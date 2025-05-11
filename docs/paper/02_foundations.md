@@ -50,7 +50,9 @@ $$C_P(\mu)\;=\;\lim_{n\to\infty} C_{P,n}(\mu) \quad \text{(1)}$$
 **Lemma 1 (Convergence of Complexity Hierarchy):** The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing and bounded above by some finite constant. By the Monotone Convergence Theorem, the limit $C_P(\mu)$ defined in Equation (1) exists and is finite for physically realizable $\mu$.
 
 **Convention for Complexity in Quantum Systems:** For quantum systems, such as the Minimal Predictive Units (MPUs) hypothesized to be fundamental constituents of reality (Definition 23), the Predictive Physical Complexity $C_P$ (measured in bits) is directly related to the information capacity required to specify their state and implement their predictive functions. This capacity is instantiated in the dimensionality $d_0$ of the MPU's Hilbert space $\mathcal{H}_0$ (Proposition 4). We adopt the standard quantum information convention:
-$$ C_P = \log_2 d_0 \quad \text{(Convention 1)} $$
+
+$$C_P = \log_2 d_0 \quad \text{(Convention 1)}$$
+
 This establishes that a system with $C_P$ bits of complexity requires a Hilbert space of $d_0 = 2^{C_P}$ dimensions to represent its distinguishable states. This convention will be crucial for linking information-theoretic complexity requirements (like the Horizon Constant $K_0$, Theorem 15) to the physical structure of MPUs.
 
 This hierarchical definition ensures $C_P$ is well-defined and incorporates all emergent physical constraints without circularity.
