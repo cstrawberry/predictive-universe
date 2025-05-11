@@ -49,7 +49,7 @@ $$
 $$
 where $\sigma_z^{(s)}$ and $\sigma_z^{(p)}$ are Pauli-Z operators acting on the signal and predictor qubits, respectively. The minimum MPU cycle time $\tau_{min}$ (Theorem 29) is chosen as $\tau_{min} = 2\pi/\omega$. The unitary evolution operator for the Internal Prediction phase (Definition 26) over one such cycle is:
 $$
-U_0(\tau_{min}) = \exp\left(-\frac{i\hat{H}\tau_{min}}{\hbar}\right) = \exp\left(-i\pi (\sigma_z^{(s)} + \sigma_z^{(p)})\right) = **\left(e^{-i\pi\sigma_z^{(s)}}\right) \otimes \left(e^{-i\pi\sigma_z^{(p)}}\right) \otimes \mathbb{I}_c = (-\mathbb{I}_s) \otimes (-\mathbb{I}_p) \otimes \mathbb{I}_c** = \mathbb{I}_s \otimes \mathbb{I}_p \otimes \mathbb{I}_c = \mathbb{I}_{\mathcal{H}_0}
+U_0(\tau_{min}) = \exp\left(-\frac{i\hat{H}\tau_{min}}{\hbar}\right) = \exp\left(-i\pi (\sigma_z^{(s)} + \sigma_z^{(p)})\right) = \left(e^{-i\pi\sigma_z^{(s)}}\right) \otimes \left(e^{-i\pi\sigma_z^{(p)}}\right) \otimes \mathbb{I}_c = (-\mathbb{I}_s) \otimes (-\mathbb{I}_p) \otimes \mathbb{I}_c = \mathbb{I}_s \otimes \mathbb{I}_p \otimes \mathbb{I}_c = \mathbb{I}_{\mathcal{H}_0}
 $$
 With this choice $U_0(\tau_{min})=\mathbb I$. Thus the predictive content of the cycle is carried entirely by the reversible SPAP gates in part 3 below, while the unitary part merely synchronises the MPU clock; this is allowed because POP evaluates performance on the combined cycle, not on the unitary sub-step in isolation.
 
@@ -186,7 +186,7 @@ The space of distinct perspectives $\Sigma$, identified with the space of orthon
 
 **7.2.6 Definition 25 (Def 25): Perspective Space $\Sigma$ and Metric**
 
-The **Perspective Space** $\Sigma$ is identified with the space of orthonormal bases of $\mathcal{H}_0$, $\Sigma \cong U(d_0)/U(1)^{d_0}$ (**see Appendix M, Section M.2 for formal justification**). To quantify the "difference" or incompatibility (complementarity) between perspectives $s_1$ (basis $B_1$) and $s_2$ (basis $B_2$), we can equip $\Sigma$ with a metric $d_\Sigma(s_1, s_2)$. A possible metric, related to the maximal overlap achievable between basis vectors after optimizing phases, uses the transition matrix $M_{ij} = \langle i \in B_1 | j \in B_2 \rangle$:
+The **Perspective Space** $\Sigma$ is identified with the space of orthonormal bases of $\mathcal{H}_0$, $\Sigma \cong U(d_0)/U(1)^{d_0}$ (see Appendix M, Section M.2 for formal justification). To quantify the "difference" or incompatibility (complementarity) between perspectives $s_1$ (basis $B_1$) and $s_2$ (basis $B_2$), we can equip $\Sigma$ with a metric $d_\Sigma(s_1, s_2)$. A possible metric, related to the maximal overlap achievable between basis vectors after optimizing phases, uses the transition matrix $M_{ij} = \langle i \in B_1 | j \in B_2 \rangle$:
 $$
 d_\Sigma(s_1, s_2) = \arccos \left( \sup_{U, V \in U(1)^{d_0}} \frac{|\text{Tr}(U M V^\dagger)|}{d_0} \right) \quad \text{(42)}
 $$
