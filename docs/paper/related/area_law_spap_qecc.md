@@ -1,4 +1,4 @@
-**Derivation of the Bekenstein–Hawking Area Law from a SPAP-Incorporating Holographic Code**
+## Derivation of the Bekenstein–Hawking Area Law from a SPAP-Incorporating Holographic Code
 
 **Abstract**
 
