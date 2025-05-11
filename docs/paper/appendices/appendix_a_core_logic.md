@@ -342,8 +342,7 @@ Now, consider the real $M_{decide}'$ interacting with $S'_{diag}$. As $M_{decide
 
 These core logical and computational limitations, derived rigorously under the assumption of Effective Operational Property R (motivated by POP/PCE dynamics), are foundational constraints shaping the emergent quantum mechanics, thermodynamics, information processing limits, and gravitational dynamics within the Predictive Universe framework.
 
-
-**A.4 Formal Realizability of Property R: The LITE Construction in Peano Arithmetic**
+## A.4 Formal Realizability of Property R: The LITE Construction in Peano Arithmetic
 
 The Predictive Universe (PU) framework posits that systems capable of sophisticated prediction, such as Minimal Predictive Units (MPUs) or their aggregates, possess Property R (Definition 10). This property entails the computational richness necessary for self-representation, self-simulation/reasoning, and the evaluation of predicates concerning their own behavior, forming the bedrock for phenomena like the Self-Referential Paradox of Accurate Prediction (SPAP, Theorems A.1, A.2) and Reflexive Undecidability (RUD, Theorems A.4, A.5). This section demonstrates that such computational capabilities are not exclusive to the PU's specific hypotheses but can be formally realized even within standard Peano Arithmetic (PA), assuming Con(PA). The LITE construction, detailed below, provides an explicit example of a total computable function in PA that dynamically adapts its behavior based on bounded proof searches about its own properties, thereby instantiating key aspects of Property R.
 
