@@ -44,7 +44,7 @@ To define Predictive Physical Complexity ($C_P$) without presupposing the physic
 *   **Level n ($C_{P,n}$, n ≥ 2):** Further refines $C_{P,n-1}$ by incorporating additional physical constraints (such as the thermodynamic cost $\varepsilon \ge \ln 2$ derived in Theorem 31 and the reflexivity constraint $\kappa_r > 0$ from Theorem 33) that are themselves derived independently using only constraints from levels $n-1$ and below applied to the analysis of MPU dynamics.
 
 The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing. The final, self-consistent definition of $C_P$ is the limit of this iterating refinement:
-$$
+ $$
 C_P(\mu)\;=\;\lim_{n\to\infty} C_{P,n}(\mu) \quad \text{(1)}
 $$
 
