@@ -1,0 +1,17 @@
+{
+  "name": "predictive-universe",
+  "version": "1.0.0",
+  "description": "The Predictive Universe",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "Cinematic Strawberry",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.176.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.4"
+  }
+}
