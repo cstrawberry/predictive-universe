@@ -26,9 +26,9 @@ The CC hypothesis posits that a complex aggregate's internal state influences lo
     where $\{\hat O_\alpha\}_{\alpha\in\mathcal I}$ is this minimal set of operators. $\mathcal{C}_{ctx}$ is the abstract context space.
 
 *   **Definition L.2 (POP-Admissible CC Mapping $\mathcal{M}$).** The mapping $\mathcal M: \mathcal{C}_{ctx} \to \mathcal{P}_{control}$ from the abstract context state ($\text{context}_S(t)$) to a set of physically realizable control parameters $\mathcal{P}_{control}(t)$ (e.g., classical field values, boundary conditions) is POP-admissible if it is dynamically stable under POP/PCE optimization. This requires, minimally:
-    (i) The Predictive Physical Complexity of implementing the mapping, $C_{\mathcal M}$, scales efficiently with the aggregate's complexity $C_{\text{agg}}$ (Definition 29), ideally $C_{\mathcal M} = O(\text{poly}(\log C_{\text{agg}}))$.
-    (ii) The average physical resource cost rate $R_{\mathcal M}$ (Definition 3) of generating the control parameters via $\mathcal M$ is bounded relative to the aggregate's core operational cost $R_{core}(C_{agg})$, e.g., $R_{\mathcal M} \le \eta_{cost} R_{core}(C_{agg})$ for some $\eta_{cost} < 1$.
-    (iii) The mapping satisfies the specific cost-benefit constraint (Lemma L.1) derived from minimizing the PCE potential $V(x)$ (Appendix D, Definition D.1).
+*    (i) The Predictive Physical Complexity of implementing the mapping, $C_{\mathcal M}$, scales efficiently with the aggregate's complexity $C_{\text{agg}}$ (Definition 29), ideally $C_{\mathcal M} = O(\text{poly}(\log C_{\text{agg}}))$.
+ *   (ii) The average physical resource cost rate $R_{\mathcal M}$ (Definition 3) of generating the control parameters via $\mathcal M$ is bounded relative to the aggregate's core operational cost $R_{core}(C_{agg})$, e.g., $R_{\mathcal M} \le \eta_{cost} R_{core}(C_{agg})$ for some $\eta_{cost} < 1$.
+*    (iii) The mapping satisfies the specific cost-benefit constraint (Lemma L.1) derived from minimizing the PCE potential $V(x)$ (Appendix D, Definition D.1).
 
 *   **Lemma L.1 (Cost-Benefit Condition for Mapping Stability).** Any POP-admissible mapping $\mathcal M$ with computational complexity $C_{\mathcal M}$ and average power cost rate $R_{\mathcal M}$ must satisfy a cost-benefit constraint ensuring its contribution to the PCE potential $V(x)$ is optimal. For the mapping to be dynamically favored and stable under PCE, the net benefits it provides must outweigh its costs. This implies:
     $$
