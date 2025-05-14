@@ -1,4 +1,4 @@
-# Reference
+# References
 
 *   Ambrosio, L., Gigli, N., & Savaré, G. (2008). *Gradient Flows in Metric Spaces and in the Space of Probability Measures*. Birkhäuser.
 *   Anderson, P. W. (1972). More is different. *Science*, *177*(4047), 393–396. DOI: 10.1126/science.177.4047.393
