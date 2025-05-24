@@ -7,6 +7,7 @@
 
 * Barabási, A.-L. (2016). *Network Science*. Cambridge, UK: Cambridge University Press. *(Network science context)*
 * Bennett, C. H. (1982). The thermodynamics of computation—a review. *International Journal of Theoretical Physics, 21*(12), 905–940. *(Thermodynamics of computation)*
+* Deutsch, D., & Marletto, C. (2015). Constructor theory of information. Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, 471(2174), 20140540. *(Constructor theory)*
 * Deutsch, D. (1997). *The Fabric of Reality*. London, UK: Penguin Books. *(Computation, physics, epistemology links)*
 * Floridi, L. (2011). *The Philosophy of Information*. Oxford, UK: Oxford University Press. *(Informational ontologies)*
 * Fredkin, E. (1990). Digital Mechanics: An Informational Process Based on Reversible Universal Cellular Automata. *Physica D: Nonlinear Phenomena, 45*(1–3), 254–270. *(Physics as discrete computation)*
@@ -16,7 +17,6 @@
 * Lloyd, S. (2000). Ultimate physical limits to computation. *Nature, 406*(6799), 1047–1054. *(Physical limits on computation)*
 * Lloyd, S. (2002). Computational capacity of the universe. *Physical Review Letters, 88*(23), 237901. *(Universe computation capacity)*
 * Lloyd, S. (2006). *Programming the Universe: A Quantum Computer Scientist Takes On the Cosmos*. New York, NY: Alfred A. Knopf. *(Universe as quantum computation)*
-* Marletto, C. (2015). Constructor theory of information. *Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, 471*(2174), 20140540. *(Constructor theory)*
 * ’t Hooft, G. (2016). *The Cellular Automaton Interpretation of Quantum Mechanics*. Cham, Switzerland: Springer. *(QM from deterministic CA)*
 * Zuse, K. (1969). *Rechnender Raum*. Braunschweig, Germany: Friedrich Vieweg & Sohn. *(Universe as cellular automaton)*
 
