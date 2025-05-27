@@ -5,7 +5,7 @@
 
 This project explores the **Predictive Universe (PU)** model, a theoretical framework conceived as a foundational element within the larger artistic and world-building project, Universe 00110000.
 
-Universe 00110000 is envisioned as a digital frontier where imagination and technology intertwine. It aims to construct a simulated reality that is similar to our own but slightly different.
+Universe 00110000 is envisioned as a digital frontier where imagination and technology intertwine. It aims to construct a simulated reality that is similar to our own.
 
 The Predictive Universe framework presented here serves as a set of underlying operational principles governing this simulated reality. It takes the concept of an information-processing cosmos to a logical conclusion, modeling reality as emerging from interacting predictive units (MPUs) governed by optimization principles and resource constraints. This framework attempts to unify aspects related to quantum mechanics, spacetime geometry, and consciousness from first principles.
 
