@@ -20,7 +20,6 @@
 * ’t Hooft, G. (2016). *The Cellular Automaton Interpretation of Quantum Mechanics*. Cham, Switzerland: Springer. *(QM from deterministic CA)*
 * Vopson, M. (2025). Is gravity evidence of a computational universe?. AIP Advances, 15(4), 045035. (Argues that gravitational phenomena may provide evidence for the universe being fundamentally computational in nature.)
 * Zuse, K. (1969). *Rechnender Raum*. Braunschweig, Germany: Friedrich Vieweg & Sohn. *(Universe as cellular automaton)*
-Zypman, F. P. (2025). Is gravity evidence of a computational universe?. AIP Advances, 15(4), 045035. (Argues that gravitational phenomena may provide evidence for the universe being fundamentally computational in nature).
 
 ## 2. Emergent Spacetime and Quantum Gravity (Alternative Approaches)
 
