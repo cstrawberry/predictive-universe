@@ -56,7 +56,7 @@ Zypman, F. P. (2025). Is gravity evidence of a computational universe?. AIP Adva
 * Stapp, H. P. (2007). *Mindful Universe: Quantum Mechanics and the Participating Observer*. Berlin, Germany: Springer. *(Alternative conscious influence mechanism – contrast)*
 * Strathern, M. (1997). Improving ratings: Audit in the British university system. *European Review, 5*(3), 305–321. *(Anthropological discussion and popularization of the law)*
 * Strawson, G. (2006). Realistic Monism: Why Physicalism Entails Panpsychism. *Journal of Consciousness Studies, 13*(10–11), 3–31. *(Panpsychism context)*
-* **Schmidhuber, J. (2008). *Driven by Compression Progress: A Simple Principle Explains Essential Aspects of Subjective Beauty, Novelty, Surprise, Interestingness, Attention, Curiosity, Creativity, Art, Science, Music, Jokes*. arXiv:0812.4360 \[cs.AI]. *(Proposes that subjective experiences and cognitive drives are linked to an agent's progress in compressing observed data).*
+* Schmidhuber, J. (2008). *Driven by Compression Progress: A Simple Principle Explains Essential Aspects of Subjective Beauty, Novelty, Surprise, Interestingness, Attention, Curiosity, Creativity, Art, Science, Music, Jokes*. arXiv:0812.4360 \[cs.AI]. *(Proposes that subjective experiences and cognitive drives are linked to an agent's progress in compressing observed data).*
 * Tegmark, M. (2014). *Consciousness as a State of Matter*. arXiv:1401.1219; see also arXiv:1405.0493.
 
 ## 4. Logic, Algorithmic Information Theory, Computation Limits, and Self-Reference
