@@ -99,3 +99,4 @@ Zypman, F. P. (2025). Is gravity evidence of a computational universe?. AIP Adva
 
 * Rescher, N. (1996). *Process Metaphysics: An Introduction to Process Philosophy*. Albany, NY: SUNY Press. *(Process philosophy introduction)*
 * Whitehead, A. N. (1929/1978). *Process and Reality* (Corrected ed.). New York, NY: Free Press. *(Process philosophy classic)*
+
