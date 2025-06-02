@@ -18,6 +18,7 @@
 * Lloyd, S. (2002). Computational capacity of the universe. *Physical Review Letters, 88*(23), 237901. *(Universe computation capacity)*
 * Lloyd, S. (2006). *Programming the Universe: A Quantum Computer Scientist Takes On the Cosmos*. New York, NY: Alfred A. Knopf. *(Universe as quantum computation)*
 * ’t Hooft, G. (2016). *The Cellular Automaton Interpretation of Quantum Mechanics*. Cham, Switzerland: Springer. *(QM from deterministic CA)*
+* Vopson, M. (2025). Is gravity evidence of a computational universe?. AIP Advances, 15(4), 045035. (Argues that gravitational phenomena may provide evidence for the universe being fundamentally computational in nature.)
 * Zuse, K. (1969). *Rechnender Raum*. Braunschweig, Germany: Friedrich Vieweg & Sohn. *(Universe as cellular automaton)*
 
 
@@ -28,7 +29,7 @@
 * Oriti, D. (Ed.). (2009). *Approaches to Quantum Gravity: Toward a New Understanding of Space, Time and Matter*. Cambridge, UK: Cambridge University Press. *(Survey of QG approaches)*
 * Rovelli, C. (2004). *Quantum Gravity*. Cambridge, UK: Cambridge University Press. *(Loop Quantum Gravity)*
 * Sorkin, R. D. (2005). Causal sets: Discrete gravity. In A. Gomberoff & D. Marolf (Eds.), *Lectures on Quantum Gravity* (pp. 305–327). Berlin, Germany: Springer. *(Causal Set Theory)*
-* 
+
 
 ## 3. Consciousness, Physics, Information, and Predictive Processing
 
@@ -48,6 +49,7 @@
 *   Stapp, H. P. (2007). *Mindful Universe: Quantum Mechanics and the Participating Observer*. Berlin, Germany: Springer. *(Alternative conscious influence mechanism – contrast)*
 *   Strathern, M. (1997). Improving ratings: Audit in the British university system. *European Review, 5*(3), 305–321. *(Anthropological discussion and popularization of the law)*
 *   Strawson, G. (2006). Realistic Monism: Why Physicalism Entails Panpsychism. *Journal of Consciousness Studies, 13*(10–11), 3–31. *(Panpsychism context)*
+*   Schmidhuber, J. (2008). *Driven by Compression Progress: A Simple Principle Explains Essential Aspects of Subjective Beauty, Novelty, Surprise, Interestingness, Attention, Curiosity, Creativity, Art, Science, Music, Jokes*. arXiv:0812.4360 \[cs.AI]. *(Proposes that subjective experiences and cognitive drives are linked to an agent's progress in compressing observed data).*
 
 
 ## 4. Logic, Algorithmic Information Theory, Computation Limits, and Self-Reference
