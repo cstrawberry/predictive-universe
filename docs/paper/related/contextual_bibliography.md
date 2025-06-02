@@ -20,7 +20,7 @@
 * ’t Hooft, G. (2016). *The Cellular Automaton Interpretation of Quantum Mechanics*. Cham, Switzerland: Springer. *(QM from deterministic CA)*
 * Vopson, M. (2025). Is gravity evidence of a computational universe?. AIP Advances, 15(4), 045035. (Argues that gravitational phenomena may provide evidence for the universe being fundamentally computational in nature.)
 * Zuse, K. (1969). *Rechnender Raum*. Braunschweig, Germany: Friedrich Vieweg & Sohn. *(Universe as cellular automaton)*
-
+Zypman, F. P. (2025). Is gravity evidence of a computational universe?. AIP Advances, 15(4), 045035. (Argues that gravitational phenomena may provide evidence for the universe being fundamentally computational in nature).
 
 ## 2. Emergent Spacetime and Quantum Gravity (Alternative Approaches)
 
@@ -31,15 +31,22 @@
 * Sorkin, R. D. (2005). Causal sets: Discrete gravity. In A. Gomberoff & D. Marolf (Eds.), *Lectures on Quantum Gravity* (pp. 305–327). Berlin, Germany: Springer. *(Causal Set Theory)*
 
 
+
 ## 3. Consciousness, Physics, Information, and Predictive Processing
 
 *   Amari, S., & Nagaoka, H. (2000). *Methods of Information Geometry*. Providence, RI: American Mathematical Society; Oxford, UK: Oxford University Press. *(Information geometry context)*
+*   Arkhipov, A. (2022). *Non‐separability of Physical Systems as a Foundation of Consciousness*. arXiv:2207.07504. 
+* Beshkar, M. (2018). *A thermodynamic approach to the problem of consciousness*. *Medical Hypotheses*, 113, 15–16. doi:10.1016/j.mehy.2018.02.003
 *   Bohm, D. (1980). *Wholeness and the Implicate Order*. London, UK: Routledge. *(Alternative ontology)*
 *   Chalmers, D. J. (1996). *The Conscious Mind: In Search of a Fundamental Theory*. Oxford, UK: Oxford University Press. *(Hard Problem, information links)*
 *   Clark, A. (2016). *Surfing Uncertainty: Prediction, Action, and the Embodied Mind*. Oxford, UK: Oxford University Press. *(Predictive brain context)*
+* Deli, E. (2022). *Will Artificial Intelligence Become Conscious? Can Thermodynamics Explain the Evolution of Intellect?* ResearchGate. (DOI: 10.20944/preprints202205.0134.v1)
 *   Friston, K. J. (2013). Life as we know it. *Journal of the Royal Society Interface, 10*(86), 20130475. *(Free Energy Principle broader context)*
+* Ganesh, N. (2020). *A Non‐equilibrium Thermodynamic Framework of Consciousness*. arXiv:2005.02801.
 *   Goff, P. (2017). *Consciousness and Fundamental Reality*. Oxford, UK: Oxford University Press. *(Panpsychism context)*
+* Gilson, M., Tagliazucchi, E., & Cofre, R. (2022). *Entropy production of Multivariate Ornstein–Uhlenbeck processes correlates with consciousness levels in the human brain*. arXiv:2207.05197.
 *   Hohwy, J. (2013). *The Predictive Mind*. Oxford, UK: Oxford University Press. *(Predictive processing philosophy)*
+* Laureys, S., Laufs, H., Kringelbach, M., Deco, G., & Tagliazucchi, E. (2020). *Non‐equilibrium brain dynamics as a signature of consciousness*. arXiv:2012.10792.
 *   Metzinger, T. (2003). *Being No One: The Self-Model Theory of Subjectivity*. Cambridge, MA: MIT Press. *(Phenomenal Self-Model theory)*
 *   Nelson, R. D., Radin, D. I., Shoup, R., & Bancel, P. A. (2002). Correlations of continuous random data with major world events. *Foundations of Physics Letters, 15*(6), 537–550. *(Flagship analysis of four years of GCP RNG data, showing statistically significant structure around major global events.)*
 *   Parr, T., & Friston, K. J. (2019). Generalised free energy and active inference. *Biological Cybernetics, 113*(5–6), 495–513. *(Active inference mathematics)*
@@ -49,8 +56,8 @@
 *   Stapp, H. P. (2007). *Mindful Universe: Quantum Mechanics and the Participating Observer*. Berlin, Germany: Springer. *(Alternative conscious influence mechanism – contrast)*
 *   Strathern, M. (1997). Improving ratings: Audit in the British university system. *European Review, 5*(3), 305–321. *(Anthropological discussion and popularization of the law)*
 *   Strawson, G. (2006). Realistic Monism: Why Physicalism Entails Panpsychism. *Journal of Consciousness Studies, 13*(10–11), 3–31. *(Panpsychism context)*
-*   Schmidhuber, J. (2008). *Driven by Compression Progress: A Simple Principle Explains Essential Aspects of Subjective Beauty, Novelty, Surprise, Interestingness, Attention, Curiosity, Creativity, Art, Science, Music, Jokes*. arXiv:0812.4360 \[cs.AI]. *(Proposes that subjective experiences and cognitive drives are linked to an agent's progress in compressing observed data).*
-
+*   **Schmidhuber, J. (2008). *Driven by Compression Progress: A Simple Principle Explains Essential Aspects of Subjective Beauty, Novelty, Surprise, Interestingness, Attention, Curiosity, Creativity, Art, Science, Music, Jokes*. arXiv:0812.4360 \[cs.AI]. *(Proposes that subjective experiences and cognitive drives are linked to an agent's progress in compressing observed data).*
+* Tegmark, M. (2014). *Consciousness as a State of Matter*. arXiv:1401.1219; see also arXiv:1405.0493.
 
 ## 4. Logic, Algorithmic Information Theory, Computation Limits, and Self-Reference
 
@@ -70,7 +77,10 @@
 
 ## 5. Quantum Foundations, Interpretation, and Contextuality
 
+* Barnum, H., Caves, C. M., Fuchs, C. A., Jozsa, R., & Schumacher, B. (1996). *Noncommuting Mixed States Cannot Be Broadcast.* *Physical Review Letters, 76*(15), 2818–2821. doi:10.1103/PhysRevLett.76.2818
+* Faist, P., & Renner, R. (2018). *Fundamental Work Cost of Quantum Processes.* *Physical Review X, 8*(2), 021011. doi:10.1103/PhysRevX.8.021011 
 * Kochen, S., & Specker, E. P. (1967). The problem of hidden variables in quantum mechanics. *Journal of Mathematics and Mechanics, 17*(1), 59–87. *(Quantum contextuality)*
+* Swingle, B. (2012). *Entanglement Renormalization and Holography.* *Physical Review D, 86*(6), 065007. doi:10.1103/PhysRevD.86.065007 
 * Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. *Reviews of Modern Physics, 75*(3), 715–775. *(Decoherence theory)*
 
 
