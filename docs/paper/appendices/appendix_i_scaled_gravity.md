@@ -12,18 +12,12 @@ The emergence of gravity in the PU framework is a multi-step process (Sections 1
 *   **Information limits:** ND-RID is inherently irreversible ($\varepsilon\!\ge\!\ln2$, Theorem 31) and strictly contractive ($f_{\mathrm{RID}}\!<\!1$, Lemma E.1), capping the channel capacity at $C_{\max}(f_{\mathrm{RID}})\!<\!\ln d_{0}$ (Theorem E.2 in Appendix E).
 *   **Emergent geometry:** Prediction-Optimization (POP) and PCE drive the network towards geometrically regular configurations (Theorem 43), giving rise to a Lorentzian manifold $(M,g_{\mu\nu})$ (Theorem 46).
 *   **Area law:** The channel capacity bound plus emergent geometric regularity give rise to the Horizon Entropy Area Law $S=k_B\mathcal A/(4L_P^2)$ (Theorem 49).
-*   **Newton constant:** Identifying the coefficient in the Area Law links the emergent gravitational scale $L_P^2=G\hbar/c^3$ to microscopic MPU parameters (derived in Appendix E):
-    $$
-    G=\frac{c^3}{4\hbar\,\sigma_{\mathrm{link}}\,C_{\max}(f_{\mathrm{RID}})},
-    \qquad
-    \sigma_{\mathrm{link}}\simeq\frac{1}{\eta\delta^2},
-    $$
-    and therefore
-    $$
-    G(\delta,C_{\max})\simeq\frac{\eta\,\delta^2 c^3}{4\hbar\,C_{\max}(f_{\mathrm{RID}})}.
-    \tag{I.1}
+*   **Newton constant:** Identifying the coefficient in the Area Law links the emergent gravitational scale $L_P^2=G\hbar/c^3$ to microscopic MPU parameters (derived in Appendix E, Equation E.9):
+    $$
+    G(\delta, C_{\max}, \chi) \simeq \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}.
+    \tag{I.1}
 $$
-(where $\delta$ is the effective microscopic MPU spacing, $\eta$ is a geometric packing factor, $\sigma_{link}$ is the boundary channel density, and $C_{max}$ is the channel capacity). Equation (I.1) is dimensionally consistent as shown in Appendix E.
+(where $\delta$ is the effective microscopic MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is the correlation factor reducing effective channel density, $\sigma_{eff\_link} = \chi / (\eta \delta^2)$ is the effective boundary channel density as per Theorem E.3, and $C_{max}$ is the channel capacity). This appendix implicitly assumes $\chi \approx 1$ for its subsequent scale-dependent arguments, effectively using $G \propto \delta^2/C_{max}$. Equation (I.1) is dimensionally consistent as shown in Appendix H.
 *   **Einstein field equations:** Applying thermodynamic principles (Clausius relation) to causal horizons in the emergent geometry, using the Area Law and the MPU stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ (Definition B.8, Appendix B) as the source, yields the Einstein field equations (Theorem 50).
 
 **I.3 Complexity Saturation in Prediction**
