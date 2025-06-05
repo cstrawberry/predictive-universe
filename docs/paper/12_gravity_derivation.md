@@ -119,7 +119,7 @@ where $R_{\mu\nu}$ is the Ricci curvature tensor, $R$ is the Ricci scalar, $g_{\
 
 **Uniqueness Lemma 12.1 (Uniqueness of Einstein Tensor).**
 In four dimensions, the only generally covariant, symmetric, divergence-free rank-2 tensor field derivable from a Lagrangian containing at most second derivatives of $g_{\mu\nu}$, and consistent with the emergent Bekenstein-Hawking entropy density fixed by PU principles (Appendix E), is the Einstein tensor plus a cosmological term: $\mathcal E_{\mu\nu}=G_{\mu\nu}+\Lambda g_{\mu\nu} = R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu}+\Lambda g_{\mu\nu}$.
-*Proof Summary:* Lovelock's theorem [Lovelock 1971] limits second-order covariant gravitational actions in D=4 to the Einstein-Hilbert term plus $\Lambda$. Higher-curvature terms generally modify the Wald entropy formula, deviating from the Bekenstein-Hawking form derived from ND-RID limits (Appendix E). Consistency with the framework's emergent thermodynamics selects the unique EFE structure (Equation 76). (cf. Section 12.3.3). QED
+*Proof Summary:* Lovelock's theorem [Lovelock 1971] limits second-order covariant gravitational actions in D=4 to the Einstein-Hilbert term plus $\Lambda$. Higher-curvature terms generally modify the Wald entropy formula, deviating from the Bekenstein-Hawking form derived from ND-RID limits (Appendix E). Consistency with the framework's emergent thermodynamics selects the unique EFE structure (Equation 76). QED
 
 **12.4 Interpretation: Gravity as Predictive Thermodynamics**
 
