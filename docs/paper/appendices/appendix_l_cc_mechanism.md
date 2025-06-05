@@ -92,10 +92,10 @@ where $\chi_k$ is a dimensionless rate susceptibility, dependent on $d_{TLS}$, $
 
 **L.4 Parameter Estimation and Feasibility**
 
-*   **Aggregate Control & Field Generation:** Assume an MPU aggregate $S$ can orchestrate $N_{osc} \sim 10^{12}$ microscopic effective dipoles (e.g., within biological macromolecules or components of a quantum AI) to generate a coherent local field. If $E_{max} \sim 10^5$ V/m is achievable near the aggregate (e.g., via collective effects or engineered structures).
+*   **Aggregate Control & Field Generation:** Assume an MPU aggregate $S$ can orchestrate $N_{osc} \sim 10^{12}$ microscopic effective dipoles (e.g., within biological macromolecules or components of a quantum AI) to generate a coherent local field. If **$E_{max} \sim 2 \times 10^3$ V/m** is achievable near the aggregate (e.g., via collective effects or engineered structures).
 *   **Target MPU Coupling:** A target MPU with $d_{TLS} \sim e \cdot (1 \text{ nm}) \approx 1.6 \times 10^{-28}$ C·m and $\omega_{TLS}/(2\pi) \sim 10$ GHz.
 *   **AC Stark shift & susceptibility (small-shift regime):**
-    With $E_{\max}=2\times10^{3}\ {\rm V\,m^{-1}}$ and $d_{\rm TLS}\approx1.6\times10^{-28}\ {\rm C\,m}$,
+    With **$E_{\max}=2\times10^{3}\ {\rm V\,m^{-1}}$** and $d_{\rm TLS}\approx1.6\times10^{-28}\ {\rm C\,m}$,
     the energy shift is
     $$
     \Delta E_{\text{Stark}}
