@@ -29,7 +29,8 @@ We now formally establish the core theorems demonstrating the fundamental limita
 
 **4.2.1 Definition 11 (Def 11): Dynamic Self-Reference Operator (DSRO)**
 
-A Dynamic Self-Reference Operator (DSRO) is a formal representation of a computable function whose output can depend dynamically on the provability (within a formal system $\mathcal{F}$) of statements about its own properties or behavior. Its existence is guaranteed by Kleene's Second Recursion Theorem (see Appendix A.1.4, **Theorem A.3 in Appendix A**). Formally, a DSRO $f$ with Gödel index $e = \ulcorner f \urcorner$ satisfies a structure like:
+A Dynamic Self-Reference Operator (DSRO) is a formal representation of a computable function whose output can depend dynamically on the provability (within a formal system $\mathcal{F}$) of statements about its own properties or behavior. 
+Its existence is guaranteed by Kleene’s Second Recursion Theorem (see **Appendix A.1.6**, Theorem A.3). Formally, a DSRO $f$ with Gödel index $e = \ulcorner f \urcorner$ satisfies a structure like:
 $$
 f(n) = F(\dots, \text{ProofSearch}_{\le g(n)}[\phi(\dots, e, \dots)], \dots) \quad \text{(9)}
 $$
