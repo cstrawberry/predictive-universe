@@ -16,7 +16,7 @@ A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses **
 2.  **Simulate/Reason:** Simulate the execution (the predictive process) of any model $M \in \mathcal{M}$ applied to a given state $s$, or formally reason about this process within $\mathcal{F}$. This capability is subject to fundamental computational limits like the Halting Problem or Reflexive Undecidability (Theorem 12, Appendix A.2).
 3.  **Evaluate Predicates:** Represent and evaluate logical formulas or predicates within $\mathcal{F}$ concerning the behavior, output, or predictive accuracy of models in $\mathcal{M}$ (e.g., determine if "model $M$ predicts outcome $\phi=1$ from state $s$" is provable, or check if "prediction $\hat{s}$ matches actual outcome $s'$").
 
-Property R establishes the level of computational sophistication required for a system to engage in the kind of self-referential reasoning that leads to the SPAP paradoxes. As argued in Appendix A.0 (**Theorem A.0.2**), effective universality enabling Property R is not merely possible but is dynamically favored by POP/PCE optimization within the MPU network.
+Property R establishes the level of computational sophistication required for a system to engage in the kind of self-referential reasoning that leads to the SPAP paradoxes. The emergence of this property is not an assumption but is argued to be a derived consequence of the framework's core dynamics. As detailed in Appendix A.0 (Theorem A.0.2), which relies on the convergence theorems of Appendix D, POP/PCE optimization necessarily drives the MPU network towards configurations capable of reliable, universal computation, thus dynamically enforcing Property R.
 
 **4.1.3 Proposition 2 (Sufficient Conditions for Property R)**
 
