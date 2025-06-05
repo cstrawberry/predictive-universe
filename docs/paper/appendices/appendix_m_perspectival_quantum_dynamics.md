@@ -84,20 +84,27 @@ Let $\Delta_{\Sigma}$ denote the associated (positive) Laplace–Beltrami operat
 
 **(b) Interaction-biased Lindblad generator**
 
-For a fixed outcome projector $P_{k}=|k\rangle_{s}\!\langle k|$ (here $|k\rangle_s$ should be understood as the perspective corresponding to the state vector $|k\rangle_s$, rather than the projector itself, for consistency with $d_{\Sigma}(s', P_k)$ where $s'$ is a perspective), we define a **drift potential** on $\Sigma$:
+For a fixed outcome corresponding to the state vector $\lvert k\rangle_{s}$ (here $\lvert k\rangle_{s}$ should be understood as the perspective itself, rather than the projector), we define a **drift potential** on $\Sigma$:
+
 $$
-V_{k}(s')\;=\;\frac{\lambda_{drift}}{2}\,d_{\Sigma}^{2}\!\bigl(s',s_k\bigr),
-\qquad\lambda_{drift}>0.
+V_{k}(s')
+  \;=\;\frac{\lambda_{\mathrm{drift}}}{2}\,d_{\Sigma}^{2}\bigl(s',\,s_{k}\bigr),
+  \qquad \lambda_{\mathrm{drift}}>0,
 $$
-where $s_k$ is the perspective corresponding to the outcome state $|k\rangle_s$.
-Following standard diffusion‐with‐drift constructions (see Breuer & Petruccione 2002, §3.4), introduce the self-adjoint operator
+
+where $s_{k}$ is the perspective corresponding to $\lvert k\rangle_{s}$.
+Following standard diffusion‐with‐drift constructions (see Breuer & Petruccione 2002, §3.4), introduce the self‐adjoint operator
+
 $$
-\mathcal L_{\Sigma}^{(k)}
-\;=\;
-\Delta_{\Sigma} \;-\;\nabla_{\Sigma}\!\cdot\!\bigl( (\nabla_{\Sigma} V_{k}(s'))\,\cdot\bigr),
+\mathcal{L}_{\Sigma}^{(k)}
+  \;=\;
+  \Delta_{\Sigma}
+  \;-\;
+  \nabla_{\Sigma}\!\cdot\!\bigl(\,(\nabla_{\Sigma} V_{k}(s'))\,\cdot\bigr),
 \tag{M.5a}
 $$
-which is the generator of an Ornstein–Uhlenbeck‐type process that is (i) reversible w\.r.t. the Gibbs weight $e^{-V_{k}(s')}$ and (ii) drifts every perspective towards $s_k$.
+
+which is the generator of an Ornstein–Uhlenbeck–type process that is (i) reversible with respect to the Gibbs weight $\exp[-V_{k}(s')]$ and (ii) drifts every perspective toward $s_{k}$.
 
 **(c) Markov kernel and normalisation**
 
