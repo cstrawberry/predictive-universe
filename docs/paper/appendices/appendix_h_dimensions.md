@@ -42,7 +42,8 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Cosmological constant         | $\Lambda$                                                                        | $[L]^{-2}$                                           | vacuum curvature                                     |
 | Empirical acceleration scale  | $g_{0}$                                                                          | $[L][T]^{-2}$                                        | Appendix I                                           |
 | Transition-length scale       | $L_{0}$                                                                          | $[L]$                                                | scale at which $G(R)$ changes                        |
-| Simulation steps / Horizon T  | $T \text{ (in Eq B.4)}$                                                          | $1$                                                  | Dimensionless count                                  |
+| Simulation steps / Horizon    | $\mathcal{T} \text{ (in Eq B.4)}$                                                 | $1$                                                  | Dimensionless count      
+                                |
 
 ## H.3 Dimensional Consistency Checks
 
