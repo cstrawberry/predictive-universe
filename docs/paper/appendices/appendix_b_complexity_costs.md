@@ -18,19 +18,21 @@ The theoretical Predictive Physical Complexity $C_{\mathrm P}(\mu)$ (Equation 1)
 
 For each MPU $v$, its operational complexity is represented by a Hermitian, positive-semi-definite operator $\hat C_v$ acting on the MPU's Hilbert space $\mathcal{H}_v$ (Proposition 4), identified with quantum circuit complexity. This operator is defined via its spectral decomposition:
 
-$$
-\hat C_v \;=\;
-\sum_{d=0}^{\infty}\lambda(d)\,\hat P_d
-\tag{B.1}
-$$
+ $$
+ \hat C_v \;=\;
+ \sum_{d=0}^{\infty}\lambda(d)\,\hat P_d
+ \tag{B.1}
+ $$
 
-where:
+ where:
 
-*   $d \in \mathbb{N}_0$ is a dimensionless integer representing the minimum number of fundamental quantum gates (circuit depth or size, relative to a fixed gate set) required to prepare states in the subspace $\hat{P}_d \mathcal{H}_v$ starting from a reference state $|K_0\rangle$ corresponding to the Horizon Constant $K_0$.
-*   $\hat{P}_d$ is the orthogonal projector onto the subspace of $\mathcal{H}_v$ consisting of states requiring additional circuit complexity $d$ relative to $|K_0\rangle$. These projectors are assumed orthogonal and complete: $\hat{P}_d \hat{P}_{d'} \approx \delta_{dd'} \hat{P}_d$ and $\sum_{d=0}^{\infty} \hat{P}_d \approx \hat{I}$.
-*   $\lambda(d)$ are the eigenvalues of $\hat{C}_v$, representing the effective Predictive Physical Complexity for states in the subspace $\hat{P}_d \mathcal{H}_v$. These eigenvalues are non-decreasing with $d$:
-    $$ \lambda(d) = K_0 + \Delta C(d) \tag{B.2} $$
-    where $K_0$ is the Horizon Constant (Theorem 15) and $\Delta C(d) \ge 0$ is the additional complexity due to circuit depth $d$, with $\Delta C(0)=0$.
+ *   $d \in \mathbb{N}_0$ is a dimensionless integer representing the minimum number of fundamental quantum gates (circuit depth or size, relative to a fixed gate set) required to prepare states in the subspace $\hat{P}_d \mathcal{H}_v$ starting from a reference state $|K_0\rangle$ corresponding to the Horizon Constant $K_0$.
+ *   $\hat{P}_d$ is the orthogonal projector onto the subspace of $\mathcal{H}_v$ consisting of states requiring additional circuit complexity $d$ relative to $|K_0\rangle$. These projectors are assumed orthogonal and complete: $\hat{P}_d \hat{P}_{d'} \approx \delta_{dd'} \hat{P}_d$ and $\sum_{d} \hat{P}_d = \hat{I}$ (where the sum becomes effectively finite for a finite-dimensional $\mathcal{H}_v$).
+ *   $\lambda(d)$ are the eigenvalues of $\hat{C}_v$, representing the effective Predictive Physical Complexity for states in the subspace $\hat{P}_d \mathcal{H}_v$. These eigenvalues are non-decreasing with $d$:
+     $$ \lambda(d) = K_0 + \Delta C(d) \tag{B.2} $$
+     where $K_0$ is the Horizon Constant (Theorem 15) and $\Delta C(d) \ge 0$ is the additional complexity due to circuit depth $d$, with $\Delta C(0)=0$.
+
+ For an MPU with a finite-dimensional Hilbert space $\mathcal{H}_v$ of dimension $d_0$ (Theorem 23), the sum in Equation (B.1) is understood to be effectively finite. Only a finite number of distinct, non-zero orthogonal projectors $\hat{P}_d$ corresponding to achievable complexity levels can exist, or for $d$ beyond a certain $d_{max}$, the projectors $\hat{P}_d$ become zero or the eigenvalues $\lambda(d)$ cease to increase, reflecting the capacity limit of the $d_0$-dimensional space.
 
 The expectation value $\langle \psi | \hat{C}_v | \psi \rangle$ for a state $|\psi\rangle$ provides the MPU's operational measure of complexity. The justification for this operator serving as a valid, dynamically selected proxy for the theoretical $C_P$ at viable equilibria is provided by Theorem 2 (Dynamically Enforced Functional Correspondence), detailed in Appendix D.
 
