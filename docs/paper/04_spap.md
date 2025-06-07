@@ -111,13 +111,13 @@ C_{pred}(\alpha) = \Omega\left(\frac{1}{(\alpha_{SPAP} - \alpha)^2}\right) \quad
 $$
 A more refined lower bound, derived rigorously in Appendix B.3 (Theorem B.2, Equation B.5) using the unified complexity functional $C_{\text{uni}}$, incorporates both this statistical resolution cost (scaled by time horizon $T$) and the cost associated with the logical simulation depth (related to $T$):
 $$
-C_{\text{pred}}(\alpha) = \Omega\!\Bigl( \tfrac{T}{(\alpha_{SPAP}-\alpha)^{2}} + \log T \Bigr) \quad \text{(14)}
+C_{\text{pred}}(\alpha) = \Omega\!\Bigl( \tfrac{\mathcal{T}}{(\alpha_{SPAP}-\alpha)^{2}} + \log \mathcal{T} \Bigr) \quad \text{(14)}
 $$
-*(where $T$ denotes the time horizon / simulation depth)*. Because the required complexity diverges according to these bounds as $\alpha \to \alpha_{SPAP}^-$, attaining performance arbitrarily close to the fundamental SPAP limit is physically unattainable, requiring unbounded resources.
+*(where $\mathcal{T}$ denotes the time horizon / simulation depth)*. Because the required complexity diverges according to these bounds as $\alpha \to \alpha_{SPAP}^-$, attaining performance arbitrarily close to the fundamental SPAP limit is physically unattainable, requiring unbounded resources.
 
-*Proof Outline:* The rigorous proof establishing Equation (14) is provided in Appendix B.3. It utilizes the unified complexity functional ($C_{\text{uni}}$, Definition B.2) and information-theoretic arguments. The bound arises from two primary, independent cost components required for any strategy achieving accuracy $\alpha$ over horizon $T$:
-1.  **Statistical Resolution Cost:** The resources needed to distinguish the system's behavior from the SPAP limit with precision $\delta_{\rm SPAP} = \alpha_{SPAP} - \alpha$. Rate-distortion arguments show this cost scales as $\Omega(T/\delta_{\rm SPAP}^2) = \Omega(T/(\alpha_{SPAP}-\alpha)^2)$, yielding the dominant quadratic divergence.
-2.  **Logical Simulation Cost:** The resources needed to execute the self-referential computation (e.g., DSRO simulation) to depth $T$, contributing a cost scaling as $\Omega(\log T)$.
+*Proof Outline:* The rigorous proof establishing Equation (14) is provided in Appendix B.3. It utilizes the unified complexity functional ($C_{\text{uni}}$, Definition B.2) and information-theoretic arguments. The bound arises from two primary, independent cost components required for any strategy achieving accuracy $\alpha$ over horizon $\mathcal{T}$:
+1.  **Statistical Resolution Cost:** The resources needed to distinguish the system's behavior from the SPAP limit with precision $\delta_{\rm SPAP} = \alpha_{SPAP} - \alpha$. Rate-distortion arguments show this cost scales as $\Omega(\mathcal{T}/\delta_{\rm SPAP}^2) = \Omega(\mathcal{T}/(\alpha_{SPAP}-\alpha)^2)$, yielding the dominant quadratic divergence.
+2.  **Logical Simulation Cost:** The resources needed to execute the self-referential computation (e.g., DSRO simulation) to depth $\mathcal{T}$, contributing a cost scaling as $\Omega(\log \mathcal{T})$.
 The total minimum complexity $C_{\text{pred}}(\alpha)$, identified with $C_{\text{uni}}$, is bounded below by the sum of these necessary costs, resulting in Equation (14).
 
 **4.5.3 Remark 3 (Conceptual Synthesis: Prediction Relativity)**
