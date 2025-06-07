@@ -138,8 +138,8 @@ where:
     R_I'(C(t)) = \frac{r_I}{C(t) \ln 2} \quad (\text{for } C(t) > K_0) \quad \text{(26)}
     $$
     Both $R'$ and $R_I'$ have units `[E][T]^{-1}[Complexity]^{-1}`.
-
-*Interpretation:* $\Psi(t)$ quantifies the net marginal incentive (power gradient per unit complexity) driving complexity changes. $\Psi > 0$ favors increasing $C$, $\Psi < 0$ favors decreasing $C$. Equilibrium, corresponding to the optimal complexity allocation (Definition 14), occurs when $\Psi = 0$, precisely balancing the marginal power-equivalent benefit against the weighted marginal resource costs (Equation 18).
+    
+*Interpretation:* $\Psi(t)$ quantifies the net marginal incentive (power gradient per unit complexity) driving complexity changes. $\Psi > 0$ favors increasing $C$, $\Psi < 0$ favors decreasing $C$. Equilibrium, corresponding to the optimal complexity allocation (Definition 14), occurs when $\Psi = 0$, precisely balancing the marginal power-equivalent benefit against the weighted marginal resource costs (Equation 18). This Adaptation Driving Force can be understood as the local gradient of the global PCE Potential $V(x)$ (defined in Appendix D) with respect to the complexity component $C(t)$. The condition $\Psi(t)=0$ thus represents a local equilibrium where the system has found a minimum of the potential along the complexity axis, given a fixed environmental context.
 
 **6.4.2 Theorem 20 (Physical Bounds and Self-Consistency of $\Gamma_0$)**
 
@@ -248,7 +248,7 @@ where:
 *   $PP_{op} \in (\alpha, \beta)$ is the system's target operational performance level.
 *   $PP(C(t), \hat{C}_{target}(t))$ is the currently achieved performance (Equation 22).
 
-*Interpretation:* This equation implements negative feedback. If current performance $PP$ is below the target $PP_{op}$, the term $(PP_{op} - PP)$ is positive, causing $\hat{C}_{target}$ to increase (system estimates environment is harder). If $PP$ exceeds $PP_{op}$, $\hat{C}_{target}$ decreases. At equilibrium, $PP = PP_{op}$, and $d\hat{C}_{target}/dt = 0$. These dynamics allow the system to adjust its internal representation of task difficulty in conjunction with adapting its own complexity $C(t)$ via Equation (30), facilitating robust operation under varying conditions.
+*Interpretation:* This equation implements negative feedback. If current performance $PP$ is below the target $PP_{op}$, the term $(PP_{op} - PP)$ is positive, causing $\hat{C}_{target}$ to increase (system estimates environment is harder). If $PP$ exceeds $PP_{op}$, $\hat{C}_{target}$ decreases. At equilibrium, $PP = PP_{op}$, and $d\hat{C}_{target}/dt = 0$. These dynamics allow the system to adjust its internal representation of task difficulty in conjunction with adapting its own complexity $C(t)$ via Equation (30), facilitating robust operation under varying conditions. Functionally, $\hat{C}_{target}(t)$ serves as the MPU's internal, running estimate of the effective algorithmic complexity of the local environmental dynamics it is trying to predict. Its value is not derived from direct analysis of the environment but is adapted purely through performance feedback, consistent with the MPU's bounded epistemic access.
 
 **6.6 Viability Enforcement**
 
