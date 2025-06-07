@@ -104,6 +104,8 @@
 
 *   **PCE (Principle of Compression Efficiency):** (Definition 15) The core optimization principle stating that adaptive systems evolve towards configurations that maximize predictive utility (Meaning Potential, related to high PP) while minimizing comprehensive resource costs (Signal Cost, including $R, R_I$, adaptation costs). Drives complexity adaptation and network self-organization via minimization of PCE Potential $V(x)$ (Appendix D).
 
+*   **PCE Potential ($V(x)$):** (Definition D.1) An effective potential function quantifying the net cost rate (operational, propagation, penalties) minus benefits for a given MPU network configuration $x$. The system's adaptation dynamics are modeled as a stochastic gradient flow seeking to minimize $V(x)$.  
+
 *   **Perspectival Realism:** (Section 14.2) Philosophical stance suggested by the framework where reality has definite properties, but their description and actualization (via 'Evolve') are inherently relative to the interaction context or perspective $s \in \Sigma$.
 
 *   **Perspectival State ($S_{(s)}(t)$):** (Definition 24, Appendix M) The complete state of an MPU, represented by the pair $(S(t), s)$, where $S(t)=|\psi(t)\rangle \in \mathcal{H}_0$ is the state amplitude and $s \in \Sigma$ is the perspective index representing the interaction context/basis.
