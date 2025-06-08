@@ -8,7 +8,7 @@ Within the Predictive-Universe (PU) framework, this appendix sketches a mechanis
 
 The emergence of gravity in the PU framework is a multi-step process (Sections 11, 12):
 
-*   **MPU network and ND-RID:** The fundamental substrate is an adaptive network of Minimal Predictive Units (MPUs) coupled by non-deterministic reversible–irreversible dynamics (ND-RID, Definition A.2).
+*   **MPU network and ND-RID:** The fundamental substrate is an adaptive network of Minimal Predictive Units (MPUs) coupled by Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition A.2).
 *   **Information limits:** ND-RID is inherently irreversible ($\varepsilon\!\ge\!\ln2$, Theorem 31) and strictly contractive ($f_{\mathrm{RID}}\!<\!1$, Lemma E.1), capping the channel capacity at $C_{\max}(f_{\mathrm{RID}})\!<\!\ln d_{0}$ (Theorem E.2 in Appendix E).
 *   **Emergent geometry:** Prediction-Optimization (POP) and PCE drive the network towards geometrically regular configurations (Theorem 43), giving rise to a Lorentzian manifold $(M,g_{\mu\nu})$ (Theorem 46).
 *   **Area law:** The channel capacity bound plus emergent geometric regularity give rise to the Horizon Entropy Area Law $S=k_B\mathcal A/(4L_P^2)$ (Theorem 49).
