@@ -52,7 +52,8 @@ Let $\mathcal{M}$ be a model class possessing Property R (Definition 10) relativ
 $$
 Prob_{actual}(\phi=1) = \begin{cases} 0, & \text{if } p > 0.5 \\ 1, & \text{if } p \le 0.5 \end{cases} \quad \text{(11)}
 $$
-Perfect prediction requires the predicted probability $p$ to equal the actual probability determined by the rule: $p = Prob_{actual}(\phi=1)$. If $p>0.5$, this equality implies $p=0$, a contradiction. If $p \le 0.5$, this equality implies $p=1$, also a contradiction. In no case can the predicted probability $p$ match the actual probability determined by the rule. (The formal justification relies on Theorem A.0.2 (PCE Dynamically Enforces Effective Property R) in Appendix A.0.).
+Perfect prediction requires the predicted probability $p$ to equal the actual probability determined by the rule: $p = Prob_{actual}(\phi=1)$. If $p>0.5$, this equality implies $p=0$, a contradiction. If $p \le 0.5$, this equality implies $p=1$, also a contradiction. In no case can the predicted probability $p$ match the actual probability determined by the rule. 
+(The formal justification for the system's ability to reliably execute this paradoxical logic, which requires Effective Operational Property R, is provided by Theorem A.0.2 in Appendix A.0).
 
 **4.2.4 Corollary 1 (Fundamental Limits)**
 
