@@ -353,7 +353,7 @@ where $\eta_{ben}$ is an effective average positive coefficient representing the
 
 **G.8.4.6 Net PCE Potential for Gauge Sector ($V_{net}(G)$)**
 
-Combining the communication cost (G.8.5), field-energy cost (G.8.6), and predictive benefit (G.8.7), the net PCE potential contribution per MPU from a gauge group $G$, which the system seeks to minimize, is:
+Combining the modeled communication cost (G.8.5), field-energy cost (G.8.6), and predictive benefit (G.8.7), the resulting model for the net PCE potential contribution per MPU from a gauge group $G$, which the system seeks to minimize, is:
 $$
 \frac{V_{\text{net}}(G)}{N}\; =\; \Bigl(\lambda_c\frac{\bar d}{2} \frac{\alpha}{k\,C_{\max}} -\eta_{\text{ben}}\Bigr)\,n_G \;+\; \lambda_f\,k_G\,n_G. \tag{G.8.8}
 $$
