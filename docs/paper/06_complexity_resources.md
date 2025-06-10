@@ -96,11 +96,11 @@ Here $\kappa_{\mathrm{eff}}$ is a dimensionless efficiency constant. Equation (2
     $$
     \Gamma_{0}\, \Bigl.\frac{\partial PP}{\partial C}\Bigr|_{C^{*}} =\lambda\,R'(C^{*})+R_I'(C^{*}).
     $$
-3.  **Model Assumption (Exponential Saturation):** Guided by the Complexity–Performance Scaling Principles (Definition 19), we adopt the simplest differential form consistent with bounded saturation towards $\beta$, monotonicity, diminishing returns, and dependence on relative complexity $(C-C_{op})/\hat C_{\mathrm{target}}$. This implies the rate of performance gain is proportional to the remaining performance gap $(\beta - PP)$:
-    $$
-    \frac{\partial PP}{\partial C} = \frac{\kappa_{\mathrm{eff}}}{\hat C_{\mathrm{target}}}\, (\beta-PP)
-    $$
-    This form is analogous to standard learning curves exhibiting exponential saturation.
+3.  **Model Assumption (Exponential Saturation):** Guided by the Complexity–Performance Scaling Principles (Definition 19), we adopt a specific differential form for the performance gain. The simplest ordinary differential equation consistent with bounded saturation towards $\beta$, monotonicity, and diminishing returns is one where the rate of performance gain is proportional to the remaining performance gap $(\beta - PP)$:
+    $$
+    \frac{\partial PP}{\partial C} = \frac{\kappa_{\mathrm{eff}}}{\hat C_{\mathrm{target}}}\, (\beta-PP)
+    $$
+    This is a standard model for processes exhibiting exponential saturation (e.g., learning curves, capacitor charging) and is adopted here as the specific instantiation of the general principles outlined in Definition 19.
 4.  **Integration:** Separating variables gives $dPP / (\beta - PP) = (\kappa_{\mathrm{eff}} / \hat C_{\mathrm{target}}) dC$. Integrating from the baseline $(C_{op}, \alpha)$ (minimal viable performance at threshold complexity) to a general point $(C, PP)$ yields:
     $$
     \int_{\alpha}^{PP}\!\frac{dPP'}{\beta-PP'} = \int_{C_{op}}^{C}\!\frac{\kappa_{\mathrm{eff}}}{\hat C_{\mathrm{target}}}\,dC'
