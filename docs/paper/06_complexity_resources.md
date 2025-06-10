@@ -76,7 +76,7 @@ where the function $F: \mathbb{R}_{\geq 0} \rightarrow [0, 1)$ satisfies:
 
 **6.3 Derivation of the Law of Prediction from POP / PCE**
 
-We now obtain the explicit complexity–performance relationship—the *Law of Prediction*—by analysing the optimization problem implied by the Prediction Optimization Problem (POP, Definition 16) and the Principle of Compression Efficiency (PCE, Definition 15), together with the qualitative scaling requirements of Definition 19. An alternative variational derivation is presented in Appendix D.
+We now derive the explicit complexity–performance relationship—the *Law of Prediction*—by integrating the simplest differential equation that satisfies the qualitative scaling requirements of Definition 19. This approach, guided by the optimization imperatives of the Prediction Optimization Problem (POP, Definition 16) and the Principle of Compression Efficiency (PCE, Definition 15), yields a specific functional form that is used to construct the benefit component of the PCE Potential $V(x)$ analyzed in Appendix D.
 
 **6.3.1 Theorem 19 (Law of Prediction)**
 
