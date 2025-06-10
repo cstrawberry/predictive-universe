@@ -83,7 +83,7 @@ This Unruh radiation acts as a source of noise, fundamentally degrading the MPU'
 >    * $W_{\rm kin}=m_0c^2(\gamma-1)\approx2.31\times10^{17}$ J.
 > 2. **Predictive Cost:**
 >
->    * $a=(c/\tau)\acosh\gamma\approx5.84\times10^8$ m/s².
+>    * $a=(c/\tau)\operatorname{arccosh}\gamma\approx5.84\times10^8$ m/s².
 >    * $C_{SPAP}=1/(10^{-11})^2=10^{22}$ bits.
 >    * $T_U=\hbar a/(2\pi c k_B)\approx2.37\times10^{-12}$ K.
 >    * $C_{\rm noise}\approx3.6\times10^{-15}$ bits.
@@ -93,9 +93,6 @@ This Unruh radiation acts as a source of noise, fundamentally degrading the MPU'
 >
 > **Conclusion:**
 > Kinetic work $\sim2.31\times10^{17}$ J and predictive work $\sim3.27\times10^{16}$ J are now of the same order of magnitude. This demonstrates a tangible “Unruh cost” coupling motion and prediction, illustrating the trade-off enforced by the UCT.
-
-
-
 
 ## N.5 Proof of the UCT Theorem
 
