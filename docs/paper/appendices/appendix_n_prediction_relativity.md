@@ -83,7 +83,7 @@ This Unruh radiation acts as a source of noise, fundamentally degrading the MPU'
 >    * $W_{\rm kin}=m_0c^2(\gamma-1)\approx2.31\times10^{17}$ J.
 > 2. **Predictive Cost:**
 >
->    * $a=(c/\tau)\operatorname{arccosh}\gamma\approx5.84\times10^8$ m/s².
+>    * $a=(c/\tau)\cosh^{-1}\gamma\approx5.84\times10^8$ m/s².
 >    * $C_{SPAP}=1/(10^{-11})^2=10^{22}$ bits.
 >    * $T_U=\hbar a/(2\pi c k_B)\approx2.37\times10^{-12}$ K.
 >    * $C_{\rm noise}\approx3.6\times10^{-15}$ bits.
