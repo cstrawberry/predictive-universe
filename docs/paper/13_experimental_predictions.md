@@ -43,7 +43,7 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
     The experiment aims to resolve CC-induced deviations $\Delta P$ from a baseline Born probability
     $P_{\mathrm{Born}}(i)\approx 0.25$.
 *   **Prospective Sample Sizes ($N_{\mathrm{total}}$ for a two-sample z-test comparing contexts, or $N$ for a one-sample z-test comparing an observed probability to $P_{Born}$):**
-*   **Prospective Sample Sizes ($N_{\mathrm{total}}$ for a two-sample z-test comparing contexts, or $N$ for a one-sample z-test comparing an observed probability to $P_{Born}$):**
+
 
     * To detect $\Delta P = 1 \times 10^{-3}$:
       $N_{\mathrm{total}}\approx 1.0\times 10^{7}$ (two-sample) or $N\approx 2.5\times 10^{6}$ (one-sample).
