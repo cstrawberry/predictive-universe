@@ -2,7 +2,7 @@
 
 ## N.1 Master Principle: The PCE Potential
 
-The foundational dynamical principle of the Predictive Universe (PU) framework is the minimization of the **PCE Potential**, $V$. This is a functional that quantifies the net resource cost rate of a given MPU network configuration, balancing the costs of operation and interaction against the benefits of predictive accuracy. The system's evolution is governed by a stochastic process that seeks the global minimum of this potential. For a single MPU $i$ interacting with its local environment, its contribution to the global potential is derived from the structure of $V$ as defined in the PU framework [PU Framework, Appendix D, Def. D.1]:
+The foundational dynamical principle of the Predictive Universe (PU) framework is the minimization of the **PCE Potential**, $V$. This is a functional that quantifies the net resource cost rate of a given MPU network configuration, balancing the costs of operation and interaction against the benefits of predictive accuracy. The system's evolution is governed by a stochastic process that seeks the global minimum of this potential. For a single MPU $i$ interacting with its local environment, its contribution to the global potential is derived from the structure of $V$ as defined in the PU framework [Appendix D, Def. D.1]:
 
 $$
 V_i = \underbrace{V_{op}(i)}_{\text{Operational Cost}} + \underbrace{V_{prop}(i)}_{\text{Propagation Cost}} - \underbrace{V_{benefit}(i)}_{\text{Predictive Benefit}}
@@ -10,17 +10,17 @@ V_i = \underbrace{V_{op}(i)}_{\text{Operational Cost}} + \underbrace{V_{prop}(i)
 $$
 
 where each term is a rate (power):
-*   **$V_{op}$**: The cost of maintaining the MPU's internal complexity $C_i$, given by the PU cost functions $R(C_i)$ and $R_I(C_i)$ [PU Framework, Def. 3].
-*   **$V_{prop}$**: The cost of maintaining coherent predictive links with neighbors, penalizing both information loss (decoherence) and the fundamental thermodynamic cost ($\varepsilon \ge \ln 2$) of interaction [PU Framework, AppN. C, D].
-*   **$V_{benefit}$**: The reward for predictive accuracy, proportional to the MPU's success in predicting the states of its neighbors, derived from its Predictive Performance $PP$ [PU Framework, Def. 7, D.1].
+*   **$V_{op}$**: The cost of maintaining the MPU's internal complexity $C_i$, given by the PU cost functions $R(C_i)$ and $R_I(C_i)$ [Def. 3].
+*   **$V_{prop}$**: The cost of maintaining coherent predictive links with neighbors, penalizing both information loss (decoherence) and the fundamental thermodynamic cost ($\varepsilon \ge \ln 2$) of interaction [AppN. C, D].
+*   **$V_{benefit}$**: The reward for predictive accuracy, proportional to the MPU's success in predicting the states of its neighbors, derived from its Predictive Performance $PP$ [Def. 7, D.1].
 
-The master equation of the PU framework is the stochastic differential equation describing the evolution of the network configuration $x$ as a gradient flow on this potential: $dx(t) = -\eta(x) \nabla V(x) dt + \sqrt{2D(x)} dW(t)$ [PU Framework, AppN. D, Eq. D.8]. The principles explored in this section represent physical constraints that must be incorporated into the cost terms of the PCE potential $V$, thereby shaping the emergent dynamics of the system as it seeks to minimize this potential.
+The master equation of the PU framework is the stochastic differential equation describing the evolution of the network configuration $x$ as a gradient flow on this potential: $dx(t) = -\eta(x) \nabla V(x) dt + \sqrt{2D(x)} dW(t)$ [AppN. D, Eq. D.8]. The principles explored in this section represent physical constraints that must be incorporated into the cost terms of the PCE potential $V$, thereby shaping the emergent dynamics of the system as it seeks to minimize this potential.
 
 ## N.2 Divergence Laws for Hardware and Software Limits
 
 The PCE Potential incorporates costs that diverge as the system approaches fundamental physical or logical limits. Two such divergences are critical:
 
-*   **Predictive Divergence** [PU Framework, Thm. 14]. To achieve a predictive performance $PP$ on a self-referential task limited by the SPAP boundary $\alpha_{SPAP} < 1$, the required Predictive Physical Complexity $C_P$ diverges quadratically:
+*   **Predictive Divergence** [Thm. 14]. To achieve a predictive performance $PP$ on a self-referential task limited by the SPAP boundary $\alpha_{SPAP} < 1$, the required Predictive Physical Complexity $C_P$ diverges quadratically:
     $$
     C_P(PP) \;\ge\; \frac{K}{(\alpha_{SPAP}-PP)^{2}}
     \tag{N.2}
@@ -60,7 +60,7 @@ This Unruh radiation acts as a source of noise, fundamentally degrading the MPU'
 > \tag{N.5}
 > $$
 >
-> where $R(C, T_{eff})$ is the PU physical operational cost function [PU Framework, Def. 3], generalized to include temperature dependence. $T_{eff}(t) = T_{bath} + T_U(a(t))$ is the effective temperature. The optimal trajectory is one that minimizes this total work integral, forcing a trade-off between reaching a destination quickly (high $v$ and $a$, high $W_{kin}$ and increased predictive power cost via $T_U$) and maintaining high predictive accuracy (high predictive power cost via the SPAP term).
+> where $R(C, T_{eff})$ is the PU physical operational cost function [Def. 3], generalized to include temperature dependence. $T_{eff}(t) = T_{bath} + T_U(a(t))$ is the effective temperature. The optimal trajectory is one that minimizes this total work integral, forcing a trade-off between reaching a destination quickly (high $v$ and $a$, high $W_{kin}$ and increased predictive power cost via $T_U$) and maintaining high predictive accuracy (high predictive power cost via the SPAP term).
 
 > **Box N.1: Worked Numerical Estimate of the Unified Cost of Transgression**
 >
@@ -121,16 +121,16 @@ $$
 $$
 C_{SPAP}(PP) \ge \frac{K}{(\alpha_{SPAP}-PP)^{2}}, \quad K>0.
 $$
-*Proof.* See [PU Framework, Thm. 14, AppN. B.3]. 
+*Proof.* See [Thm. 14, AppN. B.3]. 
 
 **Lemma N.3 (Relativistic work).** The minimum work to accelerate a mass $m_0$ from rest to final velocity $v_f$ is $W_{kin}(v_f) = m_0c^2(\gamma(v_f)-1)$. 
 
 **Lemma N.4 (Complexity Cost of Unruh Noise).** An MPU undergoing proper acceleration $a$ perceives an effective thermal bath at temperature $T_U(a) = \frac{\hbar a}{2\pi c k_B}$. To maintain a constant predictive performance $PP$ against this noise, the MPU must allocate additional predictive complexity $C_{noise}(a)$. The existence of this cost is necessary, and it must be a monotonically increasing function of $a$, with $C_{noise}(0)=0$.
-> *Proof.* The existence and properties of $C_{noise}(a)$ are derived as a necessary consequence of the MPU's adaptation dynamics under PCE. An MPU operating in a stable predictive regime seeks to maintain a target operational performance $PP_{op} \in (\alpha, \beta)$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [PU Framework, Def. 14, 20]):
+> *Proof.* The existence and properties of $C_{noise}(a)$ are derived as a necessary consequence of the MPU's adaptation dynamics under PCE. An MPU operating in a stable predictive regime seeks to maintain a target operational performance $PP_{op} \in (\alpha, \beta)$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20]):
 > $$
 > \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda \frac{\partial R}{\partial C}\bigg|_{C^*, T_{eff}} + \frac{\partial R_I}{\partial C}\bigg|_{C^*}
 > $$
-> The Law of Prediction [PU Framework, Thm. 19, Eq. 25] gives $\frac{\partial PP}{\partial C} = \frac{\kappa_{eff}}{\hat{C}_{target}}(\beta - PP)$. At the target performance $PP_{op}$, the left-hand side becomes a constant value, $K_{benefit} = \Gamma_0 \frac{\kappa_{eff}}{\hat{C}_{target}}(\beta - PP_{op})$. The informational cost term $\frac{\partial R_I}{\partial C} = \frac{r_I}{C \ln 2}$ depends only on $C$. The physical cost $R(C, T_{eff})$ depends on both complexity and temperature. Physical consistency requires that the marginal cost of maintaining complexity increases with temperature, i.e., $\frac{\partial^2 R}{\partial C \partial T_{eff}} > 0$.
+> The Law of Prediction [Thm. 19, Eq. 25] gives $\frac{\partial PP}{\partial C} = \frac{\kappa_{eff}}{\hat{C}_{target}}(\beta - PP)$. At the target performance $PP_{op}$, the left-hand side becomes a constant value, $K_{benefit} = \Gamma_0 \frac{\kappa_{eff}}{\hat{C}_{target}}(\beta - PP_{op})$. The informational cost term $\frac{\partial R_I}{\partial C} = \frac{r_I}{C \ln 2}$ depends only on $C$. The physical cost $R(C, T_{eff})$ depends on both complexity and temperature. Physical consistency requires that the marginal cost of maintaining complexity increases with temperature, i.e., $\frac{\partial^2 R}{\partial C \partial T_{eff}} > 0$.
 >
 > The equilibrium equation is thus an implicit function defining the optimal complexity $C^*$ in terms of the effective temperature $T_{eff}$:
 > $$
