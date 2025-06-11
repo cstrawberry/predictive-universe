@@ -86,7 +86,7 @@ $$
 The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon > 0$ (Theorem 31)). These costs constrain the POP. To make the framework's dynamics tractable, we now adopt specific, physically-motivated functional forms for these costs, chosen to be the simplest expressions consistent with core principles like increasing cost and diminishing returns. In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
 
 **Definition 3 (Resource-Cost Functions):**  
-The ongoing operational expense of an MPU’s predictive cycle is described by two monotone mappings from theoretical complexity $C_P$ to power-like rates.
+The ongoing operational expense of an MPU’s predictive cycle is described by two monotone mappings from theoretical complexity $C_P$ to power-like rates. The specific functional forms presented here are minimal models chosen to satisfy the framework's derived principles (see Section 6.7 for a discussion of model-form robustness).
 
 **(a) Physical Operational Cost $R(C)$** – the rate of *physical* resource consumption required to maintain structures and run processes of complexity $C$.
 $R(C)$ is non-decreasing ($R'(C)\!\ge 0$). For $C > C_{op}$, it is strictly convex ($R''(C)\!>0$); it is continuous at $C=C_{op}$.
