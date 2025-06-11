@@ -123,7 +123,7 @@ The total minimum complexity $C_{\text{pred}}(\alpha)$, identified with $C_{\tex
 
 **Remark 3 (Conceptual Synthesis: Prediction Relativity and its Physical Mechanism)**
 
-The SPAP limit $\alpha_{SPAP} < 1$ (Theorems 10, 11) establishes a fundamental barrier analogous to the speed of light limit in Special Relativity. This analogy, however, is not merely metaphorical. The Predictive Universe framework reveals a deep, physical unification of these two limits, demonstrating that they are two facets of a single, underlying thermodynamic cost principle.
+The SPAP limit $\alpha_{SPAP} < 1$ (Theorems 10, 11) establishes a fundamental barrier—which we will refer to conceptually as the **Prediction Coherence Boundary**—analogous to the speed of light limit in Special Relativity. This analogy, however, is not merely metaphorical. The Predictive Universe framework reveals a deep, physical unification of these two limits, demonstrating that they are two facets of a single, underlying thermodynamic cost principle.
 
 Just as achieving $v=c$ requires infinite energy in a physical system, achieving predictive performance arbitrarily close to $\alpha_{SPAP}$ demands infinite Predictive Physical Complexity ($C_P$, Equation 1), implying infinite physical resource cost (Theorem 14). The PU framework provides the unifying mechanism: an accelerating MPU perceives a thermal bath at the Unruh temperature, which acts as noise that degrades predictive capacity. To counteract this "Unruh cost" and maintain high predictive performance, the MPU must allocate additional complexity and expend more power.
 
