@@ -80,7 +80,7 @@ We now derive the explicit complexity–performance relationship—the *Law of P
 
 **6.3.1 Theorem 19 (Law of Prediction — Exponential Saturation Model)**
 
-Let a system adapt its operational complexity $C(t)=\langle\hat C_v\rangle(t) \ge C_{op}$, to meet the estimated task difficulty $\hat C_{\mathrm{target}}(t)$. For viability bounds $\alpha<PP<\beta$ (Definition 8), the achievable **Predictive Performance** is given by:
+Let a system adapt its operational complexity $C(t)=\langle\hat C_v\rangle(t) \ge C_{op}$, to meet the estimated task difficulty $\hat C_{\mathrm{target}}(t)$. For viability bounds $\alpha<PP<\beta$ (Definition 8), the achievable **Predictive Performance** is given by the following minimal model (consistent with the principles of Definition 19 and discussed in Section 6.7):
 $$
 PP(C,\hat C_{\mathrm{target}}) =\beta-(\beta-\alpha)\, \exp\!\Bigl[-\kappa_{\mathrm{eff}}\, \tfrac{C-C_{op}}{\hat C_{\mathrm{target}}}\Bigr] \quad \text{(22)}
 $$
