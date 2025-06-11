@@ -78,7 +78,7 @@ where the function $F: \mathbb{R}_{\geq 0} \rightarrow [0, 1)$ satisfies:
 
 We now derive the explicit complexity–performance relationship—the *Law of Prediction*—by integrating the simplest differential equation that satisfies the qualitative scaling requirements of Definition 19. This approach, guided by the optimization imperatives of the Prediction Optimization Problem (POP, Definition 16) and the Principle of Compression Efficiency (PCE, Definition 15), yields a specific functional form that is used to construct the benefit component of the PCE Potential $V(x)$ analyzed in Appendix D.
 
-**6.3.1 Theorem 19 (Law of Prediction)**
+**6.3.1 Theorem 19 (Law of Prediction — Exponential Saturation Model)**
 
 Let a system adapt its operational complexity $C(t)=\langle\hat C_v\rangle(t) \ge C_{op}$, to meet the estimated task difficulty $\hat C_{\mathrm{target}}(t)$. For viability bounds $\alpha<PP<\beta$ (Definition 8), the achievable **Predictive Performance** is given by:
 $$
