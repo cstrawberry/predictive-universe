@@ -104,11 +104,11 @@ This implies $C(M_n) = \Omega(n)$. QED
 
 For self-referential predictive systems subject to SPAP (operating within a model class $\mathcal{M}$ possessing Property R, Definition 10), let $\alpha_{SPAP} < 1$ be the theoretical maximum achievable average predictive performance (PP) for those aspects limited by SPAP (Theorem 10, Theorem 11). Let $C_{pred}(\alpha)$ denote the minimum necessary Predictive Physical Complexity ($C_P$, Equation 1) required by any physically realizable model $M \in \mathcal{M}$ to consistently achieve an average performance $\alpha = PP$ on these SPAP-limited aspects.
 
-As performance $\alpha$ approaches the fundamental limit $\alpha_{SPAP}$ from below ($\alpha\to\alpha_{SPAP}^-$), the required complexity diverges. The dominant scaling of this divergence, arising from the information‐theoretic cost of statistically distinguishing behavior near the limit, is at least quadratic. A simplified bound capturing only the statistical resolution cost over a time horizon $\mathcal{T}$ with an accuracy gap $\delta_{\rm SPAP} = \alpha_{SPAP} - \alpha$ is:
+As performance $\alpha$ approaches the fundamental limit $\alpha_{SPAP}$ from below ($\alpha\to\alpha_{SPAP}^-$), the required complexity diverges. The dominant scaling of this divergence, arising from the information‐theoretic cost of statistically distinguishing behavior near the limit, is at least quadratic. An illustrative bound capturing only the statistical resolution cost over a dimensionless time horizon or number of steps $\mathcal{T}$ with an accuracy gap $\delta_{\rm SPAP} = \alpha_{SPAP} - \alpha$ is:
 $$
 C_{pred}(\alpha) = \Omega\left(\frac{\mathcal{T}}{(\alpha_{SPAP} - \alpha)^2}\right) \quad \text{(13)}
 $$
-A more complete lower bound, derived in Appendix B.3 (Theorem B.2, Equation B.5) using the unified complexity functional $C_{\text{uni}}$, incorporates both this statistical resolution cost and the cost associated with the logical simulation depth required to resolve the paradox to precision $\delta_{\rm SPAP}$:
+A more complete lower bound, derived in Appendix B.3 (Theorem B.2, Equation B.5) using the unified complexity functional $C_{\text{uni}}$, incorporates both this statistical resolution cost and the cost associated with the logical simulation depth required to resolve the paradox to precision $\delta_{\rm SPAP}$ (effectively subsuming the role of $\mathcal{T}$):
 $$
 C_{pred}(\alpha) = \Omega\left(\frac{\log(1/(\alpha_{SPAP} - \alpha))}{(\alpha_{SPAP} - \alpha)^2}\right) \quad \text{(14)}
 $$
