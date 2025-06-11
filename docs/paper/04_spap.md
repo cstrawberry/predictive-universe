@@ -42,7 +42,7 @@ Let $\mathcal{M}$ be a model class possessing Property R (Definition 10) relativ
 $$
 \phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f}) \quad \text{(10)}
 $$
-If $P_f$ were perfect, it must predict the actual outcome: $\hat{\phi}_{P_f} = \phi_{t+1}$. Substituting the system's rule gives $\hat{\phi}_{P_f} = \text{NOT}(\hat{\phi}_{P_f})$, which is a logical contradiction. Thus, $P_f$ cannot perfectly predict $S_{diag}$. (Formal proof in Appendix A.1, specifically Theorem A.1 in Appendix A; robustness to computational error discussed via Theorem A.1-ε in Appendix A). QED
+If $P_f$ were perfect, it must predict the actual outcome: $\hat{\phi}_{P_f} = \phi_{t+1}$. Substituting the system's rule gives $\hat{\phi}_{P_f} = \text{NOT}(\hat{\phi}_{P_f})$, which is a logical contradiction. Thus, $P_f$ cannot perfectly predict $S_{diag}$. (Formal proof in Appendix A.1, specifically Theorem A.1 in Appendix A.1.2; robustness to computational error discussed via Theorem A.1-ε in Appendix A.1.3). QED
 
 **4.2.3 Theorem 11 (Probabilistic SPAP)**
 
