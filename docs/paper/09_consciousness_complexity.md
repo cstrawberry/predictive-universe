@@ -65,7 +65,7 @@ where:
 
 **9.3.4 Definition 32 (Def 32): Specific CC Scaling Model Example**
 
-For illustrative purposes, we adopt a specific rational function model for $G(x)$ satisfying the required properties: $G(x) = x / (1+x)$. Substituting this into the general form (Equation 55) yields:
+For illustrative purposes, we adopt a specific rational function model for $G(x)$ satisfying the required properties: $G(x) = x / (1+x)$. This minimal phenomenological model is chosen for its simplicity and consistency with derived principles (see Section 6.7). Substituting this into the general form (Equation 55) yields:
 $$
 \text{CC}(C_{agg}) = \alpha_{CC,max}\, \frac{C_{agg}-C_{op}}{C_{scale} + (C_{agg}-C_{op})}\, \Theta(C_{agg}-C_{op}) \quad \text{(56)}
 $$
