@@ -60,33 +60,30 @@ The operators $\hat R(C_v)$ and $\hat R_I(C_v)$ are Hermitian because the cost f
 
 **B.3 Fundamental Complexity Bound for SPAP Prediction**
 
-The Self-Referential Paradox of Accurate Prediction (SPAP, Theorems A.1, A.2) establishes a fundamental limit $\alpha_{SPAP} < 1$ on the achievable predictive performance for self-referential systems possessing Property R (Definition 10). Approaching this limit requires increasing computational resources. We quantify the minimal computational cost required, using a unified measure incorporating both statistical resolution and logical depth, based on information theory.
-
 **Definition B.2 (Unified Complexity Functional $C_{\text{uni}}$)**
 
-Consider the task of achieving a prediction accuracy $\alpha$ for a SPAP-limited binary outcome over $\mathcal{T}$ discrete steps or cycles, where $\delta_{\rm SPAP} = \alpha_{\mathrm{SPAP}}-\alpha$ is the error margin below the fundamental limit $\alpha_{\mathrm{SPAP}}$. A $\delta_{\rm SPAP}$-accurate SPAP strategy involves an encoding $\mathcal{C}$ of the prediction model and an evaluator $G$ that simulates the SPAP loop and verifies the accuracy constraint. The unified complexity functional $C_{\text{uni}}(\delta_{\rm SPAP},\mathcal{T})$ represents the minimal total resources (e.g., combined code length $m$ for $\mathcal{C}$ and evaluator Kolmogorov complexity $C(G)$) required by any such strategy:
+Consider the task of achieving a prediction accuracy $\alpha$ for a SPAP-limited binary outcome, where $\delta_{\rm SPAP} = \alpha_{\mathrm{SPAP}}-\alpha$ is the error margin below the fundamental limit $\alpha_{\mathrm{SPAP}}$. A $\delta_{\rm SPAP}$-accurate SPAP strategy involves an encoding $\mathcal{C}$ of the prediction model and an evaluator $G$ that simulates the SPAP loop and verifies the accuracy constraint. The unified complexity functional $C_{\text{uni}}(\delta_{\rm SPAP})$ represents the minimal total resources (e.g., combined code length $m$ for $\mathcal{C}$ and evaluator Kolmogorov complexity $C(G)$) required by any such strategy:
 $$
-C_{\,\text{uni}}\bigl(\delta_{\rm SPAP},\mathcal{T}\bigr) :=\min_{(\mathcal C, G)\ \delta_{\rm SPAP}\text{-strategy}} \bigl[m \;+\; C(G)\bigr] \tag{B.4}
+C_{\,\text{uni}}\bigl(\delta_{\rm SPAP}\bigr) :=\min_{(\mathcal C, G)\ \delta_{\rm SPAP}\text{-strategy}} \bigl[m \;+\; C(G)\bigr] \tag{B.4}
 $$
 
-**Theorem B.2 (Quadratic Complexity Divergence Near $\alpha_{SPAP}$ = Theorem 14)**
+**Theorem B.2 (Poly-logarithmic Complexity Divergence Near $\alpha_{SPAP}$ = Theorem 14)**
 
-For a desired prediction accuracy $\alpha$ approaching the fundamental SPAP limit $\alpha_{\mathrm{SPAP}}$ (i.e., $\delta_{\rm SPAP} = \alpha_{\mathrm{SPAP}}-\alpha \to 0$, specifically for $0 < \delta_{\rm SPAP} \le \delta_{max}$ for some $\delta_{max} < 1/2$), the minimum unified complexity $C_{\text{uni}}(\delta_{\rm SPAP},\mathcal{T})$ required to predict a SPAP-limited process over $\mathcal{T}$ steps (or time horizon $\mathcal{T}$) is rigorously bounded below by combining information-theoretic statistical resolution costs and logical simulation depth costs:
+For a desired prediction accuracy $\alpha$ approaching the fundamental SPAP limit $\alpha_{\mathrm{SPAP}}$ (i.e., $\delta_{\rm SPAP} = \alpha_{\mathrm{SPAP}}-\alpha \to 0$), the minimum unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ required to predict a SPAP-limited process is rigorously bounded below by a poly-logarithmic function of the accuracy gap $\delta_{\rm SPAP}$:
 
 $$
-C_{\text{uni}}(\delta_{\rm SPAP},\mathcal{T})\;\ge\;
-\frac{\mathcal{T}}{2\ln2}\,\frac{1}{(\delta_{\rm SPAP})^{2}} + \Omega(\log \mathcal{T})
+C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{(\delta_{\rm SPAP})^2}\right)
 \tag{B.5}
 $$
 
-where $\mathcal{T}$ is a dimensionless count of steps/cycles, $\delta_{\rm SPAP}$ is the dimensionless error margin, $C_{uni}$ is a dimensionless measure of effective computational resources, $1/(2\ln2)$ is a dimensionless constant (units of nats), and $\Omega(\log \mathcal{T})$ denotes a term that grows at least logarithmically with $\mathcal{T}$. This bound demonstrates that the computational resources required diverge quadratically as the desired accuracy $\alpha$ approaches $\alpha_{SPAP}$.
+where $\delta_{\rm SPAP}$ is the dimensionless error margin and $C_{uni}$ is a dimensionless measure of effective computational resources. This bound demonstrates that the resources required diverge faster than quadratically as the desired accuracy $\alpha$ approaches $\alpha_{SPAP}$.
 
-*Proof Sketch:* The proof leverages rate-distortion theory and computational complexity bounds.
-1.  **Statistical Resolution Cost ($\mathcal{T}/\delta_{\rm SPAP}^2$):** Distinguishing the system's behavior from the SPAP limit with error $\delta_{\rm SPAP}$ requires resolving statistical differences of this order. Standard results from statistical distinguishability (e.g., hypothesis testing bounds related to relative entropy or Chernoff information) show that the number of effective independent samples or the description length ($m$ in Def B.2) required to achieve precision $\delta_{\rm SPAP}$ over $\mathcal{T}$ steps scales as $m \gtrsim \mathcal{T} / (\delta_{\rm SPAP})^2$. This term dominates the complexity for small $\delta_{\rm SPAP}$.
-2.  **Logical Depth Cost ($\Omega(\log \mathcal{T})$):** Simulating the SPAP self-referential loop or evaluating the associated DSRO (Definition 11) to depth $\mathcal{T}$ requires a minimum computational overhead. The Kolmogorov complexity $C(G)$ of the evaluator must include information specifying the horizon $\mathcal{T}$ and the self-referential structure (e.g., via Kleene's recursion theorem), contributing at least $\Omega(\log \mathcal{T})$ bits.
-3.  **Combined Bound:** Any valid $\delta_{\rm SPAP}$-accurate SPAP strategy must cover both costs. The total unified complexity $C_{uni}$ is bounded below by the sum of these independent minimal requirements, yielding Equation (B.5).
+*Proof Sketch:* The proof leverages rate-distortion theory and computational complexity bounds. The total complexity arises from two primary, independent cost components:
+1.  **Statistical Resolution Cost:** The resources needed to distinguish the system's behavior from the SPAP limit with a statistical error margin of $\delta_{\rm SPAP}$. Rate-distortion arguments show this cost scales as $\Omega(1/(\delta_{\rm SPAP})^2)$.
+2.  **Logical Simulation Cost:** The resources needed to execute the self-referential computation (e.g., DSRO simulation) to a logical depth sufficient to guarantee accuracy $1-\delta_{\rm SPAP}$. This depth scales at least logarithmically with the inverse of the error margin, contributing a complexity cost of $\Omega(\log(1/\delta_{\rm SPAP}))$.
+3.  **Combined Bound:** A valid strategy must satisfy both requirements. The total unified complexity $C_{uni}$ is bounded below by the product of the resources needed for each level of simulation depth and the number of levels required. This multiplicative combination of the logical depth cost and the statistical resolution cost per level leads to the combined poly-logarithmic scaling shown in Equation (B.5).
 
-This quadratic divergence of the dimensionless complexity $C_{uni}$ (Eq B.5) underlies the divergence of the Predictive Physical Complexity $C_{pred}(\alpha)$ in **Theorem 14** of the main text. Since physical realizability requires finite $C_P$, attaining performance arbitrarily close to $\alpha_{SPAP}$ is physically unattainable.
+This poly-logarithmic divergence of the dimensionless complexity $C_{\text{uni}}$ (Eq B.5) underlies the divergence of the Predictive Physical Complexity $C_{pred}(\alpha)$ in **Theorem 14** of the main text. Since physical realizability requires finite $C_P$, attaining performance arbitrarily close to $\alpha_{SPAP}$ is physically unattainable.
 
 **B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure**
 
