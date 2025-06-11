@@ -20,7 +20,7 @@ The master equation of the PU framework is the stochastic differential equation 
 
 The PCE Potential incorporates costs that diverge as the system approaches fundamental physical or logical limits. Two such divergences are critical:
 
-*   **Predictive Divergence** [Thm. 14]. To achieve a predictive performance $PP$ on a self-referential task limited by the SPAP boundary $\alpha_{SPAP} < 1$, the required Predictive Physical Complexity $C_P$ diverges quadratically:
+*   **Predictive Divergence** [Thm. 14]. To achieve a predictive performance $PP$ on a self-referential task limited by the **Prediction Coherence Boundary** ($\alpha_{SPAP} < 1$), the required Predictive Physical Complexity $C_P$ diverges quadratically:
     $$
     C_P(PP) \;\ge\; \frac{K}{(\alpha_{SPAP}-PP)^{2}}
     \tag{N.2}
