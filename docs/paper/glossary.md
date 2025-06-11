@@ -122,6 +122,8 @@
 
 *   **Postulate 4 (Local Thermodynamic Equilibrium):** (Section 12.1.2) Assumption that MPU networks admit states treatable as being in LTE near local causal horizons, enabling thermodynamic derivation of gravity.
 
+*   **Prediction Coherence Boundary:** (Remark 3) The conceptual name for **$\alpha_{SPAP}$**, the fundamental upper bound on self-prediction performance. It represents the theoretical maximum for predictive accuracy that cannot be exceeded due to the logical limits of self-reference (SPAP). Approaching this boundary requires quadratically divergent Predictive Physical Complexity (Theorem 14), forming the basis for **Prediction Relativity**.
+
 *   **PP(t) (Predictive Performance):** (Definition 7, Eq. 8) A normalized measure ($PP \in (0, 1]$) quantifying the effectiveness (quality $Q$) of a system's predictions, inversely related to Prediction Error ($PE$). Viable systems operate with $\alpha < PP < \beta$.
 
 *   **Prediction Relativity:** (Remark 3) Concept encapsulating the fundamental limits on predictive accuracy ($\alpha_{SPAP}<1$) arising from self-reference (SPAP) and the associated divergent resource costs ($C_P \propto 1/(\alpha_{SPAP}-\alpha)^2$) required to approach these limits (Theorem 14), analogous to the speed of light limit $v \to c$ in Special Relativity.
