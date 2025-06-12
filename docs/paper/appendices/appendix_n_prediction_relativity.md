@@ -55,6 +55,11 @@ C_{noise}(a) := C^*(a) - C^*(0)
 $$
 By construction, $C_{noise}(0)=0$, and it is a monotonically increasing function of $a$. This demonstrates that the requirement to allocate extra complexity to counteract Unruh noise is not an assumption but a direct consequence of the MPU's adaptation dynamics under PCE.
 
+To model the total required complexity for the UCT, we will adopt the simplest additive form, $C_{req}(t) = C_{SPAP}(PP(t)) + C_{noise}(a(t))$, where $C_{noise}(a)$ is the monotonically increasing function of acceleration derived in Lemma N.4. While Lemma N.4 establishes the existence and monotonicity of $C_{noise}(a)$, its specific functional form (e.g., how it scales with $a$) depends on the detailed temperature dependence of the cost function $R(C, T_{eff})$ and is a subject for future investigation. More complex, non-linear interactions between the $C_{SPAP}$ and $C_{noise}$ components in determining the total cost are also possible and represent an avenue for future refinement. The effective temperature is likewise modeled additively: $T_{eff}(t) = T_{bath} + T_U(a(t))$.
+
+This Unruh radiation acts as a source of noise, fundamentally degrading the MPU's ability to make predictions.
+
+
 ## N.4 The Unified Cost of Transgression (UCT)
 
 > **Theorem (UCT).**
@@ -72,9 +77,9 @@ By construction, $C_{noise}(0)=0$, and it is a monotonically increasing function
 > $$
 >
 > where the components are defined by framework principles:
-> *   **$C_{req}(t) = C_{SPAP}(PP(t)) + C_{noise}(a(t))$** is the total required complexity.
+> *   **$C_{req}(t) = C_{SPAP}(PP(t)) + C_{noise}(a(t))$** is the total required complexity, representing the simplest additive model for combining these distinct complexity demands.
 >     *   $C_{SPAP}(PP(t))$ is the complexity needed to achieve performance $PP(t)$ against the SPAP limit [Thm. 14].
->     *   $C_{noise}(a(t))$ is the additional complexity required to counteract Unruh noise, whose existence and monotonicity are derived from PCE equilibrium conditions [Appx. N.3].
+>     *   $C_{noise}(a(t))$ is the additional complexity required to counteract Unruh noise, whose existence and monotonicity are derived from PCE equilibrium conditions [Appx. N.3, Lemma N.4].
 > *   **$T_{eff}(a(t)) = T_{bath} + T_U(a(t))$** is the effective temperature.
 > *   **$R(C, T_{eff})$** is the PU physical operational cost function, generalized for temperature dependence [Def. 3, Appx. N.3].
 >
@@ -141,7 +146,8 @@ $$
 **Lemma N.3 (Relativistic work).** The minimum work to accelerate a mass $m_0$ from rest to final velocity $v_f$ is $W_{kin}(v_f) = m_0c^2(\gamma(v_f)-1)$. 
 
 **Lemma N.4 (Complexity Cost of Unruh Noise).** An MPU undergoing proper acceleration $a$ perceives an effective thermal bath at temperature $T_U(a) = \frac{\hbar a}{2\pi c k_B}$. To maintain a constant predictive performance $PP$ against this noise, the MPU must allocate additional predictive complexity $C_{noise}(a)$. The existence of this cost is necessary, and it must be a monotonically increasing function of $a$, with $C_{noise}(0)=0$.
-> *Proof.* The existence and properties of $C_{noise}(a)$ are derived as a necessary consequence of the MPU's adaptation dynamics under PCE. An MPU operating in a stable predictive regime seeks to maintain a target operational performance $PP_{op} \in (\alpha, \beta)$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20]):
+> *Proof.* The MPU's adaptation dynamics under PCE establish the necessity and key properties of $C_{noise}(a)$. An MPU operating in a stable predictive regime seeks to maintain a target operational performance $PP_{op} \in (\alpha, \beta)$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$.
+ This optimum is found where the marginal predictive benefit equals the marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20]):
 > $$
 > \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda \frac{\partial R}{\partial C}\bigg|_{C^*, T_{eff}} + \frac{\partial R_I}{\partial C}\bigg|_{C^*}
 > $$
