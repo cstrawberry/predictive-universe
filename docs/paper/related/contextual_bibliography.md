@@ -11,6 +11,7 @@
 * Deutsch, D. (1997). *The Fabric of Reality*. London, UK: Penguin Books. *(Computation, physics, epistemology links)*
 * Floridi, L. (2011). *The Philosophy of Information*. Oxford, UK: Oxford University Press. *(Informational ontologies)*
 * Fredkin, E. (1990). Digital Mechanics: An Informational Process Based on Reversible Universal Cellular Automata. *Physica D: Nonlinear Phenomena, 45*(1–3), 254–270. *(Physics as discrete computation)*
+* Fullwood, J., & Vedral, V. (2025). Geometry from quantum temporal correlations. arXiv:2502.13293. (Provides a direct, rigorous mathematical demonstration of the 'It from Qubit' principle by deriving 3D Euclidean space from the temporal correlations of a single qubit's measurements.)
 * Hoel, E. (2017). When the Map Is Better Than the Territory. *Entropy, 19*(5), 188. *(Causal emergence)*
 * Landauer, R. (1991). Information is Physical. *Physics Today, 44*(5), 23–29. *(Information physicality)*
 * Leibniz, G. W. (1714/1989). *Monadology* (R. Ariew & D. Garber, Trans.). Indianapolis, IN: Hackett Publishing Co. *(Early concept of reality from perspectival processing units)*
