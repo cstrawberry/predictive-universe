@@ -35,18 +35,30 @@ The PCE Potential incorporates costs that diverge as the system approaches funda
 ## N.3 Unifying Mechanism: The Thermodynamic Cost of Acceleration
 
 A moving MPU is not a closed system. An MPU undergoing proper acceleration $a$ perceives its environment as a thermal bath at the Unruh temperature [Unruh, 1976]:
-
 $$
-T_U = \frac{\hbar a}{2\pi c k_B}
+T_U(a) = \frac{\hbar a}{2\pi c k_B}
 \tag{N.4}
 $$
+This Unruh radiation acts as a source of noise, fundamentally degrading the MPU's ability to make predictions. The framework's core optimization principles provide the mechanism for how this noise impacts the cost of prediction.
 
-This Unruh radiation acts as a source of noise, fundamentally degrading the MPU's ability to make predictions. To maintain a given level of predictive performance $PP$ in the face of this noise, the MPU must increase its internal complexity $C_P$. This establishes a direct physical link between motion (acceleration $a$) and the cost of prediction. The PU cost function $R(C)$, which represents the minimum power to sustain complexity $C$, must be generalized to $R(C, T_{eff})$ to account for the thermodynamic environment. This is a physically necessary extension, as the resources required to maintain stable information states against thermal fluctuations inherently scale with temperature. To model the total required complexity, we adopt the simplest additive form, $C_{req} = C_{SPAP} + C_{noise}(a)$, where $C_{noise}(a)$ is a monotonically increasing function of acceleration whose existence is necessary but whose specific functional form is a subject for future investigation. The effective temperature is likewise modeled additively: $T_{eff} = T_{bath} + T_U$. We acknowledge that more complex, non-linear interactions between these components are possible and represent an important avenue for future refinement. Deriving the specific scaling of $C_{noise}(a)$ and the precise form of $R(C, T_{eff})$ from first-principles models of MPU error correction in thermal environments represents a crucial next step in refining the UCT.
+An MPU operating in a stable predictive regime seeks to maintain a target performance $PP_{op}$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from Def. 14, 20):
+$$
+\Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda \frac{\partial R}{\partial C}\bigg|_{C^*, T_{eff}} + \frac{\partial R_I}{\partial C}\bigg|_{C^*}
+$$
+The physical cost function $R$ must depend on the effective temperature $T_{eff} = T_{bath} + T_U(a)$, as maintaining stable information states against thermal fluctuations is a core thermodynamic cost. Physical consistency requires that the marginal cost of maintaining complexity increases with temperature, i.e., $\frac{\partial^2 R}{\partial C \partial T_{eff}} > 0$.
+
+When acceleration $a$ increases, $T_U(a)$ and thus $T_{eff}$ increase. This raises the marginal cost term $\frac{\partial R}{\partial C}$ for any fixed complexity. To restore the equilibrium equality for a constant target performance $PP_{op}$, the system must adapt its complexity $C^*$ to a new, higher value. Therefore, the optimal complexity $C^*$ is necessarily a monotonically increasing function of acceleration, $C^*(a)$.
+
+We define the **noise-induced complexity cost**, $C_{noise}(a)$, as this necessary additional complexity:
+$$
+C_{noise}(a) := C^*(a) - C^*(0)
+$$
+By construction, $C_{noise}(0)=0$, and it is a monotonically increasing function of $a$. This demonstrates that the requirement to allocate extra complexity to counteract Unruh noise is not an assumption but a direct consequence of the MPU's adaptation dynamics under PCE.
 
 ## N.4 The Unified Cost of Transgression (UCT)
 
 > **Theorem (UCT).**
-> Consider a process where an MPU (rest mass $m_0$) is accelerated along a trajectory with proper acceleration profile $a(t)$, resulting in a final velocity $v_f$. Simultaneously, it performs a predictive task, achieving an average performance $PP(t)$. The total work $W_{\text{tot}}$ required for this joint process is the sum of the kinetic work $W_{\text{kin}}$ and the predictive work $W_{\text{pred}}$. This total work is bounded below:
+> Consider a process where an MPU (rest mass $m_0$) is accelerated along a trajectory with proper acceleration profile $a(t)$, while simultaneously performing a predictive task to achieve performance $PP(t)$. The total work $W_{\text{tot}}$ required for this joint process is bounded below:
 >
 > $$
 > W_{\text{tot}} = W_{\text{kin}} + W_{\text{pred}}
@@ -54,12 +66,19 @@ This Unruh radiation acts as a source of noise, fundamentally degrading the MPU'
 >
 > $$
 > \boxed{
-> W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( \frac{K}{(\alpha_{SPAP}-PP(t))^2} + C_{noise}(a(t)), T_{eff}(a(t)) \right) dt
+> W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(a(t)) \right) dt
 > }
 > \tag{N.5}
 > $$
 >
-> where $R(C, T_{eff})$ is the PU physical operational cost function [Def. 3], generalized to include temperature dependence. $T_{eff}(t) = T_{bath} + T_U(a(t))$ is the effective temperature. The optimal trajectory is one that minimizes this total work integral, forcing a trade-off between reaching a destination quickly (high $v$ and $a$, high $W_{kin}$ and increased predictive power cost via $T_U$) and maintaining high predictive accuracy (high predictive power cost via the SPAP term).
+> where the components are defined by framework principles:
+> *   **$C_{req}(t) = C_{SPAP}(PP(t)) + C_{noise}(a(t))$** is the total required complexity.
+>     *   $C_{SPAP}(PP(t))$ is the complexity needed to achieve performance $PP(t)$ against the SPAP limit [Thm. 14].
+>     *   $C_{noise}(a(t))$ is the additional complexity required to counteract Unruh noise, whose existence and monotonicity are derived from PCE equilibrium conditions [Appx. N.3].
+> *   **$T_{eff}(a(t)) = T_{bath} + T_U(a(t))$** is the effective temperature.
+> *   **$R(C, T_{eff})$** is the PU physical operational cost function, generalized for temperature dependence [Def. 3, Appx. N.3].
+>
+> The optimal trajectory is one that minimizes this total work integral, forcing a trade-off between reaching a destination quickly (high $v$ and $a$, increasing $W_{kin}$ and $W_{pred}$ via $T_U$) and maintaining high predictive accuracy (increasing $W_{pred}$ via the $C_{SPAP}$ term).
 
 > **Box N.1: Worked Numerical Estimate of the Unified Cost of Transgression**
 >
