@@ -89,7 +89,7 @@ By construction, $C_{noise}(0)=0$, and it is a monotonically increasing function
 > * **Probe:** Mass $m_0 = 1$ kg.
 > * **Trajectory:** Achieve a final velocity $v_f = 0.96c$ after proper time $\tau = 1$ s under constant proper acceleration.
 > * **Predictive Task:** Maintain $PP = \alpha_{SPAP} - 10^{-11}$ (so $\alpha_{SPAP}\approx1$).
-> * **PU Parameters:** $K=1$.
+> * **PU Parameters:** For the complexity bound $C_{SPAP} \ge K / (\alpha_{SPAP}-PP)^2$ [Lemma N.2], we set the constant **$K = 1$ bit** for this illustrative model.
 > * **Cost Model:** $R(C,T_{\rm eff})=k_R\,C\,(k_BT_{\rm eff})$; here $k_R=10^{29}$ (bits·s)$^{-1}$. This extremely large value is chosen for illustrative purposes, representing a hypothetical system whose predictive architecture is exceptionally vulnerable to thermal decoherence, a regime where the UCT becomes dominant.
 > * **Noise Model:** $C_{\rm noise}(a)=k_N\,(a/g_{\rm earth})^2$ with $k_N=10^{-30}$ bits; $T_{\rm bath}\approx0$. The constants $k_R$ and $k_N$ are free parameters in this model; their values would need to be determined by a more fundamental theory of MPU error correction and thermodynamics. Here, $k_R$ is chosen to be very large and $k_N$ very small to highlight the respective contributions of the SPAP and Unruh costs in this specific example.
 >
@@ -102,7 +102,7 @@ By construction, $C_{noise}(0)=0$, and it is a monotonically increasing function
 > 2. **Predictive Cost:**
 >
 >    * $a=(c/\tau)\cosh^{-1}\gamma\approx5.84\times10^8$ m/s².
->    * $C_{SPAP}=1/(10^{-11})^2=10^{22}$ bits.
+>    * $C_{SPAP} = (1 \text{ bit}) / (10^{-11})^2 = 10^{22}$ bits.
 >    * $T_U=\hbar a/(2\pi c k_B)\approx2.37\times10^{-12}$ K.
 >    * $C_{\rm noise}\approx3.6\times10^{-15}$ bits.
 >    * $C_{\rm req}\approx10^{22}$ bits.
