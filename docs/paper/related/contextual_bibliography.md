@@ -5,6 +5,7 @@
 
 ## 1. Information, Computation, and Emergent Physics
 
+* Alexander, S., Cunningham, W. J., Lanier, J., Smolin, L., Stanojevic, S., Toomey, M. W., & Wecker, D. (2021). *The Autodidactic Universe*. arXiv:2104.03902 *(Proposes a framework where physical laws are not fixed but are learned by the universe itself, establishing a formal correspondence between physical theories, matrix models, and machine learning architectures.)*
 * Barabási, A.-L. (2016). *Network Science*. Cambridge, UK: Cambridge University Press. *(Network science context)*
 * Bennett, C. H. (1982). The thermodynamics of computation—a review. *International Journal of Theoretical Physics, 21*(12), 905–940. *(Thermodynamics of computation)*
 * Deutsch, D., & Marletto, C. (2015). Constructor theory of information. Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences, 471(2174), 20140540. *(Constructor theory)*
