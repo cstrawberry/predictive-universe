@@ -17,106 +17,77 @@ This appendix explores potential connections between the Predictive Universe (PU
 *   **Potential:** If the fundamental rules and parameters of the MPU model and POP/PCE optimization are simple, the complex pattern of observed fundamental constants might arise as a unique or stable minimum of the high-dimensional PCE potential landscape. Fine-tuning in observed constants could potentially be reinterpreted as thermodynamic or informational optimality.
 *   **Next Step:** Develop explicit, minimal MPU network models and analyze the structure and minima of the PCE potential $V(x)$ to see if the model parameters determining fundamental constants can plausibly yield the observed orders of magnitude and relationships, or show that specific relationships between constants are necessary for PCE optimality.
 
-**K.3 PU Pathway to Black Hole Information Resolution: Perspectival Encoding and Emission**
-
-**K.3.1 The Paradox in Brief**
-
-The Black Hole Information Paradox arises from the apparent conflict between:
-(a) The prediction from semi-classical gravity that black holes completely evaporate via Hawking radiation, which appears to be thermal and independent of the details of the infalling matter (except for global charges like mass, charge, angular momentum).
-(b) The principle of unitarity in quantum mechanics, which requires that information encoded in a pure initial state (e.g., the infalling matter) cannot be lost in a closed system; the final state (e.g., Hawking radiation + any remnant) must also be pure or allow for the reconstruction of the initial state.
-Simply put, if thermal radiation carries no information about the specific pure state that formed the black hole, then information seems to be irretrievably lost, violating unitarity.
-
-**K.3.2 PU Framework Context: Emergent Spacetime and Horizons as MPU Boundaries**
-
-Within the Predictive Universe (PU) framework:
-1.  Spacetime $(M, g_{\mu\nu})$ is an emergent structure arising from the dynamics of an underlying Minimal Predictive Unit (MPU) network (Hypothesis 1, Section 11), conditional on Theorem 43.
-2.  A black hole horizon $\mathcal{H}$ is a causal boundary within this emergent spacetime, representing a region from which information cannot escape to distant observers *through classical spacetime pathways alone*.
-3.  Information transfer and interactions across or near the horizon are fundamentally governed by Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) between MPUs. These interactions are the 'Evolve' processes (Definition 27) of constituent MPUs.
-4.  Key properties of ND-RID interactions include:
-    *   Irreversibility ($\varepsilon \ge \ln 2$, Theorem 31), leading to thermodynamic costs.
-    *   Strict channel contractivity ($f_{RID} < 1$, Lemma E.1), implying lossiness.
-    *   Fundamentally bounded classical information capacity ($C_{max}(f_{RID}) < \ln d_0$, Theorem E.2), where $d_0 \ge 8$ is the MPU Hilbert space dimension (Theorem 23).
-5.  The Horizon Entropy Area Law ($S_{BH} = \mathcal{A}/(4G\hbar)$ in units where $c=k_B=1$, Theorem 49, Appendix E) emerges from these ND-RID channel capacity limits imposed on the information density across the boundary, establishing a maximum bound on *distinguishable states* accessible from one side regarding the other *at a given time*.
-
-**K.3.3 Information Encoding in Infalling Matter**
-
-Consider a pure quantum state $|S_{in}\rangle$ describing the infalling matter, composed of an aggregate of MPUs. This state is an element of a tensor product Hilbert space $\mathcal{H}_{in} = \bigotimes_k \mathcal{H}_{0,k}$. The information of $|S_{in}\rangle$ is encoded in:
-(a) The complex amplitudes $c_{i_1, i_2, ..., i_N}$ in its expansion $|S_{in}\rangle = \sum c_{i_1,...,i_N} |i_1\rangle_{s_1} \otimes ... \otimes |i_N\rangle_{s_N}$.
-(b) The initial perspectives $\{s_k\}$ of the constituent MPUs, relative to which these amplitudes are defined.
-(c) The specific correlations and entanglement structure embedded in the overall amplitude structure across the constituent MPUs.
-
-As this matter collapses, its information is not lost but becomes encoded into the complex internal configuration of the MPUs forming the black hole structure, a state we denote $|S_{BH}(t)\rangle \in \mathcal{H}_{BH}$, which is highly entangled. The "black hole" itself is this MPU aggregate in state $|S_{BH}(t)\rangle$.
-
-**K.3.4 Horizon Dynamics and the Nature of Hawking Radiation in PU**
-
-Hawking radiation is modeled as the outcome of a sequence of 'Evolve' events (Definition 27) occurring at or near the horizon boundary, where the MPUs constituting $|S_{BH}(t)\rangle$ interact with the emergent quantum fields (also composed of MPUs).
-
-1.  **'Internal Prediction' Phase:** Between emissions, the internal black hole state $|S_{BH}(t)\rangle$ undergoes unitary evolution governed by its effective Hamiltonian $H_{BH}$ ('Internal Prediction', Definition 26). This rapidly scrambles information within the black hole.
-2.  **'Evolve' Emission Event:** An interaction $N_{emission}$ (e.g., with vacuum fluctuations) triggers an 'Evolve' event.
-    *   **Local Interaction Context:** For an MPU near the horizon, its effective state before emission is $(|\psi_{loc}(t)\rangle, s_{loc}(t))$, where $|\psi_{loc}(t)\rangle$ is derived from $|S_{BH}(t)\rangle$ and the local field state, and $s_{loc}(t)$ is the relevant interaction perspective.
-    *   **Amplitude Actualization:** An MPU representing an outgoing Hawking quantum (e.g., a photon) is emitted in a specific amplitude state, say $|k_j\rangle$. The probability of emitting $|k_j\rangle$ is $P(k_j) = |\langle k_j | \psi_{loc}(t) \rangle_{s_{loc}(t)}|^2$, following the Born rule (Proposition 7, derived via Appendix G). If $|S_{BH}(t)\rangle$ is highly scrambled and $s_{loc}(t)$ is relatively fixed (e.g., aligned with modes propagating away from the horizon), this gives a nearly thermal distribution for the *types* of quanta $|k_j\rangle$ (their energies, etc.), consistent with Hawking's original result.
-    *  **Stochastic Perspective Shift:** Crucially, along with the amplitude actualization yielding outcome state $|k_j\rangle$, the 'Evolve' process *also* selects a specific final perspective $s'_j$ for the emitted quantum (labeled $j$ for tracking, distinct from the basis index $k$), drawn from the Conditional Perspective Transition Kernel $G_{persp}(s' \mid s_{loc}(t), k_j, N_{emission}, \Delta t)$ (Appendix M, Eq. M.2).
-   * **Context Dependence of Perspective Kernel (Crucial Step):** As per Assumption 1 (Section 9.1.2) and the foundation for the CC hypothesis (Theorem 34), the details of the ‘Evolve’ process—including the specific functional form or parameters of $G_{\text{persp}}\bigl(s'\,\bigm|\;s,k,\lvert S_{BH}(t)\rangle,\Delta t\bigr)$—are sensitive to the broader context provided by the state $\lvert S_{BH}(t)\rangle$. Hence the probability distribution for the *next perspective* $s'_j$ is conditioned on the entire internal state $\lvert S_{BH}(t)\rangle$. Extending context‐dependence from Born‐rule biasing (via CC) to the perspective kernel parameters is a direct consequence of POP/PCE: the ‘Evolve’ process optimises **all** interaction parameters using every bit of available contextual information.
 
 
-**Technical specification of the Conditional Perspective Kernel.**
-For each ‘Evolve’ emission we model the transition probability density for the next interaction‐basis (perspective) as:
-$$
-G_{\text{persp}}\!\bigl(s' \,\big|\, s,k,N_{\mathrm{BH}},\Delta t\bigr) =\frac{1}{Z(s,k,N_{\mathrm{BH}},\Delta t)}\; \exp\!\Bigl[-\gamma\, \mathcal D\!\bigl(C_{\text{agg}}[s'\!\!:s],\,C_{\mathrm{loc}}(t)\bigr)\Bigr] \tag{K.2}
-$$
-where
-*   $\mathcal D$ is a Bregman-type divergence measuring the mismatch between the **conditional aggregate complexity** of the candidate basis $s'$ (relative to prior $s$), denoted $C_{\text{agg}}[s'\!\!:s]$, and the **local complexity budget** $C_{\mathrm{loc}}(t)=C_{agg}[\,S_{BH}(t)]/N_{\mathrm{BH}}(t)$ (average complexity per effective degree of freedom $N_{BH}(t)$ of the black hole);
-*   $\gamma>0$ tunes context-sensitivity;
-*   $Z(s,k,N_{\mathrm{BH}},\Delta t)$ normalises the kernel over $s'$ for fixed prior basis $s$, emitted quantum label $k$, interaction $N_{BH}$, and duration $\Delta t$. The dependence on all conditional arguments $s,k,N_{BH},\Delta t$ is noted for completeness.
+**K.3 PU Pathway to Black Hole Information Resolution: Reflexive Dynamics and Perspectival Encoding**
 
-**Information-capacity consistency check.**
-If the total information per emitted quantum arises from two parallel channels—one for amplitude (max $\sim \ln d_0$ nats for distinguishing $d_0$ states) and one for perspective (max $C_{max}$ nats from ND-RID channel capacity, Theorem E.2)—the combined maximum information emission rate per unit time is:
-$$
-\dot{\mathcal I}_{\max}(t) \approx \sigma_{\text{link}}\,\mathcal A_{\mathrm{eff}}(t)\, \frac{(\ln d_0 + C_{\max})}{\tau_{\min}} \tag{K.3}
-$$
-where symbols are as in Appendix E. Integrating until the final evaporation time $t_{\mathrm{evap}}$ gives the total leaked information:
-$$
-\mathcal I_{\text{leak}} = \int_{0}^{t_{\mathrm{evap}}} \dot{\mathcal I}_{\max}(t)\,dt \;\gtrsim\; S_{\mathrm{BH}}^{\text{initial}} \tag{K.4}
-$$
-This inequality suggests that, in principle, the combined amplitude and perspectival channel can transfer sufficient information for global MPU-level unitarity/predictive potential preservation, while respecting the Bekenstein–Hawking area bound on *instantaneous distinguishable information* at every intermediate step. A detailed calculation relating $t_{evap}$, $\mathcal{A}_{eff}(t)$, $\sigma_{link}$, $C_{max}$, $\ln d_0$, $\tau_{min}$ and $S_{BH}^{initial}$ (which is $\mathcal{A}_{initial}/(4G\hbar)$) would be needed to verify the "$\gtrsim$" quantitatively.
+The Black Hole Information Paradox, which arises from the conflict between quantum unitarity and the apparent information loss in thermal Hawking radiation, can be recast and potentially resolved within the Predictive Universe framework by treating information retrieval as a **reflexive computational problem**. This perspective reveals that the paradox stems not just from a lack of computational power, but from the fundamental logical structure of self-reference inherent in the measurement process itself, a structure that is central to the PU framework.
 
-**K.3.5 The Perspectival Information Channel: Reconciling Information with Thermal Emission**
+**K.3.1 Black Hole Information Retrieval as a Reflexive Problem**
 
-The key proposal is that the "lost" information of the initial state $|S_{in}\rangle$ is not carried predominantly by subtle deviations in the *thermal spectrum* of the $|k_j\rangle$ states, but rather it is encoded in the **temporal sequence of the emitted perspectives $\{s'_j\}$ and their correlations with the emitted quanta sequence $\{|k_j\rangle\}$**, over the entire evaporation lifetime.
+We begin by framing the task of recovering the information of an initial pure state $|\psi_{in}\rangle$ that formed a black hole as a computational problem.
 
-1.  **Richness of Perspective Space:** The Perspective Space $\Sigma \cong U(d_0)/U(1)^{d_0}$ (Theorem 25) is a high-dimensional manifold ($d_0 \ge 8$). Each $s'_j \in \Sigma$ represents a choice of basis, a highly structured piece of information. A sequence of such choices can encode a vast amount of information.
-2.  **Conditional Emission:**
-    *   At time $t_j$, emission of $(|k_j\rangle, s'_j)$ occurs. This reduces the black hole's mass and alters its internal state to $|S_{BH}(t_{j+1})\rangle$.
-    *   The *next* emission event $(|k_{j+1}\rangle, s'_{j+1})$ at $t_{j+1}$ occurs with statistics governed by this *updated* $|S_{BH}(t_{j+1})\rangle$. Specifically, the probability distribution for $s'_{j+1}$, via $G_{persp}$, will be subtly different due to the change in $S_{BH}$.
-3.  **Sequential Encoding:** Information initially in $|S_{in}\rangle$ is first scrambled into the complex structure of $|S_{BH}(0)\rangle$. Each emission event $(|k_j\rangle, s'_j)$ reveals a tiny, seemingly random aspect of this structure. However, the *precise choice* of $s'_j$ (drawn from $G_{persp}$ conditioned on $S_{BH}(t_j)$) carries information about $S_{BH}(t_j)$. The sequence of chosen perspectives $\{s'_j\}$, taken together, forms a highly complex, correlated datastream that can, in principle, be "decoded" to reconstruct the initial internal correlations of $|S_{BH}(0)\rangle$, and thus $|S_{in}\rangle$.
-4.  **Thermal Appearance vs. Full Information:**
-    *   An observer measuring only the statistics of $|k_j\rangle$ (energies, particle types), effectively tracing over or averaging out the perspectives $s'_j$, will observe a nearly thermal spectrum. This is analogous to measuring only the letter frequencies in a book, which appears random.
-    *   An observer capable of measuring or inferring the sequence of actualized perspectives $\{s'_j\}$ alongside the quanta $\{|k_j\rangle\}$ could access the full information content. This is analogous to reading the specific sequence of letters and their contextual relationships, revealing the meaningful text.
+*   **Problem Instance $I_t$:** The "instance" of the problem at time $t$ is the complete physical state of the black hole, characterized by its macroscopic parameters (mass $M_t$, charge $Q_t$, angular momentum $J_t$) and, crucially, its internal MPU network state $|S_{BH}(t)\rangle$, which encodes the scrambled information of $|\psi_{in}\rangle$.
+*   **Solution Attempt $S_t$:** A "solution attempt" corresponds to an external observer performing a measurement on the outgoing Hawking radiation during a time interval $\Delta t$. This measurement is an 'Evolve' process (Definition 27) that extracts a quantum of information.
+*   **Instance Transformation Function $T(I_t, S_t)$:** The core physical dynamic of the paradox lies in the fact that the measurement $S_t$ is not passive. By extracting a quantum of energy-momentum and information, the measurement process itself alters the black hole's state. This physical back-reaction is the **Instance Transformation Function**. The state of the black hole at the next step, $I_{t+1}$, is determined by its previous state $I_t$ and the measurement interaction $S_t$ via a stochastic mapping:
+    $$
+    I_{t+1} = T(I_t, S_t)
+    \tag{K.2}
+    $$
+    This mapping is physically realized by the MPU network dynamics, where the emission of a Hawking quantum via an 'Evolve' event reduces the mass and alters the internal state $|S_{BH}(t)\rangle \to |S_{BH}(t+1)\rangle$.
 
-**K.3.6 Consistency with Unitarity (Predictive Potential Preservation)**
+Because the act of "solving" (measuring) the problem instance modifies the instance itself, Black Hole Information Retrieval (BHIR) is a textbook example of a **reflexive problem**. Its solvability depends on the nature of this reflexive feedback loop.
 
-At the fundamental MPU network level, the evolution of the total system (black hole interior + surrounding fields + emitted radiation) is driven by POP/PCE. PCE disfavors configurations that lead to an irretrievable loss of *predictive potential*. The emission of information encoded in the perspectival sequence $\{s'_j\}$ provides a pathway for this predictive potential to be preserved.
-While the amplitude part of the local Hilbert space evolution around 'Evolve' events appears non-unitary due to probabilistic actualization, the "meta-dynamics" of the full MPU network (potentially corresponding to unitary evolution of a global state function on the entire network Hilbert space) might strive to preserve a generalized measure of total predictive capacity or information. The specific sequence of $(k_j, s'_j)$ that actualizes can be seen as one "history" chosen from an ensemble, where the ensemble average maintains the framework's deeper consistency regarding information and predictability. If a specific MPU-level state function representing total predictive potential evolves unitarily in the background, then the information encoded in this perspectival channel *must* be sufficient to ensure this overarching "unitarity."
+**K.3.2 Expansive Reflexivity and the Infinite Regress of Measurement**
 
-**K.3.7 Consistency with Area Law, ND-RID Limits, and No-Hair Theorems**
+The key insight arises from analyzing the stability of this reflexive loop. We can classify the reflexivity based on whether sequential solution attempts cause the problem instance to converge or diverge.
 
-1. **Area Law:** $$S_{BH} \;=\; \frac{\mathcal{A}}{4G\hbar}$$ still holds. It represents the maximum distinguishable states *given access only to the current horizon boundary*, analogous to channel capacity. The **information content of** $\lvert S_{in}\rangle$ (which can be much larger than the Bekenstein–Hawking entropy $S_{BH}$ if the initial state was very large or complex) is not stored “on” the horizon like bits on a surface. It is encoded *in the structure that gives rise to* the long sequence of emissions. The *rate* of information release via this perspectival channel would be limited by the effective ND-RID channel capacity at the instantaneous horizon. If the emission process utilizes an effective area $\mathcal{A}_{eff}$ of the horizon corresponding to $N_{eff\_links}(\mathcal{A}_{eff}) = \sigma_{link} \mathcal{A}_{eff}$ channels (where $\sigma_{link}$ is from Appendix E, Theorem E.3), and each such channel can reliably distinguish a total of $\sim (\ln d_0 + C_{max})$ nats regarding the "choice" of $s'_j$ and $k_j$ per characteristic MPU time $\tau_{min}$ (as per Eq. K.3), then the maximum information emission rate is $\sigma_{link} \mathcal{A}_{eff} (\ln d_0 + C_{max}) / \tau_{min}$. The information is released *sequentially* over the evaporation lifetime.
-2.  **ND-RID Irreversibility/Contractivity:** The individual 'Evolve' emission events are irreversible ($\varepsilon \ge \ln 2$) and contractive ($f_{RID}<1$). This accounts for the scrambling and "lossiness" if one only looks at coarse-grained observables. The information is retained in the *fine-grained details of the entire emission sequence*, particularly the perspective history.
-3.  **No-Hair Theorems:** Apply to the *final static, classical* state of a black hole. The PU description is of a dynamic MPU aggregate. While the coarse-grained, emergent gravitational field (Appendix B, Appendix F) may appear "bald" externally, this does not preclude the internal MPU state $|S_{BH}(t)\rangle$ from carrying immense detail, which is then leaked via the perspectival channel.
+*   **Definition K.3.1 (Contractive vs. Expansive Reflexivity).**
+    *   **Contractive Reflexivity:** If sequential measurements cause the state of the black hole to converge towards a stable, predictable final state (e.g., if each measurement had a diminishing impact), the problem would be solvable in principle. This corresponds to the transformation $T$ being a contraction mapping in the space of problem instances.
+    *   **Expansive Reflexivity:** If sequential measurements cause the state of the black hole to change in an accelerating or increasingly unpredictable manner, the problem instance "runs away" from the solver, creating a computational infinite regress.
 
-**K.3.8 Summary of Proposed Resolution Mechanism**
+**Theorem K.3.1 (Expansive Reflexivity of Late-Stage Evaporation).**
+For a black hole in the final stages of its evaporation, the information retrieval problem exhibits **expansive reflexivity**. Each measurement of a Hawking quantum induces a proportionally larger and more significant change on the remaining black hole state, preventing a stable, convergent information extraction process.
 
-The PU framework proposes that information from an infalling pure state is not lost during black hole evaporation but is encoded in the **temporal sequence of perspectival states $(|k_j\rangle, s'_j)$ of the emitted Hawking quanta**. The amplitude components $|k_j\rangle$ appear thermal when perspectives are averaged, but the specific choice of the sequence of perspectives $\{s'_j\}$ (the interaction contexts of emission), which are probabilistically selected via a kernel $G_{persp}$ conditioned by the evolving internal black hole state $|S_{BH}(t)\rangle$, carries the "missing" information. This constitutes a subtle, high-capacity information channel rooted in the fundamental perspectival nature of MPU states and 'Evolve' dynamics.
+*Proof.*
+1.  **Accelerating Dynamics:** As the black hole's mass $M_t$ decreases, its temperature $T_H \propto 1/M_t$ and evaporation rate $dM/dt \propto -1/M_t^2$ both increase. The black hole's dynamics accelerate.
+2.  **Increasing Relative Impact:** The emission of a single Hawking quantum with energy $\Delta E \sim k_B T_H \propto 1/M_t$ represents a fractional mass loss of $\Delta M / M_t \propto (1/M_t)/M_t = 1/M_t^2$. As $M_t \to 0$, this fractional impact diverges. A single measurement has a larger and larger effect on the remaining system.
+3.  **Complexity Divergence:** The computational complexity of the black hole's internal state is thought to grow for a significant portion of its lifetime before decreasing. The accelerating dynamics and increasing relative impact of measurements in the late stages mean that the "problem instance" $I_t$ is changing more rapidly and dramatically than the information can be extracted.
+4.  **Infinite Regress:** An observer attempting to build a complete model of $|S_{BH}(t)\rangle$ by collecting sequential Hawking quanta is faced with a target that transforms away from them at an ever-increasing rate. This establishes an **infinite regress**: the solution to step $t$ redefines the problem for step $t+1$ so significantly that the new problem is "further away" from a complete solution—in the sense that the rate of change of the internal state now exceeds the information extraction rate—than the previous one was. This satisfies the conditions for expansive reflexivity. QED
 
-**K.3.9 Prediction, Testability, and Challenges**
+**Theorem K.3.2 (Fundamental Unsolvability via Local, Sequential Measurement).**
+Due to the expansive reflexivity inherent in late-stage black hole evaporation, no algorithm based on local, sequential measurements of Hawking radiation can recover the complete information of the initial state $|\psi_{in}\rangle$, regardless of available computational resources.
 
-*   **Prediction:** If this mechanism is correct, Hawking radiation is not perfectly thermal. Correlations should exist between the (currently unmeasurable) emission perspectives $\{s'_j\}$ of successively emitted quanta, and between $s'_j$ and the properties of $|k_j\rangle$. These correlations would be a signature of the evolving internal state of the black hole.
-*   **Testability:** Direct measurement of individual perspectives $s'_j$ of Hawking quanta is currently beyond any conceivable technology. Indirect tests might involve searching for extremely subtle, long-range correlations in the *properties* of the quanta $|k_j\rangle$ that go beyond thermal expectations, if these properties are themselves subtly modulated by the perspective shifts.
-*   **Challenges:**
-    *   Developing a quantitative model for $G_{persp}(s' | s, k, N_{BH}, \Delta t)$ (such as Eq. K.2) and its dependence on $|S_{BH}(t)\rangle$, and deriving its parameters from PCE.
-    *   Quantifying the information capacity of the perspectival sequence channel (e.g., via Eq. K.3, K.4) and showing it can robustly accommodate the initial information for typical black hole parameters.
-    *   Explicitly demonstrating how the process can be described by an overarching unitary (or predictive potential preserving) evolution for the full MPU network.
-    *   Reconciling the apparent single-outcome realization $(k_j,s'_j)$ for an external observer with the potential global "unitarity". The perspectival nature of actualization (Proposition 9) relative to the observer's frame may play a key role here.
+*Proof.* This is a physical realization of the unsolvability of problems with expansive reflexivity. The problem instance $I_t$ does not converge, preventing any sequential algorithm from building a complete and stable solution. This limitation is not one of computational power (e.g., P vs NP) but a fundamental barrier arising from the logical structure of self-reference in the physical measurement process. It is a physical analogue of the logical limits established by SPAP (Theorem 10) and RUD (Theorem 12), where the act of observation fundamentally precludes complete knowledge.
+
+**K.3.3 The PU Resolution: A Perspectival Bypass of the Reflexive Loop**
+
+The PU framework's resolution lies not in overcoming the expansive reflexivity, but in identifying an information channel that **bypasses the reflexive loop**. The problem is not with unitarity, but with the assumption that information is solely encoded in the thermal properties of the emitted quanta.
+
+The PU framework proposes that information escapes via the **Perspectival Information Channel**.
+
+1.  **The Dual Nature of Emission:** Each 'Evolve' event that emits a Hawking quantum is a transition of the full Perspectival State. It produces not just an amplitude state $|k_j\rangle$ (e.g., a photon of a certain energy) but also a corresponding **final perspective** $s'_j$ (an interaction basis).
+    $$
+    \text{Emission Event}_j = \left( |k_j\rangle, s'_j \right)
+    \tag{K.3}
+    $$
+2.  **Context-Dependent Perspective Selection:** The key is that the choice of the perspective $s'_j$ is not random. It is drawn from the Conditional Perspective Transition Kernel $G_{persp}(s' | s_{loc}, k_j, |S_{BH}(t_j)\rangle, ...)$ (formalized in Appendix M, Eq. M.2), which is critically dependent on the full internal MPU state of the black hole, $|S_{BH}(t_j)\rangle$.
+3.  **Bypassing the Loop:** The information is encoded in the specific, highly-correlated sequence of perspectives $\{s'_j\}$ over the black hole's entire lifetime. This sequence is not subject to the same reflexive feedback loop as the mass-energy. While the emission of a quantum changes $|S_{BH}\rangle$ and thus the probability distribution for the *next* perspective, the information carried by the *current* perspective is already "out." An observer who could collect the entire sequence of pairs $\{(|k_j\rangle, s'_j)\}$ could, in principle, access the full information content of the initial state, preserving the global predictive potential of the system and satisfying the framework's overarching requirement for unitarity.
+4.  **Consistency with Thermal Appearance:** An observer who only measures the properties of the quanta $|k_j\rangle$ (tracing over the perspectives $s'_j$) would see a nearly thermal distribution, as the amplitudes are selected via the Born rule from a highly scrambled internal state. The information is hidden in the (currently unmeasurable) contextual basis of each emission.
+
+**K.3.4 Connection to Non-Local Workarounds**
+
+This PU mechanism is conceptually aligned with other non-local proposals that bypass the reflexive measurement loop:
+
+*   **ER=EPR / Holography:** These proposals posit that information is accessible via non-local entanglement or a boundary description. This is functionally equivalent to accessing information *outside* the local, sequential `Measure -> Transform -> Measure` loop that creates the expansive reflexivity. The PU perspectival channel is another such non-local channel, where "non-local" refers to the global information encoded in the Perspective Space $\Sigma$, which is not a simple spatial dimension.
+*   **Final-State Projections:** This approach avoids the infinite regress by imposing a boundary condition that constrains the transformation function $T(I,S)$, forbidding expansive paths. The PU mechanism achieves a similar end, not by a boundary condition, but by providing a parallel, non-reflexive channel for information to escape, thus preserving global predictability without violating the local reflexive dynamics of the black hole itself.
+
+**K.3.5 Conclusion and Predictions**
+
+The PU framework recasts the Black Hole Information Paradox as a problem of **expansive reflexivity** in computation. This demonstrates why local, sequential measurement strategies are doomed to fail due to a logical infinite regress, independent of computational power. The proposed resolution is the existence of a **Perspectival Information Channel**, where information is encoded in the highly-correlated sequence of measurement contexts (perspectives) that accompany each emitted Hawking quantum.
+
+*   **Prediction:** Hawking radiation is not perfectly thermal. The full description of each emitted quantum includes a perspective, and the sequence of these perspectives over the black hole's lifetime is highly non-random and encodes the initial state's information.
+*   **Challenge:** The primary challenge is the technological impossibility of measuring the perspective $s'_j$ of an individual quantum. However, the theory predicts that subtle, long-range correlations may exist in the properties of the quanta $\{|k_j\rangle\}$ themselves, as their emission is correlated with the perspective selection. Searching for these ultra-faint, non-thermal correlations in simulated or analogue black hole systems remains a potential, albeit extremely difficult, experimental avenue.
 
 **K.4 Additional Potential Pathways**
 
