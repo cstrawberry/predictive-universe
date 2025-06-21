@@ -2,7 +2,7 @@
 
 *   **$\alpha, \beta$ (Alpha, Beta):** (Definition 8) The lower ($\alpha>0$) and upper ($\beta<\alpha_{SPAP}$) bounds defining the **Space of Becoming**. Represent the minimum and maximum viable **Predictive Performance (PP)** for sustained adaptive operation of the Fundamental Predictive Loop. (Note: The magnitude of any Consciousness Complexity (CC) effects, $CC(S)$, is independently bounded by $\text{CC}(S) \le \alpha_{CC,max} < 0.5$, cf. Theorem 39).
 
-*   **$\delta_{SPAP}$ (Delta-SPAP):** (**Appendix B.3, cf. Theorem 14**) The statistical error margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$ below the fundamental self-prediction limit $\alpha_{SPAP}$. Appears explicitly in the poly-logarithmic complexity divergence bound derived in **Theorem B.2** as $C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega(\log(1/\delta_{\rm SPAP}) / (\delta_{\rm SPAP})^2)$ (Eq. B.5).
+*   **$\delta_{SPAP}$ (Delta-SPAP):** (Appendix B.3, Theorem B.2) The statistical error margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$ below the fundamental self-prediction limit $\alpha_{SPAP}$. Appears explicitly in the poly-logarithmic complexity divergence bound derived in Theorem B.2 as $C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega(\log(1/\delta_{\rm SPAP}) / (\delta_{\rm SPAP})^2)$ (Eq. B.5).
 
 *   **$\alpha_{SPAP}$ (Alpha-SPAP):** (Theorem 10, Theorem 11) The fundamental upper bound on average self-prediction performance ($PP<1$) for SPAP-limited aspects. Distinct from the operational upper bound $\beta$. Approaching $\alpha_{SPAP}$ requires divergent complexity as $\delta_{SPAP} \to 0$ (Theorem 14).
 
