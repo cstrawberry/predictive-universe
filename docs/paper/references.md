@@ -21,6 +21,7 @@
 *   Cheeger, J., & Colding, T. H. (1997). On the structure of spaces with Ricci curvature bounded below. I. *Journal of Differential Geometry*, *46*(3), 406–480.
 *   Cheeger, J., & Colding, T. H. (2000). On the structure of spaces with Ricci curvature bounded below. II. *Journal of Differential Geometry*, *54*(1), 13–35.
 *   Chung, F. (1997). *Spectral Graph Theory*. American Mathematical Society.
+*   Church, A. (1936). An Unsolvable Problem of Elementary Number Theory. *American Journal of Mathematics*, *58*(2), 345–363. DOI: 10.2307/2371045
 *   Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. *Behavioral and Brain Sciences*, *36*(3), 181–204. DOI: 10.1017/S0140525X1200047X
 *   Clowe, D., Bradač, M., Gonzalez, A. H., Markevitch, M., Randall, S. W., Jones, C., & Zaritsky, D. (2006). A direct empirical proof of the existence of dark matter. *The Astrophysical Journal Letters*, *648*(2), L109–L113. DOI: 10.1086/508162
 *   Cook, M. (2004). Universality in elementary cellular automata. *Complex Systems*, *15*(1), 1-40.
@@ -100,6 +101,7 @@
 *   Peskin, M. E., & Schroeder, D. V. (1995). *An Introduction to Quantum Field Theory*. Addison-Wesley (now Perseus Books).
 *   Planck Collaboration, Aghanim, N., Akrami, Y., Ashdown, M., et al. (2020). Planck 2018 results. VI. Cosmological parameters. Astronomy & Astrophysics, 641, A6. DOI: 10.1051/0004-6361/201833910.
 *   Polyak, B. T. (1963). Gradient methods for the minimization of functionals. *USSR Computational Mathematics and Mathematical Physics*, *3*(4), 864–878.
+*   Post, E. L. (1921). Introduction to a General Theory of Elementary Propositions. *American Journal of Mathematics*, *43*(3), 163–185. DOI: 10.2307/2370324
 *   Preskill, J. (1998). *Lecture Notes for Physics 229: Quantum Information and Computation*. California Institute of Technology. 
 *   Putnam, H. (1967). Psychological predicates. In W. H. Capitan & D. D. Merrill (Eds.), *Art, Mind, and Religion* (pp. 37–48). University of Pittsburgh Press.
 *   Raychaudhuri, A. (1955). Relativistic Cosmology. I. *Physical Review*, *98*(4), 1123–1126. DOI: 10.1103/PhysRev.98.1123
