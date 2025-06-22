@@ -76,7 +76,7 @@ The PU framework distinguishes itself while connecting to other approaches:
 
 *   **Emergence and Self-Organization:** PU is built on emergence, deriving QM/GR from collective MPU dynamics under POP/PCE and constraints (SPAP, $\varepsilon$). Macroscopic features like geometric regularity (Theorem 43) result from self-organization driven by optimization (Appendices C, D). CC (Hypothesis 3) proposes feedback within the emergent hierarchy.
 
-*   **Action Principles as Emergent Bookkeeping:** Action principles ($\delta S = 0$) are reframed as emergent descriptions of underlying optimization (minimizing PCE Potential $V(x)$, Appendix D). Minimizing $V(x)$ yields effective continuum actions; $\delta V_{cont} \approx \delta S = 0$ recovers standard Euler-Lagrange equations. Actions emerge as macroscopic entropy budget accounting rules for the predictive network.
+*   **Action Principles as Emergent Bookkeeping:** Action principles ($\delta S = 0$) are reframed as emergent descriptions of underlying optimization, consistent with the Principle of Physical Instantiation (PPI) (Appendix P). The abstract ideal of "least action" is physically instantiated through the concrete process of minimizing the PCE Potential $V(x)$ (Appendix D). Minimizing $V(x)$ yields effective continuum actions; $\delta V_{cont} \approx \delta S = 0$ recovers standard Euler-Lagrange equations. Actions emerge as the macroscopic, thermodynamically optimal bookkeeping rules for the predictive network's resource economy.
 
 *   **Connections to Information Processing:** PU provides a potential physical realization for "it from bit" ideas [Wheeler 1990], portraying reality as an efficient, self-regulating information processing system.
 
