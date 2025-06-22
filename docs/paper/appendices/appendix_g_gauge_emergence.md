@@ -334,7 +334,7 @@ The MPU network's efficiency under PCE depends on D-sensitive information-theore
 
 ### G.8.3 A Model for the PCE Potential of the Gauge Sector (in a given D)
 
-For a fixed dimension D, consistent with the approach outlined in Section 6.7 regarding the use of minimal phenomenological models for tractability, we model the net PCE potential contribution per MPU, $V_{net}(G, \{\psi\}, D)/N$, for a candidate gauge group $G = \prod_i G_i$ (a product of simple compact Lie groups and U(1) factors) and its fermion content $\{\psi\}$. This contribution is a component of the global PCE potential $V(x)$ (Definition D.1).
+For a fixed dimension D, consistent with the approach outlined in Section 6.7 regarding the use of minimal phenomenological models for tractability, we model the net PCE potential contribution per MPU, $V_{net}(G, \{\psi\}, D)/N$, for a candidate gauge group $G = \prod_i G_i$ (a product of simple compact Lie groups and U(1) factors) and its fermion content $\{\psi\}$. This contribution is a component of the global PCE potential $V(x)$ (Definition D.1). The terms included in this model are motivated by their fundamental role in the operation and consistency of a predictive network supporting gauge symmetries, as dictated by PCE:
 
 **Definition G.8.1 (PCE Potential Model for the Gauge Sector in Dimension D)**
 The net PCE potential contribution per MPU (a power term) is modeled as:
@@ -342,27 +342,27 @@ $$
 \frac{V_{net}(G, \{\psi\}, D)}{N} = \frac{V_{\text{cost}}(G, \{\psi\}, D)}{N} - \frac{V_{\text{benefit}}(G, D)}{N}
 $$
 where:
-1.  **Predictive Benefit ($V_{benefit}$):** Modeled as proportional to $n_G = \dim(G)$, representing the number of internal symmetries managed, which aids in forming coherent predictive models:
+1.  **Predictive Benefit ($V_{benefit}$):** A richer gauge structure (more generators $n_G = \dim(G)$) allows for more sophisticated internal models of interaction and conservation laws, enhancing the network's capacity to predict complex dynamics and form stable, diverse MPU aggregates. This increased predictive power translates to a higher aggregate Predictive Performance $PP_{agg}$, yielding a benefit term. We model this as directly proportional to $n_G$:
     $$
     \frac{V_{\text{benefit}}(G, D)}{N} = \eta_{ben}(D) \cdot n_G
     \tag{G.8.1}
     $$
-    where $\eta_{ben}(D) > 0$ is a D-dependent effective benefit coefficient (units of power) per generator.
+    where $\eta_{ben}(D) > 0$ is a D-dependent effective benefit coefficient (units of power) per generator, reflecting the marginal gain in predictive utility from an additional degree of internal symmetry.
 
-2.  **Total Cost ($V_{cost}$):**
-    *   **(a) Communication Cost ($V_{comm}$):** The power cost of transmitting gauge information to maintain coherence. This is proportional to the information load and inversely proportional to the channel capacity. The load scales with $n_G$ and the D-independent information rate $\alpha_{load}$ per generator. The D-independent MPU channel capacity is $C_{\max}$.
+2.  **Total Cost ($V_{cost}$):** This comprises several dominant PCE-relevant factors:
+    *   **(a) Communication Cost for Coherence ($V_{comm}$):** Maintaining coherence for a gauge symmetry across the MPU network requires the reliable transmission of phase information (or its equivalent) for each of the $n_G$ generators. Each generator's state (e.g., its local phase) must be tracked across MPU-MPU links. As established in Section G.8.2.2, this incurs a D-independent information load of $\alpha_{load}$ (nats per link per cycle) per generator to achieve the necessary fidelity (low $p_{err}^*$). The cost of transmitting this total load $n_G \alpha_{load}$ is inversely proportional to the fundamental MPU channel capacity $C_{\max}$ (Theorem E.2), which is also D-independent. Thus, the communication cost per MPU scales as:
         $$
         \frac{V_{\text{comm}}(G, D)}{N} = \lambda_c(D) \cdot \frac{n_G \cdot \alpha_{load}}{C_{\max}}
         \tag{G.8.2}
         $$
-        Here, $\lambda_c(D) > 0$ is a PCE-derived D-dependent cost coefficient (units of power).
-    *   **(b) Field Energy Cost ($V_{field}$):** The power cost associated with the energy of vacuum fluctuations of the gauge fields. This is expected to scale with $n_G$ and the group's quadratic Casimir of the adjoint representation, $k_G = C_2(\text{Adj})$ ($k_G = N$ for $SU(N)$ and $k_G=0$ for $U(1)$).
+        Here, $\lambda_c(D) > 0$ is a PCE-derived D-dependent cost coefficient (units of power) representing the physical resources (e.g., energy) per unit of information load handled by the network's communication infrastructure.
+    *   **(b) Gauge Field Energy Cost ($V_{field}$):** The existence of gauge fields implies a contribution to the vacuum energy density from their zero-point fluctuations. Standard QFT calculations show this vacuum energy, when appropriately regularized, scales with the number of independent field polarizations (proportional to $n_G$) and often with the group's quadratic Casimir of the adjoint representation, $k_G = C_2(\text{Adj})$ (which is $N$ for $SU(N)$ and $0$ for $U(1)$), reflecting the field's self-interaction strength. PCE penalizes excessive vacuum energy as a non-productive resource cost. This contribution to the operational cost per MPU is modeled as:
         $$
         \frac{V_{\text{field}}(G, D)}{N} = \lambda_f(D) \cdot n_G \cdot k_G
         \tag{G.8.3}
         $$
-        Here, $\lambda_f(D) > 0$ is a D-dependent cost coefficient (units of power).
-    *   **(c) Fermion Sector Cost ($V_{fermion}$):** The power cost of supporting the minimal set of fermion multiplets $\{\psi\}$ required to make the theory anomaly-free in dimension D. This cost depends on the number and complexity of the representations. We model this complexity measure as $C_{fermion}(\{\psi\}, D) = \sum_{i} w_i(D) \dim(R_i)$, where $R_i$ is the representation of fermion $\psi_i$ and $w_i(D)$ are PCE-derived D-dependent dimensionless weights reflecting the cost of each representation type.
+        Here, $\lambda_f(D) > 0$ is a D-dependent cost coefficient (units of power) related to the energy scale of these vacuum fluctuations.
+    *   **(c) Fermion Sector Cost ($V_{fermion}$):** Chiral fermions $\{\psi\}$, which are necessary to interact with gauge fields in a way that produces rich dynamics (e.g., parity violation), introduce their own complexity and resource costs. The cost of supporting the minimal set of fermion multiplets required for mathematical consistency (specifically, anomaly cancellation in dimension D) and for mediating diverse interactions depends on the number and complexity of their gauge group representations. We model this complexity measure as $C_{fermion}(\{\psi\}, D) = \sum_{i} w_i(D) \dim(R_i)$, where $R_i$ is the representation of fermion $\psi_i$ under $G$, and $w_i(D)$ are PCE-derived D-dependent dimensionless weights reflecting the relative cost of instantiating and maintaining different types of representations (e.g., fundamental vs. adjoint, real vs. complex vs. pseudoreal) within the MPU network. The associated power cost per MPU is:
         $$
         \frac{V_{\text{fermion}}(G, \{\psi\}, D)}{N} = \lambda_m(D) \cdot C_{fermion}(\{\psi\}, D)
         \tag{G.8.4}
@@ -374,7 +374,7 @@ $$
 \frac{V_{net}(G, \{\psi\}, D)}{N} = \left( \lambda_c(D) \frac{\alpha_{load}}{C_{\max}} - \eta_{ben}(D) \right) n_G + \lambda_f(D) n_G k_G + \lambda_m(D) C_{fermion}(\{\psi\}, D)
 \tag{G.8.5}
 $$
-PCE favors system parameters such that $\eta_{ben}(D) > \lambda_c(D) \alpha_{load}/C_{max}$, making the coefficient of the linear $n_G$ term negative. This implies that, all else being equal, there is an incentive to increase the number of generators to gain predictive benefit, a trend limited by the capacity $n_{max}$ and the rising quadratic ($n_G k_G$) and fermion costs (the "Capacity-Filling Principle," Section G.8.4.2 of original G.8).
+PCE favors system parameters such that $\eta_{ben}(D) > \lambda_c(D) \alpha_{load}/C_{max}$, making the coefficient of the linear $n_G$ term negative. This implies that, all else being equal, there is an incentive to increase the number of generators to gain predictive benefit, a trend limited by the capacity $n_{max}$ (Equation G.8.0) and the rising quadratic ($n_G k_G$) and fermion costs.
 
 ### G.8.4 PCE Selection Criteria for Gauge Groups and Dimension
 
