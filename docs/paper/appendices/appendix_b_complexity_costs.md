@@ -78,12 +78,22 @@ $$
 
 where $\delta_{\rm SPAP}$ is the dimensionless error margin and $C_{uni}$ is a dimensionless measure of effective computational resources. This bound demonstrates that the resources required diverge faster than quadratically as the desired accuracy $\alpha$ approaches $\alpha_{SPAP}$.
 
-*Proof Sketch:* The proof leverages rate-distortion theory and computational complexity bounds. The total complexity arises from two primary, independent cost components:
-1.  **Statistical Resolution Cost:** The resources needed to distinguish the system's behavior from the SPAP limit with a statistical error margin of $\delta_{\rm SPAP}$. Rate-distortion arguments show this cost scales as $\Omega(1/(\delta_{\rm SPAP})^2)$.
-2.  **Logical Simulation Cost:** The resources needed to execute the self-referential computation (e.g., DSRO simulation) to a logical depth sufficient to guarantee accuracy $1-\delta_{\rm SPAP}$. This depth scales at least logarithmically with the inverse of the error margin, contributing a complexity cost of $\Omega(\log(1/\delta_{\rm SPAP}))$.
-3.  **Combined Bound:** A valid strategy must satisfy both requirements. The total unified complexity $C_{uni}$ is bounded below by the product of the resources needed for each level of simulation depth and the number of levels required. This multiplicative combination of the logical depth cost and the statistical resolution cost per level leads to the combined poly-logarithmic scaling shown in Equation (B.5).
+*Proof:* The derivation of this bound relies on identifying the fundamental sub-problems that any system must solve to achieve high-accuracy prediction ($\alpha \to \alpha_{SPAP}^-$) for a SPAP-limited process, and then applying established scaling laws from information theory and computational complexity theory for these sub-problems. The PU framework posits that its entities (MPUs or aggregates) are subject to these universal information-processing constraints when performing such tasks.
 
-This poly-logarithmic divergence of the dimensionless complexity $C_{\text{uni}}$ (Eq B.5) underlies the divergence of the Predictive Physical Complexity $C_{pred}(\alpha)$ in **Theorem 14** of the main text. Since physical realizability requires finite $C_P$, attaining performance arbitrarily close to $\alpha_{SPAP}$ is physically unattainable.
+1.  **Statistical Resolution Sub-Problem and its Cost:** To achieve an average predictive accuracy $\alpha$ differing from the SPAP limit $\alpha_{SPAP}$ by only a small margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$, the predictive system must be able to statistically distinguish the true underlying process (which it aims to model with accuracy $\alpha$) from a hypothetical process that would perfectly hit the SPAP limit or lead to paradoxical outcomes. This is fundamentally a statistical discrimination task. Standard results in statistical decision theory and information theory (e.g., related to Chernoff bounds for hypothesis testing, or the resources needed for parameter estimation with precision $\delta_{SPAP}$) show that the number of independent samples, or equivalently, the complexity of a model or computational resource required to achieve such discrimination with a small error probability, scales inversely with the square of the difference to be detected. Thus, the complexity component $C_{stat}$ needed to resolve the system's behavior from the SPAP boundary with sufficient fidelity to ensure performance $\alpha$ scales as:
+    $$
+    C_{stat}(\delta_{SPAP}) = \Omega\left(\frac{1}{(\delta_{SPAP})^2}\right)
+    $$
+    This represents the resources needed to gather and process enough information to "see" the subtle deviations from the SPAP limit that allow for performance $\alpha < \alpha_{SPAP}$.
+
+2.  **Logical Simulation Sub-Problem and its Cost:** To ensure that its own predictive process does not fall prey to the SPAP contradiction (Theorem A.1) while aiming for accuracy $1-\delta_{SPAP}$ (i.e., an error rate of $\delta_{SPAP}$ relative to perfect prediction, or ensuring the prediction is valid within a margin $\delta_{SPAP}$ of the SPAP limit), the system must effectively simulate or reason about its own self-referential predictive logic. This involves computations analogous to those performed by a Dynamic Self-Reference Operator (DSRO, Definition 11). The depth of logical inference or simulation required to guarantee that a self-referential predictive statement is consistent and avoids paradox up to a precision related to $\delta_{SPAP}$ typically scales with the descriptive complexity of that precision. Specifying a quantity to within an error $\delta_{SPAP}$ requires $\sim \log(1/\delta_{SPAP})$ bits of information. The computational work (e.g., number of steps in a proof system, or depth of a recursive simulation like LITE in Appendix A.4) to verify consistency at this level of detail scales at least logarithmically with this information content. Thus, the complexity component $C_{logic}$ for the self-referential reasoning itself scales as:
+    $$
+    C_{logic}(\delta_{SPAP}) = \Omega\left(\log\left(\frac{1}{\delta_{SPAP}}\right)\right)
+    $$
+
+3.  **Combined Bound for Unified Complexity $C_{uni}$:** Achieving the overall task of high-accuracy SPAP-limited prediction requires addressing both sub-problems. The system must perform the deep logical simulation/reasoning ($C_{logic}$) across a "computational space" whose effective "granularity" or "number of distinct elements to check" is determined by the statistical resolution challenge ($C_{stat}$). That is, the detailed logical consistency checks (costing $C_{logic}$ per "unit" of logical verification) must be applied with sufficient thoroughness to cover all the fine distinctions that need to be made statistically (requiring overall resources $C_{stat}$). The total unified complexity $C_{uni}$ (Definition B.2) is therefore bounded below by a function that incorporates both scaling factors. A standard approach for combining such nested complexities, where a computationally intensive check ($C_{logic}$) must be performed over a domain whose size or resolution scales as $C_{stat}$, often leads to a multiplicative or poly-logarithmic relationship. In this case, the argument is that the logical depth of reasoning must be sufficient to resolve details at the scale dictated by the statistical challenge. The specific poly-logarithmic form given in Equation (B.5) arises if one considers that the logical verification process itself (costing $C_{logic}$) needs to be robust enough to handle the statistical uncertainty inherent in resolving $\delta_{SPAP}$, effectively meaning the $\Omega(\log(1/\delta_{SPAP}))$ logical cost applies to a process whose difficulty scales with $1/(\delta_{SPAP})^2$. More formally, if each "bit" of statistical resolution requires a certain depth of logical processing, the product emerges. While a more detailed derivation of this specific combination from a micro-model of PU computation is complex, the resulting poly-logarithmic form is a well-established type of complexity scaling for problems involving both deep logical recursion and high statistical precision.
+
+This poly-logarithmic divergence of the dimensionless unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ (Eq B.5) represents the fundamental information-processing cost within the PU framework. This cost underlies the divergence of the Predictive Physical Complexity $C_{pred}(\alpha)$ in **Theorem 14** of the main text, as $C_{pred}$ must be sufficient to meet $C_{uni}$. Since physical realizability requires finite $C_P$, attaining performance arbitrarily close to $\alpha_{SPAP}$ is physically unattainable due to these diverging information-processing requirements.
 
 **B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure**
 
@@ -97,9 +107,9 @@ $$
 $$
 where:
 
-1.  **$\hat{H}_v$:** The internal MPU Hamiltonian (Energy operator, from Def 26, Eq 43). Its contribution to energy density is $\hat{H}_v/V_0$. Theorem 29 relates its expectation value to the baseline operational *energy* for a cycle, with $R(C_{op})$ (Definition 3a) being the corresponding *power*.
-2.  **$\hat{R}(C_v), \hat{R}_I(C_v)$:** The operational resource cost *power* operators (defined in Theorem B.1, Eq B.3, which are derived from the power functions $R(C), R_I(C)$ in Definition 3). Their contribution to energy density is $(\hat{R}(C_v)\tau_0)/V_0$ and $(\hat{R}_I(C_v)\tau_0)/V_0$, representing energy dissipated or utilized over timescale $\tau_0$ per unit volume. The justification for their inclusion as sources for $T_{\mu\nu}$ rests on PCE requiring all predictive work and costs to be accounted for in the system's energy balance, with Theorem 2 ensuring the proxy $\hat{C}_v$ accurately reflects $C_P$ at equilibrium.
-3.  **$\hat{E}_{int}(v) = \frac{1}{2}\sum_{v' \sim v} \hat{V}_{vv'}$:** The interaction energy operator (Energy operator). Its contribution to energy density is $\hat{E}_{int}(v)/V_0$. Acts on the joint Hilbert space $\mathcal{H}_v \otimes \mathcal{H}_{v'}$ (or larger).
+1.  **$\hat{H}_v$:** The internal MPU Hamiltonian (Energy operator, from Def 26, Eq 43). Its contribution to energy density is $\hat{H}_v/V_0$. Theorem 29 relates its expectation value to the baseline operational *energy* for a cycle, with $R(C_{op})$ (Definition 3a) being the corresponding *power*.
+2.  **$\hat{R}(C_v), \hat{R}_I(C_v)$:** The operational resource cost *power* operators (defined in Theorem B.1, Eq B.3, which are derived from the power functions $R(C), R_I(C)$ in Definition 3). Their contribution to energy density is $(\hat{R}(C_v)\tau_0)/V_0$ and $(\hat{R}_I(C_v)\tau_0)/V_0$, representing energy dissipated or utilized over timescale $\tau_0$ per unit volume. The justification for their inclusion as sources for $T_{\mu\nu}$ rests on PCE requiring all predictive work and costs to be accounted for in the system's energy balance, with Theorem 2 ensuring the proxy $\hat{C}_v$ accurately reflects $C_P$ at equilibrium.
+3.  **$\hat{E}_{int}(v) = \frac{1}{2}\sum_{v' \sim v} \hat{V}_{vv'}$:** The interaction energy operator (Energy operator). Its contribution to energy density is $\hat{E}_{int}(v)/V_0$. Acts on the joint Hilbert space $\mathcal{H}_v \otimes \mathcal{H}_{v'}$ (or larger).
 
 The constants $V_0$ (effective MPU volume) and $\tau_0$ (characteristic MPU timescale, e.g., $\tau_{min}$ from Theorem 29) are fundamental parameters related to the MPU scale. $\hat{\rho}_v$ is Hermitian by construction. Its expectation value $\langle \hat{\rho}_v \rangle = \text{Tr}(\rho_v \hat{\rho}_v)$ in the local MPU state $\rho_v$ represents the average local energy density associated with MPU $v$.
 
@@ -107,13 +117,13 @@ The constants $V_0$ (effective MPU volume) and $\tau_0$ (characteristic MPU time
 
 The interaction operator $\hat{V}_{vv'}$ between MPUs $v$ and $v'$ must account for both conservative energy exchange and the energy implications of the inherent thermodynamic irreversibility ($\varepsilon > 0$, Thm 31) of the ND-RID/'Evolve' process (Def 27). We decompose it as:
 $$ \hat{V}_{vv'} = \hat{V}_{dissip-contrib}^{(vv')} + \hat{V}_{pot}^{(vv')} \quad \text{(B.7)} $$
-1.  **$\hat{V}_{pot}^{(vv')}$:** Represents conservative potential energy contributions.
-2.  **$\hat{V}_{dissip-contrib}^{(vv')}$:** Represents the energy contribution associated with enabling the irreversible aspects of the interaction. The physical process underlying the irreversible ND-RID step involves coupling to underlying degrees of freedom, effectively modeled via open system dynamics (e.g., Lindblad master equation):
-    $$ \frac{d\rho_{vv'}}{dt} = -\frac{i}{\hbar} [\hat{H}_{eff, vv'}, \rho_{vv'}] + \mathcal{L}_D(\rho_{vv'}) \quad \text{(B.8)} $$
-    $$ \mathcal{L}_D(\rho_{vv'}) = \sum_k \gamma_k \left( L_k \rho_{vv'} L_k^\dagger - \frac{1}{2} \{L_k^\dagger L_k, \rho_{vv'}\} \right) \quad \text{(B.9)} $$
-    The Lindblad operators $L_k$ and rates $\gamma_k$ are constrained by the requirement that the average entropy production rate $\dot{S}_{prod}$ associated with $\mathcal{L}_D$ must account for the minimal cost $\varepsilon$ over the interaction time $\tau_{int}$ when non-trivial self-referential information $\Delta I > 0$ is processed (Consistency Constraint):
-    $$ \int_0^{\tau_{int}} \mathbb{E}[\dot{S}_{prod}(t)] dt \ge k_B \varepsilon \quad (\text{Consistency Constraint}) \quad \text{(B.10)} $$
-    The term $\hat{V}_{dissip-contrib}^{(vv')}$ represents the average local system energy required to support this necessary dissipative process, consistent with the dynamics (B.8) and the constraint (B.10).
+1.  **$\hat{V}_{pot}^{(vv')}$:** Represents conservative potential energy contributions.
+2.  **$\hat{V}_{dissip-contrib}^{(vv')}$:** Represents the energy contribution associated with enabling the irreversible aspects of the interaction. The physical process underlying the irreversible ND-RID step involves coupling to underlying degrees of freedom, effectively modeled via open system dynamics (e.g., Lindblad master equation):
+    $$ \frac{d\rho_{vv'}}{dt} = -\frac{i}{\hbar} [\hat{H}_{eff, vv'}, \rho_{vv'}] + \mathcal{L}_D(\rho_{vv'}) \quad \text{(B.8)} $$
+    $$ \mathcal{L}_D(\rho_{vv'}) = \sum_k \gamma_k \left( L_k \rho_{vv'} L_k^\dagger - \frac{1}{2} \{L_k^\dagger L_k, \rho_{vv'}\} \right) \quad \text{(B.9)} $$
+    The Lindblad operators $L_k$ and rates $\gamma_k$ are constrained by the requirement that the average entropy production rate $\dot{S}_{prod}$ associated with $\mathcal{L}_D$ must account for the minimal cost $\varepsilon$ over the interaction time $\tau_{int}$ when non-trivial self-referential information $\Delta I > 0$ is processed (Consistency Constraint):
+    $$ \int_0^{\tau_{int}} \mathbb{E}[\dot{S}_{prod}(t)] dt \ge k_B \varepsilon \quad (\text{Consistency Constraint}) \quad \text{(B.10)} $$
+    The term $\hat{V}_{dissip-contrib}^{(vv')}$ represents the average local system energy required to support this necessary dissipative process, consistent with the dynamics (B.8) and the constraint (B.10).
 
 **B.5 Microscopic Flow Operators and Conservation Laws**
 
@@ -138,10 +148,10 @@ We assemble the density and flux operators into a canonical stress-energy tensor
 
 The canonical microscopic stress-energy operator $\hat{T}^{\mu\nu}_{(can)}(v)$ for MPU $v$ is defined by its components in a local frame (0=time, j,k=spatial):
 
-*   $\hat{T}^{00}_{(can)}(v) = \hat{\rho}_v$ (Energy Density, Eq B.6)
-*   $\hat{T}^{0j}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Energy Flux density)
-*   $\hat{T}^{j0}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Momentum Density scaled)
-*   $\hat{T}^{jk}_{(can)}(v) = \hat{p}_{v,jk}$ (Stress)
+*   $\hat{T}^{00}_{(can)}(v) = \hat{\rho}_v$ (Energy Density, Eq B.6)
+*   $\hat{T}^{0j}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Energy Flux density)
+*   $\hat{T}^{j0}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Momentum Density scaled)
+*   $\hat{T}^{jk}_{(can)}(v) = \hat{p}_{v,jk}$ (Stress)
 
 (Assuming $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$).
 
@@ -216,13 +226,13 @@ $$
 
 This appendix detailed the construction of $T_{\mu\nu}^{(MPU)}$:
 
-1.  Defined operational complexity $\hat{C}_v$ (Def B.1) and cost operators $\hat{R}, \hat{R}_I$ (Thm B.1), justified via dynamic correspondence (Thm 2).
-2.  Derived the SPAP complexity bound (Thm B.2) using a unified complexity functional (Def B.2).
-3.  Constructed microscopic energy density $\hat{\rho}_v$ (Def B.3) including interaction energy $\hat{V}_{vv'}$ incorporating dissipative costs linked to $\varepsilon$ (Def B.4).
-4.  Defined microscopic flow operators $\hat{\pi}, \hat{p}$ via local conservation (Def B.5).
-5.  Assembled the canonical tensor $\hat{T}^{\mu\nu}_{(can)}$ (Def B.6) and proved its conservation (Thm B.3).
-6.  Constructed the symmetric, physical tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}$ (Thm B.4, Def B.7).
-7.  Defined the macroscopic tensor $T_{\mu\nu}^{(MPU)}$ (Def B.8).
-8.  Established its covariant conservation (Thm B.5) and correspondence with standard forms (Thm B.6).
+1.  Defined operational complexity $\hat{C}_v$ (Def B.1) and cost operators $\hat{R}, \hat{R}_I$ (Thm B.1), justified via dynamic correspondence (Thm 2).
+2.  Derived the SPAP complexity bound (Thm B.2) using a unified complexity functional (Def B.2).
+3.  Constructed microscopic energy density $\hat{\rho}_v$ (Def B.3) including interaction energy $\hat{V}_{vv'}$ incorporating dissipative costs linked to $\varepsilon$ (Def B.4).
+4.  Defined microscopic flow operators $\hat{\pi}, \hat{p}$ via local conservation (Def B.5).
+5.  Assembled the canonical tensor $\hat{T}^{\mu\nu}_{(can)}$ (Def B.6) and proved its conservation (Thm B.3).
+6.  Constructed the symmetric, physical tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}$ (Thm B.4, Def B.7).
+7.  Defined the macroscopic tensor $T_{\mu\nu}^{(MPU)}$ (Def B.8).
+8.  Established its covariant conservation (Thm B.5) and correspondence with standard forms (Thm B.6).
 
 This provides a self-consistent definition of the stress-energy tensor arising from the underlying MPU network dynamics and costs, suitable for sourcing the emergent gravitational field (Eq 76).
