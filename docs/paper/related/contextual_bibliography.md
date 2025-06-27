@@ -5,6 +5,7 @@
 
 ## 1. Information, Computation, and Emergent Physics
 
+
 * Alexander, S., Cunningham, W. J., Lanier, J., Smolin, L., Stanojevic, S., Toomey, M. W., & Wecker, D. (2021). *The Autodidactic Universe*. arXiv:2104.03902 *(Proposes a framework where physical laws are not fixed but are learned by the universe itself, establishing a formal correspondence between physical theories, matrix models, and machine learning architectures.)*
 * Barabási, A.-L. (2016). *Network Science*. Cambridge, UK: Cambridge University Press. *(Network science context)*
 * Bennett, C. H. (1982). The thermodynamics of computation—a review. *International Journal of Theoretical Physics, 21*(12), 905–940. *(Thermodynamics of computation)*
@@ -19,9 +20,11 @@
 * Lloyd, S. (2000). Ultimate physical limits to computation. *Nature, 406*(6799), 1047–1054. *(Physical limits on computation)*
 * Lloyd, S. (2002). Computational capacity of the universe. *Physical Review Letters, 88*(23), 237901. *(Universe computation capacity)*
 * Lloyd, S. (2006). *Programming the Universe: A Quantum Computer Scientist Takes On the Cosmos*. New York, NY: Alfred A. Knopf. *(Universe as quantum computation)*
+* Sagawa, T., & Ueda, M. (2011). *Nonequilibrium Thermodynamics of Feedback Control*. arXiv:1105.3262. *(Generalizes fluctuation theorems in the presence of measurement‐based feedback; key to info–energy trade-offs.)*
 * ’t Hooft, G. (2016). *The Cellular Automaton Interpretation of Quantum Mechanics*. Cham, Switzerland: Springer. *(QM from deterministic CA)*
 * Vopson, M. (2025). Is gravity evidence of a computational universe?. AIP Advances, 15(4), 045035. (Argues that gravitational phenomena may provide evidence for the universe being fundamentally computational in nature.)
 * Zuse, K. (1969). *Rechnender Raum*. Braunschweig, Germany: Friedrich Vieweg & Sohn. *(Universe as cellular automaton)*
+
 
 ## 2. Emergent Spacetime and Quantum Gravity (Alternative Approaches)
 
@@ -57,11 +60,13 @@
 * Stapp, H. P. (2007). *Mindful Universe: Quantum Mechanics and the Participating Observer*. Berlin, Germany: Springer. *(Alternative conscious influence mechanism – contrast)*
 * Strathern, M. (1997). Improving ratings: Audit in the British university system. *European Review, 5*(3), 305–321. *(Anthropological discussion and popularization of the law)*
 * Strawson, G. (2006). Realistic Monism: Why Physicalism Entails Panpsychism. *Journal of Consciousness Studies, 13*(10–11), 3–31. *(Panpsychism context)*
-* Schmidhuber, J. (2008). *Driven by Compression Progress: A Simple Principle Explains Essential Aspects of Subjective Beauty, Novelty, Surprise, Interestingness, Attention, Curiosity, Creativity, Art, Science, Music, Jokes*. arXiv:0812.4360 \[cs.AI]. *(Proposes that subjective experiences and cognitive drives are linked to an agent's progress in compressing observed data).*
+* **Schmidhuber, J. (2008). *Driven by Compression Progress: A Simple Principle Explains Essential Aspects of Subjective Beauty, Novelty, Surprise, Interestingness, Attention, Curiosity, Creativity, Art, Science, Music, Jokes*. arXiv:0812.4360 \[cs.AI]. *(Proposes that subjective experiences and cognitive drives are linked to an agent's progress in compressing observed data).*
 * Tegmark, M. (2014). *Consciousness as a State of Matter*. arXiv:1401.1219; see also arXiv:1405.0493.
+* Wolff, J. G. (2013). *The SP Theory of Intelligence: An Overview*. arXiv:1306.3888. *(Information‐compression as the core of cognition; a brain‐like model storing compressed ‘Old’ from ‘New’ inputs.)*
 
 ## 4. Logic, Algorithmic Information Theory, Computation Limits, and Self-Reference
 
+* Bialek, W., & Tishby, N. (1999). *Predictive Information*. arXiv:cond-mat/9902341. *(Introduces the mutual-information measure between past and future as a complexity/learning capacity metric.)*
 * Chaitin, G. J. (1975). Randomness and mathematical proof. *Scientific American, 232*(5), 47–52. *(Pioneering work in Algorithmic Information Theory, algorithmic randomness, and limits of formal systems).*
 * Cover, T. M., & Thomas, J. A. (2006). *Elements of Information Theory* (2nd ed.). Hoboken, NJ: Wiley-Interscience. *(Standard text covering Kolmogorov complexity, entropy, and aspects relevant to AIT foundations).*
 * Grünwald, P. D. (2007). *The Minimum Description Length Principle*. Cambridge, MA: MIT Press. *(Comprehensive treatment of the MDL principle, a formalization of Occam's Razor with strong connections to Kolmogorov complexity and predictive modeling).*
@@ -72,6 +77,7 @@
 * Li, M., & Vitányi, P. (2008). *An Introduction to Kolmogorov Complexity and Its Applications* (3rd ed.). New York, NY: Springer. *(Definitive textbook on Kolmogorov complexity (algorithmic information content) and its wide-ranging applications, including connections to Solomonoff induction, MDL, and the theory of randomness).*
 * Scriven, M. (1965). An essential unpredictability in human behavior. In B. B. Wolman & E. Nagel (Eds.), *Scientific Psychology: Principles and Approaches* (pp. 411–425). New York, NY: Basic Books. *(Early analysis of the logical paradoxes inherent in self-prediction, particularly in psychological or behavioral contexts).*
 * Solomonoff, R. J. (1964). A formal theory of inductive inference. Part I & Part II. *Information and Control, 7*(1), 1–22 & 7(2), 224–254. *(Foundational papers introducing Solomonoff induction, a universal Bayesian framework for sequence prediction based on algorithmic probability, which assigns prior probabilities based on Kolmogorov complexity).*
+* Svesko, A. (2020). *Emergence of Spacetime: From Entanglement to Einstein*. arXiv:2006.13106. *(Derives the NEC and elements of Einstein’s equations from second-law arguments on local holographic screens.)*
 * Wallace, C. S., & Boulton, D. M. (1968). An information measure for classification. *The Computer Journal, 11*(2), 185–194. *(Pioneering work on Minimum Message Length (MML) principle, a closely related information-theoretic approach to model selection and statistical inference).*
 * Zurek, W. H. (1989). Thermodynamic cost of computation, algorithmic complexity and the information metric. *Nature, 341*(6238), 119–124. *(Explores deep connections between the thermodynamic cost of computation, algorithmic complexity (Kolmogorov complexity), and information metrics).*
 
@@ -100,4 +106,3 @@
 
 * Rescher, N. (1996). *Process Metaphysics: An Introduction to Process Philosophy*. Albany, NY: SUNY Press. *(Process philosophy introduction)*
 * Whitehead, A. N. (1929/1978). *Process and Reality* (Corrected ed.). New York, NY: Free Press. *(Process philosophy classic)*
-
