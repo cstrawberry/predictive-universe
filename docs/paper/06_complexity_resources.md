@@ -116,30 +116,33 @@ Here $\kappa_{\mathrm{eff}}$ is a dimensionless efficiency constant. Equation (2
 
 **6.4 Adaptation Dynamics Driven by PCE**
 
-The Principle of Compression Efficiency (PCE, Definition 15) mandates that systems dynamically adjust their complexity $C(t)$ (operationally represented by $\langle \hat{C}_v \rangle$, justified by Theorem 2) to approach the optimal allocation (Definition 14) that efficiently balances predictive performance benefits against comprehensive resource costs. This section formally defines the driving force behind this adaptation and models the resulting complexity dynamics.
+The Principle of Compression Efficiency (PCE, Definition 15) mandates that systems dynamically adjust their configuration to minimize a global effective potential, balancing predictive benefits against comprehensive resource costs. The adaptation of complexity $C(t)$ is driven by the local gradient of this potential.
 
-**6.4.1 Definition 20 (Def 20): Adaptation Driving Force $\Psi(t)$**
-The net incentive for adapting complexity $C(t)$ arises from the local imbalance between the marginal benefit derived from increasing complexity (improved performance $PP$) and the marginal cost incurred (increased resource expenditure rate). To establish a consistent comparison in units of power gradient per unit complexity, we introduce:
-1.  The **Power Conversion Factor ($\Gamma_0$**): A positive constant with dimensions of Power (`[E][T]^{-1}`), quantifying the effective power value assigned by the system's optimization process (under PCE) to a unit increase in the marginal performance gradient ($\partial PP/\partial C$). Its value is physically constrained and self-consistently determined at equilibrium (Theorem 20).
-2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), representing the relative importance assigned to the physical operational cost $R(C)$ versus informational cost $R_I(C)$ and performance benefits within the PCE optimization.
-The **Adaptation Driving Force $\Psi(t)$** is defined as the net power gradient per unit complexity, representing the local gradient of the effective objective function derived from POP/PCE:
+**6.4.1 Definition 20 (Def 20): PCE Potential and Adaptation Driving Force $\Psi(t)$**
+The adaptation dynamics are governed by the **Principle of Compression Efficiency (PCE) Potential $V(x)$**, which quantifies the net cost rate for a given MPU network configuration $x$. As detailed in Appendix D (Definition D.1), its core components are:
+*   **Costs ($V_{op} + V_{prop}$):** The total resource cost rate, including operational costs for maintaining complexity ($R, R_I$) and propagation costs for maintaining network coherence.
+*   **Benefit ($V_{benefit}$):** The power-equivalent predictive benefit derived from the system's performance $PP$.
+The system's slow adaptation dynamics are modeled as a stochastic gradient flow seeking to minimize this potential: $dx(t) = -\eta(x) \nabla_x V(x) dt + \dots$ (Equation D.8).
+
+The **Adaptation Driving Force $\Psi(t)$** for the complexity component $C(t)$ is defined as the negative of the local gradient of this potential with respect to $C(t)$, representing the net incentive for complexity adaptation. It arises from the local imbalance between the marginal benefit of increased complexity and its marginal cost. Formally:
 $$
-\Psi(t) \equiv \Psi(C(t), \hat{C}_{target}(t), \lambda, \Gamma_0) = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t), \hat{C}_{target}(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
+\Psi(t) \equiv -\frac{1}{\eta_{adapt}} \frac{\partial V(x)}{\partial C}\bigg|_{C(t)} = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
 $$
-where:
-*   $\Gamma_0$ and $\lambda$ are as defined above.
-*   $\frac{\partial PP}{\partial C}$ is the marginal performance gain from complexity. Its specific functional form is obtained from the Law of Prediction (Theorem 19, Equation 22):
-    $$
-    \frac{\partial PP}{\partial C}\bigg|_{C(t), \hat{C}_{target}(t)} = (\beta - \alpha) \left( \frac{\kappa_{eff}}{\hat{C}_{target}(t)} \right) e^{-\kappa_{eff} \cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}} = \frac{\kappa_{eff}}{\hat{C}_{target}(t)} (\beta - PP(t)) \quad \text{(25)}
-    $$
-    This term has units `[Complexity]^{-1}`. Consequently, $\Gamma_0 \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units `[E][T]^{-1}[Complexity]^{-1}`.
-*   $R'(C(t))$ and $R_I'(C(t))$ are the marginal gradients of the operational resource cost rate functions (acting on $C(t) = \langle \hat{C}_v \rangle$, consistent due to Theorem 2). From Definition 3, assuming $R'(C) \ge 0$ and using Equation (5) for $R_I(C)$:
-    $$
-    R_I'(C(t)) = \frac{r_I}{C(t) \ln 2} \quad (\text{for } C(t) > K_0) \quad \text{(26)}
-    $$
-    Both $R'$ and $R_I'$ have units `[E][T]^{-1}[Complexity]^{-1}`.
-    
-*Interpretation:* $\Psi(t)$ quantifies the net marginal incentive (power gradient per unit complexity) driving complexity changes. $\Psi > 0$ favors increasing $C$, $\Psi < 0$ favors decreasing $C$. Equilibrium, corresponding to the optimal complexity allocation (Definition 14), occurs when $\Psi = 0$, precisely balancing the marginal power-equivalent benefit against the weighted marginal resource costs (Equation 18). This Adaptation Driving Force can be understood as the local gradient of the global PCE Potential $V(x)$ (defined in Appendix D) with respect to the complexity component $C(t)$. The condition $\Psi(t)=0$ thus represents a local equilibrium where the system has found a minimum of the potential along the complexity axis, given a fixed environmental context.
+where the terms arise from the derivatives of the potential's components:
+1.  The **Power Conversion Factor ($\Gamma_0$**): A positive constant with dimensions of Power (`[E][T]^{-1}`), arising from the benefit term $V_{benefit}$. It quantifies the effective power value assigned by PCE to a unit increase in the marginal performance gradient ($\partial PP/\partial C$). Its value is physically constrained and self-consistently determined at equilibrium (Theorem 20).
+2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
+
+The specific components of the driving force are:
+*   **Marginal Benefit:** The term $\Gamma_0 \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units `[E][T]^{-1}[Complexity]^{-1}`. From the Law of Prediction (Theorem 19), the performance gradient is:
+    $$
+    \frac{\partial PP}{\partial C}\bigg|_{C(t), \hat{C}_{target}(t)} = (\beta - \alpha) \left( \frac{\kappa_{eff}}{\hat{C}_{target}(t)} \right) e^{-\kappa_{eff} \cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}} = \frac{\kappa_{eff}}{\hat{C}_{target}(t)} (\beta - PP(t)) \quad \text{(25)}
+    $$
+*   **Marginal Cost:** The term $\lambda R'(C(t)) + R_I'(C(t))$ is the weighted marginal resource cost rate, with units `[E][T]^{-1}[Complexity]^{-1}`. From Definition 3:
+    $$
+    R_I'(C(t)) = \frac{r_I}{C(t) \ln 2} \quad (\text{for } C(t) > K_0) \quad \text{(26)}
+    $$
+
+*Interpretation:* The driving force $\Psi(t)$ quantifies the net marginal incentive for complexity changes: $\Psi > 0$ favors increasing $C$, $\Psi < 0$ favors decreasing $C$. Equilibrium, corresponding to the optimal complexity allocation (Definition 14), occurs when $\Psi = 0$, precisely where the gradient of the effective potential with respect to complexity vanishes.
 
 **6.4.2 Theorem 20 (Physical Bounds and Self-Consistency of $\Gamma_0$)**
 
