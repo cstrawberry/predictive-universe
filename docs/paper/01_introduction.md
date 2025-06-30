@@ -74,7 +74,7 @@ This paper is structured as follows:
 
 **1.5 Logical Structure of the Framework**
 
-The Predictive Universe (PU) framework is a deductive theoretical structure built upon operationalizing the philosophical certainty of the Cogito. Grounded in the interpretation of consciousness as a fundamentally predictive process (as detailed in Section 1.1 and Appendix P), the framework derives the necessary conditions for a knowable reality. These logical and operational necessities, when instantiated under the constraints of finite resources, give rise to the emergent laws of physics. This emergence unfolds through three primary, interconnected pillars, with the rigorous mathematical justifications provided in the appendices.
+The Predictive Universe (PU) framework is a deductive theoretical structure built upon operationalizing the philosophical certainty of the Cogito. It derives physical law not as an external set of rules, but as the emergent, resource-efficient embodiment of logical and predictive necessities. This bridge between logic and physics is formalized by the **Principle of Physical Instantiation (PPI)** (detailed in Appendix P), which posits that any abstract logical requirement, when implemented by a physical system with finite resources, is shaped by irreducible thermodynamic costs and optimization imperatives like the Principle of Compression Efficiency (PCE). The framework's core arguments unfold through three pillars, each an application of this core methodology.
 
 **Pillar I: Emergence of Quantum Mechanics from the Logic of Self-Reference**
 
