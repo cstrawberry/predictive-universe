@@ -51,6 +51,26 @@ When the MPU network in sparse regions saturates at a lower complexity level $\b
 
 These parameter variations, $\delta(R)$ increasing and $C_{\max}(R)$ decreasing in sparse, large-scale regions ($R \gg L_0$), combine to raise the factor $\eta\delta^2/C_{\max}$ in Equation (I.1).
 
+### **I.5.1 Derivation of Crossover Behavior from PCE Optimization**
+
+The parameter relaxation described in Section I.5 implies that the MPU network's equilibrium structure, and thus the value of the emergent gravitational constant $G$, depends on the local information environment, which we proxy by the baryonic matter density $\rho_b$. We can formalize this by modeling the local contribution to the global PCE Potential from the network's structural parameters, $V_{struct}(\delta, C_{max}; \rho_b)$. This potential balances the cost of maintaining the network's infrastructure against the predictive benefit it provides.
+$$
+V_{struct}(\delta, C_{max}; \rho_b) = V_{cost}(\delta, C_{max}) - V_{benefit}(\delta, C_{max}; \rho_b)
+\tag{I.3.1}
+$$
+The system dynamically adjusts its effective local parameters `δ` and `C_max` to minimize this potential.
+
+*   **Analysis of Cost and Benefit:**
+    *   **Structural Cost `V_{cost}`:** This term represents the physical resources needed to maintain the network. A denser network (smaller `δ`) and higher-fidelity channels (larger `C_max`, which requires minimizing `ε`) are physically more costly. Thus, `V_cost` is a decreasing function of `δ` and an increasing function of `C_max`.
+    *   **Predictive Benefit `V_{benefit}`:** The benefit arises from the network's ability to form complex predictive models of the local environment. This ability, `PP_agg`, depends on having a dense (`small δ`) and high-fidelity (`large C_max`) network. The total benefit is proportional to the amount of "stuff to predict," which is directly related to `ρ_b`. Thus, `V_benefit` is a decreasing function of `δ`, an increasing function of `C_max`, and an increasing function of `ρ_b`.
+
+*   **Derivation of Crossover Behavior:** The system's minimization of `V_struct` leads to two distinct equilibrium regimes:
+    *   **High `ρ_b` (e.g., galactic cores):** The benefit term `V_benefit` is large and dominates the optimization. PCE drives the network to a high-cost, high-performance state to maximize predictive gain. This corresponds to an equilibrium with a small spacing `δ_0` and a large channel capacity `C_{max,0}`.
+    *   **Low `ρ_b` (e.g., galactic outskirts):** The benefit term is weak. PCE drives the network to a low-cost, low-performance state to conserve resources. This corresponds to an equilibrium with a large spacing `δ_{large}` and a small channel capacity `C_{max,low}`.
+    
+This analysis proves that the equilibrium values `(δ*, C_max*)` must be functions of `ρ_b`, and that the system must transition between these two distinct regimes as `ρ_b` changes. The functional form of the scale-dependent `G(R)` introduced in the next section is a physically-motivated phenomenological model of this derived crossover behavior.
+
+
 **I.6 Scale-Dependent Newton Constant**
 
 The variation of the microscopic parameters $\delta$ and $C_{\max}$ with the scale $R$ (associated with the density of predictive information and effective $\hat C_{\mathrm{target}}(R)$) due to the PCE-driven parameter relaxation mechanism (Section I.5) leads to a scale-dependent emergent Newton constant $G(R)$, as given by Equation (I.1). We model this scale dependence using a minimal phenomenological interpolation function (consistent with the robustness discussion in Section 6.7):
@@ -162,4 +182,5 @@ The adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $
 **I.15 Conclusion**
 
 The Principle of Compression Efficiency and complexity saturation in sparse predictive environments lead to a PCE-driven parameter relaxation mechanism that causes the emergent Newton constant to increase with scale in low-density regions. The resulting function $G(R)$, Equation (I.4), provides a physically motivated framework that naturally explains galaxy-scale mass discrepancies (e.g., rotation curves, scaling relations). This emergent gravity scenario respects local tests of GR and yields falsifiable predictions for baryon–kinematic relations and potentially cluster dynamics. Detailed rotation-curve fits and cosmological simulations testing the evolution of $G(R)$ are necessary next steps to validate this aspect of the Predictive Universe framework.
+
 
