@@ -74,7 +74,7 @@ This paper is structured as follows:
 *   **Section 15:** Offers concluding remarks.
 *   **Glossary:** See Glossary of Key Terms for complete definitions.
 *   **References:** Provided for all cited works.
-*   **Appendices (A-P):** Provide detailed proofs, derivations, and analyses supporting the main text's arguments.
+*   **Appendices (A-Q):** Provide detailed proofs, derivations, and analyses supporting the main text's arguments.
 
 **1.5 Logical Structure of the Framework**
 
@@ -109,4 +109,5 @@ This pillar proposes novel, testable hypotheses for how complex predictive proce
 3.  **Scale-Dependent Gravity and the Dark Sector:** The same overarching **Principle of Compression Efficiency (PCE)** is extended to cosmology. It is argued that PCE, acting through a different mechanism—namely, the adaptation of fundamental MPU network parameters to the large-scale information environment—causes the emergent gravitational constant $G$ to become scale-dependent. This provides a potential unified explanation for the "dark matter" phenomenology observed in galaxies (**Appendix I**) and aspects of the "dark energy" puzzle related to cosmic expansion (**Appendix K**), framing both as manifestations of gravity's adaptation to the information environment.
 
 These three pillars, built upon the same philosophical and physical foundations, demonstrate the framework's potential to provide a coherent and deductive account of quantum mechanics, gravity, and consciousness-related phenomena as emergent features of a unified, predictive reality.
+
 
