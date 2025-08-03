@@ -4,7 +4,7 @@ This section demonstrates that the standard mathematical formalism of Quantum Me
 
 **8.1 QM Formalism as Effective Description**
 
-The PU framework does not postulate QM but derives its structural elements as necessary consequences of optimizing prediction under logical and physical constraints. The complex Hilbert space structure (Proposition 4) provides the stage, and the Dual Dynamics (Section 7.3.3) dictate the evolution upon it, naturally mapping onto the core elements of QM formalism.
+The PU framework does not postulate QM but derives its structural elements as necessary consequences of optimizing prediction under logical and physical constraints. The complex Hilbert space structure (Proposition 4) provides the stage. This structure is uniquely selected by the Principle of Compression Efficiency (PCE) over alternatives (real or quaternionic vector spaces). As argued in Appendix G (Theorems G.1.7 & G.1.8), the complex field $\mathbb{C}$ provides the unique algebraic structure that simultaneously maximizes predictive utility (e.g., allowing for local tomography and continuous reversible transformations) while minimizing the resource overhead required for consistent state representation and dynamics. Alternative formalisms are demonstrably less resource-efficient under the framework's optimization principles. The Dual Dynamics (Section 7.3.3) dictate the evolution upon this stage, naturally mapping onto the core elements of QM formalism.
 
 **8.2 Interpretation of Superposition (Proposition 6)**
 
@@ -132,3 +132,4 @@ where $\hat{H}$ is a unique self-adjoint operator (Hamiltonian) representing the
 5.  **Identifying Generator ($\hat{H} = \hbar \hat{G}$):** Introduce $\hbar$ for dimensional consistency (`[E][T]`). $\hat{H} = \hbar \hat{G}$ is self-adjoint, has energy units, and is identified with the Hamiltonian representing baseline cost $R(C_{op})$ (Theorem 29). Evolution is $U(t) = e^{-i\hat{H}t/\hbar}$.
 6.  **Deriving Differential Equation:** Differentiating $S(t) = e^{-i\hat{H}t/\hbar} S(0)$ yields $\frac{d}{dt} S(t) = (-\frac{i\hat{H}}{\hbar}) S(t)$. Multiplying by $i\hbar$ gives the Schrödinger equation (Equation 43).
 7.  **Conclusion:** Operational requirements of linearity, information-preserving internal prediction (unitarity via POP/PCE), and continuity uniquely lead via Stone's Theorem to the Schrödinger equation governed by $\hat{H}$. QED
+
