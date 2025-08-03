@@ -48,7 +48,7 @@ $$
 C_P(\mu)\;=\;\lim_{n\to\infty} C_{P,n}(\mu) \quad \text{(1)}
 $$
 
-*Lemma 1 (Convergence of Complexity Hierarchy):* The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing and bounded above by some finite constant. By the Monotone Convergence Theorem, the limit $C_P(\mu)$ defined in Equation (1) exists and is finite for physically realizable $\mu$.
+*Lemma 1 (Convergence of Complexity Hierarchy):* The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing. For any physically realizable microstate $\mu$ (see Definition 17), which by definition is constructible using finite resources, the complexity $C_P(\mu)$ must be finite. Therefore, the sequence is bounded above. By the Monotone Convergence Theorem, the limit $C_P(\mu)$ defined in Equation (1) exists and is finite.
 
 **Convention for Complexity in Quantum Systems:** For quantum systems, such as the Minimal Predictive Units (MPUs) hypothesized to be fundamental constituents of reality (Definition 23), the Predictive Physical Complexity $C_P$ (measured in bits) is directly related to the information capacity required to specify their state and implement their predictive functions. This capacity is instantiated in the dimensionality $d_0$ of the MPU's Hilbert space $\mathcal{H}_0$ (Proposition 4). We adopt the standard quantum information convention:
 $$
@@ -140,5 +140,6 @@ Several conditions are logically necessary for any system to perform prediction 
 
 *   **Theorem 7 (Necessity of a Representational Medium):** Prediction requires a physical or formal medium capable of encoding and processing the relevant states ($S(t)$), internal models ($M_t$), and predictions ($\hat{S}(t+\Delta t)$).
     *Proof:* Information processing requires a substrate; without it, the components of the predictive cycle cannot be instantiated or manipulated. QED
+
 
 
