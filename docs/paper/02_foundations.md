@@ -88,8 +88,8 @@ The physical realization of systems with complexity $C_P$ incurs resource costs,
 **Definition 3 (Resource-Cost Functions):**  
 The ongoing operational expense of an MPU’s predictive cycle is described by two monotone mappings from theoretical complexity $C_P$ to power-like rates. The specific functional forms presented here are minimal models chosen to satisfy the framework's derived principles (see Section 6.7 for a discussion of model-form robustness).
 
-**(a) Physical Operational Cost $R(C)$** – the rate of *physical* resource consumption required to maintain structures and run processes of complexity $C$.
-$R(C)$ is non-decreasing ($R'(C)\!\ge 0$). For $C > C_{op}$, it is strictly convex ($R''(C)\!>0$); it is continuous at $C=C_{op}$.
+(a) **Physical Operational Cost $R(C)$** – the rate of *physical* resource consumption required to maintain structures and run processes of complexity $C$.
+$R(C)$ is non-decreasing ($R'(C)\!\ge 0$). For $C > C_{op}$, it is strictly convex ($R''(C)\!>0$); it is continuous at $C=C_{op}$. The convexity is a derived property: a system of complexity $C$ corresponds to $d=2^C$ distinguishable states. While a baseline linear cost `R(C) ∝ C` arises from the thermodynamic cost of refreshing `C` bits of information against thermal noise (Landauer's principle), a super-linear overhead is required to manage the coherence, error correction, and communication between the exponentially growing number of states. The marginal cost of adding one more bit of complexity (`C → C+1`) is not constant, as the new bit must be integrated with the `2^C` existing states, requiring protocols whose own complexity and cost grow with `C`. This proves that the marginal cost `R'(C)` must be an increasing function of `C`, meaning the cost function must be strictly convex. The power-law form below with $\gamma_p > 1$ is the simplest model capturing this necessary property.
 Relative to the baseline $P_{\min}=R(C_{op})$ (Definition 13) we set
 $$
 R(C)
@@ -140,6 +140,7 @@ Several conditions are logically necessary for any system to perform prediction 
 
 *   **Theorem 7 (Necessity of a Representational Medium):** Prediction requires a physical or formal medium capable of encoding and processing the relevant states ($S(t)$), internal models ($M_t$), and predictions ($\hat{S}(t+\Delta t)$).
     *Proof:* Information processing requires a substrate; without it, the components of the predictive cycle cannot be instantiated or manipulated. QED
+
 
 
 
