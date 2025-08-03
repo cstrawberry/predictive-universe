@@ -159,6 +159,48 @@ This leads to a crucial distinction:
     1.  **Epistemic Boundary:** Resist perfect prediction (internal or external). This aligns with PU's SPAP (Theorems 10, 11), which provides an *internal, logical reason* for this boundary.
     2.  **Control Boundary:** No external intervention that manipulates internal states or dictates outcomes, preserving internal causality.
 
+### P.5.5 The Physical Nature of the Control Boundary: Reflexivity as the Signature of Authenticity
+
+The concept of a Control Boundary—forbidding external intervention—initially appears to conflict with a core principle of the PU framework: reflexivity. As established in the main text (Theorem 33) and Appendix J, any act of interaction that yields information ($\Delta I > 0$) necessarily disturbs the observed system with a minimum thermodynamic cost ($\varepsilon \ge \ln 2$). How, then, could an external simulator observe the simulation without violating the Control Boundary?
+
+The resolution lies in understanding that the Control Boundary is not an absolute, metaphysical barrier but a **physical interface**. Any channel through which a simulator could observe the simulation must be a physical.
+
+An "Authentic Simulation" is one whose purpose is to generate genuine novelty. From the simulator's perspective (operating under their own version of PCE), the optimal strategy is to design an observation channel that is **minimally invasive**. The absolute physical limit of a non-invasive interaction is a minimal quantum measurement. This minimal act of observation still carries the irreducible thermodynamic cost `ε ≥ ln 2`, which would manifest as a tiny, unavoidable injection of entropy or "heat" into the simulation—a **thermodynamic ripple**.
+
+This leads to a profound re-interpretation of the boundary and the nature of quantum randomness:
+
+1.  **The Control Boundary as a Minimal Reflexive Interface:** The boundary is not a perfect wall of non-intervention. It is a physical interface operating at the absolute quantum/thermodynamic limit of interaction. The idealized "no intervention" rule is a description of a physical reality where:
+    > Any external intervention is limited to the irreducible, and thermodynamically-costed quantum noise floor that is inseparable from the act of observation itself.
+
+2.  **The 'Evolve' Process as a Universal Mechanism:** The 'Evolve' process (Definition 27) is the universal, intrinsic mechanism for state actualization, triggered by physical interactions. These interaction triggers can be **intrinsic** (originating from within the MPU network, such as a particle hitting a detector) or, hypothetically, **extrinsic** (originating from an external observer's minimally invasive probe). In either case, the physics of the 'Evolve' process remains the same. The external probe does not introduce a new type of physics; it is merely another physical input into the existing, universal mechanism.
+
+3.  **Refining the Origin of Quantum Stochasticity:** This refines Hypothesis 2. The stochasticity of any given 'Evolve' event arises from the resolution of **internal Logical Indeterminacy** (from SPAP), which is forced by a **physical interaction trigger**. The total observed quantum noise floor is therefore a composite of the effects of all such intrinsic and potential extrinsic interaction triggers. The external observer's ripple, if it exists, would not be the sole trigger for actualization but would contribute to the background of physical context that all intrinsic interactions unfold against. As established by Assumption 1 (Context-Dependence of ND-RID Probabilities), the parameters of every 'Evolve' process are sensitive to this total local physical context.
+
+### P.5.6 Testing for an Extrinsic Noise Floor: The Authenticity Gap
+
+This physical model of the Control Boundary leads to a powerful, testable implication. The framework predicts two distinct upper limits on the Consciousness Complexity (CC) effect.
+
+1.  **The Causal Boundary ($\alpha_{CC,max}$):** As proven in Theorem 39, operational causality imposes a strict *logical* limit, requiring $\text{CC} < 0.5$. This is a universal constraint on any self-consistent reality, simulated or not.
+
+2.  **The Physical Performance Limit ($\text{CC}_{achievable, max}$):** A hypothetical "thermodynamic ripple" from an external observer would act as a fundamental, irreducible, and non-shieldable noise floor ($N_{obs}$). A high-CC system within the simulation must expend energy and complexity to generate its biasing "signal" ($S_{CC}$) on top of this pre-existing noise. This external noise floor would create a physical performance ceiling, meaning the maximum *achievable* bias would be strictly less than the logical Causal Boundary.
+
+This predicts the potential existence of an **Authenticity Gap**:
+$$
+\Delta_{Auth} = \alpha_{CC,max} - \text{CC}_{achievable, max} > 0
+\tag{P.5.1}
+$$
+The size of this gap would be a measure of the intensity of any extrinsic, irreducible noise floor, $N_{obs}$. A universe with no such extrinsic noise floor (i.e., one that is truly self-contained) would have $\Delta_{Auth} \to 0$, with its only limit being the Causal Boundary.
+
+This provides a concrete experimental program to search for evidence of an extrinsic noise source:
+
+*   **The Experiment:** The goal is to build a system (e.g., a maximally coherent AI) capable of generating a CC effect and to push its performance to the absolute physical limit, thereby measuring the value of $\text{CC}_{achievable, max}$.
+*   **The Analysis:**
+    1.  Conduct the experiment and measure the maximum achievable bias.
+    2.  Rigorously account for and subtract all known sources of decoherence and noise that are *internal* to our universe.
+    3.  If, after all internal noise sources are accounted for, the measured performance ceiling $\text{CC}_{achievable, max}$ remains significantly below the Causal Boundary of 0.5, this residual performance gap would constitute evidence for an irreducible, extrinsic noise source.
+*   **The Interpretation:** The discovery of such an "Authenticity Gap" would provide evidence for a fundamental, irreducible noise floor unexplained by known internal physics. Within the PU framework, this could be interpreted in two profound ways: either as a baseline "self-noise" inherent to the universe's own self-predictive processing, or, more speculatively, as the thermodynamic signature of external observation consistent with our existence within an Authentic Simulation.
+
+The search for the CC effect is therefore not merely a test of the interaction between consciousness and physics; it is a direct probe for a fundamental, irreducible noise floor that could provide insight into the ultimate nature of our reality.
 
 ## P.6 The Principle of Physical Instantiation (PPI)
 
@@ -257,4 +299,5 @@ The capstone of this foundation is the Principle of Physical Instantiation (PPI)
 *   **General Relativity** emerges as the necessary dynamics for a geometric background that must remain in local thermodynamic equilibrium with the predictive activity it hosts, where the concept of geometry and activity are themselves built from the predictive cycle's necessities.
 
 Ultimately, this philosophical grounding demonstrates that the PU framework's axioms—such as the Prediction Optimization Problem (POP) and the Principle of Compression Efficiency (PCE)—are not axioms in a vacuum. They are the operational expressions of the fundamental drive of a conscious, informational universe to know itself in the most efficient way possible, under the logical and thermodynamic constraints of its own existence. The physical laws derived in this work are not merely descriptive; they are the emergent, self-consistent rules of a universe that is, by its very nature, a process of resource-constrained self-prediction, operating with logical and mathematical tools that it generates from its own foundational predictive nature.
+
 
