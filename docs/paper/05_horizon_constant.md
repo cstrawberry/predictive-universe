@@ -4,9 +4,6 @@ Having established the logical limits on prediction (SPAP, Theorem 10, Theorem 1
 
 **5.1 Operational Threshold $C_{op}$**
 
-The Operational Threshold marks the minimum complexity required for a system to engage in meaningful adaptive prediction.
-
-
 **Definition 13 (Operational Threshold $C_{op}$)**
 
 The **Operational Threshold ($C_{op}$)** is defined as the infimum of Predictive Physical Complexity $C_P(\mu)$ (Equation 1) over all physically realizable system microstates $\mu$ (consistent with $\mathcal{L}_{phys}$) that satisfy the following conditions:
@@ -126,5 +123,6 @@ Any physical system exhibiting the operational characteristics modeled by the Pr
 | :------- | :--------------------- | :------------------------------------------------------------ | :---------------- | :----------------------------------- |
 | $K_0$    | Horizon Constant       | Minimal self-reference core & basic super-chance prediction | Exactly 3         | Corresponds to $K_0=3$ structure     |
 | $C_{op}$ | Operational Threshold  | Full adaptive loop at target accuracy $\epsilon_{acc} > 0$    | $\ge K_0 = 3$     | Can be $C_{op}=K_0=3$ if $\epsilon_{acc}$ is minimal |
+
 
 
