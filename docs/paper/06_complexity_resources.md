@@ -115,7 +115,7 @@ The system's slow adaptation dynamics are modeled as a stochastic gradient flow 
 
 The **Adaptation Driving Force $\Psi(t)$** for the complexity component $C(t)$ is defined as the negative of the local gradient of this potential with respect to $C(t)$, representing the net incentive for complexity adaptation. It arises from the local imbalance between the marginal benefit of increased complexity and its marginal cost. Formally:
 $$
-\Psi(t) \equiv -\frac{1}{\eta_{adapt}} \frac{\partial V(x)}{\partial C}\bigg|_{C(t)} = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
+\Psi(t) \equiv -\frac{\partial V(x)}{\partial C}\bigg|_{C(t)} = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
 $$
 where the terms arise from the derivatives of the potential's components:
 1.  The **Power Conversion Factor ($\Gamma_0$**): A positive constant with dimensions of Power (`[E][T]^{-1}`), arising from the benefit term $V_{benefit}$. It quantifies the effective power value assigned by PCE to a unit increase in the marginal performance gradient ($\partial PP/\partial C$). Its value is physically constrained and self-consistently determined at equilibrium (Theorem 20).
@@ -280,5 +280,6 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 *   **Error Signal:** The deviation $(PP_{op} - PP)$ serves as an error signal.
 *   **Control Actions:** Adjusting $\hat{C}_{target}$ (Equation 38) adapts the internal representation of the environment. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
 *   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and environmental representation $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon > 0$), enabling sustained viable prediction.
+
 
 
