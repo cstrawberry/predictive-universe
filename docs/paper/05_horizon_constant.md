@@ -39,9 +39,6 @@ This baseline power $P_{min}$ signifies the minimum rate of physical resource co
 
 We investigate the minimum complexity needed for a system to instantiate the core logic of the self-referential contradictions underlying SPAP *and* achieve minimal predictive success. Before quantifying this minimum complexity ($K_0$) in bits, we first establish the fundamental logical capabilities that any self-referential predictive system must possess. As established by Convention 1 (Section 2.4.1), Predictive Physical Complexity $C_P$ for quantum systems is measured in bits and relates to the required Hilbert space dimension $d_0$ via $C_P = \log_2 d_0$. This link will be essential in what follows.
 
-
-**5.2 Minimal Complexity for Self-Reference and Prediction ($K_0$)**
-
 **5.2.1 Fundamental Logical Capabilities for Self-Referential Prediction**
 
 **Proposition 5.2.1 (Necessary Logical Capabilities for Self-Referential Prediction)**
@@ -129,4 +126,5 @@ Any physical system exhibiting the operational characteristics modeled by the Pr
 | :------- | :--------------------- | :------------------------------------------------------------ | :---------------- | :----------------------------------- |
 | $K_0$    | Horizon Constant       | Minimal self-reference core & basic super-chance prediction | Exactly 3         | Corresponds to $K_0=3$ structure     |
 | $C_{op}$ | Operational Threshold  | Full adaptive loop at target accuracy $\epsilon_{acc} > 0$    | $\ge K_0 = 3$     | Can be $C_{op}=K_0=3$ if $\epsilon_{acc}$ is minimal |
+
 
