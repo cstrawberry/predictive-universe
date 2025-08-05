@@ -76,7 +76,7 @@ where the function $F: \mathbb{R}_{\geq 0} \rightarrow [0, 1)$ satisfies:
 
 **6.3 Derivation of the Law of Prediction from POP / PCE**
 
-We now derive the explicit complexity–performance relationship—the *Law of Prediction*—by integrating the simplest differential equation that satisfies the qualitative scaling requirements of Definition 19. This approach, guided by the optimization imperatives of the Prediction Optimization Problem (POP, Definition 16) and the Principle of Compression Efficiency (PCE, Definition 15), yields a specific functional form that is used to construct the benefit component of the PCE Potential $V(x)$ analyzed in Appendix D.
+We now derive the explicit complexity–performance relationship—the *Law of Prediction*—by modeling the dynamics of predictive improvement under the framework's core optimization principles. The Principle of Compression Efficiency (PCE, Definition 15) implies that any adaptive system will exhibit diminishing returns: as complexity increases, the marginal gain in performance decreases because the most cost-effective improvements are made first. We formalize this by constructing and solving the simplest differential equation that captures this fundamental economic principle.
 
 **6.3.1 Theorem 19 (Law of Prediction — Exponential Saturation Model)**
 
@@ -90,18 +90,37 @@ C(PP,\hat C_{\mathrm{target}}) = C_{op} +\frac{\hat C_{\mathrm{target}}}{\kappa_
 $$
 Here $\kappa_{\mathrm{eff}}$ is a dimensionless efficiency constant. Equation (22) realizes the generic form Equation (21) with $F(x)=1-e^{-\kappa_{\mathrm{eff}}x}$, satisfying the required properties (Theorem 18) and exhibiting logarithmic divergence of $C$ as $PP\to\beta$.
 
-*Proof:* The functional form is grounded in rate-distortion theory applied within the PU framework's operational context.
-1.  **Information-Theoretic Foundation:** The task of predicting an environmental variable can be framed using rate-distortion theory. The "rate" $R_D$ is the minimum number of bits (complexity) required to describe a source (the environment) such that it can be reconstructed with an average "distortion" (Prediction Error, $PE$) no greater than $D$. For a wide class of sources, for small distortion, the required rate scales as $C(PE) \ge -k \log(PE) + \text{const.}$ for some constant $k$.
-2.  **Mapping to Operational Performance:** Predictive Performance is defined as $PP = 1 / (1 + k_{PP} \cdot PE)$ (Definition 7). For high performance ($PP \to \beta$), $PE$ is small, and this relation inverts to $PE \propto (\beta - PP)$. The framework asserts that the relevant complexity investment, $C - C_{op}$, is used to reduce the operational performance gap from its floor $\alpha$ towards its ceiling $\beta$. Applying the rate-distortion principle to this re-scaled operational error, which is proportional to $(\beta - PP)$, yields:
+*Proof:*
+1.  **Modeling Diminishing Returns:** We model the principle of diminishing returns by positing that the marginal increase in performance with respect to complexity, $d(PP)/dC$, is proportional to the remaining performance gap $(\beta - PP(C))$ and inversely proportional to the target complexity $\hat{C}_{target}$. This gives the differential equation:
     $$
-    C(PP) - C_{op} \ge k' \log\left(\frac{C_{const}}{\beta - PP}\right)
+    \frac{d(PP)}{dC} = \kappa_{eff} \frac{\beta - PP(C)}{\hat{C}_{target}}
     $$
-    where $k'$ and $C_{const}$ are constants. Normalizing such that $C=C_{op}$ at $PP=\alpha$ requires $C_{const} \propto (\beta-\alpha)$. This gives the relationship:
+    where $\kappa_{eff} > 0$ is the dimensionless efficiency constant.
+2.  **Integration:** We separate variables and integrate from the initial condition $(C_{op}, \alpha)$ to the state $(C, PP(C))$:
     $$
-    C(PP) - C_{op} \ge k' \log\left(\frac{\beta - \alpha}{\beta - PP}\right)
+    \int_{\alpha}^{PP(C)} \frac{d(PP')}{\beta - PP'} = \frac{\kappa_{eff}}{\hat{C}_{target}} \int_{C_{op}}^{C} dC'
     $$
-3.  **Deriving the Law of Prediction:** Setting this as an equality (for a PCE-optimal system) and identifying the proportionality constant $k'$ with $\hat{C}_{target}/\kappa_{eff}$ (where $\hat{C}_{target}$ sets the environmental complexity scale and $\kappa_{eff}$ is a dimensionless efficiency factor) directly yields Equation (23). Inverting this relationship to solve for $PP$ yields Equation (22).
-4.  **Conclusion:** The exponential saturation form of the Law of Prediction is derived from applying fundamental information-theoretic principles (rate-distortion theory) to the specific operational context of the PU framework, where complexity is allocated to reduce the performance gap within the viable Space of Becoming $(\alpha, \beta)$. QED
+3.  **Solving the Integral:** The integration yields:
+    $$
+    \left[ -\ln(\beta - PP') \right]_{\alpha}^{PP(C)} = \frac{\kappa_{eff}}{\hat{C}_{target}} (C - C_{op})
+    $$
+    $$
+    \ln\left(\frac{\beta - \alpha}{\beta - PP(C)}\right) = \kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}
+    $$
+    This is the integrated form, which directly corresponds to Equation (23) when solved for $C$.
+4.  **Deriving the Final Form:** Exponentiating both sides and rearranging to solve for $PP(C)$:
+    $$
+    \frac{\beta - \alpha}{\beta - PP(C)} = \exp\left(\kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
+    $$
+    $$
+    \beta - PP(C) = (\beta - \alpha) \exp\left(-\kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
+    $$
+    $$
+    PP(C,\hat C_{\mathrm{target}}) = \beta - (\beta - \alpha) \exp\left(-\kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
+    $$
+    This confirms Equation (22). QED
+
+*Justification from Information Theory:* This result, derived from the PCE principle of diminishing returns, is strongly supported by an independent argument from rate-distortion theory. In rate-distortion theory, the complexity (rate) required to describe a source with a given distortion (Prediction Error, $PE$) typically scales as $C(PE) \propto -\log(PE)$. Within the PU framework, for high performance, $PE$ is proportional to the performance gap $(\beta-PP)$. Applying the rate-distortion principle to this operational gap, we find that the required excess complexity $(C-C_{op})$ should scale as $-\log(\beta-PP)$. This leads directly to the logarithmic relationship in Equation (23), confirming that the exponential saturation model is not only the simplest phenomenological choice but is also consistent with fundamental information-theoretic bounds on efficient representation.
 
 **6.4 Adaptation Dynamics Driven by PCE**
 
@@ -280,6 +299,7 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 *   **Error Signal:** The deviation $(PP_{op} - PP)$ serves as an error signal.
 *   **Control Actions:** Adjusting $\hat{C}_{target}$ (Equation 38) adapts the internal representation of the environment. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
 *   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and environmental representation $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon > 0$), enabling sustained viable prediction.
+
 
 
 
