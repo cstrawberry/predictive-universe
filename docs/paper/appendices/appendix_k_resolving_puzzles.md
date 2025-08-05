@@ -149,33 +149,33 @@ Systems with high aggregate complexity $C_{agg}$ (Definition 29), potentially ex
 
 This section presents a first-principles derivation of the cosmological constant $\Lambda$ from non-perturbative fluctuations (“instantons”) in the MPU network vacuum. The vacuum is the global minimum of the PCE potential $V[x]$. Small, localized bounces away from this minimum generate a tiny positive vacuum energy density via exponential suppression, connecting the information-theoretic dynamics of the PU to observable cosmology.
 
-#### 1. From PCE Dynamics to Euclidean Information Action
+**K.8.1 From PCE Dynamics to Euclidean Information Action**
 
 The MPU network’s dynamics are governed by the minimization of the PCE potential $V[x]$ (Definition D.1). We analyze the vacuum structure using a statistical mechanics approach, where the irreducible entropy production $\varepsilon$ (Theorem 31) serves as the analogue of $\hbar$, governing the magnitude of fluctuations.
 
-*   **Partition Function**
-    The partition function is defined over the space of MPU configurations $\{x\}$:
-    $$
-    Z \;=\; \int \mathcal{D}x\;\exp\!\Bigl[-\,S_E[\{x\}]\Bigr]
-    \tag{K.8.1}
-    $$
-    where $S_E = V[\{x\}]/\varepsilon$ is the dimensionless Euclidean information action. The vacuum free energy is $F = -\,\varepsilon\,\ln Z.$
+*   **Partition Function**
+    The partition function is defined over the space of MPU configurations $\{x\}$:
+    $$
+    Z \;=\; \int \mathcal{D}x\;\exp\!\Bigl[-\,S_E[\{x\}]\Bigr]
+    \tag{K.8.1}
+    $$
+    where $S_E = V[\{x\}]/\varepsilon$ is the dimensionless Euclidean information action. The vacuum free energy is $F = -\,\varepsilon\,\ln Z.$
 
-*   **Instanton Action**
-    Non-perturbative corrections arise from "instanton" solutions—finite-action trajectories in emergent Euclidean time $s$ that tunnel between degenerate vacuum states. The leading correction comes from the minimal “bounce” trajectory $x_{\rm inst}(s)$. In the continuous approximation of the MPU dynamics, the action of this bounce is:
-    $$
-    S_{\rm inst}
-    = \frac{1}{\varepsilon}\,\int_{-\infty}^{+\infty}\!ds\;\mathcal{L}_E\bigl[x_{\rm inst}(s)\bigr]
-    \tag{K.8.2}
-    $$
-    Here, $\mathcal{L}_E$ is the effective Euclidean Lagrangian derived from the PCE dynamics, encompassing both potential (derived from $V[x]$) and kinetic/gradient terms in the emergent spacetime. We parametrize this minimal action using the MPU’s fundamental capacity and entropy production:
-    $$
-    S_{\rm inst} \;\equiv\; \frac{\kappa\,C_{\max}}{\varepsilon}
-    \tag{K.8.3}
-    $$
-    where $C_{\max}$ is the MPU’s ND-RID channel capacity (Theorem E.2), and $\kappa$ is a dimensionless coefficient related to the bounce duration in MPU time units.
+*   **Instanton Action**
+    Non-perturbative corrections arise from "instanton" solutions—finite-action trajectories in emergent Euclidean time $s$ that tunnel between degenerate vacuum states. The leading correction comes from the minimal “bounce” trajectory $x_{\rm inst}(s)$. In the continuous approximation of the MPU dynamics, the action of this bounce is:
+    $$
+    S_{\rm inst}
+    = \frac{1}{\varepsilon}\,\int_{-\infty}^{+\infty}\!ds\;\mathcal{L}_E\bigl[x_{\rm inst}(s)\bigr]
+    \tag{K.8.2}
+    $$
+    Here, $\mathcal{L}_E$ is the effective Euclidean Lagrangian derived from the PCE dynamics, encompassing both potential (derived from $V[x]$) and kinetic/gradient terms in the emergent spacetime. We parametrize this minimal action using the MPU’s fundamental capacity and entropy production:
+    $$
+    S_{\rm inst} \;\equiv\; \frac{\kappa\,C_{\max}}{\varepsilon}
+    \tag{K.8.3}
+    $$
+    where $C_{\max}$ is the MPU’s ND-RID channel capacity (Theorem E.2), and $\kappa$ is a dimensionless coefficient related to the bounce duration in MPU time units.
 
-#### 2. Exponential Suppression and $\Lambda$
+**K.8.2 Exponential Suppression and Λ**
 
 Semi-classical instanton methods (dilute instanton gas approximation) yield a non-perturbative contribution to the dimensionless vacuum information energy density:
 $$
@@ -198,22 +198,20 @@ $$
 \tag{K.8.6}
 $$
 
+**K.8.3 First-Principles Estimates of A and κ**
 
-#### 3. First-Principles Estimates of $A$ and $\kappa$
+*   **Prefactor $A$:** This is computed via the ratio of fluctuation determinants around the instanton and the vacuum. In typical semi-classical bounce calculations, $A$ is generally found to be within the range $10^{-1}$–$10^{1}$.
 
-*   **Prefactor $A$:** This is computed via the ratio of fluctuation determinants around the instanton and the vacuum. In typical semi-classical bounce calculations, $A$ is generally found to be within the range $10^{-1}$–$10^{1}$.
+*   **Action Coefficient $\kappa$:** This coefficient represents the duration of the minimal coherent bounce in fundamental MPU time units ($\tau_{\rm MPU}\sim\delta/c$). A coherent fluctuation requires $N_{\rm steps}$ sequential MPU “Evolve” updates. Thus:
+    $$
+    \kappa
+    = \frac{\tau_{\rm bounce}}{\tau_{\rm MPU}}
+    \;\approx\; N_{\rm steps}
+    \tag{K.8.7}
+    $$
+    We estimate the minimal timescale for a coherent self-organized fluctuation in the network to be $N_{\rm steps}\sim10^2$.
 
-*   **Action Coefficient $\kappa$:** This coefficient represents the duration of the minimal coherent bounce in fundamental MPU time units ($\tau_{\rm MPU}\sim\delta/c$). A coherent fluctuation requires $N_{\rm steps}$ sequential MPU “Evolve” updates. Thus:
-    $$
-    \kappa
-    = \frac{\tau_{\rm bounce}}{\tau_{\rm MPU}}
-    \;\approx\; N_{\rm steps}
-    \tag{K.8.7}
-    $$
-    We estimate the minimal timescale for a coherent self-organized fluctuation in the network to be $N_{\rm steps}\sim10^2$.
-
-
-#### 4. Numerical Consistency Check
+**K.8.4 Numerical Consistency Check**
 
 From Appendix Q (Equation Q.5), the PCE-optimal partitioning yields specific values for capacity and entropy production based on the optimal dimensionality $d_0=8$ and irreducible entropy $\varepsilon=\ln(2)$:
 $$
@@ -348,4 +346,5 @@ Key future theoretical work essential for solidifying and extending these pathwa
 6.  **Computational and Information-Theoretic Limits:** Further exploring the consequences of computation-induced information horizons (K.5) and the full implications of Prediction Relativity (Appendix N) for systems operating near fundamental predictive or relativistic limits, and for the ultimate evolution of complexity in the universe.
 
 Progress in these demanding theoretical areas is necessary to bridge the gap between the foundational concepts of the Predictive Universe and robust, quantitative predictions for these outstanding problems. Concurrently, the experimental program outlined in Section 13, particularly tests of the Consciousness Complexity (CC) hypothesis, provides a crucial empirical anchor. Positive or null results from these experiments will be invaluable for validating, falsifying, or refining core aspects of the PU framework and guiding its future theoretical development towards a more complete and empirically grounded understanding of reality.
+
 
