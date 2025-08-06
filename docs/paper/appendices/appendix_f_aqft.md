@@ -44,7 +44,7 @@ e^{-\mu\bigl(d_{\mathcal N_n}(X,Y)-v_{LR}^{(n)}\,t\bigr)}.
 $$
 
 **Proof Sketch:** 
-Write $\;F(t)=\|[\alpha_t(A),B]\|$, differentiate to obtain $\tfrac{dF}{dt}\le2J\sum_{\langle u,v\rangle}F_{uv}$, then expand $\alpha_t(A)=\sum_{n\ge0}\tfrac{(it)^n}{n!}\mathrm{ad}_H^n(A)$. Since $\mathrm{ad}_H^n(A)$ spreads support by at most $n$ edges and vanishes on $B$ for $n<d$, only the tail $n\ge d$ survives. Bounding $\|\mathrm{ad}_H^n(A)\|\le(2J)^n\|A\|$ and using Stirling’s inequality on $d!$ yields the exponential “light-cone” in (F.1) [Lieb & Robinson 1972; Hastings & Koma 2006].
+The proof relies on generalized Lieb-Robinson bounds applicable to open quantum systems governed by local Liouvillian dynamics. The evolution is given by $\alpha_t^{(n)} = e^{t\mathcal{L}_n}$. Standard techniques for proving such bounds on lattices with local interactions involve analyzing the propagation of operators under the action of the Liouvillian superoperator $\mathcal{L}_n$. The finite interaction range and the contractive nature of the underlying ND-RID process (which bounds the strength of the non-unitary part of the Liouvillian) ensure that the norm of the commutator decays exponentially outside a linear light-cone defined by a finite Lieb-Robinson velocity $v_{LR}^{(n)}$, yielding the form in (F.1). We justify the assumption $v_{LR}^{(n)}\to c$ in Corollary F.1 by identifying the emergent invariant speed $c$ (Theorem 46) as the macroscopic limit of the microscopic network's maximum information propagation velocity, which is precisely what $v_{LR}^{(n)}$ quantifies.
 
 **Corollary F.1 (Emergence of Einstein Causality).**
 If the sequence $\{\mathcal N_n\}$ converges geometrically to a Lorentzian spacetime $(M,g_{\mu\nu})$ with invariant speed $c$, and $v_{LR}^{(n)}\to c$ as $n\to\infty$, then for any two space-like separated regions $\mathcal O_1,\mathcal O_2\subset M$ one has
@@ -134,4 +134,5 @@ AQFT provides a robust and necessary mathematical framework for formalizing the 
 *   Confirmation that consistency with operational causality (Postulate 2) is maintained via the CC bound (Theorem 39) and the information limitations of the underlying ND-RID interactions (Theorem 40, Theorem 41, as analyzed in Section F.6), preventing deterministic signaling (Theorem 42).
 
 Establishing the full convergence from discrete MPU dynamics to a stable, local AQFT satisfying the Haag-Kastler axioms (Hypothesis F.1), rigorously deriving the emergent dynamics generator $\mathcal{L}^*$, and definitively proving the impossibility of deterministic signaling within this formal setting are key future theoretical tasks for validating the PU framework's consistency and its unique stance on locality.
+
 
