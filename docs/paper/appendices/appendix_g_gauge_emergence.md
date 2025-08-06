@@ -161,7 +161,7 @@ $$
 $$
 The derivative transforms inhomogeneously (acquiring the extra $iq(\partial_{\mu}\theta)|\Psi\rangle$ term), making the difference $\partial_{\mu}|\Psi(x)\rangle dx^\mu$ depend on the arbitrary local phase choices $\theta(x)$.
 
-Maintaining predictive coherence by explicitly tracking all relative phases between the $N$ MPUs in a large aggregate would require managing $\mathcal{O}(N^2)$ relative phases. The complexity $C_{phase}$ and associated resource costs ($V_{op}, V_{prop}$ components of PCE Potential $V(x)$, Definition D.1) for storing and updating this information would likely scale super-extensively ($C_{phase} \propto N^2$, $V_{cost} \propto N^2$), whereas the available resources and benefits are expected to scale extensively ($V_{max} \propto N$, $V_{benefit} \propto N$). Such a super-extensive cost contribution to $V(x)$ is strongly disfavored by the Principle of Compression Efficiency (PCE, Definition 15) which drives minimization of $V(x)$ (Appendix D).
+Maintaining predictive coherence by explicitly tracking all relative phases between the $N$ MPUs in a large aggregate would require managing $\mathcal{O}(N^2)$ relative phases. The propagation cost component of the PCE Potential, $V_{prop}$, would scale super-extensively as $\mathcal{O}(N^2)$, while the available resource budget and predictive benefits scale extensively as $\mathcal{O}(N)$. In contrast, introducing a local gauge field to manage coherence introduces a cost that scales with the number of field degrees of freedom, which is extensive, $\mathcal{O}(N)$. For any sufficiently large system ($N > N_{crit}$), the extensive cost of the gauge field solution is guaranteed to be lower than the super-extensive cost of explicit phase tracking. PCE, which minimizes the total potential $V(x)$, therefore necessarily selects the gauge field solution as the only viable and efficient mechanism for maintaining coherence in large MPU aggregates.
 
 **G.4 Emergent Connection and Covariant Derivative**
 
@@ -458,6 +458,7 @@ The analysis throughout this appendix highlights the potential for PU principles
 *¹* For $d=2$ the same probability functional is fixed either by
 embedding the qubit in its naturally larger interaction Hilbert space
 (e.g., within the MPU's $d_0 \ge 8$ space) or, if one prefers, by Deutsch’s decision-theoretic argument [Deutsch 1999] applied within a PCE framework. Both routes, when driven by POP–PCE consistency requirements for optimal resource allocation and consistent probability assignment, are expected to converge to the quadratic Born rule as the unique self-consistent measure; we primarily rely on the Gleason argument due to $d_0 \ge 8$.
+
 
 
 
