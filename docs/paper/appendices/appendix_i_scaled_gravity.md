@@ -112,7 +112,7 @@ $$
 \rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R)\,\rho_b(R).
 \tag{I.6}
 $$
-Equation (I.6) shows that the scale-dependent Newton constant $G(R)$ is formally equivalent to the presence of an effective dark-matter density $\rho_{\mathrm{DM,eff}}(R)$ that is directly proportional to the baryonic density $\rho_b(R)$ and whose proportionality factor $\varepsilon_G(R)$ increases with scale according to Equation (I.5). This mechanism naturally produces a dark-matter phenomenology that tracks baryons, a key empirical observation in galaxy dynamics (e.g., the Radial Acceleration Relation). While the existence of such a scale dependence is motivated by the framework's principles, the specific transition scale $L_0$ in Equation (I.4) is currently treated as a phenomenological parameter constrained by observation; its derivation from underlying MPU network properties remains a subject for future work.
+Equation (I.6) shows that the scale-dependent Newton constant $G(R)$ is formally equivalent to the presence of an effective dark-matter density $\rho_{\mathrm{DM,eff}}(R)$ that is directly proportional to the baryonic density $\rho_b(R)$ and whose proportionality factor $\varepsilon_G(R)$ increases with scale according to Equation (I.5). This mechanism naturally produces a dark-matter phenomenology that tracks baryons, a key empirical observation in galaxy dynamics (e.g., the Radial Acceleration Relation). By reproducing this baryon-tracking behavior from first principles, the framework's result captures the central phenomenological success of modified gravity frameworks like MOND [Milgrom 1983]. While the existence of such a scale dependence is motivated by the framework's principles, the specific transition scale $L_0$ in Equation (I.4) is currently treated as a phenomenological parameter constrained by observation; its derivation from underlying MPU network properties remains a subject for future work.
 
 In far-from-equilibrium situations (like galaxy cluster mergers), the scale dependence might not be instantaneous or might involve transient effects related to the dynamics of complexity adaptation, potentially introducing a transient stress component $\rho_\Pi(R,t)$:
 $$
@@ -182,5 +182,6 @@ The adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $
 **I.15 Conclusion**
 
 The Principle of Compression Efficiency and complexity saturation in sparse predictive environments lead to a PCE-driven parameter relaxation mechanism that causes the emergent Newton constant to increase with scale in low-density regions. The resulting function $G(R)$, Equation (I.4), provides a physically motivated framework that naturally explains galaxy-scale mass discrepancies (e.g., rotation curves, scaling relations). This emergent gravity scenario respects local tests of GR and yields falsifiable predictions for baryon–kinematic relations and potentially cluster dynamics. Detailed rotation-curve fits and cosmological simulations testing the evolution of $G(R)$ are necessary next steps to validate this aspect of the Predictive Universe framework.
+
 
 
