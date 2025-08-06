@@ -92,10 +92,11 @@ Based on the necessity of both lower and upper performance bounds (Theorem 8, Th
 
 The process modeled by the adaptive Fundamental Predictive Loop (Definition 4), subject to POP (Axiom 1) and RID (Definition 6) constraints, can only be sustained if its Predictive Performance $PP(t)$ is dynamically maintained within the Space of Becoming, i.e., $\alpha < PP(t) < \beta$.
 
-*Justification:* This axiom elevates the conclusions of Theorem 8 and Theorem 9 to a core postulate, asserting that maintaining performance within the derived bounds $(\alpha, \beta)$ is not just beneficial but strictly necessary for the continued existence and operation of the predictive systems modeled by this framework.
+*Justification:* This principle elevates the conclusions of Theorem 8 and Theorem 9 to a core postulate of operational viability. While presented as an axiom for structural clarity within the framework's deductive flow, it also functions as a necessary condition derived from the requirements for meaningful and adaptive prediction. It asserts that maintaining performance within the derived bounds $(\alpha, \beta)$ is not just beneficial but strictly necessary for the continued existence and operation of the predictive systems modeled by this framework.
 
 **3.3.7 Proposition 1 (Dynamic Regulation Requirement)**
 
 Any system governed by Operational Viability (Axiom 3), existing in an environment where perturbations can affect its Predictive Performance $PP(t)$, must possess regulatory mechanisms (e.g., the adaptation dynamics detailed in Section 6) to actively maintain $PP(t)$ within the Space of Becoming $(\alpha, \beta)$.
 *Proof:* Assume Axiom 3 holds but no regulation exists. External or internal perturbations can cause $PP(t)$ to fluctuate. Without active counter-mechanisms, $PP(t)$ will eventually drift outside the interval $(\alpha, \beta)$ with non-zero probability, leading to operational failure according to Axiom 3. Therefore, sustained operation necessitates active regulatory dynamics that detect deviations and adjust system parameters (like complexity $C(t)$) to restore performance to the viable range. QED
+
 
