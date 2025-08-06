@@ -186,13 +186,13 @@ We use stochastic Lyapunov methods, common in the analysis of stochastic approxi
 
 ### D.6.1 Assumptions for Convergence
 
-We make standard technical assumptions required for the convergence theorems:
-*   **(A1) Potential Properties:** $V(x)$ is continuously differentiable ($C^1$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $\|x\| \to \infty$. This ensures the dynamics do not escape to infinity.
-*   **(A2) Rate Matrix Bounds:** $\eta(x)$ is symmetric, and its eigenvalues are uniformly bounded above and below: $0 < \eta_{min} \le \lambda(\eta(x)) \le \eta_{max} < \infty$ for all $x \in \mathcal{X}_{adm}$. The adaptation process has a finite, non-zero rate.
-*   **(A3) Diffusion Bounds:** $D(x)$ is positive semi-definite, and its trace (representing total noise power) is uniformly bounded: $\text{Tr}(D(x)) \le D_{max} < \infty$.
-*   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
-*   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
-*   **(A6) Noise Irreducibility/Ergodicity:** The noise term $\sqrt{2D(x)} dW(t)$ is sufficiently non-degenerate (e.g., $D(x)$ is strictly positive definite within $\mathcal{K}$, or the noise allows transitions between different basins of attraction) to ensure that the process is ergodic and can escape any potential local minima that are not global minima.
+We make standard technical assumptions required for the convergence theorems, justifying them from the physical principles of the PU framework.
+*   **(A1) Potential Properties:** $V(x)$ is continuously differentiable ($C^1$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $\|x\| \to \infty$. *Physical Justification:* Coercivity is physically plausible because the resource cost terms ($V_{op}, V_{prop}$) are expected to grow super-linearly with complexity and network size (e.g., $R(C) \propto C^{\gamma_p}$ with $\gamma_p>1$), while the benefit term ($V_{benefit}$) saturates (due to $PP < \beta$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
+*   **(A2) Rate Matrix Bounds:** $\eta(x)$ is symmetric, and its eigenvalues are uniformly bounded above and below: $0 < \eta_{min} \le \lambda(\eta(x)) \le \eta_{max} < \infty$ for all $x \in \mathcal{X}_{adm}$. The adaptation process has a finite, non-zero rate.
+*   **(A3) Diffusion Bounds:** $D(x)$ is positive semi-definite, and its trace (representing total noise power) is uniformly bounded: $\text{Tr}(D(x)) \le D_{max} < \infty$.
+*   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
+*   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
+*   **(A6) Noise Irreducibility/Ergodicity:** The noise term $\sqrt{2D(x)} dW(t)$ is sufficiently non-degenerate to ensure that the process is ergodic and can escape any potential local minima that are not global minima. *Physical Justification:* The fundamental 'Evolve' process is intrinsically stochastic (ND-RID, with $\varepsilon>0$) and involves stochastic perspective shifts on the manifold $\Sigma$ (Appendix M). This ubiquitous, microscopic source of randomness provides a physical basis for the assumption that the effective noise in the slow adaptation dynamics is sufficiently rich to prevent permanent trapping in suboptimal states.
 
 ### D.6.2 Lyapunov Analysis
 
@@ -370,6 +370,7 @@ This appendix has provided a rigorous analysis grounded in the variational persp
 3.  **Complexity Adaptation Convergence (Section D.8):** A focused analysis of the complexity adaptation dynamics for a single component $C(t)$ (Eq. D.13), driven by the Adaptation Driving Force $\Psi(C)$, confirms its convergence to the unique POP-optimal complexity $C^{\star}$ (Eq. D.17). This was established using Lyapunov methods for deterministic convergence and referencing standard results for stochastic robustness (Eq. D.18), providing a detailed mechanism for how individual complexity components seek their optimum within the larger PCE landscape.
 
 The global convergence of the full system configuration $x(t)$ to states that are simultaneously aligned and regular is established in Section D.6.5 (via Theorem D.5), relying on stochastic Lyapunov methods applied to $V(x)$ under standard technical assumptions (A1-A6). The analysis throughout this appendix confirms that complexity alignment and geometric regularity are not ad-hoc assumptions but necessary, stable outcomes of the Predictive Universe framework's core optimization principles (POP/PCE) operating within the constrained MPU network. These results provide crucial support for the subsequent derivations of emergent spacetime and gravity.
+
 
 
 
