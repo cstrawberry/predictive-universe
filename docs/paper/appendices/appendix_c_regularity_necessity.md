@@ -1,4 +1,4 @@
-# Appendix C — Necessity of Geometric Regularity
+# Appendix C: Necessity of Geometric Regularity
 
 **C.1 Introduction: The Requirement for Geometric Order**
 
@@ -209,3 +209,4 @@ where:
 
 
 This appendix has rigorously demonstrated, through quantitative analysis of the impact of geometric irregularities on the core operational requirements (R1: Local Viability, R2: Global Coherence, R3: Resource Efficiency), that large-scale geometric regularity (Definition C.3)—which includes uniform D-dimensional volume growth and a PU-derived positive lower bound on discrete Ricci curvature with bounded variance (Section C.3)—is a necessary condition (Theorem C.6) for the viability and self-consistency of MPU networks operating under the principles of the Predictive Universe framework (POP, PCE, Axiom 3). Anomalous dimension leads inevitably to the breakdown of global predictive coherence and/or unsustainable propagation costs (Theorem C.2). Failure to maintain a sufficiently positive and uniform Ricci curvature (or having large curvature fluctuations) induces excessive operational costs and destabilizes local MPU dynamics (Theorem C.4). Configurations suffering from these irregularities are demonstrably non-viable ($\mathcal{V}[\mathcal{C}] < 1$, Theorem C.5). This finding justifies Theorem 43 and provides the crucial foundation for assuming an emergent regular geometric background in the subsequent derivation of a continuous spacetime manifold (Section 11) and its gravitational dynamics (Section 12). Regularity is not an arbitrary assumption but a prerequisite imposed by the functional demands of efficient, stable, large-scale prediction.
+
