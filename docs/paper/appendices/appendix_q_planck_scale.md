@@ -1,4 +1,4 @@
-### **Appendix Q: Derivation of the Planck-MPU Scale Ratio (`δ/L_P`)**
+# Appendix Q: Derivation of the Planck-MPU Scale Ratio (`δ/L_P`)
 
 **Q.1 Foundational Relation**
 
@@ -70,5 +70,6 @@ $$
 $$
 
 **Q.5 Interpretation**
+
 
 This result provides a direct, quantitative link between the microscopic scale of the fundamental predictive units (`δ`) and the emergent scale of quantum gravity (`L_P`). It demonstrates that the Planck scale is not an arbitrary input but is determined by the information-theoretic and thermodynamic properties of the MPU, specifically its Hilbert space dimension (`d₀=8`, from the logical necessity of self-reference) and the irreducible cost of its predictive cycle (`ε=ln(2)`). The fact that this derivation, rooted in the principles of prediction and optimization, yields a physically plausible `O(1)` relationship between these scales provides strong evidence for the internal consistency and predictive potential of the Predictive Universe framework.
