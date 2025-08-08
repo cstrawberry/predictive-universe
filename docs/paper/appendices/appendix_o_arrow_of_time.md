@@ -1,6 +1,6 @@
 # Appendix O: Temporal Coherence and the Arrow of Time in the Predictive Universe
 
-**## O.1 Introduction: The Problem of Temporal Coherence**
+## O.1 Introduction: The Problem of Temporal Coherence
 
 The Predictive Universe (PU) framework is built upon the operational dynamics of interacting Minimal Predictive Units (MPUs). As established in Theorem 4, the very act of prediction requires a primitive, ordered, and directional concept of evolution, which we identify with local time. Each MPU, through its cyclical operation, effectively possesses its own internal "clock." However, the existence of these local causal rhythms does not, in itself, explain the emergence of the coherent, large-scale temporal structure observed in the universe.
 
@@ -131,4 +131,5 @@ The familiar properties of time—its coherence over vast scales and its unwaver
 *   **The Arrow of Time** is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle.
 
 Crucially, this emergent temporal structure is not a passive background. Its dynamic properties provide the physical substrate for the framework's most profound emergent phenomena. The controlled modulation of this medium's coherence provides a channel for Consciousness Complexity to exert its influence, with the energy cost of this modulation being properly accounted for within the standard stress-energy tensor. Meanwhile, uncontrolled, large-scale disturbances in the medium, sourced by bulk fluctuations in `T_μν`, propagate as temporal waves that are physically identical to the gravitational waves of General Relativity. This unifies the emergence of time, the mechanism of CC, and the nature of gravity within a single, coherent, and dynamic picture.
+
 
