@@ -42,7 +42,7 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Cosmological constant         | $\Lambda$                                                                        | $[L]^{-2}$                                           | vacuum curvature                                     |
 | Empirical acceleration scale  | $g_{0}$                                                                          | $[L][T]^{-2}$                                        | Appendix I                                           |
 | Transition-length scale       | $L_{0}$                                                                          | $[L]$                                                | scale at which $G(R)$ changes                        |
-| Simulation steps / Horizon | $T$ (in Eq B.4) | 1 | Dimensionless count |$                                                 | $1$                                                  | Dimensionless count                                  |
+| Simulation steps / Horizon | $T$ (in Eq B.4) | $1$ | Dimensionless count |
 
 
 
@@ -157,5 +157,6 @@ Taking $\eta'=1.38$ reproduces the empirically observed value $g_{0}\simeq1.20\t
 ## H.5 Conclusion
 
 Through careful dimensional analysis, all core PU equations are shown to be homogeneous according to the defined units. A vacuum-energy matching hypothesis (Hypothesis H.1) leads to a derived relationship $g_{0}\propto c^{2}\sqrt{\Lambda}$ (Theorem H.1), providing a potential natural origin for the empirical Milgrom scale from the cosmological constant $\Lambda$. A numerical estimate shows consistency with observed values for a plausible $\mathcal{O}(1)$ efficiency factor $\eta'. If validated, this relation removes one phenomenological parameter from the scale-dependent gravity model of Appendix I and ties galaxy dynamics directly to fundamental constants and the properties of the cosmological vacuum.
+
 
 
