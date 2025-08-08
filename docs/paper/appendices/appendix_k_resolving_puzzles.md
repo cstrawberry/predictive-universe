@@ -213,7 +213,7 @@ $$
 
 **K.8.4 Numerical Consistency Check**
 
-From Appendix Q (Equation Q.5), the PCE-optimal partitioning yields specific values for capacity and entropy production based on the optimal dimensionality $d_0=8$ and irreducible entropy $\varepsilon=\ln(2)$:
+As derived in Appendix Q (Equation Q.5), the PCE-optimal partitioning of the MPU's finite information potential yields specific values for capacity and entropy production based on the optimal dimensionality $d_0=8$ and irreducible entropy $\varepsilon=\ln(2)$:
 $$
 \frac{C_{\max}}{\varepsilon}
 = \frac{\ln(d_0)-\varepsilon}{\varepsilon}
@@ -346,5 +346,6 @@ Key future theoretical work essential for solidifying and extending these pathwa
 6.  **Computational and Information-Theoretic Limits:** Further exploring the consequences of computation-induced information horizons (K.5) and the full implications of Prediction Relativity (Appendix N) for systems operating near fundamental predictive or relativistic limits, and for the ultimate evolution of complexity in the universe.
 
 Progress in these demanding theoretical areas is necessary to bridge the gap between the foundational concepts of the Predictive Universe and robust, quantitative predictions for these outstanding problems. Concurrently, the experimental program outlined in Section 13, particularly tests of the Consciousness Complexity (CC) hypothesis, provides a crucial empirical anchor. Positive or null results from these experiments will be invaluable for validating, falsifying, or refining core aspects of the PU framework and guiding its future theoretical development towards a more complete and empirically grounded understanding of reality.
+
 
 
