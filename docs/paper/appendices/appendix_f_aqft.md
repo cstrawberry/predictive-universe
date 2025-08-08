@@ -126,7 +126,7 @@ The framework is argued to maintain Lorentz invariance despite the hypothesis of
 
 **F.8 Conclusion: AQFT as Arena for Verification and Locality**
 
-AQFT provides a robust and necessary mathematical framework for formalizing the emergence of continuum QFT from the discrete MPU network (conditional on Hypothesis F.1 and Theorem 43). It allows for:
+AQFT provides a robust mathematical framework for analyzing the properties of the hypothesized continuum limit of the MPU network. The analysis presented here is strictly conditional on the validity of Hypothesis F.1 (the convergence to a stable AQFT) and Theorem 43 (geometric regularity). Subject to these assumptions, AQFT allows for:
 *   Precise definition of emergent physical states and dynamics.
 *   Rigorous definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ (Definition F.4).
 *   Demonstration that the emergent algebra $\mathfrak{A}$ satisfies standard Einstein Causality (Microcausality, as stated in Corollary F.1) as a consequence of the underlying ND-RID properties (Corollary F.1).
@@ -134,6 +134,7 @@ AQFT provides a robust and necessary mathematical framework for formalizing the 
 *   Confirmation that consistency with operational causality (Postulate 2) is maintained via the CC bound (Theorem 39) and the information limitations of the underlying ND-RID interactions (Theorem 40, Theorem 41, as analyzed in Section F.6), preventing deterministic signaling (Theorem 42).
 
 Establishing the full convergence from discrete MPU dynamics to a stable, local AQFT satisfying the Haag-Kastler axioms (Hypothesis F.1), rigorously deriving the emergent dynamics generator $\mathcal{L}^*$, and definitively proving the impossibility of deterministic signaling within this formal setting are key future theoretical tasks for validating the PU framework's consistency and its unique stance on locality.
+
 
 
 
