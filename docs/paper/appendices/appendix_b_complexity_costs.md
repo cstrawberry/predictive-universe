@@ -1,4 +1,4 @@
-# Appendix B — Operational Complexity, Costs, and Stress–Energy Tensor Construction
+# Appendix B: Operational Complexity, Costs, and Stress–Energy Tensor Construction
 
 This appendix provides the detailed construction and justification for key operators used within the Predictive Universe (PU) framework, culminating in the definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$. This includes the operational complexity operator $\hat{C}_v$ used as a proxy for the theoretical $C_P$, the associated resource cost operators $\hat{R}$ and $\hat{R}_I$, a rigorous lower bound for complexity near the SPAP limit, and the operators representing local energy density and flows, ensuring consistency with the framework's principles and conservation laws.
 
@@ -239,5 +239,6 @@ This appendix detailed the construction of $T_{\mu\nu}^{(MPU)}$:
 8.  Established its covariant conservation (Thm B.5) and correspondence with standard forms (Thm B.6).
 
 This provides a self-consistent definition of the stress-energy tensor arising from the underlying MPU network dynamics and costs, suitable for sourcing the emergent gravitational field (Eq 76).
+
 
 
