@@ -85,7 +85,7 @@ The crucial question then becomes: What prevents the physical laws governing the
 
 **3. Synthesis**
 
-The arrow of time in the Predictive Universe is not an emergent statistical phenomenon, nor is it merely an assumption. It is a logical necessity for prediction, which is physically and irreversibly enforced by the ubiquitous thermodynamic cost of self-referential processing. The logical requirement defines the direction, and the thermodynamic ratchet ensures the physical dynamics can never flow against it. This mechanism provides a microscopic and dynamical origin for the arrow of time, distinct from the standard statistical explanation which relies on postulating a special, low-entropy initial state for the universe.
+The arrow of time in the Predictive Universe is not an emergent statistical phenomenon, nor is it merely an assumption. It is a logical necessity for prediction, which is physically and irreversibly enforced by the ubiquitous thermodynamic cost of self-referential processing. The logical requirement defines the direction, and the thermodynamic ratchet ensures the physical dynamics can never flow against it. This mechanism provides a microscopic and dynamical origin for the arrow of time, distinct from the standard statistical explanation which relies on postulating a special, low-entropy initial state for the universe (the "Past Hypothesis") without providing a dynamical reason for its existence.
 
 ## O.6 Temporal Dynamics as the Substrate for Consciousness Complexity and Gravity
 
@@ -131,3 +131,4 @@ The familiar properties of time—its coherence over vast scales and its unwaver
 *   **The Arrow of Time** is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle.
 
 Crucially, this emergent temporal structure is not a passive background. Its dynamic properties provide the physical substrate for the framework's most profound emergent phenomena. The controlled modulation of this medium's coherence provides a channel for Consciousness Complexity to exert its influence, with the energy cost of this modulation being properly accounted for within the standard stress-energy tensor. Meanwhile, uncontrolled, large-scale disturbances in the medium, sourced by bulk fluctuations in `T_μν`, propagate as temporal waves that are physically identical to the gravitational waves of General Relativity. This unifies the emergence of time, the mechanism of CC, and the nature of gravity within a single, coherent, and dynamic picture.
+
