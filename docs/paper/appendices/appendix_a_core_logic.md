@@ -408,3 +408,4 @@ The LITE construction robustly demonstrates that standard Peano Arithmetic, a fo
 
 While MPUs in the PU framework are physical entities operating under POP/PCE optimization, not abstract arithmetical functions, the LITE construction serves as a crucial existence proof for the *type* of computational logic involved. It significantly strengthens the plausibility of the PU hypothesis (e.g., as argued in Appendix A.0) that MPUs, possessing at least $K_0$ complexity and driven by optimization, can effectively achieve Property R. The resource bounds in PU (e.g., finite complexity $C_P$, costs $R, R_I$) find a conceptual parallel in LITE's bounded proof search $g(n)$. LITE thus provides strong formal grounding for the computational prerequisites underlying key PU results like SPAP, Logical Indeterminacy, and the constraints arising from DSRO-like dynamics.
 
+
