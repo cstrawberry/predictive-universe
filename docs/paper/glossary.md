@@ -2,7 +2,7 @@
 
 *   **$\alpha, \beta$ (Alpha, Beta):** (Definition 8) The lower ($\alpha>0$) and upper ($\beta<\alpha_{SPAP}$) bounds defining the **Space of Becoming**. Represent the minimum and maximum viable **Predictive Performance (PP)** for sustained adaptive operation of the Fundamental Predictive Loop. (Note: The magnitude of any Consciousness Complexity (CC) effects, $CC(S)$, is independently bounded by $\text{CC}(S) \le \alpha_{CC,max} < 0.5$, cf. Theorem 39).
 
-*   **$\delta_{SPAP}$ (Delta-SPAP):** (Appendix B.3, Theorem B.2) The statistical error margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$ below the fundamental self-prediction limit $\alpha_{SPAP}$. Appears explicitly in the poly-logarithmic complexity divergence bound derived in Theorem B.2 as $C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega(\log(1/\delta_{\rm SPAP}) / (\delta_{\rm SPAP})^2)$ (Eq. B.5).
+*   **$\delta_{SPAP}$ (Delta-SPAP):** (Appendix B.3, Theorem B.2) The statistical error margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$ below the fundamental self-prediction limit $\alpha_{SPAP}$. Appears explicitly in the poly-logarithmic complexity divergence bound derived in Theorem B.2 as $C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega(\log(1/\delta_{\rm SPAP}) / (\delta_{\rm SPAP})^2)$ (**Eq. B.5**).
 
 *   **$\alpha_{SPAP}$ (Alpha-SPAP):** (Theorem 10, Theorem 11) The fundamental upper bound on average self-prediction performance ($PP<1$) for SPAP-limited aspects. Distinct from the operational upper bound $\beta$. Approaching $\alpha_{SPAP}$ requires divergent complexity as $\delta_{SPAP} \to 0$ (Theorem 14).
 
@@ -159,3 +159,4 @@
 *   **$T_{\mu\nu}^{(MPU)}$ (MPU Stress-Energy Tensor):** (Definition B.8, Eq. B.15, Appendix B) Macroscopic, symmetric, covariantly conserved stress-energy tensor derived from coarse-grained average of the underlying microscopic operator $\hat{\Theta}_{\mu\nu}^{(MPU)}$ (Definition B.7), representing MPU activity and costs ($\hat{H}_v, \hat{R}, \hat{R}_I, \hat{V}_{vv'}$). Source term in the emergent Einstein Field Equations (EFE, Eq. 76).
 
 *   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.3, Theorem C.6, Appendix D) Theorem asserting POP/PCE dynamics necessarily drive MPU networks to self-organize into configurations exhibiting large-scale geometric regularity (Definition C.3). Justified by necessity arguments (Appendix C) and dynamical convergence (Appendix D). Foundational for emergence of smooth spacetime.
+
