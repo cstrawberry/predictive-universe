@@ -69,7 +69,9 @@ $$
 \tag{Q.7}
 $$
 
+
 **Q.5 Interpretation**
 
+This result provides a direct, quantitative link between the microscopic scale of the fundamental predictive units (`δ`) and the emergent Planck scale (`L_P`). The PU framework interprets the Planck scale as the fundamental transition point where the macroscopic, thermodynamic description of gravity gives way to the underlying discrete, quantum dynamics of the MPU network.
 
-This result provides a direct, quantitative link between the microscopic scale of the fundamental predictive units (`δ`) and the emergent scale of quantum gravity (`L_P`). It demonstrates that the Planck scale is not an arbitrary input but is determined by the information-theoretic and thermodynamic properties of the MPU, specifically its Hilbert space dimension (`d₀=8`, from the logical necessity of self-reference) and the irreducible cost of its predictive cycle (`ε=ln(2)`). The fact that this derivation, rooted in the principles of prediction and optimization, yields a physically plausible `O(1)` relationship between these scales provides strong evidence for the internal consistency and predictive potential of the Predictive Universe framework.
+The value of this transition scale is a derived consequence of the framework's core principles, determined specifically by the MPU's Hilbert space dimension (`d₀=8`, from the logical necessity of self-reference) and the irreducible cost of its predictive cycle (`ε=ln(2)`). The fact that this derivation, rooted in prediction and optimization, yields a physically plausible `O(1)` relationship between these scales provides strong evidence for the internal consistency and predictive potential of the Predictive Universe framework.
