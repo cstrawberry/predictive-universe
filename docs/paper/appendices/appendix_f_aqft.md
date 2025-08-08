@@ -64,7 +64,7 @@ recovering Einstein causality (Theorem 46).
 
 The transition from the discrete MPU network to continuum physics is formalized as the convergence of the sequence of discrete nets of algebras $\{\mathfrak{A}_n(\mathcal{O})\}$.
 
-**Hypothesis F.1 (Convergence to Stable, Local AQFT).** The MPU network sequence $\{\mathcal{N}_n\}$, evolving under PCE dynamics (Appendix D) towards a stable, viable equilibrium configuration, is hypothesized to converge robustly in the limit $n \to \infty$ to a structure satisfying:
+**Hypothesis F.1 (Convergence to Stable, Local AQFT).** The MPU network sequence $\{\mathcal{N}_n\}$, evolving under PCE dynamics (Appendix D) towards a stable, viable equilibrium configuration, is hypothesized to converge robustly in the limit $n \to \infty$ to a structure satisfying the following conditions. This hypothesis represents a strong assumption about the behavior of the MPU network in the continuum limit:
 1.  **Geometric Convergence:** The network metric spaces $(\mathcal{V}_n, d_{\mathcal{N}_n})$ converge to a D=4 Lorentzian manifold $(M, g_{\mu\nu})$ (realizing Theorem 43 and Theorem 46).
 2.  **Algebraic Convergence:** The sequence of discrete nets of algebras $\mathcal{O} \mapsto \mathfrak{A}_n(\mathcal{O})$ converges in a suitable sense (e.g., Stone-von Neumann theorem for finite regions, or more general convergence for nets) to a limiting continuous net $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ defined on $(M, g_{\mu\nu})$.
 3.  **Emergent AQFT Axioms:** The limit net $\mathfrak{A}$ satisfies the standard Haag-Kastler axioms of AQFT (isotony, locality/causality, covariance under the emergent isometry group, time slice axiom), adapted for curved spacetime.
@@ -134,6 +134,7 @@ AQFT provides a robust mathematical framework for analyzing the properties of th
 *   Confirmation that consistency with operational causality (Postulate 2) is maintained via the CC bound (Theorem 39) and the information limitations of the underlying ND-RID interactions (Theorem 40, Theorem 41, as analyzed in Section F.6), preventing deterministic signaling (Theorem 42).
 
 Establishing the full convergence from discrete MPU dynamics to a stable, local AQFT satisfying the Haag-Kastler axioms (Hypothesis F.1), rigorously deriving the emergent dynamics generator $\mathcal{L}^*$, and definitively proving the impossibility of deterministic signaling within this formal setting are key future theoretical tasks for validating the PU framework's consistency and its unique stance on locality.
+
 
 
 
