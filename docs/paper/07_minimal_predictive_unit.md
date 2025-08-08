@@ -78,12 +78,12 @@ Because $U_{rev}^{(sp)\dagger}U_{rev}^{(sp)}=\mathbb I_{sp}$ and $(|0\rangle_c\l
 
 **4. Complexity Accounting**
 
-| Quantity                                | Value in this Construction                                     |
+| Quantity                                | Value in this Construction                                     |
 | :-------------------------------------- | :------------------------------------------------------------- |
-| Horizon Constant $K_0$                  | 3 bits (corresponding to the 3-qubit, 8-state system)        |
-| Operational Complexity $C_{op}$         | $C_{op} = K_0 = 3$ bits (by construction, using minimal elements) |
-| Minimum Cycle Time $\tau_{min}$         | $2\pi/\omega$ (a free parameter, assumed $\ll$ ms)              |
-| Irreducible Entropy Cost $\varepsilon$  | $\ln 2$ nats                                                   |
+| Horizon Constant $K_0$                  | 3 bits (corresponding to the 3-qubit, 8-state system)        |
+| Operational Complexity $C_{op}$         | $C_{op} = K_0 = 3$ bits (by construction, using minimal elements) |
+| Minimum Cycle Time $\tau_{min}$         | related to the Hamiltonian $\hat{H}$ (see Theorem 29), with an effective cycle time $\tau_{min} > 0$ |
+| Irreducible Entropy Cost $\varepsilon$  | $\ln 2$ nats                                                   |
 
 Since this MPU model operates at $C_{op}=K_0$ using the minimal structural elements for SPAP logic and irreversible reset, it instantiates a truly "Minimal" Predictive Unit.
 
@@ -313,5 +313,6 @@ P_{min} = \frac{E_{min, cycle}}{\Delta t_{cycle}} \ge \frac{k_B T \ln(d_0)}{\Del
 $$
 where $T$ is the effective temperature, $d_0 = \dim(\mathcal{H}_0) \ge 8$, and $\Delta t_{cycle} \approx \tau_{min}$ is the characteristic cycle time (Theorem 29). This $P_{min}$ corresponds to the physical power cost associated with the MPU's internal Hamiltonian $\hat{H}$ and represents the baseline physical resource cost $R(C_{op})$ (Definition 3a, Equation 16).
 *Distinction:* The baseline cost $R(C_{op})$ (Equation 49) is the continuous power needed to run the $C_{op}$ predictive engine (including the $K_0$ logic). The $\varepsilon$ cost (Theorem 31) is an additional, discrete entropy production incurred specifically during the irreversible information erasure step mandated by significant self-referential information gain ($\Delta I > 0$) within an 'Evolve' interaction. Both contribute distinctly to the MPU's total energy budget and stress-energy tensor (Appendix B).
+
 
 
