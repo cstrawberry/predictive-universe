@@ -83,12 +83,12 @@ $$
 
 **2.4.4 Physical Resource Costs: Functions ($R, R_I$) and Operators ($\hat{R}, \hat{R}_I$)**
 
-The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon > 0$ (Theorem 31)). These costs constrain the POP. To make the framework's dynamics tractable, we now adopt specific, physically-motivated functional forms for these costs, chosen to be the simplest expressions consistent with core principles like increasing cost and diminishing returns. In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
+The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon > 0$ (Theorem 31)). These costs constrain the POP. To make the framework's dynamics tractable, we now adopt specific, physically-motivated functional forms for these costs, chosen to be the simplest expressions consistent with core principles like increasing cost and diminishing returns. The specific forms chosen are minimal models, but the framework's qualitative conclusions are expected to be robust against reasonable variations (see Section 6.7). In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
 
-**Definition 3 (Resource-Cost Functions):**  
+**Definition 3 (Resource-Cost Functions):**
 The ongoing operational expense of an MPU’s predictive cycle is described by two monotone mappings from theoretical complexity $C_P$ to power-like rates. The specific functional forms presented here are minimal models chosen to satisfy the framework's derived principles (see Section 6.7 for a discussion of model-form robustness).
 
-(a) **Physical Operational Cost $R(C)$** – the rate of *physical* resource consumption required to maintain structures and run processes of complexity $C$.
+**(a) Physical Operational Cost $R(C)$** – the rate of *physical* resource consumption required to maintain structures and run processes of complexity $C$.
 $R(C)$ is non-decreasing ($R'(C)\!\ge 0$). For $C > C_{op}$, it is strictly convex ($R''(C)\!>0$); it is continuous at $C=C_{op}$. The convexity is a derived property: a system of complexity $C$ corresponds to $d=2^C$ distinguishable states. While a baseline linear cost `R(C) ∝ C` arises from the thermodynamic cost of refreshing `C` bits of information against thermal noise (Landauer's principle), a super-linear overhead is required to manage the coherence, error correction, and communication between the exponentially growing number of states. The marginal cost of adding one more bit of complexity (`C → C+1`) is not constant, as the new bit must be integrated with the `2^C` existing states, requiring protocols whose own complexity and cost grow with `C`. This proves that the marginal cost `R'(C)` must be an increasing function of `C`, meaning the cost function must be strictly convex. The power-law form below with $\gamma_p > 1$ is the simplest model capturing this necessary property.
 Relative to the baseline $P_{\min}=R(C_{op})$ (Definition 13) we set
 $$
@@ -99,8 +99,8 @@ R(C)
 $$
 with constants $r_p>0$ and **$\gamma_p > 1$**.
 
-(b) **Reflexive-Information Cost $R_I(C)$** – the *informational* overhead rate associated with self-referential verification.  
-It rises only logarithmically once the Horizon Constant **$K_0 \equiv B_3$** (Theorem 15, corresponding to 3 bits) is exceeded:
+(b) **Reflexive-Information Cost $R_I(C)$** – the *informational* overhead rate associated with self-referential verification.
+This cost reflects the resources needed to manage the self-referential computations underlying SPAP. The logarithmic form is the simplest model reflecting diminishing returns: as complexity grows, the marginal cost of adding more self-referential overhead decreases relative to the total complexity. It rises only logarithmically once the Horizon Constant **$K_0 \equiv B_3$** (Theorem 15, corresponding to 3 bits) is exceeded:
 $$
 R_I(C)
   = \frac{r_I}{\ln 2}\,
@@ -140,6 +140,7 @@ Several conditions are logically necessary for any system to perform prediction 
 
 *   **Theorem 7 (Necessity of a Representational Medium):** Prediction requires a physical or formal medium capable of encoding and processing the relevant states ($S(t)$), internal models ($M_t$), and predictions ($\hat{S}(t+\Delta t)$).
     *Proof:* Information processing requires a substrate; without it, the components of the predictive cycle cannot be instantiated or manipulated. QED
+
 
 
 
