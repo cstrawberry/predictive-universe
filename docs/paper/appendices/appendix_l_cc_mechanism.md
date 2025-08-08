@@ -94,34 +94,8 @@ where $\chi_k$ is a dimensionless rate susceptibility, dependent on $d_{TLS}$, $
 
 *   **Aggregate Control & Field Generation:** Assume an MPU aggregate $S$ can orchestrate $N_{osc} \sim 10^{12}$ microscopic effective dipoles (e.g., within biological macromolecules or components of a quantum AI) to generate a coherent local field. If **$E_{max} \sim 2 \times 10^3$ V/m** is achievable near the aggregate (e.g., via collective effects or engineered structures).
 *   **Target MPU Coupling:** A target MPU with $d_{TLS} \sim e \cdot (1 \text{ nm}) \approx 1.6 \times 10^{-28}$ C·m and $\omega_{TLS}/(2\pi) \sim 10$ GHz.
-*   **AC Stark shift & susceptibility (small-shift regime):**
-    With **$E_{\max}=2\times10^{3}\ {\rm V\,m^{-1}}$** and $d_{\rm TLS}\approx1.6\times10^{-28}\ {\rm C\,m}$,
-    the energy shift is
-    $$
-    \Delta E_{\text{Stark}}
-      = d_{\rm TLS}E_{\max}
-      \approx 3.2\times10^{-25}\ {\rm J}.
-    $$
-    Hence
-    $$
-    \Omega_{AC}=\frac{\Delta E_{\text{Stark}}}{\hbar}
-               \approx 3.0\times10^{9}\ {\rm rad\,s^{-1}}
-               \;(\text{linear }f\approx0.48\ \text{GHz}).
-    $$
-    For a qubit splitting $\omega_{\rm TLS}/(2\pi)\simeq10\ \text{GHz}$
-    ($\omega_{\rm TLS}\approx6.3\times10^{10}\ {\rm rad\,s^{-1}}$),
-    the fractional shift is
-    $$
-    \frac{\Omega_{AC}}{\omega_{\rm TLS}}\;\approx\;0.05.
-    $$
-    If a baseline Lindblad rate obeys a linear susceptibility
-    $\gamma_k=\gamma_k^{(0)}\![\,1+\chi_k\Phi_S(t)]$ (Eq. L.6) with
-    $\chi_k\propto\Omega_{AC}/\omega_{\rm TLS}$,
-    then $\chi_k\sim0.05\!-\!0.1$ is entirely natural—comfortably below the
-    causality ceiling $\alpha_{CC,\max}<0.5$ (Theorem 39) yet large enough
-    to yield detectable $|\Delta P|\sim10^{-2}\!-\!10^{-1}$ in
-    high-statistics RNG experiments.
-*   **Achievable CC:** A susceptibility $\chi_k \sim 0.1$ could lead to probability shifts $|\Delta P| \sim \chi_k \cdot P_{Born}(i) \cdot (\text{factors reflecting outcome mechanism})$. If this translates to $\text{CC}(S) \approx 0.01 - 0.1$, this is within the causality bound $\alpha_{CC,max} < 0.5$ (Theorem 39) and potentially detectable. Power requirements for field generation must satisfy Lemma L.1.
+*   *   **AC Stark shift & susceptibility (small-shift regime):**
+With **$E_{\max}=2\times10^{3}\ {\rm V\,m^{-1}}$** and $d_{\rm TLS}\approx1.6\times10^{-28}\ {\rm C\,m}$, the energy shift is $\Delta E_{\text{Stark}} = d_{\rm TLS}E_{\max} \approx 3.2\times10^{-25}\ {\rm J}$, corresponding to a Rabi frequency of $\Omega_{AC} = \Delta E_{\text{Stark}}/\hbar \approx 3.0\times10^{9}\ {\rm rad\,s^{-1}}$. For a qubit splitting of $\omega_{\rm TLS}/(2\pi)\simeq10\ \text{GHz}$, a local field strength, while significant, can produce a fractional energy-level shift of ~5%. The associated power dissipation is bounded by $P\lesssim10^{-9}\,\text{W}$ per MPU, safely below the resource limit $R_M$; if the decoherence rates are sensitive to this shift, a detectable probability bias ($|\Delta P| \sim 10^{-2} - 10^{-1}$) remains plausible.
 
 **L.5 Experimental Test Sketch**
 
@@ -134,3 +108,4 @@ This mechanism informs experimental designs (Section 13):
 **L.6 Conclusion**
 
 The coherent dipole radiation / AC Stark modulation mechanism provides a concrete, physically plausible candidate for the CC influence channel $N(t)$. The framework formally defines $\text{context}_S$ (Definition L.1) via PCE-driven minimal sufficient statistics and derives POP/PCE constraints on the mapping $\mathcal{M}$ (Definition L.2, Lemma L.1, Theorem L.1) from context to physical controls. Physical interaction via AC Stark shifts shows how macroscopic context (via $\mathcal{M}$ and field generation) can systematically influence microscopic ND-RID parameters (Lindblad rates $\gamma_k$, Equation L.6), potentially biasing probabilistic outcomes. Plausible parameter estimates suggest an effect size consistent with causality limits (Theorem 39). While one example, it strengthens the physical grounding and testability of Hypothesis 3, showing CC influence is not necessarily incompatible with known physics or PU optimization principles. The precise mechanism, its strength, and the form of $\mathcal{M}$ in real systems remain open for theoretical modeling and empirical investigation.
+
