@@ -50,11 +50,11 @@ $$
 
 *Lemma 1 (Convergence of Complexity Hierarchy):* The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing. For any physically realizable microstate $\mu$ (see Definition 17), which by definition is constructible using finite resources, the complexity $C_P(\mu)$ must be finite. Therefore, the sequence is bounded above. By the Monotone Convergence Theorem, the limit $C_P(\mu)$ defined in Equation (1) exists and is finite.
 
-**Convention for Complexity in Quantum Systems:** For quantum systems, such as the Minimal Predictive Units (MPUs) hypothesized to be fundamental constituents of reality (Definition 23), the Predictive Physical Complexity $C_P$ (measured in bits) is directly related to the information capacity required to specify their state and implement their predictive functions. This capacity is instantiated in the dimensionality $d_0$ of the MPU's Hilbert space $\mathcal{H}_0$ (Proposition 4). We adopt the standard quantum information convention:
+**Convention for Information Capacity in Quantum Systems:** For quantum systems, such as the Minimal Predictive Units (MPUs) hypothesized to be fundamental constituents of reality (Definition 23), the maximum information capacity required to specify their distinguishable states is determined by the dimensionality $d_0$ of the MPU's Hilbert space $\mathcal{H}_0$ (Proposition 4). We adopt the standard quantum information convention for this capacity $C_{cap}$ (measured in bits):
 $$
-C_P = \log_2 d_0 \quad \text{(Convention 1)}
+C_{cap} = \log_2 d_0 \quad \text{(Convention 1)}
 $$
-This establishes that a system with $C_P$ bits of complexity requires a Hilbert space of $d_0 = 2^{C_P}$ dimensions to represent its distinguishable states. This convention will be crucial for linking information-theoretic complexity requirements (like the Horizon Constant $K_0$, Theorem 15) to the physical structure of MPUs.
+This establishes that a system with a Hilbert space of $d_0$ dimensions has a capacity of $C_{cap}$ bits. The Predictive Physical Complexity $C_P$ (Equation 1) represents the resources utilized by the system to implement its current predictive functions, necessarily satisfying $C_P \le C_{cap}$. This distinction is crucial: $C_{cap}$ is the potential capacity, while $C_P$ is the realized complexity, which is dynamically adapted (Section 6). This convention will be crucial for linking information-theoretic complexity requirements (like the Horizon Constant $K_0$, Theorem 15) to the physical structure of MPUs.
 
 This hierarchical definition ensures $C_P$ is well-defined and incorporates all emergent physical constraints without circularity.
 
@@ -140,6 +140,7 @@ Several conditions are logically necessary for any system to perform prediction 
 
 *   **Theorem 7 (Necessity of a Representational Medium):** Prediction requires a physical or formal medium capable of encoding and processing the relevant states ($S(t)$), internal models ($M_t$), and predictions ($\hat{S}(t+\Delta t)$).
     *Proof:* Information processing requires a substrate; without it, the components of the predictive cycle cannot be instantiated or manipulated. QED
+
 
 
 
