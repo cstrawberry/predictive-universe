@@ -128,7 +128,7 @@ The scale-dependent gravity model (Equation I.4) must be consistent with high-pr
 
 *   **Scale separation:** Local tests operate on scales $R_\odot \sim 10^{-6}\,\mathrm{kpc}$, vastly smaller than the transition scale $L_0 \sim \mathrm{kpc}$. For $R \ll L_0$, Equation (I.5) gives $\varepsilon_G(R) \approx A_G (R/L_0)^m$. With $m \ge 1$ and $A_G = \mathcal O(1)$, $\varepsilon_G(R_\odot)$ is extremely small (e.g., for $A_G=1, L_0=1$ kpc, $m=2$, $\varepsilon_G(10^{-6} \text{ kpc}) \approx (10^{-6})^2 = 10^{-12}$).
 *   **Recovery of $G_0$:** For $R \ll L_0$, $G(R) \approx G_0$, effectively recovering constant Newton gravity.
-*   **PPN parameters:** The smallness of $\varepsilon_G(R)$ on solar system scales implies that the parameterized post-Newtonian (PPN) parameters, which quantify deviations from Newtonian gravity and flat spacetime, remain consistent with observations ($\gamma_{\mathrm{PPN}}\!\simeq\!\beta_{\mathrm{PPN}}\!\simeq\!1$). Deviations would only appear at scales comparable to or larger than $L_0$.
+*   **PPN parameters:** The smallness of $\varepsilon_G(R)$ on solar system scales implies that the parameterized post-Newtonian (PPN) parameters, which quantify deviations from Newtonian gravity and flat spacetime, remain consistent with observations ($\gamma_{\mathrm{PPN}}\simeq\beta_{\mathrm{PPN}}\simeq1$). Deviations would only appear at scales comparable to or larger than $L_0$.
 
 **I.9 Numerical Plausibility and Cosmological Bounds**
 
@@ -182,6 +182,7 @@ The adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $
 **I.15 Conclusion**
 
 The Principle of Compression Efficiency and complexity saturation in sparse predictive environments lead to a PCE-driven parameter relaxation mechanism that causes the emergent Newton constant to increase with scale in low-density regions. The resulting function $G(R)$, Equation (I.4), provides a physically motivated framework that naturally explains galaxy-scale mass discrepancies (e.g., rotation curves, scaling relations). This emergent gravity scenario respects local tests of GR and yields falsifiable predictions for baryon–kinematic relations and potentially cluster dynamics. Detailed rotation-curve fits and cosmological simulations testing the evolution of $G(R)$ are necessary next steps to validate this aspect of the Predictive Universe framework.
+
 
 
 
