@@ -246,7 +246,17 @@ $$
 **6.5.2 Theorem 22 (Stability of Adaptation)**
 
 The adaptation dynamics (Equation 30) are locally stable around an equilibrium point $C^*$ (where $\Psi(C^*) = 0$) if and only if the driving force decreases as complexity moves away from equilibrium, i.e., $\frac{d\Psi}{dC}\big|_{C=C^*} < 0$.
-*Proof:* Perform linear stability analysis around $C^*$. Let $C(t) = C^* + \delta C(t)$. Substitute into Equation (30) and Taylor expand $\Psi(C) \approx \Psi(C^*) + (d\Psi/dC|_{C^*}) \delta C$. Since $\Psi(C^*)=0$, the linearized dynamics for the perturbation are: $d(\delta C)/dt \approx (\eta_{adapt} \cdot d\Psi/dC|_{C^*}) \delta C$. For the perturbation $\delta C$ to decay (local stability), the coefficient must be negative. Since $\eta_{adapt} > 0$, this requires $d\Psi/dC|_{C^*} < 0$. From Equation (35), $d\Psi/dC = \Gamma_0 (\partial^2 PP / \partial C^2) - \lambda R''(C) - R_I''(C)$. Since $\Gamma_0 > 0$, $\partial^2 PP / \partial C^2 < 0$, and $R_I'' < 0$, stability is generally guaranteed if the marginal physical costs are non-decreasing or increase ($R''(C) \ge 0$). QED
+*Proof:* The equilibrium point $C^*$ is stable if the Adaptation Driving Force $\Psi(C)$ decreases as $C$ increases near $C^*$, i.e., $d\Psi/dC < 0$ at $C^*$. Differentiating Equation (33) with respect to $C$ gives the stability condition:
+ $$
+ \frac{\partial \Psi}{\partial C} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) - R_I''(C) < 0 \quad \text{(34)}
+ $$
+By Definition 19, $PP(C)$ is concave ($\partial^2 PP / \partial C^2 < 0$). By Definition 3a, $R(C)$ is strictly convex ($R''(C) > 0$ for $C>C_{op}$ since $\gamma_p>1$). By Definition 3b, $R_I(C)$ is concave ($R_I'' < 0$).
+Stability requires the stabilizing terms (concave $PP$ and convex $R$) to dominate the destabilizing term (concave $R_I$). Since $R_I'' < 0$, the term $-R_I''(C)$ is positive (destabilizing). Stability is guaranteed if and only if:
+$$
+\Gamma_0 \left|\frac{\partial^2 PP}{\partial C^2}\right| + \lambda R''(C) > |R_I''(C)|
+\quad \text{(34a)}
+$$
+This condition, the **Dominance of Stabilizing Costs (DSC)**, is assumed to hold for viable MPU configurations. It ensures that the stabilizing effects of performance saturation and the strict convexity of $R(C)$ (driven by $\gamma_p>1$) are sufficient to overcome the destabilizing effect of the diminishing marginal cost of $R_I(C)$. Under the DSC condition, the fundamental structure ensures the existence of a stable equilibrium complexity $C^*$. QED
 
 **6.5.3 Definition 21 (Def 21): Dynamics of $\hat{C}_{target}(t)$**
 
@@ -307,3 +317,4 @@ The framework derives the necessity of the operational performance bounds `α` a
 *   **The Lower Bound `α`:** This is the threshold of viability, where a predictive signal becomes distinguishable from noise. Its value is fundamentally tied to the minimal information content of a predictive act (`ε = ln 2`) and the dimensionality of the minimal predictive system (`d₀ = 8`, from `K₀=3` bits). `α` represents the minimal signal-to-noise ratio required for the adaptation dynamics of the system (the coupled equations for `C` and `C_target`) to achieve a stable lock and avoid dissolution into chaos. A full derivation will involve a detailed stability analysis of these adaptation equations in the low-complexity, low-performance regime near the `C=C_op` baseline.
 
 *   **The Upper Bound `β`:** This is the threshold of adaptability, where the marginal cost of further predictive improvement becomes prohibitive under PCE. Its value is set by a dynamic stability condition: the system must be able to afford the resource cost of achieving the next increment of performance without entering a regime of runaway costs or instability. This constrains the relationship between the marginal cost functions (`R'`, `R_I'`) and the performance gap `(β-PP)` at the limit of high complexity. Deriving `β` requires a full, self-consistent solution of the PCE optimization problem at its upper boundary, likely yielding a value for `β` that is a complex function of the framework's core cost and efficiency parameters (`r_p`, `γ_p`, `r_I`, `κ_eff`, `λ`, `Γ₀`).
+
