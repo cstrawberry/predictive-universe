@@ -142,8 +142,9 @@ $$
 $$
 $$
 \boxed{
-\frac{\delta}{L\_P} = \sqrt{8\ln 2}, \sqrt{\frac{\chi^*}{\eta^*}} \approx 2.355, \sqrt{\frac{\chi^*}{\eta^*}}
+\frac{\delta}{L_P} = \sqrt{8\ln 2}, \sqrt{\frac{\chi^}{\eta^}} \approx 2.355
 }
 \tag{Q.18}
 $$
 This result demonstrates that the fundamental MPU spacing `δ` is robustly of the same order of magnitude as the emergent Planck length `L_P`. The value of this ratio is not a tunable parameter but is derived directly from the framework's most fundamental constants: the Hilbert space dimension `d₀=8` (from the logical necessity of `K_0=3` bits for self-reference) and the irreducible thermodynamic cost of that logic, `ε=ln(2)`. The ability to derive a plausible, `O(1)` constant linking these scales from a self-consistent global optimization provides powerful evidence for the internal coherence of the Predictive Universe framework.
+
