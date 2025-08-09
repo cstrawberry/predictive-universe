@@ -183,7 +183,7 @@ $$
 S_{max}(\mathcal{A}) = k_B \left(\frac{\chi C_{max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}
 \tag{E.6}
 $$
-To match the universal Bekenstein-Hawking form $S_{BH} = k_B \mathcal{A} / (4 L_P^2)$ (where $L_P^2 = G\hbar/c^3$ is the squared Planck length), we must identify the coefficients:
+To match the universal Bekenstein-Hawking form $S_{BH} = k_B \mathcal{A} / (4 L_P^2)$ (where $L_P^2 = G\hbar/c^3$ is the squared Planck length), we identify the coefficients (fixing \$G\$ in terms of microscopic MPU parameters; this is not an additional assumption):
 $$
 \frac{\chi C_{max}(f_{RID})}{\eta \delta^2} = \frac{1}{4 L_P^2} = \frac{c^3}{4 G \hbar}
 \tag{E.7}
@@ -275,4 +275,5 @@ This result demonstrates that the relationship between the fundamental microscop
 
 
 This appendix provided a theoretical derivation of the Horizon Entropy Area Law (Theorem 49 / Theorem E.4) from PU principles. ND–RID irreversibility ($\varepsilon \ge \ln 2$, Theorem 31, Appendix J) guarantees strict channel contractivity ($f_{RID}<1$, Lemma E.1), fundamentally bounding classical information capacity ($C_{max} < \ln d_0$, Theorem E.2). Combined with the geometric scaling of effective information channels across a boundary ($N_{eff\_links} \propto \mathcal{A}$, incorporating correlation factor $\chi$, conditional on Theorem 43, Theorem E.3), this yields the linear entropy-area relation $S_{max} = k_B \left(\frac{\chi C_{max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}$ (Eq. E.6). The explicit Bekenstein-Hawking coefficient $1/(4L_P^2)$ was shown to emerge self-consistently (Section E.6.1) when this is combined with the PU framework's definition of the emergent gravitational constant $G$ (Equation E.9). This links the emergent Planck scale ($L_P^2 = G\hbar/c^3$) to fundamental MPU parameters ($\delta, \eta, \chi, \varepsilon$ via $C_{max}$) controlling geometric density and information capacity (Equation E.14, E.15). The analysis demonstrates structural consistency, showing that the derived origin of $G$ is compatible with MPU scales being near $L_P$. The derived Area Law thus interprets the black hole horizon thermodynamically as representing the maximal information boundary defined by the fundamental ND–RID capacity limits. This provides the necessary thermodynamic foundation (Theorem 49) for deriving Einstein's Field Equations (Section 12).
+
 
