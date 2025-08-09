@@ -154,9 +154,10 @@
 
 *   **Statistical FTL Influence:** (Postulate 3, Section 10.3) Hypothesized effect where CC modulation by Alice can statistically influence the marginal probabilities of outcomes for Bob's measurements on an entangled system at a space-like separated location, argued to be consistent with operational causality (Postulate 2) due to information limits (Theorem 42, Appendix F).
 
-*   **$T$ (Simulation Horizon/Steps):** (Used in Theorems 14, B.2) Dimensionless number of steps or cycles over which a SPAP-limited prediction task is performed or a simulation is run.
+*   **$\mathcal{T}$ (Simulation Horizon/Steps):** (Used in Theorems 14, B.2) Dimensionless number of steps or cycles over which a SPAP-limited prediction task is performed or a simulation is run.
 
 *   **$T_{\mu\nu}^{(MPU)}$ (MPU Stress-Energy Tensor):** (Definition B.8, Eq. B.15, Appendix B) Macroscopic, symmetric, covariantly conserved stress-energy tensor derived from coarse-grained average of the underlying microscopic operator $\hat{\Theta}_{\mu\nu}^{(MPU)}$ (Definition B.7), representing MPU activity and costs ($\hat{H}_v, \hat{R}, \hat{R}_I, \hat{V}_{vv'}$). Source term in the emergent Einstein Field Equations (EFE, Eq. 76).
 
 *   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.3, Theorem C.6, Appendix D) Theorem asserting POP/PCE dynamics necessarily drive MPU networks to self-organize into configurations exhibiting large-scale geometric regularity (Definition C.3). Justified by necessity arguments (Appendix C) and dynamical convergence (Appendix D). Foundational for emergence of smooth spacetime.
+
 
