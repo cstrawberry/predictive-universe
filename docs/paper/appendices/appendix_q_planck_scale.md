@@ -138,7 +138,7 @@ The global, coupled PCE optimization of the MPU network vacuum yields a unique, 
 
 Substituting these PCE-optimal values into the foundational relation (Q.15) yields the final result for the ratio of the MPU scale to the Planck scale:
 $$
-\frac{\delta^2}{L\_P^2} \approx 8\ln 2 , \frac{\chi^*}{\eta^*}
+\frac{\delta^2}{L\_P^2} \approx 8\ln 2,\frac{\chi^*}{\eta^*}
 $$
 $$
 \boxed{
@@ -147,4 +147,5 @@ $$
 \tag{Q.18}
 $$
 This result demonstrates that the fundamental MPU spacing `δ` is robustly of the same order of magnitude as the emergent Planck length `L_P`. The value of this ratio is not a tunable parameter but is derived directly from the framework's most fundamental constants: the Hilbert space dimension `d₀=8` (from the logical necessity of `K_0=3` bits for self-reference) and the irreducible thermodynamic cost of that logic, `ε=ln(2)`. The ability to derive a plausible, `O(1)` constant linking these scales from a self-consistent global optimization provides powerful evidence for the internal coherence of the Predictive Universe framework.
+
 
