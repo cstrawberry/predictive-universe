@@ -43,7 +43,7 @@ To define Predictive Physical Complexity ($C_P$) without presupposing the physic
 *   **Level 1 ($C_{P,1}$):** Refines $C_{P,0}$ by restricting allowed processes $P$ to those compatible with a minimal, framework-independent set of base physical constraints $\mathcal{L}_{phys}^{(base)}$. These constraints are treated axiomatically as necessary prerequisites for any physical instantiation of computation (consistent with the Principle of Physical Instantiation, Appendix P). They include conservation laws, the Second Law of Thermodynamics, and the Landauer limit relating computation to energy dissipation. Crucially, this level excludes PU-specific derived results like $\varepsilon \ge \ln 2$ (Theorem 31) or emergent constraints such as a finite invariant speed (Theorem 46) and uncertainty relations (Proposition 8), ensuring these are derived rather than assumed. This incorporates fundamental thermodynamic and computational constraints.
 *   **Level n ($C_{P,n}$, $n \ge 2$):** Further refines $C_{P,n-1}$ by incorporating additional physical constraints (such as the thermodynamic cost $\varepsilon \ge \ln 2$ derived in **Theorem 31** and the reflexivity constraint $\kappa_r > 0$ from **Theorem 33**, which are established later in the framework) that are themselves derived independently using only constraints from levels $n-1$ and below applied to the analysis of MPU dynamics.
 
-The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing. The final, self-consistent definition of $C_P$ is the limit of this iterating refinement:
+The final, self-consistent definition of $C_P$ is the limit of this iterating refinement:
 $$
 C_P(\mu)\;=\;\lim_{n\to\infty} C_{P,n}(\mu) \quad \text{(1)}
 $$
