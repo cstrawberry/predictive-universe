@@ -60,6 +60,12 @@ Therefore, PCE optimization intrinsically prevents causal paradoxes by establish
 
 In summary, PU presents reality governed by the logic, thermodynamics, and optimization of prediction. Physical laws, spacetime, and consciousness emerge from the collective dynamics of the MPU network operating under derived logical and resource limitations.
 
+**14.2.1 Causality, Statistical Advantage, and the Limits of Influence**
+
+The framework’s stance on causality (Postulate 2) and its hypothesis of statistical influence (Postulate 3) culminate in a subtle but testable implication for non-local correlations. The PU framework precludes the transmission of arbitrary, deterministic information faster than light, thereby upholding operational causality. However, it allows for the establishment of a statistical advantage on a pre-agreed decision task across spacelike separation. Section 10.3.2 formalizes this via the QCP, in which a system under Alice’s control induces a lawful, probabilistic “nudge” for Bob.
+
+From Bob’s isolated perspective, his local measurement outcomes remain baseline-random; he gains no information about Alice’s context. The advantage is not knowledge for any single party, but improved performance of the joint system executing the pre-agreed strategy. If the induced bias is $\delta$, the joint success probability on a binary task becomes $0.5+\delta$, an improvement over pure chance. For example, $\delta=0.01$ (achievable if $\mathrm{CC}\ge \delta/\kappa$; for $\kappa=1$, $\mathrm{CC}\ge 0.01$) raises the success rate from 50% to 51%; over 100 independent, time-critical trials, that yields about one additional correct outcome on average. This advantage is bounded by the causal limit $(\mathrm{CC}<0.5)$, physically self-limited by the cost of context (Appendix S), and information-rate limited $(I \propto \mathrm{CC}^2)$. Together these bounds make paradox-inducing uses impossible while preserving a real, measurable edge.
+
 **14.3 Distinctions, Connections, and Information Processing Frameworks**
 
 The PU framework distinguishes itself while connecting to other approaches:

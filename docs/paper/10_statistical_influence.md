@@ -35,6 +35,55 @@ While deterministic FTL signaling is ruled out by Theorem 39, the proposed CC me
 
 As a direct consequence of Hypothesis 3 (CC influence mechanism) combined with the existence of quantum entanglement (Proposition 10) within the MPU network (Hypothesis 1), the Predictive Universe framework allows for the possibility of statistical faster-than-light (FTL) influence. Specifically, it is postulated that a change in the internal context `context_S` of a high-CC system $S_A$ (Alice) localized in region $\mathcal{O}_A$ *can* statistically alter the marginal probability distribution $P_{obs}(b|B)$ of outcomes $b$ for local measurements $B$ performed on an entangled system by $S_B$ (Bob) in a space-like separated region $\mathcal{O}_B$. This statistical influence is asserted to be incapable of enabling deterministic FTL signaling (and thus preserves causality according to Postulate 2) provided the constraint $\alpha_{CC,max} < 0.5$ (Theorem 39) holds. The existence and nature of this statistical FTL influence is presented as a key, falsifiable prediction of the framework, requiring stringent empirical verification (Section 13.4).
 
+### 10.3.2 Quantum Communication Protocol (QCP)
+
+It is crucial to distinguish this protocol from “communication” in the operational sense used in physics. The name “Quantum Communication Protocol” is chosen to reflect the broader, semantic sense in which a meaningful statistical correlation is established to grant a decision advantage. However, operational “communication” implies the ability to transmit chosen, deterministic information. The analysis below shows that the protocol’s inherent probabilistic nature and fundamental information-rate limits make such operational communication impossible, thereby preserving causality (Postulate 2). The protocol formalizes a method for leveraging statistical influence for a pre-agreed task, not for arbitrary FTL signaling.
+
+**Definition (QCP).** Alice and Bob share many copies of a fixed entangled state. They agree on a binary mapping between **Alice’s context** $C\in\{\mathrm A,\mathrm B\}$ and a **target local measurement bias** for Bob (Appendix L): if $C=\mathrm A$, Alice applies a physical control $\mathcal M(\text{context}_S)$ intended to bias Bob’s local outcome toward “spin up”; if $C=\mathrm B$, toward “spin down.” Bob measures each partner in the pre-agreed basis and uses the single-shot rule: choose Strategy A if he observes “spin up,” Strategy B if “spin down.”
+
+**Statistical neutrality of the raw stream.** With equiprobable contexts $P(C=\mathrm A)=P(C=\mathrm B)=\tfrac12$, Bob’s unconditional marginal equals the baseline $p$ (e.g., $p=\tfrac12$ for a singlet in the matched basis), so the raw bit stream is indistinguishable from baseline (cf. Theorem 41, Eq. (63)).
+
+**Single-shot decision advantage.** Write
+$$
+P(\uparrow\mid C=\mathrm A)=\tfrac12+\delta,\quad
+P(\uparrow\mid C=\mathrm B)=\tfrac12-\delta,\quad
+0<\delta\le \kappa\,\mathrm{CC},\ \kappa\in(0,1],
+$$
+where $\kappa$ quantifies context-to-control and basis alignment efficiency (Appendix L), and $\delta\le \mathrm{CC}$ follows from the magnitude bound on $f$ (Theorem 36; cf. Def. 30). With equiprobable contexts,
+$$
+P_{\text{succ}}
+= \tfrac12\,P(\uparrow\!\mid \mathrm A)+\tfrac12\,P(\downarrow\!\mid \mathrm B)
+= \tfrac12+\delta,
+$$
+so the single-shot advantage over random is exactly $\delta=O(\mathrm{CC})$.
+
+**Information-rate bound (no deterministic signaling).** For small $\delta$, the per-trial classical mutual information between context $C$ and Bob’s outcome $Y$ obeys
+$$
+I(C;Y)\le c\,\delta^2 = O(\mathrm{CC}^2)\quad\text{(nats/trial)},
+$$
+as in Theorem 41 (Eq. (63)). To decode a deterministic bit with error probability $\le\alpha$ from $N$ i.i.d. outcomes requires (e.g., Chernoff/Hoeffding)
+$$
+N \gtrsim \frac{\log(1/\alpha)}{2\,\delta^2}=O\!\Big(\tfrac1{\mathrm{CC}^2}\Big),
+$$
+consistent with Theorem 40 (Eq. (62)). Let $r_{\max}\lesssim 1/\tau_{\min}$ be the feasible local measurement rate per device (Theorem 29), further limited in throughput by ND–RID capacity bounds (Appendix E, Thm E.2). With spacelike separation $D$, the pre-lightcone trial budget satisfies
+$$
+N_{\text{pre}}\ \le\ r_{\max}\,\frac{D}{c}.
+$$
+Reliable pre-lightcone decoding would thus require $r_{\max}D/c=O(1/\delta^2)$, a regime excluded by these rate/resource bounds at realistic $\delta$, preventing tachyonic anti-telephone constructions (Theorem 42). *(Illustrative numbers: at $r_{\max}=1\,\text{GHz}$ and $D=1\,\text{km}$, $N_{\text{pre}}\!\approx\!3.3\times10^3 \ll 2.3\times10^4$ for $\delta=0.01,\alpha=0.01\)).*
+
+**AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Eq. (F.4). Under the $O(\mathrm{CC}^2)$ information-rate bound (Theorem 41), this cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42).
+
+**Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to stress–energy and induces gravitational self-dephasing (Appendix S). Modeling
+$$
+P_{\text{context}}(\mathrm{CC}) = A\!\left[\frac{\mathrm{CC}}{\alpha_{CC,\max}-\mathrm{CC}}\right]^2,\qquad
+\alpha_{CC,\max}<\tfrac12,
+$$
+the induced time-dilation across a target of size $L_q$ over coherence time $\tau_c$ satisfies
+$$
+\Delta\tau_d = K\,P_{\text{context}},
+$$
+with geometry constant $K$ defined in Appendix S. This reduces the achieved $\mathrm{CC}_{\text{eff}}$ (achieved CC after self-dephasing; Appendix S) and hence $\delta$, further limiting any practical advantage.
+
 **10.4 Consistency Analysis: Statistical Influence vs. Causality**
 
 The framework must rigorously demonstrate that the allowed statistical FTL influence (Postulate 3) does not violate the core causality principle (Postulate 2). This analysis relies on the limits imposed by the CC bound and the nature of the information transfer.
