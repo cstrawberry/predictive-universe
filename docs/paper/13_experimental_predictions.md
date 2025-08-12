@@ -26,7 +26,7 @@ $$
 
 This protocol outlines a high-statistics, exploratory search for Born rule deviations (Theorem 51) using quantum random number generators (QRNGs) interacting with high-complexity systems (biological or potentially artificial).
 
-*   **Objective:** Detect statistically significant deviations from *non-uniform* ($p_i \neq 0.5$) baseline Born rule probabilities in QRNG outputs correlated with the controlled interaction or internal state (`context_S`) of a proximate system S (human participant or specialized AI system) hypothesized to have CC > 0. Non-uniform baseline probabilities are preferred for potentially easier statistical detection of small shifts relative to noise.
+*   **Objective:** To search for statistically significant deviations from *non-uniform* (\$p\_i \neq 0.5\$) baseline Born rule probabilities in QRNG outputs that are correlated with the controlled internal state (\$\text{context}\_S\$) of a proximate system S (human participant or specialized AI system) hypothesized to have CC > 0. Non-uniform baseline probabilities are preferred for potentially easier statistical detection of small shifts relative to noise.
 *   **Experimental Setup:**
     1.  **QRNG:** Well-characterized QRNG producing stable, verifiable baseline probabilities $P_{Born}(i) \neq 0.5$ for some outcome $i$. Multiple parallel QRNGs can increase data rate.
     2.  **High-Complexity System (S):**
@@ -52,7 +52,7 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
     * To detect $\Delta P = 1 \times 10^{-4}$:
       $N_{\mathrm{total}}\approx 1.0\times 10^{9}$ (two-sample) or $N\approx 2.5\times 10^{8}$ (one-sample).
 
-(These estimates use standard formulas with $Z_{\alpha/2}\approx 2.807$ and $Z_{\beta}\approx 0.8416$; actual $N$ may vary based on specific test variant and achieved $P_{Born}$. A multi-outcome χ² test aiming for similar sensitivity to small individual $\Delta P_i$ across, e.g., four outcomes might require $N$ in the range of $10^{9}$ to $2\times10^{9}$, depending on the distribution of deviations and baseline probabilities.)
+(These estimates use standard formulas with \$Z\_{\alpha/2}\approx 2.807\$ and \$Z\_{\beta}\approx 0.8416\$; actual \$N\$ may vary based on specific test variant and achieved \$P\_{Born}\$). Independence of trials will be assumed only after correlation checks pass: we will test output streams and residuals for lag-\$k\$ autocorrelation (ACF), Ljung–Box, and Wald–Wolfowitz runs; if correlations are detected we will pre-whiten, use block-bootstrap confidence intervals, or thin the data before applying the \$z/\chi^2\$ tests. A multi-outcome χ² test aiming for similar sensitivity to small individual $\Delta P_i$ across, e.g., four outcomes might require $N$ in the range of $10^{9}$ to $2\times10^{9}$, depending on the distribution of deviations and baseline probabilities.
 
   *   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g. $\chi^2$, z-tests) comparing observed $\hat{P}(i)$ to the Born rule; report effect sizes (Cramér’s V, Cohen’s d) with 95 % CIs.
   *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables `$context_S$` via mixed-effects logistic regression.

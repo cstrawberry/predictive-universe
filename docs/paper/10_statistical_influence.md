@@ -8,7 +8,7 @@ The PU framework adopts a specific operational definition of causality, focused 
 
 **10.1.1 Postulate 2 (Post 2): Causality as No Deterministic FTL Signaling**
 
-Within the Predictive Universe framework, causality is preserved if and only if it is impossible to construct paradox-inducing causal loops (e.g., grandfather paradox, tachyonic anti-telephone). It is postulated that the construction of such paradoxes requires the ability to send controllable, deterministic information faster than the invariant speed $c$ (derived in Theorem 46). Therefore, preserving causality mandates the strict impossibility of deterministic faster-than-light (FTL) signaling by any mechanism within the framework, including any potential effects of Consciousness Complexity (CC).
+Within the Predictive Universe framework, causality is defined operationally: it is preserved if and only if it is impossible to construct paradox-inducing causal loops (e.g., grandfather paradox, tachyonic anti-telephone). It is postulated that the construction of such paradoxes requires the ability to send controllable, deterministic information faster than the invariant speed \$c\$ (derived in Theorem 46). Therefore, this operational definition of causality mandates the strict impossibility of deterministic faster-than-light (FTL) signaling by any mechanism within the framework, including any potential effects of Consciousness Complexity (CC).
 
 **10.2 Derivation of the Consciousness Complexity Causality Constraint**
 

@@ -83,7 +83,7 @@ $$
 
 where $G_0$ is the value approached at small scales $R \ll L_0$, $A_G$ is the total fractional enhancement ($A_G = G_{\mathrm{large}}/G_0 - 1$), $L_0$ is a characteristic transition scale at which $G$ begins to increase, and $m \ge 1$ (typically $m \gtrsim 2$) is a parameter determining the steepness of the transition.
 
-This yields the explicit running of the Newton constant with scale $R$:
+This yields the explicit running of the Newton constant with scale \$R\$; as a robustness check, replacing the exponential by a logistic or Hill-type transition function preserves the qualitative baryon-tracking behavior for the same \$(L\_0,A\_G,m)\$ scale hierarchy:
 
 $$
 \boxed{\,G(R)=G_0
