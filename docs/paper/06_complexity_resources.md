@@ -248,13 +248,13 @@ $$
 The adaptation dynamics (Equation 30) are locally stable around an equilibrium point $C^*$ (where $\Psi(C^*) = 0$) if and only if the driving force decreases as complexity moves away from equilibrium, i.e., $\frac{d\Psi}{dC}\big|_{C=C^*} < 0$.
 *Proof:* The equilibrium point $C^*$ is stable if the Adaptation Driving Force $\Psi(C)$ decreases as $C$ increases near $C^*$, i.e., $d\Psi/dC < 0$ at $C^*$. Differentiating Equation (33) with respect to $C$ gives the stability condition:
  $$
- \frac{\partial \Psi}{\partial C} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) - R_I''(C) < 0 \quad \text{(34)}
+ \frac{\partial \Psi}{\partial C} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) - R_I''(C) < 0 \quad \text{(34a)}
  $$
 By Definition 19, $PP(C)$ is concave ($\partial^2 PP / \partial C^2 < 0$). By Definition 3a, $R(C)$ is strictly convex ($R''(C) > 0$ for $C>C_{op}$ since $\gamma_p>1$). By Definition 3b, $R_I(C)$ is concave ($R_I'' < 0$).
 Stability requires the stabilizing terms (concave $PP$ and convex $R$) to dominate the destabilizing term (concave $R_I$). Since $R_I'' < 0$, the term $-R_I''(C)$ is positive (destabilizing). Stability is guaranteed if and only if:
 $$
 \Gamma_0 \left|\frac{\partial^2 PP}{\partial C^2}\right| + \lambda R''(C) > |R_I''(C)|
-\quad \text{(34a)}
+\quad \text{(34b)}
 $$
 This condition, the **Dominance of Stabilizing Costs (DSC)**, is assumed to hold for viable MPU configurations. It ensures that the stabilizing effects of performance saturation and the strict convexity of $R(C)$ (driven by $\gamma_p>1$) are sufficient to overcome the destabilizing effect of the diminishing marginal cost of $R_I(C)$. Under the DSC condition, the fundamental structure ensures the existence of a stable equilibrium complexity $C^*$. QED
 
