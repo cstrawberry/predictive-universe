@@ -212,7 +212,20 @@ Minimizing this action with respect to variations in $A_\nu$ ($\delta S_{field} 
 
 **G.6 Minimal Coupling to Matter**
 
-The interaction between the emergent gauge field $A_\mu$ and emergent matter fields (represented, for example, by a complex scalar field $\phi$ or a Dirac spinor field $\Psi$ describing MPU aggregates) must preserve the established $U(1)$ gauge symmetry for overall self-consistency of the theory. The simplest and most resource-efficient way to achieve this, favored by PCE principles (which penalize unnecessary complexity and additional cost terms in $V(x)$ unless justified by significant benefit), is minimal coupling: replace all partial derivatives $\partial_\mu$ acting on the matter fields in their free-field Lagrangian with the full covariant derivative $D_\mu$ (Equation G.4.1).
+The interaction between the emergent gauge field $A_\mu$ and matter fields arises from the same microscopic coherence cost that necessitates the gauge field's existence. The propagation cost component of the PCE Potential, $V_{prop}$, penalizes any loss of predictive coherence between neighboring MPUs. On the emergent network with effective spacing $\delta$, this cost for a link between site $v$ and $v+\mu$ can be modeled by a functional that is minimized for perfect coherence. For a coarse-grained scalar field $\psi$ representing the slow modes of the MPU state, this cost is proportional to $|\psi_v - \mathcal{U}_{v,\mu} \psi_{v+\mu}|^2$, where the link transporter $\mathcal{U}_{v,\mu} = e^{iq\delta A_\mu(v)}$ is the lattice gauge field.
+
+To derive the effective action for the matter field $\psi$ in the continuum limit, we perform a gradient expansion of this microscopic link cost. The gauged finite difference is:
+$$
+\psi_v - \mathcal{U}_{v,\mu} \psi_{v+\mu} = \psi(x) - e^{iq\delta A_\mu(x)} \psi(x+\delta\hat{e}_\mu)
+$$
+Expanding both terms to first order in the spacing $\delta$:
+$$
+\approx \psi(x) - (1 + iq\delta A_\mu(x)) (\psi(x) + \delta \partial_\mu \psi(x))
+$$
+$$
+\approx \psi(x) - (\psi(x) + \delta \partial_\mu \psi(x) + iq\delta A_\mu(x)\psi(x)) = -\delta(\partial_\mu + iqA_\mu(x))\psi(x)
+$$
+The link cost is therefore proportional to $\delta^2 |D_\mu \psi|^2$, where $D_\mu = \partial_\mu + iqA_\mu$ is precisely the covariant derivative. Summing this cost over all links and taking the continuum limit ($\sum_v \delta^D \to \int d^Dx$) demonstrates that the kinetic term for the matter field emerging from the microscopic PCE coherence cost is exactly the minimally coupled term. This provides a constructive, "bottom-up" justification for the principle of minimal coupling, showing it to be the unique, lowest-order structure consistent with the underlying gauge invariance required for predictive coherence. The standard procedure is thus to replace all partial derivatives $\partial_\mu$ in the free-field Lagrangian with the full covariant derivative $D_\mu$ (Equation G.4.1).
 For a complex scalar field $\phi$ with charge $q$:
 $$
 \mathcal{L}_{\text{scalar, free}} = g^{\mu\nu}(\partial_\mu \phi)^* (\partial_\nu \phi) - m^2 |\phi|^2

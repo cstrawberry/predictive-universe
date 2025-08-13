@@ -41,12 +41,20 @@ The homomorphism `ℤ⁸ → ℤ` is induced by the inclusion `T⁸ ↪ U(8)` an
 
 Let `0 ⊂ S₁ ⊂ S₂ ⊂ \dots ⊂ S₈ = ℂ⁸ × Σ₈` be the universal flag of subbundles over `Σ₈`, where `rank(S_k) = k`. We define the tautological quotient line bundles `Q_k := S_k/S_{k−1}`. Their first Chern classes, `x_k := c₁(Q_k)`, are elements of the second integer cohomology group `H²(Σ₈; ℤ)`. The triviality of the ambient rank-8 bundle implies the relation `Σₖ x_k = 0`.
 
-An integral basis for `H²(Σ₈; ℤ)` is given by the differences of these Chern classes \[Fulton 1997; Brion 2005]:
+An integral basis for $H^2(\Sigma_8; \mathbb{Z})$ is given by the differences of these Chern classes [Fulton 1997; Brion 2005]:
 $$
 \omega_i := x_i - x_{i+1}, \quad i = 1, \dots, 7.
 \tag{R.4}
 $$
-By the Hurewicz theorem, these cohomology classes `ω_i` can also be taken to represent the generators of `π₂(Σ₈)`.
+By the Hurewicz theorem, these cohomology classes $\omega_i$ represent the generators of $\pi_2(\Sigma_8)$. Concretely, for a smooth map $f:S^2\to \Sigma_8$, define the Chern integers
+$$
+k_i ;:=; \int_{S^2} f^*(x_i)\in \mathbb{Z},,\qquad \sum_{i=1}^8 k_i=0,
+$$
+and the topological charges
+$$
+q_i ;:=; \int_{S^2} f^*(\omega_i);=;k_i-k_{i+1},,\qquad i=1,\dots,7.
+$$
+Thus $\pi_2(\Sigma_8)\cong \ker!\left(\sum_i : \mathbb{Z}^8\to\mathbb{Z}\right)\cong \mathbb{Z}^7$ with integral coordinates $q=(q_1,\dots,q_7)$ in the ${\omega_i}$-basis.
 
 ## R.2 Gauge–Topology Correspondence
 
@@ -126,16 +134,19 @@ For any charge `q ∈ L_light`, its `SU(3)` center charge is trivial: `τ(q) = 0
 
 This result implies that the `SU(3)` center charge imposes no further constraint beyond `SU(3)`-Cartan neutrality for the physically viable light sectors. The determining constraint among these light sectors is therefore Abelian (`U(1)_Y`) anomaly cancellation across the sectors.
 
-### R.3.4 Theorem (Abelian anomaly constraints across sectors).
-
-Let `{q^(g)} ⊂ L_light` be the set of realized light sectors, and define their hypercharges as `Y_g := y \cdot q^(g)`. The absence of mixed gravitational–hypercharge and cubic hypercharge anomalies across these sectors enforces the conditions [Peskin & Schroeder 1995]:
+### R.3.4 Theorem (Abelian anomaly constraints and minimal sector count).
+Let ${q^{(g)}}\subset L_{\text{light}}$ be the set of realized light sectors, and define their hypercharges as $Y_g := y \cdot q^{(g)}$. The absence of mixed gravitational–hypercharge and cubic hypercharge anomalies across these sectors enforces [Peskin & Schroeder 1995]:
 $$
-\Sigma_g Y_g = 0, \quad \Sigma_g Y_g^3 = 0.
+\sum_g Y_g ;=; 0,
+\qquad
+\sum_g Y_g^3 ;=; 0.
 \tag{R.13}
 $$
-For a system with exactly three light sectors, the minimal non-trivial integer solution for the set of hypercharges `{Y₁, Y₂, Y₃}` is `{a, −a, 0}`, where `a > 0` is the minimal non-zero hypercharge achievable within the light sublattice, `a = \text{gcd } y(L_{light})`.
+Moreover:
 
-*Proof.* The constraints are the standard conditions for Abelian anomaly cancellation in a theory with multiple chiral sectors. For three integers `Y₁, Y₂, Y₃`, the algebraic identity `x³ + y³ + z³ − 3xyz = (x + y + z)(x² + y² + z² − xy − yz − zx)` implies that if `Σ Y_g = 0`, then `Σ Y_g³ = 3 Y₁Y₂Y₃`. For both sums to be zero, we must have `Y₁Y₂Y₃ = 0`, which means at least one of the hypercharges must be zero. The linear constraint `Σ Y_g = 0` then forces the other two to be equal and opposite. Thus, the set of hypercharges must be of the form `{a, −a, 0}`. PCE favors the minimal complexity solution, which corresponds to choosing the smallest possible non-zero integer value for `a`, given by the greatest common divisor of all possible hypercharges in the light sublattice. ∎
+There is no non-trivial two-sector solution: if $N=2$, global topological neutrality $\sum_g q^{(g)}=0$ forces $q^{(2)}=-q^{(1)}$ and hence $Y_2=-Y_1$, yielding a vector-like pair.
+The minimal non-trivial sector count is $N=3$, and for three sectors the hypercharges must take the form ${a,-a,0}$, where $a>0$ is the minimal non-zero value achievable from $y(L_{\text{light}})$, i.e. $$ a ;=; \gcd,{,y\cdot q ;:; q\in L_{\text{light}},}. $$
+Proof. The anomaly constraints are standard. For any three integers $Y_1,Y_2,Y_3$, the identity $x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$ implies that if $\sum_g Y_g=0$ then $\sum_g Y_g^3=3Y_1Y_2Y_3$. Thus $\sum_g Y_g=\sum_g Y_g^3=0$ forces $Y_1Y_2Y_3=0$, i.e. at least one $Y_g$ vanishes; the linear constraint then enforces ${a,-a,0}$. For $N=2$, global topological neutrality forces $q^{(2)}=-q^{(1)}$, hence $Y_2=-Y_1$, which is vector-like; such a pair is physically degenerate and removable. Therefore $N=3$ is minimal. The minimal non-zero magnitude $a$ is the greatest common divisor of the attainable hypercharges $y\cdot q$, $q\in L_{\text{light}}$, which fixes the unit of the ${a,-a,0}$ pattern. ∎
 
 ## R.4 Minimal Three-Sector Solution: Worked Instance
 
@@ -170,32 +181,29 @@ The adjacent weight differences `v_A[i] = ⟨w_i − w_{i+1}, H_A⟩` for `i = 1
 These vectors define the homomorphism `q ↦ (c₁ \cdot q, c₂ \cdot q; t \cdot q; y \cdot q)`.
 
 ### R.4.2 The light sublattice
-
-We form the `3×7` integer matrix `C` by stacking the rows `c₁`, `c₂`, and `t`. A `ℤ`-basis for the light sublattice `L_light = \ker_{\mathbb{Z}} C` can be computed, yielding four basis vectors:
+We form the $3\times 7$ integer matrix $C$ by stacking the rows $c_1$, $c_2$, and $t$. Since $\operatorname{rank}{\mathbb{Z}}(C)=3$, the light sublattice $L{\text{light}}=\ker_{\mathbb{Z}}(C)\subset \mathbb{Z}^7$ has rank $7-3=4$. A primitive $\mathbb{Z}$-basis, obtained e.g. via Smith Normal Form of $C$, is
 $$
-\ell_1 = (1, 2, 0, 0, 0, 3, 3),
-$$
-$$
+\ell_1 = (1, 2, 0, 0, 0, 3, 3),\qquad
 \ell_2 = (0, -1, 1, 0, 0, -3, -4),
 $$
 $$
-\ell_3 = (0, 2, 0, 1, 0, 3, 3),
-$$
-$$
+\ell_3 = (0, 2, 0, 1, 0, 3, 3),\qquad
 \ell_4 = (0, -1, 0, 0, 1, 0, 0).
 $$
+One verifies directly that $C,\ell_j=0$ for $j=1,\dots,4$ and that these generators are $\mathbb{Z}$-independent, hence they form a basis of $L_{\text{light}}$.
 
-### R.4.3 Minimal hypercharge unit `a` and three-sector solution
-
-The image of the light sublattice under the hypercharge map, `y(L_light)`, is generated by the integers `y \cdot \ell_j`. Since `y \cdot q = 4q₆`, this image is generated by `4 \cdot (3n₁ - 3n₂ + 3n₃) = 12(n₁ - n₂ + n₃)` for `q = Σn_j \ell_j`. The minimal non-zero hypercharge unit is `a := \text{gcd } y(L_{light}) = 12` in 6Y-scaled normalization.
-
-By Theorem R.3.4, the minimal non-trivial three-sector pattern for hypercharges is `{+12, -12, 0}`. This enforces `q₆ = +3` for the first sector, `q₆ = -3` for the second, and `q₆ = 0` for the third. A minimal-norm choice for the topological charge `q(+)` with `y \cdot q = +12` (i.e., `q₆ = 3`), subject to the constraint `Cq = 0`, is:
+### R.4.3 Minimal hypercharge unit $a$ and three-sector solution
+The image $y(L_{\text{light}})$ is generated by the integers $y\cdot \ell_j$. Since $y\cdot q=4q_6$ and $(\ell_1)_6=3$, $(\ell_2)_6=-3$, $(\ell_3)6=3$, $(\ell_4)6=0$, we have $y\cdot \ell_j\in{12,-12,12,0}$, hence
 $$
-q^{(1)} = (1, 1, 0, 0, 1, 3, 3),
+a ;:=; \gcd, y(L{\text{light}}) ;=; 12
 $$
-with `q^{(2)} = −q^{(1)}` and `q^{(3)} = 0`. This solution set satisfies global neutrality `Σq = 0` and is composed of minimal-norm vectors for each required hypercharge sector.
-
-*Minimality Proof.* With `q₆ = 3`, the non-Abelian neutrality constraints become a system of three linear Diophantine equations for the remaining `q_i`. The vector `q^{(1)}` corresponds to a solution of this system with squared Euclidean norm `‖q^{(1)}‖² = 1²+1²+0²+0²+1²+3²+3² = 21`. One can show through systematic analysis of the solution space that this is the minimal possible norm for any vector in `L_light` with `q₆ = 3`. ∎
+in the $6Y$ normalization. By Theorem R.3.4, the minimal non-trivial three-sector pattern for hypercharges is ${+12,-12,0}$, which enforces $q_6=+3$ for one sector, $q_6=-3$ for another, and $q_6=0$ for the third. A minimal-norm choice for the positive-hypercharge sector, subject to $Cq=0$, is
+$$
+q^{(1)} ;=; (1, 1, 0, 0, 1, 3, 3),\qquad
+q^{(2)} ;=; -,q^{(1)},\qquad
+q^{(3)} ;=; 0,
+$$
+which satisfies global neutrality $\sum_g q^{(g)}=0$. With $q_6=3$, the neutrality constraints reduce to a system of three linear Diophantine equations for the remaining components; a direct search (equivalently, lattice reduction in $L{\text{light}}$ with the linear constraint $q_6=3$) shows that $q^{(1)}$ attains the minimal squared norm $|q^{(1)}|^2=21$ among all solutions with $q_6=3$.
 
 Thus, the three generational topological charges are uniquely determined up to sign and basis choice:
 $$

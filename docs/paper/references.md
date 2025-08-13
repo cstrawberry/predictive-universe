@@ -26,7 +26,9 @@
 *   Church, A. (1936). An Unsolvable Problem of Elementary Number Theory. *American Journal of Mathematics*, *58*(2), 345–363. DOI: 10.2307/2371045
 *   Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. *Behavioral and Brain Sciences*, *36*(3), 181–204. DOI: 10.1017/S0140525X1200047X
 *   Clowe, D., Bradač, M., Gonzalez, A. H., Markevitch, M., Randall, S. W., Jones, C., & Zaritsky, D. (2006). A direct empirical proof of the existence of dark matter. *The Astrophysical Journal Letters*, *648*(2), L109–L113. DOI: 10.1086/508162
+*   Coleman, S., & Weinberg, E. (1973). Radiative Corrections as the Origin of Spontaneous Symmetry Breaking. *Physical Review D*, *7*(6), 1888–1912. DOI: 10.1103/PhysRevD.7.1888
 *   Cook, M. (2004). Universality in elementary cellular automata. Complex Systems, 15(1), 1-40. DOI: 10.25088/ComplexSystems.15.1.1
+*   Corless, R. M., Gonnet, G. H., Hare, D. E. G., Jeffrey, D. J., & Knuth, D. E. (1996). On the Lambert W function. *Advances in Computational Mathematics*, *5*(1), 329–359. DOI: 10.1007/BF02124750
 *   Deffner, S., & Campbell, S. (2017). Quantum speed limits: from Heisenberg's uncertainty principle to optimal quantum control. *Journal of Physics A: Mathematical and Theoretical*, *50*(45), 453001. DOI: 10.1088/1751-8121/aa8c2f
 *   Dehaene, S., Lau, H., & Kouider, S. (2017). What is consciousness, and could machines have it? *Science*, *358*(6362), 486–492. DOI: 10.1126/science.aan8871
 *   Descartes, R. (1641). *Meditationes de Prima Philosophia* (Meditations on First Philosophy).
@@ -38,6 +40,7 @@
 *   Feroz, F., Hobson, M. P., & Bridges, M. (2009). MultiNest: an efficient and robust Bayesian inference tool for cosmology and particle physics. *Monthly Notices of the Royal Astronomical Society*, *398*(4), 1601–1614. DOI: 10.1111/j.1365-2966.2009.14548.x
 *   Feroz, F., Hobson, M. P., Cameron, E., & Pettitt, A. N. (2019). Importance Nested Sampling and the MultiNest Algorithm. *The Open Journal of Astrophysics*, *2*, 10. DOI: 10.21105/astro.1306.2144
 *   Fodor, J. A. (1975). *The Language of Thought*. Harvard University Press.
+*   Fortuin, C. M., Kasteleyn, P. W., & Ginibre, J. (1971). Correlation inequalities on some partially ordered sets. *Communications in Mathematical Physics*, *22*(2), 89–103. DOI: 10.1007/BF01651330. 
 *   Fowler, A. G., Mariantoni, M., Martinis, J. M., & Cleland, A. N. (2012). Surface codes: Towards practical large-scale quantum computation. *Physical Review A*, *86*(3), 032324. DOI: 10.1103/PhysRevA.86.032324
 *   Frank, R. L., & Lieb, E. H. (2013). Monotonicity of a relative Rényi entropy. *Journal of Mathematical Physics*, *54*(12), 122201. DOI: 10.1063/1.4832737
 *   Frigerio, A. (1978). Stationary states of quantum dynamical semigroups. *Communications in Mathematical Physics*, *63*(3), 269–276. DOI: 10.1007/BF01196936
@@ -54,6 +57,7 @@
 *   Gleason, A. M. (1957). Measures on the closed subspaces of a Hilbert space. Journal of Mathematics and Mechanics, 6(4), 885–893. DOI: 10.1512/iumj.1957.6.56050
 *   Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. *Monatshefte für Mathematik und Physik*, *38*(1), 173–198. DOI: 10.1007/BF01700692
 *   Gottesman, D. (1998). A Theory of Fault-Tolerant Quantum Computation. *Physical Review A*, *57*(1), 127–137. DOI: 10.1103/PhysRevA.57.127
+*   Griffiths, R. B. (1967). Correlations in Ising Ferromagnets. I. *Journal of Mathematical Physics*, *8*(3), 478–483. DOI: 10.1063/1.1705219
 *   Gromov, M. (1999). *Metric structures for Riemannian and non-Riemannian spaces*. Birkhäuser.
 *   Haag, R. (1996). *Local Quantum Physics: Fields, Particles, Algebras* (2nd ed.). Springer-Verlag.
 *   Hameroff, S. R., & Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, *40*(3–4), 453–480. DOI: 10.1016/0378-4754(95)00042-4
@@ -153,6 +157,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Wigner, E. P. (1967). Remarks on the mind-body question. In *Symmetries and Reflections* (pp. 171–184). Indiana University Press.
 *   Wilde, M. M. (2017). *Quantum Information Theory* (2nd ed.). Cambridge University Press. DOI: 10.1017/9781316809976
 *   Will, C. M. (2014). The Confrontation between General Relativity and Experiment. *Living Reviews in Relativity*, *17*(1), 4. DOI: 10.12942/lrr-2014-4
+*   Wilson, K. G. (1971). Renormalization Group and Critical Phenomena. I. Renormalization Group and the Kadanoff Scaling Picture. *Physical Review B*, *4*(9), 3174–3183. DOI: 10.1103/PhysRevB.4.3174 
 *   Winter, A. (1999). Coding theorem and strong converse for quantum channels. *IEEE Transactions on Information Theory*, *45*(7), 2481-2485. DOI: 10.1109/18.796385
 *   Witten, E. (1982). An SU(2) anomaly. *Physics Letters B*, *117*(5), 324-328. DOI: 10.1016/0370-2693(82)90728-6
 *   Wolf, M. M. (2012). *Quantum Channels & Operations: A Guided Tour* (Lecture notes). Technical University of Munich. 
