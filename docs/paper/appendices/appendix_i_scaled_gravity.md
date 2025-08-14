@@ -12,11 +12,11 @@ The emergence of gravity in the PU framework is a multi-step process (Sections 1
 *   **Information limits:** ND-RID is inherently irreversible ($\varepsilon\!\ge\!\ln2$, Theorem 31) and strictly contractive ($f_{\mathrm{RID}}\!<\!1$, Lemma E.1), capping the channel capacity at $C_{\max}(f_{\mathrm{RID}})\!<\!\ln d_{0}$ (Theorem E.2 in Appendix E).
 *   **Emergent geometry:** Prediction-Optimization (POP) and PCE drive the network towards geometrically regular configurations (Theorem 43), giving rise to a Lorentzian manifold $(M,g_{\mu\nu})$ (Theorem 46).
 *   **Area law:** The channel capacity bound plus emergent geometric regularity give rise to the Horizon Entropy Area Law $S=k_B\mathcal A/(4L_P^2)$ (Theorem 49).
-*   **Newton constant:** Identifying the coefficient in the Area Law links the emergent gravitational scale $L_P^2=G\hbar/c^3$ to microscopic MPU parameters (derived in Appendix E, Equation E.9):
-    $$
-    G(\delta, C_{\max}, \chi) \simeq \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}.
-    \tag{I.1}
-$$
+*   **Newton constant:** Identifying the coefficient in the Area Law links the emergent gravitational scale $L_P^2=G\hbar/c^3$ to microscopic MPU parameters (derived in Appendix E, Equation E.9):
+    $$
+    G(\delta, C_{\max}, \chi) \simeq \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}.
+    \tag{I.1}
+    $$
 (where $\delta$ is the effective microscopic MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is the correlation factor reducing effective channel density, $\sigma_{eff\_link} = \chi / (\eta \delta^2)$ is the effective boundary channel density as per Theorem E.3, and $C_{max}$ is the channel capacity). This appendix implicitly assumes $\chi \approx 1$ for its subsequent scale-dependent arguments, effectively using $G \propto \delta^2/C_{max}$. Equation (I.1) is dimensionally consistent as shown in Appendix H.
 *   **Einstein field equations:** Applying thermodynamic principles (Clausius relation) to causal horizons in the emergent geometry, using the Area Law and the MPU stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ (Definition B.8, Appendix B) as the source, yields the Einstein field equations (Theorem 50).
 
@@ -58,17 +58,17 @@ $$
 V_{struct}(\delta, C_{max}; \rho_b) = V_{cost}(\delta, C_{max}) - V_{benefit}(\delta, C_{max}; \rho_b)
 \tag{I.3.1}
 $$
-The system dynamically adjusts its effective local parameters `δ` and `C_max` to minimize this potential.
+The system dynamically adjusts its effective local parameters $\delta$ and $C_{max}$ to minimize this potential.
 
-*   **Analysis of Cost and Benefit:**
-    *   **Structural Cost `V_{cost}`:** This term represents the physical resources needed to maintain the network. A denser network (smaller `δ`) and higher-fidelity channels (larger `C_max`, which requires minimizing `ε`) are physically more costly. Thus, `V_cost` is a decreasing function of `δ` and an increasing function of `C_max`.
-    *   **Predictive Benefit `V_{benefit}`:** The benefit arises from the network's ability to form complex predictive models of the local environment. This ability, `PP_agg`, depends on having a dense (`small δ`) and high-fidelity (`large C_max`) network. The total benefit is proportional to the amount of "stuff to predict," which is directly related to `ρ_b`. Thus, `V_benefit` is a decreasing function of `δ`, an increasing function of `C_max`, and an increasing function of `ρ_b`.
+*   **Analysis of Cost and Benefit:**
+    *   **Structural Cost $V_{cost}$:** This term represents the physical resources needed to maintain the network. A denser network (smaller $\delta$) and higher-fidelity channels (larger $C_{max}$, which requires minimizing $\varepsilon$) are physically more costly. Thus, $V_{cost}$ is a decreasing function of $\delta$ and an increasing function of $C_{max}$.
+    *   **Predictive Benefit $V_{benefit}$:** The benefit arises from the network's ability to form complex predictive models of the local environment. This ability, $PP_{agg}$, depends on having a dense (small $\delta$) and high-fidelity (large $C_{max}$) network. The total benefit is proportional to the amount of "stuff to predict," which is directly related to $\rho_b$. Thus, $V_{benefit}$ is a decreasing function of $\delta$, an increasing function of $C_{max}$, and an increasing function of $\rho_b$.
 
-*   **Derivation of Crossover Behavior:** The system's minimization of `V_struct` leads to two distinct equilibrium regimes:
-    *   **High `ρ_b` (e.g., galactic cores):** The benefit term `V_benefit` is large and dominates the optimization. PCE drives the network to a high-cost, high-performance state to maximize predictive gain. This corresponds to an equilibrium with a small spacing `δ_0` and a large channel capacity `C_{max,0}`.
-    *   **Low `ρ_b` (e.g., galactic outskirts):** The benefit term is weak. PCE drives the network to a low-cost, low-performance state to conserve resources. This corresponds to an equilibrium with a large spacing `δ_{large}` and a small channel capacity `C_{max,low}`.
-    
-This analysis proves that the equilibrium values `(δ*, C_max*)` must be functions of `ρ_b`, and that the system must transition between these two distinct regimes as `ρ_b` changes. The functional form of the scale-dependent `G(R)` introduced in the next section is a physically-motivated phenomenological model of this derived crossover behavior.
+*   **Derivation of Crossover Behavior:** The system's minimization of $V_{struct}$ leads to two distinct equilibrium regimes:
+    *   **High $\rho_b$ (e.g., galactic cores):** The benefit term $V_{benefit}$ is large and dominates the optimization. PCE drives the network to a high-cost, high-performance state to maximize predictive gain. This corresponds to an equilibrium with a small spacing $\delta_0$ and a large channel capacity $C_{max,0}$.
+    *   **Low $\rho_b$ (e.g., galactic outskirts):** The benefit term is weak. PCE drives the network to a low-cost, low-performance state to conserve resources. This corresponds to an equilibrium with a large spacing $\delta_{large}$ and a small channel capacity $C_{max,low}$.
+    
+This analysis proves that the equilibrium values $(\delta*, C_{max}*)$ must be functions of $\rho_b$, and that the system must transition between these two distinct regimes as $\rho_b$ changes. The functional form of the scale-dependent $G(R)$ introduced in the next section is a physically-motivated phenomenological model of this derived crossover behavior.
 
 
 **I.6 Scale-Dependent Newton Constant**
@@ -83,7 +83,7 @@ $$
 
 where $G_0$ is the value approached at small scales $R \ll L_0$, $A_G$ is the total fractional enhancement ($A_G = G_{\mathrm{large}}/G_0 - 1$), $L_0$ is a characteristic transition scale at which $G$ begins to increase, and $m \ge 1$ (typically $m \gtrsim 2$) is a parameter determining the steepness of the transition.
 
-This yields the explicit running of the Newton constant with scale \$R\$; as a robustness check, replacing the exponential by a logistic or Hill-type transition function preserves the qualitative baryon-tracking behavior for the same \$(L\_0,A\_G,m)\$ scale hierarchy:
+This yields the explicit running of the Newton constant with scale $R$; as a robustness check, replacing the exponential by a logistic or Hill-type transition function preserves the qualitative baryon-tracking behavior for the same $(L_0,A_G,m)$ scale hierarchy:
 
 $$
 \boxed{\,G(R)=G_0
@@ -128,7 +128,7 @@ The scale-dependent gravity model (Equation I.4) must be consistent with high-pr
 
 *   **Scale separation:** Local tests operate on scales $R_\odot \sim 10^{-6}\,\mathrm{kpc}$, vastly smaller than the transition scale $L_0 \sim \mathrm{kpc}$. For $R \ll L_0$, Equation (I.5) gives $\varepsilon_G(R) \approx A_G (R/L_0)^m$. With $m \ge 1$ and $A_G = \mathcal O(1)$, $\varepsilon_G(R_\odot)$ is extremely small (e.g., for $A_G=1, L_0=1$ kpc, $m=2$, $\varepsilon_G(10^{-6} \text{ kpc}) \approx (10^{-6})^2 = 10^{-12}$).
 *   **Recovery of $G_0$:** For $R \ll L_0$, $G(R) \approx G_0$, effectively recovering constant Newton gravity.
-*   **PPN parameters:** The smallness of $\varepsilon_G(R)$ on solar system scales implies that the parameterized post-Newtonian (PPN) parameters, which quantify deviations from Newtonian gravity and flat spacetime, remain consistent with observations ($\gamma_{\mathrm{PPN}}\simeq\beta_{\mathrm{PPN}}\simeq1$). Deviations would only appear at scales comparable to or larger than $L_0$.
+*   **PPN parameters:** The smallness of $\varepsilon_G(R)$ on solar system scales implies that the parameterized post-Newtonian (PPN) parameters, which quantify deviations from Newtonian gravity and flat spacetime, remain consistent with observations ($\gamma_{\mathrm{PPN}}\simeq\beta_{\mathrm{PPN}}\simeq1$). Deviations would only appear at scales comparable to or larger than $L_0$.
 
 **I.9 Numerical Plausibility and Cosmological Bounds**
 
@@ -182,7 +182,3 @@ The adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $
 **I.15 Conclusion**
 
 The Principle of Compression Efficiency and complexity saturation in sparse predictive environments lead to a PCE-driven parameter relaxation mechanism that causes the emergent Newton constant to increase with scale in low-density regions. The resulting function $G(R)$, Equation (I.4), provides a physically motivated framework that naturally explains galaxy-scale mass discrepancies (e.g., rotation curves, scaling relations). This emergent gravity scenario respects local tests of GR and yields falsifiable predictions for baryon–kinematic relations and potentially cluster dynamics. Detailed rotation-curve fits and cosmological simulations testing the evolution of $G(R)$ are necessary next steps to validate this aspect of the Predictive Universe framework.
-
-
-
-

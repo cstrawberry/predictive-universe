@@ -99,7 +99,7 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 > * **Trajectory:** Achieve a final velocity $v_f = 0.96c$ after proper time $\tau = 1$ s under constant proper acceleration.
 > * **Predictive Task:** Maintain $PP = \alpha_{SPAP} - 10^{-6}$.
 > * **PU Parameters:** For the complexity bound $C_{SPAP} \ge K / (\alpha_{SPAP}-PP)^2$ [Lemma N.2], we set $K = 1$ bit.
-> * **Cost Model:** We adopt a simple linear cost model \$R(C,T\_{\rm eff})=k\_R,C,(k\_BT\_{\rm eff})\$ and a noise model \$C\_{\rm noise,external}(a)=k\_N,(a/g\_{\rm earth})^2\$, with \$T\_{\rm bath}\approx0\$. We choose parameters for a system where predictive and noise-mitigation costs are both significant: a cost-scaling factor \$k\_R=2.3 \times 10^{39}\$ (bits·s)\$^{-1}\$ and a noise-sensitivity factor \$k\_N=1.0 \times 10^{-4}\$ bits. These parameters are not derived but are chosen illustratively to demonstrate a regime where kinetic and predictive costs are comparable.
+> * **Cost Model:** We adopt a simple linear cost model $R(C, T_{\rm eff})=k_R C (k_B T_{\rm eff})$ and a noise model $C_{\rm noise,external}(a)=k_N (a/g_{\text{earth}})^2$, with $T_{\rm bath}\approx0$. We choose parameters for a system where predictive and noise-mitigation costs are both significant: a cost-scaling factor $k_R=2.3 \times 10^{39} \text{ (bits}\cdot\text{s)}^{-1}$ and a noise-sensitivity factor $k_N=1.0 \times 10^{-4} \text{ bits}$. These parameters are not derived but are chosen illustratively to demonstrate a regime where kinetic and predictive costs are comparable.
 >
 > **Calculations:**
 >
