@@ -115,9 +115,10 @@ Systems with high aggregate complexity $C_{agg}$ (Definition 29), potentially ex
 
 *   **Puzzle:** Quantum Chromodynamics (QCD) allows a term $\theta G\tilde{G}$ in the Lagrangian that violates CP symmetry, but experiments constrain the parameter $\theta$ to be extremely small ($|\theta| \lesssim 10^{-10}$). Why is $\theta$ so close to zero?
 *   **PU Pathway (Speculative):** Assume the PCE potential $V(x)$ (Appendix D, Definition D.1) includes an effective cost density contribution related to the $\theta$ term. A non-zero $\theta$ term introduces topological features or non-trivial winding numbers that might disrupt the smooth, efficient flow of predictive information or increase the irreducible cost $\varepsilon$ in certain interaction pathways, leading to a penalty in the PCE functional. Hypothesize that this penalty takes a form that depends periodically on $\theta$, potentially:
-    $$
-    \Delta V_{\text{topo}}(\theta) = \lambda_{\theta}\,[1-\cos\theta] \quad (\lambda_{\theta}>0) \quad \text{ (cf. axion potential)} \tag{K.3}
-    $$
+     $$
+  \Delta V_{\text{topo}}(\theta) = \lambda_{\theta}\,[1-\cos\theta] \quad (\lambda_{\theta}>0) \quad \text{ (cf. axion potential)} \tag{**K.4**}
+     $$
+
     *(Derivation of $\Delta V_{topo}$ from PU principles required).* The total PCE potential would include this term: $V_{PCE} = V_0 + \Delta V_{topo}$. The system's adaptation dynamics (stochastic gradient descent on $V_{PCE}$) would drive the configuration towards values of $\theta$ that minimize $V_{PCE}$. Minimizing $\Delta V_{topo}$ requires $\partial \Delta V_{topo}/\partial\theta = \lambda_{\theta}\sin\theta = 0$, which has solutions $\theta^* = n\pi$ for integer $n$. The second derivative $\partial^2 \Delta V_{topo}/\partial\theta^2 = \lambda_{\theta}\cos\theta$ shows that $\theta = 2n\pi$ are stable minima ($\cos\theta=1, \lambda_\theta>0$), while $\theta = (2n+1)\pi$ are unstable maxima ($\cos\theta=-1$). PCE optimization might dynamically drive the effective vacuum angle $\theta$ towards a stable minimum at 0 (or multiples of $2\pi$, which are physically equivalent).
 *   **Next Step:** Rigorously derive or justify the form of the effective PCE penalty $\Delta V_{topo}(\theta)$ from fundamental PU mechanisms (e.g., relating the $\theta$ term in the emergent QCD Lagrangian to increased irreducible cost $\varepsilon$ in topological sectors, reduced channel capacity $C_{max}$, or disruption of predictive coherence).
 

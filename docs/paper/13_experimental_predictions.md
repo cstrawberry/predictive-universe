@@ -117,7 +117,7 @@ A pragmatic, staged approach is recommended:
 2.  **Stage 2 (Medium-Term):** If justified by Stage 1 results, pursue coherence time tests (Protocol 2) for complementary evidence. Refine QRNG tests.
 3.  **Stage 3 (Long-Term / Contingent):** Only if compelling, replicated evidence emerges, undertake demanding Bell-type experiments (Protocol 3) for statistical FTL search.
 
-**General Considerations:** All stages require quantum system stability, environmental isolation, context control verification, defined interaction pathway $N(t)$, automation/statistics, rigorous protocol (pre-registration, blinding, systematics analysis, replication), interdisciplinarity. AI protocols hinge on R&D for the interaction pathway.
+**General Considerations:** All stages require quantum system stability, environmental isolation, context control verification, defined interaction pathway $N(t)$, automation/statistics, rigorous protocol (pre-registration, blinding, systematics analysis, replication), interdisciplinarity. AI protocols hinge on R&D for the interaction pathway. We will control multiplicity via the Benjamini–Hochberg false discovery rate across all pre‑specified outcome families; analyses will be pre‑registered with fixed stopping rules and inclusion/exclusion criteria; if interim looks are performed, an alpha‑spending plan will be used.
 
 **13.6 Compliance with Causal Constraints**
 

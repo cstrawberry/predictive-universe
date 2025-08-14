@@ -72,7 +72,7 @@ This crucial equation links the matter energy flux crossing the horizon to the g
 
 **12.3.2 Raychaudhuri Equation and Emergence of EFE**
 
-The derivation proceeds by substituting the Raychaudhuri equation into the thermodynamic relation (72).
+The derivation proceeds by substituting the Raychaudhuri equation [Raychaudhuri 1955] into the thermodynamic relation (72) [Jacobson 1995].
 1.  **Raychaudhuri Equation:** The focusing $d\theta/d\lambda$ is governed by the Raychaudhuri equation. We assume geodesic congruence with zero initial expansion $\theta(\lambda=0)=0$ and zero vorticity. To first order in $\lambda$, the shear term $\sigma_{\alpha\beta}\sigma^{\alpha\beta}$ is $O(\lambda^2)$ and can be neglected near $\lambda=0$. The equation becomes:
     $$
     \frac{d\theta}{d\lambda} = - R_{\alpha\beta} k^{\alpha} k^{\beta} \quad (\text{at } \lambda=0) \quad \text{(73)}

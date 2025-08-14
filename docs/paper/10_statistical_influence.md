@@ -69,7 +69,7 @@ consistent with Theorem 40 (Eq. (62)). Let $r_{\max}\lesssim 1/\tau_{\min}$ be t
 $$
 N_{\text{pre}}\ \le\ r_{\max}\,\frac{D}{c}.
 $$
-Reliable pre-lightcone decoding would thus require $r_{\max}D/c=O(1/\delta^2)$, a regime excluded by these rate/resource bounds at realistic $\delta$, preventing tachyonic anti-telephone constructions (Theorem 42). *(Illustrative numbers: at $r_{\max}=1\,\text{GHz}$ and $D=1\,\text{km}$, $N_{\text{pre}}\!\approx\!3.3\times10^3 \ll 2.3\times10^4$ for $\delta=0.01,\alpha=0.01\)).*
+Reliable pre-lightcone decoding would thus require $r_{\max}D/c=O(1/\delta^2)$, a regime excluded by these rate/resource bounds at realistic $\delta$, preventing tachyonic anti-telephone constructions (Theorem 42). *(Illustrative numbers: at $r_{\max}=1\,\text{GHz}$ and $D=1\,\text{km}$, $N_{\text{pre}}\!\approx\!3.3\times10^3 \ll 2.3\times10^4$ for $\delta=0.01,\alpha=0.01\).*
 
 **AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Eq. (F.4). Under the $O(\mathrm{CC}^2)$ information-rate bound (Theorem 41), this cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42).
 

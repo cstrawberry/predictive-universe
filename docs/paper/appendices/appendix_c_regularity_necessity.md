@@ -27,7 +27,7 @@ where $B_{R}(v) = \{u \in \mathcal{V}_n \mid d_{\mathcal{N}_n}(v, u) \leq R\}$ i
 
 **C.3 Microscopic Basis for a Positive Ricci Curvature Bound from PU Principles**
 
-This section provides a constructive argument demonstrating how local MPU interaction rules, consistent with the Predictive Universe (PU) principles, can lead to an emergent positive lower bound on a specific discrete measure of Ricci curvature—the Ollivier-Ricci curvature [Ollivier 2009]. This offers a microscopic basis for satisfying the "uniformly bounded synthetic Ricci curvature" condition (Definition C.2, main text Definition 37), which is an essential component of geometric regularity (Definition C.3, main text Theorem 43).
+This section provides a constructive argument demonstrating how local MPU interaction rules, consistent with the Predictive Universe (PU) principles, can lead to an emergent positive lower bound on a specific discrete measure of Ricci curvature—the Ollivier-Ricci curvature [Ollivier 2009]. This offers a microscopic basis for satisfying the "uniformly bounded synthetic Ricci curvature" condition (Definition C.2, main text Definition 37), which is an essential component of geometric regularity (**Definition C.3**).
 
 This derivation models the one-step transition probabilities $\mathcal{P}\delta_v(u) = P_{vu}$ from an MPU $v$ to a neighboring MPU $u$ (where $d(v,u)=1$ in the underlying MPU graph, using the cost metric $d_{\mathcal{N}}$ from main text Definition 35). These probabilities are assumed to be influenced by the local Predictive Physical Complexity $C_P(x)$ at different MPUs, reflecting how predictive load or information processing requirements affect network flow and resource allocation as governed by PCE.
 
