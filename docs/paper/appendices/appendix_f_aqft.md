@@ -16,7 +16,6 @@ We associate algebraic structures to regions of the discrete MPU network sequenc
 
 This construction defines a net of algebras $\mathcal{O} \mapsto \mathfrak{A}_n(\mathcal{O})$ indexed by $n$ and regions $\mathcal{O}$, satisfying isotony: if $\mathcal{O}_1 \subset \mathcal{O}_2$, then $\mathfrak{A}_n(\mathcal{O}_1) \subset \mathfrak{A}_n(\mathcal{O}_2)$ (operators localized in $\mathcal{O}_1$ are also localized in $\mathcal{O}_2$).
 
-Thought for 5 seconds
 
 
 **F.2 Emergence of Einstein Causality from ND-RID Limits**
