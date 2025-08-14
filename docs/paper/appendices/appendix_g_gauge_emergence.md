@@ -445,178 +445,213 @@ The Standard Model gauge group $G_{SM} = SU(3) \times SU(2) \times U(1)$ with it
 
 ## G.9 A Proposed Pathway Toward Deriving the Fine-Structure Constant $\alpha_{em}$
 
-This section presents an *ab initio* route to compute the electromagnetic fine-structure constant $\alpha_{em}$ within the Predictive Universe (PU) framework. The calculation is framed as a direct consequence of the Principle of Compression Efficiency (PCE) applied to the problem of maintaining predictive coherence across a locally phase-free description—a challenge whose minimal, PCE-optimal remedy is the emergence of a U(1) gauge structure, as established in Sections G.2–G.7. The renormalized coupling at the MPU’s predictive operating scale is fixed by a stable equilibrium that balances the resource cost of the gauge field against the predictive benefit it provides. All quantities entering the equilibrium are operational functionals of the MPU’s Fundamental Predictive Loop (FPL) at $d_0=8$ with one logically irreversible decision per cycle of cost $\varepsilon=\ln 2$.
+This appendix develops a first-principles pathway for computing the electromagnetic fine-structure constant $\alpha_{em}$ within the Predictive Universe (PU) framework. The calculation is framed as a direct consequence of the **Principle of Compression Efficiency (PCE)** applied at the **rate level** to the problem of maintaining predictive coherence across a locally phase-free description, for which the PCE-optimal remedy is the emergence of a $\mathrm{U}(1)$ gauge structure (as established in §§G.2–G.7). The result is a complete, self-contained computational program that reduces the determination of $\alpha_{em}$ to evaluating a small set of **operational functionals** of the MPU’s Fundamental Predictive Loop (FPL) at $d_0=8$ with one logically irreversible decision per cycle of cost $\varepsilon=\ln 2$. The renormalized coupling at the MPU’s predictive operating scale $\mu^*$ is fixed by a unique equilibrium that balances the **power** cost of coherence against the predictive benefit it provides.
 
-*Units convention.* We use natural units with $\hbar=c=\varepsilon_0=1$. In this convention,
-
-$$
-\alpha_{em} \;=\; \frac{e^2}{4\pi}\,.
-$$
-
-### G.9.1 The U(1) Coherence Problem as a PCE Trade-off
-
-A universe without the U(1) mechanism ($e=0$) suffers predictive inefficiencies when comparing predictive states across an MPU network in the presence of local phase freedom. Introducing a coupling $e$ restores predictive coherence at reduced resource cost, but sustaining the field incurs its own cost. PCE therefore selects a unique equilibrium coupling $e^*$ that minimizes a per-event potential combining (i) the gauge field’s operational cost and (ii) the predictive benefit the coupling enables.
-
-### G.9.2 The Effective PCE Potential for the U(1) Coupling
-
-We model the trade-off by the effective PCE potential
+*Units.* We work in **natural units with $\hbar=c=\varepsilon_0=1$** (Heaviside–Lorentz/rationalized). Information is measured in **nats**. In these units,
 
 $$
-V_{\mathrm{eff}}(e) \;=\; V_{\mathrm{cost}}(e) \;-\; V_{\mathrm{benefit}}(e)\,,
+\alpha_{em}=\frac{e^2}{4\pi}.
+\tag{G.9.1}
 $$
 
-interpreted as the per-event resource cost rate of the coupled FPL minus the per-event predictive benefit rate extracted from the coupling.
+### G.9.1 Assumptions, Notation, and Symbols
 
-### G.9.3 Predictive Benefit from the Fisher Information
+**Assumptions (local and explicit).**
 
-Let the one-cycle FPL with final POVM induce a classical kernel $p_e(x_{t+1}\!\mid x_t,y_t)$, where $y_t$ is the environmental input and $x_{t+1}$ is the readout. Define the *predictive Fisher information* at $e=0$ by
+A1. *LAN regularity.* The one-cycle FPL channel family $p_e$ is differentiable in quadratic mean at $e=0$. The induced stationary process is ergodic and $\beta$-mixing with summable correlations; the **per-event Fisher information operator** exists and is finite.
+
+A2. *Mismatch energetics.* For small $e$, the free-energy penalty for gauge-invariant mismatch admits a quadratic expansion $\Delta\mathcal F_{\mathrm{mismatch}}(e)=\kappa_F e^2+O(e^4)$ with $\kappa_F>0$.
+
+A3. *Coding overhead law.* To achieve per-cycle logical error probability $p_L\ll1$, the minimal incremental **complexity** scales as
+$\Delta C_{\mathrm{gauge}}(p_L)\sim K[\ln(1/p_L)]^\gamma$ with $\gamma\ge 1,\ K>0$ (poly-log reliability cost; compatible with modern capacity-approaching codes [Gallager 1968; Richardson & Urbanke 2008; Arıkan 2009]).
+
+A4. *Power–complexity convexity.* The power–complexity relation $R(C)$ is strictly convex near the baseline $C_0$ and admits
+$R(C)=R(C_0)+r_p(C-C_0)^{\gamma_p}$ with $\gamma_p>1,\ r_p>0$.
+
+A5. *POVM readout.* Each FPL cycle ends with a finite-outcome POVM on $\mathcal H_0$ (dimension $d_0=8$).
+
+A6. *Mode accounting.* The per-event Fisher information operator $J$ at $e=0$ has $M$ nonzero eigenvalues $\{\lambda_i\}_{i=1}^M$ with trace $k_b\coloneqq\sum_i\lambda_i$, $1\le M\le d_0^2-1$.
+
+**Table G.9.1. Symbols and units.**
+
+| Symbol                       | Meaning                                                                        | Units          |
+| :--------------------------- | :----------------------------------------------------------------------------- | :------------- |
+| $e$                        | $\mathrm{U}(1)$ coupling                                                     | —              |
+| $u$                        | $u\coloneqq e^2$                                                             | —              |
+| $\alpha_{em}$             | $e^2/(4\pi)$                                                                 | —              |
+| $\tau,\ \nu$               | FPL cadence time $\tau$, event rate $\nu=1/\tau$                           | time,\ 1/time  |
+| $\mu^*$                   | Operating (renormalization) scale $\mu^*=\kappa_\mu\nu,\ \kappa_\mu=O(1)$ | energy         |
+| $C, C_0$                  | Predictive Physical Complexity (baseline $C_0$)                             | —              |
+| $R(C)$                     | **Power** at complexity $C$ (strictly convex near $C_0$)                  | energy/time    |
+| $r_p,\ \gamma_p$         | Parameters of $R(C)$                                                         | energy/time, — |
+| $\Gamma_0$                | Energy-per-nat exchange factor (rate-level PCE; cf. Def. 20)                   | energy/nat     |
+| $P_{\mathrm{cost}}(e)$    | Operating power at coupling $e$                                              | energy/time    |
+| $I_{\mathrm{rate}}(e)$    | Predictive-information **rate**                                                | nats/time      |
+| $V_{\mathrm{benefit}}(e)$ | Per-event predictive benefit                                                   | nats/event     |
+| $p_L$                     | Logical mismatch probability per cycle                                         | —              |
+| $\beta_{\mathrm{eff}}$    | Cadence-scale inverse temperature                                              | 1/energy       |
+| $\kappa_F$                | Small-deviation field-mismatch scale                                           | energy         |
+| $J$                        | Per-event Fisher information operator at $e=0$                               | —              |
+| ${\lambda_i}$             | Nonzero spectrum of $J$                                                      | —              |
+| $k_b$                     | $\sum_i\lambda_i=\mathrm{Tr}\,J$                                            | —              |
+| $\gamma$                   | Coherence-overhead complexity exponent ($\ge 1$)                             | —              |
+| $c_\gamma$                | Gauge-overhead coefficient $=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$       | —              |
+| $\gamma_{\mathrm{eff}}$   | Effective cost exponent $=\gamma\gamma_p>1$                                 | —              |
+| $A_{\mathrm{eff}}$        | Effective cost coefficient $=r_p c_\gamma^{\gamma_p}$                     | energy/time    |
+| $d_0$                     | Baseline Hilbert-space dimension ($=8$)                                      | —              |
+
+*Mode counting.* We adopt the **complex-mode** convention: each mode contributes $\ln(1+\mathrm{SNR})$ nats/event. (In a real-mode representation, each real scalar mode contributes $\tfrac12\ln(1+\mathrm{SNR})$ and the mode count doubles; both conventions yield the same total benefit when applied consistently.)
+
+### G.9.2 Predictive Benefit from LAN Information Geometry
+
+Let one FPL cycle with POVM readout induce a classical kernel $p_e(x_{t+1}|x_t,y_t)$. Define the score $s(z)=\partial_e \ln p_e(z)|_{e=0}$ with $\mathbb E_{p_0}[s]=0$. Under A1 (LAN), the one-cycle log-likelihood ratio admits the Gaussian tangent expansion. Diagonalizing the **per-event** Fisher information operator $J$ yields $M$ independent complex Gaussian shift modes with eigenvalues $\{\lambda_i\}$. In the whitened basis (unit noise covariance so each mode has unit variance), the per-mode small-signal SNR is $\lambda_i u$ with $u=e^2$.
+
+For a complex Gaussian mode, the **per-event** mutual information is $\ln(1+\lambda_i u)$ nats. Summing over modes gives
 
 $$
-J \;=\; \mathbb{E}\!\left[\Big(\partial_e \ln p_e(X_{t+1}\!\mid X_t,Y_t)\Big)^2\Big|_{e=0}\right],
-$$
-
-with nonzero eigenvalues $\{\lambda_i\}_{i=1}^M$. The small-$e$ predictive gain is quadratic with slope $\sum_i \lambda_i$. A minimal saturating, mode-additive form consistent with this linearization is the mode-wise logarithmic sum, a physically-motivated model chosen for its consistency with standard information-theoretic results:
-
-$$
-V_{\mathrm{benefit}}(e) \;=\; \sum_{i=1}^{M} \ln\!\big(1+\lambda_i e^2\big), 
+V_{\mathrm{benefit}}(e)=\sum_{i=1}^M \ln(1+\lambda_i u),
 \qquad
-k_b \;:=\; \mathrm{Tr}\,J \;=\; \sum_{i=1}^{M}\lambda_i .
+I_{\mathrm{rate}}(e)=\nu\,V_{\mathrm{benefit}}(e).
+\tag{G.9.2}
 $$
 
-*Capacity feasibility.* The benefit is subject to the information-capacity constraint
+Equivalently, $V_{\mathrm{benefit}}(e)=\log\det(I+u\Lambda)$, where $\Lambda=\mathrm{diag}(\lambda_1,\dots,\lambda_M)$. *Small-signal check.* Since $\ln(1+x)=x+O(x^2)$, $\dfrac{d}{du}V_{\mathrm{benefit}}(u)|_{u=0}=k_b$ with $k_b=\sum_i\lambda_i$.
+
+**Capacity cap (alphabet bound).** Because each cycle ends with a $d_0$-outcome POVM, the accessible classical information per event satisfies $\le H(\mathrm{output})\le \ln d_0$, hence:
 
 $$
-\sum_{i=1}^{M}\ln\!\big(1+\lambda_i e^2\big)\;\le\;\ln d_0=\ln 8\,.
+V_{\mathrm{benefit}}(e)\ \le\ \ln d_0\ (= \ln 8).
+\tag{G.9.3}
 $$
 
-### G.9.4 Gauge Cost as Operational Small-$e$ Slopes
+### G.9.3 Gauge-Mismatch Tail, Coding Overhead, and Convex Power Cost
 
-PCE fixes the small-$e$ gauge cost as an operational quadratic:
+A cadence-scale Gibbs–Donsker–Varadhan variational principle implies the gauge-invariant mismatch tail
 
 $$
-V_{\mathrm{cost}}(e) \;=\; k_c\,e^2,
+p_L(e)\ \le\ \exp\Big(-\beta_{\mathrm{eff}}\ \Delta\mathcal F_{\mathrm{mismatch}}(e)\Big),
 \qquad
-k_c \;=\; k_c^{\mathrm{field}} \;+\; k_c^{\mathrm{coh}}\,,
+\Delta\mathcal F_{\mathrm{mismatch}}(e)=\kappa_F e^2+O(e^4).
+\tag{G.9.4}
 $$
 
-where both coefficients are defined by per-event limits taken under the *stationary* baseline FPL at $e=0$:
+Under A3, the minimal **incremental complexity** required to drive $p_L$ to the tail (achievable via exponential tilting compatible with ND–RID) scales as
 
 $$
-k_c^{\mathrm{field}}
-\;:=\; \frac{\displaystyle \lim_{e\to 0}\,\mathbb{E}\!\big[\,W_{\mathrm{field}}(e)\,\big]/e^2}{\varepsilon},
+\Delta C_{\mathrm{gauge}}(e)\ \approx\ c_\gamma\,e^{2\gamma},
 \qquad
-k_c^{\mathrm{coh}}
-\;:=\; \lim_{e\to 0}\,\frac{\mathbb{E}\!\big[\,R_{\mathrm{coh}}(e)\,\big]}{e^2}.
+c_\gamma\coloneqq K(\beta_{\mathrm{eff}}\kappa_F)^\gamma .
+\tag{G.9.5}
 $$
 
-Here $W_{\mathrm{field}}(e)$ is the minimal physical work per event to maintain the PCE-selected field statistics at coupling $e$; $R_{\mathrm{coh}}(e)$ is the minimal irreversible bit-rate per event required by the controller to hold the gauge-invariant mismatch (phase/coherence distortion) at its PCE-selected level. Normalization by $\varepsilon=\ln 2$ renders $k_c^{\mathrm{field}}$ dimensionless. Both terms are nonnegative and gauge-invariant.
-
-### G.9.5 Emergence and Equilibrium
-
-With the benefit and cost fixed as above,
+With A4, the **incremental power** cost is
 
 $$
-V_{\mathrm{eff}}(e)=k_c e^2-\sum_{i=1}^{M}\ln(1+\lambda_i e^2).
+P_{\mathrm{cost}}(e)-R(C_0)=r_p(\Delta C_{\mathrm{gauge}}(e))^{\gamma_p}
+\ \approx\ A_{\mathrm{eff}}\,e^{2\gamma_{\mathrm{eff}}},
+\tag{G.9.6}
 $$
 
-The non-interacting point $e=0$ is unstable iff
+where
 
 $$
-\frac{d^2V_{\mathrm{eff}}}{de^2}\Big|_{e=0} \;=\; 2\,(k_c-k_b)\;<\;0
-\quad\Longleftrightarrow\quad
-k_b \;>\; k_c .
+\gamma_{\mathrm{eff}}\coloneqq \gamma\gamma_p>1,
+\qquad
+A_{\mathrm{eff}}\coloneqq r_p c_\gamma^{\gamma_p}>0.
+\tag{G.9.7}
 $$
 
-Assuming $0<k_c<k_b$, the unique positive minimizer $e^*$ solves
+### G.9.4 Rate-Level PCE Potential and Equilibrium
+
+Define the **rate-level** PCE potential
 
 $$
-k_c \;=\; \sum_{i=1}^{M}\frac{\lambda_i}{\,1+\lambda_i (e^*)^2\,},
+V_{\mathrm{PCE}}(e)\coloneqq P_{\mathrm{cost}}(e)-\Gamma_0\,I_{\mathrm{rate}}(e).
+\tag{G.9.8}
 $$
 
-which is strictly decreasing in $(e^*)^2$, hence has a unique root.
-
-### G.9.6 The Fine-Structure Constant at the Predictive Operating Scale
-
-The emergent coupling at PCE equilibrium defines
+With $u=e^2$ and dropping the additive constant $R(C_0)$, we minimize
 
 $$
-\alpha_{em}(\mu^*) \;=\; \frac{(e^*)^2}{4\pi},
+\phi(u)\ \coloneqq\ A_{\mathrm{eff}}\,u^{\gamma_{\mathrm{eff}}}
+-\Gamma_0\,\nu\sum_{i=1}^M \ln(1+\lambda_i u),
+\qquad u\ge 0.
+\tag{G.9.9}
 $$
 
-where the predictive operating scale $\mu^*$ is the FPL cadence/coarse-graining selected by PCE. Comparison with laboratory scales requires standard renormalization-group evolution from $\mu^*$.
+**Theorem G.9.1 (Strict convexity; unique emergence).**
+If $\gamma_{\mathrm{eff}}>1$ and $A_{\mathrm{eff}},\Gamma_0,\nu>0$, then $\phi$ is strictly convex on $(0,\infty)$ and
+$\displaystyle \lim_{u\to0^+}\phi'(u)=-\Gamma_0\nu k_b<0$ with $k_b=\sum_i\lambda_i$. Hence the non-interacting point $u=0$ is unstable and there is a unique PCE-optimal $u^*>0$.
 
-### G.9.7 A Computational Program for $\alpha_{em}$
+*Proof.* $\phi'(u)=A_{\mathrm{eff}}\gamma_{\mathrm{eff}}u^{\gamma_{\mathrm{eff}}-1}-\Gamma_0\nu\sum_i\frac{\lambda_i}{1+\lambda_i u}$.
+$\phi''(u)=A_{\mathrm{eff}}\gamma_{\mathrm{eff}}(\gamma_{\mathrm{eff}}-1)u^{\gamma_{\mathrm{eff}}-2}+\Gamma_0\nu\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}>0$ for $u>0$. $\square$
 
-This is a two-level variational program whose outputs are fully determined once the PCE-optimal baseline FPL is known.
-
-**Level 1 (Baseline optimization).**
-Determine a PCE-optimal stationary baseline $\Phi_0^*$ on $d_0=8$ at $e=0$ by minimizing the baseline PCE functional
-
-$$
-\Phi_0^* \;=\; \arg\min_{\Phi_0}\Big\{\;\mathcal{C}_{\mathrm{prog}}(\Phi_0)\;-\;I_0(\Phi_0)\;\Big\},
-$$
-
-subject to CPTP constraints, stationarity, and a fixed minimal program length $\mathcal{C}_{\mathrm{prog}}(\Phi_0)=K_0=3$ bits. Here $I_0(\Phi_0)$ is the per-event predictive utility (e.g., $I(Y_{t+1};X_{t+1})$) induced by the kernel of $\Phi_0$.
-
-*Canonical baseline for the binary-Markov environment.*
-For a stationary, symmetric binary Markov source with flip probability $p\in(0,\tfrac12)$, the data-processing inequality yields
+The equilibrium $u^*$ solves
 
 $$
-I(Y_{t+1};X_{t+1}) \;\le\; I(Y_{t+1};Y_t),
+A_{\mathrm{eff}}\gamma_{\mathrm{eff}}\,(u^*)^{\gamma_{\mathrm{eff}}-1}
+=\Gamma_0\nu\sum_{i=1}^M \frac{\lambda_i}{1+\lambda_i u^*}.
+\tag{G.9.10}
 $$
 
-with equality if $X_{t+1}$ is a bijective function of $Y_t$. Under the minimal program constraint $K_0=3$ on $d_0=8$, the *persistence predictor* $X_{t+1}=Y_t$ saturates this bound and is realized by the standard 3-qubit MPU witness (as constructed in Section 7.1.3) at the floor $C_{op}=K_0$. This establishes it as a canonical candidate for $\Phi_0^*$; global optimality remains a (well-posed) variational question to be decided by the minimization above.
-
-**Level 2 (Small-$e$ response).**
-Given $\Phi_0^*$, evaluate the operational functionals that enter the equilibrium:
-
-1. *Predictive Fisher.* Compute the Gateaux derivative of the induced kernel at $e=0$, obtain the predictive Fisher $J$, and extract its nonzero spectrum $\{\lambda_i\}$ and trace $k_b=\sum_i\lambda_i$.
-2. *Gauge cost slopes.* Compute
-
-   $$
-   \kappa_{\mathrm{field}} := \lim_{e\to0}\frac{\mathbb{E}[W_{\mathrm{field}}(e)]}{e^2},
-   \qquad
-   \kappa_{\mathrm{coh}} := \lim_{e\to0}\frac{\mathbb{E}[R_{\mathrm{coh}}(e)]}{e^2},
-   $$
-
-   then set $k_c^{\mathrm{field}}=\kappa_{\mathrm{field}}/\varepsilon$, $k_c^{\mathrm{coh}}=\kappa_{\mathrm{coh}}$, and $k_c=k_c^{\mathrm{field}}+k_c^{\mathrm{coh}}$.
-
-*Feasibility checks.* Verify the capacity constraint $\sum_i\ln(1+\lambda_i e^2)\le\ln 8$ over the relevant $e$-range and ensure stationarity of the baseline law used to evaluate the expectations above.
-
-### G.9.8 PU Reduction of $\alpha_{em}$
-
-**Theorem.**
-The following theorem provides an exact, parameter-free expression for `α_em(μ*)` that is fully determined by the operational functionals of the PCE-optimal baseline FPL. While the computation of these functionals is a significant future undertaking, the structure of the result is derived directly from the framework's principles.
-
-Let $d_0=8$ and $\varepsilon=\ln 2$. For any PCE-optimal stationary baseline $\Phi_0^*$ at $e=0$, define:
-
-* $\{\lambda_i\}_{i=1}^{M}$: the nonzero eigenvalues of the predictive Fisher operator $J$ built from the induced kernel of $\Phi_0^*$; set $k_b=\sum_{i=1}^{M}\lambda_i$.
-* $k_c^{\mathrm{field}}=\displaystyle \frac{\lim_{e\to0}\mathbb{E}[W_{\mathrm{field}}(e)]/e^2}{\varepsilon}$,
-  $k_c^{\mathrm{coh}}=\displaystyle \lim_{e\to0}\mathbb{E}[R_{\mathrm{coh}}(e)]/e^2$,
-  $k_c=k_c^{\mathrm{field}}+k_c^{\mathrm{coh}}$.
-
-If $k_b\le k_c$, then the PCE-optimal equilibrium is $e^*=0$ and $\alpha_{em}(\mu^*)=0$.
-If $0<k_c<k_b$, there exists a unique $e^*>0$ solving
+**Capacity-aware upper bound.** By Schur-concavity [Marshall, Olkin & Arnold 2011], the sum $\sum_i\ln(1+\lambda_i u)$ is maximized at fixed $(k_b,M)$ by the flat spectrum $\lambda_i=k_b/M$. Imposing the cap (G.9.3) in that worst case yields the universal bound
 
 $$
-k_c \;=\; \sum_{i=1}^{M}\frac{\lambda_i}{1+\lambda_i (e^*)^2},
+M\ln\Big(1+\frac{k_b}{M}u^*\Big)\ \le\ \ln d_0
+\quad\Rightarrow\quad
+u^*\ \le\ \frac{M}{k_b}(d_0^{\,1/M}-1).
+\tag{G.9.11}
 $$
 
-and the fine-structure constant at the predictive operating scale is
+If the unconstrained minimizer of (G.9.9) violates this inequality, the true optimum lies on the boundary $V_{\mathrm{benefit}}(e)=\ln d_0$.
+
+**Special case (flat spectrum, minimal exponents).**
+Let $\lambda_i=k_b/M$, $\gamma=1$, and $\gamma_p=2$ so that $\gamma_{\mathrm{eff}}=2$. Then (G.9.10) reduces to
 
 $$
-\alpha_{em}(\mu^*) \;=\; \frac{(e^*)^2}{4\pi}.
+2A_{\mathrm{eff}}\,u^*=\Gamma_0\nu\,\frac{k_b}{1+\tfrac{k_b}{M}u^*},
+\tag{G.9.12}
 $$
 
-All quantities on the right are finite, operational functionals of the PCE-optimal baseline $\Phi_0^*$ and its stationary control. No further parameters are required.
+with positive solution
+
+$$
+u^*=\frac{M}{2k_b}\left(\sqrt{\,1+\frac{2\,\Gamma_0\nu\,k_b^2}{A_{\mathrm{eff}}\,M}}\ -\ 1\right),
+\qquad
+\alpha_{em}(\mu^*)=\frac{u^*}{4\pi},\ \ \mu^*=\kappa_\mu\nu .
+\tag{G.9.13}
+$$
+
+For large $\Gamma_0\nu/A_{\mathrm{eff}}$,
+
+$$
+u^*\ =\ \frac{\sqrt{M}}{2}\sqrt{\frac{2\,\Gamma_0\nu}{A_{\mathrm{eff}}}}\ -\ \frac{M}{2k_b}\ +\ O\left(\sqrt{\frac{A_{\mathrm{eff}}}{\Gamma_0\nu}}\right).
+\tag{G.9.14}
+$$
+
+### G.9.5 Computational Program
+
+1.  **Baseline ($e=0$).** Fix an admissible FPL on $\mathcal H_0$ ($d_0=8$), an ND–RID-compatible noise model, and a strictly convex $R(C)$. Solve the baseline PCE to obtain $\Phi_0^*$, $C_0$, $\Gamma_0$, $\nu$, and the stationary kernel $p_0$ (cf. §6.4 for $\Gamma_0$).
+
+2.  **Small-$e$ response.** Specify the $\mathrm{U}(1)$ deformation; compute the **per-event** Fisher information operator $J$, its spectrum $\{\lambda_i\}$, and $k_b=\sum_i\lambda_i$.
+
+3.  **Coherence overhead.** Choose a code family (fixing $\gamma$); estimate $c_\gamma=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$; set $A_{\mathrm{eff}}=r_p c_\gamma^{\gamma_p}$.
+
+4.  **Equilibrium and cap.** Solve (G.9.10) for $u^*$ and verify the capacity bound (G.9.11); if violated, place the optimum on the boundary $V_{\mathrm{benefit}}=\ln d_0$.
+
+5.  **Renormalization-group matching.** Report $\alpha_{em}^{\overline{\mathrm{MS}}}(\mu^*)=u^*/(4\pi)$ (or specify the on-shell scheme), with $\kappa_\mu=O(1)$ fixed by the cadence/clock-rate mapping. Evolve to laboratory scales by standard QED running with threshold matching and hadronic vacuum polarization as needed.
+
+### G.9.6 Conclusion
+
+Within PU, the electromagnetic coupling emerges as a **rate-level PCE equilibrium** balancing the predictive benefit of $\mathrm{U}(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non-interacting state $e=0$ is unstable and the unique optimum $u^*>0$ determines $\alpha_{em}(\mu^*)=u^*/(4\pi)$. The inputs $\Gamma_0$, $\nu$, $A_{\mathrm{eff}}$, $\gamma_{\mathrm{eff}}$, and $\{\lambda_i\}$ are operational functionals of the baseline PCE-optimal FPL, and the capacity-aware bound (G.9.11) supplies a falsifiable constraint independent of micro-details. The validity of this derivation now rests on the foundational assumptions A1-A6; deriving these properties from the underlying MPU dynamics and global PCE optimization is a key objective for future research.
 
 ## G.10 Conclusion
 
 This appendix (G) has demonstrated how the Predictive Universe framework, driven by the Prediction Optimization Problem (POP, Axiom 1) and the Principle of Compression Efficiency (PCE, Definition 15), provides potential pathways for deriving fundamental structures of modern physics:
-1.  The Born probability rule (Theorem G.1.7) and the necessity of a complex Hilbert space (Theorem G.1.8) emerge from the requirement of consistent, optimal resource allocation in predictive tasks, directly linking quantum mechanical probability to PCE optimization principles.
-2.  U(1) gauge theory (electromagnetism) emerges as the minimal PCE-optimal solution for maintaining predictive coherence across the MPU network despite the local phase freedom inherent in the complex Hilbert space description (Section G.7).
-3.  A comprehensive argument (Section G.8) has been presented showing how the Standard Model gauge group $SU(3)\!\times\!SU(2)\!\times\!U(1)$ with its specific chiral fermion content, and the D=4 dimensionality of spacetime, can be robustly co-selected as a unified PCE-optimal structure. This co-selection is driven by D=4's unique ability to support stable complex MPU aggregates (essential for high predictive benefit) and the Standard Model being a uniquely efficient (fitting the D-independent MPU network information capacity $n_{max}$) and mathematically consistent (anomaly-free in D=4) gauge solution for that dimensional arena.
-4. A rigorous, first-principles pathway for deriving the value of the fine-structure constant `α_em` has been established (Section G.9). The value emerges as the unique PCE-optimal equilibrium balancing the predictive benefits of U(1) coherence against the resource costs of the gauge field.
+1.  The Born probability rule (Theorem G.1.7) and the necessity of a complex Hilbert space (Theorem G.1.8) emerge from the requirement of consistent, optimal resource allocation in predictive tasks, directly linking quantum mechanical probability to PCE optimization principles.
+2.  U(1) gauge theory (electromagnetism) emerges as the minimal PCE-optimal solution for maintaining predictive coherence across the MPU network despite the local phase freedom inherent in the complex Hilbert space description (Section G.7).
+3.  A comprehensive argument (Section G.8) has been presented showing how the Standard Model gauge group $SU(3)\!\times\!SU(2)\!\times\!U(1)$ with its specific chiral fermion content, and the D=4 dimensionality of spacetime, can be robustly co-selected as a unified PCE-optimal structure. This co-selection is driven by D=4's unique ability to support stable complex MPU aggregates (essential for high predictive benefit) and the Standard Model being a uniquely efficient (fitting the D-independent MPU network information capacity $n_{max}$) and mathematically consistent (anomaly-free in D=4) gauge solution for that dimensional arena.
+4.  A rigorous, first-principles pathway for deriving the value of the fine-structure constant `α_em` has been established (**Section G.9**). The value emerges as the unique PCE-optimal equilibrium of a **rate-level potential**, balancing the thermodynamic **power cost** of maintaining U(1) coherence against the **predictive information rate** benefit it enables. This transforms the framework's principles into a complete computational program, reducing the calculation of a fundamental constant of nature to the evaluation of well-defined **operational functionals** of the MPU's baseline predictive cycle.
 
 The analysis throughout this appendix highlights the potential for PU principles to provide a unified origin for the quantum measurement framework, the gauge structure of particle interactions, and even the dimensionality of spacetime, grounding these fundamental aspects of physics in the overarching logic and resource economics of prediction.
 
