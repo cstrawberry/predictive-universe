@@ -68,7 +68,7 @@ $$
 To verify this map is CPTP:
 $E_0^\dagger E_0 = (U_{rev}^{(sp)\dagger}U_{rev}^{(sp)}) \otimes (|0\rangle_c\langle 0|_c|0\rangle_c\langle 0|_c) = \mathbb{I}_{sp} \otimes |0\rangle_c\langle 0|_c$.
 $E_1^\dagger E_1 = (U_{rev}^{(sp)\dagger}U_{rev}^{(sp)}) \otimes (|1\rangle_c\langle 0|_c|0\rangle_c\langle 1|_c) = \mathbb{I}_{sp} \otimes |1\rangle_c\langle 1|_c$.
-Because $U_{rev}^{(sp)\dagger}U_{rev}^{(sp)}=\mathbb I_{sp}$ and $(|0\rangle_c\langle 0|_c + |1\rangle_c\langle 1|_c) = \mathbb I_c$, we have $\sum_{k=0}^{1}E_k^\dagger E_k=\mathbb I_{sp}\otimes\mathbb I_c=\mathbb I_{\mathcal H_0}$. Thus, the map is CPTP.
+Because $U_{rev}^{(sp)\dagger}U_{rev}^{(sp)}=\mathbb I_{sp}$ and $(|0\rangle_c\langle 0|_c + |1\rangle_c\langle 1|_c) = \mathbb I_c$, we have $\sum_{k=0}^{1}E_k^\dagger E_k=\mathbb I_{sp}\otimes\mathbb I_c=\mathbb I_{\mathcal{H}_0}$. Thus, the map is CPTP.
 
 *   **Entropy Cost $\varepsilon$:** Step (iii), the reset of $Q_c$, involves mapping two orthogonal states of $Q_c$ (e.g., $|0\rangle_c$ and $|1\rangle_c$) to a single state ($|0\rangle_c$). This is a 2-to-1 logical state merging. By Landauer's principle, as formalized in Appendix J (Theorem J.1), this incurs a minimal dimensionless entropy production:
     $$

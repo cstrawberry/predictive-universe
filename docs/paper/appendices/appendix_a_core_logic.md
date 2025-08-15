@@ -19,7 +19,7 @@ The justification proceeds by establishing that:
 
 *   **Definition 23 (MPU):** Fundamental unit operating at complexity $C_{op}$ (Definition 13), which necessarily includes the minimal complexity $K_0 \equiv B_3$ required for self-referential logic (Theorem 15, Corollary 3). MPUs operate via Dual Dynamics (Internal Prediction, Def 26; 'Evolve'/ND-RID, Def 27).
 
-*   **Definition 6 & A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics governing the MPU 'Evolve' process, characterized by probabilistic outcomes and state transitions dependent on those outcomes. Fundamentally irreversible ($\varepsilon \ge \ln 2$, Theorem 31) and contractive ($f_{RID} < 1$, Lemma E.1).
+*   **Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics governing the MPU 'Evolve' process, characterized by probabilistic outcomes and state transitions dependent on those outcomes. Fundamentally irreversible ($\varepsilon \ge \ln 2$, Theorem 31) and contractive ($f_{RID} < 1$, Lemma E.1).
 
 ### A.0.3 MPU Intrinsic Capacity ($K_0$) and Minimal Self-Reference
 

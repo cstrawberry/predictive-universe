@@ -246,7 +246,7 @@ $$
 **6.5.2 Theorem 22 (Stability of Adaptation)**
 
 The adaptation dynamics (Equation 30) are locally stable around an equilibrium point $C^*$ (where $\Psi(C^*) = 0$) if and only if the driving force decreases as complexity moves away from equilibrium, i.e., $\frac{d\Psi}{dC}\big|_{C=C^*} < 0$.
-*Proof:* The equilibrium point $C^*$ is stable if the Adaptation Driving Force $\Psi(C)$ decreases as $C$ increases near $C^*$, i.e., $d\Psi/dC < 0$ at $C^*$. Differentiating Equation (33) with respect to $C$ gives the stability condition:
+*Proof:* The equilibrium point $C^*$ is stable if the Adaptation Driving Force $\Psi(C)$ decreases as $C$ increases near $C^*$, i.e., $d\Psi/dC < 0$ at $C^*$. Differentiating the expression for $\Psi$ (Equation (24)) with respect to $C$ gives the stability condition:
  $$
  \frac{\partial \Psi}{\partial C} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) - R_I''(C) < 0 \quad \text{(34a)}
  $$
@@ -310,7 +310,7 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 *   **Control Actions:** Adjusting $\hat{C}_{target}$ (Equation 38) adapts the internal representation of the environment. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
 *   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and environmental representation $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon > 0$), enabling sustained viable prediction.
 
-### 6.9 Self-Consistent Determination of Viability Bounds α and β
+**6.9 Self-Consistent Determination of Viability Bounds α and β**
 
 The framework derives the necessity of the operational performance bounds `α` and `β` that define the **Space of Becoming**. While their existence is proven, their precise numerical values are a target for future derivation from the framework's fundamental parameters.
 

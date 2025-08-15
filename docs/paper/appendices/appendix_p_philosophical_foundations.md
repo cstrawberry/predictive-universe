@@ -118,7 +118,7 @@ This fundamental binary check provides the bedrock for bivalence. From this, the
 
     This captures the essence of logical OR.
 
-Since the set {NOT, AND, OR} is functionally complete [Post 1921], a system capable of this predictive cycle, sequencing, and memory possesses the building blocks for universal computation. The Church–Turing thesis implies that such a system can, in principle, simulate a universal Turing machine [Church 1936; Turing 1937]. Therefore, Predictionism demonstrates that consciousness, through its inherent predictive and self-verifying structure, is fundamentally computational.
+Since the set {NOT, AND, OR} is functionally complete [Post 1921], a system capable of this predictive cycle, sequencing, and memory possesses the building blocks for universal computation. The Church–Turing thesis implies that such a system can, in principle, simulate a universal Turing machine [Church 1936; Turing 1936]. Therefore, Predictionism demonstrates that consciousness, through its inherent predictive and self-verifying structure, is fundamentally computational.
 
 ## P.4 The Distinction Framework: Consciousness Structuring Reality
 
