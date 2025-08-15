@@ -74,7 +74,7 @@ This paper is structured as follows:
 *   **Section 15:** Offers concluding remarks.
 *   **Glossary:** See Glossary of Key Terms for complete definitions.
 *   **References:** Provided for all cited works.
-*   **Appendices (A-T):** Provide detailed proofs, derivations, and analyses supporting the main text's arguments.
+*   **Appendices (A-U):** Provide detailed proofs, derivations, and analyses supporting the main text's arguments.
 
 **1.5 Logical Structure of the Framework**
 

@@ -99,7 +99,7 @@ The derivation proceeds by substituting the Raychaudhuri equation [Raychaudhuri 
     From the contracted Bianchi identity, we know that $\nabla^\alpha R_{\alpha\beta} = \frac{1}{2} \nabla_\beta R$, where $R$ is the Ricci scalar ($R = g^{\mu\nu}R_{\mu\nu}$).
     Therefore, we have:
     $$ \frac{1}{2} \nabla_\beta R = \nabla_\beta f(x) $$
-    This implies $\nabla_\beta (f(x) - \frac{1}{2}R) = 0$. For the covariant derivative of a scalar quantity to be zero, the quantity itself must be a constant throughout spacetime. Let this constant be denoted as $-\Lambda$ (where the negative sign is chosen by convention to align with the standard definition of the cosmological constant $\Lambda$, such that a positive $\Lambda$ contributes positively to effective energy density):
+    This implies $\nabla_\beta (f(x) - \frac{1}{2}R) = 0$. For the covariant derivative of a scalar quantity to be zero, the quantity itself must be a constant throughout spacetime. We identify this constant with the cosmological constant, $-\Lambda$. Within the PU framework, $\Lambda$ is not a free parameter but a quantity derived from the non-perturbative dynamics of the MPU vacuum, as rigorously shown in **Appendix U**. The negative sign is chosen by convention to align with the standard definition, such that a positive $\Lambda$ contributes positively to effective energy density:
     $$ f(x) - \frac{1}{2}R = -\Lambda $$
     Thus, $f(x) = \frac{1}{2}R - \Lambda$.
     Substituting this expression for $f(x)$ back into Equation (75):

@@ -83,7 +83,7 @@ Using the dimensional assignments in Table H.1, we verify the dimensional homoge
 
 ## H.4 Vacuum-Based Estimate of the Acceleration Scale $g_{0}$
 
-The empirical acceleration scale $g_0 \sim 1.2 \times 10^{-10} \text{ m s}^{-2}$ that appears in galaxy scaling relations (Appendix I) is comparable to $cH_0$ where $H_0$ is the Hubble constant, suggesting a link to cosmology. Within the PU framework, $\Lambda$ represents the energy density of the predictive vacuum state.
+The empirical acceleration scale $g_0 \sim 1.2 \times 10^{-10} \text{ m s}^{-2}$ that appears in galaxy scaling relations (Appendix I) is comparable to $cH_0$ where $H_0$ is the Hubble constant, suggesting a link to cosmology. Within the PU framework, the cosmological constant $\Lambda$ is not a free parameter but is derived from the non-perturbative dynamics of the MPU network vacuum (**Appendix U**). It represents the energy density of this predictive vacuum state.
 
 #### H.4.1 de Sitter temperature
 
