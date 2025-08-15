@@ -128,7 +128,7 @@
 
 *   **Prediction Coherence Boundary:** (Remark 3) The conceptual name for \$\alpha\_{SPAP}\$, the fundamental upper bound on self-prediction performance. It represents the theoretical maximum for predictive accuracy that cannot be exceeded due to the logical limits of self-reference (SPAP). Approaching this boundary requires quadratically divergent Predictive Physical Complexity (Theorem 14), forming the basis for **Prediction Relativity**.
 
-*   **Prediction Relativity:** (Remark 3) Concept encapsulating the fundamental limits on predictive accuracy (\$\alpha\_{SPAP}<1\$) arising from self-reference (SPAP) and the associated divergent resource costs (\$C\_P \propto 1/(\alpha\_{SPAP}-\alpha)^2\$) required to approach these limits (Theorem 14), analogous to the speed of light limit \$v \to c\$ in Special Relativity.
+*   **Prediction Relativity:** (Remark 3) Concept encapsulating the fundamental limits on predictive accuracy ($\alpha_{SPAP}<1$) arising from self-reference (SPAP) and the associated divergent resource costs ($C_P \propto 1/(\alpha_{SPAP}-\alpha)^2$) required to approach these limits (Theorem 14), analogous to the speed of light limit ($v \to c$) in Special Relativity.
 
 *   **Property R (Computational Richness):** (Definition 10, Appendix A) The necessary level of computational capability (representation, simulation/reasoning, predicate evaluation) required for a system to engage in the self-referential processing leading to SPAP and RUD limits. Argued to emerge effectively in MPU networks via POP/PCE optimization (**as argued in Appendix A.0**).
 
