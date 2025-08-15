@@ -31,27 +31,27 @@ The CC hypothesis posits that a complex aggregate's internal state influences lo
 *    (iii) The mapping satisfies the specific cost-benefit constraint (Lemma L.1) derived from minimizing the PCE potential $V(x)$ (Appendix D, Definition D.1).
 
 *   **Lemma L.1 (Cost-Benefit Condition for Mapping Stability).** Any POP-admissible mapping $\mathcal M$ with computational complexity $C_{\mathcal M}$ and average power cost rate $R_{\mathcal M}$ must satisfy a cost-benefit constraint ensuring its contribution to the PCE potential $V(x)$ is optimal. For the mapping to be dynamically favored and stable under PCE, the net benefits it provides must outweigh its costs. This implies:
-    $$
+$$
     \bigl(\Gamma_0 \Delta PP_{agg}(\mathcal{M}) - \Delta V_{\text{core}}(\mathcal{M})\bigr)_+ \;\ge\; \lambda\,R_{\mathcal M} + k_C\,C_{\mathcal M}
     \tag{L.2}
     $$
     where:
-    *   The left-hand side, $(\dots)_+$, represents the net positive contribution to reducing the global PCE potential, expressed in units of power.
-        *   $\Delta PP_{agg}(\mathcal{M})$ is the increase in the aggregate's future Predictive Performance (Definition 7) enabled by the CC influence via mapping $\mathcal M$.
-        *   $\Gamma_0$ is the power conversion factor (Definition 20).
-        *   $\Delta V_{\text{core}}(\mathcal{M})$ is the change (positive if a decrease) in the core PCE potential terms ($V_{op}, V_{prop}, V_{benefit}$ from Equation D.1, excluding direct mapping costs $R_{\mathcal{M}}, C_{\mathcal{M}}$ and $V_{proxy}$) resulting from the biased ND-RID parameters.
-    *   The right-hand side represents the total effective cost rate of implementing and maintaining the mapping $\mathcal M$.
-        *   $\lambda$ is the resource scarcity factor (Definition 20).
-        *   $R_{\mathcal M}$ is the average power cost rate of the mapping.
-        *   $k_C$ is a constant (dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$) relating mapping complexity $C_{\mathcal M}$ to an equivalent power cost rate.
+*   The left-hand side, $(\dots)_+$, represents the net positive contribution to reducing the global PCE potential, expressed in units of power.
+*   $\Delta PP_{agg}(\mathcal{M})$ is the increase in the aggregate's future Predictive Performance (Definition 7) enabled by the CC influence via mapping $\mathcal M$.
+*   $\Gamma_0$ is the power conversion factor (Definition 20).
+*   $\Delta V_{\text{core}}(\mathcal{M})$ is the change (positive if a decrease) in the core PCE potential terms ($V_{op}, V_{prop}, V_{benefit}$ from Equation D.1, excluding direct mapping costs $R_{\mathcal{M}}, C_{\mathcal{M}}$ and $V_{proxy}$) resulting from the biased ND-RID parameters.
+*   The right-hand side represents the total effective cost rate of implementing and maintaining the mapping $\mathcal M$.
+*   $\lambda$ is the resource scarcity factor (Definition 20).
+*   $R_{\mathcal M}$ is the average power cost rate of the mapping.
+*   $k_C$ is a constant (dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$) relating mapping complexity $C_{\mathcal M}$ to an equivalent power cost rate.
     The notation $(\dots)_+$ ensures the benefit term is non-negative. This condition means that mappings $\mathcal{M}$ are selected by PCE dynamics (Appendix D, Theorem D.5) only if they lead to a net decrease or no increase in the total $V(x)$.
 
-*   **Theorem L.1 (Necessary Properties of CC Mapping for Robustness).** Any stable mapping $\mathcal M: \mathcal{C}_{ctx} \to \mathcal{P}_{control}$ under POP/PCE optimization must be POP-admissible (Definition L.2) and also satisfy robustness properties necessary for stable control in a noisy environment. These properties emerge from minimizing stochastic drift and variance terms in the PCE potential dynamics (Equation D.9, Appendix D) and include:
-    1.  **Lipschitz Continuity:** The mapping $\mathcal{M}$ must be Lipschitz continuous with respect to its input $\text{context}_S$. That is, there exists a finite Lipschitz constant $L_{\mathcal{M}} > 0$ such that for any two context states $c_1, c_2 \in \mathcal{C}_{ctx}$:
-        $$ d_{\mathcal{P}}(\mathcal{M}(c_1), \mathcal{M}(c_2)) \le L_{\mathcal{M}} \cdot d_{\mathcal{C}}(c_1, c_2) \quad \text{(L.2a)} $$
+**Theorem L.1 (Necessary Properties of CC Mapping for Robustness).** Any stable mapping $\mathcal M: \mathcal{C}_{ctx} \to \mathcal{P}_{control}$ under POP/PCE optimization must be POP-admissible (Definition L.2) and also satisfy robustness properties necessary for stable control in a noisy environment. These properties emerge from minimizing stochastic drift and variance terms in the PCE potential dynamics (Equation D.9, Appendix D) and include:
+   1.  **Lipschitz Continuity:** The mapping $\mathcal{M}$ must be Lipschitz continuous with respect to its input $\text{context}_S$. That is, there exists a finite Lipschitz constant $L_{\mathcal{M}} > 0$ such that for any two context states $c_1, c_2 \in \mathcal{C}_{ctx}$:
+$$ d_{\mathcal{P}}(\mathcal{M}(c_1), \mathcal{M}(c_2)) \le L_{\mathcal{M}} \cdot d_{\mathcal{C}}(c_1, c_2) \quad \text{(L.2a)} $$
         where $d_{\mathcal{P}}$ and $d_{\mathcal{C}}$ are appropriate metrics on the control parameter space $\mathcal{P}_{control}$ and the context space $\mathcal{C}_{ctx}$, respectively. The value of $L_{\mathcal{M}}$ is optimized by PCE.
-    2.  **Bounded Control Output:** The range of physical control parameters $\mathcal{P}_{control}$ generated by $\mathcal{M}$ must be bounded, $\|\mathcal{M}(\text{context}_S)\|_{\mathcal{P}} \le P_{max}$, to ensure finite physical costs ($R_{\mathcal{M}}$).
-    3.  **Stability of Iterative Dynamics:** If the context $\text{context}_S$ can be influenced by past CC effects (forming a feedback loop), PCE will select for mappings $\mathcal{M}$ that ensure the stability of this overall iterative dynamic system.
+   2.  **Bounded Control Output:** The range of physical control parameters $\mathcal{P}_{control}$ generated by $\mathcal{M}$ must be bounded, $\|\mathcal{M}(\text{context}_S)\|_{\mathcal{P}} \le P_{max}$, to ensure finite physical costs ($R_{\mathcal{M}}$).
+   3.  **Stability of Iterative Dynamics:** If the context $\text{context}_S$ can be influenced by past CC effects (forming a feedback loop), PCE will select for mappings $\mathcal{M}$ that ensure the stability of this overall iterative dynamic system.
 
     Violation of these properties would lead to increased variance in the PCE potential, higher average costs, and reduced predictive stability, all of which are selected against by PCE optimization.
 

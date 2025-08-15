@@ -1,7 +1,7 @@
 # Appendix T: A Substrate-First Derivation of the Electroweak Scale
 
 **Abstract**
-We derive the electroweak/Planck hierarchy from first principles within the Predictive Universe (PU) framework by constructing a macroscopic effective potential directly from microscopic Minimal Predictive Unit (MPU) dynamics. The emergent scalar order parameter is a block average of a bounded, $\mathbb{Z}_2$-symmetric local observable defined from MPU primitives, which we construct via a physically-motivated ansatz to possess the quantum numbers of the Higgs vacuum expectation value. Using large-deviation theory, the effective potential is obtained as the difference of (i) a constrained operational/communication cost and (ii) a predictive-information benefit. A key geometric feature—an area law for inter-block penalties—introduces a boundary mass term that competes with a logarithmically destabilizing bulk drift. Wilsonian block recursion yields an emergent critical scale $\ell^*$ at which the quadratic curvature (mass) changes sign, triggering spontaneous symmetry breaking. We derive the Renormalization Group (RG) flow, correctly separating the logarithmic running of the bulk mass from the geometric dilution ($1/\ell$) of the boundary term. The resulting vacuum expectation value satisfies $v \simeq \zeta/\ell^*$, yielding an exponential hierarchy $v/M_{Pl}$ from logarithmic renormalization. All coefficients are expressed in terms of MPU cumulants, mixed cumulants with the bulk cost density, and boundary cumulants arising from the ND–RID link geometry. We provide explicit MPU-native constructions and formulas for these coefficients, along with a closed-form solution for $\ell^*$ using the Lambert–$W$ function. A monotonicity argument based on emergent ferromagnetic correlations justifies the sign flip of the bulk mass. We compare this mechanism to Coleman–Weinberg, technicolor, and supersymmetry, highlighting the distinctive prediction $\partial \ln v/\partial \ln C_{\max} > 0$.
+We derive the electroweak/Planck hierarchy from first principles within the Predictive Universe (PU) framework by constructing a macroscopic effective potential directly from microscopic Minimal Predictive Unit (MPU) dynamics. The emergent scalar order parameter is a block average of a bounded, $\mathbb{Z}_2$-symmetric local observable defined from MPU primitives, which we construct via a physically-motivated ansatz to possess the quantum numbers of the Higgs vacuum expectation value. Using large-deviation theory, the effective potential is obtained as the difference of (i) a constrained operational/communication cost and (ii) a predictive-information benefit. A key geometric feature—an area law for inter-block penalties—introduces a boundary mass term that competes with a logarithmically destabilizing bulk drift. Wilsonian block recursion yields an emergent critical scale $\ell^*$ at which the quadratic curvature (mass) changes sign, triggering spontaneous symmetry breaking. We derive the Renormalization Group (RG) flow, correctly separating the logarithmic running of the bulk mass from the geometric dilution ($1/\ell$) of the boundary term. The resulting vacuum expectation value satisfies $v \simeq \zeta/(\ell^*\delta)$, yielding an exponential hierarchy $v/M_{Pl}$ from logarithmic renormalization. All coefficients are expressed in terms of MPU cumulants, mixed cumulants with the bulk cost density, and boundary cumulants arising from the ND–RID link geometry. We provide explicit MPU-native constructions and formulas for these coefficients, along with a closed-form solution for $\ell^*$ using the Lambert–$W$ function. A monotonicity argument based on emergent ferromagnetic correlations justifies the sign flip of the bulk mass. We compare this mechanism to Coleman–Weinberg, technicolor, and supersymmetry, highlighting the distinctive prediction $\partial \ln v/\partial \ln C_{\max} > 0$.
 
 ---
 
@@ -9,7 +9,7 @@ We derive the electroweak/Planck hierarchy from first principles within the Pred
 
 A longstanding open problem in fundamental physics is to explain the vast hierarchy between the electroweak scale and the Planck scale, $v/M_{Pl} \approx 10^{-17}$, without resorting to fine-tuning of parameters. This appendix develops a substrate-first solution within the PU framework, where physical reality emerges from the operational dynamics of a network of interacting, information-processing agents—Minimal Predictive Units (MPUs)—governed by the Principle of Compression Efficiency (PCE).
 
-The core mechanism is a competition between predictive benefits and resource costs that manifests geometrically. Under coarse-graining, this competition produces a macroscopic order parameter with an effective potential whose quadratic curvature (effective mass) runs from positive to negative at a critical block size $\ell^*$. This sign flip induces spontaneous symmetry breaking, and the resulting vacuum expectation value (VEV) is set by the inverse of this emergent length scale, $v \simeq \zeta/\ell^*$. An exponential hierarchy, $v/M_{Pl} \ll 1$, arises because the bulk mass term runs logarithmically with scale while the stabilizing boundary term dilutes as $1/\ell$. The mechanism is contingent on the PCE-driven emergence of ferromagnetic correlations, a foundational property derived in Section T.2.4.
+The core mechanism is a competition between predictive benefits and resource costs that manifests geometrically. Under coarse-graining, this competition produces a macroscopic order parameter with an effective potential whose quadratic curvature (effective mass) runs from positive to negative at a critical block size $\ell^*$. This sign flip induces spontaneous symmetry breaking, and the resulting vacuum expectation value (VEV) is set by the inverse of this emergent length scale, $v \simeq \zeta/(\ell^*\delta)$. An exponential hierarchy, $v/M_{Pl} \ll 1$, arises because the bulk mass term runs logarithmically with scale while the stabilizing boundary term dilutes as $1/\ell$. The mechanism is contingent on the PCE-driven emergence of ferromagnetic correlations, a foundational property derived in Section T.2.4.
 
 **Key elements.**
 
@@ -40,7 +40,7 @@ The core mechanism is a competition between predictive benefits and resource cos
 
 To construct a concrete and viable instance of the mechanism, we adopt a physically-motivated *ansatz* for the local observable that acquires a vacuum expectation value. This ansatz serves as a concrete existence proof that a viable order parameter with the correct quantum numbers can be constructed from MPU primitives, allowing us to derive its VEV. The general mechanism is expected to be robust for any such emergent scalar.
 
-We choose an observable with the quantum numbers of the Higgs field's VEV: an $SU(3)$-singlet, $SU(2)_L$-triplet, with zero hypercharge. For each MPU $i$, let $\rho_i$ be its stationary single-cycle output state. We define a set of Hermitian observables $\vec{M}_i=(M_x, M_y, M_z)$ on the MPU Hilbert space $H_0$ that transform as a triplet under the emergent $SU(2)_L$ gauge symmetry. A minimal construction, assuming $H_0$ carries representations of the SM gauge group, is $M_a:=\mathrm{diag}(\sigma_a,\sigma_a,\sigma_a,\sigma_a)$, where $\sigma_a$ are the Pauli matrices. Let $n_i$ be a unit vector in the internal $SU(2)$ space. We define the normalized score:
+We choose an observable constructed from an $SU(2)_L$-triplet proxy with the quantum numbers needed to track electroweak breaking. For each MPU $i$, let $\rho_i$ be its stationary single-cycle output state. We define a set of Hermitian observables $\vec{M}_i=(M_x, M_y, M_z)$ on the MPU Hilbert space $H_0$ that transform as a triplet under the emergent $SU(2)_L$ gauge symmetry. A minimal construction, assuming $H_0$ carries representations of the SM gauge group, is $M_a:=\mathrm{diag}(\sigma_a,\sigma_a,\sigma_a,\sigma_a)$, where $\sigma_a$ are the Pauli matrices. Let $n_i$ be a unit vector in the internal $SU(2)$ space. We define the normalized score:
 $$
 s_i := {\rm Tr}\!\left[\rho_i \,(n_i\!\cdot\!\vec M_i)\right]/\mu_0,\qquad |s_i|\le 1,
 $$
@@ -55,7 +55,7 @@ This appendix must be understood in the context of the broader PU framework, spe
 
 The emergent scalar order parameter `φ` is therefore identified as a composite field that transforms as the neutral component of the SM Higgs doublet. The local observable `m_i`, chosen to be a `SU(2)_L`-triplet, serves as a proxy for the composite operator `H†σ_a H`, where `H` is the Higgs doublet. A non-zero expectation value `⟨φ⟩` thus directly corresponds to the electroweak VEV, `v`.
 
-In this substrate-first picture, the Higgs field is not a fundamental particle but an emergent, collective mode of the MPU network itself. The derivation in this appendix successfully explains the origin and scale of its VEV—the core of the hierarchy problem. The subsequent derivation of the full set of SM Yukawa couplings (which give rise to fermion masses) and the quartic Higgs self-coupling from this MPU substrate represents a major program for future theoretical work.
+In this substrate-first picture, the Higgs field is not a fundamental particle but an emergent, collective mode of the MPU network itself. The derivation in this appendix successfully explains the origin and scale of its VEV—the core of the hierarchy problem. The subsequent derivation of the full set of SM Yukawa couplings (which give rise to fermion masses) and the quartic Higgs self-coupling from this MPU substrate represents a major program for future theoretical work. Operationally we monitor the gauge-invariant scalar $\phi \propto \sqrt{\langle m_a m_a\rangle}$, which coincides with $H^\dagger H$ at leading order; in unitary gauge this aligns with the neutral component of the Higgs doublet.
 
 ### T.2.4 Derivation of Emergent Ferromagnetic Correlations from PCE
 
@@ -63,7 +63,7 @@ The emergence of ferromagnetic correlations—the tendency for neighboring `m_i`
 
 #### T.2.4.1 The PCE Potential as a Function of Macroscopic Order
 
-Consider the MPU network in a stationary state. Let `φ` be the macroscopic order parameter, representing the ensemble average of the local observable `m_i`. The total PCE Potential per unit volume, `V(φ)`, can be expressed as the difference between the resource cost of maintaining a state with order `φ` and the predictive benefit gained from that state:
+Consider the MPU network in a stationary state.  We take the macroscopic order parameter to be the **gauge-invariant scalar** $\phi$ defined by $\phi^2 := \langle m_a m_a \rangle$, where the average is over the MPU ensemble and the sum is over the triplet components. At leading order, this corresponds to the SM operator $H^\dagger H$. All expansions below are in this gauge-invariant order parameter $\phi$. The total PCE Potential per unit volume, `V(φ)`, can be expressed as the difference between the resource cost of maintaining a state with order `φ` and the predictive benefit gained from that state:
 $$
 V(\phi) = V_{cost}(\phi) - V_{benefit}(\phi)
 $$
@@ -88,12 +88,12 @@ For small `φ`, we expand the second exponential: `e^{-x} ≈ 1-x`.
 $$
 \Delta V_{benefit}(\phi) \approx \Gamma_0 (\beta-\alpha) e^{-\kappa_0 \frac{C-C_{op}}{C_{target}}} \left[ \kappa_1 \frac{C-C_{op}}{C_{target}} \right] \phi^2
 $$
-This is of the form `ΔV_{benefit}(φ) = k_b φ^2`, where the benefit coefficient `k_b` is positive and given by:
-$$
-k_b = \Gamma_0 (\beta - PP_0) \frac{\kappa_1}{\kappa_0},
-\tag{T.1}
-$$
-where we have used `(β-α)e^{-κ_0(C-C_{op})/C_{target}} = β-PP_0` (the performance gap in the symmetric state) and `(C-C_{op})/C_{target} = (1/κ₀) \ln((\beta-\alpha)/(\beta-PP_0))`. The coefficient `k_b` represents the marginal predictive utility of macroscopic order.
+ This is of the form `ΔV_{benefit}(φ) = k_b φ^2`, where the benefit coefficient `k_b` is positive and given by:
+ $$
+ k_b = \Gamma_0 (\beta - PP_0) \frac{\kappa_1}{\kappa_0} \ln\left(\frac{\beta-\alpha}{\beta-PP_0}\right),
+ \tag{T.1}
+ $$
+ where we have used `(β-α)e^{-κ_0(C-C_{op})/C_{target}} = β-PP_0` (the performance gap in the symmetric state) and `(C-C_{op})/C_{target} = (1/κ₀) \ln((\beta-\alpha)/(\beta-PP_0))`; here $PP_0$ is the symmetric-state performance and $\alpha,\beta$ are the standard bounds from the Law of Prediction (cf. Eq. 22). The coefficient `k_b` represents the marginal predictive utility of macroscopic order.
 
 #### T.2.4.3 The Resource Cost of Order
 
@@ -138,7 +138,7 @@ This derivation rests on several foundational assumptions that are either derive
 
 1. **Lattice structure.** The PCE-optimal equilibrium is modeled as a regular $D=4$ hypercubic lattice with spacing $\delta$, consistent with the framework's derivation of **Geometric Regularity (Theorem 43)**.
 2. **Finite interaction range.** Microscopic interactions have a finite range, consistent with the **Lieb-Robinson bounds derived from ND-RID in Appendix F**, yielding exponential clustering in the symmetric phase.
-3. **Stationary Gibbs ensemble.** The global PCE potential $V(x)$ is coercive, ensuring a stationary, translation-invariant Gibbs ensemble $d\mu(x) \propto e^{-\beta V(x)} dx$. This is consistent with the **stochastic dynamics on the PCE potential described in Appendix D**, which lead to a stationary distribution.
+3. **Stationary Gibbs ensemble.** The global PCE potential $V(x)$ is coercive, ensuring a stationary, translation-invariant Gibbs ensemble $d\mu(x) \propto e^{-\beta_G V(x)} dx$. This is consistent with the **stochastic dynamics on the PCE potential described in Appendix D**, which lead to a stationary distribution.
 4. **Area-law dominance.** The inter-block propagation cost is dominated by boundary edges due to the locality of interactions on the emergent lattice. For any local interaction Hamiltonian on a lattice, the energy cost of enforcing a boundary condition between two blocks will scale with the area of that boundary, making the surface-to-volume term $|\partial B_\ell|/|B_\ell|\sim c_D/\ell$ a generic feature.
 5. **PCE Benefit of Order.** The core physical hypothesis for this mechanism is that a specialized (ordered) MPU network has a higher predictive efficiency, leading to a net PCE benefit that can overcome the cost of ordering (`k_b > k_c`).
 6. **Observable Ansatz.** The choice of the local observable `m_i` (Section T.2.2) is a specific, physically motivated *ansatz* designed to have the correct SM quantum numbers to serve as a proxy for the Higgs VEV. This is a modeling choice to demonstrate a concrete, viable instance of the mechanism.
@@ -222,24 +222,24 @@ $$
 $$
 with $\alpha_\ell>0$ and $\gamma_\ell>0$ given explicitly by shell integrals of the block-field propagator. Let $S_m(k)$ be the symmetric-phase spectral density of $m$,
 $$
-S_m(k)=\sum_r e^{-ik\cdot r},\langle m_0 m_r\rangle_c ;\simeq; \frac{\beta_0^2,\varepsilon}{,k_S-2J_{int}\sum_{\mu=1}^4\cos(k_\mu\delta),},,
+S_m(k)=\sum_r e^{-ik\cdot r} \langle m_0 m_r\rangle_c \simeq \frac{\beta_0^2 \varepsilon}{k_S-2J_{int}\sum_{\mu=1}^4\cos(k_\mu\delta)},
 $$
 and let $W_\ell(k)$ denote the normalized Fourier-space window of the $\ell$-block average. Then
 $$
-G_\ell(k):=|W_\ell(k)|^2,S_m(k),\qquad
-\alpha_\ell=3!\int_{\rm shell}!\frac{d^4k}{(2\pi)^4},G_\ell(k),\qquad
-\gamma_\ell=9!\int_{\rm shell}!\frac{d^4k}{(2\pi)^4},[G_\ell(k)]^2,,
+G_\ell(k):=|W_\ell(k)|^2 S_m(k),\qquad
+\alpha_\ell=c_\alpha\int_{\rm shell}\frac{d^4k}{(2\pi)^4} G_\ell(k),\qquad
+\gamma_\ell=c_\gamma\int_{\rm shell}\frac{d^4k}{(2\pi)^4} [G_\ell(k)]^2,
 $$
-which are manifestly positive. In $D=4$, $\lambda_\ell$ is marginally irrelevant, so it varies only logarithmically and the bulk mass exhibits an approximately constant negative drift:
+which are manifestly positive, with $c_\alpha, c_\gamma$ being $\mathcal{O}(1)$ combinatorial factors from the loop expansion. In $D=4$, $\lambda_\ell$ is marginally irrelevant, so it varies only logarithmically and the bulk mass exhibits an approximately constant negative drift:
 $$
 \frac{d m_{\rm bulk}^2}{d\ln\ell}\approx -\beta_2,\qquad \beta_2 := \overline{\alpha_\ell\lambda_\ell}>0,
 \tag{T.12}
 $$
-where $\overline{f}:=\Delta^{-1}!\int_{\ln\ell_0}^{\ln\ell_0+\Delta}! f(\ell),d\ln\ell$. For later estimates it is convenient to write $\alpha_\ell\simeq c_W$ with
+where $\overline{f}:=\Delta^{-1}\int_{\ln\ell_0}^{\ln\ell_0+\Delta} f(\ell) d\ln\ell$. For later estimates it is convenient to write $\alpha_\ell\simeq c_W$ with
 $$
-c_W:=\frac{3}{16\pi^2},\mathcal{Z},\qquad \mathcal{Z}:=\frac{\int_{\rm shell}! d^4k,G_\ell(k)}{\int_{\rm shell}! d^4k}\in[0.5,1.5],,
+c_W:=\frac{3}{16\pi^2}\,\mathcal{Z},\qquad \mathcal{Z}:=\frac{\int_{\rm shell} d^4k\,G_\ell(k)}{\int_{\rm shell} d^4k}\in[0.5,1.5],
 $$
-so that $\beta_2\simeq c_W,\overline{\lambda_\ell}$. Integrating this flow from a microscopic scale (e.g., $\ell=1$) gives the scale-dependent effective mass:
+so that $\beta_2\simeq c_W \overline{\lambda_\ell}$. Integrating this flow from a microscopic scale (e.g., $\ell=1$) gives the scale-dependent effective mass:
 $$
 m_\ell^2\approx m_{\rm bulk}^2(1)-\beta_2\ln\ell+\frac{2B}{\ell}.
 \tag{T.13}
@@ -252,7 +252,7 @@ $$
 Two mechanisms ensure $m_{\rm bulk}^2(\ell)$ becomes negative at large $\ell$:
 
 1. **One-loop negativity.** From (T.12), the loop term $-\beta_2$ is strictly negative for a stable quartic coupling ($\lambda_\ell>0$). This is a universal feature of the RG flow for such theories.
-2. **Monotone susceptibility.** The bulk mass is $m_{\rm bulk}^2(\ell)=2[A_2(\ell)-1/(2\kappa_2(\ell))]$. The emergent ferromagnetic structure (derived in T.2.4) allows for Griffiths/FKG-type inequalities [Griffiths 1967; Fortuin, Kasteleyn & Ginibre 1971], which provide a strong physical argument that the block susceptibility $\kappa_2(\ell)$ (a measure of correlated fluctuations) is non-decreasing in the block size $\ell$. If the cost coefficient $A_2(\ell)$ varies slowly with scale, the difference $A_2 - 1/(2\kappa_2)$ will necessarily decrease and turn negative once the susceptibility $\kappa_2$ grows sufficiently large. This monotonicity uses positive association (FKG/attractiveness) of the symmetric-phase Gibbs measure induced by the ND–RID penalties.
+2. **Monotone susceptibility.** The bulk mass is $m_{\rm bulk}^2(\ell)=2[A_2(\ell)-1/(2\kappa_2(\ell))]$. The emergent ferromagnetic structure (derived in T.2.4) allows for Griffiths/FKG-type inequalities [Griffiths 1967; Fortuin, Kasteleyn & Ginibre 1971], which provide a strong physical argument that the block susceptibility $\kappa_2(\ell)$ (a measure of correlated fluctuations) is non-decreasing in the block size $\ell$. If the cost coefficient $A_2(\ell)$ varies slowly with scale, the difference $A_2 - 1/(2\kappa_2)$ will necessarily decrease and turn negative once the susceptibility $\kappa_2$ grows sufficiently large. This monotonicity uses positive association (FKG/attractiveness) of the symmetric-phase Gibbs measure induced by the ND–RID penalties with $J\_{int}>0\$ ferromagnetic couplings.
 
 At small scales, the boundary term $2B/\ell$ is large and positive, keeping $m_\ell^2>0$. As $\ell$ grows, this geometric term dilutes, and the negative bulk drift dominates, guaranteeing a zero-crossing at some finite critical scale $\ell^*$.
 
@@ -290,6 +290,8 @@ This section provides the explicit, computable formulas linking the macroscopic 
 
 ### T.8.1 Conventions and Microscopic Model
 
+In this section, we work in **lattice units** where the microscopic spacing `δ=1`, so all lengths are dimensionless multiples of `δ`.
+
 *   **Substrate:** $D=4$ hypercubic lattice.
 *   **Observable:** $m_i = \tanh(\beta_0 s_i)$ where $s_i = \mathrm{Tr}[\rho_i (n_i \cdot M)]$.
 *   **PCE Potential Model:** We use a minimal model for the PCE potential density that captures the essential physics. The bulk cost is modeled by the negentropy of the local state, `c_bulk(ρ) = k_S [S_* - S(ρ)]`, which penalizes ordered (low-entropy) states. The interaction term favors alignment of neighboring observables, `v_int = -J_int ∑_{<ij>} s_i s_j`. The system is analyzed in the symmetric phase (`k_S > 2DJ_int`).
@@ -317,35 +319,35 @@ This section provides the explicit, computable formulas linking the macroscopic 
 4.  **Bare Boundary Cost Coefficient B:**
     The alignment interaction $v_{\rm int}$ generates a gradient stiffness. Expanding the lattice coupling to quadratic order yields the continuum elastic energy
    $$
-   E_{\rm grad}\simeq \frac{J_{int},\delta^2}{2,\varepsilon,\beta_0^2}\int d^4x,(\nabla m)^2.
+   E_{\rm grad}\simeq \frac{J_{int}\,\delta^2}{2\,\varepsilon\,\beta_0^2}\int d^4x\,(\nabla m)^2.
    $$
-   Imposing a small mismatch $\Delta\phi$ between adjacent $\ell$-blocks and minimizing in the boundary layer gives an inter-block penalty proportional to area/volume, i.e. $(B/\ell)(\Delta\phi)^2$. In the cumulant language this is $B=\tfrac{D,\tau_2}{\kappa_2^2}$. For the present elastic approximation one finds
+   Imposing a small mismatch $\Delta\phi$ between adjacent $\ell$-blocks and minimizing in the boundary layer gives an inter-block penalty proportional to area/volume, i.e. $(B/\ell)(\Delta\phi)^2$. In the cumulant language this is $B=\tfrac{D\,\tau_2}{\kappa_2^2}$. For the present elastic approximation one finds
    $$
-    B=\frac{c_B,J_{int},\delta^2}{\varepsilon,\beta_0^2},
+   B=\frac{c_B\,J_{int}}{\varepsilon\,\beta_0^2},
    $$
-   where $c_B=O(1)$ encodes the interface profile and the $2D$ faces of the hypercube.
+ where $c_B=O(1)$ encodes the interface profile and the $2D$ faces of the hypercube.
 
 ### T.8.3 Part II: PU-Native RG Flow
 
 The one-loop RG flow for the bulk mass is `d m_bulk²/d(ln ℓ) = -β₂`, where `β₂ = α_ℓ λ_ℓ`.
-*   **Quartic Coupling `λ̄`:** Quartic Coupling $\bar{\lambda}$: The quartic that enters the one-loop tadpole is the block-rescaled coefficient
+*   **Quartic Coupling $\bar{\lambda}$:** The quartic that enters the one-loop tadpole is the block-rescaled coefficient
 $$
-\bar{\lambda};\equiv;\widehat{\lambda}\ell;\simeq;24\Big[A_4+\frac{\kappa_4}{24,\kappa_2^4}\Big];\xi^4,
+\bar{\lambda}\equiv\widehat{\lambda}_\ell\simeq 24\Big[A_4+\frac{\kappa_4}{24\,\kappa_2^4}\Big]\xi^4,
 $$
-evaluated at the symmetric point and treated as slowly varying across the flow window. Here $A_4\simeq k_S/(12\beta_0^4)$ comes from the negentropy expansion of the bulk cost, $\kappa_4<0$ is the fourth connected cumulant of $m$ in the symmetric ensemble (for $m=\tanh(\beta_0 s)$ it partially cancels $A_4$), and $\xi^4$ encodes the normalization of the block zero-mode induced by the window $W\ell(k)$ (for the standard cubic block $\xi=O(1)$). It is convenient to parameterize the net result as
+evaluated at the symmetric point and treated as slowly varying across the flow window. Here $A_4\simeq k_S/(12\beta_0^4)$ comes from the negentropy expansion of the bulk cost, $\kappa_4<0$ is the fourth connected cumulant of $m$ in the symmetric ensemble (for $m=\tanh(\beta_0 s)$ it partially cancels $A_4$), and $\xi^4$ encodes the normalization of the block zero-mode induced by the window $W_\ell(k)$ (for the standard cubic block $\xi=O(1)$). It is convenient to parameterize the net result as
 $$
-\bar{\lambda}=c_\lambda,\frac{k_S}{\beta_0^4},\qquad c_\lambda\in[0.03,0.2],
+\bar{\lambda}=c_\lambda\,\frac{k_S}{\beta_0^4},\qquad c_\lambda\in[0.03,0.2],
 $$
 with $c_\lambda$ determined by $(\kappa_2,\kappa_4)$ and the block filter. The numerical example below uses $c_\lambda\simeq 0.10$.
 
 Drift Coefficient $\beta_2$: With
 $$
-\alpha_\ell=3!\int_{\rm shell}!\frac{d^4k}{(2\pi)^4}G_\ell(k);\equiv;c_W,
+\alpha_\ell=3!\int_{\rm shell}\frac{d^4k}{(2\pi)^4}G_\ell(k)\equiv c_W,
 $$
 one has
 $$
-\beta_2=\overline{\alpha_\ell\lambda_\ell};\simeq;c_W,\bar{\lambda},\qquad
-c_W=\frac{3}{16\pi^2},\mathcal{Z},\quad \mathcal{Z}\in[0.5,1.5],
+\beta_2=\overline{\alpha_\ell\lambda_\ell}\simeq c_W\,\bar{\lambda},\qquad
+c_W=\frac{3}{16\pi^2}\,\mathcal{Z},\quad \mathcal{Z}\in[0.5,1.5],
 $$
 so a representative value is $c_W\simeq 0.019$ for the standard cubic block. Hence $\beta_2\simeq 0.019\times\bar{\lambda}$.
 
@@ -400,5 +402,4 @@ This provides a unique, directional prediction linking the electroweak scale to 
 ## T.11 Conclusion
 
 The electroweak scale emerges from a geometric competition between an area-law boundary cost that stabilizes the symmetric vacuum and a logarithmically destabilizing bulk drift that favors symmetry breaking. The Renormalization Group flow ensures a zero-crossing of the effective mass at a finite critical scale $\ell^*$, which is exponentially large due to the logarithmic nature of the running. All coefficients in the effective potential are, in principle, computable as functionals of the underlying MPU network's statistical properties, tying the electroweak/Planck hierarchy directly to microscopic information-processing constraints. The specific construction of the local observable `m_i` serves as a successful existence proof for a viable order parameter, and the general mechanism is expected to be robust to other choices of observables with similar symmetry properties. The mechanism yields a unique, falsifiable directional prediction linking the electroweak scale $v$ to the ND–RID channel capacity $C_{\max}$ and is conceptually distinct from existing proposals for solving the hierarchy problem.
-
 

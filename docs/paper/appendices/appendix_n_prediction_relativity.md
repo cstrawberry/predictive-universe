@@ -176,17 +176,17 @@ The total work $W_{tot}$ is the sum of the work done to increase kinetic energy,
     $$
 
 2.  **Predictive Work:** The predictive computation happens continuously along the trajectory. Over an infinitesimal time interval $dt$, the MPU must sustain a predictive complexity of at least $C_{req}(t) = C_{SPAP}(PP(t)) + C_{noise}(T_{eff}(t))$, where $C_{noise}$ encompasses all noise-induced costs. The effective temperature at which this computation is performed is $T_{eff}(t)$. Applying the predictive power bound (Lemma N.1) infinitesimally, the work done for prediction in $dt$ is $dW_{pred}(t) = P_{pred}(t) dt$, which is bounded by:
-    $$
+$$
     dW_{pred}(t) \ge R(C_{req}(t), T_{eff}(t)) dt
     $$
     Integrating this over the entire process gives the total predictive work:
-    $$
+$$
     W_{pred} = \int dW_{pred}(t) \ge \int R(C_{req}(t), T_{eff}(t)) dt
     $$
     Because $R$ is a power, the integrand $R(\dots)dt$ carries units of energy, ensuring inequality N.5 is dimensionally consistent.
 
 3.  **Substituting Bounds:** We substitute the lower bound for $C_{SPAP}$ from Lemma N.2 into the expression for $C_{req}(t)$:
-    $$
+$$
     W_{pred} \ge \int R\left( \Omega\left(\frac{\log(1/(\alpha_{SPAP}-PP))}{(\alpha_{SPAP}-PP)^2}\right) + C_{noise}(T_{eff}(t)), T_{eff}(t) \right) dt
     $$
 
@@ -263,7 +263,7 @@ Binary pulsars are ideal for this test for several key reasons:
 
 *   **The Physical Mechanism:** The neutron star is not merely a point mass but a complex MPU aggregate ($C_{agg} \gg C_{op}$). As it accelerates through its orbit, its constituent MPUs experience an Unruh temperature `T_U(a)`. According to the UCT, the system must continuously expend energy to maintain its predictive coherence against this Unruh-induced thermal noise. This expenditure acts as a continuous power drain, a "predictive drag," which removes energy from the orbital system. The precise emission channel for this dissipated energy (e.g., thermal photons, neutrinos, or a non-standard channel) is a subject for deeper theoretical work, but its effect on the orbit is modelable as a pure energy loss.
 *   **The Total Energy Loss:** The total energy loss rate of the system becomes the sum of the two effects:
-    $$ \frac{dE}{dt}_{\text{Total}} = \frac{dE}{dt}_{\text{GR (GW)}} + P_{UCT}(t) $$
+$$ \frac{dE}{dt}_{\text{Total}} = \frac{dE}{dt}_{\text{GR (GW)}} + P_{UCT}(t) $$
     where `P_UCT > 0` is the anomalous power loss due to predictive drag.
 
 #### N.8.3 The Unique Observational Signature
@@ -272,7 +272,7 @@ The key to detecting this effect lies in the fact that the two energy loss mecha
 
 *   **The GR Signal:** The power radiated in GWs depends on the third time derivative of the system's quadrupole moment. For a binary orbit, this scales in a complex way with the stars' velocities and separation, but is characteristically strongest near periastron where both are maximized.
 *   **The UCT Signal:** The power loss `P_UCT` is posited to depend on the magnitude of the proper acceleration vector, `a(t)`. We can use a simple phenomenological power-law model for this dissipation:
-    $$ P_{UCT}(t) = k_{UCT} \cdot a(t)^n $$
+$$ P_{UCT}(t) = k_{UCT} \cdot a(t)^n $$
     where `k_UCT` is a new fundamental constant representing the coupling between acceleration and predictive cost, and `n` is a dimensionless exponent. While the full UCT (Eq. N.5) suggests a complex relationship, an expansion for low Unruh temperatures plausibly leads to a dominant power-law behavior, with `n ≥ 2` being a natural starting point for modeling (cf. Box N.1). In an elliptical orbit, the acceleration `a(t)` is at its maximum at periastron and its minimum at apastron.
 
 While both energy loss effects are strongest near periastron, their precise functional dependencies on the orbital phase are different. This means the UCT adds an energy loss term with a **unique temporal signature** over the course of a single orbit. It is this unique *shape* of the energy loss profile that allows it, in principle, to be distinguished from the GR prediction.
@@ -284,23 +284,23 @@ The search for this effect constitutes a high-precision data analysis challenge.
 1.  **Acquire Data:** Utilize long-term, high-cadence timing data from the best-suited binary pulsar system, such as the Double Pulsar (PSR J0737−3039A/B).
 
 2.  **Establish the Null Hypothesis (`Model_GR`):**
-    *   Employ a state-of-the-art pulsar timing model (e.g., the `T2` model used in `TEMPO2` software) that incorporates all known relativistic effects, including orbital decay due to GW emission as predicted by GR.
-    *   Fit this `Model_GR` to the timing data to determine the system's parameters (masses, orbital elements, etc.) with the highest possible precision.
-    *   Calculate the timing residuals: `Residuals = Data - Model_GR`. If GR is the complete theory, these residuals should be statistically indistinguishable from random noise.
+     *   Employ a state-of-the-art pulsar timing model (e.g., the `T2` model used in `TEMPO2` software) that incorporates all known relativistic effects, including orbital decay due to GW emission as predicted by GR.
+     *   Fit this `Model_GR` to the timing data to determine the system's parameters (masses, orbital elements, etc.) with the highest possible precision.
+     *   Calculate the timing residuals: `Residuals = Data - Model_GR`. If GR is the complete theory, these residuals should be statistically indistinguishable from random noise.
 
 3.  **Construct the Alternative Hypothesis (`Model_UCT`):**
-    *   Begin with the standard `Model_GR`.
-    *   Introduce a new term that models the cumulative effect of the anomalous energy loss `P_UCT(t) = k_UCT \cdot a(t)^n` on the orbit. This requires integrating this power loss over time to calculate the resulting additional contribution to the orbital period derivative, `(dP_b/dt)_UCT`. The new parameters `k_UCT` and `n` are free parameters in the fit.
-    *   This defines a new, expanded timing model: `Model_UCT = Model_GR + Correction_UCT(k_UCT, n)`.
+    *   Begin with the standard `Model_GR`.
+    *   Introduce a new term that models the cumulative effect of the anomalous energy loss `P_UCT(t) = k_UCT \cdot a(t)^n` on the orbit. This requires integrating this power loss over time to calculate the resulting additional contribution to the orbital period derivative, `(dP_b/dt)_UCT`. The new parameters `k_UCT` and `n` are free parameters in the fit.
+    *   This defines a new, expanded timing model: `Model_UCT = Model_GR + Correction_UCT(k_UCT, n)`.
 
 4.  **Perform a Bayesian Model Comparison:**
-    *   Use a Bayesian inference framework (e.g., employing nested sampling or MCMC techniques) to simultaneously fit both `Model_GR` and `Model_UCT` to the dataset.
-    *   This analysis will yield the posterior probability distributions for all parameters in both models. Crucially, it will also allow for the calculation of the **Bayesian evidence** (or marginal likelihood), `Z`, for each model.
-    *   The test consists of comparing the evidence via the **Bayes factor**:
-        $$ B = \frac{Z(\text{Model}_{UCT})}{Z(\text{Model}_{GR})} $$
-    *   **Interpretation:**
-        *   If `B ≈ 1`, the data show no preference for the more complex UCT model. GR remains the most efficient description. This would place stringent upper limits on the value of `k_UCT`.
-        *   If `B >> 1` (e.g., `B > 100`, conventionally "strong evidence"), this would indicate that the data *require* the additional UCT term to be explained. This would be a momentous discovery.
+    *   Use a Bayesian inference framework (e.g., employing nested sampling or MCMC techniques) to simultaneously fit both `Model_GR` and `Model_UCT` to the dataset.
+    *   This analysis will yield the posterior probability distributions for all parameters in both models. Crucially, it will also allow for the calculation of the **Bayesian evidence** (or marginal likelihood), `Z`, for each model.
+    *   The test consists of comparing the evidence via the **Bayes factor**:
+$$ B = \frac{Z(\text{Model}_{UCT})}{Z(\text{Model}_{GR})} $$
+
+*   If `B ≈ 1`, the data show no preference for the more complex UCT model. GR remains the most efficient description. This would place stringent upper limits on the value of `k_UCT`.
+*   If `B >> 1` (e.g., `B > 100`, conventionally "strong evidence"), this would indicate that the data *require* the additional UCT term to be explained. This would be a momentous discovery.
 
 #### N.8.5 Challenges and Outlook
 

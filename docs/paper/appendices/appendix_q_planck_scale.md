@@ -33,22 +33,22 @@ $$
 The components are:
 
 1.  **Packing Cost `V_packing`:** The cost of maintaining the network's structural integrity. A denser network (smaller `δ`) is more costly. A stiffness-like penalty against compression, scaling with curvature-squared in a 3D lattice, provides a minimal model:
-    $$
+$$
     V_{packing}(δ) = \frac{k_1}{δ^4}
     \tag{Q.5}
     $$
 2.  **Correlation Cost `V_corr`:** The resource cost of managing correlations and performing error correction to ensure reliable information channels. Fully independent channels (`χ=1`) are the baseline (zero cost), while introducing correlations (`χ<1`) for error correction incurs a complexity cost. This cost is expected to be convex near `χ=1` and is mitigated by a larger available channel capacity `C_max`. The simplest convex model is:
-    $$
+$$
     V_{corr}(χ, C_{max}) = \frac{k_2 (1 − χ)^2}{C_{max}}
     \tag{Q.6}
     $$
 3.  **Geometric Regularity Cost `V_geom`:** As established by Theorem 43, PCE strongly favors regular geometries. We model this with a potential that has a unique minimum at `η=1`, representing an isotropic, impedance-matched lattice:
-    $$
+$$
     V_{geom}(η) = k_4 ( η + η^{-1} − 2 )
     \tag{Q.7}
     $$
 4.  **Predictive Utility `V_utility`:** The benefit derived from the network's information processing capacity. This is proportional to the surface density of independent channels (`σ_link ≈ χ / (η δ^2)`) and the net usable information capacity per channel, which is the raw capacity `C_max` minus the irreducible processing cost `ε`.
-    $$
+$$
     V_{utility}(δ, χ, η, C_{max}) = k_3 \left[ \frac{χ (C_{max} − ε)}{η δ^2} \right]
     \tag{Q.8}
     $$
@@ -58,7 +58,7 @@ The coefficients `k_i` are positive constants (in Planck units) whose ratios are
 
 We find the equilibrium state (`δ*`, `χ*`, `η*`, `C_max*`) by minimizing `V_vac` subject to the framework's fundamental constraints:
 *   **Information Budget:** The available capacity is limited by the MPU's structure. From the PCE-optimal partitioning argument (Appendix E.7, Eq. E.14), `C_{max} ≤ \ln(d_0) - ε`. With the derived values `d_0=8` and `ε=ln(2)`, this gives the hard constraint:
-    $$
+$$
     C_{max} ≤ 2 \ln(2)
     \tag{Q.9}
     $$
