@@ -291,163 +291,225 @@ The $U(1)$ gauge theory of electromagnetism emerges as the unique, most resource
 
 ### G.8.1 Introduction and Objective: Co-selection from First Principles
 
-This section extends the logic of the Principle of Compression Efficiency (PCE, Definition 15) to argue for the emergence of the Standard Model (SM) gauge group, \$G\_{SM} = SU(3)\times SU(2)\times U(1)\$ with its chiral fermion content, and the D=4 dimensionality of spacetime as a *unified, co-selected optimal structure*. Building upon the established emergence of a complex Hilbert space (Theorem G.1.8) and a U(1) gauge symmetry (Section G.7) from POP/PCE, we argue that PCE, when applied to the selection of more complex non-Abelian gauge structures and the dimensional arena for their operation, strongly favors the observed D=4 SM configuration.
+This section extends the logic of the Principle of Compression Efficiency (PCE, Definition 15) to argue for the emergence of the Standard Model (SM) gauge group, $G_{SM} = SU(3)\times SU(2)\times U(1)$ with its chiral fermion content, and the D=4 dimensionality of spacetime as a *unified, co-selected optimal structure*. Building upon the established emergence of a complex Hilbert space (Theorem G.1.8) and a $U(1)$ gauge symmetry (Section G.7) from POP/PCE, we argue that PCE, when applied to the selection of more complex non‑Abelian gauge structures and the dimensional arena for their operation, strongly favors the observed D=4 SM configuration.
 
-The hypothesis is that neither the SM structure nor D=4 dimensionality are arbitrary empirical inputs but are necessary and robust consequences of the MPU network minimizing a global PCE potential. This potential, $V_{global}(G, \{\psi\}, D, \dots)$, is minimized over a vast configuration space where the gauge group $G$, its fermion content $\{\psi\}$, and the effective spacetime dimension $D$ are treated as co-optimized variables. D=4 with the SM emerges as a unique "PCE sweet spot" because it simultaneously satisfies multiple, stringent, and dimension-dependent criteria essential for a predictively viable, informationally efficient, and structurally complex universe.
+The hypothesis is that neither the SM structure nor D=4 dimensionality are arbitrary empirical inputs but are necessary and robust consequences of the MPU network minimizing a global PCE potential. This potential, $V_{global}(G, {\psi}, D, \dots)$, is minimized over a vast configuration space where the gauge group $G$, its fermion content ${\psi}$, and the effective spacetime dimension $D$ are treated as co‑optimized variables. D=4 with the SM emerges as a unique “PCE sweet spot” because it simultaneously satisfies multiple, stringent, and dimension‑dependent criteria essential for a predictively viable, informationally efficient, and structurally complex universe (quantitatively reflected by the coefficients in Eq. G.8.5).
 
-We construct a physically motivated model for the PCE Potential's dependence on these properties and show that minimizing this potential, subject to fundamental constraints (MPU network information capacity, mathematical consistency via anomaly cancellation, and structural stability), strongly favors the D=4 SM configuration over conceivable alternatives.
+We construct a physically motivated model for the PCE potential’s dependence on these properties and show that minimizing this potential, subject to fundamental constraints (MPU network information capacity, mathematical consistency via anomaly cancellation, and structural stability), strongly favors the D=4 SM configuration over conceivable alternatives.
 
 ### G.8.2 Foundational Principles for Co-selection
 
-The selection of a stable gauge structure and its operational dimensionality is governed by the minimization of the global PCE Potential $V(x)$ (Definition D.1), incorporating $D$ as a variable, subject to fundamental constraints.
+The selection of a stable gauge structure and its operational dimensionality is governed by the minimization of the global PCE potential $V(x)$ (Definition D.1), incorporating $D$ as a variable, subject to fundamental constraints.
 
 #### G.8.2.1 The PCE Potential as the Master Functional
 
 The MPU network evolves to minimize $V(x)$, representing the net resource cost rate. For the gauge sector and dimensionality, this potential accounts for:
+
 *   **Predictive Benefit ($V_{benefit}$):** A gauge structure in an appropriate dimension provides benefits by enabling efficient management of predictive coherence and supporting the formation of complex MPU aggregates necessary for advanced prediction.
 *   **Operational & Propagation Costs ($V_{op}, V_{prop}$):** Maintaining a gauge structure and specific network dimensionality incurs costs (gauge field energy, information load for coherence, network propagation costs, structural stability costs).
-*   **Consistency Penalties ($V_{penalty}$):** Mathematically or physically inconsistent structures (e.g., anomalous gauge theories in a given D, unstable orbital dynamics in another D) incur effectively infinite penalties.
+*   **Consistency Penalties ($V_{penalty}$):** Mathematically or physically inconsistent structures (e.g., anomalous gauge theories in a given $D$, unstable orbital dynamics in another $D$) incur effectively infinite penalties.
 
 #### G.8.2.2 Information Capacity Constraint (D-Independent MPU Property)
 
-The MPU network's ability to support a complex gauge structure is fundamentally limited by the classical capacity $C_{\max} < \ln d_0$ of the underlying ND-RID channels (Appendix E, Theorem E.2), where $d_0 \ge 8$ is the MPU Hilbert space dimension. This capacity $C_{max}$ and the PCE-optimal information rate $\alpha_{load}$ (in nats per link per cycle) are taken as fundamental MPU network properties. Specifically, $\alpha_{load}$ represents the D-independent information rate needed to maintain the coherence of a single gauge generator's state (e.g., reliably tracking its phase evolution) across an MPU-MPU link; this reliable tracking necessitates a low effective logical error rate $p_{err}^*$ per cycle for the underlying computations, where $p_{err}^*$ is the dynamically optimal error rate derived from PCE principles in Appendix A.0 (Theorem A.0.2). These parameters ($C_{max}, \alpha_{load}, p_{err}^*$) are tied to the intrinsic $d_0$-dimensional Hilbert space and ND-RID logic of individual MPUs, which are pre-geometric and thus independent of the emergent macroscopic dimension D. This imposes a D-independent hard upper limit on the total number of gauge group generators $n_G$ that can be coherently supported.
+The MPU network’s ability to support a complex gauge structure is fundamentally limited by the classical capacity $C_{\max} < \ln d_0$ of the underlying ND‑RID channels (Appendix E, Theorem E.2), where $d_0 \ge 8$ is the MPU Hilbert space dimension. This capacity $C_{\max}$ and the PCE‑optimal information rate $\alpha_{load}$ (in nats per link per cycle) are taken as fundamental MPU network properties. Specifically, $\alpha_{load}$ represents the D‑independent information rate needed to maintain the coherence of a single gauge generator’s state (e.g., reliably tracking its phase evolution) across an MPU–MPU link; this reliable tracking necessitates a low effective logical error rate $p_{err}^*$ per cycle for the underlying computations, where $p_{err}^*$ is the dynamically optimal error rate derived from PCE principles in Appendix A.0 (Theorem A.0.2). These parameters ($C_{\max}, \alpha_{load}, p_{err}^*$) are tied to the intrinsic $d_0$‑dimensional Hilbert space and ND‑RID logic of individual MPUs, which are pre‑geometric and thus independent of the emergent macroscopic dimension $D$. This imposes a D‑independent hard upper limit on the total number of gauge group generators $n_G$ that can be coherently supported.
 
 *   **Capacity Limit on $n_G$:** The total number of generators must satisfy:
+
     $$
     n_G \le n_{\max} := \left\lfloor \frac{C_{\max}}{\alpha_{load}} \right\rfloor
     \tag{G.8.0}
     $$
-    Using plausible estimates from the PU framework ($C_{max} \approx 1.5 - 2.0$ nats, derived from $f_{RID}<1$ which is a consequence of $\varepsilon \ge \ln 2$; $\alpha_{load} \approx 0.1 - 0.2$ nats, related to achieving sufficient signal-to-noise for coherence), we get a target range for the maximum viable total gauge group dimension:
+
+    Using plausible estimates from the PU framework ($C_{\max} \approx 1.5-2.0$ nats, derived from $f_{RID}<1$ which follows from $\varepsilon \ge \ln 2$; $\alpha_{load} \approx 0.1-0.2$ nats, related to achieving sufficient signal‑to‑noise for coherence), we get a target range for the maximum viable total gauge group dimension:
+
     $$
     n_{\max} \approx \frac{1.5 \text{ to } 2.0}{0.1 \text{ to } 0.2} = 7.5 \text{ to } 20
     $$
-    Any gauge group with $n_G$ significantly exceeding 20 is likely unsupportable due to prohibitive information costs, irrespective of D.
 
-#### G.8.2.3 Anomaly Cancellation as a PCE Imperative (D-Sensitive)
+    Any gauge group with $n_G$ significantly exceeding 20 is likely unsupportable due to prohibitive information costs, irrespective of $D$.
 
-Quantum gauge theories with chiral fermions can suffer from quantum anomalies, which are acutely sensitive to spacetime dimension D [Bilal 2008]. An anomalous gauge structure implies inconsistency and is assigned an infinite PCE penalty:
+#### G.8.2.3 Anomaly Cancellation as a PCE Imperative (D‑Sensitive)
+
+Quantum gauge theories with chiral fermions can suffer from quantum anomalies, which are acutely sensitive to spacetime dimension $D$. An anomalous gauge structure implies inconsistency and is assigned an infinite PCE penalty:
+
 $$
-V_{\text{anom}}(G, \{\psi\}, D) = \begin{cases} 0, & \text{if anomaly-free in dimension D} \\ +\infty, & \text{if anomalous in dimension D} \end{cases}
+V_{\text{anom}}(G,\{\psi\},D)=
+\begin{cases}
+0, & \text{if anomaly‑free in dimension } D\\[2pt]
++\infty, & \text{if anomalous in dimension } D
+\end{cases}
 $$
-PCE co-selects $G$, $\{\psi\}$, and $D$ to ensure $V_{\text{anom}} = 0$.
 
-#### G.8.2.4 Stability of Complex Structures (D-Sensitive)
+PCE co‑selects $G$, ${\psi}$, and $D$ to ensure $V_{\text{anom}}=0$.
 
-The existence of stable, complex, bound MPU aggregates ($C_{agg} \gg C_{op}$) is essential for generating significant predictive benefit ($V_{benefit}$). The stability of such structures (e.g., "atoms," "planetary systems," "galaxies" in the MPU network sense) depends critically on the long-range behavior of fundamental forces, which is D-sensitive.
-*   For unscreened massless force carriers (like those associated with U(1) gauge fields or gravity), the classical potential in D-dimensional spacetime scales as $1/r^{D-3}$ for $D>3$ and $\ln(r)$ for $D=3$ (corresponding to $D_{space}=D-1$ spatial dimensions). Stable, closed, non-circular orbits under attractive central forces are robustly supported for an inverse-square force law ($F \propto 1/r^2$, potential $\propto 1/r$), corresponding to $D_{space}=3$, i.e., $D=4$ spacetime dimensions [Bertrand's theorem context].
-*   Higher spatial dimensions ($D_{space} > 3$, i.e., $D > 4$) tend towards unstable orbits for such potentials, making the formation and persistence of complex, gravitationally or electrodynamically bound MPU aggregates highly problematic. Lower spatial dimensions ($D_{space} < 3$) can be too restrictive for the topological complexity and degrees of freedom needed for rich aggregate structures.
-*   A universe unable to form stable complex structures incurs a catastrophic loss of $V_{benefit}$ (as these structures are the primary engines of advanced prediction) and is thus strongly disfavored by PCE. It is a core hypothesis of this co-selection argument that PCE robustly translates these D-sensitive stability issues into highly unfavorable D-dependent coefficients within the PCE potential model (Eq. G.8.5), for instance, by yielding a significantly lower benefit coefficient $\eta_{ben}(D)$ or imposing high effective penalty terms for dimensions $D \neq 4$ that fail to support such stable complexity.
+#### G.8.2.4 Stability of Complex Structures (D‑Sensitive)
 
-#### G.8.2.5 Information-Theoretic and Network Efficiency (D-Sensitive)
+The existence of stable, complex, bound MPU aggregates ($C_{agg}\gg C_{op}$) is essential for generating significant predictive benefit ($V_{benefit}$). The stability of such structures (e.g., “atoms,” “planetary systems,” “galaxies” in the MPU‑network sense) depends critically on the long‑range behavior of fundamental forces, which is D‑sensitive.
 
-The MPU network's efficiency under PCE depends on D-sensitive information-theoretic properties.
-*   **Holographic Efficiency:** The Horizon Entropy Area Law (Theorem 49) $S = \mathcal{A}/(4G)$ holds in the emergent D=4 spacetime. The efficiency of bulk-boundary information encoding (related to how much complexity $C_P$ can be supported within a volume relative to its boundary information capacity) may be optimal in D=4. Other dimensions might lead to less favorable scaling or consistency issues between bulk degrees of freedom and boundary information limits.
-*   **Network Propagation and Coherence ($V_{prop}$):** Costs of information propagation, maintaining coherence, and error correction (achieving $p_{err}^*$ in App A.0) are D-sensitive. For instance, the nature of random walks (fundamental to information diffusion and error propagation) changes qualitatively: they are recurrent in $D_{space} \le 2$ but transient in $D_{space} \ge 3$. D=4 ($D_{space}=3$) may offer an optimal trade-off between network connectivity, path length scaling, and the stability of information propagation against noise for achieving robust, large-scale predictive coherence. It is further hypothesized that PCE favors dimensions where these D-sensitive network efficiencies (which would contribute to minimizing cost coefficients like $\lambda_c(D)$ or maximizing benefit coefficients like effective $\eta_{ben}(D)$ in Eq. G.8.5) are optimized, with D=4 emerging as a strong candidate under such comprehensive optimization.
+*   For unscreened massless force carriers (like those associated with $U(1)$ gauge fields or gravity), the classical potential in D‑dimensional spacetime scales as $1/r^{D-3}$ for $D>3$ and $\ln r$ for $D=3$ (corresponding to $D_{\text{space}}=D-1$ spatial dimensions). Stable, closed, non‑circular orbits under attractive central forces are robustly supported for an inverse‑square force law ($F\propto 1/r^2$, potential $\propto 1/r$), corresponding to $D_{\text{space}}=3$, i.e., $D=4$ spacetime dimensions [Bertrand, 1873].
+*   Higher spatial dimensions ($D_{\text{space}}>3$, i.e., $D>4$) tend towards unstable orbits for such potentials, making the formation and persistence of complex, gravitationally or electrodynamically bound MPU aggregates highly problematic. Lower spatial dimensions ($D_{\text{space}}<3$) can be too restrictive for the topological complexity and degrees of freedom needed for rich aggregate structures.
+*   A universe unable to form stable complex structures incurs a catastrophic loss of $V_{benefit}$ (as these structures are the primary engines of advanced prediction) and is thus strongly disfavored by PCE. It is a core hypothesis of this co‑selection argument that PCE robustly translates these D‑sensitive stability issues into highly unfavorable D‑dependent coefficients within the PCE potential model (Eq. G.8.5), for instance, by yielding a significantly lower benefit coefficient $\eta_{ben}(D)$ or imposing high effective penalty terms for dimensions $D\neq 4$ that fail to support such stable complexity.
+
+#### G.8.2.5 Information‑Theoretic and Network Efficiency (D‑Sensitive)
+
+The MPU network’s efficiency under PCE depends on D‑sensitive information‑theoretic properties.
+
+*   **Holographic Efficiency:** The horizon‑entropy area law $S=\mathcal A/(4G)$ holds in the emergent D=4 spacetime. The efficiency of bulk–boundary information encoding (related to how much complexity $C_P$ can be supported within a volume relative to its boundary information capacity) may be optimal in D=4. Other dimensions might lead to less favorable scaling or consistency issues between bulk degrees of freedom and boundary information limits.
+*   **Network Propagation and Coherence ($V_{prop}$):** Costs of information propagation, maintaining coherence, and error correction (achieving $p_{err}^*$ in App. A.0) are D‑sensitive. For instance, the nature of random walks (fundamental to information diffusion and error propagation) changes qualitatively: they are recurrent in $D_{\text{space}}\le 2$ but transient in $D_{\text{space}}\ge 3$. D=4 ($D_{\text{space}}=3$) may offer an optimal trade‑off between network connectivity, path‑length scaling, and the stability of information propagation against noise for achieving robust, large‑scale predictive coherence. It is further hypothesized that PCE favors dimensions where these D‑sensitive network efficiencies (which would contribute to minimizing cost coefficients like $\lambda_c(D)$ or maximizing benefit coefficients like effective $\eta_{ben}(D)$ in Eq. G.8.5) are optimized, with D=4 emerging as a strong candidate under such comprehensive optimization.
 
 ### G.8.3 A Model for the PCE Potential of the Gauge Sector (in a given D)
 
-For a fixed dimension D, consistent with the approach outlined in Section 6.7 regarding the use of minimal phenomenological models for tractability, we model the net PCE potential contribution per MPU, $V_{net}(G, \{\psi\}, D)/N$, for a candidate gauge group $G = \prod_i G_i$ (a product of simple compact Lie groups and U(1) factors) and its fermion content $\{\psi\}$. This contribution is a component of the global PCE potential $V(x)$ (Definition D.1). The terms included in this model are motivated by their fundamental role in the operation and consistency of a predictive network supporting gauge symmetries, as dictated by PCE:
+For a fixed dimension $D$, consistent with the approach outlined in Section 6.7 regarding the use of minimal phenomenological models for tractability, we model the net PCE potential contribution per MPU, $V_{net}(G,{\psi},D)/N$, for a candidate gauge group $G=\prod_i G_i$ (a product of simple compact Lie groups and $U(1)$ factors) and its fermion content ${\psi}$. This contribution is a component of the global PCE potential $V(x)$ (Definition D.1). The terms included in this model are motivated by their fundamental role in the operation and consistency of a predictive network supporting gauge symmetries, as dictated by PCE:
 
-**Definition G.8.1 (PCE Potential Model for the Gauge Sector in Dimension D)**
+**Definition G.8.1 (PCE Potential Model for the Gauge Sector in Dimension $D$).**
 The net PCE potential contribution per MPU (a power term) is modeled as:
+
 $$
-\frac{V_{net}(G, \{\psi\}, D)}{N} = \frac{V_{\text{cost}}(G, \{\psi\}, D)}{N} - \frac{V_{\text{benefit}}(G, D)}{N}
+\frac{V_{net}(G,\{\psi\},D)}{N}
+=\frac{V_{\text{cost}}(G,\{\psi\},D)}{N}
+-\frac{V_{\text{benefit}}(G,D)}{N}.
 $$
+
 where:
-1.  **Predictive Benefit ($V_{benefit}$):** A richer gauge structure (more generators $n_G = \dim(G)$) allows for more sophisticated internal models of interaction and conservation laws, enhancing the network's capacity to predict complex dynamics and form stable, diverse MPU aggregates. This increased predictive power translates to a higher aggregate Predictive Performance $PP_{agg}$, yielding a benefit term. We model this as directly proportional to $n_G$:
+
+1.  **Predictive Benefit ($V_{benefit}$):** A richer gauge structure (more generators $n_G=\dim G$) allows for more sophisticated internal models of interaction and conservation laws, enhancing the network’s capacity to predict complex dynamics and form stable, diverse MPU aggregates. This increased predictive power translates to a higher aggregate Predictive Performance $PP_{agg}$, yielding a benefit term. We model this as directly proportional to $n_G$:
+
     $$
-    \frac{V_{\text{benefit}}(G, D)}{N} = \eta_{ben}(D) \cdot n_G
+    \frac{V_{\text{benefit}}(G,D)}{N}=\eta_{ben}(D)\cdot n_G,
     \tag{G.8.1}
     $$
-    where $\eta_{ben}(D) > 0$ is a D-dependent effective benefit coefficient (units of power) per generator, reflecting the marginal gain in predictive utility from an additional degree of internal symmetry.
 
-2.  **Total Cost ($V_{cost}$):** This comprises several dominant PCE-relevant factors:
-    *   **(a) Communication Cost for Coherence ($V_{comm}$):** Maintaining coherence for a gauge symmetry across the MPU network requires the reliable transmission of phase information (or its equivalent) for each of the $n_G$ generators. Each generator's state (e.g., its local phase) must be tracked across MPU-MPU links. As established in Section G.8.2.2, this incurs a D-independent information load of $\alpha_{load}$ (nats per link per cycle) per generator to achieve the necessary fidelity (low $p_{err}^*$). The cost of transmitting this total load $n_G \alpha_{load}$ is inversely proportional to the fundamental MPU channel capacity $C_{\max}$ (Theorem E.2), which is also D-independent. Thus, the communication cost per MPU scales as:
+    where $\eta_{ben}(D)>0$ is a D‑dependent effective benefit coefficient (units of power) per generator, reflecting the marginal gain in predictive utility from an additional degree of internal symmetry. Although modeled as linear in $n_G$ for tractability, PCE generically induces diminishing returns at large $n_G$, weakening the effective coefficient near $n_{\max}$.
+
+2.  **Total Cost ($V_{cost}$):** This comprises several dominant PCE‑relevant factors:
+
+    *   **(a) Communication Cost for Coherence ($V_{comm}$):** Maintaining coherence for a gauge symmetry across the MPU network requires the reliable transmission of phase information (or its equivalent) for each of the $n_G$ generators. Each generator’s state must be tracked across MPU–MPU links. As established in Section G.8.2.2, this incurs a D‑independent information load of $\alpha_{load}$ (nats per link per cycle) per generator to achieve the necessary fidelity (low $p_{err}^*$). The cost of transmitting this total load $n_G\alpha_{load}$ is inversely proportional to the fundamental MPU channel capacity $C_{\max}$ (Theorem E.2), which is also D‑independent. Thus, the communication cost per MPU scales as:
+
         $$
-        \frac{V_{\text{comm}}(G, D)}{N} = \lambda_c(D) \cdot \frac{n_G \cdot \alpha_{load}}{C_{\max}}
+        \frac{V_{\text{comm}}(G,D)}{N}
+        =\lambda_c(D)\cdot\frac{n_G\,\alpha_{load}}{C_{\max}},
         \tag{G.8.2}
         $$
-        Here, $\lambda_c(D) > 0$ is a PCE-derived D-dependent cost coefficient (units of power) representing the physical resources (e.g., energy) per unit of information load handled by the network's communication infrastructure.
-    *   **(b) Gauge Field Energy Cost ($V_{field}$):** The existence of gauge fields implies a contribution to the vacuum energy density from their zero-point fluctuations. Standard QFT calculations show this vacuum energy, when appropriately regularized, scales with the number of independent field polarizations (proportional to $n_G$) and often with the group's quadratic Casimir of the adjoint representation, $k_G = C_2(\text{Adj})$ (which is $N$ for $SU(N)$ and $0$ for $U(1)$), reflecting the field's self-interaction strength. PCE penalizes excessive vacuum energy as a non-productive resource cost. This contribution to the operational cost per MPU is modeled as:
+
+        where $\lambda_c(D)>0$ is a PCE‑derived D‑dependent cost coefficient (units of power) representing the physical resources per unit of information load handled by the network’s communication infrastructure.
+    *   **(b) Gauge Field Energy Cost ($V_{field}$):** Gauge fields contribute to vacuum energy via zero‑point fluctuations. A minimal scaling model sets this proportional to the number of polarizations (hence $n_G$) and the quadratic Casimir of the adjoint, $k_G=C_2(\text{Adj})$ ($=N$ for $SU(N)$ and $=0$ for $U(1)$), reflecting self‑interaction strength. PCE penalizes excessive vacuum energy as non‑productive resource cost:
+
         $$
-        \frac{V_{\text{field}}(G, D)}{N} = \lambda_f(D) \cdot n_G \cdot k_G
+        \frac{V_{\text{field}}(G,D)}{N}
+        =\lambda_f(D)\cdot n_G\,k_G,
         \tag{G.8.3}
         $$
-        Here, $\lambda_f(D) > 0$ is a D-dependent cost coefficient (units of power) related to the energy scale of these vacuum fluctuations.
-    *   **(c) Fermion Sector Cost ($V_{fermion}$):** Chiral fermions $\{\psi\}$, which are necessary to interact with gauge fields in a way that produces rich dynamics (e.g., parity violation), introduce their own complexity and resource costs. The cost of supporting the minimal set of fermion multiplets required for mathematical consistency (specifically, anomaly cancellation in dimension D) and for mediating diverse interactions depends on the number and complexity of their gauge group representations. We model this complexity measure as $C_{fermion}(\{\psi\}, D) = \sum_{i} w_i(D) \dim(R_i)$, where $R_i$ is the representation of fermion $\psi_i$ under $G$, and $w_i(D)$ are PCE-derived D-dependent dimensionless weights reflecting the relative cost of instantiating and maintaining different types of representations (e.g., fundamental vs. adjoint, real vs. complex vs. pseudoreal) within the MPU network. The associated power cost per MPU is:
+
+        with $\lambda_f(D)>0$ a D‑dependent cost coefficient (power).
+    *   **(c) Fermion Sector Cost ($V_{fermion}$):** Chiral fermions ${\psi}$ introduce complexity and resource costs. The minimal, anomaly‑free set and their gauge representations drive a complexity measure $C_{fermion}({\psi},D)=\sum_i w_i(D)\dim(R_i)$, with $R_i$ the representation of $\psi_i$ under $G$ and $w_i(D)$ dimensionless D‑dependent weights, interpretable as MDL‑coded description‑length penalties per representation (shorter code → lower cost). The associated power cost per MPU is
+
         $$
-        \frac{V_{\text{fermion}}(G, \{\psi\}, D)}{N} = \lambda_m(D) \cdot C_{fermion}(\{\psi\}, D)
+        \frac{V_{\text{fermion}}(G,\{\psi\},D)}{N}
+        =\lambda_m(D)\cdot C_{fermion}(\{\psi\},D),
         \tag{G.8.4}
         $$
-        Here, $\lambda_m(D) > 0$ is a D-dependent cost coefficient (units of power).
 
-Combining these terms, the function to be minimized for a given D is:
+        with $\lambda_m(D)>0$ (power).
+
+Combining these terms, the function to be minimized for a given $D$ is:
+
 $$
-\frac{V_{net}(G, \{\psi\}, D)}{N} = \left( \lambda_c(D) \frac{\alpha_{load}}{C_{\max}} - \eta_{ben}(D) \right) n_G + \lambda_f(D) n_G k_G + \lambda_m(D) C_{fermion}(\{\psi\}, D)
+\frac{V_{net}(G,\{\psi\},D)}{N}
+=\left(\lambda_c(D)\frac{\alpha_{load}}{C_{\max}}-\eta_{ben}(D)\right)n_G
++\lambda_f(D)\,n_G\,k_G
++\lambda_m(D)\,C_{fermion}(\{\psi\},D).
 \tag{G.8.5}
 $$
-PCE favors system parameters such that $\eta_{ben}(D) > \lambda_c(D) \alpha_{load}/C_{max}$, making the coefficient of the linear $n_G$ term negative. This implies that, all else being equal, there is an incentive to increase the number of generators to gain predictive benefit, a trend limited by the capacity $n_{max}$ (Equation G.8.0) and the rising quadratic ($n_G k_G$) and fermion costs.
+
+PCE favors system parameters such that $\eta_{ben}(D)>\lambda_c(D)\alpha_{load}/C_{\max}$, making the coefficient of the linear $n_G$ term negative. This implies that, all else being equal, there is an incentive to increase the number of generators to gain predictive benefit, a trend limited by the capacity $n_{\max}$ (Eq. G.8.0) and the rising quadratic ($n_Gk_G$) and fermion costs.
 
 ### G.8.4 PCE Selection Criteria for Gauge Groups and Dimension
 
-A triplet $(G, \{\psi\}, D)$ is a stable, PCE-optimal solution if it satisfies:
-1.  **Anomaly Freedom:** $V_{\text{anom}}(G, \{\psi\}, D) = 0$.
-2.  **Capacity Constraint:** $n_G \le n_{\max}$ (Eq. G.8.0, where $n_{max}$ is D-independent, derived from MPU properties).
-3.  **Structural Stability:** Dimension D must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors D=4.
-4.  **Information Efficiency:** Dimension D should optimize information-theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor D=4.
-5.  **Potential Minimization:** Among all triplets $(G, \{\psi\}, D)$ satisfying criteria (1)-(4), the optimal solution is the one that minimizes the net potential $V_{net}$ given by Equation G.8.5.
+A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
+
+1.  **Anomaly Freedom:** $V_{\text{anom}}(G,{\psi},D)=0$.
+2.  **Capacity Constraint:** $n_G\le n_{\max}$ (Eq. G.8.0, where $n_{\max}$ is D‑independent, derived from MPU properties).
+3.  **Structural Stability:** $D$ must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors $D=4$.
+4.  **Information Efficiency:** $D$ should optimize information‑theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor $D=4$.
+5.  **Potential Minimization:** Among all triplets $(G,{\psi},D)$ satisfying (1)–(4), the optimal solution minimizes $V_{net}$ given by Eq. G.8.5.
 
 ### G.8.5 The Standard Model in D=4 as a Unique PCE Optimum
 
-**Conjecture G.8.2 (Unified PCE-Optimality of SM in D=4)**
-The Standard Model gauge group $G_{SM} = SU(3) \times SU(2) \times U(1)$ with its known chiral fermion content $\{\psi_{SM}\}$ operating in D=4 spacetime represents a uniquely strong candidate for the PCE-optimal solution that simultaneously satisfies all criteria from Section G.8.4.
+**Conjecture G.8.2 (Unified PCE‑Optimality of SM in D=4).**
+The Standard Model gauge group $G_{SM}=SU(3)\times SU(2)\times U(1)$ with its known chiral fermion content ${\psi_{SM}}$ operating in D=4 spacetime represents a uniquely strong candidate for the PCE‑optimal solution that simultaneously satisfies all criteria from Section G.8.4.
 
 **Justification and Derivation:**
 
 1.  **Primacy of D=4 for Structural Stability and Information Efficiency (Criteria 3 & 4):**
-    As argued in G.8.2.4 (Stability of Complex Structures) and G.8.2.5 (Information-Theoretic and Network Efficiency), D=4 ($D_{space}=3$) is strongly favored. The inability to form stable, complex MPU aggregates in dimensions $D \neq 4$ (due to unstable orbital dynamics or insufficient topological richness) would lead to a catastrophic reduction in the achievable predictive benefit $V_{benefit}$ for the system, as these aggregates are the primary engines of advanced prediction. Similarly, sub-optimal network efficiencies in $D \neq 4$ would significantly inflate propagation and operational costs ($V_{prop}, V_{op}$). The central hypothesis for dimensional selection is that these profound physical disadvantages for $D \neq 4$ are quantitatively reflected by PCE as yielding a substantially higher overall $V_{net}(G, \{\psi\}, D \neq 4)$ compared to $V_{net}(G, \{\psi\}, D=4)$, primarily through a drastically reduced benefit coefficient $\eta_{ben}(D \neq 4)$ and/or significantly increased cost coefficients $\lambda_c(D \neq 4), \lambda_f(D \neq 4), \lambda_m(D \neq 4)$. Under this hypothesis, PCE is expected to robustly select D=4 as the optimal dimensional arena because configurations in other dimensions would be massively penalized in the global minimization of $V_{net}$. We henceforth assume D=4 is robustly selected by these overarching stability, complexity-support, and efficiency criteria, and proceed to find the optimal gauge theory $(G, \{\psi\})$ within D=4 by minimizing $V_{net}(G, \{\psi\}, D=4)$.
+    As argued in G.8.2.4–G.8.2.5, $D=4$ ($D_{\text{space}}=3$) is strongly favored. The inability to form stable, complex MPU aggregates in dimensions $D\neq4$ would lead to a catastrophic reduction in achievable predictive benefit $V_{benefit}$; sub‑optimal network efficiencies in $D\neq4$ would significantly inflate propagation and operational costs ($V_{prop},V_{op}$). These disadvantages are reflected by PCE as a substantially higher $V_{net}(G,{\psi},D\neq4)$ compared to $V_{net}(G,{\psi},4)$ via reduced $\eta_{ben}(D\neq4)$ and/or increased $\lambda_c(D\neq4),\lambda_f(D\neq4),\lambda_m(D\neq4)$. We henceforth assume D=4 is robustly selected by these overarching criteria and proceed to find the optimal gauge theory $(G,{\psi})$ within D=4 by minimizing $V_{net}(G,{\psi},4)$.
 
-2.  **Optimizing Gauge Theory $(G, \{\psi\})$ within D=4 (Criteria 1, 2, 5):**
-    We minimize $V_{net}(G, \{\psi\}, D=4)$ from Eq. G.8.5, subject to $n_G \le n_{\max} \approx 8-20$ (from Eq. G.8.0) and the theory being anomaly-free in D=4. For D=4, the cost coefficients $\lambda_c(4), \eta_{ben}(4), \lambda_f(4), \lambda_m(4)$ are considered fixed by the global PCE optimization specific to this dimension.
+    **Canonical marginality check.** In $D$ spacetime dimensions the canonical mass dimension of a non‑Abelian gauge coupling is
+    $$
+    [g]=\frac{4-D}{2},
+    $$
+    so only $D=4$ admits classically marginal gauge interactions. This dovetails with the PCE bias toward scale‑robust predictive channels and further reinforces the selection of $D=4$.
 
-    *   **Capacity Constraint for SM:** $G_{SM}$ has $n_G = \dim(SU(3)) + \dim(SU(2)) + \dim(U(1)) = 8 + 3 + 1 = 12$. This value **fits perfectly** within the MPU-derived capacity range $n_{max} \approx 8-20$. This suggests the SM efficiently utilizes the MPU network's intrinsic coherence bandwidth.
+2.  **Optimizing Gauge Theory $(G,{\psi})$ within D=4 (Criteria 1, 2, 5):**
+    Minimize $V_{net}(G,{\psi},4)$ (Eq. G.8.5), subject to $n_G\le n_{\max}\approx 8-20$ (Eq. G.8.0) and anomaly‑freedom in D=4. For D=4, the coefficients $\lambda_c(4),\eta_{ben}(4),\lambda_f(4),\lambda_m(4)$ are fixed by the global PCE optimization at this dimension.
 
-    *   **Anomaly Freedom for SM in D=4:** The Standard Model, with its specific chiral fermion content (15 Weyl spinors per generation, arranged in representations like $(3, 2)_{1/6}$ for left-handed quarks, $(1, 2)_{-1/2}$ for left-handed leptons, and various singlets for right-handed fermions), is **famously and precisely anomaly-free in D=4** for all gauge and mixed gauge-gravitational anomalies [Peskin & Schroeder, 1995]. This is a highly non-trivial mathematical constraint. It is crucial to note that this specific SM structure, particularly its hypercharge assignments, would generally be anomalous or require a very different, potentially more complex, fermion sector to cancel anomalies in other common chiral dimensions like D=2 (where only $U(1)$ anomalies are relevant) or D=6.
+    *   **Capacity Constraint for SM:** $G_{SM}$ has $n_G=\dim SU(3)+\dim SU(2)+\dim U(1)=8+3+1=12$, well within $n_{\max}$—efficient use of the coherence bandwidth.
+    *   **Anomaly Freedom for SM in D=4:** The Standard Model, with its specific chiral fermion content (15 Weyl spinors per generation, arranged in representations like $(3, 2)_{1/6}$ for left‑handed quarks, $(1, 2)_{-1/2}$ for left‑handed leptons, and various singlets for right‑handed fermions), is **famously and precisely anomaly‑free in D=4** for all gauge and mixed gauge‑gravitational anomalies [Peskin & Schroeder, 1995]. This is a highly non‑trivial mathematical constraint. It is crucial to note that this specific SM structure would generally be anomalous or require a very different, potentially more complex, fermion sector in other chiral dimensions (e.g., D=2 or D=6).
 
-    *   **Potential Minimization (Comparative Analysis of $(G, \{\psi\})$ within D=4):**
-        *   **Simple Groups (e.g., $SU(N)$ in D=4):**
-            *   $SU(N)$ with $N < 5$: For $N=2,3,4$, chiral $SU(N)$ theories are generically anomalous without specific (often complex) fermion choices.
-            *   $SU(5)$ Grand Unified Theory (GUT): $n_G = 24$. This significantly exceeds the plausible $n_{max} \approx 20$, making it unsupportable due to communication costs ($V_{comm}$). Even if $n_{max}$ were slightly larger, its field energy cost term $n_G k_G = 24 \cdot 5 = 120$ (scaled by $\lambda_f(4)$) is substantially higher than for $G_{SM}$. Anomaly cancellation in $SU(5)$ requires fermions in specific representations (e.g., $\bar{5} \oplus 10$), and $C_{fermion}(\{\psi_{SU(5)}\}, 4)$ would need comparison.
-        *   **Standard Model $G_{SM} = SU(3) \times SU(2) \times U(1)$ in D=4:**
-            *   $n_G = 12$ (well within capacity $n_{max}$).
-            *   Anomaly-free with its 15 Weyl spinors per generation (e.g., $C_{fermion}(\{\psi_{SM,1gen}\}, 4) = 15$ if $w_i(4)=1$).
-            *   Field energy cost component (sum of $n_{G_i} k_{G_i}$ for each factor): $(8 \cdot 3)_{\text{SU(3)}} + (3 \cdot 2)_{\text{SU(2)}} + (1 \cdot 0)_{\text{U(1)}} = 24 + 6 + 0 = 30$.
-        *   **Comparison:**
-            The SM's $V_{net}(SM, \{\psi_{SM}\}, 4)/N \approx (\lambda_c(4) \frac{\alpha_{load}}{C_{\max}} - \eta_{ben}(4)) \cdot 12 + \lambda_f(4) \cdot 30 + \lambda_m(4) \cdot C_{fermion}(\{\psi_{SM}\}, 4)$.
-            An $SU(5)$ GUT in D=4, if it were supportable ($n_G=24 > n_{max}$ is problematic) and could be made anomaly-free with a comparable $C_{fermion}$, would have a field energy term of $120 \lambda_f(4)$, four times larger than the SM's $30 \lambda_f(4)$. This significantly penalizes $SU(5)$ in $V_{net}$.
-            Simpler product groups like $SU(2) \times U(1)$ ($n_G=4$) in D=4, while supportable and potentially made anomaly-free with suitable fermions (like the electroweak sector of the SM), would leave significant information capacity $n_{max}-4$ unused. This would make them sub-optimal if the Capacity-Filling Principle holds (i.e., if $(\lambda_c(D) \frac{\alpha_{load}}{C_{\max}} - \eta_{ben}(D))$ is sufficiently negative). Furthermore, such a group cannot describe the strong force.
-            Finding other anomaly-free product groups in D=4 with $n_G \approx 12$ and a fermion sector as simple or simpler than the SM's 15 Weyl spinors per generation is notoriously difficult. Most alternatives tend to require more exotic or numerous fermion representations, leading to a higher $C_{fermion}$ and thus a higher $\lambda_m(D) C_{fermion}$ term in $V_{net}$.
+        *Hypercharge from Yukawa/gauge constraints.* With one Higgs doublet $H:(\mathbf 1,\mathbf 2)_{Y(H)}$ and a single generation,
+        $$
+        \begin{aligned}
+        &Q_L:(\mathbf 3,\mathbf 2)_{Y(Q)},\quad u_R:(\mathbf 3,\mathbf 1)_{Y(u)},\quad d_R:(\mathbf 3,\mathbf 1)_{Y(d)},\\
+        &L_L:(\mathbf 1,\mathbf 2)_{Y(L)},\quad e_R:(\mathbf 1,\mathbf 1)_{Y(e)}.
+        \end{aligned}
+        $$
+        Yukawa gauge invariance gives
+        $$
+        Y(u)=Y(Q)+Y(H),\quad Y(d)=Y(Q)-Y(H),\quad Y(e)=Y(L)-Y(H),
+        \tag{G.8.11}
+        $$
+        and mixed anomalies impose
+        $$
+        3\,Y(Q)+Y(L)=0\quad[SU(2)^2\!-\!U(1)],\qquad
+        \sum Y=0\quad[\mathrm{Grav}^2\!-\!U(1)].
+        \tag{G.8.12}
+        $$
+        Solving yields
+        $$
+        Y(H)=3Y(Q),\; Y(L)=-3Y(Q),\; Y(u)=4Y(Q),\; Y(d)=-2Y(Q),\; Y(e)=-6Y(Q).
+        \tag{G.8.13}
+        $$
+        Fixing $Y(H)=\tfrac12$ sets
+        $$
+        Y(Q)=\tfrac16,\; Y(u)=\tfrac23,\; Y(d)=-\tfrac13,\; Y(L)=-\tfrac12,\; Y(e)=-1,
+        \tag{G.8.14}
+        $$
+        which satisfy all gauge, mixed gauge–gravitational, and the global $SU(2)$ (Witten) anomaly constraints per generation.
+    *   **Predictive roles realized by $G_{SM}$.** Minimal roles required by PCE are: **R1** long‑range Coulombic channel ($U(1)$), **R2** parity‑violating chiral channel ($SU(2)$), and **R3** asymptotically‑free confining channel ($SU(3)$). This rubric clarifies why omitting a role crushes benefit and duplicating roles inflates cost without added predictive value.
 
-    *   **Conclusion for Gauge Theory in D=4:** The Standard Model gauge group, with its specific chiral fermion content, appears to be a remarkable "sweet spot" in D=4. It robustly satisfies the MPU network's information capacity constraint ($n_G=12 \le n_{max}$) and the stringent mathematical requirement of anomaly cancellation, while likely achieving a near-minimal value for the combined field energy and fermion sector costs ($n_G k_G + (\lambda_m/\lambda_f)C_{fermion}$) among viable alternatives of similar complexity.
+        **Potential Minimization (Comparative Analysis of $(G, \{\psi\})$ within D=4):**
 
-3.  **Confluence and Co-selection of D=4 and SM:**
-    The argument for the D=4 Standard Model configuration as a unified PCE optimum arises from the confluence of these factors:
-    *   D=4 is strongly favored by PCE due to its unique support for **stable complex MPU aggregates** (essential for achieving high $V_{benefit}$) and its hypothesized **optimal network/information-theoretic efficiencies** (minimizing $V_{prop}$ and other costs). These factors make $V_{net}(G, \{\psi\}, D=4)$ generally lower than $V_{net}(G, \{\psi\}, D \neq 4)$ for any given $G, \{\psi\}$.
-    *   The Standard Model gauge group with its fermion content ($G_{SM}, \{\psi_{SM}\}$) represents a highly **PCE-efficient solution within D=4**. It meets the MPU network's information capacity constraint ($n_G=12 \le n_{max}$), is robustly anomaly-free in D=4, and features a favorable balance of generator count against field energy and fermion complexity costs compared to other D=4 candidates.
-    *   The SM structure's consistency (especially anomaly freedom) is acutely tied to D=4. Attempting to realize a similar gauge structure in other chiral dimensions (e.g., D=2, 6, 10) would likely require a different, potentially more complex or less efficient, fermion sector, or might be impossible.
-    *   Therefore, PCE, by simultaneously demanding mathematical consistency (anomaly freedom), structural stability for complex aggregates, informational efficiency of the MPU network, and minimization of intrinsic gauge theory costs, is hypothesized to drive the emergent reality into the specific configuration of D=4 spacetime hosting Standard Model interactions. The D=4 "hardware" is optimal for complex predictive structures, and the SM "software" is a uniquely efficient and consistent gauge system for that hardware.
+        *   **Simple groups (e.g., $SU(N)$):**
+            $SU(5)$ has $n_G=24>n_{\max}$ and $n_Gk_G=24\cdot 5=120$, substantially larger than the SM’s 30, strongly penalizing $V_{net}$. Chiral $SU(N<5)$ theories require delicate fermion choices and often raise $C_{fermion}$.
+        *   **$G_{SM}=SU(3)\times SU(2)\times U(1)$:**
+            $n_G=12$, anomaly‑free, and field‑energy cost $n_Gk_G=(8\cdot3)+(3\cdot2)+(1\cdot0)=30$, with component values $8\!\cdot\!3=24$ for $SU(3)$ and $3\!\cdot\!2=6$ for $SU(2)$ (here $k_G=C_2(\mathrm{Adj})=N$), typically lower than alternatives of similar scope.
+        *   **Smaller products (e.g., $SU(2)\times U(1)$):**
+            While potentially anomaly‑free and $n_G=4$, they leave capacity under‑utilized and cannot describe the strong force; they are sub‑optimal if $(\lambda_c(4)\alpha_{load}/C_{\max}-\eta_{ben}(4))<0$.
+    *   **Conclusion within D=4:** The SM occupies a “sweet spot”: it satisfies the capacity constraint, is anomaly‑free, and likely minimizes the combined field‑energy plus fermion‑sector costs among viable alternatives of comparable descriptive power.
+3.  **Confluence and Co‑selection of D=4 and SM:**
+    D=4 is favored by stability and information efficiency; within D=4, $G_{SM}$ with its fermion content is a highly PCE‑efficient solution satisfying anomaly freedom and capacity. Attempts to realize a similar gauge structure in $D\neq4$ generally face anomaly or complexity barriers. PCE, by demanding mathematical consistency, structural stability, and informational efficiency, naturally drives to D=4 with SM interactions.
 
 ### G.8.6 Three Generations, Couplings, and Final Remarks
 
-*   **Three Generations:** The mechanism outlined above selects for the gauge group and the fundamental fermion representations of a *single generation*. The existence of three (nearly) identical copies of these fermions is a distinct puzzle not directly addressed by this specific optimization. Within the PU framework, this replication could speculatively arise from global topological features of the MPU network, the existence of multiple, nearly degenerate global minima in the full PCE potential $V(x)$ (each minimum supporting one instance of the optimal $(G_{SM}, \{\psi_{SM,1gen}\}, D=4)$ structure), or other symmetry-breaking mechanisms in the early, high-energy phase of the MPU network's evolution. This remains a key topic for future investigation.
-*   **Emergent Couplings and Masses:** The specific numerical values of the gauge coupling constants ($g_s, g_2, g_Y$ for $SU(3), SU(2), U(1)$ respectively) and fermion Yukawa couplings (which determine fermion masses via electroweak symmetry breaking) are determined by the precise location and depth of the PCE potential minimum. This involves minimizing $V_{net}$ (and other relevant $V(x)$ terms) with respect to these coupling parameters, which would effectively set the D-dependent coefficients $\eta_{ben}(D), \lambda_c(D), \lambda_f(D), \lambda_m(D)$ to their optimal values. Deriving these coupling constants from first principles requires a full quantitative calculation of these PCE coefficients from the underlying MPU dynamics, which is a primary goal for future theoretical work within the PU framework.
-*   **Conclusion of G.8:** The D=4 Standard Model configuration is proposed to be a unique, unified PCE-optimal solution. D=4 provides the stable arena for complex MPU aggregates necessary for advanced prediction. Within D=4, the SM provides a uniquely consistent (anomaly-free) and efficient (fitting $n_{max}$, balancing costs) gauge structure. PCE, by demanding simultaneous mathematical consistency, structural stability, and informational efficiency, is hypothesized to drive the emergent reality into this specific four-dimensional configuration with Standard Model interactions. While an exhaustive search across all possible $(G, \{\psi\}, D)$ is beyond the current scope, the confluence of strong D-dependent constraints and the SM's specific properties makes it a compelling candidate for a global PCE optimum.
+*   **Three Generations:** The mechanism outlined above selects the gauge group and the fundamental fermion representations of a *single generation*. The existence of three (nearly) identical copies is a distinct puzzle that may relate to global topological features, multiple near‑degenerate minima of $V(x)$, or symmetry‑breaking in an early high‑energy phase of MPU evolution.
+*   **Emergent Couplings and Masses:** The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yukawas are determined by the location and depth of the PCE minimum. Computing these from first principles requires evaluating the D‑dependent coefficients $\eta_{ben}(D),\lambda_c(D),\lambda_f(D),\lambda_m(D)$ from MPU microdynamics, an explicit goal for future work. The ratios between these couplings are further constrained by the PCE optimization, a topic explored in Appendix G.10.
 
-## G.9 A Proposed Pathway Toward Deriving the Fine-Structure Constant $\alpha_{em}$
+---
 
-This appendix develops a first-principles pathway for computing the electromagnetic fine-structure constant $\alpha_{em}$ within the Predictive Universe (PU) framework. The calculation is framed as a direct consequence of the **Principle of Compression Efficiency (PCE)** applied at the **rate level** to the problem of maintaining predictive coherence across a locally phase-free description, for which the PCE-optimal remedy is the emergence of a $\mathrm{U}(1)$ gauge structure (as established in §§G.2–G.7). The result is a complete, self-contained computational program that reduces the determination of $\alpha_{em}$ to evaluating a small set of **operational functionals** of the MPU’s Fundamental Predictive Loop (FPL) at $d_0=8$ with one logically irreversible decision per cycle of cost $\varepsilon=\ln 2$. The renormalized coupling at the MPU’s predictive operating scale $\mu^*$ is fixed by a unique equilibrium that balances the **power** cost of coherence against the predictive benefit it provides.
+## G.9 A Proposed Pathway Toward Deriving the Fine‑Structure Constant $\alpha_{em}$
 
-*Units.* We work in **natural units with $\hbar=c=\varepsilon_0=1$** (Heaviside–Lorentz/rationalized). Information is measured in **nats**. In these units,
+This section develops a first‑principles pathway for computing the electromagnetic fine‑structure constant $\alpha_{em}$ within the Predictive Universe (PU) framework. The calculation follows from **PCE at the rate level** applied to maintaining predictive coherence under a local phase freedom ($U(1)$), with the renormalized coupling at the MPU’s predictive operating scale $\mu^*$ fixed by a unique equilibrium that balances the **power** cost of coherence against the predictive benefit it provides.
+
+*Units.* Natural units with $\hbar=c=\varepsilon_0=1$ (Heaviside–Lorentz/rationalized). Information is in **nats**. In these units
 
 $$
 \alpha_{em}=\frac{e^2}{4\pi}.
@@ -456,57 +518,57 @@ $$
 
 ### G.9.1 Assumptions, Notation, and Symbols
 
-**Assumptions (local and explicit).**
+**Assumptions.**
 
-A1. *LAN regularity.* The one-cycle FPL channel family $p_e$ is differentiable in quadratic mean at $e=0$. The induced stationary process is ergodic and $\beta$-mixing with summable correlations; the **per-event Fisher information operator** exists and is finite.
+A1. *LAN regularity.* The one‑cycle FPL channel family $p_e$ is differentiable in quadratic mean at $e=0$; the induced stationary process is ergodic and $\beta$‑mixing with summable correlations; the **per‑event Fisher information operator** exists and is finite.
 
-A2. *Mismatch energetics.* For small $e$, the free-energy penalty for gauge-invariant mismatch admits a quadratic expansion $\Delta\mathcal F_{\mathrm{mismatch}}(e)=\kappa_F e^2+O(e^4)$ with $\kappa_F>0$.
+A2. *Mismatch energetics.* For small $e$, the free‑energy penalty for gauge‑invariant mismatch admits $\Delta\mathcal F_{\mathrm{mismatch}}(e)=\kappa_F e^2+O(e^4)$ with $\kappa_F>0$.
 
-A3. *Coding overhead law.* To achieve per-cycle logical error probability $p_L\ll1$, the minimal incremental **complexity** scales as
-$\Delta C_{\mathrm{gauge}}(p_L)\sim K[\ln(1/p_L)]^\gamma$ with $\gamma\ge 1,\ K>0$ (poly-log reliability cost; compatible with modern capacity-approaching codes [Gallager 1968; Richardson & Urbanke 2008; Arıkan 2009]).
+A3. *Coding overhead law.* To achieve per‑cycle logical error probability $p_L\ll1$, the minimal incremental **complexity** scales as
+$\Delta C_{\mathrm{gauge}}(p_L)\sim K[\ln(1/p_L)]^\gamma$ with $\gamma\ge1$, $K>0$ (poly‑log reliability cost; capacity‑approaching codes).
 
-A4. *Power–complexity convexity.* The power–complexity relation $R(C)$ is strictly convex near the baseline $C_0$ and admits
-$R(C)=R(C_0)+r_p(C-C_0)^{\gamma_p}$ with $\gamma_p>1,\ r_p>0$.
+A4. *Power–complexity convexity.* The power–complexity relation $R(C)$ is strictly convex near $C_0$ and admits
+$R(C)=R(C_0)+r_p(C-C_0)^{\gamma_p}$ with $\gamma_p>1$, $r_p>0$.
 
-A5. *POVM readout.* Each FPL cycle ends with a finite-outcome POVM on $\mathcal H_0$ (dimension $d_0=8$).
+A5. *POVM readout.* Each FPL cycle ends with a finite‑outcome POVM on $\mathcal H_0$ (dimension $d_0=8$).
 
-A6. *Mode accounting.* The per-event Fisher information operator $J$ at $e=0$ has $M$ nonzero eigenvalues $\{\lambda_i\}_{i=1}^M$ with trace $k_b\coloneqq\sum_i\lambda_i$, $1\le M\le d_0^2-1$.
+A6. *Mode accounting.* The per‑event Fisher information operator $J$ at $e=0$ has $M$ nonzero eigenvalues ${\lambda_i}_{i=1}^M$ with trace $k_b\coloneqq\sum_i\lambda_i$, $1\le M\le d_0^2-1$.
 
 **Table G.9.1. Symbols and units.**
 
-| Symbol                       | Meaning                                                                        | Units          |
-| :--------------------------- | :----------------------------------------------------------------------------- | :------------- |
-| $e$                        | $\mathrm{U}(1)$ coupling                                                     | —              |
-| $u$                        | $u\coloneqq e^2$                                                             | —              |
-| $\alpha_{em}$             | $e^2/(4\pi)$                                                                 | —              |
-| $\tau,\ \nu$               | FPL cadence time $\tau$, event rate $\nu=1/\tau$                           | time,\ 1/time  |
-| $\mu^*$                   | Operating (renormalization) scale $\mu^*=\kappa_\mu\nu,\ \kappa_\mu=O(1)$ | energy         |
-| $C, C_0$                  | Predictive Physical Complexity (baseline $C_0$)                             | —              |
-| $R(C)$                     | **Power** at complexity $C$ (strictly convex near $C_0$)                  | energy/time    |
-| $r_p,\ \gamma_p$         | Parameters of $R(C)$                                                         | energy/time, — |
-| $\Gamma_0$                | Energy-per-nat exchange factor (rate-level PCE; cf. Def. 20)                   | energy/nat     |
-| $P_{\mathrm{cost}}(e)$    | Operating power at coupling $e$                                              | energy/time    |
-| $I_{\mathrm{rate}}(e)$    | Predictive-information **rate**                                                | nats/time      |
-| $V_{\mathrm{benefit}}(e)$ | Per-event predictive benefit                                                   | nats/event     |
-| $p_L$                     | Logical mismatch probability per cycle                                         | —              |
-| $\beta_{\mathrm{eff}}$    | Cadence-scale inverse temperature                                              | 1/energy       |
-| $\kappa_F$                | Small-deviation field-mismatch scale                                           | energy         |
-| $J$                        | Per-event Fisher information operator at $e=0$                               | —              |
-| ${\lambda_i}$             | Nonzero spectrum of $J$                                                      | —              |
-| $k_b$                     | $\sum_i\lambda_i=\mathrm{Tr}\,J$                                            | —              |
-| $\gamma$                   | Coherence-overhead complexity exponent ($\ge 1$)                             | —              |
-| $c_\gamma$                | Gauge-overhead coefficient $=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$       | —              |
-| $\gamma_{\mathrm{eff}}$   | Effective cost exponent $=\gamma\gamma_p>1$                                 | —              |
-| $A_{\mathrm{eff}}$        | Effective cost coefficient $=r_p c_\gamma^{\gamma_p}$                     | energy/time    |
-| $d_0$                     | Baseline Hilbert-space dimension ($=8$)                                      | —              |
+| Symbol                       | Meaning                                                                           | Units          |
+| ---------------------------- | --------------------------------------------------------------------------------- | -------------- |
+| $e$                        | $U(1)$ coupling                                                                 | —              |
+| $u$                        | $u\coloneqq e^2$                                                                | —              |
+| $\alpha_{em}$             | $e^2/(4\pi)$                                                                    | —              |
+| $\tau,\ \nu$               | FPL cadence time $\tau$, event rate $\nu=1/\tau$                              | time,\ 1/time  |
+| $\mu^*$                   | Operating (renormalization) scale $\mu^*=\kappa_\mu\nu$, $\kappa_\mu=O(1)$ | energy         |
+| $C, C_0$                  | Predictive Physical Complexity (baseline $C_0$)                                | —              |
+| $R(C)$                     | **Power** at complexity $C$                                                     | energy/time    |
+| $r_p,\ \gamma_p$         | Parameters of $R(C)$                                                            | energy/time, — |
+| $\Gamma_0$                | Energy‑per‑nat exchange factor (rate‑level PCE)                                   | energy/nat     |
+| $P_{\mathrm{cost}}(e)$    | Operating power at coupling $e$                                                 | energy/time    |
+| $I_{\mathrm{rate}}(e)$    | Predictive‑information **rate**                                                   | nats/time      |
+| $V_{\mathrm{benefit}}(e)$ | Per‑event predictive benefit                                                      | nats/event     |
+| $p_L$                     | Logical mismatch probability per cycle                                            | —              |
+| $\beta_{\mathrm{eff}}$    | Cadence‑scale inverse temperature                                                 | 1/energy       |
+| $\kappa_F$                | Small‑deviation field‑mismatch scale                                              | energy         |
+| $J$                        | Per‑event Fisher information operator at $e=0$                                  | —              |
+| ${\lambda_i}$             | Nonzero spectrum of $J$                                                         | —              |
+| $k_b$                     | $\sum_i\lambda_i=\mathrm{Tr},J$                                               | —              |
+| $\gamma$                   | Coherence‑overhead complexity exponent ($\ge1$)                                 | —              |
+| $c_\gamma$                | Gauge‑overhead coefficient $=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$          | —              |
+| $\gamma_{\mathrm{eff}}$   | Effective cost exponent $=\gamma\gamma_p>1$                                    | —              |
+| $A_{\mathrm{eff}}$        | Effective cost coefficient $=r_p c_\gamma^{\gamma_p}$                        | energy/time    |
+| $d_0$                     | Baseline Hilbert‑space dimension ($=8$)                                         | —              |
 
-*Mode counting.* We adopt the **complex-mode** convention: each mode contributes $\ln(1+\mathrm{SNR})$ nats/event. (In a real-mode representation, each real scalar mode contributes $\tfrac12\ln(1+\mathrm{SNR})$ and the mode count doubles; both conventions yield the same total benefit when applied consistently.)
+*Mode counting.* We adopt the **complex‑mode** convention: per mode $\ln(1+\mathrm{SNR})$ nats/event. (A real‑mode convention with $\tfrac12\ln(1+\mathrm{SNR})$ per real scalar and doubled count yields the same total benefit if applied consistently.)
 
 ### G.9.2 Predictive Benefit from LAN Information Geometry
 
-Let one FPL cycle with POVM readout induce a classical kernel $p_e(x_{t+1}|x_t,y_t)$. Define the score $s(z)=\partial_e \ln p_e(z)|_{e=0}$ with $\mathbb E_{p_0}[s]=0$. Under A1 (LAN), the one-cycle log-likelihood ratio admits the Gaussian tangent expansion. Diagonalizing the **per-event** Fisher information operator $J$ yields $M$ independent complex Gaussian shift modes with eigenvalues $\{\lambda_i\}$. In the whitened basis (unit noise covariance so each mode has unit variance), the per-mode small-signal SNR is $\lambda_i u$ with $u=e^2$.
+Let one FPL cycle with POVM readout induce a classical kernel $p_e(x_{t+1}|x_t,y_t)$. Define the score $s(z)=\partial_e \ln p_e(z)|_{e=0}$ with $\mathbb E_{p_0}[s]=0$. Under A1 (LAN), the one‑cycle log‑likelihood ratio admits the Gaussian tangent expansion. Diagonalizing the **per‑event** Fisher information operator $J$ yields $M$ independent complex Gaussian shift modes with eigenvalues ${\lambda_i}$. In the whitened basis (unit noise covariance per mode), the per‑mode small‑signal SNR is $\lambda_i u$ with $u=e^2$.
 
-For a complex Gaussian mode, the **per-event** mutual information is $\ln(1+\lambda_i u)$ nats. Summing over modes gives
+For a complex Gaussian mode, the **per‑event** mutual information is $\ln(1+\lambda_i u)$ nats. Summing over modes gives
 
 $$
 V_{\mathrm{benefit}}(e)=\sum_{i=1}^M \ln(1+\lambda_i u),
@@ -515,21 +577,22 @@ I_{\mathrm{rate}}(e)=\nu\,V_{\mathrm{benefit}}(e).
 \tag{G.9.2}
 $$
 
-Equivalently, $V_{\mathrm{benefit}}(e)=\log\det(I+u\Lambda)$, where $\Lambda=\mathrm{diag}(\lambda_1,\dots,\lambda_M)$. *Small-signal check.* Since $\ln(1+x)=x+O(x^2)$, $\dfrac{d}{du}V_{\mathrm{benefit}}(u)|_{u=0}=k_b$ with $k_b=\sum_i\lambda_i$.
+Equivalently, $V_{\mathrm{benefit}}(e)=\log\det(I+u\Lambda)$, with $\Lambda=\mathrm{diag}(\lambda_1,\dots,\lambda_M)$. Since $\ln(1+x)=x+O(x^2)$,
+$\dfrac{d}{du}V_{\mathrm{benefit}}(u)\big|_{u=0}=k_b$ with $k_b=\sum_i\lambda_i$.
 
-**Capacity cap (alphabet bound).** Because each cycle ends with a $d_0$-outcome POVM, the accessible classical information per event satisfies $\le H(\mathrm{output})\le \ln d_0$, hence:
+**Capacity cap (alphabet bound).** Because each cycle ends with a $d_0$‑outcome POVM, the accessible classical information per event satisfies $\le H(\mathrm{output})\le \ln d_0$, hence:
 
 $$
 V_{\mathrm{benefit}}(e)\ \le\ \ln d_0\ (= \ln 8).
 \tag{G.9.3}
 $$
 
-### G.9.3 Gauge-Mismatch Tail, Coding Overhead, and Convex Power Cost
+### G.9.3 Gauge‑Mismatch Tail, Coding Overhead, and Convex Power Cost
 
-A cadence-scale Gibbs–Donsker–Varadhan variational principle implies the gauge-invariant mismatch tail
+A cadence‑scale Gibbs–Donsker–Varadhan variational principle [Dembo & Zeitouni, 1998] implies the gauge‑invariant mismatch tail
 
 $$
-p_L(e)\ \le\ \exp\Big(-\beta_{\mathrm{eff}}\ \Delta\mathcal F_{\mathrm{mismatch}}(e)\Big),
+p_L(e)\ \le\ \exp\!\Big(-\beta_{\mathrm{eff}}\ \Delta\mathcal F_{\mathrm{mismatch}}(e)\Big),
 \qquad
 \Delta\mathcal F_{\mathrm{mismatch}}(e)=\kappa_F e^2+O(e^4).
 \tag{G.9.4}
@@ -547,8 +610,8 @@ $$
 With A4, the **incremental power** cost is
 
 $$
-P_{\mathrm{cost}}(e)-R(C_0)=r_p(\Delta C_{\mathrm{gauge}}(e))^{\gamma_p}
-\ \approx\ A_{\mathrm{eff}}\,e^{2\gamma_{\mathrm{eff}}},
+P_{\mathrm{cost}}(e)-R(C_0)=r_p\!\left(\Delta C_{\mathrm{gauge}}(e)\right)^{\gamma_p}
+\ \approx\ A_{\mathrm{eff}}\,e^{2\gamma_{\mathrm{eff}}}, 
 \tag{G.9.6}
 $$
 
@@ -557,20 +620,20 @@ where
 $$
 \gamma_{\mathrm{eff}}\coloneqq \gamma\gamma_p>1,
 \qquad
-A_{\mathrm{eff}}\coloneqq r_p c_\gamma^{\gamma_p}>0.
+A_{\mathrm{eff}}\coloneqq r_p\,c_\gamma^{\gamma_p}>0.
 \tag{G.9.7}
 $$
 
-### G.9.4 Rate-Level PCE Potential and Equilibrium
+### G.9.4 Rate‑Level PCE Potential and Equilibrium
 
-Define the **rate-level** PCE potential
+Define the **rate‑level** PCE potential
 
 $$
 V_{\mathrm{PCE}}(e)\coloneqq P_{\mathrm{cost}}(e)-\Gamma_0\,I_{\mathrm{rate}}(e).
 \tag{G.9.8}
 $$
 
-With $u=e^2$ and dropping the additive constant $R(C_0)$, we minimize
+With $u=e^2$ and dropping the additive constant $R(C_0)$, minimize
 
 $$
 \phi(u)\ \coloneqq\ A_{\mathrm{eff}}\,u^{\gamma_{\mathrm{eff}}}
@@ -580,11 +643,10 @@ $$
 $$
 
 **Theorem G.9.1 (Strict convexity; unique emergence).**
-If $\gamma_{\mathrm{eff}}>1$ and $A_{\mathrm{eff}},\Gamma_0,\nu>0$, then $\phi$ is strictly convex on $(0,\infty)$ and
-$\displaystyle \lim_{u\to0^+}\phi'(u)=-\Gamma_0\nu k_b<0$ with $k_b=\sum_i\lambda_i$. Hence the non-interacting point $u=0$ is unstable and there is a unique PCE-optimal $u^*>0$.
+If $\gamma_{\mathrm{eff}}>1$ and $A_{\mathrm{eff}},\Gamma_0,\nu>0$, then $\phi$ is strictly convex on $(0,\infty)$ and $\displaystyle \lim_{u\to0^+}\phi'(u)=-\Gamma_0\nu k_b<0$ with $k_b=\sum_i\lambda_i$. Hence the non‑interacting point $u=0$ is unstable and there is a unique PCE‑optimal $u^*>0$.
 
 *Proof.* $\phi'(u)=A_{\mathrm{eff}}\gamma_{\mathrm{eff}}u^{\gamma_{\mathrm{eff}}-1}-\Gamma_0\nu\sum_i\frac{\lambda_i}{1+\lambda_i u}$.
-$\phi''(u)=A_{\mathrm{eff}}\gamma_{\mathrm{eff}}(\gamma_{\mathrm{eff}}-1)u^{\gamma_{\mathrm{eff}}-2}+\Gamma_0\nu\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}>0$ for $u>0$. $\square$
+$\ \phi''(u)=A_{\mathrm{eff}}\gamma_{\mathrm{eff}}(\gamma_{\mathrm{eff}}-1)u^{\gamma_{\mathrm{eff}}-2}+\Gamma_0\nu\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}>0$ for $u>0$. $\square$
 
 The equilibrium $u^*$ solves
 
@@ -594,12 +656,12 @@ A_{\mathrm{eff}}\gamma_{\mathrm{eff}}\,(u^*)^{\gamma_{\mathrm{eff}}-1}
 \tag{G.9.10}
 $$
 
-**Capacity-aware upper bound.** By Schur-concavity [Marshall, Olkin & Arnold 2011], the sum $\sum_i\ln(1+\lambda_i u)$ is maximized at fixed $(k_b,M)$ by the flat spectrum $\lambda_i=k_b/M$. Imposing the cap (G.9.3) in that worst case yields the universal bound
+**Capacity‑aware upper bound.** By Schur‑concavity, $\sum_i\ln(1+\lambda_i u)$ is maximized at fixed $(k_b,M)$ by the flat spectrum $\lambda_i=k_b/M$. Imposing the cap (G.9.3) in that worst case yields the universal bound
 
 $$
-M\ln\Big(1+\frac{k_b}{M}u^*\Big)\ \le\ \ln d_0
+M\ln\!\Big(1+\tfrac{k_b}{M}u^*\Big)\ \le\ \ln d_0
 \quad\Rightarrow\quad
-u^*\ \le\ \frac{M}{k_b}(d_0^{\,1/M}-1).
+u^*\ \le\ \frac{M}{k_b}\Big(d_0^{\,1/M}-1\Big).
 \tag{G.9.11}
 $$
 
@@ -616,7 +678,7 @@ $$
 with positive solution
 
 $$
-u^*=\frac{M}{2k_b}\left(\sqrt{\,1+\frac{2\,\Gamma_0\nu\,k_b^2}{A_{\mathrm{eff}}\,M}}\ -\ 1\right),
+u^*=\frac{M}{2k_b}\!\left(\sqrt{\,1+\frac{2\,\Gamma_0\nu\,k_b^2}{A_{\mathrm{eff}}\,M}}\ -\ 1\right),
 \qquad
 \alpha_{em}(\mu^*)=\frac{u^*}{4\pi},\ \ \mu^*=\kappa_\mu\nu .
 \tag{G.9.13}
@@ -625,25 +687,21 @@ $$
 For large $\Gamma_0\nu/A_{\mathrm{eff}}$,
 
 $$
-u^*\ =\ \frac{\sqrt{M}}{2}\sqrt{\frac{2\,\Gamma_0\nu}{A_{\mathrm{eff}}}}\ -\ \frac{M}{2k_b}\ +\ O\left(\sqrt{\frac{A_{\mathrm{eff}}}{\Gamma_0\nu}}\right).
+u^*\ =\ \frac{\sqrt{M}}{2}\sqrt{\frac{2\,\Gamma_0\nu}{A_{\mathrm{eff}}}}\ -\ \frac{M}{2k_b}\ +\ O\!\left(\sqrt{\frac{A_{\mathrm{eff}}}{\Gamma_0\nu}}\right).
 \tag{G.9.14}
 $$
 
 ### G.9.5 Computational Program
 
-1.  **Baseline ($e=0$).** Fix an admissible FPL on $\mathcal H_0$ ($d_0=8$), an ND–RID-compatible noise model, and a strictly convex $R(C)$. Solve the baseline PCE to obtain $\Phi_0^*$, $C_0$, $\Gamma_0$, $\nu$, and the stationary kernel $p_0$ (cf. §6.4 for $\Gamma_0$).
-
-2.  **Small-$e$ response.** Specify the $\mathrm{U}(1)$ deformation; compute the **per-event** Fisher information operator $J$, its spectrum $\{\lambda_i\}$, and $k_b=\sum_i\lambda_i$.
-
-3.  **Coherence overhead.** Choose a code family (fixing $\gamma$); estimate $c_\gamma=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$; set $A_{\mathrm{eff}}=r_p c_\gamma^{\gamma_p}$.
-
+1.  **Baseline ($e=0$).** Fix an admissible FPL on $\mathcal H_0$ ($d_0=8$), an ND–RID‑compatible noise model, and a strictly convex $R(C)$. Solve the baseline PCE to obtain $\Phi_0^*$, $C_0$, $\Gamma_0$, $\nu$, and the stationary kernel $p_0$.
+2.  **Small‑$e$ response.** Specify the $U(1)$ deformation; compute the **per‑event** Fisher information operator $J$, its spectrum ${\lambda_i}$, and $k_b=\sum_i\lambda_i$.
+3.  **Coherence overhead.** Choose any capacity-approaching code family (fixing $\gamma$); estimate $c_\gamma=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$; set $A_{\mathrm{eff}}=r_p c_\gamma^{\gamma_p}$.
 4.  **Equilibrium and cap.** Solve (G.9.10) for $u^*$ and verify the capacity bound (G.9.11); if violated, place the optimum on the boundary $V_{\mathrm{benefit}}=\ln d_0$.
-
-5.  **Renormalization-group matching.** Report $\alpha_{em}^{\overline{\mathrm{MS}}}(\mu^*)=u^*/(4\pi)$ (or specify the on-shell scheme), with $\kappa_\mu=O(1)$ fixed by the cadence/clock-rate mapping. Evolve to laboratory scales by standard QED running with threshold matching and hadronic vacuum polarization as needed.
+5.  **RG matching.** Report $\alpha_{em}^{\overline{\mathrm{MS}}}(\mu^*)=u^*/(4\pi)$ (or specify the on‑shell scheme), with $\kappa_\mu=O(1)$ fixed by the cadence/clock‑rate mapping. Evolve to laboratory scales by standard QED running with threshold matching.
 
 ### G.9.6 Conclusion
 
-Within PU, the electromagnetic coupling emerges as a **rate-level PCE equilibrium** balancing the predictive benefit of $\mathrm{U}(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non-interacting state $e=0$ is unstable and the unique optimum $u^*>0$ determines $\alpha_{em}(\mu^*)=u^*/(4\pi)$. The inputs $\Gamma_0$, $\nu$, $A_{\mathrm{eff}}$, $\gamma_{\mathrm{eff}}$, and $\{\lambda_i\}$ are operational functionals of the baseline PCE-optimal FPL, and the capacity-aware bound (G.9.11) supplies a falsifiable constraint independent of micro-details. The validity of this derivation now rests on the foundational assumptions A1-A6; deriving these properties from the underlying MPU dynamics and global PCE optimization is a key objective for future research.
+Within PU, the electromagnetic coupling emerges as a **rate‑level PCE equilibrium** balancing the predictive benefit of $U(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non‑interacting state $e=0$ is unstable and the unique optimum $u^*>0$ determines $\alpha_{em}(\mu^*)=u^*/(4\pi)$. The inputs $\Gamma_0$, $\nu$, $A_{\mathrm{eff}}$, $\gamma_{\mathrm{eff}}$, and ${\lambda_i}$ are operational functionals of the baseline PCE‑optimal FPL, and the capacity‑aware bound (G.9.11) supplies a falsifiable constraint independent of micro‑details.
 
 ## G.10 Conclusion
 

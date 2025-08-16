@@ -51,35 +51,34 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 Using the dimensional assignments in Table H.1, we verify the dimensional homogeneity of the principal PU equations.
 
 *   **Adaptation Dynamics (Equations (24), (30), (38))**
-    *   Equation (24) defining $\Psi$: $\Psi$ has dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. $\Gamma_{0}$ has $[E][T]^{-1}$, $\partial PP/\partial C$ has $[\text{Complexity}]^{-1}$ (PP dimensionless, $C$ has $[\text{Complexity}]$). $\lambda$ is dimensionless, $R'$ and $R_I'$ have dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. The equation $\Psi = \Gamma_0 (\partial PP/\partial C) - (\lambda R' + R_I')$ is dimensionally consistent.
-    *   Equation (30) for $\dot C$: $dC/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\eta_{\text{adapt}}$ has $[\text{Complexity}]^2 [E]^{-1}$, $\Psi$ has $[E][T]^{-1}[\text{Complexity}]^{-1}$. The product $\eta_{\text{adapt}}\Psi$ has dimensions $[\text{Complexity}]^2 [E]^{-1} \times [E][T]^{-1}[\text{Complexity}]^{-1} = [\text{Complexity}][T]^{-1}$. Equation (30) is dimensionally consistent.
-    *   Equation (38) for $\dot{\hat C}_{\text{target}}$: $d\hat C_{\text{target}}/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\mu_{\text{target}}$ has $[T]^{-1}$. $\hat C_{\text{target}}$ has $[\text{Complexity}]$. $(PP_{op}-PP)$ is dimensionless. The equation $\dot{\hat C}_{\text{target}} = \mu_{\text{target}} \hat C_{\text{target}} (PP_{op} - PP)$ is dimensionally consistent: $[\text{Complexity}][T]^{-1} = [T]^{-1} \times [\text{Complexity}] \times 1$.
+    *   Equation (24) defining $\Psi$: $\Psi$ has dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. $\Gamma_{0}$ has $[E][T]^{-1}$, $\partial PP/\partial C$ has $[\text{Complexity}]^{-1}$ (PP dimensionless, $C$ has $[\text{Complexity}]$). $\lambda$ is dimensionless, $R'$ and $R_I'$ have dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. The equation $\Psi = \Gamma_0 (\partial PP/\partial C) - (\lambda R' + R_I')$ is dimensionally consistent.
+    *   Equation (30) for $\dot C$: $dC/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\eta_{\text{adapt}}$ has $[\text{Complexity}]^2 [E]^{-1}$, $\Psi$ has $[E][T]^{-1}[\text{Complexity}]^{-1}$. The product $\eta_{\text{adapt}}\Psi$ has dimensions $[\text{Complexity}]^2 [E]^{-1} \times [E][T]^{-1}[\text{Complexity}]^{-1} = [\text{Complexity}][T]^{-1}$. Equation (30) is dimensionally consistent.
+    *   Equation (38) for $\dot{\hat C}_{\text{target}}$: $d\hat C_{\text{target}}/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\mu_{\text{target}}$ has $[T]^{-1}$. $\hat C_{\text{target}}$ has $[\text{Complexity}]$. $(PP_{op}-PP)$ is dimensionless. The equation $\dot{\hat C}_{\text{target}} = \mu_{\text{target}} \hat C_{\text{target}} (PP_{op} - PP)$ is dimensionally consistent: $[\text{Complexity}][T]^{-1} = [T]^{-1} \times [\text{Complexity}] \times 1$.
 
 *   **Law of Prediction (Equations (22)–(23))**
-    *   Equation (22): $PP$ dimensionless. $\beta, \alpha$ dimensionless. $\kappa_{\text{eff}}$ dimensionless. $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $(C-C_{op})/\hat C_{\text{target}}$ is dimensionless. Exponent argument is dimensionless. Equation is dimensionally consistent.
-    *   Equation (23): $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $\kappa_{\text{eff}}$ dimensionless. $\ln(\dots)$ dimensionless. The equation is dimensionally consistent.
+    *   Equation (22): $PP$ dimensionless. $\beta, \alpha$ dimensionless. $\kappa_{\text{eff}}$ dimensionless. $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $(C-C_{op})/\hat C_{\text{target}}$ is dimensionless. Exponent argument is dimensionless. Equation is dimensionally consistent.
+    *   Equation (23): $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $\kappa_{\text{eff}}$ dimensionless. $\ln(\dots)$ dimensionless. The equation is dimensionally consistent.
 
 *   **Reflexivity Constraint (Equation (48))**
-    *   Equation (48): $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r$. $\Delta I$ is dimensionless (nats). $\Delta S_{min}/k_B$ is dimensionless (nats). $\kappa_r$ must be dimensionless. Table H.1 states $\kappa_r$ is dimensionless. Consistent.
+     *   Equation (48): $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r$. $\Delta I$ is dimensionless (nats). $\Delta S_{min}/k_B$ is dimensionless (nats). $\kappa_r$ must be dimensionless. Table H.1 states $\kappa_r$ is dimensionless. Consistent.
 
 *   **Area Law (Equation (71))**
-    *   Equation (71): $S_{max}$ has dimensions $[E][\Theta]^{-1}$. $k_B$ has $[E][\Theta]^{-1}$. $\mathcal A$ has $[L]^{2}$. $L_P$ has $[L]$. $S_{max} = \frac{[E][\Theta]^{-1} [L]^2}{[L]^2} = [E][\Theta]^{-1}$. Equation is dimensionally consistent.
+     *   Equation (71): $S_{max}$ has dimensions $[E][\Theta]^{-1}$. $k_B$ has $[E][\Theta]^{-1}$. $\mathcal A$ has $[L]^{2}$. $L_P$ has $[L]$. $S_{max} = \frac{[E][\Theta]^{-1} [L]^2}{[L]^2} = [E][\Theta]^{-1}$. Equation is dimensionally consistent.
 
-*   Emergent $G$ (Equation (E.9))
-    *   Equation (E.9) from Appendix E is $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}(f_{RID})}$. $G$ has dimensions $[M]^{-1}[L]^3[T]^{-2}$. For the RHS: $\eta$ is dimensionless (1), $\delta$ has dimensions $[L]$, $c$ has $[L][T]^{-1}$, $\hbar$ has $[E][T]$, $\chi$ is dimensionless (1), and $C_{\max}$ is dimensionless (1).
+*   **Emergent $G$ (Equation (E.9))**
+    *   Equation (E.9) from Appendix E is $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}(f_{RID})}$. $G$ has dimensions $[M]^{-1}[L]^3[T]^{-2}$. For the RHS: $\eta$ is dimensionless (1), $\delta$ has dimensions $[L]$, $c$ has $[L][T]^{-1}$, $\hbar$ has $[E][T]$, $\chi$ is dimensionless (1), and $C_{\max}$ is dimensionless (1).
     RHS dimensions: $\frac{1 \cdot [L]^2 \cdot ([L][T]^{-1})^3}{[E][T] \cdot 1 \cdot 1} = \frac{[L]^2 [L]^3 [T]^{-3}}{[E][T]} = \frac{[L]^5 [T]^{-3}}{[M][L]^2[T]^{-2} [T]} = \frac{[L]^5 [T]^{-3}}{[M][L]^2[T]^{-1}} = [M]^{-1}[L]^3[T]^{-2}$.
     Equation is dimensionally consistent.
 
 *   **Einstein Field Equations (Equation (76))**
-    *   Equation (76): $R_{\mu\nu}$ has dimensions $[L]^{-2}$. Ricci scalar $R$ has $[L]^{-2}$. $\Lambda$ has $[L]^{-2}$. $g_{\mu\nu}$ is dimensionless metric component. $T_{\mu\nu}$ has $[E][L]^{-3}$. $G$ has $[M]^{-1}[L]^3[T]^{-2}$, $c$ has $[L][T]^{-1}$. $\frac{G}{c^4} T_{\mu\nu}$ has $\frac{[M]^{-1}[L]^3[T]^{-2}}{([L][T]^{-1})^4} [E][L]^{-3} = \frac{[M]^{-1}[L]^3[T]^{-2}}{[L]^4[T]^{-4}} [E][L]^{-3} = [M]^{-1}[L]^{-1}[T]^{2} [E][L]^{-3}$. Using $[E]=[M][L]^2[T]^{-2}$, this is $[M]^{-1}[L]^{-1}[T]^{2} [M][L]^2[T]^{-2} [L]^{-3} = [L]^{-2}$. Each term in the EFE carries dimensions of $[L]^{-2}$. Equation is dimensionally consistent.
+    *   Equation (76): $R_{\mu\nu}$ has dimensions $[L]^{-2}$. Ricci scalar $R$ has $[L]^{-2}$. $\Lambda$ has $[L]^{-2}$. $g_{\mu\nu}$ is dimensionless metric component. $T_{\mu\nu}$ has $[E][L]^{-3}$. $G$ has $[M]^{-1}[L]^3[T]^{-2}$, $c$ has $[L][T]^{-1}$. $\frac{G}{c^4} T_{\mu\nu}$ has $\frac{[M]^{-1}[L]^3[T]^{-2}}{([L][T]^{-1})^4} [E][L]^{-3} = \frac{[M]^{-1}[L]^3[T]^{-2}}{[L]^4[T]^{-4}} [E][L]^{-3} = [M]^{-1}[L]^{-1}[T]^{2} [E][L]^{-3}$. Using $[E]=[M][L]^2[T]^{-2}$, this is $[M]^{-1}[L]^{-1}[T]^{2} [M][L]^2[T]^{-2} [L]^{-3} = [L]^{-2}$. Each term in the EFE carries dimensions of $[L]^{-2}$. Equation is dimensionally consistent.
 
 *   **SPAP Complexity Bound (Equation (B.5))**
-    *   Equation (B.5) from Appendix B.3 gives the poly-logarithmic complexity divergence near the SPAP limit:
-        $$
+    *   Equation (B.5) from Appendix B.3 gives the poly-logarithmic complexity divergence near the SPAP limit:
+ $$
         C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{(\delta_{\rm SPAP})^2}\right)
-        \tag{B.5}
         $$
-    *   $C_{\text{uni}}$ represents the unified complexity, a dimensionless measure of effective computational resources (Theorem B.2). The accuracy gap $\delta_{\rm SPAP}$ is a dimensionless probability margin. The logarithm of a dimensionless quantity is dimensionless. 
+$C_{\text{uni}}$ represents the unified complexity, a dimensionless measure of effective computational resources (Theorem B.2). The accuracy gap $\delta_{\rm SPAP}$ is a dimensionless probability margin. The logarithm of a dimensionless quantity is dimensionless. 
 
 ## H.4 Vacuum-Based Estimate of the Acceleration Scale $g_{0}$
 

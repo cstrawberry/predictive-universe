@@ -170,23 +170,14 @@ $$
 F_g := f \cdot q^{(g)},
 $$
 
-where $f$ is the $U(1)_F$ charge-map vector. If $U(1)_F$ is gauged, cancellation of mixed gravitational–$U(1)_F$ and cubic $U(1)_F$ anomalies across these sectors requires
-
+where $f$ is the $U(1)_F$ charge-map vector. If $U(1)_F$ is gauged, Yukawa couplings arise via a $U(1)_F$-charged Higgs or higher-dimension operators involving a flavon field. Mixed SM–$U(1)_F$ anomalies cancel because each generation's SM content is identical and the net family charge vanishes (as shown below). For the theory to be consistent, the remaining pure $U(1)_F$ and mixed gravitational–$U(1)_F$ anomalies must also cancel across the sectors, requiring:
 $$
 \sum_g F_g = 0,
 \qquad
 \sum_g F_g^3 = 0.
 \tag{R.13}
 $$
-
-If $U(1)_F$ is gauged, Yukawa couplings arise via a $U(1)_F$-charged Higgs or higher-dimension operators involving a flavon field. Mixed SM–$U(1)_F$ anomalies cancel because each generation's SM content is identical and $\sum_g F_g = 0$.  **If $U(1)_F$ is gauged**, cancellation of mixed gravitational–$U(1)_F$ and cubic $U(1)_F$ anomalies across these sectors requires
- $$
- \sum_g F_g = 0,
- \qquad
- \sum_g F_g^3 = 0.
- \tag{R.13}
- $$
- Mixed SM–$U(1)_F$ anomalies cancel because each generation's SM content is identical and $\sum_g F_g = 0$. There is no nontrivial two-sector solution: if $N=2$, global neutrality $\sum_g q^{(g)}=0$ forces $q^{(2)}=-q^{(1)}$ and hence $F_2=-F_1$, producing a **family-vector-like pair under $U(1)_F$**. The minimal nontrivial solution is $N=3$ with offsets $\{a,-a,0\}$, where $a>0$ is the minimal nonzero value achievable from $f(L_{\rm light})$, i.e., $a = \gcd\{f\cdot q : q\in L_{\rm light}\}$.
+There is no nontrivial two-sector solution: if $N=2$, global neutrality $\sum_g q^{(g)}=0$ forces $q^{(2)}=-q^{(1)}$ and hence $F_2=-F_1$, producing a **family-vector-like pair under $U(1)_F$**. The minimal nontrivial solution is $N=3$ with offsets $\{a,-a,0\}$, where $a>0$ is the minimal nonzero value achievable from $f(L_{\rm light})$, i.e., $a = \gcd\{f\cdot q : q\in L_{\rm light}\}$.
 
 *Proof.* The anomaly constraints are standard. For integers $F_1, F_2, F_3$, the identity $x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$ implies that if $\sum_g F_g=0$ then $\sum_g F_g^3=3F_1F_2F_3$. Thus $\sum_g F_g=\sum_g F_g^3=0$ forces $F_1F_2F_3=0$, i.e., at least one $F_g$ vanishes; the linear constraint then enforces $\{a,-a,0\}$. For $N=2$, $\sum q^{(g)}=0$ implies $q^{(2)}=-q^{(1)}$ and $F_2=-F_1$, which is vector-like. Therefore $N=3$ is minimal. The minimal nonzero magnitude $a$ is $\gcd(f(L_{\rm light}))$. ∎
 
