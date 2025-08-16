@@ -88,7 +88,13 @@ $$
 \gamma_k(t) \approx \gamma_k^{(0)}\bigl[1+\chi_k(\omega_{rad}(t), \Delta(t))\Phi_S(t) + O(\Phi_S^2(t))\bigr]
 \tag{L.6}
 $$
-where $\chi_k$ is a dimensionless rate susceptibility, dependent on $d_{TLS}$, $E_{\max}$, and details of the TLS-environment coupling modulated by the Stark shift. The outcome probabilities $P_{obs}(i)$ of the 'Evolve' process (Definition 27), being functions of these $\gamma_k(t)$, thus become dependent on $\text{context}_S(t)$.
+where $\chi_k$ is a dimensionless rate susceptibility, dependent on $d_{TLS}$, $E_{\max}$, and details of the TLS-environment coupling modulated by the Stark shift. The outcome probabilities $P_{\mathrm{obs}}(i)$ of the 'Evolve' process are then
+
+$$
+P_{\mathrm{obs}}(i)=\mathrm{tr}\!\big(e^{\varepsilon L_S}(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,(E_i+\varepsilon K_S(E_i))\big)+O(\varepsilon^2),
+$$
+
+with $\varepsilon$ a context-controlled scale (when $L_S$ is a GKLS generator) chosen so that $|\Delta P(i)|\le \mathrm{CC}(S)$.
 
 **L.4 Parameter Estimation and Feasibility**
 

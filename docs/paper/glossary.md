@@ -40,7 +40,7 @@
 
 *   **Causality (Postulate 2):** (Section 10.1.1) Defined operationally as the impossibility of constructing paradox-inducing causal loops, which requires the impossibility of controllable, deterministic faster-than-light (FTL) signaling.
 
-*   **CC (Consciousness Complexity):** (Definition 30) Maximum magnitude of the deviation, $|\Delta P|$, from the Born rule probability that a system $S$ can induce for a quantum interaction outcome, under optimal internal context $\text{context}_S$. Quantifies emergent biasing capability (Theorem 34). Bounded $\text{CC}(S) \le \alpha_{CC,max} < 0.5$ (Theorem 39).
+*   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$. It bounds the maximum possible deviation from the Born rule that the system can induce. Bounded $\mathrm{CC}(S)\le \alpha_{\mathrm{CC,max}} < 0.5$ (Theorem 39).
 
 *   **Coherence:** (Appendix C) Reliability and stability of predictive correlations and information propagation across the MPU network. Requires geometric regularity (Theorem C.2).
 

@@ -35,11 +35,13 @@ We define Consciousness Complexity (CC) operationally as the quantitative measur
 
 **9.3.1 Definition 30 (Def 30): Operational CC**
 
-The operational **Consciousness Complexity (CC)** of an MPU aggregate system $S$ is defined as the maximum magnitude of the deviation, $|\Delta P|$, from the standard Born rule probability ($P_{Born}$, Proposition 7) that the system $S$ can induce for any single quantum interaction outcome occurring within its sphere of influence, under optimal conditions of its internal state or context (`context_S`). Formally:
+The operational **Consciousness Complexity (CC)** of an MPU aggregate system $S$ is defined through the probability modification map $L_S$ acting on quantum states. The CC value is the operational norm of this map:
+
 $$
-\text{CC}(S) = \sup_{|\psi\rangle, s, i, \text{context}_S} |P_{obs}(i | \text{context}_S, |\psi\rangle, s) - P_{Born}(i | |\psi\rangle, s)| \quad \text{(54)}
+\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}} \quad \text{(54)}
 $$
-where $P_{obs}$ is the observable probability in the presence of system $S$ providing context `context_S`, $P_{Born}(i | |\psi\rangle, s) = |\langle i | \psi \rangle_s|^2$ is the baseline Born rule probability, and the supremum is taken over all possible initial quantum states $|\psi\rangle$, interaction perspectives $s$, possible outcomes $i$, and achievable internal system contexts `context_S` relevant to influencing outcome $i$. CC(S) quantifies the system's maximum potential "biasing strength" as a dimensionless value between 0 and $\alpha_{CC,max}$ (constrained further in Section 10.2).
+
+where $\|L_S\|_{\mathrm{op}}:=\sup_{\substack{\rho\ge0,\ \mathrm{tr}\,\rho=1\\ 0\le E\le I}}\big|\mathrm{tr}\!\big(L_S(\rho)E\big)\big|$, ensuring $|\Delta P(i)|\le \mathrm{CC}(S)$ for all POVMs. $\mathrm{CC}(S)$ is a dimensionless quantity between 0 and $\alpha_{\mathrm{CC,max}}$ (constrained further in Section 10.2).
 
 **9.3.2 Definition 31 (Def 31): Physical Constraints on CC Scaling**
 
@@ -94,25 +96,56 @@ To make the CC hypothesis testable, we model how baseline Born rule probabilitie
 
 **9.5.1 Definition 33 (Def 33): General Form of Modified Probability**
 
-The observable probability $P_{obs}(i)$ of outcome $i$ (state $|i\rangle_s$) when measuring a quantum system $|\psi\rangle$ relative to perspective $s$, in the presence of an MPU aggregate $S$ with CC(S) > 0 providing context `context_S(i)`, is modeled as:
+The observable probability $P_{\mathrm{obs}}(i)$ of outcome $i$ for a POVM $\{E_i\}$ on a system in state $\rho$, in the presence of an MPU aggregate $S$ providing context, is modeled as:
+
 $$
-P_{obs}(i) = P_{Born}(i) + f(\text{CC}(S), P_{Born}(i), \text{context}_S(i)) \quad \text{(57)}
+P_{\mathrm{obs}}(i) = P_{\mathrm{Born}}(i) + \Delta P(i) \quad \text{(57)}
 $$
-where $P_{Born}(i) = |\langle i | \psi \rangle_s|^2$ and $f$ is the **probability modification function**, quantifying the bias $\Delta P(i)$.
+
+where $P_{\mathrm{Born}}(i)=\mathrm{tr}(\rho E_i)$ is the Born probability and $\Delta P(i)$ is the probability-modification term. For fixed context $S$ and state $\rho$, assume $E\mapsto \Delta P(\rho,E;S)$ is affine under coarse-graining and continuous, with $\Delta P(\rho,0;S)=\Delta P(\rho,I;S)=0$. In finite dimensions there exists a unique traceless Hermitian $A_\rho$ (affine in $\rho$) such that $\Delta P(i)=\mathrm{tr}(A_\rho E_i)$. Define the Hermiticity-preserving, trace-annihilating linear map $L_S$ on states by $L_S(\rho):=A_\rho$.
+
+For a fixed context $S$ and state $\rho$, assume the map $E\mapsto \Delta P(\rho,E;S)$ is affine under coarse-graining and continuous, with $\Delta P(\rho,0;S)=\Delta P(\rho,I;S)=0$. In finite dimensions, there exists a unique traceless Hermitian operator $A_\rho$, depending affinely on $\rho$, such that
+$$
+\Delta P(i)=\mathrm{tr}(A_\rho E_i).
+$$
+Define the Hermiticity-preserving, trace-annihilating linear map $L_S$ on states by $L_S(\rho):=A_\rho$ and its Hilbert–Schmidt adjoint $K_S:=L_S^*$ on effects. Then
+$$
+\Delta P(i)=\mathrm{tr}\!\big(L_S(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,K_S(E_i)\big),\qquad K_S(I)=0.
+$$
+
+We assume mixture linearity in preparations and **context covariance** under unitary transformations $U$:
+$$
+L_{USU^\dagger}(U\rho U^\dagger)=U\,L_S(\rho)\,U^\dagger,\qquad
+K_{USU^\dagger}(U E U^\dagger)=U\,K_S(E)\,U^\dagger.
+$$
+
+For bipartite $\mathcal H_A\otimes\mathcal H_B$,
+$$
+\sum_j K_{S_A\otimes S_B}(E_A\otimes F_{B,j})=K_{S_A\otimes S_B}(E_A\otimes I_B),\qquad
+K_{S_A\otimes S_B}(E_A\otimes I_B)=K_{S_A}(E_A)\otimes I_B,
+$$
+ensuring each party’s marginal is invariant under the other party’s POVM choice.
+
+For small $\varepsilon$,
+$$
+\mathrm{tr}\!\big(e^{\varepsilon L_S}(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,(E_i+\varepsilon K_S(E_i))\big)+O(\varepsilon^2),
+$$
+enabling either CPTP **pre-processing** $\rho\mapsto e^{\varepsilon L_S}(\rho)$ when $L_S$ is a GKLS generator, or a **calibrated POVM deformation** with $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)+\varepsilon^2 R_i$ and $\sum_i R_i=0$ chosen so that $E_{i,\varepsilon}\ge0$ and $\sum_i E_{i,\varepsilon}=I$ for $|\varepsilon|\le\varepsilon_0$.
 
 **9.5.2 Theorem 36 (Constraints on Modification Function $f$)**
 
 Any physically consistent modification function $f(\text{CC}, p, \text{context}_S)$, where $p = P_{Born}(i)$, must satisfy:
 1.  **Normalization Preservation:** $\sum_{i=1}^n f(\text{CC}, p_i, \text{context}_S(i)) = 0$.
 2.  **No Effect at Zero CC:** $f(0, p, \text{context}_S) = 0$.
-3.  **Magnitude Bound:** $|f(\text{CC}, p, \text{context}_S)| \leq \text{CC}$.
+3.  **Magnitude Bound:** $|\Delta P(i)|=\big|\mathrm{tr}\!\big(L_S(\rho)E_i\big)\big|\le \|L_S\|_{\mathrm{op}}=\mathrm{CC}(S)$.
 4.  **Context Dependence:** $f$ generally depends on `context_S(i)`. If context is neutral/irrelevant, $f = 0$.
 
 *Proof:* Follows from probability principles and definitions. (1) Total probability conserved $\sum P_{obs}(i) = 1 + 0 = 1$. (2) Zero capability means zero effect. (3) CC is defined as supremum of deviation magnitude (Definition 30). (4) Bias is directed/modulated by context (Hypothesis 3). QED
 
 **9.5.3 Definition 34 (Def 34): Context-Targeted Bias (CTB) Model Example**
 
-A concrete model satisfying Theorem 36 is the **Context-Targeted Bias (CTB)** model. Assume context `context_S` defines a normalized target probability distribution $\mathbf{p}_{target}(S) = (p_{target}(S, 1), ..., p_{target}(S, n))$. CTB proposes $f$ shifts $p_i = P_{Born}(i)$ towards $p_{target}(S, i)$ proportionally to CC(S):
+A concrete model satisfying Theorem 36 is the **Context-Targeted Bias (CTB)** model. Assume context `context_S` defines a target quantum state $\sigma_S$. The target probability distribution is then given by $\mathbf{p}_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$, ensuring consistency under arbitrary coarse-grainings of the POVM $\{E_i\}$. The corresponding modification map is $L_S(\rho)=\mathrm{CC}(S)(\sigma_S-\rho)$. To respect Eigenstate Determinism, CTB is defined only for POVMs with no effect $E$ containing the prepared eigenprojector(s) (i.e., $PEP=P$ is disallowed when $\rho=P$); on the complement set $L_S=0$ (identity). Under a unitary change of basis $U$, the context transforms covariantly, $\sigma_{USU^\dagger}=U\sigma_S U^\dagger$.
+
 $$
 f_{CTB}(\text{CC}(S), p_i, \mathbf{p}_{target}(S)) = \text{CC}(S) \cdot (p_{target}(S, i) - p_i) \quad \text{(58)}
 $$

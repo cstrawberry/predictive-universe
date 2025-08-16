@@ -189,7 +189,7 @@ w \;=\; \frac{\langle P\rangle}{\langle \rho\rangle} \;=\; -1\;+\;O\!\big(N_{\ma
 \tag{U.15}
 $$
 
-(Weinberg, 1989; Carroll, 2001).
+[Weinberg, 1989; Carroll, 2001].
 
 
 ## U.8 Prefactor, Diluteness, and Scope
