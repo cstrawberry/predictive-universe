@@ -16,16 +16,19 @@ To ensure compliance with Postulate 2, the maximum possible strength of the CC e
 
 **10.2.1 Theorem 39 (Upper Bound on CC ($\alpha_{CC,max} < 0.5$))**
 
-Upholding the causality definition stated in Postulate 2 requires that the maximum possible value of operational Consciousness Complexity, $\alpha_{CC,max} = \sup_{S} \text{CC}(S)$ (Definition 30, Equation 55), must be strictly bounded such that deterministic FTL signaling is impossible. This imposes the condition:
+Upholding the causality definition in Postulate 2 is guaranteed if the maximum operational Consciousness Complexity $\alpha_{CC,max} = \sup_{S} \text{CC}(S)$ (Definition 30; Eq. (55)) is strictly bounded to preclude deterministic FTL signaling. A sufficient universal bound is:
 $$
 \alpha_{CC,max} < 0.5 \quad \text{(61)}
 $$
 *Proof:* Deterministic FTL signaling using CC would require a system $S_A$ (Alice) with maximal capability $\alpha_{CC,max}$ to reliably force a specific outcome $i$ of a quantum measurement performed by a distant system $S_B$ (Bob) at a space-like separated location, overriding the Born rule probability $p_i = P_{Born}(i)$.
 1.  **Forcing Outcome $i$ ($P_{obs}(i) = 1$):** Requires probability modification $\Delta P(i) = 1 - p_i$. By Definition 30, $|\Delta P| \le \alpha_{CC,max}$. Forcing outcome $i$ requires $\alpha_{CC,max} \ge |1 - p_i|$. This must be impossible for any $p_i \in (0, 1)$.
 2.  **Forcing Outcome NOT $i$ ($P_{obs}(i) = 0$):** Requires $\Delta P(i) = -p_i$. This requires $\alpha_{CC,max} \ge |-p_i| = p_i$. This must also be impossible for any $p_i \in (0, 1)$.
-3.  **Combined Constraint:** Preventing deterministic control for *any* $p_i \in (0, 1)$ requires *both* $\alpha_{CC,max} < 1 - p_i$ and $\alpha_{CC,max} < p_i$ to hold for all $p_i$. This means $\alpha_{CC,max} < \min(p_i, 1 - p_i)$ for all $p_i \in (0, 1)$.
-4.  **Finding the Minimum Upper Bound:** The function $f(p) = \min(p, 1-p)$ has a maximum value of $0.5$ at $p=0.5$. To satisfy the condition for *all* $p_i$, $\alpha_{CC,max}$ must be strictly less than this maximum value.
-5.  **Conclusion:** Preserving causality (Postulate 2) requires $\alpha_{CC,max} < 0.5$. QED
+3.  **Single-channel forcing threshold:** To force either outcome $i$ or its complement with a *single fixed channel*, the required capability is $\alpha_{\mathrm{req}}(p_i)=\max\{p_i,\,1-p_i\}$.
+4.  **Sufficient universal bound:** The minimum of $\alpha_{\mathrm{req}}(p)$ over $p\in(0,1)$ is $0.5$ (at $p=0.5$). Hence a sufficient condition that precludes deterministic forcing for any baseline $p_i$ is
+$$
+\alpha_{CC,max} < 0.5.
+$$
+5.  **Conclusion:** Under this bound, deterministic FTL signaling is impossible while statistical influence remains allowed. QED
 
 **10.3 The Statistical FTL Influence Hypothesis**
 
@@ -102,7 +105,7 @@ The maximum classical information (Mutual Information $I(A;B)$) transmittable re
 $$
 I(A;B) \le O(\text{CC}^2) \quad \text{nats/trial} \quad \text{(63)}
 $$
-*Proof:* Let Alice choose context $A \in \{0, 1\}$ with $P(A)=0.5$. Let Bob observe binary outcome $B \in \{0, 1\}$ with $P(B=0|A=0) = p + \delta p$ and $P(B=0|A=1) = p - \delta p$, where $\delta p \le \text{CC}$. Mutual information is $I(A;B) = H(B) - H(B|A)$. $P(B=0) = p$, so $H(B)=H(p)$. $H(B|A) = 0.5 H(p+\delta p) + 0.5 H(p-\delta p)$. Taylor expansion of $H(p \pm \delta p)$ for small $\delta p$ yields $H(p \pm \delta p) \approx H(p) \pm H'(p)\delta p + \frac{1}{2} H''(p)(\delta p)^2$. Substituting gives $I(A;B) \approx - \frac{1}{2} H''(p) (\delta p)^2$. Since $H''(p) = -1/(p(1-p)\ln 2)$ (for nats), $I(A;B) \approx (\delta p)^2 / (2 p(1-p) \ln 2)$. Since $\delta p \le \text{CC}$, $I(A;B)_{max} \approx O(\text{CC}^2)$. (A more rigorous bound using channel capacity derived from ND-RID contractivity is given in **Appendix F, section F.6**).
+*Proof:* Let Alice choose context $A \in \{0, 1\}$ with $P(A)=0.5$. Let Bob observe binary outcome $B \in \{0, 1\}$ with $P(B=0|A=0) = p + \delta p$ and $P(B=0|A=1) = p - \delta p$, where $\delta p \le \text{CC}$. Mutual information is $I(A;B) = H(B) - H(B|A)$. $P(B=0) = p$, so $H(B)=H(p)$. $H(B|A) = 0.5 H(p+\delta p) + 0.5 H(p-\delta p)$. Taylor expansion of $H(p \pm \delta p)$ for small $\delta p$ yields $H(p \pm \delta p) \approx H(p) \pm H'(p)\delta p + \frac{1}{2} H''(p)(\delta p)^2$. Substituting gives $I(A;B) \approx - \frac{1}{2} H''(p) (\delta p)^2$. Since $$H''(p) = -\frac{1}{p(1-p)}$$ (nats), $$I(A;B) \approx \frac{(\delta p)^2}{2 p(1-p)}.$$ If expressing $I$ in bits, multiply the right-hand side by $1/\ln 2$. Since $\delta p \le \text{CC}$, $I(A;B)_{max} \approx O(\text{CC}^2)$. (A more rigorous bound using channel capacity derived from ND-RID contractivity is given in **Appendix F, section F.6**).
 
 **10.4.3 Theorem 42 (Inability to Construct Causal Loops)**
 

@@ -27,32 +27,41 @@ $$
 
 #### **S.2 Step 2: The CC-Context Stress–Energy Tensor $\Delta T_{\mu\nu}^{(CC)}$**
 
-Assume the context state occupies a volume $V_S$ and behaves as a signal-rich fluid with an equation-of-state parameter $w_c \approx 1/3$, which is plausible for a medium dominated by driven, propagating internal signals that are relativistic in nature. The energy density is $\rho_{context} = P_{context} / V_S$, and the pressure is $p_{context} = w_c \rho_{context}$. In the rest frame of system S, the perfect-fluid form of the stress-energy tensor gives:
+Assume the context state occupies a volume $V_S$ and behaves as a signal-rich fluid with an equation-of-state parameter $w_c \approx 1/3$, which is plausible for a medium dominated by driven, propagating internal signals that are relativistic in nature. The time-averaged energy density is
 $$
-\Delta T_{\mu\nu}^{(CC)} = \text{diag}(\rho_{context}, p_{context}, p_{context}, p_{context}) = \frac{P_{context}}{V_S} \text{diag}(1, w_c, w_c, w_c).
+u_{context}=\frac{P_{context}\,\tau_c}{V_S},\qquad p_{context}=w_c\,u_{context}.
 $$
-For $w_c = 1/3$, this becomes:
+In the rest frame of system S, the perfect-fluid stress–energy tensor is
 $$
-\Delta T\_{\mu\nu}^{(CC)} = \rho\_{context} \text{diag}(1, 1/3, 1/3, 1/3).
+\Delta T_{\mu\nu}^{(CC)}=\text{diag}\big(u_{context},\,p_{context},\,p_{context},\,p_{context}\big).
+$$
+For $w_c=1/3$,
+$$
+\Delta T_{\mu\nu}^{(CC)}=u_{context}\,\text{diag}(1,\,1/3,\,1/3,\,1/3).
 $$
 
 #### **S.3 Step 3: Gravitational Self-Disruption**
 
-In the weak-field limit of General Relativity, the effective gravitational source density is $\rho_{source} = \rho_{context} + 3 p_{context} = (1 + 3 w_c) \rho_{context}$. With $w_c = 1/3$, this gives $\rho_{source} = 2 \rho_{context}$. For a uniform sphere of radius $R_S$, the magnitude of the radial gravitational field inside the sphere is:
+In the weak-field limit of General Relativity, the effective source for the Newtonian field is
 $$
-g_{CC}(r) = \frac{4\pi G}{3} \rho_{source} r = \frac{8\pi G}{3} \rho_{context} r.
+\rho_{source}=\frac{u_{context}+3\,p_{context}}{c^2}=(1+3w_c)\,\frac{u_{context}}{c^2}.
 $$
-A target quantum system of linear extent $L_q$ located at a radius $r$ within this sphere experiences a gravitational potential difference across its volume of:
+For a uniform sphere of radius $R_S$, the radial gravitational field inside is
 $$
-\Delta\Phi_{diff} \approx g_{CC}(r) L_q.
+g_{CC}(r)=\frac{4\pi G}{3}\,\rho_{source}\,r.
 $$
-Over a coherence time $\tau_c$, this potential difference leads to a differential proper-time accumulation (gravitational time dilation) across the quantum system:
+A target of linear extent $L_q$ at radius $r$ experiences a potential difference
 $$
-\Delta\tau_d = \frac{\Delta\Phi_{diff}}{c^2} \tau_c = K P_{context},
+\Delta\Phi_{diff}\approx g_{CC}(r)\,L_q,
 $$
-where the geometric constant $K$ is defined as:
+and over coherence time $\tau_c$ the resulting proper-time difference is
 $$
-K := \frac{2 G L_q}{c^2 R_S^2}.
+\Delta\tau_d=\frac{\Delta\Phi_{diff}}{c^2}\,\tau_c
+=K\,P_{context},
+$$
+with
+$$
+K:=\frac{4\pi G}{3c^4}\,(1+3w_c)\,\frac{r\,L_q}{V_S}\,\tau_c^{2}.
 $$
 
 #### **S.4 Step 4: PCE Optimization and the Self-Limiting CC***
