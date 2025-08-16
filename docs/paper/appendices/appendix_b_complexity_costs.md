@@ -90,12 +90,12 @@ where $\delta_{\rm SPAP}$ is the dimensionless error margin and $C_{uni}$ is a d
     $$
     C_{logic}(\delta_{SPAP}) = \Omega\left(\log\left(\frac{1}{\delta_{SPAP}}\right)\right)
     $$
-3.  **Combined Bound for Unified Complexity \$C\_{uni}\$:** Achieving the overall task of high-accuracy SPAP-limited prediction requires addressing both sub-problems simultaneously. We formalize the computation required as a circuit (consistent with the operational proxy \$\hat{C}*v\$, Definition B.1).
-The logical depth of the circuit, \$T\$, must be sufficient to implement the DSRO simulation, requiring \$T = \Omega(C*{logic}) = \Omega(\log(1/\delta\_{SPAP}))\$.
-The width or space complexity of the circuit, \$W\$, must be sufficient to represent and process the information required for the statistical resolution. This involves distinguishing between distributions separated by \$\delta\_{SPAP}\$, requiring effective samples or parallel computations \$W = \Omega(C\_{stat}) = \Omega(1/(\delta\_{SPAP})^2)\$.
-The total unified complexity \$C\_{uni}\$, formalized as the circuit size (or time-space product), is bounded below by the product of depth and width, \$C\_{uni} = \Omega(T \cdot W)\$. This multiplicative relationship is rigorously justified because the logical operations (depth \$T\$) must be applied coherently across the entire informational substrate (width \$W\$) needed to resolve the fine-grained statistical distinctions. Therefore, the total complexity scales as:
-$     C_{uni} = \Omega(T \cdot W) = \Omega\left(\log\left(\frac{1}{\delta_{SPAP}}\right) \cdot \frac{1}{(\delta_{SPAP})^2}\right)
-    $
+3.  **Combined Bound for Unified Complexity $C_{\text{uni}}$:** Achieving the overall task of high-accuracy SPAP-limited prediction requires addressing both sub-problems simultaneously. We formalize the computation required as a circuit (consistent with the operational proxy $\hat{C}_v$, Definition B.1).
+The logical depth of the circuit, $T$, must be sufficient to implement the DSRO simulation, requiring $T = \Omega(C_{logic}) = \Omega(\log(1/\delta_{\rm SPAP}))$.
+The width or space complexity of the circuit, $W$, must be sufficient to represent and process the information required for the statistical resolution. This involves distinguishing between distributions separated by $\delta_{\rm SPAP}$, requiring effective samples or parallel computations $W = \Omega(C_{stat}) = \Omega(1/(\delta_{\rm SPAP})^2)$.
+The total unified complexity $C_{\text{uni}}$, formalized as the circuit size (or time-space product), is bounded below by the product of depth and width, $C_{\text{uni}} = \Omega(T \cdot W)$. This multiplicative relationship is rigorously justified because the logical operations (depth $T$) must be applied coherently across the entire informational substrate (width $W$) needed to resolve the fine-grained statistical distinctions. Therefore, the total complexity scales as:
+$$     C_{\text{uni}} = \Omega(T \cdot W) = \Omega\left(\log\left(\frac{1}{\delta_{\rm SPAP}}\right) \cdot \frac{1}{(\delta_{\rm SPAP})^2}\right)
+    $$
 This establishes the poly-logarithmic form in Equation (B.5) from a formal computational model perspective.
 
 This poly-logarithmic divergence of the dimensionless unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ (Eq B.5) represents the fundamental information-processing cost within the PU framework. This cost underlies the divergence of the Predictive Physical Complexity $C_{pred}(\alpha)$ in **Theorem 14** of the main text, as $C_{pred}$ must be sufficient to meet $C_{uni}$. Since physical realizability requires finite $C_P$, attaining performance arbitrarily close to $\alpha_{SPAP}$ is physically unattainable due to these diverging information-processing requirements.

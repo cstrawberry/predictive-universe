@@ -53,19 +53,19 @@ As an emergent property expected to arise from aggregate complexity $C_{agg}$, t
 
 Any function CC($C_{agg}$) satisfying the physical constraints outlined in Definition 31 must be expressible in the general form:
 $$
-\text{CC}(C_{agg}) = \alpha_{CC,max}\, G\!\left(\frac{C_{agg}-C_{op}}{C_{scale}}\right)\, \Theta(C_{agg}-C_{op}) \quad \text{(55)}
+\text{CC}(C_{agg}) = \alpha_{CC,max}\, \mathcal{G}\!\left(\frac{C_{agg}-C_{op}}{C_{scale}}\right)\, \Theta(C_{agg}-C_{op}) \quad \text{(55)}
 $$
 where:
 *   $\alpha_{CC,max} < 0.5$ is the maximum possible CC value (Theorem 39).
-*   $G: [0, \infty) \to [0, 1)$ is a dimensionless scaling function satisfying $G(0)=0$, $\lim_{x \to \infty} G(x) = 1$, $G'(x) \ge 0$ (monotonicity), and $G''(x) \le 0$ (diminishing returns).
+*   $\mathcal{G}: [0, \infty) \to [0, 1)$ is a dimensionless scaling function satisfying $\mathcal{G}(0)=0$, $\lim_{x \to \infty} \mathcal{G}(x) = 1$, $\mathcal{G}'(x) \ge 0$ (monotonicity), and $\mathcal{G}''(x) \le 0$ (diminishing returns).
 *   $C_{scale} > 0$ is a characteristic complexity scale over which CC develops significantly.
 *   $C_{op}$ is the Operational Threshold (Definition 13).
 *   $\Theta(C_{agg} - C_{op})$ is the Heaviside step function, enforcing the threshold behavior (Constraint 1).
-*Proof:* This mathematical form is constructed to satisfy the constraints. The argument $x = (C_{agg} - C_{op})/C_{scale}$ is normalized complexity above threshold. $G(x)$ maps this to $[0, 1)$, embodying constraints 3 and 4. Multiplying by $\alpha_{CC,max}$ satisfies constraint 2. $\Theta$ implements constraint 1. QED
+*Proof:* This mathematical form is constructed to satisfy the constraints. The argument $x = (C_{agg} - C_{op})/C_{scale}$ is normalized complexity above threshold. $\mathcal{G}(x)$ maps this to $[0, 1)$, embodying constraints 3 and 4. Multiplying by $\alpha_{CC,max}$ satisfies constraint 2. $\Theta$ implements constraint 1. QED
 
 **9.3.4 Definition 32 (Def 32): Specific CC Scaling Model Example**
 
-For illustrative purposes, we adopt a specific rational function model for $G(x)$ satisfying the required properties: $G(x) = x / (1+x)$. This minimal phenomenological model is chosen for its simplicity and consistency with derived principles (see Section 6.7). Substituting this into the general form (Equation 55) yields:
+For illustrative purposes, we adopt a specific rational function model for $\mathcal{G}(x)$ satisfying the required properties: $\mathcal{G}(x) = x / (1+x)$. This minimal phenomenological model is chosen for its simplicity and consistency with derived principles (see Section 6.7). Substituting this into the general form (Equation 55) yields:
 $$
 \text{CC}(C_{agg}) = \alpha_{CC,max}\, \frac{C_{agg}-C_{op}}{C_{scale} + (C_{agg}-C_{op})}\, \Theta(C_{agg}-C_{op}) \quad \text{(56)}
 $$
@@ -120,7 +120,7 @@ The resulting observable probability is:
 $$
 P_{obs}(i) = P_{Born}(i) + f_{CTB} = (1 - \text{CC}(S)) P_{Born}(i) + \text{CC}(S) p_{target}(S, i) \quad \text{(59)}
 $$
-*Interpretation:* $P_{obs}$ is a linear interpolation between Born and target probabilities, weighted by CC(S).
+*Interpretation:* $P_{obs}$ is a linear interpolation between Born and target probabilities, weighted by CC(S). For example, for a binary outcome with $P_{Born}=(0.6, 0.4)$, a context targeting the first outcome $p_{target}=(1, 0)$, and a system with $\text{CC}=0.01$, the observable probabilities would be shifted to $P_{obs} \approx (0.99 \cdot 0.6 + 0.01 \cdot 1, 0.99 \cdot 0.4 + 0.01 \cdot 0) = (0.604, 0.396)$, a small but potentially detectable bias.
 
 **9.5.4 Theorem 37 (Consistency of CTB Model)**
 
