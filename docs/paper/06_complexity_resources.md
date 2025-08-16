@@ -13,7 +13,8 @@ Given the relationship between Predictive Physical Complexity ($C \equiv C_P$, a
     $$
     \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda R'(C^*) + R_I'(C^*) \quad \text{(18)}
     $$
-    (This corresponds to the condition $\Psi(C^) = 0$, where $\Psi$ is the Adaptation Driving Force, Definition 20). Here $\Gamma_0$ is a dimensionless power-conversion factor (Sec. 6.4).
+    (This corresponds to the condition $\Psi(C^*) = 0$, where $\Psi$ is the Adaptation Driving Force, Definition 20). Here $\Gamma_0$ is the power-conversion factor (Definition 20) with dimensions of power $[E][T]^{-1}$.
+
 2.  **Second Order Optimality (Diminishing Returns Exceed Cost Acceleration):** For a stable maximum, the second derivative of the net benefit must be negative:
     $$
     \Gamma_0 \frac{\partial^2 PP}{\partial C^2}\bigg|_{C^*} < \lambda R''(C^*) + R_I''(C^*) \quad \text{(19)}

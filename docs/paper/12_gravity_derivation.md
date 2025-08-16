@@ -94,7 +94,9 @@ The derivation proceeds by substituting the Raychaudhuri equation [Raychaudhuri 
     for some scalar function $f(x)$.
 4.  **Determining $f(x)$ & EFE Form:** Equation (75) is $R_{\alpha\beta} - 8\pi G T_{\alpha\beta}^{(MPU)} = f(x) g_{\alpha\beta}$. To determine the scalar function $f(x)$, we take the covariant divergence $\nabla^\alpha$ of both sides:
     $$ \nabla^\alpha R_{\alpha\beta} - 8\pi G \nabla^\alpha T_{\alpha\beta}^{(MPU)} = \nabla^\alpha (f(x) g_{\alpha\beta}) $$
-    Using the covariant conservation of the MPU stress-energy tensor, $\nabla^\alpha T_{\alpha\beta}^{(MPU)} = 0$ (Theorem B.5), and the metric compatibility condition $\nabla^\alpha g_{\alpha\beta} = 0$, the equation simplifies to:
+    Using the covariant conservation of the MPU stress–energy tensor, 
+    $\nabla^\alpha T_{\alpha\beta}^{(\mathrm{MPU})}=0$ (Appendix B, Theorem B.5; Appendix F, Theorem F.1), and metric compatibility $\nabla_\gamma g_{\alpha\beta}=0$, the equation simplifies to:
+
     $$ \nabla^\alpha R_{\alpha\beta} = (\nabla^\alpha f(x)) g_{\alpha\beta} = \nabla_\beta f(x) $$
     From the contracted Bianchi identity, we know that $\nabla^\alpha R_{\alpha\beta} = \frac{1}{2} \nabla_\beta R$, where $R$ is the Ricci scalar ($R = g^{\mu\nu}R_{\mu\nu}$).
     Therefore, we have:

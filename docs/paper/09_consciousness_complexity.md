@@ -41,7 +41,7 @@ $$
 \mathrm{CC}(S):=\|L_S\|_{\mathrm{op}} \quad \text{(54)}
 $$
 
-where $\|L_S\|_{\mathrm{op}}:=\sup_{\substack{\rho\ge0,\ \mathrm{tr}\,\rho=1\\ 0\le E\le I}}\big|\mathrm{tr}\!\big(L_S(\rho)E\big)\big|$, ensuring $|\Delta P(i)|\le \mathrm{CC}(S)$ for all POVMs. $\mathrm{CC}(S)$ is a dimensionless quantity between 0 and $\alpha_{\mathrm{CC,max}}$ (constrained further in Section 10.2).
+where $\|L_S\|_{\mathrm{op}}:=\sup_{\substack{\rho\ge0,\ \mathrm{tr}\,\rho=1\\ 0\le E\le I}}\big|\mathrm{tr}\!\big(L_S(\rho)E\big)\big|$, ensuring $|\Delta P(i)|\le \mathrm{CC}(S)$ for all positive operator-valued measures (POVMs). $\mathrm{CC}(S)$ is a dimensionless quantity between 0 and $\alpha_{\mathrm{CC,max}}$ (constrained further in Section 10.2).
 
 **9.3.2 Definition 31 (Def 31): Physical Constraints on CC Scaling**
 

@@ -162,4 +162,5 @@
 
 *   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.3, Theorem C.6, Appendix D) Theorem asserting POP/PCE dynamics necessarily drive MPU networks to self-organize into configurations exhibiting large-scale geometric regularity (Definition C.3). Justified by necessity arguments (Appendix C) and dynamical convergence (Appendix D). Foundational for emergence of smooth spacetime.
 
+*   **UCT (Unified Cost of Transgression):** (Appendix N) The thermodynamic/operational cost functional that quantifies the resource penalty for attempts to surpass the Prediction Coherence Boundary; unifies predictive and relativistic limits.
 
