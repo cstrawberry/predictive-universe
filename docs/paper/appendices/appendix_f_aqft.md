@@ -54,7 +54,7 @@ $$
 =0,
 $$
 
-for \$A\_n\in\mathfrak A\_n(\mathcal O\_1)\$, \$B\_n\in\mathfrak A\_n(\mathcal O\_2)\$.  Hence
+for $A_n\in\mathfrak A_n(\mathcal O_1)$, $B_n\in\mathfrak A_n(\mathcal O_2)$.  Hence
 
 $$
 [\mathfrak A(\mathcal O_1),\, \mathfrak A(\mathcal O_2)] = \{0\} \quad \tag{F.2}

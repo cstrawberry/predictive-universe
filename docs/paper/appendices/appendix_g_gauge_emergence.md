@@ -503,7 +503,7 @@ The Standard Model gauge group $G_{SM}=SU(3)\times SU(2)\times U(1)$ with its kn
 *   **Three Generations:** The mechanism outlined above selects the gauge group and the fundamental fermion representations of a *single generation*. The existence of three (nearly) identical copies is a distinct puzzle that may relate to global topological features, multiple near‑degenerate minima of $V(x)$, or symmetry‑breaking in an early high‑energy phase of MPU evolution.
 *   **Emergent Couplings and Masses:** The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yukawas are determined by the location and depth of the PCE minimum. Computing these from first principles requires evaluating the D‑dependent coefficients $\eta_{ben}(D),\lambda_c(D),\lambda_f(D),\lambda_m(D)$ from MPU microdynamics, an explicit goal for future work. The ratios between these couplings are further constrained by the PCE optimization, a topic explored in Appendix G.10.
 
----
+
 
 ## G.9 A Proposed Pathway Toward Deriving the Fine‑Structure Constant $\alpha_{em}$
 
@@ -512,7 +512,7 @@ This section develops a first‑principles pathway for computing the electromagn
 *Units.* Natural units with $\hbar=c=\varepsilon_0=1$ (Heaviside–Lorentz/rationalized). Information is in **nats**. In these units
 
 $$
-\alpha_{em}=\frac{e^2}{4\pi}.
+\alpha_{em}=\frac{g_e^2}{4\pi}.
 \tag{G.9.1}
 $$
 
@@ -520,9 +520,9 @@ $$
 
 **Assumptions.**
 
-A1. *LAN regularity.* The one‑cycle FPL channel family $p_e$ is differentiable in quadratic mean at $e=0$; the induced stationary process is ergodic and $\beta$‑mixing with summable correlations; the **per‑event Fisher information operator** exists and is finite.
+A1. *LAN regularity.* The one‑cycle FPL channel family $p_{g_e}$ is differentiable in quadratic mean at $g_e=0$; the induced stationary process is ergodic and $\beta$‑mixing with summable correlations; the **per‑event Fisher information operator** exists and is finite.
 
-A2. *Mismatch energetics.* For small $e$, the free‑energy penalty for gauge‑invariant mismatch admits $\Delta\mathcal F_{\mathrm{mismatch}}(e)=\kappa_F e^2+O(e^4)$ with $\kappa_F>0$.
+A2. *Mismatch energetics.* For small $g_e$, the free‑energy penalty for gauge‑invariant mismatch admits $\Delta\mathcal F_{\mathrm{mismatch}}(g_e)=\kappa_F g_e^2+O(g_e^4)$ with $\kappa_F>0$.
 
 A3. *Coding overhead law.* To achieve per‑cycle logical error probability $p_L\ll1$, the minimal incremental **complexity** scales as
 $\Delta C_{\mathrm{gauge}}(p_L)\sim K[\ln(1/p_L)]^\gamma$ with $\gamma\ge1$, $K>0$ (poly‑log reliability cost; capacity‑approaching codes).
@@ -532,58 +532,58 @@ $R(C)=R(C_0)+r_p(C-C_0)^{\gamma_p}$ with $\gamma_p>1$, $r_p>0$.
 
 A5. *POVM readout.* Each FPL cycle ends with a finite‑outcome POVM on $\mathcal H_0$ (dimension $d_0=8$).
 
-A6. *Mode accounting.* The per‑event Fisher information operator $J$ at $e=0$ has $M$ nonzero eigenvalues ${\lambda_i}_{i=1}^M$ with trace $k_b\coloneqq\sum_i\lambda_i$, $1\le M\le d_0^2-1$.
+A6. *Mode accounting.* The per‑event Fisher information operator $J$ at $g_e=0$ has $M$ nonzero eigenvalues ${\lambda_i}_{i=1}^M$ with trace $S_1\coloneqq\sum_i\lambda_i$, $1\le M\le d_0^2-1$.
 
 **Table G.9.1. Symbols and units.**
 
 | Symbol                       | Meaning                                                                           | Units          |
 | ---------------------------- | --------------------------------------------------------------------------------- | -------------- |
-| $e$                        | $U(1)$ coupling                                                                 | —              |
-| $u$                        | $u\coloneqq e^2$                                                                | —              |
-| $\alpha_{em}$             | $e^2/(4\pi)$                                                                    | —              |
+| $g_e$                      | $U(1)$ coupling (electric charge)                                               | —              |
+| $u$                        | $u\coloneqq g_e^2$                                                              | —              |
+| $\alpha_{em}$             | $g_e^2/(4\pi)$                                                                    | —              |
 | $\tau,\ \nu$               | FPL cadence time $\tau$, event rate $\nu=1/\tau$                              | time,\ 1/time  |
 | $\mu^*$                   | Operating (renormalization) scale $\mu^*=\kappa_\mu\nu$, $\kappa_\mu=O(1)$ | energy         |
 | $C, C_0$                  | Predictive Physical Complexity (baseline $C_0$)                                | —              |
 | $R(C)$                     | **Power** at complexity $C$                                                     | energy/time    |
 | $r_p,\ \gamma_p$         | Parameters of $R(C)$                                                            | energy/time, — |
 | $\Gamma_0$                | Energy‑per‑nat exchange factor (rate‑level PCE)                                   | energy/nat     |
-| $P_{\mathrm{cost}}(e)$    | Operating power at coupling $e$                                                 | energy/time    |
-| $I_{\mathrm{rate}}(e)$    | Predictive‑information **rate**                                                   | nats/time      |
-| $V_{\mathrm{benefit}}(e)$ | Per‑event predictive benefit                                                      | nats/event     |
+| $P_{\mathrm{cost}}(g_e)$  | Operating power at coupling $g_e$                                               | energy/time    |
+| $I_{\mathrm{rate}}(g_e)$  | Predictive‑information **rate**                                                   | nats/time      |
+| $V_{\mathrm{benefit}}(g_e)$| Per‑event predictive benefit                                                      | nats/event     |
 | $p_L$                     | Logical mismatch probability per cycle                                            | —              |
 | $\beta_{\mathrm{eff}}$    | Cadence‑scale inverse temperature                                                 | 1/energy       |
 | $\kappa_F$                | Small‑deviation field‑mismatch scale                                              | energy         |
-| $J$                        | Per‑event Fisher information operator at $e=0$                                  | —              |
+| $J$                        | Per‑event Fisher information operator at $g_e=0$                                | —              |
 | ${\lambda_i}$             | Nonzero spectrum of $J$                                                         | —              |
-| $k_b$                     | $\sum_i\lambda_i=\mathrm{Tr},J$                                               | —              |
+| $S_1$                      | $\sum_i\lambda_i=\mathrm{Tr}\,J$ (spectral sum)                                  | —              |
 | $\gamma$                   | Coherence‑overhead complexity exponent ($\ge1$)                                 | —              |
 | $c_\gamma$                | Gauge‑overhead coefficient $=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$          | —              |
 | $\gamma_{\mathrm{eff}}$   | Effective cost exponent $=\gamma\gamma_p>1$                                    | —              |
-| $A_{\mathrm{eff}}$        | Effective cost coefficient $=r_p c_\gamma^{\gamma_p}$                        | energy/time    |
-| $d_0$                     | Baseline Hilbert‑space dimension ($=8$)                                         | —              |
+| $A_{\mathrm{PCE}}$        | Effective cost coefficient $=r_p c_\gamma^{\gamma_p}$                        | energy/time    |
+| $d_0$                      | MPU alphabet size / Hilbert‑space dimension ($=2^{K_0}=8$)                      | —              |
 
 *Mode counting.* We adopt the **complex‑mode** convention: per mode $\ln(1+\mathrm{SNR})$ nats/event. (A real‑mode convention with $\tfrac12\ln(1+\mathrm{SNR})$ per real scalar and doubled count yields the same total benefit if applied consistently.)
 
 ### G.9.2 Predictive Benefit from LAN Information Geometry
 
-Let one FPL cycle with POVM readout induce a classical kernel $p_e(x_{t+1}|x_t,y_t)$. Define the score $s(z)=\partial_e \ln p_e(z)|_{e=0}$ with $\mathbb E_{p_0}[s]=0$. Under A1 (LAN), the one‑cycle log‑likelihood ratio admits the Gaussian tangent expansion. Diagonalizing the **per‑event** Fisher information operator $J$ yields $M$ independent complex Gaussian shift modes with eigenvalues ${\lambda_i}$. In the whitened basis (unit noise covariance per mode), the per‑mode small‑signal SNR is $\lambda_i u$ with $u=e^2$.
+Let one FPL cycle with POVM readout induce a classical kernel $p_{g_e}(x_{t+1}|x_t,y_t)$. Define the score $s(z)=\partial_{g_e} \ln p_{g_e}(z)|_{g_e=0}$ with $\mathbb E_{p_0}[s]=0$. Under A1 (LAN), the one‑cycle log‑likelihood ratio admits the Gaussian tangent expansion. Diagonalizing the **per‑event** Fisher information operator $J$ yields $M$ independent complex Gaussian shift modes with eigenvalues ${\lambda_i}$. In the whitened basis (unit noise covariance per mode), the per‑mode small‑signal SNR is $\lambda_i u$ with $u=g_e^2$.
 
 For a complex Gaussian mode, the **per‑event** mutual information is $\ln(1+\lambda_i u)$ nats. Summing over modes gives
 
 $$
-V_{\mathrm{benefit}}(e)=\sum_{i=1}^M \ln(1+\lambda_i u),
+V_{\mathrm{benefit}}(g_e)=\sum_{i=1}^M \ln(1+\lambda_i u),
 \qquad
-I_{\mathrm{rate}}(e)=\nu\,V_{\mathrm{benefit}}(e).
+I_{\mathrm{rate}}(g_e)=\nu\,V_{\mathrm{benefit}}(g_e).
 \tag{G.9.2}
 $$
 
-Equivalently, $V_{\mathrm{benefit}}(e)=\log\det(I+u\Lambda)$, with $\Lambda=\mathrm{diag}(\lambda_1,\dots,\lambda_M)$. Since $\ln(1+x)=x+O(x^2)$,
-$\dfrac{d}{du}V_{\mathrm{benefit}}(u)\big|_{u=0}=k_b$ with $k_b=\sum_i\lambda_i$.
+Equivalently, $V_{\mathrm{benefit}}(g_e)=\log\det(I+u\Lambda)$, with $\Lambda=\mathrm{diag}(\lambda_1,\dots,\lambda_M)$. Since $\ln(1+x)=x+O(x^2)$,
+$\dfrac{d}{du}V_{\mathrm{benefit}}(u)\big|_{u=0}=S_1$ with $S_1=\sum_i\lambda_i$.
 
-**Capacity cap (alphabet bound).** Because each cycle ends with a $d_0$‑outcome POVM, the accessible classical information per event satisfies $\le H(\mathrm{output})\le \ln d_0$, hence:
+**Capacity cap (alphabet bound).** Because each cycle ends with a $d_0$‑outcome POVM, where $d_0=8$ is the MPU alphabet size (Theorem 23), the accessible classical information per event satisfies $\le H(\mathrm{output})\le \ln d_0$, hence:
 
 $$
-V_{\mathrm{benefit}}(e)\ \le\ \ln d_0\ (= \ln 8).
+V_{\mathrm{benefit}}(g_e)\ \le\ \ln d_0\ (= \ln 8).
 \tag{G.9.3}
 $$
 
@@ -592,16 +592,16 @@ $$
 A cadence‑scale Gibbs–Donsker–Varadhan variational principle [Dembo & Zeitouni, 1998] implies the gauge‑invariant mismatch tail
 
 $$
-p_L(e)\ \le\ \exp\!\Big(-\beta_{\mathrm{eff}}\ \Delta\mathcal F_{\mathrm{mismatch}}(e)\Big),
+p_L(g_e)\ \le\ \exp\!\Big(-\beta_{\mathrm{eff}}\ \Delta\mathcal F_{\mathrm{mismatch}}(g_e)\Big),
 \qquad
-\Delta\mathcal F_{\mathrm{mismatch}}(e)=\kappa_F e^2+O(e^4).
+\Delta\mathcal F_{\mathrm{mismatch}}(g_e)=\kappa_F g_e^2+O(g_e^4).
 \tag{G.9.4}
 $$
 
 Under A3, the minimal **incremental complexity** required to drive $p_L$ to the tail (achievable via exponential tilting compatible with ND–RID) scales as
 
 $$
-\Delta C_{\mathrm{gauge}}(e)\ \approx\ c_\gamma\,e^{2\gamma},
+\Delta C_{\mathrm{gauge}}(g_e)\ \approx\ c_\gamma\,g_e^{2\gamma},
 \qquad
 c_\gamma\coloneqq K(\beta_{\mathrm{eff}}\kappa_F)^\gamma .
 \tag{G.9.5}
@@ -610,8 +610,8 @@ $$
 With A4, the **incremental power** cost is
 
 $$
-P_{\mathrm{cost}}(e)-R(C_0)=r_p\!\left(\Delta C_{\mathrm{gauge}}(e)\right)^{\gamma_p}
-\ \approx\ A_{\mathrm{eff}}\,e^{2\gamma_{\mathrm{eff}}}, 
+P_{\mathrm{cost}}(g_e)-R(C_0)=r_p\!\left(\Delta C_{\mathrm{gauge}}(g_e)\right)^{\gamma_p}
+\ \approx\ A_{\mathrm{PCE}}\,g_e^{2\gamma_{\mathrm{eff}}}, 
 \tag{G.9.6}
 $$
 
@@ -620,7 +620,7 @@ where
 $$
 \gamma_{\mathrm{eff}}\coloneqq \gamma\gamma_p>1,
 \qquad
-A_{\mathrm{eff}}\coloneqq r_p\,c_\gamma^{\gamma_p}>0.
+A_{\mathrm{PCE}}\coloneqq r_p\,c_\gamma^{\gamma_p}>0.
 \tag{G.9.7}
 $$
 
@@ -629,79 +629,79 @@ $$
 Define the **rate‑level** PCE potential
 
 $$
-V_{\mathrm{PCE}}(e)\coloneqq P_{\mathrm{cost}}(e)-\Gamma_0\,I_{\mathrm{rate}}(e).
+V_{\mathrm{PCE}}(g_e)\coloneqq P_{\mathrm{cost}}(g_e)-\Gamma_0\,I_{\mathrm{rate}}(g_e).
 \tag{G.9.8}
 $$
 
-With $u=e^2$ and dropping the additive constant $R(C_0)$, minimize
+With $u=g_e^2$ and dropping the additive constant $R(C_0)$, minimize
 
 $$
-\phi(u)\ \coloneqq\ A_{\mathrm{eff}}\,u^{\gamma_{\mathrm{eff}}}
+\phi(u)\ \coloneqq\ A_{\mathrm{PCE}}\,u^{\gamma_{\mathrm{eff}}}
 -\Gamma_0\,\nu\sum_{i=1}^M \ln(1+\lambda_i u),
 \qquad u\ge 0.
 \tag{G.9.9}
 $$
 
 **Theorem G.9.1 (Strict convexity; unique emergence).**
-If $\gamma_{\mathrm{eff}}>1$ and $A_{\mathrm{eff}},\Gamma_0,\nu>0$, then $\phi$ is strictly convex on $(0,\infty)$ and $\displaystyle \lim_{u\to0^+}\phi'(u)=-\Gamma_0\nu k_b<0$ with $k_b=\sum_i\lambda_i$. Hence the non‑interacting point $u=0$ is unstable and there is a unique PCE‑optimal $u^*>0$.
+If $\gamma_{\mathrm{eff}}>1$ and $A_{\mathrm{PCE}},\Gamma_0,\nu>0$, then $\phi$ is strictly convex on $(0,\infty)$ and $\displaystyle \lim_{u\to0^+}\phi'(u)=-\Gamma_0\nu S_1<0$ with $S_1=\sum_i\lambda_i$. Hence the non‑interacting point $u=0$ is unstable and there is a unique PCE‑optimal $u^*>0$.
 
-*Proof.* $\phi'(u)=A_{\mathrm{eff}}\gamma_{\mathrm{eff}}u^{\gamma_{\mathrm{eff}}-1}-\Gamma_0\nu\sum_i\frac{\lambda_i}{1+\lambda_i u}$.
-$\ \phi''(u)=A_{\mathrm{eff}}\gamma_{\mathrm{eff}}(\gamma_{\mathrm{eff}}-1)u^{\gamma_{\mathrm{eff}}-2}+\Gamma_0\nu\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}>0$ for $u>0$. $\square$
+*Proof.* $\phi'(u)=A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}u^{\gamma_{\mathrm{eff}}-1}-\Gamma_0\nu\sum_i\frac{\lambda_i}{1+\lambda_i u}$.
+$\ \phi''(u)=A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}(\gamma_{\mathrm{eff}}-1)u^{\gamma_{\mathrm{eff}}-2}+\Gamma_0\nu\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}>0$ for $u>0$. $\square$
 
 The equilibrium $u^*$ solves
 
 $$
-A_{\mathrm{eff}}\gamma_{\mathrm{eff}}\,(u^*)^{\gamma_{\mathrm{eff}}-1}
+A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}\,(u^*)^{\gamma_{\mathrm{eff}}-1}
 =\Gamma_0\nu\sum_{i=1}^M \frac{\lambda_i}{1+\lambda_i u^*}.
 \tag{G.9.10}
 $$
 
-**Capacity‑aware upper bound.** By Schur‑concavity, $\sum_i\ln(1+\lambda_i u)$ is maximized at fixed $(k_b,M)$ by the flat spectrum $\lambda_i=k_b/M$. Imposing the cap (G.9.3) in that worst case yields the universal bound
+**Capacity‑aware upper bound.** By Schur‑concavity, $\sum_i\ln(1+\lambda_i u)$ is maximized at fixed $(S_1,M)$ by the flat spectrum $\lambda_i=S_1/M$. Imposing the cap (G.9.3) in that worst case yields the universal bound
 
 $$
-M\ln\!\Big(1+\tfrac{k_b}{M}u^*\Big)\ \le\ \ln d_0
+M\ln\!\Big(1+\tfrac{S_1}{M}u^*\Big)\ \le\ \ln d_0
 \quad\Rightarrow\quad
-u^*\ \le\ \frac{M}{k_b}\Big(d_0^{\,1/M}-1\Big).
+u^*\ \le\ \frac{M}{S_1}\Big(d_0^{\,1/M}-1\Big).
 \tag{G.9.11}
 $$
 
-If the unconstrained minimizer of (G.9.9) violates this inequality, the true optimum lies on the boundary $V_{\mathrm{benefit}}(e)=\ln d_0$.
+If the unconstrained minimizer of (G.9.9) violates this inequality, the true optimum lies on the boundary $V_{\mathrm{benefit}}(g_e)=\ln d_0$.
 
 **Special case (flat spectrum, minimal exponents).**
-Let $\lambda_i=k_b/M$, $\gamma=1$, and $\gamma_p=2$ so that $\gamma_{\mathrm{eff}}=2$. Then (G.9.10) reduces to
+Let $\lambda_i=S_1/M$, $\gamma=1$, and $\gamma_p=2$ so that $\gamma_{\mathrm{eff}}=2$. Then (G.9.10) reduces to
 
 $$
-2A_{\mathrm{eff}}\,u^*=\Gamma_0\nu\,\frac{k_b}{1+\tfrac{k_b}{M}u^*},
+2A_{\mathrm{PCE}}\,u^*=\Gamma_0\nu\,\frac{S_1}{1+\tfrac{S_1}{M}u^*},
 \tag{G.9.12}
 $$
 
 with positive solution
 
 $$
-u^*=\frac{M}{2k_b}\!\left(\sqrt{\,1+\frac{2\,\Gamma_0\nu\,k_b^2}{A_{\mathrm{eff}}\,M}}\ -\ 1\right),
+u^*=\frac{M}{2S_1}\!\left(\sqrt{\,1+\frac{2\,\Gamma_0\nu\,S_1^2}{A_{\mathrm{PCE}}\,M}}\ -\ 1\right),
 \qquad
 \alpha_{em}(\mu^*)=\frac{u^*}{4\pi},\ \ \mu^*=\kappa_\mu\nu .
 \tag{G.9.13}
 $$
 
-For large $\Gamma_0\nu/A_{\mathrm{eff}}$,
+For large $\Gamma_0\nu/A_{\mathrm{PCE}}$,
 
 $$
-u^*\ =\ \frac{\sqrt{M}}{2}\sqrt{\frac{2\,\Gamma_0\nu}{A_{\mathrm{eff}}}}\ -\ \frac{M}{2k_b}\ +\ O\!\left(\sqrt{\frac{A_{\mathrm{eff}}}{\Gamma_0\nu}}\right).
+u^*\ =\ \frac{\sqrt{M}}{2}\sqrt{\frac{2\,\Gamma_0\nu}{A_{\mathrm{PCE}}}}\ -\ \frac{M}{2S_1}\ +\ O\!\left(\sqrt{\frac{A_{\mathrm{PCE}}}{\Gamma_0\nu}}\right).
 \tag{G.9.14}
 $$
 
 ### G.9.5 Computational Program
 
-1.  **Baseline ($e=0$).** Fix an admissible FPL on $\mathcal H_0$ ($d_0=8$), an ND–RID‑compatible noise model, and a strictly convex $R(C)$. Solve the baseline PCE to obtain $\Phi_0^*$, $C_0$, $\Gamma_0$, $\nu$, and the stationary kernel $p_0$.
-2.  **Small‑$e$ response.** Specify the $U(1)$ deformation; compute the **per‑event** Fisher information operator $J$, its spectrum ${\lambda_i}$, and $k_b=\sum_i\lambda_i$.
-3.  **Coherence overhead.** Choose any capacity-approaching code family (fixing $\gamma$); estimate $c_\gamma=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$; set $A_{\mathrm{eff}}=r_p c_\gamma^{\gamma_p}$.
+1.  **Baseline ($g_e=0$).** Fix an admissible FPL on $\mathcal H_0$ ($d_0=8$), an ND–RID‑compatible noise model, and a strictly convex $R(C)$. Solve the baseline PCE to obtain $\Phi_0^*$, $C_0$, $\Gamma_0$, $\nu$, and the stationary kernel $p_0$.
+2.  **Small‑$g_e$ response.** Specify the $U(1)$ deformation; compute the **per‑event** Fisher information operator $J$, its spectrum ${\lambda_i}$, and $S_1=\sum_i\lambda_i$.
+3.  **Coherence overhead.** Choose any capacity-approaching code family (fixing $\gamma$); estimate $c_\gamma=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$; set $A_{\mathrm{PCE}}=r_p c_\gamma^{\gamma_p}$.
 4.  **Equilibrium and cap.** Solve (G.9.10) for $u^*$ and verify the capacity bound (G.9.11); if violated, place the optimum on the boundary $V_{\mathrm{benefit}}=\ln d_0$.
 5.  **RG matching.** Report $\alpha_{em}^{\overline{\mathrm{MS}}}(\mu^*)=u^*/(4\pi)$ (or specify the on‑shell scheme), with $\kappa_\mu=O(1)$ fixed by the cadence/clock‑rate mapping. Evolve to laboratory scales by standard QED running with threshold matching.
 
 ### G.9.6 Conclusion
 
-Within PU, the electromagnetic coupling emerges as a **rate‑level PCE equilibrium** balancing the predictive benefit of $U(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non‑interacting state $e=0$ is unstable and the unique optimum $u^*>0$ determines $\alpha_{em}(\mu^*)=u^*/(4\pi)$. The inputs $\Gamma_0$, $\nu$, $A_{\mathrm{eff}}$, $\gamma_{\mathrm{eff}}$, and ${\lambda_i}$ are operational functionals of the baseline PCE‑optimal FPL, and the capacity‑aware bound (G.9.11) supplies a falsifiable constraint independent of micro‑details.
+Within PU, the electromagnetic coupling emerges as a **rate‑level PCE equilibrium** balancing the predictive benefit of $U(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non‑interacting state $g_e=0$ is unstable and the unique optimum $u^*>0$ determines $\alpha_{em}(\mu^*)=u^*/(4\pi)$. The inputs $\Gamma_0$, $\nu$, $A_{\mathrm{PCE}}$, $\gamma_{\mathrm{eff}}$, and ${\lambda_i}$ are operational functionals of the baseline PCE‑optimal FPL, and the capacity‑aware bound (G.9.11) supplies a falsifiable constraint independent of micro‑details.
 
 ## G.10 Conclusion
 

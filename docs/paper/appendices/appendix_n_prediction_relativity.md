@@ -55,7 +55,7 @@ A distinct but analogous set of thermodynamic constraints arises from the act of
 
 The PU framework establishes that information processing, particularly the irreversible logical steps inherent in the SPAP cycle, incurs a minimal thermodynamic cost (Theorem 31: $\varepsilon \ge \ln 2$). An MPU "accelerating" its predictive capabilities performs more such operations per unit time, leading to an increased rate of internal heat generation, $dQ_{internal}/dt$.
 
-If this self-generated heat is not dissipated to an external environment with perfect efficiency, the MPU's internal effective temperature, $T_{internal\_eff}$, will rise. This internally generated thermal environment acts as a source of noise, directly impacting the MPU's own predictive machinery. Consistent with the temperature dependence of the physical cost function $R(C, T_{eff})$ (Section N.3.1), an increase in $T_{internal\_eff}$ raises the marginal cost $\partial R / \partial C$. Consequently, to maintain a target predictive performance $PP_{op}$ or to achieve further increases in $C_P$ in the face of this self-induced noise, the MPU must allocate additional complexity, $C_{noise,internal}$. This represents another component of the total required complexity, $C_{req}$.
+If this self-generated heat is not dissipated to an external environment with perfect efficiency, the MPU's internal effective temperature, $T_{internal_eff}$, will rise. This internally generated thermal environment acts as a source of noise, directly impacting the MPU's own predictive machinery. Consistent with the temperature dependence of the physical cost function $R(C, T_{eff})$ (Section N.3.1), an increase in $T_{internal_eff}$ raises the marginal cost $\partial R / \partial C$. Consequently, to maintain a target predictive performance $PP_{op}$ or to achieve further increases in $C_P$ in the face of this self-induced noise, the MPU must allocate additional complexity, $C_{noise,internal}$. This represents another component of the total required complexity, $C_{req}$.
 
 ### N.3.4 Effective Limits on the Rate of Predictive Acceleration
 
@@ -84,7 +84,7 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 >     *   $C_{SPAP}(PP(t))$ is the complexity needed to achieve performance $PP(t)$ against the SPAP limit [Thm. 14].
 >     *   $C_{noise,external}(a(t))$ is the additional complexity required to counteract Unruh noise, whose existence and monotonicity are derived from PCE equilibrium conditions [Lemma N.4].
 >     *   $C_{noise,internal}(A_{pred}(t))$ is the additional complexity required to counteract self-generated thermal noise from rapid changes in internal processing rates [Section N.3.3].
-> *   **$T_{eff}(t) = T_{bath} + T_U(a(t)) + T_{internal\_eff}(A_{pred}(t))$** is the total effective temperature.
+> *   **$T_{eff}(t) = T_{bath} + T_U(a(t)) + T_{internal_eff}(A_{pred}(t))$** is the total effective temperature.
 > *   **$R(C, T_{eff})$** is the PU physical operational cost function, generalized for temperature dependence [Section N.3.1].
 >
 > The optimal trajectory is one that minimizes this total work integral, forcing a trade-off between reaching a destination quickly (increasing $W_{kin}$ and $W_{pred}$ via external acceleration) and adapting or learning quickly (increasing $W_{pred}$ via internal predictive acceleration), all while maintaining high predictive accuracy (increasing $W_{pred}$ via the $C_{SPAP}$ term).

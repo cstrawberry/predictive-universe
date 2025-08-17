@@ -138,11 +138,11 @@ The global, coupled PCE optimization of the MPU network vacuum yields a unique, 
 
 Substituting these PCE-optimal values into the foundational relation (Q.15) yields the final result for the ratio of the MPU scale to the Planck scale:
 $$
-\frac{\delta^2}{L\_P^2} \approx 8\ln 2,\frac{\chi^*}{\eta^*}
+\frac{\delta^2}{L_P^2} \approx 8\ln 2,\frac{\chi^*}{\eta^*}
 $$
 $$
 \boxed{
-\frac{\delta}{L\_P} = \sqrt{8\ln 2,\frac{\chi^*}{\eta^*}} \approx 2.355
+\frac{\delta}{L_P} = \sqrt{8\ln 2,\frac{\chi^*}{\eta^*}} \approx 2.355
 }
 \tag{Q.18}
 $$

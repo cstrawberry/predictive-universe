@@ -164,7 +164,7 @@ $$
 \tag{U.13}
 $$
 
-Given $\Lambda L_P^2 \approx 1.1\times 10^{-122}$,
+Given $\Lambda L_P^2 \sim 10^{-122}$ (see **Appendix V** for a precise inversion using Planck-2018 central values).
 
 $$
 \boxed{

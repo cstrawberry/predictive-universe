@@ -320,9 +320,9 @@ We connect the bulk entropy generation to the information capacity of the bounda
 
 **6. Emergent Planck Length from PU Consistency**
 
-The PU framework provides an independent derivation for the emergent Planck length $L_P^2 = G$ based on the relationship between boundary entropy density and channel capacity. From PU Appendix E (**Equation E.10** in natural units, or the principle leading to **Equation E.7** which relates the microscopic parameter group involving $\sigma_{eff\_link}$ and $C_{max}$ to $1/(4L_P^2)$ when combining the Area Law definition $S = k_B \mathcal{A} / (4L_P^2)$ with the microscopic entropy expression $S_{max} = N_{eff\_links} S_{channel}^{max}$):
+The PU framework provides an independent derivation for the emergent Planck length $L_P^2 = G$ based on the relationship between boundary entropy density and channel capacity. From PU Appendix E (**Equation E.10** in natural units, or the principle leading to **Equation E.7** which relates the microscopic parameter group involving $\sigma_{eff_link}$ and $C_{max}$ to $1/(4L_P^2)$ when combining the Area Law definition $S = k_B \mathcal{A} / (4L_P^2)$ with the microscopic entropy expression $S_{max} = N_{eff_links} S_{channel}^{max}$):
 $$
-\frac{1}{4 L_P^2} = \frac{\sigma_{eff\_link} C_{\max}}{k_B} = \frac{1}{k_B} \left(\frac{\chi}{\eta \ell^2}\right) (k_B C_{\max}) = \frac{\chi C_{\max}}{\eta \ell^2} \quad (6.1)
+\frac{1}{4 L_P^2} = \frac{\sigma_{eff_link} C_{\max}}{k_B} = \frac{1}{k_B} \left(\frac{\chi}{\eta \ell^2}\right) (k_B C_{\max}) = \frac{\chi C_{\max}}{\eta \ell^2} \quad (6.1)
 $$
 where $C_{\max}$ is the dimensionless capacity in nats per effective boundary link, $\ell$ is the MPU spacing ($\delta$), and $\eta, \chi$ are $\mathcal{O}(1)$ geometric packing and correlation factors.
 
