@@ -74,7 +74,7 @@
 
 *   **Geometric Regularity:** (Definition C.3, Theorem 43) Property of the MPU network exhibiting uniform D-dimensional polynomial volume growth (Definition C.1) and uniformly bounded synthetic Ricci curvature (Definition C.2). Argued to be a necessary condition for viable equilibrium states under POP/PCE (Appendix C, Theorem C.6) and dynamically achieved (Appendix D, Theorem D.5).
 
-*   **$\Gamma_0$:** (Definition 20) Power Conversion Factor, relating the marginal gradient of Predictive Performance ($\partial PP/\partial C$) to an equivalent power benefit rate in the Adaptation Driving Force $\Psi$. Determined self-consistently at equilibrium (Theorem 20).
+*   **$\Gamma_0$:** (Definition 20) System-level **constant** Power Conversion Factor with dimensions of **Power** ($[E][T]^{-1}$), mapping the marginal performance gradient $(\partial PP/\partial C)$ to an equivalent power rate in $\Psi$. Constrained by thermodynamic limits (Theorem 20). **At equilibrium, parameters satisfy Eq. (29)**, enabling empirical calibration of $\Gamma_0$ for a given MPU.
 
 *   **$\mathcal{H}_0$:** (Proposition 4) The minimal complex Hilbert space required for representing the MPU state amplitude $S(t)$. Dimension $d_0 = \dim(\mathcal{H}_0)$ satisfies $d_0 \ge 8$ (Theorem 23). Emergence justified by PCE optimality (Theorem G.1.8).
 

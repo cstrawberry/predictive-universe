@@ -93,30 +93,30 @@ Here $\kappa_{\mathrm{eff}}$ is a dimensionless efficiency constant. Equation (2
 
 *Proof:*
 1.  **Modeling Diminishing Returns:** We model the principle of diminishing returns by positing that the marginal increase in performance with respect to complexity, $d(PP)/dC$, is proportional to the remaining performance gap $(\beta - PP(C))$ and inversely proportional to the target complexity $\hat{C}_{target}$. This gives the differential equation:
-    $$
+$$
     \frac{d(PP)}{dC} = \kappa_{eff} \frac{\beta - PP(C)}{\hat{C}_{target}}
     $$
     where $\kappa_{eff} > 0$ is the dimensionless efficiency constant.
 2.  **Integration:** We separate variables and integrate from the initial condition $(C_{op}, \alpha)$ to the state $(C, PP(C))$:
-    $$
+$$
     \int_{\alpha}^{PP(C)} \frac{d(PP')}{\beta - PP'} = \frac{\kappa_{eff}}{\hat{C}_{target}} \int_{C_{op}}^{C} dC'
     $$
 3.  **Solving the Integral:** The integration yields:
-    $$
+$$
     \left[ -\ln(\beta - PP') \right]_{\alpha}^{PP(C)} = \frac{\kappa_{eff}}{\hat{C}_{target}} (C - C_{op})
     $$
-    $$
+$$
     \ln\left(\frac{\beta - \alpha}{\beta - PP(C)}\right) = \kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}
     $$
     This is the integrated form, which directly corresponds to Equation (23) when solved for $C$.
 4.  **Deriving the Final Form:** Exponentiating both sides and rearranging to solve for $PP(C)$:
-    $$
+$$
     \frac{\beta - \alpha}{\beta - PP(C)} = \exp\left(\kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
     $$
-    $$
+$$
     \beta - PP(C) = (\beta - \alpha) \exp\left(-\kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
     $$
-    $$
+$$
     PP(C,\hat C_{\mathrm{target}}) = \beta - (\beta - \alpha) \exp\left(-\kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
     $$
     This confirms Equation (22). QED
@@ -133,31 +133,31 @@ The adaptation dynamics are governed by the **Principle of Compression Efficienc
 *   **Benefit ($V_{benefit}$):** The power-equivalent predictive benefit derived from the system's performance $PP$.
 The system's slow adaptation dynamics are modeled as a stochastic gradient flow seeking to minimize this potential: $dx(t) = -\eta(x) \nabla_x V(x) dt + \dots$ (Equation D.8).
 
-The **Adaptation Driving Force $\Psi(t)$** for the complexity component $C(t)$ is defined as the negative of the local gradient of this potential with respect to $C(t)$, representing the net incentive for complexity adaptation. It arises from the local imbalance between the marginal benefit of increased complexity and its marginal cost. Formally:
+The **Adaptation Driving Force $\Psi(t)$** for the complexity component $C(t)$ is defined as the negative of the local gradient of this potential with respect to $C(t)$, representing the net incentive for complexity adaptation. It arises from the local imbalance between the marginal benefit of increased complexity and its marginal cost. We model the benefit term linearly in $PP$, so the benefit component of the PCE potential is $V_{benefit}=-\Gamma_0\,PP$ and its marginal contribution to the driving force is $\Gamma_0(\partial PP/\partial C)$. The Adaptation Driving Force is:
 $$
-\Psi(t) \equiv -\frac{\partial V(x)}{\partial C}\bigg|_{C(t)} = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
+\Psi(t) = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
 $$
-where the terms arise from the derivatives of the potential's components:
-1.  The **Power Conversion Factor ($\Gamma_0$**): A positive constant with dimensions of Power (`[E][T]^{-1}`), arising from the benefit term $V_{benefit}$. It quantifies the effective power value assigned by PCE to a unit increase in the marginal performance gradient ($\partial PP/\partial C$). Its value is physically constrained and self-consistently determined at equilibrium (Theorem 20).
-2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
+where:
+1.  The **Power Conversion Factor ($\Gamma_0$)**: A positive **constant** with dimensions of Power (`[E][T]^{-1}`), arising from the benefit term $V_{benefit}$. It quantifies the effective power value assigned by PCE to a unit increase in the marginal performance gradient ($\partial PP/\partial C$). Its value is physically constrained by thermodynamic limits (Theorem 20); at equilibrium, the parameters satisfy the calibration identity Eq. (29).
+2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
 
 The specific components of the driving force are:
 *   **Marginal Benefit:** The term $\Gamma_0 \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units `[E][T]^{-1}[Complexity]^{-1}`. From the Law of Prediction (Theorem 19), the performance gradient is:
-    $$
+$$
     \frac{\partial PP}{\partial C}\bigg|_{C(t), \hat{C}_{target}(t)} = (\beta - \alpha) \left( \frac{\kappa_{eff}}{\hat{C}_{target}(t)} \right) e^{-\kappa_{eff} \cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}} = \frac{\kappa_{eff}}{\hat{C}_{target}(t)} (\beta - PP(t)) \quad \text{(25)}
     $$
 *   **Marginal Cost:** The term $\lambda R'(C(t)) + R_I'(C(t))$ is the weighted marginal resource cost rate, with units `[E][T]^{-1}[Complexity]^{-1}`. From Definition 3:
-    $$
+$$
     R_I'(C(t)) = \frac{r_I}{C(t) \ln 2} \quad (\text{for } C(t) > K_0) \quad \text{(26)}
     $$
 
 *Interpretation:* The driving force $\Psi(t)$ quantifies the net marginal incentive for complexity changes: $\Psi > 0$ favors increasing $C$, $\Psi < 0$ favors decreasing $C$. Equilibrium, corresponding to the optimal complexity allocation (Definition 14), occurs when $\Psi = 0$, precisely where the gradient of the effective potential with respect to complexity vanishes.
 
-**6.4.2 Theorem 20 (Physical Bounds and Self-Consistency of $\Gamma_0$)**
+**Theorem 20 (Physical Bounds and Self-Consistency of $\Gamma_0$)**
 
-The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is constrained by fundamental thermodynamic limits inherent in the MPU framework and determined self-consistently by the system's adaptation dynamics under PCE.
+The constant Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **system-level constant** of the PCE potential, constrained by thermodynamic limits inherent in the MPU framework.
 
-1.  **Lower Bound ($P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23, Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates $\Gamma_0$ be commensurate with baseline operational costs:
+1.  **Lower Bound ($P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23, Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0\,\frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
     $$
     \Gamma_{0} \gtrsim P_{min} = R(C_{op}) \ge \frac{k_B T \ln(d_0)}{\tau_{min}} \ge \frac{3 k_B T \ln(2)}{\tau_{min}} \quad \text{(27)}
     $$
@@ -166,13 +166,13 @@ The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is cons
     $$
     \Gamma_{0} \lesssim \frac{k_B T \varepsilon}{\tau_{min} \Delta PP_{max}} =: \Gamma_{crit} \quad \text{(28)}
     $$
-3.  **Self-Consistent Value ($\Gamma_0^*$):** At a stable equilibrium configuration characterized by complexity $C^*$ and performance $PP^*$, the Adaptation Driving Force vanishes: $\Psi(C^*, PP^*) = 0$ (Equation 18). From the definition of $\Psi$ (Equation 24), this equilibrium condition requires $\Gamma_0$ to take the specific value:
+3.  **Equilibrium Calibration Identity:** At a stable equilibrium configuration characterized by complexity $C^*$ and performance $PP^*$, the Adaptation Driving Force vanishes: $\Psi(C^*, PP^*) = 0$ (Equation 18). This provides a calibration identity relating the constant $\Gamma_0$ to the equilibrium properties of the system:
     $$
-    \Gamma_{0}^{*} = \frac{\lambda R'(C^*) + R_I'(C^*)}{\frac{\partial PP}{\partial C} \big|_{C^*, PP^*}} \quad \text{(29)}
+    \Gamma_{0} = \frac{\lambda R'(C^*) + R_I'(C^*)}{\frac{\partial PP}{\partial C} \big|_{C^*, PP^*}} \quad \text{(29)}
     $$
-    The system dynamically evolves towards states where the effective energy valuation $\Gamma_0^*$ falls within the physical bounds $[P_{min}, \Gamma_{crit}]$ and satisfies the PCE optimality condition.
+    For a given constant value of $\Gamma_0$ within the physical bounds, this equation determines the optimal complexity $C^*$ that the system will adapt towards.
 
-*Conclusion:* $\Gamma_0$ is physically grounded by thermodynamic limits derived within the framework and its operational value $\Gamma_0^*$ emerges self-consistently from the equilibrium state achieved under PCE optimization.
+*Conclusion:* $\Gamma_0$ is a **system-level constant** of the PCE potential, physically grounded by thermodynamic limits derived within the framework. Its value determines the location of the optimal equilibrium state achieved under PCE optimization.
 
 **6.4.3 Proposition 3 (Complexity Adaptation Dynamics Model)**
 
@@ -182,7 +182,7 @@ $$
 $$
 Substituting the expression for $\Psi$ (Equation 24) using the derived forms for $\partial PP/\partial C$ (Equation 25) and $R_I'(C)$ (Equation 26):
 $$
-\frac{dC}{dt} = \eta_{adapt} \left[ \Gamma_0 (\beta - \alpha) \left( \frac{\kappa_{eff}}{\hat{C}_{target}(t)} \right) e^{-\kappa_{eff} \cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}} - \lambda R'(C(t)) - \frac{r_I}{C(t) \ln 2} \right] \quad \text{(31)}
+\frac{dC}{dt} = \eta_{adapt} \left[ \Gamma_0 \frac{\kappa_{eff}}{\hat{C}_{target}(t)} (\beta - PP(t)) - \lambda R'(C(t)) - \frac{r_I}{C(t) \ln 2} \right] \quad \text{(31)}
 $$
 where $\eta_{adapt} > 0$ is the adaptation rate parameter. It has dimensions `[E]^{-1}[Complexity]^2` (Appendix H) and determines the timescale and responsiveness of the complexity adaptation to the driving force $\Psi$. This model describes the dynamics within the viable range $(\alpha, \beta)$, prior to the activation of the viability enforcement mechanisms (Definition 22).
 
@@ -205,7 +205,7 @@ Rearranging yields the equilibrium expression:
 $$
 \kappa_{eff} = \frac{\hat{C}_{\text{target}}}{\Gamma_0\,(\beta-PP^{*})} \bigl[\lambda R'(C^{*}) + R_I'(C^{*})\bigr] \quad \text{(32)}
 $$
-Thus $\kappa_{eff}$ encodes the ratio of marginal resource costs (weighted physical cost gradient $\lambda R' + R_I'$) to the power-equivalent value of the remaining performance gap $(\beta-PP^{*})$, scaled by the target complexity $\hat{C}_{\text{target}}$. Higher costs or lower energy valuation $\Gamma_0$ reduce the effective efficiency $\kappa_{eff}$.
+Thus $\kappa_{eff}$ encodes the ratio of marginal resource costs (weighted physical cost gradient $\lambda R' + R_I'$) to the power-equivalent value of the remaining performance gap $(\beta-PP^{*})$, scaled by the target complexity $\hat{C}_{\text{target}}$. Higher costs or a lower constant energy valuation $\Gamma_0$ reduce the effective efficiency $\kappa_{eff}$.
 
 **6.5 Stability, Response, and Target Estimation**
 
