@@ -174,7 +174,7 @@ The constant Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter bu
 
 *Conclusion:* $\Gamma_0$ is a **system-level constant** of the PCE potential, physically grounded by thermodynamic limits derived within the framework. Its value determines the location of the optimal equilibrium state achieved under PCE optimization.
 
-**6.4.3 Proposition 3 (Complexity Adaptation Dynamics Model)**
+**6.4.2 Proposition 3 (Complexity Adaptation Dynamics Model)**
 
 Assuming the rate of change of complexity $C(t)$ (operationally, $C(t) = \langle \hat{C}_v \rangle(t)$) is proportional to the net driving force $\Psi(t)$ acting to optimize the PCE objective, the basic adaptation dynamics follow a gradient ascent on the effective benefit landscape defined implicitly by $V(x)$ (Appendix D, Equation D.1):
 $$

@@ -48,7 +48,7 @@ $$
 C_P(\mu)\;=\;\lim_{n\to\infty} C_{P,n}(\mu) \quad \text{(1)}
 $$
 
-*Lemma 1 (Convergence of Complexity Hierarchy):* The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing. For any physically realizable microstate $\mu$ (see Definition 17), which by definition is constructible using finite resources, the complexity $C_P(\mu)$ must be finite. Therefore, the sequence is bounded above. By the Monotone Convergence Theorem, the limit $C_P(\mu)$ defined in Equation (1) exists and is finite.
+**Lemma 1 (Convergence of Complexity Hierarchy):** The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing. For any physically realizable microstate $\mu$ (see Definition 17), which by definition is constructible using finite resources, the complexity $C_P(\mu)$ must be finite. Therefore, the sequence is bounded above. By the Monotone Convergence Theorem, the limit $C_P(\mu)$ defined in Equation (1) exists and is finite.
 
 **Convention for Information Capacity in Quantum Systems:** For quantum systems, such as the Minimal Predictive Units (MPUs) hypothesized to be fundamental constituents of reality (Definition 23), the maximum information capacity required to specify their distinguishable states is determined by the dimensionality $d_0$ of the MPU's Hilbert space $\mathcal{H}_0$ (Proposition 4). We adopt the standard quantum information convention for this capacity $C_{cap}$ (measured in bits):
 $$

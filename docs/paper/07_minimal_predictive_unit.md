@@ -229,7 +229,7 @@ The self-adjoint generator $\hat{H}$ of the internal MPU dynamics (Definition 26
 1.  **Baseline Energy Cost:** The expectation value $\langle \hat{H} \rangle$ corresponds to the minimal baseline operational energy associated with sustaining the $C_{op}$ predictive cycle, equivalent to the baseline physical resource cost $R(C_{op})$ (Definition 3a, Equation 16). It represents the energy cost of the internal predictive processing capability ($b_p$).
 2.  **Minimum Timescale:** The energy spectrum and structure of $\hat{H}$ determine the minimum characteristic internal processing timescale $\tau_{min} > 0$ (e.g., via energy-time uncertainty relations or specific dynamical rates) required for one cycle of internal prediction generation via the unitary evolution $U_0(t) = e^{-i\hat{H}t/\hbar}$.
 
-*Justification:* This theorem connects the abstract mathematical generator $\hat{H}$ emerging from the requirements of continuous, probability-preserving evolution (Proposition 11) to the physical concepts of baseline energy cost $R(C_{op})$ and minimum operational time $\tau_{min}$ established earlier (Section 5.1.2), ensuring consistency.
+*Justification:* This theorem connects the abstract mathematical generator $\hat{H}$ emerging from the requirements of continuous, probability-preserving evolution (Proposition 11) to the physical concepts of baseline energy cost $R(C_{op})$ and minimum operational time $\tau_{min}$ established earlier (Section 5.1.1), ensuring consistency.
 
 **7.3.3.3 Definition 27 (Def 27): Interaction and Perspectival Actualization ('Evolve'/ND-RID)**
 

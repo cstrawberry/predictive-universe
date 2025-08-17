@@ -23,7 +23,7 @@ where:
 
 $C_{op}$ represents the minimum complexity required for a system to "come online" as a non-trivial predictive entity capable of engaging in the adaptive Fundamental Predictive Loop (Definition 4) and potentially operating within the Space of Becoming $(\alpha, \beta)$ (Definition 8). Systems with $C(t) < C_{op}$ lack the structural resources for reliable prediction better than chance. Viewed thermodynamically, $C_{op}$ marks the threshold where the system enters the predictive phase, characterized by non-zero irreversible cost ($\varepsilon > 0$, Theorem 31, derived in Appendix J) and active SPAP dynamics (enabled because $C_{op} \ge K_0$) (see Table 5.1).
 
-**5.1.2 Physical Interpretation: Baseline Cost and Capability**
+**5.1.1 Physical Interpretation: Baseline Cost and Capability**
 
 The Operational Threshold $C_{op}$ represents the minimum complexity required to implement the *full integrated functionality* of the adaptive Fundamental Predictive Loop (Definition 4: capabilities $b_m, b_p, b_v, D_{cyc}$, Definition 5) such that it achieves *functional efficacy* (prediction better than chance). As established by Corollary 3 ($C_{op} \ge K_0$), achieving this operational capability *necessarily requires* possessing at least the minimal complexity $K_0$ (Theorem 15) needed for the internal logic of self-reference. Therefore, $C_{op}$ represents the total complexity cost for the minimally functioning, adaptive predictive system. Sustaining this minimal operational cycle incurs a baseline physical resource cost rate, captured by the Physical Operational Cost function $R(C)$ (Definition 3a) evaluated at $C_{op}$:
 $$
