@@ -203,17 +203,23 @@ with active charged fermions $f$ in each interval and color factors $N_c^{f}$. A
 
 ### V.2.6 Algorithm (deterministic, capacity‑aware)
 
-**Input:** ${\lambda_i},\ \Gamma_0,\ \nu,\ (r_p,\gamma_p),\ (K,\gamma,\kappa_F,\beta_{\mathrm{eff}}),\ \kappa_\mu$.
+**Input:** ${\lambda_i},\ \Gamma_0,\ \nu,\ (r_p,\gamma_p),\ (C_K,\gamma,\kappa_F,\beta_{\mathrm{eff}}),\ \kappa_\mu$.
 
 **Derived:**
 
 $$
-c_\gamma=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma,\quad
+c_\gamma=C_K\,(\beta_{\mathrm{eff}}\kappa_F)^\gamma,\quad
 A_{\mathrm{PCE}}=r_p\,c_\gamma^{\gamma_p},\quad
 \gamma_{\mathrm{eff}}=\gamma\gamma_p,\quad
 \tilde A_{\mathrm{PCE}}=\frac{A_{\mathrm{PCE}}}{\Gamma_0\nu},\quad
 S_m=\sum_i\lambda_i^{\,m}.
 $$
+
+Assume $C_K>0,\ r_p>0,\ \beta_{\mathrm{eff}}\kappa_F>0$ so that $A_{\mathrm{PCE}}>0$.
+If $\beta_{\mathrm{eff}}$ or $\kappa_F$ carry units, $C_K$ absorbs the necessary dimensions so that $A_{\mathrm{PCE}}$ is dimensionless (consistent with Appendix W).
+
+When used with Appendix W (which takes $\gamma_{\mathrm{eff}}=2$), choose $\gamma,\gamma_p$ such that $\gamma\gamma_p=2$.
+
 
 1. **Seed.** Calculate the zeroth-order seed $u_0$ from (V.9) and use it as the initial guess for the solver: $u \leftarrow u_0$.
 
