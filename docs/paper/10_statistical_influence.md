@@ -64,7 +64,7 @@ so the single-shot advantage over random is exactly $\delta=O(\mathrm{CC})$.
 $$
 I(C;Y)\le c\,\delta^2 = O(\mathrm{CC}^2)\quad\text{(nats/trial)},
 $$
-as in Theorem 41 (Eq. (63)). To decode a deterministic bit with error probability $\le\alpha$ from $N$ i.i.d. outcomes requires (e.g., Chernoff/Hoeffding)
+as in Theorem 41 (Eq. (63)). To decode a deterministic bit with error probability $\le\alpha$ from $N$ i.i.d. outcomes requires (e.g., [Chernoff 1952; Hoeffding 1963])
 $$
 N \gtrsim \frac{\log(1/\alpha)}{2\,\delta^2}=O\!\Big(\tfrac1{\mathrm{CC}^2}\Big),
 $$
