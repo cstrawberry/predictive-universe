@@ -130,9 +130,7 @@ A pragmatic, staged approach is recommended:
 2.  **Stage 2 (Medium-Term):** If justified by Stage 1 results, pursue coherence time tests (Protocol 2) for complementary evidence. Refine QRNG tests.
 3.  **Stage 3 (Long-Term / Contingent):** Only if compelling, replicated evidence emerges, undertake demanding Bell-type experiments (Protocol 3) for statistical FTL search.
 
-**General Considerations:** All stages require quantum system stability and strict control of systematics. If group-sequential interim looks are used, we will use a Lan–DeMets O’Brien–Fleming (OBF) α-spending function with K looks 
-(including the final analysis) at information fractions t_k (Fisher information as a fraction of the planned maximum; for binomial tests, t_k≈N_k/N_max). 
-The cumulative spending is α(t)=2−2Φ(z_{1−α/2}/√t). The corresponding two-sided monitoring boundaries satisfy |Z_k|≥b_k with b_k≈z_{1−α/2}/√t_k. For equal information fractions t=[1/3, 2/3, 1] and α=0.05, the OBF boundaries are approximately [3.47, 2.45, 2.00].
+**General Considerations:** All stages require quantum system stability and strict control of systematics. If group-sequential interim looks are used, we will use a Lan–DeMets O’Brien–Fleming (OBF) α-spending function [Lan & DeMets 1983; O’Brien & Fleming 1979]. with K looks (including the final analysis) at information fractions t_k (Fisher information as a fraction of the planned maximum; for binomial tests, t_k≈N_k/N_max). The cumulative spending is α(t)=2−2Φ(z_{1−α/2}/√t). The corresponding two-sided monitoring boundaries satisfy |Z_k|≥b_k with b_k≈z_{1−α/2}/√t_k. For equal information fractions t=[1/3, 2/3, 1] and α=0.05, the OBF boundaries are approximately [3.47, 2.45, 2.00].
 
 
 **13.6 Compliance with Causal Constraints**
