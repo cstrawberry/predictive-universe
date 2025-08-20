@@ -45,7 +45,7 @@ Any system engaging in non-trivial self-referential prediction, irrespective of 
 * (ii) **Predictive Generation ($b_p$):** An internal mechanism or model to generate representations of potential future states.
 * (iii) **Verification & Update ($b_v$):** The ability to compare its predictions with actual outcomes and initiate an update to its internal state or model.
 
-*Proof Outline:*
+*Proof (outline; full derivation in **Appendix A.0.4**):*
 * (i) Self-reference requires the system to identify itself and differentiate its current state from others. Without state distinction, referencing a specific "self-state" is ill-defined.
 * (ii) Prediction involves forming an internal representation of a future state. Without an internal modeling mechanism, the system cannot generate a prediction distinct from mere reaction.
 * (iii) For adaptive or meaningful prediction, the system must assess its predictions against outcomes. Without verification, learning and model improvement are impossible, and predictive accuracy is undefined. For example, a memoryless device or one that cannot compare its output to subsequent events cannot verify its predictions and thus cannot adapt or even ascertain if its predictions are successful.
@@ -60,7 +60,7 @@ Consider a computational framework capable of representing discrete states and i
 $$ K_0 = 3 \quad \text{(bits)} $$
 
 
-*Proof:* The proof demonstrates both necessity ($\ge 3$ bits) and sufficiency ($\le 3$ bits).
+*Proof:* The proof demonstrates both necessity ($\ge 3$ bits) and sufficiency ($\le 3$ bits). This explicit construction serves as a witness that the abstract MPU (Definition 23) can be realized with the stated properties, forming a consistent foundation for the framework.
 
 *   **(I) Necessity ($K_0 \ge 3$):** We show that fewer than 3 bits are insufficient to reliably implement the SPAP logic cycle.
     1.  **Functional Requirements (for SPAP Logic):** Implementing the deterministic SPAP logic ($\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$, Equation 10) requires a system that can reliably execute a sequence involving: representing the current state component $\phi$; computing a prediction $\hat{\phi}$ based on the state; storing the prediction $\hat{\phi}$ distinctly from $\phi$; computing the next state $\phi_{next}$ using the stored $\hat{\phi}$; and updating the state component to $\phi_{next}$. This sequence requires distinguishing between different configurations corresponding to these operational phases, which are instantiations of the necessary logical capabilities $b_m, b_p, b_v$ (Proposition 5.2.1).

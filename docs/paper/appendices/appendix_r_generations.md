@@ -2,14 +2,14 @@
 
 ## R.0 Introduction
 
-This appendix develops a first-principles pathway by which the threefold generation structure of the Standard Model (SM) fermion sector emerges from the topology of a fundamental internal Perspective Space associated with a Minimal Predictive Unit (MPU). The Perspective Space is the complete flag manifold
+This appendix develops a first-principles pathway by which the threefold generation structure of the Standard Model (SM) fermion sector emerges from the topology of a fundamental internal Perspective Space associated with a Minimal Predictive Unit (MPU). The Perspective Space is the complete flag manifold, rigorously defined in **Section 7.2.5**,
 
 $$
 \Sigma_8 \cong U(8)/U(1)^8,
 \tag{R.1}
 $$
 
-naturally attached to an MPU with Hilbert space $H_0 \cong \mathbb{C}^8$, the minimal dimension required for self-referential logic (Theorem 23).
+naturally attached to an MPU with Hilbert space $H_0 \cong \mathbb{C}^8$, the minimal dimension required for self-referential logic (Theorem 23). This derivation is a key component of the framework's ability to explain the Standard Model's structure from first principles.
 
 Three pillars drive the derivation:
 
@@ -27,7 +27,7 @@ Let $\Sigma_8 := U(8)/U(1)^8$ be the complete flag manifold of $\mathbb{C}^8$. I
 
 The Perspective Space $\Sigma_8$ is simply connected and its second homotopy group is $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$.
 
-*Proof.* Consider the principal bundle $T^8 \to U(8) \to \Sigma_8$ where $T^8 \cong U(1)^8$ is the maximal torus. The long exact sequence in homotopy for this fibration yields [Bott & Tu 1982]:
+*Proof.* Consider the principal bundle $T^8 \to U(8) \to \Sigma_8$ where $T^8 \cong U(1)^8$ is the maximal torus. The long exact sequence in homotopy for this fibration yields [Bott & Tu 1982]. This is a standard result in algebraic topology.
 
 $$
 \dots \to \pi_2(U(8)) \to \pi_2(\Sigma_8) \to \pi_1(T^8) \to \pi_1(U(8)) \to \pi_1(\Sigma_8) \to 0.
@@ -128,7 +128,7 @@ $$
 
 so the image contains a generator of $\mathbb{Z}_3$. ∎
 
-*Remark (family $U(1)_F$):* Beyond $G_{\rm SM}$, one may include an Abelian factor $U(1)_F$ inside $U(8)$ that commutes with $G_{\rm SM}$. Its charge-map vector $f\in\mathbb{Z}^7$ is defined by the same adjacent-difference rule (R.7) for the corresponding generator.
+*Remark (family $U(1)_F$):* Beyond $G_{\rm SM}$, one may include an Abelian factor $U(1)_F$ inside $U(8)$ that commutes with $G_{\rm SM}$. Its charge-map vector $f\in\mathbb{Z}^7$ is defined by the same adjacent-difference rule (R.7) for the corresponding generator. The existence of such a factor is consistent with the framework's emergence of gauge symmetries (Appendix G).
 
 ## R.3 PCE Selection Principles
 
@@ -143,7 +143,7 @@ $$
 \tag{R.11}
 $$
 
-*Proof.* On a compact Kähler target, a nonzero $q \in \pi_2$ represents a nontrivial homology class whose energy is bounded below by a positive value proportional to its area (see R.6). A nonzero net topological charge at spatial infinity would produce an unavoidable gradient energy density in the vacuum. PCE selects the globally trivial vacuum sector, enforcing $\sum_g q^{(g)} = 0$. ∎
+*Proof.* On a compact Kähler target, a nonzero $q \in \pi_2$ represents a nontrivial homology class whose energy is bounded below by a positive value proportional to its area (see R.6). A nonzero net topological charge at spatial infinity would produce an unavoidable gradient energy density in the vacuum. PCE selects the globally trivial vacuum sector, enforcing $\sum_g q^{(g)} = 0$. This is a consequence of PCE minimizing the total energy contribution to the PCE potential $V(x)$. ∎
 
 ### R.3.2 Definition (Light sublattice).
 

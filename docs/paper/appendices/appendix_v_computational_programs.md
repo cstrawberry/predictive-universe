@@ -16,7 +16,7 @@ This appendix provides computational programs for two constants within the Predi
    \boxed{S_{\mathrm{inst}}=\left(\frac{C_{\max}}{\varepsilon}\right)\kappa = 2\,\kappa} \tag{V.1}
    $$
 
-   where $C_{\max}/\varepsilon=2$ (Appendix Q).
+   where $C_{\max}/\varepsilon=2$ (rigorously derived in Appendix Q).
 
 2. **Vacuum energy density.** The dimensionless combination $\Lambda L_P^2$ is
 

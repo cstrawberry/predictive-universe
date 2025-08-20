@@ -1,6 +1,6 @@
 # Appendix U: First-Principles Derivation of the Cosmological Constant
 
-The cosmological constant $\Lambda$ is derived from non-perturbative fluctuations of the Predictive Universe (PU) vacuum modeled as the late-time equilibrium of a network of Minimal Predictive Units (MPUs). The vacuum is governed by the Principle of Compression Efficiency (PCE) and exhibits rare Euclidean “bounce” (instanton) trajectories in an information-theoretic action. PCE fixes the ratio of channel capacity to irreducible step cost to a PU-internal value $C_{\max}/\varepsilon=2$ (Appendix Q, with $d_0=8$ and $\varepsilon=\ln 2$), and the instanton action scales with a geometric-information **complexity** $\kappa$ that counts correlated MPU involvement along the bounce. In Planck units built from the late-time coupling $G_\infty$, the vacuum energy takes the dilute-gas form
+The cosmological constant $\Lambda$ is derived from non-perturbative fluctuations of the Predictive Universe (PU) vacuum modeled as the late-time equilibrium of a network of Minimal Predictive Units (MPUs). The vacuum is governed by the Principle of Compression Efficiency (PCE) and exhibits rare Euclidean “bounce” (instanton) trajectories in an information-theoretic action. PCE fixes the ratio of channel capacity to irreducible step cost to a PU-internal value $C_{\max}/\varepsilon=2$ (rigorously derived in Appendix Q, with $d_0=8$ and $\varepsilon=\ln 2$), and the instanton action scales with a geometric-information **complexity** $\kappa$ that counts correlated MPU involvement along the bounce. In Planck units built from the late-time coupling $G_\infty$, the vacuum energy takes the dilute-gas form
 
 $$
 \Lambda L_P^2 \simeq 8\pi\,A_{\rm eff}\,e^{-2\kappa},
@@ -98,7 +98,7 @@ where the $O(1)$ term collects path-independent overheads (its contribution is a
 
 ## U.5 PCE Fixes the Information Ratio
 
-PCE allocates the MPU budget $\ln(d_0)$ between irreducible self-referential processing and external predictive capacity. With $d_0=8$ (Appendix Q) and $\varepsilon=\ln 2$ (Appendix Q, Theorem 31),
+PCE allocates the MPU budget $\ln(d_0)$ between irreducible self-referential processing and external predictive capacity. With $d_0=8$ (Theorem 23) and $\varepsilon=\ln 2$ (Theorem 31, rigorously derived in Appendix J),
 
 $$
 \boxed{
@@ -178,7 +178,7 @@ For $A_{\rm eff}=1$ this gives $\kappa\approx 142.0$. Varying $A_{\rm eff}$ by $
 
 ## U.7 Relation to Extensivity and Late-Time Equation of State
 
-Equation (U.13) shows the **multiplicative** combination of the polynomial extensivity factor with the non-perturbative exponential. For late times the exponential dominates the magnitude, while $A_{\rm eff}$ refines it.
+Equation (U.13) shows the **multiplicative** combination of the polynomial extensivity factor (derived in Appendix E) with the non-perturbative exponential. For late times the exponential dominates the magnitude, while $A_{\rm eff}$ refines it.
 
 Because the instanton contribution is vacuum-to-vacuum, it behaves as an effective constant in the action. Varying the action with respect to $g_{\mu\nu}$ gives $T_{\mu\nu}=-\rho_\Lambda\,g_{\mu\nu}$, hence
 

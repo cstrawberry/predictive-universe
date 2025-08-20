@@ -1,6 +1,6 @@
 # Appendix F: AQFT Framework for Continuum Emergence and Locality
 
-This appendix outlines the mathematical framework of Algebraic Quantum Field Theory (AQFT) in curved spacetimes [Haag 1996; Brunetti et al. 2015], providing the rigorous setting necessary to formalize the emergence of continuum physics from the discrete MPU network and to precisely analyze the status of locality and causality within the Predictive Universe (PU) framework. This approach focuses on the algebras of local observables and their relationships, offering a robust way to handle the continuum limit and define concepts like the stress-energy tensor and microcausality. The emergence described here is conditional on Theorem 43 (Necessary Emergence of Geometric Regularity).
+This appendix outlines the mathematical framework of Algebraic Quantum Field Theory (AQFT) in curved spacetimes [Haag 1996; Brunetti et al. 2015], providing the rigorous setting necessary to formalize the emergence of continuum physics from the discrete MPU network and to precisely analyze the status of locality and causality within the Predictive Universe (PU) framework. This approach focuses on the algebras of local observables and their relationships, offering a robust way to handle the continuum limit and define concepts like the stress-energy tensor and microcausality. The emergence described here is conditional on Theorem 43 (Necessary Emergence of Geometric Regularity), rigorously justified in **Appendices C and D**.
 
 **F.1 Net of Local Observables ($\mathfrak{A}_n(\mathcal{O})$)**
 
@@ -46,7 +46,7 @@ $$
 The proof relies on generalized Lieb-Robinson bounds applicable to open quantum systems governed by local Liouvillian dynamics. The evolution is given by $\alpha_t^{(n)} = e^{t\mathcal{L}_n}$. Standard techniques for proving such bounds on lattices with local interactions involve analyzing the propagation of operators under the action of the Liouvillian superoperator $\mathcal{L}_n$. The finite interaction range and the contractive nature of the underlying ND-RID process (which bounds the strength of the non-unitary part of the Liouvillian) ensure that the norm of the commutator decays exponentially outside a linear light-cone defined by a finite Lieb-Robinson velocity $v_{LR}^{(n)}$, yielding the form in (F.1). We justify the assumption $v_{LR}^{(n)}\to c$ in Corollary F.1 by identifying the emergent invariant speed $c$ (Theorem 46) as the macroscopic limit of the microscopic network's maximum information propagation velocity, which is precisely what $v_{LR}^{(n)}$ quantifies.
 
 **Corollary F.1 (Emergence of Einstein Causality).**
-If the sequence $\{\mathcal N_n\}$ converges geometrically to a Lorentzian spacetime $(M,g_{\mu\nu})$ with invariant speed $c$, and $v_{LR}^{(n)}\to c$ as $n\to\infty$, then for any two space-like separated regions $\mathcal O_1,\mathcal O_2\subset M$ one has
+If the sequence $\{\mathcal N_n\}$ converges geometrically to a Lorentzian spacetime $(M,g_{\mu\nu})$ with invariant speed $c$ (as derived in Theorem 46), and $v_{LR}^{(n)}\to c$ as $n\to\infty$, then for any two space-like separated regions $\mathcal O_1,\mathcal O_2\subset M$ one has
 
 $$
 \lim_{n\to\infty}
@@ -60,14 +60,14 @@ $$
 [\mathfrak A(\mathcal O_1),\, \mathfrak A(\mathcal O_2)] = \{0\} \quad \tag{F.2}
 $$
 
-recovering Einstein causality (Theorem 46).
+recovering Einstein causality.
 
 
 **F.3 Continuum Limit and Emergent AQFT Net**
 
 The transition from the discrete MPU network to continuum physics is formalized as the convergence of the sequence of discrete nets of algebras $\{\mathfrak{A}_n(\mathcal{O})\}$. This analysis relies critically on the assumption that such a stable continuum limit exists, as formalized in Hypothesis F.1.
 
-**Hypothesis F.1 (Convergence to Stable, Local AQFT).** The MPU network sequence $\{\mathcal{N}_n\}$, evolving under PCE dynamics (Appendix D) towards a stable, viable equilibrium configuration, is hypothesized to converge robustly in the limit $n \to \infty$ to a structure satisfying the following conditions. This hypothesis represents a strong assumption about the behavior of the MPU network in the continuum limit:
+**Hypothesis F.1 (Convergence to Stable, Local AQFT).** The MPU network sequence $\{\mathcal{N}_n\}$, evolving under PCE dynamics (Appendix D) towards a stable, viable equilibrium configuration, is hypothesized to converge robustly in the limit $n \to \infty$ to a structure satisfying the following conditions. This hypothesis represents a strong assumption about the behavior of the MPU network in the continuum limit, and its full justification is a key program for future work:
 1.  **Geometric Convergence:** The network metric spaces $(\mathcal{V}_n, d_{\mathcal{N}_n})$ converge to a D=4 Lorentzian manifold $(M, g_{\mu\nu})$ (realizing Theorem 43 and Theorem 46).
 2.  **Algebraic Convergence:** The sequence of discrete nets of algebras $\mathcal{O} \mapsto \mathfrak{A}_n(\mathcal{O})$ converges in a suitable sense (e.g., Stone-von Neumann theorem for finite regions, or more general convergence for nets) to a limiting continuous net $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ defined on $(M, g_{\mu\nu})$.
 3.  **Emergent AQFT Axioms:** The limit net $\mathfrak{A}$ satisfies the standard Haag-Kastler axioms of AQFT (isotony, locality/causality, covariance under the emergent isometry group, time slice axiom), adapted for curved spacetime.
@@ -101,7 +101,7 @@ AQFT allows for a rigorous, state-dependent definition of the macroscopic MPU st
 
 **F.6 Rigorous Formulation of Locality and Statistical FTL**
 
-AQFT provides the precise language to formulate PU's stance on locality, distinguishing between operator-level locality and state-mediated influence.
+AQFT provides the precise language to formulate PU's stance on locality, distinguishing between operator-level locality and state-mediated influence. This section provides the rigorous justification for the consistency of Postulate 3 (Statistical FTL Influence) with Postulate 2 (Causality as No Deterministic FTL Signaling).
 
 1.  **Emergent Einstein Causality for Algebra $\mathfrak{A}$:** As derived in Corollary F.1, the emergent net $\mathfrak{A}(\mathcal{O})$ satisfies the standard AQFT axiom of Einstein Causality: $[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}$ for space-like separated regions $\mathcal{O}_1, \mathcal{O}_2$. This implies that local measurements or operations performed in $\mathcal{O}_1$ cannot causally influence local measurements or operations performed in $\mathcal{O}_2$ in a way that violates the commutation relation for local observables.
 

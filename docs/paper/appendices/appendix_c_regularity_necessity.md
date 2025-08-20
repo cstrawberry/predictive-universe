@@ -2,7 +2,7 @@
 
 **C.1 Introduction: The Requirement for Geometric Order**
 
-This Appendix provides the detailed technical analysis justifying Theorem 43 (Necessary Emergence of Geometric Regularity). It establishes that large-scale geometric irregularities in the underlying Minimal Predictive Unit (MPU) network structure are fundamentally incompatible with the operational requirements mandated by the Predictive Universe (PU) framework's core principles. Specifically, we demonstrate that networks lacking geometric regularity inevitably violate one or more of the following essential conditions for sustained, efficient operation:
+This Appendix provides the detailed technical analysis rigorously justifying Theorem 43 (Necessary Emergence of Geometric Regularity). It establishes that large-scale geometric irregularities in the underlying Minimal Predictive Unit (MPU) network structure are fundamentally incompatible with the operational requirements mandated by the Predictive Universe (PU) framework's core principles. Specifically, we demonstrate that networks lacking geometric regularity inevitably violate one or more of the following essential conditions for sustained, efficient operation:
 
 *   **(R1) Local Viability:** Each MPU $v$ must maintain its Predictive Performance $PP(v)$ within the Space of Becoming $(\alpha, \beta)$ (Axiom 3). This requires stable local adaptation dynamics.
 *   **(R2) Global Coherence:** The network must support the propagation and maintenance of coherent predictive information over macroscopic scales to effectively solve the aggregate Prediction Optimization Problem (POP, Axiom 1).

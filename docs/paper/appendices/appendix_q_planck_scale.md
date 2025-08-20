@@ -2,9 +2,9 @@
 
 **Q.1 Foundational Relation and the Optimization Goal**
 
-This appendix provides an *ab initio* derivation of the quantitative relationship between the emergent Planck length `L_P` and the intrinsic microscopic spacing `δ` of the MPU network. The derivation proceeds by constructing a global PCE Potential for the MPU network vacuum and finding the unique, stable equilibrium state that minimizes it. This equilibrium is then shown to be self-consistent with the framework's foundational geometric and information-theoretic identities.
+This appendix provides an *ab initio* derivation of the quantitative relationship between the emergent Planck length `L_P` and the intrinsic microscopic spacing `δ` of the MPU network. The derivation proceeds by constructing a global PCE Potential for the MPU network vacuum and finding the unique, stable equilibrium state that minimizes it. This equilibrium is then shown to be self-consistent with the framework's foundational geometric and information-theoretic identities. This derivation is a key component of the framework's ability to predict fundamental constants from first principles.
 
-The derivation begins with the rigorous relationship between the emergent gravitational constant `G` and the microscopic network parameters, as established in Appendix E (Theorem E.4, Equation E.9):
+The derivation begins with the rigorous relationship between the emergent gravitational constant `G` and the microscopic network parameters, as rigorously established in **Appendix E** (Theorem E.4, Equation E.9):
 $$
 G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}}
 \tag{Q.1}
@@ -57,7 +57,7 @@ The coefficients `k_i` are positive constants (in Planck units) whose ratios are
 **Q.3 Coupled Minimization of the PCE Potential**
 
 We find the equilibrium state (`δ*`, `χ*`, `η*`, `C_max*`) by minimizing `V_vac` subject to the framework's fundamental constraints:
-*   **Information Budget:** The available capacity is limited by the MPU's structure. From the PCE-optimal partitioning argument (Appendix E.7, Eq. E.14), `C_{max} ≤ \ln(d_0) - ε`. With the derived values `d_0=8` and `ε=ln(2)`, this gives the hard constraint:
+*   **Information Budget:** The available capacity is limited by the MPU's structure. From the PCE-optimal partitioning argument (Appendix E.7, Eq. E.14), `C_{max} ≤ \ln(d_0) - ε`. With the rigorously derived values `d_0=8` (Theorem 23) and `ε=ln(2)` (Theorem 31), this gives the hard constraint:
 $$
     C_{max} ≤ 2 \ln(2)
     \tag{Q.9}

@@ -6,9 +6,7 @@ This appendix provides the detailed construction and justification for key opera
 $\hbar$, $c$, and $k_B$ factors so that every operator’s physical
 dimension is transparent. Predictive Physical Complexity($C_P$ and its proxy $\hat C_v$) carries its own base dimension $\mathrm{[Complexity]}$, e.g.\ $[\hat C_v]=\mathrm{[Complexity]}$. Information-theoretic quantities such as the entropy $\varepsilon$ or
 the channel capacity $C_{\max}$ are dimensionless, typically expressed
-in nats (natural-log base $e$).The physical relevance of all complexity-derived cost terms rests on the Dynamically Enforced Functional Correspondence (Theorem 2),
-which equates operational cost with predictive cost in
-steady-state MPU optimisation.
+in nats (natural-log base $e$). The physical relevance of all complexity-derived cost terms rests on the Dynamically Enforced Functional Correspondence (Theorem 2), rigorously proven in **Appendix D**, which equates operational cost with predictive cost in steady-state MPU optimisation.
 
 **B.1 Operational Predictive Physical Complexity $\hat{C}_v$**
 
@@ -34,7 +32,7 @@ For each MPU $v$, its operational complexity is represented by a Hermitian, posi
 
  For an MPU with a finite-dimensional Hilbert space $\mathcal{H}_v$ of dimension $d_0$ (Theorem 23), the sum in Equation (B.1) is understood to be effectively finite. Only a finite number of distinct, non-zero orthogonal projectors $\hat{P}_d$ corresponding to achievable complexity levels can exist, or for $d$ beyond a certain $d_{max}$, the projectors $\hat{P}_d$ become zero or the eigenvalues $\lambda(d)$ cease to increase, reflecting the capacity limit of the $d_0$-dimensional space.
 
-The expectation value $\langle \psi | \hat{C}_v | \psi \rangle$ for a state $|\psi\rangle$ provides the MPU's operational measure of complexity. The justification for this operator serving as a valid, dynamically selected proxy for the theoretical $C_P$ at viable equilibria is provided by Theorem 2 (Dynamically Enforced Functional Correspondence), detailed in Appendix D.
+The expectation value $\langle \psi | \hat{C}_v | \psi \rangle$ for a state $|\psi\rangle$ provides the MPU's operational measure of complexity. The justification for this operator serving as a valid, dynamically selected proxy for the theoretical $C_P$ at viable equilibria is rigorously provided by Theorem 2 (Dynamically Enforced Functional Correspondence), detailed in **Appendix D**.
 
 *Proof:* The definition of $\hat{C}_v$ as a Hermitian operator with a spectral decomposition based on quantum circuit complexity levels is standard in quantum information theory. The property of being positive-semi-definite follows from $\lambda(d) = K_0 + \Delta C(d) \ge K_0 > 0$.
 
@@ -54,7 +52,7 @@ $$
 $$
 
 where $\lambda(d) = K_0 + \Delta C(d)$ are the eigenvalues of $\hat{C}_v$.
-The operators $\hat R(C_v)$ and $\hat R_I(C_v)$ are Hermitian because the cost functions $R(\cdot)$ and $R_I(\cdot)$ are real-valued. They are positive-semi-definite because $R(C) \ge 0$ and $R_I(C) \ge 0$ for $C \ge K_0$ (Definition 3), and $\lambda(d) \ge K_0$ for all $d \ge 0$. The physical relevance of using $\langle\hat{R}\rangle$ and $\langle\hat{R}_I\rangle$ in dynamics relies on Theorem 2 ensuring alignment of $\langle \hat{C}_v \rangle$ with $C_P$.
+The operators $\hat R(C_v)$ and $\hat R_I(C_v)$ are Hermitian because the cost functions $R(\cdot)$ and $R_I(\cdot)$ are real-valued. They are positive-semi-definite because $R(C) \ge 0$ and $R_I(C) \ge 0$ for $C \ge K_0$ (Definition 3), and $\lambda(d) \ge K_0$ for all $d \ge 0$. The physical relevance of using $\langle\hat{R}\rangle$ and $\langle\hat{R}_I\rangle$ in dynamics relies on Theorem 2 (Dynamically Enforced Functional Correspondence) ensuring alignment of $\langle \hat{C}_v \rangle$ with $C_P$.
 
 *Proof:* The definition of operators via functional calculus on a Hermitian operator ($\hat{C}_v$) is a standard mathematical construction. The properties of self-adjointness (Hermitian) and positive-semi-definiteness for $\hat{R}$ and $\hat{R}_I$ follow directly from the real-valued and non-negative nature of the functions $R(\cdot)$ and $R_I(\cdot)$ when applied to the non-negative eigenvalues $\lambda(d)$ of $\hat{C}_v$.
 
@@ -78,7 +76,7 @@ $$
 
 where $\delta_{\rm SPAP}$ is the dimensionless error margin and $C_{uni}$ is a dimensionless measure of effective computational resources. This bound demonstrates that the resources required diverge faster than quadratically as the desired accuracy $\alpha$ approaches $\alpha_{SPAP}$.
 
-*Proof:* The derivation of this bound relies on identifying the fundamental sub-problems that any system must solve to achieve high-accuracy prediction ($\alpha \to \alpha_{SPAP}^-$) for a SPAP-limited process, and then applying established scaling laws from information theory and computational complexity theory for these sub-problems. The PU framework posits that its entities (MPUs or aggregates) are subject to these universal information-processing constraints when performing such tasks.
+*Proof:* The derivation of this bound relies on identifying the fundamental sub-problems that any system must solve to achieve high-accuracy prediction ($\alpha \to \alpha_{SPAP}^-$) for a SPAP-limited process, and then applying established scaling laws from information theory and computational complexity theory for these sub-problems. The PU framework posits that its entities (MPUs or aggregates) are subject to these universal information-processing constraints when performing such tasks. The full argument for the applicability of Property R to MPUs is provided in **Appendix A.0**.
 
 1.  **Statistical Resolution Sub-Problem and its Cost:** To achieve an average predictive accuracy $\alpha$ differing from the SPAP limit $\alpha_{SPAP}$ by only a small margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$, the predictive system must be able to statistically distinguish the true underlying process (which it aims to model with accuracy $\alpha$) from a hypothetical process that would perfectly hit the SPAP limit or lead to paradoxical outcomes. This is fundamentally a statistical discrimination task. Standard results in statistical decision theory and information theory (e.g., related to Chernoff bounds for hypothesis testing, or the resources needed for parameter estimation with precision $\delta_{SPAP}$) show that the number of independent samples, or equivalently, the complexity of a model or computational resource required to achieve such discrimination with a small error probability, scales inversely with the square of the difference to be detected. Thus, the complexity component $C_{stat}$ needed to resolve the system's behavior from the SPAP boundary with sufficient fidelity to ensure performance $\alpha$ scales as:
     $$

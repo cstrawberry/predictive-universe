@@ -2,7 +2,7 @@
 
 ## N.1 Master Principle: The PCE Potential
 
-The foundational dynamical principle of the Predictive Universe (PU) framework is the minimization of the **PCE Potential**, $V$. This is a functional that quantifies the net resource cost rate of a given MPU network configuration, balancing the costs of operation and interaction against the benefits of predictive accuracy. The system's evolution is governed by a stochastic process that seeks the global minimum of this potential. For a single MPU $i$ interacting with its local environment, its contribution to the global potential is derived from the structure of $V$ as defined in the PU framework [Appendix D, Def. D.1]:
+The foundational dynamical principle of the Predictive Universe (PU) framework is the minimization of the **PCE Potential**, $V$. This is a functional that quantifies the net resource cost rate of a given MPU network configuration, balancing the costs of operation and interaction against the benefits of predictive accuracy. The system's evolution is governed by a stochastic process that seeks the global minimum of this potential. For a single MPU $i$ interacting with its local environment, its contribution to the global potential is derived from the structure of $V$ as defined in the PU framework [**Appendix D**, Def. D.1]:
 
 $$
 V_i = \underbrace{V_{op}(i)}_{\text{Operational Cost}} + \underbrace{V_{prop}(i)}_{\text{Propagation Cost}} - \underbrace{V_{benefit}(i)}_{\text{Predictive Benefit}}
@@ -14,7 +14,7 @@ where each term is a rate (power):
 *   **$V_{prop}$**: The cost of maintaining coherent predictive links with neighbors, penalizing both information loss (decoherence) and the fundamental thermodynamic cost ($\varepsilon \ge \ln 2$) of interaction [Appx. C, D].
 *   **$V_{benefit}$**: The reward for predictive accuracy, proportional to the MPU's success in predicting the states of its neighbors, derived from its Predictive Performance $PP$ [Def. 7, D.1].
 
-The master equation of the PU framework is the stochastic differential equation describing the evolution of the network configuration $x$ as a gradient flow on this potential: $dx(t) = -\eta(x) \nabla V(x) dt + \sqrt{2D(x)} dW(t)$ [Appx. D, Eq. D.8]. The principles explored in this section represent physical constraints that must be incorporated into the cost terms of the PCE potential $V$, thereby shaping the emergent dynamics of the system as it seeks to minimize this potential.
+The master equation of the PU framework is the stochastic differential equation describing the evolution of the network configuration $x$ as a gradient flow on this potential: $dx(t) = -\eta(x) \nabla V(x) dt + \sqrt{2D(x)} dW(t)$ [**Appendix D**, Eq. D.8]. The principles explored in this section represent physical constraints that must be incorporated into the cost terms of the PCE potential $V$, thereby shaping the emergent dynamics of the system as it seeks to minimize this potential.
 
 ## N.2 Divergence Laws for Hardware and Software Limits
 
@@ -145,12 +145,12 @@ $$
 $$
 C_{SPAP}(PP) = \Omega\left(\frac{\log(1/(\alpha_{SPAP}-PP))}{(\alpha_{SPAP}-PP)^2}\right)
 $$
-*Proof.* See [Thm. 14, Appx. B.3].
+*Proof.* See [Thm. 14, **Appendix B.3**].
 
 **Lemma N.3 (Relativistic work).** The minimum work to accelerate a mass $m_0$ from rest to final velocity $v_f$ is $W_{kin}(v_f) = m_0c^2(\gamma(v_f)-1)$.
 
 **Lemma N.4 (Complexity Cost of Environmental Noise).** An MPU operating in an effective thermal bath at temperature $T_{eff}$ must allocate additional predictive complexity $C_{noise}$ to maintain a constant target predictive performance $PP_{op}$. The existence of this cost is necessary. For any system selected for long-term viability under PCE, this cost must be a monotonically increasing function of $T_{eff}$ (for $T_{eff} > T_{base}$), with $C_{noise}=0$ at some baseline temperature $T_{base}$.
-> *Proof.* The MPU's adaptation dynamics under PCE establish the necessity and key properties of $C_{noise}(T_{eff})$. An MPU operating in a stable predictive regime seeks to maintain a target performance $PP_{op}$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the total marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20]):
+> *Proof.* The MPU's adaptation dynamics under PCE establish the necessity and key properties of $C_{noise}(T_{eff})$. An MPU operating in a stable predictive regime seeks to maintain a target performance $PP_{op}$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the total marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20], rigorously established in **Appendix D, Eq. (D.8)**):
 > $$
 > \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda \frac{\partial R}{\partial C}\bigg|_{C^*, T_{eff}} + \frac{\partial R_I}{\partial C}\bigg|_{C^*}
 > $$
@@ -168,7 +168,7 @@ $$
 
 ### N.5.2 Proof of the Inequality (N.6)
 
-The total work $W_{tot}$ is the sum of the work done to increase kinetic energy, $W_{kin}$, and the work done to perform the predictive computation, $W_{pred}$.
+The total work $W_{tot}$ is the sum of the work done to increase kinetic energy, $W_{kin}$, and the work done to perform the predictive computation, $W_{pred}$. The full derivation of the UCT theorem is provided in this section.
 
 1.  **Kinetic Work:** By Lemma N.3, the kinetic work is bounded below by the ideal relativistic work:
     $$
