@@ -714,7 +714,7 @@ $$
 
 ### G.9.6 Conclusion
 
-Within PU, the electromagnetic coupling emerges as a **rate‑level PCE equilibrium** balancing the predictive benefit of $U(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non‑interacting state $g_e=0$ is unstable and the unique optimum $u^*>0$ determines $\alpha_{em}(\mu^*)=u^\*/(4\pi)$. The inputs $\Gamma_0$, $\nu$, $A_{\mathrm{PCE}}$, $\gamma_{\mathrm{eff}}$, and ${\lambda_i}$ are operational functionals of the baseline PCE‑optimal FPL. As demonstrated in **Appendix Z**, the framework's foundational constants (`d₀=8`, `ε=ln 2`) are sufficient to fix these spectral inputs, leading to a complete, parameter-free calculation of `α_em` at the PCE-Attractor.
+Within PU, the electromagnetic coupling emerges as a **rate‑level PCE equilibrium** balancing the predictive benefit of $U(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non‑interacting state $g_e=0$ is unstable and the unique optimum $u^*>0$ determines the bare coupling. As rigorously established in **Appendix X**, this rate-level potential and its minimization under the MPU alphabet capacity constraint are equivalent to finding the stationary point of the full QFT effective potential. The physical coupling is then $\alpha_{em}(\mu^*)=u^*/(4\pi\kappa)$, where the normalization $\kappa$ is determined by the emergent field theory (Appendix X.3). The inputs are operational functionals of the baseline PCE‑optimal FPL. As demonstrated in **Appendix Z**, the framework's foundational constants (`d₀=8`, `ε=ln 2`) are sufficient to fix these spectral inputs, leading to a complete, parameter-free calculation of `α_em` at the PCE-Attractor.
 
 ## G.10 Conclusion
 
