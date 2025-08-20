@@ -92,7 +92,7 @@ $$
 equal to the **net chiral asymmetry** $(\#\mathrm{LH}-\#\mathrm{RH})$ of zero‑modes in that block, and is given topologically by the Atiyah–Singer index theorem [Atiyah & Singer 1963]:
 
 $$
-\operatorname{Ind}\big(\slashed D_A\big)\ =\ \big\langle\,\widehat A(TM)\ \mathrm{ch}(E_R)\,,\ [M]\ \big\rangle\ \in\ \mathbb Z. \tag{R.2}
+\operatorname{Ind}\big(\slashed D_A\big)\ =\ \big\langle\,\widehat A(TM)\ \mathrm{ch}(E_R)\,,\ [M]\ \big\rangle\ \in\ \mathbb Z. \tag{R.5}
 $$
 
 *Proof.* Standard Atiyah–Singer index theorem for the Dirac operator twisted by the complex $G$‑bundle $E_R$. In four dimensions, the index equals the difference of left‑ and right‑chiral zero‑modes, which is precisely the net chiral asymmetry of the predictive block. ∎

@@ -196,5 +196,5 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Winter, A. (1999). Coding theorem and strong converse for quantum channels. *IEEE Transactions on Information Theory*, *45*(7), 2481-2485. DOI: 10.1109/18.796385
 *   Witten, E. (1982). An SU(2) anomaly. *Physics Letters B*, *117*(5), 324-328. DOI: 10.1016/0370-2693(82)90728-6
 *   Wolf, M. M. (2012). *Quantum Channels & Operations: A Guided Tour* (Lecture notes). Technical University of Munich. 
-*   Zinn-Justin, J. (2002). *Quantum Field Theory and Critical Phenomena* (4th ed.). Oxford University Press (International Series of Monographs on Physics). DOI: 10.1093/acprof\:oso/9780198509233.001.0001
+*   Zinn-Justin, J. (2002). *Quantum Field Theory and Critical Phenomena* (4th ed.). Oxford University Press (International Series of Monographs on Physics). DOI: 10.1093/acprof:oso/9780198509233.001.0001
 
