@@ -109,7 +109,7 @@ R_I(C)
 $$
 where $r_I>0$ sets the informational-cost scale and $R_I(K_0)=0$.
 
-**Note on Corollary 3.** The Operational Threshold and Horizon Constant obey $C_{op}\!\ge\!K_0$ (Corollary 3, Section 5.2.3), so both cost functions are simultaneously well-defined at $C=C_{op}$. In the limiting case $C_{op}=K_0$ the reflexive cost vanishes exactly at the threshold.
+**Note on Corollary 3.** The Operational Threshold and Horizon Constant obey $C_{op}\!\ge\!K_0$ (Corollary 3, Section 5.2.3), so both cost functions are simultaneously well-defined at $C=C_{op}$. In the limiting case $C_{op}=K_0$, the **excess** reflexive overhead above the baseline physical cost tends to zero at the threshold. For stable adaptation dynamics (see Theorem 22), we assume the **Dominance of Stabilizing Costs (DSC)**: the strict convexity of the physical cost $R(C)$ together with performance saturation (concave $PP(C)$) dominates any destabilizing concavity in the informational cost $R_I(C)$, ensuring a unique, stable equilibrium $C^*$.
 
 
 These functions represent the theoretical cost scaling. The corresponding operators used in the operational dynamics are derived via functional calculus.

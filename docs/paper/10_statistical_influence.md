@@ -60,11 +60,8 @@ P_{\text{succ}}
 $$
 so the single-shot advantage over random is exactly $\delta=O(\mathrm{CC})$.
 
-**Information-rate bound (no deterministic signaling).** For small $\delta$, the per-trial classical mutual information between context $C$ and Bob’s outcome $Y$ obeys
-$$
-I(C;Y)\le c\,\delta^2 = O(\mathrm{CC}^2)\quad\text{(nats/trial)},
-$$
-as in Theorem 41 (Eq. (63)). To decode a deterministic bit with error probability $\le\alpha$ from $N$ i.i.d. outcomes requires (e.g., [Chernoff 1952; Hoeffding 1963])
+
+**Information-rate bound (no deterministic signaling).** The per-trial classical mutual information `I(C;Y)` between Alice's context and Bob's outcome is rigorously bounded. For a bias $\delta$, the mutual information is given by $I(C;Y) = \ln 2 - h(1/2+\delta) = 2\delta^2 + O(\delta^4)$ nats, where $h(p)$ is the binary entropy function. Since $\delta \le \kappa\,\mathrm{CC}$, this confirms the information rate scales as $O(\mathrm{CC}^2)$ and is strictly bounded (see Theorem 41 analysis). To decode a deterministic bit with error probability $\le\alpha$ from $N$ i.i.d. outcomes requires (e.g., [Chernoff 1952; Hoeffding 1963])
 $$
 N \gtrsim \frac{\log(1/\alpha)}{2\,\delta^2}=O\!\Big(\tfrac1{\mathrm{CC}^2}\Big),
 $$
@@ -74,7 +71,7 @@ N_{\text{pre}}\ \le\ r_{\max}\,\frac{D}{c}.
 $$
 Reliable pre-lightcone decoding would thus require $r_{\max}D/c=O(1/\delta^2)$, a regime excluded by these rate/resource bounds at realistic $\delta$, preventing tachyonic anti-telephone constructions (Theorem 42). (Illustrative numbers: at $r_{\max}=1\,\text{GHz}$ and $D=1\,\text{km}$, $N_{\text{pre}}\!\approx\!3.3\times10^3 \ll 2.3\times10^4$ for $\delta=0.01,\alpha=0.01)$
 
-**AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Eq. (F.4). Under the $O(\mathrm{CC}^2)$ information-rate bound (Theorem 41), this cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42).
+**AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Eq. (F.4). Under the rigorously established information-rate bound, $I(C;Y) \le 4\ln 2 \,(\kappa \cdot \mathrm{CC})^2$ nats/trial (Theorem 41), this statistical influence cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42).
 
 **Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to stress–energy and induces gravitational self-dephasing (Appendix S). Modeling
 $$
@@ -105,7 +102,7 @@ The maximum classical information (Mutual Information $I(A;B)$) transmittable re
 $$
 I(A;B) \le O(\text{CC}^2) \quad \text{nats/trial} \quad \text{(63)}
 $$
-*Proof:* Let Alice choose context $A \in \{0, 1\}$ with $P(A)=0.5$. Let Bob observe binary outcome $B \in \{0, 1\}$ with $P(B=0|A=0) = p + \delta p$ and $P(B=0|A=1) = p - \delta p$, where $\delta p \le \text{CC}$. Mutual information is $I(A;B) = H(B) - H(B|A)$. $P(B=0) = p$, so $H(B)=H(p)$. $H(B|A) = 0.5 H(p+\delta p) + 0.5 H(p-\delta p)$. Taylor expansion of $H(p \pm \delta p)$ for small $\delta p$ yields $H(p \pm \delta p) \approx H(p) \pm H'(p)\delta p + \frac{1}{2} H''(p)(\delta p)^2$. Substituting gives $I(A;B) \approx - \frac{1}{2} H''(p) (\delta p)^2$. Since $$H''(p) = -\frac{1}{p(1-p)}$$ (nats), $$I(A;B) \approx \frac{(\delta p)^2}{2 p(1-p)}.$$ If expressing $I$ in bits, multiply the right-hand side by $1/\ln 2$. Since $\delta p \le \text{CC}$, $I(A;B)_{max} \approx O(\text{CC}^2)$. (A more rigorous bound using channel capacity derived from ND-RID contractivity is given in **Appendix F, section F.6**).
+*Proof:* Let Alice choose context $A \in \{0, 1\}$ with $P(A)=0.5$. Let Bob observe binary outcome $B \in \{0, 1\}$ with $P(B=0|A=0) = p + \delta p$ and $P(B=0|A=1) = p - \delta p$, where $\delta p \le \text{CC}$. Mutual information is $I(A;B) = H(B) - H(B|A)$. $P(B=0) = p$, so $H(B)=H(p)$. $H(B|A) = 0.5 H(p+\delta p) + 0.5 H(p-\delta p)$. Taylor expansion of $H(p \pm \delta p)$ for small $\delta p$ yields $H(p \pm \delta p) \approx H(p) \pm H'(p)\delta p + \frac{1}{2} H''(p)(\delta p)^2$. Substituting gives $I(A;B) \approx - \frac{1}{2} H''(p) (\delta p)^2$. Since $$H''(p) = -\frac{1}{p(1-p)}$$ (nats), $$I(A;B) \approx \frac{(\delta p)^2}{2 p(1-p)}.$$ If expressing $I$ in bits, multiply the right-hand side by $1/\ln 2$. Since $\delta p \le \text{CC}$, $I(A;B)_{max} \approx O(\text{CC}^2)$. Since $\delta p \le \kappa \cdot \text{CC}$ for some efficiency factor $\kappa \in (0,1]$, the information transfer rate is bounded. For equiprobable inputs $X\sim \mathrm{Bern}(1/2)$ and bias $\delta:=\Pr(Y=1|X=1)-1/2$, $I=\ln 2 - h(1/2+\delta) = 2\delta^2 + O(\delta^4)$ (nats). With $\delta\le \kappa\,\mathrm{CC}$, $I \lesssim 2(\kappa\,\mathrm{CC})^2$ for small $\mathrm{CC}$, and in general $I \le 4\ln 2 \,(\kappa\,\mathrm{CC})^2$.
 
 **10.4.3 Theorem 42 (Inability to Construct Causal Loops)**
 

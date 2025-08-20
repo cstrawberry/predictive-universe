@@ -138,7 +138,7 @@ $$
 \Psi(t) = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
 $$
 where:
-1.  The **Power Conversion Factor ($\Gamma_0$)**: A positive **constant** with dimensions of Power (`[E][T]^{-1}`), arising from the benefit term $V_{benefit}$. It quantifies the effective power value assigned by PCE to a unit increase in the marginal performance gradient ($\partial PP/\partial C$). Its value is physically constrained by thermodynamic limits (Theorem 20); at equilibrium, the parameters satisfy the calibration identity Eq. (29).
+1.  The **Power Conversion Factor ($\Gamma_0$)**: A positive **system-level constant** with dimensions of Power (`[E][T]^{-1}`), arising from the benefit term $V_{benefit}$. It quantifies the effective power value assigned by PCE to a unit increase in the marginal performance gradient ($\partial PP/\partial C$). Its value is physically constrained by thermodynamic limits (Theorem 20); at equilibrium, the parameters satisfy the calibration identity Eq. (29).
 2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
 
 The specific components of the driving force are:

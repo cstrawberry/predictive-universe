@@ -54,6 +54,8 @@
 
 *   **DSRO (Dynamic Self-Reference Operator):** (Definition 11, Theorem A.3) Formal representation of a computable function whose output depends dynamically on provable properties about itself, based on Kleene's Second Recursion Theorem. Used in SPAP logic.
 
+*   **Dominance of Stabilizing Costs (DSC):** (Theorem 22) The condition that the stabilizing effects of performance saturation (concave $PP$) and the strictly convex physical cost $R(C)$ are sufficient to overcome any destabilizing effects (e.g., from the concave informational cost $R_I(C)$), ensuring the existence of a unique, stable equilibrium complexity $C^*$.
+
 *   **Dual Dynamics:** (Section 7.3.3) The two modes of MPU evolution: (1) continuous, deterministic, unitary **Internal Prediction** (Definition 26, Eq. 43) governed by $\hat{H}$, and (2) discrete, stochastic **'Evolve' Interaction** (Definition 27) instantiating ND-RID.
 
 *   **Dynamically Enforced Functional Correspondence:** (Theorem 2, Appendix D) Principle stating that POP/PCE adaptation dynamics necessarily drive the expectation value of the operational complexity proxy $\langle\hat{C}_v\rangle$ into alignment with the theoretical Predictive Physical Complexity $C_P(v)$ at stable equilibrium points. Justified via work-cost gap feedback (Lemma D.2, Theorem D.5).
@@ -113,6 +115,8 @@
 *   **$\Sigma$ (Sigma - Perspective Space):** (Definition 25, Theorem 25, Appendix M) Mathematical space of all possible interaction contexts/measurement bases for an MPU. Identified with the complex homogeneous space $\Sigma \cong U(d_0)/U(1)^{d_0}$. Equipped with a metric $d_\Sigma$ (Eq. 42).
 
 *   **POP (Prediction Optimization Problem):** (Axiom 1) The fundamental adaptive imperative for systems to optimize the predictive quality ($Q$) of their internal models concerning relevant aspects of their environment, under resource constraints.
+
+*   **Principle of Physical Instantiation (PPI):** (Appendix P) Any abstract computational/logical requirement realized by a finite physical system incurs irreducible thermodynamic costs and hence is subject to optimization (PCE). Physical laws reflect resource-efficient embodiments of these instantiated logical structures.
 
 *   **Postulate 1 (Minimal Awareness):** (Section 7.1.2) Interpretive postulate linking the operational $C_{op}$ cycle of an MPU to the most basic form of awareness.
 
