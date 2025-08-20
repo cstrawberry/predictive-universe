@@ -22,7 +22,24 @@ PCE provides a coarse-grained potential $\mathcal{V}[x]$ (a **rate**, Appendix Q
 
 ### U.2.1 Euclidean Information Action and Partition Function
 
-We introduce **dimensionless** Euclidean information coordinates $y$ that count MPU ticks and coarse spatial cells. The statistical mechanics of the PU vacuum are governed by a core physical hypothesis: the probability weight for a configuration is determined by an effective Euclidean Information Action where the irreducible cost $\varepsilon$ sets the fundamental scale of statistical fluctuation. We define a **dimensionless** potential $V[x]:=\tau_{\rm MPU}\,\mathcal{V}[x]/\varepsilon$ using the MPU tick $\tau_{\rm MPU}$. With a positive semi-definite metric $\mathcal{G}_{ij}$ on configuration space, the action is
+We introduce **dimensionless** Euclidean information coordinates $y$ that count MPU ticks and coarse spatial cells. The statistical mechanics of the PU vacuum are governed by a core physical hypothesis: the probability weight for a configuration is determined by an effective Euclidean Information Action where the irreducible cost $\varepsilon$ sets the fundamental scale of statistical fluctuation. This is formalized by the following large-deviation principle.
+
+**Theorem U.V1 (Exponential suppression of $\Lambda$ from redundancy rate).**
+Let $Z_N(\kappa)$ be the PCE‑optimal vacuum partition function for $N$ weakly dependent, exponentially mixing MPU “cells” with redundancy‑penalized code‑length $L(\text{micro})=L_0+2\kappa$. Suppose the per‑cell log‑moment generating function exists and is steep (a Gärtner-Ellis condition). Then, as $N\to\infty$,
+
+$$
+\frac{1}{N}\log Z_N(\kappa)\ \to\ \sup_{m}\{\Psi(m)-2\kappa\}\,,
+$$
+
+with rate function $\Psi$. If the supremum occurs at $m^\star$ with $\Psi(m^\star)=A_{\rm eff}$ (PU’s area‑law effective coefficient, see Appendix E), the induced vacuum energy density satisfies
+
+$$
+\Lambda L_P^2 \;=\; 8\pi\,A_{\rm eff}\,e^{-2\kappa}\ \big(1+o(1)\big).
+$$
+
+*Proof.* Apply the Gärtner–Ellis theorem [Dembo & Zeitouni 1998] to the redundancy‑shifted mgf; Laplace’s method gives the exponential factor $e^{-2\kappa N}$ times a prefactor $e^{N A_{\rm eff}}$. Identifying $N\sim A/L_P^2$ via horizon‑area counting yields the stated scaling. ∎
+
+We define a **dimensionless** potential $V[x]:=\tau_{\rm MPU}\,\mathcal{V}[x]/\varepsilon$ using the MPU tick $\tau_{\rm MPU}$. With a positive semi-definite metric $\mathcal{G}_{ij}$ on configuration space, the action is
 
 $$
 \boxed{

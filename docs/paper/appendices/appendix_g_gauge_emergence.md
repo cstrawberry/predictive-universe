@@ -138,9 +138,23 @@ Any proposed alternative algebraic structure for prediction (e.g., classical pro
 3.  **Quaternionic Hilbert Spaces:** Introduce additional non-commutative structure in the scalar field, leading to different symmetry groups and typically more complex dynamics. Unless these extra structures provide a significant, demonstrable PCE benefit (e.g., vastly improving $PP$ or reducing $R, R_I$ costs without other penalties), PCE would favor the simpler complex Hilbert space.
 4.  **General Failure to Support Optimal Cost Structure:** For these alternatives to be viable under PU, they would need to support a cost frame functional $f(P)$ exhibiting non-contextual additivity (from Lemma G.1.1) and consistency with $P(P)=\text{Tr}(\rho_{phys}P)$ globally (from Section G.1.4 logic). If an alternative structure fails to naturally yield this, then imposing it would be akin to adding constraints. This deviation from the structure intrinsically optimal for complex Hilbert spaces would manifest as an additional effective penalty term in its PCE potential $V(x)_{alt} = V(x)_{complex_H} + V_{penalty,struc}$. PCE dynamics minimizing $V(x)_{alt}$ would then drive the system either towards behaviors that mimic complex Hilbert space dynamics or to states that are demonstrably less efficient, thus being outcompeted by true complex Hilbert space based MPU configurations. Thus, the complex Hilbert space structure is uniquely stable under PCE. QED
 
-**G.2 Local Phase Freedom in Emergent Hilbert Space**
+**G.2 Local Phase Freedom and Emergence of Gauge Structure**
 
-Having established the necessity of a complex Hilbert space $\mathcal{H}$ (specifically $\mathcal{H}_0$ for MPUs, Proposition 4, justified by Theorem G.1.8) and the Born rule $p_i = |\langle i|\psi\rangle_s|^2$ from PCE principles, we consider the symmetries. The physical predictions (probabilities $p_i$) derived from a state vector $|\Psi(x)\rangle$ (representing the amplitude of an MPU or an aggregate field, localized at spacetime point $x$ on the emergent manifold) depend only on the squared amplitudes. This implies an inherent redundancy: multiplying the state vector by a local phase factor leaves all local physical predictions unchanged:
+Having established the necessity of a complex Hilbert space $\mathcal{H}$ and the Born rule from PCE principles, we now derive the origin of gauge symmetries.
+
+**Conjecture G.M1 (Predictive frame changes form a principal bundle; SM group from block‑structure).**
+Let $\mathcal P\to M$ be the bundle whose fiber at $x$ consists of *predictive partitions* (orthogonal decompositions of the local MPU Hilbert space, see Definition G.1.1) that **preserve PCE** under refinements.
+(i) The group $G_x$ of local transformations of predictive frames that preserve the predictive state $\omega$ and PCE acts **freely and transitively** on the fiber, making $\mathcal P$ a **principal $G$‑bundle**.
+(ii) A minimal‑change condition for transporting frames (PCE‑least–action) defines a **connection form $A$** on $\mathcal P$; the curvature $F=dA+A\wedge A$ is the emergent **field strength**.
+(iii) If the local MPU module decomposes as $H_x \cong \mathbb C\oplus \mathbb C^2\oplus \mathbb C^3$ and PCE enforces **determinant‑neutrality** on the non‑abelian blocks (i.e., PCE penalizes volume-distorting transformations on these blocks, selecting special unitary subgroups), then
+
+$$
+G \ \cong\ U(1)\times SU(2)\times SU(3).
+$$
+
+*Proof (Sketch).* (i) PCE‑preserving frame changes are precisely the fiber automorphisms that leave the predictive weights invariant; by construction the action is free and transitive. (ii) Define parallel transport by minimizing the second‑order PCE cost along curves; horizontal spaces give a principal connection. (iii) The block‑diagonal stabilizer of the predictive inner product on $\mathbb C\oplus \mathbb C^2\oplus \mathbb C^3$ is $U(1)\times U(2)\times U(3)$; enforcing determinant‑neutrality on non‑abelian blocks reduces to $SU(2)\times SU(3)$. For a worked example, the stabilizer of the inner product on the block $H_B = \mathbb{C}^2$ is $U(2)$. A transformation $U \in U(2)$ acts on the volume form as $\det(U)$. PCE penalizes transformations that do not preserve this volume form, selecting the subgroup where $\det(U)=1$ (the overall abelian phase is carried by the separate $U(1)$ factor), which is $SU(2)$. ∎
+
+For the simplest case of a single predictive field, the group of PCE-preserving automorphisms is $U(1)$. The physical predictions (probabilities $p_i$) derived from a state vector $|\Psi(x)\rangle$ depend only on the squared amplitudes. This implies an inherent redundancy: multiplying the state vector by a local phase factor leaves all local physical predictions unchanged:
 $$
 |\Psi(x)\rangle \longrightarrow |\Psi'(x)\rangle = e^{\,i q \theta(x)}|\Psi(x)\rangle
 \quad (\theta(x)\in\mathbb{R})

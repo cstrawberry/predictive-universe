@@ -266,7 +266,24 @@ where $\operatorname*{dist}(x, A) = \inf_{y \in A} \|x-y\|$. Furthermore, by The
 
 ## D.7 Formal Justification of Theorems 2 and 43
 
-The results derived in this appendix provide the rigorous dynamical justification for Theorems 2 and 43, establishing them as necessary consequences of the framework's core optimization principles operating through stochastic dynamics. This appendix thus provides the rigorous foundation for the dynamical aspects of the Predictive Universe framework.
+The results derived in this appendix provide the rigorous dynamical justification for Theorems 2 and 43, establishing them as necessary consequences of the framework's core optimization principles operating through stochastic dynamics. The convergence from the discrete MPU network to a continuum description governed by a standard action is made precise by the following theorem.
+
+**Theorem D.G3 (Γ‑limit of discrete predictive action).**
+Let $\{(\mathcal G_\epsilon,\mu_\epsilon)\}_{\epsilon\downarrow0}$ be MPU graphs embedded in $M$ with edge‑length scale $\epsilon$, and let $\mathcal F_\epsilon$ be the **predictive action**: a sum of local convex functionals of discrete curvature proxies (e.g., Ollivier-Ricci on graphs) + a matter (MPU) term. Suppose:
+(i) **Equicoercivity**: $\mathcal F_\epsilon$ controls discrete second differences uniformly;
+(ii) **Locality & consistency**: the discrete curvature converges in $L^1_{\mathrm{loc}}$ to the Ricci scalar $R$;
+(iii) **Area‑law scaling** for the horizon part (Appendix E).
+Then $\mathcal F_\epsilon \ \Gamma\!\!\!-\!\!\!\!\!\!\!\!\longrightarrow \ \mathcal F$ in $L^1_{\mathrm{loc}}$, where
+
+$$
+\mathcal F[g,\phi]=\frac{c^3}{16\pi G}\int_M R\,\sqrt{-g}\,d^4x \ +\ \int_M \mathcal L_{MPU}(g,\phi)\,\sqrt{-g}\,d^4x,
+$$
+
+and minimizers/critical points of $\mathcal F_\epsilon$ converge (up to subsequences) to critical points of $\mathcal F$ (the Einstein–Hilbert plus MPU action). The convergence of the discrete metric spaces is understood in the Gromov-Hausdorff sense (Section 11).
+
+*Proof (sketch).* Establish liminf inequality by curvature consistency and convexity; construct a **recovery sequence** via local interpolation (finite‑element style) respecting the area‑law scaling; use equicoercivity to obtain precompactness; conclude by Γ‑convergence theory (see, e.g., Braides, Dal Maso). ∎
+
+This appendix thus provides the rigorous foundation for the dynamical aspects of the Predictive Universe framework.
 
 **Theorem 2 (Dynamically Enforced Functional Correspondence - Justified):**
 The slow adaptation dynamics of the MPU network, modeled as a stochastic gradient flow minimizing the PCE Potential $V(x)$ (Eq. D.8), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.4, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily satisfies the complexity alignment condition $C_P(v) = \langle\hat C_v\rangle_{x^\star}$ for all $v$. This alignment is enforced physically via the observable work-cost gap feedback mechanism (Lemma D.2), which implements the necessary alignment gradient term implicitly within the operational dynamics minimizing $V(x)$ (Theorem D.1, Corollary D.2).

@@ -30,7 +30,7 @@ We begin by framing the task of recovering the information of an initial pure st
 *   **Solution Attempt $S_t$:** A "solution attempt" corresponds to an external observer performing a measurement on the outgoing Hawking radiation during a time interval $\Delta t$. This measurement is an 'Evolve' process (Definition 27) that extracts a quantum of information.
 *   **Instance Transformation Function $T(I_t, S_t)$:** The core physical dynamic of the paradox lies in the fact that the measurement $S_t$ is not passive. By extracting a quantum of energy-momentum and information, the measurement process itself alters the black hole's state. This physical back-reaction is the **Instance Transformation Function**. The state of the black hole at the next step, $I_{t+1}$, is determined by its previous state $I_t$ and the measurement interaction $S_t$ via a stochastic mapping:
     $$
-    I_{t+1} = T(I_t, S_t) \quad \text{(K.2)}
+    I_{t+1} = T(I_t, S_t) \quad \text{(K.3.1)}
     $$
     This mapping is physically realized by the MPU network dynamics, where the emission of a Hawking quantum via an 'Evolve' event reduces the mass and alters the internal state $|S_{BH}(t)\rangle \to |S_{BH}(t+1)\rangle$.
 
@@ -40,11 +40,11 @@ Because the act of "solving" (measuring) the problem instance modifies the insta
 
 The key insight arises from analyzing the stability of this reflexive loop. We can classify the reflexivity based on whether sequential solution attempts cause the problem instance to converge or diverge.
 
-*   **Definition K.3.1 (Contractive vs. Expansive Reflexivity).**
+*   **Definition K.1 (Contractive vs. Expansive Reflexivity).**
     *   **Contractive Reflexivity:** If sequential measurements cause the state of the black hole to converge towards a stable, predictable final state (e.g., if each measurement had a diminishing impact), the problem would be solvable in principle. This corresponds to the transformation $T$ being a contraction mapping in the space of problem instances.
     *   **Expansive Reflexivity:** If sequential measurements cause the state of the black hole to change in an accelerating or increasingly unpredictable manner, the problem instance "runs away" from the solver, creating a computational infinite regress.
 
-**Theorem K.3.1 (Expansive Reflexivity of Late-Stage Evaporation).**
+**Theorem K.1 (Expansive Reflexivity of Late-Stage Evaporation).**
 For a black hole in the final stages of its evaporation, the information retrieval problem exhibits **expansive reflexivity**. Each measurement of a Hawking quantum induces a proportionally larger and more significant change on the remaining black hole state, preventing a stable, convergent information extraction process.
 
 *Proof.*
@@ -53,7 +53,7 @@ For a black hole in the final stages of its evaporation, the information retriev
 3.  **Complexity Divergence:** The computational complexity of the black hole's internal state is thought to grow for a significant portion of its lifetime before decreasing. The accelerating dynamics and increasing relative impact of measurements in the late stages mean that the "problem instance" $I_t$ is changing more rapidly and dramatically than the information can be extracted.
 4.  **Infinite Regress:** An observer attempting to build a complete model of $|S_{BH}(t)\rangle$ by collecting sequential Hawking quanta is faced with a target that transforms away from them at an ever-increasing rate. This establishes an **infinite regress**: the solution to step $t$ redefines the problem for step $t+1$ so significantly that the new problem is "further away" from a complete solution—in the sense that the rate of change of the internal state now exceeds the information extraction rate—than the previous one was. This satisfies the conditions for expansive reflexivity. QED
 
-**Theorem K.3.2 (Fundamental Unsolvability via Local, Sequential Measurement).**
+**Theorem K.2 (Fundamental Unsolvability via Local, Sequential Measurement).**
 Due to the expansive reflexivity inherent in late-stage black hole evaporation, no algorithm based on local, sequential measurements of Hawking radiation can recover the complete information of the initial state $|\psi_{in}\rangle$, regardless of available computational resources.
 
 *Proof.* This is a physical realization of the unsolvability of problems with expansive reflexivity. The problem instance $I_t$ does not converge, preventing any sequential algorithm from building a complete and stable solution. This limitation is not one of computational power (e.g., P vs NP) but a fundamental barrier arising from the logical structure of self-reference in the physical measurement process. It is a physical analogue of the logical limits established by SPAP (Theorem 10) and RUD (Theorem 12), where the act of observation fundamentally precludes complete knowledge.
@@ -65,7 +65,7 @@ The PU framework's resolution lies not in overcoming the expansive reflexivity, 
 The PU framework proposes that information escapes via the **Perspectival Information Channel**.
 
 1.  **The Dual Nature of Emission:** Each 'Evolve' event that emits a Hawking quantum is a transition of the full Perspectival State. It produces not just an amplitude state $|k_j\rangle$ (e.g., a photon of a certain energy) but also a corresponding **final perspective** $s'_j$ (an interaction basis).
-      $$\text{Emission Event}_j = \left( |k_j\rangle, s'_j \right) \quad \text{(K.3)}
+      $$\text{Emission Event}_j = \left( |k_j\rangle, s'_j \right) \quad \text{(K.3.2)}
     $$
 2.  **Context-Dependent Perspective Selection:** The key is that the choice of the perspective $s'_j$ is not random. It is drawn from the Conditional Perspective Transition Kernel $G_{persp}(s' | s_{loc}, k_j, |S_{BH}(t_j)\rangle, ...)$ (formalized in Appendix M, Eq. M.2), which is critically dependent on the full internal MPU state of the black hole, $|S_{BH}(t_j)\rangle$.
 3.  **Bypassing the Loop:** The information is encoded in the specific, highly-correlated sequence of perspectives $\{s'_j\}$ over the black hole's entire lifetime. This sequence is not subject to the same reflexive feedback loop as the mass-energy. While the emission of a quantum changes $|S_{BH}\rangle$ and thus the probability distribution for the *next* perspective, the information carried by the *current* perspective is already "out." An observer who could collect the entire sequence of pairs $\{(|k_j\rangle, s'_j)\}$ could, in principle, access the full information content of the initial state, preserving the global predictive potential of the system and satisfying the framework's overarching requirement for unitarity.
@@ -85,6 +85,56 @@ The PU framework recasts the Black Hole Information Paradox as a problem of **ex
 *   **Prediction:** Hawking radiation is not perfectly thermal. The full description of each emitted quantum includes a perspective, and the sequence of these perspectives over the black hole's lifetime is highly non-random and encodes the initial state's information.
 *   **Challenge:** The primary challenge is the technological impossibility of measuring the perspective $s'_j$ of an individual quantum. However, the theory predicts that subtle, long-range correlations may exist in the properties of the quanta $\{|k_j\rangle\}$ themselves, as their emission is correlated with the perspective selection. Searching for these ultra-faint, non-thermal correlations in simulated or analogue black hole systems remains a potential, albeit extremely difficult, experimental avenue.
 
+**K.3.6 Consistency with the Page Curve**
+
+In addition to providing a unique conceptual resolution via expansive reflexivity, the PU framework's core principles can be shown to reproduce the expected Page curve shape for the entanglement entropy of the radiation, providing a crucial consistency check with standard information-theoretic results.
+
+**Lemma K.1 (Evaporation as a bistochastic predictive channel ⇒ Page-curve shape).**
+Let the black-hole (BH) degrees of freedom at formation be an MPU reservoir with Hilbert space $H_0$ of dimension $d_{H_0}$. Evaporation in PU is modeled by a sequence of **PCE‑symmetric** emission steps: for each $t=1,2,\dots$, an isometry
+
+$$
+W_t:\ H_0\longrightarrow R_t\otimes H_t,\qquad d_{H_0}=d_{R_t}\,d_{H_t},
+$$
+
+where $R_t$ is the cumulative radiation and $H_t$ the remaining BH. Denote by
+
+$$
+\mathcal E_t(\,\cdot\,)\ :=\ \operatorname{Tr}_{H_t}\!\big[\,W_t(\,\cdot\,)W_t^\dagger\big]\ :\ \mathcal B(H_0)\to\mathcal B(R_t)
+$$
+
+the induced emission channel. Assume PCE‑symmetric emission channels are completely positive, trace‑preserving and unital on the emitted algebra (conditioned on conserved quantities): $\mathcal E_t(\mathbf 1_{H_0})=\mathbf 1_{R_t}$. This means the channel is **bistochastic** (completely positive, trace‑preserving and unital). For an arbitrary initial BH state $\rho_{H_0}$ with entropy $S_0:=S(\rho_{H_0})$, let $\rho_{R_t}=\mathcal E_t(\rho_{H_0})$ and $\rho_{H_t}=\operatorname{Tr}_{R_t}[W_t\rho_{H_0}W_t^\dagger]$. Then:
+
+1. (**Early‑time lower bound**) By data‑processing for relative entropy,
+
+   $$
+   D\!\left(\rho_{R_t}\ \|\ \tfrac{\mathbf 1_{R_t}}{d_{R_t}}\right)\ \le\ D\!\left(\rho_{H_0}\ \|\ \tfrac{\mathbf 1_{H_0}}{d_{H_0}}\right)\ =\ \log d_{H_0}-S_0.
+   $$
+
+   Using $D(\rho\|\tfrac{\mathbf 1}{d})=\log d - S(\rho)$ gives the **increasing lower bound**
+
+   $$
+   S(R_t)\ \ge\ \log d_{R_t}\ -\ \big(\log d_{H_0}-S_0\big). \tag{K.3.3}
+   $$
+
+   As $t$ grows, $d_{R_t}$ increases, so the right‑hand side grows monotonically.
+
+2. (**Late‑time upper bound**) The joint $R_tH_t$ state is pure (Stinespring), hence $S(R_t)=S(H_t)$. Therefore
+
+   $$
+   S(R_t)\ =\ S(H_t)\ \le\ \log d_{H_t}\ =\ \log d_{H_0}-\log d_{R_t}, \tag{K.3.4}
+   $$
+
+   which **decreases** as $d_{R_t}$ grows.
+
+Combining (K.3.3) and (K.3.4) sandwiches $S(R_t)$ between an **increasing** and a **decreasing** function of $\log d_{R_t}$ that **cross** at equipartition $\log d_{R_t}\approx \log d_{H_t}$ (i.e. $d_{R_t}\approx d_{H_t}$). Consequently,
+
+$$
+\text{\(S(R_t)\) attains its maximum near \(d_{R_t}\simeq d_{H_t}\) and exhibits the single‑peaked “Page‑curve” shape.}
+$$
+
+No numerical fit or randomness assumption is required—only PU’s PCE‑symmetry (bistochasticity) and basic entropy/duality facts.
+
+*Proof.* For (1), the **data‑processing inequality** $D(\Phi(\rho)\|\Phi(\sigma))\le D(\rho\|\sigma)$ applied to $\Phi=\mathcal E_t$ with $\rho=\rho_{H_0}$, $\sigma=\mathbf 1_{H_0}/d_{H_0}$ and unitality $\mathcal E_t(\sigma)=\mathbf 1_{R_t}/d_{R_t}$ yields the bound; rewriting relative entropy gives (K.3.3). Relative entropy is taken against the uniform states on the **respective** spaces; the data‑processing inequality holds under $\mathcal E_t:\mathcal B(H_0)\to\mathcal B(R_t)$ with $\mathcal E_t(\mathbf{1}_{H_0}/d_{H_0})=\mathbf{1}_{R_t}/d_{R_t}$. For (2), purity of $R_tH_t$ implies $S(R_t)=S(H_t)$; von Neumann entropy is bounded by the log‑dimension, giving (K.3.4). Since $\log d_{R_t}$ increases while $\log d_{H_t}=\log d_{H_0}-\log d_{R_t}$ decreases, the lower and upper bounds cross once; $S(R_t)$ is confined between them and therefore reaches its maximum in the crossover region, i.e. the Page time. ∎
 
 **K.4 Additional Potential Pathways**
 
@@ -93,7 +143,8 @@ The PU framework recasts the Black Hole Information Paradox as a problem of **ex
 | **Arrow of time** | The arrow of time arises from a logical necessity—the irreversible `Predict→Verify→Update` cycle (Def. 4)—that is physically enforced by a thermodynamic ratchet: the `ε ≥ ln 2` cost of every 'Evolve' interaction (Thm. 31). This ubiquitous microscopic cost makes emergent time unidirectional (Appx. O), providing a dynamical origin independent of initial cosmological conditions. | Simulate MPU network dynamics incorporating the $\varepsilon$-cost to demonstrate the robust emergence of a global arrow of time and its consistency with macroscopic thermodynamic behavior. Explore if this mechanism can explain the universe's initial low effective entropy state from a PCE perspective. |
 | **Singularity avoidance** | Infinite energy density or curvature likely corresponds to a requirement for unbounded information density or channel capacity, which would violate the fundamental limits $C_{max} < \ln d_0$ (Theorem E.2) and bounds on information density from the Area Law (Theorem 49). Physics likely modified near Planck scale by these info limits. | Explore modifications to the emergent EFE (Theorem 50) motivated by PU's information/capacity cutoffs, investigating if they lead to singularity avoidance or bounce scenarios. |
 | **The Electroweak Hierarchy Problem** | The vast hierarchy between the electroweak scale `v` and the Planck scale `M_Pl` (`v/M_Pl ≈ 10⁻¹⁷`) is derived from first principles as an emergent phenomenon. As rigorously detailed in **Appendix T**, the mechanism involves a Wilsonian RG analysis of a macroscopic effective potential constructed directly from the underlying MPU network statistics. The potential arises from a PCE-driven competition between a stabilizing, area-law boundary cost (proportional to `1/ℓ`, where `ℓ` is the coarse-graining scale) and a destabilizing bulk mass term that runs logarithmically with scale (`-β₂ln(ℓ)`). This competition guarantees the existence of an emergent critical scale `ℓ*` where the effective mass-squared of the order parameter flips sign, triggering spontaneous symmetry breaking. The VEV is set by this scale, `v ≈ ζ/(ℓ*δ)`. The logarithmic nature of the RG flow naturally generates an exponentially large `ℓ* ≈ exp(m_b²/β₂)`, explaining the hierarchy without fine-tuning. The mechanism yields the unique, falsifiable prediction that the electroweak scale increases with the underlying ND-RID channel capacity: `∂ln(v)/∂ln(C_max) > 0`. | Compute the microscopic MPU cumulants that determine the coefficients of the effective potential (`m_b²`, `β₂`, `B`) from first principles of the PCE-optimized MPU network. This would transform the mechanism from an explanation of the hierarchy's existence into a quantitative, parameter-free prediction of its value. |
-| **Cosmic coincidence ($g_0 \sim cH_0$)** The empirical Milgrom scale $g_0$ is derived from the cosmological constant $\Lambda$ via an energy matching hypothesis (Theorem H.1 in **Appendix H**). The coincidence $g_0 \sim cH_0$ then relies on the observed $\Lambda \sim H_0^2$. This relation between $\Lambda$ and $H_0$ needs a deeper explanation within PU, perhaps related to the characteristic relaxation timescale $L_0$ in the scale-dependent gravity model (Appendix I) itself relating to $H_0^{-1}$. A full derivation of the cosmological constant from first principles is provided in **Appendix U**. |
+| **Cosmic coincidence ($g_0 \sim cH_0$)** | The empirical Milgrom scale $g_0$ is derived from the cosmological constant $\Lambda$ via an energy matching hypothesis (Theorem H.1 in **Appendix H**). The coincidence $g_0 \sim cH_0$ then relies on the observed $\Lambda \sim H_0^2$. This relation between $\Lambda$ and $H_0$ needs a deeper explanation within PU, perhaps related to the characteristic relaxation timescale $L_0$ in the scale-dependent gravity model (Appendix I) itself relating to $H_0^{-1}$. A full derivation of the cosmological constant from first principles is provided in **Appendix U**. | |
+| **Baryon Asymmetry of the Universe** | The observed matter-antimatter asymmetry is derived from the PU framework's emergent gauge structure without new particles or couplings. As detailed in **Appendix Y**, the three Sakharov conditions are shown to be generic consequences of the framework: (1) Baryon number violation arises from the standard electroweak anomaly, which is a necessary feature of the emergent gauge bundle (Conjecture G.M1, Lemma R.IDX1); (2) C and CP violation are generic features of the complex holonomies in the PCE-preserving predictive frame bundle; (3) Departure from equilibrium is a direct consequence of the emergent arrow of time and horizon thermodynamics. The net baryon number is then generated via anomaly inflow, with its sign tied to the initial predictive boundary conditions. | Calculate the topological susceptibility of the electroweak sector from the finite-temperature effective action derived from the PU continuum limit (Theorem D.G3) to provide a quantitative, parameter-free prediction for the baryon-to-entropy ratio $\eta_B$. |
 
 **K.5 High-Complexity Prediction, Consciousness Complexity (CC) and Information Horizons**
 

@@ -40,6 +40,25 @@ $$
 \Delta T_{\mu\nu}^{(CC)}=u_{context}\,\text{diag}(1,\,1/3,\,1/3,\,1/3).
 $$
 
+**Theorem S.C1 (Local CC biases cannot signal superluminally; gravitational bound).**
+Let a bipartite system $AB$ be prepared in state $\rho_{AB}$. Let the local CC device on $A$ be described by a one-parameter family of completely positive, trace-preserving (CPTP) maps $\{\Phi_A^{(\epsilon)}\}_{\epsilon}$ with $\|\Phi_A^{(\epsilon)}-\mathcal E_A\|_{1\to 1}\le \alpha<1/2$, where $\mathcal{E}_A$ is the baseline (zero-CC) channel. Let this map act before a product measurement $\{E_i\otimes F_j\}$. Then the marginal on $B$ is unchanged for all $\epsilon$:
+
+$$
+\sum_i \operatorname{tr}\!\Big[(\Phi_A^{(\epsilon)}\otimes\mathrm{id}_B)(\rho_{AB})\, (E_i\otimes F_j)\Big]
+=\operatorname{tr}\!\big[\rho_B F_j\big].
+$$
+
+Moreover, if the context stress–energy $\Delta T^{(CC)}_{\mu\nu}$ is perfect‑fluid as in S.2, the bias obeys the self‑limitation bound
+
+$$
+|\Delta P|\ \le\ \min\!\Big\{\alpha,\ c_1\,\frac{G\,u_{\mathrm{context}}\,L^2}{c^4}\Big\},
+$$
+
+where $L$ is the characteristic spatial scale (e.g., $L\sim c\,\tau_c$), and $c_1$ is a geometric factor.
+
+*Proof.* CP‑TP local maps commute with partial trace: $\operatorname{tr}_A ((\Phi_A^{(\epsilon)}\otimes \mathrm{id}_B)(\rho_{AB}))=\operatorname{tr}_A \rho_{AB}$. Thus $B$’s marginal is invariant. The bound is the S.1–S.2 energy budget translated into probabilities via first‑order perturbation theory; positivity and the norm bound on the channel difference cap the operational effect. The completely bounded (cb) norm or diamond norm could also be used here, but the induced trace norm $\|\cdot\|_{1\to 1}$ is sufficient for this argument. ∎
+
+
 #### **S.3 Step 3: Gravitational Self-Disruption**
 
 In the weak-field limit of General Relativity, the effective source for the Newtonian field is

@@ -68,67 +68,64 @@ $$
 
 Thus $\pi_2(\Sigma_8)\cong \ker\left(\sum_i : \mathbb{Z}^8\to\mathbb{Z}\right)\cong \mathbb{Z}^7$ with integral coordinates $q=(q_1,\dots,q_7)$ in the $\{\omega_i\}$-basis.
 
-## R.2 Gauge–Topology Correspondence
+## R.2 Twisted Dirac index and chiral asymmetry of a predictive block
 
-Let $\rho: G_{\rm SM} \to U(8)$ be a fixed embedding of the Standard Model gauge group into $U(8)$, providing an eigenspace decomposition of $H_0 \cong \mathbb{C}^8$ into eight one-dimensional weight lines with weights $w_i \in \mathfrak{t}^\ast(G_{\rm SM})$ for $i=1,\dots,8$. We write each weight in components for $G_{\rm SM} = SU(3) \times SU(2) \times U(1)_Y$:
-
-$$
-w_i = (r_i; s_i; y_i),
-\tag{R.5}
-$$
-
-where $r_i \in \mathfrak{t}^\ast(SU(3))$ (two Cartan coordinates, e.g., Dynkin basis), $s_i \in \mathfrak{t}^\ast(SU(2))$ (the $T_3$ eigenvalue), and $y_i \in \mathbb{R}$ (hypercharge, in a chosen normalization).
-
-### R.2.1 Theorem (Charge map and center character).
-
-There exists a homomorphism from topological to gauge charges:
+**Lemma R.IDX1 (Twisted Dirac index = net chirality of one predictive block).**
+Let $M$ be a $4$‑dimensional, time‑orientable spin manifold carrying the emergent Lorentzian structure of §11. Let $P\to M$ be the principal
 
 $$
-\mu_{\rm top}: H^2(\Sigma_8; \mathbb{Z}) \to P_{G_{\rm SM}},
-\tag{R.6}
+G\ =\ U(1)\times SU(2)\times SU(3)
 $$
 
-where $P_{G_{\rm SM}}$ is the integral weight lattice. In the $\omega$-basis,
+bundle of **PCE‑preserving predictive frames** (Conjecture G.M1 in Appendix G), with connection $A$. For a *predictive block* $R$ (a finite‑dimensional complex representation of $G$ dictated by the $(1,2,3)$ block structure of Appendix G), consider the associated complex vector bundle $E_R:=P\times_G R$ and the chiral spinor bundles $S^\pm$. The **twisted Dirac operator**
 
 $$
-\mu_{\rm top}(\omega_i) = w_i - w_{i+1}, \quad i = 1, \dots, 7.
-\tag{R.7}
+\slashed D_A:\ \Gamma\big(S^+\!\otimes E_R\big)\longrightarrow \Gamma\big(S^-\!\otimes E_R\big)
 $$
 
-This assignment is canonical given an ordered flag; PCE selects the ordering minimizing the total complexity of the charge vectors, e.g., $\sum_A \|v_A\|_1$. For any Cartan generator $H_A$, the corresponding integer charge of a topological state $q \in \mathbb{Z}^7$ is $A(q) = v_A \cdot q$, with components $v_A[i] := \langle w_i - w_{i+1}, H_A\rangle \in \mathbb{Z}$.
-
-Composing the $SU(3)$ projection with the natural map $P_{SU(3)} \to Z(SU(3)) \cong \mathbb{Z}_3$ (modding out the root lattice) gives the **center character map** [Fulton & Harris 1991; Georgi 1999]:
+has Fredholm index
 
 $$
-\tau: \pi_2(\Sigma_8) \cong H^2(\Sigma_8; \mathbb{Z}) \to \mathbb{Z}_3,
-\tag{R.8}
+\operatorname{Ind}\big(\slashed D_A\big)=\dim\ker\slashed D_A\big|_{S^+\!\otimes E_R}\ -\ \dim\ker\slashed D_A\big|_{S^-\!\otimes E_R}
 $$
 
-given by
+equal to the **net chiral asymmetry** $(\#\mathrm{LH}-\#\mathrm{RH})$ of zero‑modes in that block, and is given topologically by the Atiyah–Singer index theorem [Atiyah & Singer 1963]:
 
 $$
-\tau(q) \equiv (c_1 \cdot q + 2 c_2 \cdot q) \pmod 3,
-\tag{R.9}
+\operatorname{Ind}\big(\slashed D_A\big)\ =\ \big\langle\,\widehat A(TM)\ \mathrm{ch}(E_R)\,,\ [M]\ \big\rangle\ \in\ \mathbb Z. \tag{R.2}
 $$
 
-where $c_1$ and $c_2$ are the two $SU(3)$ Cartan charge vectors.
+*Proof.* Standard Atiyah–Singer index theorem for the Dirac operator twisted by the complex $G$‑bundle $E_R$. In four dimensions, the index equals the difference of left‑ and right‑chiral zero‑modes, which is precisely the net chiral asymmetry of the predictive block. ∎
 
-*Proof.* The universal splitting $E = \bigoplus_k Q_k$ over $\Sigma_8$ yields an equivariant class $\sum_k x_k \otimes w_k \in H^2(\Sigma_8; \mathbb{Z}) \otimes P_{G_{\rm SM}}$. With $\sum_k x_k=0$, passing to the $\omega$-basis maps $x_k-x_{k+1}\mapsto w_k-w_{k+1}$, defining $\mu_{\rm top}$. Linearity gives $A(q)=v_A\cdot q$. For $SU(3)$, the center character of highest weight $(\lambda_1,\lambda_2)$ is $\exp(2\pi i(\lambda_1+2\lambda_2)/3)$; the integer $c_1\cdot q+2c_2\cdot q$ recovers this exponent modulo $3$, defining $\tau$. ∎
-
-### R.2.2 Proposition (Surjectivity of $\tau$ for the PCE-optimal embedding).
-
-For the PCE-favored embedding $\rho$ on $H_0 \cong \mathbb{C}^8$ specified in R.4 below, the center character map $\tau$ is surjective.
-
-*Proof.* For the embedding of R.4.1, $c_1 = (2, -1, -1, 2, -1, 0, 0)$ and $c_2 = (-1, 2, -1, -1, 2, -1, 0)$. For the basis vector $e_6 \in \mathbb{Z}^7$,
+**Corollary R.IDX1.1 (Degree‑4 characteristic‑class form).**
+In $4$D, only the degree‑4 part contributes:
 
 $$
-\tau(e_6) \equiv (c_1 \cdot e_6 + 2 c_2 \cdot e_6) \pmod 3 = (0 + 2(-1)) \pmod 3 = 1 \pmod 3,
-\tag{R.10}
+\operatorname{Ind}(\slashed D_A)
+\ =\ \int_M \left[\ -\tfrac{1}{24}\,p_1(TM)\ \mathrm{rk}(E_R)\ +\ \tfrac12\,c_1(E_R)^2\ -\ c_2(E_R)\ \right],
 $$
 
-so the image contains a generator of $\mathbb{Z}_3$. ∎
+with the usual identifications $c_i,\,p_1$ built from the $U(1),SU(2),SU(3)$ curvatures (and their hypercharge embedding inside $c_1$).
 
-*Remark (family $U(1)_F$):* Beyond $G_{\rm SM}$, one may include an Abelian factor $U(1)_F$ inside $U(8)$ that commutes with $G_{\rm SM}$. Its charge-map vector $f\in\mathbb{Z}^7$ is defined by the same adjacent-difference rule (R.7) for the corresponding generator. The existence of such a factor is consistent with the framework's emergence of gauge symmetries (Appendix G).
+**Lemma R.IDX2 (Anomaly additivity and block replication).**
+Let $I_6(R)$ be the **perturbative gauge‑anomaly polynomial** (the 6‑form) of the chiral content in one predictive block $R$; additivity of the Chern character over direct sums implies
+
+$$
+I_6(R_1\oplus R_2)\ =\ I_6(R_1)\ +\ I_6(R_2).
+$$
+
+Hence, for $k$ identical blocks,
+
+$$
+I_6\big(\,R^{\oplus k}\,\big)\ =\ k\,I_6(R).
+$$
+
+In particular, if a single predictive block is **anomaly‑free** (all cubic/mixed gauge anomalies and mixed gauge–gravitational anomalies vanish, including the global SU(2) parity constraint, i.e., an even number of SU(2) doublets per block [Witten 1982]), then any number $k$ of **replicated blocks remains anomaly‑free**.
+
+*Proof.* The perturbative anomaly polynomial in 4D is $\mathrm{ch}_3(E_R)$ plus mixed terms involving $c_1(E_R)$ and $p_1(TM)$; all are linear in $\mathrm{ch}(E_R)$, which is additive under direct sums. The global SU(2) anomaly (Witten parity) depends on the parity of the **number of SU(2) doublets**; replication multiplies that number by $k$, so if one block has an even count, every replicated theory does as well. ∎
+
+**Remark (Predictive block and SM‑like content).**
+The block structure $H_x\cong\mathbb C\oplus\mathbb C^2\oplus\mathbb C^3$ from Appendix G naturally yields associated bundles whose Chern classes reproduce the usual $U(1)$, $SU(2)$, $SU(3)$ contributions. In that setting, Lemma R.IDX1 pins the **net chirality per block** to the topological pairing $\langle \widehat A\,\mathrm{ch},[M]\rangle$, while Lemma R.IDX2 guarantees that once a **single** predictive block satisfies the anomaly constraints, any number of generations (blocks) preserves them automatically.
 
 ## R.3 PCE Selection Principles
 
