@@ -2,7 +2,9 @@
 
 ## W\.0 Notation and setup
 
-* **Alphabet size:** $d_0\in\{2,3,\dots\}$. PU uses $d_0=8$.
+This appendix derives general, robust identities and bounds relating emergent gauge couplings to the information-theoretic invariants of the MPU’s predictive cycle. This formalism provides stringent internal consistency checks for the PU framework. In **Appendix Z**, these principles are applied to a first-principles derivation of the MPU's QFI spectrum, culminating in a parameter-free calculation of the fine-structure constant at the PCE-Attractor.
+
+* **Alphabet size:** $d_0\in{2,3,\dots}$. PU uses $d_0=8$.
 * **One‑cycle deformation variable:** $u=g^2\ge 0$ (Heaviside–Lorentz units).
 * **Rate‑level PCE potential (quadratic curvature near $u=0$):** take $\gamma_{\rm eff}=2$,
 
@@ -409,11 +411,12 @@ with $c_{1,2}$ controlled by the degree of non‑saturation (entropy deficit) an
 ## W\.9 Distinctive mathematical features
 
 **Features.**
-(A) **Alphabet‑constant family** $K(d_0,M)$ with exact identity (W\.2.6) in the flat‑spectrum branch‑boundary reference.
-(B) **Convexity and uniqueness** of the coupling‑setting principle (Lemma W\.1).
-(C) **Capacity‑aware bounds** that are explicit and saturable under stated conditions (Proposition W\.8; Theorem W\.10; Corollary W\.16).
-(D) **Hypercharge structure** compactly fixed by anomaly + Yukawa relations (Theorem W\.14; Corollary W\.15).
-(E) **Deterministic pipeline** from axioms/invariants to numbers (W\.6).
-(F) **Transparent variance dependence** via $F_\lambda$ (W\.2.4), quantifying robustness.
+* (A) **Alphabet‑constant family** $K(d_0,M)$ with exact identity (W\.2.6) in the flat‑spectrum branch‑boundary reference.
+* (B) **Convexity and uniqueness** of the coupling‑setting principle (Lemma W\.1).
+* (C) **Capacity‑aware bounds** that are explicit and saturable under stated conditions (Proposition W\.8; Theorem W\.10; Corollary W\.16).
+* (D) **Hypercharge structure** compactly fixed by anomaly + Yukawa relations (Theorem W\.14; Corollary W\.15).
+* (E) **Deterministic pipeline** from axioms/invariants to numbers (W\.6).
+* (F) **Transparent variance dependence** via $F_\lambda$ (W\.2.4), quantifying robustness.
+* (G) **Predictive Power:** As shown in **Appendix Z**, this formalism, when combined with the framework's fundamental constants, enables a complete, parameter-free calculation of the fine-structure constant.
 
 

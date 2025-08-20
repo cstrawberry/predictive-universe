@@ -520,7 +520,7 @@ The Standard Model gauge group $G_{SM}=SU(3)\times SU(2)\times U(1)$ with its kn
 
 ## G.9 A Proposed Pathway Toward Deriving the Fine‑Structure Constant $\alpha_{em}$
 
-This section develops a first‑principles pathway for computing the electromagnetic fine‑structure constant $\alpha_{em}$ within the Predictive Universe (PU) framework. The calculation follows from **PCE at the rate level** applied to maintaining predictive coherence under a local phase freedom ($U(1)$), with the renormalized coupling at the MPU’s predictive operating scale $\mu^*$ fixed by a unique equilibrium that balances the **power** cost of coherence against the predictive benefit it provides. This derivation is further supported by the general alphabet identities and bounds derived in **Appendix W**.
+This section develops the general formalism and computational program for deriving the electromagnetic fine-structure constant `α_em` from a rate-level PCE potential. The calculation balances the **power cost** of maintaining U(1) coherence against the **predictive information rate** benefit it provides. This general framework is further constrained by the alphabet identities derived in **Appendix W**. The complete, parameter-free derivation, which uses the framework's fundamental constants (`d₀`, `ε`) to fix the spectral inputs to this program and solve for `α_em` at the PCE-Attractor, is presented in **Appendix Z**.
 
 *Units.* Natural units with $\hbar=c=\varepsilon_0=1$ (Heaviside–Lorentz/rationalized). Information is in **nats**. In these units
 
@@ -714,7 +714,7 @@ $$
 
 ### G.9.6 Conclusion
 
-Within PU, the electromagnetic coupling emerges as a **rate‑level PCE equilibrium** balancing the predictive benefit of $U(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non‑interacting state $g_e=0$ is unstable and the unique optimum $u^*>0$ determines $\alpha_{em}(\mu^*)=u^*/(4\pi)$. The inputs $\Gamma_0$, $\nu$, $A_{\mathrm{PCE}}$, $\gamma_{\mathrm{eff}}$, and ${\lambda_i}$ are operational functionals of the baseline PCE‑optimal FPL, and the capacity‑aware bound (G.9.11) supplies a falsifiable constraint independent of micro‑details.
+Within PU, the electromagnetic coupling emerges as a **rate‑level PCE equilibrium** balancing the predictive benefit of $U(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non‑interacting state $g_e=0$ is unstable and the unique optimum $u^*>0$ determines $\alpha_{em}(\mu^*)=u^\*/(4\pi)$. The inputs $\Gamma_0$, $\nu$, $A_{\mathrm{PCE}}$, $\gamma_{\mathrm{eff}}$, and ${\lambda_i}$ are operational functionals of the baseline PCE‑optimal FPL. As demonstrated in **Appendix Z**, the framework's foundational constants (`d₀=8`, `ε=ln 2`) are sufficient to fix these spectral inputs, leading to a complete, parameter-free calculation of `α_em` at the PCE-Attractor.
 
 ## G.10 Conclusion
 
