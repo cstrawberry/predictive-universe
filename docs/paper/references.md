@@ -2,6 +2,8 @@
 
 *   Arıkan, E. (2009). Channel polarization: A method for constructing capacity-achieving codes for symmetric binary-input memoryless channels. *IEEE Transactions on Information Theory*, *55*(7), 3051–3073. DOI: 10.1109/TIT.2009.2021379
 *   Ambrosio, L., Gigli, N., & Savaré, G. (2008). *Gradient Flows in Metric Spaces and in the Space of Probability Measures*. Birkhäuser.
+*   Ambrosio, L., Gigli, N., & Savaré, G. (2014). Metric measure spaces with Riemannian Ricci curvature bounded from below. *Duke Mathematical Journal*, *163*(7), 1405–1490. DOI: 10.1215/00127094-2681605
+*   Ambrosio, L., Gigli, N., & Savaré, G. (2015). Bakry–Émery curvature-dimension condition and Riemannian Ricci curvature bounds. *Annals of Probability*, *43*(1), 339–404. DOI: 10.1214/14-AOP907
 *   Anderson, P. W. (1972). More is different. *Science*, *177*(4047), 393–396. DOI: 10.1126/science.177.4047.393
 *   Audenaert, K. M. R. (2007). A sharp continuity estimate for the von Neumann entropy. *Journal of Physics A: Mathematical and Theoretical*, *40*(28), 8127–8136. DOI: 10.1088/1751-8113/40/28/S19
 *   Audenaert, K. M. R., & Datta, N. (2015). α–z–Rényi relative entropies. *Journal of Mathematical Physics*, *56*(2), 022202. DOI: 10.1063/1.4906367
@@ -28,6 +30,7 @@
 *   Carroll, S. M., & Parola, A. (2024). What Emergence Can Possibly Mean. arXiv:2410.15468 [physics.hist-ph].
 *   Cesa-Bianchi, N., & Lugosi, G. (2006). *Prediction, Learning, and Games*. Cambridge University Press.
 *   Chalmers, D. J. (1996). *The Conscious Mind: In Search of a Fundamental Theory*. Oxford University Press.
+*   Cheeger, J. (1999). Differentiability of Lipschitz functions on metric measure spaces. *Geometric & Functional Analysis*, *9*(3), 428–517. DOI: 10.1007/s000390050094
 *   Cheeger, J., & Colding, T. H. (1997). On the structure of spaces with Ricci curvature bounded below. I. *Journal of Differential Geometry*, *46*(3), 406–480.
 *   Cheeger, J., & Colding, T. H. (2000). On the structure of spaces with Ricci curvature bounded below. II. *Journal of Differential Geometry*, *54*(1), 13–35.
 *   Chung, F. (1997). *Spectral Graph Theory*. American Mathematical Society.
@@ -98,6 +101,7 @@
 *   Jech, T. (2003). *Set Theory* (The Third Millennium Edition, revised and expanded). Springer.
 *   Jegerlehner, F. (2008). The running fine-structure constant α(E) via the Adler function. *Nuclear Physics B – Proceedings Supplements*, *181–182*, 135–140. DOI: 10.1016/j.nuclphysbps.2008.09.010
 *   Kant, I. (1781). Kritik der reinen Vernunft (Critique of Pure Reason).
+*   Keith, S. (2004). A differentiable structure for metric measure spaces. *Advances in Mathematics*, *183*(2), 271–315. DOI: 10.1016/S0001-8708(03)00089-6
 *   King, C. (2003). The capacity of the quantum depolarizing channel. *IEEE Transactions on Information Theory*, *49*(1), 221-229. DOI: 10.1109/TIT.2002.806153
 *   King, C., & Ruskai, M. B. (2001). Minimal entropy of states emerging from noisy quantum channels. *IEEE Transactions on Information Theory*, *47*(1), 192-209. DOI: 10.1109/18.904522
 *   Kleene, S. C. (1938). On Notation for Ordinal Numbers. *The Journal of Symbolic Logic*, *3*(4), 150–155. DOI: 10.2307/2267778
@@ -123,6 +127,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Lin, Y. & Yau, S.T. (2010). Ricci curvature and eigenvalue estimate on locally finite graphs. *Mathematical Research Letters*, *17*(2), 343-356.
 *   Lindblad, G. (1976). On the generators of quantum dynamical semigroups. *Communications in Mathematical Physics*, *48*(2), 119–130. DOI: 10.1007/BF01608499. 
 *   Loll, R. (2019). Quantum Gravity from Causal Dynamical Triangulations: A Review. *Classical and Quantum Gravity*, *37*(1), 013002. DOI: 10.1088/1361-6382/ab579e
+*   Lott, J., & Villani, C. (2009). Ricci curvature for metric-measure spaces via optimal transport. *Annals of Mathematics*, *169*(3), 903–991. DOI: 10.4007/annals.2009.169.903
 *   Lovelock, D. (1971). The Einstein tensor and its generalizations. *Journal of Mathematical Physics*, *12*(3), 498–501. DOI: 10.1063/1.1665613
 * Manton, N. S., & Sutcliffe, P. (2004). *Topological Solitons*. Cambridge University Press (Cambridge Monographs on Mathematical Physics). DOI: 10.1017/CBO9780511617034
 *   Marshall, A. W., Olkin, I., & Arnold, B. C. (2011). *Inequalities: Theory of Majorization and Its Applications* (2nd ed.). Springer. DOI: 10.1007/978-0-387-68276-1
@@ -171,6 +176,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Smart, J. M. (2012). The transcension hypothesis: Sufficiently advanced civilizations invariably leave our universe, and implications for METI and SETI. *Acta Astronautica*, *78*, 55-68. DOI: 10.1016/j.actaastro.2011.11.012
 *   Stone, M. H. (1932). On one-parameter unitary groups in Hilbert space. *Annals of Mathematics*, *33*(3), 643–648. DOI: 10.2307/1968538
 *   Susskind, L. (1995). The world as a hologram. *Journal of Mathematical Physics*, *36*(11), 6377–6396. DOI: 10.1063/1.531249
+*   Sturm, K.-T. (2006). On the geometry of metric measure spaces. I and II. *Acta Mathematica*, *196*(1), 65–131 and 133–177. DOIs: 10.1007/s11511-006-0002-8 and 10.1007/s11511-006-0003-7
 *   Teilhard de Chardin, P. (1959). *The Phenomenon of Man* (B. Wall, Trans.). Harper & Row. (Original work published 1955).
 * Temme, K., Pastawski, F., & Kastoryano, M. J. (2014). Hypercontractivity of quasi-free quantum semigroups. Journal of Physics A: Mathematical and Theoretical, 47(40), 405303. DOI: 10.1088/1751-8113/47/40/405303 
 *   Tononi, G., & Koch, C. (2015). Consciousness: here, there and everywhere? *Philosophical Transactions of the Royal Society B: Biological Sciences*, *370*(1668), 20140167. DOI: 10.1098/rstb.2014.0167
