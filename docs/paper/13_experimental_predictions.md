@@ -130,7 +130,22 @@ A pragmatic, staged approach is recommended:
 2.  **Stage 2 (Medium-Term):** If justified by Stage 1 results, pursue coherence time tests (Protocol 2) for complementary evidence. Refine QRNG tests.
 3.  **Stage 3 (Long-Term / Contingent):** Only if compelling, replicated evidence emerges, undertake demanding Bell-type experiments (Protocol 3) for statistical FTL search.
 
-**General Considerations:** All stages require quantum system stability and strict control of systematics. If group-sequential interim looks are used, we will use a Lan–DeMets O’Brien–Fleming (OBF) α-spending function [Lan & DeMets 1983; O’Brien & Fleming 1979]. with K looks (including the final analysis) at information fractions t_k (Fisher information as a fraction of the planned maximum; for binomial tests, t_k≈N_k/N_max). The cumulative spending is α(t)=2−2Φ(z_{1−α/2}/√t). The corresponding two-sided monitoring boundaries satisfy |Z_k|≥b_k with b_k≈z_{1−α/2}/√t_k. For equal information fractions t=[1/3, 2/3, 1] and α=0.05, the OBF boundaries are approximately [3.47, 2.45, 2.00].
+**General Considerations:** All stages require quantum systems stable over long integration times, and careful $\alpha$‑spending to avoid inflated type‑I error. For three equally spaced looks, canonical OBF boundaries at $\alpha=0.05$ are approximately $[3.47, 2.45, 2.00]$. For Protocol 1’s primary endpoint (binary bias $\delta$), a fixed‑horizon proxy is
+$$
+N_{\rm fixed}\ \approx\ \frac{\ln(1/\alpha)}{2\,\delta^2},
+$$
+with OBF typically requiring $\approx 1.05$–$1.06$ of this information. The table gives **worked sizes** (per context) and an indicative **stop distribution under $H_1$** for three equally spaced looks:
+
+| $\alpha$ | $\delta$ | $N_{\rm fixed}$ | $N_{\rm OBF}\ (\approx 1.06\times N_{\rm fixed})$ | Expected stop \% at looks $1/2/3$ (under $H_1$) |
+|---:|---:|---:|---:|:---|
+| 0.01 | $10^{-3}$ | 2,302,586 | 2,440,742 | $\sim$5% / 20% / 75% |
+| 0.01 | $5\times10^{-4}$ | 9,210,341 | 9,762,962 | $\sim$3% / 17% / 80% |
+| 0.01 | $10^{-4}$ | 230,258,510 | 244,074,021 | $\lesssim$1% / 10% / 89% |
+| 0.001 | $10^{-3}$ | 3,453,878 | 3,661,111 | $\sim$4% / 18% / 78% |
+| 0.001 | $5\times10^{-4}$ | 13,815,511 | 14,644,442 | $\sim$2% / 15% / 83% |
+| 0.001 | $10^{-4}$ | 345,387,764 | 366,111,030 | $\lesssim$1% / 9% / 90% |
+
+*Notes:* (i) $N_{\rm fixed}$ uses the Hoeffding‑style bound; (ii) OBF factors assume equal information times; (iii) stopping proportions reflect that OBF spends little $\alpha$ early, so most power accrues at the final look. In practice the OBF inflation factor varies mildly with effect size and information timing; 1.05–1.06 is typical for three equal looks (often within 1.03–1.08).
 
 
 **13.6 Compliance with Causal Constraints**

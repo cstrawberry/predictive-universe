@@ -163,16 +163,25 @@ $$
 \tag{U.11}
 $$
 
-Appendix E relates vacuum extensivity to an effective size $N_{\mathrm{eff}}$, yielding a polynomial factor $\propto \text{const}/N_{\mathrm{eff}}$. Defining
-
+Appendix E relates vacuum extensivity to an effective four‑volume of **independent cells**. Let $\xi$ denote the correlation length obtained from the RID contraction factor (E.2), $\xi:=c\,\tau_{\rm mix}=c\,\Delta t_{\rm cycle}/|\ln f_{\mathrm{RID}}|$ (Sec. 7). For a spacetime volume $V_4$,
+$$
+N_{\mathrm{eff}}\ :=\ \frac{V_4}{\gamma_4\,\xi^4}\ \simeq\ \frac{V_4}{\gamma_4\,\delta^4},\qquad \gamma_4=O(1)\ \text{(packing constant)}.
+\tag{U.12a}
+$$
+The one‑loop prefactor is the standard ratio of quadratic fluctuation determinants around the instanton saddle versus the vacuum,
+$$
+A\ =\ \mathcal{Z}_0\;\Bigg[\frac{\det{}' \mathcal{M}_{\mathrm{inst}}}{\det \mathcal{M}_{\mathrm{vac}}}\Bigg]^{-1/2},
+\qquad \mathcal{Z}_0=(2\pi)^{-n_0/2}\,\mathcal{V}_0\,\mathcal{J},
+\tag{U.12b}
+$$
+where $\mathcal{M}$ are second‑variation operators, $n_0$ the number of zero modes with collective‑coordinate volume $\mathcal{V}_0$, and $\mathcal{J}$ the Jacobian from gauge/collective‑coordinate fixing. Finite‑size/extensivity then renormalize the prefactor to
 $$
 \boxed{
 A_{\rm eff}\;:=\;\frac{\text{const}}{N_{\mathrm{eff}}}\,A,
 }
 \tag{U.12}
 $$
-
-the combined result is
+and the combined result is
 
 $$
 \boxed{

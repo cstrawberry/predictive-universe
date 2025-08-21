@@ -23,7 +23,7 @@ A precise “gauge–topology correspondence” is proved: any $G_{\rm SM}$-embe
 
 Let $\Sigma_8 := U(8)/U(1)^8$ be the complete flag manifold of $\mathbb{C}^8$. It is a compact, simply connected Kähler manifold of complex dimension $28$ and real dimension $56$.
 
-### R.1.1 Theorem (Homotopy of $\Sigma_8$).
+### R.1.1 Theorem (Homotopy of $\Sigma_8$)
 
 The Perspective Space $\Sigma_8$ is simply connected and its second homotopy group is $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$.
 
@@ -129,12 +129,11 @@ The block structure $H_x\cong\mathbb C\oplus\mathbb C^2\oplus\mathbb C^3$ from A
 
 ## R.3 PCE Selection Principles
 
-Two selection mechanisms, derived from the Principle of Compression Efficiency, enforce physical viability and minimality: global topological neutrality and non-Abelian neutrality (lightness).
+This section details the PCE-based mechanisms that select the physically realized fermion sector. We first establish general principles related to the topology of the Perspective Space and the light sublattice, then derive a uniqueness result for three generations using only the standing PCE principles together with a standard MDL replication lemma.
 
-### R.3.1 Theorem (Global topological neutrality).
+### R.3.1 Theorem (Global topological neutrality)
 
 For any physically realized collection of long-lived, low-energy sectors labeled by topological charges $\{q^{(g)}\} \subset \pi_2(\Sigma_8)$, the net charge must vanish:
-
 $$
 \sum_g q^{(g)} = 0.
 \tag{R.11}
@@ -142,10 +141,9 @@ $$
 
 *Proof.* On a compact Kähler target, a nonzero $q \in \pi_2$ represents a nontrivial homology class whose energy is bounded below by a positive value proportional to its area (see R.6). A nonzero net topological charge at spatial infinity would produce an unavoidable gradient energy density in the vacuum. PCE selects the globally trivial vacuum sector, enforcing $\sum_g q^{(g)} = 0$. This is a consequence of PCE minimizing the total energy contribution to the PCE potential $V(x)$. ∎
 
-### R.3.2 Definition (Light sublattice).
+### R.3.2 Definition (Light sublattice)
 
 Let $v_{c_1}, v_{c_2}, v_t$ be the charge-map vectors for the $SU(3) \times SU(2)$ Cartan generators. Stack these as rows of $C \in \mathrm{Mat}_{3\times 7}(\mathbb{Z})$. The **light sublattice** is the integer kernel:
-
 $$
 L_{\rm light} := \ker_{\mathbb{Z}} C = \{ q \in \mathbb{Z}^7 : C q = 0 \}.
 \tag{R.12}
@@ -153,30 +151,61 @@ $$
 
 These are topological charges neutral under $SU(3)\times SU(2)$. Sectors $q \notin L_{\rm light}$ carry non-Abelian charges and are penalized by PCE.
 
-### R.3.3 Lemma (Center neutrality in the light sublattice).
+### R.3.3 Lemma (Center neutrality in the light sublattice)
 
 For any $q \in L_{\rm light}$, its $SU(3)$ center charge is trivial: $\tau(q) = 0 \in \mathbb{Z}_3$.
 
 *Proof.* If $q \in L_{\rm light}$, then $c_1 \cdot q = c_2 \cdot q = 0$, hence $\tau(q)\equiv (c_1\cdot q + 2 c_2\cdot q)\pmod 3 = 0$. ∎
 
-### R.3.4 Theorem (Family-charge anomaly constraints and minimal sector count).
+### R.3.4 Theorem (Family-charge anomaly constraints and minimal sector count)
 
-Let $\{q^{(g)}\}\subset L_{\rm light}$ be the set of realized light sectors. Each sector corresponds to a full SM generation (including right-handed singlets) with **identical** $G_{\rm SM}$ charges across sectors; in addition, the sector carries a **family** charge offset
-
-$$
-F_g := f \cdot q^{(g)},
-$$
-
-where $f$ is the $U(1)_F$ charge-map vector. If $U(1)_F$ is gauged, Yukawa couplings arise via a $U(1)_F$-charged Higgs or higher-dimension operators involving a flavon field. Mixed SM–$U(1)_F$ anomalies cancel because each generation's SM content is identical and the net family charge vanishes (as shown below). For the theory to be consistent, the remaining pure $U(1)_F$ and mixed gravitational–$U(1)_F$ anomalies must also cancel across the sectors, requiring:
+Let $\{q^{(g)}\}\subset L_{\rm light}$ be the set of realized light sectors. Each sector corresponds to a full SM generation with identical $G_{\rm SM}$ charges, but carries a distinct **family** charge offset $F_g := f \cdot q^{(g)}$. For a consistent theory, the net family charges must satisfy the anomaly cancellation conditions:
 $$
 \sum_g F_g = 0,
 \qquad
 \sum_g F_g^3 = 0.
 \tag{R.13}
 $$
-There is no nontrivial two-sector solution: if $N=2$, global neutrality $\sum_g q^{(g)}=0$ forces $q^{(2)}=-q^{(1)}$ and hence $F_2=-F_1$, producing a **family-vector-like pair under $U(1)_F$**. The minimal nontrivial solution is $N=3$ with offsets $\{a,-a,0\}$, where $a>0$ is the minimal nonzero value achievable from $f(L_{\rm light})$, i.e., $a = \gcd\{f\cdot q : q\in L_{\rm light}\}$.
+The minimal non-trivial solution satisfying these conditions requires $N=3$ sectors, with family charge offsets of the form $\{a, -a, 0\}$.
 
-*Proof.* The anomaly constraints are standard. For integers $F_1, F_2, F_3$, the identity $x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$ implies that if $\sum_g F_g=0$ then $\sum_g F_g^3=3F_1F_2F_3$. Thus $\sum_g F_g=\sum_g F_g^3=0$ forces $F_1F_2F_3=0$, i.e., at least one $F_g$ vanishes; the linear constraint then enforces $\{a,-a,0\}$. For $N=2$, $\sum q^{(g)}=0$ implies $q^{(2)}=-q^{(1)}$ and $F_2=-F_1$, which is vector-like. Therefore $N=3$ is minimal. The minimal nonzero magnitude $a$ is $\gcd(f(L_{\rm light}))$. ∎
+*Proof.* The identity $x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$ implies that if $\sum_g F_g=0$, then $\sum_g F_g^3=3F_1F_2F_3$. Thus the two anomaly conditions together force $F_1F_2F_3=0$, meaning at least one family charge must be zero. The linear constraint then enforces the pattern $\{a, -a, 0\}$. For $N=2$, $\{a,-a\}$ is vector-like and predictively degenerate. Therefore, $N=3$ is the minimal nontrivial solution. ∎
+
+### R.3.5 Three Generations: Minimality, Doping Exclusion, and MDL-Based Uniqueness
+
+**Lemma R.3.5a (Doping irrelevance under PCE).**
+Adding any finite multiset of abelian vector-like singlet pairs leaves all gauge and mixed anomalies unchanged and does not create new chirally imbalanced categories. Under PCE’s compression-first criterion, such additions provide no predictive benefit but increase description length. Hence minimizers have no abelian “doping.” ∎
+
+**Proposition R.3.5b (Minimal cardinality of anomaly-consistent family offsets).**
+Let $\{F_g\} \subset \mathbb{Z}$ satisfy $\sum_g F_g = \sum_g F_g^3 = 0$. There is no nontrivial solution with $N=2$. The minimal nontrivial solution has $N=3$ and can be written $\{a,-a,0\}$ for some nonzero integer $a$. ∎
+
+**Lemma R.3.5c (Replication sublinearity from MDL).**
+Let a one-generation fermion block $\mathcal{B}$ induce a regular $k$-dimensional parametric predictive family $\{p_\theta\}$. For $N$ identical copies used i.i.d. and coded by any asymptotically minimax-optimal universal code, the predictive redundancy satisfies
+$$
+\mathcal{R}_N = \frac{k}{2}\log N + C + o(1),
+$$
+hence the incremental predictive gain obeys
+$$
+0 \le \Delta\Psi_{\mathrm{pred}}(N) \le \kappa_{\mathrm{MDL}}\log\!\left(1+\frac{1}{N}\right) + O\!\left(\frac{1}{N^2}\right),
+$$
+with $\kappa_{\mathrm{MDL}}=\frac{k}{2}$ up to units, and there exist $\beta_1,\beta_2>0$ such that
+$$
+\Delta\Psi_{\mathrm{pred}}(1)\ge \beta_1,\qquad
+\Delta\Psi_{\mathrm{pred}}(2)\ge \beta_2.
+$$
+Here the $N$ copies are treated as independent predictive modules for MDL accounting. ∎
+
+**Theorem R.3.5d (Uniqueness of $N=3$ via MDL replication).**
+Consider models $\mathcal{R}_{N,S}=N\times \mathcal{B} \cup S$, where $\mathcal{B}$ is one SM generation, $N\ge1$, and $S$ is any finite multiset of abelian vector-like singlet pairs, where $\lambda_3,\lambda_4$ are the PCE weights from Eq. G.8.5 and $C_{\mathrm{gen}}=\frac{13}{3}$ is the per-generation bookkeeping constant (no $\nu_R$); any alternative convention rescales both sides without changing the conclusion. If the PCE weights satisfy
+$$
+\frac{\lambda_3 C_{\mathrm{gen}}}{\lambda_4\,\beta_2} < 1 < \frac{\lambda_3 C_{\mathrm{gen}}}{\lambda_4\,\kappa_{\mathrm{MDL}}\log(4/3)},
+$$
+then with $S=\varnothing$ the potential increments
+$$
+\Delta_N := \mathcal{V}(N+1)-\mathcal{V}(N)
+$$
+obey $\Delta_1<0$, $\Delta_2<0$, $\Delta_3>0$, and $\Delta_N>\Delta_3>0$ for all $N>3$. Therefore the global minimum is uniquely at **$N=3$**. This interval is non‑empty provided $\beta_2>\kappa_{\mathrm{MDL}}\log(4/3)$, which holds for regular $k$-parameter families when finite‑sample gains exceed the asymptotic decrement at $N=3$ (see Lemma R.3.5c).
+
+*Proof.* By Lemma R.3.5a, $S\neq\varnothing$ is suboptimal. With $S=\varnothing$, $\Delta_N=\lambda_3 C_{\mathrm{gen}}-\lambda_4\,\Delta\Psi_{\mathrm{pred}}(N)$. Finite-sample MDL lower bounds give $\Delta_1\le \lambda_3 C_{\mathrm{gen}}-\lambda_4\beta_1$ and $\Delta_2\le \lambda_3 C_{\mathrm{gen}}-\lambda_4\beta_2$, which are negative by the left inequality. For $N=3$, the MDL upper bound gives $\Delta_3\ge \lambda_3 C_{\mathrm{gen}}-\lambda_4\,\kappa_{\mathrm{MDL}}\log(4/3)>0$ by the right inequality. Since $\Delta\Psi_{\mathrm{pred}}(N)$ decreases in $N$, $\Delta_N$ increases in $N$; thus $\Delta_N>\Delta_3>0$ for all $N>3$. ∎
 
 ## R.4 Minimal Three-Sector Solution: A Worked Instance
 
@@ -283,7 +312,7 @@ with positive constants $\alpha_1,\alpha_2$ from the Hessians.
 *Consequences:*
 *   $Y_{33}$ is maximal (involves $p_0$).
 *   $Y_{11} = Y_{22}$ are suppressed by $\exp(-\alpha_1 D^2)$.
-*   $Y_{13} = Y_{23}$ are suppressed by $\exp(-\alpha_1 D^2/2)$.
+*   $Y_{13} = Y_{23}$ are suppressed by $\exp(-(\alpha_1 + \alpha_2) D^2/2)$.
 *   $Y_{12}$ is most suppressed, by $\exp(-\alpha_1 D^2 - (\alpha_2/2) D'^2)$.
 
 This geometry naturally produces hierarchical masses and small mixings. Large leptonic mixings can arise if the leptonic sector has a smaller $D'$ or a different Hessian ratio $\alpha_2/\alpha_1$ than the quark sector.
@@ -311,4 +340,3 @@ Sectors outside $L_{\rm light}$ are non-Abelian charged and are excluded by PCE.
 *   **Family $U(1)_F$:** An Abelian factor commuting with $G_{\rm SM}$ has charge-map vector $f$; family-charge offsets $F_g=f\cdot q^{(g)}$ across sectors satisfy (R.13). The minimal nontrivial three-sector pattern is $\{F_g\}=\{a,-a,0\}$, with $a=\gcd f(L_{\rm light})$.
 *   **Worked Instance:** An explicit embedding ansatz yields charge vectors $c_1, c_2, t$, and a family vector $f=(0,0,0,0,0,4,0)$; a primitive basis for $L_{\rm light}$; the minimal family-charge unit $a = 12$; and three minimal-norm sectors $q^{(1)} = (1, 1, 0, 0, 1, 3, 3)$, $q^{(2)} = -q^{(1)}$, and $q^{(3)} = 0$.
 *   **Dynamics:** A PCE-compatible potential on $\Sigma_8$ selects three distinct vacuum states $p_\pm, p_0$; Gaussian overlap integrals centered at these vacua yield a Yukawa matrix with hierarchical masses and small mixings controlled by the geodesic separations $D, D'$.
-

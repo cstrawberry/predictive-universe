@@ -56,11 +56,18 @@ acting on the MPU's $d_0$-dimensional Hilbert space $\mathcal{H}_{d_0}$ ($\dim\m
     where $D_{\mathrm{tr}}(\rho_{1},\rho_{2})=\tfrac12\lVert\rho_{1}-\rho_{2}\rVert_{1}$ is the trace distance. The contractivity factor is $f_{\mathrm{RID}} \equiv \lambda_{gap}(\mathcal{E}_N) < 1$, where $\lambda_{gap}(\mathcal{E}_N)$ is the spectral radius of $\mathcal{E}_N$ restricted to the subspace of traceless operators acting on $\mathcal{H}_{d_0}$.
 
 *Proof.*
-1.  **Primitivity of $\mathcal{E}_N$:** A channel $\mathcal{E}_N$ is primitive if it is irreducible and aperiodic [Baumgartner & Narnhofer 2008]. We argue that the structure of the 'Evolve' process (Definition 27) necessitates these properties.
-    *   **Irreversibility and SPAP Logic:** The 'Evolve' process is fundamentally irreversible due to the SPAP logic and its cost $\varepsilon \ge \ln 2 > 0$ (Theorem 31, Corollary E.1). This involves logically irreversible state merging (Appendix J), physically realized via non-unitary operations (e.g., subsystem reset in Section 7.1.3).
-    *   **Strict Positivity Implies Primitivity:** A sufficient condition for primitivity in finite dimensions is that the map $\mathcal{E}_N$ is *strictly positive* (SP), meaning it maps every non-zero positive semi-definite operator to a strictly positive definite (full rank) operator [Sanz et al. 2010; Wolf 2012].
-    *   **Formal Argument for SP:** The combination of internal mixing dynamics (e.g., $U_{int}$), the non-unitary SPAP operations, and the averaging over stochastic perspective shifts (Appendix M.3.3.1) ensures a diffusive process across the state space. This combination guarantees that for any input $\rho \ge 0, \rho \neq 0$, the output $\mathcal{E}_N(\rho)$ acquires support on the entire Hilbert space $\mathcal{H}_{d_0}$ (i.e., it has full rank). Therefore, $\mathcal{E}_N$ is strictly positive and hence primitive.
-    The primitivity of $\mathcal{E}_N$ ensures it has a unique, full-rank fixed point $\rho_{fix}$ (see Step 2).
+1.  **Primitivity of $\mathcal{E}_N$ via minorization.** The 'Evolve' map contains, with strictly positive probability, an SPAP‑mandated reset/mixing subroutine (Section 7.1.3) *as implemented in our SPAP cycle model; $\varepsilon\ge\ln 2$ mandates irreversibility, and we assume the cycle includes a reset/mixing branch with nonzero weight* due to the irreducible reflexivity cost. Hence there exist a constant $p>0$ and a full‑rank state $\sigma\succ 0$ such that for all $\rho\ge 0$,
+    $$
+    \boxed{\ \mathcal{E}_N(\rho)\ \ge\ p\,\mathrm{tr}(\rho)\,\sigma\ }\tag{E.2a}
+    $$
+    (order inequality on positive operators).  
+    *Minorization Lemma (RID Doeblin bound).* The Kraus decomposition of the reset/mixing subroutine contains a branch that (i) reinitializes an ancilla to a fixed full‑support state and (ii) applies an internal mixing channel to the MPU register. Averaging over cycles yields (E.2a) with $p$ equal to the branch weight and $\sigma$ the post‑mixing state.  
+    **Consequences.** (E.2a) implies **strict positivity** (any nonzero $\rho\ge 0$ is mapped to a positive‑definite output) and therefore **primitivity** by the Perron–Frobenius theory for positive CPTP maps. Moreover, we obtain the non‑asymptotic trace‑norm contraction on the traceless subspace:
+    $$
+    \|\mathcal{E}_N(X)\|_1\ \le\ (1-p)\,\|X\|_1,\qquad \mathrm{tr}\,X=0,
+    \tag{E.2b}
+    $$
+    so we may take $f_{\mathrm{RID}}\le 1-p<1$ in (E.2). The primitivity of $\mathcal{E}_N$ also ensures a unique, full‑rank fixed point $\rho_{fix}$ (see Step 2).
 
 2.  **Consequences of Primitivity:** For a primitive CPTP map $\mathcal{E}_N$ on $\mathcal{B}(\mathcal{H}_{d_0})$ [Frigerio & Verri 1982; Wolf 2012]:
     *   There is a unique full-rank fixed point state $\rho_{fix}$ such that $\mathcal{E}_N(\rho_{fix}) = \rho_{fix}$.

@@ -40,6 +40,12 @@ $$
 \Delta T_{\mu\nu}^{(CC)}=u_{context}\,\text{diag}(1,\,1/3,\,1/3,\,1/3).
 $$
 
+*Result (Self‑limiting CC bound under a resource ceiling).* If an operational ceiling $u_{\rm context}\le u_{\max}$ holds, then using $P_{\rm context}\ge \Gamma_0 C_{\rm context}/\tau_c$ we have $u_{\rm context}\ge \Gamma_0 C_{\rm context}/V_S$ and hence
+$$
+\boxed{\ \mathrm{CC}\ \le\ \alpha_{CC,\max}\,\frac{u_{\max}}{u_{\max}+\kappa_*\,C_{\rm scale}}\ },\qquad \kappa_*:=\Gamma_0/V_S.
+$$
+Higher available energy density raises the cap, while causal‑consistency still enforces $\mathrm{CC}<\alpha_{CC,\max}$.
+
 **Theorem S.C1 (Local CC biases cannot signal superluminally; gravitational bound).**
 Let a bipartite system $AB$ be prepared in state $\rho_{AB}$. Let the local CC device on $A$ be described by a one-parameter family of completely positive, trace-preserving (CPTP) maps $\{\Phi_A^{(\epsilon)}\}_{\epsilon}$ with $\|\Phi_A^{(\epsilon)}-\mathcal E_A\|_{1\to 1}\le \alpha<1/2$, where $\mathcal{E}_A$ is the baseline (zero-CC) channel. Let this map act before a product measurement $\{E_i\otimes F_j\}$. Then the marginal on $B$ is unchanged for all $\epsilon$:
 

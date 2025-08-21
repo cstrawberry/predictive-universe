@@ -102,11 +102,26 @@ This provides a sharp, falsifiable prediction for the ratio of the system's core
 
 ## Z.6 Reconciliation with Observation via Renormalization Group Flow
 
-Standard-Model RG evolution increases $\alpha$ with energy (decreases $1/\alpha$), so RG alone cannot reconcile a high-scale prediction with $1/\alpha(\mu^*) > 137$ to the Thomson limit. However, in PU the physical photon generator need not coincide with the standard trace-normalized convention; an emergent normalization factor $\kappa$ rescales the coupling as
+Define the **matching scale** $\mu^\*$ as the stationary point of the gauge‑sector effective potential subject to the PCE capacity constraint (Appendix X):
 $$
-\alpha_{\mathrm{phys}}(\mu^*) = \frac{u^*}{4\pi\kappa}.
+\frac{d}{du}\Big(V_{\rm eff}(u;k)+\zeta\,[M\ln(1+\lambda u)-\ln d_0]\Big)\Big|_{u=u^*,\,k=\mu^\*}=0,
+\qquad \alpha_{\mathrm{em}}(k)=\frac{u(k)}{4\pi\,\kappa(k)}\ \text{(X.6)}.
+\tag{Z.6a}
 $$
-Both $\kappa$ and the matching scale $\mu^*$ are, in principle, determined by the MPU substrate geometry and dynamics (not fit). A complete, parameter-free comparison therefore requires (i) computing $\kappa$ from the substrate map to the photon generator, (ii) fixing $\mu^*$ from the same microdynamics, and (iii) evolving $\alpha$ to laboratory scales with standard RG including threshold effects.
+At $k=\mu^\*$ we have $u(\mu^\*)=u^*$ (Appendix Z.4) and the background‑field normalization $\kappa(\mu^\*)=\kappa_\*$ from (X.5)–(X.6). The alphabet/flat‑spectrum identities (Appendix W) fix the $O(1)$ factors **at the PCE attractor** (capacity saturation),
+$$
+F_\lambda(\mu^\*)=1,\qquad \frac{C_{\rm cyc}}{C_{\rm cap}}(\mu^\*)=1,
+\tag{Z.6b}
+$$
+These equalities hold at the flat‑spectrum, capacity‑saturated PCE attractor; off‑attractor deviations appear as $O(\Delta_{\rm cap})$ corrections. The **matched coupling** is
+$$
+\boxed{\ \alpha_{\mathrm{phys}}(\mu^*) = \frac{u^*}{4\pi\,\kappa_\*}\ }.
+\tag{Z.6c}
+$$
+From $\mu^\*$, evolve to laboratory scales using the deterministic running (Appendix V):
+$$
+\frac{d\alpha}{d\ln\mu}=\frac{2}{3\pi}\!\left(\sum_{f}N_c^{f}Q_f^{2}\right)\alpha^2\ \ \text{(V.14)},\qquad
+\alpha^{-1}(\mu_2)=\alpha^{-1}(\mu_1)-\frac{2}{3\pi}\!\left(\sum_{f}N_c^{f}Q_f^{2}\right)\ln\!\frac{\mu_2}{\mu_1}\ \ \text{(V.15)}.
 
 ## Z.7 Conclusion
 

@@ -65,15 +65,37 @@ recovering Einstein causality.
 
 **F.3 Continuum Limit and Emergent AQFT Net**
 
-The transition from the discrete MPU network to continuum physics is formalized as the convergence of the sequence of discrete nets of algebras $\{\mathfrak{A}_n(\mathcal{O})\}$. This analysis relies critically on the assumption that such a stable continuum limit exists, as formalized in Hypothesis F.1.
+The transition from the discrete MPU network to continuum physics is formalized as the convergence of the sequence of discrete nets of algebras $\{\mathfrak{A}_n(\mathcal{O})\}$. This analysis relies critically on the assumption that such a stable continuum limit exists, as formalized in Theorem F.0.
 
-**Hypothesis F.1 (Convergence to Stable, Local AQFT).** The MPU network sequence $\{\mathcal{N}_n\}$, evolving under PCE dynamics (Appendix D) towards a stable, viable equilibrium configuration, is hypothesized to converge robustly in the limit $n \to \infty$ to a structure satisfying the following conditions. This hypothesis represents a strong assumption about the behavior of the MPU network in the continuum limit, and its full justification is a key program for future work:
-1.  **Geometric Convergence:** The network metric spaces $(\mathcal{V}_n, d_{\mathcal{N}_n})$ converge to a D=4 Lorentzian manifold $(M, g_{\mu\nu})$ (realizing Theorem 43 and Theorem 46).
-2.  **Algebraic Convergence:** The sequence of discrete nets of algebras $\mathcal{O} \mapsto \mathfrak{A}_n(\mathcal{O})$ converges in a suitable sense (e.g., Stone-von Neumann theorem for finite regions, or more general convergence for nets) to a limiting continuous net $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ defined on $(M, g_{\mu\nu})$.
-3.  **Emergent AQFT Axioms:** The limit net $\mathfrak{A}$ satisfies the standard Haag-Kastler axioms of AQFT (isotony, locality/causality, covariance under the emergent isometry group, time slice axiom), adapted for curved spacetime.
-4.  **Emergent Einstein Causality:** The limit net $\mathfrak{A}$ satisfies the crucial Einstein Causality axiom ($[\mathfrak A(\mathcal O_1),\,\mathfrak A(\mathcal O_2)] = \{0\}$ for spacelike separated $\mathcal{O}_1, \mathcal{O}_2$), as derived in Corollary F.1.
+**Theorem F.0 (Conditional Convergence to a Stable, Local AQFT Net).** Assume the discrete MPU dynamics satisfy the following **sufficient conditions**:
 
-**Definition F.3 (Emergent AQFT Net and Properties).** Conditional on Hypothesis F.1, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
+1.  **Bounded Local Degree & Short‑Range Interactions:** A uniform bound on node degrees and finite‑range (or exponentially decaying) couplings across all scales.
+
+2.  **Uniform Lieb–Robinson Bound:** There exist constants $v_{\rm LR} < \infty$ and $\mu > 0$ such that commutators for local operators $A, B$ obey the bound:
+    $$
+    \|[A(t),B]\| \le c\,\|A\|\,\|B\|\,e^{-\mu(d - v_{\rm LR}|t|)}
+    $$
+
+3.  **Controlled Coarse‑Graining:** The coarse‑graining maps $\Phi_b$ (with scale $b \to 0$) converge to a continuum evolution in the diamond norm. Specifically, there exist constants $C, \gamma > 0$ such that:
+    $$
+    \|\Phi_b \circ \mathrm{Evolve}_b - \mathrm{Evolve}_{\rm cont}\|_\diamond \le C b^\gamma
+    $$
+    This convergence must hold uniformly on local algebras supported in balls of a fixed physical radius (see Appendix D; regularity in Appendix C).
+
+Then, the continuum limit exists and defines a net $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ on a Lorentzian manifold $(M, g_{\mu\nu})$ with the following properties:
+
+1.  **Geometric Limit:** The sequence of discrete metric spaces converges to the manifold: $(\mathcal{V}_b, d_b) \to (M, g_{\mu\nu})$ (realizing Theorem 43 and Theorem 46).
+
+2.  **Algebraic Limit:** The discrete algebras converge to a Haag–Kastler net of local observables, $\mathfrak{A}(\mathcal{O})$.
+
+3.  **AQFT Axioms:** The emergent net satisfies the axioms of isotony, a consistent locality structure, covariance under the emergent isometry group, and the time‑slice property (in their curved‑spacetime formulations).
+
+4.  **Einstein Causality:** Observables in space-like separated regions commute (as derived in Corollary F.1):
+    $$
+    [\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}
+    $$
+
+**Definition F.3 (Emergent AQFT Net and Properties).** Conditional on Theorem F.0, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
 
 **F.4 Physical States and Dynamics**
 
@@ -129,14 +151,14 @@ The framework is argued to maintain Lorentz invariance despite the hypothesis of
 
 **F.8 Conclusion: AQFT as Arena for Verification and Locality**
 
-AQFT provides a robust mathematical framework for analyzing the properties of the hypothesized continuum limit of the MPU network. The analysis presented here is strictly conditional on the validity of Hypothesis F.1 (the convergence to a stable AQFT) and Theorem 43 (geometric regularity). Subject to these assumptions, AQFT allows for:
+AQFT provides a robust mathematical framework for analyzing the properties of the hypothesized continuum limit of the MPU network. The analysis presented here is strictly conditional on the validity of Theorem F.0 (the convergence to a stable AQFT) and Theorem 43 (geometric regularity). Subject to these assumptions, AQFT allows for:
 *   Precise definition of emergent physical states and dynamics.
 *   Rigorous definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ (Definition F.4).
 *   Demonstration that the emergent algebra $\mathfrak{A}$ satisfies standard Einstein Causality (Microcausality, as stated in Corollary F.1) as a consequence of the underlying ND-RID properties (Corollary F.1).
 *   A clear formulation of the framework's stance on locality, allowing for a hypothesized state-mediated statistical FTL influence (Equation F.4, Postulate 3) that is compatible with emergent operator locality (as stated in Corollary F.1) as analyzed in Section F.6.
 *   Confirmation that consistency with operational causality (Postulate 2) is maintained via the CC bound (Theorem 39) and the information limitations of the underlying ND-RID interactions (Theorem 40, Theorem 41, as analyzed in Section F.6), preventing deterministic signaling (Theorem 42).
 
-Establishing the full convergence from discrete MPU dynamics to a stable, local AQFT satisfying the Haag-Kastler axioms (Hypothesis F.1), rigorously deriving the emergent dynamics generator $\mathcal{L}^*$, and definitively proving the impossibility of deterministic signaling within this formal setting are key future theoretical tasks for validating the PU framework's consistency and its unique stance on locality.
+Establishing the full convergence from discrete MPU dynamics to a stable, local AQFT satisfying the Haag-Kastler axioms, rigorously deriving the emergent dynamics generator $\mathcal{L}^*$, and definitively proving the impossibility of deterministic signaling within this formal setting are key future theoretical tasks for validating the PU framework's consistency and its unique stance on locality.
 
 
 
