@@ -199,11 +199,17 @@ where:
 
 **Theorem C.6 (Formal Statement of Theorem 43 - Necessity).** Let $\mathbb{C}_{viable} \subset \mathbb{C}$ be the set of all viable MPU configurations (satisfying $\mathcal{V}[\mathcal{C}] \ge 1$). Then geometric regularity (Definition C.3) is a necessary condition for viability. That is, if $\mathcal{C} \in \mathbb{C}_{viable}$, then $\mathcal{C}$ must exhibit geometric regularity.
 
-*Proof (by Contrapositive).* We prove the contrapositive statement: If a configuration $\mathcal{C}$ does *not* exhibit geometric regularity (i.e., it is irregular), then $\mathcal{C}$ is *not* viable.
-1.  Assume $\mathcal{C}$ is geometrically irregular. By Definition C.3, this means $\mathcal{C}$ violates Definition C.1 (uniform volume growth) or Definition C.2 (uniformly bounded synthetic Ricci curvature, including the requirement for a positive lower bound $\kappa_R>0$ and bounded variance), or both.
-2.  By Theorem C.5 and Corollary C.1, if the geometric irregularity is present (meaning the conditions of Def C.1 or C.2 are violated as the system scale or variance parameter grows), then for sufficiently large systems or sufficiently high variance/insufficient positive curvature, the configuration $\mathcal{C}$ becomes non-viable ($\mathcal{V}[\mathcal{C}] < 1$).
-3.  Therefore, the property of being geometrically irregular implies that the configuration is non-viable (at least asymptotically or under sufficient stress). Thus, $\mathcal{C} \notin \mathbb{C}_{viable}$.
-4.  The contrapositive statement is logically equivalent: If $\mathcal{C}$ is viable ($\mathcal{C} \in \mathbb{C}_{viable}$), then $\mathcal{C}$ must exhibit geometric regularity. QED
+*Proof (by Contrapositive).* 
+Assume $\mathcal C$ is not geometrically regular in the sense of Definition C.3. We work on the metric‑measure space $(X,d,\mu)$ induced by the large‑scale MPU network.
+
+1. **Failure of Doubling or Poincaré ⇒ Loss of Predictive Coercivity.**
+If $(X,d,\mu)$ fails the doubling condition or a $(1,2)$‑Poincaré inequality (see, e.g., [Cheeger 1999; Keith 2004]), then by the Cheeger–Keith theory the Cheeger energy does not control $H^1$‑seminorms of Lipschitz predictors. Consequently, the predictive risk cannot admit scale‑stable coercive bounds, and the POP/PCE objective lacks compact sublevel sets. This forces unbounded resource blow‑up in the global coherence and resource efficiency requirements $R_2,R_3$ (Definition C.4), so $\mathcal V[\mathcal C]<1$.
+
+2. **Curvature Lower Bounds and GH‑Limits.**
+If $(X,d,\mu)$ is doubling and supports a $(1,2)$‑Poincaré inequality, then by standard results it admits a measurable differentiable structure, and pointed Gromov–Hausdorff limits exist along bounded‑geometry sequences. We assume, consistent with the stability of the PCE Lyapunov function (Appendix D), that the emergent geometry satisfies a coarse $RCD(K,N)$ lower curvature bound [Sturm 2006; Lott–Villani 2009; Ambrosio–Gigli–Savaré 2008]. Lack of geometric regularity implies violation of these bounds on a non‑negligible set of scales, contradicting the stability estimates required by POP/PCE.
+
+3. **Conclusion.**
+In either case, non‑regularity forces either (i) loss of coercivity (no compactness, exploding $R_2,R_3$) or (ii) violation of coarse curvature bounds (instability of predictive flows), hence by Definition C.5 the configuration is not viable: $\mathcal C\notin\mathbb C_{\mathrm{viable}}$. The contrapositive yields the claim: if $\mathcal C\in\mathbb C_{\mathrm{viable}}$, then $\mathcal C$ is geometrically regular.
 
 **C.7 Conclusion**
 

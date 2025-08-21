@@ -102,9 +102,11 @@ This provides a sharp, falsifiable prediction for the ratio of the system's core
 
 ## Z.6 Reconciliation with Observation via Renormalization Group Flow
 
-The calculated value $1/\alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 138.843$ is a "bare" prediction at the MPU's operational scale $\mu^\*$. The experimentally measured value $1/\alpha_{\mathrm{em}}^{\mathrm{obs}} \approx 137.036$ is determined in the Thomson limit ($q^2 \to 0$). To connect the prediction to observation, standard Renormalization Group (RG) evolution must be applied.
-
-The difference, $\Delta(1/\alpha_{\mathrm{em}}) = 1/\alpha_{\mathrm{em}}(\mathrm{MPU}) - 1/\alpha_{\mathrm{em}}^{\mathrm{obs}} \approx 138.843 - 137.036 = +1.81$. Standard Model RG running decreases $1/\alpha$ with increasing energy, so RG alone cannot account for a value of $1/\alpha$ larger than the Thomson limit. In the emergent normalization used here, the physical photon generator may differ from the $\mathrm{Tr},G^2{=}1$ convention by a calculable factor $\kappa$, i.e., $\alpha_{\mathrm{em}}=u/(4\pi,\kappa)$. A full matching calculation, including threshold and MPU‑specific corrections, is therefore required to fix $\mu^\*$ and $\kappa$ for comparison with observation.
+Standard-Model RG evolution increases $\alpha$ with energy (decreases $1/\alpha$), so RG alone cannot reconcile a high-scale prediction with $1/\alpha(\mu^*) > 137$ to the Thomson limit. However, in PU the physical photon generator need not coincide with the standard trace-normalized convention; an emergent normalization factor $\kappa$ rescales the coupling as
+$$
+\alpha_{\mathrm{phys}}(\mu^*) = \frac{u^*}{4\pi\kappa}.
+$$
+Both $\kappa$ and the matching scale $\mu^*$ are, in principle, determined by the MPU substrate geometry and dynamics (not fit). A complete, parameter-free comparison therefore requires (i) computing $\kappa$ from the substrate map to the photon generator, (ii) fixing $\mu^*$ from the same microdynamics, and (iii) evolving $\alpha$ to laboratory scales with standard RG including threshold effects.
 
 ## Z.7 Conclusion
 
