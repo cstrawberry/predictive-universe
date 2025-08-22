@@ -55,7 +55,12 @@ To quantify the effectiveness of the system's predictions, we define Predictive 
 $$
 PP(t) = \frac{1}{1 + k_{PP} \cdot PE(t)} \quad \text{(8)}
 $$
-where $PE(t)$ is the prediction error at time $t$ (e.g., expected loss function value relative to perfect prediction), and $k_{PP} > 0$ is a dimensionless scaling constant determining sensitivity to error. This definition ensures $PP(t) \in (0, 1]$, with $PP=1$ corresponding to perfect prediction ($PE=0$) and $PP \to 0$ as $PE \to \infty$. Higher PP corresponds to higher predictive quality $Q$.
+
+**Definition (Predictive Error $PE$).** Let $\hat y(t)$ be the system’s prediction and $y(t)$ the realized outcome. The predictive error $PE(t)\in[0,\infty)$ is a scalar discrepancy under a proper scoring rule (e.g., Brier or log‑loss). When $PE$ is a log‑loss, it carries units of nats (or bits); otherwise we normalize $PE$ to be dimensionless as specified in the protocol.
+
+**Definition (Scale $k_{PP}$).** The constant $k_{PP}>0$ rescales $PE$ in Eq. (8) so that the **typical operating range** of $PE$ maps into the viability band $(\alpha,\beta)$. If $PE$ has units (nats/bits), then $k_{PP}$ has reciprocal units (1/nat or 1/bit) so that $k_{PP}PE$ is dimensionless; if $PE$ is normalized to be dimensionless, so is $k_{PP}$.
+
+This definition ensures $PP(t) \in (0, 1]$, with $PP=1$ corresponding to perfect prediction ($PE=0$) and $PP \to 0$ as $PE \to \infty$. Higher PP corresponds to higher predictive quality $Q$.
 
 **3.3.2 Theorem 8 (Necessity of Lower Performance Bound $\alpha > 0$)**
 

@@ -150,7 +150,24 @@ $$
 \tag{X.12}
 $$
 
-Using (X.12) with $\gamma_{\rm eff}=2$ reproduces the **zero‑slack condition** employed in Appendix Z, and algebraically yields the **identity** for $(\Gamma_0\nu)/A_{\rm PCE}$ reported in (Z.7)–(Z.8). At the PCE‑Attractor, the zero‑slack condition enforces capacity saturation, making the constrained minimizer of $\phi(u)$ coincide with the stationary point of $V_{\rm eff}$ under (X.11), reproducing the identities used in Appendix Z. Thus the **parameter‑free** value $u^*=8^{1/24}-1$ (Appendix Z) is simultaneously (i) a constrained PCE optimum and (ii) a stationary point of the effective potential under the same capacity saturation.
+Using (X.12) with $\gamma_{\rm eff}=2$ reproduces the **zero‑slack condition** employed in Appendix Z, and algebraically yields the **identity** for $(\Gamma_0\nu)/A_{\rm PCE}$ reported in (Z.7)–(Z.8). At the PCE‑Attractor, the zero‑slack condition enforces capacity saturation, making the constrained minimizer of $\phi(u)$ coincide with the stationary point of $V_{\rm eff}$ under (X.11), reproducing the identities used in Appendix Z. 
+
+**Theorem X.3 (Predictive Ward identity ⇒ $\kappa_\*=1$)**
+
+Let $u$ be the PU control parameter that couples the predictive code to a background $U(1)$ connection $A_\mu$ through the predictive‑observable algebra (Sec. 8, App. F). At the PCE optimum with flat mode spectrum $(M,\lambda)=(24,1)$ (App. Z), the **quadratic variation** of the predictive free energy in $A_\mu$ equals the **BKM (Kubo–Mori) metric** of the $U(1)$ generator $Q$ *with canonical normalization*. The PU Ward identity (local $U(1)$ invariance of the cost frame) fixes this normalization, matching the quadratic term to the standard Maxwell action:
+$$
+
+\Delta \mathcal F \;=\; \frac{1}{4}\int \frac{1}{g^2}\,F_{\mu\nu}F^{\mu\nu}\, \mathrm d^4x,
+\qquad \text{with}\qquad \boxed{\,g^2 = u\,}.
+$$
+Here $\mu^\*$ denotes the **PCE attractor scale** (flat spectrum $M=24,\lambda=1$); laboratory values follow by **RG running** (Appendix V).
+Hence $\alpha(\mu^\*)=\dfrac{g^2}{4\pi}=\dfrac{u^\*}{4\pi}$ and the normalization constant is exactly $\boxed{\kappa_\*=1}$. Using $u^\* = 8^{1/24}-1\approx 0.0905077$,
+$$
+\alpha(\mu^\*) \approx 0.007202, \qquad \frac{1}{\alpha(\mu^\*)}\approx 138.843.
+$$
+*Proof sketch.* The **predictive Ward identity** (cost‑frame invariance under local $U(1)$) fixes the generator normalization to the canonical one. This matches the quadratic piece to the standard Maxwell action, forcing $g^2=u$. No additional renormalization factor survives at $\mu^\*$ because the Ward identity is saturated by the flat spectrum at the PCE attractor. $\square$
+
+Thus the **parameter‑free** value $u^*=8^{1/24}-1$ (Appendix Z) is simultaneously (i) a constrained PCE optimum and (ii) a stationary point of the effective potential under the same capacity saturation.
 
 ---
 

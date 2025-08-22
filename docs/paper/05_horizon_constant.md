@@ -88,7 +88,7 @@ $$ K_0 = 3 \quad \text{(bits)} $$
 **5.2.3 Corollary 3 (Relation Between Thresholds ($C_{op} \ge K_0$))**
 
 The **Operational Threshold $C_{op}$ (Definition 13)** must be greater than or equal to the Horizon Constant $K_0$ (Theorem 15):
-$$ C_{op} \ge K_0 = 3 \quad \text{(bits)} \quad \text{(17)} $$
+$$ C_{op} \ge K_0 = 3\,\text{bits} \quad \text{(17)} $$
 *Proof:* The adaptive Fundamental Predictive Loop (Definition 4) must, at minimum, embody the capabilities of the minimal predictor defined by $K_0=3$. Thus, $C_{op} \ge K_0$. If a target accuracy $\epsilon_{acc}$ (in Definition 13) is significantly higher than the minimal super-chance performance achievable at $K_0$ (e.g., $\epsilon_{acc} \gg \delta_{min}/2$ from Theorem 15 proof), $C_{op}$ will typically exceed $K_0$. This quantitative relationship can be foreshadowed by noting that achieving higher accuracy generally requires more complexity, consistent with the Law of Prediction (Theorem 19), potentially leading to an approximate scaling like $C_{op} \approx K_0 + O(\ln(1/\epsilon'_{acc}))$, where $\epsilon'_{acc}$ is the accuracy gap above the baseline $K_0$-level performance.
 
 

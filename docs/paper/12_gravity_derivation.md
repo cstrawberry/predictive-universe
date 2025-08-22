@@ -41,8 +41,9 @@ Here $\lambda$ increases toward the Rindler wedge, so $\delta Q_{in} > 0$ for po
 Consistent with local thermodynamic equilibrium (Postulate 4) and analogous to the Unruh effect, the effective temperature $T$ associated with the local causal horizon $\mathcal{H}$ is defined in terms of the surface gravity $\kappa$. In SI units: $T = \hbar \kappa / (2\pi k_B c)$. In natural units ($c=\hbar=k_B=1$):
 
 $$
-T = \frac{\kappa}{2\pi} \quad \text{(natural units)} \quad \text{(69)}
+T = \frac{\kappa}{2\pi} \tag{69}
 $$
+*(natural units)*
 
 Within PU, this temperature reflects the effective thermal noise spectrum encountered by MPUs near the horizon, ultimately related to the information limits ($\varepsilon, f_{RID}$) of the underlying ND-RID processes.
 
@@ -55,14 +56,16 @@ A crucial ingredient is the relationship between the entropy associated with a c
 **Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43)**, the equilibrium boundary entropy $S_{boundary}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal{H}$ is proportional to the horizon's cross-sectional area $\mathcal{A}$. This arises because the finite classical information capacity $C_{max}(f_{RID}) < \ln d_0$ (Theorem E.2) of the fundamental ND-RID channels mediating information transfer across the boundary limits the maximum distinguishable information. Assuming this bound is saturated at equilibrium—saturation is expected because any unsaturated boundary would allow PCE-driven adaptation to increase entropy until the limit is reached—the relationship takes the universal Bekenstein-Hawking form, $S = k_B c^3 \mathcal{A} / (4 G \hbar)$ in SI units. With Planck length $L_P^2 = G\hbar/c^3$, this is $S = k_B \mathcal{A} / (4 L_P^2)$. In natural units ($c=\hbar=k_B=1$, $L_P^2=G$):
 
 $$
-S_{boundary}(\mathcal{A}) = \frac{\mathcal{A}}{4 G} \quad \text{(natural units)} \quad \text{(70)}
+S_{boundary}(\mathcal{A}) = \frac{\mathcal{A}}{4 G} \tag{70}
 $$
+*(natural units)*
 
 An infinitesimal change $\delta \mathcal{A}$ in area corresponds to:
 
 $$
-\delta S = \frac{1}{4 G} \delta \mathcal{A} \quad \text{(natural units)} \quad \text{(71)}
+\delta S = \frac{1}{4 G} \delta \mathcal{A} \tag{71}
 $$
+*(natural units)*
 
 *Proof Summary:* The derivation, detailed comprehensively in **Appendix E**, hinges on the fundamental information limits imposed by ND-RID interactions across causal boundaries within the emergent geometry. The core logic proceeds as follows: (1) The inherent irreversibility of the 'Evolve' process, quantified by the minimum cost $\varepsilon \ge \ln 2$ (Theorem 31, rigorously derived in Appendix J), implies strict contractivity ($f_{RID}<1$) of the average ND-RID channel (Lemma E.1). (2) This contractivity fundamentally bounds the classical information capacity of each individual MPU interaction channel ($C_{max}(f_{RID}) < \ln d_0$, Theorem E.2), limiting the maximum distinguishable information transmissible per channel. (3) Conditional on the necessary emergence of geometric regularity (Theorem 43), the number of effective independent information channels ($N_{links}$) crossing a horizon boundary scales linearly with its area $\mathcal{A}$ in the macroscopic limit ($N_{links} = \sigma_{link} \mathcal{A}$, Theorem E.3). (4) The total equilibrium boundary entropy $S_{boundary}$ associated with the boundary is the product of the number of channels and the maximum entropy per channel ($S_{boundary} = N_{links} \times S_{channel}^{max} = N_{links} \times C_{max}$), directly yielding the linear scaling $S_{boundary} = (\sigma_{link} C_{max}) \mathcal{A}$ (Equation E.6). Identifying the coefficient with the Bekenstein-Hawking value $1/(4 G)$ recovers the standard Area Law form (Equation 70) and crucially links the emergent gravitational constant $G$ to the underlying microscopic MPU parameters (spacing $\delta$ via $\sigma_{link}$, and ND-RID efficiency via $C_{max}$) as shown in Equation (E.9) and Equation (E.10). QED
 

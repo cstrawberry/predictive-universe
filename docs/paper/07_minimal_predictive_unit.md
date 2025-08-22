@@ -141,6 +141,24 @@ Thus, with parameters chosen consistently with the framework's definitions (e.g.
 
 This explicit construction serves as a witness that the abstract MPU (Definition 23) can be realized with the stated properties, forming a consistent foundation for the framework.
 
+**Uniqueness of Minimal Predictive Algebra and Dimension $d_0=8$**
+
+This result strengthens Theorem 23 by showing that the minimal dimension is not just a lower bound but a unique, stable outcome of the framework's functional requirements. In any MPU that implements a full SPAP cycle with one irreversible RID of cost $\varepsilon\ge\ln 2$ (App. J) and satisfies the PU axioms (Sec. 5–8), the finite‑dimensional predictive C\*-algebra $\mathfrak A$ must contain **three pairwise‑commuting $M_2(\mathbb C)$** factors:
+
+$$
+\mathfrak A\ \supseteq\ M_2(\mathbb C)\ \otimes\ M_2(\mathbb C)\ \otimes\ M_2(\mathbb C)\,,
+$$
+
+corresponding to (i) the **quantum superposition register** (nontrivial Gleason/Busch regime), (ii) the **pointer/commit register** implementing the Landauer‑limited RID, and (iii) the **self‑reference/recursion register** needed to close SPAP. Consequently, the minimal faithful representation has dimension $d_0=\prod_i 2=8$. Moreover, any representation with $d_0<8$ fails at least one of: Gleason‑type additivity, RID compliance at $\varepsilon\ge\ln 2$, or SPAP recursion; any $d_0>8$ PCE‑flows to $8$ by factor decoupling.
+
+*Proof sketch.*
+
+1. *Quantum register ($M_2$).* Born weights are derived via a Gleason/Busch argument (App. G.1), which requires a nontrivial quantum factor; the minimal such factor is $M_2(\mathbb C)$.
+2. *Pointer ($M_2$).* An RID step that erases $\ge\ln 2$ nats requires a binary irreversible kernel *represented within the MPU* (PU minimalism). If this bit were purely classical/external, the measured algebra would fail the non‑contextuality used in App. G. Thus an internal $M_2(\mathbb C)$ factor is necessary to carry the pointer coherently pre‑RID.
+3. *Recursion ($M_2$).* Closing SPAP demands a control qubit that (a) gates prediction/verification, (b) enforces reversibility of the unitary part, and (c) keeps predictive consistency across frames (Sec. 5). This control must be representable as a two‑state quantum factor to preserve PCE symmetry across frame refinements; otherwise mixture linearity in the frame function is violated.
+4. *Commutation & minimality.* These three roles must commute (control/pointer may not disturb the superposition algebra outside RID). By the structure theorem for finite C\*-algebras, the smallest algebra containing three commuting $M_2(\mathbb C)$ factors is $M_2(\mathbb C)\otimes M_2(\mathbb C)\otimes M_2(\mathbb C) \cong M_8(\mathbb C)$ of dimension $8$.
+5. *Exclusion $d_0<8$.* If $d_0<8$, $\mathfrak A$ cannot contain three commuting $M_2$’s; one of the three registers collapses (violating either App. G additivity, the RID cost bound, or SPAP closure).
+6. *PCE flow for $d_0>8$.* Extra factors that do not improve predictive efficiency are decoupled by PCE to the capacity‑saturated core; hence the **unique** minimal fixed point is $d_0=8$.  $\square$
 
 **7.2 MPU State Representation: Perspectival State and Hilbert Space**
 

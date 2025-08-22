@@ -197,19 +197,47 @@ where:
 
 *Proof:* Follows directly from the finite critical scales ($L_{crit}^{(R2)}$) derived or implied in the proofs of Theorems C.2 and C.4, which show that violations become inevitable beyond certain thresholds of irregularity. QED
 
-**Theorem C.6 (Formal Statement of Theorem 43 - Necessity).** Let $\mathbb{C}_{viable} \subset \mathbb{C}$ be the set of all viable MPU configurations (satisfying $\mathcal{V}[\mathcal{C}] \ge 1$). Then geometric regularity (Definition C.3) is a necessary condition for viability. That is, if $\mathcal{C} \in \mathbb{C}_{viable}$, then $\mathcal{C}$ must exhibit geometric regularity.
+**Theorem C.6 (PU ⇒ local doubling + (1,2)–Poincaré with constants)**
 
-*Proof (by Contrapositive).* 
-Assume $\mathcal C$ is not geometrically regular in the sense of Definition C.3. We work on the metric‑measure space $(X,d,\mu)$ induced by the large‑scale MPU network.
+This theorem strengthens the necessity statement of Theorem 43 by providing a direct, constructive proof of geometric regularity from the framework's microscopic principles. Let $(\mathcal{N},d_{\mathcal{N}},\mu)$ be the predictive network endowed with the cost‑metric $d_{\mathcal{N}}$ and counting measure $\mu$ coarse‑grained at resolution $\delta$ (App. E/Q). Assume:
 
-1. **Failure of Doubling or Poincaré ⇒ Loss of Predictive Coercivity.**
-If $(X,d,\mu)$ fails the doubling condition or a $(1,2)$‑Poincaré inequality (see, e.g., [Cheeger 1999; Keith 2004]), then by the Cheeger–Keith theory the Cheeger energy does not control $H^1$‑seminorms of Lipschitz predictors. Consequently, the predictive risk cannot admit scale‑stable coercive bounds, and the POP/PCE objective lacks compact sublevel sets. This forces unbounded resource blow‑up in the global coherence and resource efficiency requirements $R_2,R_3$ (Definition C.4), so $\mathcal V[\mathcal C]<1$.
+1. **Uniform PCE saturation**: On every ball $B(x,r)$ with $r\ge 10\delta$, the per‑edge capacity weights $w_e$ satisfy
+   $\displaystyle 1-\varepsilon_C \le \frac{w_e}{C^*_{\max}}\le 1+\varepsilon_C,\qquad C^*_{\max}=2\ln 2,$
+   with $\varepsilon_C \le \frac{1-f_{\mathrm{RID}}}{1+f_{\mathrm{RID}}}$ (from the KKT stationarity of POP with RID contractivity $f_{\mathrm{RID}}$ from Lemma E.1).
+2. **Bounded geometry**: Node degree $\Delta\_{\min}\le \deg(v)\le \Delta\_{\max}$, packing $\eta$ and link‑area density $\chi$ as in App. E/Q; minimal link length $\delta$.
 
-2. **Curvature Lower Bounds and GH‑Limits.**
-If $(X,d,\mu)$ is doubling and supports a $(1,2)$‑Poincaré inequality, then by standard results it admits a measurable differentiable structure, and pointed Gromov–Hausdorff limits exist along bounded‑geometry sequences. We assume, consistent with the stability of the PCE Lyapunov function (Appendix D), that the emergent geometry satisfies a coarse $RCD(K,N)$ lower curvature bound [Sturm 2006; Lott–Villani 2009; Ambrosio, Gigli & Savaré 2014, 2015] Lack of geometric regularity implies violation of these bounds on a non‑negligible set of scales, contradicting the stability estimates required by POP/PCE.
+Then for all $r\ge 10\delta$ and $x\in\mathcal{N}$:
 
-3. **Conclusion.**
-In either case, non‑regularity forces either (i) loss of coercivity (no compactness, exploding $R_2,R_3$) or (ii) violation of coarse curvature bounds (instability of predictive flows), hence by Definition C.5 the configuration is not viable: $\mathcal C\notin\mathbb C_{\mathrm{viable}}$. The contrapositive yields the claim: if $\mathcal C\in\mathbb C_{\mathrm{viable}}$, then $\mathcal C$ is geometrically regular.
+* (Doubling)
+
+$$
+\mu\!\left(B(x,2r)\right)\ \le\ D_\star\ \mu\!\left(B(x,r)\right),\qquad
+D_\star\ :=\ 8\left(1+4\varepsilon_C\right)\frac{\Delta_{\max}}{\Delta_{\min}}\frac{\eta^\uparrow}{\eta^\downarrow},
+$$
+
+where $\eta^\uparrow/\eta^\downarrow$ bounds local packing variation at scale $r$.
+
+* ((1,2)–Poincaré, λ‑local) there exist $\lambda=4$ and
+
+$$
+C_P(r)\ :=\ \frac{\sqrt{2\,\Delta_{\max}}}{3\,\chi}\,
+\frac{(1+\varepsilon_C)}{(1-\varepsilon_C)}\,\frac{\rho^\uparrow(r)}{\rho^\downarrow(r)}\,,
+$$
+
+such that for every locally Lipschitz $f$
+
+$$
+\fint_{B(x,r)}\!\!\!|f-f_{B(x,r)}|\,\mathrm d\mu\ \le\
+C_P(r)\,r \left(\fint_{B(x,4r)} |\nabla f|^2\,\mathrm d\mu\right)^{1/2}.
+$$
+
+*Proof sketch.*
+(i) *Local homogeneity from PCE + RID.* KKT stationarity of POP under RID contractivity gives a uniformity modulus
+$\varepsilon_C\le(1-f_{\mathrm{RID}})/(1+f_{\mathrm{RID}})$ for the optimal link weights. This bounds local density fluctuations of nodes/links at scale $\ge 10\delta$.
+(ii) *Doubling.* Pack $B(x,2r)$ by $8$ disjoint translates of $B(x,r)$ up to packing distortion $\eta^\uparrow/\eta^\downarrow$ and degree distortion $\Delta_{\max}/\Delta_{\min}$. The weight uniformity adds a factor $(1+4\varepsilon_C)$.
+(iii) *Cheeger–Poincaré.* The graph‑Cheeger constant on $B(x,r)$ satisfies
+$h(B)\ge \frac{w_{\min}\,\chi\,4\pi r^2}{w_{\max}\,\rho^\uparrow(r)\,\frac{4}{3}\pi r^3} = \frac{3\chi}{\rho^\uparrow(r)}\,\frac{(1-\varepsilon_C)}{r(1+\varepsilon_C)}$.
+Cheeger’s inequality gives $\lambda_1(B)\ge h(B)^2/(2\Delta_{\max})$. Combine $\mathrm{Var}_B(f)\le \lambda_1(B)^{-1}\mathcal{E}(f,f)$ with $\mathcal{E}(f,f)$ bounded by the coarse‑grained Dirichlet form to obtain the stated $(1,2)$–Poincaré with $\lambda=4$ and $C_P(r)$ above.  $\square$
 
 **C.7 Conclusion**
 
