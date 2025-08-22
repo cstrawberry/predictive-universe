@@ -160,7 +160,13 @@ $$
 \Delta \mathcal F \;=\; \frac{1}{4}\int \frac{1}{g^2}\,F_{\mu\nu}F^{\mu\nu}\, \mathrm d^4x,
 \qquad \text{with}\qquad \boxed{\,g^2 = u\,}.
 $$
-Here $\mu^\*$ denotes the **PCE attractor scale** (flat spectrum $M=24,\lambda=1$); laboratory values follow by **RG running** (Appendix V).
+Here $\mu^\*$ denotes the **PCE attractor scale** (flat spectrum; $\lambda=1$); laboratory values follow by **RG running** (Appendix V), with the one‑loop QED relation (Heaviside–Lorentz units)
+
+$$
+\frac{1}{\alpha(\mu)}=\frac{1}{\alpha(\mu_0)}-\frac{2}{3\pi}\sum_f N_c^{(f)} Q_f^2 \,\ln\!\frac{\mu}{\mu_0}\,,
+$$
+
+applied piecewise across thresholds (standard decoupling).
 Hence $\alpha(\mu^\*)=\dfrac{g^2}{4\pi}=\dfrac{u^\*}{4\pi}$ and the normalization constant is exactly $\boxed{\kappa_\*=1}$. Using $u^\* = 8^{1/24}-1\approx 0.0905077$,
 $$
 \alpha(\mu^\*) \approx 0.007202, \qquad \frac{1}{\alpha(\mu^\*)}\approx 138.843.

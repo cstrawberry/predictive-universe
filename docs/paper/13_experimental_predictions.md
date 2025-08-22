@@ -26,6 +26,15 @@ $$
 \lvert \Delta P(i)\rvert \le \|L_S\|_{\mathrm{op}}=\mathrm{CC}(S)\le \alpha_{\mathrm{CC,max}}<0.5 .
 $$
 
+Moreover, for every POVM ${E_i}$ and any state $\rho$, impose the positivity‑preserving effect constraint
+
+$$
+0 \le E \le I \ \Longrightarrow\ -E \ \le\ K_S(E)\ \le\ I - E ,
+$$
+
+which, together with $K_S(I)=0$, ensures $0 \le P_{\mathrm{obs}}(i) \le 1$ for all outcomes while preserving $\sum_i P_{\mathrm{obs}}(i)=1$.
+
+
 Using the **Context-Targeted Bias (CTB)** model (Definition 34), where the context defines a target state $\sigma_S$ and $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$, the deviation takes the form
 
 $$

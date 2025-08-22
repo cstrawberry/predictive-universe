@@ -43,7 +43,7 @@ To define Predictive Physical Complexity ($C_P$) without presupposing the physic
 *   **Level 1 ($C_{P,1}$):** Refines $C_{P,0}$ by restricting allowed processes $P$ to those compatible with a minimal, framework-independent set of base physical constraints $\mathcal{L}_{phys}^{(base)}$. These constraints are treated as properties of the physical *substrate* upon which any computation must be instantiated. They include fundamental conservation laws (e.g., of energy) and the **statistical nature of thermodynamics**. This means the substrate is governed by statistical mechanics, such that processes which would systematically violate the statistical Second Law (e.g., a perpetual motion machine of the second kind) are not physically realizable programs. 
 *   **Level n ($C_{P,n}$, $n \ge 2$):** Further refines $C_{P,n-1}$ by incorporating additional physical constraints (such as the thermodynamic cost $\varepsilon \ge \ln 2$ derived in **Theorem 31** and the reflexivity constraint $\kappa_r > 0$ from **Theorem 33**, which are established later in the framework) that are themselves derived independently using only constraints from levels $n-1$ and below applied to the analysis of MPU dynamics.
 
-The final, self-consistent definition of $C_P$ is the limit of this iterating refinement:
+Here $\mu$ denotes a physically realizable microstate admissible under the PU constraints (cf. Section 7 and the Glossary). The final, self-consistent definition of $C_P$ is the limit of this iterating refinement:
 $$
 C_P(\mu)\;=\;\lim_{n\to\infty} C_{P,n}(\mu) \quad \text{(1)}
 $$
