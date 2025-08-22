@@ -49,37 +49,45 @@ These properties highlight the intrinsic limitations and complexities introduced
 
 The adaptive Fundamental Predictive Loop (Definition 4), driven by the POP (Axiom 1) and operating under the constraints of RID (Definition 6) and finite resources (Section 2.4.4), requires a specific operational range of predictive effectiveness to function sustainably. This section defines the measure of predictive effectiveness—Predictive Performance (PP)—and derives the necessity of both lower and upper bounds on this performance, defining the "Space of Becoming" within which viable, adaptive prediction must occur.
 
-**3.3.1 Definition 7 (Def 7): Predictive Performance (PP)**
+#### 3.3.1 Definition 7 (Def 7): Predictive Performance (PP)
 
-To quantify the effectiveness of the system's predictions, we define Predictive Performance (PP). It is a normalized measure, monotonically decreasing with the Prediction Error (PE) incurred during the Verification phase ($V$) of the predictive loop. PP reflects the quality ($Q$) and reliability of the system's predictive state relative to its task. We adopt the functional form:
+To quantify the effectiveness of the system’s predictions, we define Predictive Performance (PP). It is a normalized measure, monotonically decreasing with the Prediction Error (PE) incurred during the Verification phase (V) of the predictive loop. PP reflects the quality (Q) and reliability of the system’s predictive state relative to its task. We adopt the functional form:
 $$
-PP(t) = \frac{1}{1 + k_{PP} \cdot PE(t)} \quad \text{(8)}
+PP(t) = \frac{1}{1 + k_{PP}\, PE(t)} \quad \text{(8)}
 $$
 
-**Definition (Predictive Error $PE$).** Let $\hat y(t)$ be the system’s prediction and $y(t)$ the realized outcome. The predictive error $PE(t)\in[0,\infty)$ is a scalar discrepancy under a proper scoring rule (e.g., Brier or log‑loss). When $PE$ is a log‑loss, it carries units of nats (or bits); otherwise we normalize $PE$ to be dimensionless as specified in the protocol.
+**Definition (Predictive Error PE).** Let $\hat{y}(t)$ denote the system’s predictive object (a point prediction or a predictive distribution) and $y(t)$ the realized outcome. Fix a proper scoring rule $S(\cdot,·)$ (e.g., Brier score or log‑loss). Define $PE(t) = S(\hat{y}(t), y(t)) \ge 0$. When $S$ is log‑loss, PE has units of nats (base e) or bits (base 2); otherwise PE is made dimensionless by a specified normalization protocol.
 
-**Definition (Scale $k_{PP}$).** The constant $k_{PP}>0$ rescales $PE$ in Eq. (8) so that the **typical operating range** of $PE$ maps into the viability band $(\alpha,\beta)$. If $PE$ has units (nats/bits), then $k_{PP}$ has reciprocal units (1/nat or 1/bit) so that $k_{PP}PE$ is dimensionless; if $PE$ is normalized to be dimensionless, so is $k_{PP}$.
+**Definition (Scale k_PP).** The constant $k_{PP} > 0$ rescales PE in Eq. (8) so that a designated operating point $PE_*$ maps to a specified $PP_* \in (0, 1)$, typically chosen within the viability band $(\alpha, \beta)$ defined below. Concretely, $k_{PP} = (1/PP_* - 1)/PE_*$. When PE carries units (nats/bits), $k_{PP}$ has the corresponding reciprocal units so that $k_{PP} PE$ is dimensionless; if PE is dimensionless, so is $k_{PP}$.
 
-This definition ensures $PP(t) \in (0, 1]$, with $PP=1$ corresponding to perfect prediction ($PE=0$) and $PP \to 0$ as $PE \to \infty$. Higher PP corresponds to higher predictive quality $Q$.
+This definition ensures $PP(t) \in (0, 1]$, with $PP = 1$ corresponding to perfect prediction ($PE = 0$) and $PP \to 0$ as $PE \to \infty$. Higher PP corresponds to higher predictive quality $Q$. The specific choice of $k_{PP}$ anchors PP to the task’s typical error scale and does not alter the ordering of predictive quality across models or time.
 
-**3.3.2 Theorem 8 (Necessity of Lower Performance Bound $\alpha > 0$)**
+#### 3.3.2 Theorem 8 (Necessity of Lower Performance Bound α > 0)
 
-For the adaptive predictive cycle (Definition 4) to maintain meaningful coupling to the system or environment being predicted, enabling its predictions to effectively guide actions or internal regulations relevant to solving the POP (Axiom 1), its Predictive Performance $PP(t)$ must remain strictly above a positive lower bound $\alpha$.
-*Proof:* The functional role of prediction within the POP framework is to guide behavior towards desired outcomes or maintain internal stability. This requires a significant correlation between the system's predictive state and the actual state of the relevant variables. Predictive Performance PP (Definition 7) quantifies this correlation (inversely related to PE, directly related to predictive quality $Q$). As $PP(t)$ approaches 0, the correlation vanishes ($I(S(t); S(t+\Delta t)) \to 0$, cf. Theorem 6). 
+For the adaptive predictive cycle (Definition 4) to maintain meaningful coupling to the system or environment being predicted—so that predictions effectively guide actions or internal regulation relevant to solving the POP (Axiom 1)—its Predictive Performance PP(t) must remain strictly above a positive lower bound α.
 
-In this limit, the system's predictions become functionally decoupled from the reality they purport to model, effectively becoming random noise relative to the predictive task. Resource expenditure (Section 2.4.4) yields negligible predictive benefit, rendering the cycle operationally ineffective for solving the POP. Sustained viability thus necessitates maintaining a minimum level of predictive correlation and quality, corresponding to $PP(t)$ consistently exceeding some positive threshold $\alpha > 0$. Below $\alpha$, the system is functionally defunct. QED
+*Proof:* Consider any task‑level objective that leverages predictions to select actions $a(t)$ with expected utility $U(a, S(t+Δt))$. Let $ΔU(t)$ denote the expected decision advantage over a baseline policy that ignores predictions. Assume:
+(i) $ΔU(t)$ is non‑negative and strictly increasing in predictive quality at the operating point, and
+(ii) $ΔU(t)$ is continuous in $PP(t)$ with $ΔU(t) \to 0$ as $PP(t) \to 0$ (e.g., under any proper scoring rule, predictions that incur arbitrarily large PE carry vanishingly little decision‑relevant information about outcomes).
 
-**3.3.3 Theorem 9 (Necessity of Upper Performance Bound $\beta < 1$)**
+Operational viability requires $ΔU(t) \ge ΔU_{min} > 0$. By continuity and strict monotonicity, there exists $α \in (0, 1)$ such that $PP(t) \le α$ implies $ΔU(t) < ΔU_{min}$, contradicting viability. Therefore, sustained operation necessitates maintaining $PP(t) > α$. QED
 
-For the adaptive predictive cycle (Definition 4), operating under RID constraints (Definition 6), resource limitations (Section 2.4.4), facing potential environmental changes (dynamics of $\hat{C}_{target}(t)$, Definition 21), and subject to fundamental self-prediction limits (Section 4, especially Theorem 14), to retain the capacity for learning, adaptation, and efficient operation, its Predictive Performance $PP(t)$ must remain strictly bounded below 1. That is, $PP(t) \leq \beta$ for some operational upper bound $\beta < 1$.
-*Proof:* Several converging factors necessitate this upper bound:
-1.  **Adaptation Requires Error Signals:** The update phase ($D_{cyc}$) of the loop relies on informative Prediction Error ($PE(t)$) signals. Non-zero errors provide the feedback necessary to adjust the internal model $M_t$ (e.g., adapt complexity $C(t)$ via Section 6.4) to track changes in the environment ($\hat{C}_{target}(t)$) or improve the model itself, crucial for solving the POP adaptively.
-2.  **Information Content Vanishes Near Perfection:** As $PP(t) \to 1$, by definition $PE(t) \to 0$. An error signal that is always zero carries no information ($H(PE) \to 0$) to guide adaptation ($I(PE; \Delta M) \to 0$).
-3.  **Predictive Stasis:** Without informative feedback, the system enters predictive stasis, unable to learn or adapt to new conditions. This compromises its ability to maintain optimal performance in a dynamic environment and risks eventual failure if conditions change such that performance drops below $\alpha$. Effective adaptation requires $PE > 0$, hence $PP < 1$.
-4.  **Resource Costs and Efficiency (PCE):** As derived later (Theorem 19, see Equation (23)), the complexity $C$ required to achieve performance $PP$ diverges logarithmically as $PP$ approaches the operational ceiling $\beta$: $C(PP,\hat C_{\mathrm{target}}) = C_{op} +\frac{\hat C_{\mathrm{target}}}{\kappa_{\mathrm{eff}}}\, \ln\!\Bigl(\tfrac{\beta-\alpha}{\beta-PP}\Bigr)$. While only logarithmically divergent, operating extremely close to $\beta$ requires rapidly increasing complexity and thus rapidly increasing resource costs ($R(C), R_I(C)$, Definition 3). Such operation may become highly inefficient, violating the Principle of Compression Efficiency (PCE, Definition 15), representing a poor solution to the POP.
-5.  **Fundamental Logical Limits (SPAP):** The Self-Referential Paradox of Accurate Prediction (Theorem 10, Theorem 11) establishes a fundamental logical limit $\alpha_{SPAP} < 1$ on the achievable accuracy for self-predicting aspects of sufficiently complex systems (Property R, Definition 10). Attempting to reach or exceed $\alpha_{SPAP}$ is logically inconsistent. Furthermore, the complexity required diverges much faster (quadratically, $C \propto 1/(\alpha_{SPAP}-PP)^2$, Theorem 14) near this logical limit. Physical realizability demands operation below $\alpha_{SPAP}$.
-6.  **Fundamental Thermodynamic Limits (Reflexivity Constraint):** The Reflexivity Constraint ($\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$, Theorem 33), derived from the necessary state change cost $\varepsilon > 0$ (Theorem 31), links information gain $\Delta I$ and state disturbance $\Delta S_{min}$. Approaching perfect prediction ($PP \to 1$) implies resolving a very large amount of uncertainty about the outcome (corresponding to a high effective information gain $\Delta I$ in the context of the Reflexivity Constraint), which would necessitate large state disturbance ($\Delta S_{min}$) according to the constraint. This represents a distinct physical impossibility related to interaction costs.
-7.  **Synthesis:** To retain adaptability (1-3), operate efficiently (4), and remain consistent with fundamental logical (5) and physical/thermodynamic (6) limits, performance must be bounded away from $PP=1$. Therefore, there must exist an operational upper bound $\beta$ such that $PP(t) \le \beta$, and consistency requires $\beta < \alpha_{SPAP} < 1$. QED
+#### 3.3.3 Theorem 9 (Necessity of Upper Performance Bound β < 1)
+
+For the adaptive predictive cycle (Definition 4), operating under RID constraints (Definition 6) and finite resources (Section 2.4.4), facing potential environmental changes (dynamics of $\hat{C}_{target}(t)$, Definition 21), and using error‑driven adaptation, to retain the capacity for learning, adaptation, and efficient operation, its Predictive Performance PP(t) must be kept strictly below 1. That is, there exists an operational upper bound β < 1 such that PP(t) ≤ β.
+
+*Proof:*
+1. **Persistent Excitation for Adaptation:** The update phase (D_cyc) relies on informative error signals PE(t). To guarantee finite detection and tracking of nonstationary changes, a standard identifiability condition is persistent excitation: over any sufficiently long window, the error channel exhibits non‑zero informativeness (e.g., E[PE(t)] ≥ ε_E > 0 or Var[PE(t)] ≥ v_0 > 0). If PP(t) ≡ 1 for extended periods, PE(t) ≡ 0, eliminating information needed for adaptation and violating persistent excitation.
+2. **Mapping Excitation to a PP Ceiling:** Since PP(t) = 1/(1 + k_PP PE(t)) is strictly decreasing in PE(t), any lower bound ε_E > 0 on the error signal implies an upper bound on PP:
+   $$
+   PP(t) \le 1/(1 + k_{PP} \varepsilon_E) =: \beta < 1.
+   $$
+3. **Resource Efficiency:** Approaching the operational ceiling incurs rapidly increasing complexity costs. As derived later (Theorem 19; see Eq. (23)), the complexity required to sustain a given PP grows as
+   $$
+   C(PP, \hat{C}_{target}) = C_{op} + \frac{\hat{C}_{target}}{\kappa_{eff}} \ln\!\Bigl(\frac{\beta - \alpha}{\beta - PP}\Bigr),
+   $$
+   which diverges logarithmically as PP → β^−. Operating extremely close to β is therefore increasingly inefficient and can violate the Principle of Compression Efficiency (PCE, Definition 15) for the POP.
+4. **Synthesis:** To ensure adaptability under RID and nonstationarity and to preserve efficiency under resource constraints, the system must maintain a non‑zero level of informative error. This enforces an operational upper bound β < 1 on PP(t). QED
 
 **3.3.4 Remark 1 (Distinction between $\beta$ and $\alpha_{SPAP}$)**
 

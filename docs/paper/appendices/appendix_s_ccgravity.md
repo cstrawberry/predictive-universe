@@ -86,23 +86,23 @@ $$
 $$
 with
 $$
-K:=\frac{4\pi G}{3c^4}\,(1+3w_c)\,\frac{r\,L_q}{V_S}\,\tau_c^{2}.
+K:=\frac{4\pi G}{3c^4}\,(1+3w_c)\,\frac{r\,L_q}{V_S}\,\tau_c^{2},\qquad K_{\mathrm{eff}}:=\frac{K}{\tau_c}.
 $$
 
 #### **S.4 Step 4: PCE Optimization and the Self-Limiting CC***
 
 This gravitational time dilation acts as a dephasing mechanism. The effective, achievable bias is reduced from the ideal value:
 $$
-\text{CC}_{eff} = \text{CC} \left(1 − \frac{\Delta\tau_d}{\tau_c}\right) = \text{CC} (1 − K P_{context}).
+\text{CC}_{eff} = \text{CC} \left(1 − \frac{\Delta\tau_d}{\tau_c}\right) = \text{CC} \left(1 − K_{\mathrm{eff}}\, P_{context}\right).
 $$
 The Principle of Compression Efficiency (PCE) drives the system to an equilibrium that maximizes a net-benefit functional, which balances the utility of the bias against its costs. We model this as:
 $$
-B_{net}(\text{CC}) = k_b \text{CC}_{eff} − k_c P_{context} = k_b \text{CC} − (k_b K \text{CC} + k_c) P_{context},
+B_{net}(\text{CC}) = k_b \text{CC}_{eff} − k_c P_{context} = k_b \text{CC} − \left(k_b K_{\mathrm{eff}} \text{CC} + k_c\right) P_{context},
 $$
 with positive coefficients $k_b, k_c$ determined by the specific predictive task and system architecture.
 
 For $\text{CC} \ll \alpha$, we can approximate $P_{context}(\text{CC}) \approx (A/\alpha^2) \text{CC}^2$. The stationarity condition $dB_{net}/d\text{CC} = 0$ becomes:
 $$
-\left(\frac{3A k_b K}{\alpha^2}\right) (\text{CC}^*)^2 + \left(\frac{2A k_c}{\alpha^2}\right) \text{CC}^* − k_b = 0.
+\left(\frac{3A k_b K_{\mathrm{eff}}}{\alpha^2}\right) (\text{CC}^*)^2 + \left(\frac{2A k_c}{\alpha^2}\right) \text{CC}^* − k_b = 0.
 $$
 Solving the quadratic equation for the positive root gives the PCE-optimal bias, CC*. This demonstrates that any attempt to increase CC by raising the power $P_{context}$ ultimately triggers self-gravity–induced dephasing that reduces the effective bias, CC$_{eff}$. The PCE optimum balances the benefit of the bias against both its direct resource cost and its indirect gravitational self-sabotage.

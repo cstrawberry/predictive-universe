@@ -18,7 +18,7 @@ b) The inherent self-referential logical structure, corresponding to the Horizon
 
 Therefore, by definition, $C_{op}$ encompasses $K_0$ ($C_{op} \ge K_0$, Corollary 3). An MPU operates under the Prediction Optimization Problem (POP, Axiom 1) subject to physical, informational ($\varepsilon > 0$, Theorem 31), and logical (SPAP, Theorem 10, Theorem 11; RID, Definition 6) constraints intrinsically tied to its $C_{op}/K_0$ structure. An MPU's state and dynamics are characterized by:
 
- 1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state amplitude $S(t)$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4, dimension $d_0 \ge 8$ directly implied by $K_0$, Theorem 23) encoding predictive information, and a perspective index $s$ from the Perspective Space $\Sigma$ (Definition 25) representing the interaction context.
+ 1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state amplitude $S(t)$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4, dimension $d_0 \ge 8$; see Theorem 23 and the subsequent algebraic argument) encoding predictive information, and a perspective index $s$ from the Perspective Space $\Sigma$ (Definition 25) representing the interaction context.
  2.  **Dual Dynamics:** Its evolution follows Dual Dynamics (Section 7.3.3): deterministic Internal Prediction Evolution (Definition 26) via the Schrödinger equation (Equation 43), implementing predictive generation ($b_p$), and stochastic Interaction ('Evolve', Definition 27) triggered by interaction, instantiating Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) for verification ($b_v$) and update initiation ($D_{cyc}$), whose indeterminacy stems from the inherent $K_0$ logic (Hypothesis 2).
  3.  Minimal Operational Complexity: The physical system possesses exactly the complexity $C(MPU) = C_{op}$ (Theorem 16).
 
@@ -26,124 +26,90 @@ Therefore, by definition, $C_{op}$ encompasses $K_0$ ($C_{op} \ge K_0$, Corollar
 
 The ongoing, cyclical operation of an MPU (Definition 23)—prediction ($P_{int}$), verification ($V$), update ($D_{cyc}$) under the imperative of the POP (Axiom 1)—represents the minimal instance of a system actively navigating uncertainty through self-referential prediction and interaction. This operational cycle is *interpreted* within this framework as corresponding to the most basic, elemental form of awareness. Crucially, this elemental awareness is intrinsically tied to the MPU's full operational cycle, including the 'Evolve' interaction (Definition 27), which is the process responsible for the actualization of quantum states (Proposition 9). Therefore, within this framework, every quantum actualization event is underpinned by at least this minimal, operational form of awareness. This postulate serves primarily to connect the operational dynamics of the $C_{op}$ cycle to phenomenal concepts. The subsequent physical derivations rely on the MPU's *operational* characteristics (prediction, effective Property R applicability, ND-RID, $C_{op} \ge K_0$, POP/PCE optimization) and their logical/thermodynamic limits (SPAP, Theorem 10, Theorem 11; Reflexive Undecidability, Theorem 12; $\varepsilon$, Theorem 31; $\kappa_r$, Theorem 33), not directly on this interpretive postulate. The specific physical realization of this minimal awareness, if it exists, is beyond the scope of this framework.
 
-
 **7.1.3 Example: An Explicit 3-Qubit MPU Model Witnessing $C_{op}=K_0$**
 
-To demonstrate the concrete realizability of a Minimal Predictive Unit (MPU) satisfying the core requirements—operating at complexity $C_{op} = K_0 = 3$ bits, incorporating the SPAP logic, exhibiting fundamental irreversibility $\varepsilon = \ln 2$, and capable of solving the Prediction Optimization Problem (POP)—we construct an explicit model.
+This construction exhibits a Minimal Predictive Unit satisfying the core requirements—operating at complexity $C_{op} = K_0 = 3$ bits, incorporating SPAP logic, exhibiting fundamental irreversibility with $\varepsilon = \ln 2$, and capable of solving the Prediction Optimization Problem (POP).
 
 **1. Hilbert Space and Computational Basis**
 
-*   **Hilbert Space:** The MPU's state amplitude resides in the Hilbert space $\mathcal{H}_0 = (\mathbb{C}^2)^{\otimes 3} \cong \mathbb{C}^8$. The computational basis vectors are denoted by $|b_2 b_1 b_0\rangle$, where $b_j \in \{0,1\}$. The dimension $d_0=8$ satisfies the requirement $d_0 \ge 8$ (Theorem 23).
+*   **Hilbert Space:** The MPU’s state amplitude resides in $\mathcal{H}_0 = (\mathbb{C}^2)^{\otimes 3} \cong \mathbb{C}^8$. The computational basis vectors are $|b_2 b_1 b_0\rangle$, where $b_j \in \{0,1\}$. The dimension $d_0 = 8$ satisfies the requirement $d_0 \ge 8$ (Theorem 23).
 
 *   **Logical Roles of the Three Qubits:**
-    1.  **Signal Qubit ($Q_s$, e.g., $b_2$):** Carries the binary variable whose future state is to be predicted by the MPU within its operational cycle.
-    2.  **Predictor Qubit ($Q_p$, e.g., $b_1$):** Stores the MPU’s internal prediction $\hat{b}_s$ for the next state of $Q_s$. Its content is overwritten each cycle.
-    3.  **Ancilla/Clock Qubit ($Q_c$, e.g., $b_0$):** Provides the one bit of erasable memory crucial for resetting the predictive cycle and implementing the logically irreversible step of the SPAP loop with finite resources.
+    1.  **Memory Qubit ($Q_M$, e.g., $b_2$):** Stores the MPU’s current internal model or state under reflexive update.
+    2.  **Prediction Qubit ($Q_P$, e.g., $b_1$):** Holds the generated prediction for the next outcome, refreshed each cycle.
+    3.  **Interface/Ancilla Qubit ($Q_I$, e.g., $b_0$):** Mediates interaction with the environment and is used for the logically irreversible reset.
 
-**2. Hamiltonian and Unitary (Internal Prediction) Evolution**
+**2. Internal Prediction (Unitary) Evolution**
 
-For this minimal model, we redefine the logical roles of the qubits to better illustrate the predictive cycle:
-1.  **Memory Qubit ($Q_M$, e.g., $b_2$):** Stores the MPU's current internal model, representing the learned state of the environment.
-2.  **Prediction Qubit ($Q_P$, e.g., $b_1$):** Serves as a register to hold the generated prediction for the next outcome.
-3.  **Interface/Ancilla Qubit ($Q_I$, e.g., $b_0$):** Interacts with the environment to receive the outcome and is used for the irreversible reset.
+The Internal Prediction phase (Definition 26) implements the minimal predictive model “predict that the next outcome will match the current internal state.” A unitary that realizes this is the controlled-NOT from $Q_M$ to $Q_P$ with target initialized to $|0\rangle$:
+*   $U_{pred} = \text{CNOT}_{M \to P}$.
+*   For an initial state $|\mu_M\rangle \otimes |0_P\rangle \otimes |0_I\rangle$, the state after this phase is $|\mu_M\rangle \otimes |\mu_P\rangle \otimes |0_I\rangle$, where the prediction register coherently encodes the memory content in the computational basis.
 
-The Internal Prediction phase (Definition 26) must implement the MPU's predictive model ($M_t$), which for this minimal unit is: "Predict that the next outcome will match the state of the Memory Qubit." This is a non-trivial computation. It is implemented by a unitary evolution $U_0$ generated by a suitable Hamiltonian $\hat{H}$ over the cycle time $\tau_{min}$. The simplest unitary that achieves this is a Controlled-NOT gate from Memory to Prediction, $U_{pred} = \text{CNOT}_{M \to P}$. The full unitary evolution is $U_0(\tau_{min}) = U_{pred}$.
+This coherent copying (entangling for superpositions) constitutes the predictive generation phase ($b_p$) without violating no-cloning.
 
-This **non-trivial unitary operation** constitutes the predictive generation phase ($b_p$), where the MPU's model is executed. For an initial state $|\mu_M\rangle \otimes |0_P\rangle \otimes |0_I\rangle$, the state after this phase is $|\mu_M\rangle \otimes |\mu_P\rangle \otimes |0_I\rangle$, where the prediction qubit now holds a copy of the memory state.
+**3. The ‘Evolve’ Interaction Implementing SPAP Logic**
 
-**3. The 'Evolve' Interaction Implementing SPAP Logic**
+The ‘Evolve’ interaction (Definition 27) comprises a reversible reflexive update on ($Q_M,Q_P$) and a logically irreversible ancilla reset on $Q_I$:
 
-The 'Evolve' interaction (Definition 27) implements the core SPAP logic through a sequence of operations on the MPU's qubits:
+*   **Reversible Reflexive Update (on $Q_M,Q_P$):**
+    *   Logical steps:
+        (i) Prediction is present in $Q_P$ (from $U_{pred}$).
+        (ii) Reflexive update: $Q_M \leftarrow \text{NOT}(Q_P)$, and retain the pre-update state in $Q_P$.
+    *   Net effect on the pair $(m,p)$ in the computational basis:
+        $(m,p) \mapsto (\neg m, m)$.
+    *   A two-qubit permutation unitary $U_{rev}$ on $Q_MQ_P$ implements this map.
 
-| Logical Step                  | Physical Operation on Qubits                                                                                                                                  |
-| :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **(i) Prediction Generation** | The current state of $Q_s(t)$ is taken as the prediction $\hat{b}_s$. This value is stored in $Q_p$, overwriting $Q_p$'s previous content: $Q_p \leftarrow Q_s(t)$. |
-| **(ii) Reflexive Update**     | A conditional NOT operation on $Q_s$, controlled by $Q_p$: The state of $Q_s$ is updated to $\text{NOT}(Q_p)$. That is, if $Q_p$ stores $|b_p\rangle$, $Q_s \to |\overline{b_p}\rangle$. This sets $Q_s(t+\Delta t) = \text{NOT}(\hat{b}_s)$. |
-| **(iii) Ancilla Reset**       | The ancilla qubit $Q_c$ is reset to a fixed state, e.g., $|0\rangle_c$, irrespective of its prior state. This step is logically irreversible.                                |
+*   **Ancilla Reset (on $Q_I$):**
+    *   Reset $Q_I$ to $|0\rangle$ irrespective of its prior state via a completely positive trace-preserving (CPTP) map with Kraus operators acting on $\mathcal{H}_0 = \mathcal{H}_{MP} \otimes \mathcal{H}_I$:
+        *   $E_0 = U_{rev} \otimes |0\rangle\langle 0|_I$,
+        *   $E_1 = U_{rev} \otimes |0\rangle\langle 1|_I$.
+    *   Completeness:
+        *   $E_0^\dagger E_0 + E_1^\dagger E_1 = (U_{rev}^\dagger U_{rev}) \otimes (|0\rangle\langle 0| + |1\rangle\langle 1|) = I_{MP} \otimes I_I$,
+        ensuring CPTP.
+    *   Action: The ancilla’s reduced state after the map is $|0\rangle\langle 0|$ for any input, implementing a physical reset.
 
-Let $U_{rev}^{(sp)}$ denote the unitary operator acting on the $Q_sQ_p$ subsystem implementing the reversible logical steps (i) and (ii). The complete 'Evolve' process, including the irreversible reset of $Q_c$, can be described by Kraus operators acting on $\mathcal{H}_0 = \mathcal{H}_s \otimes \mathcal{H}_p \otimes \mathcal{H}_c$:
-$$
-E_0 = (U_{rev}^{(sp)} \otimes |0\rangle_c\langle 0|_c) \quad \text{and} \quad E_1 = (U_{rev}^{(sp)} \otimes |0\rangle_c\langle 1|_c)
-$$
-To verify this map is CPTP:
-$E_0^\dagger E_0 = (U_{rev}^{(sp)\dagger}U_{rev}^{(sp)}) \otimes (|0\rangle_c\langle 0|_c|0\rangle_c\langle 0|_c) = \mathbb{I}_{sp} \otimes |0\rangle_c\langle 0|_c$.
-$E_1^\dagger E_1 = (U_{rev}^{(sp)\dagger}U_{rev}^{(sp)}) \otimes (|1\rangle_c\langle 0|_c|0\rangle_c\langle 1|_c) = \mathbb{I}_{sp} \otimes |1\rangle_c\langle 1|_c$.
-Because $U_{rev}^{(sp)\dagger}U_{rev}^{(sp)}=\mathbb I_{sp}$ and $(|0\rangle_c\langle 0|_c + |1\rangle_c\langle 1|_c) = \mathbb I_c$, we have $\sum_{k=0}^{1}E_k^\dagger E_k=\mathbb I_{sp}\otimes\mathbb I_c=\mathbb I_{\mathcal{H}_0}$. Thus, the map is CPTP.
-
-*   **Entropy Cost $\varepsilon$:** Step (iii), the reset of $Q_c$, involves mapping two orthogonal states of $Q_c$ (e.g., $|0\rangle_c$ and $|1\rangle_c$) to a single state ($|0\rangle_c$). This is a 2-to-1 logical state merging. By Landauer's principle, as formalized in Appendix J (Theorem J.1), this incurs a minimal dimensionless entropy production:
+*   **Entropy Cost $\varepsilon$:** The reset maps two orthogonal logical states of $Q_I$ to one, a 2-to-1 merge. By Landauer’s principle (Appendix J, Theorem J.1), this entails a minimal dimensionless entropy production
     $$
-    \varepsilon = \frac{\Delta S_{min}}{k_B} = \ln 2
+    \varepsilon = \frac{\Delta S_{min}}{k_B} = \ln 2,
     $$
-    This satisfies the fundamental bound (Theorem 31).
+    meeting the bound in Theorem 31.
 
 **4. Complexity Accounting**
 
-| Quantity                                | Value in this Construction                                     |
-| :-------------------------------------- | :------------------------------------------------------------- |
-| Horizon Constant $K_0$                  | 3 bits (corresponding to the 3-qubit, 8-state system)        |
-| Operational Complexity $C_{op}$         | $C_{op} = K_0 = 3$ bits (by construction, using minimal elements) |
-| Minimum Cycle Time $\tau_{min}$         | related to the Hamiltonian $\hat{H}$ (see Theorem 29), with an effective cycle time $\tau_{min} > 0$ |
-| Irreducible Entropy Cost $\varepsilon$  | $\ln 2$ nats                                                   |
+*   **Horizon Constant $K_0$:** 3 bits (three binary registers).
+*   **Operational Complexity $C_{op}$:** $C_{op} = K_0 = 3$ bits (by construction, using minimal registers to realize SPAP logic).
+*   **Minimum Cycle Time $\tau_{min}$:** Determined by the internal Hamiltonian (Theorem 29), with $\tau_{min} > 0$.
+*   **Irreducible Entropy Cost $\varepsilon$:** $\ln 2$ (nats) when the ancilla reset operation is effected.
 
-Since this MPU model operates at $C_{op}=K_0$ using the minimal structural elements for SPAP logic and irreversible reset, it instantiates a truly "Minimal" Predictive Unit.
+**5. Solving the Prediction Optimization Problem (POP)**
 
-**5. Proof that this MPU Solves the Prediction Optimization Problem (POP)**
+Let $V(C) = \lambda R(C) + R_I(C) - \Gamma_0 PP(C)$, with:
+*   Physical Cost $R(C) = R(C_{op}) + r_p (C - C_{op})^{\gamma_p}$ for $C \ge C_{op}$ and $\gamma_p > 1$.
+*   Reflexive-Information Cost $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$, for $C > K_0$ and $R_I(K_0) = 0$.
+*   Predictive Performance $PP(C) = \beta - (\beta - \alpha) \exp[-\kappa_{eff} (C - C_{op})/K_0]$, giving $PP(K_0) = \alpha$.
 
-To demonstrate POP satisfaction for this MPU operating at $C = C_{op} = K_0 = 3$ bits, we analyze the PCE Potential $V(C)$ and its derivatives at $C=K_0$, using the general forms for costs and performance from Definition 3 and Theorem 19. The POP is solved if $C=K_0$ can be an optimal complexity $C^*$ satisfying $V'(K_0)=0$ and $V''(K_0)>0$.
+Derivatives at $C = K_0$:
+*   $R'(K_0) = 0$ (right-derivative) for $\gamma_p > 1$; $R''(K_0) = \gamma_p(\gamma_p - 1) r_p (C - C_{op})^{\gamma_p - 2}$, hence $R''(K_0) = 2 r_p$ for $\gamma_p = 2$.
+*   $R_I'(K_0) = r_I/(K_0 \ln 2)$, $R_I''(K_0) = - r_I/(K_0^2 \ln 2)$.
+*   $PP'(K_0) = (\beta - \alpha) \kappa_{eff} / K_0$, $PP''(K_0) = - (\beta - \alpha) \kappa_{eff}^2 / K_0^2$.
 
-The PCE Potential is $V(C) = \lambda R(C) + R_I(C) - \Gamma_0 PP(C)$.
-Its derivative is $V'(C) = \lambda R'(C) + R_I'(C) - \Gamma_0 PP'(C)$.
-Its second derivative is $V''(C) = \lambda R''(C) + R_I''(C) - \Gamma_0 PP''(C)$.
-
-We evaluate the terms at $C = K_0 = C_{op}$:
-*   **Physical Cost $R(C)$ (Definition 3a):** $R(C) = R(C_{op}) + r_p(C-C_{op})^{\gamma_p}$ for $C \ge C_{op}$, with $\gamma_p > 1$.
-    At $C=K_0=C_{op}$: $R(K_0) = R(C_{op})$ (this is the baseline physical cost, $P_{min}$ from Eq. 16).
-    $R'(C) = \gamma_p r_p (C-C_{op})^{\gamma_p-1}$. We interpret $R'(K_0)$ as the marginal cost if $C$ were to increase from $K_0$. For this minimal MPU fixed at $K_0$, the relevant part of $R(C)$ is its value $R(K_0)$, and its *potential* derivative if $C$ *could* change. If we consider the function only at $C=K_0$, the derivatives are more about the shape of the cost function *around* $K_0$. For the MPU to be optimal *at* $K_0$, it means no incentive to change from $K_0$. Let $R'(K_0)$ denote the right-derivative $ \lim_{C \to K_0^+} R'(C)$. If $\gamma_p \in (1,2]$, $R'(K_0)=0$. If $\gamma_p>2$, $R'(K_0)=0$. If $\gamma_p=1$ (linear beyond $R(K_0)$), $R'(K_0)=r_p$. Let's assume for the optimality condition that $R'(K_0)$ represents the marginal cost of deviation. For the simplest case where the MPU is *fixed* at $K_0$, the interesting part is that $V(K_0)$ is minimal among *possible alternative complexities*.
-    $R''(C) = \gamma_p(\gamma_p-1)r_p(C-C_{op})^{\gamma_p-2}$. If $\gamma_p=2$, $R''(K_0) = 2r_p > 0$.
-
-*   **Reflexive-Information Cost $R_I(C)$ (Definition 3b):** $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$ for $C > K_0$.
-    At $C=K_0=C_{op}$: $R_I(K_0) = 0$.
-    $R_I'(C) = r_I/(C \ln 2)$. So, $R_I'(K_0) = r_I/(K_0 \ln 2) > 0$.
-    $R_I''(C) = -r_I/(C^2 \ln 2)$. So, $R_I''(K_0) = -r_I/(K_0^2 \ln 2) < 0$.
-
-*   **Predictive Performance $PP(C)$ (Law of Prediction, Theorem 19, Eq. 22):**
-    $PP(C, \hat{C}_{target}) = \beta - (\beta-\alpha) \exp[-\kappa_{eff} (C-C_{op})/\hat{C}_{target}]$. For this minimal MPU, $\hat{C}_{target}$ is effectively its own internal complexity scale, so we can set $\hat{C}_{target} \approx K_0$.
-    At $C=K_0=C_{op}$: $PP(K_0) = \beta - (\beta-\alpha)e^0 = \alpha$. (This minimal MPU operates at the lower bound of the Space of Becoming).
-    $PP'(C) = (\beta-\alpha) (\kappa_{eff}/\hat{C}_{target}) \exp[-\kappa_{eff} (C-C_{op})/\hat{C}_{target}]$.
-    So, $PP'(K_0) = (\beta-\alpha) (\kappa_{eff}/K_0) > 0$.
-    $PP''(C) = -(\beta-\alpha) (\kappa_{eff}/\hat{C}_{target})^2 \exp[-\kappa_{eff} (C-C_{op})/\hat{C}_{target}]$.
-    So, $PP''(K_0) = -(\beta-\alpha) (\kappa_{eff}/K_0)^2 < 0$.
-
-**Condition for $C=K_0$ to be optimal ($V'(K_0)=0$):**
-The system operates optimally at $C=K_0$ if there is no net incentive to change complexity.
-$\lambda R'(K_0) + R_I'(K_0) - \Gamma_0 PP'(K_0) = 0$.
-Substituting the derivatives at $K_0$:
-$\lambda R'(K_0) + \frac{r_I}{K_0 \ln 2} - \Gamma_0 \frac{(\beta-\alpha)\kappa_{eff}}{K_0} = 0$.
-This equation defines the equilibrium relationship between the parameters $(\lambda, R'(K_0), r_I, \Gamma_0, \alpha, \beta, \kappa_{eff})$ if the MPU operates optimally at $C=K_0$. $R'(K_0)$ here is the marginal cost of increasing complexity *from* $K_0$. For a system fixed at $K_0$, we can consider this as the condition that would make $K_0$ the optimum if $C$ were variable. We can choose $\Gamma_0$ (Power Conversion Factor, Definition 20) to satisfy this for given physical costs:
+Optimality at $C = K_0$ requires $V'(K_0) = 0$, yielding
 $$
-\Gamma_0 = \frac{K_0}{(\beta-\alpha)\kappa_{eff}} \left( \lambda R'(K_0) + \frac{r_I}{K_0 \ln 2} \right)
+\Gamma_0 = \frac{K_0}{(\beta - \alpha)\,\kappa_{eff}} \left( \lambda\,R'(K_0) + \frac{r_I}{K_0 \ln 2} \right) > 0.
 $$
-Since all terms defining $\Gamma_0$ are positive ($K_0, \beta-\alpha>0, \kappa_{eff}>0, \lambda \ge 0, R'(K_0) \ge 0, r_I>0$), a physically meaningful $\Gamma_0 > 0$ exists.
+Local minimality requires $V''(K_0) > 0$. Substituting $\Gamma_0$ gives
+$$
+V''(K_0) \;=\; \lambda\,R''(K_0) + \frac{\lambda\,\kappa_{eff}}{K_0} R'(K_0) + \frac{r_I}{K_0^2 \ln 2}\,(\kappa_{eff} - 1) \;>\; 0.
+$$
+For $\gamma_p = 2$ (so $R'(K_0) = 0$ and $R''(K_0) = 2 r_p > 0$), this condition reduces to
+$$
+2\lambda r_p + \frac{r_I}{K_0^2 \ln 2}\,(\kappa_{eff} - 1) > 0,
+$$
+which is readily satisfiable for $\lambda r_p > 0$ and $\kappa_{eff} \ge 1$ (or more generally by parameter choice consistent with convex $R$ and concave $PP$). Thus, this 3-qubit MPU can be a local minimizer of $V(C)$ at $C = K_0$ under physically reasonable parameter regimes, thereby solving POP at the minimal admissible complexity.
 
-**Condition for $C=K_0$ to be a local minimum ($V''(K_0)>0$):**
-$\lambda R''(K_0) + R_I''(K_0) - \Gamma_0 PP''(K_0) > 0$.
-Substituting:
-$\lambda R''(K_0) + \left(-\frac{r_I}{K_0^2 \ln 2}\right) - \Gamma_0 \left(- \frac{(\beta-\alpha)\kappa_{eff}^2}{K_0^2} \right) > 0$.
-$\lambda R''(K_0) - \frac{r_I}{K_0^2 \ln 2} + \Gamma_0 \frac{(\beta-\alpha)\kappa_{eff}^2}{K_0^2} > 0$.
-Substituting the expression for $\Gamma_0$:
-$\lambda R''(K_0) - \frac{r_I}{K_0^2 \ln 2} + \frac{K_0}{(\beta-\alpha)\kappa_{eff}} \left( \lambda R'(K_0) + \frac{r_I}{K_0 \ln 2} \right) \frac{(\beta-\alpha)\kappa_{eff}^2}{K_0^2} > 0$.
-$\lambda R''(K_0) - \frac{r_I}{K_0^2 \ln 2} + \frac{\kappa_{eff}}{K_0} \left( \lambda R'(K_0) + \frac{r_I}{K_0 \ln 2} \right) > 0$.
-$\lambda R''(K_0) + \frac{\lambda \kappa_{eff}R'(K_0)}{K_0} + \frac{r_I (\kappa_{eff}-1)}{K_0^2 \ln 2} > 0$.
-This condition can be satisfied. For example, if we take the physical cost form $R(C)$ with $\gamma_p=2$ (so $R'(K_0)=0$ if $C_{op}=K_0$ marks the start of the quadratic rise, and $R''(K_0)=2r_p > 0$), the condition becomes:
-$2\lambda r_p + \frac{r_I (\kappa_{eff}-1)}{K_0^2 \ln 2} > 0$.
-This holds if $r_p>0$ and $\kappa_{eff} \ge 1$ (or if $r_p$ is large enough when $\kappa_{eff}<1$).
-Thus, with parameters chosen consistently with the framework's definitions (e.g., ensuring $R(C)$ is convex, $PP(C)$ is concave), this explicit 3-qubit MPU, operating at $C_{op}=K_0=3$ bits with $\varepsilon=\ln 2$, can provably be a unique local minimizer of a valid PCE Potential, thereby solving the POP at the minimal admissible complexity.
+#### Minimal Predictive Algebra and the Dimension $d_0 = 8$
 
-This explicit construction serves as a witness that the abstract MPU (Definition 23) can be realized with the stated properties, forming a consistent foundation for the framework.
-
-**Uniqueness of Minimal Predictive Algebra and Dimension $d_0=8$**
-
-This result strengthens Theorem 23 by showing that the minimal dimension is not just a lower bound but a unique, stable outcome of the framework's functional requirements. In any MPU that implements a full SPAP cycle with one irreversible RID of cost $\varepsilon\ge\ln 2$ (App. J) and satisfies the PU axioms (Sec. 5–8), the finite‑dimensional predictive C\*-algebra $\mathfrak A$ must contain **three pairwise‑commuting $M_2(\mathbb C)$** factors:
+The minimal Hilbert-space dimension is not just a lower bound but a unique, stable outcome of the framework's functional requirements. In any MPU that implements a full SPAP cycle with one irreversible RID of cost $\varepsilon\ge\ln 2$ (App. J) and satisfies the PU axioms (Sec. 5–8), the finite‑dimensional predictive C\*-algebra $\mathfrak A$ must contain **three pairwise‑commuting $M_2(\mathbb C)$** factors:
 
 $$
 \mathfrak A\ \supseteq\ M_2(\mathbb C)\ \otimes\ M_2(\mathbb C)\ \otimes\ M_2(\mathbb C)\,,
@@ -166,10 +132,11 @@ We now detail the necessary mathematical structure for representing the state of
 
 **7.2.1 Theorem 23 (Minimal MPU Hilbert Space Dimension)**
 
- Minimal Predictive Units (MPUs) operate at the minimal adaptive-cycle complexity $C(MPU) = C_{op}$ (Definition 13). Prior results establish $C_{op} \ge K_0 \equiv B_3$ (Theorem 15, Corollary 3), where $K_0$ is the minimum complexity for the SPAP logic. Because $K_0 \equiv B_3$ requires 3 bits of information capacity, the corresponding Hilbert space $\mathcal{H}_0$ for the MPU state amplitude $S(t)$ must have a dimension $d_0 = \dim(\mathcal{H}_0)$ satisfying:
-  $$ d_0 \ge 2^{K_0} = 8 \quad \text{(41)} $$
-
-Hence every minimal MPU already possesses the Hilbert space dimensionality needed to encode the structural capacity for SPAP logic. (Note: The exact relationship between $C_P$ and $d_0$ might be more complex, but $C_{op} \ge K_0$ implies a minimum $d_0$ sufficient for the logic).
+Minimal Predictive Units operate at the minimal adaptive-cycle complexity $C(MPU) = C_{op}$ (Definition 13). Prior results establish $C_{op} \ge K_0 \equiv B_3$ (Theorem 15, Corollary 3), where $K_0$ is the minimum complexity for the SPAP logic. We adopt the capacity–dimension link that a $K_0$-bit structural capacity requires at least $2^{K_0}$ distinguishable basis states in the amplitude space. Therefore, the corresponding Hilbert space $\mathcal{H}_0$ for the MPU state amplitude $S(t)$ must have a dimension $d_0$ satisfying
+$$
+d_0 \;\ge\; 2^{K_0} \;=\; 8 \quad \text{(41)}
+$$
+and this bound is also guaranteed by the algebraic argument above when the register decomposition holds. Hence every minimal MPU possesses the Hilbert-space dimensionality needed to encode the structural capacity for SPAP logic.
 
 **7.2.2 Proposition 4 (Emergence of Complex Hilbert Space $\mathcal{H}_0$)**
 
@@ -192,26 +159,33 @@ The perspectival nature is crucial because interaction outcomes ('Evolve', Defin
 
 **7.2.4 Theorem 24 (Measurement Contexts and Bases)**
 
-Within the MPU framework, where the 'Evolve' process (Definition 27) yields outcome probabilities via the Born rule (Proposition 7), a complete interaction context (perspective $s$) that yields a set of definite, mutually exclusive, and collectively exhaustive outcomes corresponds uniquely to the specification of an orthonormal basis (ONB) of the MPU Hilbert space $\mathcal{H}_0$.
-*Proof:* The 'Evolve' process actualizes $S(t)=|\psi\rangle$ into one outcome state $|i\rangle_s$ from a set corresponding to perspective $s$. Mutual exclusivity requires orthogonality $\langle i | j \rangle_s = \delta_{ij}$. Collective exhaustiveness requires $\sum_i P(i | S(t), s) = 1$. By the Born rule (Proposition 7), $P(i)=|\langle i | \psi \rangle_s|^2$. The condition $\sum_i |\langle i | \psi \rangle_s|^2 = \langle\psi| (\sum_i |i\rangle_s\langle i|_s) |\psi\rangle = 1$ for all normalized $|\psi\rangle$ requires the completeness relation $\sum_i |i\rangle_s\langle i|_s = I$. A set of mutually orthogonal vectors satisfying completeness forms an ONB. Conversely, any ONB defines a complete set of orthogonal projectors representing mutually exclusive, exhaustive outcomes. Thus, each perspective $s$ corresponds uniquely to an ONB of $\mathcal{H}_0$. QED
+Within the MPU framework, where the ‘Evolve’ process (Definition 27) yields outcome probabilities via the Born rule (Proposition 7), a complete interaction context (perspective $s$) that yields a set of definite, mutually exclusive, and collectively exhaustive outcomes corresponds uniquely to the specification of an ordered orthonormal basis (ONB) of the MPU Hilbert space $\mathcal{H}_0$.
+
+*Proof:* Mutual exclusivity requires orthogonality $\langle i|j\rangle_s = \delta_{ij}$. Collective exhaustiveness requires $\sum_i P(i|S(t), s) = 1$. By the Born rule, $P(i) = |\langle i|\psi\rangle_s|^2$ and $\sum_i |\langle i|\psi\rangle_s|^2 = 1$ for all normalized $|\psi\rangle$ if and only if $\sum_i |i\rangle_s\langle i|_s = I$. Conversely, any ONB defines such a context. □
 
 **7.2.5 Theorem 25 (Structure of Perspective Space $\Sigma$)**
 
-The space of distinct perspectives $\Sigma$, identified with the space of orthonormal bases (ONBs) of the $d_0$-dimensional complex Hilbert space $\mathcal{H}_0$ (Theorem 24), is mathematically isomorphic to the complex homogeneous space $U(d_0)/U(1)^{d_0}$.
-*Proof:* Any ONB $\{|i'\rangle\}$ is related to a reference ONB $\{|i\rangle\}$ by $U \in U(d_0)$, $|i'\rangle = U|i\rangle$. Bases differing only by individual phase factors $e^{i\theta_i}$ applied to each vector represent the same physical perspective (Born rule probabilities are unchanged). These phase transformations form the maximal torus subgroup $T \cong U(1)^{d_0}$. The space of distinct perspectives is the quotient space $\Sigma \cong U(d_0)/T = U(d_0)/U(1)^{d_0}$. QED
+Let perspectives be identified with ordered ONBs modulo per-vector phases. Then the space of distinct perspectives $\Sigma$ is isomorphic to the complex homogeneous space
+$$
+\Sigma \;\cong\; U(d_0)\, /\, U(1)^{d_0}.
+$$
+*Proof:* Any ordered ONB $\{ |i′\rangle \}$ is related to a reference ONB $\{ |i\rangle \}$ by $U \in U(d_0)$, $|i′\rangle = U|i\rangle$. Multiplying each $|i′\rangle$ by $e^{i\theta_i}$ leaves Born probabilities invariant; these phase changes form the maximal torus $T \cong U(1)^{d_0}$. Distinct perspectives are cosets in $U(d_0)/T$. □
+
+*Remark:* If outcome labels are physically irrelevant, one may further quotient by the permutation group $S_{d_0}$, giving $U(d_0)/(U(1)^{d_0} \rtimes S_{d_0})$. Here we fix ordered ONBs to retain outcome labels inherent in control and recursion roles.
 
 **7.2.6 Definition 25 (Def 25): Perspective Space $\Sigma$ and Metric**
 
-The **Perspective Space** $\Sigma$ is identified with the space of orthonormal bases of $\mathcal{H}_0$, $\Sigma \cong U(d_0)/U(1)^{d_0}$ (see Appendix M, Section M.2 for formal justification). To quantify the "difference" or incompatibility (complementarity) between perspectives $s_1$ (basis $B_1$) and $s_2$ (basis $B_2$), we can equip $\Sigma$ with a metric $d_\Sigma(s_1, s_2)$. A possible metric, related to the maximal overlap achievable between basis vectors after optimizing phases, uses the transition matrix $M_{ij} = \langle i \in B_1 | j \in B_2 \rangle$:
+The **Perspective Space** $\Sigma$ is identified with $U(d_0)/U(1)^{d_0}$. We equip $\Sigma$ with the Riemannian metric induced by the bi-invariant metric on $U(d_0)$ under the quotient by its maximal torus. For representatives $U_1, U_2 \in U(d_0)$ of two perspectives $s_1, s_2$, the geodesic distance is
 $$
-d_\Sigma(s_1, s_2) = \arccos \left( \sup_{U, V \in U(1)^{d_0}} \frac{|\text{Tr}(U M V^\dagger)|}{d_0} \right) \quad \text{(42)}
+d_\Sigma(s_1, s_2) \;=\; \frac{1}{\sqrt{2}} \inf_{D_1, D_2 \in U(1)^{d_0}}
+\left\| \log\!\big( D_1\, U_1^\dagger U_2\, D_2 \big) \right\|_F,
+\quad \text{(42)}
 $$
-This metric reflects the degree of complementarity. The dynamics of perspective shifts during 'Evolve' (Definition 27) occur on this space $\Sigma$.
+where $\|\cdot\|_F$ is the Frobenius norm and $\log$ is the principal matrix logarithm on $U(d_0)$. This defines a true metric on the quotient manifold $\Sigma$.
 
 **7.2.7 Theorem 26 (Consistency Requirement for $\Sigma$ Identification)**
 
-Identifying the Perspective Space $\Sigma$ with the space of ONBs of $\mathcal{H}_0$, $\Sigma \cong U(d_0)/U(1)^{d_0}$ (Theorem 25), is necessary for the internal consistency of the MPU framework.
-*Proof:* The framework relies on the Born rule (Proposition 7) requiring projection onto basis states associated with perspective $s$. SPAP (Theorem 10, Theorem 11) implies complementarity, requiring non-commuting operators and distinct bases (perspectives) for their measurement via 'Evolve'. The mathematical structure $U(d_0)/U(1)^{d_0}$ precisely captures the set of all possible complete measurement contexts (ONBs) and their relationships, as required by the emergent quantum formalism (Section 8) mandated by the framework's operational requirements. Alternative identifications for $\Sigma$ would fail to encompass the necessary structure of quantum measurement contexts. QED
+Identifying the Perspective Space $\Sigma$ with the space of ordered ONBs of $\mathcal{H}_0$ modulo per-vector phases, $\Sigma \cong U(d_0)/U(1)^{d_0}$, is necessary for the internal consistency of the MPU framework. SPAP requires complementarity (non-commuting observables and distinct bases), and the Born rule necessitates projection onto basis states associated with perspectives. The homogeneous space $\Sigma$ precisely captures the structure of complete measurement contexts and their relationships as required by the emergent quantum formalism. □
 
 **7.3 MPU Dual Dynamics Driven by POP**
 
@@ -243,11 +217,11 @@ where $\hbar$ is the reduced Planck constant, $S(t)$ is the state vector $|\psi(
 
 **7.3.3.2 Theorem 29 (Physical Interpretation of Internal Hamiltonian $\hat{H}$)**
 
-The self-adjoint generator $\hat{H}$ of the internal MPU dynamics (Definition 26, Equation 43) possesses the following physical interpretations consistent with the framework:
-1.  **Baseline Energy Cost:** The expectation value $\langle \hat{H} \rangle$ corresponds to the minimal baseline operational energy associated with sustaining the $C_{op}$ predictive cycle, equivalent to the baseline physical resource cost $R(C_{op})$ (Definition 3a, Equation 16). It represents the energy cost of the internal predictive processing capability ($b_p$).
-2.  **Minimum Timescale:** The energy spectrum and structure of $\hat{H}$ determine the minimum characteristic internal processing timescale $\tau_{min} > 0$ (e.g., via energy-time uncertainty relations or specific dynamical rates) required for one cycle of internal prediction generation via the unitary evolution $U_0(t) = e^{-i\hat{H}t/\hbar}$.
+Within the framework, $\hat{H}$ admits the following physical interpretation:
+1.  **Baseline Energy Cost:** The expectation $\langle\hat{H}\rangle$ corresponds to the minimal baseline operational energy associated with sustaining the $C_{op}$ predictive cycle, i.e., the baseline physical resource cost $R(C_{op})$ (Definition 3a).
+2.  **Minimum Timescale:** The spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min} > 0$ for completing a unitary prediction subcycle $U_0(t) = e^{-i\hat{H} t/\hbar}$.
 
-*Justification:* This theorem connects the abstract mathematical generator $\hat{H}$ emerging from the requirements of continuous, probability-preserving evolution (Proposition 11) to the physical concepts of baseline energy cost $R(C_{op})$ and minimum operational time $\tau_{min}$ established earlier (Section 5.1.1), ensuring consistency.
+These identifications connect the abstract generator of unitary evolution to the physical resource requirements of the predictive loop.
 
 **7.3.3.3 Definition 27 (Def 27): Interaction and Perspectival Actualization ('Evolve'/ND-RID)**
 
@@ -324,13 +298,15 @@ where the **Reflexivity Constant** $\kappa_r$ is guaranteed to be strictly posit
 
 **7.4.7 Baseline Operational Costs vs. Interaction Costs**
 
-It is crucial to distinguish the specific thermodynamic cost $\varepsilon$ (Definition 28, Theorem 31) incurred *during* the irreversible update step of the 'Evolve' interaction (Definition 27) from the *ongoing* baseline energy cost required to maintain the MPU's operational cycle even between interactions.
-Maintaining the MPU's adaptive predictive cycle at the minimal complexity $C_{op}$ (which requires $C_{op} \ge K_0$ and thus $d_0 \ge 8$, Theorem 23) incurs a minimum average energy dissipation rate (power) $P_{min}$, consistent with Landauer's principle applied to the information processing over the cycle time $\Delta t_{cycle}$:
+Distinguish:
+-   **Baseline operational resources:** The internal unitary prediction dynamics (Definition 26) governed by $\hat{H}$ require baseline energy to sustain computation and coherence but do not, by themselves, mandate a Landauer cost.
+-   **Interaction-specific irreversible costs:** Whenever the ‘Evolve’ process performs a logically irreversible update resolving $\Delta I > 0$, an entropy production of at least $\varepsilon = \ln 2$ is incurred (Theorem 31), with additional information/feedback contributions per Theorem 32.
+
+Let $n_{erase}$ be the average number of irreversibly erased bits per cycle ($n_{erase} \ge 0$; typically $n_{erase} \ge 1$ during significant ‘Evolve’ events), and let $\tau_{cycle} \approx \tau_{min}$ be the characteristic cycle time. The minimal average power attributable to logical erasures is bounded by
 $$
-P_{min} = \frac{E_{min, cycle}}{\Delta t_{cycle}} \ge \frac{k_B T \ln(d_0)}{\Delta t_{cycle}} \ge \frac{3 k_B T \ln(2)}{\Delta t_{cycle}} \quad \text{(49)}
+P_{erase} \;\ge\; \frac{n_{erase}\, k_B T \ln 2}{\tau_{cycle}},
 $$
-where $T$ is the effective temperature, $d_0 = \dim(\mathcal{H}_0) \ge 8$, and $\Delta t_{cycle} \approx \tau_{min}$ is the characteristic cycle time (Theorem 29). This $P_{min}$ corresponds to the physical power cost associated with the MPU's internal Hamiltonian $\hat{H}$ and represents the baseline physical resource cost $R(C_{op})$ (Definition 3a, Equation 16).
-*Distinction:* The baseline cost $R(C_{op})$ (Equation 49) is the continuous power needed to run the $C_{op}$ predictive engine (including the $K_0$ logic), corresponding to the expectation value of the MPU’s internal Hamiltonian, $\langle \hat{H} \rangle$ (Theorem 29). The $\varepsilon$ cost (Theorem 31) is an additional, discrete entropy production incurred specifically during the irreversible information erasure step mandated by significant self-referential information gain ($\Delta I > 0$) within an 'Evolve' interaction. Both contribute distinctly to the MPU’s total energy budget and stress-energy tensor (Appendix B).
+while the baseline power associated with maintaining the predictive unitary dynamics is encoded in $\langle\hat{H}\rangle$ via Theorem 29 and depends on the specific physical realization. The total power is the sum of baseline and interaction-specific contributions and determines the MPU’s effective stress-energy budget (Appendix B).
 
 
 

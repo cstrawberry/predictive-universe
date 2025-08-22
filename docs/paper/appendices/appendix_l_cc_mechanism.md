@@ -64,10 +64,16 @@ We propose a physical mechanism for the interaction channel $N(t)$ to implement 
 
 The interaction Hamiltonian describing the coupling, focusing on the AC Stark effect, is (in a suitable interaction picture):
 $$
-H_{\text{int}}(t) = -\vec{d}_{TLS} \cdot \vec{E}_{rad}(t) \approx \hbar \Omega_{AC}(t) \sigma_z
+H_{\text{int}}(t) = -\vec{d}_{TLS} \cdot \vec{E}_{rad}(t) \approx \hbar\,\delta(t)\,\sigma_z
 \tag{L.3}
 $$
-where $\Omega_{AC}(t)$ is the AC Stark shift frequency, proportional to $|\vec{d}_{TLS} \cdot \vec{\epsilon}_{rad}(t)| E_0(t)$ and dependent on the detuning $\Delta(t) = \omega_{TLS} - \omega_{rad}(t)$. The operator $\sigma_z = |e\rangle\langle e| - |g\rangle\langle g|$ projects onto the TLS energy eigenstates. The time-dependence of $E_0(t)$, $\omega_{rad}(t)$, etc., reflects control via $\mathcal{M}(\text{context}_S(t))$.
+where the off‑resonant AC Stark shift is
+$$
+\delta(t)\;\simeq\;\frac{\Omega_R^2(t)}{4\,\Delta(t)},\qquad
+\Omega_R(t)\;=\;\frac{|\vec{d}_{TLS}\cdot\vec{\epsilon}_{rad}(t)|\,E_0(t)}{\hbar},\quad
+\Delta(t)=\omega_{TLS}-\omega_{rad}(t).
+$$
+The operator $\sigma_z = |e\rangle\langle e| - |g\rangle\langle g|$ projects onto the TLS energy eigenstates. The time‑dependence of $E_0(t)$, $\omega_{rad}(t)$, etc., reflects control via $\mathcal{M}(\text{context}_S(t))$.
 
 **L.3 Open System Dynamics and Rate Modulation**
 
@@ -100,8 +106,8 @@ with $\varepsilon$ a context-controlled scale (when $L_S$ is a GKLS generator) c
 
 *   **Aggregate Control & Field Generation:** Assume an MPU aggregate $S$ can orchestrate $N_{osc} \sim 10^{12}$ microscopic effective dipoles (e.g., within biological macromolecules or components of a quantum AI) to generate a coherent local field. If **$E_{max} \sim 2 \times 10^3$ V/m** is achievable near the aggregate (e.g., via collective effects or engineered structures).
 *   **Target MPU Coupling:** A target MPU with $d_{TLS} \sim e \cdot (1 \text{ nm}) \approx 1.6 \times 10^{-28}$ C·m and $\omega_{TLS}/(2\pi) \sim 10$ GHz.
-*   *   **AC Stark shift & susceptibility (small-shift regime):**
-With **$E_{\max}=2\times10^{3}\ {\rm V\,m^{-1}}$** and $d_{\rm TLS}\approx1.6\times10^{-28}\ {\rm C\,m}$, the energy shift is $\Delta E_{\text{Stark}} = d_{\rm TLS}E_{\max} \approx 3.2\times10^{-25}\ {\rm J}$, corresponding to a Rabi frequency of $\Omega_{AC} = \Delta E_{\text{Stark}}/\hbar \approx 3.0\times10^{9}\ {\rm rad\,s^{-1}}$. For a qubit splitting of $\omega_{\rm TLS}/(2\pi)\simeq10\ \text{GHz}$, a local field strength, while significant, can produce a fractional energy-level shift of ~5%. The associated power dissipation is bounded by $P\lesssim10^{-9}\,\text{W}$ per MPU, safely below the resource limit $R_M$; if the decoherence rates are sensitive to this shift, a detectable probability bias ($|\Delta P| \sim 10^{-2} - 10^{-1}$) remains plausible.
+*   **AC Stark shift & susceptibility (small‑shift regime):**
+With **$E_{\max}=2\times10^{3}\ {\rm V\,m^{-1}}$** and $d_{\rm TLS}\approx1.6\times10^{-28}\ {\rm C\,m}$, the Rabi frequency is $\Omega_R=d_{\rm TLS}E_{\max}/\hbar\approx 3.0\times10^{9}\ {\rm rad\,s^{-1}}$. For detuning $\Delta=2\pi\times10\ \text{GHz}$ the off‑resonant AC Stark shift is $\delta\simeq \Omega_R^2/(4\Delta)\approx 3.7\times10^{7}\ {\rm rad\,s^{-1}}$, giving a fractional level shift $\delta/\omega_{\rm TLS}\approx 6\times10^{-4}$. For $\Delta=2\pi\times1\ \text{GHz}$ this rises to $\sim 6\times10^{-3}$. Achieving a $5\%$ fractional shift at $\Delta=2\pi\times10\ \text{GHz}$ would require $E\sim 3.6\times10^{4}\ {\rm V\,m^{-1}}$ (or engineered enhancement/reduced detuning). Within the small‑shift regime, modulation of decoherence/transition rates via Eq. (L.6) may yield detectable probability biases with higher fields, reduced detuning, or cavity/plasmonic enhancements consistent with resource bounds.
 
 **L.5 Experimental Test Sketch**
 

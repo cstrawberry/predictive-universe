@@ -72,12 +72,12 @@ $$
 \|P_{v\bullet}-P_{u\bullet}\|_{1} \;\le\; C_{geom} \cdot \lambda_{R}\,e^{\lambda_{R} B}\,M\,L_{C_P},
 \quad \text{(C.7)}
 $$
-where $B = \sup_w |I'(C_P(w))|$ is finite (since $C_P$ operates in a bounded range $[C_{op}, C_{max_phys}]$ for viable systems, and $I'$ is continuous on this compact set), and $C_{geom}$ is an $\mathcal{O}(1)$ constant reflecting local graph geometry (e.g., average degree). For simplicity, we absorb $C_{geom}$ into a redefinition of $\lambda_R$ or $M$. Thus, we define the parameter:
+where $B = \sup_w |I'(C_P(w))|$ is finite (since $C_P$ operates in a bounded range $[C_{op}, C_{max_phys}]$ for viable systems, and $I'$ is continuous on this compact set), and $C_{geom}$ is an $\mathcal{O}(1)$ constant reflecting local graph geometry (e.g., average degree). We define the parameter with the geometric factor kept explicit:
+
 $$
-\eta_{R} \;:=\; \lambda_{R}\,e^{\lambda_{R} B}\,M\,L_{C_P}.
+\eta_{R} \;:=\; C_{geom}\,\lambda_{R}\,e^{\lambda_{R} B}\,M\,L_{C_P}.
 \quad \text{(C.8)}
 $$
-(Here, $\lambda_R$ effectively incorporates $C_{geom}$).
 For the MPU network to function as a stable, information-processing substrate, this parameter $\eta_{R}$ must be strictly less than 1. The parameter $\eta_R$ bounds the Wasserstein-1 distance, which in turn bounds the distinguishability of the local one-step evolution distributions originating from nodes $v$ and $u$. If $\eta_R \ge 1$, it would imply that a small, bounded difference in the underlying control parameter ($C_P$) could lead to a large, potentially maximal difference in the resulting probability distributions. This signifies a channel with extremely high sensitivity or "information gain" regarding the parameter $C_P$. Such high sensitivity is fundamentally incompatible with the established information-theoretic limits of the underlying ND-RID channels. These channels are strictly contractive ($f_{RID} < 1$, Lemma E.1) and have a finite classical capacity $C_{max} < \ln d_0$ (Theorem E.2). A value of $\eta_R \ge 1$ would correspond to an effective local channel for inferring $C_P$ whose capacity could exceed these fundamental bounds, a configuration that is physically unrealizable or thermodynamically prohibitive. Therefore, the Principle of Compression Efficiency (PCE), by forcing the system to operate within these established thermodynamic and information-theoretic constraints, must select for effective interaction parameters and network configurations such that $\eta_{R} < 1$.
 
 Given $W_1(\mathcal P\delta_v,\mathcal P\delta_u) \le \|P_{v\bullet}-P_{u\bullet}\|_{1}$, we have:
@@ -90,11 +90,13 @@ $$
 \operatorname{Ric}_{\mathrm{OR}}(v \to u)\;\ge\;1-\eta_{R}.
 $$
 Defining $\kappa_{R} := 1-\eta_{R}$:
+
 $$
-\kappa_{R} = 1 - \lambda_{R}\,e^{\lambda_{R} B}\,M\,L_{C_P}.
+\kappa_{R} = 1 - C_{geom}\,\lambda_{R}\,e^{\lambda_{R} B}\,M\,L_{C_P}.
 \quad \text{(C.10)}
 $$
-Since PCE, through consistency with fundamental ND-RID information limits, enforces $\eta_{R} < 1$, it follows that $\kappa_{R} > 0$. This establishes a strictly positive lower bound on this measure of discrete Ricci curvature, arising from the interplay of PCE-optimized local complexity variations and the information-theoretic constraints of the underlying MPU interactions. A network with such a positive lower bound on Ricci curvature (meaning it is bounded below by $\kappa_R > 0$) satisfies a key component of geometric regularity (Definition C.2, Definition C.3), providing a constructive basis for the emergence of a well-behaved spacetime geometry. The subsequent sections of this appendix detail why violations of such regularity are penalized by PCE.
+
+Since PCE, through consistency with fundamental ND-RID information limits, enforces $\eta_{R} < 1$, it follows that $\kappa_{R} > 0$. Equivalently, adopting a lazy one‑step kernel with idleness $\alpha\in(0,1)$ reduces $W_1$ and can strictly increase $\kappa_R$ for fixed local parameters. This establishes a strictly positive lower bound on this measure of discrete Ricci curvature, arising from the interplay of PCE-optimized local complexity variations and the information-theoretic constraints of the underlying MPU interactions. A network with such a positive lower bound on Ricci curvature (meaning it is bounded below by $\kappa_R > 0$) satisfies a key component of geometric regularity (Definition C.2, Definition C.3), providing a constructive basis for the emergence of a well-behaved spacetime geometry. The subsequent sections of this appendix detail why violations of such regularity are penalized by PCE.
 
 
 ¹ Footnote: The parameter $\lambda_R$ is specific to this curvature model (Eq. C.2) and represents the sensitivity of local transition probabilities to gradients in the effective cost-rate $I'$. It should not be confused with the resource scarcity Lagrange multiplier $\lambda$ from main text Definition 20.
@@ -212,7 +214,7 @@ Then for all $r\ge 10\delta$ and $x\in\mathcal{N}$:
 
 $$
 \mu\!\left(B(x,2r)\right)\ \le\ D_\star\ \mu\!\left(B(x,r)\right),\qquad
-D_\star\ :=\ 8\left(1+4\varepsilon_C\right)\frac{\Delta_{\max}}{\Delta_{\min}}\frac{\eta^\uparrow}{\eta^\downarrow},
+D_\star\ :=\ 2^{D}\left(1+4\varepsilon_C\right)\frac{\Delta_{\max}}{\Delta_{\min}}\frac{\eta^\uparrow}{\eta^\downarrow},
 $$
 
 where $\eta^\uparrow/\eta^\downarrow$ bounds local packing variation at scale $r$.
@@ -234,7 +236,7 @@ $$
 *Proof sketch.*
 (i) *Local homogeneity from PCE + RID.* KKT stationarity of POP under RID contractivity gives a uniformity modulus
 $\varepsilon_C\le(1-f_{\mathrm{RID}})/(1+f_{\mathrm{RID}})$ for the optimal link weights. This bounds local density fluctuations of nodes/links at scale $\ge 10\delta$.
-(ii) *Doubling.* Pack $B(x,2r)$ by $8$ disjoint translates of $B(x,r)$ up to packing distortion $\eta^\uparrow/\eta^\downarrow$ and degree distortion $\Delta_{\max}/\Delta_{\min}$. The weight uniformity adds a factor $(1+4\varepsilon_C)$.
+(ii) *Doubling.* Pack $B(x,2r)$ by $2^{D}$ disjoint translates of $B(x,r)$ up to packing distortion $\eta^\uparrow/\eta^\downarrow$ and degree distortion $\Delta_{\max}/\Delta_{\min}$. The weight uniformity adds a factor $(1+4\varepsilon_C)$.
 (iii) *Cheeger–Poincaré.* The graph‑Cheeger constant on $B(x,r)$ satisfies
 $h(B)\ge \frac{w_{\min}\,\chi\,4\pi r^2}{w_{\max}\,\rho^\uparrow(r)\,\frac{4}{3}\pi r^3} = \frac{3\chi}{\rho^\uparrow(r)}\,\frac{(1-\varepsilon_C)}{r(1+\varepsilon_C)}$.
 Cheeger’s inequality gives $\lambda_1(B)\ge h(B)^2/(2\Delta_{\max})$. Combine $\mathrm{Var}_B(f)\le \lambda_1(B)^{-1}\mathcal{E}(f,f)$ with $\mathcal{E}(f,f)$ bounded by the coarse‑grained Dirichlet form to obtain the stated $(1,2)$–Poincaré with $\lambda=4$ and $C_P(r)$ above.  $\square$

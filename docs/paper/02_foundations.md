@@ -4,7 +4,9 @@ This section establishes the core axioms and definitions underpinning the Predic
 
 **2.1 Axiom 1 (Ax 1): The Prediction Optimization Problem (POP)**
 
-Adaptive systems operating within uncertain environments face the fundamental challenge of optimizing the predictive quality ($Q$) of their internal state or model concerning aspects of their internal and external environment relevant to their continued functioning and goals. This optimization aims to maximize the expected predictive improvement ($\Delta Q$)—quantified by metrics reflecting reduced uncertainty (e.g., decreased entropy) or enhanced accuracy (e.g., reduced prediction error, increased log-likelihood)—that can be achieved through information processing, interaction, and adaptation. This ongoing optimization must be performed under the constraints of limited physical and computational resources, including available energy, processing time, and achievable system complexity ($C_P$). This fundamental, resource-constrained drive to enhance predictive capability is termed the Prediction Optimization Problem (POP).
+Adaptive systems operating within uncertain environments face the fundamental challenge of optimizing the predictive quality ($Q$) of their internal state or model concerning aspects of their internal and external environment relevant to their continued functioning and goals. This optimization aims to maximize the expected predictive improvement ($\Delta Q$)—quantified by metrics reflecting reduced uncertainty (e.g., decreased entropy), enhanced accuracy (e.g., increased log-likelihood, reduced prediction error), or reduced Bayes risk—that can be achieved through information processing, interaction, and adaptation. This ongoing optimization is performed subject to limited physical and computational resources, including available energy, processing time, and achievable system complexity ($C_P$). This fundamental, resource-constrained drive to enhance predictive capability is termed the Prediction Optimization Problem (POP).
+
+For concreteness, all predictive-quality functionals $Q$ are assumed measurable and bounded below on the feasible state space so that expectations and improvements $\mathbb{E}[\Delta Q]$ are well-defined.
 
 **2.2 Axiom 2 (Ax 2): Predictive Capacity Foundation**
 
@@ -23,14 +25,18 @@ Within the Predictive Universe framework, information is defined functionally as
 *   **(I) Physical Instantiation:** The pattern must be embodied in a physical configuration or process, linking it to physical dynamics, resource costs, and thermodynamic constraints.
 *   **(S) Substrate Independence:** The functional content of the pattern (its potential to reduce uncertainty) is, in principle, substrate-independent and can be represented on different physical substrates.
 *   **(E) System Enablement:** Information potential is relative to a system capable of detecting and processing the pattern to improve its predictions ($C \ge K_0$, $M_t \in \mathcal{M}$).
-*   **(F) Functional Potential (Predictive Improvement):** The defining characteristic and "value" of information lies in its objective potential to improve the system's predictive quality (increase $\Delta Q$, decrease PE) by reducing relevant uncertainty.
+*   **(F) Functional Potential.** Let $\mathcal{M}$ denote the admissible class of inference/prediction procedures available to the system under the POP constraints (energy, time, and complexity). There exists an $M\in\mathcal{M}$ and a measurable feature/event $E$ in the relevant $\sigma$‑algebra (e.g., a detectable regularity) with nonzero probability such that the expected predictive improvement is strictly positive:
+    $$
+    \mathbb{E}\big[\Delta Q \mid E;\, M\big] > 0.
+    $$
+    Equivalently, there exists an admissible procedure and an operationally relevant input distribution under which the system achieves $\mathbb{E}[\Delta Q]>0$.
 *   **(R) Relevant States:** The states about which uncertainty can be reduced are determined contextually by the system's operational goals as defined by its specific POP.
 
 In essence, information is any physically grounded pattern exploitable by a predictive system to achieve measurable improvements in its predictive performance relevant to its adaptive goals.
 
 **2.3.2 Definition 2 (Def 2): Prediction-Based Knowledge**
 
-A system possesses knowledge to the extent that its internal models ($M_t$) can effectively process available information (Definition 1) to generate predictions yielding quantifiable predictive improvement ($\Delta Q > 0$) in its state concerning variables relevant to its POP (Axiom 1). Knowledge is the realized capacity, embodied in the system's structure and dynamics, for effective prediction that facilitates measurable improvements in predictive quality (e.g., reduced entropy $\Delta H < 0$, reduced KL divergence $\Delta D_{KL} < 0$, or increased operational performance). It represents the accumulated, functional residue of successful adaptation cycles that have encoded discovered regularities into the system's predictive machinery.
+A system possesses knowledge to the extent that its internal models ($M_t$) can effectively process available information (Definition 1) to generate predictions yielding quantifiable predictive improvement ($\Delta Q > 0$) with respect to variables relevant to its POP. Knowledge is the realized capacity, embodied in the system’s structure and dynamics, for effective prediction that facilitates measurable improvements in predictive quality (e.g., reduced entropy $\Delta H < 0$, reduced KL divergence $\Delta D_{KL} < 0$, reduced Bayes risk, or increased operational performance). It represents the accumulated, functional residue of successful adaptation cycles that have encoded discovered regularities into the system’s predictive machinery.
 
 **2.4 Predictive Physical Complexity ($C_P$) and Operational Measures**
 
@@ -95,29 +101,22 @@ $$
 
 The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon > 0$ (Theorem 31)). These costs constrain the POP. To make the framework's dynamics tractable, we now adopt specific, physically-motivated functional forms for these costs, chosen to be the simplest expressions consistent with core principles like increasing cost and diminishing returns. The specific forms chosen are minimal models, but the framework's qualitative conclusions are expected to be robust against reasonable variations (see Section 6.7). In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
 
-**Definition 3 (Resource-Cost Functions):**
-The ongoing operational expense of an MPU’s predictive cycle is described by two monotone mappings from theoretical complexity $C_P$ to power-like rates. The specific functional forms presented here are minimal models chosen to satisfy the framework's derived principles (see Section 6.7 for a discussion of model-form robustness).
-
-**(a) Physical Operational Cost $R(C)$** – the rate of *physical* resource consumption required to maintain structures and run processes of complexity $C$.
-$R(C)$ is non-decreasing ($R'(C)\!\ge 0$). For $C > C_{op}$ (Operational Threshold; see Definition 13), it is strictly convex ($R''(C)\!>0$); it is continuous at $C=C_{op}$. The convexity is a derived property: a system of complexity $C$ corresponds to $d=2^C$ distinguishable states. While a baseline linear cost $R(C) \propto C$ arises from the thermodynamic cost of refreshing $C$ bits of information against thermal noise (Landauer's principle), a super-linear overhead is required to manage the coherence, error correction, and communication between the exponentially growing number of states. The marginal cost of adding one more bit of complexity ($C \to C+1$) is not constant, as the new bit must be integrated with the $2^C$ existing states, requiring protocols whose own complexity and cost grow with $C$. This proves that the marginal cost $R'(C)$ must be an increasing function of $C$, meaning the cost function must be strictly convex. The power-law form below with $\gamma_p > 1$ is the simplest model capturing this necessary property.
-Relative to the baseline $P_{\min}=R(C_{op})$ (Definition 13) we set
-$$
-R(C)
-= R(C_{op})
-  + r_p\bigl(C-C_{op}\bigr)^{\gamma_p},
-\qquad C\ge C_{op}\quad\text{(4)}
-$$
-with constants $r_p>0$ and **$\gamma_p > 1$**.
-
-(b) **Reflexive-Information Cost $R_I(C)$** – the *informational* overhead rate associated with self-referential verification.
-This cost reflects the resources needed to manage the self-referential computations underlying SPAP. The logarithmic form is the simplest model reflecting diminishing returns: as complexity grows, the marginal cost of adding more self-referential overhead decreases relative to the total complexity. It rises only logarithmically once the Horizon Constant **$K_0 \equiv B_3$** (Theorem 15, corresponding to 3 bits) is exceeded:
-$$
-R_I(C)
-  = \frac{r_I}{\ln 2}\,
-    \ln\!\Bigl(\tfrac{C}{K_0}\Bigr),
-\qquad C>K_0\quad\text{(5)}
-$$
-where $r_I>0$ sets the informational-cost scale and $R_I(K_0)=0$.
+**Definition 3 (Resource–Cost Functions).**
+- **Physical operational cost $R(C; T_{\text{eff}})$** — the rate of physical resource consumption required to maintain structures and run processes of complexity $C$ at effective temperature $T_{\text{eff}}$.
+  - $R$ is non‑decreasing in $C$ ($R'(C)\ge 0$). For $C > C_{op}$ (Operational Threshold; Definition 13), we adopt strict convexity, $R''(C) > 0$, reflecting the increasing coordination, error‑correction, and communication overhead at scale. Intuitively, adding one bit must be integrated with the existing $2^C$ states; this raises the marginal cost $R'(C)$, yielding convexity. A minimal parametric form is
+ $$
+    R(C; T_{\text{eff}})
+    \;=\; R(C_{\text{op}}; T_{\text{eff}})
+    \;+\; r_p(T_{\text{eff}})\,\bigl(C - C_{\text{op}}\bigr)^{\gamma_p},
+    \quad C\ge C_{\text{op}},\ \gamma_p>1,\ r_p(T_{\text{eff}})>0. \quad (4)
+    $$
+- **Reflexive‑information cost $R_I(C; T_{\text{eff}})$** — the informational overhead rate associated with self‑referential verification (SPAP). Reflecting diminishing returns beyond the Horizon Constant $K_0$,
+ $$
+  R_I(C; T_{\text{eff}})
+  \;=\; \frac{r_I(T_{\text{eff}})}{\ln 2}\,\ln\!\Bigl(\frac{C}{K_0}\Bigr),
+  \quad C\ge K_0,\qquad R_I(K_0; T_{\text{eff}}):=0. \quad (5)
+  $$
+  The temperature‑dependence $r_p(T_{\text{eff}}), r_I(T_{\text{eff}})$ allows coupling to environmental operating conditions used later (e.g., Prediction Relativity in App. N).
 
 **Note on Corollary 3.** The Operational Threshold and Horizon Constant obey $C_{op}\!\ge\!K_0$ (Corollary 3, Section 5.2.3), so both cost functions are simultaneously well-defined at $C=C_{op}$. In the limiting case $C_{op}=K_0$, the **excess** reflexive overhead above the baseline physical cost tends to zero at the threshold. For stable adaptation dynamics (see Theorem 22), we assume the **Dominance of Stabilizing Costs (DSC)**: the strict convexity of the physical cost $R(C)$ together with performance saturation (concave $PP(C)$) dominates any destabilizing concavity in the informational cost $R_I(C)$, ensuring a unique, stable equilibrium $C^*$.
 
@@ -135,21 +134,27 @@ where $R(\cdot)$ and $R_I(\cdot)$ are the cost functions (Definition 3) applied 
 
 *Justification:* The physical relevance of using the expectation values $\langle \hat{R}(C_v) \rangle$ and $\langle \hat{R}_I(C_v) \rangle$ to represent actual resource costs within the system's dynamics (e.g., in defining $\Psi$ (Definition 20) or the Stress-Energy Tensor (Definition B.8, Appendix B) is established by Theorem 2. Since the system dynamics governed by POP/PCE necessarily drive viable equilibrium states to satisfy $C_P(v) = \langle \hat{C}_v \rangle_{x^*}$, applying the cost functions $R, R_I$ to the eigenvalues of $\hat{C}_v$ yields operators whose expectation values accurately reflect the true resource costs $R(C_P)$ and $R_I(C_P)$ in those physically relevant states.
 
+In the subsequent modeling of adaptation dynamics (e.g., the Adaptation Driving Force, Definition 20), the operational cost is treated using a mean-field approximation, applying the cost function directly to the expectation value of the complexity: $R(\langle \hat{C}_v \rangle; T_{\text{eff}})$. This approximation, $\langle R(\hat{C}_v) \rangle \approx R(\langle \hat{C}_v \rangle)$, is physically well-justified within the PU framework. The Principle of Compression Efficiency (PCE) is expected to drive the system towards equilibrium states that are sharply peaked in the eigenbasis of the complexity operator, minimizing costly fluctuations. In such low-variance states, the difference between the expectation of the (convex) function and the function of the expectation becomes negligible, ensuring the accuracy of the dynamical model.
+
 **2.5 Foundational Theorems: Necessary Conditions for Prediction**
 
 Several conditions are logically necessary for any system to perform prediction as modeled within this framework.
 
-*   **Theorem 4 (Necessity of Time Directionality):** Prediction requires an ordered, directional concept of time allowing distinction between 'now' ($t$) and 'future' ($t+\Delta t$, $\Delta t > 0$).
-    *Proof:* Without ordered time, 'future' is undefined, making prediction meaningless. QED
+**Theorem 4 (Necessity of time directionality).** Prediction requires an ordered, directional concept of time allowing distinction between “now” (t) and a strictly later instant (t + Δt, Δt > 0).
 
-*   **Theorem 5 (Necessity of State Distinguishability):** Prediction requires the capacity to distinguish relevant informational states: the current state $S(t)$, the predicted state $\hat{S}(t+\Delta t)$, and the actual subsequent state $S(t+\Delta t)$.
-    *Proof:* Prediction input $S(t)$, output $\hat{S}$, and verification target $S(t+\Delta t)$ must be distinguishable for the process to function. QED
+*Proof.* By definition, prediction maps information available at t to a distribution over states at t + Δt. Without a partial order with a nonempty forward cone, t + Δt is undefined and the mapping is meaningless. ∎
 
-*   **Theorem 6 (Necessity of Discoverable Regularities):** Prediction better than chance requires the existence of discoverable regularities or correlations between past/present states and future states (i.e., mutual information $I(S(t); S(t+\Delta t)) > 0$ under the true dynamics).
-    *Proof:* If the future is independent of the past/present, no information exists to enable prediction better than the prior distribution. QED
+**Theorem 5 (Necessity of state distinguishability).** Prediction requires the capacity to distinguish the input state S(t), the predicted state Ŝ(t + Δt), and the realized subsequent state S(t + Δt) within the experiment’s σ-algebra.
 
-*   **Theorem 7 (Necessity of a Representational Medium):** Prediction requires a physical or formal medium capable of encoding and processing the relevant states ($S(t)$), internal models ($M_t$), and predictions ($\hat{S}(t+\Delta t)$).
-    *Proof:* Information processing requires a substrate; without it, the components of the predictive cycle cannot be instantiated or manipulated. QED
+*Proof.* If these states are indistinguishable (almost surely identical as measurable random variables), then no verification of predictive performance is possible, and improvement ΔQ cannot be assessed. ∎
+
+**Theorem 6 (Necessity of discoverable regularities).** Prediction better than chance requires mutual information I(S(t); S(t + Δt)) > 0 under the true dynamics.
+
+*Proof.* If I(S(t); S(t + Δt)) = 0, then S(t) and S(t + Δt) are independent. For any predictor Ŝ formed from S(t), the data-processing inequality yields I(Ŝ; S(t + Δt)) ≤ I(S(t); S(t + Δt)) = 0. Hence no predictor can improve the Bayes risk (or cross-entropy) relative to the marginal distribution of S(t + Δt). ∎
+
+**Theorem 7 (Necessity of a representational medium).** Prediction requires a physical medium capable of encoding and processing the relevant states S(t), internal models M_t, and predictions Ŝ(t + Δt).
+
+*Proof.* Information processing requires a substrate to instantiate random variables and transformations. Absent such a medium, S(t), M_t, and Ŝ(t + Δt) cannot be realized. ∎
 
 
 

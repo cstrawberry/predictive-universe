@@ -36,12 +36,31 @@ We define Consciousness Complexity (CC) operationally as the quantitative measur
 **9.3.1 Definition 30 (Def 30): Operational CC**
 
 The operational **Consciousness Complexity (CC)** of an MPU aggregate system $S$ is defined through the probability modification map $L_S$ acting on quantum states. The CC value is the operational norm of this map:
-
 $$
 \mathrm{CC}(S):=\|L_S\|_{\mathrm{op}} \quad \text{(54)}
 $$
+where
+$$
+\|L_S\|_{\mathrm{op}}:=\sup_{\substack{\rho\ge0,\ \mathrm{tr}\,\rho=1\\ 0\le E\le I}}\big|\mathrm{tr}\!\big(L_S(\rho)E\big)\big|.
+$$
+This ensures the pointwise bound
+$$
+|\Delta P(i)|=\big|\mathrm{tr}\!\big(L_S(\rho)E_i\big)\big|\le \mathrm{CC}(S)
+$$
+for all positive operator-valued measures (POVMs).
 
-where $\|L_S\|_{\mathrm{op}}:=\sup_{\substack{\rho\ge0,\ \mathrm{tr}\,\rho=1\\ 0\le E\le I}}\big|\mathrm{tr}\!\big(L_S(\rho)E\big)\big|$, ensuring $|\Delta P(i)|\le \mathrm{CC}(S)$ for all positive operator-valued measures (POVMs). $\mathrm{CC}(S)$ is a dimensionless quantity between 0 and $\alpha_{\mathrm{CC,max}}$ (constrained further in Section 10.2).
+**Lemma 9.1 (Variational characterization).** For Hermitian $H$,
+$$
+\sup_{0\le E\le I}\big|\mathrm{tr}(H E)\big|=\tfrac12\|H\|_1,
+$$
+with the supremum attained by the projector onto the positive eigenspace of $H$ (or negative eigenspace for the negative maximum).
+
+*Proof:* Decompose $H = H_+ - H_-$ with $H_\pm \ge 0$, $H_+H_- = 0$, and $\mathrm{tr}(H_\pm) = (1/2)\|H\|_1$. Choosing $E = \mathrm{supp}(H_+)$ yields $\mathrm{tr}(H E) = \mathrm{tr}(H_+)= (1/2)\|H\|_1$; taking $E = \mathrm{supp}(H_-)$ gives the negative extremum. QED
+
+**Corollary 9.1.** For Hermitian-preserving $L_S$,
+$$
+\|L_S\|_{\mathrm{op}}=\tfrac12\sup_{\rho}\big\|L_S(\rho)\big\|_1.
+$$
 
 **9.3.2 Definition 31 (Def 31): Physical Constraints on CC Scaling**
 
@@ -53,25 +72,27 @@ As an emergent property expected to arise from aggregate complexity $C_{agg}$, t
 
 **9.3.3 Theorem 35 (General CC Scaling Form)**
 
-Any function CC($C_{agg}$) satisfying the physical constraints outlined in Definition 31 must be expressible in the general form:
+Any function CC($C_{agg}$) satisfying Definition 31 can be written as
 $$
-\text{CC}(C_{agg}) = \alpha_{CC,max}\, \mathcal{G}\!\left(\frac{C_{agg}-C_{op}}{C_{scale}}\right)\, \Theta(C_{agg}-C_{op}) \quad \text{(55)}
+\text{CC}(C_{agg}) = \alpha_{\infty}\, \mathcal{G}\!\left(\frac{C_{agg}-C_{op}}{C_{scale}}\right)\, \Theta(C_{agg}-C_{op}) \quad \text{(55)}
 $$
 where:
-*   $\alpha_{CC,max} < 0.5$ is the maximum possible CC value (Theorem 39).
-*   $\mathcal{G}: [0, \infty) \to [0, 1)$ is a dimensionless scaling function satisfying $\mathcal{G}(0)=0$, $\lim_{x \to \infty} \mathcal{G}(x) = 1$, $\mathcal{G}'(x) \ge 0$ (monotonicity), and $\mathcal{G}''(x) \le 0$ (diminishing returns).
-*   $C_{scale} > 0$ is a characteristic complexity scale over which CC develops significantly.
-*   $C_{op}$ is the Operational Threshold (Definition 13).
-*   $\Theta(C_{agg} - C_{op})$ is the Heaviside step function, enforcing the threshold behavior (Constraint 1).
-*Proof:* This mathematical form is constructed to satisfy the constraints. The argument $x = (C_{agg} - C_{op})/C_{scale}$ is normalized complexity above threshold. $\mathcal{G}(x)$ maps this to $[0, 1)$, embodying constraints 3 and 4. Multiplying by $\alpha_{CC,max}$ satisfies constraint 2. $\Theta$ implements constraint 1. QED
+
+*   $0 \le \alpha_\infty \le \alpha_{CC,max} < 0.5$ is the asymptotic CC value achievable as $C_{agg}$ grows,
+*   $\mathcal{G}: [0, \infty) \to [0, 1)$ is dimensionless with $\mathcal{G}(0)=0$, $\lim_{x\to\infty} \mathcal{G}(x)=1$, $\mathcal{G}'(x) \ge 0$, $\mathcal{G}''(x) \le 0$,
+*   $C_{scale} > 0$ is a characteristic complexity scale,
+*   $C_{op}$ is the operational threshold (Definition 13),
+*   $\Theta$ is the Heaviside step function.
+
+*Proof:* Normalize the complexity above threshold by $x = (C_{agg} - C_{op})/C_{scale} \ge 0$. The function $\mathcal{G}$ encodes monotonicity and concavity, with a finite asymptote at 1, while $\alpha_\infty$ enforces the global upper bound. The Heaviside factor enforces the threshold property. QED
 
 **9.3.4 Definition 32 (Def 32): Specific CC Scaling Model Example**
 
-For illustrative purposes, we adopt a specific rational function model for $\mathcal{G}(x)$ satisfying the required properties: $\mathcal{G}(x) = x / (1+x)$. This minimal phenomenological model is chosen for its simplicity and consistency with derived principles (see Section 6.7). Substituting this into the general form (Equation 55) yields:
+A simple concave, monotone scaling function meeting the constraints is $\mathcal{G}(x) = x/(1+x)$. Then
 $$
-\text{CC}(C_{agg}) = \alpha_{CC,max}\, \frac{C_{agg}-C_{op}}{C_{scale} + (C_{agg}-C_{op})}\, \Theta(C_{agg}-C_{op}) \quad \text{(56)}
+\text{CC}(C_{agg}) = \alpha_{\infty}\, \frac{C_{agg}-C_{op}}{C_{scale} + (C_{agg}-C_{op})}\, \Theta(C_{agg}-C_{op}) \quad \text{(56)}
 $$
-where $\alpha_{CC,max} < 0.5$ (Theorem 39), $C_{op}$ (Definition 13), and $C_{scale} > 0$ are the model parameters. This provides a concrete example scaling form.
+with parameters $\alpha_\infty \le \alpha_{CC,max} < 0.5$, $C_{op}$ (Definition 13), and $C_{scale} > 0$.
 
 **9.4 Proposed Mechanism of CC Influence**
 
@@ -96,95 +117,126 @@ To make the CC hypothesis testable, we model how baseline Born rule probabilitie
 
 **9.5.1 Definition 33 (Def 33): General Form of Modified Probability**
 
-The observable probability $P_{\mathrm{obs}}(i)$ of outcome $i$ for a POVM $\{E_i\}$ on a system in state $\rho$, in the presence of an MPU aggregate $S$ providing context, is modeled as:
+The observable probability $P_{\mathrm{obs}}(i)$ of outcome $i$ for a POVM $\{E_i\}$ on a system in state $\rho$, in the presence of a context-providing MPU aggregate $S$, is modeled as
+$$
+P_{\mathrm{obs}}(i) = P_{\mathrm{Born}}(i) + \Delta P(i),\quad P_{\mathrm{Born}}(i)=\mathrm{tr}(\rho E_i) \quad \text{(57)}
+$$
+where the modification term $\Delta P(i) := \mathrm{tr}(L_S(\rho) E_i)$ is generated by a Hermiticity-preserving, trace-annihilating linear map $L_S$ acting on states. In finite dimensions, assume:
 
-$$
-P_{\mathrm{obs}}(i) = P_{\mathrm{Born}}(i) + \Delta P(i) \quad \text{(57)}
-$$
+*   mixture linearity in preparations $\rho$,
+*   for fixed $S$ and $\rho$, the map $E \mapsto \Delta P(\rho,E;S)$ is affine under coarse-graining and continuous with $\Delta P(\rho,0;S)=\Delta P(\rho,I;S)=0$.
 
-where $P_{\mathrm{Born}}(i)=\mathrm{tr}(\rho E_i)$ is the Born probability and $\Delta P(i)$ is the probability-modification term. For fixed context $S$ and state $\rho$, assume $E\mapsto \Delta P(\rho,E;S)$ is affine under coarse-graining and continuous, with $\Delta P(\rho,0;S)=\Delta P(\rho,I;S)=0$. In finite dimensions there exists a unique traceless Hermitian $A_\rho$ (affine in $\rho$) such that $\Delta P(i)=\mathrm{tr}(A_\rho E_i)$. Define the Hermiticity-preserving, trace-annihilating linear map $L_S$ on states by $L_S(\rho):=A_\rho$.
-
-For a fixed context $S$ and state $\rho$, assume the map $E\mapsto \Delta P(\rho,E;S)$ is affine under coarse-graining and continuous, with $\Delta P(\rho,0;S)=\Delta P(\rho,I;S)=0$. In finite dimensions, there exists a unique traceless Hermitian operator $A_\rho$, depending affinely on $\rho$, such that
-$$
-\Delta P(i)=\mathrm{tr}(A_\rho E_i).
-$$
-Define the Hermiticity-preserving, trace-annihilating linear map $L_S$ on states by $L_S(\rho):=A_\rho$ and its Hilbert–Schmidt adjoint $K_S:=L_S^*$ on effects. Then
+Then there exists a unique traceless Hermitian operator $A_\rho$, affine in $\rho$, such that $\Delta P(i)=\mathrm{tr}(A_\rho E_i)$; define $L_S(\rho):=A_\rho$ and its Hilbert–Schmidt adjoint $K_S:=L_S^*$ on effects by
 $$
 \Delta P(i)=\mathrm{tr}\!\big(L_S(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,K_S(E_i)\big),\qquad K_S(I)=0.
 $$
 
-We assume mixture linearity in preparations and **context covariance** under unitary transformations $U$:
+**Covariance:** under unitary $U$,
 $$
 L_{USU^\dagger}(U\rho U^\dagger)=U\,L_S(\rho)\,U^\dagger,\qquad
 K_{USU^\dagger}(U E U^\dagger)=U\,K_S(E)\,U^\dagger.
 $$
 
-For bipartite $\mathcal H_A\otimes\mathcal H_B$,
+**Bipartite consistency** on $\mathcal{H}_A\otimes\mathcal{H}_B$:
 $$
 \sum_j K_{S_A\otimes S_B}(E_A\otimes F_{B,j})=K_{S_A\otimes S_B}(E_A\otimes I_B),\qquad
 K_{S_A\otimes S_B}(E_A\otimes I_B)=K_{S_A}(E_A)\otimes I_B,
 $$
 ensuring each party’s marginal is invariant under the other party’s POVM choice.
 
-For small $\varepsilon$,
+**Small-deformation realizations:** for small $\varepsilon$,
 $$
-\mathrm{tr}\!\big(e^{\varepsilon L_S}(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,(E_i+\varepsilon K_S(E_i))\big)+O(\varepsilon^2),
+\mathrm{tr}\!\big(e^{\varepsilon L_S}(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,(E_i+\varepsilon K_S(E_i))\big)+O(\varepsilon^2).
 $$
-enabling either CPTP **pre-processing** $\rho\mapsto e^{\varepsilon L_S}(\rho)$ when $L_S$ is a GKLS generator, or a **calibrated POVM deformation** with $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)+\varepsilon^2 R_i$ and $\sum_i R_i=0$ chosen so that $E_{i,\varepsilon}\ge0$ and $\sum_i E_{i,\varepsilon}=I$ for $|\varepsilon|\le\varepsilon_0$.
+Two operational implementations are possible:
 
-**9.5.2 Theorem 36 (Constraints on Modification Function $f$)**
+1.  **CPTP pre-processing** $\rho \mapsto e^{\varepsilon L_S}(\rho)$ when $L_S$ is a GKLS generator.
+2.  **Calibrated POVM deformations** $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)+\varepsilon^2 R_i$ with $\sum_i R_i=0$ and $0\le E_{i,\varepsilon}\le I$ for $|\varepsilon|\le\varepsilon_0$, provided $K_S$ satisfies the first-order tangent-cone condition relative to each effect $E_i$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$.
 
-Any physically consistent modification function $f(\text{CC}, p, \text{context}_S)$, where $p = P_{Born}(i)$, must satisfy:
-1.  **Normalization Preservation:** $\sum_{i=1}^n f(\text{CC}, p_i, \text{context}_S(i)) = 0$.
-2.  **No Effect at Zero CC:** $f(0, p, \text{context}_S) = 0$.
-3.  **Magnitude Bound:** $|\Delta P(i)|=\big|\mathrm{tr}\!\big(L_S(\rho)E_i\big)\big|\le \|L_S\|_{\mathrm{op}}=\mathrm{CC}(S)$.
-4.  **Context Dependence:** $f$ generally depends on `context_S(i)`. If context is neutral/irrelevant, $f = 0$.
+While these two mechanisms are mathematically distinct, their experimental distinguishability is a complex question. For the phenomenological predictions in this paper, we focus on the net observable effect on $P_{obs}(i)$, which is identical at first order in $\varepsilon$.
 
-*Proof:* Follows from probability principles and definitions. (1) Total probability conserved $\sum P_{obs}(i) = 1 + 0 = 1$. (2) Zero capability means zero effect. (3) CC is defined as supremum of deviation magnitude (Definition 30). (4) Bias is directed/modulated by context (Hypothesis 3). QED
-
-**9.5.3 Definition 34 (Def 34): Context-Targeted Bias (CTB) Model Example**
-
-A concrete model satisfying Theorem 36 is the **Context-Targeted Bias (CTB)** model. Assume context `context_S` defines a target quantum state $\sigma_S$. The target probability distribution is then given by $\mathbf{p}_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$, ensuring consistency under arbitrary coarse-grainings of the POVM $\{E_i\}$. The corresponding modification map is $L_S(\rho)=\mathrm{CC}(S)(\sigma_S-\rho)$. To respect Eigenstate Determinism, CTB is defined only for POVMs with no effect $E$ containing the prepared eigenprojector(s) (i.e., $PEP=P$ is disallowed when $\rho=P$); on the complement set $L_S=0$ (identity). Under a unitary change of basis $U$, the context transforms covariantly, $\sigma_{USU^\dagger}=U\sigma_S U^\dagger$.
-
+**Proposition 17 (CTB generator semigroup).** For $L_S(\rho)=\alpha(\sigma-\rho)$ with $\sigma\ge0$, $\mathrm{tr}\,\sigma=1$ and $\alpha\ge0$, the semigroup $T_t:=e^{tL_S}$ acts as
 $$
-f_{CTB}(\text{CC}(S), p_i, \mathbf{p}_{target}(S)) = \text{CC}(S) \cdot (p_{target}(S, i) - p_i) \quad \text{(58)}
+T_t(\rho)=e^{-\alpha t}\,\rho+\big(1-e^{-\alpha t}\big)\sigma,
 $$
-The resulting observable probability is:
+which is CPTP for all $t\ge0$ and has unique fixed point $\sigma$.
+
+*Proof:* $T_t$ is a convex mixture of two CPTP maps (identity and the constant replacement map $\rho\mapsto\sigma$), and $\{T_t\}$ satisfies the semigroup property $T_t\circ T_s= T_{t+s}$. QED
+
+**9.5.2 Theorem 36 (Constraints on Probability Modification)**
+
+Any physically consistent probability modification $\Delta P(i) = \mathrm{tr}(L_S(\rho)E_i)$ must satisfy:
+
+1.  **Normalization Preservation:** $\sum_{i} \Delta P(i) = 0$.
+2.  **No Effect at Zero CC:** If $\mathrm{CC}(S)=0$, then $L_S=0$ and $\Delta P(i)=0$.
+3.  **Magnitude Bound:** $|\Delta P(i)| \le \mathrm{CC}(S)$.
+4.  **Context Dependence:** $L_S$ generally depends on `context_S`. If context is neutral/irrelevant, $L_S=0$.
+5.  **Positivity:** $0 \le P_{\mathrm{obs}}(i) \le 1$ for all $i$.
+
+*Proof:* (1) follows from $\sum_i \Delta P(i) = \mathrm{tr}(L_S(\rho) \sum_i E_i) = \mathrm{tr}(L_S(\rho) I) = 0$. (2) holds by definition. (3) follows from Definition 30. (4) reflects the role of context in directing bias. (5) is required for physical consistency and restricts admissible $L_S$ to those yielding valid probabilities; it holds automatically for convex-combination models such as CTB below. QED
+
+**9.5.3 Definition 34 (Def 34): Context-Targeted Bias (CTB) Model**
+
+Let `context_S` define a target quantum state $\sigma_S$. Define the modification map $L_S$ by
 $$
-P_{obs}(i) = P_{Born}(i) + f_{CTB} = (1 - \text{CC}(S)) P_{Born}(i) + \text{CC}(S) p_{target}(S, i) \quad \text{(59)}
+L_S(\rho):=\alpha_S\,(\sigma_S-\rho),\qquad \alpha_S:=\frac{\mathrm{CC}(S)}{r(\sigma_S)},\qquad r(\sigma):=\sup_{\rho}\tfrac12\|\sigma-\rho\|_1=1-\lambda_{\min}(\sigma),
 $$
-*Interpretation:* $P_{obs}$ is a linear interpolation between Born and target probabilities, weighted by CC(S). For example, for a binary outcome with $P_{Born}=(0.6, 0.4)$, a context targeting the first outcome $p_{target}=(1, 0)$, and a system with $\text{CC}=0.01$, the observable probabilities would be shifted to $P_{obs} \approx (0.99 \cdot 0.6 + 0.01 \cdot 1, 0.99 \cdot 0.4 + 0.01 \cdot 0) = (0.604, 0.396)$, a small but potentially detectable bias.
+with $\lambda_{\min}(\sigma)$ the minimal eigenvalue of $\sigma$. Then
+$$
+\Delta P(i)=\mathrm{tr}\!\big(L_S(\rho)E_i\big)=\alpha_S\big(\mathrm{tr}(\sigma_S E_i)-\mathrm{tr}(\rho E_i)\big)=\alpha_S\big(p_{\mathrm{target}}(S,i)-p_i\big) \quad \text{(58)}
+$$
+and
+$$
+P_{\mathrm{obs}}(i)=(1-\alpha_S)\,P_{\mathrm{Born}}(i)+\alpha_S\,p_{\mathrm{target}}(S,i) \quad \text{(59)}
+$$
+with $0\le\alpha_S<1$. Under a unitary $U$, $\sigma_{USU^\dagger}=U\sigma_S U^\dagger$, so $L_S$ and $K_S$ transform covariantly.
+
+*Remarks:*
+*   The normalization ensures $\|L_S\|_{\mathrm{op}} = \alpha_S r(\sigma_S) = \mathrm{CC}(S)$.
+*   For the convex combination in Equation (59) to be physically valid, the interpolation factor $\alpha_S$ must be bounded by 1. This implies a non-trivial physical constraint on the operational CC for a given target state: $\mathrm{CC}(S) \le r(\sigma_S) = 1 - \lambda_{\min}(\sigma_S)$. This means a system's biasing capability is most effective when its target state $\sigma_S$ is pure or near-pure ($\lambda_{\min} \approx 0$). Conversely, attempting to bias outcomes towards a highly mixed target state is inherently less efficient, as the maximum achievable $\mathrm{CC}(S)$ is limited by the target's entropy.
+*   For bipartite $\sigma_{AB}$, define $\sigma_A = \mathrm{tr}_B \sigma_{AB}$ to ensure the marginal invariance conditions stated above.
 
 **9.5.4 Theorem 37 (Consistency of CTB Model)**
 
-The Context-Targeted Bias (CTB) model (Equation 58) satisfies the four necessary constraints in Theorem 36.
+The CTB model (Equation 58) satisfies the five constraints in Theorem 36.
+
 *Proof:*
-1.  **Normalization:** $\sum_{i} f_{CTB}(i) = \text{CC}(S) (\sum_i p_{target}(S, i) - \sum_i p_i) = \text{CC}(S) (1 - 1) = 0$.
-2.  **Zero CC:** If CC(S)=0, $f_{CTB} = 0$.
-3.  **Magnitude Bound:** $|f_{CTB}| = \text{CC}(S) |p_{target}(S, i) - p_i|$. Max value of $|p_{target} - p_i|$ is 1, so $|f_{CTB}| \le \text{CC}(S)$.
-4.  **Context Dependence:** $f_{CTB}$ depends on $\mathbf{p}_{target}(S)$. If $p_{target}(S, i) = p_i$ (neutral context), $f_{CTB} = 0$.
-QED
+1.  **Normalization:** $\sum_i \Delta P(i) = \alpha_S(\sum_i p_{\mathrm{target}} - \sum_i p_i) = \alpha_S(1 - 1)=0$.
+2.  **Zero CC:** $\mathrm{CC}(S)=0$ implies $\alpha_S=0$, hence $\Delta P=0$.
+3.  **Magnitude bound:** For all $\rho,E$, $|\Delta P| = \alpha_S|p_{\mathrm{target}} - p_i| \le \alpha_S r(\sigma_S) = \mathrm{CC}(S)$ by Lemma 9.1.
+4.  **Context dependence:** $\Delta P$ depends on $\sigma_S$, hence on `context_S`.
+5.  **Positivity:** $P_{\mathrm{obs}}$ is a convex combination with weight $\alpha_S\in[0,1)$, so $0 \le P_{\mathrm{obs}} \le 1$. QED
 
 **9.5.5 Theorem 38 (Maximum Bias Effect with CTB Model)**
 
-Within the Context-Targeted Bias (CTB) model (Equation 58), the maximum possible deviation magnitude $|f_{CTB}|$ for a single outcome probability is exactly equal to the system's operational CC(S), achieved when $p_{target}(S, i)$ and $P_{Born}(i)$ are maximally different (0 and 1).
-*Proof:* As shown in proof of Theorem 37 (Constraint 3), max value of $|p_{target} - p_i|$ is 1, giving max $|f_{CTB}| = \text{CC}(S) \cdot 1 = \text{CC}(S)$. Confirms consistency with Definition 30. QED
+For CTB (Equation 58), the maximum possible deviation magnitude over all states $\rho$ and effects $0\le E\le I$ equals $\mathrm{CC}(S)$:
+$$
+\sup_{\rho,E}\,|\Delta P(i)|=\|L_S\|_{\mathrm{op}}=\mathrm{CC}(S).
+$$
 
-**Remark 5 (Information-Theoretic Measure of CC Bias)**
-The effect of CC bias from $P_{Born} = \{p_i\}$ to $P_{obs} = \{P_{obs}(i)\}$ (Equation 57) can be quantified by Kullback-Leibler (KL) divergence:
+*Proof:* By Lemma 9.1 and the definition of $r(\sigma_S)$, $\sup_{\rho,E} |p_{\mathrm{target}} - p_i| = r(\sigma_S)$. With $\Delta P = \alpha_S(p_{\mathrm{target}} - p_i)$ and $\alpha_S = \mathrm{CC}(S)/r(\sigma_S)$, the supremum equals $\mathrm{CC}(S)$. QED
+
+**Remark 5 (Information-theoretic measure of CC bias).** The effect of CC bias from $P_{\mathrm{Born}} = \{p_i\}$ to $P_{\mathrm{obs}} = \{P_{\mathrm{obs}}(i)\}$ (Equation 57) can be quantified by the KL divergence
 $$
-D_{KL}(P_{obs} || P_{Born}) = \sum_i P_{obs}(i) \ln \left( \frac{P_{obs}(i)}{P_{Born}(i)} \right) \quad \text{(60)}
+D_{KL}(P_{\mathrm{obs}}\Vert P_{\mathrm{Born}})=\sum_i P_{\mathrm{obs}}(i)\ln\frac{P_{\mathrm{obs}}(i)}{P_{\mathrm{Born}}(i)} \quad \text{(60)}
 $$
-This measures the information gain or statistical distinguishability (in nats). The magnitude of $D_{KL}$ is bounded, scaling approx. quadratically with probability shifts $|\Delta P(i)| \le \text{CC}(S)$ for small deviations: $D_{KL} \approx \sum_i (\Delta P(i))^2 / (2 P_{Born}(i))$.
+which, for small deviations $\sum_i \Delta P(i)=0$ with $|\Delta P(i)|\ll1$, scales as
+$$
+D_{KL}\approx \sum_i \frac{(\Delta P(i))^2}{2\,P_{\mathrm{Born}}(i)}.
+$$
 
 **9.6 Theoretical Implications of Emergent CC**
 
-Assuming the validity of the CC hypothesis (Theorem 34, Hypothesis 3), several further theoretical implications arise:
+Assuming the validity of the CC hypothesis (Theorem 34, Hypothesis 3), several implications arise:
 
-*   **Proposition 12 (Hypothesized Correlation: CC and PP - Speculative):** A positive correlation is hypothesized between achievable CC(S) and average sustainable Predictive Performance PP(S). Systems with higher CC might operate more effectively closer to the operational performance bound $\beta$.
-*   **Proposition 13 (Potential CC Effect on Quantum Coherence):** The CC mechanism (Hypothesis 3), by influencing 'Evolve'/ND-RID parameters contributing to decoherence, could potentially modify effective decoherence rates $\Gamma_{eff}$ or coherence times $\tau_{coh}$ of quantum systems interacting with the high-CC aggregate. Fractional change might scale as $O(\text{CC})$, sign context-dependent. (See Section 13.3).
-*   **Proposition 14 (Relation Between Operational CC and System Integration/Prediction):** Since CC (Definition 30) emerges from optimized generation and control of complex internal states `context_S` (Theorem 34, Hypothesis 3), it should correlate with measures of functional integration, sophisticated internal modeling, and high-level predictive capacity.
-*   **Proposition 15 (Introspection Limits from Reflexivity Constraint):** The Reflexivity Constraint ($\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$, Theorem 33) applies to aggregates. Attempts to gain precise internal information $\Delta I$ about `context_S` (introspection) necessarily induce minimum state disturbance $\Delta S_{min}$, limiting simultaneous precision of self-knowledge and state stability.
-*   **Proposition 16 (Dynamic Nature of High-CC States):** A consequence of Proposition 15 is that internal states `context_S` associated with high operational CC or subjective experience (if linked via Postulate 1, Proposition 14) must be fundamentally dynamic. The interplay between acquiring internal information and resulting disturbance prevents static, perfectly known internal states while maintaining high CC or awareness.
+**Proposition 12 (Hypothesized correlation: CC and PP).** A positive correlation is hypothesized between achievable CC(S) and average sustainable Predictive Performance PP(S). Systems with higher CC might operate more effectively closer to the operational performance bound $\beta$.
+
+**Proposition 13 (Potential CC effect on quantum coherence).** The CC mechanism (Hypothesis 3), by influencing “Evolve”/ND-RID parameters contributing to decoherence, could modify effective decoherence rates $\Gamma_{eff}$ or coherence times $\tau_{coh}$ of quantum systems interacting with the high-CC aggregate. Fractional change might scale as $O(\mathrm{CC})$, with context-dependent sign (Section 13.3).
+
+**Proposition 14 (Relation between operational CC and system integration/prediction).** Since CC (Definition 30) emerges from optimized generation and control of complex internal states `context_S` (Theorem 34, Hypothesis 3), it should correlate with measures of functional integration, sophisticated internal modeling, and high-level predictive capacity.
+
+**Proposition 15 (Introspection limits from Reflexivity Constraint).** The Reflexivity Constraint ($\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$, Theorem 33) applies to aggregates. Attempts to gain precise internal information $\Delta I$ about `context_S` (introspection) necessarily induce minimum state disturbance $\Delta S_{min}$, limiting simultaneous precision of self-knowledge and state stability.
+
+**Proposition 16 (Dynamic nature of high-CC states).** A consequence of Proposition 15 is that internal states `context_S` associated with high operational CC or subjective experience (if linked via Postulate 1, Proposition 14) must be fundamentally dynamic. The interplay between acquiring internal information and resulting disturbance prevents static, perfectly known internal states while maintaining high CC or awareness.
 
 

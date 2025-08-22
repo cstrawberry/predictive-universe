@@ -124,7 +124,7 @@ the induced emission channel. Assume PCE‑symmetric emission channels are compl
    S(R_t)\ =\ S(H_t)\ \le\ \log d_{H_t}\ =\ \log d_{H_0}-\log d_{R_t}, \tag{K.3.4}
    $$
 
-   which **decreases** as $d_{R_t}$ grows.
+   Hence $S(R_t)=S(H_t E)\le S(H_t)+S(E)=\log d_{H_t}+S_0$. In particular, if $S_0=0$ (pure input), $S(R_t)\le \log d_{H_t}$. This upper bound decreases as $d_{R_t}$ grows.
 
 Combining (K.3.3) and (K.3.4) sandwiches $S(R_t)$ between an **increasing** and a **decreasing** function of $\log d_{R_t}$ that **cross** at equipartition $\log d_{R_t}\approx \log d_{H_t}$ (i.e. $d_{R_t}\approx d_{H_t}$). Consequently,
 
@@ -282,10 +282,10 @@ This PU-modified cosmology offers potential pathways to explain observed "dark s
 *   **"Dark Matter" Mimicry:** In Equation (K.9.2), if $G_{eff}(t)$ is larger than $G_{early}$ (e.g., $G_0$) during epochs relevant for structure formation and galaxy/cluster dynamics, the term $\frac{8\pi G_{eff}(t)}{3} \rho(t)$ provides an enhanced gravitational influence for a given baryonic density $\rho_b(t)$. This increased effective gravity can mimic the effects usually attributed to cold dark matter. This unifies the explanation for dark matter phenomenology from galactic scales (Appendix I) to cosmological scales.
 
 *   **"Dark Energy" / Cosmic Acceleration:** The observed late-time cosmic acceleration (positive $\ddot{a}$) can be driven by one or both of two mechanisms within this framework:
-    1.  **The True Cosmological Constant $\Lambda$:** This term, interpreted within PU as arising from the ground state energy density of the MPU vacuum (Section K.8), provides a constant positive contribution to acceleration.
-    2.  **The Dynamic Contribution from $\dot{G}_{eff}(t)$:** Terms involving $\dot{G}_{eff}(t)$ in the acceleration equation (K.9.4), such as the $-\frac{\dot{G}_{eff}(t)}{G_{eff}(t)} H(t)$ term, can contribute to acceleration. If $G_{eff}(t)$ is increasing with time at present ($\dot{G}_{eff}(t) > 0$), and $H(t)>0$, this term is negative if $\dot{G}_{eff}/G_{eff}$ is positive, thus contributing to deceleration. However, if $\dot{G}_{eff}(t) < 0$ (e.g., if $G_{eff}$ was larger in the past and is now decreasing towards a future asymptotic value, or if its evolution is more complex), this term could contribute to acceleration. The interplay is non-trivial and depends on the precise evolution of $G_{eff}(t)$.
+    1.  **The True Cosmological Constant $\Lambda$:** This term, interpreted within PU as arising from the ground state energy density of the MPU vacuum (Section K.8), provides a constant positive contribution to acceleration.
+    2.  **The Dynamic Contribution from $\dot{G}_{eff}(t)$:** Under the conservation choice $\nabla_\mu!\bigl(G_{eff}(t)T^{\mu\nu}\bigr)=0$, explicit $\dot{G}*{eff}$ terms cancel from (K.9.4); the influence of a varying $G*{eff}$ on $\ddot a/a$ is indirect, via the modified continuity equation and the time‑dependence of $\rho(t)$ and $p(t)$. Alternative conservation prescriptions can introduce explicit $\dot{G}_{eff}$ terms; our analysis here adopts the former.
 
-    This "hybrid" scenario allows for a rich phenomenology. It is conceivable that PCE optimization could result in a very small true $\Lambda_{PU-vacuum}$, with the observed late-time acceleration being largely driven by a complex evolution of $G_{eff}(t)$ and the associated energy exchange $Q_{exchange}(t)$, or a combination of all factors.
+This "hybrid" scenario allows for a rich phenomenology. It is conceivable that PCE optimization could result in a very small true $\Lambda_{PU-vacuum}$, with the observed late-time acceleration being largely driven by a complex evolution of $G_{eff}(t)$ and the associated energy exchange $Q_{exchange}(t)$, or a combination of all factors.
 
 **K.9.4 Observational Consistency and Future Directions**
 

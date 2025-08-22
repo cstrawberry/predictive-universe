@@ -1,35 +1,46 @@
 # 5 Complexity Thresholds: Operational Threshold and Horizon Constant
 
-Having established the logical limits on prediction (SPAP, Theorem 10, Theorem 11) and the concept of Predictive Physical Complexity $C_P$ (Equation 1), we now formally define two crucial, distinct complexity thresholds within the PU framework. The primary focus is the Operational Threshold ($C_{op}$, Definition 13), representing the minimum $C_P$ required for the *full adaptive predictive loop* (Definition 4) to achieve functional viability (prediction better than chance). We then define the Horizon Constant ($K_0$, Theorem 15), which represents the fixed, minimal complexity required merely to instantiate the *core logic* of the self-referential paradox (SPAP) that is necessarily embedded within the operational loop. We prove the crucial relationship $C_{op} \ge K_0$ (Corollary 3), establishing $K_0$ as a fundamental logical prerequisite contained within the operational threshold $C_{op}$, and discuss their distinct physical significance.
+Having established the logical limits on prediction (SPAP, Theorem 10; Theorem 11) and the notion of **Predictive Physical Complexity** $C_P$ (Equation 1), this section formalizes two distinct complexity thresholds within the PU framework. The **Operational Threshold** $C_{op}$ (Definition 13) is the minimum $C_P$ required for the *full adaptive predictive loop* (Definition 4) to achieve functional viability (prediction better than chance). The **Horizon Constant** $K_0$ (Theorem 15) is the fixed, minimal complexity required to instantiate the *core logic* of the self‑referential paradox (SPAP) that is necessarily embedded, as a sub‑dynamic, within the operational loop. We prove the relationship $C_{op}\ge K_0$ (Corollary 3) and discuss the distinct physical roles of these thresholds.
 
 **5.1 Operational Threshold $C_{op}$**
 
-**Definition 13 (Operational Threshold $C_{op}$)**
+### Definition 13 (Operational Threshold $C_{op}$)
 
-The **Operational Threshold ($C_{op}$)** is defined as the infimum of Predictive Physical Complexity $C_P(\mu)$ (Equation 1) over all physically realizable system microstates $\mu$ (consistent with $\mathcal{L}_{phys}$) that satisfy the following conditions:
-(a) The microstate $\mu$ implements a predictive function $f_{\mu}$.
-(b) The accuracy $A(f_{\mu})$ of this function, measured against relevant environmental variables $\mathcal{E}$ (using a chosen, well-defined accuracy measure $A$ such as $1-PE$ or information gain),
-(c) exceeds the accuracy $A(f_{random})$ achievable by a baseline random chance predictor
-(d) by at least a minimal significant threshold $\epsilon_{acc} > 0$.
-Formally:
-$$
-C_{op} = \inf \{ C_P(\mu) \mid \mu \in \mathcal{S}_{phys}, A(f_{\mu}(\mathcal{E}_{past}), \mathcal{E}_{future}) > A(f_{random}(\mathcal{E}_{past}), \mathcal{E}_{future}) + \epsilon_{acc} \} \quad \text{(15)}
-$$
-where:
-*   $\mathcal{S}_{phys}$ is the set of physically realizable microstates.
-*   $C_P(\mu)$ is the Predictive Physical Complexity of state $\mu$.
-*   The existence of such microstates achieving or arbitrarily approaching this infimum is assumed, contingent upon mild continuity properties of $A(f_\mu)$ with respect to the resources quantified by $C_P(\mu)$ and the properties of $\mathcal{S}_{phys}$ (e.g., that the set of $C_P$ values for states satisfying the accuracy condition is non-empty and bounded below).
-*   In practice, for predictions averaged over $T$ trials, $\epsilon_{acc}$ can be chosen to scale appropriately, e.g., $\epsilon_{acc} \sim O(1/\sqrt{T})$, ensuring the threshold is meaningful even for finite operational timescales.
+Let $\mathcal{S}_{phys}$ denote the set of physically realizable system microstates consistent with the physical law set $\mathcal{L}_{phys}$. For a microstate $\mu\in\mathcal{S}_{phys}$, let $C_P(\mu)$ be its Predictive Physical Complexity (Equation 1), and let $f_\mu$ be the predictive function implemented by $\mu$. Fix a relevant set of environmental variables $\mathcal{E}$ and a well‑defined accuracy functional $A(\cdot)$ (e.g., $1-\mathrm{PE}$, information gain). Let $f_{random}$ denote a baseline random‑chance predictor matched to the task. For a chosen, strictly positive accuracy margin $\epsilon_{acc}>0$,
 
-$C_{op}$ represents the minimum complexity required for a system to "come online" as a non-trivial predictive entity capable of engaging in the adaptive Fundamental Predictive Loop (Definition 4) and potentially operating within the Space of Becoming $(\alpha, \beta)$ (Definition 8). Systems with $C(t) < C_{op}$ lack the structural resources for reliable prediction better than chance. Viewed thermodynamically, $C_{op}$ marks the threshold where the system enters the predictive phase, characterized by non-zero irreversible cost ($\varepsilon > 0$, Theorem 31, derived in Appendix J) and active SPAP dynamics (enabled because $C_{op} \ge K_0$) (see Table 5.1).
-
-**5.1.1 Physical Interpretation: Baseline Cost and Capability**
-
-The Operational Threshold $C_{op}$ represents the minimum complexity required to implement the *full integrated functionality* of the adaptive Fundamental Predictive Loop (Definition 4: capabilities $b_m, b_p, b_v, D_{cyc}$, Definition 5) such that it achieves *functional efficacy* (prediction better than chance). As established by Corollary 3 ($C_{op} \ge K_0$), achieving this operational capability *necessarily requires* possessing at least the minimal complexity $K_0$ (Theorem 15) needed for the internal logic of self-reference. Therefore, $C_{op}$ represents the total complexity cost for the minimally functioning, adaptive predictive system. Sustaining this minimal operational cycle incurs a baseline physical resource cost rate, captured by the Physical Operational Cost function $R(C)$ (Definition 3a) evaluated at $C_{op}$:
 $$
-P_{min} = R(C_{op}) \quad \text{(16)}
+\boxed{
+\;C_{op} \;=\; \inf \Big\{\, C_P(\mu)\ \Big|\ \mu\in\mathcal{S}_{phys},\; A\big(f_\mu(\mathcal{E}_{past}),\mathcal{E}_{future}\big)\;>\; A\big(f_{random}(\mathcal{E}_{past}),\mathcal{E}_{future}\big)\;+\;\epsilon_{acc}\,\Big\} \;.
+}
+\tag{15}
 $$
-This baseline power $P_{min}$ signifies the minimum rate of physical resource consumption (e.g., energy/time) intrinsically required to operate a system at the threshold of non-trivial predictive capability ($C=C_{op}$). This cost is not merely formal but represents a lower bound on the continuous energy dissipation of any physical adaptive device, ultimately linked to fundamental thermodynamic costs like Landauer's principle applied to the MPU cycle (cf. **Theorem 29** for the MPU Hamiltonian interpretation, and **Section J.3** of Appendix J for the link between information processing and heat dissipation). For instance, a minimal $K_0=3$ bit (or 3-qubit MPU) system operating at $C_{op}=K_0$ at room temperature ($T \approx 300$K) and completing one logical cycle involving minimal irreversible operations per, say, $\tau_{cyc} \sim 10^{-9}$s, would have a baseline power $P_{min} \gtrsim k_B T (\ln 2) / \tau_{cyc} \approx (1.38 \times 10^{-23} \text{ J/K})(300 \text{ K})(0.693) / (10^{-9} \text{ s}) \approx 2.87 \times 10^{-12}$ W. Any system operating adaptively ($C(t) \ge C_{op}$) incurs at least this cost. If available power falls below $P_{min}$, PCE dynamics drive complexity below $C_{op}$, causing predictive performance to collapse. (Further justification for the microscopic heat dissipation bounds and their relation to $R(C)$ can be found in Section D.3 of Appendix D, specifically the work-cost gap mechanism).
+
+We assume mild regularity: the set of $C_P$ values among states satisfying the accuracy condition is non‑empty and bounded below, and $A(f_\mu)$ varies continuously enough with resources quantified by $C_P(\mu)$ to render the infimum meaningful. For predictions aggregated over $T$ trials, $\epsilon_{acc}$ can be chosen to scale as $\epsilon_{acc}= \Theta(T^{-1/2})$, ensuring significance on finite timescales.
+
+**Interpretation.** $C_{op}$ is the minimum complexity at which a system “comes online” as a non‑trivial predictive unit capable of engaging in the adaptive Fundamental Predictive Loop (Definition 4; capabilities $b_m,b_p,b_v, D_{cyc}$, Definition 5) and operating within the Space of Becoming $(\alpha,\beta)$ (Definition 8). Any system with instantaneous complexity $C(t)<C_{op}$ lacks the structural resources for reliable better‑than‑chance prediction.
+
+### 5.1.1 Physical Interpretation: Baseline Cost and Capability
+
+The Operational Threshold $C_{op}$ measures the minimum complexity to implement the *integrated functionality* of the adaptive loop with super‑chance performance. Because the loop is adaptive and logically asymmetric, its operation entails irreversibility; thermodynamic costs follow. Let $R(C)$ be the Physical Operational Cost function (Definition 3a), mapping complexity to baseline resource‑consumption rate. The minimal continuous dissipation required to sustain the threshold loop is
+
+$$
+\boxed{P_{min} \;=\; R(C_{op}).}
+\tag{16}
+$$
+
+A concrete baseline arises from Landauer‑type considerations for logically irreversible steps within the MPU cycle (cf. **Theorem 29** and Appendix J):
+
+* Example: a minimal $K_0=3$‑bit (or 3‑qubit) system operating at $C_{op}=K_0$ at $T\approx 300$ K and completing one logically irreversible operation per $\tau_{cyc}\approx 10^{-9}$ s has
+
+  $$
+  P_{min}\ \gtrsim\ k_B T (\ln 2)/\tau_{cyc}\ \approx\ (1.380649\times10^{-23}\,\mathrm{J/K})\,(300\,\mathrm{K})\,(0.693)/(10^{-9}\,\mathrm{s})
+  $$
+
+  $$
+  \approx\ 2.87\times 10^{-12}\ \mathrm{W}.
+  $$
+
+Any adaptive device with $C(t)\ge C_{op}$ dissipates at least this power. If available power falls below $P_{min}$, PCE dynamics reduce $C(t)$ beneath $C_{op}$, and predictive performance collapses (see Section D.3, work‑cost gap mechanism, and Theorem 31).
 
 
 **5.2 Minimal Complexity for Self-Reference and Prediction ($K_0$)**
@@ -54,55 +65,85 @@ Thus, these three capabilities ($b_m, b_p, b_v$) are jointly necessary as the lo
 
 The Horizon Constant $K_0$ will represent the minimal physical complexity required to instantiate these capabilities in a way that enables both the encoding of the SPAP self-referential loop and the achievement of predictive accuracy better than chance.
 
-**5.2.2 Theorem 15 (Minimal Complexity for SPAP Logic and Minimal Prediction ($K_0 = 3$ bits))**
+### 5.2.2 Theorem 15 (Horizon Constant: Minimal Complexity for SPAP Encodability and Minimal Prediction)
 
-Consider a computational framework capable of representing discrete states and implementing state transition functions based on internal computations (consistent with the requirements for Property R, Definition 10). The **Horizon Constant $K_0$** represents the minimum **Predictive Physical Complexity** $K$ (measured in bits) that allows a system to encode the SPAP loop and achieve long-run predictive accuracy strictly greater than the ½ baseline in every binary environment with conditional entropy $H(X_{t+1}\!\mid \mathbf{X_{\le t}})\; \le\; 1-\delta_{min}\quad\text{for some }\delta_{min}>0$. A system within this framework requires a state space capable of representing at least **8 distinct configurations**, corresponding to a minimal information capacity of **3 bits ($B_3$)**, to instantiate the minimal functional logic necessary for the deterministic self-referential paradox constructed in the proof of Theorem 10 (SPAP Encodability). Furthermore, this 3-bit complexity is demonstrated to be sufficient to achieve the required super-chance predictive performance. Thus, the Horizon Constant is:
-$$ K_0 = 3 \quad \text{(bits)} $$
+We first formalize operational prerequisites for SPAP encodability within the loop, then state the environment class used to certify minimal predictive success. The following operational conditions are posited not as arbitrary constraints, but as the minimal, necessary requirements for a robust and computationally efficient implementation of the SPAP sub-dynamics, consistent with the Principle of Compression Efficiency (PCE). Condition (O1) requires that the core computational steps of the sub-dynamic be logically reversible; this is a principle of maximal computational efficiency (cf. Landauer's principle) and is distinct from the overall thermodynamic irreversibility of the full MPU loop, which arises from the necessary state-merging and reset operations that close the cycle (as detailed in Appendix J). Conditions (O2) and (O3) are fundamental requirements for any reliable sequential computation, preventing race conditions and the destructive loss of information essential for the logical paradox.
 
+**Operational conditions (sub‑dynamics constraints).**
 
-*Proof:* The proof demonstrates both necessity ($\ge 3$ bits) and sufficiency ($\le 3$ bits). This explicit construction serves as a witness that the abstract MPU (Definition 23) can be realized with the stated properties, forming a consistent foundation for the framework.
+* **(O1) Injective stepping on the cycle.** The one‑cycle transition over the set of visited internal configurations is injective (lossless on‑cycle), i.e., logically reversible on the realized sub‑dynamics.
+* **(O2) Explicit two‑phase control.** The loop consists of two logically distinct phases—(prepare/predict/store) and (reflex/update)—distinguished internally by a control bit $c_{phase}$.
+* **(O3) Non‑destructive retention.** The current state component $\phi$ and the stored prediction $p_{stored}$ must coexist without destructive overwrite across the phase boundary.
 
-*   **(I) Necessity ($K_0 \ge 3$):** We show that fewer than 3 bits are insufficient to reliably implement the SPAP logic cycle.
-    1.  **Functional Requirements (for SPAP Logic):** Implementing the deterministic SPAP logic ($\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$, Equation 10) requires a system that can reliably execute a sequence involving: representing the current state component $\phi$; computing a prediction $\hat{\phi}$ based on the state; storing the prediction $\hat{\phi}$ distinctly from $\phi$; computing the next state $\phi_{next}$ using the stored $\hat{\phi}$; and updating the state component to $\phi_{next}$. This sequence requires distinguishing between different configurations corresponding to these operational phases, which are instantiations of the necessary logical capabilities $b_m, b_p, b_v$ (Proposition 5.2.1).
-    2.  **Minimum Configurations (for SPAP Logic):** To implement the SPAP logic reliably, the system must unambiguously encode the necessary data and control states. It requires: (a) A register for the state component $\phi \in \{0,1\}$; (b) A register for the stored prediction $p_{stored} \in \{0,1\}$; and (c) A control mechanism to sequence the operations (prediction generation, storage, reflexive update). A minimal implementation requires at least one control bit, $c_{phase} \in \{0,1\}$, to distinguish between the phase where the prediction is generated/stored and the phase where the state is reflexively updated based on that stored prediction.
-    The system must be able to represent all combinations of these elements to execute the cycle deterministically without information loss that would compromise the logic. The required distinct internal configurations are the combinations $(\phi, p_{stored}, c_{phase})$.
-    For example:
-       *   Phase 0 (e.g., $c_{phase}=0$): System computes and prepares to store prediction $\hat{\phi}_t$ based on $\phi_t$.
-       *   Phase 1 (e.g., $c_{phase}=1$): System uses the stored prediction $p_{stored}=\hat{\phi}_t$ to execute the update $\phi_{t+1} = \text{NOT}(p_{stored})$.
-    The total number of distinct configurations required to uniquely and unambiguously represent the full state space of this minimal self-referential process is $2 (\text{for } \phi) \times 2 (\text{for } p_{stored}) \times 2 (\text{for } c_{phase}) = 8$. The SPAP logic cycle constitutes a well-defined injective mapping over this 8-element domain.
-    3.  **Insufficiency of Fewer Bits (for SPAP Logic):** Any realization with fewer than 8 internal states (i.e., < 3 bits) cannot implement this injective mapping. By the pigeonhole principle, distinct logical configurations necessary for the SPAP cycle would be forced to map to the same physical state. This conflation would lead to ambiguity, loss of necessary information (e.g., overwriting the prediction before the update), or failure to implement the deterministic negation required by the SPAP construction. Therefore, $\lceil\log_2 8\rceil = 3$ independent bits are strictly necessary. A 3-bit system ($2^3=8$ states, consistent with $C_P = \log_2 d_0$ from Convention 1) provides the minimal sufficient capacity, corresponding to a Hilbert space of at least $d_0 = 8$ dimensions.
-    4.  **Necessity Conclusion:** Reliable implementation of the SPAP logical cycle requires a state space capable of representing at least 8 distinct configurations. The minimum integer number of bits providing this is 3 bits.
+Under (O1)–(O3), the minimal internal configuration domain for the SPAP sub‑dynamics is the set of triples $(\phi, p_{stored}, c_{phase})\in\{0,1\}^3$, yielding $2\times2\times2=8$ distinct configurations.
 
-*   **(II) Sufficiency ($K_0 \le 3$):** We demonstrate that a 3-bit system can satisfy both SPAP Encodability and the Super-Chance Predictive Performance criteria. Our simple 3-bit flip-on-error automaton (described below) adapts to any stationary environmental bias $\delta>0$ and achieves accuracy $>\text{½}$ almost surely.
-    1.  *SPAP Encodability:* As established in part (I.3), a 3-bit architecture (8 states) provides sufficient state space capacity to implement the necessary sequence of operations for the deterministic SPAP logic without ambiguity.
-    2.  *Super-Chance Performance Construction:* Consider an explicit three-bit state machine $\mathcal{M}$ with state tuple $(m, p, e) \in \{0, 1\}^3$. These bits represent: $m$: current internal model; $p$: provisional prediction; $e$: error flag. Let the environment produce a binary sequence $X_t$. The machine operates cyclically:
-        *   *Predict:* Output $\hat{X}_t = m$. Set $p \leftarrow m$.
-        *   *Observe:* Receive outcome $X_t$.
-        *   *Verify:* Compute error $e_{new} = (m \oplus X_t)$.
-        *   *Update Model:* If $e_{new}=1$, $m_{new} = 1 - m$. Else $m_{new} = m$.
-        *   *Store State:* Update to $(m_{new}, p, e_{new})$.
-    3.  *Performance Analysis:* This machine implements "flip-on-error." For environments with conditional entropy $H(X_{t+1}|X_{\le t}) \le 1-\delta_{min}$ (i.e., environments with discoverable regularities, not pure noise), its long-run average accuracy $A_T$ provably exceeds $1/2$. For stationary bias $\delta \neq 0$, $A_T \to 1/2+2\delta^{2}$. For general bias sequences with $\inf_t |\delta_t| \ge\delta_{min}>0$, concentration bounds show $\mathbb E[A_T]\ge\frac12+\delta_{min}/2$, and $A_T\!\xrightarrow{\mathrm{a.s.}}\!E[Z_\infty]\ge½+\delta_{min}/2>½$ ([Cesa-Bianchi & Lugosi 2006]). This strategy fails if $\delta_t$ changes sign too frequently without exploitable structure, but the assumed environment class $H(X_{t+1}|X_{\le t})<1-\delta_{min}$ rules this out.
-    4.  *Sufficiency Conclusion:* Since a 3-bit system can be constructed that meets both criteria, 3 bits are sufficient; hence $K_{0}\le3$. Together with $K_{0}\ge3$, we obtain $K_{0}=3$.
+**Environment class for minimal predictive success.**
 
-*   **Conclusion:** Since 3 bits are necessary (Part I) and sufficient (Part II) for a system to be a minimal predictor, the Horizon Constant is $K_0 = 3$ bits. This 3-bit complexity allows physical realization of the necessary logical capabilities $b_m, b_p, b_v$ (Proposition 5.2.1). QED
-**5.2.3 Corollary 3 (Relation Between Thresholds ($C_{op} \ge K_0$))**
+Let $(X_t)_{t\ge 0}$ be a binary process adapted to its natural history $\mathcal{H}_t = X_{\le t}$. Define the one‑step *persistence statistic*
 
-The **Operational Threshold $C_{op}$ (Definition 13)** must be greater than or equal to the Horizon Constant $K_0$ (Theorem 15):
-$$ C_{op} \ge K_0 = 3\,\text{bits} \quad \text{(17)} $$
-*Proof:* The adaptive Fundamental Predictive Loop (Definition 4) must, at minimum, embody the capabilities of the minimal predictor defined by $K_0=3$. Thus, $C_{op} \ge K_0$. If a target accuracy $\epsilon_{acc}$ (in Definition 13) is significantly higher than the minimal super-chance performance achievable at $K_0$ (e.g., $\epsilon_{acc} \gg \delta_{min}/2$ from Theorem 15 proof), $C_{op}$ will typically exceed $K_0$. This quantitative relationship can be foreshadowed by noting that achieving higher accuracy generally requires more complexity, consistent with the Law of Prediction (Theorem 19), potentially leading to an approximate scaling like $C_{op} \approx K_0 + O(\ln(1/\epsilon'_{acc}))$, where $\epsilon'_{acc}$ is the accuracy gap above the baseline $K_0$-level performance.
+$$
+s_t \;=\; \Pr\!\big[X_{t+1}=X_t\ \big|\ \mathcal{H}_t\big].
+$$
 
+For $\gamma>0$, define
 
-**Remark (Explicit Relation):** Because the Operational Threshold $C_{op}$ measures the physical complexity needed to reach a specified accuracy gap $\epsilon_{acc}>0$ (Definition 13), it must satisfy $C_{op}\ge K_{0}=3$.
+$$
+\mathcal{E}_{\mathrm{basic}}(\gamma)\;=\;\Big\{\text{stationary ergodic binary processes}\ :\ \liminf_{T\to\infty}\ \frac1T\sum_{t=0}^{T-1}\mathbb{E}[s_t]\ \ge\ \tfrac12+\gamma\Big\}.
+$$
 
-**5.2.4 Justification: SPAP/RUD Limits Apply Fundamentally to MPUs**
+This class includes, for example, i.i.d. Bernoulli($p$) with $p\neq \tfrac12$ (where $\mathbb{E}[s_t]=p^2+(1-p)^2$) and symmetric two‑state Markov chains with persistence $q>1/2$ (where $\mathbb{E}[s_t]=q$).
 
-The applicability of fundamental limits like SPAP (Theorem 10, Theorem 11) and Reflexive Undecidability (Theorem 12) to Minimal Predictive Units (MPUs) operating at complexity $C_{op}$ is crucial and follows from the interplay between their intrinsic structure and the optimizing dynamics of the network context.
+**Theorem 15.**
+Under (O1)–(O3), the **Horizon Constant** equals
 
-1.  **Necessary $K_0$ Structure (Logical Prerequisite):** By definition (Definition 23), an MPU operates at $C_{op}$. Since $C_{op} \ge K_0$ (Corollary 3), every MPU inherently possesses *at least* the minimal logical structure ($K_0 \equiv B_3$, Theorem 15) for self-referential processing.
-2.  **Effective Operational Realization (Computational Requirement):** Rigorous application of SPAP/RUD relies on the system's ability to *reliably execute* complex computational steps despite inherent ND-RID noise ($\varepsilon>0, f_{RID}<1$).
-3.  **POP/PCE Driven Network Optimization (Enabling Mechanism):** It is hypothesized (and argued in Appendix A.0) that POP/PCE dynamics favor MPU network configurations that function as a *reliable computational substrate*, enabling sufficient operational fidelity for SPAP/RUD arguments to hold effectively. (Further details on adaptation dynamics are in Section 6).
-4.  **Resulting Applicability:** Consequently, SPAP/RUD limitations apply fundamentally to MPUs due to their $K_0$ structure and the effective computational capability facilitated by the POP/PCE-optimized network.
-5.  **Foundation for Indeterminacy:** This grounds Hypothesis 2 (origin of quantum randomness) in Logical Indeterminacy encountered by MPUs.
+$$
+\boxed{K_0 = 3\ \text{bits}.}
+$$
+
+More precisely:
+
+1. (**SPAP Encodability—Necessity**). Any realization of the SPAP sub‑dynamics
+
+   $$
+   \phi_{t+1}=\mathrm{NOT}\big(p_{stored}\big)
+   $$
+
+   that satisfies (O1)–(O3) requires at least $8$ distinct internal configurations. Hence $C_P=\log_2 d_0 \ge \log_2 8=3$ bits.
+
+2. (**SPAP Encodability—Sufficiency**). There exists a three‑bit (eight‑state) architecture with state $(\phi, p_{stored}, c_{phase})$ whose two‑phase injective transition realizes the SPAP mapping without ambiguity.
+
+3. (**Minimal Predictive Success—Sufficiency on $\mathcal{E}_{\mathrm{basic}}(\gamma)$**). Within the same three‑bit architecture, a predictive mode implementing the *flip‑on‑error* (equivalently, *predict last outcome*) rule achieves long‑run accuracy strictly greater than $\tfrac12$ on every process in $\mathcal{E}_{\mathrm{basic}}(\gamma)$. In particular, its asymptotic accuracy equals the time‑average of $s_t$, which by stationarity/ergodicity converges almost surely to $\mathbb{E}[s_t]\ge\tfrac12+\gamma$.
+
+*Proof.*
+**(1) Necessity.** Under (O1)–(O3) the system must simultaneously and non‑destructively represent three logically independent bits across a phase boundary: (a) the state component $\phi\in\{0,1\}$; (b) a stored prediction $p_{stored}\in\{0,1\}$; and (c) a control phase bit $c_{phase}\in\{0,1\}$ that determines whether the machine is in the generate/store phase or in the reflex/update phase. The SPAP step $\phi_{t+1}=\mathrm{NOT}(p_{stored})$ must be executed in the update phase using the *previously stored* prediction. The on‑cycle injectivity (O1) forbids conflating any pair of distinct triples $(\phi,p_{stored},c_{phase})$ into a single physical configuration, as that would lose information and violate reversibility on the realized sub‑dynamics. By the pigeonhole principle, fewer than $2^3=8$ configurations are insufficient. Thus $C_P\ge \log_2 8=3$.
+
+**(2) Sufficiency.** Define an injective two‑phase transition on the eight‑state domain. In phase $c_{phase}=0$: compute a provisional prediction $\hat\phi=\phi$ and set $p_{stored}\leftarrow \hat\phi$, then toggle $c_{phase}\leftarrow 1$. In phase $c_{phase}=1$: update $\phi\leftarrow \mathrm{NOT}(p_{stored})$ and toggle $c_{phase}\leftarrow 0$. This realizes the SPAP sub‑dynamics as a permutation over the eight states, hence satisfies (O1)–(O3).
+
+**(3) Minimal Predictive Success—Sufficiency on $\mathcal{E}_{\mathrm{basic}}(\gamma)$**). Within the same three‑bit architecture, a predictive mode implementing the *flip‑on‑error* (equivalently, *predict last outcome*) rule achieves long‑run accuracy strictly greater than $\tfrac12$ on every process in $\mathcal{E}_{\mathrm{basic}}(\gamma)$. In particular, its asymptotic accuracy equals the time‑average of $s_t$, which by stationarity/ergodicity converges almost surely to $\mathbb{E}[s_t]\ge\tfrac12+\gamma$. This predictive rule, requiring at most one bit of memory for the model and additional bits for processing, can be readily implemented within the same three-bit architecture shown to be sufficient for SPAP encodability. Implementing this rule requires at most one model bit; a three‑bit architecture therefore suffices. ∎
+
+**Consequence.** The minimal **Predictive Physical Complexity** that (i) realizes SPAP as an internal, injective two‑phase sub‑dynamics and (ii) admits a predictive mode with super‑chance accuracy on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ equals **three bits**. This result, combined with Convention 1 ($C_P = \log_2 d_0$), provides the direct link from the logical requirement of 8 distinguishable states to the physical requirement of a minimal Hilbert-space dimension $d_0=8$.
+
+### 5.2.3 Corollary 3 (Relation Between Thresholds $C_{op}\ge K_0$)
+
+The **Operational Threshold** must satisfy
+
+$$
+\boxed{C_{op}\ \ge\ K_0\ =\ 3\ \text{bits}.}
+\tag{17}
+$$
+
+*Proof.* The adaptive Fundamental Predictive Loop (Definition 4) includes, as an internal sub‑dynamic, the SPAP logic and the capabilities $b_m,b_p,b_v, D_{cyc}$ (Definition 5; Proposition 5.2.1). By Theorem 15, the minimal $C_P$ that realizes this sub‑dynamic and permits super‑chance operation on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ is $K_0=3$. Therefore, any system meeting the Definition 13 criterion must have $C_P\ge 3$. ∎
+
+**Remark (Explicit Relation).** Since $C_{op}$ is defined as the minimal physical complexity that achieves a target accuracy gap $\epsilon_{acc}>0$ under the full loop, $C_{op}\ge K_0=3$. Achieving larger accuracy gaps generally requires additional structure; informally, in many regimes one expects $C_{op}\approx K_0 + O\!\big(\ln(1/\epsilon'_{acc})\big)$ (cf. Law of Prediction, Theorem 19), with constants depending on the environment class and $A(\cdot)$.
+
+### 5.2.4 Applicability of SPAP/RUD Limits to MPUs
+
+Minimal Predictive Units (MPUs) operating at or above $C_{op}$ inherit SPAP and Reflexive Undecidability (RUD) constraints through the following chain:
+
+1. **Embedded structure.** By design, every MPU at operational capacity possesses at least the $K_0\equiv B_3$ structure required for self‑referential processing (Theorem 15).
+2. **Effective realization under noise.** SPAP/RUD arguments rely on reliable execution of the sub‑dynamics despite ND‑RID noise ($\varepsilon>0,\ f_{RID}<1$); the operational loop provides the necessary computational regularity.
+3. **POP/PCE optimization.** POP/PCE dynamics favor MPU networks that function as reliable computational substrates (Appendix A.0), increasing the practical salience of SPAP/RUD limitations.
+4. **Conclusion.** SPAP/RUD constraints thus apply fundamentally to MPUs through their internal $K_0$ structure and the effective computation enabled by network optimization.
 
 **5.2.5 Theorem 16 (Universal Necessity of $C_{op}$ for Modeled Process)**
 
@@ -116,13 +157,12 @@ Any physical system exhibiting the operational characteristics modeled by the Pr
 6.  This prevents sustained adaptive operation with $PP > \alpha$, contradicting the initial assumption.
 7.  Therefore, any such system $S$ must have complexity $C(S) \ge C_{op}$. QED
 
-**Table 5.1: Summary of Complexity Thresholds and an Example Instantiation**
+### Table 5.1 — Complexity Thresholds and an Example Instantiation
 
-| Symbol   | Name                   | Logical Purpose                                               | Complexity (Bits) | Example: 3-Qubit MPU (Sec 7.1.3) |
-| :------- | :--------------------- | :------------------------------------------------------------ | :---------------- | :----------------------------------- |
-| $K_0$    | Horizon Constant       | Minimal self-reference core & basic super-chance prediction | Exactly 3         | Corresponds to $K_0=3$ structure     |
-| $C_{op}$ | Operational Threshold  | Full adaptive loop at target accuracy $\epsilon_{acc} > 0$    | $\ge K_0 = 3$     | Can be $C_{op}=K_0=3$ if $\epsilon_{acc}$ is minimal |
-
+|  Symbol  | Name                  | Logical Purpose                                                                                               | Complexity (Bits) | Example: 3‑Qubit MPU (Sec. 7.1.3)            |
+| :------: | :-------------------- | :------------------------------------------------------------------------------------------------------------ | :---------------- | :------------------------------------------- |
+|   $K_0$  | Horizon Constant      | Minimal SPAP sub‑dynamics (O1–O3) and basic super‑chance prediction on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ | Exactly 3         | $d_0=8$ Hilbert subspace, SPAP two‑phase map |
+| $C_{op}$ | Operational Threshold | Full adaptive loop at target margin $\epsilon_{acc}>0$                                                        | $\ge K_0=3$       | Can equal $K_0$ for minimal $\epsilon_{acc}$ |
 
 
 

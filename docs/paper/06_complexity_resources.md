@@ -133,7 +133,11 @@ The adaptation dynamics are governed by the **Principle of Compression Efficienc
 *   **Benefit ($V_{benefit}$):** The power-equivalent predictive benefit derived from the system's performance $PP$.
 The system's slow adaptation dynamics are modeled as a stochastic gradient flow seeking to minimize this potential: $dx(t) = -\eta(x) \nabla_x V(x) dt + \dots$ (Equation D.8).
 
-The **Adaptation Driving Force $\Psi(t)$** for the complexity component $C(t)$ is defined as the negative of the local gradient of this potential with respect to $C(t)$, representing the net incentive for complexity adaptation. It arises from the local imbalance between the marginal benefit of increased complexity and its marginal cost. We model the benefit term linearly in $PP$, so the benefit component of the PCE potential is $V_{benefit}=-\Gamma_0\,PP$ and its marginal contribution to the driving force is $\Gamma_0(\partial PP/\partial C)$. The Adaptation Driving Force is:
+The **Adaptation Driving Force $\Psi(t)$** for the complexity component $C(t)$ is defined as the negative of the local gradient of this potential with respect to $C(t)$, representing the net incentive for complexity adaptation. It arises from the local imbalance between the marginal benefit of increased complexity and its marginal cost. We model the benefit term linearly in $PP$, so the benefit component of the PCE potential is $V_{benefit}=-\Gamma_0\,PP$ and its marginal contribution to the driving force is $\Gamma_0(\partial PP/\partial C)$.
+
+We treat ‘nats’ as dimensionless. In Section 6, the MPU cycle cadence is absorbed into the performance gradient, so the conversion factor $\Gamma_0$ carries units of power. In Appendices G, W, and Z, where the per-cycle information benefit is analyzed, the cadence $\nu$ remains explicit and $\Gamma_0$ is an energy-scale; the combination $\Gamma_0\nu$ then has units of power. Dimensionless reporting uses ratios such as $(\Gamma_0\nu)/A_{PCE}$.
+
+The Adaptation Driving Force is:
 $$
 \Psi(t) = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
 $$

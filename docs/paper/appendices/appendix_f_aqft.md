@@ -135,9 +135,14 @@ AQFT provides the precise language to formulate PU's stance on locality, disting
     $$
     This dependence of local statistics on a distant context is a manifestation of correlations encoded in the global state $\omega$. Crucially, this does *not* violate operator locality (Corollary F.1), as the operators themselves still commute. The influence is mediated by the *state* $\omega$, not by superluminal propagation of effects through local operations.
 
-4.  **Compatibility with Operational Causality:** The compatibility between emergent operator locality (Corollary F.1) and the potential state-mediated influence (Equation F.4) is maintained mathematically within AQFT. Consistency with operational causality (Postulate 2 - no deterministic FTL signaling) is ensured by the constraints derived within the PU framework:
-    *   CC Bound: $\text{CC} \le \alpha_{CC,max} < 0.5$ (Theorem 39) prevents Alice from deterministically *forcing* Bob's outcome for any initial state, irrespective of entanglement.
-    *   ND-RID Information Limits: The underlying irreversible ND-RID interactions mediating state changes and correlations are subject to irreducible costs ($\varepsilon > 0$, Theorem 31), strict contractivity ($f_{RID} < 1$, Lemma E.1), and finite channel capacity ($C_{max} < \ln d_0$, Theorem E.2). As analyzed in Section 10 (Theorem 40, Theorem 41) and implied by the properties of channels in AQFT (Section F.2, Prop F.1), these limits fundamentally restrict the rate and fidelity of any potential information transfer via this mechanism, preventing the construction of deterministic signaling protocols required for causal paradoxes (Theorem 42).
+4.  **Compatibility with Operational Causality:** Operator locality together with local CP‑TP structure implies no‑signaling at the level of marginals: for any local CPTP map $\Phi_A$ on $A$,
+$$
+\operatorname{tr}_A\!\big[(\Phi_A\!\otimes\!\mathrm{id}_B)(\rho_{AB})\big]=\operatorname{tr}_A(\rho_{AB}),\qquad
+\big\|\operatorname{tr}_A[(\Phi_A^{(1)}\!\otimes\!\mathrm{id}_B)\rho]-\operatorname{tr}_A[(\Phi_A^{(2)}\!\otimes\!\mathrm{id}_B)\rho]\big\|_1=0,
+$$
+so Alice’s local choice cannot deterministically alter Bob’s marginal. Different contexts correspond to different global state preparations $\omega_{C_A}$ (not superluminal state updates), and consistency with operational causality (Postulate 2) is ensured by the constraints derived within the PU framework:
+   *   CC Bound: $\text{CC} \le \alpha_{CC,max} < 0.5$ (Theorem 39) prevents Alice from deterministically *forcing* Bob's outcome for any initial state, irrespective of entanglement.
+   *   ND-RID Information Limits: The underlying irreversible ND-RID interactions mediating state changes and correlations are subject to irreducible costs ($\varepsilon > 0$, Theorem 31), strict contractivity ($f_{RID} < 1$, Lemma E.1), and finite channel capacity ($C_{max} < \ln d_0$, Theorem E.2). As analyzed in Section 10 (Theorem 40, Theorem 41) and implied by the properties of channels in AQFT (Section F.2, Prop F.1), these limits fundamentally restrict the rate and fidelity of any potential information transfer via this mechanism, preventing the construction of deterministic signaling protocols required for causal paradoxes (Theorem 42).
 
 AQFT formalizes how emergent operator locality for observables coexists with constrained state-mediated statistical non-locality for expectations and outcome probabilities. The influence is in the preparation of the global state ensemble, not in the local interaction rule.
 

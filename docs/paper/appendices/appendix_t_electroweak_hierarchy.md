@@ -252,7 +252,7 @@ $$
 Two mechanisms ensure $m_{\rm bulk}^2(\ell)$ becomes negative at large $\ell$:
 
 1. **One-loop negativity.** From (T.12), the loop term $-\beta_2$ is strictly negative for a stable quartic coupling ($\lambda_\ell>0$). This is a universal feature of the RG flow for such theories.
-2. **Monotone susceptibility.** The bulk mass is $m_{\rm bulk}^2(\ell)=2[A_2(\ell)-1/(2\kappa_2(\ell))]$. The emergent ferromagnetic structure (derived in T.2.4) allows for Griffiths/FKG-type inequalities [Griffiths 1967; Fortuin, Kasteleyn & Ginibre 1971], which provide a strong physical argument that the block susceptibility $\kappa_2(\ell)$ (a measure of correlated fluctuations) is non-decreasing in the block size $\ell$. If the cost coefficient $A_2(\ell)$ varies slowly with scale, the difference $A_2 - 1/(2\kappa_2)$ will necessarily decrease and turn negative once the susceptibility $\kappa_2$ grows sufficiently large. This monotonicity uses positive association (FKG/attractiveness) of the symmetric-phase Gibbs measure induced by the ND–RID penalties with $J_{int}>0$ ferromagnetic couplings.
+2. **Monotone susceptibility.** The bulk mass is $m_{\rm bulk}^2(\ell)=2[A_2(\ell)-1/(2\kappa_2(\ell))]$. The emergent ferromagnetic structure (derived in T.2.4) allows for Griffiths/FKG-type inequalities [Griffiths 1967; Fortuin, Kasteleyn & Ginibre 1971], which provide a strong physical argument that the block susceptibility $\kappa_2(\ell)$ (a measure of correlated fluctuations) is non-decreasing in the block size $\ell$. If the cost coefficient $A_2(\ell)$ decreases with scale due to bulk cost renormalization, then together with the one‑loop negativity (T.12) the combination $m_{\rm bulk}^2(\ell)=2A_2(\ell)-1/\kappa_2(\ell)$ decreases and turns negative at large $\ell$; by contrast, growth of $\kappa_2$ alone would increase $m_{\rm bulk}^2$ for fixed $A_2$. This monotonicity uses positive association (FKG/attractiveness) of the symmetric-phase Gibbs measure induced by the ND–RID penalties with $J_{int}>0$ ferromagnetic couplings.
 
 At small scales, the boundary term $2B/\ell$ is large and positive, keeping $m_\ell^2>0$. As $\ell$ grows, this geometric term dilutes, and the negative bulk drift dominates, guaranteeing a zero-crossing at some finite critical scale $\ell^*$.
 
@@ -382,7 +382,8 @@ so a representative value is $c_W\simeq 0.019$ for the standard cubic block. Hen
 
 ## T.9 Falsifiable Signature of the Mechanism
 
-The boundary coefficient $B$ is sensitive to the cost of inter-MPU communication, which is inversely related to the ND–RID channel capacity $C_{\max}$. Increasing $C_{\max}$ reduces boundary penalties and typically increases the susceptibility $\kappa_2$, leading to a lower value for $B$ and a more negative bare bulk mass $m_b^2$. From the structure of (T.14)–(T.17), both effects decrease the critical scale $\ell^*$ and therefore increase the VEV $v$:
+The boundary coefficient $B$ is sensitive to the cost of inter-MPU communication, which is inversely related to the ND–RID channel capacity $C_{\max}$. Increasing $C_{\max}$ reduces boundary penalties, lowering $B$. If, in addition, the bulk ordering cost $A_2(C_{\max})$ decreases with $C_{\max}$ (reflecting cheaper coordination), then $m_b^2=2A_2-1/\kappa_2$ decreases despite the typical increase of $\kappa_2$; growth of $\kappa_2$ alone would raise $m_b^2$ at fixed $A_2$. Under these conditions, both effects decrease the critical scale $\ell^\*$ and therefore increase the VEV $v$:
+
 $$
 \boxed{\ \frac{\partial \ln v}{\partial \ln C_{\max}}>0\ }.
 \tag{T.18}

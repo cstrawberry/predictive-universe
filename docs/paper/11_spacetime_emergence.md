@@ -16,7 +16,8 @@ We define a metric distance $d_{\mathcal{N}}(u,v)$ between any two MPUs $u, v \i
 $$
 d_{\mathcal{N}}(u,v) = \min_{\gamma: u \to v} \sum_{(x,y) \in \gamma} \ell_0 w_{xy} \quad \text{(64)}
 $$
-where the minimum is over all finite paths $\gamma$ connecting $u$ and $v$. Since $\ell_0 > 0$ and $w_{xy} > 0$, $d_{\mathcal{N}}$ is a valid metric on $\mathcal{V}$. It reflects effective distance based on the difficulty of reliable information transfer via ND-RID.
+where the minimum is over all finite paths $\gamma$ connecting $u$ and $v$. Assuming symmetric positive edge weights $w_{xy}=w_{yx}>0$ and finiteness, the shortest‑path construction defines a valid metric on $\mathcal{V}$. 
+When $w_{xy}$ encode throughput (inverse delay), use costs $c_{xy}:=1/w_{xy}$ in the path length; the metric statement then applies to the cost weights $c_{xy}$. It reflects effective distance based on the difficulty of reliable information transfer via ND-RID.
 
 **11.3 Geometric Regularity: A Necessary Condition for Viability**
 
@@ -46,8 +47,8 @@ Assuming the necessary geometric regularity holds (Theorem 43), mathematical con
 
 **11.4.1 Theorem 44 (Gromov-Hausdorff Limit)**
 
-**Conditional on Theorem 43**, consider a sequence of pointed, rescaled MPU network metric spaces $\{(X_n, o_n) = (\mathcal{V}_n, \delta_{eff, n}^{-1} d_{\mathcal{N}_n}, o_n)\}$ where mesh size $\delta_{eff, n} \to 0$. Geometric regularity ensures pre-compactness in the pointed Gromov-Hausdorff (pGH) topology [Gromov 1999]. Consequently, a subsequence converges in pGH sense to a limit pointed metric space $(M, d_\infty, o_\infty)$. This limit space $(M, d_\infty)$ is complete, locally compact, rectifiably connected, possesses integer Hausdorff dimension $D$ (matching volume growth exponent), and at $\mathcal{H}^D$-almost every point $p \in M$, the tangent cone is metrically isometric to Euclidean $\mathbb{R}^D$.
-*Proof:* Geometric regularity provides uniform volume doubling and Ricci lower bound, satisfying conditions of Gromov's Precompactness Theorem. Properties of the limit space follow from Cheeger-Colding structure theory for metric spaces with Ricci bounds [Cheeger & Colding 1997, 2000]. QED
+**Conditional on Theorem 43**, consider a sequence of pointed, rescaled MPU network metric spaces $\{(X_n, o_n) = (\mathcal{V}_n, \delta_{eff, n}^{-1} d_{\mathcal{N}_n}, o_n)\}$ where mesh size $\delta_{eff, n} \to 0$. Geometric regularity provides uniform volume doubling and a Poincaré‑type inequality (synthetic Ricci lower bound), ensuring pre‑compactness in the pointed Gromov–Hausdorff (pGH) topology \[Gromov 1999]. Consequently, a subsequence converges in pGH sense to a limit pointed metric space \$(M, d\_\infty, o\_\infty)\$. This limit space \$(M, d\_\infty)\$ is complete, locally compact, rectifiably connected, possesses integer Hausdorff dimension \$D\$ (matching volume growth exponent), and, under a uniform non‑collapsing normalization, at \$\mathcal{H}^D\$‑almost every point \$p \in M\$ the tangent cone is metrically isometric to Euclidean \$\mathbb{R}^D\$.
+*Proof:* Geometric regularity provides uniform volume doubling and Ricci lower bound, satisfying conditions of Gromov's Precompactness Theorem. Properties of the limit space follow from structure theory for spaces with synthetic Ricci bounds (e.g., Cheeger–Colding; RCD\$(K,N)\$ frameworks) [Cheeger & Colding 1997, 2000].
 
 **11.5 Emergence of the Metric Tensor (Conditional on Thm 43, Thm 44)**
 
@@ -68,8 +69,12 @@ The emergent metric $g_{\mu\nu}$ inherits its signature from the causal structur
 
 **11.6.1 Theorem 46 (Lorentzian Metric and Speed $c$)**
 
-The causal structure inherent in ND-RID interactions imposes a finite, invariant maximum speed $c$ for causal influence propagation across the emergent manifold $(M, g_{\mu\nu})$. Finiteness arises from minimum MPU processing time $\tau_{\min} > 0$ (Theorem 29) and minimum positive link cost $w_{\min} > 0$ (consequence of $\varepsilon > 0$, Theorem 31). Maximum speed is approximately $c \approx \ell_0 / \tau_{min}$ (up to factors from $w_{min}$, geometry). Existence of finite invariant $c$ requires $g_{\mu\nu}$ to be indefinite (pseudo-Riemannian), admitting non-trivial null cones ($ds^2 = 0$ for non-zero $dx^\mu$). Given time directionality (Theorem 4) and assuming emergent dimension $D=4$ (empirical), the signature is necessarily Lorentzian (conventionally $(-+++)$ or $(+---)$).
-*Proof:* Finite MPU cycle time $\tau_{min}$ and minimum link cost $w_{min}$ imply maximum physical propagation speed $c_{max} \lesssim \ell_0 w_{min} / \tau_{min}$ in the discrete network. This manifests as finite invariant speed $c$ in the continuum limit. An invariant speed $c$ geometrically defines null cones, requiring an indefinite metric $g_{\mu\nu}$. In D=4, established time directionality selects the Lorentzian signature with one time and three space dimensions. QED
+The causal structure inherent in ND-RID interactions imposes a finite, invariant maximum speed $c$ for causal influence propagation across the emergent manifold $(M, g_{\mu\nu})$. Finiteness arises from the minimum MPU processing time $\tau_{min}>0$ (Theorem 29) together with uniform weight bounds $0 < w_{min} \le w_{xy} \le w_{max} < \infty$ supplied by geometric regularity (Defs. 36–37). Interpreting $w_{xy}$ as throughput (inverse delay), the per‑edge time is at least $\tau_{min}/w_{xy}$, so the characteristic speed scales as
+$
+c \approx (\ell_0\, w)/\tau_{min},
+$
+and is controlled above by $w_{max}$ (up to geometric factors). Existence of finite invariant $c$ requires $g_{\mu\nu}$ to be indefinite (pseudo-Riemannian), admitting non-trivial null cones ($ds^2 = 0$ for non-zero $dx^\mu$). Given time directionality (Theorem 4) and assuming emergent dimension $D=4$ (empirical), the signature is necessarily Lorentzian (conventionally $(-+++)$ or $(+---)$).
+*Proof:* Finite MPU cycle time $\tau_{min}$ and minimum link cost $w_{min}$ imply maximum physical propagation speed $c_{max} \lesssim \ell_0\, w_{max}/\tau_{min}$ in the discrete network (with $w_{xy}$ understood as inverse delay; if one works directly with delay costs $c_{xy}=1/w_{xy}$, the equivalent bound is $c_{max}\lesssim \ell_0/(\tau_{min}\, c_{min})$). This manifests as finite invariant speed $c$ in the continuum limit. An invariant speed $c$ geometrically defines null cones, requiring an indefinite metric $g_{\mu\nu}$. In D=4, established time directionality selects the Lorentzian signature with one time and three space dimensions. QED
 
 **11.7 Spacetime Curvature as Predictive Holonomy (Conditional on Thm 43, Thm 45)**
 

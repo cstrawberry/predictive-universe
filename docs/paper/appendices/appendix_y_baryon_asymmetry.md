@@ -29,14 +29,14 @@ In any PU cosmology satisfying the emergence of spacetime (§11) and gravity (§
    \partial_\mu J_{B+L}^\mu \;=\; 2 N_g\,\frac{g^2}{32\pi^2}\, W^a_{\mu\nu}\tilde W^{a\mu\nu}, \tag{Y.1}
    $$
 
-   i.e., $B{+}L$ is violated by topological transitions (sphalerons) [’t Hooft 1976; Klinkhamer & Manton 1984].
+   i.e., $B{+}L$ is violated by topological transitions (sphalerons), with per‑generation coefficients $C_B=C_L=1$ implying $C_{B+L}=2$ in (Y.1) [’t Hooft 1976; Klinkhamer & Manton 1984].
    If right‑handed neutrinos are *not* in the block content, the mixed gravitational anomaly can induce $B{-}L$ violation:
 
    $$
    \partial_\mu J_{B-L}^\mu \;=\; c_{\rm grav}\, R\tilde R\;+\;c_Y\,F_Y\tilde F_Y, \tag{Y.2}
    $$
 
-   with coefficients fixed by the block’s charges (Lemma R.IDX2). If $\nu_R$ are included, $B{-}L$ is anomaly‑free and (Y.2) vanishes.
+   with coefficients fixed by the block’s charges (Lemma R.IDX2). If $\nu_R$ are included, all mixed gauge and gravitational anomalies cancel, hence (Y.2)$=0$.
 
 2. (**C and CP violation**) The predictive‑frame connection carries generic complex holonomies; CP invariance requires measure‑zero phase constraints. Thus generic PU blocks violate CP without extra fields (this is the standard “complex phase is generic” statement, now anchored in the $G$–principal bundle of Conjecture G.M1).
 
@@ -74,7 +74,7 @@ In any history where the gauge field asymptotes to pure gauges on $\Sigma_{i,f}$
 **Proposition Y.3 (Out‑of‑equilibrium + CP violation ⇒ nonzero $\langle \Delta N_{CS}\rangle$).**
 Assume the electroweak sector is in a locally thermal but *driven* (KMS‑oriented) state due to expansion/horizon exchange (§12), and the predictive measure is CP‑asymmetric (generic in PU). Then the CP‑odd scalar $W\tilde W$ has a nonvanishing expectation in linear response, producing a nonzero **drift** of the Chern–Simons number and hence a net $\langle\Delta(B{+}L)\rangle\neq 0$ via (Y.3).
 
-*Proof (linear‑response sketch).* In a CP‑symmetric state, $\langle W\tilde W\rangle=0$ by parity. A CP‑odd perturbation (generic complex holonomy in the predictive connection) plus a time‑oriented KMS driving modifies the Kubo two‑point kernel so that the CP‑odd correlator $\langle K^0; \mathcal H_{\text{drive}}\rangle$ is nonzero. Since $\dot N_{CS}=\int d^3x\,\partial_0 K^0=\int d^3x\,W\tilde W$, the expectation drifts with sign fixed by the CP‑odd part of the response. No new operators are introduced—this is standard anomaly‑induced transport under nonequilibrium. ∎
+*Proof (linear‑response sketch).* In a CP‑symmetric state, $\langle W\tilde W\rangle=0$ by parity. A CP‑odd perturbation (generic complex holonomy in the predictive connection) plus a time‑oriented KMS driving modifies the Kubo two‑point kernel so that the CP‑odd correlator $\langle K^0; \mathcal H_{\text{drive}}\rangle$ is nonzero. Since $\dot N_{CS}=\int d^3x,\frac{g^2}{32\pi^2},W\tilde W$, the expectation drifts with sign fixed by the CP‑odd part of the response. No new operators are introduced—this is standard anomaly‑induced transport under nonequilibrium. ∎
 
 
 ---
