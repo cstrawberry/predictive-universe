@@ -142,17 +142,35 @@ Any proposed alternative algebraic structure for prediction (e.g., classical pro
 
 Having established the necessity of a complex Hilbert space $\mathcal{H}$ and the Born rule from PCE principles, we now derive the origin of gauge symmetries.
 
-**Conjecture G.M1 (Predictive frame changes form a principal bundle; SM group from block‑structure).**
-Let $\mathcal P\to M$ be the bundle whose fiber at $x$ consists of *predictive partitions* (orthogonal decompositions of the local MPU Hilbert space, see Definition G.1.1) that **preserve PCE** under refinements.
-(i) The group $G_x$ of local transformations of predictive frames that preserve the predictive state $\omega$ and PCE acts **freely and transitively** on the fiber, making $\mathcal P$ a **principal $G$‑bundle**.
-(ii) A minimal‑change condition for transporting frames (PCE‑least–action) defines a **connection form $A$** on $\mathcal P$; the curvature $F=dA+A\wedge A$ is the emergent **field strength**.
-(iii) If the local MPU module decomposes as $H_x \cong \mathbb C\oplus \mathbb C^2\oplus \mathbb C^3$ and PCE enforces **determinant‑neutrality** on the non‑abelian blocks (i.e., PCE penalizes volume-distorting transformations on these blocks, selecting special unitary subgroups), then
-
+**Conjecture G.M1 (SM gauge group from PCE cost minimization under the Local Module Hypothesis).**
+Let $\mathcal P\to M$ be the bundle of predictive frames that **preserve PCE** under refinements. The fiber consists of **ordered, PCE‑adapted orthonormal frames**, on which the group of frame transformations acts freely.
+(i) The group $G_x$ of local predictive‑frame transformations that preserve the predictive state $\omega$ acts **freely and transitively** on the fiber, making $\mathcal P$ a **principal $G$‑bundle**.
+(ii) A PCE‑least‑action transport defines a **connection** $A$ on $\mathcal P$ with curvature $F=dA+A\wedge A$.
+(iii) **Local Module Hypothesis (LMH).** If the local MPU Hilbert space decomposes as a direct sum of predictive modules $H_x\cong \mathbb C\oplus\mathbb C^2\oplus\mathbb C^3$ (as expected when predictive partitions decouple to leading order under PCE locality) and the predictive‑frame symmetry acts **locally** as a product group
 $$
-G \ \cong\ U(1)\times SU(2)\times SU(3).
+G\ \cong\ G_1\times G_2\times G_3,
 $$
+then the total PCE coherence cost **adds** across modules.
+*Partition‑to‑Module Lemma.* If a predictive partition $\mathcal H=\bigoplus_i \mathcal H_i$ saturates the PCE locality bound and inter‑module predictive mutual information vanishes at leading order, then there exists a local frame in which PCE coherence costs **add** across modules up to higher‑order corrections: $\mathcal C\big(\bigoplus_i\mathcal H_i\big)=\sum_i \mathcal C(\mathcal H_i)+O(\epsilon_{\rm int})$.
 
-*Proof (Sketch).* (i) PCE-preserving frame changes are precisely the fiber automorphisms that leave the predictive weights invariant; by construction the action is free and transitive. (ii) Define parallel transport by minimizing the second-order PCE cost along curves; horizontal spaces give a principal connection. (iii) The block-diagonal stabilizer of the predictive inner product on $\mathbb C\oplus \mathbb C^2\oplus \mathbb C^3$ is $U(1)\times U(2)\times U(3)$; enforcing determinant-neutrality on non-abelian blocks reduces to $SU(2)\times SU(3)$. For a worked example, the stabilizer of the inner product on the block $H_B = \mathbb{C}^2$ is $U(2)$. A transformation $U \in U(2)$ acts on the volume form as $\det(U)$. PCE penalizes transformations that do not preserve this volume form, selecting the subgroup where $\det(U)=1$ (the overall abelian phase is carried by the separate $U(1)$ factor), which is $SU(2)$. This specific block structure is conjectured to be the minimal, most efficient representation for the fundamental predictive roles required by PCE, a claim further substantiated by the global optimization analysis in Section G.8. ∎
+For a simple compact factor $G_i$ acting irreducibly on an $n$‑dimensional module, we posit a PCE-motivated cost functional. All quadratic Casimirs $C_2$ below use the standard physics convention (long roots of length‑squared 2; for $SU(N)$, $\mathrm{Tr}(T_aT_b)=\tfrac{1}{2}\delta_{ab}$). A minimal, physically motivated form is:
+$$
+\mathcal C(G_i)=\frac{n}{n+1}\,C_2(U_i),
+$$
+where $C_2(U_i)$ is the quadratic Casimir of the representation $U_i$ of $G_i$ on $\mathbb{C}^n$. This form follows from the PCE risk expansion on complex projective space $\mathrm{CP}^{n-1}$: the expected second‑order predictive loss along Killing‑normalized generators scales as $\frac{n}{n+1}\mathrm{Tr}\big(\sum_a H_a^2\,\rho\big)=\frac{n}{n+1}C_2(U_i)$; cross‑module terms vanish under the Lemma above. For $U(1)$, we use the aggregate cost over fields: $\mathcal C_{U(1)}\propto \sum_{\text{fields}} (\text{multiplicity})\cdot Y^2$.
+
+**Minimization under LMH** yields:
+*   On $\mathbb C^2$: The unique simple option with a faithful 2‑dimensional complex irrep is $SU(2)$. Minimal cost selects the fundamental representation with $C_2(SU(2)_{\mathbf{2}})=\frac{3}{4}$.
+*   On $\mathbb C^3$: Candidates are $SU(3)$ in the fundamental and $SU(2)$ in the spin-1 (adjoint) representation. The respective costs are:
+    $$
+    \mathcal C(SU(3)_{\mathbf{3}}) = \frac{3}{4}\,C_2(SU(3)_{\mathbf{3}})=\frac{3}{4}\cdot\frac{4}{3}=1
+    \quad<\quad
+    \mathcal C(SU(2)_{j=1})=\frac{3}{4}\,C_2(SU(2)_{j=1})=\frac{3}{4}\cdot 2=\frac{3}{2}.
+    $$
+    PCE selects the lower-cost option, $SU(3)$. Thus, the non‑abelian part is **$SU(2)\times SU(3)$** acting in fundamentals.
+*   **Abelian factor:** A **single** non‑trivial $U(1)$ factor is **sufficient** and **cost‑minimal** for SM‑like chiral content. With a common proportionality constant across abelian sectors, **any additional non‑trivial $U(1)$** strictly increases the abelian cost; hence one and only one $U(1)$ is cost‑minimal.
+
+**Note on irreducible competitors.** Competing **simple** groups acting irreducibly on $\mathbb C^5 \cong \mathbb C^2 \oplus \mathbb C^3$ (e.g., $SU(5)$) are disfavored by the cost (2.0 vs 1.5) and **ruled out** in PU by the **capacity bound** ($\dim SU(5)=24 > n_{\max}$, Eq. G.8.0). Orthogonal/symplectic alternatives have real/pseudoreal fundamentals that obstruct the required **chirality**, providing a second, independent exclusion. ∎
 
 For the simplest case of a single predictive field, the group of PCE-preserving automorphisms is $U(1)$. The physical predictions (probabilities $p_i$) derived from a state vector $|\Psi(x)\rangle$ depend only on the squared amplitudes. This implies an inherent redundancy: multiplying the state vector by a local phase factor leaves all local physical predictions unchanged:
 $$
@@ -209,9 +227,11 @@ $$
 F_{\mu\nu}(x) = \partial_{\mu}A_{\nu}(x) - \partial_{\nu}A_{\mu}(x)
 \quad \text{(G.5.1)}
 $$
+*Convention.* We absorb the coupling into the covariant derivative: $D_\mu=\partial_\mu+i\,q\,A_\mu$. Then $A_\mu\mapsto A_\mu-\partial_\mu\theta$ and $\psi\mapsto e^{iq\theta}\psi$. In the non‑abelian case, $D_\mu=\partial_\mu+i\,g\,A_\mu^aT^a$ and $F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu+i g\,[A_\mu,A_\nu]$; in differential‑form notation with anti‑Hermitian $A$, $F=dA+A\wedge A$.
+
 This $F_{\mu\nu}$ is automatically gauge invariant under the transformation Equation (G.4.2):
-$F'_{\mu\nu} = \partial_{\mu}A'_{\nu} - \partial_{\nu}A'_{\mu} = \partial_{\mu}(A_{\nu} - \frac{1}{q}\partial_{\nu}\theta) - \partial_{\nu}(A_{\mu} - \frac{1}{q}\partial_{\mu}\theta)$
-$F'_{\mu\nu} = (\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}) - \frac{1}{q}(\partial_{\mu}\partial_{\nu}\theta - \partial_{\nu}\partial_{\mu}\theta) = F_{\mu\nu}$ (since partial derivatives commute).
+$F'_{\mu\nu} = \partial_{\mu}A'_{\nu} - \partial_{\nu}A'_{\mu} = \partial_{\mu}(A_{\nu} - \partial_{\nu}\theta) - \partial_{\nu}(A_{\mu} - \partial_{\mu}\theta)$
+$F'_{\mu\nu} = (\partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}) - (\partial_{\mu}\partial_{\nu}\theta - \partial_{\nu}\partial_{\mu}\theta) = F_{\mu\nu}$ (since partial derivatives commute).
 The unique quadratic Lorentz invariant constructed from $F_{\mu\nu}$ is $F_{\mu\nu}F^{\mu\nu}$. The contribution to the PCE potential density (a cost) associated with field strength should be positive definite (penalizing strong fields for stability) and typically quadratic in fields for linear equations of motion. A plausible form arising from minimizing $V(x)$ components is $\mathcal{V}_{field} = \frac{1}{4\kappa_F} F_{\mu\nu}F^{\mu\nu}$, where $\kappa_F > 0$ is an effective coupling strength (a positive constant because PCE penalizes this field strength as a resource cost). The corresponding term in the action functional (whose variation gives equations of motion, and which is related to $-\int \mathcal{V}_{field} dV dt$ integrated over spacetime volume) is:
 $$
 S_{\text{field}}[A] = \int d^{D}x\,\sqrt{-g}\;\left(-\frac{1}{4\kappa_F} F_{\mu\nu}(x)F^{\mu\nu}(x)\right)
@@ -447,21 +467,37 @@ A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 4.  **Information Efficiency:** $D$ should optimize information‑theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor $D=4$.
 5.  **Potential Minimization:** Among all triplets $(G,{\psi},D)$ satisfying (1)–(4), the optimal solution minimizes $V_{net}$ given by Eq. G.8.5.
 
-### G.8.5 The Standard Model in D=4 as a Unified PCE Optimum
+### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 
 The PU framework provides a robust, multi-layered argument for the co-selection of D=4 spacetime and the Standard Model gauge group with its specific fermion content and three-generation structure. This selection is a derived consequence of minimizing the global PCE potential under the standing principles of compression efficiency and predictive invariance.
 
 1.  **Primacy of D=4 for Structural Stability and Information Efficiency:**
     As argued in Sections G.8.2.4 and G.8.2.5, D=4 is strongly and uniquely favored by PCE. It is the dimension that robustly supports stable, complex MPU aggregates (via inverse-square force structure) and favorable network information efficiency. These factors make D=4 the unique, stable dimensional arena for a complex, predictive universe.
 
-2.  **Selection of $G_{SM}$ and three generations within D=4:**
-    Within the stable D=4 arena, PCE selects the optimal gauge group and matter content by minimizing the potential (Eq. G.8.5) subject to capacity and consistency constraints.
-    *   **Gauge group $G_{SM}$.** The SM group $G_{SM}=SU(3)\times SU(2)\times U(1)$ emerges as a PCE “sweet spot.” Its dimension $n_G=12$ fits within the MPU network’s information capacity limit, it realizes the minimal set of predictive roles (confining, chiral, long-range), and its specific fermion content is anomaly-free in D=4.
-    *   **Three generations (unique minimizer).** Appendix R (Section R.3.5) shows—using only standing PCE principles together with a standard MDL replication lemma—that (i) the smallest nontrivial anomaly-consistent family structure is $N=3$ with offsets $\{a,-a,0\}$, (ii) abelian “doping” is disfavored, and (iii) there exists a **non-empty open region** of PCE weights for which the global potential attains a **unique** minimum at exactly **three generations**.
+2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
+    Within the stable D=4 arena, PCE selects the optimal gauge group and matter content subject to capacity and consistency constraints.
+    *   **Gauge group $G_{SM}$.** By the cost‑minimization principle under Conjecture G.M1 and the Local Module Hypothesis, the non‑abelian part is $SU(2)\times SU(3)$ acting in fundamentals; adding **exactly one** non‑trivial $U(1)$ factor is sufficient and cost‑minimal for SM‑like chiral content. The total generator count $n_G=12$ lies within the information‑capacity range (see §G.8.2).
+    *   **Hypercharge Uniqueness (one chiral family, no $n^c$).** Let the left‑chiral hypercharges be $y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c}$. Imposing cancellation of all local and mixed gauge and gravitational anomalies in $D=4$ yields the constraints:
+        $$
+        \begin{aligned}
+        &SU(3)^2U(1):\quad 2y_q+y_{u^c}+y_{d^c}=0,\\
+        &SU(2)^2U(1):\quad N_c y_q+y_\ell=0,\\
+        &\text{grav}^2U(1):\quad 2N_c y_q+N_c y_{u^c}+N_c y_{d^c}+2y_\ell+y_{e^c}=0,\\
+        &U(1)^3:\quad N_c(2y_q^3+y_{u^c}^3+y_{d^c}^3)+2y_\ell^3+y_{e^c}^3=0.
+        \end{aligned}
+        $$
+        Treating $N_c$ as a variable, the anomaly constraints admit the family $y_\ell=-N_c y_q,\ y_{e^c}=2N_c y_q,\ y_{d^c}=(N_c-1)y_q,\ y_{u^c}=-(N_c+1)y_q$. Witten’s global $SU(2)$ anomaly enforces $N_c+1$ even $\Rightarrow N_c$ odd. PU’s capacity bound $n_G=(N_c^2-1)+3+1\le n_{\max}$ (Eq. G.8.0) implies $N_c^2\le 9$ for $n_{\max}=12$, so $N_c\le 3$. Because PU’s predictive-role taxonomy requires a confining non‑abelian sector to stabilize MPU aggregates, $N_c=1$ is excluded; hence with $N_c$ odd and $N_c\le 3$ we obtain **$N_c=3$**. With $N_c=3$, the PCE cost of the hypercharge configuration, modeled as being proportional to the sum of squared charges, $S \propto \sum_i n_i y_i^2$, is equal for both anomaly‑allowed branches. Choosing the conventional SM branch gives, up to an overall normalization/sign factor, the unique Standard Model hypercharge assignments:
+        $$
+        y_q=\tfrac{1}{6},\quad y_{u^c}=-\tfrac{2}{3},\quad y_{d^c}=\tfrac{1}{3},\quad y_\ell=-\tfrac{1}{2},\quad y_{e^c}=1.
+        $$
+        This solution is also consistent with the global $SU(2)$ anomaly (4 doublets/family).
 
-3.  **Confluence and co-selection:**
-    D=4 provides the stable arena; within it, the SM gauge group with its chiral fermion content is PCE-efficient, and the family replication uniquely selected by PCE is $N=3$.
+    *   **PCE Corollary – Singlet Neutrality.** Assigning non‑zero hypercharge to a pure non‑abelian singlet increases PCE cost without predictive gain; the minimum sets the hypercharge of any potential sterile right-handed neutrino to zero.
+    *   **Three Generations (Unique Minimizer).** Appendix R (Section R.3.5) shows—using PCE together with a standard MDL replication lemma—that (i) the smallest nontrivial anomaly-consistent family structure is $N=3$ with offsets $\{a,-a,0\}$, (ii) abelian “doping” is disfavored, and (iii) there exists a **non-empty open region** of PCE weights for which the global potential attains a **unique** minimum at exactly **three generations**.
 
+3.  **Confluence and Co-selection:**
+    D=4 provides the stable arena; within it, the SM gauge group with its uniquely determined chiral fermion content is PCE-efficient, and the family replication uniquely selected by PCE is $N=3$.
+    
 ### G.8.6 Emergent Couplings and Masses
 
 The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yukawas are determined by the location and depth of the PCE minimum. Computing these from first principles requires evaluating the D-dependent coefficients in the PCE potential (Eq. G.8.5) from MPU microdynamics. The ratios between these couplings are further constrained by the PCE optimization, a topic explored in **Appendix W**, and a concrete, attractor-matched estimate for the fine-structure constant is provided in **Appendix Z** (with order‑unity matching fixed at the PCE capacity point).

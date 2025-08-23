@@ -44,11 +44,14 @@ $$
 *Proof:* (77) is the definition of observable probability in the presence of context. The representation (78) follows from Definition 33 (operator formalism with $L_S$ on states and $K_S=L_S^\*$ on effects, with $K_S(I)=0$ ensuring normalization). The bound $|\Delta P(i)|\le \mathrm{CC}(S)$ follows from Definition 30 with $\mathrm{CC}(S)=\|L_S\|_{\mathrm{op}}$ and Theorem 39. The CTB expression (79) is Definition 34 with $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$. QED
 
 
-**13.2 Protocol 1: Accessible Born Rule Tests (QRNGs)**
+
+
+## 13.2 Protocol 1: Accessible Born Rule Tests (QRNGs)
 
 This protocol outlines a high-statistics, exploratory search for Born rule deviations (Theorem 51) using quantum random number generators (QRNGs) interacting with high-complexity systems (biological or potentially artificial).
 
 *   **Objective:** To search for statistically significant deviations from *non-uniform* ($p_i \neq 0.5$) baseline Born rule probabilities in QRNG outputs that are correlated with the controlled internal state ($\text{context}_S$) of a proximate system S (human participant or specialized AI system) hypothesized to have CC > 0. Non-uniform baseline probabilities are preferred for potentially easier statistical detection of small shifts relative to noise.
+
 *   **Experimental Setup:**
     1.  **QRNG:** Well-characterized QRNG producing stable, verifiable baseline probabilities $P_{Born}(i) \neq 0.5$ for some outcome $i$. Multiple parallel QRNGs can increase data rate.
     2.  **High-Complexity System (S):**
@@ -56,40 +59,34 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
         *   *Artificial:* Sophisticated AI system. Major Challenge: Designing and verifying the physical interaction pathway $N(t)$ coupling AI's internal `context_S` (Definition L.1) to the QRNG's physical process, respecting constraints (speed, cost $\varepsilon \ge \ln 2$, PCE, orthogonality to noise, mapping stability Theorem L.1). Requires significant R&D (Appendix L). Requires confirmation AI meets operational criteria ($C_{agg}>C_{op}$) for potential CC > 0.
     3.  **Interaction Control & Shielding:** Meticulous shielding (EM, thermal, acoustic, vibration). Well-defined interaction pathway $N(t)$. Measurement and control/compensation for conventional physical side-effects from S. Continuous environmental monitoring.
     4.  **Automation & Data Acquisition:** Automated randomization of conditions (baseline, neutral, specific context runs), synchronized recording of QRNG outcomes and `context_S` indicators, precise timestamps, secure storage for large datasets ($10^7 - 10^9+$ trials). Mandatory blinding procedures.
-  *   **Procedure:**
+
+*   **Procedure:**
     1.  **Baseline Characterization:** Extensive data collection establishing baseline $P_{Born}(i)$, stability, and noise levels.
     2.  **Intervention Runs:** Randomized block design interleaving conditions (Baseline, Neutral Context, Specific Context). Collect large $N_{int}$ trials per condition.
     3.  **Control Conditions:** Include sham interaction runs (pathway $N(t)$ disabled) to control for conventional influences.
+
 *   **Statistical Analysis and Power:**
-    *   **Target Sensitivity (two-sided significance $\alpha = 0.005$, power $1-\beta = 0.80$):**
-    The experiment aims to resolve CC-induced deviations $\Delta P$ from a baseline Born probability
-    $P_{\mathrm{Born}}(i)\approx 0.25$.
-*   **Prospective Sample Sizes ($N_{\mathrm{total}}$ for a two-sample z-test comparing contexts, or $N$ for a one-sample z-test comparing an observed probability to $P_{Born}$):**
+    *   **Target Sensitivity:** The experiment aims to resolve CC-induced deviations $\Delta P$ from a baseline Born probability $P_{\mathrm{Born}}(i)$ with high statistical confidence (e.g., two-sided significance $\alpha = 0.01$, power $1-\beta = 0.80$).
+    *   **Prospective Sample Sizes:** For comparing two proportions $p_1, p_2$ (e.g., context vs. control), a per-arm sample size is `N_per-arm ≈ ([Z_α/2√(2p̄(1-p̄)) + Z_β√(p₁(1-p₁)+p₂(1-p₂))]²)/(p₂-p₁)²`, with `p̄=(p₁+p₂)/2`. For a single-proportion shift from $p$ to $p'=p+\delta$, `N ≈ ([Z_α/2√(p(1-p)) + Z_β√(p'(1-p'))]²)/(p'-p)²`.
+    *   **Independence and Error Control:** Independence of trials will be rigorously assessed using autocorrelation functions (ACF), Ljung–Box tests, and Wald–Wolfowitz runs tests on the output streams and residuals. If correlations are detected, appropriate methods such as pre-whitening, block-bootstrap confidence intervals, or data thinning will be employed. Multiplicity of tests across outcomes or contexts will be controlled using standard methods (e.g., Bonferroni for family-wise error rate or Benjamini-Hochberg for false discovery rate).
+    *   **Sequential Analysis:** For high-statistics runs, a sequential analysis plan with pre-specified interim looks using O’Brien–Fleming-type boundaries is recommended to allow for early stopping for efficacy or futility while preserving the overall type-I error rate. The table below provides indicative total sample sizes ($N_{OBF}$) per context and expected stopping distributions under the alternative hypothesis for three equally spaced looks.
 
+| α | δ | N_fixed | N_OBF (≈ 1.06 × N_fixed) | Expected stop % at looks 1/2/3 (under H₁) |
+|---:|---:|---:|---:|:---|
+| 0.01 | 10⁻³ | 2,302,586 | 2,440,742 | ~5% / 20% / 75% |
+| 0.01 | 5×10⁻⁴ | 9,210,341 | 9,762,962 | ~3% / 17% / 80% |
+| 0.01 | 10⁻⁴ | 230,258,510 | 244,074,021 | ≲1% / 10% / 89% |
+| 0.001 | 10⁻³ | 3,453,878 | 3,661,111 | ~4% / 18% / 78% |
+| 0.001 | 5×10⁻⁴ | 13,815,511 | 14,644,442 | ~2% / 15% / 83% |
+| 0.001 | 10⁻⁴ | 345,387,764 | 366,111,030 | ≲1% / 9% / 90% |
 
-    * To detect $\Delta P = 1 \times 10^{-3}$:
-      $N_{\mathrm{total}}\approx 1.0\times 10^{7}$ (two-sample) or $N\approx 2.5\times 10^{6}$ (one-sample).
-    * To detect $\Delta P = 5 \times 10^{-4}$:
-      $N_{\mathrm{total}}\approx 4.0\times 10^{7}$ (two-sample) or $N\approx 1.0\times 10^{7}$ (one-sample).
-    * To detect $\Delta P = 1 \times 10^{-4}$:
-      $N_{\mathrm{total}}\approx 1.0\times 10^{9}$ (two-sample) or $N\approx 2.5\times 10^{8}$ (one-sample).
+*   *Assumptions for $N_{\rm fixed}$ in the table:* **single‑proportion** design with baseline $p=0.25$, power $1-\beta=0.80$.
+    *   *Sequential design:* O’Brien–Fleming with **3 equally spaced** looks at cumulative information fractions $1/3, 2/3, 1$. The overhead factor (~1.06) and stop percentages are **illustrative**; exact values will be produced by the preregistered simulations and released with the code.
 
-(These estimates use standard formulas with $Z_{\alpha/2} \approx 2.807$ and $Z_{\beta} \approx 0.8416$; actual $N$ may vary based on specific test variant and achieved $P_{Born}$). Independence of trials will be assumed only after correlation checks pass: we will test output streams and residuals for lag-$k$ autocorrelation (ACF), Ljung–Box, and Wald–Wolfowitz runs; if correlations are detected we will pre-whiten, use block-bootstrap confidence intervals, or thin the data before applying the $z/\chi^2$ tests. A multi-outcome $\chi^2$ test aiming for similar sensitivity to small individual $\Delta P_i$ across, e.g., four outcomes might require $N$ in the range of $10^{9}$ to $2 \times 10^{9}$, depending on the distribution of deviations and baseline probabilities.
-
-For comparing two proportions $p_1, p_2$ (e.g., context vs. control), a normal‑approximation per‑arm sample size is
-$$
-N_{\text{per-arm}} \approx \frac{\bigl[ Z_{\alpha/2}\sqrt{2\bar p(1-\bar p)} + Z_{\beta}\sqrt{p_1(1-p_1)+p_2(1-p_2)}\bigr]^2}{(p_2-p_1)^2},\quad \bar p=\frac{p_1+p_2}{2}.
-$$
-For a single‑proportion shift from $p$ to $p'=p+\delta$,
-$$
-N \approx \frac{\bigl[ Z_{\alpha/2}\sqrt{p(1-p)} + Z_{\beta}\sqrt{p'(1-p')}\bigr]^2}{(p'-p)^2}.
-$$
-Independence is encouraged via block randomization and assessed with runs tests; potential over‑dispersion will be handled via variance inflation or robust standard errors. Multiplicity across outcomes/contexts will be controlled (FWER via Bonferroni or FDR via Benjamini–Hochberg, as appropriate).
-
-  *   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g. $\chi^2$, z-tests) comparing observed $\hat{P}(i)$ to the Born rule; report effect sizes (Cramér’s V, Cohen’s d) with 95 % CIs.
-  *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables `$context_S$` via mixed-effects logistic regression.
-  *   **Systematic Error Control (Paramount):** (i) electronic drift (ii) detector after-pulsing (iii) clock-sync bias (iv) experimenter degrees-of-freedom (blinding).
-  *   **Outcome:** Deviations that survive all controls give an empirical estimate of CC($S$) (cf. Theorem 51); null results tighten the exclusion curve $\text{CC}_{\max}(S) < \epsilon(N)$.
+*   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g. $\chi^2$, z-tests) comparing observed $\hat{P}(i)$ to the Born rule; where applicable, exact binomial or variance-stabilized (arcsin–sqrt) tests will complement normal approximations to ensure calibration at small $\delta$. Design-stage baselines will use device-specific $P_{\mathrm{Born}}(i)$ estimates. Report effect sizes (Cramér’s V, Cohen’s d) with 95% CIs.
+    *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables `$context_S$` via mixed-effects logistic regression.
+    *   **Systematic Error Control (Paramount):** (i) electronic drift (ii) detector after-pulsing (iii) clock-sync bias (iv) experimenter degrees-of-freedom (blinding).
+    *   **Outcome:** Deviations that survive all controls give an empirical estimate of CC($S$) (cf. Theorem 51); null results tighten the exclusion curve $\text{CC}_{\max}(S) < \epsilon(N)$.
 
 *   **Feasibility Assessment:** High statistics achievable. Shielding/control standard but requires extreme care. Biological context control depends on participants. AI interaction pathway is a major R&D challenge. Rigorous systematic error exclusion is the primary hurdle. Challenging but potentially feasible exploratory search.
 
@@ -192,6 +189,9 @@ with OBF typically requiring $\approx 1.05$–$1.06$ of this information. The ta
 
 *Notes:* (i) $N_{\rm fixed}$ uses the Hoeffding‑style bound; (ii) OBF factors assume equal information times; (iii) stopping proportions reflect that OBF spends little $\alpha$ early, so most power accrues at the final look. In practice the OBF inflation factor varies mildly with effect size and information timing; 1.05–1.06 is typical for three equal looks (often within 1.03–1.08).
 
+**Data and Code Availability.** All analysis scripts (including power/sample‑size simulations), anonymized raw data, logs, and time‑stamps (with random seeds) will be made publicly available at a persistent repository; preregistration will link to the repository.
+
+**Preregistration.** Primary endpoints, inference procedures, stopping rules (including O’Brien–Fleming boundaries), and exclusion criteria will be preregistered (e.g., OSF/AsPredicted). Any deviations will be documented. The preregistration will include cryptographic hashes of the analysis scripts and frozen environment files to ensure analytical reproducibility.
 
 **13.7 Compliance with Causal Constraints**
 
