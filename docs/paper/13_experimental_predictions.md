@@ -115,7 +115,7 @@ where $\Delta \tau_{coh} = \tau_{coh, obs} - \tau_{coh, base}$, $\gamma'_{CC}$ i
     *   **Quantum System:** System with well-characterized, long, stable baseline $\tau_{coh, base}$ (NV centers, trapped ions, qubits, NMR).
     *   **High-Complexity System (S):** Human or AI.
     *   **Interaction/Control:** Similar requirements as Protocol 1 (shielding, interaction $N(t)$, stability, blinding). Temperature stability critical.
-*   **Procedure:** Measure $\tau_{coh}$ (e.g., Ramsey, spin echo, $T_1/T_2$) repeatedly under randomized conditions (baseline, neutral context, specific context). Rapid interleaving mitigates drifts.
+*   **Procedure:** Measure $\tau_{coh}$ (e.g., Ramsey, spin echo, $T_1/T_2$) repeatedly under randomized conditions (baseline, neutral context, specific context). Rapid interleaving mitigates drifts. Residual autocorrelation will be diagnosed and, if present, mitigated by prewhitening (e.g., AR(1)).
 *   **Analysis:** Detect small differences $\Delta \hat{\tau}_{coh} = \hat{\tau}_{coh, context} - \hat{\tau}_{coh, baseline}$. High precision/stability needed; effect size $|\Delta \tau_{coh}/\tau_{coh}| \approx |\gamma'_{CC} \cdot \text{CC}|$ may be small. Use appropriate statistical tests (t-tests, ANOVA) after rigorous systematic error checks (temperature, fields correlated with S).
 *   **Feasibility Assessment:** Technically demanding (high-precision $\tau_{coh}$ measurement). Requires specialized equipment/expertise. Sensitivity depends on achievable baseline stability $\sigma_{\tau_{coh, base}}$. Highly exploratory.
 
@@ -137,6 +137,8 @@ $$
 \quad\text{(mid‑fringe, small‑phase regime).}
 $$
 
+*Derivation.* In a Ramsey interferometer at mid‑fringe, a small differential AC Stark shift $\Delta\omega$ between the two arms produces a phase $\Delta\phi=\Delta\omega\,T$, and the probability bias satisfies $|\Delta P|\approx |\Delta\phi|/2$. For a field with energy density $u$, $E^2=2u/\varepsilon_0$, and the differential shift is $\Delta\omega=(\Delta\alpha/2\hbar)E^2=(\Delta\alpha/(\hbar\,\varepsilon_0))\,u$. Combining gives $|\Delta P|\le (\Delta\alpha/(2\hbar\,\varepsilon_0))\,u\,T$, as stated.
+
 A separate bound on algorithmic predictability confounds is given by $P_{\rm guess} \le 2^{-(H_\infty L - t)}$, where an adversary has at most $t$ bits of side-information. The **CC** effect predicted by PU is
 $$
 |\Delta P|_{\rm PU}\ =\ \|L_S\|_{\rm op}\,\|\partial_\theta P_{\rm Born}\|_2\ \equiv\ \mathrm{CC}(S)\,Q,
@@ -153,7 +155,7 @@ Addresses the most speculative prediction: potential statistical FTL influence m
 *   **Theoretical Basis:** Postulate 3 allows Alice's context $C_A$ to influence Bob's marginal probabilities $P_{obs}(b|B, C_A)$, respecting Postulate 2 (no deterministic signaling). Detection requires $N \propto 1/\text{CC}^2$ trials (Theorem 40).
 *   **Experimental Setup:**
     1.  **Entanglement Source:** High-quality, stable source distributing entangled pairs to space-like separated stations (Alice, Bob).
-    2.  **Measurement Stations (A, B):** Standard Bell test apparatus (independent, random settings $a, b$). High efficiency desirable.
+    2.  **Measurement Stations (A, B):** Standard Bell test apparatus (independent, random settings $a, b$). High efficiency desirable. The setting generators are device‑independent and statistically independent of system $S$ and any hidden variables.
     3.  **High-Complexity System (S_A):** System S (human/AI) at Alice's station generating distinct contexts $C_{A,k}$.
     4.  **Interaction/Control (Alice):** Controlled pathway $N(t)$ linking $S_A$'s context $C_{A,k}$ to Alice's measurement/particle. Rigorous shielding/systematics control at both stations.
     5.  **Space-like Separation:** Ensure measurement events ($a, o_A$ and $b, o_B$) are space-like separated. Requires precise timing and separation.

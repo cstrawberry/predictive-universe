@@ -120,7 +120,7 @@ R_{\alpha\beta} - 8\pi G T_{\alpha\beta}^{(MPU)} = f(x) g_{\alpha\beta}.
 \quad \text{(75)}
 $$
 
-Taking the divergence and using $\nabla^\mu T_{\mu\nu}=0$ plus the Bianchi identity gives $f(x)=\tfrac12 R-\Lambda$, which yields the Einstein equation stated. ∎
+Taking the divergence and using the contracted Bianchi identity $\nabla^\mu(R_{\mu\nu}-\tfrac12 R g_{\mu\nu})=0$ and $\nabla^\mu T_{\mu\nu}=0$ plus the Bianchi identity gives $f(x)=\tfrac12 R-\Lambda$, which yields the Einstein equation stated. ∎
 
 ### 12.3.1 Theorem 50 (Einstein Field Equations)
 
