@@ -57,13 +57,13 @@ $$
 By the Hurewicz theorem, the $\omega_i$ represent the generators of $\pi_2(\Sigma_8)$. Concretely, for a smooth map $f:S^2\to \Sigma_8$, define the Chern integers
 
 $$
-k_i := \int_{S^2} f^*(x_i)\in \mathbb{Z},\qquad \sum_{i=1}^8 k_i=0,
+k_i := \int_{S^2} f^*(x_i)\in \mathbb{Z},\qquad \sum_{i=1}^8 k_i=0,\tag{R.6}
 $$
 
 and the topological charges
 
 $$
-q_i := \int_{S^2} f^*(\omega_i) = k_i-k_{i+1},\qquad i=1,\dots,7.
+q_i := \int_{S^2} f^*(\omega_i) = k_i-k_{i+1},\qquad i=1,\dots,7.\tag{R.7}
 $$
 
 Thus $\pi_2(\Sigma_8)\cong \ker\left(\sum_i : \mathbb{Z}^8\to\mathbb{Z}\right)\cong \mathbb{Z}^7$ with integral coordinates $q=(q_1,\dots,q_7)$ in the $\{\omega_i\}$-basis.
@@ -74,19 +74,19 @@ Thus $\pi_2(\Sigma_8)\cong \ker\left(\sum_i : \mathbb{Z}^8\to\mathbb{Z}\right)\c
 Let $M$ be a $4$‑dimensional, time‑orientable spin manifold carrying the emergent Lorentzian structure of §11. Let $P\to M$ be the principal
 
 $$
-G\ =\ U(1)\times SU(2)\times SU(3)
+G\ =\ U(1)\times SU(2)\times SU(3)\tag{R.8}
 $$
 
 bundle of **PCE‑preserving predictive frames** (Conjecture G.M1 in Appendix G), with connection $A$. For a *predictive block* $R$ (a finite‑dimensional complex representation of $G$ dictated by the $(1,2,3)$ block structure of Appendix G), consider the associated complex vector bundle $E_R:=P\times_G R$ and the chiral spinor bundles $S^\pm$. The **twisted Dirac operator**
 
 $$
-\slashed D_A:\ \Gamma\big(S^+\!\otimes E_R\big)\longrightarrow \Gamma\big(S^-\!\otimes E_R\big)
+\slashed D_A:\ \Gamma\big(S^+\!\otimes E_R\big)\longrightarrow \Gamma\big(S^-\!\otimes E_R\big)\tag{R.9}
 $$
 
 has Fredholm index
 
 $$
-\operatorname{Ind}\big(\slashed D_A\big)=\dim\ker\slashed D_A\big|_{S^+\!\otimes E_R}\ -\ \dim\ker\slashed D_A\big|_{S^-\!\otimes E_R}
+\operatorname{Ind}\big(\slashed D_A\big)=\dim\ker\slashed D_A\big|_{S^+\!\otimes E_R}\ -\ \dim\ker\slashed D_A\big|_{S^-\!\otimes E_R}\tag{R.10} 
 $$
 
 equal to the **net chiral asymmetry** $(\#\mathrm{LH}-\#\mathrm{RH})$ of zero‑modes in that block, and is given topologically by the Atiyah–Singer index theorem [Atiyah & Singer 1963]:

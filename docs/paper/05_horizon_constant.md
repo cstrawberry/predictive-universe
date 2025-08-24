@@ -155,7 +155,7 @@ Any physical system exhibiting the operational characteristics modeled by the Pr
 4.  Thus, implementing these capabilities for $PP > \alpha$ requires $C_P \ge C_{op}$.
 5.  Suppose $C(S) < C_{op}$. By definition of $C_{op}$, $S$ lacks minimal resources for reliable prediction better than chance.
 6.  This prevents sustained adaptive operation with $PP > \alpha$, contradicting the initial assumption.
-7.  Therefore, any such system $S$ must have complexity $C(S) \ge C_{op}$. QED
+7.  Therefore, any such system $S$ must have complexity $C(S) \ge C_{op}$. See Table 5.1. QED
 
 ### Table 5.1 — Complexity Thresholds and an Example Instantiation
 

@@ -225,7 +225,7 @@ This derivation ties the observed gauge coupling constants to the foundational p
 
 # **K.9 Cosmological Implications: The PU Perspective on the Dark Sector and Cosmic Evolution**
 
-This section explores how the foundational principles of the Predictive Universe (PU) framework, particularly the emergent nature of gravity from MPU network adaptation (Section 12, Appendix E) and the Principle of Compression Efficiency (PCE, Definition 15), can be extended to address key cosmological puzzles, including the origin of the Cosmological Principle and the nature of the "dark sector" (dark matter and dark energy). These pathways represent natural, though still developing, implications of the core PU theory.
+This section explores how the foundational principles of the Predictive Universe (PU) framework, particularly the emergent nature of gravity from MPU network adaptation (Section 12, **Appendix E**) and the Principle of Compression Efficiency (PCE, Definition 15), can be extended to address key cosmological puzzles, including the origin of the Cosmological Principle and the nature of the "dark sector" (dark matter and dark energy). These pathways represent natural, though still developing, implications of the core PU theory.
 
 **K.9.1 The Cosmological Principle as a PCE-Optimal State**
 
@@ -235,80 +235,53 @@ The MPU network as a whole, considered as a closed system over cosmological time
 
 The MPU network, as a dynamic system driven by the stochastic nature of underlying ND-RID interactions (Appendix D, Section D.5), tends towards states of higher entropy and lower PCE potential. Over cosmological timescales, PCE dynamics act to smooth out significant deviations from uniformity, as these represent sub-optimal, higher-potential states. The configuration that minimizes long-term average costs and maximizes entropy, thereby minimizing $V(x)$, is one where all large-scale predictive information gradients have been dissipated. This is the state of maximal uniformity—statistical homogeneity and isotropy. The scale and amplitude of primordial fluctuations seeding large-scale structure would then be related to quantum fluctuations in the MPU network during its relaxation to this PCE-optimal state, or potentially to residual, minimal inhomogeneities dynamically sustained by PCE itself (e.g., to support the minimal complexity needed for POP across cosmic scales), with the specific spectrum of these fluctuations requiring derivation from a PU inflationary model.
 
-**K.9.2 Emergent Gravity in an Evolving Universe: Towards a Unified "Dark Sector" Explanation**
+**K.9.2 Cosmology with Variable $G_{\mathrm{eff}}$: Background and Perturbations**
 
-The PU framework posits that the gravitational constant $G$ is not a fundamental constant of nature but an emergent parameter arising from the collective properties of the MPU network. Specifically, Equation (E.9) in Appendix E establishes $G \propto \delta^2 / (\chi C_{max})$, where $\delta$ is the effective MPU spacing, $\chi$ is a correlation factor, and $C_{max}$ is the ND-RID channel capacity. The Principle of Compression Efficiency (PCE, Definition 15) drives the continuous optimization of these underlying MPU network parameters in response to the prevailing information environment.
+The PU framework posits that the gravitational constant $G$ is an emergent parameter of the MPU network, dependent on the information environment, as established by Equation (E.9) in **Appendix E**. As rigorously detailed for the galactic case in **Appendix I**, this PCE-driven adaptation leads to a spatially scale-dependent $G(R)$. This section proposes a natural cosmological extension of this mechanism, where the effective gravitational constant $G_{\mathrm{eff}}$ evolves with the changing cosmic density.
 
-*   **Local Adaptation ($G(R)$):** As rigorously detailed in **Appendix I**, this PCE-driven adaptation leads to a spatially scale-dependent $G(R)$ in structured environments like galaxies. In sparse regions (low density of predictive information), PCE favors relaxed MPU parameters (larger effective $\delta$, potentially smaller $C_{max}$ due to reduced pressure for high-fidelity links), causing $G(R)$ to increase. This provides an explanation for galactic "dark matter" phenomenology without invoking new particles.
+### K.9.2.1 Background Equations and Consistency
 
-*   **Cosmological Adaptation ($G_{eff}(t)$):** This section proposes a natural cosmological extension of this mechanism. PCE optimization, when applied to the MPU network on cosmological scales, suggests that the *average* MPU network parameters (such as effective spacing $\delta(t)$, correlation $\chi(t)$, and channel capacity $C_{max}(t)$) across the observable universe would adapt to the *evolving average cosmic energy density $\rho(t)$ and pressure $p(t)$*. These macroscopic thermodynamic variables act as proxies for the mean information environment and its complexity, influencing the PCE-optimal configuration of the MPU network. This cosmological adaptation would then lead to an effective gravitational constant $G_{eff}(t) \approx G(\rho(t), p(t))$ that varies with cosmic time, thereby influencing the dynamics of the homogeneous and isotropic FLRW background.
+The expansion history obeys the first Friedmann equation with a time-varying $G_{\mathrm{eff}}(a)$:
+$$
+\boxed{\,H^2(a)=\frac{8\pi G_{\mathrm{eff}}(a)}{3}\,\rho_{\mathrm{tot}}(a)\;-\;\frac{k}{a^2}\;+\;\frac{\Lambda}{3}\, }.
+$$
+Here, $\rho_{\mathrm{tot}}(a)$ is the total energy density of standard matter and radiation, whose stress-energy tensor is constructed from MPU primitives in **Appendix B**, and $\Lambda$ is the true, non-perturbative cosmological constant derived from the PU vacuum dynamics as rigorously detailed in **Appendix U**.
 
-**Critical Consideration: Energy Conservation in the Expanding MPU Network.** The introduction of a time-varying $G_{eff}(t)$ due to the adaptation of MPU network parameters (e.g., effective MPU spacing $\delta(t)$, interaction energy costs, or information capacity $C_{max}(t)$ influencing the energy density of the vacuum or network structure) implies that the MPU network substrate itself must possess a dynamic stress-energy tensor, $T_{\mu\nu}^{MPU_sub}$. This tensor would represent the energy stored in the configuration of the MPU network (e.g., in the effective "spring constants" between MPUs implied by $\delta(t)$, or the energy associated with maintaining a certain $C_{max}(t)$). For overall consistency, the total stress-energy, $T_{\mu\nu}^{total} = T_{\mu\nu}^{(MPU)} + T_{\mu\nu}^{MPU_sub}$ (where $T_{\mu\nu}^{(MPU)}$ is for standard matter/radiation), must be covariantly conserved: $\nabla_\mu T^{\mu\nu}_{total} = 0$. This means that the standard continuity equation for $T_{\mu\nu}^{(MPU)}$ alone, $\nabla_\mu T^{\mu\nu (MPU)} = 0$, will generally not hold if there is energy exchange between the matter/radiation sector and the MPU substrate driving the variation in $G_{eff}(t)$. The derivation of modified Friedmann equations that follows must acknowledge this. A complete, self-consistent PU cosmological model, incorporating the dynamics of $T_{\mu\nu}^{MPU_sub}$ and its coupling to $T_{\mu\nu}^{(MPU)}$, is a primary objective for future research. The equations presented below are derived under the provisional framework where this energy exchange term $Q_{exchange}$ is formally introduced, or where specific structural assumptions are made to explore consequences.
+The PU framework requires a specific physical hypothesis for the conservation law in a variable-G cosmology. We adopt the choice that the total energy-momentum, including the MPU substrate that gives rise to $G_{\mathrm{eff}}$, is conserved. This is expressed by the consistency relation derived from the Bianchi identity $\nabla^\mu(G_{\mu\nu}+\Lambda g_{\mu\nu})=0$ applied to the field equations $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G_{\mathrm{eff}}(a)\,T^{\mathrm{tot}}_{\mu\nu}$:
+$$
+\nabla^\mu (G_{\mathrm{eff}} T^{\mathrm{tot}}_{\mu\nu}) = 0
+$$
+This implies a modified continuity equation for the total standard matter-energy density $\rho_{\mathrm{tot}}$:
+$$
+\boxed{\,\dot\rho_{\mathrm{tot}}+3H(\rho_{\mathrm{tot}}+p_{\mathrm{tot}})= -\frac{\dot G_{\mathrm{eff}}}{G_{\mathrm{eff}}}\,\rho_{\mathrm{tot}}\, }.
+$$
+The term on the right-hand side represents the energy exchanged between the standard matter/radiation sector and the MPU substrate as the latter reconfigures itself (changing `δ`, `C_max`, etc.) in response to the changing cosmic density, thereby altering $G_{\mathrm{eff}}$.
 
-    In a homogeneous FLRW universe, the characteristic physical scale $R$ of a comoving region is related to the average density; for matter, $R \sim \rho^{-1/3}$. We therefore adopt a phenomenological model for $G(\rho)$ that captures the same qualitative behavior as $G(R)$: a transition from a baseline $G_{early}$ at high densities to an enhanced value at low densities, with the transition occurring around a critical density $\rho_c$. As the universe expands, $\rho(t)$ decreases, causing $G(\rho(t))$ to evolve. A plausible phenomenological model for this transition is:
-    $$ G_{eff}(\rho) = G_{early} \left( 1 + A_G \frac{(\rho_c/\rho)^n}{1 + (\rho_c/\rho)^n} \right) \quad \text{(K.9.1)} $$
-    where $G_{early}$ is the primordial value of the gravitational constant (approached at high densities $\rho \gg \rho_c$), $A_G > 0$ is the total fractional enhancement, $\rho_c$ is the characteristic crossover energy density, and $n > 0$ controls the transition steepness. This is one plausible model; other forms, such as an exponential saturation $G_{eff}(\rho) = G_{early} [1 + A_G (1 - \exp(-(\rho_c/\rho)^n))]$, could also capture the essential feature of a PCE-driven shift. The precise functional form of $G_{eff}(\rho, p)$ awaits derivation from a full PCE optimization of MPU network parameters (specifically $\delta(t)$, $\chi(t)$, $C_{max}(t)$) in an FLRW background.
-    This model naturally ensures $G_{eff}(t) \approx G_{early}$ at very early times when $\rho(t) \gg \rho_c$. If $G_{early}$ is identified with the standard Newtonian constant $G_0$ (or is very close to it), successes of early universe cosmology such as Big Bang Nucleosynthesis (BBN) and the physics of the early Cosmic Microwave Background (CMB) are preserved.
+### K.9.2.2 Linear Perturbations and Growth
 
-    The cosmological adaptation of MPU network parameters (and thus $G_{eff}(t)$) is assumed to occur adiabatically, meaning the characteristic timescale for network re-optimization $\tau_{adapt}$ is much shorter than the Hubble timescale $H^{-1}(t)$. This ensures the MPU network remains in quasi-equilibrium with the evolving cosmic conditions.
+The modified background evolution and conservation law directly impact the growth of cosmological perturbations. The metric potentials in Newtonian gauge satisfy:
+$$
+k^2\Psi = -4\pi G_{\mathrm{eff}}(a)\,a^2\,\rho_m\,\Delta,\qquad \Phi=\eta(a)\,\Psi,
+$$
+where we have absorbed the effect of variable G into the source term and introduced a gravitational slip parameter $\eta(a)$, which is unity in the simplest models but could deviate. The linear growth factor $D(a)$ for matter perturbations then obeys a modified equation:
+$$
+\boxed{\,\frac{d^2 D}{d(\ln a)^2}+\Big(2+\frac{d\ln H}{d\ln a}\Big)\frac{dD}{d\ln a}
+-\frac{3}{2}\,\frac{8\pi G_{\mathrm{eff}}(a)\rho_m(a)}{3H^2(a)}\,D=0\, }.
+$$
+This provides a closed system of equations. Given a functional form for $G_{\mathrm{eff}}(a)$ derived from PU principles (such as the model in Appendix I, Eq. I.4, where scale R is related to density and thus to `a`), the entire cosmic history, including the growth of structure, can be computed and compared to observations.
 
-**K.9.3 PU-Modified Friedmann Equations and Dark Sector Phenomenology**
+**K.9.3 Observational Consistency and Future Directions**
 
-Given the emergent homogeneity and isotropy (K.9.1), the large-scale geometry of the emergent spacetime manifold $(M, g_{\mu\nu})$ is described by the Friedmann-Lemaître-Robertson-Walker (FLRW) metric:
-$$ ds^2 = -c^2 dt^2 + a(t)^2 \left( \frac{dr^2}{1-kr^2} + r^2 d\Omega^2 \right) $$
-On these large scales, assuming homogeneity and isotropy, the macroscopic MPU stress-energy tensor for standard matter and radiation $T_{\mu\nu}^{(MPU)}$ (Definition B.8, Theorem B.6b) takes the perfect fluid form:
-$$ T_{\mu\nu}^{(MPU)} = (\rho(t) + p(t)/c^2) u_\mu u_\nu + p(t) g_{\mu\nu} $$
-where $\rho(t)$ and $p(t)$ are the effective energy density and pressure of these cosmic fluid components. Incorporating a time-varying $G_{eff}(t) \equiv G(\rho(t))$ into the emergent Einstein Field Equations (Theorem 50) leads to modified Friedmann equations.
-
-*   **First Friedmann Equation (from the 00-component of EFE):**
-    This equation remains structurally similar to the standard form but with $G$ replaced by $G_{eff}(t)$:
-    $$ H(t)^2 \equiv \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G_{eff}(t)}{3} \rho(t) - \frac{k c^2}{a(t)^2} + \frac{\Lambda c^2}{3} \quad \text{(K.9.2)} $$
-    where $\rho(t)$ is the total density of standard matter and radiation, $k$ is the spatial curvature parameter, and $\Lambda$ is the true cosmological constant arising from the PU vacuum (Section K.8).
-
-*   **Modified Continuity Equation:**
-    The conservation of total energy-momentum $\nabla_\mu (T^{\mu\nu (MPU)} + T^{\mu\nu MPU_sub}) = 0$ implies an interaction between the standard matter/radiation sector and the MPU substrate. This leads to a modified continuity equation for the standard matter/radiation density $\rho(t)$:
-    $$ \dot{\rho}(t) + 3H(t)(\rho(t) + p(t)/c^2) = Q_{exchange}(t) \quad \text{(K.9.3)} $$
-    where $Q_{exchange}(t)$ represents the rate of energy density transfer from (or to) the MPU substrate, related to the dynamics of $G_{eff}(t)$. If one assumes the specific conservation law $\nabla_\mu (G_{eff}(t)T^{\mu\nu (MPU)}) = 0$, this expands to $G_{eff}(t)\nabla_\mu T^{\mu\nu (MPU)} + T^{\mu\nu (MPU)}\nabla_\mu G_{eff}(t) = 0$. For a perfect fluid and FLRW metric, this leads to $G_{eff}(\dot{\rho} + 3H(\rho+p/c^2)) + \dot{G}_{eff}(\rho+p/c^2)=0$ if we consider the energy density part of $T^{\mu\nu}$ for the $\nabla_\mu G_{eff}$ coupling. A common simplification focusing on the dominant $\rho$ term for the coupling to $\dot{G}_{eff}$ is to model the interaction source as $Q_{exchange}(t) \approx -\frac{\dot{G}_{eff}(t)}{G_{eff}(t)} \rho(t)$ (especially if $p \ll \rho c^2$ or if the coupling is primarily to the energy density component). A full derivation of $Q_{exchange}(t)$ from PU principles is required to move beyond such structural assumptions.
-
-*   **Acceleration Equation (Modified):**
-    The acceleration equation can be derived from the first Friedmann equation (K.9.2) and the modified continuity equation (K.9.3) implied by the conservation choice $\nabla_\mu\bigl(G_{eff}(t)\,T_{\mu\nu}^{(\rm MPU)}\bigr)=0$. Differentiating $H(t)^2$ from (K.9.2) with respect to time, and substituting $\dot{\rho}(t)$ from (K.9.3)
-    $$ \dot{\rho}(t) + 3H(t)\Bigl(\rho(t) + \frac{p(t)}{c^2}\Bigr) = -\frac{\dot{G}_{eff}(t)}{G_{eff}(t)}\,\rho(t), $$
-    leads (using $\ddot a/a = \dot H + H^2$ and restoring $c$) to
-    $$ \frac{\ddot{a}}{a} = -\frac{4\pi\,G_{eff}(t)}{3}\Bigl(\rho(t) + \frac{3\,p(t)}{c^2}\Bigr) + \frac{\Lambda\,c^2}{3} \quad\text{(K.9.4)} $$
-    This equation, together with the time‐evolution of $G_{eff}(t)$ (driven by $\rho(t)$ via Eq. K.9.1) and the modified continuity equation (K.9.3), governs the cosmic expansion dynamics. Apparent “dark energy” effects, beyond the true cosmological constant $\Lambda$, can arise from the evolution of $G_{eff}(t)$ influencing $\rho(t)$ and $p(t)$ via the $Q_{exchange}$ term in (K.9.3), which then impacts $\ddot a/a$ through the terms in (K.9.4).
-
-This PU-modified cosmology offers potential pathways to explain observed "dark sector" phenomena:
-
-*   **"Dark Matter" Mimicry:** In Equation (K.9.2), if $G_{eff}(t)$ is larger than $G_{early}$ (e.g., $G_0$) during epochs relevant for structure formation and galaxy/cluster dynamics, the term $\frac{8\pi G_{eff}(t)}{3} \rho(t)$ provides an enhanced gravitational influence for a given baryonic density $\rho_b(t)$. This increased effective gravity can mimic the effects usually attributed to cold dark matter. This unifies the explanation for dark matter phenomenology from galactic scales (Appendix I) to cosmological scales.
-
-*   **"Dark Energy" / Cosmic Acceleration:** The observed late-time cosmic acceleration (positive $\ddot{a}$) can be driven by one or both of two mechanisms within this framework:
-    1.  **The True Cosmological Constant $\Lambda$:** This term, interpreted within PU as arising from the ground state energy density of the MPU vacuum (Section K.8), provides a constant positive contribution to acceleration.
-    2.  **The Dynamic Contribution from $\dot{G}_{eff}(t)$:** Under the conservation choice $\nabla_\mu!\bigl(G_{eff}(t)T^{\mu\nu}\bigr)=0$, explicit $\dot{G}*{eff}$ terms cancel from (K.9.4); the influence of a varying $G*{eff}$ on $\ddot a/a$ is indirect, via the modified continuity equation and the time‑dependence of $\rho(t)$ and $p(t)$. Alternative conservation prescriptions can introduce explicit $\dot{G}_{eff}$ terms; our analysis here adopts the former.
-
-This "hybrid" scenario allows for a rich phenomenology. It is conceivable that PCE optimization could result in a very small true $\Lambda_{PU-vacuum}$, with the observed late-time acceleration being largely driven by a complex evolution of $G_{eff}(t)$ and the associated energy exchange $Q_{exchange}(t)$, or a combination of all factors.
-
-**K.9.4 Observational Consistency and Future Directions**
-
-The specific functional form chosen for $G_{eff}(\rho(t), p(t))$ (e.g., the model in K.9.1) and its parameters ($G_{early}, A_G, \rho_c, n$) must be such that the predicted contemporary value of $|\dot{G}_{eff}/G_{eff}|_0$ respects stringent observational bounds (typically $|\dot{G}/G|_0 \lesssim 10^{-12} - 10^{-13} \text{ yr}^{-1}$).
-
-> **Theorem K.9.1: Natural Scaling of $\dot{G}_{eff}/G_{eff}$**
->
-> If the time evolution of $G_{eff}(t)$ is primarily driven by its dependence on the changing cosmic energy density $\rho(t)$ (i.e., $G_{eff}(t) \approx G_{eff}(\rho(t))$), and the evolution of $\rho(t)$ is governed by Equation (K.9.3), then the fractional rate of change of $G_{eff}(t)$ is:
-> $$ \frac{\dot{G}_{eff}}{G_{eff}} = \frac{1}{G_{eff}(\rho)}\frac{dG_{eff}}{d\rho}\bigg|_{\rho(t)} \left( -3H(t)(\rho(t)+p(t)/c^2) + Q_{exchange}(t) \right) \quad \text{(K.9.5)} $$
-> *Proof:* The time derivative $\dot{G}_{eff}$ is given by $\dot{G}_{eff} = (dG_{eff}/d\rho) \dot{\rho}$. Substituting the expression for $\dot{\rho}$ from the modified continuity equation (K.9.3) and dividing by $G_{eff}$ yields Equation (K.9.5). QED
-
-Consistency with observational bounds on $|\dot{G}_{eff}/G_{eff}|_0$ (currently $\lesssim \mathcal{O}(0.1) H_0$ from various probes, though specific model constraints can be tighter) requires that the terms on the right-hand side of Equation (K.9.5) combine to yield a value of this order. This can be naturally achieved if, for example, the primary transition phase of $G_{eff}(\rho)$ (where $|dG_{eff}/d\rho|$ is largest, near $\rho_c$) occurred when $\rho(t)$ was significantly different from $\rho_{present}$, or if the sensitivity $dG_{eff}/d\rho$ is sufficiently small at current densities, or if the $Q_{exchange}(t)$ term (if significant and derived from PU principles) leads to partial cancellations or specific scaling. The general scaling $\dot{G}_{eff}/G_{eff} \sim H(t)$ is a characteristic feature of many cosmological models where $G$ evolves due to cosmic expansion.
-
-This cosmological extension of the PU framework is conceptually promising but requires significant further theoretical work, as summarized below.
+This cosmological extension of the PU framework is conceptually promising but requires significant further theoretical work to become a fully predictive model.
 
 > **Key Challenges for PU Cosmology:**
 >
-> *   **MPU Substrate Energy Budget and Self-Consistent Dynamics:** Rigorously deriving the stress-energy tensor of the MPU network substrate ($T_{\mu\nu}^{MPU_sub}$), ensuring overall covariant conservation $\nabla_\mu (T^{\mu\nu (MPU)} + T^{\mu\nu MPU_sub}) = 0$, and from this, deriving the fully self-consistent form of $Q_{exchange}(t)$ and the modified Friedmann equations. This is the most critical step for robustly modeling the "dark energy" component potentially arising from $\dot{G}_{eff}(t)$ and accurately constraining the true PU vacuum contribution $\Lambda$.
-> *   **Derivation of $G_{eff}(\rho,p)$ from PCE:** Deriving the functional form of $G_{eff}(\rho(t), p(t))$ and its parameters ($G_{early}, A_G, \rho_c, n$) from first principles of PCE optimization of MPU network parameters in an evolving FLRW background. This involves modeling how average MPU spacing $\delta$, correlation $\chi$, and channel capacity $C_{max}$ adapt to global cosmic conditions.
+> *   **MPU Substrate Energy Budget and Self-Consistent Dynamics:** Rigorously deriving the stress-energy tensor of the MPU network substrate ($T_{\mu\nu}^{MPU_sub}$, cf. **Appendix B**), ensuring overall covariant conservation $\nabla_\mu (T^{\mu\nu (MPU)} + T^{\mu\nu MPU_sub}) = 0$, and from this, deriving the fully self-consistent form of the energy exchange and the modified Friedmann equations. This is the most critical step for robustly modeling the "dark energy" component potentially arising from $\dot{G}_{eff}(t)$ and accurately constraining the true PU vacuum contribution $\Lambda$.
+> *   **Derivation of $G_{eff}(\rho,p)$ from PCE:** Deriving the functional form of $G_{eff}(\rho(t), p(t))$ and its parameters ($G_{early}, A_G, \rho_c, n$) from first principles of PCE optimization of MPU network parameters in an evolving FLRW background (cf. **Appendix D**). This involves modeling how average MPU spacing $\delta$, correlation $\chi$, and channel capacity $C_{max}$ adapt to global cosmic conditions.
 > *   **Adiabaticity of Adaptation:** Justifying the assumption that the MPU network adaptation timescale $\tau_{adapt}$ is much shorter than the Hubble timescale $H^{-1}(t)$, allowing $G_{eff}$ to be treated as a function of instantaneous $\rho(t)$ and $p(t)$.
 > *   **Early Universe Consistency:** Ensuring that detailed predictions for Big Bang Nucleosynthesis (BBN), the Cosmic Microwave Background (CMB) power spectrum (acoustic peaks, damping tail), and primordial fluctuations remain compatible with observations after the full PU cosmological model (including $G_{eff}(t)$ and MPU substrate effects) is specified. This will constrain $G_{early}$ and the evolutionary track of $G_{eff}(t)$.
-> *   **Parameter Degeneracy and Distinguishability:** Developing strategies to distinguish the effects of a true (PU-vacuum derived) cosmological constant $\Lambda$ from the dynamic effects of the $\dot{G}_{eff}(t)$ term (and related $Q_{exchange}$) in the acceleration equation. This requires analyzing multiple cosmological probes simultaneously.
-> *   **Galactic vs. Cosmic $G$ Consistency:** Ensuring that a unified PCE-driven mechanism, where MPU parameters adapt to the local/global information environment, can consistently explain both the local scale-dependence $G(R)$ (Appendix I, driven by local density contrasts) and the cosmological evolution $G_{eff}(t)$ (driven by average cosmic density) with a coherent set of underlying MPU network properties and adaptation rules.
+> *   **Parameter Degeneracy and Distinguishability:** Developing strategies to distinguish the effects of a true (PU-vacuum derived) cosmological constant $\Lambda$ (from **Appendix U**) from the dynamic effects of the $\dot{G}_{eff}(t)$ term in the acceleration equation. This requires analyzing multiple cosmological probes simultaneously.
+> *   **Galactic vs. Cosmic $G$ Consistency:** Ensuring that a unified PCE-driven mechanism, where MPU parameters adapt to the local/global information environment, can consistently explain both the local scale-dependence $G(R)$ (**Appendix I**, driven by local density contrasts) and the cosmological evolution $G_{eff}(t)$ (driven by average cosmic density) with a coherent set of underlying MPU network properties and adaptation rules.
 
 Detailed fitting of specific, fully derived PU cosmological models to a comprehensive suite of cosmological data will be the ultimate test of this extension of the Predictive Universe framework.
 

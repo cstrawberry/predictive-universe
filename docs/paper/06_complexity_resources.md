@@ -133,23 +133,26 @@ The adaptation dynamics are governed by the **Principle of Compression Efficienc
 *   **Benefit ($V_{benefit}$):** The power-equivalent predictive benefit derived from the system's performance $PP$.
 The system's slow adaptation dynamics are modeled as a stochastic gradient flow seeking to minimize this potential: $dx(t) = -\eta(x) \nabla_x V(x) dt + \dots$ (Equation D.8).
 
-The **Adaptation Driving Force $\Psi(t)$** for the complexity component $C(t)$ is defined as the negative of the local gradient of this potential with respect to $C(t)$, representing the net incentive for complexity adaptation. It arises from the local imbalance between the marginal benefit of increased complexity and its marginal cost. We model the benefit term linearly in $PP$, so the benefit component of the PCE potential is $V_{benefit}=-\Gamma_0\,PP$ and its marginal contribution to the driving force is $\Gamma_0(\partial PP/\partial C)$.
-
-We treat ‘nats’ as dimensionless. In Section 6, the MPU cycle cadence is absorbed into the performance gradient, so the conversion factor $\Gamma_0$ carries units of power. In Appendices G, W, and Z, where the per-cycle information benefit is analyzed, the cadence $\nu$ remains explicit and $\Gamma_0$ is an energy-scale; the combination $\Gamma_0\nu$ then has units of power. Dimensionless reporting uses ratios such as $(\Gamma_0\nu)/A_{PCE}$.
+The **Adaptation Driving Force $\Psi(t)$** for the complexity component $C(t)$ is defined as the negative of the local gradient of this potential with respect to $C(t)$, representing the net incentive for complexity adaptation. It arises from the local imbalance between the marginal benefit of increased complexity and its marginal cost. The benefit term in the PCE potential is $V_{benefit}=-\Gamma_0 \nu PP$, where $\Gamma_0$ is the energy value per nat of information and $\nu$ is the MPU cycle rate. The marginal contribution to the driving force is thus $\Gamma_0 \nu (\partial PP/\partial C)$.
 
 The Adaptation Driving Force is:
 $$
-\Psi(t) = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
+\Psi(t) = \Gamma_0 \nu \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
 $$
 where:
-1.  The **Power Conversion Factor ($\Gamma_0$)**: A positive **system-level constant** with dimensions of Power (`[E][T]^{-1}`), arising from the benefit term $V_{benefit}$. It quantifies the effective power value assigned by PCE to a unit increase in the marginal performance gradient ($\partial PP/\partial C$). Its value is physically constrained by thermodynamic limits (Theorem 20); at equilibrium, the parameters satisfy the calibration identity Eq. (29).
-2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
+1.  The **Energy-per-nat Scale ($\Gamma_0$)**: A positive **system-level constant** with dimensions of Energy (`[E]`), physically identified with the characteristic energy of the operational environment, e.g., $\Gamma_0 \equiv k_B T_{eff}$. It quantifies the effective energy value assigned by PCE to a unit of predictive information (one nat). Its value is physically constrained by thermodynamic limits (Theorem 20).
+2.  The **MPU Cycle Rate ($\nu$)**: The characteristic frequency of the MPU's Fundamental Predictive Loop, with dimensions of inverse Time (`[T]⁻¹`).
+3.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
 
 The specific components of the driving force are:
-*   **Marginal Benefit:** The term $\Gamma_0 \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units `[E][T]^{-1}[Complexity]^{-1}`. From the Law of Prediction (Theorem 19), the performance gradient is:
+*   **Marginal Benefit:** The term $\Gamma_0 \nu \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units `[E][T]^{-1}[Complexity]^{-1}`. From the Law of Prediction (Theorem 19), the performance gradient is:
 $$
-    \frac{\partial PP}{\partial C}\bigg|_{C(t), \hat{C}_{target}(t)} = (\beta - \alpha) \left( \frac{\kappa_{eff}}{\hat{C}_{target}(t)} \right) e^{-\kappa_{eff} \cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}} = \frac{\kappa_{eff}}{\hat{C}_{target}(t)} (\beta - PP(t)) \quad \text{(25)}
-    $$
+\frac{\partial PP}{\partial C}\bigg|_{C(t), \hat{C}_{target}(t)}
+= (\beta - \alpha)\left(\frac{\kappa_{eff}}{\hat{C}_{target}(t)}\right)
+e^{-\kappa_{eff}\cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}}
+= \frac{\kappa_{eff}}{\hat{C}_{target}(t)}\big(\beta - PP(t)\big),
+\quad \text{with } PP(t)=\beta-(\beta-\alpha)\,e^{-\kappa_{eff}\cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}} \quad \text{(25)}
+$$
 *   **Marginal Cost:** The term $\lambda R'(C(t)) + R_I'(C(t))$ is the weighted marginal resource cost rate, with units `[E][T]^{-1}[Complexity]^{-1}`. From Definition 3:
 $$
     R_I'(C(t)) = \frac{r_I}{C(t) \ln 2} \quad (\text{for } C(t) > K_0) \quad \text{(26)}
@@ -159,20 +162,20 @@ $$
 
 **Theorem 20 (Physical Bounds and Self-Consistency of $\Gamma_0$)**
 
-The constant Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **system-level constant** of the PCE potential, constrained by thermodynamic limits inherent in the MPU framework.
+The Energy-per-nat Scale $\Gamma_0$ is not an arbitrary parameter but is a **system-level constant** of the PCE potential, constrained by thermodynamic limits inherent in the MPU framework.
 
-1.  **Lower Bound ($P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23, Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0\,\frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
+1.  **Lower Bound (from $P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23, Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 \nu (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0 \nu \frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
     $$
-    \Gamma_{0} \gtrsim P_{min} = R(C_{op}) \ge \frac{k_B T \ln(d_0)}{\tau_{min}} \ge \frac{3 k_B T \ln(2)}{\tau_{min}} \quad \text{(27)}
+    \Gamma_0 \gtrsim \frac{P_{min}}{\nu} = \frac{R(C_{op})}{\nu} \ge \frac{k_B T \ln(d_0)}{\nu \tau_{min}} \ge \frac{3 k_B T \ln(2)}{\nu \tau_{min}} \quad \text{(27)}
     $$
-    (using MPU state dimension $d_0 \ge 8$ from Theorem 23, and minimum cycle time $\tau_{min}$ from Theorem 29).
-2.  **Upper Bound ($\Gamma_{crit}$):** The irreducible thermodynamic cost, quantified by dimensionless entropy production $\varepsilon \ge \ln 2$ (Theorem 31), associated with the necessary irreversible state change during an 'Evolve' interaction within the minimal cycle time $\tau \approx \tau_{min}$, provides an upper bound. The maximum power-equivalent benefit gainable in a single cycle, $(\Gamma_0 \Delta PP_{max}) \tau_{min}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), must be considered relative to this fundamental dissipation $E_{dissip} \ge k_B T \varepsilon$. For thermodynamically consistent energy valuation:
+    If the cycle rate $\nu \approx 1/\tau_{min}$, this simplifies to $\Gamma_0 \gtrsim 3 k_B T \ln(2)$.
+2.  **Upper Bound (from $\varepsilon$):** The irreducible thermodynamic cost, quantified by dimensionless entropy production $\varepsilon \ge \ln 2$ (Theorem 31), associated with the necessary irreversible state change during an 'Evolve' interaction, provides an upper bound. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), must be considered relative to this fundamental dissipation $E_{dissip} \ge k_B T \varepsilon$. For thermodynamically consistent energy valuation:
     $$
-    \Gamma_{0} \lesssim \frac{k_B T \varepsilon}{\tau_{min} \Delta PP_{max}} =: \Gamma_{crit} \quad \text{(28)}
+    \Gamma_0 \lesssim \frac{k_B T \varepsilon}{\Delta PP_{max}} =: \Gamma_{0,crit} \quad \text{(28)}
     $$
 3.  **Equilibrium Calibration Identity:** At a stable equilibrium configuration characterized by complexity $C^*$ and performance $PP^*$, the Adaptation Driving Force vanishes: $\Psi(C^*, PP^*) = 0$ (Equation 18). This provides a calibration identity relating the constant $\Gamma_0$ to the equilibrium properties of the system:
     $$
-    \Gamma_{0} = \frac{\lambda R'(C^*) + R_I'(C^*)}{\frac{\partial PP}{\partial C} \big|_{C^*, PP^*}} \quad \text{(29)}
+    \Gamma_0 = \frac{1}{\nu} \frac{\lambda R'(C^*) + R_I'(C^*)}{\frac{\partial PP}{\partial C} \big|_{C^*, PP^*}} \quad \text{(29)}
     $$
     For a given constant value of $\Gamma_0$ within the physical bounds, this equation determines the optimal complexity $C^*$ that the system will adapt towards.
 

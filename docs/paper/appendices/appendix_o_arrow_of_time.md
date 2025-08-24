@@ -130,7 +130,36 @@ The source of spacetime curvature in the Einstein Field Equations (EFE) is the t
 *   The energy expended by a high-CC system to generate its influencing signal `N(t)` is accounted for in the system's own `T_μν`. The act of "thinking" or generating a specific context `context_S` has a physical energy cost that contributes to the aggregate's mass-energy and thus to its gravitational field.
 Therefore, CC does not act as a new, independent source of gravity. Rather, the *energy cost of the CC process* is already included in the standard `T_μν` source term of the EFE. The mechanism is not that "thought" directly bends spacetime, but that the physical process of generating a high-CC state has an energy cost, and this energy, like all other forms of energy, sources gravity according to the EFE. 
 
-## O.7 Conclusion
+## O.7 Mathematical Emergence of the Lorentzian Signature
+
+The logical and thermodynamic arguments in this appendix establish the *directionality* of time. The mathematical formalism of **Γ-convergence** provides a rigorous pathway to show how this microscopic, directed, and irreversible process necessarily gives rise to the **Lorentzian signature** of the emergent spacetime metric in the continuum limit.
+
+### O.7.1 Γ‑convergence of the Spatial Sector
+
+Let $(G_n)$ be locally-finite graphs with mesh $h_n\to 0$ approximating a spatial slice $(M,g)$. For fields $\phi_n:V(G_n)\to\mathbb R$, the PCE potential contribution from spatial variations takes the form of a discrete energy functional:
+$$
+F_n(\phi_n)=\sum_{(x,y)\in E(G_n)} w_{xy}\,\Psi\!\Big(\frac{\phi_n(y)-\phi_n(x)}{h_n}\Big)
++\sum_{x\in V(G_n)} h_n^D\,\mathcal V\big(\phi_n(x)\big),
+$$
+where $\Psi$ is a convex link cost function derived from the propagation cost $V_{prop}$ and $\mathcal{V}$ is a local potential from $V_{op}-V_{benefit}$. Under standard conditions of equi‑coercivity and consistency, this functional $\Gamma$-converges to a continuum functional as $h_n \to 0$:
+$$
+\boxed{\,F_n\ \xrightarrow{\ \Gamma\ }\ F(u)=\int_M f(x,\nabla u)\,d^Dx+\int_M \mathcal V(u)\,d^Dx,\qquad
+f(x,\xi)=\xi^\top A(x)\,\xi+o(|\xi|^2)\, },
+$$
+The quadratic form $A(x)$ defines a positive-definite Riemannian metric on the spatial slice, $A(x) \propto \sqrt{\det g_{ij}} g^{ij}(x)$.
+
+### O.7.2 Time Direction and Lorentzian Signature
+
+The PU framework's dynamics are fundamentally time-directed and irreversible. The Fundamental Predictive Loop (`Predict→Verify→Update`) imposes a logical arrow, which is physically enforced by the thermodynamic irreversibility of the 'Evolve' process ($\varepsilon \ge \ln 2$, Appendix O). This intrinsic asymmetry must be reflected in the continuum limit.
+
+When we extend the $\Gamma$-convergence to spacetime, the discrete functional includes terms for temporal differences, e.g., `Ψ_t((\phi(t+Δt) - \phi(t))/Δt)`. Due to the irreversible nature of the 'Evolve' step that mediates updates between time slices, the effective cost function `Ψ_t` is fundamentally different from the spatial `Ψ`. The dissipation inherent in the temporal update process introduces a relative negative sign in the kinetic term upon taking the continuum limit. The full $\Gamma$-limit in $D+1$ dimensions yields an action of the form:
+$$
+\boxed{\,S[u]=\int d^{D+1}x\,\sqrt{|g|}\;\Big[\,g^{00}(x)\,(\partial_t u)^2\;+\;g^{ij}(x)\,\nabla_i u\,\nabla_j u\;-\;\mathcal V(u)\,\Big]\, },
+$$
+where the coefficient of the time-derivative term, $g^{00}$, is negative, while the spatial coefficients $g^{ij}$ form a positive-definite matrix. This demonstrates that the emergent metric $g_{\mu\nu}$ necessarily has a **Lorentzian** signature $(-,+,\dots,+)$. The signature is not a postulate but a direct mathematical consequence of instantiating a logically directed, thermodynamically irreversible predictive process in the continuum.
+
+
+## O.8 Conclusion
 
 The familiar properties of time—its coherence over vast scales and its unwavering forward direction—are not postulated in the Predictive Universe framework but are derived as necessary emergent features of the collective predictive process.
 *   **Temporal Coherence** emerges as a dynamically stable state, enforced by the Principle of Compression Efficiency, which penalizes the predictive errors and resource costs inherent in desynchronization. The MPU network self-organizes into a synchronized coherent causal medium to optimize its collective predictive function.

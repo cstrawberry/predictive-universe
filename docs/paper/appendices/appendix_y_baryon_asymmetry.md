@@ -16,7 +16,6 @@ $$
 N_{CS}(\Sigma)\;=\;\frac{g^2}{32\pi^2}\int_{\Sigma} \mathrm{tr}\!\left(\mathcal A\wedge d\mathcal A+\tfrac23\,\mathcal A\wedge\mathcal A\wedge\mathcal A\right).
 $$
 
----
 
 ### Y.1. PU–Sakov conditions (no new assumptions)
 
@@ -44,7 +43,6 @@ In any PU cosmology satisfying the emergence of spacetime (§11) and gravity (§
 
 *Proof.* (1) follows from the Atiyah–Singer index for chiral fermions in $SU(2)$ backgrounds (Lemma R.IDX1) and the standard descent to the local anomaly (Y.1). The gravitational/hypercharge statement is the usual mixed‑anomaly consequence of Lemma R.IDX2. (2) In the $G$–principal bundle, PCE‑preserving automorphisms with complex phases are open and dense; CP‑symmetric holonomy constraints define a lower‑dimensional subset. (3) The Clausius relation with $T>0$ and $\dot a>0$ forbids global equilibrium across cosmological horizons (Theorem 12.G2 and Appendix E). ∎
 
----
 
 ### Y.2. Anomaly inflow identity → net baryon number
 
@@ -67,7 +65,6 @@ $$
 **Corollary Y.2.1 (Quantization and universality).**
 In any history where the gauge field asymptotes to pure gauges on $\Sigma_{i,f}$, $N_{CS}(\Sigma)\in\mathbb Z$. Hence $\Delta(B{+}L)=2 N_g\,\Delta N_{CS}$ is **topologically quantized**. This uses only PU’s gauge‑bundle structure and index theory.
 
----
 
 ### Y.3. Why a nonzero drift appears (sign without extra couplings)
 
@@ -76,8 +73,6 @@ Assume the electroweak sector is in a locally thermal but *driven* (KMS‑orient
 
 *Proof (linear‑response sketch).* In a CP‑symmetric state, $\langle W\tilde W\rangle=0$ by parity. A CP‑odd perturbation (generic complex holonomy in the predictive connection) plus a time‑oriented KMS driving modifies the Kubo two‑point kernel so that the CP‑odd correlator $\langle K^0; \mathcal H_{\text{drive}}\rangle$ is nonzero. Since $\dot N_{CS}=\int d^3x,\frac{g^2}{32\pi^2},W\tilde W$, the expectation drifts with sign fixed by the CP‑odd part of the response. No new operators are introduced—this is standard anomaly‑induced transport under nonequilibrium. ∎
 
-
----
 
 ### Y.4. Two channels summarized
 
@@ -89,29 +84,30 @@ Assume the electroweak sector is in a locally thermal but *driven* (KMS‑orient
 
 Both are purely **topological/anomalous** and require only the already‑derived PU structures.
 
----
 
-### Y.5. Baryon‑to‑entropy ratio (expression, not fit)
+### Y.5. Quantitative Pathway for Baryogenesis
 
-The net change in baryon number $\Delta B$ is derived from the changes in the conserved and non-conserved currents. The total change is given by the standard relation:
+The baryon-to-entropy ratio $\eta_B\equiv n_B/s$ is generated during a non-equilibrium epoch in the early universe. The PU framework provides the necessary ingredients (the Sakharov conditions, as per Appendix Y) and allows for a quantitative calculation. The net baryon number produced is proportional to the total change in the Chern-Simons number, $\Delta N_{CS}$, integrated over the relevant epoch. The rate of change of $\langle N_{CS} \rangle$ is proportional to the expectation value of the CP-violating operator $W\tilde{W}$, which is non-zero in a driven, out-of-equilibrium thermal state with fundamental CP violation.
 $$
-\Delta B = \frac{1}{2} \left( \Delta(B+L) + \Delta(B-L) \right).
+\frac{d \langle N_{CS} \rangle}{dt} \propto \Gamma_{\mathrm{CS}}(T) \cdot \delta_{CP} \cdot f_{NEQ}(T)
 $$
-Substituting the result from Theorem Y.2 for the anomalous `B+L` current yields:
+where $\Gamma_{\mathrm{CS}}(T)$ is the sphaleron rate, $\delta_{CP}$ is the fundamental CP-violating parameter from the PU predictive-frame bundle, and $f_{NEQ}(T)$ is a factor quantifying the departure from thermal equilibrium, proportional to $H(T)/T$. Integrating this rate yields the final asymmetry:
 $$
-\Delta B = \frac{1}{2} \left( 2 N_g \Delta N_{CS} + \Delta(B-L) \right) = N_g \Delta N_{CS} + \frac{1}{2} \Delta(B-L).
+\boxed{\,\eta_B^{\mathrm{final}}\;=\;\frac{N_g}{\mathcal C}\int_{T_{\mathrm{fo}}}^{T_i}
+\frac{\Gamma_{\mathrm{CS}}(T)\;\delta_{CP}\;(H(T)/T)\;W(T)}
+{g_\ast^{3/2}(T)\;\sqrt{G_H(T)}\;T^6}\;dT\, },\qquad N_g=3,
 $$
-Defining the comoving entropy density $s$ for the predictive fluid (Appendix E thermodynamics), the final asymmetry is
-$$
-\eta_B \;\equiv\; \frac{n_B}{s}
-\;=\;\frac{1}{s}\,\int_{t_i}^{t_f}\! dt\int_{\Sigma_t}\! d^3x\ \left\langle \partial_\mu J_B^\mu \right\rangle
-\;=\; \frac{N_g}{s}\,\Big\langle N_{CS}(\Sigma_f)-N_{CS}(\Sigma_i)\Big\rangle
-\;+\;\frac{1}{2s}\int_{\mathcal V}\!\langle \partial_\mu J_{B-L}^\mu\rangle, \tag{Y.5}
-$$
+with:
+*   $s(T)=\tfrac{2\pi^2}{45}\,g_\ast(T)\,T^3$, $H(T)=\sqrt{\tfrac{8\pi^3}{90}\,G_H(T)\,g_\ast(T)}\;T^2$.
+*   $\Gamma_{\mathrm{CS}}(T)$ is the standard sphaleron transition rate.
+*   $\delta_{CP}$ is the key PU input: a dimensionless, in-principle computable parameter representing the magnitude of CP violation from the complex holonomies of the predictive-frame bundle.
+*   $W(T)\in[0,1]$ is a washout factor.
+*   $T_{\mathrm{fo}}$ is the freeze-out temperature where $\Gamma_{\mathrm{CS}}(T_{\mathrm{fo}})\!\approx\!H(T_{\mathrm{fo}})$.
+*   $\mathcal C$ is a standard normalization constant.
 
-where the last term is absent if $B{-}L$ is anomaly‑free. Equation (Y.5) is **parameter‑free** at the level of principle; magnitudes are controlled by the **topological susceptibility** of the electroweak sector and the **duration of the driven epoch**, both computable once the PU continuum limit (Theorem D.G3) fixes the finite‑$T$ effective action.
+This formula provides a direct, computable pathway from the microscopic PU parameter $\delta_{CP}$ to the macroscopic observable $\eta_B$.
 
----
+
 
 ### Y.6. Boundary conditions and sign
 
