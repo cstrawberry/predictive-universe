@@ -35,7 +35,7 @@ Within the MPU framework, a superposition state $|\psi\rangle = \sum_i c_i |i\ra
 
 **8.3 Emergence of the Born Rule (Proposition 7)**
 
-The probability $P(i | S(t), s)$ for the 'Evolve' process (Definition 27), acting on an MPU with state amplitude $S(t)=|\psi\rangle$ relative to perspective $s$ (corresponding to ONB $\{|i\rangle_s\}$), is uniquely determined by the mathematical structure of the Hilbert space $\mathcal{H}_0$ (Proposition 4) and fundamental consistency requirements (specifically, that probabilities for a complete set of outcomes must sum to unity independent of the choice of basis, **Theorem G.1.7** derived from PCE cost optimization in Appendix G.1) to to be the Born rule:
+The probability $P(i | S(t), s)$ for the 'Evolve' process (Definition 27), acting on an MPU with state amplitude $S(t)=|\psi\rangle$ relative to perspective $s$ (corresponding to ONB $\{|i\rangle_s\}$), is uniquely determined by the mathematical structure of the Hilbert space $\mathcal{H}_0$ (Proposition 4) and fundamental consistency requirements (specifically, that probabilities for a complete set of outcomes must sum to unity independent of the choice of basis, **Theorem G.1.7** derived from PCE cost optimization in Appendix G.1) to be the Born rule:
 
 $$
 \sum_i |i\rangle_s \langle i|_s = I \quad \text{(49)}
