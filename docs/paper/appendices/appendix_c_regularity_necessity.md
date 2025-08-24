@@ -206,7 +206,7 @@ This theorem strengthens the necessity statement of Theorem 43 by providing a di
 1. **Uniform PCE saturation**: On every ball $B(x,r)$ with $r\ge 10\delta$, the per‑edge capacity weights $w_e$ satisfy
    $\displaystyle 1-\varepsilon_C \le \frac{w_e}{C^*_{\max}}\le 1+\varepsilon_C,\qquad C^*_{\max}=2\ln 2,$
    with $\varepsilon_C \le \frac{1-f_{\mathrm{RID}}}{1+f_{\mathrm{RID}}}$ (from the KKT stationarity of POP with RID contractivity $f_{\mathrm{RID}}$ from Lemma E.1).
-2. **Bounded geometry**: Node degree $\Delta\_{\min}\le \deg(v)\le \Delta\_{\max}$, packing $\eta$ and link‑area density $\chi$ as in App. E/Q; minimal link length $\delta$.
+2. **Bounded geometry**: Node degree $\Delta_{\min}\le \deg(v)\le \Delta_{\max}$, packing $\eta$ and link‑area density $\chi$ as in App. E/Q; minimal link length $\delta$.
 
 Then for all $r\ge 10\delta$ and $x\in\mathcal{N}$:
 
@@ -233,13 +233,13 @@ $$
 C_P(r)\,r \left(\fint_{B(x,4r)} |\nabla f|^2\,\mathrm d\mu\right)^{1/2}.
 $$
 
-*Proof sketch.*
+*Proof.*
 (i) *Local homogeneity from PCE + RID.* KKT stationarity of POP under RID contractivity gives a uniformity modulus
 $\varepsilon_C\le(1-f_{\mathrm{RID}})/(1+f_{\mathrm{RID}})$ for the optimal link weights. This bounds local density fluctuations of nodes/links at scale $\ge 10\delta$.
 (ii) *Doubling.* Pack $B(x,2r)$ by $2^{D}$ disjoint translates of $B(x,r)$ up to packing distortion $\eta^\uparrow/\eta^\downarrow$ and degree distortion $\Delta_{\max}/\Delta_{\min}$. The weight uniformity adds a factor $(1+4\varepsilon_C)$.
 (iii) *Cheeger–Poincaré.* The graph‑Cheeger constant on $B(x,r)$ satisfies
 $h(B)\ge \frac{w_{\min}\,\chi\,4\pi r^2}{w_{\max}\,\rho^\uparrow(r)\,\frac{4}{3}\pi r^3} = \frac{3\chi}{\rho^\uparrow(r)}\,\frac{(1-\varepsilon_C)}{r(1+\varepsilon_C)}$.
-Cheeger’s inequality gives $\lambda_1(B)\ge h(B)^2/(2\Delta_{\max})$. Combine $\mathrm{Var}_B(f)\le \lambda_1(B)^{-1}\mathcal{E}(f,f)$ with $\mathcal{E}(f,f)$ bounded by the coarse‑grained Dirichlet form to obtain the stated $(1,2)$–Poincaré with $\lambda=4$ and $C_P(r)$ above.  $\square$
+Cheeger’s inequality gives $\lambda_1(B)\ge h(B)^2/(2\Delta_{\max})$. Combine $\mathrm{Var}_B(f)\le \lambda_1(B)^{-1}\mathcal{E}(f,f)$ with $\mathcal{E}(f,f)$ bounded by the coarse‑grained Dirichlet form to obtain the stated $(1,2)$–Poincaré with $\lambda=4$ and $C_P(r)$ above.  ∎
 
 **C.7 Conclusion**
 

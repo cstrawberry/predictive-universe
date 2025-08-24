@@ -72,6 +72,12 @@ This condition is excluded by the framework's rate and resource bounds for reali
 
 **AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Eq. (F.4). Under the information‑rate bound for the balanced baseline \$p=\tfrac12\$, \$I(C;Y) \le 4\ln 2 ,(\kappa \cdot \mathrm{CC})^2\$ nats/trial (Theorem 41), this statistical influence cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42). The full consistency analysis is provided in **Appendix F**.
 
+**No‑signaling equalities.** For all choices of local settings $x,x'$ and $y,y'$ and all outcomes $a,b$,
+$$
+\sum_{a} P(a,b\,|\,x,y)=P(b\,|\,y),\qquad \sum_{b} P(a,b\,|\,x,y)=P(a\,|\,x).
+$$
+*Proof.* If $O_A\subset O_B'$ are spacelike separated, Appendix F gives $[\mathcal A(O_A),\mathcal A(O_B)]=\{0\}$ and Einstein causality for the induced dynamics. Hence any local operation at $A$ is represented by an instrument that commutes with all effects at $B$, and vice versa, so marginals at one site are invariant under changes of the other site’s setting; the displayed equalities follow by summing joint probabilities over the commuting outcome algebra.
+
 **Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to stress–energy and induces gravitational self-dephasing (Appendix S). Modeling
 $$
 P_{\text{context}}(\mathrm{CC}) = A\!\left[\frac{\mathrm{CC}}{\alpha_{CC,\max}-\mathrm{CC}}\right]^2,\qquad

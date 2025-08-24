@@ -9,7 +9,7 @@
 *   Audenaert, K. M. R. (2007). A sharp continuity estimate for the von Neumann entropy. *Journal of Physics A: Mathematical and Theoretical*, *40*(28), 8127–8136. DOI: 10.1088/1751-8113/40/28/S19
 *   Audenaert, K. M. R., & Datta, N. (2015). α–z–Rényi relative entropies. *Journal of Mathematical Physics*, *56*(2), 022202. DOI: 10.1063/1.4906367
 *   Baumgartner, B., & Narnhofer, H. (2008). Analysis of quantum semigroups with GKS–Lindblad generators: II. General. *Journal of Physics A: Mathematical and Theoretical*, *41*(39), Article 395303. DOI: 10.1088/1751-8113/41/39/395303
-* Belavin, A. A., Polyakov, A. M., Schwartz, A. S., & Tyupkin, Y. S. (1975). Pseudoparticle solutions of the Yang–Mills equations. *Physics Letters B*, *59*(1), 85–87. DOI: 10.1016/0370-2693(75)90163-X 
+*   Belavin, A. A., Polyakov, A. M., Schwartz, A. S., & Tyupkin, Y. S. (1975). Pseudoparticle solutions of the Yang–Mills equations. *Physics Letters B*, *59*(1), 85–87. DOI: 10.1016/0370-2693(75)90163-X 
 *   Bekenstein, J. D. (1973). Black holes and entropy. *Physical Review D*, *7*(8), 2333–2346. DOI: 10.1103/PhysRevD.7.2333
 *   Belinfante, F. J. (1939). On the spin angular momentum of mesons. *Physica*, *6*(9–10), 887–898. DOI: 10.1016/S0031-8914(39)80090-X
 *   Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525–532. DOI: 10.1147/rd.176.0525
@@ -19,6 +19,7 @@
 *   Born, M. (1926). Zur Quantenmechanik der Stoßvorgänge. *Zeitschrift für Physik*, *37*, 863–867. DOI: 10.1007/BF01397477
 *   Bott, R., & Tu, L. W. (1982). *Differential Forms in Algebraic Topology*. Springer (Graduate Texts in Mathematics, 82). DOI: 10.1007/978-1-4757-3951-0
 *   Boyd, S., & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.
+*   Bratteli, O., & Robinson, D. W. (1997). *Operator Algebras and Quantum Statistical Mechanics: Equilibrium States. Models in Quantum Statistical Mechanics* (2nd ed.). Springer. DOI: 10.1007/978-3-662-03444-6.   
 *   Breuer, H.-P., & Petruccione, F. (2002). *The Theory of Open Quantum Systems*. Oxford University Press.
 *   Brion, M. (2005). Lectures on the geometry of flag varieties. In P. Pragacz (Ed.), *Topics in Cohomological Studies of Algebraic Varieties* (pp. 33–85). Birkhäuser. DOI: 10.1007/3-7643-7342-3_2
 *   Brunetti, R., Dappiaggi, C., Fredenhagen, K., & Zahn, J. (Eds.). (2015). *Advances in Algebraic Quantum Field Theory*. Springer.
@@ -29,6 +30,7 @@
 *   Carlen, E. A., Frank, R. L., & Lieb, E. H. (2018). Inequalities for quantum divergences and the Audenaert–Datta conjecture. *Journal of Physics A: Mathematical and Theoretical*, *51*(48), 483001. DOI: 10.1088/1751-8121/aae536
 *   Carroll, S. M. (2001). The cosmological constant. *Living Reviews in Relativity*, *4*(1), 1. DOI: 10.12942/lrr-2001-1
 *   Carroll, S. M., & Parola, A. (2024). What Emergence Can Possibly Mean. arXiv:2410.15468 [physics.hist-ph].
+*   Caves, C. M., Fuchs, C. A., Manne, K. K., & Renes, J. M. (2004). Gleason-type derivations of the quantum probability rule for generalized measurements. *Foundations of Physics*, *34*(2), 193–209. DOI: 10.1023/B\:FOOP.0000019581.00318.a5. 
 *   Cesa-Bianchi, N., & Lugosi, G. (2006). *Prediction, Learning, and Games*. Cambridge University Press.
 *   Chalmers, D. J. (1996). *The Conscious Mind: In Search of a Fundamental Theory*. Oxford University Press.
 *   Cheeger, J. (1999). Differentiability of Lipschitz functions on metric measure spaces. *Geometric & Functional Analysis*, *9*(3), 428–517. DOI: 10.1007/s000390050094
@@ -82,11 +84,13 @@
 *   Griffiths, R. B. (1967). Correlations in Ising Ferromagnets. I. *Journal of Mathematical Physics*, *8*(3), 478–483. DOI: 10.1063/1.1705219
 *   Gromov, M. (1999). *Metric structures for Riemannian and non-Riemannian spaces*. Birkhäuser.
 *   Haag, R. (1996). *Local Quantum Physics: Fields, Particles, Algebras* (2nd ed.). Springer-Verlag.
+*   Haag, R., & Kastler, D. (1964). An algebraic approach to quantum field theory. *Journal of Mathematical Physics*, *5*(7), 848–861. DOI: 10.1063/1.1704187. 
 *   Hameroff, S. R., & Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, *40*(3–4), 453–480. DOI: 10.1016/0378-4754(95)00042-4
 *   Hastings, M. B., & Koma, T. (2006). Spectral gap and exponential decay of correlations. *Communications in Mathematical Physics*, 265(3), 781–804. DOI: 10.1007/s00220-006-0030-4
 *   Havlin, S., & Ben-Avraham, D. (1987). Diffusion in disordered media. *Advances in Physics*, *36*(6), 695-798. DOI: 10.1080/00018738700101072
 *   Hawking, S. W. (1975). Particle creation by black holes. *Communications in Mathematical Physics*, *43*(3), 199–220. DOI: 10.1007/BF02345020
 *   Hayward, S. A. (1994). General laws of black-hole dynamics. *Physical Review D*, *49*(12), 6467–6474. DOI: 10.1103/PhysRevD.49.6467
+*   Heinonen, J., & Koskela, P. (1998). Quasiconformal maps in metric spaces with controlled geometry. *Acta Mathematica*, *181*(1), 1–61. DOI: 10.1007/BF02392747.
 *   Heisenberg, W. (1927). Über den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik. *Zeitschrift für Physik*, *43*(3–4), 172–198. DOI: 10.1007/BF01397280
 *   Helstrom, C. W. (1976). *Quantum Detection and Estimation Theory*. Academic Press.
 *   Hoeffding, W. (1963). Probability inequalities for sums of bounded random variables. *Journal of the American Statistical Association*, *58*(301), 13–30. DOI: 10.1080/01621459.1963.10500830
@@ -103,6 +107,7 @@
 *   Jegerlehner, F. (2008). The running fine-structure constant α(E) via the Adler function. *Nuclear Physics B – Proceedings Supplements*, *181–182*, 135–140. DOI: 10.1016/j.nuclphysbps.2008.09.010
 *   Kant, I. (1781). Kritik der reinen Vernunft (Critique of Pure Reason).
 *   Keith, S. (2004). A differentiable structure for metric measure spaces. *Advances in Mathematics*, *183*(2), 271–315. DOI: 10.1016/S0001-8708(03)00089-6
+*   Keith, S., & Zhong, X. (2008). The Poincaré inequality is an open ended condition. *Annals of Mathematics*, *167*(2), 575–599. DOI: 10.4007/annals.2008.167.575.
 *   King, C. (2003). The capacity of the quantum depolarizing channel. *IEEE Transactions on Information Theory*, *49*(1), 221-229. DOI: 10.1109/TIT.2002.806153
 *   King, C., & Ruskai, M. B. (2001). Minimal entropy of states emerging from noisy quantum channels. *IEEE Transactions on Information Theory*, *47*(1), 192-209. DOI: 10.1109/18.904522
 *   Kleene, S. C. (1938). On Notation for Ordinal Numbers. *The Journal of Symbolic Logic*, *3*(4), 150–155. DOI: 10.2307/2267778
@@ -139,6 +144,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Milgrom, M. (1983). A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis. *The Astrophysical Journal*, *270*, 365–370. DOI: 10.1086/161130
 *   Mosonyi, M., & Hiai, F. (2011). On the Symmetrized Rényi Relative Entropies and Related Metrics. *IEEE Transactions on Information Theory*, *57*(4), 2474-2487. DOI: 10.1109/TIT.2011.2110065
 *   Mosonyi, M., & Ogawa, T. (2017). Quantum hypothesis testing and the operational interpretation of the quantum Rényi relative entropies. *Communications in Mathematical Physics*, *355*, 373–426. DOI: 10.1007/s00220-017-2960-6
+*   Nachtergaele, B., & Sims, R. (2010). Lieb–Robinson bounds in quantum many-body physics. In R. Sims & D. Ueltschi (Eds.), *Entropy and the Quantum* (*Contemporary Mathematics*, Vol. 529), pp. 141–176. American Mathematical Society. DOI: 10.1090/conm/529.
 *   Nakahara, M. (2003). *Geometry, Topology and Physics* (2nd ed.). Institute of Physics Publishing.
 *   Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information* (10th Anniversary ed.). Cambridge University Press. DOI: 10.1017/CBO9780511976667
 *   O’Brien, P. C., & Fleming, T. R. (1979). A multiple testing procedure for clinical trials. *Biometrics*, *35*(3), 549–556. DOI: 10.2307/2530245. 

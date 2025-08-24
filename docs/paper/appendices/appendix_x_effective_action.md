@@ -2,27 +2,21 @@
 
 ## X.0 Overview and Scope
 
-This appendix establishes the precise relationship between the Predictive Universe (PU) framework and the quantum/statistical **effective action** formalism. We connect:
+This appendix establishes the precise relationship between the Predictive Universe (PU) framework and the quantum/statistical **effective action** formalism. We connect the **predictive free energy** and its **natural‑gradient RG** flow (Appendix D) to **Wilsonian coarse‑graining**, the **1PI effective action** \$\Gamma\$, and the **functional RG** (FRG), including the **gauge** and **gravitational** sectors and the open‑system (Schwinger–Keldysh) structure required for ND‑RID. Throughout we use natural units \$c=\hbar=k\_B=1\$, spacetime signature \$(-,+,+,+)\$, and Heaviside–Lorentz electromagnetic conventions.
 
-* the **predictive free energy** and its **natural‑gradient RG** flow (Appendix D) to
-* **Wilsonian coarse‑graining**, the **1PI effective action** $\Gamma$, and the **functional RG** (FRG),
-* including the **gauge** and **gravitational** sectors, open‑system (Schwinger–Keldysh) structure for ND‑RID, and the link between the **rate‑level PCE potential** and the **effective potential** used in Appendix G.9 and Appendix Z.
 
-Throughout we use natural units $c=\hbar=k_B=1$ unless explicitly stated, spacetime signature $(-,+,+,+)$, and Heaviside–Lorentz electromagnetic conventions.
-
----
 
 ## X.1 From Predictive Statistics to Generating Functionals
 
-Let $\Theta\ni\theta\mapsto p_\theta$ be the coarse‑grained predictive model on field histories $\varphi$ (including matter/MPU fields and, when appropriate, background geometry). For a set of sufficient statistics $\mathcal{O}_a[\varphi]$ with sources $J^a(x)$, define the cumulant generating functional
+Let \$\Theta\ni\theta\mapsto p\_\theta\$ be the coarse‑grained predictive model on field histories \$\varphi\$ (including matter/MPU fields and, when appropriate, background geometry). For a set of sufficient statistics \$\mathcal O\_a\[\varphi]\$ with sources \$J^a(x)\$, define the cumulant generating functional
 
 $$
 W[J]\;:=\;\ln\!\int\!\mathcal{D}\varphi\;p_\theta[\varphi]\;
-\exp\!\Big(\!\int\! d^dx\, J^a(x)\,\mathcal{O}_a[\varphi](x)\Big).
+\exp\!\Big(\!\int\! d^dx\, J^a(x)\,\mathcal O_a[\varphi](x)\Big).
 \tag{X.1}
 $$
 
-The classical fields are $\Phi_a(x):=\delta W/\delta J^a(x)=\langle \mathcal{O}_a\rangle_J$. The **1PI effective action** is the Legendre transform
+The classical fields are \$\Phi\_a(x):=\delta W/\delta J^a(x)=\langle \mathcal O\_a\rangle\_J\$. The **1PI effective action** is the Legendre transform
 
 $$
 \Gamma[\Phi]\;:=\;\sup_{J}\Big\{\!\int\! d^dx\,J^a\Phi_a\;-\;W[J]\Big\},
@@ -30,43 +24,47 @@ $$
 \tag{X.2}
 $$
 
-We assume standard regularity/convexity conditions on $W[J]$ ensuring the existence of the Legendre transform and a well-defined Hessian. In quantum settings the weight $p_\theta[\varphi]$ subsumes $e^{iS[\varphi]}$ (Minkowski) or $e^{-S_E[\varphi]}$ (Euclidean) under the PU coarse-graining; open-system structure is treated via the CTP formalism in §X.5.
+For rigorous convexity and domain control, \$W\$ and \$\Gamma\$ are defined in Euclidean signature; Minkowski‑space results follow by analytic continuation where appropriate. In Euclidean conventions one may write \$p\_\theta\[\varphi]\propto e^{-S\_E\[\varphi]}\$ with **dimensionless**
 
-(For rigorous functional derivatives and convexity, $W$ and $\Gamma_k$ are defined in Euclidean signature; Minkowski-space results are obtained by analytic continuation where appropriate.) At vanishing sources $J=0$, stationary configurations $\delta\Gamma/\delta\Phi=0$ are the PU macrostates consistent with the chosen coarse‑graining.
+$$
+S_E[\varphi]\;:=\;-\ln p_\theta[\varphi]\;+\;\text{const.}
+$$
+
+so that \$W,\Gamma\$ coincide with the usual statistical field‑theory functionals under PU coarse‑graining. At vanishing sources \$J=0\$, stationary configurations \$\delta\Gamma/\delta\Phi=0\$ are the PU macrostates at the chosen resolution.
 
 **Proposition X.1 (Information geometry and curvature).**
-Let $\mathcal{G}_{ab}(x,y)=\delta^2 W/\delta J^a(x)\delta J^b(y)$ be the connected two‑point kernel. Then
+Let \$\mathcal G\_{ab}(x,y)=\delta^2 W/\delta J^a(x)\delta J^b(y)\$ be the connected two‑point kernel. Then
 
 $$
 \Gamma^{(2)}_{ab}(x,y):=\frac{\delta^2\Gamma}{\delta\Phi_a(x)\delta\Phi_b(y)}
 \quad\text{satisfies}\quad
-\int\! d^dz\, \mathcal{G}_{ac}(x,z)\,\Gamma^{(2)}_{cb}(z,y)=\delta_{ab}\delta(x-y).
+\int\! d^dz\, \mathcal G_{ac}(x,z)\,\Gamma^{(2)}_{cb}(z,y)=\delta_{ab}\delta^{(d)}(x-y).
 \tag{X.3}
 $$
 
-Under LAN for exponential families built from the chosen sufficient statistics $\mathcal{O}_a$, the Fisher information coincides with $\mathcal{G}_{ab}$. The **Hessian of $\Gamma$** is its functional inverse. This identifies the curvature used in Appendix D with the inverse response encoded by $\Gamma^{(2)}$.
+Under local asymptotic normality for exponential families built from \$\mathcal O\_a\$, the Fisher information coincides with \$\mathcal G\_{ab}\$, and the Hessian of \$\Gamma\$ is its functional inverse.
 
----
+
 
 ## X.2 Wilsonian Coarse‑Graining and Functional RG
 
-Introduce a momentum‑scale dependent regulator $R_k$ and define the **scale‑dependent effective action** $\Gamma_k$ (IR modes $q\lesssim k$ suppressed). Its (Wetterich) functional RG flow is
+Introduce a momentum‑scale dependent regulator \$R\_k\$ and define the scale‑dependent effective action \$\Gamma\_k\$ (IR modes \$q\lesssim k\$ suppressed). Its (Wetterich) functional RG flow is
 
 $$
 \partial_k \Gamma_k[\Phi]\;=\;\frac{1}{2}\,\mathrm{STr}\!\Big[\big(\Gamma^{(2)}_k[\Phi]+R_k\big)^{-1}\,\partial_k R_k\Big],
 \tag{X.4}
 $$
 
-(Note: The flow is parameterized by the momentum scale $k$ directly, in contrast to some literature that uses $t = \ln(k/\Lambda)$.) Here $\mathrm{STr}$ denotes the supertrace, with a minus sign for Grassmann (fermionic/ghost) fields and implicit sums over internal indices and spacetime. The regulator $R_k$ suppresses modes $q\lesssim k$ and satisfies standard positivity/IR‑regularization conditions. We set $k=\Lambda/b$; the predictive $c$-function $c(b)=\mathcal{F}(\theta(b))$ is KL‑monotone, while $\Gamma_k$ encodes the full (regulator‑dependent) dynamics.
+with \$\mathrm{STr}\$ the supertrace (minus sign for fermions/ghosts) and implicit traces over internal/spacetime indices. The regulator \$R\_k\$ suppresses modes \$q\lesssim k\$ and satisfies standard positivity/IR‑regularization conditions. Writing \$k=\Lambda/b\$, the predictive \$c\$‑function \$c(b)=\mathcal F(\theta(b))\$ is KL‑monotone, while \$\Gamma\_k\$ encodes the full (regulator‑dependent) dynamics.
 
 **Corollary X.2 (Fixed points and relevant directions).**
-At a fixed point, directions with positive eigenvalues of $-H$ in Appendix D (equivalently, negative eigenvalues of $H$) correspond to RG‑relevant deformations of $\Gamma_k$; irrelevant directions decay under $k\downarrow 0$.
+At a fixed point, directions with negative eigenvalues of the \$\Gamma\_k\$ stability matrix are RG‑relevant (grow under \$k\downarrow 0\$), while positive‑eigenvalue directions are irrelevant.
 
----
+
 
 ## X.3 Gauge Sector: Background‑Field Method and Normalization
 
-Let $A_\mu=\bar A_\mu+a_\mu$ with background‑field gauge fixing preserving background invariance. The gauge part of the effective action reads
+Let \$A\_\mu=\bar A\_\mu+a\_\mu\$ with background‑field gauge fixing preserving background invariance. The gauge part of the effective action reads
 
 $$
 \Gamma^{\text{gauge}}_k[\bar A]
@@ -74,7 +72,7 @@ $$
 \tag{X.5}
 $$
 
-where dots include gauge‑invariant operators and (background‑invariant) gauge‑fixing/ghost terms. In this formalism, a Ward identity ensures that the renormalization of the background gauge coupling depends only on the background-field wavefunction renormalization factor $Z_A(k)$. The **physical coupling** satisfies
+where dots include gauge‑invariant higher operators and the background‑invariant gauge‑fixing/ghost sector. A Ward identity ensures that the renormalization of the background gauge coupling depends only on the background‑field wavefunction factor \$Z\_A(k)\$. The physical coupling satisfies
 
 $$
 e^2(k)=\frac{u(k)}{\kappa(k)},\qquad
@@ -82,22 +80,22 @@ e^2(k)=\frac{u(k)}{\kappa(k)},\qquad
 \tag{X.6}
 $$
 
-with $u=g_e^2$ the PU rate‑level deformation and $\kappa(k)$ the field‑strength normalization. In background-field normalization (X.5), one may take $\kappa(k)=Z_{\text{map}}\;Z_A^{-1}(k)$, where $Z_A(k)$ is the background-field wavefunction factor and $Z_{\text{map}}$ accounts for the PU$\to$canonical field mapping. At the **PCE‑Attractor**, Appendix Z fixes $u^*=8^{1/24}-1$, and $\kappa$ is fixed by the emergent electroweak normalization/matching. Equation (X.6) is the precise statement underlying Appendix Z (cf. Z.4–Z.6).
+with \$u=g\_e^2\$ the PU rate‑level deformation and \$\kappa(k)\$ the field‑strength normalization. In background‑field normalization (X.5) one may take \$\kappa(k)=Z\_{\text{map}},Z\_A^{-1}(k)\$, where \$Z\_A(k)\$ is the background‑field wavefunction factor and \$Z\_{\text{map}}\$ accounts for the PU→canonical field mapping. At the PCE‑Attractor (Appendix Z), \$u^\*=8^{1/24}-1\$ and \$\kappa\$ is fixed by emergent electroweak matching.
 
----
 
-## X.4 Gravitational Sector: $\Gamma[g]$, Wald Entropy, and Area Law
 
-The geometric sector of the effective action takes the general diffeomorphism‑invariant form
+## X.4 Gravitational Sector: \$\Gamma\[g]\$, Wald Entropy, and Area Law
+
+The geometric sector of the effective action takes the diffeomorphism‑invariant form
 
 $$
 \Gamma^{\text{grav}}_k[g]
 =\int d^4x\sqrt{-g}\,\Big[\frac{1}{16\pi G(k)}\,\big(R-2\Lambda(k)\big)
-+\sum_i c_i(k)\,\mathcal{O}_i[g]\Big],
++\sum_i c_i(k)\,\mathcal O_i[g]\Big],
 \tag{X.7}
 $$
 
-with curvature invariants $\mathcal{O}_i$ (e.g., $R^2,R_{\mu\nu}R^{\mu\nu},\dots$). Appendix E imposes **thermodynamic consistency** via the Clausius relation and the **Wald entropy density** on local Rindler sections. In $D=4$, consistency with the **Bekenstein–Hawking area coefficient** selects the Einstein–Hilbert structure at leading order (Appendix E; Section 12), yielding the field equations
+with curvature invariants \$\mathcal O\_i\$ (e.g., \$R^2,R\_{\mu\nu}R^{\mu\nu},\dots\$). Appendix E imposes **thermodynamic consistency** via the local Clausius relation and the **Wald entropy density** on local Rindler sections. In \$D=4\$, consistency with the **Bekenstein–Hawking area coefficient** selects the Einstein–Hilbert structure at leading order (Appendix E; Section 12), yielding field equations
 
 $$
 \frac{\delta \Gamma^{\text{grav}}}{\delta g_{\mu\nu}}
@@ -106,13 +104,13 @@ $$
 \tag{X.8}
 $$
 
-which reproduce Theorem 12.G2/50 when coupled to $\Gamma^{\text{matter}}$. The **area‑law coefficient** $1/[4G]$ is fixed microscopically by Appendix E (Eq. E.9), while **scale dependence** $G(k)$ is discussed in Appendix I and Section 12.5. In higher dimensions $D>4$, the same Clausius/Wald logic selects the Lovelock class (Appendix E).
+The area‑law coefficient \$1/(4G)\$ is fixed microscopically by Appendix E, while scale dependence \$G(k)\$ is discussed in Appendix I and Section 12.5; in \$D>4\$ the same Clausius/Wald logic selects the Lovelock class.
 
----
 
-## X.5 Open‑System Structure for ND‑RID: Schwinger–Keldysh $\Gamma_{\rm CTP}$
 
-ND‑RID implies an intrinsically **open** macroscopic dynamics. Introduce doubled fields $\Phi_\pm$ on the closed‑time path and define
+## X.5 Open‑System Structure for ND‑RID: Schwinger–Keldysh \$\Gamma\_{\rm CTP}\$
+
+ND‑RID implies intrinsically **open** macroscopic dynamics. Introduce doubled fields \$\Phi\_\pm\$ on the closed‑time path and define
 
 $$
 e^{\,i W_{\rm CTP}[J_+,J_-]}
@@ -122,80 +120,93 @@ e^{\,i\big(S[\varphi_+]-S[\varphi_-]+\int J_+\mathcal{O}_+-\int J_-\mathcal{O}_-
 \tag{X.9}
 $$
 
-The **CTP effective action** $\Gamma_{\rm CTP}[\Phi_+,\Phi_-]$ is the Legendre transform of $W_{\rm CTP}$. Its **Keldysh decomposition** encodes a causal dissipative kernel $\eta$ and a noise kernel $N$ obeying fluctuation–dissipation constraints; positivity of $N$ aligns with the **local second law** used in Appendix E and preserves **operator causality** as in Appendix F. Near local equilibrium the KMS condition constrains the dissipative/noise kernels, consistent with the fluctuation–dissipation relations implied by the local second law. Setting $\Phi_+=\Phi_-=\Phi$ yields the physical, coarse‑grained equations with dissipative corrections consistent with PU thermodynamics.
+The **CTP effective action** \$\Gamma\_{\rm CTP}\[\Phi\_+,\Phi\_-]\$ is the Legendre transform of \$W\_{\rm CTP}\$. In the Keldysh \$r/a\$ basis the quadratic kernel has the causal structure
 
----
+$$
+\Gamma^{(2)}(\omega,\mathbf{k}) \equiv
+\begin{pmatrix}
+0 & \Gamma^{A} \\
+\Gamma^{R} & \Gamma^{K}
+\end{pmatrix},
+$$
+
+with \$\Gamma^{R}\$ retarded, \$\Gamma^{A}=(\Gamma^{R})^\dagger\$, and \$-i,\Gamma^{K}\succeq 0\$ (noise positivity). Near local equilibrium the KMS condition constrains \$\Gamma^{K}\$ consistently with the fluctuation–dissipation relations implied by the local second law (Appendix E). Setting \$\Phi\_+=\Phi\_-=\Phi\$ yields the physical coarse‑grained equations with causal dissipation.
+
+
 
 ## X.6 Rate‑Level PCE Potential vs. Effective Potential
 
-For homogeneous deformations $u=g_e^2$, define the **effective potential**
+For homogeneous deformations \$u=g\_e^2\$, define the **effective potential**
 
 $$
-V_{\rm eff}(u;k)\ :=\ \frac{1}{\mathcal{V}}\;\Gamma_k[u\ \text{const}],
-\qquad \mathcal{V}=\int d^4x.
+V_{\rm eff}(u;k)\ :=\ \frac{1}{\mathcal{V}}\;\Gamma_k[u\ \text{const}],\qquad \mathcal{V}=\int d^4x.
 \tag{X.10}
 $$
 
-Appendix G.9 defines a **rate‑level PCE potential** $\phi(u)$ capturing the power‑benefit tradeoff for maintaining $U(1)$ coherence; its LAN expansion near $u=0$ has curvature $\gamma_{\rm eff}=2$. The PU **capacity constraint** (Appendix W; flat spectrum at the PCE‑Attractor) reads
+Appendix G.9 defines a **rate‑level PCE potential** \$\phi(u)\$ capturing the power‑benefit trade‑off for maintaining \$U(1)\$ coherence; its LAN expansion near \$u=0\$ has curvature \$\gamma\_{\rm eff}=2\$. The PU **capacity constraint** (Appendix W; flat spectrum at the PCE‑Attractor) reads
 
 $$
 M\ln(1+\lambda u)=\ln d_0.
 \tag{X.11}
 $$
 
-At the attractor, the constrained minimization of $\phi(u)$ is equivalent to the stationarity of $V_{\rm eff}$ with a Lagrange multiplier $\zeta$:
+At the attractor, the constrained minimization of \$\phi(u)\$ is equivalent to the stationarity of \$V\_{\rm eff}\$ with Lagrange multiplier \$\zeta\$:
 
 $$
 \frac{d}{du}\Big(V_{\rm eff}(u;k)+\zeta\,[M\ln(1+\lambda u)-\ln d_0]\Big)\Big|_{u=u^*}=0.
 \tag{X.12}
 $$
 
-Using (X.12) with $\gamma_{\rm eff}=2$ reproduces the **zero‑slack condition** employed in Appendix Z, and algebraically yields the **identity** for $(\Gamma_0\nu)/A_{\rm PCE}$ reported in (Z.7)–(Z.8). At the PCE‑Attractor, the zero‑slack condition enforces capacity saturation, making the constrained minimizer of $\phi(u)$ coincide with the stationary point of $V_{\rm eff}$ under (X.11), reproducing the identities used in Appendix Z. 
+Using (X.12) with \$\gamma\_{\rm eff}=2\$ reproduces the zero‑slack condition employed in Appendix Z and the identities (Z.7)–(Z.8). At the PCE‑Attractor the constrained minimizer of \$\phi(u)\$ coincides with the stationary point of \$V\_{\rm eff}\$ under (X.11).
 
-**Theorem X.3 (Predictive Ward identity ⇒ $\kappa_\*=1$)**
+**Theorem X.3 (Predictive Ward identity ⇒ \$\kappa\_\*=1\$).**
+Let \$u\$ couple the predictive code to a background \$U(1)\$ source through the sufficient statistic associated to the generator \$Q\$. Denote by \$\mathcal K\$ the predictive quadratic kernel fixed by the \$U(1)\$ Ward identity in the predictive frame. At the PCE fixed point with flat mode spectrum \$(M,\lambda)=(24,1)\$ (Appendix Z):
 
-Let $u$ be the PU control parameter that couples the predictive code to a background $U(1)$ connection $A_\mu$ through the predictive‑observable algebra (Sec. 8, App. F). At the PCE optimum with flat mode spectrum $(M,\lambda)=(24,1)$ (App. Z), the **quadratic variation** of the predictive free energy in $A_\mu$ equals the **BKM (Kubo–Mori) metric** of the $U(1)$ generator $Q$ *with canonical normalization*. The PU Ward identity (local $U(1)$ invariance of the cost frame) fixes this normalization, matching the quadratic term to the standard Maxwell action:
-$$
+*Assumption (Predictive Ward frame identification).* At the attractor scale \$\mu^\*\$, the predictive frame is fixed by matching the quadratic response to the background‑field two‑point function, i.e., the kernel \$\mathcal K\$ is defined with the background‑field normalization so that comparisons with \$\Gamma^{(2)}\$ are direct.
 
-\Delta \mathcal F \;=\; \frac{1}{4}\int \frac{1}{g^2}\,F_{\mu\nu}F^{\mu\nu}\, \mathrm d^4x,
-\qquad \text{with}\qquad \boxed{\,g^2 = u\,}.
-$$
-Here $\mu^\*$ denotes the **PCE attractor scale** (flat spectrum; $\lambda=1$); laboratory values follow by **RG running** (Appendix V), with the one‑loop QED relation (Heaviside–Lorentz units)
+1. The predictive Ward identity implies
 
 $$
-\frac{1}{\alpha(\mu)}=\frac{1}{\alpha(\mu_0)}-\frac{2}{3\pi}\sum_f N_c^{(f)} Q_f^2 \,\ln\!\frac{\mu}{\mu_0}\,,
+\mathcal{G}\;=\;\left.\frac{\delta^2 W}{\delta J\,\delta J}\right|_{J=0}\;=\;\mathcal{K}^{-1}.
 $$
 
-applied piecewise across thresholds (standard decoupling).
-Hence $\alpha(\mu^\*)=\dfrac{g^2}{4\pi}=\dfrac{u^\*}{4\pi}$ and the normalization constant is exactly $\boxed{\kappa_\*=1}$. Using $u^\* = 8^{1/24}-1\approx 0.0905077$,
-$$
-\alpha(\mu^\*) \approx 0.007202, \qquad \frac{1}{\alpha(\mu^\*)}\approx 138.843.
-$$
-*Proof sketch.* The **predictive Ward identity** (cost‑frame invariance under local $U(1)$) fixes the generator normalization to the canonical one. This matches the quadratic piece to the standard Maxwell action, forcing $g^2=u$. No additional renormalization factor survives at $\mu^\*$ because the Ward identity is saturated by the flat spectrum at the PCE attractor. $\square$
+2. By Legendre duality (X.3),
 
-Thus the **parameter‑free** value $u^*=8^{1/24}-1$ (Appendix Z) is simultaneously (i) a constrained PCE optimum and (ii) a stationary point of the effective potential under the same capacity saturation.
+$$
+\Gamma^{(2)}\;=\;\mathcal{G}^{-1}\;=\;\mathcal{K}.
+$$
 
----
+3. Writing the renormalized quadratic gauge kernel as \$\Gamma^{(2)}=\kappa\_*\mathcal{K}\$ by definition of the field‑strength normalization at the attractor, comparison with step 2 forces \$\kappa\_*=1\$.
+
+Hence, at \$\mu^\*\$ (the PCE attractor scale) the canonical Maxwell normalization is recovered with
+
+$$
+g^2\;=\;u,\qquad \alpha(\mu^\*)=\frac{u^\*}{4\pi}.
+$$
+
+With \$u^\*=8^{1/24}-1\approx 0.0905077\$ (Appendix Z),
+
+$$
+\alpha(\mu^\*) \approx 0.007202,\qquad \frac{1}{\alpha(\mu^\*)}\approx 138.843.
+$$
+
+
 
 ## X.7 Computational Pipeline and Renormalization Conditions
 
-A concrete PU‑to‑$\Gamma$ pipeline (cf. Appendix V):
+1. **Microscopic MPU cycle → LAN block:** extract \$(d\_0,\varepsilon)\$, the active kernel size \$a=e^\varepsilon=2\$, and the QFI spectrum \$(M,\lambda)\$ (Appendix Z; Appendix W).
+2. **Construct \$W\_k\[J]\$:** choose sufficient statistics consistent with symmetries; include CTP doubling for ND‑RID (X.9).
+3. **Legendre transform → \$\Gamma\_k\$:** enforce background invariances; use background‑field method for gauge/gravity; add regulator \$R\_k\$ and integrate (X.4).
+4. **Renormalization conditions:** fix \$\kappa(k)\$ and field normalizations by matching to low‑energy observables (e.g., Thomson limit), consistent with (X.6) and Appendix Z; fix \$G(k)\$ via the area‑law coefficient (Appendix E).
+5. **Predictions:** evaluate \$V\_{\rm eff}\$ and stationarity (X.10)–(X.12); run \$k\downarrow 0\$ and compare with protocols in Section 13.
 
-1. **Microscopic MPU cycle → LAN block:** extract $(d_0,\varepsilon)$, the active kernel size $a=e^\varepsilon=2$, and the QFI spectrum $(M,\lambda)$ (Appendix Z; Appendix W).
-2. **Construct $W_k[J]$:** choose sufficient statistics consistent with symmetries; include CTP doubling for ND‑RID (X.9).
-3. **Legendre transform → $\Gamma_k$:** enforce background invariances; use background‑field method for gauge/gravity; add regulator $R_k$ and integrate (X.4).
-4. **Renormalization conditions:** fix $\kappa(k)$ and field normalizations by matching to low‑energy observables (e.g., Thomson limit), consistent with (X.6) and Appendix Z; fix $G(k)$ via the area‑law coefficient (Appendix E, Eq. E.9).
-5. **Predictions:** evaluate $V_{\rm eff}$ and stationary conditions (X.10)–(X.12); propagate scale dependence $k\mapsto 0$ and compare with protocols in Section 13.
 
----
 
 ## X.8 Summary of Correspondences
 
-* **Predictive geometry ↔ Response:** Fisher metric $\mathcal{G}$ (Appendix D) ↔ connected kernel $\mathcal{G}=\delta^2 W$; $\Gamma^{(2)}=\mathcal{G}^{-1}$ (X.3).
-* **PU RG ↔ FRG:** KL‑monotone $c(b)$ (Appendix D) ↔ $\Gamma_k$ flow (X.4); relevant/irrelevant classification aligned via Hessians.
-* **Gauge normalization:** $u=g_e^2$, $\alpha_{\mathrm{em}}=u/(4\pi\kappa)$ (X.6); $\kappa$ fixed by background‑field normalization; $u^*=8^{1/24}-1$ (Appendix Z).
-* **Gravity:** $\Gamma^{\text{grav}}$ (X.7) + Wald entropy (Appendix E) ⇒ EFE (Section 12); $G$ from Eq. E.9; running $G(k)$ (Appendix I).
-* **Open dynamics:** CTP $\Gamma_{\rm CTP}$ (X.9) encodes dissipation/noise consistent with the local second law (Appendix E) and algebraic locality (Appendix F).
-* **Capacity saturation:** constraint (X.11) links PCE potential and $V_{\rm eff}$ stationarity (X.12), yielding the identities used in Appendix Z.
-
-This appendix completes the identification of PU’s predictive variational structure with the standard effective‑action toolkit used to derive field equations, response, and renormalized parameters in both gauge and gravitational sectors.
+* **Predictive geometry ↔ response:** Fisher metric \$\mathcal{G}\$ (Appendix D) ↔ connected kernel \$\mathcal{G}=\delta^2 W\$; \$\Gamma^{(2)}=\mathcal{G}^{-1}\$ (X.3).
+* **PU RG ↔ FRG:** KL‑monotone \$c(b)\$ (Appendix D) ↔ \$\Gamma\_k\$ flow (X.4); relevant/irrelevant classification aligned via stability eigenvalues.
+* **Gauge normalization:** \$u=g\_e^2\$, \$\alpha\_{\mathrm{em}}=u/(4\pi\kappa)\$ (X.6); \$\kappa\_\*=1\$ at the attractor (Theorem X.3); \$u^\*=8^{1/24}-1\$ (Appendix Z).
+* **Gravity:** \$\Gamma^{\text{grav}}\$ (X.7) + Wald entropy (Appendix E) ⇒ EFE (Section 12); \$G\$ from the area‑law coefficient; running \$G(k)\$ (Appendix I).
+* **Open dynamics:** CTP \$\Gamma\_{\rm CTP}\$ (X.9) encodes dissipation/noise consistent with the local second law (Appendix E) and algebraic locality (Appendix F).
+* **Capacity saturation:** constraint (X.11) links \$\phi(u)\$ and \$V\_{\rm eff}\$ stationarity (X.12), yielding the identities used in Appendix Z.
