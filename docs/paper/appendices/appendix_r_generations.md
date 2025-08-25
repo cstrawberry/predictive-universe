@@ -168,7 +168,7 @@ $$
 $$
 The minimal non-trivial solution satisfying these conditions requires $N=3$ sectors, with family charge offsets of the form $\{a, -a, 0\}$.
 
-*Proof.* The identity $x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$ implies that if $\sum_g F_g=0$, then $\sum_g F_g^3=3F_1F_2F_3$. Thus the two anomaly conditions together force $F_1F_2F_3=0$, meaning at least one family charge must be zero. The linear constraint then enforces the pattern $\{a, -a, 0\}$. For $N=2$, $\{a,-a\}$ is vector-like and predictively degenerate. Therefore, $N=3$ is the minimal nontrivial solution. ∎
+*Proof.* The identity $x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$ implies that if $\sum_g F_g=0$, then $\sum_g F_g^3=3F_1F_2F_3$. Thus the two anomaly conditions together force $F_1F_2F_3=0$, meaning at least one family charge must be zero. The linear constraint then enforces the pattern $\{a, -a, 0\}$. For $N=2$, $\{a,-a\}$ is vector-like and predictively degenerate. Therefore, $N=3$ is the minimal nontrivial solution. Moreover, any basis‑invariant CP‑odd observable (the Jarlskog invariant) vanishes for $N<3$ and can be nonzero for $N=3$, so a nonzero CP‑odd predictive capacity is feasible only for three or more families; by PCE minimality this selects $N=3$. ∎
 
 ### R.3.5 Three Generations: Minimality, Doping Exclusion, and MDL-Based Uniqueness
 
