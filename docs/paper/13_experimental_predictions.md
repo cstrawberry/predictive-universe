@@ -23,16 +23,15 @@ $$
 and is bounded by the CC norm,
 
 $$
-\lvert \Delta P(i)\rvert \le \|L_S\|_{\mathrm{op}}=\mathrm{CC}(S)\le \alpha_{\mathrm{CC,max}}<0.5 .
+|\Delta P(i)| \le 2\sqrt2\,\sin(\mathrm{CC}(S)/4)
 $$
-
-Moreover, for every POVM ${E_i}$ and any state $\rho$, impose the positivity‑preserving effect constraint
-
+which in the small-bias regime relevant for experiments becomes:
 $$
-0 \le E \le I \ \Longrightarrow\ -E \ \le\ K_S(E)\ \le\ I - E ,
+|\Delta P(i)| \le \frac{1}{\sqrt{2}}\mathrm{CC}(S) \approx 0.707\,\mathrm{CC}(S).
 $$
+This provides a direct, parameter-free link between an observed probability shift $\delta = |\Delta P(i)|$ and a lower bound on the underlying complexity budget: $\mathrm{CC}(S) \ge \sqrt{2}\,\delta$.
 
-which, together with $K_S(I)=0$, ensures $0 \le P_{\mathrm{obs}}(i) \le 1$ for all outcomes while preserving $\sum_i P_{\mathrm{obs}}(i)=1$.
+*Proof:* The bounds are derived directly from the PCE-minimal modification principle and information geometry, as established in Theorem 36.
 
 
 Using the **Context-Targeted Bias (CTB)** model (Definition 34), where the context defines a target state $\sigma_S$ and $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$, the deviation takes the form
