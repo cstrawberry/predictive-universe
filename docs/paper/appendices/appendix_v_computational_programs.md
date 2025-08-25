@@ -117,7 +117,7 @@ $$
 and the **dimensionless** coefficient
 
 $$
-\tilde A_{\mathrm{PCE}}\ \coloneqq\ \frac{A_{\mathrm{PCE}}}{\Gamma_0\,\nu}.
+\tilde A_{\mathrm{PCE}}\ \coloneqq\ \frac{A_{\mathrm{PCE}}}{\Gamma_0}.
 $$
 
 Define the spectral power sums and capacity:
@@ -211,7 +211,7 @@ $$
 c_\gamma=C_K\,(\beta_{\mathrm{eff}}\kappa_F)^\gamma,\quad
 A_{\mathrm{PCE}}=r_p\,c_\gamma^{\gamma_p},\quad
 \gamma_{\mathrm{eff}}=\gamma\gamma_p,\quad
-\tilde A_{\mathrm{PCE}}=\frac{A_{\mathrm{PCE}}}{\Gamma_0\nu},\quad
+\tilde A_{\mathrm{PCE}}=\frac{A_{\mathrm{PCE}}}{\Gamma_0},\quad
 S_m=\sum_i\lambda_i^{\,m}.
 $$
 

@@ -9,11 +9,11 @@ This appendix derives general, robust identities and bounds relating emergent ga
 * **Rate‑level PCE potential (quadratic curvature near $u=0$):** take $\gamma_{\rm eff}=2$,
 
   $$
-  \phi(u)=A_{\rm PCE}\,u^{2}\;-\;\Gamma_0\,\nu\sum_{i=1}^{M}\ln(1+\lambda_i u),\qquad u\ge0,
+  \phi(u)=A_{\rm PCE}\,u^{2}\;-\;\Gamma_0\sum_{i=1}^{M}\ln(1+\lambda_i u),\qquad u\ge0,
   \tag{W.0.1}
   $$
 
-  with $A_{\rm PCE},\Gamma_0,\nu$ dimensionless.
+  with $A_{\rm PCE}, \Gamma_0$ having units of **power** $[E][T]^{-1}$, and $\nu$ having units $[T]^{-1}$.
 * **Spectral statistics (LAN/SLD‑QFI spectrum at $g=0$):** the $\{\lambda_i\}$ are the SLD‑QFI eigenvalues of the probe channel linearized at $g=0$. Let
 
   $$
@@ -22,10 +22,10 @@ This appendix derives general, robust identities and bounds relating emergent ga
 * **Invariants at $u=0$:**
 
   $$
-  C_{\rm cap}=\Gamma_0\nu\,S_1,\qquad 
-  C_{\rm cyc}=\phi''(0)=\Gamma_0\nu\,[\,2\tilde A_{\rm PCE}+S_2\,],\qquad
-  \tilde A_{\rm PCE}:=\frac{A_{\rm PCE}}{\Gamma_0\nu}.
-  \tag{W.0.2}
+  C_{\rm cap}=\Gamma_0\,S_1,\qquad 
+   C_{\rm cyc}=\phi''(0)=\Gamma_0\,[\,2\tilde A_{\rm PCE}+S_2\,],\qquad
+   \tilde A_{\rm PCE}:=\frac{A_{\rm PCE}}{\Gamma_0}.
+   \tag{W.0.2}
   $$
 * **Capacity inequality (Jensen):**
 
@@ -196,8 +196,8 @@ Thus
 
 $$
 0\ \ge\ \phi'(u^\*_{\rm J})
-=2A_{\rm PCE}\,u^\*_{\rm J}-\Gamma_0\nu\sum_i\frac{\lambda_i}{1+\lambda_i u^\*_{\rm J}}
-\ \ge\ 2A_{\rm PCE}\frac{a_{\rm cap}-1}{x}-\Gamma_0\nu\,M\frac{x}{a_{\rm cap}}.
+=2A_{\rm PCE}\,u^\*_{\rm J}-\Gamma_0\sum_i\frac{\lambda_i}{1+\lambda_i u^\*_{\rm J}}
+\ \ge\ 2A_{\rm PCE}\frac{a_{\rm cap}-1}{x}-\Gamma_0\,M\frac{x}{a_{\rm cap}}.
 $$
 
 Rearranging gives $2\tilde A_{\rm PCE}\le (Mx^2)/D$. Since $S_2\ge Mx^2$ (Cauchy–Schwarz / RMS–AM), we obtain $2\tilde A_{\rm PCE}\le S_2/D$. Equality requires both Jensen tightness ($\lambda_i=x$) and $\eta=0$, i.e., $u_0=u^\*_{\rm J}$. $\square$

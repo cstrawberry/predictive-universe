@@ -96,20 +96,19 @@ This result is a parameter-free prediction derived solely from the framework's f
 
 At the PCE-Attractor, the system operates at the capacity boundary, where the unconstrained minimizer of the PCE potential $\phi(u)$ coincides with the boundary point. This "zero-slack" condition allows us to derive an exact identity linking the cost-benefit ratio $\Gamma_0/A_{\mathrm{PCE}}$ to the alphabet constants.
 
-The equilibrium condition (Eq. (G.9.10)) for a flat spectrum with $\gamma_{\mathrm{eff}}=2$ is $2A_{\mathrm{PCE}} u^\* = \Gamma_0\nu \frac{M\lambda}{1+\lambda u^*}$. Let $s:=d_0^{1/M}$. At the capacity boundary, $1+\lambda u^*=s$. Eliminating $\lambda$ gives $\lambda=(s-1)/u^\*$. Substituting $\lambda$ into the equilibrium equation yields:
+The equilibrium condition (Eq. (G.9.10)) for a flat spectrum with $\gamma_{\mathrm{eff}}=2$ is $2A_{\mathrm{PCE}} u^\* = \Gamma_0 \frac{M\lambda}{1+\lambda u^*}$. Let $s:=d_0^{1/M}$. At the capacity boundary, $1+\lambda u^*=s$. Eliminating $\lambda$ gives $\lambda=(s-1)/u^\*$. Substituting $\lambda$ into the equilibrium equation yields:
 
 $$
-\frac{\Gamma_0 \nu}{A_{\mathrm{PCE}}} = \frac{2s\,u^{*2}}{M(s-1)} = \frac{2\, d_0^{1/M}}{M\big(d_0^{1/M}-1\big)}\, u^{*2}.
+\frac{\Gamma_0}{A_{\mathrm{PCE}}} = \frac{2s\,u^{*2}}{M(s-1)} = \frac{2\, d_0^{1/M}}{M\big(d_0^{1/M}-1\big)}\, u^{*2}.
 \tag{Z.7}
 $$
 
-Plugging in $d_0=8$, $M=24$, and $u^\* = 8^{1/24}-1$, we obtain a parameter-free prediction for the dimensionless ratio $(\Gamma_0\nu)/A_{\mathrm{PCE}}$:
+Plugging in $d_0=8$, $M=24$, and $u^\* = 8^{1/24}-1$, we obtain a parameter-free prediction for the dimensionless ratio $\Gamma_0/A_{\mathrm{PCE}}$:
 
 $$
-\frac{\Gamma_0 \nu}{A_{\mathrm{PCE}}} \approx \frac{2 \cdot 8^{1/24}}{24\big(8^{1/24}-1\big)} \big(8^{1/24}-1\big)^2 = \frac{8^{1/24}\big(8^{1/24}-1\big)}{12} \approx 0.008225
+\frac{\Gamma_0}{A_{\mathrm{PCE}}} \approx \frac{2 \cdot 8^{1/24}}{24\big(8^{1/24}-1\big)} \big(8^{1/24}-1\big)^2 = \frac{8^{1/24}\big(8^{1/24}-1\big)}{12} \approx 0.008225
 \tag{Z.8}
 $$
-
 This provides a sharp, falsifiable prediction for the ratio of the system's core benefit-conversion factor to its effective cost coefficient.
 
 ## Z.6 Matching the Attractor Coupling to Low‑Energy $\alpha$

@@ -559,7 +559,7 @@ A6. *Mode accounting.* The per‑event Fisher information operator $J$ at $g_e=0
 | $C, C_0$                    | Predictive Physical Complexity (baseline $C_0$)                            | —              |
 | $R(C)$                      | **Power** at complexity $C$                                                | energy/time    |
 | $r_p,\ \gamma_p$            | Parameters of $R(C)$                                                       | energy/time, — |
-| $\Gamma_0$                  | Energy‑per‑nat exchange factor (rate‑level PCE)                            | energy/nat     |
+| $\Gamma_0$                  | Power-conversion factor (rate-level)                                       | energy/time    |
 | $P_{\mathrm{cost}}(g_e)$    | Operating power at coupling $g_e$                                          | energy/time    |
 | $I_{\mathrm{rate}}(g_e)$    | Predictive‑information **rate**                                            | nats/time      |
 | $V_{\mathrm{benefit}}(g_e)$ | Per‑event predictive benefit                                               | nats/event     |
@@ -581,14 +581,14 @@ A6. *Mode accounting.* The per‑event Fisher information operator $J$ at $g_e=0
 
 Let one FPL cycle with POVM readout induce a classical kernel $p_{g_e}(x_{t+1}|x_t,y_t)$. Define the score $s(z)=\partial_{g_e} \ln p_{g_e}(z)|_{g_e=0}$ with $\mathbb E_{p_0}[s]=0$. Under A1 (LAN), the one‑cycle log‑likelihood ratio admits the Gaussian tangent expansion. Diagonalizing the **per‑event** Fisher information operator $J$ yields $M$ independent complex Gaussian shift modes with eigenvalues ${\lambda_i}$. In the whitened basis (unit noise covariance per mode), the per‑mode small‑signal SNR is $\lambda_i u$ with $u=g_e^2$.
 
-For a complex Gaussian mode, the **per‑event** mutual information is $\ln(1+\lambda_i u)$ nats. Summing over modes gives
+For a complex Gaussian mode, the **per‑event** mutual information is $\ln(1+\lambda_i u)$ nats. Summing over modes gives the per-event benefit:
 
 $$
-V_{\mathrm{benefit}}(g_e)=\sum_{i=1}^M \ln(1+\lambda_i u),
-\qquad
-I_{\mathrm{rate}}(g_e)=\nu\,V_{\mathrm{benefit}}(g_e).
-\tag{G.9.2}
+V_{\mathrm{benefit}}(g_e)=\sum_{i=1}^M \ln(1+\lambda_i u).
 $$
+
+The corresponding information **rate** is $I_{\mathrm{rate}}(g_e)=\nu\,V_{\mathrm{benefit}}(g_e)$.
+\tag{G.9.2}
 
 Equivalently, $V_{\mathrm{benefit}}(g_e)=\log\det(I+u\Lambda)$, with $\Lambda=\mathrm{diag}(\lambda_1,\dots,\lambda_M)$. Since $\ln(1+x)=x+O(x^2)$,
 $\dfrac{d}{du}V_{\mathrm{benefit}}(u)\big|_{u=0}=S_1$ with $S_1=\sum_i\lambda_i$.
@@ -642,7 +642,7 @@ $$
 Define the **rate‑level** PCE potential
 
 $$
-V_{\mathrm{PCE}}(g_e)\coloneqq P_{\mathrm{cost}}(g_e)-\Gamma_0\,I_{\mathrm{rate}}(g_e).
+V_{\mathrm{PCE}}(g_e)\coloneqq P_{\mathrm{cost}}(g_e)-\Gamma_0\,V_{\mathrm{benefit}}(g_e).
 \tag{G.9.8}
 $$
 
@@ -650,22 +650,22 @@ With $u=g_e^2$ and dropping the additive constant $R(C_0)$, minimize
 
 $$
 \phi(u)\ \coloneqq\ A_{\mathrm{PCE}}\,u^{\gamma_{\mathrm{eff}}}
--\Gamma_0\,\nu\sum_{i=1}^M \ln(1+\lambda_i u),
+-\Gamma_0\sum_{i=1}^M \ln(1+\lambda_i u),
 \qquad u\ge 0.
 \tag{G.9.9}
 $$
 
 **Theorem G.9.1 (Strict convexity; unique emergence).**
-If $\gamma_{\mathrm{eff}}>1$ and $A_{\mathrm{PCE}},\Gamma_0,\nu>0$, then $\phi$ is strictly convex on $(0,\infty)$ and $\displaystyle \lim_{u\to0^+}\phi'(u)=-\Gamma_0\nu S_1<0$ with $S_1=\sum_i\lambda_i$. Hence the non‑interacting point $u=0$ is unstable and there is a unique PCE‑optimal $u^*>0$.
+If $\gamma_{\mathrm{eff}}>1$ and $A_{\mathrm{PCE}},\Gamma_0>0$, then $\phi$ is strictly convex on $(0,\infty)$ and $\displaystyle \lim_{u\to0^+}\phi'(u)=-\Gamma_0 S_1<0$ with $S_1=\sum_i\lambda_i$. Hence the non‑interacting point $u=0$ is unstable and there is a unique PCE‑optimal $u^*>0$.
 
-*Proof.* $\phi'(u)=A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}u^{\gamma_{\mathrm{eff}}-1}-\Gamma_0\nu\sum_i\frac{\lambda_i}{1+\lambda_i u}$.
-$\ \phi''(u)=A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}(\gamma_{\mathrm{eff}}-1)u^{\gamma_{\mathrm{eff}}-2}+\Gamma_0\nu\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}>0$ for $u>0$. $\square$
+*Proof.* $\phi'(u)=A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}u^{\gamma_{\mathrm{eff}}-1}-\Gamma_0\sum_i\frac{\lambda_i}{1+\lambda_i u}$.
+$\ \phi''(u)=A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}(\gamma_{\mathrm{eff}}-1)u^{\gamma_{\mathrm{eff}}-2}+\Gamma_0\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}>0$ for $u>0$. $\square$
 
 The equilibrium $u^*$ solves
 
 $$
 A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}\,(u^*)^{\gamma_{\mathrm{eff}}-1}
-=\Gamma_0\nu\sum_{i=1}^M \frac{\lambda_i}{1+\lambda_i u^*}.
+=\Gamma_0\sum_{i=1}^M \frac{\lambda_i}{1+\lambda_i u^*}.
 \tag{G.9.10}
 $$
 
@@ -684,23 +684,23 @@ If the unconstrained minimizer of (G.9.9) violates this inequality, the true opt
 Let $\lambda_i=S_1/M$, $\gamma=1$, and $\gamma_p=2$ so that $\gamma_{\mathrm{eff}}=2$. Then (G.9.10) reduces to
 
 $$
-2A_{\mathrm{PCE}}\,u^*=\Gamma_0\nu\,\frac{S_1}{1+\tfrac{S_1}{M}u^*},
+2A_{\mathrm{PCE}}\,u^*=\Gamma_0\,\frac{S_1}{1+\tfrac{S_1}{M}u^*},
 \tag{G.9.12}
 $$
 
 with positive solution
 
 $$
-u^*=\frac{M}{2S_1}\!\left(\sqrt{\,1+\frac{2\,\Gamma_0\nu\,S_1^2}{A_{\mathrm{PCE}}\,M}}\ -\ 1\right),
+u^*=\frac{M}{2S_1}\!\left(\sqrt{\,1+\frac{2\,\Gamma_0\,S_1^2}{A_{\mathrm{PCE}}\,M}}\ -\ 1\right),
 \qquad
 \alpha_{em}(\mu^*)=\frac{u^*}{4\pi},\ \ \mu^*=\kappa_\mu\nu .
 \tag{G.9.13}
 $$
 
-For large $\Gamma_0\nu/A_{\mathrm{PCE}}$,
+For large $\Gamma_0/A_{\mathrm{PCE}}$,
 
 $$
-u^*\ =\ \frac{\sqrt{M}}{2}\sqrt{\frac{2\,\Gamma_0\nu}{A_{\mathrm{PCE}}}}\ -\ \frac{M}{2S_1}\ +\ O\!\left(\sqrt{\frac{A_{\mathrm{PCE}}}{\Gamma_0\nu}}\right).
+u^*\ =\ \frac{\sqrt{M}}{2}\sqrt{\frac{2\,\Gamma_0}{A_{\mathrm{PCE}}}}\ -\ \frac{M}{2S_1}\ +\ O\!\left(\sqrt{\frac{A_{\mathrm{PCE}}}{\Gamma_0}}\right).
 \tag{G.9.14}
 $$
 
@@ -729,4 +729,3 @@ The analysis throughout this appendix highlights the potential for PU principles
 *¹* For $d=2$ the same probability functional is fixed either by
 embedding the qubit in its naturally larger interaction Hilbert space
 (e.g., within the MPU's $d_0 \ge 8$ space) or, if one prefers, by Deutsch’s decision-theoretic argument [Deutsch 1999] applied within a PCE framework. Both routes, when driven by POP–PCE consistency requirements for optimal resource allocation and consistent probability assignment, are expected to converge to the quadratic Born rule as the unique self-consistent measure; we primarily rely on the Gleason argument due to $d_0 \ge 8$.
-
