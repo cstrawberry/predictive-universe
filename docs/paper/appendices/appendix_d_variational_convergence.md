@@ -269,7 +269,7 @@ where $\operatorname*{dist}(x, A) = \inf_{y \in A} \|x-y\|$. Furthermore, by The
 The results derived in this appendix provide the rigorous dynamical justification for Theorems 2 and 43, establishing them as necessary consequences of the framework's core optimization principles operating through stochastic dynamics. The convergence from the discrete MPU network to a continuum description governed by a standard action is made precise by the following theorem.
 
 **Theorem D.G3 (Γ‑limit of discrete predictive action).**
-Let $\{(\mathcal G_\epsilon,\mu_\epsilon)\}_{\epsilon\downarrow0}$ be MPU graphs embedded in $M$ with edge‑length scale $\epsilon$, and let $\mathcal F_\epsilon$ be the **predictive action**: a sum of local convex functionals of discrete curvature proxies (e.g., Ollivier-Ricci on graphs) + a matter (MPU) term. Suppose:
+Let $\{(\mathcal G_\epsilon,\mu_\epsilon)\}_{\epsilon\downarrow0}$ be a family of weighted graphs with mesh $\epsilon\to0$ and discrete curvature proxies (e.g., Ollivier-Ricci on graphs or Regge curvature on triangulations) + a matter (MPU) term. Suppose:
 (i) **Equicoercivity**: $\mathcal F_\epsilon$ controls discrete second differences uniformly;
 (ii) **Locality & consistency**: the discrete curvature converges in $L^1_{\mathrm{loc}}$ to the Ricci scalar $R$;
 (iii) **Area‑law scaling** for the horizon part (Appendix E).

@@ -50,6 +50,7 @@ Therefore, $f(P)$ depends only on the projector $P$ itself.
 
 **G.1.3 Gleason-type Result for the Cost Functional**
 
+
 The cost function $f(P)$ defined on projectors $P$ on the MPU Hilbert space $\mathcal{H}$ (where $\dim(\mathcal{H}) = d_0 \ge 8$, Theorem 23) satisfies the necessary conditions for Gleason's Theorem:
 1.  **Domain:** Defined on the set of orthogonal projectors $P$ on $\mathcal{H}$.
 2.  **Non-negativity:** $f(P) = V(P) \ge 0$ (Definition G.1.1, as conditional potential $V(P)$ components like $V_{op}, V_{prop}$ are non-negative costs, and $V_{benefit}$ is bounded and subtracted appropriately such that the net functional represents effective cost/weight).
@@ -500,7 +501,11 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
         $$
         y_q=\tfrac{1}{6},\quad y_{u^c}=-\tfrac{2}{3},\quad y_{d^c}=\tfrac{1}{3},\quad y_\ell=-\tfrac{1}{2},\quad y_{e^c}=1.
         $$
-        This solution is also consistent with the global $SU(2)$ anomaly (4 doublets/family).
+        This solution is also consistent with the global $SU(2)$ anomaly (4 doublets/family). Furthermore, requiring gauge invariance of the renormalizable Yukawa interactions with a single Higgs doublet $H$,
+        $$
+         y_q+y_H+y_{u^c}=0,\qquad y_q-y_H+y_{d^c}=0,\qquad y_\ell-y_H+y_{e^c}=0,
+          $$
+       selects the same pattern of hypercharges. Among the equivalent overall normalizations, a PCE-favored tie-breaker of minimal denominator complexity sets the conventional scale $y_H=1/2$ and $y_q=1/6$.
 
     *   **PCE Corollary – Singlet Neutrality.** Assigning non‑zero hypercharge to a pure non‑abelian singlet increases PCE cost without predictive gain; the minimum sets the hypercharge of any potential sterile right-handed neutrino to zero.
     *   **Three Generations (Unique Minimizer).** Appendix R (Section R.3.5) shows—using PCE together with a standard MDL replication lemma—that (i) the smallest nontrivial anomaly-consistent family structure is $N=3$ with offsets $\{a,-a,0\}$, (ii) abelian “doping” is disfavored, and (iii) there exists a **non-empty open region** of PCE weights for which the global potential attains a **unique** minimum at exactly **three generations**.
@@ -544,31 +549,31 @@ A6. *Mode accounting.* The per‑event Fisher information operator $J$ at $g_e=0
 
 **Table G.9.1. Symbols and units.**
 
-| Symbol                       | Meaning                                                                           | Units          |
-| ---------------------------- | --------------------------------------------------------------------------------- | -------------- |
-| $g_e$                      | $U(1)$ coupling (electric charge)                                               | —              |
-| $u$                        | $u\coloneqq g_e^2$                                                              | —              |
-| $\alpha_{em}$             | $g_e^2/(4\pi)$                                                                    | —              |
-| $\tau,\ \nu$               | FPL cadence time $\tau$, event rate $\nu=1/\tau$                              | time,\ 1/time  |
-| $\mu^*$                   | Operating (renormalization) scale $\mu^*=\kappa_\mu\nu$, $\kappa_\mu=O(1)$ | energy         |
-| $C, C_0$                  | Predictive Physical Complexity (baseline $C_0$)                                | —              |
-| $R(C)$                     | **Power** at complexity $C$                                                     | energy/time    |
-| $r_p,\ \gamma_p$         | Parameters of $R(C)$                                                            | energy/time, — |
-| $\Gamma_0$                | Energy‑per‑nat exchange factor (rate‑level PCE)                                   | energy/nat     |
-| $P_{\mathrm{cost}}(g_e)$  | Operating power at coupling $g_e$                                               | energy/time    |
-| $I_{\mathrm{rate}}(g_e)$  | Predictive‑information **rate**                                                   | nats/time      |
-| $V_{\mathrm{benefit}}(g_e)$| Per‑event predictive benefit                                                      | nats/event     |
-| $p_L$                     | Logical mismatch probability per cycle                                            | —              |
-| $\beta_{\mathrm{eff}}$    | Cadence‑scale inverse temperature                                                 | 1/energy       |
-| $\kappa_F$                | Small‑deviation field‑mismatch scale                                              | energy         |
-| $J$                        | Per‑event Fisher information operator at $g_e=0$                                | —              |
-| ${\lambda_i}$             | Nonzero spectrum of $J$                                                         | —              |
-| $S_1$                      | $\sum_i\lambda_i=\mathrm{Tr}\,J$ (spectral sum)                                  | —              |
-| $\gamma$                   | Coherence‑overhead complexity exponent ($\ge1$)                                 | —              |
-| $c_\gamma$                | Gauge‑overhead coefficient $=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$          | —              |
-| $\gamma_{\mathrm{eff}}$   | Effective cost exponent $=\gamma\gamma_p>1$                                    | —              |
-| $A_{\mathrm{PCE}}$        | Effective cost coefficient $=r_p c_\gamma^{\gamma_p}$                        | energy/time    |
-| $d_0$                      | MPU alphabet size / Hilbert‑space dimension ($=2^{K_0}=8$)                      | —              |
+| Symbol                      | Meaning                                                                    | Units          |
+| --------------------------- | -------------------------------------------------------------------------- | -------------- |
+| $g_e$                       | $U(1)$ coupling (electric charge)                                          | —              |
+| $u$                         | $u\coloneqq g_e^2$                                                         | —              |
+| $\alpha_{em}$               | $g_e^2/(4\pi)$                                                             | —              |
+| $\tau,\ \nu$                | FPL cadence time $\tau$, event rate $\nu=1/\tau$                           | time,\ 1/time  |
+| $\mu^*$                     | Operating (renormalization) scale $\mu^*=\kappa_\mu\nu$, $\kappa_\mu=O(1)$ | energy         |
+| $C, C_0$                    | Predictive Physical Complexity (baseline $C_0$)                            | —              |
+| $R(C)$                      | **Power** at complexity $C$                                                | energy/time    |
+| $r_p,\ \gamma_p$            | Parameters of $R(C)$                                                       | energy/time, — |
+| $\Gamma_0$                  | Energy‑per‑nat exchange factor (rate‑level PCE)                            | energy/nat     |
+| $P_{\mathrm{cost}}(g_e)$    | Operating power at coupling $g_e$                                          | energy/time    |
+| $I_{\mathrm{rate}}(g_e)$    | Predictive‑information **rate**                                            | nats/time      |
+| $V_{\mathrm{benefit}}(g_e)$ | Per‑event predictive benefit                                               | nats/event     |
+| $p_L$                       | Logical mismatch probability per cycle                                     | —              |
+| $\beta_{\mathrm{eff}}$      | Cadence‑scale inverse temperature                                          | 1/energy       |
+| $\kappa_F$                  | Small‑deviation field‑mismatch scale                                       | energy         |
+| $J$                         | Per‑event Fisher information operator at $g_e=0$                           | —              |
+| ${\lambda_i}$               | Nonzero spectrum of $J$                                                    | —              |
+| $S_1$                       | $\sum_i\lambda_i=\mathrm{Tr}\,J$ (spectral sum)                            | —              |
+| $\gamma$                    | Coherence‑overhead complexity exponent ($\ge1$)                            | —              |
+| $c_\gamma$                  | Gauge‑overhead coefficient $=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$       | —              |
+| $\gamma_{\mathrm{eff}}$     | Effective cost exponent $=\gamma\gamma_p>1$                                | —              |
+| $A_{\mathrm{PCE}}$          | Effective cost coefficient $=r_p c_\gamma^{\gamma_p}$                      | energy/time    |
+| $d_0$                       | MPU alphabet size / Hilbert‑space dimension ($=2^{K_0}=8$)                 | —              |
 
 *Mode counting.* We adopt the **complex‑mode** convention: per mode $\ln(1+\mathrm{SNR})$ nats/event. (A real‑mode convention with $\tfrac12\ln(1+\mathrm{SNR})$ per real scalar and doubled count yields the same total benefit if applied consistently.)
 

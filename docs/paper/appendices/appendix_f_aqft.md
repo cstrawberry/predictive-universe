@@ -82,7 +82,7 @@ The transition from the discrete MPU network to continuum physics is formalized 
     $$
     This convergence must hold uniformly on local algebras supported in balls of a fixed physical radius (see Appendix D; regularity in Appendix C).
 
-Then, the continuum limit exists and defines a net $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ on a Lorentzian manifold $(M, g_{\mu\nu})$ with the following properties:
+In the ND–RID setting with MPU cycle time $\tau$, interaction radius $r_0$ (max graph distance per update), bounded local interaction norm $J$, and maximal network degree $z_{\max}$, these hypotheses imply a uniform Lieb–Robinson bound with constants depending on these micro-parameters; in particular, the emergent Lieb-Robinson velocity scales as $v_{LR}=O(r_0/\tau)$. Then, the continuum limit exists and defines a net $\mathfrak{A}(\mathcal{O})$ on a Lorentzian manifold $(M, g_{\mu\nu})$ with the following properties:
 
 1.  **Geometric Limit:** The sequence of discrete metric spaces converges to the manifold: $(\mathcal{V}_b, d_b) \to (M, g_{\mu\nu})$ (realizing Theorem 43 and Theorem 46).
 

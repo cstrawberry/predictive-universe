@@ -332,11 +332,32 @@ $$
 $$
 Sectors outside $L_{\rm light}$ are non-Abelian charged and are excluded by PCE. Within $L_{\rm light}$, the triple $\{q^{(1)},-q^{(1)},0\}$ minimizes the family-charge unit $|F|=|f\cdot q|$ while achieving small $\ell_1$ and $\ell_2$ norms (with $|q^{(1)}|^2=21$), making the three-sector configuration PCE-favored under (R.18). Configurations with five or more sectors (e.g., $\{a, -a, b, -b, 0\}$), though mathematically possible, require a more complex fermion content and incur higher minimal energy and model complexity, rendering them disfavored.
 
-## R.7 Summary
+### R.8 PCE Constraints on Flavor Mixing (Small-Angle Regime)
 
-*   **Topology:** $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ with an integral basis $\{\omega_i\}$ from universal quotient line bundles $Q_i$.
-*   **Gauge–Topology Correspondence:** The embedding $\rho: G_{\rm SM} \to U(8)$ induces a homomorphism $\mu_{\rm top}: H^2(\Sigma_8; \mathbb{Z}) \to P_{G_{\rm SM}}$ via adjacent weight differences; the $SU(3)$ center character $\tau: \pi_2(\Sigma_8) \to \mathbb{Z}_3$ is surjective for the PCE-favored embedding.
-*   **PCE Selection:** The **light sublattice** $L_{\rm light} = \ker_{\mathbb{Z}}\{c_1, c_2, t\}$ enforces non-Abelian neutrality; center neutrality is automatic for these states.
-*   **Family $U(1)_F$:** An Abelian factor commuting with $G_{\rm SM}$ has charge-map vector $f$; family-charge offsets $F_g=f\cdot q^{(g)}$ across sectors satisfy (R.13). The minimal nontrivial three-sector pattern is $\{F_g\}=\{a,-a,0\}$, with $a=\gcd f(L_{\rm light})$.
-*   **Worked Instance:** An explicit embedding ansatz yields charge vectors $c_1, c_2, t$, and a family vector $f=(0,0,0,0,0,4,0)$; a primitive basis for $L_{\rm light}$; the minimal family-charge unit $a = 12$; and three minimal-norm sectors $q^{(1)} = (1, 1, 0, 0, 1, 3, 3)$, $q^{(2)} = -q^{(1)}$, and $q^{(3)} = 0$.
-*   **Dynamics:** A PCE-compatible potential on $\Sigma_8$ selects three distinct vacuum states $p_\pm, p_0$; Gaussian overlap integrals centered at these vacua yield a Yukawa matrix with hierarchical masses and small mixings controlled by the geodesic separations $D, D'$.
+PCE selects the basis that minimizes the descriptive complexity of interactions. For flavor mixing, a natural basis-invariant proxy for this complexity is the squared Frobenius norm of the off-diagonal part of the rotated Yukawa matrix, $V^\dagger Y V$, where $Y$ is the diagonal matrix of Yukawa couplings (with singular values $\{y_1 \ge y_2 \ge y_3\}$) and $V$ is the unitary mixing matrix.
+
+**Lemma R.8.1 (Quadratic Small-Angle Bound).**
+Let the mixing matrix be parameterized as $V=\exp(\Theta)$ with $\Theta$ being anti-Hermitian and $\|\Theta\| \ll 1$. Then, to second order in the mixing angles, the off-diagonal complexity measure is:
+$$
+\big\|\mathrm{offdiag}(V^\dagger Y V)\big\|_F^2
+= 2\sum_{i<j}(y_i-y_j)^2\,|\Theta_{ij}|^2 + O(\|\Theta\|^3).
+$$
+If PCE imposes a budget $\mathcal{K} \le \varepsilon_{mix}$ on this off-diagonal complexity, it implies an upper bound on the mixing matrix elements:
+$$
+|V_{ij}| \approx |\Theta_{ij}| \le \sqrt{\frac{\varepsilon_{mix}}{2\,(y_i-y_j)^2}}.
+$$
+
+**Consequences for Flavor Structure:** This simple PCE-based cost model provides a powerful qualitative explanation for the observed pattern of fermion mixing:
+*   **Quarks (Hierarchical Gaps):** The quark masses are strongly hierarchical, meaning the gaps $(y_i-y_j)^2$ between Yukawa couplings are large. The PCE bound thus forces the corresponding mixing angles $|V_{ij}|$ to be small. This naturally explains why the CKM matrix is nearly diagonal.
+*   **Leptons (Quasi-degenerate):** In the lepton sector, particularly for neutrinos, the mass eigenstates are much closer together, leading to small gaps $(y_i-y_j)^2$. For a comparable complexity budget $\varepsilon_{mix}$, the PCE bound permits much larger mixing angles. This provides a natural explanation for the large angles observed in the PMNS matrix.
+
+For neutrinos, where mixing is not small, higher-order terms must be included in the expansion; the qualitative conclusion that smaller mass gaps permit larger mixing at a similar complexity cost remains robust.
+
+## R.9 Summary
+
+*   **Topology:** The second homotopy group of the MPU's Perspective Space is $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$, providing seven independent topological charges.
+*   **Gauge–Topology Correspondence:** An embedding of the Standard Model gauge group into the MPU's internal symmetry group induces a homomorphism from the topological charges to the Cartan weight lattice of the gauge group.
+*   **PCE Selection:** The Principle of Compression Efficiency selects for physically viable sectors by enforcing non-Abelian charge neutrality via the **light sublattice** and requiring anomaly cancellation for an emergent family symmetry $U(1)_F$.
+*   **Three Generations:** The minimal non-trivial solution satisfying these consistency and optimization constraints requires exactly three generations, with family charges $\{a, -a, 0\}$.
+*   **Worked Instance:** An explicit, PCE-favored embedding ansatz for the first-generation fermions allows for the calculation of the light sublattice basis and the minimal three-sector solution.
+*   **Masses and Mixings:** A PCE-compatible potential on the Perspective Space creates distinct vacuum states for each generation. Yukawa couplings arise from the overlap of Gaussian wavepackets centered at these vacua, naturally producing hierarchical masses and small CKM mixing angles controlled by the geodesic distances between the vacua. The same mechanism allows for large PMNS mixing if the leptonic vacua are closer or have different local geometry.

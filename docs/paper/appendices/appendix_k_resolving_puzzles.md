@@ -213,6 +213,49 @@ The hierarchy of fundamental forces emerges from the information-theoretic costs
 
 This derivation ties the observed gauge coupling constants to the foundational parameters of the PU framework (`d₀`, `ε`, `C_max`, and the parameters of the cost function `R(C)`), explaining the disparate strengths of the fundamental forces as a direct consequence of the optimal resource allocation for predictive processing.
 
+### **K.7.6 Pathway toward Addressing the Strong-CP Problem**
+
+PCE provides a principled route to reduce predictive complexity. We formalize a conditional resolution of the Strong-CP problem based on explicit assumptions about the optimization flow and a stiffness hierarchy in the cost landscape of CP-violating parameters.
+
+#### K.7.6.1 Assumptions
+
+The resolution pathway is contingent on the following PCE-motivated assumptions regarding the structure of the predictive cost function $C$ in the space of Yukawa phases:
+
+(A1) **Cost Decomposition:** Let $\bar\theta = \theta + \arg\det(Y_u Y_d)$ be the physical strong-CP parameter and let $\phi_\perp$ denote the vector of Yukawa phases orthogonal (in the Fisher-Rao metric on the parameter space) to the combination $\arg\det(Y_u Y_d)$. We assume the predictive-complexity cost function near the CP-conserving submanifold decomposes additively:
+$$
+C(\bar\theta, \phi_\perp) = C_{\text{phys}}(\bar\theta) + C_\perp(\phi_\perp)
+$$
+where both $C_{\text{phys}}$ and $C_\perp$ are strictly convex functions with unique global minima at $0$.
+
+(A2) **Stiffness Hierarchy:** There exists a large dimensionless constant $\Lambda_{stiff} \gg 1$ such that in a neighborhood of the PCE-Attractor, the local curvatures (Hessians) of the cost functions satisfy a stiffness hierarchy. Let $I_{\text{phys}}$ and $I_\perp$ be the Fisher information metrics associated with $C_{\text{phys}}$ and $C_\perp$. We assume:
+$$
+\frac{\lambda_{\min}(I_{\text{phys}})}{\lambda_{\max}(I_\perp)} \ge \Lambda_{stiff}
+$$
+where $\lambda_{\min}$ and $\lambda_{\max}$ are the minimum and maximum eigenvalues, respectively. This implies the cost landscape is far "stiffer" in the $\bar\theta$ direction than in any of the orthogonal $\phi_\perp$ directions.
+
+(A3) **Predictive Content Constraint (POP):** The optimization must preserve the observed amount of weak-sector CP violation. This is formalized by constraining the minimization to a leaf where the Jarlskog invariant $J = \mathrm{Im}\,\det[Y_u^\dagger Y_u, Y_d^\dagger Y_d]$ is held constant, i.e., $J(\phi_\perp) = J_{\text{obs}} > 0$.
+
+#### K.7.6.2 Proposition K.7.1 (Lexicographic Minimization to $O(1/\Lambda_{stiff})$)
+
+Under assumptions (A1)–(A3), the PCE-driven gradient flow dynamics, $\dot{\bar\theta} = -\nabla_{\bar\theta} C$ and $\dot{\phi}_\perp = -\nabla_{\phi_\perp} C$, will drive the system to an equilibrium where the physical strong-CP parameter vanishes:
+$$
+\bar\theta^* = 0.
+$$
+This occurs via a lexicographic (sequential) minimization process accurate to order $O(1/\Lambda_{stiff})$, where the system first rapidly relaxes $\bar\theta$ to zero before slowly optimizing the remaining phases $\phi_\perp$ under the constraint from (A3).
+
+*Proof:* The dynamics are governed by the gradient flow on the cost function $C(\bar\theta, \phi_\perp)$. Due to the decomposition assumed in (A1), the equations of motion are decoupled:
+$$
+\dot{\bar\theta} = -\nabla_{\bar\theta} C_{\text{phys}}(\bar\theta), \qquad \dot{\phi}_\perp = -\nabla_{\phi_\perp} C_\perp(\phi_\perp)
+$$
+Near the minimum at $(0,0)$, we can approximate the cost functions quadratically based on their Hessians, which are proportional to the Fisher information metrics $I_{\text{phys}}$ and $I_\perp$. The dynamics become approximately linear, with relaxation rates determined by the eigenvalues of these Hessians. Let $\lambda_{\text{phys}, \min}$ and $\lambda_{\perp, \max}$ be the minimum and maximum relevant eigenvalues. The characteristic relaxation timescales are $\tau_{\text{phys}} \approx 1/\lambda_{\text{phys}, \min}$ and $\tau_\perp \approx 1/\lambda_{\perp, \min}$.
+The stiffness hierarchy assumption (A2) implies $\lambda_{\text{phys}, \min} \ge \Lambda_{stiff} \lambda_{\perp, \max}$, which leads to a clear separation of timescales:
+$$
+\tau_{\text{phys}} \le \frac{1}{\Lambda_{stiff} \lambda_{\perp, \max}} \ll \frac{1}{\lambda_{\perp, \min}} \approx \tau_\perp
+$$
+This vast difference in relaxation rates means the system minimizes along the "stiff" direction $\bar\theta$ much more rapidly than along any of the "soft" directions $\phi_\perp$. The system will first relax to a state where $\bar\theta(t) \approx 0$ on the fast timescale $\tau_{\text{phys}}$, while $\phi_\perp(t)$ has barely evolved. Subsequently, on the much slower timescale $\tau_\perp$, the system will relax along the $\phi_\perp$ directions, confined to the submanifold where $\bar\theta \approx 0$.
+The POP constraint (A3) ensures that this slow relaxation in the $\phi_\perp$ space occurs on a leaf where the physical CP-invariant $J$ is held constant, preventing the system from simply relaxing to the trivial CP-conserving point $J=0$. This preserves the observed weak-sector CP violation.
+Because the first, rapid stage of minimization drives $\bar\theta$ to zero, the final equilibrium state will have $\bar\theta^* = 0$, resolving the Strong-CP problem. The separation of timescales makes the minimization effectively lexicographic. The error in this approximation is of order $1/\Lambda_{stiff}$. QED
+
 # **K.8 Pathway toward Deriving the Cosmological Constant**
 
 *   **Puzzle:** Why is the observed vacuum energy density astronomically smaller than naïve quantum field theory estimates?

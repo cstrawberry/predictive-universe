@@ -112,7 +112,7 @@ $$
 
 **10.4.3 Theorem 42 (Inability to Construct Causal Loops)**
 
-The hypothesized statistical FTL influence (Postulate 3), constrained by $\text{CC} \le \alpha_{CC,max} < 0.5$ (Theorem 39), cannot be used to construct paradox-inducing causal loops as defined by Postulate 2.
+For any decoder $\mathcal{D}$ that is restricted to a physically plausible computational class (e.g., randomized polynomial-time, BPP or BQP) and thus obeys the sample-complexity lower bound of Theorem 40, the hypothesized statistical FTL influence (Postulate 3), constrained by Theorem 39 and the emergent AQFT locality conditions of Appendix F, cannot be used to construct paradox-inducing causal loops as defined by Postulate 2.
 *Proof:*
 1.  **Requirement for Paradox (Post 2):** Requires deterministic FTL signaling.
 2.  **Nature of Statistical Influence:** CC influence changes Bob's outcome probabilities $P(b|C_A)$, but since $\text{CC} < 0.5$, probabilities remain strictly between 0 and 1 ($P(b|C_A) \in (0, 1)$ for outcomes with $P_{Born}(b) \in (0,1)$). Bob observes a random outcome $b$ from this distribution.
