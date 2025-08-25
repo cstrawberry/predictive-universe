@@ -207,6 +207,20 @@ The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\tex
 
 *Note:* Empirical investigation of Postulate 3 (Protocol 3) critically tests this unique aspect of PU's locality/causality. Confirmation requires re-evaluating standard locality; null results constrain/falsify this prediction.
 
+**13.8 High-Precision Falsification Windows**
+
+Beyond the direct experimental search for CC, the framework's quantitative predictions for fundamental constants and emergent gravity provide sharp, falsifiable tests.
+
+**13.8.1 The Fine-Structure Constant Matching Window**
+The framework predicts a bare value of $1/\alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 138.843$ at the PCE-Attractor. As calculated in Appendix Z.6, connecting this to the value measured at the Z-boson mass requires a finite matching constant. For the $\overline{\mathrm{MS}}$ scheme, this is $\delta_{\overline{\mathrm{MS}}} \approx +8.53\%$ [PDG2024]. Here $\delta_{\overline{\mathrm{MS}}}(M_Z)$ denotes the **finite** $\mathcal{R}$‑map evaluated at $M_Z$ (running from the Attractor boundary, thresholds, hadronic vacuum polarization, and scheme conversion). This prediction is falsifiable: if future, more precise measurements of low-energy $\alpha(0)$ or the hadronic vacuum polarization shift the required matching constant $\delta_{\overline{\mathrm{MS}}}(M_Z)$ outside a plausible range attributable to scheme conversion and threshold/hadronic effects, the PCE‑Attractor model for the origin of the U(1) coupling would be invalidated.
+
+**13.8.2 The Multi-Scale Gravity / Dark Sector Window**
+The framework's two-mechanism model for the dark sector (Appendix I) is falsifiable through its demand for cross-scale consistency with a minimal set of universal parameters. The model can be falsified in several ways:
+*   **Failure to Fit Galaxies:** If the scale-dependent $G(R)$ model (Eq. I.4) fails to provide good fits to a large, diverse sample of galaxy rotation curves (e.g., the SPARC database) with a single, universal set of parameters $(L_0, A_G, m)$, the galaxy-scale mechanism is invalidated.
+*   **Consistency with Early-Universe Constraints:** The galaxy-fit value for the asymptotic enhancement, $A_G$, must remain consistent with cosmological constraints on the effective gravitational coupling during recombination (e.g., CMB/BBN). A model that requires a larger $A_G$ to fit galaxies would be falsified.
+*   **Failure to Fit Clusters:** The non-local predictive matter model (Eq. I.7) must be able to fit the observed lensing profiles of massive galaxy clusters (like Abell 1689 and stacked samples) using a **universal nonlinearity exponent $q$** and either a **universal kernel scale $L_0$ or one derivable from ND–RID microphysics (allowing mild environment dependence)**, with per‑cluster amplitudes $A_{\rm PM}$ bounded by baryon budgets. If no such consistent fit can be found, the cluster-scale mechanism is invalidated.
+*   **Parameter Incoherence:** The parameters derived from fitting galaxies (e.g., the transition scale $L_0$) and clusters (e.g., the kernel scale $L_0$ and the universal exponent $q$) must be coherently related by the underlying theory. A significant, unexplainable discrepancy between the best-fit parameters for the two regimes would falsify the claim of a unified underlying mechanism.
+
 **Data and Code Availability.** All analysis scripts (including power/sample‑size simulations), anonymized raw data, logs, and time‑stamps (with random seeds) will be made publicly available at a persistent repository; preregistration will link to the repository.
 
 **Preregistration.** Primary endpoints, inference procedures, stopping rules (including O’Brien–Fleming boundaries), and exclusion criteria will be preregistered (e.g., OSF/AsPredicted). Any deviations will be documented.

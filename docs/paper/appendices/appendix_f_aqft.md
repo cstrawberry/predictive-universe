@@ -43,7 +43,33 @@ e^{-\mu\bigl(d_{\mathcal N_n}(X,Y)-v_{LR}^{(n)}\,t\bigr)}.
 $$
 
 **Proof Sketch:** 
-The proof relies on generalized Lieb-Robinson bounds applicable to open quantum systems governed by local Liouvillian dynamics. The evolution is given by $\alpha_t^{(n)} = e^{t\mathcal{L}_n}$. Standard techniques for proving such bounds on lattices with local interactions involve analyzing the propagation of operators under the action of the Liouvillian superoperator $\mathcal{L}_n$. The finite interaction range and the contractive nature of the underlying ND-RID process (which bounds the strength of the non-unitary part of the Liouvillian) ensure that the norm of the commutator decays exponentially outside a linear light-cone defined by a finite Lieb-Robinson velocity $v_{LR}^{(n)}$, yielding the form in (F.1). We justify the assumption $v_{LR}^{(n)}\to c$ in Corollary F.1 by identifying the emergent invariant speed $c$ (Theorem 46) as the macroscopic limit of the microscopic network's maximum information propagation velocity, which is precisely what $v_{LR}^{(n)}$ quantifies.
+The proof relies on generalized Lieb-Robinson bounds applicable to open quantum systems governed by local Liouvillian dynamics. The evolution is given by $\alpha_t^{(n)} = e^{t\mathcal{L}_n}$. Standard techniques for proving such bounds on lattices with local interactions involve analyzing the propagation of operators under the action of the Liouvillian superoperator $\mathcal{L}_n$. The finite interaction range and the contractive nature of the underlying ND-RID process (which bounds the strength of the non-unitary part of the Liouvillian) ensure that the norm of the commutator decays exponentially outside a linear light-cone defined by a finite Lieb-Robinson velocity $v_{LR}^{(n)}$, yielding the form in (F.1). 
+
+**Explicit ND–RID Lieb–Robinson bound.** Consider an ND–RID update with cycle time $\tau$, interaction radius $r_0$, per‑cycle circuit depth $D$, max degree $z_{\max}$, and a uniform bound on local generators (or per‑layer gate norms $K\le e^{J_{\max}\tau}$). Then there exist $C,\mu>0$ such that for disjoint supports $X,Y$ at graph distance $d$ and time $t=n\tau$,
+
+$$
+\|[A_X(t),B_Y]\|\ \le\ C\,\|A_X\|\,\|B_Y\|\,\exp\!\big[-\mu\,(d-v_{\rm LR}t)\big],
+$$
+
+with an explicit **velocity bound**
+
+$$
+v_{\rm LR}\ \le\ \frac{r_0}{\tau}\,\ln\!\Big[c_0\,z_{\max}\,K^{\,2D}\Big],\qquad K=e^{J_{\max}\tau},\ c_0=O(1),
+$$
+
+and one constructive choice of decay rate,
+
+$$
+\mu\ =\ \frac{1}{r_0}\,\ln\!\left(\frac{B}{B-1}\right), \quad \text{where } B := c_0\,z_{\max}\,K^{2D}.
+$$
+
+The formula for the decay rate $\mu$ is well-defined and positive only under the precondition that $B > 1$, which is satisfied for any non-trivial network ($z_{\max} \ge 2$) and circuit ($K>1$), or by suitable choice of the $O(1)$ constant $c_0$. These constants need not be optimal; they provide one **constructive** set arising from a walk‑counting estimate (constructive, not tight). In the strictly causal subcase (non‑overlapping local gates of range $r_0$ per layer), one has an **exact light cone** with speed $v_\ast=(D r_0)/\tau$ (i.e., vanishing commutator whenever $d>v_\ast t$). For local CPTP (Lindbladian) generators with bounded local norms, an LR‑type inequality of the same form holds with $O(1)$ changes in $C,\mu,v_{\rm LR}$. A convenient envelope is
+
+$$
+v_{\rm LR}\ \le\ v_\*\ +\ 2D\,J_{\max}\,r_0\ +\ O\!\Big(\tfrac{r_0}{\tau}\ln z_{\max}\Big).
+$$
+
+Identifying the macroscopic invariant speed $c$ (Theorem 46) with $\lim_{n\to\infty}v_{LR}^{(n)}$ justifies Corollary F.1.
 
 **Corollary F.1 (Emergence of Einstein Causality).**
 If the sequence $\{\mathcal N_n\}$ converges geometrically to a Lorentzian spacetime $(M,g_{\mu\nu})$ with invariant speed $c$ (as derived in Theorem 46), and $v_{LR}^{(n)}\to c$ as $n\to\infty$, then for any two space-like separated regions $\mathcal O_1,\mathcal O_2\subset M$ one has

@@ -1,8 +1,8 @@
-# Appendix I: Scale-Dependent Emergent Gravity and Effective-Dark-Matter Phenomenology
+# Appendix I: A PCE-Driven, Environment-Dependent Model for Emergent Gravity
 
 **I.1 Aim and Scope**
 
-Within the Predictive-Universe (PU) framework, this appendix sketches a mechanism by which the emergent Newton constant becomes scale-dependent. This scale dependence arises naturally from the Principle of Compression Efficiency (PCE) governing the adaptation of MPU networks in varying environments. The resulting modification to gravity on kiloparsec and larger scales reproduces the principal dynamical phenomena usually attributed to cold dark matter. Natural units $\hbar=c=1$ are used except where they clarify dimensions of $G$.
+Within the Predictive-Universe (PU) framework, this appendix develops the model for emergent gravity as a multi-scale, environment-dependent phenomenon. The Principle of Physical Instantiation (PPI), guided by the Principle of Compression Efficiency (PCE), must provide the most resource-efficient and globally self-consistent mechanism for the gravitational binding of structures across all scales. We demonstrate that this leads to a two-tiered solution: a local "Law Modification" (`G(R)`) for galaxies and a non-local "Source Modification" ("predictive matter") for clusters. This composite model is a PCE‑preferred solution that satisfies both local binding requirements and global cosmological constraints. The galaxy‑scale law‑modification is **environment‑dependent** and does not imply a universal large‑scale shift of $G$ relevant for the CMB.
 
 **I.2 Foundations of Emergent Gravity in PU**
 
@@ -93,34 +93,35 @@ $$
 
 The parameter set $(G_0,L_0,A_G,m)$ is expected to be universal, determined by the fundamental properties of the MPU network and the PCE optimization landscape. $L_0$ is the scale at which $\hat C_{\mathrm{target}}(R)$ becomes sufficiently low in sparse regions to trigger significant parameter relaxation.
 
-**I.7 Weak-Field Limit and Effective Dark Matter**
+**I.7 A Multi-Scale Solution from Global PCE Optimization**
 
-In the weak-field limit, gravity is described by the Poisson equation $\nabla^2\Phi=4\pi G \rho$. Replacing the standard constant $G_0$ with the scale-dependent $G(R)$ from Equation (I.4), and considering a baryonic mass distribution $\rho_b(R)$, we get:
+The PU framework provides two distinct mechanisms to augment gravity: adapting local network parameters to modify the emergent law (`G`), or collectively reconfiguring the substrate to modify the emergent source (`T_μν`). The choice of mechanism is not arbitrary but is determined by a global PCE optimization that balances local resource costs against global consistency costs.
+
+**I.7.1 Galactic Scales: Law Modification as the Low-Cost Solution**
+
+In the moderate potential wells of galaxies, the required gravitational enhancement is small. Here, PCE selects the most efficient mechanism: a local adaptation of MPU network parameters. This "parameter relaxation" (Section I.5) manifests as a scale-dependent Newton constant, `G(R)` (Eq. I.4). This is the low-cost solution, as it represents a passive relaxation of the substrate and the required asymptotic enhancement `A_G` is small enough to remain consistent with global cosmological constraints. In the weak-field limit, this is formally equivalent to an effective dark matter density that tracks the baryonic distribution:
+
 $$
-\nabla^2\Phi\simeq4\pi G(R)\rho_b(R) = 4\pi G_0\bigl[1+A_G(1-e^{-(R/L_0)^m})\bigr]\rho_b(R)
-$$
-$$
-\nabla^2\Phi\simeq4\pi G_0\bigl[1+\varepsilon_G(R)\bigr]\rho_b(R),
-\qquad
-\varepsilon_G(R)=A_G\bigl(1-e^{-(R/L_0)^m}\bigr),
-\tag{I.5}
-$$
-where $\varepsilon_G(R)$ is the scale-dependent fractional enhancement factor. This equation can be formally recast in the form of the standard Poisson equation sourced by a total density $\rho_{total} = \rho_b + \rho_{\mathrm{DM,eff}}$:
-$$
-\nabla^2\Phi=4\pi G_0\!\left[\rho_b(R)+\rho_{\mathrm{DM,eff}}(R)\right],
-\quad
-\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R)\,\rho_b(R).
+\nabla^2\Phi \simeq 4\pi G_0 \left[ \rho_b(R) + \rho_{\mathrm{DM,eff}}(R) \right], \quad \text{where} \quad \rho_{\mathrm{DM,eff}}(R) = \left[ \frac{G(R)}{G_0} - 1 \right] \rho_b(R).
 \tag{I.6}
 $$
-Equation (I.6) shows that the scale-dependent Newton constant $G(R)$ is formally equivalent to the presence of an effective dark-matter density $\rho_{\mathrm{DM,eff}}(R)$ that is directly proportional to the baryonic density $\rho_b(R)$ and whose proportionality factor $\varepsilon_G(R)$ increases with scale according to Equation (I.5). This mechanism naturally produces a dark-matter phenomenology that tracks baryons, a key empirical observation in galaxy dynamics (e.g., the Radial Acceleration Relation). By reproducing this baryon-tracking behavior from first principles, the framework's result captures the central phenomenological success of modified gravity frameworks like MOND [Milgrom 1983]. While the existence of such a scale dependence is motivated by the framework's principles, the specific transition scale $L_0$ in Equation (I.4) is currently treated as a phenomenological parameter constrained by observation; its derivation from underlying MPU network properties remains a subject for future work.
 
-In far-from-equilibrium situations (like galaxy cluster mergers), the scale dependence might not be instantaneous or might involve transient effects related to the dynamics of complexity adaptation, potentially introducing a transient stress component $\rho_\Pi(R,t)$:
+This adaptation is **environment‑dependent** and does not alter the homogeneous early‑Universe limit relevant for the CMB.
+
+**I.7.2 Cluster Scales: Non-Local Source Modification as the Necessary Solution**
+
+In the deep potential wells of galaxy clusters, the required gravitational enhancement is large. A "Law Modification" (`G(R)`) that could produce this effect is ruled out *a priori* by the global consistency requirement, as it would violate precise CMB constraints on the value of `G` in the early universe.
+
+PCE must therefore select the remaining globally consistent mechanism: "Source Modification." Furthermore, the nature of this response is also dictated by PCE. A purely local response ($\rho_{\rm PM}(r)\propto\rho_b(r)$) is informationally sub‑optimal and dynamically inefficient. The MPU network, as an integrated predictive system, naturally adapts to the most salient non‑local feature of the gravitational environment: the baryonic potential $\Phi_b$. A local response would be predictively myopic and prone to instabilities, incurring high coherence costs disfavored by PCE.
+
+Therefore, PCE **preferentially selects** a **non‑local "predictive matter" (PM) response**, a collective reconfiguration of the MPU substrate that is a functional of the baryonic potential. The minimal mathematical implementation of this required non‑local principle is an integral model:
+
 $$
-\nabla^2\Phi=4\pi G_0
-  \bigl[\rho_b+\rho_{\mathrm{DM,eff}}+\rho_\Pi(R,t)\bigr].
+\rho_{\rm PM}(r)=A_{\rm PM}\!\int K\!\big(|\mathbf r-\mathbf r'|;L_0\big)\,\rho_b(r')\!\left(\frac{|\nabla\Phi_b(r')|}{g_\ast}\right)^{q}\! d^3r',
 \tag{I.7}
 $$
-The specific form and significance of $\rho_\Pi$ require further investigation.
+
+where $K$ is a kernel representing the network's correlation length, $\Phi_b$ is the baryonic potential, $g_\ast$ is a characteristic acceleration, and $q$ is a universal nonlinearity exponent. With $\int K d^3x=1$, the total PM mass is $M_{\rm PM} = A_{\rm PM} \int \rho_b(r') \left(\frac{|\nabla\Phi_b(r')|}{g_\ast}\right)^{q} d^3r' = A_{\rm PM} \left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^{q}\right\rangle_{\rho_b} M_b$; thus, once $q$ and $g_\ast$ are fixed, cluster baryon budgets constrain the combination $A_{\rm PM} \left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^{q}\right\rangle_{\rho_b}$ (not $A_{\rm PM}$ alone). For $q>0$, $\rho_{\rm PM}$ vanishes in homogeneous backgrounds, keeping the recombination-era coupling unchanged and satisfying CMB bounds. We take $\rho_{\rm PM}$ to arise from an effective nonlocal susceptibility (or action) so that the associated $T^{\mu\nu}*{\rm PM}$ obeys $\nabla*\mu (T^{\mu\nu}*{\rm b}+T^{\mu\nu}*{\rm PM})=0$.
 
 **I.8 Consistency with Local Tests of GR**
 
@@ -181,4 +182,8 @@ The adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $
 
 **I.15 Conclusion**
 
-The Principle of Compression Efficiency and complexity saturation in sparse predictive environments lead to a PCE-driven parameter relaxation mechanism that causes the emergent Newton constant to increase with scale in low-density regions. The resulting function $G(R)$, Equation (I.4), provides a physically motivated framework that naturally explains galaxy-scale mass discrepancies (e.g., rotation curves, scaling relations). This emergent gravity scenario respects local tests of GR and yields falsifiable predictions for baryon–kinematic relations and potentially cluster dynamics. Detailed rotation-curve fits and cosmological simulations testing the evolution of $G(R)$ are necessary next steps to validate this aspect of the Predictive Universe framework.
+The PU framework proposes a multi-scale solution to the phenomena attributed to dark matter, driven by the Principle of Compression Efficiency.
+1.  **At galaxy scales,** a PCE-driven parameter relaxation mechanism causes the emergent Newton constant to increase with scale ($G(R)$, Eq. I.4), providing a physically motivated framework that naturally explains galaxy rotation curves and baryonic scaling relations while respecting local tests of GR, **as an environment‑dependent relaxation** that leaves the CMB‑era effective $G$ unchanged.
+2.  **At cluster scales**, where a running $G(R)$ is cosmologically constrained, the mass discrepancy is modeled by a **non‑local predictive‑matter response**. A linear, single‑scale kernel is sufficient for **stacked profiles**, while **high‑concentration outliers** (e.g., A1689) demand either a **mild nonlinearity $q>0$** or a **multi‑scale kernel**. All options remain **CMB‑safe** with $A_G\simeq 0$ and are quantitatively testable against lensing data.
+
+This composite model provides a coherent, physically-grounded explanation for dark matter phenomenology across different astrophysical scales and yields a rich set of falsifiable predictions.

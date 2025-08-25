@@ -144,9 +144,15 @@ Within the Predictive Universe framework, gravity emerges as a macroscopic therm
 Gravity is the large-scale thermodynamic consequence of the universe's underlying predictive processing and its inherent informational limits.
 
 
-### **12.5 Scale-Dependent Gravity and Effective Dark Matter (Summary of Appendix I)**
+### **12.5 A Multi-Scale, Environment-Dependent Model for Emergent Gravity**
 
-A significant implication, detailed in Appendix I, is that the effective gravitational coupling $G$ (given by Equation E.9) can become scale-dependent. The effect arises because the equilibrium MPU parameters ($\delta$, $C_{\max}$) are fixed by PCE optimisation and therefore vary with environment. Appendix I shows that in sparse, large-scale regions the system reaches complexity saturation sooner (Corollary I.2), which relaxes the network parameters ($\delta(R)$ grows while $C_{\max}(R)$ falls for $R>L_0$, Section I.5). Inserting these scale-dependent parameters into Equation E.9 produces a running Newton constant $G(R)$ (Equation I.4) that increases at large $R$. In the weak-field limit this is equivalent to an effective dark-matter density $\rho_{\mathrm{DM,eff}}(R) = [G(R)/G_0 - 1]\rho_b(R)$ (Equation I.6) that automatically tracks the baryonic distribution. Full derivation: Appendix I, Equations (I.4)–(I.6).
+The Principle of Compression Efficiency (PCE) dictates that the mechanism for emergent gravity must be globally self-consistent and resource-optimal. As detailed in Appendix I, this leads to a multi-scale, environment-dependent solution for the phenomena attributed to dark matter.
+
+*   **At Galactic Scales:** In environments with moderate potential wells, PCE favors a low-cost "Law Modification." This manifests as a scale-dependent Newton constant, `G(R)` (Eq. I.4), which naturally explains galaxy rotation curves and baryonic scaling relations **as an environment‑dependent relaxation that does not alter the homogeneous early‑Universe limit**.
+
+*   **At Cluster Scales:** In the deep potential wells of clusters, a large change in `G` is ruled out by global cosmological constraints (e.g., from the CMB). PCE therefore selects a different, globally-consistent mechanism: a "Source Modification." This manifests as a non-local "predictive matter" response (Eq. I.7), a collective reconfiguration of the MPU substrate that contributes to the stress-energy tensor only in these extreme environments.
+
+This two-tiered model provides a unified explanation for dark matter phenomenology across scales, rooted in the adaptive dynamics of the underlying predictive substrate, while remaining consistent with cosmological observations.
 
 **Theorem (Universality at fixed scale).** For the predictive action $S_{\mathrm{PU}}(g,\Phi) = \int d^4x \sqrt{-g} \left(\mathcal{L}_{\mathrm{geom}}(g) + \mathcal{L}_{\mathrm{MPU}}(g,\Phi)\right)$ with diffeomorphism invariance and no background structures, the Noether identity implies $\nabla_\mu T^{\mu\nu}=0$ with
 $$

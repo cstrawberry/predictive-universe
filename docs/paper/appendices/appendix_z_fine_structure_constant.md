@@ -130,7 +130,18 @@ This implies that $\alpha_{\mathrm{em}}(\mathrm{MPU})$ cannot be directly identi
 $$
 \alpha(0)=\mathcal{R}\!\left[\alpha_{\mathrm{em}}(\mathrm{MPU})\right].
 $$
-The map $\mathcal{R}$ must account for: (i) scheme-dependencies between the PU framework's "predictive-frame" normalization and a standard QFT scheme; (ii) running and threshold corrections for all charged particles; and (iii) non-perturbative hadronic contributions, typically handled via dispersion relations. The framework thus makes a sharp prediction for this high-scale boundary value, which can then be used as an input to a full RG analysis.
+The map $\mathcal{R}$ must account for: (i) scheme-dependencies between the PU framework's "predictive-frame" normalization and a standard QFT scheme; (ii) running and threshold corrections for all charged particles; and (iii) non-perturbative hadronic contributions. We can perform this matching calculation explicitly.
+
+Numerically (PDG 2024 inputs), $1/\alpha(M_Z)=128.916\pm0.008$ (on‑shell) and $1/\hat\alpha(M_Z)=127.930\pm0.008$ ($\overline{\rm MS}$) [PDG2024].
+
+Here $\delta_{\rm scheme}(M_Z)$ denotes the **finite value of the full matching map** $\mathcal{R}$ **evaluated at** $M_Z$, including RG running from the Attractor boundary, charged‑particle thresholds, hadronic vacuum polarization via dispersion relations, and the scheme conversion. The finite maps at $M_Z$ are
+
+$$
+\delta_{\rm on\text{-}shell}(M_Z)=\frac{\alpha(M_Z)}{\alpha_{\rm em}({\rm MPU})}-1=0.0770\pm0.0001,\qquad
+\delta_{\overline{\rm MS}}(M_Z)=\frac{\hat\alpha(M_Z)}{\alpha_{\rm em}({\rm MPU})}-1=0.0853\pm0.0001.
+$$
+
+These uncertainties reflect experimental inputs at $M_Z$; any theoretical uncertainty in $\alpha_{\rm em}({\rm MPU})$ adds in quadrature. Thus PU predicts a **boundary condition** that is consistent with observation via a finite, scheme‑dependent $\mathcal{R}$, not a forced identity with any low‑energy coupling.
 
 ## Z.7 Conclusion
 
