@@ -23,7 +23,19 @@ Given the relationship between Predictive Physical Complexity ($C \equiv C_P$, a
 
 **6.1.2 Definition 15 (Def 15): Principle of Compression Efficiency (PCE)**
 
-The adaptation dynamics of systems within the PU framework are governed by the Principle of Compression Efficiency (PCE). This principle posits that complex predictive systems naturally evolve or self-organize towards configurations that optimize the trade-off between maximizing the functional utility or Meaning Potential (MP) derived from processed information—quantified by the expected improvement in predictive quality ($\Delta Q$, operationally related to achieving high PP, Definition 7) relevant to the POP (Axiom 1)—and minimizing the comprehensive Signal Cost (SC) associated with acquiring, representing, processing, updating, and utilizing that information. The Signal Cost encompasses the ongoing operational resource costs ($R(C), R_I(C)$, Definition 3, represented operationally by $\langle \hat{R} \rangle, \langle \hat{R}_I \rangle$ when acting on $\langle \hat{C}_v \rangle$) and any transient costs associated with adaptation (complexity changes, model updates). The system implicitly seeks configurations that maximize a net benefit, effectively balancing MP against SC, driving it towards states satisfying the optimal allocation criteria (Definition 14).
+The adaptation dynamics of systems within the PU framework are governed by the Principle of Compression Efficiency (PCE). This principle posits that complex predictive systems naturally evolve or self-organize towards configurations that optimize the trade-off between maximizing the functional utility or Meaning Potential (MP) derived from processed information—quantified by the expected improvement in predictive quality ($\Delta Q$, operationally related to achieving high PP, Definition 7) relevant to the POP (Axiom 1)—and minimizing the comprehensive Signal Cost (SC) associated with acquiring, representing, processing, updating, and utilizing that information. The Signal Cost encompasses the ongoing operational resource costs ($R(C), R_I(C)$, Definition 3, represented operationally by $\langle \hat{R} \rangle, \langle \hat{R}_I \rangle$ when acting on $\langle \hat{C}_v \rangle$) and any transient costs associated with adaptation (complexity changes, model updates). The system implicitly seeks configurations that maximize a net benefit, effectively balancing MP against SC, driving it towards states satisfying the optimal allocation criteria (Definition 14). The ultimate expression of this optimization is the PCE-Attractor.
+
+**Definition 15a (Def 15a): The PCE-Attractor**
+
+ The **PCE-Attractor**, denoted $x_{attr}$, is the canonically selected global-minimum configuration within $\mathcal{E}_{*}^{\text{global}}$ (see Theorem D.3) singled out by the *co-occurring* conditions:
+
+ 1.  **Maximal Symmetry (Flat Spectrum):** For the U(1) sector, the SLD-QFI spectrum is flat ($\sigma^2=0$), reflecting a state of maximal robustness where all information-carrying modes are democratically utilized (see Appendix W; §Z.3).
+
+ 2.  **Maximal Efficiency (Capacity Saturation):** The system operates at the "zero-slack" or "branch boundary" condition, where the unconstrained minimum of the rate-level PCE potential $\phi(u)$ coincides with the information capacity limit ($V_{benefit} = \ln d_0$).
+
+ 3.  **Canonical Instantiation (Minimal Complexity Action):** At the Attractor scale $\mu^*$, the predictive-to-physical normalization for the emergent gauge action satisfies $\kappa^* = 1$ as a consequence of the Principle of Physical Instantiation (PPI, Appendix P) and the Predictive Ward Identity (Theorem X.3).
+
+ This point is the unique, PCE-favored selection used for parameter-free predictions.
 
 **6.1.3 Definition 16 (Def 16): Prediction Optimization Problem - Operational Goal**
 

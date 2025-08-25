@@ -106,6 +106,8 @@
 
 *   **PCE (Principle of Compression Efficiency):** (Definition 15) The core optimization principle stating that adaptive systems evolve towards configurations that maximize predictive utility (Meaning Potential, related to high PP) while minimizing comprehensive resource costs (Signal Cost, including $R, R_I$, adaptation costs). Drives complexity adaptation and network self-organization via minimization of PCE Potential $V(x)$ (Appendix D).
 
+*    **PCE-Attractor:** (Definition 15a) The canonically selected global-minimum equilibrium configuration characterized by maximal efficiency and symmetry. Its defining properties include a flat Quantum Fisher Information (QFI) spectrum for the U(1) sector, operation at the information capacity boundary, and the emergence of a canonical (minimal complexity) physical action with normalization $\kappa^*=1$. It is the idealized state that enables parameter-free predictions for fundamental constants.
+
 *   **PCE Potential ($V(x)$):** (Definition D.1) An effective potential function quantifying the net cost rate (operational, propagation, penalties) minus benefits for a given MPU network configuration $x$. The system's adaptation dynamics are modeled as a stochastic gradient flow seeking to minimize $V(x)$.  
 
 *   **Perspectival Realism:** (Section 14.2) Philosophical stance suggested by the framework where reality has definite properties, but their description and actualization (via 'Evolve') are inherently relative to the interaction context or perspective $s \in \Sigma$.

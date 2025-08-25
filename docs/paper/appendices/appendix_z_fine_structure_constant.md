@@ -45,7 +45,7 @@ Thus, the fundamental parameters ($d_0$, $\varepsilon$) uniquely determine the Q
 
 ## Z.4 The PCE-Attractor and Parameter-Free Calculation of $\alpha_{\mathrm{em}}(\mathrm{MPU})$
 
-The PCE-Attractor is the equilibrium state where the system is maximally efficient, which corresponds to operating at the alphabet capacity boundary (Appendix W). For a flat spectrum, the capacity constraint (Eq. (G.9.3)) becomes an equality:
+As defined in the main text (**Definition 15a**), the **PCE-Attractor** is the canonically selected equilibrium state characterized by maximal efficiency and symmetry. Its defining properties include operation at the alphabet capacity boundary and a flat QFI spectrum. For a flat spectrum, the capacity constraint (Eq. (G.9.3)) becomes an equality:
 
 $$
 M \ln(1 + \lambda u^*) = \ln d_0

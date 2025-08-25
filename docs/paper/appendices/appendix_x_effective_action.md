@@ -150,17 +150,18 @@ M\ln(1+\lambda u)=\ln d_0.
 \tag{X.11}
 $$
 
-At the attractor, the constrained minimization of $\phi(u)$ is equivalent to the stationarity of $V_{\rm eff}$ with Lagrange multiplier $\zeta$:
+At the **PCE-Attractor** (Definition 15a), the system by definition operates at the capacity boundary. This means the constrained minimization of the rate-level potential $\phi(u)$ is equivalent to finding the stationary point of the full effective potential $V_{\rm eff}$ under the capacity constraint (X.11), which can be formalized with a Lagrange multiplier $\zeta$:
 
 $$
-\frac{d}{du}\Big(V_{\rm eff}(u;k)+\zeta\,[M\ln(1+\lambda u)-\ln d_0]\Big)\Big|_{u=u^*}=0.
-\tag{X.12}
-$$
+ \frac{d}{du}\Big(V_{\rm eff}(u;k)+\zeta\,[M\ln(1+\lambda u)-\ln d_0]\Big)\Big|_{u=u^*}=0.
+ \tag{X.12}
+ $$
 
-Using (X.12) with $\gamma_{\rm eff}=2$ reproduces the zero‑slack condition employed in Appendix Z and the identities (Z.7)–(Z.8). At the PCE‑Attractor the constrained minimizer of $\phi(u)$ coincides with the stationary point of $V_{\rm eff}$ under (X.11).
+Using this equivalence with $\gamma_{\rm eff}=2$ reproduces the zero‑slack condition employed in Appendix Z and the identities (Z.7)–(Z.8).
 
 **Theorem X.3 (Predictive Ward Identity and Unity Normalization at the PCE-Attractor).**
-The requirement for consistency between the substrate-level information-theoretic description and the emergent physical effective action, when evaluated at the PCE-Attractor, uniquely fixes the normalization constant $\kappa^*$ to 1.
+
+The requirement for consistency between the substrate-level information-theoretic description and the emergent physical effective action, when evaluated at the **PCE-Attractor** (Definition 15a), uniquely fixes the normalization constant $\kappa^*$ to 1.
 
 This result is derived from the Principle of Physical Instantiation (PPI, Appendix P), which mandates that at the Attractor—the state of maximal efficiency and symmetry—the emergent physical action must take its simplest, most direct form. For a $U(1)$ gauge field, this is the canonical Maxwell action, for which $\kappa^* = 1$ by definition. Any other value would represent an inefficiency that is, by definition, eliminated at the Attractor. The Predictive Ward Identity provides the formal mechanism that enforces this consistency:
 
@@ -176,7 +177,7 @@ This result is derived from the Principle of Physical Instantiation (PPI, Append
 
 3.  The physical quadratic gauge kernel is, by definition, related to the information-theoretic kernel by the normalization constant $\kappa^*$: $\Gamma^{(2)}=\kappa_*\mathcal{K}$. Comparison with the result from step 2, which is enforced by the Ward identity, forces the normalization constant to be exactly $\kappa^* = 1$.
 
-Hence, at $\mu^*$ (the PCE-Attractor scale) the canonical Maxwell normalization is recovered as a derived consequence of the framework's principles:
+Hence, at the MPU operational scale $\mu^*$ corresponding to the PCE-Attractor, the canonical Maxwell normalization is recovered as a derived consequence of the framework's principles:
 $$
 g^2\;=\;u,\qquad \alpha(\mu^*)=\frac{u^*}{4\pi}.
 $$

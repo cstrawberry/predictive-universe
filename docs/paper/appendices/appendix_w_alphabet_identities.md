@@ -237,7 +237,8 @@ $$
 Apply (W\.2.3) to obtain the bound with factor $1/F_{\lambda,e}=S_2/(M x^2)$ (for the EM sector). Strictness and equality conditions follow from Proposition W\.8 and $F_{\lambda,e}=1\iff \sigma^2=0$. $\square$
 
 **PCE motivation for the identity point.**
-A **flat spectrum ($\sigma^2=0$)** implies that all informational modes contribute equally to predictive benefit, representing maximal democratic utility and robustness against mode‑specific failures. Operation at the **capacity boundary ($u_0=u^\*_{\rm J}$)** represents maximal information‑theoretic efficiency, where the system extracts the maximum possible information allowed by the MPU’s fundamental alphabet without over‑investing in costly coherence. A system driven by PCE to be maximally robust and efficient is naturally attracted to this specific point in its configuration space. The identity (W\.2.6) thus represents a **PCE‑attractor**, an idealized high‑symmetry point.
+ *Relation to the PCE-Attractor.*
+ This specific point, where the spectrum is flat ($\sigma^2=0$) and the system operates at the capacity boundary ($u_0=u^\*_{\rm J}$), corresponds precisely to the **PCE-Attractor** (Definition 15a). The identity (W.2.6) is therefore not merely an idealized case but a sharp prediction for a system that has converged to this unique, PCE-favored state of maximal efficiency and symmetry.
 
 **Sensitivity note (alphabet constant and variance).**
 For $d_0=8$, $K(8,M)$ decreases slowly with $M$:
