@@ -95,9 +95,9 @@ The framework must rigorously demonstrate that the allowed statistical FTL influ
 
 **10.4.1 Theorem 40 (Statistical Detection Limit)**
 
-Detecting the hypothesized statistical FTL influence (Postulate 3), manifesting as a small shift $\Delta P_{marginal}$ in Bob's local marginal probabilities dependent on Alice's remote context $C_A$ (where $|\Delta P_{marginal}| \le \text{CC}(S_A) \le \alpha_{CC,max} < 0.5$), requires a minimum number of experimental trials $N$ that scales inversely with the square of the effect size:
+Detecting the hypothesized statistical FTL influence (Postulate 3) requires analyzing the joint statistics of Alice's and Bob's outcomes, conditioned on Alice's context $C_A$. Let $\delta_c$ be the magnitude of the shift in the conditional probability of Bob's outcome given Alice's outcome, dependent on $C_A$. By Theorem 36, $|\delta_c| \le \text{CC}(S_A) \le \alpha_{CC,max} < 0.5$. To statistically resolve this conditional shift with high confidence, a minimum number of experimental trials $N$ is required, scaling inversely with the square of the effect size:
 $$
-N \gtrsim O\left(\frac{1}{(\Delta P_{marginal})^2}\right) \approx O\left(\frac{1}{\text{CC}^2}\right) \quad \text{(62)}
+N \gtrsim O\left(\frac{1}{(\delta_c)^2}\right) \approx O\left(\frac{1}{\text{CC}^2}\right) \quad \text{(62)}
 $$
 *Proof:* To statistically distinguish between two probability distributions $P_1(b)$ and $P_2(b)$ (corresponding to Alice's contexts $C_{A1}, C_{A2}$) based on $N$ trials, the difference $\Delta P = |P_1(b) - P_2(b)|$ must be significantly larger than the statistical uncertainty $\sigma_{\hat{p}} = \sqrt{p(1-p)/N}$. For $k$-sigma significance, $\Delta P \gtrsim k \sigma_{\hat{p}}$, yielding $N \gtrsim k^2 p(1-p) / (\Delta P)^2$. Since the maximum shift $\Delta P_{marginal} \le \text{CC}$, the required trials scale as $N \gtrsim O(1/\text{CC}^2)$. QED
 
@@ -132,7 +132,9 @@ The consistency of the framework's stance—allowing potential statistical FTL i
 
 *   Lorentz Invariance: Lorentz invariance is argued to be preserved (Appendix F, Section F.7) because (i) local operators obey microcausality, (ii) the influence is purely statistical and cannot establish a preferred frame (Theorem 42, analysis in Appendix F, Section F.7), and (iii) the underlying effective dynamics are assumed Lorentz covariant.
 
-In summary, the AQFT analysis (Appendix F) provides a rigorous context supporting the internal consistency of the PU framework's specific formulation of locality, distinguishing between standard operator locality (which emerges) and constrained state-mediated statistical influence (which is hypothesized and bounded).
+In summary, the AQFT analysis (Appendix F) provides a rigorous consistency setting for emergent locality while allowing bounded, state‑mediated statistical influence (which is hypothesized and bounded).
+
+**No actionable capacity without shared decoding.** Let $X$ denote Alice’s choice and $B$ Bob’s local outcome. For any admissible decoder $\mathcal{D}$ acting only on Bob’s local algebra (Appendix F), the marginal law of $B$ is independent of $X$, hence $I\!\left(X;\mathcal{D}(B)\right)=0$ and the single‑use Shannon capacity of the $X\!\to\!B$ channel is $C=0$ so long as $\mathcal{D}$ is independent of Alice’s side information. Nonzero correlations appear only in the **joint** statistics unlocked by a shared context (e.g., subluminal sifting), which prevents any paradox‑inducing superluminal communication.
 
 **10.6 Gravitational Self-Limitation of CC**
 

@@ -27,21 +27,24 @@ $$
 
 where $p_j$ are the eigenvalues of $\rho_0$. The sum runs over $j\neq k$ with $p_j+p_k>0$; terms with $p_j=p_k=0$ drop out. From Eq. (Z.1), the eigenvalues are $(1/2, 1/2, 0, 0, 0, 0, 0, 0)$.
 
-* **Mode Structure:** The QFI is non-zero only for generators $G$ that couple the active ($a=2$) and inactive ($b=6$) subspaces, as generators acting purely within either block commute with $\rho_0$ and yield zero QFI. These off-block-diagonal generators come in pairs (analogous to $\sigma_x$ and $\sigma_y$ for each $a-b$ link), giving a total number of independent, information-carrying modes:
+**Proposition Z.1 (QFI mode count and eigenvalue).** For the baseline pointer state $\rho_0\simeq I_a/a \oplus 0_b$ with $a=2$ and $b=d_0-a=6$, the LAN Fisher‑information decomposition yields
+$$
+M = 2ab = 2 \cdot 2 \cdot (8-2) = 24
+\tag{Z.2}
+$$
+and a flat spectrum of equal per‑mode sensitivities. With the standard Hilbert–Schmidt normalization of generators, the per‑mode sensitivity equals
+$$
+\lambda = \frac{2}{a} = \frac{2}{2} = 1.
+\tag{Z.3}
+$$
+*Proof.* For $p_j\in\{1/2,1/2,0,\dots,0\}$ the quantum Fisher information
+$$
+F_Q(\rho_0;G)=2\sum_{j\ne k}\frac{(p_j-p_k)^2}{p_j+p_k}\,|G_{jk}|^2
+$$
+is supported only on cross‑block coherences ($j$ in the active block, $k$ in the inactive block) and their conjugates, giving $2ab$ independent complex modes (hence $M=2ab$ real information modes). For each such pair with $p_j=1/2$, $p_k=0$, the sensitivity weight is $(p_j-p_k)^2/(p_j+p_k)=1$, yielding $\lambda=2/a$ under our normalization; for $a=2$ this gives $\lambda=1$. $\square$
 
-  $$
-  M = 2ab = 2 \cdot 2 \cdot (8-2) = 24
-  \tag{Z.2}
-  $$
-* **Flat Spectrum:** The baseline state $\rho_0$ is invariant under $U(a) \times U(b)$ transformations. This symmetry implies that all $M=24$ off-block information-carrying modes are equivalent. Therefore, their corresponding QFI eigenvalues must be equal, resulting in a **flat spectrum**.
-* **Eigenvalue `λ`:** With a standard Hilbert-Schmidt normalization for the generators ($\mathrm{Tr},G^2=1$), the QFI for each of these $M$ modes can be calculated. The non-zero eigenvalues $p_j$ and $p_k$ are $1/2$ and $0$. The resulting eigenvalue is:
+Thus, the fundamental parameters ($d_0$, $\varepsilon$) uniquely fix the PCE‑Attractor to have $M=24$ equal‑sensitivity modes with $\lambda=1$.
 
-  $$
-  \lambda = \frac{2}{a} = \frac{2}{2} = 1
-  \tag{Z.3}
-  $$
-
-Thus, the fundamental parameters ($d_0$, $\varepsilon$) uniquely determine the QFI spectrum of the MPU at the PCE-Attractor to be $M=24$ modes, each with sensitivity $\lambda=1$.
 
 ## Z.4 The PCE-Attractor and Parameter-Free Calculation of $\alpha_{\mathrm{em}}(\mathrm{MPU})$
 

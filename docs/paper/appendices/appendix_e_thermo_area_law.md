@@ -71,7 +71,11 @@ acting on the MPU's $d_0$-dimensional Hilbert space $\mathcal{H}_{d_0}$ ($\dim\m
     \|\mathcal{E}_N(X)\|_1\ \le\ (1-p)\,\|X\|_1,\qquad \mathrm{tr}\,X=0,
     \tag{E.2b}
     $$
-    so we may take $f_{\mathrm{RID}}\le 1-p<1$ in (E.2). The primitivity of $\mathcal{E}_N$ also ensures a unique, full‑rank fixed point $\rho_{fix}$ (see Step 2).
+    **Proof sketch.** Write $\mathcal{E}_N=(1-p)\Psi + p\,T_\sigma$ with $T_\sigma(\rho)=\mathrm{tr}(\rho)\,\sigma$. For any traceless Hermitian $X$, decompose $X=t(\rho_+-\rho_-)$ with states $\rho_\pm$ and $t=\tfrac12\|X\|_1$. CPTP contractivity of trace distance gives $\|\Psi(X)\|_1 \le \|X\|_1$, while $T_\sigma(X)=0$. Hence
+    $$
+    \|\mathcal{E}_N(X)\|_1 \le (1-p)\,\|X\|_1,
+    $$  
+    which is (E.2b). Therefore we may take $f_{\mathrm{RID}}\le 1-p<1$ in (E.2). This ensures a unique, full‑rank fixed point $\rho_{fix}$ (see Step 2).
 
 2.  **Consequences of Primitivity:** For a primitive CPTP map $\mathcal{E}_N$ on $\mathcal{B}(\mathcal{H}_{d_0})$ [Frigerio & Verri 1982; Wolf 2012]:
     *   There is a unique full-rank fixed point state $\rho_{fix}$ such that $\mathcal{E}_N(\rho_{fix}) = \rho_{fix}$.

@@ -678,7 +678,19 @@ u^*\ \le\ \frac{M}{S_1}\Big(d_0^{\,1/M}-1\Big).
 \tag{G.9.11}
 $$
 
-If the unconstrained minimizer of (G.9.9) violates this inequality, the true optimum lies on the boundary $V_{\mathrm{benefit}}(g_e)=\ln d_0$.
+If the unconstrained minimizer of (G.9.9) violates this inequality, the optimum lies on the boundary $V_{\mathrm{benefit}}(g_e)=\ln d_0$.
+
+**Lemma (Active‑cap optimality).** Consider $\min_{u\ge 0}\ \phi(u)$ subject to $V_{\mathrm{benefit}}(u)\le \ln d_0$, where $\phi$ is given by (G.9.9) and $V_{\mathrm{benefit}}(u)=\sum_{i=1}^M\ln(1+\lambda_i u)$ (Section G.9.2). Then there exist multipliers $\eta,\mu\ge 0$ such that at any optimizer $u^{\cap}$,
+$$
+\phi'(u^{\cap})+\eta\,V'_{\mathrm{benefit}}(u^{\cap})-\mu=0,\quad
+\eta\big(V_{\mathrm{benefit}}(u^{\cap})-\ln d_0\big)=0,\quad
+\mu\,u^{\cap}=0.
+$$
+If the unconstrained minimizer $u^\circ$ of $\phi'(u)=0$ is infeasible, i.e. $V_{\mathrm{benefit}}(u^\circ)>\ln d_0$, then $\eta>0$ and the optimum satisfies $V_{\mathrm{benefit}}(u^{\cap})=\ln d_0$ (the capacity cap is active).
+
+*Proof.* In one dimension the feasible set $\{u\ge 0:V_{\mathrm{benefit}}(u)\le \ln d_0\}$ is an interval. Since $\phi$ is strictly convex (Theorem G.9.1) and $V_{\mathrm{benefit}}$ is increasing and concave, this is a convex program and KKT conditions are necessary and sufficient. If $u^\circ$ violates the cap, complementary slackness forces $\eta>0$; with $V'_{\mathrm{benefit}}(u)>0$ and $u^{\cap}>0$, stationarity excludes $\mu>0$, hence $V_{\mathrm{benefit}}(u^{\cap})=\ln d_0$. $\square$
+
+Using Lemma W.1–W.2 (Appendix W), the flat‑spectrum proxy yields the Jensen boundary $u^{\cap}\le \frac{M}{S_1}(d_0^{1/M}-1)$, i.e. (G.9.11).
 
 **Special case (flat spectrum, minimal exponents).**
 Let $\lambda_i=S_1/M$, $\gamma=1$, and $\gamma_p=2$ so that $\gamma_{\mathrm{eff}}=2$. Then (G.9.10) reduces to
