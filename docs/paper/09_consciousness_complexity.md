@@ -144,9 +144,19 @@ $$
 Two operational implementations are possible:
 
 1.  **CPTP pre-processing** $\rho \mapsto e^{\varepsilon L_S}(\rho)$ when $L_S$ is a GKLS generator.
-2.  **Calibrated POVM deformations** $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)+\varepsilon^2 R_i$ with $\sum_i R_i=0$ and $0\le E_{i,\varepsilon}\le I$ for $|\varepsilon|\le\varepsilon_0$, provided $K_S$ satisfies the first-order tangent-cone condition relative to each effect $E_i$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$. Additionally, impose the completeness-preserving constraint $\sum_i K_S(E_i)=0$, which ensures $\sum_i E_{i,\varepsilon}=I+O(\varepsilon^2)$.
+2.  **Calibrated POVM deformations** $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)$ with positivity on $\ker(E_i)$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$. Additionally, impose the completeness‑preserving constraint $\sum_i K_S(E_i)=0$, which ensures $\sum_i E_{i,\varepsilon}=I$. Additionally, impose the completeness-preserving constraint $\sum_i K_S(E_i)=0$, which ensures $\sum_i E_{i,\varepsilon}=I+O(\varepsilon^2)$.
 
-While these two mechanisms are mathematically distinct, their experimental distinguishability is a complex question. For the phenomenological predictions in this paper, we focus on the net observable effect on $P_{obs}(i)$, which is identical at first order in $\varepsilon$.
+**Theorem (Heisenberg–Schrödinger identity for CPTP semigroups).** Let $\Lambda_\varepsilon=e^{\varepsilon\mathcal L}$ be a CPTP quantum Markov semigroup on $\mathcal B(\mathcal H)$ [Lindblad 1976; Gorini–Kossakowski–Sudarshan 1976; Nielsen & Chuang 2010] and let $\{E_i\}_i$ be any POVM on $\mathcal H$. Define the Heisenberg‑picture effects
+$$
+E_{i,\varepsilon}:=\Lambda_\varepsilon^{*}(E_i).
+$$
+Then $\{E_{i,\varepsilon}\}_i$ is a POVM for every $\varepsilon\ge 0$ and, for any state $\rho$,
+$$
+\operatorname{tr}\big[\Lambda_\varepsilon(\rho)\,E_i\big]=\operatorname{tr}\big[\rho\,E_{i,\varepsilon}\big].
+$$
+*Proof.* Since $\Lambda_\varepsilon$ is CPTP, its dual $\Lambda_\varepsilon^*$ is completely positive and unital, hence $E_{i,\varepsilon}\ge 0$ and $\sum_i E_{i,\varepsilon}=I$. The probability identity is duality. ∎
+
+*Corollary (all‑orders normalization & positivity; linearized form).* Writing $K(E_i):=\tfrac{d}{d\varepsilon}\big|_{\varepsilon=0}\Lambda_\varepsilon^*(E_i)$ gives $\sum_i K(E_i)=\mathcal L^*(I)=0$.
 
 **Proposition 17 (CTB generator semigroup).** For $L_S(\rho)=\alpha(\sigma-\rho)$ with $\sigma\ge0$, $\mathrm{tr}\,\sigma=1$ and $\alpha\ge0$, the semigroup $T_t:=e^{tL_S}$ acts as
 $$

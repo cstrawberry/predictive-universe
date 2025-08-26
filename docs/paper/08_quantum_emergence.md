@@ -49,9 +49,10 @@ $$
 
 **Theorem 8.F2 (PU probability from PCE non‑contextual additivity).**
 Assume:
+(NC) **Context symmetry:** the predictive weight assigned to an effect $E$ depends only on $E$ (and not on which resolution $\{E_i\}$ it appears in).
 (i) For any orthogonal family $\{E_i\}$ of effects with $\sum_i E_i=\mathbf 1$, the predictive weights satisfy additivity $\omega(\sum_i E_i)=\sum_i \omega(E_i)$.
 (ii) Invariance under predictive refinements (PCE): if $E=\sum_j F_j$ is a refinement, $\omega(E)=\sum_j \omega(F_j)$, and $\omega$ is continuous under directed refinements.
-Then for $\dim\mathcal H_\omega\ge3$, there exists a density operator $\rho$ such that
+Then for $\dim\mathcal H_\omega\ge3$, there exists a density operator $\rho$ such that [Gleason 1957; Busch 2003]
 
 $$
 \omega(E)=\operatorname{tr}(\rho E) \quad \text{for all effects }E.
@@ -159,19 +160,22 @@ The deterministic evolution of the MPU state amplitude $S(t)$ between 'Evolve' i
 
 **Proposition 11 (Derivation of Schrödinger Equation for Internal Evolution)**
 
-The time evolution of the MPU state amplitude $S(t) \in \mathcal{H}_0$ (Proposition 4) during the Internal Prediction phase (Definition 26), occurring between stochastic 'Evolve' events, must be linear, unitary, and strongly continuous in time to preserve the Hilbert space structure and probability interpretation. These conditions uniquely determine the evolution equation to be the time-dependent Schrödinger equation (Equation 43):
+The time evolution of the MPU state amplitude $S(t) \in \mathcal{H}_0$ during the Internal Prediction phase (Definition 26) is governed by the time-dependent Schrödinger equation. This emerges as a necessary consequence of fundamental symmetries and the principle of efficient information processing.
+
+**Theorem 8.F3 (Time-translation symmetry ⇒ unitary group ⇒ Schrödinger dynamics).**
+Assume the PCE-optimal evolution preserves Born statistics and is time-translation symmetric: there exists a family $\{\mathcal T_t\}_{t\in\mathbb R}$ with $\mathcal T_{t+s}=\mathcal T_t\circ\mathcal T_s$, $\mathcal T_0=\mathrm{id}$, continuous in $t$, and preserving all transition probabilities [Bargmann 1964]. Then there exists a strongly continuous unitary group $U(t)$ with $\mathcal T_t(\rho)=U(t)\rho U(t)^\dagger$. By Stone’s theorem, $U(t)=e^{-i\hat{H}t/\hbar}$ for a (densely defined) self-adjoint operator $\hat{H}$ [Stone 1932], so
 $$
-i\hbar \frac{d}{dt} S(t) = \hat{H} S(t) \quad \
+\frac{d}{dt}\rho(t)=-\frac{i}{\hbar}[\hat{H},\rho(t)],\qquad i\hbar\,\frac{d}{dt}|\psi(t)\rangle=\hat{H}|\psi(t)\rangle.
 $$
-where $\hat{H}$ is a unique self-adjoint operator (Hamiltonian) representing the MPU's baseline operational energy cost $R(C_{op})$ (Theorem 29). The evolution operator mapping $S(t_0)$ to $S(t_0+t)$ is $U_0(t) = e^{-i\hat{H} t/\hbar}$.
-*Proof:*
-1.  **Linearity:** Preserves superposition structure.
-2.  **Unitarity:** Internal Prediction (Definition 26) models deterministic evolution *between* irreversible 'Evolve' events. POP/PCE favor dynamics preserving predictive information efficiently. Information-preserving, reversible, probability-conserving evolution on Hilbert space is necessarily unitary: $S(t) = U(t) S(0)$.
-3.  **Strong Continuity & Group Property:** Continuous time evolution implies $\{U(t)\}$ forms a strongly continuous one-parameter unitary group.
-4.  **Stone's Theorem:** Guarantees existence of a unique self-adjoint generator $\hat{G}$ such that $U(t) = e^{-i\hat{G}t}$ [Stone 1932].
-5.  **Identifying Generator ($\hat{H} = \hbar \hat{G}$):** Introduce $\hbar$ for dimensional consistency (`[E][T]`). $\hat{H} = \hbar \hat{G}$ is self-adjoint, has energy units, and is identified with the Hamiltonian representing baseline cost $R(C_{op})$ (Theorem 29). Evolution is $U(t) = e^{-i\hat{H}t/\hbar}$.
-6.  **Deriving Differential Equation:** Differentiating $S(t) = e^{-i\hat{H}t/\hbar} S(0)$ yields $\frac{d}{dt} S(t) = (-\frac{i\hat{H}}{\hbar}) S(t)$. Multiplying by $i\hbar$ gives the Schrödinger equation (Equation 43).
-7.  **Conclusion:** Operational requirements of linearity, information-preserving internal prediction (unitarity via POP/PCE), and continuity uniquely lead via Stone's Theorem to the Schrödinger equation governed by $\hat{H}$. QED
+
+*Proof and Physical Justification:* The premises of Theorem 8.F3 are not postulates but are derived from the PU framework's core principles.
+1.  **Preservation of Born Statistics (Unitarity):** The Internal Prediction phase models deterministic evolution between irreversible 'Evolve' events. The Principle of Compression Efficiency (PCE) favors dynamics that preserve predictive information with minimal cost. For a system described on a Hilbert space, information-preserving, reversible, and probability-conserving evolution is necessarily unitary. This requirement is precisely the premise of Wigner's theorem [Bargmann 1964], which guarantees the evolution is implemented by a unitary (or anti-unitary, excluded by continuity) operator.
+2.  **Time-Translation Symmetry:** The assumption of a continuous, time-translation invariant evolution implies that the unitary operators form a strongly continuous one-parameter group $\{U(t)\}$.
+3.  **Existence of Generator:** Stone's theorem [Stone 1932] then guarantees the existence of a unique, self-adjoint generator for this group, the Hamiltonian $\hat{H}$.
+4.  **Physical Identification of the Hamiltonian:** The abstract generator $\hat{H}$ is given a concrete physical meaning by the framework. As established in **Theorem 29**, the expectation value of the Hamiltonian, $\langle\hat{H}\rangle$, corresponds to the MPU's baseline operational energy cost, which is determined by the physical resource cost rate $R(C_{op})$.
+5.  **Schrödinger Equation:** The differential form of the evolution, the Schrödinger equation (Equation 43), follows directly from differentiating the exponential form $U(t) = e^{-i\hat{H}t/\hbar}$.
+
+Thus, the Schrödinger equation emerges as the unique description of dynamics that are consistent with the symmetries of continuous time and the PCE-driven requirement for efficient, information-preserving predictive processing, with its generator physically grounded in the MPU's operational resource cost. QED
 
 
 

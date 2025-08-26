@@ -262,20 +262,18 @@ $$
     $$
 *   **Result:** The sensitivity $dC^*/d\hat{C}_{target}$ is given by $-(\partial \Psi / \partial \hat{C}_{target}) / (\partial \Psi / \partial C)$. If $\partial \Psi / \partial C < 0$ (stability) and the relative complexity $(C-C_{op})/\hat{C}_{target}$ is sufficiently large ($> 1/\kappa_{eff}$), then $\partial \Psi / \partial \hat{C}_{target} > 0$. In this regime, $dC^*/d\hat{C}_{target} > 0$, indicating that an increase in perceived environmental difficulty $\hat{C}_{target}$ leads to an increase in the optimal allocated complexity $C^*$. QED
 
-**6.5.2 Theorem 22 (Stability of Adaptation)**
+**6.5.2 Theorem 22 (Existence, uniqueness, and exponential stability of the PCE optimum)**
 
-The adaptation dynamics (Equation 30) are locally stable around an equilibrium point $C^*$ (where $\Psi(C^*) = 0$) if and only if the driving force decreases as complexity moves away from equilibrium, i.e., $\frac{d\Psi}{dC}\big|_{C=C^*} < 0$.
-*Proof:* The equilibrium point $C^*$ is stable if the Adaptation Driving Force $\Psi(C)$ decreases as $C$ increases near $C^*$, i.e., $d\Psi/dC < 0$ at $C^*$. Differentiating the expression for $\Psi$ (Equation (24)) with respect to $C$ gives the stability condition:
- $$
- \frac{\partial \Psi}{\partial C} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) - R_I''(C) < 0 \quad \text{(34a)}
- $$
-By Definition 19, $PP(C)$ is concave ($\partial^2 PP / \partial C^2 < 0$). By Definition 3a, $R(C)$ is strictly convex ($R''(C) > 0$ for $C>C_{op}$ since $\gamma_p>1$). By Definition 3b, $R_I(C)$ is concave ($R_I'' < 0$).
-Stability requires the stabilizing terms (concave $PP$ and convex $R$) to dominate the destabilizing term (concave $R_I$). Since $R_I'' < 0$, the term $-R_I''(C)$ is positive (destabilizing). Stability is guaranteed if and only if:
+Let $J(C):=\Gamma_0\,PP(C)-\big[\lambda R(C)+R_I(C)\big]$ on $[C_{op},\infty)$. Assume the Dominance of Stabilizing Costs (DSC) condition holds, such that $J(C)$ is strictly concave on $[C_{op},\infty)$, and that there exists $\mu>0$ and a neighborhood $\mathcal N(C^*)$ of the unique maximizer $C^*$ where $J(C)$ is $\mu$-strongly concave. Then:
+
+1. There exists a unique maximizer $C^*$ of $J(C)$, characterized by the first‑order condition $\partial J/\partial C = \Psi(C^*) = 0$ (Equation 18).
+
+2. The adaptation dynamics $\dot C=\eta_{adapt}\,\partial J/\partial C$ with $\eta_{adapt}>0$ converge locally and exponentially to $C^*$: for any $C(0)\in\mathcal N(C^*)$,
 $$
-\Gamma_0 \left|\frac{\partial^2 PP}{\partial C^2}\right| + \lambda R''(C) > |R_I''(C)|
-\quad \text{(34b)}
+|C(t)-C^*|\le e^{-\eta_{adapt}\mu t}\,|C(0)-C^*|.
 $$
-This condition, the **Dominance of Stabilizing Costs (DSC)**, is assumed to hold for viable MPU configurations. It ensures that the stabilizing effects of performance saturation and the strict convexity of $R(C)$ (driven by $\gamma_p>1$) are sufficient to overcome the destabilizing effect of the diminishing marginal cost of $R_I(C)$. Under the DSC condition, the fundamental structure ensures the existence of a stable equilibrium complexity $C^*$. QED
+
+*Proof.* Strict concavity of $J$ guarantees a unique maximizer $C^*$. Strong concavity in a neighborhood implies $(C-C^*)\,\partial J/\partial C\le -\mu(C-C^*)^2$ for $C\in\mathcal N(C^*)$. Let $V(t)=\frac{1}{2}(C(t)-C^*)^2$. Then $\dot V = (C-C^*)\dot C = \eta_{adapt}(C-C^*)\partial J/\partial C \le -\eta_{adapt}\mu(C-C^*)^2 = -2\eta_{adapt}\mu V$. By Grönwall's inequality, $V(t)\le e^{-2\eta_{adapt}\mu t}V(0)$, which yields the stated exponential bound on $|C(t)-C^*|$. ∎
 
 **6.5.3 Definition 21 (Def 21): Dynamics of $\hat{C}_{target}(t)$**
 

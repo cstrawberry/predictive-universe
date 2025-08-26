@@ -134,7 +134,15 @@ The consistency of the framework's stance—allowing potential statistical FTL i
 
 In summary, the AQFT analysis (Appendix F) provides a rigorous consistency setting for emergent locality while allowing bounded, state‑mediated statistical influence (which is hypothesized and bounded).
 
-**No actionable capacity without shared decoding.** Let $X$ denote Alice’s choice and $B$ Bob’s local outcome. For any admissible decoder $\mathcal{D}$ acting only on Bob’s local algebra (Appendix F), the marginal law of $B$ is independent of $X$, hence $I\!\left(X;\mathcal{D}(B)\right)=0$ and the single‑use Shannon capacity of the $X\!\to\!B$ channel is $C=0$ so long as $\mathcal{D}$ is independent of Alice’s side information. Nonzero correlations appear only in the **joint** statistics unlocked by a shared context (e.g., subluminal sifting), which prevents any paradox‑inducing superluminal communication.
+**Theorem (No actionable capacity without shared decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. Alice chooses a local instrument $\Phi_x$ labeled by a message $x$. Bob’s local detector is keyed by a classical variable $K$ (unavailable to Bob at measurement time), selecting a unital CP Heisenberg map $\Lambda_K^*$, and he measures effects $\{E_i^{(K)}\}$ with $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume the key distribution $\pi(K)$ is independent of $x$, and that the averaged Heisenberg map
+$$
+\overline{\Lambda^*}:=\sum_K \pi(K)\,\Lambda_K^*
+$$
+is completely positive, unital, and independent of $x$ (if moreover $\overline{\Lambda^*}=\mathrm{id}$, the baseline statistics are preserved). Then Bob’s observed distribution is independent of $x$ and the classical channel $X\!\to\!Y$ has zero capacity [Watrous 2018; Nielsen & Chuang 2010]:
+$$
+p_B(i\mid x)=\sum_K\pi(K)\operatorname{tr}\big[\rho_B\,E_i^{(K)}\big]=\operatorname{tr}\big[\rho_B\,\overline{\Lambda^*}(E_i)\big],\qquad I(X;Y)=0.
+$$
+*Proof.* Local operations on $A$ do not change $B$’s marginal, $\rho_B^{(x)}=\rho_B$. Linearity and the $x$‑independence of $\overline{\Lambda^*}$ give the result. ∎
 
 **10.6 Gravitational Self-Limitation of CC**
 

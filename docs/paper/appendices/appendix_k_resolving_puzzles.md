@@ -288,6 +288,13 @@ The expansion history obeys the first Friedmann equation with a time-varying $G_
 $$
 \boxed{\,H^2(a)=\frac{8\pi G_{\mathrm{eff}}(a)}{3}\,\rho_{\mathrm{tot}}(a)\;-\;\frac{k}{a^2}\;+\;\frac{\Lambda}{3}\, }.
 $$
+**Theorem K.DS.1 (Constant‑$H$ segment is PCE‑optimal).** For a comoving predictive boundary with physical area $A\propto a^2$, if the instantaneous payoff rate is concave in $x:=\dot A/A$ and the resource cost is convex, then under a fixed $\int_0^T x\,dt$, the PCE‑optimal history on $[0,T]$ has $x\equiv \Xi/T$; thus $H$ is constant on that segment.
+
+**Theorem K.DS.2 (Minimum e‑folds to a target error).** If a coarse‑grained prediction error contracts as $\varepsilon(t)=\varepsilon_0\exp\{-\chi\int_0^t x\,dt\}$, any history achieving $\varepsilon(T)\le\varepsilon_\star$ must satisfy
+$$
+N:=\tfrac12\!\int_0^T x(t)\,dt \;\ge\; \frac{1}{2\chi}\,\log\!\frac{\varepsilon_0}{\varepsilon_\star}.
+$$
+The constant‑$H$ history achieves the bound with equality for suitable $T$.
 Here, $\rho_{\mathrm{tot}}(a)$ is the total energy density of standard matter and radiation, whose stress-energy tensor is constructed from MPU primitives in **Appendix B**, and $\Lambda$ is the true, non-perturbative cosmological constant derived from the PU vacuum dynamics as rigorously detailed in **Appendix U**.
 
 The PU framework requires a specific physical hypothesis for the conservation law in a variable-G cosmology. We adopt the choice that the total energy-momentum, including the MPU substrate that gives rise to $G_{\mathrm{eff}}$, is conserved. This is expressed by the consistency relation derived from the Bianchi identity $\nabla^\mu(G_{\mu\nu}+\Lambda g_{\mu\nu})=0$ applied to the field equations $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G_{\mathrm{eff}}(a)\,T^{\mathrm{tot}}_{\mu\nu}$:

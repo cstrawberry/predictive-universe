@@ -11,7 +11,12 @@ where $A_{\rm eff}$ (defined in U.12) is an order-unity prefactor that includes 
 
 ## U.1 Introduction
 
-The observed $\Lambda L_P^2\sim10^{-122}$ challenges naïve quantum-field estimates of vacuum energy. Within PU, $\Lambda$ is emergent: it arises from information-theoretic constraints on an MPU network tuned by PCE and driven by non-deterministic, resource-bounded dynamics (ND-RID). This appendix develops a non-perturbative mechanism for $\Lambda$ based on instanton suppression in a Euclidean **information action**, with scales anchored by the MPU budget $\ln(d_0)$, the irreducible step cost $\varepsilon=\ln 2$, and the PCE-optimal capacity $C_{\max}$ (Appendix Q).
+**Theorem U.Λ.1 (Holographic/black‑hole energy bound).** Requiring that a region of size $L$ not collapse into a black hole imposes $E\le \tfrac{c^4}{2G}L$. Hence the mean energy density obeys
+$$
+\rho(L)\ \le\ \frac{3c^4}{8\pi G}\,\frac{1}{L^2},\qquad
+|\Lambda(L)|\ \le\ \frac{3c^2}{L^2}.
+$$
+In de Sitter equilibrium, this saturates with $L\sim H^{-1}$, giving $|\Lambda|\sim 3H^2$ [Cohen–Kaplan–Nelson 1999; Li 2004; Bekenstein 1981]. The observed $\Lambda L_P^2\sim10^{-122}$ thus challenges naïve quantum‑field estimates of vacuum energy. Within PU, $\Lambda$ is emergent: it arises from information-theoretic constraints on an MPU network tuned by PCE and driven by non-deterministic, resource-bounded dynamics (ND-RID). This appendix develops a non-perturbative mechanism for $\Lambda$ based on instanton suppression in a Euclidean **information action**, with scales anchored by the MPU budget $\ln(d_0)$, the irreducible step cost $\varepsilon=\ln 2$, and the PCE-optimal capacity $C_{\max}$ (Appendix Q).
 
 Natural units $(\hbar=c=k_B=1)$ are used. $G$ denotes the **late-time** gravitational coupling $G_\infty$ relevant to the vacuum sector (Appendix K.9). Accordingly, $L_P^2=G_\infty$.
 

@@ -159,7 +159,22 @@ The scale-dependent gravity framework derived from PU principles leads to severa
 A direct test of the scale-dependent $G(R)$ model is to fit it to observed galaxy rotation curves. The SPARC database [Lelli et al. 2016], providing high-quality rotation curves and detailed baryonic mass models for 152 disk galaxies, offers an ideal dataset. A full comparison requires:
 
 *   Accurate baryonic mass models for each galaxy, requiring estimates of stellar mass-to-light ratios $\Upsilon_\ast$.
-*   Numerical solutions of the modified Poisson equations (Equation I.5 or I.6) for each galaxy's baryonic distribution, incorporating the scale-dependent $G(R)$.
+**Theorem I.RC.1 (Well-posed generalized Poisson law).** For a local energy functional of the form
+$$
+\mathcal E[\Phi]=\int_\Omega \left[ -\frac{1}{8\pi G}\Psi(|\nabla\Phi|^2)-\rho\,\Phi\right]\,d^3x,
+$$
+where $\Psi(u)$ is a strictly convex and coercive function of $u=|\nabla\Phi|^2$, the Euler–Lagrange equation is
+$$
+\nabla\!\cdot\!\big(\mu(|\nabla\Phi|)\,\nabla\Phi\big)=4\pi G\,\rho,\qquad \text{with}\quad \mu(s) := \Psi'(s^2).
+$$
+Under these conditions, the generalized Poisson equation admits a unique weak solution for suitable boundary data (e.g., Dirichlet) [Minty 1962; Evans 2010].
+
+**Theorem I.RC.2 (Flat-curve asymptotics).** For a point mass $M$, if the response function $\mu(s)$ has the asymptotic behavior $\mu(s) \sim s/a_0$ as $s\to0^+$ for some characteristic acceleration $a_0$, then the gravitational field strength $g(r)=|\nabla\Phi|$ and circular velocity $v_{\rm circ}(r)$ satisfy
+$$
+g(r)\sim \frac{\sqrt{GMa_0}}{r},\qquad v_{\rm circ}^4(r)\sim GMa_0.
+$$
+This recovers the baryonic Tully-Fisher relation as a direct consequence of the asymptotic form of the effective gravitational law [Milgrom 1983; McGaugh 2012].
+
 *   A joint Bayesian inference analysis (e.g., using nested sampling \[Feroz & Hobson 2008; Feroz et al. 2009, 2019]) to determine the universal parameter set $(L_0,A_G,m)$ and the per-galaxy $\Upsilon_\ast$ values by comparing predicted and observed rotation curves. When inferring $A_G$ from rotation curves, the effective far‑field enhancement reflects the baryon‑mass‑weighted $\langle\varepsilon_G\rangle_b$ rather than $A_G$ itself; the numerical fits naturally absorb this via the $\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R),\rho_b(R)$ source.
 
 **I.12 Robustness and Systematics**
