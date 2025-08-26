@@ -505,7 +505,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
         $$
          y_q+y_H+y_{u^c}=0,\qquad y_q-y_H+y_{d^c}=0,\qquad y_\ell-y_H+y_{e^c}=0,
           $$
-       selects the same pattern of hypercharges. Among the equivalent overall normalizations, a PCE-favored tie-breaker of minimal denominator complexity sets the conventional scale $y_H=1/2$ and $y_q=1/6$.
+       selects the same pattern of hypercharges. Among the equivalent overall normalizations, a PCE-favored tie-breaker of minimal denominator complexity sets the conventional scale $y_H=1/2$ and $y_q=1/6$. Quantitative constraints on electroweak coupling ratios at the PCE-attractor—including a branch-specific prediction for $\sin^2\theta_W(\mu^*)$ under the cap-active alignment (Assumption W.3.A)—are derived in Appendix W (Theorem W.11; Eqs. W.3.1–W.3.3).
 
     *   **PCE Corollary – Singlet Neutrality.** Assigning non‑zero hypercharge to a pure non‑abelian singlet increases PCE cost without predictive gain; the minimum sets the hypercharge of any potential sterile right-handed neutrino to zero.
     *   **Three Generations (Unique Minimizer).** Appendix R (Section R.3.5) shows—using PCE together with a standard MDL replication lemma—that (i) the smallest nontrivial anomaly-consistent family structure is $N=3$ with offsets $\{a,-a,0\}$, (ii) abelian “doping” is disfavored, and (iii) there exists a **non-empty open region** of PCE weights for which the global potential attains a **unique** minimum at exactly **three generations**.
