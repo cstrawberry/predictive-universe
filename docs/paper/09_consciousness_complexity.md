@@ -144,7 +144,7 @@ $$
 Two operational implementations are possible:
 
 1.  **CPTP pre-processing** $\rho \mapsto e^{\varepsilon L_S}(\rho)$ when $L_S$ is a GKLS generator.
-2.  **Calibrated POVM deformations** $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)+\varepsilon^2 R_i$ with $\sum_i R_i=0$ and $0\le E_{i,\varepsilon}\le I$ for $|\varepsilon|\le\varepsilon_0$, provided $K_S$ satisfies the first-order tangent-cone condition relative to each effect $E_i$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$.
+2.  **Calibrated POVM deformations** $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)+\varepsilon^2 R_i$ with $\sum_i R_i=0$ and $0\le E_{i,\varepsilon}\le I$ for $|\varepsilon|\le\varepsilon_0$, provided $K_S$ satisfies the first-order tangent-cone condition relative to each effect $E_i$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$. Additionally, impose the completeness-preserving constraint $\sum_i K_S(E_i)=0$, which ensures $\sum_i E_{i,\varepsilon}=I+O(\varepsilon^2)$.
 
 While these two mechanisms are mathematically distinct, their experimental distinguishability is a complex question. For the phenomenological predictions in this paper, we focus on the net observable effect on $P_{obs}(i)$, which is identical at first order in $\varepsilon$.
 

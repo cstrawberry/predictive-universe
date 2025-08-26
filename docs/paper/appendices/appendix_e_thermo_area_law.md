@@ -244,7 +244,7 @@ This is the Bekenstein-Hawking formula with the explicit coefficient $1/4$. This
 
 The derivation of the Area Law (Theorem E.4 / main text, Theorem 49) and the emergent gravitational constant $G$ (Equation E.9) is based on the effective surface density of independent information channels ($\sigma_{eff_link}$) and the capacity per channel ($C_{max}$). An alternative, complementary perspective on the origin of the $1/4$ coefficient in the Bekenstein-Hawking formula can be obtained by considering the fundamental entropy unit associated with the MPU's self-referential processing.
 
-As established in Appendix J (Theorem J.1, proving main text Theorem 31), each 'Evolve' interaction cycle (main text, Definition 27) involving non-trivial self-referential information processing (the SPAP update cycle) incurs a minimal irreducible dimensionless entropy cost $\varepsilon = \ln 2$ nats. Let this fundamental quantum of entropy generation be denoted \$\Delta S\_{\text{SPAP}} = \ln 2\$.
+As established in Appendix J (Theorem J.1, proving main text Theorem 31), each 'Evolve' interaction cycle (main text, Definition 27) involving non-trivial self-referential information processing (the SPAP update cycle) incurs a minimal irreducible dimensionless entropy cost $\varepsilon = \ln 2$ nats. Let this fundamental quantum of entropy generation be denoted $\Delta S_{\text{SPAP}} = \ln 2$.
 
 $$
 \Delta S_{\text{SPAP}} = \ln 2
