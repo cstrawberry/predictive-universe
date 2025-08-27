@@ -10,7 +10,7 @@ This result ($\varepsilon \ge \ln 2$) is foundational for the PU framework, prov
 
 **J.2 The SPAP Update Rule and Inherent Logical Irreversibility**
 
-Consider the logical core of the deterministic SPAP diagonal argument (Theorem A.1). The system $S_{diag}$ requires:
+Consider the logical core of the deterministic SPAP diagonal argument (**Theorem A.1.1**). The system $S_{diag}$ requires:
 1.  **State Representation:** Representation of a binary component $\phi \in \{0, 1\}$ of the system's state.
 2.  **Prediction Computation:** An internal process $P_f$ computes a prediction $\hat{\phi} \in \{0, 1\}$ for the *next* value of $\phi$. This prediction is stored in a binary ancilla variable $p \in \{0, 1\}$.
 3.  **Reflexive Update Rule:** The system's actual next state for $\phi$ is determined by the rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$.
