@@ -213,25 +213,17 @@ For a given sector $s$, write $F_{\lambda,s}:=\dfrac{M_s x_s^2}{S_2^{(s)}}$.
 **Theorem W\.10 (Alphabet constant: upper bound and identity conditions at the Jensen‑cap–saturated optimum).**
 At the **Jensen‑cap–saturated** optimum,
 
-$$
-\boxed{\ \alpha_{em}(\mu^\*)\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0,M_e)\,\frac{1}{F_{\lambda,e}}\ },
-\tag{W.2.5}
-$$
+$$ \boxed{\ \alpha_{em}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0,M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.2.5} $$
 
 with **strict inequality on the cap‑active branch**. **Equality** holds **iff** the spectrum is flat $(F_{\lambda,e}=1)$ **and** the unconstrained minimizer lies on the boundary $(u_0=u^\*_{\rm J})$, in which case
 
-$$
-\boxed{\ \alpha_{em}(\mu^\*)\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ =\ K(d_0,M_e)\ }.
-\tag{W.2.6}
-$$
+
+$$ \boxed{\ \alpha_{em}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ =\ K(d_0,M_e)\ }. \tag{W.2.6} $$
+
 
 *Proof.* From $u^\*_{\rm J}=(a_{\rm cap}-1)/x$,
 
-$$
-\alpha_{em}(\mu^\*)\,\frac{C_{\rm cyc}}{C_{\rm cap}}
-=\frac{u^\*_{\rm J}}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{S_1}
-=\frac{a_{\rm cap}-1}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{M x^2}.
-$$
+$$ \alpha_{em}(\mathrm{MPU})\,\frac{C_{\rm cyc}}{C_{\rm cap}} =\frac{u^\*_{\rm J}}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{S_1} =\frac{a_{\rm cap}-1}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{M x^2}. $$
 
 Apply (W\.2.3) to obtain the bound with factor $1/F_{\lambda,e}=S_2/(M x^2)$ (for the EM sector). Strictness and equality conditions follow from Proposition W\.8 and $F_{\lambda,e}=1\iff \sigma^2=0$. $\square$
 
@@ -251,17 +243,12 @@ Variance enters only through $F_\lambda$: the multiplicative penalty is $1/F_\la
 ## W\.3 Weak sector relation (Weinberg angle)
 
 **Assumption W\.3.A (Alignment hypothesis).**
-At a common scale $\mu^\*$, PCE sets both $U(1)_Y$ and $SU(2)$ sectors to be **simultaneously cap‑active and Jensen‑cap–saturated**. A sufficient rationale is **spectral similarity** (comparable $M_s$ and $x_s$ across sectors) so that both unconstrained optima exceed the common alphabet cap at $\mu^\*$. The assumption can fail if sector spectra differ markedly (e.g., large variance or $M_s$ mismatch) causing one sector to be interior while the other is cap‑active.
+At the $\mathrm{MPU}$ operational point, PCE sets both $U(1)_Y$ and $SU(2)$ sectors to be **simultaneously cap‑active and Jensen‑cap–saturated**. A sufficient rationale is **spectral similarity** (comparable $M_s$ and $x_s$ across sectors) so that both unconstrained optima exceed the common alphabet cap at $\mu^\*$. The assumption can fail if sector spectra differ markedly (e.g., large variance or $M_s$ mismatch) causing one sector to be interior while the other is cap‑active.
 
 **Theorem W\.11 (Weinberg angle from sector invariants; cap‑active branch).**
 Under Assumption W\.3.A, let $u_s^\*$ denote the Jensen‑cap–saturated optimum for sector $s\in\{Y,2\}$. Then
 
-$$
-\sin^2\theta_W(\mu^\*)=\frac{u_Y^\*}{u_Y^\*+u_2^\*},\qquad
-\frac{u_2^\*}{u_Y^\*}=
-\frac{(d_0^{1/M_2}-1) / (S_1^{(2)}/M_2)}{(d_0^{1/M_Y}-1) / (S_1^{(Y)}/M_Y)}.
-\tag{W.3.1}
-$$
+$$ \sin^2\theta_W(\mathrm{MPU})=\frac{u_Y^\*}{u_Y^\*+u_2^\*},\qquad \frac{u_2^\*}{u_Y^\*}= \frac{(d_0^{1/M_2}-1) / (S_1^{(2)}/M_2)}{(d_0^{1/M_Y}-1) / (S_1^{(Y)}/M_Y)}. \tag{W.3.1} $$
 
 *Proof.* $\sin^2\theta_W=g_Y^2/(g_Y^2+g_2^2)$ and $u=g^2$. Apply Lemma W\.2 in each sector. $\square$
 
@@ -270,18 +257,12 @@ $$
 **Corollary W\.12 (Symmetric sector reference).**
 If $M_Y=M_2=M$ and $x_Y=x_2=x_0$, then $u_2^\*/u_Y^\*=1$ and
 
-$$
-\sin^2\theta_W(\mu^\*)=\tfrac12.
-\tag{W.3.2}
-$$
+$$ \sin^2\theta_W(\mathrm{MPU})=\tfrac12. \tag{W.3.2} $$
 
 **Proposition W\.13 (GUT‑normalized template).**
 If one further assumes an $SU(5)$‑style generator normalization at $\mu^\*$ with $g_1=g_2$ and $g_Y=\sqrt{\tfrac{3}{5}}\,g_1$ (here $g_1$ is the **GUT‑normalized** $U(1)$ coupling), then
 
-$$
-\sin^2\theta_W(\mu^\*)=\frac{3}{8}.
-\tag{W.3.3}
-$$
+$$ \sin^2\theta_W(\mathrm{MPU})=\frac{3}{8}. \tag{W.3.3} $$
 
 ---
 
@@ -338,10 +319,7 @@ $$
 **Corollary W\.16 (Product bound at Jensen‑cap; EM restatement of (W\.2.5) at the Jensen‑cap–saturated optimum).**
 At the Jensen‑cap–saturated optimum,
 
-$$
-\boxed{\ \alpha_{em}(\mu^\*)\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0, M_e)\,\frac{1}{F_{\lambda,e}}\ },
-\tag{W.5.1}
-$$
+$$ \boxed{\ \alpha_{em}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0, M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.5.1} $$
 
 with **strict inequality on the cap‑active branch**. **Equality** holds **iff** $u_0=u^\*_{\rm J}$ and $\sigma^2=0$. The identity (W\.2.6) holds only under the specific conditions of a flat LAN spectrum and operation precisely at the branch boundary. The more general, robust prediction of this framework is the inequality (W\.5.1). The identity represents an idealized, high‑symmetry point in the space of possible solutions.
 

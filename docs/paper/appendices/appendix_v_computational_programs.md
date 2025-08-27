@@ -183,13 +183,11 @@ Because each cycle outputs at most $d_0$ outcomes and the observation channel fa
 
 With $\mu^*=\kappa_\mu\nu$,
 
-$$
-\boxed{\ \alpha_{em}(\mu^*)=\frac{u^*}{4\pi}\ }\tag{V.13}
-$$
+$$ \boxed{\ \alpha_{em}(\mathrm{MPU})=\frac{u^*}{4\pi}\ }\tag{V.13} $$
 
 ### V.2.5 Running to Laboratory Scales
 
-Evolve $\alpha_{em}$ from $\mu^*$ to a reference scale (e.g., $m_Z$) by one‑loop QED with threshold matching (Heaviside–Lorentz units) in the $\overline{\mathrm{MS}}$ scheme \[Peskin & Schroeder, 1995]:
+Match and evolve $\alpha_{em}$ from the MPU scale $\mu^*$ to a reference scale (e.g., $m_Z$) by one‑loop QED with threshold matching (Heaviside–Lorentz units) in the $\overline{\mathrm{MS}}$ scheme \[Peskin & Schroeder, 1995]:
 
 $$
 \boxed{\ \frac{d\alpha}{d\ln\mu}=\frac{2}{3\pi}\!\left(\sum_{f}N_c^{f}Q_f^{2}\right)\alpha^2\ }\tag{V.14}
@@ -239,9 +237,10 @@ When used with Appendix W (which takes $\gamma_{\mathrm{eff}}=2$), choose $\gamm
 
 3. **Capacity check.** If $\sum_i\ln(1+\lambda_i u)\le\ln 8$, accept $u^*=u$. Otherwise, solve $\sum_i\ln(1+\lambda_i u)=\ln 8$ for $u^*_{\mathrm{cap}}$ using a bracketing root-finder (e.g., Brent's method) on a bracketing interval that guarantees crossing, e.g., $[0, (8^{1/M}-1)/\lambda_{\min}]$; alternatively expand the upper bound geometrically from the interior solution until $\sum_i\ln(1+\lambda_i u)\ge\ln 8$, then bracket.
 
-4. **Report $\alpha$ at $\mu^*$.** $\alpha_{em}(\mu^*)=u^*/(4\pi)$, $\mu^*=\kappa_\mu\nu$.
+4. **Report bare coupling.** The bare, predictive-scheme coupling is $\alpha_{em}(\mathrm{MPU})=u^*/(4\pi)$, at an operational scale $\mu^*=\kappa_\mu\nu$.
 
-5. **Run to target scale.** Apply (V.15) piecewise between thresholds to obtain $\alpha_{em}(\mu_{\mathrm{target}})$.
+
+5. **Match and run to target scale.** Apply a full matching procedure, including scheme conversion and RG running via Eq. (V.15), to relate $\alpha_{em}(\mathrm{MPU})$ to the physical coupling $\alpha_{em}(\mu_{\mathrm{target}})$.
 
 ### V.2.7 Sensitivity (local)
 
@@ -258,7 +257,4 @@ so increasing spectral weight $\lambda_i$ increases $u^*$ linearly, while increa
 
 With the accepted $u^*$ (interior or boundary), the prediction is
 
-$$
-\boxed{\ \alpha_{em}(\mu^*)=\frac{u^*}{4\pi},\qquad
-\alpha_{em}(\mu_{\mathrm{target}})\ \text{from (V.15).}\ }\tag{V.16}
-$$
+$$ \boxed{\ \alpha_{em}(\mathrm{MPU})=\frac{u^*}{4\pi},\qquad \alpha_{em}(\mu_{\mathrm{target}})\ \text{from matching and running via (V.15).}\ }\tag{V.16} $$

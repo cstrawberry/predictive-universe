@@ -190,9 +190,7 @@ g^2\;=\;u,\qquad \alpha(\mu^*)=\frac{u^*}{4\pi}.
 $$
 
 With $u^*=8^{1/24}-1\approx 0.0905077$ (derived in Appendix Z), we have the parameter-free result:
-$$
-\alpha(\mu^*) \approx 0.007202,\qquad \frac{1}{\alpha(\mu^*)}\approx 138.843.
-$$
+$$ \alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 0.007202,\qquad \frac{1}{\alpha_{\mathrm{em}}(\mathrm{MPU})}\approx 138.843. $$
 
 
 

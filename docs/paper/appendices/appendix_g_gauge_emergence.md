@@ -723,12 +723,7 @@ $$
 
 with positive solution
 
-$$
-u^*=\frac{M}{2S_1}\!\left(\sqrt{\,1+\frac{2\,\Gamma_0\,S_1^2}{A_{\mathrm{PCE}}\,M}}\ -\ 1\right),
-\qquad
-\alpha_{em}(\mu^*)=\frac{u^*}{4\pi},\ \ \mu^*=\kappa_\mu\nu .
-\tag{G.9.13}
-$$
+$$ u^*=\frac{M}{2S_1}\!\left(\sqrt{\,1+\frac{2\,\Gamma_0\,S_1^2}{A_{\mathrm{PCE}}\,M}}\ -\ 1\right), \qquad \alpha_{em}(\mathrm{MPU})=\frac{u^*}{4\pi},\ \ \mu^*=\kappa_\mu\nu . \tag{G.9.13} $$
 
 For large $\Gamma_0/A_{\mathrm{PCE}}$,
 
