@@ -78,7 +78,7 @@
 
 *   **$\Gamma_0$ (Gamma-0):** (Definition 20) System-level **constant** Power Conversion Factor with dimensions of **Power** ($[E][T]^{-1}$), appearing in the PCE potential. It maps the marginal performance gradient $(\partial PP/\partial C)$ to an equivalent power rate in the Adaptation Driving Force $\Psi$. Constrained by thermodynamic limits (Theorem 20). **At equilibrium, parameters satisfy Eq. (29)**, enabling empirical calibration of $\Gamma_0$ for a given MPU system.
 
-*   **$\mathcal{H}_0$:** (Proposition 4) The minimal complex Hilbert space required for representing the MPU state amplitude $S(t)$. Dimension $d_0 = \dim(\mathcal{H}_0)$ satisfies $d_0 \ge 8$ (Theorem 23). Emergence justified by PCE optimality (Theorem G.1.8).
+*   **$\mathcal{H}_0$:** (Proposition 4) The minimal complex Hilbert space required for representing the MPU state $|\psi(t)\rangle$. Dimension $d_0 = \dim(\mathcal{H}_0)$ satisfies $d_0 \ge 8$ (Theorem 23). Emergence justified by PCE optimality (Theorem G.1.8).
 
 *   **Horizon Constant ($K_0$):** (Theorem 15) The fundamental minimum Predictive Physical Complexity ($C_P = 3$ bits) required for a system to function as a *minimal predictor*, capable of both encoding SPAP logic and achieving prediction accuracy reliably better than chance (> ½). Represents the absolute floor for non-trivial predictive agency. Necessarily $C_{op} \ge K_0$.
 
@@ -142,7 +142,7 @@
 
 *   **$Q$ (Predictive Quality):** (Section 2.1) General measure of the goodness or utility of a system's predictions relative to its POP goals (e.g., reduced uncertainty, increased accuracy, enhanced operational success). Related to Predictive Performance PP.
 
-*   **$R(C)$:** (Definition 3a, Eq. 4) Physical Operational Cost function. Power-like rate of *physical* resource consumption required to maintain and operate structures/processes of complexity $C$. $R(C) = R(C_{op}) + r_p (C-C_{op})^{\gamma_p}$ for $C \ge C_{op}$, with $\gamma_p > 1$.
+*   **$R(C)$:** (Definition 3, Eq. 4) Physical Operational Cost function. Power-like rate of *physical* resource consumption required to maintain and operate structures/processes of complexity $C$. $R(C) = R(C_{op}) + r_p (C-C_{op})^{\gamma_p}$ for $C \ge C_{op}$, with $\gamma_p > 1$.
 
 *   **RID (Reflexive Interaction Dynamics):** (Definition 6, Definition A.1) Formalism characterizing interactions where the system's subsequent state depends intrinsically on the outcome of the interaction itself. Includes deterministic (D-RID) and non-deterministic (ND-RID) versions.
 
@@ -154,7 +154,7 @@
 
 *   **$R_I(C)$:** (Definition 3b, Eq. 5) Reflexive-Information Cost function. *Informational* overhead rate associated with self-referential verification/processing. $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$ for $C > K_0$.
 
-*   **$S(t)$:** (Definition 24) State amplitude component of the Perspectival State, represented by the Hilbert space vector $|\psi(t)\rangle \in \mathcal{H}_0$.
+*   **$|\psi(t)\rangle$:** (Definition 24) State amplitude component of the Perspectival State, represented by the Hilbert space vector $|\psi(t)\rangle \in \mathcal{H}_0$.
 
 *   **$S_{(s)}(t)$:** (Definition 24) The complete Perspectival State $(S(t), s) = (|\psi(t)\rangle, s)$ of an MPU.
 

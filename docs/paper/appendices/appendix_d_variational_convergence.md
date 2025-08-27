@@ -317,7 +317,7 @@ $$
 
 We rely on the following properties, consistent with definitions established in the main text:
 *   **(A1''') Predictive Performance $PP(C)$:** (Definition 19, Theorem 19) For $C \ge C_{op}$, $PP(C)$ is $\mathcal{C}^2$, strictly increasing ($\partial PP/\partial C > 0$), and strictly concave ($\partial^2 PP/\partial C^2 < 0$).
-*   **(A2''') Physical Cost $R(C)$:** (Definition 3a) For $C \ge C_{op}$, $R(C)$ is $\mathcal{C}^2$, strictly increasing ($R'(C) > 0$ for $C > C_{op}$; $R'(C_{op})$ can be taken as the right-derivative $\ge 0$), and convex ($R''(C) \ge 0$).
+*   **(A2''') Physical Cost $R(C)$:** (Definition 3) For $C \ge C_{op}$, $R(C)$ is $\mathcal{C}^2$, strictly increasing ($R'(C) > 0$ for $C > C_{op}$; $R'(C_{op})$ can be taken as the right-derivative $\ge 0$), and convex ($R''(C) \ge 0$).
 *   **(A3''') Informational Cost $R_I(C)$:** (Definition 3b) For $C > K_0$ (and thus for $C \ge C_{op}$ since $C_{op} \ge K_0$), $R_I(C)$ is $\mathcal{C}^2$. It satisfies $R_I'(C) = r_I/(C \ln 2) > 0$ and $R_I''(C) = -r_I/(C^2 \ln 2) < 0$ (i.e., $R_I(C)$ is strictly concave).
 
 The derivative of the driving force is (from Eq. 35, Section 6.5.1):

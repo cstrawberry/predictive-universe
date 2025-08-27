@@ -18,7 +18,7 @@ b) The inherent self-referential logical structure, corresponding to the Horizon
 
 Therefore, by definition, $C_{op}$ encompasses $K_0$ ($C_{op} \ge K_0$, Corollary 3). An MPU operates under the Prediction Optimization Problem (POP, Axiom 1) subject to physical, informational ($\varepsilon > 0$, Theorem 31), and logical (SPAP, Theorem 10, Theorem 11; RID, Definition 6) constraints intrinsically tied to its $C_{op}/K_0$ structure. An MPU's state and dynamics are characterized by:
 
-1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state amplitude $S(t)$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4; dimension $d_0 \ge 8$, see Theorem 23 and the subsequent algebraic argument) that encodes predictive information, and a perspective index $s$ from the Perspective Space $\Sigma$ (Definition 25) representing the interaction context.
+1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state $|\psi(t)\rangle$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4; dimension $d_0 \ge 8$, see Theorem 23 and the subsequent algebraic argument) that encodes predictive information, and a perspective index $s$ from the Perspective Space $\Sigma$ (Definition 25) representing the interaction context.
  2.  **Dual Dynamics:** Its evolution follows Dual Dynamics (Section 7.3.3): deterministic Internal Prediction Evolution (Definition 26) via the Schrödinger equation (Equation 43), implementing predictive generation ($b_p$), and stochastic Interaction ('Evolve', Definition 27) triggered by interaction, instantiating Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) for verification ($b_v$) and update initiation ($D_{cyc}$), whose indeterminacy stems from the inherent $K_0$ logic (Hypothesis 2).
  3.  Minimal Operational Complexity: The physical system possesses exactly the complexity $C(MPU) = C_{op}$ (Theorem 16).
 
@@ -133,7 +133,7 @@ We now detail the necessary mathematical structure for representing the state of
 
 **7.2.1 Theorem 23 (Minimal MPU Hilbert Space Dimension)**
 
-Minimal Predictive Units operate at the minimal adaptive-cycle complexity $C(MPU) = C_{op}$ (Definition 13). Prior results establish $C_{op} \ge K_0 \equiv B_3$ (Theorem 15, Corollary 3), where $K_0$ is the minimum complexity for the SPAP logic. We adopt the capacity–dimension link that a $K_0$-bit structural capacity requires at least $2^{K_0}$ distinguishable basis states in the amplitude space. Therefore, the corresponding Hilbert space $\mathcal{H}_0$ for the MPU state amplitude $S(t)$ must have a dimension $d_0$ satisfying
+Minimal Predictive Units operate at the minimal adaptive-cycle complexity $C(MPU) = C_{op}$ (Definition 13). Prior results establish $C_{op} \ge K_0 \equiv B_3$ (Theorem 15, Corollary 3), where $K_0$ is the minimum complexity for the SPAP logic. We adopt the capacity–dimension link that a $K_0$-bit structural capacity requires at least $2^{K_0}$ distinguishable basis states in the amplitude space. Therefore, the corresponding Hilbert space $\mathcal{H}_0$ for the MPU state $|\psi(t)\rangle$ must have a dimension $d_0$ satisfying
 $$
 d_0 \;\ge\; 2^{K_0} \;=\; 8 \quad \text{(41)}
 $$
@@ -212,14 +212,14 @@ The MPU's continuous effort to solve the POP (Axiom 1) within the constraints of
 
 Between 'Evolve' interactions, the state amplitude $S(t) \in \mathcal{H}_0$ undergoes deterministic, continuous evolution representing the internal predictive generation phase ($b_p$) of the Fundamental Predictive Loop. This evolution preserves probability (norm of $S(t)$) and superposition. As derived later (Proposition 11 based on linearity, unitarity, continuity), this evolution is necessarily governed by the time-dependent Schrödinger equation:
 $$
-i\hbar \frac{d}{dt} S(t) = \hat{H} S(t)\quad \text{(43)}
+i\hbar \frac{d}{dt} |\psi(t)\rangle = \hat{H} |\psi(t)\rangle\quad \text{(43)}
 $$
-where $\hbar$ is the reduced Planck constant, $S(t)$ is the state vector $|\psi(t)\rangle$, and $\hat{H}$ is a unique self-adjoint operator on $\mathcal{H}_0$ (the Hamiltonian) identified physically (Theorem 29) with the MPU's baseline operational energy cost $R(C_{op})$ (Equation 16). The evolution is given by the unitary operator $U_0(\delta t) = e^{-i\hat{H}\delta t/\hbar}$.
+where $\hbar$ is the reduced Planck constant, $|\psi(t)\rangle$ is the state vector $|\psi(t)\rangle$, and $\hat{H}$ is a unique self-adjoint operator on $\mathcal{H}_0$ (the Hamiltonian) identified physically (Theorem 29) with the MPU's baseline operational energy cost $R(C_{op})$ (Equation 16). The evolution is given by the unitary operator $U_0(\delta t) = e^{-i\hat{H}\delta t/\hbar}$.
 
 **7.3.3.2 Theorem 29 (Physical Interpretation of Internal Hamiltonian $\hat{H}$)**
 
 Within the framework, $\hat{H}$ admits the following physical interpretation:
-1.  **Baseline Energy Cost:** The expectation $\langle\hat{H}\rangle$ corresponds to the minimal baseline operational energy associated with sustaining the $C_{op}$ predictive cycle, i.e., the baseline physical resource cost $R(C_{op})$ (Definition 3a).
+1.  **Baseline Energy Cost:** The expectation $\langle\hat{H}\rangle$ corresponds to the minimal baseline operational energy associated with sustaining the $C_{op}$ predictive cycle, i.e., the baseline physical resource cost $R(C_{op})$ (Definition 3).
 2.  **Minimum Timescale:** The spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min} > 0$ for completing a unitary prediction subcycle $U_0(t) = e^{-i\hat{H} t/\hbar}$.
 
 These identifications connect the abstract generator of unitary evolution to the physical resource requirements of the predictive loop.
@@ -231,7 +231,7 @@ $$
 (S(t+\Delta t), s') \sim \text{Evolve}(S_{(s)}(t), N(t)) \quad \text{(44)}
 $$
 As formalized in Appendix M (Equation M.2), the 'Evolve' process comprises two conceptually distinct but intertwined components:
-1.  **Probabilistic Amplitude Actualization:** The state amplitude $S(t)=|\psi(t)\rangle$ actualizes to one of the possible outcome states $|i\rangle_s$ corresponding to the interaction perspective $s$. This occurs with probability given by the Born rule (Proposition 7, Equation 50): $P(i|S(t), s) = |\langle i | S(t) \rangle_s|^2$. The resulting amplitude is $S(t+\Delta t) = |i\rangle_s$ (normalized).
+1.  **Probabilistic Amplitude Actualization:** The state amplitude $S(t)=|\psi(t)\rangle$ actualizes to one of the possible outcome states $|i\rangle_s$ corresponding to the interaction perspective $s$. This occurs with probability given by the Born rule (Proposition 7, Equation 50): $P(i|S(t), s) = |\langle i | S(t) \rangle_s|^2$. The resulting state is $|\psi(t+\Delta t)\rangle = |i\rangle_s$ (normalized).
 2.  **Stochastic Perspective Shift:** Simultaneously or immediately following actualization, the perspective index $s$ transitions stochastically to a new perspective $s'$ according to a Conditional Perspective Transition Kernel $G_{persp}(s' | s, i, N, \Delta t)$ defined on the Perspective Space $\Sigma$ (Definition 25, elaborated in Appendix M, Section M.3.3). This shift reflects the system registering the specific interaction context $N(t)$ and the outcome $i$.
 The post-interaction state is the specific realized perspectival state $(|i\rangle_s, s')$. 'Evolve' is the fundamentally stochastic (Theorem 27, Theorem 28), resource-consuming (due to $\varepsilon>0$, Theorem 31) step where predictive information is verified and updated, driving the adaptation cycle.
 

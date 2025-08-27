@@ -21,7 +21,7 @@ We assume mild regularity: the set of $C_P$ values among states satisfying the a
 
 ### 5.1.1 Physical Interpretation: Baseline Cost and Capability
 
-The Operational Threshold $C_{op}$ measures the minimum complexity to implement the *integrated functionality* of the adaptive loop with super‑chance performance. Because the loop is adaptive and logically asymmetric, its operation entails irreversibility; thermodynamic costs follow. Let $R(C)$ be the Physical Operational Cost function (Definition 3a), mapping complexity to baseline resource‑consumption rate. The minimal continuous dissipation required to sustain the threshold loop is
+The Operational Threshold $C_{op}$ measures the minimum complexity to implement the *integrated functionality* of the adaptive loop with super‑chance performance. Because the loop is adaptive and logically asymmetric, its operation entails irreversibility; thermodynamic costs follow. Let $R(C)$ be the Physical Operational Cost function (Definition 3), mapping complexity to baseline resource‑consumption rate. The minimal continuous dissipation required to sustain the threshold loop is
 
 $$
 \boxed{P_{min} \;=\; R(C_{op}).}

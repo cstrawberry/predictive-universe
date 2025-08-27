@@ -26,7 +26,7 @@ The complex Hilbert space structure (Proposition 4) thus provides the necessary 
 
 **8.2 Interpretation of Superposition (Proposition 6)**
 
-Within the MPU framework, a superposition state $|\psi\rangle = \sum_i c_i |i\rangle_s$ in the MPU Hilbert space $\mathcal{H}_0$ (Proposition 4), expressed relative to an orthonormal basis $\{|i\rangle_s\}$ corresponding to perspective $s \in \Sigma$ (Theorem 24), represents the MPU's predictive state amplitude $S(t)$ in a situation where the outcome of the next 'Evolve' interaction (Definition 27) is fundamentally indeterminate (due to SPAP/RID limits, Theorem 27). The complex coefficients $c_i = \langle i | \psi \rangle_s$ encode the predictive information available from perspective $s$ about the potential outcome corresponding to state $|i\rangle_s$. The squared magnitude $|c_i|^2$ yields the probability of that outcome upon interaction (Proposition 7), while the relative phases between the coefficients $c_i$ determine the probabilities of outcomes relative to different, complementary perspectives (bases).
+Within the MPU framework, a superposition state $|\psi\rangle = \sum_i c_i |i\rangle_s$ in the MPU Hilbert space $\mathcal{H}_0$ (Proposition 4), expressed relative to an orthonormal basis $\{|i\rangle_s\}$ corresponding to perspective $s \in \Sigma$ (Theorem 24), represents the MPU's predictive state $|\psi(t)\rangle$ in a situation where the outcome of the next 'Evolve' interaction (Definition 27) is fundamentally indeterminate (due to SPAP/RID limits, Theorem 27). The complex coefficients $c_i = \langle i | \psi \rangle_s$ encode the predictive information available from perspective $s$ about the potential outcome corresponding to state $|i\rangle_s$. The squared magnitude $|c_i|^2$ yields the probability of that outcome upon interaction (Proposition 7), while the relative phases between the coefficients $c_i$ determine the probabilities of outcomes relative to different, complementary perspectives (bases).
 *Proof:*
 1.  **Indeterminacy:** The outcome of 'Evolve' is fundamentally indeterminate (Theorem 27, Theorem 28). The pre-interaction state $S(t)$ cannot generally correspond to a single definite outcome state $|i\rangle_s$.
 2.  **Hilbert Space Representation:** The state must encode the potentiality for multiple mutually exclusive outcomes $\{|i\rangle_s\}$. In the necessary Hilbert space structure $\mathcal{H}_0$ (Proposition 4), such a state is represented as a linear combination (superposition) $S(t) = |\psi\rangle = \sum_i c_i |i\rangle_s$.
@@ -156,7 +156,7 @@ Apparent non-local correlations (e.g., Bell inequality violations) manifest the 
 
 **8.7 Derivation of Schrödinger Equation (Proposition 11)**
 
-The deterministic evolution of the MPU state amplitude $S(t)$ between 'Evolve' interactions, representing internal prediction ($b_p$, Definition 26), is necessarily described by the Schrödinger equation.
+The deterministic evolution of the MPU state $|\psi(t)\rangle$ between 'Evolve' interactions, representing internal prediction ($b_p$, Definition 26), is necessarily described by the Schrödinger equation.
 
 **Proposition 11 (Derivation of Schrödinger Equation for Internal Evolution)**
 

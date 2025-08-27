@@ -71,7 +71,7 @@ This hierarchical definition ensures $C_P$ is well-defined and incorporates all 
 
 *   **The Derivation:** The framework later derives the **dynamical Arrow of Time** from the logic of prediction itself. The self-referential nature of the MPU's predictive cycle, when physically instantiated, is shown to necessitate a minimal, irreversible, per-operation thermodynamic cost (`ε ≥ ln 2`, Theorem 31). This ubiquitous `ε`-cost acts as a microscopic *ratchet*.
 
-The framework's assumes a standard statistical property of the physical medium to derive the powerful, dynamical engine that locks the entire universe into a coherent, forward-moving temporal evolution.
+The framework assumes a standard statistical property of the physical medium to derive the powerful, dynamical engine that locks the entire universe into a coherent, forward-moving temporal evolution.
 
 **2.4.2 The Operational Complexity Proxy Operator ($\hat{C}_v$)**
 

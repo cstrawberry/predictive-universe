@@ -60,7 +60,7 @@ Consistent with local thermodynamic equilibrium (Postulate 4) and analogous to t
 $$
 T = \frac{\kappa}{2\pi} \tag{69}
 $$
-*(natural units)*
+
 
 Within PU, this temperature reflects the effective thermal noise spectrum encountered by MPUs near the horizon, ultimately related to the information limits ($\varepsilon, f_{RID}$) of the underlying ND-RID processes.
 
@@ -75,14 +75,14 @@ A crucial ingredient is the relationship between the entropy associated with a c
 $$
 S_{boundary}(\mathcal{A}) = \frac{\mathcal{A}}{4 G} \tag{70}
 $$
-*(natural units)*
+
 
 An infinitesimal change $\delta \mathcal{A}$ in area corresponds to:
 
 $$
 \delta S = \frac{1}{4 G} \delta \mathcal{A} \tag{71}
 $$
-*(natural units)*
+
 
 *Proof Summary:* The derivation, detailed comprehensively in **Appendix E**, hinges on the fundamental information limits imposed by ND-RID interactions across causal boundaries within the emergent geometry. The core logic proceeds as follows: (1) The inherent irreversibility of the 'Evolve' process, quantified by the fundamental minimum cost $\varepsilon \ge \ln 2$ (Theorem 31, rigorously derived in Appendix J), implies strict contractivity ($f_{RID}<1$) of the average ND-RID channel (Lemma E.1). This $\varepsilon$-cost is the ultimate source of the thermodynamic limits. (2) This contractivity fundamentally bounds the classical information capacity of each individual MPU interaction channel ($C_{max}(f_{RID}) < \ln d_0$, Theorem E.2). This limits the maximum distinguishable information transmissible per channel. (3) Conditional on the necessary emergence of geometric regularity (Theorem 43), the number of effective independent information channels ($N_{links}$) crossing a horizon boundary scales linearly with its area $\mathcal{A}$ in the macroscopic limit ($N_{links} = \sigma_{link} \mathcal{A}$, Theorem E.3). (4) The total equilibrium boundary entropy $S_{boundary}$ associated with the boundary is the product of the number of channels and the maximum entropy per channel, which is identified with the capacity ($S_{boundary} = N_{links} \times S_{channel}^{max} = N_{links} \times C_{max}$). This directly yields the linear scaling $S_{boundary} = (\sigma_{link} C_{max}) \mathcal{A}$ (Equation E.6). The identification of the coefficient with the Bekenstein-Hawking value, $\sigma_{link} C_{max} = 1/(4 G)$, recovers the standard Area Law form (Equation 70). This identification is necessary for thermodynamic consistency (as shown in the subsequent derivation of the EFE) and crucially links the emergent gravitational constant $G$ to the underlying microscopic MPU parameters (spacing $\delta$ via $\sigma_{link}$, and ND-RID efficiency via $C_{max}$) as shown in Equation (E.9) and Equation (E.10). QED
 

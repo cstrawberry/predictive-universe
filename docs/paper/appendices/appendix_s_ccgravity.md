@@ -12,7 +12,7 @@ Define the active context complexity above baseline as $C_{context} := C_{agg} �
 $$
 C_{context} = C_{scale} \frac{\text{CC}}{\alpha_{CC,max} − \text{CC}}.
 $$
-We adopt a quadratic operational cost function $R(C)$ expanded around the baseline $C_{op}$. Assuming the system is operating at a local minimum where the linear term $R'(C_{op})$ is negligible or absorbed into the baseline cost, the leading order expansion consistent with the convexity requirement (Definition 3a) is:
+We adopt a quadratic operational cost function $R(C)$ expanded around the baseline $C_{op}$. Assuming the system is operating at a local minimum where the linear term $R'(C_{op})$ is negligible or absorbed into the baseline cost, the leading order expansion consistent with the convexity requirement (Definition 3) is:
 $$
 R(C) \approx R(C_{op}) + r_p (C − C_{op})^2, \quad \text{where } r_p = \tfrac{1}{2}R''(C_{op}) > 0.
 $$

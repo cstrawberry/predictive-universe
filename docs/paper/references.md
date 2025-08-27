@@ -8,11 +8,11 @@
 *   Atiyah, M. F., & Singer, I. M. (1963). The Index of Elliptic Operators on Compact Manifolds. *Bulletin of the American Mathematical Society*, *69*(3), 422–433. DOI: 10.1090/S0002-9904-1963-10957-X
 *   Audenaert, K. M. R. (2007). A sharp continuity estimate for the von Neumann entropy. *Journal of Physics A: Mathematical and Theoretical*, *40*(28), 8127–8136. DOI: 10.1088/1751-8113/40/28/S19
 *   Audenaert, K. M. R., & Datta, N. (2015). α–z–Rényi relative entropies. *Journal of Mathematical Physics*, *56*(2), 022202. DOI: 10.1063/1.4906367
-*   Bargmann, V. (1964). Note on Wigner’s theorem on symmetry operations. *Journal of Mathematical Physics*, *5*(7), 862–868. DOI: 10.1063/1.1704188. 
+*   Bargmann, V. (1964). Note on Wigner’s theorem on symmetry operations. *Journal of Mathematical Physics*, *5*(7), 862–868. DOI: 10.1063/1.1704188 
 *   Baumgartner, B., & Narnhofer, H. (2008). Analysis of quantum semigroups with GKS–Lindblad generators: II. General. *Journal of Physics A: Mathematical and Theoretical*, *41*(39), Article 395303. DOI: 10.1088/1751-8113/41/39/395303
 *   Belavin, A. A., Polyakov, A. M., Schwartz, A. S., & Tyupkin, Y. S. (1975). Pseudoparticle solutions of the Yang–Mills equations. *Physics Letters B*, *59*(1), 85–87. DOI: 10.1016/0370-2693(75)90163-X 
 *   Bekenstein, J. D. (1973). Black holes and entropy. *Physical Review D*, *7*(8), 2333–2346. DOI: 10.1103/PhysRevD.7.2333
-*   Bekenstein, J. D. (1981). Universal upper bound on the entropy-to-energy ratio for bounded systems. *Physical Review D*, *23*(2), 287–298. DOI: 10.1103/PhysRevD.23.287.
+*   Bekenstein, J. D. (1981). Universal upper bound on the entropy-to-energy ratio for bounded systems. *Physical Review D*, *23*(2), 287–298. DOI: 10.1103/PhysRevD.23.287
 *   Belinfante, F. J. (1939). On the spin angular momentum of mesons. *Physica*, *6*(9–10), 887–898. DOI: 10.1016/S0031-8914(39)80090-X
 *   Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525–532. DOI: 10.1147/rd.176.0525
 *   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853.
@@ -21,19 +21,19 @@
 *   Born, M. (1926). Zur Quantenmechanik der Stoßvorgänge. *Zeitschrift für Physik*, *37*, 863–867. DOI: 10.1007/BF01397477
 *   Bott, R., & Tu, L. W. (1982). *Differential Forms in Algebraic Topology*. Springer (Graduate Texts in Mathematics, 82). DOI: 10.1007/978-1-4757-3951-0
 *   Boyd, S., & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.
-*   Bratteli, O., & Robinson, D. W. (1997). *Operator Algebras and Quantum Statistical Mechanics: Equilibrium States. Models in Quantum Statistical Mechanics* (2nd ed.). Springer. DOI: 10.1007/978-3-662-03444-6.   
+*   Bratteli, O., & Robinson, D. W. (1997). *Operator Algebras and Quantum Statistical Mechanics: Equilibrium States. Models in Quantum Statistical Mechanics* (2nd ed.). Springer. DOI: 10.1007/978-3-662-03444-6   
 *   Breuer, H.-P., & Petruccione, F. (2002). *The Theory of Open Quantum Systems*. Oxford University Press.
 *   Brion, M. (2005). Lectures on the geometry of flag varieties. In P. Pragacz (Ed.), *Topics in Cohomological Studies of Algebraic Varieties* (pp. 33–85). Birkhäuser. DOI: 10.1007/3-7643-7342-3_2
 *   Brunetti, R., Dappiaggi, C., Fredenhagen, K., & Zahn, J. (Eds.). (2015). *Advances in Algebraic Quantum Field Theory*. Springer.
 *   Brunetti, R., Fredenhagen, K., & Verch, R. (2003). The generally covariant locality principle: A new paradigm for local quantum physics. *Communications in Mathematical Physics*, *237*(1-2), 31–68. DOI: 10.1007/s00220-003-0805-5
 *   Burkhardt, H., & Pietrzyk, B. (2001). Update of the hadronic contribution to the QED vacuum polarization. *Physics Letters B*, *513*(1–2), 46–52. DOI: 10.1016/S0370-2693(01)00393-8
 *   Busch, P. (2003). Quantum States and Generalized Observables: A Simple Proof of Gleason's Theorem. *Physical Review Letters*, *91*(12), 120403. DOI: 10.1103/PhysRevLett.91.120403
-*   Buttazzo, D., Degrassi, G., Giardino, P. P., Giudice, G. F., Sala, F., Salvio, A., & Strumia, A. (2013). Investigating the near-criticality of the Higgs boson. *Journal of High Energy Physics*, *2013*(12), 089. DOI: 10.1007/JHEP12(2013)089. 
+*   Buttazzo, D., Degrassi, G., Giardino, P. P., Giudice, G. F., Sala, F., Salvio, A., & Strumia, A. (2013). Investigating the near-criticality of the Higgs boson. *Journal of High Energy Physics*, *2013*(12), 089. DOI: 10.1007/JHEP12(2013)089 
 *   Callan, C. G., Jr., & Coleman, S. (1977). The fate of the false vacuum II: First quantum corrections. *Physical Review D*, *16*(6), 1762–1768. DOI: 10.1103/PhysRevD.16.1762
 *   Carlen, E. A., Frank, R. L., & Lieb, E. H. (2018). Inequalities for quantum divergences and the Audenaert–Datta conjecture. *Journal of Physics A: Mathematical and Theoretical*, *51*(48), 483001. DOI: 10.1088/1751-8121/aae536
 *   Carroll, S. M. (2001). The cosmological constant. *Living Reviews in Relativity*, *4*(1), 1. DOI: 10.12942/lrr-2001-1
 *   Carroll, S. M., & Parola, A. (2024). What Emergence Can Possibly Mean. arXiv:2410.15468 [physics.hist-ph].
-*   Caves, C. M., Fuchs, C. A., Manne, K. K., & Renes, J. M. (2004). Gleason-type derivations of the quantum probability rule for generalized measurements. *Foundations of Physics*, *34*(2), 193–209. DOI: 10.1023/B\:FOOP.0000019581.00318.a5. 
+*   Caves, C. M., Fuchs, C. A., Manne, K. K., & Renes, J. M. (2004). Gleason-type derivations of the quantum probability rule for generalized measurements. *Foundations of Physics*, *34*(2), 193–209. DOI: 10.1023/B\:FOOP.0000019581.00318.a5 
 *   Cesa-Bianchi, N., & Lugosi, G. (2006). *Prediction, Learning, and Games*. Cambridge University Press.
 *   Chalmers, D. J. (1996). *The Conscious Mind: In Search of a Fundamental Theory*. Oxford University Press.
 *   Cheeger, J. (1999). Differentiability of Lipschitz functions on metric measure spaces. *Geometric & Functional Analysis*, *9*(3), 428–517. DOI: 10.1007/s000390050094
@@ -45,7 +45,7 @@
 *   Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. *Behavioral and Brain Sciences*, *36*(3), 181–204. DOI: 10.1017/S0140525X1200047X
 *   Clowe, D., Bradač, M., Gonzalez, A. H., Markevitch, M., Randall, S. W., Jones, C., & Zaritsky, D. (2006). A direct empirical proof of the existence of dark matter. *The Astrophysical Journal Letters*, *648*(2), L109–L113. DOI: 10.1086/508162
 *   CODATA Committee on Data for Science and Technology (2018). *The CODATA 2018 recommended values of the fundamental physical constants*. (Data available from physics.nist.gov/constants).
-*   Cohen, A. G., Kaplan, D. B., & Nelson, A. E. (1999). Effective field theory, black holes, and the cosmological constant. *Physical Review Letters*, *82*(25), 4971–4974. DOI: 10.1103/PhysRevLett.82.4971.
+*   Cohen, A. G., Kaplan, D. B., & Nelson, A. E. (1999). Effective field theory, black holes, and the cosmological constant. *Physical Review Letters*, *82*(25), 4971–4974. DOI: 10.1103/PhysRevLett.82.4971
 *   Coleman, S., & Weinberg, E. (1973). Radiative Corrections as the Origin of Spontaneous Symmetry Breaking. *Physical Review D*, *7*(6), 1888–1912. DOI: 10.1103/PhysRevD.7.1888
 *   Coleman, S. (1977). The fate of the false vacuum: Semiclassical theory. *Physical Review D*, *15*(10), 2929–2936; Erratum: *Physical Review D*, *16*, 1248 (1977). DOIs: 10.1103/PhysRevD.15.2929; 10.1103/PhysRevD.16.1248
 *   Coleman, S. (1985). *Aspects of Symmetry: Selected Erice Lectures*. Cambridge University Press. DOI: 10.1017/CBO9780511565045
@@ -68,7 +68,7 @@
 *   Feroz, F., Hobson, M. P., & Bridges, M. (2009). MultiNest: an efficient and robust Bayesian inference tool for cosmology and particle physics. *Monthly Notices of the Royal Astronomical Society*, *398*(4), 1601–1614. DOI: 10.1111/j.1365-2966.2009.14548.x
 *   Feroz, F., Hobson, M. P., Cameron, E., & Pettitt, A. N. (2019). Importance Nested Sampling and the MultiNest Algorithm. *The Open Journal of Astrophysics*, *2*, 10. DOI: 10.21105/astro.1306.2144
 *   Fodor, J. A. (1975). *The Language of Thought*. Harvard University Press.
-*   Fortuin, C. M., Kasteleyn, P. W., & Ginibre, J. (1971). Correlation inequalities on some partially ordered sets. *Communications in Mathematical Physics*, *22*(2), 89–103. DOI: 10.1007/BF01651330. 
+*   Fortuin, C. M., Kasteleyn, P. W., & Ginibre, J. (1971). Correlation inequalities on some partially ordered sets. *Communications in Mathematical Physics*, *22*(2), 89–103. DOI: 10.1007/BF01651330 
 *   Fowler, A. G., Mariantoni, M., Martinis, J. M., & Cleland, A. N. (2012). Surface codes: Towards practical large-scale quantum computation. *Physical Review A*, *86*(3), 032324. DOI: 10.1103/PhysRevA.86.032324
 *   Frank, R. L., & Lieb, E. H. (2013). Monotonicity of a relative Rényi entropy. *Journal of Mathematical Physics*, *54*(12), 122201. DOI: 10.1063/1.4832737
 *   Frigerio, A. (1978). Stationary states of quantum dynamical semigroups. *Communications in Mathematical Physics*, *63*(3), 269–276. DOI: 10.1007/BF01196936
@@ -83,27 +83,27 @@
 *   Gell-Mann, M. (1994). *The Quark and the Jaguar: Adventures in the Simple and the Complex*. W. H. Freeman.
 * Georgi, H. (1999). *Lie Algebras in Particle Physics: From Isospin to Unified Theories* (2nd ed.). Westview Press.
 *   Gibbons, G. W., & Hawking, S. W. (1977). Cosmological event horizons, thermodynamics, and particle creation. *Physical Review D*, *15*(10), 2738–2751. DOI: 10.1103/PhysRevD.15.2738
-*   Gildener, E., & Weinberg, S. (1976). Symmetry breaking and scalar bosons. *Physical Review D*, *13*(12), 3333–3341. DOI: 10.1103/PhysRevD.13.3333. 
+*   Gildener, E., & Weinberg, S. (1976). Symmetry breaking and scalar bosons. *Physical Review D*, *13*(12), 3333–3341. DOI: 10.1103/PhysRevD.13.3333 
 *   Gleason, A. M. (1957). Measures on the closed subspaces of a Hilbert space. Journal of Mathematics and Mechanics, 6(4), 885–893. DOI: 10.1512/iumj.1957.6.56050
 *   Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. *Monatshefte für Mathematik und Physik*, *38*(1), 173–198. DOI: 10.1007/BF01700692
-*   Gorini, V., Kossakowski, A., & Sudarshan, E. C. G. (1976). Completely positive dynamical semigroups of N-level systems. *Journal of Mathematical Physics*, *17*(5), 821–825. DOI: 10.1063/1.522979. 
+*   Gorini, V., Kossakowski, A., & Sudarshan, E. C. G. (1976). Completely positive dynamical semigroups of N-level systems. *Journal of Mathematical Physics*, *17*(5), 821–825. DOI: 10.1063/1.522979 
 *   Gottesman, D. (1998). A Theory of Fault-Tolerant Quantum Computation. *Physical Review A*, *57*(1), 127–137. DOI: 10.1103/PhysRevA.57.127
 *   Griffiths, R. B. (1967). Correlations in Ising Ferromagnets. I. *Journal of Mathematical Physics*, *8*(3), 478–483. DOI: 10.1063/1.1705219
 *   Gromov, M. (1999). *Metric structures for Riemannian and non-Riemannian spaces*. Birkhäuser.
 *   Haag, R. (1996). *Local Quantum Physics: Fields, Particles, Algebras* (2nd ed.). Springer-Verlag.
-*   Haag, R., & Kastler, D. (1964). An algebraic approach to quantum field theory. *Journal of Mathematical Physics*, *5*(7), 848–861. DOI: 10.1063/1.1704187. 
+*   Haag, R., & Kastler, D. (1964). An algebraic approach to quantum field theory. *Journal of Mathematical Physics*, *5*(7), 848–861. DOI: 10.1063/1.1704187 
 *   Hameroff, S. R., & Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, *40*(3–4), 453–480. DOI: 10.1016/0378-4754(95)00042-4
-*   Hardy, L. (2001). Quantum Theory From Five Reasonable Axioms. *arXiv*, quant-ph/0101012. DOI: 10.48550/arXiv.quant-ph/0101012.
+*   Hardy, L. (2001). Quantum Theory From Five Reasonable Axioms. *arXiv*, quant-ph/0101012. DOI: 10.48550/arXiv.quant-ph/0101012
 *   Hastings, M. B., & Koma, T. (2006). Spectral gap and exponential decay of correlations. *Communications in Mathematical Physics*, 265(3), 781–804. DOI: 10.1007/s00220-006-0030-4
 *   Havlin, S., & Ben-Avraham, D. (1987). Diffusion in disordered media. *Advances in Physics*, *36*(6), 695-798. DOI: 10.1080/00018738700101072
 *   Hawking, S. W. (1975). Particle creation by black holes. *Communications in Mathematical Physics*, *43*(3), 199–220. DOI: 10.1007/BF02345020
 *   Hayward, S. A. (1994). General laws of black-hole dynamics. *Physical Review D*, *49*(12), 6467–6474. DOI: 10.1103/PhysRevD.49.6467
-*   Heinonen, J., & Koskela, P. (1998). Quasiconformal maps in metric spaces with controlled geometry. *Acta Mathematica*, *181*(1), 1–61. DOI: 10.1007/BF02392747.
+*   Heinonen, J., & Koskela, P. (1998). Quasiconformal maps in metric spaces with controlled geometry. *Acta Mathematica*, *181*(1), 1–61. DOI: 10.1007/BF02392747
 *   Heisenberg, W. (1927). Über den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik. *Zeitschrift für Physik*, *43*(3–4), 172–198. DOI: 10.1007/BF01397280
 *   Helstrom, C. W. (1976). *Quantum Detection and Estimation Theory*. Academic Press.
 *   Hoeffding, W. (1963). Probability inequalities for sums of bounded random variables. *Journal of the American Statistical Association*, *58*(301), 13–30. DOI: 10.1080/01621459.1963.10500830
 *   Hohwy, J. (2016). The self-evidencing brain. *Noûs*, *50*(2), 259–285. DOI: 10.1111/nous.12062
-*   Holevo, A. S. (1973). Bounds for the quantity of information transmitted by a quantum communication channel. *Problemy Peredachi Informatsii*, *9*(3), 3-11. (English translation: Problems of Information Transmission, 9(3), 177-183 (1973)).
+*   Holevo, A. S. (1973). Bounds for the quantity of information transmitted by a quantum communication channel. *Problemy Peredachi Informatsii*, *9*(3), 3-11. (English translation: Problems of Information Transmission, 9(3), 177-183 (1973))
 *   Holevo, A. S. (1982). *Probabilistic and Statistical Aspects of Quantum Theory*. North-Holland.
 *   Holevo, A. S. (1998). The capacity of the quantum channel with general signal states. *IEEE Transactions on Information Theory*, *44*(1), 269–273. DOI: 10.1109/18.651037
 *   Holevo, A. S., & Werner, R. F. (2001). Evaluating capacities of quantum channels. *Physical Review A*, *63*(3), 032312. DOI: 10.1103/PhysRevA.63.032312
@@ -116,7 +116,7 @@
 *   Jegerlehner, F. (2008). The running fine-structure constant α(E) via the Adler function. *Nuclear Physics B – Proceedings Supplements*, *181–182*, 135–140. DOI: 10.1016/j.nuclphysbps.2008.09.010
 *   Kant, I. (1781). Kritik der reinen Vernunft (Critique of Pure Reason).
 *   Keith, S. (2004). A differentiable structure for metric measure spaces. *Advances in Mathematics*, *183*(2), 271–315. DOI: 10.1016/S0001-8708(03)00089-6
-*   Keith, S., & Zhong, X. (2008). The Poincaré inequality is an open ended condition. *Annals of Mathematics*, *167*(2), 575–599. DOI: 10.4007/annals.2008.167.575.
+*   Keith, S., & Zhong, X. (2008). The Poincaré inequality is an open ended condition. *Annals of Mathematics*, *167*(2), 575–599. DOI: 10.4007/annals.2008.167.575
 *   King, C. (2003). The capacity of the quantum depolarizing channel. *IEEE Transactions on Information Theory*, *49*(1), 221-229. DOI: 10.1109/TIT.2002.806153
 *   King, C., & Ruskai, M. B. (2001). Minimal entropy of states emerging from noisy quantum channels. *IEEE Transactions on Information Theory*, *47*(1), 192-209. DOI: 10.1109/18.904522
 *   Kleene, S. C. (1938). On Notation for Ordinal Numbers. *The Journal of Symbolic Logic*, *3*(4), 150–155. DOI: 10.2307/2267778
@@ -125,7 +125,7 @@
 *   Kolchinsky, A., & Wolpert, D. H. (2018). Semantic information, autonomous agency and non-equilibrium statistical physics. *Interface Focus*, *8*(6), 20180041. DOI: 10.1098/rsfs.2018.0041
 *   König, R., & Wehner, S. (2009). A strong converse for classical channel coding using entangled inputs. *Physical Review Letters*, *103*(7), 070504. DOI: 10.1103/PhysRevLett.103.070504
 *   Kramer, M., Stairs, I. H., Manchester, R. N., Wex, N., Deller, A. T., Coles, W. A., Ali, M., Burgay, M., Camilo, F., Cognard, I., … Theureau, G. (2021).
-Strong-Field Gravity Tests with the Double Pulsar. Physical Review X, 11(4), 041050.
+Strong-Field Gravity Tests with the Double Pulsar. Physical Review X, 11(4), 041050
 DOI: 10.1103/PhysRevX.11.041050
 *   Kramer, M., & Wex, N. (2009). The double pulsar system: a unique laboratory for gravity. *Classical and Quantum Gravity*, *26*(7), 073001. DOI: 10.1088/0264-9381/26/7/073001
 *   Kushner, H. J., & Yin, G. G. (2003). *Stochastic Approximation and Recursive Algorithms and Applications* (2nd ed.). Springer.
@@ -142,7 +142,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Li, M. (2004). A model of holographic dark energy. *Physics Letters B*, *603*(1–2), 1–5. DOI: 10.1016/j.physletb.2004.10.014. 
 *   Lieb, E. H., & Robinson, D. W. (1972). The finite group velocity of quantum spin systems. *Communications in Mathematical Physics*, *28*(3), 251–257. DOI: 10.1007/BF01645779
 *   Lin, Y. & Yau, S.T. (2010). Ricci curvature and eigenvalue estimate on locally finite graphs. *Mathematical Research Letters*, *17*(2), 343-356.
-*   Lindblad, G. (1976). On the generators of quantum dynamical semigroups. *Communications in Mathematical Physics*, *48*(2), 119–130. DOI: 10.1007/BF01608499. 
+*   Lindblad, G. (1976). On the generators of quantum dynamical semigroups. *Communications in Mathematical Physics*, *48*(2), 119–130. DOI: 10.1007/BF01608499 
 *   Litim, D. F. (2001). Optimized renormalization group flows. *Physical Review D*, *64*, 105007. DOI: 10.1103/PhysRevD.64.105007
 *   Loll, R. (2019). Quantum Gravity from Causal Dynamical Triangulations: A Review. *Classical and Quantum Gravity*, *37*(1), 013002. DOI: 10.1088/1361-6382/ab579e
 *   Lott, J., & Villani, C. (2009). Ricci curvature for metric-measure spaces via optimal transport. *Annals of Mathematics*, *169*(3), 903–991. DOI: 10.4007/annals.2009.169.903
@@ -152,7 +152,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   McGaugh, S. S. (2012). The Baryonic Tully-Fisher Relation of Gas-Rich Galaxies as a Test of ΛCDM and MOND. *The Astronomical Journal*, *143*(2), 40. DOI: 10.1088/0004-6256/143/2/40
 *   McGaugh, S. S., Lelli, F., & Schombert, J. M. (2016). The Radial Acceleration Relation in Rotationally Supported Galaxies. *Physical Review Letters*, *117*(20), 201101. DOI: 10.1103/PhysRevLett.117.201101
 *   Mendelson, E. (2015). *Introduction to Mathematical Logic* (6th ed.). CRC Press.
-*   Minty, G. J. (1962). Monotone (nonlinear) operators in Hilbert space. *Duke Mathematical Journal*, *29*(3), 341–346. DOI: 10.1215/S0012-7094-62-02933-2. 
+*   Minty, G. J. (1962). Monotone (nonlinear) operators in Hilbert space. *Duke Mathematical Journal*, *29*(3), 341–346. DOI: 10.1215/S0012-7094-62-02933-2 
 *   Milgrom, M. (1983). A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis. *The Astrophysical Journal*, *270*, 365–370. DOI: 10.1086/161130
 *   Mosonyi, M., & Hiai, F. (2011). On the Symmetrized Rényi Relative Entropies and Related Metrics. *IEEE Transactions on Information Theory*, *57*(4), 2474-2487. DOI: 10.1109/TIT.2011.2110065
 *   Mosonyi, M., & Ogawa, T. (2017). Quantum hypothesis testing and the operational interpretation of the quantum Rényi relative entropies. *Communications in Mathematical Physics*, *355*, 373–426. DOI: 10.1007/s00220-017-2960-6
@@ -172,7 +172,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Pérez-García, D., Wolf, M. M., Petz, D., & Ruskai, M. B. (2006). Contractivity of positive and trace-preserving maps under Lⁿ norms. *Journal of Mathematical Physics*, *47*(8), 083506. DOI: 10.1063/1.2218675
 *   Peskin, M. E., & Schroeder, D. V. (1995). *An Introduction to Quantum Field Theory*. Addison-Wesley (now Perseus Books).
 *   Petz, D. (1996). Monotone metrics on matrix spaces. *Linear Algebra and its Applications*, *244*, 81–96. DOI: 10.1016/0024-3795(94)00211-8.
-*   Planck Collaboration, Aghanim, N., Akrami, Y., Ashdown, M., et al. (2020). Planck 2018 results. VI. Cosmological parameters. Astronomy & Astrophysics, 641, A6. DOI: 10.1051/0004-6361/201833910.
+*   Planck Collaboration, Aghanim, N., Akrami, Y., Ashdown, M., et al. (2020). Planck 2018 results. VI. Cosmological parameters. Astronomy & Astrophysics, 641, A6. DOI: 10.1051/0004-6361/201833910
 *   Polyak, B. T. (1963). Gradient methods for the minimization of functionals. *USSR Computational Mathematics and Mathematical Physics*, *3*(4), 864–878.
 *   Post, E. L. (1921). Introduction to a General Theory of Elementary Propositions. *American Journal of Mathematics*, *43*(3), 163–185. DOI: 10.2307/2370324
 *   Preskill, J. (1998). *Lecture Notes for Physics 229: Quantum Information and Computation*. California Institute of Technology. 

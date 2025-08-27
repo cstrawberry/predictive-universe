@@ -110,7 +110,7 @@ $$
 $$
 where:
 
-1.  **$\hat{H}_v$:** The internal MPU Hamiltonian (Energy operator, from Def 26, Eq 43). Its contribution to energy density is $\hat{H}_v/V_0$. Theorem 29 relates its expectation value to the baseline operational *energy* for a cycle, with $R(C_{op})$ (Definition 3a) being the corresponding *power*.
+1.  **$\hat{H}_v$:** The internal MPU Hamiltonian (Energy operator, from Def 26, Eq 43). Its contribution to energy density is $\hat{H}_v/V_0$. Theorem 29 relates its expectation value to the baseline operational *energy* for a cycle, with $R(C_{op})$ (Definition 3) being the corresponding *power*.
 2.  **$\hat{R}(C_v), \hat{R}_I(C_v)$:** The operational resource cost *power* operators (defined in Theorem B.1, Eq B.3, which are derived from the power functions $R(C), R_I(C)$ in Definition 3). Their contribution to energy density is $(\hat{R}(C_v)\tau_0)/V_0$ and $(\hat{R}_I(C_v)\tau_0)/V_0$, representing energy dissipated or utilized over timescale $\tau_0$ per unit volume. The justification for their inclusion as sources for $T_{\mu\nu}$ rests on PCE requiring all predictive work and costs to be accounted for in the system's energy balance, with Theorem 2 ensuring the proxy $\hat{C}_v$ accurately reflects $C_P$ at equilibrium.
 3.  **$\hat{E}_{int}(v) = \frac{1}{2}\sum_{v' \sim v} \hat{V}_{vv'}$:** The interaction energy operator (Energy operator). Its contribution to energy density is $\hat{E}_{int}(v)/V_0$. Acts on the joint Hilbert space $\mathcal{H}_v \otimes \mathcal{H}_{v'}$ (or larger).
 
