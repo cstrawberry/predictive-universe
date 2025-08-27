@@ -9,7 +9,7 @@ The standard formalism of quantum mechanics was demonstrated in Section 8 to eme
 Furthermore, the framework lays out a definite route (Section 11) for the emergence of spacetime geometry from the MPU network.  
 The Necessary Emergence of Geometric Regularity (Theorem 43) follows from POP/PCE optimisation arguments (Appendices C, D).  
 Imposing local thermodynamic consistency on causal horizons (Postulate 4) yields, in turn, the Lorentzian metric (Theorem 46) and finally Einstein’s Field Equations (Theorem 50) in Section 12.  
-The derivation depends crucially on the ND-RID–driven *Horizon-Entropy Area Law* (Theorem 49, rigorously derived in **Appendix E**) and the MPU stress–energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ (Definition B.8, rigorously constructed in **Appendix B**).
+The derivation depends crucially on the ND-RID–driven *Horizon-Entropy Area Law* (Theorem 49), which itself is rigorously derived from the fundamental thermodynamic cost $\varepsilon \ge \ln 2$ in **Appendix E**, and the MPU stress–energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ (Definition B.8, rigorously constructed in **Appendix B**).
 
 Gravity therefore appears as a macroscopic, thermodynamic consequence of predictive-network dynamics, with its scale fixed by the underlying MPU information parameters, succinctly summarised by (derived from Equation E.9):
 

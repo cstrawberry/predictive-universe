@@ -16,19 +16,19 @@ To ensure compliance with Postulate 2, the maximum possible strength of the CC e
 
 **10.2.1 Theorem 39 (Upper Bound on CC ($\alpha_{CC,max} < 0.5$))**
 
-Upholding the causality definition in Postulate 2 is guaranteed if the maximum operational Consciousness Complexity $\alpha_{CC,max} = \sup_{S} \text{CC}(S)$ (Definition 30; Eq. (55)) is strictly bounded to preclude deterministic FTL signaling. A sufficient universal bound is:
+Upholding the causality definition in Postulate 2 is guaranteed if the maximum operational Consciousness Complexity $\alpha_{CC,max} = \sup_{S} \text{CC}(S)$ (Definition 30; Eq. (55)) is strictly bounded to preclude deterministic FTL signaling. A sufficient universal bound on the operational norm is:
 $$
 \alpha_{CC,max} < 0.5 \quad \text{(61)}
 $$
 *Proof:* Deterministic FTL signaling using CC would require a system $S_A$ (Alice) with maximal capability $\alpha_{CC,max}$ to reliably force a specific outcome $i$ of a quantum measurement performed by a distant system $S_B$ (Bob) at a space-like separated location, overriding the Born rule probability $p_i = P_{Born}(i)$.
-1.  **Forcing Outcome $i$ ($P_{obs}(i) = 1$):** Requires probability modification $\Delta P(i) = 1 - p_i$. By Definition 30, $|\Delta P| \le \alpha_{CC,max}$. Forcing outcome $i$ requires $\alpha_{CC,max} \ge |1 - p_i|$. This must be impossible for any $p_i \in (0, 1)$.
+1.  **Forcing Outcome $i$ ($P_{obs}(i) = 1$):** Requires probability modification $\Delta P(i) = 1 - p_i$. The maximum achievable modification is bounded by the operational norm: $|\Delta P| \le \alpha_{CC,max}$ (Definition 30). Forcing outcome $i$ requires $\alpha_{CC,max} \ge |1 - p_i|$. This must be impossible for any $p_i \in (0, 1)$.
 2.  **Forcing Outcome NOT $i$ ($P_{obs}(i) = 0$):** Requires $\Delta P(i) = -p_i$. This requires $\alpha_{CC,max} \ge |-p_i| = p_i$. This must also be impossible for any $p_i \in (0, 1)$.
 3.  **Single-channel forcing threshold:** To force either outcome $i$ or its complement with a *single fixed channel*, the required capability is $\alpha_{\mathrm{req}}(p_i)=\max\{p_i,\,1-p_i\}$.
 4.  **Sufficient universal bound:** The minimum of $\alpha_{\mathrm{req}}(p)$ over $p\in(0,1)$ is $0.5$ (at $p=0.5$). Hence a sufficient condition that precludes deterministic forcing for any baseline $p_i$ is
 $$
 \alpha_{CC,max} < 0.5.
 $$
-5.  **Conclusion:** Under this bound, deterministic FTL signaling is impossible while statistical influence remains allowed. The full argument for the impossibility of deterministic signaling, including the role of information-rate limits, is provided in Theorem 42 and Appendix F. QED
+5.  **Conclusion:** Under this bound on the operational norm, deterministic forcing of single-shot outcomes is impossible, precluding deterministic FTL signaling via this mechanism, while statistical influence remains allowed. The full argument for the impossibility of deterministic signaling, including the role of information-rate limits and multi-shot protocols, is provided in Theorem 42 and Appendix F. QED
 
 **10.3 The Statistical FTL Influence Hypothesis**
 
@@ -42,9 +42,9 @@ As a direct consequence of Hypothesis 3 (CC influence mechanism) combined with t
 
 It is crucial to distinguish this protocol from “communication” in the operational sense used in physics. The name “Quantum Communication Protocol” is chosen to reflect the broader, semantic sense in which a meaningful statistical correlation is established to grant a decision advantage. However, operational “communication” implies the ability to transmit chosen, deterministic information. The analysis below shows that the protocol’s inherent probabilistic nature and fundamental information-rate limits make such operational communication impossible, thereby preserving causality (Postulate 2). The protocol formalizes a method for leveraging statistical influence for a pre-agreed task, not for arbitrary FTL signaling.
 
-**Definition (QCP).** Alice and Bob share many copies of a fixed entangled state. They agree on a binary mapping between **Alice’s context** $C\in\{\mathrm A,\mathrm B\}$ and a **target local measurement bias** for Bob (Appendix L): if $C=\mathrm A$, Alice applies a physical control $\mathcal M(\text{context}_S)$ intended to bias Bob’s local outcome toward “spin up”; if $C=\mathrm B$, toward “spin down.” Bob measures each partner in the pre-agreed basis and uses the single-shot rule: choose Strategy A if he observes “spin up,” Strategy B if “spin down.”
+**Definition (QCP).** Alice and Bob share many copies of a fixed entangled state. They agree on a binary mapping between **Alice’s context** $C\in\{\mathrm A,\mathrm B\}$ and a **target local measurement bias** for Bob (Appendix L): if $C=\mathrm A$, Alice adopts an internal state $\text{context}_S$ and applies the associated physical control $\mathcal M(\text{context}_S)$ intended to bias Bob’s local outcome toward “spin up”; if $C=\mathrm B$, she adopts the corresponding context and control intended to bias toward “spin down.” Bob measures each partner in the pre-agreed basis and uses the single-shot rule: choose Strategy A if he observes “spin up,” Strategy B if “spin down.”
 
-**Statistical neutrality of the raw stream.** With equiprobable contexts $P(C=\mathrm A)=P(C=\mathrm B)=\tfrac12$, Bob’s unconditional marginal equals the baseline $p$ (e.g., $p=\tfrac12$ for a singlet in the matched basis), so the raw bit stream is indistinguishable from baseline (cf. Theorem 41, Eq. (63)).
+**Statistical neutrality of the raw stream.** With equiprobable contexts $P(C=\mathrm A)=P(C=\mathrm B)=\tfrac12$, Bob’s unconditional marginal equals the baseline $p$ (e.g., $p=\tfrac12$ for a singlet in the matched basis). This follows from the linearity of expectation and the normalization property of the CC modification map ($K_S(I)=0$, Definition 33), ensuring the raw bit stream is indistinguishable from baseline (cf. Theorem 41, Eq. (63)).
 
 **Single-shot decision advantage.** Write
 $$
@@ -68,9 +68,9 @@ $$
 $$
 This condition is excluded by the framework's rate and resource bounds for realistic parameters, preventing the construction of a tachyonic anti-telephone.
 
-*Proof.* The bound on $N_{\text{decode}}$ follows from standard channel coding results for a binary symmetric channel with crossover probability $1/2-\delta$ (e.g., via Chernoff-Hoeffding bounds). The maximum local measurement rate $r_{\max}$ is limited by the MPU cycle time $\tau_{\min}$ (Theorem 29) and ND-RID capacity (Theorem E.2). For any realistic bias $\delta \ll 1$ (since $\mathrm{CC} < 0.5$), the required number of trials $N_{\text{decode}}$ grows quadratically, while the available pre-lightcone budget $N_{\text{pre}}$ grows linearly with separation $D$. The inequality can only be satisfied in extreme, physically unrealizable regimes of bias or measurement rate. For example, for $\delta=0.01, \alpha=0.01$, one needs $N_{\text{decode}} \approx 2.3 \times 10^4$ trials. At a separation of $D=1$ km and a high rate of $r_{\max}=1$ GHz, only $N_{\text{pre}} \approx 3.3 \times 10^3$ trials are available before a light signal could arrive, demonstrating the infeasibility. QED
+*Proof.* The bound on $N_{\text{decode}}$ follows from standard channel coding results (e.g., via Chernoff-Hoeffding bounds [Chernoff 1952; Hoeffding 1963]) for a binary symmetric channel with crossover probability $1/2-\delta$. The maximum local measurement rate $r_{\max}$ is limited by the MPU cycle time $\tau_{\min}$ (Theorem 29) and ND-RID capacity (Theorem E.2). For any realistic bias $\delta \ll 1$ (since $\mathrm{CC} < 0.5$), the required number of trials $N_{\text{decode}}$ grows quadratically with $1/\delta^2$, while the available pre-lightcone budget $N_{\text{pre}}$ grows linearly with separation $D$. The inequality can only be satisfied in extreme, physically unrealizable regimes of bias or measurement rate. For example, for $\delta=0.01, \alpha=0.01$, one needs $N_{\text{decode}} \approx 2.3 \times 10^4$ trials. At a separation of $D=1$ km and a high rate of $r_{\max}=1$ GHz, only $N_{\text{pre}} \approx 3.3 \times 10^3$ trials are available before a light signal could arrive, demonstrating the infeasibility. QED
 
-**AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Eq. (F.4). Under the information‑rate bound for the balanced baseline $p=\tfrac12$, $I(C;Y) \le 4\ln 2 ,(\kappa \cdot \mathrm{CC})^2$ nats/trial (Theorem 41), this statistical influence cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42). The full consistency analysis is provided in **Appendix F**.
+**AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Eq. (F.4). Under the information‑rate bound for the balanced baseline $p=\tfrac12$, $I(C;Y) \le 4\ln 2 \cdot (\kappa \cdot \mathrm{CC})^2$ nats/trial (Theorem 41), this statistical influence cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42). The full consistency analysis is provided in **Appendix F**.
 
 **No‑signaling equalities.** For all choices of local settings $x,x'$ and $y,y'$ and all outcomes $a,b$,
 $$
@@ -78,12 +78,12 @@ $$
 $$
 *Proof.* If $O_A\subset O_B'$ are spacelike separated, Appendix F gives $[\mathcal A(O_A),\mathcal A(O_B)]=\{0\}$ and Einstein causality for the induced dynamics. Hence any local operation at $A$ is represented by an instrument that commutes with all effects at $B$, and vice versa, so marginals at one site are invariant under changes of the other site’s setting; the displayed equalities follow by summing joint probabilities over the commuting outcome algebra.
 
-**Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to stress–energy and induces gravitational self-dephasing (Appendix S). Modeling
+**Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to the MPU stress–energy tensor $T_{\mu\nu}^{(MPU)}$ (Appendix B) and induces gravitational self-dephasing (Appendix S). Adopting a phenomenological model for the power cost of maintaining the context (derived in Appendix S, Eq. S.1):
 $$
 P_{\text{context}}(\mathrm{CC}) = A\!\left[\frac{\mathrm{CC}}{\alpha_{CC,\max}-\mathrm{CC}}\right]^2,\qquad
 \alpha_{CC,\max}<\tfrac12,
 $$
-the induced time-dilation across a target of size $L_q$ over coherence time $\tau_c$ satisfies
+the resulting gravitational backreaction induces a time-dilation $\Delta\tau_d$ across the system (derived in Appendix S, Eq. S.4):
 $$
 \Delta\tau_d = K\,P_{\text{context}},
 $$

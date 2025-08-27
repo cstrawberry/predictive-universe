@@ -20,18 +20,19 @@ $$
 \Delta P(i)=\mathrm{tr}\!\big(L_S(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,K_S(E_i)\big),\qquad K_S(I)=0 \quad \text{(78)}
 $$
 
-and is bounded by the CC norm,
+and the deviation is bounded by the information-geometric constraint derived from the PCE-minimal modification principle (Theorem 36):
 
 $$
-|\Delta P(i)| \le 2\sqrt2\,\sin(\mathrm{CC}(S)/4)
+|\Delta P(i)| \le 2\sqrt{P_{\mathrm{Born}}(i)(1-P_{\mathrm{Born}}(i))}\,\sin(\mathrm{CC}(S)/2)
 $$
-which in the small-bias regime relevant for experiments becomes:
+In the small-bias regime relevant for experiments, this yields the linear approximation:
 $$
-|\Delta P(i)| \le \frac{1}{\sqrt{2}}\mathrm{CC}(S) \approx 0.707\,\mathrm{CC}(S).
+|\Delta P(i)| \lesssim \sqrt{P_{\mathrm{Born}}(i)(1-P_{\mathrm{Born}}(i))}\,\mathrm{CC}(S).
 $$
+For $P_{\mathrm{Born}}(i)=1/2$, the bound is $|\Delta P(i)| \lesssim \mathrm{CC}(S)/2$.
 This provides a direct, parameter-free link between an observed probability shift $\delta = |\Delta P(i)|$ and a lower bound on the underlying complexity budget: $\mathrm{CC}(S) \ge \sqrt{2}\,\delta$.
 
-*Proof:* The bounds are derived directly from the PCE-minimal modification principle and information geometry, as established in Theorem 36.
+*Proof:* The bounds are derived directly from the PCE-minimal modification principle (Definition 33) applied to the geometry of the statistical manifold, as rigorously established in Theorem 36.
 
 
 Using the **Context-Targeted Bias (CTB)** model (Definition 34), where the context defines a target state $\sigma_S$ and $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$, the deviation takes the form
@@ -40,9 +41,7 @@ $$
 \Delta P(i)=\mathrm{CC}(S)\,\big(p_{\mathrm{target}}(S,i)-P_{\mathrm{Born}}(i)\big)\quad \text{(79)}
 $$
 
-*Proof:* (77) is the definition of observable probability in the presence of context. The representation (78) follows from Definition 33 (operator formalism with $L_S$ on states and $K_S=L_S^\*$ on effects, with $K_S(I)=0$ ensuring normalization). The bound $|\Delta P(i)|\le \mathrm{CC}(S)$ follows from Definition 30 with $\mathrm{CC}(S)=\|L_S\|_{\mathrm{op}}$ and Theorem 39. The CTB expression (79) is Definition 34 with $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$. QED
-
-
+*Proof:* (77) is the definition of observable probability in the presence of context. The representation (78) follows from Definition 33 (operator formalism with $L_S$ on states and $K_S=L_S^\*$ on effects, with $K_S(I)=0$ ensuring normalization). The bound on $|\Delta P(i)|$ follows from Theorem 36, derived from the Fisher-Rao distance bound (Definition 33) and the operational definition of CC (Definition 30), constrained by causality (Theorem 39). The CTB expression (79) is Definition 34 with $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$. QED
 
 
 ## 13.2 Protocol 1: Accessible Born Rule Tests (QRNGs)
@@ -66,11 +65,10 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
 
 *   **Statistical Analysis and Power:**
     *   **Target Sensitivity:** The experiment aims to resolve CC-induced deviations $\Delta P$ from a baseline Born probability $P_{\mathrm{Born}}(i)$ with high statistical confidence (e.g., two-sided significance $\alpha = 0.01$, power $1-\beta = 0.80$).
-    *   **Prospective Sample Sizes:** For comparing two independent proportions $p, p'$ (e.g., context vs. control), a per‑arm sample size is
-      `n ≈ { [ Z_{α/2} √(2 \bar p (1- \bar p)) + Z_β √( p(1-p)+p'(1-p') ) ]^2 } / (p' - p)^2`, with `\bar p=(p+p')/2`. For a one‑sample test against a calibrated baseline `p0` treated as known, use
-      `N ≈ { [ Z_{α/2} √( p0(1-p0) ) + Z_β √( p'(1-p') ) ]^2 } / (p' - p0)^2` and report the calibration precision.
-    *   **Independence and Error Control:** Independence of trials will be rigorously assessed using autocorrelation functions (ACF), Ljung–Box tests, and Wald–Wolfowitz runs tests on the output streams and residuals. If correlations are detected, appropriate methods such as pre-whitening, block-bootstrap confidence intervals, or data thinning will be employed. Multiplicity of tests across outcomes or contexts will be controlled using standard methods (e.g., Bonferroni for family-wise error rate or Benjamini-Hochberg for false discovery rate).
-    *   **Sequential Analysis:** For high-statistics runs, a sequential analysis plan with pre-specified interim looks using O’Brien–Fleming-type boundaries is recommended to allow for early stopping for efficacy or futility while preserving the overall type-I error rate. The table below provides indicative total sample sizes ($N_{OBF}$) per context and expected stopping distributions under the alternative hypothesis for three equally spaced looks.
+    *   **Prospective Sample Sizes:** For comparing two independent proportions $p, p'$ (e.g., context vs. control), the required per‑arm sample size is
+    $n \approx \frac{ \left[ Z_{\alpha/2} \sqrt{2 \bar p (1- \bar p)} + Z_\beta \sqrt{ p(1-p)+p'(1-p') } \right]^2 }{ (p' - p)^2}$, with $\bar p=(p+p')/2$. For a one‑sample test against a calibrated baseline $p_0$ treated as known, use $N \approx \frac{ \left[ Z_{\alpha/2} \sqrt{ p_0(1-p_0) } + Z_\beta \sqrt{ p'(1-p') } \right]^2 }{ (p' - p_0)^2}$ and report the calibration precision.
+    *   **Independence and Error Control:** Independence of trials will be rigorously assessed using autocorrelation functions (ACF), Ljung–Box tests, and Wald–Wolfowitz runs tests on the output streams and residuals. The NIST Statistical Test Suite (SP 800-22) will be applied to verify randomness properties. If correlations are detected, appropriate methods such as pre-whitening, block-bootstrap confidence intervals, or data thinning will be employed. Multiplicity of tests across outcomes or contexts will be controlled using standard methods (e.g., Bonferroni correction for family-wise error rate or Benjamini-Hochberg procedure for false discovery rate).
+    *   **Sequential Analysis:** For high-statistics runs, a sequential analysis plan with pre-specified interim looks using O’Brien–Fleming-type boundaries [Lan & DeMets 1983] is recommended to allow for early stopping for efficacy or futility while preserving the overall type-I error rate. The table below provides indicative total sample sizes ($N_{OBF}$) per context and expected stopping distributions under the alternative hypothesis for three equally spaced looks.
 
 | α | δ | N_fixed | N_OBF (≈ 1.06 × N_fixed) | Expected stop % at looks 1/2/3 (under H₁) |
 |---:|---:|---:|---:|:---|
@@ -81,8 +79,8 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
 | 0.001 | 5×10⁻⁴ | 13,815,511 | 14,644,442 | ~2% / 15% / 83% |
 | 0.001 | 10⁻⁴ | 345,387,764 | 366,111,030 | ≲1% / 9% / 90% |
 
-*   *Assumptions for $N_{\rm fixed}$ in the table:* **single‑proportion** design with baseline $p=0.25$, power $1-\beta=0.80$.
-    *   *Sequential design:* O’Brien–Fleming with **3 equally spaced** looks at cumulative information fractions $1/3, 2/3, 1$. The overhead factor (~1.06) and stop percentages are **illustrative**; exact values will be produced by the preregistered simulations and released with the code.
+*   *Assumptions for $N_{\rm fixed}$ in the table:* **One-sample proportion** design with baseline $p=0.25$, power $1-\beta=0.80$.
+    *   *Sequential design:* O’Brien–Fleming boundaries with **3 equally spaced** looks at cumulative information fractions $1/3, 2/3, 1$. The overhead factor (~1.06) and stop percentages are **illustrative**; exact values will be determined by the preregistered simulations and released with the code.
 
 *   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g. $\chi^2$, z-tests) comparing observed $\hat{P}(i)$ to the Born rule; where applicable, exact binomial or variance-stabilized (arcsin–sqrt) tests will complement normal approximations to ensure calibration at small $\delta$. Design-stage baselines will use device-specific $P_{\mathrm{Born}}(i)$ estimates. Report effect sizes (Cramér’s V, Cohen’s d) with 95% CIs.
     *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables `$context_S$` via mixed-effects logistic regression.
@@ -132,17 +130,17 @@ Consider a triple‑blind protocol with:
 
 Then any *pure Maxwell* environment with residual EM **intensity** $I$ (Poynting magnitude), giving energy density $u = I/c$ in free space, incident on the sensors over interrogation time $T$ and with differential polarizability $\Delta\alpha$ at the magic point is bounded by:
 $$
-|\Delta P|_{\rm EM}\ \le\ \frac{\Delta\alpha}{2\,\hbar\,\varepsilon_0}\,u\,T
+|\Delta P|_{\rm EM}\ \le\ \frac{\Delta\alpha}{4\,\hbar\,\varepsilon_0}\,u\,T
 \quad\text{(mid‑fringe, small‑phase regime).}
+\quad \text{(81)}
 $$
 
-*Derivation.* In a Ramsey interferometer at mid‑fringe, a small differential AC Stark shift $\Delta\omega$ between the two arms produces a phase $\Delta\phi=\Delta\omega\,T$, and the probability bias satisfies $|\Delta P|\approx |\Delta\phi|/2$. For a field with energy density $u$, $E^2=2u/\varepsilon_0$, and the differential shift is $\Delta\omega=(\Delta\alpha/2\hbar)E^2=(\Delta\alpha/(\hbar\,\varepsilon_0))\,u$. Combining gives $|\Delta P|\le (\Delta\alpha/(2\hbar\,\varepsilon_0))\,u\,T$, as stated.
+*Derivation.* In a Ramsey interferometer at mid‑fringe, a small differential AC Stark shift $\Delta\omega$ between the two arms produces a phase shift $\Delta\phi=\Delta\omega\,T$. The probability bias satisfies $|\Delta P| = |\sin(\Delta\phi/2)| \approx |\Delta\phi|/2$ for small $\Delta\phi$. For a field with energy density $u$, the mean squared electric field is $\langle E^2 \rangle=u/\varepsilon_0$ (assuming linear polarization). The differential shift is $\Delta\omega=(\Delta\alpha/2\hbar)\langle E^2 \rangle=(\Delta\alpha/(2\hbar\,\varepsilon_0))\,u$. Combining gives $|\Delta P|\le (\Delta\alpha/(4\hbar\,\varepsilon_0))\,u\,T$, as stated.
 
-A separate bound on algorithmic predictability confounds is given by $P_{\rm guess} \le 2^{-(H_\infty L - t)}$, where an adversary has at most $t$ bits of side-information. The **CC** effect predicted by PU is
+A separate bound on algorithmic predictability confounds is given by $P_{\rm guess} \le 2^{-(H_\infty L - t)}$, where an adversary has at most $t$ bits of side-information. The **CC** effect predicted by PU, using the bounds from Theorem 51 (for $P_{Born}=1/2$), is
 $$
-|\Delta P|_{\rm PU}\ =\ \|L_S\|_{\rm op}\,\|\partial_\theta P_{\rm Born}\|_2\ \equiv\ \mathrm{CC}(S)\,Q,
-$$
-with $Q$ computable from the quantum Fisher information of the Ramsey sequence. Using $|\Delta\alpha|\!\lesssim\!10^{-39}\,\mathrm{J\,m^2/V^2}$ and $u\!\lesssim\!10^{-18}\,\mathrm{J/m^3}$, we obtain
+|\Delta P|_{\rm PU}\ \lesssim\ \mathrm{CC}(S)/2.$$
+Using $|\Delta\alpha|\!\lesssim\!10^{-39}\,\mathrm{J\,m^2/V^2}$ and $u\!\lesssim\!10^{-18}\,\mathrm{J/m^3}$, we obtain
 $|\Delta P|_{\rm EM}\ \lesssim\ 5.36\times 10^{-13}\,T$ (with $T$ in seconds): $5.4\times 10^{-13}$ at $T=1\,\mathrm{s}$, $1.9\times 10^{-9}$ at $T=1\,\mathrm{hr}$. Hence any observed $|\Delta P|\gtrsim 10^{-6}$ **cannot** be attributed to EM channels, while PU predicts $|\Delta P|_{\rm PU}\sim \mathrm{CC}(S)\times 10^{-4}$.
 
 

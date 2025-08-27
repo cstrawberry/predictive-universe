@@ -1,10 +1,10 @@
 # Glossary of Key Terms
 
-*   **$\alpha, \beta$ (Alpha, Beta):** (Definition 8) The lower ($\alpha>0$) and upper ($\beta<\alpha_{SPAP}$) bounds defining the **Space of Becoming**. Represent the minimum and maximum viable **Predictive Performance (PP)** for sustained adaptive operation of the Fundamental Predictive Loop. (Note: The magnitude of any Consciousness Complexity (CC) effects, $CC(S)$, is independently bounded by $\text{CC}(S) \le \alpha_{CC,max} < 0.5$, cf. Theorem 39).
+*   **$\alpha, \beta$ (Alpha, Beta):** (Definition 8) The lower ($\alpha>0$) and upper ($\beta<\alpha_{SPAP}$) bounds defining the **Space of Becoming**. Represent the minimum and maximum viable **Predictive Performance (PP)** for sustained adaptive operation of the Fundamental Predictive Loop. (Note: The magnitude of any Consciousness Complexity (CC) effects, $\text{CC}(S)$, is independently bounded by the operational norm constraint $\text{CC}(S) \le \alpha_{CC,max} < 0.5$, cf. Theorem 39).
 
 *   **$\delta_{SPAP}$ (Delta-SPAP):** (Appendix B.3, Theorem B.2) The statistical error margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$ below the fundamental self-prediction limit $\alpha_{SPAP}$. Appears explicitly in the poly-logarithmic complexity divergence bound derived in Theorem B.2 as $C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega(\log(1/\delta_{\rm SPAP}) / (\delta_{\rm SPAP})^2)$ (**Eq. B.5**).
 
-*   **$\alpha_{SPAP}$ (Alpha-SPAP):** (Theorem 10, Theorem 11) The fundamental upper bound on average self-prediction performance ($PP<1$) for SPAP-limited aspects. Distinct from the operational upper bound $\beta$. Approaching $\alpha_{SPAP}$ requires divergent complexity as $\delta_{SPAP} \to 0$ (Theorem 14).
+*   **$\alpha_{SPAP}$ (Alpha-SPAP):** (Theorem 10, Theorem 11) The fundamental upper bound on average self-prediction performance ($PP<1$) for systems possessing Property R, regarding SPAP-limited aspects. Distinct from the operational upper bound $\beta$. Approaching $\alpha_{SPAP}$ requires divergent complexity as $\delta_{SPAP} \to 0$ (Theorem 14).
 
 *   **$\alpha_{CC,max}$ (Alpha-CC-max):** (Theorem 39) The strict upper bound on Consciousness Complexity (CC), requiring $\alpha_{CC,max} < 0.5$ to forbid deterministic FTL signaling (Postulate 2).
 
@@ -32,7 +32,7 @@
 
 *   **$\hat{C}_v$ (Operational Complexity Proxy):** (Theorem 1, Definition B.1, Eq. B.1) Hermitian operator (identified with quantum circuit complexity) on MPU Hilbert space $\mathcal{H}_v$, with spectrum $\lambda(d)=K_0+\Delta C(d)$. Dynamically aligned with $C_P$ at equilibrium (Theorem 2).
 
-*   **$C_{op}$ (Operational Threshold):** (Definition 13) Minimum $C_P$ for a predictive function to exceed baseline chance accuracy by $\epsilon_{acc}$; satisfies $C_{op} \ge K_0$ (Corollary 3). Minimal complexity for the adaptive Fundamental Predictive Loop.
+*   **$C_{op}$ (Operational Threshold):** (Definition 13) Minimum $C_P$ for a predictive function to exceed baseline chance accuracy by $\epsilon_{acc}$ (Eq. 15); satisfies $C_{op} \ge K_0$ (Corollary 3). Minimal complexity for the adaptive Fundamental Predictive Loop.
 
 *   **$C_{PPC}(PP_{target})$:** (Definition 18) Minimum $C_P$ required to achieve target average predictive performance $PP_{target}$.
 
@@ -40,7 +40,7 @@
 
 *   **Causality (Postulate 2):** (Section 10.1.1) Defined operationally as the impossibility of constructing paradox-inducing causal loops, which requires the impossibility of controllable, deterministic faster-than-light (FTL) signaling.
 
-*   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$. It bounds the maximum possible deviation from the Born rule that the system can induce. Bounded $\mathrm{CC}(S)\le \alpha_{\mathrm{CC,max}} < 0.5$ (Theorem 39).
+*   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Eq. 54). It bounds the maximum possible deviation from the Born rule (specifically, the Fisher-Rao distance, Definition 33) that the system can induce. Bounded by the causality constraint $\mathrm{CC}(S)\le \alpha_{\mathrm{CC,max}} < 0.5$ (Theorem 39).
 
 *   **Coherence:** (Appendix C) Reliability and stability of predictive correlations and information propagation across the MPU network. Requires geometric regularity (Theorem C.2).
 
@@ -50,7 +50,7 @@
 
 *   **CTB Model (Context-Targeted Bias):** (Definition 34, Eq. 58–59) Example model for CC influence where probability shifts towards a context-defined target distribution: $P_{obs}(i) = (1-\text{CC}) P_{Born}(i) + \text{CC} p_{target}(i)$.
 
-*   **$d_{\mathcal{N}}$:** (Definition 35) Network propagation cost metric based on minimum cumulative ND-RID cost along paths (shortest path distance in cost space).
+*   **$d_{\mathcal{N}}$:** (Definition 35) Network propagation cost metric based on minimum cumulative ND-RID cost along paths (shortest path distance in cost space) (Eq. 64).
 
 *   **DSRO (Dynamic Self-Reference Operator):** (Definition 11, Theorem A.3) Formal representation of a computable function whose output depends dynamically on provable properties about itself, based on Kleene's Second Recursion Theorem. Used in SPAP logic.
 
@@ -60,7 +60,7 @@
 
 *   **Dynamically Enforced Functional Correspondence:** (Theorem 2, Appendix D) Principle stating that POP/PCE adaptation dynamics necessarily drive the expectation value of the operational complexity proxy $\langle\hat{C}_v\rangle$ into alignment with the theoretical Predictive Physical Complexity $C_P(v)$ at stable equilibrium points. Justified via work-cost gap feedback (Lemma D.2, Theorem D.5).
 
-*   **EFE (Einstein Field Equations):** (Section 12, Theorem 50) Emergent equation relating spacetime curvature to MPU stress-energy: $R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}$ (Eq. 76). Derived thermodynamically.
+*   **EFE (Einstein Field Equations):** (Section 12, Theorem 50) Emergent equation relating spacetime curvature to MPU stress-energy: $R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}$ (Eq. 76). Derived thermodynamically from the Clausius relation applied to local horizons.
 
 *   **Einstein Causality (Microcausality):** (Appendix F, Corollary F.1) Standard QFT principle stating that operators associated with space-like separated regions commute: $[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}$ if $\mathcal{O}_1$ is space-like to $\mathcal{O}_2$. Emerges from ND-RID limits (Proposition F.1).
 
@@ -74,9 +74,9 @@
 
 *   **$g_{\mu\nu}$:** (Theorem 45, Theorem 46) The emergent Lorentzian metric tensor field on the spacetime manifold $M$, derived from the large-scale structure of the ND-RID propagation cost metric $d_{\mathcal{N}}$.
 
-*   **Geometric Regularity:** (Definition C.3, Theorem 43) Property of the MPU network exhibiting uniform D-dimensional polynomial volume growth (Definition C.1) and uniformly bounded synthetic Ricci curvature (Definition C.2). Argued to be a necessary condition for viable equilibrium states under POP/PCE (Appendix C, Theorem C.6) and dynamically achieved (Appendix D, Theorem D.5).
+*   **Geometric Regularity:** (Definition 36, Definition 37, Theorem 43) Property of the MPU network exhibiting uniform D-dimensional polynomial volume growth and uniformly bounded synthetic Ricci curvature. Argued to be a necessary condition for viable equilibrium states under POP/PCE (Appendix C, Theorem C.6) and dynamically achieved (Appendix D, Theorem D.5).
 
-*   **$\Gamma_0$:** (Definition 20) System-level **constant** Power Conversion Factor with dimensions of **Power** ($[E][T]^{-1}$), mapping the marginal performance gradient $(\partial PP/\partial C)$ to an equivalent power rate in $\Psi$. Constrained by thermodynamic limits (Theorem 20). **At equilibrium, parameters satisfy Eq. (29)**, enabling empirical calibration of $\Gamma_0$ for a given MPU.
+*   **$\Gamma_0$ (Gamma-0):** (Definition 20) System-level **constant** Power Conversion Factor with dimensions of **Power** ($[E][T]^{-1}$), appearing in the PCE potential. It maps the marginal performance gradient $(\partial PP/\partial C)$ to an equivalent power rate in the Adaptation Driving Force $\Psi$. Constrained by thermodynamic limits (Theorem 20). **At equilibrium, parameters satisfy Eq. (29)**, enabling empirical calibration of $\Gamma_0$ for a given MPU system.
 
 *   **$\mathcal{H}_0$:** (Proposition 4) The minimal complex Hilbert space required for representing the MPU state amplitude $S(t)$. Dimension $d_0 = \dim(\mathcal{H}_0)$ satisfies $d_0 \ge 8$ (Theorem 23). Emergence justified by PCE optimality (Theorem G.1.8).
 
