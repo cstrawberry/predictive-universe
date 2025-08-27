@@ -20,18 +20,13 @@ $$
 \Delta P(i)=\mathrm{tr}\!\big(L_S(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,K_S(E_i)\big),\qquad K_S(I)=0 \quad \text{(78)}
 $$
 
-and the deviation is bounded by the information-geometric constraint derived from the PCE-minimal modification principle (Theorem 36):
-
+and the deviation magnitude is rigorously bounded by the information-geometric constraint derived from the PCE-minimal modification principle (Theorem 36):
 $$
-|\Delta P(i)| \le 2\sqrt{P_{\mathrm{Born}}(i)(1-P_{\mathrm{Born}}(i))}\,\sin(\mathrm{CC}(S)/2)
+|\Delta P(i)| \le \mathrm{TV}(p,q) \le \sin\!\big(\mathrm{CC}(S)/2\big).
 $$
-In the small-bias regime relevant for experiments, this yields the linear approximation:
-$$
-|\Delta P(i)| \lesssim \sqrt{P_{\mathrm{Born}}(i)(1-P_{\mathrm{Born}}(i))}\,\mathrm{CC}(S).
-$$
-For $P_{\mathrm{Born}}(i)=1/2$, the bound is $|\Delta P(i)| \lesssim \mathrm{CC}(S)/2$.
-This provides a direct, parameter‑free link between an observed probability shift $\delta = |\Delta P(i)|$ and a lower bound on the underlying complexity budget. For a binary baseline $P_{\mathrm{Born}}(i)=1/2$, $\delta=\mathrm{TV}$ and $\delta \le \sin(\mathrm{CC}(S)/2)$, hence
-$\mathrm{CC}(S) \ge 2\,\arcsin(\delta)$ \quad (small bias: $\mathrm{CC}(S)\approx 2\delta$).
+In the small‑bias regime ($\mathrm{CC}(S)\ll 1$): $|\Delta P(i)| \lesssim \mathrm{CC}(S)/2$.
+Therefore, for an observed per‑outcome shift $\delta=|\Delta P(i)|$, a conservative exact lower bound is
+$\mathrm{CC}(S) \ge 2\,\arcsin(\delta)$ (small bias: $\mathrm{CC}(S) \gtrsim 2\delta$).
 
 *Proof:* The bounds are derived directly from the PCE-minimal modification principle (Definition 33) applied to the geometry of the statistical manifold, as rigorously established in Theorem 36.
 
@@ -167,7 +162,7 @@ Addresses the most speculative prediction: potential statistical FTL influence m
     *   **Systematic Error Control (Extreme Rigor):** Exclude conventional communication (light leaks, EM, acoustic), detector/setting correlations with $C_{A,k}$, statistical loopholes, biases.
 *   **Feasibility Assessment:** Extremely challenging. Requires state-of-the-art entanglement/measurement technology, robust space-like separation. Controlling systematics to demonstrate statistical FTL is extraordinarily difficult. Required statistics $N \propto 1/\text{CC}^2$ can be immense. Highly exploratory; positive indication needs exceptional scrutiny/replication.
 
-**13.6 Staged Experimental Approach and Considerations**
+**13.6 Staged Experimental Approach and General Considerations**
 
 A pragmatic, staged approach is recommended to systematically test the framework's predictions:
 
@@ -175,7 +170,7 @@ A pragmatic, staged approach is recommended to systematically test the framework
 1.  **Stage 2 (Medium-Term):** If justified by positive and replicated results from Stage 1, coherence time tests (Protocol 2) should be pursued to seek complementary evidence. This stage would also involve refining the QRNG protocols based on initial findings.
 2.  **Stage 3 (Long-Term / Contingent):** The extraordinarily demanding Bell-type experiments for a statistical FTL search (Protocol 3) should only be undertaken if compelling, independently verified evidence emerges from the earlier stages.
 
-All proposed experiments require quantum systems with high stability over long integration times. Given the multiple hypotheses being tested, a clear statistical plan for controlling the family-wise error rate, for instance by pre-registering a specific $\alpha$-spending function for sequential analyses (e.g., O’Brien–Fleming boundaries), is mandatory.
+All proposed experiments share common requirements for rigor and validity. They necessitate quantum systems with high stability over long integration times to achieve the required statistical power. Given the multiple hypotheses being tested, a clear, pre-registered statistical plan is mandatory to control the family-wise error rate. This should include specifying the use of sequential analyses with pre-defined stopping rules (e.g., O’Brien–Fleming boundaries) to allow for early termination for efficacy or futility while preserving the overall type-I error rate. As a concrete example, with three equally spaced looks, the canonical OBF boundaries (Z-scores) at a family-wise $\alpha=0.05$ are approximately $[3.47, 2.45, 2.00]$.
 
 **13.7 Compliance with Causal Constraints**
 
@@ -202,7 +197,7 @@ The framework's two-mechanism model for the dark sector (Appendix I) is falsifia
 *   **Failure to Fit Clusters:** The non-local predictive matter model (Eq. I.7) must be able to fit the observed lensing profiles of massive galaxy clusters (like Abell 1689 and stacked samples) using a **universal nonlinearity exponent $q$** and either a **universal kernel scale $L_0$ or one derivable from ND–RID microphysics (allowing mild environment dependence)**, with per‑cluster amplitudes $A_{\rm PM}$ bounded by baryon budgets. If no such consistent fit can be found, the cluster-scale mechanism is invalidated.
 *   **Parameter Incoherence:** The parameters derived from fitting galaxies (e.g., the transition scale $L_0$) and clusters (e.g., the kernel scale $L_0$ and the universal exponent $q$) must be coherently related by the underlying theory. A significant, unexplainable discrepancy between the best-fit parameters for the two regimes would falsify the claim of a unified underlying mechanism.
 
-**Data and Code Availability.** All analysis scripts (including power/sample‑size simulations), anonymized raw data, logs, and time‑stamps (with random seeds) will be made publicly available at a persistent repository; preregistration will link to the repository.
+**Preregistration:** All primary endpoints, inference procedures, stopping rules, and exclusion criteria must be preregistered (e.g., via OSF/AsPredicted). Any deviations from the pre-registered plan must be explicitly documented and justified.
 
-**Preregistration.** Primary endpoints, inference procedures, stopping rules (including O’Brien–Fleming boundaries), and exclusion criteria will be preregistered (e.g., OSF/AsPredicted). Any deviations will be documented.
+**Data and Code Availability:** All analysis scripts (including power and sample-size simulations), anonymized raw data, experimental logs, and time-stamps (with random seeds where applicable) will be made publicly available at a persistent repository to ensure full transparency and reproducibility. The preregistration will link directly to this repository.
 

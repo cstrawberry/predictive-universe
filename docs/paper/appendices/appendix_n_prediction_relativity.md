@@ -103,18 +103,18 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 
  **Calculations:**
 
- 1. **Kinetic Cost:**
-
-    * $\gamma=1/\sqrt{1-0.96^2}\approx3.57$.
-    * $W_{\rm kin}=m_0c^2(\gamma-1)\approx2.31\times10^{17}$ J.
+> 1. **Kinetic Cost:**
+>
+>    * $\gamma=1/\sqrt{1-0.96^2}\approx3.57$.
+>    * $W_{\rm kin}=m_0c^2(\gamma-1)\approx (1 \text{ kg})(3\times10^8 \text{ m/s})^2(3.57-1) \approx 2.31\times10^{17}$ J.
  2. **Predictive Cost:**
 
-    * $a=(c/\tau)\cosh^{-1}\gamma\approx5.84\times10^8$ m/s².
-    * $T_U=\hbar a/(2\pi c k_B)\approx2.37\times10^{-12}$ K.
+>    * The required constant proper acceleration is $a=(c/\tau)\cosh^{-1}\gamma\approx5.84\times10^8$ m/s².
+>    * $T_U=\hbar a/(2\pi c k_B)\approx 2.36\times10^{-12}$ K.
     * $C_{SPAP} = (1 \text{ bit}) / (10^{-6})^2 = 1.0 \times 10^{12}$ bits.
     * $C_{\rm noise,external} \approx (1.0 \times 10^{-4} \text{ bits}) \cdot (5.84\times10^8/9.8)^2 \approx 3.55 \times 10^{11}$ bits.
     * $C_{\rm req} = C_{SPAP} + C_{noise,external} \approx 1.355 \times 10^{12}$ bits.
-    * $P_{\rm pred}=k_R\,C_{\rm req}\,(k_BT_U) \approx (2.3\times10^{39}) \cdot (1.355\times10^{12}) \cdot (1.38\times10^{-23} \cdot 2.37\times10^{-12}) \approx 1.02 \times 10^{17}$ W.
+>    * $P_{\rm pred}=k_R\,C_{\rm req}\,(k_BT_U) \approx (2.3\times10^{39}) \cdot (1.355\times10^{12}) \cdot (1.38\times10^{-23} \cdot 2.36\times10^{-12}) \approx 1.02 \times 10^{17}$ W.
     * $W_{\rm pred}=P_{\rm pred}\,\tau \approx 1.02 \times 10^{17}$ J.
 
  **Conclusion:**
@@ -123,15 +123,15 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 
 ## N.5 Proof of the UCT Theorem
 
-We restate the theorem for convenience.
+We restate the theorem (Eq. N.5) for convenience before proceeding with the proof.
 
- **Theorem (UCT).**
- For a process where an MPU (mass $m_0$) follows a trajectory with proper acceleration $a(t)$ and achieves predictive performance $PP(t)$ in a background thermal bath at temperature $T_{bath}$, the total work $W_{\text{tot}}$ is bounded by:
- $$
- W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt
- \tag{N.6}
- $$
- where $v_f$ is the final velocity, $T_{eff}(t)$ is the total effective temperature, and $C_{req}(t)$ is the total required predictive complexity.
+> **Theorem (UCT).**
+> For a process where an MPU (or MPU aggregate, with mass $m_0$) follows a trajectory with proper acceleration $a(t)$, achieves predictive performance $PP(t)$, and undergoes predictive acceleration $A_{pred}(t)$, in a background thermal bath at temperature $T_{bath}$, the total work $W_{\text{tot}}$ is bounded by:
+> $$
+> W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt
+> \tag{N.6, repeated from N.5}
+> $$
+> where $v_f$ is the final velocity, $T_{eff}(t)$ is the total effective temperature including Unruh and internal heating effects, and $C_{req}(t)$ is the total required predictive complexity including SPAP, external noise, and internal noise components (as defined in N.4).
 
 ### N.5.1 Preparatory Lemmas
 
