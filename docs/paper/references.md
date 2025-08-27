@@ -93,6 +93,7 @@
 *   Haag, R. (1996). *Local Quantum Physics: Fields, Particles, Algebras* (2nd ed.). Springer-Verlag.
 *   Haag, R., & Kastler, D. (1964). An algebraic approach to quantum field theory. *Journal of Mathematical Physics*, *5*(7), 848–861. DOI: 10.1063/1.1704187. 
 *   Hameroff, S. R., & Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, *40*(3–4), 453–480. DOI: 10.1016/0378-4754(95)00042-4
+*   Hardy, L. (2001). Quantum Theory From Five Reasonable Axioms. *arXiv*, quant-ph/0101012. DOI: 10.48550/arXiv.quant-ph/0101012.
 *   Hastings, M. B., & Koma, T. (2006). Spectral gap and exponential decay of correlations. *Communications in Mathematical Physics*, 265(3), 781–804. DOI: 10.1007/s00220-006-0030-4
 *   Havlin, S., & Ben-Avraham, D. (1987). Diffusion in disordered media. *Advances in Physics*, *36*(6), 695-798. DOI: 10.1080/00018738700101072
 *   Hawking, S. W. (1975). Particle creation by black holes. *Communications in Mathematical Physics*, *43*(3), 199–220. DOI: 10.1007/BF02345020
@@ -227,6 +228,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Witten, E. (1982). An SU(2) anomaly. *Physics Letters B*, *117*(5), 324-328. DOI: 10.1016/0370-2693(82)90728-6
 *   Wetterich, C. (1993). Exact evolution equation for the effective potential. *Physics Letters B*, *301*(1), 90–94. DOI: 10.1016/0370-2693(93)90726-X
 *   Wolf, M. M. (2012). *Quantum Channels & Operations: A Guided Tour* (Lecture notes). Technical University of Munich. 
+*   Wootters, W. K. (1990). Local accessibility of quantum states. In W. H. Zurek (Ed.), *Complexity, Entropy and the Physics of Information* (Santa Fe Institute Studies in the Sciences of Complexity, Vol. VIII, pp. 39–46). Redwood City, CA: Addison–Wesley. DOI: 10.1201/9780429502880
 *   Yang, C. N., & Mills, R. L. (1954). Conservation of isotopic spin and isotopic gauge invariance. *Physical Review*, *96*(1), 191–195. DOI: 10.1103/PhysRev.96.191.
 *   Zinn-Justin, J. (2002). *Quantum Field Theory and Critical Phenomena* (4th ed.). Oxford University Press (International Series of Monographs on Physics). DOI: 10.1093/acprof:oso/9780198509233.001.0001
 

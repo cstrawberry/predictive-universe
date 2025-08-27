@@ -2,7 +2,7 @@
 
 ## R.0 Introduction
 
-This appendix develops a first-principles pathway by which the threefold generation structure of the Standard Model (SM) fermion sector emerges from the topology of a fundamental internal Perspective Space associated with a Minimal Predictive Unit (MPU). The Perspective Space is the complete flag manifold, rigorously defined in **Section 7.2.5**,
+This appendix develops a first-principles pathway by which the threefold generation structure of the Standard Model (SM) fermion sector emerges from the topology of a fundamental internal Perspective Space associated with a Minimal Predictive Unit (MPU). The Perspective Space $\Sigma_8$ is the complete flag manifold, rigorously defined in **Section 7.2.5** (Theorem 26, formalized in Appendix M.2),
 
 $$
 \Sigma_8 \cong U(8)/U(1)^8,
@@ -17,7 +17,7 @@ Three pillars drive the derivation:
 2.  **Gauge–Topology Correspondence:** A representation-theoretic map from the cohomology group $H^2(\Sigma_8; \mathbb{Z})$ to the weight lattice of the emergent gauge group is established.
 3.  **PCE-based Selection:** Physical viability is enforced by constraints of non-Abelian charge neutrality and Abelian anomaly cancellation across topological sectors, together with energetic and complexity minimization dictated by the Principle of Compression Efficiency (PCE).
 
-A precise “gauge–topology correspondence” is proved: any $G_{\rm SM}$-embedding on $H_0$ induces a homomorphism from $\pi_2(\Sigma_8)$ to the Cartan weight lattice of $G_{\rm SM}$, and hence a center character map to $Z(SU(3)) \cong \mathbb{Z}_3$. Non-Abelian neutrality then selects a “light sublattice” $L_{\rm light}\subset\mathbb{Z}^7$. To achieve a nontrivial multi-sector structure while preserving SM gauge invariance of Yukawa couplings, we introduce a family $U(1)_F$ whose charges are induced by topology; anomaly cancellation for this Abelian factor across sectors forces a minimal nontrivial three-sector solution with offsets $\{a,-a,0\}$. A worked instance, based on a physically motivated, PCE-compatible ansatz for embedding the first-generation fermions, provides explicit Cartan charge vectors, a primitive basis of $L_{\rm light}$, the minimal family-charge unit $a$, and three minimal-norm sector vectors. A PCE-compatible potential on $\Sigma_8$ selects sector minima; Gaussian semiclassics on this Kähler target yields Yukawa matrices from overlap integrals, producing exponentially hierarchical masses and small mixings determined by geodesic separations and local Hessians.
+A precise “gauge–topology correspondence” is proved: any embedding of the SM gauge group $G_{\rm SM}$ acting on $H_0$ induces a homomorphism from $\pi_2(\Sigma_8)$ to the Cartan weight lattice of $G_{\rm SM}$. This consequently yields a center character map, e.g., to $Z(SU(3)) \cong \mathbb{Z}_3$. Non-Abelian neutrality then selects a “light sublattice” $L_{\rm light}\subset\mathbb{Z}^7$. To achieve a nontrivial multi-sector structure while preserving SM gauge invariance of Yukawa couplings, we introduce a family $U(1)_F$ whose charges are induced by topology; anomaly cancellation for this Abelian factor across sectors forces a minimal nontrivial three-sector solution with offsets $\{a,-a,0\}$. A worked instance, based on a physically motivated, PCE-compatible ansatz for embedding the first-generation fermions, provides explicit Cartan charge vectors, a primitive basis of $L_{\rm light}$, the minimal family-charge unit $a$, and three minimal-norm sector vectors. A PCE-compatible potential on $\Sigma_8$ selects sector minima; Gaussian semiclassics on this Kähler target yields Yukawa matrices from overlap integrals, producing exponentially hierarchical masses and small mixings determined by geodesic separations and local Hessians.
 
 ## R.1 The MPU’s Perspective Space and Its Topology
 
@@ -27,14 +27,14 @@ Let $\Sigma_8 := U(8)/U(1)^8$ be the complete flag manifold of $\mathbb{C}^8$. I
 
 The Perspective Space $\Sigma_8$ is simply connected and its second homotopy group is $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$.
 
-*Proof.* Consider the principal bundle $T^8 \to U(8) \to \Sigma_8$ where $T^8 \cong U(1)^8$ is the maximal torus. The long exact sequence in homotopy for this fibration yields [Bott & Tu 1982]. This is a standard result in algebraic topology.
+*Proof.* This is a standard result in algebraic topology [Bott & Tu 1982]. Consider the principal fiber bundle $T^8 \hookrightarrow U(8) \to \Sigma_8$, where $T^8 \cong U(1)^8$ is the maximal torus. The long exact sequence in homotopy associated with this fibration provides the necessary relationships.
 
 $$
 \dots \to \pi_2(U(8)) \to \pi_2(\Sigma_8) \to \pi_1(T^8) \to \pi_1(U(8)) \to \pi_1(\Sigma_8) \to 0.
 \tag{R.2}
 $$
 
-Using the standard results $\pi_2(U(n)) = 0$, $\pi_1(T^n) \cong \mathbb{Z}^n$, and $\pi_1(U(n)) \cong \mathbb{Z}$, the relevant segment reduces to:
+Using the standard homotopy groups of Lie groups: $\pi_2(U(n)) = 0$, $\pi_1(T^n) \cong \mathbb{Z}^n$, and $\pi_1(U(n)) \cong \mathbb{Z}$. The relevant segment of the sequence reduces to:
 
 $$
 0 \to \pi_2(\Sigma_8) \to \mathbb{Z}^8 \to \mathbb{Z} \to \pi_1(\Sigma_8) \to 0.
@@ -45,7 +45,7 @@ The homomorphism $\mathbb{Z}^8 \to \mathbb{Z}$ is induced by the inclusion $T^8 
 
 ### R.1.2 Topological generators and cohomology in degree two
 
-Let $0 \subset S_1 \subset S_2 \subset \dots \subset S_8 = \mathbb{C}^8 \times \Sigma_8$ be the universal flag of subbundles over $\Sigma_8$, where $\mathrm{rank}(S_k) = k$. Define the tautological quotient line bundles $Q_k := S_k/S_{k-1}$ and their first Chern classes $x_k := c_1(Q_k) \in H^2(\Sigma_8; \mathbb{Z})$. The triviality of the ambient rank-8 bundle implies $\sum_k x_k = 0$.
+Let $0 \subset S_1 \subset S_2 \subset \dots \subset S_8$ be the universal flag of tautological subbundles over $\Sigma_8$, where $S_8$ is the trivial bundle $\mathbb{C}^8 \times \Sigma_8$, and $\mathrm{rank}(S_k) = k$. Define the tautological quotient line bundles $Q_k := S_k/S_{k-1}$ and their first Chern classes $x_k := c_1(Q_k) \in H^2(\Sigma_8; \mathbb{Z})$. The total Chern class of the ambient rank-8 bundle $S_8$ is trivial, which implies $\sum_k x_k = 0$ in $H^2(\Sigma_8; \mathbb{Z})$.
 
 An integral basis for $H^2(\Sigma_8; \mathbb{Z})$ is given by differences of these Chern classes [Fulton 1997; Brion 2005]:
 
@@ -57,45 +57,46 @@ $$
 By the Hurewicz theorem, the $\omega_i$ represent the generators of $\pi_2(\Sigma_8)$. Concretely, for a smooth map $f:S^2\to \Sigma_8$, define the Chern integers
 
 $$
-k_i := \int_{S^2} f^*(x_i)\in \mathbb{Z},\qquad \sum_{i=1}^8 k_i=0,\tag{R.6}
+k_i := \int_{S^2} f^*(x_i)\in \mathbb{Z}.\tag{R.5}
+$$
+These integers must satisfy the constraint $\sum_{i=1}^8 k_i=0$, inherited from $\sum_i x_i = 0$.
+The topological charges are defined as:
+
+$$
+q_i := \int_{S^2} f^*(\omega_i) = k_i-k_{i+1},\qquad i=1,\dots,7.\tag{R.6}
 $$
 
-and the topological charges
-
-$$
-q_i := \int_{S^2} f^*(\omega_i) = k_i-k_{i+1},\qquad i=1,\dots,7.\tag{R.7}
-$$
 
 Thus $\pi_2(\Sigma_8)\cong \ker\left(\sum_i : \mathbb{Z}^8\to\mathbb{Z}\right)\cong \mathbb{Z}^7$ with integral coordinates $q=(q_1,\dots,q_7)$ in the $\{\omega_i\}$-basis.
 
 ## R.2 Twisted Dirac index and chiral asymmetry of a predictive block
 
 **Lemma R.IDX1 (Twisted Dirac index = net chirality of one predictive block).**
-Let $M$ be a $4$‑dimensional, time‑orientable spin manifold carrying the emergent Lorentzian structure of §11. Let $P\to M$ be the principal
+Let $M$ be a $4$‑dimensional, time‑orientable spin manifold carrying the emergent Lorentzian structure of §11. Let $P\to M$ be a principal
 
 $$
-G\ =\ U(1)\times SU(2)\times SU(3)\tag{R.8}
+G\ =\ U(1)\times SU(2)\times SU(3)\tag{R.7}
 $$
 
 bundle of **PCE‑preserving predictive frames** (Conjecture G.M1 in Appendix G), with connection $A$. For a *predictive block* $R$ (a finite‑dimensional complex representation of $G$ dictated by the $(1,2,3)$ block structure of Appendix G), consider the associated complex vector bundle $E_R:=P\times_G R$ and the chiral spinor bundles $S^\pm$. The **twisted Dirac operator**
 
 $$
-\slashed D_A:\ \Gamma\big(S^+\!\otimes E_R\big)\longrightarrow \Gamma\big(S^-\!\otimes E_R\big)\tag{R.9}
+\slashed D_A:\ \Gamma\big(S^+\!\otimes E_R\big)\longrightarrow \Gamma\big(S^-\!\otimes E_R\big)\tag{R.8}
 $$
 
 has Fredholm index
 
 $$
-\operatorname{Ind}\big(\slashed D_A\big)=\dim\ker\slashed D_A\big|_{S^+\!\otimes E_R}\ -\ \dim\ker\slashed D_A\big|_{S^-\!\otimes E_R}\tag{R.10} 
+\operatorname{Ind}\big(\slashed D_A\big)=\dim\ker\big(\slashed D_A\big)\ -\ \dim\operatorname{coker}\big(\slashed D_A\big)\tag{R.9}
 $$
 
 equal to the **net chiral asymmetry** $(\#\mathrm{LH}-\#\mathrm{RH})$ of zero‑modes in that block, and is given topologically by the Atiyah–Singer index theorem [Atiyah & Singer 1963]:
 
 $$
-\operatorname{Ind}\big(\slashed D_A\big)\ =\ \big\langle\,\widehat A(TM)\ \mathrm{ch}(E_R)\,,\ [M]\ \big\rangle\ \in\ \mathbb Z. \tag{R.5}
+\operatorname{Ind}\big(\slashed D_A\big)\ =\ \big\langle\,\widehat A(TM)\ \mathrm{ch}(E_R)\,,\ [M]\ \big\rangle\ \in\ \mathbb Z. \tag{R.10}
 $$
 
-*Proof.* Standard Atiyah–Singer index theorem for the Dirac operator twisted by the complex $G$‑bundle $E_R$. In four dimensions, the index equals the difference of left‑ and right‑chiral zero‑modes, which is precisely the net chiral asymmetry of the predictive block. ∎
+*Proof.* This is a direct application of the Atiyah–Singer index theorem for the Dirac operator twisted by the complex vector bundle $E_R$ associated with the principal $G$-bundle $P$. In four dimensions, the analytical index (LHS of R.9) equals the difference between the dimensions of the spaces of left-handed and right-handed zero modes (since $\dim\operatorname{coker}(\slashed D_A) = \dim\ker(\slashed D_A^\dagger)$), which corresponds to the net chiral asymmetry of the matter content in representation $R$. The RHS (R.10) provides the topological expression for this index. ∎
 
 **Corollary R.IDX1.1 (Degree‑4 characteristic‑class form).**
 In $4$D, only the degree‑4 part contributes:
@@ -139,7 +140,7 @@ $$
 \tag{R.11}
 $$
 
-*Proof.* On a compact Kähler target, a nonzero $q \in \pi_2$ represents a nontrivial homology class whose energy is bounded below by a positive value proportional to its area (see R.6). A nonzero net topological charge at spatial infinity would produce an unavoidable gradient energy density in the vacuum. PCE selects the globally trivial vacuum sector, enforcing $\sum_g q^{(g)} = 0$. This is a consequence of PCE minimizing the total energy contribution to the PCE potential $V(x)$. ∎
+*Proof.* On a compact Kähler target, a nonzero $q \in \pi_2$ represents a nontrivial homology class whose energy is bounded below by a positive value proportional to its area (related to the topological charges defined in R.1.2). A nonzero net topological charge at spatial infinity would produce an unavoidable gradient energy density in the vacuum. PCE selects the globally trivial vacuum sector, enforcing $\sum_g q^{(g)} = 0$. This is a consequence of PCE minimizing the total energy contribution to the PCE potential $V(x)$. ∎
 
 ### R.3.2 Definition (Light sublattice)
 

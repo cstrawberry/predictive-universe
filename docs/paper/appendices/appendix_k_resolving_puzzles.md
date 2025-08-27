@@ -11,9 +11,9 @@ This appendix explores potential connections between the Predictive Universe (PU
    *   **Invariant speed of light $c$**: Emerges from the finite minimum MPU processing time $\tau_{min} > 0$ (Theorem 29) and the effective microscopic length scale $\ell_0$ (Definition 35), approximately $c \approx \ell_0 / \tau_{min}$ (Theorem 46). These scales are set by the minimal operational requirements of the MPU cycle.
    *   **Reduced Planck constant $\hbar$**: Acts as the fundamental quantum of action. Within PU, it scales the generator of unitary evolution (Equation 43) and relates energy/frequency to information. It is associated with the fundamental scales of energy (from $\hat{H}_v$, Theorem 29) and time ($\tau_{min}$, Theorem 29) intrinsic to the MPU cycle, and potentially linked to the fundamental minimum disturbance or information scale arising from SPAP-induced indeterminacy (Theorem 27, Theorem 33). Its value might be determined by the self-consistent scale of minimal actions in the PCE optimization.
    *   **Boltzmann constant $k_B$**: Functions as the conversion factor between dimensionless information/entropy measures (nats) and thermodynamic entropy (energy/temperature). Its value is inherent in the fundamental thermodynamic interpretation of the MPU dynamics (Section 12) and the link between information costs ($\varepsilon$) and energy dissipation ($k_B T \varepsilon$).
-   *   **Gravitational constant $G$**: Emerges from the thermodynamic properties of the MPU network at causal boundaries (Section 12). As rigorously shown in **Appendix E** (**Equation E.9**), $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}(f_{RID})}$, where the effective MPU spacing is $\delta$, $\eta$ is a geometric packing factor, $\chi$ is a correlation factor (these parameters contribute to the effective surface density of channels $\sigma_{eff_link} = \chi / (\eta \delta^2)$ as per **Theorem E.3**), and $C_{max}$ is the ND-RID channel capacity limited by the irreducible cost $\varepsilon$ (Theorem E.2). **Equation E.10** relates these parameters to $G$ as $\frac{\chi C_{max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}$. This relationship is further constrained by the PCE-driven optimization of these parameters, which yields a direct calculation of the ratio $\delta/L_P \approx \mathcal{O}(1)$ (**Appendix Q**), linking the microscopic MPU scale to the emergent Planck scale.
+   *   **Gravitational constant $G$**: Emerges from the thermodynamic properties of the MPU network at causal boundaries (Section 12). As rigorously shown in **Appendix E** (Theorem E.4), $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}(f_{RID})}$ (**Equation E.10**). Here, $\delta$ is the effective MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is a correlation factor, and $C_{max}$ is the ND-RID channel capacity (limited by $\varepsilon$, Theorem E.2). These parameters determine the effective surface density of channels $\sigma_{eff_link} = \chi / (\eta \delta^2)$ (Theorem E.3). The fundamental relationship (**Equation E.8**) is $\frac{\chi C_{max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}$. This relationship is further constrained by the PCE-driven optimization of these parameters in the vacuum state, yielding a direct, parameter-free calculation of the ratio $\delta/L_P$ (**Appendix Q**), which links the microscopic MPU scale to the emergent Planck scale.
    *   **Gauge couplings ($e, g_s, g_w$):** Relate to the effective "stiffness" or cost coefficients ($\kappa_F$ in Equation G.5.2) in the emergent gauge field actions (Appendix G), which are determined by PCE optimization balancing the benefit of predictive coherence provided by gauge fields against their resource cost. Their values might emerge from minimizing the gauge field contribution to $V(x)$.
-   *   **Electroweak Scale, Fermion Masses, and Yukawa Couplings:** The electroweak scale, and thus the scale of fermion masses, is proposed to emerge from a substrate-first mechanism detailed in **Appendix T**. The vast hierarchy between the electroweak scale `v` and the Planck scale `M_Pl` is derived from a PCE-driven competition between a stabilizing, area-law boundary cost and a destabilizing, logarithmically running bulk mass term in a coarse-grained effective potential. This mechanism generates an exponentially large critical scale `ℓ*` that sets the VEV, explaining the hierarchy without fine-tuning. The specific values of Yukawa couplings could then arise from the geometric overlaps of topological sectors on the MPU's internal Perspective Space, as detailed in **Appendix R**, with their absolute scale set by the emergent VEV.
+   *   **Electroweak Scale, Fermion Masses, and Yukawa Couplings:** The electroweak scale, and thus the scale of fermion masses, is proposed to emerge from a substrate-first mechanism detailed in **Appendix T**. The vast hierarchy between the electroweak scale $v$ and the Planck scale $M_{Pl}$ is derived from a PCE-driven competition between a stabilizing, area-law boundary cost and a destabilizing, logarithmically running bulk mass term in a coarse-grained effective potential. This competition generates an emergent critical length scale $\ell^*$. The VEV is set by the inverse of this scale, $v \simeq \zeta/(\ell^*\delta)$ (where $\delta$ is the microscopic MPU spacing). The hierarchy $v/M_{Pl} \ll 1$ arises because $\ell^*$ is exponentially large relative to the Planck scale due to the logarithmic nature of the renormalization group flow, explaining the hierarchy without fine-tuning. The specific values of Yukawa couplings could then arise from the geometric overlaps of topological sectors on the MPU's internal Perspective Space, as detailed in **Appendix R**, with their absolute scale set by the emergent VEV.
 *   **Potential:** If the fundamental rules and parameters of the MPU model and POP/PCE optimization are simple, the complex pattern of observed fundamental constants might arise as a unique or stable minimum of the high-dimensional PCE potential landscape. Fine-tuning in observed constants could potentially be reinterpreted as thermodynamic or informational optimality.
 *   **Next Step:** Develop explicit, minimal MPU network models and analyze the structure and minima of the PCE potential $V(x)$ to see if the model parameters determining fundamental constants can plausibly yield the observed orders of magnitude and relationships, or show that specific relationships between constants are necessary for PCE optimality.
 
@@ -27,8 +27,8 @@ The Black Hole Information Paradox, which arises from the conflict between quant
 We begin by framing the task of recovering the information of an initial pure state $|\psi_{in}\rangle$ that formed a black hole as a computational problem.
 
 *   **Problem Instance $I_t$:** The "instance" of the problem at time $t$ is the complete physical state of the black hole, characterized by its macroscopic parameters (mass $M_t$, charge $Q_t$, angular momentum $J_t$) and, crucially, its internal MPU network state $|S_{BH}(t)\rangle$, which encodes the scrambled information of $|\psi_{in}\rangle$.
-*   **Solution Attempt $S_t$:** A "solution attempt" corresponds to an external observer performing a measurement on the outgoing Hawking radiation during a time interval $\Delta t$. This measurement is an 'Evolve' process (Definition 27) that extracts a quantum of information.
-*   **Instance Transformation Function $T(I_t, S_t)$:** The core physical dynamic of the paradox lies in the fact that the measurement $S_t$ is not passive. By extracting a quantum of energy-momentum and information, the measurement process itself alters the black hole's state. This physical back-reaction is the **Instance Transformation Function**. The state of the black hole at the next step, $I_{t+1}$, is determined by its previous state $I_t$ and the measurement interaction $S_t$ via a stochastic mapping:
+*   **Solution Attempt $S_t$:** A "solution attempt" corresponds to an external observer performing a measurement on the outgoing Hawking radiation during a time interval $\Delta t$. This measurement involves an interaction realized by an 'Evolve' process (Definition 27) that extracts a quantum of information.
+*   **Instance Transformation Function $T(I_t, S_t)$:** The core physical dynamic relevant to the paradox lies in the fact that the measurement $S_t$ is not passive. By extracting a quantum of energy-momentum and information, the measurement process itself alters the black hole's state. This physical back-reaction is the **Instance Transformation Function**. The state of the black hole at the next step, $I_{t+1}$, is determined by its previous state $I_t$ and the measurement interaction $S_t$ via a stochastic mapping:
     $$
     I_{t+1} = T(I_t, S_t) \quad \text{(K.3.1)}
     $$
@@ -50,13 +50,13 @@ For a black hole in the final stages of its evaporation, the information retriev
 *Proof.*
 1.  **Accelerating Dynamics:** As the black hole's mass $M_t$ decreases, its temperature $T_H \propto 1/M_t$ and evaporation rate $dM/dt \propto -1/M_t^2$ both increase. The black hole's dynamics accelerate.
 2.  **Increasing Relative Impact:** The emission of a single Hawking quantum with energy $\Delta E \sim k_B T_H \propto 1/M_t$ represents a fractional mass loss of $\Delta M / M_t \propto (1/M_t)/M_t = 1/M_t^2$. As $M_t \to 0$, this fractional impact diverges. A single measurement has a larger and larger effect on the remaining system.
-3.  **Complexity Divergence:** The computational complexity of the black hole's internal state is thought to grow for a significant portion of its lifetime before decreasing. The accelerating dynamics and increasing relative impact of measurements in the late stages mean that the "problem instance" $I_t$ is changing more rapidly and dramatically than the information can be extracted.
+3.  **Complexity Divergence:** The computational complexity of the black hole's internal state is hypothesized to grow for a significant portion of its lifetime. Regardless of the complexity trend in the late stages, the accelerating dynamics and increasing relative impact of measurements mean that the "problem instance" $I_t$ is changing more rapidly and dramatically relative to the rate at which information can be extracted.
 4.  **Infinite Regress:** An observer attempting to build a complete model of $|S_{BH}(t)\rangle$ by collecting sequential Hawking quanta is faced with a target that transforms away from them at an ever-increasing rate. This establishes an **infinite regress**: the solution to step $t$ redefines the problem for step $t+1$ so significantly that the new problem is "further away" from a complete solution—in the sense that the rate of change of the internal state now exceeds the information extraction rate—than the previous one was. This satisfies the conditions for expansive reflexivity. QED
 
 **Theorem K.2 (Fundamental Unsolvability via Local, Sequential Measurement).**
 Due to the expansive reflexivity inherent in late-stage black hole evaporation, no algorithm based on local, sequential measurements of Hawking radiation can recover the complete information of the initial state $|\psi_{in}\rangle$, regardless of available computational resources.
 
-*Proof.* This is a physical realization of the unsolvability of problems with expansive reflexivity. The problem instance $I_t$ does not converge, preventing any sequential algorithm from building a complete and stable solution. This limitation is not one of computational power (e.g., P vs NP) but a fundamental barrier arising from the logical structure of self-reference in the physical measurement process. It is a physical analogue of the logical limits established by SPAP (Theorem 10) and RUD (Theorem 12), where the act of observation fundamentally precludes complete knowledge.
+*Proof.* This is a physical realization of the unsolvability of problems with expansive reflexivity. The problem instance $I_t$ does not converge, preventing any sequential algorithm from building a complete and stable solution. This limitation is not one of computational power (e.g., P vs NP) but a fundamental barrier arising from the logical structure of self-reference in the physical measurement process. It is a physical analogue of the logical limits established by SPAP (Theorems A.1.1, A.1.3) and RUD (Theorems A.2.3, A.2.4), where the act of observation or prediction fundamentally precludes complete knowledge due to self-reference.
 
 **K.3.3 The PU Resolution: A Perspectival Bypass of the Reflexive Loop**
 
@@ -102,15 +102,13 @@ $$
 \mathcal E_t(\,\cdot\,)\ :=\ \operatorname{Tr}_{H_t}\!\big[\,W_t(\,\cdot\,)W_t^\dagger\big]\ :\ \mathcal B(H_0)\to\mathcal B(R_t)
 $$
 
-the induced emission channel. Assume PCE‑symmetric emission channels are completely positive, trace‑preserving and unital on the emitted algebra (conditioned on conserved quantities): $\mathcal E_t(\mathbf 1_{H_0})=\mathbf 1_{R_t}$. This means the channel is **bistochastic** (completely positive, trace‑preserving and unital). For an arbitrary initial BH state $\rho_{H_0}$ with entropy $S_0:=S(\rho_{H_0})$, let $\rho_{R_t}=\mathcal E_t(\rho_{H_0})$ and $\rho_{H_t}=\operatorname{Tr}_{R_t}[W_t\rho_{H_0}W_t^\dagger]$. Then:
+the induced emission channel. We model the emission by a completely positive, trace‑preserving (CPTP) channel \$\mathcal E\_t:\mathcal B(H\_0)\to\mathcal B(R\_t)\$ with a Stinespring isometry \$W\_t\:H\_0\to R\_t\otimes H\_t\$ such that \$\mathcal E\_t(\rho)=\operatorname{Tr}\_{H\_t}(W\_t\rho W\_t^\dagger)\$. For an arbitrary initial BH state $\rho_{H_0}$ with entropy $S_0:=S(\rho_{H_0})$, let $\rho_{R_t}=\mathcal E_t(\rho_{H_0})$ and $\rho_{H_t}=\operatorname{Tr}_{R_t}[W_t\rho_{H_0}W_t^\dagger]$. Then:
 
-1. (**Early‑time lower bound**) By data‑processing for relative entropy,
+1. (**Early‑time lower bound**) Let \$W\_t\:H\_0\to R\_t\otimes H\_t\$ be the Stinespring isometry for \$\mathcal E\_t\$. Unitary invariance of entropy gives \$S(R\_tH\_t)=S(\rho\_{H\_0})=S\_0\$. By the Araki–Lieb inequality, \$S(R\_t)\ge S(R\_tH\_t)-S(H\_t)\ge S\_0-\log d\_{H\_t}\$. Hence
 
-   $$
-   D\!\left(\rho_{R_t}\ \|\ \tfrac{\mathbf 1_{R_t}}{d_{R_t}}\right)\ \le\ D\!\left(\rho_{H_0}\ \|\ \tfrac{\mathbf 1_{H_0}}{d_{H_0}}\right)\ =\ \log d_{H_0}-S_0.
-   $$
-
-   Using $D(\rho\|\tfrac{\mathbf 1}{d})=\log d - S(\rho)$ gives the **increasing lower bound**
+$$
+S(R_t)\ \ge\ S_0-\log d_{H_t}. \tag{K.3.3}
+$$
 
    $$
    S(R_t)\ \ge\ \log d_{R_t}\ -\ \big(\log d_{H_0}-S_0\big). \tag{K.3.3}
@@ -118,15 +116,21 @@ the induced emission channel. Assume PCE‑symmetric emission channels are compl
 
    As $t$ grows, $d_{R_t}$ increases, so the right‑hand side grows monotonically.
 
-2. (**Late‑time upper bound**) The joint $R_tH_t$ state is pure (Stinespring), hence $S(R_t)=S(H_t)$. Therefore
+2. (**Late‑time upper bound**) If the initial state is pure ($S_0=0$), the joint $R_tH_t$ state remains pure (by Stinespring dilation of the isometry $W_t$), hence $S(R_t)=S(H_t)$. Therefore
 
    $$
-   S(R_t)\ =\ S(H_t)\ \le\ \log d_{H_t}\ =\ \log d_{H_0}-\log d_{R_t}, \tag{K.3.4}
+   S(R_t)\ =\ S(H_t)\ \le\ \log d_{H_t}. \tag{K.3.4}
    $$
 
-   Hence $S(R_t)=S(H_t E)\le S(H_t)+S(E)=\log d_{H_t}+S_0$. In particular, if $S_0=0$ (pure input), $S(R_t)\le \log d_{H_t}$. This upper bound decreases as $d_{R_t}$ grows.
+   This upper bound decreases as $d_{R_t}$ grows.
 
-Combining (K.3.3) and (K.3.4) sandwiches $S(R_t)$ between an **increasing** and a **decreasing** function of $\log d_{R_t}$ that **cross** at equipartition $\log d_{R_t}\approx \log d_{H_t}$ (i.e. $d_{R_t}\approx d_{H_t}$). Consequently,
+Combining (K.3.3) and (K.3.4) yields the sandwich bound
+
+$$
+S_0-\log d_{H_t}\ \le\ S(R_t)\ \le\ \log d_{H_t}.
+$$
+
+Consequently,
 
 $$
 \text{\(S(R_t)\) attains its maximum near \(d_{R_t}\simeq d_{H_t}\) and exhibits the single‑peaked “Page‑curve” shape.}
@@ -134,7 +138,7 @@ $$
 
 No numerical fit or randomness assumption is required—only PU’s PCE‑symmetry (bistochasticity) and basic entropy/duality facts.
 
-*Proof.* For (1), the **data‑processing inequality** $D(\Phi(\rho)\|\Phi(\sigma))\le D(\rho\|\sigma)$ applied to $\Phi=\mathcal E_t$ with $\rho=\rho_{H_0}$, $\sigma=\mathbf 1_{H_0}/d_{H_0}$ and unitality $\mathcal E_t(\sigma)=\mathbf 1_{R_t}/d_{R_t}$ yields the bound; rewriting relative entropy gives (K.3.3). Relative entropy is taken against the uniform states on the **respective** spaces; the data‑processing inequality holds under $\mathcal E_t:\mathcal B(H_0)\to\mathcal B(R_t)$ with $\mathcal E_t(\mathbf{1}_{H_0}/d_{H_0})=\mathbf{1}_{R_t}/d_{R_t}$. For (2), purity of $R_tH_t$ implies $S(R_t)=S(H_t)$; von Neumann entropy is bounded by the log‑dimension, giving (K.3.4). Since $\log d_{R_t}$ increases while $\log d_{H_t}=\log d_{H_0}-\log d_{R_t}$ decreases, the lower and upper bounds cross once; $S(R_t)$ is confined between them and therefore reaches its maximum in the crossover region, i.e. the Page time. ∎
+*Proof.* For (1), let \$W\_t\$ be the Stinespring isometry for \$\mathcal E\_t\$. The joint state after the isometry satisfies \$S(R\_tH\_t)=S(\rho\_{H\_0})=S\_0\$. Applying the Araki–Lieb inequality yields \$S(R\_t)\ge S(R\_tH\_t)-S(H\_t)\ge S\_0-\log d\_{H\_t}\$, establishing (K.3.3). For (2), assuming a pure initial state (\$S\_0=0\$), the joint state \$R\_tH\_t\$ is pure, hence \$S(R\_t)=S(H\_t)\le\log d\_{H\_t}\$, giving (K.3.4). Since $\log d_{R_t}$ increases while $\log d_{H_t}=\log d_{H_0}-\log d_{R_t}$ decreases, the lower and upper bounds cross once; $S(R_t)$ is confined between them and therefore reaches its maximum in the crossover region, i.e. the Page time. ∎
 
 **K.4 Additional Potential Pathways**
 

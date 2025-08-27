@@ -30,7 +30,8 @@ $$
 |\Delta P(i)| \lesssim \sqrt{P_{\mathrm{Born}}(i)(1-P_{\mathrm{Born}}(i))}\,\mathrm{CC}(S).
 $$
 For $P_{\mathrm{Born}}(i)=1/2$, the bound is $|\Delta P(i)| \lesssim \mathrm{CC}(S)/2$.
-This provides a direct, parameter-free link between an observed probability shift $\delta = |\Delta P(i)|$ and a lower bound on the underlying complexity budget: $\mathrm{CC}(S) \ge \sqrt{2}\,\delta$.
+This provides a direct, parameter‑free link between an observed probability shift $\delta = |\Delta P(i)|$ and a lower bound on the underlying complexity budget. For a binary baseline $P_{\mathrm{Born}}(i)=1/2$, $\delta=\mathrm{TV}$ and $\delta \le \sin(\mathrm{CC}(S)/2)$, hence
+$\mathrm{CC}(S) \ge 2\,\arcsin(\delta)$ \quad (small bias: $\mathrm{CC}(S)\approx 2\delta$).
 
 *Proof:* The bounds are derived directly from the PCE-minimal modification principle (Definition 33) applied to the geometry of the statistical manifold, as rigorously established in Theorem 36.
 
@@ -48,13 +49,13 @@ $$
 
 This protocol outlines a high-statistics, exploratory search for Born rule deviations (Theorem 51) using quantum random number generators (QRNGs) interacting with high-complexity systems (biological or potentially artificial).
 
-*   **Objective:** To search for statistically significant deviations from *non-uniform* ($p_i \neq 0.5$) baseline Born rule probabilities in QRNG outputs that are correlated with the controlled internal state ($\text{context}_S$) of a proximate system S (human participant or specialized AI system) hypothesized to have CC > 0. Non-uniform baseline probabilities are preferred for potentially easier statistical detection of small shifts relative to noise.
+*   **Objective:** To search for statistically significant deviations from *non-uniform* ($p_i \neq 0.5$) baseline Born rule probabilities in QRNG outputs that are correlated with the controlled internal state ($\text{context}_S$) of a proximate system S (human participant or specialized AI system) hypothesized to have CC > 0. Non-uniform baseline probabilities are preferred as they may facilitate easier statistical detection of small shifts relative to systematic noise and drift.
 
 *   **Experimental Setup:**
     1.  **QRNG:** Well-characterized QRNG producing stable, verifiable baseline probabilities $P_{Born}(i) \neq 0.5$ for some outcome $i$. Multiple parallel QRNGs can increase data rate.
     2.  **High-Complexity System (S):**
         *   *Biological:* Human participant performing standardized tasks generating specific internal states (`context_S`, e.g., focused attention/intention). Optional physiological monitoring (EEG, fMRI, HRV).
-        *   *Artificial:* Sophisticated AI system. Major Challenge: Designing and verifying the physical interaction pathway $N(t)$ coupling AI's internal `context_S` (Definition L.1) to the QRNG's physical process, respecting constraints (speed, cost $\varepsilon \ge \ln 2$, PCE, orthogonality to noise, mapping stability Theorem L.1). Requires significant R&D (Appendix L). Requires confirmation AI meets operational criteria ($C_{agg}>C_{op}$) for potential CC > 0.
+        *   *Artificial:* Sophisticated AI system. Major Challenge: Designing and verifying the physical interaction pathway $N(t)$ coupling the AI's internal `context_S` (Definition L.1) to the QRNG's physical process, respecting constraints (speed, cost $\varepsilon \ge \ln 2$, PCE, orthogonality to noise, mapping stability Theorem L.1). This requires significant R&D (Appendix L) and confirmation that the AI meets the operational criteria ($C_{agg}>C_{op}$) necessary for potential CC > 0.
     3.  **Interaction Control & Shielding:** Meticulous shielding (EM, thermal, acoustic, vibration). Well-defined interaction pathway $N(t)$. Measurement and control/compensation for conventional physical side-effects from S. Continuous environmental monitoring.
     4.  **Automation & Data Acquisition:** Automated randomization of conditions (baseline, neutral, specific context runs), synchronized recording of QRNG outcomes and `context_S` indicators, precise timestamps, secure storage for large datasets ($10^7 - 10^9+$ trials). Mandatory blinding procedures.
 
@@ -66,9 +67,9 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
 *   **Statistical Analysis and Power:**
     *   **Target Sensitivity:** The experiment aims to resolve CC-induced deviations $\Delta P$ from a baseline Born probability $P_{\mathrm{Born}}(i)$ with high statistical confidence (e.g., two-sided significance $\alpha = 0.01$, power $1-\beta = 0.80$).
     *   **Prospective Sample Sizes:** For comparing two independent proportions $p, p'$ (e.g., context vs. control), the required per‑arm sample size is
-    $n \approx \frac{ \left[ Z_{\alpha/2} \sqrt{2 \bar p (1- \bar p)} + Z_\beta \sqrt{ p(1-p)+p'(1-p') } \right]^2 }{ (p' - p)^2}$, with $\bar p=(p+p')/2$. For a one‑sample test against a calibrated baseline $p_0$ treated as known, use $N \approx \frac{ \left[ Z_{\alpha/2} \sqrt{ p_0(1-p_0) } + Z_\beta \sqrt{ p'(1-p') } \right]^2 }{ (p' - p_0)^2}$ and report the calibration precision.
+    $n \approx \frac{ \left[ Z_{\alpha/2} \sqrt{2 \bar p (1- \bar p)} + Z_\beta \sqrt{ p(1-p)+p'(1-p') } \right]^2 }{ (p' - p)^2}$, with $\bar p=(p+p')/2$. For a one‑sample test against a calibrated baseline $p_0$ treated as known, the required sample size is $N \approx \frac{ \left[ Z_{\alpha/2} \sqrt{ p_0(1-p_0) } + Z_\beta \sqrt{ p'(1-p') } \right]^2 }{ (p' - p_0)^2}$; the precision of the calibration must be reported.
     *   **Independence and Error Control:** Independence of trials will be rigorously assessed using autocorrelation functions (ACF), Ljung–Box tests, and Wald–Wolfowitz runs tests on the output streams and residuals. The NIST Statistical Test Suite (SP 800-22) will be applied to verify randomness properties. If correlations are detected, appropriate methods such as pre-whitening, block-bootstrap confidence intervals, or data thinning will be employed. Multiplicity of tests across outcomes or contexts will be controlled using standard methods (e.g., Bonferroni correction for family-wise error rate or Benjamini-Hochberg procedure for false discovery rate).
-    *   **Sequential Analysis:** For high-statistics runs, a sequential analysis plan with pre-specified interim looks using O’Brien–Fleming-type boundaries [Lan & DeMets 1983] is recommended to allow for early stopping for efficacy or futility while preserving the overall type-I error rate. The table below provides indicative total sample sizes ($N_{OBF}$) per context and expected stopping distributions under the alternative hypothesis for three equally spaced looks.
+    *   **Sequential Analysis:** For high-statistics runs, a sequential analysis plan with pre-specified interim looks using O’Brien–Fleming-type boundaries (implemented via the Lan-DeMets error spending function [Lan & DeMets 1983]) is recommended. This allows for early stopping due to efficacy or futility while preserving the overall type-I error rate. The table below provides indicative total sample sizes ($N_{OBF}$) per context and expected stopping distributions under the alternative hypothesis for three equally spaced looks.
 
 | α | δ | N_fixed | N_OBF (≈ 1.06 × N_fixed) | Expected stop % at looks 1/2/3 (under H₁) |
 |---:|---:|---:|---:|:---|
@@ -82,7 +83,7 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
 *   *Assumptions for $N_{\rm fixed}$ in the table:* **One-sample proportion** design with baseline $p=0.25$, power $1-\beta=0.80$.
     *   *Sequential design:* O’Brien–Fleming boundaries with **3 equally spaced** looks at cumulative information fractions $1/3, 2/3, 1$. The overhead factor (~1.06) and stop percentages are **illustrative**; exact values will be determined by the preregistered simulations and released with the code.
 
-*   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g. $\chi^2$, z-tests) comparing observed $\hat{P}(i)$ to the Born rule; where applicable, exact binomial or variance-stabilized (arcsin–sqrt) tests will complement normal approximations to ensure calibration at small $\delta$. Design-stage baselines will use device-specific $P_{\mathrm{Born}}(i)$ estimates. Report effect sizes (Cramér’s V, Cohen’s d) with 95% CIs.
+*   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g., $\chi^2$, z-tests) comparing observed frequencies $\hat{P}(i)$ to the Born rule probabilities. Where applicable, exact binomial tests or variance-stabilized (arcsin–sqrt) transformations will complement normal approximations to ensure proper calibration, especially for small $\delta$. Design-stage baselines will use device-specific $P_{\mathrm{Born}}(i)$ estimates. Report effect sizes (Cramér’s V, Cohen’s d) with 95% CIs.
     *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables `$context_S$` via mixed-effects logistic regression.
     *   **Systematic Error Control (Paramount):** (i) electronic drift (ii) detector after-pulsing (iii) clock-sync bias (iv) experimenter degrees-of-freedom (blinding).
     *   **Outcome:** Deviations that survive all controls give an empirical estimate of CC($S$) (cf. Theorem 51); null results tighten the exclusion curve $\text{CC}_{\max}(S) < \epsilon(N)$.
@@ -125,7 +126,7 @@ A critical challenge for any experiment seeking to detect CC is to unambiguously
 Consider a triple‑blind protocol with:
 
 * (i) **DFS‑locked sensors**: two co‑located atomic‑clock qubits operated at a “magic” point with **zero first‑order** differential polarizability (Stark‑insensitive).
-* (ii) **Reciprocity‑null geometry**: a Ramsey‑interferometric readout with two **counter‑propagating** optical paths whose EM susceptibilities are equal and opposite (so any residual EM field produces equal shifts that **cancel** at the differenced detector).
+* (ii) **Reciprocity‑null geometry**: a Ramsey‑interferometric readout utilizing two **counter‑propagating** optical paths whose EM susceptibilities are equal and opposite. Consequently, any residual EM field produces equal shifts that **cancel** at the differenced detector output.
 * (iii) **Algorithmic‑complexity shielding**: measurement bases chosen by a stream whose **min‑entropy per bit** $H_\infty\ge 0.999$ and **Kolmogorov complexity rate** $K/L \ge 0.99$, unknown to all labs until after data lock.
 
 Then any *pure Maxwell* environment with residual EM **intensity** $I$ (Poynting magnitude), giving energy density $u = I/c$ in free space, incident on the sensors over interrogation time $T$ and with differential polarizability $\Delta\alpha$ at the magic point is bounded by:
@@ -135,13 +136,13 @@ $$
 \quad \text{(81)}
 $$
 
-*Derivation.* In a Ramsey interferometer at mid‑fringe, a small differential AC Stark shift $\Delta\omega$ between the two arms produces a phase shift $\Delta\phi=\Delta\omega\,T$. The probability bias satisfies $|\Delta P| = |\sin(\Delta\phi/2)| \approx |\Delta\phi|/2$ for small $\Delta\phi$. For a field with energy density $u$, the mean squared electric field is $\langle E^2 \rangle=u/\varepsilon_0$ (assuming linear polarization). The differential shift is $\Delta\omega=(\Delta\alpha/2\hbar)\langle E^2 \rangle=(\Delta\alpha/(2\hbar\,\varepsilon_0))\,u$. Combining gives $|\Delta P|\le (\Delta\alpha/(4\hbar\,\varepsilon_0))\,u\,T$, as stated.
+*Derivation.* In a Ramsey interferometer at mid‑fringe, a small differential AC Stark shift $\Delta\omega$ between the two arms produces a phase shift $\Delta\phi=\Delta\omega\,T$. The probability bias satisfies $|\Delta P| = |\sin(\Delta\phi/2)| \approx |\Delta\phi|/2$ for small $\Delta\phi$. For a field with energy density $u$, the mean squared electric field is $\langle E^2 \rangle=u/\varepsilon_0$ (assuming linear polarization). The differential shift is $\Delta\omega=(\Delta\alpha/(2\hbar))\langle E^2 \rangle=(\Delta\alpha/(2\hbar\,\varepsilon_0))\,u$. Combining these results yields $|\Delta P|\approx (\Delta\alpha/(4\hbar\,\varepsilon_0))\,u\,T$, establishing the bound as stated.
 
 A separate bound on algorithmic predictability confounds is given by $P_{\rm guess} \le 2^{-(H_\infty L - t)}$, where an adversary has at most $t$ bits of side-information. The **CC** effect predicted by PU, using the bounds from Theorem 51 (for $P_{Born}=1/2$), is
 $$
 |\Delta P|_{\rm PU}\ \lesssim\ \mathrm{CC}(S)/2.$$
-Using $|\Delta\alpha|\!\lesssim\!10^{-39}\,\mathrm{J\,m^2/V^2}$ and $u\!\lesssim\!10^{-18}\,\mathrm{J/m^3}$, we obtain
-$|\Delta P|_{\rm EM}\ \lesssim\ 5.36\times 10^{-13}\,T$ (with $T$ in seconds): $5.4\times 10^{-13}$ at $T=1\,\mathrm{s}$, $1.9\times 10^{-9}$ at $T=1\,\mathrm{hr}$. Hence any observed $|\Delta P|\gtrsim 10^{-6}$ **cannot** be attributed to EM channels, while PU predicts $|\Delta P|_{\rm PU}\sim \mathrm{CC}(S)\times 10^{-4}$.
+Using representative achievable values of $|\Delta\alpha|\!\lesssim\!10^{-39}\,\mathrm{J\,m^2/V^2}$ and $u\!\lesssim\!10^{-18}\,\mathrm{J/m^3}$, we obtain
+$|\Delta P|_{\rm EM}\ \lesssim\ 5.36\times 10^{-13}\,T$ (with $T$ in seconds). This yields $|\Delta P|_{\rm EM} \lesssim 5.4\times 10^{-13}$ at $T=1\,\mathrm{s}$, and $1.9\times 10^{-9}$ at $T=1\,\mathrm{hr}$. Consequently, any observed $|\Delta P|\gtrsim 10^{-6}$ **cannot** be attributed solely to these EM channels. In contrast, the PU framework predicts $|\Delta P|_{\rm PU}$ could potentially reach $\sim 10^{-4}$ (assuming $\mathrm{CC}(S) \sim 10^{-4}$).
 
 
 **13.5 Prediction/Protocol 3: Exploratory Bell Tests / Statistical FTL Search**
@@ -161,38 +162,20 @@ Addresses the most speculative prediction: potential statistical FTL influence m
     1.  **Standard Bell Test:** Verify entanglement, calibrate, establish baseline correlations $E(a,b)$.
     2.  **Context Intervention Runs:** Interleave runs with Alice generating contexts $C_{A,k}$ (e.g., $k=0, 1, 2$). Random settings $a, b$. Collect large statistics $N_{int}$ per context $k$.
 *   **Statistical Analysis:**
-    *   **Primary Focus (Statistical Influence):** Compare Bob's marginal probabilities $P(o_B | b, C_{A,k})$ across contexts $k$. Test null hypothesis $H_0: P(o_B | b, C_{A,k=1}) = P(o_B | b, C_{A,k=2})$. Rejection supports Postulate 3. Estimate shift $\Delta P_{marginal} \approx |P(o_B | b, C_{A,1}) - P(o_B | b, C_{A,2})| \le \text{CC}(S_A)$. Requires $N_{int} \gtrsim O(1/\text{CC}^2)$.
+    *   **Primary Focus (Statistical Influence):** Compare Bob's marginal probabilities $P(o_B | b, C_{A,k})$ across contexts $k$. Test the null hypothesis $H_0: P(o_B | b, C_{A,k=1}) = P(o_B | b, C_{A,k=2})$. Rejection supports Postulate 3. Estimate the shift $\Delta P_{marginal} = |P(o_B | b, C_{A,1}) - P(o_B | b, C_{A,2})|$. By Theorem 36, this shift is bounded by $\Delta P_{marginal} \lesssim \text{CC}(S_A)$. Detection requires $N_{int} \gtrsim O(1/\text{CC}^2)$ (Theorem 40).
     *   **Secondary Analysis (Correlations):** Calculate correlations $E(a,b)_k$ and Bell parameters $S_{CHSH, k}$ conditioned on context $k$. Look for differences $S_{CHSH, k=1} \neq S_{CHSH, k=2}$.
     *   **Systematic Error Control (Extreme Rigor):** Exclude conventional communication (light leaks, EM, acoustic), detector/setting correlations with $C_{A,k}$, statistical loopholes, biases.
 *   **Feasibility Assessment:** Extremely challenging. Requires state-of-the-art entanglement/measurement technology, robust space-like separation. Controlling systematics to demonstrate statistical FTL is extraordinarily difficult. Required statistics $N \propto 1/\text{CC}^2$ can be immense. Highly exploratory; positive indication needs exceptional scrutiny/replication.
 
 **13.6 Staged Experimental Approach and Considerations**
 
-A pragmatic, staged approach is recommended:
-1.  **Stage 1 (Near-Term Focus):** High-statistics QRNG tests (Protocol 1). Most accessible for detecting/bounding CC $\sim 10^{-3} - 10^{-4}$. Success depends on QRNG/interaction design, systematics control, statistical power.
-2.  **Stage 2 (Medium-Term):** If justified by Stage 1 results, pursue coherence time tests (Protocol 2) for complementary evidence. Refine QRNG tests.
-3.  **Stage 3 (Long-Term / Contingent):** Only if compelling, replicated evidence emerges, undertake demanding Bell-type experiments (Protocol 3) for statistical FTL search.
+A pragmatic, staged approach is recommended to systematically test the framework's predictions:
 
-**General Considerations:** All stages require quantum systems stable over long integration times, and careful $\alpha$‑spending to avoid inflated type‑I error. For three equally spaced looks, canonical OBF boundaries at $\alpha=0.05$ are approximately $[3.47, 2.45, 2.00]$. For Protocol 1’s primary endpoint (binary bias $\delta$), a fixed‑horizon proxy is
-$$
-N_{\rm fixed}\ \approx\ \frac{\ln(1/\alpha)}{2\,\delta^2},
-$$
-with OBF typically requiring $\approx 1.05$–$1.06$ of this information. The table gives **worked sizes** (per context) and an indicative **stop distribution under $H_1$** for three equally spaced looks:
+1.  **Stage 1 (Near-Term Focus):** High-statistics QRNG tests (Protocol 1). This protocol is the most accessible for either detecting a signal or placing meaningful upper bounds on CC in the range of $10^{-3} - 10^{-4}$. Success is contingent on meticulous QRNG and interaction-pathway design, rigorous systematics control, and achieving the required statistical power as outlined in the protocol's power analysis.
+1.  **Stage 2 (Medium-Term):** If justified by positive and replicated results from Stage 1, coherence time tests (Protocol 2) should be pursued to seek complementary evidence. This stage would also involve refining the QRNG protocols based on initial findings.
+2.  **Stage 3 (Long-Term / Contingent):** The extraordinarily demanding Bell-type experiments for a statistical FTL search (Protocol 3) should only be undertaken if compelling, independently verified evidence emerges from the earlier stages.
 
-| $\alpha$ | $\delta$ | $N_{\rm fixed}$ | $N_{\rm OBF}\ (\approx 1.06\times N_{\rm fixed})$ | Expected stop \% at looks $1/2/3$ (under $H_1$) |
-|---:|---:|---:|---:|:---|
-| 0.01 | $10^{-3}$ | 2,302,586 | 2,440,742 | $\sim$5% / 20% / 75% |
-| 0.01 | $5\times10^{-4}$ | 9,210,341 | 9,762,962 | $\sim$3% / 17% / 80% |
-| 0.01 | $10^{-4}$ | 230,258,510 | 244,074,021 | $\lesssim$1% / 10% / 89% |
-| 0.001 | $10^{-3}$ | 3,453,878 | 3,661,111 | $\sim$4% / 18% / 78% |
-| 0.001 | $5\times10^{-4}$ | 13,815,511 | 14,644,442 | $\sim$2% / 15% / 83% |
-| 0.001 | $10^{-4}$ | 345,387,764 | 366,111,030 | $\lesssim$1% / 9% / 90% |
-
-*Notes:* (i) $N_{\rm fixed}$ uses the Hoeffding‑style bound; (ii) OBF factors assume equal information times; (iii) stopping proportions reflect that OBF spends little $\alpha$ early, so most power accrues at the final look. In practice the OBF inflation factor varies mildly with effect size and information timing; 1.05–1.06 is typical for three equal looks (often within 1.03–1.08).
-
-**Data and Code Availability.** All analysis scripts (including power/sample‑size simulations), anonymized raw data, logs, and time‑stamps (with random seeds) will be made publicly available at a persistent repository; preregistration will link to the repository.
-
-**Preregistration.** Primary endpoints, inference procedures, stopping rules (including O’Brien–Fleming boundaries), and exclusion criteria will be preregistered (e.g., OSF/AsPredicted). Any deviations will be documented. The preregistration will include cryptographic hashes of the analysis scripts and frozen environment files to ensure analytical reproducibility.
+All proposed experiments require quantum systems with high stability over long integration times. Given the multiple hypotheses being tested, a clear statistical plan for controlling the family-wise error rate, for instance by pre-registering a specific $\alpha$-spending function for sequential analyses (e.g., O’Brien–Fleming boundaries), is mandatory.
 
 **13.7 Compliance with Causal Constraints**
 
@@ -210,7 +193,7 @@ The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\tex
 Beyond the direct experimental search for CC, the framework's quantitative predictions for fundamental constants and emergent gravity provide sharp, falsifiable tests.
 
 **13.8.1 The Fine-Structure Constant Matching Window**
-The framework predicts a bare value of $1/\alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 138.843$ at the PCE-Attractor. As calculated in Appendix Z.6, connecting this to the value measured at the Z-boson mass requires a finite matching constant. For the $\overline{\mathrm{MS}}$ scheme, this is $\delta_{\overline{\mathrm{MS}}} \approx +8.53\%$ [PDG2024]. Here $\delta_{\overline{\mathrm{MS}}}(M_Z)$ denotes the **finite** $\mathcal{R}$‑map evaluated at $M_Z$ (running from the Attractor boundary, thresholds, hadronic vacuum polarization, and scheme conversion). This prediction is falsifiable: if future, more precise measurements of low-energy $\alpha(0)$ or the hadronic vacuum polarization shift the required matching constant $\delta_{\overline{\mathrm{MS}}}(M_Z)$ outside a plausible range attributable to scheme conversion and threshold/hadronic effects, the PCE‑Attractor model for the origin of the U(1) coupling would be invalidated.
+The framework predicts a bare value of $1/\alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 138.843$ at the PCE-Attractor. As calculated in Appendix Z.6, connecting this to the value measured at the Z-boson mass requires a finite matching constant. For the $\overline{\mathrm{MS}}$ scheme, the required matching constant is $\delta_{\overline{\mathrm{MS}}} \approx +8.53\%$ [PDG2024]. Here $\delta_{\overline{\mathrm{MS}}}(M_Z)$ denotes the **finite** $\mathcal{R}$‑map evaluated at $M_Z$. This map accounts for the running from the Attractor boundary, including thresholds, hadronic vacuum polarization, and scheme conversion effects. This prediction is falsifiable: if future, more precise measurements of low-energy $\alpha(0)$ or the hadronic vacuum polarization shift the required matching constant $\delta_{\overline{\mathrm{MS}}}(M_Z)$ outside a plausible range attributable to scheme conversion and threshold/hadronic effects, the PCE‑Attractor model for the origin of the U(1) coupling would be invalidated.
 
 **13.8.2 The Multi-Scale Gravity / Dark Sector Window**
 The framework's two-mechanism model for the dark sector (Appendix I) is falsifiable through its demand for cross-scale consistency with a minimal set of universal parameters. The model can be falsified in several ways:

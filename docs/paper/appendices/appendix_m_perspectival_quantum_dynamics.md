@@ -2,7 +2,7 @@
 
 **M.1 Introduction**
 
-This appendix provides a detailed mathematical formalism for the concepts of the Perspectival State ($S_{(s)}(t)$, Definition 24) and the 'Evolve' dynamics (Definition 27) introduced in Section 7. The purpose is to enhance the formal precision and mathematical rigor of the description of quantum states and the measurement process presented in Sections 7 and 8, demonstrating its consistency within established mathematical structures.
+This appendix provides a detailed mathematical formalism for the concepts of the Perspectival State ($S_{(s)}(t)$, Definition 24) and the 'Evolve' dynamics (Definition 27) introduced in Section 7. The purpose is to enhance the formal precision and mathematical rigor of the description of quantum states and the interaction ('Evolve'/measurement) process presented in Sections 7 and 8, demonstrating consistency with established mathematical structures.
 
 We assume the validity of the foundational principles established earlier, including the Prediction Optimization Problem (POP, Axiom 1), Principle of Compression Efficiency (PCE, Definition 15), the existence of Minimal Predictive Units (MPUs, Definition 23) operating at complexity $C_{op} \ge K_0$, the emergence of the MPU Hilbert space $\mathcal{H}_0$ (Proposition 4), the Dual Dynamics model (Section 7.3.3), and importantly, the derivation of the Born rule from POP/PCE consistency principles as detailed in Appendix G (Theorem G.1.7). This appendix builds upon these results to provide a precise mathematical model for the stochastic dynamics associated with MPU interactions ('Evolve').
 
@@ -13,7 +13,7 @@ We formally define the components describing the state of a Minimal Predictive U
 *   **Perspectival State:** As defined in Definition 24, the complete state of an MPU at time $t$ is the **perspectival state** $S_{(s)}(t) = (S(t), s)$.
 *   **State Amplitude:** The component $S(t)$ is the state vector $|\psi(t)\rangle$, an element of the MPU's complex Hilbert space $\mathcal{H}_0$ (Proposition 4). The dimension $d_0 = \dim(\mathcal{H}_0)$ satisfies $d_0 \ge 8$ (Theorem 23).
 *   **Perspective Index:** The component $s$ is the perspective index, representing the interaction context or observational basis relevant to the MPU's potential interactions. It is an element of the Perspective Space $\Sigma$.
-*   **Perspective Space $\Sigma$:** As established by Theorem 25 and Theorem 26, the Perspective Space $\Sigma$ is mathematically identified with the set of all possible orthonormal bases (ONBs) of the Hilbert space $\mathcal{H}_0$. This space possesses the structure of a compact complex homogeneous space, specifically $\Sigma \cong U(d_0)/U(1)^{d_0}$, where $U(d_0)$ is the unitary group on $\mathcal{H}_0$ and $U(1)^{d_0}$ is the maximal torus subgroup representing the freedom to choose phases for each basis vector independently.
+*   **Perspective Space $\Sigma$:** As established by Theorem 25 and Theorem 26, the Perspective Space $\Sigma$ is mathematically identified with the space of all possible ordered orthonormal bases (ONBs) of the Hilbert space $\mathcal{H}_0$, modulo phase equivalence. This space possesses the structure of the complete flag manifold, a compact complex homogeneous space, specifically $\Sigma \cong U(d_0)/U(1)^{d_0}$. Here, $U(d_0)$ is the unitary group on $\mathcal{H}_0$ and $U(1)^{d_0}$ is the maximal torus subgroup representing the freedom to choose phases for each basis vector independently.
 *   **Metric on $\Sigma$:** The manifold $\Sigma$ is equipped with a natural distance metric $d_\Sigma(s_1, s_2)$, such as the one induced by the Fubini-Study metric on the space of projectors, which quantifies the geometric distance or "incompatibility" between two perspectives (bases) $s_1$ and $s_2$. (See Equation (42) for a related construction).
 
 This structure $(\mathcal{H}_0, \Sigma, d_\Sigma)$ provides the formal mathematical setting for describing the state and dynamics of an MPU.
@@ -28,25 +28,25 @@ During the Internal Prediction phase (Definition 26), the state amplitude $S(t) 
 $$
 i\hbar \frac{d}{dt} |\psi(t)\rangle = \hat{H} |\psi(t)\rangle \quad \text{(M.1, cf. Eq. 43)}
 $$
-This unitary evolution $U_0(\Delta t) = \exp(-i\hat{H}\Delta t/\hbar)$ acts only on the Hilbert space component $|\psi(t)\rangle$ of the Perspectival State $S_{(s)}(t)$ and proceeds continuously, irrespective of 'Evolve' events.
+This unitary evolution $U_0(\Delta t) = \exp(-i\hat{H}\Delta t/\hbar)$ acts only on the Hilbert space component $|\psi(t)\rangle$ of the Perspectival State $S_{(s)}(t)$. It proceeds continuously in the background, irrespective of 'Evolve' events.
 
 **M.3.2 Interaction ('Evolve') Dynamics as a Stochastic Process**
 
 The 'Evolve' process (Definition 27), triggered by an interaction $N(t)$, represents a stochastic transition of the full Perspectival State $S_{(s)}(t) = (|\psi(t)\rangle, s)$. Mathematically, this is described as a stochastic process occurring over a characteristic interaction time interval $\Delta t$.
 
-*   **Transition Probability Measure:** The transformation is characterized by a transition probability measure, denoted $d\mathbb{P}(f | i, N, \Delta t)$, which gives the probability for a system starting in initial state $i = (|\psi\rangle, s)$ to transition into an infinitesimal final state region $df$ centered around $f = (|\psi'\rangle, s')$ under the influence of interaction $N$ during $\Delta t$.
+*   **Transition Probability Measure:** The transformation is characterized by a transition probability measure, denoted $d\mathbb{P}(f | i, N, \Delta t)$. This gives the probability for a system starting in initial state $i = (|\psi\rangle, s)$ to transition into an infinitesimal region of the final state space centered around $f = (|\psi'\rangle, s')$, under the influence of interaction $N$ during the interval $\Delta t$.
 *   **Structure Imposed by Framework Principles:** The structure of this transition measure is constrained by the principles established earlier:
     1.  *(Amplitude Actualization)* The state amplitude component undergoes a probabilistic transition, actualizing into one of the basis states $|k\rangle_s$ corresponding to the initial perspective $s$ (assuming $s$ defines the relevant interaction basis for the immediate outcome). Let $P_k = |k\rangle_s\langle k|_s$ be the projector onto this outcome state.
     2.  *(Born Rule Probability)* The probability for the system to actualize into the specific outcome state $|k\rangle_s$ is given precisely by the Born rule probability $P_{Born}(k | |\psi\rangle, s) = |\langle k | \psi \rangle_s|^2$. This rule is derived from POP/PCE consistency principles (Appendix G, Theorem G.1.7).
     3.  *(Perspective Shift)* Concurrently with or subsequent to the amplitude actualization yielding outcome $k$, the perspective index undergoes a stochastic transition $s \to s'$. The distribution of the final perspective $s'$ depends on the initial perspective $s$, the specific outcome $k$, and the nature of the interaction $N$.
 
-*   **Formal Decomposition of the Transition:** Based on these constraints, we decompose the probability measure for the transition $(|\psi\rangle, s) \to (|k\rangle_s, s')$ occurring via interaction $N$ over $\Delta t$. The probability density for realizing outcome $k$ *and* ending in perspective $s'$ can be expressed as:
+*   **Formal Decomposition of the Transition:** Based on these constraints, we decompose the probability measure for the transition $(|\psi\rangle, s) \to (|k\rangle_s, s')$ occurring via interaction $N$ over $\Delta t$. The joint probability (density with respect to $s'$) for actualizing the amplitude into state $|k\rangle_s$ *and* transitioning the perspective to $s'$ can be expressed as:
     $$
     \frac{d\mathbb{P}( (|k\rangle_s, s') | (|\psi\rangle, s), N, \Delta t)}{d\mu(s')} = P_{Born}(k | |\psi\rangle, s) \times G_{persp}(s' | s, k, N, \Delta t) \quad \text{(M.2)}
     $$
     where:
     *   $P_{Born}(k | |\psi\rangle, s) = |\langle k | \psi \rangle_s|^2$ is the probability of amplitude actualization to outcome $k$, derived from framework principles (Appendix G).
-    *   $G_{persp}(s' | s, k, N, \Delta t)$ is the Conditional Perspective Transition Kernel. This function represents the probability density for the perspective index to transition from the initial perspective $s$ to the final perspective $s'$, *given that* outcome $k$ was actualized during the interaction $N$ over the interval $\Delta t$.
+    *   $G_{persp}(s' | s, k, N, \Delta t)$ is the Conditional Perspective Transition Kernel. This function represents the probability density (with respect to the measure $d\mu(s')$) for the perspective index to transition from the initial perspective $s$ to the final perspective $s'$, *given that* outcome $k$ was actualized during the interaction $N$ over the interval $\Delta t$.
     *   $G_{persp}$ must satisfy the properties of a Markov kernel density on the perspective space $\Sigma$. For fixed $s, k, N, \Delta t$, it must be non-negative and normalized with respect to the invariant measure $\mu(s')$ on $\Sigma$:
         $$ \int_{\Sigma} G_{persp}(s' | s, k, N, \Delta t) \, d\mu(s') = 1 \quad \forall s, k, N, \Delta t \quad \text{(M.3)} $$
     *   $d\mu(s')$ is the volume element associated with the unique unit-normalized Haar measure (invariant measure) on the compact manifold $\Sigma$.

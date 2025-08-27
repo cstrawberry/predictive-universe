@@ -10,7 +10,7 @@ V_i = \underbrace{V_{op}(i)}_{\text{Operational Cost}} + \underbrace{V_{prop}(i)
 $$
 
 where each term is a rate (power):
-*   **$V_{op}$**: The cost of maintaining the MPU's internal complexity $C_i$, given by the PU cost functions $R(C_i)$ and $R_I(C_i)$ [Def. 3].
+*   **$V_{op}$**: The cost of maintaining and operating the MPU's internal complexity $C_i$, given by the PU cost functions $R(C_i)$ and $R_I(C_i)$ [Def. 3].
 *   **$V_{prop}$**: The cost of maintaining coherent predictive links with neighbors, penalizing both information loss (decoherence) and the fundamental thermodynamic cost ($\varepsilon \ge \ln 2$) of interaction [Appx. C, D].
 *   **$V_{benefit}$**: The reward for predictive accuracy, proportional to the MPU's success in predicting the states of its neighbors, derived from its Predictive Performance $PP$ [Def. 7, D.1].
 
@@ -38,7 +38,7 @@ The PU framework reveals a deep connection between the cost of prediction and th
 
 ### N.3.1 Physically-Grounded Temperature Dependence of Resource Costs
 
-The physical operational cost function $R(C)$ (Definition 3a) represents the power required to maintain and operate the physical structures implementing a predictive complexity $C$. As a physical cost rooted in thermodynamics (e.g., Landauer dissipation), it must depend on the effective temperature $T_{eff}$ of the environment in which the MPU operates. Maintaining stable, distinguishable information states against thermal fluctuations incurs a cost that increases with temperature. Thus, we generalize the cost function to $R(C, T_{eff})$. Physical consistency requires that the marginal cost of maintaining complexity increases with temperature, i.e., $\frac{\partial^2 R}{\partial C \partial T_{eff}} > 0$. This physically-motivated generalization is necessary for analyzing systems in non-isothermal or dynamic thermal environments.
+The physical operational cost function $R(C)$ (Definition 3a) represents the power required to maintain and operate the physical structures implementing a predictive complexity $C$. As a physical cost rooted in thermodynamics (e.g., Landauer dissipation), it must depend on the effective temperature $T_{eff}$ of the environment in which the MPU operates. Maintaining stable, distinguishable information states against thermal fluctuations incurs a cost that increases with temperature. Thus, we generalize the cost function to $R(C, T_{eff})$. Physical consistency (e.g., generalized Landauer principle) requires that the cost increases with temperature, $\partial R / \partial T_{eff} > 0$. Furthermore, the marginal cost of maintaining complexity is also generally expected to increase with temperature, i.e., $\frac{\partial^2 R}{\partial C \partial T_{eff}} > 0$. This physically-motivated generalization is necessary for analyzing systems in non-isothermal or dynamic thermal environments.
 
 ### N.3.2 Thermodynamic Costs of Physical Acceleration (Unruh Effect)
 
@@ -55,83 +55,83 @@ A distinct but analogous set of thermodynamic constraints arises from the act of
 
 The PU framework establishes that information processing, particularly the irreversible logical steps inherent in the SPAP cycle, incurs a minimal thermodynamic cost (Theorem 31: $\varepsilon \ge \ln 2$). An MPU "accelerating" its predictive capabilities performs more such operations per unit time, leading to an increased rate of internal heat generation, $dQ_{internal}/dt$.
 
-If this self-generated heat is not dissipated to an external environment with perfect efficiency, the MPU's internal effective temperature, $T_{internal_eff}$, will rise. This internally generated thermal environment acts as a source of noise, directly impacting the MPU's own predictive machinery. Consistent with the temperature dependence of the physical cost function $R(C, T_{eff})$ (Section N.3.1), an increase in $T_{internal_eff}$ raises the marginal cost $\partial R / \partial C$. Consequently, to maintain a target predictive performance $PP_{op}$ or to achieve further increases in $C_P$ in the face of this self-induced noise, the MPU must allocate additional complexity, $C_{noise,internal}$. This represents another component of the total required complexity, $C_{req}$.
+If this self-generated heat is not dissipated instantaneously to an external environment (i.e., finite thermal conductivity), the MPU's internal effective temperature, $T_{internal_eff}$, will rise above the ambient temperature. This internally generated thermal environment acts as a source of noise, directly impacting the MPU's own predictive machinery. Consistent with the temperature dependence of the physical cost function $R(C, T_{eff})$ (Section N.3.1), an increase in $T_{internal_eff}$ raises the marginal cost $\partial R / \partial C$. Consequently, to maintain a target predictive performance $PP_{op}$ or to achieve further increases in $C_P$ in the face of this self-induced noise, the MPU must allocate additional complexity, $C_{noise,internal}$. This represents another component of the total required complexity, $C_{req}$.
 
 ### N.3.4 Effective Limits on the Rate of Predictive Acceleration
 
 The self-generation of internal thermal noise due to "predictive acceleration" implies an effective limit on how rapidly an MPU can increase its predictive power. Any physical system possesses a maximum rate at which it can dissipate heat, $dQ_{dissipate, max}/dt$. A critical threshold is reached when the internal heat generation rate equals this maximum dissipation rate:
-$$ dQ_{internal}/dt (A_{pred,crit}) = dQ_{dissipate, max}/dt \tag{N.4a} $$
+$$ dQ_{internal}/dt |_{A_{pred,crit}} = dQ_{dissipate, max}/dt \tag{N.4a} $$
 Attempting to increase predictive acceleration beyond this critical rate, $A_{pred,crit}$, would lead to thermal runaway, escalating operational costs, and performance degradation. Thus, $A_{pred,crit}$ acts as an effective, system-dependent "speed limit" on the rate of increase of predictive capability. PCE would drive systems to operate at predictive accelerations $A_{pred} < A_{pred,crit}$, optimizing the trade-off between rapid adaptation and the costs of managing self-induced thermal noise.
 
 ## N.4 The Unified Cost of Transgression (UCT)
 
-> **Theorem (UCT).**
-> Consider a process where an MPU (rest mass $m_0$) is accelerated along a trajectory with proper acceleration profile $a(t)$, while simultaneously performing a predictive task to achieve performance $PP(t)$ and undergoing internal predictive acceleration $A_{pred}(t)$. The total work $W_{\text{tot}}$ required for this joint process is bounded below:
->
-> $$
-> W_{\text{tot}} = W_{\text{kin}} + W_{\text{pred}}
-> $$
->
-> $$
-> \boxed{
-> W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt
-> }
-> \tag{N.5}
-> $$
->
-> where the components are defined by framework principles:
-> *   **$C_{req}(t) = C_{SPAP}(PP(t)) + C_{noise,external}(a(t)) + C_{noise,internal}(A_{pred}(t))$** is the total required complexity, comprising contributions from the predictive task itself, noise from external physical acceleration, and noise from internal predictive acceleration.
->     *   $C_{SPAP}(PP(t))$ is the complexity needed to achieve performance $PP(t)$ against the SPAP limit [Thm. 14].
->     *   $C_{noise,external}(a(t))$ is the additional complexity required to counteract Unruh noise, whose existence and monotonicity are derived from PCE equilibrium conditions [Lemma N.4].
->     *   $C_{noise,internal}(A_{pred}(t))$ is the additional complexity required to counteract self-generated thermal noise from rapid changes in internal processing rates [Section N.3.3].
-> *   **$T_{eff}(t) = T_{bath} + T_U(a(t)) + T_{internal_eff}(A_{pred}(t))$** is the total effective temperature.
-> *   **$R(C, T_{eff})$** is the PU physical operational cost function, generalized for temperature dependence [Section N.3.1].
->
-> The optimal trajectory is one that minimizes this total work integral, forcing a trade-off between reaching a destination quickly (increasing $W_{kin}$ and $W_{pred}$ via external acceleration) and adapting or learning quickly (increasing $W_{pred}$ via internal predictive acceleration), all while maintaining high predictive accuracy (increasing $W_{pred}$ via the $C_{SPAP}$ term).
+ **Theorem (UCT).**
+ Consider a process where an MPU (or MPU aggregate, with rest mass $m_0$) is accelerated along a trajectory with proper acceleration profile $a(t)$, while simultaneously performing a predictive task to achieve performance $PP(t)$ and undergoing internal predictive acceleration $A_{pred}(t)$. The total work $W_{\text{tot}}$ required for this joint process is bounded below:
+
+ $$
+ W_{\text{tot}} = W_{\text{kin}} + W_{\text{pred}}
+ $$
+
+ $$
+ \boxed{
+ W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt
+ }
+ \tag{N.5}
+ $$
+
+ where the components, derived from framework principles, are:
+ *   **$C_{req}(t) = C_{SPAP}(PP(t)) + C_{noise,external}(a(t)) + C_{noise,internal}(A_{pred}(t))$** is the total required complexity. It comprises contributions from the predictive task itself ($C_{SPAP}$), complexity needed to counteract noise from external physical acceleration ($C_{noise,external}$), and complexity to counteract noise from internal predictive acceleration ($C_{noise,internal}$).
+ *   $C_{SPAP}(PP(t))$: Baseline complexity to achieve performance $PP(t)$ approaching the SPAP limit [Thm. 14].
+ *   $C_{noise,external}(a(t))$: Additional complexity to counteract Unruh noise (derived from PCE conditions [Lemma N.4]).
+ *   $C_{noise,internal}(A_{pred}(t))$: Additional complexity to counteract self-generated thermal noise from rapid changes in internal processing rates [Section N.3.3].
+ *   **$T_{eff}(t) = T_{bath} + T_U(a(t)) + T_{internal_eff}(A_{pred}(t))$** is the total effective temperature.
+ *   **$R(C, T_{eff})$** is the PU physical operational cost function, generalized for temperature dependence [Section N.3.1].
+
+ The optimal trajectory is one that minimizes this total work integral, forcing a trade-off between reaching a destination quickly (increasing $W_{kin}$ and $W_{pred}$ via external acceleration) and adapting or learning quickly (increasing $W_{pred}$ via internal predictive acceleration), all while maintaining high predictive accuracy (increasing $W_{pred}$ via the $C_{SPAP}$ term).
 
 > **Box N.1: Worked Numerical Estimate of the Unified Cost of Transgression**
 >
-> To make the UCT concrete, we construct a hypothetical scenario with parameters chosen to demonstrate a regime where kinetic and predictive costs become comparable. These values are illustrative, not derived. For this example, we focus only on the Unruh-mediated cost.
+> To make the UCT concrete, we construct a hypothetical scenario with parameters chosen to demonstrate a regime where kinetic and predictive costs become comparable. These values are illustrative, not derived. For this example, we focus only on the Unruh-mediated cost ($C_{noise,internal}=0$).
 >
 > **Assumptions:**
 >
 > * **Probe:** Mass $m_0 = 1$ kg.
-> * **Trajectory:** Achieve a final velocity $v_f = 0.96c$ after proper time $\tau = 1$ s under constant proper acceleration.
-> * **Predictive Task:** Maintain $PP = \alpha_{SPAP} - 10^{-6}$.
-> * **PU Parameters:** For the complexity bound $C_{SPAP} \ge K / (\alpha_{SPAP}-PP)^2$ [Lemma N.2], we set $K = 1$ bit.
-> * **Cost Model:** We adopt a simple linear cost model $R(C, T_{\rm eff})=k_R C (k_B T_{\rm eff})$ and a noise model $C_{\rm noise,external}(a)=k_N (a/g_{\text{earth}})^2$, with $T_{\rm bath}\approx0$. We choose parameters for a system where predictive and noise-mitigation costs are both significant: a cost-scaling factor $k_R=2.3 \times 10^{39} \text{ (bits}\cdot\text{s)}^{-1}$ and a noise-sensitivity factor $k_N=1.0 \times 10^{-4} \text{ bits}$. These parameters are not derived but are chosen illustratively to demonstrate a regime where kinetic and predictive costs are comparable.
->
-> **Calculations:**
->
-> 1. **Kinetic Cost:**
->
->    * $\gamma=1/\sqrt{1-0.96^2}\approx3.57$.
->    * $W_{\rm kin}=m_0c^2(\gamma-1)\approx2.31\times10^{17}$ J.
-> 2. **Predictive Cost:**
->
->    * $a=(c/\tau)\cosh^{-1}\gamma\approx5.84\times10^8$ m/s².
->    * $T_U=\hbar a/(2\pi c k_B)\approx2.37\times10^{-12}$ K.
->    * $C_{SPAP} = (1 \text{ bit}) / (10^{-6})^2 = 1.0 \times 10^{12}$ bits.
->    * $C_{\rm noise,external} \approx (1.0 \times 10^{-4} \text{ bits}) \cdot (5.84\times10^8/9.8)^2 \approx 3.55 \times 10^{11}$ bits.
->    * $C_{\rm req} = C_{SPAP} + C_{noise,external} \approx 1.355 \times 10^{12}$ bits.
->    * $P_{\rm pred}=k_R\,C_{\rm req}\,(k_BT_U) \approx (2.3\times10^{39}) \cdot (1.355\times10^{12}) \cdot (1.38\times10^{-23} \cdot 2.37\times10^{-12}) \approx 1.02 \times 10^{17}$ W.
->    * $W_{\rm pred}=P_{\rm pred}\,\tau \approx 1.02 \times 10^{17}$ J.
->
-> **Conclusion:**
-> In this illustrative model, kinetic work ($\sim2.31\times10^{17}$ J) and predictive work ($\sim1.02\times10^{17}$ J) are of the same order of magnitude. Notably, the noise-mitigation complexity ($C_{noise}$) is a significant fraction ($\sim 26\%$) of the task complexity ($C_{SPAP}$), demonstrating a tangible "Unruh cost" that couples motion and prediction and illustrates the trade-off enforced by the UCT.
+> * **Trajectory:** Achieve a final velocity $v_f = 0.96c$ after proper time $\tau = 1$ s under constant proper acceleration. $T_{\rm bath}\approx0$.
+> * **Predictive Task:** Maintain a constant performance gap $\delta_{SPAP} = \alpha_{SPAP} - PP = 10^{-6}$.
+> * **PU Parameters:** We use the simplified quadratic complexity bound $C_{SPAP} \approx K / \delta_{SPAP}^2$ (Lemma N.2, approximating Theorem 14), setting the constant $K = 1$ bit.
+> * **Cost Model:** We adopt a simple cost model $R(C, T_{\rm eff})=k_R C (k_B T_{\rm eff})$ and a noise model $C_{\rm noise,external}(a)=k_N (a/g_{\text{earth}})^2$. We choose illustrative parameters such that the costs are comparable: a cost-scaling factor $k_R=2.3 \times 10^{39} \text{ s}^{-1}$ (assuming complexity $C$ is measured in bits) and a noise-sensitivity factor $k_N=1.0 \times 10^{-4} \text{ bits}$.
+
+ **Calculations:**
+
+ 1. **Kinetic Cost:**
+
+    * $\gamma=1/\sqrt{1-0.96^2}\approx3.57$.
+    * $W_{\rm kin}=m_0c^2(\gamma-1)\approx2.31\times10^{17}$ J.
+ 2. **Predictive Cost:**
+
+    * $a=(c/\tau)\cosh^{-1}\gamma\approx5.84\times10^8$ m/s².
+    * $T_U=\hbar a/(2\pi c k_B)\approx2.37\times10^{-12}$ K.
+    * $C_{SPAP} = (1 \text{ bit}) / (10^{-6})^2 = 1.0 \times 10^{12}$ bits.
+    * $C_{\rm noise,external} \approx (1.0 \times 10^{-4} \text{ bits}) \cdot (5.84\times10^8/9.8)^2 \approx 3.55 \times 10^{11}$ bits.
+    * $C_{\rm req} = C_{SPAP} + C_{noise,external} \approx 1.355 \times 10^{12}$ bits.
+    * $P_{\rm pred}=k_R\,C_{\rm req}\,(k_BT_U) \approx (2.3\times10^{39}) \cdot (1.355\times10^{12}) \cdot (1.38\times10^{-23} \cdot 2.37\times10^{-12}) \approx 1.02 \times 10^{17}$ W.
+    * $W_{\rm pred}=P_{\rm pred}\,\tau \approx 1.02 \times 10^{17}$ J.
+
+ **Conclusion:**
+ In this illustrative model, kinetic work ($\sim2.31\times10^{17}$ J) and predictive work ($\sim1.02\times10^{17}$ J) are of the same order of magnitude. Notably, the noise-mitigation complexity ($C_{noise}$) is a significant fraction ($\sim 26\%$) of the task complexity ($C_{SPAP}$), demonstrating a tangible "Unruh cost" that couples motion and prediction and illustrates the trade-off enforced by the UCT.
 
 
 ## N.5 Proof of the UCT Theorem
 
 We restate the theorem for convenience.
 
-> **Theorem (UCT).**
-> For a process where an MPU (mass $m_0$) follows a trajectory with proper acceleration $a(t)$ and achieves predictive performance $PP(t)$ in a background thermal bath at temperature $T_{bath}$, the total work $W_{\text{tot}}$ is bounded by:
-> $$
-> W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt
-> \tag{N.6}
-> $$
-> where $v_f$ is the final velocity, $T_{eff}(t)$ is the total effective temperature, and $C_{req}(t)$ is the total required predictive complexity.
+ **Theorem (UCT).**
+ For a process where an MPU (mass $m_0$) follows a trajectory with proper acceleration $a(t)$ and achieves predictive performance $PP(t)$ in a background thermal bath at temperature $T_{bath}$, the total work $W_{\text{tot}}$ is bounded by:
+ $$
+ W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt
+ \tag{N.6}
+ $$
+ where $v_f$ is the final velocity, $T_{eff}(t)$ is the total effective temperature, and $C_{req}(t)$ is the total required predictive complexity.
 
 ### N.5.1 Preparatory Lemmas
 
@@ -150,21 +150,21 @@ $$
 **Lemma N.3 (Relativistic work).** The minimum work to accelerate a mass $m_0$ from rest to final velocity $v_f$ is $W_{kin}(v_f) = m_0c^2(\gamma(v_f)-1)$.
 
 **Lemma N.4 (Complexity Cost of Environmental Noise).** An MPU operating in an effective thermal bath at temperature $T_{eff}$ must allocate additional predictive complexity $C_{noise}$ to maintain a constant target predictive performance $PP_{op}$. The existence of this cost is necessary. For any system selected for long-term viability under PCE, this cost must be a monotonically increasing function of $T_{eff}$ (for $T_{eff} > T_{base}$), with $C_{noise}=0$ at some baseline temperature $T_{base}$.
-> *Proof.* The MPU's adaptation dynamics under PCE establish the necessity and key properties of $C_{noise}(T_{eff})$. An MPU operating in a stable predictive regime seeks to maintain a target performance $PP_{op}$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the total marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20], rigorously established in **Appendix D, Eq. (D.8)**):
-> $$
-> \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda \frac{\partial R}{\partial C}\bigg|_{C^*, T_{eff}} + \frac{\partial R_I}{\partial C}\bigg|_{C^*}
-> $$
-> Let's denote the total marginal cost `MC(C, T_eff) = λ (∂R/∂C)|(C, T_eff) + (∂R_I/∂C)|C`. The LHS is constant for a fixed `PP_op`, so the equilibrium condition is `K_benefit = MC(C*, T_eff)`.
->
-> Now, consider an increase in temperature `T_eff`. From Section N.3.1, `∂R/∂C` increases with `T_eff`, so `MC(C, T_eff)` increases with `T_eff` for any fixed `C`. To restore the equality, the system must adjust its optimal complexity `C*`. The direction of this adjustment depends on the sign of `∂(MC)/∂C = λR''(C) + R_I''(C)`.
-> *   **Case 1: `∂(MC)/∂C > 0` (Increasing Marginal Costs).** To counteract the temperature-induced rise in `MC`, `C*` must *decrease*. This represents a strategy of "giving up"—reducing complexity and predictive ambition in the face of noise.
-> *   **Case 2: `∂(MC)/∂C < 0` (Decreasing Marginal Costs).** To counteract the rise in `MC`, `C*` must *increase*. This represents a strategy of "fighting back"—investing more complexity to actively combat the noise and maintain performance.
->
-> The Principle of Compression Efficiency (PCE), which drives systems to solve the Prediction Optimization Problem (POP), selects for the most robust and efficient long-term strategy. A system that adopts the "give up" strategy (Case 1) in response to persistent or increasing environmental noise will suffer a degradation of its predictive capabilities, eventually failing to meet the viability requirements of the POP (**Axiom 1**). In contrast, a system that adopts the "fight back" strategy (Case 2) actively works to maintain its predictive performance, a more robust strategy for long-term viability.
->
-> Therefore, PCE dynamics will favor the evolution of systems whose internal cost structures correspond to Case 2. While Case 1 might be a possible short-term response, it is not a stable evolutionary strategy. Any system that survives and operates effectively must have a cost structure that leads to an increase in complexity to counteract noise.
->
-> Thus, for any viable system, the optimal complexity `C*` must be a monotonically increasing function of `T_{eff}`. The noise-induced complexity cost is defined as this necessary increase: `C_noise(T_eff) := C^*(T_{eff}) - C^*(T_{base})`. It is a monotonically increasing function of `T_{eff}` for `T_{eff} > T_{base}`, and zero at the baseline temperature. QED
+ *Proof.* The MPU's adaptation dynamics under PCE establish the necessity and key properties of $C_{noise}(T_{eff})$. An MPU operating in a stable predictive regime seeks to maintain a target performance $PP_{op}$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the total marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20], rigorously established in **Appendix D, Eq. (D.8)**):
+ $$
+ \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda \frac{\partial R}{\partial C}\bigg|_{C^*, T_{eff}} + \frac{\partial R_I}{\partial C}\bigg|_{C^*}
+ $$
+ Let's denote the total marginal cost `MC(C, T_eff) = λ (∂R/∂C)|(C, T_eff) + (∂R_I/∂C)|C`. The LHS is constant for a fixed `PP_op`, so the equilibrium condition is `K_benefit = MC(C*, T_eff)`.
+
+ Now, consider an increase in temperature `T_eff`. From Section N.3.1, `∂R/∂C` increases with `T_eff`, so `MC(C, T_eff)` increases with `T_eff` for any fixed `C`. To restore the equality, the system must adjust its optimal complexity `C*`. The direction of this adjustment depends on the sign of `∂(MC)/∂C = λR''(C) + R_I''(C)`.
+ *   **Case 1: `∂(MC)/∂C > 0` (Increasing Marginal Costs).** To counteract the temperature-induced rise in `MC`, `C*` must *decrease*. This represents a strategy of "giving up"—reducing complexity and predictive ambition in the face of noise.
+*   **Case 2: `∂(MC)/∂C < 0` (Decreasing Marginal Costs).** To counteract the rise in `MC`, `C*` must *increase*. This represents a strategy of "fighting back"—investing more complexity to actively combat the noise and maintain performance.
+
+ The Principle of Compression Efficiency (PCE), which drives systems to solve the Prediction Optimization Problem (POP), selects for the most robust and efficient long-term strategy. A system that adopts the "give up" strategy (Case 1) in response to persistent or increasing environmental noise will suffer a degradation of its predictive capabilities, eventually failing to meet the viability requirements of the POP (**Axiom 1**). In contrast, a system that adopts the "fight back" strategy (Case 2) actively works to maintain its predictive performance, a more robust strategy for long-term viability.
+
+ Therefore, PCE dynamics will favor the evolution of systems whose internal cost structures correspond to Case 2. While Case 1 might be a possible short-term response, it is not a stable evolutionary strategy. Any system that survives and operates effectively must have a cost structure that leads to an increase in complexity to counteract noise.
+
+Thus, for any viable system, the optimal complexity `C*` must be a monotonically increasing function of `T_{eff}`. The noise-induced complexity cost is defined as this necessary increase: `C_noise(T_eff) := C^*(T_{eff}) - C^*(T_{base})`. It is a monotonically increasing function of `T_{eff}` for `T_{eff} > T_{base}`, and zero at the baseline temperature. QED
 
 ### N.5.2 Proof of the Inequality (N.6)
 

@@ -13,7 +13,7 @@ This appendix derives general, robust identities and bounds relating emergent ga
   \tag{W.0.1}
   $$
 
-  with $A_{\rm PCE}, \Gamma_0$ having units of **power** $[E][T]^{-1}$, and $\nu$ having units $[T]^{-1}$.
+  with $A_{\rm PCE}, \Gamma_0$ having units of **power** $[E][T]^{-1}$ (assuming $u$ and $\lambda_i$ are dimensionless).
 * **Spectral statistics (LAN/SLD‑QFI spectrum at $g=0$):** the $\{\lambda_i\}$ are the SLD‑QFI eigenvalues of the probe channel linearized at $g=0$. Let
 
   $$
@@ -53,13 +53,13 @@ $$
 g_1=\sqrt{\tfrac{5}{3}}\,g_Y\quad\text{(equivalently }g_Y=\sqrt{\tfrac{3}{5}}\,g_1\text{)}.
 $$
 
-**LAN/QFI–capacity rationale.** For a $C^1$ family of CPTP maps near $g=0$ with a full‑rank stationary state, local asymptotic normality (LAN) reduces estimation to a Gaussian shift model; the SLD–QFI eigenvalues $\{\lambda_i\}$ parameterize orthogonal local signal‑to‑noise directions. The surrogate
+**LAN/QFI–capacity rationale.** For a $C^1$ family of CPTP maps near $g=0$ with a full‑rank stationary state, local asymptotic normality (LAN) reduces estimation to a Gaussian shift model; the SLD–QFI eigenvalues $\{\lambda_i\}$ parameterize orthogonal local signal‑to‑noise directions. The surrogate objective
 
 $$
 g_{\rm true}(u)=\sum_i\ln(1+\lambda_i u)
 $$
 
-is used as a **concave** (in $u$), monotone‑in‑$u$, capacity‑like objective consistent with the LAN decomposition; it is **concave in $\lambda$** (Helstrom; Holevo; Petz; Paris–Řeháček). This appendix does not derive the existence of the Standard Model group, a task addressed in Appendix G.8. Instead, it assumes the SM group structure has emerged and proceeds to derive quantitative constraints on its coupling constants from the underlying MPU substrate’s information‑theoretic properties.
+is used as a capacity-like measure consistent with the LAN decomposition. It is **concave** and monotone in $u$. The function $\ln(1+\lambda u)$ is also **concave in $\lambda$** for fixed $u>0$ (Helstrom; Holevo; Petz; Paris–Řeháček). This appendix does not derive the existence of the Standard Model group, a task addressed in Appendix G.8. Instead, it assumes the SM group structure has emerged and proceeds to derive quantitative constraints on its coupling constants from the underlying MPU substrate’s information‑theoretic properties.
 
 **Standing assumptions.** Throughout this appendix:
 
@@ -73,16 +73,15 @@ Unless stated otherwise, the **cap‑active branch** at $\mu^\*$ is considered: 
 
 ---
 
-## W\.1 Capacity ordering and gap control
+## W.1 Capacity ordering and gap control
 
-**Lemma W\.1 (Strict convexity; unique constrained minimizer).**
-With $\gamma_{\rm eff}=2$,
+**Lemma W.1 (Strict convexity; unique constrained minimizer).**
+With $\gamma_{\rm eff}=2$, the second derivative of the potential (W.0.1) is:
 
 $$
-\phi''(u)=2A_{\rm PCE}+ \Gamma_0\nu\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}\ >\ 2A_{\rm PCE}\ >\ 0\quad\forall u\ge 0,
+\phi''(u)=2A_{\rm PCE}+ \Gamma_0\sum_i\frac{\lambda_i^2}{(1+\lambda_i u)^2}.
 $$
-
-hence $\phi$ is strictly convex on $[0,\infty)$ and has a unique constrained minimizer under either capacity constraint.
+Since $A_{\rm PCE}>0$ and the sum is non-negative, $\phi''(u) > 0$ for all $u\ge 0$. Hence $\phi$ is strictly convex on $[0,\infty)$ and has a unique constrained minimizer under either capacity constraint.
 
 **Lemma W\.2 (Jensen‑cap boundary).**
 When the Jensen‑cap is active,
@@ -95,14 +94,13 @@ $$
 **Lemma W\.3 (Gap monotonicity).**
 $\Delta_{\rm cap}(u):=g_J(u)-g_{\rm true}(u)$ satisfies $\Delta_{\rm cap}(u)\ge0$ and $\Delta'_{\rm cap}(u)\ge0$ for all $u\ge0$.
 
-*Proof.* Nonnegativity is Jensen. Derivative:
+*Proof.* Nonnegativity is Jensen's inequality applied to the concave function $\ln(1+\lambda u)$. Derivative:
 
 $$
-\Delta'_{\rm cap}(u)=\frac{Mx}{1+xu}-\sum_i\frac{\lambda_i}{1+\lambda_i u}
-=\sum_i\Bigl[\frac{x}{1+xu}-\frac{\lambda_i}{1+\lambda_i u}\Bigr]\ge0,
+\Delta'_{\rm cap}(u)=\frac{Mx}{1+xu}-\sum_i\frac{\lambda_i}{1+\lambda_i u}.
 $$
 
-since $h(\lambda):=\lambda/(1+\lambda u)$ is concave in $\lambda$ and Jensen gives $\sum_i h(\lambda_i)\le M h(x)$. $\square$
+Let $h(\lambda):=\lambda/(1+\lambda u)$. This function is concave in $\lambda$ (for $u>0$). By Jensen's inequality, the average value is less than or equal to the value at the average: $\frac{1}{M}\sum_i h(\lambda_i) \le h(\frac{1}{M}\sum_i \lambda_i) = h(x)$. Thus, $\sum_i h(\lambda_i) \le M h(x) = \frac{Mx}{1+xu}$. Therefore, $\Delta'_{\rm cap}(u) \ge 0$. $\square$
 
 **Lemma W\.4 (Quadratic gap bound).**
 Assume $\lambda_i\ge0$ and let $\lambda_{\min}=\min_i\lambda_i$. Then for all $u\ge0$,
@@ -112,13 +110,14 @@ $$
 \tag{W.1.2}
 $$
 
-*Proof.* Concavity of $f(\lambda)=\ln(1+\lambda u)$ yields the second‑order Taylor remainder bound
-
-$$
-f(\lambda)\ \ge\ f(x)+f'(x)(\lambda-x)+\frac{1}{2}\inf_{\xi\in[\lambda,x]}f''(\xi)\,(\lambda-x)^2,
-$$
-
-with $f''(\xi)=-\frac{u^2}{(1+\xi u)^2}\ge -\frac{u^2}{(1+\lambda_{\min}u)^2}$. Summing over $i$ cancels the linear term and gives the stated bound. $\square$
+*Proof.* Let $f(\lambda)=\ln(1+\lambda u)$. We use the Taylor expansion with the Lagrange form of the remainder: $f(\lambda_i) = f(x) + f'(x)(\lambda_i-x) + \frac{1}{2}f''(\xi_i)(\lambda_i-x)^2$ for some $\xi_i$ between $\lambda_i$ and $x$.
+The gap is $\Delta_{\rm cap}(u) = M f(x) - \sum_i f(\lambda_i)$. Summing the expansion over $i$ (the linear term cancels) gives:
+$\Delta_{\rm cap}(u) = -\frac{1}{2}\sum_i f''(\xi_i)(\lambda_i-x)^2$.
+Since $f''(\xi) = -\frac{u^2}{(1+\xi u)^2}$, we have:
+$\Delta_{\rm cap}(u) = \frac{u^2}{2}\sum_i \frac{(\lambda_i-x)^2}{(1+\xi_i u)^2}$.
+Since $\xi_i \ge \lambda_{\min}$, we have $(1+\xi_i u)^2 \ge (1+\lambda_{\min}u)^2$.
+$\Delta_{\rm cap}(u) \le \frac{u^2}{2(1+\lambda_{\min}u)^2} \sum_i (\lambda_i-x)^2 = \frac{M\sigma^2 u^2}{2(1+\lambda_{\min}u)^2}$.
+Nonnegativity follows from Jensen's inequality (Lemma W.3). $\square$
 
 **Remark (sharper bound).** A per‑eigenvalue refinement is
 

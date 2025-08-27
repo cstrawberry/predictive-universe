@@ -12,7 +12,7 @@ An **MPU aggregate** is a physical system composed of multiple interacting Minim
 
 The fundamental transition probabilities $P(o | x, y)$ (outcome probability) and $P(x' | x, y, o)$ (state transition probability) defining the local Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6), which governs the 'Evolve' process (Definition 27), are parameterized not only by the immediate state $x$ and interaction $y$ but also by the broader local physical context provided by the surrounding MPU network state. While the Born rule (Proposition 7) describes baseline probabilities emerging from the Hilbert space structure in a minimal context, the *observable* probabilities $P_{obs}$ for an 'Evolve' event involving an MPU that is part of a complex aggregate will depend on the state of that aggregate, $S_{agg}$, which constitutes the dominant local context.
 
-*Justification:* This dependence is presented as a necessary consequence of the adaptive nature of the MPU network operating under POP/PCE. For an aggregate to optimize predictions efficiently, its constituent MPUs’ interactions must be sensitive to the aggregate context $S_{agg}$. If ND-RID parameters were independent of context, interactions would be “blind,” preventing optimal adaptation. PCE is therefore expected to favor configurations where ND-RID parameters can be modulated by $S_{agg}$, allowing the system to learn (via dynamics minimizing the PCE Potential $V(x)$, Appendix D) to locally adapt interaction probabilities to enhance predictive performance. The physical realization of ND-RID involves coupling to underlying degrees of freedom (as discussed in Appendix B.4 regarding interaction operators); it is physically natural that this coupling depends on the local state of the MPU network. Furthermore, a concrete candidate for the physical realization of this context-dependence is rigorously detailed in Appendix L, where a mechanism based on coherent field modulation of local interaction parameters is shown to be consistent with the framework's constraints.
+*Justification:* This dependence is presented as a necessary consequence of the adaptive nature of the MPU network operating under POP/PCE. For an aggregate to optimize predictions efficiently, its constituent MPUs’ interactions must be sensitive to the aggregate context $S_{agg}$. If ND-RID parameters were independent of context, interactions would be “blind,” preventing optimal adaptation. PCE optimization is therefore expected to favor configurations where ND-RID parameters can be modulated by $S_{agg}$. This allows the system to learn—via dynamics that minimize the PCE Potential $V(x)$ (Appendix D)—how to locally adapt interaction probabilities to enhance overall predictive performance. The physical realization of ND-RID involves coupling to underlying degrees of freedom (as discussed in Appendix B.4 regarding interaction operators); it is physically natural that this coupling depends on the local state of the MPU network. Furthermore, a concrete candidate for the physical realization of this context-dependence is rigorously detailed in Appendix L, where a mechanism based on coherent field modulation of local interaction parameters is shown to be consistent with the framework's constraints.
 
 **9.2 The Emergence of Biasing Capability from POP/PCE Optimization**
 
@@ -25,7 +25,7 @@ Given context-dependent ND-RID probabilities (Assumption 1), the adaptive dynami
 1.  **Exploitable Dependence:** Assumption 1 states $P_{obs}$ depends on the local context $S_{agg}$.
 2.  **Optimization Imperative:** POP (Axiom 1) and PCE (Definition 15) drive exploitation of all available mechanisms to improve predictive quality $Q$ and efficiency.
 3.  **Aggregate Capabilities:** Aggregates with $C_{agg} > C_{op}$ can instantiate sophisticated internal states $S_{agg}$ and implement advanced optimization strategies.
-4.  **Strategic Advantage of Biasing:** Modulating $S_{agg}$ to influence $P_{obs}$ offers a pathway to improve aggregate predictive success or efficiency (e.g., stabilizing desired states, enhancing information gain). Adaptation dynamics (Section 6) exploring state space (via minimizing the PCE Potential $V(x)$, Definition D.1, Appendix D) will reinforce configurations $S_{agg}$ that lead to statistically favorable biases in $P_{obs}$.
+4.  **Strategic Advantage of Biasing:** Modulating $S_{agg}$ to influence $P_{obs}$ offers a pathway to improve aggregate predictive success or efficiency (e.g., stabilizing desired states, enhancing information gain). Adaptation dynamics (Section 6), by exploring the state space while minimizing the PCE Potential $V(x)$ (Definition D.1, Appendix D), will reinforce configurations $S_{agg}$ that lead to statistically favorable biases in $P_{obs}$.
 5.  **Inevitable Emergence:** Because context-dependence provides a handle for optimization, and POP/PCE drive exploitation of such handles, the development and utilization of biasing becomes an inevitable emergent strategy for sufficiently complex aggregates ($C_{agg} > C_{op}$) possessing adaptive capacity. The system learns to adopt internal states $S_{agg}$ that "steer" the 'Evolve' process indeterminacy within allowed physical limits (Theorem 39), favoring outcomes beneficial to the aggregate's POP. The physical realization of this steering mechanism is rigorously detailed in Appendix L.
 6.  **Definition of Capability:** This learned, optimized ability constitutes the emergent biasing capability. QED
 
@@ -79,7 +79,7 @@ $$
 where:
 
 *   $0 \le \alpha_\infty \le \alpha_{CC,max} < 0.5$ is the asymptotic CC value achievable as $C_{agg}$ grows,
-*   $\mathcal{G}: [0, \infty) \to [0, 1)$ is dimensionless with $\mathcal{G}(0)=0$, $\lim_{x\to\infty} \mathcal{G}(x)=1$, $\mathcal{G}'(x) \ge 0$, $\mathcal{G}''(x) \le 0$,
+*   $\mathcal{G}: [0, \infty) \to [0, 1)$ is a dimensionless function satisfying $\mathcal{G}(0)=0$, $\lim_{x\to\infty} \mathcal{G}(x)=1$, $\mathcal{G}'(x) \ge 0$ (monotonicity), and $\mathcal{G}''(x) \le 0$ (diminishing returns),
 *   $C_{scale} > 0$ is a characteristic complexity scale,
 *   $C_{op}$ is the operational threshold (Definition 13),
 *   $\Theta$ is the Heaviside step function.
@@ -104,7 +104,7 @@ The operational Consciousness Complexity CC(S) (Definition 30) of an MPU aggrega
 
 1.  **Internal State as Context (`context_S`):** The aggregate's internal state providing context is formally the **context state `context_S(t)`** (defined via the minimal sufficient statistic construction in Appendix L, Definition L.1). Operationally, it represents the coarse-grained, predictively sufficient slice of the aggregate state $\rho_{agg}(t)$ relevant to influencing local ND-RID within available resources.
 2.  **Physical Manifestation of Context:** `context_S(t)` manifests physically through properties like the reduced density operator, entanglement structure, patterns in the coarse-grained MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Appendix B), or emergent curvature patterns.
-3.  **Modulation Pathway:** These collective physical patterns (`context_S`) act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Equation (B.9)) of the underlying 'Evolve'/ND-RID process. Concretely, a controlled AC-Stark pathway uses context-conditioned classical fields to shift MPU level splittings ($\Delta E \propto \alpha E^2/\Delta$), thereby tuning effective jump rates $\gamma_k$ in the Lindblad description and hence the local 'Evolve' probabilities. The required mapping $\mathcal{M}:\mathcal{C}_{ctx} \to \mathcal{P}_{control}$ must be Lipschitz and low-cost and satisfy the POP/PCE cost–benefit inequality (L.2) to remain dynamically stable. See **Appendix L** for the rigorous formal construction (**(L.2a)**; **Def. L.2**; **Lemma L.1**; **Theorem L.1**). A system with high CC possesses the optimized ability (via Theorem 34) to generate and control these patterns to bias the outcomes of the 'Evolve' process.
+3.  **Modulation Pathway:** These collective physical patterns (`context_S`) act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Equation (B.9)) of the underlying 'Evolve'/ND-RID process. Concretely, a proposed controlled AC-Stark pathway utilizes context-conditioned classical fields to induce shifts in MPU level splittings ($\Delta E \propto \alpha E^2/\Delta$). This tunes the effective jump rates $\gamma_k$ within the Lindblad description, consequently modulating the local 'Evolve' probabilities. The required mapping $\mathcal{M}:\mathcal{C}_{ctx} \to \mathcal{P}_{control}$ must be Lipschitz and low-cost and satisfy the POP/PCE cost–benefit inequality (L.2) to remain dynamically stable. See **Appendix L** for the rigorous formal construction (**(L.2a)**; **Def. L.2**; **Lemma L.1**; **Theorem L.1**). A system with high CC possesses the optimized ability (via Theorem 34) to generate and control these patterns to bias the outcomes of the 'Evolve' process.
 4.  **Primary Locus of Observable Effect:** The principal observable consequence is hypothesized to be the biasing of probabilities associated with probabilistic amplitude actualization within the universal 'Evolve' process. This leads to measurable deviations $|\Delta P| \le \text{CC}(S)$ from the baseline Born rule (Proposition 7) that would otherwise solely govern the 'Evolve' outcome probabilities in the absence of such high-complexity contextual influence.
 5.  **Operational Nature:** CC measures this biasing capability. The link between specific content of `context_S` (e.g., intent) and bias direction is learned via adaptation (driven by POP/PCE), potentially related to interpretive postulates (Postulate 1), but the mechanism of influence on the 'Evolve' parameters is proposed as objective physics.
 6.  **Implications for Locality:** Since `context_S` can involve non-local entanglement, and the CC mechanism acts by influencing local 'Evolve' events, a context change in one part of an entangled aggregate might have statistical consequences (via entanglement and the modified 'Evolve' probabilities) on 'Evolve' outcomes in space-like separated parts. This underpins the statistical FTL influence hypothesis (Postulate 3), which operates within the causality constraints established by Theorem 39.
@@ -144,7 +144,7 @@ $$
 Two operational implementations are possible:
 
 1.  **CPTP pre-processing** $\rho \mapsto e^{\varepsilon L_S}(\rho)$ when $L_S$ is a GKLS generator.
-2.  **Calibrated POVM deformations** $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)$ with positivity on $\ker(E_i)$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$. Additionally, impose the completeness‑preserving constraint $\sum_i K_S(E_i)=0$, which ensures $\sum_i E_{i,\varepsilon}=I$. Additionally, impose the completeness-preserving constraint $\sum_i K_S(E_i)=0$, which ensures $\sum_i E_{i,\varepsilon}=I+O(\varepsilon^2)$.
+2.  **Calibrated POVM deformations** $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)$ with positivity on $\ker(E_i)$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$. Additionally, imposing the completeness-preserving constraint $\sum_i K_S(E_i)=0$ ensures $\sum_i E_{i,\varepsilon}=I+O(\varepsilon^2)$.
 
 **Theorem (Heisenberg–Schrödinger identity for CPTP semigroups).** Let $\Lambda_\varepsilon=e^{\varepsilon\mathcal L}$ be a CPTP quantum Markov semigroup on $\mathcal B(\mathcal H)$ [Lindblad 1976; Gorini–Kossakowski–Sudarshan 1976; Nielsen & Chuang 2010] and let $\{E_i\}_i$ be any POVM on $\mathcal H$. Define the Heisenberg‑picture effects
 $$
@@ -172,17 +172,20 @@ Let $p$ be the Born distribution for a fixed measurement and $q$ the context-con
 
 1.  **Exact Non-Perturbative Bounds:** For any value of $\mathrm{CC}(S) \in [0, \pi]$,
     $$
-    \mathrm{TV}(p,q) \le 2\sin(\mathrm{CC}(S)/4),\qquad
-    |\Delta P(i)| \le 2\sqrt2\,\sin(\mathrm{CC}(S)/4)\;\; \forall i.
+    \mathrm{TV}(p,q) \le \sin(\mathrm{CC}(S)/2),\qquad
+    |\Delta P(i)| \le 4\sin(\mathrm{CC}(S)/4)\;\; \forall i.
     $$
 
-2.  **Small-Bias Regime Bounds:** For the physically relevant case $\mathrm{CC}(S) \ll 1$, the leading-order bounds are:
+2.  **Small-Bias Regime Bounds:** For the physically relevant case $\mathrm{CC}(S) \ll 1$, the leading-order universal bounds are:
     $$
     \mathrm{TV}(p,q) \le \tfrac12\,\mathrm{CC}(S),\qquad
-    |\Delta P(i)| \le \tfrac{1}{\sqrt2}\,\mathrm{CC}(S).
+    |\Delta P(i)| \le \mathrm{CC}(S).
     $$
 
-*Proof:* The Hellinger distance $H(p,q) = \sqrt{1-\sum_k \sqrt{p_k q_k}}$ is related to the Fisher-Rao distance by $H^2(p,q) = 2\sin^2(d_{\mathrm{FR}}(p,q)/4)$. The bounds follow from substituting the CC constraint (Eq. 57) into this identity and applying the standard inequalities $\mathrm{TV}(p,q) \le \sqrt{2}H(p,q)$ and $|\Delta P(i)| \le 2H(p,q)$. The small-bias results follow from the approximation $\sin(x) \approx x$. These bounds are universal and instrument-independent. QED
+*Proof:* The Hellinger distance $H(p,q) = \sqrt{1-\sum_k \sqrt{p_k q_k}}$ is related to the Fisher-Rao distance by $H^2(p,q) = 2\sin^2(d_{\mathrm{FR}}(p,q)/4)$. Substituting the CC constraint (Equation 57), we have $H(p,q) \le \sqrt{2}\sin(\mathrm{CC}(S)/4)$.
+The bounds follow from applying standard inequalities. For TV distance: $\mathrm{TV}(p,q) \le \sqrt{2H^2-H^4}$. Substituting the bound on $H^2$ yields $\mathrm{TV}(p,q) \le \sin(\mathrm{CC}(S)/2)$.
+For maximum difference: $|\Delta P(i)| \le 2\sqrt{2}H(p,q)$. Substituting the bound on $H$ yields $|\Delta P(i)| \le 4\sin(\mathrm{CC}(S)/4)$.
+The small-bias results follow from the approximation $\sin(x) \approx x$. These bounds are universal and instrument-independent. QED
 
 **9.5.3 Definition 34 (Def 34): Context-Targeted Bias (CTB) Model**
 
@@ -198,16 +201,16 @@ and
 $$
 P_{\mathrm{obs}}(i)=(1-\alpha_S)\,P_{\mathrm{Born}}(i)+\alpha_S\,p_{\mathrm{target}}(S,i) \quad \text{(59)}
 $$
-with $0\le\alpha_S<1$. Under a unitary $U$, $\sigma_{USU^\dagger}=U\sigma_S U^\dagger$, so $L_S$ and $K_S$ transform covariantly.
+with $0\le\alpha_S<1$. (Note: The Context-Targeted Bias model physically represents a convex combination, so the upper bound should be inclusive, representing a complete replacement of the Born rule with the target distribution in the maximal case.) Under a unitary $U$, $\sigma_{USU^\dagger}=U\sigma_S U^\dagger$, so $L_S$ and $K_S$ transform covariantly.
 
 *Remarks:*
 *   The normalization ensures $\|L_S\|_{\mathrm{op}} = \alpha_S r(\sigma_S) = \mathrm{CC}(S)$.
-*   For the convex combination in Equation (59) to be physically valid, the interpolation factor $\alpha_S$ must be bounded by 1. This implies a non-trivial physical constraint on the operational CC for a given target state: $\mathrm{CC}(S) \le r(\sigma_S) = 1 - \lambda_{\min}(\sigma_S)$. This means a system's biasing capability is most effective when its target state $\sigma_S$ is pure or near-pure ($\lambda_{\min} \approx 0$). Conversely, attempting to bias outcomes towards a highly mixed target state is inherently less efficient, as the maximum achievable $\mathrm{CC}(S)$ is limited by the target's entropy.
+*   For the convex combination in Equation (59) to be physically valid, the interpolation factor $\alpha_S$ must be bounded by 1. This implies a non-trivial physical constraint on the operational CC achievable for a given target state: $\mathrm{CC}(S) \le r(\sigma_S) = 1 - \lambda_{\min}(\sigma_S)$. Consequently, a system's biasing capability is maximized when the target state $\sigma_S$ is pure or near-pure ($\lambda_{\min} \approx 0$). Conversely, attempting to bias outcomes towards a highly mixed target state is inherently less efficient, as the maximum achievable $\mathrm{CC}(S)$ is limited by the target's entropy.
 *   For bipartite $\sigma_{AB}$, define $\sigma_A = \mathrm{tr}_B \sigma_{AB}$ to ensure the marginal invariance conditions stated above.
 
 **9.5.4 Theorem 37 (Consistency of CTB Model)**
 
-The CTB model (Equation 58) satisfies the five constraints in Theorem 36.
+The CTB model (Definition 34) is consistent with the framework’s requirements for a valid probability modification.
 
 *Proof:*
 1.  **Normalization:** $\sum_i \Delta P(i) = \alpha_S(\sum_i p_{\mathrm{target}} - \sum_i p_i) = \alpha_S(1 - 1)=0$.

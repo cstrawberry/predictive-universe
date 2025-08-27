@@ -6,14 +6,16 @@ On the emergent Lorentzian manifold $(M,g)$ of §11, PU yields the standard gaug
 
 $$
 G \;=\; U(1)\times SU(2)\times SU(3)
+\tag{Y.0.1}
 $$
 
-as PCE‑preserving automorphisms of predictive frames (Conjecture G.M1, Appendix G). Chiral fermions are sections of $S^\pm\!\otimes E_R$ where $E_R$ is the $G$–associated bundle of a *predictive block* $R$ (Appendix R). The twisted Dirac index equals the block’s net chirality (Lemma R.IDX1), and anomaly additivity under block replication holds (Lemma R.IDX2).
+as PCE‑preserving automorphisms of predictive frames (Conjecture G.M1, Appendix G). Chiral fermions are sections of $S^\pm\!\otimes E_R$ where $E_R$ is the $G$–associated vector bundle corresponding to a *predictive block* representation $R$ (Appendix R). The twisted Dirac index equals the block’s net chirality (Lemma R.IDX1), and anomaly additivity under block replication holds (Lemma R.IDX2).
 
-Let $\mathcal V\subset M$ be a comoving 4‑volume bounded by two constant‑“becoming” Cauchy slices $\Sigma_i$ (early) and $\Sigma_f$ (late), with outward normal conventions of §12. Let $N_g$ be the number of predictive blocks carrying the usual $SU(2)_L$ doublets (three in the SM case). Denote the electroweak field strength $W^a_{\mu\nu}$ and its dual $\tilde W^{a\mu\nu}=\frac12\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$. The $SU(2)$ Chern–Simons functional on a slice $\Sigma$ is
+Let $\mathcal V\subset M$ be a comoving 4‑volume bounded by two Cauchy slices $\Sigma_i$ (early) and $\Sigma_f$ (late), corresponding to constant values of the emergent temporal coordinate (Section 11, Appendix O), with outward normal conventions as in §12. Let $N_g$ be the number of predictive blocks carrying the usual $SU(2)_L$ doublets (three in the SM case). Denote the electroweak field strength $W^a_{\mu\nu}$ and its dual $\tilde W^{a\mu\nu}=\frac12\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$. The $SU(2)$ Chern–Simons functional on a slice $\Sigma$ is
 
 $$
 N_{CS}(\Sigma)\;=\;\frac{g^2}{32\pi^2}\int_{\Sigma} \mathrm{tr}\!\left(\mathcal A\wedge d\mathcal A+\tfrac23\,\mathcal A\wedge\mathcal A\wedge\mathcal A\right).
+\tag{Y.0.2}
 $$
 
 
@@ -22,14 +24,14 @@ $$
 **Theorem Y.1 (Sakharov conditions hold generically in PU).**
 In any PU cosmology satisfying the emergence of spacetime (§11) and gravity (§12) and with gauge bundle $G$ from Conjecture G.M1:
 
-1. (**Baryon‑number non‑conservation**) The chiral electroweak anomaly (a corollary of Lemma R.IDX1) gives
+1. (**Baryon‑number non‑conservation**) The chiral electroweak anomaly (related to the index theorem, Lemma R.IDX1) dictates the non-conservation of the baryon ($B$) and lepton ($L$) currents:
 
    $$
    \partial_\mu J_{B+L}^\mu \;=\; 2 N_g\,\frac{g^2}{32\pi^2}\, W^a_{\mu\nu}\tilde W^{a\mu\nu}, \tag{Y.1}
    $$
 
-   i.e., $B{+}L$ is violated by topological transitions (sphalerons), with per‑generation coefficients $C_B=C_L=1$ implying $C_{B+L}=2$ in (Y.1) [’t Hooft 1976; Klinkhamer & Manton 1984].
-   If right‑handed neutrinos are *not* in the block content, the mixed gravitational anomaly can induce $B{-}L$ violation:
+   where $N_g$ is the number of generations. This implies $B{+}L$ is violated by topological transitions (e.g., sphalerons). The standard per‑generation coefficients $C_B=C_L=1$ yield the factor $2N_g$ in (Y.1) [’t Hooft 1976; Klinkhamer & Manton 1984].
+   If right‑handed neutrinos ($\nu_R$) are *not* included in the predictive block content, the mixed gravitational anomaly can induce $B{-}L$ violation:
 
    $$
    \partial_\mu J_{B-L}^\mu \;=\; c_{\rm grav}\, R\tilde R\;+\;c_Y\,F_Y\tilde F_Y, \tag{Y.2}
@@ -37,7 +39,7 @@ In any PU cosmology satisfying the emergence of spacetime (§11) and gravity (§
 
    with coefficients fixed by the block’s charges (Lemma R.IDX2). If $\nu_R$ are included, all mixed gauge and gravitational anomalies cancel, hence (Y.2)$=0$.
 
-2. (**C and CP violation**) The predictive‑frame connection carries generic complex holonomies; CP invariance requires measure‑zero phase constraints. Thus generic PU blocks violate CP without extra fields (this is the standard “complex phase is generic” statement, now anchored in the $G$–principal bundle of Conjecture G.M1).
+2. (**C and CP violation**) The emergent gauge interactions (predictive‑frame connection) carry generic complex phases (e.g., in the Yukawa couplings derived in Appendix R). CP invariance requires these phases to satisfy specific, measure‑zero constraints. Thus, generic PU configurations violate CP without requiring extra fields. This is the standard “complex phase is generic” argument, now anchored in the emergent $G$‑bundle structure (Appendix G) and the topological origin of generations (Appendix R).
 
 3. (**Departure from equilibrium**) The arrow‑of‑becoming and local horizon thermodynamics (§12; Theorem 12.G2 with positive Unruh/KMS temperature) enforce nonequilibrium during expansion. Hence all three Sakharov conditions hold without additional assumptions [Sakharov 1967].
 

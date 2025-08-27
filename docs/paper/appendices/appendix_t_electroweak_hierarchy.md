@@ -1,7 +1,7 @@
 # Appendix T: A Substrate-First Derivation of the Electroweak Scale
 
 **Abstract**
-We derive the electroweak/Planck hierarchy from first principles within the Predictive Universe (PU) framework by constructing a macroscopic effective potential directly from microscopic Minimal Predictive Unit (MPU) dynamics. The emergent scalar order parameter is a block average of a bounded, $\mathbb{Z}_2$-symmetric local observable defined from MPU primitives, which we construct via a physically-motivated ansatz to possess the quantum numbers of the Higgs vacuum expectation value. Using large-deviation theory, the effective potential is obtained as the difference of (i) a constrained operational/communication cost and (ii) a predictive-information benefit. A key geometric feature—an area law for inter-block penalties—introduces a boundary mass term that competes with a logarithmically destabilizing bulk drift. Wilsonian block recursion yields an emergent critical scale $\ell^*$ at which the quadratic curvature (mass) changes sign, triggering spontaneous symmetry breaking. We derive the Renormalization Group (RG) flow, correctly separating the logarithmic running of the bulk mass from the geometric dilution ($1/\ell$) of the boundary term. The resulting vacuum expectation value satisfies $v \simeq \zeta/(\ell^*\delta)$, yielding an exponential hierarchy $v/M_{Pl}$ from logarithmic renormalization. All coefficients are expressed in terms of MPU cumulants, mixed cumulants with the bulk cost density, and boundary cumulants arising from the ND–RID link geometry. We provide explicit MPU-native constructions and formulas for these coefficients, along with a closed-form solution for $\ell^*$ using the Lambert–$W$ function. A monotonicity argument based on emergent ferromagnetic correlations justifies the sign flip of the bulk mass. We compare this mechanism to Coleman–Weinberg, technicolor, and supersymmetry, highlighting the distinctive prediction $\partial \ln v/\partial \ln C_{\max} > 0$. This derivation is a key component of the framework's ability to explain the Standard Model's structure from first principles.
+We derive the electroweak/Planck hierarchy from first principles within the Predictive Universe (PU) framework by constructing a macroscopic effective potential directly from microscopic Minimal Predictive Unit (MPU) dynamics. The emergent scalar order parameter is a block average of a bounded, $\mathbb{Z}_2$-symmetric local observable defined from MPU primitives. We construct a concrete instance of this observable via a physically-motivated ansatz, demonstrating it can possess the necessary quantum numbers (e.g., $SU(2)_L$ triplet proxy) to track the Higgs vacuum expectation value. Using large-deviation theory, the effective potential is obtained as the difference of (i) a constrained operational/communication cost and (ii) a predictive-information benefit. A key geometric feature—an area law for inter-block penalties—introduces a boundary mass term that competes with a logarithmically destabilizing bulk drift. Wilsonian block recursion yields an emergent critical scale $\ell^*$ at which the quadratic curvature (mass) changes sign, triggering spontaneous symmetry breaking. We derive the Renormalization Group (RG) flow, correctly separating the logarithmic running of the bulk mass from the geometric dilution ($1/\ell$) of the boundary term. The resulting vacuum expectation value satisfies $v \simeq \zeta/(\ell^*\delta)$, yielding an exponential hierarchy $v/M_{Pl}$ from logarithmic renormalization. All coefficients are expressed in terms of MPU cumulants, mixed cumulants with the bulk cost density, and boundary cumulants arising from the ND–RID link geometry. We provide explicit MPU-native constructions and formulas for these coefficients, along with a closed-form solution for $\ell^*$ using the Lambert–$W$ function. A monotonicity argument based on emergent ferromagnetic correlations justifies the sign flip of the bulk mass. We compare this mechanism to Coleman–Weinberg, technicolor, and supersymmetry, highlighting the distinctive prediction $\partial \ln v/\partial \ln C_{\max} > 0$. This derivation is a key component of the framework's ability to explain the Standard Model's structure from first principles.
 
 ---
 
@@ -9,7 +9,7 @@ We derive the electroweak/Planck hierarchy from first principles within the Pred
 
 A longstanding open problem in fundamental physics is to explain the vast hierarchy between the electroweak scale and the Planck scale, $v/M_{Pl} \approx 10^{-17}$, without resorting to fine-tuning of parameters. This appendix develops a substrate-first solution within the PU framework, where physical reality emerges from the operational dynamics of a network of interacting, information-processing agents—Minimal Predictive Units (MPUs)—governed by the Principle of Compression Efficiency (PCE).
 
-The core mechanism is a competition between predictive benefits and resource costs that manifests geometrically. Under coarse-graining, this competition produces a macroscopic order parameter with an effective potential whose quadratic curvature (effective mass) runs from positive to negative at a critical block size $\ell^*$. This sign flip induces spontaneous symmetry breaking, and the resulting vacuum expectation value (VEV) is set by the inverse of this emergent length scale, $v \simeq \zeta/(\ell^*\delta)$. An exponential hierarchy, $v/M_{Pl} \ll 1$, arises because the bulk mass term runs logarithmically with scale while the stabilizing boundary term dilutes as $1/\ell$. The mechanism is contingent on the PCE-driven emergence of ferromagnetic correlations, a foundational property derived in Section T.2.4.
+The core mechanism is a competition between predictive benefits and resource costs that manifests geometrically. Under coarse-graining, this competition produces a macroscopic order parameter with an effective potential whose quadratic curvature (effective mass) runs from positive to negative at a critical block size $\ell^*$. This sign flip induces spontaneous symmetry breaking, and the resulting vacuum expectation value (VEV) is set by the inverse of this emergent length scale, $v \simeq \zeta/(\ell^*\delta)$. An exponential hierarchy, $v/M_{Pl} \ll 1$, arises because the bulk mass term runs logarithmically with scale, while the stabilizing boundary term dilutes geometrically as $1/\ell$. The mechanism is contingent on the PCE-driven emergence of ferromagnetic correlations, a foundational property derived in Section T.2.4.
 
 **Key elements.**
 
@@ -22,7 +22,7 @@ The core mechanism is a competition between predictive benefits and resource cos
 
 * No field-theory templates are assumed (contrast Coleman–Weinberg); the potential is derived from the statistics of the underlying MPU network.
 * No new confining dynamics or superpartners are introduced (contrast technicolor and SUSY).
-* Testable prediction: $\partial \ln v/\partial \ln C_{\max} > 0$—increasing ND–RID capacity raises the electroweak scale.
+* Testable prediction: $\partial \ln v/\partial \ln C_{\max} > 0$. This implies that increasing the fundamental ND–RID channel capacity $C_{\max}$ would raise the electroweak scale $v$.
 
 ---
 
@@ -33,14 +33,14 @@ The core mechanism is a competition between predictive benefits and resource cos
 * **MPUs.** The world is modeled as a network of MPUs; each MPU has an internal Hilbert space $H_0$ of dimension $d_0=8$ (Theorem 23).
 * **ND–RID links.** Interactions between neighboring MPUs are governed by Non-Deterministic Reflexive Interaction Dynamics (ND–RID), information-limited channels with classical capacity $C_{\max} < \ln d_0$ (Theorem E.2).
 * **PCE potential.** The global potential $V(x)$ balances operational/communication costs with predictive benefits (Definition D.1).
-* **Parameters.** Fundamental inputs are $(d_0,\varepsilon,C_{\max},K_0,\chi,\eta)$ and the lattice spacing $\delta$, related to the Planck length $L_P$ by the fixed PU ratio $\delta/L_P=\sqrt{8\ln 2}$ (rigorously derived in Appendix Q).
+* **Parameters.** Fundamental inputs are \$(d\_0,\varepsilon,C\_{\max},K\_0,\chi,\eta)\$ and the lattice spacing \$\delta\$. The lattice spacing is related to the Planck length \$L\_P\$ by the fixed PU ratio \$\delta/L\_P=\sqrt{8\ln 2}\$ (as derived in Appendix Q).
 * **Geometry.** We assume a $D=4$ hypercubic lattice with spacing $\delta$ and exponential clustering in the symmetric phase, consistent with the emergence of geometric regularity (Theorem 43).
 
 ### T.2.2 Modeling Ansatz for the Local Observable `mᵢ`
 
 To construct a concrete and viable instance of the mechanism, we adopt a physically-motivated *ansatz* for the local observable that acquires a vacuum expectation value. This ansatz serves as a concrete existence proof that a viable order parameter with the correct quantum numbers can be constructed from MPU primitives, allowing us to derive its VEV. The general mechanism is expected to be robust for any such emergent scalar.
 
-We choose an observable constructed from an $SU(2)_L$-triplet proxy with the quantum numbers needed to track electroweak breaking. For each MPU $i$, let $\rho_i$ be its stationary single-cycle output state. We define a set of Hermitian observables $\vec{M}_i=(M_x, M_y, M_z)$ on the MPU Hilbert space $H_0$ that transform as a triplet under the emergent $SU(2)_L$ gauge symmetry. A minimal construction, assuming $H_0$ carries representations of the SM gauge group, is $M_a:=\mathrm{diag}(\sigma_a,\sigma_a,\sigma_a,\sigma_a)$, where $\sigma_a$ are the Pauli matrices. Let $n_i$ be a unit vector in the internal $SU(2)$ space. We define the normalized score:
+We choose an observable constructed from an $SU(2)_L$-triplet proxy with the quantum numbers needed to track electroweak breaking. For each MPU $i$, let $\rho_i$ be its stationary single-cycle output state. We define a set of Hermitian observables $\vec{M}_i=(M_x, M_y, M_z)$ on the MPU Hilbert space $H_0$ that transform as a triplet under the emergent $SU(2)_L$ gauge symmetry. A minimal construction, assuming the relevant subspace of $H_0 \cong \mathbb{C}^8$ carries appropriate representations of the emergent SM gauge group (Appendix G.8), involves defining $M_a$ using the generators of $SU(2)_L$ (e.g., Pauli matrices $\sigma_a$) replicated across the necessary components of $H_0$. Let $n_i$ be a unit vector in the internal $SU(2)$ space. We define the normalized score:
 $$
 s_i := {\rm Tr}\!\left[\rho_i \,(n_i\!\cdot\!\vec M_i)\right]/\mu_0,\qquad |s_i|\le 1,
 $$
@@ -53,9 +53,9 @@ $$
 
 This appendix must be understood in the context of the broader PU framework, specifically the emergence of the Standard Model gauge group (Appendix G.8). That derivation implies the existence of an electroweak symmetry-breaking mechanism, consistent with the SM Higgs mechanism. The mechanism detailed in this appendix provides the physical origin for that symmetry breaking and determines its scale. The full set of SM Yukawa couplings and the Higgs self-coupling are posited to emerge from the same substrate dynamics, representing a key program for future work.
 
-The emergent scalar order parameter `φ` is therefore identified as a composite field that transforms as the neutral component of the SM Higgs doublet. The local observable `m_i`, chosen to be a `SU(2)_L`-triplet, serves as a proxy for the composite operator `H†σ_a H`, where `H` is the Higgs doublet. A non-zero expectation value `⟨φ⟩` thus directly corresponds to the electroweak VEV, `v`.
+The emergent scalar order parameter `φ` is therefore identified as a composite field that transforms as the neutral component of the SM Higgs doublet. The local observable components $m_{i,a}$, constructed from the $SU(2)_L$-triplet $\vec{M}_i$, serve as proxies for the components of the composite operator $H^\dagger\sigma_a H$, where $H$ is the Higgs doublet. A non-zero expectation value `⟨φ⟩` thus directly corresponds to the electroweak VEV, `v`.
 
-In this substrate-first picture, the Higgs field is not a fundamental particle but an emergent, collective mode of the MPU network itself. The derivation in this appendix successfully explains the origin and scale of its VEV—the core of the hierarchy problem. The subsequent derivation of the full set of SM Yukawa couplings (which give rise to fermion masses) and the quartic Higgs self-coupling from this MPU substrate represents a major program for future theoretical work. Operationally we monitor the gauge-invariant scalar $\phi \propto \sqrt{\langle m_a m_a\rangle}$, which coincides with $H^\dagger H$ at leading order; in unitary gauge this aligns with the neutral component of the Higgs doublet.
+In this substrate-first picture, the Higgs field is not a fundamental particle but an emergent, collective mode of the MPU network itself. The derivation in this appendix explains the origin and scale of its VEV—the core of the hierarchy problem. Operationally, we monitor the gauge-invariant scalar $\phi$ related to the coarse-grained average of $\vec{M}_i$, which corresponds to $H^\dagger H$ at leading order; in unitary gauge, this aligns with the neutral component of the Higgs doublet. The derivation of the full set of SM Yukawa couplings (which give rise to fermion masses, potentially via the mechanism in Appendix R) and the quartic Higgs self-coupling from this MPU substrate represents a major program for future theoretical work.
 
 ### T.2.4 Derivation of Emergent Ferromagnetic Correlations from PCE
 
@@ -63,46 +63,46 @@ The emergence of ferromagnetic correlations—the tendency for neighboring `m_i`
 
 #### T.2.4.1 The PCE Potential as a Function of Macroscopic Order
 
-Consider the MPU network in a stationary state.  We take the macroscopic order parameter to be the **gauge-invariant scalar** $\phi$ defined by $\phi^2 := \langle m_a m_a \rangle$, where the average is over the MPU ensemble and the sum is over the triplet components. At leading order, this corresponds to the SM operator $H^\dagger H$. All expansions below are in this gauge-invariant order parameter $\phi$. The total PCE Potential per unit volume, `V(φ)`, can be expressed as the difference between the resource cost of maintaining a state with order `φ` and the predictive benefit gained from that state:
+Consider the MPU network in a stationary state. We define the macroscopic order parameter using the coarse-grained field $\vec{\phi}$ derived from the local observables $\vec{M}_i$. We take the macroscopic order parameter to be the **gauge-invariant scalar** $\phi$ defined by $\phi^2 := \langle \vec{\phi} \cdot \vec{\phi} \rangle$, where the average is over the MPU ensemble. At leading order, this corresponds to the SM operator $H^\dagger H$. All expansions below are in this gauge-invariant order parameter $\phi$. The total PCE Potential per unit volume, `V(φ)`, can be expressed as the difference between the resource cost of maintaining a state with order `φ` and the predictive benefit gained from that state:
 $$
 V(\phi) = V_{cost}(\phi) - V_{benefit}(\phi)
 $$
-We analyze the behavior of `V(φ)` for small `φ` by expanding the cost and benefit terms around the symmetric state `φ=0`.
+We analyze the behavior of $V(\phi)$ for small $\phi$ by expanding the cost and benefit terms around the symmetric state $\phi=0$.
 
 #### T.2.4.2 The Predictive Benefit of Specialization
 
-The core of the argument lies in quantifying the predictive advantage of a symmetry-broken state. A network in the symmetric state (`φ=0`) is a general-purpose predictor. A network in a broken-symmetry state (`φ≠0`) has become *specialized*. If the environment being predicted has a corresponding regularity, the specialized network is a more efficient predictor.
+The core of the argument lies in quantifying the predictive advantage of a symmetry-broken state. A network in the symmetric state ($\phi=0$) is a general-purpose predictor. A network in a broken-symmetry state ($\phi\ne 0$) has become *specialized*. If the environment being predicted has a corresponding regularity, the specialized network is a more efficient predictor.
 
-This increased efficiency is modeled as an enhancement of the performance-efficiency parameter `κ_eff` from the Law of Prediction (Theorem 19). An ordered state is "pre-adapted" and can achieve higher predictive performance for the same computational effort. We model this dependence for small `φ` as:
+This increased efficiency is modeled as an enhancement of the performance-efficiency parameter `κ_eff` from the Law of Prediction (Theorem 19). An ordered state is "pre-adapted" and can achieve higher predictive performance for the same computational effort. We model this dependence for small $\phi$ as:
 $$
 \kappa_{eff}(\phi) = \kappa_0 + \kappa_1 \phi^2 + O(\phi^4), \quad \text{with } \kappa_1 > 0
 $$
-where `κ₀` is the efficiency in the symmetric state. The benefit term in the PCE potential is `V_{benefit} = Γ₀ \cdot PP`. The change in benefit due to order is `ΔV_{benefit}(φ) = V_{benefit}(φ) - V_{benefit}(0)`. Using the Law of Prediction (Eq. 22), and assuming the system operates at a fixed complexity `C` to predict a target `C_target`:
+where $\kappa_0$ is the efficiency in the symmetric state. The benefit term in the PCE potential is $V_{benefit} = \Gamma_0 \cdot PP$. The change in benefit due to order is $\Delta V_{benefit}(\phi) = V_{benefit}(\phi) - V_{benefit}(0)$. Using the Law of Prediction (Eq. 22), and assuming the system operates at a fixed complexity $C$ to predict a target $C_{target}$:
 $$
 \Delta V_{benefit}(\phi) = \Gamma_0 \left[ \left(\beta - (\beta-\alpha)e^{-\kappa_{eff}(\phi) \frac{C-C_{op}}{C_{target}}}\right) - \left(\beta - (\beta-\alpha)e^{-\kappa_0 \frac{C-C_{op}}{C_{target}}}\right) \right]
 $$
 $$
 \Delta V_{benefit}(\phi) = \Gamma_0 (\beta-\alpha) e^{-\kappa_0 \frac{C-C_{op}}{C_{target}}} \left[ 1 - e^{-\kappa_1 \phi^2 \frac{C-C_{op}}{C_{target}}} \right]
 $$
-For small `φ`, we expand the second exponential: `e^{-x} ≈ 1-x`.
+For small $\phi$ (and thus small $x = \kappa_1 \phi^2 \frac{C-C_{op}}{C_{target}}$), we expand the second exponential: $1-e^{-x} \approx x$.
 $$
 \Delta V_{benefit}(\phi) \approx \Gamma_0 (\beta-\alpha) e^{-\kappa_0 \frac{C-C_{op}}{C_{target}}} \left[ \kappa_1 \frac{C-C_{op}}{C_{target}} \right] \phi^2
 $$
- This is of the form `ΔV_{benefit}(φ) = k_b φ^2`, where the benefit coefficient `k_b` is positive and given by:
+ This is of the form $\Delta V_{benefit}(\phi) = k_b \phi^2$. To express the positive benefit coefficient $k_b$ in terms of the symmetric-state performance $PP_0$, we use the relations derived from the Law of Prediction (Eq. 22): the performance gap is $(\beta-PP_0) = (\beta-\alpha)e^{-\kappa_0(C-C_{op})/C_{target}}$, and the normalized complexity is $(C-C_{op})/C_{target} = (1/\kappa_0) \ln((\beta-\alpha)/(\beta-PP_0))$. Substituting these into the expression above yields:
  $$
- k_b = \Gamma_0 (\beta - PP_0) \frac{\kappa_1}{\kappa_0} \ln\left(\frac{\beta-\alpha}{\beta-PP_0}\right),
+ k_b = \Gamma_0 (\beta - PP_0) \frac{\kappa_1}{\kappa_0} \ln\left(\frac{\beta-\alpha}{\beta-PP_0}\right).
  \tag{T.1}
  $$
- where we have used `(β-α)e^{-κ_0(C-C_{op})/C_{target}} = β-PP_0` (the performance gap in the symmetric state) and `(C-C_{op})/C_{target} = (1/κ₀) \ln((\beta-\alpha)/(\beta-PP_0))`; here $PP_0$ is the symmetric-state performance and $\alpha,\beta$ are the standard bounds from the Law of Prediction (cf. Eq. 22). The coefficient `k_b` represents the marginal predictive utility of macroscopic order.
+The coefficient $k_b$ represents the marginal predictive utility of macroscopic order, depending on the fundamental bounds $\alpha, \beta$ and the efficiency gain $\kappa_1/\kappa_0$.
 
 #### T.2.4.3 The Resource Cost of Order
 
-Maintaining a coherent, macroscopically ordered state (`φ≠0`) incurs resource costs beyond the symmetric state. This includes the complexity cost of specifying the order and the communication/propagation cost of enforcing coherence across the network against the decorrelating effects of ND-RID noise. This cost must be a positive, even function of `φ` (as `φ` and `-φ` are equivalent broken states). For small `φ`, the leading term is quadratic:
+Maintaining a coherent, macroscopically ordered state ($\phi\ne 0$) incurs resource costs beyond the symmetric state. This includes the complexity cost of specifying the order and the communication/propagation cost of enforcing coherence across the network against the decorrelating effects of ND-RID noise. This cost must be a positive, even function of $\phi$. For small $\phi$, the leading term is quadratic:
 $$
 \Delta V_{cost}(\phi) = V_{cost}(\phi) - V_{cost}(0) = k_c \phi^2 + O(\phi^4)
 \tag{T.2}
 $$
-The cost coefficient `k_c > 0` is a functional of the underlying MPU network parameters. It reflects the stiffness of the system against ordering and is related to the cost of maintaining phase coherence across ND-RID links, which scales with the irreducible cost `ε`.
+The cost coefficient $k_c > 0$ is a functional of the underlying MPU network parameters. It reflects the stiffness of the system against ordering and is related to the cost of maintaining phase coherence across ND-RID links, which scales with the irreducible cost $\varepsilon$.
 
 #### T.2.4.4 The Condition for Spontaneous Symmetry Breaking
 
@@ -110,7 +110,7 @@ Combining the cost and benefit terms, the effective PCE potential near the symme
 $$
 V(\phi) \approx V(0) + \Delta V_{cost}(\phi) - \Delta V_{benefit}(\phi) = V(0) + (k_c - k_b) \phi^2 + O(\phi^4)
 $$
-The symmetric state `φ=0` is a stable minimum of the potential if the quadratic term is positive, i.e., if `k_c > k_b`. However, if the predictive benefit of specialization is sufficiently large, the potential landscape changes.
+The symmetric state $\phi=0$ is a stable minimum of the potential if the quadratic term is positive, i.e., if $k_c > k_b$. However, if the predictive benefit of specialization is sufficiently large, the potential landscape changes.
 
 **Theorem T.1 (Condition for Emergent Order).**
 The symmetric state `φ=0` becomes unstable, leading to spontaneous symmetry breaking, if and only if the marginal predictive benefit of order exceeds the marginal resource cost of order:

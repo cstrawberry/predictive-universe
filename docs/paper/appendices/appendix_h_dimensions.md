@@ -4,7 +4,7 @@
 
 This appendix records the physical dimensions assigned to key symbols in the Predictive-Universe (PU) framework and verifies the dimensional homogeneity of its core equations. It then sketches how the empirical Milgrom acceleration scale $g_{0}$—used in Appendix I—might arise from the PU vacuum structure, relating $g_{0}$ to the cosmological constant $\Lambda$.
 
-Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Energy $[E]=[M][L]^{2}[T]^{-2}$ and Temperature $[\Theta]$. Boltzmann’s constant $k_{B}$ carries $[E][\Theta]^{-1}$. Predictive Physical Complexity $[Complexity]$ is treated as a fundamental dimension unique to the PU framework, representing the non-algorithmic structural resources for prediction. Dimensionless information measures (nats) are noted where relevant. Factors of $c$ and $\hbar$ are kept explicit where needed for standard physics relations, but often $c=1, \hbar=1, k_B=1$ are used in derivations for simplicity.
+Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Energy $[E]=[M][L]^{2}[T]^{-2}$ and Temperature $[\Theta]$. Boltzmann’s constant $k_{B}$ carries $[E][\Theta]^{-1}$. Predictive Physical Complexity $[Complexity]$ is treated as a fundamental dimension within the PU framework, representing the quantifiable structural resources required for prediction. Dimensionless information measures (nats) are noted where relevant. Factors of $c$ and $\hbar$ are kept explicit where needed for standard physics relations, but often $c=1, \hbar=1, k_B=1$ are used in derivations for simplicity.
 
 ## H.2 Dimensional Assignments
 
@@ -15,7 +15,7 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Predictive Physical Complexity | $C_{P}, K_{0}, C_{\text{agg}}, \hat{C}_{\text{target}}, \hat{C}_{v}$             | $[\text{Complexity}]$                                | structural / resource capacity                       |
 | Probability / Performance     | $PP, Q, \alpha, \beta, \alpha_{\text{SPAP}}, \alpha_{\text{CC,max}}, \mathrm{CC}$ | $1$                                                  | dimensionless                                        |
 | Information / Capacity        | $\Delta I, C_{\max}(f_{\text{RID}})$                                             | $1$                                                  | dimensionless (nats)                                 |
-| Irreducible entropy (dimless) | $\varepsilon=\Delta S_{\min}/k_{B}\ge\ln2$                                       | $1$                                                  | dimensionless (nats per cycle)                       |
+| Irreducible entropy (dimless) | $\varepsilon=\Delta S_{\min}/k_{B}$ ($\ge\ln2$)                                     | $1$                                                  | dimensionless (nats per cycle)                       |
 | Reflexivity constant          | $\kappa_{r}$                                                                     | $1$                                                  | dimensionless                                        |
 | Physical cost rate            | $R(C), P_{\min}$                                                                 | $[E][T]^{-1}$                                        | power                                                |
 | Info-cost rate                | $R_I(C), r_{I}$                                                                | $[E][T]^{-1}$                                        | power                                                |
@@ -42,7 +42,7 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 | Cosmological constant         | $\Lambda$                                                                        | $[L]^{-2}$                                           | vacuum curvature                                     |
 | Empirical acceleration scale  | $g_{0}$                                                                          | $[L][T]^{-2}$                                        | Appendix I                                           |
 | Transition-length scale       | $L_{0}$                                                                          | $[L]$                                                | scale at which $G(R)$ changes                        |
-| Simulation steps / Horizon | $\mathcal{T}$ | 1 | Dimensionless count |
+| Simulation steps / Horizon    | $\mathcal{T}$                                                                | $1$                                                  | Dimensionless count                                  |
 
 
 
@@ -71,7 +71,7 @@ Using the dimensional assignments in Table H.1, we verify the dimensional homoge
     Equation is dimensionally consistent.
 
 *   **Einstein Field Equations (Equation (76))**
-    *   Equation (76): $R_{\mu\nu}$ has dimensions $[L]^{-2}$. Ricci scalar $R$ has $[L]^{-2}$. $\Lambda$ has $[L]^{-2}$. $g_{\mu\nu}$ is dimensionless metric component. $T_{\mu\nu}$ has $[E][L]^{-3}$. $G$ has $[M]^{-1}[L]^3[T]^{-2}$, $c$ has $[L][T]^{-1}$. $\frac{G}{c^4} T_{\mu\nu}$ has $\frac{[M]^{-1}[L]^3[T]^{-2}}{([L][T]^{-1})^4} [E][L]^{-3} = \frac{[M]^{-1}[L]^3[T]^{-2}}{[L]^4[T]^{-4}} [E][L]^{-3} = [M]^{-1}[L]^{-1}[T]^{2} [E][L]^{-3}$. Using $[E]=[M][L]^2[T]^{-2}$, this is $[M]^{-1}[L]^{-1}[T]^{2} [M][L]^2[T]^{-2} [L]^{-3} = [L]^{-2}$. Each term in the EFE carries dimensions of $[L]^{-2}$. Equation is dimensionally consistent.
+    *   Equation (76): $R_{\mu\nu}$ has dimensions $[L]^{-2}$. Ricci scalar $R$ has $[L]^{-2}$. $\Lambda$ has $[L]^{-2}$. $g_{\mu\nu}$ is dimensionless metric component. $T_{\mu\nu}$ has $[E][L]^{-3}$. $G$ has $[M]^{-1}[L]^3[T]^{-2}$, $c$ has $[L][T]^{-1}$. The term $\frac{8\pi G}{c^4} T_{\mu\nu}$ must also have dimensions $[L]^{-2}$. Checking the dimensions: $\frac{[G]}{[c^4]} [T_{\mu\nu}] = \frac{[M]^{-1}[L]^3[T]^{-2}}{[L]^4[T]^{-4}} [E][L]^{-3} = [M]^{-1}[L]^{-1}[T]^{2} [E][L]^{-3}$. Using $[E]=[M][L]^2[T]^{-2}$, this becomes $[M]^{-1}[L]^{-1}[T]^{2} ([M][L]^2[T]^{-2}) [L]^{-3} = [L]^{-2}$. Each term in the EFE carries dimensions of $[L]^{-2}$. Equation is dimensionally consistent.
 
 *   **SPAP Complexity Bound (Equation (B.5))**
     *   Equation (B.5) from Appendix B.3 gives the poly-logarithmic complexity divergence near the SPAP limit:
@@ -110,11 +110,19 @@ $$
 
 Combining Equation (H.2) for $T_{dS}$ and Equation (H.3) from Hypothesis H.1 allows us to express $g_0$ in terms of fundamental constants and $\Lambda$.
 The standard relationship $T_{dS} = \frac{\hbar a}{2\pi c k_B}$ relates temperature to acceleration. For de Sitter space, the relevant acceleration is related to $c^2 \sqrt{\Lambda/3}$. So $T_{dS} = \frac{\hbar c^2 \sqrt{\Lambda/3}}{2\pi c k_B} = \frac{\hbar c \sqrt{\Lambda/3}}{2\pi k_B}$, which matches Equation (H.2).
-The energy matching hypothesis $m_p g_0 \lambda_p \simeq \eta' k_B T_{dS}$ is dimensionally consistent, as both sides have units of Energy $[E]$.
-Substituting $T_{dS} = \frac{\hbar c \sqrt{\Lambda/3}}{2\pi k_B}$ into the hypothesis:
-$m_p g_0 (\hbar/(m_p c)) \simeq \eta' k_B (\frac{\hbar c \sqrt{\Lambda/3}}{2\pi k_B})$.
-$g_0 \frac{\hbar}{c} \simeq \eta' \frac{\hbar c \sqrt{\Lambda/3}}{2\pi}$.
-$g_0 \simeq \eta' \frac{c^2 \sqrt{\Lambda/3}}{2\pi}$.
+The energy matching hypothesis (H.3) is dimensionally consistent, as both sides have units of Energy $[E]$.
+We substitute the expression for $T_{dS}$ (H.2) and $\lambda_p = \hbar/(m_p c)$ into the hypothesis (H.3):
+$$
+m_p g_0 \left(\frac{\hbar}{m_p c}\right) \simeq \eta' k_B \left(\frac{\hbar c \sqrt{\Lambda/3}}{2\pi k_B}\right).
+$$
+Simplifying the terms:
+$$
+g_0 \frac{\hbar}{c} \simeq \eta' \frac{\hbar c \sqrt{\Lambda/3}}{2\pi}.
+$$
+Solving for $g_0$:
+$$
+g_0 \simeq \eta' \frac{c^2 \sqrt{\Lambda/3}}{2\pi}.
+$$
 $$
 g_{0}\simeq\eta'\,\frac{c^{2}}{2\pi}\sqrt{\frac{\Lambda}{3}}.
 \tag{H.4}

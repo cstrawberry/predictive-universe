@@ -1,6 +1,6 @@
 # 3 The Dynamics of Prediction and Interaction
 
-Building upon the foundational principles of prediction, optimization, and resource constraints established in Section 2, this section delves into the core dynamical processes governing predictive systems within the PU framework. We formally define the operational cycle—the Fundamental Predictive Loop—that systems employ to address the Prediction Optimization Problem (POP). We then introduce Reflexive Interaction Dynamics (RID) as the formal structure characterizing the crucial interaction and update phases of this loop, highlighting inherent properties that impose fundamental constraints on predictive systems. Finally, we derive the necessity of operating within specific performance bounds, defining the "Space of Becoming".
+Building upon the foundational principles of prediction, optimization, and resource constraints established in Section 2, this section delves into the core dynamical processes governing predictive systems within the PU framework. We formally define the operational cycle—the Fundamental Predictive Loop—that systems employ to address the Prediction Optimization Problem (POP). We then introduce Reflexive Interaction Dynamics (RID) as the formal structure characterizing the crucial interaction and update phases of this loop. We highlight the inherent properties of RID that impose fundamental constraints on predictive systems. Finally, we derive the necessity of operating within specific performance bounds, defining the "Space of Becoming".
 
 **3.1 The Fundamental Predictive Loop**
 
@@ -10,17 +10,17 @@ The ongoing effort to satisfy the POP (Axiom 1) necessitates a cyclical process 
 
 The Fundamental Predictive Loop is the core operational cycle through which a system attempts to maintain predictive quality concerning relevant states. It involves three essential, interconnected phases:
 1.  **Internal Prediction ($P_{int}$):** The system utilizes its current internal model ($M_t$) and available information (represented by its state $S(t)$) to generate a prediction ($\hat{S}(t+\Delta t)$ or a predictive distribution) about a relevant future state.
-2.  **Verification ($V$):** The system interacts with its environment or internal state to acquire outcome information ($S(t+\Delta t)$) corresponding to the prediction time. It compares the prediction with the outcome, computes a measure of discrepancy (Prediction Error, $PE$) or success, yielding feedback for adaptation (contributing to $\Delta Q$).
-3.  **Update/Cycle ($D_{cyc}$):** Based on the feedback from the verification phase, the system updates its internal model ($M_t \rightarrow M_{t+1}$) and potentially its operational complexity ($C(t)$). It then transitions to initiate the next predictive cycle, incorporating the updated model and state.
+2.  **Verification ($V$):** The system interacts with its environment or internal state to acquire outcome information ($S(t+\Delta t)$) corresponding to the prediction time. It compares the prediction with the outcome, computing a measure of discrepancy (Prediction Error, $PE$) or success. This yields feedback for adaptation (contributing to $\Delta Q$).
+3.  **Update/Cycle ($D_{cyc}$):** Based on the feedback from the verification phase, the system updates its internal model ($M_t \rightarrow M_{t+1}$) and potentially adjusts its operational complexity ($C(t)$) to optimize future performance relative to cost. It then transitions to initiate the next predictive cycle using the updated model and state.
 
 **3.1.2 Definition 5 (Def 5): Minimal Functional Requirements**
 
 For the Fundamental Predictive Loop (Definition 4) to operate sustainably and adaptively, the system must possess the integrated functional capabilities to:
-1.  **State Representation & Distinction ($b_m$):** Encode, maintain, and distinguish between relevant states (current state, prediction, outcome).
-2.  **Predictive Generation ($b_p$):** Execute the internal model ($M_t$) to generate predictions based on the current state.
-3.  **Verification & Update Initiation ($b_v$):** Interact to acquire outcome information, compare it with the prediction, generate an error/feedback signal, and utilize this signal to initiate the update process ($D_{cyc}$) for the model and state.
+1.  **State Representation & Distinction ($b_m$):** The ability to encode, maintain, and distinguish between relevant states (e.g., current state, prediction, outcome).
+2.  **Predictive Generation ($b_p$):** The ability to execute the internal model ($M_t$) to generate predictions based on the current state.
+3.  **Verification & Update Initiation ($b_v$):** The ability to interact to acquire outcome information, compare it with the prediction, generate an error/feedback signal, and utilize this signal to initiate the adaptive update process ($D_{cyc}$) for the model and state.
 
-These capabilities must operate in a coordinated, cyclical manner. The minimal physical resources required to implement these integrated functions correspond to the Operational Threshold $C_{op}$ (Definition 13), which necessarily satisfies $C_{op} \ge K_0$ (Corollary 3).
+These capabilities must operate in a coordinated, cyclical manner. The minimal physical resources required to implement these integrated functions correspond to the Operational Threshold $C_{op}$ (Definition 14), which necessarily satisfies $C_{op} \ge K_0$ (Corollary 3).
 
 **3.2 Reflexive Interaction Dynamics (RID)**
 
@@ -30,8 +30,8 @@ The Verification ($V$) and Update ($D_{cyc}$) phases involve interaction, which 
 
 Reflexive Interaction Dynamics (RID) formally characterizes interactions where the system's subsequent state depends intrinsically on the outcome of the interaction. (See Appendix A.2.1 for full formal definitions).
 
-*   **Deterministic RID (D-RID):** A D-RID system is a tuple $S = (X, Y, O, V, T)$, where $X$ is the set of states, $Y$ is the set of interactions, $O$ is the set of outcomes, $V: X \times Y \to O$ is the deterministic interaction function ($o = V(x, y)$), and $T: X \times Y \times O \to X$ is the deterministic state transformation function ($x' = T(x, y, o)$).
-*   **Non-Deterministic RID (ND-RID):** An ND-RID system is a tuple $S = (X, Y, O, V_{prob}, T_{prob})$, where $X, Y, O$ are as above, $V_{prob}: X \times Y \to \Delta(O)$ is the probabilistic interaction function yielding a distribution over outcomes ($P(o | x, y) = (V_{prob}(x, y))(o)$), and $T_{prob}: X \times Y \times O \to \Delta(X)$ is the probabilistic state transformation function yielding a distribution over next states ($P(x' | x, y, o) = (T_{prob}(x, y, o))(x')$).
+*   **Deterministic RID (D-RID):** A D-RID system is a tuple $S = (X, Y, O, V, T)$. Here $X$ is the set of states, $Y$ is the set of interactions, and $O$ is the set of outcomes. $V: X \times Y \to O$ is the deterministic interaction function (outcome $o = V(x, y)$), and $T: X \times Y \times O \to X$ is the deterministic state transformation function (next state $x' = T(x, y, o)$).
+*   **Non-Deterministic RID (ND-RID):** An ND-RID system is a tuple $S = (X, Y, O, V_{prob}, T_{prob})$. $V_{prob}: X \times Y \to \Delta(O)$ is the probabilistic interaction function yielding a distribution over outcomes ($P(o | x, y) = [V_{prob}(x, y)](o)$). $T_{prob}: X \times Y \times O \to \Delta(X)$ is the probabilistic state transformation function yielding a distribution over next states ($P(x' | x, y, o) = [T_{prob}(x, y, o)](x')$).
 
 The defining characteristic of RID is the dependence of the transformation ($T$ or $T_{prob}$) on the outcome $o$, creating a reflexive loop where the interaction result influences the subsequent state from which future interactions will originate. The MPU 'Evolve' process (Definition 27) is modeled as an instance of ND-RID.
 

@@ -76,7 +76,7 @@ because $T_\sigma(X)=0$ and $\|\Psi(X)\|_1\le \|X\|_1$ [Nielsen & Chuang 2010]. 
 $$
 p \;\ge\; \frac{\varepsilon}{\ln d_0}\ \ge\ \frac{\ln 2}{\ln d_0},
 $$
-hence the RID contractivity factor satisfies $f_{\mathrm{RID}}(\mathcal{E}_N)\le 1-p \le 1 - \tfrac{\ln 2}{\ln d_0}<1$. This bound assumes the reset channel is the sole source of the cycle's average irreversibility cost $\varepsilon$.
+hence the RID contractivity factor satisfies $f_{\mathrm{RID}}(\mathcal{E}_N)\le 1-p \le 1 - \tfrac{\ln 2}{\ln d_0}<1$. This bound is derived by conservatively assuming the reset channel is the dominant contributor to the cycle's average irreversibility cost $\varepsilon$; other sources of dissipation would only increase $p$ and further decrease $f_{\mathrm{RID}}$. More generally, any mechanism realizing the necessary irreversibility $\varepsilon>0$ will ensure primitivity and thus $f_{\mathrm{RID}}<1$.
 
 2.  **Consequences of Primitivity:** For a primitive CPTP map $\mathcal{E}_N$ on $\mathcal{B}(\mathcal{H}_{d_0})$ [Frigerio & Verri 1982; Wolf 2012]:
     *   There is a unique full-rank fixed point state $\rho_{fix}$ such that $\mathcal{E}_N(\rho_{fix}) = \rho_{fix}$.
@@ -110,16 +110,16 @@ That contractivity forces the channel’s classical capacity to be strictly belo
 To formalize this, we use standard definitions from quantum information theory (all logarithms are natural, giving units of nats, unless specified otherwise):
 
 *   **Quantum Channel:** A quantum channel is a completely–positive, trace–preserving (CPTP) linear map $\Phi: \mathcal{B}(\mathcal{H}_{in}) \to \mathcal{B}(\mathcal{H}_{out})$, where $\mathcal{H}_{in}$ and $\mathcal{H}_{out}$ are finite-dimensional Hilbert spaces. For the ND–RID 'Evolve' channel $\mathcal{E}_N$, we have $\mathcal{H}_{in} = \mathcal{H}_{out} = \mathcal{H}_{d_0}$, the $d_0$-dimensional MPU Hilbert space. $\mathcal{B}(\mathcal{H})$ denotes the space of bounded linear operators on $\mathcal{H}$, and $\mathcal{S}(\mathcal{H}_{d_0})$ the set of density operators on $\mathcal{H}_{d_0}$.
-*   **Trace-Norm Contractivity Factor $f_{\mathrm{RID}}(\Phi)$:** As implied by Lemma E.1, the contractivity factor is $f_{\mathrm{RID}}(\Phi) = \sup_{\rho,\sigma\in\mathcal S(\mathcal H_{d_0}), \rho\neq\sigma} \frac{\|\Phi(\rho)-\Phi(\sigma)\|_{1}}{\|\rho-\sigma\|_{1}}$, where $\|\cdot\|_1$ is the trace norm. Lemma E.1 establishes $f_{\mathrm{RID}}(\mathcal{E}_N) < 1$. When $\dim\mathcal{H}_{in}=\dim\mathcal{H}_{out}=d_0$, $f_{\mathrm{RID}}(\Phi)=1$ if and only if $\Phi$ is a unitary channel (a surjective isometry) [Pérez-García et al. 2006].
+*   **Trace-Norm Contractivity Factor $f_{\mathrm{RID}}(\Phi)$:** As implied by Lemma E.1, the contractivity factor is $f_{\mathrm{RID}}(\Phi) = \sup_{\rho,\sigma\in\mathcal S(\mathcal H_{d_0}), \rho\neq\sigma} \frac{D_{tr}(\Phi(\rho),\Phi(\sigma))}{D_{tr}(\rho,\sigma)}$, where $D_{tr}(\rho,\sigma)=\tfrac12\lVert\rho-\sigma\rVert_{1}$ is the trace distance. Lemma E.1 establishes $f_{\mathrm{RID}}(\mathcal{E}_N) < 1$. For context, when $\dim\mathcal{H}_{in}=\dim\mathcal{H}_{out}=d_0$, a channel $\Phi$ has $f_{\mathrm{RID}}(\Phi)=1$ if and only if $\Phi$ is a unitary channel (a surjective isometry) [Pérez-García et al. 2006].
 *   **One–Shot and Regularized Classical Capacities:** For a channel $\Psi$, the one–shot Holevo capacity is
     $$
     \chi^{\ast}(\Psi):=\max_{\{p_{k},\rho_{k}\}} \Bigl[ S\Bigl(\sum_{k}p_{k}\Psi(\rho_{k})\Bigr) -\sum_{k}p_{k}S\bigl(\Psi(\rho_{k})\bigr) \Bigr]
-    \tag{E.2a}
+    \tag{E.3a}
     $$
     where $S(\cdot)$ is the von Neumann entropy. The classical Shannon capacity $C(\Phi)$ is the regularized limit (HSW Theorem):
     $$
     C(\Phi):=\lim_{n\to\infty}\frac1n\chi^{\ast}(\Phi^{\otimes n})
-    \tag{E.2b}
+    \tag{E.3b}
     $$
     It is always true that $\chi^{\ast}(\Phi)\le C(\Phi)\le\ln d_0$. For the PU framework, we are interested in the true information transmission rate $C(\mathcal{E}_N)$. The following theorem establishes that this rate is strictly less than the ideal maximum if the channel is contractive.
 

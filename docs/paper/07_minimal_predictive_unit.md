@@ -18,7 +18,7 @@ b) The inherent self-referential logical structure, corresponding to the Horizon
 
 Therefore, by definition, $C_{op}$ encompasses $K_0$ ($C_{op} \ge K_0$, Corollary 3). An MPU operates under the Prediction Optimization Problem (POP, Axiom 1) subject to physical, informational ($\varepsilon > 0$, Theorem 31), and logical (SPAP, Theorem 10, Theorem 11; RID, Definition 6) constraints intrinsically tied to its $C_{op}/K_0$ structure. An MPU's state and dynamics are characterized by:
 
- 1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state amplitude $S(t)$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4, dimension $d_0 \ge 8$; see Theorem 23 and the subsequent algebraic argument) encoding predictive information, and a perspective index $s$ from the Perspective Space $\Sigma$ (Definition 25) representing the interaction context.
+1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state amplitude $S(t)$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4; dimension $d_0 \ge 8$, see Theorem 23 and the subsequent algebraic argument) that encodes predictive information, and a perspective index $s$ from the Perspective Space $\Sigma$ (Definition 25) representing the interaction context.
  2.  **Dual Dynamics:** Its evolution follows Dual Dynamics (Section 7.3.3): deterministic Internal Prediction Evolution (Definition 26) via the Schrödinger equation (Equation 43), implementing predictive generation ($b_p$), and stochastic Interaction ('Evolve', Definition 27) triggered by interaction, instantiating Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) for verification ($b_v$) and update initiation ($D_{cyc}$), whose indeterminacy stems from the inherent $K_0$ logic (Hypothesis 2).
  3.  Minimal Operational Complexity: The physical system possesses exactly the complexity $C(MPU) = C_{op}$ (Theorem 16).
 
@@ -51,13 +51,14 @@ This coherent copying (entangling for superpositions) constitutes the predictive
 
 The ‘Evolve’ interaction (Definition 27) comprises a reversible reflexive update on ($Q_M,Q_P$) and a logically irreversible ancilla reset on $Q_I$:
 
-*   **Reversible Reflexive Update (on $Q_M,Q_P$):**
+*   **Reversible Reflexive Update (on $Q_M,Q_P,Q_A$):**
     *   Logical steps:
-        (i) Prediction is present in $Q_P$ (from $U_{pred}$).
-        (ii) Reflexive update: $Q_M \leftarrow \text{NOT}(Q_P)$, and retain the pre-update state in $Q_P$.
-    *   Net effect on the pair $(m,p)$ in the computational basis:
-        $(m,p) \mapsto (\neg m, m)$.
-    *   A two-qubit permutation unitary $U_{rev}$ on $Q_MQ_P$ implements this map.
+        (i) Prediction $p$ is present in $Q_P$ (from $U_{pred}$).
+        (ii) Reversible update: set $Q_M \leftarrow \text{NOT}(Q_P)$ while preserving the pre‑update $m$ in an ancilla $Q_A$.
+    *   Net effect on the triple $(m,p,a)$ in the computational basis:
+        $(m,p,a) \mapsto (\neg p,\,p,\,m)$.
+    *   This is a bijection (a 3‑qubit permutation) and thus unitary. One explicit implementation is:
+        $\mathrm{SWAP}(Q_M,Q_A)$; $\mathrm{CNOT}(Q_P\!\to\!Q_M)$; $X(Q_M)$.
 
 *   **Ancilla Reset (on $Q_I$):**
     *   Reset $Q_I$ to $|0\rangle$ irrespective of its prior state via a completely positive trace-preserving (CPTP) map with Kraus operators acting on $\mathcal{H}_0 = \mathcal{H}_{MP} \otimes \mathcal{H}_I$:
@@ -91,21 +92,21 @@ Let $V(C) = \lambda R(C) + R_I(C) - \Gamma_0 PP(C)$, with:
 Derivatives at $C = K_0$:
 *   $R'(K_0) = 0$ (right-derivative) for $\gamma_p > 1$; $R''(K_0) = \gamma_p(\gamma_p - 1) r_p (C - C_{op})^{\gamma_p - 2}$, hence $R''(K_0) = 2 r_p$ for $\gamma_p = 2$.
 *   $R_I'(K_0) = r_I/(K_0 \ln 2)$, $R_I''(K_0) = - r_I/(K_0^2 \ln 2)$.
-*   $PP'(K_0) = (\beta - \alpha) \kappa_{eff} / K_0$, $PP''(K_0) = - (\beta - \alpha) \kappa_{eff}^2 / K_0^2$.
+*   $PP'(K_0) = (\beta - \alpha) \kappa_{\mathrm{eff}} / K_0$, $PP''(K_0) = - (\beta - \alpha) \kappa_{\mathrm{eff}}^2 / K_0^2$.
 
 Optimality at $C = K_0$ requires $V'(K_0) = 0$, yielding
 $$
-\Gamma_0 = \frac{K_0}{(\beta - \alpha)\,\kappa_{eff}} \left( \lambda\,R'(K_0) + \frac{r_I}{K_0 \ln 2} \right) > 0.
+\Gamma_0 = \frac{K_0}{(\beta - \alpha)\,\kappa_{\mathrm{eff}}} \left( \lambda\,R'(K_0) + \frac{r_I}{K_0 \ln 2} \right) > 0.
 $$
 Local minimality requires $V''(K_0) > 0$. Substituting $\Gamma_0$ gives
 $$
-V''(K_0) \;=\; \lambda\,R''(K_0) + \frac{\lambda\,\kappa_{eff}}{K_0} R'(K_0) + \frac{r_I}{K_0^2 \ln 2}\,(\kappa_{eff} - 1) \;>\; 0.
+V''(K_0) \;=\; \lambda\,R''(K_0) + \frac{\lambda\,\kappa_{\mathrm{eff}}}{K_0} R'(K_0) + \frac{r_I}{K_0^2 \ln 2}\,(\kappa_{\mathrm{eff}} - 1) \;>\; 0.
 $$
 For $\gamma_p = 2$ (so $R'(K_0) = 0$ and $R''(K_0) = 2 r_p > 0$), this condition reduces to
 $$
-2\lambda r_p + \frac{r_I}{K_0^2 \ln 2}\,(\kappa_{eff} - 1) > 0,
+2\lambda r_p + \frac{r_I}{K_0^2 \ln 2}\,(\kappa_{\mathrm{eff}} - 1) > 0,
 $$
-which is readily satisfiable for $\lambda r_p > 0$ and $\kappa_{eff} \ge 1$ (or more generally by parameter choice consistent with convex $R$ and concave $PP$). Thus, this 3-qubit MPU can be a local minimizer of $V(C)$ at $C = K_0$ under physically reasonable parameter regimes, thereby solving POP at the minimal admissible complexity.
+which is readily satisfiable for $\lambda r_p > 0$ and $\kappa_{\mathrm{eff}} \ge 1$ (or more generally by parameter choice consistent with convex $R$ and concave $PP$). Thus, this 3-qubit MPU can be a local minimizer of $V(C)$ at $C = K_0$ under physically reasonable parameter regimes, thereby solving POP at the minimal admissible complexity.
 
 #### Minimal Predictive Algebra and the Dimension $d_0 = 8$
 
@@ -120,7 +121,7 @@ corresponding to (i) the **quantum superposition register** (nontrivial Gleason/
 *Proof sketch.*
 
 1. *Quantum register ($M_2$).* Born weights are derived via a Gleason/Busch argument (App. G.1), which requires a nontrivial quantum factor; the minimal such factor is $M_2(\mathbb C)$.
-2. *Pointer ($M_2$).* An RID step that erases $\ge\ln 2$ nats requires a binary irreversible kernel *represented within the MPU* (PU minimalism). If this bit were purely classical/external, the measured algebra would fail the non‑contextuality used in App. G. Thus an internal $M_2(\mathbb C)$ factor is necessary to carry the pointer coherently pre‑RID.
+2. *Pointer ($M_2$).* An RID step that erases $\ge\ln 2$ nats requires a binary irreversible kernel *represented within the MPU* (PU minimalism). If this bit were purely classical or external, the measured algebra would fail the non‑contextuality assumption required in App. G. Thus an internal $M_2(\mathbb C)$ factor is necessary to carry the pointer coherently pre‑RID.
 3. *Recursion ($M_2$).* Closing SPAP demands a control qubit that (a) gates prediction/verification, (b) enforces reversibility of the unitary part, and (c) keeps predictive consistency across frames (Sec. 5). This control must be representable as a two‑state quantum factor to preserve PCE symmetry across frame refinements; otherwise mixture linearity in the frame function is violated.
 4. *Commutation & minimality.* These three roles must commute (control/pointer may not disturb the superposition algebra outside RID). By the structure theorem for finite C\*-algebras, the smallest algebra containing three commuting $M_2(\mathbb C)$ factors is $M_2(\mathbb C)\otimes M_2(\mathbb C)\otimes M_2(\mathbb C) \cong M_8(\mathbb C)$ of dimension $8$.
 5. *Exclusion $d_0<8$.* If $d_0<8$, $\mathfrak A$ cannot contain three commuting $M_2$’s; one of the three registers collapses (violating either App. G additivity, the RID cost bound, or SPAP closure).
@@ -146,7 +147,7 @@ A complex Hilbert space $\mathcal{H}_0$ emerges as the necessary mathematical st
 1.  **Probabilistic Framework:** 'Evolve' interactions are indeterminate (Theorem 27, Theorem 28), requiring a state space supporting probability assignments.
 2.  **Superposition:** Logical Indeterminacy (Definition 12) from SPAP necessitates representing coexisting outcome potentials, requiring linear superposition beyond classical probability mixtures.
 3.  **Inner Product & Born Rule:** **Inner Product & Born Rule:** Consistent probability assignment across perspectives mandates an inner product structure, leading uniquely to the Born rule (**Proposition 7**) via Gleason's theorem (see **Lemma G.1.1**).
-4.  **Complex Field ($\mathbb{C}$):** Consistent composition of multiple MPUs (tensor products) and representing dynamics/complementarity favors the complex field over real or quaternionic structures due to properties like local tomography and unitary group structure.
+4.  **Complex Field ($\mathbb{C}$):** Consistent composition of multiple MPUs (tensor products) and the representation of continuous dynamics and complementarity favor the complex field over real or quaternionic structures, due to properties such as efficient local tomography and the structure of the unitary group (see Appendix G.1.4).
 5.  **Completeness:** Mathematical consistency requires a complete normed space (Hilbert space).
 6.  **Minimal Dimension:** $C_{op} \ge K_0$ implies $d_0 \ge 8$ (Theorem 23).
 The combination uniquely compels representation within a complex Hilbert space $\mathcal{H}_0$ of dimension $d_0 \ge 8$. QED
@@ -181,7 +182,7 @@ d_\Sigma(s_1, s_2) \;=\; \frac{1}{\sqrt{2}} \inf_{D_1, D_2 \in U(1)^{d_0}}
 \left\| \log\!\big( D_1\, U_1^\dagger U_2\, D_2 \big) \right\|_F,
 \quad \text{(42)}
 $$
-where $\|\cdot\|_F$ is the Frobenius norm and $\log$ is the principal matrix logarithm on $U(d_0)$. This defines a true metric on the quotient manifold $\Sigma$.
+where $\|\cdot\|_F$ is the Frobenius norm and $\log(\cdot)$ denotes the principal matrix logarithm on $U(d_0)$. This defines a true metric on the quotient manifold $\Sigma$.
 
 **7.2.7 Theorem 26 (Consistency Requirement for $\Sigma$ Identification)**
 
@@ -230,7 +231,7 @@ $$
 (S(t+\Delta t), s') \sim \text{Evolve}(S_{(s)}(t), N(t)) \quad \text{(44)}
 $$
 As formalized in Appendix M (Equation M.2), the 'Evolve' process comprises two conceptually distinct but intertwined components:
-1.  **Probabilistic Amplitude Actualization:** The state amplitude $S(t)=|\psi(t)\rangle$ actualizes to one of the possible outcome states $|i\rangle_s$ corresponding to the interaction perspective $s$. This occurs with probability given by the Born rule (Proposition 7, Equation 50): $P(i|S(t), s) = |\langle i | S(t) \rangle_s|^2$. The resulting amplitude is $S(t+\Delta t) = |i\rangle_s$.
+1.  **Probabilistic Amplitude Actualization:** The state amplitude $S(t)=|\psi(t)\rangle$ actualizes to one of the possible outcome states $|i\rangle_s$ corresponding to the interaction perspective $s$. This occurs with probability given by the Born rule (Proposition 7, Equation 50): $P(i|S(t), s) = |\langle i | S(t) \rangle_s|^2$. The resulting amplitude is $S(t+\Delta t) = |i\rangle_s$ (normalized).
 2.  **Stochastic Perspective Shift:** Simultaneously or immediately following actualization, the perspective index $s$ transitions stochastically to a new perspective $s'$ according to a Conditional Perspective Transition Kernel $G_{persp}(s' | s, i, N, \Delta t)$ defined on the Perspective Space $\Sigma$ (Definition 25, elaborated in Appendix M, Section M.3.3). This shift reflects the system registering the specific interaction context $N(t)$ and the outcome $i$.
 The post-interaction state is the specific realized perspectival state $(|i\rangle_s, s')$. 'Evolve' is the fundamentally stochastic (Theorem 27, Theorem 28), resource-consuming (due to $\varepsilon>0$, Theorem 31) step where predictive information is verified and updated, driving the adaptation cycle.
 
@@ -271,9 +272,9 @@ $$
     \varepsilon \ge \varepsilon_{logic} = \ln 2
     $$
 
-*Proof Summary:* The strict lower bound $\varepsilon \ge \ln 2$ arises fundamentally from the logical structure of the self-referential SPAP update cycle inherent in the MPU's 'Evolve' process (Definition 27). As rigorously derived in Appendix J (Theorem J.1), any physical implementation of this cycle necessitates a logically irreversible state-space merging to resolve the self-reference and close the predictive loop under finite complexity constraints (Section J.2). Applying Landauer's principle to this unavoidable logical erasure yields the universal minimum dimensionless entropy cost $\varepsilon_{logic} = \ln 2$ that must be dissipated to the environment per cycle involving non-trivial self-referential information gain (Section J.3). The total effective cost $\varepsilon$ associated with the 'Evolve' step must account for this fundamental logical requirement, hence $\varepsilon \ge \ln 2$. QED
+*Proof Summary:* The strict lower bound $\varepsilon \ge \ln 2$ arises fundamentally from the logical structure of the self-referential SPAP update cycle inherent in the MPU's 'Evolve' process (Definition 27). As rigorously derived in Appendix J (Theorem J.1), any physical implementation of this cycle necessitates a logically irreversible merging of the state space to resolve the self-reference and close the predictive loop under finite complexity constraints (Section J.2). Applying Landauer's principle to this unavoidable logical erasure yields the universal minimum dimensionless entropy cost $\varepsilon_{logic} = \ln 2$ that must be dissipated to the environment per cycle involving non-trivial self-referential information gain (Section J.3). The total effective cost $\varepsilon$ associated with the 'Evolve' step must account for this fundamental logical requirement, hence $\varepsilon \ge \ln 2$. QED
 
-The strict positivity and universality of this irreducible cost $\varepsilon$ is of profound consequence. Beyond underpinning the Reflexivity Constraint (Theorem 33) and limiting ND-RID channel capacity (Appendix E), it serves as the fundamental thermodynamic ratchet that physically enforces the emergent arrow of time, ensuring the directionality of macroscopic evolution (Appendix O, Theorem O.3). The full derivation of $\varepsilon \ge \ln 2$ is provided in **Appendix J**.
+The strict positivity and universality of this irreducible cost $\varepsilon$ are of profound consequence. Beyond underpinning the Reflexivity Constraint (Theorem 33) and limiting ND-RID channel capacity (Appendix E), it serves as the fundamental thermodynamic ratchet that physically enforces the emergent arrow of time, ensuring the directionality of macroscopic evolution (Appendix O, Theorem O.3). The full derivation of $\varepsilon \ge \ln 2$ is provided in **Appendix J**.
 
 **7.4.5 Theorem 32 (Fundamental Info-Thermo Bound for 'Evolve')**
 
@@ -294,7 +295,7 @@ $$
 \Delta I \cdot (\Delta S_{min}/k_B) \geq \kappa_r \quad \text{(48)}
 $$
 where the **Reflexivity Constant** $\kappa_r$ is guaranteed to be strictly positive ($\kappa_r > 0$) due to $\Delta I_{min} > 0$ and the necessary cost $\varepsilon \ge \ln 2 > 0$ (Theorem 31), assuming a non-negative minimal feedback cost $D_{KL, min} \ge 0$.
-*Proof:* From Theorem 32 **(specifically, Equation (47) which applies when $I>0$)**, we have the bound $\frac{\Delta S_{min}(o)}{k_B} \ge I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon$. For any interaction yielding at least $\Delta I_{min}$ information and having a minimal feedback cost of $D_{KL, min}$, this implies $\Delta S_{min}(o)/k_B \ge \Delta I + D_{KL, min} + \varepsilon$. Multiplying by $\Delta I$ yields $\Delta I \cdot (\Delta S_{min}(o)/k_B) \ge h(\Delta I)$, where $h(\Delta I) = \Delta I (\Delta I + D_{KL, min} + \varepsilon)$. The function $h(\Delta I)$ increases for $\Delta I>0$ since $\varepsilon>0, D_{KL,min}\ge 0$. Its minimum value for $\Delta I \ge \Delta I_{min}$ occurs at $\Delta I_{min}$, defining $\kappa_r = h(\Delta I_{min}) = \Delta I_{min} (\Delta I_{min} + D_{KL, min} + \varepsilon)$. Since $\Delta I_{min}>0$ and $\varepsilon > 0$, $\kappa_r$ is strictly positive. (See **Appendix E.1** and derivation from Theorem 32). QED
+*Proof:* From Theorem 32, **Equation (47) (which applies when $I>0$)**, we have the bound $\frac{\Delta S_{min}(o)}{k_B} \geq I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon$. For any interaction yielding at least $\Delta I_{min}$ information and having a minimal feedback cost of $D_{KL, min}$, this implies $\Delta S_{min}(o)/k_B \ge \Delta I + D_{KL, min} + \varepsilon$. Multiplying by $\Delta I$ yields $\Delta I \cdot (\Delta S_{min}(o)/k_B) \ge h(\Delta I)$, where $h(\Delta I) = \Delta I (\Delta I + D_{KL, min} + \varepsilon)$. The function $h(\Delta I)$ increases for $\Delta I>0$ since $\varepsilon>0, D_{KL,min}\ge 0$. Its minimum value for $\Delta I \ge \Delta I_{min}$ occurs at $\Delta I_{min}$, defining $\kappa_r = h(\Delta I_{min}) = \Delta I_{min} (\Delta I_{min} + D_{KL, min} + \varepsilon)$. Since $\Delta I_{min}>0$ and $\varepsilon > 0$, $\kappa_r$ is strictly positive. (See **Appendix E.1** and derivation from Theorem 32). QED
 
 **7.4.7 Baseline Operational Costs vs. Interaction Costs**
 

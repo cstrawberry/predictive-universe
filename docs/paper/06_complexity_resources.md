@@ -13,7 +13,7 @@ Given the relationship between Predictive Physical Complexity ($C \equiv C_P$, a
     $$
     \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda R'(C^*) + R_I'(C^*) \quad \text{(18)}
     $$
-    (This corresponds to the condition $\Psi(C^*) = 0$, where $\Psi$ is the Adaptation Driving Force, Definition 20). Here $\Gamma_0$ is the power-conversion factor (Definition 20) with dimensions of power $[E][T]^{-1}$.
+    (This corresponds to the condition $\Psi(C^*) = 0$, where $\Psi$ is the Adaptation Driving Force, Definition 20). Here $\Gamma_0$ is the power-conversion factor (Definition 20), a system-level constant with dimensions of power $[E][T]^{-1}$.
 
 2.  **Second Order Optimality (Diminishing Returns Exceed Cost Acceleration):** For a stable maximum, the second derivative of the net benefit must be negative:
     $$
@@ -29,7 +29,7 @@ The adaptation dynamics of systems within the PU framework are governed by the P
 
  The **PCE-Attractor**, denoted $x_{attr}$, is the canonically selected global-minimum configuration within $\mathcal{E}_{*}^{\text{global}}$ (see Theorem D.3) singled out by the *co-occurring* conditions:
 
- 1.  **Maximal Symmetry (Flat Spectrum):** For the U(1) sector, the SLD-QFI spectrum is flat ($\sigma^2=0$), reflecting a state of maximal robustness where all information-carrying modes are democratically utilized (see Appendix W; §Z.3).
+ 1.  **Maximal Symmetry (Flat Spectrum):** For the U(1) sector, the SLD-QFI spectrum is flat ($\sigma^2=0$), reflecting a state of maximal robustness where all information-carrying modes are utilized democratically (see Appendix W; §Z.3).
 
  2.  **Maximal Efficiency (Capacity Saturation):** The system operates at the "zero-slack" or "branch boundary" condition, where the unconstrained minimum of the rate-level PCE potential $\phi(u)$ coincides with the information capacity limit ($V_{benefit} = \ln d_0$).
 
@@ -64,7 +64,7 @@ Any system operating sustainably within the Space of Becoming ($\alpha < PP(t) <
 
 **6.2.4 Physical Nature of Complexity Transformations (Thermodynamic Irreversibility)**
 
-The adaptation process involves changing the system's complexity $C(t) \to C(t+1)$ (Section 6.4). This corresponds to a physical transformation within the system's representational medium (Theorem 7). Implementing such changes requires physical operations that consume resources (transient Adaptation Costs, part of the SC in Definition 15). Model adaptation involves information processing (e.g., incorporating new data, computing updates) and often logically irreversible information erasure (e.g., discarding outdated model components or hypotheses). By the fundamental link between information and thermodynamics (Landauer's Principle; specifically the consequence $\varepsilon > 0$, Theorem 31), logically irreversible operations performed in finite time inevitably lead to entropy production and energy dissipation. Therefore, complexity transformation ($C(t) \to C(t+1)$) is generally a thermodynamically irreversible physical process associated with resource costs and entropy generation, constraining the dynamics and efficiency of adaptation.
+The adaptation process involves changing the system's complexity $C(t) \to C(t+1)$ (Section 6.4). This corresponds to a physical transformation within the system's representational medium (Theorem 7). Implementing such changes requires physical operations that consume resources (transient Adaptation Costs, part of the SC in Definition 15). Model adaptation involves information processing (e.g., incorporating new data, computing updates) and typically requires logically irreversible information erasure (e.g., discarding outdated model components or hypotheses). By the fundamental link between information and thermodynamics (Landauer's Principle; specifically the consequence $\varepsilon > 0$, Theorem 31), logically irreversible operations performed in finite time inevitably lead to entropy production and energy dissipation. Therefore, complexity transformation ($C(t) \to C(t+1)$) is generally a thermodynamically irreversible physical process associated with resource costs and entropy generation, constraining the dynamics and efficiency of adaptation.
 
 **6.2.5 Definition 19 (Def 19): Complexity-Performance Scaling Principles**
 
@@ -82,10 +82,10 @@ PP(C, \hat{C}_{target}) = \alpha + (\beta - \alpha) \cdot F\left(\frac{C-C_{op}}
 $$
 where the function $F: \mathbb{R}_{\geq 0} \rightarrow [0, 1)$ satisfies:
 *   $F(0)=0$ (performance is $\alpha$ at baseline complexity $C=C_{op}$).
-*   $\lim_{x \to \infty} F(x) = 1$ (performance approaches $\beta$ as relative complexity $x \to \infty$).
+*   $\lim_{x \rightarrow \infty} F(x) = 1$ (performance approaches $\beta$ as relative complexity $x \rightarrow \infty$).
 *   $F'(x) > 0$ for $x > 0$ (monotonicity, Principle 2).
 *   $F''(x) < 0$ for $x > 0$ (diminishing returns, Principle 3).
-*Proof:* Principle 1 (Bounds) dictates the scaling form $PP = \alpha + (\beta - \alpha) F_{int}$, where $F_{int}$ maps complexity to $[0, 1)$. Principle 4 (Relative Complexity) implies $F_{int} = F(x)$ with $x = (C-C_{op})/\hat{C}_{target}$. The boundary conditions $F(0)=0$ and $\lim_{x\to\infty} F(x)=1$ follow directly from Principle 1 applied to $C=C_{op}$ and $C\to\infty$. Principle 2 (Monotonicity) ($\partial PP / \partial C = (\beta - \alpha) F'(x) / \hat{C}_{target} > 0$) requires $F'(x)>0$. Principle 3 (Diminishing Returns) ($\partial^2 PP / \partial C^2 = (\beta - \alpha) F''(x) / (\hat{C}_{target})^2 < 0$) requires $F''(x)<0$. QED
+*Proof:* Principle 1 (Bounds) dictates the scaling form $PP = \alpha + (\beta - \alpha) F_{int}$, where $F_{int}$ maps complexity to $[0, 1)$. Principle 4 (Relative Complexity) implies $F_{int} = F(x)$ with $x = (C-C_{op})/\hat{C}_{target}$. The boundary conditions $F(0)=0$ and $\lim_{x\rightarrow\infty} F(x)=1$ follow directly from Principle 1 applied to $C=C_{op}$ and $C\rightarrow\infty$. Principle 2 (Monotonicity) ($\partial PP / \partial C = (\beta - \alpha) F'(x) / \hat{C}_{target} > 0$) requires $F'(x)>0$. Principle 3 (Diminishing Returns) ($\partial^2 PP / \partial C^2 = (\beta - \alpha) F''(x) / (\hat{C}_{target})^2 < 0$) requires $F''(x)<0$. QED
 
 **6.3 Derivation of the Law of Prediction from POP / PCE**
 
@@ -101,35 +101,35 @@ and the **complexity required** to reach a chosen performance $PP\in(\alpha,\bet
 $$
 C(PP,\hat C_{\mathrm{target}}) = C_{op} +\frac{\hat C_{\mathrm{target}}}{\kappa_{\mathrm{eff}}}\, \ln\!\Bigl(\tfrac{\beta-\alpha}{\beta-PP}\Bigr). \quad \text{(23)}
 $$
-Here $\kappa_{\mathrm{eff}}$ is a dimensionless efficiency constant. Equation (22) realizes the generic form Equation (21) with $F(x)=1-e^{-\kappa_{\mathrm{eff}}x}$, satisfying the required properties (Theorem 18) and exhibiting logarithmic divergence of $C$ as $PP\to\beta$.
+Here $\kappa_{\mathrm{eff}}$ is a dimensionless efficiency constant. Equation (22) realizes the generic form Equation (21) with $F(x)=1-e^{-\kappa_{\mathrm{eff}}x}$, satisfying the required properties (Theorem 18) and exhibiting logarithmic divergence of $C$ as $PP\rightarrow\beta$.
 
 *Proof:*
 1.  **Modeling Diminishing Returns:** We model the principle of diminishing returns by positing that the marginal increase in performance with respect to complexity, $d(PP)/dC$, is proportional to the remaining performance gap $(\beta - PP(C))$ and inversely proportional to the target complexity $\hat{C}_{target}$. This gives the differential equation:
 $$
-    \frac{d(PP)}{dC} = \kappa_{eff} \frac{\beta - PP(C)}{\hat{C}_{target}}
+    \frac{d(PP)}{dC} = \kappa_{\mathrm{eff}} \frac{\beta - PP(C)}{\hat{C}_{target}}
     $$
-    where $\kappa_{eff} > 0$ is the dimensionless efficiency constant.
+    where $\kappa_{\mathrm{eff}} > 0$ is the dimensionless efficiency constant.
 2.  **Integration:** We separate variables and integrate from the initial condition $(C_{op}, \alpha)$ to the state $(C, PP(C))$:
 $$
-    \int_{\alpha}^{PP(C)} \frac{d(PP')}{\beta - PP'} = \frac{\kappa_{eff}}{\hat{C}_{target}} \int_{C_{op}}^{C} dC'
+    \int_{\alpha}^{PP(C)} \frac{d(PP')}{\beta - PP'} = \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} \int_{C_{op}}^{C} dC'
     $$
 3.  **Solving the Integral:** The integration yields:
 $$
-    \left[ -\ln(\beta - PP') \right]_{\alpha}^{PP(C)} = \frac{\kappa_{eff}}{\hat{C}_{target}} (C - C_{op})
+    \left[ -\ln(\beta - PP') \right]_{\alpha}^{PP(C)} = \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} (C - C_{op})
     $$
 $$
-    \ln\left(\frac{\beta - \alpha}{\beta - PP(C)}\right) = \kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}
+    \ln\left(\frac{\beta - \alpha}{\beta - PP(C)}\right) = \kappa_{\mathrm{eff}}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}
     $$
     This is the integrated form, which directly corresponds to Equation (23) when solved for $C$.
 4.  **Deriving the Final Form:** Exponentiating both sides and rearranging to solve for $PP(C)$:
 $$
-    \frac{\beta - \alpha}{\beta - PP(C)} = \exp\left(\kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
+    \frac{\beta - \alpha}{\beta - PP(C)} = \exp\left(\kappa_{\mathrm{eff}}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
     $$
 $$
-    \beta - PP(C) = (\beta - \alpha) \exp\left(-\kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
+    \beta - PP(C) = (\beta - \alpha) \exp\left(-\kappa_{\mathrm{eff}}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
     $$
 $$
-    PP(C,\hat C_{\mathrm{target}}) = \beta - (\beta - \alpha) \exp\left(-\kappa_{eff}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
+    PP(C,\hat C_{\mathrm{target}}) = \beta - (\beta - \alpha) \exp\left(-\kappa_{\mathrm{eff}}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
     $$
     This confirms Equation (22). QED
 
@@ -159,10 +159,10 @@ The specific components of the driving force are:
 *   **Marginal Benefit:** The term $\Gamma_0 \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units `[E][T]^{-1}[Complexity]^{-1}`. From the Law of Prediction (Theorem 19), the performance gradient is:
 $$
 \frac{\partial PP}{\partial C}\bigg|_{C(t), \hat{C}_{target}(t)}
-= (\beta - \alpha)\left(\frac{\kappa_{eff}}{\hat{C}_{target}(t)}\right)
-e^{-\kappa_{eff}\cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}}
-= \frac{\kappa_{eff}}{\hat{C}_{target}(t)}\big(\beta - PP(t)\big),
-\quad \text{with } PP(t)=\beta-(\beta-\alpha)\,e^{-\kappa_{eff}\cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}} \quad \text{(25)}
+= (\beta - \alpha)\left(\frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}(t)}\right)
+e^{-\kappa_{\mathrm{eff}}\cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}}
+= \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}(t)}\big(\beta - PP(t)\big),
+\quad \text{with } PP(t)=\beta-(\beta-\alpha)\,e^{-\kappa_{\mathrm{eff}}\cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}} \quad \text{(25)}
 $$
 *   **Marginal Cost:** The term $\lambda R'(C(t)) + R_I'(C(t))$ is the weighted marginal resource cost rate, with units `[E][T]^{-1}[Complexity]^{-1}`. From Definition 3:
 $$
@@ -200,30 +200,30 @@ $$
 $$
 Substituting the expression for $\Psi$ (Equation 24) using the derived forms for $\partial PP/\partial C$ (Equation 25) and $R_I'(C)$ (Equation 26):
 $$
-\frac{dC}{dt} = \eta_{adapt} \left[ \Gamma_0 \frac{\kappa_{eff}}{\hat{C}_{target}(t)} (\beta - PP(t)) - \lambda R'(C(t)) - \frac{r_I}{C(t) \ln 2} \right] \quad \text{(31)}
+\frac{dC}{dt} = \eta_{adapt} \left[ \Gamma_0 \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}(t)} (\beta - PP(t)) - \lambda R'(C(t)) - \frac{r_I}{C(t) \ln 2} \right] \quad \text{(31)}
 $$
 where $\eta_{adapt} > 0$ is the adaptation rate parameter. It has dimensions `[E]^{-1}[Complexity]^2` (Appendix H) and determines the timescale and responsiveness of the complexity adaptation to the driving force $\Psi$. This model describes the dynamics within the viable range $(\alpha, \beta)$, prior to the activation of the viability enforcement mechanisms (Definition 22).
 
-*Interpretation:* Complexity $C(t)$ evolves over time, driven by the imbalance $\Psi(t)$ between marginal benefits and costs, towards the locally optimal value $C^*(t)$ where $\Psi(t)$ approaches zero. This equilibrium $C^*(t)$ represents an efficient operating point satisfying the PCE principle (Definition 14, Equation 18). The dynamics depend explicitly on the current state ($C, \hat{C}_{target}$), the system's energy valuation ($\Gamma_0$), resource scarcity ($\lambda$), intrinsic performance efficiency ($\kappa_{eff}$), informational overhead ($r_I$), and the marginal physical cost $R'$.
+*Interpretation:* Complexity $C(t)$ evolves over time, driven by the imbalance $\Psi(t)$ between marginal benefits and costs, towards the locally optimal value $C^*(t)$ where $\Psi(t)$ approaches zero. This equilibrium $C^*(t)$ represents an efficient operating point satisfying the PCE principle (Definition 14, Equation 18). The dynamics depend explicitly on the current state ($C, \hat{C}_{target}$), the system's energy valuation ($\Gamma_0$), resource scarcity ($\lambda$), intrinsic performance efficiency ($\kappa_{\mathrm{eff}}$), informational overhead ($r_I$), and the marginal physical cost $R'$.
 
-*Remark 4: Interpretation of $\kappa_{eff}$*
-The dimensionless performance-efficiency parameter $\kappa_{eff}$, introduced in the Law of Prediction (Equation 22), can be expressed in terms of equilibrium quantities. At equilibrium the Adaptation Driving Force vanishes, $\Psi=0$ (Equation 18), and by definition (Equation 24):
+*Remark 4: Interpretation of $\kappa_{\mathrm{eff}}$*
+The dimensionless performance-efficiency parameter $\kappa_{\mathrm{eff}}$, introduced in the Law of Prediction (Equation 22), can be expressed in terms of equilibrium quantities. At equilibrium the Adaptation Driving Force vanishes, $\Psi=0$ (Equation 18), and by definition (Equation 24):
 $$
 \Gamma_0 \,\frac{\partial PP}{\partial C} = \lambda R' + R_I'.
 $$
 Substituting Equation (25) for the derivative gives:
 $$
-\Gamma_0\,(\beta-\alpha)\, \frac{\kappa_{eff}}{\hat{C}_{\text{target}}} \,e^{-\kappa_{eff}(C^{*}-C_{op})/\hat{C}_{\text{target}}} = \lambda R'(C^{*}) + R_I'(C^{*}).
+\Gamma_0\,(\beta-\alpha)\, \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{\text{target}}} \,e^{-\kappa_{\mathrm{eff}}(C^{*}-C_{op})/\hat{C}_{\text{target}}} = \lambda R'(C^{*}) + R_I'(C^{*}).
 $$
-Using Equation (22), we recognize $e^{-\kappa_{eff}(C^{*}-C_{op})/\hat{C}_{\text{target}}} = (\beta-PP^{*})/(\beta-\alpha)$. Substituting this yields:
+Using Equation (22), we recognize $e^{-\kappa_{\mathrm{eff}}(C^{*}-C_{op})/\hat{C}_{\text{target}}} = (\beta-PP^{*})/(\beta-\alpha)$. Substituting this yields:
 $$
-\Gamma_0\,(\beta-PP^{*}) \frac{\kappa_{eff}}{\hat{C}_{\text{target}}} = \lambda R'(C^{*}) + R_I'(C^{*}).
+\Gamma_0\,(\beta-PP^{*}) \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{\text{target}}} = \lambda R'(C^{*}) + R_I'(C^{*}).
 $$
 Rearranging yields the equilibrium expression:
 $$
-\kappa_{eff} = \frac{\hat{C}_{\text{target}}}{\Gamma_0\,(\beta-PP^{*})} \bigl[\lambda R'(C^{*}) + R_I'(C^{*})\bigr] \quad \text{(32)}
+\kappa_{\mathrm{eff}} = \frac{\hat{C}_{\text{target}}}{\Gamma_0\,(\beta-PP^{*})} \bigl[\lambda R'(C^{*}) + R_I'(C^{*})\bigr] \quad \text{(32)}
 $$
-Thus $\kappa_{eff}$ encodes the ratio of marginal resource costs (weighted physical cost gradient $\lambda R' + R_I'$) to the power-equivalent value of the remaining performance gap $(\beta-PP^{*})$, scaled by the target complexity $\hat{C}_{\text{target}}$. Higher costs or a lower constant energy valuation $\Gamma_0$ reduce the effective efficiency $\kappa_{eff}$.
+Thus $\kappa_{\mathrm{eff}}$ encodes the ratio of marginal resource costs (weighted physical cost gradient $\lambda R' + R_I'$) to the power-equivalent value of the remaining performance gap $(\beta-PP^{*})$, scaled by the target complexity $\hat{C}_{\text{target}}$. Higher costs or a lower constant energy valuation $\Gamma_0$ reduce the effective efficiency $\kappa_{\mathrm{eff}}$.
 
 **6.5 Stability, Response, and Target Estimation**
 
@@ -241,11 +241,11 @@ $$
     $$
     \frac{\partial \Psi}{\partial C} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) - R_I''(C) \quad \text{(34)}
     $$
-    Using Equation (25): $\frac{\partial^2 PP}{\partial C^2} = \frac{\partial}{\partial C} \left( \frac{\kappa_{eff}}{\hat{C}_{target}} (\beta - PP) \right) = - \frac{\kappa_{eff}}{\hat{C}_{target}} \frac{\partial PP}{\partial C} < 0$.
+    Using Equation (25): $\frac{\partial^2 PP}{\partial C^2} = \frac{\partial}{\partial C} \left( \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} (\beta - PP) \right) = - \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} \frac{\partial PP}{\partial C} < 0$.
     Using Equation (26): $R_I''(C) = \frac{d}{dC} \left( \frac{r_I}{C \ln 2} \right) = -\frac{r_I}{C^2 \ln 2} < 0$.
     Substituting into Equation (34):
-    $$
-    \frac{\partial \Psi}{\partial C} = - \Gamma_0 \frac{\kappa_{eff}}{\hat{C}_{target}} \left( \frac{\partial PP}{\partial C} \right) - \lambda R''(C) + \frac{r_I}{C^2 \ln 2} \quad \text{(35)}
+     $$
+    \frac{\partial \Psi}{\partial C} = - \Gamma_0 \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} \left( \frac{\partial PP}{\partial C} \right) - \lambda R''(C) + \frac{r_I}{C^2 \ln 2} \quad \text{(35)}
     $$
     For stability, we typically expect $\partial \Psi / \partial C < 0$ (Theorem 22).
 *   **Derivative w.r.t. $\hat{C}_{target}$:** Assuming $R'$ and $R_I'$ do not explicitly depend on $\hat{C}_{target}$:
@@ -253,14 +253,14 @@ $$
     \frac{\partial \Psi}{\partial \hat{C}_{target}} = \Gamma_0 \frac{\partial^2 PP}{\partial \hat{C}_{target} \partial C} \quad \text{(36)}
     $$
     Calculating the mixed partial derivative from Equation (25):
-    $$
-    \frac{\partial^2 PP}{\partial \hat{C}_{target} \partial C} = \frac{\partial}{\partial \hat{C}_{target}} \left( \frac{\kappa_{eff}}{\hat{C}_{target}} (\beta - PP) \right) = \left( \frac{\partial PP}{\partial C} \right) \left[ -\frac{1}{\hat{C}_{target}} + \frac{\kappa_{eff} (C-C_{op})}{(\hat{C}_{target})^2} \right]
+   $$
+    \frac{\partial^2 PP}{\partial \hat{C}_{target} \partial C} = \frac{\partial}{\partial \hat{C}_{target}} \left( \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} (\beta - PP) \right) = \left( \frac{\partial PP}{\partial C} \right) \left[ -\frac{1}{\hat{C}_{target}} + \frac{\kappa_{\mathrm{eff}} (C-C_{op})}{(\hat{C}_{target})^2} \right]
     $$
     Thus:
     $$
-    \frac{\partial \Psi}{\partial \hat{C}_{target}} = \Gamma_0 \left( \frac{\partial PP}{\partial C} \right) \frac{1}{\hat{C}_{target}} \left( \frac{\kappa_{eff} (C-C_{op})}{\hat{C}_{target}} - 1 \right) \quad \text{(37)}
+    \frac{\partial \Psi}{\partial \hat{C}_{target}} = \Gamma_0 \left( \frac{\partial PP}{\partial C} \right) \frac{1}{\hat{C}_{target}} \left( \frac{\kappa_{\mathrm{eff}} (C-C_{op})}{\hat{C}_{target}} - 1 \right) \quad \text{(37)}
     $$
-*   **Result:** The sensitivity $dC^*/d\hat{C}_{target}$ is given by $-(\partial \Psi / \partial \hat{C}_{target}) / (\partial \Psi / \partial C)$. If $\partial \Psi / \partial C < 0$ (stability) and the relative complexity $(C-C_{op})/\hat{C}_{target}$ is sufficiently large ($> 1/\kappa_{eff}$), then $\partial \Psi / \partial \hat{C}_{target} > 0$. In this regime, $dC^*/d\hat{C}_{target} > 0$, indicating that an increase in perceived environmental difficulty $\hat{C}_{target}$ leads to an increase in the optimal allocated complexity $C^*$. QED
+*   **Result:** The sensitivity $dC^*/d\hat{C}_{target}$ is given by $-(\partial \Psi / \partial \hat{C}_{target}) / (\partial \Psi / \partial C)$. If $\partial \Psi / \partial C < 0$ (stability) and the relative complexity $(C-C_{op})/\hat{C}_{target}$ is sufficiently large ($> 1/\kappa_{\mathrm{eff}}$), then $\partial \Psi / \partial \hat{C}_{target} > 0$. In this regime where the relative complexity is sufficiently high, $dC^*/d\hat{C}_{target} > 0$, indicating that an increase in perceived environmental difficulty $\hat{C}_{target}$ leads to a corresponding increase in the optimal allocated complexity $C^*$. QED
 
 **6.5.2 Theorem 22 (Existence, uniqueness, and exponential stability of the PCE optimum)**
 

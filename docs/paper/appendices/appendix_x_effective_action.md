@@ -11,12 +11,12 @@ This appendix establishes the precise relationship between the Predictive Univer
 Let $\Theta\ni\theta\mapsto p_\theta$ be the coarse‑grained predictive model on field histories $\varphi$ (including matter/MPU fields and, when appropriate, background geometry). For a set of sufficient statistics $\mathcal O_a\[\varphi]$ with sources $J^a(x)$, define the cumulant generating functional
 
 $$
-W[J]\;:=\;\ln\!\int\!\mathcal{D}\varphi\;p_\theta[\varphi]\;
+W[J]\;:=\;\ln Z[J] = \ln\!\int\!\mathcal{D}\varphi\;p_\theta[\varphi]\;
 \exp\!\Big(\!\int\! d^dx\, J^a(x)\,\mathcal O_a[\varphi](x)\Big).
 \tag{X.1}
 $$
 
-The classical fields are $\Phi_a(x):=\delta W/\delta J^a(x)=\langle \mathcal O_a\rangle_J$. The **1PI effective action** is the Legendre transform
+The classical fields (the expectation values of the operators in the presence of the source $J$) are $\Phi_a(x):=\delta W/\delta J^a(x)=\langle \mathcal O_a(x)\rangle_J$. The **1PI effective action** is the Legendre transform
 
 $$
 \Gamma[\Phi]\;:=\;\sup_{J}\Big\{\!\int\! d^dx\,J^a\Phi_a\;-\;W[J]\Big\},
@@ -24,13 +24,13 @@ $$
 \tag{X.2}
 $$
 
-For rigorous convexity and domain control, $W$ and $\Gamma$ are defined in Euclidean signature; Minkowski‑space results follow by analytic continuation where appropriate. In Euclidean conventions one may write $p_\theta\[\varphi]\propto e^{-S_E\[\varphi]}$ with **dimensionless**
+For rigorous convexity and domain control, $W$ and $\Gamma$ are defined in Euclidean signature; Minkowski‑space results follow by analytic continuation where appropriate. In Euclidean conventions, assuming the probability distribution can be written in Boltzmann form, $p_\theta\[\varphi] = e^{-S_E[\varphi]} / Z$, where $Z$ is the partition function. The **dimensionless** Euclidean action is
 
 $$
-S_E[\varphi]\;:=\;-\ln p_\theta[\varphi]\;+\;\text{const.}
+S_E[\varphi]\;:=\;-\ln p_\theta[\varphi]\;+\;\ln Z.
 $$
 
-so that $W,\Gamma$ coincide with the usual statistical field‑theory functionals under PU coarse‑graining. At vanishing sources $J=0$, stationary configurations $\delta\Gamma/\delta\Phi=0$ are the PU macrostates at the chosen resolution.
+This ensures that $W,\Gamma$ coincide with the standard definitions in statistical field theory, adapted to the PU coarse‑graining context. At vanishing sources $J=0$, stationary configurations $\delta\Gamma/\delta\Phi=0$ are the PU macrostates at the chosen resolution.
 
 **Proposition X.1 (Information geometry and curvature).**
 Let $\mathcal G_{ab}(x,y)=\delta^2 W/\delta J^a(x)\delta J^b(y)$ be the connected two‑point kernel. Then
@@ -42,13 +42,12 @@ $$
 \tag{X.3}
 $$
 
-Under local asymptotic normality for exponential families built from $\mathcal O_a$, the Fisher information coincides with $\mathcal G_{ab}$, and the Hessian of $\Gamma$ is its functional inverse.
-
+Under conditions where the distribution $p_\theta$ forms an exponential family parameterized by sources related to $\theta$, and assuming local asymptotic normality (LAN), the Fisher information metric is related to the connected correlator $\mathcal G_{ab}$. The Hessian of $\Gamma$ (the inverse propagator in QFT language) is the functional inverse of $\mathcal G_{ab}$.
 
 
 ## X.2 Wilsonian Coarse‑Graining and Functional RG
 
-Introduce a momentum‑scale dependent regulator $R_k$ and define the scale‑dependent effective action $\Gamma_k$ (IR modes $q\lesssim k$ suppressed). Its (Wetterich) functional RG flow is
+Introduce a momentum‑scale dependent infrared (IR) regulator $R_k$ which suppresses modes with momenta $q\lesssim k$. The scale‑dependent effective average action $\Gamma_k$ is defined via a modified Legendre transform incorporating this regulator. Its (Wetterich) functional RG flow equation is [Wetterich 1993]:
 
 $$
 \partial_k \Gamma_k[\Phi]\;=\;\frac{1}{2}\,\mathrm{STr}\!\Big[\big(\Gamma^{(2)}_k[\Phi]+R_k\big)^{-1}\,\partial_k R_k\Big],
