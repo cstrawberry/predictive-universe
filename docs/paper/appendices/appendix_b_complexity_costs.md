@@ -4,7 +4,7 @@ This appendix provides the detailed construction and justification for key opera
 
 *(Units convention.)* Throughout this appendix we retain explicit
 $\hbar$, $c$, and $k_B$ factors so that every operator’s physical
-dimension is transparent. Predictive Physical Complexity($C_P$ and its proxy $\hat C_v$) carries its own base dimension $\mathrm{[Complexity]}$, e.g.\ $[\hat C_v]=\mathrm{[Complexity]}$. Information-theoretic quantities such as the entropy $\varepsilon$ or
+dimension is transparent. Predictive Physical Complexity ($C_P$ and its proxy $\hat C_v$) carries its own base dimension $\mathrm{[Complexity]}$, e.g.\ $[\hat C_v]=\mathrm{[Complexity]}$. Information-theoretic quantities such as the entropy $\varepsilon$ or
 the channel capacity $C_{\max}$ are dimensionless, typically expressed
 in nats (natural-log base $e$). The physical relevance of all complexity-derived cost terms rests on the Dynamically Enforced Functional Correspondence (Theorem 2), rigorously proven in **Appendix D**, which equates operational cost with predictive cost in steady-state MPU optimisation.
 
@@ -24,7 +24,7 @@ For each MPU $v$, its operational complexity is represented by a Hermitian, posi
 
  where:
 
- *   $d \in \mathbb{N}_0$ is a dimensionless integer representing the minimum number of fundamental quantum gates (circuit depth or size, relative to a fixed gate set) required to prepare states in the subspace $\hat{P}_d \mathcal{H}_v$ starting from a reference state $|K_0\rangle$ corresponding to the Horizon Constant $K_0$.
+ *   $d \in \mathbb{N}_0$ is a dimensionless integer representing the minimum number of fundamental quantum gates (circuit size, relative to a fixed universal gate set) required to prepare states in the subspace $\hat{P}_d \mathcal{H}_v$ starting from a reference state $|K_0\rangle$ corresponding to the Horizon Constant $K_0$.
  *   $\hat{P}_d$ is the orthogonal projector onto the subspace of $\mathcal{H}_v$ consisting of states requiring additional circuit complexity $d$ relative to $|K_0\rangle$. These projectors are orthogonal and complete: $\hat{P}_d \hat{P}_{d'} = \delta_{dd'} \hat{P}_d$ and $\sum_{d} \hat{P}_d = \hat{I}$ (where the sum becomes effectively finite for a finite-dimensional $\mathcal{H}_v$).
  *   $\lambda(d)$ are the eigenvalues of $\hat{C}_v$, representing the effective Predictive Physical Complexity for states in the subspace $\hat{P}_d \mathcal{H}_v$. These eigenvalues are non-decreasing with $d$:
      $$ \lambda(d) = K_0 + \Delta C(d) \tag{B.2} $$
@@ -34,7 +34,7 @@ For each MPU $v$, its operational complexity is represented by a Hermitian, posi
 
 The expectation value $\langle \psi | \hat{C}_v | \psi \rangle$ for a state $|\psi\rangle$ provides the MPU's operational measure of complexity. The justification for this operator serving as a valid, dynamically selected proxy for the theoretical $C_P$ at viable equilibria is rigorously provided by Theorem 2 (Dynamically Enforced Functional Correspondence), detailed in **Appendix D**.
 
-*Proof:* The definition of $\hat{C}_v$ as a Hermitian operator with a spectral decomposition based on quantum circuit complexity levels is standard in quantum information theory. The property of being positive-semi-definite follows from $\lambda(d) = K_0 + \Delta C(d) \ge K_0 > 0$.
+*Proof:* The definition of $\hat{C}_v$ as a Hermitian operator with a spectral decomposition based on quantum circuit complexity levels is standard in quantum information theory. The property of being positive-semidefinite follows from $\lambda(d) = K_0 + \Delta C(d) \ge K_0 > 0$.
 
 **B.2 Physical Resource-Cost Operators $\hat{R}, \hat{R}_I$**
 
@@ -52,9 +52,9 @@ $$
 $$
 
 where $\lambda(d) = K_0 + \Delta C(d)$ are the eigenvalues of $\hat{C}_v$.
-The operators $\hat R(C_v)$ and $\hat R_I(C_v)$ are Hermitian because the cost functions $R(\cdot)$ and $R_I(\cdot)$ are real-valued. They are positive-semi-definite because $R(C) \ge 0$ and $R_I(C) \ge 0$ for $C \ge K_0$ (Definition 3), and $\lambda(d) \ge K_0$ for all $d \ge 0$. The physical relevance of using $\langle\hat{R}\rangle$ and $\langle\hat{R}_I\rangle$ in dynamics relies on Theorem 2 (Dynamically Enforced Functional Correspondence) ensuring alignment of $\langle \hat{C}_v \rangle$ with $C_P$.
+The operators $\hat R(C_v)$ and $\hat R_I(C_v)$ are Hermitian because the cost functions $R(\cdot)$ and $R_I(\cdot)$ are real-valued. They are positive-semidefinite because $R(C) \ge 0$ and $R_I(C) \ge 0$ for $C \ge K_0$ (Definition 3), and $\lambda(d) \ge K_0$ for all $d \ge 0$. The physical relevance of using $\langle\hat{R}\rangle$ and $\langle\hat{R}_I\rangle$ in dynamics relies on Theorem 2 (Dynamically Enforced Functional Correspondence) ensuring alignment of $\langle \hat{C}_v \rangle$ with $C_P$.
 
-*Proof:* The definition of operators via functional calculus on a Hermitian operator ($\hat{C}_v$) is a standard mathematical construction. The properties of self-adjointness (Hermitian) and positive-semi-definiteness for $\hat{R}$ and $\hat{R}_I$ follow directly from the real-valued and non-negative nature of the functions $R(\cdot)$ and $R_I(\cdot)$ when applied to the non-negative eigenvalues $\lambda(d)$ of $\hat{C}_v$.
+*Proof:* The definition of operators via functional calculus on a Hermitian operator ($\hat{C}_v$) is a standard mathematical construction. The properties of self-adjointness (Hermitian) and positive-semidefiniteness for $\hat{R}$ and $\hat{R}_I$ follow directly from the real-valued and non-negative nature of the functions $R(\cdot)$ and $R_I(\cdot)$ when applied to the non-negative eigenvalues $\lambda(d)$ of $\hat{C}_v$.
 
 **B.3 Fundamental Complexity Bound for SPAP Prediction**
 
@@ -91,7 +91,7 @@ where $\delta_{\rm SPAP}$ is the dimensionless error margin and $C_{uni}$ is a d
 3.  **Combined Bound for Unified Complexity $C_{\text{uni}}$:** Achieving the overall task of high-accuracy SPAP-limited prediction requires addressing both sub-problems simultaneously. We formalize the computation required as a circuit (consistent with the operational proxy $\hat{C}_v$, Definition B.1).
 The logical depth of the circuit, $T$, must be sufficient to implement the DSRO simulation, requiring $T = \Omega(C_{logic}) = \Omega(\log(1/\delta_{\rm SPAP}))$.
 The width or space complexity of the circuit, $W$, must be sufficient to represent and process the information required for the statistical resolution. This involves distinguishing between distributions separated by $\delta_{\rm SPAP}$, requiring effective samples or parallel computations $W = \Omega(C_{stat}) = \Omega(1/(\delta_{\rm SPAP})^2)$.
-The total unified complexity $C_{\text{uni}}$, formalized as the circuit size (or time-space product), is bounded below by the product of depth and width, $C_{\text{uni}} = \Omega(T \cdot W)$. This multiplicative relationship is rigorously justified because the logical operations (depth $T$) must be applied coherently across the entire informational substrate (width $W$) needed to resolve the fine-grained statistical distinctions. Therefore, the total complexity scales as:
+The total unified complexity $C_{\text{uni}}$, formalized as the circuit size (proportional to the time-space product), is bounded below by the product of depth and width: $C_{\text{uni}} = \Omega(T \cdot W)$. This multiplicative relationship is rigorously justified because the sequential logical operations (depth $T$) must be performed on the data structures (width $W$) required to maintain the necessary statistical resolution. The coherence required for the self-referential simulation necessitates that the full width $W$ is utilized throughout the depth $T$ of the computation. Therefore, the total complexity scales as:
 $$     C_{\text{uni}} = \Omega(T \cdot W) = \Omega\left(\log\left(\frac{1}{\delta_{\rm SPAP}}\right) \cdot \frac{1}{(\delta_{\rm SPAP})^2}\right)
     $$
 This establishes the poly-logarithmic form in Equation (B.5) from a formal computational model perspective.
@@ -114,7 +114,7 @@ where:
 2.  **$\hat{R}(C_v), \hat{R}_I(C_v)$:** The operational resource cost *power* operators (defined in Theorem B.1, Eq B.3, which are derived from the power functions $R(C), R_I(C)$ in Definition 3). Their contribution to energy density is $(\hat{R}(C_v)\tau_0)/V_0$ and $(\hat{R}_I(C_v)\tau_0)/V_0$, representing energy dissipated or utilized over timescale $\tau_0$ per unit volume. The justification for their inclusion as sources for $T_{\mu\nu}$ rests on PCE requiring all predictive work and costs to be accounted for in the system's energy balance, with Theorem 2 ensuring the proxy $\hat{C}_v$ accurately reflects $C_P$ at equilibrium.
 3.  **$\hat{E}_{int}(v) = \frac{1}{2}\sum_{v' \sim v} \hat{V}_{vv'}$:** The interaction energy operator (Energy operator). Its contribution to energy density is $\hat{E}_{int}(v)/V_0$. Acts on the joint Hilbert space $\mathcal{H}_v \otimes \mathcal{H}_{v'}$ (or larger).
 
-The constants $V_0$ (effective MPU volume) and $\tau_0$ (characteristic MPU timescale, e.g., $\tau_{min}$ from Theorem 29) are fundamental parameters related to the MPU scale. $\hat{\rho}_v$ is Hermitian by construction. Its expectation value $\langle \hat{\rho}_v \rangle = \text{Tr}(\rho_v \hat{\rho}_v)$ in the local MPU state $\rho_v$ represents the average local energy density associated with MPU $v$.
+The constants $V_0$ (effective MPU volume) and $\tau_0$ (characteristic MPU operational timescale, identified with $\tau_{min}$ from Theorem 29) are fundamental parameters related to the MPU scale. $\hat{\rho}_v$ is Hermitian by construction. Its expectation value $\langle \hat{\rho}_v \rangle = \text{Tr}(\rho_v \hat{\rho}_v)$ in the local MPU state $\rho_v$ represents the average local energy density associated with MPU $v$.
 
 **Definition B.4 (Structure of Interaction Operator $\hat{V}_{vv'}$) **
 
@@ -124,7 +124,7 @@ $$ \hat{V}_{vv'} = \hat{V}_{dissip-contrib}^{(vv')} + \hat{V}_{pot}^{(vv')} \qua
 2.  **$\hat{V}_{dissip-contrib}^{(vv')}$:** Represents the energy contribution associated with enabling the irreversible aspects of the interaction. The physical process underlying the irreversible ND-RID step involves coupling to underlying degrees of freedom, effectively modeled via open system dynamics (e.g., GKSL/Lindblad master equation [Gorini–Kossakowski–Sudarshan 1976; Lindblad 1976]):
     $$ \frac{d\rho_{vv'}}{dt} = -\frac{i}{\hbar} [\hat{H}_{eff, vv'}, \rho_{vv'}] + \mathcal{L}_D(\rho_{vv'}) \quad \text{(B.8)} $$
     $$ \mathcal{L}_D(\rho_{vv'}) = \sum_k \gamma_k \left( L_k \rho_{vv'} L_k^\dagger - \frac{1}{2} \{L_k^\dagger L_k, \rho_{vv'}\} \right) \quad \text{(B.9)} $$
-    The Lindblad operators $L_k$ and rates $\gamma_k$ are constrained by the requirement that the average entropy production rate $\dot{S}_{prod}$ associated with $\mathcal{L}_D$ must account for the minimal cost $\varepsilon$ over the interaction time $\tau_{int}$ when non-trivial self-referential information $\Delta I > 0$ is processed (Consistency Constraint):
+    The Lindblad operators $L_k$ and rates $\gamma_k$ are constrained such that the average entropy production rate $\dot{S}_{prod}$ associated with $\mathcal{L}_D$ accounts for the minimal cost $\varepsilon$. This cost is incurred over the interaction time $\tau_{int}$ specifically when non-trivial self-referential information $\Delta I > 0$ is processed (Consistency Constraint):
     $$ \int_0^{\tau_{int}} \mathbb{E}[\dot{S}_{prod}(t)] dt \ge k_B \varepsilon \quad (\text{Consistency Constraint}) \quad \text{(B.10)} $$
     The term $\hat{V}_{dissip-contrib}^{(vv')}$ represents the average local system energy required to support this necessary dissipative process, consistent with the dynamics (B.8) and the constraint (B.10).
 
@@ -156,7 +156,7 @@ The canonical microscopic stress-energy operator $\hat{T}^{\mu\nu}_{(can)}(v)$ f
 *   $\hat{T}^{j0}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Momentum Density scaled)
 *   $\hat{T}^{jk}_{(can)}(v) = \hat{p}_{v,jk}$ (Stress)
 
-(Assuming $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$).
+(Assuming the standard relativistic relation $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, which implies $\hat{T}^{0j}_{(can)}(v) = \hat{T}^{j0}_{(can)}(v)$).
 
 **Theorem B.3 (Microscopic Conservation Law for $\hat{T}^{\mu\nu}_{(can)}$)**
 
