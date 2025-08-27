@@ -239,11 +239,16 @@ where $\overline{f}:=\Delta^{-1}\int_{\ln\ell_0}^{\ln\ell_0+\Delta} f(\ell) d\ln
 $$
 c_W:=\frac{3}{16\pi^2}\,\mathcal{Z},\qquad \mathcal{Z}:=\frac{\int_{\rm shell} d^4k\,G_\ell(k)}{\int_{\rm shell} d^4k}\in[0.5,1.5],
 $$
-so that $\beta_2\simeq c_W \overline{\lambda_\ell}$. Integrating this flow from a microscopic scale (e.g., $\ell=1$) gives the scale-dependent effective mass:
+so that $\beta_2\simeq c_W \overline{\lambda_\ell}$. **Example (numerical):** taking the Litim regulator gives $\mathcal Z\!\approx\!1\Rightarrow c_W=\tfrac{3}{16\pi^2}\approx 1.90\times 10^{-2}$ [Litim 2001]. For a representative average $\overline{\lambda_\ell}=0.25$ over $\ell\in[1,10^{17}]$,
+$$
+\beta_2\approx 4.8\times 10^{-3},\qquad \Delta m^2\equiv -\beta_2\ln\ell\big|_{1}^{10^{17}}\approx -\,0.0048\times 39.1\approx -\,0.19.
+$$
+Integrating from a microscopic reference scale (e.g., $\ell=1$) gives the scale‑dependent effective mass:
 $$
 m_\ell^2\approx m_{\rm bulk}^2(1)-\beta_2\ln\ell+\frac{2B}{\ell}.
 \tag{T.13}
 $$
+Thus a modest $m_{\rm bulk}^2(1)=O(0.1\text{–}1)$ naturally yields $m_{\rm EW}\ll M_{\rm UV}$ once the negative drift dominates the decaying boundary term.
 
 ---
 

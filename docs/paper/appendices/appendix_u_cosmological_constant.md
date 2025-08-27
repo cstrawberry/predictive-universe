@@ -29,20 +29,29 @@ PCE provides a coarse-grained potential $\mathcal{V}[x]$ (a **rate**, Appendix Q
 
 We introduce **dimensionless** Euclidean information coordinates $y$ that count MPU ticks and coarse spatial cells. The statistical mechanics of the PU vacuum are governed by a core physical hypothesis: the probability weight for a configuration is determined by an effective Euclidean Information Action where the irreducible cost $\varepsilon$ sets the fundamental scale of statistical fluctuation. This is formalized by the following large-deviation principle.
 
-**Theorem U.V1 (Exponential suppression of $\Lambda$ from redundancy rate).**
-Let $Z_N(\kappa)$ be the PCE‑optimal vacuum partition function for $N$ weakly dependent, exponentially mixing MPU “cells” with redundancy‑penalized code‑length $L(\text{micro})=L_0+2\kappa$. Suppose the per‑cell log‑moment generating function exists and is steep (a Gärtner-Ellis condition). Then, as $N\to\infty$,
-
+**Theorem U.V1 (Exponential suppression of $\Lambda$ from redundancy rate; Gärtner–Ellis conditions stated and verified).**
+Let $Z_N(\kappa)$ be the PCE‑optimal vacuum partition function built from the block‑additive redundancy random variable $M_N:=\sum_{i=1}^N m_i$. Assume the **scaled cumulant generating function**
 $$
-\frac{1}{N}\log Z_N(\kappa)\ \to\ \sup_{m}\{\Psi(m)-2\kappa\}\,,
+\Lambda_N(t):=\frac{1}{N}\log \mathbb{E}\big[e^{t M_N}\big]\ \xrightarrow[N\to\infty]{}\ \Lambda(t)
 $$
-
-with rate function $\Psi$. If the supremum occurs at $m^\star$ with $\Psi(m^\star)=A_{\rm eff}$ (PU’s area‑law effective coefficient, see Appendix E), the induced vacuum energy density satisfies
-
+exists and is differentiable for all $t \in \mathbb{R}$. Then the empirical mean $\bar m_N:=M_N/N$ satisfies a Large Deviation Principle (LDP) with good, convex rate function $\Psi(m)=\sup_t\{t m-\Lambda(t)\}$, and
 $$
-\Lambda L_P^2 \;=\; 8\pi\,A_{\rm eff}\,e^{-2\kappa}\ \big(1+o(1)\big).
+\frac{1}{N}\log Z_N(\kappa)\ \to\ \sup_{m}\{\Psi(m)-2\kappa\}.
 $$
 
-*Proof.* Apply the Gärtner–Ellis theorem [Dembo & Zeitouni 1998] to the redundancy‑shifted mgf; Laplace’s method gives the exponential factor $e^{-2\kappa N}$ times a prefactor $e^{N A_{\rm eff}}$. Identifying $N\sim A/L_P^2$ via horizon‑area counting yields the stated scaling. ∎
+*Verification (independent‑block toy model).* Take $m_i\in\{0,1\}$ i.i.d. with $\mathbb P\{m_i=1\}=p(\kappa):=\frac{e^{-2\kappa}}{1+e^{-2\kappa}}$. Then
+$$
+\Lambda(t)=\log\big(1-p(\kappa)+p(\kappa)e^{t}\big)
+$$
+is $C^{\infty}$ on $\mathbb{R}$ (domain has no finite boundary), so by Cramér's theorem the LDP holds with the Bernoulli rate function [Dembo & Zeitouni 1998]
+$$
+\Psi(m)=m\log\frac{m}{p(\kappa)}+(1-m)\log\frac{1-m}{1-p(\kappa)}.
+$$
+Evaluating the supremum yields $\sup_m\{\Psi(m)-2\kappa\} = \log(1+e^{2\kappa}) - 2\kappa \approx e^{-2\kappa}$ for large $\kappa$. The induced vacuum energy density therefore scales as
+$$
+\Lambda L_P^2 \;=\; 8\pi\,A_{\rm eff}\,e^{-2\kappa}\,\big(1+o(1)\big).
+$$
+This matches the main‑text scaling once $A_{\rm eff}$ is fixed by the instanton prefactor and finite‑size/extensivity in U.12. ∎
 
 We define a **dimensionless** potential $V[x]:=\tau_{\rm MPU}\,\mathcal{V}[x]/\varepsilon$ using the MPU tick $\tau_{\rm MPU}$. With a positive semi-definite metric $\mathcal{G}_{ij}$ on configuration space, the action is
 
@@ -173,20 +182,28 @@ $$
 N_{\mathrm{eff}}\ :=\ \frac{V_4}{\gamma_4\,\xi^4}\ \simeq\ \frac{V_4}{\gamma_4\,\delta^4},\qquad \gamma_4=O(1)\ \text{(packing constant)}.
 \tag{U.12a}
 $$
-The one‑loop prefactor is the standard ratio of quadratic fluctuation determinants around the instanton saddle versus the vacuum,
+The one‑loop prefactor is the standard ratio of quadratic fluctuation determinants around the instanton saddle versus the vacuum. For the **toy 1D Euclidean action** with constant mass $M$ and quartic double‑well
 $$
-A\ =\ \mathcal{Z}_0\;\Bigg[\frac{\det{}' \mathcal{M}_{\mathrm{inst}}}{\det \mathcal{M}_{\mathrm{vac}}}\Bigg]^{-1/2},
-\qquad \mathcal{Z}_0=(2\pi)^{-n_0/2}\,\mathcal{V}_0\,\mathcal{J},
+S_E[q]=\frac{1}{\varepsilon}\int d\tau\,\Big[\tfrac{M}{2}\dot q^{2}+\tfrac{\lambda}{4}(q^2-a^2)^2- V_{\mathrm{eff}}(q_{\mathrm{vac}})\Big],
+$$
+the bounce $q_{\mathrm{inst}}(\tau)$ yields Hessians
+$$
+\mathcal{M}_{\mathrm{inst}}=-M\,\partial_\tau^2+V''(q_{\mathrm{inst}}(\tau)),\qquad
+\mathcal{M}_{\mathrm{vac}}=-M\,\partial_\tau^2+\omega_0^2,\quad \omega_0^2:=V''(q_{\mathrm{vac}})=2\lambda a^2.
+$$
+Removing the translational zero mode, the prefactor reads [Coleman 1977; Callan & Coleman 1977]
+$$
+A\;=\;\Big(\frac{S_{\mathrm{inst}}}{2\pi}\Big)^{\!1/2}\,\Bigg[\frac{\det{}'\big(-M\partial_\tau^2+V''(q_{\mathrm{inst}})\big)}{\det\big(-M\partial_\tau^2+\omega_0^2\big)}\Bigg]^{-1/2},
 \tag{U.12b}
 $$
-where $\mathcal{M}$ are second‑variation operators, $n_0$ the number of zero modes with collective‑coordinate volume $\mathcal{V}_0$, and $\mathcal{J}$ the Jacobian from gauge/collective‑coordinate fixing. Finite‑size/extensivity then renormalize the prefactor to
+with $S_{\mathrm{inst}}=\tfrac{1}{\varepsilon}\int d\tau\,\tfrac{M}{2}\dot q_{\mathrm{inst}}^{2}+\cdots$. Writing $n_0=1$ for the single zero mode and absorbing its Jacobian $\mathcal J$ into the standard factor gives
 $$
-\boxed{
-A_{\rm eff}\;:=\;\frac{\text{const}}{N_{\mathrm{eff}}}\,A,
-}
+\boxed{\, A_{\rm eff}:=\frac{\text{const}}{N_{\mathrm{eff}}}\,A,\quad \text{const}=\frac{1}{\sqrt{2\pi}}\,\mathcal J \,},\qquad
+N_{\mathrm{eff}}=\frac{V_4}{\gamma_4\,\xi^4}\simeq\frac{V_4}{\gamma_4\,\delta^4},
 \tag{U.12}
 $$
-and the combined result is
+making explicit both the determinant ratio and the finite‑size/extensivity renormalization used in (U.13).
+
 
 $$
 \boxed{

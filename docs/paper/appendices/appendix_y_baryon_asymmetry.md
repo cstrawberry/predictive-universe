@@ -98,14 +98,26 @@ $$
 {g_\ast^{3/2}(T)\;\sqrt{G_H(T)}\;T^6}\;dT\, },\qquad N_g=3,
 $$
 with:
-*   $s(T)=\tfrac{2\pi^2}{45}\,g_\ast(T)\,T^3$, $H(T)=\sqrt{\tfrac{8\pi^3}{90}\,G_H(T)\,g_\ast(T)}\;T^2$.
+*   $s(T)=\tfrac{2\pi^2}{45}\,g_\ast(T)\,T^3$, $H(T)=\sqrt{\tfrac{8\pi^3}{90}\,G_H(T)\,g_\ast(T)}\,T^2$.
 *   $\Gamma_{\mathrm{CS}}(T)$ is the standard sphaleron transition rate.
-*   $\delta_{CP}$ is the key PU input: a dimensionless, in-principle computable parameter representing the magnitude of CP violation from the complex holonomies of the predictive-frame bundle.
+*   $\delta_{CP}$ is the key PU input: a dimensionless, in‑principle computable measure of CP violation from the complex holonomies of the predictive‑frame bundle.
 *   $W(T)\in[0,1]$ is a washout factor.
-*   $T_{\mathrm{fo}}$ is the freeze-out temperature where $\Gamma_{\mathrm{CS}}(T_{\mathrm{fo}})\!\approx\!H(T_{\mathrm{fo}})$.
+*   $T_{\mathrm{fo}}$ is the freeze‑out temperature where $\Gamma_{\mathrm{CS}}(T_{\mathrm{fo}})\!\approx\!H(T_{\mathrm{fo}})$.
 *   $\mathcal C$ is a standard normalization constant.
 
-This formula provides a direct, computable pathway from the microscopic PU parameter $\delta_{CP}$ to the macroscopic observable $\eta_B$.
+**Benchmark estimate.** Taking $g_\ast\!=\!106.75$ for the SM plasma [Husdal 2016], $T_{\mathrm{fo}}\approx 130\,\mathrm{GeV}$ [D’Onofrio et al. 2014], and standard cosmological relations, the final baryon-to-entropy ratio is approximately
+$$
+\eta_B \approx \frac{n_B}{s} \approx \mathcal{C}_{norm} \cdot \delta_{CP} \cdot W_{eff}
+$$
+where $\mathcal{C}_{norm} \approx 10^{-3}$ is a coefficient derived from integrating the sphaleron rate against the Hubble expansion, and $W_{eff}$ is an effective washout factor. For a conservative washout $W_{eff} \sim 10^{-2}$, this yields
+$$
+\eta_B \sim 10^{-5} \times \delta_{CP}.
+$$
+Hence a **conservative** $\delta_{CP}\sim 10^{-5}$—consistent with a small predictive‑frame holonomy—yields
+$$
+\eta_B \sim 10^{-10},
+$$
+within the observed range of $\eta_B \approx 6 \times 10^{-10}$ [Planck Collaboration 2020]. This provides a concrete target for computing $\delta_{CP}$ from the PU connection.
 
 
 

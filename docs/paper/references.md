@@ -58,6 +58,7 @@
 *   Descartes, R. (1641). *Meditationes de Prima Philosophia* (Meditations on First Philosophy).
 *   Deutsch, D. (1999). Quantum Theory of Probability and Decisions. *Proceedings of the Royal Society of London A*, *455*(1988), 3129–3137. DOI: 10.1098/rspa.1999.0443
 *   Devetak, I. (2005). The private classical capacity and quantum capacity of a quantum channel. *IEEE Transactions on Information Theory*, *51*(1), 44-55. DOI: 10.1109/TIT.2004.839516
+*   D’Onofrio, M., Rummukainen, K., & Tranberg, A. (2014). Sphaleron rate in the minimal Standard Model. *Physical Review Letters*, *113*, 141602. DOI: 10.1103/PhysRevLett.113.141602
 *   Donsker, M. D., & Varadhan, S. R. S. (1975). Asymptotic evaluation of certain Markov process expectations for large time. I. *Communications on Pure and Applied Mathematics*, *28*(1), 1–47. DOI: 10.1002/cpa.3160280102
 *   Dunne, G. V. (2008). Functional determinants in quantum field theory. *Journal of Physics A: Mathematical and Theoretical*, *41*(30), 304006. DOI: 10.1088/1751-8113/41/30/304006
 *   Evans, D. E., & Høegh-Krohn, R. (1978). Spectral properties of positive maps on C\*-algebras. *Journal of the London Mathematical Society*, s2-17(2), 345–355. DOI: 10.1112/jlms/s2-17.2.345
@@ -108,6 +109,7 @@
 *   Hollands, S., & Wald, R. M. (2015). Quantum field theory in curved spacetime. *Physics Reports*, *574*, 1–35. DOI: 10.1016/j.physrep.2015.02.001
 *   Horowitz, J. M., & Parrondo, J. M. R. (2011). Designing optimal discrete-feedback thermodynamic engines. New Journal of Physics, 13(12), 123019. DOI: 10.1088/1367-2630/13/12/123019
 *   Hume, D. (1739). *A Treatise of Human Nature*.
+*   Husdal, L. (2016). On effective degrees of freedom in the early Universe. *Galaxies*, *4*(4), 78. DOI: 10.3390/galaxies4040078
 *   Jacobson, T. (1995). Thermodynamics of spacetime: The Einstein equation of state. *Physical Review Letters*, *75*(7), 1260–1263. DOI: 10.1103/PhysRevLett.75.1260
 *   Jech, T. (2003). *Set Theory* (The Third Millennium Edition, revised and expanded). Springer.
 *   Jegerlehner, F. (2008). The running fine-structure constant α(E) via the Adler function. *Nuclear Physics B – Proceedings Supplements*, *181–182*, 135–140. DOI: 10.1016/j.nuclphysbps.2008.09.010
@@ -140,6 +142,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Lieb, E. H., & Robinson, D. W. (1972). The finite group velocity of quantum spin systems. *Communications in Mathematical Physics*, *28*(3), 251–257. DOI: 10.1007/BF01645779
 *   Lin, Y. & Yau, S.T. (2010). Ricci curvature and eigenvalue estimate on locally finite graphs. *Mathematical Research Letters*, *17*(2), 343-356.
 *   Lindblad, G. (1976). On the generators of quantum dynamical semigroups. *Communications in Mathematical Physics*, *48*(2), 119–130. DOI: 10.1007/BF01608499. 
+*   Litim, D. F. (2001). Optimized renormalization group flows. *Physical Review D*, *64*, 105007. DOI: 10.1103/PhysRevD.64.105007
 *   Loll, R. (2019). Quantum Gravity from Causal Dynamical Triangulations: A Review. *Classical and Quantum Gravity*, *37*(1), 013002. DOI: 10.1088/1361-6382/ab579e
 *   Lott, J., & Villani, C. (2009). Ricci curvature for metric-measure spaces via optimal transport. *Annals of Mathematics*, *169*(3), 903–991. DOI: 10.4007/annals.2009.169.903
 *   Lovelock, D. (1971). The Einstein tensor and its generalizations. *Journal of Mathematical Physics*, *12*(3), 498–501. DOI: 10.1063/1.1665613
@@ -222,6 +225,7 @@ DOI: 10.1103/PhysRevX.11.041050
 *   Wilson, K. G. (1971). Renormalization Group and Critical Phenomena. I. Renormalization Group and the Kadanoff Scaling Picture. *Physical Review B*, *4*(9), 3174–3183. DOI: 10.1103/PhysRevB.4.3174 
 *   Winter, A. (1999). Coding theorem and strong converse for quantum channels. *IEEE Transactions on Information Theory*, *45*(7), 2481-2485. DOI: 10.1109/18.796385
 *   Witten, E. (1982). An SU(2) anomaly. *Physics Letters B*, *117*(5), 324-328. DOI: 10.1016/0370-2693(82)90728-6
+*   Wetterich, C. (1993). Exact evolution equation for the effective potential. *Physics Letters B*, *301*(1), 90–94. DOI: 10.1016/0370-2693(93)90726-X
 *   Wolf, M. M. (2012). *Quantum Channels & Operations: A Guided Tour* (Lecture notes). Technical University of Munich. 
 *   Yang, C. N., & Mills, R. L. (1954). Conservation of isotopic spin and isotopic gauge invariance. *Physical Review*, *96*(1), 191–195. DOI: 10.1103/PhysRev.96.191.
 *   Zinn-Justin, J. (2002). *Quantum Field Theory and Critical Phenomena* (4th ed.). Oxford University Press (International Series of Monographs on Physics). DOI: 10.1093/acprof:oso/9780198509233.001.0001

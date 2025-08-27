@@ -55,7 +55,15 @@ $$
 \tag{X.4}
 $$
 
-with $\mathrm{STr}$ the supertrace (minus sign for fermions/ghosts) and implicit traces over internal/spacetime indices. The regulator $R_k$ suppresses modes $q\lesssim k$ and satisfies standard positivity/IR‑regularization conditions. Writing $k=\Lambda/b$, the predictive $c$‑function $c(b)=\mathcal F(\theta(b))$ is KL‑monotone, while $\Gamma_k$ encodes the full (regulator‑dependent) dynamics.
+with $\mathrm{STr}$ the supertrace (minus sign for fermions/ghosts), while $\Gamma_k$ encodes the full (regulator‑dependent) dynamics. In the **Abelian sector (QED)** the flow of the electromagnetic coupling reads, to leading order and with $t:=\ln k$ [Wetterich 1993],
+$$
+\partial_t\,\alpha^{-1}(k)\;=\;-\,\frac{2}{3\pi}\sum_{f}\,N_c^{(f)} Q_f^{2}\,\ell_1^{\mathrm F}\!\left(\frac{m_f^{2}}{k^{2}}\right)\;+\;O(\alpha),
+$$
+where $\ell_1^{\mathrm F}(y)$ is the fermionic threshold function (e.g., Litim regulator: $\ell_1^{\mathrm F}(y)=\frac{1}{1+y}\,\Theta(1-y)$ [Litim 2001]), $N_c^{(f)}$ is color multiplicity, and $Q_f$ the electric charge. Integrating,
+$$
+\alpha^{-1}(k)\;=\;\alpha^{-1}(\mu^{\*})\;-\;\frac{2}{3\pi}\sum_{f} N_c^{(f)} Q_f^{2}\int_{\ln \mu^{\*}}^{\ln k}\!dt\;\ell_1^{\mathrm F}\!\left(\frac{m_f^{2}}{e^{2t}}\right).
+$$
+With the PU normalization $\kappa^{\*}=1$ one has the **boundary condition** $\alpha(\mu^{\*})=u^{\*}/(4\pi)$ from Appendix Z, and the piecewise integral (set by fermion thresholds $m_f$) produces a predictive **band** for $\alpha^{-1}(m_Z)$.
 
 **Corollary X.2 (Fixed points and relevant directions).**
 At a fixed point, directions with negative eigenvalues of the $\Gamma_k$ stability matrix are RG‑relevant (grow under $k\downarrow 0$), while positive‑eigenvalue directions are irrelevant.

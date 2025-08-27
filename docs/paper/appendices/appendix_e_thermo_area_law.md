@@ -60,22 +60,23 @@ acting on the MPU's $d_0$-dimensional Hilbert space $\mathcal{H}_{d_0}$ ($\dim\m
     where $D_{\mathrm{tr}}(\rho_{1},\rho_{2})=\tfrac12\lVert\rho_{1}-\rho_{2}\rVert_{1}$ is the trace distance. The contractivity factor is $f_{\mathrm{RID}} \equiv \lambda_{gap}(\mathcal{E}_N) < 1$, where $\lambda_{gap}(\mathcal{E}_N)$ is the spectral radius of $\mathcal{E}_N$ restricted to the subspace of traceless operators acting on $\mathcal{H}_{d_0}$.
 
 *Proof.*
-1.  **Primitivity of $\mathcal{E}_N$ via minorization.** The 'Evolve' map contains, with strictly positive probability, an SPAP‑mandated reset/mixing subroutine (Section 7.1.3) *as implemented in our SPAP cycle model; $\varepsilon\ge\ln 2$ mandates irreversibility, and we assume the cycle includes a reset/mixing branch with nonzero weight* due to the irreducible reflexivity cost. Hence there exist a constant $p>0$ and a full‑rank state $\sigma\succ 0$ such that for all $\rho\ge 0$,
-    $$
-    \boxed{\ \mathcal{E}_N(\rho)\ \ge\ p\,\mathrm{tr}(\rho)\,\sigma\ }\tag{E.2a}
-    $$
-    (order inequality on positive operators).  
-    *Minorization Lemma (RID Doeblin bound).* The Kraus decomposition of the reset/mixing subroutine contains a branch that (i) reinitializes an ancilla to a fixed full‑support state and (ii) applies an internal mixing channel to the MPU register. Averaging over cycles yields (E.2a) with $p$ equal to the branch weight and $\sigma$ the post‑mixing state.  
-    **Consequences.** (E.2a) implies **strict positivity** (any nonzero $\rho\ge 0$ is mapped to a positive‑definite output) and therefore **primitivity** by the Perron–Frobenius theory for positive CPTP maps. Moreover, we obtain the non‑asymptotic trace‑norm contraction on the traceless subspace:
-    $$
-    \|\mathcal{E}_N(X)\|_1\ \le\ (1-p)\,\|X\|_1,\qquad \mathrm{tr}\,X=0,
-    \tag{E.2b}
-    $$
-    **Proof sketch.** Write $\mathcal{E}_N=(1-p)\Psi + p\,T_\sigma$ with $T_\sigma(\rho)=\mathrm{tr}(\rho)\,\sigma$. For any traceless Hermitian $X$, decompose $X=t(\rho_+-\rho_-)$ with states $\rho_\pm$ and $t=\tfrac12\|X\|_1$. CPTP contractivity of trace distance gives $\|\Psi(X)\|_1 \le \|X\|_1$, while $T_\sigma(X)=0$. Hence
-    $$
-    \|\mathcal{E}_N(X)\|_1 \le (1-p)\,\|X\|_1,
-    $$  
-    which is (E.2b). Therefore we may take $f_{\mathrm{RID}}\le 1-p<1$ in (E.2). This ensures a unique, full‑rank fixed point $\rho_{fix}$ (see Step 2).
+1.  **Primitivity and quantitative contractivity via a two‑phase ND–RID micro‑model.** Consider the averaged ‘Evolve’ channel as the convex combination
+$$
+\mathcal{E}_N \;=\; (1-p)\,\Psi \;+\; p\,T_\sigma,\qquad 0<p\le 1,
+$$
+where $\Psi$ is an arbitrary CPTP map representing the reversible/update phase and $T_\sigma(\rho)=\mathrm{tr}(\rho)\,\sigma$ is the full–rank reset channel to $\sigma\succ 0$. By construction,
+$$
+\boxed{\ \mathcal{E}_N(\rho)\ \ge\ p\,\mathrm{tr}(\rho)\,\sigma\ }\tag{E.2a}
+$$
+(order on positive operators). Since $T_\sigma$ is strictly positive and appears with weight $p>0$, $\mathcal{E}_N$ is **primitive** [Sanz et al. 2010]. Moreover, for any traceless Hermitian $X$,
+$$
+\|\mathcal{E}_N(X)\|_1 \le (1-p)\,\|X\|_1,\qquad \mathrm{tr}X=0, \tag{E.2b}
+$$
+because $T_\sigma(X)=0$ and $\|\Psi(X)\|_1\le \|X\|_1$ [Nielsen & Chuang 2010]. Finally, by Appendix J (irreversibility cost $\varepsilon\ge \ln 2$) and choosing $\sigma=\tfrac{\mathbf 1_{d_0}}{d_0}$ so that a reset contributes at most $\ln d_0$ nats of entropy, the reset probability obeys the **non‑zero lower bound**
+$$
+p \;\ge\; \frac{\varepsilon}{\ln d_0}\ \ge\ \frac{\ln 2}{\ln d_0},
+$$
+hence the RID contractivity factor satisfies $f_{\mathrm{RID}}(\mathcal{E}_N)\le 1-p \le 1 - \tfrac{\ln 2}{\ln d_0}<1$. This bound assumes the reset channel is the sole source of the cycle's average irreversibility cost $\varepsilon$.
 
 2.  **Consequences of Primitivity:** For a primitive CPTP map $\mathcal{E}_N$ on $\mathcal{B}(\mathcal{H}_{d_0})$ [Frigerio & Verri 1982; Wolf 2012]:
     *   There is a unique full-rank fixed point state $\rho_{fix}$ such that $\mathcal{E}_N(\rho_{fix}) = \rho_{fix}$.
