@@ -85,7 +85,7 @@ The derivation rests on the interplay between the Principle of Compression Effic
 Therefore, `κ* = 1` is a derived theorem about the nature of the PCE-Attractor state. With this established, the fine-structure constant at the MPU operational scale $\mu^*$ is:
 
 $$
-\alpha_{\mathrm{em}}(\mathrm{MPU}) = \frac{u^*}{4\pi} \approx \frac{0.0905077}{4\pi} \approx 0.007202
+\alpha_{\mathrm{em}}(\mathrm{MPU}) = \frac{u^*}{4\pi} \approx \frac{0.0905077}{4\pi} \approx 0.00720238
 $$
 
 $$
@@ -128,7 +128,7 @@ This map $\mathcal{R}$ accounts for several effects:
 3.  **Threshold Corrections:** The effects of integrating out heavy particles.
 4.  **Non-Perturbative Effects:** Primarily the hadronic vacuum polarization contribution.
 
-This interpretation is not an ad-hoc fix but is mandated by the physics. The standard Källén–Lehmann spectral representation proves that the physical QED coupling $\alpha(Q^2)$ is a monotonically increasing function of the momentum scale $Q^2$. This means for any physical scale $\mu > 0$, we must have $\alpha(\mu) > \alpha(0)$. Empirically, $1/\alpha(0) \approx 137.036$, which gives $\alpha(0) \approx 0.007297$. Our calculated value is $\alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 0.007202$. Since $\alpha_{\mathrm{em}}(\mathrm{MPU}) < \alpha(0)$, it is logically impossible to identify $\alpha_{\mathrm{em}}(\mathrm{MPU})$ with a physical running coupling $\alpha(\mu)$ at any scale $\mu > 0$. This confirms its status as a bare boundary condition.
+This interpretation is not an ad-hoc fix but is mandated by the physics. The standard Källén–Lehmann spectral representation, applied to the renormalized vacuum polarization, implies that the effective QED coupling is monotonically increasing for spacelike momenta $Q^2>0$. This means for any physical scale $\mu > 0$, we must have $\alpha(\mu) > \alpha(0)$. Empirically, $1/\alpha(0) \approx 137.036$, which gives $\alpha(0) \approx 0.007297$. Our calculated value is $\alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 0.007202$. Since $\alpha_{\mathrm{em}}(\mathrm{MPU}) < \alpha(0)$, it is logically impossible to identify $\alpha_{\mathrm{em}}(\mathrm{MPU})$ with a physical running coupling $\alpha(\mu)$ at any scale $\mu > 0$. This confirms its status as a bare boundary condition.
 
 The framework's prediction is therefore not that $1/\alpha(0)$ should equal 138.843, but that the value 138.843 is the correct bare input from which the observed low-energy value can be derived via the map $\mathcal{R}$. We can test this for consistency by matching to a well-understood high-energy scale, such as the Z-boson mass, $M_Z$. The experimentally measured value in the $\overline{\mathrm{MS}}$ scheme is $1/\hat{\alpha}(M_Z) \approx 127.955 \pm 0.010$ (PDG 2024 value). The required matching map is then:
 $$

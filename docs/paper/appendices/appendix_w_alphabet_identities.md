@@ -44,7 +44,7 @@ This appendix derives general, robust identities and bounds relating emergent ga
 **Units & normalization.** Heaviside–Lorentz (HL) units are used with $u=g^2$ and $\alpha=g^2/(4\pi)$. **Below electroweak symmetry breaking (EWSB)**, the **canonical** SM convention is adopted:
 
 $$
-Q\,=\,T_3+\frac{Y}{2},\qquad e=g_2\sin\theta_W=g_Y\cos\theta_W,\qquad \alpha_{em}=\frac{e^2}{4\pi}.
+Q\,=\,T_3+\frac{Y}{2},\qquad e=g_2\sin\theta_W=g_Y\cos\theta_W,\qquad \alpha_{\mathrm{em}}=\frac{e^2}{4\pi}.
 $$
 
 For grand‑unified (GUT) normalization of hypercharge,
@@ -213,17 +213,17 @@ For a given sector $s$, write $F_{\lambda,s}:=\dfrac{M_s x_s^2}{S_2^{(s)}}$.
 **Theorem W\.10 (Alphabet constant: upper bound and identity conditions at the Jensen‑cap–saturated optimum).**
 At the **Jensen‑cap–saturated** optimum,
 
-$$ \boxed{\ \alpha_{em}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0,M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.2.5} $$
+$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0,M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.2.5} $$
 
 with **strict inequality on the cap‑active branch**. **Equality** holds **iff** the spectrum is flat $(F_{\lambda,e}=1)$ **and** the unconstrained minimizer lies on the boundary $(u_0=u^\*_{\rm J})$, in which case
 
 
-$$ \boxed{\ \alpha_{em}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ =\ K(d_0,M_e)\ }. \tag{W.2.6} $$
+$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ =\ K(d_0,M_e)\ }. \tag{W.2.6} $$
 
 
 *Proof.* From $u^\*_{\rm J}=(a_{\rm cap}-1)/x$,
 
-$$ \alpha_{em}(\mathrm{MPU})\,\frac{C_{\rm cyc}}{C_{\rm cap}} =\frac{u^\*_{\rm J}}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{S_1} =\frac{a_{\rm cap}-1}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{M x^2}. $$
+$$ \alpha_{\mathrm{em}}(\mathrm{MPU})\,\frac{C_{\rm cyc}}{C_{\rm cap}} =\frac{u^\*_{\rm J}}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{S_1} =\frac{a_{\rm cap}-1}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{M x^2}. $$
 
 Apply (W\.2.3) to obtain the bound with factor $1/F_{\lambda,e}=S_2/(M x^2)$ (for the EM sector). Strictness and equality conditions follow from Proposition W\.8 and $F_{\lambda,e}=1\iff \sigma^2=0$. $\square$
 
@@ -319,7 +319,7 @@ $$
 **Corollary W\.16 (Product bound at Jensen‑cap; EM restatement of (W\.2.5) at the Jensen‑cap–saturated optimum).**
 At the Jensen‑cap–saturated optimum,
 
-$$ \boxed{\ \alpha_{em}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0, M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.5.1} $$
+$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0, M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.5.1} $$
 
 with **strict inequality on the cap‑active branch**. **Equality** holds **iff** $u_0=u^\*_{\rm J}$ and $\sigma^2=0$. The identity (W\.2.6) holds only under the specific conditions of a flat LAN spectrum and operation precisely at the branch boundary. The more general, robust prediction of this framework is the inequality (W\.5.1). The identity represents an idealized, high‑symmetry point in the space of possible solutions.
 
@@ -354,7 +354,7 @@ Increasing spectral variance decreases $r_e$ and enlarges the upper bound (W\.5.
    – If $g_J(u_0)= \ln d_0$: **branch boundary** $(u_s^\*=u_0=u^\*_{\rm J})$.
    – If $g_J(u_0)> \ln d_0$: **cap‑active** $\bigl(u_s^\*=u^\*_{\rm J}=(a_{\rm cap}-1)\,M_s/S_1^{(s)}\bigr)$, with $a_{\rm cap}=d_0^{1/M_s}$.
 4. **Invariants:** $C_{\rm cap}^{(s)}=\Gamma_0\nu\,S_1^{(s)}$,\quad $C_{\rm cyc}^{(s)}=\Gamma_0\nu\,[\,2\tilde A_{\rm PCE}^{(s)}+S_2^{(s)}\,]$.
-5. **U(1)/EM product:** for scales **below** EWSB, $\alpha_{em}(\mu^\*)=u_e^\*/(4\pi)$. Compute $\alpha_{em}(\mu^\*)\,(C_{\rm cyc}/C_{\rm cap})_{e}$ and compare to $K(d_0,M_e)/F_{\lambda,e}$; the identity (W\.2.6) applies only at the branch boundary with $\sigma_e^2=0$. For scales **above** EWSB, replace with hypercharge/weak couplings as in (W\.3.1).
+5. **U(1)/EM product:** for scales **below** EWSB, $\alpha_{\mathrm{em}}(\mu^\*)=u_e^\*/(4\pi)$. Compute $\alpha_{\mathrm{em}}(\mu^\*)\,(C_{\rm cyc}/C_{\rm cap})_{e}$ and compare to $K(d_0,M_e)/F_{\lambda,e}$; the identity (W\.2.6) applies only at the branch boundary with $\sigma_e^2=0$. For scales **above** EWSB, replace with hypercharge/weak couplings as in (W\.3.1).
 6. **Weinberg angle:** evaluate (W\.3.1); if using GUT normalization, use (W\.3.3) with $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$.
 7. **Reporting:** publish $\{M_s,S_1^{(s)},S_2^{(s)}\}$, $\Gamma_0,\nu$, $d_0$, probe specification, and code.
 

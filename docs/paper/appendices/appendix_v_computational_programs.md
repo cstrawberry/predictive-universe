@@ -1,8 +1,8 @@
 # Appendix V: Computational Programs and Numerical Consistency Checks
 
-This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{em}$. The $\Lambda$ program is an inversion that uses observational inputs to determine the instanton complexity $\kappa$. The $\alpha_{em}$ program gives a parametric, falsifiable roadmap that becomes parameter-free once the baseline MPU invariants are computed from a specified model.
+This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program is an inversion that uses observational inputs to determine the instanton complexity $\kappa$. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap that becomes parameter-free once the baseline MPU invariants are computed from a specified model.
 
-**Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{em}=g_e^2/(4\pi)$.
+**Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=g_e^2/(4\pi)$.
 
 
 
@@ -96,7 +96,7 @@ $$
 
 ---
 
-## V.2 Calculation of $\alpha_{em}$ from Baseline MPU Invariants
+## V.2 Calculation of $\alpha_{\mathrm{em}}$ from Baseline MPU Invariants
 
 ### V.2.1 Inputs
 
@@ -183,11 +183,14 @@ Because each cycle outputs at most $d_0$ outcomes and the observation channel fa
 
 With $\mu^*=\kappa_\mu\nu$,
 
-$$ \boxed{\ \alpha_{em}(\mathrm{MPU})=\frac{u^*}{4\pi}\ }\tag{V.13} $$
+$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})=\frac{u^*}{4\pi}\ }\tag{V.13} $$
+
 
 ### V.2.5 Running to Laboratory Scales
 
-Match and evolve $\alpha_{em}$ from the MPU scale $\mu^*$ to a reference scale (e.g., $m_Z$) by one‑loop QED with threshold matching (Heaviside–Lorentz units) in the $\overline{\mathrm{MS}}$ scheme \[Peskin & Schroeder, 1995]:
+Match $\alpha_{\mathrm{em}}(\mathrm{MPU})$ to the $\overline{\mathrm{MS}}$ scheme at $\mu^*$, obtaining
+$\hat{\alpha}(\mu^*) \equiv \alpha_{\overline{\mathrm{MS}}}(\mu^*) \;=\; \mathcal{M}\!\big[\alpha_{\mathrm{em}}(\mathrm{MPU})\big]$;
+then evolve $\hat{\alpha}$ from $\mu^*$ to the target scale using the RG (e.g., [Peskin & Schroeder, 1995]):
 
 $$
 \boxed{\ \frac{d\alpha}{d\ln\mu}=\frac{2}{3\pi}\!\left(\sum_{f}N_c^{f}Q_f^{2}\right)\alpha^2\ }\tag{V.14}
@@ -237,10 +240,10 @@ When used with Appendix W (which takes $\gamma_{\mathrm{eff}}=2$), choose $\gamm
 
 3. **Capacity check.** If $\sum_i\ln(1+\lambda_i u)\le\ln 8$, accept $u^*=u$. Otherwise, solve $\sum_i\ln(1+\lambda_i u)=\ln 8$ for $u^*_{\mathrm{cap}}$ using a bracketing root-finder (e.g., Brent's method) on a bracketing interval that guarantees crossing, e.g., $[0, (8^{1/M}-1)/\lambda_{\min}]$; alternatively expand the upper bound geometrically from the interior solution until $\sum_i\ln(1+\lambda_i u)\ge\ln 8$, then bracket.
 
-4. **Report bare coupling.** The bare, predictive-scheme coupling is $\alpha_{em}(\mathrm{MPU})=u^*/(4\pi)$, at an operational scale $\mu^*=\kappa_\mu\nu$.
+4. **Report bare coupling.** The bare, predictive-scheme coupling is $\alpha_{\mathrm{em}}(\mathrm{MPU})=u^*/(4\pi)$, at an operational scale $\mu^*=\kappa_\mu\nu$.
 
 
-5. **Match and run to target scale.** Apply a full matching procedure, including scheme conversion and RG running via Eq. (V.15), to relate $\alpha_{em}(\mathrm{MPU})$ to the physical coupling $\alpha_{em}(\mu_{\mathrm{target}})$.
+5. **Match and run to target scale.** Apply a full matching procedure, including scheme conversion and RG running via Eq. (V.15), to relate $\alpha_{\mathrm{em}}(\mathrm{MPU})$ to the physical coupling $\alpha_{\mathrm{em}}(\mu_{\mathrm{target}})$.
 
 ### V.2.7 Sensitivity (local)
 
@@ -257,4 +260,4 @@ so increasing spectral weight $\lambda_i$ increases $u^*$ linearly, while increa
 
 With the accepted $u^*$ (interior or boundary), the prediction is
 
-$$ \boxed{\ \alpha_{em}(\mathrm{MPU})=\frac{u^*}{4\pi},\qquad \alpha_{em}(\mu_{\mathrm{target}})\ \text{from matching and running via (V.15).}\ }\tag{V.16} $$
+$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})=\frac{u^*}{4\pi},\qquad \alpha_{\mathrm{em}}(\mu_{\mathrm{target}})\ \text{from matching and running via (V.15).}\ }\tag{V.16} $$

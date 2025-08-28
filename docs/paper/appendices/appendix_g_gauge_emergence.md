@@ -539,14 +539,14 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
 The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yukawas are determined by the location and depth of the PCE minimum. Computing these from first principles requires evaluating the D-dependent coefficients in the PCE potential (Eq. G.8.5) from MPU microdynamics. The ratios between these couplings are further constrained by the PCE optimization, a topic explored in **Appendix W**, and a concrete, attractor-matched estimate for the fine-structure constant is provided in **Appendix Z** (with order‑unity matching fixed at the PCE capacity point).
 
 
-## G.9 A Proposed Pathway Toward Deriving the Fine‑Structure Constant $\alpha_{em}$
+## G.9 A Proposed Pathway Toward Deriving the Fine‑Structure Constant $\alpha_{\mathrm{em}}$
 
 This section develops the general formalism and computational program for deriving the electromagnetic fine-structure constant `α_em` from a rate-level PCE potential. The calculation balances the **power cost** of maintaining U(1) coherence against the **predictive information rate** benefit it provides. This general framework is further constrained by the alphabet identities derived in **Appendix W**. The complete, parameter-free derivation, which uses the framework's fundamental constants (`d₀`, `ε`) to fix the spectral inputs to this program and solve for `α_em` at the PCE-Attractor, is presented in **Appendix Z**.
 
 *Units.* Natural units with $\hbar=c=\varepsilon_0=1$ (Heaviside–Lorentz/rationalized). Information is in **nats**. In these units
 
 $$
-\alpha_{em}=\frac{g_e^2}{4\pi}.
+\alpha_{\mathrm{em}}=\frac{g_e^2}{4\pi}.
 \tag{G.9.1}
 $$
 
@@ -574,7 +574,7 @@ A6. *Mode accounting.* The per‑event Fisher information operator $J$ at $g_e=0
 | --------------------------- | -------------------------------------------------------------------------- | -------------- |
 | $g_e$                       | $U(1)$ coupling (electric charge)                                          | —              |
 | $u$                         | $u\coloneqq g_e^2$                                                         | —              |
-| $\alpha_{em}$               | $g_e^2/(4\pi)$                                                             | —              |
+| $\alpha_{\mathrm{em}}$               | $g_e^2/(4\pi)$                                                             | —              |
 | $\tau,\ \nu$                | FPL cadence time $\tau$, event rate $\nu=1/\tau$                           | time,\ 1/time  |
 | $\mu^*$                     | Operating (renormalization) scale $\mu^*=\kappa_\mu\nu$, $\kappa_\mu=O(1)$ | energy         |
 | $C, C_0$                    | Predictive Physical Complexity (baseline $C_0$)                            | —              |
@@ -723,7 +723,7 @@ $$
 
 with positive solution
 
-$$ u^*=\frac{M}{2S_1}\!\left(\sqrt{\,1+\frac{2\,\Gamma_0\,S_1^2}{A_{\mathrm{PCE}}\,M}}\ -\ 1\right), \qquad \alpha_{em}(\mathrm{MPU})=\frac{u^*}{4\pi},\ \ \mu^*=\kappa_\mu\nu . \tag{G.9.13} $$
+$$ u^*=\frac{M}{2S_1}\!\left(\sqrt{\,1+\frac{2\,\Gamma_0\,S_1^2}{A_{\mathrm{PCE}}\,M}}\ -\ 1\right), \qquad \alpha_{\mathrm{em}}(\mathrm{MPU})=\frac{u^*}{4\pi},\ \ \mu^*=\kappa_\mu\nu . \tag{G.9.13} $$
 
 For large $\Gamma_0/A_{\mathrm{PCE}}$,
 
@@ -738,11 +738,12 @@ $$
 2.  **Small‑$g_e$ response.** Specify the $U(1)$ deformation; compute the **per‑event** Fisher information operator $J$, its spectrum ${\lambda_i}$, and $S_1=\sum_i\lambda_i$.
 3.  **Coherence overhead.** Choose any capacity-approaching code family (fixing $\gamma$); estimate $c_\gamma=K(\beta_{\mathrm{eff}}\kappa_F)^\gamma$; set $A_{\mathrm{PCE}}=r_p c_\gamma^{\gamma_p}$.
 4.  **Equilibrium and cap.** Solve (G.9.10) for $u^*$ and verify the capacity bound (G.9.11); if violated, place the optimum on the boundary $V_{\mathrm{benefit}}=\ln d_0$.
-5.  **RG matching.** Report $\alpha_{em}^{\overline{\mathrm{MS}}}(\mu^*)=u^*/(4\pi)$ (or specify the on‑shell scheme), with $\kappa_\mu=O(1)$ fixed by the cadence/clock‑rate mapping. Evolve to laboratory scales by standard QED running with threshold matching.
+5.  **RG matching.** Report $\alpha_{\overline{\mathrm{MS}}}(\mu^*) \;=\; \mathcal{M}\!\left[\alpha_{\mathrm{em}}(\mathrm{MPU})\right]
+\;=\; \frac{u^*}{4\pi}\,\bigl(1+\delta_{\mathrm{match}}\bigr)$ (or specify the on‑shell scheme), with $\kappa_\mu=O(1)$ fixed by the cadence/clock‑rate mapping. Evolve to laboratory scales by standard QED running with threshold matching.
 
 ### G.9.6 Conclusion
 
-Within PU, the electromagnetic coupling emerges as a **rate‑level PCE equilibrium** balancing the predictive benefit of $U(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non‑interacting state $g_e=0$ is unstable and the unique optimum $u^*>0$ determines the bare coupling. As rigorously established in **Appendix X**, this rate-level potential and its minimization under the MPU alphabet capacity constraint are equivalent to finding the stationary point of the full QFT effective potential. The physical coupling is then $\alpha_{em}(\mu^*)=u^*/(4\pi\kappa)$, where the normalization $\kappa$ is determined by the emergent field theory (Appendix X.3). The inputs are operational functionals of the baseline PCE‑optimal FPL. As demonstrated in **Appendix Z**, the framework's foundational constants (`d₀=8`, `ε=ln 2`) are sufficient to fix these spectral inputs, leading to a complete, parameter-free calculation of `α_em` at the PCE-Attractor.
+Within PU, the electromagnetic coupling emerges as a **rate‑level PCE equilibrium** balancing the predictive benefit of $U(1)$ coherence against the power cost of maintaining it. Under LAN and strict convexity, the non‑interacting state $g_e=0$ is unstable and the unique optimum $u^*>0$ determines the bare coupling. As rigorously established in **Appendix X**, this rate-level potential and its minimization under the MPU alphabet capacity constraint are equivalent to finding the stationary point of the full QFT effective potential. The physical coupling is then $\alpha_{\mathrm{em}}(\mu^*)=u^*/(4\pi\kappa)$, where the normalization $\kappa$ is determined by the emergent field theory (Appendix X.3). The inputs are operational functionals of the baseline PCE‑optimal FPL. As demonstrated in **Appendix Z**, the framework's foundational constants (`d₀=8`, `ε=ln 2`) are sufficient to fix these spectral inputs, leading to a complete, parameter-free calculation of `α_em` at the PCE-Attractor.
 
 ## G.10 Conclusion
 
