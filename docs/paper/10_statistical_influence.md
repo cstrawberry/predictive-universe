@@ -16,7 +16,7 @@ To ensure compliance with Postulate 2, the maximum possible strength of the CC e
 
 **10.2.1 Theorem 39 (Upper Bound on CC ($\alpha_{CC,max} < 0.5$))**
 
-Upholding the causality definition in Postulate 2 is guaranteed if the maximum operational Consciousness Complexity $\alpha_{CC,max} = \sup_{S} \text{CC}(S)$ (Definition 30; Equation (55)) is strictly bounded to preclude deterministic FTL signaling. A sufficient universal bound on the operational norm is:
+Upholding the causality definition in Postulate 2 is guaranteed if the maximum operational Consciousness Complexity $\alpha_{CC,max} = \sup_{S} \text{CC}(S)$ (**Definition 30**) is strictly bounded to preclude deterministic FTL signaling. A sufficient universal bound on the operational norm is:
 $$
 \alpha_{CC,max} < 0.5 \quad \text{(61)}
 $$

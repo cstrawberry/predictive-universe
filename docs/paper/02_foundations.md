@@ -18,7 +18,7 @@ We define information and knowledge not intrinsically, but functionally in terms
 
 **2.3.1 Definition 1 (Def 1): Information**
 
-Within the Predictive Universe framework, information is defined functionally as any physically instantiated (I), substrate-independent (S) pattern or correlation structure (P) that, when processed by a suitable predictive system (E), has the objective potential to reduce uncertainty or Prediction Error (PE) (F) concerning states relevant (R) to that system's Prediction Optimization Problem (POP, Axiom 1). A suitable system must possess sufficient complexity ($C \ge K_0$, the Horizon Constant; see Section 5, Theorem 16) and an appropriate model class $\mathcal{M}$.
+Within the Predictive Universe framework, information is defined functionally as any physically instantiated (I), substrate-independent (S) pattern or correlation structure (P) that, when processed by a suitable predictive system (E), has the objective potential to reduce uncertainty or Prediction Error (PE) (F) concerning states relevant (R) to that system's Prediction Optimization Problem (POP, Axiom 1). A suitable system must possess sufficient complexity ($C \ge K_0$, the Horizon Constant; see **Section 5, Theorem 15**) and an appropriate model class $\mathcal{M}$.
 
 *Elaboration:*
 *   **(P) Pattern:** A discernible structure, regularity, or deviation from randomness that allows for distinctions relevant to prediction.

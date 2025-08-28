@@ -20,7 +20,7 @@ For the Fundamental Predictive Loop (Definition 4) to operate sustainably and ad
 2.  **Predictive Generation ($b_p$):** The ability to execute the internal model ($M_t$) to generate predictions based on the current state.
 3.  **Verification & Update Initiation ($b_v$):** The ability to interact to acquire outcome information, compare it with the prediction, generate an error/feedback signal, and utilize this signal to initiate the adaptive update process ($D_{cyc}$) for the model and state.
 
-These capabilities must operate in a coordinated, cyclical manner. The minimal physical resources required to implement these integrated functions correspond to the Operational Threshold $C_{op}$ (Definition 14), which necessarily satisfies $C_{op} \ge K_0$ (Corollary 3).
+These capabilities must operate in a coordinated, cyclical manner. The minimal physical resources required to implement these integrated functions correspond to the Operational Threshold $C_{op}$ (**Definition 13**), which necessarily satisfies $C_{op} \ge K_0$ (Corollary 3).
 
 **3.2 Reflexive Interaction Dynamics (RID)**
 

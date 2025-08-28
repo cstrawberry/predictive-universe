@@ -52,7 +52,7 @@
 
 *   **$d_{\mathcal{N}}$:** (Definition 35) Network propagation cost metric based on minimum cumulative ND-RID cost along paths (shortest path distance in cost space) (Equation 64).
 
-*   **DSRO (Dynamic Self-Reference Operator):** (Definition 11, Theorem A.3) Formal representation of a computable function whose output depends dynamically on provable properties about itself, based on Kleene's Second Recursion Theorem. Used in SPAP logic.
+*   **DSRO (Dynamic Self-Reference Operator):** (Definition 11, **Theorem A.1.5**) Formal representation of a computable function whose output depends dynamically on provable properties about itself, based on Kleene's Second Recursion Theorem. Used in SPAP logic.
 
 *   **Dominance of Stabilizing Costs (DSC):** (Theorem 22) The condition that the stabilizing effects of performance saturation (concave $PP$) and the strictly convex physical cost $R(C)$ are sufficient to overcome any destabilizing effects (e.g., from the concave informational cost $R_I(C)$), ensuring the existence of a unique, stable equilibrium complexity $C^*$.
 
@@ -146,7 +146,7 @@
 
 *   **RID (Reflexive Interaction Dynamics):** (Definition 6, Definition A.1) Formalism characterizing interactions where the system's subsequent state depends intrinsically on the outcome of the interaction itself. Includes deterministic (D-RID) and non-deterministic (ND-RID) versions.
 
-*   **RU (Reflexive Undecidability):** (Theorem 12, Theorems A.4, A.5) Fundamental limitation on the ability of an interacting algorithm to reliably decide certain properties of systems governed by RID, due to the interaction perturbing the system state.
+*   **RU (Reflexive Undecidability):** (**Theorem 12, Theorems A.2.3, A.2.4**) Fundamental limitation on the ability of an interacting algorithm to reliably decide certain properties of systems governed by RID, due to the interaction perturbing the system state.
 
 *   **Reflexivity Constraint:** (Theorem 33, Equation 48) Fundamental trade-off $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$ between relevant information gain $\Delta I$ in an 'Evolve' interaction and the minimum necessary dimensionless state disturbance (entropy production) $\Delta S_{min}/k_B$. Arises from $\varepsilon \ge \ln 2$.
 
@@ -160,7 +160,7 @@
 
 *   **Space of Becoming:** (Definition 8) The open interval $(\alpha, \beta)$, representing the necessary operational range for Predictive Performance $PP(t)$ for viable, adaptive MPU functioning (Axiom 3).
 
-*   **SPAP (Self-Referential Paradox of Accurate Prediction):** (Section 4.2, Theorems 10, 11, A.1, A.2) Theorems demonstrating the logical impossibility of guaranteed perfect self-prediction (deterministic or probabilistic) for systems possessing sufficient computational richness (Property R). Establishes fundamental Logical Indeterminacy and performance limit $\alpha_{SPAP}$.
+*   **SPAP (Self-Referential Paradox of Accurate Prediction):** (**Section 4.2, Theorems 10, 11, A.1.1, A.1.3**) Theorems demonstrating the logical impossibility of guaranteed perfect self-prediction (deterministic or probabilistic) for systems possessing sufficient computational richness (Property R). Establishes fundamental Logical Indeterminacy and performance limit $\alpha_{SPAP}$.
 
 *   **Statistical FTL Influence:** (Postulate 3, Section 10.3) Hypothesized effect where CC modulation by Alice can statistically influence the marginal probabilities of outcomes for Bob's measurements on an entangled system at a space-like separated location, argued to be consistent with operational causality (Postulate 2) due to information limits (Theorem 42, Appendix F).
 
