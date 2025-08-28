@@ -137,6 +137,21 @@ This interpretation is not an ad-hoc fix but is mandated by the physics. The sta
 
 The framework's prediction is therefore not that $1/\alpha(0)$ should equal 138.843, but that the value 138.843 is the correct bare input from which the observed low-energy value can be derived via an independent calculation of the map $\mathcal{R}$. We can test this for consistency by matching to a well-understood high-energy scale, such as the Z-boson mass, $M_Z$.
 
+### Z.8 Robustness Bounds and Scheme Stability
+The parameter-free prediction for $\alpha_{\mathrm{em}}$ is an idealized result at the PCE-Attractor. The following proposition provides robust bounds for physical scenarios.
+
+**Proposition Z.1 (Scheme-Stable α-Ratio Bound).**
+The PU boundary value $\alpha_{\rm em}(\mathrm{MPU})$ and the physical $\overline{\mathrm{MS}}$ value at the Z-pole, $\hat\alpha(M_Z)$, are related by:
+$$
+\left|\frac{\hat\alpha(M_Z)}{\alpha_{\rm em}(\mathrm{MPU})} - (1+\Delta^*)\right|
+\;\le\; c_4(M_Z,\mu^*)\,\alpha_{\rm em}(\mathrm{MPU})^2,
+$$
+where $\Delta^*$ is the central value of the finite matching map $\mathcal{R}$ (Section Z.7), and $c_4(M_Z,\mu^*)$ is the two-loop coefficient at fixed scales. In $\overline{\mathrm{MS}}$ it is given by:
+$$
+c_4(M_Z,\mu^*) \;=\; \frac{\beta_2^{\mathrm{QED}}}{(4\pi)^2}\,\ln\frac{M_Z}{\mu^*} \;+\; \delta_{match}^{(2)},
+$$
+where $\beta_2^{\mathrm{QED}}$ is the two-loop QED beta-function coefficient with the appropriate active-flavor content between $\mu^*$ and $M_Z$ (including color factors $N_c^{(f)}$ and charges $Q_f$), and $\delta_{match}^{(2)}$ encodes the two-loop threshold and scheme-conversion effects at $M_Z$. This establishes a provable theoretical corridor for the prediction.
+
 ## Z.7 Worked Matching: $\alpha_{\mathrm{em}}(\mathrm{MPU}) \to \hat\alpha(M_Z)$
 
 **Purpose.** Convert the PU boundary value $\alpha_{\mathrm{em}}(\mathrm{MPU})$ into the $\overline{\mathrm{MS}}$ coupling at the $Z$ pole and quantify the finite matching factor with uncertainties.

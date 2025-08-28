@@ -3,7 +3,7 @@
 **Abstract**
 We derive the electroweak/Planck hierarchy from first principles within the Predictive Universe (PU) framework by constructing a macroscopic effective potential directly from microscopic Minimal Predictive Unit (MPU) dynamics. The emergent scalar order parameter is a block average of a bounded, $\mathbb{Z}_2$-symmetric local observable defined from MPU primitives. We construct a concrete instance of this observable via a physically-motivated ansatz, demonstrating it can possess the necessary quantum numbers (e.g., $SU(2)_L$ triplet proxy) to track the Higgs vacuum expectation value. Using large-deviation theory, the effective potential is obtained as the difference of (i) a constrained operational/communication cost and (ii) a predictive-information benefit. A key geometric feature—an area law for inter-block penalties—introduces a boundary mass term that competes with a logarithmically destabilizing bulk drift. Wilsonian block recursion yields an emergent critical scale $\ell^*$ at which the quadratic curvature (mass) changes sign, triggering spontaneous symmetry breaking. We derive the Renormalization Group (RG) flow, correctly separating the logarithmic running of the bulk mass from the geometric dilution ($1/\ell$) of the boundary term. The resulting vacuum expectation value satisfies $v \simeq \zeta/(\ell^*\delta)$, yielding an exponential hierarchy $v/M_{Pl}$ from logarithmic renormalization. All coefficients are expressed in terms of MPU cumulants, mixed cumulants with the bulk cost density, and boundary cumulants arising from the ND–RID link geometry. We provide explicit MPU-native constructions and formulas for these coefficients, along with a closed-form solution for $\ell^*$ using the Lambert–$W$ function. A monotonicity argument based on emergent ferromagnetic correlations justifies the sign flip of the bulk mass. We compare this mechanism to Coleman–Weinberg, technicolor, and supersymmetry, highlighting the distinctive prediction $\partial \ln v/\partial \ln C_{\max} > 0$. This derivation is a key component of the framework's ability to explain the Standard Model's structure from first principles.
 
----
+
 
 ## T.1 Introduction and Overview
 
@@ -24,7 +24,7 @@ The core mechanism is a competition between predictive benefits and resource cos
 * No new confining dynamics or superpartners are introduced (contrast technicolor and SUSY).
 * Testable prediction: $\partial \ln v/\partial \ln C_{\max} > 0$. This implies that increasing the fundamental ND–RID channel capacity $C_{\max}$ would raise the electroweak scale $v$.
 
----
+
 
 ## T.2 Microscopic PU Model and MPU-Native Definitions
 
@@ -144,7 +144,7 @@ This derivation rests on several foundational assumptions that are either derive
 6. **Observable Ansatz.** The choice of the local observable `m_i` (Section T.2.2) is a specific, physically motivated *ansatz* designed to have the correct SM quantum numbers to serve as a proxy for the Higgs VEV. This is a modeling choice to demonstrate a concrete, viable instance of the mechanism.
 7. **PCE-Driven Near-Criticality.** The numerical viability of the mechanism requires the system to operate in a regime where the bare bulk mass `m_b²` is small, i.e., near the ferromagnetic phase transition (`k_b ≈ k_c`). We posit that this is not a fine-tuning but a dynamically selected state. A system poised at criticality exhibits maximal susceptibility to external perturbations, making it an optimal sensor of its environment. PCE, by driving the system to solve the Prediction Optimization Problem, will favor configurations that maximize this predictive sensitivity, thus dynamically tuning the system to a near-critical state.
 
----
+
 
 ## T.3 Coarse-Grained Order Parameter and Large-Deviation Effective Potential
 
@@ -178,7 +178,7 @@ $$
 \tag{T.6}
 $$
 
----
+
 
 ## T.4 Effective Potential and Coefficients from MPU Cumulants
 
@@ -207,7 +207,7 @@ The macroscopic coefficients $A_2, A_4, B$ are formally derived as mixed cumulan
 *   $\Sigma_2, \Sigma_4$: Quantify the bulk cost backreaction on order.
 *   $\tau_2$: Quantifies the cost of cross-boundary coherence under ND–RID.
 
----
+
 
 ## T.5 PU-Native RG: Block Recursion and One-Loop Flows
 
@@ -250,7 +250,7 @@ m_\ell^2\approx m_{\rm bulk}^2(1)-\beta_2\ln\ell+\frac{2B}{\ell}.
 $$
 Thus a modest $m_{\rm bulk}^2(1)=O(0.1\text{–}1)$ naturally yields $m_{\rm EW}\ll M_{\rm UV}$ once the negative drift dominates the decaying boundary term.
 
----
+
 
 ## T.6 Why the Bulk Mass Runs Negative
 
@@ -261,7 +261,7 @@ Two mechanisms ensure $m_{\rm bulk}^2(\ell)$ becomes negative at large $\ell$:
 
 At small scales, the boundary term $2B/\ell$ is large and positive, keeping $m_\ell^2>0$. As $\ell$ grows, this geometric term dilutes, and the negative bulk drift dominates, guaranteeing a zero-crossing at some finite critical scale $\ell^*$.
 
----
+
 
 ## T.7 Critical Scale, VEV, and the Hierarchy
 
@@ -294,7 +294,7 @@ $$
 $$
 with $\vartheta(\mu,\phi) = (\partial_\mu\mathcal P)/(\partial_\mu\mathcal R)$ the marginal tradeoff density. This theorem provides the formal justification for the exponential hierarchy emerging from the PCE-driven RG flow.
 
----
+
 
 ## T.8 A Computable Program from PU Primitives
 
@@ -390,7 +390,7 @@ so a representative value is $c_W\simeq 0.019$ for the standard cubic block. Hen
     $$
     This result matches the observed hierarchy `v/M_{Pl} ≈ 10^{-17}` with `O(1)` inputs, demonstrating the mechanism's viability without fine-tuning.
 
----
+
 
 ## T.9 Falsifiable Signature of the Mechanism
 
@@ -402,16 +402,25 @@ $$
 $$
 This provides a unique, directional prediction linking the electroweak scale to the fundamental information-theoretic capacity of the PU substrate.
 
----
+
 
 ## T.10 Relation to Existing Mechanisms
 
 **Theorem T.CW.1 (Radiative symmetry breaking from a scale-free UV).** Suppose the PU tie-breaker selects a scale-free UV Higgs sector $V_{\rm tree}=\lambda(H^\dagger H)^2$ and the running satisfies $\lambda(\mu_0)>0$ while $\lambda(\mu_1)+\tfrac14\beta_\lambda(\mu_1)<0$ for some $\mu_0<\mu_1$. Then there exists $\mu_\ast\in(\mu_0,\mu_1)$ where the RG‑improved potential develops a nontrivial minimum. With the RG-improved choice of scale $\mu\approx|H|$, the extremum occurs at $|H|\approx\mu_\ast$ where $\lambda(\mu_\ast)+\tfrac14\beta_\lambda(\mu_\ast)=0$ [Coleman & Weinberg 1973; Gildener & Weinberg 1976; Buttazzo et al. 2013]. *Remark:* In the minimal SM, central RG data do not realize the observed scale without additional dynamics; the statement is existence‑level and model‑agnostic.
-* **Technicolor/Composite Higgs.** While the Higgs is emergent and composite in this model, no new confining gauge sector is invoked. The scale emerges from PCE tradeoffs within the fundamental MPU substrate itself, not from the dynamics of a new strong force.
-* **Supersymmetry.** No superpartners are required. The stability of the hierarchy (protection of the small electroweak scale from large quantum corrections) follows from the robust properties of the RG flow, specifically the monotone growth of susceptibility and the geometric dilution of the area-law term, which naturally produce an exponentially large scale separation.
 
----
+*  **Technicolor/Composite Higgs.** While the Higgs is emergent and composite in this model, no new confining gauge sector is invoked. The scale emerges from PCE tradeoffs within the fundamental MPU substrate itself, not from the dynamics of a new strong force.
+*  **Supersymmetry.** No superpartners are required. The stability of the hierarchy (protection of the small electroweak scale from large quantum corrections) follows from the robust properties of the RG flow, specifically the monotone growth of susceptibility and the geometric dilution of the area-law term, which naturally produce an exponentially large scale separation.
 
-## T.11 Conclusion
+## T.11 Hierarchy Monotonicity and Sensitivity
+The dependence of the electroweak scale on the underlying PU parameters can be made precise.
+
+**Theorem T.3 (Hierarchy Monotonicity and Sensitivity).**
+The electroweak VEV $v$ is a minimizer of the effective potential $V_{\rm eff}(v;C_{\max})$. Under the stability condition $\partial^2_{v}V_{\rm eff}>0$ and the condition that increased capacity lowers boundary costs such that $\partial^2_{vC}V_{\rm eff}<0$, its sensitivity to the ND-RID channel capacity $C_{\max}$ is given by the implicit function theorem:
+$$
+\frac{\partial\ln v}{\partial\ln C_{\max}} \;=\; -\frac{C_{\max}}{v}\frac{\partial^2_{vC}V_{\rm eff}}{\partial^2_v V_{\rm eff}}.
+$$
+Under the conditions $\partial^2_{vC}V_{\rm eff}<0$ and $\partial^2_v V_{\rm eff}>0$, the RHS is positive, hence the directional prediction is $\partial \ln v/\partial \ln C_{\max} > 0$.
+
+## T.12 Conclusion
 
 The electroweak scale emerges from a geometric competition between an area-law boundary cost that stabilizes the symmetric vacuum and a logarithmically destabilizing bulk drift that favors symmetry breaking. The Renormalization Group flow ensures a zero-crossing of the effective mass at a finite critical scale $\ell^*$, which is exponentially large due to the logarithmic nature of the running. All coefficients in the effective potential are, in principle, computable as functionals of the underlying MPU network's statistical properties, tying the electroweak/Planck hierarchy directly to microscopic information-processing constraints. The specific construction of the local observable `m_i` serves as a successful existence proof for a viable order parameter, and the general mechanism is expected to be robust to other choices of observables with similar symmetry properties. The mechanism yields a unique, falsifiable directional prediction linking the electroweak scale $v$ to the ND–RID channel capacity $C_{\max}$ and is conceptually distinct from existing proposals for solving the hierarchy problem.
