@@ -18,7 +18,7 @@ We propose a derivation pathway for the Bekenstein–Hawking Area Law [Bekenstei
 | $c_{\text{geom}}^{(3D)}$            | Dimensionless geometric ratio: (Bulk nodes relevant to boundary) / ($\mathcal{A}/\ell^2$). | Dimensionless    | Lemma 1.2        |
 | $C_{\max}$                         | Classical capacity per boundary link of the effective ND-RID channel (nats).         | Dimensionless    | Thm E.2 (App E)  |
 | $L_P$                              | Planck length ($\sqrt{G\hbar/c^3}$).                                               | Length           | Standard         |
-| $\eta, \chi$                       | Geometric packing and correlation factors in PU relation for $G$.                 | Dimensionless    | Eq. E.9 (App E)  |
+| $\eta, \chi$                       | Geometric packing and correlation factors in PU relation for $G$.                 | Dimensionless    | Equation E.9 (App E)  |
 
 Natural units $\hbar=c=1$ are employed unless otherwise specified, implying $L_P^2 = G$.
 
@@ -315,7 +315,7 @@ We connect the bulk entropy generation to the information capacity of the bounda
     $$
     C_{\max} = c_{\text{geom}}^{(3D)} \ln 2 \quad (5.1)
     $$
-*   **Justification:** This hypothesis posits a fundamental consistency condition required by the Principle of Compression Efficiency (PCE). The boundary degrees of freedom, operating at their maximum ND-RID limited capacity $C_{max}$ per link, must be able to fully account for or process the information related to the irreducible erasure events ($k_B \ln 2$ entropy, corresponding to $\ln 2$ nats of information loss per event) occurring in the bulk region they encode ($c_{geom}^{(3D)}$ events per boundary link area $\ell^2$). If $C_{max}$ were less than the erasure rate density, information related to bulk processes would be irretrievably lost at the boundary, violating the QECC property (Assumption 2.2) needed for coherent prediction and potentially leading to inconsistencies penalized by PCE. If $C_{max}$ were greater, it would imply excess capacity, an inefficient use of resources disfavored by PCE. Thus, PCE drives the system towards an equilibrium where the boundary channel capacity matches the irreducible information processing load imposed by the bulk dynamics, leading to the balance expressed in Eq. (5.1). This hypothesis connects the microscopic irreversibility cost ($\ln 2$) to the macroscopic channel limit ($C_{max}$) via the emergent geometry ($c_{geom}^{(3D)}$). We proceed conditional on this hypothesis.
+*   **Justification:** This hypothesis posits a fundamental consistency condition required by the Principle of Compression Efficiency (PCE). The boundary degrees of freedom, operating at their maximum ND-RID limited capacity $C_{max}$ per link, must be able to fully account for or process the information related to the irreducible erasure events ($k_B \ln 2$ entropy, corresponding to $\ln 2$ nats of information loss per event) occurring in the bulk region they encode ($c_{geom}^{(3D)}$ events per boundary link area $\ell^2$). If $C_{max}$ were less than the erasure rate density, information related to bulk processes would be irretrievably lost at the boundary, violating the QECC property (Assumption 2.2) needed for coherent prediction and potentially leading to inconsistencies penalized by PCE. If $C_{max}$ were greater, it would imply excess capacity, an inefficient use of resources disfavored by PCE. Thus, PCE drives the system towards an equilibrium where the boundary channel capacity matches the irreducible information processing load imposed by the bulk dynamics, leading to the balance expressed in Equation (5.1). This hypothesis connects the microscopic irreversibility cost ($\ln 2$) to the macroscopic channel limit ($C_{max}$) via the emergent geometry ($c_{geom}^{(3D)}$). We proceed conditional on this hypothesis.
 
 
 **6. Emergent Planck Length from PU Consistency**
@@ -333,7 +333,7 @@ Under Assumption 6.1, the PU consistency relation becomes:
 $$
 \frac{1}{4 L_P^2} = \frac{C_{\max}}{\ell^2} \quad (6.2)
 $$
-Now, crucially, we substitute the Capacity-Erasure Balance (Hypothesis 5.1, Eq. 5.1) into this PU relation:
+Now, crucially, we substitute the Capacity-Erasure Balance (Hypothesis 5.1, Equation 5.1) into this PU relation:
 $$
 \frac{1}{4 L_P^2} = \frac{c_{\text{geom}}^{(3D)} \ln 2}{\ell^2} \quad (6.3)
 $$
@@ -343,9 +343,9 @@ This equation provides a direct link between the emergent Planck scale $L_P$ (an
 
 **7. Derivation of the Bekenstein–Hawking Formula**
 
-The final step is to demonstrate the equality between the thermodynamic entropy density calculated from the bulk SPAP erasures (Proposition 4.1) and the Bekenstein-Hawking entropy density defined via the emergent Planck length determined by Eq. (6.3).
+The final step is to demonstrate the equality between the thermodynamic entropy density calculated from the bulk SPAP erasures (Proposition 4.1) and the Bekenstein-Hawking entropy density defined via the emergent Planck length determined by Equation (6.3).
 
-From Proposition 4.1 (Eq. 4.2), the thermodynamic entropy density is:
+From Proposition 4.1 (Equation 4.2), the thermodynamic entropy density is:
 $$
 \frac{S_{therm}(\mathcal{A})}{\mathcal{A}} = \frac{k_B c_{\text{geom}}^{(3D)} \ln 2}{\ell^2} \quad (*)
 $$

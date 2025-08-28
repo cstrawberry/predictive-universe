@@ -14,13 +14,13 @@ where each term is a rate (power):
 *   **$V_{prop}$**: The cost of maintaining coherent predictive links with neighbors, penalizing both information loss (decoherence) and the fundamental thermodynamic cost ($\varepsilon \ge \ln 2$) of interaction [Appx. C, D].
 *   **$V_{benefit}$**: The reward for predictive accuracy, proportional to the MPU's success in predicting the states of its neighbors, derived from its Predictive Performance $PP$ [Def. 7, D.1].
 
-The master equation of the PU framework is the stochastic differential equation describing the evolution of the network configuration $x$ as a gradient flow on this potential: $dx(t) = -\eta(x) \nabla V(x) dt + \sqrt{2D(x)} dW(t)$ [**Appendix D**, Eq. D.8]. The principles explored in this section represent physical constraints that must be incorporated into the cost terms of the PCE potential $V$, thereby shaping the emergent dynamics of the system as it seeks to minimize this potential.
+The master equation of the PU framework is the stochastic differential equation describing the evolution of the network configuration $x$ as a gradient flow on this potential: $dx(t) = -\eta(x) \nabla V(x) dt + \sqrt{2D(x)} dW(t)$ [**Appendix D**, Equation D.8]. The principles explored in this section represent physical constraints that must be incorporated into the cost terms of the PCE potential $V$, thereby shaping the emergent dynamics of the system as it seeks to minimize this potential.
 
 ## N.2 Divergence Laws for Hardware and Software Limits
 
 The PCE Potential incorporates costs that diverge as the system approaches fundamental physical or logical limits. Two such divergences are critical:
 
-*   **Predictive Divergence** [Thm. 14]. To achieve a predictive performance $PP$ on a self-referential task limited by the **Prediction Coherence Boundary** ($\alpha_{SPAP} < 1$), the required Predictive Physical Complexity $C_P$ diverges. The scaling law [Thm. 14, Eq. 14] is:
+*   **Predictive Divergence** [Thm. 14]. To achieve a predictive performance $PP$ on a self-referential task limited by the **Prediction Coherence Boundary** ($\alpha_{SPAP} < 1$), the required Predictive Physical Complexity $C_P$ diverges. The scaling law [Thm. 14, Equation 14] is:
     $$
     C_P(PP) = \Omega\left(\frac{\log(1/(\alpha_{SPAP} - PP))}{(\alpha_{SPAP} - PP)^2}\right)
     \tag{N.2}
@@ -123,7 +123,7 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 
 ## N.5 Proof of the UCT Theorem
 
-We restate the theorem (Eq. N.5) for convenience before proceeding with the proof.
+We restate the theorem (Equation N.5) for convenience before proceeding with the proof.
 
 > **Theorem (UCT).**
 > For a process where an MPU (or MPU aggregate, with mass $m_0$) follows a trajectory with proper acceleration $a(t)$, achieves predictive performance $PP(t)$, and undergoes predictive acceleration $A_{pred}(t)$, in a background thermal bath at temperature $T_{bath}$, the total work $W_{\text{tot}}$ is bounded by:
@@ -150,7 +150,7 @@ $$
 **Lemma N.3 (Relativistic work).** The minimum work to accelerate a mass $m_0$ from rest to final velocity $v_f$ is $W_{kin}(v_f) = m_0c^2(\gamma(v_f)-1)$.
 
 **Lemma N.4 (Complexity Cost of Environmental Noise).** An MPU operating in an effective thermal bath at temperature $T_{eff}$ must allocate additional predictive complexity $C_{noise}$ to maintain a constant target predictive performance $PP_{op}$. The existence of this cost is necessary. For any system selected for long-term viability under PCE, this cost must be a monotonically increasing function of $T_{eff}$ (for $T_{eff} > T_{base}$), with $C_{noise}=0$ at some baseline temperature $T_{base}$.
- *Proof.* The MPU's adaptation dynamics under PCE establish the necessity and key properties of $C_{noise}(T_{eff})$. An MPU operating in a stable predictive regime seeks to maintain a target performance $PP_{op}$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the total marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20], rigorously established in **Appendix D, Eq. (D.8)**):
+ *Proof.* The MPU's adaptation dynamics under PCE establish the necessity and key properties of $C_{noise}(T_{eff})$. An MPU operating in a stable predictive regime seeks to maintain a target performance $PP_{op}$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the total marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20], rigorously established in **Appendix D, Equation (D.8)**):
  $$
  \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda \frac{\partial R}{\partial C}\bigg|_{C^*, T_{eff}} + \frac{\partial R_I}{\partial C}\bigg|_{C^*}
  $$
@@ -273,7 +273,7 @@ The key to detecting this effect lies in the fact that the two energy loss mecha
 *   **The GR Signal:** The power radiated in GWs depends on the third time derivative of the system's quadrupole moment. For a binary orbit, this scales in a complex way with the stars' velocities and separation, but is characteristically strongest near periastron where both are maximized.
 *   **The UCT Signal:** The power loss `P_UCT` is posited to depend on the magnitude of the proper acceleration vector, `a(t)`. We can use a simple phenomenological power-law model for this dissipation:
 $$ P_{UCT}(t) = k_{UCT} \cdot a(t)^n $$
-    where `k_UCT` is a new fundamental constant representing the coupling between acceleration and predictive cost, and `n` is a dimensionless exponent. While the full UCT (Eq. N.5) suggests a complex relationship, an expansion for low Unruh temperatures plausibly leads to a dominant power-law behavior, with `n ≥ 2` being a natural starting point for modeling (cf. Box N.1). In an elliptical orbit, the acceleration `a(t)` is at its maximum at periastron and its minimum at apastron.
+    where `k_UCT` is a new fundamental constant representing the coupling between acceleration and predictive cost, and `n` is a dimensionless exponent. While the full UCT (Equation N.5) suggests a complex relationship, an expansion for low Unruh temperatures plausibly leads to a dominant power-law behavior, with `n ≥ 2` being a natural starting point for modeling (cf. Box N.1). In an elliptical orbit, the acceleration `a(t)` is at its maximum at periastron and its minimum at apastron.
 
 While both energy loss effects are strongest near periastron, their precise functional dependencies on the orbital phase are different. This means the UCT adds an energy loss term with a **unique temporal signature** over the course of a single orbit. It is this unique *shape* of the energy loss profile that allows it, in principle, to be distinguished from the GR prediction.
 

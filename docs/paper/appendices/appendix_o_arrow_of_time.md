@@ -103,8 +103,8 @@ The establishment of a coherent causal medium is the necessary prerequisite for 
 
 The causal chain proceeds as follows:
 > 1.  **Context State to Physical Signal:** A complex MPU aggregate forms a stable, coherent internal model, represented by the **context state `context_S`** (Definition L.1). This abstract state is translated into a physical, time-varying signal `N(t)` via a PCE-optimized mapping `M` (Appendix L). This signal is fundamentally temporal in nature, such as the coherent electromagnetic field `E_rad(t)` modeled in Appendix L.
-> 2.  **Signal Modulates 'Evolve' Dynamics:** This physical signal `N(t)` interacts with a target MPU during its 'Evolve' process (Definition 27), acting as a time-dependent term in the interaction Hamiltonian (`H_int`, Eq. L.3) and thereby modulating the parameters of the underlying ND-RID.
-> 3.  **Physical Influence on Perspective Shift:** The physical signal `N(t)` provides the concrete realization of the interaction argument `N` in the **Conditional Perspective Transition Kernel**, `G_persp(s' | s, k, N, Δt)` (Appendix M, Eq. M.2). The temporal characteristics of the signal physically set the parameters of the drift-diffusion process on the perspective manifold, creating a biased random walk.
+> 2.  **Signal Modulates 'Evolve' Dynamics:** This physical signal `N(t)` interacts with a target MPU during its 'Evolve' process (Definition 27), acting as a time-dependent term in the interaction Hamiltonian (`H_int`, Equation L.3) and thereby modulating the parameters of the underlying ND-RID.
+> 3.  **Physical Influence on Perspective Shift:** The physical signal `N(t)` provides the concrete realization of the interaction argument `N` in the **Conditional Perspective Transition Kernel**, `G_persp(s' | s, k, N, Δt)` (Appendix M, Equation M.2). The temporal characteristics of the signal physically set the parameters of the drift-diffusion process on the perspective manifold, creating a biased random walk.
 
 In this view, CC influence is a form of temporal signaling that steers the evolution of interaction context.
 

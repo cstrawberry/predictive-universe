@@ -87,7 +87,7 @@ $$
 f(n) = \begin{cases} n + H_1(n), & \text{if } Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉) \\ n + H_2(n), & \text{if } \neg Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉) \land Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉) \\ n + 1, & \text{otherwise} \end{cases} \quad \text{(2)}
 $$
 Here:
-*   $Prf_{\le g(n)}$ is the bounded proof search predicate (Definition 3, Eq. 1).
+*   $Prf_{\le g(n)}$ is the bounded proof search predicate (Definition 3, Equation 1).
 *   $ϕ_{\beta}(n)$ is the specific PA formula whose Gödel code $⌈ϕ_{\beta}(n)⌉$ depends computably on $n$ and the code $\beta$ of $f$ itself, as constructed above. It makes an assertion about some property related to $f$.
 *   $H_1(n)$ and $H_2(n)$ are the chosen total computable functions causing a "jump" if a proof/refutation is found within bound $g(n)$.
 *   The third case, "otherwise," covers the situation where neither $Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉)$ nor $Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉)$ holds.
@@ -97,7 +97,7 @@ Because of the Recursion Theorem, there is no logical contradiction in letting t
 
 ### 3.2. Shifting Values Based on Proof Discovery
 
-The novelty lies in how $f(n)$ is not predetermined by a simple recursive or closed-form expression. Instead, its value reacts if a sufficiently short proof ($p \le g(n)$) of $ϕ_{\beta}(n)$ or $¬ϕ_{\beta}(n)$ is discovered by the system. If such a proof is found, LITE “steers” the function value to $n + H_1(n)$ or $n + H_2(n)$, respectively (following the logic in Eq. 2). If no such short proof is found, the function defaults to $f(n) = n + 1$.
+The novelty lies in how $f(n)$ is not predetermined by a simple recursive or closed-form expression. Instead, its value reacts if a sufficiently short proof ($p \le g(n)$) of $ϕ_{\beta}(n)$ or $¬ϕ_{\beta}(n)$ is discovered by the system. If such a proof is found, LITE “steers” the function value to $n + H_1(n)$ or $n + H_2(n)$, respectively (following the logic in Equation 2). If no such short proof is found, the function defaults to $f(n) = n + 1$.
 
 Because the jump values $n + H_1(n)$ or $n + H_2(n)$ can be significantly different from the default $n+1$, this shift in $f(n)$ can potentially alter the truth value or, more crucially, the *provability within bounded resources* of subsequent statements $ϕ_{\beta}(n+1)$, $ϕ_{\beta}(n+2)$, etc. Over the sequence of natural numbers, $f$ thus evolves under the influence of the system’s ability to locate relevant short derivations, effectively “recording” the discovery of these proofs in its numeric output sequence.
 
@@ -111,9 +111,9 @@ By design, each input $n$ extends the ongoing computation: “Is $ϕ_{\beta}(n)$
 
 The function $f$ defined by Equation (2) via the Recursion Theorem is a well-defined, total function from $ℕ$ to $ℕ$.
 *Proof:*
-1.  **Consistency via Recursion Theorem:** Theorem 1 guarantees the existence of a consistent index $\beta$ such that $f(n) = \varphi_\beta(n) = \Psi(\beta, n)$ (where $\Psi$ is the operator implementing Eq. 2, formally defined in Theorem 2, Section 6.5), resolving the self-reference without paradox.
+1.  **Consistency via Recursion Theorem:** Theorem 1 guarantees the existence of a consistent index $\beta$ such that $f(n) = \varphi_\beta(n) = \Psi(\beta, n)$ (where $\Psi$ is the operator implementing Equation 2, formally defined in Theorem 2, Section 6.5), resolving the self-reference without paradox.
 2.  **Finite Search:** For any given $n$, the value $g(n)$ is finite. Checking for the existence of a proof $p \le g(n)$ for $ϕ_{\beta}(n)$ or $¬ϕ_{\beta}(n)$ using the decidable predicate $Prf(p, c)$ involves searching a finite set of potential proof codes $\{0, 1, ..., g(n)\}$. This is a finite computation.
-3.  **Exhaustive and Mutually Exclusive Cases:** The definition (Eq. 2) covers all possibilities based on the outcomes of the two bounded proof searches. The conditions are structured to be mutually exclusive:
+3.  **Exhaustive and Mutually Exclusive Cases:** The definition (Equation 2) covers all possibilities based on the outcomes of the two bounded proof searches. The conditions are structured to be mutually exclusive:
     *   Case 1: $Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉)$ holds.
     *   Case 2: $Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉)$ fails AND $Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉)$ holds.
     *   Case 3: Both $Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉)$ and $Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉)$ fail.
@@ -149,9 +149,9 @@ The computation of $f(n)$ proceeds iteratively for each $n=0, 1, 2, \dots$:
 2.  **Bounded Search:** Perform two finite searches:
     *   Search 1: Check if $∃p_1 \le g(n) \, Prf(p_1, ⌈ϕ_{\beta}(n)⌉)$. Let result be $B_1$ (True/False).
     *   Search 2: Check if $∃p_2 \le g(n) \, Prf(p_2, ⌈¬ϕ_{\beta}(n)⌉)$. Let result be $B_2$ (True/False).
-3.  **Branching Logic (following Eq. 2):**
+3.  **Branching Logic (following Equation 2):**
     *   If $B_1$ is True, set $f(n) = n + H_1(n)$.
-    *   Else if $B_2$ is True (and thus $B_1$ is False by the structure of Eq. 2), set $f(n) = n + H_2(n)$.
+    *   Else if $B_2$ is True (and thus $B_1$ is False by the structure of Equation 2), set $f(n) = n + H_2(n)$.
     *   Else (if $B_1$ is False and $B_2$ is False), set $f(n) = n + 1$.
 4.  **Potential Cascade:** The value $f(n)$ determined in this step becomes part of the definition used when evaluating $f(k)$ for $k > n$, potentially influencing the truth or bounded provability of $ϕ_{\beta}(k)$ and subsequent values via the construction of $ϕ_{\beta}(k)$.
 
@@ -181,7 +181,7 @@ To make LITE more tangible, let us consider a simplified illustrative instance:
     *   $g(0) = 2^1 = 2$. The system computes $⌈ϕ_{\beta}(0)⌉$ and $⌈¬ϕ_{\beta}(0)⌉$. It then checks if $Prf(0, ⌈ϕ_{\beta}(0)⌉)$, $Prf(1, ⌈ϕ_{\beta}(0)⌉)$, $Prf(2, ⌈ϕ_{\beta}(0)⌉)$ holds, and similarly for $¬ϕ_{\beta}(0)$.
     *   It seems extremely improbable that a proof or refutation of $∃y [T(\underline{\beta}, \underline{0}, y) \land U(y) > 5]$ could have a Gödel code $p \le 2$.
     *   Assume neither $Prf_{\le 2}(⌈ϕ_{\beta}(0)⌉)$ nor $Prf_{\le 2}(⌈¬ϕ_{\beta}(0)⌉)$ holds.
-    *   **Result:** $f(0) = 0 + 1 = 1$. (Case 3 of Eq. 2)
+    *   **Result:** $f(0) = 0 + 1 = 1$. (Case 3 of Equation 2)
 
 2.  **$n = 1$:**
     *   $g(1) = 2^2 = 4$. The system checks for proofs $p \in \{0, 1, 2, 3, 4\}$ for $ϕ_{\beta}(1) \equiv ∃y [T(\underline{\beta}, \underline{1}, y) \land U(y) > 6]$ and its negation $¬ϕ_{\beta}(1)$.
@@ -200,10 +200,10 @@ To make LITE more tangible, let us consider a simplified illustrative instance:
     *   $g(11) = 2^{12} = 4096$. Search for proofs $p \le 4096$.
     *   The statement $ϕ_{\beta}(11) \equiv ∃y [T(\underline{\beta}, \underline{11}, y) \land U(y) > 16]$ now involves $f$'s behavior after the jump at $n=10$.
     *   Suppose now a proof $p_2$ of $¬ϕ_{\beta}(11)$ is found with $p_2 \le 4096$. This means PA proves $∀y [T(\underline{\beta}, \underline{11}, y) \implies U(y) \le 16]$ with a proof code $p_2 \le 4096$.
-    *   We check conditions for Eq. 2:
+    *   We check conditions for Equation 2:
         *   Is $Prf_{\le 4096}(⌈ϕ_{\beta}(11)⌉)$ true ($B_1$)? Assume No.
         *   Is $Prf_{\le 4096}(⌈¬ϕ_{\beta}(11)⌉)$ true ($B_2$)? Yes (by assumption).
-    *   Since $B_1$ is False and $B_2$ is True, the second condition in Eq. 2 is met.
+    *   Since $B_1$ is False and $B_2$ is True, the second condition in Equation 2 is met.
     *   **Result:** $f(11) = 11 + H_2(11) = 11 + 20 = 31$. (Case 2)
 
 This hypothetical sequence illustrates how $f$ evolves dynamically. Its value is determined step-by-step based on the outcome of bounded proof searches concerning statements that refer back to $f$ itself. Note that while the existence of $\beta$ is guaranteed, finding its value or computing $f(n)$ for larger $n$ is generally infeasible.
@@ -235,7 +235,7 @@ Assume Con(PA) and that $g, H_1, H_2$ are total computable functions. Then the f
     We define the LITE function $f$ as $f = φ_{\beta}$. By definition, $f(n) = \Psi(\beta, n)$ for all $n$. Since $\Psi$ is total (by Lemma 1), $\Psi(\beta, n)$ is defined and yields a natural number for all $n$. Therefore, $f(n)$ is defined for all $n \in ℕ$, meaning $f$ is a total function.
 
 4.  **Conclusion: $f$ is Total Computable.**
-    From Lemma 3, $f$ is total. Since $f = φ_{\beta}$ and $φ_{\beta}$ is by definition a computable function (specifically, the one computed by the program with index $\beta$), $f$ is a total computable function. The self-referential definition via Eq. 2 is justified by the existence of the fixed point $\beta$ from the Recursion Theorem, ensuring consistency. QED
+    From Lemma 3, $f$ is total. Since $f = φ_{\beta}$ and $φ_{\beta}$ is by definition a computable function (specifically, the one computed by the program with index $\beta$), $f$ is a total computable function. The self-referential definition via Equation 2 is justified by the existence of the fixed point $\beta$ from the Recursion Theorem, ensuring consistency. QED
 
 ## 7. Discussion
 

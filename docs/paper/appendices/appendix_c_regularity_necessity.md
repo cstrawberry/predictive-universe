@@ -85,7 +85,7 @@ $$
 W_1\bigl(\mathcal P\delta_v,\mathcal P\delta_u\bigr)\;\le\;\eta_{R}.
 \quad \text{(C.9)}
 $$
-Substituting this into the definition of Ollivier-Ricci curvature (Eq. C.3) with $d(v,u)=1$:
+Substituting this into the definition of Ollivier-Ricci curvature (Equation C.3) with $d(v,u)=1$:
 $$
 \operatorname{Ric}_{\mathrm{OR}}(v \to u)\;\ge\;1-\eta_{R}.
 $$
@@ -99,7 +99,7 @@ $$
 Since PCE, through consistency with fundamental ND-RID information limits, enforces $\eta_{R} < 1$, it follows that $\kappa_{R} > 0$. Equivalently, adopting a lazy one‑step kernel with idleness $\alpha\in(0,1)$ reduces $W_1$ and can strictly increase $\kappa_R$ for fixed local parameters. This establishes a strictly positive lower bound on this measure of discrete Ricci curvature, arising from the interplay of PCE-optimized local complexity variations and the information-theoretic constraints of the underlying MPU interactions. A network with such a positive lower bound on Ricci curvature (meaning it is bounded below by $\kappa_R > 0$) satisfies a key component of geometric regularity (Definition C.2, Definition C.3), providing a constructive basis for the emergence of a well-behaved spacetime geometry. The subsequent sections of this appendix detail why violations of such regularity are penalized by PCE.
 
 
-¹ Footnote: The parameter $\lambda_R$ is specific to this curvature model (Eq. C.2) and represents the sensitivity of local transition probabilities to gradients in the effective cost-rate $I'$. It should not be confused with the resource scarcity Lagrange multiplier $\lambda$ from main text Definition 20.
+¹ Footnote: The parameter $\lambda_R$ is specific to this curvature model (Equation C.2) and represents the sensitivity of local transition probabilities to gradients in the effective cost-rate $I'$. It should not be confused with the resource scarcity Lagrange multiplier $\lambda$ from main text Definition 20.
 
 
 **C.4 Penalization of Anomalous Network Dimension**
@@ -181,7 +181,7 @@ We now combine the results to demonstrate formally that geometric regularity is 
     \quad \text{(C.17)}
     $$
 where:
-*   **$R_1[\mathcal{C}]$ (Local Viability):** A measure reflecting the stability of local adaptation dynamics. $R_1[\mathcal{C}] = P_{stability}[\mathcal{C}] / P_{min}$, where $P_{stability}$ is the probability the network remains viable (Eq. C.16) and $P_{min}$ is the minimum required stability level. Requires $R_1 \ge 1$.
+*   **$R_1[\mathcal{C}]$ (Local Viability):** A measure reflecting the stability of local adaptation dynamics. $R_1[\mathcal{C}] = P_{stability}[\mathcal{C}] / P_{min}$, where $P_{stability}$ is the probability the network remains viable (Equation C.16) and $P_{min}$ is the minimum required stability level. Requires $R_1 \ge 1$.
 *   **$R_2[\mathcal{C}]$ (Global Coherence):** A measure reflecting the maintenance of predictive coherence across the network. $R_2[\mathcal{C}] = MP_{Global}[\mathcal{C}] / MP_{min}$, where $MP_{min}$ is the minimum required coherence level. Requires $R_2 \ge 1$.
 *   **$R_3[\mathcal{C}]$ (Resource Efficiency):** A measure reflecting cost efficiency. $R_3[\mathcal{C}] = V_{max} / V_{total}[\mathcal{C}]$, where $V_{total}[\mathcal{C}]$ is the total effective cost rate (e.g., from PCE Potential $V(x)$ components related to operation and propagation) and $V_{max}$ is the maximum sustainable rate based on available resources. Requires $R_3 \ge 1$.
 
@@ -193,7 +193,7 @@ where:
 1.  **Consequences of Irregularity:** Geometric irregularity means either anomalous dimension (violating Def C.1) or failure to maintain a positive lower bound on Ricci curvature and/or presence of large curvature fluctuations (violating Def C.2 as refined in Def C.3), or both.
 2.  **Impact of Anomalous Dimension:** If Def C.1 is violated, then by Theorem C.2, for sufficiently large $L$, either global coherence $MP_{Global}$ falls below $MP_{min}$ (forcing $R_2[\mathcal{C}] < 1$) or resource cost $V_{total}[\mathcal{C}]$ (due to $V_{prop}$) exceeds $V_{max}$ (forcing $R_3[\mathcal{C}] < 1$).
 3.  **Impact of Curvature Issues:** If Def C.2 (as refined by Def C.3, requiring $\kappa_R>0$ and bounded variance) is violated (e.g., large Var$(\kappa_{\mathcal{N}})$ or $\kappa_R \le 0$ in significant regions), then by Theorem C.4, for sufficiently large $N$ or Var$(\kappa_{\mathcal{N}})$, either the excess operational cost makes the total cost $V_{total}[\mathcal{C}]$ (due to $V_{op}$) exceed $V_{max}$ (forcing $R_3[\mathcal{C}] < 1$) or the network stability $P_{stability}$ falls below $P_{min_stability}$ (forcing $R_1[\mathcal{C}] < 1$).
-4.  **Minimum Condition:** Since $\mathcal{V}[\mathcal{C}] = \min\{R_1, R_2, R_3\}$ (Eq. C.17), if any requirement $R_i$ falls below 1 due to irregularity, then $\mathcal{V}[\mathcal{C}]$ must be less than 1.
+4.  **Minimum Condition:** Since $\mathcal{V}[\mathcal{C}] = \min\{R_1, R_2, R_3\}$ (Equation C.17), if any requirement $R_i$ falls below 1 due to irregularity, then $\mathcal{V}[\mathcal{C}]$ must be less than 1.
 5.  **Conclusion:** Significant geometric irregularity inevitably leads to the violation of at least one core requirement (R1, R2, or R3) under sufficiently challenging conditions (large size or high variance/insufficient positive curvature), rendering the configuration non-viable according to Definition C.5 ($\mathcal{V}[\mathcal{C}] < 1$). QED
 
 **Corollary C.1 (Asymptotic Non-Viability).** There exist finite thresholds for system size $L_{crit}$ and curvature variance $\kappa_{var,crit}$ (or degree of violation of $\kappa_R>0$) such that any configuration exhibiting geometric irregularity exceeding these thresholds is guaranteed to be non-viable ($\mathcal{V}[\mathcal{C}] < 1$).

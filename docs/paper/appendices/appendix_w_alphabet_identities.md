@@ -1,6 +1,6 @@
 # Appendix W — PU’s Alphabet‑Constant Identities, Robustness, and SM Structure
 
-## W\.0 Notation and setup
+## W.0 Notation and setup
 
 This appendix derives general, robust identities and bounds relating emergent gauge couplings to the information-theoretic invariants of the MPU’s predictive cycle. This formalism provides stringent internal consistency checks for the PU framework. In **Appendix Z**, these principles are applied to a first-principles derivation of the MPU's QFI spectrum, culminating in a parameter-free calculation of the fine-structure constant at the PCE-Attractor.
 
@@ -83,7 +83,7 @@ $$
 $$
 Since $A_{\rm PCE}>0$ and the sum is non-negative, $\phi''(u) > 0$ for all $u\ge 0$. Hence $\phi$ is strictly convex on $[0,\infty)$ and has a unique constrained minimizer under either capacity constraint.
 
-**Lemma W\.2 (Jensen‑cap boundary).**
+**Lemma W.2 (Jensen‑cap boundary).**
 When the Jensen‑cap is active,
 
 $$
@@ -91,7 +91,7 @@ u^\*_{\rm J}\;=\;\frac{M}{S_1}\bigl(a_{\rm cap}-1\bigr)\;=\;\frac{a_{\rm cap}-1}
 \tag{W.1.1}
 $$
 
-**Lemma W\.3 (Gap monotonicity).**
+**Lemma W.3 (Gap monotonicity).**
 $\Delta_{\rm cap}(u):=g_J(u)-g_{\rm true}(u)$ satisfies $\Delta_{\rm cap}(u)\ge0$ and $\Delta'_{\rm cap}(u)\ge0$ for all $u\ge0$.
 
 *Proof.* Nonnegativity is Jensen's inequality applied to the concave function $\ln(1+\lambda u)$. Derivative:
@@ -102,7 +102,7 @@ $$
 
 Let $h(\lambda):=\lambda/(1+\lambda u)$. This function is concave in $\lambda$ (for $u>0$). By Jensen's inequality, the average value is less than or equal to the value at the average: $\frac{1}{M}\sum_i h(\lambda_i) \le h(\frac{1}{M}\sum_i \lambda_i) = h(x)$. Thus, $\sum_i h(\lambda_i) \le M h(x) = \frac{Mx}{1+xu}$. Therefore, $\Delta'_{\rm cap}(u) \ge 0$. $\square$
 
-**Lemma W\.4 (Quadratic gap bound).**
+**Lemma W.4 (Quadratic gap bound).**
 Assume $\lambda_i\ge0$ and let $\lambda_{\min}=\min_i\lambda_i$. Then for all $u\ge0$,
 
 $$
@@ -133,7 +133,7 @@ $$
 
 If some $\lambda_i=0$, the limit diverges accordingly, as expected from the asymptotics.
 
-**Theorem W\.5 (Ordering of optima; active‑cap case).**
+**Theorem W.5 (Ordering of optima; active‑cap case).**
 Assume the upper capacity constraint is active for both problems. Then
 
 $$
@@ -145,9 +145,9 @@ $$
 
 ---
 
-## W\.2 Alphabet constant and product relation
+## W.2 Alphabet constant and product relation
 
-**Definition W\.6 (Sector ratio).** For any sector $s$,
+**Definition W.6 (Sector ratio).** For any sector $s$,
 
 $$
 r_s:=\Bigl(\frac{C_{\rm cap}}{C_{\rm cyc}}\Bigr)_s
@@ -155,7 +155,7 @@ r_s:=\Bigl(\frac{C_{\rm cap}}{C_{\rm cyc}}\Bigr)_s
 \tag{W.2.1}
 $$
 
-**Definition W\.7 (Alphabet constant).** For fixed $d_0$ and $M$,
+**Definition W.7 (Alphabet constant).** For fixed $d_0$ and $M$,
 
 $$
 a_{\rm cap}=d_0^{1/M},\quad D=a_{\rm cap}(a_{\rm cap}-1),\quad 
@@ -169,7 +169,7 @@ $$
 \boxed{K(8,7)=0.0866517}.
 $$
 
-**Proposition W\.8 (Cap–coherence curvature bound).**
+**Proposition W.8 (Cap–coherence curvature bound).**
 At the Jensen‑cap boundary $u=u^\*_{\rm J}$,
 
 $$
@@ -201,7 +201,7 @@ $$
 
 Rearranging gives $2\tilde A_{\rm PCE}\le (Mx^2)/D$. Since $S_2\ge Mx^2$ (Cauchy–Schwarz / RMS–AM), we obtain $2\tilde A_{\rm PCE}\le S_2/D$. Equality requires both Jensen tightness ($\lambda_i=x$) and $\eta=0$, i.e., $u_0=u^\*_{\rm J}$. $\square$
 
-**Definition W\.9 (Spectral form factor).**
+**Definition W.9 (Spectral form factor).**
 
 $$
 F_{\lambda}\ :=\ \frac{M\,x^2}{S_2}\ =\ \frac{1}{1+\sigma^2/x^2}\ \in (0,1].
@@ -210,7 +210,7 @@ $$
 
 For a given sector $s$, write $F_{\lambda,s}:=\dfrac{M_s x_s^2}{S_2^{(s)}}$.
 
-**Theorem W\.10 (Alphabet constant: upper bound and identity conditions at the Jensen‑cap–saturated optimum).**
+**Theorem W.10 (Alphabet constant: upper bound and identity conditions at the Jensen‑cap–saturated optimum).**
 At the **Jensen‑cap–saturated** optimum,
 
 $$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0,M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.2.5} $$
@@ -225,7 +225,7 @@ $$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm ca
 
 $$ \alpha_{\mathrm{em}}(\mathrm{MPU})\,\frac{C_{\rm cyc}}{C_{\rm cap}} =\frac{u^\*_{\rm J}}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{S_1} =\frac{a_{\rm cap}-1}{4\pi}\cdot\frac{2\tilde A_{\rm PCE}+S_2}{M x^2}. $$
 
-Apply (W\.2.3) to obtain the bound with factor $1/F_{\lambda,e}=S_2/(M x^2)$ (for the EM sector). Strictness and equality conditions follow from Proposition W\.8 and $F_{\lambda,e}=1\iff \sigma^2=0$. $\square$
+Apply (W.2.3) to obtain the bound with factor $1/F_{\lambda,e}=S_2/(M x^2)$ (for the EM sector). Strictness and equality conditions follow from Proposition W.8 and $F_{\lambda,e}=1\iff \sigma^2=0$. $\square$
 
 **PCE motivation for the identity point.**
  *Relation to the PCE-Attractor.*
@@ -236,37 +236,37 @@ For $d_0=8$, $K(8,M)$ decreases slowly with $M$:
 $K(8,5)=0.0935410,\ K(8,6)=0.0892318,\ K(8,7)=0.0866517,\ K(8,8)=0.0849844,\ K(8,9)=0.0838445,\ K(8,10)=0.0830309$.
 Variance enters only through $F_\lambda$: the multiplicative penalty is $1/F_\lambda=1+\sigma^2/x^2$.
 
-**Remark.** By Theorem W\.5 (active‑cap case), the true‑capacity optimum satisfies $u^\*_{\rm T}\ge u^\*_{\rm J}$; the product at the true optimum is therefore $\ge$ its Jensen‑cap value. The bound (W\.2.5) is asserted at the Jensen‑cap–saturated optimum.
+**Remark.** By Theorem W.5 (active‑cap case), the true‑capacity optimum satisfies $u^\*_{\rm T}\ge u^\*_{\rm J}$; the product at the true optimum is therefore $\ge$ its Jensen‑cap value. The bound (W.2.5) is asserted at the Jensen‑cap–saturated optimum.
 
 ---
 
-## W\.3 Weak sector relation (Weinberg angle)
+## W.3 Weak sector relation (Weinberg angle)
 
-**Assumption W\.3.A (Alignment hypothesis).**
+**Assumption W.3.A (Alignment hypothesis).**
 At the $\mathrm{MPU}$ operational point, PCE sets both $U(1)_Y$ and $SU(2)$ sectors to be **simultaneously cap‑active and Jensen‑cap–saturated**. A sufficient rationale is **spectral similarity** (comparable $M_s$ and $x_s$ across sectors) so that both unconstrained optima exceed the common alphabet cap at $\mu^\*$. The assumption can fail if sector spectra differ markedly (e.g., large variance or $M_s$ mismatch) causing one sector to be interior while the other is cap‑active.
 
-**Theorem W\.11 (Weinberg angle from sector invariants; cap‑active branch).**
-Under Assumption W\.3.A, let $u_s^\*$ denote the Jensen‑cap–saturated optimum for sector $s\in\{Y,2\}$. Then
+**Theorem W.11 (Weinberg angle from sector invariants; cap‑active branch).**
+Under Assumption W.3.A, let $u_s^\*$ denote the Jensen‑cap–saturated optimum for sector $s\in\{Y,2\}$. Then
 
 $$ \sin^2\theta_W(\mathrm{MPU})=\frac{u_Y^\*}{u_Y^\*+u_2^\*},\qquad \frac{u_2^\*}{u_Y^\*}= \frac{(d_0^{1/M_2}-1) / (S_1^{(2)}/M_2)}{(d_0^{1/M_Y}-1) / (S_1^{(Y)}/M_Y)}. \tag{W.3.1} $$
 
-*Proof.* $\sin^2\theta_W=g_Y^2/(g_Y^2+g_2^2)$ and $u=g^2$. Apply Lemma W\.2 in each sector. $\square$
+*Proof.* $\sin^2\theta_W=g_Y^2/(g_Y^2+g_2^2)$ and $u=g^2$. Apply Lemma W.2 in each sector. $\square$
 
-**Normalization.** Equation (W\.3.1) uses **SM (canonical) normalization** $g_Y$. For **GUT normalization**, $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$ (equivalently $g_Y=\sqrt{\tfrac{3}{5}}\,g_1$).
+**Normalization.** Equation (W.3.1) uses **SM (canonical) normalization** $g_Y$. For **GUT normalization**, $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$ (equivalently $g_Y=\sqrt{\tfrac{3}{5}}\,g_1$).
 
-**Corollary W\.12 (Symmetric sector reference).**
+**Corollary W.12 (Symmetric sector reference).**
 If $M_Y=M_2=M$ and $x_Y=x_2=x_0$, then $u_2^\*/u_Y^\*=1$ and
 
 $$ \sin^2\theta_W(\mathrm{MPU})=\tfrac12. \tag{W.3.2} $$
 
-**Proposition W\.13 (GUT‑normalized template).**
+**Proposition W.13 (GUT‑normalized template).**
 If one further assumes an $SU(5)$‑style generator normalization at $\mu^\*$ with $g_1=g_2$ and $g_Y=\sqrt{\tfrac{3}{5}}\,g_1$ (here $g_1$ is the **GUT‑normalized** $U(1)$ coupling), then
 
 $$ \sin^2\theta_W(\mathrm{MPU})=\frac{3}{8}. \tag{W.3.3} $$
 
 ---
 
-## W\.4 Hypercharge from anomalies and Yukawa invariance
+## W.4 Hypercharge from anomalies and Yukawa invariance
 
 Consider $SU(N_c)\times SU(2)\times U(1)_Y$ with one Higgs doublet $H:(\mathbf{1},\mathbf{2})_{Y_H}$ and one family
 
@@ -278,7 +278,7 @@ L_L:(\mathbf{1},\mathbf{2})_{Y_L},\quad
 e_R:(\mathbf{1},\mathbf{1})_{Y_e}.
 $$
 
-**Theorem W\.14 (Master anomaly–Yukawa relation).**
+**Theorem W.14 (Master anomaly–Yukawa relation).**
 Yukawa gauge‑invariance gives $Y_u=Y_Q+Y_H$, $Y_d=Y_Q-Y_H$, $Y_e=Y_L-Y_H$. The mixed anomalies enforce $N_cY_Q+Y_L=0$. The cubic hypercharge anomaly for left‑chiral fields reduces to
 
 $$
@@ -304,7 +304,7 @@ $$
 
 This simultaneously cancels the mixed gravitational–$U(1)_Y$ anomaly $\sum Y= -N_cY_Q+Y_H=0$. (This sum is over the left‑chiral fermion content; the Higgs doublet, being a scalar, does not contribute to this chiral gravitational anomaly.)
 
-**Corollary W\.15 (SM normalization and $N_c$).**
+**Corollary W.15 (SM normalization and $N_c$).**
 Using the **canonical** SM relation $Q=T_3+\tfrac{Y}{2}$ and $Q(\nu_L)=+\tfrac12+\tfrac{Y_L}{2}=0\Rightarrow Y_L=-1$, we obtain $Y_Q=\tfrac{1}{N_c}$ and $Y_H=1$. Matching $Q(u_L)=+\tfrac23$, $Q(d_L)=-\tfrac13$ fixes $N_c=3$ and
 
 $$
@@ -314,28 +314,28 @@ $$
 
 ---
 
-## W\.5 Robustness bounds
+## W.5 Robustness bounds
 
-**Corollary W\.16 (Product bound at Jensen‑cap; EM restatement of (W\.2.5) at the Jensen‑cap–saturated optimum).**
+**Corollary W.16 (Product bound at Jensen‑cap; EM restatement of (W.2.5) at the Jensen‑cap–saturated optimum).**
 At the Jensen‑cap–saturated optimum,
 
 $$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})\Bigl(\frac{C_{\rm cyc}}{C_{\rm cap}}\Bigr)_{e}\ \le\ K(d_0, M_e)\,\frac{1}{F_{\lambda,e}}\ }, \tag{W.5.1} $$
 
-with **strict inequality on the cap‑active branch**. **Equality** holds **iff** $u_0=u^\*_{\rm J}$ and $\sigma^2=0$. The identity (W\.2.6) holds only under the specific conditions of a flat LAN spectrum and operation precisely at the branch boundary. The more general, robust prediction of this framework is the inequality (W\.5.1). The identity represents an idealized, high‑symmetry point in the space of possible solutions.
+with **strict inequality on the cap‑active branch**. **Equality** holds **iff** $u_0=u^\*_{\rm J}$ and $\sigma^2=0$. The identity (W.2.6) holds only under the specific conditions of a flat LAN spectrum and operation precisely at the branch boundary. The more general, robust prediction of this framework is the inequality (W.5.1). The identity represents an idealized, high‑symmetry point in the space of possible solutions.
 
-**Corollary W\.17 (Lower bound on $r_e$ and variance effect).**
-With $r_e=\tfrac{S_1}{2\tilde A_{\rm PCE}+S_2}$ and (W\.2.3),
+**Corollary W.17 (Lower bound on $r_e$ and variance effect).**
+With $r_e=\tfrac{S_1}{2\tilde A_{\rm PCE}+S_2}$ and (W.2.3),
 
 $$
 r_e\ \ge\ \frac{S_1}{S_2(1+1/D)}\ =\ \frac{1}{x}\cdot \frac{1}{(1+\sigma^2/x^2)(1+1/D)}.
 \tag{W.5.2}
 $$
 
-Increasing spectral variance decreases $r_e$ and enlarges the upper bound (W\.5.1) via $1/F_\lambda=1+\sigma^2/x^2$.
+Increasing spectral variance decreases $r_e$ and enlarges the upper bound (W.5.1) via $1/F_\lambda=1+\sigma^2/x^2$.
 
 ---
 
-## W\.6 Preregisterable computation (deterministic; no data)
+## W.6 Preregisterable computation (deterministic; no data)
 
 **Inputs at $g=0$** for each sector $s\in\{e,Y,2\}$:
 
@@ -354,27 +354,27 @@ Increasing spectral variance decreases $r_e$ and enlarges the upper bound (W\.5.
    – If $g_J(u_0)= \ln d_0$: **branch boundary** $(u_s^\*=u_0=u^\*_{\rm J})$.
    – If $g_J(u_0)> \ln d_0$: **cap‑active** $\bigl(u_s^\*=u^\*_{\rm J}=(a_{\rm cap}-1)\,M_s/S_1^{(s)}\bigr)$, with $a_{\rm cap}=d_0^{1/M_s}$.
 4. **Invariants:** $C_{\rm cap}^{(s)}=\Gamma_0\nu\,S_1^{(s)}$,\quad $C_{\rm cyc}^{(s)}=\Gamma_0\nu\,[\,2\tilde A_{\rm PCE}^{(s)}+S_2^{(s)}\,]$.
-5. **U(1)/EM product:** for scales **below** EWSB, $\alpha_{\mathrm{em}}(\mu^\*)=u_e^\*/(4\pi)$. Compute $\alpha_{\mathrm{em}}(\mu^\*)\,(C_{\rm cyc}/C_{\rm cap})_{e}$ and compare to $K(d_0,M_e)/F_{\lambda,e}$; the identity (W\.2.6) applies only at the branch boundary with $\sigma_e^2=0$. For scales **above** EWSB, replace with hypercharge/weak couplings as in (W\.3.1).
-6. **Weinberg angle:** evaluate (W\.3.1); if using GUT normalization, use (W\.3.3) with $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$.
+5. **U(1)/EM product:** for scales **below** EWSB, $\alpha_{\mathrm{em}}(\mu^\*)=u_e^\*/(4\pi)$. Compute $\alpha_{\mathrm{em}}(\mu^\*)\,(C_{\rm cyc}/C_{\rm cap})_{e}$ and compare to $K(d_0,M_e)/F_{\lambda,e}$; the identity (W.2.6) applies only at the branch boundary with $\sigma_e^2=0$. For scales **above** EWSB, replace with hypercharge/weak couplings as in (W.3.1).
+6. **Weinberg angle:** evaluate (W.3.1); if using GUT normalization, use (W.3.3) with $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$.
 7. **Reporting:** publish $\{M_s,S_1^{(s)},S_2^{(s)}\}$, $\Gamma_0,\nu$, $d_0$, probe specification, and code.
 
 ---
 
-## W\.7 Fisher‑operator (SLD) existence: finite‑dimensional setting
+## W.7 Fisher‑operator (SLD) existence: finite‑dimensional setting
 
-**Theorem W\.18 (SLD existence and QFI quadratic form).**
+**Theorem W.18 (SLD existence and QFI quadratic form).**
 Let $\{E_g\}_{g\in\mathbb{R}}$ be a $C^1$ family of CPTP maps on a finite‑dimensional Hilbert space, and let $\rho_0$ be full‑rank and stationary at $g=0$ $(E_0(\rho_0)=\rho_0)$. Then the Symmetric Logarithmic Derivative (SLD) exists at $g=0$, the quantum Fisher information (QFI) is finite, and the SLD‑based QFI defines a positive semidefinite quadratic form on the tangent space at $\rho_0$. In finite dimension, this quadratic form admits a Riesz representation (equivalently, an operator/superoperator representation) with respect to $\rho_0$.
 
 *Sketch.* Standard quantum estimation theory (Helstrom–Holevo–Petz) ensures SLD existence for $C^1$ differentiable state families with full‑rank base state, implying a well‑defined QFI quadratic form representable via SLD at $\rho_0$. $\square$
 
 ---
 
-## W\.8 Emergent GR: assumptions and controlled deviations
+## W.8 Emergent GR: assumptions and controlled deviations
 
-**Theorem W\.19 (Einstein dynamics under thermodynamic assumptions).**
+**Theorem W.19 (Einstein dynamics under thermodynamic assumptions).**
 Assume: (i) a stable AQFT limit on a Lorentzian manifold; (ii) local thermodynamic equilibrium near local causal horizons (with approximate boost Killing flow); (iii) saturation of the horizon information bound inducing an area law; (iv) the Clausius relation $\delta Q=T\,{\rm d}S$ for local Rindler wedges. Then the macroscopic dynamics obey the Einstein field equations with constant $G$ set by the area–entropy proportionality.
 
-**Proposition W\.20 (Leading corrections).**
+**Proposition W.20 (Leading corrections).**
 Deviations from (ii)–(iii) induce effective‑action corrections of the form
 
 $$
@@ -386,15 +386,15 @@ with $c_{1,2}$ controlled by the degree of non‑saturation (entropy deficit) an
 
 ---
 
-## W\.9 Distinctive mathematical features
+## W.9 Distinctive mathematical features
 
 **Features.**
-* (A) **Alphabet‑constant family** $K(d_0,M)$ with exact identity (W\.2.6) in the flat‑spectrum branch‑boundary reference.
-* (B) **Convexity and uniqueness** of the coupling‑setting principle (Lemma W\.1).
-* (C) **Capacity‑aware bounds** that are explicit and saturable under stated conditions (Proposition W\.8; Theorem W\.10; Corollary W\.16).
-* (D) **Hypercharge structure** compactly fixed by anomaly + Yukawa relations (Theorem W\.14; Corollary W\.15).
-* (E) **Deterministic pipeline** from axioms/invariants to numbers (W\.6).
-* (F) **Transparent variance dependence** via $F_\lambda$ (W\.2.4), quantifying robustness.
+* (A) **Alphabet‑constant family** $K(d_0,M)$ with exact identity (W.2.6) in the flat‑spectrum branch‑boundary reference.
+* (B) **Convexity and uniqueness** of the coupling‑setting principle (Lemma W.1).
+* (C) **Capacity‑aware bounds** that are explicit and saturable under stated conditions (Proposition W.8; Theorem W.10; Corollary W.16).
+* (D) **Hypercharge structure** compactly fixed by anomaly + Yukawa relations (Theorem W.14; Corollary W.15).
+* (E) **Deterministic pipeline** from axioms/invariants to numbers (W.6).
+* (F) **Transparent variance dependence** via $F_\lambda$ (W.2.4), quantifying robustness.
 * (G) **Predictive Power:** As shown in **Appendix Z**, this formalism, when combined with the framework's fundamental constants, enables a complete, parameter-free calculation of the fine-structure constant.
 
 

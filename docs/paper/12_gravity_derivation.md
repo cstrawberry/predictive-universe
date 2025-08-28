@@ -6,7 +6,7 @@ Under the following explicit premises, rigorously grounded in the preceding sect
 
 *  (A1) Local thermodynamic equilibrium at the coarse‑grained scale.
 
-*  (A2) Local horizon thermodynamics with Unruh temperature $T=\kappa/(2\pi)$ (Eq. (69)) and an area–entropy law as established in Appendix E.
+*  (A2) Local horizon thermodynamics with Unruh temperature $T=\kappa/(2\pi)$ (Equation (69)) and an area–entropy law as established in Appendix E.
 
 *  (A3) Geometric regularity ensuring a smooth manifold limit and controlled curvature (Appendix C).
 
@@ -163,7 +163,7 @@ The Principle of Compression Efficiency (PCE) dictates that the mechanism for em
 
 *   **At Galactic Scales:** In environments with moderate potential wells, PCE favors a low-cost "Law Modification." This manifests as a scale-dependent effective Newton constant, $G(R)$ (Equation I.4). This naturally explains galaxy rotation curves and baryonic scaling relations **as an environment‑dependent relaxation that does not alter the homogeneous early‑Universe limit**.
 
-*   **At Cluster Scales:** In the deep potential wells of clusters, a large change in `G` is ruled out by global cosmological constraints (e.g., from the CMB). PCE therefore selects a different, globally-consistent mechanism: a "Source Modification." This manifests as a non-local "predictive matter" response (Eq. I.7), a collective reconfiguration of the MPU substrate that contributes to the stress-energy tensor only in these extreme environments.
+*   **At Cluster Scales:** In the deep potential wells of clusters, a large change in `G` is ruled out by global cosmological constraints (e.g., from the CMB). PCE therefore selects a different, globally-consistent mechanism: a "Source Modification." This manifests as a non-local "predictive matter" response (Equation I.7), a collective reconfiguration of the MPU substrate that contributes to the stress-energy tensor only in these extreme environments.
 
 This two-tiered model provides a unified explanation for dark matter phenomenology across scales, rooted in the adaptive dynamics of the underlying predictive substrate, while remaining consistent with cosmological observations.
 

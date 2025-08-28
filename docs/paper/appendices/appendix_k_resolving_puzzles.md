@@ -67,7 +67,7 @@ The PU framework proposes that information escapes via the **Perspectival Inform
 1.  **The Dual Nature of Emission:** Each 'Evolve' event that emits a Hawking quantum is a transition of the full Perspectival State. It produces not just an amplitude state $|k_j\rangle$ (e.g., a photon of a certain energy) but also a corresponding **final perspective** $s'_j$ (an interaction basis).
       $$\text{Emission Event}_j = \left( |k_j\rangle, s'_j \right) \quad \text{(K.3.2)}
     $$
-2.  **Context-Dependent Perspective Selection:** The key is that the choice of the perspective $s'_j$ is not random. It is drawn from the Conditional Perspective Transition Kernel $G_{persp}(s' | s_{loc}, k_j, |S_{BH}(t_j)\rangle, ...)$ (formalized in Appendix M, Eq. M.2), which is critically dependent on the full internal MPU state of the black hole, $|S_{BH}(t_j)\rangle$.
+2.  **Context-Dependent Perspective Selection:** The key is that the choice of the perspective $s'_j$ is not random. It is drawn from the Conditional Perspective Transition Kernel $G_{persp}(s' | s_{loc}, k_j, |S_{BH}(t_j)\rangle, ...)$ (formalized in Appendix M, Equation M.2), which is critically dependent on the full internal MPU state of the black hole, $|S_{BH}(t_j)\rangle$.
 3.  **Bypassing the Loop:** The information is encoded in the specific, highly-correlated sequence of perspectives $\{s'_j\}$ over the black hole's entire lifetime. This sequence is not subject to the same reflexive feedback loop as the mass-energy. While the emission of a quantum changes $|S_{BH}\rangle$ and thus the probability distribution for the *next* perspective, the information carried by the *current* perspective is already "out." An observer who could collect the entire sequence of pairs $\{(|k_j\rangle, s'_j)\}$ could, in principle, access the full information content of the initial state, preserving the global predictive potential of the system and satisfying the framework's overarching requirement for unitarity.
 4.  **Consistency with Thermal Appearance:** An observer who only measures the properties of the quanta $|k_j\rangle$ (tracing over the perspectives $s'_j$) would see a nearly thermal distribution, as the amplitudes are selected via the Born rule from a highly scrambled internal state. The information is hidden in the (currently unmeasurable) contextual basis of each emission.
 
@@ -260,7 +260,7 @@ This vast difference in relaxation rates means the system minimizes along the "s
 The POP constraint (A3) ensures that this slow relaxation in the $\phi_\perp$ space occurs on a leaf where the physical CP-invariant $J$ is held constant, preventing the system from simply relaxing to the trivial CP-conserving point $J=0$. This preserves the observed weak-sector CP violation.
 Because the first, rapid stage of minimization drives $\bar\theta$ to zero, the final equilibrium state will have $\bar\theta^* = 0$, resolving the Strong-CP problem. The separation of timescales makes the minimization effectively lexicographic. The error in this approximation is of order $1/\Lambda_{stiff}$. QED
 
-# **K.8 Pathway toward Deriving the Cosmological Constant**
+**K.8 Pathway toward Deriving the Cosmological Constant**
 
 *   **Puzzle:** Why is the observed vacuum energy density astronomically smaller than naïve quantum field theory estimates?
 *   **PU Pathway (Summary of Appendix U):** The cosmological constant $\Lambda$ is derived from first principles as a non-perturbative effect arising from the statistical mechanics of the MPU network vacuum. The full, rigorous derivation is presented in **Appendix U**. The core mechanism is as follows:
@@ -270,7 +270,7 @@ Because the first, rapid stage of minimization drives $\bar\theta$ to zero, the 
     4.  **Final Result:** The vacuum energy density is $\rho_{\rm vac} \approx A_{\rm eff} \rho_{\rm Pl} \exp(-2\kappa)$, where $\rho_{\rm Pl}$ is the Planck density and $A_{\rm eff}$ is an $\mathcal{O}(1)$ prefactor. This yields the dimensionless relation `Λ L_P² ≈ 8π A_eff exp(-2κ)`. The observed value of `Λ` is naturally reproduced for a physically plausible complexity `κ ≈ 142`, providing a solution to the hierarchy problem without fine-tuning.
 *   **Next Step:** The full derivation in Appendix U provides a complete computational program. Future work involves first-principles calculation of the complexity $\kappa$ and prefactor $A_{\rm eff}$ from MPU network simulations.
 
-# **K.9 Cosmological Implications: The PU Perspective on the Dark Sector and Cosmic Evolution**
+**K.9 Cosmological Implications: The PU Perspective on the Dark Sector and Cosmic Evolution**
 
 This section explores how the foundational principles of the Predictive Universe (PU) framework, particularly the emergent nature of gravity from MPU network adaptation (Section 12, **Appendix E**) and the Principle of Compression Efficiency (PCE, Definition 15), can be extended to address key cosmological puzzles, including the origin of the Cosmological Principle and the nature of the "dark sector" (dark matter and dark energy). These pathways represent natural, though still developing, implications of the core PU theory.
 
@@ -322,7 +322,7 @@ $$
 \boxed{\,\frac{d^2 D}{d(\ln a)^2}+\Big(2+\frac{d\ln H}{d\ln a}\Big)\frac{dD}{d\ln a}
 -\frac{3}{2}\,\frac{8\pi G_{\mathrm{eff}}(a)\rho_m(a)}{3H^2(a)}\,D=0\, }.
 $$
-This provides a closed system of equations. Given a functional form for $G_{\mathrm{eff}}(a)$ derived from PU principles (such as the model in Appendix I, Eq. I.4, where scale R is related to density and thus to `a`), the entire cosmic history, including the growth of structure, can be computed and compared to observations.
+This provides a closed system of equations. Given a functional form for $G_{\mathrm{eff}}(a)$ derived from PU principles (such as the model in Appendix I, Equation I.4, where scale R is related to density and thus to `a`), the entire cosmic history, including the growth of structure, can be computed and compared to observations.
 
 **K.9.3 Observational Consistency and Future Directions**
 

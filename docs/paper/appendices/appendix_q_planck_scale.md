@@ -57,7 +57,7 @@ The coefficients `k_i` are positive constants (in Planck units) whose ratios are
 **Q.3 Coupled Minimization of the PCE Potential**
 
 We find the equilibrium state (`δ*`, `χ*`, `η*`, `C_max*`) by minimizing `V_vac` subject to the framework's fundamental constraints:
-*   **Information Budget:** The available capacity is limited by the MPU's structure. From the PCE-optimal partitioning argument (Appendix E.7, Eq. E.14), `C_{max} ≤ \ln(d_0) - ε`. With the rigorously derived values `d_0=8` (Theorem 23) and `ε=ln(2)` (Theorem 31), this gives the hard constraint:
+*   **Information Budget:** The available capacity is limited by the MPU's structure. From the PCE-optimal partitioning argument (Appendix E.7, Equation E.14), `C_{max} ≤ \ln(d_0) - ε`. With the rigorously derived values `d_0=8` (Theorem 23) and `ε=ln(2)` (Theorem 31), this gives the hard constraint:
 $$
     C_{max} ≤ 2 \ln(2)
     \tag{Q.9}
@@ -102,9 +102,9 @@ The second derivatives (`∂²V/∂δ²`, `∂²V/∂η²`) are positive at the 
 
 **Q.4 Self-Consistency Condition and Determination of `δ/L_P`**
 
-The framework now imposes a powerful self-consistency check. We have two independent expressions for the optimal spacing `δ*`: one from minimizing the potential (Eq. Q.13) and one from the foundational geometric identity (Eq. Q.3). For the framework to be self-consistent, these must be equal at the equilibrium point.
+The framework now imposes a powerful self-consistency check. We have two independent expressions for the optimal spacing `δ*`: one from minimizing the potential (Equation Q.13) and one from the foundational geometric identity (Equation Q.3). For the framework to be self-consistent, these must be equal at the equilibrium point.
 
-Evaluating Eq. Q.3 at the optimum (`C_max* = 2 ln(2)`, `χ* = 1`):
+Evaluating Equation Q.3 at the optimum (`C_max* = 2 ln(2)`, `χ* = 1`):
 $$
 \frac{\delta^{*2}}{L_P^2} = \frac{4 (1) (2 \ln 2)}{η^{*}} = \frac{8 \ln 2}{η^{*}}
 \tag{Q.15}
@@ -121,13 +121,13 @@ $$
 $$
 This is not a free parameter; its value is fixed by the self-consistency of the theory.
 
-Finally, we determine `η*`. Substitute Eq. Q.15 into Eq. Q.14:
+Finally, we determine `η*`. Substitute Equation Q.15 into Equation Q.14:
 $$
 k_4 (η^{*2} - 1) = - \frac{k_3 \ln 2}{8 \ln 2 / η^{*}} = - \frac{k_3 η^{*}}{8} \implies η^{*2} + \frac{k_3}{8k_4}η^{*} - 1 = 0
 $$
 Since `η* > 0`, the solution is `η* = [-b + sqrt(b²+4)]/2` with `b=k_3/(8k_4)`. As argued in Appendix C and D, PCE's drive for regularity implies that the cost of geometric distortion is high, so `k_4 >> k_3`. In this limit, `b → 0` and `η* → 1`. Thus, the stable equilibrium robustly occurs at `η* ≈ 1`.
 
-Substituting `η* ≈ 1` back into our primary result (Eq. Q.15) gives the final prediction.
+Substituting `η* ≈ 1` back into our primary result (Equation Q.15) gives the final prediction.
 
 **Q.5 Final Result and Interpretation**
 

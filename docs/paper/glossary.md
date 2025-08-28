@@ -2,13 +2,13 @@
 
 *   **$\alpha, \beta$ (Alpha, Beta):** (Definition 8) The lower ($\alpha>0$) and upper ($\beta<\alpha_{SPAP}$) bounds defining the **Space of Becoming**. Represent the minimum and maximum viable **Predictive Performance (PP)** for sustained adaptive operation of the Fundamental Predictive Loop. (Note: The magnitude of any Consciousness Complexity (CC) effects, $\text{CC}(S)$, is independently bounded by the operational norm constraint $\text{CC}(S) \le \alpha_{CC,max} < 0.5$, cf. Theorem 39).
 
-*   **$\delta_{SPAP}$ (Delta-SPAP):** (Appendix B.3, Theorem B.2) The statistical error margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$ below the fundamental self-prediction limit $\alpha_{SPAP}$. Appears explicitly in the poly-logarithmic complexity divergence bound derived in Theorem B.2 as $C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega(\log(1/\delta_{\rm SPAP}) / (\delta_{\rm SPAP})^2)$ (**Eq. B.5**).
+*   **$\delta_{SPAP}$ (Delta-SPAP):** (Appendix B.3, Theorem B.2) The statistical error margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$ below the fundamental self-prediction limit $\alpha_{SPAP}$. Appears explicitly in the poly-logarithmic complexity divergence bound derived in Theorem B.2 as $C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega(\log(1/\delta_{\rm SPAP}) / (\delta_{\rm SPAP})^2)$ (**Equation B.5**).
 
 *   **$\alpha_{SPAP}$ (Alpha-SPAP):** (Theorem 10, Theorem 11) The fundamental upper bound on average self-prediction performance ($PP<1$) for systems possessing Property R, regarding SPAP-limited aspects. Distinct from the operational upper bound $\beta$. Approaching $\alpha_{SPAP}$ requires divergent complexity as $\delta_{SPAP} \to 0$ (Theorem 14).
 
 *   **$\alpha_{CC,max}$ (Alpha-CC-max):** (Theorem 39) The strict upper bound on Consciousness Complexity (CC), requiring $\alpha_{CC,max} < 0.5$ to forbid deterministic FTL signaling (Postulate 2).
 
-*   **Adaptation Driving Force ($\Psi(t)$):** (Definition 20, Eq. 24) The net incentive for complexity adaptation $C(t)$: marginal power-equivalent performance gain ($\Gamma_0 \partial PP/\partial C$) minus marginal resource cost rate ($\lambda R' + R'_I$).
+*   **Adaptation Driving Force ($\Psi(t)$):** (Definition 20, Equation 24) The net incentive for complexity adaptation $C(t)$: marginal power-equivalent performance gain ($\Gamma_0 \partial PP/\partial C$) minus marginal resource cost rate ($\lambda R' + R'_I$).
 
 *   **Aggregate Complexity ($C_{agg}$):** (Definition 29) The Predictive Physical Complexity of an MPU aggregate. Must exceed $C_{op}$ for emergent biasing (Theorem 34).
 
@@ -28,11 +28,11 @@
 
 *   **Born Rule:** (Proposition 7, Theorem G.1.7) Probability of outcome $i$ from state $\rho$ measured via projector $P_i$ is $P(i) = \text{Tr}(\rho P_i)$. For pure state $|\psi\rangle$ and basis projector $P_i=|i\rangle\langle i|$, $P(i)=|\langle i|\psi\rangle_s|^2$. Derived via PCE consistency (Appendix G).
 
-*   **$C \equiv C_P$ (Predictive Physical Complexity):** (Section 2.4.1, Eq. 1) Theoretical complexity measure for physically constructing microstate $\mu$ achieving nontrivial predictive accuracy under all physical laws. Hierarchically defined, generally uncomputable.
+*   **$C \equiv C_P$ (Predictive Physical Complexity):** (Section 2.4.1, Equation 1) Theoretical complexity measure for physically constructing microstate $\mu$ achieving nontrivial predictive accuracy under all physical laws. Hierarchically defined, generally uncomputable.
 
-*   **$\hat{C}_v$ (Operational Complexity Proxy):** (Theorem 1, Definition B.1, Eq. B.1) Hermitian operator (identified with quantum circuit complexity) on MPU Hilbert space $\mathcal{H}_v$, with spectrum $\lambda(d)=K_0+\Delta C(d)$. Dynamically aligned with $C_P$ at equilibrium (Theorem 2).
+*   **$\hat{C}_v$ (Operational Complexity Proxy):** (Theorem 1, Definition B.1, Equation B.1) Hermitian operator (identified with quantum circuit complexity) on MPU Hilbert space $\mathcal{H}_v$, with spectrum $\lambda(d)=K_0+\Delta C(d)$. Dynamically aligned with $C_P$ at equilibrium (Theorem 2).
 
-*   **$C_{op}$ (Operational Threshold):** (Definition 13) Minimum $C_P$ for a predictive function to exceed baseline chance accuracy by $\epsilon_{acc}$ (Eq. 15); satisfies $C_{op} \ge K_0$ (Corollary 3). Minimal complexity for the adaptive Fundamental Predictive Loop.
+*   **$C_{op}$ (Operational Threshold):** (Definition 13) Minimum $C_P$ for a predictive function to exceed baseline chance accuracy by $\epsilon_{acc}$ (Equation 15); satisfies $C_{op} \ge K_0$ (Corollary 3). Minimal complexity for the adaptive Fundamental Predictive Loop.
 
 *   **$C_{PPC}(PP_{target})$:** (Definition 18) Minimum $C_P$ required to achieve target average predictive performance $PP_{target}$.
 
@@ -40,7 +40,7 @@
 
 *   **Causality (Postulate 2):** (Section 10.1.1) Defined operationally as the impossibility of constructing paradox-inducing causal loops, which requires the impossibility of controllable, deterministic faster-than-light (FTL) signaling.
 
-*   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Eq. 54). It bounds the maximum possible deviation from the Born rule (specifically, the Fisher-Rao distance, Definition 33) that the system can induce. Bounded by the causality constraint $\mathrm{CC}(S)\le \alpha_{\mathrm{CC,max}} < 0.5$ (Theorem 39).
+*   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Equation 54). It bounds the maximum possible deviation from the Born rule (specifically, the Fisher-Rao distance, Definition 33) that the system can induce. Bounded by the causality constraint $\mathrm{CC}(S)\le \alpha_{\mathrm{CC,max}} < 0.5$ (Theorem 39).
 
 *   **Coherence:** (Appendix C) Reliability and stability of predictive correlations and information propagation across the MPU network. Requires geometric regularity (Theorem C.2).
 
@@ -48,19 +48,19 @@
 
 *   **Continuum Limit:** (Section 11, Appendix F) Convergence of the discrete MPU network structure (geometry and dynamics) to a continuous spacetime manifold $(M, g_{\mu\nu})$ and an effective AQFT description, conditional on Geometric Regularity (Theorem 43).
 
-*   **CTB Model (Context-Targeted Bias):** (Definition 34, Eq. 58–59) Example model for CC influence where probability shifts towards a context-defined target distribution: $P_{obs}(i) = (1-\text{CC}) P_{Born}(i) + \text{CC} p_{target}(i)$.
+*   **CTB Model (Context-Targeted Bias):** (Definition 34, Equation 58–59) Example model for CC influence where probability shifts towards a context-defined target distribution: $P_{obs}(i) = (1-\text{CC}) P_{Born}(i) + \text{CC} p_{target}(i)$.
 
-*   **$d_{\mathcal{N}}$:** (Definition 35) Network propagation cost metric based on minimum cumulative ND-RID cost along paths (shortest path distance in cost space) (Eq. 64).
+*   **$d_{\mathcal{N}}$:** (Definition 35) Network propagation cost metric based on minimum cumulative ND-RID cost along paths (shortest path distance in cost space) (Equation 64).
 
 *   **DSRO (Dynamic Self-Reference Operator):** (Definition 11, Theorem A.3) Formal representation of a computable function whose output depends dynamically on provable properties about itself, based on Kleene's Second Recursion Theorem. Used in SPAP logic.
 
 *   **Dominance of Stabilizing Costs (DSC):** (Theorem 22) The condition that the stabilizing effects of performance saturation (concave $PP$) and the strictly convex physical cost $R(C)$ are sufficient to overcome any destabilizing effects (e.g., from the concave informational cost $R_I(C)$), ensuring the existence of a unique, stable equilibrium complexity $C^*$.
 
-*   **Dual Dynamics:** (Section 7.3.3) The two modes of MPU evolution: (1) continuous, deterministic, unitary **Internal Prediction** (Definition 26, Eq. 43) governed by $\hat{H}$, and (2) discrete, stochastic **'Evolve' Interaction** (Definition 27) instantiating ND-RID.
+*   **Dual Dynamics:** (Section 7.3.3) The two modes of MPU evolution: (1) continuous, deterministic, unitary **Internal Prediction** (Definition 26, Equation 43) governed by $\hat{H}$, and (2) discrete, stochastic **'Evolve' Interaction** (Definition 27) instantiating ND-RID.
 
 *   **Dynamically Enforced Functional Correspondence:** (Theorem 2, Appendix D) Principle stating that POP/PCE adaptation dynamics necessarily drive the expectation value of the operational complexity proxy $\langle\hat{C}_v\rangle$ into alignment with the theoretical Predictive Physical Complexity $C_P(v)$ at stable equilibrium points. Justified via work-cost gap feedback (Lemma D.2, Theorem D.5).
 
-*   **EFE (Einstein Field Equations):** (Section 12, Theorem 50) Emergent equation relating spacetime curvature to MPU stress-energy: $R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}$ (Eq. 76). Derived thermodynamically from the Clausius relation applied to local horizons.
+*   **EFE (Einstein Field Equations):** (Section 12, Theorem 50) Emergent equation relating spacetime curvature to MPU stress-energy: $R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}$ (Equation 76). Derived thermodynamically from the Clausius relation applied to local horizons.
 
 *   **Einstein Causality (Microcausality):** (Appendix F, Corollary F.1) Standard QFT principle stating that operators associated with space-like separated regions commute: $[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}$ if $\mathcal{O}_1$ is space-like to $\mathcal{O}_2$. Emerges from ND-RID limits (Proposition F.1).
 
@@ -76,7 +76,7 @@
 
 *   **Geometric Regularity:** (Definition 36, Definition 37, Theorem 43) Property of the MPU network exhibiting uniform D-dimensional polynomial volume growth and uniformly bounded synthetic Ricci curvature. Argued to be a necessary condition for viable equilibrium states under POP/PCE (Appendix C, Theorem C.6) and dynamically achieved (Appendix D, Theorem D.5).
 
-*   **$\Gamma_0$ (Gamma-0):** (Definition 20) System-level **constant** Power Conversion Factor with dimensions of **Power** ($[E][T]^{-1}$), appearing in the PCE potential. It maps the marginal performance gradient $(\partial PP/\partial C)$ to an equivalent power rate in the Adaptation Driving Force $\Psi$. Constrained by thermodynamic limits (Theorem 20). **At equilibrium, parameters satisfy Eq. (29)**, enabling empirical calibration of $\Gamma_0$ for a given MPU system.
+*   **$\Gamma_0$ (Gamma-0):** (Definition 20) System-level **constant** Power Conversion Factor with dimensions of **Power** ($[E][T]^{-1}$), appearing in the PCE potential. It maps the marginal performance gradient $(\partial PP/\partial C)$ to an equivalent power rate in the Adaptation Driving Force $\Psi$. Constrained by thermodynamic limits (Theorem 20). **At equilibrium, parameters satisfy Equation (29)**, enabling empirical calibration of $\Gamma_0$ for a given MPU system.
 
 *   **$\mathcal{H}_0$:** (Proposition 4) The minimal complex Hilbert space required for representing the MPU state $|\psi(t)\rangle$. Dimension $d_0 = \dim(\mathcal{H}_0)$ satisfies $d_0 \ge 8$ (Theorem 23). Emergence justified by PCE optimality (Theorem G.1.8).
 
@@ -90,13 +90,13 @@
 
 *   **Information:** (Definition 1) Functionally defined as any physically instantiated pattern or structure that has the objective potential to reduce uncertainty or Prediction Error ($PE$) relevant to a system's POP when processed by a suitable predictive system ($C \ge K_0$).
 
-*   **Internal Prediction:** (Definition 26) The deterministic, unitary evolution phase of MPU dynamics (governed by Schrödinger equation, Eq. 43), representing internal model processing between 'Evolve' events.
+*   **Internal Prediction:** (Definition 26) The deterministic, unitary evolution phase of MPU dynamics (governed by Schrödinger equation, Equation 43), representing internal model processing between 'Evolve' events.
 
-*   **$\kappa_{eff}$:** (Theorem 19, Remark 4) Dimensionless efficiency parameter governing the relationship between complexity and performance in the Law of Prediction (Eq. 22). Related to equilibrium cost/benefit ratios (Eq. 32).
+*   **$\kappa_{eff}$:** (Theorem 19, Remark 4) Dimensionless efficiency parameter governing the relationship between complexity and performance in the Law of Prediction (Equation 22). Related to equilibrium cost/benefit ratios (Equation 32).
 
 *   **$\kappa_r$:** (Theorem 33) The positive constant ($\kappa_r > 0$) appearing in the Reflexivity Constraint, quantifying the fundamental trade-off between information gain $\Delta I$ and minimum state disturbance $\Delta S_{min}/k_B$. Arises from $\varepsilon \ge \ln 2$.
 
-*   **Law of Prediction:** (Theorem 19, Eq. 22) The functional relationship between invested complexity $C$, target complexity $\hat{C}_{target}$, and achievable Predictive Performance $PP$ within the viable range $(\alpha, \beta)$: $PP(C, \hat{C}_{target}) = \beta - (\beta-\alpha) \exp[-\kappa_{eff} (C-C_{op})/\hat{C}_{target}]$.
+*   **Law of Prediction:** (Theorem 19, Equation 22) The functional relationship between invested complexity $C$, target complexity $\hat{C}_{target}$, and achievable Predictive Performance $PP$ within the viable range $(\alpha, \beta)$: $PP(C, \hat{C}_{target}) = \beta - (\beta-\alpha) \exp[-\kappa_{eff} (C-C_{op})/\hat{C}_{target}]$.
 
 *   **Logical Indeterminacy:** (Definition 12) The fundamental, in-principle unpredictability arising directly from the logical structure of self-reference (SPAP) and reflexive interaction (RID/RU) in systems possessing sufficient computational richness (Property R). Hypothesized source of quantum randomness (Hypothesis 2).
 
@@ -114,7 +114,7 @@
 
 *   **Perspectival State ($S_{(s)}(t)$):** (Definition 24, Appendix M) The complete state of an MPU, represented by the pair $(S(t), s)$, where $S(t)=|\psi(t)\rangle \in \mathcal{H}_0$ is the state amplitude and $s \in \Sigma$ is the perspective index representing the interaction context/basis.
 
-*   **$\Sigma$ (Sigma - Perspective Space):** (Definition 25, Theorem 25, Appendix M) Mathematical space of all possible interaction contexts/measurement bases for an MPU. Identified with the complex homogeneous space $\Sigma \cong U(d_0)/U(1)^{d_0}$. Equipped with a metric $d_\Sigma$ (Eq. 42).
+*   **$\Sigma$ (Sigma - Perspective Space):** (Definition 25, Theorem 25, Appendix M) Mathematical space of all possible interaction contexts/measurement bases for an MPU. Identified with the complex homogeneous space $\Sigma \cong U(d_0)/U(1)^{d_0}$. Equipped with a metric $d_\Sigma$ (Equation 42).
 
 *   **POP (Prediction Optimization Problem):** (Axiom 1) The fundamental adaptive imperative for systems to optimize the predictive quality ($Q$) of their internal models concerning relevant aspects of their environment, under resource constraints.
 
@@ -130,7 +130,7 @@
 
 *   **Prediction Coherence Boundary:** (Remark 3) The conceptual name for **$\alpha_{SPAP}$**, the fundamental upper bound on self-prediction performance. It represents the theoretical maximum for predictive accuracy that cannot be exceeded due to the logical limits of self-reference (SPAP). Approaching this boundary requires quadratically divergent Predictive Physical Complexity (Theorem 14), forming the basis for **Prediction Relativity**.
 
-*  **PP(t) (Predictive Performance):** (Definition 7, Eq. 8) A normalized measure ($PP \in (0, 1]$) quantifying the effectiveness (quality $Q$) of a system’s predictions, inversely related to Prediction Error ($PE$). Viable systems operate with $\alpha < PP < \beta$.
+*  **PP(t) (Predictive Performance):** (Definition 7, Equation 8) A normalized measure ($PP \in (0, 1]$) quantifying the effectiveness (quality $Q$) of a system’s predictions, inversely related to Prediction Error ($PE$). Viable systems operate with $\alpha < PP < \beta$.
 
 *   **$PE$ (Predictive Error):** Scalar discrepancy under a proper scoring rule (e.g., Brier or log‑loss). If $PE$ is a log‑loss it has units (nats/bits); otherwise we explicitly normalize it to be dimensionless.
 
@@ -142,17 +142,17 @@
 
 *   **$Q$ (Predictive Quality):** (Section 2.1) General measure of the goodness or utility of a system's predictions relative to its POP goals (e.g., reduced uncertainty, increased accuracy, enhanced operational success). Related to Predictive Performance PP.
 
-*   **$R(C)$:** (Definition 3, Eq. 4) Physical Operational Cost function. Power-like rate of *physical* resource consumption required to maintain and operate structures/processes of complexity $C$. $R(C) = R(C_{op}) + r_p (C-C_{op})^{\gamma_p}$ for $C \ge C_{op}$, with $\gamma_p > 1$.
+*   **$R(C)$:** (Definition 3, Equation 4) Physical Operational Cost function. Power-like rate of *physical* resource consumption required to maintain and operate structures/processes of complexity $C$. $R(C) = R(C_{op}) + r_p (C-C_{op})^{\gamma_p}$ for $C \ge C_{op}$, with $\gamma_p > 1$.
 
 *   **RID (Reflexive Interaction Dynamics):** (Definition 6, Definition A.1) Formalism characterizing interactions where the system's subsequent state depends intrinsically on the outcome of the interaction itself. Includes deterministic (D-RID) and non-deterministic (ND-RID) versions.
 
 *   **RU (Reflexive Undecidability):** (Theorem 12, Theorems A.4, A.5) Fundamental limitation on the ability of an interacting algorithm to reliably decide certain properties of systems governed by RID, due to the interaction perturbing the system state.
 
-*   **Reflexivity Constraint:** (Theorem 33, Eq. 48) Fundamental trade-off $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$ between relevant information gain $\Delta I$ in an 'Evolve' interaction and the minimum necessary dimensionless state disturbance (entropy production) $\Delta S_{min}/k_B$. Arises from $\varepsilon \ge \ln 2$.
+*   **Reflexivity Constraint:** (Theorem 33, Equation 48) Fundamental trade-off $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$ between relevant information gain $\Delta I$ in an 'Evolve' interaction and the minimum necessary dimensionless state disturbance (entropy production) $\Delta S_{min}/k_B$. Arises from $\varepsilon \ge \ln 2$.
 
 *   **Regularity:** (Definition C.3) Geometric Regularity of the MPU network, encompassing uniform volume growth and bounded curvature. Necessary condition for viability (Theorem 43).
 
-*   **$R_I(C)$:** (Definition 3b, Eq. 5) Reflexive-Information Cost function. *Informational* overhead rate associated with self-referential verification/processing. $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$ for $C > K_0$.
+*   **$R_I(C)$:** (Definition 3b, Equation 5) Reflexive-Information Cost function. *Informational* overhead rate associated with self-referential verification/processing. $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$ for $C > K_0$.
 
 *   **$|\psi(t)\rangle$:** (Definition 24) State amplitude component of the Perspectival State, represented by the Hilbert space vector $|\psi(t)\rangle \in \mathcal{H}_0$.
 
@@ -166,7 +166,7 @@
 
 *   **$\mathcal{T}$ (Simulation Horizon/Steps):** (Used in Theorems 14, B.2) Dimensionless number of steps or cycles over which a SPAP-limited prediction task is performed or a simulation is run.
 
-*   **$T_{\mu\nu}^{(MPU)}$ (MPU Stress-Energy Tensor):** (Definition B.8, Eq. B.15, Appendix B) Macroscopic, symmetric, covariantly conserved stress-energy tensor derived from coarse-grained average of the underlying microscopic operator $\hat{\Theta}_{\mu\nu}^{(MPU)}$ (Definition B.7), representing MPU activity and costs ($\hat{H}_v, \hat{R}, \hat{R}_I, \hat{V}_{vv'}$). Source term in the emergent Einstein Field Equations (EFE, Eq. 76).
+*   **$T_{\mu\nu}^{(MPU)}$ (MPU Stress-Energy Tensor):** (Definition B.8, Equation B.15, Appendix B) Macroscopic, symmetric, covariantly conserved stress-energy tensor derived from coarse-grained average of the underlying microscopic operator $\hat{\Theta}_{\mu\nu}^{(MPU)}$ (Definition B.7), representing MPU activity and costs ($\hat{H}_v, \hat{R}, \hat{R}_I, \hat{V}_{vv'}$). Source term in the emergent Einstein Field Equations (EFE, Equation 76).
 
 *   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.3, Theorem C.6, Appendix D) Theorem asserting POP/PCE dynamics necessarily drive MPU networks to self-organize into configurations exhibiting large-scale geometric regularity (Definition C.3). Justified by necessity arguments (Appendix C) and dynamical convergence (Appendix D). Foundational for emergence of smooth spacetime.
 

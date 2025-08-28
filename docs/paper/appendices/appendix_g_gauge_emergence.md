@@ -42,7 +42,7 @@ $$
 A crucial property mandated by the global optimization principles of POP and PCE is non-contextuality. The physical cost or resource implication associated with a specific potential outcome (represented by projector $P$) must depend only on the physical process corresponding to $P$ itself, and *not* on the particular set of alternative outcomes (the partition $\mathcal{P}$) considered alongside it.
 
 **Lemma G.1.1 (Non-Contextuality from Dynamical Stability).**
-Non-contextuality is a necessary condition for the stability and consistency of the PCE-driven adaptation dynamics. The dynamics are modeled as a stochastic gradient flow on the PCE Potential $V(x)$ (Appendix D, Eq. D.8), which serves as a stochastic Lyapunov function for the system.
+Non-contextuality is a necessary condition for the stability and consistency of the PCE-driven adaptation dynamics. The dynamics are modeled as a stochastic gradient flow on the PCE Potential $V(x)$ (Appendix D, Equation D.8), which serves as a stochastic Lyapunov function for the system.
 Assume, for contradiction, that the cost function is contextual, so that the cost associated with outcome $P$ depends on the partition $\mathcal{P}$ it is considered part of: $f(P|\mathcal{P})$. This would mean the potential itself depends on the choice of partition, $V(x, \mathcal{P})$. For a fixed physical configuration $x$, the potential could take different values $V(x, \mathcal{P}_1) \neq V(x, \mathcal{P}_2)$ depending on the system's internal conceptual framing.
 This introduces a fatal ambiguity into the adaptation dynamics. The gradient $\nabla_x V$, which drives the system's evolution, would become ill-defined, depending on the arbitrary choice of partition $\mathcal{P}$ rather than solely on the objective physical configuration $x$. A potential function that is not a single-valued function of the physical state cannot serve as a proper Lyapunov function to guarantee convergence to a stable physical equilibrium (as proven in Theorem D.5). For the PCE optimization process to be well-defined and dynamically stable, the potential $V$ must depend only on the physical configuration $x$. This mandates that the cost component $f(P)$ must be a function of the physical process associated with $P$ alone, and not the context of other considered possibilities. Therefore, non-contextuality is a prerequisite for a dynamically consistent optimization framework.
 
@@ -181,7 +181,7 @@ where $C_2(U_i)$ is the quadratic Casimir of the representation $U_i$ of $G_i$ o
     PCE selects the lower-cost option, $SU(3)$. Thus, the non‑abelian part is **$SU(2)\times SU(3)$** acting in fundamentals.
 *   **Abelian factor:** A **single** non‑trivial $U(1)$ factor is **sufficient** and **cost‑minimal** for SM‑like chiral content. With a common proportionality constant across abelian sectors, **any additional non‑trivial $U(1)$** strictly increases the abelian cost; hence one and only one $U(1)$ is cost‑minimal.
 
-**Note on irreducible competitors.** Competing **simple** groups acting irreducibly on $\mathbb C^5 \cong \mathbb C^2 \oplus \mathbb C^3$ (e.g., $SU(5)$) are disfavored by the cost (2.0 vs 1.5) and **ruled out** in PU by the **capacity bound** ($\dim SU(5)=24 > n_{\max}$, Eq. G.8.0). Orthogonal/symplectic alternatives have real/pseudoreal fundamentals that obstruct the required **chirality**, providing a second, independent exclusion. ∎
+**Note on irreducible competitors.** Competing **simple** groups acting irreducibly on $\mathbb C^5 \cong \mathbb C^2 \oplus \mathbb C^3$ (e.g., $SU(5)$) are disfavored by the cost (2.0 vs 1.5) and **ruled out** in PU by the **capacity bound** ($\dim SU(5)=24 > n_{\max}$, Equation G.8.0). Orthogonal/symplectic alternatives have real/pseudoreal fundamentals that obstruct the required **chirality**, providing a second, independent exclusion. ∎
 
 For the simplest case of a single predictive field, the group of PCE-preserving automorphisms is $U(1)$. The physical predictions (probabilities $p_i$) derived from a state vector $|\Psi(x)\rangle$ depend only on the squared amplitudes. This implies an inherent redundancy: multiplying the state vector by a local phase factor leaves all local physical predictions unchanged:
 $$
@@ -193,7 +193,7 @@ Here, $q$ represents a "charge" associated with the field $\Psi$, indicating how
 
 **G.3 The Predictive-Coherence Problem**
 
-Effective prediction across the MPU network (required by POP, Axiom 1) necessitates comparing predictive states (amplitudes) at different spacetime points, say $x$ and $x+dx$. This comparison is essential for calculating gradients, predicting propagation, and maintaining coherent superposition across the network. However, the local gauge freedom (Eq. G.2.1) obstructs simple comparison using the standard partial derivative $\partial_\mu$. If we transform $|\Psi(x)\rangle \to e^{iq\theta(x)}|\Psi(x)\rangle$, the derivative transforms as:
+Effective prediction across the MPU network (required by POP, Axiom 1) necessitates comparing predictive states (amplitudes) at different spacetime points, say $x$ and $x+dx$. This comparison is essential for calculating gradients, predicting propagation, and maintaining coherent superposition across the network. However, the local gauge freedom (Equation G.2.1) obstructs simple comparison using the standard partial derivative $\partial_\mu$. If we transform $|\Psi(x)\rangle \to e^{iq\theta(x)}|\Psi(x)\rangle$, the derivative transforms as:
 $$
 \partial_{\mu}|\Psi(x)\rangle \longrightarrow \partial_{\mu}(e^{iq\theta(x)}|\Psi(x)\rangle) = e^{iq\theta(x)} \left( \partial_{\mu}|\Psi(x)\rangle + iq(\partial_{\mu}\theta(x))|\Psi(x)\rangle \right)
 \quad \text{(G.2.2)}
@@ -211,7 +211,7 @@ $$
 Introducing a dynamical connection field $A_\mu(x)$ that transforms appropriately under the gauge transformation provides such a mechanism.
 
 **Definition G.4.1 (Covariant Derivative $D_\mu$).**
-A covariant derivative $D_\mu$ is defined to incorporate the connection $A_\mu$ such that $D_\mu \Psi$ transforms homogeneously (like $\Psi$) under the gauge transformation (Eq. G.2.1). The emergent spacetime is curved (Section 11, Theorem 46), requiring incorporation of the geometric spin connection $\Omega_\mu$ (from Theorem 48) for fields with spin. For scalar fields (simplest case for illustration), $\Omega_\mu$ acts trivially. The covariant derivative is:
+A covariant derivative $D_\mu$ is defined to incorporate the connection $A_\mu$ such that $D_\mu \Psi$ transforms homogeneously (like $\Psi$) under the gauge transformation (Equation G.2.1). The emergent spacetime is curved (Section 11, Theorem 46), requiring incorporation of the geometric spin connection $\Omega_\mu$ (from Theorem 48) for fields with spin. For scalar fields (simplest case for illustration), $\Omega_\mu$ acts trivially. The covariant derivative is:
 $$
 D_{\mu}\Psi(x) = (\partial_{\mu} + \Omega_{\mu} + iqA_{\mu}(x))\Psi(x)
 \quad \text{(G.4.1)}
@@ -322,17 +322,17 @@ The emergence of $U(1)$ gauge theory can be summarized in the following steps, d
 4.  **G.4: Emergent Connection**
     *   **Content:** Introduce $A_\mu, D_\mu$ to ensure homogeneous transformation of derivatives.
     *   **POP / PCE Justification Principle Applied:** Minimal complexity solution for local gauge-invariant comparison, favored by PCE.
-    *   **Result:** Covariant derivative $D_\mu$, connection $A_\mu$ transformation law (Eq. G.4.2).
+    *   **Result:** Covariant derivative $D_\mu$, connection $A_\mu$ transformation law (Equation G.4.2).
 
 5.  **G.5: Field Dynamics**
     *   **Content:** Minimize field energy cost contribution to $V(x)$; form $\propto F^2$ is simplest gauge/Lorentz invariant.
     *   **POP / PCE Justification Principle Applied:** PCE favors simplest, stable dynamics for new field, minimizing unnecessary additions to $V(x)$.
-    *   **Result:** Maxwell action $S_{\text{field}}$ (Eq. G.5.3), source-free equations $\nabla_\mu F^{\mu\nu}=0$.
+    *   **Result:** Maxwell action $S_{\text{field}}$ (Equation G.5.3), source-free equations $\nabla_\mu F^{\mu\nu}=0$.
 
 6.  **G.6: Matter Coupling**
     *   **Content:** Replace $\partial_{\mu} \to D_{\mu}$ in $\mathcal{L}_m$ to maintain gauge invariance for interaction.
     *   **POP / PCE Justification Principle Applied:** PCE favors minimal complexity additions to action, ensures maintained symmetries.
-    *   **Result:** Minimal coupling interaction terms, sourced Maxwell Equations (Eq. G.6.3).
+    *   **Result:** Minimal coupling interaction terms, sourced Maxwell Equations (Equation G.6.3).
 
 The $U(1)$ gauge theory of electromagnetism emerges as the unique, most resource-efficient (PCE-optimal) structure necessitated by the requirement to maintain predictive coherence across the network in the face of the inherent local phase freedom of the emergent complex Hilbert space description.
 
@@ -342,7 +342,7 @@ The $U(1)$ gauge theory of electromagnetism emerges as the unique, most resource
 
 This section extends the logic of the Principle of Compression Efficiency (PCE, Definition 15) to argue for the emergence of the Standard Model (SM) gauge group, $G_{SM} = SU(3)\times SU(2)\times U(1)$ with its chiral fermion content, and the D=4 dimensionality of spacetime as a *unified, co-selected optimal structure*. Building upon the established emergence of a complex Hilbert space (Theorem G.1.8) and a $U(1)$ gauge symmetry (Section G.7) from POP/PCE, we argue that PCE, when applied to the selection of more complex non‑Abelian gauge structures and the dimensional arena for their operation, strongly favors the observed D=4 SM configuration.
 
-The hypothesis is that neither the SM structure nor D=4 dimensionality are arbitrary empirical inputs but are necessary and robust consequences of the MPU network minimizing a global PCE potential. This potential, $V_{global}(G, {\psi}, D, \dots)$, is minimized over a vast configuration space where the gauge group $G$, its fermion content ${\psi}$, and the effective spacetime dimension $D$ are treated as co‑optimized variables. D=4 with the SM emerges as a unique “PCE sweet spot” because it simultaneously satisfies multiple, stringent, and dimension‑dependent criteria essential for a predictively viable, informationally efficient, and structurally complex universe (quantitatively reflected by the coefficients in Eq. G.8.5).
+The hypothesis is that neither the SM structure nor D=4 dimensionality are arbitrary empirical inputs but are necessary and robust consequences of the MPU network minimizing a global PCE potential. This potential, $V_{global}(G, {\psi}, D, \dots)$, is minimized over a vast configuration space where the gauge group $G$, its fermion content ${\psi}$, and the effective spacetime dimension $D$ are treated as co‑optimized variables. D=4 with the SM emerges as a unique “PCE sweet spot” because it simultaneously satisfies multiple, stringent, and dimension‑dependent criteria essential for a predictively viable, informationally efficient, and structurally complex universe (quantitatively reflected by the coefficients in Equation G.8.5).
 
 We construct a physically motivated model for the PCE potential’s dependence on these properties and show that minimizing this potential, subject to fundamental constraints (MPU network information capacity, mathematical consistency via anomaly cancellation, and structural stability), strongly favors the D=4 SM configuration over conceivable alternatives.
 
@@ -397,14 +397,14 @@ The existence of stable, complex, bound MPU aggregates ($C_{agg}\gg C_{op}$) is 
 
 *   For unscreened massless force carriers (like those associated with $U(1)$ gauge fields or gravity), the classical potential in D‑dimensional spacetime scales as $1/r^{D-3}$ for $D>3$ and $\ln r$ for $D=3$ (corresponding to $D_{\text{space}}=D-1$ spatial dimensions). Stable, closed, non‑circular orbits under attractive central forces are robustly supported for an inverse‑square force law ($F\propto 1/r^2$, potential $\propto 1/r$), corresponding to $D_{\text{space}}=3$, i.e., $D=4$ spacetime dimensions [Bertrand, 1873].
 *   Higher spatial dimensions ($D_{\text{space}}>3$, i.e., $D>4$) tend towards unstable orbits for such potentials, making the formation and persistence of complex, gravitationally or electrodynamically bound MPU aggregates highly problematic. Lower spatial dimensions ($D_{\text{space}}<3$) can be too restrictive for the topological complexity and degrees of freedom needed for rich aggregate structures.
-*   A universe unable to form stable complex structures incurs a catastrophic loss of $V_{benefit}$ (as these structures are the primary engines of advanced prediction) and is thus strongly disfavored by PCE. It is a core hypothesis of this co‑selection argument that PCE robustly translates these D‑sensitive stability issues into highly unfavorable D‑dependent coefficients within the PCE potential model (Eq. G.8.5), for instance, by yielding a significantly lower benefit coefficient $\eta_{ben}(D)$ or imposing high effective penalty terms for dimensions $D\neq 4$ that fail to support such stable complexity.
+*   A universe unable to form stable complex structures incurs a catastrophic loss of $V_{benefit}$ (as these structures are the primary engines of advanced prediction) and is thus strongly disfavored by PCE. It is a core hypothesis of this co‑selection argument that PCE robustly translates these D‑sensitive stability issues into highly unfavorable D‑dependent coefficients within the PCE potential model (Equation G.8.5), for instance, by yielding a significantly lower benefit coefficient $\eta_{ben}(D)$ or imposing high effective penalty terms for dimensions $D\neq 4$ that fail to support such stable complexity.
 
 #### G.8.2.5 Information‑Theoretic and Network Efficiency (D‑Sensitive)
 
 The MPU network’s efficiency under PCE depends on D‑sensitive information‑theoretic properties.
 
 *   **Holographic Efficiency:** The horizon‑entropy area law $S=\mathcal A/(4G)$ holds in the emergent D=4 spacetime. The efficiency of bulk–boundary information encoding (related to how much complexity $C_P$ can be supported within a volume relative to its boundary information capacity) may be optimal in D=4. Other dimensions might lead to less favorable scaling or consistency issues between bulk degrees of freedom and boundary information limits.
-*   **Network Propagation and Coherence ($V_{prop}$):** Costs of information propagation, maintaining coherence, and error correction (achieving $p_{err}^*$ in App. A.0) are D‑sensitive. For instance, the nature of random walks (fundamental to information diffusion and error propagation) changes qualitatively: they are recurrent in $D_{\text{space}}\le 2$ but transient in $D_{\text{space}}\ge 3$. D=4 ($D_{\text{space}}=3$) may offer an optimal trade‑off between network connectivity, path‑length scaling, and the stability of information propagation against noise for achieving robust, large‑scale predictive coherence. It is further hypothesized that PCE favors dimensions where these D‑sensitive network efficiencies (which would contribute to minimizing cost coefficients like $\lambda_c(D)$ or maximizing benefit coefficients like effective $\eta_{ben}(D)$ in Eq. G.8.5) are optimized, with D=4 emerging as a strong candidate under such comprehensive optimization.
+*   **Network Propagation and Coherence ($V_{prop}$):** Costs of information propagation, maintaining coherence, and error correction (achieving $p_{err}^*$ in App. A.0) are D‑sensitive. For instance, the nature of random walks (fundamental to information diffusion and error propagation) changes qualitatively: they are recurrent in $D_{\text{space}}\le 2$ but transient in $D_{\text{space}}\ge 3$. D=4 ($D_{\text{space}}=3$) may offer an optimal trade‑off between network connectivity, path‑length scaling, and the stability of information propagation against noise for achieving robust, large‑scale predictive coherence. It is further hypothesized that PCE favors dimensions where these D‑sensitive network efficiencies (which would contribute to minimizing cost coefficients like $\lambda_c(D)$ or maximizing benefit coefficients like effective $\eta_{ben}(D)$ in Equation G.8.5) are optimized, with D=4 emerging as a strong candidate under such comprehensive optimization.
 
 ### G.8.3 A Model for the PCE Potential of the Gauge Sector (in a given D)
 
@@ -470,17 +470,17 @@ $$
 \tag{G.8.5}
 $$
 
-PCE favors system parameters such that $\eta_{ben}(D)>\lambda_c(D)\alpha_{load}/C_{\max}$, making the coefficient of the linear $n_G$ term negative. This implies that, all else being equal, there is an incentive to increase the number of generators to gain predictive benefit, a trend limited by the capacity $n_{\max}$ (Eq. G.8.0) and the rising quadratic ($n_Gk_G$) and fermion costs.
+PCE favors system parameters such that $\eta_{ben}(D)>\lambda_c(D)\alpha_{load}/C_{\max}$, making the coefficient of the linear $n_G$ term negative. This implies that, all else being equal, there is an incentive to increase the number of generators to gain predictive benefit, a trend limited by the capacity $n_{\max}$ (Equation G.8.0) and the rising quadratic ($n_Gk_G$) and fermion costs.
 
 ### G.8.4 PCE Selection Criteria for Gauge Groups and Dimension
 
 A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 
 1.  **Anomaly Freedom:** $V_{\text{anom}}(G,{\psi},D)=0$.
-2.  **Capacity Constraint:** $n_G\le n_{\max}$ (Eq. G.8.0, where $n_{\max}$ is D‑independent, derived from MPU properties).
+2.  **Capacity Constraint:** $n_G\le n_{\max}$ (Equation G.8.0, where $n_{\max}$ is D‑independent, derived from MPU properties).
 3.  **Structural Stability:** $D$ must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors $D=4$.
 4.  **Information Efficiency:** $D$ should optimize information‑theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor $D=4$.
-5.  **Potential Minimization:** Among all triplets $(G,{\psi},D)$ satisfying (1)–(4), the optimal solution minimizes $V_{net}$ given by Eq. G.8.5.
+5.  **Potential Minimization:** Among all triplets $(G,{\psi},D)$ satisfying (1)–(4), the optimal solution minimizes $V_{net}$ given by Equation G.8.5.
 
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 
@@ -501,7 +501,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
         &[U(1)]^3: &\quad &N_c(2y_q^3+y_{u^c}^3+y_{d^c}^3)+2y_\ell^3+y_{e^c}^3=0.
         \end{alignedat}
         $$
-        Treating $N_c$ as a variable, the anomaly constraints admit the family $y_\ell=-N_c y_q,\ y_{e^c}=2N_c y_q,\ y_{d^c}=(N_c-1)y_q,\ y_{u^c}=-(N_c+1)y_q$. Witten’s global $SU(2)$ anomaly enforces $N_c+1$ even $\Rightarrow N_c$ odd. The SM gauge group dimension is $n_G = (N_c^2-1) + (2^2-1) + 1 = N_c^2+3$. PU’s capacity bound $n_G \le n_{\max}$ (Eq. G.8.0). If we take the central estimate $n_{\max} \approx 12$, then $N_c^2+3 \le 12$, implying $N_c^2\le 9$, so $N_c\le 3$. With $N_c=3$, the PCE cost of the hypercharge configuration, modeled as being proportional to the sum of squared charges, $S \propto \sum_i n_i y_i^2$, is equal for both anomaly‑allowed branches. Choosing the conventional SM branch gives, up to an overall normalization/sign factor, the unique Standard Model hypercharge assignments:
+        Treating $N_c$ as a variable, the anomaly constraints admit the family $y_\ell=-N_c y_q,\ y_{e^c}=2N_c y_q,\ y_{d^c}=(N_c-1)y_q,\ y_{u^c}=-(N_c+1)y_q$. Witten’s global $SU(2)$ anomaly enforces $N_c+1$ even $\Rightarrow N_c$ odd. The SM gauge group dimension is $n_G = (N_c^2-1) + (2^2-1) + 1 = N_c^2+3$. PU’s capacity bound $n_G \le n_{\max}$ (Equation G.8.0). If we take the central estimate $n_{\max} \approx 12$, then $N_c^2+3 \le 12$, implying $N_c^2\le 9$, so $N_c\le 3$. With $N_c=3$, the PCE cost of the hypercharge configuration, modeled as being proportional to the sum of squared charges, $S \propto \sum_i n_i y_i^2$, is equal for both anomaly‑allowed branches. Choosing the conventional SM branch gives, up to an overall normalization/sign factor, the unique Standard Model hypercharge assignments:
         $$
         y_q=\tfrac{1}{6},\quad y_{u^c}=-\tfrac{2}{3},\quad y_{d^c}=\tfrac{1}{3},\quad y_\ell=-\tfrac{1}{2},\quad y_{e^c}=1.
         $$
@@ -536,7 +536,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
     
 ### G.8.6 Emergent Couplings and Masses
 
-The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yukawas are determined by the location and depth of the PCE minimum. Computing these from first principles requires evaluating the D-dependent coefficients in the PCE potential (Eq. G.8.5) from MPU microdynamics. The ratios between these couplings are further constrained by the PCE optimization, a topic explored in **Appendix W**, and a concrete, attractor-matched estimate for the fine-structure constant is provided in **Appendix Z** (with order‑unity matching fixed at the PCE capacity point).
+The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yukawas are determined by the location and depth of the PCE minimum. Computing these from first principles requires evaluating the D-dependent coefficients in the PCE potential (Equation G.8.5) from MPU microdynamics. The ratios between these couplings are further constrained by the PCE optimization, a topic explored in **Appendix W**, and a concrete, attractor-matched estimate for the fine-structure constant is provided in **Appendix Z** (with order‑unity matching fixed at the PCE capacity point).
 
 
 ## G.9 A Proposed Pathway Toward Deriving the Fine‑Structure Constant $\alpha_{\mathrm{em}}$

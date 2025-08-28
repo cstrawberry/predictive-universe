@@ -25,7 +25,7 @@ $$
 F_Q(\rho_0; G) = 2 \sum_{j \neq k} \frac{(p_j - p_k)^2}{p_j + p_k} |G_{jk}|^2
 $$
 
-where $p_j$ are the eigenvalues of $\rho_0$. The sum runs over $j\neq k$ with $p_j+p_k>0$; terms with $p_j=p_k=0$ drop out. From Eq. (Z.1), the eigenvalues are $(1/2, 1/2, 0, 0, 0, 0, 0, 0)$.
+where $p_j$ are the eigenvalues of $\rho_0$. The sum runs over $j\neq k$ with $p_j+p_k>0$; terms with $p_j=p_k=0$ drop out. From Equation (Z.1), the eigenvalues are $(1/2, 1/2, 0, 0, 0, 0, 0, 0)$.
 
 **Proposition Z.1 (QFI mode count and eigenvalue).** For the baseline pointer state $\rho_0\simeq I_a/a \oplus 0_b$ with $a=2$ and $b=d_0-a=6$, the LAN Fisher‑information decomposition yields
 $$
@@ -48,7 +48,7 @@ Thus, the fundamental parameters ($d_0$, $\varepsilon$) uniquely fix the PCE‑A
 
 ## Z.4 The PCE-Attractor and Parameter-Free Calculation of $\alpha_{\mathrm{em}}(\mathrm{MPU})$
 
-As defined in the main text (**Definition 15a**), the **PCE-Attractor** is the canonically selected equilibrium state characterized by maximal efficiency and symmetry. Its defining properties include operation at the alphabet capacity boundary and a flat QFI spectrum. For a flat spectrum, the capacity constraint (Eq. (G.9.3)) becomes an equality:
+As defined in the main text (**Definition 15a**), the **PCE-Attractor** is the canonically selected equilibrium state characterized by maximal efficiency and symmetry. Its defining properties include operation at the alphabet capacity boundary and a flat QFI spectrum. For a flat spectrum, the capacity constraint (Equation (G.9.3)) becomes an equality:
 
 $$
 M \ln(1 + \lambda u^*) = \ln d_0
@@ -99,7 +99,7 @@ This result is a parameter-free prediction derived solely from the framework's f
 
 At the PCE-Attractor, the system operates at the capacity boundary, where the unconstrained minimizer of the PCE potential $\phi(u)$ coincides with the boundary point. This "zero-slack" condition allows us to derive an exact identity linking the cost-benefit ratio $\Gamma_0/A_{\mathrm{PCE}}$ to the alphabet constants.
 
-The equilibrium condition (Eq. (G.9.10)) for a flat spectrum with $\gamma_{\mathrm{eff}}=2$ is $2A_{\mathrm{PCE}} u^\* = \Gamma_0 \frac{M\lambda}{1+\lambda u^*}$. Let $s:=d_0^{1/M}$. At the capacity boundary, $1+\lambda u^*=s$. Eliminating $\lambda$ gives $\lambda=(s-1)/u^\*$. Substituting $\lambda$ into the equilibrium equation yields:
+The equilibrium condition (Equation (G.9.10)) for a flat spectrum with $\gamma_{\mathrm{eff}}=2$ is $2A_{\mathrm{PCE}} u^\* = \Gamma_0 \frac{M\lambda}{1+\lambda u^*}$. Let $s:=d_0^{1/M}$. At the capacity boundary, $1+\lambda u^*=s$. Eliminating $\lambda$ gives $\lambda=(s-1)/u^\*$. Substituting $\lambda$ into the equilibrium equation yields:
 
 $$
 \frac{\Gamma_0}{A_{\mathrm{PCE}}} = \frac{2s\,u^{*2}}{M(s-1)} = \frac{2\, d_0^{1/M}}{M\big(d_0^{1/M}-1\big)}\, u^{*2}.
@@ -142,4 +142,4 @@ This 8.5% correction is a concrete prediction for the combined effect of RG runn
 
 ## Z.7 Conclusion
 
-The PU framework, through the synthesis of its core principles (PPI, PCE) and fundamental constants ($d_0$, $\varepsilon$), provides a complete, parameter-free derivation for the fine-structure constant at the MPU scale, yielding $1/\alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 138.843$. This prediction arises from the unique PCE-Attractor state, where the system's predictive machinery is maximally efficient and robust, and the emergent gauge action takes its canonical form ($\kappa^*=1$). A rigorous Renormalization Group analysis shows that this value must be treated as a high-scale boundary condition, not the low-energy Thomson-limit coupling. This reframes the prediction as an input to a full, non-trivial matching calculation, $\alpha(0)=\mathcal{R}[\alpha_{\mathrm{em}}(\mathrm{MPU})]$, preserving falsifiability while avoiding a naive identification. The derivation also fixes the underlying spectral parameters of the emergent U(1) interaction and provides a sharp, falsifiable identity for the system's core cost-benefit ratio. This result must be interpreted as a bare, predictive-scheme boundary condition, not a direct prediction for the low-energy coupling. The result stands as a powerful demonstration of the framework's internal consistency and its potential to explain the values of fundamental constants from the logic and thermodynamics of prediction.
+The PU framework, through the synthesis of its core principles (PPI, PCE) and fundamental constants ($d_0$, $\varepsilon$), provides a complete, parameter-free derivation for the fine-structure constant at the MPU scale, yielding $1/\alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 138.843$. This prediction arises from the unique PCE-Attractor state, where the system's predictive machinery is maximally efficient and robust, and the emergent gauge action takes its canonical form ($\kappa^*=1$). A rigorous Renormalization Group analysis shows that this value must be treated as a high-scale boundary condition, not the low-energy Thomson-limit coupling. This reframes the prediction as an input to a full, non-trivial matching calculation, $\alpha(0)=\mathcal{R}[\alpha_{\mathrm{em}}(\mathrm{MPU})]$, preserving falsifiability while avoiding a naïve identification. The derivation also fixes the underlying spectral parameters of the emergent U(1) interaction and provides a sharp, falsifiable identity for the system's core cost-benefit ratio. This result must be interpreted as a bare, predictive-scheme boundary condition, not a direct prediction for the low-energy coupling. The result stands as a powerful demonstration of the framework's internal consistency and its potential to explain the values of fundamental constants from the logic and thermodynamics of prediction.

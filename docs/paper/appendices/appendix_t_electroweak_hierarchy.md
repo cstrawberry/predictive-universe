@@ -77,7 +77,7 @@ This increased efficiency is modeled as an enhancement of the performance-effici
 $$
 \kappa_{eff}(\phi) = \kappa_0 + \kappa_1 \phi^2 + O(\phi^4), \quad \text{with } \kappa_1 > 0
 $$
-where $\kappa_0$ is the efficiency in the symmetric state. The benefit term in the PCE potential is $V_{benefit} = \Gamma_0 \cdot PP$. The change in benefit due to order is $\Delta V_{benefit}(\phi) = V_{benefit}(\phi) - V_{benefit}(0)$. Using the Law of Prediction (Eq. 22), and assuming the system operates at a fixed complexity $C$ to predict a target $C_{target}$:
+where $\kappa_0$ is the efficiency in the symmetric state. The benefit term in the PCE potential is $V_{benefit} = \Gamma_0 \cdot PP$. The change in benefit due to order is $\Delta V_{benefit}(\phi) = V_{benefit}(\phi) - V_{benefit}(0)$. Using the Law of Prediction (Equation 22), and assuming the system operates at a fixed complexity $C$ to predict a target $C_{target}$:
 $$
 \Delta V_{benefit}(\phi) = \Gamma_0 \left[ \left(\beta - (\beta-\alpha)e^{-\kappa_{eff}(\phi) \frac{C-C_{op}}{C_{target}}}\right) - \left(\beta - (\beta-\alpha)e^{-\kappa_0 \frac{C-C_{op}}{C_{target}}}\right) \right]
 $$
@@ -88,7 +88,7 @@ For small $\phi$ (and thus small $x = \kappa_1 \phi^2 \frac{C-C_{op}}{C_{target}
 $$
 \Delta V_{benefit}(\phi) \approx \Gamma_0 (\beta-\alpha) e^{-\kappa_0 \frac{C-C_{op}}{C_{target}}} \left[ \kappa_1 \frac{C-C_{op}}{C_{target}} \right] \phi^2
 $$
- This is of the form $\Delta V_{benefit}(\phi) = k_b \phi^2$. To express the positive benefit coefficient $k_b$ in terms of the symmetric-state performance $PP_0$, we use the relations derived from the Law of Prediction (Eq. 22): the performance gap is $(\beta-PP_0) = (\beta-\alpha)e^{-\kappa_0(C-C_{op})/C_{target}}$, and the normalized complexity is $(C-C_{op})/C_{target} = (1/\kappa_0) \ln((\beta-\alpha)/(\beta-PP_0))$. Substituting these into the expression above yields:
+ This is of the form $\Delta V_{benefit}(\phi) = k_b \phi^2$. To express the positive benefit coefficient $k_b$ in terms of the symmetric-state performance $PP_0$, we use the relations derived from the Law of Prediction (Equation 22): the performance gap is $(\beta-PP_0) = (\beta-\alpha)e^{-\kappa_0(C-C_{op})/C_{target}}$, and the normalized complexity is $(C-C_{op})/C_{target} = (1/\kappa_0) \ln((\beta-\alpha)/(\beta-PP_0))$. Substituting these into the expression above yields:
  $$
  k_b = \Gamma_0 (\beta - PP_0) \frac{\kappa_1}{\kappa_0} \ln\left(\frac{\beta-\alpha}{\beta-PP_0}\right).
  \tag{T.1}

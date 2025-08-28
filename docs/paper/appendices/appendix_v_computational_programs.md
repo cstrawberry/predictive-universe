@@ -24,11 +24,11 @@ This appendix provides computational programs for two constants within the Predi
    \boxed{\Lambda L_P^2 \;\simeq\; 8\pi\,A_{\Lambda}\,e^{-S_{\mathrm{inst}}}} \tag{V.2}
    $$
 
-   with $A_{\Lambda}$ an $O(1)$, **dimensionless** prefactor aggregating one‑loop determinants and extensivity (defined in Eq. U.12).
+   with $A_{\Lambda}$ an $O(1)$, **dimensionless** prefactor aggregating one‑loop determinants and extensivity (defined in Equation U.12).
 
-   **Normalization note.** Using the Einstein‑equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$ and $L_P^2=\hbar G/c^3$, the ratio $\Lambda L_P^2$ is dimensionless while the conventional $8\pi$ remains as a pure numerical factor multiplying the semiclassical instanton amplitude. All dimensionful contributions in the one‑loop determinant and finite‑volume counting are normalized by $L_P$, so the aggregated prefactor $A_\Lambda$ is a **dimensionless** $O(1)$ constant (see Eq. U.12). Equivalently, $A_\Lambda \equiv A_{\rm eff}$ as defined in Appendix U (Eq. U.12).
+   **Normalization note.** Using the Einstein‑equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$ and $L_P^2=\hbar G/c^3$, the ratio $\Lambda L_P^2$ is dimensionless while the conventional $8\pi$ remains as a pure numerical factor multiplying the semiclassical instanton amplitude. All dimensionful contributions in the one‑loop determinant and finite‑volume counting are normalized by $L_P$, so the aggregated prefactor $A_\Lambda$ is a **dimensionless** $O(1)$ constant (see Equation U.12). Equivalently, $A_\Lambda \equiv A_{\rm eff}$ as defined in Appendix U (Equation U.12).
 
-3. **Inversion for $\kappa$.** Solving Eq. (V.2) using Eq. (V.1),
+3. **Inversion for $\kappa$.** Solving Equation (V.2) using Equation (V.1),
 
    $$
    \boxed{\kappa \;=\; -\tfrac12\,\ln\!\left(\frac{\Lambda L_P^2}{8\pi A_{\Lambda}}\right)} \tag{V.3}
@@ -66,13 +66,13 @@ The quoted uncertainty is dominated by $H_0$ and $\Omega_{\Lambda}$; the relativ
 
 ### V.1.4 Inversion for $\kappa$ and the Instanton Action
 
-Setting $A_{\Lambda}=1$ in Eq. (V.3),
+Setting $A_{\Lambda}=1$ in Equation (V.3),
 
 $$
 \boxed{\kappa \;=\; -\tfrac12 \ln\!\left(\frac{2.86599\times10^{-122}}{8\pi}\right) \;=\; 141.543\ \pm\ 0.009} \tag{V.6}
 $$
 
-The corresponding action (Eq. (V.1)) is
+The corresponding action (Equation (V.1)) is
 
 $$
 \boxed{S_{\mathrm{inst}}=2\kappa=283.087\ \pm\ 0.017\ \text{nats} \;=\; 408.408\ \pm\ 0.025\ \text{bits}} \tag{V.7}
@@ -106,7 +106,7 @@ $$
 \{\lambda_i\}_{i=1}^{M},\quad \Gamma_0,\ \nu,\quad (r_p,\gamma_p),\quad (K,\gamma,\kappa_F,\beta_{\mathrm{eff}}),\quad \kappa_\mu .
 $$
 
-From these, form the derived cost parameters (Eq. (G.9.7)):
+From these, form the derived cost parameters (Equation (G.9.7)):
 
 $$
 c_\gamma \coloneqq K(\beta_{\mathrm{eff}}\kappa_F)^\gamma,\qquad
@@ -131,7 +131,7 @@ Throughout, **nats are treated as dimensionless**.
 
 ### V.2.2 Interior Equilibrium
 
-Let $u=g_e^2$. The unique interior optimum $u^*>0$ solves (cf. Eq. (G.9.10))
+Let $u=g_e^2$. The unique interior optimum $u^*>0$ solves (cf. Equation (G.9.10))
 
 $$
 \boxed{\ \tilde A_{\mathrm{PCE}}\,\gamma_{\mathrm{eff}}\,(u^*)^{\gamma_{\mathrm{eff}}-1}
@@ -155,7 +155,7 @@ $$
 
 ### V.2.3 Capacity Constraint
 
-The interior solution must satisfy the alphabet cap (Eq. (G.9.3)):
+The interior solution must satisfy the alphabet cap (Equation (G.9.3)):
 
 $$
 \boxed{\ \sum_{i=1}^{M}\ln\!\bigl(1+\lambda_i u^*\bigr)\ \le\ \ln d_0\ =\ \ln 8\ }\tag{V.11}
@@ -244,7 +244,7 @@ When used with Appendix W (which takes $\gamma_{\mathrm{eff}}=2$), choose $\gamm
 4. **Report bare coupling.** The bare, predictive-scheme coupling is $\alpha_{\mathrm{em}}(\mathrm{MPU})=u^*/(4\pi)$, at an operational scale $\mu^*=\kappa_\mu\nu$.
 
 
-5. **Match and run to target scale.** Apply a full matching procedure, including scheme conversion and RG running via Eq. (V.15), to relate $\alpha_{\mathrm{em}}(\mathrm{MPU})$ to the physical coupling $\alpha_{\mathrm{em}}(\mu_{\mathrm{target}})$.
+5. **Match and run to target scale.** Apply a full matching procedure, including scheme conversion and RG running via Equation (V.15), to relate $\alpha_{\mathrm{em}}(\mathrm{MPU})$ to the physical coupling $\alpha_{\mathrm{em}}(\mu_{\mathrm{target}})$.
 
 ### V.2.7 Sensitivity (local)
 
@@ -255,7 +255,7 @@ $$
 \frac{\partial u^*}{\partial \tilde A_{\mathrm{PCE}}}\ \approx\ -\,\frac{S_1}{2\tilde A_{\mathrm{PCE}}^{\,2}},
 $$
 
-so increasing spectral weight $\lambda_i$ increases $u^*$ linearly, while increasing the relative cost $\tilde A_{\mathrm{PCE}}$ decreases $u^*$ inversely. *(For general $\gamma_{\mathrm{eff}}>1$, differentiate Eq. (V.8) implicitly to obtain sensitivities; the Jacobian is strictly positive/finite.)*
+so increasing spectral weight $\lambda_i$ increases $u^*$ linearly, while increasing the relative cost $\tilde A_{\mathrm{PCE}}$ decreases $u^*$ inversely. *(For general $\gamma_{\mathrm{eff}}>1$, differentiate Equation (V.8) implicitly to obtain sensitivities; the Jacobian is strictly positive/finite.)*
 
 ### V.2.8 Output
 

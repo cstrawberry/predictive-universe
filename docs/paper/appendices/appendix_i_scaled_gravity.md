@@ -99,7 +99,7 @@ The PU framework provides two distinct mechanisms to augment gravity: adapting l
 
 **I.7.1 Galactic Scales: Law Modification as the Low-Cost Solution**
 
-In the moderate potential wells of galaxies, the required gravitational enhancement is small. Here, PCE selects the most efficient mechanism: a local adaptation of MPU network parameters. This "parameter relaxation" (Section I.5) manifests as a scale-dependent Newton constant, `G(R)` (Eq. I.4). This is the low-cost solution, as it represents a passive relaxation of the substrate and the required asymptotic enhancement `A_G` is small enough to remain consistent with global cosmological constraints. In the weak-field limit, this is formally equivalent to an effective dark matter density that tracks the baryonic distribution:
+In the moderate potential wells of galaxies, the required gravitational enhancement is small. Here, PCE selects the most efficient mechanism: a local adaptation of MPU network parameters. This "parameter relaxation" (Section I.5) manifests as a scale-dependent Newton constant, `G(R)` (Equation I.4). This is the low-cost solution, as it represents a passive relaxation of the substrate and the required asymptotic enhancement `A_G` is small enough to remain consistent with global cosmological constraints. In the weak-field limit, this is formally equivalent to an effective dark matter density that tracks the baryonic distribution:
 
 $$
 \nabla^2\Phi \simeq 4\pi G_0 \left[ \rho_b(R) + \rho_{\mathrm{DM,eff}}(R) \right], \quad \text{where} \quad \rho_{\mathrm{DM,eff}}(R) = \left[ \frac{G(R)}{G_0} - 1 \right] \rho_b(R).
@@ -202,7 +202,7 @@ The adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $
 **I.15 Conclusion**
 
 The PU framework proposes a multi-scale solution to the phenomena attributed to dark matter, driven by the Principle of Compression Efficiency.
-1.  **At galaxy scales,** a PCE-driven parameter relaxation mechanism causes the emergent Newton constant to increase with scale ($G(R)$, Eq. I.4), providing a physically motivated framework that naturally explains galaxy rotation curves and baryonic scaling relations while respecting local tests of GR, **as an environment‑dependent relaxation** that leaves the CMB‑era effective $G$ unchanged.
+1.  **At galaxy scales,** a PCE-driven parameter relaxation mechanism causes the emergent Newton constant to increase with scale ($G(R)$, Equation I.4), providing a physically motivated framework that naturally explains galaxy rotation curves and baryonic scaling relations while respecting local tests of GR, **as an environment‑dependent relaxation** that leaves the CMB‑era effective $G$ unchanged.
 2.  **At cluster scales**, where a running $G(R)$ is cosmologically constrained, the mass discrepancy is modeled by a **non‑local predictive‑matter response**. A linear, single‑scale kernel is sufficient for **stacked profiles**, while **high‑concentration outliers** (e.g., A1689) demand either a **mild nonlinearity $q>0$** or a **multi‑scale kernel**. All options remain **CMB‑safe** with $A_G\simeq 0$ and are quantitatively testable against lensing data.
 
 This composite model provides a coherent, physically-grounded explanation for dark matter phenomenology across different astrophysical scales and yields a rich set of falsifiable predictions.

@@ -58,7 +58,7 @@ $$
 
 **Definition (Predictive Error PE).** Let $\hat{y}(t)$ denote the system’s predictive object (a point prediction or a predictive distribution) and $y(t)$ the realized outcome. Fix a proper scoring rule $S(\cdot,·)$ (e.g., Brier score or log‑loss). Define $PE(t) = S(\hat{y}(t), y(t)) \ge 0$. When $S$ is log‑loss, PE has units of nats (base e) or bits (base 2); otherwise PE is made dimensionless by a specified normalization protocol.
 
-**Definition (Scale k_PP).** The constant $k_{PP} > 0$ rescales PE in Eq. (8) so that a designated operating point $PE_*$ maps to a specified $PP_* \in (0, 1)$, typically chosen within the viability band $(\alpha, \beta)$ defined below. Concretely, $k_{PP} = (1/PP_* - 1)/PE_*$. When PE carries units (nats/bits), $k_{PP}$ has the corresponding reciprocal units so that $k_{PP} PE$ is dimensionless; if PE is dimensionless, so is $k_{PP}$.
+**Definition (Scale k_PP).** The constant $k_{PP} > 0$ rescales PE in Equation (8) so that a designated operating point $PE_*$ maps to a specified $PP_* \in (0, 1)$, typically chosen within the viability band $(\alpha, \beta)$ defined below. Concretely, $k_{PP} = (1/PP_* - 1)/PE_*$. When PE carries units (nats/bits), $k_{PP}$ has the corresponding reciprocal units so that $k_{PP} PE$ is dimensionless; if PE is dimensionless, so is $k_{PP}$.
 
 This definition ensures $PP(t) \in (0, 1]$, with $PP = 1$ corresponding to perfect prediction ($PE = 0$) and $PP \to 0$ as $PE \to \infty$. Higher PP corresponds to higher predictive quality $Q$. The specific choice of $k_{PP}$ anchors PP to the task’s typical error scale and does not alter the ordering of predictive quality across models or time.
 
@@ -82,7 +82,7 @@ For the adaptive predictive cycle (Definition 4), operating under RID constraint
    $$
    PP(t) \le 1/(1 + k_{PP} \varepsilon_E) =: \beta < 1.
    $$
-3. **Resource Efficiency:** Approaching the operational ceiling incurs rapidly increasing complexity costs. As derived later (Theorem 19; see Eq. (23)), the complexity required to sustain a given PP grows as
+3. **Resource Efficiency:** Approaching the operational ceiling incurs rapidly increasing complexity costs. As derived later (Theorem 19; see Equation (23)), the complexity required to sustain a given PP grows as
    $$
    C(PP, \hat{C}_{target}) = C_{op} + \frac{\hat{C}_{target}}{\kappa_{eff}} \ln\!\Bigl(\frac{\beta - \alpha}{\beta - PP}\Bigr),
    $$

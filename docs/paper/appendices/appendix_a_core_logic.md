@@ -170,7 +170,7 @@ PCE drives the system to minimize the total potential related to errors, balanci
 
 The minimization of the error potential $V_{tot}$ is part of the global optimization of the full PCE potential $V(x)$.
 
-*   **Theorem A.0.6 (Convergence to Reliable Equilibrium):** Let $p_{\mathrm{err}}(x)$ denote the effective logical gate error rate achievable in network configuration $x$. The total error potential $V_{\mathrm{tot}}(p_{\mathrm{err}}(x))$ (Def A.0.5) represents the component of the global PCE potential $V(x)$ (Def D.1) related to computational reliability costs and error penalties. The stochastic adaptation dynamics governing the evolution of the network configuration $x(t)$ are given by Eq. (D.8), seeking to minimize $V(x)$. By Theorem D.5 (Global Convergence), under standard assumptions (A1-A6 in Appendix D), the trajectory $x(t)$ converges almost surely to the set $\mathcal{E}_{*}^{\text{global}}$ of global minima of $V(x)$ as $t \to \infty$. Since minimizing $V(x)$ requires minimizing all its constituent positive cost/penalty components, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ must necessarily minimize $V_{\mathrm{tot}}(p_{\mathrm{err}}(x))$. By Theorem A.0.5, the minimum of $V_{tot}$ occurs uniquely at $p_{\mathrm{err}} = p_{\mathrm{err}}^*$. Therefore, any stable equilibrium configuration $x^*$ achieved by the POP/PCE dynamics will exhibit the optimal effective error rate: $p_{\mathrm{err}}(x^*) = p_{\mathrm{err}}^*$. QED
+*   **Theorem A.0.6 (Convergence to Reliable Equilibrium):** Let $p_{\mathrm{err}}(x)$ denote the effective logical gate error rate achievable in network configuration $x$. The total error potential $V_{\mathrm{tot}}(p_{\mathrm{err}}(x))$ (Def A.0.5) represents the component of the global PCE potential $V(x)$ (Def D.1) related to computational reliability costs and error penalties. The stochastic adaptation dynamics governing the evolution of the network configuration $x(t)$ are given by Equation (D.8), seeking to minimize $V(x)$. By Theorem D.5 (Global Convergence), under standard assumptions (A1-A6 in Appendix D), the trajectory $x(t)$ converges almost surely to the set $\mathcal{E}_{*}^{\text{global}}$ of global minima of $V(x)$ as $t \to \infty$. Since minimizing $V(x)$ requires minimizing all its constituent positive cost/penalty components, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ must necessarily minimize $V_{\mathrm{tot}}(p_{\mathrm{err}}(x))$. By Theorem A.0.5, the minimum of $V_{tot}$ occurs uniquely at $p_{\mathrm{err}} = p_{\mathrm{err}}^*$. Therefore, any stable equilibrium configuration $x^*$ achieved by the POP/PCE dynamics will exhibit the optimal effective error rate: $p_{\mathrm{err}}(x^*) = p_{\mathrm{err}}^*$. QED
 
 **6. Conclusion of Proof for Theorem A.0.2**
 
@@ -210,7 +210,7 @@ Let $\mathcal{M}$ be a class of predictive models implementable within the PU fr
     \quad (\text{A.1})
     $$
     where $\text{NOT}(0)=1$ and $\text{NOT}(1)=0$.
-If $P_f$ were perfect for $S_{diag}$, its prediction must equal the actual outcome: $\hat{\phi}_{P_f} = \phi_{t+1}$. Substituting the system's rule (Eq. A.1) gives:
+If $P_f$ were perfect for $S_{diag}$, its prediction must equal the actual outcome: $\hat{\phi}_{P_f} = \phi_{t+1}$. Substituting the system's rule (Equation A.1) gives:
 $$
 \hat{\phi}_{P_f} = \text{NOT}(\hat{\phi}_{P_f})
 $$
@@ -245,31 +245,31 @@ Let $\mathcal{M}$ be a class of predictive models implementable within the PU fr
     P_{actual}(\phi_{t+1}=1) = \begin{cases} 0, & \text{if } p > 0.5 \\ 1, & \text{if } p \le 0.5 \end{cases}
     \quad (\text{A.3})
     $$
-If $P_f$ were perfect for $S'_{diag}$, its predicted probability $p$ must equal the actual probability determined by the rule (Eq. A.3): $p = P_{actual}(\phi_{t+1}=1)$.
+If $P_f$ were perfect for $S'_{diag}$, its predicted probability $p$ must equal the actual probability determined by the rule (Equation A.3): $p = P_{actual}(\phi_{t+1}=1)$.
 *   Case 1: Assume $P_f$ predicts $p > 0.5$. The rule dictates $P_{actual}(\phi_{t+1}=1) = 0$. Perfection requires $p=0$. This contradicts the initial assumption $p > 0.5$.
 *   Case 2: Assume $P_f$ predicts $p \le 0.5$. The rule dictates $P_{actual}(\phi_{t+1}=1) = 1$. Perfection requires $p=1$. This contradicts the initial assumption $p \le 0.5$.
 In both cases, the assumption of a perfect probabilistic predictor $P_f$ leads to a contradiction. Since $S'_{diag}$ is constructible and reliably executable within $\mathcal{M}$ due to Effective Operational Property R, no such universal perfect probabilistic predictor $P_f$ can exist within $\mathcal{M}$. QED
 
 ### A.1.5 Theorem A.1.4 (Noise Robustness - Probabilistic SPAP)
 
-Let the conditions of Theorem A.1.3 hold. Consider a system $S'_{noisy}$ implementable within $\mathcal{M}$ that *attempts* to set its actual outcome probability $P_{actual}(p_t)$ according to the rule (Eq. A.3), based on an external probabilistic predictor $P_f$'s output $p_t = P_f(\phi=1 | \text{state}_t)$. However, due to operational noise, the *true* probability realized by the system $P_{true}(p_t)$ differs from the intended $P_{actual}(p_t)$ via a noisy channel, e.g., $P_{true}(p_t) = (1-p_{noise})P_{actual}(p_t) + p_{noise}(1-P_{actual}(p_t))$ for some constant noise level $0 \le p_{noise} < 1/2$. No probabilistic predictor $P_f$ can guarantee that its output $p_t$ perfectly matches the true probability $P_{true}(p_t)$ for all cycles $t$.
+Let the conditions of Theorem A.1.3 hold. Consider a system $S'_{noisy}$ implementable within $\mathcal{M}$ that *attempts* to set its actual outcome probability $P_{actual}(p_t)$ according to the rule (Equation A.3), based on an external probabilistic predictor $P_f$'s output $p_t = P_f(\phi=1 | \text{state}_t)$. However, due to operational noise, the *true* probability realized by the system $P_{true}(p_t)$ differs from the intended $P_{actual}(p_t)$ via a noisy channel, e.g., $P_{true}(p_t) = (1-p_{noise})P_{actual}(p_t) + p_{noise}(1-P_{actual}(p_t))$ for some constant noise level $0 \le p_{noise} < 1/2$. No probabilistic predictor $P_f$ can guarantee that its output $p_t$ perfectly matches the true probability $P_{true}(p_t)$ for all cycles $t$.
 
 *Proof:* Perfect matching requires the condition $p_t = P_{true}(p_t)$ to hold. Substituting the noise model gives:
 $$
 p_t = (1-p_{noise})P_{actual}(p_t) + p_{noise}(1-P_{actual}(p_t)) \quad (\text{A.4})
 $$
-Now consider the rule (Eq. A.3) for $P_{actual}(p_t)$:
-*   Case 1: Assume the predictor outputs $p_t > 0.5$. The system rule sets $P_{actual}(p_t) = 0$. Substituting into Eq. A.4 yields $p_t = (1-p_{noise})(0) + p_{noise}(1-0) = p_{noise}$. For perfect matching, we would need $p_t = p_{noise}$. However, this contradicts the initial assumption $p_t > 0.5$ because $p_{noise}$ is assumed to be less than $1/2$.
-*   Case 2: Assume the predictor outputs $p_t \le 0.5$. The system rule sets $P_{actual}(p_t) = 1$. Substituting into Eq. A.4 yields $p_t = (1-p_{noise})(1) + p_{noise}(1-1) = 1-p_{noise}$. For perfect matching, we would need $p_t = 1-p_{noise}$. However, this contradicts the initial assumption $p_t \le 0.5$ because $p_{noise} < 1/2$ implies $1-p_{noise} > 0.5$.
+Now consider the rule (Equation A.3) for $P_{actual}(p_t)$:
+*   Case 1: Assume the predictor outputs $p_t > 0.5$. The system rule sets $P_{actual}(p_t) = 0$. Substituting into Equation A.4 yields $p_t = (1-p_{noise})(0) + p_{noise}(1-0) = p_{noise}$. For perfect matching, we would need $p_t = p_{noise}$. However, this contradicts the initial assumption $p_t > 0.5$ because $p_{noise}$ is assumed to be less than $1/2$.
+*   Case 2: Assume the predictor outputs $p_t \le 0.5$. The system rule sets $P_{actual}(p_t) = 1$. Substituting into Equation A.4 yields $p_t = (1-p_{noise})(1) + p_{noise}(1-1) = 1-p_{noise}$. For perfect matching, we would need $p_t = 1-p_{noise}$. However, this contradicts the initial assumption $p_t \le 0.5$ because $p_{noise} < 1/2$ implies $1-p_{noise} > 0.5$.
 
 Since neither case allows the condition $p_t = P_{true}(p_t)$ to be satisfied for any $p_t \in [0, 1]$ when $0 \le p_{noise} < 1/2$, perfect matching between the predicted probability and the true probability is impossible in any single cycle. Consequently, the probability of perfect matching over $k$ cycles is zero for $k \ge 1$. No probabilistic predictor can reliably match the true outcome distribution generated by such a noisy, self-referentially defined system. QED
 
 ### A.1.6 Theorem A.1.5 (Existence of Dynamic Self-Reference Operators - DSRO = Definition 11 Justified)
 
-Within a sufficiently rich formal system $\mathcal{F}$ capable of representing computation (like Peano Arithmetic or equivalent systems realizable via Effective Operational Property R), for any total computable function $G$ and any set of computable functions representing bounded proof searches $\text{ProofSearch}_{\le g_i(n)}$ for formulas $\phi_i$ that may contain a free variable representing a Gödel index, there exists a total computable function $f$ whose Gödel index $e = \ulcorner f \urcorner$ satisfies the fixed-point equation (structural form identical to Eq. 9):
+Within a sufficiently rich formal system $\mathcal{F}$ capable of representing computation (like Peano Arithmetic or equivalent systems realizable via Effective Operational Property R), for any total computable function $G$ and any set of computable functions representing bounded proof searches $\text{ProofSearch}_{\le g_i(n)}$ for formulas $\phi_i$ that may contain a free variable representing a Gödel index, there exists a total computable function $f$ whose Gödel index $e = \ulcorner f \urcorner$ satisfies the fixed-point equation (structural form identical to Equation 9):
 $$
 f(n) = G(n, \dots, \text{ProofSearch}_{\le g_i(n)}[\phi_i(\dots, e, \dots)], \dots)
-\quad (\text{Appendix A.1.6, Theorem A.1.5; cf.\ main-text Eq.~(9)})
+\quad (\text{Appendix A.1.6, Theorem A.1.5; cf.\ main-text Equation~(9)})
 $$
  This existence is guaranteed by Kleene's Second Recursion Theorem, a fundamental result in computability theory.
 
@@ -372,7 +372,7 @@ Here, $\beta$ is the Gödel code of $f$ itself. The first case is prioritized. B
 Assume Con(PA) and that $g, H_1, H_2$ are total computable functions. Then the LITE function $f$ defined by Equation (A.4.1) via the Recursion Theorem exists, is total, and is computable.
 
 *Proof Outline:*
-1.  **The Operator $\Psi$ is Total Computable:** The operator $\Psi(\alpha, n)$ which implements the case distinction in Eq. (A.4.1) involves:
+1.  **The Operator $\Psi$ is Total Computable:** The operator $\Psi(\alpha, n)$ which implements the case distinction in Equation (A.4.1) involves:
     a.  Computing $g(n), H_1(n), H_2(n)$ (computable).
     b.  Constructing $⌈ϕ_{\alpha}(n)⌉$ and $⌈¬ϕ_{\alpha}(n)⌉$ (computable using $Sub$).
     c.  Evaluating $Prf_{\le g(n)}(⌈ϕ_{\alpha}(n)⌉)$ and $Prf_{\le g(n)}(⌈¬ϕ_{\alpha}(n)⌉)$ (decidable finite searches).
@@ -395,13 +395,13 @@ The LITE function $f$, constructed entirely within PA, explicitly demonstrates t
     *   The Recursion Theorem ensures this self-referential simulation/reasoning is consistent: $f$ can incorporate reasoning about its own (potential) behavior into its definition.
 
 3.  **Evaluate Predicates (Concerning Own Behavior):**
-    *   The LITE function's definition (Eq. A.4.1) is a conditional branching structure based on the truth values of the predicates $B_1 \equiv Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉)$ and $B_2 \equiv Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉)$.
+    *   The LITE function's definition (Equation A.4.1) is a conditional branching structure based on the truth values of the predicates $B_1 \equiv Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉)$ and $B_2 \equiv Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉)$.
     *   These predicates concern properties (specifically, bounded provability) of the formula $ϕ_{\beta}(n)$, which itself is a statement about $f$'s behavior.
     *   The function $f$ *evaluates* these predicates and *adapts* its output ($n+H_1(n)$, $n+H_2(n)$, or $n+1$) based on the evaluation. This directly matches Property R's requirement for evaluating predicates about model behavior to guide subsequent processing.
 
 **A.4.4 Dynamic Self-Reference and DSRO Analogy**
 
-The LITE function's structure (Eq. A.4.1) provides a concrete arithmetical realization of a Dynamic Self-Reference Operator (DSRO, Definition 11). The output $f(n)$ depends on the outcome of a bounded proof search (a computable process) for formulas $\phi_{\beta}(n)$ that refer to the function's own index $\beta$. This iterative process, where $f(n)$'s value is determined at step $n$ based on provability checks and can influence future checks, embodies the dynamic, adaptive self-reference that DSROs formalize.
+The LITE function's structure (Equation A.4.1) provides a concrete arithmetical realization of a Dynamic Self-Reference Operator (DSRO, Definition 11). The output $f(n)$ depends on the outcome of a bounded proof search (a computable process) for formulas $\phi_{\beta}(n)$ that refer to the function's own index $\beta$. This iterative process, where $f(n)$'s value is determined at step $n$ based on provability checks and can influence future checks, embodies the dynamic, adaptive self-reference that DSROs formalize.
 
 **A.4.5 Conclusion: LITE and the Plausibility of Property R for MPUs**
 

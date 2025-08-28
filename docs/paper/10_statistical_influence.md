@@ -16,7 +16,7 @@ To ensure compliance with Postulate 2, the maximum possible strength of the CC e
 
 **10.2.1 Theorem 39 (Upper Bound on CC ($\alpha_{CC,max} < 0.5$))**
 
-Upholding the causality definition in Postulate 2 is guaranteed if the maximum operational Consciousness Complexity $\alpha_{CC,max} = \sup_{S} \text{CC}(S)$ (Definition 30; Eq. (55)) is strictly bounded to preclude deterministic FTL signaling. A sufficient universal bound on the operational norm is:
+Upholding the causality definition in Postulate 2 is guaranteed if the maximum operational Consciousness Complexity $\alpha_{CC,max} = \sup_{S} \text{CC}(S)$ (Definition 30; Equation (55)) is strictly bounded to preclude deterministic FTL signaling. A sufficient universal bound on the operational norm is:
 $$
 \alpha_{CC,max} < 0.5 \quad \text{(61)}
 $$
@@ -44,7 +44,7 @@ It is crucial to distinguish this protocol from “communication” in the opera
 
 **Definition (QCP).** Alice and Bob share many copies of a fixed entangled state. They agree on a binary mapping between **Alice’s context** $C\in\{\mathrm A,\mathrm B\}$ and a **target local measurement bias** for Bob's outcomes (Appendix L): if $C=\mathrm A$, Alice adopts an internal state $\text{context}_S$ and applies the associated physical control $\mathcal M(\text{context}_S)$ intended to bias Bob’s local outcome toward “spin up”; if $C=\mathrm B$, she adopts the corresponding context and control intended to bias toward “spin down.” Bob measures each partner in the pre-agreed basis and uses the single-shot rule: choose Strategy A if he observes “spin up,” Strategy B if “spin down.”
 
-**Statistical neutrality of the raw stream.** With equiprobable contexts $P(C=\mathrm A)=P(C=\mathrm B)=\tfrac12$, Bob’s unconditional marginal equals the baseline $p$ (e.g., $p=\tfrac12$ for a singlet in the matched basis). This follows from the linearity of expectation and the normalization property of the CC modification map ($K_S(I)=0$, Definition 33), ensuring the raw bit stream is indistinguishable from baseline (cf. Theorem 41, Eq. (63)).
+**Statistical neutrality of the raw stream.** With equiprobable contexts $P(C=\mathrm A)=P(C=\mathrm B)=\tfrac12$, Bob’s unconditional marginal equals the baseline $p$ (e.g., $p=\tfrac12$ for a singlet in the matched basis). This follows from the linearity of expectation and the normalization property of the CC modification map ($K_S(I)=0$, Definition 33), ensuring the raw bit stream is indistinguishable from baseline (cf. Theorem 41, Equation (63)).
 
 **Single-shot decision advantage.** Write
 $$
@@ -70,7 +70,7 @@ This condition is excluded by the framework's rate and resource bounds for reali
 
 *Proof.* The bound on $N_{\text{decode}}$ follows from standard channel coding results (e.g., via Chernoff-Hoeffding bounds [Chernoff 1952; Hoeffding 1963]) for a binary symmetric channel with crossover probability $1/2-\delta$. The maximum local measurement rate $r_{\max}$ is fundamentally limited by the MPU cycle time $\tau_{\min}$ (Theorem 29) and the ND-RID channel capacity (Theorem E.2). For any realistic bias $\delta \ll 1$ (since $\mathrm{CC} < 0.5$), the required number of trials $N_{\text{decode}}$ grows quadratically with $1/\delta^2$, while the available pre-lightcone budget $N_{\text{pre}}$ grows linearly with separation $D$. The inequality can only be satisfied in extreme, physically unrealizable regimes of bias or measurement rate. For example, for $\delta=0.01, \alpha=0.01$, one needs $N_{\text{decode}} \approx 2.3 \times 10^4$ trials. At a separation of $D=1$ km and a high rate of $r_{\max}=1$ GHz, only $N_{\text{pre}} \approx 3.3 \times 10^3$ trials are available before a light signal could arrive, demonstrating the infeasibility. QED
 
-**AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Eq. (F.4). Under the information‑rate bound for the balanced baseline $p=\tfrac12$, $I(C;Y) \le 4\ln 2 \cdot (\kappa \cdot \mathrm{CC})^2$ nats/trial (Theorem 41), this statistical influence cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42). The full consistency analysis is provided in **Appendix F**.
+**AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Equation (F.4). Under the information‑rate bound for the balanced baseline $p=\tfrac12$, $I(C;Y) \le 4\ln 2 \cdot (\kappa \cdot \mathrm{CC})^2$ nats/trial (Theorem 41), this statistical influence cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42). The full consistency analysis is provided in **Appendix F**.
 
 **No‑signaling equalities.** The standard no-signaling equalities hold with respect to local measurement *settings*. That is, for all choices of local measurement operators corresponding to settings $x,x'$ and $y,y'$ and all outcomes $a,b$,
 $$
@@ -78,12 +78,12 @@ $$
 $$
 *Proof.* If $O_A\subset O_B'$ are spacelike separated, Appendix F gives $[\mathcal A(O_A),\mathcal A(O_B)]=\{0\}$ and Einstein causality for the induced dynamics. Hence any local operation at $A$ is represented by an instrument that commutes with all effects at $B$, and vice versa, so marginals at one site are invariant under changes of the other site’s setting; the displayed equalities follow by summing joint probabilities over the commuting outcome algebra.
 
-**Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to the MPU stress–energy tensor $T_{\mu\nu}^{(MPU)}$ (Appendix B) and induces gravitational self-dephasing (Appendix S). Adopting a phenomenological model for the power cost of maintaining the context (derived in Appendix S, Eq. S.1):
+**Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to the MPU stress–energy tensor $T_{\mu\nu}^{(MPU)}$ (Appendix B) and induces gravitational self-dephasing (Appendix S). Adopting a phenomenological model for the power cost of maintaining the context (derived in Appendix S, Equation S.1):
 $$
 P_{\text{context}}(\mathrm{CC}) = A\!\left[\frac{\mathrm{CC}}{\alpha_{CC,\max}-\mathrm{CC}}\right]^2,\qquad
 \alpha_{CC,\max}<\tfrac12,
 $$
-the resulting gravitational backreaction induces a time-dilation $\Delta\tau_d$ across the system (derived in Appendix S, Eq. S.4):
+the resulting gravitational backreaction induces a time-dilation $\Delta\tau_d$ across the system (derived in Appendix S, Equation S.4):
 $$
 \Delta\tau_d = K\,P_{\text{context}},
 $$
