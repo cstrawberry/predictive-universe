@@ -87,40 +87,52 @@ Assume the electroweak sector is in a locally thermal but *driven* (KMS‑orient
 Both are purely **topological/anomalous** and require only the already‑derived PU structures.
 
 
-### Y.5. Quantitative Pathway for Baryogenesis
+### Y.5. Quantitative Pathway for Baryogenesis from Predictive Holonomy
 
-The baryon-to-entropy ratio $\eta_B\equiv n_B/s$ is generated during a non-equilibrium epoch in the early universe. The PU framework provides the necessary ingredients (the Sakharov conditions, as per Appendix Y) and allows for a quantitative calculation. The net baryon number produced is proportional to the total change in the Chern-Simons number, $\Delta N_{CS}$, integrated over the relevant epoch. The rate of change of $\langle N_{CS} \rangle$ is proportional to the expectation value of the CP-violating operator $W\tilde{W}$, which is non-zero in a driven, out-of-equilibrium thermal state with fundamental CP violation.
-$$
-\frac{d \langle N_{CS} \rangle}{dt} \propto \Gamma_{\mathrm{CS}}(T) \cdot \delta_{CP} \cdot f_{NEQ}(T)
-$$
-where $\Gamma_{\mathrm{CS}}(T)$ is the sphaleron rate, $\delta_{CP}$ is the fundamental CP-violating parameter from the PU predictive-frame bundle, and $f_{NEQ}(T)$ is a factor quantifying the departure from thermal equilibrium, proportional to $H(T)/T$. Integrating this rate yields the final asymmetry:
-$$
-\boxed{\,\eta_B^{\mathrm{final}}\;=\;\frac{N_g}{\mathcal C}\int_{T_{\mathrm{fo}}}^{T_i}
-\frac{\Gamma_{\mathrm{CS}}(T)\;\delta_{CP}\;(H(T)/T)\;W(T)}
-{g_\ast^{3/2}(T)\;\sqrt{G_H(T)}\;T^6}\;dT\, },\qquad N_g=3,
-$$
-with:
-*   $s(T)=\tfrac{2\pi^2}{45}\,g_\ast(T)\,T^3$, $H(T)=\sqrt{\tfrac{8\pi^3}{90}\,G_H(T)\,g_\ast(T)}\,T^2$.
-*   $\Gamma_{\mathrm{CS}}(T)$ is the standard sphaleron transition rate.
-*   $\delta_{CP}$ is the key PU input: a dimensionless, in‑principle computable measure of CP violation from the complex holonomies of the predictive‑frame bundle.
-*   $W(T)\in[0,1]$ is a washout factor.
-*   $T_{\mathrm{fo}}$ is the freeze‑out temperature where $\Gamma_{\mathrm{CS}}(T_{\mathrm{fo}})\!\approx\!H(T_{\mathrm{fo}})$.
-*   $\mathcal C$ is a standard normalization constant.
+This section provides a computable pipeline to derive the baryon asymmetry $\eta_B$ from the geometric invariants of the PU predictive bundle.
 
-**Benchmark estimate.** Taking $g_\ast\!=\!106.75$ for the SM plasma [Husdal 2016], $T_{\mathrm{fo}}\approx 130\,\mathrm{GeV}$ [D’Onofrio et al. 2014], and standard cosmological relations, the final baryon-to-entropy ratio is approximately
-$$
-\eta_B \approx \frac{n_B}{s} \approx \mathcal{C}_{norm} \cdot \delta_{CP} \cdot W_{eff}
-$$
-where $\mathcal{C}_{norm} \approx 10^{-3}$ is a coefficient derived from integrating the sphaleron rate against the Hubble expansion, and $W_{eff}$ is an effective washout factor. For a conservative washout $W_{eff} \sim 10^{-2}$, this yields
-$$
-\eta_B \sim 10^{-5} \times \delta_{CP}.
-$$
-Hence a **conservative** $\delta_{CP}\sim 10^{-5}$—consistent with a small predictive‑frame holonomy—yields
-$$
-\eta_B \sim 10^{-10},
-$$
-within the observed range of $\eta_B \approx 6 \times 10^{-10}$ [Planck Collaboration 2020]. This provides a concrete target for computing $\delta_{CP}$ from the PU connection.
+#### Y.5.1 CP Source and Chemical Potential
+Let $\delta_{\rm CP}$ be the Berry–Simon holonomy of the predictive bundle, computed via the integral of the curvature of the connection $\mathcal{A}$ over a minimal update cycle surface $\Sigma$:
 
+$$
+\boxed{\ \delta_{\rm CP}\ =\ \int_{\Sigma} d\mathcal A\ }\tag{Y.5}
+$$
+
+This holonomy is a gauge-invariant, dimensionless measure of the fundamental CP violation.
+
+**CP source and Kubo definition.** The PU‑induced CP source acts as an effective baryon chemical potential,
+\[
+\mu_B(T)=J_{\rm PU}(T)\,\delta_{\rm CP}\,T,\qquad
+J_{\rm PU}(T)=\lim_{\omega\to0^+}\frac{1}{T}\frac{\Im\,G^R_{B\,\mathcal O}(\omega)}{\omega},
+\]
+where \(G^R_{B\,\mathcal O}\) is the retarded correlator between the conserved baryon number density and the PU predictive operator \(\mathcal O\) that sources the holonomy.
+
+**Baryon yield.** In the relativistic, small‑\(\mu/T\) regime, the baryon‑to‑entropy ratio can be written as
+\[
+\eta_B=\frac{15}{4\pi^2 g_\*(T)}\!
+\left(\sum_i g_i B_i^2\right)
+\int_{t_i}^{t_f}\!dt\,\frac{\Gamma_{\rm sph}(T)}{T^2}\,
+\frac{\mu_B(T)}{T}\,
+e^{-\int_t^{t_f}\!dt'\,\Gamma_{\rm wash}(T')},
+\]
+where the species sum runs over relativistic degrees of freedom with baryon charge \(B_i\) and degeneracy \(g_i\). Defining the thermal coefficient
+\[
+C_{\rm th}(T)\equiv \frac{15}{4\pi^2 g_\*(T)}\sum_i g_i B_i^2,
+\]
+we have the compact form
+\[
+\eta_B=\delta_{\rm CP}\int_{t_i}^{t_f}\!dt\;C_{\rm th}(T)\,
+\Gamma_{\rm sph}(T)\,J_{\rm PU}(T)\,
+e^{-\int_t^{t_f}\!dt'\,\Gamma_{\rm wash}(T')}\,.
+\]
+**Electroweak window.** The integral is taken across the electroweak crossover where sphaleron transitions are active and subsequently freeze out; lattice‑informed \(\Gamma_{\rm sph}(T)\) and standard model inputs determine \(C_{\rm th}(T)\).
+
+#### Y.5.3 Computational Program
+
+1. Compute $\delta_{\rm CP}$ from the holonomy integral (Y.5) using the MPU's alphabet kernel.
+2. Compute the transport coefficient $J_{\rm PU}(T)$ from the PU response functions.
+3. Evaluate the thermodynamic integral $\mathcal K_{\rm PU}$ using standard thermal field theory for $\Gamma_{\rm sph}$ and $\Gamma_{\rm wash}$.
+4. The observed $\eta_B \approx 6 \times 10^{-10}$ then provides a sharp, falsifiable prediction for the value of $\delta_{\rm CP}$.
 
 
 ### Y.6. Boundary conditions and sign

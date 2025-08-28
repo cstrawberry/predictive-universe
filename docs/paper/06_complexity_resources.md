@@ -1,6 +1,6 @@
 # 6 Complexity, Performance, and Adaptation Dynamics
 
-This section explores the crucial interplay between system complexity, achievable predictive performance, and the dynamical processes governing adaptation within the Predictive Universe framework. We introduce the Principle of Compression Efficiency (PCE) as the core driver of adaptation, analyze the scaling relationship between complexity and performance, derive the specific functional form known as the Law of Prediction, and formally model the adaptation dynamics. These elements establish the foundation for understanding how systems governed by POP (Axiom 1) dynamically adjust their complexity to navigate the Space of Becoming (Definition 8) efficiently.
+This section explores the crucial interplay between system complexity, achievable predictive performance, and the dynamical processes governing adaptation within the Predictive Universe framework. We introduce the Principle of Compression Efficiency (PCE) as the core driver of adaptation, analyze the scaling relationship between complexity and performance, derive the specific functional form known as the Law of Prediction, and formally model the adaptation dynamics. These elements establish the foundation for understanding how systems governed by POP (Axiom 1) dynamically adjust their complexity, which is fundamentally bounded by the Operational Threshold ($C \ge C_{op} \ge K_0$, Corollary 3), to navigate the Space of Becoming (Definition 8) efficiently.
 
 **6.1 Principle of Compression Efficiency (PCE)**
 

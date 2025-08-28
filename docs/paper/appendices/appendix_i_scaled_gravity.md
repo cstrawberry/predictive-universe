@@ -95,22 +95,24 @@ The parameter set $(G_0,L_0,A_G,m)$ is expected to be universal, determined by t
 
 **I.7 A Multi-Scale Solution from Global PCE Optimization**
 
-The PU framework provides two distinct mechanisms to augment gravity: adapting local network parameters to modify the emergent law (`G`), or collectively reconfiguring the substrate to modify the emergent source (`T_μν`). The choice of mechanism is not arbitrary but is determined by a global PCE optimization that balances local resource costs against global consistency costs.
+The PU framework provides two distinct mechanisms to augment gravity: adapting local network parameters to modify the emergent law ($G$), or collectively reconfiguring the substrate to modify the emergent source ($T_{\mu\nu}$). The choice of mechanism is not arbitrary but is determined by a global PCE optimization that balances local resource costs against global consistency costs.
 
 **I.7.1 Galactic Scales: Law Modification as the Low-Cost Solution**
 
-In the moderate potential wells of galaxies, the required gravitational enhancement is small. Here, PCE selects the most efficient mechanism: a local adaptation of MPU network parameters. This "parameter relaxation" (Section I.5) manifests as a scale-dependent Newton constant, `G(R)` (Equation I.4). This is the low-cost solution, as it represents a passive relaxation of the substrate and the required asymptotic enhancement `A_G` is small enough to remain consistent with global cosmological constraints. In the weak-field limit, this is formally equivalent to an effective dark matter density that tracks the baryonic distribution:
+In the moderate potential wells of galaxies, the required gravitational enhancement is small. Here, PCE selects the most efficient mechanism: a local adaptation of MPU network parameters. This "parameter relaxation" (Section I.5) manifests as a scale-dependent Newton constant, $G(R)$ (Eq. I.4). This is the low-cost solution, as it represents a passive relaxation of the substrate and the required asymptotic enhancement $A_G$ is small enough to remain consistent with global cosmological constraints. In the weak-field limit, this is formally equivalent to an effective dark matter density that tracks the baryonic distribution:
 
 $$
 \nabla^2\Phi \simeq 4\pi G_0 \left[ \rho_b(R) + \rho_{\mathrm{DM,eff}}(R) \right], \quad \text{where} \quad \rho_{\mathrm{DM,eff}}(R) = \left[ \frac{G(R)}{G_0} - 1 \right] \rho_b(R).
 \tag{I.6}
 $$
 
+**Local‑tests limit.** In high‑acceleration, small‑scale regimes (Solar System, binary pulsars), the adaptation saturates and $G_{\rm eff}(L)\to G_0$ with $\bar\gamma(L\!\ll\!L_0)\to 0$, preserving precision‑gravity bounds.
+
 This adaptation is **environment‑dependent** and does not alter the homogeneous early‑Universe limit relevant for the CMB.
 
 **I.7.2 Cluster Scales: Non-Local Source Modification as the Necessary Solution**
 
-In the deep potential wells of galaxy clusters, the required gravitational enhancement is large. A "Law Modification" (`G(R)`) that could produce this effect is ruled out *a priori* by the global consistency requirement, as it would violate precise CMB constraints on the value of `G` in the early universe.
+In the deep potential wells of galaxy clusters, the required gravitational enhancement is large. A "Law Modification" ($G(R)$) that could produce this effect is ruled out *a priori* by the global consistency requirement, as it would violate precise CMB constraints on the value of $G$ in the early universe.
 
 PCE must therefore select the remaining globally consistent mechanism: "Source Modification." Furthermore, the nature of this response is also dictated by PCE. A purely local response ($\rho_{\rm PM}(r)\propto\rho_b(r)$) is informationally sub‑optimal and dynamically inefficient in this regime. The MPU network, operating as an integrated predictive system, seeks the most efficient representation. PCE favors adaptation to the most salient features of the environment relevant for prediction. In deep potential wells, the non‑local gravitational environment, characterized by the baryonic potential $\Phi_b$, becomes the dominant feature. A purely local response would be predictively myopic and less efficient at capturing the global potential structure, incurring high coherence costs disfavored by PCE.
 
@@ -121,7 +123,17 @@ $$
 \tag{I.7}
 $$
 
-where $K$ is a kernel representing the network's correlation length, $\Phi_b$ is the baryonic potential, $g_\ast$ is a characteristic acceleration, and $q$ is a universal nonlinearity exponent. With $\int K d^3x=1$, the total PM mass is $M_{\rm PM} = A_{\rm PM} \int \rho_b(r') \left(\frac{|\nabla\Phi_b(r')|}{g_\ast}\right)^{q} d^3r' = A_{\rm PM} \left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^{q}\right\rangle_{\rho_b} M_b$; thus, once $q$ and $g_\ast$ are fixed, cluster baryon budgets constrain the combination $A_{\rm PM} \left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^{q}\right\rangle_{\rho_b}$ (not $A_{\rm PM}$ alone). For $q>0$, $\rho_{\rm PM}$ vanishes in homogeneous backgrounds, keeping the recombination-era coupling unchanged and satisfying CMB bounds. We take $\rho_{\rm PM}$ to arise from an effective nonlocal susceptibility (or action) so that the associated $T^{\mu\nu}*{\rm PM}$ obeys $\nabla*\mu (T^{\mu\nu}*{\rm b}+T^{\mu\nu}*{\rm PM})=0$.
+where $K$ is a causally supported kernel representing the network's correlation length, $\Phi_b$ is the baryonic potential, $g_\ast$ is a characteristic acceleration, and $q$ is a universal nonlinearity exponent. This model, where predictive matter tracks the gravitational potential rather than baryonic density directly, naturally predicts the observed offsets between lensing and baryonic mass in systems like the Bullet Cluster. With $\int K d^3x=1$, the total PM mass is $M_{\rm PM} = A_{\rm PM} \int \rho_b(r') \left(\frac{|\nabla\Phi_b(r')|}{g_\ast}\right)^{q} d^3r' = A_{\rm PM} \left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^{q}\right\rangle_{\rho_b} M_b$; thus, once $q$ and $g_\ast$ are fixed, cluster baryon budgets constrain the combination $A_{\rm PM} \left\langle\left(\frac{|\nabla\Phi_b|}{g_\ast}\right)^{q}\right\rangle_{\rho_b}$ (not $A_{\rm PM}$ alone). For $q>0$, $\rho_{\rm PM}$ vanishes in homogeneous backgrounds, keeping the recombination-era coupling unchanged and satisfying CMB bounds. We take $\rho_{\rm PM}$ to arise from an effective nonlocal susceptibility (or action) so that the associated stress-energy tensor $T^{\mu\nu}_{\rm PM}$ ensures covariant conservation of the total: $\nabla_\mu (T^{\mu\nu}_{\rm b}+T^{\mu\nu}_{\rm PM})=0$.
+
+**Anisotropic stress.** The lensing–dynamics identity (I.8) assumes a metric theory with minimal coupling and negligible anisotropic stress so that both probes are sensitive to the same potential; departures from this condition are separately testable.
+
+**Theorem I.5 (Lensing–dynamics identity).**
+For any axisymmetric lens with kinematic measurement at $r_\sigma$ and Einstein radius $b_E$ within a scale window where $G_{\rm eff}(L) \approx G_0(L/L_0)^{\bar\gamma}$, assuming the emergent gravity remains a **metric theory with minimal coupling**, and that kinematics and lensing probe the same gravitational potential, then:
+$$
+\boxed{\ \frac{M_{\rm lens}}{M_{\rm dyn}}\ \approx\ \Big(\frac{b_E}{r_\sigma}\Big)^{\bar\gamma}\ }
+\tag{I.8}
+$$
+up to measurable geometric factors. This provides a parameter-free test of the model by comparing the mass inferred from lensing to the mass inferred from dynamics, with the discrepancy predicted by the logarithmic slope $\bar\gamma$ derived from PU principles.
 
 **I.8 Consistency with Local Tests of GR**
 

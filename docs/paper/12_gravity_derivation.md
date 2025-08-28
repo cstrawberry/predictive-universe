@@ -1,20 +1,16 @@
 # 12 Emergence of Gravitational Dynamics from Predictive Thermodynamics
 
-This section derives the dynamical equations governing the emergent spacetime geometry $(M, g_{\mu\nu})$, whose existence and properties were established conditionally in Section 11. The derivation follows the thermodynamic approach pioneered by Jacobson \[Jacobson 1995], interpreting Einstein's Field Equations as an equation of state for the spacetime manifold derived from the Clausius relation ($\delta Q = T \delta S$). Within the PU framework, this approach is grounded in the thermodynamic properties of the underlying MPU network interactions, specifically the information limits associated with Non-Deterministic Reflexive Interaction Dynamics (ND‑RID) across causal boundaries, which lead to the Horizon Entropy Area Law (Theorem 49) derived in Appendix E. By applying the Clausius relation to infinitesimal causal horizons and relating heat flow to the MPU stress-energy tensor ($T_{\mu\nu}^{(MPU)}$, Appendix B), we demonstrate that local thermodynamic consistency necessitates the Einstein Field Equations. We work in natural units where $c=\hbar=k_{B}=1$ unless explicitly stated otherwise, and adopt a spacetime signature convention $(-,+,+,+)$. 
+This section derives the dynamical equations governing the emergent spacetime geometry $(M, g_{\mu\nu})$, whose existence and properties were established conditionally in Section 11. The derivation follows the thermodynamic approach pioneered by Jacobson [Jacobson 1995], interpreting Einstein's Field Equations as an equation of state for the spacetime manifold derived from the Clausius relation ($\delta Q = T \delta S$). Within the PU framework, this approach is grounded in the thermodynamic properties of the underlying MPU network interactions. Specifically, the information limits of Non-Deterministic Reflexive Interaction Dynamics (ND‑RID) give rise to the **Horizon Entropy Area Law (Theorem 49)**, which is rigorously derived in **Appendix E**. By applying the Clausius relation to infinitesimal causal horizons and relating heat flow to the **MPU stress-energy tensor ($T_{\mu\nu}^{(MPU)}$)**, constructed in **Appendix B**, we demonstrate that local thermodynamic consistency necessitates the Einstein Field Equations. We work in natural units where $c=\hbar=k_{B}=1$ unless explicitly stated otherwise, and adopt a spacetime signature convention of $(-,+,+,+)$.
 
-Under the following explicit premises, rigorously grounded in the preceding sections and appendices, we derive the macroscopic dynamics:
+Under the following explicit premises, which are themselves derived results or foundational postulates of the PU framework, we derive the macroscopic dynamics:
 
-*  (A1) Local thermodynamic equilibrium at the coarse‑grained scale.
+*   (A1) **Local Thermodynamic Equilibrium:** The MPU network admits coarse-grained states treatable as being in local thermodynamic equilibrium near causal horizons (**Postulate 4**).
+*   (A2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation (69)) and an entropy density given by the **Area Law derived from ND-RID information limits in Appendix E**.
+*   (A3) **Geometric Regularity:** The MPU network dynamically converges to a configuration that ensures a smooth manifold limit with controlled curvature, as justified by necessity (**Appendix C**) and dynamical stability (**Appendix D**).
+*   (A4) **Conserved Energy-Momentum Source:** A covariantly conserved effective stress–energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ emerges from the underlying MPU dynamics, with $\nabla_\mu T^{\mu\nu}=0$ (**Appendix B**).
+*   (A5) **Local Lorentz Invariance (LLI):** The emergent dynamics are locally Lorentz invariant, a direct consequence of the causal structure derived from MPU interactions (**Theorem 46**).
 
-*  (A2) Local horizon thermodynamics with Unruh temperature $T=\kappa/(2\pi)$ (Equation (69)) and an area–entropy law as established in Appendix E.
-
-*  (A3) Geometric regularity ensuring a smooth manifold limit and controlled curvature (Appendix C).
-
-*  (A4) Existence of a covariantly conserved effective stress–energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ sourced by the MPU dynamics, with $\nabla_\mu T^{\mu\nu}=0$ (Appendix B).
-
-*  (A5) Local Lorentz invariance (LLI) of the emergent dynamics (derived from the causal structure in Theorem 46).
-
-Under (A1)–(A5), applying the Clausius relation $\delta Q = T\,\delta S$ to local Rindler horizons together with the Raychaudhuri equation yields Einstein’s field equations (Theorem 50).
+Under these premises, applying the Clausius relation $\delta Q = T\,\delta S$ to local Rindler horizons, with heat flux `δQ > 0` defined as energy flow into the causal diamond, and combining it with the Raychaudhuri equation, yields Einstein’s field equations (**Theorem 50**).
 
 **12.1 Local Thermodynamic Equilibrium and Horizon Properties**
 

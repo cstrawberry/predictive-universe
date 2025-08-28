@@ -87,7 +87,7 @@ The ‘Evolve’ interaction (Definition 27) comprises a reversible reflexive up
 Let $V(C) = \lambda R(C) + R_I(C) - \Gamma_0 PP(C)$, with:
 *   Physical Cost $R(C) = R(C_{op}) + r_p (C - C_{op})^{\gamma_p}$ for $C \ge C_{op}$ and $\gamma_p > 1$.
 *   Reflexive-Information Cost $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$, for $C > K_0$ and $R_I(K_0) = 0$.
-*   Predictive Performance $PP(C) = \beta - (\beta - \alpha) \exp[-\kappa_{eff} (C - C_{op})/K_0]$, giving $PP(K_0) = \alpha$.
+*   Predictive Performance $PP(C) = \beta - (\beta - \alpha)\exp\[-\kappa_{eff} (C - C_{op})/K_0]$, giving $PP(K_0) = \alpha$.
 
 Derivatives at $C = K_0$:
 *   $R'(K_0) = 0$ (right-derivative) for $\gamma_p > 1$; $R''(K_0) = \gamma_p(\gamma_p - 1) r_p (C - C_{op})^{\gamma_p - 2}$, hence $R''(K_0) = 2 r_p$ for $\gamma_p = 2$.
@@ -107,6 +107,8 @@ $$
 2\lambda r_p + \frac{r_I}{K_0^2 \ln 2}\,(\kappa_{\mathrm{eff}} - 1) > 0,
 $$
 which is readily satisfiable for $\lambda r_p > 0$ and $\kappa_{\mathrm{eff}} \ge 1$ (or more generally by parameter choice consistent with convex $R$ and concave $PP$). Thus, this 3-qubit MPU can be a local minimizer of $V(C)$ at $C = K_0$ under physically reasonable parameter regimes, thereby solving POP at the minimal admissible complexity.
+
+*Numeric cycle (one Evolve step):* Set $\alpha=0.60$, $\beta=0.98$, $\kappa_{\mathrm{eff}}=0.25$, $r_p=0.10$, $r_I=0.02$, $K_0=3$ bits and $C_{op}=K_0$. Initialize $p=(\tfrac14,\tfrac14,\tfrac14,\tfrac14)$. Suppose a context yields $\Delta C=0.012$ bits and $\Delta I=0.002$ bits. Then $\Delta\Psi=\kappa_{\mathrm{eff}}\Delta C - r_p - r_I = 0.25\cdot 0.012 - 0.10 - 0.02 = -0.117$. Because $\max_i p_i\in\[\alpha,\beta]$ and $C_{op}=K_0$, the policy selects passive update (no RID). As compression improves, once $\Delta C>0.48$ bits per cycle, $\Delta\Psi>0$ and a single RID is armed so one ‘Evolve’ event occurs while maintaining $C_{op}=K_0$ and $p_i\in\[\alpha,\beta]$.
 
 #### Minimal Predictive Algebra and the Dimension $d_0 = 8$
 

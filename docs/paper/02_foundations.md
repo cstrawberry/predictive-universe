@@ -53,7 +53,8 @@ Here $\mu$ denotes a physically realizable microstate admissible under the PU co
 $$
 C_P(\mu)\;=\;\lim_{n\to\infty} C_{P,n}(\mu) \quad \text{(1)}
 $$
-This definition ensures $C_P$ is well-defined and incorporates all emergent physical constraints without circularity.
+
+This definition ensures $C_P$ is well-defined and incorporates all emergent physical constraints without circularity. Monotone by construction and uniformly bounded by $C_{max}$ (Appendix Q), hence the limit exists and is finite.
 
 **Lemma 1 (Convergence of Complexity Hierarchy):** The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing. For any physically realizable microstate $\mu$ (see Definition 17), which by definition is constructible using finite resources, the complexity $C_P(\mu)$ must be finite. Therefore, the sequence is bounded above. By the Monotone Convergence Theorem, the limit $C_P(\mu)$ defined in Equation (1) exists and is finite.
 

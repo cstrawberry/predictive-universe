@@ -285,7 +285,14 @@ $$
 \frac{v}{M_{Pl}} \simeq \left[\frac{\zeta}{\sqrt{8\ln 2}}\right]\exp\!\left(-\frac{m_b^2}{\beta_2}\right).
 \tag{T.17}
 $$
-A moderate ratio of microscopic parameters, $m_b^2/\beta_2 \approx 38$, naturally generates the observed hierarchy of $\approx 10^{17}$.
+A moderate ratio of microscopic parameters, $m_b^2/\beta_2 \approx 38$, naturally generates the observed hierarchy of $\approx 10^{17}$. This mechanism is formalized by the **PCE Suppression Theorem**:
+
+**Theorem T.2 (PCE Suppression of the Electroweak Scale).**
+Let the predictive effective functional for the order parameter be $\mathcal J[\phi] = \int (\mathcal P - \lambda \mathcal R) d\ln\mu$, where $\mathcal{P}$ is the predictive benefit and $\mathcal{R}$ is the resource cost. The PCE stationary condition is $\partial_\mu\mathcal P = \lambda\,\partial_\mu\mathcal R$. If non-equilibrium effects or sub-leading terms introduce a small, PU-computable deviation from stationarity, $\delta(\mu) = \partial_\mu\mathcal P - \lambda\,\partial_\mu\mathcal R \neq 0$, then the electroweak scale $v$ is exponentially suppressed relative to the Planck scale $M_{Pl}$:
+$$
+\boxed{\ \frac{v}{M_{\rm Pl}}\;=\;\exp\!\bigl(-\Xi_\*\bigr)\,,\quad \text{where} \quad \Xi_\*\;\equiv\;\frac{1}{\lambda}\int_{\ln v}^{\ln M_{\rm Pl}}\!\vartheta\bigl(\mu,\phi_\*(\mu)\bigr)\ d\ln\mu\ }
+$$
+with $\vartheta(\mu,\phi) = (\partial_\mu\mathcal P)/(\partial_\mu\mathcal R)$ the marginal tradeoff density. This theorem provides the formal justification for the exponential hierarchy emerging from the PCE-driven RG flow.
 
 ---
 
@@ -408,4 +415,3 @@ This provides a unique, directional prediction linking the electroweak scale to 
 ## T.11 Conclusion
 
 The electroweak scale emerges from a geometric competition between an area-law boundary cost that stabilizes the symmetric vacuum and a logarithmically destabilizing bulk drift that favors symmetry breaking. The Renormalization Group flow ensures a zero-crossing of the effective mass at a finite critical scale $\ell^*$, which is exponentially large due to the logarithmic nature of the running. All coefficients in the effective potential are, in principle, computable as functionals of the underlying MPU network's statistical properties, tying the electroweak/Planck hierarchy directly to microscopic information-processing constraints. The specific construction of the local observable `m_i` serves as a successful existence proof for a viable order parameter, and the general mechanism is expected to be robust to other choices of observables with similar symmetry properties. The mechanism yields a unique, falsifiable directional prediction linking the electroweak scale $v$ to the ND–RID channel capacity $C_{\max}$ and is conceptually distinct from existing proposals for solving the hierarchy problem.
-

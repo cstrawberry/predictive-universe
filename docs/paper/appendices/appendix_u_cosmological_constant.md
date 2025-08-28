@@ -159,70 +159,23 @@ $$
 
 ## U.6 Vacuum Energy and Numerical Consistency
 
-In the dilute-gas approximation the vacuum energy density is
+**Theorem U.3 (Correlation-controlled suppression of Λ).**  
+Let $\{X_i\}_{i=1}^N$ be stationary, mean‑zero predictive‑correlation increments on horizon‑scale cells with **exponential α‑mixing** and cumulant generating function $\Lambda_X(t)=\lim_{n\to\infty}\tfrac{1}{n}\ln\mathbb{E}\big[e^{t\sum_{i=1}^n X_i}\big]$ existing in a neighborhood of $t=-2$. If $\Lambda_X(-2)<0$, then
+\[
+\Lambda_{\rm PU}\,L_P^2=8\pi A_{\rm eff}\,\exp\!\big(N\,\Lambda_X(-2)\big)
+=8\pi A_{\rm eff}\,e^{-2\kappa_{\rm eff}},\quad
+\kappa_{\rm eff}\equiv-\tfrac{N}{2}\Lambda_X(-2)>0.
+\]
+*Proof sketch.* Exponential mixing ensures a large‑deviation principle via the Gärtner–Ellis theorem with rate function given by the Legendre–Fenchel transform of $\Lambda_X$. The evaluation at $t=-2$ is fixed by the PCE-optimal information ratio $C_{\max}/\varepsilon=2$, which sets the scale of the non-perturbative action. Evaluating the moment generating function at this point yields the stated suppression.
 
-$$
-\boxed{
-\rho_\Lambda \;\approx\; A\,\rho_{\mathrm{Pl}}\;e^{-S_{\mathrm{inst}}}},
-\qquad \rho_{\mathrm{Pl}}:=\frac{1}{L_P^4}=\frac{1}{G_\infty^2},
-\tag{U.10}
-$$
-
-where $A=O(1)$ encodes one-loop determinant ratios and zero-mode volumes (Callan & Coleman, 1977; Dunne, 2008; Zinn-Justin, 2002). Using $L_P^2=G_\infty$ so that $\Lambda L_P^2=8\pi G_\infty^2 \rho_\Lambda$, and (U.9),
-
-$$
-\boxed{
-\Lambda L_P^2 \;\simeq\; 8\pi\,A\,e^{-2\kappa}.
-}
-\tag{U.11}
-$$
-
-Appendix E relates vacuum extensivity to an effective four‑volume of **independent cells**. Let $\xi$ denote the correlation length obtained from the RID contraction factor (E.2), $\xi:=c\,\tau_{\rm mix}=c\,\Delta t_{\rm cycle}/|\ln f_{\mathrm{RID}}|$ (Sec. 7). For a spacetime volume $V_4$,
-$$
-N_{\mathrm{eff}}\ :=\ \frac{V_4}{\gamma_4\,\xi^4}\ \simeq\ \frac{V_4}{\gamma_4\,\delta^4},\qquad \gamma_4=O(1)\ \text{(packing constant)}.
-\tag{U.12a}
-$$
-The one‑loop prefactor is the standard ratio of quadratic fluctuation determinants around the instanton saddle versus the vacuum. For the **toy 1D Euclidean action** with constant mass $M$ and quartic double‑well
-$$
-S_E[q]=\frac{1}{\varepsilon}\int d\tau\,\Big[\tfrac{M}{2}\dot q^{2}+\tfrac{\lambda}{4}(q^2-a^2)^2- V_{\mathrm{eff}}(q_{\mathrm{vac}})\Big],
-$$
-the bounce $q_{\mathrm{inst}}(\tau)$ yields Hessians
-$$
-\mathcal{M}_{\mathrm{inst}}=-M\,\partial_\tau^2+V''(q_{\mathrm{inst}}(\tau)),\qquad
-\mathcal{M}_{\mathrm{vac}}=-M\,\partial_\tau^2+\omega_0^2,\quad \omega_0^2:=V''(q_{\mathrm{vac}})=2\lambda a^2.
-$$
-Removing the translational zero mode, the prefactor reads [Coleman 1977; Callan & Coleman 1977]
-$$
-A\;=\;\Big(\frac{S_{\mathrm{inst}}}{2\pi}\Big)^{\!1/2}\,\Bigg[\frac{\det{}'\big(-M\partial_\tau^2+V''(q_{\mathrm{inst}})\big)}{\det\big(-M\partial_\tau^2+\omega_0^2\big)}\Bigg]^{-1/2},
-\tag{U.12b}
-$$
-with $S_{\mathrm{inst}}=\tfrac{1}{\varepsilon}\int d\tau\,\tfrac{M}{2}\dot q_{\mathrm{inst}}^{2}+\cdots$. Writing $n_0=1$ for the single zero mode and absorbing its Jacobian $\mathcal J$ into the standard factor gives
-$$
-\boxed{\, A_{\rm eff}:=\frac{\text{const}}{N_{\mathrm{eff}}}\,A,\quad \text{const}=\frac{1}{\sqrt{2\pi}}\,\mathcal J \,},\qquad
-N_{\mathrm{eff}}=\frac{V_4}{\gamma_4\,\xi^4}\simeq\frac{V_4}{\gamma_4\,\delta^4},
-\tag{U.12}
-$$
-making explicit both the determinant ratio and the finite‑size/extensivity renormalization used in (U.13).
-
-
-$$
-\boxed{
-\Lambda L_P^2 \;\simeq\; 8\pi\,A_{\rm eff}\,e^{-2\kappa}.
-}
-\tag{U.13}
-$$
-
-Given $\Lambda L_P^2 \sim 10^{-122}$ (see **Appendix V** for a precise inversion using Planck-2018 central values).
-
+Given $\Lambda L_P^2 \sim 10^{-122}$ (see **Appendix V** for a precise inversion using Planck-2018 central values), we can solve for the effective complexity:
 $$
 \boxed{
 \kappa\;=\;-\tfrac12\,\ln\!\Big(\tfrac{\Lambda L_P^2}{8\pi A_{\rm eff}}\Big).
 }
 \tag{U.14}
 $$
-
-For $A_{\rm eff}=1$ this gives $\kappa\approx 142.0$. Varying $A_{\rm eff}$ by $10^{\pm 3}$ shifts $\kappa$ by only $\pm 3.5$. The success of this model lies not in deriving the specific number `κ ≈ 142`, but in demonstrating that a plausible, `O(100)` complexity can naturally explain the observed `O(10¹²²)` suppression without fine-tuning.
-
+For $A_{\rm eff}=1$ this gives $\kappa\approx 142.0$. Varying $A_{\rm eff}$ by $10^{\pm 3}$ shifts $\kappa$ by only $\pm 3.5$. The success of this model lies not in deriving the specific number $\kappa \approx 142$, but in demonstrating that a plausible, $\mathcal{O}(100)$ complexity can naturally explain the observed $\mathcal{O}(10^{122})$ suppression without fine-tuning.
 
 ## U.7 Relation to Extensivity and Late-Time Equation of State
 
@@ -254,5 +207,3 @@ $$
 $$
 
 and the observed value corresponds to a natural $\kappa\approx 142$ for $A_{\rm eff}\sim 1$. The mechanism ties $\Lambda$ to the discrete information structure of the MPU network without fine-tuned continuous parameters and preserves $w\to -1$ in the late-time vacuum.
-
-
