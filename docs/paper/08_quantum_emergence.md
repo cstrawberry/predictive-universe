@@ -48,6 +48,8 @@ $$
 *Proof:* The derivation relies on the consistency of probability assignments within the emergent Hilbert space $\mathcal{H}_0$ (Proposition 4), yielding the probability law first proposed by Born [Born 1926]. The following theorem makes this derivation rigorous.
 
 **Theorem 8.F2 (PU probability from PCE non‑contextual additivity).**
+PCE motivates the non‑contextual additivity constraints; under these conditions, Gleason/Busch fix the quadratic (Born) form.
+
 Assume:
 (NC) **Context symmetry:** the predictive weight assigned to an effect $E$ depends only on $E$ (and not on which resolution $\{E_i\}$ it appears in).
 (i) For any orthogonal family $\{E_i\}$ of effects with $\sum_i E_i=\mathbf 1$, the predictive weights satisfy additivity $\omega(\sum_i E_i)=\sum_i \omega(E_i)$.

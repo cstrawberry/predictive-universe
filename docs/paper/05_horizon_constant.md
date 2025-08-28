@@ -93,7 +93,6 @@ $$
 
 This class includes, for example, i.i.d. Bernoulli($p$) with $p\neq \tfrac12$ (where $\mathbb{E}[s_t]=p^2+(1-p)^2$) and symmetric two‑state Markov chains with persistence $q>1/2$ (where $\mathbb{E}[s_t]=q$).
 
-**Theorem 15.**
 Under (O1)–(O3), the **Horizon Constant** equals
 
 $$

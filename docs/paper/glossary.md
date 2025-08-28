@@ -28,7 +28,7 @@
 
 *   **Born Rule:** (Proposition 7, Theorem G.1.7) Probability of outcome $i$ from state $\rho$ measured via projector $P_i$ is $P(i) = \text{Tr}(\rho P_i)$. For pure state $|\psi\rangle$ and basis projector $P_i=|i\rangle\langle i|$, $P(i)=|\langle i|\psi\rangle_s|^2$. Derived via PCE consistency (Appendix G).
 
-*   **$C \equiv C_P$ (Predictive Physical Complexity):** (Section 2.4.1, Equation 1) Theoretical complexity measure for physically constructing microstate $\mu$ achieving nontrivial predictive accuracy under all physical laws. Hierarchically defined, generally uncomputable.
+*   **$C \equiv C_P$ (Predictive Physical Complexity):** (Section 2.4.1, Equation 1) Theoretical complexity measure for physically constructing microstate $\mu$ (notation note: $\mu$ is also used as a spacetime index in Sec. 11; context disambiguates) achieving nontrivial predictive accuracy under all physical laws. Hierarchically defined, generally uncomputable.
 
 *   **$\hat{C}_v$ (Operational Complexity Proxy):** (Theorem 1, Definition B.1, Equation B.1) Hermitian operator (identified with quantum circuit complexity) on MPU Hilbert space $\mathcal{H}_v$, with spectrum $\lambda(d)=K_0+\Delta C(d)$. Dynamically aligned with $C_P$ at equilibrium (Theorem 2).
 
