@@ -87,6 +87,43 @@ Assume the electroweak sector is in a locally thermal but *driven* (KMS‑orient
 Both are purely **topological/anomalous** and require only the already‑derived PU structures.
 
 
+#### Y.4.1 Quantitative Plausibility Sketch
+
+To demonstrate quantitative viability, we outline a standard, PU-compatible electroweak-era mechanism that can yield the correct order of magnitude for the baryon-to-entropy ratio:
+$$
+\eta_B \;\equiv\; \frac{n_B}{n_\gamma} \;\approx\; 6\times10^{-10}.
+$$
+The effective evolution of the comoving baryon yield $Y_B$ in the out-of-equilibrium region near the electroweak crossover (with $z\equiv T_c/T$) is governed by a Boltzmann-type equation:
+$$
+\frac{dY_B}{dz}
+\;=\;
+-\frac{\Gamma_{\rm sph}(z)}{H(z)}\Big(Y_B-c_{\rm sph}\,Y_{B-L}\Big)
+\;+\;\frac{S_B(z)}{s(z)H(z)}
+\;-\;\frac{W(z)}{H(z)}\,Y_B,
+$$
+where $s$ is the entropy density, $c_{\rm sph}=28/79$ is the sphaleron conversion factor, $S_B$ is the CP-violating source term, and $W$ encodes washout processes. In a thin-freeze-out approximation, where the source and washout are localized, the final asymmetry is:
+$$
+\eta_B
+\;\simeq\;
+\zeta_{\rm dil}\;\times\;c_{\rm sph}\;\times\;\epsilon_{\rm CP}\;\times\;
+\left.\frac{\Gamma_{\rm sph}}{H}\right|_{z_*}\;\times\;f_{\rm wash},
+$$
+with $\epsilon_{\rm CP}$ being the effective CP asymmetry, $\zeta_{\rm dil}$ a dilution factor, and $f_{\rm wash}$ the washout survival fraction.
+
+**Illustrative PU-compatible parameters:** Taking
+$$
+\epsilon_{\rm CP}\sim 10^{-6},\qquad
+\left.\frac{\Gamma_{\rm sph}}{H}\right|_{z_*}\sim 3\times10^{-2},\qquad
+f_{\rm wash}\sim 0.1,\qquad
+\zeta_{\rm dil}\sim 1,
+$$
+gives
+$$
+\eta_B \;\simeq\; (28/79)\times 10^{-6}\times 3\times10^{-2}\times 0.1 \times 1
+\;\approx\; 1\times10^{-9}.
+$$
+This demonstrates that the mechanism is quantitatively plausible. In the PU framework, the key parameters are not arbitrary inputs. The predictive viscosity and relaxation scales set the out-of-equilibrium dynamics (entering $z_*$ and $\Gamma_{\rm sph}/H$), while the capacity-limited gauge kinetics and the geometric holonomy of the predictive bundle (as detailed in Section Y.5) determine the fundamental CP asymmetry $\epsilon_{\rm CP}$. A full computation can thus promote these from phenomenological inputs to derived parameters, enabling a falsifiable estimate of $\eta_B$.
+
 ### Y.5. Quantitative Pathway for Baryogenesis from Predictive Holonomy
 
 This section provides a computable pipeline to derive the baryon asymmetry $\eta_B$ from the geometric invariants of the PU predictive bundle.

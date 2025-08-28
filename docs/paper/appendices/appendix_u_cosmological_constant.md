@@ -133,12 +133,21 @@ Let $\{X_i\}_{i=1}^N$ be stationary, mean‑zero predictive‑correlation increm
 \]
 *Proof sketch.* Exponential mixing ensures a large‑deviation principle via the Gärtner–Ellis theorem with rate function given by the Legendre–Fenchel transform of $\Lambda_X$. The evaluation at $t=-2$ is fixed by the PCE-optimal information ratio $C_{\max}/\varepsilon=2$ (Equation U.8), which sets the scale of the non-perturbative action. Evaluating the moment generating function at this point yields the stated suppression.
 
-Given $\Lambda L_P^2 \sim 10^{-122}$ (see Appendix V for a precise inversion using Planck-2018 central values), we can solve for the effective complexity using Equation (U.9) and Equation (U.13):
+Given $\Lambda L_P^2 \approx 2.87\times10^{-122}$ (see **Appendix V** for a precise inversion using Planck-2018 central values), we can solve for the effective complexity:
 $$
 \kappa\;=\;-\tfrac12\,\ln\!\left(\frac{\Lambda L_P^2}{8\pi A_{\rm eff}}\right).
 \tag{U.14}
 $$
-For $A_{\rm eff}=1$ this gives $\kappa\approx 141.5$. Varying $A_{\rm eff}$ by $10^{\pm 3}$ shifts $\kappa$ by only $\pm 3.5$. The success of this model lies not in deriving the specific number $\kappa \approx 142$, but in demonstrating that a plausible, $\mathcal{O}(100)$ complexity can naturally explain the observed $\mathcal{O}(10^{122})$ suppression without fine-tuning.
+For a range of plausible order-unity values for the prefactor $A_{\rm eff}$, this yields:
+*   $A_{\rm eff}=0.5 \Rightarrow \kappa\simeq141.2$
+*   $A_{\rm eff}=1.0 \Rightarrow \kappa\simeq141.5$
+*   $A_{\rm eff}=2.0 \Rightarrow \kappa\simeq141.9$
+
+The success of this model lies not in deriving the specific number $\kappa \approx 142$, but in demonstrating that a plausible, $\mathcal{O}(100)$ complexity can naturally explain the observed $\mathcal{O}(10^{122})$ suppression without fine-tuning. This value for $\kappa$ is expressible in terms of the underlying MPU network's statistical properties via
+$$
+\kappa \;=\; -\frac{N}{2}\,\Lambda_X(-2)\quad(>0),
+$$
+where $N$ is the number of effective predictive units and $\Lambda_X(-2)$ is the value of the cumulant generating function. For example, with $N=64$ predictive units one has $\Lambda_X(-2)\simeq-4.42$ at $\kappa\simeq141.5$, while $N=128$ gives $\Lambda_X(-2)\simeq-2.21$. This places the **per-unit action/cost** in the $\mathcal O(1-10)$ range, consistent with the PU framework's ND-RID cost scales.
 
 ## U.8 Relation to Late-Time Equation of State
 
