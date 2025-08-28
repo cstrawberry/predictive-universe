@@ -217,7 +217,8 @@ S_m=\sum_i\lambda_i^{\,m}.
 $$
 
 Assume $C_K>0,\ r_p>0,\ \beta_{\mathrm{eff}}\kappa_F>0$ so that $A_{\mathrm{PCE}}>0$.
-If $\beta_{\mathrm{eff}}$ or $\kappa_F$ carry units, $C_K$ absorbs the necessary dimensions so that $A_{\mathrm{PCE}}$ is dimensionless (consistent with Appendix W).
+
+The coefficient $c_\gamma$ is constructed to be dimensionless. As $r_p$ has units of power, $A_{\mathrm{PCE}}$ also carries units of power, ensuring the ratio $\tilde A_{\mathrm{PCE}} = A_{\mathrm{PCE}}/\Gamma_0$ used in the potential is dimensionless (consistent with Appendix W).
 
 When used with Appendix W (which takes $\gamma_{\mathrm{eff}}=2$), choose $\gamma,\gamma_p$ such that $\gamma\gamma_p=2$.
 
