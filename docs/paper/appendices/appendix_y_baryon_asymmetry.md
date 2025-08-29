@@ -131,9 +131,8 @@ This section provides a computable pipeline to derive the baryon asymmetry $\eta
 #### Y.5.1 CP Source and Chemical Potential
 Let $\delta_{\rm CP}$ be the Berry–Simon holonomy of the predictive bundle, computed via the integral of the curvature of the connection $\mathcal{A}$ over a minimal update cycle surface $\Sigma$:
 
-$$
-\boxed{\ \delta_{\rm CP}\ =\ \int_{\Sigma} d\mathcal A\ }\tag{Y.5}
-$$
+\boxed{\ \delta_{\rm CP}\ =\ \frac{1}{2\pi}\int_{\Sigma}\mathrm{Tr},\mathcal F\ }\tag{Y.5}
+with $\mathcal F=d\mathcal A+\mathcal A\wedge\mathcal A$.
 
 This holonomy is a gauge-invariant, dimensionless measure of the fundamental CP violation.
 
