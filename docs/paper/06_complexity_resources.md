@@ -206,7 +206,7 @@ The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **
 
 **6.4.2 Proposition 3 (Complexity Adaptation Dynamics Model)**
 
-Assuming the rate of change of complexity $C(t)$ (operationally, $C(t) = \langle \hat{C}_v \rangle(t)$) is proportional to the net driving force $\Psi(t)$ acting to optimize the PCE objective, the basic adaptation dynamics follow a gradient ascent on the effective benefit landscape defined implicitly by $V(x)$ (Appendix D, Equation D.1):
+Assuming the rate of change of complexity $C(t)$ (operationally, $C(t) = \langle \hat{C}_v \rangle(t)$) is proportional to the net driving force $\Psi(t)$ acting to optimize the PCE objective, the basic adaptation dynamics follow a gradient ascent on the effective benefit landscape defined implicitly by $V(x)$ (Appendix D, **Equation D.8**):
 $$
 \frac{dC}{dt} = \eta_{adapt} \cdot \Psi(C(t), \hat{C}_{target}(t), \lambda, \Gamma_0) \quad \text{(30)}
 $$

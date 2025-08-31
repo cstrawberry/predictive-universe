@@ -56,7 +56,7 @@ Any system engaging in non-trivial self-referential prediction, irrespective of 
 * (ii) **Predictive Generation ($b_p$):** An internal mechanism or model to generate representations of potential future states.
 * (iii) **Verification & Update ($b_v$):** The ability to compare its predictions with actual outcomes and initiate an update to its internal state or model.
 
-*Proof (outline; full derivation in **Appendix A.0.4**):*
+*Proof (outline):*
 * (i) Self-reference requires the system to identify itself and differentiate its current state from others. Without state distinction, referencing a specific "self-state" is ill-defined.
 * (ii) Prediction involves forming an internal representation of a future state. Without an internal modeling mechanism, the system cannot generate a prediction that is distinct from a mere reaction to current input.
 * (iii) For adaptive or meaningful prediction, the system must assess its predictions against outcomes. Without verification, learning and model improvement are impossible, and predictive accuracy is undefined. For example, a memoryless device or one that cannot compare its output to subsequent events cannot verify its predictions and thus cannot adapt or even ascertain if its predictions are successful.
