@@ -4,7 +4,7 @@ Having established the foundational principles governing adaptive prediction, co
 
 **7.1 Hypothesis 1 (Hyp 1): The MPU Reality Model**
 
-Physical reality is fundamentally constituted by a network of interacting Minimal Predictive Units (MPUs), as defined below (Definition 23). The collective dynamics of this MPU network give rise to all emergent physical phenomena, including particles, fields, the formalism of quantum mechanics (Section 8), and spacetime geometry (Section 11, Section 12). These dynamics are governed by several core principles:
+Physical reality is fundamentally constituted by a network of interacting Minimal Predictive Units (MPUs), as defined below (Definition 23). This network structure is not merely a postulate of efficiency but is also a requirement for mathematical self-consistency; as rigorously proven in Appendix P, a universe containing the chiral gauge structure of the Standard Model is incompatible with a singular predictive entity and requires a substrate of at least two interacting MPUs to ensure the cancellation of quantum anomalies. The collective dynamics of this MPU network give rise to all emergent physical phenomena, including particles, fields, the formalism of quantum mechanics (Section 8), and spacetime geometry (Section 11, Section 12). These dynamics are governed by several core principles:
 *   The Dual Dynamics of internal prediction (unitary evolution) and 'Evolve' interaction (stochastic ND-RID) (Section 7.3.3).
 *   Optimization via the Prediction Optimization Problem (Axiom 1) and the Principle of Compression Efficiency (Definition 15).
 *   Constraints arising from self-reference limits (SPAP, Theorem 10, Theorem 11) and reflexive interaction dynamics (RID, Definition 6).
