@@ -35,6 +35,18 @@ The adaptation dynamics of systems within the PU framework are governed by the P
 
  3.  **Canonical Instantiation (Minimal Complexity Action):** At the Attractor scale $\mu^*$, the predictive-to-physical normalization for the emergent gauge action satisfies $\kappa^* = 1$ as a consequence of the Principle of Physical Instantiation (PPI, Appendix P) and the Predictive Ward Identity (Theorem X.3).
 
+ This point is the unique, PCE-favored selection used for parameter-free predictions. The ultimate expression of this optimization is the PCE-Attractor.
+
+**Definition 15a (Def 15a): The PCE-Attractor**
+
+ The **PCE-Attractor**, denoted $x_{attr}$, is the canonically selected global-minimum configuration within $\mathcal{E}_{*}^{\text{global}}$ (see Theorem D.3) singled out by the *co-occurring* conditions:
+
+ 1.  **Maximal Symmetry (Flat Spectrum):** For the U(1) sector, the SLD-QFI spectrum is flat ($\sigma^2=0$), reflecting a state of maximal robustness where all information-carrying modes are utilized democratically (see Appendix W; §Z.3).
+
+ 2.  **Maximal Efficiency (Capacity Saturation):** The system operates at the "zero-slack" or "branch boundary" condition, where the unconstrained minimum of the rate-level PCE potential $\phi(u)$ coincides with the information capacity limit ($V_{benefit} = \ln d_0$).
+
+ 3.  **Canonical Instantiation (Minimal Complexity Action):** At the Attractor scale $\mu^*$, the predictive-to-physical normalization for the emergent gauge action satisfies $\kappa^* = 1$ as a consequence of the Principle of Physical Instantiation (PPI, Appendix P) and the Predictive Ward Identity (Theorem X.3).
+
  This point is the unique, PCE-favored selection used for parameter-free predictions.
 
 **6.1.3 Definition 16 (Def 16): Prediction Optimization Problem - Operational Goal**

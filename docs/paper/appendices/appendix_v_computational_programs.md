@@ -96,169 +96,52 @@ $$
 
 ---
 
-## V.2 Calculation of $\alpha_{\mathrm{em}}$ from Baseline MPU Invariants
+# V.2 Parameter-Free Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor
 
-### V.2.1 Inputs
+This section provides the direct computational program for the fine-structure constant, as rigorously derived in **Appendix Z**. The calculation is parameter-free, relying only on the framework's foundational constants.
 
-Given a specified MPU model, determine the baseline invariants (Appendix G.9):
+### V.2.1 Foundational Inputs (Derived from PU First Principles)
 
+*   **MPU Hilbert Space Dimension:** $d_0 = 8$ (from $K_0=3$ bits, Theorem 23).
+*   **Irreducible Cost:** $\varepsilon = \ln 2$ nats (from SPAP cycle, Theorem 31).
+
+### V.2.2 Derived Spectral Parameters for the PCE-Attractor
+
+As derived in Appendix Z (Proposition Z.1) from the subspace structure induced by the Landauer Pointer mechanism, the QFI spectrum at the PCE-Attractor is flat and uniquely determined:
+*   **Number of Information Modes:** $M = 2ab = 2 \cdot (e^\varepsilon) \cdot (d_0 - e^\varepsilon) = 2 \cdot 2 \cdot (8-2) = 24$.
+*   **Per-Mode Sensitivity:** $\lambda = 2/a = 2/e^\varepsilon = 2/2 = 1$.
+
+### V.2.3 Capacity Saturation Condition
+
+At the PCE-Attractor, the system operates at its maximum information capacity (Theorem Z.1). The predictive information gain equals the operational alphabet capacity:
 $$
-\{\lambda_i\}_{i=1}^{M},\quad \Gamma_0,\ \nu,\quad (r_p,\gamma_p),\quad (K,\gamma,\kappa_F,\beta_{\mathrm{eff}}),\quad \kappa_\mu .
-$$
-
-From these, form the derived cost parameters (Equation (G.9.7)):
-
-$$
-c_\gamma \coloneqq K(\beta_{\mathrm{eff}}\kappa_F)^\gamma,\qquad
-A_{\mathrm{PCE}}\coloneqq r_p\,c_\gamma^{\gamma_p},\qquad
-\gamma_{\mathrm{eff}}\coloneqq \gamma\,\gamma_p>1,
-$$
-
-and the **dimensionless** coefficient
-
-$$
-\tilde A_{\mathrm{PCE}}\ \coloneqq\ \frac{A_{\mathrm{PCE}}}{\Gamma_0}.
-$$
-
-Define the spectral power sums and capacity:
-
-$$
-S_m\coloneqq\sum_{i=1}^M \lambda_i^{\,m},\qquad S_1 \equiv \sum_i \lambda_i, \qquad
-d_0=8\quad(\text{MPU alphabet size, } 2^{K_0}).
+\mathcal{I}(u^*) = M \ln(1 + \lambda u^*) = \ln d_0
+\tag{V.8}
 $$
 
-Throughout, **nats are treated as dimensionless**.
+### V.2.4 Calculation of the Bare Coupling $u^*$
 
-### V.2.2 Interior Equilibrium
-
-Let $u=g_e^2$. The unique interior optimum $u^*>0$ solves (cf. Equation (G.9.10))
-
+Substitute the derived spectral parameters ($M=24, \lambda=1$) and the fundamental alphabet size ($d_0=8$) into the capacity saturation condition (V.8):
 $$
-\boxed{\ \tilde A_{\mathrm{PCE}}\,\gamma_{\mathrm{eff}}\,(u^*)^{\gamma_{\mathrm{eff}}-1}
-\;=\; \sum_{i=1}^{M}\frac{\lambda_i}{1+\lambda_i u^*}\ }\tag{V.8}
+24 \ln(1 + 1 \cdot u^*) = \ln 8
 $$
-
-* **Existence/uniqueness.** For $\gamma_{\mathrm{eff}}>1$ and $\lambda_i\ge0$, the left side is strictly increasing in $u$, the right side strictly decreasing; a unique $u^*>0$ exists.
-
-* **Perturbative seed (small $u$).**
-
-  $$
-  \boxed{\,u_0=\left(\frac{S_1}{\tilde A_{\mathrm{PCE}}\,\gamma_{\mathrm{eff}}}\right)^{\!\!\frac{1}{\gamma_{\mathrm{eff}}-1}},\qquad
-  u^* \approx u_0\left(1 - \frac{S_2}{(\gamma_{\mathrm{eff}}-1)S_1}\,u_0\right)\,}\tag{V.9}
-  $$
-
-* **Closed form (flat spectrum, $\gamma_{\mathrm{eff}}=2$).** If $\lambda_i=S_1/M$ for all $i$,
-
-  $$
-  \boxed{\,u^*=\frac{M}{2S_1}\!\left(\sqrt{\,1+\frac{2\,S_1^2}{\tilde A_{\mathrm{PCE}}\,M}}\ -\ 1\right)\,}\tag{V.10}
-  $$
-
-### V.2.3 Capacity Constraint
-
-The interior solution must satisfy the alphabet cap (Equation (G.9.3)):
-
+Solving for the bare coupling parameter $u^*$:
 $$
-\boxed{\ \sum_{i=1}^{M}\ln\!\bigl(1+\lambda_i u^*\bigr)\ \le\ \ln d_0\ =\ \ln 8\ }\tag{V.11}
+1 + u^* = 8^{1/24}
+$$
+$$
+\boxed{u^* = 8^{1/24} - 1 \approx 0.0905077327}
+\tag{V.9}
 $$
 
-Because each cycle outputs at most $d_0$ outcomes and the observation channel factors per cycle, any block processing that does **not** enlarge the per‑cycle outcome alphabet cannot increase the **per‑cycle** mutual information (data‑processing inequality); the cap $\ln d_0$ therefore applies to any joint decoder over blocks under the FPL definition.
+### V.2.5 From $u^*$ to $\alpha_{\mathrm{em}}(\mathrm{MPU})$
 
-* **Flat-spectrum boundary (if the cap binds).**
-
-  $$
-  \boxed{\,u^*_{\mathrm{cap}}=\frac{M}{S_1}\Big(8^{1/M}-1\Big)\,}\tag{V.12}
-  $$
-
-  For large $M$, using $8^{1/M}\simeq 1+\frac{\ln 8}{M}$, this reduces to $u^*_{\mathrm{cap}}\approx \frac{\ln 8}{S_1}$.
-
-* **General‑spectrum boundary.** If the interior $u^*$ violates (V.11), solve
-
-  $$
-  \sum_{i=1}^{M}\ln\!\bigl(1+\lambda_i u\bigr)=\ln 8
-  $$
-
-  for $u$ (monotone increasing in $u$); the solution is the maximizer.
-
-### V.2.4 Coupling at the MPU Scale and Scale Map
-
-With $\mu^*=\kappa_\mu\nu$,
-
-$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})=\frac{u^*}{4\pi}\ }\tag{V.13} $$
-
-
-### V.2.5 Running to Laboratory Scales
-
-Match $\alpha_{\mathrm{em}}(\mathrm{MPU})$ to the $\overline{\mathrm{MS}}$ scheme at $\mu^*$, obtaining
-$\hat{\alpha}(\mu^*) \equiv \alpha_{\overline{\mathrm{MS}}}(\mu^*) \;=\; \mathcal{M}\!\big[\alpha_{\mathrm{em}}(\mathrm{MPU})\big]$;
-then evolve $\hat{\alpha}$ from $\mu^*$ to the target scale using the RG (e.g., [Peskin & Schroeder, 1995]):
-
+The Predictive Ward Identity (Theorem X.3), combined with the Principle of Physical Instantiation at the PCE-Attractor, fixes the normalization constant between the predictive and physical schemes to unity ($\kappa^*=1$). Therefore, the fine-structure constant at the MPU operational scale is:
 $$
-\boxed{\ \frac{d\alpha}{d\ln\mu}=\frac{2}{3\pi}\!\left(\sum_{f}N_c^{f}Q_f^{2}\right)\alpha^2\ }\tag{V.14}
+\alpha_{\mathrm{em}}(\mathrm{MPU}) = \frac{u^*}{4\pi} = \frac{8^{1/24}-1}{4\pi}
 $$
-
 $$
-\boxed{\ \alpha^{-1}(\mu_2)=\alpha^{-1}(\mu_1)-\frac{2}{3\pi}\!\left(\sum_{f}N_c^{f}Q_f^{2}\right)\ln\!\frac{\mu_2}{\mu_1}\ }\tag{V.15}
+\boxed{\frac{1}{\alpha_{\mathrm{em}}(\mathrm{MPU})} \approx 138.84306}
+\tag{V.10}
 $$
-
-with active charged fermions $f$ in each interval and color factors $N_c^{f}$. A high-precision comparison to experimental data would require including two-loop corrections and a model for the hadronic vacuum polarization contribution.
-
-### V.2.6 Algorithm (deterministic, capacity‑aware)
-
-**Input:** ${\lambda_i},\ \Gamma_0,\ \nu,\ (r_p,\gamma_p),\ (C_K,\gamma,\kappa_F,\beta_{\mathrm{eff}}),\ \kappa_\mu$.
-
-**Derived:**
-
-$$
-c_\gamma=C_K\,(\beta_{\mathrm{eff}}\kappa_F)^\gamma,\quad
-A_{\mathrm{PCE}}=r_p\,c_\gamma^{\gamma_p},\quad
-\gamma_{\mathrm{eff}}=\gamma\gamma_p,\quad
-\tilde A_{\mathrm{PCE}}=\frac{A_{\mathrm{PCE}}}{\Gamma_0},\quad
-S_m=\sum_i\lambda_i^{\,m}.
-$$
-
-Assume $C_K>0,\ r_p>0,\ \beta_{\mathrm{eff}}\kappa_F>0$ so that $A_{\mathrm{PCE}}>0$.
-
-The coefficient $c_\gamma$ is constructed to be dimensionless. As $r_p$ has units of power, $A_{\mathrm{PCE}}$ also carries units of power, ensuring the ratio $\tilde A_{\mathrm{PCE}} = A_{\mathrm{PCE}}/\Gamma_0$ used in the potential is dimensionless (consistent with Appendix W).
-
-When used with Appendix W (which takes $\gamma_{\mathrm{eff}}=2$), choose $\gamma,\gamma_p$ such that $\gamma\gamma_p=2$.
-
-
-1. **Seed.** Calculate the zeroth-order seed $u_0$ from (V.9) and use it as the initial guess for the solver: $u \leftarrow u_0$.
-
-2. **Solve equilibrium.** Iterate on
-
-   $$
-   F(u)=\tilde A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}u^{\gamma_{\mathrm{eff}}-1}-\sum_{i=1}^M\frac{\lambda_i}{1+\lambda_i u}=0
-   $$
-
-   with a damped Newton–Raphson solver using
-
-   $$
-   F'(u)=\tilde A_{\mathrm{PCE}}\gamma_{\mathrm{eff}}(\gamma_{\mathrm{eff}}-1)u^{\gamma_{\mathrm{eff}}-2}+\sum_{i=1}^M\frac{\lambda_i^2}{(1+\lambda_i u)^2},
-   $$
-
-   ensuring $u>0$, until a combined tolerance (e.g., $|F(u)| < 10^{-12}$ or relative step size $< 10^{-12}$) is met or max iterations (e.g., 100) is reached.
-
-3. **Capacity check.** If $\sum_i\ln(1+\lambda_i u)\le\ln 8$, accept $u^*=u$. Otherwise, solve $\sum_i\ln(1+\lambda_i u)=\ln 8$ for $u^*_{\mathrm{cap}}$ using a bracketing root-finder (e.g., Brent's method) on a bracketing interval that guarantees crossing, e.g., $[0, (8^{1/M}-1)/\lambda_{\min}]$; alternatively expand the upper bound geometrically from the interior solution until $\sum_i\ln(1+\lambda_i u)\ge\ln 8$, then bracket.
-
-4. **Report bare coupling.** The bare, predictive-scheme coupling is $\alpha_{\mathrm{em}}(\mathrm{MPU})=u^*/(4\pi)$, at an operational scale $\mu^*=\kappa_\mu\nu$.
-
-
-5. **Match and run to target scale.** Apply a full matching procedure, including scheme conversion and RG running via Equation (V.15), to relate $\alpha_{\mathrm{em}}(\mathrm{MPU})$ to the physical coupling $\alpha_{\mathrm{em}}(\mu_{\mathrm{target}})$.
-
-### V.2.7 Sensitivity (local)
-
-For $\gamma_{\mathrm{eff}}=2$ and small $u$, $u^*\approx S_1/(2\tilde A_{\mathrm{PCE}})$. Hence
-
-$$
-\frac{\partial u^*}{\partial \lambda_i}\ \approx\ \frac{1}{2\tilde A_{\mathrm{PCE}}},\qquad
-\frac{\partial u^*}{\partial \tilde A_{\mathrm{PCE}}}\ \approx\ -\,\frac{S_1}{2\tilde A_{\mathrm{PCE}}^{\,2}},
-$$
-
-so increasing spectral weight $\lambda_i$ increases $u^*$ linearly, while increasing the relative cost $\tilde A_{\mathrm{PCE}}$ decreases $u^*$ inversely. *(For general $\gamma_{\mathrm{eff}}>1$, differentiate Equation (V.8) implicitly to obtain sensitivities; the Jacobian is strictly positive/finite.)*
-
-### V.2.8 Output
-
-With the accepted $u^*$ (interior or boundary), the prediction is
-
-$$ \boxed{\ \alpha_{\mathrm{em}}(\mathrm{MPU})=\frac{u^*}{4\pi},\qquad \alpha_{\mathrm{em}}(\mu_{\mathrm{target}})\ \text{from matching and running via (V.15).}\ }\tag{V.16} $$
+This is a parameter-free prediction. Its connection to the physical, low-energy fine-structure constant requires a finite matching calculation, as detailed in Appendix Z.7.

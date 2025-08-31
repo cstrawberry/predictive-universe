@@ -189,11 +189,6 @@ $$
 g^2\;=\;u,\qquad \alpha_{\mathrm{em}}(\mathrm{MPU})=\frac{u^*}{4\pi}.
 $$
 
-With $u^*=8^{1/24}-1\approx 0.0905077$ (derived in Appendix Z), we have the parameter-free result:
-$$ \alpha_{\mathrm{em}}(\mathrm{MPU}) \approx 0.00720238,\qquad \frac{1}{\alpha_{\mathrm{em}}(\mathrm{MPU})}\approx 138.843. $$
-
-
-
 ## X.7 Computational Pipeline and Renormalization Conditions
 
 1. **Microscopic MPU cycle → LAN block:** extract $(d_0,\varepsilon)$, the active kernel size $a=e^\varepsilon=2$, and the QFI spectrum $(M,\lambda)$ (Appendix Z; Appendix W).
