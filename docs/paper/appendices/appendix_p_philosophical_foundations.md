@@ -328,6 +328,20 @@ The core argument is that a measurement outcome must be a piece of usable, unamb
 
 In summary, the imaginary part of the quantum state is not "lost" or "hidden" in measurement; it is fulfilling its function of encoding the predictive relationships between potential outcomes. The function of a measurement is to collapse this web of potentiality into a single, definite, and quantifiable piece of information to update the system. That information is, by functional and efficiency-driven necessity, a real number.
 
+### P.6.4 Symmetry as an Emergent Consequence of Efficiency
+
+The Principle of Physical Instantiation provides a powerful lens through which to understand the origin of symmetry in physical law. In the standard view, symmetries are often treated as fundamental, axiomatic principles. The PU framework inverts this, proposing that **symmetry is not a fundamental postulate but an emergent, and often inevitable, consequence of resource optimization.**
+
+The core of the argument lies in the structure of the PCE Potential, $V(x) = V_{cost} - V_{benefit}$. A symmetric state is, by its nature, a state of lower complexity and higher efficiency.
+
+1.  **Symmetry as the Low-Cost Solution:** A symmetric configuration is inherently simpler and requires less information to describe. In the language of the framework, it has a lower **Predictive Physical Complexity ($C_P$)**. This translates directly to a lower operational cost rate ($R(C)$) and, as rigorously demonstrated in the case of geometric regularity (Appendix C), a lower propagation cost ($V_{prop}$) for maintaining predictive coherence. Therefore, a symmetric state represents a low-energy, low-cost configuration that minimizes the $V_{cost}$ term in the PCE potential. It is the natural "ground state" or "vacuum" that the system will relax into unless there is a compelling predictive benefit to do otherwise.
+
+2.  **Asymmetry as a High-Benefit Investment:** If symmetry is the low-cost default, then any observed asymmetry or broken symmetry must be justified by a significant predictive benefit. The system will only bear the higher complexity and operational costs of an asymmetric state if doing so unlocks a sufficiently large increase in the $V_{benefit}$ term. The emergence of the electroweak scale (Appendix T) is the canonical example: the universe pays the cost of breaking the electroweak symmetry because the resulting universe—with massive particles, stable atoms, and complex chemistry—offers an immeasurably greater predictive utility than the symmetric, massless state.
+
+The PCE-Attractor (Definition 15a) is the ultimate expression of this principle. It is a state of maximal symmetry (e.g., a flat QFI spectrum) precisely because that symmetry corresponds to the most robust and efficient operational configuration, allowing for the parameter-free predictions of fundamental constants.
+
+The symmetries of physical law are not axioms to be assumed but are the indelible signatures of a universe optimizing its own existence, while its broken symmetries are the necessary price paid for a reality rich enough to be known.
+
 ## P.7 PU as a Transcendental Framework for Physics
 
 Immanuel Kant's transcendental idealism sought to identify the *a priori* conditions for the possibility of human experience (e.g., space, time, causality) [Kant 1781]. The PU framework can be seen as a generalization and operationalization of this project.
