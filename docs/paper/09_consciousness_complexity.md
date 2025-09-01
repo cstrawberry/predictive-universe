@@ -158,7 +158,7 @@ $$
 
 *Corollary (all‑orders normalization & positivity; linearized form).* Writing $K(E_i):=\tfrac{d}{d\varepsilon}\big|_{\varepsilon=0}\Lambda_\varepsilon^*(E_i)$ gives $\sum_i K(E_i)=\mathcal L^*(I)=0$.
 
-**Proposition 17 (CTB generator semigroup).** For $L_S(\rho)=\alpha(\sigma-\rho)$ with $\sigma\ge0$, $\mathrm{tr}\,\sigma=1$ and $\alpha\ge0$, the semigroup $T_t:=e^{tL_S}$ acts as
+**CTB generator semigroup.** For $L_S(\rho)=\alpha(\sigma-\rho)$ with $\sigma\ge0$, $\mathrm{tr}\,\sigma=1$ and $\alpha\ge0$, the semigroup $T_t:=e^{tL_S}$ acts as
 $$
 T_t(\rho)=e^{-\alpha t}\,\rho+\big(1-e^{-\alpha t}\big)\sigma,
 $$
