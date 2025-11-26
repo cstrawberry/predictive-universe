@@ -687,16 +687,15 @@ None exhibit multi-layered structure with each factorization mapping to independ
 
 **Remark Z.7b (Unification of Abstract and Physical at M = 24).** The number 24 serves as the unique meeting point where abstract mathematical structure and physical information structure coincide:
 
-| Domain | Mathematical (Abstract) | Physical (Operational) |
-|--------|-------------------------|------------------------|
-| **Origin** | Pure mathematics | Quantum information theory |
-| **24 appears as** | Modular weight (η²⁴), Leech lattice dimension, Ramanujan τ-function support | QFI mode count (2ab), error correction channels (Golay [24,12,8]), kissing number K(4) |
-| **Selection principle** | Number-theoretic optimality | PCE optimization |
-| **Why 24** | Unique weight for cusp forms with integer coefficients | Unique solution to $M_{\mathrm{int}} = K(D)$ |
+| Domain | Mathematical | Physical |
+|--------|-------------|----------|
+| **24 appears as** | Modular weight (η²⁴), Leech lattice dimension, Ramanujan τ-function support | QFI mode count (2ab), Golay code [24,12,8], kissing number K(4) |
+| **Selection principle** | Uniqueness under consistency constraints | Efficiency under resource constraints |
+| **Why 24** | Unique weight for cusp forms with integer Fourier coefficients | Unique solution to $M_{\mathrm{int}} = K(D)$ |
 
-This convergence is not coincidental. The abstract structures (modular forms, exceptional lattices) encode optimal solutions to packing and symmetry problems that pure mathematicians discovered through internal consistency requirements. The physical structures (QFI spectrum, channel capacity) encode optimal solutions to information-processing problems that PCE selects through resource efficiency. That both arrive at 24 reflects a deeper unity: **mathematical optimality and physical optimality are the same constraint viewed from different perspectives**.
+This convergence is not coincidental. Predictionism (Section P.3.4) grounds mathematics in the Cogito: binary verification yields Boolean operations, which yield universal computation (Theorem A.0.1). Mathematics is thus the operational structure of prediction—the explicit articulation of what predictors implicitly do. Physical structures emerge from the same foundation through thermodynamic instantiation (PPI, Definition P.6.2), with PCE selecting for resource efficiency. That both domains arrive at 24 reflects a deeper unity: **mathematical proof and physical law are the same predictive activity viewed at different levels of abstraction**.
 
-This resolves Wigner's puzzle regarding the "unreasonable effectiveness of mathematics" (see Appendix P, Section P.7.1): mathematics is effective because it studies optimal structures, and physics instantiates optimal structures under PCE. The number 24 is where these two notions of optimality demonstrably coincide.
+This resolves Wigner's puzzle (Appendix P, Section P.7.1). Mathematicians exploring computable structures through proof discover those satisfying extremal optimization—modular forms, exceptional lattices, perfect codes. PCE, selecting structures through thermodynamic competition, converges on the same extrema. Mathematics articulates what prediction *can* do in principle; physics specifies what prediction *does* do under finite resources. At M = 24, their identity becomes explicit: one optimization problem, approached from different directions, yielding the same answer.
 
 ---
 
@@ -1765,7 +1764,8 @@ $$
 \ell_{\mathrm{trans}} \sim K(D) \cdot \delta = 24\delta,
 $$
 beyond which local packing irregularities are washed out and the effective continuum description becomes accurate.
----
+
+
 
 ### Z.32.5 Falsifiable Prediction
 

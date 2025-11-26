@@ -357,13 +357,44 @@ Immanuel Kant's transcendental idealism sought to identify the *a priori* condit
 
 Instead of starting with the structure of human cognition, it starts with the more fundamental and universal structure of a predictive system. It derives the same key necessities—space, time, causality—but does so from the single, simpler foundation of prediction. It then goes further, showing how these necessities, when implemented under physical resource constraints (PCE), give rise to the specific mathematical formalisms of quantum mechanics and general relativity. The PU framework is thus a transcendental framework for physics itself, seeking the conditions for the possibility of a universe that can be known (i.e., predicted).
 
+
 ### P.7.1 Resolution of Wigner's Puzzle
 
-Eugene Wigner's essay "The Unreasonable Effectiveness of Mathematics in the Natural Sciences" (1960) posed a foundational question: why should abstract mathematical structures, developed through pure reasoning, so precisely describe physical reality? The traditional response—that this correspondence is simply how nature happens to be—provides no explanation.
+The Principle of Physical Instantiation (Section P.6) established that physical laws are thermodynamically optimal embodiments of logical necessities derived from prediction. This principle now resolves a foundational question in the philosophy of science.
 
-The PU framework resolves this puzzle through the mode-channel correspondence established in Appendix Z (Theorem Z.10). The identity $M_{\mathrm{int}} = K(D)$ demonstrates that internal information structure (the domain of mathematics) and external spatial structure (the domain of physics) are not mysteriously aligned but are dual aspects of the same PCE-optimized configuration. The 24 QFI modes arising from quantum information geometry equal the 24 spatial channels permitted by kissing geometry because both constraints emerge from the same efficiency principle.
+Eugene Wigner's essay "The Unreasonable Effectiveness of Mathematics in the Natural Sciences" (1960) posed a deep puzzle: why should abstract mathematical structures, developed through pure reasoning, so precisely describe physical reality? The traditional response—that this correspondence is simply how nature happens to be—provides no explanation.
 
-Mathematics describes physics because both are constrained by PCE. Abstract mathematical structures satisfying optimization criteria—sphere packing density, error-correction capacity, modular invariance—necessarily correspond to physical structures satisfying the same criteria. The "unreasonable effectiveness" becomes a reasonable inevitability: any mathematical structure violating PCE optimality lacks physical instantiation, while any physical structure violating it is eliminated by resource competition. The correspondence is not a happy accident but a selection effect imposed by the thermodynamics of prediction.
+The PU framework dissolves this puzzle by showing that mathematics and physics share a common foundation in prediction, constrained by the same optimization principle.
+
+**Mathematics as the Operational Structure of Prediction**
+
+Predictionism (Section P.3.4, Appendix A.0.2) grounds mathematics in the certainty of the Cogito. The logical structures underlying mathematics—bivalence, Boolean operations, the law of non-contradiction—are not arbitrary axioms but necessary features of verification:
+
+1. **Binary Verification:** Every verification yields a definite outcome—prediction confirmed or disconfirmed. Let $V(S) \in \{0,1\}$ denote this outcome for statement $S$. This binary structure is intrinsic to verification: the Cogito's self-verification cannot be partial or ambiguous.
+
+2. **Boolean Operations:** From this binary foundation, logical operations emerge operationally. Negation distinguishes confirmed from disconfirmed: $V(\neg S) = 1 - V(S)$. Conjunction arises from sequential verification: $V(S_1 \land S_2) = \min(V(S_1), V(S_2))$. Disjunction arises from branching: $V(S_1 \lor S_2) = \max(V(S_1), V(S_2))$.
+
+3. **Universal Computation:** Since $\{\text{NOT}, \text{AND}, \text{OR}\}$ is functionally complete [Post 1921], any system capable of the predictive cycle possesses the structural capacity for universal computation (Theorem A.0.1) and Property R (Corollary A.0.1).
+
+Mathematics thus inherits the indubitability of the Cogito. Its structures are not discovered in some Platonic realm but are *generated* by the operational requirements of prediction itself.
+
+The Prediction Optimization Problem (POP, Definition 5) drives all predictive systems toward maximal predictive accuracy under resource constraints. A predictor must distinguish states, compose operations, recognize patterns, and optimize under constraints. These activities *are* the operations of logic, combinatorics, algebra, and analysis. Mathematics is the explicit articulation of what the predictor implicitly does. When mathematicians prove theorems, they are predictors mapping the territory that prediction itself generates.
+
+**Physics as Thermodynamic Instantiation**
+
+The Principle of Physical Instantiation (PPI, Definition P.6.2) completes the bridge: physical laws are the thermodynamically optimal embodiment of the logical necessities derived from prediction. Quantum mechanics instantiates self-referential logic under irreducible cost ($\varepsilon \geq \ln 2$). Gauge theory instantiates coherence under bandwidth constraints. General relativity instantiates geometric consistency under thermodynamic equilibrium.
+
+Where mathematics articulates what prediction *can* do in principle, physics specifies what prediction *does* do under finite resources. 
+
+**Convergence at M = 24**
+
+The mode-channel correspondence (Theorem Z.10) makes this unity explicit. The number 24 appears in pure mathematics—as the modular weight of $\eta^{24}$, the dimension of the Leech lattice, the support of the Ramanujan $\tau$-function—because mathematicians, exploring computable structures through proof, identified those satisfying extremal optimization conditions. The same number appears in physics—as QFI mode count, Golay code length, kissing number $K(4)$—because PCE, selecting structures through thermodynamic competition, converges on the same extrema.
+
+Both processes solve the same problem: finding structures optimal for prediction under finite resources. They arrive at the same answer because they *are* the same optimization, approached from different directions. 
+
+The "unreasonable effectiveness" dissolves once the common foundation is recognized. Mathematics emerges from prediction as the articulation of its operational structure; physics emerges from prediction as its thermodynamic instantiation. The correspondence between them is the correspondence of a single activity with itself, viewed at different levels of abstraction.
+
+Wigner asked why the language of mathematics is appropriate for physics. The framework's answer: both *are* the language of prediction—one expressing what prediction can do, the other expressing what prediction does do under resource constraints—and both are constrained by PCE to select the same optimal structures. The effectiveness is not unreasonable but inevitable: mathematical logic is imbued in the predictor, and physics is the predictor's embodied operation.
 
 ### P.7.2 The Complete Derivation Chain
 
