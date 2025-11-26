@@ -97,69 +97,37 @@ T_{dS}=\frac{\hbar \mathbf{c} \sqrt{\Lambda/3}}{2\pi k_{B}}.
 \tag{H.2}
 $$
 
-#### H.4.2 Energy-matching hypothesis
+#### H.4.2 Crossover Scale from Information Resolution
 
- **Hypothesis H.1** The empirical acceleration scale $g_{0}$ represents a transition point where baryonic energy scales become comparable to the de Sitter vacuum thermal energy scale associated with the cosmological constant $\Lambda$. Specifically, the characteristic energy scale of baryonic matter (represented by proton mass $m_p$ and its Compton wavelength $\lambda_p$) in the transition regime is proportional to the de Sitter vacuum thermal energy:
- $$
- m_{p}g_{0}\,\lambda_{p}\;\simeq\;\eta'\,k_{B}T_{dS},
- \tag{H.3}
- $$
- where $m_{p}$ is the proton mass, $\lambda_{p}=\hbar/(m_{p}c)$ its Compton wavelength, and $\eta'$ is a dimensionless $\mathcal O(1)$ efficiency factor capturing details of the interaction between baryonic structure and the vacuum effects at this scale.
+**Proposition H.1 (Acceleration Scale from Information Resolution).**
 
-#### H.4.3 Closed-form expression
+If the MPU network's parameter relaxation is triggered when local information gradients become indistinguishable from cosmic vacuum fluctuations—operationally, when the local Unruh temperature drops to the de Sitter temperature (as motivated in Appendix I, Section I.5.1)—then the crossover acceleration scale is:
+$$
+a_0 = c^2\sqrt{\frac{\Lambda}{3}}
+\tag{H.3}
+$$
 
-Combining Equation (H.2) for $T_{dS}$ and Equation (H.3) from Hypothesis H.1 allows us to express $g_0$ in terms of fundamental constants and $\Lambda$.
-The standard relationship $T_{dS} = \frac{\hbar a}{2\pi c k_B}$ relates temperature to acceleration. For de Sitter space, the relevant acceleration is related to $c^2 \sqrt{\Lambda/3}$. So $T_{dS} = \frac{\hbar c^2 \sqrt{\Lambda/3}}{2\pi c k_B} = \frac{\hbar c \sqrt{\Lambda/3}}{2\pi k_B}$, which matches Equation (H.2).
-The energy matching hypothesis (H.3) is dimensionally consistent, as both sides have units of Energy $[E]$.
-We substitute the expression for $T_{dS}$ (H.2) and $\lambda_p = \hbar/(m_p c)$ into the hypothesis (H.3):
+The empirical MOND/RAR scale $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ is related by an efficiency factor:
 $$
-m_p g_0 \left(\frac{\hbar}{m_p c}\right) \simeq \eta' k_B \left(\frac{\hbar c \sqrt{\Lambda/3}}{2\pi k_B}\right).
-$$
-Simplifying the terms:
-$$
-g_0 \frac{\hbar}{c} \simeq \eta' \frac{\hbar c \sqrt{\Lambda/3}}{2\pi}.
-$$
-Solving for $g_0$:
-$$
-g_0 \simeq \eta' \frac{c^2 \sqrt{\Lambda/3}}{2\pi}.
-$$
-$$
-g_{0}\simeq\eta'\,\frac{c^{2}}{2\pi}\sqrt{\frac{\Lambda}{3}}.
+g_0 = \eta' \cdot a_0 = \eta' \cdot c^2\sqrt{\frac{\Lambda}{3}}
 \tag{H.4}
 $$
+where $\eta'$ encapsulates the precise operational definition of the resolution threshold, non-linear response coefficients, and network geometry factors.
 
-**Theorem H.1 (Acceleration Scale from $\Lambda$).**
-If Hypothesis H.1 holds, the empirical acceleration scale is given by:
-$$
-g_{0}=\eta'\,\frac{c^{2}}{2\pi}\sqrt{\frac{\Lambda}{3}}.
-$$
+#### H.4.3 Numerical estimate
 
-**Remark H.1** Writing $H_{\Lambda}=c\sqrt{\Lambda/3}$ (the de Sitter Hubble parameter) yields $g_{0}=\eta' cH_{\Lambda}/(2\pi)$. Since current cosmological measurements suggest $H_{\Lambda}\approx H_{0}$ (the present-day Hubble constant), this relation implies $g_{0}\sim cH_{0}$.
-
-#### H.4.4 Numerical estimate
-
-Using the observed value of the cosmological constant $\Lambda \approx 1.10 \times 10^{-52}\,\mathrm{m}^{-2}$ (**from Planck 2018 results, for example**), $c \approx 3.00 \times 10^8 \text{ m/s}$, and $\sqrt{1/3} \approx 0.577$:
+Using $\Lambda \approx 1.1 \times 10^{-52}$ m$^{-2}$ [Planck 2018] and $c \approx 3.00 \times 10^8$ m/s:
 $$
-\sqrt{\frac{\Lambda}{3}} \approx \sqrt{\frac{1.10 \times 10^{-52}\,\mathrm{m}^{-2}}{3}} \approx \sqrt{0.367 \times 10^{-52}\,\mathrm{m}^{-2}} \approx 0.606 \times 10^{-26}\,\mathrm{m}^{-1}
-$$
-$$
-g_{0}\simeq\eta'\,\frac{(3.00\times10^8\,\mathrm{m/s})^{2}}{2\pi}\,(0.606\times10^{-26}\,\mathrm{m^{-1}})
-$$
-$$
-g_{0}\simeq\eta'\,\frac{9.00\times10^{16}\,\mathrm{m^2/s^2}}{6.28}\,(0.606\times10^{-26}\,\mathrm{m^{-1}})
-$$
-$$
-g_{0}\simeq\eta'\,(1.43\times10^{16}\,\mathrm{m^2/s^2})\,(0.606\times10^{-26}\,\mathrm{m^{-1}})
-$$
-$$
-g_{0}\simeq\eta'\,(8.68\times10^{-11})\;\mathrm{m\,s^{-2}}.
+a_0 = (3.00 \times 10^8)^2 \cdot \sqrt{\frac{1.1 \times 10^{-52}}{3}} \approx 5.4 \times 10^{-10} \text{ m/s}^2
 \tag{H.5}
 $$
 
-Taking $\eta'=1.38$ reproduces the empirically observed value $g_{0}\simeq1.20\times10^{-10}\,\mathrm{m\,s^{-2}}$ used in phenomenological models (e.g., MOND [Milgrom 1983], or the Radial Acceleration Relation [McGaugh et al. 2016]).
+Comparison with $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ gives $\eta' \approx 0.22$.
 
- **Corollary H.1 (Parameter-Locked Gravity).**
- If Theorem H.1 holds, the scale-dependent gravity model of Appendix I has no free acceleration parameter: $g_{0}$ is fixed by the cosmological constant $\Lambda$ via Equation (H.4) and the efficiency factor $\eta'$.
+**Remark H.1.** Writing $H_\Lambda = c\sqrt{\Lambda/3}$ (the de Sitter Hubble parameter) yields $a_0 = cH_\Lambda$. Since $H_\Lambda \approx H_0$, this implies $a_0 \sim cH_0$, connecting the MOND scale to the Hubble scale.
+
+**Corollary H.1 (Parameter-Locked Gravity).**
+Under Proposition H.1, the scale-dependent gravity model of Appendix I has its transition scale determined by the cosmological constant, with only the efficiency factor $\eta'$ as phenomenological input.
 
 ## H.5 Conclusion
 

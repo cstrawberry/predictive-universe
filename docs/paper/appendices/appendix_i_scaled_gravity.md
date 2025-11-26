@@ -30,7 +30,7 @@ $$
 $$
 As complexity $\bar C_{\mathrm{agg}}$ increases, the marginal predictive gain $\partial PP/\partial C$ decreases (diminishing returns, $\partial^2 PP/\partial C^2 < 0$), while the marginal resource costs ($R', R_I'$) generally increase or remain non-negative ($R'' \ge 0$, $R_I'' \propto -1/C^2 < 0$ for $C>K_0$, but total marginal cost typically non-decreasing). This creates a balance point.
 
-**Proposition I.1 (Saturation of Aggregate Complexity).**
+**Proposition I.2 (Saturation of Aggregate Complexity).**
 Given the diminishing returns in predictive performance from increasing complexity ($\partial^2 PP/\partial C^2 < 0$) and the increasing or non-decreasing marginal costs ($R' \ge 0, R_I' > 0$ for $C>K_0$), Equation (I.2) necessarily admits a finite optimal complexity value $\bar C_{\mathrm{agg,sat}}$ beyond which additional complexity investment is disfavoured by PCE. This saturation level depends on the environment and the perceived predictive difficulty $\hat C_{\mathrm{target}}$.
 
 *Proof:* The marginal benefit term $\Gamma_0 (\partial PP/\partial C)$ decreases from a finite value towards zero as $C \to \infty$ (Equation 25). The marginal cost term $\lambda R' + R_I'$ is positive for $C>K_0$ and generally non-decreasing with $C$ (Definition 3). Thus, there must exist a finite complexity $C^*$ where the decreasing benefit curve intersects the increasing or non-decreasing cost curve. This intersection point represents the optimal complexity allocation $\bar C_{\mathrm{agg,sat}}$.
@@ -51,12 +51,57 @@ When the MPU network in sparse regions saturates at a lower complexity level $\b
 
 These parameter variations, $\delta(R)$ increasing and $C_{\max}(R)$ decreasing in sparse, large-scale regions ($R \gg L_0$), combine to raise the factor $\eta\delta^2/C_{\max}$ in Equation (I.1).
 
-### **I.5.1 Derivation of Crossover Behavior from PCE Optimization**
+**I.5.1 Crossover Scale from Information Resolution Limits**
 
-The parameter relaxation described in Section I.5 implies that the MPU network's equilibrium structure, and thus the value of the emergent gravitational constant $G$, depends on the local information environment, which we proxy by the baryonic matter density $\rho_b$. We can formalize this by modeling the local contribution to the global PCE Potential from the network's structural parameters, $V_{struct}(\delta, C_{max}; \rho_b)$. This potential balances the cost of maintaining the network's infrastructure against the predictive benefit it provides.
+The parameter relaxation described in Section I.5 implies that the MPU network's equilibrium structure depends on the local information environment. We derive the transition scale $a_0$ from the resolution limits of the MPU in the cosmic vacuum.
+
+**Proposition I.2 (Information Resolution Threshold).**
+
+If the MPU network relaxes its parameters when the local environmental information density drops below the thermodynamic threshold required to distinguish a predictive gradient against the vacuum background, then the crossover acceleration is uniquely determined by the cosmological constant.
+
+**Physical Setup:**
+
+**1. Cosmic Resolution Floor:** In a universe dominated by cosmological constant $\Lambda$, the de Sitter horizon defines a minimum resolvable energy quantum. The associated de Sitter temperature is [Gibbons & Hawking 1977]:
+$$
+T_{dS} = \frac{\hbar c}{2\pi k_B}\sqrt{\frac{\Lambda}{3}}
+\tag{I.3.1}
+$$
+
+**2. Local Gradient Detection:** An MPU experiencing proper acceleration $a$ behaves as a thermal detector at Unruh temperature [Unruh 1976]:
+$$
+T_U(a) = \frac{\hbar a}{2\pi c k_B}
+\tag{I.3.2}
+$$
+
+**The Crossover Criterion:** Parameter relaxation is triggered when the local Unruh temperature drops to the cosmic de Sitter temperature, rendering local gradients indistinguishable from vacuum fluctuations. Setting $T_U(a_0) = T_{dS}$:
+$$
+\frac{\hbar a_0}{2\pi c k_B} = \frac{\hbar c}{2\pi k_B}\sqrt{\frac{\Lambda}{3}}
+$$
+$$
+\boxed{a_0 = c^2\sqrt{\frac{\Lambda}{3}}}
+\tag{I.3.3}
+$$
+
+**Physical Interpretation:**
+- For $a \gg a_0$: $T_U \gg T_{dS}$, local gradients detectable $\to$ high-fidelity channels $\to$ $G \approx G_0$
+- For $a \ll a_0$: $T_U \ll T_{dS}$, gradients masked by cosmic noise $\to$ channel relaxation $\to$ $G$ increases
+
+**Numerical Estimate:** Using $\Lambda \approx 1.1 \times 10^{-52}$ m$^{-2}$ [Planck 2018]:
+$$
+a_0 \approx 5.4 \times 10^{-10} \text{ m/s}^2
+\tag{I.3.4}
+$$
+
+**Connection to Empirical Scale:** The relationship to the empirical MOND scale $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ involves an efficiency factor $\eta' \approx 0.22$ (see Appendix H, Proposition H.1) encapsulating the precise threshold definition and network response coefficients.
+
+**Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The remaining phenomenological input is the $\mathcal{O}(1)$ efficiency factor $\eta'$.
+
+---
+
+The PCE-driven relaxation of network parameters can be formalized by modeling the local contribution to the global PCE Potential:
 $$
 V_{struct}(\delta, C_{max}; \rho_b) = V_{cost}(\delta, C_{max}) - V_{benefit}(\delta, C_{max}; \rho_b)
-\tag{I.3.1}
+\tag{I.3.5}
 $$
 The system dynamically adjusts its effective local parameters $\delta$ and $C_{max}$ to minimize this potential.
 
@@ -171,7 +216,7 @@ The scale-dependent gravity framework derived from PU principles leads to severa
 A direct test of the scale-dependent $G(R)$ model is to fit it to observed galaxy rotation curves. The SPARC database [Lelli et al. 2016], providing high-quality rotation curves and detailed baryonic mass models for 152 disk galaxies, offers an ideal dataset. A full comparison requires:
 
 *   Accurate baryonic mass models for each galaxy, requiring estimates of stellar mass-to-light ratios $\Upsilon_\ast$.
-**Theorem I.RC.1 (Well-posed generalized Poisson law).** For a local energy functional of the form
+**Theorem I.6 (Well-posed generalized Poisson law).** For a local energy functional of the form
 $$
 \mathcal E[\Phi]=\int_\Omega \left[ -\frac{1}{8\pi G}\Psi(|\nabla\Phi|^2)-\rho\,\Phi\right]\,d^3x,
 $$
@@ -181,7 +226,7 @@ $$
 $$
 Under these conditions, the generalized Poisson equation admits a unique weak solution for suitable boundary data (e.g., Dirichlet) [Minty 1962; Evans 2010].
 
-**Theorem I.RC.2 (Flat-curve asymptotics).** For a point mass $M$, if the response function $\mu(s)$ has the asymptotic behavior $\mu(s) \sim s/a_0$ as $s\to0^+$ for some characteristic acceleration $a_0$, then the gravitational field strength $g(r)=|\nabla\Phi|$ and circular velocity $v_{\rm circ}(r)$ satisfy
+**Theorem I.7 (Flat-curve asymptotics).** For a point mass $M$, if the response function $\mu(s)$ has the asymptotic behavior $\mu(s) \sim s/a_0$ as $s\to0^+$ for some characteristic acceleration $a_0$, then the gravitational field strength $g(r)=|\nabla\Phi|$ and circular velocity $v_{\rm circ}(r)$ satisfy
 $$
 g(r)\sim \frac{\sqrt{GMa_0}}{r},\qquad v_{\rm circ}^4(r)\sim GMa_0.
 $$

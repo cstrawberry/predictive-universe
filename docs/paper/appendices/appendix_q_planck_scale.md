@@ -4,7 +4,7 @@
 
 This appendix provides an *ab initio* derivation of the quantitative relationship between the emergent Planck length `L_P` and the intrinsic microscopic spacing `δ` of the MPU network. The derivation proceeds by constructing a global PCE Potential for the MPU network vacuum and finding the unique, stable equilibrium state that minimizes it. This equilibrium is then shown to be self-consistent with the framework's foundational geometric and information-theoretic identities. This derivation is a key component of the framework's ability to predict fundamental constants from first principles.
 
-The derivation begins with the rigorous relationship between the emergent gravitational constant `G` and the microscopic network parameters, as rigorously established in **Appendix E** (Theorem E.4, Equation E.9):
+The derivation begins with the rigorous relationship between the emergent gravitational constant `G` and the microscopic network parameters, as rigorously established in **Appendix E** (Theorem E.6):
 $$
 G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}}
 \tag{Q.1}
@@ -37,17 +37,17 @@ $$
     V_{packing}(δ) = \frac{k_1}{δ^4}
     \tag{Q.5}
     $$
-2.  **Correlation Cost `V_corr`:** The resource cost of managing correlations and performing error correction to ensure reliable information channels. Fully independent channels (`χ=1`) are the baseline (zero cost), while introducing correlations (`χ<1`) for error correction incurs a complexity cost. This cost is expected to be convex near `χ=1` and is mitigated by a larger available channel capacity `C_max`. The simplest convex model is:
+1.  **Correlation Cost `V_corr`:** The resource cost of managing correlations and performing error correction to ensure reliable information channels. Fully independent channels (`χ=1`) are the baseline (zero cost), while introducing correlations (`χ<1`) for error correction incurs a complexity cost. This cost is expected to be convex near `χ=1` and is mitigated by a larger available channel capacity `C_max`. The simplest convex model is:
 $$
     V_{corr}(χ, C_{max}) = \frac{k_2 (1 − χ)^2}{C_{max}}
     \tag{Q.6}
     $$
-3.  **Geometric Regularity Cost `V_geom`:** As established by Theorem 43, PCE strongly favors regular geometries. We model this with a potential that has a unique minimum at `η=1`, representing an isotropic, impedance-matched lattice:
+1.  **Geometric Regularity Cost `V_geom`:** As established by Theorem 43, PCE strongly favors regular geometries. We model this with a potential that has a unique minimum at `η=1`, representing an isotropic, impedance-matched lattice:
 $$
     V_{geom}(η) = k_4 ( η + η^{-1} − 2 )
     \tag{Q.7}
     $$
-4.  **Predictive Utility `V_utility`:** The benefit derived from the network's information processing capacity. This is proportional to the surface density of independent channels (`σ_link ≈ χ / (η δ^2)`) and the net usable information capacity per channel, which is the raw capacity `C_max` minus the irreducible processing cost `ε`.
+1.  **Predictive Utility `V_utility`:** The benefit derived from the network's information processing capacity. This is proportional to the surface density of independent channels (`σ_link ≈ χ / (η δ^2)`) and the net usable information capacity per channel, which is the raw capacity `C_max` minus the irreducible processing cost `ε`.
 $$
     V_{utility}(δ, χ, η, C_{max}) = k_3 \left[ \frac{χ (C_{max} − ε)}{η δ^2} \right]
     \tag{Q.8}

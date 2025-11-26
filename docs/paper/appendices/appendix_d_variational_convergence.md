@@ -194,7 +194,7 @@ We use stochastic Lyapunov methods, common in the analysis of stochastic approxi
 ### D.6.1 Assumptions for Convergence
 
 We make standard technical assumptions required for the convergence theorems, justifying them from the physical principles of the PU framework.
-*   **(A1) Potential Properties:** \$V(x)\$ is twice continuously differentiable (\$C^2\$), bounded below on the admissible state space \$\mathcal{X}*{adm}\$. We assume \$V(x)\$ is coercive, meaning \$V(x) \to \infty\$ as \$x\$ approaches the boundary of \$\mathcal{X}*{adm}\$ or as some norm \$|x| \to \infty\$. *Physical Justification:* The \$C^2\$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms (\$V\_{op}, V\_{prop}\$) are expected to grow super‑linearly with complexity and network size (e.g., \$R(C) \propto C^{\gamma\_p}\$ with \$\gamma\_p > 1\$), while the benefit term (\$V\_{benefit}\$) saturates (due to \$PP < \beta\$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
+*   **(A1) Potential Properties:** \$V(x)\$ is twice continuously differentiable (\$C^2\$), bounded below on the admissible state space \$\mathcal{X}*{adm}\$. We assume \$V(x)\$ is coercive, meaning \$V(x) \to \infty\$ as \$x\$ approaches the boundary of \$\mathcal{X}*{adm}\$ or as some norm \$|x| \to \infty\$. *Physical Justification:* The \$C^2\$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.7). Coercivity is physically plausible because the resource cost terms (\$V\_{op}, V\_{prop}\$) are expected to grow super‑linearly with complexity and network size (e.g., \$R(C) \propto C^{\gamma\_p}\$ with \$\gamma\_p > 1\$), while the benefit term (\$V\_{benefit}\$) saturates (due to \$PP < \beta\$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
 *   **(A2) Rate Matrix Bounds:** $\eta(x)$ is symmetric, and its eigenvalues are uniformly bounded above and below: $0 < \eta_{min} \le \lambda(\eta(x)) \le \eta_{max} < \infty$ for all $x \in \mathcal{X}_{adm}$. The adaptation process has a finite, non-zero rate.
 *   **(A3) Diffusion Bounds:** $D(x)$ is positive semi-definite, and its trace (representing total noise power) is uniformly bounded: $\text{Tr}(D(x)) \le D_{max} < \infty$.
 *   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
@@ -203,7 +203,7 @@ We make standard technical assumptions required for the convergence theorems, ju
 
 ### D.6.2 Lyapunov Analysis
 
-**Lemma D.5 (Stochastic Lyapunov Property of $V(x)$).**
+**Lemma D.7 (Stochastic Lyapunov Property of $V(x)$).**
 Under assumptions (A1)-(A5), the PCE Potential $V(x)$ serves as a stochastic Lyapunov function for the dynamics (Equation D.8). Applying Ito's formula to $V(x(t))$ yields the expected instantaneous rate of change (the infinitesimal generator $\mathcal{L}V$ applied to $V$):
 $$
 \mathcal{L}V(x) = \lim_{\Delta t \to 0} \frac{\mathbb{E}[V(x(t+\Delta t)) - V(x(t)) | x(t)=x]}{\Delta t}
@@ -225,7 +225,7 @@ where $C_{noise} = \sup_{x \in \mathcal{K}} |\text{Tr}(D(x) \nabla^2 V(x))|$ is 
 
 ### D.6.3 Characterization of the Critical Set $\mathcal{E}_{*}$
 
-**Definition D.4 (Critical Set $\mathcal{E}_{*}$).**
+**Definition D.6 (Critical Set $\mathcal{E}_{*}$).**
 The critical set $\mathcal{E}_{*}$ consists of all configurations $x^* \in \mathcal{X}_{adm}$ where the deterministic drift term vanishes:
 $$
 \mathcal{E}_{*} = \{x^* \in \mathcal{X}_{adm} \mid \nabla V(x^*) = 0\}
@@ -233,7 +233,7 @@ $$
 $$
 This set includes all local minima, maxima, and saddle points of the potential $V(x)$.
 
-**Theorem D.4 (Properties of Critical Points).**
+**Theorem D.7 (Properties of Critical Points).**
 Any configuration $x^* \in \mathcal{E}_{*}$ must simultaneously satisfy:
 (i) **Complexity Alignment:** $C_P(v) = \langle \hat{C}_v \rangle_{x^*}$ for all $v$.
 (ii) **Geometric Regularity:** The network structure **$\mathcal{N}^*$** corresponding to **$x^*$** exhibits geometric regularity (**Definition C.3**).
@@ -270,7 +270,7 @@ where $\operatorname*{dist}(x, A) = \inf_{y \in A} \|x-y\|$. Furthermore, by The
 
 The results derived in this appendix provide the rigorous dynamical justification for Theorems 2 and 43, establishing them as necessary consequences of the framework's core optimization principles operating through stochastic dynamics. The convergence from the discrete MPU network to a continuum description governed by a standard action is made precise by the following theorem.
 
-**Theorem D.G3 (Γ‑limit of discrete predictive action).**
+**Theorem D.8 (Γ‑limit of discrete predictive action).**
 Let $\{(\mathcal G_\epsilon,\mu_\epsilon)\}_{\epsilon\downarrow0}$ be a family of weighted graphs with mesh $\epsilon\to0$ and discrete curvature proxies (e.g., Ollivier-Ricci on graphs or Regge curvature on triangulations) + a matter (MPU) term. Suppose:
 (i) **Equicoercivity**: $\mathcal F_\epsilon$ controls discrete second differences uniformly;
 (ii) **Locality & consistency**: the discrete curvature converges in $L^1_{\mathrm{loc}}$ to the Ricci scalar $R$;
@@ -288,100 +288,154 @@ and minimizers/critical points of $\mathcal F_\epsilon$ converge (up to subseque
 This appendix thus provides the rigorous foundation for the dynamical aspects of the Predictive Universe framework.
 
 **Theorem 2 (Dynamically Enforced Functional Correspondence - Justified):**
-The slow adaptation dynamics of the MPU network, modeled as a stochastic gradient flow minimizing the PCE Potential $V(x)$ (Equation D.8), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.4, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily satisfies the complexity alignment condition $C_P(v) = \langle\hat C_v\rangle_{x^*}$ for all $v$. This alignment is enforced physically via the observable work-cost gap feedback mechanism (Lemma D.2), which implements the necessary alignment gradient term implicitly within the operational dynamics minimizing $V(x)$ (Theorem D.1, Corollary D.2).
+The slow adaptation dynamics of the MPU network, modeled as a stochastic gradient flow minimizing the PCE Potential $V(x)$ (Equation D.8), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.7, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily satisfies the complexity alignment condition $C_P(v) = \langle\hat C_v\rangle_{x^*}$ for all $v$. This alignment is enforced physically via the observable work-cost gap feedback mechanism (Lemma D.2), which implements the necessary alignment gradient term implicitly within the operational dynamics minimizing $V(x)$ (Theorem D.1, Corollary D.2).
 
-*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.4 proves that global minima must be aligned. Theorem D.1 and Lemma D.2 establish the mechanism driving alignment within the operational potential framework.
+*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.7 proves that global minima must be aligned. Theorem D.1 and Lemma D.2 establish the mechanism driving alignment within the operational potential framework.
 
 **Theorem 43 (Dynamical Emergence of Geometric Regularity - Justified):**
-The slow adaptation dynamics of the MPU network (Equation D.8), driven by minimizing the PCE Potential $V(x)$ which inherently penalizes irregularity (Theorem D.2, Lemma D.3), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.4, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily exhibits large-scale geometric regularity (Definition C.3).
+The slow adaptation dynamics of the MPU network (Equation D.8), driven by minimizing the PCE Potential $V(x)$ which inherently penalizes irregularity (Theorem D.2, Lemma D.3), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.7, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily exhibits large-scale geometric regularity (Definition C.3).
 
-*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.4 proves that global minima must be geometrically regular. Theorem D.2 and Lemma D.3 establish how the PCE potential inherently penalizes irregularity, driving the system towards regular configurations.
+*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.7 proves that global minima must be geometrically regular. Theorem D.2 and Lemma D.3 establish how the PCE potential inherently penalizes irregularity, driving the system towards regular configurations.
 
 
+**D.8 Rigorous Convergence Analysis for Complexity Adaptation**
 
-## D.8 Detailed Analysis of Complexity Adaptation Convergence
+The complexity adaptation dynamics (Section 6.4) are driven by the Adaptation Driving Force $\Psi(C)$ (Definition 20), which acts as a gradient flow on an effective complexity potential $V_{eff}(C)$ derived from the full PCE potential $V(x)$. We provide a rigorous convergence proof with quantitative rates using standard optimization theory.
 
-While Section D.5 describes the general stochastic gradient flow for the full configuration $x(t)$ on the PCE Potential $V(x)$ (Equation D.8), and Section D.6 proves its convergence to global minima, we can provide a more focused analysis for the convergence of the crucial complexity component $C(t) = \langle \hat{C}_v \rangle(t)$. The deterministic part of its dynamics, as given by Equation (30) in Section 6.4, is $\dot{C}(t) = \eta_{adapt} \Psi(C(t))$, where $\Psi(C)$ is the Adaptation Driving Force (Definition 20). This force $\Psi(C)$ is effectively $-\frac{1}{\eta_{adapt}}\frac{\partial V_{eff}(C)}{\partial C}$ where $V_{eff}(C)$ is an effective potential for the complexity component, derived from the full PCE potential $V(x)$. We now demonstrate the convergence of these deterministic dynamics to the unique POP-optimal value $C^{\star}$ and discuss stochastic robustness.
+### D.8.1 Effective Complexity Potential and Equilibrium
 
-The deterministic dynamics for $C(t)$ are:
+**Definition D.6 (Effective Complexity Potential).** 
+The effective potential $V_{eff}(C)$ is obtained by marginalizing the full PCE potential $V(x)$ (Definition D.1) over all other degrees of freedom at their quasi-equilibrium values conditioned on complexity $C$. The deterministic complexity dynamics are:
+
 $$
-\dot{C}(t) = \eta_{adapt} \Psi(C(t))
-\quad \text{(D.13)}
+\dot{C}(t) = \eta_{adapt} \Psi(C(t)), \quad \Psi(C) = -\frac{1}{\eta_{adapt}}\frac{\partial V_{eff}(C)}{\partial C}
+\tag{D.13}
 $$
+
 where from Equation (24):
 $$
 \Psi(C) = \Gamma_0 \frac{\partial PP}{\partial C}(C) - \lambda R'(C) - R_I'(C)
 $$
 
-### D.8.1 Assumptions for Complexity Adaptation Convergence
+**Theorem D.7 (Uniqueness and Stability of Optimal Complexity).**
+Under the Dominance of Stabilizing Costs (DSC, Theorem 22), which ensures $\Psi'(C) < 0$ for all $C$ in the viable range, the effective potential $V_{eff}(C)$ is strictly convex. Consequently:
 
-We rely on the following properties, consistent with definitions established in the main text:
-*   **(A1''') Predictive Performance $PP(C)$:** (Definition 19, Theorem 19) For $C \ge C_{op}$, $PP(C)$ is $\mathcal{C}^2$, strictly increasing ($\partial PP/\partial C > 0$), and strictly concave ($\partial^2 PP/\partial C^2 < 0$).
-*   **(A2''') Physical Cost $R(C)$:** (Definition 3) For $C \ge C_{op}$, $R(C)$ is $\mathcal{C}^2$, strictly increasing ($R'(C) > 0$ for $C > C_{op}$; $R'(C_{op})$ can be taken as the right-derivative $\ge 0$), and convex ($R''(C) \ge 0$).
-*   **(A3''') Informational Cost $R_I(C)$:** (Definition 3b) For $C > K_0$ (and thus for $C \ge C_{op}$ since $C_{op} \ge K_0$), $R_I(C)$ is $\mathcal{C}^2$. It satisfies $R_I'(C) = r_I/(C \ln 2) > 0$ and $R_I''(C) = -r_I/(C^2 \ln 2) < 0$ (i.e., $R_I(C)$ is strictly concave).
+1. There exists a unique global minimum $C^\star$ satisfying $\Psi(C^\star) = 0$.
+2. This minimum is globally stable: $\Psi(C) > 0$ for $C < C^\star$ and $\Psi(C) < 0$ for $C > C^\star$.
 
-The derivative of the driving force is (from Equation 35, Section 6.5.1):
+*Proof.* The DSC condition (Theorem 22) ensures that the convexity of the physical cost $R(C)$ together with performance saturation (concave $PP(C)$) dominates any destabilizing concavity in the informational cost $R_I(C)$. From Equation (35) in Section 6.5.1:
 $$
-\Psi'(C) = \frac{d\Psi}{dC} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) - R_I''(C) = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) + \frac{r_I}{C^2 \ln 2}
+\Psi'(C) = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) + \frac{r_I}{C^2 \ln 2}
 $$
-For $\Psi(C)$ to be strictly decreasing (ensuring a unique root for $\Psi(C)=0$), we require $\Psi'(C) < 0$. This condition is:
-$$
-\Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) + \frac{r_I}{C^2 \ln 2} < 0
-$$
-This is precisely the stability condition for complexity adaptation (Theorem 22). If this stability condition holds over the relevant range of $C \ge C_{op}$, then $\Psi(C)$ is strictly decreasing and thus admits a unique root $C^{\star}$ such that:
-$$
-C^{\star} = \{C \ge C_{op} \mid \Psi(C)=0\}
-\quad \text{(D.14)}
-$$
-This $C^{\star}$ corresponds to the complexity that optimally balances marginal benefits and costs (Definition 14, Equation 18).
+DSC requires this derivative to be negative. Since $\frac{\partial^2 PP}{\partial C^2} < 0$ (strict concavity), $R''(C) \ge 0$ (convexity), and the stabilizing cost terms dominate, we have $\Psi'(C) < 0$. Strict convexity of $V_{eff}$ follows from $V''_{eff}(C) = -\eta_{adapt}\Psi'(C) > 0$. A strictly convex function on an interval has at most one critical point, which must be a global minimum. The gradient flow property of Equation (D.13) ensures trajectories flow toward this minimum from any initial condition. QED
 
-### D.8.2 Lyapunov Function for Deterministic Convergence
+### D.8.2 Polyak–Łojasiewicz Condition and Linear Convergence
 
-Consider the Lyapunov candidate function:
-$$
-\mathcal{V}_L(C) = \int_{C^{\star}}^{C} \Psi(u) du
-\quad \text{(D.15)}
-$$
-Given that $\Psi(u)$ is strictly decreasing (under the stability condition from D.8.1) and $\Psi(C^{\star})=0$:
-*   For $C > C^{\star}$, $\Psi(u) < 0$ on $(C^{\star}, C]$, thus $\mathcal{V}_L(C) < 0$.
-*   For $C < C^{\star}$ (and $C \ge C_{op}$), $\Psi(u) > 0$ on $[C, C^{\star})$, thus $\mathcal{V}_L(C) = -\int_C^{C^{\star}} \Psi(u) du < 0$.
-So, $\mathcal{V}_L(C) \le 0$, and $\mathcal{V}_L(C)=0 \iff C=C^{\star}$.
+Near the unique optimum, the strict convexity ensures a strong local gradient dominance condition that guarantees exponential convergence.
 
-Let $\widetilde{\mathcal{V}}_L(C) = -\mathcal{V}_L(C)$. Then $\widetilde{\mathcal{V}}_L(C) \ge 0$, and $\widetilde{\mathcal{V}}_L(C)=0 \iff C=C^{\star}$.
-The time derivative of $\widetilde{\mathcal{V}}_L(C)$ along trajectories of Equation (D.13) is:
-$$
-\dot{\widetilde{\mathcal{V}}}_L(C(t)) = -\frac{d\mathcal{V}_L}{dC} \dot{C}(t) = -\Psi(C(t)) \cdot \left( \eta_{adapt} \Psi(C(t)) \right)
-$$
-$$
-\dot{\widetilde{\mathcal{V}}}_L(C(t)) = -\eta_{adapt} [\Psi(C(t))]^2 \le 0
-\quad \text{(D.16)}
-$$
-Since $\eta_{adapt} > 0$, $\dot{\widetilde{\mathcal{V}}}_L(C(t))$ is zero if and only if $\Psi(C(t))=0$, which implies $C(t)=C^{\star}$. Thus, $\widetilde{\mathcal{V}}_L(C)$ is a strict Lyapunov function for the deterministic system (D.13).
+**Definition D.7 (Polyak–Łojasiewicz Inequality).**
+A function $V(C)$ satisfies the PL inequality with constant $\mu_{PL} > 0$ in a neighborhood $|C - C^\star| \le r$ if:
 
-### D.8.3 LaSalle Invariance Argument for Deterministic Global Convergence
-
-For global convergence, $\widetilde{\mathcal{V}}_L(C)$ must be radially unbounded (i.e., $\widetilde{\mathcal{V}}_L(C) \to \infty$ as $C \to C_{op}^+$ or $C \to \infty$, assuming $C^*$ lies strictly between $C_{op}$ and $\infty$). This property typically holds if $|\Psi(C)|$ does not decay too rapidly away from $C^*$. Given the forms in Definitions 3a and 3b, $R'(C)$ generally grows or is constant for large $C$, and $R_I'(C)$ diverges as $C \to K_0^+ \le C_{op}^+$. $PP'(C)$ (Equation 25) decays exponentially for large $C$. Thus, for large $C$, $\Psi(C) \approx -\lambda R'(C)$ (typically growing or constant negative), and for $C$ near $C_{op}$, $\Psi(C)$ can be positive if the performance gain term dominates the cost terms. The integral $\int |\Psi(u)|du$ is expected to diverge, making $\widetilde{\mathcal{V}}_L(C)$ radially unbounded on $[C_{op}, \infty)$.
-
-The largest invariant set contained in $\{C \ge C_{op} \mid \dot{\widetilde{\mathcal{V}}}_L(C)=0\} = \{C \ge C_{op} \mid \Psi(C)=0\}$ is the singleton $\{C^{\star}\}$ (due to the uniqueness of the root of $\Psi(C)$ under the stability condition). By LaSalle’s invariance principle [LaSalle 1960], every solution $C(t)$ of Equation (D.13) starting in $C(0) \ge C_{op}$ satisfies:
 $$
-\lim_{t\to\infty} C(t) = C^{\star}
-\quad \text{(D.17)}
+\frac{1}{2}|\nabla V(C)|^2 \ge \mu_{PL} \big(V(C) - V(C^\star)\big)
+\tag{D.14}
 $$
-The convergence is exponential because $\Psi'(C^{\star}) < 0$ (the stability condition at $C^{\star}$).
 
-### D.8.4 Stochastic Robustness
+The radius $r$ depends on the third and higher-order derivatives of $V_{eff}$; for practical purposes, we require the neighborhood to extend beyond the initial distance $|C(0) - C^\star|$ for deterministic convergence guarantees to apply.
 
-The actual complexity adaptation dynamics (a component of the full system dynamics in Equation D.8) will include stochastic noise:
+**Lemma D.7 (PL Constant from Stability).**
+In a neighborhood of $C^\star$, the effective potential satisfies the PL inequality with:
+
 $$
-dC_t = \eta_{adapt} \Psi(C_t) dt + \sigma_C(C_t, x_{other}(t)) dW_t
-\quad \text{(D.18)}
+\mu_{PL} \ge \eta_{adapt} \underline{\lambda}, \quad \text{where } \underline{\lambda} := -\Psi'(C^\star) > 0
+\tag{D.14a}
 $$
-where $dW_t$ is a Wiener process component and $\sigma_C$ is the noise intensity for the $C$ dimension, possibly depending on $C_t$ and other configuration variables $x_{other}(t)$ of the system $x(t)$.
-Standard results from stochastic approximation and control theory (e.g., Kushner & Yin 2003, particularly results concerning convergence of SDEs to minima of potential functions under suitable noise conditions) indicate that if the deterministic system (D.13) globally converges to $C^{\star}$ (as shown above), and the noise term $\sigma_C$ is appropriately bounded (e.g., not growing faster than the restoring force $|\Psi(C_t)|$ for $C_t$ far from $C^{\star}$, and ensuring sufficient excitation if multiple attractors for $\Psi$ were possible), then the stochastic recursion (D.18) will also converge to $C^{\star}$ in a suitable probabilistic sense (e.g., almost surely, or in mean square to a neighborhood of $C^{\star}$ whose size depends on noise intensity).
-For instance, under conditions like $\sup_C \sigma_C^2(C) < \infty$ and the global asymptotic stability of $C^{\star}$ for the ODE, $C_t$ converges to $C^{\star}$ almost surely. More generally, for state-dependent noise, conditions such as those discussed by Kushner & Yin (2003, Ch. 5) for stability of SDEs apply.
-If, for example, $\frac{\sigma_C^2(C)}{|\Psi(C)|} \xrightarrow{|C-C^*|\to\infty} 0$ (noise relatively weaker than drift far from equilibrium), then $C_t \xrightarrow{a.s.} C^{\star}$, and the mean squared error $\mathbb{E}[(C_t - C^{\star})^2]$ can converge, potentially as $\mathcal{O}(e^{-2\kappa t})$ for some $\kappa > 0$ related to $-\Psi'(C^{\star})$, before settling to a small variance around $C^\star$ due to persistent noise.
 
-This focused analysis using Lyapunov methods and LaSalle's principle for the deterministic part, along with standard stochastic approximation results, robustly supports the conclusion that the system dynamically drives its complexity $C(t)$ towards the unique POP-optimal value $C^{\star}$ (Definition 14), even in the presence of operational noise. This is consistent with and provides a more detailed mechanism for one aspect of the global convergence proven more generally for $V(x)$ in Section D.6.5 (Theorem D.5).
+*Proof.* By Taylor expansion near $C^\star$:
+$$
+V_{eff}(C) - V_{eff}(C^\star) \approx \frac{1}{2}V''_{eff}(C^\star)(C - C^\star)^2 = -\frac{\eta_{adapt}}{2}\Psi'(C^\star)(C - C^\star)^2
+$$
+
+The gradient satisfies:
+$$
+|\nabla V_{eff}(C)| = \eta_{adapt}|\Psi(C)| \approx \eta_{adapt}|\Psi'(C^\star)||C - C^\star|
+$$
+
+Therefore:
+$$
+\frac{|\nabla V_{eff}|^2}{V_{eff} - V_{eff}(C^\star)} \approx \frac{\eta_{adapt}^2|\Psi'(C^\star)|^2|C - C^\star|^2}{-\frac{\eta_{adapt}}{2}\Psi'(C^\star)(C - C^\star)^2} = 2\eta_{adapt}|\Psi'(C^\star)|
+$$
+
+Setting $\mu_{PL} = \eta_{adapt}\underline{\lambda}$ with $\underline{\lambda} = -\Psi'(C^\star)$ satisfies (D.14). QED
+
+### D.8.3 Convergence Theorem with Explicit Rates
+
+**Theorem D.6 (Exponential Convergence of Complexity Adaptation).**
+Consider the complexity adaptation dynamics (D.13) with initial condition $C(0)$.
+
+**Part I (Deterministic Rate):** For the deterministic flow, the distance to optimum decays exponentially:
+
+$$
+\big|C(t) - C^\star\big| \le e^{-\underline{\lambda}\,\eta_{adapt}\, t} \big|C(0) - C^\star\big|
+\tag{D.15}
+$$
+
+with rate constant $\underline{\lambda} = -\Psi'(C^\star) > 0$ guaranteed by DSC (Theorem 22).
+
+**Part II (Stochastic Rate with Noise Floor):** When the full stochastic dynamics (Equation D.8) are considered, the effective noise from ND-RID fluctuations creates a diffusion term. Defining the effective noise variance projected onto the complexity direction as:
+$$
+\sigma_{eff}^2 = \mathbb{E}\left[\left|\frac{\partial V}{\partial C}\big|_{x_{other}}\right|^2 \big| C\right] \cdot D_{CC}
+$$
+where $D_{CC}$ is the diffusion coefficient for the $C$ dimension and the expectation is over ND-RID fluctuations in other network degrees of freedom $x_{other}$. The expected potential gap decays to a noise floor:
+
+$$
+\mathbb{E}\big[V_{eff}(C_t) - V_{eff}(C^\star)\big] \le \big(1 - \underline{\lambda}\,\eta_{adapt}\big)^t \big(V_{eff}(C_0) - V_{eff}(C^\star)\big) + \frac{\eta_{adapt} \sigma_{eff}^2}{2\underline{\lambda}}
+\tag{D.16}
+$$
+
+*Proof.* 
+
+**Part I:** Under the PL inequality (D.14), standard gradient flow analysis [Polyak, USSR Comput. Math. Math. Phys. 3, 864 (1963); Karimi et al., 2016] yields:
+
+$$
+\frac{d}{dt}\big(V_{eff}(C(t)) - V_{eff}(C^\star)\big) = \nabla V_{eff} \cdot \dot{C} = -\eta_{adapt}|\nabla V_{eff}|^2 \le -2\mu_{PL}\big(V_{eff}(C) - V_{eff}(C^\star)\big)
+$$
+
+Integrating gives:
+$$
+V_{eff}(C(t)) - V_{eff}(C^\star) \le e^{-2\mu_{PL} t}\big(V_{eff}(C(0)) - V_{eff}(C^\star)\big)
+$$
+
+Using strong convexity near the minimum, we have:
+$$
+V_{eff}(C) - V_{eff}(C^\star) \ge \frac{\underline{\lambda}\,\eta_{adapt}}{2}(C - C^\star)^2
+$$
+
+Combining these bounds yields (D.15).
+
+**Part II:** The stochastic gradient descent analysis [Bottou et al., SIAM Rev. 60, 223 (2018)] shows that under PL conditions, the expected suboptimality satisfies:
+
+$$
+\mathbb{E}[V_t - V^\star] \le (1 - \eta\mu_{PL})^t(V_0 - V^\star) + \frac{\eta\sigma^2}{2\mu_{PL}}
+$$
+
+Substituting our identifications yields (D.16). The noise floor $\eta_{adapt}\sigma_{eff}^2/(2\underline{\lambda})$ represents the fundamental limit imposed by ND-RID stochasticity and cannot be eliminated by longer integration time. QED
+
+### D.8.4 Physical Interpretation
+
+**Rapid Equilibration:** The rate constant $\underline{\lambda} = -\Psi'(C^\star)$ is the "stiffness" of the complexity potential well at optimum. DSC (Theorem 22) ensures this is strictly positive and typically $\mathcal{O}(1)$ in natural units, yielding convergence timescales $\tau_{conv} \sim 1/(\underline{\lambda}\,\eta_{adapt})$ that are rapid compared to environmental evolution timescales.
+
+**Noise Floor:** The residual fluctuations $\sigma_{eff}$ arise from the underlying ND-RID irreversibility ($\varepsilon \ge \ln 2$, Theorem 31). The noise floor is typically small:
+
+$$
+\frac{\sigma_{eff}^2}{\underline{\lambda}\,\eta_{adapt}} \ll C^\star
+$$
+
+ensuring tight convergence to the optimal complexity.
+
+**Connection to Global Dynamics:** This local analysis complements the global convergence (Theorem D.5) by providing explicit rates. The global theorem ensures the system reaches a neighborhood of $C^\star$; this theorem quantifies how quickly it equilibrates within that neighborhood.
+
+The complexity adaptation is provably convergent with exponential rate $\underline{\lambda}\,\eta_{adapt}$ to a unique optimum $C^\star$, which then remains in almost-sure alignment with the true physical cost $C_P$ (Theorem 2). The residual variance is suppressed by the ND-RID noise floor, ensuring high-fidelity tracking of optimal complexity.
 
 ## D.9 Conclusion
 
@@ -389,8 +443,8 @@ This appendix has provided a rigorous analysis grounded in the variational persp
 
 1.  **Alignment (Theorem 2)** is dynamically enforced. The operational complexity proxy $\langle \hat{C}_v \rangle$ necessarily aligns with the theoretical Predictive Physical Complexity $C_P(v)$ at stable equilibria (Section D.3, Corollary D.2). This alignment is driven by minimizing $V(x)$, which implicitly penalizes misalignment via a term $V_{proxy}$ (Theorem D.1), with the crucial physical feedback provided by the observable work-cost gap $\Delta W_v$ (Lemma D.2). Quantum circuit complexity emerges as the uniquely stable operational proxy choice (Remark D.1).
 
-2.  **Geometric Regularity (Theorem 43)** emerges dynamically. The MPU network dynamics converge almost surely to configurations exhibiting geometric regularity (Section D.4, Theorem D.4). This occurs because irregularity incurs fundamental costs in propagation ($V_{prop}$) and operation ($V_{op}$) while reducing predictive benefits ($V_{benefit}$), effectively making regular configurations the global minima of the core PCE potential $V_{core}(x)$ (Lemma D.3, Theorem D.2).
+2.  **Geometric Regularity (Theorem 43)** emerges dynamically. The MPU network dynamics converge almost surely to configurations exhibiting geometric regularity (Section D.4, Theorem D.7). This occurs because irregularity incurs fundamental costs in propagation ($V_{prop}$) and operation ($V_{op}$) while reducing predictive benefits ($V_{benefit}$), effectively making regular configurations the global minima of the core PCE potential $V_{core}(x)$ (Lemma D.3, Theorem D.2).
 
-3.  **Complexity Adaptation Convergence (Section D.8):** A focused analysis of the complexity adaptation dynamics for a single component $C(t)$ (Equation D.13), driven by the Adaptation Driving Force $\Psi(C)$, confirms its convergence to the unique POP-optimal complexity $C^{\star}$ (Equation D.17). This was established using Lyapunov methods for deterministic convergence and referencing standard results for stochastic robustness (Equation D.18), providing a detailed mechanism for how individual complexity components seek their optimum within the larger PCE landscape.
+3.  **Complexity Adaptation Convergence (Section D.8):** A rigorous analysis of the complexity adaptation dynamics (Equation D.13), driven by the Adaptation Driving Force $\Psi(C)$, establishes its exponential convergence to the unique POP-optimal complexity $C^{\star}$ with explicit rate $\underline{\lambda}\,\eta_{adapt}$ (Theorem D.6). Using Polyak-Łojasiewicz conditions and stochastic gradient descent theory, we quantify both the deterministic convergence rate (Equation D.15) and the noise floor arising from ND-RID fluctuations (Equation D.16), providing a detailed mechanism for how complexity optimization occurs within the larger PCE landscape.
 
 The global convergence of the full system configuration $x(t)$ to states that are simultaneously aligned and regular is established in Section D.6.5 (via Theorem D.5), relying on stochastic Lyapunov methods applied to $V(x)$ under standard technical assumptions (A1-A6). The analysis throughout this appendix confirms that complexity alignment and geometric regularity are not ad-hoc assumptions but necessary, stable outcomes of the Predictive Universe framework's core optimization principles (POP/PCE) operating within the constrained MPU network. These results provide crucial support for the subsequent derivations of emergent spacetime and gravity.

@@ -487,7 +487,7 @@ A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 The PU framework provides a robust, multi-layered argument for the co-selection of D=4 spacetime and the Standard Model gauge group with its specific fermion content and three-generation structure. This selection is a derived consequence of minimizing the global PCE potential under the standing principles of compression efficiency and predictive invariance.
 
 1.  **Primacy of D=4 for Structural Stability and Information Efficiency:**
-    As argued in Sections G.8.2.4 and G.8.2.5, D=4 is strongly and uniquely favored by PCE. It is the dimension that robustly supports stable, complex MPU aggregates (via inverse-square force structure) and favorable network information efficiency. These factors make D=4 the unique, stable dimensional arena for a complex, predictive universe.
+    As argued in Sections G.8.2.4 and G.8.2.5, D=4 is strongly and uniquely favored by PCE. It is the dimension that robustly supports stable, complex MPU aggregates (via inverse-square force structure) and favorable network information efficiency. These factors make D=4 the unique, stable dimensional arena for a complex, predictive universe. This stability-based selection is independently confirmed by the mode-channel correspondence derived in **Appendix Z** (Theorem Z.11): the $M=24$ interface modes of the PCE-Attractor must match the kissing number $K(D)$ for optimal geometric packing, and $K(D)=24$ has the unique solution $D=4$. The convergence of these two independent derivations—one from dynamical stability, one from information-geometric correspondence—provides strong evidence that $D=4$ is multiply determined by the framework's principles.
 
 2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
     Within the stable D=4 arena, PCE selects the optimal gauge group and matter content subject to capacity and consistency constraints.
@@ -510,7 +510,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
          y_q+y_H+y_{u^c}=0,\qquad y_q-y_H+y_{d^c}=0,\qquad y_\ell-y_H+y_{e^c}=0,
           $$
 
-       **Theorem (Hypercharges fixed up to overall scale).** With one Higgs doublet $H$, impose Yukawa gauge invariance
+       **Theorem G.8.1** (Hypercharges fixed up to overall scale)** With one Higgs doublet $H$, impose Yukawa gauge invariance
        $$
        y_q+y_H+y_{u^c}=0,\qquad y_q-y_H+y_{d^c}=0,\qquad y_\ell-y_H+y_{e^c}=0,
        $$
@@ -524,12 +524,12 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
        $$
        and the cubic $U(1)^3$ anomaly vanishes identically. *Proof.* Solve the Yukawa constraints for $y_{u^c},y_{d^c},y_{e^c}$, use $3y_q+y_\ell=0$ to get $y_\ell=-3y_q$, insert into the gravitational anomaly to obtain $y_H=3y_q$, then set $a:=y_q$. ∎
 
-       *Corollary (canonical normalization).* The PCE tie‑breaker of minimal denominator complexity fixes $a=1/6$, giving $(y_q,y_H,y_{u^c},y_{d^c},y_\ell,y_{e^c})=(1/6,1/2,-2/3,1/3,-1/2,1)$.
+       **Corollary G.8.2** (canonical normalization). The PCE tie‑breaker of minimal denominator complexity fixes $a=1/6$, giving $(y_q,y_H,y_{u^c},y_{d^c},y_\ell,y_{e^c})=(1/6,1/2,-2/3,1/3,-1/2,1)$.
        
        Quantitative constraints on electroweak coupling ratios at the PCE-attractor—including a branch-specific prediction for $\sin^2\theta_W(\mu^*)$ under the cap-active alignment (Assumption W.3.A)—are derived in Appendix W (Theorem W.11; Eqs. W.3.1–W.3.3).
 
     *   **PCE Corollary – Singlet Neutrality.** Assigning non‑zero hypercharge to a pure non‑abelian singlet increases PCE cost without predictive gain; the minimum sets the hypercharge of any potential sterile right-handed neutrino to zero.
-    *   **Three Generations (Unique Minimizer).** Appendix R (Section R.3.5) shows—using PCE together with a standard MDL replication lemma—that (i) the smallest nontrivial anomaly-consistent family structure is $N=3$ with offsets $\{a,-a,0\}$, (ii) abelian “doping” is disfavored, and (iii) there exists a **non-empty open region** of PCE weights for which the global potential attains a **unique** minimum at exactly **three generations**.
+    *   **Three Generations (Unique Minimizer).** Appendix R (Proposition R.3.5) shows—using PCE together with anomaly cancellation and CP violation requirements—that (i) the smallest nontrivial anomaly-consistent family structure is $N=3$ with offsets $\{a,-a,0\}$, (ii) abelian "doping" is disfavored, and (iii) the three-generation structure is over-determined by both topological (anomaly cancellation) and geometric (E$_8$/Leech lattice) constraints (Proposition R.4.2).
 
 3.  **Confluence and Co-selection:**
     D=4 provides the stable arena; within it, the SM gauge group with its uniquely determined chiral fermion content is PCE-efficient, and the family replication uniquely selected by PCE is $N=3$.
@@ -541,7 +541,7 @@ The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yuk
 
 # Appendix G.9 Rate-Level PCE Potential and the Pathway to $\alpha_{\mathrm{em}}$
 
-This section develops the general formalism for deriving gauge couplings from a rate-level PCE potential, which balances the **power cost** of maintaining gauge coherence against the **predictive information rate** benefit it provides. This general framework is further constrained by the alphabet identities derived in **Appendix W**. The complete, parameter-free derivation of the fine-structure constant, which uses the framework's foundational constants ($d_0=8, \varepsilon=\ln 2$) to fix the spectral inputs to this program and solve for $\alpha_{\mathrm{em}}$ at the unique **PCE-Attractor** (Definition 15a), is presented in **Appendix Z**.
+This section develops the general formalism for deriving gauge couplings from a rate-level PCE potential, which balances the **power cost** of maintaining gauge coherence against the **predictive information rate** benefit it provides. This general framework is further constrained by the alphabet identities derived in **Appendix W**. The complete, parameter-free derivation of the fine-structure constant at the Thomson limit, which uses the framework's foundational constants ($d_0=8$, $\varepsilon=\ln 2$) to fix the spectral inputs to this program and solve for $\alpha^{-1} ≈ 137.036$ at the unique **PCE-Attractor** (Definition 15a), is presented in **Appendix Z**.
 
 The rate-level PCE potential for a $U(1)$ gauge coupling $u=g_e^2$ is given by:
 $$
@@ -556,7 +556,7 @@ As rigorously established in **Appendix X**, this rate-level potential and its m
 This appendix (G) has demonstrated how the Predictive Universe framework, driven by the Prediction Optimization Problem (POP, Axiom 1) and the Principle of Compression Efficiency (PCE, Definition 15), provides potential pathways for deriving fundamental structures of modern physics:
 1.  The Born probability rule (Theorem G.1.7) and the necessity of a complex Hilbert space (Theorem G.1.8) emerge from the requirement of consistent, optimal resource allocation in predictive tasks, directly linking quantum mechanical probability to PCE optimization principles.
 2.  U(1) gauge theory (electromagnetism) emerges as the minimal PCE-optimal solution for maintaining predictive coherence across the MPU network despite the local phase freedom inherent in the complex Hilbert space description (Section G.7).
-3.  A comprehensive argument (Section G.8) has been presented showing how the Standard Model gauge group $SU(3)\!\times\!SU(2)\!\times\!U(1)$ and the D=4 dimensionality of spacetime are co-selected as a unified PCE-optimal structure. This co-selection is driven by D=4's unique ability to support stable complex MPU aggregates and the Standard Model being a uniquely efficient and mathematically consistent (anomaly-free) solution within that dimensional arena. Crucially, **Appendix R** derives—via a standard MDL replication lemma—that for a **non-empty open region** of PCE weights the potential is **uniquely minimized** at exactly **three generations** of the SM fermion block.
+3.  A comprehensive argument (Section G.8) has been presented showing how the Standard Model gauge group $SU(3)\!\times\!SU(2)\!\times\!U(1)$ and the D=4 dimensionality of spacetime are co-selected as a unified PCE-optimal structure. This co-selection is driven by D=4's unique ability to support stable complex MPU aggregates and the Standard Model being a uniquely efficient and mathematically consistent (anomaly-free) solution within that dimensional arena. Crucially, **Appendix R** derives—via anomaly cancellation, CP violation requirements, and E$_8$ geometric constraints—that the potential is **uniquely minimized** at exactly **three generations** of the SM fermion block (Proposition R.3.5, Proposition R.4.2).
 4.  A rigorous, first-principles pathway for deriving the value of the fine-structure constant `α_em` has been established (**Section G.9**). The value emerges as the unique PCE-optimal equilibrium of a **rate-level potential**, balancing the thermodynamic **power cost** of maintaining U(1) coherence against the **predictive information rate** benefit it enables. This transforms the framework's principles into a complete computational program, reducing the calculation of a fundamental constant of nature to the evaluation of well-defined **operational functionals** of the MPU's baseline predictive cycle.
 
 The analysis throughout this appendix highlights the potential for PU principles to provide a unified origin for the quantum measurement framework, the gauge structure of particle interactions, and even the dimensionality of spacetime, grounding these fundamental aspects of physics in the overarching logic and resource economics of prediction. The quantitative predictions for fundamental constants derived here are further constrained and supported by the general alphabet identities and bounds derived in **Appendix W**.

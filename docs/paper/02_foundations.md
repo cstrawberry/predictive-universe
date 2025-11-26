@@ -56,7 +56,15 @@ $$
 
 This definition ensures $C_P$ is well-defined and incorporates all emergent physical constraints without circularity. Monotone by construction and uniformly bounded by $C_{max}$ (Appendix Q), hence the limit exists and is finite.
 
-**Lemma 1 (Convergence of Complexity Hierarchy):** The sequence $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing. For any physically realizable microstate $\mu$ (see Definition 17), which by definition is constructible using finite resources, the complexity $C_P(\mu)$ must be finite. Therefore, the sequence is bounded above. By the Monotone Convergence Theorem, the limit $C_P(\mu)$ defined in Equation (1) exists and is finite.
+**Lemma 1 (Convergence of Complexity Hierarchy):** The hierarchically defined sequence $\{C_{P,n}(\mu)\}$ converges to a finite limit $C_P(\mu)$ for any physically realizable microstate $\mu$.
+
+*Proof.*
+
+**Monotonicity:** Each refinement step $n \to n+1$ adds constraints to the physical laws that must be satisfied, restricting the set of admissible construction programs. Since the minimum is taken over a smaller set, $C_{P,n+1}(\mu) \ge C_{P,n}(\mu)$. Thus $\{C_{P,n}(\mu)\}$ is monotonically non-decreasing.
+
+**Boundedness:** For any physically realizable microstate $\mu$ (Definition 17), which by definition is constructible using finite resources, the complexity $C_P(\mu)$ must be finite. Therefore the sequence is bounded above.
+
+**Convergence:** By the Monotone Convergence Theorem, the limit $C_P(\mu) := \lim_{n\to\infty} C_{P,n}(\mu)$ exists and is finite. QED
 
 **Convention for Information Capacity in Quantum Systems:** For quantum systems, such as the Minimal Predictive Units (MPUs) hypothesized to be fundamental constituents of reality (Definition 23), the maximum information capacity required to specify their distinguishable states is determined by the dimensionality $d_0$ of the MPU's Hilbert space $\mathcal{H}_0$ (Proposition 4). We adopt the standard quantum information convention for this capacity $C_{cap}$ (measured in bits):
 $$

@@ -2,7 +2,7 @@
 
 ## W.0 Notation and setup
 
-This appendix derives general, robust identities and bounds relating emergent gauge couplings to the information-theoretic invariants of the MPU’s predictive cycle. This formalism provides stringent internal consistency checks for the PU framework. In **Appendix Z**, these principles are applied to a first-principles derivation of the MPU's QFI spectrum, culminating in a parameter-free calculation of the fine-structure constant at the PCE-Attractor.
+This appendix derives general, robust identities and bounds relating emergent gauge couplings to the information-theoretic invariants of the MPU's predictive cycle. This formalism provides stringent internal consistency checks for the PU framework. In **Appendix Z**, these principles are applied to a first-principles derivation of the MPU's QFI spectrum, culminating in a parameter-free calculation of the Thomson-limit fine-structure constant $\alpha^{-1} ≈ 137.036$ at the PCE-Attractor.
 
 * **Alphabet size:** $d_0\in{2,3,\dots}$. PU uses $d_0=8$.
 * **One‑cycle deformation variable:** $u=g^2\ge 0$ (Heaviside–Lorentz units).
@@ -163,7 +163,7 @@ K(d_0,M)=\frac{a_{\rm cap}-1}{4\pi}\Bigl(1+\frac{1}{D}\Bigr).
 \tag{W.2.2}
 $$
 
-For $(d_0,M)=(8,7)$, where $d_0=8$ is the MPU alphabet size (Theorem 23) and $M_e=7$ is the number of effective independent information modes posited to be linked to the seven generators of $\pi_2(\Sigma_8)$ (Appendix R, Theorem R.1.1): $a_{\rm cap}=8^{1/7}=1.34590019\dots$, $D=0.46554714\dots$,
+For $(d_0,M)=(8,7)$, where $d_0=8$ is the MPU alphabet size (Theorem 23) and $M_e=7$ is the number of effective independent information modes linked to the seven generators of $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ (Appendix R, Section R.3): $a_{\rm cap}=8^{1/7}=1.34590019\dots$, $D=0.46554714\dots$,
 
 $$
 \boxed{K(8,7)=0.0866517}.

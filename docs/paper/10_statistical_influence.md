@@ -78,16 +78,16 @@ $$
 $$
 *Proof.* If $O_A\subset O_B'$ are spacelike separated, Appendix F gives $[\mathcal A(O_A),\mathcal A(O_B)]=\{0\}$ and Einstein causality for the induced dynamics. Hence any local operation at $A$ is represented by an instrument that commutes with all effects at $B$, and vice versa, so marginals at one site are invariant under changes of the other site’s setting; the displayed equalities follow by summing joint probabilities over the commuting outcome algebra.
 
-**Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to the MPU stress–energy tensor $T_{\mu\nu}^{(MPU)}$ (Appendix B) and induces gravitational self-dephasing (Appendix S). Adopting a phenomenological model for the power cost of maintaining the context (derived in Appendix S, Equation S.1):
+**Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to the MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ (Appendix B) and induces gravitational self-dephasing (Appendix S). The power cost of maintaining the context scales as (Appendix S, Equation S.5):
 $$
 P_{\text{context}}(\mathrm{CC}) = A\!\left[\frac{\mathrm{CC}}{\alpha_{CC,\max}-\mathrm{CC}}\right]^2,\qquad
 \alpha_{CC,\max}<\tfrac12,
 $$
-the resulting gravitational backreaction induces a time-dilation $\Delta\tau_d$ across the system (derived in Appendix S, Equation S.4):
+the resulting gravitational backreaction induces a time-dilation $\Delta\tau_d$ across the system (Appendix S, Equation S.18):
 $$
 \Delta\tau_d = K\,P_{\text{context}},
 $$
-with geometry constant $K$ defined in Appendix S. This reduces the achieved $\mathrm{CC}_{\text{eff}}$ (achieved CC after self-dephasing; Appendix S) and hence $\delta$, further limiting any practical advantage.
+with geometry constant $K$ defined in Appendix S (Equation S.19). This reduces the achieved $\text{CC}_{eff}$ (Equation S.21), with decoherence rate $\Gamma_{deco} = (\Delta E/\hbar) K_{eff} P_{context}$ (Equation S.57), further limiting any practical advantage.
 
 **10.4 Consistency Analysis: Statistical Influence vs. Causality**
 

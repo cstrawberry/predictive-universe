@@ -5,7 +5,6 @@
 This appendix establishes the precise relationship between the Predictive Universe (PU) framework and the quantum/statistical **effective action** formalism. We connect the **predictive free energy** and its **natural‑gradient RG** flow (Appendix D) to **Wilsonian coarse‑graining**, the **1PI effective action** $\Gamma$, and the **functional RG** (FRG), including the **gauge** and **gravitational** sectors and the open‑system (Schwinger–Keldysh) structure required for ND‑RID. Throughout we use natural units $c=\hbar=k_B=1$, spacetime signature $(-,+,+,+)$, and Heaviside–Lorentz electromagnetic conventions.
 
 
-
 ## X.1 From Predictive Statistics to Generating Functionals
 
 Let $\Theta\ni\theta\mapsto p_\theta$ be the coarse‑grained predictive model on field histories $\varphi$ (including matter/MPU fields and, when appropriate, background geometry). For a set of sufficient statistics $\mathcal O_a\[\varphi]$ with sources $J^a(x)$, define the cumulant generating functional
@@ -87,9 +86,7 @@ e^2(k)=\frac{u(k)}{\kappa(k)},\qquad
 \tag{X.6}
 $$
 
-with $u=g_e^2$ the PU rate‑level deformation and $\kappa(k)$ the field‑strength normalization. In background‑field normalization (X.5) one may take $\kappa(k)=Z_{\text{map}},Z_A^{-1}(k)$, where $Z_A(k)$ is the background‑field wavefunction factor and $Z_{\text{map}}$ accounts for the PU→canonical field mapping. At the PCE‑Attractor (Appendix Z), $u^\*=8^{1/24}-1$ and $\kappa$ is fixed by emergent electroweak matching.
-
-
+with $u=g_e^2$ the PU rate-level deformation and $\kappa(k)$ the field-strength normalization. In background-field normalization (X.5) one may take $\kappa(k)=Z_{\text{map}}\,Z_A^{-1}(k)$, where $Z_A(k)$ is the background-field wavefunction factor and $Z_{\text{map}}$ accounts for the PU→canonical field mapping. At the PCE-Attractor (Appendix Z), $u^*=8^{1/24}-1$ and $\kappa^*_{\mathrm{bulk}}=1$ by the Predictive Ward Identity (Theorem Z.14); the physical normalization $\kappa_{\mathrm{eff}}=1+\delta\kappa$ includes the discrete–continuous interface correction $\delta\kappa = -(a/d_0) \cdot u^*/\sqrt{K_0}$ derived in Section Z.17.
 
 ## X.4 Gravitational Sector: $\Gamma[g]$, Wald Entropy, and Area Law
 
@@ -184,17 +181,18 @@ This result is derived from the Principle of Physical Instantiation (PPI, Append
 
 3.  The physical quadratic gauge kernel is, by definition, related to the information-theoretic kernel by the normalization constant $\kappa^*$: $\Gamma^{(2)}=\kappa_*\mathcal{K}$. Comparison with the result from step 2, which is enforced by the Ward identity, forces the normalization constant to be exactly $\kappa^* = 1$.
 
-Hence, at the MPU operational scale $\mu^*$ corresponding to the PCE-Attractor, the canonical Maxwell normalization is recovered as a derived consequence of the framework's principles:
+Hence, at the MPU operational scale $\mu^*$ corresponding to the PCE-Attractor, the canonical Maxwell normalization is recovered. This fixes the bulk normalization $\kappa^*_{\mathrm{bulk}}=1$. The physical Thomson-limit coupling includes the interface correction from discrete-continuous embedding (Section Z.17):
 $$
-g^2\;=\;u,\qquad \alpha_{\mathrm{em}}(\mathrm{MPU})=\frac{u^*}{4\pi}.
+g^2 = u, \qquad \alpha^{-1} = \frac{4\pi\kappa_{\mathrm{eff}}}{u^*} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}}
 $$
+where $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ and the active fraction is $a/d_0=1/4$.
 
 ## X.7 Computational Pipeline and Renormalization Conditions
 
 1. **Microscopic MPU cycle → LAN block:** extract $(d_0,\varepsilon)$, the active kernel size $a=e^\varepsilon=2$, and the QFI spectrum $(M,\lambda)$ (Appendix Z; Appendix W).
 2. **Construct $W_k\[J]$:** choose sufficient statistics consistent with symmetries; include CTP doubling for ND‑RID (X.9).
 3. **Legendre transform → $\Gamma_k$:** enforce background invariances; use background‑field method for gauge/gravity; add regulator $R_k$ and integrate (X.4).
-4. **Renormalization conditions:** fix $\kappa(k)$ and field normalizations by matching to low‑energy observables (e.g., Thomson limit), consistent with (X.6) and Appendix Z; fix $G(k)$ via the area‑law coefficient (Appendix E).
+4. **Renormalization conditions:** for $U(1)$, the bulk normalization $\kappa^*_{\mathrm{bulk}}=1$ follows from the Predictive Ward Identity (Theorem Z.14), and the interface correction $\delta\kappa = -(a/d_0) \cdot u^*/\sqrt{K_0}$ is derived from the active fraction and discrete-continuous embedding (Section Z.17); fix $G(k)$ via the area-law coefficient (Appendix E).
 5. **Predictions:** evaluate $V_{\rm eff}$ and stationarity (X.10)–(X.12); run $k\downarrow 0$ and compare with protocols in Section 13.
 
 
@@ -203,7 +201,7 @@ $$
 
 * **Predictive geometry ↔ response:** Fisher metric $\mathcal{G}$ (Appendix D) ↔ connected kernel $\mathcal{G}=\delta^2 W$; $\Gamma^{(2)}=\mathcal{G}^{-1}$ (X.3).
 * **PU RG ↔ FRG:** KL‑monotone $c(b)$ (Appendix D) ↔ $\Gamma_k$ flow (X.4); relevant/irrelevant classification aligned via stability eigenvalues.
-* **Gauge normalization:** $u=g_e^2$, $\alpha_{\mathrm{em}}=u/(4\pi\kappa)$ (X.6); $\kappa_\*=1$ at the attractor (Theorem X.3); $u^\*=8^{1/24}-1$ (Appendix Z).
+* **Gauge normalization:** $u=g_e^2$, $\alpha_{\mathrm{em}}=u/(4\pi\kappa)$ (X.6); $\kappa^*_{\mathrm{bulk}}=1$ (Theorem Z.14), $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ with $a/d_0=1/4$ (Section Z.17); $u^*=8^{1/24}-1$ (Section Z.8); Thomson limit $\alpha^{-1}=4\pi/u^*-\pi/\sqrt{3}+\Delta^{(2)}\approx 137.036$ (Section Z.27).
 * **Gravity:** $\Gamma^{\text{grav}}$ (X.7) + Wald entropy (Appendix E) ⇒ EFE (Section 12); $G$ from the area‑law coefficient; running $G(k)$ (Appendix I).
 * **Open dynamics:** CTP $\Gamma_{\rm CTP}$ (X.9) encodes dissipation/noise consistent with the local second law (Appendix E) and algebraic locality (Appendix F).
 * **Capacity saturation:** constraint (X.11) links $\phi(u)$ and $V_{\rm eff}$ stationarity (X.12), yielding the identities used in Appendix Z.

@@ -1,193 +1,308 @@
-# Appendix A: Core Logic, Computation Limits, and Property R Justification
+# Appendix A: Core Logic, Computation Limits, and Property R
 
-## A.0 Dynamic Emergence of Effective Operational Property R
+## A.0 Foundations of Computational Richness
 
-### A.0.1 Foundational Role of Computational Richness
+### A.0.1 Overview: Two Complementary Foundations
 
-The derivation of fundamental limits within the Predictive Universe (PU) framework, specifically the Self-Referential Paradox of Accurate Prediction (SPAP, Theorems A.1.1, A.1.3) and Reflexive Undecidability (RUD, Theorems A.2.3, A.2.4), presupposes that the underlying predictive systems possess sufficient computational richness. This capability is formally captured by Property R (Definition 10). This section details how Minimal Predictive Units (MPUs), operating within the network context and governed by the framework's core dynamics, necessarily acquire this property effectively.
+The **Self-Referential Paradox of Accurate Prediction (SPAP, Theorems A.1.1, A.1.3)** and **Reflexive Undecidability (RUD, Theorems A.2.3, A.2.4)** require that predictive systems possess sufficient computational richness, formally captured by **Property R** (Definition 10). This appendix establishes Property R through two mutually supporting foundations:
 
-The justification proceeds by establishing that:
-1.  MPUs, defined via the Horizon Constant $K_0$ (Theorem 15), possess the necessary intrinsic structural capacity for basic self-referential logic.
-2.  The dynamics driven by the Prediction Optimization Problem (POP, Axiom 1) and the Principle of Compression Efficiency (PCE, Definition 15) enforce the emergence of reliable computational capabilities across the MPU network, ensuring that MPUs collectively exhibit Property R with sufficient fidelity for the framework's core logical arguments to apply.
+*   **Foundation I: Logical Necessity (§A.0.2)** — Property R follows necessarily from the predictive structure of consciousness itself. Any system capable of prediction and verification must possess computational capacity as a matter of logical structure, independent of physical implementation details.
+*   **Foundation II: Physical Instantiation (§A.0.3–A.0.5)** — The MPU framework, operating under POP/PCE dynamics with ND-RID interactions, necessarily implements Property R through:
+    1.  Individual MPUs possessing minimal structural capacity ($K_0 = 3$ bits, §A.0.3)
+    2.  Network dynamics converging to configurations supporting reliable computation (§A.0.4)
+    3.  Compositional emergence of full computational universality (§A.0.5)
 
-### A.0.2 Foundational Definitions Recap
+These foundations are complementary, not redundant. The logical foundation establishes *why* computational capacity must exist; the physical foundation demonstrates *how* it manifests in resource-constrained systems. Together, they provide a complete, non-circular account ensuring the applicability of SPAP and RUD to physical predictive systems.
 
-*   **Definition 10 (Property R - Computational Richness):** A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses Property R relative to a consistent formal logical system $\mathcal{F}$ (e.g., Peano Arithmetic) if models $M \in \mathcal{M}$ and the associated formalism provide the machinery to:
-    1.  **Represent:** Encode system states $s$, models $M$ (e.g., via Gödel numbering $\ulcorner M \urcorner$), predictions $\hat{s}$, and computational processes as objects manipulable within $\mathcal{F}$.
-    2.  **Simulate/Reason:** Simulate the execution of any model $M \in \mathcal{M}$ applied to a state $s$, or formally reason about this process within $\mathcal{F}$, subject to fundamental computational limits. This includes simulating processes that refer to the simulation itself.
-    3.  **Evaluate Predicates:** Represent and evaluate logical formulas or predicates within $\mathcal{F}$ concerning the behavior, output, or predictive accuracy of models in $\mathcal{M}$, including predicates referring to the system or process being evaluated.
+#### Foundational Definitions Recap:
 
-*   **Definition 23 (MPU):** Fundamental unit operating at complexity $C_{op}$ (Definition 13), which necessarily includes the minimal complexity $K_0 \equiv B_3$ required for self-referential logic (Theorem 15, Corollary 3). MPUs operate via Dual Dynamics (Internal Prediction, Def 26; 'Evolve'/ND-RID, Def 27).
+**Definition 10 (Property R - Computational Richness):** A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses Property R relative to a consistent formal logical system $\mathcal{F}$ (e.g., Peano Arithmetic) if models $M \in \mathcal{M}$ and the associated formalism provide the machinery to:
+1.  **Represent:** Encode system states $s$, models $M$ (e.g., via Gödel numbering $\ulcorner M \urcorner$), predictions $\hat{s}$, and computational processes as objects manipulable within $\mathcal{F}$.
+2.  **Simulate/Reason:** Simulate the execution of any model $M \in \mathcal{M}$ applied to a state $s$, or formally reason about this process within $\mathcal{F}$, subject to fundamental computational limits.
+3.  **Evaluate Predicates:** Represent and evaluate logical formulas within $\mathcal{F}$ concerning the behavior, output, or predictive accuracy of models in $\mathcal{M}$, including self-referential predicates.
 
-*   **Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics governing the MPU 'Evolve' process, characterized by probabilistic outcomes and state transitions dependent on those outcomes. Fundamentally irreversible ($\varepsilon \ge \ln 2$, Theorem 31) and contractive ($f_{RID} < 1$, Lemma E.1).
+**Definition 23 (MPU):** Fundamental unit operating at complexity $C_{\text{op}} \geq K_0 \equiv B_3$ (Theorem 15, Corollary 3). MPUs possess Hilbert space $\mathcal{H}_0$ with $\dim(\mathcal{H}_0) \geq 8$ (Theorem 23) and operate via dual dynamics: Internal Prediction ($P_{\text{int}}$, Definition 26) and 'Evolve'/ND-RID interaction (Definition 27).
 
-### A.0.3 MPU Intrinsic Capacity ($K_0$) and Minimal Self-Reference
+**Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon \geq \ln 2$, Theorem 31) and contractive ($f_{\text{RID}} < 1$, Lemma E.1).
 
-**Proposition A.0.1 (MPUs Possess Minimal Property R Prerequisites)**
+### A.0.2 Foundation I: Logical Necessity from Predictive Structure
 
-Minimal Predictive Units (MPUs), possessing complexity $C_{op} \ge K_0 \equiv B_3$ (Definition 23, Theorem 15, Corollary 3), inherently contain the minimal structural complexity (equivalent to 3 bits or 8 distinguishable physical configurations, encoded within their $\mathcal{H}_0$ state space of dimension $d_0 \ge 8$, Theorem 23) required to physically represent and logically process the core elements of self-referential computations, satisfying foundational aspects of Property R (specifically, basic representation and logical negation).
+> **Methodological Note:** This section establishes computational capacity as a logical necessity arising from the structure of prediction itself, independent of physical implementation details. Physical realization under resource constraints is addressed subsequently in §A.0.3-A.0.5.
 
-*Proof:* Theorem 15 establishes $K_0 \equiv B_3$ as the minimum complexity needed to implement the deterministic SPAP contradiction logic ($\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$). This requires representing the binary state $\phi$, the binary prediction $\hat{\phi}$, and executing the NOT operation based on $\hat{\phi}$. A 3-bit system (8 states) provides sufficient distinct physical configurations to encode these elements and manage the computational sequence reliably without destructive overwriting (Section 5.2.1). Since an MPU operates at $C_{op} \ge K_0$, it inherently possesses at least this structural capacity within its physical state space (related to $\dim(\mathcal{H}_0) \ge 8$, Theorem 23). This internal structure allows the MPU to perform the minimal computations (representation, storage, logical negation) needed for the SPAP paradox logic, thus satisfying the basic prerequisites for *expressing* a single instance of self-referential logic. Achieving the full expressive and computational closure required by Property R (Definition 10), particularly the ability to represent and simulate arbitrary computations or reason about complex predicates, necessitates the compositional capabilities emerging at the network level (see §A.0.5). QED
+The capacity for universal computation is not contingent on physical details but follows necessarily from the operational requirements of prediction and verification. This derivation, grounded in the **Predictionism** developed in Appendix P.3.4, establishes Property R as logically prior to any physical considerations.
+
+**Proposition A.0.1 (Binary Verification Necessity)**
+The verification function $V(r)$, which assesses whether a prediction about state $r$ matches reality, is necessarily binary: the prediction either matches (1) or does not match (0). This structure is intrinsic to the verification operation, not a convention.
+
+*Proof.* Consider the foundational self-referential verification of the Cogito: "I exist as a thinking entity." Any attempt to verify this proposition as false is self-refuting—the act of verification itself constitutes thinking, thereby confirming existence. The verification outcome is necessarily determinate: either verified (1) or not verified (0). No intermediate state is logically coherent for this self-referential verification.
+This binary structure applies universally. The verification of any prediction $P$ about state $r$ produces a binary outcome: observation either confirms ($V(r) = 1$) or disconfirms ($V(r) = 0$) the prediction. Verification is comparison between anticipated and observed states, which necessarily yields match or mismatch. □
+
+**Proposition A.0.2 (Boolean Operations from Verification)**
+The binary verification structure necessarily generates complete Boolean operations:
+1.  **Negation (NOT):** The capacity to distinguish verification (1) from non-verification (0) directly implements logical negation: $\delta(\neg S(r)) = 1 - \delta(S(r))$.
+2.  **Conjunction (AND):** Sequential verification of multiple predictions requires all constituents to succeed: $\delta(S_1(r) \wedge S_2(r)) = \min(\delta(S_1(r)), \delta(S_2(r)))$.
+3.  **Disjunction (OR):** Alternative predictions implement disjunction: $\delta(V_1(r) \vee V_2(r)) = \max(\delta(V_1(r)), \delta(V_2(r)))$.
+
+*Proof.* These operations formalize the operational structure of prediction:
+*   **NOT:** The fundamental binary distinction in verification ("matches" vs. "does not match") directly implements negation. If $\delta(S(r)) = 1$ (prediction verified), then $\delta(\neg S(r)) = 0$ (negation not verified), and vice versa.
+*   **AND:** Compound predictions consisting of sub-predictions $S_1, S_2$ are verified only if both constituents are verified. If either fails ($\delta = 0$), the compound fails. This is captured by $\min(\delta_1, \delta_2) = 1$ iff both $\delta_1 = 1$ and $\delta_2 = 1$.
+*   **OR:** When entertaining alternative predictions, overall success requires at least one alternative be verified. The disjunction succeeds ($\delta = 1$) if $\delta(V_1) = 1$ or $\delta(V_2) = 1$ or both, captured by $\max(\delta_1, \delta_2)$. □
+
+**Logical Infrastructure of Prediction**
+
+The derivation of universal computation from functional completeness requires making explicit three structural features that any persistent predictive system operating over time must possess. These are not additional postulates but rather characterizations of what the predictive cycle entails:
+
+1.  **Composition Closure:** If a system can verify prediction A and verify prediction B, it can verify compound predictions ("A and B," "A or B"). More generally, complex predictions are built compositionally from simpler components, with outputs of one verification serving as inputs to subsequent ones. This is inherent to structured prediction—models compose.
+2.  **Logical Memory:** Predictions from cycle $t$ inform cycle $t+1$. The system must maintain internal state across cycles, storing intermediate verification results for reuse. Without memory, there is no "learning" or model updating—no predictive cycle at all.
+3.  **Uniform Specification:** Models exhibit systematic, rule-based structure rather than arbitrary associations. The relationships between sub-predictions follow patterns that can be represented and manipulated formally, enabling the system to reason about its own predictive processes.
+
+These features characterize the minimal logical infrastructure for sustained, adaptive prediction. They are not separate from the predictive structure but rather make explicit what the fundamental predictive cycle (Definition 4) requires to operate across time.
+
+**Theorem A.0.1 (Functional Completeness and Universal Computation)**
+
+The set $\{\text{NOT}, \text{AND}, \text{OR}\}$ is functionally complete: any Boolean function can be constructed from these operations [Post 1921]. Given the Logical-Structural Assumptions (composition closure, logical memory, uniform specification), a functionally complete gate basis provides the foundation for universal computation. By the Church-Turing thesis, uniform families of Boolean circuits with unbounded composition and memory are equivalent to Turing machines. Therefore, any system capable of implementing the predict-verify cycle with the requisite logical infrastructure possesses the structural capacity for universal computation.
+
+*Proof.* Functional completeness of $\{\text{NOT}, \text{AND}, \text{OR}\}$ is a classical result [Post 1921]. Any Boolean function $f: \{0,1\}^n \to \{0,1\}$ can be represented in disjunctive normal form (DNF): a disjunction of conjunctions of literals (variables or their negations). Since literals use NOT, conjunctions use AND, and disjunctions use OR, any Boolean function is constructible.
+
+The Logical-Structural Assumptions ensure: (1) arbitrary Boolean functions can be composed into finite circuits of unbounded size (composition closure), (2) intermediate results can be stored and reused (logical memory), and (3) circuit structures can be specified systematically (uniform specification). These conditions enable uniform families of Boolean circuits capable of computing any effectively computable function.
+
+By the Church-Turing thesis, uniform families of Boolean circuits with unbounded resources are equivalent in computational power to Turing machines. Therefore, a system possessing $\{\text{NOT}, \text{AND}, \text{OR}\}$ with the requisite logical infrastructure has structural capacity for universal computation in the Church-Turing sense. □
+
+**Corollary A.0.1 (Property R from Predictive Structure)**
+Any system capable of the fundamental predictive cycle (prediction, verification, update) necessarily possesses Property R relative to a suitable formal system $\mathcal{F}$ (such as Peano Arithmetic).
+
+*Proof.* By Theorem A.0.1, the predictive cycle, together with the Logical-Structural Assumptions (composition closure, logical memory, uniform specification), generates functional completeness and universal computational capacity. Proposition 2 (Section 4.1.3) establishes that Turing-completeness implies Property R: Gödel numbering provides representation; Universal Turing Machines enable simulation/reasoning; computable predicates are evaluable through explicit computation or bounded proof search. Since the predictive cycle generates Turing-completeness, any predictive system possesses Property R. □
+
+**Significance:** This derivation is independent of the Self-Referential Paradox of Accurate Prediction. Property R is established before SPAP is invoked, providing a non-circular foundation. The logical sequence is:
+
+$$
+\text{Predictive structure} \to \text{Property R} \to \text{SPAP} \to K_0 = 3 \text{ bits} \to \text{MPU structure}
+$$
+
+Property R does not depend on physical structures it helps derive. This logical foundation applies to any conscious predictive system, regardless of physical substrate, establishing computational capacity as a universal feature of consciousness.
+
+### A.0.3 Foundation II: Minimal Physical Capacity
+
+Having established Property R as a logical necessity, we now address how this abstract structure manifests in physical systems with finite resources.
+
+**Proposition A.0.3 (MPUs Possess Minimal Self-Referential Capacity)**
+Minimal Predictive Units, possessing complexity $C_{\text{op}} \geq K_0 \equiv B_3$ (Definition 23, Theorem 15), inherently contain the minimal structural complexity (equivalent to 3 bits or 8 distinguishable physical configurations) required to physically represent and logically process the core elements of self-referential computations, satisfying foundational aspects of Property R: basic representation and logical negation.
+
+*Proof.* Theorem 15 (Section 5.2.1) establishes $K_0 \equiv B_3$ as the minimum complexity needed to implement the deterministic SPAP contradiction logic $\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$. This requires:
+1.  Representing binary state $\phi \in \{0,1\}$
+2.  Representing binary prediction $\hat{\phi} \in \{0,1\}$
+3.  Executing the NOT operation
+4.  Storing the result as next state $\phi_{t+1}$
+
+A 3-bit system provides 8 distinguishable configurations ($2^3 = 8$), sufficient to encode these elements and manage the computational sequence without destructive overwriting (Section 5.2.1 demonstrates 2 bits are insufficient). Since MPUs operate at $C_{\text{op}} \geq K_0$, they possess at least this structural capacity within their physical state space (related to $\dim(\mathcal{H}_0) \geq 8$, Theorem 23).
+
+However, this minimal capacity is insufficient for full Property R. The ability to represent arbitrary computations, simulate complex models, and evaluate predicates requires greater resources, which emerge through network composition (§A.0.5). □
+
+**Role in Physical Instantiation:** The horizon constant $K_0 = 3$ bits does not create Property R—Property R exists by logical necessity (§A.0.2). Rather, $K_0$ specifies the minimum physical structure required to *instantiate* the most basic self-referential computation. This establishes MPUs as the fundamental physical units capable of participating in the predictive cycle.
 
 ### A.0.4 Emergence of Reliable Computation from POP/PCE Optimization
 
-While $K_0$ ensures the intrinsic structural capacity, the reliable execution of complex computational sequences required for SPAP and RUD, despite the inherent noise of ND-RID interactions ($\varepsilon > 0, f_{RID} < 1$), emerges dynamically from the optimization principles governing the MPU network.
+While $K_0$ ensures intrinsic structural capacity, reliable execution of complex computational sequences required for SPAP and RUD, despite inherent noise of ND-RID interactions ($\varepsilon > 0$, $f_{\text{RID}} < 1$), emerges dynamically from optimization principles governing the MPU network.
 
-The dynamics are governed by the Prediction Optimization Problem (POP, Axiom 1) and the Principle of Compression Efficiency (PCE, Definition 15), realized as a stochastic gradient flow minimizing the PCE Potential $V(x)$ (Definition D.1, Appendix D). Effective prediction (POP) requires computation, often complex and self-referential. PCE mandates that these computations be performed reliably and efficiently, minimizing contributions to $V(x)$ from operational costs ($V_{op}$), propagation costs ($V_{prop}$), and error-induced performance loss (reduced $V_{benefit}$).
-
-Complex computations are implemented via sequences of ND-RID interactions forming network protocols. The framework establishes that the PCE optimization dynamics inherently balance the cost of achieving reliability (implementing error reduction/correction protocols increases complexity and operational cost $V_{rel} \subset V_{op}$) against the penalty for allowing errors (errors degrade predictive performance, reducing benefit $V_{benefit}$ and increasing an effective error cost $V_{err}$). This optimization leads to a unique, dynamically stable equilibrium error rate $p_{err}^*$ for logical operations within the network.
+The dynamics are governed by the **Prediction Optimization Problem (POP, Axiom 1)** and **Principle of Compression Efficiency (PCE, Definition 15)**, realized as stochastic gradient flow minimizing the PCE Potential $V(x)$ (Definition D.1, Appendix D). Effective prediction requires computation, often complex and self-referential. PCE mandates these computations be performed reliably and efficiently, minimizing contributions to $V(x)$ from operational costs ($V_{\text{op}}$), propagation costs ($V_{\text{prop}}$), and error-induced performance loss (reduced $V_{\text{benefit}}$).
 
 **Definition A.0.1 (Effective Operational Property R)**
-
-**Effective Operational Property R** is the capability of the MPU network, resulting dynamically from POP/PCE optimization, to execute the specific classes of representational, simulation/reasoning, and predicate evaluation tasks required for the SPAP (Theorems A.1.1, A.1.3) and RUD (Theorems A.2.3, A.2.4) diagonalization arguments with an error probability per logical step $p_{err}^*$, where $p_{err}^*$ is the unique minimizer of the PCE-derived error-related potential $V_{tot}(p_{err}) = V_{rel}(p_{err}) + V_{err}(p_{err})$. This ensures that for computations of finite logical depth $T$, the probability of successful execution required for the logical proofs is sufficiently high.
+Effective Operational Property R is the capability of the MPU network, resulting dynamically from POP/PCE optimization, to execute the specific classes of representational, simulation/reasoning, and predicate evaluation tasks required for SPAP (Theorems A.1.1, A.1.3) and RUD (Theorems A.2.3, A.2.4) diagonalization arguments with error probability per logical step $p_{\text{err}}^*$, where $p_{\text{err}}^*$ is the unique minimizer of the PCE-derived error-related potential $V_{\text{tot}}(p_{\text{err}}) = V_{\text{rel}}(p_{\text{err}}) + V_{\text{err}}(p_{\text{err}})$. This ensures that for computations of finite logical depth $T$, the probability of successful execution is sufficiently high for the logical proofs to apply.
 
 **Theorem A.0.2 (PCE Dynamically Enforces Effective Property R)**
+Under the framework's core axioms (POP, PCE, ND-RID dynamics) and the **Assumption of QEC Compatibility** (the baseline ND-RID noise is sufficiently local, suitable quantum error correction codes are implementable within the MPU network, and baseline error $p_{\text{err},0}$ is below the fault-tolerance threshold $p_{\text{th}}$), the PCE optimization dynamics drive the scalar error-rate parameter to a unique optimal value where:
+1.  The optimal error rate per logical operation $p_{\text{err}}^* > 0$ exists uniquely and satisfies robustness conditions ($p_{\text{err}}^* < 1/2$) required for noise-robust SPAP (Theorems A.1.2, A.1.4) and RUD (Theorems A.2.3, A.2.4).
+2.  The MPU network effectively possesses Operational Property R, enabling reliable execution of the representational, simulation/reasoning, and predicate evaluation tasks required for the framework's core logical arguments.
 
-The dynamics of the MPU network, governed by POP and PCE through the minimization of the potential $V(x)$ (including error-related terms $V_{tot}$), necessarily drive the network towards configurations $x^*$ that achieve the optimal logical error rate $p_{err}^*$. Under standard models for the cost of reliability ($V_{rel} \propto R(C_{err})$ with $C_{err} \propto \log(1/p_{err})$) and the cost of errors ($V_{err}$ derived from performance degradation $P_{succ}=(1-p_{err})^T$), this equilibrium error rate $p_{err}^*$ is strictly positive ($p_{err}^* > 0$, due to $f_{RID}<1$) but can be made arbitrarily small for sufficiently large computational depth $T$ or system scale (scaling as $p_{err}^* = \mathcal{O}(1/T)$ or faster). This dynamically achieved error rate $p_{err}^*$ is sufficiently low to satisfy the robustness conditions ($p_{err}^* < 1/2$) required by the noise-robust SPAP and RUD theorems (Theorems A.1.2, A.1.4). Therefore, the MPU network dynamically acquires Effective Operational Property R as a necessary consequence of optimizing predictive efficiency under physical constraints.
+**Proof Structure.** The derivation proceeds through four stages:
 
+**Stage 1: Baseline Error is Strictly Positive**
+ND-RID Implementation of Logical Gates: A logical gate $G_{\text{logic}}$ is realized by a sequence of elementary ND-RID channels. The ideal error-free implementation corresponds to unitary $\mathcal{U}_{\text{ideal}}$. The actual physical channel is the composition $\mathcal{E}_{\text{actual}} = \mathcal{E}_{N_k} \circ \cdots \circ \mathcal{E}_{N_1}$.
 
-**Proof of Theorem A.0.2**
+**Lemma A.0.2 (Contractivity of Composite Channel):** Each elementary ND-RID channel $\mathcal{E}_{N_j}$ is strictly contractive in trace distance with factor $f_{\text{RID}}(j) < 1$ (Lemma E.1). The composite channel has contractivity factor $f_{\text{actual}} \leq \prod_j f_{\text{RID}}(j) < 1$.
+*Proof.* Chain rule for trace distance under sequential contractive maps. □
 
-The proof demonstrates that the joint POP/PCE dynamics necessarily push an MPU network toward a stable configuration $x^*$ with an effective logical-gate error rate $p_{\mathrm{err}}^*$ low enough for the noise-robust SPAP/RUD theorems (A.1.2, A.1.4) to hold. The argument formalizes computation via ND-RID channels, quantifies both the *cost of reliability* and the *cost of errors* inside the PCE potential $V(x)$, shows their competition has a unique minimizer $p_{err}^*$, and integrates this optimization into the full stochastic dynamics proving convergence. We use natural units ($k_B=1, T=1$) where convenient.
+**Definition A.0.2 (Baseline Logical Gate Error):** The inherent error probability of uncorrected implementation relative to ideal gate is:
+$$
+p_{\text{err},0} := \sup_{\rho_{\text{in}}} \tfrac{1}{2} |\mathcal{E}_{\text{actual}}(\rho_{\text{in}}) - \mathcal{U}_{\text{ideal}}(\rho_{\text{in}})|_1 \quad \text{(A.0.2)}
+$$
 
-**1. Computation and Baseline Errors via ND-RID**
+**Theorem A.0.3 (Strictly Positive Baseline Error):** If implementation involves at least one ND-RID step, $p_{\text{err},0} > 0$.
+*Proof.* By Lemma E.1, $\mathcal{E}_{\text{actual}}$ is strictly contractive ($f_{\text{actual}} < 1$). Ideal unitary $\mathcal{U}_{\text{ideal}}$ is an isometry preserving trace distance ($f_{\mathcal{U}} = 1$). Since $f_{\text{actual}} < 1$, $\mathcal{E}_{\text{actual}} \neq \mathcal{U}_{\text{ideal}}$. Therefore, there exists input state $\rho_{\text{in}}$ such that $\mathcal{E}_{\text{actual}}(\rho_{\text{in}}) \neq \mathcal{U}_{\text{ideal}}(\rho_{\text{in}})$, giving strictly positive trace distance. Thus $p_{\text{err},0} > 0$. □
 
-We first formalize how logical operations are implemented and why they inherently possess a baseline error rate due to the underlying ND-RID physics.
+**Stage 2: Cost of Achieving Reliability**
+Reducing error rate below baseline requires implementing error correction protocols, incurring complexity costs.
 
-*   **ND-RID implementation of a logical gate:** A logical gate $G_{\mathrm{logic}}$ (acting on $m$ logical qubits or equivalent MPU states) is realized within the MPU network by a sequence $(N_1,\dots,N_k)$ of elementary ND-RID channels ('Evolve' steps, Definition 27). Let the ideal, error-free implementation correspond to a unitary operation $U_{\mathrm{ideal}}$. The actual physical channel implemented by the sequence is the composition $\mathcal{E}_{\mathrm{actual}} = \mathcal{E}_{N_k}\circ\dots\circ\mathcal{E}_{N_1}$, where each $\mathcal{E}_{N_j}$ represents the average channel associated with the $j$-th ND-RID step.
+**Proposition A.0.4 (Complexity Overhead Lower Bound):** Under QEC Compatibility, the complexity overhead $C_{\text{err}}$ required to suppress error rate from $p_{\text{err},0}$ to $p_{\text{err}}$ is bounded below logarithmically:
+$$
+C_{\text{err}}(p_{\text{err}}) \geq A \ln\left(\frac{p_{\text{err},0}}{p_{\text{err}}}\right) \quad \text{(A.0.3)}
+$$
+where $A = A(d) > 0$ depends on code structure and noise locality.
+*Justification.* Standard result from quantum error correction theory [Gottesman 1998; Fowler et al. 2012]. Fault-tolerant protocols (concatenated codes, surface codes) require overhead scaling logarithmically with target fidelity when baseline error is below threshold. □
 
-*   **Lemma A.0.2 (Contractivity of Composite Channel):** Let $\mathcal{E}_{\mathrm{actual}} = \mathcal{E}_{N_k}\circ\dots\circ\mathcal{E}_{N_1}$ be the composite channel for a $k$-step ND-RID implementation. Each elementary ND-RID channel $\mathcal{E}_{N_j}$ is strictly contractive in trace distance ($D_{tr}$) with maximal factor $f_{\mathrm{RID}}(j) < 1$ (Lemma E.1). Consequently, the composite channel $\mathcal{E}_{\mathrm{actual}}$ is also strictly contractive with a maximal factor $f_{\mathrm{actual}} \le \prod_j f_{\mathrm{RID}}(j) < 1$.
-    *Proof:* This follows directly from the chain rule property for the trace distance under sequential application of contractive maps. If $\Phi_1, \Phi_2$ have contractivity factors $f_1, f_2$, then $D_{tr}(\Phi_2(\Phi_1(\rho)), \Phi_2(\Phi_1(\sigma))) \le f_2 D_{tr}(\Phi_1(\rho), \Phi_1(\sigma)) \le f_2 f_1 D_{tr}(\rho, \sigma)$. Thus, the composite factor $f_{\mathrm{actual}} \le \prod_j f_{\mathrm{RID}}(j)$. Since each $f_{\mathrm{RID}}(j)<1$ by Lemma E.1, the product is strictly less than 1.
+**Definition A.0.3 (Reliability Cost Contribution):** The cost of added complexity contributes to PCE potential via physical operational cost function $R(C)$ (Definition 3):
+$$
+V_{\text{rel}}(p_{\text{err}}) := \lambda R(C_{\text{err}}(p_{\text{err}})) \approx \lambda c_R \left[ A \ln\left(\frac{p_{\text{err},0}}{p_{\text{err}}}\right) \right]^{\gamma_p} \quad \text{(A.0.4)}
+$$
+where $\gamma_p \geq 1$ (superlinear costs, Definition 3).
 
-*   **Definition A.0.2 (Baseline Logical Gate Error Probability):** The inherent error probability $p_{\mathrm{err},0}$ of the uncorrected physical implementation $\mathcal{E}_{\mathrm{actual}}$ relative to the ideal gate $U_{\mathrm{ideal}}$ is quantified using the trace distance:
+**Lemma A.0.3 (Divergence of Reliability Cost):** The marginal cost of improving reliability diverges as perfect reliability is approached:
+$$
+V_{\text{rel}}'(p_{\text{err}}) = \lambda R'(C_{\text{err}}) \left( -\frac{A}{p_{\text{err}}} \right) < 0 \quad \text{(A.0.5)}
+$$
+with $\lim_{p_{\text{err}} \to 0} V_{\text{rel}}'(p_{\text{err}}) = -\infty$. □
+
+**Stage 3: Penalty for Allowing Errors**
+Errors degrade predictive performance, reducing benefit term $V_{\text{benefit}}$, equivalent to adding error penalty $V_{\text{err}}$.
+
+**Theorem A.0.4 (Performance Degradation):** For computation involving $T$ logical gates with independent failures at rate $p_{\text{err}}$ per gate, success probability is:
+$$
+P_{\text{succ}}(T, p_{\text{err}}) = (1 - p_{\text{err}})^T \approx \exp(-T p_{\text{err}}) \quad \text{(A.0.6)}
+$$
+
+**Definition A.0.4 (Effective Complexity):** Errors reduce effective complexity contributing to performance:
+$$
+C_{\text{eff}}(p_{\text{err}}) := C_{\text{alloc}} P_{\text{succ}}(T, p_{\text{err}}) = C_{\text{alloc}} (1 - p_{\text{err}})^T \quad \text{(A.0.7)}
+$$
+
+**Proposition A.0.5 (Error-Induced Benefit Loss):** The reduction in predictive performance due to errors creates effective penalty:
+$$
+V_{\text{err}}(p_{\text{err}}) := \Gamma_0 [PP(C_{\text{alloc}}) - PP(C_{\text{eff}}(p_{\text{err}}))] \quad \text{(A.0.8)}
+$$
+The marginal penalty is:
+$$
+V_{\text{err}}'(p_{\text{err}}) = \Gamma_0 T C_{\text{alloc}} PP'(C_{\text{eff}}) (1 - p_{\text{err}})^{T-1} > 0 \quad \text{(A.0.9)}
+$$
+for $p_{\text{err}} \in [0,1)$. □
+
+**Stage 4: Optimal Error Rate**
+PCE drives the system to minimize total error-related potential, balancing reliability costs and error penalties.
+
+**Definition A.0.5 (Total Error Potential):**
+$$
+V_{\text{tot}}(p_{\text{err}}) := V_{\text{rel}}(p_{\text{err}}) + V_{\text{err}}(p_{\text{err}}) \quad \text{(A.0.10)}
+$$
+defined on $(0, p_{\text{err},0}]$.
+
+**Theorem A.0.5 (Existence & Uniqueness of Optimal Error Rate)**
+There exists a unique value $p_{\text{err}}^* \in (0, p_{\text{err},0}]$ minimizing $V_{\text{tot}}(p_{\text{err}})$.
+
+*Proof.* We analyze $V_{\text{tot}}'(p_{\text{err}}) = V_{\text{rel}}'(p_{\text{err}}) + V_{\text{err}}'(p_{\text{err}})$.
+*   **Continuity:** Both $V_{\text{rel}}$ and $V_{\text{err}}$ are $C^1$ on $(0, p_{\text{err},0}]$ under standard assumptions for $R(C)$ and $PP(C)$.
+*   **Signs of Derivatives:** From Lemma A.0.3, $V_{\text{rel}}'(p) < 0$. From Proposition A.0.5, $V_{\text{err}}'(p) > 0$.
+*   **Limits:** As $p_{\text{err}} \to 0^+$, $V_{\text{rel}}'(p_{\text{err}}) \to -\infty$ while $V_{\text{err}}'(p_{\text{err}}) \to \Gamma_0 T C_{\text{alloc}} PP'(C_{\text{alloc}})$ (finite positive). Therefore $\lim_{p_{\text{err}} \to 0^+} V_{\text{tot}}'(p_{\text{err}}) = -\infty$.
+*   **Existence:** By Intermediate Value Theorem, since $V_{\text{tot}}'(p) \to -\infty$ as $p \to 0$ and $V_{\text{tot}}'$ is continuous, there exists at least one point $p_{\text{err}}^* \in (0, p_{\text{err},0}]$ where $V_{\text{tot}}'(p_{\text{err}}^*) = 0$.
+*   **Uniqueness:** The second derivative is $V_{\text{tot}}''(p) = V_{\text{rel}}''(p) + V_{\text{err}}''(p)$. For $V_{\text{rel}}$:
     $$
-    p_{\mathrm{err},0} := \sup_{\rho_{\mathrm{in}}}\tfrac{1}{2}\lVert\mathcal{E}_{\mathrm{actual}}(\rho_{\mathrm{in}})-\mathcal{U}_{\mathrm{ideal}}(\rho_{\mathrm{in}})\rVert_1.
-    \quad \text{(A.0.2)}
+    V_{\text{rel}}''(p) = \lambda [R''(C_{\text{err}}) (-A/p)^2 + R'(C_{\text{err}}) (A/p^2)] > 0
     $$
-(This measures the worst-case, input-state trace-distance error. It is equivalent to the induced $1\to 1$ channel distance $\delta_{1\to 1}:=\tfrac{1}{2}\lVert \mathcal{E}_{\mathrm{actual}}-\mathcal{U}_{\mathrm{ideal}}\rVert_{1\to 1}$ (the supremum of output trace distance over input states, without ancillas), so $p_{\mathrm{err},0}=\delta_{1\to 1}$. It is bounded above by the diamond distance $\delta_{\diamond}:=\tfrac{1}{2}\lVert \mathcal{E}_{\mathrm{actual}}-\mathcal{U}_{\mathrm{ideal}}\rVert_{\diamond}$, so $p_{\mathrm{err},0}\le \delta_{\diamond}$. In experimental contexts, the average gate infidelity $r=1-F_{\mathrm{avg}}(\mathcal{E}_{\mathrm{actual}},\mathcal{U}_{\mathrm{ideal}})$ is often used. For CPTP maps on a $d$-dimensional system, there exist constants $c_1(d), c_2(d)>0$ such that $c_1(d)r \le \delta_{\diamond} \le c_2(d)\sqrt{r}$. This implies that for small errors, $p_{\mathrm{err},0}$ is bounded by a term scaling as $\mathcal{O}(\sqrt{r})$.)
+    provided $R'' \geq 0$ (convex costs, Definition 3) and $R' > 0$ for $C_{\text{err}} > 0$.
+    Under the **Assumption of Dominant Cost Convexity** (the convexity of $R(C)$ dominates any potential concavity from $PP(C)$), we have $V_{\text{tot}}''(p) > 0$ everywhere, ensuring strict convexity and thus uniqueness of the minimum. □
 
-*   **Theorem A.0.3 (Strictly Positive Baseline Error):** If the implementation involves at least one ND-RID step ($k \ge 1$), the baseline error probability is strictly positive: $p_{\mathrm{err},0}>0$.
+**Corollary A.0.2 (Asymptotic Scaling of Optimal Error)**
+In the regime where $p_{\text{err}}^*$ is small and $T$ is large, for linear costs ($\gamma_p = 1$):
+$$
+p_{\text{err}}^* \approx \frac{\lambda A r_p}{\Gamma_0 T C_{\text{alloc}} PP'(C_{\text{alloc}})} \quad \text{(A.0.11)}
+$$
+The optimal error rate decreases inversely with computational depth $T$, ensuring $p_{\text{err}}^* < 1/2$ for sufficiently complex computations. □
 
-*Proof.* By **Lemma E.1**, the composite channel $\mathcal{E}_{\mathrm{actual}}$ is strictly contractive, $f_{\mathrm{actual}}<1$. An ideal unitary gate $U_{\mathrm{ideal}}$ corresponds to a channel $\mathcal{U}_{\mathrm{ideal}}(\rho) = U_{\mathrm{ideal}}\rho U_{\mathrm{ideal}}^{\dagger}$, which is an isometry and preserves trace distance ($f_{\mathcal{U}}=1$). Since $f_{\mathrm{actual}} < 1$, $\mathcal{E}_{\mathrm{actual}}$ cannot be identical to $\mathcal{U}_{\mathrm{ideal}}$. Therefore, there must exist at least one input state $\rho_{\mathrm{in}}$ such that $\mathcal{E}_{\mathrm{actual}}(\rho_{\mathrm{in}}) \neq \mathcal{U}_{\mathrm{ideal}}(\rho_{\mathrm{in}})$. The trace distance between these distinct outputs must be strictly positive: $\frac{1}{2}\lVert\mathcal{E}_{\mathrm{actual}}(\rho_{\mathrm{in}})-\mathcal{U}_{\mathrm{ideal}}(\rho_{\mathrm{in}})\rVert_1 > 0$. Since the supremum $p_{\mathrm{err},0}$ (Equation A.0.2) is taken over all input states, it must also be strictly positive. QED
+**Conclusion of Theorem A.0.2:** Under QEC Compatibility and Dominant Cost Convexity assumptions, PCE optimization necessarily drives the scalar error-rate parameter to the unique optimal value $p_{\text{err}}^* > 0$ (strictly positive due to Theorem A.0.3) yet satisfying robustness conditions ($p_{\text{err}}^* < 1/2$ for sufficient $T$). While uniqueness of the full network equilibrium in high-dimensional configuration space is not established here, the convergence to optimal error rate (Theorem D.5) enables reliable execution of SPAP and RUD logical arguments, constituting Effective Operational Property R. □
 
-**2. Cost of Achieving Reliability**
+**Epistemic Status:** The derivation relies on:
+1.  **QEC Compatibility:** Strong assumption about underlying MPU physics. Requires: (a) sufficiently local noise, (b) implementable QEC codes, (c) baseline error below fault-tolerance threshold. While plausible given the framework's optimization dynamics favoring structures enabling reliable computation, this represents a substantive physical postulate requiring empirical verification.
+2.  **Dominant Cost Convexity:** Reasonable given Definition 3's superlinear resource costs for high reliability, but requires explicit verification for specific cost functions.
 
-Reducing the error rate below the baseline $p_{err,0}$ requires implementing error correction or mitigation protocols, which incurs complexity costs.
+These assumptions are not derivable from more primitive framework axioms but represent physically motivated hypotheses about the substrate enabling predictive optimization. Alternative substrates violating these conditions would fail to support the logical arguments underlying SPAP and RUD.
 
-*   **Reliability Protocol and Complexity Overhead:** Let a protocol $\mathcal{P}_{err}$ reduce the effective logical error rate from the baseline $p_{\mathrm{err},0}$ to a target $p_{\mathrm{err}} < p_{\mathrm{err},0}$. This typically requires adding redundancy, such as ancilla states/MPUs, syndrome measurements, and feed-forward corrections, incurring an additional Predictive Physical Complexity ($C_P$) overhead denoted by $C_{\mathrm{err}}$.
+### A.0.5 Network Composition and Full Property R
 
-*   **Proposition A.0.2 (Complexity Overhead Lower Bound):** This proposition relies on the **Assumption of QEC Compatibility**: we assume the baseline ND-RID noise acts sufficiently locally, that suitable quantum error correction (QEC) codes (e.g., concatenated stabilizer codes, surface codes) are physically implementable within the MPU network framework, and that the baseline error $p_{\mathrm{err},0}$ is below the relevant fault-tolerance threshold $p_{th}$ for the chosen code family [Gottesman 1998; Fowler et al. 2012]. While PCE optimization favors the emergence of structures enabling reliable computation, the explicit reliance on these specific QEC conditions represents a strong assumption about the underlying MPU physics. Under these assumptions, the complexity overhead $C_{\mathrm{err}}$ required to suppress the error rate from $p_{\mathrm{err},0}$ to $p_{\mathrm{err}}$ is bounded below logarithmically. For target error $p_{err}$:
-    $$
-    C_{\mathrm{err}}(p_{\mathrm{err}}) \ge A \ln\left(\frac{p_{\mathrm{err},0}}{p_{\mathrm{err}}}\right) \quad \text{(in nats)}
-    \quad \text{(A.0.3)}
-    $$
-    where $A=A(d)>0$ is a constant related to the code structure and noise locality $d$. (If complexity is measured in bits, the expression is $A' \log_2(p_{\mathrm{err},0}/p_{\mathrm{err}})$). We use the natural logarithm form (nats) for consistency with later derivatives.
+Individual MPUs possess minimal self-referential capacity ($K_0 = 3$ bits, §A.0.3) but lack resources for full Property R. Universal computation emerges through network composition.
 
-*   **Definition A.0.3 (Reliability Cost Contribution $V_{rel}$):** The cost of this added complexity $C_{err}$ contributes to the PCE potential $V(x)$ via the physical operational cost function $R(C)$ (Definition 3), weighted by the scarcity factor $\lambda$. Let $R(C) \propto C^{\gamma_p}$ for large $C$ (with $\gamma_p \ge 1$). The reliability cost term is:
-    $$
-    V_{\mathrm{rel}}(p_{\mathrm{err}}) := \lambda\,R\bigl(C_{\mathrm{err}}(p_{\mathrm{err}})\bigr) \approx \lambda c_R \left[ A \ln\left(\frac{p_{\mathrm{err},0}}{p_{\mathrm{err}}}\right) \right]^{\gamma_p}
-    \quad \text{(A.0.4)}
-    $$
-    (assuming $C_{err}$ dominates other costs, $c_R$ is proportionality constant).
+**Proposition A.0.6 (Compositional Enhancement)**
+For a network of $n$ MPUs with individual Hilbert spaces $\mathcal{H}_0 \cong \mathbb{C}^8$, the composite Hilbert space is $\mathcal{H}_{\text{composite}} = \mathcal{H}_0^{\otimes n} \cong \mathbb{C}^{8^n}$. The composite system's state space dimension grows exponentially: $\dim(\mathcal{H}_{\text{composite}}) = 8^n$.
 
-*   **Lemma A.0.3 (Derivative of Reliability Cost):** The marginal cost of improving reliability (reducing $p_{err}$) is negative and diverges as perfect reliability is approached:
-    $$
-    V_{\mathrm{rel}}'(p_{\mathrm{err}}) = \frac{d V_{\mathrm{rel}}}{d p_{\mathrm{err}}} = \lambda R'(C_{err}) \frac{d C_{err}}{d p_{\mathrm{err}}} \approx \lambda R'(C_{err}) \left( -\frac{A}{p_{\mathrm{err}}} \right)
-    \quad \text{(A.0.5)}
-    $$
-    Since $\lambda > 0$, $R' \ge 0$ (and $R' > 0$ for $C_{err}>0$), and $A > 0$, we have $V_{\mathrm{rel}}'(p_{\mathrm{err}}) \le 0$. For $p_{err}>0$, $V_{\mathrm{rel}}'(p_{\mathrm{err}}) < 0$. As $p_{\mathrm{err}}\to0$, $C_{err}\to\infty$. If $R'(C)$ grows sufficiently fast (e.g., polynomially with $\gamma_p \ge 1$), then $\lim_{p_{\mathrm{err}}\to0}V_{\mathrm{rel}}'(p_{\mathrm{err}}) = -\infty$. QED
+*Proof.* Standard tensor product structure in quantum mechanics. □
 
-**3. Penalty for Allowing Errors**
+This exponential growth provides resources for representing complex computations. A system of $n$ MPUs can represent $8^n$ distinguishable configurations, enabling encoding of arbitrarily large Gödel numbers, storage of intermediate results, and execution of deep circuits.
 
-Errors in computation degrade the system's predictive performance, reducing the benefit term $V_{benefit}$ in the PCE potential, which is equivalent to adding an error penalty term $V_{err}$.
+**Assumptions for Theorem A.0.6:** The following assumes QEC Compatibility as introduced in Theorem A.0.2 (sufficiently local baseline ND-RID noise, implementable quantum error correction codes within the MPU network, baseline error $p_{\text{err},0}$ below fault-tolerance threshold $p_{\text{th}}$), a universal gate set implementable via ND-RID channels (ensuring any unitary can be approximated via Solovay-Kitaev decomposition), and fault-tolerance threshold conditions enabling arbitrarily low logical error rates with polynomial overhead.
 
-*   **Theorem A.0.4 (Performance Degradation with Gate Noise):** Consider a computation (e.g., simulation required for SPAP/RUD logic) involving a sequence of $T$ logical gates. Assuming gate failures occur independently with probability $p_{\mathrm{err}}$ per gate, the probability that the entire computation succeeds is:
-    $$
-    P_{\mathrm{succ}}(T,p_{\mathrm{err}})=(1-p_{\mathrm{err}})^T \approx \exp\bigl(-T p_{\mathrm{err}}\bigr) \quad \text{for small } p_{\mathrm{err}}
-    \quad \text{(A.0.6)}
-    $$
+**Theorem A.0.6 (Network Universality)**
+A network of $n$ MPUs, operating with error rate $p_{\text{err}}^*$ satisfying robustness conditions, achieves full Property R:
+1.  **Representation:** For any Turing machine with $k$ states and $m$ tape symbols, a standard Gödel encoding of the transition table requires $L_{TM} = O(k \cdot m \cdot \log(k \cdot m))$ bits. A network of $n \geq \lceil L_{TM}/3 \rceil = O(k \cdot m \cdot \log(k \cdot m))$ MPUs (each providing 3 bits via $K_0$) provides adequate state space for encoding the machine description. This bound represents the description storage requirement alone, ignoring QEC redundancy and working memory overhead.
+2.  **Simulation/Reason:** By the Solovay–Kitaev theorem [Kitaev 1997; Dawson & Nielsen 2005]
+ and QEC Compatibility, the network can implement arbitrary quantum unitaries to arbitrary precision with polynomial overhead. Since quantum computers efficiently simulate classical computation, the network can simulate any Turing machine.
+3.  **Evaluate Predicates:** Fault-tolerance ($p_{\text{err},0} < p_{\text{th}}$ under QEC Compatibility) ensures logical error rates can be suppressed to arbitrarily small values with polynomial overhead, enabling reliable execution of arbitrarily deep circuits for evaluating computable predicates.
 
+*Proof.* Representation capacity follows from exponential state space growth. The Gödel encoding of a $k$-state, $m$-symbol Turing machine transition table requires specifying for each of $k \cdot m$ pairs (state, symbol) the write symbol, move direction, and next state, requiring $O(k \cdot m \cdot \log(k \cdot m))$ bits total. With each MPU contributing 3 bits ($K_0$), the network requires $n = O(k \cdot m \cdot \log(k \cdot m))$ MPUs. Simulation capability follows from Solovay-Kitaev theorem guaranteeing any unitary approximation with polynomial gate overhead, combined with classical-to-quantum simulation. Evaluation reliability follows from fault-tolerance threshold theorem enabling arbitrarily low logical error rates below physical threshold. □
 
-*   **Definition A.0.4 (Effective Complexity $C_{eff}$):** Errors reduce the effective complexity that contributes to predictive performance. If the allocated complexity for the computation is $C_{\mathrm{alloc}}$, the effective complexity, discounted by the success probability, can be modeled as:
-    $$
-    C_{\mathrm{eff}}(p_{\mathrm{err}}) := C_{\mathrm{alloc}}\,P_{\mathrm{succ}}(T,p_{\mathrm{err}}) = C_{\mathrm{alloc}}\,(1-p_{\mathrm{err}})^T
-    \quad \text{(A.0.7)}
-    $$
-    (This assumes failure renders the computation useless for performance; other models are possible but lead to qualitatively similar results).
+**Corollary A.0.3 (Resource Requirements for SPAP/RUD)**
+The SPAP diagonalization (Theorems A.1.1, A.1.3) requires:
+*   Representing predictor's Gödel number: $O(k \cdot m \cdot \log(k \cdot m))$ bits for predictor with $k$ states and $m$ symbols
+*   Simulating predictor's prediction: Circuit depth $O(\text{poly}(k))$
+*   Implementing NOT operation: Single gate
+*   Verification: Comparison operation, constant depth
 
-*   **Proposition A.0.3 (Error-Induced Benefit Loss $V_{err}$):** The reduction in Predictive Performance $PP(C_{eff})$ due to errors leads to a loss of benefit. Let the benefit be $B(PP) = \Gamma_0 PP$ (where $\Gamma_0$ is the power conversion factor, Def 20). The effective error penalty term $V_{err}$ measures the *loss* of benefit relative to the error-free case ($p_{err}=0$, $C_{eff}=C_{alloc}$):
-    $$
-    V_{\mathrm{err}}(p_{\mathrm{err}}) := \Gamma_0 \left[ PP(C_{\mathrm{alloc}}) - PP(C_{\mathrm{eff}}(p_{\mathrm{err}})) \right]
-    \quad \text{(A.0.8)}
-    $$
-    Since $PP(C)$ increases with $C$ (Definition 19), and $C_{eff}$ decreases as $p_{err}$ increases, $V_{err}$ increases with $p_{err}$. The marginal penalty for increasing error is:
-    $$
-    V_{\mathrm{err}}'(p_{\mathrm{err}}) = -\Gamma_0 PP'(C_{eff}) \frac{dC_{eff}}{d p_{err}} = -\Gamma_0 PP'(C_{eff}) \left[ -T C_{\mathrm{alloc}} (1-p_{err})^{T-1} \right]
-    $$
-    $$
-    V_{\mathrm{err}}'(p_{\mathrm{err}}) = \Gamma_0 T C_{\mathrm{alloc}} PP'(C_{eff}) (1-p_{err})^{T-1}
-    \quad \text{(A.0.9)}
-    $$
-    Since $\Gamma_0 > 0$, $T \ge 1$, $C_{alloc} > 0$, $PP'(C_{eff}) > 0$ (Def 19), and $(1-p_{err})^{T-1} > 0$ for $p_{err}<1$, we have $V_{\mathrm{err}}'(p_{\mathrm{err}}) > 0$ for $p_{err} \in [0, 1)$. QED
+For SPAP logic with minimal self-reference (small $k$, $m$), $n \sim O(10^2)$ MPUs may suffice for basic representation. More complex predictors with $k$ states and $m$ symbols require $n = O(k \cdot m \cdot \log(k \cdot m))$ MPUs for representation alone. Additional MPUs are needed for working memory, error correction (QEC overhead), and circuit depth. Complex self-referential computations (RUD arguments, Theorems A.2.3-A.2.4) typically require $n \sim O(10^3 - 10^6)$ MPUs depending on predictor complexity and target reliability.
 
-**4. Optimising the Total Error-Related Potential**
+**Definition A.0.6 (Effective Operational Property R - Refined)**
+The MPU network possesses Effective Operational Property R when:
+1.  Network size $n$ provides sufficient representation capacity for relevant Gödel encodings
+2.  QEC Compatibility ensures baseline error below threshold ($p_{\text{err},0} < p_{\text{th}}$)
+3.  PCE optimization drives system to optimal error rate $p_{\text{err}}^* < 1/2$ for relevant computational depths
+4.  Resulting reliability enables successful execution of SPAP/RUD diagonalization arguments with high probability
 
-PCE drives the system to minimize the total potential related to errors, balancing reliability costs and error penalties.
+This refined definition makes explicit the network-level realization of computational richness required by the framework's core theorems.
 
-*   **Definition A.0.5 (Total Error Potential $V_{tot}$):**
-    $$
-    V_{\mathrm{tot}}(p_{\mathrm{err}}):=V_{\mathrm{rel}}(p_{\mathrm{err}})+V_{\mathrm{err}}(p_{\mathrm{err}})
-    \quad \text{(A.0.10)}
-    $$
-    This potential is defined on the interval $(0, p_{err,0}]$, where $p_{err,0}$ is the baseline error (Def A.0.2).
+### A.0.6 Synthesis: Complete Foundation for Property R
 
-*   **Theorem A.0.5 (Existence & Uniqueness of Optimal Error Rate $p_{\mathrm{err}}^*$):** There exists a unique value $p_{\mathrm{err}}^* \in (0, p_{\mathrm{err},0}]$ that minimizes the total error potential $V_{\mathrm{tot}}(p_{\mathrm{err}})$.
-    *Proof:* We analyze the derivative $V_{\mathrm{tot}}'(p_{\mathrm{err}}) = V_{\mathrm{rel}}'(p_{\mathrm{err}}) + V_{\mathrm{err}}'(p_{\mathrm{err}})$.
-    1.  *Continuity:* $V_{\mathrm{rel}}(p)$ and $V_{\mathrm{err}}(p)$ are continuous and differentiable ($C^1$) on $(0, p_{\mathrm{err},0}]$ under standard assumptions for $R(C)$ and $PP(C)$.
-    2.  *Signs of Derivatives:* From Lemma A.0.3, $V_{\mathrm{rel}}'(p) < 0$ for $p \in (0, p_{err,0}]$. From Prop A.0.3, $V_{\mathrm{err}}'(p) > 0$ for $p \in [0, 1)$.
-    3.  *Limits:* As $p_{\mathrm{err}}\to0^+$, $V_{\mathrm{rel}}'(p_{\mathrm{err}}) \to -\infty$ (Lemma A.0.3), while $V_{\mathrm{err}}'(p_{\mathrm{err}})$ approaches a finite positive value $\Gamma_0 T C_{alloc} PP'(C_{alloc})$. Therefore, $\lim_{p_{\mathrm{err}}\to0^+} V_{\mathrm{tot}}'(p_{\mathrm{err}}) = -\infty$.
-    4.  *Behavior at $p_{err,0}$:* At the baseline error $p=p_{err,0}$, no error correction is applied ($C_{err}=0$). If we consider the possibility of *increasing* error beyond $p_{err,0}$ (e.g., by using less reliable components), the cost $V_{rel}$ would be minimal, but the penalty $V_{err}$ would increase. More relevantly, at $p_{err,0}$, the marginal cost of *improving* reliability $V_{rel}'(p_{err,0})$ is finite and negative, while the marginal penalty $V_{err}'(p_{err,0})$ is positive. The sign of $V_{tot}'(p_{err,0})$ depends on the balance. However, since $V_{tot}'(p) \to -\infty$ as $p \to 0$, and $V_{tot}'(p)$ is continuous, by the Intermediate Value Theorem, there must exist at least one point $p_{\mathrm{err}}^* \in (0, p_{\mathrm{err},0}]$ where $V_{\mathrm{tot}}'(p_{\mathrm{err}}^*) = 0$.
-    5.  *Uniqueness:* To show uniqueness, we examine the second derivative $V_{\mathrm{tot}}''(p) = V_{\mathrm{rel}}''(p) + V_{\mathrm{err}}''(p)$. $V_{\mathrm{rel}}''(p) = \frac{d}{dp}[ \lambda R'(C_{err}) (-A/p) ]$. Using the chain rule for $R'(C_{err}(p))$ where $dC_{err}/dp \approx -A/p$, we get $V_{\mathrm{rel}}''(p) \approx \lambda [ R''(C_{err}) (-A/p)^2 + R'(C_{err}) (A/p^2) ]$. This is strictly positive, $V_{\mathrm{rel}}''(p) > 0$, provided $R'' \ge 0$ (convex costs) and $R'>0$ for $C_{err}>0$ (positive marginal costs). $V_{\mathrm{err}}''(p) = \frac{d}{dp}[ \Gamma_0 T C_{\mathrm{alloc}} PP'(C_{eff}) (1-p)^{T-1} ]$. The sign of $V_{err}''$ depends on the second derivatives of $PP$. Uniqueness of the minimum is guaranteed if $V_{tot}(p)$ is strictly convex, i.e., $V_{\mathrm{tot}}''(p) > 0$. This requires the **Assumption of Dominant Cost Convexity**: the convexity of the physical cost function $R(C)$ must be sufficiently strong to dominate any potential concavity arising from the performance function $PP(C)$. This assumption is consistent with the framework's principle that resource costs grow super-linearly for high reliability (Definition 3). If this assumption were violated, multiple local minima might exist, potentially trapping the system at suboptimal error rates, though the existence of a global minimum is still guaranteed by the boundary behaviors. We proceed assuming the dynamics select the unique global minimum $p_{\mathrm{err}}^*$. QED
+**Summary of Foundations:**
 
-*   **Corollary A.0.1 (Asymptotic Scaling of Optimal Error):** In the regime where $p_{err}^*$ is small and $T$ is large, we can approximate the condition $V_{\mathrm{tot}}'(p^*) = 0$, i.e., $-V_{\mathrm{rel}}'(p^*) = V_{\mathrm{err}}'(p^*)$. Using Lemma A.0.3 and Prop A.0.3 (approximating $(1-p^*)^{T-1} \approx e^{-T p^*}$) and assuming the simplest cost case $\gamma_p=1$ ($R(C)$ linear beyond baseline, $R'(C_{err}) = r_p$ constant):
-    $$
-    \lambda r_p \frac{A}{p^*} \approx \Gamma_0 T C_{\mathrm{alloc}} PP'(C_{eff}) e^{-T p^*}
-    $$
-    For small $p^*$, $e^{-T p^*} \approx 1$ and $C_{eff} \approx C_{alloc}$.
-    $$
-    \frac{\lambda A r_p}{p^*} \approx \Gamma_0 T C_{\mathrm{alloc}} PP'(C_{\mathrm{alloc}})
-    $$
-    Solving for $p^*$:
-    $$
-    p_{\mathrm{err}}^* \approx \frac{\lambda A r_p}{\Gamma_0 T C_{\mathrm{alloc}} PP'(C_{\mathrm{alloc}})} = \mathcal{O}\left(\frac{1}{T}\right)
-    \quad \text{(A.0.11)}
-    $$
-    This shows the optimal error rate decreases at least inversely with the computational depth $T$. If $R(C)$ grows faster ($\gamma_p > 1$), $R'(C_{err})$ increases as $p^* \to 0$, leading to even faster decrease of $p^*$ with $T$. QED
+**Foundation I (Logical Necessity, §A.0.2):**
+*   **Source:** Predictive structure of consciousness (Predictionism Appendix P.3.4)
+*   **Derivation:** Cogito → Binary verification → Boolean operations → Functional completeness → Property R
+*   **Status:** Logical necessity, independent of physical implementation
+*   **Significance:** Establishes why computational capacity must exist in any conscious predictive system
 
-*   **Proposition A.0.4 (Sufficiency for SPAP/RUD Robustness):** The noise-robust SPAP and RUD theorems (A.1.2, A.1.4) typically require the error probability per step to be less than some threshold, often $p_{err} < 1/2$. Since $p_{err}^* = \mathcal{O}(1/T)$ or faster (Corollary A.0.1), for any non-trivial computation ($T \ge 1$), $p_{err}^*$ can be made arbitrarily small by the optimization process for sufficiently large scale or cost sensitivity ($\lambda, r_p, A$). Thus, the dynamically achieved $p_{err}^*$ can always satisfy the condition $p_{err}^* < 1/2$ required for the robustness of the framework's core logical limit theorems. QED
+**Foundation II (Physical Instantiation, §A.0.3-A.0.5):**
+*   **Source:** MPU framework under POP/PCE dynamics with ND-RID interactions
+*   **Derivation:** Individual MPU minimal capacity ($K_0 = 3$ bits) → POP/PCE optimization driving reliable computation → Network composition achieving universality → Operational Property R
+*   **Status:** Physical realization under QEC Compatibility and Dominant Cost Convexity assumptions
+*   **Significance:** Demonstrates how logical necessity manifests in finite resource systems
 
-**5. Integration into System Dynamics**
+**Complementarity:** The foundations answer different questions:
+*   Logical foundation: *Why* must computational capacity exist at all?
+*   Physical foundation: *How* does it manifest under resource constraints?
 
-The minimization of the error potential $V_{tot}$ is part of the global optimization of the full PCE potential $V(x)$.
+Together, they provide complete, non-circular account of Property R in the PU framework.
 
-*   **Theorem A.0.6 (Convergence to Reliable Equilibrium):** Let $p_{\mathrm{err}}(x)$ denote the effective logical gate error rate achievable in network configuration $x$. The total error potential $V_{\mathrm{tot}}(p_{\mathrm{err}}(x))$ (Def A.0.5) represents the component of the global PCE potential $V(x)$ (Def D.1) related to computational reliability costs and error penalties. The stochastic adaptation dynamics governing the evolution of the network configuration $x(t)$ are given by Equation (D.8), seeking to minimize $V(x)$. By Theorem D.5 (Global Convergence), under standard assumptions (A1-A6 in Appendix D), the trajectory $x(t)$ converges almost surely to the set $\mathcal{E}_{*}^{\text{global}}$ of global minima of $V(x)$ as $t \to \infty$. Since minimizing $V(x)$ requires minimizing all its constituent positive cost/penalty components, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ must necessarily minimize $V_{\mathrm{tot}}(p_{\mathrm{err}}(x))$. By Theorem A.0.5, the minimum of $V_{tot}$ occurs uniquely at $p_{\mathrm{err}} = p_{\mathrm{err}}^*$. Therefore, any stable equilibrium configuration $x^*$ achieved by the POP/PCE dynamics will exhibit the optimal effective error rate: $p_{\mathrm{err}}(x^*) = p_{\mathrm{err}}^*$. QED
+**Derivational Chain:**
 
-**6. Conclusion of Proof for Theorem A.0.2**
+```
+Predictionism (Logical)           POP/PCE (Physical)
+       ↓                                 ↓
+Property R (Necessity)     →     Property R (Operational)
+       ↓                                 ↓
+SPAP Applicability         ←     Reliable Implementation
+       ↓                                 ↓
+K₀ = 3 bits                      QEC Compatibility
+       ↓                                 ↓
+MPU Structure              ←     Network Convergence
+```
 
-We have rigorously derived the unique optimal error rate $p_{\mathrm{err}}^*$ by balancing the PCE costs of achieving reliability ($V_{rel}$) against the PCE penalties for allowing errors ($V_{err}$). We proved that this optimal error rate $p_{\mathrm{err}}^*$ is strictly positive but scales at worst as $\mathcal{O}(1/T)$ with computational depth $T$ (Corollary A.0.1). We showed this dynamically achieved error rate is sufficient for the robustness conditions of the SPAP and RUD theorems (Proposition A.0.4). Finally, we demonstrated that the global POP/PCE dynamics (Theorem D.5) ensure that the MPU network converges almost surely to configurations $x^*$ that realize this optimal reliability level $p_{\mathrm{err}}^*$ (Theorem A.0.6). Therefore, the MPU network dynamically acquires Effective Operational Property R (Definition A.0.1) as a necessary consequence of optimizing predictive efficiency under physical constraints, completing the proof of Theorem A.0.2.
+**Application to Core Theorems:**
+With Property R established through both logical necessity and physical realization, the framework's core theorems apply:
 
-### A.0.5 Operational Realization via Network Protocols
+*   **SPAP (Theorems A.1.1-A.1.4):** Property R enables construction of self-referential systems that predict their own state. Diagonalization proves perfect self-prediction is impossible, establishing Logical Indeterminacy (Definition 12) and fundamental limit $\alpha_{\text{SPAP}}$.
+*   **RUD (Theorems A.2.3-A.2.4):** Property R enables construction of algorithms interacting with reflexive systems. Diagonalization proves certain properties are undecidable, extending computational limits beyond halting problem to interactive contexts.
 
-Operationally, an MPU $v$ or an aggregate $S$ leverages its internal logic ($K_0$) and the reliable network substrate (guaranteed by Theorem A.0.2 achieving optimal error $p_{err}^*$) to exhibit Effective Operational Property R:
-*   **Representation:** States ($\ulcorner s \urcorner$), models ($\ulcorner M \urcorner$), computational processes, etc., are encoded across robust configurations of multiple MPUs within a local network region, using protocols optimized for redundancy and resilience against the equilibrium error rate $p_{err}^*$.
-*   **Simulation/Reasoning:** Sequences of ND-RID interactions between networked MPUs execute computational protocols that simulate predictive processes or perform logical reasoning steps with effective error rate $p_{err}^*$. PCE selects for protocols achieving the necessary logical depth $T$ while operating near this optimal reliability/cost trade-off.
-*   **Predicate Evaluation:** MPU $v$ or aggregate $S$ uses its internal processing capacity, informed by results obtained from network simulation/reasoning protocols (which have reliability characterized by $p_{err}^*$), to evaluate logical predicates and initiate subsequent actions or state updates.
+**Physical Applicability:** Theorem A.0.2 and network universality (Theorem A.0.6) guarantee that physical MPU networks converge to configurations where SPAP and RUD theorems apply operationally. Abstract logical limits manifest as physical constraints on prediction and computation in thermodynamically optimized systems.
 
-### A.0.6 Conclusion: Applicability of SPAP/RUD
+**Falsifiability:** The physical instantiation makes testable predictions. If fundamental substrate is intrinsically non-QEC-compatible (noise fundamentally non-local, or baseline error rates irreducibly above threshold for all accessible configurations), this would falsify the PU framework's claim that physical law emerges from predictive optimization. The framework requires that Nature's substrate supports error-correctable quantum computation.
 
+### A.0.7 Transition to Formal Proofs
 
-Minimal Predictive Units (MPUs) possess the intrinsic logical structure ($K_0$) providing the minimal prerequisites for expressing instances of self-reference (Proposition A.0.1, as clarified). The full realization of Effective Operational Property R (Definition A.0.1)—encompassing representation, simulation/reasoning, and predicate evaluation for complex computations—emerges dynamically at the network level. Specifically, the optimizing dynamics driven by POP and PCE (via minimization of the PCE Potential $V(x)$, Appendix D) enforce the development of reliable computational interaction protocols across the network. This process ensures that MPUs and their aggregates achieve the necessary computational richness with a sufficiently low, dynamically optimized equilibrium error rate $p_{err}^*$ (Theorem A.0.2, proven under assumptions detailed in Appendix A.0.4 and reliant on the convergence established in Theorem D.5). This dynamically derived capability guarantees that the fundamental logical and computational limitations established by the noise-robust versions of SPAP (Theorems A.1.2, A.1.4) and RUD (Theorems A.2.3, A.2.4) apply robustly to the physical dynamics of MPUs operating within the Predictive Universe framework.
-
+Having established that the MPU network dynamically converges to a configuration possessing Effective Operational Property R, we are now justified in applying the formal machinery of self-reference to physical predictive systems. The following sections (A.1 and A.2) formally derive the Self-Referential Paradox of Accurate Prediction (SPAP) and Reflexive Undecidability (RUD), which constitute the fundamental logical limits acting upon this physically instantiated computational substrate.
 
 ## A.1 Self-Referential Paradox of Accurate Prediction (SPAP)
 

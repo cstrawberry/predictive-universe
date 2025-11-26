@@ -39,9 +39,9 @@ In any PU cosmology satisfying the emergence of spacetime (§11) and gravity (§
 
    with coefficients fixed by the block’s charges (Lemma R.IDX2). If $\nu_R$ are included, all mixed gauge and gravitational anomalies cancel, hence (Y.2)$=0$.
 
-2. (**C and CP violation**) The emergent gauge interactions (predictive‑frame connection) carry generic complex phases (e.g., in the Yukawa couplings derived in Appendix R). CP invariance requires these phases to satisfy specific, measure‑zero constraints. Thus, generic PU configurations violate CP without requiring extra fields. This is the standard “complex phase is generic” argument, now anchored in the emergent $G$‑bundle structure (Appendix G) and the topological origin of generations (Appendix R).
+2. (**C and CP violation**) The emergent gauge interactions (predictive‐frame connection) carry generic complex phases (e.g., in the Yukawa couplings derived in Appendix R, Section R.5). The Jarlskog invariant $J_{CP}$ is non-zero for $N \geq 3$ generations (Proposition R.3.5), with CP phase arising from geometric overlaps of generation vacua (Section R.7).
 
-3. (**Departure from equilibrium**) The arrow‑of‑becoming and local horizon thermodynamics (§12; Theorem 12.G2 with positive Unruh/KMS temperature) enforce nonequilibrium during expansion. Hence all three Sakharov conditions hold without additional assumptions [Sakharov 1967].
+3. (**Departure from equilibrium**) The arrow‑of‑becoming and local horizon thermodynamics (**§12**) with positive Unruh/KMS temperature enforce nonequilibrium during expansion. Hence all three Sakharov conditions hold without additional assumptions [Sakharov 1967].
 
 *Proof.* (1) follows from the Atiyah–Singer index [Atiyah & Singer 1968] for chiral fermions in $SU(2)$ backgrounds (Lemma R.IDX1) and the standard descent to the local anomaly (Y.1). The gravitational/hypercharge statement is the usual mixed‑anomaly consequence of Lemma R.IDX2. (2) In the $G$–principal bundle, PCE‑preserving automorphisms with complex phases are open and dense; CP‑symmetric holonomy constraints define a lower‑dimensional subset. (3) The Clausius relation with $T>0$ and $\dot a>0$ forbids global equilibrium across cosmological horizons (Theorem 12.G2 and Appendix E). ∎
 
