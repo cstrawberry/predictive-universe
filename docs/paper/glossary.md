@@ -40,6 +40,8 @@
 
 *   **Causality (Postulate 2):** (Section 10.1.1) Defined operationally as the impossibility of constructing paradox-inducing causal loops, which requires the impossibility of controllable, deterministic faster-than-light (FTL) signaling.
 
+*   **Causal Structure:** (Definition P.8.1) The constraint that event $A$ can causally influence event $B$ if and only if $A$'s predictive information can propagate to $B$ through ND-RID channels with correctable error accumulation. Emergent from the finite propagation speed $c$ (Theorem P.8.4 / Theorem 46) and error-correction range of the Golay code structure.
+
 *   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Equation 54). It bounds the maximum possible deviation from the Born rule (specifically, the Fisher-Rao distance, Definition 33) that the system can induce. Bounded by the causality constraint $\mathrm{CC}(S)\le \alpha_{\mathrm{CC,max}} < 0.5$ (Theorem 39).
 
 *   **Coherence:** (Appendix C) Reliability and stability of predictive correlations and information propagation across the MPU network. Requires geometric regularity (Theorem C.2).
@@ -80,6 +82,11 @@
 
 *   **Generation Vacua ($p_1, p_2, p_3$):** (Appendix R, Section R.5.2) The three distinct minima of the PCE-compatible potential $V_q$ on the Perspective Space $\Sigma_8$, each corresponding to one fermion generation. Geodesic distances between vacua $d_\Sigma(p_g, p_{g'})$ determine Yukawa couplings via Gaussian overlap integrals, producing hierarchical masses.
 
+
+*   **Golay Bridge:** (Appendix R, Section R.4.2.1, Theorem R.4.9) The unique correspondence between information-theoretic error correction and geometric sphere packing at $M = 24$. The extended binary Golay code $\mathcal{G}_{24}$ simultaneously: (1) achieves the maximum minimum distance ($d = 8$) among rate-1/2 binary linear codes of length 24, and (2) provides the glue vectors completing $\sqrt{2}E_8^3$ into the unique rootless even unimodular lattice $\Lambda_{24}$. This dual role arises necessarily from PCE optimization operating in both domains.
+
+*   **Golay Code ($\mathcal{G}_{24}$):** (Appendix Z, Theorem Z.13; Appendix R, Theorem R.4.4) The extended binary Golay code with parameters $[24, 12, 8]$: block length 24, dimension 12 (rate 1/2), minimum Hamming distance 8. Unique optimal binary linear code at these parameters (Pless 1968). Can detect up to 7 errors and correct up to 3 errors. PCE-selected as the optimal error-correcting organization for the $M = 24$ interface modes. Its weight-8 codewords support the Steiner system $S(5,8,24)$ (Assmus & Mattson 1969).
+
 *   **$\Gamma_0$ (Gamma-0):** (Definition 20) System-level **constant** Power Conversion Factor with dimensions of **Power** ($[E][T]^{-1}$), appearing in the PCE potential. It maps the marginal performance gradient $(\partial PP/\partial C)$ to an equivalent power rate in the Adaptation Driving Force $\Psi$. Constrained by thermodynamic limits (Theorem 20). **At equilibrium, parameters satisfy Equation (29)**, enabling empirical calibration of $\Gamma_0$ for a given MPU system.
 
 *   **$\mathcal{H}_0$:** (Proposition 4) The minimal complex Hilbert space required for representing the MPU state $|\psi(t)\rangle$. Dimension $d_0 = \dim(\mathcal{H}_0)$ satisfies $d_0 \ge 8$ (Theorem 23). Emergence justified by PCE optimality (Theorem G.1.8).
@@ -100,7 +107,7 @@
 
 *   **Landauer Pointer:** (Appendix Z, Theorem Z.1, Section Z.2.3) The minimal physical subsystem instantiating the irreducible cost $\varepsilon = \ln 2$ of the SPAP cycle. Dimension determined by PPI + Shannon entropy: $a = e^\varepsilon = 2$. Represents the two-level active kernel within the $d_0 = 8$ MPU Hilbert space where baseline predictive activity concentrates.
 
-*   **Leech Lattice ($\Lambda_{24}$):** (Appendix R, Section R.4.2) The unique optimal sphere-packing lattice in 24 dimensions (Cohn et al. 2017), with kissing number 196,560. Naturally decomposes as $\Lambda_{24} \hookrightarrow E_8 \oplus E_8 \oplus E_8$ when appropriately scaled, providing an independent geometric pathway to the three-fold generation structure. Its dimension 24 coincides with the interface mode count $M = 24$ (Theorem Z.5).
+*   **Leech Lattice ($\Lambda_{24}$):** (Appendix R, Section R.4.2) The unique optimal sphere-packing lattice in 24 dimensions (Cohn et al. 2017), with kissing number 196,560 and minimum norm 4 (rootless). Contains the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ with index $2^{12}$, providing an independent geometric pathway to the three-fold generation structure. Its dimension 24 coincides with the interface mode count $M = 24$ (Theorem Z.5).
 
 *   **Light Sublattice ($L_{\rm light}$):** (Appendix R, Definition R.3.2, Proposition R.3.3) The integer kernel $L_{\rm light} := \ker_{\mathbb{Z}} C \subset \mathbb{Z}^7$ of the charge map matrix $C$ encoding $SU(3) \times SU(2)$ Cartan generators. Contains topological sectors neutral under non-Abelian gauge groups. All elements have trivial $SU(3)$ center charge: $\tau(q) = 0 \in \mathbb{Z}_3$ for $q \in L_{\rm light}$.
 
@@ -136,6 +143,8 @@
 *   **Perspectival State ($S_{(s)}(t)$):** (Definition 24, Appendix M) The complete state of an MPU, represented by the pair $(S(t), s)$, where $S(t)=|\psi(t)\rangle \in \mathcal{H}_0$ is the state amplitude and $s \in \Sigma$ is the perspective index representing the interaction context/basis.
 
 *   **PCE-Attractor:** (Definition 15a, Appendix Z Section Z.6.3) The unique PCE-optimal equilibrium state of the MPU, characterized by: (i) density operator $\rho_0 = I_a/a \oplus 0_b$ maximally mixed on active subspace; (ii) capacity saturation $\mathcal{I}(u^*) = \ln d_0$; (iii) canonical gauge normalization $\kappa = 1$ (before interface corrections). The state where predictive and physical descriptions coincide, determining both $u^*$ and the fine-structure constant.
+
+*   **Module Decomposition Theorem:** (Theorem G.8.4b, Appendix G) The unique decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ of the inactive subspace $\mathcal{B} = \mathbb{C}^6$, derived via exhaustive partition analysis under: (i) Lagrangian capacity bound $n_G \leq 12$ (Theorem G.8.2e); (ii) PCE benefit maximization selecting $n_G = 12$; (iii) chirality requirement (complex representations); (iv) faithfulness (no redundant generators); and (v) anomaly cancellation. Establishes the Standard Model gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ as the unique 12-dimensional solution (Corollary G.8.4c), providing complementary verification of Conjecture G.M1.   
 
 *   **QFI Mode Count ($M$):** (Appendix Z, Theorem Z.5, Proposition Z.1) The number of independent information-sensitivity modes in the PCE-Attractor state: $M = 2ab = 2 \times 2 \times 6 = 24$, with per-mode sensitivity $\lambda = 1$. Arises from off-diagonal QFI contributions connecting active ($a = 2$) and inactive ($b = 6$) subspaces. Over-determined by 8 independent mathematical constraints (Theorem Z.12).
 

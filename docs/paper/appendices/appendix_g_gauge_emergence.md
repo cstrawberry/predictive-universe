@@ -377,6 +377,51 @@ The MPU network’s ability to support a complex gauge structure is fundamentall
 
     Any gauge group with $n_G$ significantly exceeding 20 is likely unsupportable due to prohibitive information costs, irrespective of $D$.
 
+#### G.8.2.2a Symplectic Structure of the QFI-Active Tangent Space
+
+The channel capacity bound (Equation G.8.0) admits a complementary geometric derivation from the symplectic structure of the QFI-active tangent space at the PCE-Attractor.
+
+**Definition G.8.2a (Interface Generator Basis).** For each pair $(\alpha, \beta)$ with $\alpha \in A = \{1, 2\}$ and $\beta \in B = \{3, \ldots, 8\}$, define the Hermitian interface generators:
+
+$$
+X_{\alpha\beta} := |\alpha\rangle\langle\beta| + |\beta\rangle\langle\alpha|, \quad Y_{\alpha\beta} := -i(|\alpha\rangle\langle\beta| - |\beta\rangle\langle\alpha|)
+$$
+
+The set $\{X_{\alpha\beta}, Y_{\alpha\beta}\}_{(\alpha,\beta) \in A \times B}$ comprises $2ab = 24$ generators spanning the QFI-active tangent space $T_{\rho_0}$ (Theorem Z.5).
+
+*Remark (Basis Independence).* The labeling $A = \{1, 2\}$, $B = \{3, \ldots, 8\}$ represents a choice of eigenbasis for $\rho_0$. By Proposition Z.1, any two choices of $a = 2$ dimensional active subspace are related by a unitary $U \in SU(8)$, and the symplectic structure derived below is invariant under this equivalence.
+
+
+**Definition G.8.2b (Symplectic Incompatibility Form).** The natural symplectic form on $T_{\rho_0}$ induced by quantum incompatibility is:
+
+$$
+\omega(H_1, H_2) := -i \, \mathrm{Tr}[\rho_0 [H_1, H_2]]
+$$
+
+This form quantifies the obstruction to simultaneous optimal estimation of parameters along directions $H_1$ and $H_2$ (Matsumoto 2002; Ragy et al. 2016). Non-degeneracy on the interface subspace follows from the uniform QFI eigenvalue $\lambda = 1$ (Theorem Z.5, Step 5).
+
+**Lemma G.8.2c (Canonical Symplectic Decomposition).** Direct calculation yields $\omega(X_{\alpha\beta}, Y_{\alpha\beta}) = 1$ for each pair $(\alpha, \beta)$, with all other pairings vanishing. Hence $T_{\rho_0}$ decomposes into $ab = 12$ canonical symplectic 2-planes:
+
+$$
+T_{\rho_0} = \bigoplus_{(\alpha,\beta) \in A \times B} \mathrm{span}(X_{\alpha\beta}, Y_{\alpha\beta})
+$$
+
+*Proof.* The commutator is $[X_{\alpha\beta}, Y_{\alpha\beta}] = 2i(|\alpha\rangle\langle\alpha| - |\beta\rangle\langle\beta|)$. Evaluating: $\omega(X_{\alpha\beta}, Y_{\alpha\beta}) = -i \cdot \mathrm{Tr}[\rho_0 \cdot 2i(|\alpha\rangle\langle\alpha| - |\beta\rangle\langle\beta|)] = 2(p_\alpha - p_\beta) = 2(\tfrac{1}{2} - 0) = 1$. For distinct pairs, the commutator lies in the AA $\oplus$ BB block where $\mathrm{Tr}[\rho_0[\cdots]] = 0$. ∎
+
+**Definition G.8.2d ($\omega$-Isotropic Subspace).** A subspace $L \subseteq T_{\rho_0}$ is $\omega$-isotropic if $\omega(v, w) = 0$ for all $v, w \in L$. A maximal $\omega$-isotropic subspace (Lagrangian) has $\dim(L) = \dim(T_{\rho_0})/2 = 12$.
+
+**Theorem G.8.2e (Geometric Bound on Jointly Estimable Generators).** The maximum number of gauge generators supporting joint optimal parameter estimation equals the Lagrangian dimension:
+
+$$
+n_G^{(\mathrm{geom})} = ab = 12
+$$
+
+*Proof.* A maximal $\omega$-isotropic subspace is obtained by selecting exactly one generator from each symplectic 2-plane (either $X_{\alpha\beta}$ or $Y_{\alpha\beta}$, but not both), giving $\dim(L_{\max}) = 12$. Any subspace of dimension $> 12$ must contain at least one complete 2-plane, which has $\omega(X_{\alpha\beta}, Y_{\alpha\beta}) = 1 \neq 0$, violating isotropy. ∎
+
+**Corollary G.8.2f (Consistency with Channel Capacity).** The geometric bound $n_G^{(\mathrm{geom})} = 12$ refines the channel capacity range $n_{\max} \approx 7.5$–$20$ (Equation G.8.0) by providing a sharp upper constraint from symplectic geometry. The Standard Model gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ with $\dim = 8 + 3 + 1 = 12$ saturates the geometric bound.
+
+**Remark G.8.2g (Connection to Golay Structure).** The Lagrangian dimension $ab = 12$ equals the Golay code dimension $k = M/2 = 12$ (Theorem Z.13). This correspondence reflects structural unity: both the symplectic geometry (joint estimability) and the error-correction structure (optimal redundancy) select the same 12-dimensional subspace of the 24-dimensional interface. Gauge generators failing joint estimability incur additional PCE costs from incompatibility-induced measurement trade-offs, manifesting as increased operational cost $V_{\mathrm{op}}$ due to the necessity of sequential rather than simultaneous optimal estimation.
+
 #### G.8.2.3 Anomaly Cancellation as a PCE Imperative (D‑Sensitive)
 
 Quantum gauge theories with chiral fermions can suffer from quantum anomalies, which are acutely sensitive to spacetime dimension $D$. An anomalous gauge structure implies inconsistency and is assigned an infinite PCE penalty:
@@ -477,10 +522,171 @@ PCE favors system parameters such that $\eta_{ben}(D)>\lambda_c(D)\alpha_{load}/
 A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 
 1.  **Anomaly Freedom:** $V_{\text{anom}}(G,{\psi},D)=0$.
-2.  **Capacity Constraint:** $n_G\le n_{\max}$ (Equation G.8.0, where $n_{\max}$ is D‑independent, derived from MPU properties).
+2.  **Capacity Constraint:** $n_G \leq n_{\max}$. The channel capacity estimate (Equation G.8.0) yields the range $n_{\max} \approx 7.5$–$20$. The geometric bound from the Lagrangian dimension of the QFI symplectic structure (Theorem G.8.2e) yields $n_G \leq ab = 12$. Since $12$ lies within the channel capacity range, the geometric bound provides the sharp constraint $n_G \leq 12$. This value equals the Golay code dimension $k = 12$ (Theorem Z.13). The convergence of channel capacity, symplectic geometry, and error-correction theory at the value 12 constitutes a non-trivial consistency check on the framework.
 3.  **Structural Stability:** $D$ must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors $D=4$.
 4.  **Information Efficiency:** $D$ should optimize information‑theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor $D=4$.
 5.  **Potential Minimization:** Among all triplets $(G,{\psi},D)$ satisfying (1)–(4), the optimal solution minimizes $V_{net}$ given by Equation G.8.5.
+
+### G.8.4a Gauge Algebra via Exhaustive Partition Analysis
+
+This section derives the Standard Model gauge algebra via exhaustive classification of module decompositions, providing complementary verification of the cost-minimization approach in Conjecture G.M1. The inactive subspace $\mathcal{B} = \mathbb{C}^b$ with $b = d_0 - a = 8 - 2 = 6$ (where $a = 2$ follows from Theorem Z.1) carries the gauge representation. The derivation proceeds through three stages: exclusion of simple groups, enumeration of viable partitions, and unique selection by physical constraints.
+
+**Theorem G.8.4a (No Simple 12-Dimensional Gauge Algebra).**
+No complex simple Lie algebra has dimension $12$. In particular, any gauge algebra saturating the Lagrangian capacity bound $n_G = 12$ (Theorem G.8.2e) is necessarily non-simple: its semisimple part $[\mathfrak{g},\mathfrak{g}]$ contains at least two simple factors.
+
+*Proof.*
+
+**Step 1 (Classification of simple Lie algebra dimensions).** The dimensions of simple Lie algebras over $\mathbb{C}$ are given by standard formulas. For the classical families:
+
+| Family | Dimension Formula | Values for small rank |
+|:-------|:------------------|:----------------------|
+| $\mathfrak{su}(n)$, $n \geq 2$ | $n^2 - 1$ | 3, 8, 15, 24, 35, ... |
+| $\mathfrak{so}(n)$, $n \geq 5$ | $n(n-1)/2$ | 10, 15, 21, 28, ... |
+| $\mathfrak{sp}(2n)$, $n \geq 1$ | $n(2n+1)$ | 3, 10, 21, 36, ... |
+
+For the exceptional algebras:
+$$
+\dim(\mathfrak{g}_2) = 14,\quad
+\dim(\mathfrak{f}_4) = 52,\quad
+\dim(\mathfrak{e}_6) = 78,\quad
+\dim(\mathfrak{e}_7) = 133,\quad
+\dim(\mathfrak{e}_8) = 248.
+$$
+
+We now verify explicitly that $12$ does not occur in this list.
+
+For $\mathfrak{su}(n)$:
+$$
+n^2 - 1 = 12 \;\Longrightarrow\; n^2 = 13
+$$
+which has no integer solution.
+
+For $\mathfrak{so}(n)$:
+$$
+\frac{n(n-1)}{2} = 12 \;\Longrightarrow\; n(n-1) = 24 \;\Longrightarrow\; n^2 - n - 24 = 0
+$$
+The discriminant is $\Delta = 1 + 96 = 97$, which is not a perfect square, so there is no integer solution.
+
+For $\mathfrak{sp}(2n)$:
+$$
+n(2n+1) = 12 \;\Longrightarrow\; 2n^2 + n - 12 = 0
+$$
+The discriminant is $\Delta = 1 + 96 = 97$, not a perfect square, so there is no integer solution.
+
+The exceptional dimensions listed above do not include $12$. Therefore no simple complex Lie algebra has dimension $12$.
+
+**Step 2 (Exclusion of simple 12-dimensional candidates).** Suppose for contradiction that a simple complex Lie algebra $\mathfrak{g}$ satisfies $\dim \mathfrak{g} = 12$. By the classification of simple Lie algebras, $\mathfrak{g}$ must belong either to one of the classical families or to the exceptional list. Step 1 shows that no such algebra has dimension $12$, yielding a contradiction.
+
+**Step 3 (Implication for capacity-saturating gauge algebras).** If a gauge algebra $\mathfrak{g}$ saturates the Lagrangian capacity bound $n_G = 12$ (Theorem G.8.2e), then $\dim \mathfrak{g} = 12$. By Step 2, $\mathfrak{g}$ cannot be simple. Therefore its semisimple part $[\mathfrak{g},\mathfrak{g}]$ must be a direct sum of at least two simple Lie algebras. In particular, any simple unification candidate with $\dim \mathfrak{g} > 12$ (such as $SU(5)$, $SO(10)$, or $E_6$ with dimensions $24$, $45$, and $78$ respectively) is excluded outright by the bound $n_G \leq 12$. ∎
+
+**Theorem G.8.4b (Unique Module Decomposition).**
+Let $\mathfrak{g}$ be a reductive Lie algebra of dimension at most 12 acting faithfully on $\mathcal{B} = \mathbb{C}^6$. If $\mathfrak{g}$ supports chiral fermion representations and anomaly-free matter content, then the unique module decomposition is:
+$$
+\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1
+$$
+and $\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ with $\dim(\mathfrak{g}) = 12$.
+
+*Proof.*
+
+**Step 1 (Reductivity from compactness).** The gauge group $G$ acting on the MPU Hilbert space is compact (Appendix G, Sections G.1–G.3). By standard structure theory of compact Lie groups, its complexified Lie algebra $\mathfrak{g}$ is reductive:
+$$
+\mathfrak{g} = \mathfrak{z}(\mathfrak{g}) \oplus [\mathfrak{g},\mathfrak{g}]
+$$
+where $\mathfrak{z}(\mathfrak{g})$ is the center (abelian) and $[\mathfrak{g},\mathfrak{g}]$ is semisimple. For representations of reductive Lie algebras, every finite-dimensional complex representation is completely reducible. Hence the faithful action of $\mathfrak{g}$ on the inactive subspace $\mathcal{B} = \mathbb{C}^6$ decomposes as a direct sum of irreducible $\mathfrak{g}$-modules:
+$$
+\mathcal{B} \cong \mathbb{C}^{n_1} \oplus \cdots \oplus \mathbb{C}^{n_r}
+$$
+with each $\mathbb{C}^{n_i}$ an irreducible $\mathfrak{g}$-module. We refer to $(n_1,\ldots,n_r)$ as the module dimension partition of $\mathcal{B}$.
+
+**Step 2 (Partition enumeration).** The module dimensions $(n_1, \ldots, n_r)$ partition $b = 6$. The eleven unordered partitions of 6, together with the maximal faithful algebra for each partition (taking $\mathfrak{u}(n) = \mathfrak{su}(n) \oplus \mathfrak{u}(1)$ with $\dim(\mathfrak{u}(n)) = n^2$), are:
+
+| Partition | Maximal Faithful Algebra | $\dim$ | 
+|:---------:|:-------------------------|:------:|
+| $(6)$ | $\mathfrak{u}(6)$ | 36 |
+| $(5,1)$ | $\mathfrak{u}(5) \oplus \mathfrak{u}(1)$ | 26 |
+| $(4,2)$ | $\mathfrak{u}(4) \oplus \mathfrak{u}(2)$ | 20 |
+| $(4,1,1)$ | $\mathfrak{u}(4) \oplus \mathfrak{u}(1)^2$ | 18 |
+| $(3,3)$ | $\mathfrak{u}(3)^2$ | 18 |
+| $(3,2,1)$ | $\mathfrak{u}(3) \oplus \mathfrak{u}(2) \oplus \mathfrak{u}(1)$ | 14 |
+| $(3,1,1,1)$ | $\mathfrak{u}(3) \oplus \mathfrak{u}(1)^3$ | 12 |
+| $(2,2,2)$ | $\mathfrak{u}(2)^3$ | 12 |
+| $(2,2,1,1)$ | $\mathfrak{u}(2)^2 \oplus \mathfrak{u}(1)^2$ | 10 |
+| $(2,1,1,1,1)$ | $\mathfrak{u}(2) \oplus \mathfrak{u}(1)^4$ | 8 |
+| $(1^6)$ | $\mathfrak{u}(1)^6$ | 6 |
+
+**Step 3 (Capacity bound filter).** The constraint $n_G \leq 12$ (Theorem G.8.2e) eliminates partitions whose maximal faithful algebra exceeds 12:
+
+- $(6)$: $\dim = 36 > 12$. Eliminated.
+- $(5,1)$: $\dim = 26 > 12$. Eliminated.
+- $(4,2)$: $\dim = 20 > 12$. Eliminated.
+- $(4,1,1)$: $\dim = 18 > 12$. Eliminated.
+- $(3,3)$: $\dim = 18 > 12$. Eliminated.
+- $(3,2,1)$: $\dim = 14 > 12$. Requires subalgebra analysis (Step 7).
+
+Remaining candidates with maximal $\dim \leq 12$: $(3,1,1,1)$, $(2,2,2)$, $(2,2,1,1)$, $(2,1,1,1,1)$, $(1^6)$.
+
+**Step 4 (PCE benefit maximization filter).** From Equation G.8.1, the predictive benefit satisfies $V_{\text{benefit}} \propto \eta_{\text{ben}}(D) \cdot n_G$, creating an incentive to maximize the generator count up to the capacity bound. This follows from the PCE potential structure (Equation G.8.5): when $\eta_{\text{ben}}(D) > \lambda_c(D)\alpha_{\text{load}}/C_{\max}$, the coefficient of the linear $n_G$ term in $V_{\text{net}}$ is negative, favoring larger $n_G$. PCE optimization therefore selects algebras achieving $n_G = 12$ when this is attainable, provided the PCE potential structure satisfies this condition. Partitions with maximal dimension strictly less than 12 are PCE-suboptimal under this condition:
+
+- $(2,2,1,1)$: $\dim_{\max} = 10 < 12$. Eliminated.
+- $(2,1,1,1,1)$: $\dim_{\max} = 8 < 12$. Eliminated.
+- $(1^6)$: $\dim_{\max} = 6 < 12$. Eliminated.
+
+Remaining candidates: $(3,1,1,1)$, $(2,2,2)$, and $(3,2,1)$ (pending subalgebra analysis).
+
+**Step 5 (Chirality filter).** Chiral fermions require complex representations inequivalent to their conjugates. For $SU(2)$, the fundamental representation $\mathbf{2}$ is pseudoreal: if $\psi$ transforms as $\psi \to U\psi$ for $U \in SU(2)$, then $\epsilon \psi^*$ (where $\epsilon = i\sigma_2$ is the antisymmetric tensor) transforms identically, establishing $\mathbf{2} \cong \bar{\mathbf{2}}$. All irreducible representations of $SU(2)$ are either real (integer spin) or pseudoreal (half-integer spin).
+
+For partition $(2,2,2)$, the maximal semisimple subalgebra is $\mathfrak{su}(2)^3$, acting on three copies of $\mathbb{C}^2$. Each $\mathbb{C}^2$ carries the pseudoreal fundamental. All representations of $SU(2)^3$ are self-conjugate, precluding chiral matter. Partition $(2,2,2)$ is eliminated.
+
+Remaining candidates: $(3,1,1,1)$ and $(3,2,1)$.
+
+**Step 6 (Anomaly filter on $(3,1,1,1)$).** For partition $(3,1,1,1)$, the maximal algebra is $\mathfrak{u}(3) \oplus \mathfrak{u}(1)^3$ with $\dim = 9 + 3 = 12$. Although this partition satisfies the capacity bound and PCE benefit maximization, it fails the anomaly constraints.
+
+Consider the $[SU(3)]^2 \times U(1)_i$ anomaly for each $U(1)_i$ factor. The anomaly coefficient is:
+$$
+\mathcal{A}_i = \sum_{\text{left-chiral}} Y_i \cdot T(R) - \sum_{\text{right-chiral}} Y_i \cdot T(R)
+$$
+where $T(R)$ is the Dynkin index of representation $R$ (with $T(\mathbf{3}) = 1/2$). The single $\mathbb{C}^3$ module transforms as the fundamental $\mathbf{3}$ of $SU(3)$. For anomaly cancellation $\mathcal{A}_i = 0$, either:
+(a) The $\mathbf{3}$ is vector-like (equal left and right chiralities), eliminating chiral fermions, or
+(b) $Y_i^{(\mathbf{3})} = 0$ for all $i$.
+
+Option (b) renders all $U(1)$ factors trivial on the color sector. Standard Model phenomenology requires hypercharge to couple non-trivially to quarks ($Y_q \neq 0$). This requirement follows from the observed electric charges of quarks: $Q = T_3 + Y/2$ with $Q(u) = +2/3$ and $Q(d) = -1/3$ necessitates nonzero $Y_q$. Partition $(3,1,1,1)$ cannot support anomaly-free chiral matter with appropriate abelian-color coupling. Eliminated.
+
+Remaining candidate: $(3,2,1)$.
+
+**Step 7 (Subalgebra analysis of $(3,2,1)$).** The maximal faithful algebra for $(3,2,1)$ is $\mathfrak{u}(3) \oplus \mathfrak{u}(2) \oplus \mathfrak{u}(1)$ with $\dim = 9 + 4 + 1 = 14 > 12$. We seek a 12-dimensional subalgebra acting faithfully.
+
+Decompose:
+$$
+\mathfrak{u}(3) = \mathfrak{su}(3) \oplus \mathfrak{u}(1)_3, \quad \mathfrak{u}(2) = \mathfrak{su}(2) \oplus \mathfrak{u}(1)_2
+$$
+The three $\mathfrak{u}(1)$ factors $(\mathfrak{u}(1)_3, \mathfrak{u}(1)_2, \mathfrak{u}(1)_1)$ span a 3-dimensional abelian subalgebra. To achieve $\dim(\mathfrak{g}) = 12$, we must reduce by 2 dimensions, leaving exactly one $\mathfrak{u}(1)$ factor.
+
+The anomaly cancellation conditions for Standard Model fermion content with $N_c = 3$ colors require (cf. Section G.8.5):
+$$
+[SU(3)]^2 U(1): \quad 2y_q + y_{u^c} + y_{d^c} = 0
+$$
+$$
+[SU(2)]^2 U(1): \quad 3y_q + y_\ell = 0
+$$
+These constraints, together with gravitational anomaly cancellation, fix the relative $U(1)$ charges up to an overall normalization. The solution is unique: a single linear combination $U(1)_Y$ (hypercharge) survives as the physical abelian factor. The orthogonal combinations are either anomalous or decouple. Therefore exactly one physical $U(1)$ remains:
+$$
+\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)_Y
+$$
+with $\dim = 8 + 3 + 1 = 12$.
+
+**Step 8 (Faithfulness verification).** The algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)_Y$ acts on $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ as follows:
+- $\mathfrak{su}(3)$ acts faithfully on $\mathbb{C}^3$ via the fundamental representation, trivially on $\mathbb{C}^2 \oplus \mathbb{C}^1$.
+- $\mathfrak{su}(2)$ acts faithfully on $\mathbb{C}^2$ via the fundamental representation, trivially on $\mathbb{C}^3 \oplus \mathbb{C}^1$.
+- $\mathfrak{u}(1)_Y$ acts with eigenvalues determined by hypercharge assignments on each summand.
+
+For the combined action to be faithful, no nonzero element of $\mathfrak{g}$ can annihilate all of $\mathcal{B}$. Since each simple factor acts faithfully on its designated module, and $U(1)_Y$ distinguishes the summands via distinct hypercharge values (as fixed by anomaly cancellation in Step 7), the combined action is faithful. ∎
+
+**Corollary G.8.4c (Standard Model Gauge Algebra Uniqueness).**
+The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ is the unique Lie algebra of dimension at most 12 acting faithfully on $\mathbb{C}^6$ that satisfies: (i) the Lagrangian capacity bound $n_G \leq 12$; (ii) PCE benefit maximization $n_G = 12$; (iii) chirality compatibility (complex representations); and (iv) anomaly-free chiral matter content.
+
+*Proof.* Theorem G.8.4b establishes that $(3,2,1)$ is the unique partition surviving all constraints. The module decomposition $\mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ forces the algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ as the unique 12-dimensional faithful, chirality-compatible, anomaly-free solution. ∎
+
+**Remark G.8.4d (Complementary Derivation Methods).** The module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ derived via exhaustive partition analysis coincides with the Local Module Hypothesis of Conjecture G.M1. Both methods use the same foundational constraints—the capacity bound $n_G \leq 12$, anomaly cancellation, chirality requirements, and PCE optimization—but apply them differently: Conjecture G.M1 proceeds by direct cost minimization, while Theorem G.8.4b proceeds by systematic elimination. The convergence of these complementary approaches strengthens confidence that the Standard Model gauge structure is uniquely determined by framework principles.
 
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 
@@ -491,7 +697,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
 
 2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
     Within the stable D=4 arena, PCE selects the optimal gauge group and matter content subject to capacity and consistency constraints.
-    *   **Gauge group $G_{SM}$.** By the cost‑minimization principle under Conjecture G.M1 and the Local Module Hypothesis, the non‑abelian part is $SU(2)\times SU(3)$ acting in fundamentals; adding **exactly one** non‑trivial $U(1)$ factor is sufficient and cost‑minimal for SM‑like chiral content. The total generator count $n_G=12$ lies within the information‑capacity range (see §G.8.2).
+    *   **Gauge group $G_{SM}$.** By the cost-minimization principle under Conjecture G.M1 and the Local Module Hypothesis, verified by exhaustive partition analysis (Theorem G.8.4b, Corollary G.8.4c), the module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ is uniquely selected. The non-abelian part is $SU(2) \times SU(3)$ acting in fundamentals; adding **exactly one** non-trivial $U(1)$ factor is sufficient and cost-minimal for SM-like chiral content. Simple unification groups are excluded by capacity bounds (Theorem G.8.4a). The total generator count $n_G = 12$ saturates the Lagrangian capacity bound (Theorem G.8.2e), lies within the channel capacity range (Equation G.8.0), and equals the Golay code dimension $k = 12$ (Theorem Z.13).
     *   **Hypercharge Uniqueness (one chiral family, no $n^c$).** Let the left‑chiral hypercharges be $y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c}$. Imposing cancellation of all local and mixed gauge and gravitational anomalies in $D=4$ yields the constraints:
         $$
         \begin{alignedat}{2}

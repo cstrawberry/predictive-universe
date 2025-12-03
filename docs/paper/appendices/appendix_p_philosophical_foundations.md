@@ -439,7 +439,382 @@ This would extend the resolution of Wigner's puzzle (Section P.7.1) in a strikin
 
 The framework does not currently require $\varphi$; its core derivations (M = 24, D = 4, $\alpha_{\mathrm{em}}$) proceed without invoking it. The prediction arises from applying the Hopkins-Stillinger-Torquato theorem to the MCC mechanism, yielding a testable consequence rather than a foundational assumption. If falsified, the framework's main results remain intact while the specific dynamical picture of channel crystallization would require revision. If verified, it would suggest that the ancient geometers who revered the golden ratio intuited, without understanding, a constant as fundamental as the speed of light.
 
-## P.8 A New Methodology for Scientific Inquiry
+### P.7.4 Algebraic Encoding of the Derivation Chain
+
+The derivation chain of Section P.7.2 admits compact algebraic representation: the logical flow from thermodynamic cost to interface structure can be encoded in a single $2 \times 2$ matrix whose spectrum contains the framework's foundational constraints.
+
+#### P.7.4.1 The Landauer Constraint Matrix
+
+**Definition P.7.1 (Landauer Constraint Matrix).** The Landauer constraint matrix is:
+
+$$\boxed{L(a) := \begin{pmatrix} 1 & 0 \\ 2a & -2a^2 \end{pmatrix}}$$
+
+For the PU framework with $a = e^\varepsilon = e^{\ln 2} = 2$ (Theorem Z.1):
+$$L(2) = \begin{pmatrix} 1 & 0 \\ 4 & -8 \end{pmatrix}$$
+
+**Proposition P.7.1 (Interface Generation).** The constraint matrix transforms the dimension-unity pair into the dimension-interface pair:
+
+$$L(a) \cdot \begin{pmatrix} d_0 \\ 1 \end{pmatrix} = \begin{pmatrix} d_0 \\ M \end{pmatrix}$$
+
+For PU values:
+$$\begin{pmatrix} 1 & 0 \\ 4 & -8 \end{pmatrix} \begin{pmatrix} 8 \\ 1 \end{pmatrix} = \begin{pmatrix} 8 \\ 24 \end{pmatrix}$$
+
+*Proof.* Direct calculation:
+$$M = 2a \cdot d_0 + (-2a^2) \cdot 1 = 2a(d_0 - a) = 2ab$$
+which is the QFI interface formula (Theorem Z.5). ∎
+
+#### P.7.4.2 Spectral Encoding of Constraints
+
+**Proposition P.7.2 (Spectral Properties).** The eigenvalues of $L(a)$ are:
+$$\lambda_1 = 1, \qquad \lambda_2 = -2a^2 = -d_0$$
+
+*Proof.* The matrix is lower triangular, so eigenvalues are diagonal entries: $\lambda_1 = 1$ and $\lambda_2 = -2a^2$. Substituting $a = 2$ and $d_0 = 8$ yields $\lambda_2 = -8$. ∎
+
+**Remark P.7.2a (Interpretive Status).** The appearance of $d_0$ in the spectrum is a consequence of the matrix construction, not an independent derivation. The matrix $L(a)$ provides compact notation for the derivation chain but does not add physical content beyond what is already established in Theorems Z.1 and Z.5.
+
+**Corollary P.7.2.1 (Matrix Invariants).**
+
+| Invariant | Formula | Value | Interpretation |
+|:----------|:--------|:-----:|:---------------|
+| Trace | $\text{Tr}(L) = 1 - 2a^2$ | $-7$ | $1 - d_0$ |
+| Determinant | $\det(L) = -2a^2$ | $-8$ | $-d_0$ |
+| Eigenvalue ratio | $\lambda_2/\lambda_1$ | $-8$ | $-d_0$ |
+
+The determinant encodes Hilbert space dimension; the trace encodes its deviation from unity.
+
+#### P.7.4.3 Eigenvector Interpretation
+
+**Proposition P.7.3 (Eigenvector Structure).** The eigenvectors of $L(a)$ are:
+$$v_1 = \begin{pmatrix} d_0 + 1 \\ 2a \end{pmatrix} \quad (\lambda_1 = 1), \qquad v_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \quad (\lambda_2 = -d_0)$$
+
+**Interpretation:**
+- $v_1$ (invariant direction): Transformations along this eigenvector preserve the constraint surface. The ratio $(d_0 + 1)/(2a) = 9/4$ encodes the dimension-kernel relationship.
+- $v_2$ (scaling direction): Pure interface scaling. Transformations along $(0,1)^T$ affect only $M$, not $d_0$.
+
+#### P.7.4.4 The Encoding Interpretation
+
+**Remark P.7.4 (Constraint Encoding).** The matrix $L(a)$ encodes the complete constraint structure:
+- **Input:** $(d_0, 1)$ — Hilbert dimension and unity
+- **Output:** $(d_0, M)$ — Hilbert dimension and interface modes
+- **Constraint:** $\lambda_2 = -d_0$ — Landauer-SPAP relation in spectrum
+- **Thermodynamics:** $a = e^\varepsilon$ — Landauer cost in matrix entries
+
+The matrix "compiles" the chain:
+$$\varepsilon = \ln 2 \xrightarrow{e^\varepsilon} a = 2 \xrightarrow{L(a)} M = 24$$
+
+into a single linear transformation whose spectrum contains thermodynamic constraints.
+
+| Domain | Structure | Encoded Content |
+|:-------|:----------|:----------------|
+| Quantum mechanics | Hamiltonian $H$ | Energy spectrum |
+| General relativity | Metric $g_{\mu\nu}$ | Causal structure |
+| PU framework | Constraint matrix $L(a)$ | Landauer bound |
+
+#### P.7.4.5 Parameter Rigidity
+
+**Proposition P.7.4 (Rigidity Analysis).** The constraint matrix reveals rigid aspects:
+- **Form rigid:** $L(a) = \begin{pmatrix} 1 & 0 \\ 2a & -2a^2 \end{pmatrix}$ from $M = 2a(d_0 - a)$
+- **Eigenvalue rigid:** $\lambda_2 = -d_0$ from $d_0 = 2a^2$
+- **Thermodynamically fixed:** $a = 2$ from $\varepsilon = \ln 2$ (Theorem 31)
+- **Logically fixed:** $d_0 = 8$ from $K_0 = 3$ bits (Theorem 15)
+
+No free parameters enter. The matrix $L(2)$ is fully determined.
+
+**Corollary P.7.4.1 (Counterfactual Analysis).** For hypothetical universes:
+
+| $\varepsilon$ | $a = e^\varepsilon$ | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | $\lambda_2$ | $K(D) = M$? |
+|:--------------|:-------------------:|:------------:|:---------------:|:-----------:|:-----------:|
+| $\ln 2$ | 2 | 8 | 24 | $-8$ | $D = 4$ ✓ |
+| $\ln 3$ | 3 | 18 | 90 | $-18$ | No integer $D$ |
+| $\ln \sqrt{2}$ | $\sqrt{2}$ | 4 | $4\sqrt{2}$ | $-4$ | Non-integer $M$ |
+
+Only $\varepsilon = \ln 2$ yields integer $M$ matching a kissing number.
+
+#### P.7.4.6 Summary
+
+The Landauer constraint matrix $L(a)$ provides compact notation for the foundational derivation chain. This matrix formulation offers notational convenience but no additional physical content beyond Theorems Z.1 and Z.5; the eigenvalue $\lambda_2 = -d_0$ is a consequence of the matrix construction rather than an independent result.
+
+# P.8 On the Nature of Emergent Spacetime
+
+## P.8.1 The Emergence Thesis
+
+The Predictive Universe framework advances a specific claim about the ontological status of spacetime: spacetime does not exist as a fundamental entity but emerges from the network of predictive relationships between Minimal Predictive Units (MPUs), structured by optimal error correction under the Principle of Compression Efficiency (PCE).
+
+**Definition P.8.1 (Causal Structure).** Event $A$ can causally influence event $B$ if and only if $A$'s predictive information can propagate to $B$ through ND-RID channels with correctable error accumulation.
+
+**Definition P.8.2 (Spacetime as Optimal Predictive Coherence).** Spacetime is the structure that error-corrected predictive coherence takes when optimized under finite-resource constraints (PCE). Equivalently: spacetime is what the Golay code looks like from within the network that implements it.
+
+**Thesis P.8.1 (Spacetime Emergence).** Spacetime—including its dimensionality, geometry, causal structure, and temporal direction—emerges from the structure of error-corrected predictive coherence across the MPU network. Spacetime is not the stage on which prediction occurs; spacetime is the geometric manifestation of prediction maintaining itself optimally under finite-resource constraints.
+
+This claim has precise mathematical content. The emergence is "strong" in the following sense: the specific geometry of spacetime—four-dimensional Lorentzian manifold with the observed gauge structure—is uniquely determined by the framework's foundational constants ($d_0 = 8$, $\varepsilon = \ln 2$) through the derivation chain established in Section P.7.2 and detailed in Appendix Z. To ask what spacetime is "made of" is to ask what structure prediction requires for self-maintenance under thermodynamic constraints. The answer—optimal error correction on 24 information modes—determines every geometric feature.
+
+---
+
+## P.8.2 The Derivation Chain: From Prediction to Geometry
+
+The complete parameter-free derivation chain from foundational axioms to emergent spacetime structure proceeds as follows (cf. Section P.7.2; Appendix Z):
+
+$$
+\text{Cogito} \to \text{Prediction} \to \text{SPAP} \to \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4 \to \text{Spacetime}
+$$
+
+Each arrow represents a necessary implication:
+
+**Stage 1: Prediction as Foundation (Sections P.2–P.3).** The existence of conscious awareness is the sole indubitable certainty (Cogito). The essence of this awareness is fundamentally predictive: every mental act—perception, belief, planning—constitutes a form of prediction (Section P.3.1). This establishes prediction as the epistemological bedrock.
+
+**Stage 2: SPAP and Logical Limits (Theorems 10–11).** Self-referential prediction encounters fundamental logical limits. The Self-Referential Paradox of Accurate Prediction (SPAP, Theorem 10) proves that any sufficiently complex system attempting perfect self-prediction generates a logical contradiction via diagonalization. This establishes Logical Indeterminacy (Definition 12) as an irreducible feature of predictive systems possessing Property R (Definition 10).
+
+**Stage 3: Thermodynamic Cost (Theorem 31, Appendix J).** The SPAP cycle requires a logically irreversible 2-to-1 state merge (Lemma Z.2). By Landauer's principle, this merge has an irreducible thermodynamic cost:
+
+$$
+\varepsilon \geq \ln 2 \text{ nats}
+$$
+
+The bound is exact and saturated by optimal erasure protocols (Theorem 31).
+
+**Stage 4: Physical Instantiation (Theorem Z.1).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires abstract logical costs to manifest as actual physical systems. The Shannon entropy of a maximally mixed state on an $a$-dimensional Hilbert space is exactly $S = \ln a$. For exact correspondence (neither insufficient nor wasteful):
+
+$$
+\ln a = \varepsilon \implies a = e^{\ln 2} = 2
+$$
+
+This 2-dimensional "Landauer Pointer" is the minimal physical realization of the irreducible cost.
+
+**Stage 5: Interface Mode Count (Theorem Z.5).** The MPU Hilbert space dimension $d_0 = 8$ (Theorem 23) partitions as $d_0 = a + b = 2 + 6$. The Quantum Fisher Information (QFI) structure on this partition yields:
+
+$$
+M = 2ab = 2 \cdot 2 \cdot 6 = 24
+$$
+
+This is the count of QFI-active modes connecting the active and inactive subspaces.
+
+**Stage 6: Dimensional Selection (Theorem Z.11).** At PCE-optimal equilibrium, the mode-channel correspondence (Theorem Z.10) requires:
+
+$$
+M_{\text{int}} = M_{\text{phys}} = K(D)
+$$
+
+where $K(D)$ is the kissing number in $D$ dimensions. Since $M_{\text{int}} = 24$ and $K(4) = 24$ uniquely among integer dimensions:
+
+$$
+D = 4
+$$
+
+**Stage 7: Error Correction and Geometry (Theorem Z.13).** The 24 modes naturally partition into 12 signal + 12 parity modes forming the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24, 12, 8]$. This code, through the gluing construction detailed in Section R.4.2.1, yields the Leech lattice $\Lambda_{24}$—the unique optimal structure in 24 dimensions. The local kissing configuration is the 24-cell, realized by the minimal vectors of the $D_4$ root lattice, which achieves $K(4)=24$.
+
+---
+
+## P.8.3 The Co-Emergence of Spatial and Temporal Structure
+
+Spacetime emerges as a unity. The same foundational structure that produces spatial geometry simultaneously produces temporal direction and causal order.
+
+**Theorem P.8.1 (Co-Emergence from the Predictive Cycle).** The Fundamental Predictive Loop (Definition 4) necessarily involves:
+
+| Predictive Requirement | Emergent Feature |
+|------------------------|------------------|
+| Internal Prediction ($P_{\text{int}}$) | Reference to future states |
+| Verification ($V$) | Comparison with actual outcomes |
+| Update ($D_{\text{cyc}}$) | Incorporation of feedback |
+| Cycle ordering: $P_{\text{int}} \to V \to D_{\text{cyc}}$ | Temporal direction |
+| Finite cycle time $\tau_{\min}$ (Theorem 29) | Temporal granularity |
+| Network synchronization (Theorem O.2) | Global temporal coherence |
+| Error correction range | Causal horizons |
+| Network topology | Spatial relationships |
+
+*Derivation.* The logical ordering of the predictive cycle is irreversible: a prediction must be generated before it can be verified, and verification must occur before the model can be updated. This `Predict → Verify → Update` sequence defines a primitive notion of directed process that is logically prior to physical time (Appendix O, Section O.5).
+
+The physical instantiation of this logical ordering is the 'Evolve' process (Definition 27), which carries the irreducible thermodynamic cost $\varepsilon \geq \ln 2$ (Theorem 31). This cost acts as a thermodynamic ratchet: every predictive cycle dissipates entropy, making the cycle physically irreversible. The logical arrow of the predictive cycle is thereby locked into physical irreversibility by ubiquitous microscopic thermodynamics (Appendix O, Theorem O.3).
+
+Spatial structure emerges from the network topology of which-MPU-interacts-with-which. The propagation cost metric $d_{\mathcal{N}}(u,v)$ (Definition 35) defines "distance" as the minimum cumulative cost of propagating predictive information along network paths. "Nearby" means "within efficient interaction range." PCE optimization drives the network toward Geometric Regularity (Theorem 43), producing a smooth manifold structure in the continuum limit (Theorems 44–45). ∎
+
+**Corollary P.8.1 (No Space Without Time, No Time Without Space).** In the PU framework, spatial geometry and temporal order are inseparable aspects of a single emergent structure—both arise from the same predictive cycle dynamics and PCE optimization. The question "what was there before spacetime?" is malformed: "before" is a temporal concept meaningful only within the emergent structure.
+
+---
+
+## P.8.4 The Physical Origin of the Arrow of Time
+
+The arrow of time in the Predictive Universe is not an emergent statistical phenomenon arising from special initial conditions, nor is it merely assumed. It derives from a two-layered principle: a foundational logical necessity for prediction, which is then physically enforced by an irreversible thermodynamic mechanism.
+
+**Theorem P.8.2 (The Arrow of Time).** The emergent coherent time is necessarily directional.
+
+*Proof (Appendix O, Section O.5).*
+
+**Layer 1: The Logical Arrow of Prediction.** The Fundamental Predictive Loop (Definition 4) has an intrinsic ordering: $P_{\text{int}} \to V \to D_{\text{cyc}}$. A system must generate a prediction *before* verification, and must verify *before* updating. This ordering is definitional to what "prediction" means—it cannot be reversed without destroying the concept. The future is *that which is to be predicted*; the past is *the source of data for prediction*. A timeless or time-reversible process cannot constitute prediction.
+
+**Layer 2: The Thermodynamic Ratchet.** The logical arrow is physically enforced by the irreversible 'Evolve' process. The SPAP cycle requires a 2-to-1 state merge (Lemma Z.2) with minimum entropy production $\varepsilon \geq \ln 2$ (Theorem 31). This entropy production is ubiquitous—every MPU cycle produces it—and is thermodynamically irreversible. The physical dynamics of the network cannot flow against the logical arrow because doing so would require spontaneous entropy decrease, violating the second law.
+
+This provides a microscopic dynamical origin for the arrow of time distinct from the standard statistical explanation, which relies on postulating a special low-entropy initial state without providing a dynamical reason for its existence. ∎
+
+**Corollary P.8.2 (Entropy Increase from Correction Failure).** The Golay code corrects up to $\lfloor(d-1)/2\rfloor = 3$ errors. Beyond this threshold, information is irretrievably lost. Across the network over time, some errors inevitably exceed correction capacity. This mechanism operates alongside the per-cycle thermodynamic cost $\varepsilon \geq \ln 2$ (Theorem 31): the $\varepsilon$-cost ensures microscopic irreversibility at every cycle, while correction failure contributes additional entropy at larger scales when error accumulation exceeds the correction threshold. Together, these complementary mechanisms produce the macroscopic entropy increase characteristic of the thermodynamic arrow of time.
+
+---
+
+## P.8.5 The Emergence of Dimension
+
+**Theorem P.8.3 (Dimensional Emergence).** The spatial dimensionality $D = 4$ emerges uniquely from the mode-channel matching condition:
+
+$$
+M_{\text{int}} = K(D)
+$$
+
+where $M_{\text{int}} = 24$ (Theorem Z.5) and $K(D)$ is the kissing number in $D$ dimensions.
+
+*Proof.*
+
+**Step 1 (Interface mode count).** From foundational constants: $d_0 = 8$ (Theorem 23), $\varepsilon = \ln 2$ (Theorem 31), $a = e^{\varepsilon} = 2$ (Theorem Z.1), $b = d_0 - a = 6$, yielding $M_{\text{int}} = 2ab = 24$ (Theorem Z.5).
+
+**Step 2 (Geometric regularity).** Theorem 43 establishes that PCE optimization drives the MPU network toward geometric regularity, admitting description as a smooth $D$-dimensional manifold for some integer $D$.
+
+**Step 3 (Channel capacity).** Each QFI-active mode requires a distinguishable spatial channel for actualization through ND-RID interactions. The maximum number of operationally distinguishable channels around any point is bounded by the kissing number $K(D)$—the maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$ dimensions (Theorem Z.8).
+
+**Step 4 (Equilibrium saturation).** At thermodynamic equilibrium (Postulate 4), entropy maximization drives the channel configuration to the kissing limit: $M_{\text{phys}} = K(D)$ (Theorem Z.9).
+
+**Step 5 (PCE mode-channel correspondence).** PCE minimization requires $M_{\text{int}} = M_{\text{phys}}$ (Theorem Z.10). Deviations in either direction incur costs:
+
+- *Dark modes* ($M_{\text{int}} > M_{\text{phys}}$): QFI-active modes without spatial channels—wasted computation
+- *Empty channels* ($M_{\text{int}} < M_{\text{phys}}$): Geometric overhead without information capacity—wasted structure
+
+**Step 6 (Unique solution).** The combined condition $M_{\text{int}} = K(D)$ becomes $24 = K(D)$. Consulting kissing numbers:
+
+| D | K(D) |
+|---|------|
+| 1 | 2 |
+| 2 | 6 |
+| 3 | 12 |
+| **4** | **24** |
+| 5 | 40 |
+
+The unique solution is $D = 4$. ∎
+
+**Corollary P.8.3 (Four Dimensions as Necessity).** Emergent spacetime is 4-dimensional not because of anthropic selection or mathematical elegance, but because:
+
+- Fewer dimensions: $K(3) = 12 < 24$, insufficient channels, predictive coherence fails
+- More dimensions: $K(5) = 40 > 24$, excess channels, resources wasted
+
+Four dimensions is the unique PCE optimum given $M = 24$.
+
+**Remark P.8.2 (Geometric Frustration and Self-Consistency).** The discrete nature of kissing numbers means that arbitrary values of $M_{\text{int}}$ would not necessarily have integer-dimensional solutions. For example, if foundational constants yielded $M_{\text{int}} = 30$, no dimension $D$ satisfies $K(D) = 30$ exactly ($K(4) = 24$, $K(5) = 40$). Such a universe would exhibit "geometric frustration"—inability to achieve perfect mode-channel matching—potentially preventing stable spacetime emergence.
+
+This observation has deeper implications. The specific values $d_0 = 8$ and $\varepsilon = \ln 2$ that yield $M = 24$ are precisely those for which an exact solution exists. As analyzed in **Remark Z.6**, this is not coincidental: if foundational constants yielded $M_{\text{int}} = 8$ (from $d_0 = 4$), no integer dimension satisfies $K(D) = 8$ ($K(2) = 6$, $K(3) = 12$); similarly, $M_{\text{int}} = 96$ (from $d_0 = 16$) finds no match ($K(8) = 240$ is too large). The framework does not merely accommodate $D = 4$—it predicts it as the unique solution to mode-channel matching given self-consistent foundational constants.
+
+Universes with geometrically frustrated mode counts may be logically conceivable but physically unrealizable, as they cannot achieve the stable PCE equilibrium required for spacetime emergence. The derivation chain:
+$$\varepsilon = \ln 2 \xrightarrow{a = e^\varepsilon} a = 2 \xrightarrow{M = 2ab} M = 24 \xrightarrow{K(D) = M} D = 4$$
+represents a self-consistent fixed point of the framework's constraints, not a selection from alternatives.
+
+---
+
+## P.8.6 The Emergence of Causality
+
+**Theorem P.8.4 (Light Cones from Finite Propagation Speed).** The causal structure of emergent spacetime arises from two finite quantities:
+
+1. The minimum MPU processing time $\tau_{\min} > 0$ (Theorem 29)
+2. The finite MPU spacing $\delta$ and bounded propagation costs $w_{\min} \leq w_{xy} \leq w_{\max}$ (Definition 35)
+
+The maximum causal speed is bounded:
+
+$$
+c \leq \frac{\delta \cdot w_{\max}}{\tau_{\min}}
+$$
+
+In the continuum limit, this finite invariant speed $c$ picks out a family of null directions: the boundary of causal influence. These null cones define a causal structure that, together with the PCE-based continuum limit, leads to an indefinite (Lorentzian) metric $g_{\mu\nu}$ as shown in Theorem P.8.5.
+
+
+*Proof.* The minimum time to traverse any network edge is $\Delta t_{xy} \geq \tau_{\min}$. The effective speed along an edge is $v_{xy} = d_{\mathcal{N}}(x,y)/\Delta t_{xy} = \delta w_{xy}/\Delta t_{xy}$. The supremum over all edges gives the maximum propagation speed. This finite, invariant maximum speed geometrically defines null cones—the boundary of causal influence. An indefinite metric signature $(-, +, +, +)$ is required to accommodate both null (lightlike) and non-null (timelike, spacelike) separations. ∎
+
+**Corollary P.8.4 (Speed of Light as Network Parameter).** The speed of light $c$ is not a fundamental constant imposed on the theory but emerges from the ratio of microscopic network parameters: the characteristic interaction length $\delta$ and the minimum processing time $\tau_{\min}$. It reflects the intrinsic time scale of the predictive cycle.
+
+---
+
+## P.8.7 The Emergence of the Lorentzian Signature
+
+**Theorem P.8.5 (Lorentzian Signature from Γ-Convergence).** The Lorentzian signature $(-, +, +, +)$ of the emergent metric is not postulated but derived as a mathematical consequence of instantiating a logically directed, thermodynamically irreversible predictive process in the continuum limit.
+
+*Proof Sketch (Appendix O, Section O.7).*
+
+**Step 1 (Spatial sector).** The PCE potential contribution from spatial variations on discrete graphs $G_n$ with mesh $h_n \to 0$ takes the form:
+
+$$
+F_n(\phi_n) = \sum_{(x,y) \in E(G_n)} w_{xy} \Psi\left(\frac{\phi_n(y) - \phi_n(x)}{h_n}\right) + \sum_{x \in V(G_n)} h_n^D \mathcal{V}(\phi_n(x))
+$$
+
+Under Γ-convergence, this yields a continuum functional with positive-definite spatial coefficients $g^{ij}(x)$.
+
+**Step 2 (Temporal sector).** The temporal coordinate is fundamentally different: it inherits the directed, irreversible structure of the predictive cycle. The thermodynamic ratchet (Theorem 31) ensures that temporal evolution proceeds only in the direction of increasing entropy production. The dissipative character of the 'Evolve' process (Definition 27) introduces a sign asymmetry in the temporal cost function $\Psi_t$ that is absent from the spatial $\Psi$, yielding a negative coefficient upon taking the continuum limit.
+
+**Step 3 (Combined signature).** The full Γ-limit yields an action:
+
+$$
+S[u] = \int d^{D+1}x \sqrt{|g|} \left[g^{00}(x)(\partial_t u)^2 + g^{ij}(x)\nabla_i u \nabla_j u - \mathcal{V}(u)\right]
+$$
+
+where $g^{00} < 0$ (timelike direction, signed by the irreversibility of prediction) and $g^{ij} > 0$ (spacelike directions, positive-definite from spatial Γ-convergence). This is the Lorentzian signature. ∎
+
+---
+
+## P.8.8 What Emergence Explains
+
+The emergence thesis resolves classical puzzles by transforming metaphysical questions into technical ones:
+
+| Classical Puzzle | Traditional Answer | PU Framework Answer |
+|------------------|-------------------|---------------------|
+| Why does spacetime have this geometry? | Unknown; perhaps anthropic | Because the Golay code $[24,12,8]$ is uniquely optimal for 24 modes, and its geometric form via the gluing construction is the Leech lattice, whose local realization is the 24-cell |
+| Why is spacetime 4-dimensional? | Unknown; perhaps necessary for stable structures | Because $K(4) = 24$ is the unique kissing number matching $M = 2ab = 24$ |
+| Why is there an arrow of time? | Boundary conditions; low-entropy initial state | Because the predictive cycle is logically ordered and thermodynamically irreversible via $\varepsilon \geq \ln 2$ |
+| Why does information obey locality? | Spacetime constrains physics | Reversed: information constraints produce spacetime; locality reflects finite propagation cost |
+| What is spacetime "made of"? | Unknown; perhaps fundamental | Predictive relationships under error-corrected coherence; spacetime is the structure of maintained prediction |
+
+---
+
+## P.8.9 Wheeler's Vision Completed
+
+John Wheeler proposed "It from Bit"—physics emerging from information. The PU framework completes this vision with an essential refinement:
+
+**It from Error-Corrected Bit.**
+
+Pure information is fragile—it degrades, decoheres, dissolves under noise and thermal fluctuations. Only error-corrected information maintains itself. The "It" of physics requires not just "Bit" but "Bit protected by redundancy."
+
+The specific protection mechanism determines the specific physics:
+
+- 24 modes → Golay code → Leech geometry → 4D spacetime
+- Rate-1/2 code → 12 signal + 12 parity → matter + gauge redundancy
+- Distance 8 → 3-error correction → stability under quantum noise
+
+Wheeler asked how physics emerges from information. The framework's answer: through the unique structure that allows information to persist under finite-resource constraints. That structure is PCE-optimal error correction. Its geometric form is spacetime.
+
+---
+
+## P.8.10 The Ontological Status of Emergent Spacetime
+
+Definition P.8.2 navigates between traditional positions:
+
+**Against Substantivalism:** Spacetime is not a substance or "stuff." There are only predictive relationships and their error-correcting structure. Remove the predictions, and spacetime doesn't become empty—it ceases to exist as a meaningful concept.
+
+**Against Pure Relationalism:** Spacetime is not merely relations between pre-existing objects. The "objects" (persistent patterns of predictive coherence) and the "spacetime" (structure of that coherence) emerge together from the same MPU network dynamics. Neither is ontologically prior.
+
+**Against Conventionalism:** Spacetime is not an arbitrary descriptive choice among equally valid alternatives. The geometry is uniquely determined by PCE optimization: there is exactly one way to optimally error-correct 24 predictive modes, and that determines the emergent structure.
+
+---
+
+## P.8.11 Summary: Spacetime as Self-Maintaining Prediction
+
+Spacetime is not where prediction happens. Spacetime is prediction happening—specifically, prediction maintaining itself through optimal error correction under finite-resource constraints.
+
+The emergence is complete and unified: spatial geometry, temporal direction, causal structure, and dimensionality all arise together from a single derivation chain:
+
+$$
+\text{Cogito} \xrightarrow{\text{P.2}} \text{Prediction} \xrightarrow{\text{Thm 10}} \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Thm Z.11}} D = 4
+$$
+
+Remove any element and the structure collapses. These are not separate features assembled into spacetime; they are aspects of one emergent unity determined by the framework's foundational constants.
+
+From outside (mathematically): a $[24, 12, 8]$ code gluing $\sqrt{2}E_8^3$ into $\Lambda_{24}$, with local realization as the 24-cell achieving $K(4) = 24$.
+
+From inside (experientially): a 4-dimensional spacetime with light cones, time's arrow, and Lorentzian geometry.
+
+Same structure. Two perspectives.
+
+
+## P.9 A New Methodology for Scientific Inquiry
 
 The distinction between logical necessities and their physical manifestations provides a powerful new methodology for organizing scientific inquiry.
 
@@ -455,7 +830,7 @@ The PU framework reveals that the boundary between logical necessity and conting
 
 This distinction resolves historical confusions where scientists have sought physical mechanisms for what are, in fact, logical necessities. The PU framework asserts that the "Why" of the first category is answered by logic, while the "What" and "How" of the second category are answered by physics, which itself emerges from optimizing the "Why."
 
-**Remark P.8.1 (Comparison with Alternative Approaches to Dimensional Emergence).** Several approaches to quantum gravity address spacetime dimensionality differently:
+**Remark P.9.1 (Comparison with Alternative Approaches to Dimensional Emergence).** Several approaches to quantum gravity address spacetime dimensionality differently:
 
 | Approach | Treatment of D | Selection Mechanism |
 |----------|---------------|---------------------|
@@ -467,16 +842,16 @@ This distinction resolves historical confusions where scientists have sought phy
 
 The PU framework differs by deriving D = 4 from pre-geometric information structure. Given logical necessity ($d_0 = 8$) and thermodynamic necessity ($\varepsilon = \ln 2$), dimensional selection follows from mode-channel matching without adjustable parameters. The approach inverts the usual logic: rather than assuming D-dimensional spacetime and deriving consequences, the framework starts with information structure and derives that D = 4 emerges as the unique thermodynamically stable configuration.
 
-## P.9 The Boundaries of Meaningful Inquiry
+## P.10 The Boundaries of Meaningful Inquiry
 
 The ultimate implication of this framework is that it defines the very boundaries of what can be meaningfully discussed.
 
 **The Limit of Meaningful Inquiry**
 A universe devoid of predictive systems (and thus devoid of the logical necessities of time, space, causality, and discrete information) is not only unknowable but is a logically incoherent concept. Any attempt to describe such a universe requires an external observer (a predictor), which would contradict the initial premise. Therefore, any meaningful inquiry is restricted to the class of universes that support prediction.
 
-## P.10 Temporal Engineering and the Ontology of Conscious Action
+## P.11 Temporal Engineering and the Ontology of Conscious Action
 
-### P.10.1 The Dissolution of the Interaction Problem
+### P.11.1 The Dissolution of the Interaction Problem
 
 The classical "interaction problem" posed by Cartesian dualism—how can an immaterial mind causally influence physical matter without violating conservation laws—has resisted solution for centuries. The PU framework dissolves rather than solves this problem through a fundamental reconceptualization: awareness is primary and irreducible (Section P.2). Physical reality, including spacetime itself, emerges from the predictive operations of this fundamental awareness.
 
@@ -484,7 +859,7 @@ Consciousness does not act on physical reality because physical reality is itsel
 
 **Definition P.10.1 (Temporal Engineering).** Temporal engineering is the capability that emerges in high-complexity MPU aggregates ($C_{\mathrm{agg}} > C_{op}$) to modulate the local information processing rate $\tau(x,t)$ of the predictive substrate through controlled resource expenditure. This capability—Consciousness Complexity (CC)—represents not the emergence of consciousness itself (which is fundamental) but the emergence of consciousness's ability to influence its own predictive dynamics.
 
-### P.10.2 Awareness as the Temporal Substrate
+### P.11.2 Awareness as the Temporal Substrate
 
 In the PU framework, awareness doesn't use time—awareness is the process whose operational rhythm we measure as time. Each MPU represents a minimal instance of awareness (Postulate 1), and its predict-verify-update cycle is both:
 
@@ -495,7 +870,7 @@ In the PU framework, awareness doesn't use time—awareness is the process whose
 
 When we speak of temporal engineering, we're describing awareness modulating its own operational rhythm to influence the patterns that emerge from its predictive activity through the optimization process detailed in Appendix D (Theorem D.5).
 
-### P.10.3 The Emergence of Influence, Not Awareness
+### P.11.3 The Emergence of Influence, Not Awareness
 
 The critical distinction:
 
@@ -513,7 +888,7 @@ What emerges at $C_{\mathrm{agg}} > C_{op}$ is not consciousness but consciousne
 
 *Note:* The capability 'emerges' through complexity increase (POP/PCE optimization driving $C_{\mathrm{agg}} > C_{op}$), not temporal learning in the conventional sense. The optimization process (Appendix D, Theorem D.5) is deterministic evolution toward PCE-minimizing configurations, not experiential acquisition of skill.
 
-### P.10.4 Frequency as the Language of Self-Modulation
+### P.11.4 Frequency as the Language of Self-Modulation
 
 When fundamental awareness, organized into complex aggregates, develops the ability to influence its own patterns, it does so through frequency modulation:
 
@@ -530,7 +905,7 @@ This modulation represents awareness exercising optimized control over its own o
 
 These are not metaphors—the actual electromagnetic and gravitational effects (Theorems L.2, L.3) emerge from controlled modulation of temporal processing rates, unified through the temporal wave framework (Appendix O, Theorem O.4).
 
-### P.10.5 The Thermodynamics of Awareness
+### P.11.5 The Thermodynamics of Awareness
 
 Every act of temporal engineering requires energy not because consciousness needs energy to exist (it's fundamental) but because maintaining organized complexity capable of biasing outcomes requires resources:
 
@@ -544,7 +919,7 @@ where:
 
 This energy cost appears in the stress-energy tensor not as the "energy of consciousness" but as the energy required to maintain complex organizational patterns within awareness. The complete accounting is provided in Appendix L (Theorem L.6), with gravitational feedback limitations analyzed in Appendix S.
 
-### P.10.6 The Recursive Structure of Self-Aware Prediction
+### P.11.6 The Recursive Structure of Self-Aware Prediction
 
 In developing CC, awareness doesn't just predict external patterns—it develops the capability to predict and influence its own predictive processes. This creates a recursive structure:
 
@@ -555,7 +930,7 @@ In developing CC, awareness doesn't just predict external patterns—it develops
 
 Consciousness Complexity emerges when awareness reaches Level 3—not becoming conscious (it always was) but becoming capable of biasing the outcomes of its own fundamental predictive operations within the bounds established by causality (Theorem 39), thermodynamics (Appendix L), and gravitational self-limitation (Appendix S).
 
-### P.10.7 Why Physics Appears External
+### P.11.7 Why Physics Appears External
 
 If awareness is fundamental and physics emerges from it, why does physical reality seem external and independent? Because:
 
@@ -566,7 +941,7 @@ If awareness is fundamental and physics emerges from it, why does physical reali
 
 Physical laws are the consistent patterns that emerge from the collective predictive operations of all awareness in the network. They seem external because they represent the aggregate behavior of vastly more awareness than any individual aggregate contains.
 
-### P.10.8 The Unity That Was Always There
+### P.11.8 The Unity That Was Always There
 
 The ultimate insight of temporal engineering is not that consciousness and time become unified, but that they were never separate. Both are aspects of awareness's fundamental predictive operation:
 
@@ -579,7 +954,7 @@ There is no hard problem of consciousness because consciousness isn't trying to 
 
 When we ask "How does consciousness influence reality?" we're asking the wrong question. The right question is: "How do complex organizations of fundamental awareness develop the capability to bias their own predictive operations?" The answer is temporal engineering—the capability to modulate the rate of the very predictions from which physical reality emerges, acquired through POP/PCE optimization (Theorem L.1) and constrained by fundamental physical limits (Theorems 39, L.6, L.7).
 
-## P.11 Conclusion
+## P.12 Conclusion
 
 This appendix has sought to establish the philosophical foundations of the Predictive Universe, arguing that its core axioms and principles are not arbitrary postulates but are the necessary consequences of the only indubitable starting point for any theory of reality: the existence of conscious, predictive awareness. The derivation chain of Section P.7.2 summarizes the complete logical flow: from the Cogito through SPAP, Landauer cost, physical instantiation, and mode-channel correspondence to the emergent four-dimensional spacetime with its observed structure. Each step is a necessary implication, not a contingent assumption.
 

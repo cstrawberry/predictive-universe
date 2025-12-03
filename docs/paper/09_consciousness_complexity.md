@@ -201,7 +201,7 @@ and
 $$
 P_{\mathrm{obs}}(i)=(1-\alpha_S)\,P_{\mathrm{Born}}(i)+\alpha_S\,p_{\mathrm{target}}(S,i) \quad \text{(59)}
 $$
-with $0\le\alpha_S<1$. (Note: The Context-Targeted Bias model physically represents a convex combination, so the upper bound should be inclusive, representing a complete replacement of the Born rule with the target distribution in the maximal case.) Under a unitary $U$, $\sigma_{USU^\dagger}=U\sigma_S U^\dagger$, so $L_S$ and $K_S$ transform covariantly.
+with $0\le\alpha_S<1$. (Note: The Context-Targeted Bias model physically represents a convex combination, so the upper bound should be inclusive, representing a complete replacement of the Born rule with the target distribution in the maximal case. See Section 10.4 and Appendix F for proof that this modification respects operator locality.) Under a unitary $U$, $\sigma_{USU^\dagger}=U\sigma_S U^\dagger$, so $L_S$ and $K_S$ transform covariantly.
 
 *Remarks:*
 *   The normalization ensures $\|L_S\|_{\mathrm{op}} = \alpha_S r(\sigma_S) = \mathrm{CC}(S)$.

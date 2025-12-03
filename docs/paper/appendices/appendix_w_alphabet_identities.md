@@ -264,7 +264,51 @@ If one further assumes an $SU(5)$‑style generator normalization at $\mu^\*$ wi
 
 $$ \sin^2\theta_W(\mathrm{MPU})=\frac{3}{8}. \tag{W.3.3} $$
 
----
+## W.3a Gauge Mode Counting at the PCE-Attractor
+
+This section examines the electroweak mode embedding at the PCE-Attractor from the QFI spectral structure. 
+
+### W.3a.1 Gauge Mode Embedding
+
+The Standard Model gauge group $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ has total dimension:
+$$\dim[\mathfrak{g}_{\mathrm{SM}}] = 8 + 3 + 1 = 12$$
+
+This equals the Golay code dimension $k = 12$ (Theorem Z.13).
+
+**Definition W.3a.1 (Electroweak Mode Sector).** The electroweak sector has:
+- $M_2 = \dim[\mathfrak{su}(2)] = 3$ (weak isospin generators)
+- $M_Y = \dim[\mathfrak{u}(1)] = 1$ (hypercharge generator)
+- $M_{\mathrm{EW}} = M_2 + M_Y = 4$ (total electroweak modes)
+
+### W.3a.2 QFI Spectrum at the PCE-Attractor
+
+**Proposition W.3a.1 (Flat Spectrum).** At the PCE-Attractor (Definition 15a), the QFI spectrum is flat:
+$$\lambda_i = \lambda_0 = 1 \quad \forall i \in \{1, \ldots, M\}$$
+
+*Proof.* This is Theorem Z.5 (Steps 5–6). The isotropy group $H = S(U(a) \times U(b))$ acts transitively on the 24-dimensional interface. By Schur's lemma, the $H$-invariant QFI metric is proportional to the identity. ∎
+
+### W.3a.3 Uniform Per-Generator Capacity
+
+**Theorem W.3a.2 (Uniform Capacity from PCE Isotropy).** At the PCE-Attractor, each gauge generator carries equal information capacity:
+$$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in all sectors}$$
+
+*Proof.*
+
+**Step 1.** The full 24-dimensional interface has flat QFI spectrum $g_{\mathrm{QFI}} = \lambda_0 \cdot I_{24}$ (Proposition W.3a.1).
+
+**Step 2.** The SM gauge algebra embeds into a 12-dimensional subspace $\mathcal{I}_{\mathrm{SM}} \subset \mathbb{R}^{24}$.
+
+**Step 3.** Restriction of the flat metric to any subspace remains flat: $g_{\mathrm{QFI}}|_{\mathcal{I}_s} = \lambda_0 \cdot I_{M_s}$.
+
+**Step 4.** PCE non-discrimination: Non-uniform allocation would violate inherited flatness and increase $V_{\mathrm{op}}$ without benefit. ∎
+
+### W.3a.4 Mode Ratio and Electroweak Structure
+
+**Remark W.3a.3 (Mode Ratio).** At the PCE-Attractor with uniform per-generator capacity, the mode ratio is:
+
+$$\frac{M_2}{M_Y} = \frac{3}{1} = 3$$
+
+The relationship between this mode ratio and the physical electroweak couplings $g_2$ and $g_Y$ requires renormalization group running from the PCE-Attractor scale to observable energies. The observed weak mixing angle $\sin^2\theta_W \approx 0.231$ at $M_Z$ reflects this running, and a complete derivation would require specifying the intermediate scales and particle content. This remains an open question for future development.
 
 ## W.4 Hypercharge from anomalies and Yukawa invariance
 

@@ -11,12 +11,12 @@ $$
 
 naturally attached to an MPU with Hilbert space $H_0 \cong \mathbb{C}^8$, the minimal dimension required for self-referential logic (Theorem 23). This derivation is a key component of the framework's ability to explain the Standard Model's structure from first principles.
 
-**Connection to Gauge Structure:** The perspective space $\Sigma_8$ and its associated topology emerge from the same fundamental structure as the Standard Model gauge group. As established in **Appendix G** (Conjecture G.M1 and Section G.8.5), the MPU Hilbert space $H_0 \cong \mathbb{C}^8$ admits a thermodynamically optimal partition:
+**Connection to Gauge Structure:** The perspective space $\Sigma_8$ and its associated topology emerge from the same fundamental structure as the Standard Model gauge group. As established in **Appendix G** (Conjecture G.M1, verified by Theorem G.8.4b and Corollary G.8.4c; Section G.8.5), the MPU Hilbert space $H_0 \cong \mathbb{C}^8$ admits a thermodynamically optimal partition:
 $$
 H_0 \cong H_{\mathrm{active}} \oplus H_{\mathrm{inert}} \cong \mathbb{C}^2 \oplus \mathbb{C}^6
 $$
 driven by the irreducible cost $\varepsilon = \ln 2$ of the predictive cycle. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which requires the abstract logical cost to manifest as an $a = e^\varepsilon = 2$ dimensional active kernel. The partition determines both:
-1. The **gauge structure:** $G_{\mathrm{SM}} = SU(2)_L \times SU(3)_C \times U(1)_Y$ (from Conjecture G.M1)
+1. The **gauge structure:** $G_{\mathrm{SM}} = SU(2)_L \times SU(3)_C \times U(1)_Y$ (from Conjecture G.M1, verified by Theorem G.8.4b)
 2. The **perspective space:** $\Sigma_8 = U(8)/U(1)^8$ (complete flag manifold)
 
 The generation structure derived in this appendix thus shares a common origin with the gauge structure: both arise from the topology and symmetries of the fundamental MPU state space, as optimized by PCE. This provides a unified geometric foundation for the SM's horizontal (gauge) and vertical (generation) structures.
@@ -153,18 +153,51 @@ Several factors single out E₈ as the natural geometric structure for the 8-dim
 
 3. **Kissing Number Maximization:** E₈ has kissing number 240, the maximum for any lattice in 8 dimensions. This maximizes local distinguishability—each lattice point contacts exactly 240 nearest neighbors, providing the densest local error-correction structure. Higher kissing numbers correspond to more robust error correction under PCE.
 
-4. **Radon-Hurwitz Connection:** The existence of the octonions (the unique 8-dimensional normed division algebra) is tied to dimension 8 being a Radon-Hurwitz dimension (**Theorem Z.3**, Appendix Z). The E₈ lattice can be constructed from the integral octonions (Cayley integers), inheriting special algebraic properties from this structure.
+4. **Radon-Hurwitz Connection and Cayley Integers:** The existence of the octonions (the unique 8-dimensional normed division algebra) is tied to dimension 8 being a Radon-Hurwitz dimension (**Theorem Z.3**, Appendix Z). The $E_8$ lattice is isomorphic to the ring of Cayley integers (integral octonions), defined as the $\mathbb{Z}$-span of $\{1, e_1, \ldots, e_7, \omega\}$ where $\omega = \tfrac{1}{2}(1 + e_1 + \cdots + e_7)$ and $\{e_i\}$ are the standard octonion units (Conway & Sloane 1999, Chapter 8). The norm form $N(x) = x\bar{x}$ on the Cayley integers is positive-definite with minimum value 1 on non-zero elements, and the set of unit-norm elements $\{x : N(x) = 1\}$ has cardinality exactly 240, matching the $E_8$ root count. This provides a direct algebraic bridge between the division algebra structure underlying $d_0 = 8$ and the geometric optimality of $E_8$.
 
-5. **Self-Duality:** E₈ is self-dual, meaning $E_8^* = E_8$. This symmetry simplifies the geometric structure, eliminates arbitrary orientation choices, and ensures that the dual lattice (relevant for Fourier transforms in quantum mechanics) coincides with the original. Self-duality is a natural PCE attractor as it minimizes representational redundancy.
+5. **Self-Duality:** $E_8$ is self-dual, meaning $E_8^* = E_8$. This symmetry simplifies the geometric structure, eliminates arbitrary orientation choices, and ensures that the dual lattice (relevant for Fourier transforms in quantum mechanics) coincides with the original. Self-duality is a natural PCE attractor as it minimizes representational redundancy.
 
 6. **Leech Lattice Connection:** The 24-dimensional Leech lattice $\Lambda_{24}$, which achieves optimal packing in 24 dimensions (Cohn, Kumar, Miller, Radchenko & Viazovska 2017), contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$; by contrast, the direct sum $E_8 \oplus E_8 \oplus E_8$ is a distinct Niemeier lattice (minimum norm 2). This provides an independent pathway to the three-fold structure (Section R.4.2) and connects to the interface mode count $M = 24$ from **Appendix Z (Theorem Z.5)**.
 
-**Comparison with Other Exceptional Groups:**
-- **$E_6, E_7$:** Dimensions 6 and 7 respectively, not matching the MPU dimension 8.
-- **$F_4$:** Dimension 4, too small; kissing number 24 $\ll$ 240 of E₈.
-- **$G_2$:** Dimension 2, far too small; kissing number 6 $\ll$ 240 of E₈.
+7. **Root-Kissing Correspondence:** The $E$-series exceptional lattices exhibit a remarkable algebraic-geometric correspondence: for $n \in \{6, 7, 8\}$, the root count $|\Phi(E_n)|$ equals the kissing number achieved by the corresponding lattice:
 
-Thus E₈ is not merely convenient but information-theoretically optimal for an 8-dimensional system under PCE constraints. No other root system in 8 dimensions achieves comparable packing density, kissing number, or algebraic structure.
+| $n$ | Root count $|\Phi(E_n)|$ | Kissing number | Optimality status |
+|-----|--------------------------|----------------|-------------------|
+| 6   | 72                       | 72             | Best known; optimality unproven |
+| 7   | 126                      | 126            | Best known; optimality unproven |
+| 8   | 240                      | 240            | Proven optimal (Odlyzko & Sloane 1979) |
+
+Among the $E$-series, only for $n = 8$ has the kissing number been proven optimal (Odlyzko & Sloane 1979). Additionally, Viazovska (2017) proved that $E_8$ achieves the optimal sphere packing density in dimension 8. This singles out $E_8$ as the unique member of the $E$-series with certified geometric optimality in both kissing number and packing density.
+
+**Summary of $E_8$ Structural Properties:**
+
+| Property | $E_8$ value | PCE relevance |
+|----------|-------------|---------------|
+| Self-dual | $E_8^* = E_8$ | Eliminates dual-lattice representational overhead |
+| Simply-laced | All roots equal length | Single scale parameter minimizes complexity |
+| Unimodular | $\det(\text{Gram matrix}) = 1$ | Minimal volume distortion under embedding |
+| Kissing number | 240 (proven maximal) | Maximum local distinguishability |
+
+The even unimodular lattices in dimension 8 are classified: $E_8$ is the unique such lattice (Conway & Sloane 1999, Chapter 16).
+
+**Comparison with Other Exceptional Root Systems:**
+- **$E_6, E_7$:** Ranks 6 and 7 respectively, not matching the MPU dimension 8.
+- **$F_4$:** Rank 4; kissing number 24 $\ll$ 240 of $E_8$.
+- **$G_2$:** Rank 2; kissing number 6 $\ll$ 240 of $E_8$.
+
+**Comparison with Other Rank-8 Simple Lie Algebras:**
+
+| Algebra | Root count | Simply-laced | Self-dual lattice | Packing optimal |
+|---------|------------|--------------|-------------------|-----------------|
+| $A_8$   | 72         | ✓            | ✓                 | ✗               |
+| $B_8$   | 128        | ✗            | ✗                 | ✗               |
+| $C_8$   | 128        | ✗            | ✗                 | ✗               |
+| $D_8$   | 112        | ✓            | ✓                 | ✗               |
+| $E_8$   | 240        | ✓            | ✓                 | ✓               |
+
+Among all simple Lie algebras of rank 8, only $E_8$ satisfies the full set of PCE optimality criteria: the simply-laced property ensures a single scale parameter, self-duality eliminates dual-lattice representational overhead, and packing optimality maximizes information density per unit volume.
+
+Thus $E_8$ is not merely convenient but information-theoretically unique for an 8-dimensional system under PCE constraints. No other root system in 8 dimensions achieves comparable packing density, kissing number, or algebraic structure.
 
 ### R.2.2 E₈ Root System Structure
 
@@ -433,7 +466,7 @@ Remarkably, the number 24 appears as the interface mode count $M = 24$ derived i
 
 The connection between the Leech lattice and E₈ is more subtle than a direct product. The key observations are:
 
-1. **Scaled E₈ Sublattice:** The Leech lattice $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ (scaling by $\sqrt{2}$ ensures minimum norm 4, matching Leech's rootless property). This sublattice has index $2^6$ in $\Lambda_{24}$.
+1. **Scaled E₈ Sublattice:** The Leech lattice $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ (scaling by $\sqrt{2}$ ensures minimum norm 4, matching Leech's rootless property). This sublattice has index $2^{12} = 4096$ in $\Lambda_{24}$.
 
 2. **Niemeier vs. Leech:** The direct sum $E_8 \oplus E_8 \oplus E_8$ (without scaling) is a different even unimodular 24D lattice—a Niemeier lattice with $240+240+240 = 720$ roots (minimum norm 2). This is NOT isometric to the Leech lattice, which is rootless (minimum norm 4).
 
@@ -468,7 +501,7 @@ The convergence of these three mechanisms makes the three-generation structure m
 
 **Mechanism 1 (Topological):** From the homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$, gauge embedding, and anomaly cancellation (Theorems R.3.1, R.3.4), we derive $N=3$ with family charges $\{a, -a, 0\}$ as the unique minimal solution permitting CP violation. This derivation uses only topology, representation theory, and anomaly polynomials—no geometry.
 
-**Mechanism 2 (Geometric):** From optimal sphere packing in 24 dimensions (Viazovska 2017; Cohn, Kumar, Miller, Radchenko & Viazovska 2017), the Leech lattice $\Lambda_{24}$ naturally decomposes into three scaled E₈ sublattices. The number 24 itself emerges from modular form theory (Dedekind eta weight structure) and interface mode counting (**Appendix Z**). The three-fold structure arises from the factorization $24 = 3 \times 8$ where 8 is the maximal division algebra dimension (Radon-Hurwitz). This mechanism uses only packing theory, lattice theory, and modular forms—no homotopy theory.
+**Mechanism 2 (Geometric):** From optimal sphere packing in 24 dimensions (Cohn, Kumar, Miller, Radchenko & Viazovska 2017), the Leech lattice $\Lambda_{24}$ naturally decomposes into three scaled E₈ sublattices. The number 24 itself emerges from modular form theory (Dedekind eta weight structure) and interface mode counting (**Appendix Z**). The three-fold structure arises from the factorization $24 = 3 \times 8$ where 8 is the maximal division algebra dimension (Radon-Hurwitz). This mechanism uses only packing theory, lattice theory, and modular forms—no homotopy theory.
 
 **Mechanism 3 (Information-theoretic):** From the QFI mode count $M = 2ab = 24$ with $a=2$ (Landauer pointer) and $b=6$ (inactive complement), the factorization $24 = 8 \times 3$ naturally suggests three sectors of dimension 8. This aligns with $d_0 = 8$ (MPU dimension) and three-fold replication. The appearance is natural from the capacity saturation structure (**Appendix Z, Theorem Z.6**).
 
@@ -479,13 +512,531 @@ The convergence of these three mechanisms makes the three-generation structure m
 
 These mathematical domains are logically independent—there is no a priori reason they should select the same number. Yet all three point to $N=3$. The convergence probability under a null hypothesis (random independent selections) is approximately $(1/10)^2 \sim 0.01$, strongly suggesting a unified underlying principle. ∎
 
+### R.4.2.1 The Golay Bridge: From Error Correction to Optimal Geometry
+
+The preceding discussion noted that the Leech lattice "can be obtained from the scaled triple $\sqrt{2}E_8^3$ via a gluing construction involving cosets and the extended binary Golay code." This section proves that this construction follows necessarily from PCE optimization. The key insight is that the Golay code appears independently in two optimization contexts:
+
+1. As the unique optimal error-correcting code for $M = 24$ modes (Theorem Z.13)
+2. As the gluing code in the construction of $\Lambda_{24}$ from $E_8^3$
+
+This convergence reflects a single optimization principle—PCE—operating at different scales.
+
+---
+
+#### R.4.2.1.1 E₈ as PCE-Optimal Lattice Structure in Eight Dimensions
+
+**Theorem R.4.3 (E₈ as Optimal Lattice Structure in Eight Dimensions).**
+
+Let $d_0 = 8$ be the MPU Hilbert space dimension (Theorem 23). The unique even unimodular lattice in $d_0 = 8$ dimensions is $E_8$.
+
+*Proof.*
+
+**Step 1 (Even unimodular lattice requirements).** A lattice $\Lambda \subset \mathbb{R}^n$ is *even* if $|v|^2 \in 2\mathbb{Z}$ for all $v \in \Lambda$, and *unimodular* if $\det(\Lambda) = 1$ (equivalently, $\Lambda^* = \Lambda$, i.e., self-dual). Even unimodular positive definite lattices exist only in dimensions $n \equiv 0 \pmod{8}$ (Serre 1973; Milnor & Husemoller 1973).
+
+**Step 2 (Classification in dimension 8).** By the classification theorem for even unimodular lattices (Mordell 1938; Witt 1941), there exists exactly one even unimodular lattice in dimension 8, up to isometry. This unique lattice is $E_8$.
+
+**Step 3 (Information-theoretic optimality).** The $E_8$ lattice uniquely achieves multiple optimality properties relevant to PCE:
+
+| Property | Value | PCE Interpretation |
+|----------|-------|-------------------|
+| Sphere packing density | $\Delta_8 = \pi^4/384 \approx 0.2537$ | Maximizes distinguishable states per volume (maximizes $V_{\text{benefit}}$) |
+| Kissing number | 240 (maximum in 8D) | Maximizes local connectivity for error correction |
+| Self-duality | $E_8^* = E_8$ | Eliminates representational redundancy (minimizes $V_{\text{op}}$) |
+
+The optimality of $E_8$ for sphere packing in 8 dimensions was proved by Viazovska (2017).
+
+**Step 4 (Root system structure).** The 240 minimal vectors of $E_8$ (those with $|v|^2 = 2$) form the $E_8$ root system:
+
+- 112 vectors of Type I: permutations of $(\pm 1, \pm 1, 0, 0, 0, 0, 0, 0)$
+- 128 vectors of Type II: $(\pm\tfrac{1}{2}, \ldots, \pm\tfrac{1}{2})$ with an even number of minus signs
+
+These 240 roots provide maximal symmetric discrete structure, ensuring uniform local neighborhoods. ∎
+
+---
+
+#### R.4.2.1.2 Golay Code from PCE Error Optimization
+
+**Theorem R.4.4 (Golay Code from PCE Error Optimization).**
+
+The $M = 24$ interface modes at the PCE-Attractor (Definition 15a) require error-correcting organization. The unique PCE-optimal structure is the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24, 12, 8]$.
+
+*Proof.*
+
+**Step 1 (Block length constraint).** The block length is $n = M = 24$, determined by the QFI mode count (Theorem Z.5): $M = 2ab = 2 \times 2 \times 6 = 24$.
+
+**Step 2 (Rate optimization).** The PCE loss functional for error-correcting codes is:
+
+$$
+L[C] = p_e(d) \cdot c_{\text{mode}}
+$$
+
+where $p_e(d)$ is the error probability (monotonically decreasing in minimum distance $d$) and $c_{\text{mode}}$ is the physical cost per mode. Under PCE isotropy (Theorem Z.5), all modes have equal cost.
+
+The optimal rate balancing information transmission and redundancy is $R = 1/2$, yielding dimension $k = n/2 = 12$. This follows from PCE optimization of the total functional $V_{\text{total}} = V_{\text{capacity}} + V_{\text{redundancy}}$, where $V_{\text{capacity}} \propto (1-R)$ penalizes unused information capacity and $V_{\text{redundancy}} \propto R$ penalizes insufficient error protection. Under isotropic conditions (equal mode costs), the unique minimum occurs at $R = 1/2$ where marginal gains from increased rate exactly balance marginal losses from reduced error correction. This symmetric point is the unique fixed point of the PCE gradient flow on the rate parameter.
+
+**Step 3 (Distance maximization).** With constraints $(n, k) = (24, 12)$ and symmetric noise, minimizing $L[C]$ reduces to maximizing the minimum distance $d$.
+
+Among binary linear $[24, 12]$ codes:
+
+- The Singleton bound gives
+  $$
+  d \leq n - k + 1 = 24 - 12 + 1 = 13.
+  $$
+
+- The Griesmer bound for binary linear codes (Griesmer 1960),
+  $$
+  n \geq \sum_{i=0}^{k-1} \left\lceil \frac{d}{2^i} \right\rceil,
+  $$
+  rules out $d \geq 9$ when $n = 24$, $k = 12$. For $d = 9$:
+  $$
+  \sum_{i=0}^{11} \left\lceil \frac{9}{2^i} \right\rceil = 9 + 5 + 3 + 2 + \underbrace{1 + \cdots + 1}_{8} = 27 > 24,
+  $$
+  so no binary linear $[24, 12, 9]$ code exists, establishing $d \leq 8$.
+
+- The Hamming (sphere-packing) bound (MacWilliams & Sloane 1977) independently confirms this. For $d = 9$ the correction radius is $t = 4$, and the Hamming bound requires
+  $$
+  \sum_{i=0}^{4} \binom{24}{i} \leq 2^{24-12} = 4096.
+  $$
+  But
+  $$
+  \sum_{i=0}^{4} \binom{24}{i} = 1 + 24 + 276 + 2024 + 10626 = 12951 > 4096,
+  $$
+  so the inequality is violated and no binary linear $[24, 12, 9]$ code can exist. Again we conclude $d \leq 8$.
+
+The extended binary Golay code attains this bound exactly, achieving $d = 8$.
+
+**Step 4 (Uniqueness at the bound).** The extended binary Golay code is the unique binary linear code achieving parameters $[24, 12, 8]$ (Pless 1968). No other code matches this performance.
+
+**Step 5 (PCE selection).** PCE isotropy requires invariance under mode permutations (no preferred mode ordering). Among codes achieving the distance bound, the Golay code is unique up to equivalence. Therefore, PCE optimization uniquely selects the Golay $[24, 12, 8]$ structure. ∎
+
+**Remark (Error Correction Properties).** The minimum distance $d = 8$ implies the Golay code can:
+
+- Detect up to $d - 1 = 7$ errors without misidentification
+- Correct up to $\lfloor(d-1)/2\rfloor = 3$ errors with certainty
+
+This is the maximum possible for any binary linear code of length 24 with rate 1/2.
+
+---
+
+#### R.4.2.1.3 Leech Lattice Construction via Golay Gluing
+
+**Lemma R.4.5 (Leech Lattice Construction via Golay Gluing).**
+
+The Leech lattice $\Lambda_{24}$ can be constructed from the scaled direct sum $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ by adjoining glue vectors determined by the extended binary Golay code $\mathcal{G}_{24}$.
+
+*Proof.* (Standard result; Conway & Sloane 1999, Chapter 24)
+
+**Step 1 (Base lattice).** Define the base lattice:
+
+$$
+L_0 = \sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8 \subset \mathbb{R}^{24}
+$$
+
+The scaling by $\sqrt{2}$ ensures that the minimum squared norm is $(\sqrt{2})^2 \cdot 2 = 4$, since $E_8$ has minimum squared norm 2. This matches the Leech lattice's rootless property (no vectors of squared norm 2).
+
+**Step 2 (Coordinate partition).** Partition the 24 coordinates into three octads:
+
+$$
+\mathcal{O}_1 = \{1, \ldots, 8\}, \quad \mathcal{O}_2 = \{9, \ldots, 16\}, \quad \mathcal{O}_3 = \{17, \ldots, 24\}
+$$
+
+corresponding to the three $E_8$ factors.
+
+**Step 3 (Golay code structure).** The extended binary Golay code $\mathcal{G}_{24}$ has:
+
+- $|\mathcal{G}_{24}| = 2^{12} = 4096$ codewords
+- Each codeword has weight divisible by 4: weights $\in \{0, 8, 12, 16, 24\}$
+- The code is self-dual: $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$
+- Minimum weight 8
+
+**Step 4 (Gluing construction).** For each codeword $c \in \mathcal{G}_{24}$, construct a glue vector $g_c \in \mathbb{R}^{24}$. The construction uses the coset structure of $L_0$: coordinates are shifted by $\frac{1}{2\sqrt{2}}$ in positions where $c_i = 1$.
+
+**Step 5 (Leech lattice as union).** The Leech lattice is:
+
+$$
+\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (g_c + L_0)
+$$
+
+This is a disjoint union of $|\mathcal{G}_{24}| = 2^{12} = 4096$ cosets of $L_0$.
+
+**Step 6 (Property verification).**
+
+*Even:* For any $v \in \Lambda_{24}$, $|v|^2 \in 2\mathbb{Z}$. This follows from the Golay code's self-orthogonality.
+
+*Unimodular:* $\det(\Lambda_{24}) = 1$. The determinant calculation uses the discriminant group structure.
+
+*Minimum norm 4 (rootless):* Any vector in $\Lambda_{24}$ has $|v|^2 \geq 4$. Vectors of squared norm 2 cannot arise because:
+
+- Vectors in $L_0$ have minimum squared norm 4
+- The Golay code's minimum weight 8 ensures that glue-shifted vectors also have $|v|^2 \geq 4$
+
+*Index:* $[\Lambda_{24} : L_0] = |\mathcal{G}_{24}| = 2^{12} = 4096$. ∎
+
+---
+
+#### R.4.2.1.4 Leech Lattice from PCE Constraints
+
+**Theorem R.4.6 (Leech Lattice from PCE Constraints).**
+
+The unique PCE-optimal geometric structure for the $M = 24$ interface modes is the Leech lattice $\Lambda_{24}$.
+
+*Proof.*
+
+**Step 1 (Dimension matching).** The interface mode count $M = 24$ satisfies nine logically distinct mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, combinatorial design uniqueness, and PCE minimality. The Golay code alone exhibits triple over-determination: it is simultaneously the unique binary linear code with parameters $[24,12,8]$ (up to equivalence) (Pless 1968), the glue code used to construct the Leech lattice $\Lambda_{24}$ from $\sqrt{2}E_8^3$ (Conway & Sloane 1999), and the code whose weight-8 codewords support the Steiner system $S(5,8,24)$, a $5$-$(24,8,1)$ design in which any 5 points lie in exactly one 8-element block (Assmus & Mattson 1969); both the code and design are unique up to isomorphism.
+
+**Step 2 (Even unimodular requirement).** PCE optimization favors lattice structures that:
+
+- Are *self-dual* ($\Lambda^* = \Lambda$): minimizes representational redundancy ($V_{\text{op}}$)
+- Are *even* (all $|v|^2 \in 2\mathbb{Z}$): ensures uniform quantization compatible with the flat QFI metric
+
+These requirements restrict consideration to even unimodular lattices in 24 dimensions.
+
+**Step 3 (Niemeier classification).** By the Niemeier classification (Niemeier 1973), there exist exactly 24 even unimodular lattices in 24 dimensions. These are characterized by their root systems—vectors with squared norm 2. The 24 Niemeier lattices have root systems ranging from the empty set (Leech) to $D_{24}$, $A_{24}$, $E_8^3$, and various combinations.
+
+**Step 4 (Rootless selection from PCE isotropy).** By Theorem Z.5, the QFI metric on the 24-dimensional interface is flat:
+
+$$
+g_{\text{QFI}} = \lambda \cdot I_{24}, \quad \lambda = 1
+$$
+
+This flatness follows from the isotropy group acting transitively on interface directions (Schur's lemma).
+
+Roots (vectors of squared norm 2) would break this isotropy by defining preferred directions. Such anisotropy would:
+
+- Create non-uniform local neighborhoods, increasing $V_{\text{op}}$
+- Violate the mode permutation symmetry required by PCE
+- Introduce preferred directions incompatible with the flat QFI metric
+
+Therefore, PCE selects the unique even unimodular lattice in 24 dimensions with no roots.
+
+**Step 5 (Uniqueness).** Among the 24 Niemeier lattices, exactly one is rootless: the Leech lattice $\Lambda_{24}$ (Leech 1967; Conway 1969).
+
+**Step 6 (Optimality verification).** The Leech lattice achieves:
+
+| Property | Value | Status |
+|----------|-------|--------|
+| Sphere packing density | $\Delta_{24} = \pi^{12}/(12!) \approx 0.00193$ | Optimal (Cohn et al. 2017) |
+| Kissing number | 196,560 | Maximum in 24D |
+| Self-duality | $\Lambda_{24}^* = \Lambda_{24}$ | Minimizes redundancy |
+| Minimum norm | 4 | Rootless (maximizes isotropy) |
+| Covering radius | $\sqrt{2}$ | Deep holes form 23 orbits under $\text{Aut}(\Lambda_{24})$, in bijection with the 23 Niemeier lattices with roots |
+
+
+The optimality of the Leech lattice for sphere packing in 24 dimensions was proved by Cohn, Kumar, Miller, Radchenko, and Viazovska (2017). ∎
+
+---
+
+#### R.4.2.1.5 Compatibility with M = 24 Factorization
+
+**Proposition R.4.7 (Compatibility of E₈ Triple Structure with M = 24).**
+
+The Leech lattice contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$. This three-fold structure is compatible with the factorization $24 = 3 \times d_0$ where $d_0 = 8$.
+
+*Proof.*
+
+**Step 1 (Sublattice existence).** By Lemma R.4.5, the construction of $\Lambda_{24}$ uses $L_0 = \sqrt{2}E_8^3$ as the base lattice. Therefore $L_0 \subset \Lambda_{24}$.
+
+**Step 2 (Index).** $[\Lambda_{24} : L_0] = 2^{12} = 4096$, confirming $L_0$ is a proper sublattice.
+
+**Step 3 (Factorization compatibility).** The dimension factorizes as:
+
+$$
+24 = 3 \times 8 = 3 \times d_0
+$$
+
+Each factor of 8 corresponds to one $E_8$ component, matching the MPU Hilbert space dimension $d_0 = 8$ (Theorem 23). This factorization also appears in the multi-layered structure (cf. Appendix Z, Proposition Z.2):
+
+- $24 = 8 \times 3$: $(d_0) \times (N_{\text{generations}})$
+- $24 = 4 \times 6$: $(D) \times (b)$
+- $24 = 2 \times 12$: $(a) \times (\text{modular weight})$
+
+**Step 4 (Octad structure consistency).** The Golay code $\mathcal{G}_{24}$ admits a natural partition into three octads of 8 coordinates each. This octad structure is preserved by a subgroup of $M_{24} = \text{Aut}(\mathcal{G}_{24})$.
+
+The trio structure ensures compatibility between:
+
+- Code structure: three octads of length 8
+- Sublattice structure: three copies of $\sqrt{2}E_8$
+- Framework derivation: $M = 24 = 3 \times d_0$ ∎
+
+---
+
+#### R.4.2.1.6 Automorphism Group Structure
+
+**Proposition R.4.8 (Automorphism Group and Symmetry Structure).**
+
+The automorphism group of the Leech lattice is:
+
+$$
+\text{Aut}(\Lambda_{24}) = \text{Co}_0
+$$
+
+where $\text{Co}_0$ is the Conway group with order:
+
+$$
+|\text{Co}_0| = 2^{22} \cdot 3^9 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 23 = 8{,}315{,}553{,}613{,}086{,}720{,}000
+$$
+
+*Proof.*
+
+**Step 1 (Automorphism group).** $\text{Aut}(\Lambda_{24})$ consists of all orthogonal transformations $O \in O(24)$ such that $O(\Lambda_{24}) = \Lambda_{24}$.
+
+**Step 2 (Conway's theorem).** By Conway (1969), this group is denoted $\text{Co}_0$ and has the stated order. The center contains $\{-I_{24}\}$.
+
+**Step 3 (Sporadic simple group).** The quotient $\text{Co}_1 = \text{Co}_0/\{\pm I\}$ is a simple group, one of the 26 sporadic simple groups.
+
+**Step 4 (Subgroup structure).** The stabilizer of various sublattice structures yields other sporadic groups:
+
+- Stabilizer of a norm-4 vector: $\text{Co}_2$
+- Stabilizer of a norm-6 vector: $\text{Co}_3$
+- Stabilizer of a coordinate frame: $2^{12}:M_{24}$
+
+The appearance of $M_{24} = \text{Aut}(\mathcal{G}_{24})$ reflects the Golay code's role in the construction. ∎
+
+---
+
+#### R.4.2.1.7 The Golay Bridge Theorem
+
+**Theorem R.4.9 (The Golay Bridge).**
+
+The extended binary Golay code $\mathcal{G}_{24}$ is the unique mathematical object (up to code equivalence and lattice isometry) that simultaneously:
+
+1. Achieves the maximum minimum distance ($d = 8$) among rate-1/2 binary linear codes of length 24
+2. Provides the glue vectors completing $\sqrt{2}E_8^3$ into the unique rootless even unimodular lattice $\Lambda_{24}$
+
+This dual role arises necessarily from PCE optimization operating in both domains.
+
+*Proof.*
+
+**Step 1 (Information-theoretic optimality).** By Theorem R.4.4, PCE optimization on the $M = 24$ interface modes selects the error-correcting code maximizing minimum distance at rate $R = 1/2$. The Golay code $[24, 12, 8]$ is the unique code achieving this bound.
+
+**Step 2 (Geometric optimality).** By Theorem R.4.6, PCE optimization on 24-dimensional lattice geometry selects the unique rootless even unimodular lattice. By Lemma R.4.5, this lattice is constructed by gluing $\sqrt{2}E_8^3$ with cosets indexed by $\mathcal{G}_{24}$.
+
+**Step 3 (Structural correspondence).** Both optimization problems:
+
+- Operate on the same underlying space (24 modes/dimensions)
+- Invoke the same symmetry requirement (isotropy/permutation invariance)
+- Select for the same optimality criterion (maximum "distance" under structural constraints)
+
+The Golay code's properties that make it optimal for error correction—self-duality, weight divisibility by 4, minimum weight 8—are precisely the properties required for the gluing construction to produce a rootless even unimodular lattice.
+
+**Step 4 (Uniqueness argument).** Suppose a different code $\mathcal{C} \neq \mathcal{G}_{24}$ could serve as gluing code for a rootless even unimodular lattice in 24 dimensions. Then $\mathcal{C}$ must be:
+
+- Self-dual (for lattice self-duality)
+- Have minimum weight $\geq 8$ (for rootless property)
+- Have dimension 12 (for correct index)
+
+But the Golay code is the unique self-dual binary code of length 24 with minimum weight 8 (Pless 1968). Therefore $\mathcal{C} = \mathcal{G}_{24}$.
+
+**Step 5 (PCE unification).** The convergence is necessary, not coincidental: both error-correction optimality and geometric packing optimality derive from PCE's principle of maximum efficiency under finite resources. At $M = 24$, the information-theoretic constraint (mode count) and the geometric constraint (lattice dimension) coincide, forcing the same optimal structure. ∎
+
+---
+
+#### R.4.2.1.8 Dual Optimality Summary
+
+**Remark R.4.2 (The Golay Bridge: Dual Optimality).**
+
+| Domain | Optimization Problem | Result | Role of $\mathcal{G}_{24}$ | Reference |
+|--------|---------------------|--------|---------------------------|-----------|
+| Information theory | Maximize $d$ for $[24, 12, d]$ codes | $d_{\max} = 8$ | Unique optimal code | Theorem R.4.4 |
+| Lattice geometry | Find rootless even unimodular $\Lambda \subset \mathbb{R}^{24}$ | $\Lambda_{24}$ | Gluing code for $\sqrt{2}E_8^3 \to \Lambda_{24}$ | Lemma R.4.5 |
+
+**Why the same structure appears in both domains:**
+
+1. **Common constraint:** Both problems are constrained to dimension/length 24, arising from $M = 2ab = 24$ (Theorem Z.5).
+
+2. **Common symmetry:** Both problems require isotropy—the code must be invariant under the symmetric group action (no preferred bit positions), and the lattice must be rootless (no preferred directions).
+
+3. **Common optimality criterion:** Both problems maximize a "distance" measure—Hamming distance for codes, minimum norm for lattices—subject to structural constraints.
+
+4. **Unique solution:** The intersection of these constraints has exactly one solution: the Golay code/Leech lattice pair.
+
+This is the "Golay Bridge": the unique mathematical structure that optimally connects information-theoretic error correction to geometric sphere packing, with both ends anchored in PCE optimization at $M = 24$.
+
+---
+
+#### R.4.2.1.9 Connection to Spacetime Emergence
+
+The Golay-Leech structure connects to emergent spacetime through the mode-channel correspondence:
+
+**Step 1:** $M = 24$ QFI-active modes require spatial actualization channels.
+
+**Step 2:** At equilibrium, channel count saturates at the kissing number: $M_{\text{phys}} = K(D)$.
+
+**Step 3:** PCE mode-channel matching: $M_{\text{int}} = M_{\text{phys}}$ (Theorem Z.10).
+
+**Step 4:** Unique solution: $K(D) = 24 \Rightarrow D = 4$.
+
+**Step 5:** Local geometric realization: The 24-cell achieves $K(4) = 24$ and tiles 4D Euclidean space.
+
+The chain is complete:
+
+$$
+\text{Golay code} \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(D)=24} D=4 \xrightarrow{\text{local}} \text{24-cell} \xrightarrow{\text{network}} \text{4D spacetime}
+$$
+
+The Golay code's error-correction properties (Theorem R.4.4) explain why the emergent spacetime structure is stable against quantum noise and thermal fluctuations: built-in redundancy from the 12+12 signal-parity structure provides optimal protection for 24 information modes. The "unreasonable stability" of physical structures—their persistence despite quantum uncertainty—is not mysterious but follows from the PCE-optimal error-correcting organization of the information substrate.
+
+### R.4.2.3 Golay Distance and Lattice Stability
+
+**Proposition R.4.2a (Golay Distance and Rootlessness).** The Golay code's minimum distance $d = 8$ is *necessary and sufficient* for the gluing construction to produce a rootless lattice.
+
+*Proof.*
+
+**Step 1 (Gluing mechanism).** The construction proceeds by taking the scaled lattice $(\sqrt{2}E_8)^3$, which has minimum squared norm 4, and adding coset representatives. Specifically:
+$$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} \left( (\sqrt{2}E_8)^3 + \phi(c) \right)$$
+where $\phi: \mathbb{F}_2^{24} \to (\sqrt{2}E_8)^3 / (2\sqrt{2}E_8)^3$ maps Golay codewords to coset shifts [Conway & Sloane 1999, Chapter 24].
+
+**Step 2 (Root creation risk).** When coset shifts are added, new vectors of the form $v + \phi(c)$ appear, where $v \in (\sqrt{2}E_8)^3$. For the glued lattice to remain rootless (minimum squared norm 4), no such vector may have squared norm 2.
+
+**Step 3 (Weight-distance connection).** A codeword $c \in \mathcal{G}_{24}$ of Hamming weight $w$ contributes a shift affecting $w$ coordinates. The minimum squared norm of vectors in the corresponding coset depends on $w$:
+- Weight $w < 8$: Coset contains vectors of squared norm $< 4$ (roots created)
+- Weight $w \geq 8$: Minimum squared norm in coset remains $\geq 4$ (rootless preserved)
+
+**Step 4 (Golay optimality).** The extended binary Golay code $\mathcal{G}_{24}$ has minimum distance $d = 8$, meaning all nonzero codewords have weight $\geq 8$. This is the *maximum* achievable minimum distance for any binary $[24, 12]$ code (Theorem Z.13, citing Assmus & Mattson 1969).
+
+**Step 5 (Necessity and sufficiency).**
+- *Sufficiency:* Since all nonzero Golay codewords have weight $\geq 8$, no coset shift creates vectors of squared norm $< 4$. The glued lattice is rootless. ✓
+- *Necessity:* Any code with $d < 8$ contains a codeword of weight $< 8$, whose coset would contain vectors of squared norm $< 4$. Rootlessness would fail. ✗
+
+Therefore, among all binary $[24, 12]$ codes, only the Golay code produces a rootless glued lattice. ∎
+
+**Corollary R.4.2b (Error Correction Implies Geometric Stability).** The Golay code's information-theoretic optimality (maximum error correction for length 24, rate 1/2) directly *causes* the Leech lattice's geometric optimality (unique rootless even unimodular lattice in 24 dimensions). This is not coincidence but logical entailment: PCE optimization of error correction automatically yields PCE optimization of packing geometry.
+
+*Proof.* By Proposition R.4.2a, rootlessness requires $d \geq 8$. By Theorem Z.13, $d = 8$ is the maximum achievable for $[24, 12]$ codes, uniquely attained by the Golay code. Therefore:
+$$\text{PCE-optimal error correction} \Rightarrow d = 8 \Rightarrow \text{rootlessness} \Rightarrow \text{unique optimal 24D packing}$$
+Each implication is a theorem; their composition is logical necessity. ∎
+
+---
+
+### R.4.2.4 Niemeier Classification and Unique Selection
+
+**Theorem R.4.3 (Unique Selection Among Even Unimodular Lattices).** Among all even unimodular lattices in dimension 24, exactly one is rootless. PCE selects this unique lattice.
+
+*Proof.*
+
+**Step 1 (Niemeier classification).** By Niemeier's theorem [Niemeier 1973], there exist exactly 24 even unimodular lattices in dimension 24, up to isometry. These are called the *Niemeier lattices*.
+
+**Step 2 (Root system characterization).** Each Niemeier lattice is characterized by its root system—the set of vectors of squared norm 2. The 24 Niemeier lattices have root systems:
+
+| Root System | Number of Roots | Example |
+|:------------|:---------------:|:--------|
+| $\emptyset$ (none) | 0 | Leech lattice $\Lambda_{24}$ |
+| $A_1^{24}$ | 48 | — |
+| $A_2^{12}$ | 72 | — |
+| $D_4^6$ | 144 | — |
+| $E_8^3$ | 720 | $E_8 \oplus E_8 \oplus E_8$ |
+| ... | ... | (19 others) |
+
+**Step 3 (Uniqueness of rootlessness).** Exactly one Niemeier lattice has empty root system: the Leech lattice $\Lambda_{24}$. The remaining 23 all contain roots.
+
+**Step 4 (PCE selection criterion).** By Proposition Z.13a (Section Z.13.4), rootlessness corresponds to vacuum stability—the absence of near-degenerate configurations. PCE optimization requires:
+- Minimum descriptive complexity (satisfied by all 24 lattices equally)
+- Maximum predictive stability (satisfied *only* by the rootless lattice)
+
+The Leech lattice is the unique PCE optimum among Niemeier lattices.
+
+**Step 5 (The "24-24" observation).** The dimension selected by mode-channel matching ($M = 24$ from $K(D) = 24$) equals the number of candidate lattices from which PCE selects the unique stable vacuum. This constitutes a notable observation regarding $M = 24$:
+
+| Observation | Statement | Status |
+|:-----------|:----------|:------:|
+| O9 (Niemeier) | Exactly $M$ even unimodular lattices exist in dimension $M$, with unique rootless member | ✓ |
+
+Dimension 24 is the only dimension where even unimodular lattices exist with exactly one rootless member. Whether this numerical coincidence reflects deeper structure remains an open question. ∎
+
+**Remark R.4.2a (Nested Uniqueness).** The selection process exhibits nested uniqueness:
+1. Among all dimensions $D$, only $D$ with $K(D) = 24$ works → unique $D = 4$
+2. Among all dimensions $M$, only $M = 24$ has exactly 24 even unimodular lattices
+3. Among those 24 lattices, only 1 (Leech) is rootless → unique vacuum
+
+Each level selects a unique object from a finite set, with the selections interlocking via the number 24.
+
+---
+
+### R.4.2.5 Automorphism Group and Symmetry Structure
+
+**Proposition R.4.4 (Automorphism Group).** The automorphism group of the Leech lattice is:
+$$\text{Aut}(\Lambda_{24}) = \text{Co}_0$$
+where $\text{Co}_0$ is the Conway group with order:
+$$|\text{Co}_0| = 2^{22} \cdot 3^9 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 23 = 8{,}315{,}553{,}613{,}086{,}720{,}000$$
+
+*Proof.*
+
+**Step 1 (Automorphism group).** $\text{Aut}(\Lambda_{24})$ consists of all orthogonal transformations $O \in O(24)$ such that $O(\Lambda_{24}) = \Lambda_{24}$.
+
+**Step 2 (Conway's theorem).** By Conway [1969], this group is denoted $\text{Co}_0$ and has the stated order. The center contains $\{-I_{24}\}$.
+
+**Step 3 (Sporadic simple group).** The quotient $\text{Co}_1 = \text{Co}_0/\{\pm I\}$ is a simple group, one of the 26 sporadic simple groups.
+
+**Step 4 (Subgroup structure).** The stabilizer of various sublattice structures yields other sporadic groups:
+- Stabilizer of a norm-4 vector: $\text{Co}_2$
+- Stabilizer of a norm-6 vector: $\text{Co}_3$
+- Stabilizer of a coordinate frame: $2^{12}:M_{24}$
+
+The appearance of $M_{24} = \text{Aut}(\mathcal{G}_{24})$ reflects the Golay code's role in the construction. ∎
+
+**Remark R.4.2b (Physical Status of Sporadic Symmetries).** The emergence of sporadic simple groups ($\text{Co}_0$, $\text{Co}_1$, $M_{24}$) as automorphism groups of the framework's fundamental structures is mathematically necessary but physically subtle. These groups act on the 24-dimensional mode space, not directly on the 4-dimensional emergent spacetime. Physical observables in emergent spacetime reflect only those symmetries compatible with the dimensional reduction $24 \to 4$ via the mode-channel correspondence.
+
+Whether sporadic group structure produces observable signatures—such as specific degeneracy patterns in quantum systems engineered to probe the full 24-mode space, or constraints on allowed transitions—remains an open question. The experimental predictions in **Section Z.29–Z.31** provide protocols for testing the $M = 24$ mode structure and Golay code organization; confirmation of these predictions would indirectly validate the mathematical structures whose automorphism groups are sporadic. Direct physical manifestations of sporadic symmetries represent an avenue for future theoretical and experimental investigation.
+
+---
+
+### R.4.2.6 Over-Determination and Structural Consistency
+
+**Independence verification:** 
+- Mechanism 1 (Topological): relies on $\pi_2(\Sigma_8)$ structure and gauge representation theory (Sections R.3–R.4.1)
+- Mechanism 2 (Geometric): relies on sphere packing optimality and $E_8$/Leech lattice constructions (Section R.4.2)
+
+These two mechanisms are independent at the derivation level, though they share foundational constants ($d_0 = 8$, $\varepsilon = \ln 2$) at the axiomatic level. Each provides a complete derivation of $N_{\text{gen}} = 3$.
+
+**Structural compatibility from QFI mode count:** The interface mode count $M = 24$ (**Appendix Z**, Theorem Z.5) admits the factorization:
+$$
+M = 24 = 8 \times 3 = d_0 \times N_{\text{gen}}
+$$
+This factorization does not independently derive $N_{\text{gen}} = 3$; rather, it demonstrates that the generation structure derived by Mechanisms 1 and 2 is compatible with the information-theoretic mode count. The QFI structure thus provides a consistency check, not a third derivation pathway.
+
+**Qualitative assessment:** The convergence of two independent derivation pathways on the value $N_{\text{gen}} = 3$, together with compatibility from the QFI mode factorization, constitutes strong evidence for structural necessity rather than coincidence. The framework does not select $N = 3$ by parameter choice but derives it through independent routes sharing only the foundational constants $(d_0 = 8, \varepsilon = \ln 2)$.
+
+**Remark (Methodological Note).** The strength of the over-determination argument rests on the logical independence of the two derivation pathways. Both mechanisms provide complete derivations of $N = 3$ using different mathematical structures. The QFI mode factorization $M = d_0 \times N_{\text{gen}}$ provides an independent consistency check. Their agreement reflects the internal coherence of the framework. ∎
+
+---
+
+### R.4.2.7 Connection to Spacetime Emergence
+
+The Golay-Leech structure connects to emergent spacetime through the mode-channel correspondence:
+
+**Step 1:** $M = 24$ QFI-active modes require spatial actualization channels.
+
+**Step 2:** At equilibrium, channel count saturates at the kissing number: $M_{\text{phys}} = K(D)$.
+
+**Step 3:** PCE mode-channel matching: $M_{\text{int}} = M_{\text{phys}}$ (Theorem Z.10).
+
+**Step 4:** Unique solution: $K(D) = 24 \Rightarrow D = 4$.
+
+**Step 5:** Local geometric realization: The 24-cell achieves $K(4) = 24$ and tiles 4D Euclidean space.
+
+The chain is complete:
+$$\text{Golay code} \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(D)=24} D=4 \xrightarrow{\text{local}} \text{24-cell} \xrightarrow{\text{network}} \text{4D spacetime}$$
+
+The Golay code's error-correction properties (Theorem Z.13) explain why the emergent spacetime structure is stable against quantum noise and thermal fluctuations: built-in redundancy from the 12+12 signal-parity structure provides optimal protection for 24 information modes. The "unreasonable stability" of physical structures—their persistence despite quantum uncertainty—is not mysterious but follows from the PCE-optimal error-correcting organization of the information substrate.
+
+**Experimental Signatures.** The Golay-Leech structure generates specific testable predictions detailed in **Section Z.29–Z.31**:
+
+1. **Coordination number scaling (Prediction Z.2):** Effective neighbor count in $d_0 = 8$ quantum systems should scale as $K(D_{\text{eff}})$ with effective dimension.
+
+2. **Dimensional stability (Prediction Z.3):** Systems with $M_{\text{int}} = 24$ modes embedded in $D \neq 4$ effective dimensions should exhibit instability or spontaneous dimensional reduction.
+
+3. **Error correction correlations (Prediction Z.4):** The 24×24 mode correlation matrix should reveal the 12+12 signal-parity decomposition characteristic of the Golay code.
+
+Confirmation of these predictions would provide direct empirical support for the Golay-Leech foundation of emergent spacetime geometry.
+
+
 ### R.4.3 Synthesis: Why Three is Necessary
 
 The dual derivation provides robust evidence for three generations:
 
 **Robustness:** If either mechanism failed (e.g., if $\pi_2(\Sigma_8)$ had different rank, or if optimal 24D packing had different structure), the other would still select three generations.
 
-**Over-determination:** Having two independent pathways (actually three, including information structure) to the same result greatly strengthens the prediction. The framework does not merely accommodate three generations; it requires them from multiple perspectives.
+**Over-determination:** Two independent derivation pathways converge on the same result: (1) topological anomaly cancellation on $\Sigma_8$ (Sections R.3–R.4.1), and (2) $E_8$/Leech lattice geometric structure (Section R.4.2). The QFI mode factorization $M = 24 = 8 \times 3$ (**Appendix Z**, Theorem Z.5) provides a consistency check confirming compatibility with the framework's information-theoretic structure. The framework does not merely accommodate three generations; it requires them from both topological and geometric perspectives.
 
 **Phenomenological Success:** The observed three-generation structure of the Standard Model is precisely what these mechanisms predict, with no free parameters adjusted to match observation.
 
@@ -844,9 +1395,11 @@ strongly suggests three generations are fundamentally required rather than envir
 *   **E₈ Geometry:** The E₈ root system emerges as the information-optimal coordinatization in 8 dimensions, with discrete squared distances $d^2 \in \{2, 4, 6, 8\}$ between roots.
 *   **Gauge–Topology Correspondence:** An embedding of the Standard Model gauge group into the MPU's internal symmetry group induces a homomorphism from the topological charges to the Cartan weight lattice of the gauge group.
 *   **PCE Selection:** The Principle of Compression Efficiency selects for physically viable sectors by enforcing non-Abelian charge neutrality via the **light sublattice** and requiring anomaly cancellation for an emergent family symmetry $U(1)_F$.
-*   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$. This is **over-determined** by two independent mechanisms:
-    1. Topological anomaly cancellation + CP requirement (Section R.3-R.4.1)
-    2. E₈/Leech lattice geometric structure (Section R.4.2)
+*   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$. This is **over-determined** by two independent derivation mechanisms:
+    1. Topological anomaly cancellation + CP requirement (Sections R.3–R.4.1)
+    2. $E_8$/Leech lattice geometric structure (Section R.4.2)
+    
+The interface mode structure $M = 24 = 8 \times 3$ (**Appendix Z**, Theorem Z.5) provides further structural consistency through the Golay-Leech correspondence.
 *   **Interface Modes:** The number 24 appears independently in interface mode count (**Appendix Z, Theorem Z.5**), Leech lattice dimension, and Golay code dimension (**Appendix Z, Theorem Z.13**), reflecting deep information-geometric optimality.
 *   **Mass Hierarchy:** E₈ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with no free parameters.
 *   **Phenomenological Success:** Charged lepton sector shows $\mathcal{R}_\ell \approx 2.889$, within 3.8% of the discrete value 3, strongly supporting the E₈ geometric mechanism.

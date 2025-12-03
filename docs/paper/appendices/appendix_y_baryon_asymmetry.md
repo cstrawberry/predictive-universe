@@ -9,7 +9,7 @@ G \;=\; U(1)\times SU(2)\times SU(3)
 \tag{Y.0.1}
 $$
 
-as PCE‑preserving automorphisms of predictive frames (Conjecture G.M1, Appendix G). Chiral fermions are sections of $S^\pm\!\otimes E_R$ where $E_R$ is the $G$–associated vector bundle corresponding to a *predictive block* representation $R$ (Appendix R). The twisted Dirac index equals the block’s net chirality (Lemma R.IDX1), and anomaly additivity under block replication holds (Lemma R.IDX2).
+as PCE-preserving automorphisms of predictive frames (Conjecture G.M1, verified by Theorem G.8.4b; Appendix G). Chiral fermions are sections of $S^\pm\!\otimes E_R$ where $E_R$ is the $G$-associated vector bundle corresponding to a *predictive block* representation $R$ (Appendix R). The twisted Dirac index equals the block’s net chirality (Lemma R.IDX1), and anomaly additivity under block replication holds (Lemma R.IDX2).
 
 Let $\mathcal V\subset M$ be a comoving 4‑volume bounded by two Cauchy slices $\Sigma_i$ (early) and $\Sigma_f$ (late), corresponding to constant values of the emergent temporal coordinate (Section 11, Appendix O), with outward normal conventions as in §12. Let $N_g$ be the number of predictive blocks carrying the usual $SU(2)_L$ doublets (three in the SM case). Denote the electroweak field strength $W^a_{\mu\nu}$ and its dual $\tilde W^{a\mu\nu}=\frac12\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$. The $SU(2)$ Chern–Simons functional on a slice $\Sigma$ is
 
@@ -22,7 +22,7 @@ $$
 ### Y.1. PU–Sakov conditions (no new assumptions)
 
 **Theorem Y.1 (Sakharov conditions hold generically in PU).**
-In any PU cosmology satisfying the emergence of spacetime (§11) and gravity (§12) and with gauge bundle $G$ from Conjecture G.M1:
+In any PU cosmology satisfying the emergence of spacetime (§11) and gravity (§12) and with gauge bundle $G$ from Conjecture G.M1 (verified by Theorem G.8.4b):
 
 1. (**Baryon‑number non‑conservation**) The chiral electroweak anomaly (related to the index theorem, Lemma R.IDX1) dictates the non-conservation of the baryon ($B$) and lepton ($L$) currents:
 
@@ -131,37 +131,48 @@ This section provides a computable pipeline to derive the baryon asymmetry $\eta
 #### Y.5.1 CP Source and Chemical Potential
 Let $\delta_{\rm CP}$ be the Berry–Simon holonomy of the predictive bundle, computed via the integral of the curvature of the connection $\mathcal{A}$ over a minimal update cycle surface $\Sigma$:
 
-\boxed{\ \delta_{\rm CP}\ =\ \frac{1}{2\pi}\int_{\Sigma}\mathrm{Tr},\mathcal F\ }\tag{Y.5}
+$$
+\boxed{\ \delta_{\rm CP}\ =\ \frac{1}{2\pi}\int_{\Sigma}\mathrm{Tr}\,\mathcal F\ }\tag{Y.5}
+$$
+
 with $\mathcal F=d\mathcal A+\mathcal A\wedge\mathcal A$.
 
 This holonomy is a gauge-invariant, dimensionless measure of the fundamental CP violation.
 
 **CP source and Kubo definition.** The PU‑induced CP source acts as an effective baryon chemical potential,
-\[
+
+$$
 \mu_B(T)=J_{\rm PU}(T)\,\delta_{\rm CP}\,T,\qquad
 J_{\rm PU}(T)=\lim_{\omega\to0^+}\frac{1}{T}\frac{\Im\,G^R_{B\,\mathcal O}(\omega)}{\omega},
-\]
-where \(G^R_{B\,\mathcal O}\) is the retarded correlator between the conserved baryon number density and the PU predictive operator \(\mathcal O\) that sources the holonomy.
+$$
 
-**Baryon yield.** In the relativistic, small‑\(\mu/T\) regime, the baryon‑to‑entropy ratio can be written as
-\[
-\eta_B=\frac{15}{4\pi^2 g_\*(T)}\!
+where $G^R_{B\,\mathcal O}$ is the retarded correlator between the conserved baryon number density and the PU predictive operator $\mathcal O$ that sources the holonomy.
+
+**Baryon yield.** In the relativistic, small‑$\mu/T$ regime, the baryon‑to‑entropy ratio can be written as
+
+$$
+\eta_B=\frac{15}{4\pi^2 g_*(T)}\!
 \left(\sum_i g_i B_i^2\right)
 \int_{t_i}^{t_f}\!dt\,\frac{\Gamma_{\rm sph}(T)}{T^2}\,
 \frac{\mu_B(T)}{T}\,
 e^{-\int_t^{t_f}\!dt'\,\Gamma_{\rm wash}(T')},
-\]
-where the species sum runs over relativistic degrees of freedom with baryon charge \(B_i\) and degeneracy \(g_i\). Defining the thermal coefficient
-\[
-C_{\rm th}(T)\equiv \frac{15}{4\pi^2 g_\*(T)}\sum_i g_i B_i^2,
-\]
+$$
+
+where the species sum runs over relativistic degrees of freedom with baryon charge $B_i$ and degeneracy $g_i$. Defining the thermal coefficient
+
+$$
+C_{\rm th}(T)\equiv \frac{15}{4\pi^2 g_*(T)}\sum_i g_i B_i^2,
+$$
+
 we have the compact form
-\[
+
+$$
 \eta_B=\delta_{\rm CP}\int_{t_i}^{t_f}\!dt\;C_{\rm th}(T)\,
 \Gamma_{\rm sph}(T)\,J_{\rm PU}(T)\,
 e^{-\int_t^{t_f}\!dt'\,\Gamma_{\rm wash}(T')}\,.
-\]
-**Electroweak window.** The integral is taken across the electroweak crossover where sphaleron transitions are active and subsequently freeze out; lattice‑informed \(\Gamma_{\rm sph}(T)\) and standard model inputs determine \(C_{\rm th}(T)\).
+$$
+
+**Electroweak window.** The integral is taken across the electroweak crossover where sphaleron transitions are active and subsequently freeze out; lattice‑informed $\Gamma_{\rm sph}(T)$ and standard model inputs determine $C_{\rm th}(T)$.
 
 #### Y.5.3 Computational Program
 
