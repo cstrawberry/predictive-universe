@@ -26,7 +26,7 @@ This appendix provides computational programs for two constants within the Predi
 
    with $A_{\Lambda}$ an $O(1)$, **dimensionless** prefactor aggregating one‑loop determinants and extensivity (defined in Equation U.12).
 
-   **Normalization note.** Using the Einstein‑equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$ and $L_P^2=\hbar G/c^3$, the ratio $\Lambda L_P^2$ is dimensionless while the conventional $8\pi$ remains as a pure numerical factor multiplying the semiclassical instanton amplitude. All dimensionful contributions in the one‑loop determinant and finite‑volume counting are normalized by $L_P$, so the aggregated prefactor $A_\Lambda$ is a **dimensionless** $O(1)$ constant (see Equation U.12). Equivalently, $A_\Lambda \equiv A_{\rm eff}$ as defined in Appendix U (Equation U.12).
+   **Normalization note.** Using the Einstein equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$ and $L_P^2=\hbar G/c^3$, the ratio $\Lambda L_P^2$ is dimensionless while the conventional $8\pi$ remains as a pure numerical factor multiplying the semiclassical instanton amplitude. All dimensionful contributions in the one-loop determinant and finite-volume counting are normalized by $L_P$, so the aggregated prefactor $A_\Lambda$ is a **dimensionless** $O(1)$ constant. Equivalently, $A_\Lambda \equiv A_{\rm eff} := K \cdot N_{\rm eff}$ as defined in Appendix U (Section U.1), where $K$ is the one-loop determinant ratio and $N_{\rm eff}$ is the extensivity factor from Appendix E.
 
 3. **Inversion for $\kappa$.** Solving Equation (V.2) using Equation (V.1),
 

@@ -42,6 +42,7 @@
 *   Buttazzo, D., Degrassi, G., Giardino, P. P., Giudice, G. F., Sala, F., Salvio, A., & Strumia, A. (2013). Investigating the near-criticality of the Higgs boson. *Journal of High Energy Physics*, *2013*(12), 089. DOI: 10.1007/JHEP12(2013)089 
 *   Bösch, H., Steinkamp, F., & Boller, E. (2006). Examining psychokinesis: The interaction of human intention with random number generators—A meta-analysis. *Psychological Bulletin*, *132*(4), 497-523.
 *   Callan, C. G., Jr., & Coleman, S. (1977). The fate of the false vacuum II: First quantum corrections. *Physical Review D*, *16*(6), 1762–1768. DOI: 10.1103/PhysRevD.16.1762
+*   Cameron, P.J. & Van Lint, J.H. (1991). *Designs, Graphs, Codes and their Links*. Cambridge University Press.
 *   Carlen, E. A., Frank, R. L., & Lieb, E. H. (2018). Inequalities for quantum divergences and the Audenaert–Datta conjecture. *Journal of Physics A: Mathematical and Theoretical*, *51*(48), 483001. DOI: 10.1088/1751-8121/aae536
 *   Cardeña, E. (2018). The experimental evidence for parapsychology: A review. *American Psychologist*, *73*(5), 663–677.
 *   Carroll, S. M. (2001). The cosmological constant. *Living Reviews in Relativity*, *4*(1), 1. DOI: 10.12942/lrr-2001-1
@@ -80,8 +81,10 @@
 *   Dawson, C. M., & Nielsen, M. A. (2006). The Solovay-Kitaev algorithm. *Quantum Information & Computation*, *6*(1), 81–95. DOI: 10.5555/2011679.2011685 
 *   Dicke, R. H. (1954). Coherence in spontaneous radiation processes. *Physical Review*, *93*(1), 99–110.
 *   Deffner, S., & Campbell, S. (2017). Quantum speed limits: from Heisenberg's uncertainty principle to optimal quantum control. *Journal of Physics A: Mathematical and Theoretical*, *50*(45), 453001. DOI: 10.1088/1751-8121/aa8c2f
+*   Degrassi, G., et al. (2012). Higgs mass and vacuum stability in the Standard Model at NNLO. JHEP 08, 098.
 *   Dehaene, S., Lau, H., & Kouider, S. (2017). What is consciousness, and could machines have it? *Science*, *358*(6362), 486–492. DOI: 10.1126/science.aan8871
 *   Deligne, P., et al. (Eds.). (1999). *Quantum Fields and Strings: A Course for Mathematicians* (Vols. 1–2). American Mathematical Society.
+*   Delsarte, P., Goethals, J. M., & Seidel, J. J. (1977). Spherical codes and designs. Geometriae Dedicata 6(3), 363–388.
 *   Dembo, A., & Zeitouni, O. (1998). *Large Deviations Techniques and Applications* (2nd ed.). Springer.
 *   Descartes, R. (1641). *Meditationes de Prima Philosophia* (*Meditations on First Philosophy*).
 *   Deutsch, D. (1999). Quantum Theory of Probability and Decisions. *Proceedings of the Royal Society of London A*, *455*(1988), 3129–3137. DOI: 10.1098/rspa.1999.0443
@@ -211,6 +214,7 @@
 *   Ludlow, A. D., Boyd, M. M., Ye, J., Peik, E., & Schmidt, P. O. (2015). Optical atomic clocks. *Reviews of Modern Physics*, *87*(2), 637–701.
 *   Ma, X.-S., Kofler, J., & Zeilinger, A. (2016). Delayed-choice gedanken experiments and their realizations. *Reviews of Modern Physics*, *88*(1), 015005. DOI: 10.1103/RevModPhys.88.015005
 *   MacWilliams, F. J., & Sloane, N. J. A. (1977). *The Theory of Error-Correcting Codes*. North-Holland.
+*   Machacek, M. E., & Vaughn, M. T. (1984). Two-loop renormalization group equations. Nucl. Phys. B 236, 221.
 *   Manton, N. S., & Sutcliffe, P. (2004). *Topological Solitons*. Cambridge University Press (Cambridge Monographs on Mathematical Physics). DOI: 10.1017/CBO9780511617034
 *   Marshall, A. W., Olkin, I., & Arnold, B. C. (2011). *Inequalities: Theory of Majorization and Its Applications* (2nd ed.). Springer. DOI: 10.1007/978-0-387-68276-1
 *   Matsumoto, K. (2002). A new approach to the Cramér-Rao-type bound of the pure-state model. *Journal of Physics A: Mathematical and General*, *35*(13), 3111–3123. DOI: 10.1088/0305-4470/35/13/307
@@ -229,6 +233,7 @@
 *   Nachtergaele, B., & Sims, R. (2010). Lieb–Robinson bounds in quantum many-body physics. In R. Sims & D. Ueltschi (Eds.), *Entropy and the Quantum* (*Contemporary Mathematics*, Vol. 529, pp. 141–176). American Mathematical Society. DOI: 10.1090/conm/529
 *   Nakahara, M. (2003). *Geometry, Topology and Physics* (2nd ed.). Institute of Physics Publishing.
 *   Nelson, R. D., Radin, D. I., Shoup, R., & Bancel, P. A. (2002). Correlations of continuous random data with major world events. *Foundations of Physics Letters*, *15*(6), 537–550.
+*   Nicolaescu, L.I. (2011). *An Invitation to Morse Theory*, 2nd ed. Springer.
 *   Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information* (10th Anniversary ed.). Cambridge University Press. DOI: 10.1017/CBO9780511976667
 *   Niemeier, H.-V. (1973). Definite quadratische Formen der Dimension 24 und Diskriminante 1. *Journal of Number Theory*, *5*(2), 142–178. DOI: 10.1016/0022-314X(73)90068-1
 *   Novotny, L., & Hecht, B. (2012). *Principles of Nano-Optics* (2nd ed.). Cambridge University Press.
