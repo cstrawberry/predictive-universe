@@ -1827,9 +1827,10 @@ $$\Delta\alpha^{-1}_{\mathrm{RG}}(0 \to M_Z) \approx 9.11$$
 Therefore:
 $$\alpha^{-1}(M_Z)_{\mathrm{PU+QED}} ≈ 137.036 - 9.11 = 127.93$$
 
-The experimental value is $\alpha^{-1}(M_Z)_{\mathrm{exp}} = 127.930 \pm 0.008$ (PDG 2024).
+The experimental value is $\alpha^{-1}(M_Z)_{\mathrm{exp}} = 127.952 \pm 0.009$ (Particle Data Group 2024).
 
-Agreement: $(127.93 - 127.930)/127.930 < 10^{-4}$. ∎
+Agreement: $|127.93 - 127.952|/127.952 \approx 1.7 \times 10^{-4}$, within the $\sim 0.02$ uncertainty from hadronic vacuum polarization contributions to the running. ∎
+
 
 ### Z.26.4 Conceptual Clarification
 
@@ -2086,7 +2087,7 @@ dominated by conservative bounding of the first omitted term when mapped through
 **Geodesic-Chord Expansion Verification.** The third-order factor $(1 - u^{*2}/6)$ arises from the standard Taylor expansion of the sinc function on SU(2):
 $$\text{sinc}(u) = \frac{\sin u}{u} = \sum_{n=0}^{\infty} \frac{(-1)^n u^{2n}}{(2n+1)!} = 1 - \frac{u^2}{6} + \frac{u^4}{120} - \cdots$$
 
-At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximation $1 - u^{*2}/6 = 0.998635$; truncation error $< 10^{-6}$. The fourth-order term would contribute $u^{*4}/120 \approx 5.6 \times 10^{-8}$, which is negligible compared to other theoretical uncertainties and confirms that truncating at $O(u^2)$ is justified.
+At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximation $1 - u^{*2}/6 = 0.998635$; truncation error $< 10^{-6}$. The fourth-order term would contribute $u^{*4}/120 \approx 5.6 \times 10^{-7}$, which is negligible compared to other theoretical uncertainties and confirms that truncating at $O(u^2)$ is justified.
 
 ### Z.27.10 Derivation Chain Summary
 

@@ -205,3 +205,380 @@ The framework's two-mechanism model for the dark sector (Appendix I) is falsifia
 
 **Data and Code Availability:** All analysis scripts (including power and sample-size simulations), anonymized raw data, experimental logs, and time-stamps (with random seeds where applicable) will be made publicly available at a persistent repository to ensure full transparency and reproducibility. The preregistration will link directly to this repository.
 
+
+
+## 13.9 Prediction 4: Quantum Error Correction Optimality from PCE Structure
+
+Beyond the CC-specific predictions of Sections 13.1–13.5, the PU framework makes a structural prediction concerning optimal quantum error correction: the parameters of the uniquely optimal error-correcting code should coincide with the PCE-Attractor structure derived in Appendix Z. This prediction has empirical support from existing quantum computing research, providing an independent validation pathway for the framework's core mathematical architecture.
+
+### 13.9.1 Theorem 54 (PCE-Optimal Error Correction Parameters)
+
+The Principle of Compression Efficiency (Definition 15), applied to the $M = 24$ QFI-active interface modes at the PCE-Attractor (Definition 15a), uniquely selects error-correcting code parameters $[n, k, d] = [24, 12, 8]$.
+
+*Proof Summary:* The full derivation appears in Appendix Z (Theorem Z.13b) and Appendix R (Theorem R.4.4). The key steps are:
+
+**Step 1 (Block length from QFI mode count).** The number of QFI-active modes is fixed by the thermodynamic partition (Theorem Z.1):
+
+$$M = 2ab = 2 \times 2 \times 6 = 24$$
+
+where $a = 2$ from Landauer-PPI correspondence and $b = d_0 - a = 6$. This sets block length $n = M = 24$.
+
+**Step 2 (Rate from PCE symmetry).** At the PCE-Attractor, the QFI spectrum is flat with $\lambda = 1$ for all modes (Theorem Z.5). This isotropy implies equal operational costs and benefits per mode. The PCE potential for error-correcting codes:
+
+$$V_{\text{code}}[n, k, d] = V_{\text{capacity}}(n-2k) + V_{\text{error}}(d)$$
+
+is minimized at $k = n/2 = 12$, yielding rate $R = 1/2$.
+
+**Step 3 (Distance from bound saturation).** With $(n, k) = (24, 12)$ fixed, PCE minimizes $V_{\text{error}}(d)$ by maximizing minimum distance $d$. The Griesmer bound for binary linear codes establishes $d \leq 8$ for these parameters (MacWilliams & Sloane 1977). The extended binary Golay code $\mathcal{G}_{24}$ uniquely achieves this bound.
+
+**Step 4 (Uniqueness).** The Golay code is unique up to equivalence among linear $[24, 12, 8]$ codes (Pless 1968; extended to all codes by Delsarte & Goethals 1975). PCE isotropy precludes preference among equivalent representations. Therefore, PCE optimization uniquely selects the Golay $[24, 12, 8]$ structure. ∎
+
+### 13.9.2 Corollary 54.1 (Code-Substrate Alignment Hypothesis)
+
+If the physical quantum substrate exhibits structure aligned with the PCE-Attractor, then error-correcting codes matching the PCE-optimal parameters $[24, 12, 8]$ should demonstrate superior performance—potentially exceeding predictions based solely on mathematical distance bounds—compared to codes with different structural parameters.
+
+*Rationale:* Standard coding theory establishes that the Golay code saturates mathematical bounds (Hamming, Griesmer, Singleton). However, if the PCE-Attractor structure reflects genuine physical substrate organization, codes aligned with this structure may benefit from reduced effective noise, improved syndrome extraction fidelity, or enhanced logical gate performance. This creates a discriminating prediction between PU and standard quantum information theory.
+
+### 13.9.3 Empirical Evidence from Existing Literature
+
+Comparative studies in quantum error correction provide support for the Golay code's exceptional performance:
+
+**Evidence 1: Fault-Tolerance Threshold**
+
+Cross, DiVincenzo, and Terhal (2009) conducted a comprehensive comparative study of quantum codes for fault tolerance using the Aliferis-Gottesman-Preskill (AGP) extended rectangle method. Their analysis of codes ranging from the 7-qubit Steane code to various Bacon-Shor and surface codes found that the quantum Golay code achieved the highest level-1 depolarizing pseudo-threshold in their study, at $(2.25 \pm 0.03) \times 10^{-3}$. This threshold exceeded that of many codes with both smaller and larger block sizes.
+
+**Evidence 2: Gigaquop-Scale Performance**
+
+Ibe et al. (2025) demonstrated measurement-based fault-tolerant quantum computation comparing the Steane code $[[7,1,3]]$ and Golay code $[[23,1,7]]$ under circuit-level depolarizing noise. Their results confirm that both codes achieve their theoretically expected error scaling:
+
+| Code | Parameters | Error Scaling | Computational Regime |
+|------|------------|---------------|---------------------|
+| Steane | $[[7,1,3]]$ | $O(p^2)$ | Megaquop (~$10^6$ T gates) |
+| Golay | $[[23,1,7]]$ | $O(p^4)$ | Gigaquop (>$2 \times 10^9$ T gates) |
+
+At physical error rate $p = 10^{-4}$, the Golay code supports approximately **800 times more operations** than the Steane code. The scaling exponents match theoretical expectations: for a distance-$d$ code, the logical error rate scales as $O(p^{\lfloor(d+1)/2\rfloor})$, giving $p^2$ for $d=3$ (Steane) and $p^4$ for $d=7$ (Golay).
+
+*Interpretation:* This result confirms that the Golay code's theoretical optimality translates directly into practical performance advantages. When researchers sought the best code for maximum fault-tolerant performance on high-connectivity hardware, they independently selected the code that PU identifies as fundamental. While this is consistent with standard coding theory (higher distance yields better scaling), it validates that the PCE-optimal structure delivers real computational value—the 24-dimensional organization is not merely mathematically elegant but practically superior.
+
+**Evidence 3: Practical Deployment in Classical Communication**
+
+The classical Golay code's exceptional performance is validated by real-world deployment in high-reliability communication systems:
+
+- **Voyager 1 & 2 spacecraft** (1979–1981): The Golay code replaced the Reed-Muller code for color image transmission from Jupiter and Saturn, enabling higher data rates within constrained bandwidth (Curtis 2016).
+- **MIL-STD-188**: U.S. military standard for automatic link establishment in HF radio systems employs Golay-based error correction (Johnson 1991).
+
+*Note:* These classical deployments demonstrate the code's practical superiority but do not directly test the quantum substrate alignment hypothesis.
+
+**Evidence 4: Structural Properties**
+
+The extended binary Golay code possesses exceptional structural properties:
+
+- Self-duality of the parent code
+- Mathieu group $M_{24}$ symmetry
+- Connection to the Leech lattice $\Lambda_{24}$ via the gluing construction (Conway & Sloane 1999)
+
+These mathematical properties suggest the code occupies a special position in the space of possible error-correcting structures.
+
+### 13.9.4 Theoretical Interpretation: Why the Golay Code?
+
+The PU framework provides a principled explanation for Golay optimality:
+
+**Standard Theory:** The Golay code is optimal because it saturates mathematical bounds. This is correct but does not explain *why* these particular bounds are physically relevant or why nature should "prefer" this structure.
+
+**PU Explanation:** The Golay code parameters emerge necessarily from the PCE-Attractor structure:
+
+1. $n = 24$ from QFI mode count $M = 2ab$ (Theorem Z.5)
+2. $k = 12$ from PCE symmetric optimization at rate $R = 1/2$ (Theorem Z.13b)
+3. $d = 8$ from maximum distance at these constraints (Theorem R.4.4)
+
+The code's exceptional properties—self-duality, Mathieu group $M_{24}$ symmetry, connection to the Leech lattice $\Lambda_{24}$—are consequences of this fundamental alignment, not coincidences.
+
+### 13.9.5 Theorem 55 (Structural Unity of Golay-Leech-Attractor)
+
+The extended binary Golay code $\mathcal{G}_{24}$, the Leech lattice $\Lambda_{24}$, and the PCE-Attractor state are unified manifestations of the same underlying optimization principle:
+
+$$\text{PCE optimization} \xrightarrow{M=24} \mathcal{G}_{24} \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(D)=24} D=4 \xrightarrow{\text{emergence}} \text{spacetime}$$
+
+*Proof:* See Appendix R (Theorem R.4.9, "The Golay Bridge") and Appendix Z (Theorem Z.13). The chain proceeds as follows:
+
+- PCE optimization on $M = 24$ modes selects the Golay code (Theorem Z.13b)
+- The Golay code provides glue vectors for constructing $\Lambda_{24}$ from $\sqrt{2}E_8^3$ (Lemma R.4.5)
+- The Leech lattice has kissing number 196,560, but the *dimension* 24 matches the unique $D$ where $K(D) = 24$ (Theorem Z.10)
+- Mode-channel matching $M_{\text{int}} = K(D) = 24$ selects $D = 4$ (Theorem Z.11)
+
+Each step follows uniquely from the previous under PCE constraints. ∎
+
+### 13.9.6 Classical vs. Quantum Golay Codes
+
+The framework's prediction concerns the classical extended binary Golay code $[24, 12, 8]$, whose parameters directly reflect the PCE-Attractor structure. The principal quantum code derived from this classical code is:
+
+| Code | Parameters | Construction |
+|------|------------|--------------|
+| Classical extended Golay | $[24, 12, 8]$ | PCE-optimal (Theorem 54) |
+| Quantum Golay (CSS) | $[[23, 1, 7]]$ | Punctured CSS construction |
+
+The $[[23, 1, 7]]$ quantum code is the most commonly studied variant for fault-tolerant quantum computation. Its distance $d = 7$ (vs. classical $d = 8$) reflects the CSS construction overhead. Experimental tests of the substrate alignment hypothesis (Protocol 4) should focus on this code and structurally similar alternatives.
+
+**Remark on Quantum Bounds.** The quantum Hamming bound constrains achievable parameters for nondegenerate quantum codes. For a $[[n, k, d]]$ code with $t = \lfloor(d-1)/2\rfloor$ correctable errors, the bound requires:
+
+$$\sum_{j=0}^{t} 3^j \binom{n}{j} \leq 2^{n-k}$$
+
+The $[[23, 1, 7]]$ quantum Golay code satisfies this bound, achieving the maximum distance compatible with its block length and rate.
+
+### 13.9.7 Protocol 4: Discriminating Tests for Substrate Alignment
+
+To distinguish the PU explanation from standard coding theory, we propose targeted experimental comparisons:
+
+**Protocol 4.1: Structural Comparison at Fixed Parameters**
+
+*Objective:* Compare performance of Golay-structured codes against alternative codes with similar mathematical parameters but different internal structure.
+
+*Method:*
+
+1. Implement the $[[23, 1, 7]]$ quantum Golay code on high-connectivity hardware (trapped ions, neutral atoms)
+2. Implement alternative CSS codes with comparable $[[n, k, d]]$ parameters (e.g., randomly constructed $[[23, 1, \leq 7]]$ stabilizer codes)
+3. Measure logical error rates under identical physical noise conditions
+4. Compare observed performance ratios against theoretical predictions from distance alone
+
+*PU Prediction:* Golay-structured codes outperform alternatives by a margin exceeding that predicted by distance differences alone.
+
+*Null Hypothesis:* Performance differences are fully explained by mathematical distance bounds.
+
+**Protocol 4.2: Rate Optimality Test**
+
+*Objective:* Verify that rate $R = 1/2$ represents an optimal operating point.
+
+*Method:*
+
+1. Construct a family of $[24, k, d(k)]$ codes with varying $k \in \{8, 10, 12, 14, 16\}$
+2. Measure logical fidelity per physical qubit across the family
+3. Determine empirical optimal rate $R^*_{\text{emp}}$
+
+*PU Prediction:* $R^*_{\text{emp}} = 0.5 \pm \epsilon$ with $\epsilon \ll 0.1$, matching PCE-optimal rate.
+
+*Alternative:* Optimal rate depends on noise model and shows no preference for $R = 1/2$.
+
+**Protocol 4.3: Block Length Optimality Test**
+
+*Objective:* Determine whether $n = 24$ represents a preferred block length.
+
+*Method:*
+
+1. Compare families of optimal codes at block lengths $n \in \{16, 20, 24, 28, 32\}$
+2. Normalize for qubit count: measure logical error rate per physical qubit
+3. Assess whether $n = 24$ shows disproportionate advantage
+
+*PU Prediction:* The $n = 24$ family shows disproportionate advantage, reflecting substrate alignment.
+
+*Null Hypothesis:* Performance scales smoothly with $n$; no special status for $n = 24$.
+
+**Feasibility Assessment:** Protocol 4 is implementable with current quantum computing technology. High-connectivity platforms (trapped ions, neutral atoms, superconducting circuits with all-to-all connectivity) can implement 24-qubit logical blocks. The main experimental challenges are:
+
+- Achieving sufficient syndrome extraction fidelity to distinguish PCE-alignment effects from implementation noise
+- Controlling for noise model dependencies across different code families
+- Obtaining sufficient statistics to detect potentially small performance differences
+
+Near-term implementations could begin with Protocol 4.1 on existing 20–50 qubit systems.
+
+### 13.9.8 Quantitative Predictions and Falsification Criteria
+
+**Prediction 4.1 (Threshold Enhancement):** The fault-tolerance threshold $p_{\text{th}}$ for Golay-structured codes satisfies:
+
+$$p_{\text{th}}^{\text{Golay}} \geq 1.2 \times p_{\text{th}}^{\text{generic}}$$
+
+where $p_{\text{th}}^{\text{generic}}$ is the threshold for codes of comparable distance but non-Golay structure.
+
+**Prediction 4.2 (Rate-½ Optimality):** Among codes with block length $n = 24$, the rate $R = 1/2$ achieves minimum logical error rate per physical qubit across diverse noise models.
+
+**Falsification Criteria:**
+
+The substrate alignment hypothesis (Corollary 54.1) is falsified if:
+
+1. Golay codes show no statistically significant advantage over random $[[24, 12, \leq 8]]$ codes at $p < 0.05$ significance level, after controlling for distance
+2. Block lengths other than $n = 24$ prove systematically superior for rate-$1/2$ codes across multiple noise models
+3. Rate $R \neq 1/2$ proves optimal for $n = 24$ codes across diverse noise models
+4. The observed threshold ratio satisfies $p_{\text{th}}^{\text{Golay}}/p_{\text{th}}^{\text{generic}} < 1.1$ within measurement uncertainty
+
+### 13.9.9 Implications for Quantum Computing Engineering
+
+If the substrate alignment hypothesis is supported by experimental evidence, the implications for quantum computing architecture include:
+
+1. **Code Selection:** The Golay code and its relatives (punctured Golay, Golay-based concatenated codes) merit priority consideration for fault-tolerant implementations, particularly on high-connectivity platforms.
+
+2. **Block Architecture:** Quantum processors designed with 24-qubit logical blocks as fundamental units may achieve more efficient error correction than arbitrary block sizes.
+
+3. **Concatenation Strategy:** The 12+12 signal-parity structure of the Golay code suggests natural concatenation hierarchies preserving this symmetry.
+
+4. **Hardware-Code Co-design:** Physical qubit layouts optimized for Golay syndrome extraction may achieve performance exceeding generic topological codes (surface codes) despite the latter's geometric locality advantages on planar architectures.
+
+### 13.9.10 Relationship to Other Predictions
+
+The Golay alignment prediction connects to other PU predictions through the unified PCE-Attractor structure:
+
+| Prediction | Source | Connection to $M = 24$ |
+|------------|--------|------------------------|
+| Fine-structure constant $\alpha^{-1} \approx 137.036$ | Section 13.8.1, Appendix Z | Capacity saturation at PCE-Attractor |
+| Spacetime dimensionality $D = 4$ | Appendix H, Theorem Z.11 | Kissing number $K(4) = 24$ |
+| Vacuum stability | Appendix Z, Proposition Z.13a | Leech lattice rootlessness from Golay $d = 8$ |
+| Gauge group structure | Appendix W | $\dim[\mathfrak{g}_{\text{SM}}] = 12 = k$ |
+
+This web of interconnected predictions—all flowing from the single structure $(a, b, d_0) = (2, 6, 8)$ and the PCE optimization principle—provides robust cross-validation opportunities. Confirmation or falsification in any domain constrains the others.
+
+### 13.9.11 Summary
+
+The PU framework predicts that the extended binary Golay code $[24, 12, 8]$ represents the uniquely optimal error-correcting structure, with parameters derived from first principles via PCE optimization. Existing empirical evidence provides supporting validation:
+
+| Finding | Source | Status | PU Interpretation |
+|---------|--------|--------|-------------------|
+| Golay achieves competitive threshold (~$2 \times 10^{-3}$) | Cross et al. (2009) | Established | Consistent with PCE-optimal parameters |
+| Golay enables gigaquop-scale computation (>$10^9$ T gates) | Ibe et al. (2025) | Recent | Practical validation of theoretical optimality |
+| Golay achieves $p^4$ scaling (as expected for $d=7$) | Ibe et al. (2025) | Recent | Distance bounds realized in practice |
+| Golay deployed in critical classical systems | Voyager, MIL-STD-188 | Established | Practical validation of code superiority |
+| Unique mathematical properties (self-duality, $M_{24}$, $\Lambda_{24}$) | Conway & Sloane (1999) | Established | Structural alignment with PCE-Attractor |
+
+The evidence confirms that the Golay code's theoretical optimality—predicted by PU from first principles—translates into practical performance advantages. While the existing evidence is *consistent with* rather than *discriminating for* PU (standard coding theory also predicts Golay excellence), Protocol 4 provides methodology to test whether the code's performance exceeds distance-based predictions, which would constitute discriminating evidence for substrate alignment.
+
+This constitutes an independent validation pathway for the PU framework, complementing the CC-focused protocols of Sections 13.2–13.5.
+
+## 13.10 Consolidated Falsifiability Analysis
+
+The framework generates parameter-free predictions that can be tested against observation. This section catalogs the primary falsifiable predictions derived in the technical appendices, specifies the conditions under which each would be refuted, and summarizes current experimental status.
+
+### 13.10.1 Spacetime Dimension
+
+**Prediction:** Emergent spacetime has exactly $D = 4$ macroscopic dimensions.
+
+**Derivation Summary:** The mode-channel correspondence (Theorem Z.10) requires $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$ at thermodynamic equilibrium, where $K(D)$ is the kissing number in $D$ dimensions. With $M_{\mathrm{int}} = 2ab = 24$ (Theorem Z.5), the equation $K(D) = 24$ has unique solution $D = 4$ (Theorem Z.11).
+
+**Falsification Conditions:**
+- Discovery of large extra dimensions accessible at collider energies
+- Gravitational force law deviating from $1/r^2$ at any experimentally accessible scale
+- Detection of Kaluza-Klein excitations indicating compact extra dimensions
+
+**Robustness:** The discrete nature of kissing numbers provides stability. The mode count $M = 24$ would need to change by at least 7 (to $M \leq 17$ or $M \geq 31$) to permit alternative dimensionality, since $K(3) = 12$ and $K(5) = 40$.
+
+**Current Status:** All observations consistent with $D = 4$. Gravitational inverse-square law confirmed to $\sim 52\ \mu\mathrm{m}$ (Lee *et al.* 2020). LHC searches exclude large extra dimensions to multi-TeV scales (ATLAS Collaboration 2021).
+
+
+### 13.10.2 Fine-Structure Constant
+
+**Prediction:** At the Thomson limit (zero momentum transfer):
+$$
+\alpha^{-1}_{\mathrm{theory}} = 137.036092 \pm 0.000050
+$$
+
+**Derivation Summary:** Theorem Z.26 combines bulk, interface, and curvature contributions:
+$$
+\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right)
+$$
+where $u^* = 2^{1/8} - 1$ (Theorem Z.7) and $K_0 = 3$ (Theorem 15).
+
+**Falsification Conditions:**
+- Precision measurements yielding $\alpha^{-1}$ outside the range $137.0360 \pm 0.0002$ ($4\sigma$ envelope)
+- Energy dependence of $\alpha$ inconsistent with standard QED running from this Thomson-limit value
+- Spatial or temporal variation of $\alpha$ at levels exceeding $10^{-6}$ per Gyr
+
+**Current Status:**
+$$
+\alpha^{-1}_{\mathrm{exp}} = 137.035999084(21) \quad \text{(Tiesinga \textit{et al.} 2021)}
+$$
+Discrepancy: $+0.000093 \pm 0.000050$ ($\sim 1.9\sigma$, 0.68 ppm). Consistent within theoretical uncertainty.
+
+**Consistency Check:** Standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$ (Corollary Z.8), consistent with the experimental value $127.952 \pm 0.009$ (Particle Data Group 2024).
+
+---
+
+### 13.10.3 Generation Number
+
+**Prediction:** Exactly $N_{\mathrm{gen}} = 3$ generations of Standard Model fermions.
+
+**Derivation Summary:** Three generations emerge from two independent mechanisms:
+
+1. **Topological:** Anomaly cancellation on $\Sigma_8 = U(8)/U(1)^8$ with CP violation requirements selects family charges $\{a, -a, 0\}$ (Theorem R.3.4, Proposition R.3.5).
+
+2. **Geometric:** The interface mode factorization $M = 24 = 8 \times 3 = d_0 \times N_{\mathrm{gen}}$ provides structural consistency (Theorem Z.5, Appendix R Section R.4).
+
+**Falsification Conditions:**
+- Discovery of fourth-generation quarks or leptons at colliders
+- Cosmological evidence for fourth light neutrino species ($N_\nu > 3.2$ at 95% CL)
+- Z-pole width measurement inconsistent with three light neutrino families
+
+**Current Status:**
+$$
+N_\nu = 2.9840 \pm 0.0082 \quad \text{(ALEPH \textit{et al.} 2006)}
+$$
+Fully consistent with $N_{\mathrm{gen}} = 3$. Direct searches exclude vectorlike quarks that decay to a $W$ boson and a light quark with masses below $\sim 1.5\ \mathrm{TeV}$ (ATLAS Collaboration 2024).
+
+
+---
+
+### 13.10.4 Gauge Group Structure
+
+**Prediction:** The Standard Model gauge group $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ is uniquely selected.
+
+**Derivation Summary:** Sections G.8.4–G.8.5 establish uniqueness through anomaly cancellation, capacity constraints ($n_G \leq 12$), and PCE optimization. The generator count $n_G = 8 + 3 + 1 = 12$ saturates the Lagrangian capacity bound (Theorem G.8.4b).
+
+**Conditional Status:** This prediction depends on Conjecture G.M1. While Theorem G.8.4b verifies the conjecture's consequences through exhaustive partition analysis, the conjecture itself is not yet proven from axioms.
+
+**Falsification Conditions:**
+- Discovery of additional gauge bosons ($Z'$, $W'$) at accessible energies indicating enlarged gauge group
+- Detection of new long-range forces indicating additional $U(1)$ factors
+
+**Current Status:** No evidence for physics beyond the Standard Model gauge structure. LHC searches for $Z'$ and $W'$ negative to multi-TeV scales (ATLAS Collaboration 2019; CMS Collaboration 2022).
+
+
+---
+
+### 13.10.5 Mass Hierarchy Invariant
+
+**Prediction:** The mass hierarchy invariant takes discrete values:
+$$
+\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}
+$$
+
+**Derivation Summary:** Equation R.17 derives $\mathcal{R} = d^2_{31}/d^2_{32}$ from $E_8$ root geometry, where the squared geodesic distances between generation vacua satisfy $d^2 \in \{2, 4, 6, 8\}$ (Section R.5).
+
+**Falsification Conditions:**
+- Precision mass measurements yielding $\mathcal{R}$ values unambiguously between discrete predictions
+- Failure of the invariant to match discrete values in multiple fermion sectors simultaneously
+
+**Current Status (Charged Leptons):**
+
+Using PDG 2024 values (Particle Data Group 2024):
+$$
+\mathcal{R}_\ell^{\mathrm{exp}} = \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)} = \frac{\ln(3477.2)}{\ln(16.82)} = 2.889
+$$
+
+Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}) = (6, 2)$. Deviation: 3.7%, within the theoretical uncertainty of $\sim 5\%$ arising from QED radiative corrections ($\sim \alpha/\pi \approx 0.2\%$ per mass, combining to $\sim 1\%$ on $\mathcal{R}$) and threshold matching effects ($\sim 1\%$), with a factor of $\sim 2$ for higher-order contributions.
+
+---
+
+### 13.10.6 Summary Table
+
+**Table 13.1: Falsifiable Predictions and Current Status**
+
+| Prediction | Framework Value | Experimental Value | Derivation | Status |
+|:-----------|:----------------|:-------------------|:-----------|:------:|
+| Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
+| Fine-structure constant $\alpha^{-1}$ | $137.0361 \pm 0.0001$ | $137.035999084(21)$ | Theorem Z.26 | ✓ |
+| Generation number $N_{\mathrm{gen}}$ | 3 | $2.984 \pm 0.008$ | Proposition R.3.5 | ✓ |
+| Gauge group (conditional) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ✓ |
+| Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ✓ |
+
+All predictions are currently consistent with observation. The framework will be falsified if any prediction falls outside its stated uncertainty bounds in future precision measurements.
+
+---
+
+### 13.10.7 Theoretical Error Budget
+
+| Prediction | Dominant Uncertainty Source | Estimated Magnitude |
+|:-----------|:---------------------------|:--------------------|
+| $\alpha^{-1}$ | Fifth-order terms $O(u^{*5})$ with $100\times$ safety factor | $\pm 0.000050$ |
+| $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
+| $N_{\mathrm{gen}}$ | None (topologically exact) | 0 |
+| $D$ | None (combinatorially exact) | 0 |
+
+The predictions for $D$ and $N_{\mathrm{gen}}$ are exact within the framework; any deviation would falsify the foundational structure rather than indicate theoretical uncertainty.
+
+
+

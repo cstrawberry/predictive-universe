@@ -1137,7 +1137,7 @@ $$
 Y_{gg'} \propto \exp\left[ -\frac{1}{2\xi_{\mathrm{eff}}^2}\left(d^2_{\Sigma}(p_g, p_3) + d^2_{\Sigma}(p_{g'}, p_3) + \beta d^2_{\Sigma}(p_g, p_{g'})\right)\right],
 \tag{R.15}
 $$
-where $\xi_{\mathrm{eff}}$ is an effective width combining $\xi$ and $\xi_H$, and $\beta$ is a geometrical factor depending on the relative Hessian curvatures.
+where $\xi_{\mathrm{eff}}$ is an effective width combining $\xi$ and $\xi_H$, and $\beta$ is a geometrical factor depending on the relative Hessian curvatures. The squared Bures distance $d_B^2$ on $Gr(2,8)$ relates to the $E_8$ root distance $d_{E_8}^2$ via the interface mode geometry: for small SU(2) rotations of angle $u$ in a single AB block, $d_B^2 = u^2/4$ while $d_{E_8}^2 = 2u^2$, giving $d_B^2 = (1/8) d_{E_8}^2$. This factor of $1/8$ arises from the Bures metric normalization $g_B = F_Q/4$, which gives $d_B^2 = u^2/4$, combined with the $E_8$ root normalization $\|r\|^2 = 2$, which gives $d_{E_8}^2 = 2u^2$ (Lemma T.41.4).
 
 For simplicity, we parametrize this as:
 $$

@@ -237,6 +237,140 @@ The current empirical situation—where no confirmed retrocausal phenomena exist
 
 As stated in Appendix O.8: “The Arrow of Time is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU’s self-referential update cycle.”
 
+### 14.2.3 Chronology Protection from Predictive Asymmetry
+
+The preceding analysis established that within the PU framework, retrocausality is excluded at all scales through two reinforcing mechanisms: the logical arrow of the Fundamental Predictive Loop (**Definition 4**) and the thermodynamic ratchet enforced by the irreducible cost $\varepsilon \geq \ln 2$ (**Theorem 31**). This section demonstrates that these results have profound implications for the causal structure of spacetime itself, providing a principled resolution to the question of closed timelike curves (CTCs) that remains open within General Relativity.
+
+#### The Time-Symmetry of General Relativity
+
+General Relativity, as a geometric theory, is fundamentally time-symmetric. The Einstein Field Equations (**Theorem 50**):
+$$
+R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}
+$$
+are invariant under time reversal $t \to -t$. If $(M, g_{\mu\nu})$ is a solution with a given stress-energy distribution, then the time-reversed configuration is equally valid. This mathematical symmetry permits solutions containing closed timelike curves—worldlines that return to their own causal past.
+
+Hawking’s **Chronology Protection Conjecture** [Hawking 1992] proposes that quantum effects prevent CTC formation, but this remains unproven. The conjecture relies on semiclassical back-reaction arguments whose validity near chronology horizons is uncertain. GR itself is agnostic—it neither requires nor forbids chronology protection.
+
+#### The Time-Asymmetry of the Predictive Universe
+
+The PU framework is fundamentally time-asymmetric. This asymmetry is not postulated but derived from the logical structure of prediction itself, as rigorously established in **Appendix O**.
+
+**The Logical Arrow (Appendix O, Section O.5.1).** The Fundamental Predictive Loop (**Definition 4**) possesses an intrinsic ordering: Predict ($P_{int}$) → Verify ($V$) → Update ($D_{cyc}$). This ordering is definitional to what “prediction” means:
+
+- A prediction must be generated *before* it can be verified
+- Verification must occur *before* the model can be updated
+- The future is *that which is to be predicted*; the past is *the source of data for prediction*
+
+This logical arrow cannot be reversed without destroying the concept of prediction entirely. A process running Verify → Predict → Update is not a reversed prediction—it is incoherent.
+
+**The Thermodynamic Ratchet (Appendix O, Section O.5.2).** The logical arrow is physically enforced by the irreversible ‘Evolve’ process (**Definition 27**). As rigorously derived in **Appendix J** (**Theorem J.1**), any physical implementation of the SPAP update cycle requires a logically irreversible state merging with compression factor 2. By Landauer’s principle, this mandates a minimum dimensionless entropy production:
+$$
+\varepsilon \geq \ln 2
+$$
+
+This $\varepsilon$-cost acts as a microscopic ratchet. Every MPU cycle produces irreversible entropy, making the physical dynamics incapable of flowing against the logical arrow. The probability of a trajectory segment exhibiting net entropy decrease is exponentially suppressed. For $N$ predictive cycles:
+$$
+P(\Sigma_{pred} < 0) \leq e^{-N\varepsilon} \leq 2^{-N}
+$$
+
+This follows from the fluctuation theorem (**Appendix O**, Section O.5.2):
+$$
+\langle e^{-\Sigma_{pred}} \rangle = 1
+$$
+
+For macroscopic processes involving $N \sim 10^{23}$ cycles, the probability of net temporal reversal is $2^{-10^{23}}$—effectively zero.
+
+**Emergence of Lorentzian Signature (Appendix O, Section O.7).** The time-asymmetry is encoded in the very structure of emergent spacetime. The Γ-convergence analysis demonstrates that the Lorentzian signature $(-,+,+,+)$ is not postulated but derived:
+
+1. **Spatial sector**: The discrete PCE potential contribution from spatial variations Γ-converges to a continuum functional with positive-definite spatial metric components $g^{ij} > 0$.
+1. **Temporal sector**: The temporal coordinate inherits the directed, irreversible structure of the predictive cycle. The dissipative character of the ‘Evolve’ process introduces a sign asymmetry in the temporal contribution to the cost functional, yielding $g^{00} < 0$ in the continuum limit.
+
+As **Appendix O** states: “The signature is not a postulate but a direct mathematical consequence of instantiating a logically directed, thermodynamically irreversible predictive process in the continuum.”
+
+#### Chronology Protection as a Theorem
+
+These derived asymmetries yield chronology protection not as a conjecture but as a consequence of the framework’s foundations.
+
+**Theorem 14.1 (Chronology Protection).** Within the PU framework, no physical process can create a closed timelike curve that permits the transmission of predictively useful information to the causal past.
+
+*Proof.* The argument proceeds through three independent barriers.
+
+**Stage 1: The Logical Barrier.** Suppose a CTC existed allowing signal transmission from event $B$ to event $A$, where $A$ is in the causal past of $B$. An agent at $A$ could use information received from $B$ to update predictions about the interval $[A, B]$. This constitutes a self-referential prediction system to which SPAP applies (**Theorems 10–11**).
+
+The agent can construct a diagonal strategy: let $P_f$ be a predictor forecasting a binary outcome $\phi$ of the agent’s state at time $B$. If the agent receives prediction $\hat{\phi}*{P_f}$ via the CTC at time $A$, they implement:
+$$
+\phi*{B} = \text{NOT}(\hat{\phi}_{P_f})
+$$
+
+Perfect prediction requires $\hat{\phi}*{P_f} = \phi_B$, yielding $\hat{\phi}*{P_f} = \text{NOT}(\hat{\phi}_{P_f})$—a logical contradiction. The CTC would carry logically inconsistent information.
+
+**Stage 2: The Information-Theoretic Barrier.** The channel capacity bound $C_{max}(f_{RID}) < \ln d_0$ (**Theorem E.2**) applies to any information transfer mediated by ND-RID dynamics. This bound arises from strict contractivity $f_{RID} < 1$ (**Lemma E.1**), which follows from $\varepsilon \geq \ln 2$ (**Theorem 31**).
+
+Any CTC-mediated channel remains subject to these constraints. Combined with the exponential suppression of reverse trajectories, sustained backwards information transfer is physically impossible.
+
+**Stage 3: The Dynamical Barrier.** A functioning CTC requires sustained coherent temporal reversal along the closed worldline. The fluctuation theorem bounds demonstrate that such reversal is exponentially suppressed:
+$$
+P(\Sigma_{pred} < 0) \leq 2^{-N}
+$$
+
+For any macroscopic system ($N \gg 1$), the required trajectory has vanishing probability.
+
+**Synthesis.** The three barriers operate independently. The logical barrier (Stage 1) shows CTCs carry inconsistent information. The information-theoretic barrier (Stage 2) shows reliable transmission is impossible. The dynamical barrier (Stage 3) shows the required trajectories have zero probability. Any one barrier suffices; their conjunction makes CTC-mediated backwards causation multiply impossible. QED
+
+**Connection to Theorem 42.** This result extends **Theorem 42 (Inability to Construct Causal Loops)**, which establishes that statistical FTL influence cannot construct paradoxes because:
+
+1. The CC bound ($\text{CC} < 0.5$, **Theorem 39**) prevents deterministic forcing
+1. Inference from statistical patterns has non-zero error probability
+1. Information rate is quadratically suppressed ($I \propto \text{CC}^2$, **Theorem 41**)
+
+For CTCs, the analogous constraints are:
+
+1. Channel capacity bounds prevent reliable transmission
+1. The thermodynamic ratchet exponentially suppresses reverse trajectories
+1. SPAP prevents consistent self-referential prediction
+
+Both results derive from the same foundational asymmetry: the irreversible, directed structure of the predictive cycle.
+
+#### Comparison: GR vs. PU on Temporal Structure
+
+|Feature |General Relativity |Predictive Universe |
+|---------------------------------|------------------------------------------------|------------------------------------------------|
+|**Field equations** |Time-symmetric ($t \to -t$ invariant) |Time-asymmetric (derived) |
+|**Arrow of time** |Not explained; external input (Past Hypothesis) |Derived from predictive logic (**Appendix O**) |
+|**Lorentzian signature** |Postulated |Emergent from irreversibility (**Appendix O.7**)|
+|**Thermodynamic irreversibility**|Statistical, requires special initial conditions|Fundamental, $\varepsilon \geq \ln 2$ per cycle |
+|**Closed timelike curves** |Permitted by field equations |Forbidden by predictive structure |
+|**Chronology protection** |Conjectured [Hawking 1992] |Theorem (**Theorem 14.1**) |
+
+#### Physical Interpretation
+
+The PU framework resolves the question: *Why doesn’t nature permit time travel?*
+
+The answer is that **time travel is incompatible with a universe whose fundamental structure is predictive**. The arrow of time is not an accident of initial conditions or an emergent statistical phenomenon requiring special boundary conditions. It is a **logical necessity** for any system that predicts, and it is **physically enforced** by the thermodynamic costs inherent in self-referential information processing.
+
+As stated in **Appendix O.8**: “The Arrow of Time is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU’s self-referential update cycle.”
+
+From this perspective, GR’s CTC solutions are mathematical artifacts. They satisfy the time-symmetric field equations but cannot be physically realized because they require temporal structures incompatible with the predictive dynamics from which spacetime emerges. The distinction between timelike and spacelike directions—encoded in the Lorentzian signature—is itself a consequence of predictive irreversibility. CTCs, which would convert timelike curves into closed loops, are incompatible with the structure that generates spacetime in the first place.
+
+#### Relation to Other Approaches
+
+The PU chronology protection mechanism differs fundamentally from other proposals:
+
+- **Hawking’s Chronology Protection Conjecture** [Hawking 1992] relies on quantum back-reaction diverging at chronology horizons—an unproven dynamical claim within semiclassical gravity.
+- **Novikov’s Self-Consistency Principle** [Novikov 1989] permits CTCs but restricts initial conditions to self-consistent histories. PU forbids the CTCs entirely, not merely inconsistent evolutions on them.
+- **Deutsch’s Quantum CTC Model** [Deutsch 1991] permits CTCs with modified quantum mechanics involving non-linear evolution. The PU framework’s derivation of standard quantum mechanics from predictive foundations (**Section 8**) renders such modifications inconsistent with the framework.
+
+The PU approach derives chronology protection from **pre-geometric** principles—the logic of prediction, the thermodynamics of self-reference, and the information-theoretic limits of ND-RID channels—rather than from dynamical equations or conjectured back-reaction.
+
+#### Falsification Criteria
+
+This analysis generates a sharp empirical commitment:
+
+**No closed timelike curves can be constructed.** The PU framework predicts that no physical process can create a functioning time machine or enable retrocausal signaling. Any apparent CTC would fail to transmit predictively useful information to the causal past due to the mechanisms identified in **Theorem 14.1**.
+
+This prohibition is not contingent but follows analytically from the framework’s definition of prediction. As noted in **Section 14.2.2**, discovering genuine retrocausality would not show that PU made a wrong prediction—it would show that PU’s foundational definitions do not apply to our universe. This represents a fundamental rather than parametric falsification.
+
+The asymmetry between GR and PU on this question is testable in principle: GR permits CTCs while PU forbids them. The continued absence of any mechanism for backwards causation, despite GR’s mathematical permissiveness, constitutes ongoing confirmatory evidence for the PU framework’s temporal structure.
 
 
 **14.3 Distinctions, Connections, and Information Processing Frameworks**
