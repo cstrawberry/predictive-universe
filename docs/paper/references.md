@@ -48,6 +48,7 @@
 *   Busch, P. (2003). Quantum States and Generalized Observables: A Simple Proof of Gleason's Theorem. *Physical Review Letters*, *91*(12), 120403. DOI: 10.1103/PhysRevLett.91.120403
 *   Buttazzo, D., Degrassi, G., Giardino, P. P., Giudice, G. F., Sala, F., Salvio, A., & Strumia, A. (2013). Investigating the near-criticality of the Higgs boson. *Journal of High Energy Physics*, *2013*(12), 089. DOI: 10.1007/JHEP12(2013)089 
 *   Bösch, H., Steinkamp, F., & Boller, E. (2006). Examining psychokinesis: The interaction of human intention with random number generators—A meta-analysis. *Psychological Bulletin*, *132*(4), 497-523.
+*   Cabibbo, N. (1963). Unitary Symmetry and Leptonic Decays. *Physical Review Letters*, *10*(12), 531–533. DOI: 10.1103/PhysRevLett.10.531
 *   Callan, C. G., Jr., & Coleman, S. (1977). The fate of the false vacuum II: First quantum corrections. *Physical Review D*, *16*(6), 1762–1768. DOI: 10.1103/PhysRevD.16.1762
 *   Cameron, P.J. & Van Lint, J.H. (1991). *Designs, Graphs, Codes and their Links*. Cambridge University Press.
 *   Carlen, E. A., Frank, R. L., & Lieb, E. H. (2018). Inequalities for quantum divergences and the Audenaert–Datta conjecture. *Journal of Physics A: Mathematical and Theoretical*, *51*(48), 483001. DOI: 10.1088/1751-8121/aae536
@@ -153,7 +154,8 @@
 *   Hameroff, S., & Penrose, R. (2014). Consciousness in the universe: A review of the 'Orch OR' theory. *Physics of Life Reviews*, *11*(1), 39–78.
 *   Hameroff, S. R., & Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, *40*(3–4), 453–480. DOI: 10.1016/0378-4754(95)00042-4
 *   Hardy, L. (2001). Quantum Theory From Five Reasonable Axioms. *arXiv*, quant-ph/0101012. DOI: 10.48550/arXiv.quant-ph/0101012
-*   Hastings, M. B. (2007). An area law for one-dimensional quantum systems. *Journal of Statistical Mechanics: Theory and Experiment*, *2007*(08), P08024. DOI: 10.1088/1742-5468/2007/08/P08024 
+*   Hardy, J. C., & Towner, I. S. (2020). Superallowed 0⁺→0⁺ nuclear β decays: 2020 critical survey. *Physical Review C*, *102*, 045501.
+*   Hastings, M. B. (2007). An area law for one-dimensional quantum systems. *Journal of Statistical Mechanics: Theory and Experiment*, *2007*(08), P08024. DOI: 10.1088/1742-5468/2007/08/P08024
 *   Hastings, M. B., & Koma, T. (2006). Spectral gap and exponential decay of correlations. *Communications in Mathematical Physics*, *265*(3), 781–804. DOI: 10.1007/s00220-006-0030-4
 *   Hatcher, A. (2002). *Algebraic Topology*. Cambridge University Press.
 *   Havlin, S., & Ben-Avraham, D. (1987). Diffusion in disordered media. *Advances in Physics*, *36*(6), 695–798. DOI: 10.1080/00018738700101072
@@ -174,11 +176,13 @@
 *   Horowitz, J. M., & Parrondo, J. M. R. (2011). Designing optimal discrete-feedback thermodynamic engines. *New Journal of Physics*, *13*(12), 123019. DOI: 10.1088/1367-2630/13/12/123019
 *   Hore, P. J., & Mouritsen, H. (2016). The radical-pair mechanism of magnetoreception. *Annual Review of Biophysics*, *45*, 299–344.
 *   Hume, D. (1739). *A Treatise of Human Nature*.
+*   Humphreys, J. E. (1972). *Introduction to Lie Algebras and Representation Theory*. Springer.
 *   Hurwitz, A. (1923). Über die Komposition der quadratischen Formen. *Mathematische Annalen*, *88*, 1–25.
 *   Husdal, L. (2016). On effective degrees of freedom in the early Universe. *Galaxies*, *4*(4), 78. DOI: 10.3390/galaxies4040078
 *   Ibe, Y., Hirano, Y., Ozu, Y., Kawakubo, T., & Fujii, K. (2025). Measurement-based fault-tolerant quantum computation on high-connectivity devices: A resource-efficient approach toward early FTQC. arXiv:2510.18652.
 *   Jacobson, T. (1995). Thermodynamics of spacetime: The Einstein equation of state. *Physical Review Letters*, *75*(7), 1260–1263. DOI: 10.1103/PhysRevLett.75.1260
 *   Jacobson, T. (2016). Entanglement equilibrium and the Einstein equation. *Physical Review Letters*, *116*(20), 201101. DOI: 10.1103/PhysRevLett.116.201101 
+*   Jarlskog, C. (1985). Commutator of the Quark Mass Matrices in the Standard Electroweak Model and a Measure of Maximal CP Nonconservation. *Physical Review Letters*, *55*(10), 1039–1042. DOI: 10.1103/PhysRevLett.55.1039
 *   Jech, T. (2003). *Set Theory* (The Third Millennium Edition, revised and expanded). Springer.
 *   Jegerlehner, F. (2008). The running fine-structure constant α(E) via the Adler function. *Nuclear Physics B – Proceedings Supplements*, *181–182*, 135–140. DOI: 10.1016/j.nuclphysbps.2008.09.010
 *   Joos, E., Zeh, H. D., Kiefer, C., Giulini, D. J., Kupsch, J., & Stamatescu, I. O. (2003). *Decoherence and the Appearance of a Classical World in Quantum Theory* (2nd ed.). Springer.
@@ -194,6 +198,7 @@
 *   Kleene, S. C. (1938). On Notation for Ordinal Numbers. *The Journal of Symbolic Logic*, *3*(4), 150–155. DOI: 10.2307/2267778
 *   Kleene, S. C. (1952). *Introduction to Metamathematics*. Amsterdam: North-Holland Publishing Company & Groningen: P. Noordhoff N.V.
 *   Klinkhamer, F. R., & Manton, N. S. (1984). A saddle-point solution in the Weinberg–Salam theory. *Physical Review D*, *30*(10), 2212–2220. DOI: 10.1103/PhysRevD.30.2212
+*   Kobayashi, M., & Maskawa, T. (1973). CP-Violation in the Renormalizable Theory of Weak Interaction. *Progress of Theoretical Physics*, *49*(2), 652–657. DOI: 10.1143/PTP.49.652
 *   Kobayashi, S., & Nomizu, K. (1969). Foundations of Differential Geometry (Vol. II). Wiley-Interscience.
 *   Kolchinsky, A., & Wolpert, D. H. (2018). Semantic information, autonomous agency and non-equilibrium statistical physics. *Interface Focus*, *8*(6), 20180041. DOI: 10.1098/rsfs.2018.0041
 *   Korkine, A., & Zolotareff, G. (1873). Sur les formes quadratiques. *Mathematische Annalen*, *6*, 366–389. DOI: 10.1007/BF01442795
@@ -249,7 +254,7 @@
 *   Mosonyi, M., & Ogawa, T. (2017). Quantum hypothesis testing and the operational interpretation of the quantum Rényi relative entropies. *Communications in Mathematical Physics*, *355*, 373–426. DOI: 10.1007/s00220-017-2960-6
 *   Musin, O. R. (2008). The kissing number in four dimensions. *Annals of Mathematics*, *168*, 1–32.
 *   Nachtergaele, B., & Sims, R. (2010). Lieb–Robinson bounds in quantum many-body physics. In R. Sims & D. Ueltschi (Eds.), *Entropy and the Quantum* (*Contemporary Mathematics*, Vol. 529, pp. 141–176). American Mathematical Society. DOI: 10.1090/conm/529
-*   Nakahara, M. (2003). *Geometry, Topology and Physics* (2nd ed.). Institute of Physics Publishing.
+*   Nakahara, M. (2003). *Geometry, Topology and Physics* (2nd ed.). CRC Press.
 *   Nelson, R. D., Radin, D. I., Shoup, R., & Bancel, P. A. (2002). Correlations of continuous random data with major world events. *Foundations of Physics Letters*, *15*(6), 537–550.
 *   Nicolaescu, L.I. (2011). *An Invitation to Morse Theory*, 2nd ed. Springer.
 *   Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information* (10th Anniversary ed.). Cambridge University Press. DOI: 10.1017/CBO9780511976667
@@ -308,8 +313,10 @@
 *   Schumacher, B., & Westmoreland, M. D. (1997). Sending classical information via noisy quantum channels. *Physical Review A*, *56*(1), 131–138. DOI: 10.1103/PhysRevA.56.131
 *   Searle, J. R. (1992). *The Rediscovery of the Mind*. MIT Press.
 *   Serre, J.-P. (1973). *A Course in Arithmetic*. Springer.
+*   Seng, C.-Y., et al. (2018). Reduced hadronic uncertainty in the determination of V_ud. *Physical Review Letters*, *121*, 241804.
 *   Seth, A. K. (2021). *Being You: A New Science of Consciousness*. Dutton.
 *   Shannon, C. E. (1948). A mathematical theory of communication. *The Bell System Technical Journal*, *27*(3), 379–423. DOI: 10.1002/j.1538-7305.1948.tb01338.x
+*   Simon, B. (1983). Holonomy, the Quantum Adiabatic Theorem, and Berry's Phase. *Physical Review Letters*, *51*(24), 2167–2170. DOI: 10.1103/PhysRevLett.51.2167
 *   Shiraishi, N., Funo, K., & Saito, K. (2016). Speed limit for classical stochastic processes. *Physical Review Letters*, *117*(19), 190601. DOI: 10.1103/PhysRevLett.117.190601
 *   Shirokov, M. E. (2006). The Holevo capacity of infinite dimensional quantum channels and the additivity problem. *Communications in Mathematical Physics*, *262*(1), 137–159. DOI: 10.1007/s00220-005-1494-8
 *   Shirokov, M. E. (2017). Continuity of the von Neumann entropy and its applications in quantum information theory. *Izvestiya: Mathematics*, *81*(5), 1058–1092. DOI: 10.1070/IM8672
