@@ -372,8 +372,25 @@ This prohibition is not contingent but follows analytically from the framework�
 
 The asymmetry between GR and PU on this question is testable in principle: GR permits CTCs while PU forbids them. The continued absence of any mechanism for backwards causation, despite GR’s mathematical permissiveness, constitutes ongoing confirmatory evidence for the PU framework’s temporal structure.
 
+## 14.2.4 Classical Singularities as Framework Non-Features
 
-**14.3 Distinctions, Connections, and Information Processing Frameworks**
+The preceding analysis established that time asymmetry within the PU framework is not an imposed constraint requiring explanation, but a structural feature arising necessarily from the logical ordering of the Fundamental Predictive Loop (Definition 4) and its physical enforcement via the thermodynamic ratchet $\varepsilon \geq \ln 2$ (Theorem 31). Classical singularities—the divergent curvatures and infinite densities predicted by General Relativity's Penrose-Hawking theorems—occupy an analogous status: they are not problems the framework "resolves" but artifacts of continuum physics that lie outside the PU solution space entirely.
+
+The exclusion of singularities follows from the same information-theoretic foundations that yield the arrow of time:
+
+1. **Channel Capacity Bound.** The ND-RID channel capacity is strictly bounded: $C_{\max}(f_{\text{RID}}) < \ln d_0 = \ln 8$ (Theorem E.2). This bound, derived from the irreversibility $\varepsilon \geq \ln 2$ (Theorem 31, proven in Appendix J) via strict contractivity $f_{\text{RID}} < 1$ (Lemma E.1), limits the rate at which information can be reliably transmitted through any interaction channel. A classical singularity, requiring specification of unbounded information to characterize a divergent configuration, would violate this fundamental constraint.
+
+2. **Holographic Information Bound.** The Horizon Entropy Area Law (Theorem 49, derived in Appendix E) establishes that the maximum entropy (information content) associated with any region scales with its boundary area: $S \leq \mathcal{A}/(4G)$. This bound is not a conjecture but a theorem following from ND-RID channel counting and geometric regularity (Theorem 43). A configuration with $\rho \to \infty$ in a finite region would require information content exceeding what the bounding area can support—a logical impossibility within the framework.
+
+3. **Discrete Substrate.** The emergent spacetime of Section 11 arises as a continuum approximation to the underlying MPU network. This approximation has a characteristic breakdown scale: the PCE-optimal MPU spacing $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ (Appendix Q). The "singularity" at $r = 0$ in classical black hole solutions, or the $t = 0$ Big Bang, corresponds to extrapolating the continuum description beyond its domain of validity. The discrete MPU network remains well-defined at these scales; only the smooth manifold approximation fails.
+
+The parallel to thermodynamics is instructive. One does not ask "how does thermodynamics resolve perpetual motion machines?"—the Second Law simply excludes them from the solution space. Similarly, asking "how does PU avoid singularities?" misframes the issue. The capacity bound $C_{\max} < \ln d_0$ and the Area Law $S \leq \mathcal{A}/(4G)$ make unbounded information density incoherent within the framework, just as $\varepsilon \geq \ln 2$ makes time-reversal incoherent. Singularities are not avoided; they are not features of the theory.
+
+What remains to be characterized is the Planck-regime physics that replaces singular behavior in the classical limit. When matter collapses toward what GR would call a singularity, the PU framework predicts that the continuum approximation breaks down at scale $\sim \delta$, information bounds become saturating constraints, and the dynamics transition to a regime governed directly by MPU network physics rather than smooth field equations. The absence of true singularities is a theorem, not a hypothesis.
+
+This dissolution of classical singularities exemplifies a broader pattern: phenomena that appear as "problems" or "paradoxes" in frameworks assuming time-symmetric fundamental laws and continuous substrates often dissolve when the foundational structure incorporates irreversibility and discreteness from the outset. The arrow of time, the black hole information paradox (Appendix K.3), and classical singularities all share this character—they are artifacts of approximations that the PU framework identifies and supersedes.
+
+## 14.3 Distinctions, Connections, and Information Processing Frameworks
 
 The PU framework distinguishes itself while connecting to other approaches:
 

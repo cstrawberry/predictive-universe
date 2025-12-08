@@ -346,4 +346,269 @@ $$
 while the baseline power associated with maintaining the predictive unitary dynamics is encoded in $\langle\hat{H}\rangle$ via Theorem 29 and depends on the specific physical realization. The total power is the sum of baseline and interaction-specific contributions and determines the MPU’s effective stress-energy budget (Appendix B).
 
 
+## 7.5 The Entropy Unification Principle
+
+### 7.5.1 The Central Result
+
+The irreducible entropy cost $\varepsilon = \ln 2$ (Theorem 31) is not merely a thermodynamic constraint on MPU operation—it is the foundational quantity from which all entropic phenomena in the framework derive. This section establishes that Shannon entropy, von Neumann entropy, thermodynamic entropy, and Bekenstein-Hawking entropy are derivationally connected expressions of a single underlying structure, linked through an unbroken chain of theorems.
+
+**Theorem 7.5.1 (Entropy Unification).** *The Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ is derivationally connected to the SPAP entropy $\varepsilon = \ln 2$ through the chain:*
+
+$$
+\boxed{
+\varepsilon = \ln 2 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{max} < \ln d_0 \xrightarrow{\text{Thm E.3}} N_{eff} = \sigma_{link} \mathcal{A} \xrightarrow{\text{Thm E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
+}
+$$
+
+*Each arrow represents a necessary implication. The SPAP entropy of self-referential prediction determines gravitational entropy.*
+
+The remainder of this section constructs and verifies this chain.
+
+---
+
+### 7.5.2 The Derivation Chain
+
+#### Stage 1: SPAP Entropy ($\varepsilon = \ln 2$)
+
+The Self-Referential Paradox of Accurate Prediction (Theorems 10–11) establishes that any finite-memory system engaged in self-referential prediction must implement a logically irreversible operation. The SPAP update cycle operates on a state space with two components: a prediction register $\phi \in \{0,1\}$ and an input register $p \in \{0,1\}$. The update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ maps four input configurations to two output configurations:
+
+$$\{(\phi=0, p=0), (\phi=0, p=1), (\phi=1, p=0), (\phi=1, p=1)\} \to \{(\phi'=0), (\phi'=1)\}$$
+
+This 4-to-2 mapping constitutes a 2-to-1 state merge (Lemma Z.2, Appendix J). The system can no longer distinguish which of two prior states led to the current state. The SPAP entropy of this information loss is:
+
+$$\varepsilon_{SPAP} = \ln 2 \text{ nats}$$
+
+This quantity emerges from the structure of self-referential prediction: counting distinguishable states under finite-memory cyclic operation. It is the irreducible cost of a single binary decision in self-referential processing—the "atom" of entropy.
+
+#### Stage 2: Thermodynamic Entropy (The Landauer Equivalence)
+
+Landauer's principle (1961) establishes the fundamental equivalence between logical and thermodynamic entropy:
+
+> Any physical process that maps $N$ distinguishable input states to $M < N$ distinguishable output states must increase the entropy of the environment by at least $k_B \ln(N/M)$, with equality achievable in the quasi-static limit.
+
+This is not merely a constraint on physical implementations—it is an identity statement: the information-theoretic entropy of state reduction and the thermodynamic entropy of heat production are the same quantity measured in different units. The conversion factor is Boltzmann's constant $k_B$.
+
+For the SPAP 2-to-1 merge:
+
+$$\Delta S_{env} \geq k_B \ln 2$$
+
+The minimum heat dissipation is $Q_{min} = k_B T \ln 2$ per cycle.
+
+**The role of PPI:** The Principle of Physical Instantiation (Definition P.6.2) guarantees that every logical operation within the framework has a physical implementation. Therefore, the Landauer equivalence is not optional but mandatory—SPAP entropy *necessarily* manifests as thermodynamic entropy. This universality is what transforms the Landauer equivalence from a constraint on specific implementations to a framework-wide identity.
+
+**Connection:** $S_{thermo} = k_B \varepsilon$ (Landauer equivalence, universal via PPI)
+
+#### Stage 3: Information-Theoretic Entropy (Contractivity → Capacity Bound)
+
+The thermodynamic cost $\varepsilon > 0$ has immediate information-theoretic consequences. The key insight is that irreversible entropy production implies the dynamical evolution channel cannot preserve perfect distinguishability between states.
+
+The MPU state space has dimension $d_0 = 8$ (Theorem 23), corresponding to $K_0 = 3$ bits of complexity (Theorem 15). This yields $\ln d_0 = \ln 8 = 3\ln 2$ nats of maximum information capacity per MPU.
+
+**Lemma E.1 (Strict Contractivity).** *The averaged dynamical channel $\mathcal{E}_N$ implementing the 'Evolve' process (Definition 27) is strictly contractive in trace distance:*
+
+$$D_{tr}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \leq f_{RID} \cdot D_{tr}(\rho_1, \rho_2)$$
+
+*where the contractivity factor satisfies $f_{RID} < 1$.*
+
+The strict inequality $f_{RID} < 1$ follows from $\varepsilon > 0$: each SPAP cycle dissipates at least $\varepsilon = \ln 2$ nats of entropy to the environment, reducing the mutual information between input and output states.
+
+**Theorem E.2 (Channel Capacity Bound).** *Strict contractivity ($f_{RID} < 1$) implies the classical information capacity of the dynamical channel is strictly bounded:*
+
+$$C_{max}(f_{RID}) < \ln d_0 = 3\ln 2 \approx 2.08 \text{ nats}$$
+
+*Proof.* Suppose $C = \ln d_0$. Then $d_0^n$ messages could be transmitted reliably through $n$ independent uses of the channel. Reliable transmission requires asymptotically perfect distinguishability of outputs. But contractivity gives:
+
+$$D_{tr}(\mathcal{E}_N^{\otimes n}(\rho_k), \mathcal{E}_N^{\otimes n}(\rho_l)) \leq f_{RID}^n \cdot D_{tr}(\rho_k, \rho_l) \leq f_{RID}^n \cdot 2$$
+
+Since $f_{RID} < 1$, we have $f_{RID}^n \to 0$ as $n \to \infty$. This contradicts the requirement for reliable transmission. Therefore $C < \ln d_0$. ∎
+
+**Connection:** $\varepsilon > 0 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{max} < \ln d_0$
+
+#### Stage 4: Quantum Entropy (PPI → Landauer Pointer)
+
+The SPAP entropy $\varepsilon = \ln 2$ must be physically instantiated in a quantum substrate. This instantiation is uniquely constrained.
+
+By the foundational results of Shannon (classical) and von Neumann (quantum), the maximum entropy of a uniformly mixed state on a Hilbert space of dimension $a$ is:
+
+$$S(\rho_{uniform}) = -\text{Tr}\left(\frac{I_a}{a} \ln \frac{I_a}{a}\right) = \ln a \text{ nats}$$
+
+For exact correspondence between logical cost and physical instantiation:
+
+$$\ln a = \varepsilon = \ln 2 \implies a = 2$$
+
+**Theorem Z.1 (Physical Instantiation of Irreducible Cost).** *The physical subsystem that instantiates the SPAP entropy $\varepsilon = \ln 2$ is necessarily a 2-dimensional quantum system. This "Landauer Pointer" is the minimal quantum register whose maximum entropy equals the SPAP cycle cost:*
+
+$$a = e^{\varepsilon} = e^{\ln 2} = 2$$
+
+The PCE-Attractor density operator (Appendix Z, Section Z.2.5) takes the form:
+
+$$\rho_0 = \frac{I_2}{2} \oplus 0_6$$
+
+where $I_2/2$ is the maximally mixed state on the 2-dimensional active subspace and $0_6$ represents the zero operator on the 6-dimensional inactive complement ($b = d_0 - a = 6$). The von Neumann entropy restricted to the active subspace is:
+
+$$S(\rho_0|_{\mathcal{A}}) = -\text{Tr}\left(\frac{I_2}{2} \ln \frac{I_2}{2}\right) = \ln 2 = \varepsilon$$
+
+At the PCE-Attractor, quantum entropy and SPAP entropy coincide exactly.
+
+#### Stage 4a: Error Correction Structure (The Golay Realization)
+
+The active kernel dimension $a = e^{\varepsilon} = 2$ initiates the canonical chain:
+
+$$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{\text{PCE}} [24, 12, 8]$$
+
+The endpoint is the extended binary Golay code with parameters $[n, k, d] = [24, 12, 8]$, which PCE uniquely selects as the optimal error-correcting structure for the $M = 24$ interface modes (Theorem Z.13).
+
+**Remark (Error Correction Interpretation).** The unified entropy admits an equivalent description as *error correction overhead*. The Golay code rate $R = k/n = 12/24 = 1/2$ means half of all interface modes are dedicated to protecting the other half against errors. The parity modes (the $n - k = 12$ redundancy bits) represent entropy in the following sense: they encode information about the signal modes that would be needed to reconstruct them after corruption.
+
+This interpretation complements the channel capacity view:
+- **Channel capacity view**: Entropy measures the information that can be reliably transmitted
+- **Error correction view**: Entropy measures the redundancy required for reliable transmission
+
+Both trace to the same source: the irreversible cost $\varepsilon = \ln 2$ that limits perfect distinguishability.
+
+#### Stage 5: Gravitational Entropy (Channel Counting → Area Law)
+
+The ND-RID interaction channels implementing the 'Evolve' process across MPU boundaries have bounded capacity $C_{max} < \ln d_0$ (Theorem E.2). When many such channels cross a macroscopic boundary, their cumulative capacity determines the total information that can be processed across that boundary.
+
+**Theorem E.3 (Channel Counting).** *Given geometric regularity (Theorem 43—which is itself a necessary consequence of POP/PCE optimization, proven in Appendices C and D), the number of effective independent channels crossing a codimension-1 boundary of area $\mathcal{A}$ scales as:*
+
+$$N_{eff} = \sigma_{link} \cdot \mathcal{A}$$
+
+*where the channel density is:*
+
+$$\sigma_{link} = \frac{\chi}{\eta \delta^2}$$
+
+*Here $\delta$ is the mean MPU spacing in the emergent geometry, $\eta$ is a geometric packing factor of order unity determined by the network topology, and $\chi \leq 1$ accounts for inter-channel correlations that reduce effective independence. For any viable MPU network configuration, Theorem 43 holds necessarily (Theorem C.6), so this channel counting applies universally to physical configurations.*
+
+The total information capacity across the boundary is:
+
+$$I_{boundary} = N_{eff} \times C_{max} = \sigma_{link} \cdot C_{max} \cdot \mathcal{A}$$
+
+This is an area law: boundary information scales with area, not volume.
+
+**Theorem E.5 (Thermodynamic Consistency).** *The coefficient relating entropy to area is uniquely fixed by requiring the Clausius relation $\delta Q = T \, dS$ to hold on all local Rindler horizons in the emergent spacetime.*
+
+The derivation uses kinematic results from quantum field theory on curved spacetime:
+
+1. **Unruh temperature** (kinematic): An observer with proper acceleration corresponding to surface gravity $\kappa$ perceives the vacuum as thermal at $T_U = \hbar \kappa / (2\pi k_B c)$.
+
+2. **Entanglement first law** (kinematic): For small perturbations near a Rindler horizon, $\delta S_{ent} = \delta Q / T_U$.
+
+3. **Area scaling** (from Theorem E.3 and E.4): $\delta S_{ent} = \eta_{ent} \cdot \delta\mathcal{A}$.
+
+**Step 4 (Universality requirement)**: The Clausius relation must hold for all local Rindler horizons (Jacobson 1995). This uniquely determines:
+
+$$\eta_{ent} = \frac{1}{4G}$$
+
+Combining these results yields the Bekenstein-Hawking formula:
+
+$$S_{BH} = \frac{\mathcal{A}}{4G}$$
+
+**Connection to the derivation chain:** The coefficient $1/4G$ decomposes as:
+
+$$\frac{1}{4G} = \sigma_{link} \times C_{max} = \frac{\chi C_{max}}{\eta \delta^2}$$
+
+Solving for $G$:
+
+$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{max}} \quad \text{(Equation E.9)}$$
+
+---
+
+### 7.5.3 The Complete Derivation Chain
+
+**Theorem 7.5.2 (Complete Entropy Unification Chain).** *The derivation proceeds through seven necessary implications:*
+
+| Step | Source | Statement | Role |
+|:-----|:-------|:----------|:-----|
+| 1 | Thm 10–11 | SPAP requires logically irreversible state merge | Establishes SPAP entropy |
+| 2 | Lemma Z.2 | The merge costs $\varepsilon = \ln 2$ nats | Quantifies SPAP entropy |
+| 3 | Landauer | Logical irreversibility ≡ thermodynamic entropy | The equivalence (physical content) |
+| — | PPI (Def P.6.2) | All logical operations are physically instantiated | Guarantees universality |
+| 4 | Lemma E.1 | $\varepsilon > 0 \Rightarrow f_{RID} < 1$ | Contractivity from dissipation |
+| 5 | Thm E.2 | $f_{RID} < 1 \Rightarrow C_{max} < \ln d_0$ | Capacity bound |
+| 6 | Thm E.3 | $N_{eff} = \sigma_{link} \cdot \mathcal{A}$ (area scaling) | Channel counting |
+| 7 | Thm E.5 | Clausius consistency fixes $\sigma_{link} C_{max} = 1/4G$ | Gravitational coefficient |
+
+*Each step is a theorem, lemma, or established physical principle. The chain contains no gaps.*
+
+*Proof.* The detailed derivations are provided in Appendix E (Sections E.2–E.6) and Appendix J. The logical structure is:
+
+$$\text{SPAP} \xrightarrow{\text{Thm 10-11}} \text{irreversibility} \xrightarrow{\text{Z.2}} \varepsilon = \ln 2 \xrightarrow{\text{Landauer}} S_{thermo} = k_B \varepsilon \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{max} < \ln d_0 \xrightarrow{\text{E.3, E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+
+∎
+
+---
+
+### 7.5.4 The Coefficient $1/4G$
+
+The coefficient $\frac{1}{4}$ in the Bekenstein-Hawking formula $S = \mathcal{A}/4L_P^2$ (where $L_P = \sqrt{G\hbar/c^3}$) has a transparent decomposition within the framework:
+
+$$\frac{1}{4G} = \sigma_{link} \times C_{max} = \frac{\chi C_{max}}{\eta \delta^2}$$
+
+The physical content of each factor:
+
+- **$\sigma_{link} = \chi/(\eta\delta^2)$**: The effective density of independent information channels crossing a unit area of horizon. Determined by the MPU network geometry (spacing $\delta$), modified by packing efficiency ($\eta$) and correlation effects ($\chi$).
+
+- **$C_{max}$**: The information capacity per channel, bounded by the logical cost $\varepsilon = \ln 2$ through the contractivity chain.
+
+The coefficient encodes how many bits can be processed across a Planck-area patch of horizon per unit time. The emergence of the exact factor $1/4$ is not coincidental but follows from the thermodynamic consistency requirement (Theorem E.5) combined with the PCE-determined channel density.
+
+**PCE Determination of the MPU Spacing:** The spacing $\delta$ is determined by PCE optimization (Appendix Q). The PCE-optimal channel capacity is:
+
+$$C_{max}^* = \ln(d_0) - \varepsilon = \ln 8 - \ln 2 = 2\ln 2 \quad \text{(Equation E.15)}$$
+
+This capacity ratio $C_{max}/\varepsilon = 2$ determines the instanton action relation $S_{inst} = 2\kappa$ (Proposition T.60).
+
+With PCE-optimal values $\chi^* \approx 1$ and $\eta^* \approx 1$, the scale ratio is:
+
+$$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{max}^*}{\eta^*}} = \sqrt{8\ln 2} \approx 2.355 \quad \text{(Equation Q.18)}$$
+
+This value emerges from balancing competing effects: smaller $\delta$ increases channel density but also increases energy cost per channel, while larger $\delta$ reduces both. The PCE minimum represents optimal predictive efficiency.
+
+---
+
+### 7.5.5 The $\varepsilon$-Duality
+
+The quantity $\varepsilon = \ln 2$ plays two roles that are unified:
+
+| Role | Manifestation |
+|:-----|:--------------|
+| **Thermodynamic cost** | Minimum entropy production per SPAP cycle (Theorem 31) |
+| **Structure generator** | Determines $a = e^{\varepsilon} = 2$, initiating the Golay chain (Theorem Z.1) |
+
+These are not independent facts but two aspects of the same constraint:
+
+$$\varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm 31}} \text{thermodynamic cost} \quad \text{AND} \quad \varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{} M = 24 \xrightarrow{} [24,12,8]$$
+
+The SPAP entropy ($\varepsilon$) and the error-correction structure protecting that processing (Golay code) are mutually determining: the cost fixes the structure, and the structure realizes the cost.
+
+**Corollary (Entropy Increase from Correction Failure).** The per-cycle cost $\varepsilon \geq \ln 2$ (Theorem 31) represents the *minimum* entropy production. Additional entropy increase occurs when errors exceed the correction capacity of the Golay structure. The code corrects up to $\lfloor(d-1)/2\rfloor = 3$ errors per block. When error accumulation exceeds this threshold, information is irretrievably lost, contributing entropy beyond the Landauer minimum.
+
+This provides a two-mechanism picture of entropy increase:
+1. **Microscopic**: The per-cycle cost $\varepsilon$ from logically irreversible state merging
+2. **Mesoscopic**: Correction failure when errors exceed the Golay threshold
+
+Both mechanisms operate continuously; neither alone accounts for all entropy production.
+
+---
+
+### 7.5.6 Connection to Emergent Gravity
+
+The entropy unification chain provides the thermodynamic foundation for deriving Einstein's Field Equations (Section 12). The key steps are:
+
+1. **Area Law (Theorem 49)**: Horizon entropy $S = \mathcal{A}/4G$ follows from the channel capacity chain (Section 7.5.2, Stage 5).
+
+2. **Clausius Relation**: For local Rindler horizons, $\delta Q = T \, dS$ with $T$ the Unruh temperature.
+
+3. **Raychaudhuri Equation**: Relates area change $\delta\mathcal{A}$ to stress-energy flux through the horizon.
+
+4. **Einstein Field Equations**: The unique tensor equation ensuring the Clausius relation holds for all local causal horizons (Theorem 50, Section 12).
+
+The gravitational constant $G$ appearing in the EFE is the same $G$ determined by the entropy coefficient:
+
+$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{max}(f_{RID})} \quad \text{(Equation E.9)}$$
+
+This identification connects the microscopic MPU parameters to macroscopic gravitational dynamics. The emergence of gravity from thermodynamics (Jacobson 1995) is thus grounded in the information-theoretic structure of the predictive substrate.
+
+The full derivation of the Einstein Field Equations from these thermodynamic principles is provided in Section 12.
 
