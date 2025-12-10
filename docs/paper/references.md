@@ -1,5 +1,6 @@
 # References
 
+*   Agostini, M., Benato, G., Detwiler, J. A., Menéndez, J., & Vissani, F. (2023). Toward the discovery of matter creation with neutrinoless ββ decay. *Reviews of Modern Physics*, *95*, 025002. DOI: 10.1103/RevModPhys.95.025002
 *   Aharonov, D., Kitaev, A., & Nisan, N. (1998). Quantum circuits with mixed states. *Proceedings of the Thirtieth Annual ACM Symposium on Theory of Computing*, 20–30.
 *   Aharonov, Y., Bergmann, P. G., & Lebowitz, J. L. (1964). Time Symmetry in the Quantum Process of Measurement. *Physical Review*, *134*(6B), B1410–B1416. DOI: 10.1103/PhysRev.134.B1410
 *   ALEPH, DELPHI, L3, OPAL, and SLD Collaborations (Schael, S., *et al.*) (2006). Precision electroweak measurements on the Z resonance. *Physics Reports*, *427*(5–6), 257–454. DOI: 10.1016/j.physrep.2005.12.006
@@ -17,7 +18,8 @@
 *   ATLAS Collaboration (Aad, G., *et al.*) (2024). Search for pair-produced vectorlike quarks coupling to light quarks in the lepton plus jets final state using 13 TeV pp collisions with the ATLAS detector. *Physical Review D*, *110*, 052009. DOI: 10.1103/PhysRevD.110.052009
 *   Audenaert, K. M. R. (2007). A sharp continuity estimate for the von Neumann entropy. *Journal of Physics A: Mathematical and Theoretical*, *40*(28), 8127–8136. DOI: 10.1088/1751-8113/40/28/S19
 *   Audenaert, K. M. R., & Datta, N. (2015). α–z–Rényi relative entropies. *Journal of Mathematical Physics*, *56*(2), 022202. DOI: 10.1063/1.4906367
-*   Bargmann, V. (1964). Note on Wigner's theorem on symmetry operations. *Journal of Mathematical Physics*, *5*(7), 862–868. DOI: 10.1063/1.1704188 
+*   Baker, H. F. (1905). Alternants and continuous groups. *Proceedings of the London Mathematical Society*, *s2-3*, 24–47.
+*   Bargmann, V. (1964). Note on Wigner's theorem on symmetry operations. *Journal of Mathematical Physics*, *5*(7), 862–868. DOI: 10.1063/1.1704188
 *   Bakry, D., & Émery, M. (1985). Diffusions hypercontractives. In *Séminaire de Probabilités XIX 1983/84* (Lecture Notes in Mathematics, Vol. 1123, pp. 177–206). Springer. DOI: 10.1007/BFb0075847
 *   Baumgartner, B., & Narnhofer, H. (2008). Analysis of quantum semigroups with GKS–Lindblad generators: II. General. *Journal of Physics A: Mathematical and Theoretical*, *41*(39), Article 395303. DOI: 10.1088/1751-8113/41/39/395303
 *   Belavin, A. A., Polyakov, A. M., Schwartz, A. S., & Tyupkin, Y. S. (1975). Pseudoparticle solutions of the Yang–Mills equations. *Physics Letters B*, *59*(1), 85–87. DOI: 10.1016/0370-2693(75)90163-X 
@@ -27,6 +29,7 @@
 *   Bell, J. S. (1964). On the Einstein Podolsky Rosen paradox. *Physics Physique Физика*, *1*(3), 195–200.
 *   Bengtsson, I., & Życzkowski, K. (2006). *Geometry of Quantum States: An Introduction to Quantum Entanglement*. Cambridge University Press.
 *   Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525–532. DOI: 10.1147/rd.176.0525
+*   Berry, M. V. (1984). Quantal phase factors accompanying adiabatic changes. *Proceedings of the Royal Society of London A*, *392*, 45–57.
 *   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853.
 *   Besse, A. L. (1987). *Einstein Manifolds*. Springer.
 *   Bilal, A. (2008). *Lectures on Anomalies*. arXiv:0802.0634 [hep-th].
@@ -45,12 +48,14 @@
 *   Brunetti, R., Dappiaggi, C., Fredenhagen, K., & Zahn, J. (Eds.). (2015). *Advances in Algebraic Quantum Field Theory*. Springer.
 *   Brunetti, R., Fredenhagen, K., & Verch, R. (2003). The generally covariant locality principle: A new paradigm for local quantum physics. *Communications in Mathematical Physics*, *237*(1-2), 31–68. DOI: 10.1007/s00220-003-0805-5
 *   Burkhardt, H., & Pietrzyk, B. (2001). Update of the hadronic contribution to the QED vacuum polarization. *Physics Letters B*, *513*(1–2), 46–52. DOI: 10.1016/S0370-2693(01)00393-8
+*   Bures, D. (1969). An extension of Kakutani's theorem on infinite product measures to the tensor product of semifinite w*-algebras. *Transactions of the American Mathematical Society*, *135*, 199–212.
 *   Busch, P. (2003). Quantum States and Generalized Observables: A Simple Proof of Gleason's Theorem. *Physical Review Letters*, *91*(12), 120403. DOI: 10.1103/PhysRevLett.91.120403
 *   Buttazzo, D., Degrassi, G., Giardino, P. P., Giudice, G. F., Sala, F., Salvio, A., & Strumia, A. (2013). Investigating the near-criticality of the Higgs boson. *Journal of High Energy Physics*, *2013*(12), 089. DOI: 10.1007/JHEP12(2013)089 
 *   Bösch, H., Steinkamp, F., & Boller, E. (2006). Examining psychokinesis: The interaction of human intention with random number generators—A meta-analysis. *Psychological Bulletin*, *132*(4), 497-523.
 *   Cabibbo, N. (1963). Unitary Symmetry and Leptonic Decays. *Physical Review Letters*, *10*(12), 531–533. DOI: 10.1103/PhysRevLett.10.531
 *   Callan, C. G., Jr., & Coleman, S. (1977). The fate of the false vacuum II: First quantum corrections. *Physical Review D*, *16*(6), 1762–1768. DOI: 10.1103/PhysRevD.16.1762
 *   Cameron, P.J. & Van Lint, J.H. (1991). *Designs, Graphs, Codes and their Links*. Cambridge University Press.
+*   Campbell, J. E. (1898). On a law of combination of operators (second paper). *Proceedings of the London Mathematical Society*, *29*, 14–32.
 *   Carlen, E. A., Frank, R. L., & Lieb, E. H. (2018). Inequalities for quantum divergences and the Audenaert–Datta conjecture. *Journal of Physics A: Mathematical and Theoretical*, *51*(48), 483001. DOI: 10.1088/1751-8121/aae536
 *   Cardeña, E. (2018). The experimental evidence for parapsychology: A review. *American Psychologist*, *73*(5), 663–677.
 *   Carroll, S. M. (2001). The cosmological constant. *Living Reviews in Relativity*, *4*(1), 1. DOI: 10.12942/lrr-2001-1
@@ -106,6 +111,7 @@
 *   Dittmann, J. (1999). Explicit formulae for the Bures metric. *Journal of Physics A: Mathematical and General*, *32*, 2663–2670.
 *   D’Onofrio, M., Rummukainen, K., & Tranberg, A. (2014). Sphaleron rate in the minimal Standard Model. *Physical Review Letters*, *113*, 141602. DOI: 10.1103/PhysRevLett.113.141602
 *   Donsker, M. D., & Varadhan, S. R. S. (1975). Asymptotic evaluation of certain Markov process expectations for large time. I. *Communications on Pure and Applied Mathematics*, *28*(1), 1–47. DOI: 10.1002/cpa.3160280102
+*   DUNE Collaboration (Abi, B., *et al.*) (2020). Long-baseline neutrino oscillation physics potential of the DUNE experiment. *European Physical Journal C*, *80*, 978. DOI: 10.1140/epjc/s10052-020-08456-z
 *   Dunne, G. V. (2008). Functional determinants in quantum field theory. *Journal of Physics A: Mathematical and Theoretical*, *41*(30), 304006. DOI: 10.1088/1751-8113/41/30/304006
 *   Durant, F., Morokuma, J., Fields, C., Williams, K., Adams, D. S., & Levin, M. (2017). Long-term, stochastic editing of regenerative anatomy via targeting endogenous bioelectric gradients. *Biophysical Journal*, *112*(10), 2231–2243.
 *   Ellerman, D. (2015). Why delayed choice experiments do not imply retrocausality. *Quantum Studies: Mathematics and Foundations*, *2*(2), 183–199. DOI: 10.1007/s40509-014-0026-2
@@ -157,6 +163,7 @@
 *   Hardy, J. C., & Towner, I. S. (2020). Superallowed 0⁺→0⁺ nuclear β decays: 2020 critical survey. *Physical Review C*, *102*, 045501.
 *   Hastings, M. B. (2007). An area law for one-dimensional quantum systems. *Journal of Statistical Mechanics: Theory and Experiment*, *2007*(08), P08024. DOI: 10.1088/1742-5468/2007/08/P08024
 *   Hastings, M. B., & Koma, T. (2006). Spectral gap and exponential decay of correlations. *Communications in Mathematical Physics*, *265*(3), 781–804. DOI: 10.1007/s00220-006-0030-4
+*   Hausdorff, F. (1906). Die symbolische Exponentialformel in der Gruppentheorie. *Berichte über die Verhandlungen der Sächsischen Akademie der Wissenschaften zu Leipzig*, *58*, 19–48.
 *   Hatcher, A. (2002). *Algebraic Topology*. Cambridge University Press.
 *   Havlin, S., & Ben-Avraham, D. (1987). Diffusion in disordered media. *Advances in Physics*, *36*(6), 695–798. DOI: 10.1080/00018738700101072
 *   Hawking, S. W. (1975). Particle creation by black holes. *Communications in Mathematical Physics*, *43*(3), 199–220. DOI: 10.1007/BF02345020
@@ -179,6 +186,7 @@
 *   Humphreys, J. E. (1972). *Introduction to Lie Algebras and Representation Theory*. Springer.
 *   Hurwitz, A. (1923). Über die Komposition der quadratischen Formen. *Mathematische Annalen*, *88*, 1–25.
 *   Husdal, L. (2016). On effective degrees of freedom in the early Universe. *Galaxies*, *4*(4), 78. DOI: 10.3390/galaxies4040078
+*   Hyper-Kamiokande Collaboration (Abe, K., *et al.*) (2018). Hyper-Kamiokande Design Report. arXiv:1805.04163.
 *   Ibe, Y., Hirano, Y., Ozu, Y., Kawakubo, T., & Fujii, K. (2025). Measurement-based fault-tolerant quantum computation on high-connectivity devices: A resource-efficient approach toward early FTQC. arXiv:2510.18652.
 *   Jacobson, T. (1995). Thermodynamics of spacetime: The Einstein equation of state. *Physical Review Letters*, *75*(7), 1260–1263. DOI: 10.1103/PhysRevLett.75.1260
 *   Jacobson, T. (2016). Entanglement equilibrium and the Einstein equation. *Physical Review Letters*, *116*(20), 201101. DOI: 10.1103/PhysRevLett.116.201101 
@@ -188,6 +196,8 @@
 *   Joos, E., Zeh, H. D., Kiefer, C., Giulini, D. J., Kupsch, J., & Stamatescu, I. O. (2003). *Decoherence and the Appearance of a Classical World in Quantum Theory* (2nd ed.). Springer.
 *   Johnson, E. E. (1991). An efficient Golay codec for MIL-STD-188-141A and FED-STD-1045. Technical Report NMSU-ECE-91-001, Department of Electrical and Computer Engineering, New Mexico State University.
 *   Jost, R. (1957). Eine Bemerkung zum CTP-Theorem. *Helvetica Physica Acta*, *30*, 409–416.
+*   JUNO Collaboration (An, F., *et al.*) (2016). Neutrino Physics with JUNO. *Journal of Physics G*, *43*, 030401. DOI: 10.1088/0954-3899/43/3/030401
+*   JUNO Collaboration (Abusleme, A., *et al.*) (2024). Potential to identify neutrino mass ordering with reactor antineutrinos at JUNO. arXiv:2405.18008.
 *   Kant, I. (1781). *Kritik der reinen Vernunft* (*Critique of Pure Reason*).
 *   Karimi, H., Nutini, J., & Schmidt, M. (2016). Linear convergence of gradient and proximal-gradient methods under the Polyak–Łojasiewicz condition. In A. Appice et al. (Eds.), *Machine Learning and Knowledge Discovery in Databases* (ECML PKDD 2016), Lecture Notes in Computer Science, Vol. 9851, pp. 795–811. Springer. DOI: 10.1007/978-3-319-46128-1_50
 *   Keith, S. (2004). A differentiable structure for metric measure spaces. *Advances in Mathematics*, *183*(2), 271–315. DOI: 10.1016/S0001-8708(03)00089-6
@@ -217,6 +227,7 @@
 *   Leditzky, F., Leung, D., & Smith, G. (2018). Quantum and private capacities of low-noise quantum channels. *Physical Review A*, *97*(3), 032309. DOI: 10.1103/PhysRevA.97.032309
 *   Lee, J. G., Adelberger, E. G., Cook, T. S., Fleischer, S. M., & Heckel, B. R. (2020). New Test of the Gravitational $1/r^2$ Law at Separations down to 52 μm. *Physical Review Letters*, *124*, 101101. DOI: 10.1103/PhysRevLett.124.101101
 *   Leech, J. (1967). Notes on sphere packings. *Canadian Journal of Mathematics*, *19*, 251–267.
+*   LEGEND Collaboration (Abgrall, N., *et al.*) (2021). The Large Enriched Germanium Experiment for Neutrinoless ββ Decay: LEGEND-1000 Preconceptual Design Report. arXiv:2107.11462.
 *   Leifer, M. S., & Pusey, M. F. (2017). Is a time symmetric interpretation of quantum theory possible without retrocausality? *Proceedings of the Royal Society A*, *473*(2202), 20160607. DOI: 10.1098/rspa.2016.0607
 *   Lelli, F., McGaugh, S. S., & Schombert, J. M. (2016). SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves. *The Astronomical Journal*, *152*(6), 157. DOI: 10.3847/0004-6256/152/6/157
 *   Levin, D. A., & Peres, Y. (2017). *Markov Chains and Mixing Times* (2nd ed.). American Mathematical Society.
@@ -239,6 +250,7 @@
 *   Ma, X.-S., Kofler, J., & Zeilinger, A. (2016). Delayed-choice gedanken experiments and their realizations. *Reviews of Modern Physics*, *88*(1), 015005. DOI: 10.1103/RevModPhys.88.015005
 *   MacWilliams, F. J., & Sloane, N. J. A. (1977). *The Theory of Error-Correcting Codes*. North-Holland.
 *   Machacek, M. E., & Vaughn, M. T. (1984). Two-loop renormalization group equations. Nucl. Phys. B 236, 221.
+*   Maki, Z., Nakagawa, M., & Sakata, S. (1962). Remarks on the unified model of elementary particles. *Progress of Theoretical Physics*, *28*, 870–880.
 *   Manton, N. S., & Sutcliffe, P. (2004). *Topological Solitons*. Cambridge University Press (Cambridge Monographs on Mathematical Physics). DOI: 10.1017/CBO9780511617034
 *   Marshall, A. W., Olkin, I., & Arnold, B. C. (2011). *Inequalities: Theory of Majorization and Its Applications* (2nd ed.). Springer. DOI: 10.1007/978-0-387-68276-1
 *   Matsumoto, K. (2002). A new approach to the Cramér-Rao-type bound of the pure-state model. *Journal of Physics A: Mathematical and General*, *35*(13), 3111–3123. DOI: 10.1088/0305-4470/35/13/307
@@ -257,9 +269,12 @@
 *   Nachtergaele, B., & Sims, R. (2010). Lieb–Robinson bounds in quantum many-body physics. In R. Sims & D. Ueltschi (Eds.), *Entropy and the Quantum* (*Contemporary Mathematics*, Vol. 529, pp. 141–176). American Mathematical Society. DOI: 10.1090/conm/529
 *   Nakahara, M. (2003). *Geometry, Topology and Physics* (2nd ed.). CRC Press.
 *   Nelson, R. D., Radin, D. I., Shoup, R., & Bancel, P. A. (2002). Correlations of continuous random data with major world events. *Foundations of Physics Letters*, *15*(6), 537–550.
+*   nEXO Collaboration (Albert, J. B., *et al.*) (2018). Sensitivity and discovery potential of the proposed nEXO experiment to neutrinoless double-β decay. *Physical Review C*, *97*, 065503. DOI: 10.1103/PhysRevC.97.065503
+*   nEXO Collaboration (Adhikari, G., *et al.*) (2022). nEXO: neutrinoless double beta decay search beyond 10²⁸ year half-life sensitivity. *Journal of Physics G*, *49*, 015104. DOI: 10.1088/1361-6471/ac3631
 *   Nicolaescu, L.I. (2011). *An Invitation to Morse Theory*, 2nd ed. Springer.
 *   Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information* (10th Anniversary ed.). Cambridge University Press. DOI: 10.1017/CBO9780511976667
 *   Niemeier, H.-V. (1973). Definite quadratische Formen der Dimension 24 und Diskriminante 1. *Journal of Number Theory*, *5*(2), 142–178. DOI: 10.1016/0022-314X(73)90068-1
+*   NOvA Collaboration (2022). Improved measurement of neutrino oscillation parameters by the NOvA experiment. *Physical Review D*, *106*, 032004.
 *   Novikov, I. D. (1989). An analysis of the operation of a time machine. *Soviet Physics JETP*, *68*(3), 439–443.
 *   Novotny, L., & Hecht, B. (2012). *Principles of Nano-Optics* (2nd ed.). Cambridge University Press.
 *   O’Brien, P. C., & Fleming, T. R. (1979). A multiple testing procedure for clinical trials. *Biometrics*, *35*(3), 549–556. DOI: 10.2307/2530245. 
@@ -287,6 +302,7 @@
 *   Planck Collaboration, Aghanim, N., Akrami, Y., Ashdown, M., et al. (2020). Planck 2018 results. VI. Cosmological parameters. *Astronomy & Astrophysics*, *641*, A6. DOI: 10.1051/0004-6361/201833910
 *   Pless, V. (1968). On the uniqueness of the Golay codes. *Journal of Combinatorial Theory*, *5*(3), 215–228. DOI: 10.1016/S0021-9800(68)80067-5
 *   Polyak, B. T. (1963). Gradient methods for minimizing functionals. *USSR Computational Mathematics and Mathematical Physics*, *3*(4), 864–878. DOI: 10.1016/0041-5553(63)90382-3
+*   Pontecorvo, B. (1957). Mesonium and antimesonium. *Soviet Physics JETP*, *6*, 429.
 *   Post, E. L. (1921). Introduction to a General Theory of Elementary Propositions. *American Journal of Mathematics*, *43*(3), 163–185. DOI: 10.2307/2370324
 *   Pound, R. V., & Rebka, G. A. (1960). Apparent weight of photons. *Physical Review Letters*, *4*(7), 337–341.
 *   Preskill, J. (1998). *Lecture Notes for Physics 229: Quantum Information and Computation*. California Institute of Technology. 
@@ -334,6 +350,7 @@
 *   Temme, K., Pastawski, F., & Kastoryano, M. J. (2014). Hypercontractivity of quasi-free quantum semigroups. *Journal of Physics A: Mathematical and Theoretical*, *47*(40), 405303. DOI: 10.1088/1751-8113/47/40/405303 
 *   Thompson, T. M. (1983). *From Error-Correcting Codes Through Sphere Packings to Simple Groups*. Mathematical Association of America.
 *   Tiesinga, E., Mohr, P. J., Newell, D. B., & Taylor, B. N. (2021). CODATA Recommended Values of the Fundamental Physical Constants: 2018. *Reviews of Modern Physics*, *93*, 025010.
+*   T2K Collaboration (2023). Measurements of neutrino oscillation parameters from the T2K experiment using $3.6 \times 10^{21}$ protons on target. *European Physical Journal C*, *83*, 782.
 *   Tononi, G., & Koch, C. (2015). Consciousness: here, there and everywhere? *Philosophical Transactions of the Royal Society B: Biological Sciences*, *370*(1668), 20140167. DOI: 10.1098/rstb.2014.0167
 *   Tononi, G., Boly, M., Massimini, M., & Koch, C. (2016). Integrated information theory: from consciousness to its physical substrate. *Nature Reviews Neuroscience*, *17*(7), 450–461. DOI: 10.1038/nrn.2016.44
 *   Turing, A. M. (1936). On computable numbers, with an application to the Entscheidungsproblem. *Proceedings of the London Mathematical Society*, s2-42(1), 230–265. DOI: 10.1112/plms/s2-42.1.230
@@ -351,6 +368,7 @@
 *   Watrous, J. (2018). *The Theory of Quantum Information*. Cambridge University Press.
 *   Weisberg, J. M., & Huang, Y. (2016). Relativistic Measurements from Timing the Binary Pulsar PSR B1913+16. *The Astrophysical Journal*, *829*(1), 55. DOI: 10.3847/0004-637X/829/1/55
 *   Weinberg, S. (1972). *Gravitation and Cosmology: Principles and Applications of the General Theory of Relativity*. John Wiley & Sons.
+*   Weinberg, S. (1979). Baryon- and lepton-nonconserving processes. *Physical Review Letters*, *43*, 1566–1570.
 *   Weinberg, S. (1989). The cosmological constant problem. *Reviews of Modern Physics*, *61*(1), 1–23. DOI: 10.1103/RevModPhys.61.1
 *   Weinberg, S. (1996). *The Quantum Theory of Fields, Vol. II: Modern Applications*. Cambridge University Press. DOI (eBook): 10.1017/CBO9781139644174.
 *   Weisberg, J. M., Nice, D. J., & Taylor, J. H. (2010). Timing Measurements of the Relativistic Binary Pulsar PSR B1913+16. *The Astrophysical Journal*, *722*(2), 1030. DOI: 10.1088/0004-637X/722/2/1030
