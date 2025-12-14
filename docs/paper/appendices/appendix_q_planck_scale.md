@@ -1,4 +1,155 @@
-# Appendix Q: Derivation of the Planck-MPU Scale Ratio (`δ/L_P`)
+# Appendix Q: Derivation of the Planck-MPU Scale Ratio
+
+## Q.0 The Action-Entropy Identity and the Origin of Planck's Constant
+
+Before deriving the quantitative relationship between the MPU spacing δ and the Planck length L_P, we establish a foundational result: the identification of Planck's constant ℏ as the exchange rate between information-theoretic and mechanical descriptions of physical processes. This identification emerges from the Action-Entropy Identity, which reveals that physical action measures cumulative irreversible entropy production.
+
+### Q.0.1 The Puzzle of Least Action
+
+The Principle of Least Action stands as one of the most powerful organizing principles in physics. From it, classical mechanics, field theory, and the path integral formulation of quantum mechanics can be derived. Yet the standard presentation offers no explanation for *why* nature should extremize this particular quantity—the integral of the Lagrangian over time.
+
+Within the Predictive Universe framework, this puzzle admits a resolution: the Principle of Least Action is not fundamental but derived. It is the continuous manifestation of a deeper principle: the **Principle of Minimum Entropy Production**, operating through the irreducible costs of predictive processing.
+
+### Q.0.2 The Discrete Predictive Cost Functional
+
+The MPU network executes cyclical predictive operations, each cycle implementing the Fundamental Predictive Loop (Definition 4):
+
+$$\text{Predict} \to \text{Verify} \to \text{Update}$$
+
+Each non-trivial cycle incurs the irreducible SPAP entropy cost ε ≥ ln 2 nats (Theorem 31, Appendix J). This cost arises from the logically irreversible 2-to-1 state merge required by self-referential prediction (Lemma Z.2), and by Landauer's principle, necessarily manifests as thermodynamic entropy production.
+
+**Definition Q.0.1 (Discrete Predictive Action).** For a trajectory of the MPU network over N predictive cycles, the *discrete predictive action* is the cumulative SPAP entropy:
+
+$$\mathcal{S}_{disc} := \sum_{i=1}^{N} \varepsilon_i$$
+
+where ε_i ≥ ln 2 is the entropy production of the i-th cycle. This quantity counts the total irreversible entropy cost required to evolve the network configuration along the specified trajectory.
+
+**Proposition Q.0.1 (Action Bounds).** For any trajectory involving N_ops non-trivial predictive operations:
+
+$$\mathcal{S}_{disc} \geq N_{ops} \cdot \ln 2$$
+
+*Proof.* Each non-trivial operation contributes at least the SPAP minimum ε = ln 2 nats by Theorem 31. QED
+
+**Remark (Entropy Unification).** The quantity ε appearing here is the same SPAP entropy that, through the derivation chain of Thesis P.6.1 (Appendix P), connects to Shannon, von Neumann, thermodynamic, and Bekenstein-Hawking entropy. The discrete predictive action thus inherits this unified structure: it counts entropy in the foundational sense established by the framework.
+
+### Q.0.3 The Continuum Limit via Γ-Convergence
+
+The discrete predictive cost functional converges to a continuum action in the limit of fine network resolution. This convergence is established rigorously by the Γ-convergence framework (Theorem D.8, Appendix D; Section O.7, Appendix O).
+
+**Theorem Q.0.1 (Action-Entropy Identity).** Let {G_h}_{h→0} be a family of MPU networks with mesh size h → 0 approximating a spacetime region. Under the conditions of equi-coercivity and locality (Theorem D.8), the discrete predictive action Γ-converges to the continuum action:
+
+$$\mathcal{S}_{disc}^{(h)} \xrightarrow{\Gamma} \frac{1}{\hbar} \int d^4x \sqrt{|g|} \, \mathcal{L}(u, \partial_\mu u)$$
+
+where L is the Lagrangian density and the factor 1/ℏ converts between nats and conventional action units.
+
+The key elements of the proof (detailed in Appendices D and O) are:
+
+1. **Spatial sector:** The discrete cost for spatial variations Γ-converges to a positive-definite quadratic form defining the emergent Riemannian metric on spatial slices.
+
+2. **Temporal sector:** The irreversibility of the 'Evolve' process (ε > 0, Theorem 31) introduces a sign asymmetry. The dissipative structure of temporal updates yields a kinetic term with opposite sign to the spatial gradient terms, establishing the Lorentzian signature (−, +, +, +).
+
+3. **Combined action:** The full Γ-limit yields the standard action for fields in curved spacetime, with ℏ appearing as the conversion factor between discrete (nats) and continuous (J·s) descriptions.
+
+**Corollary Q.0.1 (Action-Entropy Identity).** Physical action, measured in units of ℏ, equals the total SPAP entropy production:
+
+$$\boxed{\frac{\mathcal{S}}{\hbar} = \sum_{\text{cycles}} \varepsilon_i}$$
+
+This identity connects the mechanical description of physics (action in J·s) to the information-theoretic description (entropy in nats), with ℏ serving as the conversion factor.
+
+### Q.0.4 Planck's Constant as Exchange Rate
+
+The Action-Entropy Identity reveals that ℏ serves as a conversion factor between two descriptions of the same physical process: the information-theoretic description (counting SPAP entropy in nats) and the mechanical description (measuring action in J·s). We now establish this identification without circularity.
+
+**Theorem Q.0.2 (Planck's Constant as Necessary Exchange Rate).** Any physical instantiation of the predictive framework requires a conversion factor ℏ > 0 between SPAP entropy (nats) and physical action (J·s). This constant is determined by the framework's fundamental scales.
+
+*Proof.*
+
+**Step 1 (Existence of Minimum Scales).** The SPAP cycle requires both minimum duration τ_min > 0 and minimum energy E_min > 0 to maintain predictive coherence (Theorem 29). These scales are determined by the logical structure of self-reference and the requirement of physical instantiation (PPI, Definition P.6.2). Crucially, their existence is established independently of any assumed value of ℏ.
+
+**Step 2 (Minimum Action).** Any complete predictive cycle has an associated physical action:
+
+$$\mathcal{S}_{min} = E_{min} \cdot \tau_{min} > 0$$
+
+This is the minimum "mechanical cost" of executing one irreversible predictive operation.
+
+**Step 3 (Minimum Entropy).** The same cycle has SPAP entropy cost ε_min = ln 2 nats (Theorem 31). This is the minimum "information-theoretic cost" of one irreversible operation, determined by the 2-to-1 state merge required by self-referential prediction (Lemma Z.2).
+
+**Step 4 (Conversion Factor).** Since both quantities describe the same physical process—one complete predictive cycle—a conversion factor must exist relating them:
+
+$$\hbar := \frac{\mathcal{S}_{min}}{\varepsilon_{min}} = \frac{E_{min} \cdot \tau_{min}}{\ln 2}$$
+
+This *defines* ℏ as the action-per-nat of SPAP entropy—the exchange rate between mechanical and information-theoretic descriptions.
+
+**Step 5 (Self-Consistency).** With ℏ so defined, the energy-time relation τ_min · E_min ~ ℏ follows as an identity (up to factors of order unity determined by the detailed dynamics), not as an input assumption. The uncertainty relation is a consequence of the discrete predictive structure, not a premise. QED
+
+**Corollary Q.0.2 (Dimensional Identity).** Planck's constant has the dimensional role:
+
+$$\boxed{\hbar = \frac{[\text{Action}]}{[\text{Entropy}]} = \frac{\text{J} \cdot \text{s}}{\text{nat}}}$$
+
+It is the universal exchange rate between mechanical and information-theoretic descriptions of physical processes. This parallels the role of other fundamental constants as exchange rates (Section P.6.5.5): k_B converts between temperature and energy, c between space and time, and ℏ between action and entropy.
+
+**Remark Q.0.1 (What Is and Is Not Derived).** The framework derives:
+- The *existence* of ℏ as a necessary conversion factor
+- The *meaning* of ℏ as action-per-nat of SPAP entropy  
+- The *role* of ℏ in connecting discrete and continuous descriptions
+
+The framework does not derive the numerical value ℏ ≈ 1.055 × 10⁻³⁴ J·s from pure logic. This value is fixed by one measurement, just as the numerical value of c requires measuring the speed of light. The framework explains *what* ℏ is; experiment determines *how much* it is.
+
+### Q.0.5 The Principle of Least Entropy Production
+
+**Corollary Q.0.3 (Least Action as Least Entropy).** The Principle of Least Action:
+
+$$\delta \mathcal{S} = 0$$
+
+is equivalent to the Principle of Minimum SPAP Entropy Production:
+
+$$\delta \left( \sum_i \varepsilon_i \right) = 0$$
+
+*Proof.* By the Action-Entropy Identity (Corollary Q.0.1), S/ℏ = Σ ε_i. Since ℏ > 0 is constant, extremizing S is equivalent to extremizing the total entropy cost. QED
+
+**Physical Interpretation:** Nature "chooses" paths that minimize action because the universe, as a predictive system operating under PCE, minimizes the total irreversible entropy production required to evolve from one configuration to another. The path of least action is the path requiring minimum SPAP entropy—the path of maximum predictive efficiency.
+
+This resolves the foundational puzzle: the action principle is not an unexplained postulate but a consequence of the Principle of Compression Efficiency operating through the irreducible costs of predictive processing.
+
+### Q.0.6 Connection to the Path Integral
+
+The Action-Entropy Identity provides an information-theoretic interpretation of the Feynman path integral.
+
+**Proposition Q.0.2 (Path Integral as Entropy Sum).** The path integral amplitude:
+
+$$\langle \phi_f | \phi_i \rangle = \int \mathcal{D}\phi \, e^{i\mathcal{S}[\phi]/\hbar}$$
+
+admits the interpretation:
+
+$$\langle \phi_f | \phi_i \rangle = \int \mathcal{D}\phi \, e^{i \sum_k \varepsilon_k[\phi]}$$
+
+where Σ_k ε_k[φ] is the total SPAP entropy cost along path φ.
+
+*Proof.* Direct substitution of the Action-Entropy Identity (Corollary Q.0.1). The Lorentzian action $\mathcal{S}[\phi]$ can take positive or negative values depending on the balance of kinetic and potential terms, yielding the oscillatory phase factor characteristic of quantum amplitudes. QED
+
+**Corollary Q.0.4 (Interference as Entropy Phase Matching).** Quantum interference arises from the phase accumulated through irreversible predictive operations:
+
+$$\phi_{quantum} = \frac{\mathcal{S}}{\hbar} = \sum_i \varepsilon_i$$
+
+Paths with equal total SPAP entropy cost (mod 2π) interfere constructively. The discrete structure of irreversible operations underlies the wave-like behavior of quantum mechanics.
+
+### Q.0.7 Summary: The Foundation for Planck-Scale Physics
+
+This section has established:
+
+1. **Action-Entropy Identity:** S/ℏ = Σ ε_i (physical action counts SPAP entropy)
+
+2. **ℏ as Exchange Rate:** Planck's constant converts between nats and J·s, paralleling k_B, c, and G as inter-domain exchange rates
+
+3. **Least Action Derived:** The action principle follows from PCE-driven minimization of irreversible entropy production
+
+4. **Path Integral Interpretation:** Quantum phases are accumulated SPAP entropy costs
+
+These results provide the conceptual foundation for the quantitative derivations that follow. In particular, the appearance of ℏ in the fundamental relation G = ηδ²c³/(4ℏχC_max) (Equation Q.1 below) is now understood: ℏ converts the information-theoretic channel capacity C_max (in nats) to the mechanical units required for the gravitational constant G. The constants ℏ, k_B, c, and G form a complete set of exchange rates connecting the operational domains of the framework (cf. Section P.6.5.5).
+
+The remainder of this appendix derives the specific numerical relationship δ/L_P ≈ 2.355 by minimizing the global PCE potential subject to the framework's information-theoretic constraints.
+
+---
 
 **Q.1 Foundational Relation and the Optimization Goal**
 

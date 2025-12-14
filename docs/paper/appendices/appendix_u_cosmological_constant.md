@@ -74,17 +74,26 @@ The Steiner system parameters are:
 
 ## U.4 The Configuration Space
 
+## U.4 The Configuration Space
+
 ### U.4.1 Grassmannian Bound
 
-Vacuum fluctuations correspond to deformations of the code subspace. The space of all $k$-dimensional subspaces of an $M$-dimensional space is the Grassmannian:
+Vacuum fluctuations correspond to deformations of the code subspace. The space of all $k$-dimensional complex subspaces of the $M$-dimensional Hilbert space $\mathbb{C}^M$ is the complex Grassmannian:
 
-$$\mathcal{M} = \text{Gr}(k, M)$$
+$$\mathcal{M} = \text{Gr}_{\mathbb{C}}(k, M)$$
 
-**Theorem U.3 (Configuration Dimension).** The Grassmannian has dimension:
+**Theorem U.3 (Configuration Dimension).** The base instanton complexity equals the complex dimension of the Grassmannian:
 
-$$\dim(\text{Gr}(12, 24)) = k(M - k) = 12 \times 12 = 144$$
+$$\kappa_0 = \dim_{\mathbb{C}}(\text{Gr}_{\mathbb{C}}(12, 24)) = k(M - k) = 12 \times 12 = 144$$
 
-*Proof.* Standard differential geometry. The Grassmannian $\text{Gr}(k, n)$ is a smooth manifold of dimension $k(n-k)$. $\square$
+where:
+- $k = 12$ is the Golay code dimension (Theorem Z.13)
+- $M = 24$ is the number of interface modes (Theorem Z.5)
+- $\text{Gr}_{\mathbb{C}}(12, 24)$ is the Grassmannian of 12-dimensional complex subspaces of $\mathbb{C}^{24}$, the $M$-mode Hilbert space
+
+*Proof.* Standard differential geometry. The complex Grassmannian $\text{Gr}_{\mathbb{C}}(k, n)$ is a complex manifold of complex dimension $k(n-k)$. $\square$
+
+**Remark U.3a (Complex vs Real Dimensions).** The complex Grassmannian $\text{Gr}_{\mathbb{C}}(k, M)$ is a complex manifold of complex dimension $k(M-k) = 144$ and real dimension $N_{\mathbb{R}} = 2k(M-k) = 288$. The instanton complexity $\kappa_0 = 144$ counts *complex* directions; the real dimension enters in the Morse-Bott analysis (Theorem U.15) where $m = 5$ real zero modes are subtracted, yielding $\kappa = (N_{\mathbb{R}} - m)/2 = (288 - 5)/2 = 141.5$.
 
 **Definition U.1 (Maximum Complexity).** The **Golay bound** for instanton complexity is:
 
@@ -179,7 +188,8 @@ where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
 ### U.6.3 Identification of Modes with Vertices
 
-**Theorem U.7 (Geometric Correspondence from Mode-Channel Matching).** The $M = 24$ interface modes admit a canonical correspondence with the 24 vertices of the 24-cell embedded in $S^3 \subset \mathbb{R}^4$. This correspondence preserves the symmetry structure and quadrature properties required for the Morse-Bott analysis.
+**Theorem U.7b (Mode-Vertex Correspondence).** The 24 QFI-active interface modes of the PCE-Attractor correspond bijectively to the 24 vertices of the 24-cell polytope. This correspondence identifies the real dimension of the Grassmannian orbit $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 2ab = 24$ with the 24-cell vertex count, connecting the internal Hilbert space structure to four-dimensional geometric optimality.
+
 
 *Proof.*
 
@@ -195,7 +205,15 @@ where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
 **Step 6 (Spherical design property).** The 24-cell vertices form a tight spherical 5-design on $S^3$ (Delsarte, Goethals & Seidel 1977). This is the unique such configuration with 24 points. The correspondence between interface modes and 24-cell vertices is structurally canonical: both sets have cardinality 24, both inherit the same symmetry group (the automorphism group of the $D_4$ root lattice), and the spherical design property of the vertices exactly matches the quadrature requirements for preserving zero modes (Theorem U.13). $\square$
 
-**Remark U.2 (Nature of the Correspondence).** The mode-vertex correspondence established in Theorem U.7 is structural rather than literal: the 24 QFI-active interface modes live in the internal Hilbert space $\mathcal{H}_0 = \mathbb{C}^8$, while the 24-cell vertices span $\mathbb{R}^4$. The correspondence identifies the combinatorial and symmetry structures of these two 24-element sets, enabling the transfer of spherical design properties to the discretized action. This is analogous to how the Golay code organizes the same 24 modes for error correction (Theorem Z.13) without the modes literally being binary codewords.
+**Remark U.2 (Nature of the Correspondence).** The mode-vertex correspondence established in Theorem U.7b is structural rather than literal: the 24 QFI-active interface modes span the real tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)_{\mathbb{R}}$, a 24-dimensional real vector space (complex dimension 12), while the 24-cell vertices span $\mathbb{R}^4$. The correspondence identifies the combinatorial and symmetry structures of these two 24-element sets, enabling the transfer of spherical design properties to the discretized action. This is analogous to how the Golay code organizes the same 24 modes for error correction (Theorem Z.13) without the modes literally being binary codewords.
+
+**Theorem U.7a (Golay-Grassmannian Correspondence).** The PCE-Attractor orbit $\text{Gr}(2,8)$ encodes the Golay code parameters through dimensional correspondence:
+- Real dimension: $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 2ab = 24 = n$ (code length)
+- Complex dimension: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12 = k$ (code dimension)
+- Hilbert space dimension: $d_0 = a + b = 8 = d$ (minimum distance)
+
+The Golay parameters $[n, k, d] = [24, 12, 8]$ are thus geometrically determined by the attractor structure. The equality $d_0 = d$ is a consequence of the specific partition $(a,b) = (2,6)$ selected by Landauer constraints (Theorem Z.1), representing a structural consistency rather than a general property of Grassmannian-code correspondences.
+
 
 ---
 
@@ -393,6 +411,26 @@ $$S_{\text{inst}} = 2\kappa$$
 
 This follows from the PCE-fixed ratio $C_{\max}/\varepsilon = 2$, rigorously derived in Appendix Q from the MPU budget allocation $C_{\max}^* = \ln(d_0) - \varepsilon = 3\ln 2 - \ln 2 = 2\ln 2$.
 
+**Remark U.14.1 (One-Loop Correction via Zeta Regularization).** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
+
+$$\log\det'(-\Delta_{g_B} + \lambda) = -\zeta'_{\mathcal{O}}(0)$$
+
+where $\zeta_{\mathcal{O}}(s) = \sum_{(m_1,m_2) \neq (0,0)} \text{mult}(m_1, m_2) \cdot (\lambda_B(m_1, m_2) + \lambda)^{-s}$ uses the Laplacian eigenvalues from Theorem Z.23a. The multiplicities follow from spherical representation theory for the symmetric pair $(U(8), U(2) \times U(6))$ (see Helgason 1984). Under $K$-invariance, the mass parameter equals the hierarchy coefficient $\alpha = 3/2$ from Corollary T.41.3.
+
+**Remark U.14.1 (One-Loop Correction via Zeta Regularization).** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
+
+$$\log\det'(-\Delta_{g_B} + \lambda) = -\zeta'_{\mathcal{O}}(0)$$
+
+**Remark U.14.1 (One-Loop Correction via Zeta Regularization).** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
+
+$$\log\det'(-\Delta_{g_B} + \lambda) = -\zeta'_{\mathcal{O}}(0)$$
+
+where $\zeta_{\mathcal{O}}(s) = \sum_{(m_1,m_2) \neq (0,0)} \text{mult}(m_1, m_2) \cdot (\lambda_B(m_1, m_2) + \lambda)^{-s}$ uses the Laplacian eigenvalues on $\text{Gr}(2,8)$ (Helgason 1984). The multiplicities follow from spherical representation theory for the symmetric pair $(U(8), U(2) \times U(6))$. Under $K$-invariance, the mass parameter equals the hierarchy coefficient:
+
+$$\alpha = \frac{1}{16\sigma_B^2} = \frac{1}{16 \cdot (1/24)} = \frac{24}{16} = \frac{3}{2}$$
+
+where $\sigma_B^2 = 1/M = 1/24$ arises from capacity saturation across the $M = 24$ interface modes (Theorem Z.5).
+
 *Derivation.* The instanton action scales with complexity as $S_{\text{inst}} = (C_{\max}/\varepsilon)\kappa$ (Section U.4). Substituting $C_{\max}/\varepsilon = 2$ yields $S_{\text{inst}} = 2\kappa$.
 
 *Consistency check.* The cosmological constant formula:
@@ -407,39 +445,33 @@ The Morse-Bott correction factor $\lambda^{-m/2} = 2^{-m/2}$ (with $\lambda = C_
 
 ### U.10.2 Zero Mode Contribution
 
+**Convention U.14a (Complexity Parameter).** The instanton complexity $\kappa$ is defined as the effective number of complex normal directions contributing to the exponential suppression factor $e^{-2\kappa}$. All power-law prefactors in $\lambda$, determinants, and Jacobian contributions from the Morse-Bott measure are absorbed into the effective prefactor $A_{\text{eff}}$. This convention separates the dominant exponential scaling (controlled by $\kappa$) from subleading polynomial corrections (packaged into $A_{\text{eff}} \sim O(1)$).
+
 **Theorem U.15 (Complexity Deficit from Zero Modes).** The $m = 5$ collective zero modes reduce the effective complexity by:
 
 $$\delta = \frac{m}{2} = \frac{5}{2} = 2.5$$
 
-*Proof.* 
+*Proof.*
 
 **Step 1 (Morse-Bott structure).** By Theorem U.14, the partition function has the form:
 
-$$Z \propto \lambda^{-(N-m)/2} \cdot e^{-\lambda S^*}$$
+$$Z = A \cdot \lambda^{-(N_{\mathbb{R}}-m)/2} \cdot e^{-\lambda S^*}$$
 
-where $\lambda = C_{\max}/\varepsilon = 2$ (Appendix Q), $N$ is the total number of Gaussian directions, $m = 5$ is the dimension of the zero-mode manifold (Corollary U.10), and $S^* = S_{\text{disc}}(u^*)$ is the instanton action.
+where $\lambda = C_{\max}/\varepsilon = 2$ (Appendix Q), $N_{\mathbb{R}} = 288$ is the real dimension of the integration domain (Remark U.3a), $m = 5$ is the real dimension of the zero-mode manifold (Corollary U.10), $S^*$ is the instanton action, and $A$ collects determinant and Jacobian factors.
 
-**Step 2 (Effective action).** The base complexity $\kappa_0 = k^2 = 144$ counts the Grassmannian directions (Theorem U.3). With $m$ zero modes, only $N - m$ directions contribute to the Gaussian suppression:
+**Step 2 (Complexity identification).** The base complexity $\kappa_0 = 144$ counts the complex dimension of $\text{Gr}_{\mathbb{C}}(12, 24)$ (Theorem U.3), with $N_{\mathbb{R}} = 2\kappa_0$. By Convention U.14a, we identify $\kappa$ as the effective number of complex Gaussian directions contributing to the exponential suppression:
 
-$$Z \propto 2^{-(N-m)/2} \cdot e^{-2\kappa_0}$$
+$$\kappa := \frac{N_{\mathbb{R}} - m}{2} = \frac{288 - 5}{2} = 141.5$$
 
-**Step 3 (Complexity reduction).** Comparing with the standard form $Z \propto e^{-2\kappa_{\text{eff}}}$:
+All $\lambda$-power prefactors and the factor $A$ are absorbed into $A_{\text{eff}}$.
 
-$$e^{-2\kappa_{\text{eff}}} = 2^{-m/2} \cdot e^{-2\kappa_0}$$
+**Step 3 (Complex vs real dimensions).** The $m = 5$ collective coordinates—four translations in $\mathbb{R}^4$ and one dilatation in $\mathbb{R}^+$—are intrinsically real degrees of freedom arising from spacetime symmetries of the Euclidean bounce. Each real zero mode removes one real direction from the Gaussian normal bundle. Since $\kappa$ counts complex dimensions and each complex dimension comprises two real dimensions:
 
-Taking logarithms:
+$$\delta := \kappa_0 - \kappa = 144 - 141.5 = \frac{m}{2} = \frac{5}{2} = 2.5$$
 
-$$-2\kappa_{\text{eff}} = -\frac{m}{2}\ln 2 - 2\kappa_0$$
+**Step 4 (Result).** The instanton complexity is:
 
-$$\kappa_{\text{eff}} = \kappa_0 + \frac{m \ln 2}{4}$$
-
-**Step 4 (Action units).** Since $S_{\text{inst}} = 2\kappa$ and the Morse-Bott factor reduces the effective action by $\frac{m}{2}\ln\lambda = \frac{m}{2}\ln 2$, the complexity deficit in action units is:
-
-$$\delta = \frac{m}{2} = \frac{5}{2} = 2.5$$
-
-yielding:
-
-$$\kappa = \kappa_0 - \delta = 144 - 2.5 = 141.5$$
+$$\kappa = \kappa_0 - \delta = 144 - \frac{5}{2} = 141.5$$
 
 $\square$
 

@@ -339,3 +339,152 @@ This "strategic choice" is not necessarily a deliberative one. For simpler predi
 
 
 Therefore, the UCT imposes a fundamental choice on the strategy of inquiry. A predictive agent cannot simultaneously maximize the depth and breadth of its knowledge. It must choose how to spend its finite energy budget: on the **computational resources** required for deep, intensive modeling in one place, or on the **kinetic resources** required for broad, extensive sampling of many places. An agent's trajectory through spacetime is not just a path of motion; it is a physical manifestation of its chosen knowledge-acquisition strategy, a choice constrained by the unified thermodynamics of prediction and acceleration.
+
+## N.10 The Elegant Core: A Unified Equation
+
+The preceding technical development can be distilled into a single equation that captures the essential physics of prediction-motion coupling.
+
+### N.10.1 The Prediction-Motion Equation
+
+**Theorem N.3 (Predictive Energy Cost Under Acceleration).**
+The minimum energy required to maintain predictive complexity $C$ while undergoing proper acceleration $a$ is:
+
+$$
+\boxed{E_{\text{pred}}(a, C) = \frac{\hbar \varepsilon}{2\pi c} \cdot a \cdot C}
+\tag{N.14}
+$$
+
+where $\varepsilon = \ln 2$ is the irreducible thermodynamic cost of self-reference (Theorem 31).
+
+*Proof.* An MPU undergoing proper acceleration $a$ perceives the vacuum as a thermal bath at the Unruh temperature [Unruh 1976] (Equation N.4):
+$$T_U = \frac{\hbar a}{2\pi c k_B}$$
+
+The fundamental cost of maintaining self-referential prediction requires dissipation of at least $\varepsilon = \ln 2$ nats per predictive cycle (Theorem 31, Appendix J). By Landauer's principle [Landauer 1961], the energy cost per bit of complexity at temperature $T$ is $E = k_B T \cdot \varepsilon$. For $C$ bits of predictive complexity maintained against Unruh noise:
+
+$$E_{\text{pred}} = k_B T_U \cdot \varepsilon \cdot C = k_B \cdot \frac{\hbar a}{2\pi c k_B} \cdot \varepsilon \cdot C = \frac{\hbar \varepsilon}{2\pi c} \cdot a \cdot C$$
+
+This represents the leading-order cost in the regime where Unruh temperature dominates ($T_U \gg T_{\text{bath}}$). The full UCT (Equation N.5) incorporates additional contributions from background temperature and internal heating. ∎
+
+**Remark N.10.1 (Structural Analogy to $E = mc^2$).**
+Just as Einstein's equation reveals mass-energy equivalence through $c^2$, Equation (N.14) reveals motion-cognition coupling through $c$. The speed of light appears in both the kinematic barrier ($v < c$) and the epistemic cost ($E_{\text{pred}} \propto 1/c$). This is not coincidental—it reflects the deep unity established by the UCT: reaching relativistic velocities requires acceleration, which thermodynamically degrades predictive capacity through the Unruh mechanism.
+
+### N.10.2 The Prediction-Motion Coupling Constant
+
+**Definition N.4 (Prediction-Motion Coupling Constant).**
+The fundamental constant governing the coupling between motion and self-knowledge is:
+
+$$
+\boxed{\lambda_{PM} \equiv \frac{\hbar \varepsilon}{2\pi c} = \frac{\hbar \ln 2}{2\pi c} \approx 3.88 \times 10^{-44} \text{ kg·m}}
+\tag{N.15}
+$$
+
+This single constant encodes the bridge between:
+
+- **Quantum mechanics** ($\hbar$): the fundamental action scale
+- **Information theory** ($\varepsilon = \ln 2$): the irreducible cost of self-reference
+- **Relativity** ($c$): the invariant speed limiting both motion and signal propagation
+
+In terms of $\lambda_{PM}$, the predictive energy cost simplifies to:
+
+$$
+E_{\text{pred}} = \lambda_{PM} \cdot a \cdot C
+\tag{N.16}
+$$
+
+**Remark N.10.2 (Dimensional Analysis).**
+The coupling constant $\lambda_{PM}$ has dimensions:
+$$[\lambda_{PM}] = \frac{[\text{Energy} \cdot \text{Time}]}{[\text{Length}/\text{Time}]} = \frac{[M L^2 T^{-1}]}{[L T^{-1}]} = [M L]$$
+
+Thus $\lambda_{PM}$ carries dimensions of mass times length. Verification: $[E_{\text{pred}}] = [ML] \cdot [LT^{-2}] \cdot [1] = [ML^2T^{-2}]$, correctly yielding energy for the product of acceleration and dimensionless complexity.
+
+**Remark N.10.3 (Relation to Fundamental Scales).**
+The coupling constant can be expressed in terms of the Planck mass $m_P = \sqrt{\hbar c / G}$ and Planck length $L_P = \sqrt{\hbar G / c^3}$. From the identity $m_P L_P = \hbar/c$ (which follows from $m_P L_P = \sqrt{(\hbar c/G)(\hbar G/c^3)} = \sqrt{\hbar^2/c^2} = \hbar/c$), we obtain:
+
+$$\lambda_{PM} = \frac{\ln 2}{2\pi} \cdot \frac{\hbar}{c} = \frac{\ln 2}{2\pi} \cdot m_P L_P$$
+
+This reveals $\lambda_{PM}$ as a fraction $(\ln 2 / 2\pi) \approx 0.110$ of the quantum of action per unit velocity, $\hbar/c$, or equivalently, of the Planck mass-length product.
+
+### N.10.3 The Unification Statement
+
+The deepest content of Prediction Relativity can be expressed as a single identity:
+
+$$
+\boxed{c_{\gamma} = c_{\varepsilon}}
+\tag{N.17}
+$$
+
+*The invariant speed limiting motion is identical to the invariant speed limiting self-knowledge.*
+
+**Definition N.5 (Epistemic Speed $c_\varepsilon$).**
+The epistemic speed $c_\varepsilon$ is defined operationally as the constant appearing in the denominator of the predictive energy cost:
+
+$$c_\varepsilon \equiv \frac{\hbar \varepsilon \cdot a \cdot C}{2\pi E_{\text{pred}}}$$
+
+By Theorem N.3, this equals the speed of light $c$ for any acceleration-complexity-energy triple satisfying the UCT bound.
+
+**Interpretation:**
+
+- $c_{\gamma}$: The speed of light as kinematic barrier—no massive body can reach $v = c$, as the Lorentz factor $\gamma = (1 - v^2/c^2)^{-1/2}$ diverges
+- $c_{\varepsilon}$: The speed of light as epistemic barrier—acceleration at rate $a$ imposes predictive cost $\propto a/c_\varepsilon$ through the Unruh mechanism
+
+These are not two limits that happen to share a numerical value. They are **one limit**, experienced from different operational perspectives. The UCT theorem (Section N.4) proves this identity by deriving both divergences from a common thermodynamic substrate: acceleration couples to the vacuum through the Unruh effect, creating thermal noise that degrades predictive capacity at a rate set by $c$.
+
+### N.10.4 Physical Consequences
+
+**Corollary N.3.1 (Optimal Trajectories for Predictive Systems).**
+For any system that must maintain predictive coherence (biological organisms, AI systems, measurement apparatus), the optimal trajectory minimizes total work:
+
+$$
+W_{\text{tot}} = W_{\text{kin}} + W_{\text{pred}} = m_0 c^2 (\gamma - 1) + \int_0^\tau P_{\text{pred}}(t) \, dt
+\tag{N.18}
+$$
+
+where $\tau$ is the proper time of the process and $P_{\text{pred}}(t)$ is the instantaneous predictive power cost:
+
+$$
+P_{\text{pred}}(t) = \frac{\lambda_{PM} \cdot a(t) \cdot C(t)}{\tau_{cycle}}
+\tag{N.18a}
+$$
+
+Here $\tau_{cycle}$ is the characteristic predictive cycle time of the MPU (Definition 27), ensuring dimensional consistency: $[P_{\text{pred}}] = [ML][LT^{-2}][1]/[T] = [ML^2T^{-3}] = [\text{Power}]$.
+
+*Proof.* This follows directly from the UCT bound (Equation N.5) in the Unruh-dominated regime ($T_{\text{bath}} \ll T_U$, $T_{\text{internal}} \ll T_U$). The operational cost function $R(C, T_{\text{eff}})$ reduces to $R \approx P_{\text{pred}} = \lambda_{PM} \cdot a \cdot C / \tau_{cycle}$ when Unruh noise dominates. Integrating this power over proper time yields the total predictive work. ∎
+
+This implies that intelligent systems should favor smooth trajectories over sharp accelerations, even when the latter would minimize travel time. The PCE potential (Section N.1) naturally drives systems toward such optimal paths.
+
+**Corollary N.3.2 (Predictive Capacity Reduction Under Acceleration).**
+A system with fixed total power budget $P_{\text{tot}}$ undergoing sustained acceleration $a$ experiences an effective reduction in available predictive capacity:
+
+$$
+\Delta C_{\text{available}} = -\frac{P_{\text{pred}}}{R'(C)}
+\tag{N.19}
+$$
+
+where $R'(C) = \partial R / \partial C$ is the marginal operational cost (Definition 3) with units of power per bit.
+
+*Derivation.* From the power budget constraint $P_{\text{tot}} = P_{\text{kin}} + P_{\text{op}}$, the power available for predictive operations is $P_{\text{op}} = P_{\text{tot}} - P_{\text{kin}}$. Under acceleration, an additional power $P_{\text{pred}} = \lambda_{PM} \cdot a \cdot C / \tau_{cycle}$ must be allocated to counteract Unruh noise. By the definition of the marginal cost $R'(C)$, the complexity sustainable at fixed total power is reduced by:
+
+$$\Delta C = -\frac{\Delta P}{R'(C)} = -\frac{P_{\text{pred}}}{R'(C)}$$
+
+For systems operating near the Landauer limit where $R(C) \approx k_B T_{\text{internal}} \cdot (\varepsilon / \tau_{cycle}) \cdot C$, we have $R'(C) \approx k_B T_{\text{internal}} \cdot \varepsilon / \tau_{cycle}$, yielding the dimensionless form:
+
+$$\Delta C_{\text{available}} \approx -\frac{\lambda_{PM} \cdot a \cdot C}{k_B T_{\text{internal}} \cdot \varepsilon}$$
+
+This represents a cognitive analog of relativistic effects: fast-moving observers are fundamentally limited in their ability to model their own future states. Just as length contraction reduces spatial extent for moving observers, predictive capacity contraction reduces the epistemic horizon for accelerating predictors.
+
+### N.10.5 Conceptual Summary
+
+The Unified Cost of Transgression reveals that Einstein's $c$ and the SPAP limit $\alpha_{SPAP}$ are not independent barriers. They are unified through thermodynamics:
+
+|Domain |Barrier |Divergence |Mediator |
+|--------------|----------------------|-------------------------------------------------------------|---------------|
+|**Kinematics**|$v \to c$ |$\gamma \to \infty$ |$c$ |
+|**Prediction**|$PP \to \alpha_{SPAP}$|$C_P \to \Omega\left(\frac{\log(1/\delta)}{\delta^2}\right)$|$c$ (via Unruh)|
+
+where $\delta = \alpha_{SPAP} - PP$ is the gap to the Prediction Coherence Boundary.
+
+The same constant $c$ that forbids superluminal motion also couples motion to the cost of self-knowledge. This is the core insight of Prediction Relativity: **the invariant speed $c$ does not impose limits on prediction—rather, the fundamental limits of self-referential prediction, operating through thermodynamic optimization in networks of MPUs, give rise to an emergent geometry whose causal structure is characterized by the invariant $c$.**
+
+The kinematic barrier $v < c$ is not an independent physical law but a downstream consequence of the deeper predictive constraints. What appears in the emergent description as "the speed of light limiting motion" is, at the foundational level, the geometric manifestation of SPAP limits and the irreducible cost $\varepsilon \geq \ln 2$ propagating through the PCE optimization dynamics. The UCT makes this unity explicit: the Unruh mechanism couples acceleration to predictive degradation precisely because both "motion" and "prediction" are aspects of the same underlying MPU dynamics from which spacetime itself emerges (Sections 11, 12; Appendix F).
+
+The prediction-motion coupling constant $\lambda_{PM}$ quantifies this unity. Its smallness ($\sim 10^{-44}$ kg·m) explains why the cognitive costs of ordinary accelerations are negligible in the emergent regime, while its non-zero value ensures that the unification is physical rather than merely formal. In extreme environments—near black holes, in the early universe, or at the fundamental scales where MPU dynamics dominate—this coupling becomes the essential constraint governing the joint optimization of motion and prediction, revealing the predictive substructure beneath the emergent spacetime description.

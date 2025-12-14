@@ -284,7 +284,15 @@ $$\rho_0 = \frac{1}{2}(|000\rangle\langle 000| + |111\rangle\langle 111|)$$
 
 This choice has maximal symmetry under the permutation group S₃ acting on qubit indices.
 
----
+**Theorem Z.6.3a (PCE-Attractor Orbit Structure).** The orbit of the PCE-Attractor state $\rho_0 = \frac{1}{a}I_a \oplus 0_b$ under unitary conjugation is:
+$$\mathcal{O}_{\rho_0} \cong U(d_0)/(U(a) \times U(b)) \cong \text{Gr}(a, d_0) = \text{Gr}(2,8)$$
+a compact Hermitian symmetric space with:
+- Complex dimension: $\dim_{\mathbb{C}} = ab = 12$
+- Real dimension: $\dim_{\mathbb{R}} = 2ab = 24 = M$
+
+*Proof.* The isotropy group of $\rho_0$ under $U(d_0)$ conjugation is $U(a) \times U(b)$ (block-diagonal unitaries preserving the active/inactive partition). The quotient $U(d_0)/(U(a) \times U(b))$ is the Grassmannian of $a$-planes in $\mathbb{C}^{d_0}$. $\square$
+
+**Remark Z.6.3b (Geometric Interpretation of Mode Count).** The equality $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = M$ is not coincidental: the QFI-active interface modes (Theorem Z.5) parametrize the tangent space to the attractor orbit. This provides an independent geometric derivation of the mode count $M = 24$.
 
 ## Z.7 QFI Spectrum at the PCE-Attractor
 
@@ -562,7 +570,7 @@ The unique global minimum over all integer D is at D = 4. No other stationary po
 
 ## Z.11 Dimensional Selection
 
-**Theorem Z.11 (Dimensional Selection from First Principles).** The emergent spatial dimension is uniquely determined:
+**Theorem Z.11 (Dimensional Selection from First Principles).** The emergent spacetime dimension is uniquely determined:
 $$D = 4$$
 
 *Proof.*
@@ -591,6 +599,8 @@ Consulting the kissing numbers:
 - K(5) = 40
 
 The unique solution is D = 4. ∎
+
+**Remark Z.4a (Euclidean vs Lorentzian).** The kissing number $K(4) = 24$ refers to sphere packing in 4-dimensional Euclidean space. This is the Euclideanized spacetime geometry relevant to the instanton saddle-point calculation (Section U.9). The Euclidean rotation group is $\text{Spin}(4) \cong SU(2) \times SU(2)$. Upon analytic continuation back to Lorentzian signature, $D = 4$ yields the physical 3+1 spacetime with metric signature $(-,+,+,+)$ and structure group $\text{Spin}(1,3)$.
 
 **Remark Z.5 (Robustness).** The discrete nature of kissing numbers means D = 4 remains the unique solution for any M_int ∈ [13, 39].
 
@@ -996,11 +1006,14 @@ $$2 = a$$
 
 Thus $bM = k^2$ holds if and only if $a = 2$, the Landauer-derived value (Theorem Z.1). ∎
 
-**Corollary Z.13a.1 (Non-Triviality).** The equality $bM = k^2 = 144$ connects two independently-derived structures:
+**Corollary Z.13a.1 (Non-Triviality).** The equality $bM = k^2 = 144$ connects three independently-derived structures:
 - **Thermodynamic origin:** The partition $(a, b) = (2, 6)$ from Landauer constraints (Theorem Z.1)
 - **Information-theoretic origin:** The error-correction structure $[24, 12, 8]$ from PCE optimization (Theorem Z.13)
+- **Geometric origin:** The Grassmannian $\text{Gr}(2,8)$ with $\dim_{\mathbb{C}} = ab = 12 = k$ and $\dim_{\mathbb{R}} = 2ab = 24 = n$
 
 The syndrome-partition identity demonstrates these structures are mutually determining: each uniquely implies the other through $a = 2$. This identity provides a structural bound consistent with the inferred instanton complexity $\kappa \approx 141.5$.
+
+*Remark.* The three derivation paths—thermodynamic (Landauer), information-theoretic (Golay), and geometric (Grassmannian)—employ distinct mathematical frameworks yet converge on identical numerical values. This overdetermination provides strong evidence for the structural uniqueness of the PCE-Attractor.
 
 ---
 
@@ -1749,6 +1762,20 @@ This lies within the theoretical uncertainty of $\pm 0.0001$ (Section Z.27.9). T
 
 ---
 
+**Corollary Z.6.3b (Hessian Constraint from Isotropy).** The tangent space 
+$T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)$ is irreducible 
+under the isotropy group $K = U(2) \times U(6)$. By Schur's lemma, any $K$-invariant 
+PCE potential $V_{PCE}$ has scalar Hessian at the minimum:
+
+$$H = \nabla^2 V_{PCE}|_{x_0} = \lambda I_{24}$$
+
+Under the variance postulate $\sigma_B^2 = 1/M = 1/24$:
+
+$$\lambda = \frac{1}{16\sigma_B^2} = \frac{3}{2}$$
+
+This determines the universal hierarchy coefficient $\alpha = 3/2$ of Theorem T.39.
+---
+
 ## Z.24 Error Correction and Stability
 
 ### Z.24.1 The 12+12 Structure
@@ -1893,6 +1920,25 @@ The variance $\kappa_2(Y) = 1$ is exact; corrections appear only in $\kappa_4(Y)
 The 24 interface modes span the tangent space to the unitary orbit $\mathcal{O}_{\rho_0} \cong SU(8)/S(U(2) \times U(6)) \cong Gr(2,8)$.
 
 **Boundary Regularity.** Although $\rho_0$ has spectrum $(1/2, 1/2, 0, \ldots, 0)$ with zero eigenvalues, the Bures metric is smooth and well-defined on the tangent space $T_{\rho_0}\mathcal{O}$. The potential singularity from the QFI formula $(p_j - p_k)^2/(p_j + p_k)$ when both $p_j = p_k = 0$ (BB block) is avoided because the tangent space to the orbit consists only of AB ⊕ BA directions, where exactly one eigenvalue is nonzero. For $(j \in A, k \in B)$: $(p_j, p_k) = (1/2, 0)$ gives $(1/2 - 0)^2/(1/2 + 0) = 1/2$, which is finite. The metric tensor components are therefore smooth functions on the orbit (Petz 1996, Theorem 4.3).
+
+**Proposition Z.23a (Bures Metric at Rank-Deficient Attractor).** The Bures metric restricted to the PCE-Attractor orbit $\text{Gr}(2,8)$ is derived from the general orbit formula. For $\rho = \text{diag}(\lambda_1, \ldots, \lambda_8)$ with tangent vectors $\dot{\rho} = i[\rho, K]$:
+
+$$g_B(\dot{\rho}, \dot{\rho}) = \frac{1}{2}\sum_{i<j}\frac{(\lambda_i - \lambda_j)^2}{\lambda_i + \lambda_j}|K_{ij}|^2$$
+
+At the PCE-Attractor $\rho_0 = \frac{1}{a}I_a \oplus 0_b$, for interface directions ($i \leq a$, $j > a$) with $\lambda_i = 1/a$ and $\lambda_j = 0$, the limiting procedure yields:
+
+$$\lim_{\lambda_j \to 0^+} \frac{(\lambda_i - \lambda_j)^2}{\lambda_i + \lambda_j} = \frac{\lambda_i^2}{\lambda_i} = \lambda_i = \frac{1}{a}$$
+
+The resulting metric on the Grassmannian tangent space is:
+
+$$ds^2_B = \frac{1}{2a}\sum_{i \leq a, j > a}|K_{ij}|^2$$
+
+This is the unique $U(d_0)$-invariant Kähler metric on $\text{Gr}(a, d_0)$ up to overall scale (Kobayashi–Nomizu 1969). In complex coordinates $z_{ij}$ on $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^a, \mathbb{C}^b)$:
+
+$$ds^2_B\big|_{\text{interface}} = \frac{1}{2a}\sum_{i=1}^{a}\sum_{j=1}^{b}|dz_{ij}|^2$$
+
+*Remark.* The factor $1/(2a)$ arises from the Bures metric prefactor $1/2$ combined with the interface coefficient $1/a$ from the limiting procedure. For $a = 2$, this gives $1/4$, consistent with Lemma Z.12.
+
 
 **Lemma Z.12 (Metric Proportionality).** The Bures metric $g_B$ on the orbit $\mathcal{O}_{\rho_0} \cong Gr(2,8)$ is proportional to the Kähler-Einstein metric $g_{KE}$:
 $$g_B = \frac{1}{4} g_{KE}$$

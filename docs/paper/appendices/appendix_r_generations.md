@@ -25,7 +25,7 @@ The generation structure derived in this appendix thus shares a common origin wi
 
 1. **Topological (Sections R.1-R.4):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent integer topological charges. Combined with gauge-topology correspondence and anomaly cancellation, this uniquely selects three generations with family charges $\{a, -a, 0\}$.
 
-2. **Geometric (Sections R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a second independent three-fold structure. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
+2. **Geometric (Sections R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared E$_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (corresponding to inner products $\langle r_i, r_j \rangle \in \{2, 1, 0, -1, -2\}$ for unit-normalized roots) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a second independent three-fold structure. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
 
 **Mass Hierarchy from $E_8$ Geometry:** Beyond counting generations, this appendix shows how the hierarchical pattern of fermion masses arises from geodesic distances between generation vacua in the $E_8$ root system. The allowed squared distances $d^2 \in \{2, 4, 6, 8\}$ between $E_8$ roots lead to a parameter-free, discrete geometric invariant:
 $$
@@ -1337,22 +1337,35 @@ The observed value $J_{CP} \approx 3 \times 10^{-5}$ is consistent with small mi
 The framework provides first-principles explanations for:
 
 1. **Generation count:** $N = 3$ from dual over-determination (topology + geometry)
-2. **Mass hierarchy:** Exponential suppression from E₈ geodesic distances
-3. **Discrete mass ratios:** $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ from allowed root distances
+2. **Mass hierarchy:** Exponential suppression from E$_8$ geodesic distances on the attractor orbit $\text{Gr}(2,8)$
+3. **Discrete mass ratios:** $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ from allowed root distances $d^2 \in \{2, 4, 6, 8\}$
 4. **Small mixing angles:** Exponential suppression from large vacuum separations
 5. **CP violation:** Jarlskog invariant non-zero for $N \geq 3$
 6. **CKM vs. PMNS structure:** Different vacuum geometries for quarks vs. leptons
+7. **Hierarchy coefficient:** $\alpha = 3/2$ from Schur constraint at $K$-invariant minimum (Corollary T.41.3)
 
 ### R.8.2 What Requires Additional Input
 
 The framework does not yet fully determine:
 
-1. **Absolute Yukawa values:** Requires knowing $\alpha_1, \alpha_2$ (Hessian curvatures)
-2. **Specific vacuum locations:** Requires minimizing $V_q$ with explicit embedding
-3. **CP phase $\delta_{CP}$:** Requires detailed interference structure
+1. **Absolute Yukawa values:** Under $K$-invariance, the single Hessian eigenvalue $\alpha = 3/2$ is fixed (Corollary T.41.3); absolute values require the overall normalization scale and potential $K$-breaking effects
+2. **Specific vacuum locations:** Requires minimizing $V_q$ with explicit E$_8$ embedding
+3. **CP phase $\delta_{CP}$:** Derived in Section T.22 as $\delta = 66.7°$ from Berry holonomy
 4. **Running to low energies:** Requires RG evolution (standard QFT)
 
-These represent directions for future work rather than fundamental limitations.
+Item 3 has been resolved. Items 1-2 require explicit construction of the PCE potential $V_{PCE}$ on the attractor orbit.
+
+**Open Problem (Baryogenesis Complexity).** Matching $\eta_B \approx 6 \times 10^{-10}$ with electroweak sphaleron prefactors $\mathcal{C}_{sph} \sim 10^{10}$, $J_{CP} \sim 3 \times 10^{-5}$, $f_{neq} \sim 1$ requires complexity parameter:
+
+$$\kappa_B = \ln\left(\frac{\mathcal{C}_{sph} J_{CP} f_{neq}}{\eta_B}\right) \approx \ln(5 \times 10^{14}) \approx 34$$
+
+This value, while self-consistent, exceeds naive estimates from the Grassmannian dimension. Potential resolutions include: (i) modified prefactors from non-perturbative effects, (ii) strong out-of-equilibrium suppression ($f_{neq} \ll 1$), or (iii) a distinct baryogenesis mechanism operating at a different scale.
+
+**Open Problem (Gravitational Response).** The covariant form of variable gravitational coupling consistent with $\nabla^\mu T_{\mu\nu} = 0$ is constrained to:
+
+$$\frac{1}{G_{eff}(\rho, p)} = \frac{1}{G_N} + c_1(-\rho + 3p) + O(T^2)$$
+
+where $c_1$ is determined by the response kernel $\delta^2\Gamma/\delta g_{\mu\nu}\delta g_{\rho\sigma}$, requiring explicit derivation from the PCE effective action on the attractor orbit.
 
 ### R.8.3 Epistemological Status
 

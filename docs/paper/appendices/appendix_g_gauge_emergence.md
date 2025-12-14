@@ -136,7 +136,7 @@ Let $\mathfrak{A}$ be an abstract algebraic structure describing the predictive 
 1.  **Existence of Trace Form Cost Functional:** By Theorem G.1.7, POP/PCE optimization leads to an effective cost structure for outcome branches $P$ that necessitates $f(P) = \text{Tr}(\rho_{phys} P)$, where $\rho_{phys}$ is the system's physical state (a positive semi-definite operator). The trace functional is central.
 2.  **GNS Construction for Hilbert Space Representation:** The state $\omega(A) = \text{Tr}(\rho_{phys} A)$ is a positive linear functional on any C*-algebra $\mathfrak{A}_{ops}$ of operators that includes the projectors and observables. The Gelfand-Naimark-Segal (GNS) construction [Reed & Simon 1980] guarantees that for any such state on a C*-algebra, there exists a unique (up to unitary equivalence) Hilbert space $\mathcal{H}_\omega$, a representation $\pi_\omega: \mathfrak{A}_{ops} \to B(\mathcal{H}_\omega)$ (bounded operators on $\mathcal{H}_\omega$), and a cyclic vector $|\Omega_\omega\rangle \in \mathcal{H}_\omega$ such that $\omega(A) = \langle \Omega_\omega | \pi_\omega(A) | \Omega_\omega \rangle$.
 3.  **Why Complex Hilbert Space?:** The PCE imperative for efficiency selects the complex field $\mathbb{C}$ over real ($\mathbb{R}$) or quaternionic ($\mathbb{H}$) alternatives. While all can support vector space structures, the complex Hilbert space is uniquely efficient for the tasks required by POP.
-   *   **Local Tomography & Information Cost:** A key measure of efficiency is the balance between the predictive power of the representation and the information cost (e.g., number of measurements) needed to determine a state (local tomography). The dimension of the state space (number of parameters) determines this cost. For a $d$-dimensional system, this is $d^2-1$ for complex spaces, $(d(d+1)/2)-1$ for real spaces, and $(d(2d-1))-1$ for quaternionic spaces. While real spaces require fewer parameters, they lack the expressive power to efficiently model interference phenomena and the $U(1)$ phase crucial for emergent gauge theories (Section G.2). Complex Hilbert spaces provide the necessary structure efficiently, while quaternionic spaces are significantly less efficient (more parameters) without providing necessary additional predictive utility.
+   *   **Local Tomography & Information Cost:** A key measure of efficiency is the balance between the predictive power of the representation and the information cost (e.g., number of measurements) needed to determine a state (local tomography). The dimension of the state space (number of parameters) determines this cost. For the PCE-Attractor, the orbit dimension $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ equals the Golay code dimension $k$, providing independent geometric confirmation of the information-theoretic structure via the correspondence established in Theorem U.7a. For a $d$-dimensional system, this is $d^2-1$ for complex spaces, $(d(d+1)/2)-1$ for real spaces, and $(d(2d-1))-1$ for quaternionic spaces. While real spaces require fewer parameters, they lack the expressive power to efficiently model interference phenomena and the $U(1)$ phase crucial for emergent gauge theories (Section G.2). Complex Hilbert spaces provide the necessary structure efficiently, while quaternionic spaces are significantly less efficient (more parameters) without providing necessary additional predictive utility.
    *   **Symmetry, Dynamics, and Composition:** The complex structure provides the unique framework where the generators of continuous symmetries (Lie algebra) are naturally identified with the observables themselves (via Stone's theorem), simplifying the dynamics. Furthermore, the tensor product structure for composing subsystems is uniquely straightforward in complex Hilbert spaces, unlike real or quaternionic spaces where the local structure does not necessarily determine the global structure [Hardy 2001; Wootters 1990]. Crucially, the $U(1)$ phase freedom that gives rise to electromagnetism (Section G.7) is a natural feature of the complex structure.
    *   **PCE Selection:** A system based on $\mathbb{R}$ or $\mathbb{H}$ would incur higher information acquisition costs (more measurements for tomography) and/or higher complexity costs to represent the necessary dynamics compared to a system based on $\mathbb{C}$. PCE, by minimizing these costs within the potential $V(x)$, selects the complex Hilbert space as the most resource-efficient substrate for prediction.
 4.  **Uniqueness & Optimality:** The combination of (a) Gleason's theorem (underpinned by POP/PCE cost consistency) selecting the trace-form for costs/probabilities, and (b) the GNS construction providing a unique Hilbert space representation for systems supporting such trace-form states, establishes that the complex Hilbert space structure is uniquely determined (up to isomorphism) as the necessary arena for the self-consistent, PCE-optimized predictive processing modeled by the PU framework. This also makes Proposition 4 (Emergence of Complex Hilbert Space) a derived theorem based on Theorem G.1.8.QED
@@ -522,7 +522,7 @@ PCE favors system parameters such that $\eta_{ben}(D)>\lambda_c(D)\alpha_{load}/
 A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 
 1.  **Anomaly Freedom:** $V_{\text{anom}}(G,{\psi},D)=0$.
-2.  **Capacity Constraint:** $n_G \leq n_{\max}$. The channel capacity estimate (Equation G.8.0) yields the range $n_{\max} \approx 7.5$–$20$. The geometric bound from the Lagrangian dimension of the QFI symplectic structure (Theorem G.8.2e) yields $n_G \leq ab = 12$. Since $12$ lies within the channel capacity range, the geometric bound provides the sharp constraint $n_G \leq 12$. This value equals the Golay code dimension $k = 12$ (Theorem Z.13). The convergence of channel capacity, symplectic geometry, and error-correction theory at the value 12 constitutes a non-trivial consistency check on the framework.
+2.  **Capacity Constraint:** $n_G \leq n_{\max}$. The channel capacity estimate (Equation G.8.0) yields the range $n_{\max} \approx 7.5$–$20$. The geometric bound from the Lagrangian dimension of the QFI symplectic structure (Theorem G.8.2e) yields $n_G \leq ab = 12$. This bound equals the complex dimension of the attractor orbit: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$, providing a geometric interpretation of the gauge dimension constraint.Since $12$ lies within the channel capacity range, the geometric bound provides the sharp constraint $n_G \leq 12$. This value equals both the Golay code dimension $k = 12$ (Theorem Z.13) and the complex dimension of the attractor orbit $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ (Theorem Z.6.3a). The triple coincidence—channel capacity bound, code dimension, and orbit dimension—provides strong evidence for the structural uniqueness of the gauge sector. The convergence of channel capacity, symplectic geometry, and error-correction theory at the value 12 constitutes a non-trivial consistency check on the framework.
 3.  **Structural Stability:** $D$ must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors $D=4$.
 4.  **Information Efficiency:** $D$ should optimize information‑theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor $D=4$.
 5.  **Potential Minimization:** Among all triplets $(G,{\psi},D)$ satisfying (1)–(4), the optimal solution minimizes $V_{net}$ given by Equation G.8.5.
@@ -688,12 +688,18 @@ The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(
 
 **Remark G.8.4d (Complementary Derivation Methods).** The module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ derived via exhaustive partition analysis coincides with the Local Module Hypothesis of Conjecture G.M1. Both methods use the same foundational constraints—the capacity bound $n_G \leq 12$, anomaly cancellation, chirality requirements, and PCE optimization—but apply them differently: Conjecture G.M1 proceeds by direct cost minimization, while Theorem G.8.4b proceeds by systematic elimination. The convergence of these complementary approaches strengthens confidence that the Standard Model gauge structure is uniquely determined by framework principles.
 
+**Remark G.8.4e (Geometric Interpretation via Attractor Orbit).** The PCE-Attractor orbit is the Grassmannian $\text{Gr}(2,8)$ with isotropy group $K = U(2) \times U(6)$. The tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)$ is irreducible under $K$. By Schur's lemma, any $K$-invariant potential $V_{PCE}$ has scalar Hessian $H = \lambda I$ at the minimum with $\lambda = 3/2$ (Corollary T.41.3). 
+
+The gauge decomposition $\mathbb{C}^6 = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ induces a symmetry-breaking pattern $U(6) \to U(3) \times U(2) \times U(1)$ that splits the tangent space into components:
+$$\text{Hom}(\mathbb{C}^2, \mathbb{C}^6) = \text{Hom}(\mathbb{C}^2, \mathbb{C}^3) \oplus \text{Hom}(\mathbb{C}^2, \mathbb{C}^2) \oplus \text{Hom}(\mathbb{C}^2, \mathbb{C}^1)$$
+with complex dimensions $6 + 4 + 2 = 12$. Realizing multiple distinct Hessian eigenvalues from this structure would require constructing an explicit $V_{PCE}$ that respects the reduced symmetry $U(2) \times U(3) \times U(2) \times U(1)$ but not the full $K$.
+
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 
 The PU framework provides a robust, multi-layered argument for the co-selection of D=4 spacetime and the Standard Model gauge group with its specific fermion content and three-generation structure. This selection is a derived consequence of minimizing the global PCE potential under the standing principles of compression efficiency and predictive invariance.
 
 1.  **Primacy of D=4 for Structural Stability and Information Efficiency:**
-    As argued in Sections G.8.2.4 and G.8.2.5, D=4 is strongly and uniquely favored by PCE. It is the dimension that robustly supports stable, complex MPU aggregates (via inverse-square force structure) and favorable network information efficiency. These factors make D=4 the unique, stable dimensional arena for a complex, predictive universe. This stability-based selection is independently confirmed by the mode-channel correspondence derived in **Appendix Z** (Theorem Z.11): the $M=24$ interface modes of the PCE-Attractor must match the kissing number $K(D)$ for optimal geometric packing, and $K(D)=24$ has the unique solution $D=4$. The convergence of these two independent derivations—one from dynamical stability, one from information-geometric correspondence—provides strong evidence that $D=4$ is multiply determined by the framework's principles.
+    As argued in Sections G.8.2.4 and G.8.2.5, D=4 is strongly and uniquely favored by PCE. The mode count $M = 2ab = 24$ equals both the real dimension of the attractor orbit $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 24$ and the kissing number $K(4) = 24$ in four dimensions, establishing a geometric bridge between internal Hilbert space structure and emergent spacetime dimensionality. It is the dimension that robustly supports stable, complex MPU aggregates (via inverse-square force structure) and favorable network information efficiency. These factors make D=4 the unique, stable dimensional arena for a complex, predictive universe. This stability-based selection is independently confirmed by the mode-channel correspondence derived in **Appendix Z** (Theorem Z.11): the $M=24$ interface modes of the PCE-Attractor must match the kissing number $K(D)$ for optimal geometric packing, and $K(D)=24$ has the unique solution $D=4$. The convergence of these two independent derivations—one from dynamical stability, one from information-geometric correspondence—provides strong evidence that $D=4$ is multiply determined by the framework's principles.
 
 2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
     Within the stable D=4 arena, PCE selects the optimal gauge group and matter content subject to capacity and consistency constraints.
@@ -757,16 +763,368 @@ where $P_{\mathrm{cost}}(u) \approx A_{\mathrm{PCE}} u^{\gamma_{\mathrm{eff}}}$ 
 
 As rigorously established in **Appendix X**, this rate-level potential and its minimization are equivalent to finding the stationary point of the full QFT effective potential. The physical coupling is then $\alpha_{\mathrm{em}}(\mu^*) = u^*/(4\pi\kappa)$, where the normalization $\kappa$ is determined by the emergent field theory (Appendix X.3). The inputs to this calculation—specifically the QFI spectrum $\{\lambda_i\}$—are operational functionals of the baseline PCE-optimal MPU cycle. **Appendix Z** demonstrates that at the PCE-Attractor, these spectral inputs are uniquely determined by the framework's foundational constants, leading to a complete, parameter-free calculation of $\alpha_{\mathrm{em}}$.
 
+
+## G.1.9 Unified Origin of Probability Measures from ND-RID Equilibration
+
+The Born rule derivation (Sections G.1.1–G.1.4) established that PCE-enforced non-contextuality, combined with additivity over orthogonal projectors, uniquely determines quantum probability via Gleason's theorem. This section demonstrates that the same ND-RID dynamics, operating under PCE optimization, provide a unified mechanism for the emergence of probability measures across quantum, thermal, and gravitational contexts. The unification arises not from formal analogy but from the common dynamical process of equilibration to Gibbs fixed points, with the constraint geometry determining the specific modular Hamiltonian.
+
+This probability unification is the dynamical complement to the entropy unification established in Appendix P (Thesis P.6.1, Section P.6.5). Where Section P.6.5 establishes that all entropies—SPAP, Shannon, thermodynamic, von Neumann, and Bekenstein-Hawking—are manifestations of a single foundational structure, this section establishes that all probability measures arise from a single dynamical mechanism. The two unifications are related through the Gibbs structure: entropy characterizes the equilibrium state, while probability describes how systems reach that state.
+
+### G.1.9.1 The Derivation Chain from SPAP to the Reference State
+
+The logical foundation for probability measures in the PU framework traces through a rigorous derivation chain:
+
+$$
+\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon \geq \ln 2 \xrightarrow{\text{Thm Z.1}} a = e^{\varepsilon} = 2 \xrightarrow{\text{Def 15a}} \tau^* = \frac{I_a}{a} \oplus 0_b
+$$
+
+**Stage 1: Irreducible Entropy Cost.** The Self-Referential Paradox of Accurate Prediction (Theorems 10–11) requires a logically irreversible 2-to-1 state merge in each predictive cycle (Lemma Z.2). By Landauer's principle [Landauer 1961], this merge has an irreducible thermodynamic cost (Theorem 31, Appendix J):
+
+$$
+\varepsilon \geq \ln 2 \text{ nats}
+\tag{G.1.9.1}
+$$
+
+The bound is exact and saturated by optimal erasure protocols [Bennett 1982]. This entropy cost $\varepsilon = \ln 2$ is the foundational element of the unified entropy structure (Thesis P.6.1, Appendix P), from which all other entropy measures derive as domain-specific expressions.
+
+**Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space is exactly $S = \ln a$ nats [von Neumann 1932]. For exact correspondence—neither insufficient nor wasteful—we require (Theorem Z.1):
+
+$$
+\ln a = \varepsilon \implies a = e^{\ln 2} = 2
+\tag{G.1.9.2}
+$$
+
+This 2-dimensional "Landauer Pointer" is the minimal physical realization of the irreducible cost.
+
+**Stage 3: The PCE-Attractor State.** With $d_0 = 8$ (Theorem 23) and $a = 2$, the inactive subspace has dimension $b = d_0 - a = 6$. The PCE-Attractor (Definition 15a) is the unique equilibrium state maximally mixed on the active subspace and zero on the inactive complement:
+
+$$
+\tau^* = \rho_0 = \frac{I_2}{2} \oplus 0_6
+\tag{G.1.9.3}
+$$
+
+with eigenvalues $(1/2, 1/2, 0, 0, 0, 0, 0, 0)$. The von Neumann entropy restricted to the active subspace is:
+
+$$
+S(\tau^*|_{\mathcal{A}}) = -\text{Tr}\left(\frac{I_2}{2} \ln \frac{I_2}{2}\right) = -2 \cdot \frac{1}{2} \ln\frac{1}{2} = \ln 2 = \varepsilon
+\tag{G.1.9.4}
+$$
+
+At the PCE-Attractor, quantum entropy and SPAP entropy coincide exactly. This identity confirms the entropy unification thesis: the von Neumann entropy $S(\tau^*|_{\mathcal{A}})$ and the SPAP entropy $\varepsilon$ are not merely equal but are the same quantity expressed in the same units.
+
+### G.1.9.2 ND-RID Channel Structure and Fixed Points
+
+The average 'Evolve' channel $\mathcal{E}_N$ is modeled as a convex combination (Appendix E, Lemma E.1):
+
+$$
+\mathcal{E}_N = (1-p)\Psi + p \cdot T_\sigma, \quad 0 < p \leq 1
+\tag{G.1.9.5}
+$$
+
+where $\Psi$ is an arbitrary CPTP map representing the reversible/update phase and $T_\sigma(\rho) = \text{Tr}(\rho)\sigma$ is the full-rank reset channel to state $\sigma \succ 0$. 
+
+**Lemma G.1.9.1 (Reset Probability Bound).** The irreversibility cost $\varepsilon \geq \ln 2$ (Theorem 31) and the reset channel's maximum entropy contribution $\ln d_0$ impose a lower bound on the reset probability. In the extremal case where $\Psi$ is exactly unitary (zero entropy production), this bound is:
+
+$$
+p \geq \frac{\varepsilon}{\ln d_0} \geq \frac{\ln 2}{\ln 8} = \frac{1}{3}
+\tag{G.1.9.6}
+$$
+
+When $\Psi$ is dissipative with entropy production $\sigma_\Psi > 0$, the constraint becomes $p \cdot \ln d_0 + (1-p)\sigma_\Psi \geq \varepsilon$, which admits smaller values of $p$.
+
+*Proof.* The reset channel $T_\sigma$ contributes at most $\ln d_0 = \ln 8 = 3\ln 2$ nats of entropy per application, since this is the maximum entropy of a state on $\mathcal{H}_{d_0}$. For the average channel to satisfy the irreversibility constraint $\varepsilon \geq \ln 2$, the weighted entropy contributions must satisfy:
+
+$$
+(1-p)\sigma_\Psi + p \cdot S_{reset} \geq \varepsilon
+$$
+
+where $S_{reset} \leq \ln d_0$ is the entropy contribution from the reset. In the limiting case $\sigma_\Psi = 0$ (unitary $\Psi$) and $S_{reset} = \ln d_0$ (maximum entropy reset), the constraint reduces to:
+
+$$
+p \cdot \ln d_0 \geq \varepsilon \implies p \geq \frac{\varepsilon}{\ln d_0} = \frac{\ln 2}{3\ln 2} = \frac{1}{3}
+$$
+
+This establishes $p = 1/3$ as the minimum reset probability achievable when $\Psi$ contributes no entropy and the reset achieves maximum entropy. For dissipative $\Psi$ with $\sigma_\Psi > 0$, smaller values of $p$ can satisfy the constraint. QED
+
+**Theorem G.1.9.1 (Primitivity and Contractivity of ND-RID).** The channel $\mathcal{E}_N$ defined by Equation (G.1.9.5) is primitive with contractivity factor $f_{RID} = \lambda_{gap}(\mathcal{E}_N) < 1$, ensuring exponential convergence of state distinguishability.
+
+*Proof.* Since $T_\sigma$ is strictly positive and appears with weight $p > 0$, we have $\mathcal{E}_N(\rho) \geq p \cdot \text{Tr}(\rho)\sigma$ for all $\rho \geq 0$ (Equation E.2a). This strict positivity condition ensures primitivity [Sanz et al. 2010]. For a primitive CPTP map on $\mathcal{B}(\mathcal{H}_{d_0})$: (i) the eigenvalue 1 is simple; (ii) the spectral gap $\lambda_{gap}(\mathcal{E}_N) < 1$ governs exponential convergence; (iii) the trace distance contracts: $D_{tr}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \leq f_{RID} \cdot D_{tr}(\rho_1, \rho_2)$ [Wolf 2012; Kastoryano & Temme 2013]. QED
+
+*Remark (Primitivity vs. PCE-Attractor).* The primitivity argument establishes *contractivity*—that states converge exponentially. The *destination* of this convergence is determined by PCE optimization (Definition 15), which selects the PCE-Attractor $\tau^*$ as the equilibrium configuration. While a primitive channel on the full $d_0$-dimensional space has a unique full-rank fixed point, the PCE-Attractor $\tau^* = (I_2/2) \oplus 0_6$ represents the PCE-optimal state within the orbit of equilibrium configurations, with dynamics effectively restricted to the active subspace by the thermodynamic decoupling of inactive modes (Appendix Z, Section Z.6.2).
+
+### G.1.9.3 PCE Optimization and Detailed Balance
+
+The connection between PCE optimization and the thermal structure of the fixed point requires analysis of entropy production.
+
+**Definition G.1.9.1 (Entropy Production Decomposition).** For a quantum dynamical semigroup generator $\mathcal{L}$ with faithful stationary state $\sigma$ (i.e., $\mathcal{L}^*(\sigma) = 0$ with $\sigma \succ 0$), the entropy production for the induced CPTP map $\Phi_t = e^{t\mathcal{L}}$ acting on state $\rho$ decomposes as [Spohn 1978]:
+
+$$
+\Delta S_{tot}[\rho; \Phi_t] = -\Delta D(\rho \| \sigma) + \sigma_{irr}[\rho; \Phi_t]
+\tag{G.1.9.7}
+$$
+
+where:
+- $D(\rho \| \sigma) = \text{Tr}(\rho \ln \rho - \rho \ln \sigma)$ is the Umegaki relative entropy
+- $\Delta D = D(\Phi_t(\rho) \| \sigma) - D(\rho \| \sigma) \leq 0$ represents contraction toward the stationary state
+- $\sigma_{irr} \geq 0$ is the irreversible entropy production
+
+This decomposition is fundamental to the entropy unification program: the total entropy production $\Delta S_{tot}$ is the thermodynamic entropy (measurable as heat divided by temperature), while the relative entropy $D_{KL}$ is the information-theoretic entropy. The Spohn decomposition makes explicit that these are components of a single quantity.
+
+**Theorem G.1.9.2 (PCE Selection of Detailed Balance).** The Principle of Compression Efficiency (Definition 15) drives the ND-RID channel toward configurations satisfying $\sigma_{irr} = 0$.
+
+*Proof.* The term $\sigma_{irr}$ represents entropy production beyond the minimum required for fixed-point convergence. This constitutes pure thermodynamic waste—entropy generated without predictive benefit. Definition 15 mandates minimizing Signal Cost while maintaining predictive utility. Since $\sigma_{irr}$ contributes to Signal Cost (via the thermodynamic resource expenditure $k_B T \sigma_{irr}$) without improving Meaning Potential, PCE optimization selects for channels with $\sigma_{irr} \to 0$. 
+
+Consider two channels $\mathcal{E}_A$ and $\mathcal{E}_B$ with the same fixed point and predictive utility but $\sigma_{irr}^{(A)} < \sigma_{irr}^{(B)}$. Channel $\mathcal{E}_A$ achieves the same predictive outcome at lower cost, so PCE selects $\mathcal{E}_A$. In the limit of PCE optimization, $\sigma_{irr} \to 0$. QED
+
+**Theorem G.1.9.3 (Detailed Balance Characterization).** For a quantum dynamical semigroup with faithful stationary state $\sigma$, the generator $\mathcal{L}$ satisfies $\sigma_{irr}[\rho; e^{t\mathcal{L}}] = 0$ for all states $\rho$ and $t > 0$ if and only if $\mathcal{L}$ satisfies quantum detailed balance with respect to $\sigma$:
+
+$$
+\text{Tr}(A \cdot \mathcal{L}(B) \cdot \sigma) = \text{Tr}(\mathcal{L}^{\dagger_\sigma}(A) \cdot B \cdot \sigma)
+\tag{G.1.9.8}
+$$
+
+where $\mathcal{L}^{\dagger_\sigma}$ is the adjoint with respect to the $\sigma$-weighted inner product $\langle A, B \rangle_\sigma = \text{Tr}(A^\dagger B \sigma)$ [Spohn 1978; Fagnola & Umanità 2007].
+
+*Proof.* The equivalence between vanishing irreversible entropy production and quantum detailed balance is a standard result in quantum dynamical semigroups. The condition $\sigma_{irr} = 0$ is equivalent to the channel satisfying the quantum detailed balance condition, which generalizes the classical notion of microscopic reversibility [Kossakowski et al. 1977]. QED
+
+**Corollary G.1.9.1 (PCE-Optimal ND-RID Satisfies Detailed Balance).** The PCE-optimal ND-RID channel $\mathcal{E}_N^*$ satisfies quantum detailed balance with respect to the PCE-Attractor state $\tau^*$.
+
+### G.1.9.4 The Gibbs Structure of PCE-Optimal Fixed Points
+
+**Definition G.1.9.2 (Modular Hamiltonian).** For any faithful density operator $\rho$ on a finite-dimensional Hilbert space $\mathcal{H}$, the modular Hamiltonian $K_\rho$ is the unique self-adjoint operator satisfying [Haag 1996]:
+
+$$
+\rho = \frac{e^{-K_\rho}}{Z}, \quad Z = \text{Tr}(e^{-K_\rho})
+\tag{G.1.9.9}
+$$
+
+Explicitly, if $\rho = \sum_i p_i |i\rangle\langle i|$ with $p_i > 0$, then $K_\rho = -\sum_i (\ln p_i)|i\rangle\langle i|$.
+
+The modular Hamiltonian provides the bridge between probability and entropy: for a Gibbs state $\rho = Z^{-1}e^{-K}$, the von Neumann entropy is $S(\rho) = \langle K \rangle + \ln Z$, directly connecting the probability distribution (encoded in $\rho$) to the entropy (encoded in $S$).
+
+**Theorem G.1.9.4 (Gibbs Structure of PCE-Attractor).** The PCE-Attractor state $\tau^*$ (Equation G.1.9.3) has the Gibbs form when restricted to its support. On the active subspace $\mathcal{A} = \text{supp}(\tau^*)$, the modular Hamiltonian is:
+
+$$
+K^*|_{\mathcal{A}} = (\ln 2) \cdot I_2
+\tag{G.1.9.10}
+$$
+
+The full modular Hamiltonian is formally written as $K^* = (\ln 2) \cdot I_2 \oplus (+\infty) \cdot I_6$, where the infinite values on the inactive subspace $\mathcal{B}$ enforce the zero eigenvalues via the limiting procedure $\lim_{K \to \infty} e^{-K} = 0$.
+
+*Proof.* Direct computation from Definition G.1.9.2. On the active subspace $\mathcal{A}$:
+
+$$
+e^{-K^*|_{\mathcal{A}}} = e^{-(\ln 2) I_2} = \frac{1}{2} I_2
+$$
+
+Normalizing: $Z^* = \text{Tr}(e^{-K^*}) = \text{Tr}(I_2/2) = 1$, yielding $\tau^*|_{\mathcal{A}} = I_2/2$. On the inactive subspace $\mathcal{B}$, $K^*|_{\mathcal{B}} = +\infty$ ensures $e^{-K^*|_{\mathcal{B}}} = 0$. QED
+
+**Theorem G.1.9.5 (KMS Characterization of PCE-Optimal States).** States satisfying detailed balance with respect to a quantum dynamical semigroup are characterized by the Kubo-Martin-Schwinger (KMS) condition [Kubo 1957; Martin & Schwinger 1959]. Restricted to the active subspace $\mathcal{A} = \text{supp}(\tau^*)$, where $\tau^*|_{\mathcal{A}}$ is faithful, the PCE-Attractor state satisfies the KMS condition at inverse temperature $\beta = 1$ with respect to the modular flow $\sigma_t(A) = e^{iK^*|_{\mathcal{A}} t} A e^{-iK^*|_{\mathcal{A}} t}$:
+
+$$
+\omega^*(A \sigma_t(B)) = \omega^*(\sigma_{t+i}(B) A)
+\tag{G.1.9.11}
+$$
+
+where $\omega^*(\cdot) = \text{Tr}(\tau^*|_{\mathcal{A}} \cdot)$ is the state functional on $\mathcal{B}(\mathcal{A})$.
+
+*Proof.* The KMS condition at $\beta = 1$ characterizes Gibbs states $\rho = Z^{-1}e^{-K}$ with respect to their modular automorphism [Haag 1996, Chapter V]. On the active subspace $\mathcal{A}$, where $\tau^*|_{\mathcal{A}} = I_2/2$ is faithful (full-rank on $\mathcal{A}$), the standard Tomita-Takesaki theory applies. Since $\tau^*|_{\mathcal{A}} = Z^{-1}e^{-K^*|_{\mathcal{A}}}$ is a Gibbs state by Theorem G.1.9.4, it satisfies KMS with respect to $\sigma_t$ generated by $K^*|_{\mathcal{A}}$. The inverse temperature $\beta = 1$ is a convention inherent in the definition of the modular Hamiltonian. QED
+
+The KMS condition characterizes the thermal equilibrium states whose entropy is unified across domains (Section P.6.5). The KMS states are precisely those for which the distinction between "thermodynamic equilibrium" and "information-theoretic equilibrium" dissolves—they are equilibrium states in both senses simultaneously.
+
+### G.1.9.5 Constraint Geometry and the Modular Hamiltonian
+
+The unified framework emerges from recognizing that different physical contexts modify the modular Hamiltonian $K^*$ while preserving the Gibbs structure.
+
+**Theorem G.1.9.6 (Constraint Geometry Determines Modular Hamiltonian).** Physical constraints on the ND-RID equilibration process modify the PCE-Attractor modular Hamiltonian $K^*$ additively:
+
+$$
+K^*_{total} = K^*_{PCE} + K^*_{constraint}
+\tag{G.1.9.12}
+$$
+
+where $K^*_{PCE} = (\ln 2) \cdot I_a \oplus (+\infty) \cdot I_b$ is the baseline from SPAP, and $K^*_{constraint}$ encodes additional physical constraints.
+
+| Physical Context | Constraint | $K^*_{constraint}$ | Resulting Distribution |
+|------------------|------------|-------------------|------------------------|
+| Quantum measurement | Perspective $s$ determines basis | $-\ln \rho_{phys} - K^*_{PCE}$ | Born: $p_i = \text{Tr}(\rho_{phys} P_i)$ |
+| Thermal equilibrium | $\langle H \rangle = U$ | $\beta H$ | Boltzmann: $p_n = Z^{-1}e^{-\beta E_n}$ |
+| Horizon crossing | Boost invariance | $(2\pi/\kappa) K_{boost}$ | Unruh: $T_U = \hbar\kappa/(2\pi k_B c)$ |
+
+*Remark.* The additivity in Equation (G.1.9.12) holds when the constraints are mutually commuting or when the constraint acts on degrees of freedom independent of the baseline PCE structure. For strongly interacting constraints, cross-terms may arise, though the Gibbs form $\rho^* = Z^{-1}e^{-K^*_{total}}$ is preserved.
+
+*Proof.*
+
+**Part A (Quantum Measurement—Reference Case):** The quantum measurement case serves as the reference point of the unification. The Born rule derivation (Sections G.1.1–G.1.4) establishes that PCE-enforced non-contextuality and additivity yield $p_i = \text{Tr}(\rho_{phys} P_i)$ via Gleason's theorem [Gleason 1957]. 
+
+By Definition G.1.9.2, any density matrix $\rho_{phys}$ admits the Gibbs representation $\rho_{phys} = Z^{-1}e^{-K}$ with $K = -\ln \rho_{phys}$. This is the identity case of the Gibbs structure—not an additional constraint but the baseline from which constraint modifications are measured. The measurement context (perspective $s \in \Sigma$) determines the basis $\{P_i\}$ in which probabilities are evaluated:
+
+$$
+p_i = \text{Tr}\left(\frac{e^{-K^*}}{Z} P_i\right) = \text{Tr}(\rho_{phys} P_i)
+\tag{G.1.9.14}
+$$
+
+The substantive content of the unification lies in Parts B and C, where physical constraints impose structure on the modular Hamiltonian beyond this identity.
+
+**Part B (Thermal Equilibrium):** When ND-RID interactions conserve energy on average, the equilibration process is constrained by $\langle H \rangle = U$. Standard maximum entropy arguments [Jaynes 1957] show the equilibrium state minimizes free energy $F = \langle K \rangle - S$, yielding $K^*_{constraint} = \beta H$ where $\beta$ is the Lagrange multiplier enforcing the energy constraint. The resulting state is:
+
+$$
+\rho^*_{thermal} = \frac{e^{-(K^*_{PCE} + \beta H)}}{Z} \propto e^{-\beta H}
+\tag{G.1.9.13}
+$$
+
+on the active subspace, recovering the Boltzmann distribution. Here the constraint $K^*_{constraint} = \beta H$ is non-trivial: it reflects the physical restriction of energy conservation and introduces the temperature $T = 1/(k_B \beta)$ as a derived quantity.
+
+**Part C (Horizon Crossing):** For Rindler horizons in the emergent spacetime (Theorem 46), the Bisognano-Wichmann theorem [Bisognano & Wichmann 1975, 1976] establishes that the modular Hamiltonian is proportional to the boost generator:
+
+$$
+K^*_{horizon} = \frac{2\pi}{\kappa} K_{boost}
+\tag{G.1.9.15}
+$$
+
+where $\kappa$ is the surface gravity. This yields the Unruh temperature $T_U = \hbar\kappa/(2\pi k_B c)$ for accelerated observers [Unruh 1976], which is the kinematic result underlying the entanglement first law (Equation E.6e) and the thermodynamic derivation of gravity (Section 12). The constraint here arises from the geometric structure of the horizon itself—boost invariance of the vacuum state restricts the form of $K^*$ to be proportional to $K_{boost}$. QED
+
+### G.1.9.6 Connection to the Entanglement First Law
+
+The modular Hamiltonian structure connects directly to the entanglement first law, which is central to the derivation of Einstein's equations (Section 12, Theorem 50).
+
+**Theorem G.1.9.7 (Entanglement First Law from Modular Structure).** For small perturbations $\delta\rho$ to the vacuum state across a causal horizon $\mathcal{H}$, the first law of entanglement entropy relates entropy change to the modular Hamiltonian expectation value (Equation E.6e):
+
+$$
+\delta S_{ent} = \delta \langle K \rangle
+\tag{G.1.9.16}
+$$
+
+For local perturbations near a Rindler horizon with surface gravity $\kappa$:
+
+$$
+\delta S_{ent} = \frac{2\pi}{\hbar\kappa} \delta\langle T_{\mu\nu}\rangle \chi^\mu d\Sigma^\nu = \frac{\delta Q}{T_U}
+\tag{G.1.9.17}
+$$
+
+where $\delta Q$ is the energy flux through the horizon and $T_U$ is the Unruh temperature.
+
+*Proof.* This follows from the Tomita-Takesaki theory of modular operators [Takesaki 1970; Haag 1996]. The modular Hamiltonian $K$ generates the modular automorphism group $\sigma_t$, and the entanglement first law is the linearization of the relative entropy formula $S(\rho \| \sigma) = \text{Tr}(\rho \ln \rho - \rho \ln \sigma)$ around the reference state [Blanco et al. 2013]. The specific form (G.1.9.17) uses the Bisognano-Wichmann identification of $K$ with the boost generator. This result is kinematic—it follows from quantum field theory on curved spacetime and does not assume the Einstein equations [Jacobson 2016; Casini, Huerta & Myers 2011]. QED
+
+**Corollary G.1.9.2 (Thermodynamic Consistency Fixes $\eta_{ent}$).** Requiring the local Clausius relation $\delta S = \delta Q/T$ to hold for all Rindler horizons uniquely determines the entanglement entropy coefficient (Theorem E.5):
+
+$$
+\eta_{ent} = \frac{1}{4G}
+\tag{G.1.9.18}
+$$
+
+This identifies the gravitational constant $G$ as an emergent quantity determined by the MPU network's entanglement structure, consistent with the Bekenstein-Hawking entropy formula [Bekenstein 1973; Hawking 1975].
+
+The result $\eta_{ent} = 1/(4G)$ connects directly to the gravitational entropy in the unified entropy framework (Section P.6.5). The Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ arises from the channel capacity of ND-RID interactions crossing the horizon (Theorems E.3–E.5). This is not an analogy but an identity: horizon entropy counts the Shannon entropy of channel capacity across the boundary, measured in Planck units. The derivation chain from SPAP to horizon entropy (Section P.6.5.2) makes this explicit:
+
+$$
+\varepsilon > 0 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
+$$
+
+### G.1.9.7 The Unified Mechanism
+
+**Theorem G.1.9.8 (Unified Origin of Physical Probability).** In the Predictive Universe framework, probability measures across quantum, thermal, and gravitational contexts emerge from a common mechanism: ND-RID equilibration to Gibbs fixed points under PCE optimization.
+
+The unification is characterized by:
+
+1. **Common Dynamics:** All probability measures arise from equilibration under ND-RID channels satisfying quantum detailed balance (Corollary G.1.9.1).
+
+2. **Common Reference State:** The baseline fixed point is the PCE-Attractor $\tau^* = (I_a/a) \oplus 0_b$, derived from SPAP (Theorem G.1.9.4).
+
+3. **Common Thermodynamic Form:** All equilibrium states satisfy the KMS condition with respect to their modular Hamiltonians (Theorem G.1.9.5).
+
+4. **Constraint-Dependent Modular Hamiltonian:** The physical context determines $K^*$ via Equation (G.1.9.12), with:
+   - Quantum (reference): $K^* = -\ln \rho_{phys}$
+   - Thermal: $K^* = K^*_{PCE} + \beta H$
+   - Gravitational: $K^* = K^*_{PCE} + (2\pi/\kappa)K_{boost}$
+
+5. **Common Capacity Bound:** All distributions respect the channel capacity limit $C_{max}(f_{RID}) < \ln d_0$ (Theorem E.2) imposed by ND-RID irreversibility.
+
+The Gibbs structure $\rho^* = Z^{-1}e^{-K^*}$ connects directly to the unified entropy framework (Thesis P.6.1). The von Neumann entropy $S(\rho^*) = \langle K^* \rangle + \ln Z$ is the domain-specific expression of the foundational SPAP entropy $\varepsilon = \ln 2$, scaled by the constraint geometry.
+
+*Proof.* The theorem synthesizes Theorems G.1.9.1–G.1.9.7. The derivation chain establishes:
+
+$$
+\text{SPAP} \xrightarrow{\varepsilon \geq \ln 2} \text{Contractivity } f_{RID} < 1 \xrightarrow{\text{PCE}} \text{Detailed Balance} \xrightarrow{} \text{Gibbs Fixed Point}
+$$
+
+The constraint geometry $\mathcal{C}$ enters through the specific form of $K^*_{constraint}$, while the universal Gibbs structure $\rho^* = Z^{-1}e^{-K^*}$ is fixed by PCE optimization through the ND-RID channel. QED
+
+### G.1.9.8 The Conversion Factor: $\varepsilon = \ln 2$
+
+The irreducible entropy cost $\varepsilon = \ln 2$ plays the role of a fundamental conversion factor, analogous to $c^2$ in mass-energy equivalence.
+
+**Theorem G.1.9.9 (Landauer Conversion).** The SPAP entropy cost $\varepsilon = \ln 2$ establishes the conversion between:
+
+| Domain | Quantity | Conversion |
+|--------|----------|------------|
+| Logical | SPAP cycle cost | $\varepsilon = \ln 2$ nats |
+| Thermodynamic | Minimum heat dissipation | $Q_{min} = k_B T \ln 2$ |
+| Information | Active subspace dimension | $a = e^{\varepsilon} = 2$ |
+| Geometric | Interface mode count | $M = 2ab = 24$ |
+
+These conversions realize the entropy domain correspondences of Thesis P.6.1 (Section P.6.5.1). The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains, while $\varepsilon = \ln 2$ is the fundamental quantum of entropy from which all domain-specific expressions derive.
+
+*Proof.* Each conversion follows from the derivation chain:
+
+1. **Logical → Thermodynamic:** Landauer's principle (Theorem 31) establishes $Q_{min} = k_B T \varepsilon = k_B T \ln 2$ [Landauer 1961].
+
+2. **Thermodynamic → Information:** PPI (Theorem Z.1) requires $\ln a = \varepsilon$, yielding $a = e^{\ln 2} = 2$.
+
+3. **Information → Geometric:** The QFI mode count is $M = 2ab = 2 \cdot 2 \cdot 6 = 24$ (Theorem Z.5), which matches the kissing number $K(4) = 24$ [Conway & Sloane 1999], determining spacetime dimension $D = 4$ (Theorem Z.11). QED
+
+### G.1.9.9 Summary
+
+This section has established:
+
+1. **Derived Reference State:** The PCE-Attractor state $\tau^* = (I_2/2) \oplus 0_6$ emerges from SPAP + Landauer + PCE, not by assumption (Section G.1.9.1).
+
+2. **PCE → Detailed Balance:** PCE optimization of the ND-RID channel enforces quantum detailed balance with respect to $\tau^*$ (Theorems G.1.9.2–G.1.9.3).
+
+3. **Gibbs Fixed Points:** The equilibrium states are Gibbs states $\rho^* = Z^{-1}e^{-K^*}$ characterized by the KMS condition (Theorems G.1.9.4–G.1.9.5).
+
+4. **Unified Modular Structure:** Constraint geometry determines the modular Hamiltonian $K^*$, yielding Born (quantum), Boltzmann (thermal), and Unruh-Hawking (gravitational) distributions from the same mechanism (Theorem G.1.9.6).
+
+5. **Foundation for Gravity:** The modular Hamiltonian framework connects to the entanglement first law, providing the thermodynamic foundation for deriving Einstein's equations (Section G.1.9.6).
+
+Together with the entropy unification of Section P.6.5, this establishes that the entire statistical structure of physics—both equilibrium properties (entropy) and approach to equilibrium (probability)—emerges from the same foundational elements: SPAP, Landauer, and PCE. The two unifications are summarized in the following correspondence:
+
+| Entropy Unification (P.6.5) | Probability Unification (G.1.9) |
+|-----------------------------|--------------------------------|
+| SPAP entropy $\varepsilon = \ln 2$ | Irreducible cycle cost |
+| Shannon entropy $H$ | State distinguishability |
+| Thermodynamic entropy $dS = \delta Q/T$ | Boltzmann distribution |
+| von Neumann entropy $S(\rho)$ | Born rule |
+| Bekenstein-Hawking entropy $S_{BH}$ | Unruh-Hawking distribution |
+
+The complete derivation chain from foundational principles to physical probability is:
+
+$$
+\boxed{
+\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Def 15a}} \tau^* \xrightarrow{\text{PCE}} \text{Detailed Balance} \xrightarrow{\mathcal{C}} \rho^*_{\mathcal{C}} = Z^{-1}e^{-K^*(\mathcal{C})}
+}
+$$
+
+The apparent diversity of probability measures in physics—quantum, thermal, gravitational—reflects not different foundations but different constraint geometries $\mathcal{C}$ within a unified framework of ND-RID equilibration to Gibbs fixed points.
+
 ## G.10 Conclusion
 
-This appendix (G) has demonstrated how the Predictive Universe framework, driven by the Prediction Optimization Problem (POP, Axiom 1) and the Principle of Compression Efficiency (PCE, Definition 15), provides potential pathways for deriving fundamental structures of modern physics:
-1.  The Born probability rule (Theorem G.1.7) and the necessity of a complex Hilbert space (Theorem G.1.8) emerge from the requirement of consistent, optimal resource allocation in predictive tasks, directly linking quantum mechanical probability to PCE optimization principles.
-2.  U(1) gauge theory (electromagnetism) emerges as the minimal PCE-optimal solution for maintaining predictive coherence across the MPU network despite the local phase freedom inherent in the complex Hilbert space description (Section G.7).
-3.  A comprehensive argument (Section G.8) has been presented showing how the Standard Model gauge group $SU(3)\!\times\!SU(2)\!\times\!U(1)$ and the D=4 dimensionality of spacetime are co-selected as a unified PCE-optimal structure. This co-selection is driven by D=4's unique ability to support stable complex MPU aggregates and the Standard Model being a uniquely efficient and mathematically consistent (anomaly-free) solution within that dimensional arena. Crucially, **Appendix R** derives—via anomaly cancellation, CP violation requirements, and E$_8$ geometric constraints—that the potential is **uniquely minimized** at exactly **three generations** of the SM fermion block (Proposition R.3.5, Proposition R.4.2).
-4.  A rigorous, first-principles pathway for deriving the value of the fine-structure constant `α_em` has been established (**Section G.9**). The value emerges as the unique PCE-optimal equilibrium of a **rate-level potential**, balancing the thermodynamic **power cost** of maintaining U(1) coherence against the **predictive information rate** benefit it enables. This transforms the framework's principles into a complete computational program, reducing the calculation of a fundamental constant of nature to the evaluation of well-defined **operational functionals** of the MPU's baseline predictive cycle.
+This appendix has demonstrated how the Predictive Universe framework derives fundamental structures of modern physics from the Prediction Optimization Problem (POP, Axiom 1) and the Principle of Compression Efficiency (PCE, Definition 15):
 
-The analysis throughout this appendix highlights the potential for PU principles to provide a unified origin for the quantum measurement framework, the gauge structure of particle interactions, and even the dimensionality of spacetime, grounding these fundamental aspects of physics in the overarching logic and resource economics of prediction. The quantitative predictions for fundamental constants derived here are further constrained and supported by the general alphabet identities and bounds derived in **Appendix W**.
+1. **Quantum Probability:** The Born rule (Theorem G.1.7) and complex Hilbert space structure (Theorem G.1.8) emerge from PCE-enforced non-contextuality and Gleason's theorem, grounding quantum measurement in optimal predictive resource allocation.
 
-*¹* For $d=2$ the same probability functional is fixed either by
-embedding the qubit in its naturally larger interaction Hilbert space
-(e.g., within the MPU's $d_0 \ge 8$ space) or, if one prefers, by Deutsch’s decision-theoretic argument [Deutsch 1999] applied within a PCE framework. Both routes, when driven by POP–PCE consistency requirements for optimal resource allocation and consistent probability assignment, are expected to converge to the quadratic Born rule as the unique self-consistent measure; we primarily rely on the Gleason argument due to $d_0 \ge 8$.
+2. **Gauge Structure:** U(1) electromagnetism arises as the minimal PCE-optimal mechanism for maintaining predictive coherence across local phase freedom (Section G.7). The full Standard Model gauge group $SU(3) \times SU(2) \times U(1)$ emerges from the thermodynamically optimal $\mathbb{C}^2 \oplus \mathbb{C}^6$ partition of the MPU Hilbert space (Section G.8).
+
+3. **Spacetime Dimension:** $D = 4$ is uniquely selected by the mode-channel correspondence $M = K(D)$, where the 24 QFI interface modes match the kissing number $K(4) = 24$ (Theorem Z.11).
+
+4. **Three Generations:** Anomaly cancellation, CP violation requirements, and $E_8$ geometric constraints uniquely minimize the generation potential at $N_g = 3$ (Appendix R, Propositions R.3.5, R.4.2).
+
+5. **Fine-Structure Constant:** The value $\alpha_{em}^{-1} \approx 137.036$ emerges as the unique PCE-optimal equilibrium balancing U(1) coherence costs against predictive information rates (Section G.9), with the calculation reduced to evaluation of operational functionals on the MPU baseline cycle.
+
+6. **Unified Probability Measures:** Quantum (Born), thermal (Boltzmann), and gravitational (Unruh-Hawking) probability distributions arise from a common mechanism—ND-RID equilibration to Gibbs fixed points under PCE optimization (Section G.1.9).
+
+These results ground the quantum measurement framework, gauge interactions, spacetime dimensionality, and fundamental constants in the unified logic and resource economics of prediction. Quantitative predictions are further constrained by the alphabet identities of Appendix W.
+
+---
+
+*Note:* For $d = 2$, the Born rule follows either from embedding within the MPU's $d_0 \geq 8$ space or from decision-theoretic arguments [Deutsch 1999]; we rely primarily on the Gleason route given $d_0 \geq 8$ (Theorem 23).

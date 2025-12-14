@@ -33,14 +33,18 @@
 *   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853.
 *   Besse, A. L. (1987). *Einstein Manifolds*. Springer.
 *   Bilal, A. (2008). *Lectures on Anomalies*. arXiv:0802.0634 [hep-th].
+*   Bisognano, J. J., & Wichmann, E. H. (1975). On the duality condition for a Hermitian scalar field. *Journal of Mathematical Physics*, *16*(4), 985–1007. DOI: 10.1063/1.522605
+*   Bisognano, J. J., & Wichmann, E. H. (1976). On the duality condition for quantum fields. *Journal of Mathematical Physics*, *17*(3), 303–321. DOI: 10.1063/1.522898
 *   Blackiston, D., Lederer, E., Kriegman, S., Garnier, S., Bongard, J., & Levin, M. (2021). A cellular platform for the development of synthetic living machines. *Science Robotics*, *6*(52).
+*   Blanco, D. D., Casini, H., Hung, L.-Y., & Myers, R. C. (2013). Relative entropy and holography. *Journal of High Energy Physics*, *2013*(8), 60. DOI: 10.1007/JHEP08(2013)060
 *   Bostrom, N. (2003). Are You Living in a Computer Simulation? *Philosophical Quarterly*, *53*(211), 243–255. DOI: 10.1111/1467-9213.00309
 *   Bong, K.-W., Utreras-Alarcón, A., Ghafari, F., Liang, Y.-C., Tischler, N., Cavalcanti, E. G., Pryde, G. J., & Wiseman, H. M. (2020). A strong no-go theorem on the Wigner's friend paradox. *Nature Physics*, *16*(12), 1199–1205. DOI: 10.1038/s41567-020-0990-x
 *   Born, M. (1926). Zur Quantenmechanik der Stoßvorgänge. *Zeitschrift für Physik*, *37*, 863–867. DOI: 10.1007/BF01397477
 *   Bott, R., & Tu, L. W. (1982). *Differential Forms in Algebraic Topology*. Springer (Graduate Texts in Mathematics, 82). DOI: 10.1007/978-1-4757-3951-0
 *   Bottou, L., Curtis, F. E., & Nocedal, J. (2018). Optimization methods for large-scale machine learning. *SIAM Review*, *60*(2), 223–311. DOI: 10.1137/16M1080173 
 *   Boyd, S., & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.
-*   Bratteli, O., & Robinson, D. W. (1997). *Operator Algebras and Quantum Statistical Mechanics: Equilibrium States. Models in Quantum Statistical Mechanics* (2nd ed.). Springer. DOI: 10.1007/978-3-662-03444-6   
+*   Braides, A. (2002). *Γ-convergence for Beginners*. Oxford University Press.
+*   Bratteli, O., & Robinson, D. W. (1997). *Operator Algebras and Quantum Statistical Mechanics: Equilibrium States. Models in Quantum Statistical Mechanics* (2nd ed.). Springer. DOI: 10.1007/978-3-662-03444-6
 *   Breuer, H.-P., & Petruccione, F. (2002). *The Theory of Open Quantum Systems*. Oxford University Press.
 *   Brif, C., Chakrabarti, R., & Rabitz, H. (2010). Control of quantum phenomena: past, present and future. *New Journal of Physics*, *12*(7), 075008.
 *   Brion, M. (2005). Lectures on the geometry of flag varieties. In P. Pragacz (Ed.), *Topics in Cohomological Studies of Algebraic Varieties* (pp. 33–85). Birkhäuser. DOI: 10.1007/3-7643-7342-3_2
@@ -95,7 +99,8 @@
 *   Cross, A. W., DiVincenzo, D. P., & Terhal, B. M. (2009). A comparative code study for quantum fault-tolerance. *Quantum Information & Computation*, *9*(7-8), 541–572. arXiv:0711.1556.
 *   Cronin, A. D., Schmiedmayer, J., & Pritchard, D. E. (2009). Optics and interferometry with atoms and molecules. *Reviews of Modern Physics*, *81*(3), 1051–1129.
 *   Curtis, R. T. (2016). Error-correction and the binary Golay code. *London Mathematical Society Impact150 Stories*, *1*, 51–58.
-*   Dawson, C. M., & Nielsen, M. A. (2006). The Solovay-Kitaev algorithm. *Quantum Information & Computation*, *6*(1), 81–95. DOI: 10.5555/2011679.2011685 
+*   Dal Maso, G. (1993). *An Introduction to Γ-convergence*. Birkhäuser.
+*   Dawson, C. M., & Nielsen, M. A. (2006). The Solovay-Kitaev algorithm. *Quantum Information & Computation*, *6*(1), 81–95. DOI: 10.5555/2011679.2011685
 *   Dicke, R. H. (1954). Coherence in spontaneous radiation processes. *Physical Review*, *93*(1), 99–110.
 *   Deffner, S., & Campbell, S. (2017). Quantum speed limits: from Heisenberg's uncertainty principle to optimal quantum control. *Journal of Physics A: Mathematical and Theoretical*, *50*(45), 453001. DOI: 10.1088/1751-8121/aa8c2f
 *   Degrassi, G., et al. (2012). Higgs mass and vacuum stability in the Standard Model at NNLO. JHEP 08, 098.
@@ -119,9 +124,11 @@
 *   Evans, L. C. (2010). *Partial Differential Equations* (2nd ed.). American Mathematical Society. ISBN: 978-0-8218-4974-3. 
 *   Everett, H. (1957). "Relative State" formulation of quantum mechanics. *Reviews of Modern Physics*, *29*(3), 454–462. DOI: 10.1103/RevModPhys.29.454
 *   Engel, G. S., Calhoun, T. R., Read, E. L., Ahn, T. K., Mančal, T., Cheng, Y. C., ... & Fleming, G. R. (2007). Evidence for wavelike energy transfer through quantum coherence in photosynthetic systems. *Nature*, *446*(7137), 782–786.
+*   Fagnola, F., & Umanità, V. (2007). Generators of detailed balance quantum Markov semigroups. *Infinite Dimensional Analysis, Quantum Probability and Related Topics*, *10*(3), 335–363. DOI: 10.1142/S0219025707002762
 *   Feroz, F., & Hobson, M. P. (2008). Multimodal nested sampling: an efficient and robust alternative to Markov Chain Monte Carlo methods for astronomical data analysis. *Monthly Notices of the Royal Astronomical Society*, *384*(2), 449–463. DOI: 10.1111/j.1365-2966.2007.12353.x
 *   Feroz, F., Hobson, M. P., & Bridges, M. (2009). MultiNest: an efficient and robust Bayesian inference tool for cosmology and particle physics. *Monthly Notices of the Royal Astronomical Society*, *398*(4), 1601–1614. DOI: 10.1111/j.1365-2966.2009.14548.x
 *   Feroz, F., Hobson, M. P., Cameron, E., & Pettitt, A. N. (2019). Importance Nested Sampling and the MultiNest Algorithm. *The Open Journal of Astrophysics*, *2*, 10. DOI: 10.21105/astro.1306.2144
+*   Feynman, R. P., & Hibbs, A. R. (1965). *Quantum Mechanics and Path Integrals*. McGraw-Hill.
 *   Fodor, J. A. (1975). *The Language of Thought*. Harvard University Press.
 *   Fortuin, C. M., Kasteleyn, P. W., & Ginibre, J. (1971). Correlation inequalities on some partially ordered sets. *Communications in Mathematical Physics*, *22*(2), 89–103. DOI: 10.1007/BF01651330 
 *   Fowler, A. G., Mariantoni, M., Martinis, J. M., & Cleland, A. N. (2012). Surface codes: Towards practical large-scale quantum computation. *Physical Review A*, *86*(3), 032324. DOI: 10.1103/PhysRevA.86.032324
@@ -171,6 +178,8 @@
 *   Hayward, S. A. (1994). General laws of black-hole dynamics. *Physical Review D*, *49*(12), 6467–6474. DOI: 10.1103/PhysRevD.49.6467
 *   Heinonen, J., & Koskela, P. (1998). Quasiconformal maps in metric spaces with controlled geometry. *Acta Mathematica*, *181*(1), 1–61. DOI: 10.1007/BF02392747
 *   Heisenberg, W. (1927). Über den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik. *Zeitschrift für Physik*, *43*(3–4), 172–198. DOI: 10.1007/BF01397280
+*   Helgason, S. (1978). *Differential Geometry, Lie Groups, and Symmetric Spaces*. Academic Press.
+*   Helgason, S. (1984). Groups and Geometric Analysis: Integral Geometry, Invariant Differential Operators, and Spherical Functions. Pure and Applied Mathematics, Vol. 113. Academic Press.
 *   Helstrom, C. W. (1976). *Quantum Detection and Estimation Theory*. Academic Press.
 *   Hoeffding, W. (1963). Probability inequalities for sums of bounded random variables. *Journal of the American Statistical Association*, *58*(301), 13–30. DOI: 10.1080/01621459.1963.10500830
 *   Hohwy, J. (2016). The self-evidencing brain. *Noûs*, *50*(2), 259–285. DOI: 10.1111/nous.12062
@@ -191,6 +200,7 @@
 *   Jacobson, T. (1995). Thermodynamics of spacetime: The Einstein equation of state. *Physical Review Letters*, *75*(7), 1260–1263. DOI: 10.1103/PhysRevLett.75.1260
 *   Jacobson, T. (2016). Entanglement equilibrium and the Einstein equation. *Physical Review Letters*, *116*(20), 201101. DOI: 10.1103/PhysRevLett.116.201101 
 *   Jarlskog, C. (1985). Commutator of the Quark Mass Matrices in the Standard Electroweak Model and a Measure of Maximal CP Nonconservation. *Physical Review Letters*, *55*(10), 1039–1042. DOI: 10.1103/PhysRevLett.55.1039
+*   Jaynes, E. T. (1957). Information theory and statistical mechanics. *Physical Review*, *106*(4), 620–630. DOI: 10.1103/PhysRev.106.620
 *   Jech, T. (2003). *Set Theory* (The Third Millennium Edition, revised and expanded). Springer.
 *   Jegerlehner, F. (2008). The running fine-structure constant α(E) via the Adler function. *Nuclear Physics B – Proceedings Supplements*, *181–182*, 135–140. DOI: 10.1016/j.nuclphysbps.2008.09.010
 *   Joos, E., Zeh, H. D., Kiefer, C., Giulini, D. J., Kupsch, J., & Stamatescu, I. O. (2003). *Decoherence and the Appearance of a Classical World in Quantum Theory* (2nd ed.). Springer.
@@ -200,6 +210,7 @@
 *   JUNO Collaboration (Abusleme, A., *et al.*) (2024). Potential to identify neutrino mass ordering with reactor antineutrinos at JUNO. arXiv:2405.18008.
 *   Kant, I. (1781). *Kritik der reinen Vernunft* (*Critique of Pure Reason*).
 *   Karimi, H., Nutini, J., & Schmidt, M. (2016). Linear convergence of gradient and proximal-gradient methods under the Polyak–Łojasiewicz condition. In A. Appice et al. (Eds.), *Machine Learning and Knowledge Discovery in Databases* (ECML PKDD 2016), Lecture Notes in Computer Science, Vol. 9851, pp. 795–811. Springer. DOI: 10.1007/978-3-319-46128-1_50
+*   Kastoryano, M. J., & Temme, K. (2013). Quantum logarithmic Sobolev inequalities and rapid mixing. *Journal of Mathematical Physics*, *54*(5), 052202. DOI: 10.1063/1.4804995
 *   Keith, S. (2004). A differentiable structure for metric measure spaces. *Advances in Mathematics*, *183*(2), 271–315. DOI: 10.1016/S0001-8708(03)00089-6
 *   Keith, S., & Zhong, X. (2008). The Poincaré inequality is an open ended condition. *Annals of Mathematics*, *167*(2), 575–599. DOI: 10.4007/annals.2008.167.575
 *   Kim, Y.-H., Yu, R., Kulik, S. P., Shih, Y., & Scully, M. O. (2000). Delayed "choice" quantum eraser. *Physical Review Letters*, *84*(1), 1–5. DOI: 10.1103/PhysRevLett.84.1
@@ -213,10 +224,12 @@
 *   Kobayashi, S., & Nomizu, K. (1969). Foundations of Differential Geometry (Vol. II). Wiley-Interscience.
 *   Kolchinsky, A., & Wolpert, D. H. (2018). Semantic information, autonomous agency and non-equilibrium statistical physics. *Interface Focus*, *8*(6), 20180041. DOI: 10.1098/rsfs.2018.0041
 *   Korkine, A., & Zolotareff, G. (1873). Sur les formes quadratiques. *Mathematische Annalen*, *6*, 366–389. DOI: 10.1007/BF01442795
+*   Kossakowski, A., Frigerio, A., Gorini, V., & Verri, M. (1977). Quantum detailed balance and KMS condition. *Communications in Mathematical Physics*, *57*(2), 97–110. DOI: 10.1007/BF01625769
 *   König, R., & Wehner, S. (2009). A strong converse for classical channel coding using entangled inputs. *Physical Review Letters*, *103*(7), 070504. DOI: 10.1103/PhysRevLett.103.070504
 *   Kramer, M., Stairs, I. H., Manchester, R. N., Wex, N., Deller, A. T., Coles, W. A., Ali, M., Burgay, M., Camilo, F., Cognard, I., … Theureau, G. (2021). Strong-Field Gravity Tests with the Double Pulsar. *Physical Review X*, *11*(4), 041050. DOI: 10.1103/PhysRevX.11.041050
 *   Kramer, M., & Wex, N. (2009). The double pulsar system: a unique laboratory for gravity. *Classical and Quantum Gravity*, *26*(7), 073001. DOI: 10.1088/0264-9381/26/7/073001
 *   Kriegman, S., Blackiston, D., Levin, M., & Bongard, J. (2020). A scalable pipeline for designing reconfigurable organisms. *Proceedings of the National Academy of Sciences*, *117*(4), 1853–1859.
+*   Kubo, R. (1957). Statistical-mechanical theory of irreversible processes. I. General theory and simple applications to magnetic and conduction problems. *Journal of the Physical Society of Japan*, *12*(6), 570–586. DOI: 10.1143/JPSJ.12.570
 *   Kushner, H. J., & Yin, G. G. (2003). *Stochastic Approximation and Recursive Algorithms and Applications* (2nd ed.). Springer.
 *   Lan, K. K. G., & DeMets, D. L. (1983). Discrete sequential boundaries for clinical trials. *Biometrika*, *70*(3), 659–663. DOI: 10.1093/biomet/70.3.659. 
 *   Landau, L. D., & Lifshitz, E. M. (1975). *The Classical Theory of Fields* (4th ed.). Pergamon Press.
@@ -243,6 +256,7 @@
 *   Lin, Y., & Yau, S.-T. (2010). Ricci curvature and eigenvalue estimate on locally finite graphs. *Mathematical Research Letters*, *17*(2), 343–356.
 *   Lindblad, G. (1976). On the generators of quantum dynamical semigroups. *Communications in Mathematical Physics*, *48*(2), 119–130. DOI: 10.1007/BF01608499 
 *   Litim, D. F. (2001). Optimized renormalization group flows. *Physical Review D*, *64*, 105007. DOI: 10.1103/PhysRevD.64.105007
+*   Lloyd, S. (2000). Ultimate physical limits to computation. *Nature*, *406*(6799), 1047–1054.
 *   Loll, R. (2019). Quantum Gravity from Causal Dynamical Triangulations: A Review. *Classical and Quantum Gravity*, *37*(1), 013002. DOI: 10.1088/1361-6382/ab579e
 *   Lott, J., & Villani, C. (2009). Ricci curvature for metric-measure spaces via optimal transport. *Annals of Mathematics*, *169*(3), 903–991. DOI: 10.4007/annals.2009.169.903
 *   Lovelock, D. (1971). The Einstein tensor and its generalizations. *Journal of Mathematical Physics*, *12*(3), 498–501. DOI: 10.1063/1.1665613
@@ -253,6 +267,7 @@
 *   Maki, Z., Nakagawa, M., & Sakata, S. (1962). Remarks on the unified model of elementary particles. *Progress of Theoretical Physics*, *28*, 870–880.
 *   Manton, N. S., & Sutcliffe, P. (2004). *Topological Solitons*. Cambridge University Press (Cambridge Monographs on Mathematical Physics). DOI: 10.1017/CBO9780511617034
 *   Marshall, A. W., Olkin, I., & Arnold, B. C. (2011). *Inequalities: Theory of Majorization and Its Applications* (2nd ed.). Springer. DOI: 10.1007/978-0-387-68276-1
+*   Martin, P. C., & Schwinger, J. (1959). Theory of many-particle systems. I. *Physical Review*, *115*(6), 1342–1373. DOI: 10.1103/PhysRev.115.1342
 *   Matsumoto, K. (2002). A new approach to the Cramér-Rao-type bound of the pure-state model. *Journal of Physics A: Mathematical and General*, *35*(13), 3111–3123. DOI: 10.1088/0305-4470/35/13/307
 *   McGaugh, S. S. (2012). The Baryonic Tully-Fisher Relation of Gas-Rich Galaxies as a Test of ΛCDM and MOND. *The Astronomical Journal*, *143*(2), 40. DOI: 10.1088/0004-6256/143/2/40
 *   McGaugh, S. S., Lelli, F., & Schombert, J. M. (2016). The Radial Acceleration Relation in Rotationally Supported Galaxies. *Physical Review Letters*, *117*(20), 201101. DOI: 10.1103/PhysRevLett.117.201101
@@ -297,6 +312,7 @@
 *   Pérez-García, D., Wolf, M. M., Petz, D., & Ruskai, M. B. (2006). Contractivity of positive and trace-preserving maps under Lⁿ norms. *Journal of Mathematical Physics*, *47*(8), 083506. DOI: 10.1063/1.2218675
 *   Peskin, M. E., & Schroeder, D. V. (1995). *An Introduction to Quantum Field Theory*. Addison-Wesley (now Perseus Books).
 *   Petz, D. (1996). Monotone metrics on matrix spaces. *Linear Algebra and its Applications*, *244*, 81–96. DOI: 10.1016/0024-3795(94)00211-8.
+*   Petz, D., & Sudár, C. (1996). Geometries of quantum states. *Journal of Mathematical Physics*, *37*(6), 2662–2673. DOI: 10.1063/1.531535
 *   Pfender, F., & Ziegler, G. M. (2004). Kissing numbers, sphere packings, and some unexpected proofs. *Notices of the AMS*, *51*(8), 873–883.
 *   Pikovsky, A., Rosenblum, M., & Kurths, J. (2001). *Synchronization: A Universal Concept in Nonlinear Sciences*. Cambridge University Press.
 *   Planck Collaboration, Aghanim, N., Akrami, Y., Ashdown, M., et al. (2020). Planck 2018 results. VI. Cosmological parameters. *Astronomy & Astrophysics*, *641*, A6. DOI: 10.1051/0004-6361/201833910
@@ -341,10 +357,13 @@
 *   Slansky, R. (1981). Group theory for unified model building. *Physics Reports*, *79*(1), 1–128.
 *   Sloane, N. J. A. (1977). Error-correcting codes and invariant theory: New applications of a nineteenth-century technique. *The American Mathematical Monthly*, *84*(2), 82–107.
 *   Smart, J. M. (2012). The transcension hypothesis: Sufficiently advanced civilizations invariably leave our universe, and implications for METI and SETI. *Acta Astronautica*, *78*, 55–68. DOI: 10.1016/j.actaastro.2011.11.012
+*   Spohn, H. (1978). Entropy production for quantum dynamical semigroups. *Journal of Mathematical Physics*, *19*(5), 1227–1230. DOI: 10.1063/1.523789
 *   Stone, M. H. (1932). On one-parameter unitary groups in Hilbert space. *Annals of Mathematics*, *33*(3), 643–648. DOI: 10.2307/1968538
 *   Streater, R. F., & Wightman, A. S. (1964). *PCT, Spin and Statistics, and All That*. W. A. Benjamin.
 *   Susskind, L. (1995). The world as a hologram. *Journal of Mathematical Physics*, *36*(11), 6377–6396. DOI: 10.1063/1.531249
 *   Sturm, K.-T. (2006). On the geometry of metric measure spaces. I and II. *Acta Mathematica*, *196*(1), 65–131 and 133–177. DOIs: 10.1007/s11511-006-0002-8 and 10.1007/s11511-006-0003-7
+*   Synge, J. L. (1960). *Relativity: The General Theory*. North-Holland.
+*   Takesaki, M. (1970). Tomita's theory of modular Hilbert algebras and its applications. *Lecture Notes in Mathematics*, 128. Springer. DOI: 10.1007/BFb0065832
 *   ’t Hooft, G. (1976). Symmetry breaking through Bell–Jackiw anomalies. *Physical Review Letters*, *37*(1), 8–11. DOI: 10.1103/PhysRevLett.37.8
 *   Teilhard de Chardin, P. (1959). *The Phenomenon of Man* (B. Wall, Trans.). Harper & Row. (Original work published 1955).
 *   Temme, K., Pastawski, F., & Kastoryano, M. J. (2014). Hypercontractivity of quasi-free quantum semigroups. *Journal of Physics A: Mathematical and Theoretical*, *47*(40), 405303. DOI: 10.1088/1751-8113/47/40/405303 
@@ -372,6 +391,7 @@
 *   Weinberg, S. (1989). The cosmological constant problem. *Reviews of Modern Physics*, *61*(1), 1–23. DOI: 10.1103/RevModPhys.61.1
 *   Weinberg, S. (1996). *The Quantum Theory of Fields, Vol. II: Modern Applications*. Cambridge University Press. DOI (eBook): 10.1017/CBO9781139644174.
 *   Weisberg, J. M., Nice, D. J., & Taylor, J. H. (2010). Timing Measurements of the Relativistic Binary Pulsar PSR B1913+16. *The Astrophysical Journal*, *722*(2), 1030. DOI: 10.1088/0004-637X/722/2/1030
+*   Wheeler, J. A. (1989). Information, physics, quantum: The search for links. In *Proceedings of the 3rd International Symposium on Foundations of Quantum Mechanics* (pp. 354–368). Physical Society of Japan.
 *   Wheeler, J. A. (1990). Information, physics, quantum: The search for links. In W. H. Zurek (Ed.), *Complexity, Entropy, and the Physics of Information* (pp. 3–28). Addison-Wesley.
 *   Wigner, E. P. (1960). The unreasonable effectiveness of mathematics in the natural sciences. *Communications on Pure and Applied Mathematics*, *13*(1), 1–14. DOI: 10.1002/cpa.3160130102
 *   Wigner, E. P. (1967). Remarks on the mind-body question. In *Symmetries and Reflections* (pp. 171–184). Indiana University Press.
@@ -387,5 +407,6 @@
 *   Yang, C. N., & Mills, R. L. (1954). Conservation of isotopic spin and isotopic gauge invariance. *Physical Review*, *96*(1), 191–195. DOI: 10.1103/PhysRev.96.191.
 *   Zhao, M. (2006). Electrical fields in wound healing—An overriding signal that directs cell migration. *Seminars in Cell & Developmental Biology*, *20*(6), 674–682.
 *   Zinn-Justin, J. (2002). *Quantum Field Theory and Critical Phenomena* (4th ed.). Oxford University Press (International Series of Monographs on Physics). DOI: 10.1093/acprof:oso/9780198509233.001.0001
+*   Zurek, W. H. (1989). Thermodynamic cost of computation, algorithmic complexity and the information metric. *Nature*, *341*(6238), 119–124.
 *   Zurek, W. H. (1991). Decoherence and the transition from quantum to classical. *Physics Today*, *44*(10), 36–44.
 *   Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. *Reviews of Modern Physics*, *75*(3), 715–775. DOI: 10.1103/RevModPhys.75.715
