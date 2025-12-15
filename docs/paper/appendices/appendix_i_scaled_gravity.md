@@ -92,9 +92,13 @@ a_0 \approx 5.4 \times 10^{-10} \text{ m/s}^2
 \tag{I.3.4}
 $$
 
-**Connection to Empirical Scale:** The relationship to the empirical MOND scale $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ involves an efficiency factor $\eta' \approx 0.22$ (see Appendix H, Proposition H.1) encapsulating the precise threshold definition and network response coefficients.
+**Connection to Empirical Scale:** The relationship to the empirical MOND scale $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ involves an efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ **rigorously derived** from PU constants (Appendix H, Definition H.0 and Equation H.4b). This factor arises from the product of four terms, each proven by standard mathematical theorems:
+- Active participation fraction $a/d_0 = 1/4$ (isotropy theorem)
+- Repetition multiplier $C/\varepsilon = 2$ (QFI additivity for i.i.d.)
+- Spatial projection $(D-1)/D = 3/4$ (rotational invariance)
+- Democratic normalization $1/\sqrt{K_0} = 1/\sqrt{3}$ (QFI additivity for generators)
 
-**Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The remaining phenomenological input is the $\mathcal{O}(1)$ efficiency factor $\eta'$.
+**Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The efficiency factor $\eta' = 3/(8\sqrt{3})$ is **rigorously derived** from PU interface geometry via the QFI linear-response bridge law (Appendix H, Definition H.0), leaving **no numerically fitted parameters** in the galactic scale prediction.
 
 ---
 

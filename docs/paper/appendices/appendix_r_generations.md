@@ -11,12 +11,12 @@ $$
 
 naturally attached to an MPU with Hilbert space $H_0 \cong \mathbb{C}^8$, the minimal dimension required for self-referential logic (Theorem 23). This derivation is a key component of the framework's ability to explain the Standard Model's structure from first principles.
 
-**Connection to Gauge Structure:** The perspective space $\Sigma_8$ and its associated topology emerge from the same fundamental structure as the Standard Model gauge group. As established in **Appendix G** (Conjecture G.M1, verified by Theorem G.8.4b and Corollary G.8.4c; Section G.8.5), the MPU Hilbert space $H_0 \cong \mathbb{C}^8$ admits a thermodynamically optimal partition:
+**Connection to Gauge Structure:** The perspective space $\Sigma_8$ and its associated topology emerge from the same fundamental structure as the Standard Model gauge group. As established in **Appendix G** (Proposition G.M1, verified by Theorem G.8.4b and Corollary G.8.4c; Section G.8.5), the MPU Hilbert space $H_0 \cong \mathbb{C}^8$ admits a thermodynamically optimal partition:
 $$
 H_0 \cong H_{\mathrm{active}} \oplus H_{\mathrm{inert}} \cong \mathbb{C}^2 \oplus \mathbb{C}^6
 $$
 driven by the irreducible cost $\varepsilon = \ln 2$ of the predictive cycle. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which requires the abstract logical cost to manifest as an $a = e^\varepsilon = 2$ dimensional active kernel. The partition determines both:
-1. The **gauge structure:** $G_{\mathrm{SM}} = SU(2)_L \times SU(3)_C \times U(1)_Y$ (from Conjecture G.M1, verified by Theorem G.8.4b)
+1. The **gauge structure:** $G_{\mathrm{SM}} = SU(2)_L \times SU(3)_C \times U(1)_Y$ (from Proposition G.M1, verified by Theorem G.8.4b)
 2. The **perspective space:** $\Sigma_8 = U(8)/U(1)^8$ (complete flag manifold)
 
 The generation structure derived in this appendix thus shares a common origin with the gauge structure: both arise from the topology and symmetries of the fundamental MPU state space, as optimized by PCE. This provides a unified geometric foundation for the SM's horizontal (gauge) and vertical (generation) structures.

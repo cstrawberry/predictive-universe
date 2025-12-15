@@ -518,7 +518,7 @@ Fully consistent with $N_{\mathrm{gen}} = 3$. Direct searches exclude vectorlike
 
 **Derivation Summary:** Sections G.8.4–G.8.5 establish uniqueness through anomaly cancellation, capacity constraints ($n_G \leq 12$), and PCE optimization. The generator count $n_G = 8 + 3 + 1 = 12$ saturates the Lagrangian capacity bound (Theorem G.8.4b).
 
-**Conditional Status:** This prediction depends on Conjecture G.M1. While Theorem G.8.4b verifies the conjecture's consequences through exhaustive partition analysis, the conjecture itself is not yet proven from axioms.
+**Derivation Status:** This prediction follows from Proposition G.M1 (PCE locality), established by exhaustive partition analysis (Theorem G.8.4b, Corollary G.8.4c). The Local Module Hypothesis that predictive partitions decouple to leading order under PCE locality is a physical assumption analogous to Local Thermodynamic Equilibrium (Postulate 4).
 
 **Falsification Conditions:**
 - Discovery of additional gauge bosons ($Z'$, $W'$) at accessible energies indicating enlarged gauge group

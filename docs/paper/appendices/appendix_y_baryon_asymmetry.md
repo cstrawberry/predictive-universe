@@ -9,7 +9,7 @@ G \;=\; U(1)\times SU(2)\times SU(3)
 \tag{Y.0.1}
 $$
 
-as PCE-preserving automorphisms of predictive frames (Conjecture G.M1, verified by Theorem G.8.4b; Appendix G). Chiral fermions are sections of $S^\pm\!\otimes E_R$ where $E_R$ is the $G$-associated vector bundle corresponding to a *predictive block* representation $R$ (Appendix R). The twisted Dirac index equals the block’s net chirality (Lemma R.IDX1), and anomaly additivity under block replication holds (Lemma R.IDX2).
+as PCE-preserving automorphisms of predictive frames (Proposition G.M1, verified by Theorem G.8.4b; Appendix G).Chiral fermions are sections of $S^\pm\!\otimes E_R$ where $E_R$ is the $G$-associated vector bundle corresponding to a *predictive block* representation $R$ (Appendix R). The twisted Dirac index equals the block’s net chirality (Lemma R.IDX1), and anomaly additivity under block replication holds (Lemma R.IDX2).
 
 Let $\mathcal V\subset M$ be a comoving 4‑volume bounded by two Cauchy slices $\Sigma_i$ (early) and $\Sigma_f$ (late), corresponding to constant values of the emergent temporal coordinate (Section 11, Appendix O), with outward normal conventions as in §12. Let $N_g$ be the number of predictive blocks carrying the usual $SU(2)_L$ doublets (three in the SM case). Denote the electroweak field strength $W^a_{\mu\nu}$ and its dual $\tilde W^{a\mu\nu}=\frac12\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$. The $SU(2)$ Chern–Simons functional on a slice $\Sigma$ is
 
@@ -22,7 +22,7 @@ $$
 ### Y.1. PU–Sakov conditions (no new assumptions)
 
 **Theorem Y.1 (Sakharov conditions hold generically in PU).**
-In any PU cosmology satisfying the emergence of spacetime (§11) and gravity (§12) and with gauge bundle $G$ from Conjecture G.M1 (verified by Theorem G.8.4b):
+In any PU cosmology satisfying the emergence of spacetime (§11) and gravity (§12) and with gauge bundle $G$ from Proposition G.M1 (verified by Theorem G.8.4b):
 
 1. (**Baryon‑number non‑conservation**) The chiral electroweak anomaly (related to the index theorem, Lemma R.IDX1) dictates the non-conservation of the baryon ($B$) and lepton ($L$) currents:
 

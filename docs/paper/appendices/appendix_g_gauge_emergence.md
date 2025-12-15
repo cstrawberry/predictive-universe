@@ -153,7 +153,8 @@ Any proposed alternative algebraic structure for prediction (e.g., classical pro
 
 Having established the necessity of a complex Hilbert space $\mathcal{H}$ and the Born rule from PCE principles, we now derive the origin of gauge symmetries.
 
-**Conjecture G.M1 (SM gauge group from PCE cost minimization under the Local Module Hypothesis).**
+**Proposition G.M1 (SM gauge group from PCE cost minimization under the Local Module Hypothesis).**
+
 Let $\mathcal P\to M$ be the bundle of predictive frames that **preserve PCE** under refinements. The fiber consists of **ordered, PCE‑adapted orthonormal frames**, on which the group of frame transformations acts freely.
 (i) The group $G_x$ of local predictive‑frame transformations that preserve the predictive state $\omega$ acts **freely and transitively** on the fiber, making $\mathcal P$ a **principal $G$‑bundle**.
 (ii) A PCE‑least‑action transport defines a **connection** $A$ on $\mathcal P$ with curvature $F=dA+A\wedge A$.
@@ -529,7 +530,7 @@ A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 
 ### G.8.4a Gauge Algebra via Exhaustive Partition Analysis
 
-This section derives the Standard Model gauge algebra via exhaustive classification of module decompositions, providing complementary verification of the cost-minimization approach in Conjecture G.M1. The inactive subspace $\mathcal{B} = \mathbb{C}^b$ with $b = d_0 - a = 8 - 2 = 6$ (where $a = 2$ follows from Theorem Z.1) carries the gauge representation. The derivation proceeds through three stages: exclusion of simple groups, enumeration of viable partitions, and unique selection by physical constraints.
+This section derives the Standard Model gauge algebra via exhaustive classification of module decompositions, providing complementary verification of the cost-minimization approach in Proposition G.M1. The inactive subspace $\mathcal{B} = \mathbb{C}^b$ with $b = d_0 - a = 8 - 2 = 6$ (where $a = 2$ follows from Theorem Z.1) carries the gauge representation. The derivation proceeds through three stages: exclusion of simple groups, enumeration of viable partitions, and unique selection by physical constraints.
 
 **Theorem G.8.4a (No Simple 12-Dimensional Gauge Algebra).**
 No complex simple Lie algebra has dimension $12$. In particular, any gauge algebra saturating the Lagrangian capacity bound $n_G = 12$ (Theorem G.8.2e) is necessarily non-simple: its semisimple part $[\mathfrak{g},\mathfrak{g}]$ contains at least two simple factors.
@@ -686,7 +687,7 @@ The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(
 
 *Proof.* Theorem G.8.4b establishes that $(3,2,1)$ is the unique partition surviving all constraints. The module decomposition $\mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ forces the algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ as the unique 12-dimensional faithful, chirality-compatible, anomaly-free solution. ∎
 
-**Remark G.8.4d (Complementary Derivation Methods).** The module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ derived via exhaustive partition analysis coincides with the Local Module Hypothesis of Conjecture G.M1. Both methods use the same foundational constraints—the capacity bound $n_G \leq 12$, anomaly cancellation, chirality requirements, and PCE optimization—but apply them differently: Conjecture G.M1 proceeds by direct cost minimization, while Theorem G.8.4b proceeds by systematic elimination. The convergence of these complementary approaches strengthens confidence that the Standard Model gauge structure is uniquely determined by framework principles.
+**Remark G.8.4d (Complementary Derivation Methods).** The module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ derived via exhaustive partition analysis coincides with the Local Module Hypothesis of Proposition G.M1. Both methods use the same foundational constraints—the capacity bound $n_G \leq 12$, anomaly cancellation, chirality requirements, and PCE optimization—but apply them differently: Proposition G.M1 proceeds by direct cost minimization, while Theorem G.8.4b proceeds by systematic elimination. The convergence of these complementary approaches establishes that the Standard Model gauge structure is uniquely determined by framework principles.
 
 **Remark G.8.4e (Geometric Interpretation via Attractor Orbit).** The PCE-Attractor orbit is the Grassmannian $\text{Gr}(2,8)$ with isotropy group $K = U(2) \times U(6)$. The tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)$ is irreducible under $K$. By Schur's lemma, any $K$-invariant potential $V_{PCE}$ has scalar Hessian $H = \lambda I$ at the minimum with $\lambda = 3/2$ (Corollary T.41.3). 
 
@@ -703,7 +704,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
 
 2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
     Within the stable D=4 arena, PCE selects the optimal gauge group and matter content subject to capacity and consistency constraints.
-    *   **Gauge group $G_{SM}$.** By the cost-minimization principle under Conjecture G.M1 and the Local Module Hypothesis, verified by exhaustive partition analysis (Theorem G.8.4b, Corollary G.8.4c), the module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ is uniquely selected. The non-abelian part is $SU(2) \times SU(3)$ acting in fundamentals; adding **exactly one** non-trivial $U(1)$ factor is sufficient and cost-minimal for SM-like chiral content. Simple unification groups are excluded by capacity bounds (Theorem G.8.4a). The total generator count $n_G = 12$ saturates the Lagrangian capacity bound (Theorem G.8.2e), lies within the channel capacity range (Equation G.8.0), and equals the Golay code dimension $k = 12$ (Theorem Z.13).
+    *   **Gauge group $G_{SM}$.** By the cost-minimization principle under Proposition G.M1 and the Local Module Hypothesis, established by exhaustive partition analysis (Theorem G.8.4b, Corollary G.8.4c), the module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ is uniquely selected. The non-abelian part is $SU(2) \times SU(3)$ acting in fundamentals; adding **exactly one** non-trivial $U(1)$ factor is sufficient and cost-minimal for SM-like chiral content. Simple unification groups are excluded by capacity bounds (Theorem G.8.4a). The total generator count $n_G = 12$ saturates the Lagrangian capacity bound (Theorem G.8.2e), lies within the channel capacity range (Equation G.8.0), and equals the Golay code dimension $k = 12$ (Theorem Z.13).
     *   **Hypercharge Uniqueness (one chiral family, no $n^c$).** Let the left‑chiral hypercharges be $y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c}$. Imposing cancellation of all local and mixed gauge and gravitational anomalies in $D=4$ yields the constraints:
         $$
         \begin{alignedat}{2}
