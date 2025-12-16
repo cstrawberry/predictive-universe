@@ -5,7 +5,6 @@ This appendix provides computational programs for two constants within the Predi
 **Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=g_e^2/(4\pi)$.
 
 
-
 ## V.1 The Cosmological Constant: Inversion for the Instanton Complexity $\kappa$
 
 ### V.1.1 Foundational PU Equations for $\Lambda$
@@ -140,9 +139,10 @@ The Predictive Ward Identity (Theorem Z.14), combined with the Principle of Phys
 $$
 \alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \Delta^{(2)}
 $$
-where $\Delta^{(2)} = \pi u^*/(24\sqrt{K_0})$ is the second-order curvature correction. With $u^* = 2^{1/8}-1$ and $K_0 = 3$:
+where $\Delta^{(2)} = \pi u^*/(24\sqrt{K_0})$ is the second-order curvature correction from Bures metric geometry (Theorem Z.26). For sub-ppm precision, Appendix Z includes the third-order geodesic correction factor $(1 - u^{*2}/6) \approx 0.9986$ from SU(2) geometry, yielding $\alpha^{-1} \approx 137.036092$ (Equation Z.35). With $u^* = 2^{1/8}-1$ and $K_0 = 3$:
+
 $$
 \boxed{\alpha^{-1} ≈ 137.036 \pm 0.0001}
 \tag{V.10}
 $$
-This is a parameter-free prediction at the Thomson limit, in agreement with experiment to five significant figures.
+This is a parameter-free prediction at the Thomson limit, in agreement with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999084$ to within 0.7 ppm.
