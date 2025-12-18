@@ -3170,8 +3170,9 @@ $$\alpha = \frac{1}{16\sigma_B^2} = \frac{24}{16} = \frac{3}{2}$$
 |:---------|:-------------------|:----:|:-----:|:----------:|:--------:|:------------|
 | $\Lambda$ | Gr(12,24) | 144 | 0 | 5 | 141.5 | $10^{-122}$ |
 | $v$ | $SU(2) \times U(1)/U(1)$ | 36 | +3 | 1 | 38.5 | $10^{-17} M_{Pl}$ |
-| $M_R$ | E$_8$ instanton ($d^2_{31} = 6$) | — | — | — | 9 | $10^{-4} M_{Pl}$ |
-| $G_F$ | (derived from $v$) | — | — | — | 77 | $10^{-5}$ GeV$^{-2}$ |
+| $\eta_B$ | CP-odd sector of $\mathcal{M}_{EW}$ | 19.25 | 0 | $+0.23$ | 19.48 | $10^{-9}$ |
+| $M_R$ | E$_8$ instanton ($d^2_{31} = 6$) | – | – | – | 9 | $10^{-4} M_{Pl}$ |
+| $G_F$ | (derived from $v$) | – | – | – | 77 | $10^{-5}$ GeV$^{-2}$ |
 
 **Mechanism B: E$_8$ Geodesic Distances**
 
@@ -3203,6 +3204,14 @@ $$\kappa - \kappa_{EW} = 103$$
 *yielding:*
 
 $$\frac{\Lambda}{v^4} \sim e^{-2 \times 103} \sim 10^{-89}$$
+
+**Corollary T.63.2** (Baryogenesis-Electroweak Relationship). *The baryogenesis complexity satisfies:*
+
+$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.48$$
+
+*yielding the hierarchy unification (Appendix Y, Theorem Y.11):*
+
+$$\eta_B \sim \sqrt{\frac{v}{M_{Pl}}}$$
 
 **Proposition T.64** (Near-Integer Ratios). *The complexities satisfy:*
 

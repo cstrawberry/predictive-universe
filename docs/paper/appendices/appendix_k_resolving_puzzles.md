@@ -226,7 +226,7 @@ This is identified as a priority direction for future theoretical work (Section 
 
 **K.7 Hierarchy Problem and Naturalness**
 
-**Puzzle:** The electroweak scale $v \approx 246$ GeV is 17 orders of magnitude smaller than the Planck scale $M_{Pl} \approx 10^{19}$ GeV. In quantum field theory, radiative corrections should drive the Higgs mass to $M_{Pl}$ unless parameters are fine-tuned to extraordinary precision ($\sim 10^{-34}$). Why is the hierarchy stable?
+**Puzzle:** The electroweak scale $v \approx 246$ GeV is 17 orders of magnitude smaller than the Planck scale $M_{Pl} \approx 10^{19}$ GeV. In quantum field theory, radiative corrections should drive the Higgs mass to $M_{Pl}$ unless parameters are fine-tuned to extraordinary precision ($\sim 10^{-34}$). Similarly, the baryon asymmetry $\eta_B \sim 10^{-10}$ appears to require fine-tuning. Why are these hierarchies stable?
 
 **PU Resolution:** **Appendix T** provides a complete resolution through the Golay-Steiner structure. The hierarchy is not fine-tuned but emerges from discrete information-theoretic complexity:
 

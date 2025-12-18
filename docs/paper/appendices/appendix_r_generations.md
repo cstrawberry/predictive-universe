@@ -1355,11 +1355,11 @@ The framework does not yet fully determine:
 
 Item 3 has been resolved. Items 1-2 require explicit construction of the PCE potential $V_{PCE}$ on the attractor orbit.
 
-**Open Problem (Baryogenesis Complexity).** Matching $\eta_B \approx 6 \times 10^{-10}$ with electroweak sphaleron prefactors $\mathcal{C}_{sph} \sim 10^{10}$, $J_{CP} \sim 3 \times 10^{-5}$, $f_{neq} \sim 1$ requires complexity parameter:
+**Baryogenesis Complexity (Resolved in Appendix Y).** The baryon asymmetry $\eta_B \approx 6 \times 10^{-10}$ is derived from the anomaly-holonomy coupling mechanism where Berry holonomy on $\text{Gr}(2,8)$ generates an effective $\theta$-angle for electroweak sphalerons. The baryogenesis complexity is:
 
-$$\kappa_B = \ln\left(\frac{\mathcal{C}_{sph} J_{CP} f_{neq}}{\eta_B}\right) \approx \ln(5 \times 10^{14}) \approx 34$$
+$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.25 + 0.23 = 19.48$$
 
-This value, while self-consistent, exceeds naive estimates from the Grassmannian dimension. Potential resolutions include: (i) modified prefactors from non-perturbative effects, (ii) strong out-of-equilibrium suppression ($f_{neq} \ll 1$), or (iii) a distinct baryogenesis mechanism operating at a different scale.
+The factor of $\kappa_{EW}/2$ arises from $\mathbb{Z}_2$ bisection of the electroweak configuration space by CP, since baryogenesis samples only the CP-odd sector. The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
 
 **Open Problem (Gravitational Response).** The covariant form of variable gravitational coupling consistent with $\nabla^\mu T_{\mu\nu} = 0$ is constrained to:
 
@@ -1393,7 +1393,7 @@ The three-generation structure has cosmological implications via the Sakharov co
 2. **C and CP violation:** Requires $N \geq 3$ (Jarlskog invariant)
 3. **Departure from equilibrium:** Provided by early universe dynamics
 
-The SM CKM CP violation, enabled by three generations, provides a mechanism for the observed baryon asymmetry $\eta_B \approx 6\times 10^{-10}$. While quantitatively insufficient in the vanilla SM (requires BSM enhancement), the **structural necessity** of $N \geq 3$ for any CP violation is crucial.
+The SM CKM CP violation, enabled by three generations, provides a mechanism for the observed baryon asymmetry $\eta_B \approx 6\times 10^{-10}$. In the PU framework, the Berry holonomy $\delta = 66.7°$ on $\text{Gr}(2,8)$ couples to electroweak sphalerons via the mixed flavor-gauge anomaly, generating a saturated CP asymmetry that resolves the standard EWBG deficit (Appendix Y). The **structural necessity** of $N \geq 3$ for any CP violation remains crucial.
 
 This provides an independent, cosmological motivation for the three-generation structure beyond the information-theoretic arguments of this appendix. The convergence of:
 - Topological necessity (anomaly cancellation)
