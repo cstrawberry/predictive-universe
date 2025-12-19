@@ -49,7 +49,7 @@ The Extended Binary Golay Code $\mathcal{C}_{24}$ is the unique $[n, k, d]$ bina
 
 **Theorem U.1 (Golay Uniqueness).** The extended binary Golay code is the unique binary linear code achieving the parameters $[24, 12, 8]$.
 
-*Proof.* This is a classical result in coding theory (Pless 1968; Conway & Sloane 1999, Chapter 11). The uniqueness follows from the Golay code saturating the Griesmer bound for binary linear codes. Within the PU framework, Theorem Z.13 establishes that PCE optimization uniquely selects this code structure for the $M = 24$ interface modes. $\square$
+*Proof.* This is a classical result in coding theory (Pless 1968; Conway & Sloane 1999). The uniqueness follows from the Golay code saturating the Griesmer bound for binary linear codes. Within the PU framework, Theorem Z.13 establishes that PCE optimization uniquely selects this code structure for the $M = 24$ interface modes. $\square$
 
 ### U.3.2 Octad Structure
 

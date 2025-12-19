@@ -859,7 +859,7 @@ consistent with $0.1179 \pm 0.0010$ (experimental).
 
 ---
 
-# Part V: Summary and Open Problems
+# Part V: Summary
 
 ## T.19 Complete Electroweak Parameter Summary
 
@@ -1713,7 +1713,7 @@ $$
 d^2_{\mathrm{th}} = \frac{d_{\min}}{2} = 4
 $$
 
-**Lemma T.42.4** (Hamming-Chordal Correspondence). *Under the embedding $\sqrt{2}E_8 \hookrightarrow \Lambda_{24}$ [Conway & Sloane 1999, Chapter 24], the $E_8$ squared distance $d^2$ maps to Golay Hamming distance $h$ via:*
+**Lemma T.42.4** (Hamming-Chordal Correspondence). *Under the embedding $\sqrt{2}E_8 \hookrightarrow \Lambda_{24}$ [Conway & Sloane 1999], the $E_8$ squared distance $d^2$ maps to Golay Hamming distance $h$ via:*
 
 $$
 h = 2d^2
@@ -1996,7 +1996,7 @@ With these prefactors and the appropriate $E_8$ triads, the observed quark hiera
 
 ## T.21.10 Leech Lattice Consistency
 
-The Leech lattice $\Lambda_{24}$ is constructed via Construction A as a union of cosets of the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, with coset representatives determined by the extended binary Golay code $\mathcal{G}_{24}$ (Conway–Sloane, *Sphere Packings, Lattices and Groups*, Chapters 23–24).
+The Leech lattice $\Lambda_{24}$ is constructed via Construction A as a union of cosets of the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, with coset representatives determined by the extended binary Golay code $\mathcal{G}_{24}$ (Conway–Sloane, *Sphere Packings, Lattices and Groups*).
 
 The scaling by $\sqrt{2}$ maps $E_8$ roots (squared norm $2$) to Leech minimal vectors (squared norm $4$), ensuring even unimodularity and minimal norm $4$. This homothety is consistent with Lemma T.41.4 when expressed in a common physical normalization:
 
@@ -2606,7 +2606,7 @@ $$\mathcal{A} = \frac{i}{2}\sum_{\alpha \in A, \beta \in B} \left( \bar{z}_{\alp
 
 *Proof.*
 
-**Step 1 (Bundle structure).** The Grassmannian Gr(2,8) ≅ U(8)/[U(2) × U(6)] carries a natural U(1) determinant line bundle ℒ → Gr(2,8) whose fiber at a 2-plane W is det(W) = ⋀² W. The Berry connection is the natural connection on this bundle induced by the Fubini-Study structure (Nakahara 2003, Ch. 10).
+**Step 1 (Bundle structure).** The Grassmannian Gr(2,8) ≅ U(8)/[U(2) × U(6)] carries a natural U(1) determinant line bundle ℒ → Gr(2,8) whose fiber at a 2-plane W is det(W) = ⋀² W. The Berry connection is the natural connection on this bundle induced by the Fubini-Study structure (Nakahara 2003).
 
 **Step 2 (Connection from QFI structure).** From Definition G.8.2a, the interface generators are:
 $$X_{\alpha\beta} = |\alpha\rangle\langle\beta| + |\beta\rangle\langle\alpha|, \quad Y_{\alpha\beta} = -i(|\alpha\rangle\langle\beta| - |\beta\rangle\langle\alpha|)$$

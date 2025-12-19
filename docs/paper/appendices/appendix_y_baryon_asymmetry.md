@@ -853,14 +853,6 @@ The saturated regime $\tanh(\mathcal{S}\sin\delta) \approx 1$ is robust to uncer
 
 The prediction is insensitive to $\delta$ variations of several degrees.
 
-### Y.13.3 Open Questions
-
-1. **Leptogenesis contribution:** The PMNS CP phase $\delta_{CP}^{\text{PMNS}} = 232.5°$ (Theorem T.24.22) is larger than the CKM phase. Leptogenesis scenarios using this phase could modify the prediction if lepton-to-baryon conversion is significant.
-
-2. **Sphaleron freeze-out precision:** The exact temperature and dynamics of sphaleron decoupling affects $f_{wash}$.
-
-3. **Strong CP problem:** The framework predicts $\bar{\theta} \approx 0$ (Appendix K, Section K.6) from PCE minimization, consistent with EDM bounds.
-
 ---
 
 ## Y.14 Conclusion

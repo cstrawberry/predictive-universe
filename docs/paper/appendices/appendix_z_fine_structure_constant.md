@@ -1105,7 +1105,7 @@ $$P = \begin{pmatrix}
 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 \\
 \end{pmatrix}$$
 
-*Proof.* The matrix is constructed via the quadratic residue method [MacWilliams & Sloane 1977, Chapter 16]. Verification:
+*Proof.* The matrix is constructed via the quadratic residue method [MacWilliams & Sloane 1977]. Verification:
 - Self-orthogonality: $P \cdot P^T = I_{12} \pmod{2}$ ✓
 - Minimum distance: $d = 8$ ✓
 - Weight distribution: $A_0 = 1$, $A_8 = 759$, $A_{12} = 2576$, $A_{16} = 759$, $A_{24} = 1$ ✓ ∎
@@ -1126,7 +1126,7 @@ $$P = \begin{pmatrix}
 
 *Proof.*
 
-**Step 1 (Leech from $E_8$ Triples).** The Leech lattice $\Lambda_{24}$ is constructed from $L = \sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ by adding cosets determined by Golay codewords [Conway & Sloane 1999, Chapter 24]:
+**Step 1 (Leech from $E_8$ Triples).** The Leech lattice $\Lambda_{24}$ is constructed from $L = \sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ by adding cosets determined by Golay codewords [Conway & Sloane 1999]:
 $$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (L + g_c)$$
 
 **Step 2 (Gluing Information Content).** The Golay code is completely determined by the parity matrix $P$, containing exactly 144 bits. These 144 bits encode the complete "gluing instructions" for constructing the unique optimal 24-dimensional lattice from three copies of the unique optimal 8-dimensional lattice.
@@ -1964,7 +1964,7 @@ as claimed. ∎
 **Theorem Z.23 (Intrinsic Bures Curvature).** The mean sectional curvature of the Bures metric on $Gr(2,8)$ is:
 $$K_{\mathrm{avg}}^{\mathrm{Bures}} = \frac{32}{23}$$
 
-*Proof.* The Kähler-Einstein metric on $Gr(2,8)$ has scalar curvature (Besse 1987, Chapter 8):
+*Proof.* The Kähler-Einstein metric on $Gr(2,8)$ has scalar curvature (Besse 1987):
 $$S_{KE} = 2 \dim_\mathbb{C}(Gr(2,8)) \times (\text{Fano index}) = 2 \times 12 \times 8 = 192$$
 
 For Grassmannians $Gr(k,n)$, the Fano index equals $n$, so $Gr(2,8)$ has Fano index 8.

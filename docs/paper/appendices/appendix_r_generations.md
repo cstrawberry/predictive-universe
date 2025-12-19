@@ -153,7 +153,7 @@ Several factors single out E₈ as the natural geometric structure for the 8-dim
 
 3. **Kissing Number Maximization:** E₈ has kissing number 240, the maximum for any lattice in 8 dimensions. This maximizes local distinguishability—each lattice point contacts exactly 240 nearest neighbors, providing the densest local error-correction structure. Higher kissing numbers correspond to more robust error correction under PCE.
 
-4. **Radon-Hurwitz Connection and Cayley Integers:** The existence of the octonions (the unique 8-dimensional normed division algebra) is tied to dimension 8 being a Radon-Hurwitz dimension (**Theorem Z.3**, Appendix Z). The $E_8$ lattice is isomorphic to the ring of Cayley integers (integral octonions), defined as the $\mathbb{Z}$-span of $\{1, e_1, \ldots, e_7, \omega\}$ where $\omega = \tfrac{1}{2}(1 + e_1 + \cdots + e_7)$ and $\{e_i\}$ are the standard octonion units (Conway & Sloane 1999, Chapter 8). The norm form $N(x) = x\bar{x}$ on the Cayley integers is positive-definite with minimum value 1 on non-zero elements, and the set of unit-norm elements $\{x : N(x) = 1\}$ has cardinality exactly 240, matching the $E_8$ root count. This provides a direct algebraic bridge between the division algebra structure underlying $d_0 = 8$ and the geometric optimality of $E_8$.
+4. **Radon-Hurwitz Connection and Cayley Integers:** The existence of the octonions (the unique 8-dimensional normed division algebra) is tied to dimension 8 being a Radon-Hurwitz dimension (**Theorem Z.3**, Appendix Z). The $E_8$ lattice is isomorphic to the ring of Cayley integers (integral octonions), defined as the $\mathbb{Z}$-span of $\{1, e_1, \ldots, e_7, \omega\}$ where $\omega = \tfrac{1}{2}(1 + e_1 + \cdots + e_7)$ and $\{e_i\}$ are the standard octonion units (Conway & Sloane 1999). The norm form $N(x) = x\bar{x}$ on the Cayley integers is positive-definite with minimum value 1 on non-zero elements, and the set of unit-norm elements $\{x : N(x) = 1\}$ has cardinality exactly 240, matching the $E_8$ root count. This provides a direct algebraic bridge between the division algebra structure underlying $d_0 = 8$ and the geometric optimality of $E_8$.
 
 5. **Self-Duality:** $E_8$ is self-dual, meaning $E_8^* = E_8$. This symmetry simplifies the geometric structure, eliminates arbitrary orientation choices, and ensures that the dual lattice (relevant for Fourier transforms in quantum mechanics) coincides with the original. Self-duality is a natural PCE attractor as it minimizes representational redundancy.
 
@@ -178,7 +178,7 @@ Among the $E$-series, only for $n = 8$ has the kissing number been proven optima
 | Unimodular | $\det(\text{Gram matrix}) = 1$ | Minimal volume distortion under embedding |
 | Kissing number | 240 (proven maximal) | Maximum local distinguishability |
 
-The even unimodular lattices in dimension 8 are classified: $E_8$ is the unique such lattice (Conway & Sloane 1999, Chapter 16).
+The even unimodular lattices in dimension 8 are classified: $E_8$ is the unique such lattice (Conway & Sloane 1999).
 
 **Comparison with Other Exceptional Root Systems:**
 - **$E_6, E_7$:** Ranks 6 and 7 respectively, not matching the MPU dimension 8.
@@ -624,7 +624,7 @@ This is the maximum possible for any binary linear code of length 24 with rate 1
 
 The Leech lattice $\Lambda_{24}$ can be constructed from the scaled direct sum $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ by adjoining glue vectors determined by the extended binary Golay code $\mathcal{G}_{24}$.
 
-*Proof.* (Standard result; Conway & Sloane 1999, Chapter 24)
+*Proof.* (Standard result; Conway & Sloane 1999)
 
 **Step 1 (Base lattice).** Define the base lattice:
 
@@ -884,7 +884,7 @@ The Golay code's error-correction properties (Theorem R.4.4) explain why the eme
 
 **Step 1 (Gluing mechanism).** The construction proceeds by taking the scaled lattice $(\sqrt{2}E_8)^3$, which has minimum squared norm 4, and adding coset representatives. Specifically:
 $$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} \left( (\sqrt{2}E_8)^3 + \phi(c) \right)$$
-where $\phi: \mathbb{F}_2^{24} \to (\sqrt{2}E_8)^3 / (2\sqrt{2}E_8)^3$ maps Golay codewords to coset shifts [Conway & Sloane 1999, Chapter 24].
+where $\phi: \mathbb{F}_2^{24} \to (\sqrt{2}E_8)^3 / (2\sqrt{2}E_8)^3$ maps Golay codewords to coset shifts [Conway & Sloane 1999].
 
 **Step 2 (Root creation risk).** When coset shifts are added, new vectors of the form $v + \phi(c)$ appear, where $v \in (\sqrt{2}E_8)^3$. For the glued lattice to remain rootless (minimum squared norm 4), no such vector may have squared norm 2.
 
