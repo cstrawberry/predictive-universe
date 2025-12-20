@@ -1,5 +1,7 @@
 # References
 
+*   Abel, C., et al. (2020). Measurement of the permanent electric dipole moment of the neutron. *Physical Review Letters*, *124*(8), 081803. DOI: 10.1103/PhysRevLett.124.081803
+*   Adler, S. L. (1969). Axial-vector vertex in spinor electrodynamics. *Physical Review*, *177*(5), 2426–2438. DOI: 10.1103/PhysRev.177.2426
 *   Agostini, M., Benato, G., Detwiler, J. A., Menéndez, J., & Vissani, F. (2023). Toward the discovery of matter creation with neutrinoless ββ decay. *Reviews of Modern Physics*, *95*, 025002. DOI: 10.1103/RevModPhys.95.025002
 *   Aharonov, D., Kitaev, A., & Nisan, N. (1998). Quantum circuits with mixed states. *Proceedings of the Thirtieth Annual ACM Symposium on Theory of Computing*, 20–30.
 *   Aharonov, Y., Bergmann, P. G., & Lebowitz, J. L. (1964). Time Symmetry in the Quantum Process of Measurement. *Physical Review*, *134*(6B), B1410–B1416. DOI: 10.1103/PhysRev.134.B1410
@@ -13,12 +15,14 @@
 *   Assmus, E. F., & Mattson, H. F. (1966). Perfect codes and the Mathieu groups. *Archiv der Mathematik*, *17*, 121–135.
 *   Assmus, E. F., Jr., & Mattson, H. F., Jr. (1969). New 5-designs. *Journal of Combinatorial Theory*, *6*(2), 122–151. DOI: 10.1016/S0021-9800(69)80115-8
 *   Atiyah, M. F., & Singer, I. M. (1963). The Index of Elliptic Operators on Compact Manifolds. *Bulletin of the American Mathematical Society*, *69*(3), 422–433. DOI: 10.1090/S0002-9904-1963-10957-X
-*   Atiyah, M. F., & Singer, I. M. (1968). The index of elliptic operators: III. *Annals of Mathematics*, *87*(3), 546–604.
+*   Atiyah, M. F., & Singer, I. M. (1968a). The index of elliptic operators: I. *Annals of Mathematics*, *87*(3), 484–530. DOI: 10.2307/1970715
+*   Atiyah, M. F., & Singer, I. M. (1968b). The index of elliptic operators: III. *Annals of Mathematics*, *87*(3), 546–604.
 *   ATLAS Collaboration (Aad, G., *et al.*) (2019). Search for high-mass dilepton resonances using 139 fb$^{-1}$ of pp collision data collected at $\sqrt{s} = 13$ TeV with the ATLAS detector. *Physics Letters B*, *796*, 68–87. DOI: 10.1016/j.physletb.2019.07.016
 *   ATLAS Collaboration (Aad, G., *et al.*) (2021). Search for new phenomena in events with an energetic jet and missing transverse momentum in pp collisions at $\sqrt{s} = 13$ TeV with the ATLAS detector. *Physical Review D*, *103*, 112006. DOI: 10.1103/PhysRevD.103.112006
 *   ATLAS Collaboration (Aad, G., *et al.*) (2024). Search for pair-produced vectorlike quarks coupling to light quarks in the lepton plus jets final state using 13 TeV pp collisions with the ATLAS detector. *Physical Review D*, *110*, 052009. DOI: 10.1103/PhysRevD.110.052009
 *   Audenaert, K. M. R. (2007). A sharp continuity estimate for the von Neumann entropy. *Journal of Physics A: Mathematical and Theoretical*, *40*(28), 8127–8136. DOI: 10.1088/1751-8113/40/28/S19
 *   Audenaert, K. M. R., & Datta, N. (2015). α–z–Rényi relative entropies. *Journal of Mathematical Physics*, *56*(2), 022202. DOI: 10.1063/1.4906367
+*   Baker, C. A., et al. (2006). Improved experimental limit on the electric dipole moment of the neutron. *Physical Review Letters*, *97*(13), 131801. DOI: 10.1103/PhysRevLett.97.131801
 *   Baker, H. F. (1905). Alternants and continuous groups. *Proceedings of the London Mathematical Society*, *s2-3*, 24–47.
 *   Bargmann, V. (1964). Note on Wigner's theorem on symmetry operations. *Journal of Mathematical Physics*, *5*(7), 862–868. DOI: 10.1063/1.1704188
 *   Bakry, D., & Émery, M. (1985). Diffusions hypercontractives. In *Séminaire de Probabilités XIX 1983/84* (Lecture Notes in Mathematics, Vol. 1123, pp. 177–206). Springer. DOI: 10.1007/BFb0075847
@@ -28,6 +32,7 @@
 *   Bekenstein, J. D. (1981). Universal upper bound on the entropy-to-energy ratio for bounded systems. *Physical Review D*, *23*(2), 287–298. DOI: 10.1103/PhysRevD.23.287
 *   Belinfante, F. J. (1939). On the spin angular momentum of mesons. *Physica*, *6*(9–10), 887–898. DOI: 10.1016/S0031-8914(39)80090-X
 *   Bell, J. S. (1964). On the Einstein Podolsky Rosen paradox. *Physics Physique Физика*, *1*(3), 195–200.
+*   Bell, J. S., & Jackiw, R. (1969). A PCAC puzzle: $\pi^0 \to \gamma\gamma$ in the σ-model. *Il Nuovo Cimento A*, *60*(1), 47–61. DOI: 10.1007/BF02823296
 *   Bengtsson, I., & Życzkowski, K. (2006). *Geometry of Quantum States: An Introduction to Quantum Entanglement*. Cambridge University Press.
 *   Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525–532. DOI: 10.1147/rd.176.0525
 *   Berry, M. V. (1984). Quantal phase factors accompanying adiabatic changes. *Proceedings of the Royal Society of London A*, *392*, 45–57.
@@ -59,6 +64,7 @@
 *   Buttazzo, D., Degrassi, G., Giardino, P. P., Giudice, G. F., Sala, F., Salvio, A., & Strumia, A. (2013). Investigating the near-criticality of the Higgs boson. *Journal of High Energy Physics*, *2013*(12), 089. DOI: 10.1007/JHEP12(2013)089 
 *   Bösch, H., Steinkamp, F., & Boller, E. (2006). Examining psychokinesis: The interaction of human intention with random number generators—A meta-analysis. *Psychological Bulletin*, *132*(4), 497-523.
 *   Cabibbo, N. (1963). Unitary Symmetry and Leptonic Decays. *Physical Review Letters*, *10*(12), 531–533. DOI: 10.1103/PhysRevLett.10.531
+*   Callan, C. G., Dashen, R. F., & Gross, D. J. (1976). The structure of the gauge theory vacuum. *Physics Letters B*, *63*(3), 334–340. DOI: 10.1016/0370-2693(76)90277-X
 *   Callan, C. G., Jr., & Coleman, S. (1977). The fate of the false vacuum II: First quantum corrections. *Physical Review D*, *16*(6), 1762–1768. DOI: 10.1103/PhysRevD.16.1762
 *   Cameron, P.J. & Van Lint, J.H. (1991). *Designs, Graphs, Codes and their Links*. Cambridge University Press.
 *   Campbell, J. E. (1898). On a law of combination of operators (second paper). *Proceedings of the London Mathematical Society*, *29*, 14–32.
@@ -84,6 +90,8 @@
 *   Clowe, D., Bradač, M., Gonzalez, A. H., Markevitch, M., Randall, S. W., Jones, C., & Zaritsky, D. (2006). A direct empirical proof of the existence of dark matter. *The Astrophysical Journal Letters*, *648*(2), L109–L113. DOI: 10.1086/508162
 *   CMS Collaboration (Tumasyan, A., *et al.*) (2022). Search for new physics in the lepton plus missing transverse momentum final state in proton-proton collisions at $\sqrt{s} = 13$ TeV. *Journal of High Energy Physics*, *2022*(07), 067. DOI: 10.1007/JHEP07(2022)067
 *   CODATA Committee on Data for Science and Technology (2018). *The CODATA 2018 recommended values of the fundamental physical constants*. (Data available from physics.nist.gov/constants).
+*   Cohen, A. G., & Kaplan, D. B. (1987). Thermodynamic generation of the baryon asymmetry. *Physics Letters B*, *199*(2), 251–258. DOI: 10.1016/0370-2693(87)91369-4
+*   Cohen, A. G., & Kaplan, D. B. (1988). Spontaneous baryogenesis. *Nuclear Physics B*, *308*(4), 913–928. DOI: 10.1016/0550-3213(88)90134-4
 *   Cohen, A. G., Kaplan, D. B., & Nelson, A. E. (1999). Effective field theory, black holes, and the cosmological constant. *Physical Review Letters*, *82*(25), 4971–4974. DOI: 10.1103/PhysRevLett.82.4971
 *   Cohen-Tannoudji, C., Dupont-Roc, J., & Grynberg, G. (1992). *Atom-Photon Interactions: Basic Processes and Applications*. Wiley-Interscience.
 *   Cohn, H., & Elkies, N. (2003). New upper bounds on sphere packings I. *Annals of Mathematics*, *157*, 689–714.
@@ -96,6 +104,7 @@
 *   Cook, M. (2004). Universality in elementary cellular automata. *Complex Systems*, *15*(1), 1–40. DOI: 10.25088/ComplexSystems.15.1.1
 *   Corless, R. M., Gonnet, G. H., Hare, D. E. G., Jeffrey, D. J., & Knuth, D. E. (1996). On the Lambert W function. *Advances in Computational Mathematics*, *5*(1), 329–359. DOI: 10.1007/BF02124750
 *   Cover, T. M., & Thomas, J. A. (2006). *Elements of Information Theory* (2nd ed.). Wiley. DOI: 10.1002/047174882X
+*   Crewther, R. J., Di Vecchia, P., Veneziano, G., & Witten, E. (1979). Chiral estimate of the electric dipole moment of the neutron in quantum chromodynamics. *Physics Letters B*, *88*(1–2), 123–127. DOI: 10.1016/0370-2693(79)90128-X
 *   Craddock, T. J. A., Kurian, P., Preto, J., Sahu, K., Hameroff, S. R., Klobukowski, M., & Tuszynski, J. A. (2017). Anesthetic Alterations of Collective Terahertz Oscillations in Tubulin Correlate with Clinical Potency: Implications for Anesthetic Action and Post-Operative Cognitive Dysfunction. *Scientific Reports*, *7*, 9877.
 *   Cramer, J. G. (1986). The transactional interpretation of quantum mechanics. *Reviews of Modern Physics*, *58*(3), 647–688. DOI: 10.1103/RevModPhys.58.647
 *   Cross, A. W., DiVincenzo, D. P., & Terhal, B. M. (2009). A comparative code study for quantum fault-tolerance. *Quantum Information & Computation*, *9*(7-8), 541–572. arXiv:0711.1556.
@@ -148,6 +157,7 @@
 *   Fulton, W., & Harris, J. (1991). *Representation Theory: A First Course*. Springer (Graduate Texts in Mathematics, 129). DOI: 10.1007/978-1-4612-0979-9
 *   Fulton, W. (1997). *Young Tableaux: With Applications to Representation Theory and Geometry*. Cambridge University Press (London Mathematical Society Student Texts, 35). DOI: 10.1017/CBO9780511626241
 *   Gallager, R. G. (1968). *Information Theory and Reliable Communication*. Wiley.
+*   Gavela, M. B., Hernández, P., Orloff, J., & Pène, O. (1994). Standard model CP-violation and baryon asymmetry. *Modern Physics Letters A*, *9*(09), 795–809. DOI: 10.1142/S021773239400076X
 *   Gell-Mann, M. (1994). *The Quark and the Jaguar: Adventures in the Simple and the Complex*. W. H. Freeman.
 *   Georgi, H. (1999). *Lie Algebras in Particle Physics: From Isospin to Unified Theories* (2nd ed.). Westview Press.
 *   Georgi, H., & Glashow, S. L. (1974). Unity of all elementary-particle forces. *Physical Review Letters*, *32*(8), 438–441.
@@ -157,6 +167,7 @@
 *   Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. *Monatshefte für Mathematik und Physik*, *38*(1), 173–198. DOI: 10.1007/BF01700692
 *   Gorini, V., Kossakowski, A., & Sudarshan, E. C. G. (1976). Completely positive dynamical semigroups of N-level systems. *Journal of Mathematical Physics*, *17*(5), 821–825. DOI: 10.1063/1.522979 
 *   Gottesman, D. (1998). A Theory of Fault-Tolerant Quantum Computation. *Physical Review A*, *57*(1), 127–137. DOI: 10.1103/PhysRevA.57.127
+*   Graham, P. W., Irastorza, I. G., Lamoreaux, S. K., Lindner, A., & van Bibber, K. A. (2015). Experimental searches for the axion and axion-like particles. *Annual Review of Nuclear and Particle Science*, *65*, 485–514. DOI: 10.1146/annurev-nucl-102014-022120
 *   Griesmer, J. H. (1960). A bound for error-correcting codes. *IBM Journal of Research and Development*, *4*(5), 532–542. DOI: 10.1147/rd.45.0532
 *   Griffiths, P., & Harris, J. (1978). *Principles of Algebraic Geometry*. Wiley.
 *   Griffiths, R. B. (1967). Correlations in Ising Ferromagnets. I. *Journal of Mathematical Physics*, *8*(3), 478–483. DOI: 10.1063/1.1705219
@@ -212,11 +223,13 @@
 *   Jost, R. (1957). Eine Bemerkung zum CTP-Theorem. *Helvetica Physica Acta*, *30*, 409–416.
 *   JUNO Collaboration (An, F., *et al.*) (2016). Neutrino Physics with JUNO. *Journal of Physics G*, *43*, 030401. DOI: 10.1088/0954-3899/43/3/030401
 *   JUNO Collaboration (Abusleme, A., *et al.*) (2024). Potential to identify neutrino mass ordering with reactor antineutrinos at JUNO. arXiv:2405.18008.
+*   Kajantie, K., Laine, M., Rummukainen, K., & Shaposhnikov, M. E. (1996). Is there a hot electroweak phase transition at $m_H \gtrsim m_W$? *Physical Review Letters*, *77*(14), 2887–2890. DOI: 10.1103/PhysRevLett.77.2887
 *   Kant, I. (1781). *Kritik der reinen Vernunft* (*Critique of Pure Reason*).
 *   Karimi, H., Nutini, J., & Schmidt, M. (2016). Linear convergence of gradient and proximal-gradient methods under the Polyak–Łojasiewicz condition. In A. Appice et al. (Eds.), *Machine Learning and Knowledge Discovery in Databases* (ECML PKDD 2016), Lecture Notes in Computer Science, Vol. 9851, pp. 795–811. Springer. DOI: 10.1007/978-3-319-46128-1_50
 *   Kastoryano, M. J., & Temme, K. (2013). Quantum logarithmic Sobolev inequalities and rapid mixing. *Journal of Mathematical Physics*, *54*(5), 052202. DOI: 10.1063/1.4804995
 *   Keith, S. (2004). A differentiable structure for metric measure spaces. *Advances in Mathematics*, *183*(2), 271–315. DOI: 10.1016/S0001-8708(03)00089-6
 *   Keith, S., & Zhong, X. (2008). The Poincaré inequality is an open ended condition. *Annals of Mathematics*, *167*(2), 575–599. DOI: 10.4007/annals.2008.167.575
+*   Khlebnikov, S. Y., & Shaposhnikov, M. E. (1988). The statistical theory of anomalous fermion number non-conservation. *Nuclear Physics B*, *308*(4), 885–912. DOI: 10.1016/0550-3213(88)90133-2
 *   Kim, Y.-H., Yu, R., Kulik, S. P., Shih, Y., & Scully, M. O. (2000). Delayed "choice" quantum eraser. *Physical Review Letters*, *84*(1), 1–5. DOI: 10.1103/PhysRevLett.84.1
 *   King, C. (2003). The capacity of the quantum depolarizing channel. *IEEE Transactions on Information Theory*, *49*(1), 221–229. DOI: 10.1109/TIT.2002.806153
 *   King, C., & Ruskai, M. B. (2001). Minimal entropy of states emerging from noisy quantum channels. *IEEE Transactions on Information Theory*, *47*(1), 192–209. DOI: 10.1109/18.904522
@@ -265,6 +278,7 @@
 *   Loll, R. (2019). Quantum Gravity from Causal Dynamical Triangulations: A Review. *Classical and Quantum Gravity*, *37*(1), 013002. DOI: 10.1088/1361-6382/ab579e
 *   Lott, J., & Villani, C. (2009). Ricci curvature for metric-measure spaces via optimal transport. *Annals of Mathematics*, *169*(3), 903–991. DOI: 10.4007/annals.2009.169.903
 *   Lovelock, D. (1971). The Einstein tensor and its generalizations. *Journal of Mathematical Physics*, *12*(3), 498–501. DOI: 10.1063/1.1665613
+*   Lüders, G. (1954). On the equivalence of invariance under time reversal and under particle-antiparticle conjugation for relativistic field theories. *Danske Videnskabernes Selskab, Mat.-Fys. Medd.*, *28*(5), 1–17.
 *   Ludlow, A. D., Boyd, M. M., Ye, J., Peik, E., & Schmidt, P. O. (2015). Optical atomic clocks. *Reviews of Modern Physics*, *87*(2), 637–701.
 *   Ma, X.-S., Kofler, J., & Zeilinger, A. (2016). Delayed-choice gedanken experiments and their realizations. *Reviews of Modern Physics*, *88*(1), 015005. DOI: 10.1103/RevModPhys.88.015005
 *   MacWilliams, F. J., & Sloane, N. J. A. (1977). *The Theory of Error-Correcting Codes*. North-Holland.
@@ -305,10 +319,12 @@
 *   Padmanabhan, T. (2010). Equipartition of energy in the horizon degrees of freedom and the emergence of gravity. *Modern Physics Letters A*, *25*(14), 1129–1136. DOI: 10.1142/S021773231003294X
 *   Pai, V. P., Aw, S., Shomrat, T., Lemire, J. M., & Levin, M. (2012). Transmembrane voltage potential controls embryonic eye patterning in *Xenopus laevis*. *Development*, *139*(2), 313–323.
 *   Pauli, W. (1940). The connection between spin and statistics. *Physical Review*, *58*(8), 716–722. DOI: 10.1103/PhysRev.58.716
+*   Pauli, W. (1955). Exclusion principle, Lorentz group and reflection of space-time and charge. In *Niels Bohr and the Development of Physics*, Pergamon Press.
 *   Parrondo, J. M. R., Horowitz, J. M., & Sagawa, T. (2015). Thermodynamics of information. *Nature Physics*, *11*(2), 131–139. DOI: 10.1038/nphys3230
 *   Paris, M. G. A., & Řeháček, J. (Eds.). (2004). *Quantum State Estimation* (Lecture Notes in Physics, Vol. 649). Springer.
 *   Particle Data Group (Workman, R. L., *et al.*) (2022). Review of Particle Physics. *Progress of Theoretical and Experimental Physics*, *2022*(8), 083C01. DOI: 10.1093/ptep/ptac097
 *   Particle Data Group (Navas, S., *et al.*) (2024). Review of Particle Physics. *Physical Review D*, *110*, 030001. DOI: 10.1103/PhysRevD.110.030001.
+*   Peccei, R. D., & Quinn, H. R. (1977). CP conservation in the presence of pseudoparticles. *Physical Review Letters*, *38*(25), 1440–1443. DOI: 10.1103/PhysRevLett.38.1440
 *   Penrose, R. (1989). *The Emperor's New Mind: Concerning Computers, Minds, and the Laws of Physics*. Oxford University Press.
 *   Penrose, R. (1994). *Shadows of the Mind: A Search for the Missing Science of Consciousness*. Oxford University Press.
 *   Penrose, R. (1996). On gravity's role in quantum state reduction. *General Relativity and Gravitation*, *28*(5), 581–600.
@@ -324,6 +340,7 @@
 *   Pless, V. (1968). On the uniqueness of the Golay codes. *Journal of Combinatorial Theory*, *5*(3), 215–228. DOI: 10.1016/S0021-9800(68)80067-5
 *   Polyak, B. T. (1963). Gradient methods for minimizing functionals. *USSR Computational Mathematics and Mathematical Physics*, *3*(4), 864–878. DOI: 10.1016/0041-5553(63)90382-3
 *   Pontecorvo, B. (1957). Mesonium and antimesonium. *Soviet Physics JETP*, *6*, 429.
+*   Pospelov, M., & Ritz, A. (2005). Electric dipole moments as probes of new physics. *Annals of Physics*, *318*(1), 119–169. DOI: 10.1016/j.aop.2005.04.002
 *   Post, E. L. (1921). Introduction to a General Theory of Elementary Propositions. *American Journal of Mathematics*, *43*(3), 163–185. DOI: 10.2307/2370324
 *   Pound, R. V., & Rebka, G. A. (1960). Apparent weight of photons. *Physical Review Letters*, *4*(7), 337–341.
 *   Preskill, J. (1998). *Lecture Notes for Physics 229: Quantum Information and Computation*. California Institute of Technology. 

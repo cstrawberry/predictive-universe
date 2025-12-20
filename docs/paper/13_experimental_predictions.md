@@ -581,4 +581,16 @@ All predictions are currently consistent with observation. The framework will be
 The predictions for $D$ and $N_{\mathrm{gen}}$ are exact within the framework; any deviation would falsify the foundational structure rather than indicate theoretical uncertainty.
 
 
+### 13.10.8 Baryon Asymmetry
 
+The baryon-to-photon ratio is derived from the anomaly-holonomy coupling mechanism (Appendix Y):
+
+$$\eta_B = \mathcal{C}_{eff} \cdot \mathcal{F}_{CP} \cdot f_{wash} \cdot e^{-\kappa_B} = (6.2 \pm 0.5) \times 10^{-10}$$
+
+where $\kappa_B = \kappa_{EW}/2 + \varepsilon/N_g = 19.48$. The CP-violating factor $\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \approx 1$ saturates due to the large sphaleron action.
+
+**Observational Status:** The Planck measurement $\eta_B^{obs} = (6.12 \pm 0.04) \times 10^{-10}$ agrees with the prediction at the $+0.2\sigma$ level.
+
+**Falsification Criterion:** If future CMB measurements (LiteBIRD) converge outside the range $(5.7, 6.7) \times 10^{-10}$, the framework requires refinement.
+
+**Correlated Prediction (Theorem Y.11):** The hierarchy unification relation $\eta_B \sim \sqrt{v/M_{Pl}}$ implies that any BSM modification to the electroweak scale produces correlated shifts: $\delta\eta_B/\eta_B \approx (1/2)\delta v/v$.
