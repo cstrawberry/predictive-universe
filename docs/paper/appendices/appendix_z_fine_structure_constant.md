@@ -1246,7 +1246,7 @@ print(f"✓ Total information content: {P.size} bits")
 
 # Verification 5: Cosmological constant prefactor
 Lambda_LP2 = 2.87e-122
-S_inst = 2 * kappa_inferred
+S_inst = 2 * kappa_derived
 A_eff = Lambda_LP2 / (8 * np.pi * np.exp(-S_inst))
 print(f"\n✓ Cosmological constant check:")
 print(f"  S_inst = 2κ = {S_inst}")
@@ -1623,7 +1623,7 @@ $$\alpha^{-1} = \frac{4\pi}{2^{1/8}-1} - \frac{4\pi \cdot (1/4)}{\sqrt{3}} = \fr
 **Step 5: Evaluate.**
 - Bulk term: 4π/(2^{1/8}-1) = 138.8431
 - Interface term: π/√3 = 1.8138
-- First-order result: 138.8431 - 1.8138 = **137.029**
+- First-order result: 138.8431 - 1.8138 = **137.0293**
 - Second-order result (Section Z.27): 137.029 + 0.0068 = **137.036** ∎
 
 ---

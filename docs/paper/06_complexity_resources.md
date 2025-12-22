@@ -158,7 +158,7 @@ where:
 2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
 
 The specific components of the driving force are:
-*   **Marginal Benefit:** The term $\Gamma_0 \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units `[E][T]^{-1}[Complexity]^{-1}`. From the Law of Prediction (Theorem 19), the performance gradient is:
+*   **Marginal Benefit:** The term $\Gamma_0 \frac{\partial PP}{\partial C}$ represents the marginal power-equivalent benefit rate per unit complexity increase, with units $[E][T]^{-1}[\text{Complexity}]^{-1}$. From the Law of Prediction (Theorem 19), the performance gradient is:
 $$
 \frac{\partial PP}{\partial C}\bigg|_{C(t), \hat{C}_{target}(t)}
 = (\beta - \alpha)\left(\frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}(t)}\right)

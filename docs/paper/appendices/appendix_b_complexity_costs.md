@@ -141,7 +141,7 @@ $$
 $$
 \frac{d\hat{\pi}_{v,k}}{dt} + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,jk} = 0 \quad (\text{Local Momentum Conservation}) \quad \text{(B.12)}
 $$
-where $\hat{\rho}_v$ is from Eq (B.6), $d/dt = (i/\hbar)[\hat{H}_{total}, \cdot]$, and $\hat{q}_{v,j}$ is the energy flux operator. Assuming the standard relation $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, these equations implicitly define the flux operators consistent with the Hamiltonian and energy density.
+where $\hat{\rho}_v$ is from Eq (B.6), $\frac{d}{dt} = \frac{i}{\hbar}[\hat{H}_{total}, \cdot]$, and $\hat{q}_{v,j}$ is the energy flux operator. Assuming the standard relation $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, these equations implicitly define the flux operators consistent with the Hamiltonian and energy density.
 
 **B.6 Canonical Microscopic Stress-Energy Tensor $\hat{T}^{\mu\nu}_{(can)}$**
 

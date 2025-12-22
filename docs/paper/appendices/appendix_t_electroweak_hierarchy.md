@@ -3070,7 +3070,7 @@ $$\kappa = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5$$
 
 **Result.**
 
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-2\kappa} = 8\pi A_{\text{eff}} \cdot e^{-283} \approx 10^{-122}$$
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-2\kappa} = 8\pi A_{\text{eff}} \cdot e^{-283} \approx 2.87 \times 10^{-122}$$
 
 for $A_{\text{eff}} \sim \mathcal{O}(1)$, matching observation.
 

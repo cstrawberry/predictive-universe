@@ -134,15 +134,16 @@
 
 *   **PCE (Principle of Compression Efficiency):** (Definition 15) The core optimization principle stating that adaptive systems evolve towards configurations that maximize predictive utility (Meaning Potential, related to high PP) while minimizing comprehensive resource costs (Signal Cost, including $R, R_I$, adaptation costs). Drives complexity adaptation and network self-organization via minimization of PCE Potential $V(x)$ (Appendix D).
 
-*    **PCE-Attractor:** (Definition 15a) The canonically selected global-minimum equilibrium configuration characterized by maximal efficiency and symmetry. Its defining properties include a flat Quantum Fisher Information (QFI) spectrum for the U(1) sector, operation at the information capacity boundary, and the emergence of a canonical (minimal complexity) physical action with normalization $\kappa^*=1$. It is the idealized state that enables parameter-free predictions for fundamental constants.
+  
+*   **PCE-Attractor:** (Definition 15a, Appendix Z Section Z.6.3) The canonically selected global-minimum equilibrium configuration characterized by maximal efficiency and symmetry. It is the state where predictive and physical descriptions coincide, determining both $u^*$ and the fine-structure constant. Key properties include: (i) density operator $\rho_0 = \frac{I_a}{a} \oplus 0_b$ maximally mixed on the active subspace; (ii) a flat QFI spectrum for the $U(1)$ sector; (iii) capacity saturation $\mathcal{I}(u^*) = \ln d_0$; and (iv) canonical physical action normalization $\kappa^* = 1$. Its unitary orbit is the complex Grassmannian $\text{Gr}(2,8)$ with isotropy group $U(2) \times U(6)$.  
+
 
 *   **PCE Potential ($V(x)$):** (Definition D.1) An effective potential function quantifying the net cost rate (operational, propagation, penalties) minus benefits for a given MPU network configuration $x$. The system's adaptation dynamics are modeled as a stochastic gradient flow seeking to minimize $V(x)$.  
 
 *   **Perspectival Realism:** (Section 14.2) Philosophical stance suggested by the framework where reality has definite properties, but their description and actualization (via 'Evolve') are inherently relative to the interaction context or perspective $s \in \Sigma$.
 
 *   **Perspectival State ($S_{(s)}(t)$):** (Definition 24, Appendix M) The complete state of an MPU, represented by the pair $(S(t), s)$, where $S(t)=|\psi(t)\rangle \in \mathcal{H}_0$ is the state amplitude and $s \in \Sigma$ is the perspective index representing the interaction context/basis.
-  
-*   **PCE-Attractor:** (Definition 15a, Appendix Z Section Z.6.3) The unique PCE-optimal equilibrium state of the MPU, characterized by: (i) density operator $\rho_0 = I_a/a \oplus 0_b$ maximally mixed on active subspace; (ii) capacity saturation $\mathcal{I}(u^*) = \ln d_0$; (iii) canonical gauge normalization $\kappa = 1$ (before interface corrections). The state where predictive and physical descriptions coincide, determining both $u^*$ and the fine-structure constant. The unitary orbit of $\rho_0$ under conjugation is the complex Grassmannian $\text{Gr}(a, d_0) = \text{Gr}(2,8)$ with isotropy group $U(a) \times U(b) = U(2) \times U(6)$.
+
 
 *   **PCE-Attractor Orbit:** (Theorem Z.6.3a) The orbit of the PCE-Attractor state $\rho_0 = \frac{1}{a}I_a \oplus 0_b$ under unitary conjugation is $\mathcal{O}_{\rho_0} \cong U(d_0)/(U(a) \times U(b)) \cong \text{Gr}(2,8)$, a compact Hermitian symmetric space of complex dimension $ab = 12$ and real dimension $2ab = 24 = M$. This identification provides an independent geometric derivation of the interface mode count.
 

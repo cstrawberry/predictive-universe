@@ -693,7 +693,7 @@ $$\eta_B = 0.14 \times \sqrt{\frac{v}{M_{Pl}}} = 0.14 \times 4.5 \times 10^{-9} 
 $$\mathcal{M}_{EW} = \mathcal{M}_{+} \sqcup \mathcal{M}_{-}$$
 where $\mathcal{M}_{+}$ is CP-even and $\mathcal{M}_{-}$ is CP-odd.
 
-**Step 3 (Complexity bisection).** For a symmetric $\mathbb{Z}_2$ action, each sector carries half the total complexity:
+**Step 3 (Complexity bisection).** For a symmetric $\mathbb{Z}_2$ action that bisects the configuration space volume, each sector carries half the total complexity:
 $$\kappa(\mathcal{M}_{\pm}) = \frac{1}{2}\kappa(\mathcal{M}_{EW}) = \frac{\kappa_{EW}}{2}$$
 
 **Step 4 (Baryogenesis selection).** Baryon number violation is CP-odd (it distinguishes matter from antimatter). Therefore baryogenesis samples only $\mathcal{M}_{-}$:

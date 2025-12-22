@@ -300,4 +300,130 @@ $$
 This result demonstrates that the fundamental MPU spacing `δ` is robustly of the same order of magnitude as the emergent Planck length `L_P`. The value of this ratio is not a tunable parameter but is derived directly from the framework's most fundamental constants: the Hilbert space dimension `d₀=8` (from the logical necessity of `K_0=3` bits for self-reference) and the irreducible thermodynamic cost of that logic, `ε=ln(2)`. The ability to derive a plausible, `O(1)` constant linking these scales from a self-consistent global optimization provides powerful evidence for the internal coherence of the Predictive Universe framework.
 
 
+## Q.6 Lorentz-Invariant Discretization and the Temporal Scale
+
+The spatial discretization scale $\delta/L_P = \sqrt{8\ln 2/\eta^*}$ (Equation Q.18) was derived from PCE optimization. This section establishes the corresponding temporal discretization scale through consistency with emergent Lorentzian structure.
+
+### Q.6.1 The Discretization Consistency Requirement (Conditional on Theorems 43, 46)
+
+**Proposition Q.6.1 (Lorentz-Invariant Discretization).** The emergent invariant speed $c$ (Theorem 46) relates the spatial discretization scale $\delta$ to the temporal discretization scale $\tau_{min}$ through:
+
+$$c = \frac{\delta}{\tau_{min}}$$
+
+Combined with the Planck unit identity $c = L_P/t_P$, this yields:
+
+$$\boxed{\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}}$$
+
+*Proof.*
+
+**Step 1 (Emergent Speed Structure).** Theorem 46 establishes that the finite MPU processing time $\tau_{min} > 0$ (Theorem 29) and finite MPU spacing $\delta$ (Definition 35) yield a bounded maximum causal speed:
+
+$$c \leq \frac{\delta \cdot w_{max}}{\tau_{min}}$$
+
+**Step 5 (Uniqueness).** Suppose the ratios were unequal: $\delta/L_P \neq \tau_{min}/t_P$. Define $c_{eff} := \delta/\tau_{min}$. Then $c_{eff} \neq c$, and the discretization would select a preferred frame—spatial and temporal resolutions would transform differently under boosts. This contradicts Theorem 46, which proves that Lorentz invariance emerges necessarily from the causal structure of ND-RID interactions at PCE equilibrium. Therefore, equality of the ratios is the unique consistent solution. ∎
+
+**Step 2 (Planck Unit Relation).** The Planck length and Planck time are defined through:
+
+$$L_P = \sqrt{\frac{\hbar G}{c^3}}, \quad t_P = \sqrt{\frac{\hbar G}{c^5}}$$
+
+from which the identity $L_P/t_P = c$ follows by direct calculation:
+
+$$\frac{L_P}{t_P} = \sqrt{\frac{\hbar G/c^3}{\hbar G/c^5}} = \sqrt{c^2} = c$$
+
+**Step 3 (Scale Identification).** For the emergent discrete structure to be consistent with the continuum Planck scale physics, we identify the emergent speed $c$ appearing in Theorem 46 with the speed $c$ defining the Planck units. This identification ensures dimensional consistency between the discrete MPU network and the emergent continuum spacetime.
+
+**Step 4 (Ratio Equality).** Equating the two expressions for $c$:
+
+$$\frac{\delta}{\tau_{min}} = \frac{L_P}{t_P}$$
+
+yields the stated result upon rearrangement:
+
+$$\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}$$
+
+**Step 5 (Uniqueness).** Suppose the ratios were unequal: $\delta/L_P \neq \tau_{min}/t_P$. Define $c_{eff} := \delta/\tau_{min}$. Then $c_{eff} \neq c$, and the discretization would select a preferred frame—spatial and temporal resolutions would transform differently under boosts, violating Lorentz invariance (Theorem 46). Since Theorem 46 establishes Lorentz invariance as an emergent property of the PCE-optimal vacuum, equality of the ratios is the unique consistent solution. ∎
+
+### Q.6.2 The Temporal Discretization Scale
+
+**Theorem Q.6.1 (Minimum Temporal Interval).** The minimum resolvable temporal interval in the MPU network is:
+
+$$\boxed{\tau_{min} = \sqrt{\frac{8\ln 2}{\eta^*}} \cdot t_P \approx 2.355 \, t_P}$$
+
+where $\eta^* \approx 1$ at PCE equilibrium (Section Q.4).
+
+*Proof.* Apply Proposition Q.6.1 to the spatial result (Equation Q.18):
+
+$$\tau_{min} = t_P \cdot \frac{\delta}{L_P} = t_P \cdot \sqrt{\frac{8\ln 2}{\eta^*}}$$
+
+Evaluating at $\eta^* = 1$: $\tau_{min} = \sqrt{8\ln 2} \cdot t_P \approx 2.355 \, t_P$. ∎
+
+**Corollary Q.6.1 (Unified Discretization Formula).** Both spatial and temporal discretization scales are determined by a single expression involving the framework's fundamental constants:
+
+$$\boxed{\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P} = \sqrt{d_0 \cdot \varepsilon} = \sqrt{8\ln 2} \approx 2.355}$$
+
+where $\varepsilon = \ln 2$ is the irreducible SPAP entropy cost (Theorem 31) and $d_0 = 8$ is the MPU Hilbert space dimension (Theorem 23).
+
+*Proof.* From Equation Q.18 with $\eta^* = 1$ and the PCE-optimal channel capacity $C_{max}^* = 2\ln 2$ (Equation Q.10):
+
+$$\frac{\delta^2}{L_P^2} = \frac{4\chi^* C_{max}^*}{\eta^*} = \frac{4 \cdot 1 \cdot 2\ln 2}{1} = 8\ln 2$$
+
+This can be expressed as the product of the two fundamental MPU parameters:
+
+$$\frac{\delta^2}{L_P^2} = d_0 \cdot \varepsilon = 8 \cdot \ln 2$$
+
+Taking the square root and applying Proposition Q.6.1 yields both ratios equal to $\sqrt{d_0 \cdot \varepsilon}$. ∎
+
+### Q.6.3 Information-Theoretic Interpretation
+
+**Remark Q.6.1 (Decomposition of the Discretization Scale).** The unified discretization factor $\sqrt{d_0 \cdot \varepsilon}$ admits a transparent information-theoretic decomposition:
+
+- **Factor $d_0 = 8$:** The MPU Hilbert space dimension, determined by the horizon constant $K_0 = 3$ through $d_0 = 2^{K_0}$ (Theorem 23). This encodes the logical structure required for self-referential prediction.
+
+- **Factor $\varepsilon = \ln 2$:** The irreducible thermodynamic cost of self-referential prediction (Theorem 31), arising from the 2-to-1 state merge required by the SPAP cycle (Lemma J.1).
+
+The discretization scale $\sqrt{d_0 \cdot \varepsilon} \approx 2.355$ thus represents the geometric mean of the logical capacity ($d_0$) and thermodynamic cost ($\varepsilon$) of self-reference.
+
+**Remark Q.6.2 (Complete Derivation Chain).** The full derivation from logical axioms to spacetime discretization proceeds through two parallel pathways originating from $K_0$:
+
+$$K_0 = 3 \begin{cases} \xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[6pt] \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{cases} \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{d_0 \cdot \varepsilon} \xrightarrow{\text{Prop. Q.6.1}} \frac{\tau_{min}}{t_P} = \sqrt{d_0 \cdot \varepsilon}$$
+
+The horizon constant $K_0 = 3$ (Theorem 15) gives rise to both:
+
+1. **The Hilbert space dimension** $d_0 = 2^{K_0} = 8$ via Theorem 23, representing the minimum state space for encoding $K_0$ bits of self-referential structure.
+
+2. **The entropy cost** $\varepsilon = \ln 2$ via Theorem 31, representing the irreducible thermodynamic price of the logically necessary 2-to-1 state merge in SPAP dynamics (Appendix J, Lemma J.1).
+
+These two quantities, though both originating from $K_0$, arise through independent derivation chains—one algebraic (state counting), one thermodynamic (Landauer's principle). Their product $d_0 \cdot \varepsilon = 8 \ln 2$ determines the discretization scale through PCE optimization (Equation Q.18).
+
+### Q.6.4 Experimental Predictions
+
+**Prediction Q.6.1 (Modified Dispersion Isotropy).** Modified dispersion relations (MDRs) provide a generic phenomenological signature of quantum gravity scenarios with minimal length scales [Amelino-Camelia 2013, Mattingly 2005]. If spacetime discretization manifests in MDRs of the form:
+
+$$E^2 = p^2c^2 + m^2c^4 + \xi_s \frac{p^3 c^3}{E_P} + \xi_t \frac{E^3}{E_P}$$
+
+where $E_P = \hbar/t_P$ is the Planck energy, then the framework predicts:
+
+$$\boxed{\xi_s = \xi_t}$$
+
+*Derivation.* The coefficient $\xi_s$ parameterizes leading-order corrections from spatial discretization at scale $\delta$, while $\xi_t$ parameterizes corrections from temporal discretization at scale $\tau_{min}$. By Proposition Q.6.1, the equal ratios $\delta/L_P = \tau_{min}/t_P$ imply that spatial and temporal discretization effects enter at the same relative scale, yielding equal leading-order correction coefficients.
+
+**Prediction Q.6.2 (Absence of Preferred Frame Effects).** Searches for Lorentz-violating effects in the photon sector should yield null results to the precision set by $(\delta/L_P)^{-1} \approx 0.42$ corrections at the Planck scale. Current constraints from gamma-ray burst observations [Vasileiou et al. 2013] and active galactic nuclei [MAGIC Collaboration 2008] constrain energy-dependent photon dispersion by placing lower bounds on the effective quantum-gravity scale $E_{QG}$ at linear and quadratic orders, with GRB limits reaching the Planck scale and beyond under conservative assumptions. These bounds ($E_{QG} \gtrsim E_P$) are consistent with Lorentz-invariant discretization.
+
+*Derivation.* The framework predicts that discretization preserves Lorentz invariance (Proposition Q.6.1, Step 5). Preferred-frame effects would arise only from asymmetric spatial versus temporal discretization, which is excluded by the equal-ratio condition. The scale of any residual effects is set by the inverse discretization ratio $(\delta/L_P)^{-1} = 1/\sqrt{8\ln 2} \approx 0.42$.
+
+### Q.6.5 Summary
+
+| Quantity | Symbol | Value | Origin |
+|:---------|:-------|:------|:-------|
+| Spatial discretization | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | PCE optimization (Q.5) |
+| Temporal discretization | $\tau_{min}/t_P$ | $\sqrt{8\ln 2} \approx 2.355$ | Lorentz consistency (Q.6) |
+| Information budget | $C_{max}^*$ | $2\ln 2$ | Capacity saturation (Q.3) |
+| Hilbert space dimension | $d_0$ | $8 = 2^{K_0}$ | Theorem 23 |
+| Irreducible entropy cost | $\varepsilon$ | $\ln 2$ | Theorem 31 |
+
+The complete derivation chain from the horizon constant to spacetime discretization:
+
+$$\boxed{K_0 = 3 \xrightarrow{\text{Thm 15}} \begin{pmatrix} d_0 = 8 \\ \varepsilon = \ln 2 \end{pmatrix} \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \frac{\tau_{min}}{t_P} = \sqrt{8\ln 2} \approx 2.355}$$
+
+
+
 
