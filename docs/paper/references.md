@@ -276,7 +276,8 @@
 *   Li, M. (2004). A model of holographic dark energy. *Physics Letters B*, *603*(1–2), 1–5. DOI: 10.1016/j.physletb.2004.10.014. 
 *   Lieb, E. H., & Robinson, D. W. (1972). The finite group velocity of quantum spin systems. *Communications in Mathematical Physics*, *28*(3), 251–257. DOI: 10.1007/BF01645779
 *   Lin, Y., & Yau, S.-T. (2010). Ricci curvature and eigenvalue estimate on locally finite graphs. *Mathematical Research Letters*, *17*(2), 343–356.
-*   Lindblad, G. (1976). On the generators of quantum dynamical semigroups. *Communications in Mathematical Physics*, *48*(2), 119–130. DOI: 10.1007/BF01608499 
+*   Lindblad, G. (1975). Completely positive maps and entropy inequalities. *Communications in Mathematical Physics*, *40*(2), 147–151.
+*   Lindblad, G. (1976). On the generators of quantum dynamical semigroups. *Communications in Mathematical Physics*, *48*(2), 119–130. DOI: 10.1007/BF01608499
 *   Litim, D. F. (2001). Optimized renormalization group flows. *Physical Review D*, *64*, 105007. DOI: 10.1103/PhysRevD.64.105007
 *   Lloyd, S. (1997). Capacity of the noisy quantum channel. *Physical Review A*, *55*(3), 1613.
 *   Lloyd, S. (2000). Ultimate physical limits to computation. *Nature*, *406*(6799), 1047–1054.
@@ -341,6 +342,7 @@
 *   Peres, A., & Terno, D. R. (2004). Quantum information and relativity theory. *Reviews of Modern Physics*, *76*(1), 93–123.
 *   Pérez-García, D., Wolf, M. M., Petz, D., & Ruskai, M. B. (2006). Contractivity of positive and trace-preserving maps under Lⁿ norms. *Journal of Mathematical Physics*, *47*(8), 083506. DOI: 10.1063/1.2218675
 *   Peskin, M. E., & Schroeder, D. V. (1995). *An Introduction to Quantum Field Theory*. Addison-Wesley (now Perseus Books).
+*   Petz, D. (1986). Quasi-entropies for finite quantum systems. *Reports on Mathematical Physics*, *23*(1), 57–65.
 *   Petz, D. (1996). Monotone metrics on matrix spaces. *Linear Algebra and its Applications*, *244*, 81–96. DOI: 10.1016/0024-3795(94)00211-8.
 *   Petz, D., & Sudár, C. (1996). Geometries of quantum states. *Journal of Mathematical Physics*, *37*(6), 2662–2673. DOI: 10.1063/1.531535
 *   Pfender, F., & Ziegler, G. M. (2004). Kissing numbers, sphere packings, and some unexpected proofs. *Notices of the AMS*, *51*(8), 873–883.
@@ -368,6 +370,7 @@
 *   Robertson, H. P. (1929). The Uncertainty Principle. *Physical Review*, *34*(1), 163–164. DOI: 10.1103/PhysRev.34.163
 *   Rosenfeld, L. (1940). Sur le tenseur d'impulsion‐énergie. *Mémoires de l'Académie Royale de Belgique, Classe des Sciences*, *18*(6), 1–30.
 *   Rovelli, C. (1996). Relational quantum mechanics. *International Journal of Theoretical Physics*, *35*(8), 1637–1678. DOI: 10.1007/BF02302261
+*   Ruskai, M. B. (1994). Beyond strong subadditivity? Improved bounds on the contraction of generalized relative entropy. *Reviews in Mathematical Physics*, *6*(5a), 1147–1161.
 *   Ryu, S., & Takayanagi, T. (2006). Holographic derivation of entanglement entropy from the anti–de Sitter space/conformal field theory correspondence. *Physical Review Letters*, *96*(18), 181602.
 *   Sagawa, T., & Ueda, M. (2009). Minimal Energy Cost for Thermodynamic Information Processing: Measurement and Information Erasure. *Physical Review Letters*, *102*(25), 250602. DOI: 10.1103/PhysRevLett.102.250602
 *   Sahu, S., Ghosh, S., Hirata, K., Fujita, D., & Bandyopadhyay, A. (2013). Multi-level memory-switching properties of a single brain microtubule. *Applied Physics Letters*, *102*(12), 123701.
@@ -407,8 +410,10 @@
 *   Tononi, G., & Koch, C. (2015). Consciousness: here, there and everywhere? *Philosophical Transactions of the Royal Society B: Biological Sciences*, *370*(1668), 20140167. DOI: 10.1098/rstb.2014.0167
 *   Tononi, G., Boly, M., Massimini, M., & Koch, C. (2016). Integrated information theory: from consciousness to its physical substrate. *Nature Reviews Neuroscience*, *17*(7), 450–461. DOI: 10.1038/nrn.2016.44
 *   Touboul, P., et al. (MICROSCOPE Collaboration) (2017). MICROSCOPE mission: First results of a space test of the equivalence principle. *Physical Review Letters*, *119*, 231101. DOI: 10.1103/PhysRevLett.119.231101
+*   Touboul, P., et al. (2022). MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle. *Physical Review Letters*, *129*(12), 121102.
 *   Turing, A. M. (1936). On computable numbers, with an application to the Entscheidungsproblem. *Proceedings of the London Mathematical Society*, s2-42(1), 230–265. DOI: 10.1112/plms/s2-42.1.230
 *   Tuszyński, J. A., Brown, J. A., & Hawrylak, P. (1998). Dielectric polarization, electrical conduction, information processing and quantum computation in microtubules. Are they plausible? *Philosophical Transactions of the Royal Society of London A*, *356*(1743), 1897–1926.
+*   Uhlmann, A. (1976). The "transition probability" in the state space of a *-algebra. *Reports on Mathematical Physics*, *9*, 273–279.
 *   Unruh, W. G. (1976). Notes on black-hole evaporation. *Physical Review D*, *14*(4), 870–892. DOI: 10.1103/PhysRevD.14.870
 *   Utiyama, R. (1956). Invariant theoretical interpretation of interaction. *Physical Review*, *101*(5), 1597–1607. DOI: 10.1103/PhysRev.101.1597. 
 *   Uzan, J.-P. (2011). Varying constants, gravitation and cosmology. *Living Reviews in Relativity*, *14*(1), 2. DOI: 10.12942/lrr-2011-2

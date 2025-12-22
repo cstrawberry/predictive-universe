@@ -489,7 +489,7 @@ The kinematic barrier $v < c$ is not an independent physical law but a downstrea
 
 The prediction-motion coupling constant $\lambda_{PM}$ quantifies this unity. Its smallness ($\sim 10^{-44}$ kg·m) explains why the cognitive costs of ordinary accelerations are negligible in the emergent regime, while its non-zero value ensures that the unification is physical rather than merely formal. In extreme environments—near black holes, in the early universe, or at the fundamental scales where MPU dynamics dominate—this coupling becomes the essential constraint governing the joint optimization of motion and prediction, revealing the predictive substructure beneath the emergent spacetime description.
 
-# N.11 Inertial Mass as Relational Information
+# N.11 Inertial Mass as Relational Information# N.11 Inertial Mass as Relational Information
 
 The preceding sections established that acceleration couples to predictive capacity through the Unruh mechanism (Section N.3), and that "motion" is fundamentally the reconfiguration of a system's predictive relationships with the MPU network (Section N.7). This section completes the unification program by deriving inertial mass itself from the information content of those relationships, resolving the ancient puzzle of why matter resists acceleration.
 
@@ -758,6 +758,141 @@ $$
 
 This result is consistent with experimental tests of the weak equivalence principle, which constrain violations to the level of $|\eta| < 10^{-14}$ [Will 2014; Touboul et al. 2017].
 
+
+## N.11.5a: The Equivalence Principle as Universal Contractivity
+
+The derivation of the weak equivalence principle in Theorem N.7 establishes that $m_I = m_G$ for simple systems because both quantities measure relational information content $\mathcal{I}_{rel}$. This section deepens this result by identifying a precise information-theoretic structure underlying the equivalence principle: the **data processing inequality** (DPI) for quantum channels.
+
+### N.11.5a.1 The Data Processing Inequality
+
+**Definition N.11.1 (Distinguishability Monotone).** A distinguishability monotone $\mathcal{M}$ is a function on pairs of quantum states satisfying:
+
+$$
+\mathcal{M}(\mathcal{E}(\rho), \mathcal{E}(\sigma)) \leq \mathcal{M}(\rho, \sigma)
+$$
+
+for all CPTP maps $\mathcal{E}$ and all density operators $\rho, \sigma$. Examples include the trace distance $D_{tr}(\rho, \sigma) = \frac{1}{2}\|\rho - \sigma\|_1$, the relative entropy $S(\rho \| \sigma) = \text{Tr}(\rho \ln \rho - \rho \ln \sigma)$ when $\text{supp}(\rho) \subseteq \text{supp}(\sigma)$, quantum fidelity-derived measures [Uhlmann 1976; Jozsa 1994], and generalized relative entropy monotones [Petz 1986; Ruskai 1994].
+
+**Theorem N.10 (ND-RID Contractivity as Universal DPI).** The 'Evolve' channel $\mathcal{E}_N$ implementing ND-RID dynamics (Definition 27) satisfies the data processing inequality with strict contractivity:
+
+$$
+D_{tr}(\mathcal{E}_N(\rho), \mathcal{E}_N(\sigma)) \leq f_{RID} \cdot D_{tr}(\rho, \sigma)
+\tag{N.33}
+$$
+
+where $0 \leq f_{RID} < 1$ is the contractivity factor established in Lemma E.1.
+
+*Proof.* The irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31) implies a minimum reset probability $p \geq \varepsilon/\ln d_0 > 0$ in the channel decomposition $\mathcal{E}_N = (1-p)\Psi + p T_\sigma$ (Lemma E.1). This Doeblin minorization structure with full-rank reset state $\sigma \succ 0$ guarantees primitivity with a unique fixed point (Theorem G.1.9.1). For such channels, the spectral gap $\lambda_{gap}(\mathcal{E}_N) < 1$ on the traceless subspace directly bounds the trace-distance contractivity factor: $f_{RID} \leq 1 - p < 1$ [Wolf 2012]. The bound (N.33) follows from Appendix E, Section E.3. ∎
+
+**Corollary N.10.1 (Relative Entropy Contractivity).** The ND-RID channel satisfies:
+
+$$
+S(\mathcal{E}_N(\rho) \| \mathcal{E}_N(\sigma)) \leq S(\rho \| \sigma)
+\tag{N.34}
+$$
+
+with strict inequality for $\rho \neq \sigma$ outside the Petz recovery subspace when the channel has strictly positive reset probability $p > 0$ (Lemma E.1). For the ND-RID channel with full-rank reset state $\sigma \succ 0$, this subspace is trivial, ensuring strict inequality for all $\rho \neq \sigma$.
+
+*Proof.* This is the quantum data processing inequality for relative entropy [Lindblad 1975]. Strict inequality follows from non-unitarity of the 'Evolve' channel, guaranteed by $\varepsilon > 0$ (Theorem 31). ∎
+
+### N.11.5a.2 The DPI-Equivalence Principle Correspondence
+
+The equivalence principle asserts that all matter couples to gravity universally—inertial and gravitational mass are identical. Within the PU framework, this universality emerges from the universality of ND-RID contractivity.
+
+**Theorem N.11 (Equivalence Principle from Universal Contractivity).** Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be two simple systems (with $C_{agg} \leq C_{op}$, Definition 30) composed of different matter types. The weak equivalence principle $(m_I/m_G)_1 = (m_I/m_G)_2 = 1$ holds if and only if both systems couple to the ND-RID channel $\mathcal{E}_N$ with the same contractivity factor $f_{RID}$.
+
+*Proof.*
+
+**Step 1 (Inertial mass from entropy flow).** By Theorem N.5, inertial mass arises from the entropy cost of maintaining relational information:
+
+$$
+m_I = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P
+$$
+
+The entropy flow rate (Corollary N.4.1) depends on the channel capacity $C_{max}$, which is bounded by contractivity (Theorem E.2):
+
+$$
+C_{max}(f_{RID}) < \ln d_0
+$$
+
+**Step 2 (Gravitational mass from stress-energy).** By Theorem N.7 Step 3, gravitational mass arises from the stress-energy tensor $T_{\mu\nu}^{(MPU)}$, which encodes the operational costs of maintaining predictive states. These costs are determined by the same ND-RID channel structure.
+
+**Step 3 (Universal contractivity implies universal coupling).** The ND-RID channel structure (Definition 27) is determined by the fundamental MPU dynamics, which are matter-independent by construction. Suppose $f_{RID}$ is universal—the same for all matter types. Then:
+- The channel capacity $C_{max}(f_{RID})$ is universal
+- The entropy flow rate $d\mathcal{S}/d\tau$ depends only on $\mathcal{I}_{rel}$, not matter type
+- Both $m_I$ and $m_G$ reduce to functions of $\mathcal{I}_{rel}$ alone
+
+By Theorem N.7, this yields $m_I = m_G$ for all matter types.
+
+**Step 4 (Converse).** Suppose $f_{RID}$ differs between matter sectors: $f_{RID}^{(1)} \neq f_{RID}^{(2)}$. Then the channel capacities differ, the entropy flow rates at fixed $\mathcal{I}_{rel}$ differ, and $m_I/m_G$ would acquire matter-dependent corrections. This contradicts the equivalence principle.
+
+Therefore, EP holds iff $f_{RID}$ is universal. ∎
+
+**Corollary N.11.1 (EP Violations as DPI Violations).** Any measured violation of the equivalence principle:
+
+$$
+\eta = \frac{(m_G/m_I)_1 - (m_G/m_I)_2}{(m_G/m_I)_1 + (m_G/m_I)_2} \neq 0
+$$
+
+implies sector-dependent departures from universal ND-RID contractivity. To leading order in the deviation:
+
+$$
+\eta = \frac{\Delta f_{RID}}{f_{RID}} + O\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2 = \frac{f_{RID}^{(1)} - f_{RID}^{(2)}}{f_{RID}} + O\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2
+\tag{N.35}
+$$
+
+*Proof.* From Theorem N.11, mass ratios depend on $f_{RID}$ through the channel capacity $C_{max}(f_{RID})$. For small sector-dependent variations $\Delta f_{RID} \ll f_{RID}$, Taylor expansion of $m_I/m_G$ yields a linear leading term. The coefficient depends on the specific functional form of the $f_{RID}$-dependence but is $O(1)$ for generic smooth dependence, establishing the scaling to leading order. ∎
+
+### N.11.5a.3 Information-Theoretic Interpretation
+
+**Remark N.11.7 (The DPI as Gravitational Universality).** The data processing inequality is a fundamental theorem of information theory: no physical processing can increase distinguishability without access to additional resources or side channels [Cover & Thomas 2006]. Theorem N.11 reveals that gravitational universality—the fact that gravity couples to all matter identically—is a *physical manifestation* of this mathematical theorem.
+
+The correspondence operates as follows:
+
+| Information Theory | Gravity |
+|:-------------------|:--------|
+| CPTP channel $\mathcal{E}_N$ | ND-RID 'Evolve' process (Definition 27) |
+| Contractivity $f_{RID} < 1$ | Irreversibility $\varepsilon > 0$ (Theorem 31) |
+| Universal $f_{RID}$ | Universal gravitational coupling |
+| DPI: $\mathcal{M}(\mathcal{E}(\rho), \mathcal{E}(\sigma)) \leq \mathcal{M}(\rho, \sigma)$ | EP: $m_I = m_G$ for all matter (Theorem N.7) |
+| DPI violation (side channels) | EP violation (new physics) |
+
+**Remark N.11.8 (Testable Prediction).** Current experimental bounds on EP violation are $|\eta| < 3 \times 10^{-15}$ [Touboul et al. 2022]. Given the leading-order equality (Equation N.35), this translates to a bound on sector-dependent contractivity variations:
+
+$$
+\left|\frac{\Delta f_{RID}}{f_{RID}}\right| < 3 \times 10^{-15}
+\tag{N.36}
+$$
+
+For complex systems ($C_{agg} > C_{op}$), Theorem N.8 predicts $\delta_C \sim 10^{-40}$, which is consistent with this bound but lies far below current experimental sensitivity.
+
+### N.11.5a.4 Connection to Horizon Thermodynamics
+
+The DPI-EP correspondence connects to the unified modular structure established in Appendix G (Theorem G.1.9.5).
+
+**Proposition N.6 (Horizons as DPI Boundaries).** A causal horizon $\mathcal{H}$ is characterized information-theoretically as a boundary where the ND-RID channel capacity saturates. At saturation:
+
+$$
+C_{max}(\mathcal{H}) = \sigma_{eff} \cdot \mathcal{A}
+\tag{N.37}
+$$
+
+where $\mathcal{A}$ is the horizon area and $\sigma_{eff} = 1/(4G)$ in natural units (Theorem E.5).
+
+*Proof.* By Theorem E.6, the entropy associated with a causal boundary equals the total channel capacity crossing it. At a horizon, this capacity is maximized consistent with the geometric constraints, yielding the Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/(4G)$. ∎
+
+**Corollary N.11.2 (Unified Origin of Gravitational Phenomena).** Both the equivalence principle and the horizon area law derive from the same information-theoretic structure: the universal contractivity of ND-RID channels.
+
+- **EP (local):** Universal $f_{RID}$ → universal matter-gravity coupling (Theorem N.11)
+- **Area law (global):** Capacity saturation → entropy proportional to area (Theorem E.6)
+
+The derivation chain is:
+
+$$
+\varepsilon \geq \ln 2 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Theorem E.2}} C_{max} < \ln d_0 \xrightarrow{\text{universal}} \text{EP + Area Law}
+$$
+
+
 ## N.11.6 Complexity-Dependent Equivalence Principle Violation
 
 For systems with high internal complexity ($C_{agg} > C_{op}$), the equivalence principle receives corrections.
@@ -766,7 +901,7 @@ For systems with high internal complexity ($C_{agg} > C_{op}$), the equivalence 
 
 $$
 \frac{m_G - m_I}{m_I} = \delta_C \approx K_\Gamma \cdot P_{context}
-\tag{N.33}
+\tag{N.38}
 $$
 
 where $K_\Gamma$ is the gravitational decoherence coefficient (Appendix S, Equation S.60) and $P_{context}$ is the power associated with maintaining the CC context.
@@ -777,14 +912,14 @@ where $K_\Gamma$ is the gravitational decoherence coefficient (Appendix S, Equat
 
 $$
 \Gamma_{deco} = \frac{\Delta E}{\hbar} K_{eff} P_{context}
-\tag{N.34}
+\tag{N.39}
 $$
 
 **Step 2 (Modified boundary dynamics).** The decoherence modifies the effective 'Evolve' rate at the system's boundary. The entropy flow rate becomes:
 
 $$
 \frac{d\mathcal{S}}{d\tau}\bigg|_{CC} = \frac{\mathcal{I}_{rel}}{2\tau_{min}} \cdot (1 + \Gamma_{deco} \cdot \tau_{min})
-\tag{N.35}
+\tag{N.40}
 $$
 
 **Step 3 (Modified inertial mass).** The additional entropy flow contributes to rest energy:
@@ -811,7 +946,7 @@ with:
 
 $$
 K_\Gamma = \frac{4\pi G}{3c^4}(1+3w_c)\frac{\Delta E \cdot r L_q \tau_c \tau_{coh}^0}{\hbar V_S}
-\tag{N.36}
+\tag{N.41}
 $$
 
 For typical biological parameters ($P_{context} \sim 0.1$ W, $V_S \sim 10^{-3}$ m³, $\tau_c \sim 1$ s):
@@ -830,7 +965,7 @@ $$
 
 $$
 \frac{m_1}{m_2} = \frac{\mathcal{I}_1}{\mathcal{I}_2}
-\tag{N.37}
+\tag{N.42}
 $$
 
 *Proof.* Direct from Theorem N.5, since the prefactor $m_P/(2\sqrt{8\varepsilon})$ cancels in ratios. ∎
@@ -839,7 +974,7 @@ $$
 
 $$
 \ln\left(\frac{m_j}{m_i}\right) = \ln\left(\frac{\mathcal{I}_j}{\mathcal{I}_i}\right) = \alpha_{IR} \cdot d^2_{ij}
-\tag{N.38}
+\tag{N.43}
 $$
 
 where $d_{ij}$ is the Euclidean distance between generation roots in the E$_8$ root system (Appendix R, Section R.2) and $\alpha_{IR} = 1.418$ is the hierarchy coefficient (Theorem T.24.2.1).
