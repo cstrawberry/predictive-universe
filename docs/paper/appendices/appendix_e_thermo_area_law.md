@@ -598,7 +598,353 @@ The bulk contains no independent information beyond what is encoded in boundary 
 
 This provides an information-theoretic derivation of the Planck-scale resolution limit, independent of gravitational arguments.
 
----
+## E.8.3 Holographic Saturation as PCE Attractor
+
+### E.8.3.1 Introduction
+
+The preceding sections established that the entropy associated with a causal boundary is bounded by the Bekenstein-Hawking area law $S \leq \mathcal{A}/4G$ (Theorem 49), derived from the finite channel capacity $C_{max} < \ln d_0$ of ND-RID interactions (Theorem E.2). This section demonstrates a stronger result: the Principle of Compression Efficiency (PCE, Definition 15) does not merely permit boundary-area scaling of entropy but *dynamically selects* it as the unique stable equilibrium. We prove that PCE dynamics drive the system toward holographic saturation, establishing $S = \mathcal{A}/4G$ as an attractor of the PCE potential landscape.
+
+The progression from bounds to attractor completes the logical arc of the thermodynamic derivations:
+
+| Section | Result | Status |
+|---------|--------|--------|
+| E.2 | $\varepsilon \geq \ln 2$ (irreversibility) | Bound |
+| E.3 | $f_{RID} < 1$ (contractivity) | Bound |
+| E.4 | $C_{max} < \ln d_0$ (capacity limit) | Bound |
+| E.6 | $S \leq \mathcal{A}/4G$ (area law) | Bound |
+| **E.8.3** | $S \to \mathcal{A}/4G$ (saturation) | **Attractor** |
+
+### E.8.3.2 Bulk vs. Boundary Information Storage
+
+Consider a spatial region $\mathcal{R}$ with boundary $\partial\mathcal{R}$ of area $\mathcal{A}$, containing a configuration of MPUs storing total accessible information $I_{tot}$. The information may be encoded in two qualitatively distinct ways:
+
+**Definition E.8.3.1 (Encoding Modes).**
+- **Bulk encoding:** Information distributed throughout the interior of $\mathcal{R}$, scaling with volume $\mathcal{V}$.
+- **Boundary encoding:** Information localized to degrees of freedom at or near $\partial\mathcal{R}$, scaling with area $\mathcal{A}$.
+
+We analyze the PCE cost of each encoding mode for fixed total information $I_{tot}$.
+
+### E.8.3.3 Derivation of the Retrieval Cost Coefficient from PCE Potential
+
+Before analyzing bulk versus boundary encoding costs, we derive the retrieval cost coefficient $\gamma_{ret}$ from the fundamental PCE potential structure (Definition D.1).
+
+**Lemma E.8.3.1 (Retrieval Cost Coefficient from $V_{prop}$).**
+The cost coefficient for retrieving information at depth $r$ from the boundary, denoted $\gamma_{ret}$, is determined by the propagation cost structure $V_{prop}$ (Definition D.1) and the fundamental ND-RID parameters:
+$$
+\gamma_{ret} = \frac{\varepsilon}{\delta \cdot C_{max}}
+\tag{E.8.3a}
+$$
+where $\varepsilon \geq \ln 2$ is the minimum entropy cost per ND-RID interaction (Theorem 31), $\delta$ is the mean MPU spacing, and $C_{max} < \ln d_0$ is the channel capacity (Theorem E.2).
+
+*Proof.*
+
+**Step 1 (Link Cost from $V_{prop}$).** From Definition D.1, the propagation cost for a link $(u,v)$ is:
+$$
+V_{prop}^{(u,v)} = \langle \Phi(w_{uv}) \rangle_{\rho(x)}
+$$
+where $\Phi(w_{uv})$ scales with the information rate required for coherence, penalized by finite channel capacity. The link weight $w_{uv}$ is related to ND-RID fidelity $f_{RID}$ and cost $\varepsilon$ (Definition 35).
+
+**Step 2 (Minimum Link Cost).** Each ND-RID interaction across a link incurs the irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31, Appendix J). For information retrieval requiring one bit of mutual information, the minimum thermodynamic cost per link is:
+$$
+\Phi_{min} = \varepsilon \geq \ln 2 \text{ nats}
+\tag{E.8.3b}
+$$
+This follows from Landauer's principle: erasing one bit of information, or more generally any logically irreversible operation on one bit, requires minimum entropy production $\ln 2$ [Landauer 1961].
+
+**Step 3 (Path Cost for Retrieval).** Retrieving information at depth $r$ from the boundary requires traversing a path of approximately $n = r/\delta$ links, where $\delta$ is the characteristic MPU spacing (Definition 35). The total propagation cost for retrieval is:
+$$
+V_{prop}^{(retrieval)}(r) = n \cdot \Phi_{min} = \frac{r}{\delta} \cdot \varepsilon
+\tag{E.8.3c}
+$$
+
+**Step 4 (Per-Bit Cost Coefficient).** Each link has capacity $C_{max}$ nats (Theorem E.2), so transmitting one nat of information incurs entropy cost $\varepsilon/C_{max}$ per link (Theorem 31). For a path of $n = r/\delta$ links to depth $r$, the cost per nat is $(r/\delta) \cdot (\varepsilon/C_{max})$. The cost per nat of accessible information per unit retrieval depth is:
+$$
+\gamma_{ret} = \frac{(r/\delta) \cdot (\varepsilon/C_{max})}{r} = \frac{\varepsilon}{\delta \cdot C_{max}}
+\tag{E.8.3a}
+$$
+This has dimensions $[1/\text{length}]$ in natural units. $\square$
+
+**Corollary E.8.3.1 (Numerical Estimate).**
+Using $\varepsilon = \ln 2$, $C_{max} = 2\ln 2$ (Equation E.15), and $\delta = \sqrt{8\ln 2} \cdot L_P$ (Appendix Q, Equation Q.18):
+$$
+\gamma_{ret} = \frac{\ln 2}{\sqrt{8\ln 2} \cdot L_P \cdot 2\ln 2} = \frac{1}{2\sqrt{8\ln 2} \cdot L_P} \approx \frac{0.213}{L_P}
+$$
+
+### E.8.3.4 PCE Cost of Bulk Encoding
+
+**Theorem E.8.3.1 (Excess Cost of Bulk Encoding).**
+For a region $\mathcal{R}$ with characteristic linear dimension $L$ (so $\mathcal{V} \sim L^D$ and $\mathcal{A} \sim L^{D-1}$ in $D$ spatial dimensions), bulk-encoded information incurs a PCE cost exceeding that of boundary-encoded information by a factor scaling with $L$.
+
+*Proof.*
+
+**Step 1 (Retrieval Cost Structure).** Consider an external observer (or subsystem at the boundary) that must access information stored in the bulk. Accessing information at average depth $\bar{r} \sim L$ from the boundary requires propagating queries and responses across $\sim L/\delta$ MPU links.
+
+**Step 2 (Channel Fidelity Decay).** Each ND-RID interaction along the retrieval path incurs the contractivity factor $f_{RID} < 1$ (Lemma E.1). For a path of $n = L/\delta$ steps, the effective fidelity of information retrieval decays exponentially:
+$$
+f_{eff}(L) = f_{RID}^{L/\delta}
+\tag{E.8.3d}
+$$
+Since $f_{RID} < 1$ strictly (guaranteed by $\varepsilon > 0$, Lemma E.1), this decays exponentially with depth.
+
+**Step 3 (Compensation Cost).** To maintain reliable access to bulk-stored information despite this exponential degradation, the system must implement error correction. In fault-tolerant schemes, achieving a target logical fidelity requires resources that grow at most logarithmically with the inverse logical error rate; modeling the minimal correction overhead as logarithmic in the inverse effective fidelity yields:
+$$
+\text{Overhead} = O\left(\log\frac{1}{f_{eff}}\right) = O\left(\frac{L}{\delta} \cdot \log\frac{1}{f_{RID}}\right)
+\tag{E.8.3e}
+$$
+This confirms that the compensation cost scales linearly with $L/\delta$ [Nielsen & Chuang 2010; Preskill 1998].
+
+**Step 4 (Thermodynamic Cost from $V_{prop}$).** From Lemma E.8.3.1, accessing bulk information at depth $r$ produces entropy:
+$$
+\Delta S_{access}(r) \geq \frac{r}{\delta} \cdot \varepsilon \geq \frac{r}{\delta} \cdot \ln 2
+\tag{E.8.3f}
+$$
+Averaged over bulk-distributed information (with mean depth $\bar{r} \sim L/2$):
+$$
+\langle \Delta S_{access} \rangle_{bulk} \sim \frac{L}{2\delta} \cdot \varepsilon
+\tag{E.8.3g}
+$$
+
+**Step 5 (Operational Cost Rate).** The operational cost rate $V_{op}$ (Definition D.1) includes the complexity cost of maintaining accessible information. Using the retrieval cost coefficient $\gamma_{ret}$ derived in Lemma E.8.3.1, for bulk encoding:
+$$
+V_{op}^{(bulk)} = V_{op}^{(0)} + \gamma_{ret} \cdot I_{tot} \cdot L
+\tag{E.8.3h}
+$$
+where $V_{op}^{(0)}$ is the baseline cost independent of encoding location, and the second term represents the additional cost of maintaining accessibility for bulk-stored information at mean depth $\bar{r} \sim L$.
+
+**Step 6 (Boundary Encoding Cost).** For boundary-encoded information, the retrieval depth is $O(\delta)$ (information is already at the interface), yielding:
+$$
+V_{op}^{(boundary)} = V_{op}^{(0)} + \gamma_{ret} \cdot I_{tot} \cdot c_0 \delta
+\tag{E.8.3i}
+$$
+where $c_0 = O(1)$ and $c_0 \delta$ is the effective retrieval depth for boundary-encoded information.
+
+**Step 7 (Excess Cost).** The difference in PCE cost contributions is:
+$$
+\Delta V_{op} = V_{op}^{(bulk)} - V_{op}^{(boundary)} = \gamma_{ret} \cdot I_{tot} \cdot \left(L - c_0 \delta\right)
+\tag{E.8.3j}
+$$
+For $L \gg \delta$ (the regime where continuum geometry emerges, Theorem 43):
+$$
+\Delta V_{op} \sim \gamma_{ret} \cdot I_{tot} \cdot L > 0
+$$
+Thus, bulk encoding incurs an excess PCE cost scaling linearly with system size $L$. $\square$
+
+### E.8.3.5 PCE Selection of Boundary Encoding
+
+**Theorem E.8.3.2 (Boundary Encoding as PCE Minimum).**
+For fixed total accessible information $I_{tot}$ in a region $\mathcal{R}$, the PCE-optimal encoding strategy localizes information to the boundary $\partial\mathcal{R}$.
+
+*Proof.*
+
+Let $\phi \in [0,1]$ denote the fraction of information that is boundary-encoded, with $(1-\phi)$ bulk-encoded. The total PCE potential for this mixed configuration is:
+$$
+V(\phi) = V^{(0)} + (1-\phi) \cdot I_{tot} \cdot \gamma_{ret} \cdot L + \phi \cdot I_{tot} \cdot \gamma_{ret} \cdot c_0 \delta
+\tag{E.8.3k}
+$$
+
+The derivative with respect to $\phi$ is:
+$$
+\frac{\partial V}{\partial \phi} = I_{tot} \cdot \gamma_{ret} \cdot \left(c_0 \delta - L\right)
+\tag{E.8.3l}
+$$
+
+For $L \gg \delta$ (required for continuum emergence, Theorem 43), we have $L \gg c_0 \delta$, and therefore:
+$$
+\frac{\partial V}{\partial \phi} < 0 \quad \text{throughout } [0,1]
+\tag{E.8.3m}
+$$
+
+Since $V(\phi)$ is linear in $\phi$ with strictly negative slope throughout the domain, the minimum occurs at the boundary $\phi = 1$: pure boundary encoding. $\square$
+
+### E.8.3.6 Derivation of Idle Channel Cost Structure
+
+Before proving saturation is an attractor, we must derive the cost structure for channels that are present but not utilized.
+
+**Lemma E.8.3.2 (Idle Channel Cost from $V_{prop}$).**
+Each ND-RID channel crossing a boundary incurs a baseline maintenance cost, even when idle, modeled as:
+$$
+\Phi_{idle} = \kappa_{maint} \cdot \varepsilon
+\tag{E.8.3n}
+$$
+where $\kappa_{maint} > 0$ is a maintenance coefficient of order unity determined by the ratio of maintenance period to MPU cycle time $\tau_{min}$ (Theorem 29), and $\varepsilon \geq \ln 2$.
+
+*Proof.*
+
+**Step 1 (Channel Infrastructure).** From Definition D.1, $V_{prop}$ represents the cost of maintaining predictive coherence and communication infrastructure. Each channel crossing a boundary represents an element of this infrastructure.
+
+**Step 2 (Coherence Maintenance).** Even for an idle channel, maintaining the *capability* for information transmission requires:
+- Preserving quantum coherence of the channel states
+- Periodic refresh cycles to counteract decoherence
+- Structural maintenance of the network topology
+
+**Step 3 (Thermodynamic Cost of Coherence).** Maintaining coherence in a thermal environment requires active refresh and error-suppression operations. Any refresh cycle that discards entropy into the environment is logically irreversible at the effective level and therefore carries a strictly positive entropy cost per cycle, bounded below by $\ln 2$ per irreversibly discarded bit [Landauer 1961]. In the PU parametrization, this baseline cost per maintenance cycle is absorbed into $\varepsilon \geq \ln 2$ (Theorem 31), giving:
+$$
+\Phi_{idle} = \kappa_{maint} \cdot \varepsilon, \quad \kappa_{maint} \equiv \frac{\tau_{maint}}{\tau_{cycle}}
+\tag{E.8.3n}
+$$
+where the ratio $\kappa_{maint}$ captures the maintenance period relative to cycle time. For stable operation at PCE equilibrium, $\kappa_{maint} \sim O(1)$.
+
+**Step 4 (Lower Bound).** The minimum maintenance cost is bounded below by the irreducible entropy cost of any physical operation involving the channel:
+$$
+\Phi_{idle} \geq \varepsilon_{min} > 0
+$$
+where $\varepsilon_{min}$ is a positive constant. The strict positivity follows from the impossibility of maintaining any physical structure without entropy production (Second Law). $\square$
+
+**Corollary E.8.3.2 (Total Idle Channel Cost).**
+For a boundary with $N_{idle}$ idle channels, the total propagation cost contribution is:
+$$
+V_{prop}^{(idle)} = N_{idle} \cdot \Phi_{idle} = N_{idle} \cdot \kappa_{maint} \cdot \varepsilon
+\tag{E.8.3o}
+$$
+This cost provides no predictive benefit, representing pure inefficiency.
+
+### E.8.3.7 Construction of the PCE Potential as Function of Boundary Entropy
+
+We now construct the explicit form of the PCE potential $V(S)$ as a function of boundary entropy $S$, enabling rigorous verification of attractor conditions.
+
+**Definition E.8.3.2 (Channel Utilization).**
+For a region with boundary area $\mathcal{A}$:
+- Total effective channels: $N_{eff} = \sigma_{link} \cdot \mathcal{A}$, where $\sigma_{link} = \chi/(\eta\delta^2)$ (Theorem E.3)
+- Maximum entropy: $S_{max} = N_{eff} \cdot C_{max} = \mathcal{A}/(4G)$ (Theorem 49)
+- Active channels: $N_{active}(S) = S/C_{max}$
+- Idle channels: $N_{idle}(S) = N_{eff} - N_{active}(S)
+
+**Theorem E.8.3.3 (Explicit PCE Potential for Boundary Entropy).**
+The PCE potential as a function of boundary entropy $S \in [0, S_{max}]$ for a region with boundary area $\mathcal{A}$ is:
+$$
+V(S) = V_0 + \Phi_{idle} \cdot \left(N_{eff} - \frac{S}{C_{max}}\right) - \Gamma_0 B_0 \cdot \frac{S}{S_{max}}
+\tag{E.8.3p}
+$$
+where:
+- $V_0$ is a baseline cost independent of $S$
+- $\Phi_{idle}$ is the per-channel idle cost (Lemma E.8.3.2)
+- $\Gamma_0 B_0$ is the maximum predictive benefit at full utilization (Definition D.1)
+
+*Proof.*
+
+**Step 1 (Propagation Cost Component).** From Definition D.1, $V_{prop}$ includes costs for all channels. Decomposing by utilization:
+$$
+V_{prop}(S) = N_{active} \cdot \Phi_{active} + N_{idle} \cdot \Phi_{idle}
+$$
+where $\Phi_{active}$ is the cost for an actively transmitting channel. At capacity saturation, $\Phi_{active} \approx \Phi_{idle}$ (both require maintenance), so:
+$$
+V_{prop}(S) \approx N_{eff} \cdot \Phi_{idle} = \text{constant}
+$$
+However, the *net* cost attributable to underutilization is:
+$$
+V_{prop}^{(net)}(S) = N_{idle}(S) \cdot \Phi_{idle} = \left(N_{eff} - \frac{S}{C_{max}}\right) \cdot \Phi_{idle}
+\tag{E.8.3q}
+$$
+This captures the cost of maintaining unused capacity.
+
+**Step 2 (Benefit Component).** From Definition D.1, $V_{benefit} = \sum_v \Gamma_0 B(PP_v)$. For boundary channels, the predictive benefit scales with channel utilization. At the network level, let $B(u)$ be the benefit function of utilization fraction $u \in [0,1]$, with $B(0) = 0$ and $B(1) = B_0$ representing maximum benefit at full utilization:
+$$
+V_{benefit}(S) = \Gamma_0 \cdot B\left(\frac{S}{S_{max}}\right)
+$$
+For the simplest consistent form where $B(u) = B_0 u$ is linear:
+$$
+V_{benefit}(S) = \Gamma_0 B_0 \cdot \frac{S}{S_{max}}
+\tag{E.8.3r}
+$$
+This represents the power-equivalent predictive benefit from utilizing fraction $S/S_{max}$ of available capacity, with $V_{benefit}(S_{max}) = \Gamma_0 B_0$. The attractor result (Theorem E.8.3.4) holds for any monotonically increasing $B(u)$; linearity is adopted for analytical transparency.
+
+**Step 3 (Total Potential).** Combining the components (absorbing $\Phi_{active}$ costs into $V_0$):
+$$
+V(S) = V_0 + \Phi_{idle} \cdot \left(N_{eff} - \frac{S}{C_{max}}\right) - \Gamma_0 B_0 \cdot \frac{S}{S_{max}}
+\tag{E.8.3p}
+$$
+This is the explicit PCE potential as a function of boundary entropy. $\square$
+
+### E.8.3.8 Saturation of the Holographic Bound as PCE Attractor
+
+**Theorem E.8.3.4 (Holographic Saturation as Global Attractor).**
+Under PCE dynamics (Equation D.8), the entropy of a region $\mathcal{R}$ with boundary area $\mathcal{A}$ evolves toward the saturation value:
+$$
+S \xrightarrow{t \to \infty} S_{max} = \frac{\mathcal{A}}{4G}
+$$
+This saturation is the unique global minimum of the PCE potential $V(S)$ on the domain $[0, S_{max}]$.
+
+*Proof.*
+
+**Step 1 (Gradient Calculation).** From Theorem E.8.3.3, the gradient of $V(S)$ with respect to $S$ is:
+$$
+\frac{\partial V}{\partial S} = -\frac{\Phi_{idle}}{C_{max}} - \frac{\Gamma_0 B_0}{S_{max}}
+\tag{E.8.3s}
+$$
+
+**Step 2 (Sign of Gradient).** Since $\Phi_{idle} > 0$ (Lemma E.8.3.2), $C_{max} > 0$ (Theorem E.2), $\Gamma_0 > 0$ (Definition 20), $B_0 > 0$ (benefit is positive), and $S_{max} > 0$:
+$$
+\frac{\partial V}{\partial S} = -\left(\frac{\Phi_{idle}}{C_{max}} + \frac{\Gamma_0 B_0}{S_{max}}\right) < 0
+\tag{E.8.3t}
+$$
+The gradient is strictly negative throughout the domain $[0, S_{max}]$.
+
+**Step 3 (Attractor Identification).** Since $\partial V/\partial S < 0$ for all $S \in [0, S_{max})$, the PCE dynamics (Equation D.8):
+$$
+dS = -\eta_S \frac{\partial V}{\partial S} dt + \text{noise}
+$$
+with $\eta_S > 0$, imply:
+$$
+\langle dS \rangle = -\eta_S \frac{\partial V}{\partial S} dt > 0
+$$
+The expected drift is positive, driving $S$ toward larger values.
+
+**Step 4 (Boundary Constraint).** The entropy cannot exceed the holographic bound (Theorem 49):
+$$
+S \leq S_{max} = \frac{\mathcal{A}}{4G}
+$$
+This provides a hard upper boundary for the dynamics.
+
+**Step 5 (Unique Minimum at Boundary).** Since $V(S)$ is linear with negative slope (Equation E.8.3p), it achieves its unique minimum at the maximum allowed value:
+$$
+S^* = S_{max} = \frac{\mathcal{A}}{4G}
+\tag{E.8.3u}
+$$
+
+**Step 6 (Stability).** At $S = S_{max}$, the system is at the boundary of the allowed domain. The dynamics cannot push $S$ beyond $S_{max}$ (physical constraint from Theorem 49), and the negative gradient ensures the expected drift is toward $S_{max}$ from any $S < S_{max}$. Thus $S_{max}$ is a stable equilibrium—an attractor of the mean dynamics.
+
+**Step 7 (Convergence Rate).** The approach to saturation is characterized by:
+$$
+\frac{d(S_{max} - S)}{dt} = -\eta_S \left|\frac{\partial V}{\partial S}\right| = -\eta_S \left(\frac{\Phi_{idle}}{C_{max}} + \frac{\Gamma_0 B_0}{S_{max}}\right)
+$$
+Since $V(S)$ is linear, this derivative is constant, yielding a constant drift velocity toward saturation. The characteristic timescale for saturation from initial entropy $S_0$ is:
+$$
+t_{sat}(S_0) = \frac{S_{max} - S_0}{\eta_S \left(\frac{\Phi_{idle}}{C_{max}} + \frac{\Gamma_0 B_0}{S_{max}}\right)}
+\tag{E.8.3v}
+$$
+The stochastic term in Equation D.8 introduces fluctuations about this mean trajectory; the formula gives the expected saturation time for the deterministic component of the dynamics. $\square$
+
+**Corollary E.8.3.3 (Lyapunov Function).**
+The function $\mathcal{L}(S) = S_{max} - S$ serves as a Lyapunov function for the deterministic component of the PCE dynamics on $[0, S_{max}]$:
+- $\mathcal{L}(S) \geq 0$ with equality only at $S = S_{max}$
+- $\langle d\mathcal{L}/dt \rangle < 0$ for $S < S_{max}$
+
+Combined with the constraint $S \leq S_{max}$ (Theorem 49), this confirms $S_{max}$ is the unique stable equilibrium in the mean.
+
+### E.8.3.9 Physical Interpretation
+
+**Corollary E.8.3.4 (Holography as Economic Principle).**
+The holographic nature of entropy bounds—scaling with area rather than volume—emerges from PCE optimization rather than being imposed as an independent principle. Boundary encoding is selected because:
+
+1. **Minimal retrieval cost:** Boundary-localized information requires no bulk traversal for external access, minimizing $V_{prop}$ contributions from Equation (E.8.3h).
+2. **Maximal channel utilization:** PCE penalizes unused capacity via the maintenance cost $\Phi_{idle}$ (Lemma E.8.3.2), driving the system toward saturation in the mean.
+3. **Optimal predictive coordination:** Boundary channels mediate all cross-region predictive interactions; saturating them maximizes $V_{benefit}$ (Equation E.8.3r).
+
+**Corollary E.8.3.5 (Black Hole Entropy Maximality).**
+Black holes saturate the holographic bound ($S_{BH} = \mathcal{A}/4G$) because they represent a PCE equilibrium for a given boundary area. The argument proceeds as follows:
+
+1. Any matter configuration with $S < \mathcal{A}/4G$ occupying the same boundary area has higher PCE potential (Theorem E.8.3.4).
+2. PCE dynamics drive such configurations toward saturation.
+3. Gravitational collapse, from this perspective, is the PCE-driven evolution toward the minimum-potential configuration for a given boundary area.
+
+*Remark:* Uniqueness of the black hole as THE equilibrium (versus A equilibrium) would require additional arguments about the topology of the PCE potential landscape for different matter configurations, which we do not pursue here.
+
+### E.8.3.10 Implications for Emergent Gravity
+
+The identification of holographic saturation as a PCE attractor strengthens the thermodynamic derivation of Einstein's Field Equations (Section 12). The Clausius relation $\delta Q = T \delta S$ applied to local Rindler horizons (Theorem 12.1) assumes the entropy $S$ takes its equilibrium (maximal) value for the horizon area. Theorem E.8.3.4 provides the dynamical justification: PCE ensures that local causal horizons are driven toward holographic saturation, validating the equilibrium assumption underlying the EFE derivation as a consequence of the framework's dynamics rather than an independent postulate.
+
+This reduces the logical status of "equilibrium saturation" from an assumption to a theorem within the PU framework.
+
 
 ## E.9 General Horizon Theorem
 

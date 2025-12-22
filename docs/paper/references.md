@@ -355,6 +355,7 @@
 *   Post, E. L. (1921). Introduction to a General Theory of Elementary Propositions. *American Journal of Mathematics*, *43*(3), 163–185. DOI: 10.2307/2370324
 *   Pound, R. V., & Rebka, G. A. (1960). Apparent weight of photons. *Physical Review Letters*, *4*(7), 337–341.
 *   Preskill, J. (1998). *Lecture Notes for Physics 229: Quantum Information and Computation*. California Institute of Technology. 
+*   Preskill, J. (1998). Reliable quantum computers. *Proceedings of the Royal Society of London A*, *454*(1969), 385–410. DOI: 10.1098/rspa.1998.0167
 *   Price, H. (2012). Does time-symmetry imply retrocausality? How the quantum world says "maybe". *Studies in History and Philosophy of Modern Physics*, *43*(2), 75–83. DOI: 10.1016/j.shpsb.2011.12.003
 *   Putnam, H. (1967). Psychological predicates. In W. H. Capitan & D. D. Merrill (Eds.), *Art, Mind, and Religion* (pp. 37–48). University of Pittsburgh Press.
 *   Qureshi, T. (2020). Demystifying the delayed-choice quantum eraser. *European Journal of Physics*, *41*(5), 055403. DOI: 10.1088/1361-6404/ab923e
