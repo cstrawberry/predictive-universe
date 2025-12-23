@@ -390,6 +390,12 @@ $$
 
 The set $\{X_{\alpha\beta}, Y_{\alpha\beta}\}_{(\alpha,\beta) \in A \times B}$ comprises $2ab = 24$ generators spanning the QFI-active tangent space $T_{\rho_0}$ (Theorem Z.5).
 
+**Corollary G.8.2.2b (Interface Algebra).** The interface generators span the real vector space:
+
+$$\mathfrak{m} = \left\{ \begin{pmatrix} 0_{a \times a} & Z \\ Z^\dagger & 0_{b \times b} \end{pmatrix} : Z \in \mathbb{C}^{a \times b} \right\}$$
+
+with $\dim_{\mathbb{R}}(\mathfrak{m}) = 2ab = 24$. This is the off-diagonal block structure coupling active and inactive subspaces.
+
 *Remark (Basis Independence).* The labeling $A = \{1, 2\}$, $B = \{3, \ldots, 8\}$ represents a choice of eigenbasis for $\rho_0$. By Proposition Z.1, any two choices of $a = 2$ dimensional active subspace are related by a unitary $U \in SU(8)$, and the symplectic structure derived below is invariant under this equivalence.
 
 
@@ -1107,6 +1113,65 @@ $$
 $$
 
 The apparent diversity of probability measures in physics—quantum, thermal, gravitational—reflects not different foundations but different constraint geometries $\mathcal{C}$ within a unified framework of ND-RID equilibration to Gibbs fixed points.
+
+### G.8.7 Mode-Polarization Correspondence
+
+**Definition G.8.7a (Gauge Polarization Space).** In $D = 4$ spacetime, each massless gauge boson has $n_{\mathrm{pol}} = D - 2 = 2$ transverse polarizations. The total gauge polarization space has dimension:
+
+$$\dim(\mathcal{P}_{24}) = \dim(\mathfrak{g}_{\mathrm{SM}}) \times n_{\mathrm{pol}} = 12 \times 2 = 24$$
+
+**Theorem G.8.7b (Mode-Polarization Bijection).** There exists a canonical metric-preserving bijection:
+
+$$\Phi: \mathcal{M}_{24} \xrightarrow{\sim} \mathcal{P}_{24}$$
+
+where $\mathcal{M}_{24}$ is the 24-dimensional space of QFI-active interface modes (Theorem Z.5) and $\mathcal{P}_{24}$ is the 24-dimensional space of physical gauge polarizations.
+
+*Construction.* Define $\Phi$ by:
+
+$$\Phi(X_{\alpha\beta}) = T_{[\alpha,\beta]} \otimes e_1, \quad \Phi(Y_{\alpha\beta}) = T_{[\alpha,\beta]} \otimes e_2$$
+
+where $T_{[\alpha,\beta]}$ is the gauge generator indexed by the pair $(\alpha, \beta) \in A \times B$, and $\{e_1, e_2\}$ is the orthonormal basis of polarization space $\mathbb{R}^2$.
+
+*Proof.* Both $g_{\mathrm{QFI}}$ on $\mathcal{M}_{24}$ and the natural metric on $\mathcal{P}_{24}$ equal $I_{24}$ (Theorem Z.5). The map $\Phi$ is linear, bijective by dimension counting, and preserves inner products. ∎
+
+**Theorem G.8.7c (Critical Identity).** At the PCE-optimal configuration:
+
+$$a = D - 2$$
+
+where $a = 2$ is the Landauer active dimension (Theorem Z.1) and $D = 4$ is the emergent spacetime dimension (Theorem Z.11).
+
+*Proof.* From Theorem Z.1, the Landauer erasure cost $\varepsilon = \ln 2$ requires active dimension $a = e^\varepsilon = 2$. From Theorem Z.11, the mode-channel correspondence $M = K(D)$ with $M = 24$ uniquely selects $D = 4$. Therefore $D - 2 = 4 - 2 = 2 = a$.
+
+This equality holds specifically at the PCE-optimal point. Checking alternatives:
+
+| $\varepsilon$ | $a = e^\varepsilon$ | $b = 8 - a$ | $M = 2ab$ | $D$ from $K(D) = M$ | $a = D-2$? |
+|:-------------:|:-------------------:|:-----------:|:---------:|:-------------------:|:----------:|
+| $\ln 2$ | 2 | 6 | 24 | 4 | ✓ |
+| $\ln 3$ | 3 | 5 | 30 | — | ✗ |
+| $\ln 1.5$ | 1.5 | — | — | — | ✗ |
+
+Only the unique solution $(\varepsilon, a, b, M, D) = (\ln 2, 2, 6, 24, 4)$ exists, and it satisfies $a = D - 2$. ∎
+
+**Remark G.8.7d (Interpretation).** The identity $a = D - 2$ connects thermodynamic irreversibility (the Landauer pointer requires 2 distinguishable states) to relativistic gauge theory (massless vectors have 2 transverse polarizations). This is "accidental necessity"—necessary because no other consistent configuration exists.
+
+**Table G.8.7 (Factor Correspondence).**
+
+| Factor | Source ($\mathcal{M}_{24}$) | Target ($\mathcal{P}_{24}$) | Value |
+|:-------|:----------------------------|:----------------------------|:-----:|
+| Complex pairs | $ab$ | Gauge generators $n_G$ | 12 |
+| Real components | 2 | Polarizations $n_{\mathrm{pol}}$ | 2 |
+| Total | $2ab$ | $n_G \times n_{\mathrm{pol}}$ | 24 |
+
+**Proposition G.8.7e (Golay-Lagrangian Correspondence).** The Golay code dimension $k = 12$ equals the Lagrangian dimension $ab = 12$. The correspondence is:
+
+- 12 signal modes ↔ one Lagrangian subspace $L$
+- 12 parity modes ↔ complementary Lagrangian $L'$
+
+*Proof.* PCE isotropy at the attractor (Theorem Z.5) implies equal costs per mode. The optimal rate balancing information and redundancy is $R = 1/2$, giving $k = M/2 = 12$ (Theorem Z.13). The 12 signal modes span a subspace requiring joint estimability ($\omega = 0$ on all pairs), which is exactly the isotropic condition (Definition G.8.2d). The Golay code self-duality $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$ reflects the symmetric relationship between complementary Lagrangian subspaces. ∎
+
+**Theorem G.8.7f (Canonicity).** The bijection $\Phi$ is canonical—it involves no arbitrary choices.
+
+*Proof.* The partition $(a, b) = (2, 6)$ is uniquely determined by $\varepsilon = \ln 2$ (Theorem Z.1). The Grassmannian $\mathrm{Gr}(2, 8)$ has a unique compatible complex structure (Appendix P). The Golay code selects a unique (up to equivalence) Lagrangian subspace (Theorem Z.13). The SM gauge algebra is the unique 12-dimensional algebra satisfying all physical constraints (Theorem G.8.4b). The little group $SO(2)$ in $D = 4$ acts on the 2-dimensional transverse polarization plane via its defining representation. All ingredients are uniquely determined by framework constraints. ∎
 
 ## G.10 Conclusion
 

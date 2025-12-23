@@ -442,7 +442,7 @@ $$a = e^{\varepsilon} = e^{\ln 2} = 2$$
 
 The PCE-Attractor density operator (Appendix Z, Section Z.2.5) takes the form:
 
-$$\rho_0 = \frac{I_2}{2} \oplus 0_6$$
+$$\rho_0 = \frac{I_2}{2} \oplus 0_6 = \mathrm{diag}\left(\frac{1}{2}, \frac{1}{2}, 0, 0, 0, 0, 0, 0\right)$$
 
 where $I_2/2$ is the maximally mixed state on the 2-dimensional active subspace and $0_6$ represents the zero operator on the 6-dimensional inactive complement ($b = d_0 - a = 6$). The von Neumann entropy restricted to the active subspace is:
 

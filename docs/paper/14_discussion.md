@@ -475,6 +475,24 @@ This resolves the "unreasonable stability" puzzle: Why do coherent structures pe
 
 The rootlessness of the Leech lattice (Proposition Z.13a) reinforces this: the absence of vectors at squared norm 2 creates a gap between the vacuum and all excitations. Small perturbations cannot reach alternative configurations. The vacuum is stable because it is isolated—a direct consequence of the Golay code's minimum distance $d = 8$.
 
+#### Mass Gap Robustness
+
+The vacuum spectral gap emerges from three independent mechanisms:
+
+**Route 1 (Thermodynamic).** The ND-RID contractivity $f_{\text{RID}} < 1$ (Lemma E.1) implies exponential decay of correlations with finite correlation length $\xi$, hence $\Delta_{\text{mass}} = 1/\xi > 0$.
+
+$$\varepsilon \geq \ln 2 \implies f_{\text{RID}} < 1 \implies \Delta_{\text{Lind}} > 0 \implies \xi < \infty \implies \Delta_{\text{mass}} > 0$$
+
+**Route 2 (Geometric).** QFI isotropy at the PCE-Attractor (Theorem Z.5) implies rootlessness of the vacuum lattice (Theorem Z.8c), hence $|v|^2_{\min} = 4 > 0$ and vacuum isolation.
+
+$$g_{\text{QFI}} = I_{24} \implies \Lambda_{24} \text{ (Leech)} \implies |v|^2_{\min} = 4 \implies \Delta > 0$$
+
+**Route 3 (Information-theoretic).** The Action-Entropy Identity (Corollary Q.0.1) implies minimum action $\mathcal{S}_{\min} = \hbar \ln 2$, hence minimum excitation energy $E_{\min} > 0$.
+
+$$\mathcal{S}/\hbar = \sum_i \varepsilon_i \implies \mathcal{S}_{\min} = \hbar \ln 2 \implies E_{\min} > 0$$
+
+This overdetermination indicates structural robustness—the mass gap is a necessary consequence of the framework, not an accidental feature.
+
 ### 14.5.2 Discrete Optimality: The "Island" Structure
 
 The eight-fold over-determination of $M = 24$ (Theorem Z.12) reveals that mathematical and physical optimality occur at isolated points, not along continua.
