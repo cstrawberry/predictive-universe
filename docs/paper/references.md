@@ -62,7 +62,8 @@
 *   Burkhardt, H., & Pietrzyk, B. (2001). Update of the hadronic contribution to the QED vacuum polarization. *Physics Letters B*, *513*(1–2), 46–52. DOI: 10.1016/S0370-2693(01)00393-8
 *   Bures, D. (1969). An extension of Kakutani's theorem on infinite product measures to the tensor product of semifinite w*-algebras. *Transactions of the American Mathematical Society*, *135*, 199–212.
 *   Busch, P. (2003). Quantum States and Generalized Observables: A Simple Proof of Gleason's Theorem. *Physical Review Letters*, *91*(12), 120403. DOI: 10.1103/PhysRevLett.91.120403
-*   Buttazzo, D., Degrassi, G., Giardino, P. P., Giudice, G. F., Sala, F., Salvio, A., & Strumia, A. (2013). Investigating the near-criticality of the Higgs boson. *Journal of High Energy Physics*, *2013*(12), 089. DOI: 10.1007/JHEP12(2013)089 
+*   Buttgereit, F., & Brand, M. D. (1995). A hierarchy of ATP-consuming processes in mammalian cells. *Biochemical Journal*, *312*(Pt 1), 163–167. DOI: 10.1042/bj3120163
+*   Buttazzo, D., Degrassi, G., Giardino, P. P., Giudice, G. F., Sala, F., Salvio, A., & Strumia, A. (2013). Investigating the near-criticality of the Higgs boson. *Journal of High Energy Physics*, *2013*(12), 089. DOI: 10.1007/JHEP12(2013)089
 *   Bösch, H., Steinkamp, F., & Boller, E. (2006). Examining psychokinesis: The interaction of human intention with random number generators—A meta-analysis. *Psychological Bulletin*, *132*(4), 497-523.
 *   Cabibbo, N. (1963). Unitary Symmetry and Leptonic Decays. *Physical Review Letters*, *10*(12), 531–533. DOI: 10.1103/PhysRevLett.10.531
 *   Callan, C. G., Dashen, R. F., & Gross, D. J. (1976). The structure of the gauge theory vacuum. *Physics Letters B*, *63*(3), 334–340. DOI: 10.1016/0370-2693(76)90277-X
@@ -105,13 +106,15 @@
 *   Cook, M. (2004). Universality in elementary cellular automata. *Complex Systems*, *15*(1), 1–40. DOI: 10.25088/ComplexSystems.15.1.1
 *   Corless, R. M., Gonnet, G. H., Hare, D. E. G., Jeffrey, D. J., & Knuth, D. E. (1996). On the Lambert W function. *Advances in Computational Mathematics*, *5*(1), 329–359. DOI: 10.1007/BF02124750
 *   Cover, T. M., & Thomas, J. A. (2006). *Elements of Information Theory* (2nd ed.). Wiley. DOI: 10.1002/047174882X
-*   Crewther, R. J., Di Vecchia, P., Veneziano, G., & Witten, E. (1979). Chiral estimate of the electric dipole moment of the neutron in quantum chromodynamics. *Physics Letters B*, *88*(1–2), 123–127. DOI: 10.1016/0370-2693(79)90128-X
 *   Craddock, T. J. A., Kurian, P., Preto, J., Sahu, K., Hameroff, S. R., Klobukowski, M., & Tuszynski, J. A. (2017). Anesthetic Alterations of Collective Terahertz Oscillations in Tubulin Correlate with Clinical Potency: Implications for Anesthetic Action and Post-Operative Cognitive Dysfunction. *Scientific Reports*, *7*, 9877.
 *   Cramer, J. G. (1986). The transactional interpretation of quantum mechanics. *Reviews of Modern Physics*, *58*(3), 647–688. DOI: 10.1103/RevModPhys.58.647
+*   Crick, F. H. C. (1966). Codon–anticodon pairing: The wobble hypothesis. *Journal of Molecular Biology*, *19*(2), 548–555. DOI: 10.1016/S0022-2836(66)80022-0
+*   Crewther, R. J., Di Vecchia, P., Veneziano, G., & Witten, E. (1979). Chiral estimate of the electric dipole moment of the neutron in quantum chromodynamics. *Physics Letters B*, *88*(1–2), 123–127. DOI: 10.1016/0370-2693(79)90128-X
 *   Cross, A. W., DiVincenzo, D. P., & Terhal, B. M. (2009). A comparative code study for quantum fault-tolerance. *Quantum Information & Computation*, *9*(7-8), 541–572. arXiv:0711.1556.
 *   Cronin, A. D., Schmiedmayer, J., & Pritchard, D. E. (2009). Optics and interferometry with atoms and molecules. *Reviews of Modern Physics*, *81*(3), 1051–1129.
 *   Curtis, R. T. (2016). Error-correction and the binary Golay code. *London Mathematical Society Impact150 Stories*, *1*, 51–58.
 *   Dal Maso, G. (1993). *An Introduction to Γ-convergence*. Birkhäuser.
+*   Darwin, C. (1859). *On the Origin of Species by Means of Natural Selection*. John Murray.
 *   Dawson, C. M., & Nielsen, M. A. (2006). The Solovay-Kitaev algorithm. *Quantum Information & Computation*, *6*(1), 81–95. DOI: 10.5555/2011679.2011685
 *   Dicke, R. H. (1954). Coherence in spontaneous radiation processes. *Physical Review*, *93*(1), 99–110.
 *   Deffner, S., & Campbell, S. (2017). Quantum speed limits: from Heisenberg's uncertainty principle to optimal quantum control. *Journal of Physics A: Mathematical and Theoretical*, *50*(45), 453001. DOI: 10.1088/1751-8121/aa8c2f
@@ -134,6 +137,7 @@
 *   DUNE Collaboration (Abi, B., *et al.*) (2020). Long-baseline neutrino oscillation physics potential of the DUNE experiment. *European Physical Journal C*, *80*, 978. DOI: 10.1140/epjc/s10052-020-08456-z
 *   Dunne, G. V. (2008). Functional determinants in quantum field theory. *Journal of Physics A: Mathematical and Theoretical*, *41*(30), 304006. DOI: 10.1088/1751-8113/41/30/304006
 *   Durant, F., Morokuma, J., Fields, C., Williams, K., Adams, D. S., & Levin, M. (2017). Long-term, stochastic editing of regenerative anatomy via targeting endogenous bioelectric gradients. *Biophysical Journal*, *112*(10), 2231–2243.
+*   Durant, F., Bischof, J., Fields, C., Morokuma, J., LaPalme, J., Hoi, A., & Levin, M. (2019). The Role of Early Bioelectric Signals in the Regeneration of Planarian Anterior/Posterior Polarity. *Biophysical Journal*, *116*(5), 948–961. DOI: 10.1016/j.bpj.2019.01.029
 *   Einstein, A. (1905). Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig? *Annalen der Physik*, *323*(13), 639–641. DOI: 10.1002/andp.19053231314
 *   Ellerman, D. (2015). Why delayed choice experiments do not imply retrocausality. *Quantum Studies: Mathematics and Foundations*, *2*(2), 183–199. DOI: 10.1007/s40509-014-0026-2
 *   Evans, D. E., & Høegh-Krohn, R. (1978). Spectral properties of positive maps on C\*-algebras. *Journal of the London Mathematical Society*, s2-17(2), 345–355. DOI: 10.1112/jlms/s2-17.2.345
@@ -145,6 +149,7 @@
 *   Feroz, F., Hobson, M. P., & Bridges, M. (2009). MultiNest: an efficient and robust Bayesian inference tool for cosmology and particle physics. *Monthly Notices of the Royal Astronomical Society*, *398*(4), 1601–1614. DOI: 10.1111/j.1365-2966.2009.14548.x
 *   Feroz, F., Hobson, M. P., Cameron, E., & Pettitt, A. N. (2019). Importance Nested Sampling and the MultiNest Algorithm. *The Open Journal of Astrophysics*, *2*, 10. DOI: 10.21105/astro.1306.2144
 *   Feynman, R. P., & Hibbs, A. R. (1965). *Quantum Mechanics and Path Integrals*. McGraw-Hill.
+*   Flamholz, A., Phillips, R., & Milo, R. (2014). The quantified cell. *Molecular Biology of the Cell*, *25*(22), 3497–3500. DOI: 10.1091/mbc.e14-09-1347
 *   Fodor, J. A. (1975). *The Language of Thought*. Harvard University Press.
 *   Fortuin, C. M., Kasteleyn, P. W., & Ginibre, J. (1971). Correlation inequalities on some partially ordered sets. *Communications in Mathematical Physics*, *22*(2), 89–103. DOI: 10.1007/BF01651330 
 *   Fowler, A. G., Mariantoni, M., Martinis, J. M., & Cleland, A. N. (2012). Surface codes: Towards practical large-scale quantum computation. *Physical Review A*, *86*(3), 032324. DOI: 10.1103/PhysRevA.86.032324
@@ -152,7 +157,9 @@
 *   Frigerio, A. (1978). Stationary states of quantum dynamical semigroups. *Communications in Mathematical Physics*, *63*(3), 269–276. DOI: 10.1007/BF01196936
 *   Frigerio, A., & Verri, M. (1982). Quantum Ergodic Theorem and the Asymptotic Behaviour of the Variance. In R. L. Dobrushin, R. Kotecký & S. Shlosman (Eds.), *Mathematical Problems in Theoretical Physics* (Lecture Notes in Physics, Vol. 153, pp. 276–281). Springer. DOI: 10.1007/3-540-11192-1_204
 *   Frauchiger, D., & Renner, R. (2018). Quantum theory cannot consistently describe the use of itself. *Nature Communications*, *9*, 3711. DOI: 10.1038/s41467-018-05739-8
+*   Freeland, S. J., & Hurst, L. D. (1998). The genetic code is one in a million. *Journal of Molecular Evolution*, *47*(3), 238–248. DOI: 10.1007/PL00006381
 *   Friston, K. (2010). The free-energy principle: a unified brain theory? *Nature Reviews Neuroscience*, *11*(2), 127–138. DOI: 10.1038/nrn2787
+*   Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., & Pezzulo, G. (2017). Active inference: A process theory. *Neural Computation*, *29*(1), 1–49. DOI: 10.1162/NECO_a_00912
 *   Fröhlich, H. (1968). Long-range coherence and energy storage in biological systems. *International Journal of Quantum Chemistry*, *2*(5), 641–649.
 *   Fuchs, C. A., Mermin, N. D., & Schack, R. (2014). An introduction to QBism with an application to the locality of quantum mechanics. *American Journal of Physics*, *82*(8), 749–754. DOI: 10.1119/1.4874855
 *   Fujimori, T., Nitta, M., & Ohashi, K. (2024). Moduli spaces of instantons in flag manifold sigma models. Vortices in quiver gauge theories. *Journal of High Energy Physics*, *2024*(2), 230. DOI: 10.1007/JHEP02(2024)230
@@ -184,6 +191,7 @@
 *   Hameroff, S. (2012). How quantum brain biology can rescue conscious free will. *Frontiers in Integrative Neuroscience*, *6*, 93.
 *   Hameroff, S., & Penrose, R. (2014). Consciousness in the universe: A review of the 'Orch OR' theory. *Physics of Life Reviews*, *11*(1), 39–78.
 *   Hameroff, S. R., & Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, *40*(3–4), 453–480. DOI: 10.1016/0378-4754(95)00042-4
+*   Hamming, R. W. (1950). Error detecting and error correcting codes. *Bell System Technical Journal*, *29*(2), 147–160. DOI: 10.1002/j.1538-7305.1950.tb00463.x
 *   Hardy, L. (2001). Quantum Theory From Five Reasonable Axioms. *arXiv*, quant-ph/0101012. DOI: 10.48550/arXiv.quant-ph/0101012
 *   Hardy, J. C., & Towner, I. S. (2020). Superallowed 0⁺→0⁺ nuclear β decays: 2020 critical survey. *Physical Review C*, *102*, 045501.
 *   Hastings, M. B. (2007). An area law for one-dimensional quantum systems. *Journal of Statistical Mechanics: Theory and Experiment*, *2007*(08), P08024. DOI: 10.1088/1742-5468/2007/08/P08024
@@ -201,6 +209,7 @@
 *   Helgason, S. (1984). Groups and Geometric Analysis: Integral Geometry, Invariant Differential Operators, and Spherical Functions. Pure and Applied Mathematics, Vol. 113. Academic Press.
 *   Helstrom, C. W. (1976). *Quantum Detection and Estimation Theory*. Academic Press.
 *   Hoeffding, W. (1963). Probability inequalities for sums of bounded random variables. *Journal of the American Statistical Association*, *58*(301), 13–30. DOI: 10.1080/01621459.1963.10500830
+*   Hohwy, J. (2013). *The Predictive Mind*. Oxford University Press.
 *   Hohwy, J. (2016). The self-evidencing brain. *Noûs*, *50*(2), 259–285. DOI: 10.1111/nous.12062
 *   Holevo, A. S. (1973). Bounds for the quantity of information transmitted by a quantum communication channel. *Problemy Peredachi Informatsii*, *9*(3), 3–11. (English translation: *Problems of Information Transmission*, *9*(3), 177–183 (1973))
 *   Holevo, A. S. (1982). *Probabilistic and Statistical Aspects of Quantum Theory*. North-Holland.
@@ -267,10 +276,10 @@
 *   Lelli, F., McGaugh, S. S., & Schombert, J. M. (2017). One law to rule them all: The radial acceleration relation of galaxies. *The Astrophysical Journal*, *836*(2), 152.
 *   Levin, D. A., & Peres, Y. (2017). *Markov Chains and Mixing Times* (2nd ed.). American Mathematical Society.
 *   Levin, M. (2007). Gap junctional communication in morphogenesis. *Progress in Biophysics and Molecular Biology*, *94*(1–2), 186–206.
-*   Levin, M. (2014). Molecular bioelectricity: How endogenous voltage potentials control cell behavior and instruct pattern regulation in vivo. *Molecular Biology of the Cell*, *25*(24), 3835–3850.
-*   Levin, M., & Martyniuk, C. J. (2018). The bioelectric code: An ancient computational medium for dynamic control of growth and form. *BioSystems*, *164*, 76–93.
-*   Levin, M. (2019). The computational boundary of a "self": Developmental bioelectricity drives multicellularity and scale-free cognition. *Frontiers in Psychology*, *10*, 2688.
-*   Levin, M. (2021). Bioelectric signaling: Reprogrammable circuits underlying embryogenesis, regeneration, and cancer. *Cell*, *184*(8), 1971–1989.
+*   Levin, M. (2014). Molecular bioelectricity: How endogenous voltage potentials control cell behavior and instruct pattern regulation in vivo. *Molecular Biology of the Cell*, *25*(24), 3835–3850. DOI: 10.1091/mbc.e13-12-0708
+*   Levin, M., & Martyniuk, C. J. (2018). The bioelectric code: An ancient computational medium for dynamic control of growth and form. *BioSystems*, *164*, 76–93. DOI: 10.1016/j.biosystems.2017.08.009
+*   Levin, M. (2019). The computational boundary of a "self": Developmental bioelectricity drives multicellularity and scale-free cognition. *Frontiers in Psychology*, *10*, 2688. DOI: 10.3389/fpsyg.2019.02688
+*   Levin, M. (2021). Bioelectric signaling: Reprogrammable circuits underlying embryogenesis, regeneration, and cancer. *Cell*, *184*(8), 1971–1989. DOI: 10.1016/j.cell.2021.02.034
 *   Lewes, G. H. (1875). *Problems of Life and Mind* (Vol. 2). Trübner & Co.
 *   Li, M., & Vitányi, P. (1997). *An Introduction to Kolmogorov Complexity and Its Applications*. Springer.
 *   Li, M. (2004). A model of holographic dark energy. *Physics Letters B*, *603*(1–2), 1–5. DOI: 10.1016/j.physletb.2004.10.014. 
@@ -286,6 +295,7 @@
 *   Lovelock, D. (1971). The Einstein tensor and its generalizations. *Journal of Mathematical Physics*, *12*(3), 498–501. DOI: 10.1063/1.1665613
 *   Lüders, G. (1954). On the equivalence of invariance under time reversal and under particle-antiparticle conjugation for relativistic field theories. *Danske Videnskabernes Selskab, Mat.-Fys. Medd.*, *28*(5), 1–17.
 *   Ludlow, A. D., Boyd, M. M., Ye, J., Peik, E., & Schmidt, P. O. (2015). Optical atomic clocks. *Reviews of Modern Physics*, *87*(2), 637–701.
+*   Lynch, M., & Marinov, G. K. (2015). The bioenergetic costs of a gene. *Proceedings of the National Academy of Sciences*, *112*(51), 15690–15695. DOI: 10.1073/pnas.1514974112
 *   Ma, X.-S., Kofler, J., & Zeilinger, A. (2016). Delayed-choice gedanken experiments and their realizations. *Reviews of Modern Physics*, *88*(1), 015005. DOI: 10.1103/RevModPhys.88.015005
 *   MacWilliams, F. J., & Sloane, N. J. A. (1977). *The Theory of Error-Correcting Codes*. North-Holland.
 *   Mach, E. (1883). *Die Mechanik in ihrer Entwicklung historisch-kritisch dargestellt*. F. A. Brockhaus. [English translation: *The Science of Mechanics*, Open Court, 1893]
@@ -320,6 +330,7 @@
 *   Niemeier, H.-V. (1973). Definite quadratische Formen der Dimension 24 und Diskriminante 1. *Journal of Number Theory*, *5*(2), 142–178. DOI: 10.1016/0022-314X(73)90068-1
 *   NOvA Collaboration (2022). Improved measurement of neutrino oscillation parameters by the NOvA experiment. *Physical Review D*, *106*, 032004.
 *   Novikov, I. D. (1989). An analysis of the operation of a time machine. *Soviet Physics JETP*, *68*(3), 439–443.
+*   Novozhilov, A. S., Wolf, Y. I., & Koonin, E. V. (2007). Evolution of the genetic code: partial optimization of a random code for robustness to translation error in a rugged fitness landscape. *Biology Direct*, *2*, 24. DOI: 10.1186/1745-6150-2-24
 *   Novotny, L., & Hecht, B. (2012). *Principles of Nano-Optics* (2nd ed.). Cambridge University Press.
 *   O’Brien, P. C., & Fleming, T. R. (1979). A multiple testing procedure for clinical trials. *Biometrics*, *35*(3), 549–556. DOI: 10.2307/2530245. 
 *   Odlyzko, A. M., & Sloane, N. J. A. (1979). New bounds on the number of unit spheres that can touch a unit sphere in n dimensions. *Journal of Combinatorial Theory, Series A*, *26*(2), 210–214. DOI: 10.1016/0097-3165(79)90074-8
@@ -327,7 +338,7 @@
 *   Okuyama, M., & Ohzeki, M. (2018). Quantum Landauer Principle under Feedback Control. *Physical Review Letters*, *120*(7), 070602. DOI: 10.1103/PhysRevLett.120.070602
 *   Ollivier, Y. (2009). Ricci curvature of Markov chains on metric spaces. *Journal of Functional Analysis*, *256*(3), 810–864. DOI: 10.1016/j.jfa.2008.11.001
 *   Padmanabhan, T. (2010). Equipartition of energy in the horizon degrees of freedom and the emergence of gravity. *Modern Physics Letters A*, *25*(14), 1129–1136. DOI: 10.1142/S021773231003294X
-*   Pai, V. P., Aw, S., Shomrat, T., Lemire, J. M., & Levin, M. (2012). Transmembrane voltage potential controls embryonic eye patterning in *Xenopus laevis*. *Development*, *139*(2), 313–323.
+*   Pai, V. P., Aw, S., Shomrat, T., Lemire, J. M., & Levin, M. (2012). Transmembrane voltage potential controls embryonic eye patterning in *Xenopus laevis*. *Development*, *139*(2), 313–323. DOI: 10.1242/dev.073759
 *   Pauli, W. (1940). The connection between spin and statistics. *Physical Review*, *58*(8), 716–722. DOI: 10.1103/PhysRev.58.716
 *   Pauli, W. (1955). Exclusion principle, Lorentz group and reflection of space-time and charge. In *Niels Bohr and the Development of Physics*, Pergamon Press.
 *   Parrondo, J. M. R., Horowitz, J. M., & Sagawa, T. (2015). Thermodynamics of information. *Nature Physics*, *11*(2), 131–139. DOI: 10.1038/nphys3230
@@ -381,6 +392,7 @@
 *   Schlosshauer, M. (2007). *Decoherence and the Quantum-to-Classical Transition*. Springer. DOI: 10.1007/978-3-540-35775-9
 *   Schwarzschild, K. (1916). On the gravitational field of a mass point according to Einstein’s theory. *Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften*, 189–196. (English translation: arXiv:physics/9905030).
 *   Schombert, J., & McGaugh, S. (2014). Stellar Mass-to-Light Ratios and the Baryonic Tully-Fisher Relation. *Publications of the Astronomical Society of Australia*, *31*, e011. DOI: 10.1017/pasa.2014.5
+*   Schrödinger, E. (1944). *What is Life? The Physical Aspect of the Living Cell*. Cambridge University Press.
 *   Schumacher, B., & Westmoreland, M. D. (1997). Sending classical information via noisy quantum channels. *Physical Review A*, *56*(1), 131–138. DOI: 10.1103/PhysRevA.56.131
 *   Searle, J. R. (1992). *The Rediscovery of the Mind*. MIT Press.
 *   Serre, J.-P. (1973). *A Course in Arithmetic*. Springer.
