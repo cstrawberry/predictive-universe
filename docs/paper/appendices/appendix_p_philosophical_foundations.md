@@ -1444,14 +1444,7 @@ The framework suggests integration across currently separate research programs:
 | Neuroscience | CC emergence in neural aggregates |
 | Developmental biology | Bioelectric CC and morphogenesis |
 | Evolutionary biology | PCE landscape reconstruction |
-| Astrobiology | Prediction of universal life signatures |
 
-**Prediction 8 (Universal Biosignature).**
-Any persistent life must implement error correction; coded information is a universal biosignature.
-
-*Implication for astrobiology:* Search for error-correcting structure in any candidate biosignature, not just Earth-like chemistry.
-
----
 
 ## P.8.9a.10 The Answer to Schrödinger's Question
 
