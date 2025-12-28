@@ -1173,7 +1173,273 @@ Only the unique solution $(\varepsilon, a, b, M, D) = (\ln 2, 2, 6, 24, 4)$ exis
 
 *Proof.* The partition $(a, b) = (2, 6)$ is uniquely determined by $\varepsilon = \ln 2$ (Theorem Z.1). The Grassmannian $\mathrm{Gr}(2, 8)$ has a unique compatible complex structure (Appendix P). The Golay code selects a unique (up to equivalence) Lagrangian subspace (Theorem Z.13). The SM gauge algebra is the unique 12-dimensional algebra satisfying all physical constraints (Theorem G.8.4b). The little group $SO(2)$ in $D = 4$ acts on the 2-dimensional transverse polarization plane via its defining representation. All ingredients are uniquely determined by framework constraints. ∎
 
-## G.10 Conclusion
+# G.10 Emergence of Spinor Structure from SPAP Logic
+
+The preceding sections derived the gauge structure of the Standard Model from PCE optimization on the MPU Hilbert space. This section completes the derivation by establishing that matter fields necessarily transform as spinors under the emergent Lorentz group. The derivation draws on results from Appendix N (mass-information equivalence), Appendix O (temporal structure), and Appendix Z (Landauer partition). The spinor structure is not postulated but emerges from the $\mathbb{Z}_2$ involution inherent in the SPAP update cycle (Theorem 10) when physically instantiated on the minimal active kernel via the Principle of Physical Instantiation (PPI, Definition P.6.2).
+
+## G.10.1 The SPAP $\mathbb{Z}_2$ Structure
+
+### G.10.1.1 The Logical Involution
+
+**Definition G.10.1 (SPAP Involution).** The core logical operation of the Self-Referential Paradox of Accurate Prediction (SPAP, Theorem 10) is the reflexive update:
+$$
+\phi_{t+1} = \text{NOT}(\hat{\phi}_t) \tag{G.10.1}
+$$
+where $\hat{\phi}_t$ is the stored prediction. The NOT operation defines a $\mathbb{Z}_2$ involution $\iota: \{0,1\} \to \{0,1\}$ satisfying $\iota^2 = \text{id}$.
+
+This involution is the logical foundation of the entire framework. The SPAP update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ operates on binary states $\phi \in \{0,1\}$, and NOT is the unique non-trivial involution on this set, generating the cyclic group $\mathbb{Z}_2 = \{e, \iota\}$ with $\iota \circ \iota = e$.
+
+**Lemma G.10.1 (Irreducibility of $\mathbb{Z}_2$).** The $\mathbb{Z}_2$ structure of the SPAP involution cannot be reduced to the trivial group.
+
+*Proof.* Suppose the SPAP update could be implemented with $\iota = \text{id}$. Then $\phi_{t+1} = \hat{\phi}_t$, and the system would achieve perfect self-prediction, contradicting Theorem 10 (Deterministic SPAP). The diagonalization argument (Appendix A.1, Theorem A.1.1) establishes that any predictor $P_f$ applied to the diagonal system $S_{diag}$ with rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$ yields a contradiction: $\hat{\phi} = \text{NOT}(\hat{\phi})$. Therefore, the non-trivial involution $\iota \neq \text{id}$ is logically necessary for any system possessing Property R (Definition 10). ∎
+
+### G.10.1.2 Connection to Landauer Cost
+
+The $\mathbb{Z}_2$ structure directly generates the irreducible entropy cost $\varepsilon = \ln 2$ (Theorem 31). By Lemma Z.2 (Appendix Z), the physical instantiation of the SPAP cycle implements a 2-to-1 logical state merge: the input space $\{0,1\} \times \{0,1\}$ (state and prediction registers) maps to output space $\{0,1\} \times \{p_{\text{ready}}\}$, compressing 4 states to 2. This state-space structure follows from the operational requirement that the prediction register must reset to a determinate ready state before each new cycle can commence. Specifically, the cycle map $G_{\text{cycle}}: (\phi_t, p_t) \mapsto (\phi_{t+1}, p_{t+1})$ satisfies:
+- Input: 4 distinct logical states $\{(0,0), (0,1), (1,0), (1,1)\}$
+- Output: 2 distinct logical states $\{(0, p_{\text{ready}}), (1, p_{\text{ready}})\}$
+
+Landauer's principle [Landauer 1961] requires minimum entropy production for any logically irreversible operation mapping $N$ input states to $M$ output states:
+$$
+\Delta S_{\text{env}}^{(\min)} = k_B \ln(N/M)
+$$
+For the SPAP merge with $N = 4$, $M = 2$:
+$$
+\varepsilon = \ln\left(\frac{4}{2}\right) = \ln 2 \text{ nats} \tag{G.10.2}
+$$
+
+This establishes the chain: $\text{SPAP} \xrightarrow{\mathbb{Z}_2} \varepsilon = \ln 2$.
+
+---
+
+## G.10.2 Physical Instantiation of the Involution
+
+### G.10.2.1 The Active Kernel Dimension
+
+**Theorem G.10.2 (Unitary Realization of SPAP Involution).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the logical involution $\iota$ to be realized as a unitary operator on the active kernel $\mathcal{H}_a \cong \mathbb{C}^a$ with $a = e^\varepsilon = 2$ (Theorem Z.1). The PCE-optimal realization satisfying $U_\iota^2 = I$ is:
+$$
+U_\iota = \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \tag{G.10.3}
+$$
+up to unitary equivalence.
+
+*Proof.*
+
+**Step 1 (Active kernel dimension from PPI).** By Theorem Z.1, the irreducible Landauer cost $\varepsilon = \ln 2$ (Theorem 31) requires physical instantiation on a subsystem whose von Neumann entropy equals $\varepsilon$ when maximally mixed. The von Neumann entropy of a maximally mixed state on an $a$-dimensional space is $S = \ln a$ [von Neumann 1932]. PPI requires exact correspondence (neither insufficient nor wasteful):
+$$
+\ln a = \varepsilon = \ln 2 \implies a = 2 \tag{G.10.4}
+$$
+This is the "Landauer Pointer"—the minimal 2-dimensional active kernel within the $d_0 = 8$ MPU Hilbert space (Theorem 23).
+
+**Step 2 (Unitarity requirement).** PPI requires the logical operation to preserve the Hilbert space structure. The involution must therefore be realized as a unitary operator $U_\iota \in U(2)$ acting on $\mathcal{H}_a \cong \mathbb{C}^2$.
+
+**Step 3 (Involution constraint).** The logical requirement $\iota^2 = \text{id}$ translates to $U_\iota^2 = e^{i\theta} I$ for some phase $\theta$. In the SPAP context, the computational basis $\{|0\rangle, |1\rangle\}$ is physically defined by the state register encoding—these are not abstract mathematical states but correspond to distinguishable physical configurations of the prediction apparatus. The requirement that the NOT operation maps between these physically distinguished basis states, combined with $\iota^2 = \text{id}$ at the logical level, constrains $U_\iota^2 = I$ (rather than a general phase).
+
+**Step 4 (Non-triviality).** By Lemma G.10.1, $U_\iota \neq I$. Combined with $U_\iota^2 = I$, the operator must have eigenvalues $\{+1, -1\}$ with at least one of each.
+
+**Step 5 (PCE selection).** Among Hermitian unitaries with eigenvalues $\pm 1$ on $\mathbb{C}^2$, PCE (Definition 15) selects the operator that directly implements the swap $|0\rangle \leftrightarrow |1\rangle$ in the computational basis defined by the SPAP register. This is precisely $\sigma_x$, which achieves the logical NOT with minimal circuit complexity (single gate, depth 1).
+
+**Step 6 (Uniqueness up to basis choice).** Any Hermitian unitary with eigenvalues $\pm 1$ on $\mathbb{C}^2$ is unitarily equivalent to $\sigma_z = \text{diag}(1, -1)$, hence also to $\sigma_x = V\sigma_z V^\dagger$ where $V$ is the Hadamard gate. In the computational basis defined by the SPAP register, $\sigma_x$ is the canonical choice implementing NOT. The PCE-Attractor state $\tau^* = \frac{I_2}{2} \oplus 0_6$ (Equation G.1.9.3) provides the canonical basis in which $\sigma_x$ is the natural realization. ∎
+
+---
+
+## G.10.3 Emergence of SU(2) as Active Kernel Symmetry
+
+**Theorem G.10.3 (SU(2) as Active Kernel Symmetry Group).** The symmetry group of the active kernel $\mathcal{H}_a \cong \mathbb{C}^2$, constrained by PCE and the SPAP involution structure, is SU(2).
+
+*Proof.*
+
+**Step 1 (Physical equivalence under phase).** On density matrices $\rho$, the action of $U \in U(2)$ is $\rho \mapsto U\rho U^\dagger$. For any $U$ and phase $e^{i\phi}$, we have $(e^{i\phi}U)\rho(e^{i\phi}U)^\dagger = U\rho U^\dagger$. The overall U(1) phase factor is therefore physically unobservable—it does not affect any measurable prediction. PCE (Definition 15) penalizes redundant degrees of freedom that provide no predictive benefit. Since U(2) ≅ (SU(2) × U(1))/Z₂, the subgroup SU(2) $\subset$ U(2) captures all physically distinguishable transformations while eliminating the redundant global phase degree of freedom.
+
+**Step 2 (Generator structure).** The SPAP involution $U_\iota = \sigma_x$ generates a $\mathbb{Z}_2$ subgroup of SU(2). The complete Lie algebra $\mathfrak{su}(2)$ is spanned by:
+$$
+\mathfrak{su}(2) = \text{span}_{\mathbb{R}}\{i\sigma_x, i\sigma_y, i\sigma_z\} \tag{G.10.5}
+$$
+where the Pauli matrices satisfy the commutation relations $[\sigma_i, \sigma_j] = 2i\epsilon_{ijk}\sigma_k$.
+
+**Step 3 (Completeness for prediction).** The predict-verify-update cycle (Definition 4) requires the ability to prepare arbitrary predictions on $\mathcal{H}_a$. By standard quantum control theory [D'Alessandro 2007], complete controllability on $\mathbb{C}^2$ requires the full SU(2) action: the Lie algebra generated by any two non-commuting elements of $\mathfrak{su}(2)$ is all of $\mathfrak{su}(2)$, and the corresponding group acts transitively on the space of pure states (the Bloch sphere). The $\mathbb{Z}_2$ subgroup generated by $\sigma_x$ alone cannot reach states like $|+\rangle = (|0\rangle + |1\rangle)/\sqrt{2}$ from $|0\rangle$.
+
+**Step 4 (Minimality).** SU(2) is the minimal connected Lie group that: (i) contains the SPAP involution, (ii) acts transitively on pure states of $\mathbb{C}^2$, and (iii) eliminates the physically redundant U(1) phase. SU(2) acts transitively on the Bloch sphere $S^2 \cong \text{SU}(2)/\text{U}(1)$, which parametrizes pure states. Any smaller group would fail transitivity; any larger group would contain redundant transformations violating PCE. ∎
+
+---
+
+## G.10.4 The Double Cover and Spinor Representation
+
+### G.10.4.1 SU(2) as Double Cover of SO(3)
+
+**Theorem G.10.4 (Double Cover Structure).** The group SU(2) is the universal double cover of SO(3):
+$$
+1 \to \mathbb{Z}_2 \to \text{SU}(2) \xrightarrow{\pi} \text{SO}(3) \to 1 \tag{G.10.6}
+$$
+with $\ker(\pi) = \{I, -I\}$.
+
+*Proof.* This is a standard result in Lie theory [Hall 2015]. The homomorphism $\pi: \text{SU}(2) \to \text{SO}(3)$ is given by the adjoint action: for $U \in \text{SU}(2)$ and $\vec{v} \in \mathbb{R}^3$ identified with the traceless Hermitian matrix $V = \vec{v} \cdot \vec{\sigma}$, define $\pi(U)$ by $U V U^\dagger = (\pi(U)\vec{v}) \cdot \vec{\sigma}$. Both $U$ and $-U$ yield the same rotation, so $\ker(\pi) = \{I, -I\} \cong \mathbb{Z}_2$. ∎
+
+### G.10.4.2 Spinor Sign Flip Under 2π Rotation
+
+**Corollary G.10.4.1 (Spinor Structure from Active Kernel Symmetry).** Fields transforming under the fundamental representation of the active kernel symmetry group SU(2) are spinors: they acquire a sign flip under $2\pi$ rotation.
+
+*Proof.* Let $|\psi\rangle \in \mathcal{H}_a \cong \mathbb{C}^2$ transform under $U \in \text{SU}(2)$. A rotation by angle $\theta$ about axis $\hat{n}$ is implemented by:
+$$
+U(\theta, \hat{n}) = \exp\left(-\frac{i\theta}{2} \hat{n} \cdot \vec{\sigma}\right) \tag{G.10.7}
+$$
+For $\theta = 2\pi$:
+$$
+U(2\pi, \hat{n}) = \exp(-i\pi \hat{n} \cdot \vec{\sigma}) = -I \tag{G.10.8}
+$$
+using the identity $(\hat{n} \cdot \vec{\sigma})^2 = I$ and the matrix exponential $e^{-i\pi A} = \cos(\pi)I - i\sin(\pi)A = -I$ for any matrix $A$ with $A^2 = I$ [Sakurai & Napolitano 2017]. Thus $|\psi\rangle \mapsto -|\psi\rangle$ under $2\pi$ rotation, which is the defining property of a spinor. ∎
+
+**Remark G.10.1 (Causal Chain from SPAP $\mathbb{Z}_2$ to Spinor $\mathbb{Z}_2$).** The $\mathbb{Z}_2$ structure appears at two distinct points in the derivation chain: first as the logical involution of SPAP ($\iota: \phi \mapsto \text{NOT}(\phi)$), and second as the kernel $\{I, -I\}$ of the double cover $\pi: \text{SU}(2) \to \text{SO}(3)$. These are mathematically distinct objects—the SPAP $\mathbb{Z}_2$ acts on the logical states $\{0, 1\}$ via negation, while the double cover $\mathbb{Z}_2$ acts on the active kernel $\mathbb{C}^2$ by scalar multiplication. However, these two $\mathbb{Z}_2$ structures are *connected through necessary implication* in the derivation chain established in this appendix:
+
+1. The SPAP logical involution (Definition G.10.1) determines the 2-to-1 merge structure (Lemma Z.2)
+2. This merge structure determines $\varepsilon = \ln 2$ via Landauer's principle (Theorem 31)
+3. PPI requires physical instantiation on a subsystem of dimension $a = e^\varepsilon = 2$ (Theorem Z.1)
+4. PCE selects SU(2) as the symmetry group of this 2-dimensional active kernel (Theorem G.10.3)
+5. SU(2) inherently possesses center $\{I, -I\} \cong \mathbb{Z}_2$ and is the universal double cover of SO(3)
+
+The complete causal chain is therefore:
+$$
+\text{SPAP } \mathbb{Z}_2 \xrightarrow{\text{Landauer}} \varepsilon = \ln 2 \xrightarrow{\text{PPI}} a = 2 \xrightarrow{\text{PCE}} \text{SU}(2) \xrightarrow{\text{Lie theory}} \ker(\pi) = \mathbb{Z}_2
+$$
+
+The spinor sign flip under $2\pi$ rotation is thus ultimately traceable to the logical structure of self-referential prediction: the SPAP $\mathbb{Z}_2$ necessarily implies (through this derivation chain) the spinor $\mathbb{Z}_2$, even though they act on different mathematical objects.
+
+---
+
+## G.10.5 Lorentzian Extension to Spin(1,3)
+
+**Theorem G.10.5 (Emergence of Spin(1,3)).** The combination of the SU(2) structure on the active kernel (Theorem G.10.3) with the temporal direction required for prediction (Theorem O.3) extends to the spin group Spin(1,3), the double cover of the Lorentz group SO$^+(1,3)$.
+
+*Proof.*
+
+**Step 1 (Temporal direction from prediction).** By Theorem O.3 (The Arrow of Time), prediction requires a distinguished temporal direction: prediction precedes verification precedes update. This causal ordering defines the arrow of time (Appendix O) and establishes a temporal asymmetry that must be incorporated into the symmetry structure.
+
+**Step 2 (Lorentz algebra structure).** The proper orthochronous Lorentz group SO$^+(1,3)$ has Lie algebra $\mathfrak{so}(1,3)$ of dimension 6, spanned by three rotation generators $J_i$ and three boost generators $K_i$. The complexification satisfies [Weinberg 1995; Hall 2015]:
+$$
+\mathfrak{so}(1,3)_{\mathbb{C}} \cong \mathfrak{sl}(2,\mathbb{C}) \oplus \mathfrak{sl}(2,\mathbb{C}) \tag{G.10.9}
+$$
+where we use the isomorphism $\mathfrak{su}(2)_{\mathbb{C}} \cong \mathfrak{sl}(2,\mathbb{C})$. Defining $\vec{N}^\pm = \frac{1}{2}(\vec{J} \pm i\vec{K})$, these satisfy two independent $\mathfrak{su}(2)$ algebras: $[N_i^+, N_j^+] = i\epsilon_{ijk}N_k^+$, $[N_i^-, N_j^-] = i\epsilon_{ijk}N_k^-$, and $[N_i^+, N_j^-] = 0$. The real Lorentz algebra is recovered by taking the real form with $\vec{J} = \vec{N}^+ + \vec{N}^-$ (Hermitian) and $\vec{K} = -i(\vec{N}^+ - \vec{N}^-)$ (anti-Hermitian).
+
+**Step 3 (Universal cover).** The universal cover of the proper orthochronous Lorentz group SO$^+(1,3)$ is:
+$$
+\text{Spin}(1,3) \cong \text{SL}(2,\mathbb{C}) \tag{G.10.10}
+$$
+with the double cover projection $\pi: \text{SL}(2,\mathbb{C}) \to \text{SO}^+(1,3)$. The kernel $\ker(\pi) = \{I, -I\} \cong \mathbb{Z}_2$ coincides with the rotation case.
+
+**Step 4 (Embedding of spatial structure).** The restriction of SL(2,$\mathbb{C}$) to unitary elements recovers SU(2):
+$$
+\text{SL}(2,\mathbb{C}) \cap U(2) = \text{SU}(2) \tag{G.10.11}
+$$
+This corresponds to the spatial rotation subgroup. The SPAP involution $\sigma_x \in \text{SU}(2) \subset \text{SL}(2,\mathbb{C})$ embeds naturally into the Lorentzian structure. ∎
+
+**Definition G.10.2 (Weyl Spinors).** A left-handed Weyl spinor is a field $\psi_L$ transforming under the $(\frac{1}{2}, 0)$ representation of SL(2,$\mathbb{C}$), corresponding to the fundamental representation of the first $\mathfrak{sl}(2,\mathbb{C})$ factor with the second acting trivially. A right-handed Weyl spinor $\psi_R$ transforms under $(0, \frac{1}{2})$. A Dirac spinor combines both: $\Psi = (\psi_L, \psi_R)^T$.
+
+---
+
+## G.10.6 The Spinor-Mass Correspondence
+
+### G.10.6.1 Mass from Active Kernel Processing
+
+**Theorem G.10.6 (Fundamental Fermion Mass from Active Kernel Processing).** Fundamental fermionic fields carrying non-zero rest mass necessarily transform as spinors under the emergent Lorentz group.
+
+*Proof.*
+
+**Step 1 (Mass from relational information).** By Theorem N.5 (Mass-Information Equivalence, Appendix N), rest mass for fundamental matter is determined by relational information content:
+$$
+m = \frac{\mathcal{I}_{\text{rel}}}{2\sqrt{8\varepsilon}} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{\text{rel}} \cdot m_P \tag{G.10.12}
+$$
+where $\varepsilon = \ln 2$ (Theorem 31), $m_P = \sqrt{\hbar c/G}$ is the Planck mass, and $\mathcal{I}_{\text{rel}}$ quantifies the system's predictive correlations with the network.
+
+**Step 2 (Relational information requires active kernel processing).** The relational information $\mathcal{I}_{\text{rel}}$ for fundamental matter fields is maintained through the SPAP cycle, which necessarily involves processing on the active kernel $\mathcal{H}_a \cong \mathbb{C}^2$. The irreversible entropy cost $\varepsilon = \ln 2$ per cycle (Theorem 31, Appendix J) is incurred on this 2-dimensional subsystem. By Corollary N.4.1 (Appendix N), the entropy flow rate maintaining $\mathcal{I}_{\text{rel}}$ is:
+$$
+\frac{d\mathcal{S}}{d\tau} = \frac{\mathcal{I}_{\text{rel}}}{2\tau_{\text{min}}} \tag{G.10.13}
+$$
+where $\tau_{\text{min}} = \sqrt{8\varepsilon} \cdot t_P$ is the temporal discretization scale (Theorem Q.6.1).
+
+**Step 3 (Active kernel fields transform under SU(2)).** Fields encoding information on the active kernel $\mathcal{H}_a$ transform under the symmetry group SU(2) $\subset$ Spin(1,3) (Theorems G.10.3, G.10.5). By Corollary G.10.4.1, such fields are spinors.
+
+**Step 4 (Conclusion for fundamental fermions).** Fundamental fermionic matter fields—those whose mass arises from direct participation in the SPAP-processed relational information—necessarily transform as spinors. ∎
+
+**Remark G.10.3 (Scope of Theorem G.10.6).** This theorem applies to *fundamental fermions* whose mass originates from the relational information mechanism of Theorem N.5. It does not apply to:
+- **Composite particles** (e.g., protons, neutrons) whose mass arises predominantly from QCD binding energy
+- **Scalar bosons** (e.g., the Higgs) whose mass arises from the scalar potential
+- **Gauge bosons** which acquire mass through symmetry breaking mechanisms
+
+The Higgs boson, for instance, is massive and spin-0; its mass arises from the Higgs potential $V(\phi) = -\mu^2|\phi|^2 + \lambda|\phi|^4$, not from direct active kernel processing in the sense of Theorem N.5.
+
+### G.10.6.2 Gauge Boson Masslessness
+
+**Corollary G.10.6.1 (Gauge Boson Masslessness at Tree Level).** Gauge bosons, transforming in the adjoint representation of the gauge group rather than the fundamental representation of the active kernel, are massless prior to symmetry breaking.
+
+*Proof.* The adjoint representation of SU($N$) has dimension $N^2 - 1$. For SU(2), $\dim(\text{adj}) = 3 \neq 2 = \dim(\text{fund})$. Gauge fields transform under the adjoint representation of their respective gauge groups (SU(3)$_C$, SU(2)$_L$, U(1)$_Y$), not the fundamental representation of the active kernel SU(2). They therefore do not directly encode SPAP-processed relational information in the sense of Theorem N.5 and have $\mathcal{I}_{\text{rel}} = 0$ at tree level. By Equation (G.10.12), $m = 0$.
+
+Mass acquisition via the Higgs mechanism involves coupling to the electroweak symmetry breaking sector. The Higgs doublet transforms under SU(2)$_L$, and its vacuum expectation value breaks this symmetry, enabling the W and Z bosons to acquire mass through the standard Brout-Englert-Higgs mechanism while the photon remains massless. ∎
+
+---
+
+## G.10.7 The Spin-Statistics Connection
+
+### G.10.7.1 Fermi-Dirac Statistics from Spinor Structure
+
+**Theorem G.10.7 (Pauli Exclusion from Spinor Structure).** Identical spinor fields obey Fermi-Dirac statistics with antisymmetric multi-particle wavefunctions:
+$$
+\Psi(x_1, x_2) = -\Psi(x_2, x_1) \tag{G.10.14}
+$$
+
+*Proof.*
+
+**Step 1 (Exchange and rotation in configuration space).** Consider two identical particles in $\mathbb{R}^3$. The configuration space with coincident points removed is $(\mathbb{R}^3 \times \mathbb{R}^3 \setminus \Delta)/S_2$ where $\Delta$ is the diagonal and $S_2$ is the permutation group. For the relative coordinate $\vec{r} = \vec{x}_1 - \vec{x}_2$, the exchange $\vec{x}_1 \leftrightarrow \vec{x}_2$ corresponds to $\vec{r} \mapsto -\vec{r}$, which is homotopic to a $\pi$ rotation of particle 1 about particle 2 followed by a $\pi$ rotation of particle 2 about the center of mass. In the covering space, this corresponds to a $2\pi$ rotation acting on the internal degrees of freedom [Finkelstein & Rubinstein 1968; Berry & Robbins 1997].
+
+**Step 2 (Spinor phase under exchange).** By Corollary G.10.4.1, spinor fields acquire a phase factor of $(-1)$ under $2\pi$ rotation (Equation G.10.8). The spin-statistics connection follows from the requirement that the total wavefunction be single-valued on the physical configuration space.
+
+**Step 3 (Antisymmetry).** The wavefunction for two identical spinors therefore satisfies:
+$$
+\Psi(x_2, x_1) = (-1) \cdot \Psi(x_1, x_2) = -\Psi(x_1, x_2) \tag{G.10.15}
+$$
+
+**Step 4 (Exclusion principle).** Setting $x_1 = x_2$ in Equation (G.10.15) yields $\Psi(x, x) = -\Psi(x, x)$, which implies $\Psi(x, x) = 0$. Two identical spinors cannot occupy the same quantum state. ∎
+
+This result is consistent with the spin-statistics theorem of axiomatic quantum field theory [Streater & Wightman 1964; Pauli 1940], which is recovered in the emergent AQFT framework (Theorem F.2, Appendix F).
+
+**Remark G.10.2 (PCE Interpretation of Spin-Statistics).** Theorem G.10.7 derives the spin-statistics connection from the topological structure of configuration space combined with the spinor transformation property. An independent, information-theoretic perspective is provided in Appendix F, Proposition F.2, which establishes that Fermi-Dirac statistics minimize aggregate predictive complexity $C_{agg}$ for multi-particle configurations of half-integer spin fields. The antisymmetric wavefunction eliminates redundant configuration-space volume by enforcing the Pauli exclusion constraint automatically, reducing the effective Hilbert space dimension from $d_{int}^N$ to $\binom{d_{int}}{N}$. Both derivations—the topological (Theorem G.10.7) and the PCE-based (Proposition F.2)—arrive at the same conclusion through complementary routes, reinforcing the consistency of the framework.
+
+---
+
+## G.10.8 Summary: The Complete Derivation Chain
+
+**Table G.10.1: Derivation Chain from SPAP to Spinor Structure**
+
+| Step | Result | Origin | Status | Reference |
+|:----:|:-------|:-------|:------:|:----------|
+| 1 | $\iota^2 = \text{id}$, $\iota \neq \text{id}$ | SPAP logical structure | Derived | Theorem 10, Lemma G.10.1 |
+| 2 | $\varepsilon = \ln 2$ | Landauer + 2-to-1 merge | Derived | Theorem 31, Lemma Z.2 |
+| 3 | $a = e^\varepsilon = 2$ | PPI + Shannon entropy | Derived | Theorem Z.1 |
+| 4 | $U_\iota = \sigma_x \in U(2)$ | Unitary realization | Derived | Theorem G.10.2 |
+| 5 | SU(2) symmetry | PCE + completeness | Derived | Theorem G.10.3 |
+| 6 | Double cover SU(2) → SO(3) | Lie theory | Recovered | Theorem G.10.4 |
+| 7 | Spinor representation | $2\pi \to -1$ | Recovered | Corollary G.10.4.1 |
+| 8 | Spin(1,3) $\cong$ SL(2,$\mathbb{C}$) | Temporal extension | Derived | Theorem G.10.5 |
+| 9 | Fundamental fermions spinorial | $\mathcal{I}_{\text{rel}}$ on active kernel | Derived | Theorem G.10.6 |
+| 10 | Gauge bosons massless | Adjoint $\neq$ fundamental | Derived | Corollary G.10.6.1 |
+| 11 | Fermi-Dirac statistics | Configuration space topology | Recovered | Theorem G.10.7 |
+
+**Status Legend:**
+- **Derived:** Novel result following from framework axioms
+- **Recovered:** Known mathematical result reproduced within the framework
+
+The complete derivation chain is:
+
+$$
+\boxed{
+\text{SPAP} \xrightarrow{\mathbb{Z}_2} \varepsilon = \ln 2 \xrightarrow{\text{PPI}} a = 2 \xrightarrow{\text{PCE}} \text{SU}(2) \xrightarrow{\text{time}} \text{Spin}(1,3) \xrightarrow{} \textbf{Spinors} \xrightarrow{\mathcal{I}_{\text{rel}}} \textbf{Mass}
+} \tag{G.10.16}
+$$
+
+**Corollary G.10.8.1 (Unified Origin of Fermionic Matter).** The existence of massive fermionic matter is not a contingent feature of our universe but a direct consequence of self-referential predictive logic operating under finite resource constraints. The $\mathbb{Z}_2$ structure of SPAP, when physically instantiated via PPI and optimized under PCE, generates both the spinor representation (determining transformation properties) and the mass-information correspondence (determining dynamical properties for fundamental fermions).
+
+
+**Note:** The spinor derivation (Section G.10) depends on Theorem N.5 from Appendix N for the mass-information correspondence. The logical chain from SPAP to spinors (Sections G.10.1–G.10.5) is self-contained within this appendix.
+
+## G.11 Conclusion
 
 This appendix has demonstrated how the Predictive Universe framework derives fundamental structures of modern physics from the Prediction Optimization Problem (POP, Axiom 1) and the Principle of Compression Efficiency (PCE, Definition 15):
 

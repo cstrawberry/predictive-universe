@@ -76,9 +76,10 @@ $$
 
 *Proof Summary:*
 1.  **SPAP Implies Complementarity:** SPAP (Theorem 10, Theorem 11) establishes the impossibility of simultaneous perfect prediction for certain pairs of observables $A, B$ (Corollary 1).
-2.  **Complementarity Implies Non-Commutation:** In the Hilbert space formalism (Proposition 4), observables correspond to Hermitian operators $\hat{A}, \hat{B}$. The impossibility of simultaneous precise prediction implies that these operators cannot share a complete set of common eigenvectors. This necessitates that they do not commute: $[\hat{A}, \hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A} \neq 0$.
-3.  **Non-Commutation Yields Uncertainty Relation:** The uncertainty relation (Equation 51) is a standard mathematical theorem derived directly from the properties of Hermitian operators and inner products on a Hilbert space, typically via the Cauchy-Schwarz inequality applied to states $(\hat{A} - \langle \hat{A} \rangle)|\psi\rangle$ and $(\hat{B} - \langle \hat{B} \rangle)|\psi\rangle$. The derivation shows $(\Delta A)^2 (\Delta B)^2 \geq \frac{1}{4} |\langle [\hat{A}, \hat{B}] \rangle|^2$. Taking the square root gives Equation (51).
-4.  **Conclusion:** The uncertainty relations are a direct mathematical consequence of representing the SPAP-induced complementarity of predictive aspects via non-commuting operators in the emergent Hilbert space. QED
+2.  **Complementarity Implies Non-Commutation:** In the Hilbert space formalism (Proposition 4), observables correspond to Hermitian operators $\hat{A}, \hat{B}$. If $A$ and $B$ are complementary—meaning no state allows simultaneous perfect prediction of both—then $[\hat{A}, \hat{B}] \neq 0$. This follows because commuting Hermitian operators share a simultaneous eigenbasis (spectral theorem), and any such eigenstate would permit $\Delta A = \Delta B = 0$, contradicting complementarity.
+3.  **Non-Commutation Implies Uncertainty:** For non-commuting operators, the Robertson inequality $\Delta A \cdot \Delta B \geq \frac{1}{2}|\langle[\hat{A},\hat{B}]\rangle|$ follows from the Cauchy-Schwarz inequality applied to the Hilbert space inner product [Robertson 1929].
+
+The deeper unification of uncertainty with irreversibility—showing both arise from SPAP via channel contractivity—is developed in Section 14.2.5.
 
 For emergent degrees of freedom corresponding to conjugate variables like position $\hat{x}$ and momentum $\hat{p}$, the structure of the underlying dynamics and symmetries leads via representation theory (e.g., Stone–von Neumann theorem) to the canonical commutation relation (CCR):
 $$
