@@ -436,6 +436,164 @@ The derivational parallel is precise: just as the finite and invariant speed $c$
 
 **Remark M.6.5 (Scope of the Correspondence).** The correspondence is structural and conceptual rather than mathematical in detail. Lorentz transformations form a continuous Lie group acting on Minkowski spacetime; the perspective dynamics governed by $G_{\text{persp}}$ are stochastic transitions on a distinct manifold $\Sigma$. The parallel illuminates the *type* of conceptual move—relativizing an apparently absolute concept—rather than claiming isomorphism of the mathematical structures.
 
+## Remark M.6.6 (Unified Origin of Both Relativizations)
+
+The parallel between special relativity and perspectival quantum mechanics (Structural Correspondence M.6.4) is deeper than structural analogy: the finite invariant speed $c$ that forces frame-relative simultaneity is *itself* a consequence of the same SPAP + thermodynamic irreversibility that forces perspective-relative actuality.
+
+**The Derivation Structure.** From Appendix E (Sections E.2–E.4) and Appendix E.10, the connection proceeds through two branches sharing a common thermodynamic origin in the SPAP entropy cost:
+
+$$
+\boxed{\text{SPAP} \;\xrightarrow{\text{Theorem 31}}\; \varepsilon \geq \ln 2}
+$$
+
+From this common source, two independent branches emerge:
+
+**Branch I (Information Capacity):**
+$$
+\varepsilon \geq \ln 2 \;\xrightarrow{\text{Lemma E.1}}\; f_{RID} < 1 \;\xrightarrow{\text{Theorem E.2}}\; C_{max} < \ln d_0
+$$
+
+**Branch II (Propagation Velocity):**
+$$
+\text{SPAP structure} \;\xrightarrow{\text{Theorem 29}}\; \tau_{min} > 0 \;\xrightarrow[\text{Definition 35}]{\delta > 0}\; v_{max} = \frac{\delta}{\tau_{min}} \;\xrightarrow{\text{Theorem 46}}\; c
+$$
+
+These branches are *parallel consequences* of SPAP, not sequential implications. Branch I proceeds through the thermodynamic cost $\varepsilon \geq \ln 2$ to constrain how faithfully information can be preserved; Branch II proceeds through the computational complexity of the SPAP cycle to constrain how fast information can propagate. Both originate in the logical structure of self-referential prediction.
+
+---
+
+### Step-by-Step Justification
+
+**1. Theorem 31 (Appendix J): Irreducible Entropy Cost ε ≥ ln 2**
+
+The irreducible entropy cost $\varepsilon \geq \ln 2$ arises from the logically necessary 2-to-1 state merge in the SPAP update cycle. The SPAP cycle maps four input configurations $\{(\phi, p)\} = \{(0,0), (0,1), (1,0), (1,1)\}$ to two output configurations $\{(\phi', p_{ready})\} = \{(0, p_{ready}), (1, p_{ready})\}$.
+
+*Landauer Conditions.* The SPAP cycle structure ensures the conditions for Landauer's principle [Landauer 1961] are satisfied: (i) the prediction register *must* reset to $p_{ready}$ before each new cycle can commence—this is not optional but logically required for the cycle to close; (ii) the system cannot retain side information about which of the merged input states led to the current output, because the reset erases precisely this information; (iii) the input distribution is effectively uniform over the merged states from the system's perspective post-reset. Under these conditions, Landauer's bound applies unconditionally: $\varepsilon = \ln(4/2) = \ln 2$ nats. This bound is exact and saturated by optimal erasure protocols [Landauer 1961; Bennett 1982].
+
+**2. Lemma E.1 (Branch I): Strict Contractivity of the ND-RID Channel**
+
+The entropy cost $\varepsilon > 0$ implies that the averaged ND-RID 'Evolve' channel $\mathcal{E}_N$ is strictly contractive in trace distance.
+
+*Kraus Representation.* The 'Evolve' interaction (Definition 27) comprises a reversible reflexive update $U_{rev}$ and a logically irreversible ancilla reset. The explicit Kraus operators acting on $\mathcal{H}_0 = \mathcal{H}_{MP} \otimes \mathcal{H}_I$ are (Section 7.3.3.3):
+
+$$E_0 = U_{rev} \otimes |0\rangle\langle 0|_I, \qquad E_1 = U_{rev} \otimes |0\rangle\langle 1|_I$$
+
+Completeness follows by direct calculation:
+$$E_0^\dagger E_0 + E_1^\dagger E_1 = (U_{rev}^\dagger U_{rev}) \otimes (|0\rangle\langle 0| + |1\rangle\langle 1|) = I_{MP} \otimes I_I$$
+
+ensuring CPTP structure. The ancilla's reduced state after the map is $|0\rangle\langle 0|$ for any input, implementing a physical reset channel $T_\sigma(\rho) = \text{Tr}(\rho)\sigma$ with $\sigma = |0\rangle\langle 0|$.
+
+*Channel Decomposition.* The average channel admits the decomposition $\mathcal{E}_N = (1-p)\Psi + p T_\sigma$, where $\Psi$ is a CPTP map and $T_\sigma$ is the full-rank reset channel. Since $T_\sigma$ is strictly positive and appears with weight $p > 0$, the channel satisfies $\mathcal{E}_N(\rho) \geq p \cdot \text{Tr}(\rho)\sigma$ for all $\rho \geq 0$, ensuring primitivity [Sanz et al. 2010].
+
+*Entropy Budget Constraint.* The reset channel $T_\sigma$ contributes at most $\ln d_0$ nats of entropy per application (Lemma G.1.9.1). For the average channel to satisfy the irreversibility constraint $\varepsilon \geq \ln 2$, the reset probability must satisfy $p \geq \varepsilon/\ln d_0 \geq \ln 2/\ln 8 = 1/3$. The strict positivity of $p$ ensures primitivity [Frigerio & Verri 1982], and the spectral gap $\lambda_{gap}(\mathcal{E}_N) < 1$ on the traceless subspace bounds the contractivity factor: $f_{RID} \equiv \lambda_{gap}(\mathcal{E}_N) \leq 1 - p \leq 2/3 < 1$ [Wolf 2012].
+
+**3. Theorem E.2 (Branch I): Channel Capacity Bound**
+
+Strict contractivity bounds the classical channel capacity: $C_{max}(\mathcal{E}_N) < \ln d_0$.
+
+*Tensor Power Monotonicity.* The proof requires that contractivity extends to tensor powers of the channel. For primitive CPTP maps, the trace-norm contractivity factor is monotone under tensor power: $f_{RID}(\Phi^{\otimes n}) \leq f_{RID}(\Phi)$ [Pérez-García et al. 2006]. If $C_{max} = \ln d_0$ were achievable, the classical channel capacity [Holevo 1998] and its strong converse [Winter 1999; König & Wehner 2009] would require $d_0^n$ asymptotically orthogonal output states for some block length $n$. Orthogonality requires $\|\mathcal{E}_N^{\otimes n}(\rho_k) - \mathcal{E}_N^{\otimes n}(\rho_l)\|_1 = 2$, but contractivity gives $\|\mathcal{E}_N^{\otimes n}(\rho_k) - \mathcal{E}_N^{\otimes n}(\rho_l)\|_1 \leq f_{RID}^n \cdot 2 < 2$. This contradiction establishes $C_{max} < \ln d_0$.
+
+**4. Theorem 29 (Branch II): Minimum MPU Cycle Time τ_min > 0**
+
+The minimum MPU cycle time $\tau_{min} > 0$ arises from the finite complexity of the predictive update cycle combined with fundamental quantum speed limits.
+
+*Margolus-Levitin Bound.* For any quantum system with Hamiltonian $\hat{H}$ evolving from initial state $|\psi_0\rangle$ to an orthogonal state $|\psi_\perp\rangle$, the minimum time required is bounded by [Margolus & Levitin 1998]:
+
+$$\tau_{ML} \geq \frac{\pi\hbar}{2\langle E \rangle}$$
+
+where $\langle E \rangle = \langle\psi_0|\hat{H}|\psi_0\rangle - E_{ground}$ is the mean energy above the ground state.
+
+*Application to MPU Dynamics.* The MPU's internal Hamiltonian $\hat{H}_v$ (Definition 26, Equation 43) is a bounded, self-adjoint operator on the finite-dimensional Hilbert space $\mathcal{H}_{d_0}$ with $d_0 = 8$ (Theorem 23). The spectral structure of $\hat{H}_v$ determines a characteristic minimal processing timescale. For bounded $\hat{H}_v$ on finite-dimensional $\mathcal{H}_{d_0}$ with spectral width $\Delta_H := E_{max} - E_{ground}$:
+
+$$\langle E \rangle \leq \Delta_H < \infty$$
+
+The Fundamental Predictive Loop (Definition 4) requires transitioning between distinguishable states during the Predict → Verify → Update sequence. By the Margolus-Levitin bound:
+
+$$\tau_{min} \geq \frac{\pi\hbar}{2\Delta_H} > 0$$
+
+*Action-Entropy Derivation.* An independent derivation follows from the Action-Entropy Identity (Theorem Q.0.1). Each non-trivial predictive cycle has minimum action $\mathcal{S}_{min} = \hbar \cdot \varepsilon_{min} = \hbar \ln 2$. For action $\mathcal{S} = E \cdot \tau$ with finite spectral width $\Delta_H$:
+
+$$\tau_{min} = \frac{\mathcal{S}_{min}}{\Delta_H} = \frac{\hbar \ln 2}{\Delta_H} > 0$$
+
+Both derivations yield lower bounds ensuring $\tau_{min} > 0$ as a mathematical consequence of quantum mechanics applied to finite-dimensional systems with bounded Hamiltonians.
+
+**5. Theorem E.10.2 (Branch II): Maximum Propagation Velocity**
+
+The bounded cycle time $\tau_{min}$ and MPU spacing $\delta$ (Definition 35) yield a maximum propagation velocity $v_{max} = \delta/\tau_{min}$.
+
+*Derivation.* Information traversing distance $R$ must cross $\lceil R/\delta \rceil$ links, each requiring time $\geq \tau_{min}$. In the continuum limit $R \gg \delta$, the minimum traversal time is $t_{min}(R) = (R/\delta)\tau_{min}$ and maximum velocity:
+
+$$v_{max} = \frac{R}{t_{min}(R)} = \frac{\delta}{\tau_{min}}$$
+
+**6. Theorem 46 (Branch II): Emergent Invariant Speed and Lorentz Structure**
+
+The maximum causal velocity $v_{max} = \delta/\tau_{min}$ is identified with the invariant speed $c$ of the emergent Lorentzian spacetime.
+
+*Definition of Emergent Speed.* Within the PU framework, the invariant speed is defined by:
+
+$$c := v_{max} = \frac{\delta}{\tau_{min}}$$
+
+This is the maximum speed at which causal influence can propagate through the MPU network, determined by the network's fundamental parameters: $\delta$ from PCE optimization (Appendix Q) and $\tau_{min}$ from the quantum speed limit on MPU dynamics.
+
+*Planck Scale Calibration.* The Planck length and time are calibrated to the emergent scales:
+
+$$L_P := \sqrt{\frac{\hbar G}{c^3}}, \qquad t_P := \sqrt{\frac{\hbar G}{c^5}}$$
+
+where $c$ is the emergent invariant speed. The identity $L_P/t_P = c$ follows by construction. Proposition Q.6.1 establishes that Lorentz invariance of the emergent spacetime requires the discretization ratio:
+
+$$\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}$$
+
+This ratio equality follows from the definition of Planck units in terms of the emergent $c$, ensuring dimensional consistency between the discrete MPU network and the emergent continuum spacetime.
+
+*Lorentz Invariance.* Theorem 46 establishes that the causal structure inherent in ND-RID interactions imposes a finite, invariant maximum speed for causal influence propagation across the emergent manifold $(M, g_{\mu\nu})$. The finite invariant speed $c$ geometrically defines null cones—the boundary of causal influence—requiring an indefinite (Lorentzian) metric signature $(-,+,+,+)$.
+
+---
+
+### Corollary E.10.2 (Thermodynamic Origin of Locality)
+
+Locality is not a primitive axiom but emerges from:
+
+1. **Finite entropy cost per link:** $\varepsilon \geq \ln 2$ (Theorem 31)
+2. **Finite minimum cycle time:** $\tau_{min} > 0$ (Theorem 29)
+3. **PCE optimization minimizing total entropy production** (Definition 15)
+
+Superluminal propagation would require either $\varepsilon < \ln 2$ (violating Theorem 31) or $\tau < \tau_{min}$ (violating the Margolus-Levitin bound). Both are forbidden by the logical and quantum-mechanical structure of self-referential prediction established in Appendix J.
+
+---
+
+### The Unified Picture
+
+The comparison table in Structural Correspondence M.6.4 should be read hierarchically rather than as independent parallels:
+
+| Special Relativity | PU Framework | Relationship |
+|:-------------------|:-------------|:-------------|
+| Finite signal speed $c$ | SPAP + $\varepsilon \geq \ln 2$ + $\tau_{min} > 0$ | **Derived from** (Branch II) |
+| Frame-relative simultaneity | Perspective-relative actuality | Both forced by constraints above |
+| Lorentz invariance | Perspective consistency | Emerge from causal structure |
+
+Einstein's 1905 analysis [Einstein 1905] revealed that simultaneity, previously considered absolute, is operationally defined relative to reference frames—a consequence of the finite and invariant speed $c$. The PU framework extends this program: actuality of measurement outcomes, previously considered absolute (or at least observer-independent), is operationally defined relative to perspectives—a consequence of SPAP combined with thermodynamic irreversibility.
+
+---
+
+### The Deeper Unity
+
+Both relativizations trace to a **single source**—the irreducible entropy cost of self-referential prediction. The light cone structure of spacetime and the perspectival structure of quantum measurement are dual manifestations of SPAP operating in different domains:
+
+- **Kinematic domain** (Branch II): SPAP $\to$ finite cycle complexity $\to$ $\tau_{min} > 0$ (Margolus-Levitin) $\to$ finite $v_{max} = \delta/\tau_{min}$ $\to$ Lorentz invariance (Theorem 46) $\to$ $c \equiv v_{max}$ $\to$ frame-relative simultaneity
+
+- **Epistemic domain** (Branch I): SPAP $\to$ $\varepsilon \geq \ln 2$ $\to$ primitivity of $\mathcal{E}_N$ (Kraus structure) $\to$ $f_{RID} < 1$ (non-unitary evolution) $\to$ no perfect state preservation $\to$ measurement disturbance unavoidable $\to$ perspective-dependent outcomes $\to$ perspective-relative actuality
+
+The kinematic branch constrains how fast information can propagate through the MPU network. The epistemic branch constrains how faithfully information can be preserved through predictive processing. Both constraints originate in the logical structure of self-referential prediction.
+
+---
+
+
+### Completion of the Unification
+
+Einstein's relativity of simultaneity and the PU framework's relativity of actuality are not merely analogous—they are consequences of the same underlying constraint on self-referential systems. The finite speed of light is not an independent postulate parallel to SPAP; within the framework's derivational structure, it emerges from SPAP through the thermodynamic and temporal limits on information propagation in the MPU network. The invariant speed $c = \delta/\tau_{min}$ is the geometric manifestation of the fundamental ratio between the network's spatial scale (set by PCE optimization of channel density) and temporal scale (set by the minimum time to execute the predictive cycle).
+
+
+
 ### M.6.7 Implications
 
 The resolution of Wigner's Friend via perspectival states has several implications:
