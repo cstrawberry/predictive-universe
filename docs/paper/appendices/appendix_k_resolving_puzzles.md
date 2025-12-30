@@ -95,7 +95,6 @@ We frame the task of recovering the information of an initial pure state $|\psi_
 
 **K.3.2 Thermodynamic Cost and the Perspectival Information Channel**
 
-NEW:
 **Reflexive Structure:** Each measurement $S_t$ modifies the problem instance itself: the act of extracting information changes the black hole's state $I_t \to I_{t+1}$, altering future extractable information. The solver (observer) cannot separate themselves from the problem—they are entangled with the system being solved. This is precisely the Self-referential Paradox of Accurate Prediction (SPAP) operating at the horizon.
 
 **Definition K.1 (Contractive vs. Expansive Reflexivity).**

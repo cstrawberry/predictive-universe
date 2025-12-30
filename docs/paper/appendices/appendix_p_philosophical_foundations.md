@@ -473,6 +473,52 @@ The apparent multiplicity of entropies arises from unit conversion between opera
 
 The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains. Within the framework, these constants are constrained by derived relationships: Equation E.9 establishes $G$ in terms of $\hbar$, $c$, and the information-theoretic quantities $\delta$, $\eta$, $\chi$, and $C_{max}$.
 
+### P.6.5.5a The Action-Entropy-Information Relations
+
+The exchange rate structure forms a closed set of relations connecting action, entropy, and information. These relations consolidate and summarize the derivations in Appendix Q.
+
+**Theorem P.6.3 (AEI Relations).** *Action ($\mathcal{S}$), entropy ($S$), and information ($I$) are related by fundamental exchange rates:*
+
+| Relation | Exchange Rate | Formula | Reference |
+|:---------|:--------------|:--------|:----------|
+| Action ↔ Entropy | $\hbar$ | $\mathcal{S}/\hbar = \sum_i \varepsilon_i$ | Corollary Q.0.1 |
+| Entropy ↔ Information | $k_B$ | $\Delta S_{thermo} = k_B I$ | Landauer 1961 |
+| Action ↔ Information | $\hbar \ln 2$ | $\mathcal{S}_{min} = \hbar \ln 2$ per bit | Combined |
+
+*Proof.*
+
+**Relation 1 (Action-Entropy).** From Corollary Q.0.1 (Action-Entropy Identity), physical action accumulates as the sum of SPAP entropy costs:
+$$
+\frac{\mathcal{S}}{\hbar} = \sum_{\text{cycles}} \varepsilon_i
+$$
+where each SPAP cycle contributes $\varepsilon_i \geq \ln 2$ (Theorem 31). The exchange rate is $\hbar$.
+
+**Relation 2 (Entropy-Information).** From Landauer's principle [Landauer 1961], erasing $I$ nats of information requires minimum entropy production:
+$$
+\Delta S_{thermo} = k_B I
+$$
+The exchange rate is $k_B$.
+
+**Relation 3 (Action-Information).** Combining Relations 1 and 2 for a minimal SPAP cycle with $\varepsilon_{min} = \ln 2$:
+$$
+\mathcal{S}_{min} = \hbar \varepsilon_{min} = \hbar \ln 2
+$$
+This is the minimum action per bit of irreversible computation. ∎
+
+**Corollary P.6.3.1 (Relation Consistency).** *The three relations are mutually consistent:*
+$$
+\frac{\mathcal{S}/\hbar}{\varepsilon} = 1, \quad \frac{\Delta S/k_B}{I} = 1, \quad \frac{\mathcal{S}_{min}}{\hbar \ln 2} = 1
+$$
+*At the SPAP minimum $\varepsilon = \ln 2$, all ratios equal unity.*
+
+**Corollary P.6.3.2 (Least Action as Minimum Entropy).** *The classical principle of least action is equivalent to minimizing total SPAP entropy production along a trajectory (Corollary Q.0.3):*
+$$
+\delta\mathcal{S} = 0 \iff \delta\left(\sum_i \varepsilon_i\right) = 0
+$$
+*Classical paths minimize the number of irreversible predictive cycles.*
+
+---
+
 The framework derives values for several fundamental ratios from first principles:
 
 - **The Planck ratio**: $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ from PCE optimization (Appendix Q, Equation Q.18)

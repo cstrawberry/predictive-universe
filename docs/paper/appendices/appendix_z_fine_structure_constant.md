@@ -46,6 +46,41 @@ External path (Section G.8.2): inverse-square orbital stability (Bertrand), anom
 
 ---
 
+### Z.1.5 The Grassmannian as Geometric Arena
+
+The complex Grassmannian $\text{Gr}(2,8)$ serves as the geometric arena from which Standard Model parameters emerge. This manifold is the orbit of the PCE-Attractor state $\rho_0 = \frac{1}{2}I_2 \oplus 0_6$ under unitary conjugation (Theorem Z.6.3a):
+
+$$\mathcal{O}_{\rho_0} = \{U\rho_0 U^\dagger : U \in U(8)\} \cong U(8)/[U(2) \times U(6)] \cong \text{Gr}(2,8)$$
+
+| Application | Grassmannian Role | Reference |
+|:------------|:------------------|:----------|
+| PCE-Attractor orbit | Equilibrium manifold $\mathcal{O}_{\rho_0} \cong \text{Gr}(2,8)$ | Definition 15a, Thm Z.6.3a |
+| Fine structure constant | Bures metric curvature determines $\alpha$ | Theorem Z.26 |
+| Mass hierarchies | Geodesic distances in E₈ embedding give $Y_{ij}$ | Theorem T.39 |
+| CKM/PMNS mixing | Berry holonomy around flavor loops | Theorems T.53–T.56 |
+| Generation structure | Topological sectors from $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ | Proposition R.3.5 |
+| CP violation | Holonomy phases from sector mismatch | Theorem T.56 |
+| Strong CP solution | $\sigma$-invariance on real locus | Theorem K.6.5 |
+
+**Proposition Z.1.5 (Grassmannian Parameter Emergence).** *The Standard Model parameters emerge from geometric structures on $\text{Gr}(2,8)$ and its associated lattice embeddings:*
+- *Geodesic distances on $\text{Gr}(2,8)$ with E₈ metric → mass ratios*
+- *Berry holonomy around closed loops → CP phases*
+- *Homotopy classes in $\pi_2(\Sigma_8)$ → generation quantum numbers*
+- *Bures curvature contractions → coupling corrections*
+
+*Proof.* The Grassmannian arises from the derivation chain:
+$$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} a = 2, b = 6 \xrightarrow{\text{Def 15a}} \rho_0 = \tfrac{1}{2}I_2 \oplus 0_6$$
+
+The orbit $\mathcal{O}_{\rho_0} = \{U\rho_0 U^\dagger : U \in U(8)\} \cong \text{Gr}(2,8)$ has:
+- Complex dimension: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12 = k$ (Golay signal dimension, Theorem Z.13)
+- Real dimension: $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 2ab = 24 = M$ (interface mode count, Theorem Z.5)
+
+The mass hierarchy derivation (Theorem T.39) embeds generation vacua into E₈ root space, with Yukawa couplings suppressed by $\exp(-\alpha d^2_{E_8})$ where $\alpha = 3/2$ (Corollary T.41.3). The CP phase derivation (Theorem T.56) computes Berry holonomy $\delta = 66.7°$ from the E₈ sector mismatch between up and down quarks. The generation count $N_g = 3$ follows from anomaly cancellation on $\pi_2(\Sigma_8)$ (Proposition R.3.5). ∎
+
+**Remark Z.1.5.1 (Geometric Unification).** The appearance of the same Grassmannian across coupling constants, mass hierarchies, and mixing angles reflects the single underlying predictive structure. The determination of $\text{Gr}(2,8)$ follows uniquely from the logical constant $K_0 = 3$ through the derivation chain above.
+
+---
+
 ## Z.2 MPU Invariants and the Active Kernel
 
 ### Z.2.1 Foundational Constants Recap
@@ -679,35 +714,54 @@ The unique global minimum over all integer D is at D = 4. No other stationary po
 
 ## Z.11 Dimensional Selection
 
-**Theorem Z.11 (Dimensional Selection from First Principles).** The emergent spacetime dimension is uniquely determined:
+**Theorem Z.11 (Dimensional Selection from First Principles).** *The emergent spacetime dimension is uniquely determined:*
 $$D = 4$$
 
 *Proof.*
 
 **Step 1 (Interface mode count).** From foundational constants:
-- d₀ = 8 (Theorem 15/23)
-- ε = ln 2 (Theorem 31)
-- a = e^ε = 2 (Theorem Z.1)
-- b = d₀ - a = 6
-- M_int = 2ab = 24 (Theorem Z.5)
+- $d_0 = 8$ (Theorem 15/23)
+- $\varepsilon = \ln 2$ (Theorem 31)
+- $a = e^\varepsilon = 2$ (Theorem Z.1)
+- $b = d_0 - a = 6$
+- $M_{int} = 2ab = 24$ (Theorem Z.5)
 
-**Step 2 (Geometric regularity).** Theorem 43 guarantees the network admits a smooth D-dimensional manifold limit for some integer D, but does not specify which.
+**Step 2 (Geometric regularity).** Theorem 43 guarantees the network admits a smooth $D$-dimensional manifold limit for some integer $D$, but does not specify which.
 
-**Step 3 (Channel capacity).** At equilibrium (Postulate 4), Theorem Z.9 establishes M_phys = K(D).
+**Step 3 (Channel capacity).** At equilibrium (Postulate 4), Theorem Z.9 establishes $M_{phys} = K(D)$.
 
-**Step 4 (PCE optimization).** Theorem Z.10 requires M_int = M_phys, with the equilibrium being the unique global PCE minimum.
+**Step 4 (PCE optimization).** Theorem Z.10 requires $M_{int} = M_{phys}$, with the equilibrium being the unique global PCE minimum.
 
 **Step 5 (Unique solution).** Combining:
-$$24 = M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$$
+$$24 = M_{int} = M_{phys} = K(D)$$
 
-Consulting the kissing numbers:
-- K(1) = 2
-- K(2) = 6
-- K(3) = 12
-- K(4) = 24 ✓
-- K(5) = 40
+Consulting the kissing numbers [Conway & Sloane 1999; Musin 2008]:
 
-The unique solution is D = 4. ∎
+| $D$ | $K(D)$ |
+|:---:|:------:|
+| 1 | 2 |
+| 2 | 6 |
+| 3 | 12 |
+| **4** | **24** |
+| 5 | 40 |
+| 6 | 72 |
+| 7 | 126 |
+| 8 | 240 |
+
+The exact value $K(4) = 24$ was established by Musin (2008). The unique solution is $D = 4$. ∎
+
+**Remark Z.11.1 (Dimensional Uniqueness from $K_0$).** The derivation chain $K_0 \to d_0 \to a \to M \to D$ produces a consistent solution only for $K_0 = 3$:
+
+| $K_0$ | $d_0 = 2^{K_0}$ | $a = e^{\ln 2} = 2$ | $b = d_0 - a$ | $M = 2ab$ | $K(D) = M$? |
+|:-----:|:---------------:|:-------------------:|:-------------:|:---------:|:------------|
+| 2 | 4 | 2 | 2 | 8 | No: $K(2) = 6$, $K(3) = 12$ |
+| **3** | **8** | **2** | **6** | **24** | **Yes: $K(4) = 24$** |
+| 4 | 16 | 2 | 14 | 56 | No: $K(5) = 40$, $K(6) = 72$ |
+| 5 | 32 | 2 | 30 | 120 | No: $K(7) = 126$, $K(8) = 240$ |
+
+The table demonstrates that among values $K_0 \in \{2, 3, 4, 5\}$, only $K_0 = 3$ produces a mode count $M$ that equals $K(D)$ for some integer dimension $D$. For larger $K_0$, the mode counts $M \in \{248, 504, ...\}$ exceed known kissing numbers for low dimensions, making geometric realization increasingly improbable. This is not imposed but emerges: the SPAP-derived $K_0 = 3$ (Theorem 15) uniquely produces $M = 24$, which uniquely matches $K(4) = 24$.
+
+**Corollary Z.11.1 (Geometric Necessity).** *The physical universe occupies the sole point where information-theoretic requirements (SPAP structure) align with geometric packing constraints (kissing number). Alternative $K_0$ values would be information-theoretically viable but geometrically unrealizable—no integer dimension $D$ satisfies $K(D) = M$ for $M \in \{8, 56, 120, ...\}$.*
 
 **Remark Z.4a (Euclidean vs Lorentzian).** The kissing number $K(4) = 24$ refers to sphere packing in 4-dimensional Euclidean space. This is the Euclideanized spacetime geometry relevant to the instanton saddle-point calculation (Section U.9). The Euclidean rotation group is $\text{Spin}(4) \cong SU(2) \times SU(2)$. Upon analytic continuation back to Lorentzian signature, $D = 4$ yields the physical 3+1 spacetime with metric signature $(-,+,+,+)$ and structure group $\text{Spin}(1,3)$.
 
@@ -1759,7 +1813,19 @@ $$\alpha^{-1} = \frac{4\pi}{u^*}\left(1 - \frac{a}{d_0} \cdot \frac{u^*}{\sqrt{K
 **Step 3: Expand.**
 $$\alpha^{-1} = \frac{4\pi}{u^*} - \frac{4\pi a}{d_0\sqrt{K_0}}$$
 
-**Step 4: Substitute Constants.** Using u* = 2^{1/8} - 1, a/d₀ = 1/4, K₀ = 3:
+**Remark Z.18.1 (Capacity-Coupling Connection).** The bare coupling $u^*$ encodes the SPAP entropy cost $\varepsilon = \ln 2$ through capacity saturation (Theorem Z.7):
+$$
+u^* = d_0^{1/M} - 1 = 8^{1/24} - 1 = 2^{3/24} - 1 = 2^{1/8} - 1
+$$
+
+The exponent $1/8$ arises from the ratio of fundamental parameters:
+$$
+\frac{1}{8} = \frac{K_0}{M} = \frac{3}{24} = \frac{\ln d_0}{M \ln 2}
+$$
+
+This connects the bare electromagnetic coupling to the information-theoretic structure: $u^*$ depends on how the MPU's total information capacity ($\ln d_0 = K_0 \ln 2$) is distributed across the interface modes ($M = 24$). The factor $1/24$ in the exponent reflects the per-mode share of the total capacity.
+
+**Step 4: Substitute Constants.** Using $u^* = 2^{1/8} - 1$, $a/d_0 = 1/4$, $K_0 = 3$:
 $$\alpha^{-1} = \frac{4\pi}{2^{1/8}-1} - \frac{4\pi \cdot (1/4)}{\sqrt{3}} = \frac{4\pi}{2^{1/8}-1} - \frac{\pi}{\sqrt{3}}$$
 
 **Step 5: Evaluate.**

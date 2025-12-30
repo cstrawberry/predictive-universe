@@ -1047,6 +1047,36 @@ $$T_U = \frac{\hbar a}{2\pi k_B c}$$
 
 The entanglement entropy across the Rindler horizon satisfies the area law, with $\mathcal{A}$ being the transverse area of the horizon patch. This case provided the foundation for Jacobson's thermodynamic derivation of Einstein's equations [Jacobson 1995], which the present framework extends (Section 12). ∎
 
+#### E.9.3.1 Temperature as Information Rate
+
+All horizon temperatures appearing in the framework share a common structure reflecting the rate of information processing at causal boundaries.
+
+**Theorem E.9.4 (Horizon Temperature Structure).** *Horizon temperatures take the universal form:*
+$$
+T = \frac{\hbar}{2\pi k_B} \cdot \Gamma
+$$
+*where $\Gamma$ is a characteristic rate with dimensions of inverse time.*
+
+| Horizon Type | Rate $\Gamma$ | Temperature | Reference |
+|:-------------|:--------------|:------------|:----------|
+| Rindler | Proper acceleration $a/c$ | $T_U = \hbar a/(2\pi k_B c)$ | Unruh 1976 |
+| Schwarzschild | Surface gravity $\kappa/c$ | $T_H = \hbar\kappa/(2\pi k_B c)$ | Hawking 1975 |
+| de Sitter | Hubble rate $H_\Lambda$ | $T_{dS} = \hbar H_\Lambda/(2\pi k_B)$ | Gibbons & Hawking 1977 |
+
+*Proof.* The Unruh temperature $T_U = \hbar a/(2\pi k_B c)$ can be written:
+$$
+T_U = \frac{\hbar}{2\pi k_B} \cdot \frac{a}{c} = \frac{\hbar}{2\pi k_B} \cdot \Gamma_a
+$$
+where $\Gamma_a = a/c$ has dimensions of inverse time.
+
+For Hawking radiation, the surface gravity $\kappa = c^4/(4GM)$ gives $\Gamma_\kappa = \kappa/c$, the rate of exponential peeling of null generators from the horizon.
+
+For de Sitter space, $H_\Lambda = c\sqrt{\Lambda/3}$ is the Hubble expansion rate at the cosmological horizon.
+
+In each case, the temperature measures how rapidly an observer encounters the causal boundary—the rate at which the horizon processes the observer's trajectory through spacetime. ∎
+
+**Corollary E.9.4.1 (Prefactor Universality).** *The prefactor $\hbar/(2\pi k_B)$ relates the quantum of action $\hbar$ to thermal energy via Boltzmann's constant $k_B$, with the factor $2\pi$ arising from the periodicity of Euclidean time in the thermal field theory representation* [Gibbons & Hawking 1977].
+
 ### E.9.4 Holographic Content
 
 Throughout this subsection, we work in natural units ($c = \hbar = k_B = 1$, $L_P^2 = G$) where entropy and information are measured in nats.

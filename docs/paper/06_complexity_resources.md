@@ -2,7 +2,53 @@
 
 This section explores the crucial interplay between system complexity, achievable predictive performance, and the dynamical processes governing adaptation within the Predictive Universe framework. We introduce the Principle of Compression Efficiency (PCE) as the core driver of adaptation, analyze the scaling relationship between complexity and performance, derive the specific functional form known as the Law of Prediction, and formally model the adaptation dynamics. These elements establish the foundation for understanding how systems governed by POP (Axiom 1) dynamically adjust their complexity, which is fundamentally bounded by the Operational Threshold ($C \ge C_{op} \ge K_0$, Corollary 3), to navigate the Space of Becoming (Definition 8) efficiently.
 
-**6.1 Principle of Compression Efficiency (PCE)**
+## 6.0 The Capacity Bound as Structural Constraint
+
+*Throughout this section, natural units $\hbar = c = k_B = 1$ are used unless otherwise noted.*
+
+A fundamental structural feature of the PU framework is that the ND-RID channel capacity bound $C_{max} < \ln d_0$ (Theorem E.2) propagates through the derivation chain to constrain multiple physical domains. This bound arises from the irreversibility constraint $\varepsilon \geq \ln 2$ (Theorem 31), which implies strict contractivity $f_{RID} < 1$ (Lemma E.1), which in turn limits classical information capacity.
+
+### 6.0.1 Capacity Manifestations Across Domains
+
+**Theorem 6.0.1 (Capacity Bound Propagation).** *The channel capacity bound $C_{max} < \ln d_0$ appears as a limiting factor in distinct physical contexts:*
+
+| Domain | Capacity Role | Derived Relation | Reference |
+|:-------|:--------------|:-----------------|:----------|
+| Information channels | Upper bound on reliable transmission | $C_{max}(f_{RID}) < \ln d_0$ | Theorem E.2 |
+| Horizon entropy | Entropy per boundary channel | $S_{channel}^{max} \leq k_B C_{max}$ | Corollary E.2 |
+| Gravitational constant | Inverse proportionality | $G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{max}}$ | Equation E.9 |
+
+*where $\delta$ is the effective MPU spacing (Definition 35), $\eta$ is the geometric packing factor, and $\chi$ is the correlation factor quantifying reduction in independent degrees of freedom (all defined in Theorem E.3).*
+
+*Proof.*
+
+**Part A (Information Channels).** From Theorem E.2, if $f_{RID} < 1$ (which follows from $\varepsilon > 0$ by Lemma E.1), then the classical capacity of the quantum channel satisfies $C(\mathcal{E}_N) < \ln d_0$. The proof proceeds by contradiction: if $C = \ln d_0$, then $d_0^n$ messages could be transmitted through $n$ channel uses, requiring asymptotically orthogonal outputs. But contractivity gives $\|\mathcal{E}_N^{\otimes n}(\rho_k) - \mathcal{E}_N^{\otimes n}(\rho_l)\|_1 \leq f_{RID}^n \cdot 2 \to 0$, contradicting orthogonality. The capacity bound $C < \ln d_0$ follows from the Holevo bound [Holevo 1973], with achievability and strong converse established in [Holevo 1998; Winter 1999].
+
+**Part B (Horizon Entropy).** From Corollary E.2, the maximum thermodynamic entropy per channel is $S_{channel}^{max} = k_B C_{max}$ (SI units) or simply $C_{max}$ (natural units). Combined with channel counting (Theorem E.3), the total boundary entropy is:
+$$
+S_{boundary} = N_{eff} \cdot S_{channel}^{max} = \sigma_{link} \cdot \mathcal{A} \cdot k_B \cdot C_{max}
+$$
+where $\sigma_{link} = \chi/(\eta\delta^2)$ is the effective surface density of independent channels. This yields the area law with coefficient $\sigma_{link} \cdot C_{max} = 1/(4G)$ (Theorem E.5).
+
+**Part C (Gravitational Constant).** From Equation E.9, requiring Clausius consistency on all local horizons fixes:
+$$
+G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{max}(f_{RID})}
+$$
+The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At PCE equilibrium with $C_{max}^* = \ln d_0 - \varepsilon = 2\ln 2$ (Equation E.15), this determines $G$ in terms of the microscopic MPU parameters. ∎
+
+**Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by the single capacity bound $C_{max} < \ln d_0$ arising from ND-RID contractivity.*
+
+**Remark 6.0.1 (Origin of the Constraint).** The capacity bound traces to the irreversibility of self-referential prediction:
+$$
+\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \varepsilon \geq \ln 2 \xrightarrow{\text{Lem E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{max} < \ln d_0
+$$
+The logical structure of self-reference (SPAP) propagates through thermodynamics (Landauer cost) to information theory (channel capacity) to geometry (gravitational coupling).
+
+**Remark 6.0.2 (PCE Optimization).** At the PCE-Attractor (Definition 15a), the capacity saturates its optimal value $C_{max}^* = \ln d_0 - \varepsilon = \ln 8 - \ln 2 = 2\ln 2$ (Equation E.15). This represents the optimal partition of the MPU's information budget between internal processing cost ($\varepsilon$) and external communication capacity ($C_{max}$).
+
+---
+
+## 6.1 Principle of Compression Efficiency (PCE)
 
 The adaptation of predictive systems is governed by an optimization principle that balances predictive utility against resource costs.
 

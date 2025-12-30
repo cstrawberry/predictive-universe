@@ -37,7 +37,7 @@
 *   Bengtsson, I., & Życzkowski, K. (2006). *Geometry of Quantum States: An Introduction to Quantum Entanglement*. Cambridge University Press.
 *   Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525–532. DOI: 10.1147/rd.176.0525
 *   Bennett, C. H. (1982). The thermodynamics of computation—a review. *International Journal of Theoretical Physics*, *21*(12), 905–940. DOI: 10.1007/BF02084158
-*   Berry, M. V. (1984). Quantal phase factors accompanying adiabatic changes. *Proceedings of the Royal Society of London A*, *392*, 45–57.
+*   Berry, M. V. (1984). Quantal phase factors accompanying adiabatic changes. *Proceedings of the Royal Society of London A*, *392*(1802), 45–57. DOI: 10.1098/rspa.1984.0023
 *   Berry, M. V., & Robbins, J. M. (1997). Indistinguishability for quantum particles: spin, statistics and the geometric phase. *Proceedings of the Royal Society A*, *453*(1963), 1771–1790. DOI: 10.1098/rspa.1997.0096
 *   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853., *392*, 45–57.
 *   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853.
@@ -71,6 +71,7 @@
 *   Buttazzo, D., Degrassi, G., Giardino, P. P., Giudice, G. F., Sala, F., Salvio, A., & Strumia, A. (2013). Investigating the near-criticality of the Higgs boson. *Journal of High Energy Physics*, *2013*(12), 089. DOI: 10.1007/JHEP12(2013)089
 *   Bösch, H., Steinkamp, F., & Boller, E. (2006). Examining psychokinesis: The interaction of human intention with random number generators—A meta-analysis. *Psychological Bulletin*, *132*(4), 497-523.
 *   Cabibbo, N. (1963). Unitary Symmetry and Leptonic Decays. *Physical Review Letters*, *10*(12), 531–533. DOI: 10.1103/PhysRevLett.10.531
+*   Calderbank, A. R., & Shor, P. W. (1996). Good quantum error-correcting codes exist. *Physical Review A*, *54*(2), 1098–1105. DOI: 10.1103/PhysRevA.54.1098
 *   Callan, C. G., Dashen, R. F., & Gross, D. J. (1976). The structure of the gauge theory vacuum. *Physics Letters B*, *63*(3), 334–340. DOI: 10.1016/0370-2693(76)90277-X
 *   Callan, C. G., Jr., & Coleman, S. (1977). The fate of the false vacuum II: First quantum corrections. *Physical Review D*, *16*(6), 1762–1768. DOI: 10.1103/PhysRevD.16.1762
 *   Cameron, P.J. & Van Lint, J.H. (1991). *Designs, Graphs, Codes and their Links*. Cambridge University Press.
@@ -343,7 +344,7 @@
 *   Mordell, L. J. (1938). The definite quadratic forms in eight variables with determinant unity. *Journal de Mathématiques Pures et Appliquées*, *17*, 41–46.
 *   Mosonyi, M., & Hiai, F. (2011). On the Symmetrized Rényi Relative Entropies and Related Metrics. *IEEE Transactions on Information Theory*, *57*(4), 2474–2487. DOI: 10.1109/TIT.2011.2110065
 *   Mosonyi, M., & Ogawa, T. (2017). Quantum hypothesis testing and the operational interpretation of the quantum Rényi relative entropies. *Communications in Mathematical Physics*, *355*, 373–426. DOI: 10.1007/s00220-017-2960-6
-*   Musin, O. R. (2008). The kissing number in four dimensions. *Annals of Mathematics*, *168*, 1–32.
+*   Musin, O. R. (2008). The kissing number in four dimensions. *Annals of Mathematics*, *168*(1), 1–32. DOI: 10.4007/annals.2008.168.1
 *   Nachtergaele, B., & Sims, R. (2010). Lieb–Robinson bounds in quantum many-body physics. In R. Sims & D. Ueltschi (Eds.), *Entropy and the Quantum* (*Contemporary Mathematics*, Vol. 529, pp. 141–176). American Mathematical Society. DOI: 10.1090/conm/529
 *   Nakahara, M. (2003). *Geometry, Topology and Physics* (2nd ed.). CRC Press.
 *   Nelson, R. D., Radin, D. I., Shoup, R., & Bancel, P. A. (2002). Correlations of continuous random data with major world events. *Foundations of Physics Letters*, *15*(6), 537–550.
@@ -437,6 +438,7 @@
 *   Sloane, N. J. A. (1977). Error-correcting codes and invariant theory: New applications of a nineteenth-century technique. *The American Mathematical Monthly*, *84*(2), 82–107.
 *   Smart, J. M. (2012). The transcension hypothesis: Sufficiently advanced civilizations invariably leave our universe, and implications for METI and SETI. *Acta Astronautica*, *78*, 55–68. DOI: 10.1016/j.actaastro.2011.11.012
 *   Spohn, H. (1978). Entropy production for quantum dynamical semigroups. *Journal of Mathematical Physics*, *19*(5), 1227–1230. DOI: 10.1063/1.523789
+*   Steane, A. M. (1996). Error correcting codes in quantum theory. *Physical Review Letters*, *77*(5), 793–797. DOI: 10.1103/PhysRevLett.77.793
 *   Stone, M. H. (1932). On one-parameter unitary groups in Hilbert space. *Annals of Mathematics*, *33*(3), 643–648. DOI: 10.2307/1968538
 *   Streater, R. F., & Wightman, A. S. (1964). *PCT, Spin and Statistics, and All That*. W. A. Benjamin.
 *   Susskind, L. (1995). The world as a hologram. *Journal of Mathematical Physics*, *36*(11), 6377–6396. DOI: 10.1063/1.531249

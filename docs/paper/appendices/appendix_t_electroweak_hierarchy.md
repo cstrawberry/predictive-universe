@@ -2925,12 +2925,46 @@ The CKM hierarchy |V_us| ≫ |V_cb| ≫ |V_ub| arises from distinct mechanisms:
 ### T.22.10.3 Why CP Violation Exists
 
 CP violation requires the up and down sectors to have different orientations in the generation manifold. This follows from their distinct E₈ triad assignments:
-- Different d²₃₂ values (2 vs 4) create orientation mismatch
-- The Berry phase around the flavor loop is non-zero: δ = 66.7°
+- Different $d^2_{32}$ values (2 vs 4) create orientation mismatch
+- The Berry phase around the flavor loop is non-zero: $\delta = 66.7°$
 
-The Jarlskog invariant J ∝ sin δ ≠ 0 confirms physical CP violation.
+The Jarlskog invariant $J \propto \sin\delta \neq 0$ confirms physical CP violation.
 
-### T.22.10.4 Comparison with PMNS
+### T.22.10.4 Berry Phase Origin of CP Violation
+
+All CP-violating phases in the Standard Model trace to Berry holonomy on the generation manifold $\text{Gr}(2,8)$:
+
+| Observable | Berry Phase Mechanism | Predicted Value | Reference |
+|:-----------|:----------------------|:----------------|:----------|
+| CKM $\delta$ | Holonomy around $u_3 \to d_3 \to d_2 \to u_2 \to u_3$ | $66.7°$ | Theorem T.56 |
+| PMNS $\delta_{CP}$ | Holonomy with D₄-A₂ sector mismatch | $232.5°$ | Theorem T.24.22 |
+| Strong $\bar{\theta}$ | $\sigma$-invariance forces contractible loop | $0$ | Theorem K.6.5 |
+
+**Theorem T.57 (CP from Holonomy).** *CP-violating phases arise as Berry-Simon holonomy on the generation manifold* [Berry 1984; Simon 1983].
+
+*Proof.*
+
+**Step 1 (Berry connection).** From Lemma T.53.1, the Berry connection on $\text{Gr}(2,8)$ is:
+$$
+\mathcal{A} = \frac{i}{2}\sum_{\alpha \in A, \beta \in B} \left( \bar{z}_{\alpha\beta}\, dz_{\alpha\beta} - z_{\alpha\beta}\, d\bar{z}_{\alpha\beta} \right)
+$$
+where $z_{\alpha\beta} = \langle\beta|\psi\rangle/\langle\alpha|\psi\rangle$ are inhomogeneous coordinates on $\text{Gr}(2,8)$ as defined in Lemma T.53.1, with curvature $\mathcal{F} = d\mathcal{A} = \omega_{KE}$ (Lemma T.53.2).
+
+**Step 2 (CKM phase).** For the flavor loop $\gamma: u_3 \to d_3 \to d_2 \to u_2 \to u_3$ (Definition T.53.3), the holonomy is:
+$$
+\delta_{CKM} = \oint_\gamma \mathcal{A} = \int_\Sigma \omega_{KE}
+$$
+The E₈ sector mismatch $(d^2_{32,d}, d^2_{32,u}) = (2, 4)$ yields base phase $\delta_{flat} = 2\arctan(\sqrt{2}/2) = 70.53°$ (Theorem T.54). The finite wavepacket correction $f_{sinc} = \text{sinc}(1/\sqrt{3}) = 0.9454$ (Theorem T.55) gives:
+$$
+\delta_{CKM} = 70.53° \times 0.9454 = 66.7°
+$$
+
+**Step 3 (PMNS phase).** The leptonic sector involves D₄ (charged leptons) and A₂ (neutrinos) geometries. The additional holonomy from the D₄-A₂ mismatch contributes $75°$ (Theorem T.24.22, Steps 3-4), yielding $\delta_{CP} = 232.5°$.
+
+**Step 4 (Strong CP).** The $\sigma$-involution (Definition K.6.3) acts as complex conjugation on $\text{Gr}(2,8)$. PCE-optimal vacua are $\sigma$-invariant (Theorem K.6.5), restricting $\theta_{QCD} \in \{0, \pi\}$. The PCE cost $V_{PCE}(\theta) \propto (1 - \cos\theta)$ selects $\theta = 0$ (Theorem K.6.2). ∎
+
+**Remark T.57.1 (Type I vs Type II).** The framework distinguishes Type I CP violation (Lagrangian parameters, forbidden by $\sigma$-invariance per Theorem K.6.1) from Type II (Berry holonomy, permitted). This explains why $\bar{\theta} = 0$ while $\delta_{CKM} \neq 0$.
+
 
 ### T.22.10.4 Comparison with PMNS
 

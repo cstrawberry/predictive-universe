@@ -147,9 +147,41 @@ where $R_{\mu\nu}$ is the Ricci curvature tensor, $R$ is the Ricci scalar, $g_{\
 In four dimensions, the only generally covariant, symmetric, divergence-free rank-2 tensor field derivable from a Lagrangian containing at most second derivatives of $g_{\mu\nu}$, and consistent with the emergent Bekenstein-Hawking entropy density fixed by PU principles (Appendix E), is the Einstein tensor plus a cosmological term: $\mathcal E_{\mu\nu}=G_{\mu\nu}+\Lambda g_{\mu\nu} = R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu}+\Lambda g_{\mu\nu}$.
 *Proof Summary:* Lovelock's theorem \[Lovelock 1971] limits second-order covariant gravitational actions in D=4 to the Einstein-Hilbert term plus $\Lambda$. Higher-curvature terms generally modify the Wald entropy formula, deviating from the Bekenstein-Hawking form derived from ND-RID limits (Appendix E). Consistency with the framework's emergent thermodynamics selects the unique EFE structure (Equation 76). QED
 
-**12.4 Interpretation: Gravity as Predictive Thermodynamics**
+## 12.4 Interpretation: Gravity as Predictive Thermodynamics
 
-Within the Predictive Universe framework, gravity emerges as a macroscopic thermodynamic phenomenon. Einstein's Field Equations (Equation 76) represent the equation of state ensuring local thermodynamic consistency between the emergent spacetime geometry and the underlying MPU network's predictive activity. The curvature of spacetime reflects the geometric adjustments needed to satisfy the Clausius relation on all local causal horizons, given the Horizon Entropy Area Law (Theorem 49) which arises from fundamental information limits ($\varepsilon, f_{RID}$) of reflexive MPU interactions (ND‑RID). The distribution of predictive activity ($T_{\mu\nu}^{(MPU)}$)—which itself quantifies the coarse-grained density and flux of the very resource costs that are optimized by the predictive network—dictates local information capacity of boundaries (Area Law), and geometry ($g_{\mu\nu}, R_{\mu\nu}$) adapts via EFE to maintain local thermodynamic equilibrium.
+Within the Predictive Universe framework, gravity emerges as a macroscopic thermodynamic phenomenon.
+
+### 12.4.1 Thermodynamic Structure Across Scales
+
+*In this subsection, natural units $\hbar = c = k_B = 1$ are used in Parts A and B; SI units are restored in Part C and the table.*
+
+The derivation of Einstein's equations (Theorem 12.1) applies the Clausius relation $\delta Q = T dS$ to local Rindler horizons. This thermodynamic structure connects to analogous equilibration processes at other scales.
+
+**Theorem 12.2 (Scale-Dependent Thermodynamic Equilibration).** *Thermodynamic equilibration under ND-RID dynamics yields characteristic structures at different scales:*
+
+| Scale | Equilibration Process | Physical Result | Reference |
+|:------|:----------------------|:----------------|:----------|
+| Microscopic (MPU) | KMS equilibrium under modular flow | Born rule probabilities | Theorem G.1.9.2 |
+| Macroscopic (Rindler) | Clausius relation on local horizons | Einstein field equations | Theorem 12.1 |
+| Cosmological (de Sitter) | Instanton tunneling with PCE selection | Cosmological constant | Appendix U |
+
+*Proof.*
+
+**Part A (Microscopic).** From Theorem G.1.9.2, PCE optimization drives ND-RID channels toward detailed balance. The KMS condition (Theorem G.1.9.5) characterizes equilibrium as Gibbs states $\rho^* = Z^{-1}e^{-K^*}$. For the modular Hamiltonian $K^* = -\ln\rho_{phys}$, the resulting probabilities are $p_i = \text{Tr}(\rho_{phys} P_i)$—the Born rule. This represents equilibration at the single-MPU scale.
+
+**Part B (Macroscopic).** From Theorem 12.1, applying the Clausius relation to local Rindler horizons with Unruh temperature $T = \kappa/(2\pi)$, area-law entropy $\delta S = \eta \delta\mathcal{A}$, and energy flux $\delta Q = \int T_{\mu\nu}\chi^\mu d\Sigma^\nu$, combined with the Raychaudhuri equation, yields:
+$$
+R_{\mu\nu} - \tfrac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}
+$$
+The coefficient $\eta = 1/(4G)$ is fixed by requiring Clausius consistency for all null generators (Theorem E.5).
+
+**Part C (Cosmological).** The de Sitter horizon at $r_\Lambda = \sqrt{3/\Lambda}$ has Gibbons-Hawking temperature $T_{dS} = (\hbar c/2\pi k_B)\sqrt{\Lambda/3}$ [Gibbons & Hawking 1977]. The instanton tunneling rate $\Gamma \propto e^{-2\kappa}$ with $\kappa = 141.5$ determines the vacuum energy density (Appendix U, Theorem U.14). ∎
+
+**Remark 12.2.1 (Common Origin).** The ND-RID channel structure that produces Born rule probabilities (via capacity bound $C_{max} < \ln d_0$, Theorem E.2) also determines $G$ via Equation E.9:
+$$
+G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{max}(f_{RID})}
+$$
+Both quantum measurement statistics and gravitational dynamics are constrained by the information-theoretic limits of reflexive prediction. Einstein's Field Equations (Equation 76) represent the equation of state ensuring local thermodynamic consistency between the emergent spacetime geometry and the underlying MPU network's predictive activity. The curvature of spacetime reflects the geometric adjustments needed to satisfy the Clausius relation on all local causal horizons, given the Horizon Entropy Area Law (Theorem 49) which arises from fundamental information limits ($\varepsilon, f_{RID}$) of reflexive MPU interactions (ND‑RID). The distribution of predictive activity ($T_{\mu\nu}^{(MPU)}$)—which itself quantifies the coarse-grained density and flux of the very resource costs that are optimized by the predictive network—dictates local information capacity of boundaries (Area Law), and geometry ($g_{\mu\nu}, R_{\mu\nu}$) adapts via EFE to maintain local thermodynamic equilibrium.
 Gravity is the large-scale thermodynamic consequence of the universe's underlying predictive processing and its inherent informational limits.
 
 

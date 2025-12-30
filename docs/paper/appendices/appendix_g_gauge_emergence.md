@@ -701,6 +701,50 @@ The gauge decomposition $\mathbb{C}^6 = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus 
 $$\text{Hom}(\mathbb{C}^2, \mathbb{C}^6) = \text{Hom}(\mathbb{C}^2, \mathbb{C}^3) \oplus \text{Hom}(\mathbb{C}^2, \mathbb{C}^2) \oplus \text{Hom}(\mathbb{C}^2, \mathbb{C}^1)$$
 with complex dimensions $6 + 4 + 2 = 12$. Realizing multiple distinct Hessian eigenvalues from this structure would require constructing an explicit $V_{PCE}$ that respects the reduced symmetry $U(2) \times U(3) \times U(2) \times U(1)$ but not the full $K$.
 
+**Theorem G.8.4f (12-Fold Structural Correspondence).** *The number 12 appears as a structural constant across multiple framework domains:*
+
+| Quantity | Value | Origin |
+|:---------|:-----:|:-------|
+| Golay signal dimension | $k = 12$ | Rate-$\frac{1}{2}$ optimal code on $n = 24$ (Theorem Z.13) |
+| Gauge generators | $n_G = 12$ | Capacity bound saturation (Theorem G.8.4b) |
+| Grassmannian complex dimension | $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ | QFI tangent structure (Theorem Z.6.3a) |
+| Interface mode pairs | $M/2 = 12$ | Signal-parity partition (Theorem Z.5) |
+| Golay parity constraints | $n - k = 12$ | Parity check matrix rows |
+
+*These appearances reflect a single structural identity:*
+$$
+12 = \frac{M}{2} = ab = k = n_G = \dim_{\mathbb{C}}(\text{Gr}(2,8))
+$$
+
+*Proof.* From Theorem Z.5, the interface mode count is $M = 2ab = 24$. The rate-$\frac{1}{2}$ Golay code $[24, 12, 8]$ partitions these into $k = 12$ signal and $n - k = 12$ parity modes (Theorem Z.13). From Theorem G.8.2e, the Lagrangian capacity bound is $n_G^{max} = k = 12$. The Standard Model gauge algebra saturates this bound: $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12$ (Theorem G.8.4b). The complex Grassmannian dimension is $\dim_{\mathbb{C}}(\text{Gr}(a, d_0)) = a(d_0 - a) = 2 \times 6 = 12$ (Theorem Z.6.3a). ∎
+
+**Corollary G.8.4f.1 (Gauge-Code Correspondence).** *The rate-$\frac{1}{2}$ Golay code structure determines the gauge sector dimension: the 12 signal modes correspond to 12 gauge generators, while the 12 parity modes provide error-correcting redundancy. This correspondence reflects the optimal balance between information capacity and error protection at the PCE-Attractor.*
+
+**Theorem G.8.4g (Classical Code-Gauge Structural Analogy).** *The gauge structure of the Standard Model exhibits a structural analogy to classical error-correcting code organization.*
+
+*Statement.* For the self-dual extended binary Golay code $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$ with parameters $[24, 12, 8]$ [MacWilliams & Sloane 1977]:
+
+| Classical Code Structure | Gauge Theory Structure |
+|:-------------------------|:-----------------------|
+| Block length: $n = 24$ | Interface modes: $M = 24$ |
+| Message dimension: $k = 12$ | Dynamical degrees of freedom |
+| Parity dimension: $n - k = 12$ | Gauge generators: $n_G = 12$ |
+| Codewords | Gauge-invariant configurations |
+| Syndrome space | Gauge-variant quantities |
+| Minimum distance: $d = 8$ | Robustness scale |
+
+*Proof.* The extended binary Golay code $[24, 12, 8]$ is self-dual: $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$. The rate-$\frac{1}{2}$ structure partitions the 24-dimensional space into:
+- 12 signal dimensions (message space)
+- 12 parity dimensions (redundancy for error detection/correction)
+
+For the Standard Model gauge algebra: $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12 = n - k$.
+
+The correspondence identifies organizational structure: 12-dimensional redundancy (parity/gauge) protecting or constraining 12-dimensional content (message/matter). This is a structural parallel at the level of dimensionality, not an algebraic isomorphism. ∎
+
+**Remark G.8.4g.1 (Clarification on CSS Quantum Codes).** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ would have parameters $[[24, 0, d]]$ with zero logical qubits, since $k_{quantum} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The analogy presented here concerns the **classical** code structure, not CSS quantum parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ partition ($k = n - k = 12$) and the gauge/matter sector organization.
+
+**Remark G.8.4g.2 (Functional Analogy).** The analogy suggests that gauge invariance serves a function analogous to error detection: gauge transformations identify physically equivalent configurations, just as parity constraints identify valid codewords. Physical observables must be gauge-invariant, just as transmitted messages must satisfy parity checks. The number 12 appears in both contexts because both derive from the rate-$\frac{1}{2}$ optimization on $M = 24$ modes (Theorem Z.13).
+
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 
 The PU framework provides a robust, multi-layered argument for the co-selection of D=4 spacetime and the Standard Model gauge group with its specific fermion content and three-generation structure. This selection is a derived consequence of minimizing the global PCE potential under the standing principles of compression efficiency and predictive invariance.
