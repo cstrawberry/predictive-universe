@@ -149,7 +149,407 @@ These results provide the conceptual foundation for the quantitative derivations
 
 The remainder of this appendix derives the specific numerical relationship δ/L_P ≈ 2.355 by minimizing the global PCE potential subject to the framework's information-theoretic constraints.
 
+
+### Q.0.8 Action Quantization and the Computational Structure of Interference
+
+The Action-Entropy Identity (Corollary Q.0.1) establishes that $\mathcal{S}/\hbar = \sum_i \varepsilon_i$. At the SPAP minimum, each irreversible cycle contributes $\varepsilon = \ln 2$ nats (Theorem 31, Appendix J). This section derives the conditions under which the total cycle count $N$ is constrained to discrete values, yielding a quantization of action with observable consequences.
+
 ---
+
+#### Q.0.8.1 The Cycle Number
+
+**Definition Q.0.3 (Cycle Number).** For a process $\phi$ in the MPU network, the *cycle number* is the total count of irreversible SPAP operations:
+
+$$N[\phi] := \#\{\text{SPAP cycles along } \phi\}$$
+
+When all cycles operate at the SPAP minimum (Theorem 31), the action associated with $\phi$ is:
+
+$$\mathcal{S}[\phi] = N[\phi] \cdot \hbar \ln 2$$
+
+More generally, for cycles with entropy costs $\varepsilon_i \geq \ln 2$:
+
+$$\mathcal{S}[\phi] = \hbar \sum_{i=1}^{N[\phi]} \varepsilon_i \geq N[\phi] \cdot \hbar \ln 2$$
+
+**Proposition Q.0.3 (Discrete Integrality).** *In the fundamental MPU network description, $N[\phi] \in \mathbb{Z}_{\geq 0}$ for all processes $\phi$.*
+
+*Proof.* Each SPAP cycle is an atomic operation implementing the 2-to-1 state merge (Lemma J.1, Appendix J). The merge operation maps 4 logical input states $\{(\phi, p)\} = \{0,1\} \times \{0,1\}$ to 2 logical output states $\{0,1\} \times \{p_{\text{ready}}\}$ (Section J.2). A cycle either occurs or does not; fractional cycles have no operational meaning within the discrete network because the state merge is atomic—there is no intermediate state between the 4-state input space and the 2-state output space. The path integral over the discrete network sums over histories with well-defined integer cycle counts. $\square$
+
+---
+
+#### Q.0.8.2 Topological Quantization for Closed Paths
+
+For processes forming closed loops in configuration space, single-valuedness of the quantum amplitude imposes quantization conditions.
+
+**Theorem Q.0.4 (Holonomy Quantization).** *Let $\gamma$ be a closed path in the configuration space $\mathcal{M}$ of a physical system. If the amplitude $\langle \phi | \phi \rangle_\gamma$ around $\gamma$ must be single-valued, then the total phase satisfies:*
+
+$$\oint_\gamma \frac{d\mathcal{S}}{\hbar} = 2\pi k, \quad k \in \mathbb{Z}$$
+
+*By the Action-Entropy Identity (Corollary Q.0.1), this becomes:*
+
+$$\oint_\gamma \sum_i \varepsilon_i = 2\pi k$$
+
+*Proof.* Single-valuedness requires $e^{i\oint d\mathcal{S}/\hbar} = 1$, hence $\oint d\mathcal{S}/\hbar \in 2\pi\mathbb{Z}$. Substituting the Action-Entropy Identity gives the result. This is the standard Bohr-Sommerfeld-Wilson quantization condition [Sommerfeld 1916; Wilson 1915], here derived from the information-theoretic foundation. $\square$
+
+**Corollary Q.0.4a (SPAP-Minimum Constraint).** *For processes where all cycles operate at the SPAP minimum $\varepsilon = \ln 2$ (Theorem 31), the cycle number around closed loops satisfies:*
+
+$$N_\gamma \cdot \ln 2 = 2\pi k \implies N_\gamma = \frac{2\pi}{\ln 2} k \approx 9.0647 \, k$$
+
+*The fundamental period in cycle-number space is $\Delta N_0 = 2\pi/\ln 2 \approx 9.0647$.*
+
+**Remark Q.0.4b (Non-Integer Period and Resolution).** The period $2\pi/\ln 2 \approx 9.0647$ is not an integer and is believed to be irrational (no known algebraic relation between $\pi$ and $\ln 2$ would make the ratio rational). This creates a tension between two constraints:
+
+1. *Discrete constraint:* Integer cycle counts $N \in \mathbb{Z}$ are enforced by the atomic structure of SPAP operations (Proposition Q.0.3).
+
+2. *Interference constraint:* Constructive interference requires $N_\gamma \ln 2 = 2\pi k$ for integer $k$.
+
+Assuming $2\pi/\ln 2$ is irrational (as expected from the absence of known algebraic relations), exact satisfaction of both constraints simultaneously is impossible for generic closed paths. The resolution occurs in two regimes:
+
+**(a) Macroscopic regime ($N \gg 1$):** The Γ-convergence (Theorem Q.0.1) maps the discrete action to the continuum action. For macroscopic processes with $N \gg 1$, the fractional part of $N \cdot \ln 2 / (2\pi)$ samples the unit interval quasi-uniformly by Weyl's equidistribution theorem [Weyl 1916], provided $\ln 2/(2\pi)$ is irrational as expected. The effective phase distribution becomes continuous, recovering standard quantum mechanics.
+
+**(b) Fundamental regime ($N \sim 1$):** Only specific closed paths with integer cycle counts satisfying $|N \ln 2 - 2\pi k| < \delta$ for small tolerance $\delta$ exhibit approximate constructive interference. This predicts that at Planck scales, not all closed paths support coherent quantum amplitudes—a falsifiable structural prediction.
+
+---
+
+#### Q.0.8.3 Vacuum Excitation Structure from Leech Geometry
+
+The Leech lattice structure of the vacuum (Theorem Z.8c, Appendix Z) provides constraints on excitations above the ground state. The derivation chain proceeds: SPAP → Landauer cost → Golay code → Leech lattice.
+
+**Proposition Q.0.5 (Shell Structure).** *Excitations above the PCE-Attractor vacuum correspond to Leech lattice vectors $v \in \Lambda_{24}$ with squared norm $|v|^2 \in \{0, 4, 6, 8, 10, 12, \ldots\}$. The minimum non-trivial excitation has $|v|^2_{\min} = 4$.*
+
+*Proof.* 
+
+**Step 1 (Leech lattice from Golay code).** The extended binary Golay code $\mathcal{G}_{24} = [24, 12, 8]$ is selected by PCE optimization (Theorem Z.13) as the unique optimal error-correcting code on $M = 24$ interface modes. The Leech lattice $\Lambda_{24}$ is constructed from $\mathcal{G}_{24}$ via the gluing construction [Conway & Sloane 1999]: the base lattice $L_0 = \sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ is extended by Golay-determined cosets,
+
+$$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (g_c + L_0)$$
+
+where $g_c$ are glue vectors determined by codeword $c$. This yields a disjoint union of $|\mathcal{G}_{24}| = 2^{12} = 4096$ cosets (Lemma R.4.5).
+
+**Step 2 (Rootlessness).** The Leech lattice is the unique even unimodular lattice in 24 dimensions with no vectors of squared norm 2 [Conway 1969]. This rootlessness follows from the minimum distance $d = 8$ of the Golay code: vectors in $L_0$ have minimum squared norm 4 (from the $\sqrt{2}$ scaling), and the Golay code's minimum weight 8 ensures that glue-shifted vectors also satisfy $|v|^2 \geq 4$ (Proposition R.4.2a).
+
+**Step 3 (Shell structure).** The theta series of the Leech lattice [Conway & Sloane 1999]:
+
+$$\Theta_{\Lambda_{24}}(q) = 1 + 196560 q^4 + 16773120 q^6 + 398034000 q^8 + \cdots$$
+
+confirms $|v|^2 \in \{0, 4, 6, 8, \ldots\}$ with the 196,560 minimal vectors at $|v|^2 = 4$. $\square$
+
+**Theorem Q.0.5a (Mass-Action Correspondence).** *For a vacuum excitation corresponding to Leech lattice vector $v$, the mass satisfies:*
+
+$$m^2(v) = \mu_0^2 \cdot |v|^2$$
+
+*where $\mu_0 = m_P/(2\sqrt{8\varepsilon})$ is the fundamental mass scale (Definition Z.8f, Appendix Z).*
+
+*Proof.* From the Mass-Information Equivalence (Theorem N.5, Appendix N), a system with relational information content $\mathcal{I}_{\text{rel}}$ has inertial mass:
+
+$$m = \frac{\mathcal{I}_{\text{rel}}}{2\sqrt{8\varepsilon}} \cdot m_P$$
+
+For lattice configurations, the QFI isotropy (Theorem Z.5) implies $\mathcal{I}_{\text{rel}}(v) = |v|$ in natural units. Therefore:
+
+$$m(v) = \mu_0 |v|, \quad \mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} = \frac{m_P}{2\sqrt{8 \ln 2}} \approx 0.212 \, m_P$$
+
+Squaring yields the energy-norm relation. $\square$
+
+**Remark Q.0.5a.1 (Derivation Chain).** The mass-lattice correspondence follows from the complete derivation chain:
+
+$$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Thm Z.13}} \mathcal{G}_{24} \xrightarrow{\text{Constr. A}} \Lambda_{24} \xrightarrow{\text{Thm N.5}} m^2 = \mu_0^2 |v|^2$$
+
+Each step is derived from prior axioms with no free parameters. The correspondence is a structural prediction of the framework; empirical verification requires connecting the discrete spectrum to observed particle masses through the full RG analysis of Appendix T.
+
+**Remark Q.0.5a.2 (Phenomenological Status).** The Leech lattice shell structure provides a discrete mass spectrum at the fundamental scale. Connection to observed particle masses requires: (i) identification of vacuum excitations with physical particles, (ii) symmetry breaking mechanisms selecting specific lattice points, and (iii) RG flow from $\mu_0 \sim 0.2 \, m_P$ to electroweak scales. These developments appear in Appendices R (fermion generations) and T (electroweak hierarchy).
+
+**Corollary Q.0.5b (Landauer-Shell Correspondence).** *The minimum Leech shell $|v|^2_{\min} = 4$ equals the squared Landauer pointer dimension $a^2 = (e^\varepsilon)^2 = 4$. This equality traces through the derivation chain:*
+
+$$\varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = e^\varepsilon = 2 \xrightarrow{} a^2 = 4 = |v|^2_{\min}$$
+
+*Proof.* The equality $a^2 = 4$ follows immediately from $a = e^{\ln 2} = 2$. The equality $|v|^2_{\min} = 4$ follows from Leech lattice rootlessness (Proposition Q.0.5), which in turn follows from the Golay code's minimum distance $d = 8$ via the gluing construction (Proposition R.4.2a). The coincidence $a^2 = |v|^2_{\min}$ is not accidental: both trace to the same source through different paths in the derivation chain. The relation $d = 8 = 2a^2$ connects the information-theoretic constraint (Golay distance) to the geometric constraint (minimum shell norm). $\square$
+
+**Corollary Q.0.5c (Discrete Mass Spectrum).** *The allowed squared masses for vacuum excitations form the discrete set:*
+
+$$m^2 \in \{0, 4, 6, 8, 10, 12, \ldots\} \times \mu_0^2$$
+
+*The mass gap is $\Delta_{\text{gap}} = 2\mu_0$ (Corollary Z.8g.1).*
+
+---
+
+#### Q.0.8.4 The Phase-Bit Correspondence
+
+**Corollary Q.0.6 (Phase-Bit Correspondence).** *For processes at the SPAP minimum with cycle number $N$, the quantum phase factor admits the representation:*
+
+$$\boxed{e^{i\mathcal{S}/\hbar} = e^{iN\ln 2} = 2^{iN}}$$
+
+*Proof.* Direct substitution of $\mathcal{S} = N\hbar\ln 2$ (from the Action-Entropy Identity at SPAP minimum) into $e^{i\mathcal{S}/\hbar}$:
+
+$$e^{i\mathcal{S}/\hbar} = e^{iN\hbar\ln 2/\hbar} = e^{iN\ln 2}$$
+
+The identity $e^{iN\ln 2} = 2^{iN}$ follows from the definition $2^z := e^{z \ln 2}$ for complex $z$, which is the standard principal branch of the complex exponential. $\square$
+
+**Physical Interpretation.** This correspondence unifies three domains:
+
+| Domain | Quantity | Role in Correspondence |
+|:-------|:---------|:-----------------------|
+| Quantum mechanics | $e^{i\mathcal{S}/\hbar}$ | Phase factor governing interference |
+| Thermodynamics | $\varepsilon = \ln 2$ | Irreversible entropy cost per cycle (Theorem 31) |
+| Computation | $N$ | Count of irreversible logical operations |
+
+The path integral sums phases $2^{iN}$ over histories, with $N$ counting irreversible computational steps. Interference arises from the complex arithmetic of these phase contributions.
+
+**Corollary Q.0.6a (Constructive Interference Condition).** *Two paths $\phi_1, \phi_2$ with cycle numbers $N_1, N_2$ at the SPAP minimum interfere constructively when:*
+
+$$2^{iN_1} + 2^{iN_2} \text{ is maximized} \iff (N_1 - N_2)\ln 2 = 2\pi k, \quad k \in \mathbb{Z}$$
+
+*The interference pattern depends on $\Delta N \mod (2\pi/\ln 2)$.*
+
+*Proof.* Constructive interference requires $\arg(2^{iN_1}) = \arg(2^{iN_2}) \mod 2\pi$, i.e., $N_1 \ln 2 = N_2 \ln 2 + 2\pi k$. Rearranging gives $(N_1 - N_2) \ln 2 = 2\pi k$. $\square$
+
+---
+
+#### Q.0.8.5 Observable Consequences
+
+**Theorem Q.0.7 (Conditions for Integer $N$).** *The cycle number $N$ is constrained to integer values under the following conditions:*
+
+1. **Fundamental processes:** Any process in the discrete MPU network has $N \in \mathbb{Z}$ by construction (Proposition Q.0.3).
+
+2. **Topological sectors:** Processes classified by discrete topological invariants (winding numbers, instanton numbers) have cycle counts related to the invariant structure through the holonomy condition (Theorem Q.0.4).
+
+3. **Vacuum excitations at integer shells:** For Leech lattice excitations with $|v|^2 = 4n$ ($n \in \mathbb{Z}_{>0}$), the shell index $n$ is integral by lattice structure.
+
+**Proposition Q.0.8 (Structural Predictions).** *The discrete structure predicts:*
+
+1. **Mass spectrum discreteness:** Excitation masses satisfy $m^2 \propto |v|^2 \in \{4, 6, 8, \ldots\}$ (Theorem Q.0.5a), not a continuum. The mass gap $\Delta_{\text{gap}} = 2\mu_0$ arises from $|v|^2_{\min} = 4$.
+
+2. **Phase coherence signatures:** Interference between paths differing by $\Delta N = 1$ (one SPAP cycle at the minimum) produces a phase shift of:
+   $$\Delta\phi = \ln 2 \approx 0.6931 \text{ radians} \approx 39.71°$$
+
+3. **Minimum action bound:** The minimum non-trivial action for a single irreversible operation is:
+   $$\mathcal{S}_{\min} = \hbar \ln 2 \approx 7.31 \times 10^{-35} \text{ J·s}$$
+   
+   Processes requiring action below this threshold cannot involve irreversible predictive operations.
+
+**Remark Q.0.8a (Experimental Accessibility).** These predictions operate at the Planck scale: $\mathcal{S}_{\min} = \hbar \ln 2 \approx 0.69\hbar$ represents a sub-Planck action, and the fundamental mass scale $\mu_0 \approx 0.21 \, m_P$ is near the Planck mass. Direct experimental verification lies beyond current technology. The predictions are nonetheless falsifiable in principle through:
+
+(i) Precision tests of quantum coherence at mesoscopic scales where $N$ is moderately small
+
+(ii) Cosmological signatures where Planck-scale physics imprints on large-scale structure
+
+(iii) Derived consequences at accessible scales—particle mass ratios, coupling constants, and symmetry structures (Sections 13, G.8.4, Appendix T)
+
+**Remark Q.0.8b (Sub-Planck Action).** The minimum action $\mathcal{S}_{\min} = \hbar \ln 2 < \hbar$ is sub-Planckian. This does not violate uncertainty relations because the bound applies to complete irreversible cycles, not to arbitrary measurements. The time-energy uncertainty $\Delta E \cdot \Delta t \gtrsim \hbar/2$ constrains measurement precision, while $\mathcal{S}_{\min}$ constrains the action of completed logical operations.
+
+---
+
+#### Q.0.8.6 Relation to Standard Quantization
+
+**Proposition Q.0.9 (Emergence of Bohr-Sommerfeld Quantization).** *The Bohr-Sommerfeld condition $\oint p \, dq = nh$ (with $h = 2\pi\hbar$) emerges as an effective description in regimes where:*
+
+1. *The number of SPAP cycles is large: $N \gg 1$*
+2. *The cycle-by-cycle discreteness is unresolvable*
+3. *Topological constraints enforce phase coherence*
+
+*Proof.* 
+
+**Step 1 (Quantization unit ratio).** The ratio of the Bohr-Sommerfeld quantum to the SPAP quantum is:
+
+$$\frac{h}{\hbar \ln 2} = \frac{2\pi\hbar}{\hbar \ln 2} = \frac{2\pi}{\ln 2} \approx 9.0647$$
+
+**Step 2 (Cycle-action correspondence).** For a closed orbit with $N$ cycles at the SPAP minimum, the action is $\mathcal{S} = N \hbar \ln 2$. Constructive interference requires $\mathcal{S} = 2\pi k \hbar$ (Theorem Q.0.4), giving:
+
+$$N \ln 2 = 2\pi k \implies N = \frac{2\pi}{\ln 2} k \approx 9.0647 \, k$$
+
+**Step 3 (Quantization from interference).** The interference condition (Theorem Q.0.4) requires the total phase around a closed orbit to satisfy $\mathcal{S}/\hbar = 2\pi k$ for integer $k$. Therefore the allowed actions are:
+
+$$\mathcal{S} = 2\pi k \hbar = k h$$
+
+where $h = 2\pi\hbar$ is Planck's constant and $k \in \mathbb{Z}_{>0}$ is the quantum number.
+
+**Step 4 (Bohr-Sommerfeld emergence).** The result $\mathcal{S} = kh$ is the Bohr-Sommerfeld quantization condition $\oint p \, dq = kh$ with $k$ as the quantum number. For $k = 1$, the corresponding SPAP cycle count is $N = 2\pi/\ln 2 \approx 9.06$ cycles per fundamental quantum.
+
+**Step 5 (Geometric origin of $2\pi$).** The factor $2\pi$ arises because interference around a closed orbit requires phase coherence after one complete geometric cycle. The orbit's angular extent is $2\pi$ radians, introducing the geometric factor that converts the fundamental entropy unit $\ln 2$ to the orbital quantization unit $2\pi$. $\square$
+
+**Remark Q.0.9a (Information-Theoretic Origin).** Unlike Bohr-Sommerfeld quantization (imposed as a postulate) or Dirac quantization (derived from canonical commutators), the present quantization derives from:
+
+1. The logical structure of self-referential prediction (SPAP, Theorems 10–11)
+2. The irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31, Appendix J)
+3. The PCE-optimal vacuum geometry (Leech lattice, Theorem Z.8c)
+
+Action is quantized because physical processes are fundamentally computational, and computation has irreducible information-theoretic costs.
+
+---
+
+#### Q.0.8.7 Summary
+
+This section has established:
+
+1. **Discrete Integrality:** $N \in \mathbb{Z}$ at the fundamental (MPU network) level (Proposition Q.0.3)
+
+2. **Phase-Bit Correspondence:** $e^{i\mathcal{S}/\hbar} = 2^{iN}$ at the SPAP minimum (Corollary Q.0.6)
+
+3. **Topological Constraints:** Closed-path holonomies satisfy $\oint \sum_i \varepsilon_i = 2\pi k$ (Theorem Q.0.4)
+
+4. **Vacuum Shell Structure:** Excitations have $m^2 = \mu_0^2 |v|^2$ with $|v|^2 \in \{4, 6, 8, \ldots\}$ from Leech geometry (Theorem Q.0.5a)
+
+5. **Bohr-Sommerfeld Emergence:** Standard quantization in units of $h = 2\pi\hbar$ arises from the interference condition on closed orbits (Proposition Q.0.9)
+
+6. **Structural Predictions:** Discrete mass spectrum, minimum action $\hbar \ln 2$, characteristic phase shift of 39.71° per cycle (Proposition Q.0.8)
+
+The correspondence "interference = modular arithmetic of irreversible bits" is a quantitative consequence of the Action-Entropy Identity.
+
+---
+
+### Q.0.9 The Rindler–Landauer Cycle Time
+
+This section derives a characteristic timescale for irreversible computation in the presence of a causal horizon, emerging from the intersection of horizon thermodynamics, information theory, and the Action-Entropy Identity.
+
+---
+
+#### Q.0.9.1 The Three Ingredients
+
+The derivation combines three established results:
+
+**Ingredient 1 (Unruh Temperature).** An observer undergoing constant proper acceleration $a$ perceives the Minkowski vacuum as a thermal bath at temperature [Unruh 1976]:
+
+$$T_U(a) = \frac{\hbar a}{2\pi k_B c}$$
+
+This result follows from quantum field theory in curved spacetime and is kinematic—it depends only on the existence of a Rindler horizon, not on the dynamical field equations (Theorem E.9.4, Appendix E).
+
+**Ingredient 2 (Landauer Bound).** Erasing one bit of information into a thermal reservoir at temperature $T$ requires minimum heat dissipation [Landauer 1961; Bennett 1982]:
+
+$$Q_{\min} = k_B T \ln 2$$
+
+This bound is exact and saturated by optimal quasi-static erasure protocols. The entropy increase in the reservoir is $\Delta S = Q_{\min}/T = k_B \ln 2$.
+
+**Ingredient 3 (SPAP Action Quantum).** One irreversible bit operation at the SPAP minimum costs action $\mathcal{S}_{\min} = \hbar \ln 2$ (Corollary Q.0.1, Theorem 31). 
+
+**Derivation of E·τ = ℏ ln 2:** At the thermodynamic limit where the operation is quasi-static and all energy is dissipated as heat, the minimum energy for erasure equals the Landauer heat: $E_{\min} = Q_{\min} = k_B T \ln 2$. The cycle time $\tau$ is determined by requiring the action to equal the SPAP quantum:
+
+$$\mathcal{S} = E_{\min} \cdot \tau = \hbar \ln 2$$
+
+This relation holds specifically when operating at the Landauer limit with the SPAP entropy cost.
+
+---
+
+#### Q.0.9.2 The Characteristic Cycle Time
+
+**Theorem Q.0.10 (Rindler–Landauer Cycle Time).** *For an accelerated observer operating at the thermodynamic optimum (Landauer limit) with the Unruh bath as heat sink, the minimum irreversible bit cycle time is:*
+
+$$\boxed{\tau_U(a) = \frac{2\pi c}{a}}$$
+
+*All quantum and thermodynamic constants cancel. The result is purely geometric.*
+
+*Proof.*
+
+**Step 1 (Minimum heat dissipation).** With the Unruh bath at temperature $T_U(a)$ as heat sink, the Landauer bound (Ingredient 2) gives minimum heat per bit:
+
+$$Q_{\min}(a) = k_B T_U(a) \ln 2 = k_B \cdot \frac{\hbar a}{2\pi k_B c} \cdot \ln 2 = \frac{\hbar a \ln 2}{2\pi c}$$
+
+**Step 2 (Energy at Landauer limit).** At the thermodynamic optimum, all energy goes to heat dissipation. This idealization—operating exactly at the Landauer limit—gives:
+
+$$E_{\min} = Q_{\min}(a) = \frac{\hbar a \ln 2}{2\pi c}$$
+
+**Step 3 (Cycle time from action constraint).** By the Action-Entropy Identity at the SPAP minimum (Ingredient 3), the action for one bit operation is $\mathcal{S}_{\min} = \hbar \ln 2$. The corresponding cycle time is:
+
+$$\tau_U = \frac{\mathcal{S}_{\min}}{E_{\min}} = \frac{\hbar \ln 2}{\hbar a \ln 2 / (2\pi c)} = \frac{\hbar \ln 2 \cdot 2\pi c}{\hbar a \ln 2} = \frac{2\pi c}{a}$$
+
+**Step 4 (Cancellation verification).** The complete cancellation is verified algebraically:
+- $\hbar$ cancels between numerator and denominator
+- $\ln 2$ cancels between numerator and denominator  
+- $k_B$ cancels within $Q_{\min}$
+
+The result depends only on acceleration $a$ and the speed of light $c$. $\square$
+
+**Remark Q.0.10a (Thermodynamic Limit).** The derivation assumes operation exactly at the Landauer limit, where $E = Q_{\min}$. Real processes require $E > Q_{\min}$, with the excess energy available for useful work or faster operation. The cycle time $\tau_U$ is therefore a *lower bound* on cycle time when the Unruh bath is the only available heat sink:
+
+$$\tau \geq \tau_U(a) = \frac{2\pi c}{a}$$
+
+with equality achieved only in the quasi-static limit.
+
+---
+
+#### Q.0.9.3 Physical Interpretation
+
+**Corollary Q.0.10b (Proper Time to Horizon).** *The cycle time $\tau_U = 2\pi c/a$ equals $2\pi$ times the light-crossing time to the Rindler horizon at proper distance $\ell_R = c^2/a$:*
+
+$$\tau_U = 2\pi \cdot \frac{c}{a} = 2\pi \cdot \frac{\ell_R}{c}$$
+
+*The factor $2\pi$ reflects the thermal periodicity of the Euclidean Rindler geometry [Gibbons & Hawking 1977].*
+
+*Proof.* The Rindler horizon lies at proper distance $\ell_R = c^2/a$ from the accelerating observer. The light-crossing time is $\ell_R/c = c/a$. The Euclidean continuation of Rindler spacetime has periodicity $\beta = 2\pi c/a$ in imaginary time, corresponding to the inverse Unruh temperature:
+
+$$\beta = \frac{\hbar}{k_B T_U} = \frac{\hbar}{k_B \cdot \hbar a/(2\pi k_B c)} = \frac{2\pi k_B c}{k_B \cdot a} = \frac{2\pi c}{a}$$
+
+The cycle time $\tau_U = \beta$ inherits this thermal periodicity. $\square$
+
+**Corollary Q.0.10c (Bit Rate at Thermodynamic Optimum).** *At the Landauer limit, the maximum bit rate is:*
+
+$$\dot{N}_U = \frac{1}{\tau_U} = \frac{a}{2\pi c}$$
+
+**Remark Q.0.10d (Not a Universal Speed Limit).** The cycle time $\tau_U$ is the characteristic timescale when operating at minimum energy (Landauer limit). An observer with access to additional energy can achieve shorter cycle times:
+
+$$\tau = \frac{\hbar \ln 2}{E} < \tau_U \quad \text{when} \quad E > Q_{\min}(a)$$
+
+The relation $\dot{N}_{\max} = a/(2\pi c)$ applies specifically to thermodynamically optimal operation with only the Unruh bath as heat sink. It is an *efficiency-limited* rate, not an absolute computational speed limit.
+
+---
+
+#### Q.0.9.4 The Cancellation Structure
+
+**Proposition Q.0.10e (Structural Origin of Cancellation).** *The cancellation occurs because the three ingredients share a common origin in the information-thermodynamics of horizons:*
+
+1. *Unruh temperature introduces $\hbar a / k_B$*
+2. *Landauer bound introduces $k_B \ln 2$*
+3. *Action-entropy identity introduces $\hbar \ln 2$*
+
+*The product structure ensures exact cancellation.*
+
+*Proof.* Computing explicitly:
+
+$$\frac{Q_{\min}}{\hbar \ln 2} = \frac{k_B T_U \ln 2}{\hbar \ln 2} = \frac{k_B}{\hbar} \cdot T_U = \frac{k_B}{\hbar} \cdot \frac{\hbar a}{2\pi k_B c} = \frac{a}{2\pi c}$$
+
+The cancellation is exact because all three quantities—Unruh temperature, Landauer bound, and SPAP action—derive from the same underlying structure: the thermodynamics of information at causal boundaries. The Unruh effect converts acceleration to temperature via $\hbar/k_B$; Landauer's principle converts temperature to energy via $k_B \ln 2$; the Action-Entropy Identity converts entropy to action via $\hbar \ln 2$. The three conversion factors compose to eliminate all non-geometric quantities. $\square$
+
+---
+
+#### Q.0.9.5 Limiting Cases
+
+| Acceleration | Cycle Time $\tau_U$ | Bit Rate $\dot{N}_U$ | Physical Regime |
+|:-------------|:--------------------|:---------------------|:----------------|
+| $a \to 0$ | $\tau_U \to \infty$ | $\dot{N}_U \to 0$ | Inertial limit: Unruh bath vanishes |
+| $a = c^2/L_P$ | $\tau_U = 2\pi t_P$ | $\dot{N}_U = 1/(2\pi t_P)$ | Planck acceleration |
+| $a = g \approx 9.8$ m/s² | $\tau_U \approx 1.92 \times 10^{8}$ s | $\dot{N}_U \approx 5.2 \times 10^{-9}$ Hz | Earth surface gravity |
+
+**Remark Q.0.10f (Inertial Limit).** For inertial observers ($a = 0$), the Unruh temperature vanishes and this analysis does not apply—a different heat sink must be specified. The divergence $\tau_U \to \infty$ reflects the absence of vacuum thermal resources, not an impossibility of computation. An inertial observer with access to a thermal bath at temperature $T$ has minimum cycle time:
+
+$$\tau = \frac{\hbar \ln 2}{k_B T \ln 2} = \frac{\hbar}{k_B T}$$
+
+**Remark Q.0.10g (Earth Gravity).** At Earth's surface gravity ($g \approx 9.8$ m/s²), the Unruh temperature is:
+
+$$T_U = \frac{\hbar g}{2\pi k_B c} \approx 4.0 \times 10^{-20} \text{ K}$$
+
+This corresponds to a cycle time of approximately 6 years ($1.92 \times 10^8$ s). The extremely slow rate reflects the minuscule thermal resources available from vacuum fluctuations at typical accelerations. Practical computation requires thermal baths at temperatures vastly exceeding the Unruh temperature.
+
+---
+
+#### Q.0.9.6 Connection to Horizon Information Bounds
+
+**Proposition Q.0.10h (Consistency with Bekenstein Bound).** *The bit rate $\dot{N}_U = a/(2\pi c)$ is consistent with the Bekenstein bound [Bekenstein 1981] on information in a region of size $R = c^2/a$ (the Rindler horizon distance).*
+
+*Proof.* The Bekenstein bound states $I \leq 2\pi ER/(\hbar c)$ for a system of energy $E$ confined to region of size $R$. For $E = k_B T_U$ (energy per thermal degree of freedom) and $R = c^2/a$ (horizon distance):
+
+$$I_{\max} = \frac{2\pi k_B T_U \cdot (c^2/a)}{\hbar c} = \frac{2\pi}{\hbar c} \cdot \frac{\hbar a}{2\pi k_B c} \cdot k_B \cdot \frac{c^2}{a} = \frac{2\pi \cdot \hbar a \cdot k_B \cdot c^2}{2\pi k_B c \cdot \hbar c \cdot a} = 1$$
+
+The Bekenstein bound permits exactly one nat of information content in a horizon-sized region at thermal energy $k_B T_U$. The framework's derived rate processes one nat per thermal time $\tau_U$, saturating but not exceeding this bound. $\square$
+
+---
+
+#### Q.0.9.7 Summary
+
+The Rindler–Landauer cycle time $\tau_U = 2\pi c/a$ emerges from combining:
+- Horizon thermodynamics (Unruh temperature)
+- Information thermodynamics (Landauer bound)  
+- Quantum action (SPAP minimum)
+
+The complete cancellation of $\hbar$, $k_B$, and $\ln 2$ reveals that **at causal boundaries, the computational cost of irreversibility is purely geometric**—determined only by acceleration and the speed of light.
+
+This provides an information-theoretic interpretation of the Unruh effect: the vacuum thermal bath at temperature $T_U$ is precisely calibrated to support one irreversible bit operation per time $2\pi c/a$ at the thermodynamic optimum. The result is self-consistent with the Bekenstein bound (Proposition Q.0.10h), confirming that horizon thermodynamics and information theory share a common foundation in the framework's predictive structure.
+
 
 **Q.1 Foundational Relation and the Optimization Goal**
 

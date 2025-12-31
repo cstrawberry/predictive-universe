@@ -529,7 +529,12 @@ PCE favors system parameters such that $\eta_{ben}(D)>\lambda_c(D)\alpha_{load}/
 A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 
 1.  **Anomaly Freedom:** $V_{\text{anom}}(G,{\psi},D)=0$.
-2.  **Capacity Constraint:** $n_G \leq n_{\max}$. The channel capacity estimate (Equation G.8.0) yields the range $n_{\max} \approx 7.5$–$20$. The geometric bound from the Lagrangian dimension of the QFI symplectic structure (Theorem G.8.2e) yields $n_G \leq ab = 12$. This bound equals the complex dimension of the attractor orbit: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$, providing a geometric interpretation of the gauge dimension constraint.Since $12$ lies within the channel capacity range, the geometric bound provides the sharp constraint $n_G \leq 12$. This value equals both the Golay code dimension $k = 12$ (Theorem Z.13) and the complex dimension of the attractor orbit $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ (Theorem Z.6.3a). The triple coincidence—channel capacity bound, code dimension, and orbit dimension—provides strong evidence for the structural uniqueness of the gauge sector. The convergence of channel capacity, symplectic geometry, and error-correction theory at the value 12 constitutes a non-trivial consistency check on the framework.
+2.  **Capacity Constraint:** $n_G \leq n_{\max}$. The channel capacity estimate (Equation G.8.0) yields the range $n_{\max} \approx 7.5$–$20$. The geometric bound from the Lagrangian dimension of the QFI symplectic structure (Theorem G.8.2e) yields $n_G \leq ab = 12$. This bound equals the complex dimension of the attractor orbit: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$, providing a geometric interpretation of the gauge dimension constraint. Since $12$ lies within the channel capacity range, the geometric bound provides the sharp constraint $n_G \leq 12$. This value equals both the Golay code dimension $k = 12$ (Theorem Z.13) and the complex dimension of the attractor orbit $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ (Theorem Z.6.3a). The triple coincidence—channel capacity bound, code dimension, and orbit dimension—provides strong evidence for the structural uniqueness of the gauge sector. The convergence of channel capacity, symplectic geometry, and error-correction theory at the value 12 constitutes a non-trivial consistency check on the framework.
+    
+    The bound $n_G \leq 12$ traces to two foundational parameters through the derivation chain:
+    $$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = e^\varepsilon = 2 \xrightarrow{d_0 = 8} b = d_0 - a = 6 \xrightarrow{} ab = 12$$
+    where $d_0 = 8$ is the minimal Hilbert space dimension for on-cycle injectivity of self-referential logic (Theorem 23, Lemma Z.1) and $\varepsilon = \ln 2$ is the SPAP entropy cost from the 2-to-1 state merge (Theorem 31, Appendix J).
+
 3.  **Structural Stability:** $D$ must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors $D=4$.
 4.  **Information Efficiency:** $D$ should optimize information‑theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor $D=4$.
 5.  **Potential Minimization:** Among all triplets $(G,{\psi},D)$ satisfying (1)–(4), the optimal solution minimizes $V_{net}$ given by Equation G.8.5.
@@ -693,6 +698,27 @@ The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(
 
 *Proof.* Theorem G.8.4b establishes that $(3,2,1)$ is the unique partition surviving all constraints. The module decomposition $\mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ forces the algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ as the unique 12-dimensional faithful, chirality-compatible, anomaly-free solution. ∎
 
+**Corollary G.8.4c.1 (Exclusion of Simple Unification Groups).**
+*Grand unified theories based on simple gauge groups are excluded by the capacity bound:*
+
+| Group | $\dim(\mathfrak{g})$ | Status |
+|:------|:-------------------:|:-------|
+| $SU(5)$ | 24 | Excluded ($> 12$) |
+| $SO(10)$ | 45 | Excluded ($> 12$) |
+| $E_6$ | 78 | Excluded ($> 12$) |
+
+*Proof.* The standard dimensions $\dim(SU(5)) = 24$, $\dim(SO(10)) = 45$, and $\dim(E_6) = 78$ are tabulated in [Slansky 1981]. By Theorem G.8.4a, the capacity bound $n_G \leq 12$ excludes all simple Lie algebras of dimension greater than 12. ∎
+
+
+**Corollary G.8.4c.2 (Proton Stability).**
+*The proton lifetime against gauge-mediated decay channels is infinite within the framework: $\tau_p^{\text{gauge}} = \infty$.*
+
+*Proof.* Gauge-mediated proton decay in GUT models proceeds via exchange of heavy gauge bosons ($X$, $Y$) corresponding to generators in $\mathfrak{g}_{\text{GUT}}/\mathfrak{g}_{\text{SM}}$ [Georgi & Glashow 1974; Langacker 1981]. By Corollary G.8.4c.1, the capacity bound $n_G \leq 12$ excludes all such extensions. The Standard Model gauge algebra saturates the bound at $\dim = 12$, leaving no room for additional gauge generators. Since Standard Model gauge interactions conserve baryon number at tree level, and no baryon-number-violating gauge extensions exist within the capacity bound, the gauge-mediated proton decay rate is exactly zero. Observable proton decay, if present, must arise from non-gauge mechanisms. ∎
+
+
+**Remark G.8.4c.3 (Experimental Status).** Current experimental lower limits on partial lifetimes are $\tau/B(p \to e^+ \pi^0) > 2.4 \times 10^{34}$ years and $\tau/B(p \to \mu^+ \pi^0) > 1.6 \times 10^{34}$ years [Super-Kamiokande Collaboration 2020, Phys. Rev. D 102, 112011]. Minimal $SU(5)$ scenarios typically predict $\tau/B(p \to e^+ \pi^0)$ in the $10^{31}$–$10^{32}$ year range (model-dependent), which is excluded by more than two orders of magnitude [Nath & Fileviez Pérez 2007; Langacker 1981]. The framework predicts continued null results in searches for gauge-mediated proton decay modes.
+
+
 **Remark G.8.4d (Complementary Derivation Methods).** The module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ derived via exhaustive partition analysis coincides with the Local Module Hypothesis of Proposition G.M1. Both methods use the same foundational constraints—the capacity bound $n_G \leq 12$, anomaly cancellation, chirality requirements, and PCE optimization—but apply them differently: Proposition G.M1 proceeds by direct cost minimization, while Theorem G.8.4b proceeds by systematic elimination. The convergence of these complementary approaches establishes that the Standard Model gauge structure is uniquely determined by framework principles.
 
 **Remark G.8.4e (Geometric Interpretation via Attractor Orbit).** The PCE-Attractor orbit is the Grassmannian $\text{Gr}(2,8)$ with isotropy group $K = U(2) \times U(6)$. The tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)$ is irreducible under $K$. By Schur's lemma, any $K$-invariant potential $V_{PCE}$ has scalar Hessian $H = \lambda I$ at the minimum with $\lambda = 3/2$ (Corollary T.41.3). 
@@ -754,7 +780,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
 
 2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
     Within the stable D=4 arena, PCE selects the optimal gauge group and matter content subject to capacity and consistency constraints.
-    *   **Gauge group $G_{SM}$.** By the cost-minimization principle under Proposition G.M1 and the Local Module Hypothesis, established by exhaustive partition analysis (Theorem G.8.4b, Corollary G.8.4c), the module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ is uniquely selected. The non-abelian part is $SU(2) \times SU(3)$ acting in fundamentals; adding **exactly one** non-trivial $U(1)$ factor is sufficient and cost-minimal for SM-like chiral content. Simple unification groups are excluded by capacity bounds (Theorem G.8.4a). The total generator count $n_G = 12$ saturates the Lagrangian capacity bound (Theorem G.8.2e), lies within the channel capacity range (Equation G.8.0), and equals the Golay code dimension $k = 12$ (Theorem Z.13).
+    *   **Gauge group $G_{SM}$.** By the cost-minimization principle under Proposition G.M1 and the Local Module Hypothesis, established by exhaustive partition analysis (Theorem G.8.4b, Corollary G.8.4c), the module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ is uniquely selected. The non-abelian part is $SU(2) \times SU(3)$ acting in fundamentals; adding **exactly one** non-trivial $U(1)$ factor is sufficient and cost-minimal for SM-like chiral content. Simple unification groups are excluded by capacity bounds (Theorem G.8.4a, Corollary G.8.4c.1). The total generator count $n_G = 12$ saturates the Lagrangian capacity bound (Theorem G.8.2e), lies within the channel capacity range (Equation G.8.0), and equals the Golay code dimension $k = 12$ (Theorem Z.13). The tree-level Weinberg angle $\sin^2\theta_W^{(0)} = 3/8$ emerges from PCE isotropy at the PU fixed point without requiring grand unified gauge symmetry; the value $3/8$ coincides with the standard tree-level $SU(5)$ unification prediction [de Boer 1994] (Appendix T, Theorem T.14).
     *   **Hypercharge Uniqueness (one chiral family, no $n^c$).** Let the left‑chiral hypercharges be $y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c}$. Imposing cancellation of all local and mixed gauge and gravitational anomalies in $D=4$ yields the constraints:
         $$
         \begin{alignedat}{2}
@@ -795,7 +821,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
     *   **Three Generations (Unique Minimizer).** Appendix R (Proposition R.3.5) shows—using PCE together with anomaly cancellation and CP violation requirements—that (i) the smallest nontrivial anomaly-consistent family structure is $N=3$ with offsets $\{a,-a,0\}$, (ii) abelian "doping" is disfavored, and (iii) the three-generation structure is over-determined by both topological (anomaly cancellation) and geometric (E$_8$/Leech lattice) constraints (Proposition R.4.2).
 
 3.  **Confluence and Co-selection:**
-    D=4 provides the stable arena; within it, the SM gauge group with its uniquely determined chiral fermion content is PCE-efficient, and the family replication uniquely selected by PCE is $N=3$.
+    D=4 provides the stable arena; within it, the SM gauge group with its uniquely determined chiral fermion content is PCE-efficient, and the family replication uniquely selected by PCE is $N=3$. The capacity bound $n_G \leq 12$ excludes simple unification groups (Corollary G.8.4c.1), predicting proton stability against gauge-mediated decay (Corollary G.8.4c.2).
     
 ### G.8.6 Emergent Couplings and Masses
 

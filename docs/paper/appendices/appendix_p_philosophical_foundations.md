@@ -1588,7 +1588,7 @@ The PU framework differs by deriving D = 4 from pre-geometric information struct
 The ultimate implication of this framework is that it defines the very boundaries of what can be meaningfully discussed.
 
 **The Limit of Meaningful Inquiry**
-A universe devoid of predictive systems (and thus devoid of the logical necessities of time, space, causality, and discrete information) is not only unknowable but is a logically incoherent concept. Any attempt to describe such a universe requires an external observer (a predictor), which would contradict the initial premise. Therefore, any meaningful inquiry is restricted to the class of universes that support prediction.
+A universe devoid of predictive systems — and thus devoid of time, space, causality, and discrete information — lies beyond the reach of knowledge, description, or coherent conceptualization by any predictive system, including ourselves. Any attempt to describe such a universe requires an observer, which would contradict the very premise of its description. This constitutes an epistemic boundary. Therefore, all meaningful inquiry is necessarily restricted to the class of universes that support prediction.
 
 ## P.11 Temporal Engineering and the Ontology of Conscious Action
 

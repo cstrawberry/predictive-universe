@@ -108,9 +108,10 @@
 *   Coleman, S., & Weinberg, E. (1973). Radiative Corrections as the Origin of Spontaneous Symmetry Breaking. *Physical Review D*, *7*(6), 1888–1912. DOI: 10.1103/PhysRevD.7.1888
 *   Coleman, S. (1977). The fate of the false vacuum: Semiclassical theory. *Physical Review D*, *15*(10), 2929–2936; Erratum: *Physical Review D*, *16*, 1248 (1977). DOIs: 10.1103/PhysRevD.15.2929; 10.1103/PhysRevD.16.1248
 *   Coleman, S. (1985). *Aspects of Symmetry: Selected Erice Lectures*. Cambridge University Press. DOI: 10.1017/CBO9780511565045
+*   Conway, J. H. (1969). A characterisation of Leech's lattice. *Inventiones Mathematicae*, *7*(2), 137–142.
 *   Conway, J. H. (1969). A group of order 8,315,553,613,086,720,000. *Bulletin of the London Mathematical Society*, *1*(1), 79–88. DOI: 10.1112/blms/1.1.79
 *   Conway, J. H., & Norton, S. P. (1979). Monstrous Moonshine. *Bulletin of the London Mathematical Society*, *11*, 308–339.
-*   Conway, J. H., & Sloane, N. J. A. (1999). Sphere Packings, Lattices and Groups (3rd ed.). Springer.
+*   Conway, J. H., & Sloane, N. J. A. (1999). *Sphere Packings, Lattices and Groups* (3rd ed.). Springer-Verlag.
 *   Cook, M. (2004). Universality in elementary cellular automata. *Complex Systems*, *15*(1), 1–40. DOI: 10.25088/ComplexSystems.15.1.1
 *   Corless, R. M., Gonnet, G. H., Hare, D. E. G., Jeffrey, D. J., & Knuth, D. E. (1996). On the Lambert W function. *Advances in Computational Mathematics*, *5*(1), 329–359. DOI: 10.1007/BF02124750
 *   Cover, T. M., & Thomas, J. A. (2006). *Elements of Information Theory* (2nd ed.). Wiley. DOI: 10.1002/047174882X
@@ -125,6 +126,7 @@
 *   Dal Maso, G. (1993). *An Introduction to Γ-convergence*. Birkhäuser.
 *   Darwin, C. (1859). *On the Origin of Species by Means of Natural Selection*. John Murray.
 *   Dawson, C. M., & Nielsen, M. A. (2006). The Solovay-Kitaev algorithm. *Quantum Information & Computation*, *6*(1), 81–95. DOI: 10.5555/2011679.2011685
+*   de Boer, W. (1994). Grand Unified Theories and Supersymmetry in Particle Physics and Cosmology. arXiv:hep-ph/9402266
 *   Dicke, R. H. (1954). Coherence in spontaneous radiation processes. *Physical Review*, *93*(1), 99–110.
 *   Deffner, S., & Campbell, S. (2017). Quantum speed limits: from Heisenberg's uncertainty principle to optimal quantum control. *Journal of Physics A: Mathematical and Theoretical*, *50*(45), 453001. DOI: 10.1088/1751-8121/aa8c2f
 *   Degrassi, G., et al. (2012). Higgs mass and vacuum stability in the Standard Model at NNLO. JHEP 08, 098.
@@ -272,6 +274,7 @@
 *   Kleene, S. C. (1938). On Notation for Ordinal Numbers. *The Journal of Symbolic Logic*, *3*(4), 150–155. DOI: 10.2307/2267778
 *   Kleene, S. C. (1952). *Introduction to Metamathematics*. Amsterdam: North-Holland Publishing Company & Groningen: P. Noordhoff N.V.
 *   Klinkhamer, F. R., & Manton, N. S. (1984). A saddle-point solution in the Weinberg–Salam theory. *Physical Review D*, *30*(10), 2212–2220. DOI: 10.1103/PhysRevD.30.2212
+*   Knapp, A. W. (2002). *Lie Groups Beyond an Introduction* (2nd ed.). Birkhäuser.
 *   Knill, E., & Laflamme, R. (1997). Theory of quantum error-correcting codes. *Physical Review A*, *55*, 900–911.
 *   Kobayashi, M., & Maskawa, T. (1973). CP-Violation in the Renormalizable Theory of Weak Interaction. *Progress of Theoretical Physics*, *49*(2), 652–657. DOI: 10.1143/PTP.49.652
 *   Kobayashi, S., & Nomizu, K. (1969). Foundations of Differential Geometry (Vol. II). Wiley-Interscience.
@@ -287,6 +290,7 @@
 *   Lan, K. K. G., & DeMets, D. L. (1983). Discrete sequential boundaries for clinical trials. *Biometrika*, *70*(3), 659–663. DOI: 10.1093/biomet/70.3.659. 
 *   Landau, L. D., & Lifshitz, E. M. (1975). *The Classical Theory of Fields* (4th ed.). Pergamon Press.
 *   Landauer, R. (1961). Irreversibility and heat generation in the computing process. *IBM Journal of Research and Development*, *5*(3), 183–191. DOI: 10.1147/rd.53.0183
+*   Langacker, P. (1981). Grand unified theories and proton decay. *Physics Reports*, *72*(4), 185–385.
 *   Langacker, P. (2010). *The Standard Model and Beyond*. CRC Press.
 *   LaSalle, J. P. (1960). Some extensions of Liapunov’s second method. *IRE Transactions on Circuit Theory*, *7*(4), 520–527. DOI: 10.1109/TCT.1960.1086720
 *   Le Cam, L., & Yang, G. L. (2000). *Asymptotics in Statistics: Some Basic Concepts* (2nd ed.). Springer. DOI: 10.1007/978-1-4612-1166-2
@@ -347,6 +351,7 @@
 *   Musin, O. R. (2008). The kissing number in four dimensions. *Annals of Mathematics*, *168*(1), 1–32. DOI: 10.4007/annals.2008.168.1
 *   Nachtergaele, B., & Sims, R. (2010). Lieb–Robinson bounds in quantum many-body physics. In R. Sims & D. Ueltschi (Eds.), *Entropy and the Quantum* (*Contemporary Mathematics*, Vol. 529, pp. 141–176). American Mathematical Society. DOI: 10.1090/conm/529
 *   Nakahara, M. (2003). *Geometry, Topology and Physics* (2nd ed.). CRC Press.
+*   Nath, P., & Fileviez Pérez, P. (2007). Proton stability in grand unified theories, in strings and in branes. *Physics Reports*, *441*, 191–317. DOI: 10.1016/j.physrep.2007.02.010
 *   Nelson, R. D., Radin, D. I., Shoup, R., & Bancel, P. A. (2002). Correlations of continuous random data with major world events. *Foundations of Physics Letters*, *15*(6), 537–550.
 *   nEXO Collaboration (Albert, J. B., *et al.*) (2018). Sensitivity and discovery potential of the proposed nEXO experiment to neutrinoless double-β decay. *Physical Review C*, *97*, 065503. DOI: 10.1103/PhysRevC.97.065503
 *   nEXO Collaboration (Adhikari, G., *et al.*) (2022). nEXO: neutrinoless double beta decay search beyond 10²⁸ year half-life sensitivity. *Journal of Physics G*, *49*, 015104. DOI: 10.1088/1361-6471/ac3631
@@ -434,15 +439,17 @@
 *   Shirokov, M. E. (2006). The Holevo capacity of infinite dimensional quantum channels and the additivity problem. *Communications in Mathematical Physics*, *262*(1), 137–159. DOI: 10.1007/s00220-005-1494-8
 *   Shirokov, M. E. (2017). Continuity of the von Neumann entropy and its applications in quantum information theory. *Izvestiya: Mathematics*, *81*(5), 1058–1092. DOI: 10.1070/IM8672
 *   Shor, P. W. (2002). The quantum channel capacity and coherent information. *MSRI Workshop on Quantum Computation*, lecture notes.
-*   Slansky, R. (1981). Group theory for unified model building. *Physics Reports*, *79*(1), 1–128.
+*   Slansky, R. (1981). Group theory for unified model building. *Physics Reports*, *79*(1), 1–128. DOI: 10.1016/0370-1573(81)90092-2
 *   Sloane, N. J. A. (1977). Error-correcting codes and invariant theory: New applications of a nineteenth-century technique. *The American Mathematical Monthly*, *84*(2), 82–107.
 *   Smart, J. M. (2012). The transcension hypothesis: Sufficiently advanced civilizations invariably leave our universe, and implications for METI and SETI. *Acta Astronautica*, *78*, 55–68. DOI: 10.1016/j.actaastro.2011.11.012
+*   Sommerfeld, A. (1916). Zur Quantentheorie der Spektrallinien. *Annalen der Physik*, *356*(17), 1–94.
 *   Spohn, H. (1978). Entropy production for quantum dynamical semigroups. *Journal of Mathematical Physics*, *19*(5), 1227–1230. DOI: 10.1063/1.523789
 *   Steane, A. M. (1996). Error correcting codes in quantum theory. *Physical Review Letters*, *77*(5), 793–797. DOI: 10.1103/PhysRevLett.77.793
 *   Stone, M. H. (1932). On one-parameter unitary groups in Hilbert space. *Annals of Mathematics*, *33*(3), 643–648. DOI: 10.2307/1968538
 *   Streater, R. F., & Wightman, A. S. (1964). *PCT, Spin and Statistics, and All That*. W. A. Benjamin.
-*   Susskind, L. (1995). The world as a hologram. *Journal of Mathematical Physics*, *36*(11), 6377–6396. DOI: 10.1063/1.531249
 *   Sturm, K.-T. (2006). On the geometry of metric measure spaces. I and II. *Acta Mathematica*, *196*(1), 65–131 and 133–177. DOIs: 10.1007/s11511-006-0002-8 and 10.1007/s11511-006-0003-7
+*   Super-Kamiokande Collaboration. (2020). Search for proton decay via $p \to e^+\pi^0$ and $p \to \mu^+\pi^0$ with an enlarged fiducial volume in Super-Kamiokande I-IV. *Physical Review D*, *102*(11), 112011. DOI: 10.1103/PhysRevD.102.112011
+*   Susskind, L. (1995). The world as a hologram. *Journal of Mathematical Physics*, *36*(11), 6377–6396. DOI: 10.1063/1.531249
 *   Synge, J. L. (1960). *Relativity: The General Theory*. North-Holland.
 *   Takesaki, M. (1970). Tomita's theory of modular Hilbert algebras and its applications. *Lecture Notes in Mathematics*, 128. Springer. DOI: 10.1007/BFb0065832
 *   ’t Hooft, G. (1976). Symmetry breaking through Bell–Jackiw anomalies. *Physical Review Letters*, *37*(1), 8–11. DOI: 10.1103/PhysRevLett.37.8
@@ -479,6 +486,8 @@
 *   Weinberg, S. (1995). *The Quantum Theory of Fields, Volume I: Foundations*. Cambridge University Press. DOI: 10.1017/CBO9781139644167
 *   Weinberg, S. (1996). *The Quantum Theory of Fields, Vol. II: Modern Applications*. Cambridge University Press. DOI (eBook): 10.1017/CBO9781139644174.
 *   Weisberg, J. M., Nice, D. J., & Taylor, J. H. (2010). Timing Measurements of the Relativistic Binary Pulsar PSR B1913+16. *The Astrophysical Journal*, *722*(2), 1030. DOI: 10.1088/0004-637X/722/2/1030
+*   Wetterich, C. (1993). Exact evolution equation for the effective potential. *Physics Letters B*, *301*(1), 90–94. DOI: 10.1016/0370-2693(93)90726-X
+*   Weyl, H. (1916). Über die Gleichverteilung von Zahlen mod. Eins. *Mathematische Annalen*, *77*(3), 313–352.
 *   Wheeler, J. A. (1989). Information, physics, quantum: The search for links. In *Proceedings of the 3rd International Symposium on Foundations of Quantum Mechanics* (pp. 354–368). Physical Society of Japan.
 *   Wheeler, J. A. (1990). Information, physics, quantum: The search for links. In W. H. Zurek (Ed.), *Complexity, Entropy, and the Physics of Information* (pp. 3–28). Addison-Wesley.
 *   Wigner, E. P. (1960). The unreasonable effectiveness of mathematics in the natural sciences. *Communications on Pure and Applied Mathematics*, *13*(1), 1–14. DOI: 10.1002/cpa.3160130102
@@ -486,10 +495,10 @@
 *   Wilde, M. M. (2017). *Quantum Information Theory* (2nd ed.). Cambridge University Press. DOI: 10.1017/9781316809976
 *   Will, C. M. (2014). The Confrontation between General Relativity and Experiment. *Living Reviews in Relativity*, *17*(1), 4. DOI: 10.12942/lrr-2014-4
 *   Wilson, K. G. (1971). Renormalization Group and Critical Phenomena. I. Renormalization Group and the Kadanoff Scaling Picture. *Physical Review B*, *4*(9), 3174–3183. DOI: 10.1103/PhysRevB.4.3174 
+*   Wilson, W. (1915). The quantum-theory of radiation and line spectra. *Philosophical Magazine*, *29*(174), 795–802.
 *   Winter, A. (1999). Coding theorem and strong converse for quantum channels. *IEEE Transactions on Information Theory*, *45*(7), 2481–2485. DOI: 10.1109/18.796385
 *   Witt, E. (1941). Eine Identität zwischen Modulformen zweiten Grades. *Abhandlungen aus dem Mathematischen Seminar der Universität Hamburg*, *14*, 323–337. DOI: 10.1007/BF02940750
 *   Witten, E. (1982). An SU(2) anomaly. *Physics Letters B*, *117*(5), 324–328. DOI: 10.1016/0370-2693(82)90728-6
-*   Wetterich, C. (1993). Exact evolution equation for the effective potential. *Physics Letters B*, *301*(1), 90–94. DOI: 10.1016/0370-2693(93)90726-X
 *   Wolf, M. M. (2012). *Quantum Channels & Operations: A Guided Tour* (Lecture notes). Technical University of Munich. 
 *   Wootters, W. K. (1990). Local accessibility of quantum states. In W. H. Zurek (Ed.), *Complexity, Entropy and the Physics of Information* (Santa Fe Institute Studies in the Sciences of Complexity, Vol. VIII, pp. 39–46). Redwood City, CA: Addison–Wesley. DOI: 10.1201/9780429502880
 *   Yang, C. N., & Mills, R. L. (1954). Conservation of isotopic spin and isotopic gauge invariance. *Physical Review*, *96*(1), 191–195. DOI: 10.1103/PhysRev.96.191.
