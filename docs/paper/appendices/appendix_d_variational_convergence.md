@@ -343,7 +343,7 @@ $$
 
 The radius $r$ depends on the third and higher-order derivatives of $V_{eff}$; for practical purposes, we require the neighborhood to extend beyond the initial distance $|C(0) - C^\star|$ for deterministic convergence guarantees to apply.
 
-**Lemma D.7 (PL Constant from Stability).**
+**Lemma D.8 (PL Constant from Stability).**
 In a neighborhood of $C^\star$, the effective potential satisfies the PL inequality with:
 
 $$

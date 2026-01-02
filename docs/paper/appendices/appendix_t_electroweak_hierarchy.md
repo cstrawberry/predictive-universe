@@ -2940,7 +2940,7 @@ All CP-violating phases in the Standard Model trace to Berry holonomy on the gen
 | PMNS $\delta_{CP}$ | Holonomy with D₄-A₂ sector mismatch | $232.5°$ | Theorem T.24.22 |
 | Strong $\bar{\theta}$ | $\sigma$-invariance forces contractible loop | $0$ | Theorem K.6.5 |
 
-**Theorem T.57 (CP from Holonomy).** *CP-violating phases arise as Berry-Simon holonomy on the generation manifold* [Berry 1984; Simon 1983].
+**Theorem T.57a (CP from Holonomy).** *CP-violating phases arise as Berry-Simon holonomy on the generation manifold* [Berry 1984; Simon 1983].
 
 *Proof.*
 
@@ -2963,7 +2963,7 @@ $$
 
 **Step 4 (Strong CP).** The $\sigma$-involution (Definition K.6.3) acts as complex conjugation on $\text{Gr}(2,8)$. PCE-optimal vacua are $\sigma$-invariant (Theorem K.6.5), restricting $\theta_{QCD} \in \{0, \pi\}$. The PCE cost $V_{PCE}(\theta) \propto (1 - \cos\theta)$ selects $\theta = 0$ (Theorem K.6.2). ∎
 
-**Remark T.57.1 (Type I vs Type II).** The framework distinguishes Type I CP violation (Lagrangian parameters, forbidden by $\sigma$-invariance per Theorem K.6.1) from Type II (Berry holonomy, permitted). This explains why $\bar{\theta} = 0$ while $\delta_{CKM} \neq 0$.
+**Remark T.57a.1 (Type I vs Type II).** The framework distinguishes Type I CP violation (Lagrangian parameters, forbidden by $\sigma$-invariance per Theorem K.6.1) from Type II (Berry holonomy, permitted). This explains why $\bar{\theta} = 0$ while $\delta_{CKM} \neq 0$.
 
 
 ### T.22.10.4 Comparison with PMNS
@@ -3165,9 +3165,9 @@ The fermion mass hierarchy employs a different configuration space—the E$_8$ r
 
 $$Y_{ij} \propto \exp\left(-\alpha \cdot d^2_{E_8}\right)$$
 
-where $\alpha = 3/2$ (Theorem T.39) and $d^2_{E_8} \in \{2, 4, 6, 8\}$ are the allowed squared distances between roots in E$_8$.
+where $\alpha = 3/2$ (Theorem T.39b) and $d^2_{E_8} \in \{2, 4, 6, 8\}$ are the allowed squared distances between roots in E$_8$.
 
-**Theorem T.39** (Universal Hierarchy Coefficient). *At the PCE-attractor:*
+**Theorem T.39b** (Universal Hierarchy Coefficient). *At the PCE-attractor:*
 
 $$\alpha = \frac{1}{16\sigma_B^2} = \frac{24}{16} = \frac{3}{2}$$
 
