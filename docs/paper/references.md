@@ -456,7 +456,7 @@
 *   Teilhard de Chardin, P. (1959). *The Phenomenon of Man* (B. Wall, Trans.). Harper & Row. (Original work published 1955).
 *   Temme, K., Pastawski, F., & Kastoryano, M. J. (2014). Hypercontractivity of quasi-free quantum semigroups. *Journal of Physics A: Mathematical and Theoretical*, *47*(40), 405303. DOI: 10.1088/1751-8113/47/40/405303 
 *   Thompson, T. M. (1983). *From Error-Correcting Codes Through Sphere Packings to Simple Groups*. Mathematical Association of America.
-*   Tiesinga, E., Mohr, P. J., Newell, D. B., & Taylor, B. N. (2021). CODATA Recommended Values of the Fundamental Physical Constants: 2018. *Reviews of Modern Physics*, *93*, 025010.
+*   Tiesinga, E., Mohr, P. J., Newell, D. B., & Taylor, B. N. (2021). CODATA Recommended Values of the Fundamental Physical Constants: 2018. *Reviews of Modern Physics*, *93*, 025010. DOI: 10.1103/RevModPhys.93.025010
 *   T2K Collaboration (2023). Measurements of neutrino oscillation parameters from the T2K experiment using $3.6 \times 10^{21}$ protons on target. *European Physical Journal C*, *83*, 782.
 *   Tononi, G., & Koch, C. (2015). Consciousness: here, there and everywhere? *Philosophical Transactions of the Royal Society B: Biological Sciences*, *370*(1668), 20140167. DOI: 10.1098/rstb.2014.0167
 *   Tononi, G., Boly, M., Massimini, M., & Koch, C. (2016). Integrated information theory: from consciousness to its physical substrate. *Nature Reviews Neuroscience*, *17*(7), 450–461. DOI: 10.1038/nrn.2016.44

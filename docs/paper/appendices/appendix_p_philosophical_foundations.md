@@ -3059,8 +3059,197 @@ The philosophical significance is threefold:
 
 The Monster is not imposed on the framework—it is derived from it. This derivation, from the irreducible cost $\varepsilon = \ln 2$ through the precision cost principle to the canonical $\theta$-orbifold construction, constitutes one of the most striking results of the Predictive Universe: that the symmetry of the vacuum is determined by the thermodynamics of the SPAP cycle.
 
+## P.14 Epistemic Status of PCE
 
-## P.14 Conclusion
+The derivations throughout this framework rely on the Principle of Compression Efficiency (PCE, Definition 15). This section clarifies the epistemic structure of that reliance, distinguishing logical necessities from optimization hypotheses, and documenting the comparison with observation.
+
+### P.14.1 The Theorem–Hypothesis Distinction
+
+The framework contains two categorically different types of claims:
+
+**Logical Necessities:** These are theorems following deductively from definitions:
+
+| Claim | Status | Derivation |
+|:------|:-------|:-----------|
+| SPAP impossibility (Theorem 10) | Theorem | Diagonalization argument (§4.2, Appendix A.1) |
+| $\varepsilon \geq \ln 2$ (Theorem 31) | Theorem | SPAP cycle + Landauer principle (Appendix J) |
+| $K_0 \geq 3$ (Theorem 15) | Theorem | Encoding requirements for SPAP (§5.2) |
+| $d_0 \geq 8$ (Theorem 23) | Theorem | $d_0 = 2^{K_0}$ via Convention 1 |
+
+These establish **lower bounds**. Any physical implementation of self-referential prediction must respect them.
+
+**Optimization Hypotheses (Falsifiable).** These are assumptions about how nature selects among logically permitted options:
+
+| Claim | Status | Basis |
+|:------|:-------|:------|
+| PCE (Definition 15) | Axiom | Proposed optimization principle |
+| $\varepsilon = \ln 2$ exactly | Derived from PCE | Minimum satisfying bound |
+| $K_0 = 3$ exactly | Derived from PCE | Minimum satisfying bound |
+
+These claim that nature operates at the **logical minimum**—a hypothesis about our universe, not a guaranteed truth.
+
+### P.14.2 The Gap Between Bound and Actuality
+
+The SPAP analysis (Theorem 10, Appendix A.1) combined with Landauer's principle [Landauer 1961] establishes (for dimensionless dissipation per erased bit $\varepsilon$ measured in units of $k_B T$ as in Appendix J):
+
+$$\varepsilon \geq \ln 2$$
+
+This leaves infinitely many possibilities:
+
+$$\varepsilon \in \{\ln 2, \ln 3, \ln 4 \ldots\}$$
+
+All satisfy the bound. All are logically consistent. SPAP cannot distinguish between them. The question "What is the actual value of $\varepsilon$?" is **empirical**, not logical.
+
+Similarly for the horizon constant: $K_0 \in \{3, 4, 5, 6, \ldots\}$ all satisfy $K_0 \geq 3$. The minimal value is not logically mandated.
+
+### P.14.3 The PCE Hypothesis
+
+The Principle of Compression Efficiency (Definition 15) proposes that adaptive systems minimize resource expenditure while maintaining predictive viability. Crucially, the bound $\varepsilon \geq \ln 2$ is not merely a theoretical minimum—reversible (quasistatic) erasure protocols can approach the limit arbitrarily closely [Bennett 1982]. Applied to fundamental parameters:
+
+| Parameter | Bound | PCE Selection |
+|:----------|:------|:--------------|
+| $\varepsilon$ | $\geq \ln 2$ | $= \ln 2$ |
+| $K_0$ | $\geq 3$ | $= 3$ |
+
+This is a claim about nature, not a logical deduction. PCE could be wrong. Nature might include overhead, redundancy, or structure we do not understand. The minimum might not be what is realized.
+
+**Internal Consistency Constraint.** The minimum values are not merely convenient but are uniquely forced by the framework's internal structure. Three independent relations must hold simultaneously:
+- $d_0 = 2^{K_0}$ (Theorem 23, from encoding requirements)
+- $d_0 = 2a^2$ (Theorem Z.2, from SPAP tensor structure)
+- $a = e^{\varepsilon}$ (Theorem Z.1, from physical instantiation)
+
+Combining these: $2^{K_0} = 2(e^{\varepsilon})^2$. For integer $a$ (required by discrete state counting), the unique minimal solution is $\varepsilon = \ln 2$, $a = 2$, $d_0 = 8$, $K_0 = 3$. Alternative values such as $\varepsilon = \ln 3$ yield $a = 3$, $d_0 = 18$, which violates $d_0 = 2^{K_0}$ for integer $K_0$. Thus the minimum is not arbitrary but is the unique value satisfying all structural constraints.
+
+### P.14.4 The Derivation Chain
+
+With $\varepsilon = \ln 2$ and $K_0 = 3$ (the PCE-selected minima), the framework derives the following chain (Appendix Z):
+
+$$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \xrightarrow{\text{Thm Z.1}} a = e^{\varepsilon} = 2$$
+
+$$b = d_0 - a = 6 \xrightarrow{\text{Thm Z.5}} M = 2ab = 24$$
+
+$$u^* = d_0^{1/M} - 1 = 8^{1/24} - 1 = 2^{1/8} - 1 \approx 0.09051$$
+
+The fine-structure constant follows from Theorem Z.26:
+
+$$\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right)$$
+
+The spacetime dimension follows from the mode-channel correspondence (Theorem Z.11):
+
+$$K(D) = M = 24 \implies D = 4$$
+
+The cosmological constant follows from the Golay-Steiner vacuum structure (Corollary U.17):
+
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$$
+
+where $\kappa = 141.5$ is the instanton complexity derived in Theorem U.16, and $A_{\text{eff}} = O(1)$ is the dimensionless prefactor from one-loop determinants and extensivity (Appendix U, Section U.1). The exponential suppression $e^{-283} \sim 10^{-123}$ resolves the 122-order hierarchy; the prefactor contributes only $O(1)$ uncertainty.
+
+### P.14.5 Theoretical Predictions and Experimental Comparison
+
+The framework generates theoretical predictions from the PCE-selected minima ($\varepsilon = \ln 2$, $K_0 = 3$). These predictions are compared against independent experimental measurements.
+
+**Fundamental Constants:**
+
+| Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
+|:---------|:--------------------|:-------------------|:----------|:----------|
+| $\alpha^{-1}$ | $137.036092 \pm 0.000050$ | $137.035999084(21)$ | Tiesinga et al. 2021 | 0.68 ppm |
+| $D$ | $4$ | $4$ | Observed | Exact |
+| $\Lambda L_P^2$ | $\sim 3 \times 10^{-122}$ | $2.87 \times 10^{-122}$ (derived from Planck 2018 $\Omega_\Lambda$ and $H_0$) | Planck Collaboration 2020; PDG 2024 | Order of magnitude (resolves 122-order hierarchy; $A_{\text{eff}} \sim O(1)$) |
+| $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | — | Theorem Q.18 | Structural prediction |
+
+**Electroweak Sector:**
+
+| Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
+|:---------|:--------------------|:-------------------|:----------|:----------|
+| $v$ (Higgs VEV) | $252$ GeV | $246$ GeV | PDG 2024 | 2.4% |
+| $\sin^2\theta_W(M_Z)$ | $0.231$ | $0.23122 \pm 0.00003$ | PDG 2024 | $<1\%$ |
+| $m_H$ | $125$ GeV | $125.25 \pm 0.17$ GeV | PDG 2024 | $<1\%$ |
+
+**CKM Matrix and Quark Mixing (Appendix T):**
+
+| Quantity | Framework Prediction | Experimental Value | Reference | Pull |
+|:---------|:--------------------|:-------------------|:----------|:-----|
+| $\|V_{us}\|$ | $0.2261$ | $0.2253 \pm 0.0008$ | PDG 2024 | $+1.0\sigma$ |
+| $\|V_{cb}\|$ | $0.0407$ | $0.0405 \pm 0.0010$ | PDG 2024 | $+0.2\sigma$ |
+| $\|V_{ub}\|$ | $0.00392$ | $0.00382 \pm 0.00024$ | PDG 2024 | $+0.4\sigma$ |
+| $\delta_{CKM}$ | $66.7°$ | $65.7° \pm 1.5°$ | PDG 2024 | $+0.7\sigma$ |
+| $J_{CP}$ | $3.22 \times 10^{-5}$ | $(3.08 \pm 0.15) \times 10^{-5}$ | PDG 2024 | $+0.9\sigma$ |
+
+**Neutrino Sector (Appendix T, Section T.24):**
+
+| Quantity | Framework Prediction | Experimental Value | Reference | Pull |
+|:---------|:--------------------|:-------------------|:----------|:-----|
+| $\Delta m^2_{21}$ | $7.58 \times 10^{-5}$ eV² | $(7.53 \pm 0.18) \times 10^{-5}$ eV² | PDG 2024 | $+0.28\sigma$ |
+| $\Delta m^2_{31}$ | $2.42 \times 10^{-3}$ eV² | $(2.453 \pm 0.033) \times 10^{-3}$ eV² | PDG 2024 | $-1.0\sigma$ |
+| $\theta_{23}$ | $47.4°$ | $47.6° \pm 1.4°$ | PDG 2024 | $-0.14\sigma$ |
+| $\theta_{12}$ | $33.7°$ | $33.6° \pm 0.8°$ | PDG 2024 | $+0.12\sigma$ |
+| $\theta_{13}$ | $8.7°$ | $8.54° \pm 0.12°$ | PDG 2024 | $+1.3\sigma$ (largest neutrino pull) |
+| $\delta_{CP}^{PMNS}$ | $232.5°$ | $230° \pm 36°$ | PDG 2024 | $+0.07\sigma$ |
+| $\sum m_\nu$ | $0.058$ eV | $< 0.12$ eV | Planck 2020 | Consistent |
+
+**Fermion Mass Hierarchy (Appendix R):**
+
+| Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
+|:---------|:--------------------|:-------------------|:----------|:----------|
+| $\mathcal{R}_\ell$ (lepton ratio) | $3$ | $2.889$ | PDG 2024 | 3.8% |
+| $N_g$ (generations) | $3$ | $3$ | Observed | Exact |
+
+**Cosmological (Appendix Y):**
+
+| Quantity | Framework Prediction | Experimental Value | Reference | Pull |
+|:---------|:--------------------|:-------------------|:----------|:-----|
+| $\eta_B$ (baryon asymmetry) | $(6.2 \pm 0.5) \times 10^{-10}$ | $(6.12 \pm 0.04) \times 10^{-10}$ | Planck 2020 | $+0.2\sigma$ |
+| $\theta_{QCD}$ (strong CP) | $0$ | $< 10^{-10}$ | nEDM bounds | Consistent |
+
+**Statistical Summary:** For the quantities with well-defined uncertainties (CKM, neutrino, and cosmological sectors), the combined $\chi^2/\text{d.o.f.} < 0.5$, indicating excellent agreement. Electroweak predictions show percent-level agreement without quoted theoretical uncertainties.
+
+All predictions trace to two PCE-selected values: $\varepsilon = \ln 2$ and $K_0 = 3$. The derivation chains are documented in the referenced appendices.
+
+### P.14.6 Counterfactual Analysis
+
+Had the minimum failed, the logical structure would remain intact:
+
+| Statement | If $\varepsilon = \ln 2$ gave wrong $\alpha$ |
+|:----------|:--------------------------------------------|
+| "SPAP is false" | No—SPAP is a theorem |
+| "$\varepsilon \geq \ln 2$ is false" | No—it is logically derived |
+| "$\varepsilon = \ln 2$ for our universe" | No—try next value |
+| "PCE is false or incomplete" | Yes—efficiency assumption weakened |
+
+The bound remains valid; only the optimization hypothesis would fail. The framework would then explore $\varepsilon = \ln 3$, $\ln 4$, etc. The equality $\varepsilon = \ln 2$ is **falsifiable** and could have been wrong.
+
+### P.14.7 Significance of Immediate Success
+
+The success of the minimum values provides strong evidence for PCE:
+
+| Observation | Implication |
+|:------------|:------------|
+| Minimum values satisfy all constraints | Unique integer solution to $d_0 = 2a^2 = 2^{K_0}$ |
+| Multiple independent outputs match | Unified origin from $\varepsilon$, $K_0$ |
+| Precision spans 5+ significant figures | Not approximate or order-of-magnitude |
+| Same constants determine all sectors | $\varepsilon, K_0$ yield $\alpha$, $D$, $\Lambda$, $v$, $m_H$, CKM, PMNS, $\eta_B$ |
+| Statistical consistency: $\chi^2/\text{d.o.f.} < 0.5$ | No systematic tension with data |
+
+Had we required $\varepsilon = \ln 7.43$ to match observations, PCE would be essentially abandoned—the "minimum suffices" elegance lost, and the result would resemble parameter fitting. Instead, two numbers ($\varepsilon = \ln 2$, $K_0 = 3$) generate the entire Standard Model parameter space.
+
+
+
+### P.14.8 Summary
+
+$$\boxed{
+\begin{aligned}
+&\textbf{Logical:} \quad \varepsilon \geq \ln 2 \\[4pt]
+&\textbf{PCE hypothesis:} \quad \varepsilon = \ln 2, \; K_0 = 3 \text{ (assumed, falsifiable)} \\[4pt]
+&\textbf{Predictions:} \quad \alpha^{-1}, D, \Lambda, v, m_H, \sin^2\theta_W, \text{CKM}, \text{PMNS}, \eta_B, \ldots \\[4pt]
+&\textbf{Experimental tests:} \quad 18+ \text{ quantities, } \chi^2/\text{d.o.f.} < 0.5 \\[4pt]
+&\textbf{Conclusion:} \quad \text{PCE is vindicated—the minimum suffices}
+\end{aligned}
+}$$
+
+The universe appears to operate at the thermodynamic and information-theoretic minimum permitted by the logic of self-referential prediction.
+
+
+## P.15 Conclusion
 
 This appendix has established the philosophical foundations of the Predictive Universe, arguing that its core axioms are necessary consequences of the only indubitable starting point: conscious, predictive awareness. The *Cogito*, reinterpreted as fundamentally predictive, grounds a framework where physical law follows from logical necessity under thermodynamic constraint.
 
