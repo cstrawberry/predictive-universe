@@ -1508,7 +1508,7 @@ $$\boxed{\text{Landauer cost } (\varepsilon = \ln 2) \xrightarrow{a = e^\varepsi
 | 5 | QFI structure | $M = 24$ | Interface generators | Theorem Z.5 |
 | 6 | PCE optimization | $k = 12$ | Distance maximization | Theorem Z.13b |
 | 7 | Coding theory | Golay $[24,12,8]$ | Unique optimal code | Theorem Z.13 |
-| 8 | Structural bound | κ < k² = 144 | Instanton complexity | Observation U.10.4 |
+| 8 | Structural bound | κ < k² = 144 | Instanton complexity | Section U.4.1 |
 | 9 | Lattice gluing | $\Lambda_{24}$ | Golay determines cosets | Theorem Z.13d |
 | 10 | Mode-channel | $D = 4$ | $K(4) = 24 = M$ | Theorem Z.11 |
 

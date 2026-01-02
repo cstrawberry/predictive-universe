@@ -72,7 +72,8 @@ In summary, PU presents reality governed by the logic, thermodynamics, and optim
 | Quantum (von Neumann) | $S(\rho) = -\text{Tr}(\rho \ln \rho)$ | Quantum statistical entropy |
 | Gravitational (BH) | $S_{BH} = \mathcal{A}/4G$ | Horizon entropy from area law |
 
-The fundamental constants ($k_B, \hbar, c, G$) serve as exchange rates between domains. At the PCE-Attractor with active kernel dimension $a = 2$, Theorem P.6.2 proves the identity:
+The fundamental constants ($k_B, \hbar, c, G$) serve as exchange rates between domains. At the PCE-Attractor with active kernel dimension $a = 2$, Equation G.1.9.4 establishes the identity:
+
 $$
 S_{\text{SPAP}} = k_B \varepsilon = k_B \ln 2 = -\text{Tr}\left(\frac{I_2}{2} \ln \frac{I_2}{2}\right) = S_{vN}
 $$

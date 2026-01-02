@@ -124,7 +124,7 @@ The total minimum complexity $C_{\text{pred}}(\alpha)$, identified with $C_{\tex
 
 **Remark 3 (Conceptual Synthesis: Prediction Relativity and its Physical Mechanism)**
 
-The SPAP limit $\alpha_{SPAP} < 1$ (Theorems 10, 11) establishes a fundamental barrier—the **Prediction Coherence Boundary**—analogous to the speed of light limit in Special Relativity. This analogy is not merely metaphorical. The Predictive Universe framework reveals a deep, physical unification of these two limits through the **Unified Cost of Transgression (UCT) theorem** (Appendix N, Theorem N.1). The UCT demonstrates that these are two facets of a single, underlying thermodynamic cost principle.
+The SPAP limit $\alpha_{SPAP} < 1$ (Theorems 10, 11) establishes a fundamental barrier—the **Prediction Coherence Boundary**—analogous to the speed of light limit in Special Relativity. This analogy is not merely metaphorical. The Predictive Universe framework reveals a deep, physical unification of these two limits through the **Unified Cost of Transgression (UCT) theorem** (Appendix N, Section N.4). The UCT demonstrates that these are two facets of a single, underlying thermodynamic cost principle.
 
 The unifying mechanism is the **thermodynamic cost of acceleration**. An accelerating MPU perceives a thermal bath at the Unruh temperature, which acts as a source of noise that fundamentally degrades predictive capacity. As rigorously derived in Appendix N from the framework's core optimization principles, to counteract this "Unruh cost" and maintain a given level of predictive performance, the MPU must allocate additional predictive complexity and expend more power. The cost of prediction is therefore explicitly coupled to the MPU's trajectory.
 

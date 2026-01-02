@@ -908,7 +908,7 @@ where $K_\Gamma$ is the gravitational decoherence coefficient (Appendix S, Equat
 
 *Proof.*
 
-**Step 1 (CC modifies effective decoherence).** By Theorem S.7.3 (Appendix S), a high-CC system generates gravitational fields through its context power $P_{context}$. These fields create differential time dilation across the system's spatial extent, inducing decoherence at rate:
+**Step 1 (CC modifies effective decoherence).** By Section S.7.3 (Appendix S), a high-CC system generates gravitational fields through its context power $P_{context}$. These fields create differential time dilation across the system's spatial extent, inducing decoherence at rate:
 
 $$
 \Gamma_{deco} = \frac{\Delta E}{\hbar} K_{eff} P_{context}

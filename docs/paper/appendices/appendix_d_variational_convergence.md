@@ -304,7 +304,7 @@ The complexity adaptation dynamics (Section 6.4) are driven by the Adaptation Dr
 
 ### D.8.1 Effective Complexity Potential and Equilibrium
 
-**Definition D.6 (Effective Complexity Potential).** 
+**Definition D.9 (Effective Complexity Potential).** 
 The effective potential $V_{eff}(C)$ is obtained by marginalizing the full PCE potential $V(x)$ (Definition D.1) over all other degrees of freedom at their quasi-equilibrium values conditioned on complexity $C$. The deterministic complexity dynamics are:
 
 $$
@@ -333,7 +333,7 @@ DSC requires this derivative to be negative. Since $\frac{\partial^2 PP}{\partia
 
 Near the unique optimum, the strict convexity ensures a strong local gradient dominance condition that guarantees exponential convergence.
 
-**Definition D.7 (Polyak–Łojasiewicz Inequality).**
+**Definition D.10 (Polyak–Łojasiewicz Inequality).**
 A function $V(C)$ satisfies the PL inequality with constant $\mu_{PL} > 0$ in a neighborhood $|C - C^\star| \le r$ if:
 
 $$
