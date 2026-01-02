@@ -210,7 +210,7 @@ by the additivity of QFI for tensor product states. ∎
 
 **Application:**
 - One irreversible comparison event costs $\varepsilon = \ln 2$ nats (Landauer principle [Landauer 1961], Theorem 31)
-- Available operational capacity is $C_{\mathrm{max}} = 2\varepsilon$ nats (PCE optimization, Appendix Q, Theorem Q.10)
+- Available operational capacity is $C_{\mathrm{max}} = 2\varepsilon$ nats (PCE optimization, Appendix Q, Equation Q.10)
 - Number of independent events per cycle: $N = C_{\mathrm{max}}/\varepsilon = 2$
 
 **Key Insight:** The factor $C/\varepsilon = 2 > 1$ is NOT an "efficiency exceeding 100%". It is the **number of independent samples** (repetition count), which multiplicatively enhances distinguishability by QFI additivity. The system has 2 Landauer units of capacity, enabling 2 independent comparison events per coarse-grained time step.
@@ -407,7 +407,7 @@ No analogies, assumptions, or phenomenological parameters are used. The bridge l
 
 **Remark H.3 (Cross-Validation).** The same Grassmannian geometry $\mathrm{Gr}(2,8)$ that determines $\eta'$ also yields the fine-structure constant $\alpha^{-1} \approx 137.036$ (Theorem Z.25) and the charged lepton mass hierarchy (Appendix T). The agreement of multiple independent predictions with observation at the 98-99% level provides cross-validation of the geometric framework, though the statistical significance depends on assumptions about the prior probability of such agreements.
 
-**Remark H.4 (Operating Point Universality).** The operating point $C_{\mathrm{max}} = 2\varepsilon$ is not an arbitrary choice but the unique PCE-optimal capacity derived in Appendix Q (Theorem Q.10). At this point, the MPU network achieves maximal predictive efficiency. The universality of $g_0$ across diverse galaxies follows from the PCE-driven convergence of all sufficiently complex systems to this optimal operating point.
+**Remark H.4 (Operating Point Universality).** The operating point $C_{\mathrm{max}} = 2\varepsilon$ is not an arbitrary choice but the unique PCE-optimal capacity derived in Appendix Q (**Equation Q.10**). At this point, the MPU network achieves maximal predictive efficiency. The universality of $g_0$ across diverse galaxies follows from the PCE-driven convergence of all sufficiently complex systems to this optimal operating point.
 
 **Corollary H.1 (Parameter-Free Galactic Scale).**
 Under Proposition H.1, Definition H.0 (Bridge Law), and Equation (H.4b), the scale-dependent gravity model of Appendix I has its transition scale fully determined by the cosmological constant $\Lambda$ and PU constants $(K_0, \varepsilon, d_0, a, D)$, with **no numerically fitted parameters**. The galactic acceleration scale $g_0 \approx 1.18 \times 10^{-10}$ m/s$^2$ emerges as a derived prediction.

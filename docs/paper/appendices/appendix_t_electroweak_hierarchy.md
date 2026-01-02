@@ -472,7 +472,7 @@ $$
 \Gamma^{(2)} \propto I_{12}
 $$
 
-*Proof.* This follows from the Ward identity in Theorem Z.15.3. ∎
+*Proof.* This follows from the Ward identity in **Theorem Z.14**. ∎
 
 **Corollary T.13.1** (Equal Gauge Couplings at Matching). At the matching scale $\mu_G$, the PU isotropy condition at $\mathfrak{A}_{PU}$ induces equal canonically normalized gauge kinetic coefficients, hence
 $$
@@ -849,7 +849,7 @@ $$
 
 ### T.18.3 Strong Coupling Prediction
 
-**Theorem T.27** (Strong Coupling). Starting from $g_3(\mu_*) = g_U$ and running to $M_Z$:
+**Theorem T.27b** (Strong Coupling). Starting from $g_3(\mu_*) = g_U$ and running to $M_Z$:
 $$
 \alpha_s(M_Z) \approx 0.118 \pm 0.003
 $$

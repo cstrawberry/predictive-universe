@@ -55,7 +55,7 @@ These parameter variations, $\delta(R)$ increasing and $C_{\max}(R)$ decreasing 
 
 The parameter relaxation described in Section I.5 implies that the MPU network's equilibrium structure depends on the local information environment. We derive the transition scale $a_0$ from the resolution limits of the MPU in the cosmic vacuum.
 
-**Proposition I.2 (Information Resolution Threshold).**
+**Proposition I.3 (Information Resolution Threshold).**
 
 If the MPU network relaxes its parameters when the local environmental information density drops below the thermodynamic threshold required to distinguish a predictive gradient against the vacuum background, then the crossover acceleration is uniquely determined by the cosmological constant.
 

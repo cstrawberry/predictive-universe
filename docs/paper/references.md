@@ -39,7 +39,6 @@
 *   Bennett, C. H. (1982). The thermodynamics of computation—a review. *International Journal of Theoretical Physics*, *21*(12), 905–940. DOI: 10.1007/BF02084158
 *   Berry, M. V. (1984). Quantal phase factors accompanying adiabatic changes. *Proceedings of the Royal Society of London A*, *392*(1802), 45–57. DOI: 10.1098/rspa.1984.0023
 *   Berry, M. V., & Robbins, J. M. (1997). Indistinguishability for quantum particles: spin, statistics and the geometric phase. *Proceedings of the Royal Society A*, *453*(1963), 1771–1790. DOI: 10.1098/rspa.1997.0096
-*   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853., *392*, 45–57.
 *   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853.
 *   Besse, A. L. (1987). *Einstein Manifolds*. Springer.
 *   Bilal, A. (2008). *Lectures on Anomalies*. arXiv:0802.0634 [hep-th].
