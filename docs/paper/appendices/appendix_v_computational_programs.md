@@ -139,7 +139,7 @@ The Predictive Ward Identity (Theorem Z.14), combined with the Principle of Phys
 $$
 \alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \Delta^{(2)}
 $$
-where $\Delta^{(2)} = \pi u^*/(24\sqrt{K_0})$ is the second-order curvature correction from Bures metric geometry (Theorem Z.26). For sub-ppm precision, Appendix Z includes the third-order geodesic correction factor $(1 - u^{*2}/6) \approx 0.9986$ from SU(2) geometry, yielding $\alpha^{-1} \approx 137.036092$ (Equation Z.35). With $u^* = 2^{1/8}-1$ and $K_0 = 3$:
+where $\Delta^{(2)} = \pi u^*/(24\sqrt{K_0})$ is the second-order curvature correction from Bures metric geometry (Theorem Z.26). For sub-ppm precision, Appendix Z includes the third-order geodesic correction factor $(1 - u^{*2}/6) \approx 0.9986$ from SU(2) geometry, yielding $\alpha^{-1} \approx 137.036092$ (Section Z.27.8, Theorem Z.26). With $u^* = 2^{1/8}-1$ and $K_0 = 3$:
 
 $$
 \boxed{\alpha^{-1} ≈ 137.036 \pm 0.0001}

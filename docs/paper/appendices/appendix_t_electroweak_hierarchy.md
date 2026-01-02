@@ -1525,7 +1525,7 @@ The $\tau/\mu$ splitting is reproduced at sub-percent level. The systematic devi
 | $\ln(m_\mu/m_e)$ | $4$ | $13/6$ | $5.3306$ | $5.3316$ | $-0.019\%$ |
 | $\ln(m_\tau/m_e)$ | — | (path sum) | $8.1518$ | $8.1540$ | $-0.027\%$ |
 
-All three ratios match observation to better than $0.05\%$ (Theorem T.42.4). The $\tau/e$ prediction is the path sum $\ln(m_\tau/m_\mu) + \ln(m_\mu/m_e)$, automatically satisfying logarithmic additivity.
+All three ratios match observation to better than $0.05\%$ **(Theorem T.42.6)**. The $\tau/e$ prediction is the path sum $\ln(m_\tau/m_\mu) + \ln(m_\mu/m_e)$, automatically satisfying logarithmic additivity.
 
 ---
 
@@ -1571,7 +1571,7 @@ $$
 
 This accounts for the $5.5\%$ reduction from $\alpha_{\mathrm{UV}} = 3/2$ to $\alpha_{\mathrm{IR}} = 1.418$, matching the empirical extraction $\alpha_{\mathrm{IR}}^{\mathrm{emp}} = 1.411$ within $0.5\%$.
 
-The complete hierarchy formula including $\mathcal{O}(d^4)$ corrections is derived in Section T.21.8 (Theorem T.42.4). The fourth-order coefficient $\beta_{\mathrm{geom}}$ arises from the Van Vleck–Morette determinant in the Gaussian overlap integral on Riemannian manifolds [DeWitt 1965], applied to the Grassmannian $\mathrm{Gr}(2,8)$ with Bures metric. The effective sectional curvature $K_{\mathrm{eff}} = 2$ (Theorem Z.24) and Bures variance $\sigma_B^2 = 1/24$ (Lemma T.41.2) combine with the universal Van Vleck coefficient $1/12$ to yield the curvature coefficient $\beta_{\mathrm{geom}} = 1/144 = 1/C$.
+The complete hierarchy formula including $\mathcal{O}(d^4)$ corrections is derived in Section T.21.8 **(Theorem T.42.6)**. The fourth-order coefficient $\beta_{\mathrm{geom}}$ arises from the Van Vleck–Morette determinant in the Gaussian overlap integral on Riemannian manifolds [DeWitt 1965], applied to the Grassmannian $\mathrm{Gr}(2,8)$ with Bures metric. The effective sectional curvature $K_{\mathrm{eff}} = 2$ (Theorem Z.24) and Bures variance $\sigma_B^2 = 1/24$ (Lemma T.41.2) combine with the universal Van Vleck coefficient $1/12$ to yield the curvature coefficient $\beta_{\mathrm{geom}} = 1/144 = 1/C$.
 
 The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ encodes the tangent space structure at each geodesic separation, with two regimes determined by the Golay decoding geometry:
 - **Sub-threshold** ($d^2 < d^2_{\mathrm{th}} = 4$): Inside unique-decoding basin

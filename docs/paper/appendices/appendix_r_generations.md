@@ -682,7 +682,7 @@ The unique PCE-optimal geometric structure for the $M = 24$ interface modes is t
 
 *Proof.*
 
-**Step 1 (Dimension matching).** The interface mode count $M = 24$ satisfies nine logically distinct mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, combinatorial design uniqueness, and PCE minimality. The Golay code alone exhibits triple over-determination: it is simultaneously the unique binary linear code with parameters $[24,12,8]$ (up to equivalence) (Pless 1968), the glue code used to construct the Leech lattice $\Lambda_{24}$ from $\sqrt{2}E_8^3$ (Conway & Sloane 1999), and the code whose weight-8 codewords support the Steiner system $S(5,8,24)$, a $5$-$(24,8,1)$ design in which any 5 points lie in exactly one 8-element block (Assmus & Mattson 1969); both the code and design are unique up to isomorphism.
+**Step 1 (Dimension matching).** The interface mode count $M = 24$ satisfies eight logically distinct mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, and PCE minimality. The Golay code alone exhibits triple over-determination: it is simultaneously the unique binary linear code with parameters $[24,12,8]$ (up to equivalence) (Pless 1968), the glue code used to construct the Leech lattice $\Lambda_{24}$ from $\sqrt{2}E_8^3$ (Conway & Sloane 1999), and the code whose weight-8 codewords support the Steiner system $S(5,8,24)$, a $5$-$(24,8,1)$ design in which any 5 points lie in exactly one 8-element block (Assmus & Mattson 1969); both the code and design are unique up to isomorphism.
 
 **Step 2 (Even unimodular requirement).** PCE optimization favors lattice structures that:
 
@@ -910,7 +910,7 @@ Each implication is a theorem; their composition is logical necessity. ∎
 
 ### R.4.2.4 Niemeier Classification and Unique Selection
 
-**Theorem R.4.3 (Unique Selection Among Even Unimodular Lattices).** Among all even unimodular lattices in dimension 24, exactly one is rootless. PCE selects this unique lattice.
+**Theorem R.4.10 (Unique Selection Among Even Unimodular Lattices).** Among all even unimodular lattices in dimension 24, exactly one is rootless. PCE selects this unique lattice.
 
 *Proof.*
 

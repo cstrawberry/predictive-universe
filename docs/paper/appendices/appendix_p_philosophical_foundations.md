@@ -102,7 +102,7 @@ A universe composed of a **single MPU** turns out to be incompatible with these 
 
 #### The Mathematical Challenge: Instantiating the SM on a Single MPU
 
-Test the solipsistic hypothesis by attempting to embed the necessary SM structures into the Hilbert space of one MPU, $H_0 \cong \mathbb{C}^8$ (see Def. 23). For viability we require:
+Test the solipsistic hypothesis by attempting to embed the necessary SM structures into the Hilbert space of one MPU, $H_0 \cong \mathbb{C}^8$ (see **Theorem 23**). For viability we require:
 
 * **C1 — Mathematical Consistency (Anomaly Cancellation).** The $8$-dimensional complex representation $R$ of the gauge group $G$ on $H_0$ must be free of all **gauge** anomalies and **global** anomalies (assuming an emergent 4D spacetime) for the effective **left-chiral Weyl** matter content. *(There is no local pure gravitational anomaly in 4D; mixed gauge–gravitational anomalies reduce to gauge charge traces. Our argument below does not rely on the $U(1)$ sector.)*
 * **C2 — Predictive Richness (Chirality and Complexity).** $R$ must be a complex representation to support **chiral** fermions. $G$ must contain non-Abelian factors isomorphic to $SU(2)$ and $SU(3)$ acting non-trivially on $R$.
@@ -2779,9 +2779,9 @@ $$\boxed{
 | 12 | Modular invariance required | Framework | Proposition P.13.6.5 |
 | 13 | $V_{\Lambda_{24}}$ | Mathematics | Borcherds, FLM |
 | 14 | Precision cost $\to \dim(V_1) = 0$ | Framework | Theorem P.13.19, Axiom P.13.1 |
-| 12 | Canonical $\theta$-orbifold | Framework + Mathematics | Theorems P.13.21–P.13.24 |
-| 13 | $V^\natural$ | Mathematics | FLM construction |
-| 14 | $\text{Aut}(V^\natural) = \mathbb{M}$ | Mathematics | FLM |
+| 15 | Canonical $\theta$-orbifold | Framework + Mathematics | Theorems P.13.21–P.13.24 |
+| 16 | $V^\natural$ | Mathematics | FLM construction |
+| 17 | $\text{Aut}(V^\natural) = \mathbb{M}$ | Mathematics | FLM |
 
 
 **Legend:**
@@ -3162,7 +3162,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | $\alpha^{-1}$ | $137.036092 \pm 0.000050$ | $137.035999084(21)$ | Tiesinga et al. 2021 | 0.68 ppm |
 | $D$ | $4$ | $4$ | Observed | Exact |
 | $\Lambda L_P^2$ | $\sim 3 \times 10^{-122}$ | $2.87 \times 10^{-122}$ (derived from Planck 2018 $\Omega_\Lambda$ and $H_0$) | Planck Collaboration 2020; PDG 2024 | Order of magnitude (resolves 122-order hierarchy; $A_{\text{eff}} \sim O(1)$) |
-| $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | — | Theorem Q.18 | Structural prediction |
+| $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | — | Equation Q.18 | Structural prediction |
 
 **Electroweak Sector:**
 

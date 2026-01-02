@@ -415,7 +415,7 @@ This follows from the PCE-fixed ratio $C_{\max}/\varepsilon = 2$, rigorously der
 
 $$\log\det'(-\Delta_{g_B} + \lambda) = -\zeta'_{\mathcal{O}}(0)$$
 
-where $\zeta_{\mathcal{O}}(s) = \sum_{(m_1,m_2) \neq (0,0)} \text{mult}(m_1, m_2) \cdot (\lambda_B(m_1, m_2) + \lambda)^{-s}$ uses the Laplacian eigenvalues from Theorem Z.23a. The multiplicities follow from spherical representation theory for the symmetric pair $(U(8), U(2) \times U(6))$ (see Helgason 1984). Under $K$-invariance, the mass parameter equals the hierarchy coefficient $\alpha = 3/2$ from Corollary T.41.3.
+where $\zeta_{\mathcal{O}}(s) = \sum_{(m_1,m_2) \neq (0,0)} \text{mult}(m_1, m_2) \cdot (\lambda_B(m_1, m_2) + \lambda)^{-s}$ uses the Laplacian eigenvalues from Proposition Z.23a. The multiplicities follow from spherical representation theory for the symmetric pair $(U(8), U(2) \times U(6))$ (see Helgason 1984). Under $K$-invariance, the mass parameter equals the hierarchy coefficient $\alpha = 3/2$ from Corollary T.41.3.
 
 **Remark U.14.1 (One-Loop Correction via Zeta Regularization).** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
 

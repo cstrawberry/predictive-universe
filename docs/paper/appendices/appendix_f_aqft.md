@@ -148,7 +148,7 @@ In particular, at equal times $t=0$ we have $[\mathcal A(O_1),\mathcal A(O_2)]=\
 
 Thus $\{\mathcal A(O)\}_{O}$ with automorphisms $\{\alpha_a,\tau_t\}$ satisfies isotony, locality (Einstein causality under the lightcone identification), additivity, and covariance. This is the desired continuum AQFT net. [Bratteli–Robinson 1997; Nachtergaele–Sims 2010] ∎
 
-**Definition F.3 (Emergent AQFT Net and Properties).** Conditional on Theorem F.0, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
+*   **Definition F.3 (Emergent AQFT Net and Properties).** Conditional on Theorem F.0, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
 
 **F.4 Physical States and Dynamics**
 

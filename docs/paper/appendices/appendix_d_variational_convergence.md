@@ -233,7 +233,7 @@ $$
 $$
 This set includes all local minima, maxima, and saddle points of the potential $V(x)$.
 
-**Theorem D.7a (Properties of Critical Points).**
+**Theorem D.4 (Properties of Critical Points).**
 Any configuration $x^* \in \mathcal{E}_{*}$ must simultaneously satisfy:
 (i) **Complexity Alignment:** $C_P(v) = \langle \hat{C}_v \rangle_{x^*}$ for all $v$.
 (ii) **Geometric Regularity:** The network structure **$\mathcal{N}^*$** corresponding to **$x^*$** exhibits geometric regularity (**Definition C.3**).
@@ -288,14 +288,14 @@ and minimizers/critical points of $\mathcal F_\epsilon$ converge (up to subseque
 This appendix thus provides the rigorous foundation for the dynamical aspects of the Predictive Universe framework.
 
 **Theorem 2 (Dynamically Enforced Functional Correspondence - Justified):**
-The slow adaptation dynamics of the MPU network, modeled as a stochastic gradient flow minimizing the PCE Potential $V(x)$ (Equation D.8), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.7a, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily satisfies the complexity alignment condition $C_P(v) = \langle\hat C_v\rangle_{x^*}$ for all $v$. This alignment is enforced physically via the observable work-cost gap feedback mechanism (Lemma D.2), which implements the necessary alignment gradient term implicitly within the operational dynamics minimizing $V(x)$ (Theorem D.1, Corollary D.2).
+The slow adaptation dynamics of the MPU network, modeled as a stochastic gradient flow minimizing the PCE Potential $V(x)$ (Equation D.8), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.4, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily satisfies the complexity alignment condition $C_P(v) = \langle\hat C_v\rangle_{x^*}$ for all $v$. This alignment is enforced physically via the observable work-cost gap feedback mechanism (Lemma D.2), which implements the necessary alignment gradient term implicitly within the operational dynamics minimizing $V(x)$ (Theorem D.1, Corollary D.2).
 
-*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.7a proves that global minima must be aligned. Theorem D.1 and Lemma D.2 establish the mechanism driving alignment within the operational potential framework.
+*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.4 proves that global minima must be aligned. Theorem D.1 and Lemma D.2 establish the mechanism driving alignment within the operational potential framework.
 
 **Theorem 43 (Dynamical Emergence of Geometric Regularity - Justified):**
-The slow adaptation dynamics of the MPU network (Equation D.8), driven by minimizing the PCE Potential $V(x)$ which inherently penalizes irregularity (Theorem D.2, Lemma D.3), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.7a, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily exhibits large-scale geometric regularity (Definition C.3).
+The slow adaptation dynamics of the MPU network (Equation D.8), driven by minimizing the PCE Potential $V(x)$ which inherently penalizes irregularity (Theorem D.2, Lemma D.3), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.4, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily exhibits large-scale geometric regularity (Definition C.3).
 
-*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.7a proves that global minima must be geometrically regular. Theorem D.2 and Lemma D.3 establish how the PCE potential inherently penalizes irregularity, driving the system towards regular configurations.
+*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.4 proves that global minima must be geometrically regular. Theorem D.2 and Lemma D.3 establish how the PCE potential inherently penalizes irregularity, driving the system towards regular configurations.
 
 
 **D.8 Rigorous Convergence Analysis for Complexity Adaptation**
@@ -443,7 +443,7 @@ This appendix has provided a rigorous analysis grounded in the variational persp
 
 1.  **Alignment (Theorem 2)** is dynamically enforced. The operational complexity proxy $\langle \hat{C}_v \rangle$ necessarily aligns with the theoretical Predictive Physical Complexity $C_P(v)$ at stable equilibria (Section D.3, Corollary D.2). This alignment is driven by minimizing $V(x)$, which implicitly penalizes misalignment via a term $V_{proxy}$ (Theorem D.1), with the crucial physical feedback provided by the observable work-cost gap $\Delta W_v$ (Lemma D.2). Quantum circuit complexity emerges as the uniquely stable operational proxy choice (Remark D.1).
 
-2.  **Geometric Regularity (Theorem 43)** emerges dynamically. The MPU network dynamics converge almost surely to configurations exhibiting geometric regularity (Section D.4, Theorem D.7a). This occurs because irregularity incurs fundamental costs in propagation ($V_{prop}$) and operation ($V_{op}$) while reducing predictive benefits ($V_{benefit}$), effectively making regular configurations the global minima of the core PCE potential $V_{core}(x)$ (Lemma D.3, Theorem D.2).
+2.  **Geometric Regularity (Theorem 43)** emerges dynamically. The MPU network dynamics converge almost surely to configurations exhibiting geometric regularity (Section D.4, Theorem D.4). This occurs because irregularity incurs fundamental costs in propagation ($V_{prop}$) and operation ($V_{op}$) while reducing predictive benefits ($V_{benefit}$), effectively making regular configurations the global minima of the core PCE potential $V_{core}(x)$ (Lemma D.3, Theorem D.2).
 
 3.  **Complexity Adaptation Convergence (Section D.8):** A rigorous analysis of the complexity adaptation dynamics (Equation D.13), driven by the Adaptation Driving Force $\Psi(C)$, establishes its exponential convergence to the unique POP-optimal complexity $C^{\star}$ with explicit rate $\underline{\lambda}\,\eta_{adapt}$ (Theorem D.6). Using Polyak-Łojasiewicz conditions and stochastic gradient descent theory, we quantify both the deterministic convergence rate (Equation D.15) and the noise floor arising from ND-RID fluctuations (Equation D.16), providing a detailed mechanism for how complexity optimization occurs within the larger PCE landscape.
 

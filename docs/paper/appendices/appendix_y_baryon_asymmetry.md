@@ -89,7 +89,7 @@ The gauge structure $\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \op
 
 $$\partial_\mu J_{B+L}^\mu = \frac{N_g g^2}{16\pi^2} W^a_{\mu\nu}\tilde{W}^{a\mu\nu} \tag{Y.1}$$
 
-where $N_g = 3$ is the number of generations (Theorem R.4.1), $W^a_{\mu\nu}$ is the $SU(2)_L$ field strength, and $\tilde{W}^{a\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$ is its dual.
+where $N_g = 3$ is the number of generations (Proposition R.3.5), $W^a_{\mu\nu}$ is the $SU(2)_L$ field strength, and $\tilde{W}^{a\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$ is its dual.
 
 *Derivation:* The anomaly coefficient follows from the Atiyah-Singer index theorem applied to chiral fermions in $SU(2)$ backgrounds (Lemma R.IDX1). For $N_g$ generations, each generation contributes one left-handed quark doublet (with 3 colors) and one left-handed lepton doublet. The anomaly coefficient per generation is:
 $$\mathcal{A}_{B+L}^{(1)} = (3 \times 1 + 1) \cdot \frac{g^2}{32\pi^2} \cdot \frac{1}{2} = 2 \cdot \frac{g^2}{32\pi^2}$$
@@ -353,7 +353,7 @@ $$\kappa_{gen} = \frac{\varepsilon}{N_g} = \frac{\ln 2}{3} = 0.231$$
 
 **(e) Democratic distribution.** The $1/N_g$ distribution follows from:
 - PCE optimization: Maximum entropy distribution minimizes description length
-- $S_{N_g}$ symmetry: Generation manifold has permutation symmetry (Theorem R.4.1)
+- $S_{N_g}$ symmetry: Generation manifold has permutation symmetry (Proposition R.3.5)
 - CKM unitarity: $\sum_g |V_{ig}|^2 = 1$ enforces normalization
 
 The single-verification form ($\varepsilon/N_g$ rather than $2\varepsilon/N_g$) follows because the CP-sector selection is already accounted for in $\kappa_{CP} = \kappa_{EW}/2$.
@@ -417,7 +417,7 @@ $$\mathcal{C}_{eff} = \frac{c_{sph}}{2N_g} \cdot \mathcal{S} \cdot f_{neq} \tag{
 
 **Step 2 (Sphaleron conversion factor).** The sphaleron-to-baryon conversion efficiency arises from chemical equilibrium relations during sphaleron freeze-out [Khlebnikov & Shaposhnikov 1988]. For $N_g$ generations and $n_H$ Higgs doublets:
 $$c_{sph} = \frac{8N_g + 4n_H}{22N_g + 13n_H}$$
-With $N_g = 3$ (Theorem R.4.1) and $n_H = 1$:
+With $N_g = 3$ (Proposition R.3.5) and $n_H = 1$:
 $$c_{sph} = \frac{8 \times 3 + 4 \times 1}{22 \times 3 + 13 \times 1} = \frac{28}{79} \approx 0.354$$
 This is not a free parameter but a calculable consequence of the derived Standard Model content.
 
@@ -473,7 +473,7 @@ This derivation uses zero free parameters beyond $K_0 = 3$. ∎
 | $k = M/2$ | 12 | Golay code dimension |
 | $\kappa_{EW}$ | 38.5 | Theorem T.5 |
 | $\varepsilon$ | $\ln 2 = 0.6931$ | Theorem 31 |
-| $N_g$ | 3 | Theorem R.4.1 |
+| $N_g$ | 3 | Proposition R.3.5 |
 | $\delta$ | $66.7°$ | Theorem T.56 |
 | $\alpha_{em}^{-1}$(Thomson) | $137.036$ | Theorem Z.14 |
 | $\sin^2\theta_W(\mu_G)$ | $3/8$ | Theorem T.14 |
@@ -563,7 +563,7 @@ All derived quantities are consistent with observation.
 |:----------|:-------|:-------|
 | $K_0 = 3$ | Foundational | Horizon constant (axiom) |
 | $\varepsilon = \ln 2$ | Derived | Landauer limit (Theorem 31) |
-| $N_g = 3$ | Derived | Anomaly cancellation (Theorem R.4.1) |
+| $N_g = 3$ | Derived | Anomaly cancellation (Proposition R.3.5) |
 | $\delta = 66.7°$ | Derived | Berry holonomy (Theorem T.56) |
 | $\alpha_{em}^{-1} = 137.036$ | Derived | Capacity saturation (Theorem Z.14) |
 | $\sin^2\theta_W = 3/8$ | Derived | Bures geometry (Theorem T.14) |
@@ -917,7 +917,7 @@ $$f_{sinc} = \text{sinc}(1/\sqrt{3}) = \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = 0.9
 
 ### Y.A.3 Derivation of $N_g = 3$
 
-**Source:** Theorem R.4.1 (Appendix R)
+**Source:** Proposition R.3.5 (Appendix R)
 
 Three generations emerge from two independent constraints:
 

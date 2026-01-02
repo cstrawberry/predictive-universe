@@ -563,7 +563,7 @@ The PU framework distinguishes itself while connecting to other approaches:
     $$
     g_0 = \eta' \cdot c^2\sqrt{\frac{\Lambda}{3}}
     $$
-    where the efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is rigorously derived from PU constants via four independent factors (Theorem H.2):
+    where the efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is rigorously derived from PU constants via four independent factors (**Theorems H.1a, H.1b, H.1c, H.2**):
 
     | Factor | Value | Source |
     |:-------|:------|:-------|

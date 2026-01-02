@@ -65,7 +65,7 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 
 ## N.4 The Unified Cost of Transgression (UCT)
 
- **Theorem (UCT).**
+ **Theorem N.UCT (Unified Cost of Transgression).**
  Consider a process where an MPU (or MPU aggregate, with rest mass $m_0$) is accelerated along a trajectory with proper acceleration profile $a(t)$, while simultaneously performing a predictive task to achieve performance $PP(t)$ and undergoing internal predictive acceleration $A_{pred}(t)$. The total work $W_{\text{tot}}$ required for this joint process is bounded below:
 
  $$
@@ -125,7 +125,7 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 
 We restate the theorem (Equation N.5) for convenience before proceeding with the proof.
 
-> **Theorem (UCT).**
+> **Theorem N.UCT (Unified Cost of Transgression).**
 > For a process where an MPU (or MPU aggregate, with mass $m_0$) follows a trajectory with proper acceleration $a(t)$, achieves predictive performance $PP(t)$, and undergoes predictive acceleration $A_{pred}(t)$, in a background thermal bath at temperature $T_{bath}$, the total work $W_{\text{tot}}$ is bounded by:
 > $$
 > W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt

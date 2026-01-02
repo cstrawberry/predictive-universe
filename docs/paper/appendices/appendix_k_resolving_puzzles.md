@@ -28,7 +28,7 @@ This relationship is further constrained by the PCE-driven optimization of these
 
 **Electromagnetic coupling $\alpha$:** The fine-structure constant at the Thomson limit is rigorously derived parameter-free from the PCE-Attractor structure in **Appendix Z**. The complete 2506-line derivation establishes:
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) \approx 137.036092 \pm 0.000050}$$
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. This derivation uses zero free parameters and proceeds through a seven-stage chain: MPU invariants (d₀ = 8, ε = ln 2) → active kernel dimension a = 2 via Physical Instantiation Principle (Theorem Z.1) → interface mode count M = 2ab = 24 (Theorem Z.5) → PCE-Attractor orbit Gr(2,8) → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from Bures metric geometry, and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension **D = 4** through two independent mechanisms: mode-channel matching (Appendix Z, Theorem Z.11) and external stability requirements (Appendix H, Section G.8.2), providing multiply-determined confirmation of dimensional selection.
+where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. This derivation uses zero free parameters and proceeds through a seven-stage chain: MPU invariants (d₀ = 8, ε = ln 2) → active kernel dimension a = 2 via Physical Instantiation Principle (Theorem Z.1) → interface mode count M = 2ab = 24 (Theorem Z.5) → PCE-Attractor orbit Gr(2,8) → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from Bures metric geometry, and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension **D = 4** through two independent mechanisms: mode-channel matching (Appendix Z, Theorem Z.11) and external stability requirements (**Appendix G, Section G.8.2**), providing multiply-determined confirmation of dimensional selection.
 
 **Strong coupling $g_s$ and weak coupling $g_w$:** These relate to the effective "stiffness" or cost coefficients ($\kappa_F$ in Equation G.5.2) in the emergent gauge field actions (Appendix G), determined by PCE optimization balancing the benefit of predictive coherence provided by gauge fields against their resource cost. The unified gauge structure $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ with dimension 12 emerges from the thermodynamically optimal partition $H_0 \cong \mathbb{C}^2 \oplus \mathbb{C}^6$ (Appendix G, Proposition G.M1; Appendix Z, Theorem Z.1). At the PCE-optimal attractor, the unified coupling satisfies $g_U^2 = \pi/6$ with $\alpha_U^{-1} = 24$ (Appendix T, Theorem T.39a).
 
@@ -36,7 +36,7 @@ The hierarchy among couplings at a common fundamental scale arises from the info
 
 **Electroweak Scale, Weinberg Angle, and Higgs Mass:** These three fundamental puzzles are resolved simultaneously through a unified derivation in **Appendix T**. The electroweak scale emerges from the Golay-Steiner structure with electroweak complexity $\kappa_{EW} = bk/2 + \dim(G/H) - m/2 = 38.5$, yielding:
 $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 246 \text{ GeV}$$
-**(Theorem T.5)**. The Weinberg angle at the PU fixed point is $\sin^2\theta_W(\mu_*) = 3/8$ from PCE isotropy conditions (Theorem T.16), and the Higgs quartic coupling satisfies $\lambda(\mu_*) = 0$ at the metastability boundary (Theorem T.20), predicting $m_H \approx 125$ GeV. These results use zero free parameters and are derived from:
+**(Theorem T.5)**. The Weinberg angle at the PU fixed point is $\sin^2\theta_W(\mu_*) = 3/8$ from PCE isotropy conditions **(Theorem T.14)**, and the Higgs quartic coupling satisfies $\lambda(\mu_*) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV. These results use zero free parameters and are derived from:
 - Signal-parity decomposition of M = 24 modes into k = 12 signal and k = 12 parity subspaces via the Extended Binary Golay Code (Proposition T.1)
 - Electroweak coset $\mathcal{M}_{EW} = (SU(2)_L \times U(1)_Y)/U(1)_{em} \cong S^3$ with dimension 3 (Definition T.6)
 - Discrete action $S_{EW} = N_0 + \dim(G/H) - m/2 = 38.5$ from alignment constraints and zero-mode subtraction (Theorem T.4)
@@ -47,7 +47,7 @@ The unified derivation connects these three observables through the same underly
 
 **Fermion Masses and Yukawa Couplings:** The specific values arise from geometric overlaps of generation vacua on the MPU's internal Perspective Space $\Sigma_8 = U(8)/U(1)^8$, as rigorously derived in **Appendix R**. The three-generation structure is multiply over-determined through two independent mechanisms:
 
-1. **Topological**: The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Proposition R.3.1) and anomaly cancellation constraints (Section R.4), this uniquely selects three generations with family charges $\{a, -a, 0\}$ (Theorem R.4.1).
+1. **Topological**: The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Theorem R.3.1) and anomaly cancellation constraints (Section R.4), this uniquely selects three generations with family charges $\{a, -a, 0\}$ (Proposition R.3.5).
 
 2. **Geometric**: The E₈ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (Section R.2.1). Squared E₈ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ determine mass ratios via Gaussian suppression on the PCE-Attractor orbit Gr(2,8) with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3).
 
@@ -93,7 +93,7 @@ We frame the task of recovering the information of an initial pure state $|\psi_
 
 **Solution Attempt $S_t$:** A "solution attempt" corresponds to an external observer performing a measurement on outgoing Hawking radiation during interval $\Delta t$. This measurement involves an interaction realized by an 'Evolve' process (Definition 27) extracting a quantum of information.
 
-**K.3.2 Thermodynamic Cost and the Perspectival Information Channel**
+
 
 **Reflexive Structure:** Each measurement $S_t$ modifies the problem instance itself: the act of extracting information changes the black hole's state $I_t \to I_{t+1}$, altering future extractable information. The solver (observer) cannot separate themselves from the problem—they are entangled with the system being solved. This is precisely the Self-referential Paradox of Accurate Prediction (SPAP) operating at the horizon.
 
@@ -755,8 +755,8 @@ in excellent agreement with the observed hierarchy.
 - Connection to cosmological constant: both $v$ and $\Lambda$ emerge from the same Golay-Steiner structure via different complexity channels ($\kappa_{EW} = 38.5$ vs. $\kappa_\Lambda = 141.5$, Appendix U)
 
 **Weinberg Angle and Higgs Mass:** The same mechanism determines:
-- Weinberg angle: $\sin^2\theta_W(\mu_*) = 3/8$ from PCE isotropy requiring equal gauge kinetic stiffness (Theorem T.16)
-- Higgs quartic: $\lambda(\mu_*) = 0$ at the metastability boundary (Theorem T.20), predicting $m_H \approx 125$ GeV
+- Weinberg angle: $\sin^2\theta_W(\mu_*) = 3/8$ from PCE isotropy requiring equal gauge kinetic stiffness **(Theorem T.14)**
+- Higgs quartic: $\lambda(\mu_*) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV
 
 **Phenomenological Success:**
 - Hierarchy: $v \approx 246$ GeV (input) → test internal consistency
@@ -852,8 +852,8 @@ The Predictive Universe framework has successfully resolved several fundamental 
 **Established Results (with precise numerical predictions):**
 1. **Fine-structure constant**: $\alpha^{-1} \approx 137.036092 \pm 0.000050$ (Appendix Z, parameter-free)
 2. **Electroweak scale**: $v \approx 246$ GeV from $\kappa_{EW} = 38.5$ (Appendix T, Theorem T.5)
-3. **Weinberg angle**: $\sin^2\theta_W(\mu_*) = 3/8$ (Appendix T, Theorem T.16)
-4. **Higgs mass**: $m_H \approx 125$ GeV from metastability (Appendix T, Theorem T.20)
+3. **Weinberg angle**: $\sin^2\theta_W(\mu_*) = 3/8$ (Appendix T, **Theorem T.14**)
+4. **Higgs mass**: $m_H \approx 125$ GeV from metastability (Appendix T, **Theorem T.28**)
 5. **Fermion mass ratios**: Lepton $\mathcal{R} = 3$ to 3.8% accuracy (Appendices R, T)
 6. **Gravitational constant**: $G$ from channel capacity, $\delta/L_P \approx 2.355$ (Appendices E, Q)
 7. **Cosmological constant**: $\Lambda L_P^2 = e^{-283} \sim 10^{-122}$ (Appendix U)
