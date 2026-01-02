@@ -1578,7 +1578,7 @@ The PU framework reveals that the boundary between logical necessity and conting
 
 This distinction resolves historical confusions where scientists have sought physical mechanisms for what are, in fact, logical necessities. The PU framework asserts that the "Why" of the first category is answered by logic, while the "What" and "How" of the second category are answered by physics, which itself emerges from optimizing the "Why."
 
-**Remark P.9.1 (Comparison with Alternative Approaches to Dimensional Emergence).** Several approaches to quantum gravity address spacetime dimensionality differently:
+**Remark P.9.1 (Comparison with Alternative Approaches to Dimensional Emergence).** 
 
 | Approach | Treatment of D | Selection Mechanism |
 |----------|---------------|---------------------|
