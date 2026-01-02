@@ -26,13 +26,13 @@ The following constants are derived elsewhere in the framework:
 
 | Symbol | Value | Definition | Source |
 |--------|-------|------------|--------|
-| $\varepsilon$ | $\ln 2$ | Landauer erasure cost | Theorem 4.1 |
-| $K_0$ | 3 | Minimal self-referential bits | Theorem 5.2 |
-| $d_0$ | $2^{K_0} = 8$ | MPU Hilbert space dimension | Corollary 5.3 |
-| $a$ | $e^{\varepsilon} = 2$ | Active kernel dimension | Theorem 6.1 |
-| $b$ | $d_0 - a = 6$ | Inactive subspace dimension | Definition 6.2 |
-| $M$ | $2ab = 24$ | Interface modes | Theorem 7.1 |
-| $D$ | 4 | Emergent spacetime dimension | Theorem 11.3 |
+| $\varepsilon$ | $\ln 2$ | Landauer erasure cost | Theorem 31 |
+| $K_0$ | 3 | Minimal self-referential bits | Theorem 15 |
+| $d_0$ | $2^{K_0} = 8$ | MPU Hilbert space dimension | Theorem 23 |
+| $a$ | $e^{\varepsilon} = 2$ | Active kernel dimension | Theorem Z.1 |
+| $b$ | $d_0 - a = 6$ | Inactive subspace dimension | Definition |
+| $M$ | $2ab = 24$ | Interface modes | Theorem Z.5 |
+| $D$ | 4 | Emergent spacetime dimension | Theorem Z.11 |
 | $C_{\max}/\varepsilon$ | 2 | PCE capacity ratio | Appendix Q |
 
 ---
@@ -45,11 +45,11 @@ The Extended Binary Golay Code $\mathcal{C}_{24}$ is the unique $[n, k, d]$ bina
 
 - Length $n = M = 24$
 - Dimension $k = 12$
-- Minimum distance $d = 8 = d_0$
+- Minimum distance $d_{\min} = 8 = d_0$
 
 **Theorem U.1 (Golay Uniqueness).** The extended binary Golay code is the unique binary linear code achieving the parameters $[24, 12, 8]$.
 
-*Proof.* This is a classical result in coding theory (Pless 1968; Conway & Sloane 1999). The uniqueness follows from the Golay code saturating the Griesmer bound for binary linear codes. Within the PU framework, Theorem Z.13 establishes that PCE optimization uniquely selects this code structure for the $M = 24$ interface modes. $\square$
+*Proof.* This is a classical result in coding theory (Pless 1968; Conway & Sloane 1999). The uniqueness follows from the Golay code saturating the Griesmer bound for binary linear codes. Within the PU framework, Theorem Z.13 establishes that PCE optimization uniquely selects this code structure for the $M = 24$ interface modes. QED
 
 ### U.3.2 Octad Structure
 
