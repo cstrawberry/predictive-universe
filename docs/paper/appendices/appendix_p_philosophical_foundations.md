@@ -292,6 +292,13 @@ Any derivable, self-consistent logical or mathematical structure, when physicall
 
 The PPI is the bridge between pure mathematics and physics. It explains why the physical world is not a direct copy of abstract structures, but a specific, cost-optimized implementation of them.
 
+**Remark (Relation to PCE).** The phrase "resource-optimization imperatives" in Definition P.6.2 is made operationally precise by the Principle of Compression Efficiency (Definition 15, Section 6.1.2). PPI asserts that physical instantiation is shaped by thermodynamic costs and optimization; PCE provides the specific cost functional $V(x)$ and dynamics governing that optimization. The relationship is hierarchical:
+
+- **PPI** provides the ontological bridge (abstract $\to$ physical) and asserts optimization occurs
+- **PCE** provides the selection criterion (which physical implementation) via potential minimization
+
+Both trace to the same underlying principle: physical reality implements logical necessities at minimum cost. When a derivation invokes "PPI requires..." it typically means the instantiation requirement is active; when it invokes "PCE selects..." it means the optimization criterion is determining uniqueness among alternatives that satisfy PPI.
+
 ### P.6.2 Illustrating PPI: From Abstract Requirements to Specific Laws
 
 The following cases illustrate the PPI in action, showing how specific physical laws emerge as the optimal physical solution to abstract requirements.
