@@ -2346,10 +2346,10 @@ $$\Sigma|_{\text{boundary}} \to \mathcal{M}_{T^2} \cong \mathbb{H}/SL_2(\mathbb{
 
 This follows from the framework's identification of perspective changes with coordinate transformations (Section P.7), which at the boundary reduce to modular transformations on the vacuum structure.
 
-**Step 3 (Consistency requirement).** For physical predictions to be perspective-independent (as required by POP), the partition function $Z(\tau)$ must be invariant under $SL_2(\mathbb{Z})$:
+**Step 4 (Consistency requirement).** For physical predictions to be perspective-independent (as required by POP), the partition function $Z(\tau)$ must be invariant under $SL_2(\mathbb{Z})$:
 $$Z(\gamma \cdot \tau) = Z(\tau) \quad \forall \gamma \in SL_2(\mathbb{Z})$$
 
-**Step 4 (VOA translation).** For a VOA $V$, the partition function is the character:
+**Step 5 (VOA translation).** For a VOA $V$, the partition function is the character:
 $$\chi_V(\tau) = \text{Tr}_V(q^{L_0 - c/24}), \quad q = e^{2\pi i \tau}$$
 
 For holomorphic VOAs (those with a single irreducible module, namely themselves), the character $\chi_V(\tau)$ is automatically modular invariant [Zhu 1996]. PCE minimality (Proposition P.13.6.4) has already selected a holomorphic structure, so modular invariance follows. $\square$
