@@ -796,7 +796,7 @@ These two quantities, though both originating from $K_0$, arise through independ
 
 ### Q.6.4 Experimental Predictions
 
-**Prediction Q.6.1 (Modified Dispersion Isotropy).** Modified dispersion relations (MDRs) provide a generic phenomenological signature of quantum gravity scenarios with minimal length scales [Amelino-Camelia 2013, Mattingly 2005]. If spacetime discretization manifests in MDRs of the form:
+**Prediction Q.6.1 (Modified Dispersion Isotropy).** Modified dispersion relations (MDRs) provide a generic phenomenological signature of theories with fundamental discretization scales [Amelino-Camelia 2013, Mattingly 2005]. In the PU framework, the Lorentz-invariant discretization of the MPU substrate (Proposition Q.6.1) may manifest in MDRs of the form:
 
 $$E^2 = p^2c^2 + m^2c^4 + \xi_s \frac{p^3 c^3}{E_P} + \xi_t \frac{E^3}{E_P}$$
 
@@ -804,9 +804,9 @@ where $E_P = \hbar/t_P$ is the Planck energy, then the framework predicts:
 
 $$\boxed{\xi_s = \xi_t}$$
 
-*Derivation.* The coefficient $\xi_s$ parameterizes leading-order corrections from spatial discretization at scale $\delta$, while $\xi_t$ parameterizes corrections from temporal discretization at scale $\tau_{min}$. By Proposition Q.6.1, the equal ratios $\delta/L_P = \tau_{min}/t_P$ imply that spatial and temporal discretization effects enter at the same relative scale, yielding equal leading-order correction coefficients.
+*Derivation.* The coefficient $\xi_s$ parameterizes leading-order corrections from spatial discretization at the MPU scale $\delta$, while $\xi_t$ parameterizes corrections from temporal discretization at scale $\tau_{min}$. By Proposition Q.6.1, the equal ratios $\delta/L_P = \tau_{min}/t_P$ implied by emergent Lorentz invariance (Theorem 46) ensure that spatial and temporal discretization effects enter at the same relative scale, yielding equal leading-order correction coefficients. This prediction distinguishes the PU framework from approaches that quantize the gravitational field directly, where such isotropy is not guaranteed.
 
-**Prediction Q.6.2 (Absence of Preferred Frame Effects).** Searches for Lorentz-violating effects in the photon sector should yield null results to the precision set by $(\delta/L_P)^{-1} \approx 0.42$ corrections at the Planck scale. Current constraints from gamma-ray burst observations [Vasileiou et al. 2013] and active galactic nuclei [MAGIC Collaboration 2008] constrain energy-dependent photon dispersion by placing lower bounds on the effective quantum-gravity scale $E_{QG}$ at linear and quadratic orders, with GRB limits reaching the Planck scale and beyond under conservative assumptions. These bounds ($E_{QG} \gtrsim E_P$) are consistent with Lorentz-invariant discretization.
+**Prediction Q.6.2 (Absence of Preferred Frame Effects).** Searches for Lorentz-violating effects in the photon sector should yield null results to the precision set by $(\delta/L_P)^{-1} \approx 0.42$ corrections at the Planck scale. Current constraints from gamma-ray burst observations [Vasileiou et al. 2013] and active galactic nuclei [MAGIC Collaboration 2008] constrain energy-dependent photon dispersion by placing lower bounds on the effective discretization scale $E_{disc}$ at linear and quadratic orders, with GRB limits reaching the Planck scale and beyond under conservative assumptions. These bounds ($E_{disc} \gtrsim E_P$) are consistent with the Lorentz-invariant MPU discretization predicted by the framework.
 
 *Derivation.* The framework predicts that discretization preserves Lorentz invariance (Proposition Q.6.1, Step 5). Preferred-frame effects would arise only from asymmetric spatial versus temporal discretization, which is excluded by the equal-ratio condition. The scale of any residual effects is set by the inverse discretization ratio $(\delta/L_P)^{-1} = 1/\sqrt{8\ln 2} \approx 0.42$.
 
