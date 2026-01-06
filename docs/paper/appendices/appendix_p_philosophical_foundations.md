@@ -645,7 +645,7 @@ Appendix Z (Section Z.32) derives a falsifiable prediction connecting the golden
 
 This prediction remains to be tested. However, its philosophical implications merit consideration.
 
-**If Prediction Z.5 is verified**, each fundamental constant would be understood as governing a distinct aspect of physical structure:
+**If Prediction Z.5 is verified**, these constants would each be understood as governing a distinct aspect of physical structure:
 
 | Constant | Traditional Role | Foundational Role |
 |----------|------------------|-------------------|
