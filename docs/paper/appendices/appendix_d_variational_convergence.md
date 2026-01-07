@@ -194,7 +194,7 @@ We use stochastic Lyapunov methods, common in the analysis of stochastic approxi
 ### D.6.1 Assumptions for Convergence
 
 We make standard technical assumptions required for the convergence theorems, justifying them from the physical principles of the PU framework.
-*   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The \$C^2\$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.7). Coercivity is physically plausible because the resource cost terms (\$V\_{op}, V\_{prop}\$) are expected to grow super‑linearly with complexity and network size (e.g., \$R(C) \propto C^{\gamma\_p}\$ with \$\gamma\_p > 1\$), while the benefit term (\$V\_{benefit}\$) saturates (due to \$PP < \beta\$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
+*   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The \$C^2\$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms (\$V\_{op}, V\_{prop}\$) are expected to grow super‑linearly with complexity and network size (e.g., \$R(C) \propto C^{\gamma\_p}\$ with \$\gamma\_p > 1\$), while the benefit term (\$V\_{benefit}\$) saturates (due to \$PP < \beta\$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
 *   **(A2) Rate Matrix Bounds:** $\eta(x)$ is symmetric, and its eigenvalues are uniformly bounded above and below: $0 < \eta_{min} \le \lambda(\eta(x)) \le \eta_{max} < \infty$ for all $x \in \mathcal{X}_{adm}$. The adaptation process has a finite, non-zero rate.
 *   **(A3) Diffusion Bounds:** $D(x)$ is positive semi-definite, and its trace (representing total noise power) is uniformly bounded: $\text{Tr}(D(x)) \le D_{max} < \infty$.
 *   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
@@ -203,7 +203,7 @@ We make standard technical assumptions required for the convergence theorems, ju
 
 ### D.6.2 Lyapunov Analysis
 
-**Lemma D.7 (Stochastic Lyapunov Property of $V(x)$).**
+**Lemma D.5 (Stochastic Lyapunov Property of $V(x)$).**
 Under assumptions (A1)-(A5), the PCE Potential $V(x)$ serves as a stochastic Lyapunov function for the dynamics (Equation D.8). Applying Ito's formula to $V(x(t))$ yields the expected instantaneous rate of change (the infinitesimal generator $\mathcal{L}V$ applied to $V$):
 $$
 \mathcal{L}V(x) = \lim_{\Delta t \to 0} \frac{\mathbb{E}[V(x(t+\Delta t)) - V(x(t)) | x(t)=x]}{\Delta t}

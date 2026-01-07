@@ -282,19 +282,19 @@ This equals the Golay code dimension $k = 12$ (Theorem Z.13).
 
 ### W.3a.2 QFI Spectrum at the PCE-Attractor
 
-**Proposition W.3a.1 (Flat Spectrum).** At the PCE-Attractor (Definition 15a), the QFI spectrum is flat:
+**Proposition W.3a.2 (Flat Spectrum).** At the PCE-Attractor (Definition 15a), the QFI spectrum is flat:
 $$\lambda_i = \lambda_0 = 1 \quad \forall i \in \{1, \ldots, M\}$$
 
 *Proof.* This is Theorem Z.5 (Steps 5–6). The isotropy group $H = S(U(a) \times U(b))$ acts transitively on the 24-dimensional interface. By Schur's lemma, the $H$-invariant QFI metric is proportional to the identity. ∎
 
 ### W.3a.3 Uniform Per-Generator Capacity
 
-**Theorem W.3a.2 (Uniform Capacity from PCE Isotropy).** At the PCE-Attractor, each gauge generator carries equal information capacity:
+**Theorem W.3a.3 (Uniform Capacity from PCE Isotropy).** At the PCE-Attractor, each gauge generator carries equal information capacity:
 $$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in all sectors}$$
 
 *Proof.*
 
-**Step 1.** The full 24-dimensional interface has flat QFI spectrum $g_{\mathrm{QFI}} = \lambda_0 \cdot I_{24}$ (Proposition W.3a.1).
+**Step 1.** The full 24-dimensional interface has flat QFI spectrum $g_{\mathrm{QFI}} = \lambda_0 \cdot I_{24}$ (Proposition W.3a.2).
 
 **Step 2.** The SM gauge algebra embeds into a 12-dimensional subspace $\mathcal{I}_{\mathrm{SM}} \subset \mathbb{R}^{24}$.
 
@@ -304,7 +304,7 @@ $$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in all sectors}
 
 ### W.3a.4 Mode Ratio and Electroweak Structure
 
-**Remark W.3a.3 (Mode Ratio).** At the PCE-Attractor with uniform per-generator capacity, the mode ratio is:
+**Remark W.3a.4 (Mode Ratio).** At the PCE-Attractor with uniform per-generator capacity, the mode ratio is:
 
 $$\frac{M_2}{M_Y} = \frac{3}{1} = 3$$
 

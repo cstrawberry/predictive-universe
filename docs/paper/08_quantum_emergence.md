@@ -15,7 +15,7 @@ Assume the PCE objective takes the form $\mathcal J[\omega]=\mathcal R[\omega]+\
 **Theorem 8.3 (Gleason–Busch Representation).**
 Given that the predictive measure $\omega$ is a non-contextual frame function (by **Lemma G.1.1b**) and is continuous under the coarse-graining induced by the contractive ND-RID dynamics, there exists a unique density operator $\rho$ on the Hilbert space $\mathcal H_\omega$ such that: for $\dim \mathcal H_\omega \ge 3$, $\omega(P)=\operatorname{tr}(\rho P)$ for all projectors $P$; and for $\dim \mathcal H_\omega = 2$, $\omega(E)=\operatorname{tr}(\rho E)$ for all POVM effects $E$ (Busch extension under the full additivity required by PCE).
 
-**Hypothesis 8.4 (PCE Selection for Complex Hilbert Spaces).**
+**Hypothesis 4 (PCE Selection for Complex Hilbert Spaces).**
 Given a predictive system whose state space is a complete inner product space over a division ring $\mathbb{D} \in \{\mathbb{R}, \mathbb{C}, \mathbb{H}\}$, it is hypothesized that the Principle of Compression Efficiency (PCE) uniquely selects the complex field $\mathbb{D} = \mathbb{C}$. This selection is driven by PCE's preference for the formalism with the optimal balance of descriptive power and resource efficiency. Real spaces lack the structure for efficient representation of all required symmetries (e.g., the $U(1)$ phase), while quaternionic spaces introduce higher complexity without a commensurate increase in predictive utility for the tasks governed by the Prediction Optimization Problem (POP).
 
 **Theorem 8.5 (Schrödinger Dynamics from PCE and Time-Translation Symmetry).**
@@ -23,7 +23,9 @@ The Internal Prediction dynamics, being reversible, transition-probability prese
 
 The complex Hilbert space structure (Proposition 4) thus provides the necessary mathematical framework for MPU dynamics. This structure is uniquely favored by the Principle of Compression Efficiency (PCE) over alternatives (such as real or quaternionic vector spaces). As argued in Appendix G (Theorem G.1.8), the complex field $\mathbb{C}$ is uniquely favored under PCE because it combines superior state-tomography efficiency with reduced symmetry-representation overhead, thereby maximizing predictive utility while minimizing resource costs. Alternative formalisms are demonstrably less resource-efficient under the framework's optimization principles. The Dual Dynamics (Section 7.3.3) dictate the evolution upon this stage, naturally mapping onto the core elements of QM formalism.
 
-**8.2 Interpretation of Superposition (Proposition 6)**
+**8.2 Interpretation of Superposition**
+
+**Proposition 6 (Interpretation of Superposition)**
 
 Within the MPU framework, a superposition state $|\psi\rangle = \sum_i c_i |i\rangle_s$ in the MPU Hilbert space $\mathcal{H}_0$ (Proposition 4), expressed relative to an orthonormal basis $\{|i\rangle_s\}$ corresponding to perspective $s \in \Sigma$ (Theorem 24), represents the MPU's predictive state $|\psi(t)\rangle$ in a situation where the outcome of the next 'Evolve' interaction (Definition 27) is fundamentally indeterminate (due to SPAP/RID limits, Theorem 27). The complex coefficients $c_i = \langle i | \psi \rangle_s$ encode the predictive information available from perspective $s$ about the potential outcome corresponding to state $|i\rangle_s$. The squared magnitude $|c_i|^2$ yields the probability of that outcome upon interaction (Proposition 7), while the relative phases between the coefficients $c_i$ determine the probabilities of outcomes relative to different, complementary perspectives (bases).
 *Proof:*
@@ -32,7 +34,9 @@ Within the MPU framework, a superposition state $|\psi\rangle = \sum_i c_i |i\ra
 3.  **Information Encoding:** The coefficients $c_i$ carry predictive information. The Born rule (Proposition 7) links $|c_i|^2$ to probability. Relative phases encode information relevant for predictions in different bases (perspectives), enabling quantum interference.
 4.  **Perspective Relativity:** The representation $\sum c_i |i\rangle_s$ depends on the chosen perspective $s$. The same state amplitude $S(t)=|\psi\rangle$ has different representations in different bases. Superposition is thus the necessary, perspective-dependent description of the MPU's state of predictive indeterminacy. QED
 
-**8.3 Emergence of the Born Rule (Proposition 7)**
+**8.3 Emergence of the Born Rule**
+
+**Proposition 7 (Emergence of the Born Rule)**
 
 The probability $P(i | S(t), s)$ for the 'Evolve' process (Definition 27), acting on an MPU with state amplitude $S(t)=|\psi\rangle$ relative to perspective $s$ (corresponding to ONB $\{|i\rangle_s\}$), is uniquely determined by the mathematical structure of the Hilbert space $\mathcal{H}_0$ (Proposition 4) and fundamental consistency requirements (specifically, that probabilities for a complete set of outcomes must sum to unity independent of the choice of basis, **Theorem G.1.3** derived from PCE cost optimization in Appendix G.1) to be the Born rule:
 
@@ -66,7 +70,9 @@ For qubits ($\dim\mathcal H_\omega=2$), the same holds provided additivity is im
 This theorem formalizes the argument of Appendix G.1. The non‑contextuality and additivity premises follow from Lemma G.1.1b provided the PCE potential $V(x)$ is basis‑independent in the ND‑RID sense (single‑valued with a well‑defined gradient); otherwise (i)–(ii) should be taken as axioms. The Born rule probability assignment $P(i | S(t), s) = \text{Tr}(|\psi\rangle\langle\psi| \cdot |i\rangle_s\langle i|_s) = |\langle i | \psi \rangle_s|^2$ (Equation 50) therefore emerges as the unique measure reflecting the optimal allocation of predictive resources determined by the framework's foundational optimization principles. QED
 
 
-**8.4 Derivation of Uncertainty Relations (Proposition 8)**
+**8.4 Derivation of Uncertainty Relations**
+
+**Proposition 8 (Derivation of Uncertainty Relations)**
 
 The Heisenberg-Robertson uncertainty relations for pairs of observables represented by Hermitian operators $\hat{A}, \hat{B}$ acting on the MPU Hilbert space $\mathcal{H}_0$,
 $$

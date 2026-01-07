@@ -95,7 +95,7 @@ $$
 
 ---
 
-# V.2 Parameter-Free Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor
+## V.2 Parameter-Free Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor
 
 This section provides the direct computational program for the fine-structure constant, as rigorously derived in **Appendix Z**. The calculation is parameter-free, relying only on the framework's foundational constants.
 

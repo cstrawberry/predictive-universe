@@ -150,7 +150,7 @@ The quadratic form $A(x)$ defines a positive-definite Riemannian metric on the s
 
 ### O.7.2 Time Direction and Lorentzian Signature
 
-The PU framework's dynamics are fundamentally time-directed and irreversible. The Fundamental Predictive Loop (`Predict→Verify→Update`) imposes a logical arrow, which is physically enforced by the thermodynamic irreversibility of the 'Evolve' process ($\varepsilon \ge \ln 2$, Appendix O). This intrinsic asymmetry must be reflected in the continuum limit.
+The PU framework's dynamics are fundamentally time-directed and irreversible. The Fundamental Predictive Loop (`Predict→Verify→Update`) imposes a logical arrow, which is physically enforced by the thermodynamic irreversibility of the 'Evolve' process ($\varepsilon \ge \ln 2$, **Theorem 31, Appendix J**). This intrinsic asymmetry must be reflected in the continuum limit.
 
 When we extend the $\Gamma$-convergence to spacetime, the discrete functional includes terms for temporal differences, e.g., `Ψ_t((\phi(t+Δt) - \phi(t))/Δt)`. Due to the irreversible nature of the 'Evolve' step that mediates updates between time slices, the effective cost function `Ψ_t` is fundamentally different from the spatial `Ψ`. The dissipation inherent in the temporal update process introduces a relative negative sign in the kinetic term upon taking the continuum limit. The full $\Gamma$-limit in $D+1$ dimensions yields an action of the form:
 $$

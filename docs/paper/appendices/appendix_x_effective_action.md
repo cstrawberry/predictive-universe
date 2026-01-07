@@ -161,7 +161,7 @@ $$
  \tag{X.12}
  $$
 
-Using this equivalence with $\gamma_{\rm eff}=2$ reproduces the zero‑slack condition employed in Appendix Z and the identities (Z.7)–(Z.8).
+Using this equivalence with $\gamma_{\rm eff}=2$ reproduces the zero‑slack condition employed in Appendix Z and the identities **Sections Z.7-Z.8**.
 
 **Theorem X.3 (Predictive Ward Identity and Unity Normalization at the PCE-Attractor).**
 

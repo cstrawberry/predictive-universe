@@ -158,7 +158,7 @@ The Action-Entropy Identity (Corollary Q.0.1) establishes that $\mathcal{S}/\hba
 
 #### Q.0.8.1 The Cycle Number
 
-**Definition Q.0.3 (Cycle Number).** For a process $\phi$ in the MPU network, the *cycle number* is the total count of irreversible SPAP operations:
+**Definition Q.0.2 (Cycle Number).** For a process $\phi$ in the MPU network, the *cycle number* is the total count of irreversible SPAP operations:
 
 $$N[\phi] := \#\{\text{SPAP cycles along } \phi\}$$
 
@@ -719,8 +719,6 @@ $$\boxed{\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}}$$
 **Step 1 (Emergent Speed Structure).** Theorem 46 establishes that the finite MPU processing time $\tau_{min} > 0$ (Theorem 29) and finite MPU spacing $\delta$ (Definition 35) yield a bounded maximum causal speed:
 
 $$c \leq \frac{\delta \cdot w_{max}}{\tau_{min}}$$
-
-**Step 5 (Uniqueness).** Suppose the ratios were unequal: $\delta/L_P \neq \tau_{min}/t_P$. Define $c_{eff} := \delta/\tau_{min}$. Then $c_{eff} \neq c$, and the discretization would select a preferred frame—spatial and temporal resolutions would transform differently under boosts. This contradicts Theorem 46, which proves that Lorentz invariance emerges necessarily from the causal structure of ND-RID interactions at PCE equilibrium. Therefore, equality of the ratios is the unique consistent solution. ∎
 
 **Step 2 (Planck Unit Relation).** The Planck length and Planck time are defined through:
 

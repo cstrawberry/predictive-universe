@@ -724,7 +724,7 @@ Any mechanism that explains $\kappa_{EW}$ automatically constrains $\eta_B$, and
 
 ### Y.10.3.5 Experimental Consequences
 
-**Prediction Y.2** (Correlated Variations). *Any beyond-Standard-Model physics that modifies the electroweak scale must produce correlated modifications to the baryon asymmetry:*
+**Prediction Y.1** (Sphaleron Saturation). *The geometric CP mechanism predicts that modifies the electroweak scale must produce correlated modifications to the baryon asymmetry:*
 
 $$\frac{\delta\eta_B}{\eta_B} \approx \frac{1}{2}\frac{\delta v}{v}$$
 
@@ -769,7 +769,7 @@ K_0 = 3 &\xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[4pt]
 &\xrightarrow{\text{Thm Z.5}} M = 2ab = 24, \quad k = 12 \\[4pt]
 &\xrightarrow{\text{Thm T.5}} \kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 38.5 \\[4pt]
 &\xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \\[4pt]
-&\xrightarrow{\text{Thm R.4.1}} N_g = 3 \\[4pt]
+&\xrightarrow{\text{Prop R.3.5}} N_g = 3 \\[4pt]
 &\xrightarrow{\text{Thm Y.8}} \kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.48 \\[4pt]
 &\xrightarrow{\text{Thm T.56}} \delta = 66.7° \implies \sin\delta = 0.918 \\[4pt]
 &\xrightarrow{\text{Thm Y.9}} \eta_B = \mathcal{C}_{eff} \cdot \tanh(\mathcal{S}\sin\delta) \cdot f_{wash} \cdot e^{-\kappa_B} \\[4pt]
@@ -805,7 +805,7 @@ Projected LHCb upgrade sensitivity: $\sigma(\delta) \sim 1°$, providing a direc
 
 ### Y.12.3 Saturation Regime Test
 
-**Prediction Y.1** (Sphaleron Saturation). *The geometric CP mechanism predicts that the baryon asymmetry is insensitive to the precise value of $\sin\delta$ in the range $\sin\delta > 0.2$, because the CP asymmetry saturates ($\tanh(\mathcal{S}\sin\delta) \approx 1$).*
+**Prediction Y.2** (Sphaleron Saturation). *The geometric CP mechanism predicts that the baryon asymmetry is insensitive to the precise value of $\sin\delta$ in the range $\sin\delta > 0.2$, because the CP asymmetry saturates ($\tanh(\mathcal{S}\sin\delta) \approx 1$).*
 
 *Testable consequence:* If future measurements shift $\delta$ within experimental uncertainties, the $\eta_B$ prediction should remain stable. This distinguishes the PU mechanism from scenarios where $\eta_B \propto \sin\delta$.
 

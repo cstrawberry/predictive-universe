@@ -74,7 +74,6 @@ The Steiner system parameters are:
 
 ## U.4 The Configuration Space
 
-## U.4 The Configuration Space
 
 ### U.4.1 Grassmannian Bound
 
@@ -158,7 +157,7 @@ The right-hand side equals $d_0(M - a)$ because:
 
 The identity $d_0(M - a) = 8 \times 22 = 176$ follows from $M - a = 24 - 2 = 22$. $\square$
 
-**Remark.** This identity connects the Steiner design parameters directly to PU constants, confirming the structural relationship between coding theory and the framework established in Theorem Z.13 and the Golay Bridge (Theorem R.4.9).
+**Remark U.6a.** This identity connects the Steiner design parameters directly to PU constants, confirming the structural relationship between coding theory and the framework established in Theorem Z.13 and the Golay Bridge (Theorem R.4.9).
 
 ---
 
@@ -281,7 +280,7 @@ $$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = 0$$
 
 **Step 6 (PCE optimality).** The virial identity is equivalent to the statement that the PCE-Attractor configuration cannot reduce its action by rescaling. Any $\rho \neq 1$ would break the capacity saturation condition: rescaling the bounce changes the effective coupling $u_{\text{eff}}(\rho) \neq u^*$, violating the zero-slack optimality. The scale $\rho = 1$ is the unique fixed point of the combined PCE constraints. $\square$
 
-**Remark U.1 (Robustness of Scale Invariance).** The scale invariance at the PCE-Attractor is structurally protected by three independent mechanisms: (i) the Derrick virial constraint at the stationary bounce solution; (ii) the zero-slack condition fixing the bounce amplitude through capacity saturation; and (iii) the Predictive Ward Identity enforcing canonical normalization (Theorem X.3). Breaking scale invariance would require violating at least one of these conditions, shifting $\kappa$ by $0.5$ and changing $\Lambda$ by a factor of $e \approx 2.7$ (see Section U.13.1).
+**Remark U.8b (Robustness of Scale Invariance).** The scale invariance at the PCE-Attractor is structurally protected by three independent mechanisms: (i) the Derrick virial constraint at the stationary bounce solution; (ii) the zero-slack condition fixing the bounce amplitude through capacity saturation; and (iii) the Predictive Ward Identity enforcing canonical normalization (Theorem X.3). Breaking scale invariance would require violating at least one of these conditions, shifting $\kappa$ by $0.5$ and changing $\Lambda$ by a factor of $e \approx 2.7$ (see Section U.13.1).
 
 **Theorem U.9 (Dilatation Zero Mode).** Under Theorem U.8, the second variation annihilates the dilatation tangent vector:
 
@@ -310,7 +309,7 @@ $$S_{\text{cont}}[\phi] = \frac{1}{\varepsilon}\int_{\mathbb{R}} d\tau \int_{S^3
 
 where $\varepsilon = \ln 2$ is the Landauer cost (Theorem 31), $d\Omega_3$ is the round metric on $S^3$, $\nabla_{S^3}$ is the spherical gradient, and $V_{\text{eff}}(\phi)$ is the effective potential from the PCE rate-level potential (Appendix X, Equation X.10). The subtraction $V_{\text{eff}}(0)$ ensures finite action for vacuum-to-vacuum trajectories.
 
-**Remark U.2 (O(4) Invariance).** The action $S_{\text{cont}}$ is manifestly O(4)-invariant: the kinetic term $(\partial_\tau \phi)^2 + |\nabla_{S^3}\phi|^2$ is the standard Laplacian on $S^3 \times \mathbb{R} \cong \mathbb{R}^4 \setminus \{0\}$, and the potential $V_{\text{eff}}$ depends only on the field value, not its location. This invariance is inherited from the isotropy of the PCE-Attractor state (Definition 15a).
+**Remark U.4a (O(4) Invariance).** The action $S_{\text{cont}}$ is manifestly O(4)-invariant: the kinetic term $(\partial_\tau \phi)^2 + |\nabla_{S^3}\phi|^2$ is the standard Laplacian on $S^3 \times \mathbb{R} \cong \mathbb{R}^4 \setminus \{0\}$, and the potential $V_{\text{eff}}$ depends only on the field value, not its location. This invariance is inherited from the isotropy of the PCE-Attractor state (Definition 15a).
 
 ### U.8.2 Discrete Sampling
 
@@ -349,7 +348,7 @@ The maximum total degree is $2 + 2 = 4$. $\square$
 ### U.8.5 Zero Mode Preservation
 
 **Theorem U.13 (Design-Preserving Zero Modes).** Let $X \subset S^3$ be the 24-cell (a spherical 5-design, identified with interface modes by Theorem U.7). Let $S_{\text{cont}}[\phi]$ (Definition U.4) satisfy:
-1. O(4) invariance (Remark U.2)
+1. O(4) invariance (Remark U.4a)
 2. Translation invariance (Theorem U.8)
 3. Scale invariance at $\phi = \phi^*$ (Theorem U.8a)
 
@@ -410,16 +409,6 @@ where $N$ is the total number of Gaussian directions and $S^* = S_{\text{disc}}(
 $$S_{\text{inst}} = 2\kappa$$
 
 This follows from the PCE-fixed ratio $C_{\max}/\varepsilon = 2$, rigorously derived in Appendix Q from the MPU budget allocation $C_{\max}^* = \ln(d_0) - \varepsilon = 3\ln 2 - \ln 2 = 2\ln 2$.
-
-**Remark U.14.1 (One-Loop Correction via Zeta Regularization).** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
-
-$$\log\det'(-\Delta_{g_B} + \lambda) = -\zeta'_{\mathcal{O}}(0)$$
-
-where $\zeta_{\mathcal{O}}(s) = \sum_{(m_1,m_2) \neq (0,0)} \text{mult}(m_1, m_2) \cdot (\lambda_B(m_1, m_2) + \lambda)^{-s}$ uses the Laplacian eigenvalues from Proposition Z.23a. The multiplicities follow from spherical representation theory for the symmetric pair $(U(8), U(2) \times U(6))$ (see Helgason 1984). Under $K$-invariance, the mass parameter equals the hierarchy coefficient $\alpha = 3/2$ from Corollary T.41.3.
-
-**Remark U.14.1 (One-Loop Correction via Zeta Regularization).** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
-
-$$\log\det'(-\Delta_{g_B} + \lambda) = -\zeta'_{\mathcal{O}}(0)$$
 
 **Remark U.14.1 (One-Loop Correction via Zeta Regularization).** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
 

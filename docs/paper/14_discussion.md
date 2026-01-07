@@ -274,7 +274,7 @@ Hawking’s **Chronology Protection Conjecture** [Hawking 1992] proposes that qu
 
 The PU framework is fundamentally time-asymmetric. This asymmetry is not postulated but derived from the logical structure of prediction itself, as rigorously established in **Appendix O**.
 
-**The Logical Arrow (Appendix O, Section O.5.1).** The Fundamental Predictive Loop (**Definition 4**) possesses an intrinsic ordering: Predict ($P_{int}$) → Verify ($V$) → Update ($D_{cyc}$). This ordering is definitional to what “prediction” means:
+**The Logical Arrow (Appendix O, Section O.5).** The Fundamental Predictive Loop (**Definition 4**) possesses an intrinsic ordering: Predict ($P_{int}$) → Verify ($V$) → Update ($D_{cyc}$). This ordering is definitional to what “prediction” means:
 
 - A prediction must be generated *before* it can be verified
 - Verification must occur *before* the model can be updated
@@ -282,7 +282,7 @@ The PU framework is fundamentally time-asymmetric. This asymmetry is not postula
 
 This logical arrow cannot be reversed without destroying the concept of prediction entirely. A process running Verify → Predict → Update is not a reversed prediction—it is incoherent.
 
-**The Thermodynamic Ratchet (Appendix O, Section O.5.2).** The logical arrow is physically enforced by the irreversible ‘Evolve’ process (**Definition 27**). As rigorously derived in **Appendix J** (**Theorem J.1**), any physical implementation of the SPAP update cycle requires a logically irreversible state merging with compression factor 2. By Landauer’s principle, this mandates a minimum dimensionless entropy production:
+**The Thermodynamic Ratchet (Appendix O, Section O.5).** The logical arrow is physically enforced by the irreversible 'Evolve' process (**Definition 27**). As rigorously derived in **Appendix J** (**Theorem J.1**), any physical implementation of the SPAP update cycle requires a logically irreversible state merging with compression factor 2. By Landauer’s principle, this mandates a minimum dimensionless entropy production:
 $$
 \varepsilon \geq \ln 2
 $$
@@ -292,7 +292,7 @@ $$
 P(\Sigma_{pred} < 0) \leq e^{-N\varepsilon} \leq 2^{-N}
 $$
 
-This follows from the fluctuation theorem (**Appendix O**, Section O.5.2):
+This follows from the fluctuation theorem (**Appendix O**, Section O.5):
 $$
 \langle e^{-\Sigma_{pred}} \rangle = 1
 $$
@@ -547,6 +547,40 @@ The Heisenberg uncertainty principle and the second law of thermodynamics share 
 
 The identity explains why quantum and thermodynamic descriptions of nature are mutually consistent: they are not independent theories requiring reconciliation but dual windows onto a single SPAP-constrained reality.
 
+### 14.2.6 Resolution of the Strong CP Problem
+
+The Strong CP problem—why the QCD vacuum angle $\bar{\theta} < 10^{-10}$ despite no apparent symmetry requiring it—is resolved through two independent mechanisms detailed in **Appendix K.6**.
+
+**Mechanism I ($\sigma$-Invariance):** The anti-holomorphic involution $\sigma$ on Gr(2,8) corresponds to CP transformation (Theorem K.6.1). PCE optimization requires $\sigma$-invariant vacua (Theorem K.6.5), restricting $\theta \in \{0, \pi\}$. The PCE cost functional $V_{PCE}(\theta) = V_0(1 - \cos\theta)$ selects the global minimum $\theta_{QCD} = 0$.
+
+**Mechanism II ($E_8$ Reality):** The $E_8$ root system lies in $\mathbb{R}^8$ (Lemma K.6.2). Yukawa couplings from Gaussian overlap on $E_8$ are real positive (Theorem K.6.7): $Y_{ij} \propto \exp(-\frac{3}{4}d^2_{E_8}(r_i, r_j)) \in \mathbb{R}_{>0}$. Mass positivity and continuity require $R_f \in SO(3)$ (Theorem K.6.9), yielding $\arg(\det M_q) = 0$.
+
+**Combined Result (Theorem K.6.11):**
+$$
+\bar{\theta} = \theta_{QCD} + \arg(\det M_q) = 0 + 0 = 0 \text{ (exactly)}
+$$
+
+The framework distinguishes Type I CP violation (Lagrangian parameters, forbidden by $\sigma$-invariance) from Type II CP violation (Berry holonomy, permitted). This explains why $\bar{\theta} = 0$ while $\delta_{CKM} \neq 0$.
+
+**Experimental Predictions:**
+- No QCD axion exists (null results expected in ADMX, ABRACADABRA)
+- Neutron EDM $d_n = 0$ from strong CP; SM CKM contribution $\sim 10^{-31}$ e$\cdot$cm
+
+### 14.2.7 Baryon Asymmetry from Anomaly Inflow
+
+The cosmic baryon asymmetry $\eta_B = n_B/n_\gamma \approx 6 \times 10^{-10}$ is derived in **Appendix Y** without additional assumptions beyond the emergent gauge structure.
+
+**Sakharov Conditions (Theorem Y.2):** All three conditions hold automatically:
+1. *B-violation:* Chiral electroweak anomaly $\partial_\mu J_{B+L}^\mu = 2 N_g \frac{g^2}{32\pi^2} W^a_{\mu\nu}\tilde{W}^{a\mu\nu}$
+2. *C and CP violation:* Generic complex phases from $E_8$ geometry; non-zero Jarlskog invariant for $N_g = 3$
+3. *Departure from equilibrium:* Arrow of time (Theorem O.3) and positive Unruh temperature during expansion
+
+**Quantitative Prediction (Theorem Y.9):** The baryogenesis complexity $\kappa_B = \kappa_{EW}/2 + \varepsilon/N_g = 19.48$ yields:
+$$
+\eta_B = (6.2 \pm 0.5) \times 10^{-10}
+$$
+Observational value: $\eta_B = (6.12 \pm 0.04) \times 10^{-10}$ (agreement within 1%).
+
 ## 14.3 Distinctions, Connections, and Information Processing Frameworks
 
 The PU framework distinguishes itself while connecting to other approaches:
@@ -712,7 +746,7 @@ The D₄ lattice constraint (generation 1) and A₂ lattice constraint (generati
 The single CC mechanism splits into electromagnetic (dominant, $\mathcal{R}_{\text{EM}} \sim 10^{36} \mathcal{R}_{\text{grav}}$, Definition 31) and gravitational (regulatory, Definition 32) channels. This resolves the signaling paradox and explains why CC effects haven't been definitively observed—the wrong channel (gravitational) was tested.
 
 **5. QFI-Gravity Bridge: Vacuum Geometry $\to g_0$**
-The vacuum Quantum Fisher Information structure produces the galactic acceleration scale via Definition H.0 and Theorem H.2: $g_0 = \eta' \cdot c^2\sqrt{\Lambda/3} \approx 1.18 \times 10^{-10}\,\text{m/s}^2$, connecting microscopic quantum geometry to galactic dynamics.
+The vacuum Quantum Fisher Information structure produces the galactic acceleration scale via Definition H.0 and Theorems H.1a–H.3: $g_0 = \eta' \cdot c^2\sqrt{\Lambda/3} \approx 1.18 \times 10^{-10}\,\text{m/s}^2$, connecting microscopic quantum geometry to galactic dynamics.
 
 **6. PCE-RID Bridge: Optimization $\to$ Stochasticity**
 PCE optimization under SPAP constraints selects Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) over deterministic alternatives. The irreversibility cost $\varepsilon \geq \ln 2$ enforces stochastic dynamics (Theorem 28). This bridge explains WHY nature is quantum—deterministic dynamics would be less efficient under self-referential constraints.

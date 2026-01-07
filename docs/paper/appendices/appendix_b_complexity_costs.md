@@ -8,7 +8,7 @@ dimension is transparent. Predictive Physical Complexity ($C_P$ and its proxy $\
 the channel capacity $C_{\max}$ are dimensionless, typically expressed
 in nats (natural-log base $e$). The physical relevance of all complexity-derived cost terms rests on the Dynamically Enforced Functional Correspondence (Theorem 2), rigorously proven in **Appendix D**, which equates operational cost with predictive cost in steady-state MPU optimisation.
 
-**B.1 Operational Predictive Physical Complexity $\hat{C}_v$**
+## B.1 Operational Predictive Physical Complexity $\hat{C}_v$
 
 The theoretical Predictive Physical Complexity $C_{\mathrm P}(\mu)$ (Equation 1) is defined via a limit of algorithmic complexities, making it generally uncomputable. For the system's adaptive dynamics to operate on a physical observable that tracks this complexity, a computable operational proxy is required. Within the emergent quantum setting (Proposition 4), quantum circuit complexity provides a suitable measure, possessing expected properties like monotonicity with physical resources, approximate additivity, and computational accessibility. We formally define the operator representing this observable proxy.
 
@@ -36,7 +36,7 @@ The expectation value $\langle \psi | \hat{C}_v | \psi \rangle$ for a state $|\p
 
 *Proof:* The definition of $\hat{C}_v$ as a Hermitian operator with a spectral decomposition based on quantum circuit complexity levels is standard in quantum information theory. The property of being positive-semidefinite follows from $\lambda(d) = K_0 + \Delta C(d) \ge K_0 > 0$.
 
-**B.2 Physical Resource-Cost Operators $\hat{R}, \hat{R}_I$**
+## B.2 Physical Resource-Cost Operators $\hat{R}, \hat{R}_I$
 
 The physical realization of predictive capability, quantified by complexity, incurs costs. These costs are represented by operators derived from the operational complexity operator $\hat{C}_v$ and the cost functions defined in the main text (Definition 3).
 
@@ -56,7 +56,7 @@ The operators $\hat R(C_v)$ and $\hat R_I(C_v)$ are Hermitian because the cost f
 
 *Proof:* The definition of operators via functional calculus on a Hermitian operator ($\hat{C}_v$) is a standard mathematical construction. The properties of self-adjointness (Hermitian) and positive-semidefiniteness for $\hat{R}$ and $\hat{R}_I$ follow directly from the real-valued and non-negative nature of the functions $R(\cdot)$ and $R_I(\cdot)$ when applied to the non-negative eigenvalues $\lambda(d)$ of $\hat{C}_v$.
 
-**B.3 Fundamental Complexity Bound for SPAP Prediction**
+## B.3 Fundamental Complexity Bound for SPAP Prediction
 
 **Definition B.2 (Unified Complexity Functional $C_{\text{uni}}$)**
 
@@ -98,7 +98,7 @@ This establishes the poly-logarithmic form in Equation (B.5) from a formal compu
 
 This poly-logarithmic divergence of the dimensionless unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ (Eq B.5) represents the fundamental information-processing cost within the PU framework. This cost underlies the divergence of the Predictive Physical Complexity $C_{pred}(\alpha)$ in **Theorem 14** of the main text, as $C_{pred}$ must be sufficient to meet $C_{uni}$. Since physical realizability requires finite $C_P$, attaining performance arbitrarily close to $\alpha_{SPAP}$ is physically unattainable due to these diverging information-processing requirements.
 
-**B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure**
+## B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure
 
 The total energy density associated with an individual MPU incorporates contributions from its baseline operation, complexity-related costs, and interactions, including the thermodynamic cost of irreversibility.
 
@@ -116,7 +116,7 @@ where:
 
 The constants $V_0$ (effective MPU volume) and $\tau_0$ (characteristic MPU operational timescale, identified with $\tau_{min}$ from Theorem 29) are fundamental parameters related to the MPU scale. $\hat{\rho}_v$ is Hermitian by construction. Its expectation value $\langle \hat{\rho}_v \rangle = \text{Tr}(\rho_v \hat{\rho}_v)$ in the local MPU state $\rho_v$ represents the average local energy density associated with MPU $v$.
 
-**Definition B.4 (Structure of Interaction Operator $\hat{V}_{vv'}$) **
+**Definition B.4 (Structure of Interaction Operator $\hat{V}_{vv'}$)**
 
 The interaction operator $\hat{V}_{vv'}$ between MPUs $v$ and $v'$ must account for both conservative energy exchange and the energy implications of the inherent thermodynamic irreversibility ($\varepsilon > 0$, Thm 31) of the ND-RID/'Evolve' process (Def 27). We decompose it as:
 $$ \hat{V}_{vv'} = \hat{V}_{dissip-contrib}^{(vv')} + \hat{V}_{pot}^{(vv')} \quad \text{(B.7)} $$
@@ -128,7 +128,7 @@ $$ \hat{V}_{vv'} = \hat{V}_{dissip-contrib}^{(vv')} + \hat{V}_{pot}^{(vv')} \qua
     $$ \int_0^{\tau_{int}} \mathbb{E}[\dot{S}_{prod}(t)] dt \ge k_B \varepsilon \quad (\text{Consistency Constraint}) \quad \text{(B.10)} $$
     The term $\hat{V}_{dissip-contrib}^{(vv')}$ represents the average local system energy required to support this necessary dissipative process, consistent with the dynamics (B.8) and the constraint (B.10).
 
-**B.5 Microscopic Flow Operators and Conservation Laws**
+## B.5 Microscopic Flow Operators and Conservation Laws
 
 To construct the full stress-energy tensor, operators for momentum density and momentum flux are defined implicitly by requiring local conservation at the microscopic level.
 
@@ -143,7 +143,7 @@ $$
 $$
 where $\hat{\rho}_v$ is from Eq (B.6), $\frac{d}{dt} = \frac{i}{\hbar}[\hat{H}_{total}, \cdot]$, and $\hat{q}_{v,j}$ is the energy flux operator. Assuming the standard relation $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, these equations implicitly define the flux operators consistent with the Hamiltonian and energy density.
 
-**B.6 Canonical Microscopic Stress-Energy Tensor $\hat{T}^{\mu\nu}_{(can)}$**
+## B.6 Canonical Microscopic Stress-Energy Tensor $\hat{T}^{\mu\nu}_{(can)}$
 
 We assemble the density and flux operators into a canonical stress-energy tensor.
 
@@ -166,7 +166,7 @@ $$
 $$
 *Proof:* Follows directly by substituting the definitions into the divergence equation and applying the local conservation laws (Eq B.11, B.12).
 
-**B.7 Symmetric Physical Microscopic Stress-Energy Tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}$**
+## B.7 Symmetric Physical Microscopic Stress-Energy Tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}$
 
 The canonical tensor is symmetrized using the Belinfante-Rosenfeld procedure to obtain the physically relevant tensor.
 
@@ -187,7 +187,7 @@ $\hat{\Theta}_{\mu\nu}^{(MPU)}$ is symmetric and satisfies $\partial_\mu^{(v)} \
 
 We identify the symmetric, conserved tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}(v)$ from Eq (B.14) as the physical microscopic stress-energy tensor operator for MPU $v$.
 
-**B.8 Macroscopic Stress–Energy Tensor $T_{\mu\nu}^{(MPU)}$**
+## B.8 Macroscopic Stress–Energy Tensor $T_{\mu\nu}^{(MPU)}$
 
 The macroscopic tensor sourcing emergent gravity is the coarse-grained average.
 
@@ -208,7 +208,7 @@ $$
 where $\nabla^{\mu}$ is the covariant derivative compatible with the emergent metric $g_{\mu\nu}$.
 *Proof:* Follows from diffeomorphism invariance via Noether's second theorem (Appendix F, Thm F.1).
 
-**B.9 Correspondence with Standard Forms**
+## B.9 Correspondence with Standard Forms
 
 The emergent tensor reproduces known physical forms.
 
@@ -225,7 +225,7 @@ T_{\mu\nu}^{(MPU)} \big|_{th} = (\rho_{th} + p_{th}/c^2) u_\mu u_\nu + p_{th} g_
 $$
 *Proof:* Follows from Poincaré invariance for (a) and isotropy in LRF for (b).
 
-**B.10 Construction Pathway (Summary)**
+## B.10 Construction Pathway (Summary)
 
 This appendix detailed the construction of $T_{\mu\nu}^{(MPU)}$:
 

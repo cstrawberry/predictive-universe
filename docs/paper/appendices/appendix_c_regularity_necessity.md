@@ -175,7 +175,7 @@ Stability decays exponentially with network size $N$ and the complexity variance
 
 We now combine the results to demonstrate formally that geometric regularity is necessary for viability.
 
- **Definition C.4 (Viability Functional).** Let $\mathcal{C} = (\mathcal{N}, \{C_v\}, \rho_{agg})$ represent a complete configuration of the MPU network. We define the Viability Functional $\mathcal{V}[\mathcal{C}] \in [0, \infty)$ which quantifies the degree to which configuration $\mathcal{C}$ simultaneously satisfies the core requirements R1, R2, and R3. A configuration is viable only if all requirements are met. We define $\mathcal{V}[\mathcal{C}]$ such that $\mathcal{V}[\mathcal{C}] \ge 1$ indicates viability, using normalized measures for each requirement:
+**Definition C.4 (Viability Functional).** Let $\mathcal{C} = (\mathcal{N}, \{C_v\}, \rho_{agg})$ represent a complete configuration of the MPU network. We define the Viability Functional $\mathcal{V}[\mathcal{C}] \in [0, \infty)$ which quantifies the degree to which configuration $\mathcal{C}$ simultaneously satisfies the core requirements R1, R2, and R3. A configuration is viable only if all requirements are met. We define $\mathcal{V}[\mathcal{C}]$ such that $\mathcal{V}[\mathcal{C}] \ge 1$ indicates viability, using normalized measures for each requirement:
  $$
     \mathcal{V}[\mathcal{C}] = \min\left\{ R_1[\mathcal{C}], R_2[\mathcal{C}], R_3[\mathcal{C}] \right\}
     \quad \text{(C.17)}
@@ -187,7 +187,7 @@ where:
 
 **Definition C.5 (Viable Configuration).** A configuration $\mathcal{C}$ is viable if and only if it satisfies all core requirements simultaneously, represented by the condition $\mathcal{V}[\mathcal{C}] \ge 1$.
 
- **Theorem C.5 (Quantitative Non-Viability of Irregular Geometries).** If an MPU network configuration $\mathcal{C}$ exhibits significant geometric irregularity (violating Def C.1 or Def C.2 as refined in Def C.3), then its Viability Functional $\mathcal{V}[\mathcal{C}]$ falls below 1 for sufficiently large system size $L$ or sufficiently large curvature variance Var$(\kappa_{\mathcal{N}})$ (or absence of $\kappa_R > 0$). Such configurations are non-viable.
+**Theorem C.5 (Quantitative Non-Viability of Irregular Geometries).** If an MPU network configuration $\mathcal{C}$ exhibits significant geometric irregularity (violating Def C.1 or Def C.2 as refined in Def C.3), then its Viability Functional $\mathcal{V}[\mathcal{C}]$ falls below 1 for sufficiently large system size $L$ or sufficiently large curvature variance Var$(\kappa_{\mathcal{N}})$ (or absence of $\kappa_R > 0$). Such configurations are non-viable.
 
 *Proof:*
 1.  **Consequences of Irregularity:** Geometric irregularity means either anomalous dimension (violating Def C.1) or failure to maintain a positive lower bound on Ricci curvature and/or presence of large curvature fluctuations (violating Def C.2 as refined in Def C.3), or both.

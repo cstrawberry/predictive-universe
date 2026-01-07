@@ -135,7 +135,7 @@ The consistency of the framework's stance—allowing potential statistical FTL i
 
 In summary, the AQFT analysis (Appendix F) provides a rigorous consistency setting for emergent locality while allowing bounded, state‑mediated statistical influence (which is hypothesized and bounded).
 
-**Theorem (No actionable capacity without shared decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. Alice chooses a local instrument $\Phi_x$ labeled by a message $x$. Bob’s local detector is keyed by a classical variable $K$ (unavailable to Bob at measurement time), selecting a unital CP Heisenberg map $\Lambda_K^*$, and he measures effects $\{E_i^{(K)}\}$ with $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume the key distribution $\pi(K)$ is independent of $x$, and that the averaged Heisenberg map
+**Theorem 42a (No actionable capacity without shared decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. Alice chooses a local instrument $\Phi_x$ labeled by a message $x$. Bob’s local detector is keyed by a classical variable $K$ (unavailable to Bob at measurement time), selecting a unital CP Heisenberg map $\Lambda_K^*$, and he measures effects $\{E_i^{(K)}\}$ with $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume the key distribution $\pi(K)$ is independent of $x$, and that the averaged Heisenberg map
 $$
 \overline{\Lambda^*}:=\sum_K \pi(K)\,\Lambda_K^*
 $$

@@ -119,7 +119,7 @@ Under the framework's core axioms (POP, PCE, ND-RID dynamics) and the **Assumpti
 **Stage 1: Baseline Error is Strictly Positive**
 ND-RID Implementation of Logical Gates: A logical gate $G_{\text{logic}}$ is realized by a sequence of elementary ND-RID channels. The ideal error-free implementation corresponds to unitary $\mathcal{U}_{\text{ideal}}$. The actual physical channel is the composition $\mathcal{E}_{\text{actual}} = \mathcal{E}_{N_k} \circ \cdots \circ \mathcal{E}_{N_1}$.
 
-**Lemma A.0.2 (Contractivity of Composite Channel):** Each elementary ND-RID channel $\mathcal{E}_{N_j}$ is strictly contractive in trace distance with factor $f_{\text{RID}}(j) < 1$ (Lemma E.1). The composite channel has contractivity factor $f_{\text{actual}} \leq \prod_j f_{\text{RID}}(j) < 1$.
+**Lemma A.0.1 (Contractivity of Composite Channel):** Each elementary ND-RID channel $\mathcal{E}_{N_j}$ is strictly contractive in trace distance with factor $f_{\text{RID}}(j) < 1$ (Lemma E.1). The composite channel has contractivity factor $f_{\text{actual}} \leq \prod_j f_{\text{RID}}(j) < 1$.
 *Proof.* Chain rule for trace distance under sequential contractive maps. □
 
 **Definition A.0.2 (Baseline Logical Gate Error):** The inherent error probability of uncorrected implementation relative to ideal gate is:
@@ -146,7 +146,7 @@ V_{\text{rel}}(p_{\text{err}}) := \lambda R(C_{\text{err}}(p_{\text{err}})) \app
 $$
 where $\gamma_p \geq 1$ (superlinear costs, Definition 3).
 
-**Lemma A.0.3 (Divergence of Reliability Cost):** The marginal cost of improving reliability diverges as perfect reliability is approached:
+**Lemma A.0.2 (Divergence of Reliability Cost):** The marginal cost of improving reliability diverges as perfect reliability is approached:
 $$
 V_{\text{rel}}'(p_{\text{err}}) = \lambda R'(C_{\text{err}}) \left( -\frac{A}{p_{\text{err}}} \right) < 0 \quad \text{(A.0.5)}
 $$
@@ -189,7 +189,7 @@ There exists a unique value $p_{\text{err}}^* \in (0, p_{\text{err},0}]$ minimiz
 
 *Proof.* We analyze $V_{\text{tot}}'(p_{\text{err}}) = V_{\text{rel}}'(p_{\text{err}}) + V_{\text{err}}'(p_{\text{err}})$.
 *   **Continuity:** Both $V_{\text{rel}}$ and $V_{\text{err}}$ are $C^1$ on $(0, p_{\text{err},0}]$ under standard assumptions for $R(C)$ and $PP(C)$.
-*   **Signs of Derivatives:** From Lemma A.0.3, $V_{\text{rel}}'(p) < 0$. From Proposition A.0.5, $V_{\text{err}}'(p) > 0$.
+*   **Signs of Derivatives:** From Lemma A.0.2, $V_{\text{rel}}'(p) < 0$. From Proposition A.0.5, $V_{\text{err}}'(p) > 0$.
 *   **Limits:** As $p_{\text{err}} \to 0^+$, $V_{\text{rel}}'(p_{\text{err}}) \to -\infty$ while $V_{\text{err}}'(p_{\text{err}}) \to \Gamma_0 T C_{\text{alloc}} PP'(C_{\text{alloc}})$ (finite positive). Therefore $\lim_{p_{\text{err}} \to 0^+} V_{\text{tot}}'(p_{\text{err}}) = -\infty$.
 *   **Existence:** By Intermediate Value Theorem, since $V_{\text{tot}}'(p) \to -\infty$ as $p \to 0$ and $V_{\text{tot}}'$ is continuous, there exists at least one point $p_{\text{err}}^* \in (0, p_{\text{err},0}]$ where $V_{\text{tot}}'(p_{\text{err}}^*) = 0$.
 *   **Uniqueness:** The second derivative is $V_{\text{tot}}''(p) = V_{\text{rel}}''(p) + V_{\text{err}}''(p)$. For $V_{\text{rel}}$:
