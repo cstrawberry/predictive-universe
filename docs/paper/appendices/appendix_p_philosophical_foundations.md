@@ -621,9 +621,7 @@ Wigner asked why the language of mathematics is appropriate for physics. The fra
 
 The transcendental structure of the framework is exhibited by a single logical chain from the certainty of the Cogito to the observable universe:
 
-$$
-\text{Cogito} \to \text{Prediction} \to \text{SPAP} \to \varepsilon = \ln 2 \to a = e^\varepsilon = 2 \to M = 24 \to D = 4 \to \text{Physics}
-$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
 
 Each arrow represents a necessary implication:
 
@@ -775,9 +773,7 @@ This claim has precise mathematical content. The emergence is "strong" in the fo
 
 The complete parameter-free derivation chain from foundational axioms to emergent spacetime structure proceeds as follows (cf. Section P.7.2; Appendix Z):
 
-$$
-\text{Cogito} \to \text{Prediction} \to \text{SPAP} \to \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4 \to \text{Spacetime}
-$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
 
 Each arrow represents a necessary implication:
 
@@ -2801,7 +2797,7 @@ $$\boxed{
 
 The Monster group derivation extends the fundamental chain established in Section P.7 of Appendix P:
 
-$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \to \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4 \to \text{Spacetime}$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
 
 This appendix continues the chain beyond spacetime emergence to the symmetry structure of the vacuum:
 
@@ -2809,7 +2805,7 @@ $$M = 24 \to \mathcal{G}_{24} \to \Lambda_{24} \to V_{\Lambda_{24}} \to V^\natur
 
 The complete chain from consciousness to the Monster is therefore:
 
-$$\boxed{\text{Cogito} \to \text{SPAP} \to \varepsilon = \ln 2 \to M = 24 \to \Lambda_{24} \to V^\natural \to \mathbb{M}}$$
+$$\boxed{\text{Cogito} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon = \ln 2 \to M = 24 \to \Lambda_{24} \to V^\natural \to \mathbb{M}}$$
 
 Each arrow represents a necessary implication under PCE optimization. The Monster group is not an endpoint arbitrarily attached to the framework—it is the automorphism group of the structure that PCE necessarily selects as the optimal vacuum.
 

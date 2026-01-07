@@ -16,6 +16,6 @@ The framework achieves a fundamental unification of entropy domains: SPAP, Shann
 
 The complete derivation chain from the *Cogito* to observable physics proceeds as:
 
-$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \to \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4 \to \text{Physics}$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} + \text{Landauer} \to \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
 
 The PU framework thus offers a unified deductive structure linking consciousness, quantum theory, and gravity to the fundamental logic and economics of prediction.
