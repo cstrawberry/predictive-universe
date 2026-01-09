@@ -126,7 +126,7 @@ The claim is not that retrocausality is impossible in all conceivable universes,
 
 The ‘Evolve’ process (**Definition 27**), which physically instantiates the Verification and Update phases, necessarily incurs an irreducible entropy cost. As rigorously derived in **Appendix J**:
 
-- **Lemma J.1** proves that any finite-memory implementation of the SPAP update cycle requires a logically irreversible state merging with compression factor 2. The mapping from input states $(\phi_t, p_t)$ to output states $(\phi_{t+1}, p_{ready})$ takes 4 distinct logical input states to 2 distinct output states (since $p_{ready}$ is fixed). By the pigeonhole principle, at least two distinct input states must map to the same output state, making the cycle inherently information-destroying.
+- **Lemma J.1** proves that any finite-memory implementation of the SPAP update cycle requires a logically irreversible state merging with compression factor 2. The mapping from input states $(\phi_t, p_t)$ to output states $(\phi_{t+1}, p_{ready})$ takes 4 distinct logical input states to 2 distinct output states (since $p_{ready}$ is fixed). By the pigeonhole principle, at least two distinct input states must map to the same output state, making the cycle inherently information-erasing from the subsystem perspective. This information is not destroyed but relocated to system-environment correlations, consistent with global unitarity (Theorem E.9.5) and the entropy unification principle (Thesis P.6.1).
 - **Theorem J.1** (which formally proves **Theorem 31**) establishes that this logical state merging, combined with Landauer’s principle [Landauer 1961], mandates a minimum dimensionless entropy production:
 $$
 \varepsilon \geq \ln 2

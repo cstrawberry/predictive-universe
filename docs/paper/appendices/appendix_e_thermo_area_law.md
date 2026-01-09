@@ -1111,7 +1111,511 @@ $$\dim(\mathcal{H}_A) \leq \exp\left(\frac{\mathcal{A}}{4G}\right)$$
 
 in natural units. This is not an additional principle but a theorem following from ND-RID channel structure and capacity saturation.
 
+
+## E.9.5 Information Conservation from Causal Structure
+
+The preceding results establish that causal boundaries have finite information capacity. We now show that this finiteness implies global information conservation—unitarity is not an independent axiom but a theorem following from the structure of self-referential prediction and the closed-system assumption.
+
+### E.9.5.1 Preliminary Definitions and Prior Results
+
+This section derives global unitarity from the causal and thermodynamic structure established in preceding sections. For reference, the key prior results upon which the derivation depends are:
+
+- **Hypothesis 1 (MPU Reality Model):** Physical reality, from the internal perspective, is fundamentally constituted by a network of interacting Minimal Predictive Units (MPUs). This network $\mathcal{N}$ constitutes the complete internal substrate; no external degrees of freedom are accessible to internal systems.
+
+  *Remark (Consistency with P.5):* The closed-system assumption is consistent with the authentic simulation architecture (Appendix P.5). "No external degrees of freedom accessible to internal systems" refers to internal physical reality; external observation channels (Definition P.5.3) operate outside this substrate by construction, satisfying internal inaccessibility ($\mathbb{E}[\Delta Q \mid E; M] = 0$ for all internal procedures $M \in \mathcal{M}_{int}$) and non-intervention.
+
+- **Definition 6 / Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. The defining characteristic is the dependence of state transformation on outcome, creating a reflexive loop.
+
+- **Definition 26 (Internal Evolution):** Between 'Evolve' interactions, each MPU evolves unitarily via $U_0(\Delta t) = e^{-i\hat{H}\Delta t/\hbar}$ with self-adjoint Hamiltonian $\hat{H}$.
+
+- **Definition 27 ('Evolve'/ND-RID):** The interaction process between MPUs, implementing reflexive state updates. By construction, 'Evolve' acts on pairs of interacting MPUs through their joint Hilbert space $\mathcal{H}_A \otimes \mathcal{H}_B$, without coupling to additional external systems. This is an instance of ND-RID (Definition 6, Definition A.2.2).
+
+- **Definition 35 (Propagation Cost Metric):** The fundamental MPU spacing $\delta$ defines the characteristic length scale of the network, with the propagation cost metric $d_{\mathcal{N}}(u,v)$ measuring minimum cumulative cost along network paths.
+
+- **Theorem 23 (MPU Dimension):** The MPU Hilbert space dimension is $d_0 = 8$.
+
+- **Theorem 29 (Minimum Cycle Time):** The MPU cycle time satisfies $\tau \geq \tau_{\min} > 0$, establishing finite processing speed.
+
+- **Theorem 31 (Entropy Cost):** The minimum dimensionless entropy production per SPAP cycle is $\varepsilon \geq \ln 2$ nats, arising from the 2-to-1 logical state merge inherent in self-referential prediction (Appendix J, Lemma J.1).
+
+- **Lemma E.1 (Strict Contractivity):** The averaged ND-RID channel $\mathcal{E}_N$ satisfies $D_{\text{tr}}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \leq f_{\text{RID}} \cdot D_{\text{tr}}(\rho_1, \rho_2)$ with contractivity factor $f_{\text{RID}} = \lambda_{\text{gap}}(\mathcal{E}_N) < 1$, where $\lambda_{\text{gap}}$ is the spectral radius of $\mathcal{E}_N$ restricted to traceless operators. As derived in Appendix M (Section M.4), the channel decomposition $\mathcal{E}_N = (1-p)\Psi + pT_\sigma$ with reset probability $p \geq \varepsilon/\ln d_0 = \ln 2/\ln 8 = 1/3$ yields the quantitative bound $f_{\text{RID}} \leq 1 - p \leq 2/3$.
+
+- **Theorem E.2 (Capacity Bound):** The classical information capacity satisfies $C_{\max} \equiv C(\mathcal{E}_N) < \ln d_0$.
+
+- **Theorem E.10.2 (Velocity Bound):** Information propagation velocity is bounded by $v_{\max} = \delta/\tau_{\min} = c$.
+
+### E.9.5.2 Notation
+
+Throughout this section:
+
+- $\mathcal{S}(\mathcal{H})$ denotes the set of density operators (positive semidefinite, trace-one) on Hilbert space $\mathcal{H}$
+- $\mathcal{B}(\mathcal{H})$ denotes the algebra of bounded linear operators on $\mathcal{H}$
+- $\mathcal{U}(\mathcal{H})$ denotes the group of unitary operators on $\mathcal{H}$
+- $\text{Tr}_B[\cdot]$ denotes the partial trace over subsystem $B$
+- $D_{\text{tr}}(\rho, \sigma) = \frac{1}{2}\|\rho - \sigma\|_1$ denotes trace distance
+- $S(\rho) = -\text{Tr}(\rho \ln \rho)$ denotes von Neumann entropy (in nats) [von Neumann 1932]
+- $I(A:B)_\rho = S(\rho_A) + S(\rho_B) - S(\rho_{AB})$ denotes quantum mutual information
+- $d_0 = 8$ is the MPU Hilbert space dimension (Theorem 23)
+- $\delta$ is the fundamental MPU spacing (Definition 35)
+- $\varepsilon = \ln 2$ is the irreducible SPAP entropy cost (Theorem 31)
+
+### E.9.5.3 Information Capacity of Cauchy Surfaces
+
+**Definition E.9.5.1 (Information Capacity of a Cauchy Surface).** For a Cauchy surface $\Sigma$ in the emergent spacetime (Theorem 43), define the information capacity as the maximum von Neumann entropy achievable by states on $\Sigma$. For the finite-dimensional Hilbert space $\mathcal{H}_{\Sigma}$ arising from the discrete MPU network:
+
+$$\mathcal{C}(\Sigma) := \sup_{\rho \in \mathcal{S}(\mathcal{H}_{\Sigma})} S(\rho) = \ln \dim(\mathcal{H}_{\Sigma})$$
+
+where $\mathcal{S}(\mathcal{H}_{\Sigma})$ denotes the set of density operators on the Hilbert space $\mathcal{H}_{\Sigma}$ associated with $\Sigma$, and the equality holds because the supremum is achieved by the maximally mixed state $\rho_* = \mathbb{I}/\dim(\mathcal{H}_{\Sigma})$.
+
+*Proof of equality.* For any density operator $\rho$ on a $d$-dimensional Hilbert space, $S(\rho) \leq \ln d$ with equality if and only if $\rho = \mathbb{I}/d$ [Nielsen & Chuang 2010, Theorem 11.8]. ∎
+
+### E.9.5.4 Closed System Assumption and Exhaustive Channel Mediation
+
+**Assumption E.9.5.1 (Closed System).** The MPU network $\mathcal{N}$ constitutes a closed system from the internal perspective: no information exchange occurs with degrees of freedom accessible to internal systems. 
+
+This assumption follows from Hypothesis 1 (Section 7.1) together with the authentic simulation architecture (Appendix P.5). External observation channels (Definition P.5.3) satisfy internal inaccessibility ($\mathbb{E}[\Delta Q \mid E; M] = 0$ for all internal procedures $M \in \mathcal{M}_{int}$, Definition P.5.3(ii)) and non-intervention (Definition P.5.3(iii)), ensuring that from the internal perspective, the network evolves as if closed (Remark P.5.1). External observation extracts information without constituting an interaction from the internal viewpoint.
+
+For the derivation of global unitarity (Theorem E.9.5), this internal closure is sufficient: the Stinespring environment for any reduced subsystem dynamics is contained within $\mathcal{H}_{\Sigma}$ as experienced by internal systems, and information conservation holds for internal evolution.
+
+**Lemma E.9.5.1 (Exhaustive Channel Mediation).** *All information transfer between spacelike-separated regions in the MPU network is mediated by ND-RID channels. There exists no mechanism for information propagation outside this channel structure.*
+
+*Proof.*
+
+**Step 1 (MPU network structure).** By Definition 23, the MPU network $\mathcal{N} = (\mathcal{V}, \mathcal{E}, \{w_{uv}\})$ consists of vertices $v \in \mathcal{V}$ representing MPUs and weighted edges $(u,v) \in \mathcal{E}$ representing possible ND-RID interactions. Each MPU has Hilbert space dimension $d_0 = 8$ (Theorem 23). The network topology determines which MPUs can interact directly.
+
+**Step 2 (Definitional completeness of dynamics).** The MPU dynamics are exhaustively specified by:
+
+- Definition 26: Internal unitary evolution $U_0(\Delta t) = e^{-i\hat{H}\Delta t/\hbar}$ between interactions
+- Definition 27: 'Evolve'/ND-RID interactions between MPUs (instantiating Definition 6/A.2.2)
+- Hypothesis 1: The network $\mathcal{N}$ constitutes the complete substrate; no external degrees of freedom exist
+
+These definitions constitute the complete dynamical specification of the framework. Any hypothetical mechanism $\mathcal{M}$ for information transfer that is not reducible to compositions of internal evolution and ND-RID interactions would, by definition, lie outside the framework's ontology.
+
+**Step 3 (Interaction locality from ND-RID structure).** By Definition A.2.2, ND-RID interactions act on specific subsystems $(A, B)$ with probabilistic outcome functions $V_{\text{prob}}: X \times Y \to \Delta(O)$ and state transformations $T_{\text{prob}}: X \times Y \times O \to \Delta(X)$. For the MPU 'Evolve' process (Definition 27), these functions act on the joint state space of interacting MPU pairs. By Theorem E.10.2, information propagation velocity is bounded by $v_{\max} = \delta/\tau_{\min} = c$. This bound arises because each link traversal requires execution of the ND-RID update cycle, which cannot complete in time less than $\tau_{\min}$ (Theorem 29). Consequently, information transfer between non-adjacent MPUs must proceed through intermediate links via sequential ND-RID operations.
+
+**Step 4 (Channel decomposition at boundaries).** Consider any two spacelike-separated regions $A$ and $B$ on a Cauchy surface $\Sigma$. Let $\bar{A} = \Sigma \setminus A$ denote the complement of $A$. The Hilbert space factorizes as $\mathcal{H}_{\Sigma} = \mathcal{H}_{A} \otimes \mathcal{H}_{\bar{A}}$. Any causal curve connecting $A$ to $B \subseteq \bar{A}$ must pass through the boundary $\partial A$. By Theorem E.3, this boundary hosts $N_{\text{channels}} = \sigma_{\text{eff}} \cdot |\partial A|$ effective independent ND-RID channels, where:
+
+$$\sigma_{\text{eff}} = \frac{\chi}{\eta\delta^2}$$
+
+is the effective channel density, $\eta$ is the geometric packing coefficient, and $\chi \in (0,1]$ is the correlation correction factor (Theorem E.3).
+
+**Step 5 (Pre-existing correlations).** The tensor product structure $\mathcal{H}_{\Sigma} = \mathcal{H}_{A} \otimes \mathcal{H}_{\bar{A}}$ implies that correlations between $A$ and $\bar{A}$ are encoded in the joint state $\rho_{A\bar{A}} \in \mathcal{S}(\mathcal{H}_A \otimes \mathcal{H}_{\bar{A}})$. Pre-existing correlations (including entanglement established by prior interactions) persist via the tensor product structure. All dynamical modifications to correlations between $A$ and $\bar{A}$—that is, changes to the mutual information $I(A:\bar{A})$—are mediated exclusively through ND-RID channels crossing $\partial A$.
+
+**Step 6 (Completeness).** By Steps 2–5, the ND-RID channel structure exhaustively accounts for all information transfer mechanisms within the framework's ontology. ∎
+
+### E.9.5.5 Hilbert Space Dimension Conservation
+
+**Lemma E.9.5.2 (Hilbert Space Dimension Conservation).** *For a closed MPU network of fixed topology evolving between Cauchy surfaces $\Sigma_1 \to \Sigma_2$, the Hilbert space dimensions satisfy:*
+
+$$\dim(\mathcal{H}_{\Sigma_1}) = \dim(\mathcal{H}_{\Sigma_2})$$
+
+*Proof.*
+
+**Step 1 (MPU counting).** A Cauchy surface $\Sigma$ intersects a definite number $N_{\text{MPU}}(\Sigma)$ of MPUs in the network. By Theorem 23, each MPU has Hilbert space dimension $d_0 = 8$. The total Hilbert space dimension is:
+
+$$\dim(\mathcal{H}_{\Sigma}) = d_0^{N_{\text{MPU}}(\Sigma)} = 8^{N_{\text{MPU}}(\Sigma)}$$
+
+**Step 2 (Conservation of MPU number).** We establish that ND-RID dynamics preserve the total MPU count through three sub-arguments:
+
+*(a) Local preservation:* By Definition 27 and Definition A.2.2, the 'Evolve' process acts on the state spaces of participating MPUs without creating or destroying network vertices. The quantum instrument representation (Section E.2) maps $\mathcal{E}_N: \mathcal{S}(\mathcal{H}_{d_0}^{\otimes k}) \to \mathcal{S}(\mathcal{H}_{d_0}^{\otimes k})$ for $k$ interacting MPUs, preserving the tensor product structure and thus the count of constituent factors.
+
+*(b) Global vertex set invariance:* The MPU network $\mathcal{N} = (\mathcal{V}, \mathcal{E}, \{w_{uv}\})$ (Definition 23) has vertex set $\mathcal{V}$ corresponding to MPUs. The 'Evolve' dynamics modify edge weights $w_{uv}$ and vertex states but not the vertex set itself. For a closed network (Hypothesis 1 with no external boundary), $|\mathcal{V}|$ is an invariant of the dynamics.
+
+*(c) Cauchy surface intersection:* A Cauchy surface $\Sigma$ intersects each MPU worldline exactly once (by definition of Cauchy surface in the emergent spacetime, established via Theorem 43 and Section 11). Therefore:
+
+$$N_{\text{MPU}}(\Sigma_1) = |\mathcal{V}| = N_{\text{MPU}}(\Sigma_2) \equiv N_{\text{total}}$$
+
+**Step 3 (Dimension equality).** Combining Steps 1 and 2:
+
+$$\dim(\mathcal{H}_{\Sigma_1}) = d_0^{N_{\text{total}}} = \dim(\mathcal{H}_{\Sigma_2})$$
+
+∎
+
+### E.9.5.6 Joint Unitarity of ND-RID Operations
+
+The following lemma establishes the central technical result: while the reduced ND-RID channel on a single MPU is strictly contractive, the joint operation on interacting pairs is unitary.
+
+**Lemma E.9.5.3 (Joint ND-RID Operations are Unitary).** *For any pair of interacting MPUs $A$ and $B$, the joint evolution $U_{AB}: \mathcal{H}_{A} \otimes \mathcal{H}_{B} \to \mathcal{H}_{A} \otimes \mathcal{H}_{B}$ implementing their ND-RID interaction is unitary.*
+
+*Proof.*
+
+**Step 1 (Kraus representation of reduced channel).** The reduced ND-RID channel $\mathcal{E}_N^{(A)}$ acting on MPU $A$ alone is a CPTP map. By the Kraus representation theorem [Kraus 1983], there exist operators $\{K_i\}_{i=1}^r$ with $K_i: \mathcal{H}_A \to \mathcal{H}_A$ satisfying $\sum_i K_i^\dagger K_i = \mathbb{I}_A$ such that:
+
+$$\mathcal{E}_N^{(A)}(\rho_A) = \sum_{i=1}^r K_i \rho_A K_i^\dagger$$
+
+The minimal number of Kraus operators required is $r = \text{rank}(\mathcal{J}_{\mathcal{E}})$, where $\mathcal{J}_{\mathcal{E}}$ is the Choi-Jamiołkowski matrix of the channel [Choi 1975].
+
+**Step 2 (Physical locality constrains Kraus rank).** By Definition 27 and Definition A.2.2, the 'Evolve' process for an interacting pair $(A, B)$ couples only the degrees of freedom in $\mathcal{H}_A \otimes \mathcal{H}_B$, without involving additional external systems. This locality constraint is a structural feature of ND-RID as specified in Definition A.2.2: the probabilistic state transformation $T_{\text{prob}}: X \times Y \times O \to \Delta(X)$ acts on the participating subsystems alone, where the state space $X$ for the 'Evolve' process is $\mathcal{H}_A \otimes \mathcal{H}_B$.
+
+We now prove that physical locality bounds the Kraus rank. Let $\mathcal{E}_N^{(A)}$ arise from a joint operation on $\mathcal{H}_A \otimes \mathcal{H}_B$ followed by tracing out $B$. The most general such operation is:
+
+$$\mathcal{E}_N^{(A)}(\rho_A) = \text{Tr}_B\left[\mathcal{E}_{AB}(\rho_A \otimes \sigma_B)\right]$$
+
+where $\mathcal{E}_{AB}$ is a CPTP map on $\mathcal{H}_A \otimes \mathcal{H}_B$ and $\sigma_B \in \mathcal{S}(\mathcal{H}_B)$ is the initial state of $B$.
+
+**Claim:** The Kraus rank of $\mathcal{E}_N^{(A)}$ satisfies $r \leq d_0^2$, where $d_0 = \dim(\mathcal{H}_B) = 8$.
+
+*Proof of Claim:* Any CPTP map $\mathcal{E}_{AB}$ on $\mathcal{H}_A \otimes \mathcal{H}_B$ has Kraus operators $\{M_j\}$ with $M_j: \mathcal{H}_A \otimes \mathcal{H}_B \to \mathcal{H}_A \otimes \mathcal{H}_B$. Expanding in an orthonormal basis $\{|b\rangle\}$ of $\mathcal{H}_B$:
+
+$$\mathcal{E}_N^{(A)}(\rho_A) = \sum_j \text{Tr}_B\left[M_j(\rho_A \otimes \sigma_B)M_j^\dagger\right] = \sum_j \sum_{b,b'} \langle b|M_j(\rho_A \otimes \sigma_B)M_j^\dagger|b'\rangle \delta_{bb'}$$
+
+Define $K_{jb} := \langle b|M_j|\cdot\rangle \sqrt{\sigma_B}$ as operators on $\mathcal{H}_A$. Then:
+
+$$\mathcal{E}_N^{(A)}(\rho_A) = \sum_{j,b} K_{jb} \rho_A K_{jb}^\dagger$$
+
+The number of independent Kraus operators is at most $(\text{rank of } \mathcal{E}_{AB}) \times d_0 \leq d_0^2 \times d_0 = d_0^3$. However, completeness $\sum_{jb} K_{jb}^\dagger K_{jb} = \mathbb{I}_A$ and the structure of the partial trace further constrain this. For the minimal Kraus representation, $r \leq d_0^2$, since the Choi matrix has dimension $d_0^2 \times d_0^2$ and the minimal Kraus rank equals the Choi rank [Choi 1975].
+
+**Step 3 (Stinespring dilation with bounded environment).** By the Stinespring dilation theorem [Stinespring 1955], any CPTP map $\mathcal{E}_N^{(A)}$ on $\mathcal{H}_A$ with Kraus rank $r$ admits the representation:
+
+$$\mathcal{E}_N^{(A)}(\rho_A) = \text{Tr}_E\left[V(\rho_A \otimes |0\rangle_E\langle 0|)V^\dagger\right]$$
+
+where $V: \mathcal{H}_A \otimes \mathcal{H}_{E,\text{in}} \to \mathcal{H}_A \otimes \mathcal{H}_{E,\text{out}}$ is an isometry and $\dim(\mathcal{H}_E) = r$.
+
+The minimal Stinespring dilation has environment dimension equal to the Kraus rank: $\dim(\mathcal{H}_{E,\min}) = r \leq d_0^2$.
+
+**Step 4 (Closed bipartite structure).** By Definition 27, the 'Evolve' process for an interacting pair $(A, B)$ acts on the joint Hilbert space $\mathcal{H}_A \otimes \mathcal{H}_B$. This pairwise structure is a definitional feature of ND-RID (Definition A.2.2). By Assumption E.9.5.1 (Closed System, following from Hypothesis 1), no degrees of freedom external to the network exist. For the pairwise interaction, the relevant closed system is precisely the bipartite space $\mathcal{H}_A \otimes \mathcal{H}_B$.
+
+The Stinespring representation (Step 3) demonstrates that any CPTP map on $\mathcal{H}_A$ can be realized via an isometry to an extended space. For the pairwise 'Evolve' interaction, this extended space is the joint space $\mathcal{H}_A \otimes \mathcal{H}_B$ by the closed-system constraint. The joint operation is therefore an isometry:
+
+$$V: \mathcal{H}_A \otimes \mathcal{H}_B \to \mathcal{H}_A \otimes \mathcal{H}_B$$
+
+**Step 5 (Isometry to unitary).** For the isometry $V: \mathcal{H}_A \otimes \mathcal{H}_B \to \mathcal{H}_A \otimes \mathcal{H}_B$:
+
+$$\dim(\mathcal{H}_A \otimes \mathcal{H}_B)_{\text{in}} = \dim(\mathcal{H}_A \otimes \mathcal{H}_B)_{\text{out}} = d_0^2 = 64$$
+
+When input and output dimensions are equal, an isometry is necessarily a unitary operator [Nielsen & Chuang 2010, Section 2.2.5]. The 'Evolve' process preserves the Hilbert space dimensions of participating MPUs (the channel maps $\mathcal{S}(\mathcal{H}_{d_0}) \to \mathcal{S}(\mathcal{H}_{d_0})$ by Definition 27). Therefore:
+
+$$U_{AB} := V \in \mathcal{U}(\mathcal{H}_A \otimes \mathcal{H}_B)$$
+
+is unitary, satisfying $U_{AB}^\dagger U_{AB} = U_{AB} U_{AB}^\dagger = \mathbb{I}_{AB}$.
+
+**Step 6 (Contractivity as partial trace effect).** The strict contractivity $f_{\text{RID}} < 1$ of the reduced channel $\mathcal{E}_N^{(A)}$ (Lemma E.1) arises because:
+
+$$\mathcal{E}_N^{(A)}(\rho_A) = \text{Tr}_B\left[U_{AB}(\rho_A \otimes \rho_B)U_{AB}^\dagger\right]$$
+
+The partial trace over $B$ discards the correlations established by $U_{AB}$ between $A$ and $B$. This produces apparent information loss when examining $A$ alone. Quantitatively, the data processing inequality [Nielsen & Chuang 2010, Theorem 9.2] ensures:
+
+$$D_{\text{tr}}(\mathcal{E}_N^{(A)}(\rho_1), \mathcal{E}_N^{(A)}(\rho_2)) \leq D_{\text{tr}}(\rho_1, \rho_2)$$
+
+with strict inequality (contractivity factor $f_{\text{RID}} < 1$) when the channel is non-unitary. As derived in Appendix M (Section M.4), the channel decomposition $\mathcal{E}_N = (1-p)\Psi + pT_\sigma$ with $p \geq 1/3$ yields $f_{\text{RID}} \leq 2/3 < 1$.
+
+**Step 7 (Thermodynamic consistency).** The entropy production $\varepsilon \geq \ln 2$ (Theorem 31, rigorously derived in Appendix J from Lemma J.1) quantifies the irreversibility of the reduced dynamics on $A$, not the joint dynamics on $AB$. From the perspective of the joint system:
+
+$$S(U_{AB}\rho_{AB}U_{AB}^\dagger) = S(\rho_{AB})$$
+
+von Neumann entropy is conserved under unitary evolution [von Neumann 1932]. The SPAP-mandated entropy production represents the minimum information that must flow from $A$ to correlations with $B$ (or vice versa) during the self-referential update cycle. This is information relocated to $A$-$B$ correlations, not destroyed.
+
+Specifically, if the initial state is $\rho_A \otimes \rho_B$ (product state), the mutual information after the interaction satisfies:
+
+$$\Delta I(A:B) = I(A:B)_{\rho'} - I(A:B)_{\rho} = I(A:B)_{\rho'} \geq 0$$
+
+Since $S(\rho_{AB}') = S(\rho_{AB}) = S(\rho_A) + S(\rho_B)$ (unitary evolution preserves entropy), and generically $S(\rho_A') \neq S(\rho_A)$ and $S(\rho_B') \neq S(\rho_B)$, the entropy increase in subsystem $A$ is compensated by correlation generation:
+
+$$\Delta S_A = S(\rho_A') - S(\rho_A) = I(A:B)_{\rho'} - \Delta S_B$$
+
+where $\Delta S_B = S(\rho_B') - S(\rho_B)$. The total is conserved: $\Delta S_A + \Delta S_B = I(A:B)_{\rho'}$.
+
+This reconciliation is central to the entropy unification thesis (Thesis P.6.1, Appendix P): what appears as "entropy production" from a subsystem perspective is "correlation generation" from the global perspective. ∎
+
+### E.9.5.7 Composition Lemmas
+
+**Lemma E.9.5.4 (Composition of Unitary Operations).** *The composition of unitary operations is unitary. If $U_1: \mathcal{H} \to \mathcal{H}$ and $U_2: \mathcal{H} \to \mathcal{H}$ are unitary, then $U_2 U_1$ is unitary.*
+
+*Proof.*
+
+$$(U_2 U_1)^\dagger (U_2 U_1) = U_1^\dagger U_2^\dagger U_2 U_1 = U_1^\dagger \mathbb{I} U_1 = U_1^\dagger U_1 = \mathbb{I}$$
+
+Similarly:
+
+$$(U_2 U_1)(U_2 U_1)^\dagger = U_2 U_1 U_1^\dagger U_2^\dagger = U_2 \mathbb{I} U_2^\dagger = U_2 U_2^\dagger = \mathbb{I}$$
+
+∎
+
+**Lemma E.9.5.5 (Tensor Product of Unitary Operations).** *If $U_1: \mathcal{H}_1 \to \mathcal{H}_1$ and $U_2: \mathcal{H}_2 \to \mathcal{H}_2$ are unitary, then $U_1 \otimes U_2: \mathcal{H}_1 \otimes \mathcal{H}_2 \to \mathcal{H}_1 \otimes \mathcal{H}_2$ is unitary.*
+
+*Proof.*
+
+$$(U_1 \otimes U_2)^\dagger (U_1 \otimes U_2) = (U_1^\dagger \otimes U_2^\dagger)(U_1 \otimes U_2) = (U_1^\dagger U_1) \otimes (U_2^\dagger U_2) = \mathbb{I}_1 \otimes \mathbb{I}_2 = \mathbb{I}_{12}$$
+
+The reverse product follows analogously. ∎
+
+### E.9.5.8 Main Theorem: Unitarity from Closed-System ND-RID Structure
+
+**Theorem E.9.5 (Unitarity from Closed-System ND-RID Structure).** *Global unitarity—the conservation of quantum information under time evolution—is a necessary consequence of the structure of ND-RID interactions in a closed MPU network.*
+
+**Statement:** For any closed system evolving between Cauchy surfaces $\Sigma_1 \to \Sigma_2$, the evolution operator $U: \mathcal{H}_{\Sigma_1} \to \mathcal{H}_{\Sigma_2}$ is unitary.
+
+*Proof.*
+
+**Step 1 (Decomposition into elementary operations).** The time evolution from $\Sigma_1$ to $\Sigma_2$ is implemented by a sequence of elementary operations in the MPU network. By Lemma E.9.5.1, all information transfer occurs through ND-RID channels. The evolution decomposes into:
+
+*(a)* Internal unitary evolution of individual MPUs between interactions (Definition 26), governed by $U_0^{(v)}(\Delta t) = e^{-i\hat{H}_v \Delta t/\hbar}$ for each MPU $v$
+
+*(b)* Pairwise 'Evolve' interactions between MPUs (Definition 27), instantiating ND-RID (Definition 6/A.2.2)
+
+Let $\{t_k\}_{k=0}^{n}$ with $t_0 = t_{\Sigma_1}$ and $t_n = t_{\Sigma_2}$ denote the sequence of interaction times.
+
+**Step 2 (Unitarity of internal evolution).** By Definition 26, internal MPU evolution is explicitly unitary, governed by the Schrödinger equation with self-adjoint Hamiltonian $\hat{H}_v$. For each MPU $v$ and time interval $[t_k, t_{k+1}]$ without interactions:
+
+$$U_0^{(v)}(t_{k+1} - t_k) = e^{-i\hat{H}_v (t_{k+1} - t_k)/\hbar}$$
+
+satisfies $(U_0^{(v)})^\dagger U_0^{(v)} = \mathbb{I}$.
+
+For the entire network during a non-interaction interval:
+
+$$U_{\text{free}}(t_k, t_{k+1}) = \bigotimes_{v \in \mathcal{V}} U_0^{(v)}(t_{k+1} - t_k)$$
+
+This is unitary by Lemma E.9.5.5 (applied inductively).
+
+**Step 3 (Unitarity of pairwise interactions).** By Lemma E.9.5.3, each pairwise ND-RID interaction between MPUs $A$ and $B$ is implemented by a unitary operator $U_{AB}$ on the joint Hilbert space $\mathcal{H}_A \otimes \mathcal{H}_B$.
+
+**Step 4 (Unitarity of simultaneous non-overlapping interactions).** At any instant, multiple non-overlapping MPU pairs may interact simultaneously. The ND-RID structure (Definition 27, Definition A.2.2) specifies pairwise interactions; simultaneous interactions involving disjoint subsystems decompose into concurrent pairwise operations.
+
+Let $\mathcal{P}_k = \{(A_1, B_1), (A_2, B_2), \ldots, (A_m, B_m)\}$ denote the set of interacting pairs at time $t_k$, where $\{A_1, B_1, A_2, B_2, \ldots, A_m, B_m\}$ are pairwise disjoint. The joint interaction operator is:
+
+$$U_{\text{int}}(t_k) = U_{A_1 B_1} \otimes U_{A_2 B_2} \otimes \cdots \otimes U_{A_m B_m} \otimes \mathbb{I}_{\text{rest}}$$
+
+where $\mathbb{I}_{\text{rest}}$ is the identity on non-interacting MPUs. By Lemma E.9.5.5, this tensor product of unitaries is unitary.
+
+**Step 5 (Unitarity of full evolution).** The complete evolution from $\Sigma_1$ to $\Sigma_2$ is the composition:
+
+$$U_{\text{total}} = U_{\text{int}}(t_{n-1}) \cdot U_{\text{free}}(t_{n-2}, t_{n-1}) \cdot U_{\text{int}}(t_{n-2}) \cdots U_{\text{free}}(t_0, t_1) \cdot U_{\text{int}}(t_0)$$
+
+(with $U_{\text{int}}(t_k) = \mathbb{I}$ if no interactions occur at $t_k$).
+
+By Lemma E.9.5.4, the composition of unitary operators is unitary:
+
+$$U_{\text{total}}^\dagger U_{\text{total}} = \mathbb{I}, \qquad U_{\text{total}} U_{\text{total}}^\dagger = \mathbb{I}$$
+
+**Step 6 (Closed system constraint).** By Assumption E.9.5.1 (Closed System), following from Hypothesis 1:
+
+- No information can enter from outside the system (none accessible to internal systems)
+- No information can exit to outside the system (none detectable by internal systems)
+- All MPU interactions are internal to the total system
+- The Stinespring environment for any reduced subsystem dynamics is contained within $\mathcal{H}_{\Sigma}$ itself
+
+A Cauchy surface $\Sigma$ is, by definition, a complete spatial slice through the emergent spacetime (Theorem 43, Section 11). For internal dynamics with no boundary accessible to internal systems, this completeness is exact.
+
+**Step 7 (Conclusion).** The total evolution operator $U_{\text{total}}: \mathcal{H}_{\Sigma_1} \to \mathcal{H}_{\Sigma_2}$ is:
+
+- A composition of unitary operators (Steps 2–5)
+- Therefore unitary (Lemmas E.9.5.4, E.9.5.5)
+- Acting between spaces of equal dimension (Lemma E.9.5.2)
+
+Hence $U_{\text{total}}^\dagger U_{\text{total}} = U_{\text{total}} U_{\text{total}}^\dagger = \mathbb{I}$, establishing global unitarity. ∎
+
+### E.9.5.9 Corollaries
+
+**Corollary E.9.5.1 (Unitarity as Derived, Not Assumed).** *Unitarity of quantum evolution is not an independent axiom but a theorem following from the structure of self-referential prediction in a closed system.*
+
+The SPAP entropy cost $\varepsilon \geq \ln 2$ (Theorem 31) generates two parallel derivation chains:
+
+**Branch I (Causal Capacity Characterization):**
+
+$$\varepsilon \geq \ln 2 \xrightarrow[\text{Lem E.1}]{} f_{\text{RID}} < 1 \xrightarrow[\text{Thm E.2}]{} C_{\max} < \ln d_0 \xrightarrow[\text{Thm E.3}]{} \text{finite boundary capacity} \xrightarrow[\text{Thm E.6}]{} S_{BH} = \frac{\mathcal{A}}{4G}$$
+
+**Branch II (Global Unitarity):**
+
+$$\varepsilon \geq \ln 2 + \text{Closed System (Hyp 1)} + \text{ND-RID structure (Def 27)} \xrightarrow[\text{Lem E.9.5.3}]{} U_{AB} \text{ unitary} \xrightarrow[\text{Thm E.9.5}]{} \text{global unitarity}$$
+
+For systems with observation channels (Appendix P.5), Branch II applies to internal dynamics when the channel satisfies Definition P.5.3, ensuring internal closure from the internal perspective.
+
+The same SPAP constraint ($\varepsilon \geq \ln 2$) that generates causal structure (finite $c = \delta/\tau_{\min}$, Theorem E.10.2) also ensures the reduced channels are contractive while joint operations remain unitary. Causality and unitarity are thus dual consequences of the framework's foundational structure.
+
+*Proof.* The derivation chains are verified by tracing the logical dependencies:
+
+**Branch I:**
+1. SPAP (Theorem 10) → irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31, Appendix J)
+2. $\varepsilon > 0$ + channel decomposition (Appendix M) → strict contractivity $f_{\text{RID}} \leq 2/3 < 1$ (Lemma E.1)
+3. $f_{\text{RID}} < 1$ → bounded capacity $C_{\max} < \ln d_0$ (Theorem E.2)
+4. Bounded capacity + geometric regularity (Theorem 43) → finite boundary information $S_{\max} \propto \mathcal{A}$ (Theorem E.3)
+5. Thermodynamic consistency → $S_{BH} = \mathcal{A}/(4G)$ (Theorem E.6)
+
+**Branch II:**
+1. Closed system (Hypothesis 1) → Stinespring environment internal to network (Assumption E.9.5.1)
+2. ND-RID pairwise structure (Definition 27/A.2.2) → locality constraint on interactions
+3. Locality + closed system → joint operations unitary (Lemma E.9.5.3)
+4. Unitary composition → global unitarity (Theorem E.9.5)
+
+Both branches originate from the thermodynamic cost of self-referential prediction. ∎
+
 ---
+
+**Corollary E.9.5.2 (Black Hole Information Conservation).** *For an evaporating black hole, the total information—encoded jointly in the horizon and emitted radiation—is conserved throughout the evaporation process.*
+
+**Statement:** Let $\mathcal{A}_H(t)$ denote the horizon area at time $t$, and $S_{\text{rad}}(t)$ the coarse-grained entropy of emitted Hawking radiation. Then the fine-grained von Neumann entropy of the total state satisfies:
+
+$$S_{\text{fine}}(\rho_{\text{total}}(t)) = S_{\text{fine}}(\rho_{\text{total}}(0))$$
+
+throughout the evaporation process.
+
+*Proof.*
+
+**Step 1 (System definition).** Consider the black hole plus radiation as a closed system occupying a region $\mathcal{R}$ with boundary $\partial\mathcal{R}$ at spatial infinity (or a large sphere encompassing all radiation). The total Hilbert space factorizes as $\mathcal{H}_{\text{total}} = \mathcal{H}_{\text{BH}} \otimes \mathcal{H}_{\text{rad}}$, where the dimensions evolve as the horizon shrinks and radiation accumulates.
+
+**Step 2 (Unitarity application).** By Theorem E.9.5, the evolution of this closed system is unitary:
+
+$$\rho_{\text{total}}(t) = U(t)\rho_{\text{total}}(0)U(t)^\dagger$$
+
+Unitary evolution preserves von Neumann entropy:
+
+$$S(\rho_{\text{total}}(t)) = S(U(t)\rho_{\text{total}}(0)U(t)^\dagger) = S(\rho_{\text{total}}(0))$$
+
+by the unitary invariance of von Neumann entropy [von Neumann 1932].
+
+**Step 3 (Capacity transfer).** The horizon $\mathcal{H}$ has channel capacity $C_H(t) \propto \mathcal{A}_H(t)/(4G)$ (Theorem E.6). As the black hole evaporates, $\mathcal{A}_H(t) \to 0$, so $C_H(t) \to 0$. By unitarity, the information initially associated with the black hole must be relocated to the radiation field and horizon-radiation correlations.
+
+**Step 4 (Page curve emergence—conditional result).** The entanglement entropy between radiation and remaining black hole, $S_{\text{ent}}(t) = S(\rho_{\text{rad}}(t))$ for the reduced radiation state, follows the Page curve under the following assumption:
+
+**Assumption (Approximate k-design dynamics).** The black hole's internal MPU dynamics, governed by PCE optimization (Definition 15), generates scrambling dynamics that approximate a unitary $k$-design for sufficiently large $k$. This assumption is motivated by:
+
+- PCE optimization drives systems toward configurations that maximize predictive efficiency, which generically produces chaotic dynamics with rapid information spreading [Brandão et al. 2016]
+- Scrambling dynamics generically approach random unitary behavior [Hayden & Preskill 2007]
+- The thermalization timescale $t_{\text{scramble}} \sim \beta \ln S_{BH}$ [Sekino & Susskind 2008] is short compared to the evaporation timescale
+- The spectral gap $\Delta_{\text{gap}} > 0$ (Lemma E.6.1) ensures exponential approach to equilibrium, a necessary condition for design formation [Brandão et al. 2016]
+
+Under this assumption, by Theorem K.3 (Appendix K), the expected entanglement entropy satisfies:
+
+$$\left|\mathbb{E}[S_{\text{ent}}(t)] - S_{\text{Page}}(d_E(t), d_L(t))\right| \leq \epsilon_t$$
+
+where $d_E(t)$ and $d_L(t)$ are the dimensions of the early (radiation) and late (black hole) Hilbert spaces, and:
+
+$$S_{\text{Page}}(m,n) = \sum_{k=n+1}^{mn}\frac{1}{k} - \frac{m-1}{2n} \quad \text{for } m \leq n$$
+
+is the exact average entropy for Haar-random unitaries [Page 1993]. The error term $\epsilon_t$ is bounded by the deviation from exact Haar-randomness, which is controlled by the frame potential of the dynamics [Roberts & Yoshida 2017].
+
+The Page curve exhibits:
+
+- *Early times* ($t < t_{\text{Page}}$): $S_{\text{ent}}(t) \approx S_{\text{rad}}(t)$, increasing as radiation accumulates
+- *Page time* ($t = t_{\text{Page}}$): $S_{\text{ent}}$ reaches maximum when $S_{\text{rad}} \approx S_{\text{BH}}/2$
+- *Late times* ($t > t_{\text{Page}}$): $S_{\text{ent}}(t) \approx \mathcal{A}_H(t)/(4G)$, decreasing as horizon shrinks
+
+**Step 5 (Final state).** At complete evaporation ($\mathcal{A}_H \to 0$), unitarity (Theorem E.9.5) guarantees that the final radiation state $\rho_{\text{rad}}^{\text{final}}$ is pure if the initial state was pure: $S(\rho_{\text{rad}}^{\text{final}}) = S(\rho_{\text{initial}}) = 0$. All information is encoded in the radiation correlations. ∎
+
+**Remark E.9.5.1 (Status of k-design assumption).** The k-design assumption in Step 4 is supported by the following framework elements but not yet derived from first principles:
+
+*(i) Supporting evidence:*
+- The spectral gap $\Delta_{\text{gap}} = -\tau^{-1}\ln f_{\text{RID}} > 0$ (Lemma E.6.1) ensures exponential mixing
+- PCE optimization selects for detailed balance (Theorem G.1.9.2), producing thermal equilibrium states
+- The scrambling time $t_{\text{scramble}} \sim (S_{BH}/C_{\max}) \ln S_{BH}$ (Appendix K.3.2) matches the fast-scrambler bound [Sekino & Susskind 2008]
+
+*(ii) Required for first-principles derivation:*
+- Spectral characterization of PCE-optimal Hamiltonians (chaotic level statistics)
+- Frame potential calculation for PCE dynamics
+- Verification of eigenstate thermalization hypothesis (ETH) compliance
+
+*(iii) Independence of core result:* The central claim—information conservation via unitarity (Steps 1–3)—is independent of the k-design assumption and follows directly from Theorem E.9.5. The Page curve (Step 4) provides additional structure under the stated assumption.
+
+---
+
+**Corollary E.9.5.3 (Predictive Necessity of Information Conservation).** *Information conservation is required for prediction to remain possible. Unitarity is necessary for the framework's foundational axiom (POP, Axiom 1) to remain satisfiable.*
+
+*Proof.*
+
+**Step 1 (Prediction requires regularity).** By Theorem 6 (Regularity Necessity, Appendix C), non-trivial prediction requires environmental regularities: patterns that persist and can be exploited for anticipation. These regularities are encoded in correlations between system states at different times.
+
+**Step 2 (Correlations require information preservation).** The mutual information between system states at times $t$ and $t + \Delta t$ is:
+
+$$I(S(t); S(t+\Delta t)) = S(\rho(t)) + S(\rho(t+\Delta t)) - S(\rho_{t,t+\Delta t})$$
+
+where $\rho_{t,t+\Delta t}$ is the joint state encoding correlations across the time interval. For unitary evolution with $\rho(t+\Delta t) = U(\Delta t)\rho(t)U(\Delta t)^\dagger$, the mutual information is maximal: complete information about $\rho(t)$ determines $\rho(t+\Delta t)$ and vice versa.
+
+**Step 3 (Non-unitary evolution destroys correlations).** Suppose the evolution were implemented by a strictly contractive channel $\mathcal{E}$ with $f_{\mathcal{E}} < 1$ acting on the global state (not merely a reduced subsystem). Consider the joint state $\rho_{01}$ encoding correlations between times $t_0$ and $t_1$. Under evolution $\mathcal{E} \otimes \text{id}$ applied to the later subsystem, the data processing inequality [Lindblad 1975] yields:
+
+$$I(S_0 : S_1)_{(\text{id} \otimes \mathcal{E})(\rho_{01})} \leq I(S_0 : S_1)_{\rho_{01}}$$
+
+with strict inequality when $\mathcal{E}$ is non-unitary and the state is not in its fixed-point subspace.
+
+For a channel with spectral gap $1 - f_{\mathcal{E}} > 0$, repeated application yields exponential convergence to the fixed point $\rho_*$ [Wolf 2012]:
+
+$$D_{\text{tr}}(\mathcal{E}^n(\rho), \rho_*) \leq f_{\mathcal{E}}^n \cdot D_{\text{tr}}(\rho, \rho_*)$$
+
+As $n \to \infty$, all initial states converge to $\rho_*$. The mutual information between initial and final states decays:
+
+$$I(S(0); S(n\tau)) \xrightarrow{n \to \infty} 0$$
+
+The system becomes unpredictable: past states carry asymptotically zero information about future states beyond the fixed point.
+
+**Step 4 (Quantitative bound).** For a globally non-unitary channel with contractivity factor $f < 1$ applied $n$ times:
+
+$$I(S(0); S(n\tau)) \leq S(\rho(0)) - S(\rho_*) + S(\rho_*) f^{2n} \cdot \text{const}$$
+
+The correlation term decays exponentially with rate $-2\ln f > 0$. This violates the existence of persistent regularities required by Theorem 6 (Regularity Necessity).
+
+**Step 5 (Unitarity as necessary condition for POP satisfiability).** The Prediction Optimization Problem (POP, Axiom 1) asserts that predictive systems exist and can achieve sustained better-than-random performance: $\bar{\alpha} > \alpha_{\text{rand}}$, where $\alpha_{\text{rand}}$ is random-guess performance. By Steps 3–4, such performance is achievable only if regularities persist, which requires global information conservation. Therefore, global unitarity is a *necessary condition* for POP to be satisfiable.
+
+**Step 6 (Self-consistency).** The framework exhibits self-consistency: SPAP (derived from POP via Theorems 10–11) generates $\varepsilon \geq \ln 2$, which—through the closed-system constraint (Hypothesis 1) and the joint unitarity of ND-RID operations (Lemma E.9.5.3)—implies global unitarity (Theorem E.9.5), which is necessary for POP to be satisfiable (Step 5). The axiom generates the conditions for its own validity. ∎
+
+---
+
+**Corollary E.9.5.4 (Apparent vs. Fundamental Non-Unitarity).** *The strict contractivity $f_{\text{RID}} < 1$ of reduced ND-RID channels (Lemma E.1) represents apparent non-unitarity arising from subsystem restriction, not fundamental information loss.*
+
+*Proof.* By Lemma E.9.5.3, the joint evolution $U_{AB}$ of interacting MPUs is unitary. The reduced channel on MPU $A$:
+
+$$\mathcal{E}_N^{(A)}(\rho_A) = \text{Tr}_B\left[U_{AB}(\rho_A \otimes \rho_B)U_{AB}^\dagger\right]$$
+
+exhibits $f_{\text{RID}} \leq 2/3 < 1$ (Lemma E.1, Appendix M) because the partial trace discards $A$-$B$ correlations established by $U_{AB}$.
+
+**Quantitative analysis:** Let the initial state be $\rho_{AB} = \rho_A \otimes \rho_B$ (product state). After the interaction:
+
+$$\rho_{AB}' = U_{AB}(\rho_A \otimes \rho_B)U_{AB}^\dagger$$
+
+The mutual information generated is:
+
+$$\Delta I(A:B) = I(A:B)_{\rho'} - I(A:B)_{\rho} = I(A:B)_{\rho'} \geq 0$$
+
+Since $S(\rho_{AB}') = S(\rho_{AB}) = S(\rho_A) + S(\rho_B)$ (unitary evolution preserves total entropy), and generically $S(\rho_A') \neq S(\rho_A)$:
+
+$$I(A:B)_{\rho'} = S(\rho_A') + S(\rho_B') - S(\rho_{AB}') = S(\rho_A') + S(\rho_B') - S(\rho_A) - S(\rho_B)$$
+
+The apparent "information loss" in subsystem $A$—quantified by the entropy increase $\Delta S_A = S(\rho_A') - S(\rho_A) \geq 0$—is precisely compensated by correlations with $B$. The entropy production $\varepsilon \geq \ln 2$ (Theorem 31, Appendix J) measures the minimum correlation generation required by the SPAP update cycle.
+
+For the joint system: $S(U_{AB}\rho_{AB}U_{AB}^\dagger) = S(\rho_{AB})$. No information is destroyed globally.
+
+This distinction—between subsystem-level apparent erasure and global conservation—is central to the entropy unification thesis (Thesis P.6.1, Appendix P). What appears as "entropy production" from a subsystem perspective is "correlation generation" from the global perspective.
+
+This principle extends to observation channels (Appendix P.5): external observation accesses correlated information without participating in internal dynamics. The observation channel's internal inaccessibility ($\Delta I_{int} = 0$, Definition P.5.3(ii)) ensures no internal entropy production is triggered, while external agents extracting information incur costs in their own thermodynamic context. ∎
+
+### E.9.5.10 Numerical Values
+
+For reference, we collect the key numerical values appearing in this section:
+
+| Quantity | Symbol | Value | Source |
+|:---------|:-------|:------|:-------|
+| MPU Hilbert space dimension | $d_0$ | 8 | Theorem 23 |
+| Irreducible entropy cost | $\varepsilon$ | $\ln 2 \approx 0.693$ nats | Theorem 31 (Appendix J) |
+| Maximum channel capacity | $C_{\max}$ | $\ln d_0 - \varepsilon = 2\ln 2 \approx 1.386$ nats | Eq. E.15 (Appendix E) |
+| Contractivity factor bound | $f_{\text{RID}}$ | $\leq 1 - \frac{\ln 2}{\ln 8} = \frac{2}{3} \approx 0.667$ | Appendix M, Sec. M.4 |
+| MPU spacing / Planck length | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | Appendix Q, Eq. Q.18 |
+
+### E.9.5.11 Concluding Remarks
+
+**Remark E.9.5.2 (Relation to Standard Quantum Mechanics).** In standard quantum mechanics, unitarity is postulated as an axiom governing closed-system evolution (Postulate 2 of von Neumann's formulation [von Neumann 1932]). The present derivation reveals unitarity as a theorem following from more fundamental principles: the structure of self-referential prediction (SPAP), the thermodynamic constraints it implies ($\varepsilon \geq \ln 2$), and the closed-system assumption (Hypothesis 1).
+
+The key insight is that while individual ND-RID channels are strictly contractive ($f_{\text{RID}} \leq 2/3 < 1$, Lemma E.1, Appendix M), this contractivity arises from partial-trace effects on joint unitary operations (Lemma E.9.5.3), not from fundamental information destruction. The derivation applies to closed systems; open systems exhibit apparent non-unitarity through entanglement with external degrees of freedom, consistent with the standard quantum formalism and with Corollary E.9.5.4.
+
+**Remark E.9.5.3 (Consistency with Arrow of Time).** Global unitarity (Theorem E.9.5) and thermodynamic irreversibility (Appendix O, Theorem O.3) are compatible because they describe different operational levels:
+
+- *Global level:* The von Neumann entropy of the total closed-system state is conserved under $U_{\text{total}}$. If $\rho_{\text{total}}(0)$ is pure, it remains pure throughout evolution.
+
+- *Subsystem level:* Every physical observer occupies a subsystem perspective, accessing only reduced states via partial trace. The entropy production $\varepsilon \geq \ln 2$ (Theorem 31) quantifies information flowing into correlations invisible from that perspective—information relocated, not destroyed.
+
+The arrow of time (Appendix O, Theorem O.3) emerges not from fundamental non-unitarity but from the universality of the perspectival restriction: every predictor is necessarily embedded in what it predicts (SPAP self-other partition, Appendix P.12), ensuring that the thermodynamic ratchet operates for all observers. This reconciliation exemplifies the entropy unification thesis (Thesis P.6.1): apparent irreversibility and fundamental reversibility coexist because "irreversibility" is always relative to a subsystem boundary.
+
+**Remark E.9.5.4 (Derivational Priority).** The framework achieves what might initially seem paradoxical: deriving both unitarity (information conservation) and the second law (entropy increase) from the same source ($\varepsilon \geq \ln 2$). The resolution is that these describe the same physics from different vantage points—global versus perspectival—unified by the structure of self-referential prediction.
+
+The parallel derivation structure:
+
+$$\text{SPAP} \xrightarrow[\text{Thm 31}]{\varepsilon \geq \ln 2} \begin{cases} \text{Branch I:} & f_{\text{RID}} < 1 \to C_{\max} < \ln d_0 \to S_{BH} = \mathcal{A}/(4G) \\ \text{Branch II:} & U_{AB} \text{ unitary} \to \text{global unitarity (internally closed)} \end{cases}$$
+
+demonstrates that the causal capacity bounds (Branch I) and global unitarity (Branch II) are complementary consequences of a single constraint: the thermodynamic cost of self-referential prediction.
+
+**Remark E.9.5.5 (Role of Closed-System Assumption).** The derivation of global unitarity (Theorem E.9.5) critically depends on Hypothesis 1. Without this assumption, the Stinespring environment for reduced dynamics could include external degrees of freedom, and global evolution could in principle be non-unitary. Within the PU framework, Hypothesis 1 is a foundational postulate asserting that the MPU network constitutes internally complete physical reality—no information leaks to degrees of freedom accessible by internal systems (consistent with the observation channel architecture of Appendix P.5). This transforms unitarity from a postulate into a theorem.
+
+The assumption admits a natural extension to systems with external observation (Appendix P.5). An observation channel satisfying Definition P.5.3 permits external information extraction while preserving internal closure: internal systems gain no information from the channel ($\Delta I_{int} = 0$) and internal states are not modified by external reading. From the internal perspective, such a system satisfies Assumption E.9.5.1, and Theorem E.9.5 applies to its internal dynamics. The external observer incurs the thermodynamic cost $\varepsilon \geq \ln 2$ in their own context (Theorem 33), consistent with the Reflexivity Constraint.
+
+---
+
 
 ## E.10 Lieb-Robinson Velocity from PCE Entropy Costs
 

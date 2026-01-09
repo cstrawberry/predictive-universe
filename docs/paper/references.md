@@ -55,6 +55,7 @@
 *   Bottou, L., Curtis, F. E., & Nocedal, J. (2018). Optimization methods for large-scale machine learning. *SIAM Review*, *60*(2), 223–311. DOI: 10.1137/16M1080173 
 *   Boyd, S., & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.
 *   Braides, A. (2002). *Γ-convergence for Beginners*. Oxford University Press.
+*   Brandão, F. G. S. L., Harrow, A. W., & Horodecki, M. (2016). Local random quantum circuits are approximate polynomial-designs. *Communications in Mathematical Physics*, *346*(2), 397–434. DOI: 10.1007/s00220-016-2706-8
 *   Bratteli, O., & Robinson, D. W. (1997). *Operator Algebras and Quantum Statistical Mechanics: Equilibrium States. Models in Quantum Statistical Mechanics* (2nd ed.). Springer. DOI: 10.1007/978-3-662-03444-6
 *   Braunstein, S. L., & Caves, C. M. (1994). Statistical distance and the geometry of quantum states. *Physical Review Letters*, *72*(22), 3439–3443.
 *   Breuer, H.-P., & Petruccione, F. (2002). *The Theory of Open Quantum Systems*. Oxford University Press. DOI: 10.1093/acprof:oso/9780199213900.001.0001
@@ -92,6 +93,7 @@
 *   Chung, F. (1997). *Spectral Graph Theory*. American Mathematical Society.
 *   Chernoff, H. (1952). A measure of asymptotic efficiency for tests of a hypothesis based on the sum of observations. *Annals of Mathematical Statistics*, *23*(4), 493–507. DOI: 10.1214/aoms/1177729330
 *   Chiou, D.-W. (2023). Delayed-choice quantum erasers and the Einstein–Podolsky–Rosen paradox. *International Journal of Theoretical Physics*, *62*(6), 120. DOI: 10.1007/s10773-023-05370-4
+*   Choi, M.-D. (1975). Completely positive linear maps on complex matrices. *Linear Algebra and its Applications*, *10*(3), 285–290. DOI: 10.1016/0024-3795(75)90075-0
 *   Church, A. (1936). An Unsolvable Problem of Elementary Number Theory. *American Journal of Mathematics*, *58*(2), 345–363. DOI: 10.2307/2371045
 *   Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the future of cognitive science. *Behavioral and Brain Sciences*, *36*(3), 181–204. DOI: 10.1017/S0140525X1200047X
 *   Clauser, J. F., Horne, M. A., Shimony, A., & Holt, R. A. (1969). Proposed experiment to test local hidden-variable theories. *Physical Review Letters*, *23*(15), 880–884.
@@ -223,6 +225,7 @@
 *   Hawking, S. W. (1975). Particle creation by black holes. *Communications in Mathematical Physics*, *43*(3), 199–220. DOI: 10.1007/BF02345020
 *   Hawking, S. W. (1992). Chronology protection conjecture. *Physical Review D*, *46*(2), 603–611. DOI: 10.1103/PhysRevD.46.603
 *   Hayden, P., Jozsa, R., Petz, D., & Winter, A. (2004). Structure of states which satisfy strong subadditivity of quantum entropy with equality. *Communications in Mathematical Physics*, *246*(2), 359–374.
+*   Hayden, P., & Preskill, J. (2007). Black holes as mirrors: quantum information in random subsystems. *Journal of High Energy Physics*, *2007*(09), 120. DOI: 10.1088/1126-6708/2007/09/120
 *   Hayward, S. A. (1994). General laws of black-hole dynamics. *Physical Review D*, *49*(12), 6467–6474. DOI: 10.1103/PhysRevD.49.6467
 *   Heinonen, J., & Koskela, P. (1998). Quasiconformal maps in metric spaces with controlled geometry. *Acta Mathematica*, *181*(1), 1–61. DOI: 10.1007/BF02392747
 *   Heisenberg, W. (1927). Über den anschaulichen Inhalt der quantentheoretischen Kinematik und Mechanik. *Zeitschrift für Physik*, *43*(3–4), 172–198. DOI: 10.1007/BF01397280
@@ -283,6 +286,7 @@
 *   König, R., & Wehner, S. (2009). A strong converse for classical channel coding using entangled inputs. *Physical Review Letters*, *103*(7), 070504. DOI: 10.1103/PhysRevLett.103.070504
 *   Kramer, M., Stairs, I. H., Manchester, R. N., Wex, N., Deller, A. T., Coles, W. A., Ali, M., Burgay, M., Camilo, F., Cognard, I., … Theureau, G. (2021). Strong-Field Gravity Tests with the Double Pulsar. *Physical Review X*, *11*(4), 041050. DOI: 10.1103/PhysRevX.11.041050
 *   Kramer, M., & Wex, N. (2009). The double pulsar system: a unique laboratory for gravity. *Classical and Quantum Gravity*, *26*(7), 073001. DOI: 10.1088/0264-9381/26/7/073001
+*   Kraus, K. (1983). *States, Effects, and Operations: Fundamental Notions of Quantum Theory*. Lecture Notes in Physics, Vol. 190. Springer.
 *   Kriegman, S., Blackiston, D., Levin, M., & Bongard, J. (2020). A scalable pipeline for designing reconfigurable organisms. *Proceedings of the National Academy of Sciences*, *117*(4), 1853–1859.
 *   Kubo, R. (1957). Statistical-mechanical theory of irreversible processes. I. General theory and simple applications to magnetic and conduction problems. *Journal of the Physical Society of Japan*, *12*(6), 570–586. DOI: 10.1143/JPSJ.12.570
 *   Kushner, H. J., & Yin, G. G. (2003). *Stochastic Approximation and Recursive Algorithms and Applications* (2nd ed.). Springer.
@@ -368,6 +372,7 @@
 *   Okuyama, M., & Ohzeki, M. (2018). Quantum Landauer Principle under Feedback Control. *Physical Review Letters*, *120*(7), 070602. DOI: 10.1103/PhysRevLett.120.070602
 *   Ollivier, Y. (2009). Ricci curvature of Markov chains on metric spaces. *Journal of Functional Analysis*, *256*(3), 810–864. DOI: 10.1016/j.jfa.2008.11.001
 *   Padmanabhan, T. (2010). Equipartition of energy in the horizon degrees of freedom and the emergence of gravity. *Modern Physics Letters A*, *25*(14), 1129–1136. DOI: 10.1142/S021773231003294X
+*   Page, D. N. (1993). Average entropy of a subsystem. *Physical Review Letters*, *71*(9), 1291–1294. DOI: 10.1103/PhysRevLett.71.1291
 *   Pai, V. P., Aw, S., Shomrat, T., Lemire, J. M., & Levin, M. (2012). Transmembrane voltage potential controls embryonic eye patterning in *Xenopus laevis*. *Development*, *139*(2), 313–323. DOI: 10.1242/dev.073759
 *   Pauli, W. (1940). The connection between spin and statistics. *Physical Review*, *58*(8), 716–722. DOI: 10.1103/PhysRev.58.716
 *   Pauli, W. (1955). Exclusion principle, Lorentz group and reflection of space-time and charge. In *Niels Bohr and the Development of Physics*, Pergamon Press.
@@ -410,6 +415,7 @@
 *   Reed, M., & Simon, B. (1980). *Methods of Modern Mathematical Physics, Vol. 1: Functional Analysis* (Revised and enlarged ed.). Academic Press.
 *   Richardson, T., & Urbanke, R. (2008). *Modern Coding Theory*. Cambridge University Press. DOI: 10.1017/CBO9780511791338
 *   Rindler, W. (1966). Kruskal space and the uniformly accelerated frame. *American Journal of Physics*, *34*(12), 1174–1178.
+*   Roberts, D. A., & Yoshida, B. (2017). Chaos and complexity by design. *Journal of High Energy Physics*, *2017*(04), 121. DOI: 10.1007/JHEP04(2017)121
 *   Robertson, H. P. (1929). The Uncertainty Principle. *Physical Review*, *34*(1), 163–164. DOI: 10.1103/PhysRev.34.163
 *   Rosenfeld, L. (1940). Sur le tenseur d'impulsion‐énergie. *Mémoires de l'Académie Royale de Belgique, Classe des Sciences*, *18*(6), 1–30.
 *   Rovelli, C. (1996). Relational quantum mechanics. *International Journal of Theoretical Physics*, *35*(8), 1637–1678. DOI: 10.1007/BF02302261
@@ -429,6 +435,7 @@
 *   Schumacher, B., & Westmoreland, M. D. (1997). Sending classical information via noisy quantum channels. *Physical Review A*, *56*(1), 131–138. DOI: 10.1103/PhysRevA.56.131
 *   Searle, J. R. (1992). *The Rediscovery of the Mind*. MIT Press.
 *   Segal, I. E. (1947). Irreducible representations of operator algebras. *Bulletin of the American Mathematical Society*, *53*(2), 73–88. DOI: 10.1090/S0002-9904-1947-08742-5
+*   Sekino, Y., & Susskind, L. (2008). Fast scramblers. *Journal of High Energy Physics*, *2008*(10), 065. DOI: 10.1088/1126-6708/2008/10/065
 *   Serre, J.-P. (1973). *A Course in Arithmetic*. Springer.
 *   Seng, C.-Y., et al. (2018). Reduced hadronic uncertainty in the determination of V_ud. *Physical Review Letters*, *121*, 241804.
 *   Seth, A. K. (2021). *Being You: A New Science of Consciousness*. Dutton.
@@ -444,6 +451,7 @@
 *   Sommerfeld, A. (1916). Zur Quantentheorie der Spektrallinien. *Annalen der Physik*, *356*(17), 1–94.
 *   Spohn, H. (1978). Entropy production for quantum dynamical semigroups. *Journal of Mathematical Physics*, *19*(5), 1227–1230. DOI: 10.1063/1.523789
 *   Steane, A. M. (1996). Error correcting codes in quantum theory. *Physical Review Letters*, *77*(5), 793–797. DOI: 10.1103/PhysRevLett.77.793
+*   Stinespring, W. F. (1955). Positive functions on C*-algebras. *Proceedings of the American Mathematical Society*, *6*(2), 211–216. DOI: 10.1090/S0002-9939-1955-0069403-4
 *   Stone, M. H. (1932). On one-parameter unitary groups in Hilbert space. *Annals of Mathematics*, *33*(3), 643–648. DOI: 10.2307/1968538
 *   Streater, R. F., & Wightman, A. S. (1964). *PCT, Spin and Statistics, and All That*. W. A. Benjamin.
 *   Sturm, K.-T. (2006). On the geometry of metric measure spaces. I and II. *Acta Mathematica*, *196*(1), 65–131 and 133–177. DOIs: 10.1007/s11511-006-0002-8 and 10.1007/s11511-006-0003-7
