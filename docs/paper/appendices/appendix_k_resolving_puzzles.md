@@ -767,9 +767,9 @@ in excellent agreement with the observed hierarchy.
 This resolution is complete and rigorous, transforming the hierarchy problem from a fine-tuning puzzle into a demonstration of discrete information-theoretic structure in the vacuum.
 
 
-**K.8 Cosmological Constant Problem**
+**K.8 Cosmological Constant and Primordial Perturbations**
 
-**Puzzle:** Quantum field theory predicts vacuum energy $\rho_{vac} \sim M_{Pl}^4$, yet observation requires $\rho_{vac} \sim (10^{-3} \text{ eV})^4$—a discrepancy of 120 orders of magnitude, the worst prediction in physics.
+**Puzzle:** Quantum field theory predicts vacuum energy $\rho_{vac} \sim M_{Pl}^4$, yet observation requires $\rho_{vac} \sim (10^{-3} \text{ eV})^4$—a discrepancy of 120 orders of magnitude. Similarly, the primordial perturbation amplitude $Q \sim 10^{-5}$ and inflationary observables lack derivation from first principles.
 
 **PU Resolution:** **Appendix U** provides a complete derivation of the cosmological constant from the Golay-Steiner instanton mechanism. The vacuum is not empty but carries the information-theoretic structure of the Extended Binary Golay Code $\mathcal{G}_{24}$. Vacuum fluctuations are exponentially suppressed by instanton complexity:
 $$\boxed{\Lambda L_P^2 = 8\pi A_{eff} e^{-2\kappa}}$$
@@ -805,6 +805,20 @@ For $A_{eff} \sim O(1)$, this yields $\Lambda L_P^2 \sim 10^{-122}$ **(Corollary
 The factor-of-7 ratio in exponents ($283/38.5 \approx 7.35$) reflects the different configuration spaces: electroweak involves real alignment constraints while cosmological involves complex Grassmannian tunneling with higher dimensional overhead.
 
 This resolution is complete and parameter-free, transforming the cosmological constant problem from an inexplicable fine-tuning into a demonstration of optimal error-correcting code structure in the vacuum.
+
+**Primordial Sector:** The same Golay-Steiner structure determines inflationary observables through a second complexity channel. The primordial configuration space is $\mathbb{CP}^{11}$ (the projectivization of the 12-dimensional signal subspace), with complexity $\kappa_Q = 11$ **(Identification U.20)**. This yields the primordial perturbation amplitude:
+$$Q = \frac{e^{-\kappa_Q}}{\sqrt{2}} = \frac{e^{-11}}{\sqrt{2}} = 1.18 \times 10^{-5}$$
+**(Theorem U.27)**. The 24-cell spherical 5-design and 12-line adjacency structure determine inflation dynamics via the Starobinsky effective action **(Assumption U.48)**, with geometric e-fold count $N_e = 59.4$ **(Result U.60)**.
+
+**Inflationary Predictions (Appendix U, Sections U.24-U.25):**
+
+| Observable | Prediction | Observed | Tension |
+|:-----------|:----------:|:--------:|:-------:|
+| $n_s$ | $0.9663$ | $0.9649 \pm 0.0042$ | $0.3\sigma$ |
+| $r$ | $0.0034$ | $< 0.036$ | Consistent |
+| $A_s$ | $2.08 \times 10^{-9}$ | $(2.10 \pm 0.03) \times 10^{-9}$ | $0.7\sigma$ |
+
+The hierarchy $\kappa_\Lambda/\kappa_Q = 141.5/11 \approx 13$ explains why the cosmological constant ($e^{-283}$) is exponentially smaller than primordial perturbations ($e^{-22}$). Both sectors derive from the Golay code $[24, 12, 8]$: the vacuum sector involves the full Grassmannian $\text{Gr}_\mathbb{C}(12,24)$, while the primordial sector involves the signal subspace $\mathbb{CP}^{11}$.
 
 
 **K.9 Cosmology: Time-Varying Gravitational Coupling and Unified Dark Sector**
@@ -857,7 +871,8 @@ The Predictive Universe framework has successfully resolved several fundamental 
 5. **Fermion mass ratios**: Lepton $\mathcal{R} = 3$ to 3.8% accuracy (Appendices R, T)
 6. **Gravitational constant**: $G$ from channel capacity, $\delta/L_P \approx 2.355$ (Appendices E, Q)
 7. **Cosmological constant**: $\Lambda L_P^2 = e^{-283} \sim 10^{-122}$ (Appendix U)
-8. **Spacetime dimension**: $D = 4$ from two independent mechanisms (Appendices Z, H)
+8. **Primordial observables**: $n_s = 0.9663$, $r = 0.0034$, $A_s = 2.08 \times 10^{-9}$ (Appendix U)
+9. **Spacetime dimension**: $D = 4$ from two independent mechanisms (Appendices Z, H)
 9. **Arrow of time**: From irreducible SPAP entropy $\varepsilon = \ln 2$ (Appendix O)
 
 **Active Development Areas (conceptual frameworks established):**

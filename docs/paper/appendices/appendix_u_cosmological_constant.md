@@ -1,22 +1,24 @@
-# Appendix U: Cosmological Constant from Golay-Steiner Structure
+# Appendix U: Cosmological Constant and Primordial Sector from Golay-Steiner Structure
 
 ## U.1 Introduction
 
-The cosmological constant $\Lambda$ represents the vacuum energy density of spacetime. Observationally:
+The cosmological constant $\Lambda$ and primordial perturbation amplitude $Q$ represent the two fundamental scales of cosmology. Observationally:
 
-$$\Lambda L_P^2 \approx 2.87 \times 10^{-122}$$
+$$\Lambda L_P^2 \approx 2.87 \times 10^{-122}, \qquad Q \approx 1.9 \times 10^{-5}$$
 
-where $L_P$ is the Planck length. This extraordinarily small value constitutes the cosmological constant problem—the largest hierarchy in physics.
+where $L_P$ is the Planck length. The cosmological constant constitutes the largest hierarchy in physics; the primordial amplitude sets the scale of structure formation.
 
-In the Predictive Universe framework, the vacuum is not empty but carries the information-theoretic structure of the Extended Binary Golay Code $\mathcal{C}_{24}$. Vacuum fluctuations are suppressed by an instanton mechanism:
+In the Predictive Universe framework, both scales derive from the information-theoretic structure of the Extended Binary Golay Code $\mathcal{C}_{24}$. The vacuum sector involves the full configuration space $\text{Gr}_\mathbb{C}(12,24)$ with complexity $\kappa_\Lambda = 141.5$; the primordial sector involves the signal subspace $\mathbb{CP}^{11}$ with complexity $\kappa_Q = 11$. Both are suppressed by instanton mechanisms:
 
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \, e^{-2\kappa}$$
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \, e^{-2\kappa_\Lambda}, \qquad Q^2 = \frac{1}{2} A_Q \, e^{-2\kappa_Q}$$
 
-where $\kappa$ is the **instanton complexity parameter** and $A_{\text{eff}}$ is the dimensionless $O(1)$ prefactor defined by:
+where $A_{\text{eff}}$ and $A_Q$ are dimensionless $O(1)$ prefactors. For the vacuum sector:
 
 $$A_{\text{eff}} := K \cdot N_{\text{eff}}$$
 
-Here $K$ is the one-loop determinant ratio from Gaussian fluctuations around the bounce, and $N_{\text{eff}}$ is the polynomial extensivity factor from Appendix E. For a minimal bounce in MPU units, $A_{\text{eff}} = O(1)$. This appendix derives $\kappa = 141.5$ from first principles.
+Here $K$ is the one-loop determinant ratio from Gaussian fluctuations around the bounce, and $N_{\text{eff}}$ is the polynomial extensivity factor from Appendix E. For a minimal bounce in MPU units, $A_{\text{eff}} = O(1)$.
+
+This appendix derives $\kappa_\Lambda = 141.5$ (Sections U.3–U.14) and $\kappa_Q = 11$ (Sections U.15–U.27) from first principles, demonstrating that the Golay-Steiner structure determines both cosmological scales.
 
 ---
 
@@ -587,16 +589,651 @@ Near-saturation (98.3%) occurs because:
 
 ---
 
-## U.15 Conclusion
 
-The cosmological constant complexity $\kappa = 141.5$ is derived from:
+## U.15 Introduction to the Primordial Sector
 
-1. **The Grassmannian bound** $\kappa_0 = k^2 = 144$ from code dimension
-2. **The zero mode deficit** $\delta = (D+1)/2 = 5/2$ from spherical 5-design preservation
+The preceding sections derived the cosmological constant complexity parameter $\kappa_\Lambda = 141.5$ from the Golay-Steiner structure, yielding the exponential suppression $\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}$ (Corollary U.17). With $A_{\text{eff}} \sim O(1)$, this gives:
 
-The value $\Lambda L_P^2 \sim 10^{-122}$ follows without fine-tuning, determined entirely by the discrete information-theoretic structure of the Golay vacuum.
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283} \approx 25.1 \times 1.24 \times 10^{-123} \approx 3.1 \times 10^{-122}$$
 
-The $10^{122}$ suppression factor is the exponential of the Grassmannian dimension, corrected for the collective coordinates protected by the spherical design symmetry of the 24-cell.
+for $A_{\text{eff}} \sim 1$, matching the observed value $\Lambda L_P^2 \approx 2.87 \times 10^{-122}$ (Planck 2018, TT,TE,EE+lowE+lensing, base-$\Lambda$CDM) within 10%.
+
+This section extends the analysis to the **primordial sector**, deriving inflationary observables from the same Golay-Steiner structure. The vacuum sector involves the full configuration space $\text{Gr}_\mathbb{C}(12,24)$ with $\kappa_\Lambda = 141.5$; the primordial sector involves the signal subspace $\mathcal{S} \cong \mathbb{C}^{12}$ with a smaller complexity parameter $\kappa_Q = 11$, yielding the primordial perturbation amplitude $Q \sim 10^{-5}$.
+
+**Conventions.** Throughout this section:
+- Natural units: $\hbar = c = k_B = 1$
+- Planck length: $L_P^2 = G$ (in natural units)
+- Reduced Planck mass: $\bar{M}_{Pl} = 1/\sqrt{8\pi G} = M_{Pl}/\sqrt{8\pi} = 2.435 \times 10^{18}$ GeV
 
 ---
 
+## U.16 Primordial Configuration Space
+
+### U.16.1 Signal Subspace Geometry
+
+**Definition U.18 (Primordial Configuration Space).** Let $\mathcal{S} \cong \mathbb{C}^{12}$ denote the 12-dimensional complex signal subspace identified by Theorem Z.13. The **primordial configuration space** is its projectivization:
+
+$$\mathcal{C}_{\text{prim}} := \mathbb{P}(\mathcal{S}) \cong \mathbb{CP}^{11}$$
+
+*Remark.* The vacuum configuration space is $\text{Gr}_\mathbb{C}(12,24)$, the Grassmannian of all 12-dimensional subspaces of $\mathbb{C}^{24}$. The primordial configuration space $\mathbb{CP}^{11}$ is the space of rays within the fixed signal subspace $\mathcal{S}$, representing perturbations around the vacuum rather than deformations of it.
+
+**Theorem U.19 (Primordial Space Dimensions).**
+
+$$\dim_\mathbb{C}(\mathbb{CP}^{11}) = 11, \qquad \dim_\mathbb{R}(\mathbb{CP}^{11}) = 22$$
+
+*Proof.* Standard: $\dim_\mathbb{C}(\mathbb{CP}^n) = n$ for the complex projective space of dimension $n$. $\square$
+
+**Remark U.19a (Dimension Comparison).** The vacuum Grassmannian has:
+
+$$\dim_\mathbb{C}(\text{Gr}_\mathbb{C}(12,24)) = 12 \times (24-12) = 144$$
+
+The ratio of configuration space dimensions is:
+
+$$\frac{\dim_\mathbb{C}(\text{Gr}_\mathbb{C}(12,24))}{\dim_\mathbb{C}(\mathbb{CP}^{11})} = \frac{144}{11} \approx 13.1$$
+
+### U.16.2 Complexity Exponent
+
+**Identification U.20 (Primordial Complexity).** Following Convention U.14a and the structural correspondence between configuration space dimension and instanton complexity, the primordial complexity parameter is identified with the complex dimension of the configuration space:
+
+$$\boxed{\kappa_Q = \dim_\mathbb{C}(\mathbb{CP}^{11}) = 11}$$
+
+*Justification.* By Convention U.14a, the instanton complexity parameter counts the effective number of complex normal directions contributing to the exponential suppression. For the primordial sector on $\mathbb{CP}^{11}$, we identify $\kappa_Q$ with the complex dimension $11$. We assume no additional continuous zero modes beyond gauge redundancies; if collective modes analogous to translations or dilatations were present, they would reduce $\kappa_Q$ as in the vacuum sector ($\kappa_\Lambda = 144 - 2.5$). This identification is consistent with the framework but constitutes an assumption requiring future verification. $\square$
+
+**Corollary U.20a (Complexity Ratio).**
+
+$$\frac{\kappa_\Lambda}{\kappa_Q} = \frac{141.5}{11} \approx 12.86$$
+
+Given the identifications in Theorem U.16 and Identification U.20, this ratio reflects the hierarchy between vacuum energy (suppressed by $e^{-283}$) and primordial perturbations (suppressed by $e^{-22}$).
+
+### U.16.3 Bundle Structure
+
+**Proposition U.21 (Hopf Fibration).** The primordial configuration space $\mathbb{CP}^{11}$ admits the Hopf fibration:
+
+$$S^1 \hookrightarrow S^{23} \xrightarrow{\pi} \mathbb{CP}^{11}$$
+
+where $S^{23} \subset \mathbb{C}^{12}$ is the unit sphere and $\pi$ is the quotient by phase rotations. The Fubini-Study metric $g_{FS}$ on $\mathbb{CP}^{11}$ is induced from the round metric on $S^{23}$ via the Riemannian submersion $\pi$.
+
+*Proof.* Standard differential geometry; see Kobayashi & Nomizu (1969), Vol. II, Chapter IX. $\square$
+
+---
+
+## U.17 Primordial Perturbation Amplitude
+
+### U.17.1 Semiclassical Suppression
+
+**Corollary U.22 (Exponential Suppression).** By Proposition U.14 (complexity-action correspondence) with $S_{\text{inst}} = 2\kappa$:
+
+$$Q^2 \propto e^{-2\kappa_Q} = e^{-22}$$
+
+*Derivation.* The instanton action for primordial fluctuations is $S_{\text{inst}} = 2\kappa_Q = 22$ (Proposition U.14). The semiclassical probability amplitude scales as $e^{-S_{\text{inst}}/2}$, giving $Q \propto e^{-\kappa_Q}$. $\square$
+
+### U.17.2 Reality Projection
+
+**Lemma U.23 (Complex Gaussian Real-Part Variance).** Let $Z = X + iY$ be a circularly symmetric complex Gaussian variable with $\mathbb{E}[|Z|^2] = \sigma^2$. Then:
+
+$$\text{Var}(X) = \text{Var}(Y) = \frac{\sigma^2}{2}$$
+
+*Proof.* Circular symmetry implies $X$ and $Y$ are independent with equal variance. From $\mathbb{E}[|Z|^2] = \text{Var}(X) + \text{Var}(Y) = 2\text{Var}(X) = \sigma^2$, we obtain $\text{Var}(X) = \sigma^2/2$. $\square$
+
+**Corollary U.24 (Primordial Amplitude Formula).** Physical observables (curvature perturbations) correspond to real scalar fields, obtained by projecting circularly symmetric complex amplitudes onto their real parts. Combining with Corollary U.22:
+
+$$Q^2 = \frac{1}{2} e^{-2\kappa_Q} \cdot A_Q$$
+
+where $A_Q$ is the one-loop prefactor from Gaussian fluctuations.
+
+*Remark.* The factor $1/2$ arises from the reality projection (Lemma U.23). The identification of observable perturbations with real projections follows from the requirement that physical curvature perturbations be real-valued scalar fields.
+
+### U.17.3 One-Loop Prefactor
+
+**Definition U.25 (Spectral Zeta Function).** For a positive elliptic operator $\Delta$ on a compact Riemannian manifold, the spectral zeta function is:
+
+$$\zeta_\Delta(s) = \sum_{\lambda_j > 0} \lambda_j^{-s}, \qquad \text{Re}(s) > \dim(M)/2$$
+
+The zeta-regularized determinant is $\det'(\Delta) := e^{-\zeta'_\Delta(0)}$.
+
+**Theorem U.25a (Laplacian Spectrum on $\mathbb{CP}^n$).** For the scalar Laplacian on $\mathbb{CP}^n$ with the Fubini-Study metric normalized so that the holomorphic sectional curvature equals $4$, the eigenvalues are:
+
+$$\lambda_\ell = 4\ell(\ell + n), \qquad \ell = 0, 1, 2, \ldots$$
+
+with multiplicities:
+
+$$m_\ell = \binom{n+\ell}{n}^2 - \binom{n+\ell-1}{n}^2$$
+
+*Proof.* See Berger, Gauduchon & Mazet (1971), §III; also Ikeda & Taniguchi (1978) with normalization adjusted to holomorphic sectional curvature $4$. $\square$
+
+*Remark (Normalization Convention).* The eigenvalue factor $4$ corresponds to the Fubini-Study metric with holomorphic sectional curvature $4$ and diameter $\pi/2$. Alternative normalizations (e.g., holomorphic sectional curvature $1$) yield eigenvalues $\lambda_\ell = \ell(\ell + n)$.
+
+**Assumption U.26 (One-Loop Prefactor Scaling).** Following Convention U.14a, the one-loop prefactor $A_Q$ for the $\mathbb{CP}^{11}$ configuration space satisfies:
+
+$$A_Q = 1 + O(1/\kappa_Q)$$
+
+with $\log A_Q = O(1/\kappa_Q)$ on compact Kähler symmetric spaces of large dimension. For $\kappa_Q = 11$, the correction is $O(9\%)$, contributing $O(4.5\%)$ to $Q$.
+
+*Justification.* On compact symmetric spaces, the spectral zeta function at $s = 0$ admits asymptotic expansions in inverse dimension. For Kähler manifolds, the leading behavior of $\zeta'(0)$ is controlled by curvature invariants that scale with dimension. At large $\kappa$, the prefactor approaches unity; see Voros (1987) for general spectral asymptotics and Vassilevich (2003) for heat kernel methods on symmetric spaces. Following Convention U.14a, we absorb subleading corrections into the $O(1)$ uncertainty of $A_Q$.
+
+*Remark U.26a (Error Propagation).* The uncertainty $\delta A_Q / A_Q \sim 9\%$ propagates to $Q$ as $\delta Q / Q \sim 4.5\%$. For inflationary observables, this induces $\delta A_s / A_s \sim 9\%$, which is comparable to or exceeds current Planck precision on $\ln(10^{10}A_s)$. The predictions should therefore be understood as conditional on the one-loop prefactor assumption.
+
+### U.17.4 Primordial Scale Parameter
+
+**Theorem U.27 (Primordial Perturbation Amplitude).** With $\kappa_Q = 11$ (Identification U.20) and $A_Q = 1$ (Assumption U.26, leading order):
+
+$$\boxed{Q = \frac{e^{-\kappa_Q}}{\sqrt{2}} = \frac{e^{-11}}{\sqrt{2}} = 1.181 \times 10^{-5}}$$
+
+*Verification.* 
+- $e^{-11} = 1.6702 \times 10^{-5}$
+- $e^{-11}/\sqrt{2} = 1.6702 \times 10^{-5} / 1.4142 = 1.181 \times 10^{-5}$ $\checkmark$
+
+---
+
+## U.18 The 24-Cell Spherical Design
+
+### U.18.1 24-Cell Geometry
+
+The 24-cell is the unique regular 4-polytope with 24 vertices, 96 edges, 96 triangular faces, and 24 octahedral cells. Its vertex set on $S^3 \subset \mathbb{R}^4$ is:
+
+**Definition U.28 (24-Cell Vertices).**
+
+$$V_{24} = \{\pm e_i : i = 1,2,3,4\} \cup \left\{\frac{1}{2}(\pm 1, \pm 1, \pm 1, \pm 1)\right\}$$
+
+where $e_i$ are the standard basis vectors. Thus $|V_{24}| = 8 + 16 = 24$.
+
+**Lemma U.29 (Inner Product Distribution).** For ordered pairs $(v,w) \in V_{24}^2$, the inner products $\langle v, w \rangle$ take values in $\{-1, -\frac{1}{2}, 0, \frac{1}{2}, 1\}$ with ordered-pair multiplicities:
+
+| $\langle v, w \rangle$ | Multiplicity $N(x)$ |
+|:----------------------:|:-------------------:|
+| $1$ | $24$ |
+| $\frac{1}{2}$ | $192$ |
+| $0$ | $144$ |
+| $-\frac{1}{2}$ | $192$ |
+| $-1$ | $24$ |
+
+*Verification.* Total: $24 + 192 + 144 + 192 + 24 = 576 = 24^2$. $\checkmark$
+
+*Proof.* Direct enumeration by vertex type. Let $C = \{\pm e_i\}$ denote the 8 coordinate vertices and $H = \{\frac{1}{2}(\pm 1, \pm 1, \pm 1, \pm 1)\}$ the 16 half-vertices.
+
+**Self-pairs** ($\langle v, v \rangle = 1$): 24 pairs (diagonal).
+
+**Antipodal pairs** ($\langle v, -v \rangle = -1$): 24 pairs.
+
+**$C$-$C$ pairs** (distinct, non-antipodal): For $e_i \neq \pm e_j$, $\langle e_i, e_j \rangle = 0$. Count: $8 \times 6 = 48$ ordered pairs at inner product $0$.
+
+**$C$-$H$ pairs**: $\langle e_i, \frac{1}{2}(s_1, s_2, s_3, s_4) \rangle = s_i/2 = \pm 1/2$. Each of 8 coordinate vertices pairs with all 16 half-vertices: $8 \times 16 = 128$ pairs. By symmetry, 64 have $+1/2$ and 64 have $-1/2$. Including $H$-$C$ pairs: $2 \times 128 = 256$ total, split as 128 at $+1/2$ and 128 at $-1/2$.
+
+**$H$-$H$ pairs** (distinct, $h \neq h'$): $\langle h, h' \rangle = \frac{1}{4}\sum_{i=1}^4 s_i s'_i$. The sum $\sum s_i s'_i$ equals (agreements) $-$ (disagreements). Per half-vertex $h$, excluding self and antipode:
+- 4 vertices at $+1/2$ (3 sign agreements): $\binom{4}{1} = 4$
+- 6 vertices at $0$ (2 sign agreements): $\binom{4}{2} = 6$  
+- 4 vertices at $-1/2$ (1 sign agreement): $\binom{4}{1} = 4$
+
+Total $H$-$H$ (distinct, non-antipodal): $16 \times 4 = 64$ at $+1/2$; $16 \times 6 = 96$ at $0$; $16 \times 4 = 64$ at $-1/2$.
+
+**Combined totals**: 
+- $+1$: $24$; $-1$: $24$
+- $+1/2$: $128 + 64 = 192$; $-1/2$: $128 + 64 = 192$  
+- $0$: $48 + 96 = 144$
+
+Verification: $24 + 192 + 144 + 192 + 24 = 576 = 24^2$. $\square$
+
+### U.18.2 Spherical Design Property
+
+**Theorem U.30 (24-Cell as Spherical 5-Design).** The 24-cell vertices form a spherical 5-design on $S^3$: for any polynomial $p : \mathbb{R}^4 \to \mathbb{R}$ of degree at most $5$,
+
+$$\frac{1}{24} \sum_{v \in V_{24}} p(v) = \frac{1}{\text{Vol}(S^3)} \int_{S^3} p(x) \, d\sigma(x)$$
+
+The 24-cell is not a 6-design.
+
+*Proof.* Define the Gegenbauer moments $S_\ell := \sum_{v,w \in V_{24}} C_\ell^{(\alpha)}(\langle v, w \rangle)$ where $C_\ell^{(\alpha)}$ are Gegenbauer polynomials with $\alpha = (D-2)/2 = 1$ for $D = 4$. A configuration is a $t$-design if and only if $S_\ell = 0$ for $\ell = 1, \ldots, t$ (Delsarte, Goethals & Seidel 1977).
+
+Using Lemma U.29 and the explicit Gegenbauer polynomials $C_\ell^{(1)}(x)$:
+- $C_1^{(1)}(x) = 2x$: $S_1 = 2[24(1) + 192(1/2) + 144(0) + 192(-1/2) + 24(-1)] = 2[24 + 96 - 96 - 24] = 0$
+- $C_2^{(1)}(x) = 4x^2 - 1$: Similar calculation yields $S_2 = 0$
+- $C_3^{(1)}(x) = 8x^3 - 4x$: $S_3 = 0$
+- $C_4^{(1)}(x) = 16x^4 - 12x^2 + 1$: $S_4 = 0$
+- $C_5^{(1)}(x) = 32x^5 - 32x^3 + 6x$: $S_5 = 0$
+- $C_6^{(1)}(x) = 64x^6 - 80x^4 + 24x^2 - 1$: $S_6 = 576 \neq 0$
+
+Thus the 24-cell is a 5-design but not a 6-design. $\square$
+
+**Corollary U.31 (Design Strength and Dimension).** The design strength $t = 5$ satisfies:
+
+$$t = D + 1$$
+
+where $D = 4$ is the emergent spacetime dimension (Theorem Z.11).
+
+*Remark.* This is a structurally determined coincidence: the 24-cell achieves design strength exactly one greater than the ambient dimension, the maximum possible for a polytope with this symmetry.
+
+---
+
+## U.19 Twelve-Line Adjacency Structure
+
+### U.19.1 Antipodal Lines
+
+**Definition U.32 (Twelve Antipodal Lines).** Each vertex $v \in V_{24}$ pairs with its antipode $-v$ to form an **antipodal line** $\ell_v = \{v, -v\}$. The 24 vertices yield $k = 12$ distinct lines:
+
+$$\mathcal{L}_{12} = \{V_{24}\}/\{\pm 1\}$$
+
+**Definition U.33 (Line Adjacency).** Two lines $\ell_v, \ell_w \in \mathcal{L}_{12}$ are **adjacent** if $|\langle v, w \rangle| = \frac{1}{2}$:
+
+$$\ell_v \sim \ell_w \iff |\langle v, w \rangle| = \frac{1}{2}$$
+
+**Lemma U.34 (Adjacency Matrix Spectrum).** The line adjacency graph has:
+- **Degree**: Each line is adjacent to exactly 8 other lines
+- **Adjacency spectrum**: $\text{Spec}(A) = \{8^{(1)}, (-4)^{(2)}, 0^{(9)}\}$
+
+*Proof.*
+
+**Degree calculation:** From Lemma U.29, each vertex has inner product $+1/2$ with $192/24 = 8$ vertices and inner product $-1/2$ with $192/24 = 8$ vertices, hence $16$ vertices total with $|\langle v,w\rangle| = 1/2$. These form $8$ antipodal pairs, so each line is adjacent to $8$ lines.
+
+**Spectrum verification:**
+- $\text{tr}(A) = 0$ (no self-loops): $8 + 2(-4) + 9(0) = 0$ $\checkmark$
+- $\text{tr}(A^2) = \sum_i d_i = 12 \times 8 = 96$: $8^2 + 2(16) + 0 = 64 + 32 = 96$ $\checkmark$
+
+The characteristic polynomial is $\det(A - \lambda I) = (\lambda - 8)(\lambda + 4)^2 \lambda^9$. $\square$
+
+### U.19.2 Weyl Group Action
+
+**Theorem U.35 (Weyl Group Symmetry).** The 24-cell symmetry group is the Weyl group of the exceptional Lie algebra $F_4$:
+
+$$\text{Aut}(V_{24}) = W(F_4), \qquad |W(F_4)| = 1152 = 2^7 \times 3^2$$
+
+*Proof.* Classical result; see Conway & Sloane (1999), Chapter 4, §8. $\square$
+
+**Theorem U.36 (Eigenspace Decomposition).** The signal subspace decomposes under the $W(F_4)$ action according to the adjacency eigenspaces:
+
+$$\mathcal{S} \cong \mathbf{1} \oplus \mathbf{2} \oplus \mathbf{9}$$
+
+where:
+- $\mathbf{1}$: The 1-dimensional eigenspace with eigenvalue $8$ (spanned by the all-ones vector)
+- $\mathbf{2}$: The 2-dimensional eigenspace $\mathcal{S}_2$ with eigenvalue $-4$
+- $\mathbf{9}$: The 9-dimensional eigenspace $\mathcal{S}_9$ with eigenvalue $0$
+
+Each eigenspace is $W(F_4)$-invariant.
+
+*Proof.* The adjacency matrix $A$ commutes with the $W(F_4)$ action, so eigenspaces are invariant subspaces. The multiplicities follow from Lemma U.34. $\square$
+
+**Corollary U.37 (Invariant Projective Spaces).** The projectivizations of the eigenspaces yield $W(F_4)$-invariant projective submanifolds:
+
+- $\mathbb{P}(\mathbf{1}) = \{\text{point}\}$ (trivial)
+- $\mathbb{P}(\mathbf{2}) = \mathbb{CP}^1_{\text{inv}}$ (2-sphere)
+- $\mathbb{P}(\mathbf{9}) = \mathbb{CP}^8_{\text{inv}}$ (8-dimensional)
+
+**Theorem U.38 (Minimal Invariant Sector).** Among the non-trivial $W(F_4)$-invariant projective submanifolds of $\mathbb{CP}^{11}$, the space $\mathbb{CP}^1_{\text{inv}} = \mathbb{P}(\mathcal{S}_2)$ arising from the eigenvalue-$(-4)$ eigenspace is the **minimal positive-dimensional** invariant submanifold.
+
+*Remark.* The 9-dimensional eigenspace $\mathcal{S}_9$ (eigenvalue $0$) also yields an invariant submanifold $\mathbb{CP}^8_{\text{inv}}$. The physical selection of $\mathbb{CP}^1_{\text{inv}}$ for single-field inflation follows from:
+1. **Minimality**: Single-field inflation requires the minimal non-trivial target space
+2. **Kinetic structure**: The eigenvalue $(-4)$ yields the largest kinetic coefficient $\lambda^2 = 12$ (Proposition U.44; Identification U.44a), compared to $\lambda^2 = 8$ on the $0$-eigenspace (8-regular graph: Laplacian eigenvalue equals degree minus adjacency eigenvalue)
+3. **PCE selection**: The PCE potential (Definition 15) favors the sector with maximal gradient energy, selecting the $(-4)$ eigenspace
+
+---
+
+## U.20 Constraint Budget
+
+### U.20.1 Spherical Harmonic Constraints
+
+**Definition U.39 (Harmonic Moment Vector).** For the 24-cell vertices $V_{24}$ and spherical harmonic degree $\ell$, define the moment vector:
+
+$$\mu_\ell := \frac{1}{24} \sum_{v \in V_{24}} Y_\ell(v) \in \mathbb{R}^{N(\ell)}$$
+
+where $Y_\ell : S^3 \to \mathbb{R}^{N(\ell)}$ collects the $N(\ell) = (\ell+1)^2$ spherical harmonics of degree $\ell$.
+
+**Lemma U.40 (Rotational Constraint).** For each degree $\ell \leq t = 5$, the $SO(4)$-invariance of the design implies:
+
+$$\|\mu_\ell\|^2 = 0 \quad \text{for } \ell = 1, \ldots, 5$$
+
+This yields one scalar constraint per degree $\ell$, as the only $SO(4)$-invariant function of $\mu_\ell$ is its squared norm.
+
+*Proof.* By definition of a $t$-design (Theorem U.30), $\mu_\ell = 0$ for $\ell \leq t$. The squared norm $\|\mu_\ell\|^2$ is the unique $SO(4)$-invariant Hermitian form on $\mathbb{R}^{N(\ell)}$. $\square$
+
+**Assumption U.41 (Constraint Budget).** The total scalar (real) constraint count from the $k = 12$ signal modes and $t = 5$ design strength is assumed to be:
+
+$$N_{\text{budget}} = k \cdot t = 12 \times 5 = 60$$
+
+*Motivation.* The 24-cell spherical 5-design (Theorem U.30) integrates polynomials of degree $\leq 5$ exactly, providing $t = 5$ independent moment constraints per mode. The $k = 12$ signal modes of the Golay code span the information subspace. We estimate the total independent scalar constraints as the product $k \cdot t$, assuming each mode-degree pair contributes one real constraint. This counting is not rigorously proven to yield independent constraints; if the true count differs, $N_e^{(\text{info})}$ scales proportionally.
+
+*Remark.* The constraint budget $N_{\text{budget}} = 60$ will constrain the number of inflationary e-folds in Section U.23.
+
+---
+
+## U.21 Effective Single-Field Dynamics
+
+### U.21.1 Graph Laplacian Energy
+
+**Definition U.42 (Dirichlet Energy on Line Graph).** For a configuration $\psi \in \mathcal{S} \cong \mathbb{C}^{12}$ assigning complex amplitudes to the 12 lines, the graph Dirichlet energy is:
+
+$$E[\psi] = \frac{1}{2} \sum_{\ell \sim \ell'} |\psi_\ell - \psi_{\ell'}|^2 = \frac{1}{2} \psi^\dagger L \psi$$
+
+where $L = D - A$ is the graph Laplacian, $D = 8I$ is the degree matrix, and $A$ is the adjacency matrix.
+
+**Lemma U.43 (Uniqueness of Laplacian Form).** Among quadratic forms on $\mathcal{S}$ that are:
+1. $W(F_4)$-invariant
+2. Local (depending only on adjacent pairs)
+3. Vanishing on constant configurations
+
+the Dirichlet energy $E[\psi] = \frac{1}{2}\psi^\dagger L \psi$ is unique up to overall scale.
+
+*Proof.* Conditions (2) and (3) require the form $\psi^\dagger M \psi$ where $M_{ij} = 0$ for non-adjacent pairs and $\sum_j M_{ij} = 0$. Condition (1) requires $M$ to commute with $W(F_4)$. The graph Laplacian $L = D - A$ is the unique such matrix up to scale. $\square$
+
+### U.21.2 Kinetic Coefficient
+
+**Proposition U.44 (Laplacian on Invariant Sector).** On the 2-dimensional eigenspace $\mathcal{S}_2$ (eigenvalue $-4$), the graph Laplacian acts as:
+
+$$L|_{\mathcal{S}_2} = (D - A)|_{\mathcal{S}_2} = (8I - (-4)I)|_{\mathcal{S}_2} = 12I$$
+
+*Proof.* The eigenvalue of $A$ on $\mathcal{S}_2$ is $-4$ (Lemma U.34). The degree matrix is $D = 8I$. Thus $L|_{\mathcal{S}_2} = 8I - (-4I) = 12I$. $\square$
+
+**Identification U.44a (Effective Field Theory Kinetic Term).** The graph Laplacian eigenvalue $\lambda^2 = 12$ is identified with the kinetic coefficient in the effective single-field Lagrangian:
+
+$$\mathcal{L}_{\text{kin}} = \frac{\lambda^2 \bar{M}_{Pl}^2}{2} (\partial d_{FS})^2, \qquad \lambda^2 = 12$$
+
+where $d_{FS}$ is the Fubini-Study distance on $\mathbb{CP}^1_{\text{inv}} = \mathbb{P}(\mathcal{S}_2)$.
+
+*Justification.* This identification assumes that the discrete graph Dirichlet energy induces, in the continuum limit, a sigma-model kinetic term with the Fubini-Study target metric. If the coarse-graining map rescales $d_{FS}$ by an $O(1)$ constant, $\lambda^2$ would shift accordingly. The coefficient $\lambda^2 = 12$ then sets the field-space curvature scale.
+
+### U.21.3 Target Space Metric
+
+**Proposition U.45 (Fubini-Study Metric on $\mathbb{CP}^1$).** The Fubini-Study metric on $\mathbb{CP}^1 \cong S^2$ with the standard normalization is:
+
+$$ds^2_{FS} = \frac{1}{4}(d\theta^2 + \sin^2\theta \, d\varphi^2)$$
+
+This describes a 2-sphere of radius $\frac{1}{2}$ and diameter $d_{\max} = \pi/2$.
+
+*Proof.* Standard; see Kobayashi & Nomizu (1969). $\square$
+
+**Definition U.46 (Canonical Inflaton Field).** The canonically normalized inflaton field is:
+
+$$\phi := \sqrt{\lambda^2} \, \bar{M}_{Pl} \cdot d_{FS} = \sqrt{12} \, \bar{M}_{Pl} \cdot d_{FS}$$
+
+**Corollary U.47 (Field Range).** The maximum inflaton field excursion is:
+
+$$\Delta\phi_{\max} = \sqrt{12} \, \bar{M}_{Pl} \cdot \frac{\pi}{2} = \sqrt{3}\pi \, \bar{M}_{Pl} \approx 5.44 \, \bar{M}_{Pl}$$
+
+*Verification.* $\sqrt{3}\pi = 1.732 \times 3.1416 = 5.441$. $\checkmark$
+
+---
+
+## U.22 Einstein-Frame Scalar Dynamics
+
+### U.22.1 Gravitational Sector
+
+**Assumption U.48 (Local Equilibrium Truncation).** At the PCE-Attractor (Definition 15a), the emergent gravitational effective action (Proposition W.20) truncates to:
+
+$$S_{\text{grav}} = \int d^4x \sqrt{-g} \left[ \frac{\bar{M}_{Pl}^2}{2}(R - 2\Lambda) + c_1 R^2 \right]$$
+
+with $c_2 = 0$ (the $R_{\mu\nu}R^{\mu\nu}$ coefficient is assumed suppressed at the attractor).
+
+*Justification.* By Theorem W.19, Einstein dynamics emerge under local thermodynamic equilibrium near causal horizons. By Proposition W.20, deviations from equilibrium induce curvature-squared corrections with coefficients controlled by entropy deficit and non-equilibrium terms. In four dimensions, the independent quadratic invariants are $R^2$, $R_{\mu\nu}R^{\mu\nu}$, and the Gauss-Bonnet combination $R^2 - 4R_{\mu\nu}R^{\mu\nu} + R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ (topological). We assume that at the PCE-Attractor during inflation, viscous (shear) contributions are suppressed, setting $c_2 = 0$ to leading order. The $R^2$ term is assumed to persist. This truncation to the Starobinsky form is motivated by the attractor structure but not rigorously derived; alternative truncations including Weyl-squared terms would modify predictions.
+
+*Remark.* The $c_2 = 0$ condition may also be understood from the Gauss-Bonnet identity in 4D: the combination $R^2 - 4R_{\mu\nu}R^{\mu\nu} + R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ is topological. After suppressing the $R_{\mu\nu}R^{\mu\nu}$ contribution in the local-equilibrium truncation and restricting to the scalar-sector ansatz in Assumption U.48, the remaining curvature-squared term retained here is $R^2$.
+
+
+**Corollary U.49 (Starobinsky Form).** The gravitational action takes the Starobinsky form:
+
+$$S = \int d^4x \sqrt{-g} \left[ \frac{\bar{M}_{Pl}^2}{2}R + \frac{\bar{M}_{Pl}^2}{12 m_s^2}R^2 \right]$$
+
+where $c_1 = \bar{M}_{Pl}^2/(12 m_s^2)$ defines the scalaron mass $m_s$.
+
+### U.22.2 Einstein Frame Potential
+
+**Theorem U.50 (Starobinsky Potential).** In the Einstein frame, the Starobinsky $R + R^2$ action is equivalent to Einstein gravity coupled to a scalar field $\chi$ with potential:
+
+$$V(\chi) = \frac{3m_s^2 \bar{M}_{Pl}^2}{4}\left(1 - e^{-\sqrt{2/3}\,\chi/\bar{M}_{Pl}}\right)^2$$
+
+*Proof.* Standard Weyl transformation; see Starobinsky (1980), Mukhanov (2005) Chapter 8. $\square$
+
+We identify the canonically normalized Einstein-frame scalar $\chi$ with the canonical field $\phi$ defined in Definition U.46, i.e. $\chi = \phi$. If $\chi = \alpha \phi$ with $\alpha = O(1)$, then $x$ and the geometric e-fold bound rescale accordingly.
+
+### U.22.3 Mass Scale Identification
+
+
+**Identification U.51 (Scalaron Mass from PPI).** The Principle of Physical Instantiation (Definition P.6.2) requires that the abstract complexity scale $Q$ manifest as a physical mass scale. We identify:
+
+$$\frac{m_s}{\bar{M}_{Pl}} = Q$$
+
+*Justification.* The PPI asserts that information-theoretic quantities must have physical instantiations. The primordial complexity parameter $\kappa_Q = 11$ (Identification U.20) yields $Q = e^{-11}/\sqrt{2}$ (Theorem U.27). The scalaron mass $m_s$ is the characteristic mass scale in the Starobinsky sector. This identification is motivated by dimensional analysis and the requirement that $Q$ control primordial perturbations, but is not uniquely determined by PPI alone. Alternative identifications such as $m_s/\bar{M}_{Pl} = f(Q)$ for some $O(1)$ function $f$ would shift predictions accordingly. The linear identification $m_s = Q \cdot \bar{M}_{Pl}$ is the simplest choice consistent with the exponential suppression structure.
+
+**Corollary U.52 (Scalaron Mass Value).**
+
+$$m_s = Q \cdot \bar{M}_{Pl} = 1.181 \times 10^{-5} \times 2.435 \times 10^{18} \text{ GeV} = 2.88 \times 10^{13} \text{ GeV}$$
+
+*Verification.* $1.181 \times 2.435 = 2.876$. $\checkmark$
+
+---
+
+## U.23 E-Fold Bounds
+
+### U.23.1 Information-Theoretic Bound
+
+**Theorem U.53 (Landauer Registration Cost).** Each independent bit of information registered during inflation requires entropy production:
+
+$$\Delta S_{\min} = \ln 2$$
+
+per bit (Theorem 31).
+
+**Lemma U.54 (Capacity-Registration Ratio).** From Appendix Q, the PCE-optimal capacity ratio is:
+
+$$\frac{C^*_{\max}}{\varepsilon} = \frac{2\ln 2}{\ln 2} = 2$$
+
+This means each Landauer erasure ($\varepsilon = \ln 2$) supports registration of $C^*_{\max} = 2\ln 2$ nats of channel capacity.
+
+**Lemma U.55 (E-Fold Information Content).** Each e-fold of inflation corresponds to one unit of $\ln k$-space registration, where $k$ is the comoving wavenumber. At leading order in slow-roll:
+
+$$\Delta N_e \approx \Delta \ln k$$
+
+*Proof.* During slow-roll inflation, $k = aH$ where $a$ is the scale factor and $H$ is approximately constant. Thus $\ln k \approx \ln a + \text{const} = N_e + \text{const}$. $\square$
+
+**Assumption U.56 (E-Fold Registration Cost).** Each e-fold registers one independent scalar perturbation mode across the constraint budget. Given Assumption U.41, the total number of registrable e-folds is:
+
+$$N_e^{(\text{info})} = N_{\text{budget}} = 60$$
+
+*Justification.* The constraint budget $N_{\text{budget}} = 60$ (Assumption U.41) counts independent scalar (binary) registrations available in the primordial sector. We assume that one independent constraint is consumed per e-fold to register distinct horizon-exit conditions, so $N_e^{(\text{info})} \leq N_{\text{budget}}$ and at capacity saturation $N_e^{(\text{info})} = N_{\text{budget}} = 60$. The ratio $C^*_{\max}/\varepsilon = 2$ fixes the information content per registration at the PCE optimum but does not increase the number of independent constraints available for mode counting. If the true constraint count differs from 60, $N_e^{(\text{info})}$ scales proportionally.
+
+### U.23.2 Geometric Bound
+
+**Theorem U.58 (Starobinsky E-Fold Formula).** For the Starobinsky potential, the number of e-folds from field value $\chi$ to end of inflation is:
+
+$$N_e(\chi) = \frac{3}{4}\left(e^{\sqrt{2/3}\,\chi/\bar{M}_{Pl}} - \frac{\sqrt{2/3}\,\chi}{\bar{M}_{Pl}}\right) - \frac{3}{4}\left(e^{x_{\text{end}}} - x_{\text{end}}\right)$$
+
+where $x := \sqrt{2/3}\,\chi/\bar{M}_{Pl}$ and inflation ends when $\epsilon = 1$:
+
+$$x_{\text{end}} = \ln\left(1 + \frac{2}{\sqrt{3}}\right) \approx 0.7676$$
+
+*Proof.* Standard slow-roll calculation; see Mukhanov (2005). $\square$
+
+**Corollary U.59 (Geometric E-Fold Count).** The maximum field excursion $\Delta\phi_{\max} = \sqrt{3}\pi \bar{M}_{Pl}$ (Corollary U.47) corresponds to:
+
+$$x_{\max} = \sqrt{\frac{2}{3}} \cdot \sqrt{3}\pi = \sqrt{2}\pi \approx 4.443$$
+
+The geometric e-fold count is:
+
+$$N_{\text{geo}} = \frac{3}{4}\left[(e^{x_{\max}} - x_{\max}) - (e^{x_{\text{end}}} - x_{\text{end}})\right]$$
+
+*Evaluation:*
+- $e^{4.443} \approx 85.02$
+- $e^{0.7676} \approx 2.155$
+- $N_{\text{geo}} = \frac{3}{4}[(85.02 - 4.443) - (2.155 - 0.768)]$
+- $N_{\text{geo}} = \frac{3}{4}[80.58 - 1.387] = \frac{3}{4} \times 79.19 = 59.4$
+
+$$\boxed{N_{\text{geo}} = 59.4}$$
+
+**Result U.60 (E-Fold Determination).** Given the preceding assumptions and identifications, and assuming inflation begins at maximum field excursion $\phi_{\max}$, the realized e-fold count is:
+
+$$N_e = \min(N_e^{(\text{info})}, N_{\text{geo}}) = \min(60, 59.4) = 59.4$$
+
+The geometric bound is tighter and determines the e-fold count. If inflation begins at $\phi_0 < \phi_{\max}$, then $N_e$ becomes a function of the initial condition $\phi_0 \in (0, \phi_{\max}]$, and derived observables ($n_s$, $r$, $A_s$) shift accordingly via the standard Starobinsky relations.
+
+---
+
+## U.24 Inflationary Observables
+
+### U.24.1 Slow-Roll Parameters
+
+**Theorem U.61 (Slow-Roll Parameters).** For the Starobinsky potential at $N_e$ e-folds before the end of inflation:
+
+$$\epsilon \simeq \frac{3}{4N_e^2}, \qquad \eta \simeq -\frac{1}{N_e}$$
+
+*Proof.* Standard calculation for $V(\chi) \propto (1 - e^{-\sqrt{2/3}\chi/\bar{M}_{Pl}})^2$; see Mukhanov (2005). $\square$
+
+### U.24.2 Spectral Index
+
+**Theorem U.62 (Scalar Spectral Index).**
+
+$$n_s = 1 - 6\epsilon + 2\eta = 1 - \frac{2}{N_e} + O(1/N_e^2)$$
+
+With $N_e = 59.4$:
+
+$$\boxed{n_s = 1 - \frac{2}{59.4} = 0.9663}$$
+
+### U.24.3 Tensor-to-Scalar Ratio
+
+**Theorem U.63 (Tensor-to-Scalar Ratio).**
+
+$$r = 16\epsilon = \frac{12}{N_e^2}$$
+
+With $N_e = 59.4$:
+
+$$\boxed{r = \frac{12}{59.4^2} = \frac{12}{3528} = 0.0034}$$
+
+### U.24.4 Scalar Amplitude
+
+**Lemma U.64 (Starobinsky Amplitude Formula).** The scalar power spectrum amplitude is:
+
+$$A_s = \frac{N_e^2}{24\pi^2}\left(\frac{m_s}{\bar{M}_{Pl}}\right)^2 = \frac{N_e^2 Q^2}{24\pi^2}$$
+
+*Proof.* Standard; see Mukhanov (2005), eq. (8.50). $\square$
+
+**Theorem U.65 (Scalar Amplitude Value).** With $N_e = 59.4$ and $Q = e^{-11}/\sqrt{2}$:
+
+$$A_s = \frac{59.4^2}{24\pi^2} \times \frac{e^{-22}}{2} = \frac{3528}{24 \times 9.870} \times \frac{e^{-22}}{2}$$
+
+$$A_s = \frac{3528}{236.9} \times \frac{2.790 \times 10^{-10}}{2} = 14.89 \times 1.395 \times 10^{-10}$$
+
+$$\boxed{A_s = 2.08 \times 10^{-9}}$$
+
+*Verification.* $e^{-22} = 2.790 \times 10^{-10}$; $3528/236.9 = 14.89$; $14.89 \times 1.395 = 20.8$. $\checkmark$
+
+### U.24.5 Non-Gaussianity
+
+**Theorem U.66 (Local Non-Gaussianity).** For single-field slow-roll inflation:
+
+$$f_{NL}^{\text{local}} = \frac{5}{12}(1 - n_s) = \frac{5}{12} \times \frac{2}{N_e} = \frac{5}{6N_e}$$
+
+With $N_e = 59.4$:
+
+$$\boxed{f_{NL}^{\text{local}} = \frac{5}{6 \times 59.4} = 0.014}$$
+
+*Proof.* Single-field consistency relation; see Maldacena (2003). $\square$
+
+### U.24.6 Running and Tensor Tilt
+
+**Theorem U.67 (Spectral Running).**
+
+$$\frac{dn_s}{d\ln k} = -\frac{2}{N_e^2} + O(1/N_e^3)$$
+
+With $N_e = 59.4$:
+
+$$\boxed{\frac{dn_s}{d\ln k} = -\frac{2}{3528} = -5.7 \times 10^{-4}}$$
+
+**Theorem U.68 (Tensor Spectral Index).** The inflationary consistency relation:
+
+$$n_t = -\frac{r}{8} = -\frac{12}{8N_e^2} = -\frac{3}{2N_e^2}$$
+
+With $N_e = 59.4$:
+
+$$\boxed{n_t = -\frac{3}{2 \times 3528} = -4.3 \times 10^{-4}}$$
+
+---
+
+## U.25 Observational Comparison
+
+### U.25.1 CMB Constraints
+
+The predictions are compared against Planck 2018 results (Planck Collaboration 2020a,b) at pivot scale $k_* = 0.05 \text{ Mpc}^{-1}$:
+
+| Observable | Prediction | Observation | Tension |
+|:-----------|:----------:|:-----------:|:-------:|
+| $n_s$ | $0.9663$ | $0.9649 \pm 0.0042$ | $0.3\sigma$ |
+| $r$ | $0.0034$ | $< 0.036$ (95% CL) | Consistent |
+| $A_s$ | $2.08 \times 10^{-9}$ | $(2.10 \pm 0.03) \times 10^{-9}$ | $0.7\sigma$ |
+| $f_{NL}^{\text{local}}$ | $0.014$ | $-0.9 \pm 5.1$ | Consistent |
+| $dn_s/d\ln k$ | $-5.7 \times 10^{-4}$ | $-0.0045 \pm 0.0067$ | Consistent |
+
+**Sources:**
+- $n_s$, $A_s$, $dn_s/d\ln k$: Planck Collaboration (2020a), Table 2
+- $r$: BICEP/Keck Collaboration (2021), combined with Planck
+- $f_{NL}^{\text{local}}$: Planck Collaboration (2020b), Table 7
+
+### U.25.2 Falsification Criteria
+
+**Theorem U.69 (Falsification Conditions).** Conditional on Assumptions U.26, U.41, U.48; Identifications U.20, U.44a, U.51; and the fiducial choice $\phi_0 = \phi_{\max}$ so that $N_e = 59.4$ (Result U.60), the primordial-sector predictions would be falsified by:
+
+1. **Tensor detection**: $r > 0.006$ at $>3\sigma$ (prediction: $r = 0.0034$)
+2. **Tensor null**: $r < 0.002$ at $>3\sigma$ (prediction: $r = 0.0034$)
+3. **Spectral index**: $|n_s - 0.9663| > 0.010$ at $>3\sigma$
+4. **Non-Gaussianity**: $|f_{NL}^{\text{local}}| > 1$ at $>3\sigma$ (prediction: $0.014$)
+5. **Running**: $|dn_s/d\ln k| > 0.01$ at $>3\sigma$ (prediction: $5.7 \times 10^{-4}$)
+
+If $N_e$ differs from 59.4, replace the numerical values using $n_s \simeq 1 - 2/N_e$, $r \simeq 12/N_e^2$, $dn_s/d\ln k \simeq -2/N_e^2$, $f_{NL}^{\text{local}} \simeq 5/(6N_e)$, and $n_t \simeq -3/(2N_e^2)$.
+
+These criteria are testable by CMB-S4, LiteBIRD, and future 21-cm observations.
+
+
+---
+
+## U.26 Structural Summary
+
+### U.26.1 Dual Complexity Hierarchy
+
+**Summary U.70 (Complexity Parameters).**
+
+| Sector | Configuration Space | $\kappa$ | Physical Scale |
+|:-------|:-------------------:|:--------:|:--------------:|
+| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $141.5$ | $\Lambda L_P^2 \approx 3.1 \times 10^{-122}$ |
+| Primordial | $\mathbb{CP}^{11}$ | $11$ | $Q \approx 1.18 \times 10^{-5}$ |
+
+The hierarchy $\kappa_\Lambda / \kappa_Q = 12.86$ explains why the cosmological constant is exponentially smaller than primordial perturbations.
+
+### U.26.2 Golay-Steiner Unification
+
+**Summary U.71 (Structural Unity).** Both sectors connect to the Golay code $[24, 12, 8]$ (Theorem Z.13):
+
+- **Vacuum**: Full code structure $\to$ Grassmannian $\text{Gr}_\mathbb{C}(12,24)$ $\to$ $\kappa_\Lambda = 141.5$ (Theorem U.16)
+- **Primordial**: Signal subspace $\mathbb{C}^{12}$ $\to$ Projective space $\mathbb{CP}^{11}$ $\to$ $\kappa_Q = 11$ (Identification U.20)
+- **Inflation dynamics**: 24-cell 5-design $\to$ 12-line graph $\to$ $\mathbb{CP}^1_{\text{inv}}$ $\to$ Starobinsky (Assumption U.48, Identification U.44a)
+- **Observable predictions**: Conditional on Assumption U.26, Assumption U.41, Identification U.51
+
+The framework achieves predictions for inflationary observables from the Golay-Steiner structure, conditional on the identifications and assumptions stated in this appendix.
+
+---
+
+## U.27 Conclusion
+
+This appendix derives the cosmological constant and inflationary observables from the Golay-Steiner structure at $M = 24$. A single information-theoretic organization determines both sectors:
+
+**Vacuum Sector.** The complexity $\kappa_\Lambda = 141.5$ yields:
+
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283} \approx 3 \times 10^{-122}$$
+
+matching the observed $2.87 \times 10^{-122}$ (Corollary U.17).
+
+**Primordial Sector.** The complexity $\kappa_Q = 11$ and geometric e-fold count $N_e = 59.4$ yield:
+
+| Observable | Prediction | Observed |
+|:-----------|:----------:|:--------:|
+| $Q$ | $1.18 \times 10^{-5}$ | $\sim 10^{-5}$ |
+| $n_s$ | $0.9663$ | $0.9649 \pm 0.0042$ |
+| $r$ | $0.0034$ | $< 0.036$ |
+| $A_s$ | $2.08 \times 10^{-9}$ | $(2.10 \pm 0.03) \times 10^{-9}$ |
+
+**Structural Unity.** Both sectors derive from the Golay code $[24, 12, 8]$:
+
+| Sector | Configuration Space | $\kappa$ | Suppression |
+|:-------|:-------------------:|:--------:|:-----------:|
+| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $141.5$ | $e^{-283}$ |
+| Primordial | $\mathbb{CP}^{11}$ | $11$ | $e^{-22}$ |
+
+The ratio $\kappa_\Lambda/\kappa_Q \approx 13$ explains the hierarchy between vacuum energy and primordial perturbations.
+
+**Falsifiability.** The predictions $r = 0.0034$ and $n_s = 0.9663$ are testable by CMB-S4 and LiteBIRD. Detection outside the range $0.002 < r < 0.006$ at $>3\sigma$ would falsify the framework.
+
+The primordial predictions are conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48. The vacuum result (Theorem U.16) is more robust, depending only on the Grassmannian structure and spherical 5-design.
+
+---

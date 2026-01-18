@@ -37,10 +37,12 @@
 *   Bengtsson, I., & Życzkowski, K. (2006). *Geometry of Quantum States: An Introduction to Quantum Entanglement*. Cambridge University Press.
 *   Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525–532. DOI: 10.1147/rd.176.0525
 *   Bennett, C. H. (1982). The thermodynamics of computation—a review. *International Journal of Theoretical Physics*, *21*(12), 905–940. DOI: 10.1007/BF02084158
+*   Berger, M., Gauduchon, P., & Mazet, E. (1971). *Le spectre d'une variété riemannienne*. Lecture Notes in Mathematics, Vol. 194. Springer-Verlag.
 *   Berry, M. V. (1984). Quantal phase factors accompanying adiabatic changes. *Proceedings of the Royal Society of London A*, *392*(1802), 45–57. DOI: 10.1098/rspa.1984.0023
 *   Berry, M. V., & Robbins, J. M. (1997). Indistinguishability for quantum particles: spin, statistics and the geometric phase. *Proceedings of the Royal Society A*, *453*(1963), 1771–1790. DOI: 10.1098/rspa.1997.0096
 *   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853.
 *   Besse, A. L. (1987). *Einstein Manifolds*. Springer.
+*   BICEP/Keck Collaboration (2021). Improved Constraints on Primordial Gravitational Waves using Planck, WMAP, and BICEP/Keck Observations through the 2018 Observing Season. *Physical Review Letters*, *127*, 151301.
 *   Bilal, A. (2008). *Lectures on Anomalies*. arXiv:0802.0634 [hep-th].
 *   Bisognano, J. J., & Wichmann, E. H. (1975). On the duality condition for a Hermitian scalar field. *Journal of Mathematical Physics*, *16*(4), 985–1007. DOI: 10.1063/1.522605
 *   Bisognano, J. J., & Wichmann, E. H. (1976). On the duality condition for quantum fields. *Journal of Mathematical Physics*, *17*(3), 303–321. DOI: 10.1063/1.522898
@@ -134,7 +136,7 @@
 *   Dehaene, S., Lau, H., & Kouider, S. (2017). What is consciousness, and could machines have it? *Science*, *358*(6362), 486–492. DOI: 10.1126/science.aan8871
 *   Deligne, P., et al. (Eds.). (1999). *Quantum Fields and Strings: A Course for Mathematicians* (Vols. 1–2). American Mathematical Society.
 *   Delsarte, P., & Goethals, J.-M. (1975). Unrestricted codes with the Golay parameters are unique. *Discrete Mathematics*, *12*(3), 211–224. DOI: 10.1016/0012-365X(75)90047-2
-*   Delsarte, P., Goethals, J. M., & Seidel, J. J. (1977). Spherical codes and designs. Geometriae Dedicata 6(3), 363–388.
+*   Delsarte, P., Goethals, J. M., & Seidel, J. J. (1977). Spherical codes and designs. *Geometriae Dedicata*, *6*, 363–388.
 *   Dembo, A., & Zeitouni, O. (1998). *Large Deviations Techniques and Applications* (2nd ed.). Springer.
 *   Descartes, R. (1641). *Meditationes de Prima Philosophia* (*Meditations on First Philosophy*).
 *   Deutsch, D. (1991). Quantum mechanics near closed timelike lines. *Physical Review D*, *44*(10), 3197–3217. DOI: 10.1103/PhysRevD.44.3197
@@ -251,6 +253,7 @@
 *   Husdal, L. (2016). On effective degrees of freedom in the early Universe. *Galaxies*, *4*(4), 78. DOI: 10.3390/galaxies4040078
 *   Hyper-Kamiokande Collaboration (Abe, K., *et al.*) (2018). Hyper-Kamiokande Design Report. arXiv:1805.04163.
 *   Ibe, Y., Hirano, Y., Ozu, Y., Kawakubo, T., & Fujii, K. (2025). Measurement-based fault-tolerant quantum computation on high-connectivity devices: A resource-efficient approach toward early FTQC. arXiv:2510.18652.
+*   Ikeda, A., & Taniguchi, Y. (1978). Spectra and eigenforms of the Laplacian on $S^n$ and $P^n(\mathbb{C})$. *Osaka Journal of Mathematics*, *15*, 515–546.
 *   Jacobson, T. (1995). Thermodynamics of spacetime: The Einstein equation of state. *Physical Review Letters*, *75*(7), 1260–1263. DOI: 10.1103/PhysRevLett.75.1260
 *   Jacobson, T. (2016). Entanglement equilibrium and the Einstein equation. *Physical Review Letters*, *116*(20), 201101. DOI: 10.1103/PhysRevLett.116.201101 
 *   Jarlskog, C. (1985). Commutator of the Quark Mass Matrices in the Standard Electroweak Model and a Measure of Maximal CP Nonconservation. *Physical Review Letters*, *55*(10), 1039–1042. DOI: 10.1103/PhysRevLett.55.1039
@@ -279,7 +282,7 @@
 *   Knapp, A. W. (2002). *Lie Groups Beyond an Introduction* (2nd ed.). Birkhäuser.
 *   Knill, E., & Laflamme, R. (1997). Theory of quantum error-correcting codes. *Physical Review A*, *55*, 900–911.
 *   Kobayashi, M., & Maskawa, T. (1973). CP-Violation in the Renormalizable Theory of Weak Interaction. *Progress of Theoretical Physics*, *49*(2), 652–657. DOI: 10.1143/PTP.49.652
-*   Kobayashi, S., & Nomizu, K. (1969). Foundations of Differential Geometry (Vol. II). Wiley-Interscience.
+*   Kobayashi, S., & Nomizu, K. (1969). *Foundations of Differential Geometry* (Vol. II). Interscience Publishers.
 *   Kolchinsky, A., & Wolpert, D. H. (2018). Semantic information, autonomous agency and non-equilibrium statistical physics. *Interface Focus*, *8*(6), 20180041. DOI: 10.1098/rsfs.2018.0041
 *   Korkine, A., & Zolotareff, G. (1873). Sur les formes quadratiques. *Mathematische Annalen*, *6*, 366–389. DOI: 10.1007/BF01442795
 *   Kossakowski, A., Frigerio, A., Gorini, V., & Verri, M. (1977). Quantum detailed balance and KMS condition. *Communications in Mathematical Physics*, *57*(2), 97–110. DOI: 10.1007/BF01625769
@@ -334,6 +337,7 @@
 *   MAGIC Collaboration (Albert, J., et al.) (2008). Probing quantum gravity using photons from a flare of the active galactic nucleus Markarian 501 observed by the MAGIC telescope. *Physics Letters B*, *668*(4), 253–257. DOI: 10.1016/j.physletb.2008.08.053
 *   Maki, Z., Nakagawa, M., & Sakata, S. (1962). Remarks on the unified model of elementary particles. *Progress of Theoretical Physics*, *28*, 870–880.
 *   Maldacena, J. (1999). The large-N limit of superconformal field theories and supergravity. *International Journal of Theoretical Physics*, *38*(4), 1113–1133.
+*   Maldacena, J. (2003). Non-Gaussian features of primordial fluctuations in single field inflationary models. *Journal of High Energy Physics*, *2003*(05), 013.
 *   Manton, N. S., & Sutcliffe, P. (2004). *Topological Solitons*. Cambridge University Press (Cambridge Monographs on Mathematical Physics). DOI: 10.1017/CBO9780511617034
 *   Margolus, N., & Levitin, L. B. (1998). The maximum speed of dynamical evolution. *Physica D: Nonlinear Phenomena*, *120*(1–2), 188–195. DOI: 10.1016/S0167-2789(98)00054-2
 *   Marshall, A. W., Olkin, I., & Arnold, B. C. (2011). *Inequalities: Theory of Majorization and Its Applications* (2nd ed.). Springer. DOI: 10.1007/978-0-387-68276-1
@@ -351,6 +355,7 @@
 *   Mordell, L. J. (1938). The definite quadratic forms in eight variables with determinant unity. *Journal de Mathématiques Pures et Appliquées*, *17*, 41–46.
 *   Mosonyi, M., & Hiai, F. (2011). On the Symmetrized Rényi Relative Entropies and Related Metrics. *IEEE Transactions on Information Theory*, *57*(4), 2474–2487. DOI: 10.1109/TIT.2011.2110065
 *   Mosonyi, M., & Ogawa, T. (2017). Quantum hypothesis testing and the operational interpretation of the quantum Rényi relative entropies. *Communications in Mathematical Physics*, *355*, 373–426. DOI: 10.1007/s00220-017-2960-6
+*   Mukhanov, V. (2005). *Physical Foundations of Cosmology*. Cambridge University Press.
 *   Musin, O. R. (2008). The kissing number in four dimensions. *Annals of Mathematics*, *168*(1), 1–32. DOI: 10.4007/annals.2008.168.1
 *   Nachtergaele, B., & Sims, R. (2010). Lieb–Robinson bounds in quantum many-body physics. In R. Sims & D. Ueltschi (Eds.), *Entropy and the Quantum* (*Contemporary Mathematics*, Vol. 529, pp. 141–176). American Mathematical Society. DOI: 10.1090/conm/529
 *   Nakahara, M. (2003). *Geometry, Topology and Physics* (2nd ed.). CRC Press.
@@ -393,7 +398,8 @@
 *   Petz, D., & Sudár, C. (1996). Geometries of quantum states. *Journal of Mathematical Physics*, *37*(6), 2662–2673. DOI: 10.1063/1.531535
 *   Pfender, F., & Ziegler, G. M. (2004). Kissing numbers, sphere packings, and some unexpected proofs. *Notices of the AMS*, *51*(8), 873–883.
 *   Pikovsky, A., Rosenblum, M., & Kurths, J. (2001). *Synchronization: A Universal Concept in Nonlinear Sciences*. Cambridge University Press.
-*   Planck Collaboration, Aghanim, N., Akrami, Y., Ashdown, M., et al. (2020). Planck 2018 results. VI. Cosmological parameters. *Astronomy & Astrophysics*, *641*, A6. DOI: 10.1051/0004-6361/201833910
+*   Planck Collaboration (2020a). Planck 2018 results. VI. Cosmological parameters. *Astronomy & Astrophysics*, *641*, A6.
+*   Planck Collaboration (2020b). Planck 2018 results. IX. Constraints on primordial non-Gaussianity. *Astronomy & Astrophysics*, *641*, A9.
 *   Plavala, M. (2016). All measurements in a probabilistic theory are compatible if and only if the state space is a simplex. *Physical Review A*, *94*, 042108. DOI: 10.1103/PhysRevA.94.042108
 *   Plavala, M. (2021). General Probabilistic Theories: An Introduction. *arXiv*, arXiv:2103.07469. DOI: 10.48550/arXiv.2103.07469
 *   Pless, V. (1968). On the uniqueness of the Golay codes. *Journal of Combinatorial Theory*, *5*(3), 215–228. DOI: 10.1016/S0021-9800(68)80067-5
@@ -452,6 +458,7 @@
 *   Smart, J. M. (2012). The transcension hypothesis: Sufficiently advanced civilizations invariably leave our universe, and implications for METI and SETI. *Acta Astronautica*, *78*, 55–68. DOI: 10.1016/j.actaastro.2011.11.012
 *   Sommerfeld, A. (1916). Zur Quantentheorie der Spektrallinien. *Annalen der Physik*, *356*(17), 1–94.
 *   Spohn, H. (1978). Entropy production for quantum dynamical semigroups. *Journal of Mathematical Physics*, *19*(5), 1227–1230. DOI: 10.1063/1.523789
+*   Starobinsky, A. A. (1980). A new type of isotropic cosmological models without singularity. *Physics Letters B*, *91*, 99–102.
 *   Steane, A. M. (1996). Error correcting codes in quantum theory. *Physical Review Letters*, *77*(5), 793–797. DOI: 10.1103/PhysRevLett.77.793
 *   Stinespring, W. F. (1955). Positive functions on C*-algebras. *Proceedings of the American Mathematical Society*, *6*(2), 211–216. DOI: 10.1090/S0002-9939-1955-0069403-4
 *   Stone, M. H. (1932). On one-parameter unitary groups in Hilbert space. *Annals of Mathematics*, *33*(3), 643–648. DOI: 10.2307/1968538
@@ -482,9 +489,11 @@
 *   van Ekeren, J., Möller, S., & Scheithauer, N. (2020). Construction and classification of holomorphic vertex operator algebras. *Journal für die reine und angewandte Mathematik*, *759*, 61–99.
 *   Van Raamsdonk, M. (2010). Building up spacetime with quantum entanglement. *General Relativity and Gravitation*, *42*(10), 2323–2329. DOI: 10.1007/s10714-010-1034-0
 *   Vasileiou, V., Jacholkowska, A., Piron, F., Bolmont, J., Couturier, C., Granot, J., Stecker, F. W., Cohen-Tanugi, J., & Longo, F. (2013). Constraints on Lorentz invariance violation from Fermi-Large Area Telescope observations of gamma-ray bursts. Physical Review D, 87(12), 122001. DOI: 10.1103/PhysRevD.87.122001
+*   Vassilevich, D. V. (2003). Heat kernel expansion: user's manual. *Physics Reports*, *388*, 279–360.
 *   Verlinde, E. (2011). On the origin of gravity and the laws of Newton. *Journal of High Energy Physics*, *2011*(4), 029. DOI: 10.1007/JHEP04(2011)029
 *   Viazovska, M. S. (2017). The sphere packing problem in dimension 8. *Annals of Mathematics*, *185*(3), 991–1015.
 *   von Neumann, J. (1932). *Mathematische Grundlagen der Quantenmechanik*. Springer. [English translation: *Mathematical Foundations of Quantum Mechanics*, Princeton University Press, 1955]
+*   Voros, A. (1987). Spectral functions, special functions and the Selberg zeta function. *Communications in Mathematical Physics*, *110*, 439–465.
 *   Wald, R. M. (1984). *General Relativity*. University of Chicago Press.
 *   Wald, R. M. (1994). *Quantum Field Theory in Curved Spacetime and Black Hole Thermodynamics*. University of Chicago Press.
 *   Watrous, J. (2018). *The Theory of Quantum Information*. Cambridge University Press.

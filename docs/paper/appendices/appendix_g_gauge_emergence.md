@@ -754,6 +754,7 @@ with complex dimensions $6 + 4 + 2 = 12$. Realizing multiple distinct Hessian ei
 | Grassmannian complex dimension | $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ | QFI tangent structure (Theorem Z.6.3a) |
 | Interface mode pairs | $M/2 = 12$ | Signal-parity partition (Theorem Z.5) |
 | Golay parity constraints | $n - k = 12$ | Parity check matrix rows |
+| Stabilizer generators (each type) | 12 | CSS construction from self-dual $\mathcal{G}_{24}$ (Remark G.8.4g.1a) |
 
 *These appearances reflect a single structural identity:*
 $$
@@ -785,7 +786,11 @@ For the Standard Model gauge algebra: $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12 
 
 The correspondence identifies organizational structure: 12-dimensional redundancy (parity/gauge) protecting or constraining 12-dimensional content (message/matter). This is a structural parallel at the level of dimensionality, not an algebraic isomorphism. ∎
 
-**Remark G.8.4g.1 (Clarification on CSS Quantum Codes).** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ would have parameters $[[24, 0, d]]$ with zero logical qubits, since $k_{quantum} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The analogy presented here concerns the **classical** code structure, not CSS quantum parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ partition ($k = n - k = 12$) and the gauge/matter sector organization.
+**Remark G.8.4g.1 (Clarification on CSS Quantum Codes).** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ has parameters $[[24, 0, 8]]$ with zero logical qubits, since $k_{\text{quantum}} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The quantum Singleton bound $n - k \geq 2(d-1)$ requires $k \leq 10$ for $[[24, k, 8]]$, confirming that $[[24, 12, 8]]$ is impossible. The analogy presented here concerns the **classical** code structure, not CSS quantum parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ partition ($k = n - k = 12$) and the gauge/matter sector organization.
+
+**Remark G.8.4g.1a (Vacuum Stabilizer Interpretation).** The $[[24, 0, 8]]$ CSS construction yields a unique stabilizer state $|\Omega_{\text{Golay}}\rangle$, the uniform superposition over all 4096 Golay codewords:
+$$|\Omega_{\text{Golay}}\rangle = \frac{1}{64} \sum_{c \in \mathcal{G}_{24}} |c\rangle$$
+This state is stabilized by 24 independent generators: 12 X-type generators $S_i^X = X^{g_i}$ (where $g_i$ is the $i$-th row of a generator matrix) and 12 Z-type generators $S_j^Z = Z^{h_j}$ (where $h_j$ is the $j$-th row of a parity-check matrix). The "12 + 12" structure thus manifests as stabilizer generators rather than signal versus parity qubits. The Golay minimum distance 8 implies that the smallest-weight non-identity stabilizer elements have weight 8; equivalently, any Pauli error of weight less than 8 produces a nontrivial syndrome under stabilizer measurement. The state is invariant under the Mathieu group $M_{24} = \text{Aut}(\mathcal{G}_{24})$, with $|M_{24}| = 244,823,040$.
 
 **Remark G.8.4g.2 (Functional Analogy).** The analogy suggests that gauge invariance serves a function analogous to error detection: gauge transformations identify physically equivalent configurations, just as parity constraints identify valid codewords. Physical observables must be gauge-invariant, just as transmitted messages must satisfy parity checks. The number 12 appears in both contexts because both derive from the rate-$\frac{1}{2}$ optimization on $M = 24$ modes (Theorem Z.13).
 
@@ -1201,6 +1206,40 @@ $$
 $$
 
 The apparent diversity of probability measures in physics—quantum, thermal, gravitational—reflects not different foundations but different constraint geometries $\mathcal{C}$ within a unified framework of ND-RID equilibration to Gibbs fixed points.
+
+### G.1.9.10 Topological Origin of the Factor $2\pi$
+
+The factor $2\pi$ appears throughout the framework: holonomy quantization (Theorem Q.0.4), Unruh temperature (Theorem G.1.9.6), Bohr-Sommerfeld conditions (Proposition Q.0.9), and phase coherence. This section establishes their common topological origin in the $U(1)$ structure selected by PCE optimization.
+
+**Proposition G.1.9.10a (Unified Topological Source of $2\pi$).** *The factor $2\pi$ appearing in the framework's quantization conditions arises from the topology of the circle $S^1 \cong U(1)$, whose fundamental group $\pi_1(S^1) = \mathbb{Z}$ enforces single-valuedness constraints on quantum amplitudes.*
+
+*Proof.*
+
+**Part A (Holonomy Quantization).** Theorem Q.0.4 establishes that for closed paths $\gamma$ in configuration space:
+$$\oint_\gamma \sum_i \varepsilon_i = 2\pi k, \quad k \in \mathbb{Z}$$
+
+This follows from single-valuedness of the amplitude $e^{i\mathcal{S}/\hbar}$. For any closed loop $\gamma$, single-valuedness requires $e^{i\oint_\gamma d\mathcal{S}/\hbar} = 1$, hence $\oint_\gamma d\mathcal{S}/\hbar \in 2\pi\mathbb{Z}$. The factor $2\pi$ is the circumference of $S^1$ in the standard parametrization.
+
+**Part B (Unruh Temperature).** Theorem G.1.9.6 identifies the horizon modular Hamiltonian as $K^*_{\text{horizon}} = (2\pi/\kappa) K_{\text{boost}}$, following from the Bisognano-Wichmann theorem. In Rindler coordinates covering the right wedge $x > |t|$, the boost Killing vector generates orbits that become periodic with period $2\pi/\kappa$ under analytic continuation to imaginary time $t \to -i\tau$. This periodicity is topological: Euclidean Rindler space has polar geometry with angular period $2\pi$.
+
+**Part C (Bohr-Sommerfeld).** Proposition Q.0.9 derives $\oint p\,dq = nh$ with $h = 2\pi\hbar$ from interference conditions on closed orbits. The quantization in units of $2\pi\hbar$ rather than $\hbar$ reflects winding number interpretation: classical orbits wind once around phase space, accumulating $2\pi$ radians of phase. QED
+
+**Corollary G.1.9.10b (SPAP-Topological Ratio).** *The ratio $2\pi/\varepsilon = 2\pi/\ln 2 \approx 9.065$ determines the number of minimum-cost SPAP cycles per quantum of orbital action.*
+
+*Proof.* From the Action-Entropy Identity (Corollary Q.0.1), action in units of $\hbar$ equals total SPAP entropy: $\mathcal{S}/\hbar = \sum_i \varepsilon_i$. At the SPAP minimum, each cycle contributes $\varepsilon = \ln 2$ nats (Theorem 31). For one Bohr-Sommerfeld quantum $\mathcal{S} = h = 2\pi\hbar$:
+$$N_{\text{cycles}} = \frac{2\pi\hbar/\hbar}{\ln 2} = \frac{2\pi}{\ln 2} \approx 9.065$$
+QED
+
+**Remark G.1.9.10c (Complementary Roles of $\varepsilon$ and $2\pi$).** The quantities $\varepsilon = \ln 2$ and $2\pi$ operate in complementary domains:
+
+| Quantity | Domain | Origin | Role in Framework |
+|:---------|:-------|:-------|:------------------|
+| $\varepsilon = \ln 2$ | Measure-theoretic | SPAP logical merge (Theorem 31) | Irreducible information cost |
+| $2\pi$ | Topological | $\pi_1(U(1)) = \mathbb{Z}$ | Phase quantization period |
+
+Neither is derivable from the other. The measure-theoretic entropy $\varepsilon$ counts distinguishable states; the topological factor $2\pi$ enforces consistency under cyclic evolution. Their ratio $2\pi/\ln 2$ characterizes the computational depth of one action quantum.
+
+**Remark G.1.9.10d (Connection to Modular Flow).** The KMS condition (Theorem G.1.9.5) characterizes equilibrium states with respect to modular flow $\sigma_t(A) = e^{iK^* t} A e^{-iK^* t}$ at inverse temperature $\beta = 1$. On the active subspace, $K^*|_{\mathcal{A}} = (\ln 2)\cdot I_2$ (Theorem G.1.9.4), so the modular Hamiltonian eigenvalue is $\ln 2$. The ratio $2\pi/\ln 2 \approx 9.065$ appearing in Corollary G.1.9.10b characterizes the action-entropy conversion: one topological quantum of phase ($2\pi$) corresponds to $2\pi/\ln 2$ units of SPAP entropy.
 
 ### G.8.7 Mode-Polarization Correspondence
 

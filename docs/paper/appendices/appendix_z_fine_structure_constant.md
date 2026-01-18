@@ -254,6 +254,18 @@ The intersection of these four independent constraints uniquely determines d₀ 
 
 **Remark Z.1 (Octonionic Connection).** The octonion structure connects to the exceptional Lie algebra E₈, whose root system relates to octonion multiplication. This provides a bridge between the algebraic structure of the MPU Hilbert space H₀ and the geometric structure of optimal lattices.
 
+**Remark Z.1a (Algebraic Context of $d_0 = 8$).** The MPU Hilbert space dimension $d_0 = 8$ (Theorem 23), derived from the horizon constant $K_0 = 3$ (Theorem 15), occupies a distinguished position in algebraic structure.
+
+*Division Algebra Correspondence.* The Radon-Hurwitz theorem (Theorem Z.3) establishes that normed division algebras over $\mathbb{R}$ exist only in dimensions 1, 2, 4, and 8, corresponding to $\mathbb{R}$, $\mathbb{C}$, $\mathbb{H}$, and $\mathbb{O}$. The value $d_0 = 8$ coincides with $\dim_{\mathbb{R}}(\mathbb{O})$, placing the MPU state space at the maximal division algebra dimension.
+
+*Clifford Algebra Structure.* The $K_0 = 3$ qubit workspace supports six pairwise anti-commuting operators
+$$\gamma_{2k-1} = \left(\prod_{j=1}^{k-1}\sigma_z^{(j)}\right)\sigma_x^{(k)}, \qquad \gamma_{2k} = \left(\prod_{j=1}^{k-1}\sigma_z^{(j)}\right)\sigma_y^{(k)}, \qquad k=1,2,3$$
+which satisfy the Clifford relations $\{\gamma_i,\gamma_j\} = 2\delta_{ij} I$ and generate $\text{Cl}_{\mathbb{C}}(6) \cong M_8(\mathbb{C})$. The algebra dimension $2^6 = 64 = d_0^2$ matches the operator algebra $\mathcal{B}(\mathcal{H}_0)$.
+
+*Bott Periodicity.* Real and complex Clifford algebras exhibit 8-fold and 2-fold periodicity respectively. The value $d_0 = 8 = 2^3$ sits at the end of the first real period, where algebraic structure is maximally rich before repeating.
+
+*Consistency with Dimensional Selection.* For $K_0 \neq 3$, the framework becomes inconsistent with mode-channel matching (Theorem Z.11). Specifically, $K_0 = 2$ yields $M = 8$ with no integer $D$ satisfying $K(D) = 8$; $K_0 = 4$ yields $M = 56$ with no solution between $K(5) = 40$ and $K(6) = 72$. Only $K_0 = 3$ produces $M = 24 = K(4)$, yielding the unique self-consistent dimensional structure with $D = 4$.
+
 ---
 
 ## Z.5 Modular Forms and the Factor of Twelve
@@ -1840,24 +1852,26 @@ $$\alpha^{-1} = \frac{4\pi}{2^{1/8}-1} - \frac{4\pi \cdot (1/4)}{\sqrt{3}} = \fr
 
 | Step | Principle | Result | Reference |
 |------|-----------|--------|-----------|
-| 1 | Self-referential logic (SPAP) | K₀ = 3 bits | Theorem 15 |
-| 2 | Quantum realization | d₀ = 2^{K₀} = 8 | Theorem 23 |
-| 3 | Landauer irreversibility | ε = ln 2 | Theorem 31 |
-| 4 | Physical instantiation (PPI) | a = e^ε = 2 | Theorem Z.1 |
-| 5 | Landauer-SPAP structure | d₀ = 2a² | Theorem Z.2 |
-| 6 | Subspace decomposition | b = d₀ - a = 6 | — |
-| 7 | QFI mode structure | M = 2ab = 24, λ = 1 | Theorem Z.5 |
-| 8 | Capacity saturation | u* = 2^{1/8} - 1 | Theorem Z.7 |
-| 9 | Mode-channel correspondence | M_int = M_phys | Theorem Z.10 |
-| 10 | Kissing number constraint | K(D) = 24 | — |
-| 11 | **Dimensional selection** | **D = 4** | **Theorem Z.11** |
-| 12 | Bulk Ward identity | κ_bulk = 1 | Theorem Z.14 |
-| 13 | Sign from Legendre structure | δκ < 0 | Theorem Z.16 |
-| 14 | Active fraction | a/d₀ = 1/4 | Theorem Z.18 |
-| 15 | Embedding factor | 1/√K₀ (exact) | Theorem Z.19 |
-| 16 | Interface correction | δκ = -u*/(4√K₀) | Theorem Z.17 |
-| 17 | **Fine-structure constant (1st order)** | **α⁻¹₍₁₎ = 137.029** | **Theorem Z.20** |
-| 18 | **Fine-structure constant (2nd order)** | **α⁻¹₍₂₎ ≈ 137.036** | **Theorem Z.25** |
+| 1 | Self-referential logic (SPAP) | $K_0 = 3$ bits | Theorem 15 |
+| 2 | Quantum realization | $d_0 = 2^{K_0} = 8$ | Theorem 23 |
+| 3 | Landauer irreversibility | $\varepsilon = \ln 2$ | Theorem 31 |
+| 4 | Physical instantiation (PPI) | $a = e^{\varepsilon} = 2$ | Theorem Z.1 |
+| 5 | Landauer-SPAP structure | $d_0 = 2a^2$ | Theorem Z.2 |
+| 6 | Subspace decomposition | $b = d_0 - a = 6$ | — |
+| 7 | QFI mode structure | $M = 2ab = 24$, $\lambda = 1$ | Theorem Z.5 |
+| 8 | Capacity saturation | $u^* = 2^{1/8} - 1$ | Theorem Z.7 |
+| 9 | Mode-channel correspondence | $M_{\text{int}} = M_{\text{phys}}$ | Theorem Z.10 |
+| 10 | Kissing number constraint | $K(D) = 24$ | — |
+| 11 | **Dimensional selection** | **$D = 4$** | **Theorem Z.11** |
+| 12 | Bulk Ward identity | $\kappa_{\text{bulk}} = 1$ | Theorem Z.14 |
+| 13 | Sign from Legendre structure | $\delta\kappa < 0$ | Theorem Z.16 |
+| 14 | Active fraction | $a/d_0 = 1/4$ | Theorem Z.18 |
+| 15 | Embedding factor | $1/\sqrt{K_0}$ (exact) | Theorem Z.19 |
+| 16 | Interface correction | $\delta\kappa = -u^*/(4\sqrt{K_0})$ | Theorem Z.17 |
+| 17 | **Fine-structure constant (1st order)** | **$\alpha^{-1}_{(1)} = 137.029$** | **Theorem Z.20** |
+| 18 | **Fine-structure constant (2nd order)** | **$\alpha^{-1}_{(2)} \approx 137.036$** | **Theorem Z.25** |
+| 19 | Holonomy quantization | $\oint \sum_i \varepsilon_i \in 2\pi\mathbb{Z}$ | Theorem Q.0.4 |
+| 20 | SPAP-topological ratio | $2\pi/\ln 2 \approx 9.065$ | Corollary G.1.9.10b |
 
 ---
 

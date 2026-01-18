@@ -349,14 +349,15 @@ Each step follows uniquely from the previous under PCE constraints. ∎
 
 ### 13.9.6 Classical vs. Quantum Golay Codes
 
-The framework's prediction concerns the classical extended binary Golay code $[24, 12, 8]$, whose parameters directly reflect the PCE-Attractor structure. The principal quantum code derived from this classical code is:
+The framework's prediction concerns the classical extended binary Golay code $[24, 12, 8]$, whose parameters directly reflect the PCE-Attractor structure. The quantum codes derived from this classical code are:
 
-| Code | Parameters | Construction |
-|------|------------|--------------|
-| Classical extended Golay | $[24, 12, 8]$ | PCE-optimal (Theorem 54) |
-| Quantum Golay (CSS) | $[[23, 1, 7]]$ | Punctured CSS construction |
+| Code | Parameters | Construction | Role |
+|------|------------|--------------|------|
+| Classical extended Golay | $[24, 12, 8]$ | PCE-optimal (Theorem 54) | Information structure |
+| Golay stabilizer state | $[[24, 0, 8]]$ | CSS from self-dual code | Vacuum state (Remark G.8.4g.1a) |
+| Quantum Golay | $[[23, 1, 7]]$ | Punctured CSS construction | Error correction |
 
-The $[[23, 1, 7]]$ quantum code is the most commonly studied variant for fault-tolerant quantum computation. Its distance $d = 7$ (vs. classical $d = 8$) reflects the CSS construction overhead. Experimental tests of the substrate alignment hypothesis (Protocol 4) should focus on this code and structurally similar alternatives.
+The $[[24, 0, 8]]$ CSS construction from the self-dual Golay code yields a unique stabilizer state rather than a code space, since the quantum Singleton bound requires $k \leq 10$ for $[[24, k, 8]]$. This state represents the PCE-Attractor vacuum, stabilized by 12 X-type and 12 Z-type generators with $M_{24}$ symmetry. The $[[23, 1, 7]]$ punctured code encodes one logical qubit; puncturing reduces the distance from 8 to 7 and removes the self-duality constraint. Experimental tests of the substrate alignment hypothesis (Protocol 4) should focus on the $[[23, 1, 7]]$ code and structurally similar alternatives.
 
 **Remark on Quantum Bounds.** The quantum Hamming bound constrains achievable parameters for nondegenerate quantum codes. For a $[[n, k, d]]$ code with $t = \lfloor(d-1)/2\rfloor$ correctable errors, the bound requires:
 
@@ -433,7 +434,7 @@ where $p_{\text{th}}^{\text{generic}}$ is the threshold for codes of comparable 
 
 The substrate alignment hypothesis (Corollary 54.1) is falsified if:
 
-1. Golay codes show no statistically significant advantage over random $[[24, 12, \leq 8]]$ codes at $p < 0.05$ significance level, after controlling for distance
+1. Golay-derived $[[23, 1, 7]]$ codes show no statistically significant advantage over random $[[23, 1, 7]]$ codes or comparable CSS constructions at $p < 0.05$ significance level, after controlling for distance
 2. Block lengths other than $n = 24$ prove systematically superior for rate-$1/2$ codes across multiple noise models
 3. Rate $R \neq 1/2$ proves optimal for $n = 24$ codes across diverse noise models
 4. The observed threshold ratio satisfies $p_{\text{th}}^{\text{Golay}}/p_{\text{th}}^{\text{generic}} < 1.1$ within measurement uncertainty
