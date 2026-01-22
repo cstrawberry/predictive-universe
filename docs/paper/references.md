@@ -7,6 +7,7 @@
 *   Aharonov, Y., Bergmann, P. G., & Lebowitz, J. L. (1964). Time Symmetry in the Quantum Process of Measurement. *Physical Review*, *134*(6B), B1410–B1416. DOI: 10.1103/PhysRev.134.B1410
 *   Albert, D. (2012). On the Origin of Everything. Review of L. Krauss, *A Universe from Nothing*. *New York Times*
 *   ALEPH, DELPHI, L3, OPAL, and SLD Collaborations (Schael, S., *et al.*) (2006). Precision electroweak measurements on the Z resonance. *Physics Reports*, *427*(5–6), 257–454. DOI: 10.1016/j.physrep.2005.12.006
+*   Amari, S.-I. (1998). Natural gradient works efficiently in learning. *Neural Computation*, *10*(2), 251–276.
 *   Arıkan, E. (2009). Channel polarization: A method for constructing capacity-achieving codes for symmetric binary-input memoryless channels. *IEEE Transactions on Information Theory*, *55*(7), 3051–3073. DOI: 10.1109/TIT.2009.2021379
 *   Ambrosio, L., Gigli, N., & Savaré, G. (2008). *Gradient Flows in Metric Spaces and in the Space of Probability Measures* (2nd ed.). Birkhäuser. DOI: 10.1007/978-3-7643-8722-8
 *   Ambrosio, L., Gigli, N., & Savaré, G. (2014). Metric measure spaces with Riemannian Ricci curvature bounded from below. *Duke Mathematical Journal*, *163*(7), 1405–1490. DOI: 10.1215/00127094-2681605
@@ -57,6 +58,7 @@
 *   Born, M. (1926). Zur Quantenmechanik der Stoßvorgänge. *Zeitschrift für Physik*, *37*, 863–867. DOI: 10.1007/BF01397477
 *   Bott, R., & Tu, L. W. (1982). *Differential Forms in Algebraic Topology*. Springer (Graduate Texts in Mathematics, 82). DOI: 10.1007/978-1-4757-3951-0
 *   Bottou, L., Curtis, F. E., & Nocedal, J. (2018). Optimization methods for large-scale machine learning. *SIAM Review*, *60*(2), 223–311. DOI: 10.1137/16M1080173 
+*   Bousso, R. (2002). The holographic principle. *Reviews of Modern Physics*, *74*, 825–874.
 *   Boyd, S., & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.
 *   Braides, A. (2002). *Γ-convergence for Beginners*. Oxford University Press.
 *   Brandão, F. G. S. L., Harrow, A. W., & Horodecki, M. (2016). Local random quantum circuits are approximate polynomial-designs. *Communications in Mathematical Physics*, *346*(2), 397–434. DOI: 10.1007/s00220-016-2706-8
@@ -141,12 +143,14 @@
 *   Delsarte, P., & Goethals, J.-M. (1975). Unrestricted codes with the Golay parameters are unique. *Discrete Mathematics*, *12*(3), 211–224. DOI: 10.1016/0012-365X(75)90047-2
 *   Delsarte, P., Goethals, J. M., & Seidel, J. J. (1977). Spherical codes and designs. *Geometriae Dedicata*, *6*, 363–388.
 *   Dembo, A., & Zeitouni, O. (1998). *Large Deviations Techniques and Applications* (2nd ed.). Springer.
+*   Deser, S., & Teitelboim, C. (1976). Duality transformations of Abelian and non-Abelian gauge fields. *Physical Review D*, *13*, 1592–1597.
 *   Descartes, R. (1641). *Meditationes de Prima Philosophia* (*Meditations on First Philosophy*).
 *   Deutsch, D. (1991). Quantum mechanics near closed timelike lines. *Physical Review D*, *44*(10), 3197–3217. DOI: 10.1103/PhysRevD.44.3197
 *   Deutsch, D. (1999). Quantum Theory of Probability and Decisions. *Proceedings of the Royal Society of London A*, *455*(1988), 3129–3137. DOI: 10.1098/rspa.1999.0443
 *   Devetak, I. (2005). The private classical capacity and quantum capacity of a quantum channel. *IEEE Transactions on Information Theory*, *51*(1), 44–55. DOI: 10.1109/TIT.2004.839516
 *   DeWitt, B. S. (1965). *Dynamical Theory of Groups and Fields*. Gordon & Breach.
 *   DeWitt, B. S., & Brehme, R. W. (1960). Radiation damping in a gravitational field. *Annals of Physics*, *9*(2), 220–259.
+*   Diósi, L. (1987). A universal master equation for the gravitational violation of quantum mechanics. *Physics Letters A*, *120*, 377–381.
 *   Dittmann, J. (1999). Explicit formulae for the Bures metric. *Journal of Physics A: Mathematical and General*, *32*, 2663–2670.
 *   D’Onofrio, M., Rummukainen, K., & Tranberg, A. (2014). Sphaleron rate in the minimal Standard Model. *Physical Review Letters*, *113*, 141602. DOI: 10.1103/PhysRevLett.113.141602
 *   Dong, C. (1993). Vertex algebras associated with even lattices. *Journal of Algebra*, *161*, 245–265.
@@ -190,6 +194,7 @@
 *   Fuller, R. B. (1938). *Nine Chains to the Moon*. J. B. Lippincott Company.
 *   Fulton, W., & Harris, J. (1991). *Representation Theory: A First Course*. Springer (Graduate Texts in Mathematics, 129). DOI: 10.1007/978-1-4612-0979-9
 *   Fulton, W. (1997). *Young Tableaux: With Applications to Representation Theory and Geometry*. Cambridge University Press (London Mathematical Society Student Texts, 35). DOI: 10.1017/CBO9780511626241
+*   Gaillard, M. K., & Zumino, B. (1981). Duality rotations for interacting fields. *Nuclear Physics B*, *193*, 221–244.
 *   Gallager, R. G. (1968). *Information Theory and Reliable Communication*. Wiley.
 *   Gavela, M. B., Hernández, P., Orloff, J., & Pène, O. (1994). Standard model CP-violation and baryon asymmetry. *Modern Physics Letters A*, *9*(09), 795–809. DOI: 10.1142/S021773239400076X
 *   Gelfand, I. M., & Naimark, M. A. (1943). On the imbedding of normed rings into the ring of operators in Hilbert space. *Matematicheskii Sbornik*, *12*(54), 197–217.
@@ -282,6 +287,7 @@
 *   King, C. (2003). The capacity of the quantum depolarizing channel. *IEEE Transactions on Information Theory*, *49*(1), 221–229. DOI: 10.1109/TIT.2002.806153
 *   King, C., & Ruskai, M. B. (2001). Minimal entropy of states emerging from noisy quantum channels. *IEEE Transactions on Information Theory*, *47*(1), 192–209. DOI: 10.1109/18.904522
 *   Kitaev, A. Yu. (1997). Quantum computations: algorithms and error correction. *Russian Mathematical Surveys*, *52*(6), 1191–1249. DOI: 10.1070/RM1997v052n06ABEH002155 
+*   Kitaev, A. Y. (2003). Fault-tolerant quantum computation by anyons. *Annals of Physics*, *303*, 2–30.
 *   Kleene, S. C. (1938). On Notation for Ordinal Numbers. *The Journal of Symbolic Logic*, *3*(4), 150–155. DOI: 10.2307/2267778
 *   Kleene, S. C. (1952). *Introduction to Metamathematics*. Amsterdam: North-Holland Publishing Company & Groningen: P. Noordhoff N.V.
 *   Klinkhamer, F. R., & Manton, N. S. (1984). A saddle-point solution in the Weinberg–Salam theory. *Physical Review D*, *30*(10), 2212–2220. DOI: 10.1103/PhysRevD.30.2212
@@ -322,6 +328,7 @@
 *   Levin, M., & Martyniuk, C. J. (2018). The bioelectric code: An ancient computational medium for dynamic control of growth and form. *BioSystems*, *164*, 76–93. DOI: 10.1016/j.biosystems.2017.08.009
 *   Levin, M. (2019). The computational boundary of a "self": Developmental bioelectricity drives multicellularity and scale-free cognition. *Frontiers in Psychology*, *10*, 2688. DOI: 10.3389/fpsyg.2019.02688
 *   Levin, M. (2021). Bioelectric signaling: Reprogrammable circuits underlying embryogenesis, regeneration, and cancer. *Cell*, *184*(8), 1971–1989. DOI: 10.1016/j.cell.2021.02.034
+*   Levin, M. A., & Wen, X.-G. (2005). String-net condensation: A physical mechanism for topological phases. *Physical Review B*, *71*, 045110.
 *   Lewes, G. H. (1875). *Problems of Life and Mind* (Vol. 2). Trübner & Co.
 *   Li, M., & Vitányi, P. (1997). *An Introduction to Kolmogorov Complexity and Its Applications*. Springer.
 *   Li, M. (2004). A model of holographic dark energy. *Physics Letters B*, *603*(1–2), 1–5. DOI: 10.1016/j.physletb.2004.10.014. 
@@ -347,6 +354,7 @@
 *   Maki, Z., Nakagawa, M., & Sakata, S. (1962). Remarks on the unified model of elementary particles. *Progress of Theoretical Physics*, *28*, 870–880.
 *   Maldacena, J. (1999). The large-N limit of superconformal field theories and supergravity. *International Journal of Theoretical Physics*, *38*(4), 1113–1133.
 *   Maldacena, J. (2003). Non-Gaussian features of primordial fluctuations in single field inflationary models. *Journal of High Energy Physics*, *2003*(05), 013.
+*   Manasse, F. K., & Misner, C. W. (1963). Fermi normal coordinates and some basic concepts in differential geometry. *Journal of Mathematical Physics*, *4*, 735–745.
 *   Manton, N. S., & Sutcliffe, P. (2004). *Topological Solitons*. Cambridge University Press (Cambridge Monographs on Mathematical Physics). DOI: 10.1017/CBO9780511617034
 *   Margolus, N., & Levitin, L. B. (1998). The maximum speed of dynamical evolution. *Physica D: Nonlinear Phenomena*, *120*(1–2), 188–195. DOI: 10.1016/S0167-2789(98)00054-2
 *   Marshall, A. W., Olkin, I., & Arnold, B. C. (2011). *Inequalities: Theory of Majorization and Its Applications* (2nd ed.). Springer. DOI: 10.1007/978-0-387-68276-1
@@ -395,6 +403,7 @@
 *   Particle Data Group (Workman, R. L., *et al.*) (2022). Review of Particle Physics. *Progress of Theoretical and Experimental Physics*, *2022*(8), 083C01. DOI: 10.1093/ptep/ptac097
 *   Particle Data Group (Navas, S., *et al.*) (2024). Review of Particle Physics. *Physical Review D*, *110*, 030001. DOI: 10.1103/PhysRevD.110.030001.
 *   Peccei, R. D., & Quinn, H. R. (1977). CP conservation in the presence of pseudoparticles. *Physical Review Letters*, *38*(25), 1440–1443. DOI: 10.1103/PhysRevLett.38.1440
+*   Penrose, R. (1969). Gravitational collapse: the role of general relativity. *Rivista del Nuovo Cimento*, *1*, 252–276.
 *   Penrose, R. (1989). *The Emperor's New Mind: Concerning Computers, Minds, and the Laws of Physics*. Oxford University Press.
 *   Penrose, R. (1994). *Shadows of the Mind: A Search for the Missing Science of Consciousness*. Oxford University Press.
 *   Penrose, R. (1996). On gravity's role in quantum state reduction. *General Relativity and Gravitation*, *28*(5), 581–600.

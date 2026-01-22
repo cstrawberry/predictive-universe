@@ -63,6 +63,15 @@ $$
 This metric tensor endows $(M, g_{\mu\nu})$ with a compatible differentiable structure (a.e.), establishing it as a continuous (pseudo-)Riemannian manifold induced by the underlying ND-RID propagation cost metric $d_{\mathcal{N}}$.
 *Proof:* The existence of unique Euclidean tangent spaces $T_x M \cong \mathbb{R}^D$ a.e. (Theorem 44) defines a Euclidean norm $||\cdot||_x$ induced by the limit metric $d_\infty$. Polarization of this norm yields an inner product $\langle \cdot, \cdot \rangle_x$. In local coordinates $\{\partial_\mu\}$, the metric components are defined as $g_{\mu\nu}(x) = \langle \partial_\mu, \partial_\nu \rangle_x$. By construction, $g_{\mu\nu}$ is symmetric and non-degenerate. The regularity properties follow from Cheeger-Colding theory applied to the limit space. QED
 
+## 11.5.2 Continuum Relabeling Symmetry and Diffeomorphism Invariance
+
+The emergent manifold description obtained via Gromov–Hausdorff convergence (Theorem 44) and the existence of a metric tensor (Theorem 45) does not endow the theory with a preferred coordinate chart: coordinates are bookkeeping devices introduced only after the substrate has been compressed into an effective continuum representation. Because the substrate description is fundamentally relational and label-free, any coordinate chart used to represent the continuum limit is physically redundant.
+
+Concretely, the PU dynamics and objective are expressed in terms of relational/predictive quantities (Definition D.1; Equation D.0) and graph-induced cost distances (Definition 35). These are invariant under relabelings of underlying degrees of freedom, and in the continuum limit this relabeling freedom becomes coordinate freedom. Operational predictions must therefore be invariant under diffeomorphisms of the induced (a.e.) differentiable structure on the emergent manifold (Theorem 45). This is the continuum expression of the same structural principle: *no physical content is carried by labels.*
+
+As a result, the effective description must be expressible in a diffeomorphism-covariant form. Appendix X makes this concrete by identifying the gravitational sector of the effective action as a scalar-density integral over the emergent manifold (Equation X.7), and Section 12 then uses the standard locality and second-order consistency constraints (Lovelock uniqueness [Lovelock 1971]) to isolate the Einstein–Hilbert structure as the correct leading-order covariant dynamics at the MPU scale (Theorem 50).
+
+
 **11.6 Lorentzian Signature and Invariant Speed (Conditional on Thm 43, Thm 45)**
 
 The emergent metric $g_{\mu\nu}$ inherits its signature from the causal structure of MPU interactions.
@@ -84,6 +93,86 @@ Curvature of the emergent Lorentzian spacetime $(M, g_{\mu\nu})$ arises from pat
 
 The Riemann curvature tensor $R^{\rho}{}_{\sigma\mu\nu}$ of the emergent manifold $(M, g_{\mu\nu})$ is interpreted as the geometric component of the Predictive Holonomy. This holonomy describes the net transformation of MPU state information (local frame/perspective orientation) upon parallel transport around infinitesimal closed loops, governed by an effective connection $A_\mu = \omega_\mu \oplus A_\mu^{\text{int}}$ (spin connection $\oplus$ internal connection) acting on the associated tangent and perspective bundles (Theorem 48). Non-zero curvature $F_{\mu\nu} = dA + [A, A]$ arises because local ND-RID dynamics (determining transport rules) depend on the local MPU state/context (Assumption 1). Inhomogeneities in MPU activity ($T_{\mu\nu}^{(MPU)}$, Definition B.8, Appendix B) cause spatial variations in transport rules, leading to path dependence ($[A_\mu, A_\nu] \neq 0$). The geometric part of $F_{\mu\nu}$ is the Riemann curvature 2-form $R_{\mu\nu}$. Therefore, spacetime curvature $R^{\rho}{}_{\sigma\mu\nu}$ emerges from path-dependent transport of predictive frame information, sourced by variations in MPU network activity ($T_{\mu\nu}^{(MPU)}$).
 *Proof:* Parallel transport integrates local ND-RID transformation rules, defining connection $A_\mu(x)$. Context-dependence (Assumption 1) implies $A_\mu(x)$ varies spatially if $T_{\mu\nu}^{(MPU)}$ is inhomogeneous. Non-commuting transformations (due to state-dependence/reflexivity) imply $[A_\mu, A_\nu] \neq 0$. Infinitesimal holonomy is curvature $F_{\mu\nu} = dA + [A, A]$. Decomposing $A_\mu = \omega_\mu + A_\mu^{int}$ gives $F_{\mu\nu} = R_{\mu\nu} + F_{\mu\nu}^{int}$, where $R_{\mu\nu}$ is Riemann curvature. Thus geometric curvature emerges from path-dependence sourced by inhomogeneous MPU activity. QED
+
+## 11.7.2 Dissipative Companion to Predictive Holonomy
+
+Theorem 47 identifies the geometric curvature tensor as the geometric component of predictive holonomy in the continuum limit. When ND-RID holds, transport between neighboring "contexts" is generically *open* (not strictly unitary) because irreversibility enforces contractivity at the operational level (Appendix E, Lemma E.1). The appropriate object is therefore a completely positive, trace-preserving (CPTP) transport map on reduced states, not a pure unitary parallel transport.
+
+**Infinitesimal Transport Structure.**
+Let $\mathcal{E}_{\Delta\tau}$ denote the CPTP transport channel associated with proper time displacement $\Delta\tau$ along a timelike worldline in emergent coordinates. In the Markovian regime, its generator admits the standard GKSL decomposition [Gorini, Kossakowski & Sudarshan 1976; Lindblad 1976]:
+$$
+\mathcal{E}_{\Delta\tau}(\rho) = \rho + \Delta\tau \, \mathcal{L}(\rho) + O(\Delta\tau^2),
+$$
+$$
+\mathcal{L}(\rho) = -i[H, \rho] + \sum_a \left( L_a \rho L_a^\dagger - \frac{1}{2}\{L_a^\dagger L_a, \rho\} \right),
+$$
+with $H$ the unitary (Hamiltonian/connection) component and the $\{L_a\}$ encoding dissipation/decoherence.
+
+For spatial transport, the analogous structure requires path-ordering. Let $\gamma: [0,1] \to M$ be a smooth spatial curve with tangent $\dot{\gamma}^\mu$. The finite transport map $\mathcal{E}_\gamma$ is constructed as:
+$$
+\mathcal{E}_\gamma = \overleftarrow{\mathcal{P}} \exp\!\left( \int_0^1 ds \, \dot{\gamma}^\mu(s) \, \mathcal{L}_\mu \right),
+$$
+where $\overleftarrow{\mathcal{P}}$ denotes path-ordering and each $\mathcal{L}_\mu$ is a GKSL generator along the $\mu$-direction. This path-ordered exponential is necessary because the generators at different points generically do not commute.
+
+* The **unitary part** $H_\mu$ matches the connection structure identified in Theorem 47: its holonomy yields the emergent curvature.
+* The **dissipative part** $\{L_{\mu,a}\}$ is the operational signature of ND-RID: it captures the loss of distinguishability under transport required by irreversibility (Appendix E), and it is naturally represented in the Schwinger–Keldysh/CTP effective action formalism (Section X.5) as the stochastic/noise sector accompanying the retarded response sector.
+
+**Gravitational Decoherence from Curvature.**
+A concrete gravitational example appears in Appendix S, where differential time-dilation induces phase gradients. The gravitationally induced phase difference between two branches of a spatial superposition is (Equation S.54):
+$$
+\Delta\phi_{ij}^{(\mathrm{grav})} = -\frac{\Delta E_{ij}}{\hbar}\,\Delta\tau_{diff}
+= -\frac{\Delta E_{ij}}{\hbar}\left(\frac{\Delta\Phi}{c^2}\tau_c\right).
+$$
+
+To connect $\Delta\Phi$ to curvature in a coordinate-invariant way, work in Fermi normal coordinates $(t, x^m)$ about a freely falling reference worldline [Manasse & Misner 1963]. To quadratic order in spatial distance:
+$$
+g_{00}(t, x) = -1 - R_{0m0n}(t, 0) \, x^m x^n + O(|x|^3),
+$$
+and in the weak-field identification $g_{00} \approx -(1 + 2\Phi/c^2)$ this yields the local tidal potential:
+$$
+\Phi(x) = +\frac{c^2}{2} \, R_{0m0n}(t, 0) \, x^m x^n + O(|x|^3).
+$$
+
+*Derivation.* Equating the two expressions for $g_{00}$:
+$$
+-1 - R_{0m0n} x^m x^n = -1 - \frac{2\Phi}{c^2}
+\quad \Longrightarrow \quad
+\Phi = +\frac{c^2}{2} R_{0m0n} x^m x^n.
+$$
+
+For two branches separated by displacement $L_q^m$ about a reference location $x^m$, one obtains:
+$$
+\Delta\Phi = \Phi(x + L_q) - \Phi(x)
+= +c^2 \, R_{0m0n} \, x^m L_q^n + \frac{c^2}{2} \, R_{0m0n} \, L_q^m L_q^n + O(|x|^2|L_q|, |x||L_q|^2, |L_q|^3).
+$$
+Substituting into the phase formula (S.54) and using the decoherence-rate definition (S.56),
+$$
+\Gamma_{\mathrm{deco}}^{(ij)} := \frac{|\Delta\phi_{ij}^{(\mathrm{grav})}|}{\tau_c},
+$$
+one obtains the exact operational form
+$$
+\Gamma_{\mathrm{deco}}^{(ij)} = \frac{|\Delta E_{ij}|}{\hbar}\,\frac{|\Delta\Phi|}{c^2}.
+$$
+Using the curvature expansion for $\Delta\Phi$ above then gives, to the displayed order,
+$$
+\Gamma_{\mathrm{deco}}^{(ij)} =
+\frac{|\Delta E_{ij}|}{2\hbar}\left|
+R_{0m0n}(t,0)\left(2x^m L_q^n + L_q^m L_q^n\right)
+\right|
++O\!\left(\frac{|\Delta E_{ij}|}{\hbar}\Big(|x|^2|L_q|+|x||L_q|^2+|L_q|^3\Big)\right).
+$$
+In particular, for a symmetric superposition centered on the reference worldline ($x=0$),
+$$
+\Gamma_{\mathrm{deco}}^{(ij)} =
+\frac{|\Delta E_{ij}|}{2\hbar}\left|R_{0m0n}(t,0)\,L_q^m L_q^n\right|
++O\!\left(\frac{|\Delta E_{ij}|}{\hbar}|L_q|^3\right),
+$$
+while for off-center separations the mixed term proportional to $x^m L_q^n$ dominates at the displayed order.
+
+**Testable PU discriminator against self-gravity collapse models.**
+The predicted irreversible dephasing rate depends on the tidal curvature tensor and the internal energy splitting $\Delta E_{ij}$. For two-branch interferometers engineered so that the branches have the *same* mass density distribution but differ by an internal clock splitting $\Delta E_{ij}$, the PU prediction above gives $\Gamma_{\mathrm{deco}}^{(ij)} \propto \Delta E_{ij}$ at fixed geometry; Penrose–Diósi-type self-gravity collapse rates depend primarily on the branch mass-density difference and are insensitive to internal $\Delta E_{ij}$. Conversely, because the PU rate is curvature-controlled, it vanishes at this order in flat spacetime ($R_{0m0n}=0$) and is invariant under removing a purely uniform-acceleration contribution (no tidal curvature).
+
+This identifies a precise sense in which curvature (as predictive holonomy) and decoherence (as ND-RID dissipation in transport) are two faces of the same operational transport structure: the holonomy component defines the emergent geometry (Theorem 47), while the contractive component quantifies the irreducible loss of predictive distinguishability along that geometry (Lemma E.1; Appendix S, Section S.7).
 
 **11.8 Fibre Bundle Structure**
 

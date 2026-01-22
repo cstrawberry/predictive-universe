@@ -409,6 +409,133 @@ What remains to be characterized is the Planck-regime physics that replaces sing
 
 This dissolution of classical singularities exemplifies a broader pattern: phenomena that appear as "problems" or "paradoxes" in frameworks assuming time-symmetric fundamental laws and continuous substrates often dissolve when the foundational structure incorporates irreversibility and discreteness from the outset. The arrow of time, the black hole information paradox (Appendix K.3), and classical singularities all share this character—they are artifacts of approximations that the PU framework identifies and supersedes.
 
+## 14.2.4.1 Predictive Throughput Bounds and Operational Weak Cosmic Censorship
+
+Appendix E makes a sharp operational statement: irreversibility enforces strict contractivity (Lemma E.1), which bounds the capacity of any single effective link channel (Theorem E.2), and the number of effective channels crossing a closed surface scales with its area (Theorem E.3). Together with the minimum processing timescale $\tau_{min}$ (Theorem 29), this yields a bound on the rate at which predictive information about an interior region can be transmitted to the exterior.
+
+**Definition 14.2.4.1 (Predictive Throughput Requirement).**
+Let $S$ be a closed two-surface with area $A(S)$ in the emergent manifold regime (conditional on Theorem 43). Let $\mathcal{H}_{\mathrm{int}}$ denote the Hilbert space of MPU degrees of freedom in the interior region bounded by $S$, and let $\rho_{\mathrm{int}}(S) \in \mathcal{S}(\mathcal{H}_{\mathrm{int}})$ denote the interior reduced state.
+
+For an exterior observer system with access to MPU-admissible measurement channels crossing $S$, define the **predictive throughput requirement** $L(S)$ (in nats per unit time) as:
+
+$$
+L(S) := \sup_{\mathcal{P}} \limsup_{n \to \infty} \frac{I(\rho_{\mathrm{int}}^{(\mathcal{P},n)}; \mathcal{R}_n^{(\mathcal{P})})}{n \, \tau_{min}},
+$$
+where:
+- $\mathcal{P}$ ranges over all measurement/communication protocols using the boundary channels,
+- $\mathcal{R}_n^{(\mathcal{P})}$ denotes the classical measurement record obtained after $n$ cycles of protocol $\mathcal{P}$,
+- $\rho_{\mathrm{int}}^{(\mathcal{P},n)}$ denotes the interior marginal of the joint cq-state induced by protocol $\mathcal{P}$ after $n$ cycles,
+- $I(\rho_{\mathrm{int}}^{(\mathcal{P},n)}; \mathcal{R}_n^{(\mathcal{P})})$ is the mutual information between the interior system and the classical record in this joint cq-state. Concretely, if $\rho_{\mathrm{int},\mathcal{R}_n}^{(\mathcal{P})}$ denotes the joint state on $\mathcal{H}_{\mathrm{int}} \otimes \mathcal{H}_{\mathcal{R}_n}$ with $\mathcal{H}_{\mathcal{R}_n}$ a classical register storing the record in an orthonormal pointer basis, then
+$$
+I(\rho_{\mathrm{int}}^{(\mathcal{P},n)}; \mathcal{R}_n^{(\mathcal{P})}) := S(\rho_{\mathrm{int}}^{(\mathcal{P},n)}) + H(\mathcal{R}_n^{(\mathcal{P})}) - S(\rho_{\mathrm{int},\mathcal{R}_n}^{(\mathcal{P})}),
+$$
+which reduces to the Holevo information for a cq-state [Holevo 1973],
+- $\tau_{min} > 0$ is the minimum MPU processing timescale (Theorem 29).
+
+The supremum is taken because $L(S)$ quantifies the maximum mutual-information rate about the interior degrees of freedom in $\mathcal{H}_{\mathrm{int}}$ (equivalently, about the induced interior marginals $\rho_{\mathrm{int}}^{(\mathcal{P},n)}$) that can be extracted across $S$ by MPU-admissible protocols.
+
+
+**Theorem 14.2.4.1 (ND-RID Throughput Bound).**
+Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43), the predictive throughput is bounded by:
+$$
+L(S) \leq \frac{N_{eff\_links}(S) \cdot C_{\max}}{\tau_{min}}
+= \frac{\sigma_{eff\_link} \, A(S) \cdot C_{\max}}{\tau_{min}} + o(A),
+$$
+with $C_{\max} < \ln d_0$ bounded by Theorem E.2 and
+$$
+N_{eff\_links}(S) = \sigma_{eff\_link} \, A(S) + o(A),
+\qquad
+\sigma_{eff\_link} = \frac{\chi}{\eta \, \delta^2}
+\quad\text{(Theorem E.3)}.
+$$
+
+*Proof.* Each of the $N_{eff\_links}(S)$ independent channels crossing $S$ has classical capacity at most $C_{\max}$ nats per use (Theorem E.2). Each channel can be used at most once per $\tau_{min}$ (Theorem 29). The total information rate across the boundary is therefore bounded by $N_{eff\_links}(S) \cdot C_{\max} / \tau_{min}$. By Theorem E.3, $N_{eff\_links}(S)$ scales linearly with area. ∎
+
+**Boundary entropy and $S=A/4G$ from predictive throughput.**
+For any protocol $\mathcal{P}$ and any horizon $T=n\tau_{min}$, Definition 14.2.4.1 gives
+$$
+I(\rho_{\mathrm{int}}^{(\mathcal{P},n)};\mathcal{R}_n^{(\mathcal{P})})
+\le n\tau_{min}\,L(S).
+$$
+Combining with Theorem 14.2.4.1 yields
+$$
+I(\rho_{\mathrm{int}}^{(\mathcal{P},n)};\mathcal{R}_n^{(\mathcal{P})})
+\le n\,N_{eff_links}(S)\,C_{\max}.
+$$
+In particular, the maximal mutual information exportable across $S$ per minimum cycle is bounded by
+$$
+I_{\max}(S;\tau_{min}) \le N_{eff_links}(S)\,C_{\max}.
+$$
+Appendix E identifies the entropy of a capacity-saturating causal prediction boundary with precisely this maximal specifiable interior information (Appendix E, Theorem E.9.3). Defining
+$$
+S_{BH}(S) := N_{eff_links}(S)\,C_{\max},
+$$
+and using $N_{eff_links}(S)=\sigma_{eff_link}A(S)+o(A)$ with $\sigma_{eff_link}=\chi/(\eta\delta^2)$, one obtains the area law
+$$
+S_{BH}(S)=\frac{\chi C_{\max}}{\eta\delta^2}\,A(S)+o(A).
+$$
+With the PU identification of Newton's constant (Appendix E, Equation E.9),
+$$
+G := \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}},
+$$
+this becomes
+$$
+S_{BH}(S)=\frac{c^3}{4G\hbar}\,A(S)+o(A),
+$$
+i.e. $S=A/(4G)$ in units $\hbar=c=1$.
+
+**Theorem 14.2.4.2 (Operational Weak Cosmic Censorship).**
+In the manifold regime (Theorem 43), curvature blow-up visible to exterior observers is operationally excluded: either a capacity-saturating boundary forms or the manifold approximation fails, in the sense that the curvature-controlled normal-coordinate expansion ceases to be valid on MPU-resolvable neighborhoods (Lemma 14.2.4.2b).
+
+*Definitions.* Let $S$ be a closed two-surface and $\gamma$ a causal curve from the interior of $S$ to an exterior observation event. Define the **predictive sensitivity** of an exterior observable $O \in \mathcal{O}_{ext}$ with respect to interior state variations as
+$$
+\mathcal{S}(O; \gamma) := \sup_{\substack{\rho_1, \rho_2 \in \mathcal{S}(\mathcal{H}_{\mathrm{int}}) \\ \rho_1 \neq \rho_2}} \frac{D_{TV}(p(\cdot \mid O; \rho_1), p(\cdot \mid O; \rho_2))}{D_{tr}(\rho_1, \rho_2)},
+$$
+where $D_{TV}$ is total variation distance on exterior outcome distributions and $D_{tr}$ is trace distance on interior states. An **operationally naked singularity** is a manifold-regime configuration where $\|R\| \to \infty$ along some $\gamma$ that remains future-causally connected to exterior observers through a finite-area surface $S$.
+
+**Lemma 14.2.4.2a (Curvature-Sensitivity Bound).**
+Let the CPTP transport map $\mathcal{E}_\gamma$ along $\gamma$ be decomposed as in Section 11.7.2 into unitary (holonomy) and dissipative components. Then for all interior states $\rho_1,\rho_2$,
+$$
+D_{tr}(\mathcal{E}_\gamma(\rho_1), \mathcal{E}_\gamma(\rho_2)) \le D_{tr}(\rho_1, \rho_2),
+$$
+and when ND-RID is strict with per-cycle contraction factor $0<f_{RID}<1$ (Lemma E.1), for transport realized over $n(\gamma)$ MPU cycles,
+$$
+D_{tr}(\mathcal{E}_\gamma(\rho_1), \mathcal{E}_\gamma(\rho_2)) \le f_{RID}^{n(\gamma)}\,D_{tr}(\rho_1, \rho_2).
+$$
+Consequently, for any exterior observable $O \in \mathcal{O}_{ext}$,
+$$
+D_{TV}(p(\cdot \mid O; \rho_1), p(\cdot \mid O; \rho_2))
+\le D_{tr}(\mathcal{E}_\gamma(\rho_1), \mathcal{E}_\gamma(\rho_2))
+\le f_{RID}^{n(\gamma)}\,D_{tr}(\rho_1, \rho_2),
+$$
+so the predictive sensitivity satisfies
+$$
+\mathcal{S}(O; \gamma) \le f_{RID}^{n(\gamma)} \le 1.
+$$
+In particular, curvature-dependent unitary holonomy cannot amplify distinguishability: the unitary component preserves trace distance, while the dissipative component enforces contractivity.
+
+*Proof.* Trace distance is contractive under CPTP maps. The unitary (holonomy) part preserves trace distance, and composition with the dissipative ND-RID component yields the stated contraction. For any fixed POVM representing an exterior observable, the induced total variation distance on outcome distributions is bounded by the trace distance between the measured states. ∎
+
+**Lemma 14.2.4.2b (Operational Curvature-Resolution Bound).**
+In the manifold regime (Theorem 43) at MPU resolution $\delta$, the continuum curvature tensor inferred from predictive holonomy (Theorem 47) is operationally meaningful only on neighborhoods whose linear size is $\ell \gtrsim \delta$. Consequently, along any curve segment where the manifold approximation is valid at MPU resolution, the local curvature scale $\ell_R$ satisfies $\ell_R \gtrsim \delta$, equivalently
+$$
+\sqrt{\|R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}\|}\,\delta^2 = O(1),
+\qquad
+\text{so }\ \|R\| = O(1/\delta^2).
+$$
+
+*Proof.* In a local normal-coordinate chart (e.g., Fermi normal coordinates as in Section 11.7.2), metric components admit expansions in which the leading corrections to flat space scale as $R\,x^2$. For the expansion to be controlled on the minimal operational neighborhood $|x|\sim\delta$, one requires $|R|\,\delta^2=O(1)$ (with the constant set by the chosen norm and by the threshold defining “controlled”). If $|R|\,\delta^2 \gg 1$ at some event, curvature corrections are not small on any MPU-resolvable neighborhood and the continuum curvature tensor (and hence the manifold approximation) is not operationally valid there. ∎
+
+**Proof of Theorem 14.2.4.2.**
+Suppose, for contradiction, that an operationally naked singularity exists in the manifold regime (Theorem 43): $\|R\| \to \infty$ along a causal curve $\gamma$ that remains future-causally connected to exterior observers through a finite-area surface $S$, while the continuum manifold description remains operationally valid at MPU resolution.
+
+By Lemma 14.2.4.2b, validity of the manifold approximation at MPU resolution enforces $\|R\|=O(1/\delta^2)$ on any segment where continuum curvature is operationally meaningful. Therefore $\|R\|\to\infty$ cannot occur while remaining in the manifold regime at fixed $\delta$: once $\|R\|$ exceeds the MPU curvature scale, the manifold approximation fails.
+
+Thus any would-be curvature blow-up that remains future-causally connected to exterior observers is operationally resolved by one of:
+1. **Horizon formation:** A capacity-saturating boundary forms (Definition E.9.1; Theorem E.9.3), so exterior predictions decouple from interior microdetails.
+2. **Manifold breakdown:** The classical manifold approximation (Theorem 43) fails before curvature divergence becomes operationally meaningful at MPU resolution. ∎
+
+
 ### 14.2.5 The Uncertainty-Irreversibility Identity
 
 The derivation of the Heisenberg uncertainty relations from SPAP-induced complementarity (Section 8.4) and the derivation of the second law from SPAP-induced entropy production (Theorem 31) are not independent results. They are dual manifestations of a single underlying constraint. This section makes this identity explicit.
@@ -752,6 +879,47 @@ The vacuum Quantum Fisher Information structure produces the galactic accelerati
 PCE optimization under SPAP constraints selects Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) over deterministic alternatives. The irreversibility cost $\varepsilon \geq \ln 2$ enforces stochastic dynamics (Theorem 28). This bridge explains WHY nature is quantum—deterministic dynamics would be less efficient under self-referential constraints.
 
 These bridges collectively demonstrate that physical law is not arbitrary but emerges as the resource-efficient embodiment of logical and predictive necessities.
+
+
+## 14.5.7 Particles as Defect and Superselection Sectors
+
+The code-theoretic vacuum structure (Section 14.5.1; Theorem Z.13) provides a natural language for interpreting *particle types* as defect/superselection sectors of a highly constrained vacuum code phase.
+
+Let the PU vacuum be characterized by a stabilizer-like constraint structure on $M = 24$ interface modes (Theorem Z.5; Section 14.5.1), with Golay/Leech-derived rigidity (Theorem Z.13) and a protected mass gap (Corollary Z.8g.1). Then:
+
+* A **defect (syndrome excitation)** is a localized violation of a subset of the vacuum constraints (a nontrivial syndrome relative to the vacuum stabilizers).
+* Two defects are in the same **superselection sector** if they differ by operations generated within the local redundancy group (the same operational equivalence notion that underlies gauge redundancy, Appendix G.8.4g), i.e., if they cannot be distinguished by any strictly local MPU-limited measurement after accounting for the local redundancy.
+* **Interactions** correspond to allowed composition rules of these sectors, which in code language become fusion rules; the PU framework fixes the vacuum code geometry and symmetry constraints that such a fusion algebra must respect (Appendix R; Appendix Z), while the explicit fusion/braiding data is a further computation rather than an assumed input.
+
+**Quantitative mass spectrum from Golay/Leech rigidity.**
+The code-theoretic vacuum does not stop at a qualitative classification of sectors: because the Golay/Leech constraints fix (i) the Gaussian width of generation-localized wavepackets on the generation manifold and (ii) the admissible $E_8$ triads of generation points, the same defect/superselection structure yields quantitative Yukawa and mass data. In Appendix T, Gaussian overlap of generation wavefunctions produces the hierarchy law (Theorem T.41.5):
+$$
+\ln\!\left(\frac{m_j}{m_i}\right)=\alpha\,d^2_{E_8}(r_i,r_j),
+$$
+with $\alpha=\alpha_{UV}=3/2$ fixed by the PU Bures width $\sigma_B^2=1/24$ (Corollary T.41.6), and the IR-dressed $\alpha_{IR}\approx 1.41$ determined by the same Gr$(2,8)$ curvature corrections that appear in the gauge sector (Appendix T, Section T.24.2; Appendix Z). The generation points $\{r_i\}$ are fixed by the Golay-derived triad constraints (Theorem T.42.1). Together with the PU-derived electroweak scale $v$ and the PU normalization of the charged-lepton Yukawa prefactor (Appendix T, Theorem T.44), one obtains absolute charged-lepton mass predictions (Corollary T.44.3):
+$$
+m_\tau \approx 1.80\,\mathrm{GeV}\ \ (O(1\%)\ \text{theoretical width}),\qquad
+m_\mu \approx 105.5\,\mathrm{MeV},\qquad
+m_e \approx 0.5120\,\mathrm{MeV}.
+$$
+The same mechanism extends to quark hierarchies and CKM structure (Appendix T, Section T.44.9), so the Golay vacuum code fixes not only the existence of superselection sectors but also quantitative mass data within those sectors.
+
+This viewpoint also sharpens the role of the threefold internal decomposition in Appendix R. The emergence of a tripled internal structure (Lemma R.4.5 and Proposition R.4.7) is naturally read as a triplication of defect-family structure relative to the same vacuum code substrate, i.e., three constrained families of sectors compatible with the same global encoding geometry.
+
+
+**Clarification on the Discrete-Continuous Correspondence.**
+At MPU resolution, the vacuum constraints can be represented by stabilizer-like generators and their automorphisms (Appendix G, Remark G.8.4g.1a), which implement an *operational equivalence relation*: multiple micro-descriptions correspond to the same predictive content. This is consistent with Definition X.9.1 (MPU-equivalence).
+
+In the continuum effective description (Appendix X), the same equivalence relation appears as a local gauge redundancy acting on coarse-grained fields. The correspondence operates as follows:
+
+1. **Operational level:** Two field configurations $\varphi_1, \varphi_2$ are operationally equivalent if $p(\cdot \mid O, c; \varphi_1) = p(\cdot \mid O, c; \varphi_2)$ for all MPU-admissible $(O, c)$.
+
+2. **Effective action level:** Gauge variations $\varphi \mapsto \varphi + \delta_\xi \varphi$ (for gauge parameter $\xi$) act along directions of vanishing operational distinguishability. By the Predictive Ward Identity (Theorem X.3), these correspond to null directions of the quadratic kernel $\Gamma^{(2)}$ constrained by gauge symmetry.
+
+3. **Structural correspondence:** The *dimension* of the gauge algebra $\mathfrak{g}_{\mathrm{SM}}$ (12 generators, Theorem G.8.4b) matches the Lagrangian capacity bound from the symplectic structure on the interface (Theorem G.8.2e). This is a structural/dimensional correspondence, not a literal isomorphism between a finite stabilizer group and a continuous gauge group.
+
+This status is made precise in Appendix G.8.4g: the classical Golay code provides a *structural analogy* for the gauge organization, with the code's $k = 12$ signal dimensions corresponding to the $\dim(\mathfrak{g}_{SM}) = 12$ gauge generators (Theorem G.8.4b) and the $n - k = 12$ parity dimensions providing constraint structure that matches the Lagrangian capacity bound (Theorem G.8.2e).
+
 
 **14.6 Future Directions**
 
