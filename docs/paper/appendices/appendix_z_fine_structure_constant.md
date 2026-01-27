@@ -452,17 +452,17 @@ Numerical evaluation: u* = 2^{0.125} - 1 ≈ 1.09051 - 1 = 0.09051. ∎
 
 $$\mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} = \frac{m_P}{2\sqrt{8\ln 2}} \approx 0.212 \cdot m_P$$
 
-*Derivation.* From the Mass-Information Equivalence (Theorem N.5), a system with relational information content $\mathcal{I}_{\mathrm{rel}}$ has inertial mass $m = \mathcal{I}_{\mathrm{rel}} \cdot m_P / (2\sqrt{8\varepsilon})$. For vacuum configurations in the Leech lattice, the squared norm $|v|^2$ measures information content in Planck units. The coefficient $\mu_0$ sets the mass per unit norm.
+*Derivation.* From the Mass-Information Equivalence (Theorem N.5), a system with relational information content $\mathcal{I}_{\mathrm{rel}}$ has inertial mass $m = \mathcal{I}_{\mathrm{rel}} \cdot m_P / (2\sqrt{8\varepsilon})$. For vacuum configurations in the Leech lattice, the relational information content is encoded by the lattice norm: $\mathcal{I}_{\mathrm{rel}}(v) = |v|$ in Planck units. The coefficient $\mu_0$ sets the mass per unit norm.
 
 **Theorem Z.8g (Energy-Norm Relation).** For a gauge field configuration corresponding to lattice point $v \in \Lambda_{24}$:
 
 $$m^2(v) = \mu_0^2 \cdot |v|^2$$
 
-*Proof.* By Theorem N.5, the relational information content is $\mathcal{I}_{\mathrm{rel}}(v) \propto |v|$ where the proportionality is determined by QFI isotropy (Theorem Z.5). The Mass-Information Equivalence gives:
+*Proof.* By Definition Z.8f, Leech lattice excitations satisfy $\mathcal{I}_{\mathrm{rel}}(v) = |v|$ in Planck units. The Mass-Information Equivalence (Theorem N.5) then gives:
 
 $$m(v) = \frac{\mathcal{I}_{\mathrm{rel}}(v)}{2\sqrt{8\varepsilon}} \cdot m_P = \mu_0 \cdot |v|$$
 
-Squaring gives the energy-norm relation. ∎
+Squaring yields $m^2(v) = \mu_0^2 |v|^2$. ∎
 
 **Corollary Z.8g.1 (Mass Gap Value).** At the PCE-Attractor, the mass gap is:
 

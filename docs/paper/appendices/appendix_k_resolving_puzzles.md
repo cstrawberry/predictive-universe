@@ -879,53 +879,258 @@ The $\dot{G}_{eff}$ term acts as an effective dark energy component with equatio
 **Current Status:** This cosmological extension is conceptually promising but requires significant further theoretical work to become fully predictive. The challenges are substantial (energy budget self-consistency, PCE derivation of adaptation rules, early-universe compatibility) but well-defined. Detailed fitting of specific, fully derived PU cosmological models to comprehensive cosmological data will be the ultimate test of this extension.
 
 
-**K.10 Outlook and Future Directions**
+## K.10 Renormalization from Operational Finiteness
 
-The Predictive Universe framework has successfully resolved several fundamental puzzles through rigorous derivations:
+The exclusion of singularities established in Sections K.5.1–K.5.5 has a direct counterpart in quantum field theory: the exclusion of ultraviolet divergences. Both phenomena arise from extrapolating continuum descriptions beyond their domain of validity, and both are resolved by the same information-theoretic bounds.
 
-**Established Results (with precise numerical predictions):**
-1. **Fine-structure constant**: $\alpha^{-1} \approx 137.036092 \pm 0.000050$ (Appendix Z, parameter-free)
-2. **Electroweak scale**: $v \approx 246$ GeV from $\kappa_{EW} = 38.5$ (Appendix T, Theorem T.5)
-3. **Weinberg angle**: $\sin^2\theta_W(\mu_*) = 3/8$ (Appendix T, **Theorem T.14**)
-4. **Higgs mass**: $m_H \approx 125$ GeV from metastability (Appendix T, **Theorem T.28**)
-5. **Fermion mass ratios**: Lepton $\mathcal{R} = 3$ to 3.8% accuracy (Appendices R, T)
-6. **Gravitational constant**: $G$ from channel capacity, $\delta/L_P \approx 2.355$ (Appendices E, Q)
-7. **Cosmological constant**: $\Lambda L_P^2 = e^{-283} \sim 10^{-122}$ (Appendix U)
-8. **Primordial observables**: $n_s = 0.9663$, $r = 0.0034$, $A_s = 2.08 \times 10^{-9}$ (Appendix U)
-9. **Spacetime dimension**: $D = 4$ from two independent mechanisms (Appendices Z, H)
-10. **Arrow of time**: From irreducible SPAP entropy $\varepsilon = \ln 2$ (Appendix O)
-11. **Cosmic censorship**: Operational throughput bounds exclude naked singularities (Section K.5, Theorem K.5.4)
+**Definition K.10.1 (Operational Observable).** A quantity $\mathcal{O}$ is an operational observable if for every target precision $\epsilon>0$ there exists an MPU-admissible protocol $\mathcal{P}_\epsilon$ (i.e., a finite physically implementable procedure using the allowed interaction/update dynamics, including $\mathcal{E}_N$ updates of Definition 27) that estimates $\langle\mathcal{O}\rangle$ to within $\epsilon$ and uses finite resources, i.e. it has finite predictive complexity and hence finite cost rate:
+$$
+R(C_P(\mathcal{P}_\epsilon)) + R_I(C_P(\mathcal{P}_\epsilon)) < \infty,
+$$
+where $R,R_I$ are the resource cost functions (Definition 3).
 
-**Active Development Areas (conceptual frameworks established):**
+**Lemma K.10.2 (Operational Finiteness).** If $\mathcal{O}$ is an operational observable (Definition K.10.1), then its operational expectation value $\langle\mathcal{O}\rangle$ is finite. In particular, no MPU-admissible finite-resource protocol can certify $\langle\mathcal{O}\rangle=\infty$.
 
-1. **Black hole information**: Perspectival Information Channel and reflexive extraction costs defined; detailed calculations in progress
-2. **Strong CP problem**: PCE mechanism proposed; explicit cost term derivation required
-3. **Modified cosmology**: $G_{eff}(t)$ framework outlined; PCE derivation and observational tests needed
+*Proof.* By Definition K.10.1, for $\epsilon=1$ there exists an MPU-admissible finite-resource protocol $\mathcal{P}_1$ producing an estimate within additive error $1$ of $\langle\mathcal{O}\rangle$. If $\langle\mathcal{O}\rangle$ were infinite, no finite real-valued estimate could satisfy an additive-error bound, contradicting the definition. Hence $\langle\mathcal{O}\rangle$ is finite. ∎
 
+**Definition K.10.3 (MPU Momentum Cutoff).** The MPU network defines an intrinsic momentum scale:
+$$
+\Lambda_{\text{MPU}} := \frac{\hbar}{\delta} = \frac{m_P c}{\sqrt{8\ln 2}} \approx 0.424\, m_P c,
+$$
+where $\delta = \sqrt{8\ln 2}\, L_P \approx 2.355\, L_P$ is the PCE-optimal MPU spacing (Appendix Q, Equation Q.18) and $m_P = \sqrt{\hbar c/G}$ is the Planck mass. In natural units ($\hbar = c = 1$), the corresponding wavenumber is $k_{\text{MPU}} = 1/\delta = 1/(\sqrt{8\ln 2} \cdot L_P) \approx 0.424/L_P$, which sets the scale at which the continuum approximation breaks down.
 
-**Priority Theoretical Work:**
+**Theorem K.10.4 (Intrinsic UV Finiteness).** Let $\mathcal{A}_{phys}(\mu)$ denote any operational scattering observable whose preparation and readout are defined at a characteristic external scale $\mu$ (i.e., all operational coarse-graining lengths satisfy $\ell\sim 1/\mu \gg \delta$). Then:
 
-1. **MPU Network Modeling:** Develop detailed models to quantitatively evaluate the global PCE Potential $V(x)$ for remaining coupling constants (strong/weak beyond unified attractor, neutrino masses). This is crucial for deriving constraints on emergent parameters and extending predictive power.
+(i) $\mathcal{A}_{phys}(\mu)$ is finite.
 
-2. **Emergent Effective Actions:** Rigorously derive the structure of the emergent effective action for matter and gauge fields beyond the $U(1)$ case (Appendix G). Extend to full Standard Model and establish how PCE optimization shapes interactions, symmetries, and particle content.
+(ii) Any continuum QFT representation used to compute $\mathcal{A}_{phys}(\mu)$ must be interpreted as an effective description valid only above the intrinsic MPU spacing $\delta$ (Appendix Q, Eq. Q.18), and therefore may be taken to be regulated at the intrinsic cutoff $\Lambda_{MPU}:=\hbar/\delta$ (Definition K.10.3). Degrees of freedom with wavelengths $\lambda<\delta$ (equivalently momenta $k>\Lambda_{MPU}$) are not independently operational in PU and can influence $\mu$-scale observables only through the parameters of the regulated effective action at $\Lambda_{MPU}$.
 
-3. **Information Dynamics at Horizons:** Develop detailed models of information flow, ND-RID channel capacity limits, and thermodynamic consistency across causal horizons. Essential for completing black hole information resolution (K.3) and refining thermodynamic gravity derivation.
+(iii) Consequently, ultraviolet divergences arising from the formal $\Lambda\to\infty$ limit of continuum integrals are extrapolation artifacts: they arise from extending the continuum description into the non-operational regime $\lambda<\delta$ and have no operational meaning.
 
-4. **Cosmological Model Refinement:** Derive $G_{eff}(\rho, p)$ from first principles of MPU network adaptation. Rigorously analyze energy budget and conservation laws. Compare comprehensive PU cosmological models against full observational data suite (CMB, SNe, BAO, LSS, $H(z)$, local $\dot{G}/G$ bounds).
+*Proof.*
+(i) By Definition K.10.1, $\mathcal{A}_{phys}(\mu)$ is an operational observable; by Lemma K.10.2 its operational value is finite.
 
-5. **Topological Cost Terms:** Rigorously derive from fundamental PU principles the effective cost terms for strong CP problem ($V_{topo}(\theta)$, K.6) and other topological effects. Establish connection to instanton calculus in PCE formulation. Derive or justify the stiffness hierarchy assumption $\Lambda_{\text{stiff}} \gg 1$ from the structure of the PCE potential in the space of Yukawa phases.
+(ii) In PU the fundamental degrees of freedom are MPU-network degrees of freedom with characteristic spacing $\delta$ (Definition 35; Appendix Q, Eq. Q.18). Operational protocols act by finite MPU-admissible interaction/update steps (Definition 27) across finite-capacity channels (Theorem E.2). Any purported "mode" with $\lambda<\delta$ would require independent operational distinguishability of sub-MPU structure, which is not available to MPU-admissible protocols. Therefore changes confined to $\lambda<\delta$ cannot be represented as independently measurable degrees of freedom and can affect operational predictions only via their induced change in the effective dynamics of the MPU-resolved degrees of freedom. In a continuum representation this is exactly the statement that the effect of $k>\Lambda_{MPU}$ is encoded in the parameters of the effective action defined at $\Lambda_{MPU}$.
 
+(iii) UV divergences in continuum QFT arise from integrating over arbitrarily large momenta, i.e., from assuming operational meaning for $\lambda\to 0$. Since PU enforces a non-operational regime below $\delta$, those divergent contributions are outside the domain of the effective description and cannot correspond to any operational observable. ∎
 
-6. **Computational Limits:** Further explore consequences of the curvature-resolution bound (Lemma K.5.3) and full implications of Prediction Relativity (Appendix N) for systems operating near fundamental predictive limits. The operational cosmic censorship theorem (K.5.4) establishes the basic dichotomy; remaining work includes detailed modeling of the horizon-formation versus manifold-breakdown transition.
+**Theorem K.10.5 (UV–Strong-Curvature Unified Exclusion).** UV divergences in continuum QFT and curvature singularities in continuum GR are excluded by the same operational mechanism: both arise from extrapolating continuum descriptions beyond the domain enforced by finite information-processing capacity and the discrete MPU scale.
 
+| Divergence Type | Formal Expression | Exclusion Mechanism |
+|:----------------|:------------------|:--------------------|
+| UV (QFT) | $\int_0^\infty d^4k$ | $C_{\max} < \ln d_0$, discrete $\delta$ |
+| Strong-curvature (GR) | $\|R\| \to \infty$ | $S \leq A/(4G)$, discrete $\delta$ |
 
-**Experimental Validation:** The framework makes precise, falsifiable predictions:
+*Proof.* Both exclusions follow from three framework bounds:
+
+(i) **Finite channel capacity** (Theorem E.2): $C_{\max} < \ln d_0 = \ln 8$. Specifying an infinite quantity requires infinite information transfer, which finite-capacity channels cannot support.
+
+(ii) **Holographic bound** (Theorem 49): $S \leq A/(4G)$. Information content scales with boundary area. Infinite density in finite volume violates this bound.
+
+(iii) **Discrete substrate** (Appendix Q): $\delta/L_P = \sqrt{8\ln 2}$. The continuum manifold is an approximation valid for $\ell > \delta$. Extrapolation below this scale produces artifacts—curvature divergences in the strong-curvature regime, momentum integral divergences in the UV regime—with no operational content.
+
+The parallel is structural: in both cases, the divergence signals breakdown of the continuum approximation below $\ell\sim\delta$, where no operationally admissible protocol can access additional independent degrees of freedom. ∎
+
+**Corollary K.10.6 (Divergent Complexity Cost).** Achieving predictive accuracy $\alpha$ approaching the SPAP limit requires complexity $C_{\text{uni}}(\delta_{\text{SPAP}})$ satisfying (Theorem 14, Appendix B Equation B.5):
+$$
+C_{\text{uni}}(\delta_{\text{SPAP}}) = \Omega\left(\log\left(\frac{1}{\delta_{\text{SPAP}}}\right) \cdot \frac{1}{\delta_{\text{SPAP}}^2}\right)
+$$
+where $\delta_{\text{SPAP}} = \alpha_{\text{SPAP}} - \alpha$ is the error margin. As $\delta_{\text{SPAP}} \to 0$ (perfect resolution), $C_{\text{uni}} \to \infty$. Finite systems cannot achieve vanishing error margins in self-referential prediction tasks. Extrapolations that require infinite precision therefore have no operational content in PU.
+
+**Theorem K.10.7 (FRG Coarse-Graining as Operational Compression).** The functional renormalization group flow (Appendix X, Equation X.4)
+$$
+\partial_k \Gamma_k[\phi] = \frac{1}{2}\,\mathrm{STr}\!\left[\left(\Gamma_k^{(2)}[\phi] + R_k\right)^{-1} \partial_k R_k\right]
+$$
+implements a one-parameter family of effective descriptions in which degrees of freedom with momenta $q\gtrsim k$ are systematically integrated out. In PU, this flow is identified with the continuum analogue of PCE-selected compression: moving to smaller $k$ discards microscopic detail that is not operationally accessible or predictively efficient at the corresponding resolution scale.
+
+*Proof.* At momentum scale $k$, the effective action $\Gamma_k$ encodes physics for modes with momenta $q < k$. Modes with $q > k$ contribute only through their effect on lower-momentum dynamics. PCE (Definition 15) mandates that predictive models minimize the total PCE Potential (Appendix D, Definition D.1). At momentum scale $k$, this corresponds to minimizing:
+$$
+\mathcal{L}_{\text{PCE}}^{(k)} = C_P[\Gamma_k] + \lambda \cdot \Delta[\Gamma_k]
+$$
+where $C_P[\Gamma_k]$ is the predictive complexity required to specify the effective action at scale $k$, and $\Delta[\Gamma_k]$ quantifies the dissipation associated with coarse-graining from higher momenta.
+
+**Part A (Irrelevant operators are PCE-suppressed).** Operators of dimension $d > 4$ contribute $O((k/\Lambda_{\text{MPU}})^{d-4})$ to low-energy physics. Their retention increases $C_P[\Gamma_k]$ without proportionate predictive benefit at scale $k$. By PCE optimization (Definition 15), such operators are suppressed.
+
+**Part B (Relevant operators are PCE-preserved).** Operators of dimension $d < 4$ dominate low-energy physics. Their contribution to predictive performance exceeds their complexity cost. PCE preserves them.
+
+**Part C (Marginal operators persist with running).** Operators of dimension $d = 4$ contribute at all scales with logarithmic running. Their PCE cost-benefit ratio remains balanced across the RG flow.
+
+**Part D (Fixed points as PCE equilibria).** At RG fixed points, $\partial_k \Gamma_k = 0$. This corresponds to $\partial \mathcal{L}_{\text{PCE}}/\partial \Gamma = 0$: the system has reached a local extremum of the PCE functional. The RG fixed point structure thus reflects the landscape of PCE equilibria. ∎
+
+**Corollary K.10.8 (Universality from PCE).** The universality of critical phenomena—insensitivity of long-distance physics to microscopic details—follows from PCE selecting against propagation of high-complexity microscopic information to macroscopic scales. Near a critical point, only relevant operators (low PCE cost) survive; irrelevant operators (high PCE cost) are suppressed by factors of $(k/\Lambda_{\text{MPU}})^{d-4}$.
+
+**Theorem K.10.9 (Operational Meaning of Non-Renormalizability).** Let a continuum effective description at scale $\mu$ be specified by an operator expansion with coefficients $\{c_n\}$. If achieving a fixed target prediction precision $\epsilon>0$ for a given operational observable at scale $\mu$ requires specification of an unbounded amount of independent information in $\{c_n\}$ (equivalently, predictive complexity $C_P\to\infty$ as $\epsilon\to 0$ at fixed $\mu$), then the description is not MPU-admissible and signals a mismatch between the chosen variables and the operational degrees of freedom at the intrinsic cutoff $\Lambda_{MPU}$.
+
+*Proof.* For fixed $\mu$ and target precision $\epsilon$, an operational protocol must be finite-resource realizable (Definition K.10.1), hence must have finite predictive complexity and finite cost rate. If the effective description requires an unbounded amount of independent parameter information to reach that precision, then encoding the model itself forces $C_P\to\infty$, contradicting finite-resource realizability (Definition 3; Theorem 3; Theorem 14). Therefore, only effective descriptions whose parameter information demand remains bounded at fixed operational precision can be MPU-admissible. ∎
+
+**Theorem K.10.10 (Gravity as Emergent Thermodynamics).** In the PU framework, gravitational dynamics emerge from thermodynamic consistency at causal boundaries:
+
+(i) The Einstein field equations arise from requiring that entropy flux through local Rindler horizons saturates the Bekenstein bound [Jacobson 1995; Appendix Q, Theorem Q.0.17].
+
+(ii) The gravitational coupling $G$ is determined by MPU channel capacity (Equation E.9):
+$$
+G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}}
+$$
+
+(iii) The metric $g_{\mu\nu}$ is a collective variable describing MPU network geometry, not an independent quantum field.
+
+*Proof.*
+
+(i) The Jacobson construction derives $G_{\mu\nu} = 8\pi G T_{\mu\nu}$ from the thermodynamic identity $\delta Q = T \, dS$ applied to local Rindler horizons, using $T = \hbar a/(2\pi k_B c)$ [Unruh 1976] and $dS = dA/(4G)$ [Bekenstein 1973; Hawking 1975]. This derivation requires no graviton propagator or metric quantization.
+
+(ii) Equation E.9 follows from Theorem E.5 (thermodynamic consistency) with PCE optimization fixing $\delta/L_P = \sqrt{8\ln 2}$ (Appendix Q).
+
+(iii) The emergent manifold (Section 11, Theorem 43) arises as a continuum approximation to discrete MPU network correlations. The metric encodes distances between MPU nodes; it is not a fluctuating quantum field but a thermodynamic variable characterizing the network's collective geometry. Just as temperature fluctuations in a gas are real but derive from molecular dynamics rather than a quantized temperature field, metric fluctuations are real but derive from MPU network dynamics rather than graviton exchange. ∎
+
+**Corollary K.10.11 (Non-Renormalizability Explained).** The non-renormalizability of perturbative quantum gravity is a correct diagnosis: gravity is not a quantum field theory in the conventional sense.
+
+(i) Attempting to quantize $g_{\mu\nu}$ as a spin-2 field treats an emergent collective variable as fundamental.
+
+(ii) The resulting infinities signal operational mismatch (Theorem K.10.9), not missing physics.
+
+(iii) The UV completion is not a conventional theory of quantized gravitons at high energy but the discrete MPU dynamics from which the metric emerges. What would be identified as gravitons in a perturbative treatment are collective excitations of the MPU network geometry.
+
+**Theorem K.10.12 (Unified Origin of UV Finiteness and Gravity).** The channel capacity bound $C_{\max} < \ln d_0$ simultaneously:
+
+(i) Excludes UV divergences by limiting information extractable from sub-MPU scales (Theorem K.10.4)
+
+(ii) Enforces the Bekenstein bound $S \leq A/(4G)$ (Theorem 49)
+
+(iii) Implies Einstein's equations when saturated at horizons (Theorem Q.0.17)
+
+*Proof.* All three follow from finite channel capacity:
+
+(i) Modes with $k > \Lambda_{\text{MPU}}$ require infinite channel uses to resolve. They are operationally inaccessible.
+
+(ii) The effective link density $\sigma_{\text{eff}} = \chi/(\eta\delta^2)$ and capacity $C_{\max}$ yield boundary entropy $S = \sigma_{\text{eff}} \cdot C_{\max} \cdot A = A/(4G)$ (Theorem E.3, Theorem E.5).
+
+(iii) The Rindler-Landauer cycle time $\tau_U = 2\pi c/a$ (Theorem Q.0.10) sets the computational rate at horizons. Requiring entropy production to match Bekenstein-Hawking at this rate yields the Einstein tensor (Appendix Q, Section Q.0.9.8). ∎
+
+**Corollary K.10.13 (Status of Gravitational Waves).** The framework predicts:
+
+(i) Gravitational waves are collective excitations of MPU network geometry—propagating disturbances in the relational structure of the network.
+
+(ii) At wavelengths $\lambda \gg \delta$, these excitations satisfy the linearized Einstein equations and exhibit massless spin-2 tensor structure, consistent with observations.
+
+(iii) The framework does not require a fundamental graviton: the spin-2 behavior at $\lambda \gg \delta$ is a property of collective perturbations of the emergent metric. If a "graviton" description is used, it is an effective quasiparticle language for those collective modes rather than a fundamental degree of freedom.
+
+(iv) At wavelengths $\lambda \sim \delta \approx 2.355\, L_P$, the continuum description fails and discrete MPU dynamics dominate.
+
+*Proof.* Linearizing the emergent metric $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$ about Minkowski space yields wave equations for $h_{\mu\nu}$ with spin-2 tensor structure. This is a property of the geometry of perturbations, not a particle propagator. The distinction is analogous to sound waves in a crystal: phonon language is useful but phonons are not fundamental particles—they are collective lattice excitations. Similarly, gravitational waves are collective MPU network excitations. At $k \sim \Lambda_{\text{MPU}}$, the continuum approximation breaks down (Theorem 43), and no particle interpretation remains even as a convenient fiction. ∎
+
+**Proposition K.10.14 (Bare Parameters).** In standard QFT, "bare" parameters at cutoff $\Lambda \to \infty$ are taken to infinity to cancel divergences. In the PU framework:
+
+(i) Bare parameters at $\Lambda > \Lambda_{\text{MPU}}$ have no operational meaning—they refer to a regime where the continuum approximation is invalid.
+
+(ii) Parameters at $\Lambda_{\text{MPU}}$ are finite and, in principle, derivable from MPU dynamics.
+
+(iii) Renormalized parameters at scale $\mu < \Lambda_{\text{MPU}}$ encode operationally accessible physics at that scale.
+
+*Proof.* By Theorem K.10.4, modes with $k > \Lambda_{\text{MPU}}$ are operationally inaccessible. Parameters defined in terms of such modes have no measurable consequences. The renormalization procedure extracts the finite, operationally meaningful content by integrating out inaccessible modes and absorbing their effects into redefined parameters at accessible scales. ∎
+
+**Connection to Horizon Thermodynamics.** The results of Appendix Q (Section Q.0.9, Theorems Q.0.10–Q.0.17) complete this unified picture. The Rindler-Landauer cycle time $\tau_U = 2\pi c/a$ (Theorem Q.0.10) establishes that horizons process information at finite rate:
+$$
+\dot{N} = \frac{a}{2\pi c}.
+$$
+This computational rate bound applies universally: at black hole horizons (Theorem Q.0.12), at acceleration horizons, and implicitly at the MPU substrate level. The UV cutoff $\Lambda_{\text{MPU}}$ and the IR horizon bounds are dual manifestations of the same finite information-processing capacity.
+
+The equivalence established in Theorem Q.0.15—linking Bekenstein-Hawking entropy, Landauer dissipation, horizon area, and gravitational coupling—extends to UV physics: renormalization succeeds because it respects the same information bounds that exclude singularities.
+
+**Summary.** Within the Predictive Universe framework, renormalization extracts operational predictions from continuum approximations that, if extrapolated literally, would describe operationally inaccessible physics. The framework's finite channel capacity ($C_{\max} < \ln d_0$), discrete substrate ($\delta = \sqrt{8\ln 2} \cdot L_P$), and divergent complexity costs (Theorem 14) guarantee that UV divergences are extrapolation artifacts. The same bounds that exclude curvature singularities (Theorem K.5.4) exclude ultraviolet divergences (Theorem K.10.4).
+
+The non-renormalizability of perturbative quantum gravity receives a definitive explanation: gravity is not a quantum field theory in the conventional sense. The metric $g_{\mu\nu}$ is a collective variable encoding MPU network geometry, and Einstein's equations emerge from thermodynamic consistency at causal boundaries (Theorem K.10.10). Attempting to quantize this emergent structure produces infinities that correctly signal operational mismatch (Corollary K.10.11).
+
+UV finiteness and emergent gravity are unified: both arise from the finite information-processing capacity $C_{\max} < \ln d_0$ of the MPU network (Theorem K.10.12). The cutoff at $\Lambda_{\text{MPU}}$ is not an ad hoc regularization but the scale at which the discrete substrate—from which gravity itself emerges—becomes directly relevant.
+
+---
+
+## K.11 Outlook and Future Directions
+
+The Predictive Universe framework has successfully resolved several fundamental puzzles through rigorous derivations. This section summarizes established results, identifies active development areas, and outlines priority theoretical work and experimental validation strategies.
+
+### K.11.1 Established Results
+
+The following results have been derived with precise numerical predictions:
+
+| Result | Value | Source |
+|:-------|:------|:-------|
+| Fine-structure constant | $\alpha^{-1} \approx 137.036092 \pm 0.000050$ | Appendix Z (parameter-free) |
+| Electroweak scale | $v \approx 246$ GeV from $\kappa_{EW} = 38.5$ | Appendix T, Theorem T.5 |
+| Weinberg angle | $\sin^2\theta_W(\mu_*) = 3/8$ | Appendix T, Theorem T.14 |
+| Higgs mass | $m_H \approx 125$ GeV from metastability | Appendix T, Theorem T.28 |
+| Fermion mass ratios | Lepton $\mathcal{R} = 3$ to 3.8% accuracy | Appendices R, T |
+| Gravitational constant | $G$ from channel capacity, $\delta/L_P \approx 2.355$ | Appendices E, Q |
+| Cosmological constant | $\Lambda L_P^2 = e^{-283} \sim 10^{-122}$ | Appendix U |
+| Primordial observables | $n_s = 0.9663$, $r = 0.0034$, $A_s = 2.08 \times 10^{-9}$ | Appendix U |
+| Spacetime dimension | $D = 4$ from two independent mechanisms | Appendices Z, H |
+| Arrow of time | From irreducible SPAP entropy $\varepsilon = \ln 2$ | Appendix O |
+| Cosmic censorship | Operational throughput bounds exclude naked singularities | Section K.5, Theorem K.5.4 |
+| UV finiteness | Intrinsic cutoff $\Lambda_{\text{MPU}} \approx 0.424\, m_P c$ | Section K.10, Theorem K.10.4 |
+
+### K.11.2 Active Development Areas
+
+The following areas have established conceptual frameworks with detailed calculations in progress:
+
+1. **Black hole information:** Perspectival Information Channel and reflexive extraction costs defined (Section K.3); detailed calculations of information recovery rates and scrambling times in progress.
+
+2. **Strong CP problem:** PCE mechanism proposed (Section K.6) with $\sigma$-invariance selecting $\theta = 0$; explicit derivation of the topological cost term $V_{\text{topo}}(\theta)$ from first principles required.
+
+3. **Modified cosmology:** $G_{\text{eff}}(t)$ framework outlined (Section K.9); PCE derivation of network adaptation dynamics and comprehensive observational tests needed.
+
+4. **Renormalization-PCE correspondence:** FRG flow identified with PCE-selected compression (Theorem K.10.7); rigorous derivation of the PCE functional $\mathcal{L}_{\text{PCE}}^{(k)}$ from MPU dynamics required.
+
+### K.11.3 Priority Theoretical Work
+
+1. **MPU Network Modeling:** Develop detailed models to quantitatively evaluate the global PCE Potential $V(x)$ for remaining coupling constants (strong/weak beyond unified attractor, neutrino masses). This is crucial for deriving constraints on emergent parameters and extending predictive power beyond the established results.
+
+2. **Emergent Effective Actions:** Rigorously derive the structure of the emergent effective action for matter and gauge fields beyond the $U(1)$ case (Appendix G). Extend to full Standard Model and establish how PCE optimization shapes interactions, symmetries, and particle content at scales $\mu \ll \Lambda_{\text{MPU}}$.
+
+3. **Information Dynamics at Horizons:** Develop detailed models of information flow, ND-RID channel capacity limits, and thermodynamic consistency across causal horizons. Essential for completing black hole information resolution (Section K.3) and connecting to the unified UV-gravity picture (Theorem K.10.12).
+
+4. **Cosmological Model Refinement:** Derive $G_{\text{eff}}(\rho, p)$ from first principles of MPU network adaptation. Rigorously analyze energy budget and conservation laws. Compare comprehensive PU cosmological models against full observational data suite (CMB, SNe, BAO, LSS, $H(z)$, local $\dot{G}/G$ bounds).
+
+5. **Topological Cost Terms:** Rigorously derive from fundamental PU principles the effective cost terms for strong CP problem ($V_{\text{topo}}(\theta)$, Section K.6) and other topological effects. Establish connection to instanton calculus in PCE formulation. Derive or justify the stiffness hierarchy assumption $\Lambda_{\text{stiff}} \gg 1$ from the structure of the PCE potential in the space of Yukawa phases.
+
+6. **Computational Limits:** Further explore consequences of the curvature-resolution bound (Lemma K.5.3) and full implications of Prediction Relativity (Appendix N) for systems operating near fundamental predictive limits. The operational cosmic censorship theorem (Theorem K.5.4) establishes the basic dichotomy; remaining work includes detailed modeling of the horizon-formation versus manifold-breakdown transition.
+
+7. **Renormalization from First Principles:** Derive the correspondence between RG fixed points and PCE equilibria (Theorem K.10.7, Part D) more rigorously by constructing the explicit map between Wilsonian effective actions and MPU network configurations at different resolution scales.
+
+### K.11.4 Experimental Validation
+
+The framework makes precise, falsifiable predictions across multiple domains:
+
+**Fundamental Constants:**
 - $\alpha^{-1} = 137.036092 \pm 0.000050$ (test with improved QED measurements)
+- $\sin^2\theta_W$ and $m_H$ consistency checks with RG evolution to high precision
+
+**Particle Physics:**
 - Fermion mass hierarchy invariants: $\mathcal{R}_\ell = 3$ to 3.8% accuracy (test with improved $\tau/\mu$ mass ratio)
+- Three-generation structure from topological constraints (Appendix R)
+
+**Consciousness and Complexity:**
 - Consciousness Complexity scaling (Section 13): Neural activity $\sim N^{0.8}$ vs. $N^{0.6}$ for random networks
-- Electroweak parameters: $\sin^2\theta_W$, $m_H$ consistency checks with RG evolution
-- Cosmological signatures: Modified $f\sigma_8(z)$, potential $H_0$ tension resolution
+- CC threshold behavior and causality bound $\alpha_{CC,\max} < 0.5$
+
+**Cosmology:**
+- Modified $f\sigma_8(z)$ from $G_{\text{eff}}$ evolution
+- Potential $H_0$ tension resolution
+- Primordial observables: $n_s$, $r$, $A_s$ consistency
+
+**Gravitational Physics:**
+- Gravitational wave behavior at wavelengths approaching $\lambda \sim \delta$ (Corollary K.10.13)
+- Absence of trans-Planckian signatures in any operational observable
 
 The experimental program outlined in Section 13, particularly tests of the Consciousness Complexity (CC) hypothesis, provides crucial empirical anchors. Positive or null results will validate, falsify, or refine core framework aspects and guide future theoretical development.
 
-**Broader Implications:** The framework demonstrates that deep structure of physical law emerges from operational requirements, logical limitations, and thermodynamic costs of prediction itself. The unity revealed—connecting fundamental constants, particle masses, cosmological parameters, and consciousness scaling through the same information-theoretic principles—suggests a profound simplification underlying apparent complexity. 
+### K.11.5 Broader Implications
+
+The framework demonstrates that deep structure of physical law emerges from operational requirements, logical limitations, and thermodynamic costs of prediction itself. The unity revealed—connecting fundamental constants, particle masses, cosmological parameters, UV finiteness, emergent gravity, and consciousness scaling through the same information-theoretic principles—suggests a profound simplification underlying apparent complexity.
+
+The central insight is that the finite information-processing capacity of the MPU network ($C_{\max} < \ln d_0$) simultaneously:
+- Excludes UV divergences (Theorem K.10.4)
+- Enforces holographic entropy bounds (Theorem 49)
+- Implies Einstein's equations (Theorem Q.0.17)
+- Bounds consciousness complexity (Theorem 39)
+- Selects spacetime dimension (Theorem Z.11)
+
+This convergence from a single information-theoretic constraint to the observed structure of physics constitutes the framework's strongest evidence for internal consistency and suggests that prediction—subject to irreducible logical and thermodynamic limits—is the organizing principle of physical reality.

@@ -1681,11 +1681,11 @@ $$t_{\min}(R) = \frac{R}{\delta} \cdot \tau_{\min}$$
 
 $$v_{\max} = \frac{R}{t_{\min}(R)} = \frac{\delta}{\tau_{\min}}$$
 
-**Step 4 (Identification with $c$).** By Proposition Q.6.1, Lorentz invariance of the emergent spacetime (Theorem 46) requires:
+**Step 4 (Identification with $c$).** Lorentz invariance of the emergent spacetime (Theorem 46) requires that spatial and temporal discretization scales maintain the same ratio as the Planck units:
 
-$$\frac{\delta}{L_P} = \frac{\tau_{\min}}{t_P}$$
+$$\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}$$
 
-where $L_P$ and $t_P$ are the Planck length and time. Since $c = L_P/t_P$ by definition of Planck units:
+where $L_P$ and $t_P$ are the Planck length and time. This ratio equality follows from the requirement that the discretization not select a preferred frame. Since $c = L_P/t_P$ by definition of Planck units:
 
 $$v_{\max} = \frac{\delta}{\tau_{\min}} = \frac{L_P}{t_P} = c$$
 

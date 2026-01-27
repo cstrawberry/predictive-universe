@@ -78,12 +78,39 @@ The emergent metric $g_{\mu\nu}$ inherits its signature from the causal structur
 
 **11.6.1 Theorem 46 (Lorentzian Metric and Speed $c$)**
 
-The causal structure inherent in ND-RID interactions imposes a finite, invariant maximum speed $c$ for causal influence propagation across the emergent manifold $(M, g_{\mu\nu})$. Finiteness arises from the minimum MPU processing time $\tau_{min}>0$ (Theorem 29) together with the finite MPU spacing $\delta$ and uniform bounds on the dimensionless propagation costs $0 < w_{min} \le w_{xy} \le w_{max} < \infty$ supplied by geometric regularity (Defs. 36–37). The minimum time to traverse an edge $(x,y)$ is $\Delta t_{xy} \ge \tau_{min}$. The effective speed along an edge is $v_{xy} = d_{\mathcal{N}}(x,y) / \Delta t_{xy} = (\delta w_{xy}) / \Delta t_{xy}$. The maximum causal speed $c$ is therefore bounded:
-$
-c \le (\delta w_{max})/\tau_{min}.
-$
-In the continuum limit, this finite, invariant maximum speed $c$ requires the metric $g_{\mu\nu}$ to be indefinite (pseudo-Riemannian), admitting non-trivial null cones ($ds^2 = 0$ for non-zero $dx^\mu$). Given time directionality (Theorem 4) and assuming emergent dimension $D=4$ (empirical), the signature is necessarily Lorentzian (conventionally $(-+++)$ or $(+---)$).
-*Proof:* Finite MPU cycle time $\tau_{min}$ and minimum link cost $w_{min}$ imply maximum physical propagation speed $c_{max} \lesssim \ell_0\, w_{max}/\tau_{min}$ in the discrete network (with $w_{xy}$ understood as inverse delay; if one works directly with delay costs $c_{xy}=1/w_{xy}$, the equivalent bound is $c_{max}\lesssim \ell_0/(\tau_{min}\, c_{min})$). This manifests as finite invariant speed $c$ in the continuum limit. An invariant speed $c$ geometrically defines null cones, requiring an indefinite metric $g_{\mu\nu}$. In D=4, established time directionality selects the Lorentzian signature with one time and three space dimensions. Locality is therefore not a primitive axiom but emerges from thermodynamics: superluminal propagation would require either $\varepsilon < \ln 2$ (violating Theorem 31) or $\tau < \tau_{min}$ (violating Theorem 29), both forbidden by the logical structure of self-referential prediction (Appendix E, Corollary E.10.2). QED
+The causal structure inherent in ND-RID interactions imposes a finite, invariant maximum speed $c$ for causal influence propagation across the emergent manifold $(M,g_{\mu\nu})$. Finiteness arises from the minimum MPU processing time $\tau_{min}>0$ (Theorem 29) together with the existence of a nonzero microscopic interaction length scale $\delta>0$ (Appendix Q) and the fact that, in the viable regular regime, one-step propagation weights are uniformly bounded,
+$$
+0<w_{min}\le w_{xy}\le w_{max}<\infty,
+$$
+as established by the regularity necessity argument (Appendix C, Theorem C.2) wherein PCE-viable configurations require bounded weight uniformity, and used in the induced propagation-cost metric (Definition 35).
+
+Let $d_{\mathcal{N}}$ be the propagation-cost metric (Definition 35),
+$$
+d_{\mathcal{N}}(u,v)=\min_{\gamma:u\to v}\sum_{(x,y)\in\gamma}\delta \cdot w_{xy}.
+$$
+Each ND-RID edge-update requires time at least $\tau_{min}$ (Theorem 29). Consequently, causal influence propagation in the discrete substrate admits a finite maximal speed. In the continuum limit, the existence of a finite invariant cone speed forces the effective metric $g_{\mu\nu}$ to be indefinite (pseudo-Riemannian), admitting nontrivial null directions ($ds^2=0$ for some nonzero $dx^\mu$). Given time directionality (Theorem 4) and emergent dimension $D=4$ (Theorem Z.11), the signature is Lorentzian (conventionally $(-+++)$ or $(+---)$).
+
+*Proof:* Consider any causal propagation along a path $\gamma$ consisting of $n$ successive ND-RID interaction edges. By Theorem 29, each edge crossing requires time at least $\tau_{min}$, hence the total propagation time satisfies
+$$
+t(\gamma)\ge n\,\tau_{min}.
+$$
+By Definition 35 and the uniform bound $w_{xy}\le w_{max}$ (Appendix C), the metric length accumulated per edge is at most $\delta w_{max}$, so the total metric displacement satisfies
+$$
+d_{\mathcal{N}}(u,v)\le \sum_{(x,y)\in\gamma}\delta\, w_{xy}\le n\,\delta\, w_{max}.
+$$
+Therefore the effective propagation speed measured in the $d_{\mathcal{N}}$-induced continuum geometry is bounded by
+$$
+\frac{d_{\mathcal{N}}(u,v)}{t(\gamma)}\le \frac{n\,\delta\, w_{max}}{n\,\tau_{min}}=\frac{\delta\, w_{max}}{\tau_{min}}<\infty.
+$$
+Defining $c$ as the supremum causal speed in the continuum description yields $c\le \delta w_{max}/\tau_{min}$, hence $c$ is finite. The bound is saturated for PCE-optimal configurations: Appendix E (Theorem E.10.2) derives that information propagation through the MPU network achieves maximum velocity
+$$
+v_{max}=\frac{\delta}{\tau_{min}},
+$$
+which is identified with the emergent invariant speed $c$ (Appendix Q, Proposition Q.6.1). In PCE-optimal regular configurations where propagation costs are uniform ($w_{xy} \approx 1$ for typical links), the general bound $c \le \delta w_{max}/\tau_{min}$ reduces to $c = \delta/\tau_{min}$. Local null cones then represent propagation at the maximal causal rate permitted by the MPU substrate.
+
+A finite invariant maximal speed $c$ defines a nontrivial cone structure (null directions saturating the bound). Encoding such cones in a metric requires null vectors, hence an indefinite (pseudo-Riemannian) metric. With time directionality (Theorem 4) selecting a time orientation and with $D=4$ fixed by Theorem Z.11, the resulting non-degenerate signature class is Lorentzian.
+
+Finally, superluminal propagation contradicts the instantiation bounds formalized in Appendix E: exceeding $c=\delta/\tau_{min}$ would require either completing an ND-RID update in time $<\tau_{min}$ (violating Theorem 29) or traversing multiple links within one minimal cycle while reducing the per-link irreducible entropy cost below $\varepsilon=\ln 2$ (violating Theorem 31), exactly as stated in Appendix E (Corollary E.10.2). ∎
 
 **11.7 Spacetime Curvature as Predictive Holonomy (Conditional on Thm 43, Thm 45)**
 
