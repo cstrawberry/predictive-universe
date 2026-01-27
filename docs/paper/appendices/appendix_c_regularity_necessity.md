@@ -230,7 +230,7 @@ $$
 such that for every locally Lipschitz $f$
 
 $$
-\fint_{B(x,r)}\!\!\!|f-f_{B(x,r)}|\,\mathrm d\mu\ \le\
+\fint_{B(x,r)}\!\!\!|f-f_{B(x,r)}|\,\mathrm d\mu\ \le
 C_P(r)\,r \left(\fint_{B(x,4r)} |\nabla f|^2\,\mathrm d\mu\right)^{1/2}.
 $$
 

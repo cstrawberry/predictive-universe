@@ -14,7 +14,7 @@ The derivation depends crucially on the ND-RID–driven *Horizon-Entropy Area La
 Gravity therefore appears as a macroscopic, thermodynamic consequence of predictive-network dynamics, with its scale fixed by the underlying MPU information parameters, succinctly summarised by (derived from Equation E.9):
 
 $$
-G \;=\; \frac{c^{3}}{4\,\hbar\,\Sigma_{I}} \
+G \;=\; \frac{c^{3}}{4\,\hbar\,\Sigma_{I}}
 $$
 
 where $\displaystyle \Sigma_{I}\;=\;\sigma_{\text{link}}\;C_{\max}(f_{\text{RID}})$ represents the effective horizon information density, combining the surface density of effective information channels $\sigma_{\text{link}}$ (dimensions $L^{-2}$) and the dimensionless ND-RID channel-capacity bound $C_{\max}$, the surface density $\sigma_{\text{link}}$ depends on the effective MPU spacing $\delta$, a geometric factor $\eta$, and a theoretical correlation factor $\chi$ (potentially $\le 1$) accounting for non-independence of channels, typically $\sigma_{\text{link}} = \chi/(\eta\,\delta^{2})$, and $C_{\max}$ is limited by the irreversibility cost $\varepsilon\ge\ln 2$.

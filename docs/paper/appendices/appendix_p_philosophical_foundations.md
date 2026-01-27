@@ -3423,7 +3423,7 @@ $$\mathcal{V}_{\text{PCE}} = V^\natural \quad \square$$
 
 ### Theorem P.13.28 (Modular Invariance and Weight-One Selection)
 
-**Reference:** Theorem P.13.14e
+**Reference:** Proposition P.13.6.5
 
 Modular invariance is required by perspective consistency, and PCE selects $\dim(V_1) = 0$ within the modular-invariant class.
 
@@ -3439,7 +3439,7 @@ for some constant $C$, where $j(\tau) = q^{-1} + 744 + 196884q + \cdots$
 
 **Step 4 (PCE selection).** Among modular-invariant options, PCE selects $C = -744$ (i.e., $\dim(V_1) = 0$) as the unique configuration with finite operational cost. By Theorem P.13.19, any $\dim(V_1) > 0$ incurs infinite precision cost from $U(1)^{\dim(V_1)}$ continuous symmetry. $\square$
 
-**Epistemic Status:** Framework-derived. Modular invariance is required by perspective consistency (Theorem P.13.14e); PCE optimization via the precision cost principle (Theorem P.13.19) uniquely selects $\dim(V_1) = 0$ within the modular-invariant class.
+**Epistemic Status:** Framework-derived. Modular invariance is required by perspective consistency; PCE optimization via the precision cost principle (Theorem P.13.19) uniquely selects $\dim(V_1) = 0$ within the modular-invariant class.
 
 ---
 

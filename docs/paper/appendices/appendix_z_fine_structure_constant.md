@@ -34,7 +34,7 @@ Both results emerge from a single information-theoretic structure—the interfac
 $$\boxed{D = 4}$$
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) ≈ 137.036092 \pm 0.000050}$$
 
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The second-order correction is derived analytically in Section Z.27 from Bures metric geometry. The third-order factor $(1 - u^{*2}/6)$ arises from the SU(2) geodesic-chord relation in each interface subblock.
+where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The second-order correction is derived analytically in Section Z.27 from Bures metric geometry. The third-order factor $(1 - u^{*2}/6)$ arises from the SU(2) geodesic-chord relation in each interface subblock: for an SU(2) rotation by angle $\theta$, the ratio of geodesic distance to chord length is $(\theta/2)/\sin(\theta/2) \approx 1 + \theta^2/24 + O(\theta^4)$, yielding the stated correction factor when $\theta \sim u^*$.
 
 ### Z.1.4 Methodological Note
 - Two independent selection mechanisms for $D = 4$:
@@ -683,8 +683,8 @@ Both deviations increase V(x), with unique minimum at $M_{\text{int}} = M_{\text
 $$
 V_{\mathrm{mc}} \simeq
 \begin{cases}
-c_{\mathrm{dark}}\dfrac{\Delta_{\mathrm{mc}}^2}{K(D)}, & M_{\mathrm{int}} > K(D) \
-c_{\mathrm{dim}},\dfrac{D(D-1),\Delta_{\mathrm{mc}}}{K(D)}, & M_{\mathrm{int}} < K(D)
+c_{\mathrm{dark}}\dfrac{\Delta_{\mathrm{mc}}^2}{K(D)}, & M_{\mathrm{int}} > K(D) \\
+c_{\mathrm{dim}}\dfrac{D(D-1)\Delta_{\mathrm{mc}}}{K(D)}, & M_{\mathrm{int}} < K(D)
 \end{cases}
 $$
 and the unique minimum occurs at $M_{\mathrm{int}} = K(D)$. ∎
@@ -760,7 +760,7 @@ Consulting the kissing numbers [Conway & Sloane 1999; Musin 2008]:
 | 7 | 126 |
 | 8 | 240 |
 
-The exact value $K(4) = 24$ was established by Musin (2008). The unique solution is $D = 4$. ∎
+The exact value $K(4) = 24$ was established by Musin (2008). For intermediate dimensions, bounds constrain $K(5) \leq 44$, $K(6) \leq 78$, $K(7) \leq 134$ [Conway & Sloane 1999]. Since $K(D)$ increases monotonically with $D$ and we have $K(4) = 24$, $K(8) = 240$, no intermediate dimension can yield exactly 24. The unique solution is $D = 4$. ∎
 
 **Remark Z.11.1 (Dimensional Uniqueness from $K_0$).** The derivation chain $K_0 \to d_0 \to a \to M \to D$ produces a consistent solution only for $K_0 = 3$:
 

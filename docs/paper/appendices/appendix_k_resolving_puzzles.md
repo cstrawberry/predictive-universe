@@ -816,7 +816,7 @@ $$\kappa = \frac{N_{\mathbb{R}} - m}{2} = \frac{288 - 5}{2} = 141.5$$
 
 **Numerical Prediction:**
 $$\Lambda L_P^2 = 8\pi A_{eff} e^{-2 \times 141.5} = 8\pi A_{eff} e^{-283}$$
-For $A_{eff} \sim O(1)$, this yields $\Lambda L_P^2 \sim 10^{-122}$ **(Corollary U.16)**, in remarkable agreement with the observed value $\Lambda L_P^2 \approx 2.87 \times 10^{-122}$.
+For $A_{eff} \sim O(1)$, this yields $\Lambda L_P^2 \sim 10^{-122}$ **(Corollary U.17)**, in remarkable agreement with the observed value $\Lambda L_P^2 \approx 2.87 \times 10^{-122}$.
 
 **Key Insight:** The cosmological constant hierarchy is explained by the same Golay code structure that determines the electroweak scale (Appendix T). Both hierarchies reflect discrete information-theoretic complexity:
 - Electroweak: $v/M_{Pl} = e^{-38.5} \sim 10^{-17}$ (38.5 real dimensions)
