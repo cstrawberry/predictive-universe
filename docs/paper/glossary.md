@@ -128,7 +128,7 @@
 
 *   **MPU (Minimal Predictive Unit):** (Definition 23) The hypothesized fundamental constituent of reality, defined as a system possessing Predictive Physical Complexity exactly equal to the Operational Threshold $C_{op}$. Operates the adaptive Fundamental Predictive Loop under Dual Dynamics.
 
-*   **ND-RID (Non-Deterministic Reflexive Interaction Dynamics):** (Definition 6, Definition A.2) The formalism describing the probabilistic, irreversible 'Evolve' interaction process, where state transitions depend reflexively on stochastic outcomes. Characterized by $\varepsilon \ge \ln 2$ and $f_{RID} < 1$.
+*   **ND-RID (Non-Deterministic Reflexive Interaction Dynamics):** (Definition 6) The formalism describing the probabilistic, irreversible 'Evolve' interaction process, where state transitions depend reflexively on stochastic outcomes. Characterized by $\varepsilon \ge \ln 2$ and $f_{RID} < 1$.
 
 *   **Operational Alphabet Capacity:** (Appendix Z, Definition Z.4, Theorem Z.6) The maximum information $\ln d_0$ that can be reliably encoded and retrieved in a single MPU cycle when rank-raising instruments are available. Capacity saturation at the PCE-Attractor ($\mathcal{I}(u^*) = \ln d_0$) determines the bare coupling $u^* = d_0^{1/M} - 1 = 2^{1/8} - 1$.
 
@@ -180,7 +180,7 @@
 
 *   **$R(C)$:** (Definition 3, Equation 4) Physical Operational Cost function. Power-like rate of *physical* resource consumption required to maintain and operate structures/processes of complexity $C$. $R(C) = R(C_{op}) + r_p (C-C_{op})^{\gamma_p}$ for $C \ge C_{op}$, with $\gamma_p > 1$.
 
-*   **RID (Reflexive Interaction Dynamics):** (Definition 6, Definition A.1) Formalism characterizing interactions where the system's subsequent state depends intrinsically on the outcome of the interaction itself. Includes deterministic (D-RID) and non-deterministic (ND-RID) versions.
+*   **RID (Reflexive Interaction Dynamics):** (Definition 6) Formalism characterizing interactions where the system's subsequent state depends intrinsically on the outcome of the interaction itself. Includes deterministic (D-RID) and non-deterministic (ND-RID) versions.
 
 *   **RU (Reflexive Undecidability):** (**Theorem 12, Theorems A.2.3, A.2.4**) Fundamental limitation on the ability of an interacting algorithm to reliably decide certain properties of systems governed by RID, due to the interaction perturbing the system state.
 

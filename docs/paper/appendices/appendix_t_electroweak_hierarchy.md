@@ -3056,8 +3056,8 @@ All complexity parameters trace to the same logical foundation established in th
 | 6 | $M$ | $2ab = 24$ | QFI interface modes | Theorem Z.5 |
 | 7 | $k$ | $M/2 = 12$ | Golay code dimension | Theorem Z.13 |
 | 8 | $D$ | 4 | Emergent spacetime dimension | Theorem Z.11 |
-| 9 | $\sigma_B^2$ | $1/M = 1/24$ | Bures variance from capacity saturation | Theorem T.41.2 |
-| 10 | $\alpha$ | $1/(16\sigma_B^2) = 3/2$ | Hierarchy coefficient | Theorem T.41.3 |
+| 9 | $\sigma_B^2$ | $1/M = 1/24$ | Bures variance from capacity saturation | Lemma T.41.2 |
+| 10 | $\alpha$ | $1/(16\sigma_B^2) = 3/2$ | Hierarchy coefficient | Corollary T.41.3 |
 
 **Proposition T.59** (Foundational Completeness). *Every parameter in the complexity formula derives from $K_0 = 3$ through the chain above. No additional free parameters enter the hierarchy derivations.*
 

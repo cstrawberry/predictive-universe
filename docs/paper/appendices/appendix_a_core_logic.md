@@ -230,7 +230,7 @@ This exponential growth provides resources for representing complex computations
 **Theorem A.0.6 (Network Universality)**
 A network of $n$ MPUs, operating with error rate $p_{\text{err}}^*$ satisfying robustness conditions, achieves full Property R:
 1.  **Representation:** For any Turing machine with $k$ states and $m$ tape symbols, a standard Gödel encoding of the transition table requires $L_{TM} = O(k \cdot m \cdot \log(k \cdot m))$ bits. A network of $n \geq \lceil L_{TM}/3 \rceil = O(k \cdot m \cdot \log(k \cdot m))$ MPUs (each providing 3 bits via $K_0$) provides adequate state space for encoding the machine description. This bound represents the description storage requirement alone, ignoring QEC redundancy and working memory overhead.
-2.  **Simulation/Reason:** By the Solovay–Kitaev theorem [Kitaev 1997; Dawson & Nielsen 2005]
+2.  **Simulation/Reason:** By the Solovay–Kitaev theorem [Kitaev 1997; Dawson & Nielsen 2006]
  and QEC Compatibility, the network can implement arbitrary quantum unitaries to arbitrary precision with polynomial overhead. Since quantum computers efficiently simulate classical computation, the network can simulate any Turing machine.
 3.  **Evaluate Predicates:** Fault-tolerance ($p_{\text{err},0} < p_{\text{th}}$ under QEC Compatibility) ensures logical error rates can be suppressed to arbitrarily small values with polynomial overhead, enabling reliable execution of arbitrarily deep circuits for evaluating computable predicates.
 

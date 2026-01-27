@@ -59,7 +59,7 @@ $$
 This bound is strictly positive and arises fundamentally from the logical structure of self-reference when implemented using finite resources, independent of the specific physical substrate or noise level.
 
 *Proof:*
-1.  The minimal, finite-memory SPAP update cycle (as constructed in the proof of Theorem A.1 with ancilla reuse) requires a logical mapping over one cycle from the input state $(\phi_t, p_t)$ to the output state $(\phi_{t+1}, p_{t+1})$. Lemma J.1 proves that this mapping is at least 2-to-1, resulting in an unavoidable logical state merging.
+1.  The minimal, finite-memory SPAP update cycle (as constructed in the proof of Theorem A.1.1 with ancilla reuse) requires a logical mapping over one cycle from the input state $(\phi_t, p_t)$ to the output state $(\phi_{t+1}, p_{t+1})$. Lemma J.1 proves that this mapping is at least 2-to-1, resulting in an unavoidable logical state merging.
 2.  Any physical implementation of this logical mapping must map distinct physical states encoding the initial logical states to physical states encoding the final logical states.
 3.  The logical merging implies a contraction in the effective volume of the corresponding physical state space regions.
 4.  By Landauer's principle (Section J.3), such a logical state compression or information erasure requires a minimum irreversible entropy production in the environment to maintain consistency with underlying physical laws (like Liouville's theorem or unitarity for the combined system+environment). The minimum entropy production is $k_B \ln(N/M)$, where $N$ is the number of initial logical states mapping to $M$ final logical states.

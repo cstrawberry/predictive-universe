@@ -660,7 +660,6 @@ $$
 **Step 4 (Per-Bit Cost Coefficient).** Each link has capacity $C_{max}$ nats (Theorem E.2), so transmitting one nat of information incurs entropy cost $\varepsilon/C_{max}$ per link (Theorem 31). For a path of $n = r/\delta$ links to depth $r$, the cost per nat is $(r/\delta) \cdot (\varepsilon/C_{max})$. The cost per nat of accessible information per unit retrieval depth is:
 $$
 \gamma_{ret} = \frac{(r/\delta) \cdot (\varepsilon/C_{max})}{r} = \frac{\varepsilon}{\delta \cdot C_{max}}
-\tag{E.8.3a}
 $$
 This has dimensions $[1/\text{length}]$ in natural units. $\square$
 
@@ -780,7 +779,6 @@ where $\kappa_{maint} > 0$ is a maintenance coefficient of order unity determine
 **Step 3 (Thermodynamic Cost of Coherence).** Maintaining coherence in a thermal environment requires active refresh and error-suppression operations. Any refresh cycle that discards entropy into the environment is logically irreversible at the effective level and therefore carries a strictly positive entropy cost per cycle, bounded below by $\ln 2$ per irreversibly discarded bit [Landauer 1961]. In the PU parametrization, this baseline cost per maintenance cycle is absorbed into $\varepsilon \geq \ln 2$ (Theorem 31), giving:
 $$
 \Phi_{idle} = \kappa_{maint} \cdot \varepsilon, \quad \kappa_{maint} \equiv \frac{\tau_{maint}}{\tau_{cycle}}
-\tag{E.8.3n}
 $$
 where the ratio $\kappa_{maint}$ captures the maintenance period relative to cycle time. For stable operation at PCE equilibrium, $\kappa_{maint} \sim O(1)$.
 
@@ -807,7 +805,7 @@ For a region with boundary area $\mathcal{A}$:
 - Total effective channels: $N_{eff} = \sigma_{link} \cdot \mathcal{A}$, where $\sigma_{link} = \chi/(\eta\delta^2)$ (Theorem E.3)
 - Maximum entropy: $S_{max} = N_{eff} \cdot C_{max} = \mathcal{A}/(4G)$ (Theorem 49)
 - Active channels: $N_{active}(S) = S/C_{max}$
-- Idle channels: $N_{idle}(S) = N_{eff} - N_{active}(S)
+- Idle channels: $N_{idle}(S) = N_{eff} - N_{active}(S)$
 
 **Theorem E.8.3.3 (Explicit PCE Potential for Boundary Entropy).**
 The PCE potential as a function of boundary entropy $S \in [0, S_{max}]$ for a region with boundary area $\mathcal{A}$ is:
@@ -851,7 +849,6 @@ This represents the power-equivalent predictive benefit from utilizing fraction 
 **Step 3 (Total Potential).** Combining the components (absorbing $\Phi_{active}$ costs into $V_0$):
 $$
 V(S) = V_0 + \Phi_{idle} \cdot \left(N_{eff} - \frac{S}{C_{max}}\right) - \Gamma_0 B_0 \cdot \frac{S}{S_{max}}
-\tag{E.8.3p}
 $$
 This is the explicit PCE potential as a function of boundary entropy. $\square$
 
@@ -895,7 +892,7 @@ S \leq S_{max} = \frac{\mathcal{A}}{4G}
 $$
 This provides a hard upper boundary for the dynamics.
 
-**Step 5 (Unique Minimum at Boundary).** Since $V(S)$ is linear with negative slope (Equation E.8.3p), it achieves its unique minimum at the maximum allowed value:
+**Step 5 (Unique Minimum at Boundary).** Since $V(S)$ is linear with negative slope, it achieves its unique minimum at the maximum allowed value:
 $$
 S^* = S_{max} = \frac{\mathcal{A}}{4G}
 \tag{E.8.3u}

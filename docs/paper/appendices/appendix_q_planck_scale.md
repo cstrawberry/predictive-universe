@@ -1304,7 +1304,7 @@ $$\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}$$
 
 $$\boxed{\tau_{min} = \sqrt{8\ln 2}\; t_P \approx 2.355\, t_P}$$
 
-where $\eta^* \approx 1$ at PCE equilibrium (Section Q.4).
+where $\eta^* \approx 1$ at PCE equilibrium.
 
 *Proof.* Apply Proposition Q.6.1 to the spatial result (Equation Q.18):
 

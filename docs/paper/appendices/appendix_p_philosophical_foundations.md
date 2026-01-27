@@ -943,7 +943,7 @@ The concept of a Control Boundary—forbidding external intervention—raises an
 
 The PU framework establishes (Theorem 33, Section 7.4.6) that any interaction yielding information gain $\Delta I > 0$ necessarily incurs a minimum thermodynamic cost:
 
-$$\Delta I \cdot (\Delta S_{min}/k_B) \geq \kappa_r > 0 \$$
+$$\Delta I \cdot (\Delta S_{min}/k_B) \geq \kappa_r > 0$$
 
 where $\kappa_r$ is the strictly positive Reflexivity Constant. This constraint arises from the irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31) of any information-acquiring interaction.
 

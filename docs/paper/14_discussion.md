@@ -168,7 +168,7 @@ The $\varepsilon$-cost acts as a microscopic ratchet that operates at every MPU 
 
 The delayed-choice quantum eraser experiments provide a concrete case study for evaluating the PU framework’s temporal commitment. In the paradigmatic setup [Kim et al. 2000], signal photons pass through a double-slit and are detected at a screen, while correlated idler photons are sent to a delayed-choice apparatus that determines whether which-path information is “erased” or preserved. Correlations between signal and idler outcomes exhibit interference or no-interference patterns depending on the idler measurement choice—even when the idler measurement occurs *after* the signal detection.
 
-**The Retrocausal Interpretation:** Some researchers, including Wheeler himself in early discussions [Wheeler 1978], suggested these results imply that the choice to erase which-path information retroactively affects whether the signal photon “behaved as a wave or particle.” Aharonov and Zubairy [2005] explored interpretations involving “erasing the past and impacting the future.” Given QM’s time-symmetry, this represented a serious interpretive position.
+**The Retrocausal Interpretation:** Wheeler's delayed-choice experiments [Wheeler 1978] raised profound questions about temporal ordering in quantum mechanics. Wheeler himself emphasized that "no elementary quantum phenomenon is a phenomenon until it is a registered phenomenon," suggesting the meaninglessness of attributing definite properties before measurement rather than explicit retrocausation. However, some researchers took stronger positions: Aharonov and Zubairy [2005] explored interpretations involving "erasing the past and impacting the future." Given QM's time-symmetry, retrocausal interpretations represented a serious—if minority—position in foundations research.
 
 **The PU Framework’s Requirement:** Because retrocausality is forbidden within the PU framework’s foundations, the framework **requires** that quantum eraser phenomena have a non-retrocausal explanation. This is not an accommodation after the fact but a necessary consequence of the framework’s structure. Specifically, PU requires that:
 
@@ -838,7 +838,7 @@ Similarly, the number of fermion generations $N_g = 3$ is derived through two in
 
 2. **Geometric Pathway (Proposition R.4.2):** E₈ geometry with capacity saturation $M = 24$ and kissing number $K(4) = 24$ determines the maximum number of generation centers on Gr(2,8). The Leech lattice $\Lambda_{24}$ contains the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing independent geometric support for three generations from optimal information geometry.
 
-3. **CP Violation Requirement (Proposition R.3.7):** The Jarlskog invariant $J_{CP}$ vanishes identically for $N_g \leq 2$. Non-zero CP violation—necessary for baryogenesis—requires at least three generations.
+3. **CP Violation Requirement (Proposition R.3.5):** The Jarlskog invariant $J_{CP}$ vanishes identically for $N_g \leq 2$. Non-zero CP violation—necessary for baryogenesis—requires at least three generations.
 
 This triple over-determination makes the three-generation structure a necessary consequence of the framework rather than an arbitrary choice.
 
@@ -896,13 +896,13 @@ The code-theoretic vacuum does not stop at a qualitative classification of secto
 $$
 \ln\!\left(\frac{m_j}{m_i}\right)=\alpha\,d^2_{E_8}(r_i,r_j),
 $$
-with $\alpha=\alpha_{UV}=3/2$ fixed by the PU Bures width $\sigma_B^2=1/24$ (Corollary T.41.6), and the IR-dressed $\alpha_{IR}\approx 1.41$ determined by the same Gr$(2,8)$ curvature corrections that appear in the gauge sector (Appendix T, Section T.24.2; Appendix Z). The generation points $\{r_i\}$ are fixed by the Golay-derived triad constraints (Theorem T.42.1). Together with the PU-derived electroweak scale $v$ and the PU normalization of the charged-lepton Yukawa prefactor (Appendix T, Theorem T.44), one obtains absolute charged-lepton mass predictions (Corollary T.44.3):
+with $\alpha=\alpha_{UV}=3/2$ fixed by the PU Bures width $\sigma_B^2=1/24$ (Corollary T.41.6), and the IR-dressed $\alpha_{IR}\approx 1.41$ determined by the same Gr$(2,8)$ curvature corrections that appear in the gauge sector (Appendix T, Section T.24.2; Appendix Z). The generation points $\{r_i\}$ are fixed by the Golay-derived triad constraints (Theorem T.42.1). Together with the PU-derived electroweak scale $v$ and the PU normalization of the charged-lepton Yukawa prefactor (Appendix T, Theorem T.44), one obtains absolute charged-lepton mass predictions (Appendix T, Section T.21.11):
 $$
 m_\tau \approx 1.80\,\mathrm{GeV}\ \ (O(1\%)\ \text{theoretical width}),\qquad
 m_\mu \approx 105.5\,\mathrm{MeV},\qquad
 m_e \approx 0.5120\,\mathrm{MeV}.
 $$
-The same mechanism extends to quark hierarchies and CKM structure (Appendix T, Section T.44.9), so the Golay vacuum code fixes not only the existence of superselection sectors but also quantitative mass data within those sectors.
+The same mechanism extends to quark hierarchies and CKM structure (Appendix T), so the Golay vacuum code fixes not only the existence of superselection sectors but also quantitative mass data within those sectors.
 
 This viewpoint also sharpens the role of the threefold internal decomposition in Appendix R. The emergence of a tripled internal structure (Lemma R.4.5 and Proposition R.4.7) is naturally read as a triplication of defect-family structure relative to the same vacuum code substrate, i.e., three constrained families of sectors compatible with the same global encoding geometry.
 

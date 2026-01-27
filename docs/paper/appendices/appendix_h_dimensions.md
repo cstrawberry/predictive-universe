@@ -332,7 +332,7 @@ $$
 
 #### H.4.3 Numerical Prediction
 
-Using $\Lambda \approx 1.1 \times 10^{-52}$ m$^{-2}$ [Planck 2018] and $c = 2.998 \times 10^8$ m/s:
+Using $\Lambda \approx 1.1 \times 10^{-52}$ m$^{-2}$ [Planck Collaboration 2020a] and $c = 2.998 \times 10^8$ m/s:
 $$
 a_0 = c^2\sqrt{\frac{\Lambda}{3}} \approx 5.44 \times 10^{-10} \text{ m/s}^2
 \tag{H.5}
