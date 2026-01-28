@@ -67,7 +67,7 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
     N \approx \frac{ \left[ Z_{\alpha/2} \sqrt{ p_0(1-p_0) } + Z_\beta \sqrt{ p'(1-p') } \right]^2 }{ (p' - p_0)^2 }
     $$
 where $Z_x$ is the critical value of the standard normal distribution. The precision of the baseline calibration for $p_0$ must be rigorously established and reported, as any uncertainty in $p_0$ will affect the required sample size and the interpretation of the results.
-*   **Independence and Error Control:** Independence of trials will be rigorously assessed using autocorrelation functions (ACF), Ljung–Box tests, and Wald–Wolfowitz runs tests on the output streams and residuals. The NIST Statistical Test Suite (SP 800-22) will be applied to verify randomness properties. If correlations are detected, appropriate methods such as pre-whitening, block-bootstrap confidence intervals, or data thinning will be employed. Multiplicity of tests across outcomes or contexts will be controlled using standard methods (e.g., Bonferroni correction for family-wise error rate or Benjamini-Hochberg procedure for false discovery rate).
+*   **Independence and Error Control:** Independence of trials will be rigorously assessed using autocorrelation functions (ACF), Ljung–Box tests, and Wald–Wolfowitz runs tests on the output streams and residuals. The NIST Statistical Test Suite [Bassham et al. 2010] will be applied to verify randomness properties. If correlations are detected, appropriate methods such as pre-whitening, block-bootstrap confidence intervals, or data thinning will be employed. Multiplicity of tests across outcomes or contexts will be controlled using standard methods (e.g., Bonferroni correction for family-wise error rate or Benjamini-Hochberg procedure for false discovery rate).
 *   **Sequential Analysis:** For high-statistics runs, a sequential analysis plan with pre-specified interim looks using O’Brien–Fleming-type boundaries (implemented via the Lan-DeMets error spending function [Lan & DeMets 1983]) is recommended. This allows for early stopping due to efficacy or futility while preserving the overall type-I error rate. The table below provides indicative total sample sizes ($N_{OBF}$) per context and expected stopping distributions under the alternative hypothesis for three equally spaced looks.
 
 | α | δ | N_fixed | N_OBF (≈ 1.06 × N_fixed) | Expected stop % at looks 1/2/3 (under H₁) |
@@ -458,7 +458,7 @@ The Golay alignment prediction connects to other PU predictions through the unif
 | Prediction | Source | Connection to $M = 24$ |
 |------------|--------|------------------------|
 | Fine-structure constant $\alpha^{-1} \approx 137.036$ | Section 13.8.1, Appendix Z | Capacity saturation at PCE-Attractor |
-| Spacetime dimensionality $D = 4$ | Appendix H, Theorem Z.11 | Kissing number $K(4) = 24$ |
+| Spacetime dimensionality $D = 4$ | Appendix Z, Theorem Z.11 (see also Appendix H, Theorem H.4) | Kissing number $K(4) = 24$ |
 | Vacuum stability | Appendix Z, Proposition Z.13a | Leech lattice rootlessness from Golay $d = 8$ |
 | Gauge group structure | Appendix W | $\dim[\mathfrak{g}_{\text{SM}}] = 12 = k$ |
 
@@ -520,7 +520,7 @@ where $u^* = 2^{1/8} - 1$ (Theorem Z.7) and $K_0 = 3$ (Theorem 15).
 
 **Current Status:**
 $$
-\alpha^{-1}_{\mathrm{exp}} = 137.035999084(21) \quad \text{(Tiesinga \textit{et al.} 2021)}
+\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(NIST 2024)}
 $$
 Discrepancy: $+0.000093 \pm 0.000050$ ($\sim 1.9\sigma$, 0.68 ppm). Consistent within theoretical uncertainty.
 
@@ -584,7 +584,7 @@ $$
 
 **Current Status (Charged Leptons):**
 
-Using PDG 2024 values (Particle Data Group 2024):
+Using Particle Data Group 2024 values (Particle Data Group 2024):
 $$
 \mathcal{R}_\ell^{\mathrm{exp}} = \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)} = \frac{\ln(3477.2)}{\ln(16.82)} = 2.889
 $$
@@ -600,7 +600,7 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Prediction | Framework Value | Experimental Value | Derivation | Status |
 |:-----------|:----------------|:-------------------|:-----------|:------:|
 | Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
-| Fine-structure constant $\alpha^{-1}$ | $137.0361 \pm 0.0001$ | $137.035999084(21)$ | Theorem Z.26 | ✓ |
+| Fine-structure constant $\alpha^{-1}$ | $137.0361 \pm 0.0001$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
 | Generation number $N_{\mathrm{gen}}$ | 3 | $2.984 \pm 0.008$ | Proposition R.3.5 | ✓ |
 | Gauge group (conditional) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ✓ |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ✓ |

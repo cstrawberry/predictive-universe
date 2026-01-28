@@ -147,7 +147,16 @@ The PU framework predicts that the entanglement entropy of the Hawking radiation
 $$\left|\mathbb{E}[S_E(t)] - S_{\text{Page}}(d_E(t), d_L(t))\right| \leq \varepsilon_t$$
 where $d_E(t)$ and $d_L(t)$ are the dimensions of the early and late-time radiation Hilbert spaces, $S_{\text{Page}}(m,n) = \sum_{k=n+1}^{mn}\frac{1}{k} - \frac{m-1}{2n}$ for $m \leq n$ is the exact average entropy for Haar-random unitaries, and the error term $\varepsilon_t$ is bounded by the deviation from true Haar-randomness.
 
-*Proof Sketch.* This result follows from standard theorems in random matrix theory and quantum information. The expectation of the entropy for a Haar-random unitary evolution was calculated by Page. Dynamics forming approximate $k$-designs for sufficiently large $k$ (expected of PCE-driven scrambling) reproduce the higher moments of the Haar measure necessary to ensure tight concentration of the entropy around the Page value, as established by decoupling theorems and concentration inequalities.
+*Proof.* Under (A1), the unitary evolution on ${\cal H}_{\rm BH}\otimes{\cal H}_{\rm rad}$ forms an $\varepsilon_k$-approximate unitary $k$-design with $k\ge 2$. Page's theorem gives the Haar-averaged radiation entropy for a random pure state on ${\cal H}_{\rm BH}\otimes{\cal H}_{\rm rad}$ as
+$$
+S_{\rm Page}(t)=\sum_{j=d_L(t)+1}^{d_E(t)d_L(t)}\frac{1}{j}-\frac{d_E(t)-1}{2d_L(t)},
+\qquad (d_E(t)\le d_L(t)),
+$$
+and the symmetric expression for $d_E(t)>d_L(t)$ [Page 1993]. For an $\varepsilon_k$-approximate $k$-design with $k\ge 2$, the second moments of the reduced state match Haar up to $O(\varepsilon_k)$ [Brandão, Harrow & Horodecki 2016], implying that the expected purity ${\mathbb E}\,{\rm tr}(\rho_E^2)$ differs from the Haar value by $O(\varepsilon_k)$. Using $S(\rho_E)\ge -\ln{\rm tr}(\rho_E^2)$ and the standard continuity bound for entropy in terms of the Schatten-2 deviation from maximally mixed (via $\|X\|_1\le \sqrt{d_E}\|X\|_2$ and Audenaert's inequality), one obtains
+$$
+{\mathbb E}\,S_E(t)=S_{\rm Page}(t)+O(\varepsilon_k)+O\!\left(\frac{1}{\min\{d_E(t),d_L(t)\}}\right),
+$$
+which reproduces the Page-curve behavior: growth until $d_E(t)\sim d_L(t)$ and subsequent decrease. $\square$
 
 **Current Status:** The conceptual framework for black hole information conservation is established, with key components (SPAP dynamics, thermodynamic bounds, perspectival encoding, Page curve consistency) rigorously derived. However, detailed calculations of information extraction rates, explicit construction of the Perspectival Information Channel capacity as a function of observer resources, and precise comparison with holographic entropy calculations (Ryu-Takayanagi formula, quantum extremal surfaces) remain to be completed. This represents a promising avenue for future theoretical development, building on the solid foundation of reflexive computational costs and thermodynamic channel limits established in the framework.
 
@@ -621,7 +630,7 @@ $$\eta_B = (6.2 \pm 0.5) \times 10^{-10}$$
 $$\kappa_B = \frac{\kappa_{\text{EW}}}{2} + \frac{\varepsilon}{N_g} = 19.25 + 0.23 = 19.48$$
 where $\kappa_{\text{EW}} = 38.5$ is the electroweak complexity (Theorem T.5), $\varepsilon = \ln 2$ is the Landauer cost (Theorem 31), and $N_g = 3$ is the generation number (Proposition R.4.2).
 
-The CP asymmetry factor saturates: $\mathcal{F}_{\text{CP}} = \tanh(\mathcal{S} \sin\delta) \to 1$ for $\mathcal{S} \sin\delta \approx 4.4 \gg 1$. The resulting prediction $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ agrees with the Planck observation $\eta_B^{\text{obs}} = (6.12 \pm 0.04) \times 10^{-10}$ (Planck Collaboration 2020) within the theoretical uncertainty. ∎
+The CP asymmetry factor saturates: $\mathcal{F}_{\text{CP}} = \tanh(\mathcal{S} \sin\delta) \to 1$ for $\mathcal{S} \sin\delta \approx 4.4 \gg 1$. The resulting prediction $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ agrees with the Planck observation $\eta_B^{\text{obs}} = (6.12 \pm 0.04) \times 10^{-10}$ [Planck Collaboration 2020a] within the theoretical uncertainty. ∎
 
 ### K.6.13 Experimental Predictions
 
@@ -815,8 +824,9 @@ $$\kappa = \frac{N_{\mathbb{R}} - m}{2} = \frac{288 - 5}{2} = 141.5$$
 - **24-cell polytope:** The 24 vertices form a tight spherical 5-design on $S^3$ (Theorem U.7), establishing mode-vertex correspondence (Theorem U.7b)
 
 **Numerical Prediction:**
-$$\Lambda L_P^2 = 8\pi A_{eff} e^{-2 \times 141.5} = 8\pi A_{eff} e^{-283}$$
-For $A_{eff} \sim O(1)$, this yields $\Lambda L_P^2 \sim 10^{-122}$ **(Corollary U.17)**, in remarkable agreement with the observed value $\Lambda L_P^2 \approx 2.87 \times 10^{-122}$.
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2 \times 141.5} = 8\pi A_{\text{eff}} e^{-283}$$
+
+For $A_{\text{eff}} = 1$, this yields $\Lambda L_P^2 = 3.13 \times 10^{-122}$. The observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849) \times 10^{-122}$ implies $A_{\text{eff}} = 0.917 \pm 0.016$ **(Corollary U.15b, U.17)**, consistent with the $O(1)$ expectation from one-loop determinants.
 
 **Key Insight:** The cosmological constant hierarchy is explained by the same Golay code structure that determines the electroweak scale (Appendix T). Both hierarchies reflect discrete information-theoretic complexity:
 - Electroweak: $v/M_{Pl} = e^{-38.5} \sim 10^{-17}$ (38.5 real dimensions)

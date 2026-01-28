@@ -1232,7 +1232,7 @@ This section evaluates the framework's predictions against experimental data fro
 
 **Charged Lepton Sector:**
 
-Charged leptons are free from color confinement and provide a clean test. Using PDG 2024 values:
+Charged leptons are free from color confinement and provide a clean test. Using Particle Data Group 2024 values:
 - $m_e = 0.51099895$ MeV
 - $m_\mu = 105.6583745$ MeV  
 - $m_\tau = 1776.86$ MeV

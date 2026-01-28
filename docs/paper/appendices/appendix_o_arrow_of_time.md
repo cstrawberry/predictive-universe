@@ -150,13 +150,13 @@ The quadratic form $A(x)$ defines a positive-definite Riemannian metric on the s
 
 ### O.7.2 Time Direction and Lorentzian Signature
 
-The PU framework's dynamics are fundamentally time-directed and irreversible. The Fundamental Predictive Loop (`Predict→Verify→Update`) imposes a logical arrow, which is physically enforced by the thermodynamic irreversibility of the 'Evolve' process ($\varepsilon \ge \ln 2$, **Theorem 31, Appendix J**). This intrinsic asymmetry must be reflected in the continuum limit.
+The PU framework's dynamics are fundamentally time-directed: Theorem 31 supplies a **time orientation** (a preferred future direction) because ND–RID produces strictly positive entropy on typical trajectories. Independently, locality of the update (Definition 27) together with Proposition F.1 implies a **finite propagation speed**, i.e., an emergent causal cone in the continuum scaling.
 
-When we extend the $\Gamma$-convergence to spacetime, the discrete functional includes terms for temporal differences, e.g., `Ψ_t((\phi(t+Δt) - \phi(t))/Δt)`. Due to the irreversible nature of the 'Evolve' step that mediates updates between time slices, the effective cost function `Ψ_t` is fundamentally different from the spatial `Ψ`. The dissipation inherent in the temporal update process introduces a relative negative sign in the kinetic term upon taking the continuum limit. The full $\Gamma$-limit in $D+1$ dimensions yields an action of the form:
+A smooth cone structure with one distinguished "timelike" direction determines (up to an overall positive conformal factor) a Lorentzian principal symbol for any second‑order local continuum limit: in local coordinates one may choose units so that the maximal signal speed is $c$ and write the characteristic form as
 $$
-\boxed{\,S[u]=\int d^{D+1}x\,\sqrt{|g|}\;\Big[\,g^{00}(x)\,(\partial_t u)^2\;+\;g^{ij}(x)\,\nabla_i u\,\nabla_j u\;-\;\mathcal V(u)\,\Big]\, },
+g^{\mu\nu}\,\xi_\mu\xi_\nu=-\frac{\xi_0^2}{c^2}+\xi^\top A(x)\,\xi,
 $$
-where the coefficient of the time-derivative term, $g^{00}$, is negative, while the spatial coefficients $g^{ij}$ form a positive-definite matrix. This demonstrates that the emergent metric $g_{\mu\nu}$ necessarily has a **Lorentzian** signature $(-,+,\dots,+)$. The signature is not a postulate but a direct mathematical consequence of instantiating a logically directed, thermodynamically irreversible predictive process in the continuum.
+with $A(x)$ the positive spatial quadratic form from O.7.1. This has signature $(-,+,+,+)$ and therefore $g^{00}<0$ in the $(−,+,+,+)$ convention. Irreversibility fixes the **orientation** of the cone (future vs past), while the **signature** is fixed by the existence of a non-degenerate causal cone/hyperbolic limit rather than by a sign choice.
 
 
 ## O.8 Conclusion

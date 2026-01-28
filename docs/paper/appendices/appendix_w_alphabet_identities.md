@@ -409,7 +409,29 @@ Increasing spectral variance decreases $r_e$ and enlarges the upper bound (W.5.1
 **Theorem W.18 (SLD existence and QFI quadratic form).**
 Let $\{E_g\}_{g\in\mathbb{R}}$ be a $C^1$ family of CPTP maps on a finite‑dimensional Hilbert space, and let $\rho_0$ be full‑rank and stationary at $g=0$ $(E_0(\rho_0)=\rho_0)$. Then the Symmetric Logarithmic Derivative (SLD) exists at $g=0$, the quantum Fisher information (QFI) is finite, and the SLD‑based QFI defines a positive semidefinite quadratic form on the tangent space at $\rho_0$. In finite dimension, this quadratic form admits a Riesz representation (equivalently, an operator/superoperator representation) with respect to $\rho_0$.
 
-*Sketch.* Standard quantum estimation theory (Helstrom–Holevo–Petz) ensures SLD existence for $C^1$ differentiable state families with full‑rank base state, implying a well‑defined QFI quadratic form representable via SLD at $\rho_0$. $\square$
+*Proof.* Because $\rho_0$ is full rank, the linear map
+$$
+\mathcal{J}_{\rho_0}:\;X\mapsto \tfrac12\,(\rho_0 X+X\rho_0)
+$$
+on Hermitian operators is positive definite and therefore invertible. Define
+$$
+L:=\mathcal{J}_{\rho_0}^{-1}\!\left(\left.\partial_g\rho_g\right|_{g=0}\right).
+$$
+Then by construction $L$ is Hermitian and satisfies the Sylvester equation
+$$
+\left.\partial_g\rho_g\right|_{g=0}=\tfrac12\,(L\rho_0+\rho_0 L),
+$$
+so the SLD exists and is unique.
+
+Equivalently, in an eigenbasis $\rho_0=\sum_i p_i |i\rangle\langle i|$ with $p_i>0$ and writing $\dot\rho:=\left.\partial_g\rho_g\right|_{0}$, the unique solution is
+$$
+\langle i|L|j\rangle=\frac{2\,\langle i|\dot\rho|j\rangle}{p_i+p_j},
+$$
+since $p_i+p_j>0$ for all $i,j$. Finally, the quantum Fisher information is
+$$
+F_Q(\rho_g)=\mathrm{Tr}(\rho_0 L^2)\ge 0,
+$$
+and is finite in finite dimension. $\square$
 
 ---
 

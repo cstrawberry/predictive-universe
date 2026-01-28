@@ -25,7 +25,7 @@ $$
 $$
 where $I$ is the quantum mutual information gain, $D_{KL}$ is the quantum relative entropy representing feedback cost, $\varepsilon \ge \ln 2$ is the fundamental minimum dimensionless entropy production from the SPAP update cycle logic (Theorem 31, derived in Appendix J, Theorem J.1), and $\Theta(I)$ is the Heaviside step function.
 
-*Proof:* This theorem synthesizes standard second‑law‑with‑information inequalities for measurement and feedback (e.g., Sagawa & Ueda, Phys. Rev. Lett. 104, 090602 (2010); Parrondo, Horowitz & Sagawa, Nat. Phys. 11, 131 (2015)) with the PU framework’s SPAP‑based irreducible cost $\varepsilon$ (Theorem 31, Appendix J). The contributions $I(\rho;\mathcal{E}_N,o)$ and $D_{KL}[\rho'_o\|\mathcal{E}_N(\rho)]$ capture information acquisition and feedback costs, respectively. The $\varepsilon\ge \ln 2$ term applies only on those cycles that execute self‑referential SPAP processing with nonzero information gain ($I>0$), as enforced by the factor $\Theta(I)$. Thus
+*Proof:* This theorem synthesizes standard second‑law‑with‑information inequalities for measurement and feedback [Sagawa & Ueda 2010]; Parrondo, Horowitz & Sagawa, Nat. Phys. 11, 131 (2015) with the PU framework’s SPAP‑based irreducible cost $\varepsilon$ (Theorem 31, Appendix J). The contributions $I(\rho;\mathcal{E}_N,o)$ and $D_{KL}[\rho'_o\|\mathcal{E}_N(\rho)]$ capture information acquisition and feedback costs, respectively. The $\varepsilon\ge \ln 2$ term applies only on those cycles that execute self‑referential SPAP processing with nonzero information gain ($I>0$), as enforced by the factor $\Theta(I)$. Thus
 $$
 \Delta S_{tot}/k_B \;\ge\; I + D_{KL} + \varepsilon\,\Theta(I),
 $$
@@ -185,46 +185,79 @@ where $\sigma_{eff_link}$ is the effective surface density of independent inform
 2.  **Reduction due to Correlations:** If the MPUs or their interaction channels are correlated, not all geometric links represent independent information channels. The factor $\chi$ accounts for this effective reduction in degrees of freedom. For example, if blocks of $1/\chi$ geometric links are strongly correlated such that they effectively act as a single information channel, then the density of *independent* channels is reduced by $\chi$.
 3.  **Linear Scaling:** Combining these, the density of effective independent channels is $\sigma_{eff_link} = \chi \sigma_{geom_link} = \chi / (\eta \delta^2)$. Since geometric regularity implies this density is uniform on average over macroscopic scales, integrating over the area $\mathcal{A}$ gives $N_{eff_links} = \sigma_{eff_link} \cdot \mathcal{A}$ as the leading term for large $\mathcal{A}$. Higher-order corrections $o(\mathcal{A})$ (e.g., boundary effects proportional to perimeter) become negligible for $\mathcal{A} \gg \delta^2$. QED
 
-**E.6 Area Law from Entanglement Structure**
+## E.6 Area Law from Entanglement and Boundary Channel Structure
 
 The horizon entropy-area relationship is derived here from fundamental principles of quantum information and many-body physics, independent of gravitational field equations. This establishes the area law as a consequence of the MPU network's quantum structure.
 
 ### E.6.1 Prerequisites: ND-RID Satisfies Quantum Many-Body Assumptions
 
-**Lemma E.6.1 (ND-RID Locality and Clustering).**
+**Lemma E.6.1 (Quasi-locality and Mixing Prerequisites in the MPU Network).**
 The MPU network dynamics governed by ND-RID (Definition 27) satisfy the core assumptions required for quantum many-body area laws:
 
 1. **Locality:** Interactions have finite range in the network metric $d_{\mathcal{N}}$ (Definition 35).
 
 2. **Finite Lieb-Robinson Velocity:** Information propagation is bounded by $v_{LR} < \infty$ (established in Appendix F, Proposition F.1 from ND-RID channel contractivity $f_{RID} < 1$).
 
-3. **Spectral Gap:** The average ND-RID channel $\mathcal{E}_N$ is strictly contractive (Lemma E.1), implying the existence of a spectral gap $\Delta_{gap} > 0$ in the effective MPU network Hamiltonian.
-
-4. **Clustering:** Correlations decay exponentially with distance: $|\langle O_A O_B \rangle - \langle O_A \rangle \langle O_B \rangle| \le C e^{-d_{\mathcal{N}}(A,B)/\xi}$ for some correlation length $\xi < \infty$.
-
-*Proof Sketch.* 
-
-**Locality:** By construction, ND-RID acts on individual MPUs or nearest-neighbor pairs in the network (Definition 27). The interaction range is finite by network construction.
-
-**Finite $v_{LR}$:** Appendix F (Proposition F.1) proves that the strictly contractive channel ($f_{RID} < 1$, Lemma E.1) bounds information velocity. The Lieb-Robinson velocity satisfies:
-
+3. **Mixing Gap:** The average ND-RID channel $\mathcal{E}_N$ is strictly contractive (Lemma E.1). Equivalently, on the traceless subspace it has spectral radius strictly less than $1$, which defines a positive mixing gap
 $$
-v_{LR} \le \frac{r_0}{\tau}\ln\!\Big[c_0\,z_{max}\,K^{2D}\Big] < \infty
+\Delta_{gap}:=-\frac{1}{\tau}\ln f_{RID}>0,
 $$
+where $\tau$ is the MPU cycle time (Theorem 29).
 
-where $r_0$ is the interaction radius, $\tau$ is the MPU cycle time (Theorem 29), $z_{max}$ is the maximum network degree, and $D$ is the circuit depth. Since $f_{RID} < 1$ strictly (from $\varepsilon > 0$), this is finite.
-
-**Spectral Gap:** Contractivity of $\mathcal{E}_N$ with factor $f_{RID} < 1$ (Lemma E.1) implies the spectral radius of $\mathcal{E}_N$ restricted to traceless operators is strictly less than unity. For a quantum channel $\mathcal{E}_N$, the generator $\mathcal{L}_N$ defined by $\mathcal{E}_N = e^{\tau \mathcal{L}_N}$ (where $\tau$ is the MPU cycle time) has spectral properties directly related to the channel contractivity. Specifically, the contractivity factor $f_{RID} = \lambda_{gap}(\mathcal{E}_N)$ (Definition from Lemma E.1) translates to a gap in the generator spectrum:
+4. **Clustering:** Correlations in the stationary state decay exponentially with distance: for local observables $O_A,O_B$ supported on disjoint regions $A,B$,
 $$
-\Delta_{gap} = -\frac{1}{\tau}\ln f_{RID} > 0
+\big|\langle O_A O_B\rangle-\langle O_A\rangle\langle O_B\rangle\big|\le C\,e^{-d_{\mathcal{N}}(A,B)/\xi}
 $$
-This provides a positive lower bound on the energy gap of the effective Hamiltonian governing MPU dynamics.
+for some finite $\xi$.
 
-**Clustering:** Standard result: Finite $v_{LR}$ + spectral gap implies exponential clustering of correlations [Hastings & Koma, Commun. Math. Phys. 265, 781 (2006)]. QED
+*Proof.* 
+
+**Locality:** By construction, ND-RID is a composition of local update maps acting on individual MPUs or bounded-radius neighborhoods in the network (Definition 27). Hence there is a finite interaction radius $r_0<\infty$.
+
+**Finite $v_{LR}$ (Lieb–Robinson):** For the local ND-RID generator, Appendix F (Proposition F.1) provides constants $C_{LR},\mu>0$ and a finite velocity $v_{LR}<\infty$ such that for observables $A_X,B_Y$ supported on disjoint regions $X,Y$,
+$$
+\|[A_X(t),B_Y]\|\le C_{LR}\,\|A_X\|\,\|B_Y\|\,e^{-\mu\,(d_{\mathcal{N}}(X,Y)-v_{LR}t)}.
+$$
+Only locality and bounded local generator norm enter this bound; strict contractivity is not required for the existence of $v_{LR}$ [Poulin 2010; Barthel & Kliesch 2012].
+
+**Mixing Gap:** Let $\rho_*$ be a stationary state of $\mathcal{E}_N$ and let $A$ be any observable with $\mathrm{Tr}(\rho_*A)=0$. By strict contractivity (Lemma E.1),
+$$
+\|\mathcal{E}_N^{*n}(A)\|\le f_{RID}^n\,\|A\|\qquad(n\in\mathbb{N}),
+$$
+where $\mathcal{E}_N^*$ is the Heisenberg-picture channel. Writing $t=n\tau$ and $\mathcal{E}_N=e^{\tau\mathcal{L}_N}$ defines $\Delta_{gap}:=-(1/\tau)\ln f_{RID}>0$ and yields the exponential decay estimate
+$$
+\|\mathcal{E}_N^{*n}(A)\|\le e^{-\Delta_{gap}t}\,\|A\|.
+$$
+This provides a positive lower bound on the mixing gap of the ND-RID transfer operator (equivalently, of the logarithmic generator on the traceless subspace).
+
+**Clustering:** Let $O_A,O_B$ be supported on disjoint $A,B$ and set $\tilde O_A:=O_A-\langle O_A\rangle\mathbb{I}$ so that $\mathrm{Tr}(\rho_*\tilde O_A)=0$. Stationarity implies
+$$
+\langle \tilde O_A O_B\rangle=\mathrm{Tr}\!\big(\rho_*\,\mathcal{E}_N^{*n}(\tilde O_A)\,O_B\big)
+$$
+for any $n$. Decompose $\mathcal{E}_N^{*n}(\tilde O_A)=\tilde O_A^{(n)}+\Delta^{(n)}$ where $\tilde O_A^{(n)}$ is supported on the $v_{LR}t$-neighborhood of $A$ (with $t=n\tau$) and $\Delta^{(n)}$ is the remainder. The Lieb–Robinson bound gives
+$$
+\|\Delta^{(n)}\|\le C' \|\tilde O_A\|\,e^{-\mu\,(d_{\mathcal{N}}(A,B)-v_{LR}t)}
+$$
+for a constant $C'$ depending only on $A$ and the locality data. On the other hand, the mixing estimate gives
+$$
+\|\mathcal{E}_N^{*n}(\tilde O_A)\|\le e^{-\Delta_{gap}t}\,\|\tilde O_A\|.
+$$
+Therefore
+$$
+|\langle \tilde O_A O_B\rangle|
+\le \|\rho_*\|_1\,\|\mathcal{E}_N^{*n}(\tilde O_A)\|\,\|O_B\|
+\le \|\tilde O_A\|\,\|O_B\|\,e^{-\Delta_{gap}t}
++ C''\|\tilde O_A\|\,\|O_B\|\,e^{-\mu\,(d_{\mathcal{N}}(A,B)-v_{LR}t)}
+$$
+for a constant $C''$. Choose $t=d_{\mathcal{N}}(A,B)/(2v_{LR})$ (rounded to an integer multiple of $\tau$), which yields an exponential bound in $d_{\mathcal{N}}(A,B)$ of the stated form with a finite correlation length
+$$
+\xi=\max\!\left(\frac{2v_{LR}}{\Delta_{gap}},\frac{2}{\mu}\right).
+$$
+This proves exponential clustering. $\square$
 
 ### E.6.2 Theorem E.4' (Entanglement Entropy Area Scaling)
 
-**Theorem E.4' (Entanglement Entropy Area Scaling).**
+**Theorem E.4' (Entanglement/Boundary Entropy Area Scaling).**
 Consider a spatial region $A$ with smooth boundary $\partial A$ in the emergent geometric structure (conditional on Theorem 43). Let $\rho_A = \text{Tr}_{\bar{A}}[\rho_{total}]$ be the reduced density matrix for region $A$, where $\rho_{total}$ is the global MPU network ground state. The entanglement entropy satisfies:
 
 $$
@@ -274,7 +307,7 @@ where $\eta_{ent} = C_{MPU}$ at equilibrium. The $\mathcal{O}(1)$ term represent
 
 The area law coefficient $\eta_{ent}$ is not arbitrary but fixed by requiring consistency between the quantum entanglement structure and local thermodynamics on causal horizons.
 
-**Theorem E.5 (Bekenstein-Hawking Coefficient from Local Clausius Consistency).**
+**Theorem E.5 (Local Thermodynamic Consistency Relates $\eta_{\rm ent}$ to $G_{\rm eff}$).**
 To satisfy local thermodynamic consistency—specifically, that the Clausius relation $\delta S = \delta Q / T$ holds for all local Rindler horizons in the emergent spacetime—the entanglement entropy density must equal the Bekenstein-Hawking value:
 
 $$
@@ -302,7 +335,7 @@ $$
 
 This result follows from quantum field theory in curved spacetime (QFTCS) and depends only on the geometric structure (the existence of a horizon with surface gravity $\kappa$), not on the Einstein field equations. This is kinematic, not dynamic.
 
-**Step 2 (Entanglement First Law - Kinematic Result):** For a small perturbation $\delta\rho$ to the vacuum state across a causal horizon $\mathcal{H}$, the first law of entanglement entropy [Jacobson, Phys. Rev. Lett. 116, 201101 (2016); Casini, Huerta & Myers, J. High Energy Phys. 05, 036 (2011)] relates entropy change to expectation value change:
+**Step 2 (Entanglement First Law - Kinematic Result):** For a small perturbation $\delta\rho$ to the vacuum state across a causal horizon $\mathcal{H}$, the first law of entanglement entropy [Jacobson 2016; Casini, Huerta & Myers 2011] relates entropy change to expectation value change:
 
 
 $$
@@ -346,7 +379,7 @@ $$
 \eta_{ent} = \frac{k_B c^3}{4\hbar\,G}
 $$
 
-The derivation (following [Jacobson, Phys. Rev. Lett. 75, 1260 (1995)], Section 12 of main text, Theorem 12.1) proceeds by:
+The derivation (following [Jacobson 1995], Section 12 of main text, Theorem 12.1) proceeds by:
 1. Applying the Clausius relation to an infinitesimal Rindler horizon
 2. Using the Raychaudhuri equation (kinematic, relates area change to stress-energy)
 3. Requiring consistency for arbitrary $\delta Q$ and $\kappa$
@@ -395,7 +428,7 @@ This relationship connects the microscopic MPU parameters ($\delta, \chi, \eta, 
 
 We synthesize the limit on entropy per channel (Corollary E.2) with the geometric scaling of the number of *effective independent* channels (Theorem E.3) to derive the Area Law (Theorem 49).
 
-**Theorem E.6 (Area Law for Horizon Entropy, cf. Thm 49).**
+**Theorem E.6 (Thermodynamic Boundary Area Law and Emergent $G_{\rm eff}$).**
 Conditional on emergent geometric regularity (Theorem 43) and the resulting linear scaling of effective boundary channels with area (Theorem E.3), the maximum thermodynamic entropy $S_{max}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal{H}$ with area $\mathcal{A}$ scales linearly with the area. The entanglement-based derivation (Theorem E.4') establishes that $S_{ent} = \eta_{ent} \mathcal{A}$ with $\eta_{ent} = 1/(4G)$. The channel-based approach shows this maximum entropy corresponds to saturating the capacity of the effective independent channels:
 $$
 S_{max}(\mathcal{A}) = N_{eff_links} \cdot S_{channel}^{max} = (\sigma_{eff_link} \mathcal{A}) \cdot (k_B C_{max}(f_{RID}))
@@ -1628,7 +1661,7 @@ where $\varepsilon_{\text{link}} \geq \ln 2$ is the per-link entropy cost (Theor
 
 **Lemma E.10.1 (Linear Scaling of Link Count).** In the geometrically regular network (Theorem 43), extending correlations by distance $\delta r$ requires:
 
-$$n_{\text{links}}(r, \delta r) = \frac{\delta r}{\delta} + O(1)$$
+$$n_{\text{links}}(r,\delta r)=\left\lceil\frac{\delta r}{\delta}\right\rceil$$
 
 where $\delta$ is the MPU spacing.
 

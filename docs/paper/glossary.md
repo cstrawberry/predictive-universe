@@ -188,7 +188,7 @@
 
 *   **Regularity:** (Definition C.3) Geometric Regularity of the MPU network, encompassing uniform volume growth and bounded curvature. Necessary condition for viability (Theorem 43).
 
-*   **$R_I(C)$:** (Definition 3b, Equation 5) Reflexive-Information Cost function. *Informational* overhead rate associated with self-referential verification/processing. $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$ for $C > K_0$.
+*   **$R_I(C)$:** (Definition 3, Equation 5) Reflexive-Information Cost function. *Informational* overhead rate associated with self-referential verification/processing. $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$ for $C > K_0$.
 
 *   **$|\psi(t)\rangle$:** (Definition 24) State amplitude component of the Perspectival State, represented by the Hilbert space vector $|\psi(t)\rangle \in \mathcal{H}_0$.
 

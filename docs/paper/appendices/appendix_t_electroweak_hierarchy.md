@@ -1353,7 +1353,7 @@ $$
 S_{\mathrm{quad}}(\xi) = \frac{1}{2} \|\xi\|^2,
 $$
 
-so that the Gaussian density is $p(\xi) \propto \exp(-S_{\mathrm{quad}})$.
+so that the Gaussian density is $p(\xi) \propto \exp\!\left(-\frac{S_{\mathrm{quad}}(\xi)}{\sigma_B^2}\right)=\exp\!\left(-\frac{\|\xi\|^2}{2\sigma_B^2}\right)$ for some isotropic scale $\sigma_B^2$ fixed by capacity saturation (Lemma T.41.2).
 
 *Proof.* By the QFI calculation of Section T.21.2.2, $F_Q(\rho_0; G) = 1$ for each interface generator, and $g_B = F_Q/4 = (1/4) I_{24}$. The Predictive Ward identity identifies $\Gamma^{(2)} = g_B$. The Bures-orthonormal frame rescales the tangent basis by a factor $2$, delivering $\Gamma^{(2)} = I_{24}$ and $S_{\mathrm{quad}} = (1/2) \xi^T \xi$. ∎
 
@@ -1364,7 +1364,15 @@ $$
 \langle r_B^2 \rangle = \mathrm{tr}(\mathrm{Cov}\,\xi) = 24\,\sigma_B^2 = 1 \quad\Longrightarrow\quad \sigma_B^2 = \frac{1}{24}.
 $$
 
-*Proof sketch.* Capacity saturation at the attractor imposes the single-unit normalization $\kappa_{\mathrm{bulk}} = 1$, i.e., the quadratic action is normalized so that the one-sigma shell ($\langle r_B^2 \rangle = 1$) carries the unit of dimensionless Fisher content admitted by the Predictive Ward identity. Isotropy forces equal per-direction variance, so $\langle r_B^2 \rangle = \sum_i \langle \xi_i^2 \rangle = 24\,\sigma_B^2 = 1$, hence $\sigma_B^2 = 1/24$. ∎
+*Proof.* By Theorem T.41.1, the Predictive Ward identity fixes the quadratic kernel on the interface to be the Bures metric and hence, in Bures-orthonormal coordinates, the unique invariant quadratic is the squared Bures radius $r_B^2=\|\xi\|^2$. Capacity saturation at the PCE-attractor (Appendix Z, Theorems Z.6–Z.10) together with the bulk normalization $\kappa_{\mathrm{bulk}}=1$ (Theorem Z.14) removes any remaining overall scale: in these canonical Bures/Fisher units the total admissible mean-squared radius is fixed to the unit budget,
+$$
+\langle r_B^2\rangle=1.
+$$
+Isotropy forces the covariance to be proportional to the identity, $\mathrm{Cov}(\xi)=\sigma_B^2 I_{24}$. Therefore
+$$
+\langle r_B^2\rangle=\langle \xi^T\xi\rangle=\mathrm{tr}(\mathrm{Cov}\,\xi)=24\,\sigma_B^2,
+$$
+and setting $\langle r_B^2\rangle=1$ gives $\sigma_B^2=1/24$. ∎
 
 **Corollary T.41.3** (Universal hierarchy coefficient at UV).
 With $\sigma_B^2 = 1/24$ and $\alpha = 1/(16\,\sigma_B^2)$,
@@ -1373,7 +1381,7 @@ $$
 \alpha_{\mathrm{UV}} = \frac{24}{16} = \frac{3}{2}.
 $$
 
-This closes the width derivation without appeal to additional assumptions: the Predictive Ward identity fixes the quadratic kernel, isotropy fixes the covariance structure, and capacity saturation fixes the overall normalization of the mean-squared Bures radius.
+*Proof.* Substituting $\sigma_B^2=1/24$ (Lemma T.41.2) into $\alpha=1/(16\,\sigma_B^2)$ yields $\alpha_{\mathrm{UV}}=24/16=3/2$. ∎
 
 ---
 
@@ -1513,7 +1521,7 @@ $$
 | $\ln(m_\mu/m_e)$ | $5.672$ | $\pm 0.12$ | $5.332$ | $+2.8\sigma$ |
 | $\ln(m_\tau/m_e)$ | $8.508$ | $\pm 0.18$ | $8.154$ | $+2.0\sigma$ |
 
-*Note on uncertainties: The theoretical uncertainties $(\pm 0.06, \pm 0.12, \pm 0.18)$ are estimated as $\sim 2\%$ of each prediction, reflecting the combined uncertainty from sinc truncation ($\sim 0.5\%$), higher-order curvature terms ($\sim 1\%$), and RG running effects ($\sim 0.5\%$). Experimental mass uncertainties from PDG 2024 contribute $< 0.01\%$ and are negligible.*
+*Note on uncertainties: The theoretical uncertainties $(\pm 0.06, \pm 0.12, \pm 0.18)$ are estimated as $\sim 2\%$ of each prediction, reflecting the combined uncertainty from sinc truncation ($\sim 0.5\%$), higher-order curvature terms ($\sim 1\%$), and RG running effects ($\sim 0.5\%$). Experimental mass uncertainties from Particle Data Group 2024 contribute $< 0.01\%$ and are negligible.*
 
 The $\tau/\mu$ splitting is reproduced at sub-percent level. The systematic deviations for $\mu/e$ and $\tau/e$ are resolved by the $\mathcal{O}(d^4)$ curvature correction derived in Section T.21.8.
 
@@ -1839,7 +1847,7 @@ $$
 \end{aligned}
 $$
 
-**Comparison with PDG 2024 values** $(m_\tau, m_\mu, m_e) = (1776.86, 105.66, 0.5110)$ MeV:
+**Comparison with Particle Data Group 2024 values** $(m_\tau, m_\mu, m_e) = (1776.86, 105.66, 0.5110)$ MeV:
 
 | Quantity | Prediction | Observation | Deviation |
 |:--------:|:----------:|:-----------:|:---------:|
@@ -2851,7 +2859,7 @@ where off-diagonal elements in the second and third rows follow from unitarity c
 
 ### T.22.8.2 Summary of Predictions
 
-| Element | Formula | Theory | Experiment (PDG 2024) | Deviation |
+| Element | Formula | Theory | Experiment (Particle Data Group 2024) | Deviation |
 |:--------|:--------|:------:|:---------------------:|:---------:|
 | \|V_cb\| | √(2/3)·e⁻³ | 0.0407 | 0.0405 ± 0.0010 | +0.2σ |
 | \|V_ub\| | Sector interference | 0.00392 | 0.00382 ± 0.00024 | +0.4σ |
@@ -3222,7 +3230,7 @@ where $b_3 = (11N_c - 2N_f)/3$ is the one-loop beta function coefficient. Using 
 
 $$\Lambda_{\text{QCD}}^{\overline{\text{MS}}} \approx 200\text{--}220 \text{ MeV}$$
 
-consistent with the world average $\Lambda_{\text{QCD}}^{(5)} = 210 \pm 14$ MeV (PDG 2024). The suppression $e^{-9} \approx 1.2 \times 10^{-4}$ places the unification scale approximately four orders of magnitude below the Planck scale, with QCD running providing the remaining hierarchy to the confinement scale.
+consistent with the world average $\Lambda_{\text{QCD}}^{(5)} = 210 \pm 14$ MeV (Particle Data Group 2024). The suppression $e^{-9} \approx 1.2 \times 10^{-4}$ places the unification scale approximately four orders of magnitude below the Planck scale, with QCD running providing the remaining hierarchy to the confinement scale.
 
 **Mechanism B: E$_8$ Geodesic Distances**
 
@@ -4083,7 +4091,7 @@ $$\delta\theta_{23} = \frac{1}{4} \times \Delta\theta_{12} \times s_{13}^{\text{
 **Step 6** (Final Result).
 $$\theta_{23} = 45° + 2.36° = 47.36° \approx 47.4°$$ 
 
-**Experimental Comparison** (PDG 2024, Normal Ordering):
+**Experimental Comparison** (Particle Data Group 2024, Normal Ordering):
 
 | Quantity | Theory | Experiment | Pull |
 |:---------|:-------|:-----------|:-----|
@@ -4160,7 +4168,7 @@ $$f_{\text{sinc-renorm}} = \frac{1}{f_{\text{sinc}}^2} = \frac{1}{0.9454^2} = 1.
 $$\sin\theta_{12} = 0.480 \times 0.9989 \times 1.035 \times 1.119 = 0.555$$
 $$\theta_{12} = \arcsin(0.555) = 33.7°$$ 
 
-**Experimental Comparison** (PDG 2024):
+**Experimental Comparison** (Particle Data Group 2024):
 
 | Quantity | Theory | Experiment | Pull |
 |:---------|:-------|:-----------|:-----|
@@ -4209,7 +4217,7 @@ $$f_{\text{capacity}} = \frac{f_{\text{sinc}} \cdot c_{13}}{\sqrt{N_g}}$$
 $$\sin\theta_{13} = A \cdot \cos\theta_{13} \quad \Rightarrow \quad \sin\theta_{13} = \frac{A}{\sqrt{1 + A^2}} = 0.150$$
 $$\theta_{13} = \arcsin(0.150) = 8.65° \approx 8.7°$$
 
-**Experimental Comparison** (PDG 2024):
+**Experimental Comparison** (Particle Data Group 2024):
 
 | Quantity | Theory | Experiment | Pull |
 |:---------|:-------|:-----------|:-----|
@@ -4254,7 +4262,7 @@ $$\Delta\gamma = 1 \times (\Omega_{\text{hex}} + \Omega_{\text{tilt}}) = 60° + 
 **Step 5** (Final Result).
 $$\delta_{CP} = \delta_{\text{base}} + \Delta\gamma = 157.5° + 75° = 232.5°$$ 
 
-**Experimental Comparison** (PDG 2024, T2K/NOvA combined):
+**Experimental Comparison** (Particle Data Group 2024, T2K/NOvA combined):
 
 | Quantity | Theory | Experiment | Pull |
 |:---------|:-------|:-----------|:-----|
@@ -4286,7 +4294,7 @@ $$c_{12}s_{12}c_{23}s_{23}c^2_{13}s_{13} = 0.832 \times 0.555 \times 0.677 \time
 **Jarlskog Invariant:**
 $$\boxed{J_{CP} = 0.0342 \times (-0.793) = -0.027}$$ 
 
-**Experimental Comparison** (PDG 2024):
+**Experimental Comparison** (Particle Data Group 2024):
 
 | Quantity | Theory | Experiment | Pull |
 |:---------|:-------|:-----------|:-----|
@@ -4357,7 +4365,7 @@ The predicted $m_{\beta\beta} = 3.3$ meV lies below the design sensitivity of ne
 
 **Table T.24.4** 
 
-| Parameter | Theory | Experiment (PDG 2024) | Pull | Status |
+| Parameter | Theory | Experiment (Particle Data Group 2024) | Pull | Status |
 |:----------|:-------|:----------------------|:-----|:-------|
 | Mass Hierarchy | Normal | Pending | — | Prediction |
 | $M_R$ (seesaw scale) | $1.5 \times 10^{15}$ GeV | $(10^{14}-10^{16})$ GeV | — | Derived |
@@ -4576,7 +4584,7 @@ $$\mathcal{R}_\ell = \frac{\alpha \cdot d^2_{31}}{\alpha \cdot d^2_{32}} = \frac
 
 The ratio is independent of $\alpha$ and tests pure E₈ geometry. ∎
 
-**Experimental Comparison** (PDG 2024):
+**Experimental Comparison** (Particle Data Group 2024):
 
 | Mass | Value |
 |:-----|:------|
@@ -4631,7 +4639,7 @@ The spread in extracted values (1.333 to 1.411, approximately 6%) reflects highe
 
 The following comparisons are diagnostic checks using PDG central values at their quoted renormalization scales. Because the quark masses are defined at different scales and in different schemes, these ratios are not scheme-invariant in the way the lepton ratios are; they should be interpreted as approximate consistency tests rather than precision predictions.
 
-**Quark masses** (PDG 2024):
+**Quark masses** (Particle Data Group 2024):
 
 | Mass  | Value                   | Scheme                                  |
 | :---- | :---------------------- | :-------------------------------------- |
@@ -4715,7 +4723,7 @@ where $K_{\text{avg}} = 32/23$ is the average Bures sectional curvature on Gr(2,
 
 $$|V_{us}|_{\text{pred}} = \frac{\sqrt{3}}{2} \times \sin(15.15°) \times 0.9989 = 0.8660 \times 0.2613 \times 0.9989 = 0.2261$$
 
-| Quantity | Predicted | Observed (PDG 2024) | Deviation |
+| Quantity | Predicted | Observed (Particle Data Group 2024) | Deviation |
 |:---------|:---------:|:-------------------:|:---------:|
 | $|V_{us}|$ | 0.2261 | $0.2243 \pm 0.0008$ | **+0.8%** |
 

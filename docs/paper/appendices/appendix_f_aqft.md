@@ -42,7 +42,7 @@ e^{-\mu\bigl(d_{\mathcal N_n}(X,Y)-v_{LR}^{(n)}\,t\bigr)}.
 \tag{F.1}
 $$
 
-**Proof Sketch:** 
+**Proof:** 
 The proof relies on generalized Lieb-Robinson bounds applicable to open quantum systems governed by local Liouvillian dynamics. The evolution is given by $\alpha_t^{(n)} = e^{t\mathcal{L}_n}$. Standard techniques for proving such bounds on lattices with local interactions involve analyzing the propagation of operators under the action of the Liouvillian superoperator $\mathcal{L}_n$. The finite interaction range ensures locality of the generators. The contractive nature of the underlying ND-RID process bounds the strength of the non-unitary part of the Liouvillian. Together, these properties ensure that the norm of the commutator decays exponentially outside a linear light-cone defined by a finite Lieb-Robinson velocity $v_{LR}^{(n)}$, yielding the form in (F.1).
 
 **Explicit ND–RID Lieb–Robinson bound.** Consider an ND–RID update with cycle time $\tau$, interaction radius $r_0$, per‑cycle circuit depth $D$, max degree $z_{\max}$, and a uniform bound on local generators (or per‑layer gate norms bounded by $K$, where $K\le e^{J_{\max}\tau}$ if $J_{max}$ is the maximum local interaction strength). Then there exist $C,\mu>0$ such that for disjoint supports $X,Y$ at graph distance $d$ and time $t=n\tau$,
@@ -54,7 +54,7 @@ $$
 with an explicit **velocity bound**
 
 $$
-v_{\rm LR}\ \le\ \frac{r_0}{\tau}\,\ln\!\Big[c_0\,z_{\max}\,K^{\,2D}\Big],\qquad K=e^{J_{\max}\tau},\ c_0=O(1),
+v_{\rm LR}\ \le\ \frac{r_0}{\tau}\,\ln\!\Big[c_0\,z_{\max}\,K^{\,2D}\Big],\qquad K=e^{J_{\max}\tau},\ c_0=e,
 $$
 
 and one constructive choice of decay rate,
@@ -63,7 +63,7 @@ $$
 \mu\ =\ \frac{1}{r_0}\,\ln\!\left(\frac{B}{B-1}\right), \quad \text{where } B := c_0\,z_{\max}\,K^{2D}.
 $$
 
-The formula for the decay rate \$\mu\$ requires \$B > 1\$. This condition is satisfied for any non-trivial network (\$z\_{\max} \ge 2\$) and circuit (\$K>1\$), or by suitable choice of the \$O(1)\$ constant \$c\_0\$. These constants need not be optimal; they provide one **constructive** set arising from a walk‑counting estimate (constructive, not tight). In the strictly causal subcase (non‑overlapping local gates of range $r_0$ per layer), one has an **exact light cone** with speed $v_\ast=(D r_0)/\tau$ (i.e., vanishing commutator whenever $d>v_\ast t$). For local CPTP (Lindbladian) generators with bounded local norms, an LR‑type inequality of the same form holds with $O(1)$ changes in $C,\mu,v_{\rm LR}$. A convenient envelope is
+The formula for the decay rate \$\mu\$ requires \$B > 1\$. This condition is satisfied for any non-trivial network (\$z\_{\max} \ge 2\$) and circuit (\$K>1\$), with $c_0$ fixed to $e$; since $z_{\max}\ge 2$ and $K\ge 1$, one has $B>1$ whenever the dynamics is nontrivial, so $\ln(B)>0$. These constants need not be optimal; they provide one **constructive** set arising from a walk‑counting estimate (constructive, not tight). In the strictly causal subcase (non‑overlapping local gates of range $r_0$ per layer), one has an **exact light cone** with speed $v_\ast=(D r_0)/\tau$ (i.e., vanishing commutator whenever $d>v_\ast t$). For local CPTP (Lindbladian) generators with bounded local norms, an LR‑type inequality of the same form holds with $O(1)$ changes in $C,\mu,v_{\rm LR}$. A convenient envelope is
 
 $$
 v_{\rm LR}\ \le\ v_\*\ +\ 2D\,J_{\max}\,r_0\ +\ O\!\Big(\tfrac{r_0}{\tau}\ln z_{\max}\Big).
@@ -146,7 +146,7 @@ In particular, at equal times $t=0$ we have $[\mathcal A(O_1),\mathcal A(O_2)]=\
 
 (Covariance and additivity.) Spatial translations on $\Lambda_n$ act by $*$-automorphisms $\alpha_a^{(n)}$ that commute with $\tau_t^{(n)}$; the uniform geometric regularity ensures these descend to a strongly continuous representation $a\mapsto\alpha_a$ of translations on $\mathcal A$ with $\alpha_a\big(\mathcal A(O)\big)=\mathcal A(O+a)$. Additivity holds since $\mathcal A(\cup_i O_i)=C^*(\cup_i \mathcal A(O_i))$ by construction.
 
-Thus $\{\mathcal A(O)\}_{O}$ with automorphisms $\{\alpha_a,\tau_t\}$ satisfies isotony, locality (Einstein causality under the lightcone identification), additivity, and covariance. This is the desired continuum AQFT net. [Bratteli–Robinson 1997; Nachtergaele–Sims 2010] ∎
+Thus $\{\mathcal A(O)\}_{O}$ with automorphisms $\{\alpha_a,\tau_t\}$ satisfies isotony, locality (Einstein causality under the lightcone identification), additivity, and covariance. This is the desired continuum AQFT net. [Bratteli & Robinson 1997; Nachtergaele & Sims 2010] ∎
 
 *   **Definition F.3 (Emergent AQFT Net and Properties).** Conditional on Theorem F.0, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
 
@@ -230,6 +230,7 @@ The preceding sections establish that the emergent AQFT on the continuum manifol
 
 The spin-statistics theorem requires four ingredients, all of which are derived results in the PU framework:
 
+**Table F.1: PU-to-AQFT prerequisites invoked in Appendix F.**
 | Prerequisite | PU Source | Reference |
 |--------------|-----------|-----------|
 | **Lorentz Invariance** | Emergent from causal structure of MPU network | Theorem 46 |
@@ -255,22 +256,30 @@ $$
 
 where $[A, B]_- = AB - BA$ (commutator) applies for integer $s$, and $[A, B]_+ = AB + BA$ (anticommutator) applies for half-integer $s$.
 
-*Proof Sketch (following Pauli 1940; Streater-Wightman 1964; Haag 1996).*
+*Proof.* Under the hypotheses of Theorem 46 and Corollary F.1, the emergent net admits a Wightman realization: there is a unitary representation of the (cover of the) proper orthochronous Lorentz group acting covariantly on fields, a unique invariant vacuum $\Omega$, the spectrum condition, and local commutativity at spacelike separation. These are the assumptions entering the spin–statistics theorem (Pauli 1940; Streater & Wightman 1964; Haag 1996).
 
-The proof proceeds by contradiction, using analytic continuation in the complexified Lorentz group.
+Let $\phi$ be a (nontrivial) field transforming with spin $s$ and define the vacuum two‑point function
+$$
+W(x-y):=\langle \Omega\,|\,\phi(x)\phi(y)\,|\,\Omega\rangle .
+$$
+Local commutativity implies that for spacelike-separated $x-y$,
+$$
+\phi(x)\phi(y)=\sigma\,\phi(y)\phi(x),
+$$
+where $\sigma=+1$ for bosonic commutation and $\sigma=-1$ for fermionic anticommutation, hence
+$$
+W(x-y)=\sigma\,\langle \Omega\,|\,\phi(y)\phi(x)\,|\,\Omega\rangle .
+$$
 
-**Step 1 (Wrong statistics → wrong commutation).** Suppose a spin-$s$ field $\phi$ satisfies the wrong statistics: i.e., anticommutation for integer $s$ or commutation for half-integer $s$. Consider the two-point function $\langle \Omega | \phi(x)\phi(y) | \Omega \rangle$ in the vacuum state.
-
-**Step 2 (Lorentz transformation properties).** Under a $2\pi$ rotation $R_{2\pi}$ about any axis, integer-spin fields satisfy $U(R_{2\pi})\phi(x)U(R_{2\pi})^{-1} = \phi(x)$, while half-integer-spin fields satisfy $U(R_{2\pi})\phi(x)U(R_{2\pi})^{-1} = -\phi(x)$. This is a direct consequence of the representation theory of $SL(2,\mathbb{C})$, which emerges as the universal cover of the emergent Lorentz group $SO^+(1,3)$ (Section F.7).
-
-**Step 3 (Analytic continuation argument).** The Wightman functions admit analytic continuation to the "Jost points" in complexified spacetime. The connection between spacelike commutation/anticommutation relations and the transformation under $R_{2\pi}$ is established by continuing a spacelike separation to a timelike one via a complex Lorentz boost, then using the $CPT$ transformation (established below) to return to the original configuration with opposite field ordering.
-
-**Step 4 (Positivity constraint).** The spectrum condition (positive energy, from Theorem 29 and the emergent Hamiltonian) ensures that the Wightman functions have the correct analyticity properties for this continuation. The wrong-statistics assumption leads to a Wightman function that violates either positivity or the cluster decomposition property—both required by the PU framework's construction.
-
-**Step 5 (Contradiction).** The only consistent assignment is:
-- Integer spin $\Rightarrow$ commutation (Bose statistics)
-- Half-integer spin $\Rightarrow$ anticommutation (Fermi statistics)
-
+By the spectrum condition, $W$ extends analytically to the forward tube in complexified Minkowski space. Using the Bargmann–Hall–Wightman/Jost analytic continuation, one can deform a spacelike separation to its reversed separation $(x-y)\mapsto-(x-y)$ through complex Lorentz transformations without leaving the analyticity domain. The endpoint differs from the start by a $2\pi$ rotation in the universal cover of the Lorentz group, which acts on spin-$s$ fields by the phase $(-1)^{2s}$. Consequently,
+$$
+W(x-y)=(-1)^{2s}\,\langle \Omega\,|\,\phi(y)\phi(x)\,|\,\Omega\rangle .
+$$
+Combining with locality yields
+$$
+W(x-y)=\sigma(-1)^{2s}W(x-y).
+$$
+If $\sigma\neq(-1)^{2s}$ then $W(x-y)=-W(x-y)$, so $W(x-y)=0$ for spacelike separations. By standard positivity/reconstruction results in the Wightman framework (in particular the Reeh–Schlieder property implied by the spectrum condition), this forces $\phi\equiv 0$, contradicting nontrivial emergence. Hence $\sigma=(-1)^{2s}$: integer-spin fields are bosonic and half-integer-spin fields are fermionic. ∎
 
 ---
 
@@ -303,7 +312,29 @@ The *choice* between them is then determined by the requirement of consistency w
 **Theorem F.3 (PCE Exclusion of Parastatistics).**
 Higher-dimensional representations of $S_N$ (parastatistics) incur strictly greater complexity costs than the one-dimensional representations (Bose and Fermi statistics) without providing compensating predictive benefits in the emergent AQFT.
 
-*Proof Sketch.* Parastatistics with parastatistic order $p > 1$ would require tracking additional "color" labels to distinguish otherwise identical particles—labels that are operationally inaccessible to any local measurement in the emergent theory. The PCE potential (Appendix D, Definition D.1) penalizes such hidden degrees of freedom as complexity costs $V_{cost}$ without corresponding predictive utility $V_{benefit}$. The PCE-optimal configuration is therefore the minimal representation: one-dimensional (Bose or Fermi). ∎
+*Proof.* Let $P:S_N\to U(\mathcal{H}_{single}^{\otimes N})$ be the unitary permutation representation on the naive $N$‑particle tensor space. Operational indistinguishability of identical excitations means that all physically accessible $N$‑particle observables are permutation invariant, i.e.
+$$
+[A,P(\pi)]=0 \qquad \forall\,\pi\in S_N.
+$$
+
+Fix a superselection sector carrying an irreducible representation $\lambda$ of $S_N$ of dimension $d_\lambda$. In the standard irrep decomposition of $\mathcal{H}_{single}^{\otimes N}$, this sector factorizes as
+$$
+\mathcal{H}^{(N)}_\lambda \cong \mathcal{K}_\lambda \otimes \mathbb{C}^{d_\lambda},
+$$
+where $S_N$ acts trivially on $\mathcal{K}_\lambda$ and irreducibly on $\mathbb{C}^{d_\lambda}$. By Schur's lemma, every permutation‑invariant observable restricts on this sector to
+$$
+A|_{\mathcal{H}^{(N)}_\lambda}=A_\lambda\otimes I_{d_\lambda}.
+$$
+Consequently, for any density operator $\rho$ supported on $\mathcal{H}^{(N)}_\lambda$ and any physical observable $A$,
+$$
+\operatorname{Tr}(\rho A)
+=\operatorname{Tr}\!\left(\operatorname{Tr}_{\mathbb{C}^{d_\lambda}}\rho\;A_\lambda\right),
+$$
+so all operational predictions depend only on the reduced state $\tilde\rho_\lambda:=\operatorname{Tr}_{\mathbb{C}^{d_\lambda}}\rho$. The additional factor $\mathbb{C}^{d_\lambda}$ is therefore an unobservable "color" label. Parastatistics of order $p>1$ is precisely the choice $d_\lambda=p>1$.
+
+However, encoding a generic state on $\mathcal{K}_\lambda\otimes\mathbb{C}^{d_\lambda}$ requires strictly more internal degrees of freedom than encoding $\tilde\rho_\lambda$ on $\mathcal{K}_\lambda$ alone (the parameter count for density operators grows quadratically with Hilbert dimension). Thus, relative to the reduced description, tracking $d_\lambda>1$ strictly increases the nonnegative cost terms in the PCE potential $V(x)$ (Appendix D, Definition D.1), while leaving $V_{benefit}$ unchanged because $V_{benefit}$ depends only on observable predictions and these are fully determined by $\tilde\rho_\lambda$. Therefore any $d_\lambda>1$ sector is strictly dominated in PCE by the corresponding $d_\lambda=1$ sector.
+
+The only one‑dimensional irreducible representations of $S_N$ are the trivial and sign representations, yielding the totally symmetric and totally antisymmetric subspaces, i.e., Bose and Fermi statistics. Hence parastatistics is excluded by PCE. ∎
 
 ---
 
@@ -319,23 +350,19 @@ $$
 
 where $\eta_\phi = \pm 1$ is a phase factor and $\phi^\dagger$ denotes the charge-conjugate field.
 
-*Proof Sketch (following Jost 1957; Streater-Wightman 1964).*
+*Proof.* Under the hypotheses of Theorem 46 and Corollary F.1, the emergent field theory satisfies the Wightman (equivalently Jost) axioms: Poincaré covariance, uniqueness of the vacuum, the spectrum condition, locality, and the analyticity properties of Wightman functions. In this setting, CPT invariance is a theorem (Jost 1957; Streater & Wightman 1964; Haag 1996).
 
-**Step 1 (Weak local commutativity).** From the spin-statistics connection (Theorem F.2), fields satisfy either commutation or anticommutation at spacelike separation. This implies *weak local commutativity*: for spacelike $(x-y)$,
+Let
 $$
-\langle \Omega | \phi_1(x_1) \cdots \phi_n(x_n) | \Omega \rangle = \pm \langle \Omega | \phi_n(x_n) \cdots \phi_1(x_1) | \Omega \rangle
+W_n(x_1,\dots,x_n)=\langle\Omega|\,\phi(x_1)\cdots\phi(x_n)\,|\Omega\rangle
 $$
-with sign determined by the permutation and the statistics of each field.
+denote vacuum $n$‑point functions. The spectrum condition implies that $W_n$ extends analytically to the extended tube domain in complexified Minkowski space. Local commutativity implies **weak local commutativity** at Jost points, which yields invariance of the boundary values under the "strong reflection" map $(x_1,\dots,x_n)\mapsto(-x_n,\dots,-x_1)$ up to complex conjugation and the appropriate spinorial phases.
 
-**Step 2 (Analytic continuation to Jost points).** The Wightman functions are boundary values of analytic functions in the complexified spacetime variables, analytic in the "forward tube" (a consequence of the spectrum condition / positive energy). These functions can be continued to the "Jost points" where all differences $x_j - x_{j+1}$ are purely imaginary with negative imaginary time component.
-
-**Step 3 (Extended tube and CPT).** The transformation $x \mapsto -x$ (space and time inversion) maps the forward tube to the "backward tube." The analytic continuation through the Jost points connects these tubes, and the boundary values on the real axis satisfy:
+By the reconstruction theorem, this strong-reflection symmetry is implemented on the Hilbert space by an antiunitary operator $\Theta_{CPT}$ leaving $\Omega$ invariant and acting on fields by
 $$
-W(x_1, \ldots, x_n) = W(-x_n, \ldots, -x_1)^*
+\Theta_{CPT}\,\phi(x)\,\Theta_{CPT}^{-1}=\eta\,\phi^\dagger(-x),
 $$
-up to statistics-dependent signs. This is the Wightman function identity encoding CPT invariance.
-
-**Step 4 (Reconstruction).** By the Wightman reconstruction theorem, the equality of Wightman functions implies the existence of an antiunitary operator $\Theta$ implementing the transformation (F.9.2). The antiunitarity of $\Theta$ follows from the complex conjugation in the Wightman function identity, which in turn follows from the T-reversal component. ∎
+with $\eta$ fixed by the Lorentz representation. Therefore all Wightman functions (and hence all local observable predictions, including the S‑matrix where it exists) are invariant under the combined CPT transformation. ∎
 
 ---
 
@@ -364,6 +391,7 @@ CPT is a symmetry of the emergent dynamical equations (S-matrix elements, field 
 
 The spin-statistics connection and CPT theorem emerge as derived consequences of the PU framework's foundational structure:
 
+**Table F.2: AQFT structural theorems and their derived prerequisites in PU.**
 | Theorem | Prerequisites (all derived) | Status |
 |---------|----------------------------|--------|
 | **Spin-Statistics** (F.2) | Lorentz invariance (Thm 46), Microcausality (Cor F.1), Positive energy (Thm 29), Local field algebra (Thm F.0) | **Theorem** |

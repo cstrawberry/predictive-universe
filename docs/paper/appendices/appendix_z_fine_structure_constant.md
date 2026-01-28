@@ -1960,8 +1960,8 @@ Rounding to significant figures: α⁻¹_PU ≈ 137.036.
 
 ### Z.23.1 Experimental Value
 
-The CODATA 2018 recommended value for the fine-structure constant at the Thomson limit (q² → 0) (Tiesinga et al. 2021):
-$$\alpha^{-1}_{\mathrm{exp}} = 137.035999084(21)$$
+The CODATA 2022 recommended value for the fine-structure constant at the Thomson limit (q² → 0) (NIST 2024):
+$$\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$$
 
 ### Z.23.2 Agreement Analysis
 
@@ -1975,7 +1975,7 @@ $$\alpha^{-1}_{\mathrm{PU}}{}^{(2)} = \alpha^{-1}_{\mathrm{PU}}{}^{(1)} + \frac{
 $$\alpha^{-1}_{\mathrm{PU}}{}^{(3)} = 137.0293 + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) ≈ 137.0361$$
 
 **Comparison with Experiment:**
-$$\alpha^{-1}_{\mathrm{exp}} - \alpha^{-1}_{\mathrm{PU}}{}^{(3)} = 137.035999084 - 137.036092 = -0.000093$$
+$$\alpha^{-1}_{\mathrm{exp}} - \alpha^{-1}_{\mathrm{PU}}{}^{(3)} = 137.035999177 - 137.036092 = -0.0000928$$
 
 **Relative Discrepancy:**
 $$\frac{|\Delta\alpha^{-1}|}{\alpha^{-1}_{\mathrm{exp}}} = 6.8 \times 10^{-7} = 0.68 \text{ ppm}$$
@@ -1991,7 +1991,7 @@ PCE potential $V_{PCE}$ has scalar Hessian at the minimum:
 
 $$H = \nabla^2 V_{PCE}|_{x_0} = \lambda I_{24}$$
 
-Under the variance postulate $\sigma_B^2 = 1/M = 1/24$:
+With the Bures variance fixed by capacity saturation (Lemma T.41.2), $\sigma_B^2 = 1/M = 1/24$:
 
 $$\lambda = \frac{1}{16\sigma_B^2} = \frac{3}{2}$$
 
@@ -2070,7 +2070,7 @@ is the standard QED/EW running.
 
 ### Z.26.3 Verification at Z-Pole
 
-**Corollary Z.8 (Z-Pole Consistency Check).** Starting from the framework Thomson prediction and applying standard QED+EW running, including leptonic and hadronic vacuum polarization (see PDG 2024 for detailed breakdown), yields:
+**Corollary Z.8 (Z-Pole Consistency Check).** Starting from the framework Thomson prediction and applying standard QED+EW running, including leptonic and hadronic vacuum polarization (see Particle Data Group 2024 for detailed breakdown), yields:
 $$\Delta\alpha^{-1}_{\mathrm{RG}}(0 \to M_Z) \approx 9.11$$
 
 Therefore:
@@ -2666,7 +2666,7 @@ Delta_2_3 = Delta_2 * third_order_factor
 # Final result
 alpha_inv_PU = alpha_inv_1 + Delta_2_3
 
-alpha_inv_exp = 137.035999084
+alpha_inv_exp = 137.035999177
 discrepancy = alpha_inv_PU - alpha_inv_exp
 relative_ppm = abs(discrepancy) / alpha_inv_exp * 1e6
 
@@ -2693,7 +2693,7 @@ Third-order factor = 0.998635
 Δ^(2+3) = 0.006831
 D = 4 (from K(D) = 24 = M)
 α⁻¹_PU ≈ 137.036092
-α⁻¹_exp = 137.035999084
+α⁻¹_exp = 137.035999177
 Discrepancy = 0.000093
 Relative = 0.68 ppm
 ```

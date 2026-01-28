@@ -530,7 +530,7 @@ $$\boxed{\eta_B = (6.2 \pm 0.5) \times 10^{-10}}$$
 
 $$\eta_B^{\text{theory}} = (6.2 \pm 0.5) \times 10^{-10}$$
 
-**Observational Value** [Planck Collaboration 2020]:
+**Observational Value** [Planck Collaboration 2020a]:
 $$\eta_B^{\text{obs}} = (6.12 \pm 0.04) \times 10^{-10}$$
 
 | Quantity | Theory | Observation | Pull |
@@ -543,13 +543,13 @@ The theoretical prediction agrees with observation within combined uncertainties
 
 **CKM CP Phase:**
 
-| Quantity | PU Prediction | Measurement [PDG 2024] | Pull |
+| Quantity | PU Prediction | Measurement [Particle Data Group 2024] | Pull |
 |:---------|:-------------:|:----------------------:|:----:|
 | $\delta$ | $66.7°$ | $65.7° \pm 1.5°$ | $+0.7\sigma$ |
 
 **Jarlskog Invariant:**
 
-| Quantity | PU Prediction | Measurement [PDG 2024] | Pull |
+| Quantity | PU Prediction | Measurement [Particle Data Group 2024] | Pull |
 |:---------|:-------------:|:----------------------:|:----:|
 | $J_{CP}$ | $3.22 \times 10^{-5}$ | $(3.12^{+0.13}_{-0.12}) \times 10^{-5}$ | $+0.8\sigma$ |
 
@@ -796,7 +796,7 @@ The Planck satellite constrains $\eta_B = (6.12 \pm 0.04) \times 10^{-10}$. Futu
 
 ### Y.12.2 CKM Phase Measurements
 
-The CP phase $\delta$ is measured at B-factories and LHCb. Current world average [PDG 2024]:
+The CP phase $\delta$ is measured at B-factories and LHCb. Current world average [Particle Data Group 2024]:
 $$\delta = 65.7° \pm 1.5°$$
 
 **Prediction:** $\delta = 66.7°$ from Theorem T.56.

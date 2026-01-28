@@ -64,6 +64,7 @@ In summary, PU presents reality governed by the logic, thermodynamics, and optim
 
 **Entropy Domain Unification:** A fundamental achievement of the framework is the demonstration (Thesis P.6.1, Appendix P.6.5) that all distinct formulations of entropy in physics—SPAP entropy, Shannon entropy, thermodynamic entropy, von Neumann entropy, and Bekenstein-Hawking entropy—are expressions of the same underlying quantity in different operational domains:
 
+**Table 14.1: Entropy domain unification across the PU framework.**
 | Domain | Entropy Expression | Operational Context |
 |:-------|:-------------------|:--------------------|
 | Logical (SPAP) | $\varepsilon = \ln 2$ | Irreducible cost of self-referential prediction cycle |
@@ -152,11 +153,12 @@ The suppression factor $(1/2)^N$ assumes statistical independence of fluctuation
 
 Crucially, this capacity bound applies to *any* information channel mediated by ND-RID dynamics, regardless of the temporal direction posited. A hypothetical retrocausal channel—transmitting information from future to past—would necessarily operate through the same physical substrate (MPU interactions) and thus be subject to identical capacity constraints. The finite capacity $C_{max} < \ln d_0$ means that even if retrocausal information transfer were logically coherent (which it is not, per Layer 1), it could not achieve the sustained, high-fidelity transmission required for macroscopic causal reversal. Combined with the exponential suppression of reverse trajectories from Layer 2, this information-theoretic constraint renders retrocausality physically impossible at all scales.
 
-**Mathematical Emergence of Lorentzian Signature:** The irreversibility of the temporal update process has a further mathematical consequence. As demonstrated via Γ-convergence in **Appendix O (Section O.7)**, when extending the discrete MPU dynamics to the continuum limit, the dissipation inherent in temporal updates introduces a relative negative sign in the kinetic term. The key insight is that the effective cost function $\Psi_t$ for temporal differences is fundamentally different from the spatial cost function $\Psi$: spatial variations in the PCE potential represent reversible energy storage (analogous to elastic deformation), while temporal variations—mediated by the irreversible ‘Evolve’ step connecting successive time slices—represent irreversible energy expenditure (analogous to dissipation). This physical asymmetry in the nature of spatial versus temporal costs mathematically manifests as opposite signs in the kinetic terms. The resulting emergent metric necessarily has Lorentzian signature $(-,+,+,+)$:
-$$
-S[u] = \int d^{D+1}x,\sqrt{|g|};\Big[,g^{00}(x),(\partial_t u)^2;+;g^{ij}(x),\nabla_i u,\nabla_j u;-;\mathcal{V}(u),\Big]
-$$
-where $g^{00} < 0$ and $g^{ij}$ is positive-definite. As Appendix O concludes: “The signature is not a postulate but a direct mathematical consequence of instantiating a logically directed, thermodynamically irreversible predictive process in the continuum.”
+**Mathematical Emergence of Lorentzian Signature:** The emergent spacetime metric has Lorentzian signature as a consequence of two independent PU results:
+
+1.  **Spatial sector (positive definite):** The spatial quadratic form arises from the PCE/curvature action via a variational (Γ-convergence) argument. The discrete functionals like $\mathcal{F}_\epsilon$ converge to a local continuum functional whose leading spatial-gradient term is positive definite (Appendix D), fixing a Riemannian metric on spatial slices.
+2.  **Temporal sector (cone structure and time orientation):** Locality of ND–RID together with Proposition F.1 yields a finite propagation speed and therefore an emergent causal cone in the continuum scaling. Any second‑order local continuum limit compatible with such a cone is hyperbolic, and its principal symbol has Lorentzian signature $(-,+,+,+)$ (equivalently $g^{00}<0$ in the $(−,+,+,+)$ convention). The thermodynamic arrow-of-time (Theorem 31) fixes a **time orientation** (future vs past cone), while the **signature** is fixed by the existence of a non-degenerate causal cone.
+
+This yields a spacetime with causal cones and lightlike propagation, enabling stable prediction.
 
 ### Contrast with the Past Hypothesis
 

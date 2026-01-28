@@ -35,9 +35,9 @@ This appendix provides computational programs for two constants within the Predi
 
 ### V.1.2 Observational Inputs
 
-* **Cosmological parameters (Planck 2018, base‑$\Lambda$CDM) \[Planck Collaboration et al. 2020]:**
+* **Cosmological parameters (Planck 2018, base‑$\Lambda$CDM) \[Planck Collaboration 2020a]:**
   $H_0=67.4\pm0.5~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_{\Lambda}=0.6889\pm0.0056$.
-* **Planck length (CODATA 2018) \[CODATA Committee on Data for Science and Technology 2018]:**
+* **Planck length (CODATA 2022) \[NIST 2024]:**
   $L_P=1.616255(18)\times 10^{-35}~\mathrm{m}$.
 * **Speed of light:** $c=299{,}792{,}458~\mathrm{m\,s^{-1}}$ (exact).
 
@@ -63,13 +63,21 @@ $$
 
 The quoted uncertainty is dominated by $H_0$ and $\Omega_{\Lambda}$; the relative uncertainty in $L_P$ is negligible at this precision.
 
-### V.1.4 Inversion for $\kappa$ and the Instanton Action
+### V.1.4 Consistency Check via Inversion
 
-Setting $A_{\Lambda}=1$ in Equation (V.3),
+Setting $A_{\Lambda}=1$ in Equation (V.3):
 
 $$
 \boxed{\kappa \;=\; -\tfrac12 \ln\!\left(\frac{2.86599\times10^{-122}}{8\pi}\right) \;=\; 141.543\ \pm\ 0.009} \tag{V.6}
 $$
+
+The PU framework independently derives $\kappa = 141.5$ from Grassmannian geometry (Theorem U.16). Holding $\kappa$ fixed, the observed value (V.5) implies the effective prefactor
+
+$$
+A_{\Lambda}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016,
+$$
+
+equivalently $A_{\text{eff}}^{(\text{obs})} = 0.917 \pm 0.016$ in the notation of Appendix U (Corollary U.15b).
 
 The corresponding action (Equation (V.1)) is
 
@@ -78,6 +86,8 @@ $$
 $$
 
 since $1~\text{nat}=1/\ln 2~\text{bits}$.
+
+For the derived value $\kappa=141.5$ (Theorem U.16), one has $S_{\mathrm{inst}}=283.000\ \text{nats}=408.283\ \text{bits}$.
 
 **Sensitivity to $H_0$.** Holding $\Omega_\Lambda$ fixed at its Planck value, using $H_0=73~\mathrm{km\,s^{-1}\,Mpc^{-1}}$ shifts $\kappa$ by $\Delta\kappa\approx -0.0798$.
 

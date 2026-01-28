@@ -1689,25 +1689,21 @@ In the continuum limit, this finite invariant speed $c$ picks out a family of nu
 
 **Theorem P.8.5 (Lorentzian Signature from Γ-Convergence).** The Lorentzian signature $(-, +, +, +)$ of the emergent metric is not postulated but derived as a mathematical consequence of instantiating a logically directed, thermodynamically irreversible predictive process in the continuum limit.
 
-*Proof Sketch (Appendix O, Section O.7).*
+*Proof.* Two independent ingredients fix the Lorentzian signature.
 
-**Step 1 (Spatial sector).** The PCE potential contribution from spatial variations on discrete graphs $G_n$ with mesh $h_n \to 0$ takes the form:
-
+**(i) Spatial sector (positive definiteness).** By Theorem P.8.4 and Appendix D, the discrete PCE/curvature functionals Γ‑converge to a local continuum functional whose leading spatial-gradient term is a positive quadratic form
 $$
-F_n(\phi_n) = \sum_{(x,y) \in E(G_n)} w_{xy} \Psi\left(\frac{\phi_n(y) - \phi_n(x)}{h_n}\right) + \sum_{x \in V(G_n)} h_n^D \mathcal{V}(\phi_n(x))
+\int \langle \nabla_x u,\,A(x)\nabla_x u\rangle\,dx,
 $$
+with $A(x)$ symmetric and positive definite. This determines a Riemannian metric on spatial slices.
 
-Under Γ-convergence, this yields a continuum functional with positive-definite spatial coefficients $g^{ij}(x)$.
-
-**Step 2 (Temporal sector).** The temporal coordinate is fundamentally different: it inherits the directed, irreversible structure of the predictive cycle. The thermodynamic ratchet (Theorem 31) ensures that temporal evolution proceeds only in the direction of increasing entropy production. The dissipative character of the 'Evolve' process (Definition 27) introduces a sign asymmetry in the temporal cost function $\Psi_t$ that is absent from the spatial $\Psi$, yielding a negative coefficient upon taking the continuum limit.
-
-**Step 3 (Combined signature).** The full Γ-limit yields an action:
-
+**(ii) Temporal sector (cone structure and hyperbolicity).** Locality of ND–RID together with Proposition F.1 yields a finite propagation speed and therefore an emergent causal cone in the continuum scaling. Any second‑order local continuum limit compatible with such a cone must be hyperbolic, and its principal symbol vanishes on the null cone. After choosing units so that the maximal signal speed is $c=v_{LR}$, the characteristic quadratic form can be written as
 $$
-S[u] = \int d^{D+1}x \sqrt{|g|} \left[g^{00}(x)(\partial_t u)^2 + g^{ij}(x)\nabla_i u \nabla_j u - \mathcal{V}(u)\right]
+g^{\mu\nu}\,\xi_\mu\xi_\nu=-\frac{\xi_0^2}{c^2}+\xi^\top A(x)\,\xi,
 $$
+which has signature $(-,+,+,+)$ and therefore $g^{00}<0$ in the $(−,+,+,+)$ convention.
 
-where $g^{00} < 0$ (timelike direction, signed by the irreversibility of prediction) and $g^{ij} > 0$ (spacelike directions, positive-definite from spatial Γ-convergence). This is the Lorentzian signature. ∎
+Finally, irreversibility (Theorem 31) selects a **time orientation** (future vs past cone) but does not alter the signature determined by the cone/hyperbolicity. ∎
 
 ---
 
@@ -1955,7 +1951,7 @@ where $\Delta Q_{reproductive}$ measures improvement in reproductive prediction�
 
 *Interpretation.* Organisms are MPU aggregates (Definition 29) whose "predictions" include developmental trajectories, behavioral responses, and offspring viability. Natural selection filters these predictions: lineages whose aggregate models better predict survival-relevant features persist; those with poorer predictions are eliminated.
 
-**Theorem P.8.9a.6 (Evolution as Generational PCE).** Biological evolution implements PCE optimization (Definition 15) with:
+**Proposition P.8.9a.6 (Evolution as Generational PCE).** Biological evolution implements PCE optimization (Definition 15) with:
 - **Operational costs $R(C)$:** Metabolic expense of maintaining complexity
 - **Propagation costs $V_{prop}$:** Energetic cost of reproduction
 - **Predictive benefit $V_{benefit}$:** Reproductive success (fitness)
@@ -1964,7 +1960,27 @@ Natural selection minimizes the generational analog of the PCE potential:
 
 $$V_{gen} = R_{metabolic} + R_{reproductive} - \Gamma_{fitness} \cdot PP_{survival}$$
 
-*Proof sketch.* Organisms with suboptimal $V_{gen}$ (high costs, low fitness) leave fewer descendants. Over generations, the population converges toward configurations minimizing $V_{gen}$, precisely as the framework's adaptation dynamics (Appendix D, Theorem D.5) predict for individual MPU aggregates. The stochastic element (mutations, environmental variation) provides the exploration necessary for convergence to global minima. ∎
+*Proof.* Model each organism (or lineage type) as an MPU aggregate with a heritable configuration $x$ (Definition 29) interacting with an environment $E$. For each $x$, let $R_{metabolic}(x)$ be the expected per-generation energetic cost of maintaining the organism's predictive/control circuitry (the operational-cost analog of $R(C)$), let $R_{reproductive}(x)$ be the expected energetic cost of producing offspring (the propagation-cost analog of $V_{prop}$), and let $PP_{survival}(x)$ be the predictive performance relevant to survival and successful reproduction, with $\Gamma_{fitness}$ converting that performance into the same resource units as the costs.
+
+Define the generational PCE potential
+$$
+V_{gen}(x)=R_{metabolic}(x)+R_{reproductive}(x)-\Gamma_{fitness}\,PP_{survival}(x).
+$$
+Reproductive success is monotone in net resource surplus, hence monotone decreasing in $V_{gen}$. Equivalently (fixing units), one may write the expected viable-offspring growth factor as
+$$
+W(x)\propto \exp\!\big(-V_{gen}(x)\big).
+$$
+Let $N_x(t)$ be the (expected) number of individuals of type $x$ at generation $t$. Then
+$$
+N_x(t+1)=N_x(t)\,W(x),
+$$
+so for two types $x,y$,
+$$
+\frac{N_x(t)}{N_y(t)}=\frac{N_x(0)}{N_y(0)}\left(\frac{W(x)}{W(y)}\right)^t.
+$$
+If $V_{gen}(x)<V_{gen}(y)$ then $W(x)>W(y)$ and the ratio grows exponentially with $t$, so selection drives the population toward (local) minima of $V_{gen}$.
+
+Mutations, recombination, and environmental variability provide stochastic exploration of nearby configurations, so the effective trait dynamics is a stochastic descent on $V_{gen}$: variants sample $x+\delta x$ and selection preferentially retains those with lower $V_{gen}$. This is the generational analog of the stochastic PCE adaptation dynamics (Appendix D, Equation D.8), and Theorem D.5 gives convergence (in the same Lyapunov sense) toward the set of global minima when exploration is sufficiently non-degenerate. Hence biological evolution implements PCE optimization at the generational level with the identifications stated. ∎
 
 ### P.8.9a.5.2 Resolution of Evolutionary Puzzles
 
@@ -2248,7 +2264,7 @@ Life is *persistent complex prediction under entropic pressure, implemented thro
 
 More precisely:
 
-**Definition P.8.9a.6 (Life in the PU Framework).** A living system is an MPU aggregate (Definition 29) satisfying:
+**Definition P.8.9a.10.1 (Life in the PU Framework).** A living system is an MPU aggregate (Definition 29) satisfying:
 1. **Complexity:** $C_{agg} \gg C_{op}$
 2. **Error correction:** Multiple nested layers of redundancy protection
 3. **Autonomous optimization:** Self-directed POP solving under PCE
@@ -2261,7 +2277,7 @@ More precisely:
 1. Persistence requires error correction (Theorem P.8.9a.1)
 2. Error correction requires redundancy (coding theory)
 3. Optimal redundancy is selected by PCE (Theorem Z.13)
-4. Reproduction extends PCE optimization across generations (Theorem P.8.9a.6)
+4. Reproduction extends PCE optimization across generations (Proposition P.8.9a.6)
 5. Sufficient complexity enables CC emergence (Theorem 34)
 6. CC enables higher-order prediction, feeding back to (1)
 
@@ -2591,7 +2607,7 @@ $$\text{Aut}(\mathcal{V}_{\text{PCE}}) = \mathbb{M}$$
 **Derivation Chain:**
 $$K_0 = 3 \xrightarrow{\text{Thm 15}} d_0 = 8 \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Thm P.13.10}} \Lambda_{24} \xrightarrow{\text{Thm P.13.20}} V^\natural \xrightarrow{\text{FLM}} \mathbb{M}$$
 
-**Epistemic Note:** Steps 1–6 are derived from framework axioms (POP, PCE, PPI) as established in the referenced theorems. Steps 7–11 apply PCE optimization to select among mathematically classified structures. The final identification $\text{Aut}(V^\natural) = \mathbb{M}$ is an established mathematical theorem [FLM 1988].
+**Epistemic Note:** Steps 1–6 are derived from framework axioms (POP, PCE, PPI) as established in the referenced theorems. Steps 7–11 apply PCE optimization to select among mathematically classified structures. The final identification $\text{Aut}(V^\natural) = \mathbb{M}$ is an established mathematical theorem [Frenkel, Lepowsky & Meurman 1988].
 
 ---
 
@@ -3122,7 +3138,7 @@ This uniquely identifies $V^\natural$ among holomorphic $c = 24$ VOAs with $\dim
 
 ### Theorem P.13.14 (Lattice VOA Construction)
 
-**Reference:** [Borcherds 1986; FLM 1988; Dong 1993]
+**Reference:** [Borcherds 1986; Frenkel, Lepowsky & Meurman 1988; Dong 1993]
 
 For an even lattice $\Lambda$, the space $V_\Lambda = \mathcal{F} \otimes \mathbb{C}_\varepsilon[\Lambda]$ carries a VOA structure with central charge $c = \text{rank}(\Lambda)$.
 
@@ -3153,13 +3169,13 @@ Holomorphic (self-dual) VOAs with central charge $c = 24$ have been extensively 
 
 ### Theorem P.13.16 (Moonshine Module Characterization)
 
-**Reference:** [FLM 1988; Dong, Griess & Lam 2007]
+**Reference:** [Frenkel, Lepowsky & Meurman 1988; Dong, Griess & Lam 2007]
 
 Among holomorphic $c = 24$ VOAs satisfying $C_2$-cofiniteness and CFT-type grading:
 
 1. If $V$ has $\dim(V_1) = 0$ and $V_2$ is isomorphic to the Griess algebra, then $V \cong V^\natural$.
 
-2. The uniqueness was conjectured by FLM [FLM 1988]. Dong, Griess & Lam [Dong, Griess & Lam 2007] proved that the Moonshine module is uniquely characterized among such VOAs by the conditions $\dim(V_1) = 0$ together with the Griess algebra structure on $V_2$.
+2. The uniqueness was conjectured by FLM [Frenkel, Lepowsky & Meurman 1988]. Dong, Griess & Lam [Dong, Griess & Lam 2007] proved that the Moonshine module is uniquely characterized among such VOAs by the conditions $\dim(V_1) = 0$ together with the Griess algebra structure on $V_2$.
 
 **Epistemic Status:** Established mathematical theorem under the stated hypotheses (including Griess algebra condition).
 
@@ -3167,7 +3183,7 @@ Among holomorphic $c = 24$ VOAs satisfying $C_2$-cofiniteness and CFT-type gradi
 
 ### Theorem P.13.17 (Moonshine Module Character)
 
-**Reference:** [FLM 1988]
+**Reference:** [Frenkel, Lepowsky & Meurman 1988]
 
 The graded character of the Moonshine module is:
 $$\chi_{V^\natural}(\tau) = J(\tau) = j(\tau) - 744 = q^{-1} + 196884q + 21493760q^2 + \cdots$$
@@ -3261,7 +3277,7 @@ The map $(-1): \Lambda_{24} \to \Lambda_{24}$ given by $v \mapsto -v$ is:
 
 ### Theorem P.13.21 (Lift to VOA)
 
-**Reference:** [FLM 1988, §5.4]
+**Reference:** [Frenkel, Lepowsky & Meurman 1988, §5.4]
 
 The $(-1)$ involution on $\Lambda_{24}$ lifts to an involution $\theta$ on $V_{\Lambda_{24}}$ with:
 
@@ -3273,7 +3289,7 @@ $$\theta(\alpha^i_{-1}|0\rangle) = -\alpha^i_{-1}|0\rangle$$
 
 So the weight-one currents are $\theta$-odd, and $(V_{\Lambda_{24}})^\theta$ has $\dim((V_{\Lambda_{24}})^\theta_1) = 0$.
 
-*Proof.* Standard lift of lattice automorphisms to VOA automorphisms [FLM 1988, §5.4]. The sign $(-1)^n$ on Heisenberg generators follows from the action on the underlying Fock space. $\square$
+*Proof.* Standard lift of lattice automorphisms to VOA automorphisms [Frenkel, Lepowsky & Meurman 1988, §5.4]. The sign $(-1)^n$ on Heisenberg generators follows from the action on the underlying Fock space. $\square$
 
 **Corollary P.13.21a (Canonical Properties of θ).** When lifting lattice automorphisms to VOA automorphisms, the $(-1)$ lift $\theta$ is distinguished by:
 1. Centrality (commutes with all other automorphisms)
@@ -3286,14 +3302,14 @@ There is no other involution of $V_\Lambda$ with these properties.
 
 ### Theorem P.13.22 (The FLM Orbifold Construction)
 
-**Reference:** [FLM 1988]
+**Reference:** [Frenkel, Lepowsky & Meurman 1988]
 
 The $\theta$-orbifold of $V_{\Lambda_{24}}$ is the Moonshine module:
 $$(V_{\Lambda_{24}})^{\text{orb}} = (V_{\Lambda_{24}})^\theta \oplus (V_{\Lambda_{24}})^{tw,\theta} = V^\natural$$
 
 where $(V_{\Lambda_{24}})^\theta$ is the $\theta$-fixed subspace and $(V_{\Lambda_{24}})^{tw,\theta}$ is the $\theta$-twisted sector.
 
-**Epistemic Status:** Established mathematical theorem [FLM 1988].
+**Epistemic Status:** Established mathematical theorem [Frenkel, Lepowsky & Meurman 1988].
 
 ---
 
@@ -3358,7 +3374,7 @@ The $\mathbb{Z}_2$ structure of the PCE-Attractor corresponds canonically to the
 
 ### Theorem P.13.25 (Weight-2 Counting)
 
-**Reference:** [FLM 1988]
+**Reference:** [Frenkel, Lepowsky & Meurman 1988]
 
 For the Leech lattice VOA $V_{\Lambda_{24}}$, the weight-2 space has dimension:
 $$\dim(V_{\Lambda_{24}})_2 = 324 + 196560 = 196884$$
@@ -3379,14 +3395,14 @@ Total Heisenberg contribution: $24 + 300 = 324$.
 
 ### Theorem P.13.26 (Moonshine Module Weight-2 Structure)
 
-**Reference:** [FLM 1988; Griess 1982]
+**Reference:** [Frenkel, Lepowsky & Meurman 1988; Griess 1982]
 
 The orbifold procedure preserves the weight-2 dimension:
 $$\dim(V^\natural_2) = 196884$$
 
 The space $V^\natural_2$ carries the structure of the Griess algebra, a commutative non-associative algebra with the Monster as its automorphism group.
 
-*Proof.* The $\theta$-orbifold construction [FLM 1988] preserves the total weight-2 dimension through the combination of:
+*Proof.* The $\theta$-orbifold construction [Frenkel, Lepowsky & Meurman 1988] preserves the total weight-2 dimension through the combination of:
 - $\theta$-even states from $(V_{\Lambda_{24}})_2$ 
 - Contributions from the twisted sector
 
@@ -3449,7 +3465,7 @@ for some constant $C$, where $j(\tau) = q^{-1} + 744 + 196884q + \cdots$
 
 ### Theorem P.13.29 (FLM Theorem)
 
-**Reference:** [FLM 1988]
+**Reference:** [Frenkel, Lepowsky & Meurman 1988]
 
 $$\text{Aut}(V^\natural) = \mathbb{M}$$
 
@@ -3467,7 +3483,7 @@ $$\boxed{\text{Aut}(\mathcal{V}_{\text{PCE}}) = \mathbb{M}}$$
 
 *Proof.* By Theorem P.13.27, $\mathcal{V}_{\text{PCE}} = V^\natural$. By Theorem P.13.29, $\text{Aut}(V^\natural) = \mathbb{M}$. $\square$
 
-**Epistemic Status:** Follows from PCE selection (framework) combined with FLM 1988 (mathematics).
+**Epistemic Status:** Follows from PCE selection (framework) combined with Frenkel, Lepowsky & Meurman 1988 (mathematics).
 
 ---
 
@@ -3898,46 +3914,46 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
-| $\alpha^{-1}$ | $137.036092 \pm 0.000050$ | $137.035999084(21)$ | Tiesinga et al. 2021 | 0.68 ppm |
+| $\alpha^{-1}$ | $137.036092 \pm 0.000050$ | $137.035999177(21)$ | NIST 2024 | 0.68 ppm |
 | $D$ | $4$ | $4$ | Observed | Exact |
-| $\Lambda L_P^2$ | $\sim 3 \times 10^{-122}$ | $2.87 \times 10^{-122}$ (derived from Planck 2018 $\Omega_\Lambda$ and $H_0$) | Planck Collaboration 2020; PDG 2024 | Order of magnitude (resolves 122-order hierarchy; $A_{\text{eff}} \sim O(1)$) |
+| $\Lambda L_P^2$ | $\sim 3 \times 10^{-122}$ | $2.87 \times 10^{-122}$ (derived from Planck 2018 $\Omega_\Lambda$ and $H_0$) | Planck Collaboration 2020a; Particle Data Group 2024 | Order of magnitude (resolves 122-order hierarchy; $A_{\text{eff}} \sim O(1)$) |
 | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | — | Equation Q.18 | Structural prediction |
 
 **Electroweak Sector:**
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
-| $v$ (Higgs VEV) | $252$ GeV | $246$ GeV | PDG 2024 | 2.4% |
-| $\sin^2\theta_W(M_Z)$ | $0.231$ | $0.23122 \pm 0.00003$ | PDG 2024 | $<1\%$ |
-| $m_H$ | $125$ GeV | $125.25 \pm 0.17$ GeV | PDG 2024 | $<1\%$ |
+| $v$ (Higgs VEV) | $252$ GeV | $246$ GeV | Particle Data Group 2024 | 2.4% |
+| $\sin^2\theta_W(M_Z)$ | $0.231$ | $0.23122 \pm 0.00003$ | Particle Data Group 2024 | $<1\%$ |
+| $m_H$ | $125$ GeV | $125.25 \pm 0.17$ GeV | Particle Data Group 2024 | $<1\%$ |
 
 **CKM Matrix and Quark Mixing (Appendix T):**
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Pull |
 |:---------|:--------------------|:-------------------|:----------|:-----|
-| $\|V_{us}\|$ | $0.2261$ | $0.2253 \pm 0.0008$ | PDG 2024 | $+1.0\sigma$ |
-| $\|V_{cb}\|$ | $0.0407$ | $0.0405 \pm 0.0010$ | PDG 2024 | $+0.2\sigma$ |
-| $\|V_{ub}\|$ | $0.00392$ | $0.00382 \pm 0.00024$ | PDG 2024 | $+0.4\sigma$ |
-| $\delta_{CKM}$ | $66.7°$ | $65.7° \pm 1.5°$ | PDG 2024 | $+0.7\sigma$ |
-| $J_{CP}$ | $3.22 \times 10^{-5}$ | $(3.08 \pm 0.15) \times 10^{-5}$ | PDG 2024 | $+0.9\sigma$ |
+| $\|V_{us}\|$ | $0.2261$ | $0.2253 \pm 0.0008$ | Particle Data Group 2024 | $+1.0\sigma$ |
+| $\|V_{cb}\|$ | $0.0407$ | $0.0405 \pm 0.0010$ | Particle Data Group 2024 | $+0.2\sigma$ |
+| $\|V_{ub}\|$ | $0.00392$ | $0.00382 \pm 0.00024$ | Particle Data Group 2024 | $+0.4\sigma$ |
+| $\delta_{CKM}$ | $66.7°$ | $65.7° \pm 1.5°$ | Particle Data Group 2024 | $+0.7\sigma$ |
+| $J_{CP}$ | $3.22 \times 10^{-5}$ | $(3.08 \pm 0.15) \times 10^{-5}$ | Particle Data Group 2024 | $+0.9\sigma$ |
 
 **Neutrino Sector (Appendix T, Section T.24):**
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Pull |
 |:---------|:--------------------|:-------------------|:----------|:-----|
-| $\Delta m^2_{21}$ | $7.58 \times 10^{-5}$ eV² | $(7.53 \pm 0.18) \times 10^{-5}$ eV² | PDG 2024 | $+0.28\sigma$ |
-| $\Delta m^2_{31}$ | $2.42 \times 10^{-3}$ eV² | $(2.453 \pm 0.033) \times 10^{-3}$ eV² | PDG 2024 | $-1.0\sigma$ |
-| $\theta_{23}$ | $47.4°$ | $47.6° \pm 1.4°$ | PDG 2024 | $-0.14\sigma$ |
-| $\theta_{12}$ | $33.7°$ | $33.6° \pm 0.8°$ | PDG 2024 | $+0.12\sigma$ |
-| $\theta_{13}$ | $8.7°$ | $8.54° \pm 0.12°$ | PDG 2024 | $+1.3\sigma$ (largest neutrino pull) |
-| $\delta_{CP}^{PMNS}$ | $232.5°$ | $230° \pm 36°$ | PDG 2024 | $+0.07\sigma$ |
+| $\Delta m^2_{21}$ | $7.58 \times 10^{-5}$ eV² | $(7.53 \pm 0.18) \times 10^{-5}$ eV² | Particle Data Group 2024 | $+0.28\sigma$ |
+| $\Delta m^2_{31}$ | $2.42 \times 10^{-3}$ eV² | $(2.453 \pm 0.033) \times 10^{-3}$ eV² | Particle Data Group 2024 | $-1.0\sigma$ |
+| $\theta_{23}$ | $47.4°$ | $47.6° \pm 1.4°$ | Particle Data Group 2024 | $-0.14\sigma$ |
+| $\theta_{12}$ | $33.7°$ | $33.6° \pm 0.8°$ | Particle Data Group 2024 | $+0.12\sigma$ |
+| $\theta_{13}$ | $8.7°$ | $8.54° \pm 0.12°$ | Particle Data Group 2024 | $+1.3\sigma$ (largest neutrino pull) |
+| $\delta_{CP}^{PMNS}$ | $232.5°$ | $230° \pm 36°$ | Particle Data Group 2024 | $+0.07\sigma$ |
 | $\sum m_\nu$ | $0.058$ eV | $< 0.12$ eV | Planck 2020 | Consistent |
 
 **Fermion Mass Hierarchy (Appendix R):**
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
-| $\mathcal{R}_\ell$ (lepton ratio) | $3$ | $2.889$ | PDG 2024 | 3.8% |
+| $\mathcal{R}_\ell$ (lepton ratio) | $3$ | $2.889$ | Particle Data Group 2024 | 3.8% |
 | $N_g$ (generations) | $3$ | $3$ | Observed | Exact |
 
 **Cosmological (Appendix Y):**

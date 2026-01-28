@@ -302,16 +302,11 @@ The repetition count multiplies by QFI additivity. The normalization factor is m
 **Theorem H.4 (Linear Response Excludes Curvature Invariants).**
 *QFI is a local quadratic quantity (second-order distinguishability at a point). Curvature invariants ($K_{\mathrm{eff}}$, scalar curvature, VVM coefficients, heat kernel data) enter only at third order and beyond.*
 
-*Proof sketch.* 
-- QFI at $\rho_0$ depends only on the metric tensor $g_{ij}(\rho_0)$ (first derivatives of states)
-- Curvature requires second derivatives of the metric (Riemann tensor involves $\partial^2 g$)
-- Linear response (infinitesimal parameter estimation) uses only the metric, not its derivatives
-
-Formally, the QFI for estimating parameter $\theta$ at $\theta = 0$ is:
+*Proof.* The quantum Fisher information is the quadratic form controlling the second-order expansion of state distinguishability in parameter space: for a smooth family $\rho(\theta)$, the Bures line element satisfies
 $$
-F_Q[\rho_\theta]|_{\theta=0} = \mathrm{Tr}[\rho_0 L_0^2]
+ds_{\rm Bures}^2 \;=\;\frac14\,F_{ij}(\theta)\,d\theta^i d\theta^j,
 $$
-where $L_0$ is the symmetric logarithmic derivative. This depends on $\rho_0$ and $\partial_\theta \rho_\theta|_{\theta=0}$, not on second derivatives. ∎
+so $F_{ij}$ is the (pullback) Riemannian metric on the statistical manifold at the point $\theta$. Curvature invariants (Riemann tensor contractions) depend on derivatives of the metric, schematically $R\sim \partial^2 g + (\partial g)^2$, and therefore cannot appear as pointwise components of $g_{ij}$ itself. Such invariants enter only when comparing $g_{ij}$ at different points (e.g., via geodesic deviation or higher-order expansions). Hence the linear-response object $F_{ij}$ cannot directly contain spacetime curvature invariants. $\square$
 
 **Consequence:** If $g_0$ is defined as the **linear-response susceptibility** at the attractor (per spatial channel, per Landauer event), it **cannot** depend on curvature invariants by construction.
 
@@ -369,7 +364,7 @@ The dominant theoretical uncertainty arises from:
 The cosmological constant is derived from cosmological parameters reported by Planck:
 $$
 \Lambda = \frac{3\Omega_\Lambda H_0^2}{c^2}
-\quad \text{[Planck 2018]}
+\quad \text{[Planck Collaboration 2020a]}
 $$
 Numerically this gives $\Lambda \approx 1.1 \times 10^{-52}\,\mathrm{m^{-2}}$.
 

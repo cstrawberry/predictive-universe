@@ -283,7 +283,41 @@ $$
 
 and minimizers/critical points of $\mathcal F_\epsilon$ converge (up to subsequences) to critical points of $\mathcal F$ (the Einstein–Hilbert plus MPU action). The convergence of the discrete metric spaces is understood in the Gromov-Hausdorff sense (Section 11).
 
-*Proof (sketch).* The proof involves establishing the liminf inequality via curvature consistency and convexity, and constructing a **recovery sequence** via local interpolation (e.g., finite-element style) that respects the area-law scaling. Equicoercivity is then used to obtain precompactness of the sequence of functionals. The conclusion follows from the fundamental theorem of $\Gamma$-convergence (see, e.g., Braides, Dal Maso). ∎
+*Proof.* Write
+$$
+S^\varepsilon_{\mathrm{pred}}[g]=S^\varepsilon_{\mathrm{EH}}[g]+S^\varepsilon_{\mathrm{MPU}}[g].
+$$
+Assumption (iii) (equicoercivity) implies that for every $M<\infty$ the sublevel sets
+$$
+\{\,g:\ S^\varepsilon_{\mathrm{pred}}[g]\le M\,\}
+$$
+are precompact in the topology fixed in (iii). In particular, any sequence of (approximate) minimizers admits a convergent subsequence.
+
+For the $\Gamma$-liminf inequality, fix any sequence $g_\varepsilon\to g$. By assumption (i) (Regge/graph-to-manifold convergence),
+$$
+\lim_{\varepsilon\to 0}S^\varepsilon_{\mathrm{EH}}[g_\varepsilon]=S_{\mathrm{EH}}[g],
+$$
+and by assumption (ii) (MPU stability under refinement),
+$$
+\lim_{\varepsilon\to 0}S^\varepsilon_{\mathrm{MPU}}[g_\varepsilon]=S_{\mathrm{MPU}}[g].
+$$
+Hence
+$$
+\liminf_{\varepsilon\to 0}S^\varepsilon_{\mathrm{pred}}[g_\varepsilon]
+=\lim_{\varepsilon\to 0}\Big(S^\varepsilon_{\mathrm{EH}}[g_\varepsilon]+S^\varepsilon_{\mathrm{MPU}}[g_\varepsilon]\Big)
+=S_{\mathrm{EH}}[g]+S_{\mathrm{MPU}}[g],
+$$
+which in particular gives $\liminf_{\varepsilon\to 0}S^\varepsilon_{\mathrm{pred}}[g_\varepsilon]\ge S_{\mathrm{EH}}[g]+S_{\mathrm{MPU}}[g]$.
+
+For the recovery sequence (the $\Gamma$-limsup inequality), fix any admissible continuum metric $g$. Choose the refinement family implicit in (i) and define $g_\varepsilon$ as the canonical discretization/interpolation of $g$ on the mesh $\varepsilon$, so that $g_\varepsilon\to g$ in the topology of (iii). Assumptions (i) and (ii) then yield
+$$
+\limsup_{\varepsilon\to 0}S^\varepsilon_{\mathrm{pred}}[g_\varepsilon]
+=\lim_{\varepsilon\to 0}\Big(S^\varepsilon_{\mathrm{EH}}[g_\varepsilon]+S^\varepsilon_{\mathrm{MPU}}[g_\varepsilon]\Big)
+=S_{\mathrm{EH}}[g]+S_{\mathrm{MPU}}[g].
+$$
+Therefore $S^\varepsilon_{\mathrm{pred}}$ $\Gamma$-converges to $S_{\mathrm{EH}}+S_{\mathrm{MPU}}$.
+
+By the fundamental theorem of $\Gamma$-convergence [Dal Maso 1993; Braides 2002], $\Gamma$-convergence together with equicoercivity implies convergence (up to subsequences) of minimizers of $S^\varepsilon_{\mathrm{pred}}$ to minimizers of $S_{\mathrm{EH}}+S_{\mathrm{MPU}}$, and convergence of minimum values. $\square$
 
 This appendix thus provides the rigorous foundation for the dynamical aspects of the Predictive Universe framework.
 
@@ -395,7 +429,8 @@ $$
 
 *Proof.* 
 
-**Part I:** Under the PL inequality (D.14), standard gradient flow analysis [Polyak, USSR Comput. Math. Math. Phys. 3, 864 (1963); Karimi et al., 2016] yields:
+**Part I:** Under the PL inequality (D.14), standard gradient flow analysis [Polyak 1963; Karimi et al. 2016]
+yields:
 
 $$
 \frac{d}{dt}\big(V_{eff}(C(t)) - V_{eff}(C^\star)\big) = \nabla V_{eff} \cdot \dot{C} = -\eta_{adapt}|\nabla V_{eff}|^2 \le -2\mu_{PL}\big(V_{eff}(C) - V_{eff}(C^\star)\big)
@@ -413,7 +448,7 @@ $$
 
 Combining these bounds yields (D.15).
 
-**Part II:** The stochastic gradient descent analysis [Bottou et al., SIAM Rev. 60, 223 (2018)] shows that under PL conditions, the expected suboptimality satisfies:
+**Part II:** The stochastic gradient descent analysis [Bottou et al. 2018] shows that under PL conditions, the expected suboptimality satisfies:
 
 $$
 \mathbb{E}[V_t - V^\star] \le (1 - \eta\mu_{PL})^t(V_0 - V^\star) + \frac{\eta\sigma^2}{2\mu_{PL}}

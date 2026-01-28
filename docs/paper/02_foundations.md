@@ -111,15 +111,15 @@ $$
 The physical realization of systems with complexity $C_P$ incurs resource costs, fundamentally linked to thermodynamics (e.g., Landauer's principle, $\varepsilon > 0$ (Theorem 31)). These costs constrain the POP. To make the framework's dynamics tractable, we now adopt specific, physically-motivated functional forms for these costs, chosen to be the simplest expressions consistent with core principles like increasing cost and diminishing returns. The specific forms chosen are minimal models, but the framework's qualitative conclusions are expected to be robust against reasonable variations (see Section 6.7). In the general case, these cost rates are functions of both complexity and the effective temperature of the environment, $R(C, T_{eff})$, a dependence that becomes essential in the analysis of Prediction Relativity (Appendix N). We then define the corresponding operators acting on the Hilbert space.
 
 **Definition 3 (Resource–Cost Functions).**
-- **Physical operational cost $R(C; T_{\text{eff}})$** — the rate of physical resource consumption required to maintain structures and run processes of complexity $C$ at effective temperature $T_{\text{eff}}$.
-  - $R$ is non‑decreasing in $C$ ($R'(C)\ge 0$). For $C > C_{op}$ (Operational Threshold; Definition 13), we adopt strict convexity, $R''(C) > 0$: each additional bit must integrate with the existing $2^C$ states, raising coordination, error‑correction, and communication overhead. A minimal parametric form is
+- **Definition 3a (Physical operational cost $R(C; T_{\text{eff}})$).** The rate of physical resource consumption required to maintain structures and run processes of complexity $C$ at effective temperature $T_{\text{eff}}$.
+  - $R$ is non‑decreasing in $C$ ($R'(C)\ge 0$). For $C > C_{op}$ (Operational Threshold; Definition 13), we adopt strict convexity, $R''(C) > 0$, reflecting the increasing coordination, error‑correction, and communication overhead at scale. Intuitively, adding one bit must be integrated with the existing $2^C$ states; this raises the marginal cost $R'(C)$, yielding convexity. A minimal parametric form is
  $$
     R(C; T_{\text{eff}})
     \;=\; R(C_{\text{op}}; T_{\text{eff}})
     \;+\; r_p(T_{\text{eff}})\,\bigl(C - C_{\text{op}}\bigr)^{\gamma_p},
     \quad C\ge C_{\text{op}},\ \gamma_p>1,\ r_p(T_{\text{eff}})>0. \quad (4)
     $$
-- **Reflexive‑information cost $R_I(C; T_{\text{eff}})$** — the informational overhead rate associated with self‑referential verification (SPAP). Reflecting diminishing returns beyond the Horizon Constant $K_0$,
+- **Definition 3b (Reflexive‑information cost $R_I(C; T_{\text{eff}})$).** The informational overhead rate associated with self‑referential verification (SPAP). Reflecting diminishing returns beyond the Horizon Constant $K_0$,
  $$
   R_I(C; T_{\text{eff}})
   \;=\; \frac{r_I(T_{\text{eff}})}{\ln 2}\,\ln\!\Bigl(\frac{C}{K_0}\Bigr),

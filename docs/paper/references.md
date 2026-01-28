@@ -27,9 +27,11 @@
 *   Audenaert, K. M. R., & Datta, N. (2015). α–z–Rényi relative entropies. *Journal of Mathematical Physics*, *56*(2), 022202. DOI: 10.1063/1.4906367
 *   Baker, C. A., et al. (2006). Improved experimental limit on the electric dipole moment of the neutron. *Physical Review Letters*, *97*(13), 131801. DOI: 10.1103/PhysRevLett.97.131801
 *   Baker, H. F. (1905). Alternants and continuous groups. *Proceedings of the London Mathematical Society*, *s2-3*, 24–47.
+*   Bakry, D., & Émery, M. (1985). Diffusions hypercontractives. In *Séminaire de Probabilités XIX 1983/84* (Lecture Notes in Mathematics, Vol. 1123, pp. 177–206). Springer. DOI: 10.1007/BFb0075847
 *   Baldwin, T. (1996). There might be nothing. *Analysis*, *56*, 231–238.
 *   Bargmann, V. (1964). Note on Wigner's theorem on symmetry operations. *Journal of Mathematical Physics*, *5*(7), 862–868. DOI: 10.1063/1.1704188
-*   Bakry, D., & Émery, M. (1985). Diffusions hypercontractives. In *Séminaire de Probabilités XIX 1983/84* (Lecture Notes in Mathematics, Vol. 1123, pp. 177–206). Springer. DOI: 10.1007/BFb0075847
+*   Barthel, T., & Kliesch, M. (2012). Quasilocality and Efficient Simulation of Markovian Quantum Dynamics. *Physical Review Letters*, *108*(23), 230504. DOI: 10.1103/PhysRevLett.108.230504
+*   Bassham, L., Rukhin, A., Soto, J., Nechvatal, J., Smid, M., Leigh, S., Levenson, M., Vangel, M., Heckert, N., & Banks, D. (2010). *A Statistical Test Suite for Random and Pseudorandom Number Generators for Cryptographic Applications*. NIST Special Publication 800-22 Revision 1a. National Institute of Standards and Technology. DOI: 10.6028/NIST.SP.800-22r1a
 *   Baumgartner, B., & Narnhofer, H. (2008). Analysis of quantum semigroups with GKS–Lindblad generators: II. General. *Journal of Physics A: Mathematical and Theoretical*, *41*(39), Article 395303. DOI: 10.1088/1751-8113/41/39/395303
 *   Becker, A. (2018). *What Is Real?: The Unfinished Quest for the Meaning of Quantum Physics*. Basic Books.
 *   Belavin, A. A., Polyakov, A. M., Schwartz, A. S., & Tyupkin, Y. S. (1975). Pseudoparticle solutions of the Yang–Mills equations. *Physics Letters B*, *59*(1), 85–87. DOI: 10.1016/0370-2693(75)90163-X
@@ -108,7 +110,7 @@
 *   Clauser, J. F., Horne, M. A., Shimony, A., & Holt, R. A. (1969). Proposed experiment to test local hidden-variable theories. *Physical Review Letters*, *23*(15), 880–884.
 *   Clowe, D., Bradač, M., Gonzalez, A. H., Markevitch, M., Randall, S. W., Jones, C., & Zaritsky, D. (2006). A direct empirical proof of the existence of dark matter. *The Astrophysical Journal Letters*, *648*(2), L109–L113. DOI: 10.1086/508162
 *   CMS Collaboration (Tumasyan, A., *et al.*) (2022). Search for new physics in the lepton plus missing transverse momentum final state in proton-proton collisions at $\sqrt{s} = 13$ TeV. *Journal of High Energy Physics*, *2022*(07), 067. DOI: 10.1007/JHEP07(2022)067
-*   CODATA Committee on Data for Science and Technology (2018). *The CODATA 2018 recommended values of the fundamental physical constants*. (Data available from physics.nist.gov/constants).
+*   NIST (2024). CODATA recommended values of the fundamental physical constants: 2022 (NIST SP 961, May 2024). 
 *   Cohen, A. G., & Kaplan, D. B. (1987). Thermodynamic generation of the baryon asymmetry. *Physics Letters B*, *199*(2), 251–258. DOI: 10.1016/0370-2693(87)91369-4
 *   Cohen, A. G., & Kaplan, D. B. (1988). Spontaneous baryogenesis. *Nuclear Physics B*, *308*(4), 913–928. DOI: 10.1016/0550-3213(88)90134-4
 *   Cohen, A. G., Kaplan, D. B., & Nelson, A. E. (1999). Effective field theory, black holes, and the cosmological constant. *Physical Review Letters*, *82*(25), 4971–4974. DOI: 10.1103/PhysRevLett.82.4971
@@ -444,6 +446,7 @@
 *   Pontecorvo, B. (1957). Mesonium and antimesonium. *Soviet Physics JETP*, *6*, 429.
 *   Pospelov, M., & Ritz, A. (2005). Electric dipole moments as probes of new physics. *Annals of Physics*, *318*(1), 119–169. DOI: 10.1016/j.aop.2005.04.002
 *   Post, E. L. (1921). Introduction to a General Theory of Elementary Propositions. *American Journal of Mathematics*, *43*(3), 163–185. DOI: 10.2307/2370324
+*   Poulin, D. (2010). Lieb–Robinson Bound and Locality for General Markovian Quantum Dynamics. *Physical Review Letters*, *104*(19), 190401. DOI: 10.1103/PhysRevLett.104.190401
 *   Pound, R. V., & Rebka, G. A. (1960). Apparent weight of photons. *Physical Review Letters*, *4*(7), 337–341.
 *   Preskill, J. (1998). *Lecture Notes for Physics 229: Quantum Information and Computation*. California Institute of Technology. 
 *   Preskill, J. (1998). Reliable quantum computers. *Proceedings of the Royal Society of London A*, *454*(1969), 385–410. DOI: 10.1098/rspa.1998.0167
@@ -468,6 +471,7 @@
 *   Ruskai, M. B. (1994). Beyond strong subadditivity? Improved bounds on the contraction of generalized relative entropy. *Reviews in Mathematical Physics*, *6*(5a), 1147–1161.
 *   Ryu, S., & Takayanagi, T. (2006). Holographic derivation of entanglement entropy from the anti–de Sitter space/conformal field theory correspondence. *Physical Review Letters*, *96*(18), 181602.
 *   Sagawa, T., & Ueda, M. (2009). Minimal Energy Cost for Thermodynamic Information Processing: Measurement and Information Erasure. *Physical Review Letters*, *102*(25), 250602. DOI: 10.1103/PhysRevLett.102.250602
+*   Sagawa, T., & Ueda, M. (2010). Generalized Jarzynski Equality Under Nonequilibrium Feedback Control. *Physical Review Letters*, *104*(9), 090602. DOI: 10.1103/PhysRevLett.104.090602
 *   Sahu, S., Ghosh, S., Hirata, K., Fujita, D., & Bandyopadhyay, A. (2013). Multi-level memory-switching properties of a single brain microtubule. *Applied Physics Letters*, *102*(12), 123701.
 *   Sakharov, A. D. (1967). Violation of CP invariance, C asymmetry, and baryon asymmetry of the universe. *JETP Letters*, *5*(1), 24–27. (Reprinted as: *Soviet Physics Uspekhi*, *34*(5), 392–393, 1991.) DOI: 10.1070/PU1991v034n05ABEH002497
 *   Sakurai, J. J., & Napolitano, J. (2017). *Modern Quantum Mechanics* (2nd ed.). Cambridge University Press. DOI: 10.1017/9781108499996

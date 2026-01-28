@@ -468,6 +468,34 @@ $\square$
 
 ---
 
+## U.10.3 One-Loop Determinant Structure
+
+**Proposition U.15a (One-Loop Determinant).** Let $O = -\Delta_{g_B} + \alpha$ denote the quadratic fluctuation operator on the attractor orbit $\text{Gr}(2,8) \cong U(8)/(U(2) \times U(6))$ (Remark U.14.1). The determinant contribution to the prefactor $K$ appearing in $A_{\text{eff}} := K \cdot N_{\text{eff}}$ (Section U.1) is defined by zeta regularization as:
+
+$$\det{}' O := \exp(-\zeta_\alpha'(0)),$$
+
+so that the Gaussian prefactor is:
+
+$$K := (\det{}' O)^{-1/2} = \exp\left(\frac{1}{2}\zeta_\alpha'(0)\right).$$
+
+Here the spectral zeta function is
+
+$$\zeta_\alpha(s) = \sum_{m_1 \ge m_2 \ge 0}' \text{mult}(m_1,m_2)\,(\lambda_B(m_1,m_2) + \alpha)^{-s},$$
+
+where $\lambda_B(m_1,m_2)$ and $\text{mult}(m_1,m_2)$ are the Laplacian eigenvalues and their multiplicities on $\text{Gr}(2,8)$ (Helgason 1984), the prime excludes $(m_1,m_2) = (0,0)$, and
+
+$$\alpha = \frac{1}{16\sigma_B^2} = \frac{3}{2}$$
+
+as in Remark U.14.1. Since $\dim_{\mathbb{R}}\text{Gr}(2,8) = 24$, $\zeta_\alpha(s)$ converges for $\Re(s) > 12$ and admits meromorphic continuation to $s=0$ via the heat kernel (e.g. Vassilevich 2003).
+
+**Corollary U.15b (Observed Prefactor).** Using the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849) \times 10^{-122}$ (Appendix V, Equation (V.5)) and $\kappa = 141.5$:
+
+$$A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016.$$
+
+This $O(1)$ value is consistent with the expectation $A_{\text{eff}} = K \cdot N_{\text{eff}} \sim O(1)$.
+
+---
+
 ## U.11 Main Result
 
 **Theorem U.16 (Cosmological Constant Complexity).** The instanton complexity parameter is:
@@ -484,11 +512,16 @@ where:
 
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-2\kappa} = 8\pi A_{\text{eff}} \cdot e^{-283}$$
 
-For $A_{\text{eff}} \sim O(1)$:
+With $A_{\text{eff}} := K \cdot N_{\text{eff}}$ (Section U.1), the baseline exponential factor is:
 
-$$\Lambda L_P^2 \sim 10^{-122}$$
+$$8\pi e^{-283} = 3.13 \times 10^{-122}$$
 
-matching the observed value $\Lambda L_P^2 \approx 2.87 \times 10^{-122}$ within the uncertainty of $A_{\text{eff}}$.
+Thus:
+
+- For $A_{\text{eff}} = 1$: $\Lambda L_P^2 = 3.13 \times 10^{-122}$
+- For $A_{\text{eff}} = 0.917$: $\Lambda L_P^2 = 2.87 \times 10^{-122}$
+
+The observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849) \times 10^{-122}$ (Appendix V, Equation (V.5)) implies $A_{\text{eff}} = 0.917 \pm 0.016$ (Corollary U.15b), consistent with the $O(1)$ expectation from one-loop determinants.
 
 ---
 
@@ -513,15 +546,17 @@ Both structures exist at $M = 24$ as derived consequences of PCE optimization (T
 | $m = D + 1$ | Translation + dilatation modes | 5 |
 | $\delta = m/2$ | Morse-Bott deficit | 2.5 |
 | $\kappa = \kappa_0 - \delta$ | Final complexity | **141.5** |
+| $A_{\text{eff}} := K \cdot N_{\text{eff}}$ | One-loop prefactor definition (Section U.1) | $O(1)$ |
+| $A_{\text{eff}}^{(\text{obs})}$ | Inferred from $\Lambda L_P^2$ (Corollary U.15b) | $0.917 \pm 0.016$ |
 
 ### U.12.3 Comparison with Observation
 
-| Source | $\kappa$ Value | $\Lambda L_P^2$ |
-|--------|----------------|-----------------|
-| Derived | 141.5 | $\approx 10^{-123}$ |
-| Derived | 141.5 | $\approx 3 \times 10^{-122}$ |
-| Observed | $141.54 \pm 0.02$ | $2.87 \times 10^{-122}$ |
-| Agreement | — | **0.03%** |
+| Quantity | Derived | From Observation | Notes |
+|----------|---------|------------------|-------|
+| $\kappa$ | 141.5 | — | Grassmannian geometry (Theorem U.16) |
+| $\Lambda L_P^2$ (for $A_{\text{eff}}=1$) | $3.13 \times 10^{-122}$ | $(2.86599 \pm 0.04849) \times 10^{-122}$ | 9% |
+| $\kappa_{\text{inv}}$ (setting $A_{\text{eff}}=1$) | — | $141.543 \pm 0.009$ | 0.03% from $\kappa=141.5$ |
+| $A_{\text{eff}}^{(\text{obs})}$ | $O(1)$ | $0.917 \pm 0.016$ | Corollary U.15b |
 
 ---
 

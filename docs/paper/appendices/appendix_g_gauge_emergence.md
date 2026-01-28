@@ -112,7 +112,7 @@ Gleason's original proof required the Hilbert space dimension to be $\dim(\mathc
 
     **Claim.** Let $f$ assign to each effect $E$ on $\mathbb C^2$ a number $f(E)\in[0,1]$ such that: (i) finite additivity on POVMs: for every finite POVM $\{E_i\}$ such that $\sum_i E_i = \mathbf{1}$, we have $\sum_i f(E_i)=f(\mathbf{1})$; (ii) $f$ is continuous in the operator norm; and (iii) normalization $f(\mathbf 1)=1$.Then there exists a unique density operator $\rho$ on $\mathbb C^2$ with $f(E)=\mathrm{tr}(\rho E)$ for all effects $E$.
 
-    *Proof.* By the principle, $f$ is a bounded, positive, finitely additive functional on the effect algebra. For $E,F\ge 0$ with $E+F\le I$, embed $\{E,F,I-E-F\}$ into a POVM to get $f(E+F)=f(E)+f(F)$; by scaling, extend $f$ to all positive $T\le I$, then to the positive cone by homogeneity, to self-adjoints by Jordan decomposition, and to all of $\mathcal B(\mathbb C^2)$ by complex linearity (details as in Busch 2003). By the Riesz representation theorem there exists a unique $\rho\ge 0$, $\mathrm{tr}\,\rho=1$, such that $f(E)=\mathrm{tr}(\rho E)$ for all effects $E$. Specializing to projections $P$ recovers the Born weights $f(P)=\mathrm{tr}(\rho P)$. This closes the $d=2$ case. [Busch 2003; Caves–Fuchs–Manne–Renes 2004] ∎
+    *Proof.* By the principle, $f$ is a bounded, positive, finitely additive functional on the effect algebra. For $E,F\ge 0$ with $E+F\le I$, embed $\{E,F,I-E-F\}$ into a POVM to get $f(E+F)=f(E)+f(F)$; by scaling, extend $f$ to all positive $T\le I$, then to the positive cone by homogeneity, to self-adjoints by Jordan decomposition, and to all of $\mathcal B(\mathbb C^2)$ by complex linearity (details as in Busch 2003). By the Riesz representation theorem there exists a unique $\rho\ge 0$, $\mathrm{tr}\,\rho=1$, such that $f(E)=\mathrm{tr}(\rho E)$ for all effects $E$. Specializing to projections $P$ recovers the Born weights $f(P)=\mathrm{tr}(\rho P)$. This closes the $d=2$ case. [Busch 2003; Caves et al. 2004] ∎
 
 Therefore, both the physical embedding and the formal extension via PCE-enforced consistency for POVMs ensure that the Born rule derivation holds universally within the framework.
 
@@ -143,11 +143,35 @@ Let $\mathfrak{A}$ be an abstract algebraic structure describing the predictive 
 
 **Corollary G.1.9 (PCE Instability of Alternative Predictive Algebras).**
 Any proposed alternative algebraic structure for prediction (e.g., classical probability on phase space, real or quaternionic Hilbert spaces, Jordan algebras, $L^p$ spaces with $p \neq 2$) would be unstable under PCE optimization compared to the complex Hilbert space structure.
-*Proof Sketch:*
-1.  **Classical Phase Space:** Lacks the capacity for superposition and non-commuting observables necessary to efficiently model the full range of MPU interactions and internal states required by POP (e.g., resolving SPAP/Logical Indeterminacy constraints requires QM-like complementarity, efficiently handled in Hilbert space). It also cannot directly support a cost functional satisfying Gleason's theorem conditions in a way that leads to QM probabilities.
-2.  **Real Hilbert Spaces:** While supporting some quantum features, they lack the natural $U(1)$ phase freedom essential for the emergence of electromagnetism (Section G.2) and face restrictions with Gleason's theorem for general probability measures, potentially leading to contextual or non-additive cost functions that are sub-optimal under PCE. Tensor products and certain symmetries are also more cumbersome.
-3.  **Quaternionic Hilbert Spaces:** Introduce additional non-commutative structure in the scalar field, leading to different symmetry groups and typically more complex dynamics. Unless these extra structures provide a significant, demonstrable PCE benefit (e.g., vastly improving $PP$ or reducing $R, R_I$ costs without other penalties), PCE would favor the simpler complex Hilbert space.
-4.  **General Failure to Support Optimal Cost Structure:** For these alternatives to be viable under PU, they would need to support a cost frame functional $f(P)$ exhibiting non-contextual additivity (from Lemma G.1.1b) and consistency with $P(P)=\text{Tr}(\rho_{phys}P)$ globally (from Section G.1.4 logic). If an alternative structure fails to naturally yield this, then imposing it would be akin to adding constraints. This deviation from the structure intrinsically optimal for complex Hilbert spaces would manifest as an additional effective penalty term in its PCE potential $V(x)_{alt} = V(x)_{complex_H} + V_{penalty,struc}$. PCE dynamics minimizing $V(x)_{alt}$ would then drive the system either towards behaviors that mimic complex Hilbert space dynamics or to states that are demonstrably less efficient, thus being outcompeted by true complex Hilbert space based MPU configurations. Thus, the complex Hilbert space structure is uniquely stable under PCE. QED
+*Proof.* Let $\mathfrak{A}$ denote a proposed predictive algebra (states, sharp outcomes, and composition rules) used by an MPU. For $\mathfrak{A}$ to be PCE-stable, the POP/PCE accounting of outcome branches must admit a nonnegative, finitely additive, non-contextual frame functional $f(P)$ on sharp outcomes (Definition G.1.1), because any contextual dependence introduces avoidable bookkeeping and is penalized by the PCE potential $V(x)$ (Lemma G.1.1b and Appendix D, Definition D.1). Under these premises and $\dim(\mathcal{H}_0)\ge 3$ (Theorem 23), Theorem G.1.7 enforces the trace-form rule for costs/probabilities,
+$$
+f(P)=\operatorname{Tr}(\rho_{phys}P),
+\qquad
+p(P)=\operatorname{Tr}(\rho_{phys}P),
+$$
+for all projectors $P$ in the operational theory.
+
+Now take any alternative proposal $\mathfrak{A}_{alt}$:
+
+- If $\mathfrak{A}_{alt}$ supports such a globally non-contextual additive frame functional and also supports efficient composition/local tomography as required by POP, then Theorem G.1.8 applies: the operational theory admits a (GNS) Hilbert representation and is, up to isomorphism of predictions and composition, the complex Hilbert-space theory. In this case there is no genuinely distinct alternative—PCE-stable realizations of $\mathfrak{A}_{alt}$ reproduce complex Hilbert behavior.
+
+- If $\mathfrak{A}_{alt}$ fails to supply this structure naturally, then an MPU using it must either (i) accept reduced predictive performance $PP$ (lowering $V_{benefit}$), or (ii) impose extra constraints/hidden degrees/contextual correction rules to recover PU consistency. Case (ii) contributes a strictly positive excess cost, which appears as an effective structural penalty in the PCE potential:
+$$
+V(x)_{alt}=V(x)_{complex_H}+V_{penalty,struc},
+$$
+with $V_{penalty,struc}>0$ whenever $\mathfrak{A}_{alt}$ is genuinely inequivalent. Under the PCE adaptation dynamics (Appendix D, Equation D.8) and convergence (Theorem D.5), configurations with strictly higher potential are unstable and are outcompeted by those implementing the complex Hilbert-space structure.
+
+The examples listed fall into this dichotomy:
+
+1. **Classical phase space:** Classical probability is a simplex theory and is excluded already by Corollary G.1.10 (complementarity from SPAP). Any attempt to emulate complementarity requires extra hidden structure or contextuality, which increases $V_{penalty,struc}$.
+
+2. **Real Hilbert spaces:** Although some quantum features persist, the local phase/gauge mechanism derived in Section G.2 (and summarized in Section G.7) is not naturally available without complexification (or an equivalent doubling/constraint construction), adding operational cost without improving $PP$.
+
+3. **Quaternionic Hilbert spaces:** The non-commutative scalar field enlarges symmetry and state-parameter counts and complicates composition; absent demonstrable net benefit that lowers $V(x)$, PCE selects the complex subtheory and the unused extra structure contributes only positive $V_{penalty,struc}$.
+
+4. **Jordan algebras and $L^p$ spaces with $p\neq 2$:** These frameworks do not, in general, provide a natural globally non-contextual additive frame functional compatible with the trace-form assignment demanded by Theorem G.1.7 across all physically realizable decompositions; enforcing that consistency again amounts to added constraints and hence added penalty.
+
+Therefore the complex Hilbert-space structure is uniquely stable under PCE. QED
 
 **Corollary G.1.10 (Non-Simplex State Space from SPAP).**
 The self-referential structure of SPAP (Theorem 10, Theorem 11) logically excludes simplex state spaces, independent of efficiency considerations.

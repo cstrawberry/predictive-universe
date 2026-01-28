@@ -1015,7 +1015,7 @@ $$
 
 reflects pure E$_8$ geometry, independent of the overall scale set by $\mathcal{I}_{rel}$.
 
-*Proof.* From Theorem N.9, the ratio depends only on squared E$_8$ distances between generation roots: $d^2_{32} = d^2_{\tau\mu} = 2$ and $d^2_{31} = d^2_{\tau e} = 6$ (Appendix T, Theorem T.24.3). Therefore $\mathcal{R}_\ell = 6/2 = 3$. The observed value $\mathcal{R}_\ell^{obs} = 2.889$ (PDG 2024) agrees with the prediction to 3.8% (Appendix T, Section T.25.4). ∎
+*Proof.* From Theorem N.9, the ratio depends only on squared E$_8$ distances between generation roots: $d^2_{32} = d^2_{\tau\mu} = 2$ and $d^2_{31} = d^2_{\tau e} = 6$ (Appendix T, Theorem T.24.3). Therefore $\mathcal{R}_\ell = 6/2 = 3$. The observed value $\mathcal{R}_\ell^{obs} = 2.889$ (Particle Data Group 2024) agrees with the prediction to 3.8% (Appendix T, Section T.25.4). ∎
 
 ## N.11.8 The Complete Derivation Chain
 
