@@ -182,7 +182,7 @@ A complex Hilbert space $\mathcal{H}_0$ emerges as the necessary mathematical st
 *Proof Summary:* The Hilbert space structure arises from fulfilling operational requirements under constraints:
 1.  **Probabilistic Framework:** 'Evolve' interactions are indeterminate (Theorem 27, Theorem 28), requiring a state space supporting probability assignments.
 2.  **Superposition:** Logical Indeterminacy (Definition 12) from SPAP necessitates representing coexisting outcome potentials, requiring linear superposition beyond classical probability mixtures.
-3.  **Inner Product & Born Rule:** **Inner Product & Born Rule:** Consistent probability assignment across perspectives mandates an inner product structure, leading uniquely to the Born rule (**Proposition 7**) via Gleason's theorem (see **Lemma G.1.1b**).
+3.  **Inner Product & Born Rule:** Consistent probability assignment across perspectives mandates an inner product structure; under the non-contextual additivity and refinement-continuity constraints selected by PCE, the probability law is fixed to the Born form (**Proposition 7**, **Theorem 8.6**) via Gleason-type theorems (see **Lemma G.1.1b**).
 4.  **Complex Field ($\mathbb{C}$):** Consistent composition of multiple MPUs (tensor products) and the representation of continuous dynamics and complementarity favor the complex field over real or quaternionic structures, due to properties such as efficient local tomography and the structure of the unitary group (see Appendix G.1.4).
 5.  **Completeness:** Mathematical consistency requires a complete normed space (Hilbert space).
 6.  **Minimal Dimension:** $C_{op} \ge K_0$ implies $d_0 \ge 8$ (Theorem 23).

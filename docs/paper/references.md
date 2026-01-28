@@ -5,6 +5,7 @@
 *   Agostini, M., Benato, G., Detwiler, J. A., Menéndez, J., & Vissani, F. (2023). Toward the discovery of matter creation with neutrinoless ββ decay. *Reviews of Modern Physics*, *95*, 025002. DOI: 10.1103/RevModPhys.95.025002
 *   Aharonov, D., Kitaev, A., & Nisan, N. (1998). Quantum circuits with mixed states. *Proceedings of the Thirtieth Annual ACM Symposium on Theory of Computing*, 20–30.
 *   Aharonov, Y., Bergmann, P. G., & Lebowitz, J. L. (1964). Time Symmetry in the Quantum Process of Measurement. *Physical Review*, *134*(6B), B1410–B1416. DOI: 10.1103/PhysRev.134.B1410
+*   Aharonov, Y., & Zubairy, M. S. (2005). Time and the quantum: erasing the past and impacting the future. *Science*, *307*(5711), 875–879. DOI: 10.1126/science.1107787
 *   Albert, D. (2012). On the Origin of Everything. Review of L. Krauss, *A Universe from Nothing*. *New York Times*
 *   ALEPH, DELPHI, L3, OPAL, and SLD Collaborations (Schael, S., *et al.*) (2006). Precision electroweak measurements on the Z resonance. *Physics Reports*, *427*(5–6), 257–454. DOI: 10.1016/j.physrep.2005.12.006
 *   Amari, S.-I. (1998). Natural gradient works efficiently in learning. *Neural Computation*, *10*(2), 251–276.
@@ -135,6 +136,7 @@
 *   Cronin, A. D., Schmiedmayer, J., & Pritchard, D. E. (2009). Optics and interferometry with atoms and molecules. *Reviews of Modern Physics*, *81*(3), 1051–1129.
 *   Curtis, R. T. (2016). Error-correction and the binary Golay code. *London Mathematical Society Impact150 Stories*, *1*, 51–58.
 *   D'Alessandro, D. (2007). *Introduction to Quantum Control and Dynamics*. Chapman and Hall/CRC. DOI: 10.1201/9781584888833
+*   D'Onofrio, M., Rummukainen, K., & Tranberg, A. (2014). Sphaleron rate in the minimal standard model. *Physical Review Letters*, *113*(14), 141602. DOI: 10.1103/PhysRevLett.113.141602
 *   Dal Maso, G. (1993). *An Introduction to Γ-convergence*. Birkhäuser.
 *   Darwin, C. (1859). *On the Origin of Species by Means of Natural Selection*. John Murray.
 *   Dawson, C. M., & Nielsen, M. A. (2006). The Solovay-Kitaev algorithm. *Quantum Information & Computation*, *6*(1), 81–95. DOI: 10.5555/2011679.2011685
@@ -217,6 +219,7 @@
 *   Gorini, V., Kossakowski, A., & Sudarshan, E. C. G. (1976). Completely positive dynamical semigroups of N-level systems. *Journal of Mathematical Physics*, *17*(5), 821–825. DOI: 10.1063/1.522979 
 *   Gottesman, D. (1998). A Theory of Fault-Tolerant Quantum Computation. *Physical Review A*, *57*(1), 127–137. DOI: 10.1103/PhysRevA.57.127
 *   Graham, P. W., Irastorza, I. G., Lamoreaux, S. K., Lindner, A., & van Bibber, K. A. (2015). Experimental searches for the axion and axion-like particles. *Annual Review of Nuclear and Particle Science*, *65*, 485–514. DOI: 10.1146/annurev-nucl-102014-022120
+*   Gray, A., & Vanhecke, L. (1979). Riemannian geometry as determined by the volumes of small geodesic balls. *Acta Mathematica*, *142*, 157–198. DOI: 10.1007/BF02395060
 *   Griesmer, J. H. (1960). A bound for error-correcting codes. *IBM Journal of Research and Development*, *4*(5), 532–542. DOI: 10.1147/rd.45.0532
 *   Griess, R. L. (1982). The friendly giant. *Inventiones Mathematicae*, *69*, 1–102.
 *   Griffiths, P., & Harris, J. (1978). *Principles of Algebraic Geometry*. Wiley.

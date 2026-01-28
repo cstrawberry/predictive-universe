@@ -141,7 +141,7 @@ A separate bound on algorithmic predictability confounds is given by $P_{\rm gue
 $$
 |\Delta P|_{\rm PU}\ \lesssim\ \mathrm{CC}(S)/2.$$
 Using representative achievable values of $|\Delta\alpha|\!\lesssim\!10^{-39}\,\mathrm{J\,m^2/V^2}$ and $u\!\lesssim\!10^{-18}\,\mathrm{J/m^3}$, we obtain
-$|\Delta P|_{\rm EM}\ \lesssim\ 5.36\times 10^{-13}\,T$ (with $T$ in seconds). This yields $|\Delta P|_{\rm EM} \lesssim 5.4\times 10^{-13}$ at $T=1\,\mathrm{s}$, and $1.9\times 10^{-9}$ at $T=1\,\mathrm{hr}$. Consequently, any observed $|\Delta P|\gtrsim 10^{-6}$ **cannot** be attributed solely to these EM channels. In contrast, the PU framework predicts $|\Delta P|_{\rm PU}$ could potentially reach $\sim 10^{-4}$ (assuming $\mathrm{CC}(S) \sim 10^{-4}$).
+$|\Delta P|_{\rm EM}\ \lesssim\ 2.68\times 10^{-13}\,T$ (with $T$ in seconds). This yields $|\Delta P|_{\rm EM} \lesssim 2.7\times 10^{-13}$ at $T=1\,\mathrm{s}$, and $9.6\times 10^{-10}$ at $T=1\,\mathrm{hr}$. Consequently, any observed $|\Delta P|\gtrsim 10^{-6}$ **cannot** be attributed solely to these EM channels. In contrast, the PU framework predicts $|\Delta P|_{\rm PU}$ could potentially reach $\sim 10^{-4}$ (assuming $\mathrm{CC}(S) \sim 10^{-4}$).
 
 
 **13.5 Prediction/Protocol 3: Exploratory Bell Tests / Statistical FTL Search**
