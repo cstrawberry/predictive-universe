@@ -105,8 +105,7 @@ $$
 
 The maximum classical information (Mutual Information $I(A;B)$) transmittable from Alice's choice of context ($A$) to Bob's observed outcome ($B$) per trial is quadratically suppressed by the CC value. Let $p=P_{B|A=0}$ and $q=P_{B|A=1}$ be the outcome distributions, $M=\frac{1}{2}(p+q)$ be the mixture, and $m_0 = \min_i M_i > 0$ be the minimum mixture probability (a necessary condition for a regular operating point). The mutual information is bounded by:
 $$
-I(A;B) \le \frac{\mathrm{CC}(S)^2}{8\,m_0} + O(\mathrm{CC}(S)^3) \quad \text{(nats/trial)}
-\tag{63}
+I(A;B) \le \frac{\mathrm{CC}(S)^2}{8\,m_0} + O(\mathrm{CC}(S)^3) \quad \text{(nats/trial)} \quad \text{(63)}
 $$
 *Proof:* For a binary context with equal priors, the mutual information is the Jensen-Shannon Divergence, $I(A;B) = \mathrm{JSD}(p,q)$. For small deviations, JSD admits the expansion $\mathrm{JSD}(p,q) = \frac{1}{8}\sum_i \frac{(q_i-p_i)^2}{M_i} + O(\|q-p\|_1^3)$. Since $M_i \ge m_0 > 0$, this is bounded by $\frac{1}{8m_0} \sum_i (q_i-p_i)^2 = \frac{1}{8m_0}\|q-p\|_2^2 \le \frac{1}{8m_0}\|q-p\|_1^2$. From Theorem 36, the Total Variation distance is bounded by $\|q-p\|_1 = 2\,\mathrm{TV}(p,q) \le 2\sin\!\big(\mathrm{CC}(S)/2\big)$. For small $\mathrm{CC}(S)$, $2\sin(\mathrm{CC}(S)/2)\approx \mathrm{CC}(S)$, so $\|q-p\|_1 \le \mathrm{CC}(S)$. Combining these yields the result. This rigorous bound, with an explicit constant $K=1/(8m_0)$, proves that the information rate is too low for deterministic signaling, ensuring consistency with operational causality (Postulate 2).
 

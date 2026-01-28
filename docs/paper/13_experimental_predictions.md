@@ -70,14 +70,14 @@ where $Z_x$ is the critical value of the standard normal distribution. The preci
 *   **Independence and Error Control:** Independence of trials will be rigorously assessed using autocorrelation functions (ACF), Ljung–Box tests, and Wald–Wolfowitz runs tests on the output streams and residuals. The NIST Statistical Test Suite [Bassham et al. 2010] will be applied to verify randomness properties. If correlations are detected, appropriate methods such as pre-whitening, block-bootstrap confidence intervals, or data thinning will be employed. Multiplicity of tests across outcomes or contexts will be controlled using standard methods (e.g., Bonferroni correction for family-wise error rate or Benjamini-Hochberg procedure for false discovery rate).
 *   **Sequential Analysis:** For high-statistics runs, a sequential analysis plan with pre-specified interim looks using O’Brien–Fleming-type boundaries (implemented via the Lan-DeMets error spending function [Lan & DeMets 1983]) is recommended. This allows for early stopping due to efficacy or futility while preserving the overall type-I error rate. The table below provides indicative total sample sizes ($N_{OBF}$) per context and expected stopping distributions under the alternative hypothesis for three equally spaced looks.
 
-| α | δ | N_fixed | N_OBF (≈ 1.06 × N_fixed) | Expected stop % at looks 1/2/3 (under H₁) |
+| $\alpha$ | $\delta$ | $N_{\text{fixed}}$ | $N_{\text{OBF}}$ ($\approx 1.06 \times N_{\text{fixed}}$) | Expected stop % at looks 1/2/3 (under $H_1$) |
 |---:|---:|---:|---:|:---|
-| 0.01 | 10⁻³ | 2,302,586 | 2,440,742 | ~5% / 20% / 75% |
-| 0.01 | 5×10⁻⁴ | 9,210,341 | 9,762,962 | ~3% / 17% / 80% |
-| 0.01 | 10⁻⁴ | 230,258,510 | 244,074,021 | ≲1% / 10% / 89% |
-| 0.001 | 10⁻³ | 3,453,878 | 3,661,111 | ~4% / 18% / 78% |
-| 0.001 | 5×10⁻⁴ | 13,815,511 | 14,644,442 | ~2% / 15% / 83% |
-| 0.001 | 10⁻⁴ | 345,387,764 | 366,111,030 | ≲1% / 9% / 90% |
+| 0.01 | $10^{-3}$ | 2,302,586 | 2,440,742 | ~5% / 20% / 75% |
+| 0.01 | $5 \times 10^{-4}$ | 9,210,341 | 9,762,962 | ~3% / 17% / 80% |
+| 0.01 | $10^{-4}$ | 230,258,510 | 244,074,021 | $\lesssim 1$% / 10% / 89% |
+| 0.001 | $10^{-3}$ | 3,453,878 | 3,661,111 | ~4% / 18% / 78% |
+| 0.001 | $5 \times 10^{-4}$ | 13,815,511 | 14,644,442 | ~2% / 15% / 83% |
+| 0.001 | $10^{-4}$ | 345,387,764 | 366,111,030 | $\lesssim 1$% / 9% / 90% |
 
 *   *Assumptions for $N_{\rm fixed}$ in the table:* **One-sample proportion** design with baseline $p=0.25$, power $1-\beta=0.80$.
     *   *Sequential design:* O’Brien–Fleming boundaries with **3 equally spaced** looks at cumulative information fractions $1/3, 2/3, 1$. The overhead factor (~1.06) and stop percentages are **illustrative**; exact values will be determined by the preregistered simulations and released with the code.
@@ -192,7 +192,7 @@ The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\tex
 Beyond the direct experimental search for CC, the framework's quantitative predictions for fundamental constants and emergent gravity provide sharp, falsifiable tests.
 
 **13.8.1 The Fine-Structure Constant Prediction Window**
-The framework predicts the Thomson-limit fine-structure constant $\alpha^{-1} ≈ 137.036 \pm 0.0001$ directly from the PCE-Attractor structure (Appendix Z, Theorem Z.26). This value agrees with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999084(21)$ to 0.68 ppm, within the theoretical uncertainty. The prediction is falsifiable: if future measurements of $\alpha(0)$ deviate from this value beyond the stated uncertainty, the PCE-Attractor model for the origin of the U(1) coupling would be invalidated. As a consistency check, applying standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$, in agreement with experiment (Appendix Z, Corollary Z.8).
+The framework predicts the Thomson-limit fine-structure constant $\alpha^{-1} ≈ 137.036 \pm 0.0001$ directly from the PCE-Attractor structure (Appendix Z, Theorem Z.26). This value agrees with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$ to 0.68 ppm, within the theoretical uncertainty. The prediction is falsifiable: if future measurements of $\alpha(0)$ deviate from this value beyond the stated uncertainty, the PCE-Attractor model for the origin of the U(1) coupling would be invalidated. As a consistency check, applying standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$, in agreement with experiment (Appendix Z, Corollary Z.8).
 
 **13.8.2 The Multi-Scale Gravity / Dark Sector Window**
 The framework's two-mechanism model for the dark sector (Appendix I) is falsifiable through its demand for cross-scale consistency with a minimal set of universal parameters. The model can be falsified in several ways:
@@ -342,7 +342,7 @@ $$\text{PCE optimization} \xrightarrow{M=24} \mathcal{G}_{24} \xrightarrow{\text
 
 - PCE optimization on $M = 24$ modes selects the Golay code (Theorem Z.13b)
 - The Golay code provides glue vectors for constructing $\Lambda_{24}$ from $\sqrt{2}E_8^3$ (Lemma R.4.5)
-- The Leech lattice has kissing number 196,560, but the *dimension* 24 matches the unique $D$ where $K(D) = 24$ (Theorem Z.10)
+- The Leech lattice has kissing number 196,560, but the *dimension* 24 matches the unique $D$ where $K(D) = 24$ (Theorem Z.11)
 - Mode-channel matching $M_{\text{int}} = K(D) = 24$ selects $D = 4$ (Theorem Z.11)
 
 Each step follows uniquely from the previous under PCE constraints. ∎

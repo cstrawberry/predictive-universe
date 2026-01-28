@@ -120,7 +120,7 @@ To make the CC hypothesis testable, we model how baseline Born rule probabilitie
 The observable probability distribution $q = \{q_i\}$ for an outcome $i$ of a POVM $\{E_i\}$ on a system in state $\rho$, in the presence of a context-providing MPU aggregate $S$, is a modification of the baseline Born distribution $p = \{p_i\}$, where $p_i = P_{\mathrm{Born}}(i)=\mathrm{tr}(\rho E_i)$. The Principle of Compression Efficiency (PCE) dictates that any such modification must be minimal for a given resource cost. The canonical measure of distance on the statistical manifold of probability distributions is the Fisher-Rao geodesic distance, $d_{\mathrm{FR}}(p,q)$. We therefore formalize the CC influence as a bound on this minimal-cost path:
 $$
 d_{\mathrm{FR}}(p,q) = 2\arccos\left(\sum_k \sqrt{p_k q_k}\right) \le \mathrm{CC}(S)
-\tag{57}
+\quad \text{(57)}
 $$
 This single principle yields sharp, non-perturbative, and instrument-independent bounds on observable probability shifts.
 

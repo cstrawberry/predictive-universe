@@ -1961,7 +1961,7 @@ Rounding to significant figures: α⁻¹_PU ≈ 137.036.
 ### Z.23.1 Experimental Value
 
 The CODATA 2022 recommended value for the fine-structure constant at the Thomson limit (q² → 0) (NIST 2024):
-$$\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$$
+$\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$
 
 ### Z.23.2 Agreement Analysis
 
@@ -2324,9 +2324,9 @@ With $u^* = 2^{1/8} - 1$ and $K_0 = 3$:
 
 **Comparison with Experiment:**
 $$\alpha^{-1}_{\mathrm{theory}} ≈ 137.036092 \pm 0.000050$$
-$$\alpha^{-1}_{\mathrm{exp}} = 137.035999084(21)$$
+$\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$
 
-**Discrepancy:** +0.000093 ± 0.000050
+**Discrepancy:** +0.0000928 ± 0.000050
 **Relative:** 0.68 ppm (~2σ)
 
 ### Z.27.9 Theoretical Error Budget

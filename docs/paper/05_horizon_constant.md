@@ -12,7 +12,7 @@ $$
 \boxed{
 \;C_{op} \;=\; \inf \Big\{\, C_P(\mu)\ \Big|\ \mu\in\mathcal{S}_{phys},\; A\big(f_\mu(\mathcal{E}_{past}),\mathcal{E}_{future}\big)\;>\; A\big(f_{random}(\mathcal{E}_{past}),\mathcal{E}_{future}\big)\;+\;\epsilon_{acc}\,\Big\} \;.
 }
-\tag{15}
+\quad \text{(15)}
 $$
 
 We assume mild regularity: the set of $C_P$ values among states satisfying the accuracy condition is non‑empty and bounded below, and $A(f_\mu)$ varies continuously enough with resources quantified by $C_P(\mu)$ to render the infimum meaningful. For predictions aggregated over $T$ trials, $\epsilon_{acc}$ can be chosen to scale as $\epsilon_{acc}= \Theta(T^{-1/2})$, ensuring significance on finite timescales.
@@ -25,7 +25,7 @@ The Operational Threshold $C_{op}$ measures the minimum complexity to implement 
 
 $$
 \boxed{P_{min} \;=\; R(C_{op}).}
-\tag{16}
+\quad \text{(16)}
 $$
 
 A concrete baseline arises from Landauer‑type considerations for logically irreversible steps within the MPU cycle (cf. **Theorem 29** and Appendix J):
@@ -127,7 +127,7 @@ The **Operational Threshold** must satisfy
 
 $$
 \boxed{C_{op}\ \ge\ K_0\ =\ 3\ \text{bits}.}
-\tag{17}
+\quad \text{(17)}
 $$
 
 *Proof.* The adaptive Fundamental Predictive Loop (Definition 4) includes, as an internal sub‑dynamic, the SPAP logic and the capabilities $b_m,b_p,b_v, D_{cyc}$ (Definition 5; Proposition 5.2.1). By Theorem 15, the minimal $C_P$ that realizes this sub‑dynamic and permits super‑chance operation on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ is $K_0=3$. Therefore, any system meeting the Definition 13 criterion must have $C_P\ge 3$. ∎

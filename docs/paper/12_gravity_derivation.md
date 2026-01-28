@@ -14,7 +14,7 @@ Under these premises, applying the Clausius relation $\delta Q = T\,\delta S$ to
 
 **12.1 Local Thermodynamic Equilibrium and Horizon Properties**
 
-We consider the thermodynamic properties associated with local causal horizons within the emergent spacetime. We adopt standard tensor conventions $R^\rho{}*{\sigma\mu\nu} = \partial*\mu \Gamma^\rho_{\nu\sigma} - \dots$ and $R_{\mu\nu} = R^\alpha{}_{\mu\alpha\nu}$.
+We consider the thermodynamic properties associated with local causal horizons within the emergent spacetime. We adopt standard tensor conventions $R^\rho{}_{\sigma\mu\nu} = \partial_\mu \Gamma^\rho_{\nu\sigma} - \partial_\nu \Gamma^\rho_{\mu\sigma} + \Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma} - \Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma}$ and $R_{\mu\nu} = R^\alpha{}_{\mu\alpha\nu}$.
 
 **12.1.1 Definition 38 (Def 38): Local Causal Horizon**
 
@@ -54,7 +54,7 @@ Here, $\delta Q$ represents the energy flux crossing the horizon into the region
 Consistent with local thermodynamic equilibrium (Postulate 4) and analogous to the Unruh effect, the effective temperature $T$ associated with the local causal horizon $\mathcal{H}$ is defined in terms of the surface gravity $\kappa$. In SI units: $T = \hbar \kappa / (2\pi k_B c)$. In natural units ($c=\hbar=k_B=1$):
 
 $$
-T = \frac{\kappa}{2\pi} \tag{69}
+T = \frac{\kappa}{2\pi} \quad \text{(69)}
 $$
 
 
@@ -69,16 +69,14 @@ A crucial ingredient is the relationship between the entropy associated with a c
 **Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43)**, the equilibrium boundary entropy $S_{boundary}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal{H}$ is proportional to the horizon's cross-sectional area $\mathcal{A}$. This arises because the finite classical information capacity $C_{max}(f_{RID}) < \ln d_0$ (Theorem E.2) of the fundamental ND-RID channels mediating information transfer across the boundary limits the maximum distinguishable information. Assuming this bound is saturated at equilibrium—saturation is expected as a consequence of PCE driving the system towards maximum entropy states consistent with the constraints (local MaxEnt principle)—the relationship takes the universal Bekenstein-Hawking form, $S = k_B c^3 \mathcal{A} / (4 G \hbar)$ in SI units. With Planck length $L_P^2 = G\hbar/c^3$, this is $S = k_B \mathcal{A} / (4 L_P^2)$. In natural units ($c=\hbar=k_B=1$, $L_P^2=G$):
 
 $$
-S_{boundary}(\mathcal{A}) = \frac{\mathcal{A}}{4 G} \tag{70}
+S_{boundary}(\mathcal{A}) = \frac{\mathcal{A}}{4 G} \quad \text{(70)}
 $$
-
 
 An infinitesimal change $\delta \mathcal{A}$ in area corresponds to:
 
 $$
-\delta S = \frac{1}{4 G} \delta \mathcal{A} \tag{71}
+\delta S = \frac{1}{4 G} \delta \mathcal{A} \quad \text{(71)}
 $$
-
 
 *Proof Summary:* The derivation, detailed comprehensively in **Appendix E**, establishes the Area Law through two independent approaches that yield identical results: (1) quantum many-body entanglement structure via Hastings-type bounds (Theorem E.4'), and (2) operational information-channel counting (Theorem E.3). This dual derivation demonstrates that the Bekenstein-Hawking form is a necessary consequence of the framework's foundations. The core logic hinges on the fundamental information limits imposed by ND-RID interactions across causal boundaries within the emergent geometry. The core logic proceeds as follows: (1) The inherent irreversibility of the 'Evolve' process, quantified by the fundamental minimum cost $\varepsilon \ge \ln 2$ (Theorem 31, rigorously derived in Appendix J), implies strict contractivity ($f_{RID}<1$) of the average ND-RID channel (Lemma E.1). This $\varepsilon$-cost is the ultimate source of the thermodynamic limits. (2) This contractivity fundamentally bounds the classical information capacity of each individual MPU interaction channel ($C_{max}(f_{RID}) < \ln d_0$, Theorem E.2). This limits the maximum distinguishable information transmissible per channel. (3) Conditional on the necessary emergence of geometric regularity (Theorem 43), the number of effective independent information channels ($N_{links}$) crossing a horizon boundary scales linearly with its area $\mathcal{A}$ in the macroscopic limit ($N_{links} = \sigma_{link} \mathcal{A}$, Theorem E.3). (4) The total equilibrium boundary entropy $S_{boundary}$ associated with the boundary is the product of the number of channels and the maximum entropy per channel, which is identified with the capacity ($S_{boundary} = N_{links} \times S_{channel}^{max} = N_{links} \times C_{max}$). This directly yields the linear scaling $S_{boundary} = (\sigma_{link} C_{max}) \mathcal{A}$ (Equation E.6). The identification of the coefficient with the Bekenstein-Hawking value, $\sigma_{link} C_{max} = 1/(4 G)$, recovers the standard Area Law form (Equation 70). This identification is necessary for thermodynamic consistency (as shown in the subsequent derivation of the EFE) and crucially links the emergent gravitational constant $G$ to the underlying microscopic MPU parameters (spacing $\delta$ via $\sigma_{link}$, and ND-RID efficiency via $C_{max}$) as shown in Equation (E.9) and Equation (E.10). QED
 

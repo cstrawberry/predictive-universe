@@ -96,7 +96,7 @@ Standard quantum mechanics presents a fundamental tension regarding time. The Sc
 
 - **Two-State Vector Formalism (TSVF):** Developed by Aharonov, Bergmann, and Lebowitz [Aharonov et al. 1964], this approach describes quantum systems using both forward-evolving and backward-evolving state vectors. The formalism has been influential in analyzing pre- and post-selected ensembles and has led to surprising predictions involving weak measurements [Aharonov & Vaidman 2008].
 - **Transactional Interpretation:** Cramer’s interpretation [Cramer 1986] employs “handshakes” between advanced and retarded waves, explicitly incorporating backwards-in-time influences as part of the measurement process.
-- **Price’s Argument for Retrocausality:** Huw Price has argued philosophically that time-symmetric ontologies for quantum theory must necessarily involve retrocausal influences [Price 2012]. Leifer and Pusey [2017] have strengthened this argument, showing that under certain assumptions, time symmetry implies retrocausality in quantum mechanics.
+- **Price’s Argument for Retrocausality:** Huw Price has argued philosophically that time-symmetric ontologies for quantum theory must necessarily involve retrocausal influences [Price 2012]. [Leifer & Pusey 2017] have strengthened this argument, showing that under certain assumptions, time symmetry implies retrocausality in quantum mechanics.
 
 Because standard QM is **agnostic** about microscale temporal direction, retrocausal interpretations represent legitimate interpretive options within the formalism. This is the crucial context for understanding PU’s distinctive commitment.
 
@@ -749,7 +749,7 @@ The PU framework distinguishes itself while connecting to other approaches:
 
 *   **Connections to Information Processing:** PU provides a potential physical realization for "it from bit" ideas [Wheeler 1990], portraying reality as an efficient, self-regulating information processing system.
 
-*   **Justification for Statistical FTL:** Consistency relies on: Operational Causality (Post 2 - no deterministic FTL); CC Bound (Theorem 39: $\text{CC}<0.5$ prevents forcing outcomes); Emergent Operator Locality (Corollary F.1: $[\mathfrak{A}_1, \mathfrak{A}_2]=0$ from ND-RID contractivity, rigorously derived in **Appendix F**); State-Mediated Influence (Eq (F.4): $\omega_{C_A}(B)$ dependence via global state); Information Limits of ND-RID (Appendix E, Section F.6: finite rate, limits signaling). Statistical FTL via state correlations is argued compatible with operator locality and operational causality (justified via information limits analyzed in **Appendix F** and bounded by Theorems 40-42).
+*   **Justification for Statistical FTL:** Consistency relies on: Operational Causality (Post 2 - no deterministic FTL); CC Bound (Theorem 39: $\text{CC}<0.5$ prevents forcing outcomes); Emergent Operator Locality (Corollary F.1: $[\mathfrak{A}_1, \mathfrak{A}_2]=0$ from ND-RID contractivity, rigorously derived in **Appendix F**); State-Mediated Influence (Eq (F.4): $\omega_{C_A}(B)$ dependence via global state); Information Limits of ND-RID (Appendix F, Section F.6: finite rate, limits signaling). Statistical FTL via state correlations is argued compatible with operator locality and operational causality (justified via information limits analyzed in **Appendix F** and bounded by Theorems 40-42).
 
 **14.4 Limitations and Challenges**
 

@@ -6,6 +6,7 @@
 *   Aharonov, D., Kitaev, A., & Nisan, N. (1998). Quantum circuits with mixed states. *Proceedings of the Thirtieth Annual ACM Symposium on Theory of Computing*, 20–30.
 *   Aharonov, Y., Bergmann, P. G., & Lebowitz, J. L. (1964). Time Symmetry in the Quantum Process of Measurement. *Physical Review*, *134*(6B), B1410–B1416. DOI: 10.1103/PhysRev.134.B1410
 *   Aharonov, Y., & Zubairy, M. S. (2005). Time and the quantum: erasing the past and impacting the future. *Science*, *307*(5711), 875–879. DOI: 10.1126/science.1107787
+*   Aharonov, Y., & Vaidman, L. (2008). The Two-State Vector Formalism: An Updated Review. In J. G. Muga, R. Sala Mayato, & I. L. Egusquiza (Eds.), *Time in Quantum Mechanics* (Lecture Notes in Physics, Vol. 734, pp. 399–447). Springer. DOI: 10.1007/978-3-540-73473-4_13
 *   Albert, D. (2012). On the Origin of Everything. Review of L. Krauss, *A Universe from Nothing*. *New York Times*
 *   ALEPH, DELPHI, L3, OPAL, and SLD Collaborations (Schael, S., *et al.*) (2006). Precision electroweak measurements on the Z resonance. *Physics Reports*, *427*(5–6), 257–454. DOI: 10.1016/j.physrep.2005.12.006
 *   Amari, S.-I. (1998). Natural gradient works efficiently in learning. *Neural Computation*, *10*(2), 251–276.

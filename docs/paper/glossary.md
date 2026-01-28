@@ -103,7 +103,7 @@
 
 *   **Information:** (Definition 1) Functionally defined as any physically instantiated pattern or structure that has the objective potential to reduce uncertainty or Prediction Error ($PE$) relevant to a system's POP when processed by a suitable predictive system ($C \ge K_0$).
 
-*   **Kissing Number ($K(D)$):** (Appendix Z, Definition Z.7, Section Z.10) The maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$-dimensional Euclidean space. Key values: $K(3) = 12$, $K(4) = 24$ (24-cell), $K(8) = 240$ (E$_8$). The mode-channel correspondence (Theorem Z.10) requires $M_{\rm int} = K(D)$ at equilibrium, uniquely selecting $D = 4$ since $K(4) = M = 24$.
+*   **Kissing Number ($K(D)$):** (Appendix Z, Definition Z.7, Section Z.10) The maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$-dimensional Euclidean space. Key values: $K(3) = 12$, $K(4) = 24$ (24-cell), $K(8) = 240$ (E$_8$). The mode-channel correspondence (Theorem Z.10) requires $M_{\rm int} = K(D)$ at equilibrium; the dimension-selection theorem (Theorem Z.11) then uniquely selects $D = 4$ since $K(4) = M = 24$.
 
 *   **Landauer Pointer:** (Appendix Z, Theorem Z.1, Section Z.2.3) The minimal physical subsystem instantiating the irreducible cost $\varepsilon = \ln 2$ of the SPAP cycle. Dimension determined by PPI + Shannon entropy: $a = e^\varepsilon = 2$. Represents the two-level active kernel within the $d_0 = 8$ MPU Hilbert space where baseline predictive activity concentrates.
 
@@ -124,7 +124,7 @@
 
 *   **Mass Hierarchy Invariant ($\mathcal{R}$):** (Appendix R, Definition R.5.1) The parameter-free ratio $\mathcal{R} := \ln(m_3/m_1)/\ln(m_3/m_2) = d^2_{31}/d^2_{32}$ relating fermion mass ratios to E$_8$ root distances. Independent of width parameter $\xi$, Hessian constants $\alpha_1, \alpha_2$, and overall normalization. Restricted to discrete values $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ by E$_8$ geometry. Charged lepton sector shows $\mathcal{R}_\ell^{\rm obs} \approx 2.889$, consistent with $\mathcal{R} = 3$ to 3.8%.
 
-*   **Mode-Channel Correspondence:** (Appendix Z, Theorem Z.10) The PCE equilibrium condition requiring internal QFI modes to match external spatial channels: $M_{\rm int} = M_{\rm phys}$. At thermodynamic equilibrium with isotropic environment, $M_{\rm phys} = K(D)$ (kissing number). Combined with $M_{\rm int} = 2ab = 24$, this uniquely selects $D = 4$ as the emergent spacetime dimension.
+*   **Mode-Channel Correspondence:** (Appendix Z, Theorem Z.10) The PCE equilibrium condition requiring internal QFI modes to match external spatial channels: $M_{\rm int} = M_{\rm phys}$. At thermodynamic equilibrium with isotropic environment, $M_{\rm phys} = K(D)$ (kissing number). Combined with $M_{\rm int} = 2ab = 24$, Theorem Z.11 uniquely selects $D = 4$ as the emergent spacetime dimension.
 
 *   **MPU (Minimal Predictive Unit):** (Definition 23) The hypothesized fundamental constituent of reality, defined as a system possessing Predictive Physical Complexity exactly equal to the Operational Threshold $C_{op}$. Operates the adaptive Fundamental Predictive Loop under Dual Dynamics.
 

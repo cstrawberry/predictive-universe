@@ -155,4 +155,4 @@ $$
 \boxed{\alpha^{-1} ≈ 137.036 \pm 0.0001}
 \tag{V.10}
 $$
-This is a parameter-free prediction at the Thomson limit, in agreement with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999084$ to within 0.7 ppm.
+This is a parameter-free prediction at the Thomson limit, in agreement with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ to within 0.7 ppm.

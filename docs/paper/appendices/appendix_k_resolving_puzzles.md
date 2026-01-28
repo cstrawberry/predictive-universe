@@ -62,7 +62,7 @@ $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \
 - Cabibbo angle $|V_{us}| = 0.2261$ from frustration-induced tunneling between quark sector vacua (observed: $0.2243 \pm 0.0008$, deviation: +0.8%)
 - Lepton-quark bridge $c_\ell/c_d = 8/3$ from gauge normalization constraints (Theorem T.44)
 
-The τ/μ mass ratio achieves **0.5% precision** with zero free parameters—the single most precise test of the geometric mass hierarchy (Appendix T, Table T.25.8.1).
+The τ/μ mass ratio achieves **0.5% precision** with zero free parameters—the single most precise test of the geometric mass hierarchy (Appendix T, Section T.25.8.1).
 
 **Summary of Derived Constants:**
 The framework successfully derives from first principles:
