@@ -130,13 +130,13 @@ $$
 C(\mathcal{E}_N) < \ln d_0
 \tag{E.3}
 $$
-The quantity $C_{max}(f_{RID})$ used in subsequent sections is defined as $C_{max}(f_{RID}) \equiv C(\mathcal{E}_N)$.
+The quantity $C_{\max}(f_{RID})$ used in subsequent sections is defined as $C_{\max}(f_{RID}) \equiv C(\mathcal{E}_N)$.
 
 *Proof.*
 Let $f := f_{\mathrm{RID}}(\mathcal{E}_N)$. By Lemma E.1, $f < 1$.
 Assume, for contradiction, that $C(\mathcal{E}_N) = \ln d_0$.
 
-By the *$d_{0}$-signal converse* or strong converse for classical channel coding [e.g. Holevo 1998; Winter 1999; König & Wehner 2009; Mosonyi & Ogawa 2017], a channel $\Phi$ that achieves the maximum possible classical capacity $C(\Phi) = \ln d_0$ must, for some block length $n_0 \ge 1$, be able to transmit $M = d_0^{n_0}$ messages reliably (or with vanishing error probability for large $n_0$). This implies the existence of $M$ input codeword states $\{\rho^{(n_0)}_k\}_{k=1}^M$ such that their corresponding $n_0$-copy output states under $\mathcal{E}_N^{\otimes n_0}$, i.e., $\{\sigma^{(n_0)}_k = \mathcal{E}_N^{\otimes n_0}(\rho^{(n_0)}_k)\}$, are (asymptotically) mutually orthogonal or perfectly distinguishable.
+By the *$d_{0}$-signal converse* or strong converse for classical channel coding [Holevo 1998; Winter 1999; König & Wehner 2009; Mosonyi & Ogawa 2017], a channel $\Phi$ that achieves the maximum possible classical capacity $C(\Phi) = \ln d_0$ must, for some block length $n_0 \ge 1$, be able to transmit $M = d_0^{n_0}$ messages reliably (or with vanishing error probability for large $n_0$). This implies the existence of $M$ input codeword states $\{\rho^{(n_0)}_k\}_{k=1}^M$ such that their corresponding $n_0$-copy output states under $\mathcal{E}_N^{\otimes n_0}$, i.e., $\{\sigma^{(n_0)}_k = \mathcal{E}_N^{\otimes n_0}(\rho^{(n_0)}_k)\}$, are (asymptotically) mutually orthogonal or perfectly distinguishable.
 Orthogonality of the $n_0$-copy outputs implies $\|\mathcal E_N^{\otimes n_0}(\rho^{(n_0)}_k)-\mathcal E_N^{\otimes n_0}(\rho^{(n_0)}_l)\|_1=2$ for any two distinct input codewords $\rho^{(n_0)}_k,\rho^{(n_0)}_l$.
 The trace-norm contractivity factor is monotone under tensor power: $f_{\mathrm{RID}}(\Phi^{\otimes n_0})\le f_{\mathrm{RID}}(\Phi)$ [Pérez-García et al. 2006].
 Thus, $f_{\mathrm{RID}}(\mathcal{E}_N^{\otimes n_0}) \le f$.
@@ -159,10 +159,10 @@ This completes the proof. QED
 
 **Corollary E.2 (Maximum Entropy per ND–RID Channel).** The maximum thermodynamic entropy $S_{channel}^{max}$ (in units of $k_B$), associated with the information degrees of freedom reliably transmitted by a single ND–RID channel across a boundary, is bounded by the channel capacity:
 $$
-S_{channel}^{max} \leq k_B C_{max}(f_{RID})
+S_{channel}^{max} \leq k_B C_{\max}(f_{RID})
 \tag{E.4}
 $$
-*Proof.* The maximum amount of reliably transmissible classical information through the channel is $C_{max}(f_{RID})$ nats (where $C_{max}(f_{RID}) \equiv C(\mathcal{E}_N)$ as per Theorem E.2). If this information is used to specify one of $M_{eff}$ effectively distinguishable states, then $C_{max}(f_{RID}) = \ln M_{eff}$. The maximum thermodynamic entropy associated with these $M_{eff}$ states is $S = k_B \ln M_{eff}$. Therefore, $S_{channel}^{max} = k_B C_{max}(f_{RID})$. Since this is the maximum *reliable* information, the entropy associated with it is bounded as stated. QED
+*Proof.* The maximum amount of reliably transmissible classical information through the channel is $C_{\max}(f_{RID})$ nats (where $C_{\max}(f_{RID}) \equiv C(\mathcal{E}_N)$ as per Theorem E.2). If this information is used to specify one of $M_{eff}$ effectively distinguishable states, then $C_{\max}(f_{RID}) = \ln M_{eff}$. The maximum thermodynamic entropy associated with these $M_{eff}$ states is $S = k_B \ln M_{eff}$. Therefore, $S_{channel}^{max} = k_B C_{\max}(f_{RID})$. Since this is the maximum *reliable* information, the entropy associated with it is bounded as stated. QED
 
 **E.5 Geometric Scaling of Boundary Information Channels (Conditional Derivation)**
 
@@ -408,7 +408,7 @@ The gravitational constant $G$ emerges as the unique value ensuring consistency 
 The coefficient $\eta_{ent}$ from quantum entanglement structure (Theorem E.4') must be consistent with the channel-based derivation from Theorem E.3. Specifically, from Theorem E.3:
 
 $$
-\sigma_{eff\_link} = \frac{\chi}{\eta \delta^2}, \quad S_{max} = \sigma_{eff\_link} \cdot C_{max}(f_{RID}) \cdot k_B \cdot \mathcal{A}
+\sigma_{eff\_link} = \frac{\chi}{\eta \delta^2}, \quad S_{max} = \sigma_{eff\_link} \cdot C_{\max}(f_{RID}) \cdot k_B \cdot \mathcal{A}
 $$
 
 From Theorem E.5:
@@ -418,10 +418,10 @@ $$
 
 Consistency requires:
 $$
-\frac{\chi C_{max}(f_{RID})}{\eta \delta^2} = \frac{1}{4G}
+\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{1}{4G}
 $$
 
-This relationship connects the microscopic MPU parameters ($\delta, \chi, \eta, C_{max}$) to the emergent gravitational constant $G$, exactly as derived in the operational formulation. The entanglement-based derivation provides the physical justification for why this relationship must hold, grounding it in quantum information theory rather than purely operational counting.
+This relationship connects the microscopic MPU parameters ($\delta, \chi, \eta, C_{\max}$) to the emergent gravitational constant $G$, exactly as derived in the operational formulation. The entanglement-based derivation provides the physical justification for why this relationship must hold, grounding it in quantum information theory rather than purely operational counting.
 
 
 ### E.6.5 Derivation of the Horizon Entropy Area Law (Unified Synthesis)
@@ -431,16 +431,16 @@ We synthesize the limit on entropy per channel (Corollary E.2) with the geometri
 **Theorem E.6 (Thermodynamic Boundary Area Law and Emergent $G_{\rm eff}$).**
 Conditional on emergent geometric regularity (Theorem 43) and the resulting linear scaling of effective boundary channels with area (Theorem E.3), the maximum thermodynamic entropy $S_{max}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal{H}$ with area $\mathcal{A}$ scales linearly with the area. The entanglement-based derivation (Theorem E.4') establishes that $S_{ent} = \eta_{ent} \mathcal{A}$ with $\eta_{ent} = 1/(4G)$. The channel-based approach shows this maximum entropy corresponds to saturating the capacity of the effective independent channels:
 $$
-S_{max}(\mathcal{A}) = N_{eff_links} \cdot S_{channel}^{max} = (\sigma_{eff_link} \mathcal{A}) \cdot (k_B C_{max}(f_{RID}))
+S_{max}(\mathcal{A}) = N_{eff_links} \cdot S_{channel}^{max} = (\sigma_{eff_link} \mathcal{A}) \cdot (k_B C_{\max}(f_{RID}))
 $$
 Substituting $\sigma_{eff_link} = \chi / (\eta \delta^2)$:
 $$
-S_{max}(\mathcal{A}) = k_B \left(\frac{\chi C_{max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}
+S_{max}(\mathcal{A}) = k_B \left(\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}
 \tag{E.6}
 $$
 To match the universal Bekenstein-Hawking form $S_{BH} = k_B \mathcal{A} / (4 L_P^2)$ (where $L_P^2 = G\hbar/c^3$ is the squared Planck length), we identify the coefficients (fixing $G$ in terms of microscopic MPU parameters; this is not an additional assumption):
 $$
-\frac{\chi C_{max}(f_{RID})}{\eta \delta^2} = \frac{1}{4 L_P^2} = \frac{c^3}{4 G \hbar}
+\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{1}{4 L_P^2} = \frac{c^3}{4 G \hbar}
 \tag{E.7}
 $$
 This identification implies the standard form of the area law:
@@ -448,24 +448,24 @@ $$
 S_{max}(\mathcal{A}) = \frac{k_B c^3 \mathcal{A}}{4 G \hbar} = \frac{k_B \mathcal{A}}{4 L_P^2}
 \tag{E.8}
 $$
-and yields an expression for the emergent gravitational constant $G$ in terms of the fundamental MPU parameters encoded in spacing ($\delta$), packing ($\eta$), correlations ($\chi$), and ND–RID channel capacity ($C_{max}$, which is limited by $\varepsilon$ via $f_{RID}$):
+and yields an expression for the emergent gravitational constant $G$ in terms of the fundamental MPU parameters encoded in spacing ($\delta$), packing ($\eta$), correlations ($\chi$), and ND–RID channel capacity ($C_{\max}$, which is limited by $\varepsilon$ via $f_{RID}$):
 $$
-G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}(f_{RID})}
+G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}
 \tag{E.9}
 $$
 *Proof.*
 1.  **Total Maximum Entropy:** The total entropy is the sum over effective independent channels, $S_{max} = N_{eff_links} \cdot S_{channel}^{max}$, assuming each channel operates at its maximum capacity for reliable information transfer.
-2.  **Substitution of Components:** From Theorem E.3, $N_{eff_links} = (\chi / (\eta \delta^2)) \mathcal{A}$. From Corollary E.2, $S_{channel}^{max} = k_B C_{max}(f_{RID})$. Substituting these into the expression for $S_{max}$ directly yields Equation (E.6).
+2.  **Substitution of Components:** From Theorem E.3, $N_{eff_links} = (\chi / (\eta \delta^2)) \mathcal{A}$. From Corollary E.2, $S_{channel}^{max} = k_B C_{\max}(f_{RID})$. Substituting these into the expression for $S_{max}$ directly yields Equation (E.6).
 3.  **Identification with Bekenstein-Hawking Form:** The Bekenstein-Hawking entropy for a horizon of area $\mathcal{A}$ is $S_{BH} = k_B \mathcal{A} / (4 L_P^2)$, where $L_P^2 = G\hbar/c^3$. For the PU framework's emergent entropy (Equation E.6) to match this empirically established form, their coefficients of $\mathcal{A}$ must be equal. This leads to Equation (E.7).
 4.  **Emergent G:** Rearranging Equation (E.7) to solve for $G$ yields Equation (E.9). It is important to note that this step fixes the absolute value of $G$ by identifying the microscopic information density of the PU substrate with the Bekenstein-Hawking coefficient $1/(4L_P^2)$. The thermodynamic derivation of the Einstein Field Equations in Section 12, by contrast, only requires that horizon entropy is *proportional* to area; this identification provides the specific constant of proportionality.
-5.  **Interpretation:** The Horizon Entropy Area Law emerges as a direct consequence of: (a) the fundamental limit on information capacity per ND–RID channel ($C_{max} < \ln d_0$, Theorem E.2), which itself stems from the irreversibility cost $\varepsilon \ge \ln 2$ (Theorem 31); and (b) the geometric fact that the number of such independent channels crossing a boundary scales with the boundary's area (Theorem E.3, conditional on emergent regularity). The constant of proportionality, which defines the Planck scale and thus $G$, is thereby fixed by the microscopic parameters of the MPU network ($\delta, \eta, \chi, C_{max}$). 
+5.  **Interpretation:** The Horizon Entropy Area Law emerges as a direct consequence of: (a) the fundamental limit on information capacity per ND–RID channel ($C_{\max} < \ln d_0$, Theorem E.2), which itself stems from the irreversibility cost $\varepsilon \ge \ln 2$ (Theorem 31); and (b) the geometric fact that the number of such independent channels crossing a boundary scales with the boundary's area (Theorem E.3, conditional on emergent regularity). The constant of proportionality, which defines the Planck scale and thus $G$, is thereby fixed by the microscopic parameters of the MPU network ($\delta, \eta, \chi, C_{\max}$). 
 
-**E.6.1 Explicit Derivation of the Bekenstein-Hawking Coefficient $1/4$**
+### E.6.6 Explicit Derivation of the Bekenstein-Hawking Coefficient $1/4$
 
-Theorem E.6 establishes $S_{max} = k_B \left(\frac{\chi C_{max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}$. Equation (E.9) defines $G$ in terms of these same microscopic parameters: $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}(f_{RID})}$.
+Theorem E.6 establishes $S_{max} = k_B \left(\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}$. Equation (E.9) defines $G$ in terms of these same microscopic parameters: $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$.
 We can solve Equation (E.9) for the group of microscopic parameters:
 $$
-\frac{\chi C_{max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}
+\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}
 \tag{E.10}
 $$
 Now, substitute this expression (E.10) back into the entropy formula (E.6):
@@ -482,7 +482,7 @@ This is the Bekenstein-Hawking formula with the explicit coefficient $1/4$. This
 
 **Remark E.1 (Unit Cell Interpretation of Horizon Entropy from SPAP Cost)**
 
-The derivation of the Area Law (Theorem E.6 / main text, Theorem 49) and the emergent gravitational constant $G$ (Equation E.9) is based on the effective surface density of independent information channels ($\sigma_{eff_link}$) and the capacity per channel ($C_{max}$). An alternative, complementary perspective on the origin of the $1/4$ coefficient in the Bekenstein-Hawking formula can be obtained by considering the fundamental entropy unit associated with the MPU's self-referential processing.
+The derivation of the Area Law (Theorem E.6 / main text, Theorem 49) and the emergent gravitational constant $G$ (Equation E.9) is based on the effective surface density of independent information channels ($\sigma_{eff_link}$) and the capacity per channel ($C_{\max}$). An alternative, complementary perspective on the origin of the $1/4$ coefficient in the Bekenstein-Hawking formula can be obtained by considering the fundamental entropy unit associated with the MPU's self-referential processing.
 
 As established in Appendix J (Theorem J.1, proving main text Theorem 31), each 'Evolve' interaction cycle (main text, Definition 27) involving non-trivial self-referential information processing (the SPAP update cycle) incurs a minimal irreducible dimensionless entropy cost $\varepsilon = \ln 2$ nats. Let this fundamental quantum of entropy generation be denoted $\Delta S_{\text{SPAP}} = \ln 2$.
 
@@ -507,22 +507,22 @@ $$
 S = N_{cells} \cdot \Delta S_{\text{SPAP}} = \left( \frac{\mathcal{A}}{4G\ln2} \right) \ln2 = \frac{\mathcal{A}}{4G}.
 \tag{E.13c}
 $$
-This "tiling" argument self-consistently reproduces the $S=\mathcal{A}/(4G)$ formula. It provides an interpretation where the horizon entropy is composed of fundamental $\ln 2$ units, each associated with an area $4G\ln2$. The value of $G$ itself is determined by the more fundamental MPU parameters ($\delta, C_{max}, \eta, \chi$) as per Equation (E.9). While $C_{\max}(f_{\mathrm{RID}})$ is bounded by $\ln d_0$ (Theorem E.2), PCE optimisation plausibly drives it near $\ln2$ for consistency with this unit cell interpretation in some regimes; this assumption is used here only illustratively to connect to $\Delta S_{SPAP}$ and is not required for the main derivation of the Area Law form.
+This "tiling" argument self-consistently reproduces the $S=\mathcal{A}/(4G)$ formula. It provides an interpretation where the horizon entropy is composed of fundamental $\ln 2$ units, each associated with an area $4G\ln2$. The value of $G$ itself is determined by the more fundamental MPU parameters ($\delta, C_{\max}, \eta, \chi$) as per Equation (E.9). While $C_{\max}(f_{\mathrm{RID}})$ is bounded by $\ln d_0$ (Theorem E.2), PCE optimisation plausibly drives it near $\ln2$ for consistency with this unit cell interpretation in some regimes; this assumption is used here only illustratively to connect to $\Delta S_{SPAP}$ and is not required for the main derivation of the Area Law form.
 
-The consistency of this unit cell interpretation with the primary derivation in Theorem E.6 requires an alignment between the "entropy per effective channel" ($C_{max}(f_{RID})$ in nats, from Theorem E.2) and this fundamental SPAP cost ($\ln 2$ nats). Specifically, the product of channel density and capacity per channel must yield the same overall entropy density: $\sigma_{eff_link} \cdot C_{max}(f_{RID}) = (\text{density of SPAP cells}) \cdot \ln 2$. Since density of SPAP cells is $1/\Delta\mathcal{A}_{cell} = 1/(4G\ln2)$, this requires $\sigma_{eff_link} \cdot C_{max}(f_{RID}) = 1/(4G)$. This is precisely what Equation (E.7) (and its natural units version, Equation E.10) states, confirming the structural consistency between the two viewpoints. Essentially, PCE optimizes the network such that the effective boundary channel capacity $C_{max}$ (influenced by $\varepsilon=\ln 2$) and the effective channel density $\sigma_{eff_link}$ (influenced by $\delta$) combine to yield the emergent value of $G$ and thus the Bekenstein-Hawking entropy with the standard $1/4$ coefficient.
+The consistency of this unit cell interpretation with the primary derivation in Theorem E.6 requires an alignment between the "entropy per effective channel" ($C_{\max}(f_{RID})$ in nats, from Theorem E.2) and this fundamental SPAP cost ($\ln 2$ nats). Specifically, the product of channel density and capacity per channel must yield the same overall entropy density: $\sigma_{eff_link} \cdot C_{\max}(f_{RID}) = (\text{density of SPAP cells}) \cdot \ln 2$. Since density of SPAP cells is $1/\Delta\mathcal{A}_{cell} = 1/(4G\ln2)$, this requires $\sigma_{eff_link} \cdot C_{\max}(f_{RID}) = 1/(4G)$. This is precisely what Equation (E.7) (and its natural units version, Equation E.10) states, confirming the structural consistency between the two viewpoints. Essentially, PCE optimizes the network such that the effective boundary channel capacity $C_{\max}$ (influenced by $\varepsilon=\ln 2$) and the effective channel density $\sigma_{eff_link}$ (influenced by $\delta$) combine to yield the emergent value of $G$ and thus the Bekenstein-Hawking entropy with the standard $1/4$ coefficient.
 
 **E.7 PCE-Derived Planck-MPU Scale Relation**
 
 The relationship between the emergent gravitational constant $G$ and the microscopic MPU parameters (Equation E.9) is not merely a consistency requirement but is quantitatively fixed by the framework's core optimization principle. As rigorously derived in Appendix Q, the Principle of Compression Efficiency (PCE, Definition 15) dictates the optimal values for the network parameters that determine the scale ratio $\delta/L_P$.
 
-The derivation proceeds by analyzing the partitioning of the MPU's total information potential, $\ln(d_0)$, as a resource allocation problem. PCE optimization requires that the MPU's finite information budget be optimally divided between the cost of internal self-referential processing ($\varepsilon$) and the capacity for external communication ($C_{max}$). As derived in Appendix Q, this leads to the PCE-optimal channel capacity being the total potential minus the irreducible processing cost:
+The derivation proceeds by analyzing the partitioning of the MPU's total information potential, $\ln(d_0)$, as a resource allocation problem. PCE optimization requires that the MPU's finite information budget be optimally divided between the cost of internal self-referential processing ($\varepsilon$) and the capacity for external communication ($C_{\max}$). As derived in Appendix Q, this leads to the PCE-optimal channel capacity being the total potential minus the irreducible processing cost:
 $$
-C_{max}^{*} = \ln(d_0) - \varepsilon
+C_{\max}^{*} = \ln(d_0) - \varepsilon
 \tag{E.14}
 $$
 Using the framework's logically-derived values for the fundamental MPU parameters, `d₀=8` (from the Horizon Constant $K_0=3$ bits, Theorem 23) and `ε=ln(2)` (from the minimal SPAP cycle cost, Theorem 31), the PCE-optimal channel capacity is calculated to be:
 $$
-C_{max}^{*} = \ln(8) - \ln(2) = 2\ln(2)
+C_{\max}^{*} = \ln(8) - \ln(2) = 2\ln(2)
 \tag{E.15}
 $$
 Substituting this result, along with PCE-optimized values for the correlation and packing factors (`χ*` and `η`, which are `O(1)` constants), into the scale relation derived from Equation E.9 (`δ²/L_P² = 4 χ C_max / η`) yields a direct, quantitative prediction for the ratio of the MPU spacing to the Planck length. For the idealized case (`χ*≈1`, `η≈1`), this ratio is:
@@ -616,7 +616,7 @@ Each shell's interior can be reconstructed from its boundary via Step 1. Iterati
 
 No global geometric assumptions (asymptotic flatness, negative cosmological constant, conformal boundary) enter the construction. ∎
 
-*Remark (Distinction from AdS/CFT).* The holography established here differs fundamentally from AdS/CFT correspondence [Maldacena 1999]. AdS/CFT posits a duality between quantum gravity in anti-de Sitter space and conformal field theory on its boundary, with bulk reconstruction proceeding via the Ryu-Takayanagi formula [Ryu & Takayanagi 2006] and entanglement wedge reconstruction [Dong et al. 2016]. The present construction requires neither AdS geometry nor conformal field theory; it follows solely from ND-RID channel capacity limits and geometric regularity. The two approaches may be complementary descriptions in contexts where both apply.
+*Remark: Distinction from AdS/CFT.* The holography established here differs fundamentally from AdS/CFT correspondence [Maldacena 1999]. AdS/CFT posits a duality between quantum gravity in anti-de Sitter space and conformal field theory on its boundary, with bulk reconstruction proceeding via the Ryu-Takayanagi formula [Ryu & Takayanagi 2006] and entanglement wedge reconstruction [Dong et al. 2016]. The present construction requires neither AdS geometry nor conformal field theory; it follows solely from ND-RID channel capacity limits and geometric regularity. The two approaches may be complementary descriptions in contexts where both apply.
 
 **Corollary E.8.1 (Emergent Holography).** Holography is not an additional principle but a consequence of the derivation chain:
 
@@ -635,7 +635,7 @@ This provides an information-theoretic derivation of the Planck-scale resolution
 
 ### E.8.3.1 Introduction
 
-The preceding sections established that the entropy associated with a causal boundary is bounded by the Bekenstein-Hawking area law $S \leq \mathcal{A}/4G$ (Theorem 49), derived from the finite channel capacity $C_{max} < \ln d_0$ of ND-RID interactions (Theorem E.2). This section demonstrates a stronger result: the Principle of Compression Efficiency (PCE, Definition 15) does not merely permit boundary-area scaling of entropy but *dynamically selects* it as the unique stable equilibrium. We prove that PCE dynamics drive the system toward holographic saturation, establishing $S = \mathcal{A}/4G$ as an attractor of the PCE potential landscape.
+The preceding sections established that the entropy associated with a causal boundary is bounded by the Bekenstein-Hawking area law $S \leq \mathcal{A}/4G$ (Theorem 49), derived from the finite channel capacity $C_{\max} < \ln d_0$ of ND-RID interactions (Theorem E.2). This section demonstrates a stronger result: the Principle of Compression Efficiency (PCE, Definition 15) does not merely permit boundary-area scaling of entropy but *dynamically selects* it as the unique stable equilibrium. We prove that PCE dynamics drive the system toward holographic saturation, establishing $S = \mathcal{A}/4G$ as an attractor of the PCE potential landscape.
 
 The progression from bounds to attractor completes the logical arc of the thermodynamic derivations:
 
@@ -643,7 +643,7 @@ The progression from bounds to attractor completes the logical arc of the thermo
 |---------|--------|--------|
 | E.2 | $\varepsilon \geq \ln 2$ (irreversibility) | Bound |
 | E.3 | $f_{RID} < 1$ (contractivity) | Bound |
-| E.4 | $C_{max} < \ln d_0$ (capacity limit) | Bound |
+| E.4 | $C_{\max} < \ln d_0$ (capacity limit) | Bound |
 | E.6 | $S \leq \mathcal{A}/4G$ (area law) | Bound |
 | **E.8.3** | $S \to \mathcal{A}/4G$ (saturation) | **Attractor** |
 
@@ -664,10 +664,10 @@ Before analyzing bulk versus boundary encoding costs, we derive the retrieval co
 **Lemma E.8.3.1 (Retrieval Cost Coefficient from $V_{prop}$).**
 The cost coefficient for retrieving information at depth $r$ from the boundary, denoted $\gamma_{ret}$, is determined by the propagation cost structure $V_{prop}$ (Definition D.1) and the fundamental ND-RID parameters:
 $$
-\gamma_{ret} = \frac{\varepsilon}{\delta \cdot C_{max}}
+\gamma_{ret} = \frac{\varepsilon}{\delta \cdot C_{\max}}
 \tag{E.8.3a}
 $$
-where $\varepsilon \geq \ln 2$ is the minimum entropy cost per ND-RID interaction (Theorem 31), $\delta$ is the mean MPU spacing, and $C_{max} < \ln d_0$ is the channel capacity (Theorem E.2).
+where $\varepsilon \geq \ln 2$ is the minimum entropy cost per ND-RID interaction (Theorem 31), $\delta$ is the mean MPU spacing, and $C_{\max} < \ln d_0$ is the channel capacity (Theorem E.2).
 
 *Proof.*
 
@@ -690,14 +690,14 @@ V_{prop}^{(retrieval)}(r) = n \cdot \Phi_{min} = \frac{r}{\delta} \cdot \varepsi
 \tag{E.8.3c}
 $$
 
-**Step 4 (Per-Bit Cost Coefficient).** Each link has capacity $C_{max}$ nats (Theorem E.2), so transmitting one nat of information incurs entropy cost $\varepsilon/C_{max}$ per link (Theorem 31). For a path of $n = r/\delta$ links to depth $r$, the cost per nat is $(r/\delta) \cdot (\varepsilon/C_{max})$. The cost per nat of accessible information per unit retrieval depth is:
+**Step 4 (Per-Bit Cost Coefficient).** Each link has capacity $C_{\max}$ nats (Theorem E.2), so transmitting one nat of information incurs entropy cost $\varepsilon/C_{\max}$ per link (Theorem 31). For a path of $n = r/\delta$ links to depth $r$, the cost per nat is $(r/\delta) \cdot (\varepsilon/C_{\max})$. The cost per nat of accessible information per unit retrieval depth is:
 $$
-\gamma_{ret} = \frac{(r/\delta) \cdot (\varepsilon/C_{max})}{r} = \frac{\varepsilon}{\delta \cdot C_{max}}
+\gamma_{ret} = \frac{(r/\delta) \cdot (\varepsilon/C_{\max})}{r} = \frac{\varepsilon}{\delta \cdot C_{\max}}
 $$
 This has dimensions $[1/\text{length}]$ in natural units. $\square$
 
 **Corollary E.8.3.1 (Numerical Estimate).**
-Using $\varepsilon = \ln 2$, $C_{max} = 2\ln 2$ (Equation E.15), and $\delta = \sqrt{8\ln 2} \cdot L_P$ (Appendix Q, Equation Q.18):
+Using $\varepsilon = \ln 2$, $C_{\max} = 2\ln 2$ (Equation E.15), and $\delta = \sqrt{8\ln 2} \cdot L_P$ (Appendix Q, Equation Q.18):
 $$
 \gamma_{ret} = \frac{\ln 2}{\sqrt{8\ln 2} \cdot L_P \cdot 2\ln 2} = \frac{1}{2\sqrt{8\ln 2} \cdot L_P} \approx \frac{0.213}{L_P}
 $$
@@ -836,14 +836,14 @@ We now construct the explicit form of the PCE potential $V(S)$ as a function of 
 **Definition E.8.3.2 (Channel Utilization).**
 For a region with boundary area $\mathcal{A}$:
 - Total effective channels: $N_{eff} = \sigma_{link} \cdot \mathcal{A}$, where $\sigma_{link} = \chi/(\eta\delta^2)$ (Theorem E.3)
-- Maximum entropy: $S_{max} = N_{eff} \cdot C_{max} = \mathcal{A}/(4G)$ (Theorem 49)
-- Active channels: $N_{active}(S) = S/C_{max}$
+- Maximum entropy: $S_{max} = N_{eff} \cdot C_{\max} = \mathcal{A}/(4G)$ (Theorem 49)
+- Active channels: $N_{active}(S) = S/C_{\max}$
 - Idle channels: $N_{idle}(S) = N_{eff} - N_{active}(S)$
 
 **Theorem E.8.3.3 (Explicit PCE Potential for Boundary Entropy).**
 The PCE potential as a function of boundary entropy $S \in [0, S_{max}]$ for a region with boundary area $\mathcal{A}$ is:
 $$
-V(S) = V_0 + \Phi_{idle} \cdot \left(N_{eff} - \frac{S}{C_{max}}\right) - \Gamma_0 B_0 \cdot \frac{S}{S_{max}}
+V(S) = V_0 + \Phi_{idle} \cdot \left(N_{eff} - \frac{S}{C_{\max}}\right) - \Gamma_0 B_0 \cdot \frac{S}{S_{max}}
 \tag{E.8.3p}
 $$
 where:
@@ -863,7 +863,7 @@ V_{prop}(S) \approx N_{eff} \cdot \Phi_{idle} = \text{constant}
 $$
 However, the *net* cost attributable to underutilization is:
 $$
-V_{prop}^{(net)}(S) = N_{idle}(S) \cdot \Phi_{idle} = \left(N_{eff} - \frac{S}{C_{max}}\right) \cdot \Phi_{idle}
+V_{prop}^{(net)}(S) = N_{idle}(S) \cdot \Phi_{idle} = \left(N_{eff} - \frac{S}{C_{\max}}\right) \cdot \Phi_{idle}
 \tag{E.8.3q}
 $$
 This captures the cost of maintaining unused capacity.
@@ -881,7 +881,7 @@ This represents the power-equivalent predictive benefit from utilizing fraction 
 
 **Step 3 (Total Potential).** Combining the components (absorbing $\Phi_{active}$ costs into $V_0$):
 $$
-V(S) = V_0 + \Phi_{idle} \cdot \left(N_{eff} - \frac{S}{C_{max}}\right) - \Gamma_0 B_0 \cdot \frac{S}{S_{max}}
+V(S) = V_0 + \Phi_{idle} \cdot \left(N_{eff} - \frac{S}{C_{\max}}\right) - \Gamma_0 B_0 \cdot \frac{S}{S_{max}}
 $$
 This is the explicit PCE potential as a function of boundary entropy. $\square$
 
@@ -898,13 +898,13 @@ This saturation is the unique global minimum of the PCE potential $V(S)$ on the 
 
 **Step 1 (Gradient Calculation).** From Theorem E.8.3.3, the gradient of $V(S)$ with respect to $S$ is:
 $$
-\frac{\partial V}{\partial S} = -\frac{\Phi_{idle}}{C_{max}} - \frac{\Gamma_0 B_0}{S_{max}}
+\frac{\partial V}{\partial S} = -\frac{\Phi_{idle}}{C_{\max}} - \frac{\Gamma_0 B_0}{S_{max}}
 \tag{E.8.3s}
 $$
 
-**Step 2 (Sign of Gradient).** Since $\Phi_{idle} > 0$ (Lemma E.8.3.2), $C_{max} > 0$ (Theorem E.2), $\Gamma_0 > 0$ (Definition 20), $B_0 > 0$ (benefit is positive), and $S_{max} > 0$:
+**Step 2 (Sign of Gradient).** Since $\Phi_{idle} > 0$ (Lemma E.8.3.2), $C_{\max} > 0$ (Theorem E.2), $\Gamma_0 > 0$ (Definition 20), $B_0 > 0$ (benefit is positive), and $S_{max} > 0$:
 $$
-\frac{\partial V}{\partial S} = -\left(\frac{\Phi_{idle}}{C_{max}} + \frac{\Gamma_0 B_0}{S_{max}}\right) < 0
+\frac{\partial V}{\partial S} = -\left(\frac{\Phi_{idle}}{C_{\max}} + \frac{\Gamma_0 B_0}{S_{max}}\right) < 0
 \tag{E.8.3t}
 $$
 The gradient is strictly negative throughout the domain $[0, S_{max}]$.
@@ -935,11 +935,11 @@ $$
 
 **Step 7 (Convergence Rate).** The approach to saturation is characterized by:
 $$
-\frac{d(S_{max} - S)}{dt} = -\eta_S \left|\frac{\partial V}{\partial S}\right| = -\eta_S \left(\frac{\Phi_{idle}}{C_{max}} + \frac{\Gamma_0 B_0}{S_{max}}\right)
+\frac{d(S_{max} - S)}{dt} = -\eta_S \left|\frac{\partial V}{\partial S}\right| = -\eta_S \left(\frac{\Phi_{idle}}{C_{\max}} + \frac{\Gamma_0 B_0}{S_{max}}\right)
 $$
 Since $V(S)$ is linear, this derivative is constant, yielding a constant drift velocity toward saturation. The characteristic timescale for saturation from initial entropy $S_0$ is:
 $$
-t_{sat}(S_0) = \frac{S_{max} - S_0}{\eta_S \left(\frac{\Phi_{idle}}{C_{max}} + \frac{\Gamma_0 B_0}{S_{max}}\right)}
+t_{sat}(S_0) = \frac{S_{max} - S_0}{\eta_S \left(\frac{\Phi_{idle}}{C_{\max}} + \frac{\Gamma_0 B_0}{S_{max}}\right)}
 \tag{E.8.3v}
 $$
 The stochastic term in Equation D.8 introduces fluctuations about this mean trajectory; the formula gives the expected saturation time for the deterministic component of the dynamics. $\square$
@@ -1081,7 +1081,7 @@ The entanglement entropy across the Rindler horizon satisfies the area law, with
 
 All horizon temperatures appearing in the framework share a common structure reflecting the rate of information processing at causal boundaries.
 
-**Theorem E.9.4 (Horizon Temperature Structure).** *Horizon temperatures take the universal form:*
+**Theorem E.9.3 (Horizon Temperature Structure).** *Horizon temperatures take the universal form:*
 $$
 T = \frac{\hbar}{2\pi k_B} \cdot \Gamma
 $$
@@ -1105,13 +1105,13 @@ For de Sitter space, $H_\Lambda = c\sqrt{\Lambda/3}$ is the Hubble expansion rat
 
 In each case, the temperature measures how rapidly an observer encounters the causal boundary—the rate at which the horizon processes the observer's trajectory through spacetime. ∎
 
-**Corollary E.9.4.1 (Prefactor Universality).** *The prefactor $\hbar/(2\pi k_B)$ relates the quantum of action $\hbar$ to thermal energy via Boltzmann's constant $k_B$, with the factor $2\pi$ arising from the periodicity of Euclidean time in the thermal field theory representation* [Gibbons & Hawking 1977].
+**Corollary E.9.3.1 (Prefactor Universality).** *The prefactor $\hbar/(2\pi k_B)$ relates the quantum of action $\hbar$ to thermal energy via Boltzmann's constant $k_B$, with the factor $2\pi$ arising from the periodicity of Euclidean time in the thermal field theory representation* [Gibbons & Hawking 1977].
 
 ### E.9.4 Holographic Content
 
 Throughout this subsection, we work in natural units ($c = \hbar = k_B = 1$, $L_P^2 = G$) where entropy and information are measured in nats.
 
-**Theorem E.9.3 (Entropy as Information Limit).** The boundary entropy $S_\Sigma$ equals the maximum information specifiable about the interior $A$ from exterior measurements:
+**Theorem E.9.4 (Entropy as Information Limit).** The boundary entropy $S_\Sigma$ equals the maximum information specifiable about the interior $A$ from exterior measurements:
 
 $$I_{\max}(A \mid \bar{A}) = S_\Sigma = \frac{\mathcal{A}}{4G}$$
 
@@ -1522,7 +1522,7 @@ The Page curve exhibits:
 
 **Step 5 (Final state).** At complete evaporation ($\mathcal{A}_H \to 0$), unitarity (Theorem E.9.5) guarantees that the final radiation state $\rho_{\text{rad}}^{\text{final}}$ is pure if the initial state was pure: $S(\rho_{\text{rad}}^{\text{final}}) = S(\rho_{\text{initial}}) = 0$. All information is encoded in the radiation correlations. ∎
 
-**Remark E.9.5.1 (Status of k-design assumption).** The k-design assumption in Step 4 is supported by the following framework elements but not yet derived from first principles:
+**Remark E.9.5.1: Status of k-design assumption.** The k-design assumption in Step 4 is supported by the following framework elements but not yet derived from first principles:
 
 *(i) Supporting evidence:*
 - The spectral gap $\Delta_{\text{gap}} = -\tau^{-1}\ln f_{\text{RID}} > 0$ (Lemma E.6.1) ensures exponential mixing
@@ -1620,11 +1620,11 @@ For reference, we collect the key numerical values appearing in this section:
 
 ### E.9.5.11 Concluding Remarks
 
-**Remark E.9.5.2 (Relation to Standard Quantum Mechanics).** In standard quantum mechanics, unitarity is postulated as an axiom governing closed-system evolution (Postulate 2 of von Neumann's formulation [von Neumann 1932]). The present derivation reveals unitarity as a theorem following from more fundamental principles: the structure of self-referential prediction (SPAP), the thermodynamic constraints it implies ($\varepsilon \geq \ln 2$), and the closed-system assumption (Hypothesis 1).
+**Remark E.9.5.2: Relation to Standard Quantum Mechanics.** In standard quantum mechanics, unitarity is postulated as an axiom governing closed-system evolution (Postulate 2 of von Neumann's formulation [von Neumann 1932]). The present derivation reveals unitarity as a theorem following from more fundamental principles: the structure of self-referential prediction (SPAP), the thermodynamic constraints it implies ($\varepsilon \geq \ln 2$), and the closed-system assumption (Hypothesis 1).
 
 The key insight is that while individual ND-RID channels are strictly contractive ($f_{\text{RID}} \leq 2/3 < 1$, Lemma E.1, Appendix M), this contractivity arises from partial-trace effects on joint unitary operations (Lemma E.9.5.3), not from fundamental information destruction. The derivation applies to closed systems; open systems exhibit apparent non-unitarity through entanglement with external degrees of freedom, consistent with the standard quantum formalism and with Corollary E.9.5.4.
 
-**Remark E.9.5.3 (Consistency with Arrow of Time).** Global unitarity (Theorem E.9.5) and thermodynamic irreversibility (Appendix O, Theorem O.3) are compatible because they describe different operational levels:
+**Remark E.9.5.3: Consistency with Arrow of Time.** Global unitarity (Theorem E.9.5) and thermodynamic irreversibility (Appendix O, Theorem O.3) are compatible because they describe different operational levels:
 
 - *Global level:* The von Neumann entropy of the total closed-system state is conserved under $U_{\text{total}}$. If $\rho_{\text{total}}(0)$ is pure, it remains pure throughout evolution.
 
@@ -1632,7 +1632,7 @@ The key insight is that while individual ND-RID channels are strictly contractiv
 
 The arrow of time (Appendix O, Theorem O.3) emerges not from fundamental non-unitarity but from the universality of the perspectival restriction: every predictor is necessarily embedded in what it predicts (SPAP self-other partition, Appendix P.12), ensuring that the thermodynamic ratchet operates for all observers. This reconciliation exemplifies the entropy unification thesis (Thesis P.6.1): apparent irreversibility and fundamental reversibility coexist because "irreversibility" is always relative to a subsystem boundary.
 
-**Remark E.9.5.4 (Derivational Priority).** The framework achieves what might initially seem paradoxical: deriving both unitarity (information conservation) and the second law (entropy increase) from the same source ($\varepsilon \geq \ln 2$). The resolution is that these describe the same physics from different vantage points—global versus perspectival—unified by the structure of self-referential prediction.
+**Remark E.9.5.4: Derivational Priority.** The framework achieves what might initially seem paradoxical: deriving both unitarity (information conservation) and the second law (entropy increase) from the same source ($\varepsilon \geq \ln 2$). The resolution is that these describe the same physics from different vantage points—global versus perspectival—unified by the structure of self-referential prediction.
 
 The parallel derivation structure:
 
@@ -1640,7 +1640,7 @@ $$\text{SPAP} \xrightarrow[\text{Thm 31}]{\varepsilon \geq \ln 2} \begin{cases} 
 
 demonstrates that the causal capacity bounds (Branch I) and global unitarity (Branch II) are complementary consequences of a single constraint: the thermodynamic cost of self-referential prediction.
 
-**Remark E.9.5.5 (Role of Closed-System Assumption).** The derivation of global unitarity (Theorem E.9.5) critically depends on Hypothesis 1. Without this assumption, the Stinespring environment for reduced dynamics could include external degrees of freedom, and global evolution could in principle be non-unitary. Within the PU framework, Hypothesis 1 is a foundational postulate asserting that the MPU network constitutes internally complete physical reality—no information leaks to degrees of freedom accessible by internal systems (consistent with the observation channel architecture of Appendix P.5). This transforms unitarity from a postulate into a theorem.
+**Remark E.9.5.5: Role of Closed-System Assumption.** The derivation of global unitarity (Theorem E.9.5) critically depends on Hypothesis 1. Without this assumption, the Stinespring environment for reduced dynamics could include external degrees of freedom, and global evolution could in principle be non-unitary. Within the PU framework, Hypothesis 1 is a foundational postulate asserting that the MPU network constitutes internally complete physical reality—no information leaks to degrees of freedom accessible by internal systems (consistent with the observation channel architecture of Appendix P.5). This transforms unitarity from a postulate into a theorem.
 
 The assumption admits a natural extension to systems with external observation (Appendix P.5). An observation channel satisfying Definition P.5.3 permits external information extraction while preserving internal closure: internal systems gain no information from the channel ($\Delta I_{int} = 0$) and internal states are not modified by external reading. From the internal perspective, such a system satisfies Assumption E.9.5.1, and Theorem E.9.5 applies to its internal dynamics. The external observer incurs the thermodynamic cost $\varepsilon \geq \ln 2$ in their own context (Theorem 33), consistent with the Reflexivity Constraint.
 
@@ -1721,7 +1721,7 @@ $$v_{\max} = \frac{\delta}{\tau_{\min}} = \frac{L_P}{t_P} = c$$
 
 The emergent speed of light is thus identified with the maximum causal propagation velocity of the MPU network. ∎
 
-*Remark (Relation to Standard Lieb-Robinson Bounds).* The standard Lieb-Robinson theorem [Lieb & Robinson 1972] establishes finite propagation speed in quantum lattice systems through analytic bounds on commutator growth, requiring local bounded Hamiltonians and finite interaction range. The present derivation reaches the same conclusion—finite maximum velocity—through thermodynamic arguments: the entropy cost $\varepsilon \geq \ln 2$ per link and finite processing time $\tau_{\min}$ per cycle together bound $v_{\max}$. The two approaches are complementary; the thermodynamic derivation clarifies *why* the velocity is bounded (information processing has irreducible cost), while the standard proof provides rigorous analytic bounds.
+*Remark: Relation to Standard Lieb-Robinson Bounds.* The standard Lieb-Robinson theorem [Lieb & Robinson 1972] establishes finite propagation speed in quantum lattice systems through analytic bounds on commutator growth, requiring local bounded Hamiltonians and finite interaction range. The present derivation reaches the same conclusion—finite maximum velocity—through thermodynamic arguments: the entropy cost $\varepsilon \geq \ln 2$ per link and finite processing time $\tau_{\min}$ per cycle together bound $v_{\max}$. The two approaches are complementary; the thermodynamic derivation clarifies *why* the velocity is bounded (information processing has irreducible cost), while the standard proof provides rigorous analytic bounds.
 
 **Corollary E.10.1 (Entropy Production Rate Bound).** The rate of entropy production for information propagation is bounded below:
 
@@ -1760,6 +1760,6 @@ This appendix provided a theoretical derivation of the Horizon Entropy Area Law 
 
 **Stage 1 (Quantum Entanglement Foundation, Sections E.6.1–E.6.3):** The area law is first established from quantum many-body entanglement structure, independent of gravitational field equations. The MPU network's ND-RID dynamics satisfy the prerequisites for quantum many-body area laws (Lemma E.6.1): locality, finite Lieb-Robinson velocity, spectral gap, and exponential clustering. Applying Hastings-type bounds to the MPU network ground state yields the entanglement entropy area scaling $S_{ent}(A) = \eta_{ent} \cdot |\partial A| + \mathcal{O}(1)$ (Theorem E.4'). Local thermodynamic consistency—requiring the Clausius relation $\delta S = \delta Q / T$ to hold for all local Rindler horizons using only kinematic results (Unruh temperature, entanglement first law, Raychaudhuri equation)—uniquely fixes the coefficient $\eta_{ent} = 1/(4G)$ in natural units (Theorem E.5). This identifies the gravitational constant $G$ as an emergent quantity determined by the MPU network's quantum information structure, grounding the area law in fundamental quantum entanglement principles.
 
-**Stage 2 (Operational Channel Counting, Sections E.6.4–E.6.5):** The same result is independently derived from operational principles. ND-RID irreversibility ($\varepsilon \ge \ln 2$, Theorem 31, rigorously proven in Appendix J) guarantees strict channel contractivity ($f_{RID}<1$, Lemma E.1), fundamentally bounding classical information capacity ($C_{max} < \ln d_0$, Theorem E.2). Combined with the geometric scaling of effective information channels across a boundary ($N_{eff\_links} \propto \mathcal{A}$, incorporating correlation factor $\chi$, conditional on Theorem 43, Theorem E.3), this yields the linear entropy-area relation $S_{max} = k_B \left(\frac{\chi C_{max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}$ (Equation E.6). Consistency between the two approaches (Section E.6.4) requires $\frac{\chi C_{max}(f_{RID})}{\eta \delta^2} = \frac{1}{4G}$, yielding the explicit Bekenstein-Hawking coefficient $1/(4L_P^2)$ (Theorem E.6).
+**Stage 2 (Operational Channel Counting, Sections E.6.4–E.6.5):** The same result is independently derived from operational principles. ND-RID irreversibility ($\varepsilon \ge \ln 2$, Theorem 31, rigorously proven in Appendix J) guarantees strict channel contractivity ($f_{RID}<1$, Lemma E.1), fundamentally bounding classical information capacity ($C_{\max} < \ln d_0$, Theorem E.2). Combined with the geometric scaling of effective information channels across a boundary ($N_{eff\_links} \propto \mathcal{A}$, incorporating correlation factor $\chi$, conditional on Theorem 43, Theorem E.3), this yields the linear entropy-area relation $S_{max} = k_B \left(\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}$ (Equation E.6). Consistency between the two approaches (Section E.6.4) requires $\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{1}{4G}$, yielding the explicit Bekenstein-Hawking coefficient $1/(4L_P^2)$ (Theorem E.6).
 
-**Synthesis:** This dual derivation—from quantum entanglement structure AND operational channel capacity—demonstrates that the area law emerges necessarily from the MPU framework's foundational principles. The emergent gravitational constant is expressed as $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}(f_{RID})}$ (Equation E.9), linking the Planck scale ($L_P^2 = G\hbar/c^3$) to fundamental MPU parameters ($\delta, \eta, \chi, \varepsilon$ via $C_{max}$) controlling geometric density and information capacity. As shown in **Section E.7 (Equations E.14, E.15)**, PCE optimization of the vacuum state yields $C_{max}^* = \ln(d_0) - \varepsilon = 2\ln(2)$, with $\chi^* \approx 1$ and $\eta^* \approx 1$, demonstrating structural consistency and predicting $\delta/L_P \approx 2.355$. The derived Area Law interprets the black hole horizon thermodynamically as representing the maximal information boundary defined by both the fundamental quantum entanglement structure and the ND-RID capacity limits. This provides the necessary thermodynamic foundation (Theorem 49) for deriving Einstein's Field Equations (Section 12).
+**Synthesis:** This dual derivation—from quantum entanglement structure AND operational channel capacity—demonstrates that the area law emerges necessarily from the MPU framework's foundational principles. The emergent gravitational constant is expressed as $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$ (Equation E.9), linking the Planck scale ($L_P^2 = G\hbar/c^3$) to fundamental MPU parameters ($\delta, \eta, \chi, \varepsilon$ via $C_{\max}$) controlling geometric density and information capacity. As shown in **Section E.7 (Equations E.14, E.15)**, PCE optimization of the vacuum state yields $C_{\max}^* = \ln(d_0) - \varepsilon = 2\ln(2)$, with $\chi^* \approx 1$ and $\eta^* \approx 1$, demonstrating structural consistency and predicting $\delta/L_P \approx 2.355$. The derived Area Law interprets the black hole horizon thermodynamically as representing the maximal information boundary defined by both the fundamental quantum entanglement structure and the ND-RID capacity limits. This provides the necessary thermodynamic foundation (Theorem 49) for deriving Einstein's Field Equations (Section 12).

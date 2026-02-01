@@ -2,7 +2,7 @@
 
 ## Q.0 The Action-Entropy Identity and the Origin of Planck's Constant
 
-Before deriving the quantitative relationship between the MPU spacing δ and the Planck length L_P, we establish a foundational result: the identification of Planck's constant $\hbar$ as the exchange rate between information-theoretic and mechanical descriptions of physical processes. This identification emerges from the Action-Entropy Identity, which reveals that physical action measures cumulative irreversible entropy production.
+Before deriving the quantitative relationship between the MPU spacing $\delta$ and the Planck length $L_P$, we establish a foundational result: the identification of Planck's constant $\hbar$ as the exchange rate between information-theoretic and mechanical descriptions of physical processes. This identification emerges from the Action-Entropy Identity, which reveals that physical action measures cumulative irreversible entropy production.
 
 ### Q.0.1 The Puzzle of Least Action
 
@@ -16,7 +16,7 @@ The MPU network executes cyclical predictive operations, each cycle implementing
 
 $$\text{Predict} \to \text{Verify} \to \text{Update}$$
 
-Each non-trivial cycle incurs the irreducible SPAP entropy cost ε ≥ ln 2 nats (Theorem 31, Appendix J). This cost arises from the logically irreversible 2-to-1 state merge required by self-referential prediction (Lemma J.1), and by Landauer's principle, necessarily manifests as thermodynamic entropy production.
+Each non-trivial cycle incurs the irreducible SPAP entropy cost $\varepsilon \geq \ln 2$ nats (Theorem 31, Appendix J). This cost arises from the logically irreversible 2-to-1 state merge required by self-referential prediction (Lemma J.1), and by Landauer's principle, necessarily manifests as thermodynamic entropy production.
 
 **Definition Q.0.1 (Dimensionless Discrete Predictive Action).** For a trajectory of the MPU network over $N$ predictive cycles, define the *dimensionless* discrete predictive action by:
 
@@ -29,21 +29,21 @@ The corresponding *physical* action functional is obtained by the universal conv
 $$\mathcal{S}^{phys}_{disc} := \hbar\,\mathcal{S}_{disc}$$
 
 
-**Proposition Q.0.1 (Action Bounds).** For any trajectory involving N_ops non-trivial predictive operations:
+**Proposition Q.0.1 (Action Bounds).** For any trajectory involving $N_{\text{ops}}$ non-trivial predictive operations:
 
 $$\mathcal{S}_{disc} \geq N_{ops} \cdot \ln 2$$
 
-*Proof.* Each non-trivial operation contributes at least the SPAP minimum ε = ln 2 nats by Theorem 31. QED
+*Proof.* Each non-trivial operation contributes at least the SPAP minimum $\varepsilon = \ln 2$ nats by Theorem 31. QED
 
-**Remark (Entropy Unification).** The quantity ε appearing here is the same SPAP entropy that, through the derivation chain of Thesis P.6.1 (Appendix P), connects to Shannon, von Neumann, thermodynamic, and Bekenstein-Hawking entropy. The discrete predictive action thus inherits this unified structure: it counts entropy in the foundational sense established by the framework.
+**Remark: Entropy Unification.** The quantity $\varepsilon$ appearing here is the same SPAP entropy that, through the derivation chain of Thesis P.6.1 (Appendix P), connects to Shannon, von Neumann, thermodynamic, and Bekenstein-Hawking entropy. The discrete predictive action thus inherits this unified structure: it counts entropy in the foundational sense established by the framework.
 
 ### Q.0.3 The Continuum Limit via Γ-Convergence
 
-The discrete predictive cost functional converges to a continuum action in the limit of fine network resolution. This convergence is developed within the Γ-convergence framework (Theorem D.8, Appendix D; Section O.7, Appendix O).
+The discrete predictive cost functional converges to a continuum action in the limit of fine network resolution. This convergence is developed within the Γ-convergence framework (Theorem D.6, Appendix D; Section O.7, Appendix O).
 
 **Theorem Q.0.1 (Action-Entropy Identity).** Let $\{G_h\}_{h\to 0}$ be a family of MPU networks with mesh size $h \to 0$ approximating a spacetime region. Let $\mathcal{S}_{disc}^{(h)}$ be the dimensionless discrete predictive action of Definition Q.0.1.
 
-Under the locality and equi-coercivity hypotheses of Theorem D.8 (Appendix D), the corresponding physical action functional $\mathcal{S}_{disc}^{phys,(h)} := \hbar\,\mathcal{S}_{disc}^{(h)}$ admits a $\Gamma$-limit that is a local diffeomorphism-invariant continuum functional of the emergent fields and metric. Writing this limit in standard action form defines the continuum action $\mathcal{S}$:
+Under the locality and equi-coercivity hypotheses of Theorem D.6 (Appendix D), the corresponding physical action functional $\mathcal{S}_{disc}^{phys,(h)} := \hbar\,\mathcal{S}_{disc}^{(h)}$ admits a $\Gamma$-limit that is a local diffeomorphism-invariant continuum functional of the emergent fields and metric. Writing this limit in standard action form defines the continuum action $\mathcal{S}$:
 
 $$\mathcal{S}_{disc}^{phys,(h)} \xrightarrow{\Gamma} \mathcal{S} := \int d^4x \sqrt{|g|}\,\mathcal{L}_{tot}$$
 
@@ -53,7 +53,7 @@ $$\boxed{\mathcal{S}_{disc}^{(h)} \xrightarrow{\Gamma} \frac{\mathcal{S}}{\hbar}
 
 where $\hbar$ is the universal conversion factor between SPAP entropy units (nats) and physical action units (J·s).
 
-*Proof.* Appendix D establishes existence of a $\Gamma$-limit for the PCE-driven discrete action functional under locality and equi-coercivity (Theorem D.8). Locality and invariance fix the continuum limit to the standard form of an integral of a scalar density $\sqrt{|g|}\,\mathcal{L}_{tot}$. The normalization is fixed by identifying the continuum limit with the conventional action units, which introduces a single universal conversion constant with dimensions of action, denoted $\hbar$.
+*Proof.* Appendix D establishes existence of a $\Gamma$-limit for the PCE-driven discrete action functional under locality and equi-coercivity (Theorem D.6). Locality and invariance fix the continuum limit to the standard form of an integral of a scalar density $\sqrt{|g|}\,\mathcal{L}_{tot}$. The normalization is fixed by identifying the continuum limit with the conventional action units, which introduces a single universal conversion constant with dimensions of action, denoted $\hbar$.
 
 
 1. **Spatial sector:** The discrete cost for spatial variations Γ-converges to a positive-definite quadratic form defining the emergent Riemannian metric on spatial slices.
@@ -107,7 +107,7 @@ $$\boxed{\hbar = \frac{[\text{Action}]}{[\text{Entropy}]} = \frac{\text{J} \cdot
 
 It is the universal exchange rate between mechanical and information-theoretic descriptions of physical processes. This parallels the role of other fundamental constants as exchange rates (Section P.6.5.5): $k_B$ converts between temperature and energy, $c$ between space and time, and $\hbar$ between action and entropy.
 
-**Remark Q.0.1 (What Is and Is Not Derived).** The framework derives:
+**Remark Q.0.1: What Is and Is Not Derived.** The framework derives:
 - The *existence* of $\hbar$ as a necessary conversion factor
 - The *meaning* of $\hbar$ as action-per-nat of SPAP entropy  
 - The *role* of $\hbar$ in connecting discrete and continuous descriptions
@@ -145,7 +145,7 @@ admits the interpretation:
 
 $$\langle \phi_f | \phi_i \rangle = \int \mathcal{D}\phi \, e^{i \sum_k \varepsilon_k[\phi]}$$
 
-where Σ_k ε_k[φ] is the total SPAP entropy cost along path φ.
+where $\sum_k \varepsilon_k[\phi]$ is the total SPAP entropy cost along path $\phi$.
 
 *Proof.* Direct substitution of the Action-Entropy Identity (Corollary Q.0.1). The phase factor is oscillatory because it is a unit-modulus complex phase $e^{i\mathcal{S}[\phi]/\hbar} = e^{i\sum_k\varepsilon_k[\phi]}$ with real exponent; interference is controlled by relative phase differences (including overhead contributions when some cycles have $\varepsilon_k > \ln 2$). QED
 
@@ -188,7 +188,7 @@ $$2^i = e^{i\ln 2}$$
 
 This contradicts the algebraicity established above. Hence $\alpha_L \notin \mathbb{Q}$. $\square$
 
-**Remark Q.0.7b.1 (Transcendence Status).** While the irrationality of $\alpha_L$ is proven, its transcendence remains an open question. No algebraic relation between $\pi$ and $\ln 2$ is known, and the algebraic independence of $\{\pi, \ln 2\}$ over $\mathbb{Q}$ is conjectured but unproven. The irrationality alone suffices for all results in this section.
+**Remark Q.0.7b.1: Transcendence Status.** While the irrationality of $\alpha_L$ is proven, its transcendence remains an open question. No algebraic relation between $\pi$ and $\ln 2$ is known, and the algebraic independence of $\{\pi, \ln 2\}$ over $\mathbb{Q}$ is conjectured but unproven. The irrationality alone suffices for all results in this section.
 
 ---
 
@@ -476,13 +476,13 @@ $$
 $$
 so coherence decays exponentially with the overhead variance.
 
-**Remark Q.0.7p.1 (PCE Selection of Overhead Distribution).** The probability law $P(\Delta)$ is not arbitrary but is determined by the PCE dynamics (Appendix D). Near the PCE-Attractor (Definition 15a), overhead fluctuations are suppressed by the cost function $V_{op}$ (Definition D.1), leading to concentration of $P(\Delta)$ near zero. The decoherence mechanism thus becomes significant only away from the attractor, providing a natural explanation for the emergence of classical behavior in non-optimal configurations.
+**Remark Q.0.7p.1: PCE Selection of Overhead Distribution.** The probability law $P(\Delta)$ is not arbitrary but is determined by the PCE dynamics (Appendix D). Near the PCE-Attractor (Definition 15a), overhead fluctuations are suppressed by the cost function $V_{op}$ (Definition D.1), leading to concentration of $P(\Delta)$ near zero. The decoherence mechanism thus becomes significant only away from the attractor, providing a natural explanation for the emergence of classical behavior in non-optimal configurations.
 
 ---
 
 ### Q.0.7.15 Modular Structure from Continued Fractions
 
-**Remark Q.0.7q (The Modular Itinerary Canonically Induced by $\alpha_L$).** The continued fraction of $\alpha_L$ canonically produces a sequence of matrices in $GL_2(\mathbb{Z})$ via convergents:
+**Remark Q.0.7q: The Modular Itinerary Canonically Induced by $\alpha_L$.** The continued fraction of $\alpha_L$ canonically produces a sequence of matrices in $GL_2(\mathbb{Z})$ via convergents:
 $$M_n := \begin{pmatrix} p_n & p_{n-1} \\ q_n & q_{n-1} \end{pmatrix}, \qquad \det(M_n) = (-1)^{n-1}, \qquad M_n(\infty) = \frac{p_n}{q_n}$$
 
 Equivalently, the digit string $[0; 9, 15, 2, 4, 1, 1, 1, 1, 2, 2, 3, \ldots]$ defines a word in the generators $S: \tau \mapsto -1/\tau$ and $T: \tau \mapsto \tau + 1$, giving a canonical coding of a geodesic on the modular surface $\mathcal{H}/PSL_2(\mathbb{Z})$ by continued fractions [Series 1985].
@@ -495,7 +495,7 @@ This provides a rigorous $PSL_2(\mathbb{Z})$-structured object determined solely
 
 ### Q.0.7.16 Gauge-Holonomy Interface
 
-**Remark Q.0.7r (Gauge-Holonomy Interface).** Appendix G derives a local $U(1)$ redundancy with covariant derivative:
+**Remark Q.0.7r: Gauge-Holonomy Interface.** Appendix G derives a local $U(1)$ redundancy with covariant derivative:
 $$D_\mu\Psi = (\partial_\mu + \Omega_\mu + iq A_\mu)\Psi$$
 
 and associated $U(1)$ holonomies $\exp(iq\oint_\gamma A_\mu dx^\mu)$ (Section G.4).
@@ -527,7 +527,7 @@ Under local rephasing $\Psi \mapsto e^{iq\theta(x)}\Psi$, this reproduces the st
 
 *Justification.* Since $\overline{\langle t\rangle} = T$, the closure $\overline{\Gamma}$ contains $T$. The only proper closed subgroups of $SU(2)$ containing a maximal torus are $T$ itself and its normalizer $N_{SU(2)}(T) \cong O(2)$. If $g \notin N_{SU(2)}(T)$, the closed subgroup generated by $T$ and $g$ is therefore all of $SU(2)$.
 
-**Remark Q.0.7t.1 (Physical Selection of Generators).** The framework selects the generators satisfying the Lie algebra spanning condition through the PCE dynamics. The SPAP involution $\sigma_x$ (Theorem G.10.2) provides one generator in $SU(2)$, while the interface dynamics (Section G.8) generate additional elements through the QFI mode structure. The non-commutativity of these generators ensures that the generated subgroup spans the full $\mathfrak{su}(2)$ algebra.
+**Remark Q.0.7t.1: Physical Selection of Generators.** The framework selects the generators satisfying the Lie algebra spanning condition through the PCE dynamics. The SPAP involution $\sigma_x$ (Theorem G.10.2) provides one generator in $SU(2)$, while the interface dynamics (Section G.8) generate additional elements through the QFI mode structure. The non-commutativity of these generators ensures that the generated subgroup spans the full $\mathfrak{su}(2)$ algebra.
 
 ---
 
@@ -600,7 +600,7 @@ $$N_\gamma \cdot \ln 2 = 2\pi k \implies N_\gamma = \frac{2\pi}{\ln 2} k \approx
 
 *The fundamental period in cycle-number space is $\Delta N_0 = 2\pi/\ln 2 \approx 9.0647$.*
 
-**Remark Q.0.4b (Non-Integer Period and Resolution).** The period $\Delta N_0 = 2\pi/\ln 2 \approx 9.0647$ is not an integer. Lemma Q.0.7b establishes that this ratio is irrational via the Gelfond–Schneider theorem. This creates a tension between two constraints:
+**Remark Q.0.4b: Non-Integer Period and Resolution.** The period $\Delta N_0 = 2\pi/\ln 2 \approx 9.0647$ is not an integer. Lemma Q.0.7b establishes that this ratio is irrational via the Gelfond–Schneider theorem. This creates a tension between two constraints:
 
 1. *Discrete constraint:* Integer cycle counts $N \in \mathbb{Z}$ are enforced by the atomic structure of SPAP operations (Proposition Q.0.3).
 
@@ -648,9 +648,9 @@ $$m(v) = \mu_0 |v|, \quad \mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} = \frac{m_P}
 
 Squaring yields the stated relation. $\square$
 
-**Remark Q.0.5a.1 (Derivation Chain).** The mass-lattice correspondence follows from the derivation chain established in Appendices Z, R, and N. Each step connects SPAP entropy to the Leech lattice structure via the Golay code, with the mass spectrum emerging from the lattice geometry through the Mass-Information Equivalence (Theorem N.5).
+**Remark Q.0.5a.1: Derivation Chain.** The mass-lattice correspondence follows from the derivation chain established in Appendices Z, R, and N. Each step connects SPAP entropy to the Leech lattice structure via the Golay code, with the mass spectrum emerging from the lattice geometry through the Mass-Information Equivalence (Theorem N.5).
 
-**Remark Q.0.5a.2 (Phenomenological Status).** The Leech lattice shell structure provides a discrete mass spectrum at the fundamental scale. Connection to observed particle masses requires: (i) identification of vacuum excitations with physical particles, (ii) symmetry breaking mechanisms selecting specific lattice points, and (iii) RG flow from $\mu_0 \sim 0.2 \, m_P$ to electroweak scales. These developments appear in Appendices R (fermion generations) and T (electroweak hierarchy).
+**Remark Q.0.5a.2: Phenomenological Status.** The Leech lattice shell structure provides a discrete mass spectrum at the fundamental scale. Connection to observed particle masses requires: (i) identification of vacuum excitations with physical particles, (ii) symmetry breaking mechanisms selecting specific lattice points, and (iii) RG flow from $\mu_0 \sim 0.2 \, m_P$ to electroweak scales. These developments appear in Appendices R (fermion generations) and T (electroweak hierarchy).
 
 **Corollary Q.0.5b (Landauer-Shell Correspondence).** *The minimum Leech shell $|v|^2_{\min} = 4$ equals the squared Landauer pointer dimension $a^2 = (e^\varepsilon)^2 = 4$. This equality traces through the derivation chain:*
 
@@ -718,7 +718,7 @@ $$2^{iN_1} + 2^{iN_2} \text{ is maximized} \iff (N_1 - N_2)\ln 2 = 2\pi k, \quad
    
    Processes requiring action below this threshold cannot involve irreversible predictive operations.
 
-**Remark Q.0.8a (Experimental Accessibility).** These predictions operate at the Planck scale: $\mathcal{S}_{\min} = \hbar \ln 2 \approx 0.69\hbar$ represents a sub-Planck action, and the fundamental mass scale $\mu_0 \approx 0.21 \, m_P$ is near the Planck mass. Direct experimental verification lies beyond current technology. The predictions are nonetheless falsifiable in principle through:
+**Remark Q.0.8a: Experimental Accessibility.** These predictions operate at the Planck scale: $\mathcal{S}_{\min} = \hbar \ln 2 \approx 0.69\hbar$ represents a sub-Planck action, and the fundamental mass scale $\mu_0 \approx 0.21 \, m_P$ is near the Planck mass. Direct experimental verification lies beyond current technology. The predictions are nonetheless falsifiable in principle through:
 
 (i) Precision tests of quantum coherence at mesoscopic scales where $N$ is moderately small
 
@@ -726,7 +726,7 @@ $$2^{iN_1} + 2^{iN_2} \text{ is maximized} \iff (N_1 - N_2)\ln 2 = 2\pi k, \quad
 
 (iii) Derived consequences at accessible scales—particle mass ratios, coupling constants, and symmetry structures (Sections 13, G.8.4, Appendix T)
 
-**Remark Q.0.8b (Sub-Planck Action).** The minimum action $\mathcal{S}_{\min} = \hbar \ln 2 < \hbar$ is sub-Planckian. This does not violate uncertainty relations because the bound applies to complete irreversible cycles, not to arbitrary measurements. The time-energy uncertainty $\Delta E \cdot \Delta t \gtrsim \hbar/2$ constrains measurement precision, while $\mathcal{S}_{\min}$ constrains the action of completed logical operations.
+**Remark Q.0.8b: Sub-Planck Action.** The minimum action $\mathcal{S}_{\min} = \hbar \ln 2 < \hbar$ is sub-Planckian. This does not violate uncertainty relations because the bound applies to complete irreversible cycles, not to arbitrary measurements. The time-energy uncertainty $\Delta E \cdot \Delta t \gtrsim \hbar/2$ constrains measurement precision, while $\mathcal{S}_{\min}$ constrains the action of completed logical operations.
 
 ---
 
@@ -766,7 +766,7 @@ Thus one quantum of action corresponds to $9$ SPAP-minimum cycles plus a small i
 
 **Step 5 (Geometric origin of $2\pi$).** The factor $2\pi$ arises because interference around a closed orbit requires phase coherence after one complete geometric cycle. The orbit's angular extent is $2\pi$ radians, introducing the geometric factor that converts the fundamental entropy unit $\ln 2$ to the orbital quantization unit $2\pi$. $\square$
 
-**Remark Q.0.9a (Information-Theoretic Origin).** Unlike Bohr-Sommerfeld quantization (imposed as a postulate) or Dirac quantization (derived from canonical commutators), the present quantization derives from:
+**Remark Q.0.9a: Information-Theoretic Origin.** Unlike Bohr-Sommerfeld quantization (imposed as a postulate) or Dirac quantization (derived from canonical commutators), the present quantization derives from:
 
 1. The logical structure of self-referential prediction (SPAP, Theorems 10–11)
 2. The irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31, Appendix J)
@@ -810,7 +810,7 @@ The derivation combines three established results:
 
 $$T_U(a) = \frac{\hbar a}{2\pi k_B c}$$
 
-This result follows from quantum field theory in curved spacetime and is kinematic—it depends only on the existence of a Rindler horizon, not on the dynamical field equations (Theorem E.9.4, Appendix E).
+This result follows from quantum field theory in curved spacetime and is kinematic—it depends only on the existence of a Rindler horizon, not on the dynamical field equations (Theorem E.9.3, Appendix E).
 
 **Ingredient 2 (Landauer Bound).** Erasing one bit of information into a thermal reservoir at temperature $T$ requires minimum heat dissipation [Landauer 1961; Bennett 1982]:
 
@@ -857,7 +857,7 @@ $$\tau_U = \frac{\mathcal{S}_{\min}}{E_{\min}} = \frac{\hbar \ln 2}{\hbar a \ln 
 
 The result depends only on acceleration $a$ and the speed of light $c$. $\square$
 
-**Remark Q.0.10a (Thermodynamic Optimum).** The derivation assumes operation exactly at the Landauer limit, where the dissipated heat per erased bit is minimized: $E = Q_{\min}$. If a real process dissipates additional energy $E > Q_{\min}$ per irreversible cycle, the SPAP-minimum action constraint $\mathcal{S}_{\min} = \hbar \ln 2$ implies a shorter cycle time:
+**Remark Q.0.10a: Thermodynamic Optimum.** The derivation assumes operation exactly at the Landauer limit, where the dissipated heat per erased bit is minimized: $E = Q_{\min}$. If a real process dissipates additional energy $E > Q_{\min}$ per irreversible cycle, the SPAP-minimum action constraint $\mathcal{S}_{\min} = \hbar \ln 2$ implies a shorter cycle time:
 $$
 \tau = \frac{\mathcal{S}_{\min}}{E} = \frac{\hbar \ln 2}{E}
 \le \frac{\hbar \ln 2}{Q_{\min}(a)} = \tau_U(a) = \frac{2\pi c}{a}.
@@ -885,7 +885,7 @@ $$
 \dot{N}_U = \frac{1}{\tau_U} = \frac{a}{2\pi c}.
 $$
 
-**Remark Q.0.10d (Not a Universal Speed Limit).** The cycle time $\tau_U$ is the characteristic timescale when operating at minimum energy (Landauer limit). An observer with access to additional energy can achieve shorter cycle times:
+**Remark Q.0.10d: Not a Universal Speed Limit.** The cycle time $\tau_U$ is the characteristic timescale when operating at minimum energy (Landauer limit). An observer with access to additional energy can achieve shorter cycle times:
 
 $$\tau = \frac{\hbar \ln 2}{E} < \tau_U \quad \text{when} \quad E > Q_{\min}(a)$$
 
@@ -919,11 +919,11 @@ The cancellation is exact because all three quantities—Unruh temperature, Land
 | $a = c^2/L_P$ | $\tau_U = 2\pi t_P$ | $\dot{N}_U = 1/(2\pi t_P)$ | Planck acceleration |
 | $a = g \approx 9.8$ m/s² | $\tau_U \approx 1.92 \times 10^{8}$ s | $\dot{N}_U \approx 5.2 \times 10^{-9}$ Hz | Earth surface gravity |
 
-**Remark Q.0.10f (Inertial Limit).** For inertial observers ($a = 0$), the Unruh temperature vanishes and this analysis does not apply—a different heat sink must be specified. The divergence $\tau_U \to \infty$ reflects the absence of vacuum thermal resources, not an impossibility of computation. An inertial observer with access to a thermal bath at temperature $T$ has minimum cycle time:
+**Remark Q.0.10f: Inertial Limit.** For inertial observers ($a = 0$), the Unruh temperature vanishes and this analysis does not apply—a different heat sink must be specified. The divergence $\tau_U \to \infty$ reflects the absence of vacuum thermal resources, not an impossibility of computation. An inertial observer with access to a thermal bath at temperature $T$ has minimum cycle time:
 
 $$\tau = \frac{\hbar \ln 2}{k_B T \ln 2} = \frac{\hbar}{k_B T}$$
 
-**Remark Q.0.10g (Earth Gravity).** At Earth's surface gravity ($g \approx 9.8$ m/s²), the Unruh temperature is:
+**Remark Q.0.10g: Earth Gravity.** At Earth's surface gravity ($g \approx 9.8$ m/s²), the Unruh temperature is:
 
 $$T_U = \frac{\hbar g}{2\pi k_B c} \approx 4.0 \times 10^{-20} \text{ K}$$
 
@@ -1048,7 +1048,7 @@ $$\frac{N_{total}}{S_{BH}} = \frac{640 GM^2/(\hbar c)}{4\pi GM^2/(\hbar c)} = \f
 
 The order-unity discrepancy reflects the distinction between instantaneous bit rate (computed at fixed $M$) and the integrated rate over evaporation (during which $M$ decreases). The key result is $N_{total} \sim S_{BH}$: the horizon processes approximately one bit per unit entropy over its lifetime. $\square$
 
-**Remark Q.0.13a (Information Processing Interpretation).** The black hole horizon is not merely a causal boundary but an information-processing surface. The Bekenstein-Hawking entropy $S_{BH}$ counts the horizon's information content; the Rindler-Landauer rate $\dot{N}_{BH}$ determines how fast this information can be processed. The consistency $N_{total} \sim S_{BH}$ confirms that the horizon processes its full information content exactly once during evaporation—saturating but not exceeding the information-theoretic bounds.
+**Remark Q.0.13a: Information Processing Interpretation.** The black hole horizon is not merely a causal boundary but an information-processing surface. The Bekenstein-Hawking entropy $S_{BH}$ counts the horizon's information content; the Rindler-Landauer rate $\dot{N}_{BH}$ determines how fast this information can be processed. The consistency $N_{total} \sim S_{BH}$ confirms that the horizon processes its full information content exactly once during evaporation—saturating but not exceeding the information-theoretic bounds.
 
 ---
 
@@ -1079,17 +1079,17 @@ $\square$
 
 **Corollary Q.0.14a (Equivalence with Equation E.9).** *The expression for $G$ from horizon computation is equivalent to the MPU-derived formula (Equation E.9):*
 
-$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{max}}$$
+$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}}$$
 
 *Proof.* Appendix E gives the entropy density in MPU parameters:
 $$
-\frac{S_{BH}}{A} = \frac{\chi C_{max}}{\eta \delta^2}.
+\frac{S_{BH}}{A} = \frac{\chi C_{\max}}{\eta \delta^2}.
 $$
 Substituting into Theorem Q.0.14 yields
 $$
 G = \frac{c^3}{4\hbar}\cdot \frac{1}{S_{BH}/A}
-= \frac{c^3}{4\hbar}\cdot \frac{\eta \delta^2}{\chi C_{max}}
-= \frac{\eta \delta^2 c^3}{4\hbar \chi C_{max}},
+= \frac{c^3}{4\hbar}\cdot \frac{\eta \delta^2}{\chi C_{\max}}
+= \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}},
 $$
 which is Equation (E.9). $\square$
 
@@ -1102,7 +1102,7 @@ which is Equation (E.9). $\square$
 
 1. *Einstein's field equations hold (Theorem 12.1)*
 2. *Horizons satisfy the Bekenstein-Hawking area law (Theorem 49)*
-3. *The gravitational constant is $G = \eta\delta^2 c^3/(4\hbar\chi C_{max})$ (Equation E.9)*
+3. *The gravitational constant is $G = \eta\delta^2 c^3/(4\hbar\chi C_{\max})$ (Equation E.9)*
 4. *Horizon computational rate is $\dot{N} = \kappa/(2\pi c)$ (Theorem Q.0.12)*
 
 *Proof.*
@@ -1171,40 +1171,40 @@ exhibits exact cancellation because the three conversion factors form a closed l
 The Rindler-Landauer result $\tau_U = 2\pi c/a$ is not an isolated calculation but the computational face of the same structure that yields Einstein's equations. The cancellation of $\hbar$, $k_B$, and $\ln 2$ reveals that gravity, thermodynamics, and information theory are not three theories that happen to connect at horizons—they are three descriptions of a single geometric reality. The gravitational constant $G$, the Bekenstein-Hawking entropy, and the horizon computational rate are mutually determined by the requirement of self-consistency across all local causal boundaries.
 
 
-**Q.1 Foundational Relation and the Optimization Goal**
+## Q.1 Foundational Relation and the Optimization Goal
 
 This appendix develops a *self-consistency analysis* determining the quantitative relationship between the emergent Planck length $L_P$ and the intrinsic microscopic spacing $\delta$ of the MPU network through a physically motivated PCE potential model. The derivation proceeds by constructing a global PCE Potential for the MPU network vacuum and finding the unique, stable equilibrium state that minimizes it. This equilibrium is then shown to be self-consistent with the framework's foundational geometric and information-theoretic identities. This derivation is a key component of the framework's ability to predict fundamental constants from first principles.
 
 The derivation begins with the relationship between the emergent gravitational constant $G$ and the microscopic network parameters, established in **Appendix E**, Equation (E.9):
 $$
-G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}}
+G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}}
 \tag{Q.1}
 $$
-where `η` is a geometric packing factor, `χ` is a dimensionless correlation factor ($0 < \chi \le 1$), and `C_max` is the ND-RID channel capacity. Using the definition of the squared Planck Length, $L_P^2 = G\hbar/c^3$, we eliminate `G` to obtain a direct relationship between the fundamental MPU spacing and the emergent Planck scale:
+where $\eta$ is a geometric packing factor, $\chi$ is a dimensionless correlation factor ($0 < \chi \le 1$), and $C_{\max}$ is the ND-RID channel capacity. Using the definition of the squared Planck Length, $L_P^2 = G\hbar/c^3$, we eliminate $G$ to obtain a direct relationship between the fundamental MPU spacing and the emergent Planck scale:
 $$
-L_P^2 = \left( \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}} \right) \frac{\hbar}{c^3} = \frac{\eta \delta^2}{4 \chi C_{max}}
+L_P^2 = \left( \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}} \right) \frac{\hbar}{c^3} = \frac{\eta \delta^2}{4 \chi C_{\max}}
 \tag{Q.2}
 $$
 Rearranging this gives the target relation:
 $$
-\frac{\delta^2}{L_P^2} = \frac{4 \chi C_{max}}{\eta}
+\frac{\delta^2}{L_P^2} = \frac{4 \chi C_{\max}}{\eta}
 \tag{Q.3}
 $$
-The central task is to determine the PCE-optimal equilibrium values (`δ*`, `χ*`, `η*`, `C_max*`) for the microscopic parameters by minimizing a global potential, and then to show that these values, when inserted into Equation (Q.3), yield a specific closed-form prediction for the scale ratio in terms of the PCE-optimal dimensionless factors appearing in Equation (Q.3).
+The central task is to determine the PCE-optimal equilibrium values ($\delta^*$, $\chi^*$, $\eta^*$, $C_{\max}^*$) for the microscopic parameters by minimizing a global potential, and then to show that these values, when inserted into Equation (Q.3), yield a specific closed-form prediction for the scale ratio in terms of the PCE-optimal dimensionless factors appearing in Equation (Q.3).
 
 ## Q.2 Rigorous Determination of PCE-Optimal Parameters
 
 The scale ratio $\delta/L_P$ is determined by Equation (Q.3):
 
-$$\frac{\delta^2}{L_P^2} = \frac{4\chi C_{max}}{\eta}$$
+$$\frac{\delta^2}{L_P^2} = \frac{4\chi C_{\max}}{\eta}$$
 
 derived from the area law (Equation E.9). The PCE-optimal values of each parameter follow from existing theorems:
 
-### Q.2.1 Channel Capacity: $C_{max}^* = 2\ln 2$
+### Q.2.1 Channel Capacity: $C_{\max}^* = 2\ln 2$
 
-By Equation (E.14), the PCE-optimal channel capacity satisfies $C_{max}^* = \ln d_0 - \varepsilon$. With $d_0 = 8$ (Theorem 23) and $\varepsilon = \ln 2$ (Theorem 31), one obtains:
+By Equation (E.14), the PCE-optimal channel capacity satisfies $C_{\max}^* = \ln d_0 - \varepsilon$. With $d_0 = 8$ (Theorem 23) and $\varepsilon = \ln 2$ (Theorem 31), one obtains:
 
-$$\boxed{C_{max}^* = \ln 8 - \ln 2 = 2\ln 2 = 2\varepsilon} \tag{Q.10}$$
+$$\boxed{C_{\max}^* = \ln 8 - \ln 2 = 2\ln 2 = 2\varepsilon} \tag{Q.10}$$
 
 
 ### Q.2.2 Correlation Factor: $\chi^* = 1$
@@ -1214,7 +1214,7 @@ $$
 
 **Lemma (Channel Independence).** At PCE equilibrium, χ* = 1.
 
-*Proof.* PCE maximizes information throughput. Effective channel density σ_eff = χ/(ηδ²) is maximized when χ = 1 (fully independent channels). Correlations (χ < 1) reduce effective channel count without increasing per-channel capacity (bounded by Theorem E.2). Therefore χ* = 1. ∎
+*Proof.* PCE maximizes information throughput. Effective channel density $\sigma_{\text{eff}} = \chi/(\eta\delta^2)$ is maximized when $\chi = 1$ (fully independent channels). Correlations ($\chi < 1$) reduce effective channel count without increasing per-channel capacity (bounded by Theorem E.2). Therefore $\chi^* = 1$. ∎
 
 ### Q.2.3 Packing Factor: $\eta^* = 1$
 $$
@@ -1223,7 +1223,7 @@ $$
 
 **Lemma (Isotropic Packing).** At PCE equilibrium, η* = 1.
 
-*Proof.* By Theorem Z.5 (Step 6), the QFI metric at the PCE-Attractor is isotropic (via Schur's lemma). Consistency between QFI isotropy and spatial structure requires isotropic packing. By Theorem 43, PCE achieves geometric regularity. For an isotropic regular packing, the orientation factor η = 1 by symmetry. ∎
+*Proof.* By Theorem Z.5 (Step 6), the QFI metric at the PCE-Attractor is isotropic (via Schur's lemma). Consistency between QFI isotropy and spatial structure requires isotropic packing. By Theorem 43, PCE achieves geometric regularity. For an isotropic regular packing, the orientation factor $\eta = 1$ by symmetry. ∎
 
 ### Q.2.4 Final Result
 
@@ -1235,25 +1235,25 @@ $$\boxed{\frac{\delta}{L_P} = \sqrt{8\ln 2} \approx 2.355}$$
 
 This result depends only on rigorously established theorems (E.9, E.14, Z.5, 23, 31, 43), with no phenomenological ansätze.
 
-**Q.5 Final Result and Interpretation**
+## Q.5 Final Result and Interpretation
 
 The global, coupled PCE optimization of the MPU network vacuum yields a unique, stable equilibrium characterized by:
-*   `C_max* = 2 ln 2` (information budget is saturated)
-*   `χ* = 1` (channels are driven to maximal independence)
-*   `η* ≈ 1` (geometry is driven to maximal regularity)
+*   $C_{\max}^* = 2\ln 2$ (information budget is saturated)
+*   $\chi^* = 1$ (channels are driven to maximal independence)
+*   $\eta^* \approx 1$ (geometry is driven to maximal regularity)
 
 Substituting the PCE-optimal values into the foundational relation (Q.3) yields:
 
-$$\frac{\delta^2}{L_P^2} = \frac{4\chi^* C_{max}^*}{\eta^*}$$
+$$\frac{\delta^2}{L_P^2} = \frac{4\chi^* C_{\max}^*}{\eta^*}$$
 
-With $\chi^* = 1$ and $\eta^* = 1$ (Sections Q.2.2–Q.2.3) and $C_{max}^*$ from Equation (Q.10), this gives:
+With $\chi^* = 1$ and $\eta^* = 1$ (Sections Q.2.2–Q.2.3) and $C_{\max}^*$ from Equation (Q.10), this gives:
 
 $$\boxed{\frac{\delta^2}{L_P^2} = 8\ln 2, \qquad \frac{\delta}{L_P} = \sqrt{8\ln 2} \approx 2.355} \tag{Q.18}$$
 
 This result demonstrates that the fundamental MPU spacing $\delta$ is robustly of the same order of magnitude as the emergent Planck length $L_P$. The value of this ratio emerges from the PCE potential model using the framework's fundamental constants:
-$$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{max}^*}{\eta^*}} = \sqrt{\frac{4 \cdot 1 \cdot 2\ln 2}{\eta^*}} = \sqrt{\frac{8\ln 2}{\eta^*}}$$
-where $\chi^* = 1$ (Equation Q.11), $C_{max}^* = 2\ln 2$ (Equation Q.10), and $\eta^* = 1$ (Equation Q.12).
-The values $\chi^* = 1$ and $C_{max}^* = 2\ln 2$ follow from the KKT conditions on the PCE potential; $\eta^* \approx 1$ follows from PCE optimization favoring geometric regularity (Theorem 43). The ability to derive a plausible, $O(1)$ constant linking these scales from a self-consistent global optimization provides evidence for the internal coherence of the Predictive Universe framework.
+$$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{\max}^*}{\eta^*}} = \sqrt{\frac{4 \cdot 1 \cdot 2\ln 2}{\eta^*}} = \sqrt{\frac{8\ln 2}{\eta^*}}$$
+where $\chi^* = 1$ (Equation Q.11), $C_{\max}^* = 2\ln 2$ (Equation Q.10), and $\eta^* = 1$ (Equation Q.12).
+The values $\chi^* = 1$ and $C_{\max}^* = 2\ln 2$ follow from the KKT conditions on the PCE potential; $\eta^* \approx 1$ follows from PCE optimization favoring geometric regularity (Theorem 43). The ability to derive a plausible, $O(1)$ constant linking these scales from a self-consistent global optimization provides evidence for the internal coherence of the Predictive Universe framework.
 
 
 ## Q.6 Lorentz-Invariant Discretization and the Temporal Scale
@@ -1315,13 +1315,13 @@ Using $\eta^* = 1$ (Equation Q.12), one obtains $\tau_{min} = \sqrt{8\ln 2}\,t_P
 
 **Corollary Q.6.1 (Unified Discretization Formula).** Both spatial and temporal discretization scales are determined by a single expression involving the framework's fundamental constants:
 
-$$\boxed{\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P} = \sqrt{\frac{4\chi^* C_{max}^*}{\eta^*}} = \sqrt{\frac{8\ln 2}{\eta^*}} \approx 2.355 \quad (\eta^* \approx 1)}$$
+$$\boxed{\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P} = \sqrt{\frac{4\chi^* C_{\max}^*}{\eta^*}} = \sqrt{\frac{8\ln 2}{\eta^*}} \approx 2.355 \quad (\eta^* \approx 1)}$$
 
 where $\varepsilon = \ln 2$ is the irreducible SPAP entropy cost (Theorem 31) and $d_0 = 8$ is the MPU Hilbert space dimension (Theorem 23).
 
-*Proof.* From Equation Q.18 with $\eta^* \approx 1$ and the PCE-optimal channel capacity $C_{max}^* = 2\ln 2$ (Equation Q.10):
+*Proof.* From Equation Q.18 with $\eta^* \approx 1$ and the PCE-optimal channel capacity $C_{\max}^* = 2\ln 2$ (Equation Q.10):
 
-$$\frac{\delta^2}{L_P^2} = \frac{4\chi^* C_{max}^*}{\eta^*} = \frac{4 \cdot 1 \cdot 2\ln 2}{\eta^*} = \frac{8\ln 2}{\eta^*}$$
+$$\frac{\delta^2}{L_P^2} = \frac{4\chi^* C_{\max}^*}{\eta^*} = \frac{4 \cdot 1 \cdot 2\ln 2}{\eta^*} = \frac{8\ln 2}{\eta^*}$$
 
 In the regularity-dominated regime ($\eta^* \approx 1$), this can be expressed as the product of the two fundamental MPU parameters:
 
@@ -1331,7 +1331,7 @@ Taking the square root and applying Proposition Q.6.1 yields both ratios approxi
 
 ### Q.6.3 Information-Theoretic Interpretation
 
-**Remark Q.6.1 (Decomposition of the Discretization Scale).** The unified discretization factor $\sqrt{d_0 \cdot \varepsilon}$ admits a transparent information-theoretic decomposition:
+**Remark Q.6.1: Decomposition of the Discretization Scale.** The unified discretization factor $\sqrt{d_0 \cdot \varepsilon}$ admits a transparent information-theoretic decomposition:
 
 - **Factor $d_0 = 8$:** The MPU Hilbert space dimension, determined by the horizon constant $K_0 = 3$ through $d_0 = 2^{K_0}$ (Theorem 23). This encodes the logical structure required for self-referential prediction.
 
@@ -1339,7 +1339,7 @@ Taking the square root and applying Proposition Q.6.1 yields both ratios approxi
 
 The discretization scale $\sqrt{d_0 \cdot \varepsilon/\eta^*} \approx 2.355$ (for $\eta^* \approx 1$) thus represents the geometric mean of the logical capacity ($d_0$) and thermodynamic cost ($\varepsilon$) of self-reference, modulated by the geometric packing factor.
 
-**Remark Q.6.2 (Complete Derivation Chain).** The full derivation from logical axioms to spacetime discretization proceeds through two parallel pathways originating from $K_0$:
+**Remark Q.6.2: Complete Derivation Chain.** The full derivation from logical axioms to spacetime discretization proceeds through two parallel pathways originating from $K_0$:
 
 $$\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[6pt] \text{SPAP merge} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{array} \bigg\} \xrightarrow[\text{consistency}]{\text{P.14.3}} d_0 \cdot \varepsilon = 8\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{\frac{d_0 \cdot \varepsilon}{\eta^*}}$$
 
@@ -1374,11 +1374,11 @@ Any residual corrections must be expressible in Lorentz-scalar combinations and 
 |:---------|:-------|:------|:-------|
 | Spatial discretization | $\delta/L_P$ | $\sqrt{8\ln 2/\eta^*} \approx 2.355$ | PCE optimization (Q.18) |
 | Temporal discretization | $\tau_{min}/t_P$ | $\sqrt{8\ln 2/\eta^*} \approx 2.355$ | Lorentz consistency (Prop. Q.6.1) |
-| Information budget | $C_{max}^*$ | $2\ln 2$ | Capacity saturation (Q.3) |
+| Information budget | $C_{\max}^*$ | $2\ln 2$ | Capacity saturation (Q.3) |
 | Hilbert space dimension | $d_0$ | $8 = 2^{K_0}$ | Theorem 23 |
 | Irreducible entropy cost | $\varepsilon$ | $\ln 2$ | Theorem 31 |
 
 The complete derivation chain from the horizon constant to spacetime discretization:
 
-$$\boxed{\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \\ \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{array} \xrightarrow{\text{Eq. Q.10}} C_{max}^* = 2\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{\frac{8\ln 2}{\eta^*}}}$$
+$$\boxed{\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \\ \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{array} \xrightarrow{\text{Eq. Q.10}} C_{\max}^* = 2\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{\frac{8\ln 2}{\eta^*}}}$$
 

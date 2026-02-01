@@ -1,12 +1,12 @@
 # Appendix K: Resolving Outstanding Puzzles in Fundamental Physics
 
-**K.1 Introduction**
+## K.1 Introduction
 
 This appendix demonstrates how the Predictive Universe (PU) framework resolves several long-standing puzzles in fundamental physics and cosmology. Each section pairs an unsolved problem with specific PU mechanisms derived in the main text and appendices, showing how the framework provides quantitative resolutions or clear pathways toward them. The material ranges from rigorously established results with precise numerical predictions to exploratory directions requiring further theoretical development.
 
-The framework's core insight—that physical law emerges from the operational requirements, logical limitations, and thermodynamic costs of prediction itself as instantiated by the MPU network—yields concrete, testable predictions for fundamental constants, particle masses, and cosmological parameters. Several of these predictions achieve sub-percent precision with zero free parameters, providing stringent empirical tests of the framework's validity.
+The framework's core insight—that physical law emerges from the operational requirements, logical limitations, and thermodynamic costs of prediction itself as instantiated by the MPU network—yields concrete, testable predictions for fundamental constants, selected hierarchy invariants and mixings, and cosmological parameters. Several of these predictions achieve sub-percent precision with zero free parameters. In the quark sector, mixed-scale comparisons initially show 11–15% deviations, while a common-scheme reduction enables controlled same-scale hierarchy invariants; incorporating the down-sector $A_2/D_4$ frustration correction derived in Section T.25.6a brings these invariants into sub-percent agreement at $\mu=M_Z$, with explicit T1/T2/T3 budgets for both the common-scale reduction (Section T.25.5.3) and the frustration correction (Section T.25.6a.10).
 
-**K.2 Values of the Fundamental Constants**
+## K.2 Values of the Fundamental Constants
 
 **Puzzle:** The Standard Model of particle physics and general relativity contain approximately 25 fundamental parameters (masses, coupling constants, mixing angles) whose specific numerical values are precisely measured experimentally but are not derived from first principles within standard frameworks. Why these particular values?
 
@@ -20,21 +20,23 @@ Physical action counts SPAP entropy production. The constant $\hbar$ scales the 
 
 **Boltzmann constant $k_B$:** Functions as the conversion factor between dimensionless information/entropy measures (nats) and thermodynamic entropy (energy/temperature). Its value is inherent in the fundamental thermodynamic interpretation of the MPU dynamics (Section 12) and the link between information costs ($\varepsilon$) and energy dissipation ($k_B T \varepsilon$). Together with $\hbar$ and $c$, these constants form a complete set of exchange rates connecting the operational domains of the framework (Section P.6.5.5).
 
-**Gravitational constant $G$:** Rigorously derived from the thermodynamic properties of the MPU network at causal boundaries (Section 12). As established in **Appendix E** (Theorem E.6), 
-$$G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}(f_{RID})}$$
-**(Equation E.10)**. Here, $\delta$ is the effective MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is a correlation factor, and $C_{max}$ is the ND-RID channel capacity (limited by $\varepsilon$, Theorem E.2). These parameters determine the effective surface density of channels $\sigma_{eff\_link} = \chi / (\eta \delta^2)$ (Theorem E.3). The fundamental relationship **(Equation E.8)** is:
-$$\frac{\chi C_{max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}$$
-This relationship is further constrained by the PCE-driven optimization of these parameters in the vacuum state. **Appendix Q** provides the complete parameter-free calculation of the ratio $\delta/L_P \approx 2.355$ through minimization of the global PCE potential, linking the microscopic MPU scale to the emergent Planck scale. The derivation proceeds by constructing $V_{vac}(\delta, \chi, \eta, C_{max})$ and finding the unique stable equilibrium satisfying all framework constraints (Appendix Q, Equations Q.1-Q.18).
+**Gravitational constant $G$:** Rigorously derived from the thermodynamic properties of the MPU network at causal boundaries (Section 12). As established in Appendix E (Theorem E.6), 
+$$G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$$
+**(Equation E.10)**. Here, $\delta$ is the effective MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is a correlation factor, and $C_{\max}$ is the ND-RID channel capacity (limited by $\varepsilon$, Theorem E.2). These parameters determine the effective surface density of channels $\sigma_{eff\_link} = \chi / (\eta \delta^2)$ (Theorem E.3). The fundamental relationship **(Equation E.8)** is:
+$$\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}$$
+This relationship is further constrained by the PCE-driven optimization of these parameters in the vacuum state. Appendix Q provides the complete parameter-free calculation of the ratio $\delta/L_P \approx 2.355$ through minimization of the global PCE potential, linking the microscopic MPU scale to the emergent Planck scale. The derivation proceeds by constructing $V_{vac}(\delta, \chi, \eta, C_{\max})$ and finding the unique stable equilibrium satisfying all framework constraints (Appendix Q, Equations Q.1-Q.18).
 
-**Electromagnetic coupling $\alpha$:** The fine-structure constant at the Thomson limit is rigorously derived parameter-free from the PCE-Attractor structure in **Appendix Z**. The complete 2506-line derivation establishes:
-$$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) \approx 137.036092 \pm 0.000050}$$
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. This derivation uses zero free parameters and proceeds through a seven-stage chain: MPU invariants (d₀ = 8, ε = ln 2) → active kernel dimension a = 2 via Physical Instantiation Principle (Theorem Z.1) → interface mode count M = 2ab = 24 (Theorem Z.5) → PCE-Attractor orbit Gr(2,8) → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from Bures metric geometry, and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension **D = 4** through two independent mechanisms: mode-channel matching (Appendix Z, Theorem Z.11) and external stability requirements (**Appendix G, Section G.8.2**), providing multiply-determined confirmation of dimensional selection.
+**Electromagnetic coupling $\alpha$:** The fine-structure constant at the Thomson limit is rigorously derived parameter-free from the PCE-Attractor structure in Appendix Z. The complete 2506-line derivation establishes:
+$$\boxed{D = 4}$$
+
+$$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000050}$$
+where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. This derivation uses zero free parameters and proceeds through a seven-stage chain: MPU invariants (d₀ = 8, ε = ln 2) → active kernel dimension a = 2 via Physical Instantiation Principle (Theorem Z.1) → interface mode count M = 2ab = 24 (Theorem Z.5) → PCE-Attractor orbit Gr(2,8) → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from Bures metric geometry, and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension **D = 4** through two independent mechanisms: mode-channel matching (Appendix Z, Theorem Z.11) and external stability requirements (Appendix G, Section G.8.2), providing multiply-determined confirmation of dimensional selection.
 
 **Strong coupling $g_s$ and weak coupling $g_w$:** These relate to the effective "stiffness" or cost coefficients ($\kappa_F$ in Equation G.5.2) in the emergent gauge field actions (Appendix G), determined by PCE optimization balancing the benefit of predictive coherence provided by gauge fields against their resource cost. The unified gauge structure $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ with dimension 12 emerges from the thermodynamically optimal partition $H_0 \cong \mathbb{C}^2 \oplus \mathbb{C}^6$ (Appendix G, Proposition G.M1; Appendix Z, Theorem Z.1). At the PCE-optimal attractor, the unified coupling satisfies $g_U^2 = \pi/6$ with $\alpha_U^{-1} = 24$ (Appendix T, Theorem T.39a).
 
 The hierarchy among couplings at a common fundamental scale arises from the information-theoretic costs of maintaining gauge coherence on the noisy MPU substrate. Modeling this as continuous-time quantum error correction, the minimal Predictive Physical Complexity $C_P(G, g)$ required to maintain coherence scales polynomially with the group's self-interaction complexity, quantified by the quadratic Casimir of the adjoint representation $C_2(\text{Adj})$. For $U(1)$, $C_2(\text{Adj}) = 0$; for $SU(2)$, $C_2(\text{Adj}) = 2$; for $SU(3)$, $C_2(\text{Adj}) = 3$. PCE optimization balancing coherence cost against predictive benefit predicts the UV hierarchy $g_1^* > g_2^* > g_3^*$, which standard renormalization group evolution transforms into the observed low-energy hierarchy $g_3 > g_2 > g_1$.
 
-**Electroweak Scale, Weinberg Angle, and Higgs Mass:** These three fundamental puzzles are resolved simultaneously through a unified derivation in **Appendix T**. The electroweak scale emerges from the Golay-Steiner structure with electroweak complexity $\kappa_{EW} = bk/2 + \dim(G/H) - m/2 = 38.5$, yielding:
+**Electroweak Scale, Weinberg Angle, and Higgs Mass:** These three fundamental puzzles are resolved simultaneously through a unified derivation in Appendix T. The electroweak scale emerges from the Golay-Steiner structure with electroweak complexity $\kappa_{EW} = bk/2 + \dim(G/H) - m/2 = 38.5$, yielding:
 $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 246 \text{ GeV}$$
 **(Theorem T.5)**. The Weinberg angle at the PU fixed point is $\sin^2\theta_W(\mu_*) = 3/8$ from PCE isotropy conditions **(Theorem T.14)**, and the Higgs quartic coupling satisfies $\lambda(\mu_*) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV. These results use zero free parameters and are derived from:
 - Signal-parity decomposition of M = 24 modes into k = 12 signal and k = 12 parity subspaces via the Extended Binary Golay Code (Proposition T.1)
@@ -45,7 +47,7 @@ $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 246 \text{ GeV}$$
 
 The unified derivation connects these three observables through the same underlying Golay code structure that determines the cosmological constant (Appendix U).
 
-**Fermion Masses and Yukawa Couplings:** The specific values arise from geometric overlaps of generation vacua on the MPU's internal Perspective Space $\Sigma_8 = U(8)/U(1)^8$, as rigorously derived in **Appendix R**. The three-generation structure is multiply over-determined through two independent mechanisms:
+**Fermion Masses and Yukawa Couplings:** The specific values arise from geometric overlaps of generation vacua on the MPU's internal Perspective Space $\Sigma_8 = U(8)/U(1)^8$, as rigorously derived in Appendix R. The three-generation structure is multiply over-determined through two independent mechanisms:
 
 1. **Topological**: The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Theorem R.3.1) and anomaly cancellation constraints (Section R.4), this uniquely selects three generations with family charges $\{a, -a, 0\}$ (Proposition R.3.5).
 
@@ -55,7 +57,7 @@ The Mass Hierarchy Invariant:
 $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$$
 **(Equation R.17)** provides a discrete, parameter-free prediction. In the charged lepton sector, the observed value $\mathcal{R}_\ell \approx 2.889$ matches the discrete prediction $\mathcal{R} = 3$ to within 3.8%, providing strong phenomenological support. Absolute mass scales are set by the emergent VEV through sector prefactors $c_f$ determined by Bures/gauge normalization (Appendix T, Section T.21).
 
-**Appendix T** (Section T.25) establishes precise predictions with zero free parameters:
+Appendix T (Section T.25) establishes precise predictions with zero free parameters:
 - $m_\tau = 1.80$ GeV (observed: 1.777 GeV, deviation: 1.3%)
 - $m_\mu = 105$ MeV (observed: 105.7 MeV, deviation: 0.6%)
 - $\ln(m_\tau/m_\mu) = 2.836$ (observed: 2.822, deviation: 0.5%)
@@ -81,11 +83,11 @@ If the fundamental rules and parameters of the MPU model and POP/PCE optimizatio
 **Next Steps:** Continue developing explicit MPU network models to quantitatively evaluate the PCE Potential $V(x)$ for remaining constants (strong and weak couplings beyond unified attractor, neutrino masses). Refine predictions as experimental precision improves to test higher-order corrections in mass hierarchies (Section T.25.10).
 
 
-**K.3 PU Pathway to Black Hole Information Resolution: Reflexive Dynamics and Perspectival Encoding**
+## K.3 PU Pathway to Black Hole Information Resolution: Reflexive Dynamics and Perspectival Encoding
 
 The Black Hole Information Paradox, which arises from the conflict between quantum unitarity and the apparent information loss in thermal Hawking radiation, can be recast within the Predictive Universe framework by treating information retrieval as a **reflexive computational problem**. This perspective reveals that the paradox stems not merely from computational limits but from the fundamental logical structure of self-reference inherent in the measurement process—a structure central to the PU framework.
 
-**K.3.1 Black Hole Information Retrieval as a Reflexive Problem**
+### K.3.1 Black Hole Information Retrieval as a Reflexive Problem
 
 We frame the task of recovering the information of an initial pure state $|\psi_{in}\rangle$ that formed a black hole as a computational problem with inherent reflexivity.
 
@@ -112,17 +114,17 @@ We frame the task of recovering the information of an initial pure state $|\psi_
 
 *Proof.* This is a physical realization of the unsolvability of problems with expansive reflexivity. The problem instance $I_t$ does not converge, preventing any sequential algorithm from building a complete and stable solution. This limitation arises from the logical structure of self-reference in the physical measurement process, analogous to the logical limits established by SPAP (Theorems A.1.1, A.1.3) and RUD (Theorems A.2.3, A.2.4). QED
 
-**K.3.2 Thermodynamic Cost and the Perspectival Information Channel**
+### K.3.2 Thermodynamic Cost and the Perspectival Information Channel
 
 By Theorem 31, each irreversible measurement operation (each 'Evolve' at the horizon) incurs the minimal SPAP entropy cost $\varepsilon = \ln 2$ nats. For complete information recovery requiring $N \sim S_{BH}$ measurements (where $S_{BH}$ is the Bekenstein-Hawking entropy), the cumulative cost is:
 $$\Delta S_{cumulative} \geq N \cdot \ln 2 \sim S_{BH} \cdot \ln 2$$
 
 The **Perspectival Information Channel (PIC)** is the communication channel from the black hole interior to an external observer, mediated by Hawking radiation. This channel has capacity $C_{PIC}$ limited by:
-1. **Thermodynamic Limits:** Horizon channel capacity $C_{max}$ from ND-RID bounds (Appendix E, Theorem E.2)
+1. **Thermodynamic Limits:** Horizon channel capacity $C_{\max}$ from ND-RID bounds (Appendix E, Theorem E.2)
 2. **Reflexivity Cost:** SPAP entropy $\varepsilon$ per bit extracted (Appendix J)
-3. **Scrambling Time:** Information thermalization time $t_{scramble} \sim (S_{BH}/C_{max}) \ln S_{BH}$
+3. **Scrambling Time:** Information thermalization time $t_{scramble} \sim (S_{BH}/C_{\max}) \ln S_{BH}$
 
-**K.3.3 Expansive Reflexivity and Information Conservation**
+### K.3.3 Expansive Reflexivity and Information Conservation
 
 The framework proposes that information is never truly lost but becomes **expansively reflexive**: accessing it requires solving progressively more complex self-referential problems. The key insight is that the notion of "information loss" is observer-dependent, determined by available computational resources relative to the reflexive depth required for extraction.
 
@@ -132,14 +134,14 @@ where $t_{extract}$ is the time needed to extract information at rate $C_{PIC}$ 
 
 However, **unitarity is preserved globally** through the MPU network substrate. The apparent information loss emerges from the perspectival limitations of local observers, not from fundamental loss of quantum coherence. This aligns with recent developments in holography and the island formula (Almheiri et al. 2020), providing a complementary information-theoretic foundation.
 
-**K.3.4 Testable Predictions and Open Questions**
+### K.3.4 Testable Predictions and Open Questions
 
 The PU framework makes specific predictions about black hole information dynamics:
 1. **Modified Hawking Spectrum:** Small deviations from perfect thermality encoding information, suppressed by factor $e^{-S_{BH}}$
 2. **Page Time Modification:** Transition from entropy increase to decrease occurs when reflexive extraction cost equals remaining entropy
 3. **Horizon Complexity Scaling:** Computational complexity of extracting late-time Hawking quanta scales as $\exp(C \cdot S_{BH})$ where $C$ is a universal constant related to $\varepsilon$
 
-**K.3.5 Consistency with the Page Curve**
+### K.3.5 Consistency with the Page Curve
 
 The PU framework predicts that the entanglement entropy of the Hawking radiation follows the Page curve. Let $S_E(t)$ denote the von Neumann entropy of the early radiation subsystem at time $t$.
 
@@ -161,11 +163,11 @@ which reproduces the Page-curve behavior: growth until $d_E(t)\sim d_L(t)$ and s
 **Current Status:** The conceptual framework for black hole information conservation is established, with key components (SPAP dynamics, thermodynamic bounds, perspectival encoding, Page curve consistency) rigorously derived. However, detailed calculations of information extraction rates, explicit construction of the Perspectival Information Channel capacity as a function of observer resources, and precise comparison with holographic entropy calculations (Ryu-Takayanagi formula, quantum extremal surfaces) remain to be completed. This represents a promising avenue for future theoretical development, building on the solid foundation of reflexive computational costs and thermodynamic channel limits established in the framework.
 
 
-**K.4 Arrow of Time and Temporal Asymmetry**
+## K.4 Arrow of Time and Temporal Asymmetry
 
 **Puzzle:** Why does time have a preferred direction, with entropy increasing toward the future?
 
-**PU Resolution:** The thermodynamic arrow of time emerges directly from the irreversibility of the SPAP cycle. As rigorously established in **Appendix O** (Section O.4) and **Appendix J**, each predictive operation incurs the irreducible entropy cost $\varepsilon \geq \ln 2$ nats (Theorem 31). This fundamental irreversibility arises from the 2-to-1 state merge required by self-referential prediction (Lemma Z.2) and cannot be eliminated without violating logical consistency of the predict-verify-update cycle.
+**PU Resolution:** The thermodynamic arrow of time emerges directly from the irreversibility of the SPAP cycle. As rigorously established in Appendix O (Section O.4) and Appendix J, each predictive operation incurs the irreducible entropy cost $\varepsilon \geq \ln 2$ nats (Theorem 31). This fundamental irreversibility arises from the 2-to-1 state merge required by self-referential prediction (Lemma Z.2) and cannot be eliminated without violating logical consistency of the predict-verify-update cycle.
 
 The framework establishes (Appendix O, Theorem O.2):
 $$\frac{dS_{total}}{dt} = \sum_{\text{MPUs}} \frac{\varepsilon_i}{\tau_i} \geq 0$$
@@ -181,7 +183,7 @@ with equality only for static (non-predictive) configurations. The arrow of time
 
 This resolution is rigorous and complete, with the arrow of time emerging as a theorem rather than an axiom. Further development includes simulating MPU network dynamics incorporating the $\varepsilon$-cost to demonstrate robust emergence of a global arrow of time and exploring whether this mechanism can explain the universe's initial low effective entropy state from a PCE perspective.
 
-**K.5 Operational Weak Cosmic Censorship**
+## K.5 Operational Weak Cosmic Censorship
 
 **Puzzle:** General relativity predicts singularities (infinite curvature) at black hole centers and the Big Bang. Classical weak cosmic censorship conjectures that singularities are hidden behind horizons, but lacks rigorous proof. Are naked singularities physically possible?
 
@@ -397,7 +399,7 @@ $$f(\theta) = 1 - \cos\theta$$
 **Corollary K.6.2 (Normalization).** The coefficient $V_0$ is determined by the Bures metric curvature at the PCE-Attractor. From Corollary T.41.3, the hierarchy coefficient $\alpha = 3/2$ and from Lemma T.41.2, the per-mode Bures variance $\sigma_B^2 = 1/24$ from capacity saturation. The normalization is:
 $$V_0 = 2\alpha \sigma_B^2 = 2 \times \frac{3}{2} \times \frac{1}{24} = \frac{1}{8}$$
 
-**Remark K.6.1 (Consistency with QCD).** The QCD dilute instanton gas approximation yields $V(\theta) = \chi_{\text{top}}(1 - \cos\theta)$ where $\chi_{\text{top}}$ is the topological susceptibility (Callan, Dashen & Gross 1976). The agreement with the PCE-derived form is a consistency check: both the geometric PCE derivation and the QCD calculation yield the same functional form because both respect the U(1) holonomy structure and the physical requirement of quadratic cost near the vacuum.
+**Remark K.6.1: Consistency with QCD.** The QCD dilute instanton gas approximation yields $V(\theta) = \chi_{\text{top}}(1 - \cos\theta)$ where $\chi_{\text{top}}$ is the topological susceptibility (Callan, Dashen & Gross 1976). The agreement with the PCE-derived form is a consistency check: both the geometric PCE derivation and the QCD calculation yield the same functional form because both respect the U(1) holonomy structure and the physical requirement of quadratic cost near the vacuum.
 
 ### K.6.6 First Mechanism: σ-Invariance Selects θ = 0
 
@@ -537,7 +539,7 @@ The mechanisms share the common origin $d_0 = 8$ (Theorem 23) but employ disjoin
 
 These structures are mathematically disjoint: $\text{Gr}(2,8)$ is a continuous complex manifold while $E_8$ is a discrete lattice in real Euclidean space. No theorem in Mechanism I is used in Mechanism II, and vice versa. ∎
 
-**Remark K.6.2 (Contrast with Fine-Tuning).** In standard treatments, $\bar{\theta} \approx 0$ would require $\theta_{\text{QCD}} \approx -\arg(\det M_q)$ with both terms potentially $\mathcal{O}(1)$ but canceling to 10 decimal places. In the PU framework, $\theta_{\text{QCD}} = 0$ is forced by σ-invariance + PCE and $\arg(\det M_q) = 0$ is forced by E₈ reality. **No cancellation is required.** Each term is independently zero.
+**Remark K.6.2: Contrast with Fine-Tuning.** In standard treatments, $\bar{\theta} \approx 0$ would require $\theta_{\text{QCD}} \approx -\arg(\det M_q)$ with both terms potentially $\mathcal{O}(1)$ but canceling to 10 decimal places. In the PU framework, $\theta_{\text{QCD}} = 0$ is forced by σ-invariance + PCE and $\arg(\det M_q) = 0$ is forced by E₈ reality. **No cancellation is required.** Each term is independently zero.
 
 ### K.6.10 E₈ Triad Selection
 
@@ -595,7 +597,8 @@ $$\delta = \oint_{\gamma} \mathcal{A}_B$$
 where $\mathcal{A}_B$ is the Berry connection and $\gamma$ is the flavor-changing loop. This holonomy is non-zero even when the connection 1-form is real, because the loop encloses non-trivial curvature. The σ-involution preserves the loop $\gamma$ but reverses the orientation of the symplectic form (Lemma Y.8.1: $\text{CP}^* \omega = -\omega$), allowing non-zero holonomy consistent with overall CP as a symmetry of the vacuum. ∎
 
 **Theorem K.6.18 (CKM Phase from Berry Holonomy).** The CKM CP-violating phase arises as the Berry holonomy around the minimal flavor-changing loop:
-$$\delta = 66.7°$$
+$$\delta = 66.7° \pm 1.2°$$
+where the combined uncertainty reflects geometric and wavepacket contributions.
 
 *Proof.* By Theorem T.56, the CP phase is computed from the geometric structure of the generation manifold:
 $$\delta = \delta_{\text{flat}} \times f_{\text{sinc}} = 70.53° \times 0.9454 = 66.7°$$
@@ -756,11 +759,11 @@ The same geometric structure that generates the three-generation hierarchy (Appe
 ---
 
 
-**K.7 Hierarchy Problem and Naturalness**
+## K.7 Hierarchy Problem and Naturalness
 
 **Puzzle:** The electroweak scale $v \approx 246$ GeV is 17 orders of magnitude smaller than the Planck scale $M_{Pl} \approx 10^{19}$ GeV. In quantum field theory, radiative corrections should drive the Higgs mass to $M_{Pl}$ unless parameters are fine-tuned to extraordinary precision ($\sim 10^{-34}$). Similarly, the baryon asymmetry $\eta_B \sim 10^{-10}$ appears to require fine-tuning. Why are these hierarchies stable?
 
-**PU Resolution:** **Appendix T** provides a complete resolution through the Golay-Steiner structure. The hierarchy is not fine-tuned but emerges from discrete information-theoretic complexity:
+**PU Resolution:** Appendix T provides a complete resolution through the Golay-Steiner structure. The hierarchy is not fine-tuned but emerges from discrete information-theoretic complexity:
 
 **Electroweak Complexity:** The complexity parameter $\kappa_{EW}$ counts the number of independent constraints required to specify the electroweak vacuum:
 $$\kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 36 + 3 - 0.5 = 38.5$$
@@ -796,13 +799,13 @@ in excellent agreement with the observed hierarchy.
 This resolution is complete and rigorous, transforming the hierarchy problem from a fine-tuning puzzle into a demonstration of discrete information-theoretic structure in the vacuum.
 
 
-**K.8 Cosmological Constant and Primordial Perturbations**
+## K.8 Cosmological Constant and Primordial Perturbations
 
 **Puzzle:** Quantum field theory predicts vacuum energy $\rho_{vac} \sim M_{Pl}^4$, yet observation requires $\rho_{vac} \sim (10^{-3} \text{ eV})^4$—a discrepancy of 120 orders of magnitude. Similarly, the primordial perturbation amplitude $Q \sim 10^{-5}$ and inflationary observables lack derivation from first principles.
 
-**PU Resolution:** **Appendix U** provides a complete derivation of the cosmological constant from the Golay-Steiner instanton mechanism. The vacuum is not empty but carries the information-theoretic structure of the Extended Binary Golay Code $\mathcal{G}_{24}$. Vacuum fluctuations are exponentially suppressed by instanton complexity:
+**PU Resolution:** Appendix U provides a complete derivation of the cosmological constant from the Golay-Steiner instanton mechanism. The vacuum is not empty but carries the information-theoretic structure of the Extended Binary Golay Code $\mathcal{G}_{24}$. Vacuum fluctuations are exponentially suppressed by instanton complexity:
 $$\boxed{\Lambda L_P^2 = 8\pi A_{eff} e^{-2\kappa}}$$
-**(Equation U.1)**, where $\kappa$ is the instanton complexity and $A_{eff} = O(1)$ is the effective prefactor from Gaussian determinants and polynomial extensivity (Appendix E).
+**(Equation U.1)**, where $\kappa$ is the instanton complexity and $A_{\text{eff}} = 0.923 \pm 0.011$ is the effective prefactor from Gaussian determinants and polynomial extensivity (Appendix U, Corollary U.17).
 
 **Instanton Complexity:** The complexity parameter $\kappa$ counts the real dimensions of configuration space through which an instanton must tunnel:
 
@@ -826,7 +829,7 @@ $$\kappa = \frac{N_{\mathbb{R}} - m}{2} = \frac{288 - 5}{2} = 141.5$$
 **Numerical Prediction:**
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2 \times 141.5} = 8\pi A_{\text{eff}} e^{-283}$$
 
-For $A_{\text{eff}} = 1$, this yields $\Lambda L_P^2 = 3.13 \times 10^{-122}$. The observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849) \times 10^{-122}$ implies $A_{\text{eff}} = 0.917 \pm 0.016$ **(Corollary U.15b, U.17)**, consistent with the $O(1)$ expectation from one-loop determinants.
+For $A_{\text{eff}} = 1$, this yields $\Lambda L_P^2 = 3.13\times10^{-122}$. Using the PU-theory prefactor $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), the prediction becomes $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, consistent with the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times10^{-122}$ (Appendix V, Eq. (V.5)). Equivalently, holding $\kappa$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ (Corollary U.15b, U.17), providing an independent consistency check on the prefactor's expected $O(1)$ magnitude.
 
 **Key Insight:** The cosmological constant hierarchy is explained by the same Golay code structure that determines the electroweak scale (Appendix T). Both hierarchies reflect discrete information-theoretic complexity:
 - Electroweak: $v/M_{Pl} = e^{-38.5} \sim 10^{-17}$ (38.5 real dimensions)
@@ -834,7 +837,7 @@ For $A_{\text{eff}} = 1$, this yields $\Lambda L_P^2 = 3.13 \times 10^{-122}$. T
 
 The factor-of-7 ratio in exponents ($283/38.5 \approx 7.35$) reflects the different configuration spaces: electroweak involves real alignment constraints while cosmological involves complex Grassmannian tunneling with higher dimensional overhead.
 
-This resolution is complete and parameter-free, transforming the cosmological constant problem from an inexplicable fine-tuning into a demonstration of optimal error-correcting code structure in the vacuum.
+This resolution derives the exponential hierarchy from error-correcting code structure, with the one-loop prefactor $A_{\text{eff}}$ fixed by the specified determinant/extensivity conventions and independently computable under the canonical normalization (Appendix U, Corollary U.15b). The framework transforms the cosmological constant problem from an inexplicable fine-tuning into a demonstration of optimal Golay-Steiner structure in the vacuum.
 
 **Primordial Sector:** The same Golay-Steiner structure determines inflationary observables through a second complexity channel. The primordial configuration space is $\mathbb{CP}^{11}$ (the projectivization of the 12-dimensional signal subspace), with complexity $\kappa_Q = 11$ **(Identification U.20)**. This yields the primordial perturbation amplitude:
 $$Q = \frac{e^{-\kappa_Q}}{\sqrt{2}} = \frac{e^{-11}}{\sqrt{2}} = 1.18 \times 10^{-5}$$
@@ -847,15 +850,17 @@ $$Q = \frac{e^{-\kappa_Q}}{\sqrt{2}} = \frac{e^{-11}}{\sqrt{2}} = 1.18 \times 10
 | $n_s$ | $0.9663$ | $0.9649 \pm 0.0042$ | $0.3\sigma$ |
 | $r$ | $0.0034$ | $< 0.036$ | Consistent |
 | $A_s$ | $2.08 \times 10^{-9}$ | $(2.10 \pm 0.03) \times 10^{-9}$ | $0.7\sigma$ |
+| $\Delta N_e$ | $\pm 0.5$ | N/A | Geometric uncertainty |
+| $f_{\text{amp}}$ | $0.98$ | N/A | Amplitude correction |
 
 The hierarchy $\kappa_\Lambda/\kappa_Q = 141.5/11 \approx 13$ explains why the cosmological constant ($e^{-283}$) is exponentially smaller than primordial perturbations ($e^{-22}$). Both sectors derive from the Golay code $[24, 12, 8]$: the vacuum sector involves the full Grassmannian $\text{Gr}_\mathbb{C}(12,24)$, while the primordial sector involves the signal subspace $\mathbb{CP}^{11}$.
 
 
-**K.9 Cosmology: Time-Varying Gravitational Coupling and Unified Dark Sector**
+## K.9 Cosmology: Time-Varying Gravitational Coupling and Unified Dark Sector
 
 **Puzzle:** Cosmological observations reveal accelerated expansion ($\sim 70$% dark energy) and structure formation governed by non-luminous matter ($\sim 25$% dark matter), yet the Standard Model contains no suitable candidates.
 
-**PU Pathway:** The framework proposes a unified description where both "dark" components emerge from the adaptive response of the MPU network to cosmic evolution. As the average energy density and pressure of cosmic contents evolve, the MPU network parameters ($\delta, \chi, C_{max}$) adapt to maintain PCE optimality, resulting in an effective time-varying gravitational coupling:
+**PU Pathway:** The framework proposes a unified description where both "dark" components emerge from the adaptive response of the MPU network to cosmic evolution. As the average energy density and pressure of cosmic contents evolve, the MPU network parameters ($\delta, \chi, C_{\max}$) adapt to maintain PCE optimality, resulting in an effective time-varying gravitational coupling:
 $$G_{eff}(t) = G_{early} \left[1 - \left(\frac{\rho(t)}{\rho_c}\right)^n\right]^{-1}$$
 where $G_{early}$ is the early-universe value, $\rho_c$ is a critical density, and $n$ characterizes the adaptation strength.
 
@@ -871,7 +876,7 @@ The $\dot{G}_{eff}$ term acts as an effective dark energy component with equatio
    $$\nabla_\mu(T^{\mu\nu(MPU)} + T^{\mu\nu MPU\_sub}) = 0$$
    From this, derive the fully self-consistent form of energy exchange and modified Friedmann equations.
 
-2. **PCE Derivation of $G_{eff}(\rho, p)$:** Derive the functional form and parameters $(G_{early}, A_G, \rho_c, n)$ from first principles of PCE optimization of MPU network parameters in an evolving FLRW background (Appendix D). Model how average MPU spacing $\delta$, correlation $\chi$, and channel capacity $C_{max}$ adapt to global cosmic conditions.
+2. **PCE Derivation of $G_{eff}(\rho, p)$:** Derive the functional form and parameters $(G_{early}, A_G, \rho_c, n)$ from first principles of PCE optimization of MPU network parameters in an evolving FLRW background (Appendix D). Model how average MPU spacing $\delta$, correlation $\chi$, and channel capacity $C_{\max}$ adapt to global cosmic conditions.
 
 3. **Adiabaticity Justification:** Establish that the MPU network adaptation timescale $\tau_{adapt}$ is much shorter than the Hubble timescale $H^{-1}(t)$, allowing $G_{eff}$ to be treated as a function of instantaneous $\rho(t)$ and $p(t)$.
 

@@ -36,7 +36,7 @@ $$
 
 **Physical interpretation:** The power cost scales quadratically with context complexity above threshold, reflecting the increasing resource requirements for maintaining more refined internal states capable of greater quantum outcome bias. As $\text{CC} \to \alpha$, the power requirement diverges, enforcing a practical upper limit independent of the causality constraint.
 
-**Connection to Appendix L:** This power $P_{context}$ is a component of the total aggregate power $P_{agg}$ analyzed in Appendix L (Theorem L.6). For systems implementing CC through electromagnetic field generation, $P_{context}$ contributes to both the radiated power $P_{EM}$ and internal operational costs $P_{other}$, with the complete energy accounting given by $P_{agg} = P_{EM} + P_{other}$ (Equation L.37).
+**Connection to Appendix L:** This power $P_{context}$ is a component of the total aggregate power $P_{agg}$ analyzed in Appendix L (Theorem L.6). For systems implementing CC through electromagnetic field generation, $P_{context}$ contributes to both the radiated power $P_{EM}$ and internal operational costs $P_{other}$, with the complete energy accounting given by $P_{agg} = P_{EM} + P_{other}$ (Equation L.36).
 
 ## S.2 The CC-Context Stress-Energy Tensor $\Delta T_{\mu\nu}^{(CC)}$
 
@@ -578,8 +578,8 @@ This appendix analyzes gravitational feedback effects that limit CC efficacy. Fo
    - Detection achievable in ~6 seconds with modern ion trap arrays
 
 3. **Complete energy accounting**
-   - Energy conservation: $P_{agg} = P_{EM} + P_{other}$ (Theorem L.6)
-   - Stress-energy decomposition: $T_{\mu\nu}^{(MPU)} = T_{\mu\nu}^{(baseline)} + \Delta T_{\mu\nu}^{(CC)} + T_{\mu\nu}^{(EM)}$ (Equation L.38)
+   - Energy conservation: $P_{agg} = P_{EM} + P_{other}$ (Equation L.36)
+   - Stress-energy decomposition: $T_{\mu\nu}^{(MPU)} = T_{\mu\nu}^{(baseline)} + \Delta T_{\mu\nu}^{(CC)} + T_{\mu\nu}^{(EM)}$ (Equation S.9)
    - No double-counting; covariant conservation $\nabla^\mu T_{\mu\nu}^{(MPU)} = 0$ (Theorem B.5)
    - Horizon thermodynamics consistency (Theorem L.7)
 
@@ -728,7 +728,7 @@ Several framework elements require both appendices for complete understanding:
 
 **3. Stress-energy tensor $T_{\mu\nu}^{(MPU)}$**
 - Construction: Definition B.8 (Appendix B)
-- Decomposition: Equation L.38 (Appendix L)
+- Decomposition: Equation L.37 (Appendix L), refined as Equation S.9 (this appendix)
 - CC contribution: $\Delta T_{\mu\nu}^{(CC)}$ (Section S.2, this appendix)
 - Conservation: Theorem B.5 (Appendix B)
 
@@ -739,7 +739,7 @@ Several framework elements require both appendices for complete understanding:
 
 **5. PCE optimization**
 - General framework: Definition 15, Appendix D
-- Complexity adaptation: Theorem D.6 (Appendix D)
+- Complexity adaptation: Theorem D.8 (Appendix D)
 - CC-specific optimization: Section S.4 (this appendix)
 - Mapping existence: Theorem L.1 (Appendix L)
 

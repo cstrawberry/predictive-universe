@@ -1,6 +1,6 @@
 # 13 Experimental Predictions and Protocols
 
-The Predictive Universe framework, particularly the Consciousness Complexity (CC) hypothesis (Section 9) proposing a mechanism by which complex MPU aggregates can influence quantum outcomes, leads to specific, potentially falsifiable predictions that deviate from standard quantum mechanics. This section details these predictions and outlines experimental protocols designed for their investigation, emphasizing near-term feasibility while acknowledging the significant challenges involved in detecting potentially subtle effects.
+The Predictive Universe framework, particularly the Consciousness Complexity (CC) hypothesis (Section 9) proposing a mechanism by which complex MPU aggregates can influence quantum outcomes, leads to specific, potentially falsifiable predictions that deviate from standard quantum mechanics. Because the predicted deviations can be small and are susceptible to experimental and statistical artifacts, the protocols in this section are formulated with strict methodological constraints: pre-specified hypotheses and analysis pipelines, blinding wherever feasible, rigorous environmental and device controls, and correction for multiple comparisons across outcomes, times, and experimental settings. The aim is not merely to detect an anomaly, but to isolate a reproducible, device-independent shift consistent with the bounded modification structure of Definition 33 and Theorem 36 while ruling out classical confounds (drift, selection effects, hidden feedback, and post-selection). This section details these predictions and outlines experimental protocols designed for their investigation, emphasizing near-term feasibility while acknowledging the significant challenges involved in distinguishing a genuine CC effect from systematic error.
 
 **13.1 Prediction 1: Potential Born-Rule Deviations**
 
@@ -8,7 +8,7 @@ The core testable prediction of the CC hypothesis (Hypothesis 3) is that systems
 
 **13.1.1 Theorem 51 (Quantitative Born Rule Deviation Prediction)**
 
-Consider a quantum system prepared in state $\rho$ (pure case $\rho=\lvert\psi\rangle\!\langle\psi\rvert$) measured by a POVM $\{E_i\}_{i=1}^n$. Let $P_{\mathrm{Born}}(i)=\mathrm{tr}(\rho E_i)$ be the Born probability of outcome $i$. If this interaction occurs within the influencing context `context_S(i)` provided by an MPU aggregate system $S$ possessing operational $\mathrm{CC}(S)>0$, the predicted observable probability $P_{obs}(i)$ is
+Consider a quantum system prepared in state $\rho$ (pure case $\rho=\lvert\psi\rangle\!\langle\psi\rvert$) measured by a POVM $\{E_i\}_{i=1}^n$. Let $P_{\mathrm{Born}}(i)=\mathrm{tr}(\rho E_i)$ be the Born probability of outcome $i$. If this interaction occurs within the influencing context $\text{context}_S(i)$ provided by an MPU aggregate system $S$ possessing operational $\mathrm{CC}(S)>0$, the predicted observable probability $P_{obs}(i)$ is
 
 $$
 P_{obs}(i)=P_{\mathrm{Born}}(i)+\Delta P(i)\quad \text{(77)}
@@ -28,7 +28,7 @@ In the small‑bias regime ($\mathrm{CC}(S)\ll 1$): $|\Delta P(i)| \lesssim \mat
 Therefore, for an observed per‑outcome shift $\delta=|\Delta P(i)|$, a conservative exact lower bound is
 $\mathrm{CC}(S) \ge 2\,\arcsin(\delta)$ (small bias: $\mathrm{CC}(S) \gtrsim 2\delta$).
 
-*Proof:* The bounds are derived directly from the PCE-minimal modification principle (Definition 33) applied to the geometry of the statistical manifold, as rigorously established in Theorem 36.
+*Remark:* The bounds are derived directly from the PCE-minimal modification principle (Definition 33) applied to the geometry of the statistical manifold, as rigorously established in Theorem 36.
 
 
 Using the **Context-Targeted Bias (CTB)** model (Definition 34), where the context defines a target state $\sigma_S$ and $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$, the deviation takes the form
@@ -44,33 +44,32 @@ $$
 
 This protocol outlines a high-statistics, exploratory search for Born rule deviations (Theorem 51) using quantum random number generators (QRNGs) interacting with high-complexity systems (biological or potentially artificial).
 
-*   **Objective:** To search for statistically significant deviations from *non-uniform* ($p_i \neq 0.5$) baseline Born rule probabilities in QRNG outputs that are correlated with the controlled internal state ($\text{context}_S$) of a proximate system S (human participant or specialized AI system) hypothesized to have CC > 0. Non-uniform baseline probabilities are preferred as they may facilitate easier statistical detection of small shifts relative to systematic noise and drift.
+*   **Objective:** To search for statistically significant deviations from *non-uniform* ($p_i \neq 0.5$) baseline Born rule probabilities in QRNG outputs that are correlated with the controlled internal state ($\text{context}_S$) of a proximate system S (human participant or specialized AI system) hypothesized to have $\mathrm{CC}(S) > 0$. Non-uniform baseline probabilities are preferred as they may facilitate easier statistical detection of small shifts relative to systematic noise and drift.
 
 *   **Experimental Setup:**
     1.  **QRNG:** Well-characterized QRNG producing stable, verifiable baseline probabilities $P_{Born}(i) \neq 0.5$ for some outcome $i$. Multiple parallel QRNGs can increase data rate.
     2.  **High-Complexity System (S):**
-        *   *Biological:* Human participant performing standardized tasks generating specific internal states (`context_S`, e.g., focused attention/intention). Optional physiological monitoring (EEG, fMRI, HRV).
+        *   *Biological:* Human participant performing standardized tasks generating specific internal states ($\mathrm{context}_S$, e.g., focused attention/intention). Optional physiological monitoring (EEG, fMRI, HRV).
         *   *Artificial:* Sophisticated AI system. Major Challenge: Designing and verifying the physical interaction pathway $N(t)$ coupling the AI's internal $\text{context}_S$ (Definition L.1) to the QRNG's physical process, respecting constraints (speed, cost $\varepsilon \ge \ln 2$, PCE, orthogonality to noise, mapping stability Theorem L.1). The electromagnetic channel dominates (Theorem L.5, $\mathcal{R} \sim 10^{36}$), requiring coherent field generation (Theorem L.2). Statistical requirements (Appendix L, Protocol L.1) and gravitational self-limitation (Appendix S) provide experimental benchmarks. This requires significant R&D and confirmation that the AI meets the operational criteria ($C_{agg}>C_{op}$) necessary for potential CC > 0.
     3.  **Interaction Control & Shielding:** Meticulous shielding (EM, thermal, acoustic, vibration). Well-defined interaction pathway $N(t)$. Measurement and control/compensation for conventional physical side-effects from S. Continuous environmental monitoring.
-    4.  **Automation & Data Acquisition:** Automated randomization of conditions (baseline, neutral, specific context runs), synchronized recording of QRNG outcomes and `context_S` indicators, precise timestamps, secure storage for large datasets ($10^7 - 10^9+$ trials). Mandatory blinding procedures.
+    4.  **Automation & Data Acquisition:** Automated randomization of conditions (baseline, neutral, specific context runs), synchronized recording of QRNG outcomes and $\mathrm{context}_S$ indicators, precise timestamps, secure storage for large datasets ($10^7 - 10^9+$ trials). Mandatory blinding procedures.
 
 *   **Procedure:**
     1.  **Baseline Characterization:** Extensive data collection establishing baseline $P_{Born}(i)$, stability, and noise levels.
     2.  **Intervention Runs:** Randomized block design interleaving conditions (Baseline, Neutral Context, Specific Context). Collect large $N_{int}$ trials per condition.
     3.  **Control Conditions:** Include sham interaction runs (pathway $N(t)$ disabled) to control for conventional influences.
 
-*   **Statistical Analysis and Power:**
-    *   **Target Sensitivity:** The experiment aims to resolve CC-induced deviations $\Delta P$ from a baseline Born probability $P_{\mathrm{Born}}(i)$ with high statistical confidence (e.g., two-sided significance $\alpha = 0.01$ (continuity correction and a 5–8% conservative buffer applied), power $1-\beta = 0.80$).
-
-*   **Prospective Sample Sizes:** The experiment aims to resolve CC-induced deviations $\Delta P$ from a baseline Born probability $P_{\mathrm{Born}}(i)$ with high statistical confidence (e.g., two-sided significance $\alpha = 0.01$, power $1-\beta = 0.80$). For a one-sample test comparing an observed proportion $p'$ in a context condition against a precisely calibrated baseline $p_0$ (treated as known), the required total sample size $N$ is given by the standard formula:
+*   **Statistical Analysis and Power:** Notation and design assumptions for the pre-registered tests below. In this section, $\alpha_{\mathrm{sig}}$ and $\beta_{\mathrm{II}}$ denote the type-I and type-II error probabilities; these are distinct from the Space-of-Becoming viability parameters $(\alpha,\beta)$ (Axiom 3) and from the fine-structure constant $\alpha$ in Section 13.8.
+*   **Target Sensitivity:** The experiment aims to resolve CC-induced deviations $\Delta P$ from a baseline Born probability $P_{\mathrm{Born}}(i)$ with two-sided type-I error $\alpha_{\mathrm{sig}} = 0.01$ and power $1-\beta_{\mathrm{II}} = 0.80$, using a pre-registered primary endpoint and analysis pipeline. If normal approximations are used, apply continuity correction or exact binomial methods as appropriate.
+*   **Prospective Sample Sizes:** For a one-sample test comparing an observed proportion $p'$ in a context condition against a precisely calibrated baseline $p_0$ (treated as known), an asymptotic normal approximation gives:
     $$
-    N \approx \frac{ \left[ Z_{\alpha/2} \sqrt{ p_0(1-p_0) } + Z_\beta \sqrt{ p'(1-p') } \right]^2 }{ (p' - p_0)^2 }
+    N \approx \frac{ \left[ Z_{1-\alpha_{\mathrm{sig}}/2} \sqrt{ p_0(1-p_0) } + Z_{1-\beta_{\mathrm{II}}} \sqrt{ p'(1-p') } \right]^2 }{ (p' - p_0)^2 }
     $$
-where $Z_x$ is the critical value of the standard normal distribution. The precision of the baseline calibration for $p_0$ must be rigorously established and reported, as any uncertainty in $p_0$ will affect the required sample size and the interpretation of the results.
+    where $Z_p$ is the $p$-quantile of the standard normal distribution ($\Phi(Z_p)=p$). If $p_0$ is estimated rather than known, the baseline calibration variance must be propagated (analytically or by simulation) into the test and sample-size calculation. If residual autocorrelation is present, replace $N$ by an effective sample size $N_{\mathrm{eff}}$ estimated from the output ACF and inflate the target $N$ accordingly.
 *   **Independence and Error Control:** Independence of trials will be rigorously assessed using autocorrelation functions (ACF), Ljung–Box tests, and Wald–Wolfowitz runs tests on the output streams and residuals. The NIST Statistical Test Suite [Bassham et al. 2010] will be applied to verify randomness properties. If correlations are detected, appropriate methods such as pre-whitening, block-bootstrap confidence intervals, or data thinning will be employed. Multiplicity of tests across outcomes or contexts will be controlled using standard methods (e.g., Bonferroni correction for family-wise error rate or Benjamini-Hochberg procedure for false discovery rate).
 *   **Sequential Analysis:** For high-statistics runs, a sequential analysis plan with pre-specified interim looks using O’Brien–Fleming-type boundaries (implemented via the Lan-DeMets error spending function [Lan & DeMets 1983]) is recommended. This allows for early stopping due to efficacy or futility while preserving the overall type-I error rate. The table below provides indicative total sample sizes ($N_{OBF}$) per context and expected stopping distributions under the alternative hypothesis for three equally spaced looks.
 
-| $\alpha$ | $\delta$ | $N_{\text{fixed}}$ | $N_{\text{OBF}}$ ($\approx 1.06 \times N_{\text{fixed}}$) | Expected stop % at looks 1/2/3 (under $H_1$) |
+| $\alpha_{\mathrm{sig}}$ | $\delta$ | $N_{\text{fixed}}$ | $N_{\text{OBF}}$ ($\approx 1.06 \times N_{\text{fixed}}$) | Expected stop % at looks 1/2/3 (under $H_1$) |
 |---:|---:|---:|---:|:---|
 | 0.01 | $10^{-3}$ | 2,302,586 | 2,440,742 | ~5% / 20% / 75% |
 | 0.01 | $5 \times 10^{-4}$ | 9,210,341 | 9,762,962 | ~3% / 17% / 80% |
@@ -79,11 +78,11 @@ where $Z_x$ is the critical value of the standard normal distribution. The preci
 | 0.001 | $5 \times 10^{-4}$ | 13,815,511 | 14,644,442 | ~2% / 15% / 83% |
 | 0.001 | $10^{-4}$ | 345,387,764 | 366,111,030 | $\lesssim 1$% / 9% / 90% |
 
-*   *Assumptions for $N_{\rm fixed}$ in the table:* **One-sample proportion** design with baseline $p=0.25$, power $1-\beta=0.80$.
+*   *Assumptions for $N_{\rm fixed}$ in the table:* **One-sample proportion** design with baseline $p=0.25$, power $1-\beta_{\mathrm{II}}=0.80$ (with $\alpha_{\mathrm{sig}}$ as shown in the table).
     *   *Sequential design:* O’Brien–Fleming boundaries with **3 equally spaced** looks at cumulative information fractions $1/3, 2/3, 1$. The overhead factor (~1.06) and stop percentages are **illustrative**; exact values will be determined by the preregistered simulations and released with the code.
 
 *   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g., $\chi^2$, z-tests) comparing observed frequencies $\hat{P}(i)$ to the Born rule probabilities. Where applicable, exact binomial tests or variance-stabilized (arcsin–sqrt) transformations will complement normal approximations to ensure proper calibration, especially for small $\delta$. Design-stage baselines will use device-specific $P_{\mathrm{Born}}(i)$ estimates. Report effect sizes (Cramér’s V, Cohen’s d) with 95% CIs.
-    *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables `$context_S$` via mixed-effects logistic regression.
+    *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables $\text{context}_S$ via mixed-effects logistic regression.
     *   **Systematic Error Control (Paramount):** (i) electronic drift (ii) detector after-pulsing (iii) clock-sync bias (iv) experimenter degrees-of-freedom (blinding).
     *   **Outcome:** Deviations that survive all controls give an empirical estimate of CC($S$) (cf. Theorem 51); null results tighten the exclusion curve $\text{CC}_{\max}(S) < \epsilon(N)$.
 
@@ -107,7 +106,7 @@ where $\Delta \tau_{coh} = \tau_{coh, obs} - \tau_{coh, base}$, $\gamma'_{CC}$ i
 
 **13.3.3 Experimental Approach**
 
-*   **Objective:** Exploratory search for statistically significant *relative changes* in $\tau_{coh}$ correlated with `context_S` of system S.
+*   **Objective:** Exploratory search for statistically significant *relative changes* in $\tau_{coh}$ correlated with $\mathrm{context}_S$ of system S.
 *   **Setup:**
     *   **Quantum System:** System with well-characterized, long, stable baseline $\tau_{coh, base}$ (NV centers, trapped ions, qubits, NMR).
     *   **High-Complexity System (S):** Human or AI.
@@ -148,7 +147,7 @@ $|\Delta P|_{\rm EM}\ \lesssim\ 2.68\times 10^{-13}\,T$ (with $T$ in seconds). T
 
 Addresses the most speculative prediction: potential statistical FTL influence mediated by CC acting on entangled systems (Postulate 3).
 
-*   **Objective:** Sensitive search for statistical dependence of Bob's local measurement outcomes on Alice's remote context `context_S` (associated with system $S_A$ at her station), with A and B space-like separated. Secondary search for context-dependent changes in Bell parameters.
+*   **Objective:** Sensitive search for statistical dependence of Bob's local measurement outcomes on Alice's remote context $\mathrm{context}_S$ (associated with system $S_A$ at her station), with A and B space-like separated. Secondary search for context-dependent changes in Bell parameters.
 *   **Theoretical Basis:** Postulate 3 allows Alice's context $C_A$ to influence Bob's marginal probabilities $P_{obs}(b|B, C_A)$, respecting Postulate 2 (no deterministic signaling). Detection requires $N \propto 1/\text{CC}^2$ trials (Theorem 40).
 *   **Experimental Setup:**
     1.  **Entanglement Source:** High-quality, stable source distributing entangled pairs to space-like separated stations (Alice, Bob).
@@ -174,7 +173,7 @@ A pragmatic, staged approach is recommended to systematically test the framework
 1.  **Stage 2 (Medium-Term):** If justified by positive and replicated results from Stage 1, coherence time tests (Protocol 2) should be pursued to seek complementary evidence. This stage would also involve refining the QRNG protocols based on initial findings.
 2.  **Stage 3 (Long-Term / Contingent):** The extraordinarily demanding Bell-type experiments for a statistical FTL search (Protocol 3) should only be undertaken if compelling, independently verified evidence emerges from the earlier stages.
 
-All proposed experiments share common requirements for rigor and validity. They necessitate quantum systems with high stability over long integration times to achieve the required statistical power. Given the multiple hypotheses being tested, a clear, pre-registered statistical plan is mandatory to control the family-wise error rate. This should include specifying the use of sequential analyses with pre-defined stopping rules (e.g., O’Brien–Fleming boundaries) to allow for early termination for efficacy or futility while preserving the overall type-I error rate. As a concrete example, with three equally spaced looks, the canonical OBF boundaries (Z-scores) at a family-wise $\alpha=0.05$ are approximately $[3.47, 2.45, 2.00]$.
+All proposed experiments share common requirements for rigor and validity. They necessitate quantum systems with high stability over long integration times to achieve the required statistical power. Given the multiple hypotheses being tested, a clear, pre-registered statistical plan is mandatory to control the family-wise error rate. This should include specifying the use of sequential analyses with pre-defined stopping rules (e.g., O'Brien–Fleming boundaries) to allow for early termination for efficacy or futility while preserving the overall type-I error rate. As a concrete example, with three equally spaced looks, the canonical OBF boundaries (Z-scores) at a family-wise $\alpha_{\mathrm{sig}}=0.05$ are approximately $[3.47, 2.45, 2.00]$.
 
 **13.7 Compliance with Causal Constraints**
 
@@ -185,14 +184,14 @@ The experimental program, especially Protocol 3, probes the framework's non-stan
 The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\text{CC} \le \alpha_{CC,max} < 0.5$ (Theorem 39), is consistent with the framework's definition of causality (Postulate 2) because it prevents deterministic faster-than-light (FTL) signaling. The potential statistical FTL influence (Postulate 3) is inherently probabilistic and information-rate limited (Theorem 40, Theorem 41, consistent with bounds derived from ND-RID contractivity within the AQFT framework of Appendix F), making it unusable for constructing paradox-inducing causal loops (Theorem 42, whose consistency is supported by the AQFT analysis in Appendix F).
 *Proof Summary:* Theorem 39 prevents outcome forcing. Theorem 40 shows detection needs $N \propto 1/\text{CC}^2$. Theorem 41 bounds information rate $I \propto \text{CC}^2$. Theorem 42 proves this noisy, rate-limited channel cannot achieve deterministic signaling needed for causal loops. The full consistency analysis, including the role of emergent operator locality and information-rate limits, is provided in **Appendix F**. QED
 
-*Note:* Empirical investigation of Postulate 3 (Protocol 3) critically tests this unique aspect of PU's locality/causality. Confirmation requires re-evaluating standard locality; null results constrain/falsify this prediction.
+*Note:* Empirical investigation of Postulate 3 (Protocol 3) critically tests this distinct aspect of PU's locality/causality. Confirmation requires re-evaluating standard locality; null results constrain/falsify this prediction.
 
 **13.8 High-Precision Falsification Windows**
 
 Beyond the direct experimental search for CC, the framework's quantitative predictions for fundamental constants and emergent gravity provide sharp, falsifiable tests.
 
 **13.8.1 The Fine-Structure Constant Prediction Window**
-The framework predicts the Thomson-limit fine-structure constant $\alpha^{-1} ≈ 137.036 \pm 0.0001$ directly from the PCE-Attractor structure (Appendix Z, Theorem Z.26). This value agrees with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$ to 0.68 ppm, within the theoretical uncertainty. The prediction is falsifiable: if future measurements of $\alpha(0)$ deviate from this value beyond the stated uncertainty, the PCE-Attractor model for the origin of the U(1) coupling would be invalidated. As a consistency check, applying standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$, in agreement with experiment (Appendix Z, Corollary Z.8).
+The framework predicts the Thomson-limit fine-structure constant $\alpha^{-1} ≈ 137.036092 \pm 0.000050$ directly from the PCE-Attractor structure (Appendix Z, Theorem Z.26), where the quoted $1\sigma$ theory uncertainty is a conservative truncation bound (Section Z.27.9). This value agrees with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$ to 0.68 ppm (a ~2σ discrepancy under the stated theory uncertainty). The prediction is falsifiable: if future measurements of $\alpha(0)$ deviate from this value beyond the stated uncertainty budget, the PCE-Attractor model for the origin of the U(1) coupling would be invalidated. As a consistency check, applying standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$, in agreement with experiment (Appendix Z, Corollary Z.8).
 
 **13.8.2 The Multi-Scale Gravity / Dark Sector Window**
 The framework's two-mechanism model for the dark sector (Appendix I) is falsifiable through its demand for cross-scale consistency with a minimal set of universal parameters. The model can be falsified in several ways:
@@ -214,7 +213,7 @@ If the QCD vacuum configuration space inherits Leech lattice geometry through PC
 $$|v|^2(J^{PC}) = a^2 + \Delta_J(J) + \Delta_P(P) + \Delta_C(C)$$
 
 where:
-- Base shell $= a^2 = 4$ (Landauer: $a = e^\varepsilon = 2$, Theorem Z.1)
+- Base shell $= a^2 = 4$ (Landauer: $a = 2$, Theorem Z.1)
 - Spin contribution $\Delta_J(J) = J(J-1)$ for $J \geq 1$, and $\Delta_J(0) = 0$
 - Parity contribution $\Delta_P(+) = 0$, $\Delta_P(-) = a^2 = 4$ (minimum lattice displacement)
 - C-parity contribution $\Delta_C(+) = 0$, $\Delta_C(-) = d_{\text{Golay}} = 8$ (error-correction distance, Theorem Z.13)
@@ -229,14 +228,14 @@ where $a(2b-a) = 2(12-2) = 20$ is the residual mode capacity for spin encoding.
 
 **Predictions:**
 
-| State | $\Delta_J$ | $\Delta_P$ | $\Delta_C$ | Shell $|v|^2$ | $Z(J)$ | Predicted | Lattice QCD | Error |
-|:------|:----------:|:----------:|:----------:|:-------------:|:------:|:---------:|:-----------:|:-----:|
-| $0^{++}$ | 0 | 0 | 0 | 4 | 1.000 | 1.000 | 1.00 | — |
-| $2^{++}$ | 2 | 0 | 0 | 6 | 1.140 | 1.396 | $1.40 \pm 0.02$ | 0.3% |
-| $0^{-+}$ | 0 | 4 | 0 | 8 | 1.000 | 1.414 | $1.48 \pm 0.03$ | 4.4% |
-| $3^{++}$ | 6 | 0 | 0 | 10 | 1.265 | 2.000 | $2.00 \pm 0.05$ | 0.0% |
-| $1^{+-}$ | 0 | 0 | 8 | 12 | 1.049 | 1.817 | $1.83 \pm 0.06$ | 0.7% |
-| $2^{-+}$ | 2 | 4 | 0 | 10 | 1.140 | 1.803 | $1.93 \pm 0.08$ | 6.6% |
+| State      | $\Delta_J$ | $\Delta_P$ | $\Delta_C$ | Shell $\|v\|^2$ | $Z(J)$ | Predicted | Lattice QCD       | Error |
+|:-----------|:----------:|:----------:|:----------:|:---------------:|:------:|:---------:|:-----------------:|:-----:|
+| $0^{++}$   | 0          | 0          | 0          | 4               | 1.000  | 1.000     | 1.00              | —     |
+| $2^{++}$   | 2          | 0          | 0          | 6               | 1.140  | 1.396     | $1.40 \pm 0.02$   | 0.3%  |
+| $0^{-+}$   | 0          | 4          | 0          | 8               | 1.000  | 1.414     | $1.48 \pm 0.03$   | 4.4%  |
+| $3^{++}$   | 6          | 0          | 0          | 10              | 1.265  | 2.000     | $2.00 \pm 0.05$   | 0.0%  |
+| $1^{+-}$   | 0          | 0          | 8          | 12              | 1.049  | 1.817     | $1.83 \pm 0.06$   | 0.7%  |
+| $2^{-+}$   | 2          | 4          | 0          | 10              | 1.140  | 1.803     | $1.93 \pm 0.08$   | 6.6%  |
 
 
 **Corollary Z.8h.1 (Hierarchy of Symmetry Costs).** The discrete symmetry costs obey $\Delta_C(-) > \Delta_P(-) > \Delta_J(J)$ for $J \leq 2$, with hierarchy $8 > 4 > 2 \geq 0$. This explains why C-odd glueballs are heaviest, followed by P-odd, with spin providing finer structure.
@@ -457,7 +456,7 @@ The Golay alignment prediction connects to other PU predictions through the unif
 
 | Prediction | Source | Connection to $M = 24$ |
 |------------|--------|------------------------|
-| Fine-structure constant $\alpha^{-1} \approx 137.036$ | Section 13.8.1, Appendix Z | Capacity saturation at PCE-Attractor |
+| Fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000050$ (Thomson) | Section 13.8.1, Appendix Z | Capacity saturation at PCE-Attractor |
 | Spacetime dimensionality $D = 4$ | Appendix Z, Theorem Z.11 (see also Appendix H, Theorem H.4) | Kissing number $K(4) = 24$ |
 | Vacuum stability | Appendix Z, Proposition Z.13a | Leech lattice rootlessness from Golay $d = 8$ |
 | Gauge group structure | Appendix W | $\dim[\mathfrak{g}_{\text{SM}}] = 12 = k$ |
@@ -556,9 +555,9 @@ Fully consistent with $N_{\mathrm{gen}} = 3$. Direct searches exclude vectorlike
 
 **Prediction:** The Standard Model gauge group $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ is uniquely selected.
 
-**Derivation Summary:** Sections G.8.4–G.8.5 establish uniqueness through anomaly cancellation, capacity constraints ($n_G \leq 12$), and PCE optimization. The generator count $n_G = 8 + 3 + 1 = 12$ saturates the Lagrangian capacity bound (Theorem G.8.4b).
+**Derivation Summary:** The PU gauge-search space is the set of compact reductive Lie algebras $\mathfrak{g}\subseteq\mathfrak{u}(6)$ acting faithfully on the inactive module $\mathcal{B}\cong\mathbb{C}^6$ induced by the $b=6$ Landauer partition, together with anomaly-free chiral matter assignments compatible with the induced module decomposition $\mathbb{C}^6=\oplus_i \mathbb{C}^{n_i}$ (Appendix G.8.4). Within this finite search space, PCE selects the maximal-benefit solution at fixed capacity cost by saturating the sharp generator bound $n_G\le 12$ (Theorem G.8.2e). The exhaustive partition analysis (Theorem G.8.4b) and its anomaly filters (Corollary G.8.4c) show that the unique surviving partition is $(3,2,1)$, forcing $\mathfrak{g}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)_Y$ with $n_G=12=8+3+1$.
 
-**Derivation Status:** This prediction follows from Proposition G.M1 (PCE locality), established by exhaustive partition analysis (Theorem G.8.4b, Corollary G.8.4c). The Local Module Hypothesis that predictive partitions decouple to leading order under PCE locality is a physical assumption analogous to Local Thermodynamic Equilibrium (Postulate 4).
+**Derivation Status:** The uniqueness statement is rigorous conditional on (i) Proposition G.M1 (module-locality of the leading PCE objective) and (ii) the requirement that the low-energy chiral sector be anomaly-free and chirality-compatible within the same $b=6$ module decomposition (Appendix G.8.4c). Under these conditions, no other compact reductive $\mathfrak{g}\subseteq\mathfrak{u}(6)$ with $n_G\le 12$ both saturates the PCE optimum and admits anomaly-free chiral content; discovery of an additional long-range gauge factor would therefore falsify the locality assumption rather than merely adjust a fitted parameter.
 
 **Falsification Conditions:**
 - Discovery of additional gauge bosons ($Z'$, $W'$) at accessible energies indicating enlarged gauge group
@@ -600,9 +599,9 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Prediction | Framework Value | Experimental Value | Derivation | Status |
 |:-----------|:----------------|:-------------------|:-----------|:------:|
 | Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
-| Fine-structure constant $\alpha^{-1}$ | $137.0361 \pm 0.0001$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
+| Fine-structure constant $\alpha^{-1}$ | $137.036092 \pm 0.000050$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
 | Generation number $N_{\mathrm{gen}}$ | 3 | $2.984 \pm 0.008$ | Proposition R.3.5 | ✓ |
-| Gauge group (conditional) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ✓ |
+| Gauge group $G_{\mathrm{SM}}$ (conditional on Proposition G.M1) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ✓ |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ✓ |
 
 All predictions are currently consistent with observation. The framework will be falsified if any prediction falls outside its stated uncertainty bounds in future precision measurements.

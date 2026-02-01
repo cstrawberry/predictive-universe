@@ -2,7 +2,7 @@
 
 ## W.0 Notation and setup
 
-This appendix derives general, robust identities and bounds relating emergent gauge couplings to the information-theoretic invariants of the MPU's predictive cycle. This formalism provides stringent internal consistency checks for the PU framework. In **Appendix Z**, these principles are applied to a first-principles derivation of the MPU's QFI spectrum, culminating in a parameter-free calculation of the Thomson-limit fine-structure constant $\alpha^{-1} ≈ 137.036$ at the PCE-Attractor.
+This appendix derives general, robust identities and bounds relating emergent gauge couplings to the information-theoretic invariants of the MPU's predictive cycle. This formalism provides stringent internal consistency checks for the PU framework. In **Appendix Z**, these principles are applied to a first-principles derivation of the MPU's QFI spectrum, culminating in a parameter-free calculation of the Thomson-limit fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000050$ at the PCE-Attractor (Appendix Z, Theorem Z.26).
 
 * **Alphabet size:** $d_0\in{2,3,\dots}$. PU uses $d_0=8$.
 * **One‑cycle deformation variable:** $u=g^2\ge 0$ (Heaviside–Lorentz units).
@@ -119,13 +119,13 @@ Since $\xi_i \ge \lambda_{\min}$, we have $(1+\xi_i u)^2 \ge (1+\lambda_{\min}u)
 $\Delta_{\rm cap}(u) \le \frac{u^2}{2(1+\lambda_{\min}u)^2} \sum_i (\lambda_i-x)^2 = \frac{M\sigma^2 u^2}{2(1+\lambda_{\min}u)^2}$.
 Nonnegativity follows from Jensen's inequality (Lemma W.3). $\square$
 
-**Remark (sharper bound).** A per‑eigenvalue refinement is
+**Remark: sharper bound.** A per‑eigenvalue refinement is
 
 $$
 \Delta_{\rm cap}(u)\ \le\ \frac{u^2}{2}\sum_{i=1}^M\frac{(\lambda_i-x)^2}{\bigl(1+\min\{\lambda_i,x\}\,u\bigr)^2}.
 $$
 
-**Remark (large‑$u$ behavior).** As $u\to\infty$, **assuming $\min_i\lambda_i>0$**,
+**Remark: large‑$u$ behavior.** As $u\to\infty$, **assuming $\min_i\lambda_i>0$**,
 
 $$
 \Delta_{\rm cap}(u)\ \longrightarrow\ M\ln x\ -\ \sum_{i=1}^M\ln\lambda_i.
@@ -304,7 +304,7 @@ $$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in all sectors}
 
 ### W.3a.4 Mode Ratio and Electroweak Structure
 
-**Remark W.3a.4 (Mode Ratio).** At the PCE-Attractor with uniform per-generator capacity, the mode ratio is:
+**Remark W.3a.4: Mode Ratio.** At the PCE-Attractor with uniform per-generator capacity, the mode ratio is:
 
 $$\frac{M_2}{M_Y} = \frac{3}{1} = 3$$
 

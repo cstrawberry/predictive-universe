@@ -4,7 +4,7 @@ Having established the foundational principles governing adaptive prediction, co
 
 **7.1 Hypothesis 1 (Hyp 1): The MPU Reality Model**
 
-Physical reality, from the internal perspective, is fundamentally constituted by a network of interacting Minimal Predictive Units (MPUs), as defined below (Definition 23). This network structure is not merely a postulate of efficiency but is also a requirement for mathematical self-consistency; as rigorously proven in Appendix P, a universe containing the chiral gauge structure of the Standard Model is incompatible with a singular predictive entity and requires a substrate of at least two interacting MPUs to ensure the cancellation of quantum anomalies. The collective dynamics of this MPU network give rise to all emergent physical phenomena, including particles, fields, the formalism of quantum mechanics (Section 8), and spacetime geometry (Section 11, Section 12). These dynamics are governed by several core principles:
+Physical reality, from the internal perspective, is fundamentally constituted by a network of interacting Minimal Predictive Units (MPUs), as defined below (Definition 23). This network structure is not merely a postulate of efficiency but is also a requirement for mathematical self-consistency; within the PPI instantiation constraints and the standard anomaly-cancellation conditions, a universe containing the chiral gauge structure of the Standard Model is incompatible with a singular predictive entity and requires a substrate of at least two interacting MPUs (Appendix P). The collective dynamics of this MPU network give rise to all emergent physical phenomena, including particles, fields, the formalism of quantum mechanics (Section 8), and spacetime geometry (Section 11, Section 12). These dynamics are governed by several core principles:
 *   The Dual Dynamics of internal prediction (unitary evolution) and 'Evolve' interaction (stochastic ND-RID) (Section 7.3.3).
 *   Optimization via the Prediction Optimization Problem (Axiom 1) and the Principle of Compression Efficiency (Definition 15).
 *   Constraints arising from self-reference limits (SPAP, Theorem 10, Theorem 11) and reflexive interaction dynamics (RID, Definition 6).
@@ -18,7 +18,7 @@ b) The inherent self-referential logical structure, corresponding to the Horizon
 
 Therefore, by definition, $C_{op}$ encompasses $K_0$ ($C_{op} \ge K_0$, Corollary 3). An MPU operates under the Prediction Optimization Problem (POP, Axiom 1) subject to physical, informational ($\varepsilon > 0$, Theorem 31), and logical (SPAP, Theorem 10, Theorem 11; RID, Definition 6) constraints intrinsically tied to its $C_{op}/K_0$ structure. An MPU's state and dynamics are characterized by:
 
-1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state $|\psi(t)\rangle$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4; dimension $d_0 \ge 8$, see Theorem 23 and the subsequent algebraic argument) that encodes predictive information, and a perspective index $s$ from the Perspective Space $\Sigma$ (Definition 25) representing the interaction context.
+1.  **State Representation:** Its state is described by a Perspectival State $S_{(s)}(t) = (S(t), s)$ (Definition 24), comprising a state $|\psi(t)\rangle$ residing in a minimal complex Hilbert space $\mathcal{H}_0$ (Proposition 4; necessity $d_0 \ge 8$ from Theorem 23, with the minimal MPU case $C_{op}=K_0$ giving $d_0=8$) that encodes predictive information, and a perspective index $s$ from the Perspective Space $\Sigma$ (Definition 25) representing the interaction context.
  2.  **Dual Dynamics:** Its evolution follows Dual Dynamics (Section 7.3.3): deterministic Internal Prediction Evolution (Definition 26) via the Schrödinger equation (Equation 43), implementing predictive generation ($b_p$), and stochastic Interaction ('Evolve', Definition 27) triggered by interaction, instantiating Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) for verification ($b_v$) and update initiation ($D_{cyc}$), whose indeterminacy stems from the inherent $K_0$ logic (Hypothesis 2).
  3.  Minimal Operational Complexity: The physical system possesses exactly the complexity $C(MPU) = C_{op}$ (Theorem 16).
 
@@ -58,7 +58,7 @@ The ‘Evolve’ interaction (Definition 27) comprises a reversible reflexive up
     *   Net effect on the triple $(m,p,a)$ in the computational basis:
         $(m,p,a) \mapsto (\neg p,\,p,\,m)$.
     *   This is a bijection (a 3‑qubit permutation) and thus unitary. One explicit implementation is:
-        $\mathrm{SWAP}(Q_M,Q_A)$; $\mathrm{CNOT}(Q_P\!\to\!Q_M)$; $X(Q_M)$.
+        $\mathrm{SWAP}(Q_M,Q_A)$; $\mathrm{CNOT}(Q_P \to Q_M)$; $X(Q_M)$.
 
 *   **Ancilla Reset (on $Q_I$):**
     *   Reset $Q_I$ to $|0\rangle$ irrespective of its prior state via a completely positive trace-preserving (CPTP) map with Kraus operators acting on $\mathcal{H}_0 = \mathcal{H}_{MP} \otimes \mathcal{H}_I$:
@@ -69,9 +69,9 @@ The ‘Evolve’ interaction (Definition 27) comprises a reversible reflexive up
         ensuring CPTP.
     *   Action: The ancilla’s reduced state after the map is $|0\rangle\langle 0|$ for any input, implementing a physical reset.
 
-*   **Entropy Cost $\varepsilon$:** The reset maps two orthogonal logical states of $Q_I$ to one, a 2-to-1 merge. By Landauer’s principle (Appendix J, Theorem J.1), this entails a minimal dimensionless entropy production
+*   **Entropy Cost $\varepsilon$:** The reset maps two orthogonal logical states of $Q_I$ to one, a 2-to-1 merge. By Landauer's principle (Appendix J, Theorem J.1), this 2-to-1 logical merge entails a minimal dimensionless entropy production
     $$
-    \varepsilon = \frac{\Delta S_{min}}{k_B} = \ln 2,
+    \varepsilon = \frac{\Delta S_{min}}{k_B} = \ln\left(\frac{2}{1}\right) = \ln 2,
     $$
     meeting the bound in Theorem 31.
 
@@ -87,7 +87,7 @@ The ‘Evolve’ interaction (Definition 27) comprises a reversible reflexive up
 Let $V(C) = \lambda R(C) + R_I(C) - \Gamma_0 PP(C)$, with:
 *   Physical Cost $R(C) = R(C_{op}) + r_p (C - C_{op})^{\gamma_p}$ for $C \ge C_{op}$ and $\gamma_p > 1$.
 *   Reflexive-Information Cost $R_I(C) = (r_I/\ln 2) \ln(C/K_0)$, for $C > K_0$ and $R_I(K_0) = 0$.
-*   Predictive Performance $PP(C) = \beta - (\beta - \alpha)\exp\[-\kappa_{eff} (C - C_{op})/K_0]$, giving $PP(K_0) = \alpha$.
+*   Predictive Performance $PP(C) = \beta - (\beta - \alpha)\exp[-\kappa_{\mathrm{eff}} (C - C_{op})/K_0]$, giving $PP(K_0) = \alpha$.
 
 Derivatives at $C = K_0$:
 *   $R'(K_0) = 0$ (right-derivative) for $\gamma_p > 1$; $R''(K_0) = \gamma_p(\gamma_p - 1) r_p (C - C_{op})^{\gamma_p - 2}$, hence $R''(K_0) = 2 r_p$ for $\gamma_p = 2$.
@@ -108,12 +108,12 @@ $$
 $$
 which is readily satisfiable for $\lambda r_p > 0$ and $\kappa_{\mathrm{eff}} \ge 1$ (or more generally by parameter choice consistent with convex $R$ and concave $PP$). Thus, this 3-qubit MPU can be a local minimizer of $V(C)$ at $C = K_0$ under physically reasonable parameter regimes, thereby solving POP at the minimal admissible complexity.
 
-*Numeric cycle (one Evolve step):* Set $\alpha=0.60$, $\beta=0.98$, $\kappa_{\mathrm{eff}}=0.25$, $r_p=0.10$, $r_I=0.02$, $K_0=3$ bits and $C_{op}=K_0$. Initialize $p=(\tfrac14,\tfrac14,\tfrac14,\tfrac14)$. Suppose a context yields $\Delta C=0.012$ bits and $\Delta I=0.002$ bits. Then $\Delta\Psi=\kappa_{\mathrm{eff}}\Delta C - r_p - r_I = 0.25\cdot 0.012 - 0.10 - 0.02 = -0.117$. Because $\max_i p_i\in\[\alpha,\beta]$ and $C_{op}=K_0$, the policy selects passive update (no RID). As compression improves, once $\Delta C>0.48$ bits per cycle, $\Delta\Psi>0$ and a single RID is armed so one ‘Evolve’ event occurs while maintaining $C_{op}=K_0$ and $p_i\in\[\alpha,\beta]$.
+*Numeric cycle (one Evolve step):* Set $\alpha=0.60$, $\beta=0.98$, $\kappa_{\mathrm{eff}}=0.25$, $r_p=0.10$, $r_I=0.02$, $K_0=3$ bits and $C_{op}=K_0$. Initialize $p=(\tfrac14,\tfrac14,\tfrac14,\tfrac14)$. Suppose a context yields $\Delta C=0.012$ bits and $\Delta I=0.002$ bits. Then $\Delta\Psi=\kappa_{\mathrm{eff}}\Delta C - r_p - r_I = 0.25\cdot 0.012 - 0.10 - 0.02 = -0.117$. Because $\max_i p_i\in[\alpha,\beta]$ and $C_{op}=K_0$, the policy selects passive update (no RID). As compression improves, once $\Delta C>0.48$ bits per cycle, $\Delta\Psi>0$ and a single RID is armed so one 'Evolve' event occurs while maintaining $C_{op}=K_0$ and $p_i\in[\alpha,\beta]$.
 
 
 ### **Minimal Predictive Algebra and the Dimension $d_0 = 8$**
 
-The minimal Hilbert-space dimension `d₀=8`, established as a lower bound by the operational requirements of Theorem 15, is not merely a contingent outcome but a unique and stable consequence of the framework's functional and algebraic necessities. While Theorem 15 derives this from the need for 8 distinguishable configurations to robustly implement the SPAP sub-dynamics, this section provides a deeper, more fundamental justification. We demonstrate that the very logic of the predictive cycle, when optimized for efficiency and robustness under the Principle of Compression Efficiency (PCE), mandates a specific quantum algebraic structure whose minimal physical representation uniquely requires a Hilbert space of dimension 8.
+The minimal Hilbert-space dimension $d_0 = 8$, established as a lower bound by the operational requirements of Theorem 15, is not merely a contingent outcome but a unique and stable consequence of the framework's functional and algebraic necessities. While Theorem 15 derives this from the need for 8 distinguishable configurations to robustly implement the SPAP sub-dynamics, this section provides a deeper, more fundamental justification. We demonstrate that the very logic of the predictive cycle, when optimized for efficiency and robustness under the Principle of Compression Efficiency (PCE), mandates a specific quantum algebraic structure whose minimal physical representation uniquely requires a Hilbert space of dimension 8.
 
 Let us formally define the core algebraic structure required by an MPU.
 
@@ -126,7 +126,7 @@ The specific form of this algebra is dictated by architectural principles derive
 
 The Principle of Compression Efficiency (PCE) selects for the most resource-efficient and robust implementation of the predictive cycle. This leads to the following derived architectural principles for a *minimal* unit:
 
-1.  **Internalization and Autonomy:** PCE favors an autonomous, closed-loop architecture where the control logic for the predictive cycle is internalized. This minimizes external dependencies and communication costs (`V_prop`), enhancing robustness and efficiency.
+1.  **Internalization and Autonomy:** PCE favors an autonomous, closed-loop architecture where the control logic for the predictive cycle is internalized. This minimizes external dependencies and communication costs ($V_{prop}$), enhancing robustness and efficiency.
 **2. Functional Separation and the Emergence of a Quantum Nature:** The three core roles of the cycle—representing a space of potential outcomes, storing a definite prediction, and controlling the recursive phase—are functionally distinct. To prevent logical errors and destructive overwrites (as required by conditions O1-O3 in Theorem 15), these roles must be represented by distinct, simultaneously readable registers at the critical **Commit Snapshot** of the cycle. The Principle of Compression Efficiency (PCE) dictates the most resource-efficient way to instantiate this structure:
 
   *   **Linearity and Vector Spaces:** To efficiently manage the relationships between potentialities, the system's states are best represented by vectors, and its reversible dynamics by linear transformations.
@@ -147,21 +147,21 @@ $$
 $$
 given by $a \otimes b \otimes c \mapsto abc$. The domain algebra, $M_2(\mathbb{C})^{\otimes 3}$, is isomorphic to the algebra of all $8 \times 8$ complex matrices, $M_8(\mathbb{C})$, which is a simple C*-algebra. A fundamental theorem of C*-algebras states that any nonzero \*-homomorphism from a simple C*-algebra is injective. Since each subalgebra is assumed to act nontrivially, the map $\Phi$ is nonzero and therefore injective.
 
-This implies that $\mathfrak{A}$ contains a subalgebra isomorphic to $M_8(\mathbb{C})$. By the structure theory of C*-algebras, any nonzero representation of $M_8(\mathbb{C})$ is a direct sum of its unique 8-dimensional irreducible representation. Consequently, any faithful representation of $\mathfrak{A}$ must act on a Hilbert space $\mathcal{H}$ of dimension at least 8. Any dimension $d_0 < 8$ is informationally insufficient to non-destructively manage the three required independent quantum binary degrees of freedom. This establishes `d₀=8` as a strict algebraic lower bound. ∎
+This implies that $\mathfrak{A}$ contains a subalgebra isomorphic to $M_8(\mathbb{C})$. By the structure theory of C*-algebras, any nonzero representation of $M_8(\mathbb{C})$ is a direct sum of its unique 8-dimensional irreducible representation. Consequently, any faithful representation of $\mathfrak{A}$ must act on a Hilbert space $\mathcal{H}$ of dimension at least 8. Any dimension $d_0 < 8$ is informationally insufficient to non-destructively manage the three required independent quantum binary degrees of freedom. This establishes $d_0 = 8$ as a strict algebraic lower bound. ∎
 
-This establishes `d₀=8` as a strict lower bound. The Principle of Compression Efficiency ensures it is also the unique, stable dimension by penalizing superfluous complexity.
+This establishes $d_0 = 8$ as a strict lower bound. The Principle of Compression Efficiency ensures it is also the unique, stable dimension by penalizing superfluous complexity.
 
-**Theorem (PCE Stability of `d₀=8` from Algebraic Completeness).**
-Let the PCE potential for an MPU with an active operational dimension `d` be $V(d) = V_{cost}(d) - V_{benefit}(d)$, subject to the algebraic lower bound $d \ge 8$. The stability of the minimal dimension $d^*=8$ is a necessary consequence of PCE optimization under the following physically-motivated conditions:
+**Theorem (PCE Stability of $d_0 = 8$ from Algebraic Completeness).**
+Let the PCE potential for an MPU with an active operational dimension $d$ be $V(d) = V_{cost}(d) - V_{benefit}(d)$, subject to the algebraic lower bound $d \ge 8$. The stability of the minimal dimension $d^*=8$ is a necessary consequence of PCE optimization under the following physically-motivated conditions:
 
 1.  **Algebraic Sufficiency and Diminishing Returns:** The core predictive benefit, derived from instantiating the complete, self-referential predictive algebra (SPAP/RID), is fully realized at $d=8$. We model this by assuming the marginal predictive benefit, $\Delta V_{benefit}(d) = V_{benefit}(d) - V_{benefit}(d-1)$, is significant for $d \le 8$ but becomes negligible for $d > 8$. Any additional dimension is a "spectator" that does not contribute to the core predictive task and is subject to rapidly diminishing returns.
-2.  **Monotonic Complexity Cost:** The resource cost of maintaining and integrating an active dimension, `V_cost(d)`, is a strictly increasing function of `d`. Adding a dimension always incurs a non-zero physical cost.
+2.  **Monotonic Complexity Cost:** The resource cost of maintaining and integrating an active dimension, $V_{cost}(d)$, is a strictly increasing function of $d$. Adding a dimension always incurs a non-zero physical cost.
 
 Under these conditions, any configuration with an active dimension $d > 8$ is definitionally inefficient under PCE. It pays a strictly positive marginal cost for a negligible marginal benefit. The PCE dynamics, which minimize the total potential $V(d)$, will therefore drive the system to decouple or "freeze out" these superfluous dimensions, dynamically reducing the active operational dimension until it reaches the minimal sufficient boundary.
 
-*Proof.* For any dimension `d > 8`, the change in the potential from adding the `d`-th dimension is $\Delta V(d) = \Delta V_{cost}(d) - \Delta V_{benefit}(d)$. By condition (2), the marginal cost is strictly positive, $\Delta V_{cost}(d) > 0$. By condition (1), the marginal benefit is negligible, $\Delta V_{benefit}(d) \approx 0$. Therefore, the marginal change in the potential is strictly positive: $\Delta V(d) > 0$ for all $d > 8$. This implies that the potential $V(d)$ is a strictly increasing function for $d > 8$. The unique global minimum of $V(d)$ on the allowed domain $d \in \{8, 9, 10, \dots\}$ must therefore occur at the boundary, $d^*=8$. ∎
+*Proof.* For any dimension $d > 8$, the change in the potential from adding the $d$-th dimension is $\Delta V(d) = \Delta V_{cost}(d) - \Delta V_{benefit}(d)$. By condition (2), the marginal cost is strictly positive, $\Delta V_{cost}(d) > 0$. By condition (1), the marginal benefit is negligible, $\Delta V_{benefit}(d) \approx 0$. Therefore, the marginal change in the potential is strictly positive: $\Delta V(d) > 0$ for all $d > 8$. This implies that the potential $V(d)$ is a strictly increasing function for $d > 8$. The unique global minimum of $V(d)$ on the allowed domain $d \in \{8, 9, 10, \dots\}$ must therefore occur at the boundary, $d^*=8$. ∎
 
-It is crucial to interpret `d` as the **active operational dimension**—the dimension of the subspace of the MPU's full Hilbert space that is actively coupled into the predictive loop. A physical device instantiating an MPU may possess a larger Hilbert space, but PCE will favor dynamics where any unused, superfluous sectors are energetically penalized and dynamically decoupled from the core cycle. This "freezing out" of inefficient degrees of freedom ensures that the effective operational dimension converges to the minimal, algebraically complete value of 8. This rigorous algebraic argument confirms and deepens the result of Theorem 15, establishing `d₀=8` and its informational capacity `K₀=3` bits as a unique, stable, and fundamental feature of the Predictive Universe.
+It is crucial to interpret $d$ as the **active operational dimension**—the dimension of the subspace of the MPU's full Hilbert space that is actively coupled into the predictive loop. A physical device instantiating an MPU may possess a larger Hilbert space, but PCE will favor dynamics where any unused, superfluous sectors are energetically penalized and dynamically decoupled from the core cycle. This "freezing out" of inefficient degrees of freedom ensures that the effective operational dimension converges to the minimal, algebraically complete value of 8. This rigorous algebraic argument confirms and deepens the result of Theorem 15, establishing $d_0 = 8$ and its informational capacity $K_0 = 3$ bits as a unique, stable, and fundamental feature of the Predictive Universe.
 
 **7.2 MPU State Representation: Perspectival State and Hilbert Space**
 
@@ -186,7 +186,7 @@ A complex Hilbert space $\mathcal{H}_0$ emerges as the necessary mathematical st
 4.  **Complex Field ($\mathbb{C}$):** Consistent composition of multiple MPUs (tensor products) and the representation of continuous dynamics and complementarity favor the complex field over real or quaternionic structures, due to properties such as efficient local tomography and the structure of the unitary group (see Appendix G.1.4).
 5.  **Completeness:** Mathematical consistency requires a complete normed space (Hilbert space).
 6.  **Minimal Dimension:** $C_{op} \ge K_0$ implies $d_0 \ge 8$ (Theorem 23).
-The combination uniquely compels representation within a complex Hilbert space $\mathcal{H}_0$ of dimension $d_0 \ge 8$. QED
+The combination compels representation within a Hilbert space $\mathcal{H}_0$ of dimension $d_0 \ge 8$; under the additional composition and symmetry assumptions stated in Hypothesis 4 and Appendix G.1.8, PCE selects the complex field $\mathbb{C}$ among division-ring alternatives. QED
 
 **7.2.3 Definition 24 (Def 24): Perspectival State $S_{(s)}(t)$**
  The complete state of an MPU at time $t$ is the perspectival state $S_{(s)}(t) = (S(t), s)$, whose formal mathematical structure is detailed in Appendix M (Section M.2). It comprises:
@@ -356,7 +356,7 @@ The irreducible entropy cost $\varepsilon = \ln 2$ (Theorem 31) is not merely a 
 
 $$
 \boxed{
-\varepsilon = \ln 2 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{max} < \ln d_0 \xrightarrow{\text{Thm E.3}} N_{eff} = \sigma_{link} \mathcal{A} \xrightarrow{\text{Thm E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
+\varepsilon = \ln 2 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{Thm E.3}} N_{eff} = \sigma_{link} \mathcal{A} \xrightarrow{\text{Thm E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
 }
 $$
 
@@ -414,7 +414,7 @@ The strict inequality $f_{RID} < 1$ follows from $\varepsilon > 0$: each SPAP cy
 
 **Theorem E.2 (Channel Capacity Bound).** *Strict contractivity ($f_{RID} < 1$) implies the classical information capacity of the dynamical channel is strictly bounded:*
 
-$$C_{max}(f_{RID}) < \ln d_0 = 3\ln 2 \approx 2.08 \text{ nats}$$
+$$C_{\max}(f_{RID}) < \ln d_0 = 3\ln 2 \approx 2.08 \text{ nats}$$
 
 *Proof.* Suppose $C = \ln d_0$. Then $d_0^n$ messages could be transmitted reliably through $n$ independent uses of the channel. Reliable transmission requires asymptotically perfect distinguishability of outputs. But contractivity gives:
 
@@ -422,7 +422,7 @@ $$D_{tr}(\mathcal{E}_N^{\otimes n}(\rho_k), \mathcal{E}_N^{\otimes n}(\rho_l)) \
 
 Since $f_{RID} < 1$, we have $f_{RID}^n \to 0$ as $n \to \infty$. This contradicts the requirement for reliable transmission. Therefore $C < \ln d_0$. ∎
 
-**Connection:** $\varepsilon > 0 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{max} < \ln d_0$
+**Connection:** $\varepsilon > 0 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0$
 
 #### Stage 4: Quantum Entropy (PPI → Landauer Pointer)
 
@@ -432,13 +432,19 @@ By the foundational results of Shannon (classical) and von Neumann (quantum), th
 
 $$S(\rho_{uniform}) = -\text{Tr}\left(\frac{I_a}{a} \ln \frac{I_a}{a}\right) = \ln a \text{ nats}$$
 
-For exact correspondence between logical cost and physical instantiation:
+For an $a$-dimensional physical register, the entropy that can be absorbed/reset in one cycle is bounded by the entropy capacity inequality
+$$
+S(\rho)\le \ln a,
+$$
+with equality only for the maximally mixed state. To instantiate a Landauer cost $\varepsilon$ within the active kernel, admissibility requires
+$$
+\ln a \ge \varepsilon.
+$$
+Since $a$ is a Hilbert-space dimension ($a\in\mathbb{N}$), PPI-optimality selects the minimal admissible $a$. With $\varepsilon=\ln 2$, this yields $a=2$.
 
-$$\ln a = \varepsilon = \ln 2 \implies a = 2$$
+**Theorem Z.1 (Landauer Pointer).** The dimension $a$ of the active kernel satisfies:
 
-**Theorem Z.1 (Physical Instantiation of Irreducible Cost).** *The physical subsystem that instantiates the SPAP entropy $\varepsilon = \ln 2$ is necessarily a 2-dimensional quantum system. This "Landauer Pointer" is the minimal quantum register whose maximum entropy equals the SPAP cycle cost:*
-
-$$a = e^{\varepsilon} = e^{\ln 2} = 2$$
+$$a = 2$$
 
 The PCE-Attractor density operator (Appendix Z, Section Z.2.5) takes the form:
 
@@ -452,7 +458,7 @@ At the PCE-Attractor, quantum entropy and SPAP entropy coincide exactly.
 
 #### Stage 4a: Error Correction Structure (The Golay Realization)
 
-The active kernel dimension $a = e^{\varepsilon} = 2$ initiates the canonical chain:
+The active kernel dimension $a = 2$ initiates the canonical chain:
 
 $$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{\text{PCE}} [24, 12, 8]$$
 
@@ -468,7 +474,7 @@ Both trace to the same source: the irreversible cost $\varepsilon = \ln 2$ that 
 
 #### Stage 5: Gravitational Entropy (Channel Counting → Area Law)
 
-The ND-RID interaction channels implementing the 'Evolve' process across MPU boundaries have bounded capacity $C_{max} < \ln d_0$ (Theorem E.2). When many such channels cross a macroscopic boundary, their cumulative capacity determines the total information that can be processed across that boundary.
+The ND-RID interaction channels implementing the 'Evolve' process across MPU boundaries have bounded capacity $C_{\max} < \ln d_0$ (Theorem E.2). When many such channels cross a macroscopic boundary, their cumulative capacity determines the total information that can be processed across that boundary.
 
 **Theorem E.3 (Channel Counting).** *Given geometric regularity (Theorem 43—which is itself a necessary consequence of POP/PCE optimization, proven in Appendices C and D), the number of effective independent channels crossing a codimension-1 boundary of area $\mathcal{A}$ scales as:*
 
@@ -482,7 +488,7 @@ $$\sigma_{link} = \frac{\chi}{\eta \delta^2}$$
 
 The total information capacity across the boundary is:
 
-$$I_{boundary} = N_{eff} \times C_{max} = \sigma_{link} \cdot C_{max} \cdot \mathcal{A}$$
+$$I_{boundary} = N_{eff} \times C_{\max} = \sigma_{link} \cdot C_{\max} \cdot \mathcal{A}$$
 
 This is an area law: boundary information scales with area, not volume.
 
@@ -506,11 +512,11 @@ $$S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 **Connection to the derivation chain:** The coefficient $1/4G$ decomposes as:
 
-$$\frac{1}{4G} = \sigma_{link} \times C_{max} = \frac{\chi C_{max}}{\eta \delta^2}$$
+$$\frac{1}{4G} = \sigma_{link} \times C_{\max} = \frac{\chi C_{\max}}{\eta \delta^2}$$
 
 Solving for $G$:
 
-$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{max}} \quad \text{(Equation E.9)}$$
+$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}} \quad \text{(Equation E.9)}$$
 
 ---
 
@@ -525,15 +531,15 @@ $$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{max}} \quad \text{(Equation E.9)}$
 | 3 | Landauer | Logical irreversibility ≡ thermodynamic entropy | The equivalence (physical content) |
 | — | PPI (Def P.6.2) | All logical operations are physically instantiated | Guarantees universality |
 | 4 | Lemma E.1 | $\varepsilon > 0 \Rightarrow f_{RID} < 1$ | Contractivity from dissipation |
-| 5 | Thm E.2 | $f_{RID} < 1 \Rightarrow C_{max} < \ln d_0$ | Capacity bound |
+| 5 | Thm E.2 | $f_{RID} < 1 \Rightarrow C_{\max} < \ln d_0$ | Capacity bound |
 | 6 | Thm E.3 | $N_{eff} = \sigma_{link} \cdot \mathcal{A}$ (area scaling) | Channel counting |
-| 7 | Thm E.5 | Clausius consistency fixes $\sigma_{link} C_{max} = 1/4G$ | Gravitational coefficient |
+| 7 | Thm E.5 | Clausius consistency fixes $\sigma_{link} C_{\max} = 1/4G$ | Gravitational coefficient |
 
 *Each step is a theorem, lemma, or established physical principle. The chain contains no gaps.*
 
 *Proof.* The detailed derivations are provided in Appendix E (Sections E.2–E.6) and Appendix J. The logical structure is:
 
-$$\text{SPAP} \xrightarrow{\text{Thm 10-11}} \text{irreversibility} \xrightarrow{\text{Z.2}} \varepsilon = \ln 2 \xrightarrow{\text{Landauer}} S_{thermo} = k_B \varepsilon \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{max} < \ln d_0 \xrightarrow{\text{E.3, E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\text{SPAP} \xrightarrow{\text{Thm 10--11}} \text{irreversibility} \xrightarrow{\text{Thm Z.2}} \varepsilon = \ln 2 \xrightarrow{\text{Landauer}} S_{\text{thermo}} = k_B \varepsilon \xrightarrow{\text{Lem E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{Thm E.3, E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 ∎
 
@@ -543,25 +549,25 @@ $$\text{SPAP} \xrightarrow{\text{Thm 10-11}} \text{irreversibility} \xrightarrow
 
 The coefficient $\frac{1}{4}$ in the Bekenstein-Hawking formula $S = \mathcal{A}/4L_P^2$ (where $L_P = \sqrt{G\hbar/c^3}$) has a transparent decomposition within the framework:
 
-$$\frac{1}{4G} = \sigma_{link} \times C_{max} = \frac{\chi C_{max}}{\eta \delta^2}$$
+$$\frac{1}{4G} = \sigma_{link} \times C_{\max} = \frac{\chi C_{\max}}{\eta \delta^2}$$
 
 The physical content of each factor:
 
 - **$\sigma_{link} = \chi/(\eta\delta^2)$**: The effective density of independent information channels crossing a unit area of horizon. Determined by the MPU network geometry (spacing $\delta$), modified by packing efficiency ($\eta$) and correlation effects ($\chi$).
 
-- **$C_{max}$**: The information capacity per channel, bounded by the logical cost $\varepsilon = \ln 2$ through the contractivity chain.
+- **$C_{\max}$**: The information capacity per channel, bounded by the logical cost $\varepsilon = \ln 2$ through the contractivity chain.
 
 The coefficient encodes how many bits can be processed across a Planck-area patch of horizon per unit time. The emergence of the exact factor $1/4$ is not coincidental but follows from the thermodynamic consistency requirement (Theorem E.5) combined with the PCE-determined channel density.
 
 **PCE Determination of the MPU Spacing:** The spacing $\delta$ is determined by PCE optimization (Appendix Q). The PCE-optimal channel capacity is:
 
-$$C_{max}^* = \ln(d_0) - \varepsilon = \ln 8 - \ln 2 = 2\ln 2 \quad \text{(Equation E.15)}$$
+$$C_{\max}^* = \ln(d_0) - \varepsilon = \ln 8 - \ln 2 = 2\ln 2 \quad \text{(Equation E.15)}$$
 
-This capacity ratio $C_{max}/\varepsilon = 2$ determines the instanton action relation $S_{inst} = 2\kappa$ (Proposition T.60).
+This capacity ratio $C_{\max}/\varepsilon = 2$ determines the instanton action relation $S_{inst} = 2\kappa$ (Proposition T.60).
 
 With PCE-optimal values $\chi^* \approx 1$ and $\eta^* \approx 1$, the scale ratio is:
 
-$$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{max}^*}{\eta^*}} = \sqrt{8\ln 2} \approx 2.355 \quad \text{(Equation Q.18)}$$
+$$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{\max}^*}{\eta^*}} = \sqrt{8\ln 2} \approx 2.355 \quad \text{(Equation Q.18)}$$
 
 This value emerges from balancing competing effects: smaller $\delta$ increases channel density but also increases energy cost per channel, while larger $\delta$ reduces both. The PCE minimum represents optimal predictive efficiency.
 
@@ -606,7 +612,7 @@ The entropy unification chain provides the thermodynamic foundation for deriving
 
 The gravitational constant $G$ appearing in the EFE is the same $G$ determined by the entropy coefficient:
 
-$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{max}(f_{RID})} \quad \text{(Equation E.9)}$$
+$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}(f_{RID})} \quad \text{(Equation E.9)}$$
 
 This identification connects the microscopic MPU parameters to macroscopic gravitational dynamics. The emergence of gravity from thermodynamics (Jacobson 1995) is thus grounded in the information-theoretic structure of the predictive substrate.
 

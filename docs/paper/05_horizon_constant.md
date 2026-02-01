@@ -4,7 +4,7 @@ Having established the logical limits on prediction (SPAP, Theorem 10; Theorem 1
 
 **5.1 Operational Threshold $C_{op}$**
 
-### Definition 13 (Operational Threshold $C_{op}$)
+**Definition 13 (Def 13): Operational Threshold ($C_{op}$)**
 
 Let $\mathcal{S}_{phys}$ denote the set of physically realizable system microstates consistent with the physical law set $\mathcal{L}_{phys}$. For a microstate $\mu\in\mathcal{S}_{phys}$, let $C_P(\mu)$ be its Predictive Physical Complexity (Equation 1), and let $f_\mu$ denote the predictive function implemented by $\mu$. Fix a relevant set of environmental variables $\mathcal{E}$ and a well‑defined accuracy functional $A(\cdot)$ (e.g., $1-\mathrm{PE}$, information gain). Let $f_{random}$ denote a baseline random‑chance predictor matched to the task. For a chosen, strictly positive accuracy margin $\epsilon_{acc}>0$,
 
@@ -19,7 +19,7 @@ We assume mild regularity: the set of $C_P$ values among states satisfying the a
 
 **Interpretation.** $C_{op}$ is the minimum complexity at which a system “comes online” as a non‑trivial predictive unit capable of sustaining the adaptive Fundamental Predictive Loop (Definition 4; capabilities $b_m,b_p,b_v, D_{cyc}$, Definition 5) and operating within the Space of Becoming $(\alpha,\beta)$ (Definition 8). Any system with instantaneous complexity $C(t)<C_{op}$ lacks the structural resources for reliable better‑than‑chance prediction.
 
-### 5.1.1 Physical Interpretation: Baseline Cost and Capability
+**5.1.1 Physical Interpretation: Baseline Cost and Capability**
 
 The Operational Threshold $C_{op}$ measures the minimum complexity to implement the *integrated functionality* of the adaptive loop with super‑chance performance. Because the loop is adaptive and logically asymmetric, its operation entails irreversibility; thermodynamic costs follow. Let $R(C)$ be the Physical Operational Cost function (Definition 3), mapping complexity to baseline resource‑consumption rate. The minimal continuous dissipation required to sustain the threshold loop is
 
@@ -40,7 +40,7 @@ A concrete baseline arises from Landauer‑type considerations for logically irr
   \approx\ 2.87\times 10^{-12}\ \mathrm{W}.
   $$
 
-Any adaptive device with $C(t)\ge C_{op}$ dissipates at least this power. If available power falls below $P_{min}$, PCE dynamics reduce $C(t)$ beneath $C_{op}$, and predictive performance collapses (see Section D.3, work‑cost gap mechanism, and Theorem 31).
+Any adaptive device with $C(t)\ge C_{op}$ dissipates at least this power. If available power falls below $P_{min}$, PCE dynamics reduce $C(t)$ beneath $C_{op}$, and predictive performance collapses (see Appendix D, Section D.3, work-cost gap mechanism, and Theorem 31).
 
 
 **5.2 Minimal Complexity for Self-Reference and Prediction ($K_0$)**
@@ -65,7 +65,7 @@ Thus, these three capabilities ($b_m, b_p, b_v$) are jointly necessary as the lo
 
 The Horizon Constant $K_0$ will represent the minimal physical complexity required to instantiate these capabilities in a way that enables both the encoding of the SPAP self-referential loop and the achievement of predictive accuracy better than chance.
 
-### 5.2.2 Theorem 15 (Horizon Constant: Minimal Complexity for SPAP Encodability and Minimal Prediction)
+**5.2.2 Theorem 15 (Horizon Constant: Minimal Complexity for SPAP Encodability and Minimal Prediction)**
 
 We first formalize operational prerequisites for SPAP encodability within the loop, then state the environment class used to certify minimal predictive success. The following operational conditions are posited not as arbitrary constraints, but as the minimal, necessary requirements for a robust and computationally efficient implementation of the SPAP sub-dynamics, consistent with the Principle of Compression Efficiency (PCE). Condition (O1) requires that the core computational steps of the sub-dynamic be logically reversible. This enforces maximal computational efficiency (cf. Landauer's principle) and is distinct from the overall thermodynamic irreversibility of the full MPU loop, which arises from the necessary state-merging and reset operations that close the cycle (as detailed in Appendix J). Conditions (O2) and (O3) are fundamental requirements for any reliable sequential computation, preventing race conditions and the destructive loss of information essential for the logical paradox.
 
@@ -113,7 +113,7 @@ More precisely:
 3. (**Minimal Predictive Success—Sufficiency on $\mathcal{E}_{\mathrm{basic}}(\gamma)$**). Within the same three‑bit architecture, a predictive mode implementing the *flip‑on‑error* (equivalently, *predict last outcome*) rule achieves long‑run accuracy strictly greater than $\tfrac12$ on every process in $\mathcal{E}_{\mathrm{basic}}(\gamma)$. In particular, its asymptotic accuracy equals the time‑average of $s_t$, which by stationarity/ergodicity converges almost surely to $\mathbb{E}[s_t]\ge\tfrac12+\gamma$.
 
 *Proof.*
-**(1) Necessity.** Under (O1)–(O3) the system must simultaneously and non‑destructively represent three logically independent bits across a phase boundary: (a) the state component $\phi\in\{0,1\}$; (b) a stored prediction $p_{stored}\in\{0,1\}$; and (c) a control phase bit $c_{phase}\in\{0,1\}$ that determines whether the machine is in the generate/store phase or in the reflex/update phase. The SPAP step $\phi_{t+1}=\mathrm{NOT}(p_{stored})$ must be executed in the update phase using the *previously stored* prediction. The on‑cycle injectivity (O1) forbids mapping any pair of distinct triples $(\phi,p_{stored},c_{phase})$ to a single physical configuration, as this would lose information and violate logical reversibility on the realized sub‑dynamics. By the pigeonhole principle, fewer than $2^3=8$ configurations are insufficient. Thus $C_P\ge \log_2 8=3$.
+**(1) Necessity.** Under (O1)–(O3) the system must simultaneously and non‑destructively represent three logically independent bits across a phase boundary: (a) the state component $\phi\in\{0,1\}$; (b) a stored prediction $p_{stored}\in\{0,1\}$; and (c) a control phase bit $c_{phase}\in\{0,1\}$ that determines whether the machine is in the generate/store phase or in the reflex/update phase. The SPAP step $\phi_{t+1}=\mathrm{NOT}(p_{stored})$ must be executed in the update phase using the *previously stored* prediction. The three registers must be simultaneously accessible and distinguishable, requiring $2 \times 2 \times 2 = 8$ distinct configurations. The on‑cycle injectivity (O1) forbids mapping any pair of distinct triples $(\phi,p_{stored},c_{phase})$ to a single physical configuration, as this would lose information and violate logical reversibility on the realized sub‑dynamics. By the pigeonhole principle, fewer than $2^3=8$ configurations are insufficient. Thus $C_P\ge \log_2 8=3$.
 
 **(2) Sufficiency.** Define an injective two‑phase transition on the eight‑state domain. In phase $c_{phase}=0$: compute a provisional prediction $\hat\phi=\phi$ and set $p_{stored}\leftarrow \hat\phi$, then toggle $c_{phase}\leftarrow 1$. In phase $c_{phase}=1$: update $\phi\leftarrow \mathrm{NOT}(p_{stored})$ and toggle $c_{phase}\leftarrow 0$. This realizes the SPAP sub‑dynamics as a permutation over the eight states, hence satisfies (O1)–(O3).
 
@@ -121,7 +121,7 @@ More precisely:
 
 **Consequence.** The minimal **Predictive Physical Complexity** that (i) realizes SPAP as an internal, injective two‑phase sub‑dynamics and (ii) admits a predictive mode with super‑chance accuracy on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ equals **three bits**. This result, combined with Convention 1 ($C_P = \log_2 d_0$), provides the direct link from the logical requirement of 8 distinguishable states to the physical requirement of a minimal Hilbert-space dimension $d_0=8$.
 
-### 5.2.3 Corollary 3 (Relation Between Thresholds $C_{op}\ge K_0$)
+**5.2.3 Corollary 3 (Relation Between Thresholds $C_{op}\ge K_0$)**
 
 The **Operational Threshold** must satisfy
 
@@ -134,11 +134,11 @@ $$
 
 **Remark (Explicit Relation).** Since $C_{op}$ is defined as the minimal physical complexity that achieves a target accuracy gap $\epsilon_{acc}>0$ under the full loop, $C_{op}\ge K_0=3$. Achieving larger accuracy gaps generally requires additional structure; informally, in many regimes one expects $C_{op}\approx K_0 + O\!\big(\ln(1/\epsilon'_{acc})\big)$ (cf. Law of Prediction, Theorem 19), with constants depending on the environment class and $A(\cdot)$.
 
-### 5.2.4 Applicability of SPAP/RUD Limits to MPUs
+**5.2.4 Applicability of SPAP/RUD Limits to MPUs**
 
 Minimal Predictive Units (MPUs) operating at or above $C_{op}$ inherit SPAP and Reflexive Undecidability (RUD) constraints through the following chain:
 
-1. **Embedded structure.** By design, every MPU at operational capacity possesses at least the $K_0\equiv B_3$ structure required for self‑referential processing (Theorem 15).
+1. **Embedded structure.** By design, every MPU at operational capacity possesses at least the $K_0\equiv B_3$ three-bit Boolean core (the 8-state architecture $(\phi,p_{stored},c_{phase})$ in Theorem 15) required for self‑referential processing.
 2. **Effective realization under noise.** SPAP/RUD arguments rely on reliable execution of the sub‑dynamics despite ND‑RID noise ($\varepsilon>0,\ f_{RID}<1$); the operational loop provides the necessary effective computational regularity.
 3. **POP/PCE optimization.** POP/PCE dynamics favor MPU networks that function as reliable computational substrates (Appendix A.0), increasing the practical salience of SPAP/RUD limitations.
 4. **Conclusion.** SPAP/RUD constraints thus apply fundamentally to MPUs through their internal $K_0$ structure and the effective computation enabled by network optimization.
@@ -155,7 +155,7 @@ Any physical system exhibiting the operational characteristics modeled by the Pr
 6.  This prevents sustained adaptive operation with $PP > \alpha$, contradicting the initial assumption.
 7.  Therefore, any such system $S$ must have complexity $C(S) \ge C_{op}$. See Table 5.1. QED
 
-### Table 5.1 — Complexity Thresholds and an Example Instantiation
+**Table 5.1 — Complexity Thresholds and an Example Instantiation**
 
 |  Symbol  | Name                  | Logical Purpose                                                                                               | Complexity (Bits) | Example: 3‑Qubit MPU (Sec. 7.1.3)            |
 | :------: | :-------------------- | :------------------------------------------------------------------------------------------------------------ | :---------------- | :------------------------------------------- |

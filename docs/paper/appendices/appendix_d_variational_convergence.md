@@ -4,14 +4,14 @@
 
 This Appendix develops the variational perspective on the Predictive Universe (PU) framework's dynamics, providing rigorous dynamical justifications for two cornerstone results presented in the main text:
 1.  **Theorem 2 (Dynamically Enforced Functional Correspondence):** Demonstrating that the operational complexity proxy $\langle \hat{C}_v \rangle$ aligns with the theoretical Predictive Physical Complexity $C_P(v)$ at viable equilibria.
-2.  **Theorem 43 (Necessary Emergence of Geometric Regularity):** Showing that the adaptation dynamics converge almost surely to configurations exhibiting geometric regularity, complementing the necessity argument in **Appendix C**.
+2.  **Theorem 43 (Necessary Emergence of Geometric Regularity):** Showing that the adaptation dynamics converge almost surely to configurations exhibiting geometric regularity, complementing the necessity argument in Appendix C.
 
 We introduce the **Principle of Compression Efficiency (PCE) Potential $V(x)$**, an effective potential function derived from the framework's core principles (Axiom 1: POP, Definition 15: PCE). The system's slow adaptation dynamics, governing the evolution of the network configuration $x(t)$, are modeled as a stochastic gradient flow on the landscape defined by $V(x)$. The stochastic differential equation (SDE) governing these dynamics is:
 $$
 \mathrm{d}x_t \;=\; -\eta(x_t)\,\nabla V(x_t)\,\mathrm{d}t \;+\; \sqrt{2D(x_t)}\,\mathrm{d}W_t,
 \quad \text{(D.0)}
 $$
-where the potential $V(x_t) \ge 0$ serves as a stochastic Lyapunov function. Under suitable conditions (A2, A5, detailed in Section D.6.2), the expected rate of change satisfies $\frac{\mathrm{d}}{\mathrm{d}t}\mathbb{E}[V(x_t)]\le 0$ when far from equilibrium, driving the system towards the minima of $V(x)$. The stability of this process requires that the gradient $\nabla V$ be well-defined, which in turn necessitates that the underlying cost functions are non-contextual (i.e., independent of the choice of predictive basis), a key justification for the derivation of the Born rule (Appendix G). As detailed in **Appendix X**, this foundational potential $V(x)$ gives rise to the 1PI effective action of quantum field theory, and the stochastic gradient flow on $V(x)$ is a specific realization of the functional renormalization group. By analyzing the structure of $V(x)$ and the properties of this process, we prove that the dynamics robustly drive the system towards configurations that simultaneously exhibit complexity alignment and geometric regularity. This establishes these properties not as assumptions, but as necessary consequences of the fundamental optimization processes governing the MPU network.
+where the potential $V(x_t) \ge 0$ serves as a stochastic Lyapunov function. Under suitable conditions (A2, A5, detailed in Section D.6.2), the expected rate of change satisfies $\frac{\mathrm{d}}{\mathrm{d}t}\mathbb{E}[V(x_t)]\le 0$ when far from equilibrium, driving the system towards the minima of $V(x)$. The stability of this process requires that the gradient $\nabla V$ be well-defined, which in turn necessitates that the underlying cost functions are non-contextual (i.e., independent of the choice of predictive basis), a key justification for the derivation of the Born rule (Appendix G). As detailed in Appendix X, this foundational potential $V(x)$ gives rise to the 1PI effective action of quantum field theory, and the stochastic gradient flow on $V(x)$ is a specific realization of the functional renormalization group. By analyzing the structure of $V(x)$ and the properties of this process, we prove that the dynamics robustly drive the system towards configurations that simultaneously exhibit complexity alignment and geometric regularity. This establishes these properties not as assumptions, but as necessary consequences of the fundamental optimization processes governing the MPU network.
 
 ## D.2 The Instantaneous PCE Potential ($V(x)$)
 
@@ -24,7 +24,7 @@ V(x) = V_{op}(x) + V_{prop}(x) - V_{benefit}(x) + V_{penalty}(x)
 $$
 where:
 *   **$V_{op}(x) = \sum_{v} \langle \lambda \hat{R}(C_v) + \hat{R}_I(C_v) \rangle_{\rho^{(v)}(x)}$**: The total expected operational cost rate (power) associated with the complexity configuration $\{C_v = \langle \hat{C}_v \rangle_x\}$, including physical costs $R(C)$ and informational costs $R_I(C)$ (Definition 3), weighted by the scarcity factor $\lambda$ (Definition 20).
-*   **$V_{prop}(x) = \sum_{(u,v)} \langle \Phi(w_{uv}) \rangle_{\rho(x)}$**: The total expected propagation cost rate associated with maintaining predictive coherence and communication infrastructure across the network. The cost function $\Phi(w_{uv})$ for a link $(u,v)$ with weight $w_{uv}$ (related to ND-RID fidelity $f_{RID}$ and cost $\varepsilon$, cf. Definition 35) is fundamentally information-theoretic: it scales with the rate of information required to be sent across the link to maintain coherence, penalized by the link's finite channel capacity $C_{max}$ (derived from ND-RID limits in Appendix E). Irregular network geometries (as analyzed in Appendix C) increase path lengths and decrease effective channel fidelity, thus quantitatively increasing $V_{prop}$. A concrete example of this principle is used in Appendix G.8 to model the communication cost of maintaining gauge field coherence (see Equation G.8.5).
+*   **$V_{prop}(x) = \sum_{(u,v)} \langle \Phi(w_{uv}) \rangle_{\rho(x)}$**: The total expected propagation cost rate associated with maintaining predictive coherence and communication infrastructure across the network. The cost function $\Phi(w_{uv})$ for a link $(u,v)$ with weight $w_{uv}$ (related to ND-RID fidelity $f_{RID}$ and cost $\varepsilon$, cf. Definition 35) is fundamentally information-theoretic: it scales with the rate of information required to be sent across the link to maintain coherence, penalized by the link's finite channel capacity $C_{\max}$ (derived from ND-RID limits in Appendix E). Irregular network geometries (as analyzed in Appendix C) increase path lengths and decrease effective channel fidelity, thus quantitatively increasing $V_{prop}$. A concrete example of this principle is used in Appendix G.8 to model the communication cost of maintaining gauge field coherence (see Equation G.8.5).
 *   **$V_{benefit}(x) = \sum_{v} \Gamma_0 B(PP_v(x))$**: The total effective power-equivalent predictive benefit derived from the network's performance. $PP_v(x)$ is the local Predictive Performance (Definition 7) of MPU $v$ in configuration $x$, dependent on $C_v = \langle \hat{C}_v \rangle_x$ and the local effective target complexity $\hat{C}_{target}(v, x)$ via the Law of Prediction (Theorem 19, Equation 22). $B(PP)$ is a monotonically increasing benefit function (e.g., $B(PP) = PP$ or related to reduction in prediction error), and $\Gamma_0$ is the power conversion factor (Definition 20).
 *   **$V_{penalty}(x)$**: Represents effective penalty terms implicitly required for the consistency of the framework. As derived below (Sections D.3, D.4), self-consistent optimization requires that the structure of $V(x)$ effectively incorporates terms equivalent to penalties for complexity misalignment ($V_{proxy}$) and geometric irregularity ($V_{geom}$).
 
@@ -84,8 +84,8 @@ $$
 Integrating over $\tau$ and dividing by $\tau$, assuming $\delta_v$ and $R'(\langle \hat{C}_v \rangle)$ vary slowly such that their time averages over $\tau$ are well approximated by their instantaneous values (or using mean value theorem for integrals), yields Equation (D.3). The approximation holds well for small $\delta_v$. QED
 
 **Physical Feedback Mechanism and Justification of Assumptions:** The mechanism relies on two core assumptions: (1) At PCE-optimal equilibrium, the actual physical power dissipated is given by the theoretical cost function, $dW_{physical, v}/dt = R(C_P(v))$. (2) This physical dissipation is operationally accessible to the MPU's adaptation dynamics.
-*   *Justification for (1):* By definition, $R(C_P)$ is the *minimal* theoretical cost. Any physical implementation dissipating more power is, by definition, less efficient. PCE dynamics, which minimize the global potential $V(x)$, will select against such inefficient configurations. Therefore, any stable equilibrium state $x^*$ must correspond to a physical implementation operating at this theoretical efficiency limit.
-*   *Justification for (2):* Physical dissipation manifests as observable physical quantities (e.g., heat flux, energy transfer to the environment). For the MPU to solve the POP (Axiom 1) effectively, its adaptation dynamics must be coupled to the physical realities of its resource consumption. The MPU must be able to "sense" its own operational cost rate to optimize its behavior. The work-cost gap $\Delta W_v$ is precisely this feedback signal.
+*   *Justification for (1):* By definition, $R(C_P)$ is the *minimal* theoretical cost. Any physical implementation dissipating more power is, by definition, less efficient. PCE dynamics, which minimize the global potential $V(x)$, will select against such inefficient configurations. Therefore, any stable equilibrium state $x^*$ must correspond to a physical implementation operating at this theoretical efficiency limit.
+*   *Justification for (2):* Physical dissipation manifests as observable physical quantities (e.g., heat flux, energy transfer to the environment). For the MPU to solve the POP (Axiom 1) effectively, its adaptation dynamics must be coupled to the physical realities of its resource consumption. The MPU must be able to "sense" its own operational cost rate to optimize its behavior. The work-cost gap $\Delta W_v$ is precisely this feedback signal.
 
 With these justifications, the observable work-cost gap $\Delta W_v(\tau)$ provides a direct physical feedback signal proportional to the misalignment $\delta_v$. The system's adaptation dynamics, driven by PCE to maximize overall efficiency, will act to reduce this gap. Driving $\Delta W_v \to 0$ is equivalent to driving $\delta_v \to 0$. This mechanism is rigorously proven to ensure alignment in Theorem D.5.
 
@@ -131,7 +131,7 @@ If the effective noise driving misalignment vanishes in the stable state ($C'_{n
 
 *Proof.* From Equation (D.5), $d\mathbb{E}[\mathcal{M}]/dt \le C'_{noise}$ when $\nabla V_{proxy}=0$. This implies $\mathbb{E}[\mathcal{M}]$ is bounded. Standard results for stochastic processes with such Lyapunov properties show convergence of the expectation to a bounded region around the minimum, with the bound related to the ratio of noise to restoring force, as in Equation (D.6). QED
 
-**Remark D.1 (Uniqueness and Optimality of Circuit Complexity Proxy).**
+**Remark D.1: Uniqueness and Optimality of Circuit Complexity Proxy.**
 The operational proxy $\hat{C}_v$ was identified with quantum circuit complexity (Definition B.1). Could another proxy $\hat{C}'_v = f(\hat{C}_v)$ (with $f$ non-affine) be used consistently? If such a proxy were used, the operational cost estimate $R(\hat{C}'_v)$ would generally differ from the true physical cost $R(C_P(v))$ even when $\langle \hat{C}_v \rangle = C_P(v)$. This persistent mismatch would induce a non-zero work-cost gap $\Delta W_v$ via Equation (D.3) (using the chain rule for $R(f(C_v))$). The physical feedback mechanism, acting to minimize $\Delta W_v$, would generate a gradient term effectively penalizing the use of $\hat{C}'_v$. The dynamics governed by minimizing the true physical dissipation (including the work-cost gap penalty) uniquely favor the proxy $\hat{C}_v$ (or an affine transformation thereof) for which the operational cost function $R(\langle \hat{C}_v \rangle)$ most accurately reflects the true physical cost $R(C_P(v))$ near equilibrium. This minimizes the residual work-cost gap, satisfying the PCE imperative for maximum efficiency. Thus, quantum circuit complexity (or equivalent measures) emerges as the dynamically selected, optimal operational proxy.
 
 ## D.4 Dynamical Emergence of Geometric Regularity
@@ -150,7 +150,7 @@ V_{core}(x) - V_{core}(x_{reg}) \ge f_{geom}(\gamma(x)-1, \sigma_\kappa^2(x)) > 
 $$
 where $f_{geom}$ is monotonically increasing in both arguments ($\gamma-1$ quantifying dimensional anomaly, $\sigma_\kappa^2$ quantifying curvature fluctuations).
 
-*Proof.* This lemma synthesizes the quantitative results derived in Appendix C (Theorems C.1, C.2, C.3, C.4 and associated equations like **C.13, C.15, and C.16**). Each component ($V_{op}, V_{prop}, V_{benefit}$) is shown in Appendix C to be adversely affected by geometric irregularity. Summing these effects (increase in costs $V_{op}, V_{prop}$ and decrease in benefit $V_{benefit}$) directly leads to the lower bound $f_{geom}$ which is positive for any non-zero irregularity ($\gamma>1$ or $\sigma_\kappa^2>0$). QED
+*Proof.* This lemma synthesizes the quantitative results derived in Appendix C (Theorems C.1, C.2, C.3, C.4 and associated Equations C.13, C.15, and C.16). Each component ($V_{op}, V_{prop}, V_{benefit}$) is shown in Appendix C to be adversely affected by geometric irregularity. Summing these effects (increase in costs $V_{op}, V_{prop}$ and decrease in benefit $V_{benefit}$) directly leads to the lower bound $f_{geom}$ which is positive for any non-zero irregularity ($\gamma>1$ or $\sigma_\kappa^2>0$). QED
 
 **Theorem D.2 (Implicit Geometric Penalty in $V(x)$).**
 The structure of the core PCE potential $V_{core} = V_{op} + V_{prop} - V_{benefit}$ inherently penalizes geometric irregularity. Minimizing $V_{core}$ (and thus the full potential $V = V_{core} + V_{proxy}$) dynamically favors geometrically regular configurations. The effective operational potential $V(x)$ therefore behaves *as if* it includes an implicit penalty term $V_{geom}(x) = f_{geom}(\gamma(x)-1, \sigma_\kappa^2(x))$ that increases with irregularity.
@@ -194,12 +194,12 @@ We use stochastic Lyapunov methods, common in the analysis of stochastic approxi
 ### D.6.1 Assumptions for Convergence
 
 We make standard technical assumptions required for the convergence theorems, justifying them from the physical principles of the PU framework.
-*   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The \$C^2\$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms (\$V\_{op}, V\_{prop}\$) are expected to grow super‑linearly with complexity and network size (e.g., \$R(C) \propto C^{\gamma\_p}\$ with \$\gamma\_p > 1\$), while the benefit term (\$V\_{benefit}\$) saturates (due to \$PP < \beta\$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
-*   **(A2) Rate Matrix Bounds:** $\eta(x)$ is symmetric, and its eigenvalues are uniformly bounded above and below: $0 < \eta_{min} \le \lambda(\eta(x)) \le \eta_{max} < \infty$ for all $x \in \mathcal{X}_{adm}$. The adaptation process has a finite, non-zero rate.
-*   **(A3) Diffusion Bounds:** $D(x)$ is positive semi-definite, and its trace (representing total noise power) is uniformly bounded: $\text{Tr}(D(x)) \le D_{max} < \infty$.
-*   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
-*   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
-*   **(A6) Noise Irreducibility/Ergodicity:** The noise term $\sqrt{2D(x)} dW(t)$ is sufficiently non-degenerate to ensure that the process is ergodic and can escape any potential local minima that are not global minima. *Physical Justification:* The fundamental 'Evolve' process is intrinsically stochastic (ND-RID, with $\varepsilon>0$) and involves stochastic perspective shifts on the manifold $\Sigma$ (Appendix M). This ubiquitous, microscopic source of randomness provides a physical basis for the assumption that the effective noise in the slow adaptation dynamics is sufficiently rich to prevent permanent trapping in suboptimal states.
+*   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The $C^2$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms ($V_{op}, V_{prop}$) are expected to grow super-linearly with complexity and network size (e.g., $R(C) \propto C^{\gamma_p}$ with $\gamma_p > 1$), while the benefit term ($V_{benefit}$) saturates (due to $PP < \beta$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
+*   **(A2) Rate Matrix Bounds:** $\eta(x)$ is symmetric, and its eigenvalues are uniformly bounded above and below: $0 < \eta_{min} \le \lambda(\eta(x)) \le \eta_{max} < \infty$ for all $x \in \mathcal{X}_{adm}$. The adaptation process has a finite, non-zero rate.
+*   **(A3) Diffusion Bounds:** $D(x)$ is positive semi-definite, and its trace (representing total noise power) is uniformly bounded: $\text{Tr}(D(x)) \le D_{max} < \infty$.
+*   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
+*   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
+*   **(A6) Noise Irreducibility/Ergodicity:** The noise term $\sqrt{2D(x)} dW(t)$ is sufficiently non-degenerate to ensure that the process is ergodic and can escape any potential local minima that are not global minima. *Physical Justification:* The fundamental 'Evolve' process is intrinsically stochastic (ND-RID, with $\varepsilon>0$) and involves stochastic perspective shifts on the manifold $\Sigma$ (Appendix M). This ubiquitous, microscopic source of randomness provides a physical basis for the assumption that the effective noise in the slow adaptation dynamics is sufficiently rich to prevent permanent trapping in suboptimal states.
 
 ### D.6.2 Lyapunov Analysis
 
@@ -225,7 +225,7 @@ where $C_{noise} = \sup_{x \in \mathcal{K}} |\text{Tr}(D(x) \nabla^2 V(x))|$ is 
 
 ### D.6.3 Characterization of the Critical Set $\mathcal{E}_{*}$
 
-**Definition D.6 (Critical Set $\mathcal{E}_{*}$).**
+**Definition D.4 (Critical Set $\mathcal{E}_{*}$).**
 The critical set $\mathcal{E}_{*}$ consists of all configurations $x^* \in \mathcal{X}_{adm}$ where the deterministic drift term vanishes:
 $$
 \mathcal{E}_{*} = \{x^* \in \mathcal{X}_{adm} \mid \nabla V(x^*) = 0\}
@@ -236,7 +236,7 @@ This set includes all local minima, maxima, and saddle points of the potential $
 **Theorem D.4 (Properties of Critical Points).**
 Any configuration $x^* \in \mathcal{E}_{*}$ must simultaneously satisfy:
 (i) **Complexity Alignment:** $C_P(v) = \langle \hat{C}_v \rangle_{x^*}$ for all $v$.
-(ii) **Geometric Regularity:** The network structure **$\mathcal{N}^*$** corresponding to **$x^*$** exhibits geometric regularity (**Definition C.3**).
+(ii) **Geometric Regularity:** The network structure $\mathcal{N}^*$ corresponding to $x^*$ exhibits geometric regularity (Definition C.3).
 
 *Proof.*
 **(i) Alignment:** The gradient $\nabla V(x)$ contains the implicit component $-\nabla V_{proxy}$. Specifically, the component along the direction of changing $\langle \hat{C}_u \rangle$ is $\nabla_{\langle C_u \rangle} V(x) = [\dots] + \nabla_{\langle C_u \rangle} V_{proxy} = [\dots] + k_1 (\langle \hat{C}_u \rangle - C_P(u))$. For the total gradient $\nabla V(x^*)$ to be zero, all its components must be zero. Setting the alignment-related component to zero requires $k_1 (\langle \hat{C}_u \rangle_{x^*} - C_P(u)) = 0$. Since $k_1 > 0$, this necessitates $\langle \hat{C}_u \rangle_{x^*} = C_P(u)$ for all $u$.
@@ -270,7 +270,7 @@ where $\operatorname*{dist}(x, A) = \inf_{y \in A} \|x-y\|$. Furthermore, by The
 
 The results derived in this appendix provide the rigorous dynamical justification for Theorems 2 and 43, establishing them as necessary consequences of the framework's core optimization principles operating through stochastic dynamics. The convergence from the discrete MPU network to a continuum description governed by a standard action is made precise by the following theorem.
 
-**Theorem D.8 (Γ‑limit of discrete predictive action).**
+**Theorem D.6 (Γ‑limit of discrete predictive action).**
 Let $\{(\mathcal G_\epsilon,\mu_\epsilon)\}_{\epsilon\downarrow0}$ be a family of weighted graphs with mesh $\epsilon\to0$ and discrete curvature proxies (e.g., Ollivier-Ricci on graphs or Regge curvature on triangulations) + a matter (MPU) term. Suppose:
 (i) **Equicoercivity**: $\mathcal F_\epsilon$ controls discrete second differences uniformly;
 (ii) **Locality & consistency**: the discrete curvature converges in $L^1_{\mathrm{loc}}$ to the Ricci scalar $R$;
@@ -338,7 +338,7 @@ The complexity adaptation dynamics (Section 6.4) are driven by the Adaptation Dr
 
 ### D.8.1 Effective Complexity Potential and Equilibrium
 
-**Definition D.9 (Effective Complexity Potential).** 
+**Definition D.5 (Effective Complexity Potential).** 
 The effective potential $V_{eff}(C)$ is obtained by marginalizing the full PCE potential $V(x)$ (Definition D.1) over all other degrees of freedom at their quasi-equilibrium values conditioned on complexity $C$. The deterministic complexity dynamics are:
 
 $$
@@ -367,7 +367,7 @@ DSC requires this derivative to be negative. Since $\frac{\partial^2 PP}{\partia
 
 Near the unique optimum, the strict convexity ensures a strong local gradient dominance condition that guarantees exponential convergence.
 
-**Definition D.10 (Polyak–Łojasiewicz Inequality).**
+**Definition D.6 (Polyak–Łojasiewicz Inequality).**
 A function $V(C)$ satisfies the PL inequality with constant $\mu_{PL} > 0$ in a neighborhood $|C - C^\star| \le r$ if:
 
 $$
@@ -377,7 +377,7 @@ $$
 
 The radius $r$ depends on the third and higher-order derivatives of $V_{eff}$; for practical purposes, we require the neighborhood to extend beyond the initial distance $|C(0) - C^\star|$ for deterministic convergence guarantees to apply.
 
-**Lemma D.8 (PL Constant from Stability).**
+**Lemma D.7 (PL Constant from Stability).**
 In a neighborhood of $C^\star$, the effective potential satisfies the PL inequality with:
 
 $$
@@ -404,7 +404,7 @@ Setting $\mu_{PL} = \eta_{adapt}\underline{\lambda}$ with $\underline{\lambda} =
 
 ### D.8.3 Convergence Theorem with Explicit Rates
 
-**Theorem D.6 (Exponential Convergence of Complexity Adaptation).**
+**Theorem D.8 (Exponential Convergence of Complexity Adaptation).**
 Consider the complexity adaptation dynamics (D.13) with initial condition $C(0)$.
 
 **Part I (Deterministic Rate):** For the deterministic flow, the distance to optimum decays exponentially:
@@ -480,6 +480,6 @@ This appendix has provided a rigorous analysis grounded in the variational persp
 
 2.  **Geometric Regularity (Theorem 43)** emerges dynamically. The MPU network dynamics converge almost surely to configurations exhibiting geometric regularity (Section D.4, Theorem D.4). This occurs because irregularity incurs fundamental costs in propagation ($V_{prop}$) and operation ($V_{op}$) while reducing predictive benefits ($V_{benefit}$), effectively making regular configurations the global minima of the core PCE potential $V_{core}(x)$ (Lemma D.3, Theorem D.2).
 
-3.  **Complexity Adaptation Convergence (Section D.8):** A rigorous analysis of the complexity adaptation dynamics (Equation D.13), driven by the Adaptation Driving Force $\Psi(C)$, establishes its exponential convergence to the unique POP-optimal complexity $C^{\star}$ with explicit rate $\underline{\lambda}\,\eta_{adapt}$ (Theorem D.6). Using Polyak-Łojasiewicz conditions and stochastic gradient descent theory, we quantify both the deterministic convergence rate (Equation D.15) and the noise floor arising from ND-RID fluctuations (Equation D.16), providing a detailed mechanism for how complexity optimization occurs within the larger PCE landscape.
+3.  **Complexity Adaptation Convergence (Section D.8):** A rigorous analysis of the complexity adaptation dynamics (Equation D.13), driven by the Adaptation Driving Force $\Psi(C)$, establishes its exponential convergence to the unique POP-optimal complexity $C^{\star}$ with explicit rate $\underline{\lambda}\,\eta_{adapt}$ (Theorem D.8). Using Polyak-Łojasiewicz conditions and stochastic gradient descent theory, we quantify both the deterministic convergence rate (Equation D.15) and the noise floor arising from ND-RID fluctuations (Equation D.16), providing a detailed mechanism for how complexity optimization occurs within the larger PCE landscape.
 
 The global convergence of the full system configuration $x(t)$ to states that are simultaneously aligned and regular is established in Section D.6.5 (via Theorem D.5), relying on stochastic Lyapunov methods applied to $V(x)$ under standard technical assumptions (A1-A6). The analysis throughout this appendix confirms that complexity alignment and geometric regularity are not ad-hoc assumptions but necessary, stable outcomes of the Predictive Universe framework's core optimization principles (POP/PCE) operating within the constrained MPU network. These results provide crucial support for the subsequent derivations of emergent spacetime and gravity.

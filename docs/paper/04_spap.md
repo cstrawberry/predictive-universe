@@ -39,7 +39,7 @@ where $F$ is computable, and ProofSearch represents a bounded search for proofs 
 
 **4.2.2 Theorem 10 (Deterministic SPAP - Impossibility of Perfect Self-Prediction)**
 
-Let $\mathcal{M}$ be a model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$. There exists no single deterministic prediction function $P_f$, implementable within $\mathcal{M}$, that can guarantee perfect prediction of the future state $S(t+\Delta t)$ for all possible systems $S$ constructible within $\mathcal{M}$ that engage in self-prediction based on $P_f$.
+Let $\mathcal{M}$ be a model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$ capable of representing basic arithmetic. There exists no single deterministic prediction function $P_f$, implementable within $\mathcal{M}$, that can guarantee perfect prediction of the future state $S(t+\Delta t)$ for all possible systems $S$ constructible within $\mathcal{M}$ that engage in self-prediction based on $P_f$.
 *Proof:* Assume, for contradiction, that a perfect deterministic predictor $P_f$ exists. Construct a system $S_{diag}$ within $\mathcal{M}$ that uses $P_f$ to predict a binary aspect $\phi$ of its own next state, yielding prediction $\hat{\phi}_{P_f}$. $S_{diag}$ then deterministically sets its actual next state for that component using the rule:
 $$
 \phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f}) \quad \text{(10)}
@@ -210,7 +210,8 @@ Reflexive Undecidability (Theorem 12) and the Self-Referential Paradox of Accura
 The framework recognizes multiple origins for the deviation of predictions from actual outcomes (i.e., prediction error $PE > 0$). The most fundamental source, arising directly from the system's inherent structure, is Logical Indeterminacy:
 
 **Definition 12 (Def 12): Logical Indeterminacy**
-**Logical Indeterminacy** is defined as the fundamental, in-principle unpredictability arising directly from the logical structure of self-reference and reflexive interaction in systems possessing sufficient computational richness (Property R, Definition 10), as demonstrated by SPAP (Theorem 10, Theorem 11) and Reflexive Undecidability (Theorem 12). This form of indeterminacy persists even under idealized assumptions of complete knowledge and unbounded resources, stemming purely from the inherent logical and computational constraints on self-prediction and interactive computation within reflexive systems.
+
+Logical Indeterminacy is defined as the fundamental, in-principle unpredictability arising directly from the logical structure of self-reference and reflexive interaction in systems possessing sufficient computational richness (Property R, Definition 10), as demonstrated by SPAP (Theorem 10, Theorem 11) and Reflexive Undecidability (Theorem 12). This form of indeterminacy persists even under idealized assumptions of complete knowledge and unbounded resources, stemming purely from the inherent logical and computational constraints on self-prediction and interactive computation within reflexive systems.
 
 In addition to Logical Indeterminacy, prediction error can also stem from more conventional sources:
 
@@ -252,9 +253,9 @@ Because the required complexity diverges according to this bound, attaining perf
 The total minimum complexity $C_{\text{pred}}(\alpha)$, identified with $C_{\text{uni}}$, is bounded below by the multiplicative combination of these necessary costs, resulting in Equation (14).
 
 
-**Remark 3 (Conceptual Synthesis: Prediction Relativity and its Physical Mechanism)**
+**Remark 3: Conceptual Synthesis—Prediction Relativity and its Physical Mechanism.**
 
-The SPAP limit $\alpha_{SPAP} < 1$ (Theorems 10, 11) establishes a fundamental barrier—the **Prediction Coherence Boundary**—analogous to the speed of light limit in Special Relativity. This analogy is not merely metaphorical. The Predictive Universe framework reveals a deep, physical unification of these two limits through the **Unified Cost of Transgression (UCT) theorem** (Appendix N, Section N.4). The UCT demonstrates that these are two facets of a single, underlying thermodynamic cost principle.
+The SPAP limit $\alpha_{SPAP} < 1$ (Theorems 10, 11) establishes a fundamental barrier—the **Prediction Coherence Boundary**—analogous to the speed-of-light limit in special relativity. This analogy is not merely metaphorical. The Predictive Universe framework reveals a deep, physical unification of these two limits through the **Unified Cost of Transgression (UCT) theorem** (Appendix N, Section N.4). The UCT demonstrates that these are two facets of a single, underlying thermodynamic cost principle.
 
 The unifying mechanism is the **thermodynamic cost of acceleration**. An accelerating MPU perceives a thermal bath at the Unruh temperature, which acts as a source of noise that fundamentally degrades predictive capacity. As rigorously derived in Appendix N from the framework's core optimization principles, to counteract this "Unruh cost" and maintain a given level of predictive performance, the MPU must allocate additional predictive complexity and expend more power. The cost of prediction is therefore explicitly coupled to the MPU's trajectory.
 

@@ -6,17 +6,17 @@ This section explores the crucial interplay between system complexity, achievabl
 
 *Throughout this section, natural units $\hbar = c = k_B = 1$ are used unless otherwise noted.*
 
-A fundamental structural feature of the PU framework is that the ND-RID channel capacity bound $C_{max} < \ln d_0$ (Theorem E.2) propagates through the derivation chain to constrain multiple physical domains. This bound arises from the irreversibility constraint $\varepsilon \geq \ln 2$ (Theorem 31), which implies strict contractivity $f_{RID} < 1$ (Lemma E.1), which in turn limits classical information capacity.
+A fundamental structural feature of the PU framework is that the ND-RID channel capacity bound $C_{\max} < \ln d_0$ (Theorem E.2) propagates through the derivation chain to constrain multiple physical domains. This bound arises from the irreversibility constraint $\varepsilon \geq \ln 2$ (Theorem 31), which implies strict contractivity $f_{RID} < 1$ (Lemma E.1), which in turn limits classical information capacity.
 
 ### 6.0.1 Capacity Manifestations Across Domains
 
-**Theorem 6.0.1 (Capacity Bound Propagation).** *The channel capacity bound $C_{max} < \ln d_0$ appears as a limiting factor in distinct physical contexts:*
+**Theorem 6.0.1 (Capacity Bound Propagation).** *The channel capacity bound $C_{\max} < \ln d_0$ appears as a limiting factor in distinct physical contexts:*
 
 | Domain | Capacity Role | Derived Relation | Reference |
 |:-------|:--------------|:-----------------|:----------|
-| Information channels | Upper bound on reliable transmission | $C_{max}(f_{RID}) < \ln d_0$ | Theorem E.2 |
-| Horizon entropy | Entropy per boundary channel | $S_{channel}^{max} \leq k_B C_{max}$ | Corollary E.2 |
-| Gravitational constant | Inverse proportionality | $G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{max}}$ | Equation E.9 |
+| Information channels | Upper bound on reliable transmission | $C_{\max}(f_{RID}) < \ln d_0$ | Theorem E.2 |
+| Horizon entropy | Entropy per boundary channel | $S_{channel}^{max} \leq k_B C_{\max}$ | Corollary E.2 |
+| Gravitational constant | Inverse proportionality | $G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}}$ | Equation E.9 |
 
 *where $\delta$ is the effective MPU spacing (Definition 35), $\eta$ is the geometric packing factor, and $\chi$ is the correlation factor quantifying reduction in independent degrees of freedom (all defined in Theorem E.3).*
 
@@ -24,27 +24,27 @@ A fundamental structural feature of the PU framework is that the ND-RID channel 
 
 **Part A (Information Channels).** From Theorem E.2, if $f_{RID} < 1$ (which follows from $\varepsilon > 0$ by Lemma E.1), then the classical capacity of the quantum channel satisfies $C(\mathcal{E}_N) < \ln d_0$. The proof proceeds by contradiction: if $C = \ln d_0$, then $d_0^n$ messages could be transmitted through $n$ channel uses, requiring asymptotically orthogonal outputs. But contractivity gives $\|\mathcal{E}_N^{\otimes n}(\rho_k) - \mathcal{E}_N^{\otimes n}(\rho_l)\|_1 \leq f_{RID}^n \cdot 2 \to 0$, contradicting orthogonality. The capacity bound $C < \ln d_0$ follows from the Holevo bound [Holevo 1973], with achievability and strong converse established in [Holevo 1998; Winter 1999].
 
-**Part B (Horizon Entropy).** From Corollary E.2, the maximum thermodynamic entropy per channel is $S_{channel}^{max} = k_B C_{max}$ (SI units) or simply $C_{max}$ (natural units). Combined with channel counting (Theorem E.3), the total boundary entropy is:
+**Part B (Horizon Entropy).** From Corollary E.2, the maximum thermodynamic entropy per channel is $S_{channel}^{max} = k_B C_{\max}$ (SI units) or simply $C_{\max}$ (natural units). Combined with channel counting (Theorem E.3), the total boundary entropy is:
 $$
-S_{boundary} = N_{eff} \cdot S_{channel}^{max} = \sigma_{link} \cdot \mathcal{A} \cdot k_B \cdot C_{max}
+S_{boundary} = N_{eff} \cdot S_{channel}^{max} = \sigma_{link} \cdot \mathcal{A} \cdot k_B \cdot C_{\max}
 $$
-where $\sigma_{link} = \chi/(\eta\delta^2)$ is the effective surface density of independent channels. This yields the area law with coefficient $\sigma_{link} \cdot C_{max} = 1/(4G)$ (Theorem E.5).
+where $\sigma_{link} = \chi/(\eta\delta^2)$ is the effective surface density of independent channels. This yields the area law with coefficient $\sigma_{link} \cdot C_{\max} = 1/(4G)$ (Theorem E.5).
 
 **Part C (Gravitational Constant).** From Equation E.9, requiring Clausius consistency on all local horizons fixes:
 $$
-G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{max}(f_{RID})}
+G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}(f_{RID})}
 $$
-The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At PCE equilibrium with $C_{max}^* = \ln d_0 - \varepsilon = 2\ln 2$ (Equation E.15), this determines $G$ in terms of the microscopic MPU parameters. ∎
+The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At PCE equilibrium with $C_{\max}^* = \ln d_0 - \varepsilon = 2\ln 2$ (Equation E.15), this determines $G$ in terms of the microscopic MPU parameters. ∎
 
-**Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by the single capacity bound $C_{max} < \ln d_0$ arising from ND-RID contractivity.*
+**Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by the single capacity bound $C_{\max} < \ln d_0$ arising from ND-RID contractivity.*
 
-**Remark 6.0.1 (Origin of the Constraint).** The capacity bound traces to the irreversibility of self-referential prediction:
+**Remark 6.0.1: Origin of the Constraint.** The capacity bound traces to the irreversibility of self-referential prediction:
 $$
-\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \varepsilon \geq \ln 2 \xrightarrow{\text{Lem E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{max} < \ln d_0
+\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \varepsilon \geq \ln 2 \xrightarrow{\text{Lem E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0
 $$
 The logical structure of self-reference (SPAP) propagates through thermodynamics (Landauer cost) to information theory (channel capacity) to geometry (gravitational coupling).
 
-**Remark 6.0.2 (PCE Optimization).** At the PCE-Attractor (Definition 15a), the capacity saturates its optimal value $C_{max}^* = \ln d_0 - \varepsilon = \ln 8 - \ln 2 = 2\ln 2$ (Equation E.15). This represents the optimal partition of the MPU's information budget between internal processing cost ($\varepsilon$) and external communication capacity ($C_{max}$).
+**Remark 6.0.2: PCE Optimization.** At the PCE-Attractor (Definition 15a), the capacity saturates its optimal value $C_{\max}^* = \ln d_0 - \varepsilon = \ln 8 - \ln 2 = 2\ln 2$ (Equation E.15). This represents the optimal partition of the MPU's information budget between internal processing cost ($\varepsilon$) and external communication capacity ($C_{\max}$).
 
 ---
 
@@ -71,11 +71,11 @@ Given the relationship between Predictive Physical Complexity ($C \equiv C_P$, a
 
 The adaptation dynamics of systems within the PU framework are governed by the Principle of Compression Efficiency (PCE). This principle posits that complex predictive systems naturally evolve or self-organize towards configurations that optimize the trade-off between maximizing the functional utility or Meaning Potential (MP) derived from processed information—quantified by the expected improvement in predictive quality ($\Delta Q$, operationally related to achieving high PP, Definition 7) relevant to the POP (Axiom 1)—and minimizing the comprehensive Signal Cost (SC) associated with acquiring, representing, processing, updating, and utilizing that information. The Signal Cost encompasses the ongoing operational resource costs ($R(C), R_I(C)$, Definition 3, represented operationally by $\langle \hat{R} \rangle, \langle \hat{R}_I \rangle$ when acting on $\langle \hat{C}_v \rangle$) and any transient costs associated with adaptation (complexity changes, model updates). The system implicitly seeks configurations that maximize a net benefit, effectively balancing MP against SC, driving it towards states satisfying the optimal allocation criteria (Definition 14). The ultimate expression of this optimization is the PCE-Attractor.
 
-**Remark (Relation to PPI).** PCE is the operational content of the "resource-optimization imperatives" referenced in the Principle of Physical Instantiation (Definition P.6.2, Appendix P). While PPI establishes that abstract structures must be physically instantiated and shaped by thermodynamic costs, PCE specifies how that shaping occurs: through minimization of the PCE potential $V(x)$. The two principles are hierarchically related—PCE is the dynamical mechanism through which PPI acts. In derivations, "PPI requires..." typically invokes the instantiation requirement, while "PCE selects..." invokes the optimization criterion.
+**Remark (Relation to PPI).** PCE is an operational specialization of PPI-optimality (Definition P.6.2, Appendix P): PPI asserts that physical instantiations of abstract structures are constrained by irreducible thermodynamic costs and selected by resource-minimality, while PCE provides the explicit potential $V(x)$ and dynamics realizing that selection for adaptive predictive systems. In derivations, "PPI requires…" invokes admissibility and PPI-optimality; "PCE selects…" invokes the concrete $V$-minimization used to single out a unique attractor within the admissible class.
 
 **Definition 15a (Def 15a): The PCE-Attractor**
 
- The **PCE-Attractor**, denoted $x_{attr}$, is the canonically selected global-minimum configuration within $\mathcal{E}_{*}^{\text{global}}$ (see Theorem D.3) singled out by the *co-occurring* conditions:
+ The **PCE-Attractor**, denoted $x_{attr}$, is the canonically selected global-minimum configuration within $\mathcal{E}_{*}^{\text{global}}$ (see Theorem D.3). Existence is guaranteed by the coercivity/compactness hypotheses used in Appendix D to show that $V$ attains its infimum on $\mathcal{E}_{*}^{\text{global}}$. Uniqueness is understood after quotienting by the internal symmetries that leave $V$ invariant (e.g., gauge and relabeling symmetries); $x_{attr}$ denotes any representative of the resulting unique minimizer equivalence class, singled out by the *co-occurring* conditions:
 
  1.  **Maximal Symmetry (Flat Spectrum):** For the U(1) sector, the SLD-QFI spectrum is flat ($\sigma^2=0$), reflecting a state of maximal robustness where all information-carrying modes are utilized democratically (see Appendix W; §Z.3).
 
@@ -83,7 +83,7 @@ The adaptation dynamics of systems within the PU framework are governed by the P
 
  3.  **Canonical Instantiation (Minimal Complexity Action):** At the Attractor scale $\mu^*$, the predictive-to-physical normalization for the emergent gauge action satisfies $\kappa^* = 1$ as a consequence of the Principle of Physical Instantiation (PPI, Appendix P) and the Predictive Ward Identity (Theorem X.3).
 
- This point is the unique, PCE-favored selection used for parameter-free predictions.
+ This orbit (equivalence class under the symmetries of $V$ and gauge redundancy) is the unique, PCE-favored selection used for parameter-free predictions; throughout we fix a canonical representative and denote it by $x_{attr}$.
 
 **6.1.3 Definition 16 (Def 16): Prediction Optimization Problem - Operational Goal**
 
@@ -95,7 +95,7 @@ We now establish the general principles governing the relationship between inves
 
 **6.2.1 Definition 17 (Def 17): Physical Realizability**
 
-A predictive model $M$ or system state characterized by Predictive Physical Complexity $C_P(\mu)$ is physically realizable if the processes required to construct and operate it can be executed within a physical system using finite resources (energy, matter, time) strictly adhering to the physical laws $\mathcal{L}_{phys}$ incorporated in the definition of $C_P$ (Section 2.4.1), including thermodynamic bounds derived later (e.g., Theorem 31, Theorem 32).
+A predictive model $M$ or system state $\mu$ characterized by $C_P$ is physically realizable if there exists a finite refinement level $n$ and at least one admissible construction/operation program $p\in\mathcal{P}_n(\mu)$ (Section 2.4.1) that maps $\mu_{\rm ref}\mapsto\mu$, achieves the required predictive accuracy, and respects all constraints in $\mathcal{L}_{\rm phys}^{(n)}$. Equivalently, $C_{P,n}(\mu)<\infty$ for some (hence all larger) $n$, and $C_P(\mu)\le C_{\max}<\infty$ (Appendix Q).
 
 **6.2.2 Definition 18 (Def 18): PPC Requirement $C_{PPC}(PP_{target})$**
 
@@ -200,7 +200,7 @@ $$
 \Psi(t) = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
 $$
 where:
-1.  The **Power Conversion Factor ($\Gamma_0$)**: A positive **system-level constant** with dimensions of Power (`[E][T]⁻¹`), representing the conversion rate from dimensionless predictive performance gradients to an equivalent power. Its magnitude is set by the characteristic energy of the operational environment and the MPU cycle rate, e.g., $\Gamma_0 \propto k_B T_{eff} \cdot \nu$.
+1.  The **Power Conversion Factor ($\Gamma_0$)**: A positive **system-level constant** with dimensions of Power ($[E][T]^{-1}$), representing the conversion rate from dimensionless predictive performance gradients to an equivalent power. Its magnitude is set by the characteristic energy of the operational environment and the MPU cycle rate, e.g., $\Gamma_0 \propto k_B T_{eff} \cdot \nu$.
 2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
 
 The specific components of the driving force are:
@@ -212,7 +212,7 @@ e^{-\kappa_{\mathrm{eff}}\cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}}
 = \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}(t)}\big(\beta - PP(t)\big),
 \quad \text{with } PP(t)=\beta-(\beta-\alpha)\,e^{-\kappa_{\mathrm{eff}}\cdot \frac{C(t)-C_{op}}{\hat{C}_{target}(t)}} \quad \text{(25)}
 $$
-*   **Marginal Cost:** The term $\lambda R'(C(t)) + R_I'(C(t))$ is the weighted marginal resource cost rate, with units `[E][T]^{-1}[Complexity]^{-1}`. From Definition 3:
+*   **Marginal Cost:** The term $\lambda R'(C(t)) + R_I'(C(t))$ is the weighted marginal resource cost rate, with units $[E][T]^{-1}[\text{Complexity}]^{-1}$. From Definition 3:
 $$
     R_I'(C(t)) = \frac{r_I}{C(t) \ln 2} \quad (\text{for } C(t) > K_0) \quad \text{(26)}
     $$
@@ -280,34 +280,39 @@ We analyze the properties of the adaptation dynamics, including stability and th
 **6.5.1 Theorem 21 (Adaptation Response)**
 
 The sensitivity of the optimal complexity $C^*(t)$ (where $\Psi(C^*) = 0$) to small changes in the estimated environmental complexity $\hat{C}_{target}(t)$ is given by the implicit function theorem:
-$$
-\frac{dC^*(t)}{d\hat{C}_{target}(t)} = -\frac{\partial \Psi / \partial \hat{C}_{target}}{\partial \Psi / \partial C}\bigg|_{C=C^*(t)} \quad \text{(33)}
-$$
+
+$$\frac{dC^*(t)}{d\hat{C}_{target}(t)} = -\frac{\partial \Psi / \partial \hat{C}_{target}}{\partial \Psi / \partial C}\bigg|_{C=C^*(t)} \quad \text{(33)}$$
+
 (assuming the denominator $\partial \Psi / \partial C$ is non-zero at $C^*$).
+
 *Proof:* The total differential of $\Psi(C^*(\hat{C}_{target}), \hat{C}_{target}) = 0$ with respect to $\hat{C}_{target}$ is $d\Psi = (\partial \Psi / \partial C^*) (dC^*/d\hat{C}_{target}) + (\partial \Psi / \partial \hat{C}_{target}) = 0$. Rearranging gives Equation (33). We compute the partial derivatives from Equation (24), using Equations (25) and (26).
+
 *   **Derivative w.r.t. C:**
-    $$
-    \frac{\partial \Psi}{\partial C} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) - R_I''(C) \quad \text{(34)}
-    $$
-    Using Equation (25): $\frac{\partial^2 PP}{\partial C^2} = \frac{\partial}{\partial C} \left( \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} (\beta - PP) \right) = - \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} \frac{\partial PP}{\partial C} < 0$.
-    Using Equation (26): $R_I''(C) = \frac{d}{dC} \left( \frac{r_I}{C \ln 2} \right) = -\frac{r_I}{C^2 \ln 2} < 0$.
-    Substituting into Equation (34):
-     $$
-    \frac{\partial \Psi}{\partial C} = - \Gamma_0 \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} \left( \frac{\partial PP}{\partial C} \right) - \lambda R''(C) + \frac{r_I}{C^2 \ln 2} \quad \text{(35)}
-    $$
-    For stability, we typically expect $\partial \Psi / \partial C < 0$ (Theorem 22).
+
+$$\frac{\partial \Psi}{\partial C} = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) - R_I''(C) \quad \text{(34)}$$
+
+Using Equation (25): $\frac{\partial^2 PP}{\partial C^2} = \frac{\partial}{\partial C} \left( \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} (\beta - PP) \right) = - \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} \frac{\partial PP}{\partial C} < 0$.
+
+Using Equation (26): $R_I''(C) = \frac{d}{dC} \left( \frac{r_I}{C \ln 2} \right) = -\frac{r_I}{C^2 \ln 2} < 0$.
+
+Substituting into Equation (34):
+
+$$\frac{\partial \Psi}{\partial C} = - \Gamma_0 \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} \left( \frac{\partial PP}{\partial C} \right) - \lambda R''(C) + \frac{r_I}{C^2 \ln 2} \quad \text{(35)}$$
+
+For stability, we typically expect $\partial \Psi / \partial C < 0$ (Theorem 22).
+
 *   **Derivative w.r.t. $\hat{C}_{target}$:** Assuming $R'$ and $R_I'$ do not explicitly depend on $\hat{C}_{target}$:
-    $$
-    \frac{\partial \Psi}{\partial \hat{C}_{target}} = \Gamma_0 \frac{\partial^2 PP}{\partial \hat{C}_{target} \partial C} \quad \text{(36)}
-    $$
-    Calculating the mixed partial derivative from Equation (25):
-   $$
-    \frac{\partial^2 PP}{\partial \hat{C}_{target} \partial C} = \frac{\partial}{\partial \hat{C}_{target}} \left( \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} (\beta - PP) \right) = \left( \frac{\partial PP}{\partial C} \right) \left[ -\frac{1}{\hat{C}_{target}} + \frac{\kappa_{\mathrm{eff}} (C-C_{op})}{(\hat{C}_{target})^2} \right]
-    $$
-    Thus:
-    $$
-    \frac{\partial \Psi}{\partial \hat{C}_{target}} = \Gamma_0 \left( \frac{\partial PP}{\partial C} \right) \frac{1}{\hat{C}_{target}} \left( \frac{\kappa_{\mathrm{eff}} (C-C_{op})}{\hat{C}_{target}} - 1 \right) \quad \text{(37)}
-    $$
+
+$$\frac{\partial \Psi}{\partial \hat{C}_{target}} = \Gamma_0 \frac{\partial^2 PP}{\partial \hat{C}_{target} \partial C} \quad \text{(36)}$$
+
+Calculating the mixed partial derivative from Equation (25):
+
+$$\frac{\partial^2 PP}{\partial \hat{C}_{target} \partial C} = \frac{\partial}{\partial \hat{C}_{target}} \left( \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} (\beta - PP) \right) = \left( \frac{\partial PP}{\partial C} \right) \left[ -\frac{1}{\hat{C}_{target}} + \frac{\kappa_{\mathrm{eff}} (C-C_{op})}{(\hat{C}_{target})^2} \right]$$
+
+Thus:
+
+$$\frac{\partial \Psi}{\partial \hat{C}_{target}} = \Gamma_0 \left( \frac{\partial PP}{\partial C} \right) \frac{1}{\hat{C}_{target}} \left( \frac{\kappa_{\mathrm{eff}} (C-C_{op})}{\hat{C}_{target}} - 1 \right) \quad \text{(37)}$$
+
 *   **Result:** The sensitivity $dC^*/d\hat{C}_{target}$ is given by $-(\partial \Psi / \partial \hat{C}_{target}) / (\partial \Psi / \partial C)$. If $\partial \Psi / \partial C < 0$ (stability) and the relative complexity $(C-C_{op})/\hat{C}_{target}$ is sufficiently large ($> 1/\kappa_{\mathrm{eff}}$), then $\partial \Psi / \partial \hat{C}_{target} > 0$. In this regime where the relative complexity is sufficiently high, $dC^*/d\hat{C}_{target} > 0$, indicating that an increase in perceived environmental difficulty $\hat{C}_{target}$ leads to a corresponding increase in the optimal allocated complexity $C^*$. QED
 
 **6.5.2 Theorem 22 (Existence, uniqueness, and exponential stability of the PCE optimum)**
@@ -330,7 +335,7 @@ $$
 \frac{d\hat{C}_{target}}{dt} = \mu_{target} \cdot \hat{C}_{target}(t) \cdot \left( PP_{op} - PP(C(t), \hat{C}_{target}(t)) \right) \quad \text{(38)}
 $$
 where:
-*   $\mu_{target} \ge 0$ is the learning rate parameter (units `[T]^{-1}`).
+*   $\mu_{target} \ge 0$ is the learning rate parameter (units $[T]^{-1}$).
 *   $PP_{op} \in (\alpha, \beta)$ is the system's target operational performance level.
 *   $PP(C(t), \hat{C}_{target}(t))$ is the currently achieved performance (Equation 22).
 
@@ -375,11 +380,11 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 *   **Control Actions:** Adjusting $\hat{C}_{target}$ (Equation 38) adapts the internal representation of the environment. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
 *   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and environmental representation $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon > 0$), enabling sustained viable prediction.
 
-**6.9 Self-Consistent Determination of Viability Bounds α and β**
+**6.9 Self-Consistent Determination of Viability Bounds $\alpha$ and $\beta$**
 
-The framework derives the necessity of the operational performance bounds `α` and `β` that define the **Space of Becoming**. While their existence is proven, their precise numerical values are a target for future derivation from the framework's fundamental parameters.
+The framework derives the necessity of the operational performance bounds $\alpha$ and $\beta$ that define the **Space of Becoming**. While their existence is proven, their precise numerical values are a target for future derivation from the framework's fundamental parameters.
 
-*   **The Lower Bound `α`:** This is the threshold of viability, where a predictive signal becomes distinguishable from noise. Its value is fundamentally tied to the minimal information content of a predictive act (`ε = ln 2`) and the dimensionality of the minimal predictive system (`d₀ = 8`, from `K₀=3` bits). `α` represents the minimal signal-to-noise ratio required for the adaptation dynamics of the system (the coupled equations for `C` and `C_target`) to achieve a stable lock and avoid dissolution into chaos. A full derivation will involve a detailed stability analysis of these adaptation equations in the low-complexity, low-performance regime near the `C=C_op` baseline.
+*   **The Lower Bound $\alpha$:** This is the threshold of viability, where a predictive signal becomes distinguishable from noise. In PU it is constrained by the minimal information content of a predictive act ($\varepsilon = \ln 2$, Theorem 31) and by the minimal MPU state-space dimension ($d_0 = 2^{K_0} = 8$ with $K_0 = 3$, Theorem 15; Theorem 23). $\alpha$ represents the minimal signal-to-noise ratio required for the adaptation dynamics of the system (the coupled equations for $C$ and $C_{target}$) to enter and remain in the stable viability basin defining the Space of Becoming (Definition 8; Theorem 8–Theorem 9). In the low-complexity regime near $C=C_{op}$, the controlling stability conditions are governed by ND-RID contractivity and capacity limits (Appendix E) that constrain the onset of reliable prediction.
 
-*   **The Upper Bound `β`:** This is the threshold of adaptability, where the marginal cost of further predictive improvement becomes prohibitive under PCE. Its value is set by a dynamic stability condition: the system must be able to afford the resource cost of achieving the next increment of performance without entering a regime of runaway costs or instability. This constrains the relationship between the marginal cost functions (`R'`, `R_I'`) and the performance gap `(β-PP)` at the limit of high complexity. Deriving `β` requires a full, self-consistent solution of the PCE optimization problem at its upper boundary, likely yielding a value for `β` that is a complex function of the framework's core cost and efficiency parameters (`r_p`, `γ_p`, `r_I`, `κ_eff`, `λ`, `Γ₀`).
+*   **The Upper Bound $\beta$:** This is the threshold of adaptability, where the marginal cost of further predictive improvement becomes prohibitive under PCE. Its value is set by a dynamic stability condition: the system must be able to afford the resource cost of achieving the next increment of performance without entering a regime of runaway costs or instability. This constrains the relationship between the marginal cost functions ($R'$, $R_I'$) and the performance gap $(\beta - PP)$ at the limit of high complexity. Deriving $\beta$ requires a full, self-consistent solution of the PCE optimization problem at its upper boundary, likely yielding a value for $\beta$ that is a complex function of the framework's core cost and efficiency parameters ($r_p$, $\gamma_p$, $r_I$, $\kappa_{eff}$, $\lambda$, $\Gamma_0$).
 

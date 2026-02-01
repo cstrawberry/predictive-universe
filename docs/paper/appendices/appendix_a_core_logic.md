@@ -88,13 +88,13 @@ Having established Property R as a logical necessity, we now address how this ab
 **Proposition A.0.3 (MPUs Possess Minimal Self-Referential Capacity)**
 Minimal Predictive Units, possessing complexity $C_{\text{op}} \geq K_0 \equiv B_3$ (Definition 23, Theorem 15), inherently contain the minimal structural complexity (equivalent to 3 bits or 8 distinguishable physical configurations) required to physically represent and logically process the core elements of self-referential computations, satisfying foundational aspects of Property R: basic representation and logical negation.
 
-*Proof.* Theorem 15 (Section 5.2.1) establishes $K_0 \equiv B_3$ as the minimum complexity needed to implement the deterministic SPAP contradiction logic $\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$. This requires:
+*Proof.* Theorem 15 (Section 5.2.2) establishes $K_0 \equiv B_3$ as the minimum complexity needed to implement the deterministic SPAP contradiction logic $\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$. This requires:
 1.  Representing binary state $\phi \in \{0,1\}$
 2.  Representing binary prediction $\hat{\phi} \in \{0,1\}$
 3.  Executing the NOT operation
 4.  Storing the result as next state $\phi_{t+1}$
 
-A 3-bit system provides 8 distinguishable configurations ($2^3 = 8$), sufficient to encode these elements and manage the computational sequence without destructive overwriting (Section 5.2.1 demonstrates 2 bits are insufficient). Since MPUs operate at $C_{\text{op}} \geq K_0$, they possess at least this structural capacity within their physical state space (related to $\dim(\mathcal{H}_0) \geq 8$, Theorem 23).
+A 3-bit system provides 8 distinguishable configurations ($2^3 = 8$), sufficient to encode these elements and manage the computational sequence without destructive overwriting (Section 5.2.2, Theorem 15 demonstrates fewer than 8 configurations are insufficient). Since MPUs operate at $C_{\text{op}} \geq K_0$, they possess at least this structural capacity within their physical state space (related to $\dim(\mathcal{H}_0) \geq 8$, Theorem 23).
 
 However, this minimal capacity is insufficient for full Property R. The ability to represent arbitrary computations, simulate complex models, and evaluate predicates requires greater resources, which emerge through network composition (§A.0.5). □
 
@@ -276,20 +276,6 @@ This refined definition makes explicit the network-level realization of computat
 
 Together, they provide complete, non-circular account of Property R in the PU framework.
 
-**Derivational Chain:**
-
-```
-Predictionism (Logical)           POP/PCE (Physical)
-       ↓                                 ↓
-Property R (Necessity)     →     Property R (Operational)
-       ↓                                 ↓
-SPAP Applicability         ←     Reliable Implementation
-       ↓                                 ↓
-K₀ = 3 bits                      QEC Compatibility
-       ↓                                 ↓
-MPU Structure              ←     Network Convergence
-```
-
 **Application to Core Theorems:**
 With Property R established through both logical necessity and physical realization, the framework's core theorems apply:
 
@@ -388,7 +374,7 @@ f(n) = G(n, \dots, \text{ProofSearch}_{\le g_i(n)}[\phi_i(\dots, e, \dots)], \do
 $$
  This existence is guaranteed by Kleene's Second Recursion Theorem, a fundamental result in computability theory.
 
-*Proof Reference:* See standard texts on computability theory, e.g., [Mendelson 2015; Kleene 1952] for a proof of the Recursion Theorem. This theorem is a cornerstone of the theory, asserting that computable functions can be defined in terms of their own code (Gödel number).
+*Proof Reference:* See standard texts on computability theory [Mendelson 2015; Kleene 1952] for a proof of the Recursion Theorem. This theorem is a cornerstone of the theory, asserting that computable functions can be defined in terms of their own code (Gödel number).
 
 *Significance:* Theorem A.1.5 guarantees the existence of computable processes that can refer to and depend on provable properties about themselves within bounded resources. This provides the formal basis for constructing systems like $S_{diag}$ and $S'_{diag}$ used in the SPAP proofs (Theorems A.1.1, A.1.3), demonstrating that such self-referential conditional logic is mathematically sound and constructible within computationally rich frameworks like those enabled by Effective Operational Property R.
 
@@ -454,16 +440,16 @@ Now, consider the real $M_{decide}'$ interacting with $S'_{diag}$. As $M_{decide
 *   **Foundation for Logical Indeterminacy:** The SPAP theorems (A.1.1, A.1.3, robust to noise via A.1.2, A.1.4) and RUD theorems (A.2.3, A.2.4) provide rigorous formal grounding for Logical Indeterminacy (Definition 12) within the PU framework. They establish fundamental, in-principle limits on prediction accuracy and interactive knowledge acquisition arising directly from self-reference and reflexive dynamics in systems possessing Effective Operational Property R. This indeterminacy is intrinsic to the logic of the system's operation under the framework's assumptions.
 *   **Proposed Origin of Quantum Randomness:** This inherent Logical Indeterminacy, applicable to MPUs via the mechanism argued in Appendix A.0, is the proposed source of the ontological randomness observed in the MPU 'Evolve' process (Hypothesis 2), manifesting mathematically through the Born rule probabilities (derived via Appendix G).
 *   **Complexity Costs of Prediction:** The SPAP theorems underpin Theorem 14, which shows that approaching the fundamental performance limit $\alpha_{SPAP}$ requires divergent computational complexity (Appendix B.3), establishing physical bounds on achievable predictive accuracy.
-*   **Limits on Interaction:** RUD theorems (A.2.3, A.2.4) formally demonstrate that interaction via ND-RID ('Evolve') is fundamentally limited in its ability to reliably extract certain types of information about the system being probed. This complements the thermodynamic channel capacity bounds ($C_{max} < \ln d_0$) derived in Appendix E from the irreversibility ($\varepsilon \ge \ln 2$) of ND-RID.
+*   **Limits on Interaction:** RUD theorems (A.2.3, A.2.4) formally demonstrate that interaction via ND-RID ('Evolve') is fundamentally limited in its ability to reliably extract certain types of information about the system being probed. This complements the thermodynamic channel capacity bounds ($C_{\max} < \ln d_0$) derived in Appendix E from the irreversibility ($\varepsilon \ge \ln 2$) of ND-RID.
 
 These core logical and computational limitations, derived rigorously under the assumption of Effective Operational Property R (motivated by POP/PCE dynamics), are foundational constraints shaping the emergent quantum mechanics, thermodynamics, information processing limits, and gravitational dynamics within the Predictive Universe framework.
 
 
-**A.4 Formal Realizability of Property R: The LITE Construction in Peano Arithmetic**
+## A.4 Formal Realizability of Property R: The LITE Construction in Peano Arithmetic
 
 The Predictive Universe (PU) framework posits that systems capable of sophisticated prediction, such as Minimal Predictive Units (MPUs) or their aggregates, possess Property R (Definition 10). This property entails the computational richness necessary for self-representation, self-simulation/reasoning, and the evaluation of predicates concerning their own behavior, forming the bedrock for phenomena like the Self-Referential Paradox of Accurate Prediction (SPAP, Theorems A.1.1, A.1.3) and Reflexive Undecidability (RUD, Theorems A.2.3, A.2.4). This section demonstrates that such computational capabilities are not exclusive to the PU's specific hypotheses but can be formally realized even within standard Peano Arithmetic (PA), assuming Con(PA). The LITE construction, detailed below, provides an explicit example of a total computable function in PA that dynamically adapts its behavior based on bounded proof searches about its own properties, thereby instantiating key aspects of Property R.
 
-**A.4.1 Preliminaries for LITE in PA**
+### A.4.1 Preliminaries for LITE in PA
 
 The LITE construction leverages standard tools from mathematical logic:
 
@@ -472,7 +458,7 @@ The LITE construction leverages standard tools from mathematical logic:
 *   **Bounded Proof Search Predicate:** For a total computable function $g: \mathbb{N} \to \mathbb{N}$ and a formula $\psi$, $Prf_{\le g(n)}(⌈\psi⌉) \equiv \exists p \le g(n) \, Prf(p, ⌈\psi⌉)$ asserts a proof of $\psi$ exists with code $p \le g(n)$. This predicate is decidable for fixed $n, ⌈\psi⌉$.
 *   **Kleene's Second Recursion Theorem:** For any total computable operator $\Psi: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, there exists an index $\beta \in \mathbb{N}$ such that the partial computable function $φ_β$ satisfies $φ_β(n) = \Psi(\beta, n)$ for all $n \in \mathbb{N}$ [Kleene 1952]. This allows a function to consistently refer to its own Gödel code.
 
-**A.4.2 The LITE Function Construction**
+### A.4.2 The LITE Function Construction
 
 Let $g, H_1, H_2$ be predefined total computable functions. Let $Sub(x, y, z)$ be the standard substitution function yielding the Gödel code of the formula obtained by substituting the numeral for $y$ into the formula with Gödel code $x$ at occurrences of the variable with code $z$. Let $v$ be the code of a variable 'x'. Let $FormTemplate(v)$ be a PA formula template with one free variable $v$.
 Define $ϕ_{\alpha}(n)$ as the formula whose Gödel code is $c_{\alpha, n} = Sub(⌈FormTemplate(v)⌉, \alpha, v)$. This $ϕ_{\alpha}(n)$ asserts a property related to the function with index $\alpha$ evaluated at $n$.
@@ -497,7 +483,7 @@ Assume Con(PA) and that $g, H_1, H_2$ are total computable functions. Then the L
 3.  **Totality of $f = φ_{\beta}$:** Since $f(n) = \Psi(\beta, n)$ and $\Psi$ is total, $f(n)$ is defined for all $n \in \mathbb{N}$.
 4.  **Computability of $f$:** By definition, $f = φ_{\beta}$ is a computable function. QED
 
-**A.4.3 LITE's Instantiation of Property R Capabilities**
+### A.4.3 LITE's Instantiation of Property R Capabilities
 
 The LITE function $f$, constructed entirely within PA, explicitly demonstrates the core capabilities required by Property R (Definition 10):
 
@@ -514,11 +500,11 @@ The LITE function $f$, constructed entirely within PA, explicitly demonstrates t
     *   These predicates concern properties (specifically, bounded provability) of the formula $ϕ_{\beta}(n)$, which itself is a statement about $f$'s behavior.
     *   The function $f$ *evaluates* these predicates and *adapts* its output ($n+H_1(n)$, $n+H_2(n)$, or $n+1$) based on the evaluation. This directly matches Property R's requirement for evaluating predicates about model behavior to guide subsequent processing.
 
-**A.4.4 Dynamic Self-Reference and DSRO Analogy**
+### A.4.4 Dynamic Self-Reference and DSRO Analogy
 
 The LITE function's structure (Equation A.4.1) provides a concrete arithmetical realization of a Dynamic Self-Reference Operator (DSRO, Definition 11). The output $f(n)$ depends on the outcome of a bounded proof search (a computable process) for formulas $\phi_{\beta}(n)$ that refer to the function's own index $\beta$. This iterative process, where $f(n)$'s value is determined at step $n$ based on provability checks and can influence future checks, embodies the dynamic, adaptive self-reference that DSROs formalize.
 
-**A.4.5 Conclusion: LITE and the Plausibility of Property R for MPUs**
+### A.4.5 Conclusion: LITE and the Plausibility of Property R for MPUs
 
 The LITE construction robustly demonstrates that standard Peano Arithmetic, a foundational system of mathematics, possesses sufficient richness to define total computable functions exhibiting dynamic, adaptive self-reference based on bounded internal "proof discovery." It formally shows that capabilities analogous to self-representation, bounded self-simulation/reasoning, and adaptive predicate evaluation—the core components of Property R—are not reliant on exotic computational models but can be realized within a well-understood arithmetical framework.
 

@@ -135,10 +135,10 @@ Let $\mathfrak{A}$ be an abstract algebraic structure describing the predictive 
 *Proof.*
 1.  **Existence of Trace Form Cost Functional:** By Theorem G.1.7, POP/PCE optimization leads to an effective cost structure for outcome branches $P$ that necessitates $f(P) = \text{Tr}(\rho_{phys} P)$, where $\rho_{phys}$ is the system's physical state (a positive semi-definite operator). The trace functional is central.
 2.  **GNS Construction for Hilbert Space Representation:** The state $\omega(A) = \text{Tr}(\rho_{phys} A)$ is a positive linear functional on any C*-algebra $\mathfrak{A}_{ops}$ of operators that includes the projectors and observables. The Gelfand-Naimark-Segal (GNS) construction [Reed & Simon 1980] guarantees that for any such state on a C*-algebra, there exists a unique (up to unitary equivalence) Hilbert space $\mathcal{H}_\omega$, a representation $\pi_\omega: \mathfrak{A}_{ops} \to B(\mathcal{H}_\omega)$ (bounded operators on $\mathcal{H}_\omega$), and a cyclic vector $|\Omega_\omega\rangle \in \mathcal{H}_\omega$ such that $\omega(A) = \langle \Omega_\omega | \pi_\omega(A) | \Omega_\omega \rangle$.
-3.  **Why Complex Hilbert Space?:** The PCE imperative for efficiency selects the complex field $\mathbb{C}$ over real ($\mathbb{R}$) or quaternionic ($\mathbb{H}$) alternatives. While all can support vector space structures, the complex Hilbert space is uniquely efficient for the tasks required by POP.
-   *   **Local Tomography & Information Cost:** A key measure of efficiency is the balance between the predictive power of the representation and the information cost (e.g., number of measurements) needed to determine a state (local tomography). The dimension of the state space (number of parameters) determines this cost. For the PCE-Attractor, the orbit dimension $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ equals the Golay code dimension $k$, providing independent geometric confirmation of the information-theoretic structure via the correspondence established in Theorem U.7a. For a $d$-dimensional system, this is $d^2-1$ for complex spaces, $(d(d+1)/2)-1$ for real spaces, and $(d(2d-1))-1$ for quaternionic spaces. While real spaces require fewer parameters, they lack the expressive power to efficiently model interference phenomena and the $U(1)$ phase crucial for emergent gauge theories (Section G.2). Complex Hilbert spaces provide the necessary structure efficiently, while quaternionic spaces are significantly less efficient (more parameters) without providing necessary additional predictive utility.
-   *   **Symmetry, Dynamics, and Composition:** The complex structure provides the unique framework where the generators of continuous symmetries (Lie algebra) are naturally identified with the observables themselves (via Stone's theorem), simplifying the dynamics. Furthermore, the tensor product structure for composing subsystems is uniquely straightforward in complex Hilbert spaces, unlike real or quaternionic spaces where the local structure does not necessarily determine the global structure [Hardy 2001; Wootters 1990]. Crucially, the $U(1)$ phase freedom that gives rise to electromagnetism (Section G.7) is a natural feature of the complex structure.
-   *   **PCE Selection:** A system based on $\mathbb{R}$ or $\mathbb{H}$ would incur higher information acquisition costs (more measurements for tomography) and/or higher complexity costs to represent the necessary dynamics compared to a system based on $\mathbb{C}$. PCE, by minimizing these costs within the potential $V(x)$, selects the complex Hilbert space as the most resource-efficient substrate for prediction.
+3.  **Why Complex Hilbert Space?:** The PCE imperative for efficiency selects the complex field $\mathbb{C}$ over real ($\mathbb{R}$) or quaternionic ($\mathbb{H}$) alternatives. While all can support vector space structures, the complex Hilbert space is uniquely efficient for the tasks required by POP.
+   *   **Local Tomography & Information Cost:** A key measure of efficiency is the balance between the predictive power of the representation and the information cost (e.g., number of measurements) needed to determine a state (local tomography). The dimension of the state space (number of parameters) determines this cost. For the PCE-Attractor, the orbit dimension $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ equals the Golay code dimension $k$, providing independent geometric confirmation of the information-theoretic structure via the correspondence established in Theorem U.7a. For a $d$-dimensional system, this is $d^2-1$ for complex spaces, $(d(d+1)/2)-1$ for real spaces, and $(d(2d-1))-1$ for quaternionic spaces. While real spaces require fewer parameters, they lack the expressive power to efficiently model interference phenomena and the $U(1)$ phase crucial for emergent gauge theories (Section G.2). Complex Hilbert spaces provide the necessary structure efficiently, while quaternionic spaces are significantly less efficient (more parameters) without providing necessary additional predictive utility.
+   *   **Symmetry, Dynamics, and Composition:** The complex structure provides the unique framework where the generators of continuous symmetries (Lie algebra) are naturally identified with the observables themselves (via Stone's theorem), simplifying the dynamics. Furthermore, the tensor product structure for composing subsystems is uniquely straightforward in complex Hilbert spaces, unlike real or quaternionic spaces where the local structure does not necessarily determine the global structure [Hardy 2001; Wootters 1990]. Crucially, the $U(1)$ phase freedom that gives rise to electromagnetism (Section G.7) is a natural feature of the complex structure.
+   *   **PCE Selection:** A system based on $\mathbb{R}$ or $\mathbb{H}$ would incur higher information acquisition costs (more measurements for tomography) and/or higher complexity costs to represent the necessary dynamics compared to a system based on $\mathbb{C}$. PCE, by minimizing these costs within the potential $V(x)$, selects the complex Hilbert space as the most resource-efficient substrate for prediction.
 4.  **Uniqueness & Optimality:** The combination of (a) Gleason's theorem (underpinned by POP/PCE cost consistency) selecting the trace-form for costs/probabilities, and (b) the GNS construction providing a unique Hilbert space representation for systems supporting such trace-form states, establishes that the complex Hilbert space structure is uniquely determined (up to isomorphism) as the necessary arena for the self-consistent, PCE-optimized predictive processing modeled by the PU framework. This also makes Proposition 4 (Emergence of Complex Hilbert Space) a derived theorem based on Theorem G.1.8
 
 **Corollary G.1.9 (PCE Instability of Alternative Predictive Algebras).**
@@ -185,11 +185,11 @@ The self-referential structure of SPAP (Theorem 10, Theorem 11) logically exclud
 
 **Step 3 (Conclusion).** Step 1 establishes that SPAP-implementing systems necessarily possess complementary observable pairs. Step 2 establishes that simplex state spaces cannot support complementary pairs. Therefore, no SPAP-implementing system can have a simplex state space. ∎
 
-*Remark G.1.10a (Logical Foundation).* This result derives from the Logical Necessity foundation of Property R (§A.0.2), which establishes computational richness from the structure of prediction itself, independent of physical implementation. The exclusion of simplex state spaces therefore follows from the logical structure of self-reference without invoking PCE optimization dynamics. The derivation chain is:
+*Remark G.1.10a: Logical Foundation.* This result derives from the Logical Necessity foundation of Property R (§A.0.2), which establishes computational richness from the structure of prediction itself, independent of physical implementation. The exclusion of simplex state spaces therefore follows from the logical structure of self-reference without invoking PCE optimization dynamics. The derivation chain is:
 $$\text{SPAP} \xrightarrow{\text{Def 12}} \text{Logical Indeterminacy} \xrightarrow{\text{Cor 1, Prop 8}} \text{Complementarity} \xrightarrow{\text{Step 2}} \text{Non-simplex}$$
 This establishes that non-classical state space structure is logically necessary for self-referential predictive systems. The PCE-based arguments (Theorems G.1.7, G.1.8) then determine the specific form (complex Hilbert space with Born rule) among non-classical alternatives.
 
-*Remark G.1.10b (Connection to Hilbert Space Formalism).* Within the MPU Hilbert space $\mathcal{H}_0$ established by Theorem G.1.8, complementary observables necessarily satisfy $[\hat{A}, \hat{B}] \neq 0$ (Lemma 14.2a). The present result provides a logically prior exclusion of classical alternatives, while the efficiency-based derivations of Section G.1 determine the specific quantum structure among non-classical candidates.
+*Remark G.1.10b: Connection to Hilbert Space Formalism.* Within the MPU Hilbert space $\mathcal{H}_0$ established by Theorem G.1.8, complementary observables necessarily satisfy $[\hat{A}, \hat{B}] \neq 0$ (Lemma 14.2a). The present result provides a logically prior exclusion of classical alternatives, while the efficiency-based derivations of Section G.1 determine the specific quantum structure among non-classical candidates.
 
 **G.2 Local Phase Freedom and Emergence of Gauge Structure**
 
@@ -438,7 +438,7 @@ $$\mathfrak{m} = \left\{ \begin{pmatrix} 0_{a \times a} & Z \\ Z^\dagger & 0_{b 
 
 with $\dim_{\mathbb{R}}(\mathfrak{m}) = 2ab = 24$. This is the off-diagonal block structure coupling active and inactive subspaces.
 
-*Remark (Basis Independence).* The labeling $A = \{1, 2\}$, $B = \{3, \ldots, 8\}$ represents a choice of eigenbasis for $\rho_0$. By Proposition Z.1, any two choices of $a = 2$ dimensional active subspace are related by a unitary $U \in SU(8)$, and the symplectic structure derived below is invariant under this equivalence.
+*Remark: Basis Independence.* The labeling $A = \{1, 2\}$, $B = \{3, \ldots, 8\}$ represents a choice of eigenbasis for $\rho_0$. By Proposition Z.1, any two choices of $a = 2$ dimensional active subspace are related by a unitary $U \in SU(8)$, and the symplectic structure derived below is invariant under this equivalence.
 
 
 **Definition G.8.2b (Symplectic Incompatibility Form).** The natural symplectic form on $T_{\rho_0}$ induced by quantum incompatibility is:
@@ -469,7 +469,7 @@ $$
 
 **Corollary G.8.2f (Consistency with Channel Capacity).** The geometric bound $n_G^{(\mathrm{geom})} = 12$ refines the channel capacity range $n_{\max} \approx 7.5$–$20$ (Equation G.8.0) by providing a sharp upper constraint from symplectic geometry. The Standard Model gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ with $\dim = 8 + 3 + 1 = 12$ saturates the geometric bound.
 
-**Remark G.8.2g (Connection to Golay Structure).** The Lagrangian dimension $ab = 12$ equals the Golay code dimension $k = M/2 = 12$ (Theorem Z.13). This correspondence reflects structural unity: both the symplectic geometry (joint estimability) and the error-correction structure (optimal redundancy) select the same 12-dimensional subspace of the 24-dimensional interface. Gauge generators failing joint estimability incur additional PCE costs from incompatibility-induced measurement trade-offs, manifesting as increased operational cost $V_{\mathrm{op}}$ due to the necessity of sequential rather than simultaneous optimal estimation.
+**Remark G.8.2g: Connection to Golay Structure.** The Lagrangian dimension $ab = 12$ equals the Golay code dimension $k = M/2 = 12$ (Theorem Z.13). This correspondence reflects structural unity: both the symplectic geometry (joint estimability) and the error-correction structure (optimal redundancy) select the same 12-dimensional subspace of the 24-dimensional interface. Gauge generators failing joint estimability incur additional PCE costs from incompatibility-induced measurement trade-offs, manifesting as increased operational cost $V_{\mathrm{op}}$ due to the necessity of sequential rather than simultaneous optimal estimation.
 
 #### G.8.2.3 Anomaly Cancellation as a PCE Imperative (D‑Sensitive)
 
@@ -568,13 +568,15 @@ PCE favors system parameters such that $\eta_{ben}(D)>\lambda_c(D)\alpha_{load}/
 
 ### G.8.4 PCE Selection Criteria for Gauge Groups and Dimension
 
+The search space is the set of compact, reductive gauge algebras acting faithfully on the inactive subspace $\mathcal{B} = \mathbb{C}^6$.
+
 A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 
 1.  **Anomaly Freedom:** $V_{\text{anom}}(G,{\psi},D)=0$.
 2.  **Capacity Constraint:** $n_G \leq n_{\max}$. The channel capacity estimate (Equation G.8.0) yields the range $n_{\max} \approx 7.5$–$20$. The geometric bound from the Lagrangian dimension of the QFI symplectic structure (Theorem G.8.2e) yields $n_G \leq ab = 12$. This bound equals the complex dimension of the attractor orbit: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$, providing a geometric interpretation of the gauge dimension constraint. Since $12$ lies within the channel capacity range, the geometric bound provides the sharp constraint $n_G \leq 12$. This value equals both the Golay code dimension $k = 12$ (Theorem Z.13) and the complex dimension of the attractor orbit $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ (Theorem Z.6.3a). The triple coincidence—channel capacity bound, code dimension, and orbit dimension—provides strong evidence for the structural uniqueness of the gauge sector. The convergence of channel capacity, symplectic geometry, and error-correction theory at the value 12 constitutes a non-trivial consistency check on the framework.
     
     The bound $n_G \leq 12$ traces to two foundational parameters through the derivation chain:
-    $$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = e^\varepsilon = 2 \xrightarrow{d_0 = 8} b = d_0 - a = 6 \xrightarrow{} ab = 12$$
+    $$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{d_0 = 8} b = d_0 - a = 6 \xrightarrow{} ab = 12$$
     where $d_0 = 8$ is the minimal Hilbert space dimension for on-cycle injectivity of self-referential logic (Theorem 23, Lemma Z.1) and $\varepsilon = \ln 2$ is the SPAP entropy cost from the 2-to-1 state merge (Theorem 31, Appendix J).
 
 3.  **Structural Stability:** $D$ must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors $D=4$.
@@ -679,7 +681,7 @@ with each $\mathbb{C}^{n_i}$ an irreducible $\mathfrak{g}$-module. We refer to $
 
 Remaining candidates with maximal $\dim \leq 12$: $(3,1,1,1)$, $(2,2,2)$, $(2,2,1,1)$, $(2,1,1,1,1)$, $(1^6)$.
 
-**Step 4 (PCE benefit maximization filter).** From Equation G.8.1, the predictive benefit satisfies $V_{\text{benefit}} \propto \eta_{\text{ben}}(D) \cdot n_G$, creating an incentive to maximize the generator count up to the capacity bound. This follows from the PCE potential structure (Equation G.8.5): when $\eta_{\text{ben}}(D) > \lambda_c(D)\alpha_{\text{load}}/C_{\max}$, the coefficient of the linear $n_G$ term in $V_{\text{net}}$ is negative, favoring larger $n_G$. PCE optimization therefore selects algebras achieving $n_G = 12$ when this is attainable, provided the PCE potential structure satisfies this condition. Partitions with maximal dimension strictly less than 12 are PCE-suboptimal under this condition:
+**Step 4 (Coherence-compression saturation filter).** From Equation G.8.1, the predictive benefit satisfies $V_{\text{benefit}} \propto \eta_{\text{ben}}(D) \cdot n_G$, creating an incentive to maximize the generator count up to the capacity bound. This follows from the PCE potential structure (Equation G.8.5): when $\eta_{\text{ben}}(D) > \lambda_c(D)\alpha_{\text{load}}/C_{\max}$, the coefficient of the linear $n_G$ term in $V_{\text{net}}$ is negative, favoring larger $n_G$. PCE optimization therefore selects algebras achieving $n_G = 12$ when this is attainable, provided the PCE potential structure satisfies this condition. Partitions with maximal dimension strictly less than 12 are PCE-suboptimal under this condition:
 
 - $(2,2,1,1)$: $\dim_{\max} = 10 < 12$. Eliminated.
 - $(2,1,1,1,1)$: $\dim_{\max} = 8 < 12$. Eliminated.
@@ -693,7 +695,7 @@ For partition $(2,2,2)$, the maximal semisimple subalgebra is $\mathfrak{su}(2)^
 
 Remaining candidates: $(3,1,1,1)$ and $(3,2,1)$.
 
-**Step 6 (Anomaly filter on $(3,1,1,1)$).** For partition $(3,1,1,1)$, the maximal algebra is $\mathfrak{u}(3) \oplus \mathfrak{u}(1)^3$ with $\dim = 9 + 3 = 12$. Although this partition satisfies the capacity bound and PCE benefit maximization, it fails the anomaly constraints.
+**Step 6 (Anomaly filter on $(3,1,1,1)$).** For partition $(3,1,1,1)$, the maximal algebra is $\mathfrak{u}(3) \oplus \mathfrak{u}(1)^3$ with $\dim = 9 + 3 = 12$. Although this partition satisfies the capacity bound and coherence-compression saturation, it fails the anomaly constraints.
 
 Consider the $[SU(3)]^2 \times U(1)_i$ anomaly for each $U(1)_i$ factor. The anomaly coefficient is:
 $$
@@ -736,7 +738,7 @@ with $\dim = 8 + 3 + 1 = 12$.
 For the combined action to be faithful, no nonzero element of $\mathfrak{g}$ can annihilate all of $\mathcal{B}$. Since each simple factor acts faithfully on its designated module, and $U(1)_Y$ distinguishes the summands via distinct hypercharge values (as fixed by anomaly cancellation in Step 7), the combined action is faithful. ∎
 
 **Corollary G.8.4c (Standard Model Gauge Algebra Uniqueness).**
-The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ is the unique Lie algebra of dimension at most 12 acting faithfully on $\mathbb{C}^6$ that satisfies: (i) the Lagrangian capacity bound $n_G \leq 12$; (ii) PCE benefit maximization $n_G = 12$; (iii) chirality compatibility (complex representations); and (iv) anomaly-free chiral matter content.
+The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ is the unique Lie algebra of dimension at most 12 acting faithfully on $\mathbb{C}^6$ that satisfies: (i) the Lagrangian capacity bound $n_G \leq 12$; (ii) coherence-compression saturation $n_G = 12$; (iii) chirality compatibility (complex representations); and (iv) anomaly-free chiral matter content.
 
 *Proof.* Theorem G.8.4b establishes that $(3,2,1)$ is the unique partition surviving all constraints. The module decomposition $\mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ forces the algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ as the unique 12-dimensional faithful, chirality-compatible, anomaly-free solution. ∎
 
@@ -755,15 +757,15 @@ The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(
 **Corollary G.8.4c.2 (Proton Stability).**
 *The proton lifetime against gauge-mediated decay channels is infinite within the framework: $\tau_p^{\text{gauge}} = \infty$.*
 
-*Proof.* Gauge-mediated proton decay in GUT models proceeds via exchange of heavy gauge bosons ($X$, $Y$) corresponding to generators in $\mathfrak{g}_{\text{GUT}}/\mathfrak{g}_{\text{SM}}$ [Georgi & Glashow 1974; Langacker 1981]. By Corollary G.8.4c.1, the capacity bound $n_G \leq 12$ excludes all such extensions. The Standard Model gauge algebra saturates the bound at $\dim = 12$, leaving no room for additional gauge generators. Since Standard Model gauge interactions conserve baryon number at tree level, and no baryon-number-violating gauge extensions exist within the capacity bound, the gauge-mediated proton decay rate is exactly zero. Observable proton decay, if present, must arise from non-gauge mechanisms. ∎
+*Proof.* Gauge-mediated proton decay in GUT models proceeds via exchange of heavy gauge bosons ($X$, $Y$) corresponding to generators in $\mathfrak{g}_{\text{GUT}}/\mathfrak{g}_{\text{SM}}$ [Georgi & Glashow 1974; Langacker 1981]. By Corollary G.8.4c.1, the capacity bound $n_G \leq 12$ excludes all such extensions. The Standard Model gauge algebra saturates the bound at $\dim = 12$, leaving no room for additional gauge generators. Since Standard Model renormalizable gauge interactions preserve baryon number, and no baryon-number-violating gauge extensions exist within the capacity bound, the gauge-mediated proton decay rate is exactly zero. Observable proton decay, if present, must arise from non-gauge mechanisms. ∎
 
 
-**Remark G.8.4c.3 (Experimental Status).** Current experimental lower limits on partial lifetimes are $\tau/B(p \to e^+ \pi^0) > 2.4 \times 10^{34}$ years and $\tau/B(p \to \mu^+ \pi^0) > 1.6 \times 10^{34}$ years [Super-Kamiokande Collaboration 2020, Phys. Rev. D 102, 112011]. Minimal $SU(5)$ scenarios typically predict $\tau/B(p \to e^+ \pi^0)$ in the $10^{31}$–$10^{32}$ year range (model-dependent), which is excluded by more than two orders of magnitude [Nath & Fileviez Pérez 2007; Langacker 1981]. The framework predicts continued null results in searches for gauge-mediated proton decay modes.
+**Remark G.8.4c.3: Experimental Status.** Current experimental lower limits on partial lifetimes are $\tau/B(p \to e^+ \pi^0) > 2.4 \times 10^{34}$ years and $\tau/B(p \to \mu^+ \pi^0) > 1.6 \times 10^{34}$ years [Super-Kamiokande Collaboration 2020]. Minimal $SU(5)$ scenarios typically predict $\tau/B(p \to e^+ \pi^0)$ in the $10^{31}$–$10^{32}$ year range (model-dependent), which is excluded by more than two orders of magnitude [Nath & Fileviez Pérez 2007; Langacker 1981]. The framework predicts continued null results in searches for gauge-mediated proton decay modes.
 
 
-**Remark G.8.4d (Complementary Derivation Methods).** The module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ derived via exhaustive partition analysis coincides with the Local Module Hypothesis of Proposition G.M1. Both methods use the same foundational constraints—the capacity bound $n_G \leq 12$, anomaly cancellation, chirality requirements, and PCE optimization—but apply them differently: Proposition G.M1 proceeds by direct cost minimization, while Theorem G.8.4b proceeds by systematic elimination. The convergence of these complementary approaches establishes that the Standard Model gauge structure is uniquely determined by framework principles.
+**Remark G.8.4d: Complementary Derivation Methods.** The module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ derived via exhaustive partition analysis coincides with the Local Module Hypothesis of Proposition G.M1. Both methods use the same foundational constraints—the capacity bound $n_G \leq 12$, anomaly cancellation, chirality requirements, and PCE optimization—but apply them differently: Proposition G.M1 proceeds by direct cost minimization, while Theorem G.8.4b proceeds by systematic elimination. The convergence of these complementary approaches establishes that the Standard Model gauge structure is uniquely determined by framework principles.
 
-**Remark G.8.4e (Geometric Interpretation via Attractor Orbit).** The PCE-Attractor orbit is the Grassmannian $\text{Gr}(2,8)$ with isotropy group $K = U(2) \times U(6)$. The tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)$ is irreducible under $K$. By Schur's lemma, any $K$-invariant potential $V_{PCE}$ has scalar Hessian $H = \lambda I$ at the minimum with $\lambda = 3/2$ (Corollary T.41.3). 
+**Remark G.8.4e: Geometric Interpretation via Attractor Orbit.** The PCE-Attractor orbit is the Grassmannian $\text{Gr}(2,8)$ with isotropy group $K = U(2) \times U(6)$. The tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)$ is irreducible under $K$. By Schur's lemma, any $K$-invariant potential $V_{PCE}$ has scalar Hessian $H = \lambda I$ at the minimum with $\lambda = 3/2$ (Corollary T.41.3). 
 
 The gauge decomposition $\mathbb{C}^6 = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ induces a symmetry-breaking pattern $U(6) \to U(3) \times U(2) \times U(1)$ that splits the tangent space into components:
 $$\text{Hom}(\mathbb{C}^2, \mathbb{C}^6) = \text{Hom}(\mathbb{C}^2, \mathbb{C}^3) \oplus \text{Hom}(\mathbb{C}^2, \mathbb{C}^2) \oplus \text{Hom}(\mathbb{C}^2, \mathbb{C}^1)$$
@@ -810,20 +812,20 @@ For the Standard Model gauge algebra: $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12 
 
 The correspondence identifies organizational structure: 12-dimensional redundancy (parity/gauge) protecting or constraining 12-dimensional content (message/matter). This is a structural parallel at the level of dimensionality, not an algebraic isomorphism. ∎
 
-**Remark G.8.4g.1 (Clarification on CSS Quantum Codes).** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ has parameters $[[24, 0, 8]]$ with zero logical qubits, since $k_{\text{quantum}} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The quantum Singleton bound $n - k \geq 2(d-1)$ requires $k \leq 10$ for $[[24, k, 8]]$, confirming that $[[24, 12, 8]]$ is impossible. The analogy presented here concerns the **classical** code structure, not CSS quantum parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ partition ($k = n - k = 12$) and the gauge/matter sector organization.
+**Remark G.8.4g.1: Clarification on CSS Quantum Codes.** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ has parameters $[[24, 0, 8]]$ with zero logical qubits, since $k_{\text{quantum}} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The quantum Singleton bound $n - k \geq 2(d-1)$ requires $k \leq 10$ for $[[24, k, 8]]$, confirming that $[[24, 12, 8]]$ is impossible. The analogy presented here concerns the **classical** code structure, not CSS quantum parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ partition ($k = n - k = 12$) and the gauge/matter sector organization.
 
-**Remark G.8.4g.1a (Vacuum Stabilizer Interpretation).** The $[[24, 0, 8]]$ CSS construction yields a unique stabilizer state $|\Omega_{\text{Golay}}\rangle$, the uniform superposition over all 4096 Golay codewords:
+**Remark G.8.4g.1a: Vacuum Stabilizer Interpretation.** The $[[24, 0, 8]]$ CSS construction yields a unique stabilizer state $|\Omega_{\text{Golay}}\rangle$, the uniform superposition over all 4096 Golay codewords:
 $$|\Omega_{\text{Golay}}\rangle = \frac{1}{64} \sum_{c \in \mathcal{G}_{24}} |c\rangle$$
 This state is stabilized by 24 independent generators: 12 X-type generators $S_i^X = X^{g_i}$ (where $g_i$ is the $i$-th row of a generator matrix) and 12 Z-type generators $S_j^Z = Z^{h_j}$ (where $h_j$ is the $j$-th row of a parity-check matrix). The "12 + 12" structure thus manifests as stabilizer generators rather than signal versus parity qubits. The Golay minimum distance 8 implies that the smallest-weight non-identity stabilizer elements have weight 8; equivalently, any Pauli error of weight less than 8 produces a nontrivial syndrome under stabilizer measurement. The state is invariant under the Mathieu group $M_{24} = \text{Aut}(\mathcal{G}_{24})$, with $|M_{24}| = 244,823,040$.
 
-**Remark G.8.4g.2 (Functional Analogy).** The analogy suggests that gauge invariance serves a function analogous to error detection: gauge transformations identify physically equivalent configurations, just as parity constraints identify valid codewords. Physical observables must be gauge-invariant, just as transmitted messages must satisfy parity checks. The number 12 appears in both contexts because both derive from the rate-$\frac{1}{2}$ optimization on $M = 24$ modes (Theorem Z.13).
+**Remark G.8.4g.2: Functional Analogy.** The analogy suggests that gauge invariance serves a function analogous to error detection: gauge transformations identify physically equivalent configurations, just as parity constraints identify valid codewords. Physical observables must be gauge-invariant, just as transmitted messages must satisfy parity checks. The number 12 appears in both contexts because both derive from the rate-$\frac{1}{2}$ optimization on $M = 24$ modes (Theorem Z.13).
 
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 
 The PU framework provides a robust, multi-layered argument for the co-selection of D=4 spacetime and the Standard Model gauge group with its specific fermion content and three-generation structure. This selection is a derived consequence of minimizing the global PCE potential under the standing principles of compression efficiency and predictive invariance.
 
 1.  **Primacy of D=4 for Structural Stability and Information Efficiency:**
-    As argued in Sections G.8.2.4 and G.8.2.5, D=4 is strongly and uniquely favored by PCE. The mode count $M = 2ab = 24$ equals both the real dimension of the attractor orbit $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 24$ and the kissing number $K(4) = 24$ in four dimensions, establishing a geometric bridge between internal Hilbert space structure and emergent spacetime dimensionality. It is the dimension that robustly supports stable, complex MPU aggregates (via inverse-square force structure) and favorable network information efficiency. These factors make D=4 the unique, stable dimensional arena for a complex, predictive universe. This stability-based selection is independently confirmed by the mode-channel correspondence derived in **Appendix Z** (Theorem Z.11): the $M=24$ interface modes of the PCE-Attractor must match the kissing number $K(D)$ for optimal geometric packing, and $K(D)=24$ has the unique solution $D=4$. The convergence of these two independent derivations—one from dynamical stability, one from information-geometric correspondence—provides strong evidence that $D=4$ is multiply determined by the framework's principles.
+    As argued in Sections G.8.2.4 and G.8.2.5, D=4 is strongly and uniquely favored by PCE. The mode count $M = 2ab = 24$ equals both the real dimension of the attractor orbit $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 24$ and the kissing number $K(4) = 24$ in four dimensions, establishing a geometric bridge between internal Hilbert space structure and emergent spacetime dimensionality. It is the dimension that robustly supports stable, complex MPU aggregates (via inverse-square force structure) and favorable network information efficiency. These factors make D=4 the unique, stable dimensional arena for a complex, predictive universe. This stability-based selection is independently confirmed by the mode-channel correspondence derived in Appendix Z (Theorem Z.11): the $M=24$ interface modes of the PCE-Attractor must match the kissing number $K(D)$ for optimal geometric packing, and $K(D)=24$ has the unique solution $D=4$. The convergence of these two independent derivations—one from dynamical stability, one from information-geometric correspondence—provides strong evidence that $D=4$ is multiply determined by the framework's principles.
 
 2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
     Within the stable D=4 arena, PCE selects the optimal gauge group and matter content subject to capacity and consistency constraints.
@@ -872,12 +874,12 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
     
 ### G.8.6 Emergent Couplings and Masses
 
-The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yukawas are determined by the location and depth of the PCE minimum. Computing these from first principles requires evaluating the D-dependent coefficients in the PCE potential (Equation G.8.5) from MPU microdynamics. The ratios between these couplings are further constrained by the PCE optimization, a topic explored in **Appendix W**, and a concrete, attractor-matched estimate for the fine-structure constant is provided in **Appendix Z** (with order‑unity matching fixed at the PCE capacity point).
+The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yukawas are determined by the location and depth of the PCE minimum. Computing these from first principles requires evaluating the D-dependent coefficients in the PCE potential (Equation G.8.5) from MPU microdynamics. The ratios between these couplings are further constrained by the PCE optimization, a topic explored in Appendix W, and a concrete, attractor-matched estimate for the fine-structure constant is provided in Appendix Z (with order‑unity matching fixed at the PCE capacity point).
 
 
-# Appendix G.9 Rate-Level PCE Potential and the Pathway to $\alpha_{\mathrm{em}}$
+## G.9 Rate-Level PCE Potential and the Pathway to $\alpha_{\mathrm{em}}$
 
-This section develops the general formalism for deriving gauge couplings from a rate-level PCE potential, which balances the **power cost** of maintaining gauge coherence against the **predictive information rate** benefit it provides. This general framework is further constrained by the alphabet identities derived in **Appendix W**. The complete, parameter-free derivation of the fine-structure constant at the Thomson limit, which uses the framework's foundational constants ($d_0=8$, $\varepsilon=\ln 2$) to fix the spectral inputs to this program and solve for $\alpha^{-1} ≈ 137.036$ at the unique **PCE-Attractor** (Definition 15a), is presented in **Appendix Z**.
+This section develops the general formalism for deriving gauge couplings from a rate-level PCE potential, which balances the **power cost** of maintaining gauge coherence against the **predictive information rate** benefit it provides. This general framework is further constrained by the alphabet identities derived in Appendix W. The complete, parameter-free derivation of the fine-structure constant at the Thomson limit, which uses the framework's foundational constants ($d_0=8$, $\varepsilon=\ln 2$) to fix the spectral inputs to this program and solve for $\alpha^{-1} ≈ 137.036$ at the unique PCE-Attractor (Definition 15a), is presented in Appendix Z.
 
 The rate-level PCE potential for a $U(1)$ gauge coupling $u=g_e^2$ is given by:
 $$
@@ -885,7 +887,7 @@ $$
 $$
 where $P_{\mathrm{cost}}(u) \approx A_{\mathrm{PCE}} u^{\gamma_{\mathrm{eff}}}$ is the power cost of maintaining coherence and $V_{\mathrm{benefit}}(u) = \sum_i \ln(1+\lambda_i u)$ is the per-event predictive information gain, derived from the Local Asymptotic Normality (LAN) of the MPU's predictive channel. The system seeks the value $u^*$ that minimizes this potential, subject to the alphabet capacity constraint $V_{\mathrm{benefit}}(u) \le \ln d_0$.
 
-As rigorously established in **Appendix X**, this rate-level potential and its minimization are equivalent to finding the stationary point of the full QFT effective potential. The physical coupling is then $\alpha_{\mathrm{em}}(\mu^*) = u^*/(4\pi\kappa)$, where the normalization $\kappa$ is determined by the emergent field theory (Appendix X.3). The inputs to this calculation—specifically the QFI spectrum $\{\lambda_i\}$—are operational functionals of the baseline PCE-optimal MPU cycle. **Appendix Z** demonstrates that at the PCE-Attractor, these spectral inputs are uniquely determined by the framework's foundational constants, leading to a complete, parameter-free calculation of $\alpha_{\mathrm{em}}$.
+As rigorously established in Appendix X, this rate-level potential and its minimization are equivalent to finding the stationary point of the full QFT effective potential. The physical coupling is then $\alpha_{\mathrm{em}}(\mu^*) = u^*/(4\pi\kappa)$, where the normalization $\kappa$ is determined by the emergent field theory (Appendix X.3). The inputs to this calculation—specifically the QFI spectrum $\{\lambda_i\}$—are operational functionals of the baseline PCE-optimal MPU cycle. Appendix Z demonstrates that at the PCE-Attractor, these spectral inputs are uniquely determined by the framework's foundational constants, leading to a complete, parameter-free calculation of $\alpha_{\mathrm{em}}$.
 
 
 ## G.1.9 Unified Origin of Probability Measures from ND-RID Equilibration
@@ -899,7 +901,7 @@ This probability unification is the dynamical complement to the entropy unificat
 The logical foundation for probability measures in the PU framework traces through a rigorous derivation chain:
 
 $$
-\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon \geq \ln 2 \xrightarrow{\text{Thm Z.1}} a = e^{\varepsilon} = 2 \xrightarrow{\text{Def 15a}} \tau^* = \frac{I_a}{a} \oplus 0_b
+\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Def 15a}} \tau^* = \frac{I_a}{a} \oplus 0_b
 $$
 
 **Stage 1: Irreducible Entropy Cost.** The Self-Referential Paradox of Accurate Prediction (Theorems 10–11) requires a logically irreversible 2-to-1 state merge in each predictive cycle (Lemma Z.2). By Landauer's principle [Landauer 1961], this merge has an irreducible thermodynamic cost (Theorem 31, Appendix J):
@@ -911,10 +913,10 @@ $$
 
 The bound is exact and saturated by optimal erasure protocols [Bennett 1982]. This entropy cost $\varepsilon = \ln 2$ is the foundational element of the unified entropy structure (Thesis P.6.1, Appendix P), from which all other entropy measures derive as domain-specific expressions.
 
-**Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space is exactly $S = \ln a$ nats [von Neumann 1932]. For exact correspondence—neither insufficient nor wasteful—we require (Theorem Z.1):
+**Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space satisfies $S(\rho) \le \ln a$ nats, with equality only for the maximally mixed state [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible $a$ (Theorem Z.1):
 
 $$
-\ln a = \varepsilon \implies a = e^{\ln 2} = 2
+a = 2
 \tag{G.1.9.2}
 $$
 
@@ -974,7 +976,7 @@ This establishes $p = 1/3$ as the minimum reset probability achievable when $\Ps
 
 *Proof.* Since $T_\sigma$ is strictly positive and appears with weight $p > 0$, we have $\mathcal{E}_N(\rho) \geq p \cdot \text{Tr}(\rho)\sigma$ for all $\rho \geq 0$ (Equation E.2a). This strict positivity condition ensures primitivity [Sanz et al. 2010]. For a primitive CPTP map on $\mathcal{B}(\mathcal{H}_{d_0})$: (i) the eigenvalue 1 is simple; (ii) the spectral gap $\lambda_{gap}(\mathcal{E}_N) < 1$ governs exponential convergence; (iii) the trace distance contracts: $D_{tr}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \leq f_{RID} \cdot D_{tr}(\rho_1, \rho_2)$ [Wolf 2012; Kastoryano & Temme 2013]. QED
 
-*Remark (Primitivity vs. PCE-Attractor).* The primitivity argument establishes *contractivity*—that states converge exponentially. The *destination* of this convergence is determined by PCE optimization (Definition 15), which selects the PCE-Attractor $\tau^*$ as the equilibrium configuration. While a primitive channel on the full $d_0$-dimensional space has a unique full-rank fixed point, the PCE-Attractor $\tau^* = (I_2/2) \oplus 0_6$ represents the PCE-optimal state within the orbit of equilibrium configurations, with dynamics effectively restricted to the active subspace by the thermodynamic decoupling of inactive modes (Appendix Z, Section Z.6.2).
+*Remark: Primitivity vs. PCE-Attractor.* The primitivity argument establishes *contractivity*—that states converge exponentially. The *destination* of this convergence is determined by PCE optimization (Definition 15), which selects the PCE-Attractor $\tau^*$ as the equilibrium configuration. While a primitive channel on the full $d_0$-dimensional space has a unique full-rank fixed point, the PCE-Attractor $\tau^* = (I_2/2) \oplus 0_6$ represents the PCE-optimal state within the orbit of equilibrium configurations, with dynamics effectively restricted to the active subspace by the thermodynamic decoupling of inactive modes (Appendix Z, Section Z.6.2).
 
 ### G.1.9.3 PCE Optimization and Detailed Balance
 
@@ -1085,7 +1087,7 @@ By Definition G.1.9.2, any density matrix $\rho_{phys}$ admits the Gibbs represe
 
 $$
 p_i = \text{Tr}\left(\frac{e^{-K^*}}{Z} P_i\right) = \text{Tr}(\rho_{phys} P_i)
-\tag{G.1.9.14}
+\tag{G.1.9.13}
 $$
 
 The substantive content of the unification lies in Parts B and C, where physical constraints impose structure on the modular Hamiltonian beyond this identity.
@@ -1094,7 +1096,7 @@ The substantive content of the unification lies in Parts B and C, where physical
 
 $$
 \rho^*_{thermal} = \frac{e^{-(K^*_{PCE} + \beta H)}}{Z} \propto e^{-\beta H}
-\tag{G.1.9.13}
+\tag{G.1.9.14}
 $$
 
 on the active subspace, recovering the Boltzmann distribution. Here the constraint $K^*_{constraint} = \beta H$ is non-trivial: it reflects the physical restriction of energy conservation and introduces the temperature $T = 1/(k_B \beta)$ as a derived quantity.
@@ -1142,7 +1144,7 @@ This identifies the gravitational constant $G$ as an emergent quantity determine
 The result $\eta_{ent} = 1/(4G)$ connects directly to the gravitational entropy in the unified entropy framework (Section P.6.5). The Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ arises from the channel capacity of ND-RID interactions crossing the horizon (Theorems E.3–E.5). This is not an analogy but an identity: horizon entropy counts the Shannon entropy of channel capacity across the boundary, measured in Planck units. The derivation chain from SPAP to horizon entropy (Section P.6.5.2) makes this explicit:
 
 $$
-\varepsilon > 0 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
+\varepsilon > 0 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
 $$
 
 ### G.1.9.7 The Unified Mechanism
@@ -1162,7 +1164,7 @@ The unification is characterized by:
    - Thermal: $K^* = K^*_{PCE} + \beta H$
    - Gravitational: $K^* = K^*_{PCE} + (2\pi/\kappa)K_{boost}$
 
-5. **Common Capacity Bound:** All distributions respect the channel capacity limit $C_{max}(f_{RID}) < \ln d_0$ (Theorem E.2) imposed by ND-RID irreversibility.
+5. **Common Capacity Bound:** All distributions respect the channel capacity limit $C_{\max}(f_{RID}) < \ln d_0$ (Theorem E.2) imposed by ND-RID irreversibility.
 
 The Gibbs structure $\rho^* = Z^{-1}e^{-K^*}$ connects directly to the unified entropy framework (Thesis P.6.1). The von Neumann entropy $S(\rho^*) = \langle K^* \rangle + \ln Z$ is the domain-specific expression of the foundational SPAP entropy $\varepsilon = \ln 2$, scaled by the constraint geometry.
 
@@ -1184,7 +1186,7 @@ The irreducible entropy cost $\varepsilon = \ln 2$ plays the role of a fundament
 |--------|----------|------------|
 | Logical | SPAP cycle cost | $\varepsilon = \ln 2$ nats |
 | Thermodynamic | Minimum heat dissipation | $Q_{min} = k_B T \ln 2$ |
-| Information | Active subspace dimension | $a = e^{\varepsilon} = 2$ |
+| Information | Active subspace dimension | $a = 2$ |
 | Geometric | Interface mode count | $M = 2ab = 24$ |
 
 These conversions realize the entropy domain correspondences of Thesis P.6.1 (Section P.6.5.1). The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains, while $\varepsilon = \ln 2$ is the fundamental quantum of entropy from which all domain-specific expressions derive.
@@ -1193,7 +1195,7 @@ These conversions realize the entropy domain correspondences of Thesis P.6.1 (Se
 
 1. **Logical → Thermodynamic:** Landauer's principle (Theorem 31) establishes $Q_{min} = k_B T \varepsilon = k_B T \ln 2$ [Landauer 1961].
 
-2. **Thermodynamic → Information:** PPI (Theorem Z.1) requires $\ln a = \varepsilon$, yielding $a = e^{\ln 2} = 2$.
+2. **Thermodynamic → Information:** PPI-optimality (Theorem Z.1) selects the minimal $a \in \mathbb{N}$ satisfying $\ln a \ge \varepsilon$, yielding $a = 2$.
 
 3. **Information → Geometric:** The QFI mode count is $M = 2ab = 2 \cdot 2 \cdot 6 = 24$ (Theorem Z.5), which matches the kissing number $K(4) = 24$ [Conway & Sloane 1999], determining spacetime dimension $D = 4$ (Theorem Z.11). QED
 
@@ -1254,7 +1256,7 @@ This follows from single-valuedness of the amplitude $e^{i\mathcal{S}/\hbar}$. F
 $$N_{\text{cycles}} = \frac{2\pi\hbar/\hbar}{\ln 2} = \frac{2\pi}{\ln 2} \approx 9.065$$
 QED
 
-**Remark G.1.9.10c (Complementary Roles of $\varepsilon$ and $2\pi$).** The quantities $\varepsilon = \ln 2$ and $2\pi$ operate in complementary domains:
+**Remark G.1.9.10c: Complementary Roles of $\varepsilon$ and $2\pi$.** The quantities $\varepsilon = \ln 2$ and $2\pi$ operate in complementary domains:
 
 | Quantity | Domain | Origin | Role in Framework |
 |:---------|:-------|:-------|:------------------|
@@ -1263,7 +1265,7 @@ QED
 
 Neither is derivable from the other. The measure-theoretic entropy $\varepsilon$ counts distinguishable states; the topological factor $2\pi$ enforces consistency under cyclic evolution. Their ratio $2\pi/\ln 2$ characterizes the computational depth of one action quantum.
 
-**Remark G.1.9.10d (Connection to Modular Flow).** The KMS condition (Theorem G.1.9.5) characterizes equilibrium states with respect to modular flow $\sigma_t(A) = e^{iK^* t} A e^{-iK^* t}$ at inverse temperature $\beta = 1$. On the active subspace, $K^*|_{\mathcal{A}} = (\ln 2)\cdot I_2$ (Theorem G.1.9.4), so the modular Hamiltonian eigenvalue is $\ln 2$. The ratio $2\pi/\ln 2 \approx 9.065$ appearing in Corollary G.1.9.10b characterizes the action-entropy conversion: one topological quantum of phase ($2\pi$) corresponds to $2\pi/\ln 2$ units of SPAP entropy.
+**Remark G.1.9.10d: Connection to Modular Flow.** The KMS condition (Theorem G.1.9.5) characterizes equilibrium states with respect to modular flow $\sigma_t(A) = e^{iK^* t} A e^{-iK^* t}$ at inverse temperature $\beta = 1$. On the active subspace, $K^*|_{\mathcal{A}} = (\ln 2)\cdot I_2$ (Theorem G.1.9.4), so the modular Hamiltonian eigenvalue is $\ln 2$. The ratio $2\pi/\ln 2 \approx 9.065$ appearing in Corollary G.1.9.10b characterizes the action-entropy conversion: one topological quantum of phase ($2\pi$) corresponds to $2\pi/\ln 2$ units of SPAP entropy.
 
 ### G.8.7 Mode-Polarization Correspondence
 
@@ -1291,19 +1293,19 @@ $$a = D - 2$$
 
 where $a = 2$ is the Landauer active dimension (Theorem Z.1) and $D = 4$ is the emergent spacetime dimension (Theorem Z.11).
 
-*Proof.* From Theorem Z.1, the Landauer erasure cost $\varepsilon = \ln 2$ requires active dimension $a = e^\varepsilon = 2$. From Theorem Z.11, the mode-channel correspondence $M = K(D)$ with $M = 24$ uniquely selects $D = 4$. Therefore $D - 2 = 4 - 2 = 2 = a$.
+*Proof.* From Theorem Z.1, PPI-optimality with Landauer cost $\varepsilon = \ln 2$ selects active dimension $a = 2$. From Theorem Z.11, the mode-channel correspondence $M = K(D)$ with $M = 24$ uniquely selects $D = 4$. Therefore $D - 2 = 4 - 2 = 2 = a$.
 
 This equality holds specifically at the PCE-optimal point. Checking alternatives:
 
-| $\varepsilon$ | $a = e^\varepsilon$ | $b = 8 - a$ | $M = 2ab$ | $D$ from $K(D) = M$ | $a = D-2$? |
-|:-------------:|:-------------------:|:-----------:|:---------:|:-------------------:|:----------:|
+| $\varepsilon$ | $a$ | $b = 8 - a$ | $M = 2ab$ | $D$ from $K(D) = M$ | $a = D-2$? |
+|:-------------:|:---:|:-----------:|:---------:|:-------------------:|:----------:|
 | $\ln 2$ | 2 | 6 | 24 | 4 | ✓ |
 | $\ln 3$ | 3 | 5 | 30 | — | ✗ |
-| $\ln 1.5$ | 1.5 | — | — | — | ✗ |
+| $\ln 1.5$ | — | — | — | — | ✗ |
 
 Only the unique solution $(\varepsilon, a, b, M, D) = (\ln 2, 2, 6, 24, 4)$ exists, and it satisfies $a = D - 2$. ∎
 
-**Remark G.8.7d (Interpretation).** The identity $a = D - 2$ connects thermodynamic irreversibility (the Landauer pointer requires 2 distinguishable states) to relativistic gauge theory (massless vectors have 2 transverse polarizations). This is "accidental necessity"—necessary because no other consistent configuration exists.
+**Remark G.8.7d: Interpretation.** The identity $a = D - 2$ connects thermodynamic irreversibility (the Landauer pointer requires 2 distinguishable states) to relativistic gauge theory (massless vectors have 2 transverse polarizations). This is "accidental necessity"—necessary because no other consistent configuration exists.
 
 **Table G.8.7 (Factor Correspondence).**
 
@@ -1324,7 +1326,7 @@ Only the unique solution $(\varepsilon, a, b, M, D) = (\ln 2, 2, 6, 24, 4)$ exis
 
 *Proof.* The partition $(a, b) = (2, 6)$ is uniquely determined by $\varepsilon = \ln 2$ (Theorem Z.1). The Grassmannian $\mathrm{Gr}(2, 8)$ has a unique compatible complex structure (Appendix P). The Golay code selects a unique (up to equivalence) Lagrangian subspace (Theorem Z.13). The SM gauge algebra is the unique 12-dimensional algebra satisfying all physical constraints (Theorem G.8.4b). The little group $SO(2)$ in $D = 4$ acts on the 2-dimensional transverse polarization plane via its defining representation. All ingredients are uniquely determined by framework constraints. ∎
 
-# G.10 Emergence of Spinor Structure from SPAP Logic
+## G.10 Emergence of Spinor Structure from SPAP Logic
 
 The preceding sections derived the gauge structure of the Standard Model from PCE optimization on the MPU Hilbert space. This section completes the derivation by establishing that matter fields necessarily transform as spinors under the emergent Lorentz group. The derivation draws on results from Appendix N (mass-information equivalence), Appendix O (temporal structure), and Appendix Z (Landauer partition). The spinor structure is not postulated but emerges from the $\mathbb{Z}_2$ involution inherent in the SPAP update cycle (Theorem 10) when physically instantiated on the minimal active kernel via the Principle of Physical Instantiation (PPI, Definition P.6.2).
 
@@ -1367,7 +1369,7 @@ This establishes the chain: $\text{SPAP} \xrightarrow{\mathbb{Z}_2} \varepsilon 
 
 ### G.10.2.1 The Active Kernel Dimension
 
-**Theorem G.10.2 (Unitary Realization of SPAP Involution).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the logical involution $\iota$ to be realized as a unitary operator on the active kernel $\mathcal{H}_a \cong \mathbb{C}^a$ with $a = e^\varepsilon = 2$ (Theorem Z.1). The PCE-optimal realization satisfying $U_\iota^2 = I$ is:
+**Theorem G.10.2 (Unitary Realization of SPAP Involution).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the logical involution $\iota$ to be realized as a unitary operator on the active kernel $\mathcal{H}_a \cong \mathbb{C}^a$ with $a = 2$ (Theorem Z.1). The PCE-optimal realization satisfying $U_\iota^2 = I$ is:
 $$
 U_\iota = \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \tag{G.10.3}
 $$
@@ -1375,9 +1377,9 @@ up to unitary equivalence.
 
 *Proof.*
 
-**Step 1 (Active kernel dimension from PPI).** By Theorem Z.1, the irreducible Landauer cost $\varepsilon = \ln 2$ (Theorem 31) requires physical instantiation on a subsystem whose von Neumann entropy equals $\varepsilon$ when maximally mixed. The von Neumann entropy of a maximally mixed state on an $a$-dimensional space is $S = \ln a$ [von Neumann 1932]. PPI requires exact correspondence (neither insufficient nor wasteful):
+**Step 1 (Active kernel dimension from PPI).** By Theorem Z.1, the irreducible Landauer cost $\varepsilon = \ln 2$ (Theorem 31) requires physical instantiation on a subsystem whose entropy capacity can accommodate the Landauer cost. The von Neumann entropy of a state on an $a$-dimensional space satisfies $S(\rho) \le \ln a$ [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible value:
 $$
-\ln a = \varepsilon = \ln 2 \implies a = 2 \tag{G.10.4}
+a = 2 \tag{G.10.4}
 $$
 This is the "Landauer Pointer"—the minimal 2-dimensional active kernel within the $d_0 = 8$ MPU Hilbert space (Theorem 23).
 
@@ -1439,11 +1441,11 @@ U(2\pi, \hat{n}) = \exp(-i\pi \hat{n} \cdot \vec{\sigma}) = -I \tag{G.10.8}
 $$
 using the identity $(\hat{n} \cdot \vec{\sigma})^2 = I$ and the matrix exponential $e^{-i\pi A} = \cos(\pi)I - i\sin(\pi)A = -I$ for any matrix $A$ with $A^2 = I$ [Sakurai & Napolitano 2017]. Thus $|\psi\rangle \mapsto -|\psi\rangle$ under $2\pi$ rotation, which is the defining property of a spinor. ∎
 
-**Remark G.10.1 (Causal Chain from SPAP $\mathbb{Z}_2$ to Spinor $\mathbb{Z}_2$).** The $\mathbb{Z}_2$ structure appears at two distinct points in the derivation chain: first as the logical involution of SPAP ($\iota: \phi \mapsto \text{NOT}(\phi)$), and second as the kernel $\{I, -I\}$ of the double cover $\pi: \text{SU}(2) \to \text{SO}(3)$. These are mathematically distinct objects—the SPAP $\mathbb{Z}_2$ acts on the logical states $\{0, 1\}$ via negation, while the double cover $\mathbb{Z}_2$ acts on the active kernel $\mathbb{C}^2$ by scalar multiplication. However, these two $\mathbb{Z}_2$ structures are *connected through necessary implication* in the derivation chain established in this appendix:
+**Remark G.10.1: Causal Chain from SPAP $\mathbb{Z}_2$ to Spinor $\mathbb{Z}_2$.** The $\mathbb{Z}_2$ structure appears at two distinct points in the derivation chain: first as the logical involution of SPAP ($\iota: \phi \mapsto \text{NOT}(\phi)$), and second as the kernel $\{I, -I\}$ of the double cover $\pi: \text{SU}(2) \to \text{SO}(3)$. These are mathematically distinct objects—the SPAP $\mathbb{Z}_2$ acts on the logical states $\{0, 1\}$ via negation, while the double cover $\mathbb{Z}_2$ acts on the active kernel $\mathbb{C}^2$ by scalar multiplication. However, these two $\mathbb{Z}_2$ structures are *connected through necessary implication* in the derivation chain established in this appendix:
 
 1. The SPAP logical involution (Definition G.10.1) determines the 2-to-1 merge structure (Lemma Z.2)
 2. This merge structure determines $\varepsilon = \ln 2$ via Landauer's principle (Theorem 31)
-3. PPI requires physical instantiation on a subsystem of dimension $a = e^\varepsilon = 2$ (Theorem Z.1)
+3. PPI-optimality selects the minimal admissible subsystem dimension $a = 2$ (Theorem Z.1)
 4. PCE selects SU(2) as the symmetry group of this 2-dimensional active kernel (Theorem G.10.3)
 5. SU(2) inherently possesses center $\{I, -I\} \cong \mathbb{Z}_2$ and is the universal double cover of SO(3)
 
@@ -1510,7 +1512,7 @@ where $\tau_{\text{min}} = \sqrt{8\varepsilon} \cdot t_P$ is the temporal discre
 
 **Step 4 (Conclusion for fundamental fermions).** Fundamental fermionic matter fields—those whose mass arises from direct participation in the SPAP-processed relational information—necessarily transform as spinors. ∎
 
-**Remark G.10.3 (Scope of Theorem G.10.6).** This theorem applies to *fundamental fermions* whose mass originates from the relational information mechanism of Theorem N.5. It does not apply to:
+**Remark G.10.3: Scope of Theorem G.10.6.** This theorem applies to *fundamental fermions* whose mass originates from the relational information mechanism of Theorem N.5. It does not apply to:
 - **Composite particles** (e.g., protons, neutrons) whose mass arises predominantly from QCD binding energy
 - **Scalar bosons** (e.g., the Higgs) whose mass arises from the scalar potential
 - **Gauge bosons** which acquire mass through symmetry breaking mechanisms
@@ -1551,7 +1553,7 @@ $$
 
 This result is consistent with the spin-statistics theorem of axiomatic quantum field theory [Streater & Wightman 1964; Pauli 1940], which is recovered in the emergent AQFT framework (Theorem F.2, Appendix F).
 
-**Remark G.10.2 (PCE Interpretation of Spin-Statistics).** Theorem G.10.7 derives the spin-statistics connection from the topological structure of configuration space combined with the spinor transformation property. An independent, information-theoretic perspective is provided in Appendix F, Proposition F.2, which establishes that Fermi-Dirac statistics minimize aggregate predictive complexity $C_{agg}$ for multi-particle configurations of half-integer spin fields. The antisymmetric wavefunction eliminates redundant configuration-space volume by enforcing the Pauli exclusion constraint automatically, reducing the effective Hilbert space dimension from $d_{int}^N$ to $\binom{d_{int}}{N}$. Both derivations—the topological (Theorem G.10.7) and the PCE-based (Proposition F.2)—arrive at the same conclusion through complementary routes, reinforcing the consistency of the framework.
+**Remark G.10.2: PCE Interpretation of Spin-Statistics.** Theorem G.10.7 derives the spin-statistics connection from the topological structure of configuration space combined with the spinor transformation property. An independent, information-theoretic perspective is provided in Appendix F, Proposition F.2, which establishes that Fermi-Dirac statistics minimize aggregate predictive complexity $C_{agg}$ for multi-particle configurations of half-integer spin fields. The antisymmetric wavefunction eliminates redundant configuration-space volume by enforcing the Pauli exclusion constraint automatically, reducing the effective Hilbert space dimension from $d_{int}^N$ to $\binom{d_{int}}{N}$. Both derivations—the topological (Theorem G.10.7) and the PCE-based (Proposition F.2)—arrive at the same conclusion through complementary routes, reinforcing the consistency of the framework.
 
 ---
 
@@ -1563,7 +1565,7 @@ This result is consistent with the spin-statistics theorem of axiomatic quantum 
 |:----:|:-------|:-------|:------:|:----------|
 | 1 | $\iota^2 = \text{id}$, $\iota \neq \text{id}$ | SPAP logical structure | Derived | Theorem 10, Lemma G.10.1 |
 | 2 | $\varepsilon = \ln 2$ | Landauer + 2-to-1 merge | Derived | Theorem 31, Lemma Z.2 |
-| 3 | $a = e^\varepsilon = 2$ | PPI + Shannon entropy | Derived | Theorem Z.1 |
+| 3 | $a = 2$ | PPI-optimality | Derived | Theorem Z.1 |
 | 4 | $U_\iota = \sigma_x \in U(2)$ | Unitary realization | Derived | Theorem G.10.2 |
 | 5 | SU(2) symmetry | PCE + completeness | Derived | Theorem G.10.3 |
 | 6 | Double cover SU(2) → SO(3) | Lie theory | Recovered | Theorem G.10.4 |
@@ -1602,7 +1604,7 @@ This appendix has demonstrated how the Predictive Universe framework derives fun
 
 4. **Three Generations:** Anomaly cancellation, CP violation requirements, and $E_8$ geometric constraints uniquely minimize the generation potential at $N_g = 3$ (Appendix R, Propositions R.3.5, R.4.2).
 
-5. **Fine-Structure Constant:** The value $\alpha_{em}^{-1} \approx 137.036$ emerges as the unique PCE-optimal equilibrium balancing U(1) coherence costs against predictive information rates (Section G.9), with the calculation reduced to evaluation of operational functionals on the MPU baseline cycle.
+5. **Fine-Structure Constant:** The value $\alpha_{em}^{-1} = 137.036092 \pm 0.000050$ emerges as the unique PCE-optimal equilibrium balancing U(1) coherence costs against predictive information rates (Section G.9), with the calculation reduced to evaluation of operational functionals on the MPU baseline cycle.
 
 6. **Unified Probability Measures:** Quantum (Born), thermal (Boltzmann), and gravitational (Unruh-Hawking) probability distributions arise from a common mechanism—ND-RID equilibration to Gibbs fixed points under PCE optimization (Section G.1.9).
 

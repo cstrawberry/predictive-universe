@@ -1,4 +1,4 @@
-# **Appendix L: Unified Foundation — Energy Accounting and Thermodynamic Consistency**
+# Appendix L: Unified Foundation — Energy Accounting and Thermodynamic Consistency
 
 ## **L.0 Foundational Insight: Awareness as Primary**
 
@@ -45,27 +45,27 @@ The CC hypothesis posits that a complex aggregate's internal state influences lo
 
 ## **Definition L.1 (Context State $\text{context}_S$)**
 
-Let $\rho_{\mathrm{agg}}(t)$ be the aggregate density operator describing the quantum state of an MPU aggregate $S$ (Definition 29) on its Hilbert space $\mathcal{H}_{\mathrm{agg}}$. The context state $\text{context}S(t)$ represents the macroscopically observable, predictively relevant features of $\rho{\mathrm{agg}}(t)$. These features are those the aggregate is capable of controlling or influencing within available resources, and which are relevant for potentially biasing local MPU interactions. The specific construction of $\text{context}_S(t)$ is formalized as a Minimal Sufficient Statistic derived from the Principle of Compression Efficiency (PCE, Definition 15).
+Let $\rho_{\mathrm{agg}}(t)$ be the aggregate density operator describing the quantum state of an MPU aggregate $S$ (Definition 29) on its Hilbert space $\mathcal{H}_{\mathrm{agg}}$. The context state $\text{context}_S(t)$ represents the macroscopically observable, predictively relevant features of $\rho_{\mathrm{agg}}(t)$. These features are those the aggregate is capable of controlling or influencing within available resources, and which are relevant for potentially biasing local MPU interactions. The specific construction of $\text{context}_S(t)$ is formalized as a Minimal Sufficient Statistic derived from the Principle of Compression Efficiency (PCE, Definition 15).
 
-Let $\mathcal{O}{\text{full}} = {\hat{O}\gamma}{\gamma \in \mathcal{G}}$ be the set of all physically realizable operators whose expectation values could, in principle, be extracted from $\rho{\mathrm{agg}}(t)$. The full set of such expectation values, $\mathcal{V}{\text{full}} = {\langle \hat{O}\gamma \rangle_t}{\gamma \in \mathcal{G}}$, constitutes a complete description of the state $\rho{\mathrm{agg}}(t)$ and thus contains all potentially relevant information. However, maintaining and utilizing $\mathcal{V}_{\text{full}}$ would generally incur prohibitive complexity and resource costs.
+Let $\mathcal{O}_{\text{full}} = \{\hat{O}_\gamma\}_{\gamma \in \mathcal{G}}$ be the set of all physically realizable operators whose expectation values could, in principle, be extracted from $\rho_{\mathrm{agg}}(t)$. The full set of such expectation values, $\mathcal{V}_{\text{full}} = \{\langle \hat{O}_\gamma \rangle_t\}_{\gamma \in \mathcal{G}}$, constitutes a complete description of the state $\rho_{\mathrm{agg}}(t)$ and thus contains all potentially relevant information. However, maintaining and utilizing $\mathcal{V}_{\text{full}}$ would generally incur prohibitive complexity and resource costs.
 
-PCE drives the system to identify a minimal subset of these observables, ${\hat{O}\alpha}{\alpha \in \mathcal{I}} \subset \mathcal{O}_{\text{full}}$ (with $\mathcal{I} \subset \mathcal{G}$), such that the vector of their expectation values, $\text{context}_S(t)$, is sufficient for the aggregate's specific POP goals related to CC influence, while minimizing the associated costs of representation, computation, and control. This sufficiency is defined relative to the aggregate's ability to bias local ND-RID outcomes to maximize its net predictive utility (related to POP, Axiom 1).
+PCE drives the system to identify a minimal subset of these observables, $\{\hat{O}_\alpha\}_{\alpha \in \mathcal{I}} \subset \mathcal{O}_{\text{full}}$ (with $\mathcal{I} \subset \mathcal{G}$), such that the vector of their expectation values, $\text{context}_S(t)$, is sufficient for the aggregate's specific POP goals related to CC influence, while minimizing the associated costs of representation, computation, and control. This sufficiency is defined relative to the aggregate's ability to bias local ND-RID outcomes to maximize its net predictive utility (related to POP, Axiom 1).
 
-This construction is governed by PCE, which selects the set ${\hat{O}\alpha}{\alpha \in \mathcal{I}}$ that minimizes the effective contribution to the global PCE Potential $V(x)$ (Definition D.1, Appendix D) associated with managing the context. This contribution, $V_{\text{context}}$, takes the form:
+This construction is governed by PCE, which selects the set $\{\hat{O}_\alpha\}_{\alpha \in \mathcal{I}}$ that minimizes the effective contribution to the global PCE Potential $V(x)$ (Definition D.1, Appendix D) associated with managing the context. This contribution, $V_{\text{context}}$, takes the form:
 
-$$ V_{\text{context}}[{\hat{O}\alpha}] = \lambda{\text{rep}} C_P({\hat{O}\alpha}) + \lambda{\text{ctrl}} R_{\text{cost}}({\hat{O}\alpha}) - \Gamma{\text{utility}} U_{\text{bias}}({\langle\hat{O}_\alpha\rangle}) \tag{L.1} $$
+$$ V_{\text{context}}[\{\hat{O}_\alpha\}] = \lambda_{\text{rep}} C_P(\{\hat{O}_\alpha\}) + \lambda_{\text{ctrl}} R_{\text{cost}}(\{\hat{O}_\alpha\}) - \Gamma_{\text{utility}} U_{\text{bias}}(\{\langle\hat{O}_\alpha\rangle\}) \tag{L.1} $$
 
-where $C_P({\hat{O}\alpha})$ is the Predictive Physical Complexity associated with representing and computing the chosen statistics; $R{\text{cost}}({\hat{O}\alpha})$ is the physical resource cost rate (Definition 3) of maintaining and controlling them; $U{\text{bias}}({\langle\hat{O}\alpha\rangle})$ is the utility gain (related to improved aggregate Predictive Performance $PP{\text{agg}}$) from the achievable ND-RID bias using these statistics; and $\lambda_{\text{rep}}, \lambda_{\text{ctrl}}, \Gamma_{\text{utility}}$ are PCE-derived weighting factors (related to the global Lagrange multipliers governing resource allocation). The set ${\hat{O}\alpha}{\alpha \in \mathcal{I}}$ selected by minimizing $V_{\text{context}}$ is minimal and sufficient: removing any element significantly degrades $U_{\text{bias}}$ (increasing $V_{\text{context}}$), while adding any element from $\mathcal{O}{\text{full}} \setminus {\hat{O}\alpha}$ incurs costs ($C_P, R_{\text{cost}}$) that outweigh its marginal contribution to $U_{\text{bias}}$ (thus also increasing $V_{\text{context}}$).
+where $C_P(\{\hat{O}_\alpha\})$ is the Predictive Physical Complexity associated with representing and computing the chosen statistics; $R_{\text{cost}}(\{\hat{O}_\alpha\})$ is the physical resource cost rate (Definition 3) of maintaining and controlling them; $U_{\text{bias}}(\{\langle\hat{O}_\alpha\rangle\})$ is the utility gain (related to improved aggregate Predictive Performance $PP_{\text{agg}}$) from the achievable ND-RID bias using these statistics; and $\lambda_{\text{rep}}, \lambda_{\text{ctrl}}, \Gamma_{\text{utility}}$ are PCE-derived weighting factors (related to the global Lagrange multipliers governing resource allocation). The set $\{\hat{O}_\alpha\}_{\alpha \in \mathcal{I}}$ selected by minimizing $V_{\text{context}}$ is minimal and sufficient: removing any element significantly degrades $U_{\text{bias}}$ (increasing $V_{\text{context}}$), while adding any element from $\mathcal{O}_{\text{full}} \setminus \{\hat{O}_\alpha\}$ incurs costs ($C_P, R_{\text{cost}}$) that outweigh its marginal contribution to $U_{\text{bias}}$ (thus also increasing $V_{\text{context}}$).
 
 Operationally, the context state is then the vector of expectation values of these PCE-selected operators:
 
 $$ \text{context}_S(t) := \begin{pmatrix} \langle \hat{O}_{\alpha_1} \rangle_t \\ \langle \hat{O}_{\alpha_2} \rangle_t \\ \vdots \\ \langle \hat{O}_{\alpha_{|\mathcal{I}|}} \rangle_t \end{pmatrix} \in \mathcal{C}_{\text{ctx}} \subseteq \mathbb{R}^{|\mathcal{I}|} \tag{L.2} $$
 
-where ${\hat{O}\alpha}{\alpha \in \mathcal{I}}$ is this minimal set of operators. $\mathcal{C}_{\text{ctx}}$ is the abstract context space.
+where $\{\hat{O}_\alpha\}_{\alpha \in \mathcal{I}}$ is this minimal set of operators. $\mathcal{C}_{\text{ctx}}$ is the abstract context space.
 
 ## **Definition L.2 (Context-to-Control Mapping)**
 
-The mapping $\mathcal{M}: \mathcal{C}{\text{ctx}} \to \mathcal{P}{\text{control}}$ translates the abstract context state ($\text{context}S(t)$) into a set of physically realizable control parameters $\mathcal{P}{\text{control}}(t)$ (e.g., classical field values, boundary conditions). This mapping $\mathcal{M}$ is POP-admissible if it is dynamically stable under POP/PCE optimization. This requires, minimally:
+The mapping $\mathcal{M}: \mathcal{C}_{\text{ctx}} \to \mathcal{P}_{\text{control}}$ translates the abstract context state ($\text{context}_S(t)$) into a set of physically realizable control parameters $\mathcal{P}_{\text{control}}(t)$ (e.g., classical field values, boundary conditions). This mapping $\mathcal{M}$ is POP-admissible if it is dynamically stable under POP/PCE optimization. This requires, minimally:
 
 (i) The Predictive Physical Complexity of implementing the mapping, $C_{\mathcal{M}}$, scales efficiently with the aggregate's complexity $C_{\text{agg}}$ (Definition 29), ideally $C_{\mathcal{M}} = O(\text{poly}(\log C_{\text{agg}}))$.
 
@@ -77,9 +77,9 @@ The mapping $\mathcal{M}: \mathcal{C}{\text{ctx}} \to \mathcal{P}{\text{control}
 
 The mapping $\mathcal{M}$ must satisfy:
 
-Lipschitz continuity: $$ |\mathcal{M}(\text{context}1) - \mathcal{M}(\text{context}2)|{\mathcal{P}} \le L{\mathcal{M}} |\text{context}1 - \text{context}2|{\mathcal{C}} $$ with constant $L{\mathcal{M}}$ optimized by PCE.
+Lipschitz continuity: $$ |\mathcal{M}(\text{context}_1) - \mathcal{M}(\text{context}_2)|_{\mathcal{P}} \le L_{\mathcal{M}} |\text{context}_1 - \text{context}_2|_{\mathcal{C}} $$ with constant $L_{\mathcal{M}}$ optimized by PCE.
 
-Bounded control output: $$ |\mathcal{M}(\text{context}S)|{\mathcal{P}} \le P_{\text{max}} $$ ensuring finite physical costs.
+Bounded control output: $$ |\mathcal{M}(\text{context}_S)|_{\mathcal{P}} \le P_{\text{max}} $$ ensuring finite physical costs.
 
 Stability under feedback: If $\text{context}_S$ can be influenced by past CC effects, $\mathcal{M}$ must ensure stable iterative dynamics.
 
@@ -121,11 +121,11 @@ $$ \mathcal{M}(\text{context}_S) \to \{\omega_{\text{rad}}(t), E_0(t), \phi_{\te
 
 Coherence Mechanism: Within aggregate $S$ (Definition 29), constituent MPUs share information through network coupling (Definition 5). From Theorem 34, high-CC aggregates develop the capability to bias local 'Evolve' outcomes through POP/PCE optimization. For electromagnetic field generation, this requires coordinating $N_{\text{osc}}$ oscillating charge distributions to achieve phase coherence.
 
-The coherence emerges through PCE optimization as follows. Each oscillator $j$ produces a dipole moment $p_j(t) = d_0 \cos(\omega t + \phi_j)$, where $d_0$ is the effective dipole-moment amplitude (including the relevant charge displacement). The total dipole moment is $p(t) = \sum_j p_j(t)$, giving the far-field radiation. The total radiated power depends on the coherent sum:
+The coherence emerges through PCE optimization as follows. Each oscillator $j$ produces a dipole moment $p_j(t) = d_{\text{dip}} \cos(\omega t + \phi_j)$, where $d_{\text{dip}}$ is the effective dipole-moment amplitude (including the relevant charge displacement). The total dipole moment is $p(t) = \sum_j p_j(t)$, giving the far-field radiation. The total radiated power depends on the coherent sum:
 
-$$ \vec{D}{\text{total}}(t) = \sum{j=1}^{N_{\text{osc}}} d_0 \vec{\epsilon}_j e^{i(\omega t + \phi_j)} \tag{L.6} $$
+$$ \vec{D}_{\text{total}}(t) = \sum_{j=1}^{N_{\text{osc}}} d_{\text{dip}} \vec{\epsilon}_j e^{i(\omega t + \phi_j)} \tag{L.6} $$
 
-The radiated power is proportional to $|\vec{D}{\text{total}}|^2$. For random phases, $\langle|\vec{D}{\text{total}}|^2\rangle = N_{\text{osc}}d_0^2$ (incoherent sum). For aligned phases $\phi_j = \phi_0$, $|\vec{D}{\text{total}}|^2 = N{\text{osc}}^2 d_0^2$ (coherent sum).
+The radiated power is proportional to $|\vec{D}_{\text{total}}|^2$. For random phases, $\langle|\vec{D}_{\text{total}}|^2\rangle = N_{\text{osc}}d_{\text{dip}}^2$ (incoherent sum). For aligned phases $\phi_j = \phi_0$, $|\vec{D}_{\text{total}}|^2 = N_{\text{osc}}^2 d_{\text{dip}}^2$ (coherent sum).
 
 PCE drives alignment because coherent radiation achieves the same field strength $E_0$ at target with factor $N_{\text{osc}}$ lower power per oscillator, reducing total operational cost $R$ (Definition 3). The optimization functional balances predictive utility against resource expenditure:
 
@@ -137,13 +137,13 @@ $$ \phi_j = \phi_{\text{rad}} \quad \text{(constant for all } j\text{)} \tag{L.8
 
 This establishes phase coherence. The radiated power for coherent oscillation is:
 
-$$ P_{\text{rad}} = \frac{N_{\text{osc}}^2 d_0^2 \omega^4}{12\pi\epsilon_0 c^3} \tag{L.9} $$
+$$ P_{\text{rad}} = \frac{N_{\text{osc}}^2 d_{\text{dip}}^2 \omega^4}{12\pi\varepsilon_0 c^3} \tag{L.9} $$
 
 The $N_{\text{osc}}^2$ scaling reflects constructive interference from phase lock.
 
 Stress-Energy Derivation: The electromagnetic field energy density is:
 
-$$ u_{\text{EM}}(x,t) = \frac{\epsilon_0}{2}|\vec{E}{\text{rad}}(x,t)|^2 + \frac{1}{2\mu_0}|\vec{B}{\text{rad}}(x,t)|^2 \tag{L.10} $$
+$$ u_{\text{EM}}(x,t) = \frac{\varepsilon_0}{2}|\vec{E}_{\text{rad}}(x,t)|^2 + \frac{1}{2\mu_0}|\vec{B}_{\text{rad}}(x,t)|^2 \tag{L.10} $$
 
 From Appendix G (Equation G.5.3), the Maxwell action in curved spacetime is:
 
@@ -210,7 +210,7 @@ Substituting Equation L.18 yields Equation L.17.
 
 In the weak-field limit, the metric coefficient is $g_{00} = -(1 + 2\Phi/c^2)$, giving proper time rate:
 
-$$ \frac{d\tau}{dt} = \sqrt{-g_{00}} = \left(1 + \frac{\Phi}{c^2}\right)^{1/2} \approx 1 + \frac{\Phi}{c^2} \tag{L.22} $$
+$$ \frac{d\tau}{dt} = \sqrt{-g_{00}} = \left(1 + \frac{\Phi}{c^2}\right)^{1/2} \approx 1 + \frac{\Phi}{c^2} \tag{L.21} $$
 
 for $|\Phi| \ll c^2$. The differential proper time accumulation across spatial extent $L_q$ over coordinate time interval $\tau_c$ is:
 
@@ -222,7 +222,7 @@ This is Equation L.16. ∎
 
 The time dilation induces quantum phase shift in target system with characteristic frequency $\omega_{\text{TLS}}$:
 
-$$ \Delta\phi_{\text{grav}} = \omega_{\text{TLS}}\Delta\tau_d = \frac{\omega_{\text{TLS}}}{c^2}\Delta\Phi \tau_c \tag{L.23} $$ 
+$$ \Delta\phi_{\text{grav}} = \omega_{\text{TLS}}\Delta\tau_d = \frac{\omega_{\text{TLS}}}{c^2}\Delta\Phi \tau_c \tag{L.22} $$ 
 
 Proof. Quantum phase evolves as $\phi(t) = -\omega t$. Differential proper time $\Delta\tau_d$ across wavefunction spatial extent produces phase difference $\Delta\phi = \omega\Delta\tau_d$. ∎
 
@@ -236,17 +236,17 @@ For a macroscopic MPU aggregate (Definition 29) with aggregate Predictive Physic
 
 (a) Electromagnetic (AC Stark shift):
 
-$$ \frac{\delta}{\omega_{\text{TLS}}} = \frac{d_{\text{TLS}}^2 E_0^2}{4\hbar^2\omega_{\text{TLS}}\Delta} \propto \frac{P_{\text{rad}}}{r^2\Delta} \tag{L.24} $$
+$$ \frac{\delta}{\omega_{\text{TLS}}} = \frac{d_{\text{TLS}}^2 E_0^2}{4\hbar^2\omega_{\text{TLS}}\Delta} \propto \frac{P_{\text{rad}}}{r^2\Delta} \tag{L.23} $$
 
 where $P_{\text{rad}}$ is radiated power (Equation L.9) and we have used $E_0 \propto \sqrt{P_{\text{rad}}}/r$ in the far-field limit.
 
 (b) Gravitational (time dilation phase shift):
 
-$$ \frac{\Delta\phi_{\text{grav}}}{2\pi} = \frac{\omega_{\text{TLS}}}{2\pi c^2} \frac{G P_{\text{agg}}\tau_c (1+3w)}{c^2 r^2} L_q \propto \frac{P_{\text{agg}}\tau_c}{r^2} \tag{L.25} $$
+$$ \frac{\Delta\phi_{\text{grav}}}{2\pi} = \frac{\omega_{\text{TLS}}}{2\pi c^2} \frac{G P_{\text{agg}}\tau_c (1+3w)}{c^2 r^2} L_q \propto \frac{P_{\text{agg}}\tau_c}{r^2} \tag{L.24} $$
 
 ### **Dominance Ratio:**
 
-$$ \mathcal{R}(P_{\text{agg}}, V_S, r, \Delta, \tau_c) = \frac{\delta/\omega_{\text{TLS}}}{\Delta\phi_{\text{grav}}/(2\pi)} \propto \frac{c^4 r^2 E_0^2}{G P_{\text{agg}}\tau_c L_q \Delta} \tag{L.26} $$ 
+$$ \mathcal{R}(P_{\text{agg}}, V_S, r, \Delta, \tau_c) = \frac{\delta/\omega_{\text{TLS}}}{\Delta\phi_{\text{grav}}/(2\pi)} \propto \frac{c^4 r^2 E_0^2}{G P_{\text{agg}}\tau_c L_q \Delta} \tag{L.25} $$ 
 
 ### **Representative Case (Engineered Coherent-Charge Implementation).**
 
@@ -278,27 +278,27 @@ Detuning: $\Delta/(2\pi) = 10$ GHz
 
 Electromagnetic (AC Stark):
 
-$$ \Omega_R = \frac{d_{\text{TLS}} E_0}{\hbar} = \frac{(1.6 \times 10^{-28})(10^3)}{1.055 \times 10^{-34}} \approx 1.52 \times 10^9 \text{ rad/s} \tag{L.27} $$
+$$ \Omega_R = \frac{d_{\text{TLS}} E_0}{\hbar} = \frac{(1.6 \times 10^{-28})(10^3)}{1.055 \times 10^{-34}} \approx 1.52 \times 10^9 \text{ rad/s} \tag{L.26} $$
 
-$$ \delta = \frac{\Omega_R^2}{4\Delta} = \frac{(1.52 \times 10^9)^2}{4(2\pi)(10^{10})} \approx 9.2 \times 10^6 \text{ rad/s} \tag{L.28} $$
+$$ \delta = \frac{\Omega_R^2}{4\Delta} = \frac{(1.52 \times 10^9)^2}{4(2\pi)(10^{10})} \approx 9.2 \times 10^6 \text{ rad/s} \tag{L.27} $$
 
-$$ \frac{\delta}{\omega_{\text{TLS}}} \approx \frac{9.2 \times 10^6}{2\pi \times 10^{10}} \approx 1.5 \times 10^{-4} \tag{L.29} $$
+$$ \frac{\delta}{\omega_{\text{TLS}}} \approx \frac{9.2 \times 10^6}{2\pi \times 10^{10}} \approx 1.5 \times 10^{-4} \tag{L.28} $$
 
 Gravitational (time dilation):
 
-$$ M_{\text{eff}} = \frac{P_{\text{agg}}\tau_c}{c^2} = \frac{(20)(0.1)}{9 \times 10^{16}} \approx 2.22 \times 10^{-17} \text{ kg} \tag{L.30} $$
+$$ M_{\text{eff}} = \frac{P_{\text{agg}}\tau_c}{c^2} = \frac{(20)(0.1)}{9 \times 10^{16}} \approx 2.22 \times 10^{-17} \text{ kg} \tag{L.29} $$
 
-$$ g(r) = \frac{G M_{\text{eff}}}{r^2} = \frac{(6.67 \times 10^{-11})(2.22 \times 10^{-17})}{(0.5)^2} \approx 5.92 \times 10^{-27} \text{ m/s}^2 \tag{L.31} $$
+$$ g(r) = \frac{G M_{\text{eff}}}{r^2} = \frac{(6.67 \times 10^{-11})(2.22 \times 10^{-17})}{(0.5)^2} \approx 5.92 \times 10^{-27} \text{ m/s}^2 \tag{L.30} $$
 
-$$ \Delta\Phi = g(r)L_q = (5.92 \times 10^{-27})(10^{-9}) \approx 5.92 \times 10^{-36} \text{ m}^2/\text{s}^2 \tag{L.32} $$
+$$ \Delta\Phi = g(r)L_q = (5.92 \times 10^{-27})(10^{-9}) \approx 5.92 \times 10^{-36} \text{ m}^2/\text{s}^2 \tag{L.31} $$
 
-$$ \Delta\tau_d = \frac{\Delta\Phi}{c^2}\tau_c = \frac{5.92 \times 10^{-36}}{9 \times 10^{16}}(0.1) \approx 6.6 \times 10^{-54} \text{ s} \tag{L.33} $$
+$$ \Delta\tau_d = \frac{\Delta\Phi}{c^2}\tau_c = \frac{5.92 \times 10^{-36}}{9 \times 10^{16}}(0.1) \approx 6.6 \times 10^{-54} \text{ s} \tag{L.32} $$
 
-$$ \frac{\Delta\phi_{\text{grav}}}{2\pi} = \frac{\omega_{\text{TLS}}}{2\pi}\Delta\tau_d = (10^{10})(6.6 \times 10^{-54}) \approx 6.6 \times 10^{-44} \tag{L.34} $$
+$$ \frac{\Delta\phi_{\text{grav}}}{2\pi} = \frac{\omega_{\text{TLS}}}{2\pi}\Delta\tau_d = (10^{10})(6.6 \times 10^{-54}) \approx 6.6 \times 10^{-44} \tag{L.33} $$
 
 ### **Dominance Ratio for Engineered Implementation:**
 
-$$ \mathcal{R} = \frac{1.5 \times 10^{-4}}{6.6 \times 10^{-44}} \approx 2.3 \times 10^{39} \tag{L.35} $$ 
+$$ \mathcal{R} = \frac{1.5 \times 10^{-4}}{6.6 \times 10^{-44}} \approx 2.3 \times 10^{39} \tag{L.34} $$ 
 
 Proof. Direct numerical substitution using SI constants: $G = 6.67 \times 10^{-11}$ m³ kg⁻¹ s⁻², $c = 3 \times 10^8$ m/s, $\hbar = 1.055 \times 10^{-34}$ J·s. ∎
 
@@ -306,12 +306,12 @@ Proof. Direct numerical substitution using SI constants: $G = 6.67 \times 10^{-1
 
 **Table L.1: Sensitivity of EM/Gravity Coupling Hierarchy**
 
-| Parameter | Baseline | Conservative Range | $\mathcal{R}$ Impact Factor |
-|-----------|----------|-------------------|---------------------------|
-| $\alpha_{em}/\alpha_{grav}$ | $10^{42}$ | $10^{41}$–$10^{43}$ | $\times 0.1$ – $10$ |
-| $f_{charge}$ | $0.1$ | $0.01$–$0.5$ | $\times 0.1$ – $5$ |
-| $\eta_{geo}$ | $0.1$ | $0.01$–$1$ | $\times 0.1$ – $10$ |
-| **Combined uncertainty** | **$10^{36}$** | **$\sim 10^{33}$–$10^{39}$** | **$\times 10^{-3}$ – $10^{3}$** |
+| Parameter | Symbol | Baseline | Conservative Range | $\mathcal{R}$ Impact |
+|-----------|--------|----------|-------------------|---------------------|
+| Coupling ratio | $\alpha_{\text{em}}/\alpha_{\text{grav}}$ | $10^{42}$ | $10^{41}$–$10^{43}$ | $\times 0.1$ – $10$ |
+| Charge fraction | $f_{\text{charge}}$ | $0.1$ | $0.01$–$0.5$ | $\times 0.1$ – $5$ |
+| Geometric efficiency | $\eta_{\text{geo}}$ | $0.1$ | $0.01$–$1$ | $\times 0.1$ – $10$ |
+| **Combined** | — | **$10^{36}$** | **$10^{33}$–$10^{39}$** | **$10^{-3}$ – $10^{3}$** |
 
 Even with conservative parameter estimates accounting for all uncertainties, electromagnetic coupling dominates gravitational coupling by at least $\sim 10^{33}$ across the full parameter space, with typical values remaining near the baseline $\sim 10^{36}$. This robust hierarchy—spanning at least 33 orders of magnitude even under pessimistic assumptions—confirms electromagnetic dominance as the primary CC influence channel.
 
@@ -319,7 +319,7 @@ Even with conservative parameter estimates accounting for all uncertainties, ele
 
 For any MPU aggregate with finite power budget $P_{\text{agg}} < \infty$ and finite volume $V_S > 0$, operating at sub-Planck scales $L_q \gg l_P = \sqrt{G\hbar/c^3} \approx 1.6 \times 10^{-35}$ m and accessible field strengths $E_0 < E_{\text{Schwinger}} = m_e^2c^3/(e\hbar) \approx 1.3 \times 10^{18}$ V/m, the electromagnetic channel dominates the gravitational channel by factor:
 
-$$ \mathcal{R} \equiv \frac{\delta_{\text{EM}}}{\delta_{\text{grav}}} \gg 1 \quad \text{for all plausible MPU/aggregate parameters, typically } \mathcal{R}\sim 10^{30}\text{--}10^{40} \tag{L.36} $$
+$$ \mathcal{R} \equiv \frac{\delta_{\text{EM}}}{\delta_{\text{grav}}} \gg 1 \quad \text{for all plausible MPU/aggregate parameters, typically } \mathcal{R}\sim 10^{30}\text{--}10^{40} \tag{L.35} $$
 
 Proof. From Equations L.24 and L.25, the ratio is bounded below by substituting maximum plausible gravitational effect and minimum plausible electromagnetic effect. The universal dominance reflects the fundamental hierarchy $\alpha_{\text{em}}/\alpha_{\text{grav}} \sim 10^{43}$ (Theorem L.11) moderated by geometric factors. ∎
 
@@ -343,7 +343,7 @@ Under constraint set $\mathcal{B}$, PCE optimization (Definition 15) selects con
 $$\mathcal{F}_{\text{bio}}[\{\phi_j\}] = \alpha_1 C_{\text{internal}} - \alpha_2 P_{\text{rad}} - \alpha_3 P_{\text{metabolic}}$$
 
 For $N$ oscillators with dipole moments $d_j$ and phases $\phi_j$, the radiated power is:
-$$P_{\text{rad}} = \frac{\omega^4}{12\pi\epsilon_0 c^3}\left|\sum_{j=1}^N d_j e^{i\phi_j}\right|^2$$
+$$P_{\text{rad}} = \frac{\omega^4}{12\pi\varepsilon_0 c^3}\left|\sum_{j=1}^N d_j e^{i\phi_j}\right|^2$$
 
 The PCE-optimal configuration achieves **sub-radiant destructive interference**:
 $$\sum_{j=1}^N d_j e^{i\phi_j} \approx 0 \quad \text{(near-perfect cancellation in far-field)}$$
@@ -357,7 +357,7 @@ For a quantum system with bare decoherence rate $\Gamma_0(T)$ at temperature $T$
 $$\Gamma_{\text{eff}} = \Gamma_0 \exp\left(-\frac{\Delta E_{\text{shield}}}{k_B T}\right) + \Gamma_{\text{intrinsic}}$$
 where $\Gamma_{\text{intrinsic}}$ represents temperature-independent mechanisms.
 
-**Application to Candidate Substrates:**
+**Application to Candidate Substrates (illustrative):**
 
 **(A) Microtubule Networks (Penrose-Hameroff Substrate)**
 Following the Orchestrated Objective Reduction framework (Penrose, 1989, 1996; Hameroff & Penrose, 2014):
@@ -384,7 +384,7 @@ Cryptochrome proteins containing entangled radical pairs (as in avian magnetorec
 
 **Proposition L.4.4 (Near-Field Enhancement in Sub-Radiant Cavities)**
 A sub-radiant ensemble with trapped power $P_{\text{trap}}$ in volume $V_{\text{cav}}$ generates enhanced near-fields:
-$$E_{\text{near}}(r) = \sqrt{\frac{Q \cdot P_{\text{trap}}}{\epsilon_0 c V_{\text{cav}}}} \cdot \mathcal{G}(r/\lambda)$$
+$$E_{\text{near}}(r) = \sqrt{\frac{Q \cdot P_{\text{trap}}}{\varepsilon_0 c V_{\text{cav}}}} \cdot \mathcal{G}(r/\lambda)$$
 
 where $Q$ is the cavity quality factor and $\mathcal{G}(x) \approx (2\pi x)^{-3}$ for $x \ll 1$ (reactive near-field), with practical enhancement limited to $\mathcal{G}(x)\lesssim 10^3$–$10^4$ by loss and finite mode volume. 
 
@@ -526,57 +526,57 @@ The framework neither endorses nor dismisses these claims but provides quantitat
 
 The total power required to maintain context state $\text{context}_S$ (Definition L.1) for aggregate $S$ decomposes as:
 
-$$ P_{\text{agg}} = P_{\text{EM}} + P_{\text{other}} \tag{L.37} $$
+$$ P_{\text{agg}} = P_{\text{EM}} + P_{\text{other}} \tag{L.36} $$
 
 where $P_{\text{EM}}$ is radiated electromagnetic power and $P_{\text{other}}$ includes heat dissipation, internal energy changes, and mechanical work. The complete stress-energy tensor is:
 
-$$ T_{\mu\nu}^{(\text{MPU})} = T_{\mu\nu}^{(\text{matter})} + T_{\mu\nu}^{(\text{EM})} \tag{L.38} $$
+$$ T_{\mu\nu}^{(\text{MPU})} = T_{\mu\nu}^{(\text{matter})} + T_{\mu\nu}^{(\text{EM})} \tag{L.37} $$
 
 as constructed in Appendix B (Definition B.8). Each energy component contributes exactly once to $T_{\mu\nu}^{(\text{MPU})}$, which sources the gravitational field through Einstein's equations (Theorem 50). There is no double-counting. Furthermore, the stress-energy tensor satisfies covariant conservation (Appendix B, Theorem B.5):
 
-$$ \nabla^\mu T_{\mu\nu}^{(\text{MPU})} = 0 \tag{L.39} $$
+$$ \nabla^\mu T_{\mu\nu}^{(\text{MPU})} = 0 \tag{L.38} $$
 
 Proof.
 
 Energy conservation requires accounting for all power channels:
 
-$$ P_{\text{agg}} = P_{\text{EM}} + P_{\text{heat}} + P_{\text{internal}} + P_{\text{mech}} \tag{L.40} $$
+$$ P_{\text{agg}} = P_{\text{EM}} + P_{\text{heat}} + P_{\text{internal}} + P_{\text{mech}} \tag{L.39} $$
 
 These channels are mutually exclusive (each joule enters exactly one channel) and exhaustive (all energy accounted for).
 
 Energy Flow Analysis: The electromagnetic field energy originates from kinetic energy of oscillating charges. The complete energy flow is:
 
-$$ E_{\text{operational}} \to E_{\text{kinetic,oscillators}} \to E_{\text{EM,field}} + E_{\text{heat}} \tag{L.41} $$
+$$ E_{\text{operational}} \to E_{\text{kinetic,oscillators}} \to E_{\text{EM,field}} + E_{\text{heat}} \tag{L.40} $$
 
 At any instant, the aggregate's kinetic energy is being converted to field energy (radiation) and heat (dissipation). The electromagnetic power flux through surface $\mathcal{S}$ enclosing the aggregate is:
 
-$$ P_{\text{EM}} = \int_{\mathcal{S}} \vec{S} \cdot d\vec{A} = \int_{\mathcal{S}} \frac{1}{\mu_0}(\vec{E}{\text{rad}} \times \vec{B}{\text{rad}}) \cdot d\vec{A} \tag{L.42} $$
+$$ P_{\text{EM}} = \int_{\mathcal{S}} \vec{S} \cdot d\vec{A} = \int_{\mathcal{S}} \frac{1}{\mu_0}(\vec{E}{\text{rad}} \times \vec{B}{\text{rad}}) \cdot d\vec{A} \tag{L.41} $$
 
 where the Poynting vector $\vec{S}$ describes energy flow.
 
 Stress-Energy Accounting: Following the construction detailed in Appendix B (Definition B.8), the electromagnetic contribution is (from Theorem L.2):
 
-$$ T_{\mu\nu}^{(\text{EM})} = \frac{1}{4\pi}\left(F_{\mu\alpha}F_{\nu}{}^{\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right) \tag{L.43} $$
+$$ T_{\mu\nu}^{(\text{EM})} = \frac{1}{4\pi}\left(F_{\mu\alpha}F_{\nu}{}^{\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right) \tag{L.42} $$
 
 This represents field energy and momentum density. The matter contribution uses perfect fluid approximation in the aggregate's rest frame:
 
-$$ T_{\mu\nu}^{(\text{matter})} = (\rho_m c^2 + p)u_\mu u_\nu + p g_{\mu\nu} \tag{L.44} $$
+$$ T_{\mu\nu}^{(\text{matter})} = (\rho_m c^2 + p)u_\mu u_\nu + p g_{\mu\nu} \tag{L.43} $$
 
 where $\rho_m$ is rest mass density plus internal energy density (including kinetic energy of oscillators before radiation and thermal energy from dissipation).
 
 Temporal Evolution: As oscillators radiate, kinetic energy transfers from $T_{\mu\nu}^{(\text{matter})}$ to $T_{\mu\nu}^{(\text{EM})}$. The total stress-energy at time $t$ is:
 
-$$ T_{\mu\nu}^{(\text{MPU})}(t) = T_{\mu\nu}^{(\text{matter})}(t) + T_{\mu\nu}^{(\text{EM})}(t) \tag{L.45} $$
+$$ T_{\mu\nu}^{(\text{MPU})}(t) = T_{\mu\nu}^{(\text{matter})}(t) + T_{\mu\nu}^{(\text{EM})}(t) \tag{L.44} $$
 
 From Appendix B (Theorem B.5), the MPU stress-energy tensor satisfies covariant conservation:
 
-$$ \nabla^\mu T_{\mu\nu}^{(\text{MPU})} = 0 \tag{L.46} $$
+$$ \nabla^\mu T_{\mu\nu}^{(\text{MPU})} = 0 \tag{L.45} $$
 
 This ensures local energy-momentum conservation in the emergent curved spacetime.
 
 Gravitational Sourcing: From Theorem 50, Einstein's field equations are:
 
-$$ R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}^{(\text{MPU})} \tag{L.47} $$
+$$ R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}^{(\text{MPU})} \tag{L.46} $$
 
 The gravitational field (encoded in curvature $R_{\mu\nu}$ and metric $g_{\mu\nu}$) responds to the complete $T_{\mu\nu}^{(\text{MPU})}$.
 
@@ -586,7 +586,7 @@ Path 1 (Radiated): Power → oscillator kinetic energy → EM field energy → e
 
 Path 2 (Retained): Power → internal energy/heat → enters via $T_{\mu\nu}^{(\text{matter})}$
 
-At steady state, power input $P_{\text{agg}}$ balances radiated power $P_{\text{EM}}$ plus thermal dissipation $P_{\text{heat}}$. The gravitational potential $\Phi_{\text{grav}}$ computed from solving Equation L.47 with the complete $T_{\mu\nu}^{(\text{MPU})}$ accounts for both electromagnetic field energy (via $T_{00}^{(\text{EM})}$) and matter energy (via $T_{00}^{(\text{matter})}$) exactly once. ∎
+At steady state, power input $P_{\text{agg}}$ balances radiated power $P_{\text{EM}}$ plus thermal dissipation $P_{\text{heat}}$. The gravitational potential $\Phi_{\text{grav}}$ computed from solving Equation L.46 with the complete $T_{\mu\nu}^{(\text{MPU})}$ accounts for both electromagnetic field energy (via $T_{00}^{(\text{EM})}$) and matter energy (via $T_{00}^{(\text{matter})}$) exactly once. ∎
 
 ## **L.6 Connection to Thermodynamic Gravity Derivation**
 
@@ -598,59 +598,59 @@ Proof.
 
 From Appendix E (Theorem 49), the entropy of a causal horizon with area $\mathcal{A}$ is:
 
-$$ S = \frac{k_B c^3}{4G\hbar}\mathcal{A} = \Sigma_I \mathcal{A} \tag{L.48} $$
+$$ S = \frac{k_B c^3}{4G\hbar}\mathcal{A} = \Sigma_I \mathcal{A} \tag{L.47} $$
 
 where the information density is:
 
-$$ \Sigma_I = \sigma_{\text{link}} C_{\text{max}} = \frac{\chi}{\eta\delta^2} C_{\text{max}} \tag{L.49} $$
+$$ \Sigma_I = \sigma_{\text{link}} C_{\text{max}} = \frac{\chi}{\eta\delta^2} C_{\text{max}} \tag{L.48} $$
 
 with channel surface density $\sigma_{\text{link}} = \chi/(\eta\delta^2)$ (Theorem E.3), MPU spacing $\delta$, geometric factor $\eta$, correlation factor $\chi$, and Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) channel capacity $C_{\text{max}}$ limited by irreversibility $\varepsilon \ge \ln 2$ (Theorem 31).
 
 For local causal horizon with null generator $k^\mu$ (affinely parameterized with $\lambda$) and surface gravity $\kappa$, the energy flux through a surface element is:
 
-$$ \delta Q = \int T_{\mu\nu}^{(\text{MPU})}\chi^\mu d\Sigma^\nu \tag{L.50} $$
+$$ \delta Q = \int T_{\mu\nu}^{(\text{MPU})}\chi^\mu d\Sigma^\nu \tag{L.49} $$
 
 where $\chi^\mu = (1 + \kappa\lambda)k^\mu$ is the approximate boost Killing field near the bifurcation surface. The aggregate contribution from both electromagnetic and matter components (Appendix B, Definition B.8) is:
 
-$$ \delta Q_{\text{agg}} = \int (T_{\mu\nu}^{(\text{EM})} + \Delta T_{\mu\nu}^{(\text{matter})})\chi^\mu d\Sigma^\nu \tag{L.51} $$
+$$ \delta Q_{\text{agg}} = \int (T_{\mu\nu}^{(\text{EM})} + \Delta T_{\mu\nu}^{(\text{matter})})\chi^\mu d\Sigma^\nu \tag{L.50} $$
 
 From quantum field theory in curved spacetime, the Unruh temperature associated with surface gravity $\kappa$ is:
 
-$$ T = \frac{\hbar\kappa}{2\pi k_B c} \tag{L.52} $$
+$$ T = \frac{\hbar\kappa}{2\pi k_B c} \tag{L.51} $$
 
 Local thermodynamic consistency (Postulate 4) requires the Clausius relation:
 
-$$ \delta Q = T \delta S \tag{L.53} $$
+$$ \delta Q = T \delta S \tag{L.52} $$
 
-Substituting Equations L.48 and L.52:
+Substituting Equations L.47 and L.51:
 
-$$ \delta Q = \frac{\hbar\kappa}{2\pi k_B c} \Sigma_I \delta\mathcal{A} \tag{L.54} $$
+$$ \delta Q = \frac{\hbar\kappa}{2\pi k_B c} \Sigma_I \delta\mathcal{A} \tag{L.53} $$
 
 From the Raychaudhuri equation for geodesic congruence with null tangent $k^\mu$, expansion $\theta$, shear $\sigma$, and twist $\omega$:
 
-$$ \frac{d\theta}{d\lambda} = -R_{\mu\nu}k^\mu k^\nu - \sigma_{ab}\sigma^{ab} + \omega_{ab}\omega^{ab} \tag{L.55} $$
+$$ \frac{d\theta}{d\lambda} = -R_{\mu\nu}k^\mu k^\nu - \sigma_{ab}\sigma^{ab} + \omega_{ab}\omega^{ab} \tag{L.54} $$
 
 For initial conditions $\theta(0) = \sigma(0) = \omega(0) = 0$ (vanishing initial expansion, shear, and twist), to first order in $\lambda$:
 
-$$ \theta(\lambda) = -R_{\mu\nu}k^\mu k^\nu \lambda \tag{L.56} $$
+$$ \theta(\lambda) = -R_{\mu\nu}k^\mu k^\nu \lambda \tag{L.55} $$
 
 The area change is related to expansion by $\delta\mathcal{A}/\mathcal{A} = \theta\lambda$, giving:
 
-$$ \delta\mathcal{A} = -\mathcal{A}R_{\mu\nu}k^\mu k^\nu \lambda^2 \tag{L.57} $$
+$$ \delta\mathcal{A} = -\mathcal{A}R_{\mu\nu}k^\mu k^\nu \lambda^2 \tag{L.56} $$
 
-Combining Equations L.50, L.54, and L.57 through the Clausius relation, with $\delta Q \approx T_{\mu\nu}^{(\text{MPU})}k^\mu k^\nu \mathcal{A}\lambda$ for small $\lambda$ (from Section 12, detailed derivation in Theorem 12.1), yields the constraint:
+Combining Equations L.49, L.53, and L.56 through the Clausius relation, with $\delta Q \approx T_{\mu\nu}^{(\text{MPU})}k^\mu k^\nu \mathcal{A}\lambda$ for small $\lambda$ (from Section 12, detailed derivation in Theorem 12.1), yields the constraint:
 
-$$ T_{\mu\nu}^{(\text{MPU})} k^\mu k^\nu = \frac{\kappa\Sigma_I}{2\pi k_B c^2}R_{\rho\sigma}k^\rho k^\sigma \tag{L.58} $$
+$$ T_{\mu\nu}^{(\text{MPU})} k^\mu k^\nu = \frac{\kappa\Sigma_I}{2\pi k_B c^2}R_{\rho\sigma}k^\rho k^\sigma \tag{L.57} $$
 
 Using the relation $\Sigma_I = c^3/(4G\hbar)$ from Equation E.9 and integrating over all null directions, this yields Einstein's field equations:
 
-$$ R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}^{(\text{MPU})} \tag{L.59} $$
+$$ R_{\mu\nu} - \frac{1}{2}R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}^{(\text{MPU})} \tag{L.58} $$
 
-The aggregate contribution enters through $T_{\mu\nu}^{(\text{MPU})}$ (Equation L.38, Definition B.8), sourcing curvature and inducing the time dilation $\Delta\tau_d$ derived in Theorem L.3. ∎
+The aggregate contribution enters through $T_{\mu\nu}^{(\text{MPU})}$ (Equation L.37, Definition B.8), sourcing curvature and inducing the time dilation $\Delta\tau_d$ derived in Theorem L.3. ∎
 
 ### **Remark L.7.1 (Consistency Check vs. Independent Derivation)**
 
-### **Theorem L.7 is a consistency check demonstrating that both electromagnetic and gravitational CC contributions maintain the same thermodynamic foundation (Clausius relation $\delta Q = T\delta S$ on causal horizons) used to derive Einstein's equations in Section 12 (Theorem 50). This is not circular reasoning; rather, it validates that:**
+Theorem L.7 is a consistency check demonstrating that both electromagnetic and gravitational CC contributions maintain the same thermodynamic foundation (Clausius relation $\delta Q = T\delta S$ on causal horizons) used to derive Einstein's equations in Section 12 (Theorem 50). This is not circular reasoning; rather, it validates that:
 
 (i) The EM contribution (Thm L.2) properly enters $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8)
 
@@ -676,7 +676,7 @@ The electromagnetic and gravitational manifestations analyzed in Theorems L.2 an
 
 A controlled modulation of MPU cycle rate $\delta\tau(x,t)$ generated by aggregate context $\text{context}_S$ (Definition L.1) admits frequency decomposition:
 
-$$ \delta\tau(x,t) = \int_{-\infty}^{\infty} d\omega , \tilde{\delta\tau}(x,\omega) e^{-i\omega t} \tag{L.60} $$
+$$ \delta\tau(x,t) = \int_{-\infty}^{\infty} d\omega , \tilde{\delta\tau}(x,\omega) e^{-i\omega t} \tag{L.59} $$
 
 Different frequency regimes manifest through distinct emergent channels in the continuum limit:
 
@@ -690,7 +690,7 @@ Proof.
 
 ### **Step 1: Phase Mismatch Generation**
 
-Consider temporal modulation $\delta\tau(x,t) = \delta\tau_0 \cos(\omega t)$ with $\omega \gg 1/\tau_{\text{medium}}$ where $\tau_{\text{medium}}$ is the baseline MPU cycle time (Equation L.0). Taking the continuum limit (Appendix F, Theorem F.1) with emergent light speed $c = \delta/\tau_{\text{medium}}$ already established from geometric regularity (Theorem 43) and Lorentzian signature (Theorem 46), we analyze the phase evolution.
+Consider temporal modulation $\delta\tau(x,t) = \delta\tau_0 \cos(\omega t)$ with $\omega \gg 1/\tau_{\text{medium}}$ where $\tau_{\text{medium}}$ is the baseline MPU cycle time (Equation L.0). Taking the continuum limit (Appendix F, Theorem F.0) with emergent light speed $c = \delta/\tau_{\text{medium}}$ already established from geometric regularity (Theorem 43) and Lorentzian signature (Theorem 46), we analyze the phase evolution.
 
 Between neighboring MPUs at positions $x_i$ and $x_j$ separated by effective spacing $\delta$, the phase accumulated over one cycle is:
 
@@ -698,15 +698,15 @@ $$ \phi_i(t) = \int_0^\tau \frac{dt'}{\tau(x_i,t')} \approx \frac{t}{\tau_{\text
 
 The phase mismatch is:
 
-$$ \Delta\phi_{ij}(t) = \phi_i(t) - \phi_j(t) = -\nabla\phi \cdot (x_i - x_j) \tag{L.61a} $$
+$$ \Delta\phi_{ij}(t) = \phi_i(t) - \phi_j(t) = -\nabla\phi \cdot (x_i - x_j) \tag{L.60a} $$
 
 For modulation $\delta\tau(x,t) = \delta\tau_0 \cos(\omega t)$ with gradient $|\nabla\delta\tau| \sim \delta\tau_0/\lambda$ where $\lambda \sim c/\omega$ is the modulation wavelength, we have:
 
-$$ \nabla\phi \sim \frac{1}{\tau_{\text{medium}}}\nabla\delta\tau \sim \frac{\omega}{c}\delta\tau_0 \hat{n} \tag{L.61b} $$
+$$ \nabla\phi \sim \frac{1}{\tau_{\text{medium}}}\nabla\delta\tau \sim \frac{\omega}{c}\delta\tau_0 \hat{n} \tag{L.60b} $$
 
 Therefore:
 
-$$ \Delta\phi_{ij}(t) \approx \frac{\omega}{c}\delta\tau_0 \hat{n} \cdot (x_i - x_j) \cos(\omega t) \tag{L.61c} $$
+$$ \Delta\phi_{ij}(t) \approx \frac{\omega}{c}\delta\tau_0 \hat{n} \cdot (x_i - x_j) \cos(\omega t) \tag{L.60c} $$
 
 where $\hat{n}$ is the direction of phase gradient propagation and we used $c \sim \delta/\tau_{\text{medium}}$ (emergent light speed).
 
@@ -714,7 +714,7 @@ where $\hat{n}$ is the direction of phase gradient propagation and we used $c \s
 
 From Appendix C (Theorem C.2), predictive coherence requires minimal phase variation. The cost contribution to $V_{\text{prop}}$ (Definition D.1) from phase mismatch is:
 
-$$ V_{\text{prop}}^{(\text{phase})} = \sum_{\langle ij\rangle} \kappa_{\text{phase}} |\Delta\phi_{ij}|^2 \propto \omega^2 \delta\tau_0^2 \cos^2(\omega t) \tag{L.62} $$
+$$ V_{\text{prop}}^{(\text{phase})} = \sum_{\langle ij\rangle} \kappa_{\text{phase}} |\Delta\phi_{ij}|^2 \propto \omega^2 \delta\tau_0^2 \cos^2(\omega t) \tag{L.61} $$
 
 where $\kappa_{\text{phase}}$ emerges from PCE optimization and $\sum_{\langle ij\rangle}$ denotes summation over network links.
 
@@ -722,7 +722,7 @@ where $\kappa_{\text{phase}}$ emerges from PCE optimization and $\sum_{\langle i
 
 To minimize $V_{\text{prop}}^{(\text{phase})}$, the system introduces compensating phase through gauge field $A_\mu$. From the minimal coupling prescription (Appendix G, Section G.4), the phase compensation requires gauge field transformation:
 
-$$ A_\mu \to A_\mu - \frac{1}{g_{\text{em}}}\partial_\mu\phi \tag{L.63} $$
+$$ A_\mu \to A_\mu - \frac{1}{g_{\text{em}}}\partial_\mu\phi \tag{L.62} $$
 
 where $g_{\text{em}}$ is the emergent electromagnetic coupling (Appendix Z). For phase gradient $\nabla\phi \propto \omega \cos(\omega t)$, the scalar potential becomes:
 
@@ -730,13 +730,13 @@ $$ A_0(x,t) \propto \frac{1}{g_{\text{em}}}\omega \sin(\omega t) $$
 
 The electric field is:
 
-$$ \vec{E} = -\nabla A_0 - \frac{\partial \vec{A}}{\partial t} \propto \omega^2 \cos(\omega t) \tag{L.64} $$
+$$ \vec{E} = -\nabla A_0 - \frac{\partial \vec{A}}{\partial t} \propto \omega^2 \cos(\omega t) \tag{L.63} $$
 
 ### **Step 4: Identification with EM Radiation**
 
 This oscillating electric field, coupled with corresponding magnetic field from $\nabla \times \vec{E} = -\partial \vec{B}/\partial t$, satisfies Maxwell's equations in the continuum limit (Appendix G, Equations G.5.1-G.5.4). The field energy density:
 
-$$ u_{\text{EM}} = \frac{\epsilon_0}{2}|\vec{E}|^2 + \frac{1}{2\mu_0}|\vec{B}|^2 \propto \omega^4 \delta\tau_0^2 \tag{L.65} $$
+$$ u_{\text{EM}} = \frac{\varepsilon_0}{2}|\vec{E}|^2 + \frac{1}{2\mu_0}|\vec{B}|^2 \propto \omega^4 \delta\tau_0^2 \tag{L.64} $$
 
 corresponds to the electromagnetic stress-energy tensor $T_{\mu\nu}^{(\text{EM})}$ (Equation L.4). The $\omega^4$ scaling matches standard radiation theory (Larmor formula).
 
@@ -746,7 +746,7 @@ corresponds to the electromagnetic stress-energy tensor $T_{\mu\nu}^{(\text{EM})
 
 For $\omega \ll 1/\tau_{\text{medium}}$, the modulation $\delta\tau(x,t)$ appears static over many MPU cycles. The local effective Hamiltonian becomes:
 
-$$ \langle H_{\text{eff}}\rangle(x,t) = \langle H_{\text{eff}}\rangle_0\left[1 + \eta_H \frac{\delta\tau(x,t)}{\tau_{\text{medium}}}\right] \tag{L.66} $$
+$$ \langle H_{\text{eff}}\rangle(x,t) = \langle H_{\text{eff}}\rangle_0\left[1 + \eta_H \frac{\delta\tau(x,t)}{\tau_{\text{medium}}}\right] \tag{L.65} $$
 
 where $\eta_H$ is a dimensionless coupling determined by the operational energy-time relationship $\tau_{\text{medium}} = \hbar/\langle H_{\text{eff}}\rangle$.
 
@@ -754,39 +754,39 @@ where $\eta_H$ is a dimensionless coupling determined by the operational energy-
 
 Sustaining this altered processing rate over correlation time $\tau_c$ requires average power $\langle\delta P\rangle$. The corresponding energy density contribution is:
 
-$$ \langle\delta u\rangle = \frac{\langle\delta P\rangle \tau_c}{V_S} = \frac{P_{\text{agg}}\tau_c}{V_S} \tag{L.67} $$
+$$ \langle\delta u\rangle = \frac{\langle\delta P\rangle \tau_c}{V_S} = \frac{P_{\text{agg}}\tau_c}{V_S} \tag{L.66} $$
 
 where $P_{\text{agg}}$ represents the sustained power maintaining the modified state.
 
 ### **Step 3: Stress-Energy Sourcing**
 
-This energy density contributes to $T_{00}^{(\text{matter})}$ in the matter stress-energy tensor (Equation L.44):
+This energy density contributes to $T_{00}^{(\text{matter})}$ in the matter stress-energy tensor (Equation L.43):
 
-$$ T_{00}^{(\text{matter})} = \rho_m c^2 + \delta u = \rho_m c^2 + \frac{P_{\text{agg}}\tau_c}{V_S} \tag{L.68} $$
+$$ T_{00}^{(\text{matter})} = \rho_m c^2 + \delta u = \rho_m c^2 + \frac{P_{\text{agg}}\tau_c}{V_S} \tag{L.67} $$
 
 ### **Step 4: Geometric Response**
 
 From Theorem L.7, preservation of the Clausius relation $\delta Q = T\delta S$ on causal horizons requires geometric adjustment via Einstein equations:
 
-$$ R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}^{(\text{MPU})} \tag{L.69} $$
+$$ R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}^{(\text{MPU})} \tag{L.68} $$
 
 In the weak-field limit with static source, the time-time component yields the Newtonian potential equation:
 
-$$ \nabla^2\Phi = 4\pi G \rho_{\text{eff}} = 4\pi G(1+3w)\frac{u}{c^2} \tag{L.70} $$
+$$ \nabla^2\Phi = 4\pi G \rho_{\text{eff}} = 4\pi G(1+3w)\frac{u}{c^2} \tag{L.69} $$
 
 For the energy density $\delta u$, this gives:
 
-$$ \nabla^2\delta\Phi = 4\pi G(1+3w)\frac{P_{\text{agg}}\tau_c}{c^2 V_S} \tag{L.71} $$
+$$ \nabla^2\delta\Phi = 4\pi G(1+3w)\frac{P_{\text{agg}}\tau_c}{c^2 V_S} \tag{L.70} $$
 
 ### **Step 5: Time Dilation**
 
 The potential gradient across target extent $L_q$ at distance $r$ yields (for spherically symmetric source):
 
-$$ \Delta\Phi = \frac{4\pi G}{3}(1+3w)\frac{P_{\text{agg}}\tau_c}{V_S} r L_q \tag{L.72} $$
+$$ \Delta\Phi = \frac{4\pi G}{3}(1+3w)\frac{P_{\text{agg}}\tau_c}{V_S} r L_q \tag{L.71} $$
 
 The proper time accumulation over interval $\tau_c$ is:
 
-$$ \Delta\tau_d = \frac{\Delta\Phi}{c^2}\tau_c \tag{L.73} $$
+$$ \Delta\tau_d = \frac{\Delta\Phi}{c^2}\tau_c \tag{L.72} $$
 
 This is the gravitational time dilation of Theorem L.3.
 
@@ -842,7 +842,7 @@ Significance Test: Apply χ² test for deviation significance.
 
 For effect size $\delta/\omega \sim 10^{-4}$ to $10^{-6}$ and 5σ detection:
 
-$$ N_{\text{trials}} \gtrsim 25\left(\frac{\omega}{\delta}\right)^2 \sim 2.5 \times 10^9 \text{ to } 2.5 \times 10^{13} \tag{L.74} $$
+$$ N_{\text{trials}} \gtrsim 25\left(\frac{\omega}{\delta}\right)^2 \sim 2.5 \times 10^9 \text{ to } 2.5 \times 10^{13} \tag{L.73} $$
 
 Experimental Timeline: For optimistic scenario ($\delta/\omega \sim 10^{-4}$, 1000 ions, 1 kHz): approximately 30 days. For conservative scenario ($\delta/\omega \sim 10^{-6}$, 100 ions, 100 Hz): approximately 8 years. The worked example (L.11.4) achieves $\delta/\omega \sim 4 \times 10^{-3}$ requiring $N_{\text{trials}} \sim 2 \times 10^5$, accessible in approximately 10 seconds with 1000 ions at 1 kHz. Engineering optimization (plasmonic enhancement, cavity coupling, reduced detuning) can push effect size higher, reducing required integration times to practical timescales (hours-days) while maintaining perturbative regime validity.
 
@@ -890,7 +890,7 @@ Mechanical Work: $P_{\text{mech}}$ (typically negligible for stationary aggregat
 
 Energy Closure Test:
 
-$$ \epsilon_{\text{closure}} = \frac{|P_{\text{agg}} - (P_{\text{EM}} + P_{\text{heat}} + P_{\text{mech}})|}{P_{\text{agg}}} \tag{L.75} $$
+$$ \epsilon_{\text{closure}} = \frac{|P_{\text{agg}} - (P_{\text{EM}} + P_{\text{heat}} + P_{\text{mech}})|}{P_{\text{agg}}} \tag{L.74} $$
 
 Expected Result: $\epsilon_{\text{closure}} < 0.05$ (5% closure) with careful instrumentation.
 
@@ -910,7 +910,7 @@ Compare proper time accumulation in target versus reference clock over integrati
 
 Framework Prediction:
 
-$$ \Delta\tau_d \sim 6.6 \times 10^{-54} \text{ s} \tag{L.76} $$ 
+$$ \Delta\tau_d \sim 6.6 \times 10^{-54} \text{ s} \tag{L.75} $$ 
 
 Detection Threshold:
 
@@ -918,7 +918,7 @@ Best achievable: $\Delta\tau_{\text{min}} \sim 10^{-18} \times T_{\text{int}} \s
 
 Sensitivity Gap:
 
-$$ \frac{\Delta\tau_{\text{min}}}{\Delta\tau_d} \sim 10^{39} \tag{L.77} $$
+$$ \frac{\Delta\tau_{\text{min}}}{\Delta\tau_d} \sim 10^{39} \tag{L.76} $$
 
 Expected Outcome:
 
@@ -932,23 +932,23 @@ For all physically realizable aggregates, any influence expressed through classi
 
 For implementations utilizing oscillating fields, aggregate influence strength exhibits sharp resonance behavior:
 
-$$ |\Delta P(\Delta)| \propto \frac{\delta(\Delta)}{\omega_{\text{TLS}}} \propto \frac{1}{|\Delta|} \tag{L.78} $$
+$$ |\Delta P(\Delta)| \propto \frac{\delta(\Delta)}{\omega_{\text{TLS}}} \propto \frac{1}{|\Delta|} \tag{L.77} $$
 
 ### **Prediction L.3 (Distance Scaling in Far-Field Regime)**
 
 For radiative regime $r \gg \lambda_{\text{rad}} = 2\pi c/\omega_{\text{rad}}$, electromagnetic field amplitude scales as:
 
-$$ E_0(r) \propto \frac{1}{r} \tag{L.79} $$
+$$ E_0(r) \propto \frac{1}{r} \tag{L.78} $$
 
 Therefore AC Stark shift:
 
-$$ \delta(r) \propto \frac{E_0^2(r)}{\Delta} \propto \frac{1}{r^2} \tag{L.80} $$
+$$ \delta(r) \propto \frac{E_0^2(r)}{\Delta} \propto \frac{1}{r^2} \tag{L.79} $$
 
 ### **Prediction L.4 (Coherence Time Window)**
 
 Observable effect requires measurement time $\tau_m$ satisfying:
 
-$$ \frac{1}{\gamma_\phi + \Gamma} \lesssim \tau_m \lesssim \frac{1}{\Gamma_{\text{context}}} \tag{L.81} $$
+$$ \frac{1}{\gamma_\phi + \Gamma} \lesssim \tau_m \lesssim \frac{1}{\Gamma_{\text{context}}} \tag{L.80} $$
 
 where $\gamma_\phi$ is target dephasing rate, $\Gamma$ is natural linewidth, and $\Gamma_{\text{context}}$ is aggregate context variation rate.
 
@@ -1055,7 +1055,7 @@ Proof. (a) follows from clause (v) of Theorem L.9. (b) follows from Theorem 34 (
 ### **Remark L.9.1 (External Field Dominance Independence)**
 
 For implementations that express CC influence through classical spacetime fields external to the aggregate, Theorem L.5 establishes electromagnetic dominance over gravitational by factor $\mathcal{R} \sim 10^{36}$. However, implementations utilizing near-field coupling, biochemical gating, or internal state correlations not mediated by propagating external fields may exhibit different channel hierarchies while still satisfying conditions (i)-(v). Investigation of such alternative pathways requires rigorous derivation from framework axioms showing their emergence from POP/PCE optimization (see Section L.4.1 for biological candidate).
-L.9.X Spatiotemporal Bounds on CC Influence
+### **L.9.2 Spatiotemporal Bounds on CC Influence**
 
 The CC capability is not instantaneous across arbitrary distances but bounded by physical constraints. We formalize these bounds.
 
@@ -1149,29 +1149,29 @@ Proof. Each component proven in cited theorems. The conjunction of (a)–(g) est
 
 The electromagnetic-to-gravitational coupling ratio emerges from the framework's information-theoretic structure. From Appendix Z (Theorem Z.7), the bare electromagnetic coupling is $u^* = 8^{1/24} - 1 \approx 0.0905$, which converts via the Predictive Ward Identity (Theorem Z.14) to the bulk value:
 
-$$ \alpha_{\text{em}}(\text{bulk}) = \frac{u^*}{4\pi} \approx \frac{1}{138.843} \tag{L.82a} $$
+$$ \alpha_{\text{em}}(\text{bulk}) = \frac{u^*}{4\pi} \approx \frac{1}{138.843} \tag{L.81a} $$
 
-Including the discrete-to-continuous interface correction (Appendix Z, Section Z.17), the Thomson-limit value is $\alpha^{-1} ≈ 137.036 \pm 0.0001$ (Theorem Z.20). The electromagnetic fine structure constant in standard form is:
+Including the discrete-to-continuous interface correction (Appendix Z, Section Z.17), the Thomson-limit value is $\alpha^{-1} = 137.036092 \pm 0.000050$ (Theorem Z.20). The electromagnetic fine structure constant in standard form is:
 
-$$ \alpha_{\text{em}} = \frac{e^2}{4\pi\epsilon_0\hbar c} \tag{L.82b} $$
+$$ \alpha_{\text{em}} = \frac{e^2}{4\pi\varepsilon_0\hbar c} \tag{L.81b} $$
 
 From Appendix E (Equation E.9), the gravitational constant is:
 
-$$ G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\text{max}}} \tag{L.83} $$
+$$ G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\text{max}}} \tag{L.82} $$
 
 where $\delta$ is MPU spacing, $\eta$ is geometric packing factor, $\chi$ is channel correlation factor, and $C_{\text{max}}$ is ND-RID capacity.
 
 The gravitational fine structure constant for mass $m$ is:
 
-$$ \alpha_{\text{grav}} = \frac{Gm^2}{\hbar c} = \frac{\eta\delta^2 m^2}{4\hbar^2\chi C_{\text{max}}} \tag{L.84} $$
+$$ \alpha_{\text{grav}} = \frac{Gm^2}{\hbar c} = \frac{\eta\delta^2 m^2}{4\hbar^2\chi C_{\text{max}}} \tag{L.83} $$
 
 For electron mass $m_e$:
 
-$$ \alpha_{\text{grav}}^{(e)} = \frac{Gm_e^2}{\hbar c} \approx 1.75 \times 10^{-45} \tag{L.85} $$
+$$ \alpha_{\text{grav}}^{(e)} = \frac{Gm_e^2}{\hbar c} \approx 1.75 \times 10^{-45} \tag{L.84} $$
 
 The ratio at the MPU operational scale is:
 
-$$ \frac{\alpha_{\text{em}}(\text{MPU})}{\alpha_{\text{grav}}^{(e)}} \approx \frac{7.2 \times 10^{-3}}{1.75 \times 10^{-45}} \approx 4.1 \times 10^{42} \tag{L.86} $$
+$$ \frac{\alpha_{\text{em}}(\text{MPU})}{\alpha_{\text{grav}}^{(e)}} \approx \frac{7.2 \times 10^{-3}}{1.75 \times 10^{-45}} \approx 4.1 \times 10^{42} \tag{L.85} $$
 
 This order-of-magnitude hierarchy ($\sim 10^{43}$) reflects the fundamental information-theoretic structure.
 
@@ -1189,11 +1189,11 @@ The MPU aggregate $S$, via the POP/PCE-optimized mapping $\mathcal{M}(\text{cont
 
 The interaction occurs during the 'Evolve' process over duration $\tau_{\text{int}} \gtrsim \tau_{\text{min}}$ (Theorem 29). The interaction Hamiltonian describing the coupling is (in a suitable interaction picture):
 
-$$ H_{\text{int}}(t) = -\vec{d}{\text{TLS}} \cdot \vec{E}{\text{rad}}(t) \approx \hbar,\delta(t),\sigma_z \tag{L.87} $$
+$$ H_{\text{int}}(t) = -\vec{d}{\text{TLS}} \cdot \vec{E}{\text{rad}}(t) \approx \hbar,\delta(t),\sigma_z \tag{L.86} $$
 
 where the off-resonant AC Stark shift is:
 
-$$ \delta(t) \simeq \frac{\Omega_R^2(t)}{4,\Delta(t)}, \quad \Omega_R(t) = \frac{|\vec{d}{\text{TLS}}\cdot\vec{\epsilon}{\text{rad}}(t)|,E_0(t)}{\hbar}, \quad \Delta(t)=\omega_{\text{TLS}}-\omega_{\text{rad}}(t) \tag{L.88} $$
+$$ \delta(t) \simeq \frac{\Omega_R^2(t)}{4,\Delta(t)}, \quad \Omega_R(t) = \frac{|\vec{d}{\text{TLS}}\cdot\vec{\epsilon}{\text{rad}}(t)|,E_0(t)}{\hbar}, \quad \Delta(t)=\omega_{\text{TLS}}-\omega_{\text{rad}}(t) \tag{L.87} $$
 
 The operator $\sigma_z = |e\rangle\langle e| - |g\rangle\langle g|$ projects onto the TLS energy eigenstates.
 
@@ -1201,17 +1201,17 @@ The operator $\sigma_z = |e\rangle\langle e| - |g\rangle\langle g|$ projects ont
 
 The 'Evolve' process for the target MPU is described by a master equation for its density matrix $\rho$ (consistent with Equation B.8, Appendix B.4):
 
-$$ \dot{\rho} = -\frac{i}{\hbar}[H_{\text{TLS}} + H_{\text{int}}(t),\rho] + \sum_k \gamma_k^{(0)}\mathcal{L}_k[\rho] \tag{L.89} $$
+$$ \dot{\rho} = -\frac{i}{\hbar}[H_{\text{TLS}} + H_{\text{int}}(t),\rho] + \sum_k \gamma_k^{(0)}\mathcal{L}_k[\rho] \tag{L.88} $$
 
 where $H_{\text{TLS}}$ is the MPU's intrinsic TLS Hamiltonian (part of $\hat{H}$ from Theorem 29), and $\mathcal{L}k$ are baseline Lindblad superoperators (rates $\gamma_k^{(0)}$) for the ND-RID process. The interaction $H{\text{int}}(t)$ induces a time-dependent AC Stark shift $\pm \hbar \delta(t)$ in the TLS energy levels. If the Lindblad rates $\gamma_k^{(0)}$ depend on energy level spacings or couplings affected by these shifts (e.g., via density of states in Fermi's Golden Rule), the effective rates $\gamma_k$ become modulated by $E_0(t)$.
 
 Defining a dimensionless control field magnitude:
 
-$$ \Phi_S(t)=\frac{E_0(t)}{E_{\text{max}}}, \quad |\Phi_S(t)|\le1 \tag{L.90} $$
+$$ \Phi_S(t)=\frac{E_0(t)}{E_{\text{max}}}, \quad |\Phi_S(t)|\le1 \tag{L.89} $$
 
 where $E_{\text{max}}$ is the maximum field amplitude achievable by $S$. The effective rates can be modeled as:
 
-$$ \gamma_k(t) \approx \gamma_k^{(0)}\bigl[1+\chi_k(\omega_{\text{rad}}(t), \Delta(t))\Phi_S(t) + O(\Phi_S^2(t))\bigr] \tag{L.91} $$
+$$ \gamma_k(t) \approx \gamma_k^{(0)}\bigl[1+\chi_k(\omega_{\text{rad}}(t), \Delta(t))\Phi_S(t) + O(\Phi_S^2(t))\bigr] \tag{L.90} $$
 
 where $\chi_k$ is a dimensionless rate susceptibility, dependent on $d_{\text{TLS}}$, $E_{\text{max}}$, and details of the TLS-environment coupling modulated by the Stark shift.
 
@@ -1219,7 +1219,7 @@ where $\chi_k$ is a dimensionless rate susceptibility, dependent on $d_{\text{TL
 
 The outcome probabilities $P_{\text{obs}}(i)$ of the 'Evolve' process are then:
 
-$$ P_{\text{obs}}(i)=\text{tr}!\big(e^{\varepsilon L_S}(\rho),E_i\big)=\text{tr}!\big(\rho,(E_i+\varepsilon K_S(E_i))\big)+O(\varepsilon^2) \tag{L.92} $$
+$$ P_{\text{obs}}(i)=\text{tr}!\big(e^{\varepsilon L_S}(\rho),E_i\big)=\text{tr}!\big(\rho,(E_i+\varepsilon K_S(E_i))\big)+O(\varepsilon^2) \tag{L.91} $$
 
 with $\varepsilon$ a context-controlled scale (when $L_S$ is a GKLS generator) chosen so that $|\Delta P(i)|\le \text{CC}(S)$.
 
@@ -1241,7 +1241,7 @@ $$ |\Delta P|\sim \Delta\gamma,\tau_{\text{int}} = \gamma_0\tau_{\text{int}}\lef
 
 so the bias scales linearly with the fractional rate shift and with the baseline interaction probability over $\tau_{\text{int}}$.
 
-With $E_{\text{max}}=2\times10^{3}$ V/m and $d_{\text{TLS}}\approx1.6\times10^{-28}$ C·m, the Rabi frequency is $\Omega_R=d_{\text{TLS}}E_{\text{max}}/\hbar\approx 3.0\times10^{9}$ rad/s. For detuning $\Delta=2\pi\times10$ GHz the off-resonant AC Stark shift is $\delta\simeq \Omega_R^2/(4\Delta)\approx 3.7\times10^{7}$ rad/s, giving a fractional level shift $\delta/\omega_{\text{TLS}}\approx 6\times10^{-4}$. For $\Delta=2\pi\times1$ GHz this rises to $\sim 6\times10^{-3}$. Achieving a 5% fractional shift at $\Delta=2\pi\times10$ GHz requires $E\sim 1.85\times10^{4}$ V/m, while $E = 3.6\times10^{4}$ V/m would yield approximately 19% shift (or engineered enhancement/reduced detuning). Within the small-shift regime, modulation of decoherence/transition rates via Equation L.91 may yield detectable probability biases with higher fields, reduced detuning, or cavity/plasmonic enhancements consistent with resource bounds.
+With $E_{\text{max}}=2\times10^{3}$ V/m and $d_{\text{TLS}}\approx1.6\times10^{-28}$ C·m, the Rabi frequency is $\Omega_R=d_{\text{TLS}}E_{\text{max}}/\hbar\approx 3.0\times10^{9}$ rad/s. For detuning $\Delta=2\pi\times10$ GHz the off-resonant AC Stark shift is $\delta\simeq \Omega_R^2/(4\Delta)\approx 3.7\times10^{7}$ rad/s, giving a fractional level shift $\delta/\omega_{\text{TLS}}\approx 6\times10^{-4}$. For $\Delta=2\pi\times1$ GHz this rises to $\sim 6\times10^{-3}$. Achieving a 5% fractional shift at $\Delta=2\pi\times10$ GHz requires $E\sim 1.85\times10^{4}$ V/m, while $E = 3.6\times10^{4}$ V/m would yield approximately 19% shift (or engineered enhancement/reduced detuning). Within the small-shift regime, modulation of decoherence/transition rates via Equation L.90 may yield detectable probability biases with higher fields, reduced detuning, or cavity/plasmonic enhancements consistent with resource bounds.
 
 ## **L.11.4 Worked Example: Complete Calculation for Engineered System**
 
@@ -1271,7 +1271,7 @@ Operating frequency: $\omega_{\text{rad}} = \omega_{\text{TLS}} - \Delta$
 
 From Equation L.9, with $P_{\text{rad}} = 1.0 \times 10^6$ W:
 
-$$ E_0 = \sqrt{\frac{P_{\text{rad}}}{4\pi\epsilon_0c r^2}} = \sqrt{\frac{10^6}{4\pi \times 8.85\times10^{-12} \times 3\times10^8 \times 0.25}} \approx 1.10 \times 10^4 \text{ V/m} $$
+$$ E_0 = \sqrt{\frac{P_{\text{rad}}}{4\pi\varepsilon_0 c r^2}} = \sqrt{\frac{10^6}{4\pi \times 8.85\times10^{-12} \times 3\times10^8 \times 0.25}} \approx 1.10 \times 10^4 \text{ V/m} $$
 
 ### **Step 2: AC Stark Shift**
 
@@ -1373,11 +1373,11 @@ $$ \sigma_{\text{total}}(|\Delta P|) = \sqrt{(\sigma_{\text{field}}\cdot\partial
 With $\sigma_{\text{field}}/E_0 \sim 0.01$, $\sigma_{\Delta}/(2\pi) \sim 1$ MHz, $\sigma_{\text{stat}} \sim 3\times10^{-5}$ for $N = 10^6$ trials:
 $$ \sigma_{\text{total}}(|\Delta P|) \approx \sqrt{(4\times10^{-5})^2 + (2\times10^{-6})^2 + (3\times10^{-5})^2} \sim 5 \times 10^{-5} $$
 
-Detection significance: $|\Delta P|/\sigma_{\text{total}} = 1.9\times10^{-3}/(5\times10^{-5}) \sim 38\sigma$ (with 6.3s integration)
+Illustrative signal-to-noise ratio: $\mathrm{SNR} = |\Delta P|/\sigma_{\text{total}} = 1.9\times10^{-3}/(5\times10^{-5}) \approx 38$ (for the stated noise model and $N=10^6$ trials)
 
-This demonstrates the prediction is well above expected noise floor, making the effect readily detectable with standard error mitigation.
+Under the stated scaling and noise assumptions, the estimated effect is well above the expected noise floor, suggesting detectability with appropriate error mitigation and experimental controls.
 
-The Engineered System enables detection on practical timescales while maintaining validity of the perturbative regime. The results confirm that high-complexity MPU aggregates can produce statistically significant quantum probability deviations consistent with the CC hypothesis, providing a concrete experimental pathway for testing the framework's core predictions.
+The Engineered System enables these deviations to manifest on practical timescales, while maintaining the validity of the perturbative regime. The estimates indicate that, under the stated scaling and noise assumptions, high-complexity MPU aggregates could produce detectable deviations in quantum outcome frequencies; whether a given experiment achieves statistical significance depends on trial count, noise floors, and control of systematic effects.
 
 ## **L.12 Relationship to Appendix S: Gravitational Self-Limitation**
 

@@ -440,8 +440,8 @@
 *   Petz, D., & Sudár, C. (1996). Geometries of quantum states. *Journal of Mathematical Physics*, *37*(6), 2662–2673. DOI: 10.1063/1.531535
 *   Pfender, F., & Ziegler, G. M. (2004). Kissing numbers, sphere packings, and some unexpected proofs. *Notices of the AMS*, *51*(8), 873–883.
 *   Pikovsky, A., Rosenblum, M., & Kurths, J. (2001). *Synchronization: A Universal Concept in Nonlinear Sciences*. Cambridge University Press.
-*   Planck Collaboration (2020a). Planck 2018 results. VI. Cosmological parameters. *Astronomy & Astrophysics*, *641*, A6.
-*   Planck Collaboration (2020b). Planck 2018 results. IX. Constraints on primordial non-Gaussianity. *Astronomy & Astrophysics*, *641*, A9.
+*   Planck Collaboration (2020a). Planck 2018 results. VI. Cosmological parameters. *Astronomy & Astrophysics*, *641*, A6. DOI: 10.1051/0004-6361/201833910.
+*   Planck Collaboration (2020b). Planck 2018 results. IX. Constraints on primordial non-Gaussianity. *Astronomy & Astrophysics*, *641*, A9. DOI: 10.1051/0004-6361/201935891.
 *   Plavala, M. (2016). All measurements in a probabilistic theory are compatible if and only if the state space is a simplex. *Physical Review A*, *94*, 042108. DOI: 10.1103/PhysRevA.94.042108
 *   Plavala, M. (2021). General Probabilistic Theories: An Introduction. *arXiv*, arXiv:2103.07469. DOI: 10.48550/arXiv.2103.07469
 *   Pless, V. (1968). On the uniqueness of the Golay codes. *Journal of Combinatorial Theory*, *5*(3), 215–228. DOI: 10.1016/S0021-9800(68)80067-5

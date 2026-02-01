@@ -12,6 +12,33 @@ From these foundations—consciousness as primary, knowledge as predictive, and 
 
 Finally, we introduce the Principle of Physical Instantiation (PPI). This principle serves as a capstone, explaining how abstract logical and mathematical structures, including those necessary for prediction, become physically manifest. The PPI posits that these structures, when instantiated by systems with finite resources operating in finite time, are necessarily shaped by irreducible thermodynamic costs and resource-optimization imperatives (such as the PU's Principle of Compression Efficiency, PCE). This results in the emergence of specific physical laws—not as direct reflections of abstract objects, but as their thermodynamically optimal and resource-efficient physical embodiments. This appendix, therefore, aims to provide the philosophical justification for the PU framework, showing its axioms and principles to be deeply rooted in the conditions for any knowable reality.
 
+**Executive summary: explicit commitments and epistemic status.** Any foundational physical theory relies on commitments about (i) what exists and (ii) what counts as evidence. In practice, many matter-first foundations treat the external physical degrees of freedom and the mathematical formalism as primitives, while leaving the status of consciousness implicit or deferred. The PU framework makes these commitments explicit and then minimizes them by deriving as much as possible from the Cogito—the sole indubitable certainty [Descartes 1641]—together with the operational necessities of prediction under finite resources.
+
+The comparison below concerns starting points and explanatory completeness, not the empirical successes of standard physical models.
+
+| Question | Common matter-first starting point | PU framework starting point |
+|:--|:--|:--|
+| What is certain? | External degrees of freedom are posited; observation is modeled operationally. | Conscious awareness is certain (Cogito) and is used as the epistemic foundation (Section P.2). |
+| Status of consciousness | Treated as emergent or bracketed as outside fundamental physics (hard problem) [Chalmers 1996]. | Foundational; no emergence gap by construction (Sections P.2–P.3). |
+| Why these laws? | Dynamical laws and symmetry principles are typically postulated, then tested and refined. | Physical law is derived as PCE-selected optimal instantiation of predictive structure under PPI (Sections P.6–P.8). |
+| Why is mathematics effective? | Treated as a striking fact (Wigner) [Wigner 1960]. | Mathematics and physics arise from the same predictive constraints, with physics as thermodynamic instantiation (Section P.7). |
+
+Within PU, the epistemic status of the core commitments is stratified:
+
+- **Certainty (epistemic):** the existence of conscious awareness (Cogito) [Descartes 1641].
+- **Operational necessity:** the predictive cycle as the minimal structure supporting verification, learning, and knowledge (Sections P.3–P.4).
+- **Logical theorems:** impossibility results for perfect self-prediction (SPAP, Theorem 10) and bounded self-decision (RUD, Theorem A.2.3).
+- **Empirical anchor:** Landauer's principle relating logical irreversibility to physical dissipation [Landauer 1961; Bennett 1982], yielding the strict floor $\varepsilon \ge \ln 2$ (Theorem 31; Appendix J).
+- **Framework selection:** PPI (Definition P.6.2) and PCE (Definition 15) determine which physically instantiated structures are stable under finite resources, selecting saturation at the PCE-Attractor where applicable.
+
+A compact statement of the forcing chain is:
+
+$
+\text{Cogito} \to \text{Prediction} \to \text{SPAP/RUD} \xrightarrow{+\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4.
+$
+
+In this sense, after adopting the Cogito, finite-resource instantiation, and methodological parsimony, the remaining structural commitments are fixed by logical and thermodynamic necessity. The simulation framing (Section P.5) is used as a naturalistic modeling language for an informational process ontology, not as an ontological claim about an external programmer.
+
 ## P.1.1 The Meta-Theoretical Achievement: Establishing Viability and Addressing Incompleteness
 
 ### The Epistemological Case for Consciousness-First Physics
@@ -148,7 +175,7 @@ Within the PU modeling stance, an authentic simulation (Definition P.5.2) is nat
 
 $\square$
 
-> **Remark P.2.5.1 (Heterogeneity is expected).** POP and PCE do not select identical internal organizations everywhere: different local predictive tasks and resource constraints generically produce a heterogeneous hierarchy of predictors (single MPUs, tight aggregates, loose collectives), each occupying different points on the prediction–cost trade‑off.
+> **Remark P.2.5.1: Heterogeneity is expected.** POP and PCE do not select identical internal organizations everywhere: different local predictive tasks and resource constraints generically produce a heterogeneous hierarchy of predictors (single MPUs, tight aggregates, loose collectives), each occupying different points on the prediction–cost trade‑off.
 
 ### P.2.5.2 The Mathematical Challenge: Instantiating the SM on a Single MPU
 
@@ -673,7 +700,7 @@ Let $\mathcal{R}$ be a class of finite description objects (finite strings, reco
    r' \prec r \;\Rightarrow\; \mu(r') < \mu(r).
    $$
 
-**Remark (Well-Foundedness).** The standard characterization of well-founded relations employs rank functions into the ordinals [Kunen 1980, Chapter III]. Since each object $r \in \mathcal{R}$ is finite and acyclic by assumption, the proper-component relation $\prec$ strictly decreases a finite size measure, and the rank function may be taken to have codomain $\mathbb{N}$.
+**Remark: Well-Foundedness.** The standard characterization of well-founded relations employs rank functions into the ordinals [Kunen 1980, Chapter III]. Since each object $r \in \mathcal{R}$ is finite and acyclic by assumption, the proper-component relation $\prec$ strictly decreases a finite size measure, and the rank function may be taken to have codomain $\mathbb{N}$.
 
 **Lemma P.3.5.2 (No Proper Self-Containment).** There is no $r \in \mathcal{R}$ such that $r \prec r$.
 
@@ -963,7 +990,7 @@ where $\mathcal{M}_{int}$ is the class of predictive procedures available to int
 
 (iii) **Non-Intervention:** The channel permits observation without modification of internal states. External reading does not constitute an interaction from the internal perspective.
 
-**Remark P.5.1 (Internal Closure).** Properties (ii) and (iii) jointly ensure that from the internal perspective, the simulation's dynamics satisfy the closed-system assumption required by Theorem E.9.5 (Appendix E.9.5). External observation extracts information without participating in internal dynamics, preserving the applicability of global unitarity to internal evolution. The internal MPU network evolves as if closed, with no detectable information exchange across the observation channel.
+**Remark P.5.1: Internal Closure.** Properties (ii) and (iii) jointly ensure that from the internal perspective, the simulation's dynamics satisfy the closed-system assumption required by Theorem E.9.5 (Appendix E.9.5). External observation extracts information without participating in internal dynamics, preserving the applicability of global unitarity to internal evolution. The internal MPU network evolves as if closed, with no detectable information exchange across the observation channel.
 
 **Theorem P.5.1 (Consistency with Reflexivity Constraint).** The observation channel (Definition P.5.3) is consistent with Theorem 33.
 
@@ -996,7 +1023,7 @@ The observation channel is not a physical claim about any specific mechanism. It
 7. Properties (i), (ii), (iii) are therefore necessary
 8. A channel satisfying these properties exists by construction (the pathway enabling observation) QED
 
-**Remark P.5.2 (Epistemic Limits).** The physical nature, substrate, or mechanism of the observation channel is unknowable from within the simulation. By Corollary E.9.5.3, information conservation is required for prediction to remain possible; the observation channel architecture preserves this requirement for internal predictors while permitting external access. Internal systems may detect phenomena they cannot explain, or detect nothing at all. The channel could be entirely invisible to internal measurement. These questions are unanswerable from the internal perspective—they concern the external architecture of the simulation, which is by construction inaccessible.
+**Remark P.5.2: Epistemic Limits.** The physical nature, substrate, or mechanism of the observation channel is unknowable from within the simulation. By Corollary E.9.5.3, information conservation is required for prediction to remain possible; the observation channel architecture preserves this requirement for internal predictors while permitting external access. Internal systems may detect phenomena they cannot explain, or detect nothing at all. The channel could be entirely invisible to internal measurement. These questions are unanswerable from the internal perspective—they concern the external architecture of the simulation, which is by construction inaccessible.
 
 
 ### P.5.6 Conservation Laws and Internal Consistency
@@ -1031,16 +1058,16 @@ The PU framework invokes Landauer's principle [Landauer 1961] for the thermodyna
 ### P.6.1 The Principle of Physical Instantiation (PPI)
 
 **Definition P.6.2 (Principle of Physical Instantiation – PPI).**
-Any derivable, self-consistent logical or mathematical structure, when physically instantiated by a system composed of finite resources and operating in finite time, will manifest in the physical world with properties and dynamics shaped by the irreducible thermodynamic costs and resource-optimization imperatives inherent in its implementation.
+Any derivable, self-consistent logical or mathematical structure, when physically instantiated by a system composed of finite resources and operating in finite time, will manifest in the physical world with properties and dynamics shaped by the irreducible thermodynamic costs and resource-optimization imperatives inherent in its implementation. When multiple physically admissible implementations realize the same abstract structure with the same operational functionality, the realized implementation is the one minimizing the relevant resource cost over that admissible class (PPI-optimality).
 
 The PPI is the bridge between pure mathematics and physics. It explains why the physical world is not a direct copy of abstract structures, but a specific, cost-optimized implementation of them.
 
-**Remark (Relation to PCE).** The phrase "resource-optimization imperatives" in Definition P.6.2 is made operationally precise by the Principle of Compression Efficiency (Definition 15, Section 6.1.2). PPI asserts that physical instantiation is shaped by thermodynamic costs and optimization; PCE provides the specific cost functional $V(x)$ and dynamics governing that optimization. The relationship is hierarchical:
+**Remark: Relation to PCE.** The phrase "resource-optimization imperatives" in Definition P.6.2 is made operationally precise by the Principle of Compression Efficiency (Definition 15, Section 6.1.2). The relationship is hierarchical:
 
-- **PPI** provides the ontological bridge (abstract $\to$ physical) and asserts optimization occurs
-- **PCE** provides the selection criterion (which physical implementation) via potential minimization
+- **PPI** fixes the admissible domain: physically realizable implementations of an abstract requirement, together with PPI-optimality (minimal-cost realization within that admissible class).
+- **PCE** supplies an explicit cost functional $V(x)$ and an attractor dynamics selecting its minima subject to functionality constraints, providing a concrete realization of PPI-optimality for predictive systems.
 
-Both trace to the same underlying principle: physical reality implements logical necessities at minimum cost. When a derivation invokes "PPI requires..." it typically means the instantiation requirement is active; when it invokes "PCE selects..." it means the optimization criterion is determining uniqueness among alternatives that satisfy PPI.
+When a derivation invokes "PPI requires…", it invokes admissibility and PPI-optimality; when it invokes "PCE selects…", it invokes the explicit $V$-minimization machinery used to guarantee strict selection among admissible alternatives.
 
 ### P.6.2 Illustrating PPI: From Abstract Requirements to Specific Laws
 
@@ -1143,7 +1170,7 @@ PPI does not establish the Landauer equivalence (that is Landauer's contribution
 
 The extension of unified entropy to gravitational phenomena is *derived* within the framework from the Landauer cost. The chain:
 
-$$\varepsilon > 0 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\varepsilon > 0 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 consists entirely of theorems and lemmas proven from the framework's axioms. This is the novel contribution: showing that gravitational entropy follows necessarily from the SPAP entropy once Landauer provides the physical grounding.
 
@@ -1221,7 +1248,7 @@ The apparent multiplicity of entropies arises from unit conversion between opera
 | Information ↔ Heat | $Q = k_B T \cdot I$ | Minimum energy cost to erase $I$ bits at temperature $T$ |
 | Information ↔ Geometry | $I \cdot L_P^2 = I \cdot G\hbar/c^3$ | Planck area converts information to geometric area |
 
-The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains. Within the framework, these constants are constrained by derived relationships: Equation E.9 establishes $G$ in terms of $\hbar$, $c$, and the information-theoretic quantities $\delta$, $\eta$, $\chi$, and $C_{max}$.
+The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains. Within the framework, these constants are constrained by derived relationships: Equation E.9 establishes $G$ in terms of $\hbar$, $c$, and the information-theoretic quantities $\delta$, $\eta$, $\chi$, and $C_{\max}$.
 
 ### P.6.5.5a The Action-Entropy-Information Relations
 
@@ -1272,19 +1299,19 @@ $$
 The framework derives values for several fundamental ratios from first principles:
 
 - **The Planck ratio**: $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ from PCE optimization (Appendix Q, Equation Q.18)
-- **The fine-structure constant**: $\alpha^{-1} \approx 137.036$ from capacity saturation and interface corrections (Appendix Z, Theorem Z.26)
-- **The cosmological constant**: $\Lambda L_P^2 \approx 2.87 \times 10^{-122}$ from Golay-Steiner vacuum structure (Appendix U, Theorem U.16)
+- **The fine-structure constant (Thomson limit)**: $\alpha^{-1} \approx 137.036092 \pm 0.000050$ from capacity saturation and interface corrections (Appendix Z, Theorem Z.26)
+- **The cosmological constant**: $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ with $\kappa=141.5$ derived from the Golay-Steiner structure (Appendix U, Theorem U.16) and $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), giving $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa$ fixed, comparison with observation implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check (Corollary U.15b)
 
-These derivations represent predictions of the framework. The fundamental quantities from which all others derive are the logical cost $\varepsilon = \ln 2$ and the minimal complexity $K_0 = 3$—both determined by the structure of self-referential prediction.
+These derivations represent predictions of the framework in the sense that the functional forms and discrete exponents are fixed by PU; where a one-loop prefactor (e.g., $A_{\text{eff}}$) enters, it is defined by the specified bounce and can be independently computed, while the observed value serves as a consistency check on its expected $O(1)$ magnitude. The fundamental quantities from which all others derive are the logical cost $\varepsilon = \ln 2$ and the minimal complexity $K_0 = 3$—both determined by the structure of self-referential prediction.
 
 **Corollary P.6.2.1 (Status of the Gravitational Constant).** *Within the framework, the gravitational constant $G$ is expressed in terms of information-theoretic quantities:*
 
-$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{max}(f_{RID})} \quad \text{(Equation E.9)}$$
+$$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}(f_{RID})} \quad \text{(Equation E.9)}$$
 
 *The quantities on the right-hand side have clear physical interpretations:*
 - *$\delta$: the MPU spacing, determined by PCE optimization to be $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \, L_P$*
 - *$\eta$, $\chi$: geometric factors determined by the network topology, with PCE-optimal values $\eta^* \approx 1$, $\chi^* \approx 1$*
-- *$C_{max}$: channel capacity, with PCE-optimal value $C_{max}^* = 2\ln 2$ (Equation E.15)*
+- *$C_{\max}$: channel capacity, with PCE-optimal value $C_{\max}^* = 2\ln 2$ (Equation E.15)*
 - *$c$, $\hbar$: conversion factors between domains*
 
 *This expression identifies $G$ as emergent from the information-processing structure of the predictive substrate. The Planck scale $L_P = \sqrt{G\hbar/c^3}$ is determined by the PCE-optimal spacing $\delta \approx 2.355 \, L_P$ (Appendix Q).*
@@ -1309,7 +1336,7 @@ The framework achieves what these pioneers conjectured but could not derive from
 
 The derivation chain—from SPAP through Landauer to channel capacity to area law—makes this identity explicit and traceable:
 
-$$\varepsilon_{SPAP} = \ln 2 \to f_{RID} < 1 \to C_{max} < 3\ln 2 \to \sigma_{link} \to \frac{1}{4G} \to S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\varepsilon_{SPAP} = \ln 2 \to f_{RID} < 1 \to C_{\max} < 3\ln 2 \to \sigma_{link} \to \frac{1}{4G} \to S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 This chain ultimately determines the relationship between the Planck scale and the strength of gravity.
 
@@ -1364,13 +1391,13 @@ Wigner asked why the language of mathematics is appropriate for physics. The fra
 
 The transcendental structure of the framework is exhibited by a single logical chain from the certainty of the Cogito to the observable universe:
 
-$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
 
 Each arrow represents a necessary implication:
 
 1. **Cogito $\to$ Prediction:** Conscious awareness is fundamentally predictive (Section P.2).
 2. **Prediction $\to$ SPAP:** Self-referential prediction encounters logical limits (Theorem 10).
-3. **SPAP $\to$ $\varepsilon = \ln 2$:** The irreversible merge in the SPAP cycle has minimum thermodynamic cost (Theorem 31, Appendix J).
+3. **SPAP $\to$ $\varepsilon \ge \ln 2$:** The irreversible merge in the SPAP cycle incurs a strict thermodynamic floor under physical instantiation (Theorem 31, Appendix J). PCE then selects saturation at the PCE-Attractor, yielding $\varepsilon = \ln 2$ as the minimal consistent value.
 4. **$\varepsilon \to a = 2$:** PPI requires this abstract cost to be physically instantiated as a 2-dimensional active kernel (Appendix Z, Theorem Z.1).
 5. **$a \to M = 24$:** The QFI structure on the $(a, b) = (2, 6)$ partition yields $M = 2ab = 24$ information modes (Appendix Z, Theorem Z.5).
 6. **$M \to D = 4$:** Mode-channel correspondence requires $K(D) = M = 24$, uniquely selecting $D = 4$ (Appendix Z, Theorem Z.11).
@@ -1378,7 +1405,7 @@ Each arrow represents a necessary implication:
 
 This chain realizes Wheeler's "It from Bit" conjecture (1989) in precise form, with an essential refinement: the physical universe ("It") emerges from information-theoretic constraints ("Bit"), but specifically as "It from Error-Corrected Bit." The 24 modes naturally partition into 12 information-carrying and 12 redundancy modes forming the optimal Golay code $[24, 12, 8]$ (Appendix Z, Theorem Z.13). This built-in error correction explains why physical structures exhibit remarkable stability despite quantum uncertainty and thermal noise—reliability is not imposed on physics but emerges from the information-theoretic substrate.
 
-**Remark P.7.1 (Universality).** The derivation chain establishes that M = 24 is not contingent but necessary for any universe satisfying: (i) predictive dynamics (POP), (ii) thermodynamic constraints (Landauer), (iii) quantum structure (complex Hilbert space), and (iv) maximal algebraic closure (octonions, hence $d_0 = 8$). Any such universe—regardless of other details—must have exactly 24 information modes. This transforms M = 24 from "a feature of our universe" to "a requirement for predictive existence."
+**Remark P.7.1: Universality.** The derivation chain establishes that M = 24 is not contingent but necessary for any universe satisfying: (i) predictive dynamics (POP), (ii) thermodynamic constraints (Landauer), (iii) quantum structure (complex Hilbert space), and (iv) maximal algebraic closure (octonions, hence $d_0 = 8$). Any such universe—regardless of other details—must have exactly 24 information modes. This transforms M = 24 from "a feature of our universe" to "a requirement for predictive existence."
 
 ### P.7.3 The Golden Ratio and Emergence Dynamics
 
@@ -1411,7 +1438,7 @@ The derivation chain of Section P.7.2 admits compact algebraic representation: t
 
 $$\boxed{L(a) := \begin{pmatrix} 1 & 0 \\ 2a & -2a^2 \end{pmatrix}}$$
 
-For the PU framework with $a = e^\varepsilon = e^{\ln 2} = 2$ (Theorem Z.1):
+For the PU framework with $a = 2$ (Theorem Z.1):
 $$L(2) = \begin{pmatrix} 1 & 0 \\ 4 & -8 \end{pmatrix}$$
 
 **Proposition P.7.1 (Interface Generation).** The constraint matrix transforms the dimension-unity pair into the dimension-interface pair:
@@ -1432,7 +1459,7 @@ $$\lambda_1 = 1, \qquad \lambda_2 = -2a^2 = -d_0$$
 
 *Proof.* The matrix is lower triangular, so eigenvalues are diagonal entries: $\lambda_1 = 1$ and $\lambda_2 = -2a^2$. Substituting $a = 2$ and $d_0 = 8$ yields $\lambda_2 = -8$. ∎
 
-**Remark P.7.2a (Interpretive Status).** The appearance of $d_0$ in the spectrum is a consequence of the matrix construction, not an independent derivation. The matrix $L(a)$ provides compact notation for the derivation chain but does not add physical content beyond what is already established in Theorems Z.1 and Z.5.
+**Remark P.7.2a: Interpretive Status.** The appearance of $d_0$ in the spectrum is a consequence of the matrix construction, not an independent derivation. The matrix $L(a)$ provides compact notation for the derivation chain but does not add physical content beyond what is already established in Theorems Z.1 and Z.5.
 
 **Corollary P.7.2.1 (Matrix Invariants).**
 
@@ -1455,11 +1482,11 @@ $$v_1 = \begin{pmatrix} d_0 + 1 \\ 2a \end{pmatrix} \quad (\lambda_1 = 1), \qqua
 
 #### P.7.4.4 The Encoding Interpretation
 
-**Remark P.7.4 (Constraint Encoding).** The matrix $L(a)$ encodes the complete constraint structure:
+**Remark P.7.4: Constraint Encoding.** The matrix $L(a)$ encodes the complete constraint structure:
 - **Input:** $(d_0, 1)$ — Hilbert dimension and unity
 - **Output:** $(d_0, M)$ — Hilbert dimension and interface modes
 - **Constraint:** $\lambda_2 = -d_0$ — Landauer-SPAP relation in spectrum
-- **Thermodynamics:** $a = e^\varepsilon$ — Landauer cost in matrix entries
+- **Thermodynamics:** $\varepsilon=\ln 2 \Rightarrow a=2$ — Landauer pointer dimension encoded in matrix entries
 
 The matrix "compiles" the chain:
 $$\varepsilon = \ln 2 \xrightarrow{e^\varepsilon} a = 2 \xrightarrow{L(a)} M = 24$$
@@ -1484,7 +1511,7 @@ No free parameters enter. The matrix $L(2)$ is fully determined.
 
 **Corollary P.7.4.1 (Counterfactual Analysis).** For hypothetical universes:
 
-| $\varepsilon$ | $a = e^\varepsilon$ | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | $\lambda_2$ | $K(D) = M$? |
+| $\varepsilon$ | $a$ (minimal admissible) | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | $\lambda_2$ | $K(D) = M$? |
 |:--------------|:-------------------:|:------------:|:---------------:|:-----------:|:-----------:|
 | $\ln 2$ | 2 | 8 | 24 | $-8$ | $D = 4$ ✓ |
 | $\ln 3$ | 3 | 18 | 90 | $-18$ | No integer $D$ |
@@ -1508,7 +1535,7 @@ The Predictive Universe framework advances a specific claim about the ontologica
 
 **Thesis P.8.1 (Spacetime Emergence).** Spacetime—including its dimensionality, geometry, causal structure, and temporal direction—emerges from the structure of error-corrected predictive coherence across the MPU network. Spacetime is not the stage on which prediction occurs; spacetime is the geometric manifestation of prediction maintaining itself optimally under finite-resource constraints.
 
-This claim has precise mathematical content. The emergence is "strong" in the following sense: the specific geometry of spacetime—four-dimensional Lorentzian manifold with the observed gauge structure—is uniquely determined by the framework's foundational constants ($d_0 = 8$, $\varepsilon = \ln 2$) through the derivation chain established in Section P.7.2 and detailed in Appendix Z. To ask what spacetime is "made of" is to ask what structure prediction requires for self-maintenance under thermodynamic constraints. The answer—optimal error correction on 24 information modes—determines every geometric feature.
+This claim has precise mathematical content. The emergence is "strong" in the following sense: the specific geometry of spacetime—four-dimensional Lorentzian manifold with the observed gauge structure—is uniquely determined by the framework's foundational constants ($d_0 = 8$ and $\varepsilon \ge \ln 2$, with saturation $\varepsilon = \ln 2$ at the PCE-Attractor) through the derivation chain established in Section P.7.2 and detailed in Appendix Z. To ask what spacetime is "made of" is to ask what structure prediction requires for self-maintenance under thermodynamic constraints. The answer—optimal error correction on 24 information modes—determines every geometric feature.
 
 ---
 
@@ -1516,7 +1543,7 @@ This claim has precise mathematical content. The emergence is "strong" in the fo
 
 The complete parameter-free derivation chain from foundational axioms to emergent spacetime structure proceeds as follows (cf. Section P.7.2; Appendix Z):
 
-$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
 
 Each arrow represents a necessary implication:
 
@@ -1532,11 +1559,7 @@ $$
 
 The bound is exact and saturated by optimal erasure protocols (Theorem 31).
 
-**Stage 4: Physical Instantiation (Theorem Z.1).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires abstract logical costs to manifest as actual physical systems. The Shannon entropy of a maximally mixed state on an $a$-dimensional Hilbert space is exactly $S = \ln a$. For exact correspondence (neither insufficient nor wasteful):
-
-$$
-\ln a = \varepsilon \implies a = e^{\ln 2} = 2
-$$
+**Stage 4: Physical Instantiation (Theorem Z.1).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the irreversible SPAP merge/reset to be realized by a finite physical register. Since $S(\rho)\le \ln a$ on an $a$-dimensional register, a full reset can reduce entropy by at most $\ln a$, so admissibility requires $\ln a\ge \varepsilon$. PPI-optimality then selects the minimal admissible integer $a$; for $\varepsilon=\ln 2$ this yields $a=2$.
 
 This 2-dimensional "Landauer Pointer" is the minimal physical realization of the irreducible cost.
 
@@ -1581,7 +1604,7 @@ Spacetime emerges as a unity. The same foundational structure that produces spat
 | Error correction range | Causal horizons |
 | Network topology | Spatial relationships |
 
-*Derivation.* The logical ordering of the predictive cycle is irreversible: a prediction must be generated before it can be verified, and verification must occur before the model can be updated. This `Predict → Verify → Update` sequence defines a primitive notion of directed process that is logically prior to physical time (Appendix O, Section O.5).
+*Derivation.* The logical ordering of the predictive cycle is irreversible: a prediction must be generated before it can be verified, and verification must occur before the model can be updated. This Predict → Verify → Update sequence defines a primitive notion of directed process that is logically prior to physical time (Appendix O, Section O.5).
 
 The physical instantiation of this logical ordering is the 'Evolve' process (Definition 27), which carries the irreducible thermodynamic cost $\varepsilon \geq \ln 2$ (Theorem 31). This cost acts as a thermodynamic ratchet: every predictive cycle dissipates entropy, making the cycle physically irreversible. The logical arrow of the predictive cycle is thereby locked into physical irreversibility by ubiquitous microscopic thermodynamics (Appendix O, Theorem O.3).
 
@@ -1621,7 +1644,7 @@ where $M_{\text{int}} = 24$ (Theorem Z.5) and $K(D)$ is the kissing number in $D
 
 *Proof.*
 
-**Step 1 (Interface mode count).** From foundational constants: $d_0 = 8$ (Theorem 23), $\varepsilon = \ln 2$ (Theorem 31), $a = e^{\varepsilon} = 2$ (Theorem Z.1), $b = d_0 - a = 6$, yielding $M_{\text{int}} = 2ab = 24$ (Theorem Z.5).
+**Step 1 (Interface mode count).** From foundational constants: $d_0 = 8$ (Theorem 23), $\varepsilon = \ln 2$ (Theorem 31), $a = 2$ (Theorem Z.1), $b = d_0 - a = 6$, yielding $M_{\text{int}} = 2ab = 24$ (Theorem Z.5).
 
 **Step 2 (Geometric regularity).** Theorem 43 establishes that PCE optimization drives the MPU network toward geometric regularity, admitting description as a smooth $D$-dimensional manifold for some integer $D$.
 
@@ -1653,12 +1676,12 @@ The unique solution is $D = 4$. ∎
 
 Four dimensions is the unique PCE optimum given $M = 24$.
 
-**Remark P.8.2 (Geometric Frustration and Self-Consistency).** The discrete nature of kissing numbers means that arbitrary values of $M_{\text{int}}$ would not necessarily have integer-dimensional solutions. For example, if foundational constants yielded $M_{\text{int}} = 30$, no dimension $D$ satisfies $K(D) = 30$ exactly ($K(4) = 24$, $K(5) = 40$). Such a universe would exhibit "geometric frustration"—inability to achieve perfect mode-channel matching—potentially preventing stable spacetime emergence.
+**Remark P.8.2: Geometric Frustration and Self-Consistency.** The discrete nature of kissing numbers means that arbitrary values of $M_{\text{int}}$ would not necessarily have integer-dimensional solutions. For example, if foundational constants yielded $M_{\text{int}} = 30$, no dimension $D$ satisfies $K(D) = 30$ exactly ($K(4) = 24$, $K(5) = 40$). Such a universe would exhibit "geometric frustration"—inability to achieve perfect mode-channel matching—potentially preventing stable spacetime emergence.
 
 This observation has deeper implications. The specific values $d_0 = 8$ and $\varepsilon = \ln 2$ that yield $M = 24$ are precisely those for which an exact solution exists. As analyzed in **Remark Z.6**, this is not coincidental: if foundational constants yielded $M_{\text{int}} = 8$ (from $d_0 = 4$), no integer dimension satisfies $K(D) = 8$ ($K(2) = 6$, $K(3) = 12$); similarly, $M_{\text{int}} = 96$ (from $d_0 = 16$) finds no match ($K(8) = 240$ is too large). The framework does not merely accommodate $D = 4$—it predicts it as the unique solution to mode-channel matching given self-consistent foundational constants.
 
 Universes with geometrically frustrated mode counts may be logically conceivable but physically unrealizable, as they cannot achieve the stable PCE equilibrium required for spacetime emergence. The derivation chain:
-$$\varepsilon = \ln 2 \xrightarrow{a = e^\varepsilon} a = 2 \xrightarrow{M = 2ab} M = 24 \xrightarrow{K(D) = M} D = 4$$
+$$\varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{M = 2ab} M = 24 \xrightarrow{K(D) = M} D = 4$$
 represents a self-consistent fixed point of the framework's constraints, not a selection from alternatives.
 
 ---
@@ -1779,7 +1802,7 @@ $$\text{Negentropy} \equiv \text{Error Correction Capacity}$$
 
 Both represent stored capacity to restore order after degradation. The parity modes operationally realize the negative entropy—ordered structure whose function is enabling recovery from disorder.
 
-*Remark (Scope of Equivalence).* This equivalence is operational within the PU framework, not a general mathematical identity. Schrödinger's original concept was qualitative; the PU framework provides a precise quantitative realization for the predictive substrate.
+*Remark: Scope of Equivalence.* This equivalence is operational within the PU framework, not a general mathematical identity. Schrödinger's original concept was qualitative; the PU framework provides a precise quantitative realization for the predictive substrate.
 
 ### P.8.9a.2.1 Quantitative Correspondence
 
@@ -1827,7 +1850,7 @@ $$k^2 = 12^2 = 144$$
 $$bM = 6 \times 24 = 144$$
 
 These equalities hold given the PU framework parameters:
-- $a = e^{\varepsilon} = e^{\ln 2} = 2$ (Theorem Z.1, from $\varepsilon = \ln 2$ of Theorem 31)
+- $a = 2$ (Theorem Z.1, from $\varepsilon = \ln 2$ of Theorem 31)
 - $b = d_0 - a = 8 - 2 = 6$ (Definition)
 - $M = 2ab = 2 \times 2 \times 6 = 24$ (Theorem Z.5)
 - $k = M/2 = 12$ (From rate $R = 1/2$)
@@ -1873,14 +1896,14 @@ The genetic code exhibits structural parallels to these properties:
 
 This organization minimizes the phenotypic impact of point mutations—precisely the function of error correction. The probability of the observed structure arising by chance is $< 10^{-6}$ [Freeland & Hurst 1998], indicating strong selection for error-tolerant properties.
 
-**Remark (Distinction from Formal ECCs).** The genetic code exhibits error-tolerant *properties* consistent with selection for robustness, but it lacks the formal algebraic structure of codes like the Golay code. Specifically:
+**Remark: Distinction from Formal ECCs.** The genetic code exhibits error-tolerant *properties* consistent with selection for robustness, but it lacks the formal algebraic structure of codes like the Golay code. Specifically:
 - No finite field structure over codon space
 - No syndrome decoding algorithm
 - No guaranteed $t$-error correction capacity
 
 The appropriate characterization is that the genetic code *exhibits error-correcting properties*, not that it *is* a formal error-correcting code in the Shannon-Hamming sense. The parallel is structural and functional, revealing shared optimization principles rather than mathematical identity.
 
-**Remark (Code Optimality).** The genetic code is not globally optimal among all possible codes [Novozhilov et al. 2007], but it is highly optimized within constraints imposed by the translation machinery and evolutionary accessibility. This parallels the PU framework's treatment: PCE selects the optimal code *subject to physical constraints*, not an abstract mathematical optimum.
+**Remark: Code Optimality.** The genetic code is not globally optimal among all possible codes [Novozhilov et al. 2007], but it is highly optimized within constraints imposed by the translation machinery and evolutionary accessibility. This parallels the PU framework's treatment: PCE selects the optimal code *subject to physical constraints*, not an abstract mathematical optimum.
 
 ---
 
@@ -2166,7 +2189,7 @@ The structural correspondence is:
 - $D_{KL}[q \| p(\theta)] \leftrightarrow V_{op}$ (model complexity cost)
 - $\mathbb{E}_q[-\ln p(o|\theta)] \leftrightarrow -V_{benefit}$ (negative predictive quality)
 
-*Remark (Scope of Analogy).* This correspondence is structural, not operational equivalence. The free energy principle operates on probability distributions $q(\theta)$; the PCE potential operates on network configurations $x$. Both minimize a functional with the structure [complexity cost] + [accuracy term], suggesting shared optimization principles.
+*Remark: Scope of Analogy.* This correspondence is structural, not operational equivalence. The free energy principle operates on probability distributions $q(\theta)$; the PCE potential operates on network configurations $x$. Both minimize a functional with the structure [complexity cost] + [accuracy term], suggesting shared optimization principles.
 
 ### P.8.9a.8.2 What PU Adds Beyond Free Energy
 
@@ -2329,11 +2352,11 @@ The distinction between logical necessities and their physical manifestations pr
     *   *Examples:* "What is the value of the speed of light?" "What are the masses of the elementary particles?" "What is the specific form of the law of gravity?"
     *   *PU Answer:* These values are determined by the PCE optimization process acting on the MPU network. They are the emergent parameters of the universe's equilibrium state.
 
-The PU framework reveals that the boundary between logical necessity and contingent parameter is sharper than traditionally assumed. Einstein asked whether God had any choice in creating the universe—whether the fundamental constants could have been otherwise. The over-determination results of Appendices R and Z suggest the answer is no. The interface mode count $M = 24$ satisfies eight independent mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, and PCE minimality. The probability of random coincidence is less than $10^{-5}$. Similarly, the three-generation structure emerges independently from topological anomaly cancellation and from $E_8$ geometric embedding (Appendix R, Proposition R.4.2). These quantities are not free parameters awaiting measurement but unique solutions to over-constrained optimization problems. The universe's constants are mathematically necessary given the logical structure of prediction.
+The PU framework reveals that the boundary between logical necessity and contingent parameter is sharper than traditionally assumed. Einstein asked whether God had any choice in creating the universe—whether the fundamental constants could have been otherwise. The over-determination results of Appendices R and Z suggest the answer is no. The interface mode count $M = 24$ satisfies eight independent mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, and PCE minimality. Because these outputs are derived from shared discrete invariants and shared geometric constructions, their mutual consistency should be read as an internal rigidity/coherence check rather than as a frequentist "probability of coincidence" claim; assigning such a probability requires specifying an explicit alternative-model ensemble, priors, and multiple-comparisons accounting. Similarly, the three-generation structure emerges independently from topological anomaly cancellation and from $E_8$ geometric embedding (Appendix R, Proposition R.4.2). These quantities are not free parameters awaiting measurement but unique solutions to over-constrained optimization problems. The universe's constants are mathematically necessary given the logical structure of prediction.
 
 This distinction resolves historical confusions where scientists have sought physical mechanisms for what are, in fact, logical necessities. The PU framework asserts that the "Why" of the first category is answered by logic, while the "What" and "How" of the second category are answered by physics, which itself emerges from optimizing the "Why."
 
-**Remark P.9.1 (Comparison with Alternative Approaches to Dimensional Emergence).** 
+**Remark P.9.1: Comparison with Alternative Approaches to Dimensional Emergence.** 
 
 | Approach | Treatment of D | Selection Mechanism |
 |----------|---------------|---------------------|
@@ -2369,7 +2392,7 @@ In the PU framework, awareness doesn't use time—awareness is the process whose
 - The operational manifestation of awareness
 - The fundamental tick of time itself
 
-*Note:* While individual MPU cycles are discrete events, the emergent continuum time (Appendix F, Theorem F.1) arises from the collective dynamics of the network. The 'tick' metaphor refers to operational cycles, not fundamental discreteness of spacetime.
+*Note:* While individual MPU cycles are discrete events, the emergent continuum time (Appendix F, Theorem F.0) arises from the collective dynamics of the network. The 'tick' metaphor refers to operational cycles, not fundamental discreteness of spacetime.
 
 When we speak of temporal engineering, we're describing awareness modulating its own operational rhythm to influence the patterns that emerge from its predictive activity through the optimization process detailed in Appendix D (Theorem D.5).
 
@@ -2678,7 +2701,7 @@ Four independent constraints determine $d_0 = 8$ uniquely:
 
 The intersection of these constraints uniquely determines $d_0 = 8$.
 
-**Structural Consistency Check (Theorem Z.2).** The identity $d_0 = 2a^2$ derived in Theorem Z.2 from SPAP tensor product structure provides an independent verification: with $a = e^\varepsilon = 2$ (Theorem Z.1), we obtain $d_0 = 2 \times 4 = 8$, consistent with $d_0 = 2^{K_0} = 2^3 = 8$. This consistency is non-trivial and reflects the mutual determination of $K_0$, $\varepsilon$, $a$, and $d_0$ by SPAP structure. $\square$
+**Structural Consistency Check (Theorem Z.2).** The identity $d_0 = 2a^2$ derived in Theorem Z.2 from SPAP tensor product structure provides an independent verification: with $a = 2$ (Theorem Z.1), we obtain $d_0 = 2 \times 4 = 8$, consistent with $d_0 = 2^{K_0} = 2^3 = 8$. This consistency is non-trivial and reflects the mutual determination of $K_0$, $\varepsilon$, $a$, and $d_0$ by SPAP structure. $\square$
 
 **Epistemic Status:** Framework-derived from Convention 1, PCE minimality, with Radon-Hurwitz consistency and verification via Theorem Z.2.
 
@@ -2714,7 +2737,7 @@ This bound is exact and saturated by optimal erasure protocols [Bennett 1982]. $
 **Reference:** Theorem Z.1 (Appendix Z, Section Z.2.3)
 
 The dimension of the active kernel subspace is:
-$$a = e^{\varepsilon} = 2$$
+$$a = 2$$
 
 *Proof.*
 
@@ -2727,7 +2750,7 @@ $$S(\rho_{\text{uniform}}) = \ln a \text{ nats}$$
 - $\ln a \geq \varepsilon$ (sufficient to instantiate the cost—PPI)
 - $\ln a$ minimal (no excess capacity—PCE)
 
-is $a = e^{\varepsilon} = 2$. $\square$
+is $a = 2$ for $\varepsilon=\ln 2$. $\square$
 
 **Epistemic Status:** Framework-derived from PPI (Definition P.6.2) and PCE (Definition 15).
 
@@ -2811,7 +2834,7 @@ The value $M = 24$ satisfies multiple independent mathematical constraints:
 
 | Constraint | Statement | Verification |
 |------------|-----------|--------------|
-| C1 (Algebraic) | $M = 2ab$ with $a + b = d_0$, $a = e^\varepsilon$ | $2 \times 2 \times 6 = 24$ ✓ |
+| C1 (Algebraic) | $M = 2ab$ with $a + b = d_0$, $a = 2$ | $2 \times 2 \times 6 = 24$ ✓ |
 | C2 (Geometric) | Kissing number $K(4) = 24$ | [Musin 2008] ✓ |
 | C3 (Coding) | Unique $[24, 12, 8]$ binary code exists | [Pless 1968] ✓ |
 | C4 (Packing) | Optimal sphere packing in dimension 24 | [Cohn et al. 2017] ✓ |
@@ -2820,7 +2843,7 @@ The value $M = 24$ satisfies multiple independent mathematical constraints:
 
 *Proof of individual constraints.*
 
-**C1:** From the derivation chain: $\varepsilon = \ln 2$ (Theorem P.13.3), $a = e^\varepsilon = 2$ (Theorem P.13.4), $b = d_0 - a = 6$, $M = 2ab = 24$ (Theorem P.13.5).
+**C1:** From the derivation chain: $\varepsilon = \ln 2$ (Theorem P.13.3), $a = 2$ (Theorem P.13.4), $b = d_0 - a = 6$, $M = 2ab = 24$ (Theorem P.13.5).
 
 **C2:** The kissing number $K(D)$ is the maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$ dimensions. $K(4) = 24$ [Musin 2008]. For comparison: $K(3) = 12$, $K(5) = 40$, $K(8) = 240$.
 
@@ -3364,9 +3387,7 @@ The $\mathbb{Z}_2$ structure of the PCE-Attractor corresponds canonically to the
 
 **Step 4 (Lift consistency).** The lift $(-1) \mapsto \theta$ (Theorem P.13.21) preserves centrality: $\theta$ commutes with all VOA automorphisms. The correspondence $S \leftrightarrow (-1) \leftrightarrow \theta$ identifies the canonical central involution in each setting: the unique non-trivial involution acting on the support of $\rho_0$, the unique central involution for the indecomposable Leech lattice, and its canonical lift to the VOA. $\square$
 
-**Epistemic Status:** Framework-derived. The correspondence identifies the unique central involution in each context rather than constructing a specific matrix isomorphism.
-
-**Epistemic Status:** Framework-derived. This is a canonicity claim establishing that both structures represent the distinguished order-2 element in their respective settings.
+**Epistemic Status:** Framework-derived. The correspondence identifies the unique central involution in each context rather than constructing a specific matrix isomorphism. This is a canonicity claim establishing that both structures represent the distinguished order-2 element in their respective settings.
 
 ---
 
@@ -3506,7 +3527,7 @@ is the hauptmodul for a genus-zero subgroup $\Gamma_g \leq SL_2(\mathbb{R})$.
 
 $$\boxed{
 \begin{aligned}
-&\text{SPAP (Thm 10)} \xrightarrow{\text{Lemma J.1}} \text{2-to-1 merge} \xrightarrow{\text{Landauer}} \varepsilon = \ln 2 \\[0.3em]
+&\text{SPAP (Thm 10)} \xrightarrow{\text{Lemma J.1}} \text{2-to-1 merge} \xrightarrow{\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \\[0.3em]
 &\xrightarrow{\text{PPI+PCE}} a = 2 \xrightarrow{d_0 = 8} b = 6 \xrightarrow{\text{QFI}} M = 24 \\[0.3em]
 &\xrightarrow{\text{PCE}} \mathcal{G}_{24} \xrightarrow{\text{glue}} \Lambda_{24} \\[0.3em]
 &\xrightarrow{\text{P.13.6.1-2}} \text{Scale inv.} \to \text{CFT} \to \text{VOA} \xrightarrow{\text{P.13.6.3-4}} c = 24,\ \text{holomorphic} \\[0.3em]
@@ -3522,7 +3543,7 @@ $$\boxed{
 |------|--------|------|-----------|
 | 1 | $K_0 = 3$ bits | Framework | Theorem 15 |
 | 2 | $d_0 = 8$ | Framework | Theorem 23, Theorem Z.2 |
-| 3 | $\varepsilon = \ln 2$ | Framework + Physics | Theorem 31, Landauer |
+| 3 | $\varepsilon \ge \ln 2$ (PCE: $\varepsilon=\ln 2$) | Framework + Physics | Theorem 31, Landauer |
 | 4 | $a = 2$ | Framework | Theorem Z.1 (PPI + PCE) |
 | 5 | $b = 6$ | Definition | $b = d_0 - a$ |
 | 6 | $M = 24$ | Framework | Theorem Z.5 |
@@ -3556,7 +3577,7 @@ $$\boxed{
 
 The Monster group derivation extends the fundamental chain established in Section P.7 of Appendix P:
 
-$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
+$$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
 
 This appendix continues the chain beyond spacetime emergence to the symmetry structure of the vacuum:
 
@@ -3564,7 +3585,7 @@ $$M = 24 \to \mathcal{G}_{24} \to \Lambda_{24} \to V_{\Lambda_{24}} \to V^\natur
 
 The complete chain from consciousness to the Monster is therefore:
 
-$$\boxed{\text{Cogito} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon = \ln 2 \to M = 24 \to \Lambda_{24} \to V^\natural \to \mathbb{M}}$$
+$$\boxed{\text{Cogito} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \to M = 24 \to \Lambda_{24} \to V^\natural \to \mathbb{M}}$$
 
 Each arrow represents a necessary implication under PCE optimization. The Monster group is not an endpoint arbitrarily attached to the framework—it is the automorphism group of the structure that PCE necessarily selects as the optimal vacuum.
 
@@ -3636,7 +3657,7 @@ where $\mathcal{S}$ denotes the vacuum symmetry structure (the Monster group $\m
 
 **($\mathcal{E} \to \mathcal{S}$):** The entropy cost $\varepsilon = \ln 2$ determines $a = 2$, which determines $M = 24$, which determines the Leech lattice, which determines $V^\natural$, whose automorphism group is $\mathbb{M}$. The thermodynamic cost fixes the symmetry.
 
-**($\mathcal{S} \to \mathcal{E}$):** The Monster is the automorphism group of a structure ($V^\natural$) that exists only because the Leech lattice is rootless, which occurs only because $M = 24$, which follows from $a = 2 = e^{\varepsilon}$. The symmetry structure encodes the thermodynamic cost.
+**($\mathcal{S} \to \mathcal{E}$):** The Monster is the automorphism group of a structure ($V^\natural$) that exists only because the Leech lattice is rootless, which occurs only because $M = 24$, which follows from $a = 2$ (Theorem Z.1). The symmetry structure encodes the thermodynamic cost.
 
 **($\mathcal{T} \to \mathcal{S}$):** Temporal structure requires the predict-verify-update cycle, which requires SPAP, which produces $\varepsilon = \ln 2$, which determines $\mathbb{M}$ through the chain. The arrow of time determines vacuum symmetry.
 
@@ -3673,7 +3694,7 @@ The key constraint is the irreducible thermodynamic cost $\varepsilon = \ln 2$. 
 3. This bound is exact and saturated
 
 From $\varepsilon = \ln 2$, the entire chain follows necessarily:
-- $a = e^{\varepsilon} = 2$ (PPI exact instantiation)
+- $a = 2$ (PPI-optimality, Theorem Z.1)
 - $b = d_0 - a = 6$ (given $d_0 = 8$ from SPAP logic)
 - $M = 2ab = 24$ (QFI structure)
 - Leech lattice (unique rootless even unimodular in 24D)
@@ -3688,7 +3709,7 @@ Each step follows from PCE optimization applied to the available mathematical st
 
 The structural relation $d_0 = 2a^2$ is derived in Theorem Z.2 (Appendix Z, Section Z.3.3) from the tensor product structure of the SPAP cycle: the pre-merge configuration space $\mathcal{H}_\phi \otimes \mathcal{H}_p \otimes \mathcal{H}_c$ has dimension $a \times a \times 2 = 2a^2$, which must equal the MPU Hilbert space dimension $d_0$. Combined with Corollary Z.1, which establishes $K_0 = 1 + 2\varepsilon/\ln 2$, we can analyze what constraints alternative values of $\varepsilon$ would face:
 
-| $\varepsilon$ | $a = e^\varepsilon$ | $K_0 = 1 + 2\varepsilon/\ln 2$ | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | Viability |
+| $\varepsilon$ | $a$ (minimal admissible) | $K_0 = 1 + 2\varepsilon/\ln 2$ | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | Viability |
 |---------------|---------------------|-------------------------------|--------------|-----------------|-----------|
 | $\ln 2$ | 2 | 3 (integer) | 8 | 24 | Viable: Leech $\to \mathbb{M}$ |
 | $\ln 3$ | 3 | 4.17 (non-integer) | 18 | 90 | Non-viable: $K_0 \notin \mathbb{Z}$ |
@@ -3878,7 +3899,7 @@ This is a claim about nature, not a logical deduction. PCE could be wrong. Natur
 **Internal Consistency Constraint.** The minimum values are not merely convenient but are uniquely forced by the framework's internal structure. Three independent relations must hold simultaneously:
 - $d_0 = 2^{K_0}$ (Theorem 23, from encoding requirements)
 - $d_0 = 2a^2$ (Theorem Z.2, from SPAP tensor structure)
-- $a = e^{\varepsilon}$ (Theorem Z.1, from physical instantiation)
+- $a = 2$ (Theorem Z.1, from physical instantiation with $\varepsilon = \ln 2$)
 
 Combining these: $2^{K_0} = 2(e^{\varepsilon})^2$. For integer $a$ (required by discrete state counting), the unique minimal solution is $\varepsilon = \ln 2$, $a = 2$, $d_0 = 8$, $K_0 = 3$. Alternative values such as $\varepsilon = \ln 3$ yield $a = 3$, $d_0 = 18$, which violates $d_0 = 2^{K_0}$ for integer $K_0$. Thus the minimum is not arbitrary but is the unique value satisfying all structural constraints.
 
@@ -3886,7 +3907,7 @@ Combining these: $2^{K_0} = 2(e^{\varepsilon})^2$. For integer $a$ (required by 
 
 With $\varepsilon = \ln 2$ and $K_0 = 3$ (the PCE-selected minima), the framework derives the following chain (Appendix Z):
 
-$$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \xrightarrow{\text{Thm Z.1}} a = e^{\varepsilon} = 2$$
+$$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \xrightarrow{\text{Thm Z.1}} a = 2$$
 
 $$b = d_0 - a = 6 \xrightarrow{\text{Thm Z.5}} M = 2ab = 24$$
 
@@ -3904,7 +3925,7 @@ The cosmological constant follows from the Golay-Steiner vacuum structure (Corol
 
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$$
 
-where $\kappa = 141.5$ is the instanton complexity derived in Theorem U.16, and $A_{\text{eff}} = O(1)$ is the dimensionless prefactor from one-loop determinants and extensivity (Appendix U, Section U.1). The exponential suppression $e^{-283} \sim 10^{-123}$ resolves the 122-order hierarchy; the prefactor contributes only $O(1)$ uncertainty.
+where $\kappa=141.5$ is derived in Theorem U.16, and $A_{\text{eff}}=0.923\pm0.011$ is the PU-theory prefactor fixed under the canonical Bures/Fisher normalization (Corollary U.15b). This gives $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check. The exponential suppression $e^{-283}\sim 10^{-123}$ resolves the 122-order hierarchy.
 
 ### P.14.5 Theoretical Predictions and Experimental Comparison
 
@@ -3914,18 +3935,18 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
-| $\alpha^{-1}$ | $137.036092 \pm 0.000050$ | $137.035999177(21)$ | NIST 2024 | 0.68 ppm |
-| $D$ | $4$ | $4$ | Observed | Exact |
-| $\Lambda L_P^2$ | $\sim 3 \times 10^{-122}$ | $2.87 \times 10^{-122}$ (derived from Planck 2018 $\Omega_\Lambda$ and $H_0$) | Planck Collaboration 2020a; Particle Data Group 2024 | Order of magnitude (resolves 122-order hierarchy; $A_{\text{eff}} \sim O(1)$) |
+| $\alpha^{-1}$ | $137.036092\pm0.000050$ | $137.035999177(21)$ | NIST 2024; CODATA 2022 | $+1.9\sigma$ (0.68 ppm) |
+| $D$ | $4$ | $4$ | — | exact |
+| $\Lambda L_P^2$ | $(2.88\pm0.03)\times 10^{-122}$ | $(2.86599\pm0.04849)\times 10^{-122}$ | Planck Collaboration 2020a; NIST 2024; Appendix V | $+0.3\sigma$ |
 | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | — | Equation Q.18 | Structural prediction |
 
 **Electroweak Sector:**
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
-| $v$ (Higgs VEV) | $252$ GeV | $246$ GeV | Particle Data Group 2024 | 2.4% |
-| $\sin^2\theta_W(M_Z)$ | $0.231$ | $0.23122 \pm 0.00003$ | Particle Data Group 2024 | $<1\%$ |
-| $m_H$ | $125$ GeV | $125.25 \pm 0.17$ GeV | Particle Data Group 2024 | $<1\%$ |
+| $v$ (Higgs VEV) | $252\pm5~\mathrm{GeV}$ | $246.22~\mathrm{GeV}$ | Particle Data Group 2024 | $+1.2\sigma$ |
+| $\sin^2\theta_W(M_Z)$ | $0.2310\pm0.0015$ | $0.23122\pm0.00003$ | Particle Data Group 2024 | $-0.15\sigma$ |
+| $m_H$ | $125\pm2.5~\mathrm{GeV}$ | $125.25\pm0.17~\mathrm{GeV}$ | Particle Data Group 2024 | $-0.10\sigma$ |
 
 **CKM Matrix and Quark Mixing (Appendix T):**
 
@@ -3963,7 +3984,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | $\eta_B$ (baryon asymmetry) | $(6.2 \pm 0.5) \times 10^{-10}$ | $(6.12 \pm 0.04) \times 10^{-10}$ | Planck 2020 | $+0.2\sigma$ |
 | $\theta_{QCD}$ (strong CP) | $0$ | $< 10^{-10}$ | nEDM bounds | Consistent |
 
-**Statistical Summary:** For the quantities with well-defined uncertainties (CKM, neutrino, and cosmological sectors), the combined $\chi^2/\text{d.o.f.} < 0.5$, indicating excellent agreement. Electroweak predictions show percent-level agreement without quoted theoretical uncertainties.
+**Statistical Summary:** For the 12 quantities in the CKM, neutrino, and baryon-asymmetry tables with explicit $1\sigma$ pulls $z_i$, define $\chi^2 := \sum_i z_i^2$. Using the pulls listed above yields $\chi^2 = 5.35$ for 12 degrees of freedom, i.e. $\chi^2/\text{d.o.f.} = 0.446$. Including the additional five outputs with conservative theory budgets from Appendices T/Z/U (namely $\alpha^{-1}$, $\Lambda L_P^2$, $v$, $\sin^2\theta_W(M_Z)$, and $m_H$) gives $\chi^2/\text{d.o.f.}\approx0.60$ for the 17-output set. As emphasized in Appendix T, these $\chi^2$ values are diagnostic (budget- and correlation-model dependent), but they indicate no statistically significant tension within the stated uncertainties.
 
 All predictions trace to two PCE-selected values: $\varepsilon = \ln 2$ and $K_0 = 3$. The derivation chains are documented in the referenced appendices.
 
@@ -3990,7 +4011,7 @@ The success of the minimum values provides strong evidence for PCE:
 | Multiple independent outputs match | Unified origin from $\varepsilon$, $K_0$ |
 | Precision spans 5+ significant figures | Not approximate or order-of-magnitude |
 | Same constants determine all sectors | $\varepsilon, K_0$ yield $\alpha$, $D$, $\Lambda$, $v$, $m_H$, CKM, PMNS, $\eta_B$ |
-| Statistical consistency: $\chi^2/\text{d.o.f.} < 0.5$ | No systematic tension with data |
+| Statistical consistency: $\chi^2/\text{d.o.f.}=5.35/12=0.446$ (12-pull subset) | No systematic tension with data |
 
 Had we required $\varepsilon = \ln 7.43$ to match observations, PCE would be essentially abandoned—the "minimum suffices" elegance lost, and the result would resemble parameter fitting. Instead, two numbers ($\varepsilon = \ln 2$, $K_0 = 3$) generate the entire Standard Model parameter space.
 
@@ -4003,12 +4024,12 @@ $$\boxed{
 &\textbf{Logical:} \quad \varepsilon \geq \ln 2 \\[4pt]
 &\textbf{PCE hypothesis:} \quad \varepsilon = \ln 2, \; K_0 = 3 \text{ (assumed, falsifiable)} \\[4pt]
 &\textbf{Predictions:} \quad \alpha^{-1}, D, \Lambda, v, m_H, \sin^2\theta_W, \text{CKM}, \text{PMNS}, \eta_B, \ldots \\[4pt]
-&\textbf{Experimental tests:} \quad 18+ \text{ quantities, } \chi^2/\text{d.o.f.} < 0.5 \\[4pt]
-&\textbf{Conclusion:} \quad \text{PCE is vindicated—the minimum suffices}
+&\textbf{Experimental tests:} \quad 18+ \text{ quantities; for the 12 with explicit pulls, } \chi^2/\text{d.o.f.} = 0.446 \\[4pt]
+&\textbf{Conclusion:} \quad \text{PCE remains consistent with current tests within stated budgets}
 \end{aligned}
 }$$
 
-The universe appears to operate at the thermodynamic and information-theoretic minimum permitted by the logic of self-referential prediction.
+The compiled tests are consistent with operation near the boundary of thermodynamic possibility: minimal complexity, minimal logical cost per bit, and minimal necessary structure, within the stated domains and uncertainty budgets.
 
 
 ## P.15 Conclusion

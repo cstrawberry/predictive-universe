@@ -4,7 +4,9 @@
 
 This appendix records the physical dimensions assigned to key symbols in the Predictive-Universe (PU) framework and verifies the dimensional homogeneity of its core equations. It then sketches how the empirical Milgrom acceleration scale $g_{0}$—used in Appendix I—might arise from the PU vacuum structure, relating $g_{0}$ to the cosmological constant $\Lambda$.
 
-Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Energy $[E]=[M][L]^{2}[T]^{-2}$ and Temperature $[\Theta]$. Boltzmann’s constant $k_{B}$ carries $[E][\Theta]^{-1}$. Predictive Physical Complexity $[Complexity]$ is treated as a fundamental dimension within the PU framework, representing the quantifiable structural resources required for prediction. Dimensionless information measures (nats) are noted where relevant. Factors of $c$ and $\hbar$ are kept explicit where needed for standard physics relations, but often $c=1, \hbar=1, k_B=1$ are used in derivations for simplicity.
+Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Energy $[E]=[M][L]^{2}[T]^{-2}$ and Temperature $[\Theta]$. Boltzmann's constant $k_{B}$ carries $[E][\Theta]^{-1}$. Predictive Physical Complexity $[Complexity]$ is treated as a fundamental dimension within the PU framework, representing the quantifiable structural resources required for prediction. Dimensionless information measures (nats) are noted where relevant. Factors of $c$ and $\hbar$ are kept explicit where needed for standard physics relations, but often $c=1, \hbar=1, k_B=1$ are used in derivations for simplicity.
+
+*Numbering note:* Section and equation numbers in this appendix follow logical groupings rather than strict sequential order. Gaps in numbering (e.g., H.4 to H.8, equations H.6 to H.11) are intentional, reserving space for future refinements while preserving stable cross-references.
 
 ## H.2 Dimensional Assignments
 
@@ -53,41 +55,41 @@ Standard SI base dimensions are used: Mass $[M]$, Length $[L]$, Time $[T]$, Ener
 
 Using the dimensional assignments in Table H.1, we verify the dimensional homogeneity of the principal PU equations.
 
-*   **Adaptation Dynamics (Equations (24), (30), (38))**
-    *   Equation (24) defining $\Psi$: $\Psi$ has dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. $\Gamma_{0}$ has $[E][T]^{-1}$, $\partial PP/\partial C$ has $[\text{Complexity}]^{-1}$ (PP dimensionless, $C$ has $[\text{Complexity}]$). $\lambda$ is dimensionless, $R'$ and $R_I'$ have dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. The equation $\Psi = \Gamma_0 (\partial PP/\partial C) - (\lambda R' + R_I')$ is dimensionally consistent.
-    *   Equation (30) for $\dot C$: $dC/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\eta_{\text{adapt}}$ has $[\text{Complexity}]^2 [E]^{-1}$, $\Psi$ has $[E][T]^{-1}[\text{Complexity}]^{-1}$. The product $\eta_{\text{adapt}}\Psi$ has dimensions $[\text{Complexity}]^2 [E]^{-1} \times [E][T]^{-1}[\text{Complexity}]^{-1} = [\text{Complexity}][T]^{-1}$. Equation (30) is dimensionally consistent.
-    *   Equation (38) for $\dot{\hat C}_{\text{target}}$: $d\hat C_{\text{target}}/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\mu_{\text{target}}$ has $[T]^{-1}$. $\hat C_{\text{target}}$ has $[\text{Complexity}]$. $(PP_{op}-PP)$ is dimensionless. The equation $\dot{\hat C}_{\text{target}} = \mu_{\text{target}} \hat C_{\text{target}} (PP_{op} - PP)$ is dimensionally consistent: $[\text{Complexity}][T]^{-1} = [T]^{-1} \times [\text{Complexity}] \times 1$.
+*   **Adaptation Dynamics (Equations (24), (30), (38))**
+    *   Equation (24) defining $\Psi$: $\Psi$ has dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. $\Gamma_{0}$ has $[E][T]^{-1}$, $\partial PP/\partial C$ has $[\text{Complexity}]^{-1}$ (PP dimensionless, $C$ has $[\text{Complexity}]$). $\lambda$ is dimensionless, $R'$ and $R_I'$ have dimensions $[E][T]^{-1}[\text{Complexity}]^{-1}$. The equation $\Psi = \Gamma_0 (\partial PP/\partial C) - (\lambda R' + R_I')$ is dimensionally consistent.
+    *   Equation (30) for $\dot C$: $dC/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\eta_{\text{adapt}}$ has $[\text{Complexity}]^2 [E]^{-1}$, $\Psi$ has $[E][T]^{-1}[\text{Complexity}]^{-1}$. The product $\eta_{\text{adapt}}\Psi$ has dimensions $[\text{Complexity}]^2 [E]^{-1} \times [E][T]^{-1}[\text{Complexity}]^{-1} = [\text{Complexity}][T]^{-1}$. Equation (30) is dimensionally consistent.
+    *   Equation (38) for $\dot{\hat C}_{\text{target}}$: $d\hat C_{\text{target}}/dt$ has dimensions $[\text{Complexity}][T]^{-1}$. $\mu_{\text{target}}$ has $[T]^{-1}$. $\hat C_{\text{target}}$ has $[\text{Complexity}]$. $(PP_{op}-PP)$ is dimensionless. The equation $\dot{\hat C}_{\text{target}} = \mu_{\text{target}} \hat C_{\text{target}} (PP_{op} - PP)$ is dimensionally consistent: $[\text{Complexity}][T]^{-1} = [T]^{-1} \times [\text{Complexity}] \times 1$.
 
-*   **Law of Prediction (Equations (22)–(23))**
-    *   Equation (22): $PP$ dimensionless. $\beta, \alpha$ dimensionless. $\kappa_{\text{eff}}$ dimensionless. $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $(C-C_{op})/\hat C_{\text{target}}$ is dimensionless. Exponent argument is dimensionless. Equation is dimensionally consistent.
-    *   Equation (23): $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $\kappa_{\text{eff}}$ dimensionless. $\ln(\dots)$ dimensionless. The equation is dimensionally consistent.
+*   **Law of Prediction (Equations (22)–(23))**
+    *   Equation (22): $PP$ dimensionless. $\beta, \alpha$ dimensionless. $\kappa_{\text{eff}}$ dimensionless. $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $(C-C_{op})/\hat C_{\text{target}}$ is dimensionless. Exponent argument is dimensionless. Equation is dimensionally consistent.
+    *   Equation (23): $C, C_{op}, \hat C_{\text{target}}$ have $[\text{Complexity}]$. $\kappa_{\text{eff}}$ dimensionless. $\ln(\dots)$ dimensionless. The equation is dimensionally consistent.
 
-*   **Reflexivity Constraint (Equation (48))**
-     *   Equation (48): $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r$. $\Delta I$ is dimensionless (nats). $\Delta S_{min}/k_B$ is dimensionless (nats). $\kappa_r$ must be dimensionless. Table H.1 states $\kappa_r$ is dimensionless. Consistent.
+*   **Reflexivity Constraint (Equation (48))**
+     *   Equation (48): $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r$. $\Delta I$ is dimensionless (nats). $\Delta S_{min}/k_B$ is dimensionless (nats). $\kappa_r$ must be dimensionless. Table H.1 states $\kappa_r$ is dimensionless. Consistent.
 
-*   **Area Law (Equation (71))**
-     *   Equation (71): $S_{max}$ has dimensions $[E][\Theta]^{-1}$. $k_B$ has $[E][\Theta]^{-1}$. $\mathcal A$ has $[L]^{2}$. $L_P$ has $[L]$. $S_{max} = \frac{[E][\Theta]^{-1} [L]^2}{[L]^2} = [E][\Theta]^{-1}$. Equation is dimensionally consistent.
+*   **Area Law (Equation (71))**
+     *   Equation (71): $S_{max}$ has dimensions $[E][\Theta]^{-1}$. $k_B$ has $[E][\Theta]^{-1}$. $\mathcal A$ has $[L]^{2}$. $L_P$ has $[L]$. $S_{max} = \frac{[E][\Theta]^{-1} [L]^2}{[L]^2} = [E][\Theta]^{-1}$. Equation is dimensionally consistent.
 
-*   **Emergent $G$ (Equation (E.9))**
-    *   Equation (E.9) from Appendix E is $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{max}(f_{RID})}$. $G$ has dimensions $[M]^{-1}[L]^3[T]^{-2}$. For the RHS: $\eta$ is dimensionless (1), $\delta$ has dimensions $[L]$, $c$ has $[L][T]^{-1}$, $\hbar$ has $[E][T]$, $\chi$ is dimensionless (1), and $C_{\max}$ is dimensionless (1).
-    RHS dimensions: $\frac{1 \cdot [L]^2 \cdot ([L][T]^{-1})^3}{[E][T] \cdot 1 \cdot 1} = \frac{[L]^2 [L]^3 [T]^{-3}}{[E][T]} = \frac{[L]^5 [T]^{-3}}{[M][L]^2[T]^{-2} [T]} = \frac{[L]^5 [T]^{-3}}{[M][L]^2[T]^{-1}} = [M]^{-1}[L]^3[T]^{-2}$.
-    Equation is dimensionally consistent.
+*   **Emergent $G$ (Equation (E.9))**
+    *   Equation (E.9) from Appendix E is $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$. $G$ has dimensions $[M]^{-1}[L]^3[T]^{-2}$. For the RHS: $\eta$ is dimensionless (1), $\delta$ has dimensions $[L]$, $c$ has $[L][T]^{-1}$, $\hbar$ has $[E][T]$, $\chi$ is dimensionless (1), and $C_{\max}$ is dimensionless (1).
+    RHS dimensions: $\frac{1 \cdot [L]^2 \cdot ([L][T]^{-1})^3}{[E][T] \cdot 1 \cdot 1} = \frac{[L]^2 [L]^3 [T]^{-3}}{[E][T]} = \frac{[L]^5 [T]^{-3}}{[M][L]^2[T]^{-2} [T]} = \frac{[L]^5 [T]^{-3}}{[M][L]^2[T]^{-1}} = [M]^{-1}[L]^3[T]^{-2}$.
+    Equation is dimensionally consistent.
 
-*   **Einstein Field Equations (Equation (76))**
-    *   Equation (76): $R_{\mu\nu}$ has dimensions $[L]^{-2}$. Ricci scalar $R$ has $[L]^{-2}$. $\Lambda$ has $[L]^{-2}$. $g_{\mu\nu}$ is dimensionless metric component. $T_{\mu\nu}$ has $[E][L]^{-3}$. $G$ has $[M]^{-1}[L]^3[T]^{-2}$, $c$ has $[L][T]^{-1}$. The term $\frac{8\pi G}{c^4} T_{\mu\nu}$ must also have dimensions $[L]^{-2}$. Checking the dimensions: $\frac{[G]}{[c^4]} [T_{\mu\nu}] = \frac{[M]^{-1}[L]^3[T]^{-2}}{[L]^4[T]^{-4}} [E][L]^{-3} = [M]^{-1}[L]^{-1}[T]^{2} [E][L]^{-3}$. Using $[E]=[M][L]^2[T]^{-2}$, this becomes $[M]^{-1}[L]^{-1}[T]^{2} ([M][L]^2[T]^{-2}) [L]^{-3} = [L]^{-2}$. Each term in the EFE carries dimensions of $[L]^{-2}$. Equation is dimensionally consistent.
+*   **Einstein Field Equations (Equation (76))**
+    *   Equation (76): $R_{\mu\nu}$ has dimensions $[L]^{-2}$. Ricci scalar $R$ has $[L]^{-2}$. $\Lambda$ has $[L]^{-2}$. $g_{\mu\nu}$ is dimensionless metric component. $T_{\mu\nu}$ has $[E][L]^{-3}$. $G$ has $[M]^{-1}[L]^3[T]^{-2}$, $c$ has $[L][T]^{-1}$. The term $\frac{8\pi G}{c^4} T_{\mu\nu}$ must also have dimensions $[L]^{-2}$. Checking the dimensions: $\frac{[G]}{[c^4]} [T_{\mu\nu}] = \frac{[M]^{-1}[L]^3[T]^{-2}}{[L]^4[T]^{-4}} [E][L]^{-3} = [M]^{-1}[L]^{-1}[T]^{2} [E][L]^{-3}$. Using $[E]=[M][L]^2[T]^{-2}$, this becomes $[M]^{-1}[L]^{-1}[T]^{2} ([M][L]^2[T]^{-2}) [L]^{-3} = [L]^{-2}$. Each term in the EFE carries dimensions of $[L]^{-2}$. Equation is dimensionally consistent.
 
-*   **SPAP Complexity Bound (Equation (B.5))**
-    *   Equation (B.5) from Appendix B.3 gives the poly-logarithmic complexity divergence near the SPAP limit:
+*   **SPAP Complexity Bound (Equation (B.5))**
+    *   Equation (B.5) from Appendix B.3 gives the poly-logarithmic complexity divergence near the SPAP limit:
  $$
-        C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{(\delta_{\rm SPAP})^2}\right)
-        $$
+        C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{(\delta_{\rm SPAP})^2}\right)
+        $$
 $C_{\text{uni}}$ represents the unified complexity, a dimensionless measure of effective computational resources (Theorem B.2). The accuracy gap $\delta_{\rm SPAP}$ is a dimensionless probability margin. The logarithm of a dimensionless quantity is dimensionless. 
 
 ## H.4 Vacuum-Based Estimate of the Acceleration Scale $g_{0}$
 
-The empirical acceleration scale $g_0 \sim 1.2 \times 10^{-10} \text{ m s}^{-2}$ that appears in galaxy scaling relations (Appendix I) is comparable to $cH_0$ where $H_0$ is the Hubble constant, suggesting a link to cosmology. Within the PU framework, the cosmological constant $\Lambda$ is not a free parameter but is derived from the Golay-Steiner structure of the MPU network vacuum (**Appendix U**), with complexity $\kappa = k^2 - (D+1)/2 = 141.5$ yielding $\Lambda L_P^2 \approx 2.87 \times 10^{-122}$. It represents the energy density of this predictive vacuum state.
+The empirical acceleration scale $g_0 \sim 1.2 \times 10^{-10} \text{ m s}^{-2}$ that appears in galaxy scaling relations (Appendix I) is comparable to $cH_0$ where $H_0$ is the Hubble constant, suggesting a link to cosmology. Within the PU framework, the cosmological constant $\Lambda$ is not a free parameter but is derived from the Golay-Steiner structure of the MPU network vacuum (Appendix U), with complexity $\kappa = k^2 - (D+1)/2 = 141.5$ yielding $\Lambda L_P^2 \approx 2.87 \times 10^{-122}$. The effective amplitude $A_{\text{eff}} = 0.923 \pm 0.011$ emerges from one-loop determinants and polynomial extensivity (Appendix U, Corollary U.17). It represents the energy density of this predictive vacuum state.
 
-#### H.4.1 de Sitter temperature
+### H.4.1 de Sitter temperature
 
 The vacuum energy density associated with the cosmological constant $\Lambda$ is given by the relation in Einstein's Field Equations (Theorem 50):
 $$
@@ -100,7 +102,7 @@ T_{dS}=\frac{\hbar \mathbf{c} \sqrt{\Lambda/3}}{2\pi k_{B}}.
 \tag{H.2}
 $$
 
-#### H.4.2 Crossover Scale from Information Resolution
+### H.4.2 Crossover Scale from Information Resolution
 
 **Proposition H.1 (Acceleration Scale from Information Resolution).**
 
@@ -325,7 +327,7 @@ $$
 \tag{H.4b}
 $$
 
-#### H.4.3 Numerical Prediction
+### H.4.3 Numerical Prediction
 
 Using $\Lambda \approx 1.1 \times 10^{-52}$ m$^{-2}$ [Planck Collaboration 2020a] and $c = 2.998 \times 10^8$ m/s:
 $$
@@ -346,21 +348,20 @@ $$
 a 2% deviation. This agreement lies within the systematic uncertainty of the empirical acceleration scale (of order $\sim 20\%$), so while encouraging, it does not yet constitute a definitive test of the framework.
 
 
-#### H.4.3.1 Error Analysis
+#### H.4.3.1 Uncertainty Budget
 
-**Theoretical Uncertainty:**
+**T1 (Theoretical - Exact):**
+The following contributions have zero theoretical uncertainty:
+- **QFI estimation precision:** The isotropy theorems are exact; numerical precision $\lesssim 10^{-6}$
+- **Capacity determination:** $C_{\mathrm{max}} = 2\varepsilon$ is exact from PCE optimization (Appendix Q)
+- **Dimensional projection:** $(D-1)/D = 3/4$ is exact given $D = 4$
 
-The dominant theoretical uncertainty arises from:
-1. **QFI estimation precision:** The isotropy theorems are exact; numerical precision $\lesssim 10^{-6}$
-2. **Capacity determination:** $C_{\mathrm{max}} = 2\varepsilon$ is exact from PCE optimization (Appendix Q)
-3. **Dimensional projection:** $(D-1)/D = 3/4$ is exact given $D = 4$
+**Combined T1 precision:** $\delta\eta'/\eta' \lesssim 10^{-5}$
 
-**Combined numerical precision:** $\delta\eta'/\eta' \lesssim 10^{-5}$
+**T2 (Theoretical - Model):**
+Model uncertainty (whether the bridge law correctly captures the physics) is not quantified and depends on empirical validation. This represents the dominant theoretical uncertainty.
 
-*Note:* This represents computational precision only. Model uncertainty (whether the bridge law correctly captures the physics) is not quantified and depends on empirical validation.
-
-**Observational Uncertainty:**
-
+**T3 (Observational):**
 The cosmological constant is derived from cosmological parameters reported by Planck:
 $$
 \Lambda = \frac{3\Omega_\Lambda H_0^2}{c^2}
@@ -374,40 +375,40 @@ $$
 $$
 The fractional uncertainty in $\Lambda$ implied by Planck parameter uncertainties is at the $\mathcal{O}(1\%)$ level, so its contribution to $\delta g_0/g_0$ is sub-percent.
 
-
 The empirical $g_0$ has systematic uncertainties at the tens-of-percent level (order $\sim 20\%$), dominated by astrophysical systematics and calibration choices [McGaugh et al. 2016; Lelli et al. 2017].
 
 
-**Total Uncertainty Budget:**
+**Summary Table:**
 
-| Source | Magnitude | Type |
-|--------|-----------|------|
-| Theoretical ($\eta'$) | $< 0.01\%$ | Negligible |
-| $\Lambda$ measurement | 0.15% | Observational |
-| Empirical $g_0$ | ~20% | Observational + Systematic |
+| Source | Category | Magnitude | Type |
+|--------|----------|-----------|------|
+| Theoretical ($\eta'$) | T1 | $< 0.01\%$ | Exact |
+| Model (bridge law) | T2 | Unquantified | Systematic |
+| $\Lambda$ measurement | T3 | 0.15% | Observational |
+| Empirical $g_0$ | T3 | ~20% | Observational + Systematic |
 
 
 The 2% deviation between prediction and observation is well within the empirical systematic uncertainty. 
 
 **Remark H.1.** Writing $H_\Lambda = c\sqrt{\Lambda/3}$ (the de Sitter Hubble parameter) yields $a_0 = cH_\Lambda$. Since $H_\Lambda \approx H_0$, this implies $a_0 \sim cH_0$, connecting the MOND scale to the Hubble scale. The derived result $g_0 = \eta' \cdot cH_\Lambda$ with $\eta' = 3/(8\sqrt{3}) \approx 0.22$ thus connects the galactic acceleration scale directly to the cosmological constant through the PU interface geometry.
 
-**Remark H.2 (Derivation Status).** The efficiency factor $\eta' = 3/(8\sqrt{3})$ is now **rigorously derived** from:
+**Remark H.2: Derivation Status.** The efficiency factor $\eta' = 3/(8\sqrt{3})$ is now **rigorously derived** from:
 1. **Isotropy theorem** (Haar average) → $a/d_0 = 1/4$
 2. **QFI additivity for i.i.d.** → $C/\varepsilon = 2$
 3. **Rotational invariance of quadratics** → $(D-1)/D = 3/4$
 4. **QFI additivity for generators** → $1/\sqrt{K_0} = 1/\sqrt{3}$
 5. **Sequential coarse-graining under symmetry** → product structure
 
-No analogies, assumptions, or phenomenological parameters are used. The bridge law (Definition H.0) provides the rigorous connection between QFI geometry and gravitational observables.
+The Milgrom acceleration $g_0$ is derived within the PU framework conditional on the QFI-Gravity Bridge Law (Definition H.0), which supplies the bridge between the information-geometric sector (QFI) and the emergent gravitational acceleration observable. No additional phenomenological fitting parameters are introduced beyond the PU invariants and the bridge-law identification.
 
-**Remark H.3 (Cross-Validation).** The same Grassmannian geometry $\mathrm{Gr}(2,8)$ that determines $\eta'$ also yields the fine-structure constant $\alpha^{-1} \approx 137.036$ (Theorem Z.25) and the charged lepton mass hierarchy (Appendix T). The agreement of multiple independent predictions with observation at the 98-99% level provides cross-validation of the geometric framework, though the statistical significance depends on assumptions about the prior probability of such agreements.
+**Remark H.3: Cross-Validation.** The same Grassmannian structure $\mathrm{Gr}(2,8)$ that yields the $\eta'$ enhancement also yields the fine-structure constant (Appendix Z) and electroweak hierarchy (Appendix T). The numerical proximity of these outputs to their empirical reference values provides an internal consistency check of the shared geometric inputs; it should not be interpreted as a formal statistical significance statement without specifying an alternative-model ensemble, priors, and multiple-comparisons accounting.
 
-**Remark H.4 (Operating Point Universality).** The operating point $C_{\mathrm{max}} = 2\varepsilon$ is not an arbitrary choice but the unique PCE-optimal capacity derived in Appendix Q (**Equation Q.10**). At this point, the MPU network achieves maximal predictive efficiency. The universality of $g_0$ across diverse galaxies follows from the PCE-driven convergence of all sufficiently complex systems to this optimal operating point.
+**Remark H.4: Operating Point Universality.** The operating point $C_{\mathrm{max}} = 2\varepsilon$ is not an arbitrary choice but the unique PCE-optimal capacity derived in Appendix Q (Equation Q.10). At this point, the MPU network achieves maximal predictive efficiency. The universality of $g_0$ across diverse galaxies follows from the PCE-driven convergence of all sufficiently complex systems to this optimal operating point.
 
 **Corollary H.1 (Parameter-Free Galactic Scale).**
-Under Proposition H.1, Definition H.0 (Bridge Law), and Equation (H.4b), the scale-dependent gravity model of Appendix I has its transition scale fully determined by the cosmological constant $\Lambda$ and PU constants $(K_0, \varepsilon, d_0, a, D)$, with **no numerically fitted parameters**. The galactic acceleration scale $g_0 \approx 1.18 \times 10^{-10}$ m/s$^2$ emerges as a derived prediction.
+Under Proposition H.1, Definition H.0 (Bridge Law), and Equation (H.4b), the scale-dependent gravity model of Appendix I has its transition scale fully determined by the cosmological constant $\Lambda$ and PU constants $(K_0, \varepsilon, d_0, a, D)$, with **no numerically fitted parameters**. The galactic acceleration scale $g_0 = (1.18 \pm 0.02) \times 10^{-10}$ m/s$^2$ emerges as a derived prediction, where the uncertainty reflects propagated error from $\Lambda$ measurements. Note: Observational systematics in $g_0^{\text{obs}}$ dominate at $\sim 20\%$.
 
-#### H.4.4 Per-Channel Normalization: The Factor of 3
+### H.4.4 Per-Channel Normalization: The Factor of 3
 
 **Critical Insight:** A common error in deriving $\eta'$ is normalizing by the total interface modes $M = 24$ rather than the per-spatial-channel modes $M_{\mathrm{sp}} = 8$.
 
@@ -434,7 +435,7 @@ $$
 The physical interpretation: $\eta'$ is not "fraction of the total QFI resource of the universe" but rather a **dimensionless susceptibility per spatial acceleration channel**.
 
 
-#### H.4.6 Higher-Order Corrections: Curvature and the Van Vleck-Morette Expansion
+### H.4.6 Higher-Order Corrections: Curvature and the Van Vleck-Morette Expansion
 
 The linear-response derivation (Section H.4.2) yields $\eta' = 3/(8\sqrt{3})$ exactly at the attractor. Higher-order corrections involving curvature enter only for:
 - Off-attractor states (environmental variations)
@@ -460,7 +461,7 @@ These corrections enter at order $O(u_*^2) \sim 0.008$ and beyond. At the attrac
 
 **Environmental Predictions.** Off-operating-point behavior can be computed using the VVM expansion (see Section H.4.7 for predictions in void galaxies and UDGs). These are testable consequences of the framework but do not affect the core $g_0$ prediction at the attractor.
 
-#### H.4.7 Environmental Predictions
+### H.4.7 Environmental Predictions
 
 For systems operating at capacity $C \neq C_{\mathrm{max}}$, the efficiency varies. Using the linear-response formula extended with VVM corrections:
 
@@ -530,7 +531,7 @@ The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is **rigorously der
 | Spatial projection | $(D-1)/D = 3/4$ | Rotational invariance |
 | Generator normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | QFI additivity (generators) |
 
-The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry independently predicts $\alpha^{-1} \approx 137.036$ (0.68 ppm accuracy), providing cross-validation of the framework.
+The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry independently predicts the Thomson-limit fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000050$ (Appendix Z, Theorem Z.26), corresponding to a 0.68 ppm offset from the current experimental central value (a $\sim 2\sigma$ discrepancy under the adopted theory uncertainty).
 
 **Caveats:** The bridge law (Definition H.0) is a framework-specific modeling choice validated by predictive success, not derivable from pure mathematics. Model uncertainty remains unquantified.
 

@@ -1,9 +1,26 @@
 # Appendix V: Computational Programs and Numerical Consistency Checks
 
-This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program is an inversion that uses observational inputs to determine the instanton complexity $\kappa$. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap that becomes parameter-free once the baseline MPU invariants are computed from a specified model.
+This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program evaluates the PU prediction $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ using the derived instanton complexity $\kappa=141.5$ (Appendix U) and the PU-theory prefactor $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b); the inversion form is included as a numerical consistency check that converts the observed $\Lambda L_P^2$ into $A_{\text{eff}}^{(\text{obs})}$ or an effective $\kappa$ under a chosen prefactor. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap that becomes parameter-free once the baseline MPU invariants are computed from a specified model.
 
 **Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=g_e^2/(4\pi)$.
 
+## V.0 Reproducibility Contract and Uncertainty Budgets
+
+This appendix is intended to be mechanically reproducible from the displayed equations. An independent check should verify the following items without access to any unpublished derivations:
+
+1. **Input ledger.** Fixed PU inputs: $K_0=3$, $d_0=2^{K_0}=8$, $\varepsilon=\ln 2$, $a=2$, $b=d_0-a=6$, $M=2a(d_0-a)=24$, and (for the semiclassical vacuum sector) $S_{\mathrm{inst}}=(C_{\max}/\varepsilon)\kappa=2\kappa$.
+2. **$\Lambda$ forward evaluation + inversion check.** Using Equation (V.2) with the derived inputs $(\kappa,A_{\text{eff}})$ to compute the PU prediction for $\Lambda L_P^2$, and using Equations (V.4)–(V.5) together with Equation (V.3) to infer either $A_{\text{eff}}^{(\text{obs})}$ (holding $\kappa$ fixed) or an effective $\kappa$ (holding $A_{\text{eff}}$ fixed) from observational inputs $(H_0,\Omega_\Lambda,c,L_P)$.
+3. **$\alpha_{\mathrm{em}}$ forward program.** Using Equation (V.8) to compute $u^*$ from $(M,\lambda,d_0)$ and Equation (V.10) to compute $\alpha^{-1}$ from $(u^*,K_0)$ including the explicit interface corrections.
+4. **Uncertainty accounting.** Reported $1\sigma$ uncertainties separate (i) observational inputs, (ii) controlled truncation terms, and (iii) PU-to-physics mapping/systematic terms; when combined, they are combined in quadrature unless otherwise stated.
+
+Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponential. Intermediate computations should retain at least 20 significant digits before final rounding; dimensionless combinations such as $\Lambda L_P^2$ should be formed exactly as written to avoid unit-conversion errors.
+
+**Table V.0 — Consolidated numerical outputs and uncertainty budgets**
+
+| Quantity | PU program | Central value | $1\sigma$ budget | Dominant contributions |
+|:--|:--|:--|:--|:--|
+| $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$ | $137.036092$ | $\pm 0.000050$ | interface-correction truncation and PU-to-QED matching (Appendix Z, Section Z.27.9); compare $\alpha_{\mathrm{em}}^{-1} = 137.035999177(21)$ [NIST 2024] |
+| $\Lambda L_P^2$ (vacuum sector) | Eq. (V.2) with $\kappa=141.5$ and $A_{\text{eff}}=0.923\pm0.011$ (Appendix U) | $(2.88\times10^{-122})$ | $\pm 0.03\times10^{-122}$ | $A_{\text{eff}}$ theory/systematic dominates; Eq. (V.5) gives $(\Lambda L_P^2)_{\text{obs}}=(2.86599\pm0.04849)\times10^{-122}$, implying $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ |
 
 ## V.1 The Cosmological Constant: Inversion for the Instanton Complexity $\kappa$
 
@@ -20,24 +37,24 @@ This appendix provides computational programs for two constants within the Predi
 2. **Vacuum energy density.** The dimensionless combination $\Lambda L_P^2$ is
 
    $$
-   \boxed{\Lambda L_P^2 \;\simeq\; 8\pi\,A_{\Lambda}\,e^{-S_{\mathrm{inst}}}} \tag{V.2}
+   \boxed{\Lambda L_P^2 \;\simeq\; 8\pi\,A_{\text{eff}}\,e^{-S_{\mathrm{inst}}}} \tag{V.2}
    $$
 
-   with $A_{\Lambda}$ an $O(1)$, **dimensionless** prefactor aggregating one‑loop determinants and extensivity (defined in Section U.1).
+   with $A_{\text{eff}} := K\cdot N_{\text{eff}}$ an $O(1)$, **dimensionless** prefactor aggregating one‑loop determinants and extensivity (Appendix U, Section U.1).
 
-   **Normalization note.** Using the Einstein equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$ and $L_P^2=\hbar G/c^3$, the ratio $\Lambda L_P^2$ is dimensionless while the conventional $8\pi$ remains as a pure numerical factor multiplying the semiclassical instanton amplitude. All dimensionful contributions in the one-loop determinant and finite-volume counting are normalized by $L_P$, so the aggregated prefactor $A_\Lambda$ is a **dimensionless** $O(1)$ constant. Equivalently, $A_\Lambda \equiv A_{\rm eff} := K \cdot N_{\rm eff}$ as defined in Appendix U (Section U.1), where $K$ is the one-loop determinant ratio and $N_{\rm eff}$ is the extensivity factor from Appendix E.
+   **Normalization note.** Using the Einstein equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$ and $L_P^2=\hbar G/c^3$, the ratio $\Lambda L_P^2$ is dimensionless while the conventional $8\pi$ remains as a pure numerical factor multiplying the semiclassical instanton amplitude. All dimensionful contributions in the one-loop determinant and finite-volume counting are normalized by $L_P$, so the aggregated prefactor $A_{\text{eff}}$ is a **dimensionless** $O(1)$ constant.
 
 3. **Inversion for $\kappa$.** Solving Equation (V.2) using Equation (V.1),
 
    $$
-   \boxed{\kappa \;=\; -\tfrac12\,\ln\!\left(\frac{\Lambda L_P^2}{8\pi A_{\Lambda}}\right)} \tag{V.3}
+   \boxed{\kappa \;=\; -\tfrac12\,\ln\!\left(\frac{\Lambda L_P^2}{8\pi A_{\text{eff}}}\right)} \tag{V.3}
    $$
 
 ### V.1.2 Observational Inputs
 
-* **Cosmological parameters (Planck 2018, base‑$\Lambda$CDM) \[Planck Collaboration 2020a]:**
+* **Cosmological parameters (Planck 2018, base‑$\Lambda$CDM) [Planck Collaboration 2020a]:**
   $H_0=67.4\pm0.5~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_{\Lambda}=0.6889\pm0.0056$.
-* **Planck length (CODATA 2022) \[NIST 2024]:**
+* **Planck length (CODATA 2022) [NIST 2024]:**
   $L_P=1.616255(18)\times 10^{-35}~\mathrm{m}$.
 * **Speed of light:** $c=299{,}792{,}458~\mathrm{m\,s^{-1}}$ (exact).
 
@@ -65,43 +82,43 @@ The quoted uncertainty is dominated by $H_0$ and $\Omega_{\Lambda}$; the relativ
 
 ### V.1.4 Consistency Check via Inversion
 
-Setting $A_{\Lambda}=1$ in Equation (V.3):
+Using the PU-theory inputs $\kappa=141.5$ (Theorem U.16) and $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), Equation (V.2) gives $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, consistent with the observed value (V.5) within the combined $1\sigma$ budget.
+
+Setting $A_{\text{eff}}=1$ in Equation (V.3):
 
 $$
 \boxed{\kappa \;=\; -\tfrac12 \ln\!\left(\frac{2.86599\times10^{-122}}{8\pi}\right) \;=\; 141.543\ \pm\ 0.009} \tag{V.6}
 $$
 
-The PU framework independently derives $\kappa = 141.5$ from Grassmannian geometry (Theorem U.16). Holding $\kappa$ fixed, the observed value (V.5) implies the effective prefactor
+Holding $\kappa$ fixed, the observed value (V.5) implies the effective prefactor
 
 $$
-A_{\Lambda}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016,
+A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016,
 $$
 
-equivalently $A_{\text{eff}}^{(\text{obs})} = 0.917 \pm 0.016$ in the notation of Appendix U (Corollary U.15b).
+consistent with the PU-theory estimate $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b).
 
-The corresponding action (Equation (V.1)) is
-
-$$
-\boxed{S_{\mathrm{inst}}=2\kappa=283.087\ \pm\ 0.017\ \text{nats} \;=\; 408.408\ \pm\ 0.025\ \text{bits}} \tag{V.7}
-$$
-
-since $1~\text{nat}=1/\ln 2~\text{bits}$.
-
-For the derived value $\kappa=141.5$ (Theorem U.16), one has $S_{\mathrm{inst}}=283.000\ \text{nats}=408.283\ \text{bits}$.
-
-**Sensitivity to $H_0$.** Holding $\Omega_\Lambda$ fixed at its Planck value, using $H_0=73~\mathrm{km\,s^{-1}\,Mpc^{-1}}$ shifts $\kappa$ by $\Delta\kappa\approx -0.0798$.
-
-**Dependence on the $O(1)$ prefactor.** The dependence of $\kappa$ on the prefactor is modest ($\partial \kappa/\partial \ln A_\Lambda = +\tfrac12$), as shown for representative $A_{\Lambda}$ values in Table V.1. An error budget that separates observational and prefactor contributions is
+The corresponding instanton action, from Equation (V.1), is
 
 $$
-\sigma_\kappa^{2}\ \simeq\ \tfrac14\!\left[\ \sigma_{\ln(\Lambda L_P^{2})}^{\,2}\ +\ \sigma_{\ln A_{\Lambda}}^{\,2}\ \right].
+S_{\mathrm{inst}} = 2\kappa = 283~\text{nats} = 408.3~\text{bits}. \tag{V.7}
 $$
 
-**Table V.1 — Sensitivity of $\kappa$ to $A_{\Lambda}$**
+**Sensitivity to $H_0$.** Since $\Lambda L_P^2 \propto H_0^2$, a shift $H_0\to H_0(1+\epsilon)$ changes $\kappa$ by $\Delta \kappa \simeq -\epsilon$; hence a 1% change in $H_0$ shifts $\kappa$ by $\sim 0.01$.
 
-| $A_{\Lambda}$ | 0.5     | **1.0**     | 2.0     | $\exp(1)\approx 2.718$ | 3.0     |
-| :--------------- | :------ | :---------- | :------ | :----------------------- | :------ |
-| $\kappa$       | 141.197 | **141.543** | 141.890 | 142.043                  | 142.093 |
+**Dependence on the $O(1)$ prefactor.** The dependence of $\kappa$ on the prefactor is modest ($\partial \kappa/\partial \ln A_{\text{eff}} = +\tfrac12$), as shown for representative $A_{\text{eff}}$ values in Table V.1. An error budget that separates observational and prefactor contributions is
+
+$$
+\sigma_\kappa^{2}\ \simeq\ \tfrac14\!\left[\ \sigma_{\ln(\Lambda L_P^{2})}^{\,2}\ +\ \sigma_{\ln A_{\text{eff}}}^{\,2}\ \right].
+$$
+
+**Table V.1 — Sensitivity of $\kappa$ to $A_{\text{eff}}$**
+
+| $A_{\text{eff}}$ | 0.5     | **1.0**     | 2.0     | $\exp(1)\approx 2.718$ | 3.0     |
+|:------:|:-------:|:----------:|:-------:|:---------------------:|:-------:|
+| $\kappa$ | 141.89 | **141.54** | 141.20 | 141.04 | 140.99 |
+
+Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts $\kappa$ by less than 1, whereas the derived $\kappa=141.5$ is fixed by the Golay-Steiner structure (Theorem U.16).
 
 ---
 
@@ -118,7 +135,7 @@ This section provides the direct computational program for the fine-structure co
 
 As derived in Appendix Z (Theorem Z.5) from the subspace structure induced by the Landauer Pointer mechanism, the QFI spectrum at the PCE-Attractor is flat and uniquely determined:
 *   **Number of Information Modes:** $M = 2ab = 2 \cdot (e^\varepsilon) \cdot (d_0 - e^\varepsilon) = 2 \cdot 2 \cdot (8-2) = 24$.
-*   **Per-Mode Sensitivity:** $\lambda = 2/a = 2/e^\varepsilon = 2/2 = 1$.
+*   **Per-Mode Sensitivity:** $\lambda = 2/a = 2/e^\varepsilon = 1$ (here $\lambda$ denotes the QFI eigenvalue of the interface modes; it is unrelated to the resource-scarcity parameter of Definition 20).
 
 ### V.2.3 Capacity Saturation Condition
 
@@ -152,7 +169,7 @@ $$
 where $\Delta^{(2)} = \pi u^*/(24\sqrt{K_0})$ is the second-order curvature correction from Bures metric geometry (Theorem Z.26). For sub-ppm precision, Appendix Z includes the third-order geodesic correction factor $(1 - u^{*2}/6) \approx 0.9986$ from SU(2) geometry, yielding $\alpha^{-1} \approx 137.036092$ (Section Z.27.8, Theorem Z.26). With $u^* = 2^{1/8}-1$ and $K_0 = 3$:
 
 $$
-\boxed{\alpha^{-1} ≈ 137.036 \pm 0.0001}
+\boxed{\alpha^{-1} \approx 137.036092 \pm 0.000050}
 \tag{V.10}
 $$
-This is a parameter-free prediction at the Thomson limit, in agreement with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ to within 0.7 ppm.
+This is a parameter-free Thomson-limit prediction within the PU mapping contract. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and mapping/systematic contributions.

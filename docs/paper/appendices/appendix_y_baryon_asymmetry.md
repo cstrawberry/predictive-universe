@@ -369,7 +369,7 @@ The value $\kappa_{gen} = 0.23$ corresponds to single verification ($\varepsilon
 
 ∎
 
-**Corollary Y.8.1** (Sensitivity to Generation Number). *If $N_g \neq 3$:*
+**Corollary Y.8.3** (Sensitivity to Generation Number). *If $N_g \neq 3$:*
 - *$N_g = 2$: $J_{CP} = 0$ identically, no CP violation, no baryogenesis*
 - *$N_g = 4$: $\kappa_{gen} = \ln 2/4 = 0.173$, $c_{sph} = 36/101 = 0.356$, $\mathcal{C}_{eff} = 0.212$, giving $\kappa_B = 19.42$, predicting $\eta_B = 4.9 \times 10^{-10}$*
 
@@ -444,8 +444,11 @@ $$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W}$$
 
 *Proof.*
 
-**Step 1 (Fine structure constant).** From Appendix Z, Theorem Z.14, the Thomson-limit fine structure constant is derived from capacity saturation on the PCE-Attractor:
-$$\alpha_{em}^{-1}(\text{Thomson}) = 137.036$$
+**Step 1 (Fine structure constant).** From Appendix Z, Theorem Z.26, the Thomson-limit fine structure constant is derived from capacity saturation on the PCE-Attractor with interface corrections:
+$$
+\alpha_{em}^{-1}(\text{Thomson}) = 137.036092 \pm 0.000050
+$$
+where the uncertainty is the conservative truncation bound for the first neglected higher-order term (Appendix Z, Section Z.27.9).
 
 **Step 2 (QED running).** Standard QED running from $q^2 = 0$ to the sphaleron scale $T_{sph} \approx 160$ GeV gives:
 $$\alpha_{em}^{-1}(T_{sph}) \approx 127.5$$
@@ -475,7 +478,7 @@ This derivation uses zero free parameters beyond $K_0 = 3$. ∎
 | $\varepsilon$ | $\ln 2 = 0.6931$ | Theorem 31 |
 | $N_g$ | 3 | Proposition R.3.5 |
 | $\delta$ | $66.7°$ | Theorem T.56 |
-| $\alpha_{em}^{-1}$(Thomson) | $137.036$ | Theorem Z.14 |
+| $\alpha_{em}^{-1}$(Thomson) | $137.036092 \pm 0.000050$ | Theorem Z.26 |
 | $\sin^2\theta_W(\mu_G)$ | $3/8$ | Theorem T.14 |
 | $\alpha_W$ | $\approx 1/30$ | Derived: $\alpha_W = \alpha_{em}/\sin^2\theta_W$ |
 | $c_{sph}$ | $28/79 = 0.354$ | $(8N_g + 4n_H)/(22N_g + 13n_H)$ with $N_g = 3$ |
@@ -565,7 +568,7 @@ All derived quantities are consistent with observation.
 | $\varepsilon = \ln 2$ | Derived | Landauer limit (Theorem 31) |
 | $N_g = 3$ | Derived | Anomaly cancellation (Proposition R.3.5) |
 | $\delta = 66.7°$ | Derived | Berry holonomy (Theorem T.56) |
-| $\alpha_{em}^{-1} = 137.036$ | Derived | Capacity saturation (Theorem Z.14) |
+| $\alpha_{em}^{-1} = 137.036092 \pm 0.000050$ | Derived | Capacity saturation (Theorem Z.26) |
 | $\sin^2\theta_W = 3/8$ | Derived | Bures geometry (Theorem T.14) |
 | $\alpha_W \approx 1/30$ | Derived | $\alpha_{em}/\sin^2\theta_W$ at $T_{sph}$ |
 | $c_{sph} = 28/79$ | Derived | $(8N_g + 4n_H)/(22N_g + 13n_H)$ |
@@ -765,7 +768,7 @@ The complete logical chain from $K_0 = 3$ to $\eta_B$:
 $$\boxed{
 \begin{aligned}
 K_0 = 3 &\xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[4pt]
-&\xrightarrow{\text{Def 15a}} a = e^{\varepsilon} = 2, \quad b = d_0 - a = 6 \\[4pt]
+&\xrightarrow{\text{Thm Z.1}} a = 2, \quad b = d_0 - a = 6 \\[4pt]
 &\xrightarrow{\text{Thm Z.5}} M = 2ab = 24, \quad k = 12 \\[4pt]
 &\xrightarrow{\text{Thm T.5}} \kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 38.5 \\[4pt]
 &\xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \\[4pt]
@@ -868,7 +871,7 @@ The derivation reveals that:
 - **Efficiency** is controlled by configuration space complexity $\kappa_B = 19.48$, derived from the electroweak structure
 - **Matter dominance** is a boundary condition on the initial predictive state, not a dynamical parameter
 
-The framework provides a complete, parameter-free explanation for why the universe contains matter, how much matter it contains, and why antimatter is absent at cosmological scales.
+The framework provides a structurally constrained explanation for why the universe contains matter, how much matter it contains, and why antimatter is absent at cosmological scales, with the efficiency and washout modeling detailed in Section Y.4.
 
 ---
 

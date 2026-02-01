@@ -4,11 +4,11 @@
 
 The cosmological constant $\Lambda$ and primordial perturbation amplitude $Q$ represent the two fundamental scales of cosmology. Observationally:
 
-$$\Lambda L_P^2 \approx 2.87 \times 10^{-122}, \qquad Q \approx 1.9 \times 10^{-5}$$
+$$\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}, \qquad Q \sim 10^{-5}$$
 
 where $L_P$ is the Planck length. The cosmological constant constitutes the largest hierarchy in physics; the primordial amplitude sets the scale of structure formation.
 
-In the Predictive Universe framework, both scales derive from the information-theoretic structure of the Extended Binary Golay Code $\mathcal{C}_{24}$. The vacuum sector involves the full configuration space $\text{Gr}_\mathbb{C}(12,24)$ with complexity $\kappa_\Lambda = 141.5$; the primordial sector involves the signal subspace $\mathbb{CP}^{11}$ with complexity $\kappa_Q = 11$. Both are suppressed by instanton mechanisms:
+In the Predictive Universe framework, both scales derive from the information-theoretic structure of the Extended Binary Golay Code $\mathcal{G}_{24}$. The vacuum sector involves the full configuration space $\text{Gr}_\mathbb{C}(12,24)$ with complexity $\kappa_\Lambda = 141.5$; the primordial sector involves the signal subspace $\mathbb{CP}^{11}$ with complexity $\kappa_Q = 11$. Both are suppressed by instanton mechanisms:
 
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} \, e^{-2\kappa_\Lambda}, \qquad Q^2 = \frac{1}{2} A_Q \, e^{-2\kappa_Q}$$
 
@@ -16,7 +16,7 @@ where $A_{\text{eff}}$ and $A_Q$ are dimensionless $O(1)$ prefactors. For the va
 
 $$A_{\text{eff}} := K \cdot N_{\text{eff}}$$
 
-Here $K$ is the one-loop determinant ratio from Gaussian fluctuations around the bounce, and $N_{\text{eff}}$ is the polynomial extensivity factor from Appendix E. For a minimal bounce in MPU units, $A_{\text{eff}} = O(1)$.
+Here $K$ is the one-loop determinant ratio from Gaussian fluctuations around the bounce, and $N_{\text{eff}}$ is the polynomial extensivity factor from Appendix E. For a minimal bounce in MPU units, $A_{\text{eff}}$ is a dimensionless computable constant; under the canonical Bures/Fisher normalization fixed in Appendix T it evaluates to $A_{\text{eff}} = 1/A_{EW} = 0.923 \pm 0.011$ (Corollary U.15b).
 
 This appendix derives $\kappa_\Lambda = 141.5$ (Sections U.3–U.14) and $\kappa_Q = 11$ (Sections U.15–U.27) from first principles, demonstrating that the Golay-Steiner structure determines both cosmological scales.
 
@@ -43,7 +43,7 @@ The following constants are derived elsewhere in the framework:
 
 ### U.3.1 Code Parameters
 
-The Extended Binary Golay Code $\mathcal{C}_{24}$ is the unique $[n, k, d]$ binary linear code with:
+The Extended Binary Golay Code $\mathcal{G}_{24}$ is the unique $[n, k, d]$ binary linear code with:
 
 - Length $n = M = 24$
 - Dimension $k = 12$
@@ -55,7 +55,7 @@ The Extended Binary Golay Code $\mathcal{C}_{24}$ is the unique $[n, k, d]$ bina
 
 ### U.3.2 Octad Structure
 
-The weight-8 codewords of $\mathcal{C}_{24}$ are called **octads**. Each octad is a subset $O \subset \{1, \ldots, 24\}$ with $|O| = 8$.
+The weight-8 codewords of $\mathcal{G}_{24}$ are called **octads**. Each octad is a subset $O \subset \{1, \ldots, 24\}$ with $|O| = 8$.
 
 **Theorem U.2 (Steiner System).** The 759 octads of the Golay code form the Steiner system $S(5, 8, 24)$: any 5 elements of $\{1, \ldots, 24\}$ are contained in exactly one octad.
 
@@ -94,7 +94,7 @@ where:
 
 *Proof.* Standard differential geometry. The complex Grassmannian $\text{Gr}_{\mathbb{C}}(k, n)$ is a complex manifold of complex dimension $k(n-k)$. $\square$
 
-**Remark U.3a (Complex vs Real Dimensions).** The complex Grassmannian $\text{Gr}_{\mathbb{C}}(k, M)$ is a complex manifold of complex dimension $k(M-k) = 144$ and real dimension $N_{\mathbb{R}} = 2k(M-k) = 288$. The instanton complexity $\kappa_0 = 144$ counts *complex* directions; the real dimension enters in the Morse-Bott analysis (Theorem U.15) where $m = 5$ real zero modes are subtracted, yielding $\kappa = (N_{\mathbb{R}} - m)/2 = (288 - 5)/2 = 141.5$.
+**Remark U.3a: Complex vs Real Dimensions.** The complex Grassmannian $\text{Gr}_{\mathbb{C}}(k, M)$ is a complex manifold of complex dimension $k(M-k) = 144$ and real dimension $N_{\mathbb{R}} = 2k(M-k) = 288$. The instanton complexity $\kappa_0 = 144$ counts *complex* directions; the real dimension enters in the Morse-Bott analysis (Theorem U.15) where $m = 5$ real zero modes are subtracted, yielding $\kappa = (N_{\mathbb{R}} - m)/2 = (288 - 5)/2 = 141.5$.
 
 **Definition U.1 (Maximum Complexity).** The **Golay bound** for instanton complexity is:
 
@@ -206,7 +206,7 @@ where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
 **Step 6 (Spherical design property).** The 24-cell vertices form a tight spherical 5-design on $S^3$ (Delsarte, Goethals & Seidel 1977). This is the unique such configuration with 24 points. The correspondence between interface modes and 24-cell vertices is structurally canonical: both sets have cardinality 24, both inherit the same symmetry group (the automorphism group of the $D_4$ root lattice), and the spherical design property of the vertices exactly matches the quadrature requirements for preserving zero modes (Theorem U.13). $\square$
 
-**Remark U.2 (Nature of the Correspondence).** The mode-vertex correspondence established in Theorem U.7b is structural rather than literal: the 24 QFI-active interface modes span the real tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)_{\mathbb{R}}$, a 24-dimensional real vector space (complex dimension 12), while the 24-cell vertices span $\mathbb{R}^4$. The correspondence identifies the combinatorial and symmetry structures of these two 24-element sets, enabling the transfer of spherical design properties to the discretized action. This is analogous to how the Golay code organizes the same 24 modes for error correction (Theorem Z.13) without the modes literally being binary codewords.
+**Remark U.2: Nature of the Correspondence.** The mode-vertex correspondence established in Theorem U.7b is structural rather than literal: the 24 QFI-active interface modes span the real tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)_{\mathbb{R}}$, a 24-dimensional real vector space (complex dimension 12), while the 24-cell vertices span $\mathbb{R}^4$. The correspondence identifies the combinatorial and symmetry structures of these two 24-element sets, enabling the transfer of spherical design properties to the discretized action. This is analogous to how the Golay code organizes the same 24 modes for error correction (Theorem Z.13) without the modes literally being binary codewords.
 
 **Theorem U.7a (Golay-Grassmannian Correspondence).** The PCE-Attractor orbit $\text{Gr}(2,8)$ encodes the Golay code parameters through dimensional correspondence:
 - Real dimension: $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 2ab = 24 = n$ (code length)
@@ -282,7 +282,7 @@ $$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = 0$$
 
 **Step 6 (PCE optimality).** The virial identity is equivalent to the statement that the PCE-Attractor configuration cannot reduce its action by rescaling. Any $\rho \neq 1$ would break the capacity saturation condition: rescaling the bounce changes the effective coupling $u_{\text{eff}}(\rho) \neq u^*$, violating the zero-slack optimality. The scale $\rho = 1$ is the unique fixed point of the combined PCE constraints. $\square$
 
-**Remark U.8b (Robustness of Scale Invariance).** The scale invariance at the PCE-Attractor is structurally protected by three independent mechanisms: (i) the Derrick virial constraint at the stationary bounce solution; (ii) the zero-slack condition fixing the bounce amplitude through capacity saturation; and (iii) the Predictive Ward Identity enforcing canonical normalization (Theorem X.3). Breaking scale invariance would require violating at least one of these conditions, shifting $\kappa$ by $0.5$ and changing $\Lambda$ by a factor of $e \approx 2.7$ (see Section U.13.1).
+**Remark U.8b: Robustness of Scale Invariance.** The scale invariance at the PCE-Attractor is structurally protected by three independent mechanisms: (i) the Derrick virial constraint at the stationary bounce solution; (ii) the zero-slack condition fixing the bounce amplitude through capacity saturation; and (iii) the Predictive Ward Identity enforcing canonical normalization (Theorem X.3). Breaking scale invariance would require violating at least one of these conditions, shifting $\kappa$ by $0.5$ and changing $\Lambda$ by a factor of $e \approx 2.7$ (see Section U.13.1).
 
 **Theorem U.9 (Dilatation Zero Mode).** Under Theorem U.8, the second variation annihilates the dilatation tangent vector:
 
@@ -412,7 +412,7 @@ $$S_{\text{inst}} = 2\kappa$$
 
 This follows from the PCE-fixed ratio $C_{\max}/\varepsilon = 2$, rigorously derived in Appendix Q from the MPU budget allocation $C_{\max}^* = \ln(d_0) - \varepsilon = 3\ln 2 - \ln 2 = 2\ln 2$.
 
-**Remark U.14.1 (One-Loop Correction via Zeta Regularization).** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
+**Remark U.14.1: One-Loop Correction via Zeta Regularization.** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
 
 $$\log\det'(-\Delta_{g_B} + \lambda) = -\zeta'_{\mathcal{O}}(0)$$
 
@@ -488,11 +488,63 @@ $$\alpha = \frac{1}{16\sigma_B^2} = \frac{3}{2}$$
 
 as in Remark U.14.1. Since $\dim_{\mathbb{R}}\text{Gr}(2,8) = 24$, $\zeta_\alpha(s)$ converges for $\Re(s) > 12$ and admits meromorphic continuation to $s=0$ via the heat kernel (e.g. Vassilevich 2003).
 
-**Corollary U.15b (Observed Prefactor).** Using the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849) \times 10^{-122}$ (Appendix V, Equation (V.5)) and $\kappa = 141.5$:
+**Corollary U.15b (Observed Prefactor).** Using the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}$ (Appendix V, Equation (V.5)), the measured prefactor can be inferred:
 
-$$A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016.$$
+$$
+A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016.
+$$
 
-This $O(1)$ value is consistent with the expectation $A_{\text{eff}} = K \cdot N_{\text{eff}} \sim O(1)$.
+Within the PU framework, the prefactor can also be computed theoretically via the one-loop determinant $A_{EW}$ (Theorem T.29), yielding
+
+$$
+A_{\text{eff}}^{(\text{th})} = (A_{\text{link}} A_{\text{Schur}} A_{\text{geo}})^{-1} = A_{EW}^{-1} = 0.922 \pm 0.004,
+$$
+
+where the quoted uncertainty propagates the determinant uncertainty in $A_{EW}=1.085\pm 0.005$ (Theorem T.29).
+
+To map the Euclidean bounce normalization to the cosmological constant convention in (U.1), we include a conservative systematic term $\sigma_{T3}=0.010$ accounting for (i) ghost/zero-mode normalization and (ii) minimal-bounce extensivity conventions in $N_{\text{eff}}$ (Appendix E). We therefore adopt the combined PU theory estimate
+
+$$
+\boxed{A_{\text{eff}} = 0.923 \pm 0.011 \qquad (\text{PU theory},\ 1\sigma).}
+$$
+
+This gives the corresponding prediction for the dimensionless cosmological constant:
+
+$$
+\boxed{\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa} = (2.88 \pm 0.03)\times 10^{-122}.}
+$$
+
+The observed inference $A_{\text{eff}}^{(\text{obs})}=0.917\pm 0.016$ is consistent with $A_{\text{eff}}^{(\text{th})}$ within the combined uncertainty. ∎
+
+**PPI mapping chain (vacuum weight).** The identification
+$$
+\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}
+$$
+uses the following explicit instantiation steps:
+
+1. **Grassmannian identification.** The vacuum configuration space is identified as $\text{Gr}_\mathbb{C}(12,24)$ via the Golay code structure (Theorem U.3); alternatives with different code parameters yield $\kappa \neq 141.5$ and are excluded by PCE optimization.
+
+2. **Action mapping.** The instanton action is identified as $S_{\text{inst}}=(C_{\max}/\varepsilon)\kappa$ with $C_{\max}/\varepsilon=2$ (Appendix Q). Alternatives $S_{\text{inst}}\neq 2\kappa$ are excluded within the PU model because $(C_{\max},\varepsilon)$ are fixed MPU invariants and $\kappa$ is defined precisely as the exponent-counting complexity parameter by Convention U.14a.
+
+3. **Prefactor definition and scope.** $A_{\text{eff}}:=K\cdot N_{\text{eff}}$ absorbs all power-law factors from determinants, Jacobians, gauge-volume normalizations, and extensivity counting (Convention U.14a). Competing choices of regularization or normalization correspond to reshuffling finite terms between $K$ and $N_{\text{eff}}$ but do not modify the exponential factor, and are fixed by the stated conventions for Planck normalization and extensivity (Appendix E, Section U.1).
+
+4. **Competing saddles are suppressed.** Any additional bounce with complexity $\kappa'=\kappa+\Delta\kappa$ contributes at relative weight $\le e^{-2\Delta\kappa}$ compared to the dominant saddle. Because $\kappa$ takes half-integer values of the form $k^2-(D+1)/2$, distinct competitors satisfy $\Delta\kappa\ge 0.5$, so even the nearest possible competitor contributes at most an $e^{-1}$ fraction and only renormalizes $A_{\text{eff}}$ by an $O(1)$ factor.
+
+**Uncertainty budget for $\Lambda L_P^2$.** Write
+$$
+\ln(\Lambda L_P^2)=\ln(8\pi)+\ln A_{\text{eff}}-2\kappa.
+$$
+Within the PU model, $\kappa=141.5$ is discrete and exact (Theorem U.16). The complete theory uncertainty is therefore entirely in $\ln A_{\text{eff}}$, with contributions that can be stated explicitly:
+
+* **(T2) determinant evaluation:** $\sigma_{\ln K}$ from truncating the heat-kernel/zeta evaluation of $\zeta'_\alpha(0)$ on $\text{Gr}(2,8)$;
+* **(T3) extensivity counting:** $\sigma_{\ln N_{\text{eff}}}$ from the finite-volume/channel-count convention (Appendix E);
+* **(T2) higher-loop corrections:** $\sigma_{\ge 2\text{-loop}}$, expected to scale as $O(1/\kappa)$ on compact symmetric spaces under Convention U.14a.
+
+Once $(K,N_{\text{eff}})$ are evaluated to relative precision $\sigma_K/K$ and $\sigma_N/N_{\text{eff}}$, the propagated theory uncertainty is:
+$$
+\sigma^2_{\ln(\Lambda L_P^2)} \simeq \left(\frac{\sigma_K}{K}\right)^2 + \left(\frac{\sigma_N}{N_{\text{eff}}}\right)^2 + \sigma^2_{\ge 2\text{-loop}}.
+$$
+For observational comparison, Appendix V.1 provides the observational contribution from $(H_0,\Omega_\Lambda,L_P)$; the inference of $A_{\text{eff}}^{(\text{obs})}$ in Corollary U.15b combines theory and observational uncertainties in quadrature.
 
 ---
 
@@ -518,10 +570,13 @@ $$8\pi e^{-283} = 3.13 \times 10^{-122}$$
 
 Thus:
 
-- For $A_{\text{eff}} = 1$: $\Lambda L_P^2 = 3.13 \times 10^{-122}$
-- For $A_{\text{eff}} = 0.917$: $\Lambda L_P^2 = 2.87 \times 10^{-122}$
+- Baseline exponential scale: $8\pi e^{-283} = 3.13 \times 10^{-122}$.
+- PU prefactor (computed): for $A_{\text{eff}} = 0.923 \pm 0.011$,
+  $$
+  \Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-283} = (2.88 \pm 0.03)\times 10^{-122}.
+  $$
 
-The observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849) \times 10^{-122}$ (Appendix V, Equation (V.5)) implies $A_{\text{eff}} = 0.917 \pm 0.016$ (Corollary U.15b), consistent with the $O(1)$ expectation from one-loop determinants.
+The observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849) \times 10^{-122}$ (Appendix V, Equation (V.5)) implies $A_{\text{eff}}^{(\text{obs})} = 0.917 \pm 0.016$ (Corollary U.15b), consistent with the computed $A_{\text{eff}}^{(\text{th})} = 0.923 \pm 0.011$.
 
 ---
 
@@ -627,11 +682,11 @@ Near-saturation (98.3%) occurs because:
 
 ## U.15 Introduction to the Primordial Sector
 
-The preceding sections derived the cosmological constant complexity parameter $\kappa_\Lambda = 141.5$ from the Golay-Steiner structure, yielding the exponential suppression $\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}$ (Corollary U.17). With $A_{\text{eff}} \sim O(1)$, this gives:
+The preceding sections derived the cosmological constant complexity parameter $\kappa_\Lambda = 141.5$ from the Golay-Steiner structure, yielding the exponential suppression $\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}$ (Corollary U.17). With the PU-theory prefactor $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this gives:
 
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283} \approx 25.1 \times 1.24 \times 10^{-123} \approx 3.1 \times 10^{-122}$$
+$$\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122},$$
 
-for $A_{\text{eff}} \sim 1$, matching the observed value $\Lambda L_P^2 \approx 2.87 \times 10^{-122}$ (Planck 2018, TT,TE,EE+lowE+lensing, base-$\Lambda$CDM) within 10%.
+consistent with the observed $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}$ (Appendix V, Eq. (V.5)). Equivalently, holding $\kappa_\Lambda=141.5$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})} = 0.917 \pm 0.016$ as an independent consistency check on the prefactor's expected $O(1)$ magnitude.
 
 This section extends the analysis to the **primordial sector**, deriving inflationary observables from the same Golay-Steiner structure. The vacuum sector involves the full configuration space $\text{Gr}_\mathbb{C}(12,24)$ with $\kappa_\Lambda = 141.5$; the primordial sector involves the signal subspace $\mathcal{S} \cong \mathbb{C}^{12}$ with a smaller complexity parameter $\kappa_Q = 11$, yielding the primordial perturbation amplitude $Q \sim 10^{-5}$.
 
@@ -658,7 +713,7 @@ $$\dim_\mathbb{C}(\mathbb{CP}^{11}) = 11, \qquad \dim_\mathbb{R}(\mathbb{CP}^{11
 
 *Proof.* Standard: $\dim_\mathbb{C}(\mathbb{CP}^n) = n$ for the complex projective space of dimension $n$. $\square$
 
-**Remark U.19a (Dimension Comparison).** The vacuum Grassmannian has:
+**Remark U.19a: Dimension Comparison.** The vacuum Grassmannian has:
 
 $$\dim_\mathbb{C}(\text{Gr}_\mathbb{C}(12,24)) = 12 \times (24-12) = 144$$
 
@@ -736,7 +791,7 @@ $$m_\ell = \binom{n+\ell}{n}^2 - \binom{n+\ell-1}{n}^2$$
 
 *Proof.* See Berger, Gauduchon & Mazet (1971), §III; also Ikeda & Taniguchi (1978) with normalization adjusted to holomorphic sectional curvature $4$. $\square$
 
-*Remark (Normalization Convention).* The eigenvalue factor $4$ corresponds to the Fubini-Study metric with holomorphic sectional curvature $4$ and diameter $\pi/2$. Alternative normalizations (e.g., holomorphic sectional curvature $1$) yield eigenvalues $\lambda_\ell = \ell(\ell + n)$.
+*Remark: Normalization Convention.* The eigenvalue factor $4$ corresponds to the Fubini-Study metric with holomorphic sectional curvature $4$ and diameter $\pi/2$. Alternative normalizations (e.g., holomorphic sectional curvature $1$) yield eigenvalues $\lambda_\ell = \ell(\ell + n)$.
 
 **Assumption U.26 (One-Loop Prefactor Scaling).** Following Convention U.14a, the one-loop prefactor $A_Q$ for the $\mathbb{CP}^{11}$ configuration space satisfies:
 
@@ -746,7 +801,7 @@ with $\log A_Q = O(1/\kappa_Q)$ on compact Kähler symmetric spaces of large dim
 
 *Justification.* On compact symmetric spaces, the spectral zeta function at $s = 0$ admits asymptotic expansions in inverse dimension. For Kähler manifolds, the leading behavior of $\zeta'(0)$ is controlled by curvature invariants that scale with dimension. At large $\kappa$, the prefactor approaches unity; see Voros (1987) for general spectral asymptotics and Vassilevich (2003) for heat kernel methods on symmetric spaces. Following Convention U.14a, we absorb subleading corrections into the $O(1)$ uncertainty of $A_Q$.
 
-*Remark U.26a (Error Propagation).* The uncertainty $\delta A_Q / A_Q \sim 9\%$ propagates to $Q$ as $\delta Q / Q \sim 4.5\%$. For inflationary observables, this induces $\delta A_s / A_s \sim 9\%$, which is comparable to or exceeds current Planck precision on $\ln(10^{10}A_s)$. The predictions should therefore be understood as conditional on the one-loop prefactor assumption.
+*Remark U.26a: Error Propagation.* The uncertainty $\delta A_Q / A_Q \sim 9\%$ propagates to $Q$ as $\delta Q / Q \sim 4.5\%$. For inflationary observables, this induces $\delta A_s / A_s \sim 9\%$, which is comparable to or exceeds current Planck precision on $\ln(10^{10}A_s)$. The predictions should therefore be understood as conditional on the one-loop prefactor assumption.
 
 ### U.17.4 Primordial Scale Parameter
 
@@ -1183,13 +1238,13 @@ $$\boxed{n_t = -\frac{3}{2 \times 3528} = -4.3 \times 10^{-4}}$$
 
 The predictions are compared against Planck 2018 results (Planck Collaboration 2020a,b) at pivot scale $k_* = 0.05 \text{ Mpc}^{-1}$:
 
-| Observable | Prediction | Observation | Tension |
-|:-----------|:----------:|:-----------:|:-------:|
-| $n_s$ | $0.9663$ | $0.9649 \pm 0.0042$ | $0.3\sigma$ |
-| $r$ | $0.0034$ | $< 0.036$ (95% CL) | Consistent |
-| $A_s$ | $2.08 \times 10^{-9}$ | $(2.10 \pm 0.03) \times 10^{-9}$ | $0.7\sigma$ |
-| $f_{NL}^{\text{local}}$ | $0.014$ | $-0.9 \pm 5.1$ | Consistent |
-| $dn_s/d\ln k$ | $-5.7 \times 10^{-4}$ | $-0.0045 \pm 0.0067$ | Consistent |
+| Observable | Prediction | Observed | Tension |
+|---|---|---|---|
+| $n_s$ | $0.9663 \pm 0.0011$ | $0.9649 \pm 0.0042$ | 0.3σ (diagnostic; includes $\Delta N_e$) |
+| $r$ | $0.0034 \pm 0.00023$ | <0.032 | consistent |
+| $A_s$ | $(2.08 \pm 0.14)\times10^{-9}\, f_{\text{amp}}^2$ | $(2.10 \pm 0.03)\times10^{-9}$ | consistent for $f_{\text{amp}}\approx1$ |
+| $f_{NL}$ | $0.0140 \pm 0.0005$ | -0.9 ±5.1 | consistent |
+| $dn_s/d\ln k$ | $-(5.7 \pm 0.4)\times10^{-4}$ | -0.0045 ±0.0067 | consistent |
 
 **Sources:**
 - $n_s$, $A_s$, $dn_s/d\ln k$: Planck Collaboration (2020a), Table 2

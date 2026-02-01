@@ -15,7 +15,7 @@ Adaptation dynamics (Section 6) are driven by the Principle of Compression Effic
 
 The MPU Reality Model (Hypothesis 1) posits Minimal Predictive Units (MPUs, Definition 23), instantiating the $C_{op}$ cycle, constitute fundamental reality. Their state is the Perspectival State ($S_{(s)}(t)$, Definition 24) in a Hilbert space $\mathcal{H}_0$ (Proposition 4), evolving under Dual Dynamics: unitary Internal Prediction (Definition 26, Schrödinger Eq 43) and stochastic 'Evolve' Interaction (Definition 27, ND-RID). 'Evolve' randomness is hypothesized to originate from Logical Indeterminacy (Hypothesis 2). The process is constrained by thermodynamic costs ($\varepsilon \ge \ln 2$, Theorem 31), which not only lead to the Reflexivity Constraint ($\kappa_r > 0$, Theorem 33) but also provide the physical enforcement for the emergent arrow of time (Appendix O, Theorem O.3).
 
-The quantum mechanical formalism (Section 8) emerges as the necessary description, including the Born Rule (Proposition 7). Measurement is reinterpreted as perspectival actualization via the universal 'Evolve' process (Proposition 9), which provides the general mechanism for outcome realization.
+The quantum mechanical formalism (Section 8) emerges as a consistent effective description of MPU dynamics under the PCE/PPI constraints, including the Born Rule (Proposition 7). Measurement is reinterpreted as perspectival actualization via the universal 'Evolve' process (Proposition 9), which provides the general mechanism for outcome realization.
 
 The thermodynamic structure of quantum equilibrium emerges from PCE optimization of the ND-RID channel. Theorems G.1.9.1–G.1.9.5 rigorously establish that PCE drives the ND-RID dynamics toward configurations satisfying quantum detailed balance ($\sigma_{irr} = 0$, Theorem G.1.9.3), producing Gibbs fixed points characterized by the Kubo-Martin-Schwinger (KMS) condition (Theorem G.1.9.5). The equilibrium modular Hamiltonian $K^*$ takes constraint-dependent forms (Theorem G.1.9.6): purely quantum ($-\ln \rho_{phys}$), thermal ($K^*_{PCE} + \beta H$), and gravitational ($K^*_{PCE} + (2\pi/\kappa)K_{boost}$). This unified modular structure connects the Boltzmann distribution, Born probabilities, and Unruh-Hawking temperatures as different limits of the same PCE-selected equilibrium.
 
@@ -37,14 +37,14 @@ The PU framework carries significant implications, offering a perspective potent
   
 *   **Causality from Unified Predictive Limits (Operational Speed & Processing Cost):** The robustness of causality in the PU framework emerges not from fundamentally separate mechanisms, but from two interconnected facets of the same underlying principle: the optimized limits of physical prediction. The Principle of Compression Efficiency (PCE, Definition 15), acting on MPUs under fundamental constraints (logical limits like SPAP via $K_0$; operational limits like finite cycle time $\tau_{min}$ and interaction cost $\varepsilon$), dynamically shapes the network's capabilities in ways that prevent paradoxes (Postulate 2).
 
-    1.  **Emergent Speed Limit (`c`):** PCE optimization dictates the MPU's operational speed (bounded by $\tau_{min}$) and interaction costs (bounded by $w_{min} \propto \varepsilon$). This leads to a finite, invariant maximum propagation speed `c` for physical influence (Theorem 46), derived from the interplay of these microscopic limits and the emergent geometry. This manifests as the standard geometric enforcement of causality via light cones, restricting the speed of motion and interaction.
+    1.  **Emergent Speed Limit ($c$):** PCE optimization dictates the MPU's operational speed (bounded by $\tau_{min}$) and interaction costs (bounded by $w_{min} \propto \varepsilon$). This leads to a finite, invariant maximum propagation speed $c$ for physical influence (Theorem 46), derived from the interplay of these microscopic limits and the emergent geometry. This manifests as the standard geometric enforcement of causality via light cones, restricting the speed of motion and interaction.
 
     2.  **Emergent Processing Cost Limit:** Simultaneously, PCE interacts with the logical limits of self-prediction (SPAP). Prediction Relativity (Remark 3) demonstrates that achieving the extreme predictive/computational capability implicitly required to violate causality (e.g., deterministic control needed for paradoxes often hinges on predictive power near $\alpha_{SPAP}$) demands divergent Predictive Physical Complexity ($C_P$, Theorem 14). This incurs infinite resource costs ($R, R_I$), making such states thermodynamically and computationally impossible.
 
-Therefore, PCE optimization intrinsically prevents causal paradoxes by establishing optimized bounds on both the physical propagation speed (`c`) and the affordable predictive processing power ($C_P$ constrained near $\alpha_{SPAP}$). Both limits emerge self-consistently from the fundamental resource economics and logical constraints governing prediction within the MPU network. The full derivation of this unification is provided in **Appendix N**.
+Therefore, PCE optimization intrinsically prevents causal paradoxes by establishing optimized bounds on both the physical propagation speed ($c$) and the affordable predictive processing power ($C_P$ constrained near $\alpha_{SPAP}$). Both limits emerge self-consistently from the fundamental resource economics and logical constraints governing prediction within the MPU network. The full derivation of this unification is provided in **Appendix N**.
 
 
-*   **Black Holes as Manifestations of Limits:** The framework offers a unique perspective on black holes. They emerge not merely as gravitational endpoints defined by concentrated mass-energy, but as physical manifestations of fundamental operational limits inherent in the MPU network. The event horizon signifies a boundary where the capacity to encode or transmit distinguishable information reaches saturation, directly linked to the underlying ND-RID channel limits ($\varepsilon, C_{max}$) that dictate the Area Law (Theorem 49, rigorously derived in Appendix E). The Einstein Field Equations governing their formation reflect the enforcement of thermodynamic consistency across the emergent spacetime (Section 12). In this view, black holes represent a point where the operational limits of information capacity, thermodynamic consistency, and potentially even extreme prediction/computation (Appendix K.5) become macroscopically manifest in the geometry of spacetime itself. The framework also offers a novel perspective on the Black Hole Information Paradox, reframing it as a problem of **expansive reflexivity** in computation, where the act of measurement accelerates the system's evolution away from a knowable state. The proposed resolution involves a **Perspectival Information Channel**, where information escapes via the sequence of measurement contexts, bypassing the reflexive loop and preserving unitarity, a mechanism shown to be consistent with the expected Page curve for entanglement entropy (see **Appendix K.3** for the full derivation).
+*   **Black Holes as Manifestations of Limits:** The framework offers a distinct perspective on black holes. They emerge not merely as gravitational endpoints defined by concentrated mass-energy, but as physical manifestations of fundamental operational limits inherent in the MPU network. The event horizon signifies a boundary where the capacity to encode or transmit distinguishable information reaches saturation, directly linked to the underlying ND-RID channel limits ($\varepsilon, C_{\max}$) that dictate the Area Law (Theorem 49, rigorously derived in Appendix E). The Einstein Field Equations governing their formation reflect the enforcement of thermodynamic consistency across the emergent spacetime (Section 12). In this view, black holes represent a point where the operational limits of information capacity, thermodynamic consistency, and potentially even extreme prediction/computation (Appendix K.5) become macroscopically manifest in the geometry of spacetime itself. The framework also offers a novel perspective on the Black Hole Information Paradox, reframing it as a problem of **expansive reflexivity** in computation, where the act of measurement accelerates the system's evolution away from a knowable state. The proposed resolution involves a **Perspectival Information Channel**, where information escapes via the sequence of measurement contexts, bypassing the reflexive loop and preserving unitarity, a mechanism shown to be consistent with the expected Page curve for entanglement entropy (see **Appendix K.3** for the full derivation).
 
 *   **Predictive Information, Optimization, and Ephemeralization:** Information (Definition 1), defined by its potential to improve prediction relative to POP (Axiom 1), shapes dynamics via PCE (Definition 15). PCE mandates minimizing costs (operational, propagation, adaptation) for acquiring and utilizing predictive information. This drive towards maximum predictive utility with minimal cost can be seen as the microscopic engine realizing Ephemeralization (Fuller 1938)—"doing more with less"—suggesting efficient information processing is a foundational principle.
 
@@ -73,12 +73,13 @@ In summary, PU presents reality governed by the logic, thermodynamics, and optim
 | Quantum (von Neumann) | $S(\rho) = -\text{Tr}(\rho \ln \rho)$ | Quantum statistical entropy |
 | Gravitational (BH) | $S_{BH} = \mathcal{A}/4G$ | Horizon entropy from area law |
 
-The fundamental constants ($k_B, \hbar, c, G$) serve as exchange rates between domains. At the PCE-Attractor with active kernel dimension $a = 2$, Equation G.1.9.4 establishes the identity:
+The fundamental constants ($k_B, \hbar, c, G$) serve as exchange rates between domains. At the PCE-Attractor with active kernel dimension $a=2$ (Equation G.1.9.4), the entropy quantum associated with one binary SPAP resolution is fixed as:
 
 $$
-S_{\text{SPAP}} = k_B \varepsilon = k_B \ln 2 = -\text{Tr}\left(\frac{I_2}{2} \ln \frac{I_2}{2}\right) = S_{vN}
+S_{\text{SPAP}} = k_B \varepsilon = k_B \ln 2 = -k_B\,\text{Tr}\left(\frac{I_2}{2} \ln \frac{I_2}{2}\right) = S_{vN}\!\left(\frac{I_2}{2}\right).
 $$
-This demonstrates that quantum and logical entropy are literally the same quantity—the apparent diversity of entropy concepts dissolves into operational perspectives on a single foundational structure.
+
+More general Shannon, thermodynamic, and von Neumann entropies correspond to multi-bit uncertainty/mixtures built from this unit; the unification claim is therefore a statement about shared counting structure and unit conversion under the PPI mapping, not an identity $S_{vN} \equiv k_B\ln 2$ for arbitrary states.
 
 **14.2.1 Causality, Statistical Advantage, and the Limits of Influence**
 
@@ -149,9 +150,9 @@ As Appendix O establishes: "For the entire synchronized network of $N$ MPUs to r
 
 The suppression factor $(1/2)^N$ assumes statistical independence of fluctuations across MPUs—a consequence of the locality enforced by finite Lieb-Robinson velocity (**Proposition F.1**) and the exponential clustering property of the network ground state (**Lemma E.6.1**). Correlated fluctuations across spatially separated MPUs are themselves exponentially suppressed, ensuring the product form holds to excellent approximation for any macroscopic $N$.
 
-**Information-Theoretic Barrier:** Beyond thermodynamics, the ND-RID channel capacity bounds provide an independent barrier to retrocausality. **Theorem E.2** (Appendix E) establishes that $C_{max} < \ln d_0$, where $d_0 = 8$ is the minimal MPU Hilbert space dimension (**Theorem 23**), yielding $C_{max} < \ln 8 \approx 2.08$ nats. This bound arises because the strict contractivity $f_{RID} < 1$ of the average 'Evolve' channel (guaranteed by $\varepsilon > 0$, **Lemma E.1**) fundamentally limits the reliable classical information transmissible through ND-RID interactions.
+**Information-Theoretic Barrier:** Beyond thermodynamics, the ND-RID channel capacity bounds provide an independent barrier to retrocausality. **Theorem E.2** (Appendix E) establishes that $C_{\max} < \ln d_0$, where $d_0 = 8$ is the minimal MPU Hilbert space dimension (**Theorem 23**), yielding $C_{\max} < \ln 8 \approx 2.08$ nats. This bound arises because the strict contractivity $f_{RID} < 1$ of the average 'Evolve' channel (guaranteed by $\varepsilon > 0$, **Lemma E.1**) fundamentally limits the reliable classical information transmissible through ND-RID interactions.
 
-Crucially, this capacity bound applies to *any* information channel mediated by ND-RID dynamics, regardless of the temporal direction posited. A hypothetical retrocausal channel—transmitting information from future to past—would necessarily operate through the same physical substrate (MPU interactions) and thus be subject to identical capacity constraints. The finite capacity $C_{max} < \ln d_0$ means that even if retrocausal information transfer were logically coherent (which it is not, per Layer 1), it could not achieve the sustained, high-fidelity transmission required for macroscopic causal reversal. Combined with the exponential suppression of reverse trajectories from Layer 2, this information-theoretic constraint renders retrocausality physically impossible at all scales.
+Crucially, this capacity bound applies to *any* information channel mediated by ND-RID dynamics, regardless of the temporal direction posited. A hypothetical retrocausal channel—transmitting information from future to past—would necessarily operate through the same physical substrate (MPU interactions) and thus be subject to identical capacity constraints. The finite capacity $C_{\max} < \ln d_0$ means that even if retrocausal information transfer were logically coherent (which it is not, per Layer 1), it could not achieve the sustained, high-fidelity transmission required for macroscopic causal reversal. Combined with the exponential suppression of reverse trajectories from Layer 2, this information-theoretic constraint renders retrocausality physically impossible at all scales.
 
 **Mathematical Emergence of Lorentzian Signature:** The emergent spacetime metric has Lorentzian signature as a consequence of two independent PU results:
 
@@ -206,7 +207,7 @@ $$
 $$
 The joint statistics may depend on Alice’s context $C_A$, but Bob’s *unconditional marginals* remain invariant:
 $$
-\mathrm{Tr}*A[\omega*{C_A}(A \otimes B)] \text{ is independent of } C_A
+\omega_{C_A}(I \otimes B) \text{ is independent of } C_A \quad (\forall B)
 $$
 
 The predictive loop at each location proceeds strictly forward in time:
@@ -218,11 +219,11 @@ The statistical correlation between their outcomes does not require either party
 
 The no-signaling equalities hold with respect to local measurement settings:
 $$
-\sum_{a} P(a,b,|,x,y) = P(b,|,y), \qquad \sum_{b} P(a,b,|,x,y) = P(a,|,x)
+\sum_{a} P(a,b|x,y) = P(b|y), \qquad \sum_{b} P(a,b|x,y) = P(a|x)
 $$
 As Section 10 establishes: “Any local operation at Alice’s site is represented by an instrument that commutes with all effects at Bob’s site, and vice versa, ensuring marginals at one site are invariant under changes of the other site’s setting.”
 
-**Theorem 42 (Inability to Construct Causal Loops)** establishes that this statistical FTL channel, constrained by $\text{CC} < 0.5$ (**Theorem 39**), fundamentally cannot achieve the deterministic signaling required to construct paradox-inducing causal loops (**Postulate 2**). The underlying ND-RID interactions are subject to irreducible irreversibility ($\varepsilon \geq \ln 2$, Theorem 31) and finite information capacity ($f_{RID} < 1$, $C_{max} < \ln d_0$, Theorem E.2), which severely constrain the rate and fidelity of any information transfer via this mechanism.
+**Theorem 42 (Inability to Construct Causal Loops)** establishes that this statistical FTL channel, constrained by $\text{CC} < 0.5$ (**Theorem 39**), fundamentally cannot achieve the deterministic signaling required to construct paradox-inducing causal loops (**Postulate 2**). The underlying ND-RID interactions are subject to irreducible irreversibility ($\varepsilon \geq \ln 2$, Theorem 31) and finite information capacity ($f_{RID} < 1$, $C_{\max} < \ln d_0$, Theorem E.2), which severely constrain the rate and fidelity of any information transfer via this mechanism.
 
 ### Comparison of Framework Commitments
 
@@ -325,7 +326,7 @@ $$
 
 Perfect prediction requires $\hat{\phi}*{P_f} = \phi_B$, yielding $\hat{\phi}*{P_f} = \text{NOT}(\hat{\phi}_{P_f})$—a logical contradiction. The CTC would carry logically inconsistent information.
 
-**Stage 2: The Information-Theoretic Barrier.** The channel capacity bound $C_{max}(f_{RID}) < \ln d_0$ (**Theorem E.2**) applies to any information transfer mediated by ND-RID dynamics. This bound arises from strict contractivity $f_{RID} < 1$ (**Lemma E.1**), which follows from $\varepsilon \geq \ln 2$ (**Theorem 31**).
+**Stage 2: The Information-Theoretic Barrier.** The channel capacity bound $C_{\max}(f_{RID}) < \ln d_0$ (**Theorem E.2**) applies to any information transfer mediated by ND-RID dynamics. This bound arises from strict contractivity $f_{RID} < 1$ (**Lemma E.1**), which follows from $\varepsilon \geq \ln 2$ (**Theorem 31**).
 
 Any CTC-mediated channel remains subject to these constraints. Combined with the exponential suppression of reverse trajectories, sustained backwards information transfer is physically impossible.
 
@@ -468,7 +469,7 @@ In particular, the maximal mutual information exportable across $S$ per minimum 
 $$
 I_{\max}(S;\tau_{min}) \le N_{eff_links}(S)\,C_{\max}.
 $$
-Appendix E identifies the entropy of a capacity-saturating causal prediction boundary with precisely this maximal specifiable interior information (Appendix E, Theorem E.9.3). Defining
+Appendix E identifies the entropy of a capacity-saturating causal prediction boundary with precisely this maximal specifiable interior information (Appendix E, Theorem E.9.4). Defining
 $$
 S_{BH}(S) := N_{eff_links}(S)\,C_{\max},
 $$
@@ -534,7 +535,7 @@ Suppose, for contradiction, that an operationally naked singularity exists in th
 By Lemma 14.2.4.2b, validity of the manifold approximation at MPU resolution enforces $\|R\|=O(1/\delta^2)$ on any segment where continuum curvature is operationally meaningful. Therefore $\|R\|\to\infty$ cannot occur while remaining in the manifold regime at fixed $\delta$: once $\|R\|$ exceeds the MPU curvature scale, the manifold approximation fails.
 
 Thus any would-be curvature blow-up that remains future-causally connected to exterior observers is operationally resolved by one of:
-1. **Horizon formation:** A capacity-saturating boundary forms (Definition E.9.1; Theorem E.9.3), so exterior predictions decouple from interior microdetails.
+1. **Horizon formation:** A capacity-saturating boundary forms (Definition E.9.1; Theorem E.9.4), so exterior predictions decouple from interior microdetails.
 2. **Manifold breakdown:** The classical manifold approximation (Theorem 43) fails before curvature divergence becomes operationally meaningful at MPU resolution. ∎
 
 
@@ -658,7 +659,7 @@ Both descriptions emerge from the ND-RID channel structure. Coherent evolution c
 
 The derivation chain (Appendix E, Theorems E.1–E.5):
 
-$$\varepsilon > 0 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\varepsilon > 0 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 shows that horizon entropy inherits the SPAP structure (in natural units $c = \hbar = k_B = 1$). Thermodynamic and quantum descriptions remain consistent because both derive from the same $\varepsilon = \ln 2$ foundation. The Bekenstein-Hawking entropy is not analogous to thermodynamic entropy; it *is* thermodynamic entropy, counting the ND-RID channel degrees of freedom crossing the horizon (Theorem E.9.1).
 
@@ -672,7 +673,7 @@ The Heisenberg uncertainty principle and the second law of thermodynamics share 
 
 1. **Common source:** The SPAP entropy $\varepsilon = \ln 2$ (Theorem 31)
 2. **Common mechanism:** Strict contractivity $f_{RID} < 1$ of ND-RID channels (Lemma E.1)
-3. **Common consequence:** Bounded information capacity $C_{max} < \ln d_0$ (Theorem E.2)
+3. **Common consequence:** Bounded information capacity $C_{\max} < \ln d_0$ (Theorem E.2)
 
 The identity explains why quantum and thermodynamic descriptions of nature are mutually consistent: they are not independent theories requiring reconciliation but dual windows onto a single SPAP-constrained reality.
 
@@ -720,7 +721,7 @@ The PU framework distinguishes itself while connecting to other approaches:
     *   *IIT:* Operational CC (Definition 30, Theorem 34) based on biasing capability, distinct from axiomatic $\Phi$ [Tononi et al. 2016; Tononi & Koch 2015]. Potential correlation explored (Proposition 14).
     *   *Orch OR:* Relies on general prediction/complexity/thermodynamics, not specific biology/quantum gravity mechanism [Penrose 1994; Hameroff & Penrose 1996].
     *   *Standard Locality:* Allowance for statistical FTL (Postulate 3) is a testable departure, argued compatible with operational causality (Postulate 2, Section 10.4, Appendix F).
-    *   *Emergent/Entropic Gravity and a Unified Dark Sector:* PU derives spacetime (Section 11) and the EFE (Section 12) thermodynamically from optimizing prediction under ND-RID information limits, which yields the Area Law (**Theorem 49**). The key distinction is that PU provides a specific microscopic origin for horizon entropy: it is grounded in the quantifiable information bottleneck of the ND-RID channel ($C_{max} < \ln d_0$), which arises from the irreducible thermodynamic cost of self-reference ($\varepsilon \ge \ln 2$). The emergent scale of gravity, $G$, is thereby linked to the underlying MPU parameters governing information capacity and network geometry (Equation E.9). This same PCE-driven adaptation of MPU parameters to the local information environment leads to a multi-scale solution for the dark matter problem (Appendix I). At galactic scales, a scale-dependent $G(R)$ explains rotation curves as an **environment‐dependent relaxation**. At cluster scales, where a running $G$ is cosmologically constrained, the framework **preferentially selects** a non-local "predictive matter" response of the MPU substrate to the baryonic potential—**CMB‐safe with a negligible asymptotic enhancement to gravity, $A_G \simeq 0$**—providing a unified but environmentally‐dependent explanation for dark sector phenomenology, which is testable via a parameter-free lensing-dynamics identity (**Theorem I.5**). At recombination the framework reduces to the homogeneous limit with $G_{\rm eff} \approx G_0$, ensuring consistency with CMB constraints ($A_G \simeq 0$).
+    *   *Emergent/Entropic Gravity and a Unified Dark Sector:* PU derives spacetime (Section 11) and the EFE (Section 12) thermodynamically from optimizing prediction under ND-RID information limits, which yields the Area Law (**Theorem 49**). The key distinction is that PU provides a specific microscopic origin for horizon entropy: it is grounded in the quantifiable information bottleneck of the ND-RID channel ($C_{\max} < \ln d_0$), which arises from the irreducible thermodynamic cost of self-reference ($\varepsilon \ge \ln 2$). The emergent scale of gravity, $G$, is thereby linked to the underlying MPU parameters governing information capacity and network geometry (Equation E.9). This same PCE-driven adaptation of MPU parameters to the local information environment leads to a multi-scale solution for the dark matter problem (Appendix I). At galactic scales, a scale-dependent $G(R)$ explains rotation curves as an **environment‐dependent relaxation**. At cluster scales, where a running $G$ is cosmologically constrained, the framework **preferentially selects** a non-local "predictive matter" response of the MPU substrate to the baryonic potential—**CMB‐safe with a negligible asymptotic enhancement to gravity, $A_G \simeq 0$**—providing a unified but environmentally‐dependent explanation for dark sector phenomenology, which is testable via a parameter-free lensing-dynamics identity (**Theorem I.5**). At recombination the framework reduces to the homogeneous limit with $G_{\rm eff} \approx G_0$, ensuring consistency with CMB constraints ($A_G \simeq 0$).
 
     Beyond the scale-dependent $G(R)$ mechanism, the framework derives the fundamental acceleration scale itself from first principles. **Appendix H** establishes the QFI-Gravity Bridge Law (Definition H.0), which relates the galactic acceleration threshold to the cosmological constant via vacuum information geometry:
     $$
@@ -758,7 +759,7 @@ The PU framework faces significant limitations:
 *   **Hypothetical Foundations:** MPU definition (Hypothesis 1 / fundamental postulate incorporating $K_0$), CC mechanism (Hypothesis 3), and network adaptation dynamics (Appendix D) require robust defense/evidence. The assumption that POP/PCE drives *effective utilization* of the MPU's intrinsic logic for complex tasks (Proposition A.0.3) needs validation. The abstract concept of Property R (Definition 10) is given concrete mathematical grounding via the LITE construction (Theorem A.4.1). The LITE function, constructed within standard Peano Arithmetic using Kleene's Second Recursion Theorem, explicitly demonstrates all Property R capabilities: representing its own description via Gödel numbering, performing bounded proof search about its own behavior, and branching based on provability of self-referential statements. This establishes that Property R is achievable within well-understood mathematical frameworks, not requiring exotic computational models. PCE dynamically enforces effective Property R via Theorem A.0.2, driving the error rate to an optimal $p_{\text{err}}^* \in (0, 1/2)$.
 *   **Non-Standard Locality:** Statistical FTL (Postulate 3) requires extraordinary evidence (Protocol 3) and theoretical reconciliation (Appendix F).
 *   **Emergence Rigor:** Demonstrating rigorous convergence (discrete MPU to continuum QFT/GR), proving Theorem 43 dynamically, justifying Postulate 4 (LTE) needs more work. Validity/completeness of coarse-graining ($T_{\mu\nu}^{(MPU)}$) needs validation.
-*   **Parameter Determination:** Key parameters ($K_0, C_{op}, \varepsilon, \alpha, \beta, \alpha_{SPAP}, \alpha_{CC,max}, C_{scale}, \kappa_r, \Gamma_0, \lambda$, etc.) are underdetermined. Distinguishing threshold roles (e.g., $C_{op}$ enabling $\varepsilon$) from scaling roles is crucial.
+*   **Parameter Determination:** The minimal attractor fixes the discrete invariants $K_0=3$, $d_0=8$, and $\varepsilon=\ln 2$, but several effective parameters—most notably environment-dependent viability bounds $(\alpha,\beta)$, scale-setting quantities (e.g., $C_{scale}$), and aggregate-level coefficients such as $\Gamma_0$ and the resource-scarcity parameter of Definition 20—remain model- and coarse-graining-dependent. Distinguishing threshold roles (e.g., $C_{op}\ge K_0$) from scaling roles is crucial.
 *   **Complexity and Computability:** Reliance on uncomputable $C_P$ needs careful justification of $\hat{C}_v$ and alignment (Theorem 2). Avoiding circularity is critical.
 *   **Empirical Validation:** Testing (Section 13), especially CC effects, is extremely challenging (subtlety, precision, systematics, statistics). AI interaction pathway design is a major hurdle.
 *   **Interpretive Aspects:** Concepts like Minimal Awareness (Postulate 1), Perspective Space $\Sigma$, predictive "meaning" require careful philosophical framing.
@@ -828,9 +829,9 @@ Both activities converge on the same objects because they solve the same problem
 Shannon's channel capacity theorem establishes that sphere packing density determines maximum information transmission rate. The mode-channel correspondence (Theorem Z.10) makes this physical:
 $$M_{\text{int}} = M_{\text{phys}} = K(D)$$
 
-The kissing number $K(D)$—how many non-overlapping spheres touch a central sphere—equals the number of independent spatial channels.
+The kissing number $K(D)$—the maximal number of equal non-overlapping spheres that can touch a central equal sphere in $D$ Euclidean dimensions—sets the number of independent local interface channels in the Euclideanized tangent space used by the mode–channel correspondence.
 
-**Implication:** Spacetime dimension is determined by information density optimization. At $M = 24$ modes, the unique solution is $K(4) = 24$, yielding $D = 4$.
+**Implication:** Spacetime dimension is determined by information density optimization. At $M = 24$ modes, the unique solution is $K(4) = 24$, yielding $D = 4$ (interpreted as $3+1$ macroscopic dimensions in Section 11).
 
 This provides an information-theoretic answer to "why 3+1 dimensions?": because $K(4) = 24$ and no other dimension satisfies $K(D) = 2ab$ with $a = 2$, $b = 6$, $d_0 = 8$. The question becomes: why does PCE at $\varepsilon = \ln 2$ produce exactly 24 interface modes? Given that, $D = 4$ follows by arithmetic.
 
@@ -856,14 +857,14 @@ The PCE-Attractor state (Definition 15a) is:
 
 The vacuum resembles less a "blank canvas" and more a "crystalline grid"—a specific, derivable structure permitting stable information processing. Physical law is the grammar of this structure; particles and fields are its excitations; spacetime is its emergent geometry.
 
-Each property follows from PCE optimization given $d_0 = 8$ and $\varepsilon = \ln 2$. The structured vacuum emerges as the unique global minimum of the PCE potential.
+Each property follows from PCE optimization given $d_0 = 8$ and $\varepsilon = \ln 2$. The structured vacuum emerges as a global minimum candidate of the PCE potential within the admissible family of MPU-network configurations satisfying the fixed-invariant constraints $(d_0,\varepsilon)$ together with locality and bounded interaction cost. Local robustness is quantified by the positive stability gap for departures from the attractor established in Appendix D.
 
 ### 14.5.6 The Bridging Mechanisms: Abstract to Physical
 
 The framework operates through six critical bridging mechanisms that convert abstract logical and information-theoretic requirements into concrete physical structures:
 
 **1. PPI Bridge: $\varepsilon = \ln 2 \to a = 2$**
-The Principle of Physical Instantiation (Definition P.6.2) converts the abstract Landauer cost $\varepsilon = \ln 2$ into the physical active kernel dimension $a = e^{\varepsilon} = 2$. This bridge explains WHY the logical cost manifests as a 2-dimensional physical subsystem via $S = \ln a$.
+The Principle of Physical Instantiation (Definition P.6.2) requires the abstract Landauer cost $\varepsilon = \ln 2$ to be instantiated on a physical subsystem. Admissibility requires $\ln a \ge \varepsilon$; PPI-optimality selects the minimal admissible $a \in \mathbb{N}$, yielding $a = 2$.
 
 **2. Golay-Leech Bridge: $d = 8 \to$ Vacuum Stability**
 The error correction distance $d_{\min} = 8$ of the Golay code $[24,12,8]$ produces, via Conway-Sloane gluing construction, the rootless Leech lattice $\Lambda_{24}$ (Proposition Z.13a). Rootlessness—absence of vectors at squared norm 2—creates a gap between vacuum and excitations, ensuring topological stability.
@@ -875,7 +876,7 @@ The D₄ lattice constraint (generation 1) and A₂ lattice constraint (generati
 The single CC mechanism splits into electromagnetic (dominant, $\mathcal{R}_{\text{EM}} \sim 10^{36} \mathcal{R}_{\text{grav}}$, Definition 31) and gravitational (regulatory, Definition 32) channels. This resolves the signaling paradox and explains why CC effects haven't been definitively observed—the wrong channel (gravitational) was tested.
 
 **5. QFI-Gravity Bridge: Vacuum Geometry $\to g_0$**
-The vacuum Quantum Fisher Information structure produces the galactic acceleration scale via Definition H.0 and Theorems H.1a–H.3: $g_0 = \eta' \cdot c^2\sqrt{\Lambda/3} \approx 1.18 \times 10^{-10}\,\text{m/s}^2$, connecting microscopic quantum geometry to galactic dynamics.
+The vacuum Quantum Fisher Information structure produces the galactic acceleration scale via Definition H.0 and Theorems H.1a–H.3: $g_0 = \eta' \cdot c^2\sqrt{\Lambda/3} = (1.18 \pm 0.02) \times 10^{-10}\,\text{m/s}^2$, connecting microscopic quantum geometry to galactic dynamics.
 
 **6. PCE-RID Bridge: Optimization $\to$ Stochasticity**
 PCE optimization under SPAP constraints selects Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6) over deterministic alternatives. The irreversibility cost $\varepsilon \geq \ln 2$ enforces stochastic dynamics (Theorem 28). This bridge explains WHY nature is quantum—deterministic dynamics would be less efficient under self-referential constraints.
@@ -923,15 +924,5 @@ In the continuum effective description (Appendix X), the same equivalence relati
 This status is made precise in Appendix G.8.4g: the classical Golay code provides a *structural analogy* for the gauge organization, with the code's $k = 12$ signal dimensions corresponding to the $\dim(\mathfrak{g}_{SM}) = 12$ gauge generators (Theorem G.8.4b) and the $n - k = 12$ parity dimensions providing constraint structure that matches the Lagrangian capacity bound (Theorem G.8.2e).
 
 
-**14.6 Future Directions**
-
-Addressing limitations requires focused effort:
-
-1.  **Empirical Testing:** Prioritize Protocol 1 (QRNG tests) for CC. If warranted, pursue Protocols 2 & 3 (coherence, Bell tests), focusing on systematics/replication.
-2.  **Parameter Estimation & Modeling:** Develop methods to estimate/constrain parameters ($K_0, \varepsilon, \alpha_{CC,max}$, etc.). Explore models for scaling laws/ND-RID.
-3.  **Geometry-Modulated Indeterminacy:** Investigate how emergent geometry $g_{\mu\nu}$ (affecting ND-RID efficiency) influences effective computational bandwidth $B(g_{\mu\nu})$ and thus SPAP/indeterminacy bounds in varying gravitational environments.
-4.  **Computational Simulations:** Simulate MPU network dynamics (self-organization, regularity, stability, phase transitions).
-5.  **Connect to Measurable Complexity:** Link theoretical $C_{agg}$ / CC to measurable properties of biological/artificial systems.
-6.  **Philosophical Integration:** Clarify philosophical implications (ontology, causality, consciousness).
 
 

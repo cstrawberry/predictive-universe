@@ -37,8 +37,8 @@ This $\xi$-independent ratio provides sharp, falsifiable predictions. In the cha
 - **For topology only:** Sections R.1-R.3 (standard flag manifold results)
 - **For generation counting:** Sections R.1, R.3, R.4 (dual mechanisms)
 - **For mass hierarchy:** Sections R.5-R.7 (E₈ geometry, Yukawa derivation)
-- **For phenomenology:** Section R.8 (experimental comparison)
-- **For complete derivation:** Read sequentially R.0-R.10
+- **For phenomenology:** Section R.6 (experimental comparison)
+- **For complete derivation:** Read sequentially R.0-R.9
 
 Three pillars drive the derivation:
 
@@ -143,7 +143,7 @@ In eight dimensions, the **E₈ root system** emerges as the natural coordinatiz
 
 **Conclusion:** E₈ provides a privileged, symmetry-rich, discrete internal geometry consistent with PCE motivations. We adopt E₈ as the canonical internal coordinate system on the effective 8D real subspace.
 
-**Remark R.2.0 (E₈ Uniqueness from Information-Theoretic Optimality).**
+**Remark R.2.0: E₈ Uniqueness from Information-Theoretic Optimality.**
 
 Several factors single out E₈ as the natural geometric structure for the 8-dimensional MPU state space, all deriving from information-theoretic optimality principles consistent with PCE:
 
@@ -355,7 +355,7 @@ In particular, if a single predictive block is anomaly-free (all cubic/mixed gau
 
 *Proof.* The perturbative anomaly polynomial in 4D is $\mathrm{ch}_3(E_{\mathrm{Rep}})$ plus mixed terms involving $c_1(E_{\mathrm{Rep}})$ and $p_1(TM)$; all are linear in $\mathrm{ch}(E_{\mathrm{Rep}})$, which is additive under direct sums. The global SU(2) anomaly (Witten 1982) depends on the parity of the number of SU(2) doublets; replication multiplies that number by $k$, so if one block has an even count, every replicated theory does as well. ∎
 
-**Remark (Predictive block and SM-like content).**
+**Remark: Predictive block and SM-like content.**
 The block structure $H_x\cong\mathbb C\oplus\mathbb C^2\oplus\mathbb C^3$ from Appendix G naturally yields associated bundles whose Chern classes reproduce the usual $U(1)$, $SU(2)$, $SU(3)$ contributions. In that setting, Lemma R.IDX1 pins the net chirality per block to the topological pairing $\langle \widehat A\,\mathrm{ch},[M]\rangle$, while Lemma R.IDX2 guarantees that once a single predictive block satisfies the anomaly constraints, any number of generations (blocks) preserves them automatically.
 
 **Theorem R.3.4 (Family-charge anomaly constraints).**
@@ -476,7 +476,7 @@ The connection between the Leech lattice and E₈ is more subtle than a direct p
 
 **Note:** Throughout this appendix, when we refer to "E₈ root distances" for generation vacua, we work in the unscaled E₈ root system with minimum norm 2. The connection to Leech involves the scaled version $\sqrt{2}E_8$, but the discrete distance ratios remain unchanged under uniform scaling.
 
-**Remark R.4.1 (Modular Forms and the Number 24).**
+**Remark R.4.1: Modular Forms and the Number 24.**
 The appearance of $M = 24$ in the interface mode count (**Appendix Z**) and the Leech lattice dimension is not coincidental. The number 24 has a unique status in mathematics due to modular forms: the Dedekind eta function $\eta(\tau)^{24} = \Delta(\tau)$ achieves weight 12, the natural weight for modular forms determined by the first Chern class of the canonical bundle over modular curves. This connects:
 
 - **Topology:** Ramification index gives weight 12
@@ -609,7 +609,7 @@ The extended binary Golay code attains this bound exactly, achieving $d = 8$.
 
 **Step 5 (PCE selection).** PCE isotropy requires invariance under mode permutations (no preferred mode ordering). Among codes achieving the distance bound, the Golay code is unique up to equivalence. Therefore, PCE optimization uniquely selects the Golay $[24, 12, 8]$ structure. ∎
 
-**Remark (Error Correction Properties).** The minimum distance $d = 8$ implies the Golay code can:
+**Remark: Error Correction Properties.** The minimum distance $d = 8$ implies the Golay code can:
 
 - Detect up to $d - 1 = 7$ errors without misidentification
 - Correct up to $\lfloor(d-1)/2\rfloor = 3$ errors with certainty
@@ -833,7 +833,7 @@ But the Golay code is the unique self-dual binary code of length 24 with minimum
 
 #### R.4.2.1.8 Dual Optimality Summary
 
-**Remark R.4.2 (The Golay Bridge: Dual Optimality).**
+**Remark R.4.2: The Golay Bridge: Dual Optimality.**
 
 | Domain | Optimization Problem | Result | Role of $\mathcal{G}_{24}$ | Reference |
 |--------|---------------------|--------|---------------------------|-----------|
@@ -866,7 +866,7 @@ The Golay-Leech structure connects to emergent spacetime through the mode-channe
 
 **Step 4:** Unique solution: $K(D) = 24 \Rightarrow D = 4$.
 
-**Step 5:** Local geometric realization: The 24-cell achieves $K(4) = 24$ and tiles 4D Euclidean space.
+**Step 5:** Local geometric realization: The 24-cell achieves $K(4) = 24$ and admits a regular honeycomb tiling of 4D Euclidean space.
 
 The chain is complete:
 
@@ -874,7 +874,7 @@ $$
 \text{Golay code} \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(D)=24} D=4 \xrightarrow{\text{local}} \text{24-cell} \xrightarrow{\text{network}} \text{4D spacetime}
 $$
 
-The Golay code's error-correction properties (Theorem R.4.4) explain why the emergent spacetime structure is stable against quantum noise and thermal fluctuations: built-in redundancy from the 12+12 signal-parity structure provides optimal protection for 24 information modes. The "unreasonable stability" of physical structures—their persistence despite quantum uncertainty—is not mysterious but follows from the PCE-optimal error-correcting organization of the information substrate.
+The Golay code's error-correction properties (Theorem R.4.4) suggest a robustness mechanism: the same 12+12 partition that optimizes information protection may also constrain local geometric realizations toward noise-tolerant configurations. This is a heuristic stability argument; quantitative stability against explicit fluctuation/noise models would require specifying the dynamical perturbation model and showing that the induced geometry remains within the relevant regularity class.
 
 ### R.4.2.3 Golay Distance and Lattice Stability
 
@@ -943,7 +943,7 @@ The Leech lattice is the unique PCE optimum among Niemeier lattices.
 
 Dimension 24 is the only dimension where even unimodular lattices exist with exactly one rootless member. Whether this numerical coincidence reflects deeper structure remains an open question. ∎
 
-**Remark R.4.2a (Nested Uniqueness).** The selection process exhibits nested uniqueness:
+**Remark R.4.2a: Nested Uniqueness.** The selection process exhibits nested uniqueness:
 1. Among all dimensions $D$, only $D$ with $K(D) = 24$ works → unique $D = 4$
 2. Among all dimensions $M$, only $M = 24$ has exactly 24 even unimodular lattices
 3. Among those 24 lattices, only 1 (Leech) is rootless → unique vacuum
@@ -974,7 +974,7 @@ $$|\text{Co}_0| = 2^{22} \cdot 3^9 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 2
 
 The appearance of $M_{24} = \text{Aut}(\mathcal{G}_{24})$ reflects the Golay code's role in the construction. ∎
 
-**Remark R.4.2b (Physical Status of Sporadic Symmetries).** The emergence of sporadic simple groups ($\text{Co}_0$, $\text{Co}_1$, $M_{24}$) as automorphism groups of the framework's fundamental structures is mathematically necessary but physically subtle. These groups act on the 24-dimensional mode space, not directly on the 4-dimensional emergent spacetime. Physical observables in emergent spacetime reflect only those symmetries compatible with the dimensional reduction $24 \to 4$ via the mode-channel correspondence.
+**Remark R.4.2b: Physical Status of Sporadic Symmetries.** The emergence of sporadic simple groups ($\text{Co}_0$, $\text{Co}_1$, $M_{24}$) as automorphism groups of the framework's fundamental structures is mathematically necessary but physically subtle. These groups act on the 24-dimensional mode space, not directly on the 4-dimensional emergent spacetime. Physical observables in emergent spacetime reflect only those symmetries compatible with the dimensional reduction $24 \to 4$ via the mode-channel correspondence.
 
 Whether sporadic group structure produces observable signatures—such as specific degeneracy patterns in quantum systems engineered to probe the full 24-mode space, or constraints on allowed transitions—remains an open question. The experimental predictions in **Section Z.29–Z.31** provide protocols for testing the $M = 24$ mode structure and Golay code organization; confirmation of these predictions would indirectly validate the mathematical structures whose automorphism groups are sporadic. Direct physical manifestations of sporadic symmetries represent an avenue for future theoretical and experimental investigation.
 
@@ -996,7 +996,7 @@ This factorization does not independently derive $N_{\text{gen}} = 3$; rather, i
 
 **Qualitative assessment:** The convergence of two independent derivation pathways on the value $N_{\text{gen}} = 3$, together with compatibility from the QFI mode factorization, constitutes strong evidence for structural necessity rather than coincidence. The framework does not select $N = 3$ by parameter choice but derives it through independent routes sharing only the foundational constants $(d_0 = 8, \varepsilon = \ln 2)$.
 
-**Remark (Methodological Note).** The strength of the over-determination argument rests on the logical independence of the two derivation pathways. Both mechanisms provide complete derivations of $N = 3$ using different mathematical structures. The QFI mode factorization $M = d_0 \times N_{\text{gen}}$ provides an independent consistency check. Their agreement reflects the internal coherence of the framework. ∎
+**Remark: Methodological Note.** The strength of the over-determination argument rests on the logical independence of the two derivation pathways. Both mechanisms provide complete derivations of $N = 3$ using different mathematical structures. The QFI mode factorization $M = d_0 \times N_{\text{gen}}$ provides an independent consistency check. Their agreement reflects the internal coherence of the framework. ∎
 
 ---
 
@@ -1012,12 +1012,12 @@ The Golay-Leech structure connects to emergent spacetime through the mode-channe
 
 **Step 4:** Unique solution: $K(D) = 24 \Rightarrow D = 4$.
 
-**Step 5:** Local geometric realization: The 24-cell achieves $K(4) = 24$ and tiles 4D Euclidean space.
+**Step 5:** Local geometric realization: The 24-cell achieves $K(4) = 24$ and admits a regular honeycomb tiling of 4D Euclidean space.
 
 The chain is complete:
 $$\text{Golay code} \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(D)=24} D=4 \xrightarrow{\text{local}} \text{24-cell} \xrightarrow{\text{network}} \text{4D spacetime}$$
 
-The Golay code's error-correction properties (Theorem Z.13) explain why the emergent spacetime structure is stable against quantum noise and thermal fluctuations: built-in redundancy from the 12+12 signal-parity structure provides optimal protection for 24 information modes. The "unreasonable stability" of physical structures—their persistence despite quantum uncertainty—is not mysterious but follows from the PCE-optimal error-correcting organization of the information substrate.
+The Golay code's error-correction properties (Theorem Z.13) suggest a robustness mechanism: the same 12+12 partition that optimizes information protection may also constrain local geometric realizations toward noise-tolerant configurations. This is a heuristic stability argument; quantitative stability against explicit fluctuation/noise models would require specifying the dynamical perturbation model and showing that the induced geometry remains within the relevant regularity class.
 
 **Experimental Signatures.** The Golay-Leech structure generates specific testable predictions detailed in **Section Z.29–Z.31**:
 

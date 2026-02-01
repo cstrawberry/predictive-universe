@@ -17,7 +17,7 @@ The emergence of gravity in the PU framework is a multi-step process (Sections 1
     G(\delta, C_{\max}, \chi) \simeq \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}.
     \tag{I.1}
     $$
-(where $\delta$ is the effective microscopic MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is the correlation factor reducing effective channel density, and $C_{\max}(f_{RID})$ is the channel capacity. The effective boundary channel density is $\sigma_{eff_link} = \chi / (\eta \delta^2)$, as per Theorem E.3). This appendix implicitly assumes $\chi \approx 1$ for its subsequent scale-dependent arguments, effectively using $G \propto \delta^2/C_{max}$. Equation (I.1) is dimensionally consistent as shown in Appendix H.
+(where $\delta$ is the effective microscopic MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is the correlation factor reducing effective channel density, and $C_{\max}(f_{RID})$ is the channel capacity. The effective boundary channel density is $\sigma_{eff_link} = \chi / (\eta \delta^2)$, as per Theorem E.3). This appendix implicitly assumes $\chi \approx 1$ for its subsequent scale-dependent arguments, effectively using $G \propto \delta^2/C_{\max}$. Equation (I.1) is dimensionally consistent as shown in Appendix H.
 *   **Einstein field equations:** Applying thermodynamic principles (Clausius relation) to causal horizons in the emergent geometry, using the Area Law and the MPU stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ (Definition B.8, Appendix B) as the source, yields the Einstein field equations (Theorem 50).
 
 **I.3 Complexity Saturation in Prediction**
@@ -47,7 +47,7 @@ The perceived predictive difficulty $\hat C_{\mathrm{target}}$ (Definition 21) f
 When the MPU network in sparse regions saturates at a lower complexity level $\bar C_{\mathrm{agg,sat}}$ (Corollary I.2), the selection pressure on the microscopic MPU parameters governing network structure and interaction efficiency is altered. Specifically, PCE (Definition 15) drives configurations that minimize costs. If the density of predictive information does not warrant maintaining high complexity, the pressure to maintain the high-fidelity, densely packed configurations optimal for high complexity is reduced. This drives a "relaxation" of the effective microscopic MPU parameters:
 
 *   **Effective Microscopic Spacing $\delta(R)$ increases:** Maintaining a tight packing (small $\delta$) is costly (e.g., propagation costs $\propto 1/\delta^2$ or $\ln \delta$ type terms). If the predictive benefit from close spacing is low, PCE favors larger effective spacing, reducing propagation cost.
-*   **Effective Channel Capacity $C_{\max}(R)$ decreases:** High channel capacity requires maintaining low information loss (high $f_{RID} \approx e^{-\varepsilon}$), meaning low irreducible cost $\varepsilon$. Minimizing $\varepsilon$ requires investing resources (Theorem 31 links $\varepsilon$ to physical process). If the benefit from high fidelity is low (due to low $\hat C_{target}$), PCE favors accepting higher $\varepsilon$, allowing $C_{max}$ to decrease.
+*   **Effective Channel Capacity $C_{\max}(R)$ decreases:** High channel capacity requires maintaining low information loss (high $f_{RID} \approx e^{-\varepsilon}$), meaning low irreducible cost $\varepsilon$. Minimizing $\varepsilon$ requires investing resources (Theorem 31 links $\varepsilon$ to physical process). If the benefit from high fidelity is low (due to low $\hat C_{target}$), PCE favors accepting higher $\varepsilon$, allowing $C_{\max}$ to decrease.
 
 These parameter variations, $\delta(R)$ increasing and $C_{\max}(R)$ decreasing in sparse, large-scale regions ($R \gg L_0$), combine to raise the factor $\eta\delta^2/C_{\max}$ in Equation (I.1).
 
@@ -104,33 +104,25 @@ $$
 
 The PCE-driven relaxation of network parameters can be formalized by modeling the local contribution to the global PCE Potential:
 $$
-V_{struct}(\delta, C_{max}; \rho_b) = V_{cost}(\delta, C_{max}) - V_{benefit}(\delta, C_{max}; \rho_b)
+V_{struct}(\delta, C_{\max}; \rho_b) = V_{cost}(\delta, C_{\max}) - V_{benefit}(\delta, C_{\max}; \rho_b)
 \tag{I.3.5}
 $$
-The system dynamically adjusts its effective local parameters $\delta$ and $C_{max}$ to minimize this potential.
+The system dynamically adjusts its effective local parameters $\delta$ and $C_{\max}$ to minimize this potential.
 
 *   **Analysis of Cost and Benefit:**
-    *   **Structural Cost $V_{cost}$:** This term represents the physical resources needed to maintain the network infrastructure. A denser network (smaller $\delta$) implies higher resource density and potentially higher propagation costs. Higher-fidelity channels (larger $C_{max}$, which requires minimizing the irreversibility cost $\varepsilon$) also demand more resources (as analyzed in Appendix A.0.4, $V_{rel}$). Thus, $V_{cost}$ generally increases as $\delta$ decreases and increases as $C_{max}$ increases.
-    *   **Predictive Benefit $V_{benefit}$:** The benefit arises from the network's ability to form complex predictive models of the local environment. This ability, $PP_{agg}$, depends on having a dense (small $\delta$) and high-fidelity (large $C_{max}$) network. The total benefit is proportional to the amount of "stuff to predict," which is directly related to $\rho_b$. Thus, $V_{benefit}$ generally increases as $\delta$ decreases, increases as $C_{max}$ increases, and increases with $\rho_b$.
+    *   **Structural Cost $V_{cost}$:** This term represents the physical resources needed to maintain the network infrastructure. A denser network (smaller $\delta$) implies higher resource density and potentially higher propagation costs. Higher-fidelity channels (larger $C_{\max}$, which requires minimizing the irreversibility cost $\varepsilon$) also demand more resources (as analyzed in Appendix A.0.4, $V_{rel}$). Thus, $V_{cost}$ generally increases as $\delta$ decreases and increases as $C_{\max}$ increases.
+    *   **Predictive Benefit $V_{benefit}$:** The benefit arises from the network's ability to form complex predictive models of the local environment. This ability, $PP_{agg}$, depends on having a dense (small $\delta$) and high-fidelity (large $C_{\max}$) network. The total benefit is proportional to the amount of "stuff to predict," which is directly related to $\rho_b$. Thus, $V_{benefit}$ generally increases as $\delta$ decreases, increases as $C_{\max}$ increases, and increases with $\rho_b$.
 
 *   **Derivation of Crossover Behavior:** The system's minimization of $V_{struct}$ leads to two distinct equilibrium regimes:
     *   **High $\rho_b$ (e.g., galactic cores):** The benefit term $V_{benefit}$ is large and dominates the optimization. PCE drives the network to a high-cost, high-performance state to maximize predictive gain. This corresponds to an equilibrium with a small spacing $\delta_0$ and a large channel capacity $C_{max,0}$.
     *   **Low $\rho_b$ (e.g., galactic outskirts):** The benefit term is weak. PCE drives the network to a low-cost, low-performance state to conserve resources. This corresponds to an equilibrium with a large spacing $\delta_{large}$ and a small channel capacity $C_{max,low}$.
     
-This analysis proves that the equilibrium values $(\delta*, C_{max}*)$ must be functions of $\rho_b$, and that the system must transition between these two distinct regimes as $\rho_b$ changes. The functional form of the scale-dependent $G(R)$ introduced in the next section is a physically-motivated phenomenological model of this derived crossover behavior.
+This analysis proves that the equilibrium values $(\delta*, C_{\max}*)$ must be functions of $\rho_b$, and that the system must transition between these two distinct regimes as $\rho_b$ changes. The functional form of the scale-dependent $G(R)$ introduced in the next section is a physically-motivated phenomenological model of this derived crossover behavior.
 
 
 **I.6 Scale-Dependent Newton Constant**
 
-The variation of the microscopic parameters $\delta$ and $C_{\max}$ with the scale $R$ (associated with the density of predictive information and effective $\hat C_{\mathrm{target}}(R)$) due to the PCE-driven parameter relaxation mechanism (Section I.5) leads to a scale-dependent emergent Newton constant $G(R)$, as given by Equation (I.1). We model this scale dependence using a minimal phenomenological interpolation function (consistent with the robustness discussion in Section 6.7):
-
-$$
-G(R)=G_0\!\left[1+A_G
-        \bigl(1-e^{-(R/L_0)^m}\bigr)\right]
-\tag{I.3}
-$$
-
-where $G_0$ is the value approached at small scales $R \ll L_0$, $A_G$ is the total fractional enhancement ($A_G = G_{\mathrm{large}}/G_0 - 1$), $L_0$ is a characteristic transition scale at which $G$ begins to increase, and $m \ge 1$ (typically $m \gtrsim 2$) is a parameter determining the steepness of the transition.
+The variation of the microscopic parameters $\delta$ and $C_{\max}$ with the scale $R$ (associated with the density of predictive information and effective $\hat C_{\mathrm{target}}(R)$) due to the PCE-driven parameter relaxation mechanism (Section I.5) leads to a scale-dependent emergent Newton constant $G(R)$, as given by Equation (I.1). We model this scale dependence using a minimal phenomenological interpolation function (consistent with the robustness discussion in Section 6.7), where $G_0$ is the value approached at small scales $R \ll L_0$, $A_G$ is the total fractional enhancement ($A_G = G_{\mathrm{large}}/G_0 - 1$), $L_0$ is a characteristic transition scale at which $G$ begins to increase, and $m \ge 1$ (typically $m \gtrsim 2$) is a parameter determining the steepness of the transition.
 
 This yields the explicit running of the Newton constant with scale $R$; as a robustness check, replacing the exponential by a logistic or Hill-type transition function preserves the qualitative baryon-tracking behavior for the same $(L_0,A_G,m)$ scale hierarchy:
 
@@ -236,7 +228,7 @@ g(r)\sim \frac{\sqrt{GMa_0}}{r},\qquad v_{\rm circ}^4(r)\sim GMa_0.
 $$
 This recovers the baryonic Tully-Fisher relation as a direct consequence of the asymptotic form of the effective gravitational law [Milgrom 1983; McGaugh 2012].
 
-*   A joint Bayesian inference analysis (e.g., using nested sampling \[Feroz & Hobson 2008; Feroz et al. 2009, 2019]) to determine the universal parameter set $(L_0,A_G,m)$ and the per-galaxy $\Upsilon_\ast$ values by comparing predicted and observed rotation curves. When inferring $A_G$ from rotation curves, the effective far‑field enhancement reflects the baryon‑mass‑weighted $\langle\varepsilon_G\rangle_b$ rather than $A_G$ itself; the numerical fits naturally absorb this via the $\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R),\rho_b(R)$ source.
+*   A joint Bayesian inference analysis (e.g., using nested sampling [Feroz & Hobson 2008; Feroz et al. 2009, 2019]) to determine the universal parameter set $(L_0,A_G,m)$ and the per-galaxy $\Upsilon_\ast$ values by comparing predicted and observed rotation curves. When inferring $A_G$ from rotation curves, the effective far‑field enhancement reflects the baryon‑mass‑weighted $\langle\varepsilon_G\rangle_b$ rather than $A_G$ itself; the numerical fits naturally absorb this via the $\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R),\rho_b(R)$ source.
 
 **I.12 Robustness and Systematics**
 
