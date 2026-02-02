@@ -78,7 +78,7 @@ p \;\ge\; \frac{\varepsilon}{\ln d_0}\ \ge\ \frac{\ln 2}{\ln d_0},
 $$
 hence the RID contractivity factor satisfies $f_{\mathrm{RID}}(\mathcal{E}_N)\le 1-p \le 1 - \tfrac{\ln 2}{\ln d_0}<1$. This bound is derived by conservatively assuming the reset channel is the dominant contributor to the cycle's average irreversibility cost $\varepsilon$; other sources of dissipation would only increase $p$ and further decrease $f_{\mathrm{RID}}$. More generally, any mechanism realizing the necessary irreversibility $\varepsilon>0$ will ensure primitivity and thus $f_{\mathrm{RID}}<1$.
 
-2.  **Consequences of Primitivity:** For a primitive CPTP map $\mathcal{E}_N$ on $\mathcal{B}(\mathcal{H}_{d_0})$ [Frigerio & Verri 1982; Wolf 2012]:
+2.  **Consequences of Primitivity:** For a primitive CPTP map $\mathcal{E}_N$ on $\mathcal{B}(\mathcal{H}_{d_0})$ [Frigerio & Verri 1982a; Wolf 2012]:
     *   There is a unique full-rank fixed point state $\rho_{fix}$ such that $\mathcal{E}_N(\rho_{fix}) = \rho_{fix}$.
     *   The eigenvalue 1 of $\mathcal{E}_N$ (as a superoperator) is simple (non-degenerate in the sense that its eigenspace is one-dimensional, spanned by $\rho_{fix}$).
     *   Let $\lambda_{gap}(\mathcal{E}_N)$ be the spectral radius of $\mathcal{E}_N$ when restricted to the invariant subspace of traceless operators $\mathcal{B}_0(\mathcal{H}_{d_0}) = \{X \in \mathcal{B}(\mathcal{H}_{d_0}) : \text{Tr}(X)=0\}$. For a primitive channel, it is strictly less than 1: $0 \le \lambda_{gap}(\mathcal{E}_N) < 1$. This $\lambda_{gap}$ governs the exponential rate of convergence of $\mathcal{E}_N^k(\rho)$ to $\rho_{fix}$ for any initial state $\rho$.
@@ -520,17 +520,17 @@ $$
 C_{\max}^{*} = \ln(d_0) - \varepsilon
 \tag{E.14}
 $$
-Using the framework's logically-derived values for the fundamental MPU parameters, `d₀=8` (from the Horizon Constant $K_0=3$ bits, Theorem 23) and `ε=ln(2)` (from the minimal SPAP cycle cost, Theorem 31), the PCE-optimal channel capacity is calculated to be:
+Using the framework's logically-derived values for the fundamental MPU parameters, $d_0=8$ (from the Horizon Constant $K_0=3$ bits, Theorem 23) and $\varepsilon=\ln 2$ (from the minimal SPAP cycle cost, Theorem 31), the PCE-optimal channel capacity is calculated to be:
 $$
-C_{\max}^{*} = \ln(8) - \ln(2) = 2\ln(2)
+C_{\max}^{*} = \ln(8) - \ln(2) = 2\ln 2
 \tag{E.15}
 $$
-Substituting this result, along with PCE-optimized values for the correlation and packing factors (`χ*` and `η`, which are `O(1)` constants), into the scale relation derived from Equation E.9 (`δ²/L_P² = 4 χ C_max / η`) yields a direct, quantitative prediction for the ratio of the MPU spacing to the Planck length. For the idealized case (`χ*≈1`, `η≈1`), this ratio is:
+Substituting this result, along with PCE-optimized values for the correlation and packing factors ($\chi^*$ and $\eta$, which are $O(1)$ constants), into the scale relation derived from Equation E.9 ($\delta^2/L_P^2 = 4\chi C_{\max}/\eta$) yields a direct, quantitative prediction for the ratio of the MPU spacing to the Planck length. For the idealized case ($\chi^*\approx 1$, $\eta\approx 1$), this ratio is:
 $$
 \frac{\delta}{L_P} \approx \sqrt{8\ln 2} \approx 2.355
 \tag{E.16}
 $$
-This result demonstrates that the relationship between the fundamental microscopic scale `δ` and the emergent Planck scale `L_P` is a calculable, `O(1)` constant determined by the information-theoretic necessities of the MPU's predictive cycle, providing strong evidence for the internal consistency of the framework. The full derivation is provided in Appendix Q.
+This result demonstrates that the relationship between the fundamental microscopic scale $\delta$ and the emergent Planck scale $L_P$ is a calculable, $O(1)$ constant determined by the information-theoretic necessities of the MPU's predictive cycle. The full derivation is provided in Appendix Q.
 
 
 
@@ -1762,4 +1762,4 @@ This appendix provided a theoretical derivation of the Horizon Entropy Area Law 
 
 **Stage 2 (Operational Channel Counting, Sections E.6.4–E.6.5):** The same result is independently derived from operational principles. ND-RID irreversibility ($\varepsilon \ge \ln 2$, Theorem 31, rigorously proven in Appendix J) guarantees strict channel contractivity ($f_{RID}<1$, Lemma E.1), fundamentally bounding classical information capacity ($C_{\max} < \ln d_0$, Theorem E.2). Combined with the geometric scaling of effective information channels across a boundary ($N_{eff\_links} \propto \mathcal{A}$, incorporating correlation factor $\chi$, conditional on Theorem 43, Theorem E.3), this yields the linear entropy-area relation $S_{max} = k_B \left(\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}$ (Equation E.6). Consistency between the two approaches (Section E.6.4) requires $\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{1}{4G}$, yielding the explicit Bekenstein-Hawking coefficient $1/(4L_P^2)$ (Theorem E.6).
 
-**Synthesis:** This dual derivation—from quantum entanglement structure AND operational channel capacity—demonstrates that the area law emerges necessarily from the MPU framework's foundational principles. The emergent gravitational constant is expressed as $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$ (Equation E.9), linking the Planck scale ($L_P^2 = G\hbar/c^3$) to fundamental MPU parameters ($\delta, \eta, \chi, \varepsilon$ via $C_{\max}$) controlling geometric density and information capacity. As shown in **Section E.7 (Equations E.14, E.15)**, PCE optimization of the vacuum state yields $C_{\max}^* = \ln(d_0) - \varepsilon = 2\ln(2)$, with $\chi^* \approx 1$ and $\eta^* \approx 1$, demonstrating structural consistency and predicting $\delta/L_P \approx 2.355$. The derived Area Law interprets the black hole horizon thermodynamically as representing the maximal information boundary defined by both the fundamental quantum entanglement structure and the ND-RID capacity limits. This provides the necessary thermodynamic foundation (Theorem 49) for deriving Einstein's Field Equations (Section 12).
+**Synthesis:** This dual derivation—from quantum entanglement structure AND operational channel capacity—demonstrates that the area law emerges necessarily from the MPU framework's foundational principles. The emergent gravitational constant is expressed as $G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$ (Equation E.9), linking the Planck scale ($L_P^2 = G\hbar/c^3$) to fundamental MPU parameters ($\delta, \eta, \chi, \varepsilon$ via $C_{\max}$) controlling geometric density and information capacity. As shown in **Section E.7 (Equations E.14, E.15)**, PCE optimization of the vacuum state yields $C_{\max}^* = \ln(d_0) - \varepsilon = 2\ln 2$, with $\chi^* \approx 1$ and $\eta^* \approx 1$, demonstrating structural consistency and predicting $\delta/L_P \approx 2.355$. The derived Area Law interprets the black hole horizon thermodynamically as representing the maximal information boundary defined by both the fundamental quantum entanglement structure and the ND-RID capacity limits. This provides the necessary thermodynamic foundation (Theorem 49) for deriving Einstein's Field Equations (Section 12).

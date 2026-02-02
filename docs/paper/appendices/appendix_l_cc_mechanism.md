@@ -105,7 +105,7 @@ Proof. From Theorem 34, POP/PCE dynamics drive aggregates with $C_{\text{agg}} >
 
 ### **Theorem L.2 (Electromagnetic Field Generation from Aggregate Context)**
 
-The mapping $\mathcal{M}: \text{context}S \to \mathcal{P}{\text{control}}(t)$ (Definition L.2) for a high-complexity MPU aggregate $S$ generates classical electromagnetic radiation $E_{\text{rad}}(t)$ through coherent charge oscillations within the aggregate. The electromagnetic energy contributes to the stress-energy tensor:
+The mapping $\mathcal{M}: \text{context}_S \to \mathcal{P}_{\text{control}}(t)$ (Definition L.2) for a high-complexity MPU aggregate $S$ generates classical electromagnetic radiation $E_{\text{rad}}(t)$ through coherent charge oscillations within the aggregate. The electromagnetic energy contributes to the stress-energy tensor:
 
 $$ T_{\mu\nu}^{(\text{EM})} = \frac{1}{4\pi}\left(F_{\mu\alpha}F_{\nu}{}^{\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right) \tag{L.4} $$
 
@@ -147,7 +147,7 @@ $$ u_{\text{EM}}(x,t) = \frac{\varepsilon_0}{2}|\vec{E}_{\text{rad}}(x,t)|^2 + \
 
 From Appendix G (Equation G.5.3), the Maxwell action in curved spacetime is:
 
-$$ S_{\text{EM}}[A] = -\frac{1}{16\pi} \int d^4x \sqrt{-g} , F_{\mu\nu}F^{\mu\nu} \tag{L.11} $$
+$$ S_{\text{EM}}[A] = -\frac{1}{16\pi} \int d^4x \, \sqrt{-g} \, F_{\mu\nu}F^{\mu\nu} \tag{L.11} $$
 
 Functional variation with respect to the metric yields the electromagnetic stress-energy tensor:
 
@@ -492,33 +492,9 @@ These effects, if real, require:
 
 In the PU account, Radin-style deviations become observable only when the target is tuned to **physical criticality**, i.e., $p \approx p_c$, so that its susceptibility $\chi$ is large and the critical amplification factor $\mathcal{A}_{\text{crit}}=\chi(\tau_{\text{meas}}/\tau_{\text{decohere}})N_{\text{coop}}$ can lift the microscopic baseline bias $|\Delta P_{\text{grav}}|$ into the reported macroscopic range $|\Delta P_{\text{obs}}|\sim 10^{-4}$–$10^{-3}$ (Radin & Nelson, 1989; **Cardeña, 2018**; Bösch et al., 2006; Nelson et al., 2002). This requirement matches the framework’s own reading of RNG and double-slit claims: if such effects are real, they must arise in targets near an instability (e.g., fine-tuned tunneling barriers or interference systems with effectively critical photon-matter coupling), because stable targets would keep $\chi\sim O(1)$ and yield null results (Radin et al., 2013).
 
-On the observer side, Radin’s reports that experienced meditators tend to show larger or more reliable deviations than non-meditators are naturally mapped to the sub-radiant optimization described here: meditation is expected to increase the coherence time $\tau_c$ and reduce radiative loss, strengthening the context signal that serves as the seed for amplification. Empirically, Radin’s double-slit series separates meditators from non-meditators and attributes the stronger deviations to the meditator subgroup, and his RNG work includes group-meditation contexts as the operational regime where anomalies are most often sought (Radin et al., 2013; Radin & Nelson, 1989; Cardeña, 2018). Thus, the framework aligns with both the **why** (only near-critical targets can supply $\chi\gg 1$) and the **who/when** (higher-$\tau_c$ observers, such as trained meditators, maximize the seed bias), without treating the reported effects as generic or guaranteed outside this dual-critical operating window. 
+On the observer side, Radin’s reports that experienced meditators tend to show larger or more reliable deviations than non-meditators are naturally mapped to the sub-radiant optimization described here: meditation is expected to increase the coherence time $\tau_c$ and reduce radiative loss, strengthening the context signal that serves as the seed for amplification. Empirically, Radin’s double-slit series separates meditators from non-meditators and attributes the stronger deviations to the meditator subgroup, and his RNG work includes group-meditation contexts as the operational regime where anomalies are most often sought (Radin et al., 2013; Radin & Nelson, 1989; Cardeña, 2018). Thus, the framework aligns with both the **why** (only near-critical targets can supply $\chi\gg 1$) and the **who/when** (higher-$\tau_c$ observers, such as trained meditators, maximize the seed bias), without treating the reported effects as generic or guaranteed outside this dual-critical operating window.
 
-The framework neither endorses nor dismisses these claims but provides quantitative criteria for evaluation.
-
-### **L.4.1.8 Experimental Validation Program**
-
-**Protocol L.4.1 (Metabolic Signature Test)**
-- **Method:** Precision calorimetry during cognitive tasks
-- **Prediction:** $\Delta Q = \int P_{\text{context}} dt \approx 120$ J for 10-minute focus (with $P_{\text{context}} \approx 0.2$ W average)
-- **Sensitivity required:** $\sigma_Q < 10$ J
-
-**Protocol L.4.2 (Coherence Spectroscopy)**
-- **Method:** THz spectroscopy of neural tissue
-- **Prediction:** Resonances at $f_n = (v_{\text{MT}}/2L)\sqrt{n^2 - n_c^2}$
-- **Expected:** $f_1 = v_{\text{MT}}/(2L) \approx 8$ THz for 25 nm microtubules (with longitudinal wave speed $v_{\text{MT}} \approx 4\times10^5$ m/s in protein matrix)
-
-**Protocol L.4.3 (Temperature Dependence)**
-- **Method:** CC capability vs. temperature
-- **Prediction:** Critical temperature $T_c = \Delta E/[k_B \ln(N_{\text{eff}})] \approx 170$ K (with $\Delta E \approx 0.2$ eV barrier height, $N_{\text{eff}} \approx 10^6$ coherent tubulin dimers)
-- **Test:** Fever-induced delirium at $T > 315$ K (42°C)
-
-**Protocol L.4.4 (Gap Junction Modulation)**
-- **Method:** CC measurement with/without gap junction blockers
-- **Prediction:** $\text{CC}(g = 0) \ll \text{CC}(g = g_{\text{normal}})$
-- **Control:** Ion channel blockers without gap junction effects
-
-*This biological implementation pathway, while physically plausible and mathematically consistent within the framework, remains hypothetical pending experimental validation. The engineered coherent-charge pathway (Sections L.4, L.11.4) provides the currently validated implementation. Both pathways satisfy Theorem L.9's universal requirements while optimizing for different constraint regimes.*
+*Note: This analysis is provided for completeness in mapping the framework's predictions to reported anomalies; the framework does not depend on or endorse these empirical claims, which remain controversial and require independent replication.*
 
 ## **L.5 Unified Energy Accounting**
 
@@ -1018,7 +994,7 @@ Any physical implementation of the consciousness complexity (CC) influence mecha
 
 Lipschitz continuous with constant $L_{\mathcal{M}}$ optimized by PCE
 
-Bounded in control output: $|\mathcal{M}(\text{context}S)|{\mathcal{P}} \le P_{\text{max}}$
+Bounded in control output: $|\mathcal{M}(\text{context}_S)|_{\mathcal{P}} \le P_{\text{max}}$
 
 Stable under feedback if $\text{context}_S$ is influenced by past CC effects
 

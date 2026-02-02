@@ -225,9 +225,9 @@ The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **
 
 1.  **Lower Bound (from $P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23, Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 \nu (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0 \nu \frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
     $$
-    \Gamma_0 \gtrsim P_{min} = R(C_{op}) \ge \frac{k_B T \ln(d_0)}{\tau_{min}} \ge \frac{3 k_B T \ln(2)}{\tau_{min}} \quad \text{(27)}
+    \Gamma_0 \gtrsim P_{min} = R(C_{op}) \ge \frac{k_B T \ln(d_0)}{\tau_{min}} \ge \frac{3 k_B T \ln 2}{\tau_{min}} \quad \text{(27)}
     $$
-    If the cycle rate $\nu \approx 1/\tau_{min}$, this simplifies to $\Gamma_0 \gtrsim 3 k_B T \ln(2)$.
+    If the cycle rate $\nu \approx 1/\tau_{min}$, this simplifies to $\Gamma_0 \gtrsim 3 k_B T \ln 2$.
 2.  **Upper Bound (from $\varepsilon$):** The irreducible thermodynamic cost, quantified by dimensionless entropy production $\varepsilon \ge \ln 2$ (Theorem 31), associated with the necessary irreversible state change during an 'Evolve' interaction, provides an upper bound. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), must be considered relative to this fundamental dissipation $E_{dissip} \ge k_B T \varepsilon$. For thermodynamically consistent energy valuation:
      $$
     \Gamma_0 \lesssim \frac{k_B T \varepsilon \nu}{\Delta PP_{max}} =: \Gamma_{0,crit} \quad \text{(28)}

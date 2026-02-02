@@ -602,7 +602,7 @@ $$
 
 This identity connects the mechanical description (action in J·s) to the information-theoretic description (entropy in nats). The identity follows from the Γ-convergence of the discrete predictive action to the continuum action (Theorem Q.0.1, Appendix D). The appearance of $\hbar$ as the conversion factor reflects its fundamental role in quantum mechanics, where action enters the path integral phase as $e^{iS/\hbar}$ [Feynman & Hibbs 1965]; the information-theoretic interpretation in nats is established by the Γ-convergence construction itself.
 
-**Step 2 (Rest action magnitude).** A system at rest with mass $m$ has rest energy $E = mc^2$ [Einstein 1905]. Over proper time $\tau$, the magnitude of the accumulated action is:
+**Step 2 (Rest action magnitude).** A system at rest with mass $m$ has rest energy $E = mc^2$ [Einstein 1905b]. Over proper time $\tau$, the magnitude of the accumulated action is:
 
 $$
 |\mathcal{S}_{rest}| = E \cdot \tau = mc^2\tau

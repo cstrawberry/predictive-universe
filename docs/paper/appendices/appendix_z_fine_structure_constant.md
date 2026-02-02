@@ -157,7 +157,7 @@ The PCE-optimal baseline density operator $\rho_0$ is maximally mixed on the $a 
 $$\rho_0 = \frac{I_a}{a} \oplus 0_b = \frac{I_2}{2} \oplus 0_6$$
 with eigenvalues (1/2, 1/2, 0, 0, 0, 0, 0, 0).
 
-This state saturates the Landauer bound: $S(\rho_0|_A) = \ln(2) = \varepsilon$, confirming the active subspace exactly instantiates the irreducible cost with no excess.
+This state saturates the Landauer bound: $S(\rho_0|_A) = \ln 2 = \varepsilon$, confirming the active subspace exactly instantiates the irreducible cost with no excess.
 
 ---
 

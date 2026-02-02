@@ -40,7 +40,7 @@ A concrete baseline arises from Landauer‑type considerations for logically irr
   \approx\ 2.87\times 10^{-12}\ \mathrm{W}.
   $$
 
-Any adaptive device with $C(t)\ge C_{op}$ dissipates at least this power. If available power falls below $P_{min}$, PCE dynamics reduce $C(t)$ beneath $C_{op}$, and predictive performance collapses (see Appendix D, Section D.3, work-cost gap mechanism, and Theorem 31).
+More generally, if the loop executes $n_{\mathrm{irr}}\ge 1$ logically irreversible merges per cycle at temperature $T$ with cycle time $\tau_{cyc}$, the Landauer-limited baseline is $P_{min}\gtrsim n_{\mathrm{irr}}\,k_B T \ln 2/\tau_{cyc}$; the numerical estimate above corresponds to $n_{\mathrm{irr}}=1$, $T\approx 300$ K, and $\tau_{cyc}\approx 10^{-9}$ s. If available power falls below the relevant $P_{min}$ for the operating $(T,\tau_{cyc},n_{\mathrm{irr}})$, PCE dynamics reduce $C(t)$ beneath $C_{op}$, and predictive performance collapses (see Appendix D, Section D.3, work-cost gap mechanism, and Theorem 31).
 
 
 **5.2 Minimal Complexity for Self-Reference and Prediction ($K_0$)**

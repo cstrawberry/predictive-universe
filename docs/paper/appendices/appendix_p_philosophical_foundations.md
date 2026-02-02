@@ -992,7 +992,7 @@ where $\mathcal{M}_{int}$ is the class of predictive procedures available to int
 
 **Remark P.5.1: Internal Closure.** Properties (ii) and (iii) jointly ensure that from the internal perspective, the simulation's dynamics satisfy the closed-system assumption required by Theorem E.9.5 (Appendix E.9.5). External observation extracts information without participating in internal dynamics, preserving the applicability of global unitarity to internal evolution. The internal MPU network evolves as if closed, with no detectable information exchange across the observation channel.
 
-**Theorem P.5.1 (Consistency with Reflexivity Constraint).** The observation channel (Definition P.5.3) is consistent with Theorem 33.
+**Theorem P.5.1 (Consistency with Reflexivity Constraint).** The observation channel (Definition P.5.3) is consistent with Theorem 33 (Reflexivity Constraint, $\kappa_r > 0$) and enforces $\varepsilon \geq \ln 2$ at every external interface.
 
 *Proof.* Theorem 33 states that information gain $\Delta I > 0$ incurs thermodynamic cost. By Definition 1, information gain requires that the acquired pattern improves predictive performance for the acquiring system. 
 
@@ -1049,7 +1049,7 @@ The PU framework invokes Landauer's principle [Landauer 1961] for the thermodyna
 
 (i) **Internal operations:** State transformations within the simulation (SPAP cycle, 'Evolve' interaction, any logically irreversible computation) incur the Landauer cost $\varepsilon \geq \ln 2$ per bit erased.
 
-(ii) **External observation:** External reading of the observation channel incurs thermodynamic cost in the external context (the simulator's domain), not within the simulation.
+(ii) **External observation:** External reading of the observation channel incurs thermodynamic cost $\varepsilon \geq \ln 2$ and Reflexivity Constraint cost $\kappa_r > 0$ at the observer interface (Theorem 31; Theorem 33) in the external context (the simulator's domain), not within the simulation.
 
 *Justification.* Landauer's principle states that erasing information requires dissipating energy $k_B T \ln 2$ per bit into the environment. For internal operations, the "environment" is internal to the simulation. For external observation, the "environment" is external to the simulation. The channel architecture ensures these domains remain separate.
 

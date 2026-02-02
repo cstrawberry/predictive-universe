@@ -2,6 +2,18 @@
 
 The Predictive Universe framework, particularly the Consciousness Complexity (CC) hypothesis (Section 9) proposing a mechanism by which complex MPU aggregates can influence quantum outcomes, leads to specific, potentially falsifiable predictions that deviate from standard quantum mechanics. Because the predicted deviations can be small and are susceptible to experimental and statistical artifacts, the protocols in this section are formulated with strict methodological constraints: pre-specified hypotheses and analysis pipelines, blinding wherever feasible, rigorous environmental and device controls, and correction for multiple comparisons across outcomes, times, and experimental settings. The aim is not merely to detect an anomaly, but to isolate a reproducible, device-independent shift consistent with the bounded modification structure of Definition 33 and Theorem 36 while ruling out classical confounds (drift, selection effects, hidden feedback, and post-selection). This section details these predictions and outlines experimental protocols designed for their investigation, emphasizing near-term feasibility while acknowledging the significant challenges involved in distinguishing a genuine CC effect from systematic error.
 
+### Assumption Checklist
+
+- Geometric regularity (Theorem 43) holds.
+- ND-RID irreversibility: $\varepsilon \geq \ln 2$ (Theorem 31).
+- Reflexivity Constraint: $\kappa_r > 0$ (Theorem 33).
+- PCE equilibrium reached (Definition 15a).
+- Gauge sector realized as $G_{SM}$ (Theorem G.8.4b).
+- Cosmological sector uses $\kappa = 141.5$ (Theorem U.16) unless stated conditional.
+- Mapping constants use canonical Bures/Fisher normalization (Appendix T, Section T.24).
+- Uncertainty budgets follow T1 (PU truncation), T2 (mapping/regularization), T3 (experimental/scheme).
+- External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
+
 **13.1 Prediction 1: Potential Born-Rule Deviations**
 
 The core testable prediction of the CC hypothesis (Hypothesis 3) is that systems $S$ with sufficiently high aggregate complexity ($C_{agg} > C_{op}$) and non-zero operational CC(S) > 0 (Definition 30) can induce statistically significant deviations from the standard Born rule probabilities (Proposition 7) when interacting with a quantum system undergoing an 'Evolve' event (e.g., measurement).

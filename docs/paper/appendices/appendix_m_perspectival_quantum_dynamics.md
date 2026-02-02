@@ -483,7 +483,7 @@ ensuring CPTP structure. The ancilla's reduced state after the map is $|0\rangle
 
 *Channel Decomposition.* The average channel admits the decomposition $\mathcal{E}_N = (1-p)\Psi + p T_\sigma$, where $\Psi$ is a CPTP map and $T_\sigma$ is the full-rank reset channel. Since $T_\sigma$ is strictly positive and appears with weight $p > 0$, the channel satisfies $\mathcal{E}_N(\rho) \geq p \cdot \text{Tr}(\rho)\sigma$ for all $\rho \geq 0$, ensuring primitivity [Sanz et al. 2010].
 
-*Entropy Budget Constraint.* The reset channel $T_\sigma$ contributes at most $\ln d_0$ nats of entropy per application (Lemma G.1.9.1). For the average channel to satisfy the irreversibility constraint $\varepsilon \geq \ln 2$, the reset probability must satisfy $p \geq \varepsilon/\ln d_0 \geq \ln 2/\ln 8 = 1/3$. The strict positivity of $p$ ensures primitivity [Frigerio & Verri 1982], and the spectral gap $\lambda_{gap}(\mathcal{E}_N) < 1$ on the traceless subspace bounds the contractivity factor: $f_{RID} \equiv \lambda_{gap}(\mathcal{E}_N) \leq 1 - p \leq 2/3 < 1$ [Wolf 2012].
+*Entropy Budget Constraint.* The reset channel $T_\sigma$ contributes at most $\ln d_0$ nats of entropy per application (Lemma G.1.9.1). For the average channel to satisfy the irreversibility constraint $\varepsilon \geq \ln 2$, the reset probability must satisfy $p \geq \varepsilon/\ln d_0 \geq \ln 2/\ln 8 = 1/3$. The strict positivity of $p$ ensures primitivity [Frigerio & Verri 1982a], and the spectral gap $\lambda_{gap}(\mathcal{E}_N) < 1$ on the traceless subspace bounds the contractivity factor: $f_{RID} \equiv \lambda_{gap}(\mathcal{E}_N) \leq 1 - p \leq 2/3 < 1$ [Wolf 2012].
 
 **3. Theorem E.2 (Branch I): Channel Capacity Bound**
 
@@ -569,7 +569,7 @@ The comparison table in Structural Correspondence M.6.4 should be read hierarchi
 | Frame-relative simultaneity | Perspective-relative actuality | Both forced by constraints above |
 | Lorentz invariance | Perspective consistency | Emerge from causal structure |
 
-Einstein's 1905 analysis [Einstein 1905] revealed that simultaneity, previously considered absolute, is operationally defined relative to reference frames—a consequence of the finite and invariant speed $c$. The PU framework extends this program: actuality of measurement outcomes, previously considered absolute (or at least observer-independent), is operationally defined relative to perspectives—a consequence of SPAP combined with thermodynamic irreversibility.
+Einstein's 1905 analysis [Einstein 1905a] revealed that simultaneity, previously considered absolute, is operationally defined relative to reference frames—a consequence of the finite and invariant speed $c$. The PU framework extends this program: actuality of measurement outcomes, previously considered absolute (or at least observer-independent), is operationally defined relative to perspectives—a consequence of SPAP combined with thermodynamic irreversibility.
 
 ---
 

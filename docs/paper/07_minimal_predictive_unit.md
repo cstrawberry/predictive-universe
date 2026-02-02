@@ -328,7 +328,7 @@ $$
 
 Any non-trivial 'Evolve' interaction within an MPU yielding a minimum relevant information gain $\Delta I \ge \Delta I_{min} > 0$ (nats) is constrained by a fundamental trade-off between the information gained and the minimum necessary state disturbance (quantified by the dimensionless entropy production $\Delta S_{min}/k_B$ accompanying the interaction):
 $$
-\Delta I \cdot (\Delta S_{min}/k_B) \geq \kappa_r \quad \text{(48)}
+\Delta I \cdot (\Delta S_{min}/k_B) \geq \kappa_r > 0 \quad \text{(48)}
 $$
 where the **Reflexivity Constant** $\kappa_r$ is guaranteed to be strictly positive ($\kappa_r > 0$) due to $\Delta I_{min} > 0$ and the necessary cost $\varepsilon \ge \ln 2 > 0$ (Theorem 31), assuming a non-negative minimal feedback cost $D_{KL, min} \ge 0$.
 *Proof:* From Theorem 32, **Equation (47) (which applies when $I>0$)**, we have the bound $\frac{\Delta S_{min}(o)}{k_B} \geq I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon$. For any interaction yielding at least $\Delta I_{min}$ information and having a minimal feedback cost of $D_{KL, min}$, this implies $\Delta S_{min}(o)/k_B \ge \Delta I + D_{KL, min} + \varepsilon$. Multiplying by $\Delta I$ yields $\Delta I \cdot (\Delta S_{min}(o)/k_B) \ge h(\Delta I)$, where $h(\Delta I) = \Delta I (\Delta I + D_{KL, min} + \varepsilon)$. The function $h(\Delta I)$ increases for $\Delta I>0$ since $\varepsilon>0, D_{KL,min}\ge 0$. Its minimum value for $\Delta I \ge \Delta I_{min}$ occurs at $\Delta I_{min}$, defining $\kappa_r = h(\Delta I_{min}) = \Delta I_{min} (\Delta I_{min} + D_{KL, min} + \varepsilon)$. Since $\Delta I_{min}>0$ and $\varepsilon > 0$, $\kappa_r$ is strictly positive. (See **Appendix E.1** and derivation from Theorem 32). QED
@@ -539,7 +539,7 @@ $$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}} \quad \text{(Equation E.9)}
 
 *Proof.* The detailed derivations are provided in Appendix E (Sections E.2–E.6) and Appendix J. The logical structure is:
 
-$$\text{SPAP} \xrightarrow{\text{Thm 10--11}} \text{irreversibility} \xrightarrow{\text{Thm Z.2}} \varepsilon = \ln 2 \xrightarrow{\text{Landauer}} S_{\text{thermo}} = k_B \varepsilon \xrightarrow{\text{Lem E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{Thm E.3, E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\text{SPAP} \xrightarrow{\text{Thm 10, 11}} \text{irreversibility} \xrightarrow{\text{Thm Z.2}} \varepsilon = \ln 2 \xrightarrow{\text{Landauer}} S_{\text{thermo}} = k_B \varepsilon \xrightarrow{\text{Lem E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{Thm E.3, E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 ∎
 

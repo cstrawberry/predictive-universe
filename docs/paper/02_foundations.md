@@ -60,6 +60,8 @@ $$
 
 This definition ensures $C_P$ is well-defined and incorporates all emergent physical constraints without circularity. For physically realizable $\mu$ (Definition 17), the hierarchy $\{C_{P,n}(\mu)\}$ is monotone non-decreasing and admits a finite uniform upper bound given by any witness admissible construction of $\mu$ under the full constraint set; hence the limit exists and is finite.
 
+Remark: Level 0 uses algorithmic complexity $K(P)$ as a non-circular bookkeeping device. Exact integer invariants derived later (e.g., $K_0=3$ bits) are fixed by operational distinguishability and minimal register-size arguments expressed in the physically anchored capacity units $C_{cap}=\log_2 d_0$ (Convention 1), and therefore do not depend on the additive-constant ambiguity of $K(P)$ under changes of the reference universal machine.
+
 **Lemma 1 (Convergence of Complexity Hierarchy):** The hierarchically defined sequence $\{C_{P,n}(\mu)\}$ converges to a finite limit $C_P(\mu)$ for any physically realizable microstate $\mu$.
 
 *Proof.*
@@ -215,7 +217,7 @@ This map provides operational constructions from $(\mathcal{N},\mathcal{E}_N,V)$
 
 Because the categories are projections of one structure, canonical inter‑category relations appear as internal identities rather than independent empirical "bridges":
 
-1. **Mass–energy equivalence.** Rest energy is the maintenance cost of relational/predictive information. PU recovers $E=mc^2$ [Einstein 1905] as a consequence of identifying mass with the action/energy required to maintain relational information content; see Corollary N.5.1 and the associated development in Appendix N.
+1. **Mass–energy equivalence.** Rest energy is the maintenance cost of relational/predictive information. PU recovers $E=mc^2$ [Einstein 1905b] as a consequence of identifying mass with the action/energy required to maintain relational information content; see Corollary N.5.1 and the associated development in Appendix N.
 
 2. **Lorentzian spacetime with invariant $c$.** The same physical instantiation constraints that enforce $\tau_{\min}>0$ (Theorem 29) and $\varepsilon\ge\ln 2$ (Theorem 31) bound causal influence propagation and yield an invariant maximum speed $c$. With the emergent dimension fixed to $D=4$ by mode/channel matching (Theorem Z.11), Theorem 46 then yields the Lorentzian signature.
 
