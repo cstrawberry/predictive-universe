@@ -119,6 +119,9 @@ More precisely:
 
 **(3) Minimal Predictive Success—Sufficiency on $\mathcal{E}_{\mathrm{basic}}(\gamma)$**. The *flip‑on‑error* (equivalently, *predict last outcome*) rule achieves asymptotic accuracy equal to the time‑average of $s_t$, which by stationarity/ergodicity converges almost surely to $\mathbb{E}[s_t]\ge\tfrac12+\gamma$. This predictive rule requires at most one bit of memory for the model and additional bits for processing. It can be readily implemented within the same three-bit architecture shown to be sufficient for SPAP encodability. ∎
 
+**Remark 5.2.2a (Robustness of $K_0 \ge 3$ under reformalization).**  
+The lower bound in (1) depends only on the need for an injective realization of the SPAP update across a phase boundary: at the Commit Snapshot the machine must distinguish the triple $(\phi,p_{stored},c_{phase})\in\{0,1\}^3$. Any alternative encoding (e.g., relabeling states, using different internal variables, or changing the order of micro-operations) that still satisfies (O1)-(O3) must implement an injective map from these eight logical contexts to physical configurations. Consequently, any such realization requires at least $8$ distinguishable internal configurations, i.e. $K_0=\log_2 d_0\ge 3$.
+
 **Consequence.** The minimal **Predictive Physical Complexity** that (i) realizes SPAP as an internal, injective two‑phase sub‑dynamics and (ii) admits a predictive mode with super‑chance accuracy on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ equals **three bits**. This result, combined with Convention 1 ($C_P = \log_2 d_0$), provides the direct link from the logical requirement of 8 distinguishable states to the physical requirement of a minimal Hilbert-space dimension $d_0=8$.
 
 **5.2.3 Corollary 3 (Relation Between Thresholds $C_{op}\ge K_0$)**

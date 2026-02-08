@@ -139,18 +139,32 @@ The operational proxy $\hat{C}_v$ was identified with quantum circuit complexity
 This section provides the dynamical justification for Theorem 43, showing that minimizing the PCE Potential $V(x)$ inherently drives the system towards geometrically regular configurations.
 
 **Lemma D.3 (Quantitative Cost of Irregularity).**
-Geometric irregularities in the MPU network $\mathcal{N}$ (violating Definition C.1 or Definition C.2) quantitatively increase the core components of the PCE Potential $V_{core} = V_{op} + V_{prop} - V_{benefit}$ relative to a regular configuration $x_{reg}$ of comparable scale. Specifically, based on the analysis in Appendix C:
-1.  **Propagation Cost Penalty ($V_{prop}$):** Anomalous dimension (characterized by max path scaling exponent $\gamma > 1$ in Theorem C.1(b)) leads to super-linear path lengths, increasing total propagation costs (e.g., for routing, maintaining coherence): $\Delta V_{prop} \gtrsim c_{prop}(\gamma - 1)$, where $\Delta V_{prop}$ is the excess cost per unit volume or per MPU.
-2.  **Operational Cost Penalty ($V_{op}$):** Large curvature fluctuations (characterized by variance $\sigma_\kappa^2 > 0$) induce high variance in adapted complexities Var$(C_v)$ (Thm C.3), increasing operational cost due to cost function convexity ($R''(C) > 0$, $R_I''(C) < 0$ but typically dominated by $R''$): $\Delta V_{op} \gtrsim c_{op} \text{Var}(C_v)$ (Equation C.15), where Var$(C_v)$ is driven by $\sigma_\kappa^2$.
-3.  **Benefit Reduction ($V_{benefit}$):** Irregularity reduces global predictive coherence (Thm C.2, Equation C.13) and local operational stability (Thm C.4, Equation C.16), decreasing the attainable predictive benefit: $\Delta V_{benefit} \le -c_{ben}(\gamma-1) - c'_{ben}\sigma_\kappa^2$.
-Combining these effects, the potential gap between an irregular configuration $x$ and a comparable regular configuration $x_{reg}$ is bounded below by a positive function of the irregularity measures:
-$$
-V_{core}(x) - V_{core}(x_{reg}) \ge f_{geom}(\gamma(x)-1, \sigma_\kappa^2(x)) > 0 \quad \text{for irregular } x
-\quad \text{(D.7)}
-$$
-where $f_{geom}$ is monotonically increasing in both arguments ($\gamma-1$ quantifying dimensional anomaly, $\sigma_\kappa^2$ quantifying curvature fluctuations).
+Geometric irregularities in the MPU network increase the core components of the PCE potential, making irregular configurations non-viable. Specifically, based on the analysis in Appendix C:
 
-*Proof.* This lemma synthesizes the quantitative results derived in Appendix C (Theorems C.1, C.2, C.3, C.4 and associated Equations C.13, C.15, and C.16). Each component ($V_{op}, V_{prop}, V_{benefit}$) is shown in Appendix C to be adversely affected by geometric irregularity. Summing these effects (increase in costs $V_{op}, V_{prop}$ and decrease in benefit $V_{benefit}$) directly leads to the lower bound $f_{geom}$ which is positive for any non-zero irregularity ($\gamma>1$ or $\sigma_\kappa^2>0$). QED
+1. **Propagation Cost Penalty:** Anomalous dimension (i.e., $d_{N,max}(L)$ growing superlinearly with the physical length scale $L$, Theorem C.1(b)) increases the number of ND-RID hops required for predictive coherence across scale $L$. Since each hop incurs irreducible entropy production $\varepsilon\ge \ln 2$ (Theorem 31) and fidelity contraction $f_{RID}<1$ (Lemma E.1), the required redundancy and routing overhead increase, raising $V_{prop}$. More generally, for any coherence cut $S$ separating two subregions, define a bottleneck severity
+$$
+b(S):=\max\bigl(0,\ I_{req}(S)-C_{cut}(S)\bigr),
+\qquad
+C_{cut}(S):=\sum_{e\in S} C_{max}(f_{RID,e}),
+$$
+where $I_{req}(S)$ is the information rate required to maintain predictive coherence across $S$ and $C_{max}$ is the per-edge capacity bound (Theorem E.2). Since $V_{prop}$ is monotone increasing in bottleneck severity, geometry-induced bottlenecks (large $\gamma$ or poor local expansion) increase $V_{prop}$.
+
+2. **Operational Cost Penalty:** Large curvature fluctuations (variance $\sigma_\kappa^2$ in the discrete Ollivier-Ricci scalar field) induce variance in the required local complexity $C_v$ by Theorem C.3, i.e. $\text{Var}(C_v)\gtrsim a\,\sigma_\kappa^2$. By the convexity of $f(C)$ ensured by the **Dominance of Stabilizing Costs (DSC)** condition (Theorem 22; Theorem C.4(i)), this increases the total operational cost $V_{op}=\sum_v f(C_v)$ with a quantitative lower bound
+$$
+V_{op}[x_{irreg}]-V_{op}[x_{reg}]\ \ge\ \frac{N}{2}f''_{min}\,\text{Var}(C_v),
+$$
+as in Equation (C.15).
+
+3. **Benefit Reduction:** Irregular geometries reduce global predictive coherence and local stability (Theorem C.2 and Theorem C.4), reducing $V_{benefit}$.
+
+Combining these effects yields a quantitative penalty:
+$$
+V_{core}[x_{irreg}] - V_{core}[x_{reg}] \ge aL^{\gamma} + bL - c,
+\tag{D.7}
+$$
+where $a,b>0$ and $\gamma>1$, so for sufficiently large $L$ the irregular configuration is strictly dominated in PCE potential.
+
+*Proof.* Follows directly from parts (1)-(3) above, combined with the scaling bounds in Appendix C. QED
 
 **Theorem D.2 (Implicit Geometric Penalty in $V(x)$).**
 The structure of the core PCE potential $V_{core} = V_{op} + V_{prop} - V_{benefit}$ inherently penalizes geometric irregularity. Minimizing $V_{core}$ (and thus the full potential $V = V_{core} + V_{proxy}$) dynamically favors geometrically regular configurations. The effective operational potential $V(x)$ therefore behaves *as if* it includes an implicit penalty term $V_{geom}(x) = f_{geom}(\gamma(x)-1, \sigma_\kappa^2(x))$ that increases with irregularity.
@@ -195,11 +209,11 @@ We use stochastic Lyapunov methods, common in the analysis of stochastic approxi
 
 We make standard technical assumptions required for the convergence theorems, justifying them from the physical principles of the PU framework.
 *   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The $C^2$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms ($V_{op}, V_{prop}$) are expected to grow super-linearly with complexity and network size (e.g., $R(C) \propto C^{\gamma_p}$ with $\gamma_p > 1$), while the benefit term ($V_{benefit}$) saturates (due to $PP < \beta$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
-*   **(A2) Rate Matrix Bounds:** $\eta(x)$ is symmetric, and its eigenvalues are uniformly bounded above and below: $0 < \eta_{min} \le \lambda(\eta(x)) \le \eta_{max} < \infty$ for all $x \in \mathcal{X}_{adm}$. The adaptation process has a finite, non-zero rate.
-*   **(A3) Diffusion Bounds:** $D(x)$ is positive semi-definite, and its trace (representing total noise power) is uniformly bounded: $\text{Tr}(D(x)) \le D_{max} < \infty$.
+*   **(A2) Rate Matrix Bounds:** The rate matrix $A$ is bounded and Lipschitz on $\mathcal{X}_{adm}$: there exists $K_A < \infty$ such that $\|A(x)\| \le K_A$, and $\|A(x) - A(y)\| \le L_A \|x-y\|$ for all $x,y$. *Physical Justification:* In PU, $A$ encodes local equilibration/update rates of ND-RID channels and local routing policies. These are bounded by finite cycle times and finite per-step dissipation (each irreversible ND-RID update has $\varepsilon\ge\ln 2$, Theorem 31), and Lipschitz dependence expresses local response of rates to small changes in configuration, consistent with near-equilibrium linear response [Onsager 1931].
+*   **(A3) Diffusion Matrix Bounds:** The diffusion matrix $D(x)$ is bounded and uniformly elliptic. Specifically, there exist constants $0<\lambda_{min}\le\lambda_{max}<\infty$ such that for all $x$ and all vectors $v$, $\lambda_{min}\|v\|^2 \le v^T D(x) v \le \lambda_{max}\|v\|^2$. *Physical Justification:* In PU, diffusion models aggregate microscopic stochasticity of ND-RID routing and environmental forcing. Uniform bounds correspond to finite-temperature noise with bounded per-step fluctuations set by finite update rates and capacity constraints (e.g., bounded degree $\Delta_{max}$ and minimal cycle time $\tau_{min}$), preventing arbitrarily large instantaneous kicks while ensuring ergodic exploration of admissible configurations.
 *   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
 *   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
-*   **(A6) Noise Irreducibility/Ergodicity:** The noise term $\sqrt{2D(x)} dW(t)$ is sufficiently non-degenerate to ensure that the process is ergodic and can escape any potential local minima that are not global minima. *Physical Justification:* The fundamental 'Evolve' process is intrinsically stochastic (ND-RID, with $\varepsilon>0$) and involves stochastic perspective shifts on the manifold $\Sigma$ (Appendix M). This ubiquitous, microscopic source of randomness provides a physical basis for the assumption that the effective noise in the slow adaptation dynamics is sufficiently rich to prevent permanent trapping in suboptimal states.
+*   **(A6) Noise Irreducibility:** The stochastic forcing is irreducible on $\mathcal{X}_{adm}$: for any nonempty open set $U\subset\mathcal{X}_{adm}$ and any $t>0$, the transition probability satisfies $\mathbb{P}_x(X_t\in U)>0$. A sufficient condition is uniform non-degeneracy of the diffusion (already implied by (A3)): there exists $\lambda_*>0$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$, $v^T D(x)v\ge \lambda_*\|v\|^2$. *Physical Justification:* PU includes irreducible environmental/measurement noise and ND-RID stochasticity; without such forcing, some degrees of freedom could become trapped on invariant submanifolds, breaking ergodicity and preventing convergence to global PCE equilibria (Theorem D.5).
 
 ### D.6.2 Lyapunov Analysis
 
@@ -270,54 +284,56 @@ where $\operatorname*{dist}(x, A) = \inf_{y \in A} \|x-y\|$. Furthermore, by The
 
 The results derived in this appendix provide the rigorous dynamical justification for Theorems 2 and 43, establishing them as necessary consequences of the framework's core optimization principles operating through stochastic dynamics. The convergence from the discrete MPU network to a continuum description governed by a standard action is made precise by the following theorem.
 
-**Theorem D.6 (Γ‑limit of discrete predictive action).**
-Let $\{(\mathcal G_\epsilon,\mu_\epsilon)\}_{\epsilon\downarrow0}$ be a family of weighted graphs with mesh $\epsilon\to0$ and discrete curvature proxies (e.g., Ollivier-Ricci on graphs or Regge curvature on triangulations) + a matter (MPU) term. Suppose:
-(i) **Equicoercivity**: $\mathcal F_\epsilon$ controls discrete second differences uniformly;
-(ii) **Locality & consistency**: the discrete curvature converges in $L^1_{\mathrm{loc}}$ to the Ricci scalar $R$;
-(iii) **Area‑law scaling** for the horizon part (Appendix E).
-Then $\mathcal F_\epsilon \ \Gamma\!\!\!-\!\!\!\!\!\!\!\!\longrightarrow \ \mathcal F$ in $L^1_{\mathrm{loc}}$, where
+**Theorem D.6 (Gamma-limit of discrete predictive action).**
+Let $\{(\mathcal G_h,\mu_h)\}_{h\downarrow0}$ be a family of weighted graphs (or triangulations) with mesh $h\to0$, equipped with a discrete curvature proxy and an MPU (matter) term. Let $\mathcal F_h=\mathcal F_h^{EH}+\mathcal F_h^{MPU}$ denote the corresponding discrete predictive action. Suppose:
+
+(i) **Equicoercivity:** For every $M<\infty$, the sublevel sets $\{\,g\mid \mathcal F_h[g]\le M\,\}$ are precompact in the pointed Gromov-Hausdorff topology of Section 11 (after the standard PU rescaling).
+
+(ii) **Locality & consistency:** Along any convergent sequence $(\mathcal G_h,\mu_h)\to(M,g)$ in that topology, the discrete curvature term converges to the Einstein-Hilbert term with scalar curvature $R_g$ (e.g., via Regge convergence or via the Ollivier-to-continuum estimator of Remark C.3.3a), and the MPU term converges in $L^1_{\mathrm{loc}}$ to $\int_M \mathcal L_{MPU}(g,\phi)\sqrt{-g}\,d^4x$.
+
+(iii) **Area-law scaling:** The horizon normalization is fixed by the thermodynamic area law (Appendix E), yielding the emergent $G$ below.
+
+Then $\mathcal F_h \ \xrightarrow{\Gamma} \ \mathcal F$ in $L^1_{\mathrm{loc}}$, where
 
 $$
-\mathcal F[g,\phi]=\frac{c^3}{16\pi G}\int_M R\,\sqrt{-g}\,d^4x \ +\ \int_M \mathcal L_{MPU}(g,\phi)\,\sqrt{-g}\,d^4x,
+\mathcal F[g,\phi]=\frac{c^3}{16\pi G}\int_M R_g\,\sqrt{-g}\,d^4x \ +\ \int_M \mathcal L_{MPU}(g,\phi)\,\sqrt{-g}\,d^4x,
 $$
 
-and minimizers/critical points of $\mathcal F_\epsilon$ converge (up to subsequences) to critical points of $\mathcal F$ (the Einstein–Hilbert plus MPU action). The convergence of the discrete metric spaces is understood in the Gromov-Hausdorff sense (Section 11).
+and minimizers/critical points of $\mathcal F_h$ converge (up to subsequences) to critical points of $\mathcal F$ (the Einstein-Hilbert plus MPU action). The convergence of the discrete metric spaces is understood in the pointed Gromov-Hausdorff sense (Section 11).
+
+**Remark D.6.1 (PU motivation for hypotheses).**
+(i) Appendix C shows that configurations with anomalous volume growth (Definition C.1) or without a uniform positive discrete Ricci lower bound (Definition C.2-C.3) violate at least one of R1-R3 at sufficiently large scale (Theorem C.5). PCE-optimal equilibria (Theorem D.5) are therefore confined to bounded-geometry families, motivating the equicoercivity hypothesis needed for $\Gamma$-convergence [Gromov 1999].
+(ii) Remark C.3.3a supplies an explicit local scalar curvature estimator built from Ollivier-Ricci curvature at mesh scale $h$, providing a concrete realization of the locality/consistency requirement for the Einstein-Hilbert term.
+(iii) Appendix E derives the thermodynamic area law and fixes the emergent gravitational constant $G$ (Theorem E.6), providing the normalization invoked in (iii).
 
 *Proof.* Write
 $$
-S^\varepsilon_{\mathrm{pred}}[g]=S^\varepsilon_{\mathrm{EH}}[g]+S^\varepsilon_{\mathrm{MPU}}[g].
+\mathcal F_h[g]=\mathcal F_h^{EH}[g]+\mathcal F_h^{MPU}[g].
 $$
-Assumption (iii) (equicoercivity) implies that for every $M<\infty$ the sublevel sets
+Hypothesis (i) is equicoercivity: for every $M<\infty$ the sublevel sets
 $$
-\{\,g:\ S^\varepsilon_{\mathrm{pred}}[g]\le M\,\}
+\{\,g:\ \mathcal F_h[g]\le M\,\}
 $$
-are precompact in the topology fixed in (iii). In particular, any sequence of (approximate) minimizers admits a convergent subsequence.
+are precompact in the topology of Section 11. In particular, any sequence of (approximate) minimizers admits a convergent subsequence.
 
-For the $\Gamma$-liminf inequality, fix any sequence $g_\varepsilon\to g$. By assumption (i) (Regge/graph-to-manifold convergence),
+For the $\Gamma$-liminf inequality, fix any sequence $g_h\to g$. By hypothesis (ii),
 $$
-\lim_{\varepsilon\to 0}S^\varepsilon_{\mathrm{EH}}[g_\varepsilon]=S_{\mathrm{EH}}[g],
-$$
-and by assumption (ii) (MPU stability under refinement),
-$$
-\lim_{\varepsilon\to 0}S^\varepsilon_{\mathrm{MPU}}[g_\varepsilon]=S_{\mathrm{MPU}}[g].
+\liminf_{h\to 0}\mathcal F_h^{EH}[g_h]\ge \mathcal F^{EH}[g],
+\qquad
+\liminf_{h\to 0}\mathcal F_h^{MPU}[g_h]\ge \mathcal F^{MPU}[g].
 $$
 Hence
 $$
-\liminf_{\varepsilon\to 0}S^\varepsilon_{\mathrm{pred}}[g_\varepsilon]
-=\lim_{\varepsilon\to 0}\Big(S^\varepsilon_{\mathrm{EH}}[g_\varepsilon]+S^\varepsilon_{\mathrm{MPU}}[g_\varepsilon]\Big)
-=S_{\mathrm{EH}}[g]+S_{\mathrm{MPU}}[g],
+\liminf_{h\to 0}\mathcal F_h[g_h]\ge \mathcal F[g].
 $$
-which in particular gives $\liminf_{\varepsilon\to 0}S^\varepsilon_{\mathrm{pred}}[g_\varepsilon]\ge S_{\mathrm{EH}}[g]+S_{\mathrm{MPU}}[g]$.
 
-For the recovery sequence (the $\Gamma$-limsup inequality), fix any admissible continuum metric $g$. Choose the refinement family implicit in (i) and define $g_\varepsilon$ as the canonical discretization/interpolation of $g$ on the mesh $\varepsilon$, so that $g_\varepsilon\to g$ in the topology of (iii). Assumptions (i) and (ii) then yield
+For the recovery sequence (the $\Gamma$-limsup inequality), fix any admissible continuum metric $g$. Choose the refinement family implicit in (ii) and define $g_h$ as the canonical discretization/interpolation of $g$ on the mesh $h$, so that $g_h\to g$ in the topology of Section 11. Hypothesis (ii) then yields
 $$
-\limsup_{\varepsilon\to 0}S^\varepsilon_{\mathrm{pred}}[g_\varepsilon]
-=\lim_{\varepsilon\to 0}\Big(S^\varepsilon_{\mathrm{EH}}[g_\varepsilon]+S^\varepsilon_{\mathrm{MPU}}[g_\varepsilon]\Big)
-=S_{\mathrm{EH}}[g]+S_{\mathrm{MPU}}[g].
+\limsup_{h\to 0}\mathcal F_h[g_h]\le \mathcal F[g].
 $$
-Therefore $S^\varepsilon_{\mathrm{pred}}$ $\Gamma$-converges to $S_{\mathrm{EH}}+S_{\mathrm{MPU}}$.
+Therefore $\mathcal F_h$ $\Gamma$-converges to $\mathcal F$.
 
-By the fundamental theorem of $\Gamma$-convergence [Dal Maso 1993; Braides 2002], $\Gamma$-convergence together with equicoercivity implies convergence (up to subsequences) of minimizers of $S^\varepsilon_{\mathrm{pred}}$ to minimizers of $S_{\mathrm{EH}}+S_{\mathrm{MPU}}$, and convergence of minimum values. $\square$
+By the fundamental theorem of $\Gamma$-convergence [Dal Maso 1993; Braides 2002], $\Gamma$-convergence together with equicoercivity implies convergence (up to subsequences) of minimizers of $\mathcal F_h$ to minimizers of $\mathcal F$, and convergence of minimum values. $\square$
 
 This appendix thus provides the rigorous foundation for the dynamical aspects of the Predictive Universe framework.
 

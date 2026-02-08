@@ -3227,57 +3227,67 @@ where $j(\tau)$ is the modular $j$-invariant and $q = e^{2\pi i \tau}$.
 
 The PCE operational cost $V_{\text{op}}$ includes a precision-dependent component for implementing continuous symmetry transformations.
 
-*Statement.* For a Lie group $G$ acting on a VOA structure, define the PCE cost at resolution $\delta$:
-$$V_{\text{op}}(G; \delta) = c_0 \cdot \dim(G) \cdot \log(1/\delta)$$
-
-where:
-- $\dim(G)$ is the dimension of the Lie group
-- $\delta$ is the precision to which group elements are implemented
-- $c_0 > 0$ is determined by the framework's base operational cost scale
+*Statement.* For a Lie group $G$ acting on a VOA structure, the operational cost of representing its action with resolution $\delta$ satisfies
+$$
+V_{\text{op}}(G; \delta) = c_0 \cdot \dim(G) \cdot \ln(1/\delta) + O(1),
+$$
+where $\dim(G)$ is the Lie dimension, $\delta$ is the control precision, and $c_0>0$ is set by the framework's base per-nat operational cost scale.
 
 *Proof.*
 
-**Step 1 (Additivity).** Independent symmetry directions contribute independently to operational cost (hence the $\dim(G)$ factor).
+**Step 1 (Metric entropy scaling).** In any smooth local coordinate chart on $G$ (restricted to a bounded control range), the number of $\delta$-distinguishable group elements grows like a covering number $N_G(\delta)$ with
+$$
+\ln N_G(\delta)=\dim(G)\ln(1/\delta)+O(1).
+$$
 
-**Step 2 (Information content).** Specifying a continuous parameter to precision $\delta$ within a bounded interval requires $\log(1/\delta)$ bits of information. This follows from the fundamental principle that distinguishing among $1/\delta$ possible values requires $\log_2(1/\delta)$ bits.
+**Step 2 (Irreducible work/entropy cost).** Maintaining $\ln N_G(\delta)$ nats of distinguishability in a physical control register incurs an operational cost proportional to the irreducible entropy per update, $\varepsilon=\ln 2$ (Theorem 31), consistent with Landauer's principle [Landauer 1961]. Absorbing proportionality constants into $c_0$ yields the stated scaling for $V_{\text{op}}(G;\delta)$.
 
-**Step 3 (Consistency with PCE potential).** The PCE potential (Definition D.1, Appendix D) includes operational cost $V_{\text{op}}$ that penalizes resources needed for system maintenance. The precision cost for symmetry implementation is a specific instance of this general cost structure, consistent with the work-cost gap analysis in Theorem D.1. $\square$
-
----
-
-### Axiom P.13.1 (PCE Precision Requirement)
-
-Physical predictions derived from the framework must be resolution-independent. The framework's operational predictions cannot depend on the precision $\delta$ of symmetry implementation. Therefore, the effective symmetry cost is:
-$$V_{\text{op}}^{\text{eff}}(G) = \lim_{\delta \to 0} V_{\text{op}}(G; \delta)$$
-
-**Physical Motivation.** This axiom connects to the framework's discrete foundation ($K_0 = 3$ bits). The MPU substrate is fundamentally discrete ($d_0 = 8$ states). Any continuous structure must be approximated on this discrete substrate, and resolution-independent physics requires taking $\delta \to 0$.
+**Step 3 (Consistency with the PCE potential).** $V_{\text{op}}$ is a term in the PCE potential (Definition D.1, Appendix D), penalizing the resources needed to maintain operational degrees of freedom. The precision cost for symmetry implementation is a specific instance of this operational maintenance cost. $\square$
 
 ---
+
+### Definition P.13.2 (Precision-Independent Effective Symmetry Cost)
+
+For a symmetry group $G$ whose action must be represented by MPUs through a finite-precision control specification at resolution $\delta>0$, let $V_{\text{op}}(G;\delta)$ denote the operational cost required to maintain that representation at precision $\delta$ (Theorem P.13.18). The precision-independent effective symmetry cost is defined by
+$$
+V_{eff}^{sym}(G) := \lim_{\delta \to 0} V_{\text{op}}(G;\delta),
+$$
+when the limit exists in $[0,\infty]$.
+
+Operational predictions are expressed in terms of PCE-optimal equilibrium configurations (Theorem D.5, Appendix D). A symmetry is compatible with resolution-independent PU predictions only if $V_{eff}^{sym}(G)<\infty$; if $V_{eff}^{sym}(G)=\infty$ the symmetry cannot be maintained across refinements and is excluded from the PCE equilibrium set.
 
 ### Theorem P.13.19 (Continuous Symmetry Penalty)
 
 For any Lie group $G$ with $\dim(G) > 0$:
-$$V_{\text{op}}^{\text{eff}}(G) = +\infty$$
+$$
+V_{eff}^{sym}(G) = +\infty
+$$
 
 For discrete (finite) groups:
-$$V_{\text{op}}^{\text{eff}}(G_{\text{discrete}}) < \infty$$
+$$
+V_{eff}^{sym}(G_{\text{discrete}}) < \infty
+$$
 
 *Proof.*
-$$V_{\text{op}}^{\text{eff}}(G) = \lim_{\delta \to 0} c_0 \cdot \dim(G) \cdot \log(1/\delta) = \begin{cases} +\infty & \text{if } \dim(G) > 0 \\ 0 & \text{if } \dim(G) = 0 \end{cases}$$
+By Definition P.13.2 and Theorem P.13.18,
+$$
+V_{eff}^{sym}(G) = \lim_{\delta \to 0} \Bigl(c_0 \cdot \dim(G) \cdot \ln(1/\delta) + O(1)\Bigr)
+= \begin{cases}
++\infty & \text{if } \dim(G) > 0,\\
+<\infty & \text{if } \dim(G) = 0.
+\end{cases}
+$$
+For finite groups, symmetry operations are exact (no continuous control precision parameter is required), so $V_{\text{op}}$ remains finite. $\square$
 
-For finite groups, symmetry operations are exact ($\delta = 0$ achievable with finite precision), so $V_{\text{op}}$ is finite. $\square$
 
----
+### Corollary P.13.19a
 
-### Corollary P.13.19a (Weight-One Penalty)
+The effective operational symmetry cost of $U(1)^{24}$ is infinite:
+$$
+V_{eff}^{sym}(U(1)^{24}) = +\infty
+$$
 
-The lattice VOA $V_{\Lambda_{24}}$ has $\dim(V_1) = 24$ weight-one currents $J^i = \alpha^i_{-1}|0\rangle$. These generate a $U(1)^{24}$ continuous symmetry:
-$$e^{it J^i_0}: V_{\Lambda_{24}} \to V_{\Lambda_{24}}$$
-
-**PCE Cost Analysis:**
-$$V_{\text{op}}^{\text{eff}}(U(1)^{24}) = \lim_{\delta \to 0} c_0 \cdot 24 \cdot \log(1/\delta) = +\infty$$
-
-**Conclusion:** The vacuum structure $V_{\Lambda_{24}}$ incurs infinite operational cost under PCE. PCE optimization requires passing to a structure without continuous symmetry.
+*Proof.* $\dim(U(1)^{24}) = 24 > 0$, so the theorem applies. $\square$
 
 ---
 
@@ -3443,7 +3453,7 @@ $$\mathcal{V}_{\text{PCE}} = V^\natural$$
 
 **Step 2 (Lattice VOA).** By Theorem P.13.14, $\Lambda_{24}$ admits a VOA structure $V_{\Lambda_{24}}$ with $c = 24$ and $\dim(V_1) = 24$.
 
-**Step 3 (Precision cost).** By Corollary P.13.19a, the $U(1)^{24}$ symmetry generated by weight-one currents incurs infinite operational cost: $V_{\text{op}}^{\text{eff}}(U(1)^{24}) = +\infty$.
+**Step 3 (Precision cost).** By Corollary P.13.19a and Definition P.13.2, the $U(1)^{24}$ symmetry generated by weight-one currents incurs infinite operational cost: $V_{eff}^{sym}(U(1)^{24}) = +\infty$.
 
 **Step 4 (Canonical orbifold).** The canonical $\mathbb{Z}_2$ structure from the PCE-Attractor (Theorem P.13.23) corresponds to the $(-1)$ involution on $\Lambda_{24}$ (Theorem P.13.24). The lift $\theta$ to the VOA (Theorem P.13.21) eliminates weight-one currents: $\dim((V_{\Lambda_{24}})^\theta_1) = 0$.
 
@@ -3554,7 +3564,7 @@ $$\boxed{
 | 11 | $c = 24$, holomorphic | Framework | Propositions P.13.6.3–P.13.6.4 |
 | 12 | Modular invariance required | Framework | Proposition P.13.6.5 |
 | 13 | $V_{\Lambda_{24}}$ | Mathematics | Borcherds, FLM |
-| 14 | Precision cost $\to \dim(V_1) = 0$ | Framework | Theorem P.13.19, Axiom P.13.1 |
+| 14 | Precision cost $\to \dim(V_1) = 0$ | Framework | Theorem P.13.19, Definition P.13.2|
 | 15 | Canonical $\theta$-orbifold | Framework + Mathematics | Theorems P.13.21–P.13.24 |
 | 16 | $V^\natural$ | Mathematics | FLM construction |
 | 17 | $\text{Aut}(V^\natural) = \mathbb{M}$ | Mathematics | FLM |
@@ -3673,7 +3683,7 @@ Definition P.8.2 of Appendix P states:
 
 This definition extends naturally to the vacuum structure:
 
-**Definition P.13.2 (Vacuum as Optimal Coherence).** The vacuum $\mathcal{V}_{\text{PCE}}$ is the ground state of error-corrected predictive coherence—the unique configuration of zero excitation that maintains maximal symmetry consistent with the thermodynamic constraints of SPAP.
+**Definition P.13.3 (Vacuum as Optimal Coherence).** The vacuum $\mathcal{V}_{\text{PCE}}$ is the ground state of error-corrected predictive coherence—the unique configuration of zero excitation that maintains maximal symmetry consistent with the thermodynamic constraints of SPAP.
 
 The Monster group $\mathbb{M} = \text{Aut}(\mathcal{V}_{\text{PCE}})$ is then the complete set of transformations under which optimal predictive coherence is preserved. Just as spacetime geometry encodes how prediction maintains itself across spatial extension, the Monster encodes how prediction maintains itself in the vacuum ground state.
 

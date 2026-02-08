@@ -415,8 +415,9 @@
 *   Ogawa, T., & Nagaoka, H. (1999). Strong converse to the quantum channel coding theorem. *IEEE Transactions on Information Theory*, *45*(7), 2486–2489. DOI: 10.1109/18.796386
 *   Ohmori, K., Seiberg, N., & Shao, S.-H. (2019). Sigma models on flags. *SciPost Physics*, *6*(2), 017. DOI: 10.21468/SciPostPhys.6.2.017
 *   Okuyama, M., & Ohzeki, M. (2018). Quantum Landauer Principle under Feedback Control. *Physical Review Letters*, *120*(7), 070602. DOI: 10.1103/PhysRevLett.120.070602
-*   Ollivier, Y. (2009). Ricci curvature of Markov chains on metric spaces. *Journal of Functional Analysis*, *256*(3), 810–864. DOI: 10.1016/j.jfa.2008.11.001
-*   Padmanabhan, T. (2010). Equipartition of energy in the horizon degrees of freedom and the emergence of gravity. *Modern Physics Letters A*, *25*(14), 1129–1136. DOI: 10.1142/S021773231003294X
+*   Ollivier, Y. (2009). Ricci curvature of Markov chains on metric spaces. *Journal of Functional Analysis*, *256*(3), 810-864. DOI: 10.1016/j.jfa.2008.11.001
+*   Onsager, L. (1931). Reciprocal Relations in Irreversible Processes. I. *Physical Review*, 37, 405-426. DOI: 10.1103/PhysRev.37.405
+*   Padmanabhan, T. (2010). Equipartition of energy in the horizon degrees of freedom and the emergence of gravity. *Modern Physics Letters A*, *25*(14), 1129-1136. DOI: 10.1142/S021773231003294X
 *   Page, D. N. (1976). Particle emission rates from a black hole: Massless particles from an uncharged, nonrotating hole. *Physical Review D*, *13*(2), 198–206. DOI: 10.1103/PhysRevD.13.198
 *   Page, D. N. (1993). Average entropy of a subsystem. *Physical Review Letters*, *71*(9), 1291–1294. DOI: 10.1103/PhysRevLett.71.1291
 *   Pai, V. P., Aw, S., Shomrat, T., Lemire, J. M., & Levin, M. (2012). Transmembrane voltage potential controls embryonic eye patterning in *Xenopus laevis*. *Development*, *139*(2), 313–323. DOI: 10.1242/dev.073759
@@ -538,6 +539,7 @@
 *   Unruh, W. G. (1976). Notes on black-hole evaporation. *Physical Review D*, *14*(4), 870–892. DOI: 10.1103/PhysRevD.14.870
 *   Utiyama, R. (1956). Invariant theoretical interpretation of interaction. *Physical Review*, *101*(5), 1597–1607. DOI: 10.1103/PhysRev.101.1597. 
 *   Uzan, J.-P. (2011). Varying constants, gravitation and cosmology. *Living Reviews in Relativity*, *14*(1), 2. DOI: 10.12942/lrr-2011-2
+*   van der Hoorn, P., Cunningham, W. J., Lippner, G., Trugenberger, C. A., & Krioukov, D. (2020). Edge curvature and the spectral gap of the normalized graph Laplacian. *Physical Review Research*, 2, 013157. DOI: 10.1103/PhysRevResearch.2.013157
 *   van der Vaart, A. W. (1998). *Asymptotic Statistics*. Cambridge University Press. DOI: 10.1017/CBO9780511802256
 *   van Dokkum, P., et al. (2018). A galaxy lacking dark matter. *Nature*, *555*, 629–632.
 *   van Ekeren, J., Möller, S., & Scheithauer, N. (2020). Construction and classification of holomorphic vertex operator algebras. *Journal für die reine und angewandte Mathematik*, *759*, 61–99.
