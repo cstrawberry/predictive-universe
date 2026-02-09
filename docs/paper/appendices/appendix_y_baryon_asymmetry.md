@@ -300,19 +300,19 @@ $$\boxed{\kappa_B = \kappa_{CP} + \kappa_{gen} = 19.25 + 0.23 = 19.48} \tag{Y.11
 
 **Step 2: CP-Odd Projection via Symplectic Structure.**
 
-**Lemma Y.8.1** (CP-Odd Complexity via Symplectic Reduction). *The baryogenesis complexity arises from the symplectic structure of the electroweak configuration space.*
+**Lemma Y.8.1** (CP-Odd Complexity via Orientation Reversal). *The baryogenesis complexity arises from the orientation structure of the electroweak configuration space.*
 
 *Proof of Lemma.*
 
-**(a) Symplectic structure.** The electroweak configuration space $\mathcal{M}_{EW} \cong S^3$ carries a natural symplectic form $\omega$ from the Kähler structure on the embedding $S^3 \subset \mathbb{C}^2$.
+**(a) Contact structure and Haar measure.** The electroweak configuration space $\mathcal{M}_{EW} \cong S^3 \cong SU(2)$ is a compact, orientable 3-manifold. As a Lie group, $SU(2)$ carries a bi-invariant Haar measure $\mu_H$ and a canonical volume form $\Omega_3$. The Kähler structure on the ambient $\mathbb{C}^2$ induces the standard contact structure on $S^3$: the restriction of the ambient Liouville 1-form defines a contact form $\eta$ with $\eta \wedge d\eta$ proportional to $\Omega_3$. In particular, $S^3$ is odd-dimensional and cannot carry a symplectic 2-form; the relevant structure for CP projection is the orientation of $\Omega_3$, not a symplectic pairing.
 
-**(b) CP action on phase space.** CP acts as an anti-symplectic involution:
-$$\mathsf{CP}^* \omega = -\omega$$
-This is the correct mathematical characterization—CP reverses the orientation of phase space.
+**(b) CP action on configuration space.** Under the identification $S^3 \cong SU(2)$, CP acts by the $\mathbb{Z}_2$ involution $U \mapsto U^{-1}$ (equivalently quaternionic conjugation on unit quaternions), which reverses orientation:
+$$\mathsf{CP}^* \Omega_3 = -\Omega_3$$
+This is the correct mathematical characterization—CP reverses the orientation of the $SU(2)$ group manifold. (The differential of inversion at the identity is $-I$ on $\mathfrak{su}(2)$, so $\det(d\,\mathsf{CP}) = (-1)^3 = -1$.)
 
-**(c) Liouville measure.** The path integral measure $\mathcal{D}A \, e^{-S}$ transforms under CP as:
+**(c) Haar measure.** The path integral measure $\mathcal{D}A \, e^{-S}$ transforms under CP as:
 $$\mathcal{D}(\mathsf{CP} \cdot A) = |\det(\mathsf{CP}^*)| \, \mathcal{D}A = \mathcal{D}A$$
-The measure is CP-invariant, but the integrand splits into CP-even and CP-odd components.
+The Haar measure is CP-invariant (since $|\det| = 1$), but the integrand splits into CP-even and CP-odd components under the $\mathbb{Z}_2$ grading induced by the orientation reversal.
 
 **(d) CP-odd projection.** The baryon asymmetry depends on the CP-odd component of the transition amplitude:
 $$\mathcal{A}_{CP-odd} = \frac{1}{2}(\mathcal{A} - \mathsf{CP} \cdot \mathcal{A})$$
@@ -321,7 +321,7 @@ The effective action for the CP-odd sector is:
 $$S_{CP-odd} = S_{EW} + \Delta S_{CP}$$
 where $\Delta S_{CP} = (\sin\delta) \cdot N_{CS}$ is the topological term.
 
-**(e) Complexity of CP-odd sector.** The CP-odd projection selects half the configuration space volume in the sense of symplectic reduction. The complexity of the CP-odd sector is:
+**(e) Complexity of CP-odd sector.** The orientation-reversing $\mathbb{Z}_2$ action of CP on $SU(2)$ partitions the configuration space into CP-even and CP-odd sectors of equal Haar measure. The CP-odd projection selects exactly half the configuration space volume. The complexity of the CP-odd sector is:
 $$\kappa_{CP} = \frac{\kappa_{EW}}{2} = \frac{38.5}{2} = 19.25$$
 
 ∎
@@ -346,7 +346,7 @@ $$I_{gen} = -\sum_g |c_g|^2 \log |c_g|^2$$
 For the democratic distribution $|c_g|^2 = 1/N_g$ (maximum entropy, PCE-favored):
 $$I_{gen} = \log N_g = \log 3 \text{ nats}$$
 
-**(d) SPAP verification cost.** The SPAP cycle (Theorem 10) requires verifying the prediction outcome. For baryogenesis, this verification resolves a single binary question: did the net baryon asymmetry have positive or negative sign? The CP-odd/even distinction is already encoded in $\kappa_{CP}$ via the symplectic projection.
+**(d) SPAP verification cost.** The SPAP cycle (Theorem 10) requires verifying the prediction outcome. For baryogenesis, this verification resolves a single binary question: did the net baryon asymmetry have positive or negative sign? The CP-odd/even distinction is already encoded in $\kappa_{CP}$ via the $\mathbb{Z}_2$ orientation projection on $SU(2)$.
 
 Total cost: $\varepsilon$. This cost is shared across the $N_g$ generations whose coherent participation enabled the process:
 $$\kappa_{gen} = \frac{\varepsilon}{N_g} = \frac{\ln 2}{3} = 0.231$$
@@ -379,7 +379,7 @@ The value $\kappa_{gen} = 0.23$ corresponds to single verification ($\varepsilon
 
 | Component | Value | Physical Origin |
 |:----------|:-----:|:----------------|
-| $\kappa_{EW}/2$ | 19.25 | CP-odd projection via symplectic reduction |
+| $\kappa_{EW}/2$ | 19.25 | CP-odd projection via $\mathbb{Z}_2$ orientation reversal on $SU(2)$ |
 | $\varepsilon/N_g$ | 0.23 | Landauer cost distributed over 3 generations |
 | $\kappa_B$ | 19.48 | Total baryogenesis complexity |
 
@@ -461,7 +461,7 @@ $$\sin^2\theta_W(T_{sph}) \approx 0.234$$
 **Step 4 (Combination).** By definition of the Weinberg angle:
 $$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W} = \frac{1/127.5}{0.234} \approx \frac{1}{29.8} \approx \frac{1}{30}$$
 
-This derivation uses zero free parameters beyond $K_0 = 3$. ∎
+This derivation uses zero continuously adjustable parameters beyond $K_0 = 3$. ∎
 
 ### Y.7.5 Complete Numerical Calculation
 
@@ -574,7 +574,7 @@ All derived quantities are consistent with observation.
 | $c_{sph} = 28/79$ | Derived | $(8N_g + 4n_H)/(22N_g + 13n_H)$ |
 | $f_{wash} = 0.63$ | Calculated | $\exp(-\int \Gamma_{sph}/H \, dT/T)$ |
 
-**Free parameters: Zero.** All quantities trace to $K_0 = 3$ through the PU derivation chain, or are calculable consequences of derived Standard Model content.
+**Continuously adjustable parameters: Zero.** All quantities trace to $K_0 = 3$ through the PU derivation chain, or are calculable consequences of derived Standard Model content.
 
 ---
 

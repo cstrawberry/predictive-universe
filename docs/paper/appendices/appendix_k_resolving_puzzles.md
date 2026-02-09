@@ -4,7 +4,7 @@
 
 This appendix demonstrates how the Predictive Universe (PU) framework resolves several long-standing puzzles in fundamental physics and cosmology. Each section pairs an unsolved problem with specific PU mechanisms derived in the main text and appendices, showing how the framework provides quantitative resolutions or clear pathways toward them. The material ranges from rigorously established results with precise numerical predictions to exploratory directions requiring further theoretical development.
 
-The framework's core insight—that physical law emerges from the operational requirements, logical limitations, and thermodynamic costs of prediction itself as instantiated by the MPU network—yields concrete, testable predictions for fundamental constants, selected hierarchy invariants and mixings, and cosmological parameters. Several of these predictions achieve sub-percent precision with zero free parameters. In the quark sector, mixed-scale comparisons initially show 11–15% deviations, while a common-scheme reduction enables controlled same-scale hierarchy invariants; incorporating the down-sector $A_2/D_4$ frustration correction derived in Section T.25.6a brings these invariants into sub-percent agreement at $\mu=M_Z$, with explicit T1/T2/T3 budgets for both the common-scale reduction (Section T.25.5.3) and the frustration correction (Section T.25.6a.10).
+The framework's core insight—that physical law emerges from the operational requirements, logical limitations, and thermodynamic costs of prediction itself as instantiated by the MPU network—yields concrete, testable predictions for fundamental constants, selected hierarchy invariants and mixings, and cosmological parameters. Several of these predictions achieve sub-percent precision with zero continuously adjustable parameters. In the quark sector, mixed-scale comparisons initially show 11–15% deviations, while a common-scheme reduction enables controlled same-scale hierarchy invariants; incorporating the down-sector $A_2/D_4$ frustration correction derived in Section T.25.6a brings these invariants into sub-percent agreement at $\mu=M_Z$, with explicit T1/T2/T3 budgets for both the common-scale reduction (Section T.25.5.3) and the frustration correction (Section T.25.6a.10).
 
 ## K.2 Values of the Fundamental Constants
 
@@ -24,13 +24,13 @@ Physical action counts SPAP entropy production. The constant $\hbar$ scales the 
 $$G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$$
 **(Equation E.10)**. Here, $\delta$ is the effective MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is a correlation factor, and $C_{\max}$ is the ND-RID channel capacity (limited by $\varepsilon$, Theorem E.2). These parameters determine the effective surface density of channels $\sigma_{eff\_link} = \chi / (\eta \delta^2)$ (Theorem E.3). The fundamental relationship **(Equation E.8)** is:
 $$\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}$$
-This relationship is further constrained by the PCE-driven optimization of these parameters in the vacuum state. Appendix Q provides the complete parameter-free calculation of the ratio $\delta/L_P \approx 2.355$ through minimization of the global PCE potential, linking the microscopic MPU scale to the emergent Planck scale. The derivation proceeds by constructing $V_{vac}(\delta, \chi, \eta, C_{\max})$ and finding the unique stable equilibrium satisfying all framework constraints (Appendix Q, Equations Q.1-Q.18).
+This relationship is further constrained by the PCE-driven optimization of these parameters in the vacuum state. Appendix Q provides the complete calculation (with zero continuously adjustable parameters) of the ratio $\delta/L_P \approx 2.355$ through minimization of the global PCE potential, linking the microscopic MPU scale to the emergent Planck scale. The derivation proceeds by constructing $V_{vac}(\delta, \chi, \eta, C_{\max})$ and finding the unique stable equilibrium satisfying all framework constraints (Appendix Q, Equations Q.1-Q.18).
 
-**Electromagnetic coupling $\alpha$:** The fine-structure constant at the Thomson limit is rigorously derived parameter-free from the PCE-Attractor structure in Appendix Z. The complete 2506-line derivation establishes:
+**Electromagnetic coupling $\alpha$:** The fine-structure constant at the Thomson limit is rigorously derived with zero continuously adjustable parameters from the PCE-Attractor structure in Appendix Z. The complete 2506-line derivation establishes:
 $$\boxed{D = 4}$$
 
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000050}$$
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. This derivation uses zero free parameters and proceeds through a seven-stage chain: MPU invariants (d₀ = 8, ε = ln 2) → active kernel dimension a = 2 via Physical Instantiation Principle (Theorem Z.1) → interface mode count M = 2ab = 24 (Theorem Z.5) → PCE-Attractor orbit Gr(2,8) → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from Bures metric geometry, and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension **D = 4** through two independent mechanisms: mode-channel matching (Appendix Z, Theorem Z.11) and external stability requirements (Appendix G, Section G.8.2), providing multiply-determined confirmation of dimensional selection.
+where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. This derivation uses zero continuously adjustable parameters and proceeds through a seven-stage chain: MPU invariants (d₀ = 8, ε = ln 2) → active kernel dimension a = 2 via Physical Instantiation Principle (Theorem Z.1) → interface mode count M = 2ab = 24 (Theorem Z.5) → PCE-Attractor orbit Gr(2,8) → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from Bures metric geometry, and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension **D = 4** through two independent mechanisms: mode-channel matching (Appendix Z, Theorem Z.11) and external stability requirements (Appendix G, Section G.8.2), providing multiply-determined confirmation of dimensional selection.
 
 **Strong coupling $g_s$ and weak coupling $g_w$:** These relate to the effective "stiffness" or cost coefficients ($\kappa_F$ in Equation G.5.2) in the emergent gauge field actions (Appendix G), determined by PCE optimization balancing the benefit of predictive coherence provided by gauge fields against their resource cost. The unified gauge structure $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ with dimension 12 emerges from the thermodynamically optimal partition $H_0 \cong \mathbb{C}^2 \oplus \mathbb{C}^6$ (Appendix G, Proposition G.M1; Appendix Z, Theorem Z.1). At the PCE-optimal attractor, the unified coupling satisfies $g_U^2 = \pi/6$ with $\alpha_U^{-1} = 24$ (Appendix T, Theorem T.39a).
 
@@ -38,7 +38,7 @@ The hierarchy among couplings at a common fundamental scale arises from the info
 
 **Electroweak Scale, Weinberg Angle, and Higgs Mass:** These three fundamental puzzles are resolved simultaneously through a unified derivation in Appendix T. The electroweak scale emerges from the Golay-Steiner structure with electroweak complexity $\kappa_{EW} = bk/2 + \dim(G/H) - m/2 = 38.5$, yielding:
 $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 246 \text{ GeV}$$
-**(Theorem T.5)**. The Weinberg angle at the PU fixed point is $\sin^2\theta_W(\mu_*) = 3/8$ from PCE isotropy conditions **(Theorem T.14)**, and the Higgs quartic coupling satisfies $\lambda(\mu_*) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV. These results use zero free parameters and are derived from:
+**(Theorem T.5)**. The Weinberg angle at the PU fixed point is $\sin^2\theta_W(\mu_*) = 3/8$ from PCE isotropy conditions **(Theorem T.14)**, and the Higgs quartic coupling satisfies $\lambda(\mu_*) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV. These results use zero continuously adjustable parameters and are derived from:
 - Signal-parity decomposition of M = 24 modes into k = 12 signal and k = 12 parity subspaces via the Extended Binary Golay Code (Proposition T.1)
 - Electroweak coset $\mathcal{M}_{EW} = (SU(2)_L \times U(1)_Y)/U(1)_{em} \cong S^3$ with dimension 3 (Definition T.6)
 - Discrete action $S_{EW} = N_0 + \dim(G/H) - m/2 = 38.5$ from alignment constraints and zero-mode subtraction (Theorem T.4)
@@ -55,23 +55,23 @@ The unified derivation connects these three observables through the same underly
 
 The Mass Hierarchy Invariant:
 $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$$
-**(Equation R.17)** provides a discrete, parameter-free prediction. In the charged lepton sector, the observed value $\mathcal{R}_\ell \approx 2.889$ matches the discrete prediction $\mathcal{R} = 3$ to within 3.8%, providing strong phenomenological support. Absolute mass scales are set by the emergent VEV through sector prefactors $c_f$ determined by Bures/gauge normalization (Appendix T, Section T.21).
+**(Equation R.17)** provides a discrete prediction with zero continuously adjustable parameters. In the charged lepton sector, the observed value $\mathcal{R}_\ell \approx 2.889$ matches the discrete prediction $\mathcal{R} = 3$ to within 3.8%, providing strong phenomenological support. Absolute mass scales are set by the emergent VEV through sector prefactors $c_f$ determined by Bures/gauge normalization (Appendix T, Section T.21).
 
-Appendix T (Section T.25) establishes precise predictions with zero free parameters:
+Appendix T (Section T.25) establishes precise predictions with zero continuously adjustable parameters:
 - $m_\tau = 1.80$ GeV (observed: 1.777 GeV, deviation: 1.3%)
 - $m_\mu = 105$ MeV (observed: 105.7 MeV, deviation: 0.6%)
 - $\ln(m_\tau/m_\mu) = 2.836$ (observed: 2.822, deviation: 0.5%)
 - Cabibbo angle $|V_{us}| = 0.2261$ from frustration-induced tunneling between quark sector vacua (observed: $0.2243 \pm 0.0008$, deviation: +0.8%)
 - Lepton-quark bridge $c_\ell/c_d = 8/3$ from gauge normalization constraints (Theorem T.44)
 
-The τ/μ mass ratio achieves **0.5% precision** with zero free parameters—the single most precise test of the geometric mass hierarchy (Appendix T, Section T.25.8.1).
+The τ/μ mass ratio achieves **0.5% precision** with zero continuously adjustable parameters—the single most precise test of the geometric mass hierarchy (Appendix T, Section T.25.8.1).
 
 **Summary of Derived Constants:**
 The framework successfully derives from first principles:
 - Speed of light $c$ (from minimal operational scales)
 - Planck constant $\hbar$ (as action-entropy exchange rate)
 - Gravitational constant $G$ (from thermodynamic channel capacity)
-- Fine-structure constant $\alpha$ (parameter-free: $\alpha^{-1} \approx 137.036$)
+- Fine-structure constant $\alpha$ (zero continuously adjustable parameters: $\alpha^{-1} \approx 137.036$)
 - Electroweak scale $v$ (from Golay complexity: $v \approx 246$ GeV)
 - Weinberg angle ($\sin^2\theta_W = 3/8$ at attractor)
 - Higgs mass ($m_H \approx 125$ GeV from metastability)
@@ -594,7 +594,7 @@ where $\Sigma$ is a surface bounded by $\gamma$. If $\gamma \subset \text{Gr}(2,
 
 Type II violation arises from the Berry connection on the generation manifold. By Theorem T.53, the CP-violating phase is:
 $$\delta = \oint_{\gamma} \mathcal{A}_B$$
-where $\mathcal{A}_B$ is the Berry connection and $\gamma$ is the flavor-changing loop. This holonomy is non-zero even when the connection 1-form is real, because the loop encloses non-trivial curvature. The σ-involution preserves the loop $\gamma$ but reverses the orientation of the symplectic form (Lemma Y.8.1: $\text{CP}^* \omega = -\omega$), allowing non-zero holonomy consistent with overall CP as a symmetry of the vacuum. ∎
+where $\mathcal{A}_B$ is the Berry connection and $\gamma$ is the flavor-changing loop. This holonomy is non-zero even when the connection 1-form is real, because the loop encloses non-trivial curvature. The σ-involution preserves the loop $\gamma$ but reverses the orientation of the configuration space volume form (Lemma Y.8.1: $\mathsf{CP}^* \Omega_3 = -\Omega_3$ on $SU(2) \cong S^3$), allowing non-zero holonomy consistent with overall CP as a symmetry of the vacuum. ∎
 
 **Theorem K.6.18 (CKM Phase from Berry Holonomy).** The CKM CP-violating phase arises as the Berry holonomy around the minimal flavor-changing loop:
 $$\delta = 66.7° \pm 1.2°$$
@@ -793,7 +793,7 @@ in excellent agreement with the observed hierarchy.
 **Phenomenological Success:**
 - Hierarchy: $v \approx 246$ GeV (input) → test internal consistency
 - $\sin^2\theta_W(M_Z) \approx 0.231$ from RG evolution (predicted from tree-level value 3/8)
-- $m_H \approx 125$ GeV from metastability (predicted parameter-free)
+- $m_H \approx 125$ GeV from metastability (predicted with zero continuously adjustable parameters)
 - Fermion mass ratios (Appendix T, Section T.25)
 
 This resolution is complete and rigorous, transforming the hierarchy problem from a fine-tuning puzzle into a demonstration of discrete information-theoretic structure in the vacuum.
@@ -1069,7 +1069,7 @@ The following results have been derived with precise numerical predictions:
 
 | Result | Value | Source |
 |:-------|:------|:-------|
-| Fine-structure constant | $\alpha^{-1} \approx 137.036092 \pm 0.000050$ | Appendix Z (parameter-free) |
+| Fine-structure constant | $\alpha^{-1} \approx 137.036092 \pm 0.000050$ | Appendix Z (zero continuously adjustable parameters) |
 | Electroweak scale | $v \approx 246$ GeV from $\kappa_{EW} = 38.5$ | Appendix T, Theorem T.5 |
 | Weinberg angle | $\sin^2\theta_W(\mu_*) = 3/8$ | Appendix T, Theorem T.14 |
 | Higgs mass | $m_H \approx 125$ GeV from metastability | Appendix T, Theorem T.28 |

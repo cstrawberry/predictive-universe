@@ -27,7 +27,7 @@ The generation structure derived in this appendix thus shares a common origin wi
 
 2. **Geometric (Sections R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared E$_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (corresponding to inner products $\langle r_i, r_j \rangle \in \{2, 1, 0, -1, -2\}$ for unit-normalized roots) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a second independent three-fold structure. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
 
-**Mass Hierarchy from $E_8$ Geometry:** Beyond counting generations, this appendix shows how the hierarchical pattern of fermion masses arises from geodesic distances between generation vacua in the $E_8$ root system. The allowed squared distances $d^2 \in \{2, 4, 6, 8\}$ between $E_8$ roots lead to a parameter-free, discrete geometric invariant:
+**Mass Hierarchy from $E_8$ Geometry:** Beyond counting generations, this appendix shows how the hierarchical pattern of fermion masses arises from geodesic distances between generation vacua in the $E_8$ root system. The allowed squared distances $d^2 \in \{2, 4, 6, 8\}$ between $E_8$ roots lead to a discrete geometric invariant with zero continuously adjustable parameters:
 $$
 \mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}
 $$
@@ -256,7 +256,7 @@ $$
 \mathcal{R} = \frac{d^2(v_3, v_1)}{d^2(v_3, v_2)} = \frac{6}{4} = \frac{3}{2}.
 $$
 
-For the charged leptons, the observed value is $\mathcal{R}_\ell = \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)} \approx 2.889$. The closest discrete value is $\mathcal{R} = 3$, corresponding to root distance configurations such as $d^2 = (6, 2)$. The observed value lies between the discrete predictions $\mathcal{R} = 3$ and $\mathcal{R} = 2$, with closest match to 3 giving a 3.8% deviation. This provides a sharp, zero-parameter prediction.
+As derived independently in Section T.24.3 (Theorem T.24.3), the charged lepton triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (a, b, 2a) = (2, 6, 4)$ is uniquely determined by the error-correcting structure of $E_8$: the $D_4$ sublattice associated with Dirac bilinear structure fixes $d^2_{21} = 2a = 4$, while the active and inactive subspace dimensions fix $d^2_{32} = a = 2$ and $d^2_{31} = b = 6$. This yields the hierarchy ratio $\mathcal{R}_\ell = b/a = 3$, which is a structural prediction from the framework constants rather than a selection from observation. The experimentally measured value $\mathcal{R}_\ell^{\mathrm{obs}} \approx 2.889$ deviates from the discrete prediction by 3.8%, with the residual accounted for by the fourth-order curvature correction (Theorem T.42.6).
 
 ## R.3 Gauge–Topology Correspondence
 
@@ -446,7 +446,7 @@ This section demonstrates that the three-generation structure is multiply over-d
 
 7. **Unique solution:** Combined constraints yield $N=3$ with pattern $\{a, -a, 0\}$ as the minimal solution.
 
-This topological mechanism derives three generations from first principles without free parameters.
+This topological mechanism derives three generations from first principles with zero continuously adjustable parameters.
 
 ### R.4.2 Geometric Pathway: E₈/Leech Lattice Structure
 
@@ -1206,7 +1206,7 @@ $$
 \tag{R.18}
 $$
 
-This is a sharp, falsifiable prediction with no free parameters.
+This is a sharp, falsifiable prediction with zero continuously adjustable parameters.
 
 ## R.6 Phenomenological Comparison with Observed Fermion Masses
 
@@ -1267,7 +1267,7 @@ The existence of such triads is generic in E₈, confirming the geometric mechan
 
 The discrete set $\{4/3, 3/2, 2, 3, 4\}$ contains five values spanning a factor of 3. The observed value $\mathcal{R}_\ell \approx 2.889$ lies within 3.8% of the discrete prediction $\mathcal{R} = 3$, providing strong support for the E₈ geometric mechanism. The agreement is notable given that:
 
-1. The prediction is **parameter-free** (no fitting to lepton masses)
+1. The prediction has **zero continuously adjustable parameters** (no fitting to lepton masses)
 2. The predicted values form a **discrete set** (not a continuous range)
 3. The mechanism derives from **first principles** (E₈ geometry + PCE)
 
@@ -1313,7 +1313,7 @@ The same mechanism explains why lepton mixing (PMNS) is large while quark mixing
 | Up Quarks | $\{3/2, 2, 3\}$ | $\sim 2.4$ (estimate) | Consistent |
 | Down Quarks | $\{3/2, 2\}$ | $\sim 1.9$ (estimate) | Consistent |
 
-The framework makes **sharp predictions** for each sector with **zero free parameters** in the ratio $\mathcal{R}$. The charged lepton sector provides the cleanest test, showing excellent agreement (3.8%). Quark sector tests require more detailed analysis of QCD effects.
+The framework makes **sharp predictions** for each sector with **zero continuously adjustable parameters** in the ratio $\mathcal{R}$. The charged lepton sector provides the cleanest test, showing excellent agreement (3.8%). Quark sector tests require more detailed analysis of QCD effects.
 
 ## R.7 CP Violation and Jarlskog Invariant
 
@@ -1359,7 +1359,7 @@ Item 3 has been resolved. Items 1-2 require explicit construction of the PCE pot
 
 $$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.25 + 0.23 = 19.48$$
 
-The factor of $\kappa_{EW}/2$ arises from $\mathbb{Z}_2$ bisection of the electroweak configuration space by CP, since baryogenesis samples only the CP-odd sector. The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
+The factor of $\kappa_{EW}/2$ arises from the $\mathbb{Z}_2$ orientation-reversal action of CP on $SU(2) \cong S^3$, which bisects the electroweak configuration space into CP-even and CP-odd sectors of equal Haar measure; baryogenesis samples only the CP-odd sector. The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
 
 **Open Problem (Gravitational Response).** The covariant form of variable gravitational coupling consistent with $\nabla^\mu T_{\mu\nu} = 0$ is constrained to:
 
@@ -1414,7 +1414,7 @@ strongly suggests three generations are fundamentally required rather than envir
     
 The interface mode structure $M = 24 = 8 \times 3$ (**Appendix Z**, Theorem Z.5) provides further structural consistency through the Golay-Leech correspondence.
 *   **Interface Modes:** The number 24 appears independently in interface mode count (**Appendix Z, Theorem Z.5**), Leech lattice dimension, and Golay code dimension (**Appendix Z, Theorem Z.13**), reflecting deep information-geometric optimality.
-*   **Mass Hierarchy:** E₈ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with no free parameters.
+*   **Mass Hierarchy:** E₈ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with zero continuously adjustable parameters.
 *   **Phenomenological Success:** Charged lepton sector shows $\mathcal{R}_\ell \approx 2.889$, within 3.8% of the discrete value 3, strongly supporting the E₈ geometric mechanism.
 *   **Masses and Mixings:** A PCE-compatible potential on the Perspective Space creates distinct vacuum states for each generation. Yukawa couplings arise from the overlap of Gaussian wavepackets centered at these vacua, naturally producing hierarchical masses and small CKM mixing angles controlled by the geodesic distances between the vacua. The same mechanism allows for large PMNS mixing if the leptonic vacua have smaller separations or different Hessian ratios.
 *   **Unified Origin:** The generation structure shares a common origin with gauge structure—both arise from the topology and symmetries of the fundamental MPU state space as optimized by PCE.

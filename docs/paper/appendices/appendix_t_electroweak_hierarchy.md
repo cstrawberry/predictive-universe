@@ -704,7 +704,7 @@ $$
 
 **Remark T.24.1: Sign.** The positive sign is necessary: minimization over $s$ lowers the mismatch energy, producing a positive contribution to the quartic.
 
-**Remark T.24.2: No Free Parameters.** The magnitude $1/36$ is fixed by canonical normalizations: $L_{info} = I_{12}$, $\Pi_L\Pi_L^T = I_6$, and $\|v\| = 1$. This is the same isotropy/projection mechanism used to obtain $K_{eff} = 2$ for $\alpha$.
+**Remark T.24.2: Zero Continuously Adjustable Parameters.** The magnitude $1/36$ is fixed by canonical normalizations: $L_{info} = I_{12}$, $\Pi_L\Pi_L^T = I_6$, and $\|v\| = 1$. This is the same isotropy/projection mechanism used to obtain $K_{eff} = 2$ for $\alpha$.
 
 ---
 
@@ -962,13 +962,13 @@ A_{EW} = 1.0650 \times 1.0072 \times 1.0107 = 1.084 \pm 0.005
 $$
 ∎
 
-**Corollary T.29.1** (Complete Electroweak Scale). With no free parameters:
+**Corollary T.29.1** (Complete Electroweak Scale). With zero continuously adjustable parameters:
 $$
 v = A_{EW} \cdot e^{-\kappa_{EW}} \cdot M_{Pl} = 1.084 \times e^{-38.5} \times 1.221 \times 10^{19} \text{ GeV} = 252 \text{ GeV}
 $$
 Agreement with $v_{\text{obs}} = 246.22$ GeV: **2.3%**.
 
-**Remark T.29.1: No Free Parameters.** The inputs are:
+**Remark T.29.1: Zero Continuously Adjustable Parameters.** The inputs are:
 - $u_0^2 = 1/24$ from PCE equipartition over $M = 24$ interface modes (Theorem Z.5, Section Z.8)
 - Canonical Bures normalization (same as $\lambda$ derivation)
 - $(24/23)^{1/4}$ from homogeneous-space geometry
@@ -1445,7 +1445,7 @@ $$
 \mathcal{R} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}.
 $$
 
-**PCE Triad Selection Principle.** Given the observed $\mathcal{R}_{\mathrm{obs}}$ (charged leptons: $\mathcal{R}_{\mathrm{obs}} = 2.890 \approx 3$), the attractor selects among triads with $\mathcal{R} = 3$ the one minimizing the action cost for the second generation, i.e., maximizing $Y_{32} \propto \exp(-\alpha\,d^2_{32})$. Concretely, among triads with $\mathcal{R} = 3$, minimal $d^2_{32}$ is preferred.
+**PCE Triad Selection Principle.** The charged lepton triad is uniquely determined by the error-correcting structure of $E_8$ (Theorem T.24.3): the framework constants $(a, b) = (2, 6)$ fix the triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (a, b, 2a) = (2, 6, 4)$ with $\mathcal{R} = b/a = 3$. Among the admissible $E_8$ triads with $\mathcal{R} = 3$, the constraint $d^2_{31} = 3 d^2_{32}$ with $d^2 \in \{2, 4, 6, 8\}$ has a unique solution at $d^2_{32} = 2$ (Theorem T.42.1), which also minimizes the action cost $\exp(-\alpha\, d^2_{32})$ as required by PCE.
 
 ### T.21.5.2 Uniqueness of the Charged-Lepton Triad
 
@@ -1778,12 +1778,12 @@ $$
 - **Correctable directions** ($\dim = t = 3$): Error patterns of weight $\leq t$ with distinct syndromes
 - **Non-contributing directions** ($\dim = 24 - t = 21$): Directions that do not change the syndrome or lie outside the correction ball
 
-**Step 4** (QFI weighting). By the isotropy of the Bures metric (Theorem Z.5, Step 6), all interface modes have equal QFI weight $\lambda_i = 1$. The effective dimension counts correctable directions normalized by the syndrome-active span:
+**Step 4** (QFI weighting and geodesic deviation integral). By the isotropy of the Bures metric (Theorem Z.5, Step 6), all interface modes have equal QFI weight $\lambda_i = 1$. Within the unique-decoding basin ($h < d_{\min}$), only the $t$ correctable error directions contribute independent curvature-sensitive variations along the geodesic—these are the directions whose syndromes change within the decoding cell. The remaining $M-t$ directions are syndrome-degenerate within the decoding ball (they do not change the syndrome in the region that defines unique decoding) and therefore do not provide independent contributions to the curvature correction inside the decoding cell. The effective dimension is the fraction of curvature-sensitive directions normalized by the full syndrome-resolution scale:
 $$
-D_{\mathrm{eff}} = \frac{t}{d_{\min}} = \frac{3}{8}
+D_{\mathrm{eff}} = \frac{\dim(\text{curvature-sensitive tangent directions})}{\dim(\text{syndrome resolution scale})} = \frac{t}{d_{\min}} = \frac{3}{8}.
 $$
 
-The denominator $d_{\min} = 8$ represents the full syndrome resolution scale; the numerator $t = 3$ counts the directions that contribute to distinguishability within the decoding cell. ∎
+The denominator $d_{\min} = 8$ is the full syndrome resolution scale (minimum distance of $\mathcal{G}_{24}=[24,12,8]$), while the numerator $t = 3$ is the Golay error-correction capacity that fixes the number of independent correctable directions [Conway & Sloane 1999]. ∎
 
 ---
 
@@ -1806,7 +1806,7 @@ $$
 - Radial direction: $+1$
 - Total: $k + 1 = 13$ independent directions
 
-**Step 4** (PCE distribution over inactive modes). The $M = 24$ interface modes connect active ($a = 2$) to inactive ($b = 6$) subspaces. By the constraint-correlation correspondence (Theorem Z.13a), the $C = bM = 144$ constraints distribute uniformly over the $b = 6$ inactive channels. The 13 independent threshold directions are averaged over $b = 6$ inactive modes:
+**Step 4** (PCE distribution over inactive modes). The $M = 24$ interface modes connect active ($a = 2$) to inactive ($b = 6$) subspaces (Theorem Z.1). At the decoding boundary, the syndrome map has full rank $k=12$ and the radial boundary mode adds $+1$, giving $k+1=13$ independent directions (Steps 2–3). By QFI isotropy at the attractor (Theorem Z.5, Step 5), no inactive direction is distinguished; therefore these $k+1$ threshold directions distribute uniformly across the $b$ inactive channels. The effective per-channel dimension is:
 $$
 D_{\mathrm{eff}} = \frac{k + 1}{b} = \frac{13}{6} \approx 2.167
 $$
@@ -1879,7 +1879,7 @@ $$
 
 ### T.21.8.7 Complete Derivation Chain
 
-**Theorem T.42.7** (Zero Free Parameters Within PU Framework). *Given the foundational axioms of the Predictive Universe framework—specifically SPAP encodability (Theorem 15) and the Landauer thermodynamic cost $\varepsilon = \ln 2$ (Theorem Z.1)—the hierarchy formula contains no additional adjustable parameters. Every coefficient traces to the Horizon Constant $K_0 = 3$:*
+**Theorem T.42.7** (Zero Continuously Adjustable Parameters Within PU Framework). *Given the foundational axioms of the Predictive Universe framework—specifically SPAP encodability (Theorem 15) and the Landauer thermodynamic cost $\varepsilon = \ln 2$ (Theorem Z.1)—the hierarchy formula contains no additional continuously adjustable parameters. Every coefficient traces to the Horizon Constant $K_0 = 3$:*
 
 **Stage 1: Structural constants**
 $$
@@ -1901,7 +1901,7 @@ $$
 \mathcal{G}_{24}[24,12,8] \xrightarrow{\text{Def T.1}} (t, d_{\min}, k) = (3, 8, 12) \xrightarrow{\text{Thm T.42.5}} D_{\mathrm{eff}}(d^2)
 $$
 
-**Remark T.42.7.1: Meaning of "No Free Parameters Within PU Framework".** *The statement "no free parameters" must be understood in context:*
+**Remark T.42.7.1: Meaning of "Zero Continuously Adjustable Parameters Within PU Framework".** *The statement "zero continuously adjustable parameters" must be understood in context:*
 
 - *The PU framework itself rests on foundational axioms: SPAP encodability (which yields $K_0 = 3$), the Landauer thermodynamic cost ($\varepsilon = \ln 2$), and standard Riemannian geometry on the state manifold.*
 - *Given these axioms, the charged-lepton mass hierarchy predictions follow deterministically with no additional fitting or adjustment.*
@@ -2892,7 +2892,7 @@ This indicates excellent agreement with experiment.
 
 ## T.22.9 Complete Parameter Chain
 
-All parameters trace to the foundational derivation with zero free parameters:
+All parameters trace to the foundational derivation with zero continuously adjustable parameters:
 
 | Parameter | Value | Origin | Section |
 |:----------|:------|:-------|:--------|
@@ -2917,7 +2917,7 @@ All parameters trace to the foundational derivation with zero free parameters:
 | $\mathcal{N}_{PU}$ | $1/(72\sqrt{12})$ | Universal normalization | T.21.11 |
 | $m_\tau$ | 1.80 GeV | Absolute mass anchor | T.21.11 |
 
-**The complete CKM matrix derives from K₀ = 3 with zero additional free parameters.**
+**The complete CKM matrix derives from K₀ = 3 with zero additional continuously adjustable parameters.**
 
 ---
 
@@ -3141,7 +3141,7 @@ With $e^{-38.5} \approx 1.90 \times 10^{-17}$ and $M_{Pl} = 1.22 \times 10^{19}$
 
 $$v \approx 252 \text{ GeV}$$
 
-with the prefactor $A_{EW} = 1.085 \pm 0.005$ derived from first principles in Theorem T.29 via SU(2) block curvature, Schur complement, and homogeneous-space Jacobian factors. This parameter-free result achieves 2.3% agreement with $v_{obs} = 246.22$ GeV.
+with the prefactor $A_{EW} = 1.085 \pm 0.005$ derived from first principles in Theorem T.29 via SU(2) block curvature, Schur complement, and homogeneous-space Jacobian factors. This result, with zero continuously adjustable parameters, achieves 2.3% agreement with $v_{obs} = 246.22$ GeV.
 
 ---
 
@@ -3499,7 +3499,7 @@ $$\alpha_\nu = \frac{\alpha_{\text{UV}}}{\sqrt{3}} = \frac{3/2}{\sqrt{3}} = \fra
 
 ### T.24.3 Charged Lepton Triad from Error Correction
 
-The charged lepton triad is not an input—it is derived from the error-correcting structure of E₈.
+The charged lepton triad is derived from the error-correcting structure of $E_8$ via the framework constants $(a, b) = (2, 6)$, as established independently below.
 
 **Theorem T.24.3** (Charged Lepton Triad). *The charged lepton triad is uniquely determined by error correction:*
 
@@ -5011,7 +5011,7 @@ The near-unity ratio follows from identical SU(3) charges for $u_R$ and $d_R$; t
 
 The quark-sector entries are same-scale hierarchy invariants under a common-scheme reduction (Section T.25.5.4). The down-sector value includes the $A_2/D_4$ frustration correction (Section T.25.6a) with its matching uncertainty budget (Section T.25.6a.10).
 
-The τ/μ mass ratio achieves **0.5% precision** with zero free parameters—the single most precise test of the geometric hierarchy.
+The τ/μ mass ratio achieves **0.5% precision** with zero continuously adjustable parameters—the single most precise test of the geometric hierarchy.
 
 ### T.25.8.2 Parameter Count
 

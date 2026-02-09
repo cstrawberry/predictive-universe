@@ -246,7 +246,7 @@ where $\phi^*_\rho(x) = \phi^*(\rho x)$ is the dilated bounce.
 
 *Proof.*
 
-**Step 1 (PCE-Attractor characterization).** By Definition 15a, the PCE-Attractor is the unique global minimum characterized by three co-occurring conditions: (i) maximal symmetry with flat QFI spectrum; (ii) capacity saturation at the zero-slack boundary where $M\ln(1+\lambda u^*) = \ln d_0$; and (iii) canonical instantiation with $\kappa^* = 1$ (Theorem X.3).
+**Step 1 (PCE-Attractor characterization).** By Definition 15a, the PCE-Attractor is the unique global minimum characterized by three co-occurring conditions: (i) maximal symmetry with flat QFI spectrum; (ii) capacity saturation at the zero-slack boundary where $M\ln(1+\lambda u^*) = \ln d_0$; and (iii) canonical bulk gauge normalization with $\kappa^*_{\mathrm{bulk}}=1$ (Appendix Z, Theorem Z.14; Appendix X, Theorem X.3).
 
 **Step 2 (Effective potential at the Attractor).** From Appendix X (Equation X.10), the effective potential is defined as:
 
@@ -278,11 +278,11 @@ The virial identity follows:
 
 $$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = 0$$
 
-**Step 5 (Connection to Predictive Ward Identity).** The scale invariance is not accidental but follows from the Predictive Ward Identity (Theorem X.3). At the PCE-Attractor, the emergent physical action takes canonical form with $\kappa^* = 1$. The Legendre transform structure (Appendix X, Equation X.3) ensures that the 1PI effective action $\Gamma^{(2)} = \mathcal{G}^{-1} = \mathcal{K}$ inherits the scale properties of the information-theoretic kernel $\mathcal{K}$, which is constructed from the QFI structure. The flat QFI spectrum (Definition 15a, condition i) implies uniform scaling across all 24 modes, precluding any preferred scale.
+**Step 5 (Connection to Predictive Ward Identity).** The scale invariance is not accidental but follows from the Predictive Ward Identity and capacity rigidity (Appendix X, Theorem X.3; Appendix Z, Theorem Z.14). The Legendre transform structure (Appendix X, Equation X.3) ensures that the 1PI effective action $\Gamma^{(2)} = \mathcal{G}^{-1} = \mathcal{K}$ inherits the scale properties of the information-theoretic kernel $\mathcal{K}$, which is constructed from the QFI structure. The flat QFI spectrum (Definition 15a, condition i) implies uniform scaling across all 24 modes, precluding any preferred scale.
 
 **Step 6 (PCE optimality).** The virial identity is equivalent to the statement that the PCE-Attractor configuration cannot reduce its action by rescaling. Any $\rho \neq 1$ would break the capacity saturation condition: rescaling the bounce changes the effective coupling $u_{\text{eff}}(\rho) \neq u^*$, violating the zero-slack optimality. The scale $\rho = 1$ is the unique fixed point of the combined PCE constraints. $\square$
 
-**Remark U.8b: Robustness of Scale Invariance.** The scale invariance at the PCE-Attractor is structurally protected by three independent mechanisms: (i) the Derrick virial constraint at the stationary bounce solution; (ii) the zero-slack condition fixing the bounce amplitude through capacity saturation; and (iii) the Predictive Ward Identity enforcing canonical normalization (Theorem X.3). Breaking scale invariance would require violating at least one of these conditions, shifting $\kappa$ by $0.5$ and changing $\Lambda$ by a factor of $e \approx 2.7$ (see Section U.13.1).
+**Remark U.8b: Robustness of Scale Invariance.** The scale invariance at the PCE-Attractor is structurally protected by three independent mechanisms: (i) the Derrick virial constraint at the stationary bounce solution; (ii) the zero-slack condition fixing the bounce amplitude through capacity saturation; and (iii) the Predictive Ward Identity together with capacity/QFI rigidity uniquely fixing $\kappa^*_{\mathrm{bulk}}=1$ (Theorem X.3; Theorem Z.14). Breaking scale invariance would require violating at least one of these conditions, shifting $\kappa$ by $0.5$ and changing $\Lambda$ by a factor of $e \approx 2.7$ (see Section U.13.1).
 
 **Theorem U.9 (Dilatation Zero Mode).** Under Theorem U.8, the second variation annihilates the dilatation tangent vector:
 
@@ -296,6 +296,8 @@ $$\frac{\partial \phi^*_\rho}{\partial (\ln \rho)}\bigg|_{\rho=1} = x^\mu \parti
 
 - 4 translation modes (one per spacetime direction)
 - 1 dilatation mode (scale)
+
+The dilatation zero mode arises from the scale invariance established in Theorem U.8: the PCE-Attractor's Derrick/virial identity produces a conformal flat direction at $\rho = 1$. In standard semiclassical instanton analysis, an $O(4)$-symmetric Euclidean saddle in $D=4$ has four translational collective coordinates, and when the action is scale invariant it additionally admits a dilation collective coordinate corresponding to rescaling of the profile [Coleman 1977; Callan & Coleman 1977]. The value $m = 5$ thus follows from both the PCE structure (Theorem U.8–U.9) and standard collective-coordinate counting independently.
 
 ---
 

@@ -493,7 +493,7 @@ This constitutes an independent validation pathway for the PU framework, complem
 
 ## 13.10 Consolidated Falsifiability Analysis
 
-The framework generates parameter-free predictions that can be tested against observation. This section catalogs the primary falsifiable predictions derived in the technical appendices, specifies the conditions under which each would be refuted, and summarizes current experimental status.
+The framework generates predictions with zero continuously adjustable parameters that can be tested against observation. This section catalogs the primary falsifiable predictions derived in the technical appendices, specifies the conditions under which each would be refuted, and summarizes current experimental status.
 
 ### 13.10.1 Spacetime Dimension
 

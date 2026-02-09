@@ -2,7 +2,7 @@
 
 ## Overview Structure
 
-This appendix presents a complete, parameter-free derivation of:
+This appendix presents a complete derivation, with zero continuously adjustable parameters, of:
 - The electromagnetic fine-structure constant α at the Thomson limit
 - The spatial dimension D of emergent spacetime
 
@@ -17,9 +17,9 @@ Both results emerge from a single information-theoretic structure—the interfac
 ## Z.1 Introduction: From MPU Primitives to Fundamental Constants
 
 ### Z.1.1 Scope and Objectives
-- Parameter-free derivation of α and D
+- Derivation of α and D with zero continuously adjustable parameters
 - Both from single information-theoretic structure M = 24
-- Zero free parameters in entire derivation chain
+- Zero continuously adjustable parameters in entire derivation chain
 
 **Notation.** In this appendix, $\lambda$ denotes the QFI eigenvalue of the interface-mode metric (later $g_{QFI}=\lambda I_{24}$); it is unrelated to the resource-scarcity parameter of Definition 20.
 
@@ -137,7 +137,7 @@ Thus the result $a = 2$ is a theorem, not a free parameter.
 
 ### Z.2.4 The PPI → 24 Derivation Chain
 
-The complete parameter-free chain from axioms to M = 24:
+The complete chain (zero continuously adjustable parameters) from axioms to M = 24:
 
 $$\boxed{\text{SPAP} \xrightarrow{\text{Thm J.1}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{QFI structure}} M = 2ab = 24}$$
 
@@ -439,19 +439,33 @@ where u is the coupling strength and λ = 1 is the QFI eigenvalue.
 
 ### Z.8.2 The Bare Coupling
 
-**Theorem Z.7 (Bare Coupling from Capacity Saturation).** Saturation of operational capacity C_op = ln d₀ uniquely determines the bare coupling:
+**Theorem Z.7 (Bare Coupling from Capacity Saturation).** At the PCE-Attractor, the operational capacity saturates at $C_{\mathrm{op}} = \ln d_0$, and this uniquely determines the bare coupling:
 $$u^* = d_0^{1/M} - 1 = 8^{1/24} - 1 = 2^{1/8} - 1 \approx 0.09051$$
 
-*Proof.* The capacity saturation condition is:
-$$C_{\mathrm{op}}(\rho_0) = \ln d_0$$
+*Proof.*
 
-Substituting from Theorem Z.6:
+**Step 1 (Rate-level PCE objective).** The rate-level PCE potential used to determine the equilibrium coupling is (Appendix W, (W.0.1)):
+$$\phi(u) = A_{\mathrm{PCE}} u^2 - \Gamma_0 \sum_{i=1}^{M} \ln(1 + \lambda_i u), \quad u \ge 0.$$
+By Lemma W.1, $\phi$ is strictly convex on $[0,\infty)$ and has a unique minimizer once capacity constraints are imposed.
+
+**Step 2 (Flat spectrum at the attractor).** At the PCE-Attractor, the QFI spectrum is flat with $\lambda_i = 1$ for all $i = 1, \ldots, M$ (Theorem Z.5, Step 5). Therefore the capacity-like term is exactly $M\ln(1+u)$, and (Theorem Z.6) gives
+$$C_{\mathrm{op}}(\rho_0) = M\ln(1+u).$$
+
+**Step 3 (Alphabet bound as a hard constraint).** The MPU Hilbert space $\mathcal{H}_0=\mathbb{C}^{d_0}$ supports at most $d_0$ perfectly distinguishable states, hence the operational alphabet capacity is bounded by
+$$C_{\mathrm{op}}(\rho_0)\le \ln d_0,$$
+an information-theoretic constraint on encodability [Holevo 1973].
+
+**Step 4 (Saturation from constrained convex minimization).** On the cap-active branch at $\mu^\*$ (Appendix W, standing assumptions), the unconstrained minimizer of $\phi(u)$ would violate the hard bound $C_{\mathrm{op}}\le \ln d_0$. Since $\phi$ is strictly convex and the feasible set defined by $C_{\mathrm{op}}(\rho_0)\le \ln d_0$ is convex and closed, the constrained minimizer lies on the constraint boundary:
+$$C_{\mathrm{op}}(\rho_0) = \ln d_0.$$
+Equivalently, the KKT conditions force the capacity constraint to be active whenever the unconstrained optimum is infeasible [Boyd & Vandenberghe 2004, §5.5.3].
+
+**Step 5 (Solving for $u^*$).** Substituting the flat spectrum into the saturation condition:
 $$M \ln(1 + u^*) = \ln d_0$$
 $$\ln(1 + u^*) = \frac{\ln d_0}{M} = \frac{\ln 8}{24} = \frac{3\ln 2}{24} = \frac{\ln 2}{8}$$
 $$1 + u^* = 2^{1/8}$$
 $$u^* = 2^{1/8} - 1$$
 
-Numerical evaluation: u* = 2^{0.125} - 1 ≈ 1.09051 - 1 = 0.09051. ∎
+Numerical evaluation: $u^* = 2^{0.125} - 1 \approx 1.09051 - 1 = 0.09051$. ∎
 
 ### Z.8.3 The Fundamental Mass Scale
 
@@ -704,19 +718,17 @@ $$M_{\mathrm{int}} = M_{\mathrm{phys}}$$
 This equilibrium is the unique global minimum of the PCE potential.
 
 *Proof.* The global PCE potential incorporating mode-channel effects is:
-$$V_{\mathrm{total}} = V_{\mathrm{op}} + V_{\mathrm{prop}} - V_{\mathrm{benefit}} + V_{\mathrm{penalty}} + V_{\mathrm{mc}}$$
+$$V_{\mathrm{total}} = V_{\mathrm{op}} + V_{\mathrm{prop}} - V_{\mathrm{benefit}} + V_{\mathrm{penalty}} + V_{\mathrm{mc}}.$$
 
-Since M_int = 2ab = 24 is fixed by foundational constants (Theorem Z.5), the dimension D is the effective optimization variable that determines M_phys = K(D).
+Since $M_{\mathrm{int}} = 2ab = 24$ is fixed by foundational constants (Theorem Z.5), the dimension $D$ is the effective optimization variable that determines $M_{\mathrm{phys}} = K(D)$.
 
-**Step 1 (Stationarity).** PCE minimization (Definition 15) requires ∂V_total/∂D = 0 at equilibrium. By Lemma Z.5, V_mc is minimized when M_int = M_phys. Since thermodynamic equilibration drives M_phys → K(D) (Theorem Z.9), the equilibrium condition becomes:
-$$M_{\mathrm{int}} = K(D)$$
+**Step 1 (Mismatch cost is strictly nonnegative).** Section Z.10.4 derives that mode-channel mismatch incurs a positive PCE cost: if $M_{\mathrm{int}} > M_{\mathrm{phys}}$ there are dark internal modes with no spatial actualization channel; if $M_{\mathrm{int}} < M_{\mathrm{phys}}$ there are empty channels that contribute propagation/maintenance overhead without carrying predictive information. In both cases, the mismatch term satisfies:
+$$V_{\mathrm{mc}}\ge 0,\qquad V_{\mathrm{mc}}=0 \iff M_{\mathrm{int}} = M_{\mathrm{phys}}.$$
 
-**Step 2 (Hessian Positive-Definiteness).** To verify this is a minimum, compute the Hessian. For the mismatch potential V_mc = c_mc(M_int - K(D))²:
-$$\frac{\partial^2 V_{\mathrm{mc}}}{\partial M_{\mathrm{int}}^2} = 2c_{\mathrm{mc}} > 0$$
+**Step 2 (Equilibrium condition).** At thermodynamic equilibrium (Postulate 4), the physical channel count equals the kissing limit $M_{\mathrm{phys}} = K(D)$ (Theorem Z.9). PCE minimization (Definition 15) therefore requires selecting $D$ so that the mismatch vanishes:
+$$M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D).$$
 
-The Hessian is strictly positive, confirming the stationary point is a strict local minimum.
-
-**Step 3 (Global Uniqueness).** Evaluate V_mc at integer dimensions D ∈ {1, 2, 3, ...} with M_int = 24 fixed:
+**Step 3 (Global uniqueness over integer $D$).** Evaluate the mismatch at integer dimensions with $M_{\mathrm{int}} = 24$ fixed:
 
 | D | K(D) | (24 - K(D))² |
 |---|------|--------------|
@@ -727,7 +739,7 @@ The Hessian is strictly positive, confirming the stationary point is a strict lo
 | 5 | 40 | 256 |
 | 6 | 72 | 2304 |
 
-The unique global minimum over all integer D is at D = 4. No other stationary points exist in the physical domain. ∎
+The unique global minimum is at $D = 4$. No other integer $D$ yields zero mismatch, hence no other dimension is PCE-optimal. ∎
 
 ---
 
@@ -1528,7 +1540,7 @@ $$\boxed{\text{Landauer cost } (\varepsilon = \ln 2) \xrightarrow{\text{Thm Z.1}
 | 9 | Lattice gluing | $\Lambda_{24}$ | Golay determines cosets | Theorem Z.13d |
 | 10 | Mode-channel | $D = 4$ | $K(4) = 24 = M$ | Theorem Z.11 |
 
-Each step follows from the previous by theorem or definition. No free parameters enter. The 144-bit Golay parity matrix determines both the vacuum error-correction structure and the instanton complexity governing the cosmological constant.
+Each step follows from the previous by theorem or definition. No continuously adjustable parameters enter. The 144-bit Golay parity matrix determines both the vacuum error-correction structure and the instanton complexity governing the cosmological constant.
 
 
 ## Z.14 The 24-Cell and Geometric Constraints
@@ -1566,53 +1578,49 @@ $$\alpha_{\mathrm{em}}(\mu) = \frac{u(\mu)}{4\pi \kappa(\mu)}$$
 
 where u(μ) is the effective coupling and κ(μ) is the normalization constant at scale μ.
 
-### Z.15.2 Bulk Normalization from PPI
+### Z.15.2 Bulk Normalization from Capacity Rigidity
 
-**Theorem Z.14 (Predictive Ward Identity and Bulk Normalization).** At the PCE-Attractor, the bulk normalization constant is fixed by the canonical PPI identification between the information kernel and the quadratic $U(1)$ effective action:
+**Theorem Z.14 (Predictive Ward Identity and Bulk Normalization from Capacity Rigidity).** At the PCE-Attractor, the bulk normalization constant is uniquely determined:
 $$\kappa^*_{\mathrm{bulk}} = 1$$
 
 *Proof.*
 
-**Step 1 (PCE-Attractor Definition).** The PCE-Attractor (Definition 15a) is the state of maximal predictive efficiency—the global minimum of the PCE potential V(x). At this point, by definition, the system has eliminated all inefficiencies and operates at its theoretical optimum.
+**Step 1 (Normalization redundancy in ordinary $U(1)$).** The Maxwell action may be written
+$$S_{\mathrm{Maxwell}}=-\frac{1}{4\kappa}\int F_{\mu\nu}F^{\mu\nu}\,d^4x.$$
+In standard gauge theory, a constant rescaling of the gauge field may be absorbed into a compensating rescaling of the gauge coupling in the interaction term. When the coupling is treated as a free parameter, only the ratio $u/\kappa$ is physical, so $\kappa$ can be fixed by convention.
 
-**Step 2 (PPI Identification and Canonical Normalization).** The physical Maxwell action can be written as:
-$$S_{\text{Maxwell}} = -\frac{1}{4\kappa}\int F_{\mu\nu}F^{\mu\nu}\, d^4x.$$
+**Step 2 (QFI normalization is fixed by geometry).** At the attractor state $\rho_0=\frac{1}{a}I_a\oplus 0_b$ with $a=2$, the interface-mode SLD-QFI eigenvalue is fixed by the Bures/SLD metric (Theorem Z.5, Step 5):
+$$\lambda=\frac{2}{a}=1,$$
+and the QFI-active subspace has dimension $M=2ab=24$ (Theorem Z.5). The information-theoretic quadratic kernel $\mathcal{K}$ is therefore canonically normalized on the QFI-active subspace.
 
-In the $U(1)$ sector, the overall quadratic normalization can be absorbed by a field rescaling; the PU framework fixes this freedom by adopting the canonical PPI identification at the PCE-Attractor, i.e., the physical quadratic kernel is identified with the information-theoretic kernel under canonical Maxwell normalization. Under this convention, the bulk normalization is set to $\kappa^*_{\mathrm{bulk}} = 1$.
+**Step 3 (Capacity saturation fixes $u^*$ in QFI-natural units).** The operational alphabet capacity at $\rho_0$ is
+$$C_{\mathrm{op}}(\rho_0)=M\ln(1+\lambda u)=24\ln(1+u)$$
+(Theorem Z.6). At the PCE-Attractor the zero-slack boundary holds (Definition 15a, condition ii), so
+$$M\ln(1+\lambda u^*)=\ln d_0\qquad\Rightarrow\qquad u^*=d_0^{1/M}-1=8^{1/24}-1=2^{1/8}-1$$
+(Theorem Z.7; [Holevo 1973]).
 
-**Step 3 (Information-Geometric Setup).** Let W[J] be the cumulant generating functional (Appendix X, Equation X.1). Define:
-- Connected correlator: $\mathcal{G} = \delta^2 W/\delta J \delta J|_{J=0}$
-- QFI kernel: $\mathcal{K}$ from the information-theoretic structure at the Attractor
-- 1PI effective action: Γ[Φ] via Legendre transform of W[J]
+**Step 4 (Predictive Ward identity + Legendre duality).** Let $W[J]$ be the cumulant generating functional (Appendix X, Equation X.1) and $\Gamma[\Phi]$ its Legendre transform (Appendix X, Equation X.2). The predictive Ward identity relates the connected two-point kernel to the inverse information kernel on the QFI-active subspace:
+$$\mathcal{G}=\left.\frac{\delta^2 W}{\delta J\,\delta J}\right|_{J=0}=\mathcal{K}^{-1}.$$
+By Legendre duality (Appendix X, Proposition X.1; Equation X.3),
+$$\Gamma^{(2)}=\mathcal{G}^{-1},$$
+hence
+$$\Gamma^{(2)}=\mathcal{K}.$$
 
-**Step 4 (Predictive Ward Identity).** The predictive Ward identity on the substrate relates the correlator to the QFI kernel:
-$$\mathcal{G} = \mathcal{K}^{-1}$$
+**Step 5 (Definition of the bulk normalization).** Define the bulk normalization as the proportionality between the physical quadratic gauge kernel extracted from the 1PI effective action and the information kernel:
+$$\Gamma^{(2)}_{\mathrm{gauge}}=\kappa_{\mathrm{bulk}}\cdot\mathcal{K}.$$
+In ordinary $U(1)$ theory this proportionality can be shifted by field/coupling rescalings (Step 1).
 
-This follows from the generating functional structure: the connected two-point function is the inverse of the quadratic information kernel when sources are set to zero.
+**Step 6 (Capacity rigidity obstructs the rescaling freedom).** In PU, $\mathcal{K}$ is fixed in QFI-natural units (Step 2) and the attractor coupling $u^*$ is independently fixed in those same units by capacity saturation (Step 3). The physical coupling satisfies
+$$\alpha_{\mathrm{em}}(\mu)=\frac{u(\mu)}{4\pi\kappa(\mu)}$$
+(Section Z.15.1; Appendix X, Equation X.6). A constant rescaling that changes $\kappa_{\mathrm{bulk}}$ would require a compensating rescaling of $u$ in the same units; this is obstructed because $u^*$ is pinned by $(M,\lambda,d_0)$.
 
-**Step 5 (Legendre Duality — Mathematical Theorem).** The Legendre transform (Proposition X.1, Equation X.3) satisfies:
-$$\Gamma^{(2)} = \mathcal{G}^{-1}$$
+**Step 7 (Forced unity).** Since $\Gamma^{(2)}=\mathcal{K}$ (Step 4), comparison with $\Gamma^{(2)}_{\mathrm{gauge}}=\kappa_{\mathrm{bulk}}\mathcal{K}$ (Step 5) forces
+$$\kappa^*_{\mathrm{bulk}}=1.$$
+∎
 
-where Γ^(2) is the quadratic (1PI) effective action kernel. Combining with Step 4:
-$$\Gamma^{(2)} = \mathcal{G}^{-1} = (\mathcal{K}^{-1})^{-1} = \mathcal{K}$$
+**Remark Z.14a (Comparison with standard QFT).** In standard QFT, $\kappa$ in $S_{\mathrm{Maxwell}}$ carries no empirical content because a constant field rescaling can be absorbed into a redefinition of the free gauge coupling. In PU, the coupling $u^*$ is fixed by capacity saturation in QFI-natural units (Theorem Z.7) and the QFI normalization $\lambda=1$ is fixed by state-space geometry (Theorem Z.5), so the normalization freedom is removed and $\kappa^*_{\mathrm{bulk}}=1$ is a theorem.
 
-**Step 6 (Physical Identification).** The physical quadratic gauge kernel Γ^(2)_phys is related to the information-theoretic kernel by a normalization constant κ:
-$$\Gamma^{(2)}_{\text{phys}} = \kappa \cdot \mathcal{K}$$
-
-At the PCE-Attractor, the effective action Γ must equal the physical action (this is what "Attractor" means—the point where predictive and physical descriptions coincide). Therefore:
-$$\Gamma^{(2)} = \Gamma^{(2)}_{\text{phys}}$$
-
-**Step 7 (Forced Unity).** Combining Steps 5 and 6:
-$$\mathcal{K} = \Gamma^{(2)} = \Gamma^{(2)}_{\text{phys}} = \kappa \cdot \mathcal{K}$$
-
-This equality holds if and only if:
-$$\kappa = 1$$
-
-**Step 8 (Status of the Bulk Normalization).** Steps 3–7 establish the Ward identity structure for the quadratic kernel. The equality $\kappa^*_{\mathrm{bulk}}=1$ is the canonical normalization implied by the PPI identification at the attractor; the empirical content relevant to $\alpha_{\mathrm{em}}$ enters through $u(\mu)$ and the interface correction $\delta\kappa$.
-
-This completes the proof. ∎
-
-**Remark: Axiomatic Status.** Steps 3–7 rely on standard generating-functional identities plus the predictive Ward identity. The unity of $\kappa^*_{\mathrm{bulk}}$ fixes the overall field normalization in the PPI mapping at the attractor and is therefore a canonical normalization convention; it carries no additional empirical content beyond what is already encoded in $u(\mu)$ and the interface correction $\delta\kappa$.
+**Remark Z.14b (Mechanism).** Legendre duality fixes $\Gamma^{(2)}=\mathcal{G}^{-1}$, the predictive Ward identity fixes $\mathcal{G}=\mathcal{K}^{-1}$, and QFI/capacity rigidity fixes the units in which $\mathcal{K}$ and $u^*$ are evaluated. The unique value $\kappa^*_{\mathrm{bulk}}=1$ is the consistency condition allowing these constraints to be simultaneously satisfied.
 
 ### Z.15.3 Bulk Value of Fine-Structure Constant
 
@@ -1734,7 +1742,7 @@ $$L_2 = \langle G_{\mathrm{disc}}, G_{\mathrm{cont}} \rangle_{\mathrm{QFI}} = \f
 
 **Step 6 (Linear in u).** First-order perturbation theory forces δκ ∝ u. No other independent dimensionless scalars are available at O(u).
 
-**Step 7 (Overall Coefficient).** Ward identity normalization (Theorem Z.14) fixes the overall O(1) constant to 1, consistent with the Principle of Physical Instantiation connecting to the canonical Maxwell action normalization (Theorem X.3).
+**Step 7 (Overall Coefficient).** The Predictive Ward Identity (Theorem Z.14) establishes $\kappa^*_{\mathrm{bulk}} = 1$ at the PCE-Attractor via Legendre duality, QFI rigidity ($\lambda_i=1$, Theorem Z.5), and capacity saturation (Theorem Z.7). This fixes the overall $O(1)$ constant to 1, with the quadratic Maxwell normalization matched to the effective-action convention (Theorem X.3).
 
 **Conclusion.** The unique form consistent with all constraints is:
 
@@ -1757,7 +1765,7 @@ $$
 The unique form consistent with all constraints is:
 $$\delta\kappa = -c \cdot \frac{a}{d_0} \cdot \frac{u^*}{\sqrt{K_0}}$$
 
-where c is an O(1) constant. Ward identity normalization fixes c = 1.
+where c is an O(1) constant. The capacity-rigidity mechanism (Theorem Z.14) fixes c = 1: the Legendre identity $\Gamma^{(2)} = \mathcal{K}$ holds in QFI-natural units where $\lambda_i=1$ and $u^*$ is pinned by capacity saturation, leaving no rescaling freedom.
 
 **Why Not Alternative Forms:**
 - Not (a/d₀)²: Trace is linear in ρ₀, not quadratic
@@ -1837,7 +1845,7 @@ $$
 \frac{1}{8} = \frac{K_0}{M} = \frac{3}{24} = \frac{\ln d_0}{M \ln 2}
 $$
 
-This connects the bare electromagnetic coupling to the information-theoretic structure: $u^*$ depends on how the MPU's total information capacity ($\ln d_0 = K_0 \ln 2$) is distributed across the interface modes ($M = 24$). The factor $1/24$ in the exponent reflects the per-mode share of the total capacity.
+This connects the bare electromagnetic coupling to the information-theoretic structure: $u^*$ depends on how the MPU's total information capacity ($\ln d_0 = K_0 \ln 2$) is distributed across the interface modes ($M = 24$). The factor $1/24$ in the exponent reflects the per-mode share of the total capacity. The fact that $u^*$ is determined in QFI-natural units—where the Bures/SLD eigenvalue per interface mode is $\lambda=1$—is what elevates $\kappa^*_{\mathrm{bulk}}=1$ from a convention to a theorem (Theorem Z.14).
 
 **Step 4: Substitute Constants.** Using $u^* = 2^{1/8} - 1$, $a/d_0 = 1/4$, $K_0 = 3$:
 $$\alpha^{-1} = \frac{4\pi}{2^{1/8}-1} - \frac{4\pi \cdot (1/4)}{\sqrt{3}} = \frac{4\pi}{2^{1/8}-1} - \frac{\pi}{\sqrt{3}}$$
@@ -1982,7 +1990,7 @@ $$\alpha^{-1}_{\mathrm{exp}} - \alpha^{-1}_{\mathrm{PU}}{}^{(3)} = 137.035999177
 **Relative Discrepancy:**
 $$\frac{|\Delta\alpha^{-1}|}{\alpha^{-1}_{\mathrm{exp}}} = 6.8 \times 10^{-7} = 0.68 \text{ ppm}$$
 
-This lies within ~$2\sigma$ of the conservative theoretical uncertainty $\delta_\alpha \approx 5\times 10^{-5}$ constructed in Section Z.27.9. The prediction agrees with experiment to five significant figures with zero free parameters.
+This lies within ~$2\sigma$ of the conservative theoretical uncertainty $\delta_\alpha \approx 5\times 10^{-5}$ constructed in Section Z.27.9. The prediction agrees with experiment to five significant figures with zero continuously adjustable parameters, conditional on the discrete structural axioms (POP, PCE, PPI, Hypothesis 4, Postulate 4) enumerated in Section 1.5.
 
 ---
 
@@ -2266,11 +2274,17 @@ The effective curvature depends only on the active kernel dimension. This traces
 **Theorem Z.25 (Complete Second-Order Correction).** The second-order correction to the fine-structure constant is:
 $$\Delta^{(2)} = \frac{\pi u^*}{24\sqrt{K_0}}$$
 
-*Proof.* The correction formula with effective curvature is:
-$$\Delta^{(2)} = 2\pi \cdot \frac{a}{d_0} \cdot \frac{1}{\sqrt{K_0}} \cdot \frac{K_{\mathrm{eff}}}{M} \cdot u^*$$
+*Proof.* The second-order correction arises from the curvature of the Grassmannian orbit $\mathrm{Gr}(2,8)$ traversed by the $U(1)$ gauge holonomy. While the first-order correction (Theorem Z.17) captures the pointwise discrete-continuum mismatch, the second-order correction captures how this mismatch accumulates around a closed orbit.
 
-Substituting $a/d_0 = 1/4$, $K_{\mathrm{eff}} = 2$, $M = 24$:
-$$\Delta^{(2)} = 2\pi \cdot \frac{1}{4} \cdot \frac{1}{\sqrt{K_0}} \cdot \frac{2}{24} \cdot u^* = \frac{\pi u^*}{24\sqrt{K_0}}$$
+**Step 1 (Holonomy origin of $2\pi$).** The minimal closed $U(1)$ orbit on $\mathrm{Gr}(2,8)$ contains a holomorphic $\mathbb{CP}^1$ 2-cycle. With the standard normalization of the Grassmannian Kähler generator (the class generating $H^2(\mathrm{Gr}(k,n),\mathbb{Z})$), the curvature 2-form integrates over the minimal holomorphic curve as:
+$$\oint_{\mathbb{CP}^1} \omega = 2\pi.$$
+This is the canonical integrality normalization: the generator integrates to $2\pi$ over the minimal curve [Griffiths & Harris 1978, Ch. 1.5]. In PU terms, the $2\pi$ is the holonomy accumulated over one complete minimal gauge orbit.
+
+**Step 2 (Factor assembly).** The second-order correction combines: (i) the holonomy factor $2\pi$ from the closed-orbit integration; (ii) the active participation fraction $a/d_0$ (Theorem Z.18); (iii) the discrete-continuum embedding $1/\sqrt{K_0}$ (Theorem Z.19); (iv) the per-mode curvature contribution $K_{\mathrm{eff}}/M$ (Theorem Z.24); and (v) the coupling strength $u^*$ (Theorem Z.7). Their product gives:
+$$\Delta^{(2)} = 2\pi \cdot \frac{a}{d_0} \cdot \frac{1}{\sqrt{K_0}} \cdot \frac{K_{\mathrm{eff}}}{M} \cdot u^*.$$
+
+**Step 3 (Evaluation).** Substituting $a/d_0 = 1/4$, $K_{\mathrm{eff}} = 2$ (Theorem Z.24), $M = 24$:
+$$\Delta^{(2)} = 2\pi \cdot \frac{1}{4} \cdot \frac{1}{\sqrt{K_0}} \cdot \frac{2}{24} \cdot u^* = \frac{\pi u^*}{24\sqrt{K_0}}.$$
 
 With $K_0 = 3$ and $u^* = 2^{1/8} - 1 \approx 0.09051$:
 
@@ -2375,7 +2389,7 @@ At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximatio
 
 ### Z.27.10 Derivation Chain Summary
 
-The complete parameter-free derivation:
+The complete derivation (zero continuously adjustable parameters):
 
 $$\text{SPAP} \to K_0 = 3 \to d_0 = 8 \to \varepsilon = \ln 2 \to a = 2 \to M = 24$$
 
@@ -2391,7 +2405,7 @@ $$\text{Third-order (SU(2) sinc): } \Delta^{(2+3)} = \Delta^{(2)}\left(1 - \frac
 
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) ≈ 137.036092 \pm 0.000050}$$
 
-Every quantity traces to $(K_0, \varepsilon, \pi)$ with zero free parameters.
+Every quantity traces to $(K_0, \varepsilon, \pi)$ with zero continuously adjustable parameters.
 
 ---
 
@@ -2734,14 +2748,14 @@ Relative = 0.68 ppm
    - Third-order SU(2) sinc correction: (1 - u*²/6)
    - Agreement with experiment: 0.68 ppm (within 2σ theory uncertainty)
 
-## Zero Free Parameters Throughout
+## Zero Continuously Adjustable Parameters Throughout
 
 Every quantity in the final formulas traces back to:
-- d₀ = 8 (logical necessity)
-- ε = ln 2 (thermodynamic necessity)
-- π (geometric necessity)
+- $d_0 = 8$ (from SPAP encodability, Theorem 15/23)
+- $\varepsilon = \ln 2$ (from ND-RID irreversibility, Theorem 31)
+- $\pi$ (geometric necessity)
 
-The framework does not accommodate D = 4 and α⁻¹ ≈ 137; it **predicts** them as the unique solutions to information-theoretic optimization.
+conditional on the discrete structural axioms enumerated in Section 1.5 (POP, PCE, PPI, Hypothesis 4, Postulate 4). The framework does not accommodate $D = 4$ and $\alpha^{-1} \approx 137$; it **predicts** them as the unique solutions to information-theoretic optimization given these axioms.
 
 ---
 

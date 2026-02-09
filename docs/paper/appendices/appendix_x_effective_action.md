@@ -163,23 +163,22 @@ $$
 
 Using this equivalence with $\gamma_{\rm eff}=2$ reproduces the zero‑slack condition employed in Appendix Z and the identities **Sections Z.7-Z.8**.
 
-**Theorem X.3 (Predictive Ward Identity and Unity Normalization at the PCE-Attractor).**
+**Theorem X.3 (Predictive Ward Identity and Unity Normalization at the PCE-Attractor).** At the PCE-Attractor (Definition 15a), the bulk normalization is uniquely fixed:
+$\kappa^*_{\mathrm{bulk}}=1.$
 
-The requirement for consistency between the substrate-level information-theoretic description and the emergent physical effective action, when evaluated at the **PCE-Attractor** (Definition 15a), uniquely fixes the normalization constant $\kappa^*$ to 1.
+This is determined by an overconstrained system: (i) Legendre duality for $(W,\Gamma)$, (ii) the predictive Ward identity relating connected response to the QFI kernel, and (iii) capacity/QFI rigidity fixing the coupling in QFI-natural units (Appendix Z, Theorem Z.14).
 
-This result is derived from the Principle of Physical Instantiation (PPI, Appendix P), which mandates that at the Attractor—the state of maximal efficiency and symmetry—the emergent physical action must take its simplest, most direct form. For a $U(1)$ gauge field, this is the canonical Maxwell action, for which $\kappa^* = 1$ by definition. Any other value would represent an inefficiency that is, by definition, eliminated at the Attractor. The Predictive Ward Identity provides the formal mechanism that enforces this consistency:
-
-1.  The predictive Ward identity on the substrate relates the connected two-point kernel $\mathcal{G}$ to the inverse of the information-theoretic quadratic kernel $\mathcal{K}$:
+1.  The predictive Ward identity relates the connected two-point kernel to the inverse information kernel:
     $$
     \mathcal{G}\;=\;\left.\frac{\delta^2 W}{\delta J\,\delta J}\right|_{J=0}\;=\;\mathcal{K}^{-1}.
     $$
 
-2.  By Legendre duality (X.3), the quadratic term of the 1PI effective action, $\Gamma^{(2)}$, is the functional inverse of $\mathcal{G}$. This links the emergent physics to the substrate statistics:
+2.  By Legendre duality (X.3),
     $$
     \Gamma^{(2)}\;=\;\mathcal{G}^{-1}\;=\;\mathcal{K}.
     $$
 
-3.  The physical quadratic gauge kernel is, by definition, related to the information-theoretic kernel by the normalization constant $\kappa^*$: $\Gamma^{(2)}=\kappa_*\mathcal{K}$. Comparison with the result from step 2, which is enforced by the Ward identity, forces the normalization constant to be exactly $\kappa^* = 1$.
+3.  In PU, $\mathcal{K}$ is canonically normalized by QFI geometry (Appendix Z, Theorem Z.5) and the attractor coupling $u^*$ is fixed by capacity saturation in those same units (Appendix Z, Theorem Z.7). The usual $U(1)$ field/coupling rescaling that would make $\kappa$ a convention is therefore obstructed, and the proportionality between the physical quadratic gauge kernel and $\mathcal{K}$ is uniquely $\kappa^*_{\mathrm{bulk}}=1$ (Appendix Z, Theorem Z.14).
 
 Hence, at the MPU operational scale $\mu^*$ corresponding to the PCE-Attractor, the canonical Maxwell normalization is recovered. This fixes the bulk normalization $\kappa^*_{\mathrm{bulk}}=1$. The physical Thomson-limit coupling includes the interface correction from discrete-continuous embedding (Section Z.17):
 $$
@@ -326,7 +325,7 @@ With sources, $d{}^\star F = J_e$ and $dF = J_m$, so duality mixes the source do
 
 Operationally, "duality-symmetric sector" means the MPU-accessible observable set $\mathcal{O}$ is closed under the duality action (e.g., built from duality-invariant combinations such as the stress-energy tensor and correlators of $F_{\mu\nu}$ packaged in $SO(2)$-covariant form), and the imposed sources/boundary data do not select an electric or magnetic chart.
 
-In PU, unity normalization $\kappa^* = 1$ at the PCE-Attractor is fixed by the Predictive Ward Identity (Theorem X.3), so the quadratic gauge-sector kernel carries no PCE bias between duality-related normalizations at the operational scale. Under the conditions above, exchanging electric/magnetic descriptive variables is an MPU-equivalence (Definition X.9.1) and therefore PCE-degenerate (Definition X.9.2).
+In PU, the bulk gauge normalization $\kappa^*_{\mathrm{bulk}}=1$ at the PCE-Attractor is fixed by the Predictive Ward Identity together with capacity/QFI rigidity (Theorem X.3; Appendix Z, Theorem Z.14), so the quadratic gauge-sector kernel carries no PCE bias between duality-related normalizations at the operational scale. Under the conditions above, exchanging electric/magnetic descriptive variables is an MPU-equivalence (Definition X.9.1) and therefore PCE-degenerate (Definition X.9.2).
 
 **(ii) Bulk–Boundary Equivalence from Capacity Saturation (Operational Holography).**
 Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43), Appendix E derives an area-law capacity bound from ND-RID contractivity (Lemma E.1 and Theorem E.2), with effective channel count scaling as area (Theorem E.3). At saturation, boundary encoding becomes a PCE minimum (Theorem E.8.3.2).

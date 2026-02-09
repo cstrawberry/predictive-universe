@@ -1,6 +1,6 @@
 # Appendix V: Computational Programs and Numerical Consistency Checks
 
-This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program evaluates the PU prediction $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ using the derived instanton complexity $\kappa=141.5$ (Appendix U) and the PU-theory prefactor $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b); the inversion form is included as a numerical consistency check that converts the observed $\Lambda L_P^2$ into $A_{\text{eff}}^{(\text{obs})}$ or an effective $\kappa$ under a chosen prefactor. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap that becomes parameter-free once the baseline MPU invariants are computed from a specified model.
+This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program evaluates the PU prediction $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ using the derived instanton complexity $\kappa=141.5$ (Appendix U) and the PU-theory prefactor $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b); the inversion form is included as a numerical consistency check that converts the observed $\Lambda L_P^2$ into $A_{\text{eff}}^{(\text{obs})}$ or an effective $\kappa$ under a chosen prefactor. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap that has zero continuously adjustable parameters once the baseline MPU invariants are computed from a specified model.
 
 **Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=g_e^2/(4\pi)$.
 
@@ -122,9 +122,9 @@ Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts $\kappa$ by les
 
 ---
 
-## V.2 Parameter-Free Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor
+## V.2 Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor (Zero Continuously Adjustable Parameters)
 
-This section provides the direct computational program for the fine-structure constant, as rigorously derived in **Appendix Z**. The calculation is parameter-free, relying only on the framework's foundational constants.
+This section provides the direct computational program for the fine-structure constant, as rigorously derived in **Appendix Z**. The calculation has zero continuously adjustable parameters, relying only on the framework's foundational constants.
 
 ### V.2.1 Foundational Inputs (Derived from PU First Principles)
 
@@ -162,7 +162,7 @@ $$
 
 ### V.2.5 From $u^*$ to the Thomson-Limit $\alpha$
 
-The Predictive Ward Identity (Theorem Z.14), combined with the Principle of Physical Instantiation at the PCE-Attractor, fixes the bulk normalization constant to unity ($\kappa^*_{\mathrm{bulk}}=1$). The physical Thomson-limit coupling includes a discrete-to-continuous interface correction derived in Appendix Z (Section Z.17):
+The Predictive Ward Identity (Theorem Z.14), together with QFI geometric rigidity ($\lambda_i=1$, Theorem Z.5) and capacity saturation ($u^*=2^{1/8}-1$, Theorem Z.7), uniquely fixes the bulk normalization constant $\kappa^*_{\mathrm{bulk}}=1$ by obstructing the field-rescaling freedom present in standard $U(1)$ gauge theory. The physical Thomson-limit coupling includes a discrete-to-continuous interface correction derived in Appendix Z (Section Z.17):
 $$
 \alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \Delta^{(2)}
 $$
@@ -172,4 +172,4 @@ $$
 \boxed{\alpha^{-1} \approx 137.036092 \pm 0.000050}
 \tag{V.10}
 $$
-This is a parameter-free Thomson-limit prediction within the PU mapping contract. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and mapping/systematic contributions.
+This is a Thomson-limit prediction with zero continuously adjustable parameters within the PU mapping contract. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and mapping/systematic contributions.

@@ -72,7 +72,7 @@ This framework serves as an existence proof challenging that assumption and demo
 
 2. **Such formalization can generate structures isomorphic to known physics:** The emergence of quantum mechanical formalism (Section 8), Lorentzian spacetime geometry (Section 11), Einstein's Field Equations (Section 12), and Standard Model structures (Appendices G, R).
 
-3. **Quantitative predictions can be derived:** Parameter-free calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor (Appendix Z), derivation of three fermion generations (Appendix R), first-principles derivation of the cosmological constant $\kappa = 141.5$ from Golay-Steiner structure (Appendix U).
+3. **Quantitative predictions can be derived:** Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor with zero continuously adjustable parameters (Appendix Z), derivation of three fermion generations (Appendix R), first-principles derivation of the cosmological constant $\kappa = 141.5$ from Golay-Steiner structure (Appendix U).
 
 4. **Falsifiable experimental protocols can be formulated:** Detailed protocols with power analyses and statistical requirements for testing Consciousness Complexity effects (Section 13).
 
@@ -1124,7 +1124,7 @@ The core of the argument lies in the structure of the PCE Potential, $V(x) = V_{
 
 2.  **Asymmetry as a High-Benefit Investment:** If symmetry is the low-cost default, then any observed asymmetry or broken symmetry must be justified by a significant predictive benefit. The system will only bear the higher complexity and operational costs of an asymmetric state if doing so unlocks a sufficiently large increase in the $V_{benefit}$ term. The emergence of the electroweak scale (Appendix T) is the canonical example: the universe pays the complexity cost $\kappa_{EW} = 38.5$ of breaking the electroweak symmetry because the resulting universe—with massive particles, stable atoms, and complex chemistry—offers an immeasurably greater predictive utility than the symmetric, massless state.
 
-The PCE-Attractor (Definition 15a) is the ultimate expression of this principle. It is a state of maximal symmetry (e.g., a flat QFI spectrum) precisely because that symmetry corresponds to the most robust and efficient operational configuration, allowing for the parameter-free predictions of fundamental constants.
+The PCE-Attractor (Definition 15a) is the ultimate expression of this principle. It is a state of maximal symmetry (e.g., a flat QFI spectrum) precisely because that symmetry corresponds to the most robust and efficient operational configuration, allowing for predictions of fundamental constants with zero continuously adjustable parameters.
 
 The symmetries of physical law are not axioms to be assumed but are the indelible signatures of a universe optimizing its own existence, while its broken symmetries are the necessary price paid for a reality rich enough to be known.
 
@@ -1541,7 +1541,7 @@ This claim has precise mathematical content. The emergence is "strong" in the fo
 
 ## P.8.2 The Derivation Chain: From Prediction to Geometry
 
-The complete parameter-free derivation chain from foundational axioms to emergent spacetime structure proceeds as follows (cf. Section P.7.2; Appendix Z):
+The complete derivation chain from foundational axioms to emergent spacetime structure, with zero continuously adjustable parameters, proceeds as follows (cf. Section P.7.2; Appendix Z):
 
 $$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
 
@@ -1652,10 +1652,12 @@ where $M_{\text{int}} = 24$ (Theorem Z.5) and $K(D)$ is the kissing number in $D
 
 **Step 4 (Equilibrium saturation).** At thermodynamic equilibrium (Postulate 4), entropy maximization drives the channel configuration to the kissing limit: $M_{\text{phys}} = K(D)$ (Theorem Z.9).
 
-**Step 5 (PCE mode-channel correspondence).** PCE minimization requires $M_{\text{int}} = M_{\text{phys}}$ (Theorem Z.10). Deviations in either direction incur costs:
+**Step 5 (PCE mode-channel correspondence).** PCE minimization requires $M_{\text{int}} = M_{\text{phys}}$ (Theorem Z.10). Deviations in either direction incur quantifiable costs:
 
-- *Dark modes* ($M_{\text{int}} > M_{\text{phys}}$): QFI-active modes without spatial channels—wasted computation
-- *Empty channels* ($M_{\text{int}} < M_{\text{phys}}$): Geometric overhead without information capacity—wasted structure
+- *Dark modes* ($M_{\text{int}} > M_{\text{phys}}$): QFI-active modes without a spatial actualization channel contribute positive operational/maintenance cost in $V_{\mathrm{op}}$ (Definition D.1) but generate no predictive benefit, violating POP (Axiom 1); the natural per-cycle irreversibility scale entering these costs is set by $\varepsilon$ (Theorem 31)
+- *Empty channels* ($M_{\text{int}} < M_{\text{phys}}$): Spatial channels without an information mode contribute propagation/maintenance overhead in $V_{\mathrm{prop}}$ (Definition D.1) with zero information throughput, violating PCE (Definition 15)
+
+The mismatch cost $V_{\mathrm{mc}} \ge 0$ vanishes if and only if $M_{\mathrm{int}} = M_{\mathrm{phys}}$ (Theorem Z.10, Step 1).
 
 **Step 6 (Unique solution).** The combined condition $M_{\text{int}} = K(D)$ becomes $24 = K(D)$. Consulting kissing numbers:
 
@@ -3044,7 +3046,7 @@ $$\nabla V|_{\rho_0} = 0$$
 
 None of these quantities depend on an external length scale.
 
-**Step 3 (Virial identity).** The PCE-Attractor satisfies the virial identity (Theorem U.8a): the effective action is stationary under dilations $\phi^*_\rho(x) = \phi^*(\rho x)$ at $\rho = 1$. This scale invariance is structurally protected by the Derrick constraint at the stationary bounce, the zero-slack condition fixing amplitude through capacity saturation, and the Predictive Ward Identity enforcing canonical normalization. $\square$
+**Step 3 (Virial identity).** The PCE-Attractor satisfies the virial identity (Theorem U.8a): the effective action is stationary under dilations $\phi^*_\rho(x) = \phi^*(\rho x)$ at $\rho = 1$. This scale invariance is structurally protected by the Derrick constraint at the stationary bounce, the zero-slack condition fixing amplitude through capacity saturation, and the Predictive Ward Identity together with capacity/QFI rigidity uniquely fixing $\kappa^*_{\mathrm{bulk}}=1$ (Theorem Z.14). $\square$
 
 ---
 

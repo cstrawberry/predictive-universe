@@ -47,7 +47,7 @@ The framework's predictions, derived from the discrete MPU invariants ($K_0=3$, 
 
 Experimental reference values in Table 15.1 are drawn from [NIST 2024] ($\alpha$ and related constants), [Planck Collaboration 2020a] (cosmological parameters and baryon density), [Particle Data Group 2024] (electroweak/particle-physics quantities), and galaxy-rotation empirical compilations such as [McGaugh, Lelli & Schombert 2016].
 
-Additionally, **Appendix H** derives the galactic acceleration scale from first principles via the QFI-Gravity Bridge Law (Definition H.0, Theorems H.1a–H.3): $g_0 = \eta' \cdot c^2\sqrt{\Lambda/3} = (1.18 \pm 0.02) \times 10^{-10}\,\text{m/s}^2$, where $\eta' = 3/(8\sqrt{3})$ is computed from PU constants without free parameters. Empirical extractions of the Milgrom scale carry $\mathcal{O}(10\text{–}20\%)$ systematics, so the result should be read as consistent at the current observational precision.
+Additionally, **Appendix H** derives the galactic acceleration scale from first principles via the QFI-Gravity Bridge Law (Definition H.0, Theorems H.1a–H.3): $g_0 = \eta' \cdot c^2\sqrt{\Lambda/3} = (1.18 \pm 0.02) \times 10^{-10}\,\text{m/s}^2$, where $\eta' = 3/(8\sqrt{3})$ is computed from PU constants with zero continuously adjustable parameters. Empirical extractions of the Milgrom scale carry $\mathcal{O}(10\text{–}20\%)$ systematics, so the result should be read as consistent at the current observational precision.
 
 Taken together, deriving these fundamental constants, scales, the dimensionality of spacetime, and the unification of entropy domains from a coherent set of first principles provides a powerful demonstration of the framework's internal consistency.
 
