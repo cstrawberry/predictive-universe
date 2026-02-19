@@ -229,6 +229,7 @@
 *   Guerin, W., Araújo, M. O., & Kaiser, R. (2016). Subradiance in a large cloud of cold atoms. *Physical Review Letters*, *116*(8), 083601.
 *   Haag, R. (1996). *Local Quantum Physics: Fields, Particles, Algebras* (2nd ed.). Springer. DOI: 10.1007/978-3-642-61458-3
 *   Haag, R., & Kastler, D. (1964). An algebraic approach to quantum field theory. *Journal of Mathematical Physics*, *5*(7), 848–861. DOI: 10.1063/1.1704187
+*   Hall, D., & Wightman, A. S. (1957). A theorem on invariant analytic functions with applications to relativistic quantum field theory. *Matematisk-fysiske Meddelelser*, *31*(5), 1–41.
 *   Hagan, S., Hameroff, S. R., & Tuszyński, J. A. (2002). Quantum computation in brain microtubules: Decoherence and biological feasibility. *Physical Review E*, *65*(6), 061901.
 *   Hafele, J. C., & Keating, R. E. (1972). Around-the-world atomic clocks: Predicted relativistic time gains. *Science*, *177*(4044), 166–168.
 *   Hall, B. C. (2015). *Lie Groups, Lie Algebras, and Representations* (2nd ed.). Springer. DOI: 10.1007/978-3-319-13467-3

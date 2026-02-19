@@ -58,6 +58,9 @@ $$
 $$
 This bound is strictly positive and arises fundamentally from the logical structure of self-reference when implemented using finite resources, independent of the specific physical substrate or noise level.
 
+**Scope:** This theorem applies to finite-memory SPAP implementations that close the update cycle by resetting an ancilla register to a fixed ready state (Section J.2). The explicit 3-qubit MPU model of Section 7.1.3 realizes the saturating case $\varepsilon = \ln 2$.
+
+
 *Proof:*
 1.  The minimal, finite-memory SPAP update cycle (as constructed in the proof of Theorem A.1.1 with ancilla reuse) requires a logical mapping over one cycle from the input state $(\phi_t, p_t)$ to the output state $(\phi_{t+1}, p_{t+1})$. Lemma J.1 proves that this mapping is at least 2-to-1, resulting in an unavoidable logical state merging.
 2.  Any physical implementation of this logical mapping must map distinct physical states encoding the initial logical states to physical states encoding the final logical states.

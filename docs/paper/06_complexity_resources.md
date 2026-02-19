@@ -200,7 +200,7 @@ $$
 \Psi(t) = \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C(t)} - \left( \lambda R'(C(t)) + R_I'(C(t)) \right) \quad \text{(24)}
 $$
 where:
-1.  The **Power Conversion Factor ($\Gamma_0$)**: A positive **system-level constant** with dimensions of Power ($[E][T]^{-1}$), representing the conversion rate from dimensionless predictive performance gradients to an equivalent power. Its magnitude is set by the characteristic energy of the operational environment and the MPU cycle rate, e.g., $\Gamma_0 \propto k_B T_{eff} \cdot \nu$.
+1.  The **Power Conversion Factor ($\Gamma_0$)**: A positive **system-level constant** with dimensions of Power ($[E][T]^{-1}$), representing the conversion rate from dimensionless predictive performance gradients to an equivalent power. Its magnitude is set by the characteristic energy of the operational environment and the MPU cycle rate, e.g., $\Gamma_0 \propto k_B T_{eff} \cdot \nu$. At an equilibrium complexity $C^*$, the condition $\Psi(C^*)=0$ yields the relation in Equation (29), linking $\Gamma_0$ to the marginal benefit and marginal costs at $C^*$.
 2.  The **Resource Scarcity Factor $\lambda$**: A dimensionless weight ($\lambda \ge 0$), arising from the operational cost term $V_{op}$, representing the relative importance of physical versus informational costs.
 
 The specific components of the driving force are:

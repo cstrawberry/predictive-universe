@@ -1365,7 +1365,7 @@ Predictionism (Section P.3.4, Appendix A.0.2) grounds mathematics in the certain
 
 2. **Boolean Operations:** From this binary foundation, logical operations emerge operationally. Negation distinguishes confirmed from disconfirmed: $V(\neg S) = 1 - V(S)$. Conjunction arises from sequential verification: $V(S_1 \land S_2) = \min(V(S_1), V(S_2))$. Disjunction arises from branching: $V(S_1 \lor S_2) = \max(V(S_1), V(S_2))$.
 
-3. **Universal Computation:** Since $\{\text{NOT}, \text{AND}, \text{OR}\}$ is functionally complete [Post 1921], any system capable of the predictive cycle possesses the structural capacity for universal computation (Theorem A.0.1) and Property R (Corollary A.0.1).
+3. **Universal Computation:** Since $\{\text{NOT}, \text{AND}, \text{OR}\}$ is functionally complete [Post 1921], any system capable of the predictive cycle and satisfying the Logical-Structural Assumptions of Appendix A possesses the structural capacity for universal computation (Theorem A.0.1) and Property R (Corollary A.0.1).
 
 Mathematics thus inherits the indubitability of the Cogito. Its structures are not discovered in some Platonic realm but are *generated* by the operational requirements of prediction itself.
 

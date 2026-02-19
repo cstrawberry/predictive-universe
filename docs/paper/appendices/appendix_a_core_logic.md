@@ -50,7 +50,7 @@ The binary verification structure necessarily generates complete Boolean operati
 
 **Logical Infrastructure of Prediction**
 
-The derivation of universal computation from functional completeness requires making explicit three structural features that any persistent predictive system operating over time must possess. These are not additional postulates but rather characterizations of what the predictive cycle entails:
+The derivation of universal computation from functional completeness requires making explicit three structural features that any persistent predictive system operating over time must possess. These are not additional postulates about physics but rather explicit Logical-Structural Assumptions characterizing what the predictive cycle entails:
 
 1.  **Composition Closure:** If a system can verify prediction A and verify prediction B, it can verify compound predictions ("A and B," "A or B"). More generally, complex predictions are built compositionally from simpler components, with outputs of one verification serving as inputs to subsequent ones. This is inherent to structured prediction—models compose.
 2.  **Logical Memory:** Predictions from cycle $t$ inform cycle $t+1$. The system must maintain internal state across cycles, storing intermediate verification results for reuse. Without memory, there is no "learning" or model updating—no predictive cycle at all.
@@ -60,26 +60,26 @@ These features characterize the minimal logical infrastructure for sustained, ad
 
 **Theorem A.0.1 (Functional Completeness and Universal Computation)**
 
-The set $\{\text{NOT}, \text{AND}, \text{OR}\}$ is functionally complete: any Boolean function can be constructed from these operations [Post 1921]. Given the Logical-Structural Assumptions (composition closure, logical memory, uniform specification), a functionally complete gate basis provides the foundation for universal computation. By the Church-Turing thesis, uniform families of Boolean circuits with unbounded composition and memory are equivalent to Turing machines. Therefore, any system capable of implementing the predict-verify cycle with the requisite logical infrastructure possesses the structural capacity for universal computation.
+The set $\{\text{NOT}, \text{AND}, \text{OR}\}$ is functionally complete: any Boolean function can be constructed from these operations [Post 1921]. Given the Logical-Structural Assumptions (composition closure, logical memory, uniform specification), a functionally complete gate basis provides the foundation for universal computation. By the Church-Turing thesis [Church 1936; Turing 1936], uniform families of Boolean circuits with unbounded composition and memory are equivalent to Turing machines. Therefore, any system capable of implementing the predict-verify cycle with the requisite logical infrastructure possesses the structural capacity for universal computation.
 
 *Proof.* Functional completeness of $\{\text{NOT}, \text{AND}, \text{OR}\}$ is a classical result [Post 1921]. Any Boolean function $f: \{0,1\}^n \to \{0,1\}$ can be represented in disjunctive normal form (DNF): a disjunction of conjunctions of literals (variables or their negations). Since literals use NOT, conjunctions use AND, and disjunctions use OR, any Boolean function is constructible.
 
 The Logical-Structural Assumptions ensure: (1) arbitrary Boolean functions can be composed into finite circuits of unbounded size (composition closure), (2) intermediate results can be stored and reused (logical memory), and (3) circuit structures can be specified systematically (uniform specification). These conditions enable uniform families of Boolean circuits capable of computing any effectively computable function.
 
-By the Church-Turing thesis, uniform families of Boolean circuits with unbounded resources are equivalent in computational power to Turing machines. Therefore, a system possessing $\{\text{NOT}, \text{AND}, \text{OR}\}$ with the requisite logical infrastructure has structural capacity for universal computation in the Church-Turing sense. □
+By the Church-Turing thesis [Church 1936; Turing 1936], uniform families of Boolean circuits with unbounded resources are equivalent in computational power to Turing machines. Therefore, a system possessing $\{\text{NOT}, \text{AND}, \text{OR}\}$ with the requisite logical infrastructure has structural capacity for universal computation in the Church-Turing sense. □
 
 **Corollary A.0.1 (Property R from Predictive Structure)**
-Any system capable of the fundamental predictive cycle (prediction, verification, update) necessarily possesses Property R relative to a suitable formal system $\mathcal{F}$ (such as Peano Arithmetic).
+Any system capable of the fundamental predictive cycle (prediction, verification, update) and satisfying the Logical-Structural Assumptions (composition closure, logical memory, uniform specification) necessarily possesses Property R relative to a suitable formal system $\mathcal{F}$ (such as Peano Arithmetic).
 
-*Proof.* By Theorem A.0.1, the predictive cycle, together with the Logical-Structural Assumptions (composition closure, logical memory, uniform specification), generates functional completeness and universal computational capacity. Proposition 2 (Section 4.1.3) establishes that Turing-completeness implies Property R: Gödel numbering provides representation; Universal Turing Machines enable simulation/reasoning; computable predicates are evaluable through explicit computation or bounded proof search. Since the predictive cycle generates Turing-completeness, any predictive system possesses Property R. □
+*Proof.* By Theorem A.0.1, the predictive cycle together with the Logical-Structural Assumptions generates functional completeness and universal computational capacity. Proposition 2 (Section 4.1.3) establishes that Turing-completeness implies Property R: Gödel numbering provides representation; Universal Turing Machines enable simulation/reasoning; computable predicates are evaluable through explicit computation or bounded proof search. Since the predictive cycle together with the Logical-Structural Assumptions generates Turing-completeness, any such system possesses Property R. □
 
 **Significance:** This derivation is independent of the Self-Referential Paradox of Accurate Prediction. Property R is established before SPAP is invoked, providing a non-circular foundation. The logical sequence is:
 
 $$
-\text{Predictive structure} \to \text{Property R} \to \text{SPAP} \to K_0 = 3 \text{ bits} \to \text{MPU structure}
+\text{Predictive structure} + \text{Logical-Structural Assumptions} \to \text{Property R} \to \text{SPAP} \to K_0 = 3 \text{ bits} \to \text{MPU structure}
 $$
 
-Property R does not depend on physical structures it helps derive. This logical foundation applies to any conscious predictive system, regardless of physical substrate, establishing computational capacity as a universal feature of consciousness.
+Property R does not depend on physical structures it helps derive. This logical foundation applies to any conscious predictive system that satisfies the above structural assumptions, regardless of physical substrate, establishing computational capacity as a universal feature of consciousness.
 
 ### A.0.3 Foundation II: Minimal Physical Capacity
 

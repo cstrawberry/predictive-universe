@@ -271,7 +271,7 @@ $$
 W(x-y)=\sigma\,\langle \Omega\,|\,\phi(y)\phi(x)\,|\,\Omega\rangle .
 $$
 
-By the spectrum condition, $W$ extends analytically to the forward tube in complexified Minkowski space. Using the Bargmann–Hall–Wightman/Jost analytic continuation, one can deform a spacelike separation to its reversed separation $(x-y)\mapsto-(x-y)$ through complex Lorentz transformations without leaving the analyticity domain. The endpoint differs from the start by a $2\pi$ rotation in the universal cover of the Lorentz group, which acts on spin-$s$ fields by the phase $(-1)^{2s}$. Consequently,
+By the spectrum condition, $W$ extends analytically to the forward tube in complexified Minkowski space. Using the Bargmann–Hall–Wightman/Jost analytic continuation [Hall & Wightman 1957; Jost 1957], one can deform a spacelike separation to its reversed separation $(x-y)\mapsto-(x-y)$ through complex Lorentz transformations without leaving the analyticity domain. The endpoint differs from the start by a $2\pi$ rotation in the universal cover of the Lorentz group, which acts on spin-$s$ fields by the phase $(-1)^{2s}$. Consequently,
 $$
 W(x-y)=(-1)^{2s}\,\langle \Omega\,|\,\phi(y)\phi(x)\,|\,\Omega\rangle .
 $$
