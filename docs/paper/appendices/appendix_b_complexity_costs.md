@@ -78,11 +78,19 @@ where $\delta_{\rm SPAP}$ is the dimensionless error margin and $C_{uni}$ is a d
 
 *Proof:* The derivation of this bound relies on identifying the fundamental sub-problems that any system must solve to achieve high-accuracy prediction ($\alpha \to \alpha_{SPAP}^-$) for a SPAP-limited process, and then applying established scaling laws from information theory and computational complexity theory for these sub-problems. The PU framework posits that its entities (MPUs or aggregates) are subject to these universal information-processing constraints when performing such tasks. The full argument for the applicability of Property R to MPUs is provided in **Appendix A.0**.
 
-1.  **Statistical Resolution Sub-Problem and its Cost:** To achieve an average predictive accuracy $\alpha$ differing from the SPAP limit $\alpha_{SPAP}$ by only a small margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$, the predictive system must be able to statistically distinguish the true underlying process (which it aims to model with accuracy $\alpha$) from a hypothetical process that would perfectly hit the SPAP limit or lead to paradoxical outcomes. This is fundamentally a statistical discrimination task. Standard results in statistical decision theory and information theory (e.g., related to Chernoff bounds for hypothesis testing, or the resources needed for parameter estimation with precision $\delta_{SPAP}$) show that the number of independent samples, or equivalently, the complexity of a model or computational resource required to achieve such discrimination with a small error probability, scales inversely with the square of the difference to be detected. Thus, the complexity component $C_{stat}$ needed to resolve the system's behavior from the SPAP boundary with sufficient fidelity to ensure performance $\alpha$ scales as:
-    $$
-    C_{stat}(\delta_{SPAP}) = \Omega\left(\frac{1}{(\delta_{SPAP})^2}\right)
-    $$
-    This represents the resources needed to gather and process enough information to "see" the subtle deviations from the SPAP limit that allow for performance $\alpha < \alpha_{SPAP}$.
+1.  **Statistical Resolution Sub-Problem and its Cost:** To achieve an average predictive accuracy $\alpha$ differing from the SPAP limit $\alpha_{SPAP}$ by only a small margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$, the predictive system must be able to statistically distinguish the true underlying process (which it aims to model with accuracy $\alpha$) from a hypothetical process that would perfectly hit the SPAP limit or lead to paradoxical outcomes. This is fundamentally a statistical discrimination task. A concrete sample-complexity bound makes the $\delta_{SPAP}^{-2}$ scaling explicit. Let $X_1, \dots, X_N \in [0,1]$ be i.i.d. outcomes of a bounded statistic used by the predictor (the $[0,1]$ range is natural since the predictive performance metric $PP$ is a normalized accuracy measure valued in $[0,1]$; the i.i.d. assumption models the best-case scenario of independent observations—temporal correlations can only increase the required sample size, so the bound remains valid as a lower bound under dependence), with mean $\mu = \mathbb{E}[X]$ and empirical mean $\bar{X}$. Hoeffding's inequality gives, for any $\beta \in (0,1)$,
+$$
+\Pr\bigl[|\bar{X} - \mu| \ge \delta_{SPAP}\bigr] \le 2\exp(-2N\delta_{SPAP}^2),
+$$
+so it suffices that
+$$
+N \ge \frac{1}{2\delta_{SPAP}^2}\ln\!\left(\frac{2}{\beta}\right)
+$$
+to make the failure probability at most $\beta$. Thus any effective resource component tracking the required number of samples obeys
+$$
+C_{stat}(\delta_{SPAP}) = \Omega\!\left(\frac{\ln(1/\beta)}{\delta_{SPAP}^2}\right).
+$$
+Taking, for example, $\beta = \delta_{SPAP}$ yields the poly-logarithmic factor appearing in the unified lower bound (B.5).
 
 2.  **Logical Simulation Sub-Problem and its Cost:** To ensure that its own predictive process does not fall prey to the SPAP contradiction (**Theorems A.1.1 and A.1.3**) while aiming for accuracy $1-\delta_{SPAP}$ (i.e., an error rate of $\delta_{SPAP}$ relative to perfect prediction, or ensuring the prediction is valid within a margin $\delta_{SPAP}$ of the SPAP limit), the system must effectively simulate or reason about its own self-referential predictive logic. This involves computations analogous to those performed by a Dynamic Self-Reference Operator (DSRO, Definition 11). The depth of logical inference or simulation required to guarantee that a self-referential predictive statement is consistent and avoids paradox up to a precision related to $\delta_{SPAP}$ typically scales with the descriptive complexity of that precision. Specifying a quantity to within an error $\delta_{SPAP}$ requires $\sim \log(1/\delta_{SPAP})$ bits of information. The computational work (e.g., number of steps in a proof system, or depth of a recursive simulation like LITE in Appendix A.4) to verify consistency at this level of detail scales at least logarithmically with this information content. Thus, the complexity component $C_{logic}$ for the self-referential reasoning itself scales as:
     $$
@@ -130,18 +138,34 @@ $$ \hat{V}_{vv'} = \hat{V}_{dissip-contrib}^{(vv')} + \hat{V}_{pot}^{(vv')} \tag
 
 ## B.5 Microscopic Flow Operators and Conservation Laws
 
-To construct the full stress-energy tensor, operators for momentum density and momentum flux are defined implicitly by requiring local conservation at the microscopic level.
+To construct the full stress-energy tensor, operators for momentum density and momentum flux are defined by requiring local conservation at the microscopic level. We also make the energy-current explicit under a standard locality assumption.
 
 **Definition B.5 (Microscopic Flow Operators $\hat{\pi}_{v,j}$ and $\hat{p}_{v,jk}$)**
 
-Assuming a locally regular structure allowing definition of spatial directions $j, k$ and a discrete divergence $\nabla_j^{(v)}$, the local momentum density operator $\hat{\pi}_{v,j}$ and the stress tensor operator $\hat{p}_{v,jk}$ for MPU $v$ are defined as the Hermitian operators satisfying the operator continuity equations under the full MPU dynamics generated by $\hat{H}_{total} = \sum_v \hat{\rho}_v$:
+Let $\hat{\rho}_v$ be the microscopic energy density operator from (B.6) and define the corresponding local energy operator $\hat{\epsilon}_v := V_0 \hat{\rho}_v$ (so $\hat{\epsilon}_v$ has units of energy). Let the total Hamiltonian be
+$$
+\hat{H}_{total} := \sum_v \hat{\epsilon}_v,
+$$
+and let $\frac{d}{dt} = \frac{i}{\hbar}[\hat{H}_{total}, \cdot]$ be the Heisenberg derivative.
+
+Assume a finite interaction range so that $[\hat{\epsilon}_v, \hat{\epsilon}_u] = 0$ whenever the supports of $\hat{\epsilon}_v$ and $\hat{\epsilon}_u$ are disjoint. Define the antisymmetric pairwise energy-current operator
+$$
+\hat{J}_{v \to u} := \frac{i}{\hbar V_0}\,[\hat{\epsilon}_v, \hat{\epsilon}_u] = -\hat{J}_{u \to v}.
+$$
+Then
+$$
+\frac{d\hat{\rho}_v}{dt} + \sum_u \hat{J}_{v \to u} = 0,
+$$
+with the sum effectively restricted to interaction-range neighbors by locality.
+
+Assuming a locally regular structure allowing definition of spatial directions $j, k$ and a discrete divergence $\nabla_j^{(v)}$, choose directional energy flux operators $\hat{q}_{v,j}$ consistent with these edge-currents (e.g., on a lattice $\hat{q}_{v,j} := \hat{J}_{v \to v+e_j}$). This yields the local continuity equations
 $$
 \frac{d\hat{\rho}_v}{dt} + \sum_{j=1}^3 \nabla_j^{(v)} \hat{q}_{v,j} = 0 \quad (\text{Local Energy Conservation}) \tag{B.11}
 $$
 $$
 \frac{d\hat{\pi}_{v,k}}{dt} + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,jk} = 0 \quad (\text{Local Momentum Conservation}) \tag{B.12}
 $$
-where $\hat{\rho}_v$ is from Eq (B.6), $\frac{d}{dt} = \frac{i}{\hbar}[\hat{H}_{total}, \cdot]$, and $\hat{q}_{v,j}$ is the energy flux operator. Assuming the standard relation $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, these equations implicitly define the flux operators consistent with the Hamiltonian and energy density.
+where $\hat{\pi}_{v,j}$ is the momentum density operator and $\hat{p}_{v,jk}$ the stress operator. Assuming the standard relation $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, these equations define $(\hat{\pi}_{v,j}, \hat{p}_{v,jk})$ consistently with the Hamiltonian and energy density.
 
 ## B.6 Canonical Microscopic Stress-Energy Tensor $\hat{T}^{\mu\nu}_{(can)}$
 
@@ -152,19 +176,31 @@ We assemble the density and flux operators into a canonical stress-energy tensor
 The canonical microscopic stress-energy operator $\hat{T}^{\mu\nu}_{(can)}(v)$ for MPU $v$ is defined by its components in a local frame (0=time, j,k=spatial):
 
 *   $\hat{T}^{00}_{(can)}(v) = \hat{\rho}_v$ (Energy Density, Eq B.6)
-*   $\hat{T}^{0j}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Energy Flux density)
-*   $\hat{T}^{j0}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Momentum Density scaled)
+*   $\hat{T}^{0j}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Energy flux density)
+*   $\hat{T}^{j0}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Momentum density scaled)
 *   $\hat{T}^{jk}_{(can)}(v) = \hat{p}_{v,jk}$ (Stress)
 
-(Assuming the standard relativistic relation $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, which implies $\hat{T}^{0j}_{(can)}(v) = \hat{T}^{j0}_{(can)}(v)$).
+(Assuming $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, one has $\hat{T}^{0j}_{(can)}(v) = \hat{T}^{j0}_{(can)}(v)$.)
 
 **Theorem B.3 (Microscopic Conservation Law for $\hat{T}^{\mu\nu}_{(can)}$)**
 
-The canonical tensor $\hat{T}^{\mu\nu}_{(can)}(v)$ satisfies the local conservation law using a discrete spacetime divergence $\partial_\mu^{(v)}$ (where $\partial_0^{(v)} = (1/c) d/dt$, $\partial_j^{(v)} = \nabla_j^{(v)}$):
+The canonical tensor $\hat{T}^{\mu\nu}_{(can)}(v)$ satisfies the local conservation law using a discrete spacetime divergence $\partial_\mu^{(v)}$ (where $\partial_0^{(v)} = (1/c)\, d/dt$, $\partial_j^{(v)} = \nabla_j^{(v)}$):
 $$
 \sum_{\mu=0}^{3} \partial_\mu^{(v)} \hat{T}^{\mu\nu}_{(can)}(v) = 0 \quad (\text{for } \nu = 0, 1, 2, 3) \tag{B.13}
 $$
-*Proof:* Follows directly by substituting the definitions into the divergence equation and applying the local conservation laws (Eq B.11, B.12).
+*Proof:* For $\nu = 0$,
+$$
+\sum_{\mu=0}^{3} \partial_\mu^{(v)} \hat{T}^{\mu 0}_{(can)}
+= \partial_0^{(v)} \hat{\rho}_v + \sum_{j=1}^3 \nabla_j^{(v)}(c\hat{\pi}_{v,j})
+= \frac{1}{c}\frac{d\hat{\rho}_v}{dt} + \frac{1}{c}\sum_{j=1}^3 \nabla_j^{(v)} \hat{q}_{v,j} = 0
+$$
+by (B.11) and $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$. For $\nu = k$, one has
+$$
+\sum_{\mu=0}^{3} \partial_\mu^{(v)} \hat{T}^{\mu k}_{(can)}
+= \partial_0^{(v)}(c\hat{\pi}_{v,k}) + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,jk}
+= \frac{d\hat{\pi}_{v,k}}{dt} + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,jk} = 0
+$$
+by (B.12). ∎
 
 ## B.7 Symmetric Physical Microscopic Stress-Energy Tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}$
 

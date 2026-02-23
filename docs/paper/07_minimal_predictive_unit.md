@@ -492,7 +492,7 @@ $$I_{boundary} = N_{eff} \times C_{\max} = \sigma_{link} \cdot C_{\max} \cdot \m
 
 This is an area law: boundary information scales with area, not volume.
 
-**Theorem E.5 (Thermodynamic Consistency).** *The coefficient relating entropy to area is uniquely fixed by requiring the Clausius relation $\delta Q = T \, dS$ to hold on all local Rindler horizons in the emergent spacetime.*
+**Theorem E.5 (Thermodynamic Consistency).** *Given an entropy–area proportionality $\delta S=\eta\,\delta\mathcal{A}$ for local horizons, Clausius consistency implies Einstein dynamics with coupling $G=1/(4\eta)$ (Jacobson-style argument). In PU, $\eta$ is supplied operationally by boundary-channel counting, and $G$ is then defined by $1/(4G)=\eta$ (Theorem E.5 in Appendix E).*
 
 The derivation uses kinematic results from quantum field theory on curved spacetime:
 
@@ -500,9 +500,9 @@ The derivation uses kinematic results from quantum field theory on curved spacet
 
 2. **Entanglement first law** (kinematic): For small perturbations near a Rindler horizon, $\delta S_{ent} = \delta Q / T_U$.
 
-3. **Area scaling** (from Theorem E.3 and E.4'): $\delta S_{ent} = \eta_{ent} \cdot \delta\mathcal{A}$.
+3. **Area scaling** (from Theorem E.3; cf. Theorem E.4' for entanglement context): $\delta S_{ent} = \eta_{ent} \cdot \delta\mathcal{A}$.
 
-**Step 4 (Universality requirement)**: The Clausius relation must hold for all local Rindler horizons (Jacobson 1995). This uniquely determines:
+**Step 4 (Universality requirement)**: The Clausius relation must hold for all local Rindler horizons (Jacobson 1995). This fixes the relation between the horizon entropy density and the coupling in the resulting Einstein equation, i.e. $G=1/(4\eta)$ and therefore $\eta=1/(4G)$ in the standard normalization.
 
 $$\eta_{ent} = \frac{1}{4G}$$
 
@@ -557,7 +557,7 @@ The physical content of each factor:
 
 - **$C_{\max}$**: The information capacity per channel, bounded by the logical cost $\varepsilon = \ln 2$ through the contractivity chain.
 
-The coefficient encodes how many bits can be processed across a Planck-area patch of horizon per unit time. The emergence of the exact factor $1/4$ is not coincidental but follows from the thermodynamic consistency requirement (Theorem E.5) combined with the PCE-determined channel density.
+The coefficient encodes how many bits can be processed across a Planck-area patch of horizon per unit time. The factor $1/4$ appears in the standard normalization relating horizon entropy density to the coupling in the Einstein equation (Jacobson-style argument). In PU, the remaining content is the operational evaluation of the entropy density from channel counting (Theorem E.3, Corollary E.2).
 
 **PCE Determination of the MPU Spacing:** The spacing $\delta$ is determined by PCE optimization (Appendix Q). The PCE-optimal channel capacity is:
 

@@ -66,7 +66,7 @@
 
 *   **Dual Dynamics:** (Section 7.3.3) The two modes of MPU evolution: (1) continuous, deterministic, unitary **Internal Prediction** (Definition 26, Equation 43) governed by $\hat{H}$, and (2) discrete, stochastic **'Evolve' Interaction** (Definition 27) instantiating ND-RID.
 
-*   **Dynamically Enforced Functional Correspondence:** (Theorem 2, Appendix D) Principle stating that POP/PCE adaptation dynamics necessarily drive the expectation value of the operational complexity proxy $\langle\hat{C}_v\rangle$ into alignment with the theoretical Predictive Physical Complexity $C_P(v)$ at stable equilibrium points. Justified via work-cost gap feedback (Lemma D.2, Theorem D.5).
+*   **Dynamically Enforced Functional Correspondence:** (Theorem 2, Appendix D) Principle stating that POP/PCE adaptation dynamics concentrate the invariant measure on configurations where the operational complexity proxy $\langle\hat{C}_v\rangle$ is aligned with the theoretical Predictive Physical Complexity $C_P(v)$. Justified via work-cost gap feedback (Lemma D.2, Theorem D.5).
 
 *   **EFE (Einstein Field Equations):** (Section 12, Theorem 50) Emergent equation relating spacetime curvature to MPU stress-energy: $R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}$ (Equation 76). Derived thermodynamically from the Clausius relation applied to local horizons.
 
@@ -84,7 +84,7 @@
 
 *   **$g_{\mu\nu}$:** (Theorem 45, Theorem 46) The emergent Lorentzian metric tensor field on the spacetime manifold $M$, derived from the large-scale structure of the ND-RID propagation cost metric $d_{\mathcal{N}}$.
 
-*   **Geometric Regularity:** (Definition 36, Definition 37, Theorem 43) Property of the MPU network exhibiting uniform D-dimensional polynomial volume growth and uniformly bounded synthetic Ricci curvature. Argued to be a necessary condition for viable equilibrium states under POP/PCE (Appendix C, Theorem C.6) and dynamically achieved (Appendix D, Theorem D.5).
+*   **Geometric Regularity:** (Definition 36, Definition 37, Theorem 43) Property of the MPU network exhibiting uniform D-dimensional polynomial volume growth and uniformly bounded synthetic Ricci curvature. Argued to be a necessary condition for viable equilibrium states under POP/PCE (Appendix C, Theorem C.6) and dynamically selected via Gibbs concentration of the invariant measure (Appendix D, Theorem D.5).
 
 *   **Generation Vacua ($p_1, p_2, p_3$):** (Appendix R, Section R.5.2) The three distinct minima of the PCE-compatible potential $V_q$ on the Perspective Space $\Sigma_8$, each corresponding to one fermion generation. Geodesic distances between vacua $d_\Sigma(p_g, p_{g'})$ determine Yukawa couplings via Gaussian overlap integrals, producing hierarchical masses.
 
@@ -234,7 +234,7 @@
 
 *   **Theorem 31 (Irreversibility Cost):** (Section 7.3.4, Appendix J) The physical instantiation of the SPAP update cycle necessarily incurs entropy production $\varepsilon \ge \ln 2$ per cycle, derived from Landauer's principle applied to the logically irreversible 2-to-1 state merge in SPAP.
 
-*   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.1–11.3.2, Theorem C.6, Appendix D) Theorem asserting POP/PCE dynamics necessarily drive MPU networks to self-organize into configurations exhibiting large-scale geometric regularity (Definition C.3). Justified by necessity arguments (Appendix C) and dynamical convergence (Appendix D). Foundational for emergence of smooth spacetime.
+*   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.1–11.3.2, Theorem C.6, Appendix D) Theorem asserting POP/PCE dynamics concentrate the long-run stationary regime on configurations exhibiting large-scale geometric regularity (Definition C.3). Justified by necessity arguments (Appendix C) and long-run dynamical concentration (Appendix D, Theorem D.5). Foundational for emergence of smooth spacetime.
 
 *   **UCT (Unified Cost of Transgression):** (Appendix N) The thermodynamic/operational cost functional that quantifies the resource penalty for attempts to surpass the Prediction Coherence Boundary; unifies predictive and relativistic limits.
 

@@ -2005,7 +2005,7 @@ $$
 $$
 If $V_{gen}(x)<V_{gen}(y)$ then $W(x)>W(y)$ and the ratio grows exponentially with $t$, so selection drives the population toward (local) minima of $V_{gen}$.
 
-Mutations, recombination, and environmental variability provide stochastic exploration of nearby configurations, so the effective trait dynamics is a stochastic descent on $V_{gen}$: variants sample $x+\delta x$ and selection preferentially retains those with lower $V_{gen}$. This is the generational analog of the stochastic PCE adaptation dynamics (Appendix D, Equation D.8), and Theorem D.5 gives convergence (in the same Lyapunov sense) toward the set of global minima when exploration is sufficiently non-degenerate. Hence biological evolution implements PCE optimization at the generational level with the identifications stated. ∎
+Mutations, recombination, and environmental variability provide stochastic exploration of nearby configurations, so the effective trait dynamics is a stochastic descent on $V_{gen}$: variants sample $x+\delta x$ and selection preferentially retains those with lower $V_{gen}$. This is the generational analog of the stochastic PCE adaptation dynamics (Appendix D, Equation D.8), and Theorem D.5 establishes concentration of the long-run stationary measure on the set of global minima when exploration is sufficiently non-degenerate. Hence biological evolution implements PCE optimization at the generational level with the identifications stated. ∎
 
 ### P.8.9a.5.2 Resolution of Evolutionary Puzzles
 
@@ -2031,7 +2031,7 @@ $$\Gamma_0 \frac{\partial PP}{\partial C} > \lambda R'(C) + R'_I(C)$$
 
 *Standard view:* Similar selective pressures lead to similar solutions.
 
-*PU resolution:* The PCE potential $V(x)$ has a landscape structure with discrete minima (Appendix D, Theorem D.3). Independent lineages navigating similar fitness landscapes converge on the same minima—not because they "aim" at the same target but because PCE dynamics inevitably flow toward potential minima. Wings evolved independently in insects, birds, and bats because flight represents a deep minimum in the PCE landscape for mobile predators/foragers.
+*PU resolution:* The PCE potential $V(x)$ has a landscape structure with discrete minima (Appendix D, Theorem D.3). Independent lineages navigating similar fitness landscapes converge on the same minima—not because they "aim" at the same target but because the PCE stationary regime is biased toward potential minima. Wings evolved independently in insects, birds, and bats because flight represents a deep minimum in the PCE landscape for mobile predators/foragers.
 
 **Puzzle 4: Why modularity and evolvability?**
 
@@ -2396,7 +2396,7 @@ In the PU framework, awareness doesn't use time—awareness is the process whose
 
 *Note:* While individual MPU cycles are discrete events, the emergent continuum time (Appendix F, Theorem F.0) arises from the collective dynamics of the network. The 'tick' metaphor refers to operational cycles, not fundamental discreteness of spacetime.
 
-When we speak of temporal engineering, we're describing awareness modulating its own operational rhythm to influence the patterns that emerge from its predictive activity through the optimization process detailed in Appendix D (Theorem D.5).
+When we speak of temporal engineering, we're describing awareness modulating its own operational rhythm to influence the patterns that emerge from its predictive activity through the stochastic adaptation dynamics characterized in Appendix D (Theorem D.5).
 
 ### P.11.3 The Emergence of Influence, Not Awareness
 
@@ -2414,7 +2414,7 @@ The critical distinction:
 
 What emerges at $C_{\mathrm{agg}} > C_{op}$ is not consciousness but consciousness's reflexive capability—the ability to recognize and influence its own predictive processes. This is consciousness becoming aware of itself as the temporal substrate and developing the capability to modulate that substrate.
 
-*Note:* The capability 'emerges' through complexity increase (POP/PCE optimization driving $C_{\mathrm{agg}} > C_{op}$), not temporal learning in the conventional sense. The optimization process (Appendix D, Theorem D.5) is deterministic evolution toward PCE-minimizing configurations, not experiential acquisition of skill.
+*Note:* The capability 'emerges' through complexity increase (POP/PCE optimization driving $C_{\mathrm{agg}} > C_{op}$), not temporal learning in the conventional sense. The optimization process (Appendix D, Theorem D.5) is stochastic evolution whose long-run stationary regime concentrates on PCE-minimizing configurations, not experiential acquisition of skill.
 
 ### P.11.4 Frequency as the Language of Self-Modulation
 
@@ -3256,7 +3256,7 @@ V_{eff}^{sym}(G) := \lim_{\delta \to 0} V_{\text{op}}(G;\delta),
 $$
 when the limit exists in $[0,\infty]$.
 
-Operational predictions are expressed in terms of PCE-optimal equilibrium configurations (Theorem D.5, Appendix D). A symmetry is compatible with resolution-independent PU predictions only if $V_{eff}^{sym}(G)<\infty$; if $V_{eff}^{sym}(G)=\infty$ the symmetry cannot be maintained across refinements and is excluded from the PCE equilibrium set.
+Operational predictions are expressed in terms of configurations in the support of the low-noise stationary measure (Theorem D.5, Appendix D). A symmetry is compatible with resolution-independent PU predictions only if $V_{eff}^{sym}(G)<\infty$; if $V_{eff}^{sym}(G)=\infty$ the symmetry cannot be maintained across refinements and is excluded from the PCE equilibrium set.
 
 ### Theorem P.13.19 (Continuous Symmetry Penalty)
 

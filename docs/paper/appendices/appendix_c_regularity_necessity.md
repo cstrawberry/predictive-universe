@@ -43,7 +43,11 @@ $$
 \operatorname{Ric}_{\mathrm{OR}}(v \to u) = 1 - \frac{W_1(\mathcal{P}\delta_v, \mathcal{P}\delta_u)}{d(v,u)}
 \tag{C.3}
 $$
-For adjacent nodes where $d(v,u)=1$ (representing a single effective link cost unit), this simplifies to $\operatorname{Ric}_{\mathrm{OR}}(v \to u) = 1 - W_1(\mathcal{P}\delta_v, \mathcal{P}\delta_u)$. We utilize the bound $W_1(\mathcal{P}\delta_v, \mathcal{P}\delta_u) \le \|P_{v\bullet} - P_{u\bullet}\|_1$, where $P_{x\bullet}$ denotes the probability vector originating from $x$.
+For adjacent nodes where $d(v,u)=1$ (representing a single effective link cost unit), this simplifies to $\operatorname{Ric}_{\mathrm{OR}}(v \to u) = 1 - W_1(\mathcal{P}\delta_v, \mathcal{P}\delta_u)$. We utilize the standard estimate $W_1(p,q) \le \operatorname{diam}(\operatorname{supp} p \cup \operatorname{supp} q)\,\mathrm{TV}(p,q) = \frac{\operatorname{diam}}{2}\,\|p - q\|_1$ for probability measures on a finite metric space. For adjacent $v \sim u$ and one-step neighbor laws, $\operatorname{supp}(\mathcal{P}\delta_v) \cup \operatorname{supp}(\mathcal{P}\delta_u)$ has diameter at most $3$ in the graph metric (worst case: a neighbor of $v$ at distance $1$ from $v$, plus the edge $v \to u$ of length $1$, plus a neighbor of $u$ at distance $1$ from $u$; when $v$ and $u$ share many neighbors, the effective diameter reduces to $2$), so
+$$
+W_1(\mathcal{P}\delta_v, \mathcal{P}\delta_u) \;\le\; \frac{3}{2}\,\|P_{v\bullet} - P_{u\bullet}\|_1,
+$$
+and the constant factor (at most $\frac{3}{2}$, often closer to $1$ for high-overlap neighborhoods) can be absorbed into the geometric constant $C_{geom}$ used below.
 
 ### C.3.1 Properties of the Effective Cost-Rate Function $I(c)$
 The effective cost-rate function $I(c)$, reflecting the local contribution to the global PCE Potential $V(x)$ (main text Definition D.1) due to complexity $c=C_P$, is shaped by the interplay of predictive performance benefits and resource costs. Based on the properties of $PP(c)$ (concave, main text Definition 19), $R(c)$ (convex, main text Definition 3), and $R_I(c)$ (concave, main text Definition 3b), it is assumed that for PCE-optimal configurations, $I(c)$ is both $m$-strongly convex (i.e., $I''(c) \ge m > 0$, ensuring it has a well-defined minimum and certain growth properties facilitating stable optimization) and $M$-smooth (i.e., $|I''(c)| \le M < \infty$) over the relevant range of complexities $c \in [C_{op}, C_{max_phys}]$ (where $C_{max_phys}$ is the maximum physically sustainable complexity). The $M$-smoothness implies its derivative $I'(c) = \partial_{C_P}I(c)$ is $M$-Lipschitz continuous:
@@ -67,12 +71,66 @@ $$
 \tag{C.6}
 $$
 where $I'_{\!*}$ is some value between $I'(C_P(v))$ and $I'(C_P(u))$.
-Combining this with (C.4) and (C.5), and sketching the argument for the $L_1$ norm (a full derivation involves careful handling of $P^{(0)}$ and $Z_x$ effects): the $L_1$ distance $\|P_{v\bullet}-P_{u\bullet}\|_{1}$ can be bounded by a sum of terms, each proportional to differences like that in (C.6). The dominant contribution to this difference comes from vertices $x$ where $P^{(0)}_{vx}$ and $P^{(0)}_{ux}$ are non-zero. Assuming a locally symmetric baseline $P^{(0)}$ and that $Z_v \approx Z_u$ for slowly varying $I'$, the $L_1$ difference will be roughly proportional to the average difference in the exponential terms, weighted by $P^{(0)}$. This leads to a bound of the form:
+Combining (C.4)–(C.6) yields a complete $L_1$ control with explicit normalization dependence (no $Z_v \approx Z_u$ assumption).
+
+**Lemma C.3.3 (Rigorous $L_1$ stability for the complexity-weighted kernel).**
+Let $P$ be given by (C.2) and write $\mu_v := P^{(0)}_{v\bullet}$, extended by zero to all of $\mathcal{V}$ (i.e., $\mu_v(x) := P^{(0)}_{vx}$ for $x \sim v$ and $\mu_v(x) := 0$ otherwise, so that $\mu_v$ is a probability measure on $\mathcal{V}$ supported on the neighbors of $v$). Assume:
+
+1. (**Operating-range monotonicity**) $I'(c) \ge 0$ for $c \in [C_{op}, C_{max\_phys}]$, and define
 $$
-\|P_{v\bullet}-P_{u\bullet}\|_{1} \;\le\; C_{geom} \cdot \lambda_{R}\,e^{\lambda_{R} B}\,M\,L_{C_P},
+B := \sup_w I'(C_P(w)) < \infty.
+$$
+
+2. (**Smoothness**) $I'$ is $M$-Lipschitz (Equation (C.4)).
+
+3. (**Spatial regularity**) $C_P$ obeys the edgewise bound (C.5), hence for the graph metric $d$ one has
+$$
+|C_P(x) - C_P(y)| \le L_{C_P}\,d(x,y) \quad \text{for all } x, y.
+$$
+
+4. (**Bounded local baseline geometry**) For adjacent vertices $v \sim u$, the baseline rows satisfy
+$$
+W_1(\mu_v, \mu_u) \le C_{geom},
+$$
+for some constant $C_{geom} = \mathcal{O}(1)$ depending only on bounded local graph geometry and the chosen baseline kernel $P^{(0)}$.
+
+Then for adjacent $v \sim u$ one has the general estimate
+$$
+\|P_{v\bullet} - P_{u\bullet}\|_1
+\le e^{\lambda_R B}\,\|\mu_v - \mu_u\|_1
++ C_{geom}\,\lambda_R\,e^{\lambda_R B}\,M\,L_{C_P}.
+$$
+In particular, under a locally homogeneous baseline (the "locally symmetric $P^{(0)}$" regime used here), $\mu_v = \mu_u$ for all adjacent $v \sim u$, so $\|\mu_v - \mu_u\|_1 = 0$ and the first term vanishes identically. More generally, whenever $\|\mu_v - \mu_u\|_1 \le \delta_{\mu}$ for some $\delta_{\mu} \ge 0$, the full bound reads $\|P_{v\bullet} - P_{u\bullet}\|_1 \le e^{\lambda_R B}\,\delta_{\mu} + C_{geom}\,\lambda_R\,e^{\lambda_R B}\,M\,L_{C_P}$. In the locally homogeneous regime ($\delta_{\mu} = 0$) one obtains the advertised bound
+$$
+\|P_{v\bullet} - P_{u\bullet}\|_{1} \;\le\; C_{geom} \cdot \lambda_{R}\,e^{\lambda_{R} B}\,M\,L_{C_P}.
 \tag{C.7}
 $$
-where $B = \sup_w |I'(C_P(w))|$ is finite (since $C_P$ operates in a bounded range $[C_{op}, C_{max_phys}]$ for viable systems, and $I'$ is continuous on this compact set), and $C_{geom}$ is an $\mathcal{O}(1)$ constant reflecting local graph geometry (e.g., average degree). We define the parameter with the geometric factor kept explicit:
+
+*Proof.* Define $w(x) := \exp(-\lambda_R I'(C_P(x)))$ and $Z_v := \sum_x \mu_v(x) w(x)$. Since $0 \le I'(C_P(x)) \le B$, one has $w(x) \in [e^{-\lambda_R B}, 1]$ and therefore $Z_v \in [e^{-\lambda_R B}, 1]$, so $1/Z_v \le e^{\lambda_R B}$. For any $x$,
+$$
+P_{vx} - P_{ux}
+= \frac{\mu_v(x) w(x)}{Z_v} - \frac{\mu_u(x) w(x)}{Z_u}
+= \frac{w(x)}{Z_v}\bigl(\mu_v(x) - \mu_u(x)\bigr) + \mu_u(x) w(x)\Big(\frac{1}{Z_v} - \frac{1}{Z_u}\Big).
+$$
+Taking $\ell_1$ norms and using $\sum_x \mu_u(x) w(x) = Z_u$ gives
+$$
+\|P_{v\bullet} - P_{u\bullet}\|_1
+\le \frac{1}{Z_v}\|\mu_v - \mu_u\|_1 + \frac{|Z_v - Z_u|}{Z_v}
+\le e^{\lambda_R B}\|\mu_v - \mu_u\|_1 + e^{\lambda_R B}|Z_v - Z_u|.
+$$
+Moreover $Z_v = \mathbb{E}_{\mu_v}[w]$. Using (C.4) and the global consequence of (C.5), the function $I'(C_P(\cdot))$ is $M L_{C_P}$-Lipschitz, and since $z \mapsto e^{-\lambda_R z}$ has derivative bounded by $\lambda_R$ on $z \ge 0$, one has
+$$
+|w(x) - w(y)| \le \lambda_R\,|I'(C_P(x)) - I'(C_P(y))|
+\le \lambda_R M L_{C_P}\,d(x,y),
+$$
+so $\operatorname{Lip}(w) \le \lambda_R M L_{C_P}$. By Kantorovich–Rubinstein duality,
+$$
+|Z_v - Z_u|
+= \bigl|\mathbb{E}_{\mu_v}[w] - \mathbb{E}_{\mu_u}[w]\bigr|
+\le \operatorname{Lip}(w)\,W_1(\mu_v, \mu_u)
+\le \lambda_R M L_{C_P}\,C_{geom}.
+$$
+Substituting this bound into the previous display yields the stated estimate and hence (C.7) in the locally homogeneous baseline regime. □ We define the parameter with the geometric factor kept explicit:
 
 $$
 \eta_{R} \;:=\; C_{geom}\,\lambda_{R}\,e^{\lambda_{R} B}\,M\,L_{C_P}.
@@ -80,7 +138,7 @@ $$
 $$
 For the MPU network to function as a stable, information-processing substrate, this parameter $\eta_{R}$ must be strictly less than 1. The parameter $\eta_R$ bounds the Wasserstein-1 distance, which in turn bounds the distinguishability of the local one-step evolution distributions originating from nodes $v$ and $u$. If $\eta_R \ge 1$, it would imply that a small, bounded difference in the underlying control parameter ($C_P$) could lead to a large, potentially maximal difference in the resulting probability distributions. This signifies a channel with extremely high sensitivity or "information gain" regarding the parameter $C_P$. Such high sensitivity is fundamentally incompatible with the established information-theoretic limits of the underlying ND-RID channels, which are strictly contractive ($f_{RID} < 1$, Lemma E.1) and have a finite classical capacity $C_{\max} < \ln d_0$ (Theorem E.2). A value of $\eta_R \ge 1$ implies a large information gain from a small parameter change; if sustained, this would correspond to an effective local channel for inferring $C_P$ whose capacity could exceed the fundamental ND-RID bounds. Such a configuration is physically unrealizable or thermodynamically prohibitive. Therefore, the Principle of Compression Efficiency (PCE), by enforcing consistency with these fundamental constraints, must select for effective interaction parameters and network configurations such that $\eta_{R} < 1$.
 
-Given $W_1(\mathcal P\delta_v,\mathcal P\delta_u) \le \|P_{v\bullet}-P_{u\bullet}\|_{1}$, we have:
+Using the local-support estimate $W_1 \le \frac{3}{2}\|\cdot\|_1$ (absorbed into $C_{geom}$ as noted after (C.3)) together with (C.7), we have
 $$
 W_1\bigl(\mathcal P\delta_v,\mathcal P\delta_u\bigr)\;\le\;\eta_{R}.
 \tag{C.9}
@@ -114,6 +172,21 @@ R_h(x):=\frac{2D(D+2)}{h^2}\cdot\frac{1}{\deg(x)}\sum_{y\sim x}\kappa_h(x,y)=R_g
 \tag{C.10b}
 $$
 so that $R_h\to R_g$ in $L^1_{\mathrm{loc}}$ under refinement. This provides the discrete-to-continuum bridge used in the locality/consistency hypothesis of Theorem D.6 (Appendix D). [Ollivier 2009; van der Hoorn et al. 2020]
+
+*Justification of the neighbor-average step.* Under the local isotropy condition (which improves as the mesh refines, with error $O(h)$ relative to the continuum limit)
+$$
+\frac{1}{\deg(x)}\sum_{y \sim x} \hat{v}_{x \to y}\,\hat{v}_{x \to y}^{\mathsf{T}}
+= \frac{1}{D} I + O(h),
+$$
+write $\mathrm{Ric}_g(x)$ in an orthonormal basis at $x$. Then
+$\mathrm{Ric}_g(\hat{v}, \hat{v}) = \hat{v}^{\mathsf{T}} \mathrm{Ric}_g(x) \hat{v}$ and therefore
+$$
+\frac{1}{\deg(x)}\sum_{y \sim x} \mathrm{Ric}_g(\hat{v}_{x \to y}, \hat{v}_{x \to y})
+= \mathrm{Tr}\!\left(\mathrm{Ric}_g(x) \cdot \frac{1}{\deg(x)}\sum_{y \sim x} \hat{v}_{x \to y} \hat{v}_{x \to y}^{\mathsf{T}}\right)
+= \frac{1}{D}\,\mathrm{Tr}(\mathrm{Ric}_g(x)) + O(h)
+= \frac{1}{D} R_g(x) + O(h).
+$$
+Averaging (C.10a) over neighbors and substituting the previous display gives (C.10b).
 
 
 ## C.4 Penalization of Anomalous Network Dimension

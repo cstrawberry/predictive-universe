@@ -28,7 +28,7 @@ A fundamental structural feature of the PU framework is that the ND-RID channel 
 $$
 S_{boundary} = N_{eff} \cdot S_{channel}^{max} = \sigma_{link} \cdot \mathcal{A} \cdot k_B \cdot C_{\max}
 $$
-where $\sigma_{link} = \chi/(\eta\delta^2)$ is the effective surface density of independent channels. This yields the area law with coefficient $\sigma_{link} \cdot C_{\max} = 1/(4G)$ (Theorem E.5).
+where $\sigma_{link} = \chi/(\eta\delta^2)$ is the effective surface density of independent channels. Writing the operational area law in the standard normalization defines $1/(4G):=\sigma_{link}\,C_{\max}$ (Theorem E.5).
 
 **Part C (Gravitational Constant).** From Equation E.9, requiring Clausius consistency on all local horizons fixes:
 $$

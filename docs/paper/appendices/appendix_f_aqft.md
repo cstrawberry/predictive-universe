@@ -42,8 +42,19 @@ e^{-\mu\bigl(d_{\mathcal N_n}(X,Y)-v_{LR}^{(n)}\,t\bigr)}.
 \tag{F.1}
 $$
 
-**Proof:** 
-The proof relies on generalized Lieb-Robinson bounds applicable to open quantum systems governed by local Liouvillian dynamics. The evolution is given by $\alpha_t^{(n)} = e^{t\mathcal{L}_n}$. Standard techniques for proving such bounds on lattices with local interactions involve analyzing the propagation of operators under the action of the Liouvillian superoperator $\mathcal{L}_n$. The finite interaction range ensures locality of the generators. The contractive nature of the underlying ND-RID process bounds the strength of the non-unitary part of the Liouvillian. Together, these properties ensure that the norm of the commutator decays exponentially outside a linear light-cone defined by a finite Lieb-Robinson velocity $v_{LR}^{(n)}$, yielding the form in (F.1).
+**Proof:**
+Work in the Heisenberg picture where observables evolve by $\frac{d}{dt}A(t)=\mathcal{L}^*(A(t))$. Assume the Lindbladian decomposes as $\mathcal{L}^*=\sum_{Z}\mathcal{L}_Z^*$ with $\mathrm{diam}(Z)\le r_0$ and $\|\mathcal{L}_Z^*\|_{\infty\to\infty}\le J$ (operator norm on observables). Let $A$ and $B$ be supported on disjoint regions $X$ and $Y$. Define
+$$
+C_{X,Y}(t):=\sup_{\|A\|_\infty\le 1,\,\|B\|_\infty\le 1}
+\|[A(t),B]\|_\infty.
+$$
+Using Duhamel's formula and locality of $\mathcal{L}_Z^*$ one obtains the standard recursive inequality (see e.g. [Nachtergaele & Sims 2010]) which implies existence of constants $\mu>0$, $c>0$ and a velocity $v_{\rm LR}=v_{\rm LR}(J,r_0,z_{\max})$ such that
+$$
+\|[A(t),B]\|_\infty
+\le
+c\,|X|\,e^{-\mu(d(X,Y)-v_{\rm LR}t)}\,\|A\|_\infty\,\|B\|_\infty,
+$$
+yielding the form in (F.1). Constructive constants are given below.
 
 **Explicit ND–RID Lieb–Robinson bound.** Consider an ND–RID update with cycle time $\tau$, interaction radius $r_0$, per‑cycle circuit depth $D$, max degree $z_{\max}$, and a uniform bound on local generators (or per‑layer gate norms bounded by $K$, where $K\le e^{J_{\max}\tau}$ if $J_{max}$ is the maximum local interaction strength). Then there exist $C,\mu>0$ such that for disjoint supports $X,Y$ at graph distance $d$ and time $t=n\tau$,
 

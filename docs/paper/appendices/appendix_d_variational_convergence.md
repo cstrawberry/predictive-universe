@@ -4,7 +4,7 @@
 
 This Appendix develops the variational perspective on the Predictive Universe (PU) framework's dynamics, providing rigorous dynamical justifications for two cornerstone results presented in the main text:
 1.  **Theorem 2 (Dynamically Enforced Functional Correspondence):** Demonstrating that the operational complexity proxy $\langle \hat{C}_v \rangle$ aligns with the theoretical Predictive Physical Complexity $C_P(v)$ at viable equilibria.
-2.  **Theorem 43 (Necessary Emergence of Geometric Regularity):** Showing that the adaptation dynamics converge almost surely to configurations exhibiting geometric regularity, complementing the necessity argument in Appendix C.
+2.  **Theorem 43 (Necessary Emergence of Geometric Regularity):** Showing that the long-run adaptation dynamics concentrate on configurations exhibiting geometric regularity, complementing the necessity argument in Appendix C.
 
 We introduce the **Principle of Compression Efficiency (PCE) Potential $V(x)$**, an effective potential function derived from the framework's core principles (Axiom 1: POP, Definition 15: PCE). The system's slow adaptation dynamics, governing the evolution of the network configuration $x(t)$, are modeled as a stochastic gradient flow on the landscape defined by $V(x)$. The stochastic differential equation (SDE) governing these dynamics is:
 $$
@@ -87,7 +87,7 @@ Integrating over $\tau$ and dividing by $\tau$, assuming $\delta_v$ and $R'(\lan
 *   *Justification for (1):* By definition, $R(C_P)$ is the *minimal* theoretical cost. Any physical implementation dissipating more power is, by definition, less efficient. PCE dynamics, which minimize the global potential $V(x)$, will select against such inefficient configurations. Therefore, any stable equilibrium state $x^*$ must correspond to a physical implementation operating at this theoretical efficiency limit.
 *   *Justification for (2):* Physical dissipation manifests as observable physical quantities (e.g., heat flux, energy transfer to the environment). For the MPU to solve the POP (Axiom 1) effectively, its adaptation dynamics must be coupled to the physical realities of its resource consumption. The MPU must be able to "sense" its own operational cost rate to optimize its behavior. The work-cost gap $\Delta W_v$ is precisely this feedback signal.
 
-With these justifications, the observable work-cost gap $\Delta W_v(\tau)$ provides a direct physical feedback signal proportional to the misalignment $\delta_v$. The system's adaptation dynamics, driven by PCE to maximize overall efficiency, will act to reduce this gap. Driving $\Delta W_v \to 0$ is equivalent to driving $\delta_v \to 0$. This mechanism is rigorously proven to ensure alignment in Theorem D.5.
+With these justifications, the observable work-cost gap $\Delta W_v(\tau)$ provides a direct physical feedback signal proportional to the misalignment $\delta_v$. The system's adaptation dynamics, driven by PCE to maximize overall efficiency, will act to reduce this gap. Driving $\Delta W_v \to 0$ is equivalent to driving $\delta_v \to 0$. This mechanism is formalized in Theorem D.5 in terms of the long-run behavior of the stochastic dynamics.
 
 **Robustness to Noise and Deviations from Ideal Efficiency:** In a realistic physical setting, the measurement of the work-cost gap $\Delta W_v$ will be subject to noise (e.g., thermal fluctuations, measurement imperfections), and the system may temporarily deviate from the idealized efficiency $R(C_P)$. This means the feedback signal is stochastic: $\Delta W_v^{obs} = \Delta W_v + \xi_W$, where $\xi_W$ is noise. However, the adaptation dynamics governed by PCE are fundamentally stochastic (Equation D.8). As long as the noise $\xi_W$ is unbiased ($\mathbb{E}[\xi_W]=0$) and the feedback signal remains correlated with the true misalignment $\delta_v$, the dynamics will still drive the expected misalignment towards zero, $\mathbb{E}[\delta_v] \to 0$. This feedback process physically implements the necessary restoring force, equivalent to the gradient term $-\nabla_{\langle C_v \rangle} V_{proxy}$, ensuring the operational complexity estimate is continuously calibrated against physical reality, forcing alignment at stable equilibria.
 
@@ -127,7 +127,7 @@ $$
 \limsup_{t\to\infty} \mathbb E[\mathcal M(x(t))] \le \frac{C'_{noise}}{\eta'_{proxy}}
 \quad \text{(D.6)}
 $$
-If the effective noise driving misalignment vanishes in the stable state ($C'_{noise} \to 0$), then $\mathbb E[\mathcal M(x(t))] \to 0$, implying $C_P(v) = \langle \hat{C}_v \rangle$ almost surely in the limit. More generally, the ergodic time-average of $\langle \hat{C}_v \rangle_{x(t)}$ converges to $C_P(v)$ with probability 1. This provides the formal justification for Theorem 2.
+If the effective noise driving misalignment is sufficiently small, then $\mathbb E[\mathcal M(x(t))]$ becomes small, implying $C_P(v) \approx \langle \hat{C}_v \rangle$ in the mean. More generally, under the ergodic stationary regime of the stochastic dynamics (Theorem D.5), the long-run time-average of $\langle \hat{C}_v \rangle_{x(t)}$ converges to its expectation under the invariant measure, providing the formal justification for Theorem 2.
 
 *Proof.* From Equation (D.5), $d\mathbb{E}[\mathcal{M}]/dt \le C'_{noise}$ when $\nabla V_{proxy}=0$. This implies $\mathbb{E}[\mathcal{M}]$ is bounded. Standard results for stochastic processes with such Lyapunov properties show convergence of the expectation to a bounded region around the minimum, with the bound related to the ratio of noise to restoring force, as in Equation (D.6). QED
 
@@ -209,11 +209,12 @@ We use stochastic Lyapunov methods, common in the analysis of stochastic approxi
 
 We make standard technical assumptions required for the convergence theorems, justifying them from the physical principles of the PU framework.
 *   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The $C^2$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms ($V_{op}, V_{prop}$) are expected to grow super-linearly with complexity and network size (e.g., $R(C) \propto C^{\gamma_p}$ with $\gamma_p > 1$), while the benefit term ($V_{benefit}$) saturates (due to $PP < \beta$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
-*   **(A2) Rate Matrix Bounds:** The rate matrix $A$ is bounded and Lipschitz on $\mathcal{X}_{adm}$: there exists $K_A < \infty$ such that $\|A(x)\| \le K_A$, and $\|A(x) - A(y)\| \le L_A \|x-y\|$ for all $x,y$. *Physical Justification:* In PU, $A$ encodes local equilibration/update rates of ND-RID channels and local routing policies. These are bounded by finite cycle times and finite per-step dissipation (each irreversible ND-RID update has $\varepsilon\ge\ln 2$, Theorem 31), and Lipschitz dependence expresses local response of rates to small changes in configuration, consistent with near-equilibrium linear response [Onsager 1931].
+*   **(A2) Mobility Bounds:** The mobility matrix $\eta(x)$ is symmetric positive definite, bounded, and Lipschitz on $\mathcal{X}_{adm}$: there exist constants $0<\eta_{\min}\le \eta_{\max}<\infty$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$,
+$\eta_{\min}\|v\|^2 \le v^T\eta(x)v \le \eta_{\max}\|v\|^2$, and $\|\eta(x)-\eta(y)\|\le L_\eta\|x-y\|$ for all $x,y$. *Physical Justification:* In PU, $\eta$ encodes local equilibration/update rates of ND-RID channels and local routing policies. These are bounded by finite cycle times and finite per-step dissipation (each irreversible ND-RID update has $\varepsilon\ge\ln 2$, Theorem 31), and Lipschitz dependence expresses local response of rates to small changes in configuration, consistent with near-equilibrium linear response [Onsager 1931].
 *   **(A3) Diffusion Matrix Bounds:** The diffusion matrix $D(x)$ is bounded and uniformly elliptic. Specifically, there exist constants $0<\lambda_{min}\le\lambda_{max}<\infty$ such that for all $x$ and all vectors $v$, $\lambda_{min}\|v\|^2 \le v^T D(x) v \le \lambda_{max}\|v\|^2$. *Physical Justification:* In PU, diffusion models aggregate microscopic stochasticity of ND-RID routing and environmental forcing. Uniform bounds correspond to finite-temperature noise with bounded per-step fluctuations set by finite update rates and capacity constraints (e.g., bounded degree $\Delta_{max}$ and minimal cycle time $\tau_{min}$), preventing arbitrarily large instantaneous kicks while ensuring ergodic exploration of admissible configurations.
 *   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
 *   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
-*   **(A6) Noise Irreducibility:** The stochastic forcing is irreducible on $\mathcal{X}_{adm}$: for any nonempty open set $U\subset\mathcal{X}_{adm}$ and any $t>0$, the transition probability satisfies $\mathbb{P}_x(X_t\in U)>0$. A sufficient condition is uniform non-degeneracy of the diffusion (already implied by (A3)): there exists $\lambda_*>0$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$, $v^T D(x)v\ge \lambda_*\|v\|^2$. *Physical Justification:* PU includes irreducible environmental/measurement noise and ND-RID stochasticity; without such forcing, some degrees of freedom could become trapped on invariant submanifolds, breaking ergodicity and preventing convergence to global PCE equilibria (Theorem D.5).
+*   **(A6) Noise Irreducibility:** The stochastic forcing is irreducible on $\mathcal{X}_{adm}$: for any nonempty open set $U\subset\mathcal{X}_{adm}$ and any $t>0$, the transition probability satisfies $\mathbb{P}_x(X_t\in U)>0$. A sufficient condition is uniform non-degeneracy of the diffusion (already implied by (A3)): there exists $\lambda_*>0$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$, $v^T D(x)v\ge \lambda_*\|v\|^2$. *Physical Justification:* PU includes irreducible environmental/measurement noise and ND-RID stochasticity; without such forcing, some degrees of freedom could become trapped on invariant submanifolds, breaking ergodicity and preventing concentration of the invariant measure on global PCE equilibria (Theorem D.5).
 
 ### D.6.2 Lyapunov Analysis
 
@@ -258,27 +259,43 @@ Any configuration $x^* \in \mathcal{E}_{*}$ must simultaneously satisfy:
 
 ### D.6.4 Noise-Driven Escape from Non-Global Minima
 
-**Lemma D.6 (Escape from Suboptimal Basins).**
-Under Assumption (A6) (sufficiently non-degenerate noise), the stochastic dynamics (Equation D.8) ensure that the system cannot remain trapped indefinitely in any local minimum $x_{local} \in \mathcal{E}_{*}$ that is not a global minimum. The noise provides the mechanism to overcome potential barriers between different minima. The expected time to escape from the basin of attraction of a non-global minimum is finite.
-
-*Proof.* This is a standard result from the theory of stochastic differential equations and large deviations (e.g., Freidlin-Wentzell theory). Sufficient noise ensures that the process is irreducible, meaning it can eventually transition between any two regions of the state space allowed by the dynamics. This prevents permanent trapping in local minima that are not global minima. The escape time typically scales exponentially with the potential barrier height relative to the noise strength, but it is finite almost surely. See, e.g., [Kushner & Yin 2003] for details on convergence properties of stochastic recursive algorithms. QED
-
-### D.6.5 Global Convergence Proof
-
-**Theorem D.5 (Almost-Sure Convergence to Aligned, Regular Global Minima).**
-Under Assumptions (A1)-(A6), the trajectory $x(t)$ of the stochastic PCE dynamics (Equation D.8) converges almost surely to the set $\mathcal{E}_{*}^{\text{global}}$ of global minima of the PCE potential $V(x)$ as $t \to \infty$. That is:
+**Lemma D.6 (Almost-Sure Exit from Any Bounded Neighborhood Under Non-Degenerate Noise).**
+Consider the stochastic PCE dynamics (Equation D.8). Let $\mathcal{D}\subset\mathcal{X}_{adm}$ be any bounded open set, and define the exit time
 $$
-\operatorname*{dist}\bigl(x(t),\mathcal E_{\!*}^{\mathrm{global}}\bigr)\;\xrightarrow[t\to\infty]{a.s.}\;0
-\quad \text{(D.12)}
+\tau_{\mathcal{D}} := \inf\{t\ge 0 : x(t)\notin \mathcal{D}\}.
 $$
-where $\operatorname*{dist}(x, A) = \inf_{y \in A} \|x-y\|$. Furthermore, by Theorem D.3, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ is necessarily both geometrically regular and exhibits complexity alignment.
+Under Assumptions (A3) (uniform ellipticity) and (A6) (noise irreducibility), we have
+$$
+\mathbb{P}_x[\tau_{\mathcal{D}}<\infty]=1 \quad \text{for every }x\in\mathcal{D}. \qquad \text{(D.11a)}
+$$
+In particular, the process cannot remain trapped indefinitely inside any bounded neighborhood of a strict non-global local minimum.
 
-*Proof.*
-1.  **Lyapunov Property:** $V(x)$ serves as a stochastic Lyapunov function. Equation (D.10) shows that $\mathcal{L}V(x) \le -\eta_{min} \|\nabla V(x)\|^2 + C_{noise}$. This implies that $V(x(t))$ tends to decrease on average when the gradient is non-zero. Standard stochastic Lyapunov theorems (e.g., related to LaSalle's invariance principle adapted for SDEs) state that under conditions (A1)-(A5), the process $x(t)$ converges almost surely to the largest invariant set contained within $\{x \mid \mathcal{L}V(x) \ge 0\}$, which under mild conditions on the noise is related to the critical set $\mathcal{E}_{*} = \{x \mid \nabla V(x) = 0\}$.
-2.  **Escape from Non-Global Minima:** Assumption (A6) and Lemma D.6 ensure that the process does not get permanently trapped in local minima within $\mathcal{E}_{*}$ that are not global minima.
-3.  **Convergence to Global Minima:** Combining the Lyapunov property (convergence towards $\mathcal{E}_{*}$) with the escape property (no permanent trapping in non-global minima) implies that the process $x(t)$ must spend an increasing fraction of time in the neighborhoods of the global minima as $t \to \infty$. Under sufficient ergodicity conditions provided by (A6), this leads to almost sure convergence to the set of global minima $\mathcal{E}_{*}^{\text{global}}$, as stated in Equation (D.12). Detailed proofs can be found in texts on stochastic approximation and control, e.g., [Kushner & Yin 2003].
-4.  **Properties of Limit Set:** By Theorem D.3, the set of global minima $\mathcal{E}_{*}^{\text{global}}$ consists exclusively of configurations that are both geometrically regular and satisfy complexity alignment.
-5.  **Conclusion:** The stochastic dynamics (Equation D.8), modeling the adaptation process under POP/PCE, ensure that the system configuration $x(t)$ converges almost surely to the set of configurations that globally minimize the PCE potential, and these configurations necessarily exhibit geometric regularity and complexity alignment. QED
+*Proof sketch.* Under (A3)–(A4), the diffusion is strong Feller, and under (A6) it is topologically irreducible on $\mathcal{X}_{adm}$. Fix any $T>0$ and define $p_T(x):=\mathbb{P}_x[\tau_{\mathcal{D}}\le T]$. Irreducibility implies $p_T(x)>0$ for all $x\in\overline{\mathcal{D}}$; strong Feller implies $x\mapsto p_T(x)$ is continuous. Since $\overline{\mathcal{D}}$ is compact, $p_*:=\inf_{x\in\overline{\mathcal{D}}}p_T(x)>0$. The strong Markov property then gives $\mathbb{P}_x[\tau_{\mathcal{D}}>nT]\le (1-p_*)^n\to 0$, hence $\tau_{\mathcal{D}}<\infty$ almost surely. See, e.g., [Pavliotis 2014; Freidlin & Wentzell 2012] for rigorous statements of these elliptic diffusion properties. QED
+
+### D.6.5 Global Ergodicity and Low-Noise Concentration
+
+**Theorem D.5 (Ergodic Long-Run Behavior and Low-Noise Bias Toward PCE-Optimal Equilibria).**
+Under Assumptions (A1)–(A6), the stochastic dynamics (D.8) define a strong Markov diffusion on the compact set $\mathcal{K}$ (A5). For strictly non-vanishing noise ($\lambda_{\min}>0$ in (A3)), the process does **not** converge almost surely to a single equilibrium point; instead it admits a unique invariant probability measure $\pi$ and is ergodic. In particular, for any bounded measurable observable $f$,
+$$
+\frac{1}{T}\int_0^T f(x(t))\,dt \xrightarrow[T\to\infty]{a.s.} \int_{\mathcal{K}} f(x)\,\pi(dx). \qquad \text{(D.12)}
+$$
+
+To relate this stationary regime to PCE-optimal equilibria, consider a "temperature-scaled" family of dynamics obtained by scaling the diffusion as $D_\theta(x):=\theta\,D(x)$ for $\theta>0$ (so the noise strength decreases as $\theta\downarrow 0$). Let $\pi_\theta$ denote the invariant measure of the corresponding diffusion. Then, in regimes where detailed balance holds (e.g., constant-coefficient Langevin with $D_\theta=\theta\,\eta$ and symmetric constant $\eta$), $\pi_\theta$ has the Gibbs form
+$$
+\pi_\theta(dx) \;=\; Z_\theta^{-1}\exp\!\left(-\frac{V(x)}{\theta}\right)\,dx, \qquad \text{(D.12a)}
+$$
+and therefore concentrates on the set of global minimizers
+$\mathcal{E}_{*}^{\text{global}}:=\arg\min_{x\in\mathcal{K}}V(x)$ as $\theta\downarrow 0$. Concretely, for any $\delta>0$ let
+$\Delta_\delta:=\inf\{V(x)-V_{\min}:\operatorname*{dist}(x,\mathcal{E}_{*}^{\text{global}})>\delta\}>0$.
+Then
+$$
+\pi_\theta\bigl(\{x:\operatorname*{dist}(x,\mathcal{E}_{*}^{\text{global}})>\delta\}\bigr) \;\le\; C_\delta\,e^{-\Delta_\delta/\theta}, \qquad \text{(D.12b)}
+$$
+for all $\theta\in(0,\theta_0]$, where $\theta_0>0$ is any fixed reference temperature and $C_\delta<\infty$ is a constant depending on $\mathcal{K}$, $\delta$, and $\theta_0$ (absorbing polynomial-in-$1/\theta$ prefactors arising from the Laplace approximation to the partition function $Z_\theta$).
+
+Finally, by Theorem D.3, every configuration in $\mathcal{E}_{*}^{\text{global}}$ is both geometrically regular and complexity-aligned.
+
+*Proof sketch.* Existence/uniqueness of $\pi$ and ergodicity follow from uniform ellipticity (A3), irreducibility (A6), and compact confinement (A5) (standard elliptic diffusion theory; see, e.g., [Pavliotis 2014]). In the detailed-balance Langevin case, (D.12a) is verified by direct substitution into the stationary Fokker–Planck equation, and (D.12b) follows by bounding the Gibbs integral over a set separated by an energy gap $\Delta_\delta$. QED
 
 ## D.7 Formal Justification of Theorems 2 and 43
 
@@ -302,7 +319,7 @@ $$
 and minimizers/critical points of $\mathcal F_h$ converge (up to subsequences) to critical points of $\mathcal F$ (the Einstein-Hilbert plus MPU action). The convergence of the discrete metric spaces is understood in the pointed Gromov-Hausdorff sense (Section 11).
 
 **Remark D.6.1 (PU motivation for hypotheses).**
-(i) Appendix C shows that configurations with anomalous volume growth (Definition C.1) or without a uniform positive discrete Ricci lower bound (Definition C.2-C.3) violate at least one of R1-R3 at sufficiently large scale (Theorem C.5). PCE-optimal equilibria (Theorem D.5) are therefore confined to bounded-geometry families, motivating the equicoercivity hypothesis needed for $\Gamma$-convergence [Gromov 1999].
+(i) Appendix C shows that configurations with anomalous volume growth (Definition C.1) or without a uniform positive discrete Ricci lower bound (Definition C.2-C.3) violate at least one of R1-R3 at sufficiently large scale (Theorem C.5). The support of the low-noise stationary measure (Theorem D.5) is therefore confined to bounded-geometry families, motivating the equicoercivity hypothesis needed for $\Gamma$-convergence [Gromov 1999].
 (ii) Remark C.3.3a supplies an explicit local scalar curvature estimator built from Ollivier-Ricci curvature at mesh scale $h$, providing a concrete realization of the locality/consistency requirement for the Einstein-Hilbert term.
 (iii) Appendix E derives the thermodynamic area law and fixes the emergent gravitational constant $G$ (Theorem E.6), providing the normalization invoked in (iii).
 
@@ -338,14 +355,14 @@ By the fundamental theorem of $\Gamma$-convergence [Dal Maso 1993; Braides 2002]
 This appendix thus provides the rigorous foundation for the dynamical aspects of the Predictive Universe framework.
 
 **Theorem 2 (Dynamically Enforced Functional Correspondence - Justified):**
-The slow adaptation dynamics of the MPU network, modeled as a stochastic gradient flow minimizing the PCE Potential $V(x)$ (Equation D.8), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.4, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily satisfies the complexity alignment condition $C_P(v) = \langle\hat C_v\rangle_{x^*}$ for all $v$. This alignment is enforced physically via the observable work-cost gap feedback mechanism (Lemma D.2), which implements the necessary alignment gradient term implicitly within the operational dynamics minimizing $V(x)$ (Theorem D.1, Corollary D.2).
+The slow adaptation dynamics of the MPU network, modeled as a stochastic gradient flow minimizing the PCE Potential $V(x)$ (Equation D.8), concentrate in their long-run stationary regime on the set of global minima $\mathcal{E}_{*}^{\text{global}}$ (Theorem D.5). By Theorem D.4, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily satisfies the complexity alignment condition $C_P(v) = \langle\hat C_v\rangle_{x^*}$ for all $v$. This alignment is enforced physically via the observable work-cost gap feedback mechanism (Lemma D.2), which implements the necessary alignment gradient term implicitly within the operational dynamics minimizing $V(x)$ (Theorem D.1, Corollary D.2).
 
-*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.4 proves that global minima must be aligned. Theorem D.1 and Lemma D.2 establish the mechanism driving alignment within the operational potential framework.
+*Proof Reference:* Theorem D.5 establishes ergodicity and low-noise concentration on the global minima. Theorem D.4 proves that global minima must be aligned. Theorem D.1 and Lemma D.2 establish the mechanism driving alignment within the operational potential framework.
 
 **Theorem 43 (Dynamical Emergence of Geometric Regularity - Justified):**
-The slow adaptation dynamics of the MPU network (Equation D.8), driven by minimizing the PCE Potential $V(x)$ which inherently penalizes irregularity (Theorem D.2, Lemma D.3), converge almost surely (Theorem D.5) to the set of global minima $\mathcal{E}_{*}^{\text{global}}$. By Theorem D.4, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily exhibits large-scale geometric regularity (Definition C.3).
+The slow adaptation dynamics of the MPU network (Equation D.8), driven by minimizing the PCE Potential $V(x)$ which inherently penalizes irregularity (Theorem D.2, Lemma D.3), concentrate in their long-run stationary regime on the set of global minima $\mathcal{E}_{*}^{\text{global}}$ (Theorem D.5). By Theorem D.4, any configuration $x^* \in \mathcal{E}_{*}^{\text{global}}$ necessarily exhibits large-scale geometric regularity (Definition C.3).
 
-*Proof Reference:* Theorem D.5 proves convergence to the global minima. Theorem D.4 proves that global minima must be geometrically regular. Theorem D.2 and Lemma D.3 establish how the PCE potential inherently penalizes irregularity, driving the system towards regular configurations.
+*Proof Reference:* Theorem D.5 establishes concentration on the global minima. Theorem D.4 proves that global minima must be geometrically regular. Theorem D.2 and Lemma D.3 establish how the PCE potential inherently penalizes irregularity, driving the system towards regular configurations.
 
 
 **D.8 Rigorous Convergence Analysis for Complexity Adaptation**
@@ -484,9 +501,9 @@ $$
 
 ensuring tight convergence to the optimal complexity.
 
-**Connection to Global Dynamics:** This local analysis complements the global convergence (Theorem D.5) by providing explicit rates. The global theorem ensures the system reaches a neighborhood of $C^\star$; this theorem quantifies how quickly it equilibrates within that neighborhood.
+**Connection to Global Dynamics:** This local analysis complements the global ergodicity result (Theorem D.5) by providing explicit rates. The global theorem ensures the stationary measure concentrates near $C^\star$; this theorem quantifies how quickly the system equilibrates within that neighborhood.
 
-The complexity adaptation is provably convergent with exponential rate $\underline{\lambda}\,\eta_{adapt}$ to a unique optimum $C^\star$, which then remains in almost-sure alignment with the true physical cost $C_P$ (Theorem 2). The residual variance is suppressed by the ND-RID noise floor, ensuring high-fidelity tracking of optimal complexity.
+The complexity adaptation is provably convergent with exponential rate $\underline{\lambda}\,\eta_{adapt}$ to a unique optimum $C^\star$, which then remains in sustained alignment (up to the stationary fluctuation level implied by the ND-RID noise floor) with the true physical cost $C_P$ (Theorem 2). The residual variance is suppressed by the ND-RID noise floor, ensuring high-fidelity tracking of optimal complexity.
 
 ## D.9 Conclusion
 
@@ -494,8 +511,8 @@ This appendix has provided a rigorous analysis grounded in the variational persp
 
 1.  **Alignment (Theorem 2)** is dynamically enforced. The operational complexity proxy $\langle \hat{C}_v \rangle$ necessarily aligns with the theoretical Predictive Physical Complexity $C_P(v)$ at stable equilibria (Section D.3, Corollary D.2). This alignment is driven by minimizing $V(x)$, which implicitly penalizes misalignment via a term $V_{proxy}$ (Theorem D.1), with the crucial physical feedback provided by the observable work-cost gap $\Delta W_v$ (Lemma D.2). Quantum circuit complexity emerges as the uniquely stable operational proxy choice (Remark D.1).
 
-2.  **Geometric Regularity (Theorem 43)** emerges dynamically. The MPU network dynamics converge almost surely to configurations exhibiting geometric regularity (Section D.4, Theorem D.4). This occurs because irregularity incurs fundamental costs in propagation ($V_{prop}$) and operation ($V_{op}$) while reducing predictive benefits ($V_{benefit}$), effectively making regular configurations the global minima of the core PCE potential $V_{core}(x)$ (Lemma D.3, Theorem D.2).
+2.  **Geometric Regularity (Theorem 43)** emerges dynamically. The MPU network dynamics concentrate in the long run on configurations exhibiting geometric regularity (Section D.4, Theorem D.4). This occurs because irregularity incurs fundamental costs in propagation ($V_{prop}$) and operation ($V_{op}$) while reducing predictive benefits ($V_{benefit}$), effectively making regular configurations the global minima of the core PCE potential $V_{core}(x)$ (Lemma D.3, Theorem D.2).
 
 3.  **Complexity Adaptation Convergence (Section D.8):** A rigorous analysis of the complexity adaptation dynamics (Equation D.13), driven by the Adaptation Driving Force $\Psi(C)$, establishes its exponential convergence to the unique POP-optimal complexity $C^{\star}$ with explicit rate $\underline{\lambda}\,\eta_{adapt}$ (Theorem D.8). Using Polyak-Łojasiewicz conditions and stochastic gradient descent theory, we quantify both the deterministic convergence rate (Equation D.15) and the noise floor arising from ND-RID fluctuations (Equation D.16), providing a detailed mechanism for how complexity optimization occurs within the larger PCE landscape.
 
-The global convergence of the full system configuration $x(t)$ to states that are simultaneously aligned and regular is established in Section D.6.5 (via Theorem D.5), relying on stochastic Lyapunov methods applied to $V(x)$ under standard technical assumptions (A1-A6). The analysis throughout this appendix confirms that complexity alignment and geometric regularity are not ad-hoc assumptions but necessary, stable outcomes of the Predictive Universe framework's core optimization principles (POP/PCE) operating within the constrained MPU network. These results provide crucial support for the subsequent derivations of emergent spacetime and gravity.
+The long-run concentration of the full system configuration $x(t)$ on states that are simultaneously aligned and regular is established in Section D.6.5 (via Theorem D.5), relying on elliptic diffusion ergodicity and low-noise Gibbs concentration applied to $V(x)$ under standard technical assumptions (A1-A6). The analysis throughout this appendix confirms that complexity alignment and geometric regularity are not ad-hoc assumptions but necessary, stable outcomes of the Predictive Universe framework's core optimization principles (POP/PCE) operating within the constrained MPU network. These results provide crucial support for the subsequent derivations of emergent spacetime and gravity.

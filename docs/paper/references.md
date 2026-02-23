@@ -193,6 +193,7 @@
 *   Frigerio, A., & Verri, M. (1982b). Quantum Ergodic Theorem and the Asymptotic Behaviour of the Variance. In R. L. Dobrushin, R. Kotecký & S. Shlosman (Eds.), *Mathematical Problems in Theoretical Physics* (Lecture Notes in Physics, Vol. 153, pp. 276–281). Springer. DOI: 10.1007/3-540-11192-1_204
 *   Frauchiger, D., & Renner, R. (2018). Quantum theory cannot consistently describe the use of itself. *Nature Communications*, *9*, 3711. DOI: 10.1038/s41467-018-05739-8
 *   Freeland, S. J., & Hurst, L. D. (1998). The genetic code is one in a million. *Journal of Molecular Evolution*, *47*(3), 238–248. DOI: 10.1007/PL00006381
+*   Freidlin, M. I., & Wentzell, A. D. (2012). *Random Perturbations of Dynamical Systems* (3rd ed.). Springer. DOI: 10.1007/978-3-642-25847-3
 *   Freire, O., Jr. (2015). *The Quantum Dissidents: Rebuilding the Foundations of Quantum Mechanics (1950–1990)*. Springer. DOI: 10.1007/978-3-662-44662-1
 *   Frenkel, I., Lepowsky, J., & Meurman, A. (1988). *Vertex Operator Algebras and the Monster*. Academic Press.
 *   Friston, K. (2010). The free-energy principle: a unified brain theory? *Nature Reviews Neuroscience*, *11*(2), 127–138. DOI: 10.1038/nrn2787
@@ -213,6 +214,7 @@
 *   Georgi, H., & Glashow, S. L. (1974). Unity of all elementary-particle forces. *Physical Review Letters*, *32*(8), 438–441.
 *   Gibbons, G. W., & Hawking, S. W. (1977). Cosmological event horizons, thermodynamics, and particle creation. *Physical Review D*, *15*(10), 2738–2751. DOI: 10.1103/PhysRevD.15.2738
 *   Gildener, E., & Weinberg, S. (1976). Symmetry breaking and scalar bosons. *Physical Review D*, *13*(12), 3333–3341. DOI: 10.1103/PhysRevD.13.3333 
+*   Gelfand, S. B., & Mitter, S. K. (1991). Recursive stochastic algorithms for global optimization in $\mathbb{R}^d$. *SIAM Journal on Control and Optimization*, *29*(5), 999–1018. DOI: 10.1137/0329055
 *   Gleason, A. M. (1957). Measures on the closed subspaces of a Hilbert space. *Journal of Mathematics and Mechanics*, *6*(4), 885–893. DOI: 10.1512/iumj.1957.6.56050
 *   Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. *Monatshefte für Mathematik und Physik*, *38*(1), 173–198. DOI: 10.1007/BF01700692
 *   Goff, P. (2017). *Consciousness and Fundamental Reality*. Oxford University Press.
@@ -428,6 +430,7 @@
 *   Paris, M. G. A., & Řeháček, J. (Eds.). (2004). *Quantum State Estimation* (Lecture Notes in Physics, Vol. 649). Springer.
 *   Particle Data Group (Workman, R. L., *et al.*) (2022). Review of Particle Physics. *Progress of Theoretical and Experimental Physics*, *2022*(8), 083C01. DOI: 10.1093/ptep/ptac097
 *   Particle Data Group (Navas, S., *et al.*) (2024). Review of Particle Physics. *Physical Review D*, *110*, 030001. DOI: 10.1103/PhysRevD.110.030001.
+*   Pavliotis, G. A. (2014). *Stochastic Processes and Applications: Diffusion Processes, the Fokker-Planck and Langevin Equations*. Springer. DOI: 10.1007/978-1-4939-1323-7
 *   Peccei, R. D., & Quinn, H. R. (1977). CP conservation in the presence of pseudoparticles. *Physical Review Letters*, *38*(25), 1440–1443. DOI: 10.1103/PhysRevLett.38.1440
 *   Penrose, R. (1969). Gravitational collapse: the role of general relativity. *Rivista del Nuovo Cimento*, *1*, 252–276.
 *   Penrose, R. (1989). *The Emperor's New Mind: Concerning Computers, Minds, and the Laws of Physics*. Oxford University Press.

@@ -220,7 +220,37 @@ where $\Psi(u)$ is a strictly convex and coercive function of $u=|\nabla\Phi|^2$
 $$
 \nabla\!\cdot\!\big(\mu(|\nabla\Phi|)\,\nabla\Phi\big)=4\pi G\,\rho,\qquad \text{with}\quad \mu(s) := \Psi'(s^2).
 $$
-Under these conditions, the generalized Poisson equation admits a unique weak solution for suitable boundary data (e.g., Dirichlet) [Minty 1962; Evans 2010].
+Under these conditions, the generalized Poisson equation admits a unique weak solution for suitable boundary data (e.g., Dirichlet) [Minty 1962; Evans 2010]. *Proof sketch (existence):* Let $\Omega\subset\mathbb{R}^3$ be bounded Lipschitz and impose homogeneous Dirichlet data. Set $V=H_0^1(\Omega)$ and define the nonlinear operator $A:V\to V^*$ by
+$$
+\langle A(\phi),\psi\rangle := \int_{\Omega} \mu(|\nabla\phi|)\,\nabla\phi\cdot\nabla\psi\,dx,
+\qquad \mu(s)=\Psi'(s^2).
+$$
+The right-hand side is the continuous functional $\ell(\psi)=4\pi G\int_{\Omega}\rho\,\psi\,dx$. Hemicontinuity follows from continuity of $\mu$. Strict monotonicity holds because $\xi\mapsto \frac12\Psi(|\xi|^2)$ is strictly convex, hence its gradient $a(\xi)=\mu(|\xi|)\xi$ is strictly monotone:
+$$
+(a(\xi)-a(\eta))\cdot(\xi-\eta)>0\quad(\xi\ne\eta),
+$$
+and integrating yields $\langle A(\phi)-A(\psi),\phi-\psi\rangle>0$ for $\phi\ne\psi$. Coercivity follows from convexity: for differentiable convex $\Psi$,
+$$
+\Psi'(u)u \ge \Psi(u)-\Psi(0),
+$$
+so
+$$
+\langle A(\phi),\phi\rangle
+=\int_{\Omega}\Psi'(|\nabla\phi|^2)|\nabla\phi|^2dx
+\ge \int_{\Omega}(\Psi(|\nabla\phi|^2)-\Psi(0))dx\to\infty
+$$
+as $\|\phi\|_V\to\infty$, using coercivity of $\Psi$ and Poincaré's inequality. By Minty–Browder, there exists a unique $\phi\in V$ with $A(\phi)=\ell$.
+
+*Proof sketch (uniqueness):* Suppose $\phi_1,\phi_2\in H_0^1(\Omega)$ are weak solutions. Subtracting the weak forms gives, for all $\psi\in H_0^1(\Omega)$,
+$$
+\int_{\Omega}\big(\mu(|\nabla\phi_1|)\nabla\phi_1-\mu(|\nabla\phi_2|)\nabla\phi_2\big)\cdot\nabla\psi\,dx=0.
+$$
+Choosing $\psi=\phi_1-\phi_2$ yields
+$$
+\int_{\Omega}\big( a(\nabla\phi_1)-a(\nabla\phi_2)\big)\cdot(\nabla\phi_1-\nabla\phi_2)\,dx=0,
+\qquad a(\xi)=\mu(|\xi|)\xi.
+$$
+By strict monotonicity of $a$, the integrand is nonnegative and vanishes only when $\nabla\phi_1=\nabla\phi_2$ a.e., hence $\phi_1-\phi_2$ is constant. The Dirichlet boundary condition forces that constant to be $0$, so $\phi_1=\phi_2$.
 
 **Theorem I.7 (Flat-curve asymptotics).** For a point mass $M$, if the response function $\mu(s)$ has the asymptotic behavior $\mu(s) \sim s/a_0$ as $s\to0^+$ for some characteristic acceleration $a_0$, then the gravitational field strength $g(r)=|\nabla\Phi|$ and circular velocity $v_{\rm circ}(r)$ satisfy
 $$

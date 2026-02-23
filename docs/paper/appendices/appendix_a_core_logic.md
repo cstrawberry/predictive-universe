@@ -138,7 +138,34 @@ $$
 C_{\text{err}}(p_{\text{err}}) \geq A \ln\left(\frac{p_{\text{err},0}}{p_{\text{err}}}\right) \quad \text{(A.0.3)}
 $$
 where $A = A(d) > 0$ depends on code structure and noise locality.
-*Justification.* Standard result from quantum error correction theory [Gottesman 1998; Fowler et al. 2012]. Fault-tolerant protocols (concatenated codes, surface codes) require overhead scaling logarithmically with target fidelity when baseline error is below threshold. □
+*Justification.* The logarithmic scaling is established by the following self-contained redundancy bound; its extension to full quantum error correction is given in [Gottesman 1998; Fowler et al. 2012].
+
+**Lemma A.0.4a (Logarithmic Redundancy for Majority-Vote Decoding).**
+Suppose a logical operation is implemented by $N$ statistically independent elementary attempts, each failing with probability $p_{\text{err},0} < \tfrac12$. Let the logical decoder output the majority result (assume $N$ odd). Then the logical failure probability
+$$
+p_{\text{err}}^{(N)} \;\le\; \exp\!\bigl(-2(\tfrac12-p_{\text{err},0})^{2}N\bigr). \qquad \text{(A.0.3a)}
+$$
+Consequently, to achieve $p_{\text{err}}^{(N)} \le p_{\text{err}}$ it suffices to take
+$$
+N \;\ge\; \frac{1}{2(\tfrac12-p_{\text{err},0})^{2}}\,\ln\!\frac{1}{p_{\text{err}}}. \qquad \text{(A.0.3b)}
+$$
+
+*Proof.* Let $X_i\in\{0,1\}$ indicate failure of attempt $i$, so $\mathbb E[X_i]=p_{\text{err},0}$ and $S_N=\sum_{i=1}^N X_i$ counts failures. Majority decoding fails iff $S_N\ge \frac{N+1}{2}$, which is the event $\{S_N\ge N/2\}$ because $S_N$ is integer-valued and $N$ is odd. Write $\mu=\mathbb E[S_N]=Np_{\text{err},0}$. Then
+\[
+\{S_N\ge N/2\}=\{S_N-\mu\ge N(\tfrac12-p_{\text{err},0})\}.
+\]
+Hoeffding's inequality for independent $X_i\in[0,1]$ gives, for $t>0$,
+\[
+\mathbb P(S_N-\mu\ge t)\le \exp\!\left(-\frac{2t^2}{N}\right) \quad\text{[Hoeffding 1963]}.
+\]
+Setting $t=N(\tfrac12-p_{\text{err},0})$ yields (A.0.3a). Solving $\exp(-2(\tfrac12-p_{\text{err},0})^{2}N)\le p_{\text{err}}$ gives (A.0.3b). □
+
+**Remark A.0.4b (From Redundancy to Overhead).**
+If each attempt costs at least a constant resource $c_0$ (time, space, or energy), then the total overhead satisfies $C_{\text{err}}(p_{\text{err}})\ge c_0 N$. Combining with (A.0.3b) implies
+\[
+C_{\text{err}}(p_{\text{err}})\;\ge\; \frac{c_0}{2(\tfrac12-p_{\text{err},0})^{2}}\,\ln\!\frac{1}{p_{\text{err}}}.
+\]
+Since $\ln(1/p_{\text{err}})\ge \ln(p_{\text{err},0}/p_{\text{err}})$ for $p_{\text{err},0}\le 1$, this implies $C_{\text{err}}(p_{\text{err}})\ge A\ln(p_{\text{err},0}/p_{\text{err}})$ with $A=c_0/[2(\tfrac12-p_{\text{err},0})^{2}]$, recovering the functional form of (A.0.3). □
 
 **Definition A.0.3 (Reliability Cost Contribution):** The cost of added complexity contributes to PCE potential via physical operational cost function $R(C)$ (Definition 3):
 $$
@@ -155,10 +182,23 @@ with $\lim_{p_{\text{err}} \to 0} V_{\text{rel}}'(p_{\text{err}}) = -\infty$. �
 **Stage 3: Penalty for Allowing Errors**
 Errors degrade predictive performance, reducing benefit term $V_{\text{benefit}}$, equivalent to adding error penalty $V_{\text{err}}$.
 
-**Theorem A.0.4 (Performance Degradation):** For computation involving $T$ logical gates with independent failures at rate $p_{\text{err}}$ per gate, success probability is:
+**Theorem A.0.4 (Performance Degradation):** For computation involving $T$ logical gate applications, if each gate has failure probability at most $p_{\text{err}}$, then the success probability satisfies $P_{\text{succ}}\ge 1-Tp_{\text{err}}$ without assuming independence (Lemma A.0.4c). If failures are independent, the exact success probability is:
 $$
 P_{\text{succ}}(T, p_{\text{err}}) = (1 - p_{\text{err}})^T \approx \exp(-T p_{\text{err}}) \quad \text{(A.0.6)}
 $$
+
+**Lemma A.0.4c (Success Probability Lower Bound Without Independence).**
+Let $F_t$ be the event that the $t$-th logical gate fails, with $\mathbb P(F_t)\le p_{\text{err}}$ for each $t=1,\dots,T$. Then
+$$
+P_{\text{succ}} \;=\; 1-\mathbb P\!\Bigl(\bigcup_{t=1}^T F_t\Bigr)\;\ge\; 1-\sum_{t=1}^T \mathbb P(F_t)\;\ge\; 1-Tp_{\text{err}}. \qquad \text{(A.0.6a)}
+$$
+If failures are independent, then $P_{\text{succ}}=(1-p_{\text{err}})^T$, which satisfies the standard exponential upper bound
+$$
+(1-p_{\text{err}})^T \;=\; \exp\!\bigl(T\ln(1-p_{\text{err}})\bigr)\;\le\;\exp(-Tp_{\text{err}}), \qquad \text{(A.0.6b)}
+$$
+since $\ln(1-p)\le -p$ for $p\in[0,1)$.
+
+*Proof.* The lower bound is the union bound. The exponential bound follows from $\ln(1-p)\le -p$. □
 
 **Definition A.0.4 (Effective Complexity):** Errors reduce effective complexity contributing to performance:
 $$
@@ -206,7 +246,7 @@ p_{\text{err}}^* \approx \frac{\lambda A r_p}{\Gamma_0 T C_{\text{alloc}} PP'(C_
 $$
 The optimal error rate decreases inversely with computational depth $T$, ensuring $p_{\text{err}}^* < 1/2$ for sufficiently complex computations. □
 
-**Conclusion of Theorem A.0.2:** Under QEC Compatibility and Dominant Cost Convexity assumptions, PCE optimization necessarily drives the scalar error-rate parameter to the unique optimal value $p_{\text{err}}^* > 0$ (strictly positive due to Theorem A.0.3) yet satisfying robustness conditions ($p_{\text{err}}^* < 1/2$ for sufficient $T$). While uniqueness of the full network equilibrium in high-dimensional configuration space is not established here, the convergence to optimal error rate (Theorem D.5) enables reliable execution of SPAP and RUD logical arguments, constituting Effective Operational Property R. □
+**Conclusion of Theorem A.0.2:** Under QEC Compatibility and Dominant Cost Convexity assumptions, PCE optimization necessarily drives the scalar error-rate parameter to the unique optimal value $p_{\text{err}}^* > 0$ (strictly positive due to Theorem A.0.3) yet satisfying robustness conditions ($p_{\text{err}}^* < 1/2$ for sufficient $T$). While uniqueness of the full network equilibrium in high-dimensional configuration space is not established here, the concentration near the optimal error rate under the global convergence dynamics (Theorem D.5) enables reliable execution of SPAP and RUD logical arguments, constituting Effective Operational Property R. □
 
 **Epistemic Status:** The derivation relies on:
 1.  **QEC Compatibility:** Strong assumption about underlying MPU physics. Requires: (a) sufficiently local noise, (b) implementable QEC codes, (c) baseline error below fault-tolerance threshold. While plausible given the framework's optimization dynamics favoring structures enabling reliable computation, this represents a substantive physical postulate requiring empirical verification.
@@ -374,7 +414,7 @@ f(n) = G(n, \dots, \text{ProofSearch}_{\le g_i(n)}[\phi_i(\dots, e, \dots)], \do
 $$
  This existence is guaranteed by Kleene's Second Recursion Theorem, a fundamental result in computability theory.
 
-*Proof Reference:* See standard texts on computability theory [Mendelson 2015; Kleene 1952] for a proof of the Recursion Theorem. This theorem is a cornerstone of the theory, asserting that computable functions can be defined in terms of their own code (Gödel number).
+*Proof Reference:* A self-contained proof is given in Theorem A.4.1a (Section A.4.1). Applying the theorem to the program transformer implicit in the right-hand side yields the fixed-point index $e$ required here. Standard references include [Mendelson 2015; Kleene 1952].
 
 *Significance:* Theorem A.1.5 guarantees the existence of computable processes that can refer to and depend on provable properties about themselves within bounded resources. This provides the formal basis for constructing systems like $S_{diag}$ and $S'_{diag}$ used in the SPAP proofs (Theorems A.1.1, A.1.3), demonstrating that such self-referential conditional logic is mathematically sound and constructible within computationally rich frameworks like those enabled by Effective Operational Property R.
 
@@ -456,12 +496,32 @@ The LITE construction leverages standard tools from mathematical logic:
 *   **Gödel Coding:** A bijection $⟨·⟩: \Sigma^* \to \mathbb{N}$ assigns unique natural number codes to syntactic expressions in PA, denoted $⌈\psi⌉$ for a formula $\psi$.
 *   **Provability Predicate:** The primitive recursive relation $Prf(p, c)$ asserts that $p$ is the Gödel code of a PA proof for the formula with Gödel code $c$ [Mendelson 2015; Kleene 1952].
 *   **Bounded Proof Search Predicate:** For a total computable function $g: \mathbb{N} \to \mathbb{N}$ and a formula $\psi$, $Prf_{\le g(n)}(⌈\psi⌉) \equiv \exists p \le g(n) \, Prf(p, ⌈\psi⌉)$ asserts a proof of $\psi$ exists with code $p \le g(n)$. This predicate is decidable for fixed $n, ⌈\psi⌉$.
-*   **Kleene's Second Recursion Theorem:** For any total computable operator $\Psi: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, there exists an index $\beta \in \mathbb{N}$ such that the partial computable function $φ_β$ satisfies $φ_β(n) = \Psi(\beta, n)$ for all $n \in \mathbb{N}$ [Kleene 1952]. This allows a function to consistently refer to its own Gödel code.
+*   **Kleene's Second Recursion Theorem:** For any total computable operator $\Psi: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, there exists an index $\beta \in \mathbb{N}$ such that the partial computable function $φ_β$ satisfies $φ_β(n) = \Psi(\beta, n)$ for all $n \in \mathbb{N}$ [Kleene 1952]. This allows a function to consistently refer to its own Gödel code. *Proof sketch:* By the $s$-$m$-$n$ theorem there is a total computable $s$ with $φ_{s(a)}(n)=\Psi(φ_a(a),n)$; letting $\hat{s}$ index $s$ and setting $\beta=s(\hat{s})$ yields $φ_\beta(n)=\Psi(\beta,n)$. A full proof appears as Theorem A.4.1a below.
 
 ### A.4.2 The LITE Function Construction
 
 Let $g, H_1, H_2$ be predefined total computable functions. Let $Sub(x, y, z)$ be the standard substitution function yielding the Gödel code of the formula obtained by substituting the numeral for $y$ into the formula with Gödel code $x$ at occurrences of the variable with code $z$. Let $v$ be the code of a variable 'x'. Let $FormTemplate(v)$ be a PA formula template with one free variable $v$.
 Define $ϕ_{\alpha}(n)$ as the formula whose Gödel code is $c_{\alpha, n} = Sub(⌈FormTemplate(v)⌉, \alpha, v)$. This $ϕ_{\alpha}(n)$ asserts a property related to the function with index $\alpha$ evaluated at $n$.
+
+**Theorem A.4.1a (Kleene's Second Recursion Theorem).**
+Let $\{φ_e\}_{e\in\mathbb{N}}$ be a standard acceptable enumeration of partial computable functions $\mathbb{N}\to\mathbb{N}$. For any total computable operator $\Psi:\mathbb{N}\times\mathbb{N}\to\mathbb{N}$, there exists $\beta\in\mathbb{N}$ such that
+$$
+φ_\beta(n)=\Psi(\beta,n)\quad\text{for all }n\in\mathbb{N}. \qquad \text{(A.4.1a)}
+$$
+
+*Proof.* Define the partial computable function
+\[
+g(a,n):=\Psi(φ_a(a),n).
+\]
+Because $(a,n)\mapsto φ_a(a)$ is partial computable (by universality of the numbering), $g$ is partial computable. By the $s$-$m$-$n$ theorem, there exists a total computable function $s:\mathbb{N}\to\mathbb{N}$ such that for all $a,n$,
+\[
+φ_{s(a)}(n)=g(a,n)=\Psi(φ_a(a),n).
+\]
+Let $\hat{s}$ be an index for $s$, i.e. $φ_{\hat{s}}=s$. Set $\beta:=s(\hat{s})=φ_{\hat{s}}(\hat{s})$. Then for all $n$,
+\[
+φ_\beta(n)=φ_{s(\hat{s})}(n)=\Psi(φ_{\hat{s}}(\hat{s}),n)=\Psi(\beta,n),
+\]
+as required. □
 
 The LITE function $f: \mathbb{N} \to \mathbb{N}$ is defined as $f = φ_{\beta}$, where $\beta$ is the fixed point guaranteed by the Recursion Theorem for the operator $\Psi(\alpha, n)$ that implements the following logic:
 $$
