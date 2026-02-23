@@ -368,10 +368,12 @@ $$
 *   Case 1: Suppose the external predictor outputs $\hat{\phi}_{P_f, t} = \hat{\phi}_t$. Then $P_f$ is correct if the actual outcome is $\phi_{t+1} = \hat{\phi}_t$. This occurs with probability $p_{err}$.
 *   Case 2: Suppose the external predictor outputs $\hat{\phi}_{P_f, t} = \text{NOT}(\hat{\phi}_t)$. Then $P_f$ is correct if the actual outcome is $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$. This occurs with probability $1-p_{err}$.
 The external predictor $P_f$ might attempt to predict the noisy system's behavior. However, regardless of $P_f$'s strategy (which determines its output $\hat{\phi}_{P_f, t}$ relative to the internal $\hat{\phi}_t$), the maximum probability of $P_f$ being correct in any single cycle is $\max(p_{err}, 1-p_{err})$. Since $0 \le p_{err} < 1/2$ is assumed, this maximum probability is $1-p_{err}$.
+
 Note that the diagonal construction guarantees a history-uniform per-cycle error bound: because $S_{noisy}$ applies NOT with probability $1-p_{err}$ and the identity with probability $p_{err}$ in each cycle independently of previous outcomes, the predictor's maximum correctness probability satisfies $\mathbb{P}(\text{correct}_t \mid h_{t-1}) \le 1-p_{err}$ for every interaction history $h_{t-1}$. (This is a consequence of the construction, not an additional assumption.) By the chain rule for conditional probabilities,
 $$
 P(\text{correct for } k \text{ cycles}) = \prod_{i=0}^{k-1} \mathbb{P}(\text{correct}_{t+i} \mid \text{correct}_t,\dots,\text{correct}_{t+i-1}) \le (1-p_{err})^k.
-$$ Since $p_{err} > 0$ (otherwise the system is deterministic, covered by Thm A.1.1), we have $0 < 1-p_{err} < 1$. Therefore, the limit as $k \to \infty$ is:
+$$
+Since $p_{err} > 0$ (otherwise the system is deterministic, covered by Thm A.1.1), we have $0 < 1-p_{err} < 1$. Therefore, the limit as $k \to \infty$ is:
 $$
 \lim_{k\to\infty} P(\text{correct for } k \text{ cycles}) \le \lim_{k\to\infty} (1-p_{err})^k = 0
 $$
