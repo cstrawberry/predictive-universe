@@ -39,14 +39,14 @@ This binary structure applies universally. The verification of any prediction $P
 
 **Proposition A.0.2 (Boolean Operations from Verification)**
 The binary verification structure necessarily generates complete Boolean operations:
-1.  **Negation (NOT):** The capacity to distinguish verification (1) from non-verification (0) directly implements logical negation: $\delta(\neg S(r)) = 1 - \delta(S(r))$.
-2.  **Conjunction (AND):** Sequential verification of multiple predictions requires all constituents to succeed: $\delta(S_1(r) \wedge S_2(r)) = \min(\delta(S_1(r)), \delta(S_2(r)))$.
-3.  **Disjunction (OR):** Alternative predictions implement disjunction: $\delta(V_1(r) \vee V_2(r)) = \max(\delta(V_1(r)), \delta(V_2(r)))$.
+1.  **Negation (NOT):** The capacity to distinguish verification (1) from non-verification (0) directly implements logical negation: $V(\neg S(r)) = 1 - V(S(r))$.
+2.  **Conjunction (AND):** Sequential verification of multiple predictions requires all constituents to succeed: $V(S_1(r) \wedge S_2(r)) = \min(V(S_1(r)), V(S_2(r)))$.
+3.  **Disjunction (OR):** Alternative predictions implement disjunction: $V(S_1(r) \vee S_2(r)) = \max(V(S_1(r)), V(S_2(r)))$.
 
 *Proof.* These operations formalize the operational structure of prediction:
-*   **NOT:** The fundamental binary distinction in verification ("matches" vs. "does not match") directly implements negation. If $\delta(S(r)) = 1$ (prediction verified), then $\delta(\neg S(r)) = 0$ (negation not verified), and vice versa.
-*   **AND:** Compound predictions consisting of sub-predictions $S_1, S_2$ are verified only if both constituents are verified. If either fails ($\delta = 0$), the compound fails. This is captured by $\min(\delta_1, \delta_2) = 1$ iff both $\delta_1 = 1$ and $\delta_2 = 1$.
-*   **OR:** When entertaining alternative predictions, overall success requires at least one alternative be verified. The disjunction succeeds ($\delta = 1$) if $\delta(V_1) = 1$ or $\delta(V_2) = 1$ or both, captured by $\max(\delta_1, \delta_2)$. □
+*   **NOT:** The fundamental binary distinction in verification ("matches" vs. "does not match") directly implements negation. If $V(S(r)) = 1$ (prediction verified), then $V(\neg S(r)) = 0$ (negation not verified), and vice versa.
+*   **AND:** Compound predictions consisting of sub-predictions $S_1, S_2$ are verified only if both constituents are verified. If either fails ($V = 0$), the compound fails. This is captured by $\min(V_1, V_2) = 1$ iff both $V_1 = 1$ and $V_2 = 1$.
+*   **OR:** When entertaining alternative predictions, overall success requires at least one alternative be verified. The disjunction succeeds ($V = 1$) if $V(S_1) = 1$ or $V(S_2) = 1$ (or both), captured by $\max(V_1, V_2)$. □
 
 **Logical Infrastructure of Prediction**
 
@@ -124,7 +124,7 @@ ND-RID Implementation of Logical Gates: A logical gate $G_{\text{logic}}$ is rea
 
 **Definition A.0.2 (Baseline Logical Gate Error):** The inherent error probability of uncorrected implementation relative to ideal gate is:
 $$
-p_{\text{err},0} := \sup_{\rho_{\text{in}}} \tfrac{1}{2} |\mathcal{E}_{\text{actual}}(\rho_{\text{in}}) - \mathcal{U}_{\text{ideal}}(\rho_{\text{in}})|_1 \quad \text{(A.0.2)}
+p_{\text{err},0} := \sup_{\rho_{\text{in}}} \tfrac{1}{2} \|\mathcal{E}_{\text{actual}}(\rho_{\text{in}}) - \mathcal{U}_{\text{ideal}}(\rho_{\text{in}})\|_1 \quad \text{(A.0.2)}
 $$
 
 **Theorem A.0.3 (Strictly Positive Baseline Error):** If implementation involves at least one ND-RID step, $p_{\text{err},0} > 0$.
@@ -138,7 +138,7 @@ $$
 C_{\text{err}}(p_{\text{err}}) \geq A \ln\left(\frac{p_{\text{err},0}}{p_{\text{err}}}\right) \quad \text{(A.0.3)}
 $$
 where $A = A(d) > 0$ depends on code structure and noise locality.
-*Justification.* The logarithmic scaling is established by the following self-contained redundancy bound; its extension to full quantum error correction is given in [Gottesman 1998; Fowler et al. 2012].
+*Justification.* Under the Assumption of QEC Compatibility ($p_{\text{err},0}<p_{\text{th}}$ with sufficiently local noise and implementable fault-tolerant constructions), standard fault-tolerant schemes suppress logical error exponentially in an effective distance/level parameter while the corresponding overhead grows at least linearly in that parameter, yielding a logarithmic dependence of required overhead on the target $p_{\text{err}}$. The following self-contained redundancy bound provides an explicit witness of the same functional form in a simplified setting; full quantum error correction achieves the same (often stronger) suppression under the assumed locality below threshold [Gottesman 1998; Fowler et al. 2012].
 
 **Lemma A.0.4a (Logarithmic Redundancy for Majority-Vote Decoding).**
 Suppose a logical operation is implemented by $N$ statistically independent elementary attempts, each failing with probability $p_{\text{err},0} < \tfrac12$. Let the logical decoder output the majority result (assume $N$ odd). Then the logical failure probability
@@ -169,9 +169,9 @@ Since $\ln(1/p_{\text{err}})\ge \ln(p_{\text{err},0}/p_{\text{err}})$ for $p_{\t
 
 **Definition A.0.3 (Reliability Cost Contribution):** The cost of added complexity contributes to PCE potential via physical operational cost function $R(C)$ (Definition 3):
 $$
-V_{\text{rel}}(p_{\text{err}}) := \lambda R(C_{\text{err}}(p_{\text{err}})) \approx \lambda c_R \left[ A \ln\left(\frac{p_{\text{err},0}}{p_{\text{err}}}\right) \right]^{\gamma_p} \quad \text{(A.0.4)}
+V_{\text{rel}}(p_{\text{err}}) := \lambda R(C_{\text{err}}(p_{\text{err}})) \approx \lambda r_p(T_{\text{eff}})\, \left[ A \ln\left(\frac{p_{\text{err},0}}{p_{\text{err}}}\right) \right]^{\gamma_p} \quad \text{(A.0.4)}
 $$
-where $\gamma_p \geq 1$ (superlinear costs, Definition 3).
+where $\gamma_p>1$ and $r_p(T_{\text{eff}})>0$ (Definition 3a), with $T_{\text{eff}}$ treated as fixed in this appendix.
 
 **Lemma A.0.2 (Divergence of Reliability Cost):** The marginal cost of improving reliability diverges as perfect reliability is approached:
 $$
@@ -227,24 +227,23 @@ defined on $(0, p_{\text{err},0}]$.
 **Theorem A.0.5 (Existence & Uniqueness of Optimal Error Rate)**
 There exists a unique value $p_{\text{err}}^* \in (0, p_{\text{err},0}]$ minimizing $V_{\text{tot}}(p_{\text{err}})$.
 
-*Proof.* We analyze $V_{\text{tot}}'(p_{\text{err}}) = V_{\text{rel}}'(p_{\text{err}}) + V_{\text{err}}'(p_{\text{err}})$.
-*   **Continuity:** Both $V_{\text{rel}}$ and $V_{\text{err}}$ are $C^1$ on $(0, p_{\text{err},0}]$ under standard assumptions for $R(C)$ and $PP(C)$.
-*   **Signs of Derivatives:** From Lemma A.0.2, $V_{\text{rel}}'(p) < 0$. From Proposition A.0.5, $V_{\text{err}}'(p) > 0$.
-*   **Limits:** As $p_{\text{err}} \to 0^+$, $V_{\text{rel}}'(p_{\text{err}}) \to -\infty$ while $V_{\text{err}}'(p_{\text{err}}) \to \Gamma_0 T C_{\text{alloc}} PP'(C_{\text{alloc}})$ (finite positive). Therefore $\lim_{p_{\text{err}} \to 0^+} V_{\text{tot}}'(p_{\text{err}}) = -\infty$.
-*   **Existence:** By Intermediate Value Theorem, since $V_{\text{tot}}'(p) \to -\infty$ as $p \to 0$ and $V_{\text{tot}}'$ is continuous, there exists at least one point $p_{\text{err}}^* \in (0, p_{\text{err},0}]$ where $V_{\text{tot}}'(p_{\text{err}}^*) = 0$.
+*Proof.*
+*   **Continuity:** Both $V_{\text{rel}}$ and $V_{\text{err}}$ are continuous on $(0, p_{\text{err},0}]$ and $C^1$ on any closed subinterval $[\epsilon, p_{\text{err},0}]$ with $\epsilon>0$, under standard assumptions for $R(C)$ and $PP(C)$.
+*   **Blow-up at $p_{\text{err}}\to 0^+$:** By Proposition A.0.4, $C_{\text{err}}(p_{\text{err}})=A\ln(p_{\text{err},0}/p_{\text{err}})\to\infty$ as $p_{\text{err}}\to 0^+$. By Definition 3a, $R(C)$ is unbounded as $C\to\infty$ (with $\gamma_p>1$), hence $V_{\text{rel}}(p_{\text{err}})=\lambda R(C_{\text{err}}(p_{\text{err}}))\to\infty$. Meanwhile $V_{\text{err}}(p_{\text{err}})\ge 0$ and remains bounded because $PP(C)$ is bounded on $[0, C_{\text{alloc}}]$ (Definition 7). Therefore $\lim_{p_{\text{err}}\to 0^+} V_{\text{tot}}(p_{\text{err}})=\infty$.
+*   **Existence:** Since $V_{\text{tot}}(p_{\text{err},0})$ is finite and $V_{\text{tot}}(p_{\text{err}})\to\infty$ as $p_{\text{err}}\to 0^+$, there exists $\epsilon>0$ such that $V_{\text{tot}}(p_{\text{err}})>V_{\text{tot}}(p_{\text{err},0})$ for all $p_{\text{err}}\in(0,\epsilon]$. Restricting to the compact interval $[\epsilon, p_{\text{err},0}]$, Weierstrass' theorem implies $V_{\text{tot}}$ attains a minimum at some $p_{\text{err}}^*\in[\epsilon,p_{\text{err},0}]\subset(0,p_{\text{err},0}]$. If $p_{\text{err}}^*<p_{\text{err},0}$, then by differentiability on $(0,p_{\text{err},0})$ it satisfies the first-order condition $V_{\text{tot}}'(p_{\text{err}}^*)=0$.
 *   **Uniqueness:** The second derivative is $V_{\text{tot}}''(p) = V_{\text{rel}}''(p) + V_{\text{err}}''(p)$. For $V_{\text{rel}}$:
     $$
     V_{\text{rel}}''(p) = \lambda [R''(C_{\text{err}}) (-A/p)^2 + R'(C_{\text{err}}) (A/p^2)] > 0
     $$
-    provided $R'' \geq 0$ (convex costs, Definition 3) and $R' > 0$ for $C_{\text{err}} > 0$.
+    provided $R'' \ge 0$ (convex costs, Definition 3) and $R' > 0$ for $C_{\text{err}} > 0$.
     Under the **Assumption of Dominant Cost Convexity** (the convexity of $R(C)$ dominates any potential concavity from $PP(C)$), we have $V_{\text{tot}}''(p) > 0$ everywhere, ensuring strict convexity and thus uniqueness of the minimum. □
 
 **Corollary A.0.2 (Asymptotic Scaling of Optimal Error)**
-In the regime where $p_{\text{err}}^*$ is small and $T$ is large, for linear costs ($\gamma_p = 1$):
+In the regime where $p_{\text{err}}^*$ is small and $T$ is large, using the convex cost model of Definition 3a ($\gamma_p>1$) and treating $PP'(C_{\text{eff}})$ as slowly varying on the scale of the optimal perturbation, the interior first-order condition yields the implicit asymptotic relation:
 $$
-p_{\text{err}}^* \approx \frac{\lambda A r_p}{\Gamma_0 T C_{\text{alloc}} PP'(C_{\text{alloc}})} \quad \text{(A.0.11)}
+p_{\text{err}}^* \approx \frac{\lambda r_p(T_{\text{eff}})\, \gamma_p A^{\gamma_p}}{\Gamma_0 T C_{\text{alloc}} PP'(C_{\text{alloc}})} \left[\ln\left(\frac{p_{\text{err},0}}{p_{\text{err}}^*}\right)\right]^{\gamma_p-1} \quad \text{(A.0.11)}
 $$
-The optimal error rate decreases inversely with computational depth $T$, ensuring $p_{\text{err}}^* < 1/2$ for sufficiently complex computations. □
+Thus, up to the slowly varying logarithmic factor, $p_{\text{err}}^* = \Theta((\ln T)^{\gamma_p-1}/T)$ as $T\to\infty$, and hence $p_{\text{err}}^* < 1/2$ for sufficiently large $T$. □
 
 **Conclusion of Theorem A.0.2:** Under QEC Compatibility and Dominant Cost Convexity assumptions, PCE optimization necessarily drives the scalar error-rate parameter to the unique optimal value $p_{\text{err}}^* > 0$ (strictly positive due to Theorem A.0.3) yet satisfying robustness conditions ($p_{\text{err}}^* < 1/2$ for sufficient $T$). While uniqueness of the full network equilibrium in high-dimensional configuration space is not established here, the concentration near the optimal error rate under the global convergence dynamics (Theorem D.5) enables reliable execution of SPAP and RUD logical arguments, constituting Effective Operational Property R. □
 
@@ -359,7 +358,7 @@ This is a logical contradiction (equivalent to $x = \neg x$). The contradiction 
 
 ### A.1.3 Theorem A.1.2 (Noise Robustness - Deterministic SPAP)
 
-Let the conditions of Theorem A.1.1 hold. Consider a system $S_{noisy}$ implementable within $\mathcal{M}$ that *attempts* to implement the rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ (where $\hat{\phi}_t$ is its internal prediction), but due to operational noise (inherent in ND-RID realization of computation), it succeeds with probability $1-p_{err}$ and fails (setting $\phi_{t+1} = \hat{\phi}_t$) with probability $p_{err}$ per cycle, where $0 \le p_{err} < 1/2$. Let $P_f$ be any external deterministic predictor outputting $\hat{\phi}_{P_f, t}$ for $\phi_{t+1}$. The probability that $P_f$ achieves perfect prediction ($\hat{\phi}_{P_f, t} = \phi_{t+1}$) for $k$ consecutive independent cycles tends to zero as $k \to \infty$.
+Let the conditions of Theorem A.1.1 hold. Consider a system $S_{noisy}$ implementable within $\mathcal{M}$ that *attempts* to implement the rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ (where $\hat{\phi}_t$ is its internal prediction), but due to operational noise (inherent in ND-RID realization of computation), it succeeds with probability $1-p_{err}$ and fails (setting $\phi_{t+1} = \hat{\phi}_t$) with probability $p_{err}$ per cycle, where $0 \le p_{err} < 1/2$. Let $P_f$ be any external deterministic predictor outputting $\hat{\phi}_{P_f, t}$ for $\phi_{t+1}$. The probability that $P_f$ achieves perfect prediction ($\hat{\phi}_{P_f, t} = \phi_{t+1}$) for $k$ consecutive cycles tends to zero as $k \to \infty$.
 $$
 \lim_{k\to\infty} P(\text{P}_f \text{ is correct for cycles } t \dots t+k-1) = 0 \quad (\text{for } p_{err} < 1/2)
 \quad (\text{A.2})
@@ -369,11 +368,14 @@ $$
 *   Case 1: Suppose the external predictor outputs $\hat{\phi}_{P_f, t} = \hat{\phi}_t$. Then $P_f$ is correct if the actual outcome is $\phi_{t+1} = \hat{\phi}_t$. This occurs with probability $p_{err}$.
 *   Case 2: Suppose the external predictor outputs $\hat{\phi}_{P_f, t} = \text{NOT}(\hat{\phi}_t)$. Then $P_f$ is correct if the actual outcome is $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$. This occurs with probability $1-p_{err}$.
 The external predictor $P_f$ might attempt to predict the noisy system's behavior. However, regardless of $P_f$'s strategy (which determines its output $\hat{\phi}_{P_f, t}$ relative to the internal $\hat{\phi}_t$), the maximum probability of $P_f$ being correct in any single cycle is $\max(p_{err}, 1-p_{err})$. Since $0 \le p_{err} < 1/2$ is assumed, this maximum probability is $1-p_{err}$.
-The strictly contractive nature of the underlying ND-RID interactions (Lemma E.1) drives rapid decay of correlations (mixing) within the physical substrate realizing the computation. Assuming the resulting noise process has a correlation time $\tau_{corr}$ much shorter than the MPU cycle time $\tau_{min}$, the errors in consecutive cycles can be treated as effectively independent. The probability of $P_f$ being correct for $k$ consecutive cycles is then bounded above by $(1-p_{err})^k$. Since $p_{err} > 0$ (otherwise the system is deterministic, covered by Thm A.1.1), we have $0 < 1-p_{err} < 1$. Therefore, the limit as $k \to \infty$ is:
+Note that the diagonal construction guarantees a history-uniform per-cycle error bound: because $S_{noisy}$ applies NOT with probability $1-p_{err}$ and the identity with probability $p_{err}$ in each cycle independently of previous outcomes, the predictor's maximum correctness probability satisfies $\mathbb{P}(\text{correct}_t \mid h_{t-1}) \le 1-p_{err}$ for every interaction history $h_{t-1}$. (This is a consequence of the construction, not an additional assumption.) By the chain rule for conditional probabilities,
+$$
+P(\text{correct for } k \text{ cycles}) = \prod_{i=0}^{k-1} \mathbb{P}(\text{correct}_{t+i} \mid \text{correct}_t,\dots,\text{correct}_{t+i-1}) \le (1-p_{err})^k.
+$$ Since $p_{err} > 0$ (otherwise the system is deterministic, covered by Thm A.1.1), we have $0 < 1-p_{err} < 1$. Therefore, the limit as $k \to \infty$ is:
 $$
 \lim_{k\to\infty} P(\text{correct for } k \text{ cycles}) \le \lim_{k\to\infty} (1-p_{err})^k = 0
 $$
-Thus, no deterministic predictor can maintain perfect accuracy indefinitely against such a noisy, self-referentially defined system, demonstrating the robustness of the SPAP limit under the assumption of cycle-wise error independence. QED
+Thus, no deterministic predictor can maintain perfect accuracy indefinitely against such a noisy, self-referentially defined system, demonstrating the robustness of the SPAP limit under the history-uniform per-cycle error bound (which follows from the diagonal construction). QED
 
 ### A.1.4 Theorem A.1.3 (Probabilistic SPAP = Theorem 11)
 
@@ -465,15 +467,41 @@ Since $M_{decide}$ must halt but produces an incorrect answer in either case, it
 Let $\mathcal{C}_{NDRID}$ be a class of ND-RID systems (Definition A.2.2) whose transition probabilities $V_{\text{prob}}, T_{\text{prob}}$ are computable functions of the state and interaction, and which can be represented and reliably manipulated within a framework possessing Effective Operational Property R (Definition A.0.1). There exist properties $P$ (potentially statistical, e.g., concerning limiting probabilities or average behaviors) of systems $S \in \mathcal{C}_{NDRID}$ such that no interactive algorithm $M_{decide}'$ (e.g., a **probabilistic ITM**) can be guaranteed to halt and correctly decide $P(S)$ with arbitrarily high confidence (probability $1-\delta$ for any $\delta>0$) for all $S \in \mathcal{C}_{NDRID}$ within a finite interaction time.
 
 *Proof (Diagonalization):*
-Assume, for contradiction, that such a total probabilistic ITM $M_{decide}'$ exists that halts and correctly decides property $P$ for all $S \in \mathcal{C}_{NDRID}$ with confidence approaching 1 after a finite interaction time $T_{max}$. By Effective Operational Property R, construct an ND-RID system $S'_{diag} \in \mathcal{C}_{NDRID}$ that simulates $M_{decide}'$ interacting with itself. Its state $x$ encodes the history and the simulator's estimate $d'(t)$ of $M_{decide}'$'s likely output about $P(S'_{diag})$ based on interactions up to time $t$.
-The probabilistic rules $V_{prob}(x,y)$ and $T_{prob}(x,y,o)$ of $S'_{diag}$ are designed to dynamically adjust based on the simulated internal state $d'(t)$ of $M_{decide}'$:
-1.  $S'_{diag}$ simulates $M_{decide}'$ interacting with $\ulcorner S'_{diag} \urcorner$.
-2.  It simulates the internal computation of $M_{decide}'$ step-by-step to estimate if the simulated predictor is converging towards deciding $P$ is True (e.g., if the probability of outputting "Yes" exceeds $1-\epsilon$) or False (probability of "No" exceeds $1-\epsilon$).
-3.  $S'_{diag}$ adjusts its *actual* transition probabilities $V_{prob}, T_{prob}$ (within the allowed structure of ND-RID) based on this estimate:
-    *   If the simulation suggests $M_{decide}'$ is converging towards "Yes", $S'_{diag}$ modifies its parameters to ensure its *actual* statistical behavior will, with high probability, make property $P$ False in the long run.
-    *   If the simulation suggests convergence towards "No", $S'_{diag}$ modifies its parameters to make property $P$ True with high probability.
-This reflexive adjustment is possible because the probabilities depend on the interaction $y$ from $M_{decide}'$ (via outcome $o$).
-Now, consider the real $M_{decide}'$ interacting with $S'_{diag}$. As $M_{decide}'$ gathers statistics over time $t < T_{max}$, its internal state starts to favor one decision ("Yes" or "No") with increasing confidence. $S'_{diag}$ detects this trend via its internal simulation and actively adjusts its own statistical properties to counteract the impending decision. This feedback loop destabilizes the convergence of $M_{decide}'$. For any finite time $T_{max}$ and confidence level $1-\delta$, $S'_{diag}$ can adjust its parameters such that $M_{decide}'$ has a probability greater than $\delta$ of reaching an incorrect conclusion by time $T_{max}$. This contradicts the assumption that $M_{decide}'$ works reliably for *all* systems in $\mathcal{C}_{NDRID}$ with arbitrarily high confidence in finite time. Therefore, such an $M_{decide}'$ cannot exist, and interactively undecidable (statistical) properties exist for this class of ND-RID systems. QED
+Fix any probabilistic ITM $M_{decide}'$ that (by assumption) halts within at most $T_{max}$ interactions and outputs a decision $d\in\{\text{Yes},\text{No}\}$ intended to decide a property $P(S)$ for all $S\in\mathcal{C}_{NDRID}$.
+
+Define a statistical property $P$ as follows. Fix a designated probe interaction $y_{\text{test}}$. After the interaction between $M_{decide}'$ and $S$ halts, consider the induced conditional outcome probability for the probe, $p_{\text{test}}:=\mathbb{P}(o=1 \mid y_{\text{test}}, x_{\text{final}})$. Let $P(S)$ be the statement $p_{\text{test}} > 1/2$.
+
+By Effective Operational Property R, construct an ND-RID system $S'_{diag}\in\mathcal{C}_{NDRID}$ that keeps an internal simulation of $M_{decide}'$ on input $\ulcorner S'_{diag}\urcorner$ and maintains the full interaction transcript in its state. During the interaction phase with $M_{decide}'$ (up to $T_{max}$ steps), $S'_{diag}$ responds with an outcome bit $o\in\{0,1\}$ drawn from a fixed computable distribution (e.g., $\mathbb{P}(o=1)=1/2$), independent of the branch used below, so that the transcript distribution is fully specified and computable.
+
+After each interaction step $t$, given the current transcript $h_t$ (which includes the observed interaction symbols from $M_{decide}'$), $S'_{diag}$ computes the conditional probability
+$$
+q_t := \mathbb{P}\bigl(M_{decide}' \text{ eventually outputs "Yes"} \mid h_t\bigr).
+$$
+Because $M_{decide}'$ halts within $T_{max}$ interactions, this conditional probability is computable from $h_t$ by finite enumeration over the remaining random bits of $M_{decide}'$ and the remaining probabilistic outcomes of $S'_{diag}$ (under the fixed computable response distribution used during the interaction phase).
+
+$S'_{diag}$ stores a flag $b_t\in\{0,1\}$ in its state, updated by
+$$
+b_t =
+\begin{cases}
+0, & \text{if } q_t > 1/2,\\
+1, & \text{if } q_t \le 1/2.
+\end{cases}
+$$
+When $M_{decide}'$ halts at some (random) time $\tau\le T_{max}$, define the post-halt probe behavior of $S'_{diag}$ by setting
+$$
+\mathbb{P}(o=1 \mid y_{\text{test}}, x_{\text{final}}) =
+\begin{cases}
+1/4, & \text{if } b_\tau=0,\\
+3/4, & \text{if } b_\tau=1.
+\end{cases}
+$$
+Thus $P(S'_{diag})$ is True iff $b_\tau=1$.
+
+Conditioned on the transcript at halting time, $M_{decide}'$ outputs "Yes" with probability $q_\tau$ and "No" with probability $1-q_\tau$. If $q_\tau>1/2$, then $b_\tau=0$ so $P(S'_{diag})$ is False and $M_{decide}'$ is correct only when it outputs "No", with probability $1-q_\tau<1/2$. If $q_\tau\le 1/2$, then $b_\tau=1$ so $P(S'_{diag})$ is True and $M_{decide}'$ is correct only when it outputs "Yes", with probability $q_\tau\le 1/2$. Hence in all cases,
+$$
+\mathbb{P}\bigl(M_{decide}' \text{ outputs the correct decision on } S'_{diag}\bigr)\le 1/2,
+$$
+so $M_{decide}'$ cannot be guaranteed to decide $P$ with arbitrarily high confidence for all $S\in\mathcal{C}_{NDRID}$ within finite interaction time. QED
 
 ## A.3 Significance and Relation to Logical Indeterminacy
 
@@ -500,8 +528,10 @@ The LITE construction leverages standard tools from mathematical logic:
 
 ### A.4.2 The LITE Function Construction
 
-Let $g, H_1, H_2$ be predefined total computable functions. Let $Sub(x, y, z)$ be the standard substitution function yielding the Gödel code of the formula obtained by substituting the numeral for $y$ into the formula with Gödel code $x$ at occurrences of the variable with code $z$. Let $v$ be the code of a variable 'x'. Let $FormTemplate(v)$ be a PA formula template with one free variable $v$.
-Define $ϕ_{\alpha}(n)$ as the formula whose Gödel code is $c_{\alpha, n} = Sub(⌈FormTemplate(v)⌉, \alpha, v)$. This $ϕ_{\alpha}(n)$ asserts a property related to the function with index $\alpha$ evaluated at $n$.
+Let $g, H_1, H_2$ be predefined total computable functions. Let $Sub(x, y, z)$ be the standard substitution function yielding the Gödel code of the formula obtained by substituting the numeral for $y$ into the formula with Gödel code $x$ at occurrences of the variable with code $z$. Let $u$ be the code of a variable 'u' and let $v$ be the code of a variable 'x'. Let $FormTemplate(u,v)$ be a PA formula template with two free variables $u,v$.
+Define $ϕ_{\alpha}(n)$ as the formula whose Gödel code is
+$c_{\alpha, n} = Sub(Sub(⌈FormTemplate(u,v)⌉, \alpha, u), n, v)$.
+This $ϕ_{\alpha}(n)$ asserts a property related to the function with index $\alpha$ evaluated at input $n$.
 
 **Theorem A.4.1a (Kleene's Second Recursion Theorem).**
 Let $\{φ_e\}_{e\in\mathbb{N}}$ be a standard acceptable enumeration of partial computable functions $\mathbb{N}\to\mathbb{N}$. For any total computable operator $\Psi:\mathbb{N}\times\mathbb{N}\to\mathbb{N}$, there exists $\beta\in\mathbb{N}$ such that
@@ -527,7 +557,7 @@ The LITE function $f: \mathbb{N} \to \mathbb{N}$ is defined as $f = φ_{\beta}$,
 $$
 f(n) = \begin{cases} n + H_1(n), & \text{if } Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉) \\ n + H_2(n), & \text{if } \neg Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉) \land Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉) \\ n + 1, & \text{otherwise} \end{cases} \quad \text{(A.4.1)}
 $$
-Here, $\beta$ is the Gödel code of $f$ itself. The first case is prioritized. By the assumed consistency of PA (Con(PA)), the predicates $Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉)$ and $Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉)$ cannot both hold, ensuring the case distinction is well-defined.
+Here, $\beta$ is the Gödel code of $f$ itself. The first case is prioritized. If Con(PA) holds, the predicates $Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉)$ and $Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉)$ cannot both hold, so the first two cases are mutually exclusive; regardless, the third branch ensures the definition returns a unique output for every $n$.
 
 **Theorem A.4.1 (Totality and Computability of the LITE Function).**
 Assume Con(PA) and that $g, H_1, H_2$ are total computable functions. Then the LITE function $f$ defined by Equation (A.4.1) via the Recursion Theorem exists, is total, and is computable.
@@ -552,7 +582,7 @@ The LITE function $f$, constructed entirely within PA, explicitly demonstrates t
 
 2.  **Simulate/Reason (Self-Referentially and Bounded):**
     *   The predicate $Prf(p, c)$ itself is a formal representation within PA of the proof-checking process. The bounded proof search $Prf_{\le g(n)}(c)$ is a *computation* performed by $f$ (as part of $\Psi(\beta, n)$) to *reason* about the bounded provability of $ϕ_{\beta}(n)$.
-    *   If $FormTemplate(v)$ is chosen to be a statement like "$φ_v(n)$ halts and has property X" (e.g., $U(y) > n+5$), then $ϕ_{\beta}(n)$ is effectively making an assertion about the *simulated execution and output* of $f$ itself.
+    *   If $FormTemplate(u,v)$ is chosen to be a statement like "$φ_u(v)$ halts and has property X", then $ϕ_{\beta}(n)$ is effectively making an assertion about the *simulated execution and output* of $f$ itself.
     *   The Recursion Theorem ensures this self-referential simulation/reasoning is consistent: $f$ can incorporate reasoning about its own (potential) behavior into its definition.
 
 3.  **Evaluate Predicates (Concerning Own Behavior):**
