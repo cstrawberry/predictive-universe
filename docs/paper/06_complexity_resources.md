@@ -22,7 +22,15 @@ A fundamental structural feature of the PU framework is that the ND-RID channel 
 
 *Proof.*
 
-**Part A (Information Channels).** From Theorem E.2, if $f_{RID} < 1$ (which follows from $\varepsilon > 0$ by Lemma E.1), then the classical capacity of the quantum channel satisfies $C(\mathcal{E}_N) < \ln d_0$. The proof proceeds by contradiction: if $C = \ln d_0$, then $d_0^n$ messages could be transmitted through $n$ channel uses, requiring asymptotically orthogonal outputs. But contractivity gives $\|\mathcal{E}_N^{\otimes n}(\rho_k) - \mathcal{E}_N^{\otimes n}(\rho_l)\|_1 \leq f_{RID}^n \cdot 2 \to 0$, contradicting orthogonality. The capacity bound $C < \ln d_0$ follows from the Holevo bound [Holevo 1973], with achievability and strong converse established in [Holevo 1998; Winter 1999].
+**Part A (Information Channels).** Theorem E.2 gives the strict inequality $C(\mathcal{E}_N)<\ln d_0$ via the flagged (erasure-mixture) argument. The key structural input is Lemma E.1: the averaged ND-RID channel contains a nonzero input-independent refresh component,
+$$
+\mathcal{E}_N=(1-p)\Psi+pT_\sigma,\qquad p>0,
+$$
+so a fraction $p$ of uses are effectively erased when the refresh triggers. Conditioning on the (conceptual) refresh flag yields the per-use bound
+$$
+C(\mathcal{E}_N)\le (1-p)\ln d_0<\ln d_0.
+$$
+Achievability and strong converse are established in [Holevo 1998; Winter 1999].
 
 **Part B (Horizon Entropy).** From Corollary E.2, the maximum thermodynamic entropy per channel is $S_{channel}^{max} = k_B C_{\max}$ (SI units) or simply $C_{\max}$ (natural units). Combined with channel counting (Theorem E.3), the total boundary entropy is:
 $$

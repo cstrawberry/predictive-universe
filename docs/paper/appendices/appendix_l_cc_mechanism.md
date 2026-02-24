@@ -778,7 +778,7 @@ Both emerge from the same underlying process (temporal medium modulation) throug
 
 The electromagnetic-to-gravitational ratio $\mathcal{R} \sim 6 \times 10^{36}$ (Theorem L.5) reflects frequency-dependent coupling efficiency:
 
-High-frequency temporal waves couple to microscopic charge distributions through gauge field phase coherence. Coupling strength is set by $\alpha_{\text{em}}(\text{bulk}) \approx 1/138.843$ before interface correction, emerging from the PCE-Attractor state (Definition 15a, Appendix Z) where the flat QFI spectrum ($M=24$, $\lambda=1$) yields bare coupling $u^* = 8^{1/24}-1$ via capacity saturation (Appendix Z, Theorem Z.7). The Thomson-limit value including interface correction is $\alpha^{-1} ≈ 137.036$ (Appendix Z, Theorem Z.20).
+High-frequency temporal waves couple to microscopic charge distributions through gauge field phase coherence. Coupling strength is set by $\alpha_{\text{em}}(\text{bulk}) \approx 1/138.843$ before interface correction, emerging from the PCE-Attractor state (Definition 15a, Appendix Z) where the flat QFI spectrum ($M=24$, $\lambda=1$) yields bare coupling $u^* = 8^{1/24}-1$ via capacity saturation (Appendix Z, Theorem Z.7). The Thomson-limit value including interface correction is $\alpha^{-1} \approx 137.036$ (Appendix Z, Theorem Z.26).
 
 Low-frequency temporal waves couple to macroscopic energy density through horizon boundary information capacity. Coupling strength is set by $G$ from $\Sigma_I = c^3/(4G\hbar)$ (Appendix E, Equation E.9), determined by ND-RID channel limits.
 
@@ -1127,7 +1127,7 @@ The electromagnetic-to-gravitational coupling ratio emerges from the framework's
 
 $$ \alpha_{\text{em}}(\text{bulk}) = \frac{u^*}{4\pi} \approx \frac{1}{138.843} \tag{L.81a} $$
 
-Including the discrete-to-continuous interface correction (Appendix Z, Section Z.17), the Thomson-limit value is $\alpha^{-1} = 137.036092 \pm 0.000050$ (Theorem Z.20). The electromagnetic fine structure constant in standard form is:
+Including the discrete-to-continuous interface correction (Appendix Z, Section Z.17), the Thomson-limit value is $\alpha^{-1} = 137.036092 \pm 0.000050$ (Theorem Z.26). The electromagnetic fine structure constant in standard form is:
 
 $$ \alpha_{\text{em}} = \frac{e^2}{4\pi\varepsilon_0\hbar c} \tag{L.81b} $$
 

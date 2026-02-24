@@ -76,7 +76,7 @@
 
 *   **$\varepsilon$ (Epsilon):** (Definition 28, Theorem 31, Appendix J) The fundamental, minimal dimensionless entropy production ($\Delta S_{min}/k_B$, in nats) associated with the necessary logical state merging inherent in the physical execution of the SPAP update cycle during 'Evolve'. Bounded below: $\varepsilon \ge \ln 2$ (Theorem J.1).
 
-*   **E$_8$ Root System:** (Appendix R, Section R.2) The exceptional root system in 8 dimensions consisting of 240 vectors of squared length 2, forming the unique optimal sphere packing in 8D (Viazovska 2017). Provides the information-optimal coordinatization of the MPU's internal 8-dimensional real subspace with kissing number 240, maximal symmetry, and self-duality. Squared distances between distinct roots are restricted to $d^2 \in \{2, 4, 6, 8\}$, constraining the discrete values of the Mass Hierarchy Invariant $\mathcal{R}$.
+*   **E$_8$ Root System:** (Appendix R, Section R.2) The exceptional root system in 8 dimensions consisting of 240 vectors of squared length 2; the associated $E_8$ lattice achieves the optimal sphere packing density in 8D (Viazovska 2017). Provides the information-optimal coordinatization of the MPU's internal 8-dimensional real subspace with kissing number 240, maximal symmetry, and self-duality. Squared distances between distinct roots are restricted to $d^2 \in \{2, 4, 6, 8\}$, constraining the discrete values of the Mass Hierarchy Invariant $\mathcal{R}$.
 
 *   **$f_{RID}$:** (Lemma E.1) The maximal contractivity factor ($0 \le f_{RID} < 1$) of the average 'Evolve' channel $\mathcal{E}_N$ with respect to trace distance. Strict inequality $f_{RID}<1$ is guaranteed by irreversibility ($\varepsilon>0$).
 
@@ -117,7 +117,7 @@
 
 *   **Landauer Pointer:** (Appendix Z, Theorem Z.1, Section Z.2.3) The minimal physical subsystem instantiating the irreducible cost $\varepsilon = \ln 2$ of the SPAP cycle. Dimension determined by admissibility ($\ln a \ge \varepsilon$) together with PPI-optimality: $a = 2$. Represents the two-level active kernel within the $d_0 = 8$ MPU Hilbert space where baseline predictive activity concentrates.
 
-*   **Leech Lattice ($\Lambda_{24}$):** (Appendix R, Section R.4.2) The unique optimal sphere-packing lattice in 24 dimensions (Cohn et al. 2017), with kissing number 196,560 and minimum norm 4 (rootless). Contains the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ with index $2^{12}$, providing an independent geometric pathway to the three-fold generation structure. Its dimension 24 coincides with the interface mode count $M = 24$ (Theorem Z.5).
+*   **Leech Lattice ($\Lambda_{24}$):** (Appendix R, Section R.4.2) Achieves the optimal sphere packing density in 24 dimensions (Cohn et al. 2017), with kissing number 196,560 and minimum norm 4 (rootless). Contains the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ with index $2^{12}$, providing an independent geometric pathway to the three-fold generation structure. Its dimension 24 coincides with the interface mode count $M = 24$ (Theorem Z.5).
 
 *   **Light Sublattice ($L_{\rm light}$):** (Appendix R, Definition R.3.2, Proposition R.3.3) The integer kernel $L_{\rm light} := \ker_{\mathbb{Z}} C \subset \mathbb{Z}^7$ of the charge map matrix $C$ encoding $SU(3) \times SU(2)$ Cartan generators. Contains topological sectors neutral under non-Abelian gauge groups. All elements have trivial $SU(3)$ center charge: $\tau(q) = 0 \in \mathbb{Z}_3$ for $q \in L_{\rm light}$.
 

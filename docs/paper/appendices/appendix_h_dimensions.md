@@ -98,7 +98,7 @@ $$
 $$
 An inertial observer in de Sitter space (a vacuum solution with $\Lambda > 0$) perceives a thermal bath with the Gibbons–Hawking temperature [Gibbons & Hawking 1977]:
 $$
-T_{dS}=\frac{\hbar \mathbf{c} \sqrt{\Lambda/3}}{2\pi k_{B}}.
+T_{dS}=\frac{\hbar c \sqrt{\Lambda/3}}{2\pi k_{B}}.
 \tag{H.2}
 $$
 
@@ -159,7 +159,7 @@ $$
 - $\hat{X}$ is a unit-norm random interface direction (unit w.r.t. QFI metric at $\rho_0$)
 - $\Pi_{\mathrm{act}}$ is the active participation coarse-graining
 - $\Pi_{\mathrm{sp}}$ is the ADM spatial projection
-- $N = C_{\mathrm{max}}/\varepsilon$ is the repetition count (independent comparison events per cycle)
+- $N := C_{\mathrm{max}}/\varepsilon$ is the maximal number of independent comparison events of minimal entropy cost $\varepsilon$ that can be supported per cycle by an information budget $C_{\mathrm{max}}$
 - $1/\sqrt{K_0}$ is the canonical normalization of the democratic discrete generator
 
 Substituting into Equation (H.4.BL):
@@ -211,11 +211,11 @@ $$
 by the additivity of QFI for tensor product states. ∎
 
 **Application:**
-- One irreversible comparison event costs $\varepsilon = \ln 2$ nats (Landauer principle [Landauer 1961], Theorem 31)
-- Available operational capacity is $C_{\mathrm{max}} = 2\varepsilon$ nats (PCE optimization, Appendix Q, Equation Q.10)
-- Number of independent events per cycle: $N = C_{\mathrm{max}}/\varepsilon = 2$
+- One irreversible comparison event costs at least $\varepsilon = \ln 2$ nats (Landauer principle [Landauer 1961], Theorem 31)
+- At the PCE-optimal operating point, the per-cycle information budget is $C_{\mathrm{max}}^* = 2\varepsilon$ (Appendix Q, Equation Q.10)
+- Therefore at most $N := C_{\mathrm{max}}^*/\varepsilon = 2$ independent Landauer-costed comparison events can be supported per cycle; the bridge-law normalization uses this maximal count
 
-**Key Insight:** The factor $C/\varepsilon = 2 > 1$ is NOT an "efficiency exceeding 100%". It is the **number of independent samples** (repetition count), which multiplicatively enhances distinguishability by QFI additivity. The system has 2 Landauer units of capacity, enabling 2 independent comparison events per coarse-grained time step.
+**Key Insight:** The factor $C/\varepsilon = 2$ is not an "efficiency exceeding 100%"; it is an event-count upper bound. With $C_{\mathrm{max}}^* = 2\varepsilon$, a cycle can support at most two independent comparison events at the irreducible cost level, and a PCE-saturating implementation attains $N=2$.
 
 #### H.4.2.4 Factor 3: Spatial Projection ($(D-1)/D = 3/4$)
 

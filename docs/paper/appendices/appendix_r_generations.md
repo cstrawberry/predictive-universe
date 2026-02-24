@@ -25,7 +25,7 @@ The generation structure derived in this appendix thus shares a common origin wi
 
 1. **Topological (Sections R.1-R.4):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent integer topological charges. Combined with gauge-topology correspondence and anomaly cancellation, this uniquely selects three generations with family charges $\{a, -a, 0\}$.
 
-2. **Geometric (Sections R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared E$_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (corresponding to inner products $\langle r_i, r_j \rangle \in \{2, 1, 0, -1, -2\}$ for unit-normalized roots) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a second independent three-fold structure. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
+2. **Geometric (Sections R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared E$_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (for roots normalized by $|r|^2 = 2$, so $r_i\cdot r_j \in \{2,1,0,-1,-2\}$ and $|r_i-r_j|^2 = 4 - 2\,r_i\cdot r_j$) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a second independent three-fold structure. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
 
 **Mass Hierarchy from $E_8$ Geometry:** Beyond counting generations, this appendix shows how the hierarchical pattern of fermion masses arises from geodesic distances between generation vacua in the $E_8$ root system. The allowed squared distances $d^2 \in \{2, 4, 6, 8\}$ between $E_8$ roots lead to a discrete geometric invariant with zero continuously adjustable parameters:
 $$
@@ -60,13 +60,13 @@ To aid clarity, we summarize the key mathematical objects and their notation:
 | $\omega_i$ | Generators of $H^2(\Sigma_8;\mathbb{Z})$ | Eq. R.4 |
 | $q = (q_1,\ldots,q_7)$ | Topological charge vector | Eq. R.6 |
 | $G_{\mathrm{SM}}$ | SM gauge group, $SU(3) \times SU(2) \times U(1)$ | Appendix G.8 |
-| $L_{\mathrm{light}}$ | Light sublattice (non-Abelian neutral) | Proposition R.3.3 |
+| $L_{\mathrm{light}}$ | Light sublattice (non-Abelian neutral) | Definition R.3.2 |
 | $U(1)_F$ | Emergent family symmetry | Section R.4 |
-| $F(q)$ | Family charge of sector $q$ | Eq. R.12 |
-| $\mathrm{Rep}$ | Predictive block (fermion representation) | Definition R.2.1 |
-| $E[q]$ | Topological energy bound | Eq. R.20 |
+| $F(q)$ | Family charge of sector $q$ | Theorem R.3.4 |
+| $\mathrm{Rep}$ | Predictive block (fermion representation) | Definition R.3.3 |
+| $E[q]$ | Energy in a fixed topological sector (infimum over maps) | Theorem R.3.0 |
 | $p_g$ | Vacuum minimum for generation $g$ | Section R.5.2 |
-| $Y_{gg'}$ | Yukawa coupling matrix element | Eq. R.19 |
+| $Y_{gg'}$ | Yukawa coupling matrix element | Eq. R.15 |
 | $M$ | Interface mode count, 24 | Appendix Z, Theorem Z.5 |
 | $E_8$ | Exceptional Lie group / root system | Section R.2.1 |
 | $\Lambda_{24}$ | Leech lattice in 24 dimensions | Section R.4.2 |
@@ -113,7 +113,7 @@ $$
 \tag{R.4}
 $$
 
-By the Hurewicz theorem, the $\omega_i$ represent the generators of $\pi_2(\Sigma_8)$. Concretely, for a smooth map $f:S^2\to \Sigma_8$, define the Chern integers
+Since $\Sigma_8$ is simply connected, the Hurewicz map gives $\pi_2(\Sigma_8)\cong H_2(\Sigma_8;\mathbb{Z})$. The classes $\omega_i$ form an integral basis of $H^2(\Sigma_8;\mathbb{Z})$, and for any $f:S^2\to\Sigma_8$ the integers $q_i=\langle \omega_i, f_*[S^2]\rangle$ determine the corresponding element of $\pi_2(\Sigma_8)$ via this identification. Concretely, for a smooth map $f:S^2\to \Sigma_8$, define the Chern integers
 
 $$
 k_i := \int_{S^2} f^*(x_i)\in \mathbb{Z}.\tag{R.5}
@@ -135,7 +135,7 @@ The relevant state-space for a single MPU includes pure states ($\mathbb{CP}^7$)
 
 In eight dimensions, the **E₈ root system** emerges as the natural coordinatization of the 8-dimensional real subspace (weight space / Cartan subalgebra) for several converging reasons:
 
-1. **Packing optimality:** E₈ is the unique optimal sphere packing in 8 dimensions, achieving the maximum density (Viazovska 2017). This supplies a canonical discrete scaffold on the 8D real subspace that can organize internal "positions" efficiently.
+1. **Packing optimality:** The $E_8$ lattice achieves the optimal sphere packing density in 8 dimensions (Viazovska 2017). This supplies a canonical discrete scaffold on the 8D real subspace that can organize internal "positions" efficiently.
 
 2. **Division algebra structure:** The framework's $d_0 = 8$ is related to octonionic structure via the Radon-Hurwitz theorem (**Appendix Z, Theorem Z.3**), which constrains division algebras to dimensions $\{1, 2, 4, 8\}$. **Appendix Z (Corollary Z.2)** establishes the octonionic connection: the existence of octonions (dimension 8) is tied to the maximal value $\rho(8) = 8$ in the Radon-Hurwitz function, providing a division-algebraic foundation for $d_0 = 8$. The E₈ root system naturally encodes this octonionic structure.
 
@@ -157,7 +157,7 @@ Several factors single out E₈ as the natural geometric structure for the 8-dim
 
 5. **Self-Duality:** $E_8$ is self-dual, meaning $E_8^* = E_8$. This symmetry simplifies the geometric structure, eliminates arbitrary orientation choices, and ensures that the dual lattice (relevant for Fourier transforms in quantum mechanics) coincides with the original. Self-duality is a natural PCE attractor as it minimizes representational redundancy.
 
-6. **Leech Lattice Connection:** The 24-dimensional Leech lattice $\Lambda_{24}$, which achieves optimal packing in 24 dimensions (Cohn, Kumar, Miller, Radchenko & Viazovska 2017), contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$; by contrast, the direct sum $E_8 \oplus E_8 \oplus E_8$ is a distinct Niemeier lattice (minimum norm 2). This provides an independent pathway to the three-fold structure (Section R.4.2) and connects to the interface mode count $M = 24$ from **Appendix Z (Theorem Z.5)**.
+6. **Leech Lattice Connection:** The 24-dimensional Leech lattice $\Lambda_{24}$, which achieves the optimal sphere packing density in 24 dimensions (Cohn, Kumar, Miller, Radchenko & Viazovska 2017), contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$; by contrast, the direct sum $E_8 \oplus E_8 \oplus E_8$ is a distinct Niemeier lattice (minimum norm 2). This provides an independent pathway to the three-fold structure (Section R.4.2) and connects to the interface mode count $M = 24$ from **Appendix Z (Theorem Z.5)**.
 
 7. **Root-Kissing Correspondence:** The $E$-series exceptional lattices exhibit a remarkable algebraic-geometric correspondence: for $n \in \{6, 7, 8\}$, the root count $|\Phi(E_n)|$ equals the kissing number achieved by the corresponding lattice:
 
@@ -197,7 +197,7 @@ The even unimodular lattices in dimension 8 are classified: $E_8$ is the unique 
 
 Among all simple Lie algebras of rank 8, only $E_8$ satisfies the full set of PCE optimality criteria: the simply-laced property ensures a single scale parameter, self-duality eliminates dual-lattice representational overhead, and packing optimality maximizes information density per unit volume.
 
-Thus $E_8$ is not merely convenient but information-theoretically unique for an 8-dimensional system under PCE constraints. No other root system in 8 dimensions achieves comparable packing density, kissing number, or algebraic structure.
+Thus $E_8$ is singled out by the conjunction of (i) uniqueness as the even unimodular lattice in dimension 8 and (ii) provably optimal packing density in dimension 8. We therefore adopt $E_8$ as the canonical discrete scaffold on the effective 8D real subspace.
 
 ### R.2.2 E₈ Root System Structure
 
@@ -262,23 +262,19 @@ As derived independently in Section T.24.3 (Theorem T.24.3), the charged lepton 
 
 ### R.3.1 Theorem R.3.0 (Global topological neutrality).
 
-For any physically realized collection of long-lived, low-energy sectors labeled by topological charges $\{q^{(g)}\} \subset \pi_2(\Sigma_8)$, the net charge must vanish:
+For any finite-energy configuration on $\mathbb{R}^3$ that approaches a fixed vacuum at spatial infinity and contains finitely many localized sector defects whose charges are $\{q^{(g)}\}\subset \pi_2(\Sigma_8)$ (measured on small linking $2$-spheres), the net charge must vanish:
 $$
 \sum_g q^{(g)} = 0.
 \tag{R.8}
 $$
 
-*Proof.* On a compact Kähler target, a nonzero $q \in \pi_2$ represents a nontrivial homology class whose energy is bounded below by a positive value proportional to its area. For sigma models on $\Sigma_8$, the energy functional for a map $\phi: S^2 \to \Sigma_8$ is:
+*Proof.* Let $\phi:\mathbb{R}^3\setminus\{x_1,\dots,x_N\}\to\Sigma_8$ be smooth with $\phi(x)\to p_\ast$ as $|x|\to\infty$. Choose disjoint small spheres $S^2_g$ enclosing each defect point $x_g$ and a large sphere $S^2_\infty$ enclosing all defects. Then $\mathbb{R}^3\setminus\{x_g\}$ deformation retracts onto a manifold whose boundary is $\partial W = S^2_\infty \sqcup \bigsqcup_g (-S^2_g)$. Pushing forward the fundamental classes by $\phi$ and using that $\partial W$ bounds $W$ gives, in $H_2(\Sigma_8;\mathbb{Z})$,
 $$
-E[\phi] = \int_{S^2} |\mathrm{d}\phi|^2 \, \mathrm{vol}_{S^2}
+\phi_\ast[S^2_\infty] - \sum_g \phi_\ast[S^2_g] = 0.
 $$
-where the norm is taken with respect to the Kähler metric on $\Sigma_8$. Using the Wirtinger inequality and the fact that $\Sigma_8$ has positive curvature (as a coadjoint orbit), the energy satisfies a topological bound of the form:
-$$
-E[\phi] \geq 4\pi \sum_{i=1}^7 \alpha_i |q_i|
-$$
-for suitable positive constants $\alpha_i$ depending on the Kähler class. This is analogous to the Bogomolny bound in $\mathbb{CP}^N$ sigma models (Manton & Sutcliffe 2004).
+Because $\phi$ is constant on $S^2_\infty$ (vacuum boundary condition), $\phi_\ast[S^2_\infty]=0$. Hence $\sum_g \phi_\ast[S^2_g]=0$ in $H_2(\Sigma_8;\mathbb{Z})$. Using $\pi_2(\Sigma_8)\cong H_2(\Sigma_8;\mathbb{Z})$ (Theorem R.1.1), this is exactly $\sum_g q^{(g)}=0$.
 
-A nonzero net topological charge $\sum_g q^{(g)} \neq 0$ at spatial infinity would produce an unavoidable gradient energy density in the vacuum state. For finite-energy field configurations, all topological defects must cancel in the large-distance limit. PCE selects the globally trivial vacuum sector to minimize total energy cost, enforcing $\sum_g q^{(g)} = 0$. ∎
+(For later use, one may define $E[q]:=\inf\{E[\psi]:\psi:S^2\to\Sigma_8,\ [\psi]=q\}\ge 0$, with $E[0]=0$ realized by constant maps.) ∎
 
 ### R.3.2 Embedding and the charge map
 
@@ -294,19 +290,17 @@ $$
 $$
 from the topological charge group to the Cartan weight lattice of the SM gauge group.
 
-*Proof.* Given $\iota: G_{\mathrm{SM}} \hookrightarrow U(8)$, consider the associated bundles over $\Sigma_8$ defined by the representation theory of $G_{\mathrm{SM}}$. For each $\mathfrak{g}_{\mathrm{SM}}$-generator $T^a$ in the Cartan subalgebra, define the moment map component:
-$$
-\mu^a: \Sigma_8 \to \mathbb{R}, \quad \mu^a(x) = \langle \Lambda(x), T^a \rangle
-$$
-where $\Lambda(x)$ is the moment map for the $U(8)$ action on $\Sigma_8$.
+*Proof.* Fix a maximal torus $T_{\mathrm{SM}}\subset G_{\mathrm{SM}}$ and conjugate inside $U(8)$ so that $\iota(T_{\mathrm{SM}})$ lies in the diagonal torus $T^8\subset U(8)$. The induced action of $T_{\mathrm{SM}}$ on $\mathbb{C}^8$ is therefore diagonal, giving eight characters (weights) $\lambda_1,\dots,\lambda_8\in\Lambda_{\mathrm{Cartan}}(G_{\mathrm{SM}})$.
 
-For a map $\phi: S^2 \to \Sigma_8$ with topological charge $q \in \pi_2(\Sigma_8)$, define the Cartan charges:
+For any map $f:S^2\to\Sigma_8$, let $x_k=c_1(Q_k)\in H^2(\Sigma_8;\mathbb{Z})$ be the tautological classes (Section R.1.2) and set
 $$
-Q^a = \frac{1}{2\pi} \int_{S^2} \phi^*(\omega_{\mu^a})
+k_k := \langle x_k, f_*[S^2]\rangle \in \mathbb{Z}.
 $$
-where $\omega_{\mu^a}$ is the 2-form obtained from $\mathrm{d}\mu^a$ via the symplectic structure. By the Hurewicz theorem and Poincaré duality, these integrals depend only on the homotopy class $[q] \in \pi_2(\Sigma_8)$, defining the homomorphism $\Phi: q \mapsto (Q^a)$.
-
-The image of $\Phi$ lies in the weight lattice $\Lambda_{\mathrm{Cartan}}$ because the $\mu^a$ are moment maps for circle actions that integrate to maximal torus elements in $G_{\mathrm{SM}}$. ∎
+Define
+$$
+\Phi([f]) := \sum_{k=1}^8 k_k\,\lambda_k \ \in\ \Lambda_{\mathrm{Cartan}}(G_{\mathrm{SM}}).
+$$
+This is well-defined on $\pi_2(\Sigma_8)$ because each $k_k$ depends only on the homotopy class of $f$, and it is a group homomorphism because the Kronecker pairing is additive under the $\pi_2$ group law and the $\lambda_k$ are fixed. Finally, $\Phi([f])$ lies in the Cartan lattice by construction: it is an integral linear combination of weights of the $T_{\mathrm{SM}}$-representation on $\mathbb{C}^8$. ∎
 
 ### R.3.3 Light sublattice and non-Abelian neutrality
 
@@ -320,11 +314,11 @@ These are topological charges neutral under $SU(3)\times SU(2)$. Sectors $q \not
 
 **Proposition R.3.3 (Center neutrality in the light sublattice).** For any $q \in L_{\rm light}$, its $SU(3)$ center charge is trivial: $\tau(q) = 0 \in \mathbb{Z}_3$.
 
-*Proof.* If $q \in L_{\rm light}$, then $c_1 \cdot q = c_2 \cdot q = 0$, hence $\tau(q)\equiv (c_1\cdot q + 2 c_2\cdot q)\pmod 3 = 0$. ∎
+*Proof.* If $q \in L_{\rm light}$, then $v_{c_1} \cdot q = v_{c_2} \cdot q = 0$ by Definition R.3.2. Hence $\tau(q)\equiv (v_{c_1}\cdot q + 2\,v_{c_2}\cdot q)\pmod 3 = 0$. ∎
 
 ### R.3.4 Index theory and anomaly constraints
 
-**Definition R.2.1 (Predictive block).** A predictive block $\mathrm{Rep}$ is a representation of $G_{\mathrm{SM}}$ on a finite-dimensional Hilbert space, corresponding to a collection of chiral fermions with specified gauge quantum numbers. For the Standard Model, a single generation forms one predictive block.
+**Definition R.3.3 (Predictive block).** A predictive block $\mathrm{Rep}$ is a representation of $G_{\mathrm{SM}}$ on a finite-dimensional Hilbert space, corresponding to a collection of chiral fermions with specified gauge quantum numbers. For the Standard Model, a single generation forms one predictive block.
 
 **Lemma R.IDX1 (Atiyah-Singer index formula for Dirac operator).**
 Let $M$ be a compact, oriented, spin manifold with a vector bundle $E_{\mathrm{Rep}}$ associated to the predictive block $\mathrm{Rep}$ (Atiyah & Singer 1968). The index of the Dirac operator $\not{D}_A$ coupled to a gauge connection $A$ on $E_{\mathrm{Rep}}$ is:
@@ -370,27 +364,25 @@ $$
 
 These constraints admit multiple solutions. The pattern $\{a, -a, 0\}$ with $N=3$ sectors is the minimal solution that satisfies anomaly cancellation AND permits CP violation.
 
-*Proof.* The identity $x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$ implies that if $\sum_g F_g=0$, then $\sum_g F_g^3=3F_1F_2F_3$. Thus the two anomaly conditions together force $F_1F_2F_3=0$, meaning at least one family charge must be zero.
+*Proof.* Assume $U(1)_F$ is an emergent family symmetry for which every chiral fermion in generation $g$ carries the same family charge $F_g$ (i.e., the $g$-th predictive block is replicated with a uniform $U(1)_F$ charge).
 
-**Anomaly-Allowed Solutions:**
+Because each generation carries identical Standard Model representations, every mixed anomaly with a single $U(1)_F$ insertion is a fixed nonzero coefficient per generation multiplied by $F_g$. Therefore the mixed anomalies $SU(3)^2U(1)_F$, $SU(2)^2U(1)_F$, $U(1)_Y^2U(1)_F$, and the mixed gravitational anomaly are all proportional to $\sum_g F_g$, giving the first condition in (R.11). The purely cubic anomaly $U(1)_F^3$ is proportional to $\sum_g F_g^3$, giving the second condition in (R.11). (The mixed anomaly $U(1)_Y U(1)_F^2$ vanishes because $\sum Y=0$ within each Standard Model generation.)
 
-For $N=1$: Only $F_1=0$ allowed—trivial, single neutral sector.
+Now consider solutions:
 
-For $N=2$: The pattern $\{a, -a\}$ satisfies both constraints:
-- $\sum F = a + (-a) = 0$ ✓
-- $\sum F^3 = a^3 + (-a)^3 = 0$ ✓
+- **$N=1$.** Then $\sum_g F_g=0$ forces $F_1=0$.
 
-However, this configuration is **vector-like** (generations pairwise opposite) and admits no CP violation. The Jarlskog invariant $J_{CP} \propto \sin\phi_{12}\sin\phi_{13}\sin\phi_{23}$ requires at least three complex phases in the mixing matrix, hence $N \geq 3$.
+- **$N=2$.** Then $\sum_g F_g=0$ forces $\{F_1,F_2\}=\{a,-a\}$, and $\sum_g F_g^3=0$ holds automatically. However, with two generations the CKM matrix has no physical complex phase after field rephasings, so $J_{\mathrm{CP}}=0$ and there is no CP violation.
 
-For $N=3$: The pattern $\{a, -a, 0\}$ satisfies anomaly cancellation:
-- $\sum F = a + (-a) + 0 = 0$ ✓
-- $\sum F^3 = a^3 + (-a)^3 + 0^3 = 0$ ✓
+- **$N=3$.** If $F_1+F_2+F_3=0$, then the identity
+$$
+x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)
+$$
+gives $F_1^3+F_2^3+F_3^3 = 3F_1F_2F_3$. Imposing also $\sum_g F_g^3=0$ yields $F_1F_2F_3=0$, so (up to permutation) one charge is zero and the other two are opposite: $\{F_1,F_2,F_3\}=\{a,-a,0\}$. This satisfies anomaly cancellation and is the minimal $N$ that can support a physical CKM phase.
 
-AND permits CP violation through the CKM matrix phase structure. This is the **minimal solution satisfying both anomaly cancellation and phenomenological requirements** (CP violation for baryogenesis).
+- **$N\ge 4$.** There exist many further solutions of (R.11) (e.g., $\{a,-a,b,-b\}$) that add generations without reducing the minimal $N$ required for a physical CKM phase.
 
-For $N\geq 4$: Additional sectors (e.g., $\{a, -a, b, -b\}$) satisfy anomalies but incur higher model complexity without additional low-energy predictive benefit.
-
-**Conclusion:** Anomaly cancellation alone allows $N \geq 2$. The requirement $N=3$ arises from combining anomaly constraints with CP-violating phenomenology and PCE minimality. ∎
+Therefore the minimal anomaly-free solution that permits CP violation is $N=3$ with family charges $\{a,-a,0\}$. ∎
 
 **Proposition R.3.5 (Uniqueness and necessity of three generations).**
 
@@ -402,27 +394,19 @@ For $N\geq 4$: Additional sectors (e.g., $\{a, -a, b, -b\}$) satisfy anomalies b
 
 (d) A strict Minimum Description Length (MDL) penalty on family duplication, combined with the unique predictive benefit of CP violation at $N=3$, establishes three generations as the unique, stable global minimum of the PCE potential.
 
-*Proof.* 
+*Proof.*
 
-(a) From Theorem R.3.4, $N=2$ satisfies anomalies but not CP violation. The pattern $\{a, -a, 0\}$ is minimal with both properties.
+(a) From Theorem R.3.4, $N=2$ satisfies anomaly cancellation but cannot support a physical CKM phase. The pattern $\{a,-a,0\}$ with $N=3$ is the minimal anomaly-free charge assignment that permits CP violation.
 
-(b) The Jarlskog invariant for CP violation is:
-$$
-J_{CP} = \mathrm{Im}[V_{us}V_{cb}V_{ub}^*V_{cs}^*]
-$$
-where $V$ is the CKM matrix. For $N < 3$, the CKM matrix has insufficient complex phases: $N=1$ gives trivial $V=1$; $N=2$ gives real $2\times 2$ orthogonal matrix. Only $N \geq 3$ admits a complex phase structure with $J_{CP} \neq 0$.
+(b) With $N=2$, the quark mixing matrix is $2\times 2$ and any complex phases can be removed by rephasing, so the rephasing-invariant Jarlskog quantity vanishes. With $N=3$, a physical rephasing-invariant phase exists, and CP violation is possible.
 
-(c) The PCE potential for $N$ generations scales as:
+(c) Under MDL, the description length of a theory with $N$ replicated predictive blocks can be lower-bounded as
 $$
-\mathcal{V}_{\mathrm{PCE}}(N) = A_{\mathrm{complexity}} \cdot N + \Gamma_0 \cdot \Psi_{\mathrm{pred}}(N)
+L_{\mathrm{model}}(N)\ \ge\ L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N),
 $$
-where $\Psi_{\mathrm{pred}}(N)$ is the predictive benefit. For $N=1,2$: $\Psi_{\mathrm{pred}} = 0$ (no CP violation, no baryogenesis). For $N=3$: $\Psi_{\mathrm{pred}} = \Psi_0 > 0$ (CP violation enabled). For $N>3$: $\Psi_{\mathrm{pred}} \approx \Psi_0$ (marginal additional benefit). Thus $\mathcal{V}(3) < \mathcal{V}(N)$ for all $N \neq 3$.
+with $L_{\mathrm{block}}>0$ and $L_{\mathrm{mix}}(N)$ nondecreasing in $N$ (additional generations add replicated field content and additional mixing structure). Hence $L_{\mathrm{model}}(N)$ is strictly increasing in $N$.
 
-(d) Under MDL coding, the redundancy for $N$ identical blocks scales as $\frac{k}{2}\log N$ where $k$ is the parameter count per block. The incremental predictive gain obeys:
-$$
-\Delta\Psi_{\mathrm{pred}}(N) \le \kappa_{\mathrm{MDL}}\log\!\left(1+\frac{1}{N}\right)
-$$
-which decreases rapidly for $N > 3$. The crossover at $N=3$ where predictive benefit (CP violation) saturates while complexity cost continues to grow establishes $N=3$ as the global minimum. ∎
+(d) Therefore, among anomaly-free models that can realize a physical CKM phase, PCE/MDL selects the smallest admissible $N$, namely $N=3$. ∎
 
 ## R.4 Three Generations from Dual Mechanisms
 
@@ -452,7 +436,7 @@ This topological mechanism derives three generations from first principles with 
 
 **The 24-Dimensional Leech Lattice:**
 
-The Leech lattice $\Lambda_{24}$ is the unique optimal sphere packing in 24 dimensions (Leech 1967; Cohn, Kumar, Miller, Radchenko & Viazovska 2017). Its uniqueness and optimality properties make it a natural structure for PCE-driven systems.
+The Leech lattice $\Lambda_{24}$ achieves the optimal sphere packing density in 24 dimensions (Leech 1967; Cohn, Kumar, Miller, Radchenko & Viazovska 2017). Its rigidity and optimality properties make it a natural structure for PCE-driven systems.
 
 **Connection to M = 24:**
 
@@ -510,7 +494,7 @@ The convergence of these three mechanisms makes the three-generation structure m
 - Mechanism 2 relies on sphere packing optimality, lattice constructions
 - Mechanism 3 relies on quantum Fisher information, capacity bounds
 
-These mathematical domains are logically independent—there is no a priori reason they should select the same number. Yet all three point to $N=3$. The convergence probability under a null hypothesis (random independent selections) is approximately $(1/10)^2 \sim 0.01$, strongly suggesting a unified underlying principle. ∎
+These mathematical domains are logically independent—there is no a priori reason they should select the same number. Yet all three point to $N=3$. The coincidence is therefore recorded as an internal rigidity/coherence check across independent derivations; assigning a numerical probability would require specifying an explicit alternative-model ensemble and prior. ∎
 
 ### R.4.2.1 The Golay Bridge: From Error Correction to Optimal Geometry
 
@@ -564,15 +548,7 @@ The $M = 24$ interface modes at the PCE-Attractor (Definition 15a) require error
 
 **Step 1 (Block length constraint).** The block length is $n = M = 24$, determined by the QFI mode count (Theorem Z.5): $M = 2ab = 2 \times 2 \times 6 = 24$.
 
-**Step 2 (Rate optimization).** The PCE loss functional for error-correcting codes is:
-
-$$
-L[C] = p_e(d) \cdot c_{\text{mode}}
-$$
-
-where $p_e(d)$ is the error probability (monotonically decreasing in minimum distance $d$) and $c_{\text{mode}}$ is the physical cost per mode. Under PCE isotropy (Theorem Z.5), all modes have equal cost.
-
-The optimal rate balancing information transmission and redundancy is $R = 1/2$, yielding dimension $k = n/2 = 12$. This follows from PCE optimization of the total functional $V_{\text{total}} = V_{\text{capacity}} + V_{\text{redundancy}}$, where $V_{\text{capacity}} \propto (1-R)$ penalizes unused information capacity and $V_{\text{redundancy}} \propto R$ penalizes insufficient error protection. Under isotropic conditions (equal mode costs), the unique minimum occurs at $R = 1/2$ where marginal gains from increased rate exactly balance marginal losses from reduced error correction. This symmetric point is the unique fixed point of the PCE gradient flow on the rate parameter.
+**Step 2 (Rate selection).** Under interface isotropy (Appendix Z, Theorem Z.5), Appendix Z (Theorem Z.13b, Steps 3–4) shows that the PCE code objective is minimized at $k=n/2$. With $n=24$ this yields $k=12$, i.e. rate $R=1/2$.
 
 **Step 3 (Distance maximization).** With constraints $(n, k) = (24, 12)$ and symmetric noise, minimizing $L[C]$ reduces to maximizing the minimum distance $d$.
 
@@ -649,7 +625,7 @@ corresponding to the three $E_8$ factors.
 - The code is self-dual: $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$
 - Minimum weight 8
 
-**Step 4 (Gluing construction).** For each codeword $c \in \mathcal{G}_{24}$, construct a glue vector $g_c \in \mathbb{R}^{24}$. The construction uses the coset structure of $L_0$: coordinates are shifted by $\frac{1}{2\sqrt{2}}$ in positions where $c_i = 1$.
+**Step 4 (Gluing construction).** Let $A_{L_0}:=L_0^*/L_0$ be the discriminant group of $L_0$. There is an identification $A_{L_0}\cong (\mathbb{Z}/2\mathbb{Z})^{24}$ compatible with the decomposition into three $\sqrt{2}E_8$ factors, and $A_{L_0}$ carries the discriminant quadratic form induced by $q([x])=|x|^2\bmod 2\mathbb{Z}$. The Golay code $\mathcal{G}_{24}\subset \mathbb{F}_2^{24}$ is realized as a maximal totally isotropic subgroup of $A_{L_0}$ for this quadratic form. For each $c\in\mathcal{G}_{24}$ choose a representative $g_c\in L_0^*$ of the corresponding class in $A_{L_0}$.
 
 **Step 5 (Leech lattice as union).** The Leech lattice is:
 
@@ -661,16 +637,11 @@ This is a disjoint union of $|\mathcal{G}_{24}| = 2^{12} = 4096$ cosets of $L_0$
 
 **Step 6 (Property verification).**
 
-*Even:* For any $v \in \Lambda_{24}$, $|v|^2 \in 2\mathbb{Z}$. This follows from the Golay code's self-orthogonality.
+*Even and unimodular:* In the gluing description, $\Lambda_{24}$ is an overlattice of $L_0$ determined by the maximal totally isotropic glue subgroup $\mathcal{G}_{24}\subset A_{L_0}$. Since $\mathcal{G}_{24}$ is doubly-even and self-dual, the resulting overlattice is even and unimodular (standard gluing theory for even lattices).
 
-*Unimodular:* $\det(\Lambda_{24}) = 1$. The determinant calculation uses the discriminant group structure.
+*Minimum norm 4 (rootless):* $L_0=(\sqrt{2}E_8)^3$ has minimum squared norm $4$. A norm-$2$ vector in an overlattice would have to arise from a nontrivial glue coset, and in this $24$-mode binary gluing correspondence such a vector would be produced by a weight-$4$ glue word. Since the extended Golay code has minimum weight $8$, no glue coset introduces vectors of squared norm $2$, and therefore every nonzero vector in $\Lambda_{24}$ satisfies $|v|^2\ge 4$.
 
-*Minimum norm 4 (rootless):* Any vector in $\Lambda_{24}$ has $|v|^2 \geq 4$. Vectors of squared norm 2 cannot arise because:
-
-- Vectors in $L_0$ have minimum squared norm 4
-- The Golay code's minimum weight 8 ensures that glue-shifted vectors also have $|v|^2 \geq 4$
-
-*Index:* $[\Lambda_{24} : L_0] = |\mathcal{G}_{24}| = 2^{12} = 4096$. ∎
+*Index:* $[\Lambda_{24}:L_0]=|\mathcal{G}_{24}|=2^{12}=4096$. ∎
 
 ---
 
@@ -693,21 +664,7 @@ These requirements restrict consideration to even unimodular lattices in 24 dime
 
 **Step 3 (Niemeier classification).** By the Niemeier classification (Niemeier 1973), there exist exactly 24 even unimodular lattices in 24 dimensions. These are characterized by their root systems—vectors with squared norm 2. The 24 Niemeier lattices have root systems ranging from the empty set (Leech) to $D_{24}$, $A_{24}$, $E_8^3$, and various combinations.
 
-**Step 4 (Rootless selection from PCE isotropy).** By Theorem Z.5, the QFI metric on the 24-dimensional interface is flat:
-
-$$
-g_{\text{QFI}} = \lambda \cdot I_{24}, \quad \lambda = 1
-$$
-
-This flatness follows from the isotropy group acting transitively on interface directions (Schur's lemma).
-
-Roots (vectors of squared norm 2) would break this isotropy by defining preferred directions. Such anisotropy would:
-
-- Create non-uniform local neighborhoods, increasing $V_{\text{op}}$
-- Violate the mode permutation symmetry required by PCE
-- Introduce preferred directions incompatible with the flat QFI metric
-
-Therefore, PCE selects the unique even unimodular lattice in 24 dimensions with no roots.
+**Step 4 (Rootless selection from PCE isotropy).** By Theorem Z.5, the QFI metric on the $M=24$ interface is flat and isotropic. Appendix Z (Theorem Z.8c) shows that QFI isotropy at $M=24$ forces the vacuum lattice to be rootless (minimum squared norm $\ge 4$). Therefore, among Niemeier lattices, the unique compatible choice is the Leech lattice $\Lambda_{24}$.
 
 **Step 5 (Uniqueness).** Among the 24 Niemeier lattices, exactly one is rootless: the Leech lattice $\Lambda_{24}$ (Leech 1967; Conway 1969).
 
@@ -750,7 +707,7 @@ Each factor of 8 corresponds to one $E_8$ component, matching the MPU Hilbert sp
 - $24 = 4 \times 6$: $(D) \times (b)$
 - $24 = 2 \times 12$: $(a) \times (\text{modular weight})$
 
-**Step 4 (Octad structure consistency).** The Golay code $\mathcal{G}_{24}$ admits a natural partition into three octads of 8 coordinates each. This octad structure is preserved by a subgroup of $M_{24} = \text{Aut}(\mathcal{G}_{24})$.
+**Step 4 (Octad structure consistency).** Fix the coordinate decomposition $\mathbb{R}^{24} \cong \mathbb{R}^8 \oplus \mathbb{R}^8 \oplus \mathbb{R}^8$ used in Lemma R.4.5 (Step 2), i.e., a partition of the 24 coordinates into three octads corresponding to the three $\sqrt{2}E_8$ factors. With this convention, the Golay-code/glue-group description is written in an octad-adapted basis.
 
 The trio structure ensures compatibility between:
 
@@ -880,30 +837,16 @@ The Golay code's error-correction properties (Theorem R.4.4) suggest a robustnes
 
 **Proposition R.4.2a (Golay Distance and Rootlessness).** The Golay code's minimum distance $d = 8$ is *necessary and sufficient* for the gluing construction to produce a rootless lattice.
 
-*Proof.*
+*Proof.* Let $L_0=(\sqrt{2}E_8)^3$ and let $A_{L_0}:=L_0^*/L_0$ be its discriminant group equipped with the induced discriminant quadratic form. A unimodular overlattice $L\supset L_0$ corresponds to a maximal totally isotropic subgroup $G\subset A_{L_0}$, and $L$ is even if and only if $G$ is totally isotropic (standard gluing theory for even lattices). Under the natural identification $A_{L_0}\cong \mathbb{F}_2^{24}$, such maximal totally isotropic subgroups correspond to doubly-even self-dual binary codes of length 24.
 
-**Step 1 (Gluing mechanism).** The construction proceeds by taking the scaled lattice $(\sqrt{2}E_8)^3$, which has minimum squared norm 4, and adding coset representatives. Specifically:
-$$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} \left( (\sqrt{2}E_8)^3 + \phi(c) \right)$$
-where $\phi: \mathbb{F}_2^{24} \to (\sqrt{2}E_8)^3 / (2\sqrt{2}E_8)^3$ maps Golay codewords to coset shifts [Conway & Sloane 1999].
+A norm-$2$ vector (“root”) in an overlattice must arise from a nontrivial glue coset; in the $24$-mode binary gluing correspondence this occurs when the glue code contains a low-weight word, and in particular a weight-$4$ word produces a squared-norm-$2$ vector. Therefore the overlattice is rootless (minimum squared norm $4$) if and only if the glue code has minimum weight at least $8$, i.e. minimum distance $d\ge 8$.
 
-**Step 2 (Root creation risk).** When coset shifts are added, new vectors of the form $v + \phi(c)$ appear, where $v \in (\sqrt{2}E_8)^3$. For the glued lattice to remain rootless (minimum squared norm 4), no such vector may have squared norm 2.
-
-**Step 3 (Weight-distance connection).** A codeword $c \in \mathcal{G}_{24}$ of Hamming weight $w$ contributes a shift affecting $w$ coordinates. The minimum squared norm of vectors in the corresponding coset depends on $w$:
-- Weight $w < 8$: Coset contains vectors of squared norm $< 4$ (roots created)
-- Weight $w \geq 8$: Minimum squared norm in coset remains $\geq 4$ (rootless preserved)
-
-**Step 4 (Golay optimality).** The extended binary Golay code $\mathcal{G}_{24}$ has minimum distance $d = 8$, meaning all nonzero codewords have weight $\geq 8$. This is the *maximum* achievable minimum distance for any binary $[24, 12]$ code (Theorem Z.13, citing Assmus & Mattson 1969).
-
-**Step 5 (Necessity and sufficiency).**
-- *Sufficiency:* Since all nonzero Golay codewords have weight $\geq 8$, no coset shift creates vectors of squared norm $< 4$. The glued lattice is rootless. ✓
-- *Necessity:* Any code with $d < 8$ contains a codeword of weight $< 8$, whose coset would contain vectors of squared norm $< 4$. Rootlessness would fail. ✗
-
-Therefore, among all binary $[24, 12]$ codes, only the Golay code produces a rootless glued lattice. ∎
+For length 24 and dimension 12, coding bounds imply $d\le 8$ (Theorem R.4.4), and the unique code attaining $d=8$ is the extended binary Golay code $\mathcal{G}_{24}$. Hence $d=8$ is necessary and sufficient for the (even unimodular) gluing of $L_0$ to yield a rootless lattice, and this glued lattice is the Leech lattice $\Lambda_{24}$. ∎
 
 **Corollary R.4.2b (Error Correction Implies Geometric Stability).** The Golay code's information-theoretic optimality (maximum error correction for length 24, rate 1/2) directly *causes* the Leech lattice's geometric optimality (unique rootless even unimodular lattice in 24 dimensions). This is not coincidence but logical entailment: PCE optimization of error correction automatically yields PCE optimization of packing geometry.
 
 *Proof.* By Proposition R.4.2a, rootlessness requires $d \geq 8$. By Theorem Z.13, $d = 8$ is the maximum achievable for $[24, 12]$ codes, uniquely attained by the Golay code. Therefore:
-$$\text{PCE-optimal error correction} \Rightarrow d = 8 \Rightarrow \text{rootlessness} \Rightarrow \text{unique optimal 24D packing}$$
+$$\text{PCE-optimal error correction} \Rightarrow d = 8 \Rightarrow \text{rootlessness} \Rightarrow \Lambda_{24}\ (\text{hence optimal 24D packing})$$
 Each implication is a theorem; their composition is logical necessity. ∎
 
 ---
@@ -939,9 +882,9 @@ The Leech lattice is the unique PCE optimum among Niemeier lattices.
 
 | Observation | Statement | Status |
 |:-----------|:----------|:------:|
-| O9 (Niemeier) | Exactly $M$ even unimodular lattices exist in dimension $M$, with unique rootless member | ✓ |
+| O9 (Niemeier) | In dimension 24, there are 24 even unimodular lattices, exactly one of which is rootless | ✓ |
 
-Dimension 24 is the only dimension where even unimodular lattices exist with exactly one rootless member. Whether this numerical coincidence reflects deeper structure remains an open question. ∎
+This is a dimension-24 coincidence: the number of Niemeier lattices equals the dimension $M=24$ selected by the mode-channel matching, and exactly one of these lattices is rootless (the Leech lattice). ∎
 
 **Remark R.4.2a: Nested Uniqueness.** The selection process exhibits nested uniqueness:
 1. Among all dimensions $D$, only $D$ with $K(D) = 24$ works → unique $D = 4$
@@ -954,25 +897,7 @@ Each level selects a unique object from a finite set, with the selections interl
 
 ### R.4.2.5 Automorphism Group and Symmetry Structure
 
-**Proposition R.4.4 (Automorphism Group).** The automorphism group of the Leech lattice is:
-$$\text{Aut}(\Lambda_{24}) = \text{Co}_0$$
-where $\text{Co}_0$ is the Conway group with order:
-$$|\text{Co}_0| = 2^{22} \cdot 3^9 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 23 = 8{,}315{,}553{,}613{,}086{,}720{,}000$$
-
-*Proof.*
-
-**Step 1 (Automorphism group).** $\text{Aut}(\Lambda_{24})$ consists of all orthogonal transformations $O \in O(24)$ such that $O(\Lambda_{24}) = \Lambda_{24}$.
-
-**Step 2 (Conway's theorem).** By Conway [1969], this group is denoted $\text{Co}_0$ and has the stated order. The center contains $\{-I_{24}\}$.
-
-**Step 3 (Sporadic simple group).** The quotient $\text{Co}_1 = \text{Co}_0/\{\pm I\}$ is a simple group, one of the 26 sporadic simple groups.
-
-**Step 4 (Subgroup structure).** The stabilizer of various sublattice structures yields other sporadic groups:
-- Stabilizer of a norm-4 vector: $\text{Co}_2$
-- Stabilizer of a norm-6 vector: $\text{Co}_3$
-- Stabilizer of a coordinate frame: $2^{12}:M_{24}$
-
-The appearance of $M_{24} = \text{Aut}(\mathcal{G}_{24})$ reflects the Golay code's role in the construction. ∎
+**Proposition R.4.4 (Automorphism Group).** See Proposition R.4.8. ∎
 
 **Remark R.4.2b: Physical Status of Sporadic Symmetries.** The emergence of sporadic simple groups ($\text{Co}_0$, $\text{Co}_1$, $M_{24}$) as automorphism groups of the framework's fundamental structures is mathematically necessary but physically subtle. These groups act on the 24-dimensional mode space, not directly on the 4-dimensional emergent spacetime. Physical observables in emergent spacetime reflect only those symmetries compatible with the dimensional reduction $24 \to 4$ via the mode-channel correspondence.
 
@@ -1071,11 +996,11 @@ where $\mathcal{F}$ is the set of torus-fixed points (Schubert cells), $\Lambda_
 
 Each topological sector $q \in L_{\mathrm{light}}$ selects a preferred vacuum by adding a small linear pinning term:
 $$
-\varepsilon V_B = -\varepsilon \langle\mu_{U(8)}, B(q)\rangle,
+\eta V_B = -\eta \langle\mu_{U(8)}, B(q)\rangle,
 $$
-where $\varepsilon>0$ is small and $B(q)$ is a diagonal matrix encoding the topological charge $q$. 
+where $\eta>0$ is small and $B(q)$ is a diagonal matrix encoding the topological charge $q$. 
 
-Minimizing $V_q = V + \varepsilon V_B$ over fixed points selects distinct minima. For the three sectors $q^{(1)}, q^{(2)}, q^{(3)}$ with family charges $\{a, -a, 0\}$, this yields three vacuum configurations:
+Minimizing $V_q = V + \eta V_B$ over fixed points selects distinct minima. For the three sectors $q^{(1)}, q^{(2)}, q^{(3)}$ with family charges $\{a, -a, 0\}$, this yields three vacuum configurations:
 
 - $p_1$: vacuum for generation 1 (family charge $+a$)
 - $p_2$: vacuum for generation 2 (family charge $-a$)  

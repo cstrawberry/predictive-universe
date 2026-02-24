@@ -322,7 +322,7 @@ where $D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)]$ is the quantum relative entropy
 $$
 \frac{\Delta S_{min}(o)}{k_B} \ge I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon \quad \text{(47)}
 $$
-*Proof:* The total minimal entropy production sums contributions from information acquisition cost ($k_B I$), feedback control cost ($k_B D_{KL}$), and the irreversible update execution cost ($k_B \varepsilon$, incurred only when $I>0$). (See Appendix E.1 for details and references). QED
+*Proof:* The total minimal entropy production sums contributions from information acquisition cost ($k_B I$), feedback control cost ($k_B D_{KL}$), and the irreversible update execution cost ($k_B \varepsilon$, incurred only when $I>0$). (See Appendix E.2 for details and references). QED
 
 **7.4.6 Theorem 33 (The Reflexivity Constraint $\kappa_r > 0$)**
 
@@ -331,7 +331,7 @@ $$
 \Delta I \cdot (\Delta S_{min}/k_B) \geq \kappa_r > 0 \quad \text{(48)}
 $$
 where the **Reflexivity Constant** $\kappa_r$ is guaranteed to be strictly positive ($\kappa_r > 0$) due to $\Delta I_{min} > 0$ and the necessary cost $\varepsilon \ge \ln 2 > 0$ (Theorem 31), assuming a non-negative minimal feedback cost $D_{KL, min} \ge 0$.
-*Proof:* From Theorem 32, **Equation (47) (which applies when $I>0$)**, we have the bound $\frac{\Delta S_{min}(o)}{k_B} \geq I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon$. For any interaction yielding at least $\Delta I_{min}$ information and having a minimal feedback cost of $D_{KL, min}$, this implies $\Delta S_{min}(o)/k_B \ge \Delta I + D_{KL, min} + \varepsilon$. Multiplying by $\Delta I$ yields $\Delta I \cdot (\Delta S_{min}(o)/k_B) \ge h(\Delta I)$, where $h(\Delta I) = \Delta I (\Delta I + D_{KL, min} + \varepsilon)$. The function $h(\Delta I)$ increases for $\Delta I>0$ since $\varepsilon>0, D_{KL,min}\ge 0$. Its minimum value for $\Delta I \ge \Delta I_{min}$ occurs at $\Delta I_{min}$, defining $\kappa_r = h(\Delta I_{min}) = \Delta I_{min} (\Delta I_{min} + D_{KL, min} + \varepsilon)$. Since $\Delta I_{min}>0$ and $\varepsilon > 0$, $\kappa_r$ is strictly positive. (See **Appendix E.1** and derivation from Theorem 32). QED
+*Proof:* From Theorem 32, **Equation (47) (which applies when $I>0$)**, we have the bound $\frac{\Delta S_{min}(o)}{k_B} \geq I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon$. For any interaction yielding at least $\Delta I_{min}$ information and having a minimal feedback cost of $D_{KL, min}$, this implies $\Delta S_{min}(o)/k_B \ge \Delta I + D_{KL, min} + \varepsilon$. Multiplying by $\Delta I$ yields $\Delta I \cdot (\Delta S_{min}(o)/k_B) \ge h(\Delta I)$, where $h(\Delta I) = \Delta I (\Delta I + D_{KL, min} + \varepsilon)$. The function $h(\Delta I)$ increases for $\Delta I>0$ since $\varepsilon>0, D_{KL,min}\ge 0$. Its minimum value for $\Delta I \ge \Delta I_{min}$ occurs at $\Delta I_{min}$, defining $\kappa_r = h(\Delta I_{min}) = \Delta I_{min} (\Delta I_{min} + D_{KL, min} + \varepsilon)$. Since $\Delta I_{min}>0$ and $\varepsilon > 0$, $\kappa_r$ is strictly positive. (See **Appendix E.2** and derivation from Theorem 32). QED
 
 **7.4.7 Baseline Operational Costs vs. Interaction Costs**
 
@@ -410,19 +410,28 @@ $$D_{tr}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \leq f_{RID} \cdot D_{tr}
 
 *where the contractivity factor satisfies $f_{RID} < 1$.*
 
-The strict inequality $f_{RID} < 1$ follows from $\varepsilon > 0$: each SPAP cycle dissipates at least $\varepsilon = \ln 2$ nats of entropy to the environment, reducing the mutual information between input and output states.
+Lemma E.1 provides the structural origin of strict contraction: the averaged ND-RID channel contains a nonzero input-independent refresh component,
+$$
+\mathcal{E}_N=(1-p)\Psi+pT_\sigma,
+\qquad p>0,
+$$
+so $f_{\text{RID}}=1-p<1$.
 
-**Theorem E.2 (Channel Capacity Bound).** *Strict contractivity ($f_{RID} < 1$) implies the classical information capacity of the dynamical channel is strictly bounded:*
+To bound classical capacity, use the flagged (erasure-mixture) argument of Theorem E.2. Define the flagged channel
+$$
+\widetilde{\mathcal{E}}(\rho)=(1-p)\,\Psi(\rho)\otimes|0\rangle\langle0|+p\,\sigma\otimes|1\rangle\langle1|.
+$$
+Tracing out the flag recovers $\mathcal{E}_N$, so by data processing the classical capacity satisfies
+$$
+C(\mathcal{E}_N)\le C(\widetilde{\mathcal{E}}).
+$$
+Given the flag, a fraction $p$ of uses are erased and carry no message information; conditioning on the flag pattern shows that at most $(1-p)\ln d_0$ nats per use can be transmitted. Hence
+$$
+C(\mathcal{E}_N)\le (1-p)\ln d_0 < \ln d_0,
+$$
+which is Theorem E.2.
 
-$$C_{\max}(f_{RID}) < \ln d_0 = 3\ln 2 \approx 2.08 \text{ nats}$$
-
-*Proof.* Suppose $C = \ln d_0$. Then $d_0^n$ messages could be transmitted reliably through $n$ independent uses of the channel. Reliable transmission requires asymptotically perfect distinguishability of outputs. But contractivity gives:
-
-$$D_{tr}(\mathcal{E}_N^{\otimes n}(\rho_k), \mathcal{E}_N^{\otimes n}(\rho_l)) \leq f_{RID}^n \cdot D_{tr}(\rho_k, \rho_l) \leq f_{RID}^n \cdot 2$$
-
-Since $f_{RID} < 1$, we have $f_{RID}^n \to 0$ as $n \to \infty$. This contradicts the requirement for reliable transmission. Therefore $C < \ln d_0$. ∎
-
-**Connection:** $\varepsilon > 0 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0$
+**Connection:** $\varepsilon > 0 \xrightarrow{\text{Lemma E.1}} p>0,\; f_{RID}=1-p < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0$
 
 #### Stage 4: Quantum Entropy (PPI → Landauer Pointer)
 

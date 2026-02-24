@@ -65,31 +65,35 @@ $$
 \quad \text{(D.2)}
 $$
 
-**Lemma D.2 (Work-Cost Gap Proportional to Misalignment).**
-Assume the actual physical power dissipated by MPU $v$ follows the theoretical cost function applied to the true complexity: $dW_{physical, v}/dt = R(C_P(v))$. For small misalignments $\delta_v(t) = C_P(v) - \langle \hat{C}_v(t) \rangle$, assuming $\delta_v(t)$ and $R'(\langle \hat{C}_v(t) \rangle)$ vary slowly over the averaging interval $\tau$, the average work-cost gap rate is approximately proportional to the misalignment:
+**Lemma D.2 (Work-Cost Gap Identifies Misalignment).**
+Assume the efficiency-saturated regime where the instantaneous physical dissipation rate equals the minimal operational cost evaluated at the true complexity:
 $$
-\frac{\Delta W_v(\tau)}{\tau} \approx R'(\langle \hat{C}_v \rangle) \delta_v
+\frac{dW_{physical, v}}{dt}(t)=R(C_P(v,t)).
+$$
+Define the instantaneous misalignment $\delta_v(t):=C_P(v,t)-\langle \hat{C}_v(t)\rangle$. If $R$ is twice continuously differentiable on the viable complexity range, then for any averaging window length $\tau>0$,
+$$
+\frac{\Delta W_v(\tau)}{\tau}
+= \frac{1}{\tau}\int_t^{t+\tau} R'(\langle \hat{C}_v(t')\rangle)\,\delta_v(t')\,dt'
++ \frac{1}{2\tau}\int_t^{t+\tau} R''(\xi_v(t'))\,\delta_v(t')^2\,dt'
 \quad \text{(D.3)}
 $$
-where $R'(C)$ is the derivative of the cost function, evaluated at the operational complexity $\langle \hat{C}_v \rangle$.
+where for each $t'\in[t,t+\tau]$ the intermediate value $\xi_v(t')$ lies between $\langle \hat{C}_v(t')\rangle$ and $C_P(v,t')$.
 
-*Proof.* Using a first-order Taylor expansion for the true power cost around the operational estimate:
+In particular, if $|R''(C)|\le L_R$ on the viable complexity range, then the remainder term is bounded by
 $$
-\frac{dW_{physical, v}}{dt} = R(C_P(v)) = R(\langle \hat{C}_v \rangle + \delta_v) \approx R(\langle \hat{C}_v \rangle) + R'(\langle \hat{C}_v \rangle) \delta_v + O(\delta_v^2)
+\left|\frac{1}{2\tau}\int_t^{t+\tau} R''(\xi_v(t'))\,\delta_v(t')^2\,dt'\right|
+\le \frac{L_R}{2\tau}\int_t^{t+\tau}\delta_v(t')^2\,dt'.
 $$
-The instantaneous gap rate is:
-$$
-\frac{d(\Delta W_v)}{dt} = \frac{dW_{physical, v}}{dt} - R(\langle \hat{C}_v \rangle) \approx R'(\langle \hat{C}_v \rangle) \delta_v
-$$
-Integrating over $\tau$ and dividing by $\tau$, assuming $\delta_v$ and $R'(\langle \hat{C}_v \rangle)$ vary slowly such that their time averages over $\tau$ are well approximated by their instantaneous values (or using mean value theorem for integrals), yields Equation (D.3). The approximation holds well for small $\delta_v$. QED
 
-**Physical Feedback Mechanism and Justification of Assumptions:** The mechanism relies on two core assumptions: (1) At PCE-optimal equilibrium, the actual physical power dissipated is given by the theoretical cost function, $dW_{physical, v}/dt = R(C_P(v))$. (2) This physical dissipation is operationally accessible to the MPU's adaptation dynamics.
-*   *Justification for (1):* By definition, $R(C_P)$ is the *minimal* theoretical cost. Any physical implementation dissipating more power is, by definition, less efficient. PCE dynamics, which minimize the global potential $V(x)$, will select against such inefficient configurations. Therefore, any stable equilibrium state $x^*$ must correspond to a physical implementation operating at this theoretical efficiency limit.
-*   *Justification for (2):* Physical dissipation manifests as observable physical quantities (e.g., heat flux, energy transfer to the environment). For the MPU to solve the POP (Axiom 1) effectively, its adaptation dynamics must be coupled to the physical realities of its resource consumption. The MPU must be able to "sense" its own operational cost rate to optimize its behavior. The work-cost gap $\Delta W_v$ is precisely this feedback signal.
+*Proof.* By Taylor's theorem with remainder, for each $t'$ there exists $\xi_v(t')$ between $\langle \hat{C}_v(t')\rangle$ and $C_P(v,t')$ such that
+$$
+R(C_P(v,t')) = R(\langle \hat{C}_v(t')\rangle) + R'(\langle \hat{C}_v(t')\rangle)\delta_v(t') + \frac{1}{2}R''(\xi_v(t'))\delta_v(t')^2.
+$$
+Subtract $R(\langle \hat{C}_v(t')\rangle)$, integrate from $t$ to $t+\tau$, divide by $\tau$, and use Definition D.2. The stated bound follows immediately from $|R''|\le L_R$. QED
 
-With these justifications, the observable work-cost gap $\Delta W_v(\tau)$ provides a direct physical feedback signal proportional to the misalignment $\delta_v$. The system's adaptation dynamics, driven by PCE to maximize overall efficiency, will act to reduce this gap. Driving $\Delta W_v \to 0$ is equivalent to driving $\delta_v \to 0$. This mechanism is formalized in Theorem D.5 in terms of the long-run behavior of the stochastic dynamics.
+**Physical Feedback Mechanism and Efficiency Saturation:** By Definition 3a, $R(C)$ is the minimal operational power cost required to sustain complexity $C$ (at the relevant $T_{eff}$). Therefore any physical implementation with true complexity $C_P(v,t)$ satisfies $dW_{physical, v}/dt \ge R(C_P(v,t))$, with equality when the MPU operates at the efficiency-saturated limit. POP/PCE dynamics minimize the global potential $V(x)$ and thus select, at viable equilibria and in the low-noise stationary regime (Theorem D.5), configurations close to this efficiency-saturated limit; any nonnegative slack away from saturation can be absorbed into the stochastic forcing already present in (D.8) and the bounded noise term in the misalignment dynamics (Proposition D.1). Physical dissipation is operationally observable (e.g., as heat flux or entropy export), so $\Delta W_v$ is an accessible feedback signal. Lemma D.2 shows that this feedback decomposes into a leading term proportional to the misalignment $\delta_v$ plus a controlled quadratic remainder; consequently, driving $\Delta W_v$ small under POP/PCE drives the mean-square misalignment small and enforces $\delta_v\to 0$ in the low-noise equilibrium regime.
 
-**Robustness to Noise and Deviations from Ideal Efficiency:** In a realistic physical setting, the measurement of the work-cost gap $\Delta W_v$ will be subject to noise (e.g., thermal fluctuations, measurement imperfections), and the system may temporarily deviate from the idealized efficiency $R(C_P)$. This means the feedback signal is stochastic: $\Delta W_v^{obs} = \Delta W_v + \xi_W$, where $\xi_W$ is noise. However, the adaptation dynamics governed by PCE are fundamentally stochastic (Equation D.8). As long as the noise $\xi_W$ is unbiased ($\mathbb{E}[\xi_W]=0$) and the feedback signal remains correlated with the true misalignment $\delta_v$, the dynamics will still drive the expected misalignment towards zero, $\mathbb{E}[\delta_v] \to 0$. This feedback process physically implements the necessary restoring force, equivalent to the gradient term $-\nabla_{\langle C_v \rangle} V_{proxy}$, ensuring the operational complexity estimate is continuously calibrated against physical reality, forcing alignment at stable equilibria.
+**Robustness to Noise and Deviations from Ideal Efficiency:** In a realistic physical setting, the measurement of the work-cost gap $\Delta W_v$ is noisy (e.g., thermal fluctuations, measurement imperfections), and the instantaneous dissipation rate may deviate from the efficiency-saturated limit $R(C_P)$. These effects can be modeled as an additive stochastic perturbation of the observed feedback, $\Delta W_v^{obs} = \Delta W_v + \xi_W$, with $\mathbb{E}[\xi_W]=0$ and bounded second moment over the averaging window. Since the adaptation dynamics are already modeled as a diffusion (Equation D.8), such perturbations are absorbed into the diffusion term $D(x)$ and therefore into the bounded forcing constant $C_{\mathcal M}$ appearing in Proposition D.1. The resulting rigorous conclusion is contraction of the mean-square misalignment toward a noise floor (Corollary D.2), rather than pointwise convergence in the presence of persistent stochastic forcing.
 
 ### D.3.2 Mean-Square Alignment Convergence
 
@@ -101,35 +105,49 @@ $$
 $$
 
 **Proposition D.1 (Stochastic Contraction of Misalignment).**
-Consider the stochastic adaptation dynamics for the configuration $x(t)$ given by Equation (D.8) below, driven by the potential $V(x)$ which includes the implicit alignment penalty $V_{proxy}$. Under the technical assumptions (A1)-(A6) specified in Section D.6.1, the expected rate of change of the mean-square misalignment $\mathcal{M}(x(t))$ satisfies:
+Consider the stochastic adaptation dynamics for the configuration $x(t)$ given by Equation (D.8) below, with potential decomposed as $V(x)=V_{core}(x)+V_{proxy}(x)$ where $V_{proxy}$ is given by (D.1a). Let $\nabla_C$ denote the gradient with respect to the proxy complexity coordinates $(\langle \hat{C}_v\rangle)_v$, and let $D_{CC}(x)$ denote the restriction of the diffusion matrix $D(x)$ to these coordinates. Under the technical assumptions (A1)-(A6) specified in Section D.6.1, the expected rate of change of the mean-square misalignment $\mathcal{M}(x(t))$ satisfies:
 $$
-\frac{d}{dt}\mathbb{E}[\mathcal M(x(t))] \le \mathbb{E}\left[ -\eta'_{proxy} \|\nabla V_{proxy}(x)\|^2 + C'_{noise} \right]
+\frac{d}{dt}\mathbb{E}[\mathcal M(x(t))] \le -2k_1\eta_{min}\,\mathbb{E}[\mathcal M(x(t))] + C_{\mathcal M}
 \quad \text{(D.5)}
 $$
-for some positive constant $\eta'_{proxy}$ related to the adaptation rate and $k_1$, and a bounded noise coefficient $C'_{noise}$ related to the diffusion term affecting misalignment. The drift term is negative definite with respect to the misalignment gradient $\nabla V_{proxy}$, ensuring that the dynamics tend to reduce misalignment on average, opposed only by noise.
+where one may take
+$$
+C_{\mathcal M}
+:= \frac{\eta_{max}^2}{4k_1\eta_{min}}\left(\sup_{x\in\mathcal K}\|\nabla_C V_{core}(x)\|^2\right) + \sup_{x\in\mathcal K}\operatorname{Tr}(D_{CC}(x)),
+$$
+and $\mathcal K$ is the compact invariant set from (A5).
 
-*Proof.* $\mathcal{M}(x) = k_1^{-1} V_{proxy}(x)$. Applying Ito's formula to $\mathcal{M}(x)$ for the dynamics (Equation D.8):
+*Proof.* By Definition D.3, $\mathcal M = k_1^{-1}V_{proxy}$. Applying Ito's formula to $V_{proxy}(x(t))$ under (D.8) gives
 $$
-d\mathcal{M} = \nabla_x \mathcal{M} \cdot (-\eta \nabla V dt + \sqrt{2D} dW) + \frac{1}{2} \text{Tr}( (\sqrt{2D})^T (\nabla^2 \mathcal{M}) (\sqrt{2D}) ) dt
+\frac{d}{dt}\mathbb E[\mathcal M(x(t))]
+= \mathbb E\bigl[-k_1^{-1}(\nabla V_{proxy})^T\eta(\nabla V_{core}+\nabla V_{proxy}) + k_1^{-1}\operatorname{Tr}(D\nabla^2 V_{proxy})\bigr].
 $$
+Since $V_{proxy}(x)=\frac{k_1}{2}\sum_v(C_P(v)-\langle\hat C_v\rangle_x)^2$, its gradient is supported only on the proxy-complexity coordinates and satisfies $\nabla_C V_{proxy} = k_1(\langle\hat C\rangle-C_P)$, hence $\|\nabla_C V_{proxy}\|^2 = 2k_1^2\mathcal M$. Using the SPD bounds on $\eta$ (A2),
 $$
-d\mathcal{M} = k_1^{-1} \nabla V_{proxy} \cdot (-\eta \nabla V dt + \sqrt{2D} dW) + k_1^{-1} \text{Tr}(D \nabla^2 V_{proxy}) dt
+-k_1^{-1}(\nabla V_{proxy})^T\eta(\nabla V_{proxy})
+\le -k_1^{-1}\eta_{min}\|\nabla_C V_{proxy}\|^2
+= -2k_1\eta_{min}\mathcal M.
 $$
-Taking expectations:
+For the cross term, Cauchy-Schwarz and Young's inequality give, for each $x$,
 $$
-d\mathbb{E}[\mathcal{M}]/dt = \mathbb{E}[ -k_1^{-1} (\nabla V_{proxy})^T \eta (\nabla V_{core} + \nabla V_{proxy}) + k_1^{-1} \text{Tr}(D \nabla^2 V_{proxy}) ]
+k_1^{-1}\big|(\nabla V_{proxy})^T\eta\nabla V_{core}\big|
+\le \frac{\eta_{min}}{2k_1}\|\nabla_C V_{proxy}\|^2 + \frac{\eta_{max}^2}{2k_1\eta_{min}}\|\nabla_C V_{core}\|^2.
 $$
-Since $\eta$ is positive definite ($\lambda(\eta) \ge \eta_{min} > 0$), the term $-k_1^{-1} (\nabla V_{proxy})^T \eta (\nabla V_{proxy}) \le -k_1^{-1} \eta_{min} \|\nabla V_{proxy}\|^2$. The cross term $-k_1^{-1} (\nabla V_{proxy})^T \eta (\nabla V_{core})$ can be bounded using Cauchy-Schwarz. The noise term $\mathbb{E}[k_1^{-1} \text{Tr}(D \nabla^2 V_{proxy})]$ is bounded above by some $C'_{noise}$ (assuming bounded Hessian and diffusion). The dominant term driving down $\mathcal{M}$ when $\nabla V_{proxy}$ is large is the quadratic term $-\eta'_{proxy} \|\nabla V_{proxy}\|^2$. This guarantees a tendency towards alignment, leading to the form in Equation (D.5). QED
+Combining with $\|\nabla_C V_{proxy}\|^2=2k_1^2\mathcal M$ yields a net drift term at most $-2k_1\eta_{min}\mathcal M + \frac{\eta_{max}^2}{4k_1\eta_{min}}\|\nabla_C V_{core}\|^2$. Finally, since $\nabla^2 V_{proxy}$ is constant on the proxy-complexity block, $\operatorname{Tr}(D\nabla^2 V_{proxy})=\operatorname{Tr}(D_{CC})$, which is bounded on $\mathcal K$ by (A3)-(A5). Taking expectations and using the definition of $C_{\mathcal M}$ gives (D.5). QED
 
 **Corollary D.2 (Convergence to Alignment Noise Floor).**
-Under the dynamics (Equation D.8) and assumptions (A1)-(A6), the long-time expectation of the mean-square misalignment is bounded by the noise floor:
+Under the dynamics (Equation D.8) and assumptions (A1)-(A6), Gronwall's inequality applied to (D.5) gives:
 $$
-\limsup_{t\to\infty} \mathbb E[\mathcal M(x(t))] \le \frac{C'_{noise}}{\eta'_{proxy}}
+\mathbb E[\mathcal M(x(t))] \le e^{-2k_1\eta_{min}t}\mathbb E[\mathcal M(x(0))] + \frac{C_{\mathcal M}}{2k_1\eta_{min}}\bigl(1-e^{-2k_1\eta_{min}t}\bigr),
+$$
+and therefore the long-time expectation of the mean-square misalignment is bounded by the noise floor:
+$$
+\limsup_{t\to\infty} \mathbb E[\mathcal M(x(t))] \le \frac{C_{\mathcal M}}{2k_1\eta_{min}}
 \quad \text{(D.6)}
 $$
-If the effective noise driving misalignment is sufficiently small, then $\mathbb E[\mathcal M(x(t))]$ becomes small, implying $C_P(v) \approx \langle \hat{C}_v \rangle$ in the mean. More generally, under the ergodic stationary regime of the stochastic dynamics (Theorem D.5), the long-run time-average of $\langle \hat{C}_v \rangle_{x(t)}$ converges to its expectation under the invariant measure, providing the formal justification for Theorem 2.
+If the effective noise driving misalignment (captured in $C_{\mathcal M}$) is sufficiently small relative to $k_1\eta_{min}$, then $\mathbb E[\mathcal M(x(t))]$ becomes small, implying $C_P(v)\approx\langle\hat C_v\rangle$ in mean-square. More generally, under the ergodic stationary regime of the stochastic dynamics (Theorem D.5), the long-run time-average of $\langle \hat{C}_v \rangle_{x(t)}$ converges to its expectation under the invariant measure, providing the formal justification for Theorem 2.
 
-*Proof.* From Equation (D.5), $d\mathbb{E}[\mathcal{M}]/dt \le C'_{noise}$ when $\nabla V_{proxy}=0$. This implies $\mathbb{E}[\mathcal{M}]$ is bounded. Standard results for stochastic processes with such Lyapunov properties show convergence of the expectation to a bounded region around the minimum, with the bound related to the ratio of noise to restoring force, as in Equation (D.6). QED
+*Proof.* The bound is the explicit solution of the scalar differential inequality (D.5). QED
 
 **Remark D.1: Uniqueness and Optimality of Circuit Complexity Proxy.**
 The operational proxy $\hat{C}_v$ was identified with quantum circuit complexity (Definition B.1). Could another proxy $\hat{C}'_v = f(\hat{C}_v)$ (with $f$ non-affine) be used consistently? If such a proxy were used, the operational cost estimate $R(\hat{C}'_v)$ would generally differ from the true physical cost $R(C_P(v))$ even when $\langle \hat{C}_v \rangle = C_P(v)$. This persistent mismatch would induce a non-zero work-cost gap $\Delta W_v$ via Equation (D.3) (using the chain rule for $R(f(C_v))$). The physical feedback mechanism, acting to minimize $\Delta W_v$, would generate a gradient term effectively penalizing the use of $\hat{C}'_v$. The dynamics governed by minimizing the true physical dissipation (including the work-cost gap penalty) uniquely favor the proxy $\hat{C}_v$ (or an affine transformation thereof) for which the operational cost function $R(\langle \hat{C}_v \rangle)$ most accurately reflects the true physical cost $R(C_P(v))$ near equilibrium. This minimizes the residual work-cost gap, satisfying the PCE imperative for maximum efficiency. Thus, quantum circuit complexity (or equivalent measures) emerges as the dynamically selected, optimal operational proxy.
@@ -211,10 +229,10 @@ We make standard technical assumptions required for the convergence theorems, ju
 *   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The $C^2$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms ($V_{op}, V_{prop}$) are expected to grow super-linearly with complexity and network size (e.g., $R(C) \propto C^{\gamma_p}$ with $\gamma_p > 1$), while the benefit term ($V_{benefit}$) saturates (due to $PP < \beta$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
 *   **(A2) Mobility Bounds:** The mobility matrix $\eta(x)$ is symmetric positive definite, bounded, and Lipschitz on $\mathcal{X}_{adm}$: there exist constants $0<\eta_{\min}\le \eta_{\max}<\infty$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$,
 $\eta_{\min}\|v\|^2 \le v^T\eta(x)v \le \eta_{\max}\|v\|^2$, and $\|\eta(x)-\eta(y)\|\le L_\eta\|x-y\|$ for all $x,y$. *Physical Justification:* In PU, $\eta$ encodes local equilibration/update rates of ND-RID channels and local routing policies. These are bounded by finite cycle times and finite per-step dissipation (each irreversible ND-RID update has $\varepsilon\ge\ln 2$, Theorem 31), and Lipschitz dependence expresses local response of rates to small changes in configuration, consistent with near-equilibrium linear response [Onsager 1931].
-*   **(A3) Diffusion Matrix Bounds:** The diffusion matrix $D(x)$ is bounded and uniformly elliptic. Specifically, there exist constants $0<\lambda_{min}\le\lambda_{max}<\infty$ such that for all $x$ and all vectors $v$, $\lambda_{min}\|v\|^2 \le v^T D(x) v \le \lambda_{max}\|v\|^2$. *Physical Justification:* In PU, diffusion models aggregate microscopic stochasticity of ND-RID routing and environmental forcing. Uniform bounds correspond to finite-temperature noise with bounded per-step fluctuations set by finite update rates and capacity constraints (e.g., bounded degree $\Delta_{max}$ and minimal cycle time $\tau_{min}$), preventing arbitrarily large instantaneous kicks while ensuring ergodic exploration of admissible configurations.
+*   **(A3) Diffusion Matrix Bounds:** The diffusion matrix $D(x)$ is bounded and uniformly elliptic. Specifically, there exist constants $0<d_{\min}\le d_{\max}<\infty$ such that for all $x$ and all vectors $v$, $d_{\min}\|v\|^2 \le v^T D(x) v \le d_{\max}\|v\|^2$. *Physical Justification:* In PU, diffusion models aggregate microscopic stochasticity of ND-RID routing and environmental forcing. Uniform bounds correspond to finite-temperature noise with bounded per-step fluctuations set by finite update rates and capacity constraints (e.g., bounded degree $\Delta_{max}$ and minimal cycle time $\tau_{min}$), preventing arbitrarily large instantaneous kicks while ensuring ergodic exploration of admissible configurations.
 *   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
 *   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
-*   **(A6) Noise Irreducibility:** The stochastic forcing is irreducible on $\mathcal{X}_{adm}$: for any nonempty open set $U\subset\mathcal{X}_{adm}$ and any $t>0$, the transition probability satisfies $\mathbb{P}_x(X_t\in U)>0$. A sufficient condition is uniform non-degeneracy of the diffusion (already implied by (A3)): there exists $\lambda_*>0$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$, $v^T D(x)v\ge \lambda_*\|v\|^2$. *Physical Justification:* PU includes irreducible environmental/measurement noise and ND-RID stochasticity; without such forcing, some degrees of freedom could become trapped on invariant submanifolds, breaking ergodicity and preventing concentration of the invariant measure on global PCE equilibria (Theorem D.5).
+*   **(A6) Noise Irreducibility:** The stochastic forcing is irreducible on $\mathcal{X}_{adm}$: for any nonempty open set $U\subset\mathcal{X}_{adm}$ and any $t>0$, the transition probability satisfies $\mathbb{P}_x(X_t\in U)>0$. A sufficient condition is uniform non-degeneracy of the diffusion (already implied by (A3)): there exists $d_*>0$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$, $v^T D(x)v\ge d_*\|v\|^2$. *Physical Justification:* PU includes irreducible environmental/measurement noise and ND-RID stochasticity; without such forcing, some degrees of freedom could become trapped on invariant submanifolds, breaking ergodicity and preventing concentration of the invariant measure on global PCE equilibria (Theorem D.5).
 
 ### D.6.2 Lyapunov Analysis
 
@@ -249,13 +267,13 @@ $$
 This set includes all local minima, maxima, and saddle points of the potential $V(x)$.
 
 **Theorem D.4 (Properties of Critical Points).**
-Any configuration $x^* \in \mathcal{E}_{*}$ must simultaneously satisfy:
+Any configuration $x^*$ that is a local minimizer of $V(x)$ (and in particular any $x^*\in\mathcal E_{*}^{\text{global}}$) must simultaneously satisfy:
 (i) **Complexity Alignment:** $C_P(v) = \langle \hat{C}_v \rangle_{x^*}$ for all $v$.
 (ii) **Geometric Regularity:** The network structure $\mathcal{N}^*$ corresponding to $x^*$ exhibits geometric regularity (Definition C.3).
 
 *Proof.*
-**(i) Alignment:** The gradient $\nabla V(x)$ contains the implicit component $-\nabla V_{proxy}$. Specifically, the component along the direction of changing $\langle \hat{C}_u \rangle$ is $\nabla_{\langle C_u \rangle} V(x) = [\dots] + \nabla_{\langle C_u \rangle} V_{proxy} = [\dots] + k_1 (\langle \hat{C}_u \rangle - C_P(u))$. For the total gradient $\nabla V(x^*)$ to be zero, all its components must be zero. Setting the alignment-related component to zero requires $k_1 (\langle \hat{C}_u \rangle_{x^*} - C_P(u)) = 0$. Since $k_1 > 0$, this necessitates $\langle \hat{C}_u \rangle_{x^*} = C_P(u)$ for all $u$.
-**(ii) Regularity:** Assume, for contradiction, that $x^* \in \mathcal{E}_{*}$ is geometrically irregular. By Theorem D.2, irregularity implies that $\nabla V_{core}(x^*) \neq 0$ (there exists a direction towards regularity that decreases $V_{core}$). Since alignment holds at $x^*$ (from part i), $\nabla V_{proxy}(x^*) = 0$. Therefore, the total gradient is $\nabla V(x^*) = \nabla V_{core}(x^*) + \nabla V_{proxy}(x^*) = \nabla V_{core}(x^*) \neq 0$. This contradicts the assumption that $x^* \in \mathcal{E}_{*}$. Thus, any critical point $x^*$ must be geometrically regular. QED
+**(i) Alignment:** At a local minimizer, $\nabla V(x^*)=0$. By Theorem D.1, the effective potential contains the misalignment penalty $V_{proxy}$, whose gradient with respect to the proxy-complexity coordinate $\langle\hat C_u\rangle$ is $\nabla_{\langle C_u\rangle} V_{proxy} = k_1(\langle\hat C_u\rangle-C_P(u))$. Since $k_1>0$, vanishing of the $\langle\hat C_u\rangle$-component of the full gradient forces $\langle\hat C_u\rangle_{x^*}=C_P(u)$ for every $u$.
+**(ii) Regularity:** Decompose the configuration variables as $x=(x_{geom},x_{other},\langle\hat C\rangle)$, where $x_{geom}$ are the geometric/network-structure variables. By (i), at $x^*$ we have $V_{proxy}(x^*)=0$ and $\nabla_{\langle\hat C\rangle}V_{proxy}(x^*)=0$. Suppose for contradiction that the induced network $\mathcal N^*$ is geometrically irregular. Theorem D.2 (via Lemma D.3) asserts that geometric irregularity strictly increases the core potential $V_{core}$, in the sense that there exists a geometric perturbation $\tilde x=(\tilde x_{geom},x_{other}^*,\langle\hat C\rangle^*)$ arbitrarily close to $x^*$ for which $V_{core}(\tilde x)<V_{core}(x^*)$. Along such a perturbation the proxy-complexity coordinates are unchanged, so $V_{proxy}(\tilde x)=V_{proxy}(x^*)=0$. Hence $V(\tilde x)=V_{core}(\tilde x)+V_{proxy}(\tilde x)<V_{core}(x^*)+V_{proxy}(x^*)=V(x^*)$, contradicting that $x^*$ is a local minimizer. Therefore $\mathcal N^*$ must be geometrically regular. QED
 
 ### D.6.4 Noise-Driven Escape from Non-Global Minima
 
@@ -270,12 +288,12 @@ $$
 $$
 In particular, the process cannot remain trapped indefinitely inside any bounded neighborhood of a strict non-global local minimum.
 
-*Proof sketch.* Under (A3)–(A4), the diffusion is strong Feller, and under (A6) it is topologically irreducible on $\mathcal{X}_{adm}$. Fix any $T>0$ and define $p_T(x):=\mathbb{P}_x[\tau_{\mathcal{D}}\le T]$. Irreducibility implies $p_T(x)>0$ for all $x\in\overline{\mathcal{D}}$; strong Feller implies $x\mapsto p_T(x)$ is continuous. Since $\overline{\mathcal{D}}$ is compact, $p_*:=\inf_{x\in\overline{\mathcal{D}}}p_T(x)>0$. The strong Markov property then gives $\mathbb{P}_x[\tau_{\mathcal{D}}>nT]\le (1-p_*)^n\to 0$, hence $\tau_{\mathcal{D}}<\infty$ almost surely. See, e.g., [Pavliotis 2014; Freidlin & Wentzell 2012] for rigorous statements of these elliptic diffusion properties. QED
+*Proof.* Under (A3)–(A4), the diffusion is strong Feller, and under (A6) it is topologically irreducible on $\mathcal{X}_{adm}$. Fix any $T>0$ and define $p_T(x):=\mathbb{P}_x[\tau_{\mathcal{D}}\le T]$. Irreducibility implies $p_T(x)>0$ for all $x\in\overline{\mathcal{D}}$; strong Feller implies $x\mapsto p_T(x)$ is continuous. Since $\overline{\mathcal{D}}$ is compact, $p_*:=\inf_{x\in\overline{\mathcal{D}}}p_T(x)>0$. The strong Markov property then gives $\mathbb{P}_x[\tau_{\mathcal{D}}>nT]\le (1-p_*)^n\to 0$, hence $\tau_{\mathcal{D}}<\infty$ almost surely. See, e.g., [Pavliotis 2014; Freidlin & Wentzell 2012] for rigorous statements of these elliptic diffusion properties. QED
 
 ### D.6.5 Global Ergodicity and Low-Noise Concentration
 
 **Theorem D.5 (Ergodic Long-Run Behavior and Low-Noise Bias Toward PCE-Optimal Equilibria).**
-Under Assumptions (A1)–(A6), the stochastic dynamics (D.8) define a strong Markov diffusion on the compact set $\mathcal{K}$ (A5). For strictly non-vanishing noise ($\lambda_{\min}>0$ in (A3)), the process does **not** converge almost surely to a single equilibrium point; instead it admits a unique invariant probability measure $\pi$ and is ergodic. In particular, for any bounded measurable observable $f$,
+Under Assumptions (A1)–(A6), the stochastic dynamics (D.8) define a strong Markov diffusion on the compact set $\mathcal{K}$ (A5). For strictly non-vanishing noise ($d_{\min}>0$ in (A3)), the process does **not** converge almost surely to a single equilibrium point; instead it admits a unique invariant probability measure $\pi$ and is ergodic. In particular, for any bounded measurable observable $f$,
 $$
 \frac{1}{T}\int_0^T f(x(t))\,dt \xrightarrow[T\to\infty]{a.s.} \int_{\mathcal{K}} f(x)\,\pi(dx). \qquad \text{(D.12)}
 $$
@@ -295,7 +313,31 @@ for all $\theta\in(0,\theta_0]$, where $\theta_0>0$ is any fixed reference tempe
 
 Finally, by Theorem D.3, every configuration in $\mathcal{E}_{*}^{\text{global}}$ is both geometrically regular and complexity-aligned.
 
-*Proof sketch.* Existence/uniqueness of $\pi$ and ergodicity follow from uniform ellipticity (A3), irreducibility (A6), and compact confinement (A5) (standard elliptic diffusion theory; see, e.g., [Pavliotis 2014]). In the detailed-balance Langevin case, (D.12a) is verified by direct substitution into the stationary Fokker–Planck equation, and (D.12b) follows by bounding the Gibbs integral over a set separated by an energy gap $\Delta_\delta$. QED
+*Proof.* By (A1)-(A4) the coefficients of (D.8) are globally Lipschitz on the compact set $\mathcal K$ from (A5), hence (D.8) admits a unique strong solution for all $t\ge 0$ with trajectories remaining in $\mathcal K$. Uniform ellipticity (A3) together with (A1)-(A4) implies the Markov semigroup is strong Feller on $\mathcal K$ (standard elliptic regularity; see, e.g., [Pavliotis 2014]), and (A6) gives topological irreducibility.
+
+Existence of an invariant measure follows from the Krylov–Bogolyubov averaging procedure. For any initial condition $x\in\mathcal K$, define the time-averaged measures
+$$
+\mu_T := \frac{1}{T}\int_0^T \delta_x P_t\,dt.
+$$
+Since $\mathcal K$ is compact, the family $\{\mu_T\}_{T>0}$ is tight and therefore has weak limit points. Any such weak limit $\pi$ is invariant.
+
+Uniqueness of the invariant measure follows from strong Feller plus irreducibility (Doob-type theorem; see, e.g., [Pavliotis 2014]). Thus the invariant measure $\pi$ is unique and the diffusion is ergodic. In particular, the strong law of large numbers for ergodic diffusions yields (D.12) for every bounded measurable observable $f$ and every initial condition (again standard; see [Pavliotis 2014]).
+
+For the low-noise concentration statement, consider the temperature-scaled family with $D_\theta=\theta D$. In regimes satisfying detailed balance with respect to Lebesgue measure (e.g., constant SPD mobility $\eta$ and $D_\theta=\theta\eta$), the stationary Fokker–Planck equation for a density $p_\theta$ on $\mathcal K$ is
+$$
+\nabla\cdot(\eta(\nabla V\,p_\theta + \theta\nabla p_\theta))=0.
+$$
+Taking $p_\theta(x)=Z_\theta^{-1}e^{-V(x)/\theta}$ gives $\nabla p_\theta = -(p_\theta/\theta)\nabla V$, so the vector field inside the divergence vanishes identically, proving (D.12a).
+
+Finally, since $V$ is continuous and $\mathcal K$ is compact, the energy gap $\Delta_\delta>0$ defined in the theorem exists. Let $A_\delta:=\{x\in\mathcal K:\operatorname*{dist}(x,\mathcal E_{*}^{\text{global}})>\delta\}$ and $U_\delta:=\mathcal K\setminus A_\delta$.
+Then for $x\in A_\delta$, $V(x)\ge V_{\min}+\Delta_\delta$ where $V_{\min}:=\min_\mathcal K V$. Therefore
+$$
+\pi_\theta(A_\delta)
+= \frac{\int_{A_\delta} e^{-V(x)/\theta}dx}{\int_\mathcal K e^{-V(x)/\theta}dx}
+\le \frac{e^{-(V_{\min}+\Delta_\delta)/\theta}\operatorname{Vol}(\mathcal K)}{e^{-V_{\min}/\theta}\operatorname{Vol}(U_\delta)}
+= C_\delta e^{-\Delta_\delta/\theta},
+$$
+with $C_\delta:=\operatorname{Vol}(\mathcal K)/\operatorname{Vol}(U_\delta)<\infty$, yielding (D.12b). The final sentence follows from Theorem D.3. QED
 
 ## D.7 Formal Justification of Theorems 2 and 43
 
@@ -375,7 +417,7 @@ The complexity adaptation dynamics (Section 6.4) are driven by the Adaptation Dr
 The effective potential $V_{eff}(C)$ is obtained by marginalizing the full PCE potential $V(x)$ (Definition D.1) over all other degrees of freedom at their quasi-equilibrium values conditioned on complexity $C$. The deterministic complexity dynamics are:
 
 $$
-\dot{C}(t) = \eta_{adapt} \Psi(C(t)), \quad \Psi(C) = -\frac{1}{\eta_{adapt}}\frac{\partial V_{eff}(C)}{\partial C}
+\dot{C}(t) = \eta_{adapt} \Psi(C(t)), \quad \Psi(C) = -\frac{\partial V_{eff}(C)}{\partial C}
 \tag{D.13}
 $$
 
@@ -394,7 +436,7 @@ Under the Dominance of Stabilizing Costs (DSC, Theorem 22), which ensures $\Psi'
 $$
 \Psi'(C) = \Gamma_0 \frac{\partial^2 PP}{\partial C^2} - \lambda R''(C) + \frac{r_I}{C^2 \ln 2}
 $$
-DSC requires this derivative to be negative. Since $\frac{\partial^2 PP}{\partial C^2} < 0$ (strict concavity), $R''(C) \ge 0$ (convexity), and the stabilizing cost terms dominate, we have $\Psi'(C) < 0$. Strict convexity of $V_{eff}$ follows from $V''_{eff}(C) = -\eta_{adapt}\Psi'(C) > 0$. A strictly convex function on an interval has at most one critical point, which must be a global minimum. The gradient flow property of Equation (D.13) ensures trajectories flow toward this minimum from any initial condition. QED
+DSC requires this derivative to be negative. Since $\frac{\partial^2 PP}{\partial C^2} < 0$ (strict concavity), $R''(C) \ge 0$ (convexity), and the stabilizing cost terms dominate, we have $\Psi'(C) < 0$. Strict convexity of $V_{eff}$ follows from $V''_{eff}(C) = -\Psi'(C) > 0$. A strictly convex function on an interval has at most one critical point, which must be a global minimum. The gradient flow property of Equation (D.13) ensures trajectories flow toward this minimum from any initial condition. QED
 
 ### D.8.2 Polyak–Łojasiewicz Condition and Linear Convergence
 
@@ -411,29 +453,27 @@ $$
 The radius $r$ depends on the third and higher-order derivatives of $V_{eff}$; for practical purposes, we require the neighborhood to extend beyond the initial distance $|C(0) - C^\star|$ for deterministic convergence guarantees to apply.
 
 **Lemma D.7 (PL Constant from Stability).**
-In a neighborhood of $C^\star$, the effective potential satisfies the PL inequality with:
-
+Fix a neighborhood $|C-C^\star|\le r$ on which $\Psi$ is continuously differentiable. Define the strong monotonicity constant
 $$
-\mu_{PL} \ge \eta_{adapt} \underline{\lambda}, \quad \text{where } \underline{\lambda} := -\Psi'(C^\star) > 0
+\underline{\lambda} := \inf_{|C-C^\star|\le r}\bigl(-\Psi'(C)\bigr).
+$$
+Under DSC (Theorem 22), $\Psi'(C)<0$ on the viable range, hence by continuity and compactness of the closed neighborhood the infimum exists and satisfies $\underline{\lambda}>0$. On this neighborhood the effective potential $V_{eff}$ satisfies the PL inequality with constant
+$$
+\mu_{PL} = \underline{\lambda}
 \tag{D.14a}
 $$
 
-*Proof.* By Taylor expansion near $C^\star$:
+*Proof.* Since $\Psi(C)=-V'_{eff}(C)$, we have $V''_{eff}(C)=-\Psi'(C)\ge\underline{\lambda}$ on $|C-C^\star|\le r$, so $V_{eff}$ is $\underline{\lambda}$-strongly convex there. Let $C^\star$ be its unique minimizer (Theorem D.7), so $V'_{eff}(C^\star)=0$. Strong convexity implies for any $C$ in the neighborhood
 $$
-V_{eff}(C) - V_{eff}(C^\star) \approx \frac{1}{2}V''_{eff}(C^\star)(C - C^\star)^2 = -\frac{\eta_{adapt}}{2}\Psi'(C^\star)(C - C^\star)^2
+V_{eff}(C^\star)\ge V_{eff}(C)+V'_{eff}(C)(C^\star-C)+\frac{\underline{\lambda}}{2}(C^\star-C)^2.
 $$
-
-The gradient satisfies:
+Rearranging and applying Cauchy–Schwarz and Young's inequality,
 $$
-|\nabla V_{eff}(C)| = \eta_{adapt}|\Psi(C)| \approx \eta_{adapt}|\Psi'(C^\star)||C - C^\star|
+V_{eff}(C)-V_{eff}(C^\star)
+\le |V'_{eff}(C)|\,|C-C^\star|-\frac{\underline{\lambda}}{2}|C-C^\star|^2
+\le \frac{1}{2\underline{\lambda}}|V'_{eff}(C)|^2.
 $$
-
-Therefore:
-$$
-\frac{|\nabla V_{eff}|^2}{V_{eff} - V_{eff}(C^\star)} \approx \frac{\eta_{adapt}^2|\Psi'(C^\star)|^2|C - C^\star|^2}{-\frac{\eta_{adapt}}{2}\Psi'(C^\star)(C - C^\star)^2} = 2\eta_{adapt}|\Psi'(C^\star)|
-$$
-
-Setting $\mu_{PL} = \eta_{adapt}\underline{\lambda}$ with $\underline{\lambda} = -\Psi'(C^\star)$ satisfies (D.14). QED
+Multiplying by $\underline{\lambda}$ yields $\frac{1}{2}|V'_{eff}(C)|^2 \ge \underline{\lambda}\bigl(V_{eff}(C)-V_{eff}(C^\star)\bigr)$, which is exactly (D.14) with $\mu_{PL}=\underline{\lambda}$. QED
 
 ### D.8.3 Convergence Theorem with Explicit Rates
 
@@ -449,14 +489,19 @@ $$
 
 with rate constant $\underline{\lambda} = -\Psi'(C^\star) > 0$ guaranteed by DSC (Theorem 22).
 
-**Part II (Stochastic Rate with Noise Floor):** When the full stochastic dynamics (Equation D.8) are considered, the effective noise from ND-RID fluctuations creates a diffusion term. Defining the effective noise variance projected onto the complexity direction as:
+**Part II (Stochastic Rate with Noise Floor):** When the full stochastic dynamics (Equation D.8) are considered, the effective noise from ND-RID fluctuations induces a diffusion term in the complexity direction. Assume the complexity coordinate admits the effective one-dimensional Ito form
 $$
-\sigma_{eff}^2 = \mathbb{E}\left[\left|\frac{\partial V}{\partial C}\big|_{x_{other}}\right|^2 \big| C\right] \cdot D_{CC}
+dC_t = \eta_{adapt}\Psi(C_t)\,dt + \sqrt{2D_{CC}(x(t))}\,dB_t,
 $$
-where $D_{CC}$ is the diffusion coefficient for the $C$ dimension and the expectation is over ND-RID fluctuations in other network degrees of freedom $x_{other}$. The expected potential gap decays to a noise floor:
-
+where $B_t$ is a standard one-dimensional Wiener process and the projected diffusion coefficient satisfies $0\le D_{CC}(x)\le D_{CC}^{max}<\infty$ on the compact set $\mathcal K$ (A5). Let
 $$
-\mathbb{E}\big[V_{eff}(C_t) - V_{eff}(C^\star)\big] \le \big(1 - \underline{\lambda}\,\eta_{adapt}\big)^t \big(V_{eff}(C_0) - V_{eff}(C^\star)\big) + \frac{\eta_{adapt} \sigma_{eff}^2}{2\underline{\lambda}}
+L_{eff}:=\sup_{|C-C^\star|\le r} V''_{eff}(C)<\infty.
+$$
+Then the expected potential gap decays exponentially to a noise floor:
+$$
+\mathbb{E}\big[V_{eff}(C_t) - V_{eff}(C^\star)\big]
+\le e^{-2\underline{\lambda}\eta_{adapt}t}\big(V_{eff}(C_0) - V_{eff}(C^\star)\big)
++ \frac{D_{CC}^{max}L_{eff}}{2\underline{\lambda}\eta_{adapt}}
 \tag{D.16}
 $$
 
@@ -487,7 +532,7 @@ $$
 \mathbb{E}[V_t - V^\star] \le (1 - \eta\mu_{PL})^t(V_0 - V^\star) + \frac{\eta\sigma^2}{2\mu_{PL}}
 $$
 
-Substituting our identifications yields (D.16). The noise floor $\eta_{adapt}\sigma_{eff}^2/(2\underline{\lambda})$ represents the fundamental limit imposed by ND-RID stochasticity and cannot be eliminated by longer integration time. QED
+Substituting our identifications yields (D.16). The noise floor $D_{CC}^{max}L_{eff}/(2\underline{\lambda}\eta_{adapt})$ represents the fundamental limit imposed by ND-RID stochasticity and cannot be eliminated by longer integration time. QED
 
 ### D.8.4 Physical Interpretation
 

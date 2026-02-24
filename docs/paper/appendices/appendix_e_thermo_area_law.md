@@ -6,7 +6,7 @@ This Appendix provides a rigorous derivation of the fundamental information-theo
 
 The derivation proceeds logically:
 1.  Establish ND–RID irreversibility by lower-bounding minimal entropy production, linking it to the necessary state-change cost $\varepsilon \ge \ln 2$ (Theorem 31, derived in Appendix J). (Section E.2: Theorem E.1, Corollary E.1)
-2.  Prove that this irreversibility implies strict channel contractivity ($f_{\mathrm{RID}} < 1$) for the average 'Evolve' channel. (Section E.3: Lemma E.1)
+2.  Establish strict trace-distance contractivity ($f_{\mathrm{RID}} < 1$) of the average "Evolve" channel from the ND-RID refresh/minorization component required to close the SPAP cycle (and therefore associated with $\varepsilon>0$). (Section E.3: Lemma E.1)
 3.  Derive a strict bound ($C(\mathcal{E}_N) < \ln d_0$) on the channel's classical information capacity based on this contractivity. (Section E.4: Theorem E.2)
 4.  Establish the geometric scaling of effective independent boundary information channels, conditional on emergent geometric regularity (Theorem 43), incorporating correlation effects. (Section E.5: Theorem E.3)
 5.  Synthesize these results to derive the Horizon Entropy Area Law (Theorem 49 / Theorem E.6) and express it in the standard Bekenstein–Hawking normalization. (Section E.6)
@@ -36,73 +36,79 @@ with additivity reflecting independent sources of entropy production. QED
 
 **E.3 Strict Contractivity of the Average 'Evolve' Channel**
 
-Thermodynamic irreversibility guarantees strict contractivity of the average channel $\mathcal{E}_N$ with respect to measures of state distinguishability.
+The ND-RID refresh/minorization component that operationally implements thermodynamic irreversibility yields strict contractivity of the averaged Evolve channel.
 
 
-**Lemma E.1 (Strict Contractivity of the Average 'Evolve' Channel).**
-Let the average ND–RID ‘Evolve’ channel be the completely positive and trace-preserving (CPTP) map:
+**Lemma E.1 (Strict Contractivity of the Average "Evolve" Channel).**
+Let the average ND–RID "Evolve" channel be the CPTP map:
 $$
-\mathcal{E}_{N}(\rho)\;=\;\sum_{o}\,\mathcal{E}_{N,o}(\rho), \qquad
-\mathcal{E}_{N}:\mathcal{B}(\mathcal{H}_{d_{0}})\longrightarrow\mathcal{B}(\mathcal{H}_{d_{0}}),
+\mathcal{E}_N(\rho)=\sum_o \mathcal{E}_{N,o}(\rho)
 $$
-acting on the MPU's $d_0$-dimensional Hilbert space $\mathcal{H}_{d_0}$ ($\dim\mathcal H_{d_{0}}=d_{0}<\infty$). Then:
+where each outcome map $\mathcal{E}_{N,o}:\mathcal{S}(\mathcal{H}_{d_0})\to \mathcal{S}(\mathcal{H}_{d_0})$. Assume the averaged dynamics contains a nonzero input-independent refresh component: there exist a CPTP map $\Psi$, a fixed state $\sigma\in\mathcal{S}(\mathcal{H}_{d_0})$, and a weight $p\in(0,1]$ such that
+$$
+\mathcal{E}_N=(1-p)\Psi + p\,T_\sigma,
+\qquad
+T_\sigma(\rho):=\mathrm{Tr}(\rho)\,\sigma.
+\tag{E.2a}
+$$
+(Within PU, $T_\sigma$ is the coarse-grained representation of the SPAP-mandated refresh/reset needed to close the cycle; Theorem 31.)
 
-1.  **Primitivity.** The channel $\mathcal{E}_N$ is primitive (i.e., irreducible and aperiodic [Baumgartner & Narnhofer 2008]). This primitivity is a consequence of the MPU 'Evolve' dynamics (Definition 27), as detailed in Step 1 of the proof below.
+Then:
 
-2.  **Strict trace-norm contractivity.** Given primitivity, there exists a constant $0 \le f_{\mathrm{RID}} < 1$ such that for all distinct density operators $\rho_1, \rho_2 \in \mathcal{S}(\mathcal{H}_{d_0})$:
-    $$
-    D_{\mathrm{tr}}\!\bigl(\mathcal{E}_{N}(\rho_{1}),\mathcal{E}_{N}(\rho_{2})\bigr)
-    \;\le\;
-    f_{\mathrm{RID}}\;
-    D_{\mathrm{tr}}(\rho_{1},\rho_{2}),
-    \tag{E.2}
-    $$
-    where $D_{\mathrm{tr}}(\rho_{1},\rho_{2})=\tfrac12\lVert\rho_{1}-\rho_{2}\rVert_{1}$ is the trace distance. The contractivity factor is $f_{\mathrm{RID}} \equiv \lambda_{gap}(\mathcal{E}_N) < 1$, where $\lambda_{gap}(\mathcal{E}_N)$ is the spectral radius of $\mathcal{E}_N$ restricted to the subspace of traceless operators acting on $\mathcal{H}_{d_0}$.
+1. (**Strict trace-distance contractivity**) For all density operators $\rho_1,\rho_2$:
+$$
+D_{\mathrm{tr}}(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2))
+\le f_{\text{RID}}\,D_{\mathrm{tr}}(\rho_1,\rho_2),
+\qquad
+f_{\text{RID}}:=1-p\in[0,1).
+\tag{E.2}
+$$
+Moreover, for every traceless operator $X$,
+$$
+\mathcal{E}_N(X)=(1-p)\Psi(X).
+\tag{E.2b}
+$$
+
+2. (**Primitivity under full-rank refresh**) If additionally $\sigma\succ0$ (full rank), then $\mathcal{E}_N$ is strictly positive and hence primitive, with a unique full-rank fixed point $\rho_{\text{fix}}$ (Sanz et al. 2010).
 
 *Proof.*
-1.  **Primitivity and quantitative contractivity via a two‑phase ND–RID micro‑model.** Consider the averaged ‘Evolve’ channel as the convex combination
+Let $\rho_1,\rho_2$ be states and set $\Delta:=\rho_1-\rho_2$ (Hermitian with $\mathrm{Tr}(\Delta)=0$). Since $T_\sigma(\Delta)=\mathrm{Tr}(\Delta)\sigma=0$, the decomposition (E.2a) gives (E.2b) and
 $$
-\mathcal{E}_N \;=\; (1-p)\,\Psi \;+\; p\,T_\sigma,\qquad 0<p\le 1,
+\mathcal{E}_N(\Delta)=(1-p)\Psi(\Delta).
 $$
-where $\Psi$ is an arbitrary CPTP map representing the reversible/update phase and $T_\sigma(\rho)=\mathrm{tr}(\rho)\,\sigma$ is the full–rank reset channel to $\sigma\succ 0$. By construction,
+Because $\Psi$ is CPTP, it contracts trace distance between states, hence contracts the trace norm of traceless Hermitian operators. Concretely, write $\Delta=\Delta_+-\Delta_-$ with $\Delta_\pm\succeq0$ and $\mathrm{Tr}(\Delta_+)=\mathrm{Tr}(\Delta_-)=t$. Then $\Delta=t(\rho_+-\rho_-)$ with $\rho_\pm:=\Delta_\pm/t$ states, so
 $$
-\boxed{\ \mathcal{E}_N(\rho)\ \ge\ p\,\mathrm{tr}(\rho)\,\sigma\ }\tag{E.2a}
+\|\Psi(\Delta)\|_1
+=t\,\|\Psi(\rho_+)-\Psi(\rho_-)\|_1
+\le t\,\|\rho_+-\rho_-\|_1
+=2t
+=\|\Delta\|_1.
 $$
-(order on positive operators). Since $T_\sigma$ is strictly positive and appears with weight $p>0$, $\mathcal{E}_N$ is **primitive** [Sanz et al. 2010]. Moreover, for any traceless Hermitian $X$,
+Therefore,
 $$
-\|\mathcal{E}_N(X)\|_1 \le (1-p)\,\|X\|_1,\qquad \mathrm{tr}X=0, \tag{E.2b}
+D_{\mathrm{tr}}(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2))
+=\tfrac12\|\mathcal{E}_N(\Delta)\|_1
+=(1-p)\tfrac12\|\Psi(\Delta)\|_1
+\le (1-p)\tfrac12\|\Delta\|_1
+=(1-p)\,D_{\mathrm{tr}}(\rho_1,\rho_2),
 $$
-because $T_\sigma(X)=0$ and $\|\Psi(X)\|_1\le \|X\|_1$ [Nielsen & Chuang 2010]. Finally, by Appendix J (irreversibility cost $\varepsilon\ge \ln 2$) and choosing $\sigma=\tfrac{\mathbf 1_{d_0}}{d_0}$ so that a reset contributes at most $\ln d_0$ nats of entropy, the reset probability obeys the **non‑zero lower bound**
-$$
-p \;\ge\; \frac{\varepsilon}{\ln d_0}\ \ge\ \frac{\ln 2}{\ln d_0},
-$$
-hence the RID contractivity factor satisfies $f_{\mathrm{RID}}(\mathcal{E}_N)\le 1-p \le 1 - \tfrac{\ln 2}{\ln d_0}<1$. This bound is derived under the **minimal-refresh** assumption that the reset channel $T_\sigma$ is the sole contributor to the cycle's irreversibility cost $\varepsilon$; if additional dissipative mechanisms are present in $\Psi$, the required $p$ may be smaller (not larger), since part of $\varepsilon$ is already supplied by $\Psi$. The strict-positivity conclusion ($f_{\mathrm{RID}}<1$) requires only $p>0$, which follows from the fact that some nonzero refresh weight is needed to maintain full-rank output. More generally, any mechanism realizing the necessary irreversibility $\varepsilon>0$ will ensure primitivity and thus $f_{\mathrm{RID}}<1$.
+which is (E.2) with $f_{\text{RID}}=1-p<1$.
 
-2.  **Consequences of Primitivity:** For a primitive CPTP map $\mathcal{E}_N$ on $\mathcal{B}(\mathcal{H}_{d_0})$ [Frigerio & Verri 1982a; Wolf 2012]:
-    *   There is a unique full-rank fixed point state $\rho_{fix}$ such that $\mathcal{E}_N(\rho_{fix}) = \rho_{fix}$.
-    *   The eigenvalue 1 of $\mathcal{E}_N$ (as a superoperator) is simple (non-degenerate in the sense that its eigenspace is one-dimensional, spanned by $\rho_{fix}$).
-    *   Let $\lambda_{gap}(\mathcal{E}_N)$ be the spectral radius of $\mathcal{E}_N$ when restricted to the invariant subspace of traceless operators $\mathcal{B}_0(\mathcal{H}_{d_0}) = \{X \in \mathcal{B}(\mathcal{H}_{d_0}) : \text{Tr}(X)=0\}$. For a primitive channel, it is strictly less than 1: $0 \le \lambda_{gap}(\mathcal{E}_N) < 1$. This $\lambda_{gap}$ governs the exponential rate of convergence of $\mathcal{E}_N^k(\rho)$ to $\rho_{fix}$ for any initial state $\rho$.
-
-3.  **Contraction in Trace Distance:** For any two states $\rho_1, \rho_2$, let $\Delta = \rho_1 - \rho_2$. Since $\text{Tr}(\Delta)=0$, $\Delta \in \mathcal{B}_0(\mathcal{H}_{d_0})$. It is a standard result in the theory of primitive quantum channels that the action of $\mathcal{E}_N$ on this space of traceless operators is strictly contractive with respect to the trace norm, bounded by $\lambda_{gap}(\mathcal{E}_N)$ [Wolf 2012]. Specifically:
-    $$
-    \|\mathcal{E}_N(\rho_1 - \rho_2)\|_1 \le \lambda_{gap}(\mathcal{E}_N) \|\rho_1 - \rho_2\|_1.
-    $$
-    Dividing by 2 gives the trace distance contraction:
-    $$
-    D_{\mathrm{tr}}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \le \lambda_{gap}(\mathcal{E}_N) D_{\mathrm{tr}}(\rho_1, \rho_2).
-    $$
-
-4.  **Identification of $f_{\mathrm{RID}}$:** We identify the maximal contractivity factor $f_{\mathrm{RID}}$ with this spectral quantity: $f_{\mathrm{RID}} \equiv \lambda_{gap}(\mathcal{E}_N)$. Since $\lambda_{gap}(\mathcal{E}_N) < 1$ for a primitive channel, we have $f_{\mathrm{RID}} < 1$. The factor cannot be negative by definition of operator norms, so $0 \le f_{\mathrm{RID}} < 1$.
-
-This establishes the strict contractivity of the average 'Evolve' channel $\mathcal{E}_N$. QED
+If $\sigma\succ0$ and $p>0$, then for every state $\rho$,
+$$
+\mathcal{E}_N(\rho)=(1-p)\Psi(\rho)+p\sigma\succ0,
+$$
+so $\mathcal{E}_N$ is strictly positive. Strict positivity implies primitivity and uniqueness of the full-rank fixed point (Sanz et al. 2010). QED
 
 **E.4 Limited Information Capacity Across Boundaries due to ND–RID**
+
+Strict contractivity is ensured by the presence of a nonzero input-independent refresh component in the averaged ND-RID "Evolve" channel (Lemma E.1). Thermodynamic irreversibility ($\varepsilon>0$) is the operational signature of this refresh/reset in PU (Theorem 31), but non-unitarity alone is not sufficient to guarantee strict trace-distance contraction. The resulting strict contraction is what enforces a strict bound on the information transmission capacity of MPU-MPU interaction channels below $\ln d_0$ (Theorem E.2).
 
 The average Evolve channel $\mathcal{E}_N$ is strictly contractive (Lemma E.1):
 $$
 f_{\mathrm{RID}}\bigl(\mathcal{E}_N\bigr)<1 ,
 $$
-a consequence of the irreversibility parameter $\varepsilon\ge\ln 2$.
+a consequence of the nonzero refresh component (associated with $\varepsilon\ge\ln 2$).
 That contractivity forces the channel’s classical capacity to be strictly below the ideal $\ln d_0$ for a $d_0$-dimensional system.
 
 **E.4.1 Definitions for Channel Capacity**
@@ -110,7 +116,13 @@ That contractivity forces the channel’s classical capacity to be strictly belo
 To formalize this, we use standard definitions from quantum information theory (all logarithms are natural, giving units of nats, unless specified otherwise):
 
 *   **Quantum Channel:** A quantum channel is a completely–positive, trace–preserving (CPTP) linear map $\Phi: \mathcal{B}(\mathcal{H}_{in}) \to \mathcal{B}(\mathcal{H}_{out})$, where $\mathcal{H}_{in}$ and $\mathcal{H}_{out}$ are finite-dimensional Hilbert spaces. For the ND–RID 'Evolve' channel $\mathcal{E}_N$, we have $\mathcal{H}_{in} = \mathcal{H}_{out} = \mathcal{H}_{d_0}$, the $d_0$-dimensional MPU Hilbert space. $\mathcal{B}(\mathcal{H})$ denotes the space of bounded linear operators on $\mathcal{H}$, and $\mathcal{S}(\mathcal{H}_{d_0})$ the set of density operators on $\mathcal{H}_{d_0}$.
-*   **Trace-Norm Contractivity Factor $f_{\mathrm{RID}}(\Phi)$:** As implied by Lemma E.1, the contractivity factor is $f_{\mathrm{RID}}(\Phi) = \sup_{\rho,\sigma\in\mathcal S(\mathcal H_{d_0}), \rho\neq\sigma} \frac{D_{tr}(\Phi(\rho),\Phi(\sigma))}{D_{tr}(\rho,\sigma)}$, where $D_{tr}(\rho,\sigma)=\tfrac12\lVert\rho-\sigma\rVert_{1}$ is the trace distance. Lemma E.1 establishes $f_{\mathrm{RID}}(\mathcal{E}_N) < 1$. For context, when $\dim\mathcal{H}_{in}=\dim\mathcal{H}_{out}=d_0$, a channel $\Phi$ has $f_{\mathrm{RID}}(\Phi)=1$ if and only if $\Phi$ is a unitary channel (a surjective isometry) [Pérez-García et al. 2006].
+*   **Trace-Norm Contractivity Factor $f_{\mathrm{RID}}(\Phi)$:** Define the worst-case trace-distance contraction coefficient:
+  $$
+  f_{\text{RID}}(\Phi):=\sup_{\rho_1\neq\rho_2}\frac{D_{\mathrm{tr}}(\Phi(\rho_1),\Phi(\rho_2))}{D_{\mathrm{tr}}(\rho_1,\rho_2)}\in[0,1].
+  $$
+  Lemma E.1 gives a sufficient structural condition for strict contraction: if $\Phi$ contains a nonzero refresh component of weight $p>0$ (i.e., $\Phi=(1-p)\Psi+pT_\sigma$), then $f_{\text{RID}}(\Phi)\le 1-p<1$.
+
+  For context: unitary channels (and, more generally, channels that preserve trace distance for all state pairs, i.e. trace-distance isometries) satisfy $f_{\text{RID}}=1$. However, $f_{\text{RID}}=1$ can also occur for non-unitary channels that preserve a noiseless classical or quantum subspace. The condition $f_{\text{RID}}<1$ is strictly stronger than non-unitarity and is the relevant property used here.
 *   **One–Shot and Regularized Classical Capacities:** For a channel $\Psi$, the one–shot Holevo capacity is
     $$
     \chi^{\ast}(\Psi):=\max_{\{p_{k},\rho_{k}\}} \Bigl[ S\Bigl(\sum_{k}p_{k}\Psi(\rho_{k})\Bigr) -\sum_{k}p_{k}S\bigl(\Psi(\rho_{k})\bigr) \Bigr]
@@ -125,7 +137,7 @@ To formalize this, we use standard definitions from quantum information theory (
 
 
 **Theorem E.2 (Fundamental Strict Bound on ND–RID Channel Capacity).**
-Let $\mathcal{E}_N$ be the average 'Evolve' channel associated with an ND–RID process, acting on the $d_0$-dimensional MPU Hilbert space $\mathcal{H}_{d_0}$. If the trace-norm contractivity factor $f_{\mathrm{RID}}(\mathcal{E}_N) < 1$ (as established by Lemma E.1 due to $\varepsilon > 0$), then the classical Shannon capacity $C(\mathcal{E}_N)$ is strictly bounded below the ideal capacity:
+Let $\mathcal{E}_N$ be the average 'Evolve' channel associated with an ND–RID process, acting on the $d_0$-dimensional MPU Hilbert space $\mathcal{H}_{d_0}$. Assume the averaged Evolve channel $\mathcal{E}_N$ contains a nonzero input-independent refresh component in the sense of Lemma E.1 (i.e., $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$). Then the classical Shannon capacity $C(\mathcal{E}_N)$ is strictly bounded below the ideal capacity:
 $$
 C(\mathcal{E}_N) < \ln d_0
 \tag{E.3}
@@ -249,69 +261,33 @@ The horizon entropy-area relationship is derived here from fundamental principle
 
 ### E.6.1 Prerequisites: ND-RID Satisfies Quantum Many-Body Assumptions
 
-**Lemma E.6.1 (Quasi-locality and Mixing Prerequisites in the MPU Network).**
-The MPU network dynamics governed by ND-RID (Definition 27) satisfy the core assumptions required for quantum many-body area laws:
+**Lemma E.6.1 (Locality, Finite Propagation Speed, Mixing, and Clustering).**
+To apply Theorem E.4a and derive an area law, we use the following standard properties of local dynamics and (when stated) their consequences under the ND-RID mixing structure:
 
-1. **Locality:** Interactions have finite range in the network metric $d_{\mathcal{N}}$ (Definition 35).
+1. **Locality**: The interaction Hamiltonian $H$ is short-range, with finite interaction length $\ell_0$.  
+2. **Finite Lieb-Robinson Velocity**: Locality and bounded interaction strength imply a finite information propagation speed $v_{\text{LR}}$ (Proposition F.1), so that for local observables $O_A,O_B$:
+$$
+\|[\mathcal{E}_N^{*n}(O_A),O_B]\| \le C \|O_A\|\|O_B\| e^{-\mu(d(A,B)-v_{\text{LR}} n\tau)}.
+\tag{E.3}
+$$
+3. **Mixing (trace-distance contraction)**: If $\mathcal{E}_N$ satisfies Lemma E.1 with $f_{\text{RID}}<1$ and is primitive (unique fixed point $\rho_{\text{fix}}$), then for any state $\rho$:
+$$
+D_{\mathrm{tr}}(\mathcal{E}_N^{n}(\rho),\rho_{\text{fix}})
+\le f_{\text{RID}}^{n}\,D_{\mathrm{tr}}(\rho,\rho_{\text{fix}})
+\le f_{\text{RID}}^{n}.
+\tag{E.4}
+$$
+Define the (discrete-time) mixing gap $\Delta_{\text{gap}}:=-(1/\tau)\ln f_{\text{RID}}>0$.
+4. **Exponential Clustering**: For local primitive dynamics with a finite Lieb-Robinson bound and a positive mixing gap, the stationary (Gibbs-like) state exhibits exponential decay of connected correlations beyond a finite correlation length $\xi$ that scales as $\xi=O(v_{\text{LR}}/\Delta_{\text{gap}})$ (see, e.g., Kastoryano & Temme 2013 for a complete proof in the dissipative setting). A convenient parameterization consistent with (E.3) is:
+$$
+\xi=\max\left(\frac{2 v_{\text{LR}}}{\Delta_{\text{gap}}},\frac{2}{\mu}\right).
+$$
 
-2. **Finite Lieb-Robinson Velocity:** Information propagation is bounded by $v_{LR} < \infty$ (established in Appendix F, Proposition F.1 from ND-RID channel contractivity $f_{RID} < 1$).
-
-3. **Mixing Gap:** The average ND-RID channel $\mathcal{E}_N$ is strictly contractive (Lemma E.1). Equivalently, on the traceless subspace it has spectral radius strictly less than $1$, which defines a positive mixing gap
-$$
-\Delta_{gap}:=-\frac{1}{\tau}\ln f_{RID}>0,
-$$
-where $\tau$ is the MPU cycle time (Theorem 29).
-
-4. **Clustering:** Correlations in the stationary state decay exponentially with distance: for local observables $O_A,O_B$ supported on disjoint regions $A,B$,
-$$
-\big|\langle O_A O_B\rangle-\langle O_A\rangle\langle O_B\rangle\big|\le C\,e^{-d_{\mathcal{N}}(A,B)/\xi}
-$$
-for some finite $\xi$.
-
-*Proof.* 
-
-**Locality:** By construction, ND-RID is a composition of local update maps acting on individual MPUs or bounded-radius neighborhoods in the network (Definition 27). Hence there is a finite interaction radius $r_0<\infty$.
-
-**Finite $v_{LR}$ (Lieb–Robinson):** For the local ND-RID generator, Appendix F (Proposition F.1) provides constants $C_{LR},\mu>0$ and a finite velocity $v_{LR}<\infty$ such that for observables $A_X,B_Y$ supported on disjoint regions $X,Y$,
-$$
-\|[A_X(t),B_Y]\|\le C_{LR}\,\|A_X\|\,\|B_Y\|\,e^{-\mu\,(d_{\mathcal{N}}(X,Y)-v_{LR}t)}.
-$$
-Only locality and bounded local generator norm enter this bound; strict contractivity is not required for the existence of $v_{LR}$ [Poulin 2010; Barthel & Kliesch 2012].
-
-**Mixing Gap:** Let $\rho_*$ be a stationary state of $\mathcal{E}_N$ and let $A$ be any observable with $\mathrm{Tr}(\rho_*A)=0$. By strict contractivity (Lemma E.1),
-$$
-\|\mathcal{E}_N^{*n}(A)\|\le f_{RID}^n\,\|A\|\qquad(n\in\mathbb{N}),
-$$
-where $\mathcal{E}_N^*$ is the Heisenberg-picture channel. Writing $t=n\tau$ and $\mathcal{E}_N=e^{\tau\mathcal{L}_N}$ defines $\Delta_{gap}:=-(1/\tau)\ln f_{RID}>0$ and yields the exponential decay estimate
-$$
-\|\mathcal{E}_N^{*n}(A)\|\le e^{-\Delta_{gap}t}\,\|A\|.
-$$
-This provides a positive lower bound on the mixing gap of the ND-RID transfer operator (equivalently, of the logarithmic generator on the traceless subspace).
-
-**Clustering:** Let $O_A,O_B$ be supported on disjoint $A,B$ and set $\tilde O_A:=O_A-\langle O_A\rangle\mathbb{I}$ so that $\mathrm{Tr}(\rho_*\tilde O_A)=0$. Stationarity implies
-$$
-\langle \tilde O_A O_B\rangle=\mathrm{Tr}\!\big(\rho_*\,\mathcal{E}_N^{*n}(\tilde O_A)\,O_B\big)
-$$
-for any $n$. Decompose $\mathcal{E}_N^{*n}(\tilde O_A)=\tilde O_A^{(n)}+\Delta^{(n)}$ where $\tilde O_A^{(n)}$ is supported on the $v_{LR}t$-neighborhood of $A$ (with $t=n\tau$) and $\Delta^{(n)}$ is the remainder. The Lieb–Robinson bound gives
-$$
-\|\Delta^{(n)}\|\le C' \|\tilde O_A\|\,e^{-\mu\,(d_{\mathcal{N}}(A,B)-v_{LR}t)}
-$$
-for a constant $C'$ depending only on $A$ and the locality data. On the other hand, the mixing estimate gives
-$$
-\|\mathcal{E}_N^{*n}(\tilde O_A)\|\le e^{-\Delta_{gap}t}\,\|\tilde O_A\|.
-$$
-Therefore
-$$
-|\langle \tilde O_A O_B\rangle|
-\le \|\rho_*\|_1\,\|\mathcal{E}_N^{*n}(\tilde O_A)\|\,\|O_B\|
-\le \|\tilde O_A\|\,\|O_B\|\,e^{-\Delta_{gap}t}
-+ C''\|\tilde O_A\|\,\|O_B\|\,e^{-\mu\,(d_{\mathcal{N}}(A,B)-v_{LR}t)}
-$$
-for a constant $C''$. Choose $t=d_{\mathcal{N}}(A,B)/(2v_{LR})$ (rounded to an integer multiple of $\tau$), which yields an exponential bound in $d_{\mathcal{N}}(A,B)$ of the stated form with a finite correlation length
-$$
-\xi=\max\!\left(\frac{2v_{LR}}{\Delta_{gap}},\frac{2}{\mu}\right).
-$$
-This proves exponential clustering. $\square$
+*Proof.*  
+(1) is Definition 6.  
+(2) is Proposition F.1 (it depends on locality scale and bounded local generator norm, not on $f_{\text{RID}}$).  
+(3) follows by iterating the one-step contraction (E.2) from Lemma E.1 and using that $\rho_{\text{fix}}$ is a fixed point.  
+(4) is a standard consequence of combining locality (finite $v_{\text{LR}}$) with rapid mixing (positive $\Delta_{\text{gap}}$); a full derivation and constants are given in the cited references. QED.
 
 
 ### E.6.1a Mutual-Information Area Bound for Local Gibbs States
@@ -514,7 +490,7 @@ The consistency of this unit cell interpretation with the primary derivation in 
 
 The relationship between the emergent gravitational constant $G$ and the microscopic MPU parameters (Equation E.9) is not merely a consistency requirement but is quantitatively fixed by the framework's core optimization principle. As rigorously derived in Appendix Q, the Principle of Compression Efficiency (PCE, Definition 15) dictates the optimal values for the network parameters that determine the scale ratio $\delta/L_P$.
 
-The derivation proceeds by analyzing the partitioning of the MPU's total information potential, $\ln(d_0)$, as a resource allocation problem. PCE optimization requires that the MPU's finite information budget be optimally divided between the cost of internal self-referential processing ($\varepsilon$) and the capacity for external communication ($C_{\max}$). As derived in Appendix Q, this leads to the PCE-optimal channel capacity being the total potential minus the irreducible processing cost:
+The derivation proceeds by analyzing the partitioning of the MPU's total information potential, $\ln(d_0)$, as a resource allocation problem. PCE optimization requires that the MPU's finite information budget be optimally divided between the cost of internal self-referential processing ($\varepsilon$) and the capacity for external communication ($C_{\max}$). The PCE bookkeeping is a direct resource partition on the active kernel: a single cycle has total information potential bounded by $\ln(d_0)$, while the SPAP update incurs an irreducible local cost $\varepsilon$ whenever $\Theta(I)=1$ (Theorem 31). Thus the information that can remain available for external distinguishability transmission across boundary channels is at most the residual budget $\ln(d_0)-\varepsilon$, and PCE saturates this residual by allocating all remaining potential to boundary communication. Therefore:
 $$
 C_{\max}^{*} = \ln(d_0) - \varepsilon
 \tag{E.14}
@@ -1191,7 +1167,7 @@ This section derives global unitarity from the causal and thermodynamic structur
 
 - **Theorem 31 (Entropy Cost):** The minimum dimensionless entropy production per SPAP cycle is $\varepsilon \geq \ln 2$ nats, arising from the 2-to-1 logical state merge inherent in self-referential prediction (Appendix J, Lemma J.1).
 
-- **Lemma E.1 (Strict Contractivity):** The averaged ND-RID channel $\mathcal{E}_N$ satisfies $D_{\text{tr}}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \leq f_{\text{RID}} \cdot D_{\text{tr}}(\rho_1, \rho_2)$ with contractivity factor $f_{\text{RID}} = \lambda_{\text{gap}}(\mathcal{E}_N) < 1$, where $\lambda_{\text{gap}}$ is the spectral radius of $\mathcal{E}_N$ restricted to traceless operators. As derived in Appendix M (Section M.4), the channel decomposition $\mathcal{E}_N = (1-p)\Psi + pT_\sigma$ with reset probability $p \geq \varepsilon/\ln d_0 = \ln 2/\ln 8 = 1/3$ yields the quantitative bound $f_{\text{RID}} \leq 1 - p \leq 2/3$.
+- **Lemma E.1 (Strict Contractivity):** If the average Evolve channel contains a nonzero input-independent refresh component, $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$, then it is strictly contractive in trace distance with factor $f_{\text{RID}}=1-p<1$. If $\sigma\succ0$, the channel is strictly positive and hence primitive (unique full-rank fixed point). No universal quantitative lower bound on $p$ follows from $\varepsilon$ alone.
 
 - **Theorem E.2 (Capacity Bound):** The classical information capacity satisfies $C_{\max} \equiv C(\mathcal{E}_N) < \ln d_0$.
 
@@ -1350,7 +1326,16 @@ The partial trace over $B$ discards the correlations established by $U_{AB}$ bet
 
 $$D_{\text{tr}}(\mathcal{E}_N^{(A)}(\rho_1), \mathcal{E}_N^{(A)}(\rho_2)) \leq D_{\text{tr}}(\rho_1, \rho_2)$$
 
-with strict inequality (contractivity factor $f_{\text{RID}} < 1$) when the channel is non-unitary. As derived in Appendix M (Section M.4), the channel decomposition $\mathcal{E}_N = (1-p)\Psi + pT_\sigma$ with $p \geq 1/3$ yields $f_{\text{RID}} \leq 2/3 < 1$.
+Strict contraction ($f_{\text{RID}}<1$) does not follow from non-unitarity alone; it follows from the presence of a nonzero input-independent refresh component (Lemma E.1). Concretely, if
+$$
+\Phi=(1-p)\Psi+pT_\sigma
+\quad\text{with}\quad p>0,
+$$
+then Lemma E.1 gives the uniform bound
+$$
+D_{\mathrm{tr}}(\Phi(\rho_1),\Phi(\rho_2)) \le (1-p)\,D_{\mathrm{tr}}(\rho_1,\rho_2),
+\qquad f_{\text{RID}}=1-p<1.
+$$
 
 **Step 7 (Thermodynamic consistency).** The entropy production $\varepsilon \geq \ln 2$ (Theorem 31, rigorously derived in Appendix J from Lemma J.1) quantifies the irreversibility of the reduced dynamics on $A$, not the joint dynamics on $AB$. From the perspective of the joint system:
 
@@ -1479,7 +1464,7 @@ The same SPAP constraint ($\varepsilon \geq \ln 2$) that generates causal struct
 
 **Branch I:**
 1. SPAP (Theorem 10) → irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31, Appendix J)
-2. $\varepsilon > 0$ + channel decomposition (Appendix M) → strict contractivity $f_{\text{RID}} \leq 2/3 < 1$ (Lemma E.1)
+2. $\varepsilon > 0$ + nonzero SPAP refresh component → strict contraction $f_{\text{RID}}<1$ at each step (Lemma E.1)
 3. $f_{\text{RID}} < 1$ → bounded capacity $C_{\max} < \ln d_0$ (Theorem E.2)
 4. Bounded capacity + geometric regularity (Theorem 43) → finite boundary information $S_{\max} \propto \mathcal{A}$ (Theorem E.3)
 5. Thermodynamic consistency → $S_{BH} = \mathcal{A}/(4G)$ (Theorem E.6)
@@ -1607,7 +1592,7 @@ The correlation term decays exponentially with rate $-2\ln f > 0$. This violates
 
 $$\mathcal{E}_N^{(A)}(\rho_A) = \text{Tr}_B\left[U_{AB}(\rho_A \otimes \rho_B)U_{AB}^\dagger\right]$$
 
-exhibits $f_{\text{RID}} \leq 2/3 < 1$ (Lemma E.1, Appendix M) because the partial trace discards $A$-$B$ correlations established by $U_{AB}$.
+exhibits $f_{\text{RID}} < 1$ (Lemma E.1) because the partial trace discards $A$-$B$ correlations established by $U_{AB}$.
 
 **Quantitative analysis:** Let the initial state be $\rho_{AB} = \rho_A \otimes \rho_B$ (product state). After the interaction:
 
@@ -1638,14 +1623,14 @@ For reference, we collect the key numerical values appearing in this section:
 | MPU Hilbert space dimension | $d_0$ | 8 | Theorem 23 |
 | Irreducible entropy cost | $\varepsilon$ | $\ln 2 \approx 0.693$ nats | Theorem 31 (Appendix J) |
 | Maximum channel capacity | $C_{\max}$ | $\ln d_0 - \varepsilon = 2\ln 2 \approx 1.386$ nats | Eq. E.15 (Appendix E) |
-| Contractivity factor bound | $f_{\text{RID}}$ | $\leq 1 - \frac{\ln 2}{\ln 8} = \frac{2}{3} \approx 0.667$ | Appendix M, Sec. M.4 |
+| Contractivity factor bound | $f_{\text{RID}}$ | $\le 1-p$ for some $p\in(0,1]$ (refresh weight) | Lemma E.1 |
 | MPU spacing / Planck length | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | Appendix Q, Eq. Q.18 |
 
 ### E.9.5.11 Concluding Remarks
 
 **Remark E.9.5.2: Relation to Standard Quantum Mechanics.** In standard quantum mechanics, unitarity is postulated as an axiom governing closed-system evolution (Postulate 2 of von Neumann's formulation [von Neumann 1932]). The present derivation reveals unitarity as a theorem following from more fundamental principles: the structure of self-referential prediction (SPAP), the thermodynamic constraints it implies ($\varepsilon \geq \ln 2$), and the closed-system assumption (Hypothesis 1).
 
-The key insight is that while individual ND-RID channels are strictly contractive ($f_{\text{RID}} \leq 2/3 < 1$, Lemma E.1, Appendix M), this contractivity arises from partial-trace effects on joint unitary operations (Lemma E.9.5.3), not from fundamental information destruction. The derivation applies to closed systems; open systems exhibit apparent non-unitarity through entanglement with external degrees of freedom, consistent with the standard quantum formalism and with Corollary E.9.5.4.
+The key insight is that while individual ND-RID channels are strictly contractive ($f_{\text{RID}} < 1$, Lemma E.1), this contractivity arises from partial-trace effects on joint unitary operations (Lemma E.9.5.3), not from fundamental information destruction. The derivation applies to closed systems; open systems exhibit apparent non-unitarity through entanglement with external degrees of freedom, consistent with the standard quantum formalism and with Corollary E.9.5.4.
 
 **Remark E.9.5.3: Consistency with Arrow of Time.** Global unitarity (Theorem E.9.5) and thermodynamic irreversibility (Appendix O, Theorem O.3) are compatible because they describe different operational levels:
 

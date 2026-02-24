@@ -458,7 +458,7 @@ From this common source, two independent branches emerge:
 
 **Branch I (Information Capacity):**
 $$
-\varepsilon \geq \ln 2 \;\xrightarrow{\text{Lemma E.1}}\; f_{RID} < 1 \;\xrightarrow{\text{Theorem E.2}}\; C_{\max} < \ln d_0
+\varepsilon \geq \ln 2 \;\xrightarrow{\text{Lemma E.1}}\; p>0 \;\xrightarrow{\text{Lemma E.1}}\; f_{RID}=1-p<1 \;\xrightarrow{\text{Theorem E.2}}\; C_{\max} < \ln d_0
 $$
 
 **Branch II (Propagation Velocity):**
@@ -491,15 +491,43 @@ $$E_0^\dagger E_0 + E_1^\dagger E_1 = (U_{rev}^\dagger U_{rev}) \otimes (|0\rang
 
 ensuring CPTP structure. The ancilla's reduced state after the map is $|0\rangle\langle 0|$ for any input, implementing a physical reset channel $T_\sigma(\rho) = \text{Tr}(\rho)\sigma$ with $\sigma = |0\rangle\langle 0|$.
 
-*Channel Decomposition.* The average channel admits the decomposition $\mathcal{E}_N = (1-p)\Psi + p T_\sigma$, where $\Psi$ is a CPTP map and $T_\sigma$ is the full-rank reset channel. Since $T_\sigma$ is strictly positive and appears with weight $p > 0$, the channel satisfies $\mathcal{E}_N(\rho) \geq p \cdot \text{Tr}(\rho)\sigma$ for all $\rho \geq 0$, ensuring primitivity [Sanz et al. 2010].
-
-*Entropy Budget Constraint.* The reset channel $T_\sigma$ contributes at most $\ln d_0$ nats of entropy per application (Lemma G.1.9.1). For the average channel to satisfy the irreversibility constraint $\varepsilon \geq \ln 2$, the reset probability must satisfy $p \geq \varepsilon/\ln d_0 \geq \ln 2/\ln 8 = 1/3$. The strict positivity of $p$ ensures primitivity [Frigerio & Verri 1982a], and the spectral gap $\lambda_{gap}(\mathcal{E}_N) < 1$ on the traceless subspace bounds the contractivity factor: $f_{RID} \equiv \lambda_{gap}(\mathcal{E}_N) \leq 1 - p \leq 2/3 < 1$ [Wolf 2012].
+*Channel Decomposition.* The averaged ND-RID 'Evolve' channel contains a nonzero input-independent refresh component (Lemma E.1), and can be written as
+$$
+\mathcal{E}_N = (1-p)\Psi + p\,T_\sigma,\qquad p\in(0,1],
+$$
+where $\Psi$ is CPTP and $T_\sigma(\rho)=\mathrm{Tr}(\rho)\sigma$ is an input-independent refresh to a fixed state $\sigma$. For traceless $\Delta$ we have $T_\sigma(\Delta)=0$, hence $\mathcal{E}_N(\Delta)=(1-p)\Psi(\Delta)$ and Lemma E.1 gives the uniform trace-distance contraction
+$$
+D_{tr}(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2))\le (1-p)\,D_{tr}(\rho_1,\rho_2),
+\qquad
+f_{RID}=1-p<1.
+$$
+If additionally $\sigma\succ0$, then $\mathcal{E}_N(\rho)=(1-p)\Psi(\rho)+p\sigma\succ0$ for all states $\rho$, so $\mathcal{E}_N$ is strictly positive and hence primitive [Sanz et al. 2010]. No universal quantitative lower bound on $p$ follows from $\varepsilon$ alone without additional microscopic assumptions about how entropy production is partitioned between $\Psi$ and the refresh component.
 
 **3. Theorem E.2 (Branch I): Channel Capacity Bound**
 
 Strict contractivity bounds the classical channel capacity: $C_{\max}(\mathcal{E}_N) < \ln d_0$.
 
-*Tensor Power Monotonicity.* The proof requires that contractivity extends to tensor powers of the channel. For primitive CPTP maps, the trace-norm contractivity factor is monotone under tensor power: $f_{RID}(\Phi^{\otimes n}) \leq f_{RID}(\Phi)$ [Pérez-García et al. 2006]. If $C_{\max} = \ln d_0$ were achievable, the classical channel capacity [Holevo 1998] and its strong converse [Winter 1999; König & Wehner 2009] would require $d_0^n$ asymptotically orthogonal output states for some block length $n$. Orthogonality requires $\|\mathcal{E}_N^{\otimes n}(\rho_k) - \mathcal{E}_N^{\otimes n}(\rho_l)\|_1 = 2$, but contractivity gives $\|\mathcal{E}_N^{\otimes n}(\rho_k) - \mathcal{E}_N^{\otimes n}(\rho_l)\|_1 \leq f_{RID}^n \cdot 2 < 2$. This contradiction establishes $C_{\max} < \ln d_0$.
+*Flagged (Erasure-Mixture) Capacity Bound.* Using the decomposition $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$, define the flagged channel
+$$
+\widetilde{\mathcal{E}}_N(\rho)=(1-p)\,\Psi(\rho)\otimes|0\rangle\langle0|+p\,\sigma\otimes|1\rangle\langle1|.
+$$
+Tracing out the flag recovers $\mathcal{E}_N$, i.e. $\mathcal{E}_N=\mathrm{Tr}_F\circ \widetilde{\mathcal{E}}_N$, so $\mathcal{E}_N$ is a degraded version of $\widetilde{\mathcal{E}}_N$ and therefore
+$$
+C(\mathcal{E}_N)\le C(\widetilde{\mathcal{E}}_N).
+$$
+For any block length $n$ and any message $M$, the flag sequence $F^n$ is independent of $M$, hence
+$$
+I(M;B^nF^n)=I(M;B^n\mid F^n).
+$$
+Conditioned on a particular flag pattern with $k$ refresh events (flag value $1$), only the remaining $n-k$ non-refresh uses can carry message information, and each such use transmits at most $\ln d_0$ nats. Therefore,
+$$
+I(M;B^n\mid F^n)\le (n-k)\ln d_0,
+$$
+and averaging over the i.i.d. flag process gives $I(M;B^nF^n)\le n(1-p)\ln d_0$. Dividing by $n$ and optimizing over codes yields
+$$
+C(\widetilde{\mathcal{E}}_N)\le (1-p)\ln d_0<\ln d_0,
+$$
+hence $C(\mathcal{E}_N)<\ln d_0$, as claimed in Theorem E.2.
 
 **4. Theorem 29 (Branch II): Minimum MPU Cycle Time τ_min > 0**
 
@@ -589,7 +617,7 @@ Both relativizations trace to a **single source**—the irreducible entropy cost
 
 - **Kinematic domain** (Branch II): SPAP $\to$ finite cycle complexity $\to$ $\tau_{min} > 0$ (Margolus-Levitin) $\to$ finite $v_{max} = \delta/\tau_{min}$ $\to$ Lorentz invariance (Theorem 46) $\to$ $c \equiv v_{max}$ $\to$ frame-relative simultaneity
 
-- **Epistemic domain** (Branch I): SPAP $\to$ $\varepsilon \geq \ln 2$ $\to$ primitivity of $\mathcal{E}_N$ (Kraus structure) $\to$ $f_{RID} < 1$ (non-unitary evolution) $\to$ no perfect state preservation $\to$ measurement disturbance unavoidable $\to$ perspective-dependent outcomes $\to$ perspective-relative actuality
+- **Epistemic domain** (Branch I): SPAP $\to$ $\varepsilon \geq \ln 2$ $\to$ nonzero refresh component in $\mathcal{E}_N$ ($p>0$, Lemma E.1) $\to$ $f_{RID}=1-p<1$ (strict trace-distance contraction) $\to$ no perfect state preservation $\to$ measurement disturbance unavoidable $\to$ perspective-dependent outcomes $\to$ perspective-relative actuality
 
 The kinematic branch constrains how fast information can propagate through the MPU network. The epistemic branch constrains how faithfully information can be preserved through predictive processing. Both constraints originate in the logical structure of self-referential prediction.
 

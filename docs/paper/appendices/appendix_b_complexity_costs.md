@@ -60,51 +60,61 @@ The operators $\hat R(C_v)$ and $\hat R_I(C_v)$ are Hermitian because the cost f
 
 **Definition B.2 (Unified Complexity Functional $C_{\text{uni}}$)**
 
-Consider the task of achieving a prediction accuracy $\alpha$ for a SPAP-limited binary outcome, where $\delta_{\rm SPAP} = \alpha_{\mathrm{SPAP}}-\alpha$ is the error margin below the fundamental limit $\alpha_{\mathrm{SPAP}}$. A $\delta_{\rm SPAP}$-accurate SPAP strategy involves an encoding $\mathcal{C}$ of the prediction model and an evaluator $G$ that simulates the SPAP loop and verifies the accuracy constraint. The unified complexity functional $C_{\text{uni}}(\delta_{\rm SPAP})$ represents the minimal total resources (e.g., combined code length $m$ for $\mathcal{C}$ and evaluator Kolmogorov complexity $C(G)$) required by any such strategy:
-$$
-C_{\,\text{uni}}\bigl(\delta_{\rm SPAP}\bigr) :=\min_{(\mathcal C, G)\ \delta_{\rm SPAP}\text{-strategy}} \bigl[m \;+\; C(G)\bigr] \tag{B.4}
-$$
+Consider the task of achieving average predictive performance $\alpha$ on SPAP-limited aspects, where $\alpha$ is within an error margin $\delta_{\rm SPAP} = \alpha_{SPAP} - \alpha$ of the maximum limit $\alpha_{SPAP}$.
 
-**Theorem B.2 (Poly-logarithmic Complexity Divergence Near $\alpha_{SPAP}$ = Theorem 14)**
+A $\delta_{\rm SPAP}$-accurate SPAP strategy is any physically realizable procedure $S$ whose verification/calibration loop produces a predictor that achieves performance at least $\alpha_{SPAP}-\delta_{\rm SPAP}$ while the probability of violating this target is at most $\delta_{\rm SPAP}$. For such a strategy, define $\mathrm{Cost}(S;\delta_{\rm SPAP})$ to be its worst-case number of elementary physical operations, counting (i) each acquisition of an interaction outcome used for verification/calibration and (ii) each elementary internal update step used to process those outcomes and update the predictor. The unified complexity functional $C_{\text{uni}}$ is the minimal such cost over all $\delta_{\rm SPAP}$-accurate strategies:
+$$
+C_{\text{uni}}\bigl(\delta_{\rm SPAP}\bigr) := \inf_{S\ \delta_{\rm SPAP}\text{-accurate}} \mathrm{Cost}(S;\delta_{\rm SPAP}). \tag{B.4}
+$$
+This functional captures the fundamental effective computational resources demanded by high-accuracy self-calibration within the PU framework.
 
-For a desired prediction accuracy $\alpha$ approaching the fundamental SPAP limit $\alpha_{\mathrm{SPAP}}$ (i.e., $\delta_{\rm SPAP} = \alpha_{\mathrm{SPAP}}-\alpha \to 0$), the minimum unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ required to predict a SPAP-limited process is rigorously bounded below by a poly-logarithmic function of the accuracy gap $\delta_{\rm SPAP}$:
+**Theorem B.2 (Log-Enhanced Quadratic Complexity Divergence Near $\alpha_{SPAP}$ = Theorem 14)**
 
+As $\delta_{\rm SPAP} \to 0^+$, the unified complexity satisfies the lower bound:
 $$
-C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{(\delta_{\rm SPAP})^2}\right)
-\tag{B.5}
+C_{\text{uni}}\bigl(\delta_{\rm SPAP}\bigr) = \Omega\left(\frac{\log(1/\delta_{\rm SPAP})}{\delta_{\rm SPAP}^2}\right). \tag{B.5}
 $$
+where $\delta_{\rm SPAP}$ is the dimensionless error margin and $C_{uni}$ is a dimensionless measure of effective computational resources.
 
-where $\delta_{\rm SPAP}$ is the dimensionless error margin and $C_{uni}$ is a dimensionless measure of effective computational resources. This bound demonstrates that the resources required diverge faster than quadratically as the desired accuracy $\alpha$ approaches $\alpha_{SPAP}$.
+*Proof:* Fix $0<\delta_{\rm SPAP}\le 1/4$ and abbreviate $\delta:=\delta_{\rm SPAP}$. (The restriction $\delta\le 1/4$ is a mild technical condition ensuring $1-4\delta^2\ge 1/2$, which yields clean constants below; for $\delta>1/4$ the bound (B.5) is trivially satisfied by any strategy requiring at least one operation.) Consider the following estimation subtask, which is a special case of SPAP-limited performance calibration: an algorithm observes $N$ samples $X_1,\dots,X_N\in\{0,1\}$ with $X_i\sim\mathrm{Bern}(p)$ and must output an estimate $\hat p$ such that
+$$
+\Pr(|\hat p-p|\le \delta)\ \ge\ 1-\beta
+$$
+for all $p$ in $\{1/2-\delta,\ 1/2+\delta\}$, where $\beta\in(0,1/2)$ is a target failure probability. Any $\delta$-accurate SPAP strategy must be able to solve this subtask when restricted to this two-point family of bounded SPAP-limited success indicators (since calibrating a SPAP-limited success rate to additive accuracy $\delta$ entails at least distinguishing two hypotheses separated by $2\delta$), so a lower bound on $N$ yields a lower bound on $C_{\text{uni}}(\delta)$ via (B.4).
 
-*Proof:* The derivation of this bound relies on identifying the fundamental sub-problems that any system must solve to achieve high-accuracy prediction ($\alpha \to \alpha_{SPAP}^-$) for a SPAP-limited process, and then applying established scaling laws from information theory and computational complexity theory for these sub-problems. The PU framework posits that its entities (MPUs or aggregates) are subject to these universal information-processing constraints when performing such tasks. The full argument for the applicability of Property R to MPUs is provided in **Appendix A.0**.
+Define the decision rule $\varphi:=\mathbf{1}\{\hat p>1/2\}$. Under $p_+=1/2+\delta$ one has $\Pr_{p_+}(\varphi=1)\ge 1-\beta$, and under $p_-=1/2-\delta$ one has $\Pr_{p_-}(\varphi=1)\le \beta$. Let $P_+$ and $P_-$ denote the laws of $(X_1,\dots,X_N)$ under $p_+$ and $p_-$, respectively. By the data-processing inequality applied to the measurable map $(X_1,\dots,X_N)\mapsto\varphi$, the KL divergence satisfies
+$$
+D(P_+\|P_-)\ \ge\ D(\mathrm{Bern}(1-\beta)\|\mathrm{Bern}(\beta)).
+$$
+For $\beta\in(0,1/2)$,
+$$
+D(\mathrm{Bern}(1-\beta)\|\mathrm{Bern}(\beta))
+=(1-2\beta)\log\!\left(\frac{1-\beta}{\beta}\right)
+\ge \log\!\left(\frac{1}{2\beta}\right),
+$$
+since $\frac{1-\beta}{\beta}\ge \frac{1}{2\beta}$ and $1-2\beta\in(0,1)$.
 
-1.  **Statistical Resolution Sub-Problem and its Cost:** To achieve an average predictive accuracy $\alpha$ differing from the SPAP limit $\alpha_{SPAP}$ by only a small margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$, the predictive system must be able to statistically distinguish the true underlying process (which it aims to model with accuracy $\alpha$) from a hypothetical process that would perfectly hit the SPAP limit or lead to paradoxical outcomes. This is fundamentally a statistical discrimination task. A concrete sample-complexity bound makes the $\delta_{SPAP}^{-2}$ scaling explicit. Let $X_1, \dots, X_N \in [0,1]$ be i.i.d. outcomes of a bounded statistic used by the predictor (the $[0,1]$ range is natural since the predictive performance metric $PP$ is a normalized accuracy measure valued in $[0,1]$; the i.i.d. assumption models the best-case scenario of independent observations—temporal correlations can only increase the required sample size, so the bound remains valid as a lower bound under dependence), with mean $\mu = \mathbb{E}[X]$ and empirical mean $\bar{X}$. Hoeffding's inequality gives, for any $\beta \in (0,1)$,
+On the other hand, $P_\pm$ are product measures, so
 $$
-\Pr\bigl[|\bar{X} - \mu| \ge \delta_{SPAP}\bigr] \le 2\exp(-2N\delta_{SPAP}^2),
+D(P_+\|P_-)=N\cdot D(\mathrm{Bern}(p_+)\|\mathrm{Bern}(p_-))
+= N\cdot 2\delta\log\!\left(\frac{1+2\delta}{1-2\delta}\right).
 $$
-so it suffices that
+Using $\log\!\left(\frac{1+x}{1-x}\right)\le \frac{2x}{1-x^2}$ for $|x|<1$ with $x=2\delta\le 1/2$, we obtain
 $$
-N \ge \frac{1}{2\delta_{SPAP}^2}\ln\!\left(\frac{2}{\beta}\right)
+D(\mathrm{Bern}(p_+)\|\mathrm{Bern}(p_-))
+=2\delta\log\!\left(\frac{1+2\delta}{1-2\delta}\right)
+\le \frac{8\delta^2}{1-4\delta^2}
+\le 16\delta^2.
 $$
-to make the failure probability at most $\beta$. Thus any effective resource component tracking the required number of samples obeys
+Combining these bounds yields
 $$
-C_{stat}(\delta_{SPAP}) = \Omega\!\left(\frac{\ln(1/\beta)}{\delta_{SPAP}^2}\right).
+16N\delta^2\ \ge\ \log\!\left(\frac{1}{2\beta}\right)
+\quad\Rightarrow\quad
+N\ \ge\ \frac{1}{16\delta^2}\log\!\left(\frac{1}{2\beta}\right).
 $$
-Taking, for example, $\beta = \delta_{SPAP}$ yields the poly-logarithmic factor appearing in the unified lower bound (B.5).
+Taking the natural self-calibrated confidence choice $\beta=\delta$ (a strategy that claims accuracy $\delta$ but fails with probability much larger than $\delta$ is not operationally meaningful in the SPAP self-referential context, since the failure probability feeds back into the prediction loop) gives $N=\Omega(\log(1/\delta)/\delta^2)$. Finally, each sample acquisition and each internal update is counted as an elementary operation in $\mathrm{Cost}(\cdot;\delta)$, hence $C_{\text{uni}}(\delta)\ge N$, proving (B.5). ∎
 
-2.  **Logical Simulation Sub-Problem and its Cost:** To ensure that its own predictive process does not fall prey to the SPAP contradiction (**Theorems A.1.1 and A.1.3**) while aiming for accuracy $1-\delta_{SPAP}$ (i.e., an error rate of $\delta_{SPAP}$ relative to perfect prediction, or ensuring the prediction is valid within a margin $\delta_{SPAP}$ of the SPAP limit), the system must effectively simulate or reason about its own self-referential predictive logic. This involves computations analogous to those performed by a Dynamic Self-Reference Operator (DSRO, Definition 11). The depth of logical inference or simulation required to guarantee that a self-referential predictive statement is consistent and avoids paradox up to a precision related to $\delta_{SPAP}$ typically scales with the descriptive complexity of that precision. Specifying a quantity to within an error $\delta_{SPAP}$ requires $\sim \log(1/\delta_{SPAP})$ bits of information. The computational work (e.g., number of steps in a proof system, or depth of a recursive simulation like LITE in Appendix A.4) to verify consistency at this level of detail scales at least logarithmically with this information content. Thus, the complexity component $C_{logic}$ for the self-referential reasoning itself scales as:
-    $$
-    C_{logic}(\delta_{SPAP}) = \Omega\left(\log\left(\frac{1}{\delta_{SPAP}}\right)\right)
-    $$
-3.  **Combined Bound for Unified Complexity $C_{\text{uni}}$:** Achieving the overall task of high-accuracy SPAP-limited prediction requires addressing both sub-problems simultaneously. We formalize the computation required as a circuit (consistent with the operational proxy $\hat{C}_v$, Definition B.1).
-The logical depth of the circuit, $T$, must be sufficient to implement the DSRO simulation, requiring $T = \Omega(C_{logic}) = \Omega(\log(1/\delta_{\rm SPAP}))$.
-The width or space complexity of the circuit, $W$, must be sufficient to represent and process the information required for the statistical resolution. This involves distinguishing between distributions separated by $\delta_{\rm SPAP}$, requiring effective samples or parallel computations $W = \Omega(C_{stat}) = \Omega(1/(\delta_{\rm SPAP})^2)$.
-The total unified complexity $C_{\text{uni}}$, formalized as the circuit size (proportional to the time-space product), is bounded below by the product of depth and width: $C_{\text{uni}} = \Omega(T \cdot W)$. This multiplicative relationship is rigorously justified because the sequential logical operations (depth $T$) must be performed on the data structures (width $W$) required to maintain the necessary statistical resolution. The coherence required for the self-referential simulation necessitates that the full width $W$ is utilized throughout the depth $T$ of the computation. Therefore, the total complexity scales as:
-$$     C_{\text{uni}} = \Omega(T \cdot W) = \Omega\left(\log\left(\frac{1}{\delta_{\rm SPAP}}\right) \cdot \frac{1}{(\delta_{\rm SPAP})^2}\right)
-    $$
-This establishes the poly-logarithmic form in Equation (B.5) from a formal computational model perspective.
-
-This poly-logarithmic divergence of the dimensionless unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ (Eq B.5) represents the fundamental information-processing cost within the PU framework. This cost underlies the divergence of the Predictive Physical Complexity $C_{pred}(\alpha)$ in **Theorem 14** of the main text, as $C_{pred}$ must be sufficient to meet $C_{uni}$. Since physical realizability requires finite $C_P$, attaining performance arbitrarily close to $\alpha_{SPAP}$ is physically unattainable due to these diverging information-processing requirements.
+This log-enhanced quadratic divergence of the dimensionless unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ (Eq B.5) represents a fundamental information-processing lower bound within the PU framework. This lower bound underlies the divergence of the Predictive Physical Complexity $C_{pred}(\alpha)$ in Theorem 14 of the main text, since any physically realizable predictor must supply at least $C_{\text{uni}}(\delta_{\rm SPAP})$ effective computational resources to sustain performance $\alpha=\alpha_{SPAP}-\delta_{\rm SPAP}$.
 
 ## B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure
 
@@ -112,29 +122,39 @@ The total energy density associated with an individual MPU incorporates contribu
 
 **Definition B.3 (Microscopic Energy Density Operator $\hat{\rho}_v$)**
 
-The Hermitian operator representing the microscopic energy density associated with MPU $v$ is defined by its contributions from various physical aspects of the MPU, localized to an effective MPU volume $V_0$ and involving a characteristic MPU operational timescale $\tau_0$ where necessary for dimensional consistency:
+The Hermitian operator representing the microscopic energy density associated with MPU $v$ is defined by its contributions from various physical aspects of the MPU, localized to an effective MPU volume $V_{\mathrm{MPU}}$ and involving a characteristic MPU operational timescale $\tau_0$ where necessary for dimensional consistency:
 $$
-\hat{\rho}_v = \frac{1}{V_0} \left( \hat{H}_v + \left(\hat{R}(C_v) + \hat{R}_I(C_v)\right)\tau_0 + \hat{E}_{int}(v) \right) \tag{B.6}
+\hat{\rho}_v = \frac{1}{V_{\mathrm{MPU}}} \left( \hat{H}_v + \left(\hat{R}(C_v) - R(C_{op})\hat{\mathbb I}_v\right)\tau_0 + \hat{R}_I(C_v)\tau_0 + \hat{E}_{int}(v) \right) \tag{B.6}
 $$
 where:
 
-1.  **$\hat{H}_v$:** The internal MPU Hamiltonian (Energy operator, from Def 26, Eq 43). Its contribution to energy density is $\hat{H}_v/V_0$. Theorem 29 relates its expectation value to the baseline operational *energy* for a cycle, with $R(C_{op})$ (Definition 3) being the corresponding *power*.
-2.  **$\hat{R}(C_v), \hat{R}_I(C_v)$:** The operational resource cost *power* operators (defined in Theorem B.1, Eq B.3, which are derived from the power functions $R(C), R_I(C)$ in Definition 3). Their contribution to energy density is $(\hat{R}(C_v)\tau_0)/V_0$ and $(\hat{R}_I(C_v)\tau_0)/V_0$, representing energy dissipated or utilized over timescale $\tau_0$ per unit volume. The justification for their inclusion as sources for $T_{\mu\nu}$ rests on PCE requiring all predictive work and costs to be accounted for in the system's energy balance, with Theorem 2 ensuring the proxy $\hat{C}_v$ accurately reflects $C_P$ at equilibrium.
-3.  **$\hat{E}_{int}(v) = \frac{1}{2}\sum_{v' \sim v} \hat{V}_{vv'}$:** The interaction energy operator (Energy operator). Its contribution to energy density is $\hat{E}_{int}(v)/V_0$. Acts on the joint Hilbert space $\mathcal{H}_v \otimes \mathcal{H}_{v'}$ (or larger).
+1.  **$\hat{H}_v$:** The internal MPU Hamiltonian (Energy operator, from Def 26, Eq 43). Its contribution to energy density is $\hat{H}_v/V_{\mathrm{MPU}}$. Theorem 29 relates $\langle \hat{H}_v\rangle$ to the baseline operational energy per predictive cycle; the corresponding baseline operational power is $R(C_{op})$ (Definition 3), where $C_{op}$ is the fixed baseline operational complexity (Definition 13).
+2.  **$\hat{R}(C_v), \hat{R}_I(C_v)$:** The operational resource cost *power* operators (defined in Theorem B.1, Eq B.3, derived from the power functions $R(C), R_I(C)$ in Definition 3). Since $\langle \hat{H}_v\rangle$ already accounts for the baseline operational energy associated with $R(C_{op})$, the term $\left(\hat{R}(C_v)-R(C_{op})\hat{\mathbb I}_v\right)\tau_0$ contributes only the excess operational energy (above baseline) over the timescale $\tau_0$, while $\hat{R}_I(C_v)\tau_0$ contributes the reflexive/irreversible overhead energy over $\tau_0$. Here $\hat{\mathbb I}_v$ is the identity on $\mathcal H_v$ and $R(C_{op})$ is a scalar (the power evaluated at the fixed baseline complexity $C_{op}$).
+3.  **$\hat{E}_{int}(v) = \frac{1}{2}\sum_{v' \sim v} \hat{V}_{vv'}$:** The interaction energy operator (Energy operator). Its contribution to energy density is $\hat{E}_{int}(v)/V_{\mathrm{MPU}}$. Acts on the joint Hilbert space $\mathcal{H}_v \otimes \mathcal{H}_{v'}$ (or larger, if auxiliary degrees implementing ND-RID are included explicitly as in Definition B.4).
 
-The constants $V_0$ (effective MPU volume) and $\tau_0$ (characteristic MPU operational timescale, identified with $\tau_{min}$ from Theorem 29) are fundamental parameters related to the MPU scale. $\hat{\rho}_v$ is Hermitian by construction. Its expectation value $\langle \hat{\rho}_v \rangle = \text{Tr}(\rho_v \hat{\rho}_v)$ in the local MPU state $\rho_v$ represents the average local energy density associated with MPU $v$.
+The constants $V_{\mathrm{MPU}}$ (effective MPU volume) and $\tau_0$ (characteristic MPU operational timescale, identified with $\tau_{min}$ from Theorem 29) are fundamental parameters related to the MPU scale. $\hat{\rho}_v$ is Hermitian by construction. Its expectation value $\langle \hat{\rho}_v \rangle = \text{Tr}(\rho_v \hat{\rho}_v)$ in the local MPU state $\rho_v$ represents the average local energy density associated with MPU $v$.
 
 **Definition B.4 (Structure of Interaction Operator $\hat{V}_{vv'}$)**
 
-The interaction operator $\hat{V}_{vv'}$ between MPUs $v$ and $v'$ must account for both conservative energy exchange and the energy implications of the inherent thermodynamic irreversibility ($\varepsilon > 0$, Thm 31) of the ND-RID/'Evolve' process (Def 27). We decompose it as:
-$$ \hat{V}_{vv'} = \hat{V}_{dissip-contrib}^{(vv')} + \hat{V}_{pot}^{(vv')} \tag{B.7} $$
-1.  **$\hat{V}_{pot}^{(vv')}$:** Represents conservative potential energy contributions.
-2.  **$\hat{V}_{dissip-contrib}^{(vv')}$:** Represents the energy contribution associated with enabling the irreversible aspects of the interaction. The physical process underlying the irreversible ND-RID step involves coupling to underlying degrees of freedom, effectively modeled via open system dynamics (e.g., GKSL/Lindblad master equation [Gorini–Kossakowski–Sudarshan 1976; Lindblad 1976]):
-    $$ \frac{d\rho_{vv'}}{dt} = -\frac{i}{\hbar} [\hat{H}_{eff, vv'}, \rho_{vv'}] + \mathcal{L}_D(\rho_{vv'}) \tag{B.8} $$
-    $$ \mathcal{L}_D(\rho_{vv'}) = \sum_k \gamma_k \left( L_k \rho_{vv'} L_k^\dagger - \frac{1}{2} \{L_k^\dagger L_k, \rho_{vv'}\} \right) \tag{B.9} $$
-    The Lindblad operators $L_k$ and rates $\gamma_k$ are constrained such that the average entropy production rate $\dot{S}_{prod}$ associated with $\mathcal{L}_D$ accounts for the minimal cost $\varepsilon$. This cost is incurred over the interaction time $\tau_{int}$ specifically when non-trivial self-referential information $\Delta I > 0$ is processed (Consistency Constraint):
-    $$ \int_0^{\tau_{int}} \mathbb{E}[\dot{S}_{prod}(t)] dt \ge k_B \varepsilon \quad (\text{Consistency Constraint}) \tag{B.10} $$
-    The term $\hat{V}_{dissip-contrib}^{(vv')}$ represents the average local system energy required to support this necessary dissipative process, consistent with the dynamics (B.8) and the constraint (B.10).
+The interaction operator between two adjacent MPUs $v$ and $v'$ ($v \sim v'$) represents the energetic coupling and the energetic bookkeeping of irreversible ND-RID processes that enforce self-consistency and dissipation. We decompose it as:
+$$
+\hat{V}_{vv'} = \hat{V}_{pot}^{(vv')} + \hat{V}_{dissip-contrib}^{(vv')}. \tag{B.7}
+$$
+where:
+1.  **$\hat{V}_{pot}^{(vv')}$:** Represents "potential-like" energy from predictive coupling, such as alignment or consistency forces (e.g. analogous to spin coupling). This term is conservative and contributes to the Hamiltonian interaction energy.
+2.  **$\hat{V}_{dissip-contrib}^{(vv')}$:** Represents the local energetic contribution associated with implementing irreversible ND-RID updates. The ND-RID mechanism (Definition 20, Theorem 31) produces entropy and is well-described at the level of the reduced two-MPU state $\rho_{vv'}$ by a CPTP semigroup; hence one may write an effective Lindblad master equation
+$$
+\frac{d}{dt}\rho_{vv'}(t) = -\frac{i}{\hbar}[\hat{H}_{vv'}, \rho_{vv'}(t)] + \mathcal{L}_D(\rho_{vv'}(t)), \tag{B.8}
+$$
+where $\hat{H}_{vv'} = \hat{H}_v + \hat{H}_{v'} + \hat{V}_{pot}^{(vv')}$ is the reduced unitary part and $\mathcal{L}_D$ is of the form [Gorini–Kossakowski–Sudarshan 1976; Lindblad 1976]
+$$
+\mathcal{L}_D(\rho) = \sum_k \left( \hat{L}_k \rho \hat{L}_k^\dagger - \frac{1}{2}\{\hat{L}_k^\dagger \hat{L}_k, \rho\} \right). \tag{B.9}
+$$
+The entropy production rate $\dot{S}_{tot}$ associated with this reduced dissipative evolution is bounded below by the ND-RID constraint (Theorem 31):
+$$
+\dot{S}_{tot} \ge \frac{\epsilon}{\tau_{int}}. \tag{B.10}
+$$
+The GKSL form (B.8) is a reduced description: by unitary dilation (e.g. [Stinespring 1955]) there exists an auxiliary Hilbert space $\mathcal H_{E(vv')}$ and a self-adjoint Hamiltonian on $\mathcal H_v\otimes\mathcal H_{v'}\otimes\mathcal H_{E(vv')}$ whose unitary evolution reproduces (B.8) after tracing out $E(vv')$. Accordingly, $\hat{V}_{dissip-contrib}^{(vv')}$ is taken to be the self-adjoint local edge term (supported on the tensor factor $\mathcal{H}_v \otimes \mathcal{H}_{v'} \otimes \mathcal{H}_{E(vv')}$) that encodes the system–auxiliary coupling and auxiliary energy required to realize $\mathcal{L}_D$; its expectation accounts for the heat/work channel whose entropy production obeys (B.10). With this choice, the microscopic conservation construction in Definition B.5 is applied to the global closed Hamiltonian (with auxiliaries included), while the apparent dissipation arises only after tracing out $E(vv')$.
 
 ## B.5 Microscopic Flow Operators and Conservation Laws
 
@@ -142,30 +162,37 @@ To construct the full stress-energy tensor, operators for momentum density and m
 
 **Definition B.5 (Microscopic Flow Operators $\hat{\pi}_{v,j}$ and $\hat{p}_{v,jk}$)**
 
-Let $\hat{\rho}_v$ be the microscopic energy density operator from (B.6) and define the corresponding local energy operator $\hat{\epsilon}_v := V_0 \hat{\rho}_v$ (so $\hat{\epsilon}_v$ has units of energy). Let the total Hamiltonian be
+Let $\hat{\rho}_v$ be the microscopic energy density operator from (B.6) and define the corresponding local energy operator $\hat{\epsilon}_v := V_{\mathrm{MPU}} \hat{\rho}_v$ (so $\hat{\epsilon}_v$ has units of energy). Let the total Hamiltonian be
 $$
 \hat{H}_{total} := \sum_v \hat{\epsilon}_v,
 $$
-and let $\frac{d}{dt} = \frac{i}{\hbar}[\hat{H}_{total}, \cdot]$ be the Heisenberg derivative.
+interpreted as the global closed Hamiltonian of the MPU network (including any local auxiliary degrees of freedom used to implement ND-RID as in Definition B.4). We define the time derivative in the Heisenberg picture as $\frac{d}{dt}\hat{O} = \frac{i}{\hbar}[\hat{H}_{total}, \hat{O}]$.
 
-Assume a finite interaction range so that $[\hat{\epsilon}_v, \hat{\epsilon}_u] = 0$ whenever the supports of $\hat{\epsilon}_v$ and $\hat{\epsilon}_u$ are disjoint. Define the antisymmetric pairwise energy-current operator
+Because each $\hat{\epsilon}_v$ is supported on $v$ and its finite set of incident edges, one has $[\hat{\epsilon}_v, \hat{\epsilon}_u]=0$ whenever the supports of $\hat{\epsilon}_v$ and $\hat{\epsilon}_u$ are disjoint. Define the antisymmetric pairwise energy-current operator:
 $$
-\hat{J}_{v \to u} := \frac{i}{\hbar V_0}\,[\hat{\epsilon}_v, \hat{\epsilon}_u] = -\hat{J}_{u \to v}.
+\hat{J}_{v \to u} := \frac{i}{\hbar V_{\mathrm{MPU}}}\,[\hat{\epsilon}_v, \hat{\epsilon}_u] = -\hat{J}_{u \to v}.
 $$
 Then
 $$
-\frac{d\hat{\rho}_v}{dt} + \sum_u \hat{J}_{v \to u} = 0,
+\frac{d}{dt}\hat{\rho}_v
+= \frac{i}{\hbar V_{\mathrm{MPU}}}\left[\sum_u \hat{\epsilon}_u,\hat{\epsilon}_v\right]
+= \sum_u \frac{i}{\hbar V_{\mathrm{MPU}}}[\hat{\epsilon}_u,\hat{\epsilon}_v]
+= -\sum_u \hat{J}_{v\to u},
 $$
-with the sum effectively restricted to interaction-range neighbors by locality.
+so the local energy continuity equation holds:
+$$
+\frac{d}{dt}\hat{\rho}_v + \sum_u \hat{J}_{v \to u} = 0. \tag{B.11}
+$$
 
-Assuming a locally regular structure allowing definition of spatial directions $j, k$ and a discrete divergence $\nabla_j^{(v)}$, choose directional energy flux operators $\hat{q}_{v,j}$ consistent with these edge-currents (e.g., on a lattice $\hat{q}_{v,j} := \hat{J}_{v \to v+e_j}$). This yields the local continuity equations
+Under geometric regularity (Theorem 43), there exists a local chart in which neighbors of $v$ can be indexed as $v\pm e_j$ and a local discrete divergence operator $\nabla_j^{(v)}$ is well-defined. Choose local energy flux operators $\hat{q}_{v,j}$ consistent with the edge currents (e.g. $\hat{q}_{v,j}:=\hat{J}_{v\to v+e_j}$ in that chart). Then (B.11) can be written in the directional form:
 $$
-\frac{d\hat{\rho}_v}{dt} + \sum_{j=1}^3 \nabla_j^{(v)} \hat{q}_{v,j} = 0 \quad (\text{Local Energy Conservation}) \tag{B.11}
+\frac{d}{dt}\hat{\rho}_v + \sum_{j=1}^3 \nabla_j^{(v)} \hat{q}_{v,j} = 0. \tag{B.11}
 $$
+Define the momentum density by $\hat{\pi}_{v,j} := \hat{q}_{v,j}/c^2$ and define the stress operators $\hat{p}_{v,jk}$ by requiring local momentum conservation:
 $$
-\frac{d\hat{\pi}_{v,k}}{dt} + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,jk} = 0 \quad (\text{Local Momentum Conservation}) \tag{B.12}
+\frac{d}{dt}\hat{\pi}_{v,j} + \sum_{k=1}^3 \nabla_k^{(v)}\hat{p}_{v,jk} = 0. \tag{B.12}
 $$
-where $\hat{\pi}_{v,j}$ is the momentum density operator and $\hat{p}_{v,jk}$ the stress operator. Assuming the standard relation $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, these equations define $(\hat{\pi}_{v,j}, \hat{p}_{v,jk})$ consistently with the Hamiltonian and energy density.
+These equations define $(\hat{\pi}_{v,j}, \hat{p}_{v,jk})$ consistently with the Hamiltonian and energy density in the locally regular chart.
 
 ## B.6 Canonical Microscopic Stress-Energy Tensor $\hat{T}^{\mu\nu}_{(can)}$
 
@@ -180,7 +207,7 @@ The canonical microscopic stress-energy operator $\hat{T}^{\mu\nu}_{(can)}(v)$ f
 *   $\hat{T}^{j0}_{(can)}(v) = c \hat{\pi}_{v,j}$ (Momentum density scaled)
 *   $\hat{T}^{jk}_{(can)}(v) = \hat{p}_{v,jk}$ (Stress)
 
-(Assuming $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$, one has $\hat{T}^{0j}_{(can)}(v) = \hat{T}^{j0}_{(can)}(v)$.)
+(By definition $\hat{\pi}_{v,j}:=\hat{q}_{v,j}/c^2$, one has $\hat{T}^{0j}_{(can)}(v)=\hat{T}^{j0}_{(can)}(v)$.)
 
 **Theorem B.3 (Microscopic Conservation Law for $\hat{T}^{\mu\nu}_{(can)}$)**
 
@@ -194,7 +221,7 @@ $$
 = \partial_0^{(v)} \hat{\rho}_v + \sum_{j=1}^3 \nabla_j^{(v)}(c\hat{\pi}_{v,j})
 = \frac{1}{c}\frac{d\hat{\rho}_v}{dt} + \frac{1}{c}\sum_{j=1}^3 \nabla_j^{(v)} \hat{q}_{v,j} = 0
 $$
-by (B.11) and $\hat{q}_{v,j} = c^2 \hat{\pi}_{v,j}$. For $\nu = k$, one has
+by (B.11) and $\hat{q}_{v,j}=c^2\hat{\pi}_{v,j}$ (Definition B.5). For $\nu = k$, one has
 $$
 \sum_{\mu=0}^{3} \partial_\mu^{(v)} \hat{T}^{\mu k}_{(can)}
 = \partial_0^{(v)}(c\hat{\pi}_{v,k}) + \sum_{j=1}^3 \nabla_j^{(v)} \hat{p}_{v,jk}
@@ -206,18 +233,57 @@ by (B.12). ∎
 
 The canonical tensor is symmetrized using the Belinfante-Rosenfeld procedure to obtain the physically relevant tensor.
 
-**Assumption B.1 (MPU Effective Spin)**
-Assume an effective microscopic spin tensor operator $\hat{S}^{\lambda \mu \nu}(v)$ exists, antisymmetric in $\mu \leftrightarrow \nu$.
+**Theorem B.4 (Belinfante-Rosenfeld Symmetrization)**
 
-**Theorem B.4 (Physical, Symmetric Microscopic Operator $\hat{\Theta}_{\mu\nu}^{(MPU)}$)**
-
-The physical, symmetric, conserved stress-energy tensor operator $\hat{\Theta}_{\mu\nu}^{(MPU)}(v)$ is constructed from $\hat{T}_{\mu\nu}^{(can)}$ and $\hat{S}^{\lambda \mu \nu}$ via:
+Let $\hat{S}^{\lambda\mu\nu}(v)$ be a spin current operator (antisymmetric in $\mu,\nu$) such that the local conservation of total angular momentum holds in the form
 $$
-\hat{\Theta}_{\mu\nu}^{(MPU)} = \hat{T}_{\mu\nu}^{(can)} + \frac{1}{2} \partial_\lambda^{(v)} (\hat{S}^{\lambda \mu \nu} - \hat{S}^{\mu \lambda \nu} - \hat{S}^{\nu \mu \lambda}) \tag{B.14}
+\partial_\lambda^{(v)} \left( x^\mu \hat{T}^{\lambda\nu}_{(can)}(v) - x^\nu \hat{T}^{\lambda\mu}_{(can)}(v) - \hat{S}^{\lambda\mu\nu}(v) \right)=0,
 $$
-$\hat{\Theta}_{\mu\nu}^{(MPU)}$ is symmetric and satisfies $\partial_\mu^{(v)} \hat{\Theta}^{\mu\nu}_{(MPU)}(v) = 0$ if total angular momentum is conserved.
+together with local energy-momentum conservation (Theorem B.3, Eq B.13). Define the Belinfante-Rosenfeld improved tensor by
+$$
+\hat{\Theta}^{\mu\nu}_{(MPU)}(v)
+= \hat{T}^{\mu\nu}_{(can)}(v)
++ \frac{1}{2}\partial_\lambda^{(v)}\!\left(\hat{S}^{\mu\lambda\nu}(v) + \hat{S}^{\nu\lambda\mu}(v) - \hat{S}^{\lambda\mu\nu}(v)\right). \tag{B.14}
+$$
+Then $\hat{\Theta}^{\mu\nu}_{(MPU)}$ is symmetric and satisfies:
+$$
+\partial_\mu^{(v)}\hat{\Theta}^{\mu\nu}_{(MPU)} = 0. \tag{B.15}
+$$
 
-*Proof:* Standard field theory derivation.
+*Proof:* From the assumed local conservation of total angular momentum and (B.13), expand the divergence:
+$$
+0=\partial_\lambda^{(v)}\!\left(x^\mu \hat{T}^{\lambda\nu}_{(can)}-x^\nu \hat{T}^{\lambda\mu}_{(can)}-\hat{S}^{\lambda\mu\nu}\right)
+=\hat{T}^{\mu\nu}_{(can)}-\hat{T}^{\nu\mu}_{(can)}-\partial_\lambda^{(v)}\hat{S}^{\lambda\mu\nu},
+$$
+hence
+$$
+\hat{T}^{\mu\nu}_{(can)}-\hat{T}^{\nu\mu}_{(can)}=\partial_\lambda^{(v)}\hat{S}^{\lambda\mu\nu}. \quad (\ast)
+$$
+Define the superpotential
+$$
+\hat{B}^{\lambda\mu\nu}(v):=\frac{1}{2}\left(\hat{S}^{\mu\lambda\nu}(v)+\hat{S}^{\nu\lambda\mu}(v)-\hat{S}^{\lambda\mu\nu}(v)\right),
+$$
+so that (B.14) is $\hat{\Theta}^{\mu\nu}_{(MPU)}=\hat{T}^{\mu\nu}_{(can)}+\partial_\lambda^{(v)}\hat{B}^{\lambda\mu\nu}$. Using only $\hat{S}^{\lambda\mu\nu}=-\hat{S}^{\lambda\nu\mu}$, one checks $\hat{B}^{\lambda\mu\nu}=-\hat{B}^{\mu\lambda\nu}$.
+
+*Symmetry.* Compute the antisymmetric part:
+$$
+\hat{\Theta}^{\mu\nu}_{(MPU)}-\hat{\Theta}^{\nu\mu}_{(MPU)}
+=(\hat{T}^{\mu\nu}_{(can)}-\hat{T}^{\nu\mu}_{(can)})+\partial_\lambda^{(v)}(\hat{B}^{\lambda\mu\nu}-\hat{B}^{\lambda\nu\mu}).
+$$
+A direct substitution gives $\hat{B}^{\lambda\mu\nu}-\hat{B}^{\lambda\nu\mu}=-\hat{S}^{\lambda\mu\nu}$, hence
+$$
+\hat{\Theta}^{\mu\nu}_{(MPU)}-\hat{\Theta}^{\nu\mu}_{(MPU)}
+=(\hat{T}^{\mu\nu}_{(can)}-\hat{T}^{\nu\mu}_{(can)})-\partial_\lambda^{(v)}\hat{S}^{\lambda\mu\nu}=0
+$$
+by $(\ast)$.
+
+*Conservation.* Using (B.13) and $\hat{B}^{\lambda\mu\nu}=-\hat{B}^{\mu\lambda\nu}$,
+$$
+\partial_\mu^{(v)}\hat{\Theta}^{\mu\nu}_{(MPU)}
+=\partial_\mu^{(v)}\hat{T}^{\mu\nu}_{(can)}+\partial_\mu^{(v)}\partial_\lambda^{(v)}\hat{B}^{\lambda\mu\nu}
+=0+\partial_\mu^{(v)}\partial_\lambda^{(v)}\hat{B}^{\lambda\mu\nu}=0,
+$$
+since in the locally regular chart (Theorem 43) the mixed discrete derivatives commute and the double divergence is symmetric in $(\mu,\lambda)$ while $\hat{B}^{\lambda\mu\nu}$ is antisymmetric in $(\lambda,\mu)$. ∎
 
 **Definition B.7 (Physical Microscopic Stress-Energy Operator)**
 
@@ -251,15 +317,21 @@ The emergent tensor reproduces known physical forms.
 **Theorem B.6 (Correspondence with Standard Physical Forms)**
 
 The macroscopic tensor $T_{\mu\nu}^{(MPU)}(x)$ (Def B.8) reproduces standard forms:
-(a) Vacuum State $\omega_{vac}$:
+(a) **Vacuum State $\omega_{vac}$:** In a Poincaré-invariant vacuum, symmetry implies that the vacuum expectation of the stress-energy tensor is proportional to the metric:
 $$
-T_{\mu\nu}^{(MPU)} \big|_{vac} = \rho_{vac} g_{\mu\nu} = \frac{c^4 \Lambda}{8\pi G} g_{\mu\nu} \tag{B.17}
+T_{\mu\nu}^{(MPU)}\big|_{vac} = \kappa\, g_{\mu\nu}
 $$
+for some constant $\kappa$. In the PU convention used in Eq (76), the cosmological constant $\Lambda$ is carried entirely by the geometric term on the left-hand side, and $T_{\mu\nu}^{(MPU)}$ is understood as the renormalized excitation stress-energy with the vacuum contribution absorbed into $\Lambda$. Therefore $\kappa=0$ and
+$$
+T_{\mu\nu}^{(MPU)}\big|_{vac} = 0. \tag{B.17}
+$$
+
 (b) **Perfect Fluid (Local Thermal Equilibrium $\omega_{th}$):**
 $$
 T_{\mu\nu}^{(MPU)} \big|_{th} = (\rho_{th} + p_{th}/c^2) u_\mu u_\nu + p_{th} g_{\mu\nu} \tag{B.18}
 $$
-*Proof:* Follows from Poincaré invariance for (a) and isotropy in LRF for (b).
+
+*Proof:* (a) In a Poincaré-invariant vacuum, translation invariance makes $T_{\mu\nu}^{(MPU)}\big|_{vac}$ constant in spacetime, and Lorentz invariance restricts any constant symmetric rank-2 tensor to be proportional to $g_{\mu\nu}$. In the convention of Eq (76) (with $\Lambda g_{\mu\nu}$ retained on the geometric side), the vacuum contribution is absorbed into $\Lambda$ by definition of the renormalized matter stress-energy, so the proportionality constant is fixed to zero, giving (B.17). (b) In the local rest frame of an isotropic medium, spatial isotropy forces $T_{0i}=0$ and $T_{ij}=p\,\delta_{ij}$ while $T_{00}=\rho c^2$. Writing this covariantly in terms of the four-velocity $u^\mu$ yields $T_{\mu\nu}^{(MPU)}=(\rho+p/c^2)u_\mu u_\nu + p\, g_{\mu\nu}$. ∎
 
 ## B.10 Construction Pathway (Summary)
 

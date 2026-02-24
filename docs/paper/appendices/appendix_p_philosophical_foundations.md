@@ -2914,16 +2914,21 @@ PCE optimization, given an isotropic QFI metric, selects a rootless lattice.
 
 **Step 1 (Root definition).** Roots are lattice vectors $\mathbf{r}$ with minimal positive norm. For even lattices, roots have $|\mathbf{r}|^2 = 2$.
 
-**Step 2 (Symmetry breaking by roots).** A lattice with roots has its automorphism group constrained by the root system. The Weyl group $W(\Phi)$ of a non-trivial root system $\Phi$ is a proper subgroup of $O(n)$, breaking full rotational symmetry.
+**Step 2 (Vacuum gap penalty from roots).** A root $r$ with $|r|^2=2$ furnishes a lowest-norm lattice excitation. Vacuum isolation in the framework is the requirement that the vacuum configuration lattice exclude such norm-2 vectors, i.e., impose $|v|_{\min}^2\ge 4$ (rootlessness).
 
-**Step 3 (QFI isotropy implies rootlessness).** By Theorem Z.8c (Appendix Z, Section Z.13.4), if the QFI metric induced by the PCE-Attractor on a 24-dimensional even unimodular lattice is isotropic ($g = \lambda I_{24}$), then the lattice is rootless. The proof proceeds by noting that roots define preferred directions in the mode space where minimum distinguishability cost is $\sqrt{2}$, breaking the $O(24)$ invariance of the QFI metric. Among the 24 Niemeier lattices, only the Leech lattice has trivial root system.
+**Step 3 (Rootless uniqueness in 24D).** Theorem Z.8c states that among even unimodular lattices in dimension 24, the rootless case is unique and equals the Leech lattice $\Lambda_{24}$.
 
-**Step 4 (PCE produces isotropy).** By Theorem P.13.5, the QFI metric at the PCE-Attractor is isotropic: $g_{\text{QFI}} = \lambda I_{24}$. This follows from the isotropy group $H = S(U(a) \times U(b))$ acting irreducibly on the interface subspace (Schur's lemma).
+**Step 4 (PCE produces isotropy).** Theorem P.13.5 gives that the PCE-Attractor produces an isotropic QFI metric:
+$$g_{\text{QFI}} = \lambda I_M,\quad M=24.$$
 
-**Step 5 (Chain completion).** Combining Steps 3 and 4:
-$$\text{PCE-Attractor} \xrightarrow{\text{Thm P.13.5}} g_{\text{QFI}} = \lambda I_{24} \xrightarrow{\text{Thm Z.8c}} \text{Rootless lattice} \xrightarrow{\text{Niemeier}} \Lambda_{24}$$
+Since the lattice lives in this 24-dimensional mode space, the norm $|v|^2$ is taken in the induced QFI inner product.
 
-**Epistemic Status:** The connection from isotropy to rootlessness is established by Theorem Z.8c. The PCE selection of isotropy (Theorem P.13.5) provides the input; the mathematical implication (Theorem Z.8c) provides the output.
+**Step 5 (Chain completion).** Therefore:
+$$\text{PCE-Attractor} \xrightarrow{\text{Thm P.13.5}} g_{\text{QFI}}=\lambda I_{24},\quad \text{vacuum isolation}\implies \text{rootless}\xrightarrow{\text{Thm Z.8c}}\Lambda_{24}.$$
+
+PCE uniquely selects the Leech lattice.
+
+**Epistemic Status:** Step (3) is purely mathematical (Theorem Z.8c). Step (4) is Theorem P.13.5. Step (2) states the vacuum isolation requirement in the framework.
 
 ---
 
@@ -2943,7 +2948,7 @@ PCE uniquely selects the Leech lattice $\Lambda_{24}$ among 24-dimensional latti
 
 **Step 2 (Niemeier classification).** By the Niemeier classification [Niemeier 1973], exactly 24 even unimodular lattices exist in dimension 24. These are distinguished by their root systems.
 
-**Step 3 (Rootless uniqueness).** Among the 24 Niemeier lattices, exactly one is rootless: the Leech lattice $\Lambda_{24}$ [Leech 1967; Conway 1969]. The remaining 23 Niemeier lattices have non-trivial root systems with $|\Phi| \geq 48$ roots, breaking the full $O(24)$ symmetry required by QFI isotropy.
+**Step 3 (Rootless uniqueness).** Among the 24 Niemeier lattices, exactly one is rootless: the Leech lattice $\Lambda_{24}$ [Leech 1967; Conway 1969]. The remaining 23 lattices all have non-trivial root systems with $|\Phi| \ge 48$ roots and therefore contain vectors with $|v|^2=2$.
 
 **Step 4 (Conclusion).** PCE uniquely selects $\Lambda_{24}$. $\square$
 

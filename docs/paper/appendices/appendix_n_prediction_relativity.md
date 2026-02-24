@@ -781,18 +781,57 @@ $$
 
 where $0 \leq f_{RID} < 1$ is the contractivity factor established in Lemma E.1.
 
-*Proof.* The irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31) implies a minimum reset probability $p \geq \varepsilon/\ln d_0 > 0$ in the channel decomposition $\mathcal{E}_N = (1-p)\Psi + p T_\sigma$ (Lemma E.1). This Doeblin minorization structure with full-rank reset state $\sigma \succ 0$ guarantees primitivity with a unique fixed point (Theorem G.1.9.1). For such channels, the spectral gap $\lambda_{gap}(\mathcal{E}_N) < 1$ on the traceless subspace directly bounds the trace-distance contractivity factor: $f_{RID} \leq 1 - p < 1$ [Wolf 2012]. The bound (N.33) follows from Appendix E, Section E.3. ∎
+*Proof.* By Lemma E.1, the averaged ND-RID 'Evolve' channel contains a nonzero input-independent refresh component, so it admits a decomposition
+$$
+\mathcal{E}_N=(1-p)\Psi+pT_{\sigma_{reset}},
+\qquad p\in(0,1],
+\qquad T_{\sigma_{reset}}(\rho)=\mathrm{Tr}(\rho)\sigma_{reset}.
+$$
+For $\Delta:=\rho-\sigma$ we have $\mathrm{Tr}(\Delta)=0$, hence $T_{\sigma_{reset}}(\Delta)=0$ and
+$$
+\mathcal{E}_N(\Delta)=(1-p)\Psi(\Delta).
+$$
+Since $\Psi$ is CPTP, it contracts trace distance, implying $\|\Psi(\Delta)\|_1\le \|\Delta\|_1$. Therefore
+$$
+D_{tr}(\mathcal{E}_N(\rho),\mathcal{E}_N(\sigma))
+=\tfrac12\|\mathcal{E}_N(\Delta)\|_1
+\le (1-p)\tfrac12\|\Delta\|_1
+=(1-p)\,D_{tr}(\rho,\sigma),
+$$
+so (N.33) holds with $f_{RID}=1-p<1$. ∎
 
 **Corollary N.10.1 (Relative Entropy Contractivity).** The ND-RID channel satisfies:
 
 $$
-S(\mathcal{E}_N(\rho) \| \mathcal{E}_N(\sigma)) \leq S(\rho \| \sigma)
+S(\mathcal{E}_N(\rho) \| \mathcal{E}_N(\sigma)) \leq S(\rho \| \sigma).
 \tag{N.34}
 $$
 
-with strict inequality for $\rho \neq \sigma$ outside the Petz recovery subspace when the channel has strictly positive reset probability $p > 0$ (Lemma E.1). For the ND-RID channel with full-rank reset state $\sigma \succ 0$, this subspace is trivial, ensuring strict inequality for all $\rho \neq \sigma$.
+If $\mathcal{E}_N$ has a nonzero refresh component $\mathcal{E}_N=(1-p)\Psi+pT_{\sigma_{reset}}$ with $p>0$ (Lemma E.1), then for all pairs with $S(\rho\|\sigma)<\infty$ one has the quantitative bound
+$$
+S(\mathcal{E}_N(\rho) \| \mathcal{E}_N(\sigma)) \le (1-p)\,S(\rho \| \sigma),
+$$
+hence strict inequality for all $\rho\neq\sigma$ with finite relative entropy.
 
-*Proof.* This is the quantum data processing inequality for relative entropy [Lindblad 1975]. Strict inequality follows from non-unitarity of the 'Evolve' channel, guaranteed by $\varepsilon > 0$ (Theorem 31). ∎
+*Proof.* The first inequality is the quantum data processing inequality for relative entropy [Lindblad 1975].
+
+For the quantitative contraction, define the flagged channel
+$$
+\widetilde{\mathcal{E}}_N(\rho)=(1-p)\,\Psi(\rho)\otimes|0\rangle\langle0|+p\,\sigma_{reset}\otimes|1\rangle\langle1|.
+$$
+Tracing out the flag yields $\mathcal{E}_N=\mathrm{Tr}_F\circ \widetilde{\mathcal{E}}_N$, so by data processing,
+$$
+S(\mathcal{E}_N(\rho)\|\mathcal{E}_N(\sigma)) \le S(\widetilde{\mathcal{E}}_N(\rho)\|\widetilde{\mathcal{E}}_N(\sigma)).
+$$
+Since the flag distribution is input-independent, the relative entropy of the flagged outputs decomposes as
+$$
+S(\widetilde{\mathcal{E}}_N(\rho)\|\widetilde{\mathcal{E}}_N(\sigma))=(1-p)\,S(\Psi(\rho)\|\Psi(\sigma)).
+$$
+Applying data processing to $\Psi$ gives $S(\Psi(\rho)\|\Psi(\sigma))\le S(\rho\|\sigma)$, hence
+$$
+S(\mathcal{E}_N(\rho)\|\mathcal{E}_N(\sigma)) \le (1-p)\,S(\rho\|\sigma),
+$$
+which is strict whenever $p>0$ and $S(\rho\|\sigma)\in(0,\infty)$. ∎
 
 ### N.11.5a.2 The DPI-Equivalence Principle Correspondence
 

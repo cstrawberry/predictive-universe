@@ -949,32 +949,47 @@ $$
 
 where $\Psi$ is an arbitrary CPTP map representing the reversible/update phase and $T_\sigma(\rho) = \text{Tr}(\rho)\sigma$ is the full-rank reset channel to state $\sigma \succ 0$. 
 
-**Lemma G.1.9.1 (Reset Probability Bound).** The irreversibility cost $\varepsilon \geq \ln 2$ (Theorem 31) and the reset channel's maximum entropy contribution $\ln d_0$ impose a lower bound on the reset probability. In the extremal case where $\Psi$ is exactly unitary (zero entropy production), this bound is:
-
+**Lemma G.1.9.1 (Nonzero Refresh Weight).** In the PU coarse-grained ND-RID description, the averaged 'Evolve' channel includes a nonzero input-independent refresh component (Equation (G.1.9.5)), i.e. it admits a decomposition
 $$
-p \geq \frac{\varepsilon}{\ln d_0} \geq \frac{\ln 2}{\ln 8} = \frac{1}{3}
+\mathcal{E}_N = (1-p)\Psi + p\,T_\sigma
+\quad\text{with}\quad
+p\in(0,1].
 \tag{G.1.9.6}
 $$
+The irreducible cost $\varepsilon=\ln 2$ (Theorem 31) is the thermodynamic signature of logically irreversible refresh/reset in the SPAP cycle, but $\varepsilon$ alone does not determine a universal quantitative lower bound on $p$ without additional microscopic assumptions about how entropy production is partitioned between $\Psi$ and the refresh component.
 
-When $\Psi$ is dissipative with entropy production $\sigma_\Psi > 0$, the constraint becomes $p \cdot \ln d_0 + (1-p)\sigma_\Psi \geq \varepsilon$, which admits smaller values of $p$.
+*Proof.* Equation (G.1.9.5) defines $p$ as the weight of the input-independent refresh component in a convex decomposition of the averaged channel. Theorem 31 establishes that each cycle incurs a strictly positive irreducible entropy cost, which must be physically instantiated (Stage 2) and is operationally associated with refresh/reset in the SPAP update. At the level of the averaged channel model, this corresponds to $p>0$.
 
-*Proof.* The reset channel $T_\sigma$ contributes at most $\ln d_0 = \ln 8 = 3\ln 2$ nats of entropy per application, since this is the maximum entropy of a state on $\mathcal{H}_{d_0}$. For the average channel to satisfy the irreversibility constraint $\varepsilon \geq \ln 2$, the weighted entropy contributions must satisfy:
+However, $\varepsilon$ constrains only the total irreversible entropy production per cycle, not uniquely the decomposition weights: if $\Psi$ itself contributes irreversible entropy production, then the refresh weight $p$ can be smaller while the total cost remains $\varepsilon$. Therefore no universal numeric lower bound on $p$ follows from $\varepsilon$ alone at this abstraction level. QED
 
+**Theorem G.1.9.1 (Contractivity and Conditional Primitivity of ND-RID).** Let $\mathcal{E}_N$ be as in Equation (G.1.9.5), with $p\in(0,1]$. Then for all states $\rho_1,\rho_2$,
 $$
-(1-p)\sigma_\Psi + p \cdot S_{reset} \geq \varepsilon
+D_{tr}\\!\bigl(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2)\bigr)
+\le (1-p)\,D_{tr}(\rho_1,\rho_2),
+\qquad
+f_{RID}\le 1-p<1.
 $$
+If additionally $\sigma\succ 0$ (full rank), then $\mathcal{E}_N$ is strictly positive and hence primitive (unique full-rank fixed point) [Sanz et al. 2010].
 
-where $S_{reset} \leq \ln d_0$ is the entropy contribution from the reset. In the limiting case $\sigma_\Psi = 0$ (unitary $\Psi$) and $S_{reset} = \ln d_0$ (maximum entropy reset), the constraint reduces to:
-
+*Proof.* Let $\Delta:=\rho_1-\rho_2$ so $\mathrm{Tr}(\Delta)=0$. Since $T_\sigma(\Delta)=\mathrm{Tr}(\Delta)\sigma=0$, Equation (G.1.9.5) implies
 $$
-p \cdot \ln d_0 \geq \varepsilon \implies p \geq \frac{\varepsilon}{\ln d_0} = \frac{\ln 2}{3\ln 2} = \frac{1}{3}
+\mathcal{E}_N(\Delta)=(1-p)\Psi(\Delta).
 $$
+For any CPTP map $\Psi$, trace distance is contractive, hence $\|\Psi(\Delta)\|_1\le \|\Delta\|_1$. Therefore
+$$
+D_{tr}\\!\bigl(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2)\bigr)
+=\tfrac12\|\mathcal{E}_N(\Delta)\|_1
+=(1-p)\tfrac12\|\Psi(\Delta)\|_1
+\le (1-p)\tfrac12\|\Delta\|_1
+=(1-p)\,D_{tr}(\rho_1,\rho_2),
+$$
+which gives the stated strict contraction.
 
-This establishes $p = 1/3$ as the minimum reset probability achievable when $\Psi$ contributes no entropy and the reset achieves maximum entropy. For dissipative $\Psi$ with $\sigma_\Psi > 0$, smaller values of $p$ can satisfy the constraint. QED
-
-**Theorem G.1.9.1 (Primitivity and Contractivity of ND-RID).** The channel $\mathcal{E}_N$ defined by Equation (G.1.9.5) is primitive with contractivity factor $f_{RID} = \lambda_{gap}(\mathcal{E}_N) < 1$, ensuring exponential convergence of state distinguishability.
-
-*Proof.* Since $T_\sigma$ is strictly positive and appears with weight $p > 0$, we have $\mathcal{E}_N(\rho) \geq p \cdot \text{Tr}(\rho)\sigma$ for all $\rho \geq 0$ (Equation E.2a). This strict positivity condition ensures primitivity [Sanz et al. 2010]. For a primitive CPTP map on $\mathcal{B}(\mathcal{H}_{d_0})$: (i) the eigenvalue 1 is simple; (ii) the spectral gap $\lambda_{gap}(\mathcal{E}_N) < 1$ governs exponential convergence; (iii) the trace distance contracts: $D_{tr}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \leq f_{RID} \cdot D_{tr}(\rho_1, \rho_2)$ [Wolf 2012; Kastoryano & Temme 2013]. QED
+If $\sigma\succ0$ and $p>0$, then for any state $\rho$,
+$$
+\mathcal{E}_N(\rho)=(1-p)\Psi(\rho)+p\sigma\succ0,
+$$
+so $\mathcal{E}_N$ is strictly positive. Strict positivity implies primitivity and uniqueness of a full-rank fixed point [Sanz et al. 2010]. QED
 
 *Remark: Primitivity vs. PCE-Attractor.* The primitivity argument establishes *contractivity*—that states converge exponentially. The *destination* of this convergence is determined by PCE optimization (Definition 15), which selects the PCE-Attractor $\tau^*$ as the equilibrium configuration. While a primitive channel on the full $d_0$-dimensional space has a unique full-rank fixed point, the PCE-Attractor $\tau^* = (I_2/2) \oplus 0_6$ represents the PCE-optimal state within the orbit of equilibrium configurations, with dynamics effectively restricted to the active subspace by the thermodynamic decoupling of inactive modes (Appendix Z, Section Z.6.2).
 

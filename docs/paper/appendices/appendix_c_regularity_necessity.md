@@ -310,7 +310,7 @@ where $\eta^\uparrow/\eta^\downarrow$ bounds local packing variation at scale $r
 * ((1,2)–Poincaré, λ‑local) there exist $\lambda=4$ and
 
 $$
-C_P(r)\ :=\ \frac{\sqrt{2\,\Delta_{\max}}}{3\,\chi}\,
+C_{\mathrm{PI}}(r)\ :=\ \frac{\sqrt{2\,\Delta_{\max}}}{3\,\chi}\,
 \frac{(1+\varepsilon_C)}{(1-\varepsilon_C)}\,\frac{\rho^\uparrow(r)}{\rho^\downarrow(r)}\,,
 $$
 
@@ -318,7 +318,7 @@ such that for every locally Lipschitz $f$
 
 $$
 \fint_{B(x,r)}\!\!\!|f-f_{B(x,r)}|\,\mathrm d\mu\ \le
-C_P(r)\,r \left(\fint_{B(x,4r)} |\nabla f|^2\,\mathrm d\mu\right)^{1/2}.
+C_{\mathrm{PI}}(r)\,r \left(\fint_{B(x,4r)} |\nabla f|^2\,\mathrm d\mu\right)^{1/2}.
 $$
 
 *Proof.*
@@ -327,7 +327,7 @@ $\varepsilon_C\le(1-f_{\mathrm{RID}})/(1+f_{\mathrm{RID}})$ for the optimal link
 (ii) *Doubling.* Pack $B(x,2r)$ by $2^{D}$ disjoint translates of $B(x,r)$ up to packing distortion $\eta^\uparrow/\eta^\downarrow$ and degree distortion $\Delta_{\max}/\Delta_{\min}$. The weight uniformity adds a factor $(1+4\varepsilon_C)$.
 (iii) *Cheeger–Poincaré.* The graph‑Cheeger constant on $B(x,r)$ satisfies
 $h(B)\ge \frac{w_{\min}\,\chi\,4\pi r^2}{w_{\max}\,\rho^\uparrow(r)\,\frac{4}{3}\pi r^3} = \frac{3\chi}{\rho^\uparrow(r)}\,\frac{(1-\varepsilon_C)}{r(1+\varepsilon_C)}$.
-Cheeger’s inequality gives $\lambda_1(B)\ge h(B)^2/(2\Delta_{\max})$. Combine $\mathrm{Var}_B(f)\le \lambda_1(B)^{-1}\mathcal{E}(f,f)$ with $\mathcal{E}(f,f)$ bounded by the coarse‑grained Dirichlet form to obtain the stated $(1,2)$–Poincaré with $\lambda=4$ and $C_P(r)$ above.  ∎
+Cheeger’s inequality gives $\lambda_1(B)\ge h(B)^2/(2\Delta_{\max})$. Combine $\mathrm{Var}_B(f)\le \lambda_1(B)^{-1}\mathcal{E}(f,f)$ with $\mathcal{E}(f,f)$ bounded by the coarse‑grained Dirichlet form to obtain the stated $(1,2)$–Poincaré with $\lambda=4$ and $C_{\mathrm{PI}}(r)$ above.  ∎
 
 ## C.7 Conclusion
 

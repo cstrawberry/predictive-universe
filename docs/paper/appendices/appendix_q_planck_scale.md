@@ -616,13 +616,13 @@ Since $2\pi/\ln 2$ is irrational, exact satisfaction of both constraints simulta
 
 #### Q.0.8.3 Vacuum Excitation Structure from Leech Geometry
 
-The Leech lattice structure of the vacuum (Theorem Z.8c and Corollary Z.8d.1, Appendix Z) provides constraints on excitations above the ground state. Theorem Z.8c establishes that QFI isotropy implies rootlessness, and Corollary Z.8d.1 proves that PCE uniquely selects the Leech lattice. The derivation chain proceeds: SPAP → Landauer cost → Golay code → Leech lattice.
+The Leech lattice structure of the vacuum (Theorem Z.8c and Corollary Z.8d.1, Appendix Z) provides constraints on excitations above the ground state. Theorem Z.8c identifies the Leech lattice as the unique rootless even unimodular lattice in 24 dimensions, and Corollary Z.8d.1 links PCE optimization to selection of that confining vacuum. The derivation chain proceeds: SPAP → Landauer cost → Golay code → rootlessness → Leech lattice.
 
 **Proposition Q.0.5 (Shell Structure).** *Excitations above the PCE-Attractor vacuum correspond to Leech lattice vectors $v \in \Lambda_{24}$ with squared norm $|v|^2 \in \{0, 4, 6, 8, 10, 12, \ldots\}$. The minimum non-trivial excitation has $|v|^2_{\min} = 4$.*
 
 *Proof.* 
 
-**Step 1 (Leech lattice from PCE optimization).** PCE optimization produces QFI isotropy on the 24-dimensional interface mode space (Theorem Z.5). By Theorem Z.8c, isotropy on an even unimodular lattice implies rootlessness. Corollary Z.8d.1 establishes that PCE uniquely selects the Leech lattice $\Lambda_{24}$ as the vacuum configuration among the 24 Niemeier lattices. The extended binary Golay code $\mathcal{G}_{24} = [24, 12, 8]$ is selected by PCE optimization (Theorem Z.13) as the unique optimal error-correcting code on $M = 24$ interface modes. The Leech lattice $\Lambda_{24}$ is constructed from $\mathcal{G}_{24}$ via the gluing construction [Conway & Sloane 1999]: the base lattice $L_0 = \sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ is extended by Golay-determined cosets,
+**Step 1 (Leech lattice from rootless uniqueness).** By Theorem Z.8c, the unique rootless even unimodular lattice in 24 dimensions is the Leech lattice $\Lambda_{24}$. Corollary Z.8d.1 establishes that PCE uniquely selects the Leech lattice $\Lambda_{24}$ as the vacuum configuration among the 24 Niemeier lattices. The extended binary Golay code $\mathcal{G}_{24} = [24, 12, 8]$ is selected by PCE optimization (Theorem Z.13) as the unique optimal error-correcting code on $M = 24$ interface modes. The Leech lattice $\Lambda_{24}$ is constructed from $\mathcal{G}_{24}$ via the gluing construction [Conway & Sloane 1999]: the base lattice $L_0 = \sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ is extended by Golay-determined cosets,
 
 $$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (g_c + L_0)$$
 

@@ -32,7 +32,7 @@ $$
 
 supported on vertex sets $X,Y\subset\mathcal V_n$ at graph-distance
 $\displaystyle d_{\mathcal N_n}(X,Y)=\min_{x\in X,y\in Y}d_{\mathcal N_n}(x,y)$,
-there exist constants $C,\mu>0$ and a finite velocity $v_{LR}^{(n)}$ (controlled by the irreducible cost $\varepsilon>0$ and contractivity $f_{RID}<1$) such that
+there exist constants $C,\mu>0$ and a finite velocity $v_{LR}^{(n)}$ (controlled by interaction range and bounded local generator strength) such that
 
 $$
 \bigl\|\,[\alpha_t^{(n)}(A),B]\,\bigr\|

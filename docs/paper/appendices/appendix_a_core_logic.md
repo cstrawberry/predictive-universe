@@ -23,7 +23,7 @@ These foundations are complementary, not redundant. The logical foundation estab
 
 **Definition 23 (MPU):** Fundamental unit operating at complexity $C_{\text{op}} \geq K_0 \equiv B_3$ (Theorem 15, Corollary 3). MPUs possess Hilbert space $\mathcal{H}_0$ with $\dim(\mathcal{H}_0) \geq 8$ (Theorem 23) and operate via dual dynamics: Internal Prediction ($P_{\text{int}}$, Definition 26) and 'Evolve'/ND-RID interaction (Definition 27).
 
-**Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon \geq \ln 2$, Theorem 31) and contractive ($f_{\text{RID}} < 1$, Lemma E.1).
+**Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon \geq \ln 2$, Theorem 31) and contractive: when the ND-RID update contains a nonzero input-independent refresh component, Lemma E.1 gives $f_{\text{RID}}<1$.
 
 ### A.0.2 Foundation I: Logical Necessity from Predictive Structure
 

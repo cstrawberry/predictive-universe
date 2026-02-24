@@ -37,7 +37,15 @@ $$\boxed{D = 4}$$
 
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000050}$$
 
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The second-order correction is derived analytically in Section Z.27 from Bures metric geometry. The third-order factor $(1 - u^{*2}/6)$ arises from the SU(2) geodesic-chord relation in each interface subblock: for an SU(2) rotation by angle $\theta$, the ratio of geodesic distance to chord length is $(\theta/2)/\sin(\theta/2) \approx 1 + \theta^2/24 + O(\theta^4)$, yielding the stated correction factor when $\theta \sim u^*$.
+where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The second-order correction is derived analytically in Section Z.27 from Bures metric geometry. The third-order factor $(1 - u^{*2}/6)$ arises from the SU(2) geodesic-chord relation in each interface subblock: for an SU(2) rotation by angle $\theta$, the chord-to-geodesic ratio is
+$$
+\frac{2\sin(\theta/2)}{\theta}=\frac{\sin(\theta/2)}{\theta/2}=1-\frac{\theta^2}{24}+O(\theta^4).
+$$
+With the identification $u^*=\theta/2$, this gives
+$$
+\frac{\sin u^*}{u^*}=1-\frac{u^{*2}}{6}+O(u^{*4}),
+$$
+which multiplies the second-order curvature term.
 
 **PPI mapping chain for this appendix (α and D).** The results $D=4$ and $\alpha$ follow once the internal interface structure is identified with macroscopic observables via PPI:
 
@@ -45,7 +53,7 @@ where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The second-order correction is derived 
 
 2. **Operational channels $\to$ dimension.** Identification: channel packing in a locally Euclidean $D$-dimensional tangent space has maximal channel number $K(D)$ (kissing number), hence equilibrium requires $M=K(D)$ (Theorem Z.11). Alternatives: dimensions with $K(D)\neq M$ either waste internal modes or lack sufficient channels; both raise the PCE potential. Robustness: $K(3)=12$, $K(4)=24$, $K(5)=40$, so $D=4$ is isolated by a gap $|K(D)-24|\ge 12$ for the nearest alternatives.
 
-3. **Coupling identification.** The coefficient $u^*$ is the capacity-saturating step in the internal Bures metric (Theorem Z.8); the physical electromagnetic coupling is $\alpha_{\mathrm{em}}=u^*/(4\pi\kappa_{\mathrm{eff}})$ after the interface correction (Theorem Z.26).
+3. **Coupling identification.** The coefficient $u^*$ is fixed by capacity saturation of the internal QFI spectrum (Theorem Z.7) with the flat Bures/QFI eigenvalues $\lambda_i=1$ at the attractor (Theorem Z.5); the physical electromagnetic coupling is $\alpha_{\mathrm{em}}=u^*/(4\pi\kappa_{\mathrm{eff}})$ after the interface correction (Theorem Z.26).
 
 4. **Uncertainty accounting.** The quoted uncertainty on $\alpha^{-1}$ is a complete PU-to-physics budget including both series truncation and mapping/systematic terms, constructed explicitly in Section Z.27.9 and consolidated in Appendix V (Table V.0).
 
@@ -208,9 +216,19 @@ where d₀ = 2^{K₀} is the MPU Hilbert space dimension and a = e^ε is the act
 
 **Step 2: Pre-Merge State Space.** The SPAP cycle requires encoding two types of information: the outcome-relevant information (state component φ and stored prediction p, each in an a-dimensional space) and the prediction-relevant information (the correlation enabling reflexive update). By the injectivity condition (O1) from Theorem 15, the cycle map must be injective within each phase. Consider the tensor product structure $\mathcal{H}_{\text{pre}} = \mathcal{H}_\phi \otimes \mathcal{H}_p \otimes \mathcal{H}_c$ where $\mathcal{H}_\phi$ encodes the state (dimension a), $\mathcal{H}_p$ encodes the prediction (dimension a), and $\mathcal{H}_c$ encodes match/mismatch distinguishability (dimension 2). The minimal pre-merge configuration space satisfying injectivity has dimension $\dim(\mathcal{H}_{\text{pre}}) = a \times a \times 2 = 2a^2$.
 
-**Step 3: Post-Merge State Space.** After the irreversible reset, the ancilla is in the fixed state p_ready. The remaining state information comprises the updated state φ_{t+1} (dimension a) and the phase control (dimension a for robust encoding). The post-merge configuration space has dimension a².
+**Step 3: Post-Merge State Space.** After the irreversible reset, the ancilla $p$ is fixed; the remaining logical degrees of freedom are the updated state $\phi_{t+1}$ (dimension $a$) together with the match/mismatch control bit $c_{t+1}$ (dimension $2$). Thus the post-merge state space has dimension:
 
-**Step 4: Consistency with Compression Factor.** The compression factor is (2a²)/(a²) = 2, matching the SPAP merge requirement (Lemma Z.2).
+$$
+d_{\text{post}} = a \times 2 = 2a
+$$
+
+**Step 4: Consistency with Compression Factor.** The irreversible merge compresses a $2a^2$-dimensional space to $2a$, achieving a compression factor:
+
+$$
+\frac{d_{\text{pre}}}{d_{\text{post}}} = \frac{2a^2}{2a} = a
+$$
+
+With $a=2$ (Step 1), this is exactly the SPAP merge: a 2-to-1 irreversible map.
 
 **Step 5: Identification with Hilbert Space Dimension.** The total configuration space must accommodate the full pre-merge structure. By the Minimal Predictive Algebra argument (Section 7.1.3), d₀ ≥ 2a². The Principle of Compression Efficiency (PCE) selects the minimal sufficient dimension; any d₀ > 2a² introduces superfluous complexity without predictive benefit. Therefore d₀ = 2a².
 
@@ -435,7 +453,15 @@ since each interface generator has $F_Q[\rho_0; G_\mu] = 1$ (Theorem Z.5, Step 5
 $$C_{\mathrm{op}}(\rho_0) = M \cdot \ln(1 + \lambda u) = 24 \ln(1 + u)$$
 where u is the coupling strength and λ = 1 is the QFI eigenvalue.
 
-*Proof.* Each of the M = 24 QFI-active modes can carry information at rate ln(1 + λu) per mode. With λ = 1, the total capacity is M ln(1 + u). ∎
+*Proof.* The LAN/QFI capacity surrogate used throughout PU (Appendix W, Eq. (W.0.1)) is
+$$
+g_{\rm true}(u)=\sum_{i=1}^M \ln(1+\lambda_i u).
+$$
+By Theorem Z.5, the QFI spectrum is flat at the attractor: $\lambda_i=1$ for all $i$. Therefore
+$$
+C_{\rm op}(\rho_0)=g_{\rm true}(u)=\sum_{i=1}^M \ln(1+u)=M\ln(1+u)=24\ln(1+u).
+$$
+∎
 
 ### Z.8.2 The Bare Coupling
 
@@ -577,14 +603,26 @@ where T denotes propagation through ND-RID and F is the fidelity measure.
 
 ### Z.9.3 Angular Resolution
 
-**Lemma Z.4 (Angular Localization).** Finite channel capacity imposes a minimum solid-angle support on $S^{D-1}$: there exists $c_D>0$ such that each signal has $\Delta\Omega(\varepsilon) \ge c_D\,\delta(\varepsilon)^{D-1}$, where $\delta(\varepsilon)$ is the corresponding angular radius.
+**Lemma Z.4 (Angular Localization).** For $0<\delta\le \pi/2$, the solid angle of a spherical cap of angular radius $\delta$ on $S^{D-1}$ satisfies
+$$
+\Delta\Omega(\delta)=|S^{D-2}|\int_0^\delta \sin^{D-2}\theta\,d\theta \ge c_D\,\delta^{D-1},
+$$
+with
+$$
+c_D:=\frac{|S^{D-2}|}{D-1}\left(\frac{2}{\pi}\right)^{D-2}.
+$$
+In particular, if $\varepsilon$-distinguishability enforces a cap radius $\delta(\varepsilon)\le \pi/2$, then each distinguishable channel has $\Delta\Omega(\varepsilon)\ge c_D\,\delta(\varepsilon)^{D-1}$.
 
-*Proof.* Consider signals propagating in different spatial directions n̂ ∈ S^{D-1}. The directional information must be encoded in the quantum state transmitted through ND-RID channels. By the channel capacity theorem (Theorem E.2):
-$$C_{\mathrm{channel}} \leq C_{\max}(f_{\mathrm{RID}}) < \ln d_0$$
-
-The channel capacity bound C_max(f_RID) < ln d₀ (Theorem E.2) places a fundamental limit on the number of reliably distinguishable signals that can be transmitted through ND-RID interactions. If signals could be arbitrarily localized, the number of distinguishable signals would scale as the number of independent angular regions on S^{D-1}, which diverges as the angular resolution goes to zero.
-
-Therefore, finite spatial resolution enforced by the capacity constraint imposes a minimum cap with $\Delta\Omega(\varepsilon) \ge c_D\,\delta(\varepsilon)^{D-1}$, where $c_D$ is the small-cap volume constant on $S^{D-1}$. ∎
+*Proof.* The cap formula is
+$$
+\Delta\Omega(\delta)=|S^{D-2}|\int_0^\delta \sin^{D-2}\theta\,d\theta.
+$$
+For $0\le \theta \le \pi/2$, $\sin\theta \ge \frac{2}{\pi}\theta$. Hence, for $0<\delta\le \pi/2$,
+$$
+\Delta\Omega(\delta)\ge |S^{D-2}|\int_0^\delta \left(\frac{2}{\pi}\theta\right)^{D-2}d\theta
+= \frac{|S^{D-2}|}{D-1}\left(\frac{2}{\pi}\right)^{D-2}\delta^{D-1},
+$$
+which yields the stated constant $c_D$. ∎
 
 ### Z.9.4 Spherical Code Reduction and Exact Kissing Correspondence
 
@@ -597,20 +635,25 @@ $$\angle(\hat{n}_\alpha, \hat{n}_\beta) \geq 2\delta(\varepsilon)$$
 
 This maps the problem of counting distinguishable channels to the classical problem of spherical codes: finding the maximum number of points on S^{D-1} with minimum angular separation. ∎
 
-**Theorem Z.7a (Exact Kissing Number Correspondence).** At the PCE-Attractor, the ε-distinguishability threshold ε* determined by PCE optimization implies a minimum angular separation θ_min = π/3 (60°), which yields M_phys = K(D) exactly.
+**Theorem Z.7a (Exact Kissing Number Correspondence).** At the PCE attractor, distinguishable channel supports saturate the non-overlap constraint at tangency. In this tangent regime the minimum center-to-center angular separation is:
+
+$$\theta_{\min}=\frac{\pi}{3},$$
+
+and the maximal number of distinguishable channels equals the kissing number:
+
+$$M_{\mathrm{phys}} = K(D).$$
 
 *Proof.*
 
-**Step 1 (Helstrom Bound).** Consider two quantum states $\rho_1, \rho_2$ encoding signals propagating in directions $\hat{n}_1, \hat{n}_2$ on $S^{D-1}$. The state fidelity is $F(\rho_1, \rho_2) = \text{Tr}\sqrt{\sqrt{\rho_1}\rho_2\sqrt{\rho_1}}$. For coherent-state encodings with angular separation θ, the overlap satisfies $F = \cos^2(\theta/2)$ (Helstrom 1976). The Helstrom minimum error probability for binary discrimination is:
-$$P_e = \frac{1}{2}\left(1 - \sqrt{1 - F^2}\right)$$
-The ε-distinguishability condition $P_e < \varepsilon/2$ requires $F < \sqrt{1 - (1-\varepsilon)^2}$, which for small ε gives $F < \sqrt{2\varepsilon}$. This translates to a minimum angular separation:
-$$\theta_{\min} = 2\arccos\sqrt{F_{\max}} \geq 2\arccos(2\varepsilon)^{1/4}$$
+**Step 1 (Tangent-saturation model).** In the tangent regime, each distinguishable channel occupies a localized neighborhood on $S^{D-1}$ and different channels have non-overlapping supports (Corollary Z.4). Saturation corresponds to the standard kissing configuration: $N$ unit balls tangent to a central unit ball in $\mathbb R^D$.
 
-**Step 2 (PCE Threshold Selection).** PCE optimization (Definition 15) selects the threshold ε* that maximizes channel entropy subject to distinguishability. At equilibrium, this yields equal-size, maximally-packed angular caps.
+**Step 2 (Angular separation at tangency).** Let $x,y$ be centers of two neighbor balls. Both lie on the radius-2 sphere about the central MPU, so $|x|=|y|=2$. If $\theta$ is the angle between $x$ and $y$, then the chord length satisfies
+$$
+|x-y| = 4\sin(\theta/2).
+$$
+Non-overlap requires $|x-y|\ge 2$, hence $\sin(\theta/2)\ge 1/2$ and therefore $\theta\ge \pi/3$. At tangency $|x-y|=2$, so $\theta_{\min}=\pi/3$.
 
-**Step 3 (Tangent Packing).** The entropy-maximizing configuration has all caps tangent (touching but not overlapping). For unit spheres at the tangent limit, the angular separation between centers equals the cap angular diameter, giving θ_min = π/3 for unit-radius spheres touching a central unit sphere.
-
-**Step 4 (Kissing Configuration).** The problem of maximizing the number of equal caps at angular radius π/6 on S^{D-1} is exactly the kissing number problem. At the tangent limit, M_phys = K(D). ∎
+**Step 3 (Kissing number equality).** The largest $N$ for which unit balls can be tangent to a central unit ball in $\mathbb R^D$ is, by definition, the kissing number $K(D)$. Thus the maximal number of distinguishable channels in the tangent regime is $M_{\mathrm{phys}}=K(D)$. ∎
 
 **Remark Z.4: Information-Geometry Bridge.** This theorem establishes the fundamental connection between quantum information geometry (distinguishable generators) and classical discrete geometry (sphere packing). The information-theoretic constraint (ε-distinguishability) translates directly into a geometric constraint (minimum angular separation) with no arbitrary functions intervening.
 
@@ -666,8 +709,14 @@ For fixed N and total solid angle, entropy is maximized when all Ω_i are equal 
 
 The maximum N subject to the non-overlapping constraint occurs when caps are tangent—touching but not overlapping. This defines the kissing configuration.
 
-At thermodynamic equilibrium (Postulate 4), the system naturally evolves toward maximum entropy configurations subject to physical constraints. The PCE potential V(x) drives the system to minimize free energy, which at fixed temperature is equivalent to maximizing entropy. At the tangent limit for unit neighbors on the radius-$2$ shell, the center-to-center angular separation threshold is universal:
-$\theta_K = \frac{\pi}{3} = 60^\circ$, independent of $D$. Specific optimal configurations (e.g., the 12-point code on $S^2$) may exhibit larger minimal separations while still satisfying the non-overlap condition.
+At thermodynamic equilibrium (Postulate 4), the system naturally evolves toward maximum entropy configurations subject to physical constraints. The PCE potential V(x) drives the system to minimize free energy, which at fixed temperature is equivalent to maximizing entropy. At the tangent limit for unit neighbors on the radius-$2$ shell, the center-to-center angular separation threshold is
+$$
+\theta_K=\frac{\pi}{3},
+$$
+independent of $D$ (Theorem Z.7a). In this tangent regime the channel-packing problem is exactly the kissing-number problem: $N$ unit spheres tangent to a central unit sphere in $\mathbb R^D$ correspond to $N$ disjoint channel supports whose boundaries touch. Therefore the maximal feasible $N$ equals the kissing number $K(D)$, and the entropy-maximizing equilibrium saturates this bound:
+$$
+M_{\mathrm{phys}}(\rho_{\mathrm{eq}})=K(D).
+$$
 
 ### Z.10.4 Mode-Channel Mismatch Cost
 
@@ -1151,11 +1200,9 @@ The error correction structure solves the "unreasonable stability" problem:
 **Physical significance:** The "unreasonable stability" of the physical vacuum—its persistence despite quantum uncertainty and thermal noise—is not mysterious but follows from the information-geometric structure. PCE optimization selects the Golay code (Theorem Z.13), which produces the Leech lattice via gluing (Proposition R.4.2a), which has a gap. The vacuum is stable *because* it is error-correction optimal.
 
 **Remark Z.8a: Mass Gap Connection.** The geometric gap (minimum squared norm 4 vs. 2) suggests a qualitative correspondence to mass gaps in emergent field theory. The absence of roots corresponds to the absence of near-degenerate vacuum configurations. This provides a possible information-theoretic perspective on confinement and mass generation, though the quantitative relationship between lattice norm and physical mass scale remains to be established.
-**Theorem Z.8c (QFI Isotropy Implies Rootlessness).** If the QFI metric induced by the PCE-Attractor on a 24-dimensional even unimodular lattice is isotropic ($g = \lambda I_{24}$), then the lattice is rootless.
+**Theorem Z.8c (Unique Rootless Even Unimodular Lattice in Dimension 24).** Among even unimodular lattices $\Lambda\subset\mathbb R^{24}$ (with norm taken in the ambient QFI metric), exactly one is rootless (contains no nonzero vectors with $|v|^2=2$): the Leech lattice $\Lambda_{24}$. Equivalently, an even unimodular lattice in dimension 24 has $|v|_{\min}^2=4$ if and only if it is $\Lambda_{24}$; otherwise $|v|_{\min}^2=2$.
 
-*Proof.* An even unimodular lattice $\Lambda$ in 24 dimensions containing roots $r$ with $|r|^2 = 2$ has its automorphism group constrained by the root system. Specifically, the Weyl group of the root system acts as a proper subgroup of O(24), breaking full rotational symmetry. The QFI metric inherits this symmetry breaking: the metric distinguishes root directions (where minimum distinguishability cost is $\sqrt{2}$) from generic directions (where minimum cost is $\geq 2$).
-
-Isotropy ($g = \lambda I_{24}$) requires the full O(24) symmetry, which is incompatible with any non-trivial root system. Among the 24 Niemeier lattices classified by Niemeier (1973), exactly one has trivial root system (no vectors of norm 2): the Leech lattice $\Lambda_{24}$. Therefore, isotropy uniquely selects the Leech lattice. ∎
+*Proof.* By Niemeier's classification, the even unimodular lattices of rank 24 are exactly the 24 Niemeier lattices. Of these, 23 have nonempty root systems and therefore contain vectors with $|v|^2=2$. Exactly one has empty root system; this unique rootless lattice is the Leech lattice $\Lambda_{24}$. Hence rootlessness uniquely characterizes $\Lambda_{24}$ and implies $|v|_{\min}^2=4$, while all other Niemeier lattices have $|v|_{\min}^2=2$. ∎
 
 **Proposition Z.8d (Confinement from Rootlessness).** If the vacuum configuration lattice is rootless, the framework predicts Wilson loops satisfy an area law:
 
@@ -1183,7 +1230,7 @@ This area law signifies confinement. In contrast, a rooted lattice admits massle
 
 **Corollary Z.8d.1 (Unique Confining Vacuum Selection).** Among the 24 Niemeier lattices, PCE optimization uniquely selects the confining vacuum.
 
-*Proof.* By Theorem Z.5, PCE optimization produces QFI isotropy ($g_{\text{QFI}} = I_{24}$). By Theorem Z.8c, isotropy implies rootlessness. The unique rootless Niemeier lattice is the Leech lattice $\Lambda_{24}$. By Proposition Z.8d, the Leech lattice vacuum is expected to exhibit confinement. ∎
+*Proof.* PCE optimization selects the extended binary Golay code $\mathcal{G}_{24}=[24,12,8]$ on the $M=24$ interface modes (Theorem Z.13). The gluing construction from $\mathcal{G}_{24}$ produces an even unimodular 24-dimensional lattice with $|v|_{\min}^2=4$ (hence rootless) (Appendix R, Proposition R.4.2a and Lemma R.4.5). By Theorem Z.8c, the unique rootless even unimodular lattice in dimension 24 is the Leech lattice $\Lambda_{24}$. By Proposition Z.8d, a rootless vacuum lattice yields an area law, hence the selected vacuum is confining. ∎
 
 ### Z.13.5 The Syndrome-Partition Correspondence
 
@@ -1733,8 +1780,11 @@ with no additional independent factors. This multiplicative structure is uniquel
 **Step 3 (Schur's Lemma Application).** By Schur's lemma, any H-invariant scalar functional L(ρ₀, ΔG) at linear order must factor as:
 $$L(\rho_0, \Delta G) = L_1(\rho_0) \cdot L_2(\Delta G)$$
 
-**Step 4 (Factor L₁).** L₁(ρ₀) is the state-weight (trace) of the tangent block:
-$$L_1 = \frac{\mathrm{Tr}[\rho_0 \Pi_{AB}]}{\mathrm{Tr}[\Pi_{AB}]} = \frac{a}{d_0} = \frac{1}{4}$$
+**Step 4 (State support fraction).** The only $H$-invariant scalar depending on $\rho_0$ that can enter the contraction is the normalized trace weight of $\rho_0$ against the interface information kernel $K$:
+$$
+L_1=\frac{\operatorname{Tr}(\rho_0 K)}{\operatorname{Tr}(K)}=\frac{a}{d_0}.
+$$
+For $(a,d_0)=(2,8)$ this gives $L_1=1/4$ (Theorem Z.18 and Corollary Z.1).
 
 **Step 5 (Factor L₂).** L₂(ΔG) is the QFI/Bures inner product overlap between the discrete sum-direction and a canonically normalized continuous U(1) direction. With the QFI-metric normalization chosen so that the continuous U(1) generator G_cont has F_Q = 1:
 $$L_2 = \langle G_{\mathrm{disc}}, G_{\mathrm{cont}} \rangle_{\mathrm{QFI}} = \frac{1}{\sqrt{K_0}}$$
@@ -2287,7 +2337,9 @@ $$\Delta^{(2)} = 2\pi \cdot \frac{1}{4} \cdot \frac{1}{\sqrt{K_0}} \cdot \frac{2
 
 With $K_0 = 3$ and $u^* = 2^{1/8} - 1 \approx 0.09051$:
 
-$$\Delta^{(2)} = \frac{\pi \times 0.09051}{24\sqrt{3}} = \frac{0.2843}{41.57} = 0.00684$$
+$$
+\Delta^{(2)} = \frac{\pi \times 0.09051}{24\sqrt{3}} \approx 0.00684.
+$$
 
 
 

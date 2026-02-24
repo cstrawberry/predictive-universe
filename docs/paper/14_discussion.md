@@ -786,9 +786,9 @@ The vacuum spectral gap emerges from three independent mechanisms:
 
 $$\varepsilon \geq \ln 2 \implies f_{\text{RID}} < 1 \implies \Delta_{\text{Lind}} > 0 \implies \xi < \infty \implies \Delta_{\text{mass}} > 0$$
 
-**Route 2 (Geometric).** QFI isotropy at the PCE-Attractor (Theorem Z.5) implies rootlessness of the vacuum lattice (Theorem Z.8c), hence $|v|^2_{\min} = 4 > 0$ and vacuum isolation.
+**Route 2 (Geometric).** QFI isotropy at the PCE-Attractor (Theorem Z.5) fixes the ambient QFI inner product on the 24-dimensional mode space. Imposing vacuum isolation (rootlessness), Theorem Z.8c identifies the unique compatible even unimodular lattice as the Leech lattice $\Lambda_{24}$, hence $|v|^2_{\min}=4>0$.
 
-$$g_{\text{QFI}} = I_{24} \implies \Lambda_{24} \text{ (Leech)} \implies |v|^2_{\min} = 4 \implies \Delta > 0$$
+$$g_{\text{QFI}} = I_{24},\;\text{rootless}\xrightarrow{\text{Thm Z.8c}}\Lambda_{24}\implies |v|^2_{\min}=4\implies \Delta>0$$
 
 **Route 3 (Information-theoretic).** The Action-Entropy Identity (Corollary Q.0.1) implies minimum action $\mathcal{S}_{\min} = \hbar \ln 2$, hence minimum excitation energy $E_{\min} > 0$.
 

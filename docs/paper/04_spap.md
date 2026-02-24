@@ -237,20 +237,20 @@ This implies $C(M_n) = \Omega(n)$. QED
 
 For self-referential predictive systems subject to SPAP (operating within a model class $\mathcal{M}$ possessing Property R, Definition 10), let $\alpha_{SPAP} < 1$ be the theoretical maximum achievable average predictive performance (PP) for those aspects limited by SPAP (Theorem 10, Theorem 11). Let $C_{pred}(\alpha)$ denote the minimum necessary Predictive Physical Complexity ($C_P$, Equation 1) required by any physically realizable model $M \in \mathcal{M}$ to consistently achieve an average performance $\alpha$ (where $\alpha = PP$) on these SPAP-limited aspects.
 
-As performance $\alpha$ approaches the fundamental limit $\alpha_{SPAP}$ from below ($\alpha\rightarrow\alpha_{SPAP}^-$), the required complexity diverges. This divergence arises from two primary, independent cost components. The cost for statistical resolution with an accuracy gap $\delta_{\rm SPAP} = \alpha_{SPAP} - \alpha$ over a processing horizon of $\mathcal{T}$ steps scales as:
+As performance $\alpha$ approaches the SPAP limit $\alpha_{SPAP}$ from below ($\delta_{SPAP} \to 0^+$), the required complexity diverges because any physically realizable strategy must verify/calibrate its SPAP-limited success rate to additive accuracy $\delta_{SPAP}$ at high confidence. Over a time horizon $\mathcal{T}$ verification/update steps, maintaining a uniform failure probability budget implies a per-step failure probability of order $1/\mathcal{T}$ (union bound), leading to a sample/processing cost that scales at least as
 $$
-C_{pred}(\alpha) = \Omega\left(\frac{\mathcal{T}}{(\alpha_{SPAP} - \alpha)^2}\right) \quad \text{(13)}
+\mathcal{C}_{stat}(\delta_{SPAP}) = \Omega\left( \frac{\mathcal{T}}{\delta_{SPAP}^2} \right), \tag{13}
 $$
-Additionally, the logical simulation depth required to guarantee accuracy $1-\delta_{\rm SPAP}$ contributes a complexity cost scaling as $\Omega(\log(1/\delta_{\rm SPAP}))$. As derived in Appendix B.3 (Theorem B.2, Equation B.5), the total unified complexity $C_{\text{uni}}$ incorporates both factors multiplicatively, with the logical cost effectively replacing the time horizon $\mathcal{T}$, yielding the more complete lower bound:
-$$
-C_{pred}(\alpha) = \Omega\left(\frac{\log(1/(\alpha_{SPAP} - \alpha))}{(\alpha_{SPAP} - \alpha)^2}\right) \quad \text{(14)}
-$$
-Because the required complexity diverges according to this bound, attaining performance arbitrarily close to the fundamental SPAP limit is physically unattainable, requiring unbounded resources.
+up to the logarithmic dependence on the target failure probability.
 
-*Proof Outline:* The proof establishing Equation (14) is provided in Appendix B.3, utilizing the unified complexity functional ($C_{\text{uni}}$, Definition B.2) and information-theoretic arguments. The bound arises from the following two primary, independent cost components:
-1.  **Statistical Resolution Cost:** The resources needed to distinguish the system's behavior from the SPAP limit with a statistical error margin of $\delta_{\rm SPAP} = \alpha_{SPAP} - \alpha$. Rate-distortion arguments show this cost scales as $\Omega(1/(\alpha_{SPAP}-\alpha)^2)$.
-2.  **Logical Simulation Cost:** The resources needed to execute the self-referential computation (e.g., DSRO simulation) to a logical depth sufficient to guarantee accuracy $1-\delta_{\rm SPAP}$. This depth scales at least logarithmically with the inverse of the error margin, contributing a cost of $\Omega(\log(1/(\alpha_{SPAP}-\alpha)))$.
-The total minimum complexity $C_{\text{pred}}(\alpha)$, identified with $C_{\text{uni}}$, is bounded below by the multiplicative combination of these necessary costs, resulting in Equation (14).
+Imposing the natural self-calibrated confidence requirement that the probability of violating the target accuracy is at most the target accuracy gap itself (i.e. failure probability $\le \delta_{SPAP}$) yields the sharp lower bound proved in Appendix B.3 (Theorem B.2):
+$$
+\mathcal{C}_{pred}(\alpha) = \Omega\left( \frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2} \right). \tag{14}
+$$
+
+*Proof Outline:*
+1. Achieving additive accuracy $\delta_{SPAP}$ with failure probability $\le \beta$ requires $\Omega(\log(1/\beta)/\delta_{SPAP}^2)$ effective verification/calibration operations (Appendix B.3).
+2. Taking $\beta=\delta_{SPAP}$ gives $\Omega(\log(1/\delta_{SPAP})/\delta_{SPAP}^2)$, which implies (14).
 
 
 **Remark 3: Conceptual Synthesis—Prediction Relativity and its Physical Mechanism.**
