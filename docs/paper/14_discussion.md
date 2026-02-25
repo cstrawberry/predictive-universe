@@ -341,6 +341,8 @@ For any macroscopic system ($N \gg 1$), the required trajectory has vanishing pr
 
 **Synthesis.** The three barriers operate independently. The logical barrier (Stage 1) shows CTCs carry inconsistent information. The information-theoretic barrier (Stage 2) shows reliable transmission is impossible. The dynamical barrier (Stage 3) shows the required trajectories have zero probability. Any one barrier suffices; their conjunction makes CTC-mediated backwards causation multiply impossible. QED
 
+**Remark 14.1a (Carrier-Mediated vs State-Mediated Influence).** Theorem 14.1 targets *carrier-mediated* CTCs: physical objects traversing closed worldlines to deliver predictively useful information to the causal past. This is categorically distinct from the *state-mediated* statistical influence of Postulate 3 (Section 10.4), in which no carrier traverses any gap — the influence operates through correlations pre-encoded in a shared entangled state $\omega$ (Equation F.4). The bounded statistical influence of Postulate 3, with CC $< 0.5$ (Theorem 39), respects causality without requiring carrier prohibition: (a) the CC bound prevents deterministic outcome forcing on any single trial; (b) Theorem 41 gives a quantitative lower bound on the number of independent trials required to detect the influence with error probability $\leq \alpha_{\mathrm{err}}$; and (c) Theorem 41 bounds the mutual information per trial by a function that is $O(\mathrm{CC}^2)$ as $\mathrm{CC}\to 0$. The SPAP diagonalization (Stage 1) requires deterministic single-shot accuracy ($P_{\mathrm{err}} = 0$), not a statistical bias ($P_{\mathrm{err}} > 0$). Since $\mathrm{CC} < 0.5$ provably prevents the former while permitting the latter, Theorem 14.1 and Postulate 3 are fully consistent. More generally, no protocol combining state-mediated statistical influence with subluminal return channels can construct a paradox-inducing causal loop: the non-zero error probability at every finite sample size breaks the diagonal construction at Step 3 (the agent receives $\hat{C}_A$ with $P_{\mathrm{err}}(N) > 0$ for all finite $N$, so negating the received estimate does not produce a logical contradiction but merely a noisy feedback loop with strictly positive error).
+
 **Connection to Theorem 42.** This result extends **Theorem 42 (Inability to Construct Causal Loops)**, which establishes that statistical FTL influence cannot construct paradoxes because:
 
 1. The CC bound ($\text{CC} < 0.5$, **Theorem 39**) prevents deterministic forcing
@@ -397,6 +399,8 @@ This prohibition is not contingent but follows analytically from the framework�
 The asymmetry between GR and PU on this question is testable in principle: GR permits CTCs while PU forbids them. The continued absence of any mechanism for backwards causation, despite GR’s mathematical permissiveness, constitutes ongoing confirmatory evidence for the PU framework’s temporal structure.
 
 ## 14.2.4 Classical Singularities as Framework Non-Features
+
+**Criterion (Artifact Identification).** A formal feature $F$ of a mathematical description carries no physical content if specifying or distinguishing $F$ requires violation of any core PU constraint: finite channel capacity ($C_{\max} < \ln d_0$, Theorem E.2), irreversible cost ($\varepsilon \geq \ln 2$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), or operational finite resolution ($\delta > 0$, Appendix Q). The criterion is constructive: by operational accessibility (Definition K.10.1), physical content requires a finite protocol distinguishing "worlds with $F$" from "worlds without $F$" to arbitrary precision. If $F$ requires transmitting unbounded information (violating finite capacity), costless logical irreversibility (violating Theorem 31), complete self-prediction (violating SPAP), or distinctions below $\delta$ (violating operational finite resolution), then no such protocol exists and $F$ carries no physical content. The dissolutions below apply this criterion.
 
 The preceding analysis established that time asymmetry within the PU framework is not an imposed constraint requiring explanation, but a structural feature arising necessarily from the logical ordering of the Fundamental Predictive Loop (Definition 4) and its physical enforcement via the thermodynamic ratchet $\varepsilon \geq \ln 2$ (Theorem 31). Classical singularities—the divergent curvatures and infinite densities predicted by General Relativity's Penrose-Hawking theorems—occupy an analogous status: they are not problems the framework "resolves" but artifacts of continuum physics that lie outside the PU solution space entirely.
 
@@ -541,7 +545,34 @@ Thus any would-be curvature blow-up that remains future-causally connected to ex
 2. **Manifold breakdown:** The classical manifold approximation (Theorem 43) fails before curvature divergence becomes operationally meaningful at MPU resolution. ∎
 
 
-### 14.2.5 The Uncertainty-Irreversibility Identity
+### 14.2.5 The Yang–Mills Mass Gap as a Dissolved Problem
+
+The dissolution pattern of §14.2.4 (singularities) and §K.10.5 (UV divergences) extends to the Yang–Mills existence and mass gap problem. That problem asks: *prove that for any compact simple gauge group $G$, a non-trivial quantum Yang–Mills theory exists on $\mathbb{R}^4$ satisfying the Wightman axioms and has a mass gap $\Delta > 0$.*
+
+The problem has two components: (i) constructive existence of a continuum theory satisfying the Wightman axioms, and (ii) a strictly positive mass gap. Under PU's operational constraints, the physical content of (ii) is already captured within the framework, and (i) is reclassified as pure mathematics carrying no additional physical content.
+
+**The continuum presupposition.** The Wightman axioms require operator-valued tempered distributions $\phi(f)$ defined for all Schwartz test functions $f \in \mathcal{S}(\mathbb{R}^4)$, including those with arbitrarily small support (Axiom W1). This demands the theory assign operational meaning to arbitrarily fine spatial and temporal distinctions. But the ND-RID channel capacity is strictly bounded ($C_{\max} < \ln d_0 = \ln 8$, Theorem E.2), the holographic bound limits information content to boundary area ($S \leq \mathcal{A}/(4G)$, Theorem 49), and the emergent spacetime has a characteristic discretization scale ($\delta/L_P = \sqrt{8\ln 2}$, Appendix Q). Specifying or distinguishing field configurations at sub-$\delta$ resolution would require transmitting information through channels that do not exist in the MPU network. By the same logic that excludes singularities (§14.2.4) and UV divergences (Corollary K.10.5), the sub-$\delta$ structure demanded by W1 is a formal artifact: mathematically legitimate but physically empty.
+
+**Physical mass gap: three independent routes.** The physical content—whether Yang–Mills theory confines and has a mass gap—is resolved within the PU framework by three independent mechanisms, none of which require the continuum limit:
+
+1. **Thermodynamic contractivity.** The irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31) enforces strict contractivity of the ND-RID channel ($f_{\text{RID}} < 1$, Lemma E.1), which bounds the capacity of any interaction channel. For confining gauge theories, this contractivity prevents the deconfinement of color flux at arbitrarily low energies, ensuring $\Delta > 0$. This route depends only on the thermodynamic structure and applies universally across all compact simple $G$.
+
+2. **Leech lattice rootlessness.** The PCE-Attractor selects the Leech lattice $\Lambda_{24}$ as the optimal channel packing (Theorem Z.8c). The Leech lattice is the unique even unimodular lattice in 24 dimensions with no roots (no vectors of norm 2). Rootlessness implies Wilson loops satisfy an area law with string tension $\sigma > 0$ (Proposition Z.8d), establishing confinement and a mass gap for $G = SU(3)$. The Shell-$J^{PC}$ Correspondence (Theorem Z.8h) predicts the glueball mass spectrum from lattice shell structure, agreeing with lattice QCD at the sub-5% level with zero adjustable parameters.
+
+3. **Action-Entropy Identity.** The identity $S_{\text{action}} = d_0 \cdot \varepsilon = 8\ln 2$ (Corollary Q.0.1) sets the characteristic action scale of the MPU network. Combined with the PCE-optimal spacing $\delta$, this establishes a minimum energy scale for gauge-invariant excitations, yielding $\Delta > 0$ independently of the other two routes.
+
+**Dissolution.** The Millennium Prize problem therefore decomposes:
+
+**(A) Physical component (resolved).** The lattice Yang–Mills theory at physical resolution $\delta > 0$ captures the complete operational content. The mass gap $\Delta > 0$ is established via Routes 1–3 above. Confinement, the glueball spectrum, and all operationally accessible observables are derivable without invoking $a \to 0$.
+
+**(B) Mathematical component (physically inert).** Whether the continuum limit $a \to 0$ produces a Wightman theory on $\mathbb{R}^4$ is a question in pure mathematics. Its resolution—positive or negative—has no bearing on any operational observable, because the additional structure demanded by W1 below resolution $\delta$ corresponds to no independent degrees of freedom in the MPU network. The Wilsonian effective action at cutoff $\delta$ parametrizes the complete space of operational predictions; sub-$\delta$ completions merely reparametrize this same space (Appendix K, Theorem K.10.7).
+
+The structural parallel is exact: just as singularities are not avoided but are not features of the theory (§14.2.4), and UV divergences are not regularized but are not features of the theory (Corollary K.10.5), the continuum Yang–Mills existence problem is not solved but is not a problem in physics. What remains is well-posed pure mathematics—interesting, difficult, and physically inert.
+
+**Remark 14.2.5.1 (Scope and Conditionality).** This dissolution is conditional on the PU framework's operational constraints. This analysis does not constitute a solution to the Millennium Prize Problem as posed [Jaffe & Witten 2000]: the Clay problem asks for a rigorous continuum construction, which remains open and is unaffected by this reclassification of its physical status.
+
+
+### 14.2.6 The Uncertainty-Irreversibility Identity
 
 The derivation of the Heisenberg uncertainty relations from SPAP-induced complementarity (Section 8.4) and the derivation of the second law from SPAP-induced entropy production (Theorem 31) are not independent results. They are dual manifestations of a single underlying constraint. This section makes this identity explicit.
 
@@ -679,7 +710,7 @@ The Heisenberg uncertainty principle and the second law of thermodynamics share 
 
 The identity explains why quantum and thermodynamic descriptions of nature are mutually consistent: they are not independent theories requiring reconciliation but dual windows onto a single SPAP-constrained reality.
 
-### 14.2.6 Resolution of the Strong CP Problem
+### 14.2.7 Resolution of the Strong CP Problem
 
 The Strong CP problem—why the QCD vacuum angle $\bar{\theta} < 10^{-10}$ despite no apparent symmetry requiring it—is resolved through two independent mechanisms detailed in **Appendix K.6**.
 
@@ -698,7 +729,7 @@ The framework distinguishes Type I CP violation (Lagrangian parameters, forbidde
 - No QCD axion exists (null results expected in ADMX, ABRACADABRA)
 - Neutron EDM $d_n = 0$ from strong CP; SM CKM contribution $\sim 10^{-31}$ e$\cdot$cm
 
-### 14.2.7 Baryon Asymmetry from Anomaly Inflow
+### 14.2.8 Baryon Asymmetry from Anomaly Inflow
 
 The cosmic baryon asymmetry $\eta_B = n_B/n_\gamma \approx 6 \times 10^{-10}$ is derived in **Appendix Y** without additional assumptions beyond the emergent gauge structure.
 
@@ -765,6 +796,14 @@ The PU framework faces significant limitations:
 *   **Complexity and Computability:** Reliance on uncomputable $C_P$ needs careful justification of $\hat{C}_v$ and alignment (Theorem 2). Avoiding circularity is critical.
 *   **Empirical Validation:** Testing (Section 13), especially CC effects, is extremely challenging (subtlety, precision, systematics, statistics). AI interaction pathway design is a major hurdle.
 *   **Interpretive Aspects:** Concepts like Minimal Awareness (Postulate 1), Perspective Space $\Sigma$, predictive "meaning" require careful philosophical framing.
+
+**Open Conjectures.** Beyond the established results and identified limitations, the framework suggests several open directions with precise mathematical content:
+
+*Complexity-Adaptability Uncertainty Relation.* For any predictive system $S$ operating within the Space of Becoming $(\alpha, \beta)$ with non-trivial self-model complexity $C_{\mathrm{self}}(S) > 0$ and adaptability margin $A(S) = \beta - PP(S)$, the SPAP diagonalization (Theorems 10–11) implies $A(S) > 0$ (the self-referential error prevents exact saturation of $\beta$). The conjectured product bound $C_{\mathrm{self}}(S) \cdot A(S) \geq \ln 2$ — with the Landauer constant $\ln 2$ appearing as the irreducible overhead of the self-referential loop (Theorem 31) — remains open. A proof would require formalizing $C_{\mathrm{self}}$ within the operational complexity framework (Definition 13) and deriving the explicit functional relationship between increments in self-model fidelity and the induced adaptability gap from the SPAP cycle structure.
+
+*Finiteness of the Operationally Admissible Inflationary Model Space.* The finite channel capacity (Theorem E.2) and operational finite resolution (Theorem K.10.4), applied to the $\sim 1.3 \times 10^7$ independently measurable CMB modes (bounded by Silk damping and cosmic variance), imply that the space of inflationary models distinguishable by any finite observational protocol is finite. Models differing only in trans-horizon or pre-inflationary structure are operationally equivalent. The precise cardinality of the operationally admissible equivalence classes remains to be determined.
+
+*Classification of Hidden Variable Theories by Self-Referential Accessibility.* Any hidden variable theory in which the measured system can query the hidden variable $\lambda$ governing its own next outcome and condition its state on the result is subject to the SPAP diagonalization: the diagonal system $S_{\mathrm{diag}}$ sets $\phi_{t+1} := \mathrm{NOT}(\phi_\lambda)$, producing $\phi_\lambda = \mathrm{NOT}(\phi_\lambda)$. Such theories are excluded. Whether the admissible class (hidden variables inaccessible to the system they govern) coincides exactly with the no-signalling class, and whether it is non-empty, remain open.
 
 ## 14.5 Interpretive Implications: The Vacuum as Structured Information
 

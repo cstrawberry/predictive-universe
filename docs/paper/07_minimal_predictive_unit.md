@@ -493,7 +493,7 @@ $$N_{eff} = \sigma_{link} \cdot \mathcal{A}$$
 
 $$\sigma_{link} = \frac{\chi}{\eta \delta^2}$$
 
-*Here $\delta$ is the mean MPU spacing in the emergent geometry, $\eta$ is a geometric packing factor of order unity determined by the network topology, and $\chi \leq 1$ accounts for inter-channel correlations that reduce effective independence. For any viable MPU network configuration, Theorem 43 holds necessarily (Theorem C.6), so this channel counting applies universally to physical configurations.*
+*Here $\delta$ is the mean MPU spacing in the emergent geometry, $\eta$ is a geometric inefficiency factor ($\eta\ge 1$) encoding packing/orientation losses in the geometric channel count, and $\chi \leq 1$ accounts for inter-channel correlations that reduce effective independence. For any viable MPU network configuration, Theorem 43 holds necessarily (Theorem C.6), so this channel counting applies universally to physical configurations.*
 
 The total information capacity across the boundary is:
 
@@ -574,7 +574,7 @@ $$C_{\max}^* = \ln(d_0) - \varepsilon = \ln 8 - \ln 2 = 2\ln 2 \quad \text{(Equa
 
 This capacity ratio $C_{\max}/\varepsilon = 2$ determines the instanton action relation $S_{inst} = 2\kappa$ (Proposition T.60).
 
-With PCE-optimal values $\chi^* \approx 1$ and $\eta^* \approx 1$, the scale ratio is:
+With PCE equilibrium values $\chi^*=1$ and $\eta^*=1$ (Appendix Q), the scale ratio is:
 
 $$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{\max}^*}{\eta^*}} = \sqrt{8\ln 2} \approx 2.355 \quad \text{(Equation Q.18)}$$
 

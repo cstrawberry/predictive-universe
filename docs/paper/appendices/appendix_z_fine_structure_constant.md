@@ -1605,11 +1605,13 @@ Predictive holonomy around closed loops in this 24-neighbor structure induces sp
 
 *Proof.* Standard results: the classification of regular convex 4-polytopes shows that, besides the simplex, hypercube, and cross-polytope families (which exist in all dimensions), the 24-cell is the unique additional regular polytope unique to $D=4$ and is self-dual. Its vertex set realizes $K(4)=24$ and its symmetry group is the Weyl group of $F_4$; the associated regular 24-cell honeycomb provides a tiling of $\mathbb{R}^4$ [Conway & Sloane 1999]. ∎
 
-**Corollary Z.5a (24-Cell Constraints on Network Parameters).** The saturation $K(4) = 24$ realized by the 24-cell (D₄ lattice) constrains the packing and correlation parameters $(\eta, \chi)$ appearing in the channel density $\sigma_{\mathrm{eff}} = \chi/(\eta \delta^2)$ (Theorem E.3):
-$$\eta^*(4) = \frac{\pi^2}{16} \approx 0.617, \quad \chi^*(4) \in [0.7, 0.9]$$
-at lattice scales, with $\eta^* \to 1$ and $\chi^* \to 1$ in the continuum limit.
+**Corollary Z.5a (24-Cell Constraints on Network Parameters).** The saturation $K(4) = 24$ realized by the 24-cell ($D_4$ lattice) constrains the geometric inefficiency factor $\eta$ and the independence factor $\chi$ appearing in the channel density $\sigma_{\mathrm{eff}} = \chi/(\eta \delta^2)$ (Theorem E.3). At lattice scale,
+$$
+\eta_{\mathrm{lattice}}(4) = \frac{16}{\pi^2} \approx 1.621,
+$$
+while at continuum-limit PCE equilibrium $\chi^* = 1$ and $\eta^* = 1$ (Lemmas Q.2.2–Q.2.3).
 
-*Proof.* The D₄ lattice achieves optimal packing density $\eta^*(4) = \pi^2/16$ in four dimensions, representing the fraction of 4-dimensional space occupied by non-overlapping hyperspheres in the optimal packing. The high F₄ symmetry of the 24-cell induces geometric correlations among neighboring MPUs, constraining the correlation factor $\chi \in [0.7, 0.9]$ at lattice scales. As shown in Appendix Q, the coupled minimization of the vacuum potential $V_{\mathrm{vac}}$ yields $\chi^* \to 1$ and $\eta^* \to 1$ in the continuum limit, while the 24-cell provides the microscopic geometric realization. This closes the derivation loop: foundational constants → $M_{\mathrm{int}} = 24$ → $D = 4$ → 24-cell geometry → constraints on $(\eta, \chi)$ → channel density consistent with Theorem E.3. ∎
+*Proof.* The $D_4$ lattice achieves optimal packing density $\pi^2/16$ in four dimensions (Korkine & Zolotareff 1873; Conway & Sloane 1999). In the channel-density parametrization of Appendix E, where $N_{geom_links} \propto 1/\eta$, the geometric inefficiency factor at lattice scale is the reciprocal of the packing density, $\eta_{\mathrm{lattice}}(4) = 16/\pi^2$. The PCE equilibrium minimizes $\eta$ over its feasible interval (Lemma Q.2.3) and maximizes $\chi$ (Lemma Q.2.2), yielding $\eta^* = 1$ and $\chi^* = 1$ at the continuum-limit PCE attractor, while the 24-cell provides the microscopic geometric realization. This closes the derivation loop: foundational constants $\to$ $M_{\mathrm{int}} = 24$ $\to$ $D = 4$ $\to$ 24-cell geometry $\to$ constraints on $(\eta, \chi)$ $\to$ channel density consistent with Theorem E.3. $\square$
 
 ---
 
@@ -2612,19 +2614,19 @@ Thus, within the framework, $\varphi$ plays the role of a *natural crossover sca
 
 ### Z.32.3 Empirical Observation: $D_4$ Packing Density
 
-**Measured fact.** The $D_4$ lattice realizes the densest known lattice packing in four dimensions, with packing density
+**Measured fact.** The $D_4$ lattice realizes the densest known lattice packing in four dimensions, with packing density $\pi^2/16 \approx 0.616850275$, proven optimal among lattices in $\mathbb{R}^4$ (Korkine & Zolotareff 1873; see Conway & Sloane 1999 for a modern treatment). In the channel-density parametrization of Appendix E (where $N_{geom_links} \propto 1/\eta$), the corresponding geometric inefficiency factor is
 $$
-\eta^*(4) = \frac{\pi^2}{16} \approx 0.616850275,
+\eta_{\mathrm{lattice}}(4) = \frac{16}{\pi^2} \approx 1.621138938,
 $$
-and this value is proven to be optimal among lattices in $\mathbb{R}^4$ (Korkine & Zolotareff 1873; see Conway & Sloane 1999 for a modern treatment).
+so that the geometric channel density at lattice scale is $\sigma_{geom_link} = 1/(\eta_{\mathrm{lattice}}(4)\,\delta^2) = (\pi^2/16)/\delta^2$.
 
-**Golden-ratio comparison.** The inverse golden ratio is
+**Golden-ratio comparison.** The $D_4$ packing density $\pi^2/16 \approx 0.616850275$ is remarkably close to the inverse golden ratio
 $$
 \frac{1}{\varphi} = \varphi - 1 \approx 0.618033989.
 $$
 The relative difference is
 $$
-\left|\frac{\eta^*(4) - 1/\varphi}{1/\varphi}\right| \approx 0.19%.
+\frac{\left|\pi^2/16 - 1/\varphi\right|}{1/\varphi} \approx 0.19\%.
 $$
 
 This numerical proximity is not used as a proof of anything, but it is **suggestive**: if MCC channel crystallization in $D=4$ sits near the OSC–DLP crossover regime controlled by $\varphi$, then it is natural for the optimal local packing density to lie close to $1/\varphi$. The Hopkins–Stillinger–Torquato theorem provides a concrete mathematical mechanism by which the golden ratio can enter such local packing/coordination questions (Hopkins et al. 2010). 
@@ -2635,18 +2637,18 @@ This numerical proximity is not used as a proof of anything, but it is **suggest
 
 Within the framework, there is a tension between:
 
-* **Lattice-scale packing:** local coordination constrained by discrete structures such as the $D_4$ lattice with density $\eta_{\mathrm{lattice}}^* = \pi^2/16$. 
-* **Continuum-limit packing:** large-scale effective geometry, where coarse-graining and channel renormalization tend toward an effectively “filled” continuum.
+* **Lattice-scale geometry:** local coordination constrained by discrete structures such as the $D_4$ lattice, whose packing density $\pi^2/16$ yields a geometric inefficiency factor $\eta_{\mathrm{lattice}} = 16/\pi^2 \approx 1.621$.
+* **Continuum-limit geometry:** large-scale effective geometry, where coarse-graining and channel renormalization drive $\eta$ toward its PCE equilibrium lower bound.
 
-Within the MCC framework, this tension is modeled via a scale-dependent effective packing fraction $\eta(r)$:
+Within the MCC framework, this tension is modeled via a scale-dependent geometric inefficiency factor $\eta(r)$:
 $$
 \eta(r) =
 \begin{cases}
-\eta_{\mathrm{lattice}}^* = \dfrac{\pi^2}{16}, & r \sim \delta \quad \text{(lattice scale)},\\[6pt]
-\eta_{\mathrm{eff}}^* \to 1, & r \gg K(D) \cdot \delta \quad \text{(continuum limit)}.
+\eta_{\mathrm{lattice}} = \dfrac{16}{\pi^2}, & r \sim \delta \quad \text{(lattice scale)},\\[6pt]
+\eta_{\mathrm{eff}} \to 1, & r \gg K(D) \cdot \delta \quad \text{(continuum limit)}.
 \end{cases}
 $$
-Here $\delta$ is the microscopic lattice spacing and $K(D)$ is the kissing number (with $K(4)=24$ in four dimensions; Musin 2008). The continuum-limit behavior $\eta_{\mathrm{eff}} \to 1$ is a model-specific postulate reflecting the MCC channel renormalization dynamics, not a general theorem of sphere packing.
+Here $\delta$ is the microscopic lattice spacing and $K(D)$ is the kissing number (with $K(4)=24$ in four dimensions; Musin 2008). The continuum-limit behavior $\eta_{\mathrm{eff}} \to 1$ is driven by the PCE minimization of geometric inefficiency (Lemma Q.2.3), reflecting MCC channel renormalization dynamics.
 
 The crossover occurs around a characteristic length scale
 $$

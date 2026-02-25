@@ -1310,7 +1310,7 @@ $$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}(f_{RID})} \quad \text{(Equat
 
 *The quantities on the right-hand side have clear physical interpretations:*
 - *$\delta$: the MPU spacing, determined by PCE optimization to be $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \, L_P$*
-- *$\eta$, $\chi$: geometric factors determined by the network topology, with PCE-optimal values $\eta^* \approx 1$, $\chi^* \approx 1$*
+- *PCE equilibrium values $\eta^*=1$ and $\chi^*=1$ (Lemmas Q.2.2–Q.2.3) enforce maximal effective boundary-channel density*
 - *$C_{\max}$: channel capacity, with PCE-optimal value $C_{\max}^* = 2\ln 2$ (Equation E.15)*
 - *$c$, $\hbar$: conversion factors between domains*
 
@@ -3051,7 +3051,11 @@ $$\nabla V|_{\rho_0} = 0$$
 
 None of these quantities depend on an external length scale.
 
-**Step 3 (Virial identity).** The PCE-Attractor satisfies the virial identity (Theorem U.8a): the effective action is stationary under dilations $\phi^*_\rho(x) = \phi^*(\rho x)$ at $\rho = 1$. This scale invariance is structurally protected by the Derrick constraint at the stationary bounce, the zero-slack condition fixing amplitude through capacity saturation, and the Predictive Ward Identity together with capacity/QFI rigidity uniquely fixing $\kappa^*_{\mathrm{bulk}}=1$ (Theorem Z.14). $\square$
+**Step 3 (Scale invariance).** The PCE-Attractor admits dilatation symmetry, and the associated dilation family $\phi^*_\rho(x)=\phi^*(\rho x)$ leaves the continuum action invariant (Theorem U.8a). In particular,
+$$
+\frac{d}{d\rho}S_{\rm cont}[\phi^*_\rho]\bigg|_{\rho=1}=0.
+$$
+$\square$
 
 ---
 

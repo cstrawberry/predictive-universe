@@ -88,7 +88,7 @@ $$
 2.  **Complementarity Implies Non-Commutation:** In the Hilbert space formalism (Proposition 4), observables correspond to Hermitian operators $\hat{A}, \hat{B}$. If $A$ and $B$ are complementary—meaning no state allows simultaneous perfect prediction of both—then $[\hat{A}, \hat{B}] \neq 0$. This follows because commuting Hermitian operators share a simultaneous eigenbasis (spectral theorem), and any such eigenstate would permit $\Delta A = \Delta B = 0$, contradicting complementarity.
 3.  **Non-Commutation Implies Uncertainty:** For non-commuting operators, the Robertson inequality $\Delta A \cdot \Delta B \geq \frac{1}{2}|\langle[\hat{A},\hat{B}]\rangle|$ follows from the Cauchy-Schwarz inequality applied to the Hilbert space inner product [Robertson 1929].
 
-The deeper unification of uncertainty with irreversibility—showing both arise from SPAP via channel contractivity—is developed in Section 14.2.5.
+The deeper unification of uncertainty with irreversibility—showing both arise from SPAP via channel contractivity—is developed in Section 14.2.6.
 
 For emergent degrees of freedom corresponding to conjugate variables like position $\hat{x}$ and momentum $\hat{p}$, the structure of the underlying dynamics and symmetries leads via representation theory (e.g., Stone–von Neumann theorem) to the canonical commutation relation (CCR):
 $$

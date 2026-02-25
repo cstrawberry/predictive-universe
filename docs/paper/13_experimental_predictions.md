@@ -495,6 +495,14 @@ This constitutes an independent validation pathway for the PU framework, complem
 
 The framework generates predictions with zero continuously adjustable parameters that can be tested against observation. This section catalogs the primary falsifiable predictions derived in the technical appendices, specifies the conditions under which each would be refuted, and summarizes current experimental status.
 
+The predictions fall into three epistemic categories that must be distinguished to prevent conflation of claims of different logical type:
+
+*Quantitative predictions* are numerical values derived with zero continuously adjustable parameters and compared directly to measured quantities. These include $\alpha^{-1} = 137.036092 \pm 0.000050$ (Theorem Z.26), $D = 4$ (Theorem Z.11), $N_{\mathrm{gen}} = 3$ (Proposition R.3.5), $\Lambda L_P^2 = (2.88 \pm 0.03) \times 10^{-122}$ (Appendix U), and the glueball mass ratios (Theorem Z.8h). Falsification is straightforward: measured values falling outside stated uncertainty bounds refute the prediction.
+
+*Structural predictions* assert that specific mathematical structures emerge necessarily from the framework's axioms. These include Lorentz invariance (Theorem 46), the gauge group $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ (Theorem G.8.4b, conditional on Proposition G.M1), the Born rule (Proposition 7), and chronology protection (Theorem 14.1). Falsification requires discovering that the predicted structure is violated in nature — for example, observation of fundamental Lorentz violation or a functioning closed timelike curve.
+
+*Diagnostic reclassifications* identify formal features of existing theories as artifacts of unconstrained mathematical extrapolation rather than physical phenomena requiring resolution. These include the dissolution of curvature singularities (Section 14.2.4, Appendix K.5), the arrow-of-time "problem" (Appendix O), and UV divergences (Theorem K.10.4). These are not predictions of new observations but principled reinterpretations of existing physics; they are falsified if a phenomenon is discovered that demonstrably requires attribution of physical content to a structure the framework classifies as an artifact.
+
 ### 13.10.1 Spacetime Dimension
 
 **Prediction:** Emergent spacetime has exactly $D = 4$ macroscopic dimensions.

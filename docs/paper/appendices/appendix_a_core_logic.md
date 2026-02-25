@@ -329,6 +329,20 @@ With Property R established through both logical necessity and physical realizat
 
 Having established that the MPU network dynamically converges to a configuration possessing Effective Operational Property R, we are now justified in applying the formal machinery of self-reference to physical predictive systems. The following sections (A.1 and A.2) formally derive the Self-Referential Paradox of Accurate Prediction (SPAP) and Reflexive Undecidability (RUD), which constitute the fundamental logical limits acting upon this physically instantiated computational substrate.
 
+### A.0.8 Conceptual Non-Redundancy of the Core Constraints
+
+The framework's four core constraints — finite channel capacity (Theorem E.2), irreversible thermodynamic cost ($\varepsilon \geq \ln 2$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), and operational accessibility (Definition K.10.1) — address distinct obstructions to physical prediction. None is derivable from the others without additional physical assumptions. To establish this, we exhibit for each constraint a conceptual scenario satisfying the remaining three while violating the targeted one:
+
+(i) *Finite capacity violated, others satisfied.* Consider a hypothetical physics in which channels have unbounded capacity per use, but every many-to-one map still incurs $\Delta S \geq k_B \ln 2$ (irreversible cost holds), self-referential prediction remains limited by diagonalization (SPAP holds), and physical content still requires operational distinguishability (accessibility holds). Such a scenario permits infinite information density while preserving irreversibility, self-referential limitation, and operationality. Finite capacity is not entailed by the other three.
+
+(ii) *Irreversible cost violated, others satisfied.* Consider a hypothetical physics with finite channel capacity, self-referential limitation, and operational accessibility, but in which logically irreversible operations can be performed at zero thermodynamic cost — the scenario in which Landauer's principle fails. Irreversible cost is not entailed by the other three.
+
+(iii) *Self-referential limitation violated, others satisfied.* Consider a hypothetical physics with finite capacity, irreversible cost, and operational accessibility, but in which a finite system can compute a complete, robust prediction of its own future state under self-reference — i.e., the SPAP diagonalization is evaded. This would require the diagonal system $S_{\mathrm{diag}}$ to be excluded from the model class $\mathcal{M}$ despite satisfying Property R. Self-referential limitation is not entailed by finite capacity, irreversible cost, and operational accessibility.
+
+(iv) *Operational accessibility violated, others satisfied.* Consider a hypothetical physics with finite capacity, irreversible cost, and self-referential limitation, but in which structures are granted physical content even when no finite protocol can distinguish their presence from their absence — a physics in which formally defined but operationally inaccessible entities (such as exact curvature values at putative singularities) are treated as physically real. Operational accessibility is not entailed by the other three.
+
+These four scenarios demonstrate that the core constraints are conceptually independent: each addresses a distinct aspect of the relationship between mathematical formalism and physical prediction that is not captured by the others.
+
 ## A.1 Self-Referential Paradox of Accurate Prediction (SPAP)
 
 ### A.1.1 Formal Setup

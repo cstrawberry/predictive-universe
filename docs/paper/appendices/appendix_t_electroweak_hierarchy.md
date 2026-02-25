@@ -3188,7 +3188,7 @@ $$\mathcal{M}_\Lambda = \text{Gr}(k, M) = \text{Gr}(12, 24)$$
 
 $$\kappa = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5$$
 
-*where the base complexity $k^2 = 144$ arises from the Grassmannian dimension (Theorem U.3), and the deficit $(D+1)/2 = 5/2$ arises from collective zero modes preserved by the spherical 5-design property of the 24-cell (Theorem U.13). The scale invariance required for the dilatation zero mode is derived from PCE-Attractor properties in Theorem U.8a, protected by the virial identity, zero-slack capacity saturation, and the Predictive Ward Identity.*
+*where the base complexity $k^2 = 144$ arises from the Grassmannian dimension (Theorem U.3), and the deficit $(D+1)/2 = 5/2$ arises from the four translation zero modes (Theorem U.8) together with the dilatation zero mode (Theorem U.9). The scale invariance underlying the dilatation mode is established at the PCE-Attractor in Theorem U.8a.*
 
 **Result.**
 

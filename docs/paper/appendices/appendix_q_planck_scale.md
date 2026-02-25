@@ -728,6 +728,16 @@ $$2^{iN_1} + 2^{iN_2} \text{ is maximized} \iff (N_1 - N_2)\ln 2 = 2\pi k, \quad
 
 **Remark Q.0.8b: Sub-Planck Action.** The minimum action $\mathcal{S}_{\min} = \hbar \ln 2 < \hbar$ is sub-Planckian. This does not violate uncertainty relations because the bound applies to complete irreversible cycles, not to arbitrary measurements. The time-energy uncertainty $\Delta E \cdot \Delta t \gtrsim \hbar/2$ constrains measurement precision, while $\mathcal{S}_{\min}$ constrains the action of completed logical operations.
 
+**Theorem Q.0.8c (Minimum Observable Mass).** For any finite-resource observational protocol $\mathcal{P}$ of total duration $T_{\mathcal{P}} < \infty$, the minimum mass distinguishable from zero by $\mathcal{P}$ satisfies
+
+$$
+m_{\min}(\mathcal{P}) \ge \frac{\pi\hbar}{2c^2 T_{\mathcal{P}}} > 0.
+$$
+
+*Proof.* To operationally distinguish a massive system ($m > 0$) from a massless one, the protocol must detect a dynamical difference attributable to the rest energy $E_0 = mc^2$ (Theorem 46). By the Margolus-Levitin quantum speed limit (derivable within PU from the bounded spectral structure of the MPU Hamiltonian, Theorem 29), a quantum system with energy $E$ requires time $t \geq \pi\hbar/(2E)$ to evolve to an orthogonal (operationally distinguishable) state. For the protocol to distinguish "mass $m$ present" from "mass $m$ absent" within duration $T_{\mathcal{P}}$, the rest energy must satisfy $mc^2 \geq \pi\hbar/(2T_{\mathcal{P}})$, yielding the bound. The strict positivity $m_{\min} > 0$ follows from $T_{\mathcal{P}} < \infty$. ∎
+
+**Remark Q.0.8d (PCE-Attractor Mass Scale).** At the canonical PCE-Attractor protocol duration $T_{\mathcal{P}}^* = \delta/c = \sqrt{8\ln 2} \cdot L_P/c = \sqrt{8\ln 2} \cdot t_P$ (Eq. Q.18), Theorem Q.0.8c yields the lower bound $m_{\min}^* \ge \pi m_P/(2\sqrt{8\ln 2}) \approx 0.667 \, m_P$, providing a framework-internal minimum mass scale that depends only on the derived constants $\varepsilon = \ln 2$ and $\delta = \sqrt{8\ln 2} \cdot L_P$, with no adjustable parameters. The conjecture that this value constitutes a universal mass gap for the framework requires the additional assumption that the PCE-Attractor canonical protocol is the physically realized protocol (Appendix Z).
+
 ---
 
 #### Q.0.8.6 Relation to Standard Quantization
@@ -1173,7 +1183,7 @@ The Rindler-Landauer result $\tau_U = 2\pi c/a$ is not an isolated calculation b
 
 ## Q.1 Foundational Relation and the Optimization Goal
 
-This appendix develops a *self-consistency analysis* determining the quantitative relationship between the emergent Planck length $L_P$ and the intrinsic microscopic spacing $\delta$ of the MPU network through a physically motivated PCE potential model. The derivation proceeds by constructing a global PCE Potential for the MPU network vacuum and finding the unique, stable equilibrium state that minimizes it. This equilibrium is then shown to be self-consistent with the framework's foundational geometric and information-theoretic identities. This derivation is a key component of the framework's ability to predict fundamental constants from first principles.
+This appendix determines the relationship between the emergent Planck length $L_P$ and the microscopic MPU spatial spacing $\delta$ by enforcing consistency between the ND-RID thermodynamic derivation of $G$ (Appendix E) and the PCE equilibrium values of the boundary-channel parameters. The key identity is Equation (Q.3),
 
 The derivation begins with the relationship between the emergent gravitational constant $G$ and the microscopic network parameters, established in **Appendix E**, Equation (E.9):
 $$
@@ -1190,7 +1200,7 @@ $$
 \frac{\delta^2}{L_P^2} = \frac{4 \chi C_{\max}}{\eta}
 \tag{Q.3}
 $$
-The central task is to determine the PCE-optimal equilibrium values ($\delta^*$, $\chi^*$, $\eta^*$, $C_{\max}^*$) for the microscopic parameters by minimizing a global potential, and then to show that these values, when inserted into Equation (Q.3), yield a specific closed-form prediction for the scale ratio in terms of the PCE-optimal dimensionless factors appearing in Equation (Q.3).
+so the task reduces to fixing $C_{\max}^*$, $\chi^*$, and $\eta^*$ at PCE equilibrium and substituting them into (Q.3).
 
 ## Q.2 Rigorous Determination of PCE-Optimal Parameters
 
@@ -1208,39 +1218,43 @@ $$\boxed{C_{\max}^* = \ln 8 - \ln 2 = 2\ln 2 = 2\varepsilon} \tag{Q.10}$$
 
 
 ### Q.2.2 Correlation Factor: $\chi^* = 1$
+
+**Lemma Q.2.2 (Channel Independence).** At PCE equilibrium, the independence factor saturates its upper bound:
 $$
-\boxed{\chi^* = 1} \tag{Q.11}
+\boxed{\chi^* = 1.}
+\tag{Q.11}
 $$
 
-**Lemma (Channel Independence).** At PCE equilibrium, χ* = 1.
-
-*Proof.* PCE maximizes information throughput. Effective channel density $\sigma_{\text{eff}} = \chi/(\eta\delta^2)$ is maximized when $\chi = 1$ (fully independent channels). Correlations ($\chi < 1$) reduce effective channel count without increasing per-channel capacity (bounded by Theorem E.2). Therefore $\chi^* = 1$. ∎
+*Proof.* By definition (Appendix E, Theorem E.3), the effective independent boundary-link count satisfies
+$$
+N_{eff_links}=\chi \, N_{geom_links}, \qquad 0<\chi\le 1.
+$$
+For fixed geometry $(\delta,\eta)$ and fixed per-link capacity bound $C_{\max}$, the ND-RID boundary throughput bound in one cycle is proportional to $N_{eff_links}$ and hence is strictly increasing in $\chi$. Therefore any throughput-saturated PCE equilibrium must attain the maximal feasible value of $\chi$. Since $0<\chi\le 1$, the maximizer is $\chi^*=1$. $\square$
 
 ### Q.2.3 Packing Factor: $\eta^* = 1$
+
+**Lemma Q.2.3 (Isotropic Packing).** At PCE equilibrium, the geometric inefficiency factor saturates its lower bound:
 $$
-\boxed{\eta^* = 1} \tag{Q.12}
+\boxed{\eta^* = 1.}
+\tag{Q.12}
 $$
 
-**Lemma (Isotropic Packing).** At PCE equilibrium, η* = 1.
-
-*Proof.* By Theorem Z.5 (Step 6), the QFI metric at the PCE-Attractor is isotropic (via Schur's lemma). Consistency between QFI isotropy and spatial structure requires isotropic packing. By Theorem 43, PCE achieves geometric regularity. For an isotropic regular packing, the orientation factor $\eta = 1$ by symmetry. ∎
+*Proof.* By definition (Appendix E, Theorem E.3), $\sigma_{geom_link}=1/(\eta\delta^2)$ with $\eta\ge 1$, so at fixed $\delta$ the geometric link density is strictly decreasing in $\eta$ and the achievable ND-RID throughput bound in one cycle is strictly decreasing in $\eta$. Therefore any throughput-saturated PCE equilibrium must attain the minimal feasible value of $\eta$. Since $\eta\ge 1$, the minimizer is $\eta^*=1$. $\square$
 
 ### Q.2.4 Final Result
 
-Substituting into Equation (Q.3):
-
-$$\frac{\delta^2}{L_P^2} = \frac{4 \cdot 1 \cdot 2\ln 2}{1} = 8\ln 2$$
-
-$$\boxed{\frac{\delta}{L_P} = \sqrt{8\ln 2} \approx 2.355}$$
-
-This result depends only on rigorously established theorems (E.9, E.14, Z.5, 23, 31, 43), with no phenomenological ansätze.
+Substituting the equilibrium values $C_{\max}^*=2\ln2$, $\chi^*=1$, and $\eta^*=1$ into Equation (Q.3) yields the closed-form ratio reported in Equation (Q.18):
+$$
+\frac{\delta^2}{L_P^2}=8\ln 2,\qquad \frac{\delta}{L_P}=\sqrt{8\ln 2}\approx 2.355.
+$$
 
 ## Q.5 Final Result and Interpretation
 
 The global, coupled PCE optimization of the MPU network vacuum yields a unique, stable equilibrium characterized by:
-*   $C_{\max}^* = 2\ln 2$ (information budget is saturated)
-*   $\chi^* = 1$ (channels are driven to maximal independence)
-*   $\eta^* \approx 1$ (geometry is driven to maximal regularity)
+* $C_{\max}^* = 2\ln 2$
+* $\chi^* = 1$
+* $\eta^* = 1$
+* $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$
 
 Substituting the PCE-optimal values into the foundational relation (Q.3) yields:
 
@@ -1250,15 +1264,16 @@ With $\chi^* = 1$ and $\eta^* = 1$ (Sections Q.2.2–Q.2.3) and $C_{\max}^*$ fro
 
 $$\boxed{\frac{\delta^2}{L_P^2} = 8\ln 2, \qquad \frac{\delta}{L_P} = \sqrt{8\ln 2} \approx 2.355} \tag{Q.18}$$
 
-This result demonstrates that the fundamental MPU spacing $\delta$ is robustly of the same order of magnitude as the emergent Planck length $L_P$. The value of this ratio emerges from the PCE potential model using the framework's fundamental constants:
-$$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{\max}^*}{\eta^*}} = \sqrt{\frac{4 \cdot 1 \cdot 2\ln 2}{\eta^*}} = \sqrt{\frac{8\ln 2}{\eta^*}}$$
-where $\chi^* = 1$ (Equation Q.11), $C_{\max}^* = 2\ln 2$ (Equation Q.10), and $\eta^* = 1$ (Equation Q.12).
-The values $\chi^* = 1$ and $C_{\max}^* = 2\ln 2$ follow from the KKT conditions on the PCE potential; $\eta^* \approx 1$ follows from PCE optimization favoring geometric regularity (Theorem 43). The ability to derive a plausible, $O(1)$ constant linking these scales from a self-consistent global optimization provides evidence for the internal coherence of the Predictive Universe framework.
+This result demonstrates that the fundamental MPU spatial scale $\delta$ is not a free parameter: it is fixed in Planck units by a universal dimensionless constant arising from capacity saturation and geometric regularity. The value $C_{\max}^*=2\ln2$ follows from the ND-RID saturator (Theorem E.6), and the geometric/channel factors $\chi^*=1$ and $\eta^*=1$ follow from Lemmas Q.2.2 and Q.2.3. The resulting ratio $\delta/L_P$ is therefore uniquely fixed by (Q.3) with no additional degrees of freedom.
+
+The value of this ratio emerges from the PCE equilibrium values using the framework's fundamental constants:
+$$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{\max}^*}{\eta^*}} = \sqrt{\frac{4 \cdot 1 \cdot 2\ln 2}{1}} = \sqrt{8\ln 2}$$
+where $C_{\max}^* = 2\ln 2$ (Equation Q.10), $\chi^* = 1$ (Lemma Q.2.2), and $\eta^* = 1$ (Lemma Q.2.3). The ability to derive an $O(1)$ constant linking these scales from a self-consistent global optimization, with no adjustable parameters, provides evidence for the internal coherence of the Predictive Universe framework.
 
 
 ## Q.6 Lorentz-Invariant Discretization and the Temporal Scale
 
-The spatial discretization scale $\delta/L_P = \sqrt{8\ln 2/\eta^*}$ (Equation Q.18) was derived from PCE optimization. This section establishes the corresponding temporal discretization scale through consistency with emergent Lorentzian structure.
+The spatial discretization scale $\delta/L_P = \sqrt{8\ln 2}$ (Equation Q.18) was derived from PCE optimization. This section establishes the corresponding temporal discretization scale through consistency with emergent Lorentzian structure.
 
 ### Q.6.1 The Discretization Consistency Requirement (Conditional on Theorems 43, 46)
 
@@ -1300,34 +1315,28 @@ $$\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}$$
 
 ### Q.6.2 The Temporal Discretization Scale
 
-**Theorem Q.6.1 (Minimum Temporal Interval).** The minimum resolvable temporal interval in the MPU network is:
+**Theorem Q.6.1 (Minimum Temporal Interval).** The minimum temporal interval $\tau_{\min}$ implied by Lorentz-invariant discretization is:
+$$
+\boxed{
+\tau_{\min} = \sqrt{8\ln 2}\,t_P \approx 2.355\,t_P.
+}
+$$
 
-$$\boxed{\tau_{min} = \sqrt{8\ln 2}\; t_P \approx 2.355\, t_P}$$
-
-where $\eta^* \approx 1$ at PCE equilibrium.
-
-*Proof.* Apply Proposition Q.6.1 to the spatial result (Equation Q.18):
-
-$$\tau_{min} = t_P \cdot \frac{\delta}{L_P} = t_P \cdot \sqrt{\frac{8\ln 2}{\eta^*}}$$
-
-Using $\eta^* = 1$ (Equation Q.12), one obtains $\tau_{min} = \sqrt{8\ln 2}\,t_P \approx 2.355\,t_P$. ∎
+*Proof.* Lorentz invariance requires:
+$$
+\frac{\tau_{\min}}{t_P} = \frac{\delta}{L_P}.
+$$
+Using (Q.18), $\delta/L_P=\sqrt{8\ln 2}$, gives $\tau_{\min}=t_P\sqrt{8\ln 2}$. $\square$
 
 
-**Corollary Q.6.1 (Unified Discretization Formula).** Both spatial and temporal discretization scales are determined by a single expression involving the framework's fundamental constants:
+**Corollary Q.6.1 (Unified Discretization Formula).** The full PU discretization relation is:
+$$
+\boxed{
+\frac{\delta}{L_P} = \frac{\tau_{\min}}{t_P} = \sqrt{8\ln 2} \approx 2.355.
+}
+$$
 
-$$\boxed{\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P} = \sqrt{\frac{4\chi^* C_{\max}^*}{\eta^*}} = \sqrt{\frac{8\ln 2}{\eta^*}} \approx 2.355 \quad (\eta^* \approx 1)}$$
-
-where $\varepsilon = \ln 2$ is the irreducible SPAP entropy cost (Theorem 31) and $d_0 = 8$ is the MPU Hilbert space dimension (Theorem 23).
-
-*Proof.* From Equation Q.18 with $\eta^* \approx 1$ and the PCE-optimal channel capacity $C_{\max}^* = 2\ln 2$ (Equation Q.10):
-
-$$\frac{\delta^2}{L_P^2} = \frac{4\chi^* C_{\max}^*}{\eta^*} = \frac{4 \cdot 1 \cdot 2\ln 2}{\eta^*} = \frac{8\ln 2}{\eta^*}$$
-
-In the regularity-dominated regime ($\eta^* \approx 1$), this can be expressed as the product of the two fundamental MPU parameters:
-
-$$\frac{\delta^2}{L_P^2} \approx d_0 \cdot \varepsilon = 8 \cdot \ln 2$$
-
-Taking the square root and applying Proposition Q.6.1 yields both ratios approximately equal to $\sqrt{d_0 \cdot \varepsilon}$. ∎
+*Proof.* Combine (Q.18) with the Lorentz-invariance condition $\tau_{\min}/t_P=\delta/L_P$. $\square$
 
 ### Q.6.3 Information-Theoretic Interpretation
 
@@ -1337,11 +1346,11 @@ Taking the square root and applying Proposition Q.6.1 yields both ratios approxi
 
 - **Factor $\varepsilon = \ln 2$:** The irreducible thermodynamic cost of self-referential prediction (Theorem 31), arising from the 2-to-1 state merge required by the SPAP cycle (Lemma J.1).
 
-The discretization scale $\sqrt{d_0 \cdot \varepsilon/\eta^*} \approx 2.355$ (for $\eta^* \approx 1$) thus represents the geometric mean of the logical capacity ($d_0$) and thermodynamic cost ($\varepsilon$) of self-reference, modulated by the geometric packing factor.
+The discretization scale $\sqrt{d_0 \cdot \varepsilon} = \sqrt{8\ln 2} \approx 2.355$ thus represents the geometric mean of the logical capacity ($d_0$) and thermodynamic cost ($\varepsilon$) of self-reference.
 
 **Remark Q.6.2: Complete Derivation Chain.** The full derivation from logical axioms to spacetime discretization proceeds through two parallel pathways originating from $K_0$:
 
-$$\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[6pt] \text{SPAP merge} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{array} \bigg\} \xrightarrow[\text{consistency}]{\text{P.14.3}} d_0 \cdot \varepsilon = 8\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{\frac{d_0 \cdot \varepsilon}{\eta^*}}$$
+$$\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[6pt] \text{SPAP merge} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{array} \bigg\} \xrightarrow[\text{consistency}]{\text{P.14.3}} d_0 \cdot \varepsilon = 8\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{d_0 \cdot \varepsilon}$$
 
 The discretization scale emerges from two independent derivations constrained by internal consistency (P.14.3):
 
@@ -1364,21 +1373,23 @@ Any residual corrections must be expressible in Lorentz-scalar combinations and 
 
 *Derivation.* The coefficient $\xi_s$ parameterizes leading-order corrections from spatial discretization at the MPU scale $\delta$, while $\xi_t$ parameterizes corrections from temporal discretization at scale $\tau_{min}$. By Proposition Q.6.1, the equal ratios $\delta/L_P = \tau_{min}/t_P$ implied by emergent Lorentz invariance (Theorem 46) ensure that spatial and temporal discretization effects enter at the same relative scale, yielding equal leading-order correction coefficients. This prediction distinguishes the PU framework from approaches that quantize the gravitational field directly, where such isotropy is not guaranteed.
 
-**Prediction Q.6.2 (Absence of Preferred Frame Effects).** Searches for Lorentz-violating effects in the photon sector should yield null results with any residual effects controlled by the discretization ratio $L_P/\delta = \sqrt{\eta^*/(8\ln 2)}$ and by the detailed structure of the Lorentz-invariant discretization (Proposition Q.6.1). Current constraints from gamma-ray burst observations [Vasileiou et al. 2013] and active galactic nuclei [MAGIC Collaboration 2008] constrain energy-dependent photon dispersion by placing lower bounds on the effective discretization scale $E_{disc}$ at linear and quadratic orders, with GRB limits reaching the Planck scale and beyond under conservative assumptions. These bounds ($E_{disc} \gtrsim E_P$) are consistent with the Lorentz-invariant MPU discretization predicted by the framework.
+**Prediction Q.6.2 (Absence of Preferred Frame Effects).** Searches for Lorentz-violating effects in the photon sector should yield null results with any residual effects controlled by the discretization ratio $L_P/\delta = 1/\sqrt{8\ln 2} \approx 0.424$ and by the detailed structure of the Lorentz-invariant discretization (Proposition Q.6.1). Current constraints from gamma-ray burst observations [Vasileiou et al. 2013] and active galactic nuclei [MAGIC Collaboration 2008] constrain energy-dependent photon dispersion by placing lower bounds on the effective discretization scale $E_{disc}$ at linear and quadratic orders, with GRB limits reaching the Planck scale and beyond under conservative assumptions. These bounds ($E_{disc} \gtrsim E_P$) are consistent with the Lorentz-invariant MPU discretization predicted by the framework.
 
-*Derivation.* The framework predicts that discretization preserves Lorentz invariance (Proposition Q.6.1, Step 5). Preferred-frame effects would arise only from asymmetric spatial versus temporal discretization, which is excluded by the equal-ratio condition. The scale of any residual effects is set by the inverse discretization ratio $(\delta/L_P)^{-1} = \sqrt{\eta^*/(8\ln 2)} \approx 0.42$ for $\eta^* \approx 1$.
+*Derivation.* The framework predicts that discretization preserves Lorentz invariance (Proposition Q.6.1, Step 5). Preferred-frame effects would arise only from asymmetric spatial versus temporal discretization, which is excluded by the equal-ratio condition. The scale of any residual effects is set by the inverse discretization ratio $(\delta/L_P)^{-1} = 1/\sqrt{8\ln 2} \approx 0.424$.
 
 ### Q.6.5 Summary
 
 | Quantity | Symbol | Value | Origin |
 |:---------|:-------|:------|:-------|
-| Spatial discretization | $\delta/L_P$ | $\sqrt{8\ln 2/\eta^*} \approx 2.355$ | PCE optimization (Q.18) |
-| Temporal discretization | $\tau_{min}/t_P$ | $\sqrt{8\ln 2/\eta^*} \approx 2.355$ | Lorentz consistency (Prop. Q.6.1) |
-| Information budget | $C_{\max}^*$ | $2\ln 2$ | Capacity saturation (Q.3) |
+| Spatial discretization | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | PCE optimization (Q.18) |
+| Temporal discretization | $\tau_{min}/t_P$ | $\sqrt{8\ln 2} \approx 2.355$ | Lorentz consistency (Prop. Q.6.1) |
+| Information budget | $C_{\max}^*$ | $2\ln 2$ | Capacity saturation (Q.10) |
 | Hilbert space dimension | $d_0$ | $8 = 2^{K_0}$ | Theorem 23 |
 | Irreducible entropy cost | $\varepsilon$ | $\ln 2$ | Theorem 31 |
+| Independence factor | $\chi^*$ | $1$ | Lemma Q.2.2 |
+| Geometric inefficiency | $\eta^*$ | $1$ | Lemma Q.2.3 |
 
 The complete derivation chain from the horizon constant to spacetime discretization:
 
-$$\boxed{\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \\ \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{array} \xrightarrow{\text{Eq. Q.10}} C_{\max}^* = 2\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{\frac{8\ln 2}{\eta^*}}}$$
+$$\boxed{\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \\ \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{array} \xrightarrow{\text{Eq. Q.10}} C_{\max}^* = 2\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{8\ln 2}}$$
 

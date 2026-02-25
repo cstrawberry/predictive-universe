@@ -199,10 +199,13 @@ N_{eff_links} = \sigma_{eff_link}\;\mathcal A\;+\;o(\mathcal A)
 \tag{E.5}
 $$
 where $\sigma_{eff_link}$ is the effective surface density of independent information channels. This density is related to the underlying geometric density of potential links and the impact of correlations. Specifically:
-*   Let $\sigma_{geom_link} = 1/(\eta \delta^2)$ be the purely geometric surface density of potential links based on MPU spacing $\delta$ and a packing/orientation factor $\eta$. Here $\eta$ captures the dependence on surface orientation and lattice/packing anisotropy: $\eta=1$ for a simple‑cubic packing with the surface normal aligned to a lattice axis, while for generic orientations or isotropic regular packings $\eta$ remains $\mathcal{O}(1)$ with small deviations around unity.
-*   Correlations between the states and interactions of nearby MPUs reduce the number of *independent* degrees of freedom that contribute to the total information capacity across the boundary.
-*   Let $\chi$ be the dimensionless correlation factor ($0 < \chi \le 1$) quantifying this reduction. $\chi=1$ represents fully independent channels, while $\chi<1$ reflects the loss of effective channel density due to correlations.
-*   The effective density is therefore $\sigma_{eff_link} = \chi \, \sigma_{geom_link} = \chi / (\eta \delta^2)$. The precise value of $\chi$ depends on the equilibrium state of the MPU network (determined by PCE optimization) and is treated here as a parameter bounded between 0 and 1.
+*   Let $\sigma_{geom_link} = 1 / (\eta \delta^2)$ be the purely geometric surface density of potential boundary-crossing links. Let $\sigma_{\max}:=1/\delta^2$ denote the reference maximal admissible link density at operational resolution $\delta$ (one link footprint per surface cell of area $\delta^2$ in the macroscopic regular regime). Define the geometric inefficiency factor by
+$$
+\eta := \frac{\sigma_{\max}}{\sigma_{geom_link}},
+$$
+so $\eta\ge 1$ and the mean surface area per potential link is $\eta \delta^2$. The limit $\eta=1$ corresponds to saturating the reference density $\sigma_{\max}$ in the macroscopic regular regime.
+
+*   Let $\chi$ be a dimensionless independence factor ($0 < \chi \le 1$) defined so that the effective independent-link count satisfies $N_{eff_links}=\chi N_{geom_links}$. Thus $\chi=1$ corresponds to statistically independent boundary links and $\chi<1$ quantifies the reduction in effective independent channels due to cross-link correlations. The effective density is then $\sigma_{eff_link}=\chi/(\eta\delta^2)$; the equilibrium values are fixed in Appendix Q.
 
 *Proof.* Geometric regularity (Theorem 43) ensures that on scales larger than the MPU spacing $\delta$, the network locally resembles a smooth D-dimensional manifold (here D=4). For a 2-dimensional surface $\mathcal{H}$ embedded in this manifold, the number of fundamental units (MPUs or links between them) piercing this surface is expected to scale with the area of the surface divided by the characteristic area occupied by one such unit or link.
 1.  **Geometric Link Density:** If MPUs are arranged with an average spacing $\delta$, the number of MPUs per unit volume is $\sim 1/\delta^3$ (in 3D space). For a 2D surface, the number of links crossing it per unit area, $\sigma_{geom_link}$, would be proportional to $1/\delta^2$. The factor $\eta$ accounts for geometric details of packing and orientation relative to the surface (e.g., for a simple cubic lattice with spacing $\delta$, a surface normal to one axis would be pierced by $1/\delta^2$ links per unit area, so $\eta=1$).
@@ -500,9 +503,9 @@ $$
 C_{\max}^{*} = \ln(8) - \ln(2) = 2\ln 2
 \tag{E.15}
 $$
-Substituting this result, along with PCE-optimized values for the correlation and packing factors ($\chi^*$ and $\eta$, which are $O(1)$ constants), into the scale relation derived from Equation E.9 ($\delta^2/L_P^2 = 4\chi C_{\max}/\eta$) yields a direct, quantitative prediction for the ratio of the MPU spacing to the Planck length. For the idealized case ($\chi^*\approx 1$, $\eta\approx 1$), this ratio is:
+Substituting this result, along with the PCE equilibrium values $\chi^*=1$ (Lemma Q.2.2) and $\eta^*=1$ (Lemma Q.2.3), into the scale relation derived from Equation E.9 ($\delta^2/L_P^2 = 4\chi C_{\max}/\eta$) yields a direct, quantitative prediction for the ratio of the MPU spacing to the Planck length:
 $$
-\frac{\delta}{L_P} \approx \sqrt{8\ln 2} \approx 2.355
+\frac{\delta}{L_P} = \sqrt{8\ln 2} \approx 2.355
 \tag{E.16}
 $$
 This result demonstrates that the relationship between the fundamental microscopic scale $\delta$ and the emergent Planck scale $L_P$ is a calculable, $O(1)$ constant determined by the information-theoretic necessities of the MPU's predictive cycle. The full derivation is provided in Appendix Q.
