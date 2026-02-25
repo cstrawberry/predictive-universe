@@ -26,27 +26,39 @@ This $\tau_{medium}$ represents the fundamental granularity of physical processi
 
 For the MPU network to function as a coherent predictive system capable of supporting complex structures and consistent laws, the local causal rhythms of its interacting constituents must align. We demonstrate that temporal desynchronization is an inefficient and predictively suboptimal state, incurring a significant penalty in the global PCE Potential $V(x)$ (Definition D.1).
 
-Consider two interacting MPU ensembles, *i* and *j*, whose collective cycles are misaligned by a phase lag $\Delta\phi_{ij} \in [0, 2\pi)$. Any residual misalignment introduces irreducible prediction error and compensatory complexity costs.
+Consider two interacting MPU ensembles, *i* and *j*, whose collective cycles are misaligned by a phase lag $\Delta\phi_{ij} \in [0, 2\pi)$. Any residual misalignment introduces irreducible prediction error and compensatory resource costs. Theorem O.1 formalizes this: temporal desynchronization increases the global PCE potential $V(x)$ through reduced predictive benefit and increased operational and/or propagation costs.
 
-**Theorem O.1 (PCE Potential of Desynchronization).**
-A state of temporal desynchronization in an MPU network, characterized by non-zero average phase misalignment between interacting MPU ensembles, leads to a quantifiable increase in the global PCE Potential $V(x)$ compared to a synchronized state. This increase arises from two primary sources:
-(a) A direct reduction in the predictive benefit term $V_{benefit}$ due to increased average prediction error.
-(b) An indirect increase in the operational cost term $V_{op}$ from the additional complexity required to model and compensate for temporal misalignments.
+**Theorem O.1 (PCE Potential of Desynchronization).** A state of temporal desynchronization in an MPU network leads to a quantifiable increase in the global PCE Potential $V(x)=V_{op}+V_{prop}-V_{benefit}$ through two sources:
+
+1.  **Reduced Predictive Benefit ($V_{benefit}$):** Phase misalignment induces a strictly nonnegative excess prediction error across at least one interacting edge, thereby reducing $PP$ and lowering the benefit term $\Gamma_0 B(PP)$.
+
+2.  **Increased Resource Cost ($V_{op}$ and $V_{prop}$):** Any attempt to compensate this excess error (e.g., phase tracking, error correction, or increased interaction) requires additional complexity and/or reduces effective channel fidelity, increasing operational and propagation costs.
 
 *Proof.*
-1.  **Increased Prediction Error ($ PE $):** MPU ensemble *i* generates a prediction for a target event in ensemble *j*. Let the time mismatch due to phase lag be $ \delta t_{ij} \propto \Delta\phi_{ij} $. The resulting prediction error is related to the difference between the predicted state and the actual state at the time of verification. For small time mismatch $\delta t_{ij}$, this difference is approximately $\| |\bar{\psi}_j(t+\delta t_{ij})\rangle - |\bar{\psi}_j(t)\rangle \| \approx \| \frac{d|\bar{\psi}_j\rangle}{dt} \delta t_{ij} \|$. The resulting average prediction error $\langle PE_{ij} \rangle$ (e.g., measured by infidelity or squared error) scales quadratically with this difference, and thus quadratically with the phase lag for small misalignments:
+1.  **Phase lag induces a nonnegative excess prediction error:** Fix an interacting pair $(i,j)$ and let $p_j(\cdot|t)$ denote the outcome distribution for the verified event in ensemble $j$ at local time $t$. Let $\Delta\phi_{ij}\in(-\pi,\pi]$ denote the principal phase difference and define the corresponding verification-time offset by
     $$
-    \langle PE_{ij} \rangle \propto \| \frac{d|\bar{\psi}_j\rangle}{dt} \delta t_{ij} \|^2 \propto (\Delta\phi_{ij})^2
+    \delta t_{ij} := \frac{\tau_{medium}}{2\pi}\,\Delta\phi_{ij},
+    $$
+    where $\tau_{medium}$ is the characteristic cycle time of the coherent medium (Equation O.1). Take the scoring rule in Definition 7 to be log-loss. If $i$ forms a prediction using the stale distribution $p_j(\cdot|t)$ while the realized outcome is distributed as $p_j(\cdot|t+\delta t_{ij})$, the excess expected prediction error relative to perfect synchronization is
+    $$
+    \Delta PE_{ij}(t)
+    = D_{KL}\!\big(p_j(\cdot|t+\delta t_{ij})\,\|\,p_j(\cdot|t)\big) \ge 0.
+    $$
+    When $p_j(\cdot|t)$ is not locally constant in $t$, this divergence is strictly positive for all sufficiently small nonzero $\delta t_{ij}$. Moreover, if $p_j(\cdot|t)$ is $C^1$ with full support, then
+    $$
+    \Delta PE_{ij}(t) = \frac{1}{2} I_j(t)\,\delta t_{ij}^2 + o(\delta t_{ij}^2)
+    = \frac{1}{2} I_j(t)\Big(\frac{\tau_{medium}}{2\pi}\Big)^2 (\Delta\phi_{ij})^2 + o((\Delta\phi_{ij})^2),
     \tag{O.2}
     $$
+    where $I_j(t) := \sum_y \frac{(\partial_t p_j(y|t))^2}{p_j(y|t)} (with the analogous integral form for continuous outcomes).
 
-2.  **Reduced Predictive Benefit ($V_{benefit}$):** An increase in $\langle PE \rangle$ leads to a decrease in the average Predictive Performance $\langle PP \rangle$ (Definition 7). The total predictive benefit $V_{benefit} = \sum_v \Gamma_0 B(PP_v)$ (Definition D.1) is therefore lowered, increasing the total potential $V$.
+2.  **Reduced predictive benefit:** By Definition 7, $PP(t)=\frac{1}{1+k_{PP}PE(t)}$ is strictly decreasing in $PE(t)$. Thus any $\Delta PE_{ij}(t)>0$ strictly decreases the corresponding $PP_v$, hence decreases $B(PP_v)$ and lowers $V_{benefit}=\sum_v \Gamma_0 B(PP_v)$. Since $V=V_{op}+V_{prop}-V_{benefit}$, this increases $V$.
 
-3.  **Increased Operational Cost ($V_{op}$):** To mitigate this performance loss, MPUs must model the temporal fluctuations of their neighbors, increasing the perceived environmental complexity $\hat{C}_{target}$. According to the Law of Prediction (Theorem 19), achieving a target performance with a higher $\hat{C}_{target}$ requires greater operational complexity $C$, leading to a higher operational cost rate $R(C)$ and thus increasing $V_{op}$.
+3.  **Operational-cost penalty under compensation:** If the system seeks to maintain the synchronized $PP$ despite a fixed nonzero $\Delta\phi_{ij}$, it must reduce the excess divergence in (O.2) by additional modeling/control resources (e.g., tracking and correcting phase offsets). This requires an increase in effective complexity $C$ relative to the synchronized optimum. Because $R(C)$ is increasing (Definition 3), such compensation strictly increases $V_{op}$.
 
-4.  **Foundational Nature of Coherence:** Beyond performance degradation, a state of significant, large-scale temporal incoherence is fundamentally incompatible with the existence of stable, complex MPU aggregates. Composite structures, from particles to planets, rely on the persistent, coordinated interaction of their constituent MPUs. A lack of temporal coherence would prevent the formation of stable bonds and persistent properties, effectively dissolving any structure more complex than individual MPUs. Therefore, the "benefit" of coherence is not merely improved prediction but the very possibility of a universe with complex, stable objects. A "low-cost, low-coherence" state is not a viable alternative equilibrium capable of supporting complex structures. It is a state of effective dissolution, corresponding to a near-zero $V_{benefit}$ (as complex structures generating benefit cannot form) and thus a catastrophically high total potential $V$.
+4.  **Propagation-cost penalty under misalignment:** Even without compensation, a nonzero phase lag acts as additional time-jitter noise on the link $(i,j)$, which cannot increase effective channel fidelity or transmitted mutual information (data processing). The propagation term $V_{prop}$ penalizes decoherence and irreversibility (Definition D.1; Appendix E), and therefore cannot decrease under added time-jitter; it increases whenever the effective fidelity is degraded.
 
-5.  **Conclusion:** Desynchronization imposes a twofold penalty: it degrades predictive accuracy (lowering $V_{benefit}$) and requires costly compensatory mechanisms (raising $V_{op}$). More fundamentally, it prevents the formation of the complex structures that generate significant predictive benefits in the first place. Therefore, the PCE Potential $V(x)$ for a desynchronized configuration is strictly and significantly higher than for a synchronized one.
+5.  **Conclusion:** For any desynchronized configuration with $\Delta\phi_{ij}\neq 0$ on at least one predictive edge with nontrivial temporal variation, either the excess divergence in (O.2) is tolerated (reducing $V_{benefit}$) or it is compensated (increasing $V_{op}$ and typically $V_{prop}$), so $V(x)$ is strictly larger than in synchronized configurations (up to a global phase). For small misalignments, (O.2) yields a quadratic leading-order penalty in $\Delta\phi_{ij}$.
 
 ## O.4 Dynamical Emergence of a Coherent Causal Medium
 
@@ -60,7 +72,11 @@ The stochastic adaptation dynamics of the MPU network, governed by minimizing th
 *Proof.*
 1.  **Restoring Gradient:** As established in Theorem O.1, the PCE potential is minimized when phase differences are zero. The gradient of the potential with respect to the phase differences, $\nabla_{\Delta\phi_{ij}} V$, acts as a restoring force, driving $\Delta\phi_{ij}$ towards zero.
 2.  **Long-Run Behavior of Stochastic Dynamics:** The system's evolution is described by the stochastic gradient flow $dx(t) = -\eta(x) \nabla V dt + \sqrt{2D(x)} dW(t)$. As formalized in Appendix D (Theorem D.5), these dynamics admit an ergodic stationary regime; and in low-noise detailed-balance regimes the stationary measure is biased toward (and concentrates near) the set of global minima of the potential $V$.
-3.  **Emergence of a Coherent Medium:** Since the synchronized state corresponds to the unique, stable global minimum of the potential (as per the argument in Theorem O.1), the long-run stationary regime of the network dynamics concentrates on this baseline configuration. The stochastic noise ensures ergodic exploration and prevents permanent trapping in suboptimal states; in the low-noise regime, the invariant measure concentrates exponentially on the globally optimal, synchronized state (Theorem D.5, Eq. D.12b). This results in the formation of vast domains where all MPUs "tick" in unison, establishing a consistent and coherent causal medium. This medium provides the stable background upon which the Lorentzian spacetime of Section 11 is built.
+3.  **Emergence of a Coherent Medium:** Theorem O.1 implies that the PCE potential depends on phase differences and is minimized on the synchronized manifold
+    $$
+    \mathcal M_{sync}:=\{\{\phi_i\}:\Delta\phi_{ij}=0\ \text{for all interacting pairs }(i,j)\},
+    $$
+    which is invariant under global phase shifts. Thus the set of global minimizers is $\mathcal M_{sync}$ rather than a single configuration. By Theorem D.5, in the low-noise regime the stationary measure concentrates on neighborhoods of the global minimizer set (Eq. D.12b): for any open neighborhood $U\supset \mathcal M_{sync}$, $\pi_\beta(U)\to 1$ as $\beta\to\infty$. Consequently, typical long-run configurations exhibit small local phase differences across edges and form macroscopic domains of phase-locked MPU cycles; deviations (e.g., domain walls) incur a positive potential gap and are exponentially suppressed. This establishes a coherent causal medium consistent with the background structure used in Section 11.
 
 ## O.5 The Physical Origin of the Arrow of Time
 
@@ -81,13 +97,21 @@ The existence of a directed arrow of time is a logical prerequisite for the exis
 
 The crucial question then becomes: What prevents the physical laws governing the MPU network from violating this logical requirement? The answer is a physical enforcement mechanism that locks the logical arrow into irreversible physical reality.
 *   **The Irreversible 'Evolve' Process:** The Verification/Update phase of the predictive cycle is physically realized by the 'Evolve' process (Definition 27). As rigorously proven in Appendix J (Theorem J.1), every 'Evolve' event that processes non-trivial self-referential information—a process argued to be ubiquitous in a network of mutually predicting agents—incurs a minimal, irreversible thermodynamic cost, dissipating an entropy of at least $\varepsilon = \ln 2$ nats to the environment.
-*   **The Ubiquitous Ratchet:** Here we see the Principle of Physical Instantiation (Appendix P) in action, where a Category 1 logical necessity—the directionality of prediction—is enforced by a Category 2 physical mechanism. The physical enforcement is achieved through a thermodynamic ratchet. The $\varepsilon$-cost is a fundamental dissipation that increases the total entropy of the universe (MPU + environment) with each forward step of the MPU cycle. Reversing this physical process would require a spontaneous thermodynamic fluctuation, an event whose extreme improbability is governed by the statistical Second Law. It is crucial to distinguish this from a logical contradiction: while a microscopic fluctuation is not logically forbidden, for the entire synchronized network of $N$ MPUs to reverse a coherent step in time would demand $N$ such coordinated fluctuations. The probability of such a macroscopic reversal is suppressed by a factor of $(1/2)^N$. This probability becomes so infinitesimal for any non-trivial $N$ that the statistical law becomes a *physically absolute* prohibition. The irreducible cost $\varepsilon$ thus acts as a microscopic ratchet whose one-way operation is made inevitable by the force of statistics, ensuring the physical implementation of time's arrow is as robust as the logical necessity it serves.
+*   **The Ubiquitous Ratchet:** Theorem J.1 establishes a hard lower bound on entropy production per nontrivial update cycle: $\Sigma_{\text{pred}} \ge \varepsilon = \ln 2$. Consider a coherent macroscopic "forward step" in which $N$ MPUs undergo such update cycles. Additivity of entropy production across these cycles gives
+    $$
+    \Sigma_{\text{tot}}=\sum_{k=1}^N \Sigma_{\text{pred}}^{(k)} \ge N\varepsilon.
+    $$
+    For the corresponding time-reversed macro-trajectory, the standard path-probability relation $\Sigma_{\text{tot}}=\log(P_F/P_R)$ implies
+    $$
+    \frac{P_R}{P_F}=e^{-\Sigma_{\text{tot}}}\le e^{-N\varepsilon}=2^{-N}.
+    $$
+    Thus coherent macroscopic reversals require exponentially unlikely negative-entropy trajectories, and their probability is suppressed at least as $e^{-N\varepsilon}$.
 
-This thermodynamic enforcement can be made more precise through the lens of fluctuation theorems. The MPU controller is **feedback‑driven**. Let $\Sigma_{\mathrm{pred}}$ be the predictive entropy production in one forward update, defined by the log-likelihood ratio of the forward versus the reverse trajectories for the **joint** system+controller dynamics (including memory updates). Under local KMS conditions and microreversible dynamics of the joint system+controller+memory (so that feedback is internalized), this quantity satisfies an integral fluctuation theorem:
+These results are consistent with fluctuation theorems. Microreversible dynamics satisfy an integral fluctuation relation of the form $\langle e^{-\Sigma_{\text{pred}}} \rangle = 1$, hence $\langle \Sigma_{\text{pred}} \rangle \ge 0$ (Jensen). Moreover, by Markov's inequality, for any $a>0$,
 $$
-\left\langle e^{-\Sigma_{\mathrm{pred}}}\right\rangle=1
+\mathbb P(\Sigma_{\text{tot}}\le -a)\le e^{-a},
 $$
-A direct consequence of this theorem, via Jensen's inequality, is that the average entropy production is non-negative: $\langle \Sigma_{\mathrm{pred}}\rangle \ge 0$. The PU framework's derivation of $\varepsilon \ge \ln 2$ provides a strict, positive lower bound on this average for any cycle that includes at least one logically irreversible memory update, implying $\langle \Sigma_{\mathrm{pred}}\rangle\ge \varepsilon$. The fluctuation theorem further quantifies the extreme rarity of "reverse" trajectories (those with $\Sigma_{\mathrm{pred}} < 0$), showing that the probability of observing a macroscopic violation of the second law (a reversal of the arrow of time) is exponentially suppressed. This provides a rigorous statistical-mechanical foundation for the physical irreversibility of the emergent arrow of time.
+so taking $a=N\varepsilon$ gives $\mathbb P(\Sigma_{\text{tot}}\le -N\varepsilon)\le e^{-N\varepsilon}$.
 
 **3. Synthesis**
 
@@ -136,27 +160,39 @@ The logical and thermodynamic arguments in this appendix establish the *directio
 
 ### O.7.1 Γ‑convergence of the Spatial Sector
 
-Let $(G_n)$ be locally-finite graphs with mesh $h_n\to 0$ approximating a spatial slice $(M,g)$. For fields $\phi_n:V(G_n)\to\mathbb R$, the PCE potential contribution from spatial variations takes the form of a discrete energy functional:
+Consider a sequence of locally-finite graphs $(G_n)$ with vertex sets $V(G_n)$ and mesh size $h_n\to 0$ approximating a spatial slice $(M,g)$ of dimension $D$. For a discrete test field $u_n:V(G_n)\to\mathbb R$, a representative discrete spatial functional takes the form
 $$
-F_n(\phi_n)=\sum_{(x,y)\in E(G_n)} w_{xy}\,\Psi\!\Big(\frac{\phi_n(y)-\phi_n(x)}{h_n}\Big)
-+\sum_{x\in V(G_n)} h_n^D\,\mathcal V\big(\phi_n(x)\big),
+F_n(u_n)=\sum_{(x,y)\in E(G_n)} w_{xy}\,\Phi_{link}\!\left(\frac{u_n(y)-u_n(x)}{h_n}\right)+\sum_{x\in V(G_n)} h_n^D\,\mathcal{V}(u_n(x)),
 $$
-where $\Psi$ is a convex link cost function derived from the propagation cost $V_{prop}$ and $\mathcal{V}$ is a local potential from $V_{op}-V_{benefit}$. Under standard conditions of equi‑coercivity and consistency, this functional $\Gamma$-converges to a continuum functional as $h_n \to 0$:
+where $\Phi_{link}$ is convex and encodes the spatial propagation cost density consistent with $V_{prop}$ (Definition D.1), and $\mathcal{V}$ is the induced local term. Under the equi-coercivity and consistency hypotheses used for the PU $\Gamma$-convergence result (Appendix D, Assumptions (A1)–(A6)), these functionals $\Gamma$-converge to a continuum functional of the form
 $$
-\boxed{\,F_n\ \xrightarrow{\ \Gamma\ }\ F(u)=\int_M f(x,\nabla u)\,d^Dx+\int_M \mathcal V(u)\,d^Dx,\qquad
-f(x,\xi)=\xi^\top A(x)\,\xi+o(|\xi|^2)\, },
+F(u)=\int_M f(x,\nabla u)\,d^Dx+\int_M \mathcal{V}(u)\,d^Dx,
+\qquad
+f(x,\xi)=\xi^T A(x)\xi+o(|\xi|^2),
 $$
-The quadratic form $A(x)$ defines a positive-definite Riemannian metric on the spatial slice, $A(x) \propto \sqrt{\det g_{ij}} g^{ij}(x)$.
+where $A(x)$ is symmetric positive definite. The quadratic form $A(x)$ therefore defines the inverse spatial metric on the slice (up to the conventional density factor):
+$$
+A(x)\propto \sqrt{\det g_{ij}(x)}\,g^{ij}(x).
+$$
+Thus, the spatial geometry emerges as the effective continuum limit of the PU network's propagation sector.
 
-### O.7.2 Time Direction and Lorentzian Signature
+### O.7.2 Lorentzian Signature from Arrow of Time
 
-The PU framework's dynamics are fundamentally time-directed: Theorem 31 supplies a **time orientation** (a preferred future direction) because ND–RID produces strictly positive entropy on typical trajectories. Independently, locality of the update (Definition 27) together with Proposition F.1 implies a **finite propagation speed**, i.e., an emergent causal cone in the continuum scaling.
+The PU framework supplies two independent structural inputs: a time orientation and a positive-definite spatial sector.
 
-A smooth cone structure with one distinguished "timelike" direction determines (up to an overall positive conformal factor) a Lorentzian principal symbol for any second‑order local continuum limit: in local coordinates one may choose units so that the maximal signal speed is $c$ and write the characteristic form as
+1.  **Time orientation:** By Theorem 31 and Appendix J, nontrivial ND-RID update cycles have strictly positive entropy production. This singles out a temporal orientation ("future") as the direction of increasing cumulative entropy production.
+
+2.  **Finite propagation speed:** By locality and Proposition F.1, there exists a finite maximal signal speed $c$, yielding a non-degenerate causal cone.
+
+Combining these with the positive-definite spatial quadratic form $A(x)$ from O.7.1, define the inverse metric coefficients in local coordinates $(t,x^i)$ adapted to the oriented foliation by
 $$
-g^{\mu\nu}\,\xi_\mu\xi_\nu=-\frac{\xi_0^2}{c^2}+\xi^\top A(x)\,\xi,
+g^{00}(x)=-\frac{1}{c^2},\qquad g^{0i}(x)=0,\qquad g^{ij}(x)=A^{ij}(x).
 $$
-with $A(x)$ the positive spatial quadratic form from O.7.1. This has signature $(-,+,+,+)$ and therefore $g^{00}<0$ in the $(−,+,+,+)$ convention. Irreversibility fixes the **orientation** of the cone (future vs past), while the **signature** is fixed by the existence of a non-degenerate causal cone/hyperbolic limit rather than by a sign choice.
+Then the characteristic quadratic form is
+$$
+g^{\mu\nu}(x)\,\xi_\mu\xi_\nu=-\frac{\xi_0^2}{c^2}+\xi^T A(x)\xi.
+$$
+Since $A(x)$ is positive definite, $g^{\mu\nu}$ has exactly one negative eigenvalue, and the associated spacetime metric has Lorentzian signature $(-,+,+,+)$ in the chosen convention. The causal cone is defined by $g^{\mu\nu}\xi_\mu\xi_\nu=0$, and its temporal orientation (future vs past) is fixed by the entropy-production time orientation from Theorem 31.
 
 
 ## O.8 Conclusion

@@ -98,7 +98,7 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 > * **Probe:** Mass $m_0 = 1$ kg.
 > * **Trajectory:** Achieve a final velocity $v_f = 0.96c$ after proper time $\tau = 1$ s under constant proper acceleration. $T_{\rm bath}\approx0$.
 > * **Predictive Task:** Maintain a constant performance gap $\delta_{SPAP} = \alpha_{SPAP} - PP = 10^{-6}$.
-> * **PU Parameters:** We use the simplified quadratic complexity bound $C_{SPAP} \approx K / \delta_{SPAP}^2$ (Lemma N.2, approximating Theorem 14), setting the constant $K = 1$ bit.
+> * **PU Parameters:** We use the simplified scaling $C_{SPAP} \approx K / \delta_{SPAP}^2$, with $K$ absorbing the slowly varying $\log(1/\delta_{SPAP})$ factor in Lemma N.2, and set $K = 1$ bit.
 > * **Cost Model:** We adopt a simple cost model $R(C, T_{\rm eff})=k_R C (k_B T_{\rm eff})$ and a noise model $C_{\rm noise,external}(a)=k_N (a/g_{\text{earth}})^2$. We choose illustrative parameters such that the costs are comparable: a cost-scaling factor $k_R=2.3 \times 10^{39} \text{ s}^{-1}$ (assuming complexity $C$ is measured in bits) and a noise-sensitivity factor $k_N=1.0 \times 10^{-4} \text{ bits}$.
 >
 > **Calculations:**
@@ -128,7 +128,6 @@ We restate the theorem (Equation N.5) for convenience before proceeding with the
 > For a process where an MPU (or MPU aggregate, with mass $m_0$) follows a trajectory with proper acceleration $a(t)$, achieves predictive performance $PP(t)$, and undergoes predictive acceleration $A_{pred}(t)$, in a background thermal bath at temperature $T_{bath}$, the total work $W_{\text{tot}}$ is bounded by:
 > $$
 > W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt
-> \tag{N.6, repeated from N.5}
 > $$
 > where $v_f$ is the final velocity, $T_{eff}(t)$ is the total effective temperature including Unruh and internal heating effects, and $C_{req}(t)$ is the total required predictive complexity including SPAP, external noise, and internal noise components (as defined in N.4).
 
@@ -140,56 +139,51 @@ P_{pred} \ge R(C, T_{eff})
 $$
 *Proof.* This is a direct application and necessary physical generalization of Definition 3 from the PU framework. The function $R(C)$ is the minimum power required to operate the physical structures of complexity $C$. This power cost is fundamentally thermodynamic in origin (e.g., related to Landauer's principle) and is therefore dependent on the effective temperature of the environment in which the computation takes place, as outlined in Section N.3.1.
 
-**Lemma N.2 (Predictive-divergence bound — PU Thm 14).** To achieve performance $PP$ on a SPAP-limited task, the required complexity $C_{SPAP}$ is bounded by:
+**Lemma N.2 (Predictive-divergence bound — PU Thm 14).** There exist constants $c_{\text{SPAP}}>0$ and $\delta_0>0$ such that for every target error $\delta_{\text{SPAP}}=\alpha_{\text{SPAP}}-PP\in(0,\delta_0]$, the required complexity satisfies
 $$
-C_{SPAP}(PP) = \Omega\left(\frac{\log(1/(\alpha_{SPAP}-PP))}{(\alpha_{SPAP}-PP)^2}\right)
+C_{\text{SPAP}}(PP) \ge c_{\text{SPAP}}\,\frac{\log(1/\delta_{\text{SPAP}})}{\delta_{\text{SPAP}}^2}.
 $$
-*Proof.* See [Thm. 14, **Appendix B.3**].
 
 **Lemma N.3 (Relativistic work).** The minimum work to accelerate a mass $m_0$ from rest to final velocity $v_f$ is $W_{kin}(v_f) = m_0c^2(\gamma(v_f)-1)$.
 
-**Lemma N.4 (Complexity Cost of Environmental Noise).** An MPU operating in an effective thermal bath at temperature $T_{eff}$ must allocate additional predictive complexity $C_{noise}$ to maintain a constant target predictive performance $PP_{op}$. The existence of this cost is necessary. For any system selected for long-term viability under PCE, this cost must be a monotonically increasing function of $T_{eff}$ (for $T_{eff} > T_{base}$), with $C_{noise}=0$ at some baseline temperature $T_{base}$.
- *Proof.* The MPU's adaptation dynamics under PCE establish the necessity and key properties of $C_{noise}(T_{eff})$. An MPU operating in a stable predictive regime seeks to maintain a target performance $PP_{op}$ by dynamically adjusting its complexity $C$ to an optimal value $C^*$. This optimum is found where the marginal predictive benefit equals the total marginal resource cost (the equilibrium condition $\Psi(C^*)=0$ from [Def. 14, 20], rigorously established in **Appendix D, Equation (D.14)**):
- $$
- \Gamma_0 \frac{\partial PP}{\partial C}\bigg|_{C^*} = \lambda \frac{\partial R}{\partial C}\bigg|_{C^*, T_{eff}} + \frac{\partial R_I}{\partial C}\bigg|_{C^*}
- $$
- Let's denote the total marginal cost $MC(C, T_{eff}) = \lambda (\partial R/\partial C)|_{(C, T_{eff})} + (\partial R_I/\partial C)|_C$. The LHS is constant for a fixed $PP_{op}$, so the equilibrium condition is $K_{benefit} = MC(C^*, T_{eff})$.
-
- Now, consider an increase in temperature $T_{eff}$. From Section N.3.1, $\partial R/\partial C$ increases with $T_{eff}$, so $MC(C, T_{eff})$ increases with $T_{eff}$ for any fixed $C$. To restore the equality, the system must adjust its optimal complexity $C^*$. The direction of this adjustment depends on the sign of $\partial(MC)/\partial C = \lambda R''(C) + R_I''(C)$.
- *   **Case 1: $\partial(MC)/\partial C > 0$ (Increasing Marginal Costs).** To counteract the temperature-induced rise in $MC$, $C^*$ must *decrease*. This represents a strategy of "giving up"—reducing complexity and predictive ambition in the face of noise.
-*   **Case 2: $\partial(MC)/\partial C < 0$ (Decreasing Marginal Costs).** To counteract the rise in $MC$, $C^*$ must *increase*. This represents a strategy of "fighting back"—investing more complexity to actively combat the noise and maintain performance.
-
- The Principle of Compression Efficiency (PCE), which drives systems to solve the Prediction Optimization Problem (POP), selects for the most robust and efficient long-term strategy. A system that adopts the "give up" strategy (Case 1) in response to persistent or increasing environmental noise will suffer a degradation of its predictive capabilities, eventually failing to meet the viability requirements of the POP (**Axiom 1**). In contrast, a system that adopts the "fight back" strategy (Case 2) actively works to maintain its predictive performance, a more robust strategy for long-term viability.
-
- Therefore, PCE dynamics will favor the evolution of systems whose internal cost structures correspond to Case 2. While Case 1 might be a possible short-term response, it is not a stable evolutionary strategy. Any system that survives and operates effectively must have a cost structure that leads to an increase in complexity to counteract noise.
-
-Thus, for any viable system, the optimal complexity $C^*$ must be a monotonically increasing function of $T_{eff}$. The noise-induced complexity cost is defined as this necessary increase: $C_{noise}(T_{eff}) := C^*(T_{eff}) - C^*(T_{base})$. It is a monotonically increasing function of $T_{eff}$ for $T_{eff} > T_{base}$, and zero at the baseline temperature. QED
-
-### N.5.2 Proof of the Inequality (N.6)
-
-The total work $W_{tot}$ is the sum of the work done to increase kinetic energy, $W_{kin}$, and the work done to perform the predictive computation, $W_{pred}$. The full derivation of the UCT theorem is provided in this section.
-
-1.  **Kinetic Work:** By Lemma N.3, the kinetic work is bounded below by the ideal relativistic work:
-    $$
-    W_{kin} \ge m_0c^2(\gamma(v_f)-1)
-    $$
-
-2.  **Predictive Work:** The predictive computation happens continuously along the trajectory. Over an infinitesimal time interval $dt$, the MPU must sustain a predictive complexity of at least $C_{req}(t) = C_{SPAP}(PP(t)) + C_{noise}(T_{eff}(t))$, where $C_{noise}$ encompasses all noise-induced costs. The effective temperature at which this computation is performed is $T_{eff}(t)$. Applying the predictive power bound (Lemma N.1) infinitesimally, the work done for prediction in $dt$ is $dW_{pred}(t) = P_{pred}(t) dt$, which is bounded by:
+**Lemma N.4 (Complexity Cost of Environmental Noise).** Fix a prediction task and let $PP(C,T_{\text{eff}})$ denote the maximal predictive performance achievable at operational complexity $C$ in an environment with effective temperature $T_{\text{eff}}$. Assume that increasing $T_{\text{eff}}$ corresponds to composing the baseline sensing/communication channels with additional thermal noise, so that for all $C$,
 $$
-    dW_{pred}(t) \ge R(C_{req}(t), T_{eff}(t)) dt
-    $$
-    Integrating this over the entire process gives the total predictive work:
+T_2\ge T_1 \implies PP(C,T_2)\le PP(C,T_1).
 $$
-    W_{pred} = \int dW_{pred}(t) \ge \int R(C_{req}(t), T_{eff}(t)) dt
-    $$
-    Because $R$ is a power, the integrand $R(\dots)dt$ carries units of energy, ensuring inequality N.5 is dimensionally consistent.
-
-3.  **Substituting Bounds:** We substitute the lower bound for $C_{SPAP}$ from Lemma N.2 into the expression for $C_{req}(t)$:
+Fix a target performance level $PP_{\text{op}}\in(\alpha,\beta)$ and define the minimal complexity required to maintain it at temperature $T_{\text{eff}}$ by
 $$
-    W_{pred} \ge \int R\left( \Omega\left(\frac{\log(1/(\alpha_{SPAP}-PP))}{(\alpha_{SPAP}-PP)^2}\right) + C_{noise}(T_{eff}(t)), T_{eff}(t) \right) dt
+C^*(T_{\text{eff}}):=\inf\{C\ge C_{op}: PP(C,T_{\text{eff}})\ge PP_{\text{op}}\}.
+$$
+Then $C^*(T_{\text{eff}})$ is non-decreasing in $T_{\text{eff}}$. Consequently the noise-induced overhead
+$$
+C_{\text{noise}}(T_{\text{eff}}):=C^*(T_{\text{eff}})-C^*(T_{\text{base}})
+$$
+is well-defined and non-decreasing in $T_{\text{eff}}$, with strict increase on any interval where the monotonicity assumption is strict on the relevant range.
+
+*Proof.* Let $T_2\ge T_1$. If a complexity level $C$ achieves $PP_{\text{op}}$ at the noisier temperature $T_2$, then by monotonicity it also achieves $PP_{\text{op}}$ at the quieter temperature $T_1$. Hence the feasible set at $T_2$ is a subset of the feasible set at $T_1$, and taking infima gives $C^*(T_2)\ge C^*(T_1)$. The statement for $C_{\text{noise}}$ follows immediately. QED.
+
+### N.5.2 Proof of the Inequality (N.5)
+
+*Proof of the Inequality (N.5).*
+
+1.  **Work Decomposition:** The total work $W_{\text{tot}}$ is the sum of the work done to accelerate the agent ($W_{\text{kin}}$) and the work done to perform predictive computation ($W_{\text{pred}}$).
+
+2.  **Lower Bound on Predictive Work:** The predictive power cost at time $t$ is at least $P_{\text{pred}}(t)\ge R(C_{\text{req}}(t),T_{\text{eff}}(t))$ (Lemma N.1). Over an infinitesimal proper-time interval $dt$, the required work is $dW_{\text{pred}} \ge R(C_{\text{req}}(t),T_{\text{eff}}(t))\, dt$. Integrating gives:
+    $$
+    W_{\text{pred}} \ge \int_0^{T_f} R(C_{\text{req}}(t),T_{\text{eff}}(t))\, dt,
+    $$
+    where $C_{\text{req}}(t)=C_{\text{SPAP}}(PP(t))+C_{\text{noise,external}}(a(t))+C_{\text{noise,internal}}(A_{\text{pred}}(t))$ as in the theorem statement.
+
+3.  **Explicit SPAP lower bound (optional form):** By Lemma N.2, for $\delta(t)=\alpha_{\text{SPAP}}-PP(t)\in(0,\delta_0]$,
+    $$
+    C_{\text{SPAP}}(PP(t)) \ge c_{\text{SPAP}}\,\frac{\log(1/\delta(t))}{\delta(t)^2}.
+    $$
+    Since $R(C,T)$ is non-decreasing in $C$ (Definition 3), this yields the explicit lower bound
+    $$
+    W_{\text{pred}} \ge \int_0^{T_f} R\!\left(c_{\text{SPAP}}\,\frac{\log(1/\delta(t))}{\delta(t)^2}+C_{\text{noise,external}}(a(t))+C_{\text{noise,internal}}(A_{\text{pred}}(t)),\,T_{\text{eff}}(t)\right)\,dt.
     $$
 
-4.  **Total Work:** Summing the lower bounds for $W_{kin}$ and $W_{pred}$ gives the final inequality (N.6).
+4.  **Add Kinetic Work:** The kinetic work required to accelerate from rest to velocity $v_f$ is at least $W_{\text{kin}}\ge m_0c^2(\gamma(v_f)-1)$ (Lemma N.1). Summing $W_{\text{tot}}=W_{\text{kin}}+W_{\text{pred}}$ gives the stated bound (N.5). QED.
 
 ## N.6 Interpretation and Programme
 
@@ -1091,7 +1085,7 @@ This parallels the role of $\hbar$ as the action-entropy exchange rate (Corollar
 
 **Remark N.11.5: What Inertia "Is".** Theorem N.6 explains inertia as update resistance. Accelerating a system requires reconfiguring its correlations with the network. The more correlations ($\mathcal{I}_{rel}$), the more entropy must flow to the environment, the more energy required—hence greater resistance to acceleration.
 
-**Remark N.11.6: Connection to UCT.** The Unified Cost of Transgression (Theorem N.4, Equation N.5) included the kinetic term $W_{kin} = m_0c^2(\gamma - 1)$ with $m_0$ as input. Theorem N.5 now derives $m_0$:
+**Remark N.11.6: Connection to UCT.** The Unified Cost of Transgression (Theorem N.UCT, Equation N.5) included the kinetic term $W_{kin} = m_0c^2(\gamma - 1)$ with $m_0$ as input. Theorem N.5 now derives $m_0$:
 
 $$
 m_0 = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P
