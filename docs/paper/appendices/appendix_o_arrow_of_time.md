@@ -50,7 +50,7 @@ Consider two interacting MPU ensembles, *i* and *j*, whose collective cycles are
     = \frac{1}{2} I_j(t)\Big(\frac{\tau_{medium}}{2\pi}\Big)^2 (\Delta\phi_{ij})^2 + o((\Delta\phi_{ij})^2),
     \tag{O.2}
     $$
-    where $I_j(t) := \sum_y \frac{(\partial_t p_j(y|t))^2}{p_j(y|t)} (with the analogous integral form for continuous outcomes).
+    where $I_j(t) := \sum_y \frac{(\partial_t p_j(y|t))^2}{p_j(y|t)}$ (with the analogous integral form for continuous outcomes).
 
 2.  **Reduced predictive benefit:** By Definition 7, $PP(t)=\frac{1}{1+k_{PP}PE(t)}$ is strictly decreasing in $PE(t)$. Thus any $\Delta PE_{ij}(t)>0$ strictly decreases the corresponding $PP_v$, hence decreases $B(PP_v)$ and lowers $V_{benefit}=\sum_v \Gamma_0 B(PP_v)$. Since $V=V_{op}+V_{prop}-V_{benefit}$, this increases $V$.
 

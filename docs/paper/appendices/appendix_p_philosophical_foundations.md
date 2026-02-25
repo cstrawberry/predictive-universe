@@ -33,13 +33,23 @@ Within PU, the epistemic status of the core commitments is stratified:
 
 A compact statement of the forcing chain is:
 
-$
-\text{Cogito} \to \text{Prediction} \to \text{SPAP/RUD} \xrightarrow{+\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4.
-$
+$$
+\begin{aligned}
+&\text{(1) Cogito: } \exists\, \mathcal{C} \text{ such that } \mathcal{C} \text{ is conscious awareness (Axiom P.2.1),} \\
+&\text{(2) Prediction: } \mathcal{C} \text{ implements a predictive map } \pi : \mathcal{H}_t \to \mathcal{O}_{t+1} \text{ (Definition P.3.1; Section P.3.1),} \\
+&\text{(3) SPAP/RUD: no total computable } \pi \text{ satisfies } \pi = \text{SelfPredict}(\pi) \text{ (Theorems 10–11; Theorem A.2.3),} \\
+&\text{(4) Landauer: the SPAP cycle requires a 2-to-1 state merge with } E_{\min} \ge k_B T \ln 2 \text{ (Theorem 31; Appendix J),} \\
+&\text{(5) Define } \varepsilon := E_{\text{diss}}/(k_B T) \Rightarrow \varepsilon \ge \ln 2, \\
+&\text{(6) PCE-Attractor: stable instantiation saturates the bound, } \varepsilon = \ln 2 \text{ (Definition 15a),} \\
+&\text{(7) PPI-optimality: minimal } a \in \mathbb{N} \text{ with } \ln a \ge \varepsilon \text{ gives } a = 2 \text{ (Theorem Z.1),} \\
+&\text{(8) QFI interface: } M = 2ab = 2 \times 2 \times (d_0 - a) = 2 \times 2 \times 6 = 24 \text{ (Theorem Z.5),} \\
+&\text{(9) Mode-channel correspondence: } K(D) = M = 24 \Rightarrow D = 4 \text{ (Theorem Z.11).}
+\end{aligned}
+$$
 
 In this sense, after adopting the Cogito, finite-resource instantiation, and methodological parsimony, the remaining structural commitments are fixed by logical and thermodynamic necessity. The simulation framing (Section P.5) is used as a naturalistic modeling language for an informational process ontology, not as an ontological claim about an external programmer.
 
-## P.1.1 The Meta-Theoretical Achievement: Establishing Viability and Addressing Incompleteness
+## P.1.1 Logical Sufficiency of the Cogito Starting Point
 
 ### The Epistemological Case for Consciousness-First Physics
 
@@ -95,6 +105,8 @@ The framework's philosophical arguments (developed throughout this appendix) pro
 ### P.2.1 The Unshakeable Certainty: *Cogito Ergo Sum*
 
 The quest for an indubitable foundation for knowledge begins with René Descartes' methodical skepticism [Descartes 1641]. As Descartes revealed through his method of radical doubt, while we can question everything else—external perceptions, memories, even logical deductions—the existence of doubt itself, and thus consciousness, is self-verifying. The doubter must exist to doubt. This gives us our first foothold: *Cogito ergo sum*—"I think, therefore I am." This self-verifying loop of awareness provides the sole, unshakeable premise from which a theory of reality can be constructed without arbitrary assumptions about a pre-existing material world.
+
+**Axiom P.2.1 (Cogito Certainty).** There exists at least one locus of conscious awareness $\mathcal{C}$ whose existence is indubitable under methodological doubt. This axiom concerns epistemic certainty only and introduces no ontological commitments beyond the existence of conscious awareness.
 
 ### P.2.2 The Hard Problem of Consciousness
 
@@ -185,43 +197,37 @@ H_0 \cong \mathbb{C}^8
 $$
 (see Theorem 23). For viability we require:
 
-- **C1 — Mathematical consistency (anomaly cancellation).** The 8-dimensional complex representation $R$ of the gauge group $G$ on $H_0$ must be free of all gauge and global anomalies for an effective 4D left‑chiral Weyl matter sector.
+- **C1 — Mathematical consistency (anomaly cancellation).** The 8-dimensional complex representation $R$ of the gauge group $G$ on $H_0$ must be free of all local and global anomalies for an effective 4D left‑chiral Weyl matter sector; in particular, the pure $SU(3)^3$ anomaly and the $SU(2)$ global (Witten) anomaly must vanish on the $SU(3)\times SU(2)$ subgroup.
 
 - **C2 — Nontrivial non‑Abelian action.** $G$ must contain subgroups isomorphic to $SU(3)$ and $SU(2)$ acting nontrivially on $R$ (to support SM‑like color and weak structure).
 
-- **C3 — Compact embedding.** $G\subset SU(8)$ is compact (a natural modeling assumption for a finite‑dimensional unitary representation).
+- **C3 — Compact embedding.** $G\subset SU(8)$ is a closed subgroup; in particular, $G$ is compact because $SU(8)$ is compact and closed subgroups of a compact group are compact.
 
 **Theorem P.1 (Impossibility of a Single‑MPU Standard Model).**
 There is no 8-dimensional, complex, anomaly‑free representation of any compact $G \subset SU(8)$ that contains $SU(3)\times SU(2)$ as a subgroup acting nontrivially.
 
-**Proof.** We compute anomalies for left‑chiral Weyl fermions in 4D. Hypercharge assignments cannot cancel purely non‑Abelian anomalies (e.g., $SU(3)^3$) nor the global $SU(2)$ Witten anomaly, which depend only on the non‑Abelian representations. [Witten 1982]
+**Proof.** It is enough to analyze the non‑Abelian subgroup $H := SU(3)\times SU(2)\subset G$, because the pure $SU(3)^3$ anomaly and the $SU(2)$ global (Witten) anomaly depend only on the restriction of $R$ to $H$ and cannot be canceled by choices of $U(1)$ charges. [Witten 1982; Georgi 1999; Weinberg 1996]
 
-We systematically decompose possible $SU(3)\times SU(2)$ content inside $\mathbb{C}^8$:
+Because $R$ is a finite-dimensional unitary representation, its restriction to $H$ is completely reducible and decomposes as a direct sum of irreducibles of the form $V\otimes W$ with $V$ an $SU(3)$ irrep and $W$ an $SU(2)$ irrep:
+$$
+R \cong \bigoplus_k (V_k\otimes W_k), \qquad \sum_k \dim(V_k)\dim(W_k)=8.
+$$
+If $SU(3)$ acts nontrivially, some $V_k$ is nontrivial. The only $SU(3)$ irreps with dimension $\le 8$ are $3,\bar{3},6,\bar{6},8$. The dimension constraint further forces:
 
-1. **Adjoint option.** The $SU(3)$ adjoint $\mathbf{8}$ has dimension 8, exhausting the space. Then $SU(2)$ must act trivially, violating C2. Ruled out.
+* if $V_k\in\{3,\bar{3}\}$ then $\dim(W_k)\le 2$ (since $3\times 3>8$),
+* if $V_k\in\{6,\bar{6},8\}$ then $\dim(W_k)=1$ (since $6\times 2>8$ and $8\times 2>8$).
 
-2. **Sextet option.** A sextet $\mathbf{6}$ (or $\mathbf{6}^\ast$) uses 6 dimensions, leaving 2 for at most one $SU(2)$ doublet $\mathbf{2}$. A lone $\mathbf{6}$ (or $\mathbf{6}^\ast$) carries a nonzero $SU(3)^3$ anomaly, and a single $SU(2)$ doublet triggers the Witten anomaly (odd number of doublets). Ruled out. [Witten 1982; Georgi 1999]
+We now exhaust cases:
 
-3. **Including $(\mathbf{3},\mathbf{2})$.** The representation $(\mathbf{3},\mathbf{2})$ has dimension $3\times 2=6$, leaving 2 dimensions for at most one $(\mathbf{1},\mathbf{2})$.
+1. If an $(8,1)$ summand appears, it has dimension $8$, so there is no room for any other summand. Then $SU(2)$ acts trivially on $R$, contradicting C2.
 
-   - *Witten anomaly check.* The $(\mathbf{3},\mathbf{2})$ contributes three $SU(2)$ doublets (one per color), and $(\mathbf{1},\mathbf{2})$ contributes one; total 4 doublets → even → no Witten anomaly.
-   
-   - *$SU(3)^3$ anomaly check.* $(\mathbf{3},\mathbf{2})$ contributes nonzero $SU(3)^3$ anomaly, and cancellation requires $\bar{\mathbf{3}}$ representations. The remaining 2 dimensions cannot accommodate any $\bar{\mathbf{3}}$ (minimum dimension 3). The anomaly remains. Ruled out. [Georgi 1999; Weinberg 1996]
+2. If a $(6,1)$ or $(\bar{6},1)$ summand appears, the remaining dimension is $2$. To satisfy C2 the remainder must carry a nontrivial $SU(2)$ action, hence must be $(1,2)$. The pure $SU(3)^3$ anomaly is nonzero for $6$ and changes sign under conjugation; because $6\oplus \bar{6}$ cannot fit in dimension $8$, the $SU(3)^3$ anomaly cannot vanish. This contradicts C1. [Georgi 1999]
 
-4. **Excluding $(\mathbf{3},\mathbf{2})$.** Build $R$ from $(\mathbf{3},\mathbf{1})$, $(\bar{\mathbf{3}},\mathbf{1})$, and $(\mathbf{1},\mathbf{2})$ (plus any singlets, which do not affect anomalies or non‑Abelian action) with multiplicities $n_3,n_{\bar 3},n_2$. Dimension:
-   $$
-   3n_3+3n_{\bar 3}+2n_2\le 8.
-   $$
-   $SU(3)^3$ anomaly cancellation requires $n_3=n_{\bar 3}$, giving
-   $$
-   6n_3+2n_2\le 8.
-   $$
-   For nontrivial $SU(3)$, $n_3\ge 1\Rightarrow n_3=1$ and $n_2\le 1$.
+3. If a $(3,2)$ or $(\bar{3},2)$ summand appears, it has dimension $6$, leaving $2$. If the remaining $2$ dimensions are $SU(2)$ singlets, then the $SU(2)$ global anomaly is nontrivial because $(3,2)$ contributes three $SU(2)$ doublets (one per color), i.e. an odd number of doublets. If instead the remaining $2$ dimensions form an additional doublet $(1,2)$, then the global $SU(2)$ anomaly is absent (four doublets total), but the $SU(3)^3$ anomaly is still nonzero: the $SU(3)$‑charged content consists of two copies of $3$ (or two copies of $\bar{3}$), and there is no room to include the conjugate representation required for cancellation (minimum additional dimension $3$). Hence C1 fails in either subcase. [Witten 1982; Georgi 1999]
 
-   - If $n_2=1$: exactly one $SU(2)$ doublet → Witten anomaly.
-   - If $n_2=0$: $SU(2)$ acts trivially → violates C2.
+4. Otherwise, the $SU(3)$‑charged content consists only of $(3,1)$ and $(\bar{3},1)$ summands. Let $n_3$ and $n_{\bar{3}}$ be their multiplicities. Then $3(n_3+n_{\bar{3}})\le 8$, so $n_3+n_{\bar{3}}\in\{1,2\}$. The pure $SU(3)^3$ anomaly cancels only if $n_3=n_{\bar{3}}$, which forces $n_3=n_{\bar{3}}=1$ and uses $6$ dimensions. The remaining $2$ dimensions must carry a nontrivial $SU(2)$ action to satisfy C2, hence must be a single $(1,2)$. That yields exactly one $SU(2)$ doublet and therefore a nontrivial $SU(2)$ global anomaly, contradicting C1. [Witten 1982]
 
-Contradiction in all cases. $\square$
+All possibilities contradict C1 or C2. Therefore no such representation exists. $\square$
 
 ### P.2.5.3 The Minimal Anomaly‑Free Predictive Block
 
@@ -479,6 +485,8 @@ This is not a claim that any specific technology is inevitable; it is a structur
 ### P.3.1 From "I Think" to "I Predict"
 
 The essence of "thinking"—the activity that the Cogito assures us exists—is, upon examination, fundamentally predictive. Every conscious mental act—perception, belief formation, planning, even creativity—can be understood as a form of prediction. Perception involves predicting the cause of sensory inputs based on prior models, not passively receiving raw data. Memory serves prediction by storing patterns useful for anticipating future events. The self, in this view, is the system's predictive model of its own states and behaviors.
+
+**Definition P.3.1 (Predictive Operation).** A predictive system is any process implementing a map $\pi : \mathcal{H}_t \to \mathcal{O}_{t+1}$, where $\mathcal{H}_t$ denotes informational histories accessible at time $t$ and $\mathcal{O}_{t+1}$ denotes equivalence classes of anticipated outcomes at $t+1$. The awareness $\mathcal{C}$ established by Axiom P.2.1 is predictive iff it performs state updates $s_{t+1} = U(s_t, e_t)$ with $U$ chosen to minimize predictive error under finite resource constraints. This formal structure is operationalized by the Fundamental Predictive Loop (Definition 4) and the Prediction Optimization Problem (Axiom 1).
 
 ### P.3.2 The Space of Becoming: The Operational Domain of Prediction
 
@@ -968,9 +976,9 @@ The concept of a Control Boundary—forbidding external intervention—raises an
 
 #### P.5.5.1 The Observation Problem
 
-The PU framework establishes (Theorem 33, Section 7.4.6) that any interaction yielding information gain $\Delta I > 0$ necessarily incurs a minimum thermodynamic cost:
+The PU framework establishes (Theorem 33, Section 7.4.6) that any interaction yielding relevant information gain $\Delta I \ge \Delta I_{min} > 0$ necessarily incurs a minimum thermodynamic cost:
 
-$$\Delta I \cdot (\Delta S_{min}/k_B) \geq \kappa_r > 0$$
+$$\Delta I \cdot (\Delta S_{min}/k_B) \geq \kappa_r > 0 \qquad (\Delta I \ge \Delta I_{min} > 0)$$
 
 where $\kappa_r$ is the strictly positive Reflexivity Constant. This constraint arises from the irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31) of any information-acquiring interaction.
 
@@ -1342,6 +1350,14 @@ This chain ultimately determines the relationship between the Planck scale and t
 
 The unification explains why black hole thermodynamics works: horizons are information-capacity boundaries, and the Bekenstein-Hawking entropy counts the Shannon entropy of the channel capacity across the boundary, measured in Planck units. The "unreasonable effectiveness" of thermodynamic reasoning in gravitational physics is not unreasonable—it is the inevitable consequence of entropy being one.
 
+### P.6.5.7 Irreversibility and Temporal Orientation
+
+The entropy unification established above has a direct consequence for the arrow of time. If $\varepsilon \ge \ln 2$ holds for every nontrivial predictive update (Theorem 31), then each such update produces entropy
+
+$$\Delta S \ge k_B \ln 2$$
+
+in the environment. Because every MPU cycle in the network incurs this irreducible cost, the cumulative entropy production is strictly non-decreasing along any sequence of predictive updates. Physical time orientation therefore emerges from cumulative logical irreversibility: the forward direction is defined by the direction of increasing total SPAP entropy. This is the same mechanism formalized as the thermodynamic ratchet in Theorem P.8.2 (Section P.8.4) and in Appendix O (Section O.5), and it introduces no additional assumptions beyond those already established in the entropy unification chain.
+
 ## P.7 PU as a Transcendental Framework for Physics
 
 Immanuel Kant's transcendental idealism sought to identify the *a priori* conditions for the possibility of human experience (e.g., space, time, causality) [Kant 1781]. The PU framework can be seen as a generalization and operationalization of this project.
@@ -1455,9 +1471,10 @@ which is the QFI interface formula (Theorem Z.5). ∎
 #### P.7.4.2 Spectral Encoding of Constraints
 
 **Proposition P.7.2 (Spectral Properties).** The eigenvalues of $L(a)$ are:
-$$\lambda_1 = 1, \qquad \lambda_2 = -2a^2 = -d_0$$
+$$\lambda_1 = 1, \qquad \lambda_2 = -2a^2.$$
+In particular, in the PU fixed point where $d_0 = 2a^2$ (Theorem Z.2), one has $\lambda_2 = -d_0$.
 
-*Proof.* The matrix is lower triangular, so eigenvalues are diagonal entries: $\lambda_1 = 1$ and $\lambda_2 = -2a^2$. Substituting $a = 2$ and $d_0 = 8$ yields $\lambda_2 = -8$. ∎
+*Proof.* The matrix is lower triangular, so the eigenvalues are the diagonal entries: $\lambda_1 = 1$ and $\lambda_2 = -2a^2$. Under $d_0 = 2a^2$ this becomes $\lambda_2 = -d_0$; for PU values $a=2$ and $d_0=8$ it gives $\lambda_2=-8$. ∎
 
 **Remark P.7.2a: Interpretive Status.** The appearance of $d_0$ in the spectrum is a consequence of the matrix construction, not an independent derivation. The matrix $L(a)$ provides compact notation for the derivation chain but does not add physical content beyond what is already established in Theorems Z.1 and Z.5.
 
@@ -1474,10 +1491,11 @@ The determinant encodes Hilbert space dimension; the trace encodes its deviation
 #### P.7.4.3 Eigenvector Interpretation
 
 **Proposition P.7.3 (Eigenvector Structure).** The eigenvectors of $L(a)$ are:
-$$v_1 = \begin{pmatrix} d_0 + 1 \\ 2a \end{pmatrix} \quad (\lambda_1 = 1), \qquad v_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \quad (\lambda_2 = -d_0)$$
+$$v_1 = \begin{pmatrix} 2a^2 + 1 \\ 2a \end{pmatrix} \quad (\lambda_1 = 1), \qquad v_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \quad (\lambda_2 = -2a^2)$$
+In the PU fixed point where $d_0 = 2a^2$ (Theorem Z.2), these become $v_1 = \begin{pmatrix} d_0 + 1 \\ 2a \end{pmatrix}$ and $\lambda_2 = -d_0$.
 
 **Interpretation:**
-- $v_1$ (invariant direction): Transformations along this eigenvector preserve the constraint surface. The ratio $(d_0 + 1)/(2a) = 9/4$ encodes the dimension-kernel relationship.
+- $v_1$ (invariant direction): Transformations along this eigenvector preserve the constraint surface. At the PU fixed point ($d_0=2a^2$, $a=2$), the ratio $(d_0 + 1)/(2a) = 9/4$ encodes the dimension-kernel relationship.
 - $v_2$ (scaling direction): Pure interface scaling. Transformations along $(0,1)^T$ affect only $M$, not $d_0$.
 
 #### P.7.4.4 The Encoding Interpretation
@@ -1485,7 +1503,7 @@ $$v_1 = \begin{pmatrix} d_0 + 1 \\ 2a \end{pmatrix} \quad (\lambda_1 = 1), \qqua
 **Remark P.7.4: Constraint Encoding.** The matrix $L(a)$ encodes the complete constraint structure:
 - **Input:** $(d_0, 1)$ — Hilbert dimension and unity
 - **Output:** $(d_0, M)$ — Hilbert dimension and interface modes
-- **Constraint:** $\lambda_2 = -d_0$ — Landauer-SPAP relation in spectrum
+- **Constraint:** $\lambda_2 = -2a^2 = -d_0$ (Theorem Z.2) — Landauer-SPAP relation in spectrum
 - **Thermodynamics:** $\varepsilon=\ln 2 \Rightarrow a=2$ — Landauer pointer dimension encoded in matrix entries
 
 The matrix "compiles" the chain:
@@ -1503,7 +1521,7 @@ into a single linear transformation whose spectrum contains thermodynamic constr
 
 **Proposition P.7.4 (Rigidity Analysis).** The constraint matrix reveals rigid aspects:
 - **Form rigid:** $L(a) = \begin{pmatrix} 1 & 0 \\ 2a & -2a^2 \end{pmatrix}$ from $M = 2a(d_0 - a)$
-- **Eigenvalue rigid:** $\lambda_2 = -d_0$ from $d_0 = 2a^2$
+- **Eigenvalue rigid:** $\lambda_2 = -2a^2 = -d_0$ arises from $d_0 = 2a^2$
 - **Thermodynamically fixed:** $a = 2$ from $\varepsilon = \ln 2$ (Theorem 31)
 - **Logically fixed:** $d_0 = 8$ from $K_0 = 3$ bits (Theorem 15)
 
@@ -1511,17 +1529,17 @@ No free parameters enter. The matrix $L(2)$ is fully determined.
 
 **Corollary P.7.4.1 (Counterfactual Analysis).** For hypothetical universes:
 
-| $\varepsilon$ | $a$ (minimal admissible) | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | $\lambda_2$ | $K(D) = M$? |
-|:--------------|:-------------------:|:------------:|:---------------:|:-----------:|:-----------:|
-| $\ln 2$ | 2 | 8 | 24 | $-8$ | $D = 4$ ✓ |
-| $\ln 3$ | 3 | 18 | 90 | $-18$ | No integer $D$ |
-| $\ln \sqrt{2}$ | $\sqrt{2}$ | 4 | $4\sqrt{2}$ | $-4$ | Non-integer $M$ |
+| $\varepsilon$ | $a$ (minimal admissible) | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | $\lambda_2$ |           $K(D) = M$?          |
+| :------------ | :----------------------: | :----------: | :-------------: | :---------: | :----------------------------: |
+| $\ln 2$       |             2            |       8      |        24       |     $-8$    |            $D = 4$ ✓           |
+| $\ln 3$       |             3            |      18      |        90       |    $-18$    |  No (since $K(6)=72<K(7)=126$) |
+| $\ln 4$       |             4            |      32      |       224       |    $-32$    | No (since $K(7)=126<K(8)=240$) |
 
-Only $\varepsilon = \ln 2$ yields integer $M$ matching a kissing number.
+Only $\varepsilon = \ln 2$ yields $M$ equal to a kissing number (indeed $K(4)=24$).
 
 #### P.7.4.6 Summary
 
-The Landauer constraint matrix $L(a)$ provides compact notation for the foundational derivation chain. This matrix formulation offers notational convenience but no additional physical content beyond Theorems Z.1 and Z.5; the eigenvalue $\lambda_2 = -d_0$ is a consequence of the matrix construction rather than an independent result.
+The Landauer constraint matrix $L(a)$ provides compact notation for the foundational derivation chain. This matrix formulation offers notational convenience but no additional physical content beyond Theorems Z.1 and Z.5; the eigenvalue $\lambda_2 = -2a^2$ (hence $\lambda_2 = -d_0$ under $d_0=2a^2$, Theorem Z.2) is a consequence of the matrix construction rather than an independent result.
 
 # P.8 On the Nature of Emergent Spacetime
 
@@ -3265,7 +3283,7 @@ V_{eff}^{sym}(G) := \lim_{\delta \to 0} V_{\text{op}}(G;\delta),
 $$
 when the limit exists in $[0,\infty]$.
 
-Operational predictions are expressed in terms of configurations in the support of the low-noise stationary measure (Theorem D.5, Appendix D). A symmetry is compatible with resolution-independent PU predictions only if $V_{eff}^{sym}(G)<\infty$; if $V_{eff}^{sym}(G)=\infty$ the symmetry cannot be maintained across refinements and is excluded from the PCE equilibrium set.
+Operational predictions are expressed in terms of configurations in the support of the low-noise stationary measure (Theorem D.5, Appendix D). When a symmetry action must be instantiated uniformly along the operational refinement $\delta\to 0$, it is compatible with a resolution-independent PU description only if $V_{eff}^{sym}(G) < \infty$; if $V_{eff}^{sym}(G) = \infty$, the action cannot be implemented as an exact symmetry uniformly across refinements (though it may still appear as an effective symmetry at finite $\delta$).
 
 ### Theorem P.13.19 (Continuous Symmetry Penalty)
 
@@ -3274,7 +3292,7 @@ $$
 V_{eff}^{sym}(G) = +\infty
 $$
 
-For discrete (finite) groups:
+Thus, any non-trivial continuous Lie group action cannot be maintained as an exact symmetry uniformly in the refinement limit $\delta\to 0$ (though it may still appear as an effective symmetry at finite operational resolution). For discrete (finite) groups:
 $$
 V_{eff}^{sym}(G_{\text{discrete}}) < \infty
 $$
@@ -3359,56 +3377,36 @@ where $(V_{\Lambda_{24}})^\theta$ is the $\theta$-fixed subspace and $(V_{\Lambd
 
 ## P.13.9 The Z₂ Structure from PCE
 
-### Theorem P.13.23 (Intrinsic Parity of PCE-Attractor)
+### Theorem P.13.23 (Canonical $\mathbb{Z}_2$ from the PCE-Attractor)
 
-The PCE-Attractor has an intrinsic order-2 grading.
+The irreducible SPAP merge/reset operation that defines the PCE fixed point induces a canonical order-2 involution, and hence an intrinsic $\mathbb{Z}_2$ grading at the attractor.
 
-*Proof.*
+*Proof.* Lemma J.1 identifies an irreducible 1-bit logical erasure (a $2\to 1$ map) in the SPAP cycle, which at the PCE fixed point saturates Landauer with $\varepsilon=\ln 2$. Let
+$$
+r:\{0,1\}\to\{\mathrm{ready}\}
+$$
+denote this erasure map on the erased bit. There is a unique non-identity permutation $s:\{0,1\}\to\{0,1\}$ satisfying $r\circ s=r$, namely the bit-flip $s(0)=1$, $s(1)=0$. Hence the erasure step canonically carries the group $\{e,s\}\cong \mathbb{Z}_2$.
 
-**Step 1 (Attractor structure).** The PCE-Attractor has the form:
-$$\rho_0 = \frac{1}{2}|000\rangle\langle 000| + \frac{1}{2}|111\rangle\langle 111|$$
-
-**Step 2 (Z₂ structure).** This structure provides a distinguished order-2 parity:
-- Two equal nonzero eigenvalues
-- Supported on two orthogonal states
-- Natural $\mathbb{Z}_2$ action swapping the two states
-
-**Step 3 (Swap operator).** The swap operator $S: |000\rangle \leftrightarrow |111\rangle$ satisfies:
-- $S^2 = I$ ($\mathbb{Z}_2$ structure)
-- $S\rho_0 S^\dagger = \rho_0$ ($\rho_0$ is $S$-invariant)
-- $S = X \otimes X \otimes X$ where $X$ is the Pauli-X gate $\square$
+In the quantum realization, $s$ lifts to a unitary involution $S$ on the corresponding two-dimensional logical subspace, with $S^2=I$, and the $\pm 1$ eigenspace decomposition of $S$ defines a $\mathbb{Z}_2$ grading (even/odd under the intrinsic flip) associated to the SPAP merge/reset that defines the PCE attractor. $\square$
 
 ---
 
 ### Theorem P.13.24 (Canonicity Correspondence)
 
-The $\mathbb{Z}_2$ structure of the PCE-Attractor corresponds canonically to the $\theta$-orbifold structure.
+The canonical $\mathbb{Z}_2$ symmetry arising from the SPAP merge/reset corresponds, in the Leech-lattice vacuum selected by PCE, to the lattice inversion $v\mapsto -v$ (and its canonical lift to the lattice VOA).
 
-*Statement.* The correspondence is one of canonicity:
-
-1. **The PCE-Attractor supplies a distinguished order-2 parity** (the $\mathbb{Z}_2$ swapping $|000\rangle \leftrightarrow |111\rangle$).
-
-2. **In the VOA/lattice realization, the distinguished parity compatible with the lattice/Heisenberg structure is exactly $\theta$** induced from $(-1)$ on $\Lambda$.
-
-3. **Both are "the canonical $\mathbb{Z}_2$"** in their respective contexts.
+| Structure                    | Ambient symmetry group              | Canonical $\mathbb{Z}_2$ | Action                     |
+| ---------------------------- | ----------------------------------- | ------------------------ | -------------------------- |
+| SPAP erasure $r$             | $\{\pi\in S_2: r\circ \pi=r\}$     | $\{e,s\}$               | flips $0\leftrightarrow 1$ |
+| Leech lattice $\Lambda_{24}$ | $\mathrm{Aut}(\Lambda_{24}) = Co_0$ | $\{I,-1\}$              | sends $v\mapsto -v$        |
 
 *Proof.*
 
-**Step 1 (PCE-Attractor $\mathbb{Z}_2$).** The PCE-Attractor $\rho_0 = \frac{1}{2}|000\rangle\langle 000| + \frac{1}{2}|111\rangle\langle 111|$ is invariant under the swap $S: |000\rangle \leftrightarrow |111\rangle$. This $S$ is the unique non-trivial involution that acts on the support of $\rho_0$ by exchanging the two nonzero-eigenvalue basis states. Hence $\mathbb{Z}_2 = \{I, S\}$ is the canonical discrete symmetry acting non-trivially on the active subspace.
+1. Because $r$ has exactly two inputs and one output, the condition $r\circ \pi=r$ leaves only two possibilities: $\pi=e$ and the bit-flip $s$. Thus $\{e,s\}$ is the unique nontrivial order-2 symmetry intrinsic to the irreducible SPAP erasure at $\varepsilon=\ln 2$.
+2. For the Leech lattice, the center of $\mathrm{Aut}(\Lambda_{24})=Co_0$ is $\{\pm 1\}$, so $-1$ is the unique nontrivial central involution and acts by pairing each lattice vector with its inverse $v\mapsto -v$.
+3. The PCE fixed point contains an irreducible binary identification (the SPAP $2\to 1$ erasure). In a lattice realization of the vacuum degrees of freedom, this intrinsic binary identification must be implemented by a canonical order-2 lattice automorphism whose action pairs elements into $\{v,-v\}$ orbits. By uniqueness in (2), this is exactly $v\mapsto -v$, with its canonical lift to the lattice VOA (Theorem P.13.21).
 
-**Step 2 (Lattice $\mathbb{Z}_2$).** For any even lattice $\Lambda$, the involution $(-1): v \mapsto -v$ is the unique central element of order 2 in $\text{Aut}(\Lambda) \cap O(n)$ (Proposition P.13.20a). For the Leech lattice, $(-1) \in Z(\text{Co}_0)$ where $\text{Co}_0 = \text{Aut}(\Lambda_{24})$.
-
-**Step 3 (Categorical correspondence).** Both $\mathbb{Z}_2$ structures are characterized by the same universal property: each is the unique central order-2 element in the relevant automorphism group. This categorical equivalence establishes the correspondence:
-
-| Context | Ambient Group | Canonical $\mathbb{Z}_2$ |
-|---------|---------------|-------------------------|
-| PCE-Attractor | Involutions on $\text{supp}(\rho_0)$ | $\{I, S\}$ |
-| Leech lattice | $\text{Co}_0 = \text{Aut}(\Lambda_{24})$ | $\{I, (-1)\}$ |
-| Lattice VOA | $\text{Aut}(V_{\Lambda_{24}})$ | $\{I, \theta\}$ |
-
-**Step 4 (Lift consistency).** The lift $(-1) \mapsto \theta$ (Theorem P.13.21) preserves centrality: $\theta$ commutes with all VOA automorphisms. The correspondence $S \leftrightarrow (-1) \leftrightarrow \theta$ identifies the canonical central involution in each setting: the unique non-trivial involution acting on the support of $\rho_0$, the unique central involution for the indecomposable Leech lattice, and its canonical lift to the VOA. $\square$
-
-**Epistemic Status:** Framework-derived. The correspondence identifies the unique central involution in each context rather than constructing a specific matrix isomorphism. This is a canonicity claim establishing that both structures represent the distinguished order-2 element in their respective settings.
+Thus the FLM orbifold involution is fixed by the intrinsic binary merge/reset structure at the PCE fixed point. $\square$
 
 ---
 
@@ -3732,20 +3730,21 @@ The structural relation $d_0 = 2a^2$ is derived in Theorem Z.2 (Appendix Z, Sect
 
 | $\varepsilon$ | $a$ (minimal admissible) | $K_0 = 1 + 2\varepsilon/\ln 2$ | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | Viability |
 |---------------|---------------------|-------------------------------|--------------|-----------------|-----------|
-| $\ln 2$ | 2 | 3 (integer) | 8 | 24 | Viable: Leech $\to \mathbb{M}$ |
+| $\ln 2$ | 2 | 3 (integer) | 8 | 24 | Viable: PU fixed point |
 | $\ln 3$ | 3 | 4.17 (non-integer) | 18 | 90 | Non-viable: $K_0 \notin \mathbb{Z}$ |
-| $\ln \sqrt{2}$ | $\sqrt{2}$ | 2 | 4 | 7.31 | Non-viable: $M \notin \mathbb{Z}$ |
-| $\ln 4$ | 4 | 5 (integer) | 32 | 224 | Non-viable: no unique rootless lattice |
+| $\ln 4$ | 4 | 5 (integer) | 32 | 224 | Non-viable: MCC fails ($K(D)\neq 224$) and no unique lattice selection |
 
-The counterfactual analysis reveals three distinct failure modes for $\varepsilon \neq \ln 2$:
+Only $\varepsilon=\ln 2$ satisfies simultaneously:
 
-1. **Non-integer $K_0$**: By Corollary Z.1, $K_0 = 1 + 2\varepsilon/\ln 2$. For $\varepsilon = \ln 3$, this gives $K_0 \approx 4.17$. Since SPAP requires an integer number of binary registers (Theorem 15), non-integer $K_0$ makes the SPAP cycle unimplementable.
+1. Integer $K_0$ (logical bits).
+2. Mode-channel matching $K(D)=M$ (MCC), yielding $K(4)=24$.
+3. Unique rootless even unimodular lattice selection (Niemeier at dimension 24).
 
-2. **Non-integer $M$**: The mode count $M = 2ab = 2a(d_0 - a)$ must be integer for discrete lattice structure. For $\varepsilon = \ln\sqrt{2}$, we get $M \approx 7.31$, precluding lattice formation.
+All other values violate at least one of these constraints:
 
-3. **No unique rootless lattice**: Even when $K_0$ and $M$ are integers, the resulting dimension may lack a unique rootless even unimodular lattice. For $\varepsilon = \ln 4$, we get $M = 224$, but dimension 224 has no unique rootless member among its even unimodular lattices.
-
-Only $\varepsilon = \ln 2$ satisfies all three requirements simultaneously: $K_0 = 3$ (integer), $M = 24$ (integer), and dimension 24 has a unique rootless even unimodular lattice (Leech). This triple constraint, derived from the structural relation of Theorem Z.2, explains why $\varepsilon = \ln 2$ is not merely selected but required by the framework's internal consistency.
+* **Non-integer $K_0$**: SPAP cannot be implemented with fractional bits.
+* **Mode-channel mismatch**: even when $K_0$ is integer, the induced $M$ can fail $K(D)=M$ (e.g., $224$ lies strictly between $K(7)=126$ and $K(8)=240$, so cannot equal any $K(D)$).
+* **No uniqueness theorem beyond dimension 24**: Niemeier uniqueness of a rootless even unimodular lattice is specific to dimension $24$, so the PCE vacuum-selection mechanism does not yield a unique lattice for larger $d_0$.
 
 The Monster group therefore characterizes the vacuum structure that PCE optimization selects—the unique ground state consistent with the predictive foundations.
 
