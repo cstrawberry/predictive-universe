@@ -35,7 +35,7 @@ A compact statement of the forcing chain is:
 
 $$
 \begin{aligned}
-&\text{(1) Cogito: } \exists\, \mathcal{C} \text{ such that } \mathcal{C} \text{ is conscious awareness (Axiom P.2.1),} \\
+&\text{(1) Cogito: } \exists\, \mathcal{C} \text{ such that } \mathcal{C} \text{ is conscious awareness (Foundational Certainty P.2.1),} \\
 &\text{(2) Prediction: } \mathcal{C} \text{ implements a predictive map } \pi : \mathcal{H}_t \to \mathcal{O}_{t+1} \text{ (Definition P.3.1; Section P.3.1),} \\
 &\text{(3) SPAP/RUD: no total computable } \pi \text{ satisfies } \pi = \text{SelfPredict}(\pi) \text{ (Theorems 10–11; Theorem A.2.3),} \\
 &\text{(4) Landauer: the SPAP cycle requires a 2-to-1 state merge with } E_{\min} \ge k_B T \ln 2 \text{ (Theorem 31; Appendix J),} \\
@@ -106,7 +106,7 @@ The framework's philosophical arguments (developed throughout this appendix) pro
 
 The quest for an indubitable foundation for knowledge begins with René Descartes' methodical skepticism [Descartes 1641]. As Descartes revealed through his method of radical doubt, while we can question everything else—external perceptions, memories, even logical deductions—the existence of doubt itself, and thus consciousness, is self-verifying. The doubter must exist to doubt. This gives us our first foothold: *Cogito ergo sum*—"I think, therefore I am." This self-verifying loop of awareness provides the sole, unshakeable premise from which a theory of reality can be constructed without arbitrary assumptions about a pre-existing material world.
 
-**Axiom P.2.1 (Cogito Certainty).** There exists at least one locus of conscious awareness $\mathcal{C}$ whose existence is indubitable under methodological doubt. This axiom concerns epistemic certainty only and introduces no ontological commitments beyond the existence of conscious awareness.
+**Foundational Certainty P.2.1 (Cogito).** There exists at least one locus of conscious awareness $\mathcal{C}$ whose existence is indubitable under methodological doubt. Unlike the framework's operational axioms (Axioms 1–3), this is not a postulate but a self-verifying truth: its denial presupposes the very awareness it denies. It concerns epistemic certainty only and introduces no ontological commitments beyond the existence of conscious awareness.
 
 ### P.2.2 The Hard Problem of Consciousness
 
@@ -486,7 +486,7 @@ This is not a claim that any specific technology is inevitable; it is a structur
 
 The essence of "thinking"—the activity that the Cogito assures us exists—is, upon examination, fundamentally predictive. Every conscious mental act—perception, belief formation, planning, even creativity—can be understood as a form of prediction. Perception involves predicting the cause of sensory inputs based on prior models, not passively receiving raw data. Memory serves prediction by storing patterns useful for anticipating future events. The self, in this view, is the system's predictive model of its own states and behaviors.
 
-**Definition P.3.1 (Predictive Operation).** A predictive system is any process implementing a map $\pi : \mathcal{H}_t \to \mathcal{O}_{t+1}$, where $\mathcal{H}_t$ denotes informational histories accessible at time $t$ and $\mathcal{O}_{t+1}$ denotes equivalence classes of anticipated outcomes at $t+1$. The awareness $\mathcal{C}$ established by Axiom P.2.1 is predictive iff it performs state updates $s_{t+1} = U(s_t, e_t)$ with $U$ chosen to minimize predictive error under finite resource constraints. This formal structure is operationalized by the Fundamental Predictive Loop (Definition 4) and the Prediction Optimization Problem (Axiom 1).
+**Definition P.3.1 (Predictive Operation).** A predictive system is any process implementing a map $\pi : \mathcal{H}_t \to \mathcal{O}_{t+1}$, where $\mathcal{H}_t$ denotes informational histories accessible at time $t$ and $\mathcal{O}_{t+1}$ denotes equivalence classes of anticipated outcomes at $t+1$. The awareness $\mathcal{C}$ established by Foundational Certainty P.2.1 is predictive iff it performs state updates $s_{t+1} = U(s_t, e_t)$ with $U$ chosen to minimize predictive error under finite resource constraints. This formal structure is operationalized by the Fundamental Predictive Loop (Definition 4) and the Prediction Optimization Problem (Axiom 1).
 
 ### P.3.2 The Space of Becoming: The Operational Domain of Prediction
 
