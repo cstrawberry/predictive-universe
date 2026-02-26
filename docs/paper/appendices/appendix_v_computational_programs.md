@@ -2,7 +2,7 @@
 
 This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program evaluates the PU prediction $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ using the derived instanton complexity $\kappa=141.5$ (Appendix U) and the PU-theory prefactor $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b); the inversion form is included as a numerical consistency check that converts the observed $\Lambda L_P^2$ into $A_{\text{eff}}^{(\text{obs})}$ or an effective $\kappa$ under a chosen prefactor. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap that has zero continuously adjustable parameters once the baseline MPU invariants are computed from a specified model.
 
-**Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=g_e^2/(4\pi)$.
+**Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=e^2/(4\pi)$.
 
 ## V.0 Reproducibility Contract and Uncertainty Budgets
 
@@ -98,7 +98,7 @@ $$
 
 consistent with the PU-theory estimate $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b).
 
-The corresponding instanton action, from Equation (V.1), is
+For the PU-theory value $\kappa=141.5$ (Theorem U.16), the corresponding instanton action from Equation (V.1) is
 
 $$
 S_{\mathrm{inst}} = 2\kappa = 283~\text{nats} = 408.3~\text{bits}. \tag{V.7}
@@ -116,7 +116,7 @@ $$
 
 | $A_{\text{eff}}$ | 0.5     | **1.0**     | 2.0     | $\exp(1)\approx 2.718$ | 3.0     |
 |:------:|:-------:|:----------:|:-------:|:---------------------:|:-------:|
-| $\kappa$ | 141.89 | **141.54** | 141.20 | 141.04 | 140.99 |
+| $\kappa$ | 141.20 | **141.54** | 141.89 | 142.04 | 142.09 |
 
 Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts $\kappa$ by less than 1, whereas the derived $\kappa=141.5$ is fixed by the Golay-Steiner structure (Theorem U.16).
 
@@ -162,14 +162,14 @@ $$
 
 ### V.2.5 From $u^*$ to the Thomson-Limit $\alpha$
 
-The Predictive Ward Identity (Theorem Z.14), together with QFI geometric rigidity ($\lambda_i=1$, Theorem Z.5) and capacity saturation ($u^*=2^{1/8}-1$, Theorem Z.7), uniquely fixes the bulk normalization constant $\kappa^*_{\mathrm{bulk}}=1$ by obstructing the field-rescaling freedom present in standard $U(1)$ gauge theory. The physical Thomson-limit coupling includes a discrete-to-continuous interface correction derived in Appendix Z (Section Z.17):
+The Predictive Ward Identity (Theorem Z.14), together with QFI geometric rigidity ($\lambda_i=1$, Theorem Z.5) and capacity saturation (Theorem Z.7), uniquely fixes the bulk normalization constant $\kappa^*_{\mathrm{bulk}}=1$ by obstructing the field-rescaling freedom present in standard $U(1)$ gauge theory. The physical Thomson-limit coupling includes the discrete-to-continuous interface dressing (Section Z.17) and the curvature-controlled correction (Theorems Z.25–Z.26). Define
 $$
-\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \Delta^{(2)}
+\Delta^{(2)} := \frac{\pi u^*}{24\sqrt{K_0}}\left(1-\frac{u^{*2}}{6}\right).
 $$
-where $\Delta^{(2)} = \pi u^*/(24\sqrt{K_0})$ is the second-order curvature correction from Bures metric geometry (Theorem Z.25). For sub-ppm precision, Appendix Z includes the third-order geodesic correction factor $(1 - u^{*2}/6) \approx 0.9986$ from SU(2) geometry, yielding $\alpha^{-1} \approx 137.036092$ (Section Z.27.8, Theorem Z.26). With $u^* = 2^{1/8}-1$ and $K_0 = 3$:
+With $u^* = 8^{1/24}-1 = 2^{1/8}-1$ and $K_0 = 3$:
 
 $$
-\boxed{\alpha^{-1} \approx 137.036092 \pm 0.000050}
+\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \Delta^{(2)} + O(u^{*5}) \approx 137.036092 \pm 0.000050}
 \tag{V.10}
 $$
 This is a Thomson-limit prediction with zero continuously adjustable parameters within the PU mapping contract. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and mapping/systematic contributions.

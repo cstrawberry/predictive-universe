@@ -22,7 +22,7 @@ Physical action counts SPAP entropy production. The constant $\hbar$ scales the 
 
 **Gravitational constant $G$:** Rigorously derived from the thermodynamic properties of the MPU network at causal boundaries (Section 12). As established in Appendix E (Theorem E.6), 
 $$G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$$
-**(Equation E.10)**. Here, $\delta$ is the effective MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is a correlation factor, and $C_{\max}$ is the ND-RID channel capacity (limited by $\varepsilon$, Theorem E.2). These parameters determine the effective surface density of channels $\sigma_{eff\_link} = \chi / (\eta \delta^2)$ (Theorem E.3). The fundamental relationship **(Equation E.8)** is:
+**(Equation E.9)**. Here, $\delta$ is the effective MPU spacing, $\eta$ is a geometric packing factor, $\chi$ is a correlation factor, and $C_{\max}$ is the ND-RID channel capacity (limited by $\varepsilon$, Theorem E.2). These parameters determine the effective surface density of channels $\sigma_{eff\_link} = \chi / (\eta \delta^2)$ (Theorem E.3). The fundamental relationship **(Equation E.7)** is:
 $$\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}$$
 This relationship is further constrained by the PCE-driven optimization of these parameters in the vacuum state. Appendix Q provides the complete calculation (with zero continuously adjustable parameters) of the ratio $\delta/L_P \approx 2.355$ through minimization of the global PCE potential, linking the microscopic MPU scale to the emergent Planck scale. The derivation proceeds by constructing $V_{vac}(\delta, \chi, \eta, C_{\max})$ and finding the unique stable equilibrium satisfying all framework constraints (Appendix Q, Equations Q.1-Q.18).
 
@@ -30,7 +30,7 @@ This relationship is further constrained by the PCE-driven optimization of these
 $$\boxed{D = 4}$$
 
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000050}$$
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. This derivation uses zero continuously adjustable parameters and proceeds through a seven-stage chain: MPU invariants (d₀ = 8, ε = ln 2) → active kernel dimension a = 2 via Physical Instantiation Principle (Theorem Z.1) → interface mode count M = 2ab = 24 (Theorem Z.5) → PCE-Attractor orbit Gr(2,8) → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from Bures metric geometry, and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension **D = 4** through two independent mechanisms: mode-channel matching (Appendix Z, Theorem Z.11) and external stability requirements (Appendix G, Section G.8.2), providing multiply-determined confirmation of dimensional selection.
+where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. This derivation uses zero continuously adjustable parameters and proceeds through a seven-stage chain: MPU invariants ($d_0 = 8$, $\varepsilon = \ln 2$) → active kernel dimension $a = 2$ via Physical Instantiation Principle (Theorem Z.1) → interface mode count $M = 2ab = 24$ (Theorem Z.5) → PCE-Attractor orbit $\mathrm{Gr}(2,8)$ → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from Bures metric geometry, and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension **D = 4** through two independent mechanisms: mode-channel matching (Appendix Z, Theorem Z.11) and external stability requirements (Appendix G, Section G.8.2), providing multiply-determined confirmation of dimensional selection.
 
 **Strong coupling $g_s$ and weak coupling $g_w$:** These relate to the effective "stiffness" or cost coefficients ($\kappa_F$ in Equation G.5.2) in the emergent gauge field actions (Appendix G), determined by PCE optimization balancing the benefit of predictive coherence provided by gauge fields against their resource cost. The unified gauge structure $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ with dimension 12 emerges from the thermodynamically optimal partition $H_0 \cong \mathbb{C}^2 \oplus \mathbb{C}^6$ (Appendix G, Proposition G.M1; Appendix Z, Theorem Z.1). At the PCE-optimal attractor, the unified coupling satisfies $g_U^2 = \pi/6$ with $\alpha_U^{-1} = 24$ (Appendix T, Theorem T.39a), derived from first principles via Bures holonomy on $\mathrm{Gr}(2,8)$.
 
@@ -629,11 +629,15 @@ The preservation of Type II CP violation is essential for baryogenesis via the S
 **Theorem K.6.19 (Baryon Asymmetry).** The cosmological baryon asymmetry is:
 $$\eta_B = (6.2 \pm 0.5) \times 10^{-10}$$
 
-*Proof.* By Theorem Y.9, the baryon asymmetry is determined by the baryogenesis complexity:
-$$\kappa_B = \frac{\kappa_{\text{EW}}}{2} + \frac{\varepsilon}{N_g} = 19.25 + 0.23 = 19.48$$
-where $\kappa_{\text{EW}} = 38.5$ is the electroweak complexity (Theorem T.5), $\varepsilon = \ln 2$ is the Landauer cost (Theorem 31), and $N_g = 3$ is the generation number (Proposition R.4.2).
-
-The CP asymmetry factor saturates: $\mathcal{F}_{\text{CP}} = \tanh(\mathcal{S} \sin\delta) \to 1$ for $\mathcal{S} \sin\delta \approx 4.4 \gg 1$. The resulting prediction $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ agrees with the Planck observation $\eta_B^{\text{obs}} = (6.12 \pm 0.04) \times 10^{-10}$ [Planck Collaboration 2020a] within the theoretical uncertainty. ∎
+*Proof.* Appendix Y provides the master formula (Theorem Y.9, Equation (Y.12)):
+$$
+\eta_B = \mathcal{C}_{eff} \cdot \mathcal{F}_{CP} \cdot f_{wash} \cdot e^{-\kappa_B}.
+$$
+The baryogenesis complexity is $\kappa_B = \kappa_{CP} + \kappa_{gen}$ with $\kappa_{CP} = \kappa_{EW}/2 = 19.25$ (Theorem T.5) and $\kappa_{gen} = \varepsilon/N_g = (\ln 2)/3 \approx 0.231$, hence $\kappa_B = 19.48$ (Appendix Y, Theorem Y.8.1). The CP factor is $\mathcal{F}_{CP}=\tanh(\mathcal{S}\sin\delta)$ (Appendix Y, Theorem Y.9) with $\mathcal{S}=1/(2\pi\alpha_W)\approx 4.77$ and $\delta=66.7^\circ$ (Theorem K.6.18), so $\mathcal{S}\sin\delta\approx 4.4$ and $\mathcal{F}_{CP}\approx 1$. The efficiency coefficient is $\mathcal{C}_{eff}=\frac{c_{sph}}{2N_g}\mathcal{S}f_{neq}$ (Appendix Y, Proposition Y.9.1) with $c_{sph}=28/79$, $N_g=3$, and $f_{neq}\approx 1$, giving $\mathcal{C}_{eff}\approx 0.282$. With $f_{wash}\approx 0.63\pm 0.05$ (Appendix Y, Proposition Y.9.2) and $e^{-\kappa_B}=e^{-19.48}\approx 3.49\times 10^{-9}$, one obtains
+$$
+\eta_B \approx 0.282 \times 1 \times 0.63 \times 3.49\times 10^{-9} = 6.2\times 10^{-10},
+$$
+which yields the stated uncertainty and matches $\eta_B^{\text{obs}} = (6.12 \pm 0.04) \times 10^{-10}$ [Planck Collaboration 2020a]. ∎
 
 ### K.6.13 Experimental Predictions
 

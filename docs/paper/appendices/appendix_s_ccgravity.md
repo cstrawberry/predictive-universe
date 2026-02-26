@@ -40,7 +40,7 @@ $$
 
 ## S.2 The CC-Context Stress-Energy Tensor $\Delta T_{\mu\nu}^{(CC)}$
 
-Assume the context state occupies volume $V_S$. We model its effective stress-energy contribution as a fluid. Given that the internal signaling required for maintaining predictive coherence is likely relativistic (propagating at or near $c$), an equation-of-state parameter $w_c \approx 1/3$ (characteristic of a relativistic gas or radiation) is physically plausible. The energy density, time-averaged over the context coherence timescale $\tau_c$, is:
+Assume the context state occupies volume $V_S$. We model its effective stress-energy contribution as a perfect fluid with equation-of-state parameter $w_c:=p_{context}/u_{context}\in[0,1]$. The radiation-like case $w_c=1/3$ (relativistic internal signaling) can be substituted where needed without changing any derivations. The energy density, time-averaged over the context coherence timescale $\tau_c$, is:
 $$
 u_{context} = \frac{P_{context} \tau_c}{V_S}, \qquad p_{context} = w_c u_{context}
 \tag{S.6}
@@ -88,9 +88,44 @@ $$
 \tag{S.12}
 $$
 
-where $L$ is the characteristic spatial scale (e.g., $L \sim c\tau_c$) and $c_1$ is a geometric factor of order unity.
+where $L$ is the characteristic spatial scale (e.g., $L \sim c\tau_c$) and $c_1$ is a dimensionless factor of order unity set by geometry and the phase-sensitivity of the relevant superposition degrees of freedom.
 
-*Proof.* CP-TP local maps commute with partial trace (Peres & Terno, 2004): $\text{tr}_A((\Phi_A^{(\epsilon)} \otimes \text{id}_B)(\rho_{AB})) = \text{tr}_A(\rho_{AB})$. Thus subsystem $B$'s marginal density operator is invariant under local operations on $A$, ensuring no deterministic signaling. The bound in Equation S.12 follows from translating the energy budget constraint (Equations S.5-S.6) into probability modifications via first-order perturbation theory in the weak-field limit. Positivity of the density operator and the norm bound on the channel difference $\|\Phi_A^{(\epsilon)} - \mathcal{E}_A\|_{1 \to 1} \le \alpha$ cap the operational effect. The completely bounded (diamond) norm (Kitaev, 1997; Aharonov et al., 1998) could also be used, but the induced trace norm is sufficient for this argument. $\square$
+*Proof.* For each $j$, define
+$$
+p_j^{(\epsilon)} := \sum_i \text{tr}\!\left[(\Phi_A^{(\epsilon)} \otimes \text{id}_B)(\rho_{AB}) (E_i \otimes F_j)\right].
+$$
+Using completeness $\sum_i E_i = I_A$, we have
+$$
+p_j^{(\epsilon)}=\text{tr}\!\left[(\Phi_A^{(\epsilon)} \otimes \text{id}_B)(\rho_{AB}) (I_A \otimes F_j)\right].
+$$
+Let $\Phi_A^{(\epsilon)\dagger}$ denote the Hilbert–Schmidt adjoint. Then
+$$
+p_j^{(\epsilon)}=\text{tr}\!\left[\rho_{AB}\big(\Phi_A^{(\epsilon)\dagger}(I_A)\otimes F_j\big)\right].
+$$
+Trace preservation of $\Phi_A^{(\epsilon)}$ implies unitality of its adjoint, $\Phi_A^{(\epsilon)\dagger}(I_A)=I_A$, hence
+$$
+p_j^{(\epsilon)}=\text{tr}\!\left[\rho_{AB}(I_A\otimes F_j)\right]=\text{tr}\!\left[\rho_B F_j\right],
+$$
+which is Equation S.11.
+
+For the operational bound, let $M$ be any POVM element with $0\le M\le I$ on $AB$, and set $\Delta\rho_{AB}:=((\Phi_A^{(\epsilon)}-\mathcal E_A)\otimes \text{id}_B)(\rho_{AB})$. Then
+$$
+|\Delta P|=|\text{tr}(M\Delta\rho_{AB})|
+\le \|M\|_\infty\,\|\Delta\rho_{AB}\|_1
+\le \|\Phi_A^{(\epsilon)}-\mathcal E_A\|_{1\to1}\,\|\rho_{AB}\|_1
+\le \alpha,
+$$
+since $\|M\|_\infty\le 1$ and $\|\rho_{AB}\|_1=1$.
+
+Under the perfect-fluid model (Equation S.8), the Newtonian field of a uniform source implies a potential variation across a characteristic scale $L$ bounded by
+$$
+\frac{|\Delta\Phi|}{c^2}\le c_1\frac{G u_{context} L^2}{c^4}
+$$
+in the weak-field regime (with $c_1=\mathcal O(1)$ absorbing the geometry and the phase-sensitivity scale defining $\tau_c$). The induced proper-time spread over a coherence interval is $\Delta\tau/\tau_c = |\Delta\Phi|/c^2$, which yields a dephasing channel $\mathcal D$ on the relevant local superposition degrees of freedom with $\|\mathcal D-\text{id}\|_{1\to1}\le |\Delta\Phi|/c^2$. Therefore, for any measurement outcome,
+$$
+|\Delta P|\le \|\mathcal D-\text{id}\|_{1\to1}\le c_1\frac{G u_{context} L^2}{c^4}.
+$$
+Combining the two bounds gives Equation S.12. $\square$
 
 ## S.3 Gravitational Self-Disruption
 
@@ -228,7 +263,7 @@ where $R_S = (3V_S/4\pi)^{1/3}$ is the characteristic radius of the aggregate. A
 1. **Information-theoretic constraint** (Theorem 39): Prevents deterministic FTL signaling by ensuring $|\Delta P| < 0.5$
 2. **Gravitational collapse limit**: Prevents black hole formation by ensuring $r_s < R_S$ remains satisfiable
 
-The specific value $\alpha_{CC,\max} < 0.5$ ensures operation well below both thresholds. To see why this particular value emerges, consider the weak-field approximation validity condition:
+Operational causality (Theorem 39) fixes the universal ceiling $\alpha_{CC,\max}<0.5$. Independently, for any finite system the gravitational constraints impose additional system-dependent ceilings strictly below $\alpha$ because $P_{context}(\text{CC})$ diverges as $\text{CC}\to\alpha$. To state the perturbative requirements explicitly, consider the weak-field validity condition:
 $$
 \frac{\Phi_{context}}{c^2} = \frac{G M_{context}}{c^2 R_S} \ll 1
 \tag{S.32}
@@ -240,10 +275,7 @@ $$
 \tag{S.33}
 $$
 
-From Equation S.21, this is precisely the condition that $\text{CC}_{eff} \approx \text{CC}$, i.e., that gravitational self-dephasing remains a small correction rather than a dominant effect. The bound $\text{CC} < 0.5$ ensures substantial safety margin below the regime where:
-- Gravitational effects become nonlinear (requiring full GR, not weak-field approximation)
-- Schwarzschild radius approaches system size
-- Deterministic signaling becomes possible
+Together with collapse avoidance $r_s<R_S$ (Equation S.31), these conditions enforce an effective operational ceiling $\text{CC}<\text{CC}_{grav}<\alpha$ for any finite system. Theorem S.2 makes this explicit.
 
 **Theorem S.2 (Unified causality-gravity bound).**
 
@@ -255,7 +287,41 @@ The operational bound $\alpha_{CC,\max} < 0.5$ is necessary to simultaneously en
 
 (iii) **Perturbative regime**: Weak-field approximation for gravitational time dilation remains valid: $\Phi_{context}/c^2 \ll 1$
 
-*Proof.* Part (i) is Theorem 39. For part (ii), assume $\text{CC} \ge 0.5$. From Equation S.5, this implies $P_{context} \ge A\left[\frac{0.5}{\alpha - 0.5}\right]^2$. Physical viability (Equations S.30–S.31) requires $P_{context} < \frac{c^2 R_S}{2G\tau_c}$. For $\alpha$ near $0.5$, the lower bound diverges and violates this upper bound, forcing $r_s \ge R_S$, violating physical viability. For part (iii), from Equation S.33, if $\text{CC}$ approaches $\alpha$, then $P_{context} \to \infty$, forcing $\Phi_{context}/c^2 \to \infty$, invalidating the weak-field expansion. Therefore $\alpha < 0.5$ is necessary. $\square$
+*Proof.* Part (i) is Theorem 39, which implies the universal causality ceiling $\alpha_{CC,\max}<0.5$.
+
+For part (ii), use Equations S.30–S.31:
+$$
+r_s=\frac{2G\tau_c}{c^2}P_{context}(\text{CC})<R_S
+\quad\Longleftrightarrow\quad
+P_{context}(\text{CC})<\frac{c^2 R_S}{2G\tau_c}.
+$$
+Substituting Equation S.5 gives the necessary and sufficient condition
+$$
+A\left[\frac{\text{CC}}{\alpha-\text{CC}}\right]^2<\frac{c^2 R_S}{2G\tau_c}.
+$$
+Let
+$$
+B:=\frac{c^2 R_S}{2G\tau_c A}>0.
+$$
+Then $\frac{\text{CC}}{\alpha-\text{CC}}<\sqrt{B}$, hence
+$$
+\text{CC}<\frac{\alpha\sqrt{B}}{1+\sqrt{B}}=:\text{CC}_{BH}<\alpha,
+$$
+which is the explicit gravitational-collapse ceiling.
+
+For part (iii), a sufficient perturbative condition is $K_{eff}P_{context}\le 1$ (a conservative version of $\ll 1$ in Equation S.33). Using Equation S.5 again yields
+$$
+A\left[\frac{\text{CC}}{\alpha-\text{CC}}\right]^2\le \frac{1}{K_{eff}}.
+$$
+Let
+$$
+W:=\frac{1}{A K_{eff}}>0.
+$$
+Then $\frac{\text{CC}}{\alpha-\text{CC}}\le \sqrt{W}$, hence
+$$
+\text{CC}\le \frac{\alpha\sqrt{W}}{1+\sqrt{W}}=:\text{CC}_{WF}<\alpha.
+$$
+Therefore, for any finite system parameters, physically viable and perturbative operation requires $\text{CC}<\min\{\text{CC}_{BH},\text{CC}_{WF}\}$, and the universal causality ceiling enforces $\alpha_{CC,\max}<0.5$. $\square$
 
 **Corollary S.2.1 (No arbitrary CC enhancement).**
 
@@ -301,7 +367,7 @@ This is unchanged from the initial state, confirming no-signaling: Bob cannot de
 **Joint measurement statistics:** However, joint measurements in the transverse basis ${|+\rangle, |-\rangle}$ (where $|\pm\rangle = \frac{1}{\sqrt{2}}(|0\rangle \pm |1\rangle)$) reveal correlation changes. For the outcome $|++\rangle$:
 $$
 \begin{aligned}
-P(++|t) &= |\langle ++|\psi(t)\rangle|^2 = \left|\frac{1}{2\sqrt{2}}(1 + e^{i\delta\phi_A})\right|^2 \
+P(++|t) &= |\langle ++|\psi(t)\rangle|^2 = \left|\frac{1}{2\sqrt{2}}(1 + e^{i\delta\phi_A})\right|^2 \\
 &= \frac{1}{4}[1 + \cos(\delta\phi_A)]
 \end{aligned}
 \tag{S.38}

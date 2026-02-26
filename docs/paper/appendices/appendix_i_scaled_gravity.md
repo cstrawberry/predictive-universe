@@ -147,7 +147,11 @@ $$
 \tag{I.6}
 $$
 
-**Local‑tests limit.** In high‑acceleration, small‑scale regimes (Solar System, binary pulsars), the adaptation saturates and $G_{\rm eff}(L)\to G_0$ with $\bar\gamma(L\!\ll\!L_0)\to 0$, preserving precision‑gravity bounds.
+**Local‑tests limit.** In high‑acceleration, small‑scale regimes (Solar System, binary pulsars), the adaptation saturates and $G_{\rm eff}(L)\to G_0$. Equivalently, the local running index
+$$
+\bar\gamma(L):=\frac{d\ln G_{\rm eff}(L)}{d\ln L}
+$$
+satisfies $\bar\gamma(L\!\ll\!L_0)\to 0$, preserving precision‑gravity bounds.
 
 This adaptation is **environment‑dependent** and does not alter the homogeneous early‑Universe limit relevant for the CMB.
 
@@ -214,43 +218,49 @@ A direct test of the scale-dependent $G(R)$ model is to fit it to observed galax
 *   Accurate baryonic mass models for each galaxy, requiring estimates of stellar mass-to-light ratios $\Upsilon_\ast$.
 **Theorem I.6 (Well-posed generalized Poisson law).** For a local energy functional of the form
 $$
-\mathcal E[\Phi]=\int_\Omega \left[ -\frac{1}{8\pi G}\Psi(|\nabla\Phi|^2)-\rho\,\Phi\right]\,d^3x,
+\mathcal E[\Phi]=\int_\Omega \left[ \frac{1}{8\pi G}\Psi(|\nabla\Phi|^2)+\rho\,\Phi\right]\,d^3x,
 $$
-where $\Psi(u)$ is a strictly convex and coercive function of $u=|\nabla\Phi|^2$, the Euler–Lagrange equation is
+where $\Psi(u)$ is $C^1$, strictly convex, coercive, and nondecreasing in $u=|\nabla\Phi|^2$, the Euler–Lagrange equation is
 $$
 \nabla\!\cdot\!\big(\mu(|\nabla\Phi|)\,\nabla\Phi\big)=4\pi G\,\rho,\qquad \text{with}\quad \mu(s) := \Psi'(s^2).
 $$
-Under these conditions, the generalized Poisson equation admits a unique weak solution for suitable boundary data (e.g., Dirichlet) [Minty 1962; Evans 2010]. *Proof sketch (existence):* Let $\Omega\subset\mathbb{R}^3$ be bounded Lipschitz and impose homogeneous Dirichlet data. Set $V=H_0^1(\Omega)$ and define the nonlinear operator $A:V\to V^*$ by
+Under these conditions, the generalized Poisson equation admits a unique weak solution for suitable boundary data (e.g., Dirichlet) [Minty 1962; Evans 2010].
+
+*Proof.* Let $\Omega\subset\mathbb{R}^3$ be bounded Lipschitz and impose homogeneous Dirichlet data. Set $V=H_0^1(\Omega)$ and define the nonlinear operator $A:V\to V^*$ by
 $$
 \langle A(\phi),\psi\rangle := \int_{\Omega} \mu(|\nabla\phi|)\,\nabla\phi\cdot\nabla\psi\,dx,
 \qquad \mu(s)=\Psi'(s^2).
 $$
-The right-hand side is the continuous functional $\ell(\psi)=4\pi G\int_{\Omega}\rho\,\psi\,dx$. Hemicontinuity follows from continuity of $\mu$. Strict monotonicity holds because $\xi\mapsto \frac12\Psi(|\xi|^2)$ is strictly convex, hence its gradient $a(\xi)=\mu(|\xi|)\xi$ is strictly monotone:
+Define the continuous functional $\ell\in V^*$ by
 $$
-(a(\xi)-a(\eta))\cdot(\xi-\eta)>0\quad(\xi\ne\eta),
+\langle \ell,\psi\rangle := -4\pi G\int_{\Omega}\rho\,\psi\,dx.
 $$
-and integrating yields $\langle A(\phi)-A(\psi),\phi-\psi\rangle>0$ for $\phi\ne\psi$. Coercivity follows from convexity: for differentiable convex $\Psi$,
+Then $\phi\in V$ is a weak solution of the Euler–Lagrange equation iff $A(\phi)=\ell$.
+
+**Hemicontinuity.** For fixed $\phi,\psi,\eta\in V$, the map $t\mapsto\langle A(\phi+t\eta),\psi\rangle$ is continuous because $\nabla(\phi+t\eta)$ depends linearly on $t$ and $\mu$ is continuous.
+
+**Strict monotonicity.** Let $F(\xi):=\frac12\Psi(|\xi|^2)$ on $\mathbb{R}^3$. Since $\Psi$ is strictly convex and nondecreasing, $F$ is strictly convex. Its gradient is $\nabla_\xi F(\xi)=\mu(|\xi|)\xi=:a(\xi)$. The gradient of a strictly convex $C^1$ function is strictly monotone, hence
 $$
-\Psi'(u)u \ge \Psi(u)-\Psi(0),
+(a(\xi)-a(\eta))\cdot(\xi-\eta)>0\quad(\xi\ne\eta).
 $$
-so
+Therefore, for $\phi_1\ne\phi_2$,
+$$
+\langle A(\phi_1)-A(\phi_2),\phi_1-\phi_2\rangle
+=
+\int_\Omega (a(\nabla\phi_1)-a(\nabla\phi_2))\cdot(\nabla\phi_1-\nabla\phi_2)\,dx>0.
+$$
+
+**Coercivity.** For convex differentiable $\Psi$, the supporting-hyperplane inequality at $u$ with $v=0$ gives $\Psi(0)\ge \Psi(u)-\Psi'(u)u$, hence $\Psi'(u)u\ge \Psi(u)-\Psi(0)$ for all $u\ge0$. Applying this with $u=|\nabla\phi|^2$ yields
 $$
 \langle A(\phi),\phi\rangle
 =\int_{\Omega}\Psi'(|\nabla\phi|^2)|\nabla\phi|^2dx
-\ge \int_{\Omega}(\Psi(|\nabla\phi|^2)-\Psi(0))dx\to\infty
+\ge \int_{\Omega}\big(\Psi(|\nabla\phi|^2)-\Psi(0)\big)\,dx.
 $$
-as $\|\phi\|_V\to\infty$, using coercivity of $\Psi$ and Poincaré's inequality. By Minty–Browder, there exists a unique $\phi\in V$ with $A(\phi)=\ell$.
+By coercivity of $\Psi$ and Poincaré's inequality, the right-hand side tends to $+\infty$ as $\|\phi\|_{V}\to\infty$, so $A$ is coercive.
 
-*Proof sketch (uniqueness):* Suppose $\phi_1,\phi_2\in H_0^1(\Omega)$ are weak solutions. Subtracting the weak forms gives, for all $\psi\in H_0^1(\Omega)$,
-$$
-\int_{\Omega}\big(\mu(|\nabla\phi_1|)\nabla\phi_1-\mu(|\nabla\phi_2|)\nabla\phi_2\big)\cdot\nabla\psi\,dx=0.
-$$
-Choosing $\psi=\phi_1-\phi_2$ yields
-$$
-\int_{\Omega}\big( a(\nabla\phi_1)-a(\nabla\phi_2)\big)\cdot(\nabla\phi_1-\nabla\phi_2)\,dx=0,
-\qquad a(\xi)=\mu(|\xi|)\xi.
-$$
-By strict monotonicity of $a$, the integrand is nonnegative and vanishes only when $\nabla\phi_1=\nabla\phi_2$ a.e., hence $\phi_1-\phi_2$ is constant. The Dirichlet boundary condition forces that constant to be $0$, so $\phi_1=\phi_2$.
+By the Minty–Browder theorem, hemicontinuity, strict monotonicity, and coercivity imply that there exists a unique $\phi\in V$ such that $A(\phi)=\ell$.
+
+**Uniqueness (direct).** If $\phi_1,\phi_2\in V$ both satisfy $A(\phi)=\ell$, then subtracting gives $\langle A(\phi_1)-A(\phi_2),\phi_1-\phi_2\rangle=0$, which forces $\nabla\phi_1=\nabla\phi_2$ a.e. by strict monotonicity. With homogeneous Dirichlet data, $\phi_1=\phi_2$. $\square$
 
 **Theorem I.7 (Flat-curve asymptotics).** For a point mass $M$, if the response function $\mu(s)$ has the asymptotic behavior $\mu(s) \sim s/a_0$ as $s\to0^+$ for some characteristic acceleration $a_0$, then the gravitational field strength $g(r)=|\nabla\Phi|$ and circular velocity $v_{\rm circ}(r)$ satisfy
 $$
@@ -258,7 +268,7 @@ g(r)\sim \frac{\sqrt{GMa_0}}{r},\qquad v_{\rm circ}^4(r)\sim GMa_0.
 $$
 This recovers the baryonic Tully-Fisher relation as a direct consequence of the asymptotic form of the effective gravitational law [Milgrom 1983; McGaugh 2012].
 
-*   A joint Bayesian inference analysis (e.g., using nested sampling [Feroz & Hobson 2008; Feroz et al. 2009, 2019]) to determine the universal parameter set $(L_0,A_G,m)$ and the per-galaxy $\Upsilon_\ast$ values by comparing predicted and observed rotation curves. When inferring $A_G$ from rotation curves, the effective far‑field enhancement reflects the baryon‑mass‑weighted $\langle\varepsilon_G\rangle_b$ rather than $A_G$ itself; the numerical fits naturally absorb this via the $\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R),\rho_b(R)$ source.
+*   A joint Bayesian inference analysis (e.g., using nested sampling [Feroz & Hobson 2008; Feroz et al. 2009, 2019]) to determine the universal parameter set $(L_0,A_G,m)$ and the per-galaxy $\Upsilon_\ast$ values by comparing predicted and observed rotation curves. When inferring $A_G$ from rotation curves, the effective far‑field enhancement reflects the baryon‑mass‑weighted $\langle\varepsilon_G\rangle_b$ rather than $A_G$ itself; the numerical fits naturally absorb this via the $\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R)\,\rho_b(R)$ source.
 
 **I.12 Robustness and Systematics**
 

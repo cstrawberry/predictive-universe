@@ -91,10 +91,16 @@ $$\partial_\mu J_{B+L}^\mu = \frac{N_g g^2}{16\pi^2} W^a_{\mu\nu}\tilde{W}^{a\mu
 
 where $N_g = 3$ is the number of generations (Proposition R.3.5), $W^a_{\mu\nu}$ is the $SU(2)_L$ field strength, and $\tilde{W}^{a\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$ is its dual.
 
-*Derivation:* The anomaly coefficient follows from the Atiyah-Singer index theorem applied to chiral fermions in $SU(2)$ backgrounds (Lemma R.IDX1). For $N_g$ generations, each generation contributes one left-handed quark doublet (with 3 colors) and one left-handed lepton doublet. The anomaly coefficient per generation is:
-$$\mathcal{A}_{B+L}^{(1)} = (3 \times 1 + 1) \cdot \frac{g^2}{32\pi^2} \cdot \frac{1}{2} = 2 \cdot \frac{g^2}{32\pi^2}$$
-where the factor $1/2$ is the index of the fundamental representation. For $N_g$ generations:
-$$\mathcal{A}_{B+L} = N_g \cdot 2 \cdot \frac{g^2}{32\pi^2} = \frac{N_g g^2}{16\pi^2}$$
+*Derivation:* For a single left-handed $SU(2)_L$ doublet, the $SU(2)$ chiral anomaly contributes
+$$
+\partial_\mu j^\mu = \frac{g^2}{32\pi^2}W^a_{\mu\nu}\tilde W^{a\mu\nu}
+$$
+to the divergence of the unit-charged current. Weighting by the $B+L$ charge and summing over left-handed doublets in one generation gives: three quark doublets with $B=\frac{1}{3}$ (one per color) contribute total $B$ charge $3\cdot\frac{1}{3}=1$, and the lepton doublet contributes total $L$ charge $1$. Hence the total $B+L$ charge per generation is $2$, yielding
+$$
+\partial_\mu J^\mu_{B+L} = 2\cdot \frac{g^2}{32\pi^2}W^a_{\mu\nu}\tilde W^{a\mu\nu}
+= \frac{g^2}{16\pi^2}W^a_{\mu\nu}\tilde W^{a\mu\nu}.
+$$
+Multiplying by $N_g$ gives (Y.1).
 
 ### Y.3.2 C and CP Violation
 
@@ -188,7 +194,7 @@ $$\sin\delta = \sin(66.7°) = 0.918 \tag{Y.8}$$
 ### Y.5.3 CP-Odd Effective Action
 
 **Theorem Y.6.1** (CP-Odd Effective Action from Berry Holonomy). *The Berry holonomy $\delta$ induces a CP-odd term in the electroweak effective action:*
-$$\Delta S_{CP} = \frac{\sin\delta}{8\pi^2} \int d^4x \, W^a_{\mu\nu}\tilde{W}^{a\mu\nu}$$
+$$\Delta S_{CP} = \frac{\sin\delta}{16\pi^2} \int d^4x \, W^a_{\mu\nu}\tilde{W}^{a\mu\nu}$$
 
 *Proof.* 
 
@@ -200,9 +206,15 @@ where $\mathcal{F} = d\mathcal{A} + \mathcal{A} \wedge \mathcal{A}$ is the Berry
 $$\oint_\gamma \mathcal{A} = \int_\Sigma \mathcal{F} = \delta$$
 by Stokes' theorem and the definition of $\delta$ (Theorem T.56).
 
-**Step 3 (Effective theta term).** The Berry holonomy acts as an effective $\theta$-angle for the electroweak sector:
-$$\theta_{\text{eff}} = \delta$$
-This induces the CP-odd term $\Delta S_{CP} = (\sin\theta_{\text{eff}}/8\pi^2) \int W\tilde{W}$.
+**Step 3 (Effective theta term).** Periodicity of the holonomy angle implies the physical CP-odd coupling is its sine. Therefore the CP-odd correction can be written as
+$$\Delta S_{CP} = \frac{\sin\theta_{\text{eff}}}{16\pi^2}\int d^4x\, W\tilde{W},
+\qquad \theta_{\text{eff}}=\delta.$$
+Using the Chern-Simons definition (Y.3),
+$$\int d^4x\,W\tilde{W} = \frac{32\pi^2}{g^2}\,\Delta N_{CS},$$
+so for $\Delta N_{CS}=\pm 1$,
+$$\Delta S_{CP}(\pm)=\pm\frac{2\sin\delta}{g^2}
+=\pm\sin\delta\frac{S_{sph}}{8\pi^2},$$
+since $S_{sph}=16\pi^2/g^2$.
 
 **Step 4 (Sphaleron rate asymmetry).** The CP-odd term modifies sphaleron transition rates. For transitions in the $\pm$ directions (increasing/decreasing $N_{CS}$):
 $$\Gamma_{\text{sph}}^{(\pm)} = \Gamma_{\text{sph}}^{(0)} \exp\left(\pm \frac{\sin\delta \cdot S_{\text{sph}}}{8\pi^2}\right) = \Gamma_{\text{sph}}^{(0)} \exp\left(\pm \mathcal{S} \sin\delta\right)$$
@@ -241,13 +253,13 @@ $$\eta_B^{CK} \propto \frac{\dot{\phi}}{M T} \cdot \frac{\Gamma_{sph}}{H}$$
 **PU Baryogenesis:**
 
 The Berry phase $\gamma$ on the generation manifold couples to the Chern-Simons current:
-$$\mathcal{L}_{int} = \frac{\gamma}{8\pi^2} W_{\mu\nu}\tilde{W}^{\mu\nu}$$
+$$\mathcal{L}_{int} = \frac{\gamma}{16\pi^2} W_{\mu\nu}\tilde{W}^{\mu\nu}$$
 
 This induces an effective theta-angle:
 $$\theta_{eff} = \gamma = \oint \mathcal{A}$$
 
 The baryon asymmetry generated is:
-$$\eta_B^{PU} \propto \tanh\left(\frac{\theta_{eff} \cdot S_{sph}}{8\pi^2}\right) \cdot e^{-\kappa_B}$$
+$$\eta_B^{PU} \propto \Big(\frac{S_{sph}}{8\pi^2}\Big)\tanh\left(\theta_{eff}\frac{S_{sph}}{8\pi^2}\right)e^{-\kappa_B}$$
 
 **Structural Correspondence:**
 
@@ -268,7 +280,7 @@ $$\eta_B^{PU} \propto \tanh\left(\frac{\theta_{eff} \cdot S_{sph}}{8\pi^2}\right
 
 4. **Saturation:** Cohen-Kaplan is linear in $\dot{\phi}/M$ (perturbative regime). PU saturates via $\tanh(\mathcal{S}\sin\delta) \to 1$ (non-perturbative regime).
 
-**Theorem Y.7.1** (PU as Geometric Spontaneous Baryogenesis). *The PU baryogenesis mechanism is the geometric realization of spontaneous baryogenesis, where the scalar field $\phi$ is replaced by the Berry phase $\gamma$, the coupling $1/M$ is replaced by $1/(8\pi^2)$, and the cosmological dynamics is encoded in $e^{-\kappa_B}$.*
+**Theorem Y.7.1** (PU as Geometric Spontaneous Baryogenesis). *The PU baryogenesis mechanism is the geometric realization of spontaneous baryogenesis, where the scalar field $\phi$ is replaced by the Berry phase $\gamma$, the coupling $1/M$ is replaced by $1/(16\pi^2)$, and the cosmological dynamics is encoded in $e^{-\kappa_B}$.*
 
 ---
 
@@ -314,14 +326,12 @@ This is the correct mathematical characterization—CP reverses the orientation 
 $$\mathcal{D}(\mathsf{CP} \cdot A) = |\det(\mathsf{CP}^*)| \, \mathcal{D}A = \mathcal{D}A$$
 The Haar measure is CP-invariant (since $|\det| = 1$), but the integrand splits into CP-even and CP-odd components under the $\mathbb{Z}_2$ grading induced by the orientation reversal.
 
-**(d) CP-odd projection.** The baryon asymmetry depends on the CP-odd component of the transition amplitude:
-$$\mathcal{A}_{CP-odd} = \frac{1}{2}(\mathcal{A} - \mathsf{CP} \cdot \mathcal{A})$$
+**(d) CP-odd projection.** Net baryon number is CP-odd and is controlled by the CP-odd effective action shift (Theorem Y.6.1), which is proportional to the Chern-Simons change. For a unit transition $\Delta N_{CS}=\pm 1$,
+$$\Delta S_{CP}(\pm)=\frac{\sin\delta}{16\pi^2}\int d^4x\,W\tilde W
+=\pm\frac{2\sin\delta}{g^2}
+=\pm\sin\delta\frac{S_{sph}}{8\pi^2}.$$
 
-The effective action for the CP-odd sector is:
-$$S_{CP-odd} = S_{EW} + \Delta S_{CP}$$
-where $\Delta S_{CP} = (\sin\delta) \cdot N_{CS}$ is the topological term.
-
-**(e) Complexity of CP-odd sector.** The orientation-reversing $\mathbb{Z}_2$ action of CP on $SU(2)$ partitions the configuration space into CP-even and CP-odd sectors of equal Haar measure. The CP-odd projection selects exactly half the configuration space volume. The complexity of the CP-odd sector is:
+**(e) Complexity cost.** In PU the CP operation is the $\mathbb{Z}_2$ half-step channel whose square reproduces the full electroweak locking step (Theorem Y.11.2). Since PCE costs add under sequential composition, the corresponding suppression exponents add: $\kappa(\mathcal{C}^2)=2\kappa(\mathcal{C})$. The electroweak hierarchy involves the full step with exponent $\kappa_{EW}$, while baryogenesis depends on the single CP half-step, giving $\kappa_{CP}=\kappa_{EW}/2$.
 $$\kappa_{CP} = \frac{\kappa_{EW}}{2} = \frac{38.5}{2} = 19.25$$
 
 ∎

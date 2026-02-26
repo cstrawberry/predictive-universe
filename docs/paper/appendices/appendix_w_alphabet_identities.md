@@ -4,7 +4,7 @@
 
 This appendix derives general, robust identities and bounds relating emergent gauge couplings to the information-theoretic invariants of the MPU's predictive cycle. This formalism provides stringent internal consistency checks for the PU framework. In **Appendix Z**, these principles are applied to a first-principles derivation of the MPU's QFI spectrum, culminating in a calculation of the Thomson-limit fine-structure constant with zero continuously adjustable parameters $\alpha^{-1} \approx 137.036092 \pm 0.000050$ at the PCE-Attractor (Appendix Z, Theorem Z.26).
 
-* **Alphabet size:** $d_0\in{2,3,\dots}$. PU uses $d_0=8$.
+* **Alphabet size:** $d_0\in\{2,3,\dots\}$. PU uses $d_0=8$.
 * **One‑cycle deformation variable:** $u=g^2\ge 0$ (Heaviside–Lorentz units).
 * **Rate‑level PCE potential (quadratic curvature near $u=0$):** take $\gamma_{\rm eff}=2$,
 
@@ -53,13 +53,14 @@ $$
 g_1=\sqrt{\tfrac{5}{3}}\,g_Y\quad\text{(equivalently }g_Y=\sqrt{\tfrac{3}{5}}\,g_1\text{)}.
 $$
 
-**LAN/QFI–capacity rationale.** For a $C^1$ family of CPTP maps near $g=0$ with a full‑rank stationary state, local asymptotic normality (LAN) reduces estimation to a Gaussian shift model; the SLD–QFI eigenvalues $\{\lambda_i\}$ parameterize orthogonal local signal‑to‑noise directions. The surrogate objective
+**LAN/QFI–capacity rationale.** For a $C^1$ family of CPTP maps near $g=0$ with a stationary state $\rho_0$ that is full rank on its support, local asymptotic normality (LAN) reduces estimation to a Gaussian shift model; the SLD–QFI eigenvalues $\{\lambda_i\}$ parameterize orthogonal local signal‑to‑noise directions on the supported tangent space. The LAN capacity surrogate and its Jensen upper bound are
 
 $$
-g_{\rm true}(u)=\sum_i\ln(1+\lambda_i u)
+g_{\rm true}(u):=\sum_{i=1}^{M}\ln(1+\lambda_i u),\qquad
+g_J(u):=M\ln(1+xu),
 $$
 
-is used as a capacity-like measure consistent with the LAN decomposition. It is **concave** and monotone in $u$. The function $\ln(1+\lambda u)$ is also **concave in $\lambda$** for fixed $u>0$ (Helstrom; Holevo; Petz; Paris–Řeháček). This appendix does not derive the existence of the Standard Model group, a task addressed in Appendix G.8. Instead, it assumes the SM group structure has emerged and proceeds to derive quantitative constraints on its coupling constants from the underlying MPU substrate’s information‑theoretic properties.
+where $x=S_1/M$. The map $u\mapsto g_{\rm true}(u)$ is **concave** and monotone in $u$, and Jensen's inequality gives $g_{\rm true}(u)\le g_J(u)$ for all $u\ge0$, with equality iff $\lambda_i=x$ for all $i$. The function $\ln(1+\lambda u)$ is also **concave in $\lambda$** for fixed $u>0$ (Helstrom; Holevo; Petz; Paris–Řeháček). This appendix does not derive the existence of the Standard Model group, a task addressed in Appendix G.8. Instead, it assumes the SM group structure has emerged and proceeds to derive quantitative constraints on its coupling constants from the underlying MPU substrate’s information‑theoretic properties.
 
 **Standing assumptions.** Throughout this appendix:
 
@@ -308,7 +309,7 @@ $$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in all sectors}
 
 $$\frac{M_2}{M_Y} = \frac{3}{1} = 3$$
 
-The relationship between this mode ratio and the physical electroweak couplings $g_2$ and $g_Y$ requires renormalization group running from the PCE-Attractor scale to observable energies. The observed weak mixing angle $\sin^2\theta_W \approx 0.231$ at $M_Z$ reflects this running, and a complete derivation would require specifying the intermediate scales and particle content. This remains an open question for future development.
+At the PU fixed point $\mathfrak{A}_{PU}$ and its matching to the SM at scale $\mu_G$ (Appendix T, Section T.13), the gauge-kinetic normalization fixes the tree-level value $\sin^2\theta_W(\mu_G)=3/8$ (Appendix T, Theorem T.14). Standard-model renormalization group evolution to $M_Z$ including the PU threshold structure yields $\sin^2\theta_W(M_Z)=0.2312\pm0.0003$ (Appendix T, Theorem T.18), consistent with $0.23122\pm0.00003$.
 
 ## W.4 Hypercharge from anomalies and Yukawa invariance
 
@@ -383,55 +384,55 @@ Increasing spectral variance decreases $r_e$ and enlarges the upper bound (W.5.1
 
 **Inputs at $g=0$** for each sector $s\in\{e,Y,2\}$:
 
-0. **Probe specification:** a $C^1$ family of CPTP maps $E_g^{(s)}$ and a full‑rank stationary state $\rho_0^{(s)}$ with $E^{(s)}_0(\rho_0^{(s)})=\rho_0^{(s)}$. The SLD‑QFI is computed for the state family $\rho_g^{(s)}:=E_g^{(s)}(\rho_0^{(s)})$ at $g=0$.
+0. **Probe specification:** a $C^1$ family of CPTP maps $E_g^{(s)}$ and a stationary state $\rho_0^{(s)}$ with $E^{(s)}_0(\rho_0^{(s)})=\rho_0^{(s)}$. Let $P_0^{(s)}$ be the support projector of $\rho_0^{(s)}$ and assume $\rho_0^{(s)}$ is full rank on $\mathrm{Ran}(P_0^{(s)})$. The SLD‑QFI is computed for the state family $\rho_g^{(s)}:=E_g^{(s)}(\rho_0^{(s)})$ at $g=0$, with the finiteness condition $P_0^{(s)}\,\dot\rho^{(s)}\,P_0^{(s)}=\dot\rho^{(s)}$ for $\dot\rho^{(s)}:=\left.\partial_g\rho_g^{(s)}\right|_{g=0}$.
    *Alternative:* if a channel‑QFI convention is adopted, specify the input/state optimization rule and ancilla dimension; note that multi‑parameter QCRB attainability may require **SLD‑compatibility** (commutativity) for joint POVMs.
 1. **Spectral data:** $\{\lambda_i^{(s)}\}_{i=1}^{M_s}$ (SLD‑QFI eigenvalues at $g=0$); compute $M_s$, $S_1^{(s)}$, $S_2^{(s)}$, $x_s=S_1^{(s)}/M_s$, $\sigma_s^2$, $F_{\lambda,s}$.
-2. **Global constants:** $\Gamma_0,\nu$; alphabet size $d_0$.
+2. **Global constants:** $\Gamma_0$; alphabet size $d_0$.
 3. **Branch classification:** Solve the unconstrained stationarity
 
    $$
-   \phi'(u)=2A_{\rm PCE}\,u-\Gamma_0\nu\sum_i \frac{\lambda_i^{(s)}}{1+\lambda_i^{(s)} u}=0.
+   \phi'(u)=2A_{\rm PCE}\,u-\Gamma_0\sum_i \frac{\lambda_i^{(s)}}{1+\lambda_i^{(s)} u}=0.
    $$
 
    Let $u_0\ge 0$ denote the solution.
    – If $g_J(u_0)=M_s\ln(1+x_s u_0)< \ln d_0$: **interior** $(u_s^\*=u_0)$.
    – If $g_J(u_0)= \ln d_0$: **branch boundary** $(u_s^\*=u_0=u^\*_{\rm J})$.
    – If $g_J(u_0)> \ln d_0$: **cap‑active** $\bigl(u_s^\*=u^\*_{\rm J}=(a_{\rm cap}-1)\,M_s/S_1^{(s)}\bigr)$, with $a_{\rm cap}=d_0^{1/M_s}$.
-4. **Invariants:** $C_{\rm cap}^{(s)}=\Gamma_0\nu\,S_1^{(s)}$,\quad $C_{\rm cyc}^{(s)}=\Gamma_0\nu\,[\,2\tilde A_{\rm PCE}^{(s)}+S_2^{(s)}\,]$.
+4. **Invariants:** $C_{\rm cap}^{(s)}=\Gamma_0\,S_1^{(s)}$,\quad $C_{\rm cyc}^{(s)}=\Gamma_0\,[\,2\tilde A_{\rm PCE}^{(s)}+S_2^{(s)}\,]$.
 5. **U(1)/EM product:** for scales **below** EWSB, $\alpha_{\mathrm{em}}(\mu^\*)=u_e^\*/(4\pi)$. Compute $\alpha_{\mathrm{em}}(\mu^\*)\,(C_{\rm cyc}/C_{\rm cap})_{e}$ and compare to $K(d_0,M_e)/F_{\lambda,e}$; the identity (W.2.6) applies only at the branch boundary with $\sigma_e^2=0$. For scales **above** EWSB, replace with hypercharge/weak couplings as in (W.3.1).
 6. **Weinberg angle:** evaluate (W.3.1); if using GUT normalization, use (W.3.3) with $g_1=\sqrt{\tfrac{5}{3}}\,g_Y$.
-7. **Reporting:** publish $\{M_s,S_1^{(s)},S_2^{(s)}\}$, $\Gamma_0,\nu$, $d_0$, probe specification, and code.
+7. **Reporting:** publish $\{M_s,S_1^{(s)},S_2^{(s)}\}$, $\Gamma_0$, $d_0$, probe specification, and code.
 
 ---
 
 ## W.7 Fisher‑operator (SLD) existence: finite‑dimensional setting
 
 **Theorem W.18 (SLD existence and QFI quadratic form).**
-Let $\{E_g\}_{g\in\mathbb{R}}$ be a $C^1$ family of CPTP maps on a finite‑dimensional Hilbert space, and let $\rho_0$ be full‑rank and stationary at $g=0$ $(E_0(\rho_0)=\rho_0)$. Then the Symmetric Logarithmic Derivative (SLD) exists at $g=0$, the quantum Fisher information (QFI) is finite, and the SLD‑based QFI defines a positive semidefinite quadratic form on the tangent space at $\rho_0$. In finite dimension, this quadratic form admits a Riesz representation (equivalently, an operator/superoperator representation) with respect to $\rho_0$.
+Let $\{E_g\}_{g\in\mathbb{R}}$ be a $C^1$ family of CPTP maps on a finite‑dimensional Hilbert space, and let $\rho_0$ be stationary at $g=0$ $(E_0(\rho_0)=\rho_0)$. Let $P$ be the support projector of $\rho_0$ and assume $\rho_0$ is full rank on $\mathrm{Ran}(P)$. Suppose the tangent $\dot\rho:=\left.\partial_g\rho_g\right|_{g=0}$ satisfies the finiteness condition $P\dot\rho P=\dot\rho$ (no first‑order leakage into $\ker\rho_0$). Then the Symmetric Logarithmic Derivative (SLD) exists at $g=0$ as a Hermitian operator supported on $\mathrm{Ran}(P)$, the quantum Fisher information (QFI) is finite, and the SLD‑based QFI defines a positive semidefinite quadratic form on the supported tangent space at $\rho_0$. In finite dimension, this quadratic form admits a Riesz representation with respect to $\rho_0|_{\mathrm{Ran}(P)}$.
 
-*Proof.* Because $\rho_0$ is full rank, the linear map
+*Proof.* Restrict to Hermitian operators supported on $\mathrm{Ran}(P)$: $X=X^\dagger$ with $X=PXP$. On this space, the Jordan map
 $$
 \mathcal{J}_{\rho_0}:\;X\mapsto \tfrac12\,(\rho_0 X+X\rho_0)
 $$
-on Hermitian operators is positive definite and therefore invertible. Define
+is positive definite because $\rho_0|_{\mathrm{Ran}(P)}$ is strictly positive, hence $\mathcal{J}_{\rho_0}$ is invertible on the supported subspace. Since $\dot\rho$ is supported by assumption, define
 $$
-L:=\mathcal{J}_{\rho_0}^{-1}\!\left(\left.\partial_g\rho_g\right|_{g=0}\right).
+L:=\mathcal{J}_{\rho_0}^{-1}(\dot\rho),
 $$
-Then by construction $L$ is Hermitian and satisfies the Sylvester equation
+and extend $L$ by $0$ on $\ker\rho_0$. Then $L$ is Hermitian and satisfies the Sylvester equation
 $$
-\left.\partial_g\rho_g\right|_{g=0}=\tfrac12\,(L\rho_0+\rho_0 L),
+\dot\rho=\tfrac12\,(L\rho_0+\rho_0 L),
 $$
-so the SLD exists and is unique.
+so the SLD exists (and is unique on $\mathrm{Ran}(P)$).
 
-Equivalently, in an eigenbasis $\rho_0=\sum_i p_i |i\rangle\langle i|$ with $p_i>0$ and writing $\dot\rho:=\left.\partial_g\rho_g\right|_{0}$, the unique solution is
+Equivalently, choose an eigenbasis $\rho_0=\sum_{i=1}^{r} p_i |i\rangle\langle i|$ on $\mathrm{Ran}(P)$ with $p_i>0$ and $r=\mathrm{rank}(\rho_0)$. The supported solution is
 $$
-\langle i|L|j\rangle=\frac{2\,\langle i|\dot\rho|j\rangle}{p_i+p_j},
+\langle i|L|j\rangle=\frac{2\,\langle i|\dot\rho|j\rangle}{p_i+p_j}\qquad (1\le i,j\le r),
 $$
-since $p_i+p_j>0$ for all $i,j$. Finally, the quantum Fisher information is
+and $\langle i|L|j\rangle=0$ whenever $i>r$ or $j>r$. Since $p_i+p_j\ge 2\min_{1\le k\le r}p_k>0$, the quadratic form is finite:
 $$
-F_Q(\rho_g)=\mathrm{Tr}(\rho_0 L^2)\ge 0,
+F_Q(\rho_g)=\mathrm{Tr}(\rho_0 L^2)=\sum_{i,j=1}^{r}\frac{2\,|\langle i|\dot\rho|j\rangle|^2}{p_i+p_j}\ \ge\ 0.
 $$
-and is finite in finite dimension. $\square$
+$\square$
 
 ---
 

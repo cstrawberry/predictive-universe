@@ -16,87 +16,76 @@ Let $\mathcal{H}$ be the complex Hilbert space emerging as the necessary structu
 
 The Principle of Compression Efficiency (PCE, Definition 15) mandates minimizing the overall PCE Potential $V(x)$ (Definition D.1), which represents the net rate of resource consumption minus predictive benefit. This potential provides a basis for assigning a cost to considering or resolving different predictive possibilities.
 
-**Definition G.1.1 (Cost Frame Function $f$).**
-For any predictive partition by orthogonal projectors $\mathcal{P}=\{P_i\}$, we define the associated Cost Frame Function $f(\mathcal{P})$ as the contribution to the total PCE potential $V(x)$ associated with the existence of these potential outcome branches. The definition of the Cost Frame Function as $f(\mathcal{P}) = \sum_i f(P_i)$ (Equation G.1.1) is justified by the PCE imperative for efficient resource accounting. Here, $f(P_i)$ represents the effective conditional PCE Potential contribution $V(P_i)$ associated with the potential outcome branch $P_i$. Each $P_i$ in an orthogonal partition $\mathcal{P}$ represents a *mutually exclusive, physically distinct potential pathway* the system might actualize into.
-The components of $V(P_i) = \langle V_{op}(P_i) + V_{prop}(P_i) - V_{benefit}(P_i) \rangle_{\rho|P_i}$ are (Definition D.1):
-*   $V_{op}(P_i)$: Expected operational cost rate if $P_i$ occurs. This represents the ongoing cost of maintaining complexity and processing information based on the system's operational estimate of complexity conditional on outcome $P_i$.
-*   $V_{prop}(P_i)$: Expected propagation cost rate if $P_i$ occurs. This represents the cost of maintaining network coherence and communication infrastructure relevant to achieving or dealing with outcome $P_i$.
-*   $V_{benefit}(P_i)$: Expected predictive benefit (derived from PP, Definition 7) if $P_i$ occurs.
-A rigorous justification for additivity arises directly from PCE. Any non-additive "interference cost" $\Delta_{int}(\mathcal{P})$ associated purely with the *representation* of the partition $\mathcal{P}$ (i.e., $f(\mathcal{P}) = \sum_i f(P_i) + \Delta_{int}(\mathcal{P})$) would itself require additional Predictive Physical Complexity $C_{int}$ to compute and manage. This additional complexity incurs a physical operational cost $R(C_{int})$ that contributes positively to the total PCE Potential $V(x)$. However, since the branches $\{P_i\}$ are mutually exclusive (orthogonal), this interference cost provides no direct predictive benefit for any single actualized outcome. Therefore, any configuration with $C_{int} > 0$ has a strictly higher $V(x)$ than a configuration with $C_{int}=0$. PCE dynamics, which minimize $V(x)$, will drive the system to configurations where such purely representational overheads are eliminated, forcing $C_{int} \to 0$ and thus ensuring $\Delta_{int}(\mathcal{P}) \to 0$. Additivity is therefore a necessary condition for a PCE-optimal predictive accounting system.
+**Definition G.1.1 (Cost Frame Function $f$).** Consider a predictive partition $\Pi$ of the MPU state space induced by a finite family of mutually orthogonal projectors $\{P_i\}$ on the Hilbert space $\mathcal{H}$ with $\sum_i P_i=\mathbf{1}$. This partition represents mutually exclusive events "the realized branch lies in $\mathrm{Ran}(P_i)$". We define the associated Cost Frame Function $f(\Pi)$ as the POP-consistent predictive weights assigned to these events, normalized by $f(\mathbf{1})=1$:
 $$
-f(\mathcal{P}) = \sum_i f(P_i)
+f(\Pi)=\sum_i f(P_i)
 \quad \text{(G.1.1)}
 $$
-Since physical costs ($V_{op}, V_{prop}$) are non-negative and benefits ($V_{benefit}$) are bounded within the operational range, each $f(P_i) = V(P_i)$ is non-negative and bounded.
-
-**Lemma G.1.1ba (Additivity of $f$ over Orthogonal Sums).**
-If $P = \sum_{j=1}^k Q_j$ where $\{Q_j\}$ are mutually orthogonal projectors, then the cost associated with the combined outcome $P$ must be the sum of the costs of the constituent exclusive outcomes $Q_j$:
-$$
-f\left(\sum_{j=1}^k Q_j\right) = \sum_{j=1}^k f(Q_j)
-\quad \text{(G.1.2)}
-$$
-*Proof.* This follows directly from the definition of the Cost Frame Function (Equation G.1.1). Consider the partition $\mathcal{P}' = \{Q_1, Q_2, \dots, Q_k\}$ whose elements sum to $P$. By Equation (G.1.1), the cost associated with this partition considered as describing the (potentially coarser) outcome $P$ is $f(P) \equiv f(\mathcal{P}') = \sum_{j=1}^k f(Q_j)$. The argument implicitly assumes that if $P$ is resolved into orthogonal sub-components $\{Q_j\}$, the cost associated with "considering" $P$ is the sum of costs of "considering" its distinct sub-components. This reflects PCE's preference for consistent accounting: the resource implications of a composite possibility should reflect the sum of resource implications of its exclusive constituents. QED
+with $f(0)=0$ and hence $0\le f(P)\le 1$ for every projector $P$. Operationally, $f(P)$ is the unique weight that enters POP-optimal expected-value evaluations for decision problems whose payoffs depend only on whether the event $P$ occurs. PCE eliminates bookkeeping overhead that would make these weights depend on arbitrary refinement or context, yielding the refinement invariance and non-contextuality below.
 
 **G.1.2 Non-contextuality Enforced by POP / PCE**
 
-A crucial property mandated by the global optimization principles of POP and PCE is non-contextuality. The physical cost or resource implication associated with a specific potential outcome (represented by projector $P$) must depend only on the physical process corresponding to $P$ itself, and *not* on the particular set of alternative outcomes (the partition $\mathcal{P}$) considered alongside it.
+**Lemma G.1.1b (Non-contextuality from Dynamical Stability).** The cost frame function $f(P)$ depends only on the projector $P$ and not on the larger partition $\Pi$ in which it is embedded. That is, if $P$ appears as an element in two different partitions $\Pi_1$ and $\Pi_2$, then $f(P|\Pi_1)=f(P|\Pi_2)=f(P)$.
 
-**Lemma G.1.1b (Non-Contextuality from Dynamical Stability).**
-Non-contextuality is a necessary condition for the stability and consistency of the PCE-driven adaptation dynamics. The dynamics are modeled as a stochastic gradient flow on the PCE Potential $V(x)$ (Appendix D, Equation D.8), which serves as a stochastic Lyapunov function for the system.
-Assume, for contradiction, that the cost function is contextual, so that the cost associated with outcome $P$ depends on the partition $\mathcal{P}$ it is considered part of: $f(P|\mathcal{P})$. This would mean the potential itself depends on the choice of partition, $V(x, \mathcal{P})$. For a fixed physical configuration $x$, the potential could take different values $V(x, \mathcal{P}_1) \neq V(x, \mathcal{P}_2)$ depending on the system's internal conceptual framing.
-This introduces a fatal ambiguity into the adaptation dynamics. The gradient $\nabla_x V$, which drives the system's evolution, would become ill-defined, depending on the arbitrary choice of partition $\mathcal{P}$ rather than solely on the objective physical configuration $x$. A potential function that is not a single-valued function of the physical state cannot serve as a proper Lyapunov function to guarantee concentration on stable physical equilibria (as established in Theorem D.5). For the PCE optimization process to be well-defined and dynamically stable, the potential $V$ must depend only on the physical configuration $x$. This mandates that the cost component $f(P)$ must be a function of the physical process associated with $P$ alone, and not the context of other considered possibilities. Therefore, non-contextuality is a prerequisite for a dynamically consistent optimization framework.
+**Proof.** Fix a projector $P$ and two partitions $\Pi_1$ and $\Pi_2$ that both contain $P$. Consider any payoff function that depends only on whether $P$ occurs. If $f(P|\Pi_1)\neq f(P|\Pi_2)$, the POP-expected payoff of the same physical decision problem would depend on how $\mathbf{1}-P$ is decomposed, yielding incompatible POP-optimal behavior for an identical predictive task. Such context dependence is pure representational overhead and therefore strictly increases PCE potential. Hence at the PCE optimum the assignment is non-contextual, so $f(P)$ is well-defined. ∎
 
-Therefore, $f(P)$ depends only on the projector $P$ itself.
+**Lemma G.1.1ba (Additivity of $f$ over Orthogonal Sums).** The cost frame function $f$ is additive over orthogonal sums: if $P$ is a projector that decomposes into a sum of orthogonal projectors $P=\sum_j Q_j$ with $Q_jQ_k=0$ for $j\neq k$, then:
+$$
+f(P)=\sum_j f(Q_j)
+\quad \text{(G.1.2)}
+$$
+
+**Proof.** Let $P=\sum_{j=1}^k Q_j$ be an orthogonal refinement. Consider any bounded payoff function $u$ that depends only on the coarse-grained event "$P$ occurs" versus "$\mathbf{1}-P$ occurs", assigning payoffs $u_P$ and $u_{\neg P}$ respectively. Using the coarse partition $\{P,\mathbf{1}-P\}$,
+$$
+\mathbb{E}[u]=f(P)\,u_P+(1-f(P))\,u_{\neg P}.
+$$
+Using the refined partition $\{Q_1,\dots,Q_k,\mathbf{1}-P\}$,
+$$
+\mathbb{E}[u]=\Big(\sum_j f(Q_j)\Big)u_P+\Big(1-\sum_j f(Q_j)\Big)u_{\neg P}.
+$$
+POP requires the same expected value for the same physical decision problem, independent of representational refinement. Since $u_P,u_{\neg P}$ are arbitrary, this forces $f(P)=\sum_j f(Q_j)$. ∎
 
 **G.1.3 Gleason-type Result for the Cost Functional**
 
 
-The cost function $f(P)$ defined on projectors $P$ on the MPU Hilbert space $\mathcal{H}$ (where $\dim(\mathcal{H}) = d_0 \ge 8$, Theorem 23) satisfies the necessary conditions for Gleason's Theorem:
+The cost frame function $f(P)$ defined on projectors $P$ on the MPU Hilbert space $\mathcal{H}$ (where $\dim(\mathcal{H}) = d_0 \ge 8$, Theorem 23) satisfies the hypotheses of Gleason's theorem:
 1.  **Domain:** Defined on the set of orthogonal projectors $P$ on $\mathcal{H}$.
-2.  **Non-negativity:** $f(P) = V(P) \ge 0$ (Definition G.1.1, as conditional potential $V(P)$ components like $V_{op}, V_{prop}$ are non-negative costs, and $V_{benefit}$ is bounded and subtracted appropriately such that the net functional represents effective cost/weight).
-3.  **Additivity:** $f(\sum_j Q_j) = \sum_j f(Q_j)$ for any finite set of mutually orthogonal projectors $\{Q_j\}$ (Lemma G.1.1ba).
+2.  **Non-negativity and normalization:** $f(P)\ge 0$ for all projectors $P$, and $f(\mathbf{1})=1$ (Definition G.1.1).
+3.  **Additivity:** $f(\sum_j Q_j)=\sum_j f(Q_j)$ for any finite set of mutually orthogonal projectors $\{Q_j\}$ (Lemma G.1.1ba).
 4.  **Non-contextuality:** $f(P)$ depends only on $P$ (Lemma G.1.1b).
-5.  **Boundedness:** For any projector $P$, $f(P) \le f(\mathbf{1})$. The cost $f(\mathbf{1}) = V(\mathbf{1})$ represents the total potential contribution associated with resolving all possibilities (e.g., summing $f(P_i)$ over a complete basis $\{P_i\}$), which is assumed bounded for viable MPU configurations operating within the framework and its dynamic PCE optimization that inherently avoids unbounded costs (Assumption A1, A5 Appendix D relating to coercivity of $V(x)$ and confinement).
+5.  **Boundedness:** For any projector $P$, $f(P)+f(\mathbf{1}-P)=f(\mathbf{1})=1$ with $f(\mathbf{1}-P)\ge 0$, hence $0\le f(P)\le 1$.
+
+These match the conditions required by Gleason's theorem for projectors on a Hilbert space of dimension $\ge 3$.
 
 **Theorem G.1.3 (Quadratic Form from Cost Function).**
-Let $\mathcal{H}$ be a complex Hilbert space with $\dim(\mathcal{H}) \ge 3$. Any function $f$ mapping orthogonal projectors $P$ on $\mathcal{H}$ to non-negative real numbers, satisfying additivity over orthogonal sums ($f(\sum_j Q_j) = \sum_j f(Q_j)$ for finite sums of orthogonal projectors) and boundedness ($0 \le f(P) \le M < \infty$ for some constant $M$), must be of the form:
+Let $\mathcal{H}$ be a complex Hilbert space with $\dim(\mathcal{H}) \ge 3$. Any non-contextual finitely additive frame function $f$ on orthogonal projectors with $f(\mathbf{1})=1$ must be of the form:
 $$
-f(P) = \text{Tr}(\rho P)
+f(P)=\text{Tr}(\rho P)
 \quad \text{(G.1.3)}
 $$
-for some unique positive semi-definite trace-class operator $\rho$ on $\mathcal{H}$.
+for a unique positive semi-definite trace-class operator $\rho$ with $\text{Tr}(\rho)=1$.
 
-*Proof.* This is a direct statement of Gleason's Theorem [Gleason 1957], as extended and understood in modern contexts (e.g., [Busch 2003] discusses the conditions for POVMs, implying coverage for projectors). The premises established above (non-negativity, additivity over finite orthogonal sums derived from Def G.1.1 via Lemma G.1.1ba and Lemma G.1.1b regarding PCE-optimal accounting, non-contextuality via Lemma G.1.1b, and boundedness from physical system constraints on $V(x)$) precisely match the conditions required by Gleason's theorem for projectors on a Hilbert space of dimension $\ge 3$. Since MPUs operate with $\dim(\mathcal{H}_0) = d_0 \ge 8$ (Theorem 23), the theorem applies directly. Therefore, the cost functional $f(P)$, dictated by POP/PCE principles applied to projective outcomes, must take the form $\text{Tr}(\rho P)$ for some unique positive semi-definite trace-class operator $\rho$. Uniqueness of $\rho$ follows from the properties of the trace functional and projectors. The full derivation of the Born rule from these principles is provided in **Theorem G.1.7**. QED
+*Proof.* This is Gleason's Theorem [Gleason 1957]. Normalization $f(\mathbf{1})=1$ forces $\text{Tr}(\rho)=1$. For the POVM extension, see [Busch 2003]. ∎
 
-The operator $\rho$ derived here, determined by the cost structure arising from the PCE potential minimization, represents the effective statistical weighting assigned to different potential outcomes.
+The operator $\rho$ is therefore the density operator representing the MPU's predictive state; the trace rule fixes all projective-event weights $f(P)$.
 
 **G.1.4 Emergence of the Born Weights**
 
-The 'Evolve' process (Definition 27) is intrinsically probabilistic (Hypothesis 2, from Logical Indeterminacy, Definition 12). The system, driven by POP (Axiom 1), must assign probabilities $p_i$ to potential outcomes $P_i$ to guide its decision-making and adaptive strategies. Simultaneously, PCE (Definition 15) drives the system to a configuration $x^*$ where its PCE Potential $V(x)$ (Definition D.1) is minimized. As established by Theorem G.1.3, the components of $V(x)$ related to outcome branches $P_i$ (the cost frame function) necessarily sum to give $f(P_i) = \text{Tr}(\rho P_i)$. This $f(P_i)$ represents the system's own optimal, objective assessment of the "value" or "PCE-cost-weighted significance" of outcome branch $P_i$.
+The "Evolve" process yields discrete realized outcomes for any projective predictive partition $\{P_i\}$, and POP evaluates predictive decisions by their expected value with respect to the event weights $f(P_i)$ (Definition G.1.1). By Theorem G.1.3 there exists a unique density operator $\rho_{phys}$ such that $f(P)=\text{Tr}(\rho_{phys}P)$ for every projector $P$. Hence the realized outcome probabilities are fixed by the trace rule.
 
-For the system's probabilistic model $\{p_i\}$ to be self-consistent with its own PCE-optimized resource allocation and valuation schema $\{f(P_i)\}$, the probabilities $p_i$ must align with $f(P_i)$. Specifically, if the system assigns probabilities $p_i$ that are *not* proportional to $f(P_i)$, it means its explicit predictive model (using $p_i$) is misaligned with its implicit PCE-derived valuation $f(P_i)$. This is analogous to a rational agent whose subjective probabilities deviate from objective odds it has itself determined as optimal based on resource costs and payoffs. Such a misalignment implies sub-optimal decision-making concerning future actions or resource allocations that depend on these probabilities (e.g., how much complexity $C$ to allocate via the Law of Prediction, Thm 19, based on a $\hat{C}_{target}$ value inferred probabilistically).
-
-**POP and PCE select for this alignment.** A system whose $p_i$ does not track $f(P_i)$ would consistently misallocate resources, leading to a higher average $V(x)$ over time compared to a system where $p_i \propto f(P_i)$. The drive to minimize $V(x)$ globally (as per Appendix D dynamics) thus forces this alignment.
-Therefore, the only stable, PCE-optimal probability assignment is $p_i = c \cdot f(P_i) = c \cdot \text{Tr}(\rho P_i)$ for some constant $c$.
-The constant of proportionality $c$ is fixed by the normalization requirement $\sum_i p_i = 1$ for any complete set of orthogonal projectors $\{P_i\}$ satisfying $\sum_i P_i = \mathbf{1}$.
+**Theorem G.1.4 (Born Weights from Cost Minimization).** For a projective measurement (predictive partition) $\{P_i\}$ on state $\rho_{phys}$, the probability of outcome $i$ is:
 $$
-\sum_i p_i = c \sum_i \text{Tr}(\rho P_i) = c \text{Tr}\left(\rho \sum_i P_i\right) = c \text{Tr}(\rho \mathbf{1}) = c \text{Tr}(\rho) = 1
-$$
-The operator $\rho$ emerging from the cost functional (Theorem G.1.3) is positive semi-definite and trace-class. The physical state of the MPU, $\rho_{phys}$, is also determined by the same global PCE optimization that determines $V(x)$ and its components $f(P_i)$. Thus, PCE self-consistency demands that the $\rho$ appearing in $f(P_i)=\text{Tr}(\rho P_i)$ must be the actual physical state $\rho_{phys}$ of the system. If they were different, it would imply the system's internal cost valuation (determining $\rho$) is based on a "phantom" state, misaligned with its actual physical state $\rho_{phys}$, violating PCE's drive for accurate correspondence between internal models and physical reality (akin to the misalignment penalized by $V_{proxy}$ in Theorem D.1, but here applied to the valuation of predictive branches). The density operator representing a physical state must have unit trace: $\text{Tr}(\rho_{phys}) = 1$. This forces $c=1$.
-
-Therefore, the unique probability assignment consistent with the PCE-derived cost structure is the Born rule:
-$$
-p_i = \text{Tr}(\rho_{phys} P_i)
+p_i = f(P_i) = \text{Tr}(\rho_{phys}P_i)
 \quad \text{(G.1.4)}
 $$
-For a system in a pure state $|\psi\rangle$, the density operator is $\rho_{phys} = |\psi\rangle\langle\psi|$, and the probability becomes:
+If $\rho_{phys}=|\psi\rangle\langle\psi|$ is pure, and $P_i = |\psi_i\rangle\langle\psi_i|$ is rank-1, then:
 $$
-p_i = \text{Tr}(|\psi\rangle\langle\psi| P_i)
+p_i = \langle \psi|P_i|\psi\rangle = |\langle \psi_i|\psi\rangle|^2
+\quad \text{(G.1.5)}
 $$
-If $P_i = |i\rangle\langle i|$ projects onto a basis state $|i\rangle$ (associated with perspective $s$), then
-$$
-p_i = \text{Tr}(|\psi\rangle\langle\psi| |i\rangle_s\langle i|_s) = \langle i | \psi \rangle_s \langle \psi | i \rangle_s = |\langle i|\psi\rangle_s|^2
-$$
+
+**Proof.** The first formula is immediate from $p_i=f(P_i)$ and Theorem G.1.3. The second follows by evaluating the trace for rank-one projectors. ∎
+
 This recovers the standard form of the Born rule (Proposition 7, Equation 50).
 
 **G.1.5 The Two-Dimensional Case**
@@ -118,32 +107,29 @@ Therefore, both the physical embedding and the formal extension via PCE-enforced
 
 **G.1.6 Physical Interpretation**
 
-The derivation shows that the Born rule is not an ad-hoc postulate but emerges as the unique, self-consistent way to assign predictive weights (probabilities) that align with the optimal resource allocation determined by the fundamental PCE optimization principle operating within the Hilbert space structure. The quadratic dependence on amplitudes ($|\langle i|\psi\rangle|^2$) arises naturally from the trace functional applied to projectors, reflecting the underlying structure of the PCE potential landscape. The density operator $\rho_{phys}$ serves simultaneously as the descriptor of the physical state and the generator of the consistent cost/probability measure.
+The derivation shows that the Born rule is not an ad-hoc postulate but emerges as the unique, self-consistent way to assign predictive weights (probabilities) that align with the optimal resource allocation determined by the fundamental PCE optimization principle operating within the Hilbert space structure. The quadratic dependence on amplitudes ($|\langle i|\psi\rangle|^2$) arises naturally from the trace functional applied to projectors, reflecting the underlying structure of the PCE potential landscape. The density operator $\rho_{phys}$ serves simultaneously as the descriptor of the physical state and the generator of the POP/PCE-selected probability weight.
 
 **G.1.7 Summary Theorem**
 
-**Theorem G.1.7 (Born Rule from Cost Optimisation).**
-In the Predictive Universe framework, the principles of Prediction Optimization (POP, Axiom 1) and Compression Efficiency (PCE, Definition 15) imply that the effective cost associated with potential physical outcomes (represented by orthogonal projectors $P_i$ on the emergent Hilbert space $\mathcal{H}$) defines a non-negative, bounded, additive, and non-contextual frame function $f(P_i)$. By Gleason's Theorem (Theorem G.1.3), this function must take the form $f(P_i) = \text{Tr}(\rho P_i)$ for a unique density operator $\rho$. Consistency between this optimization-derived weighting and the probabilistic nature of outcomes required by Logical Indeterminacy (Hypothesis 2) mandates that the probability $p_i$ of outcome $P_i$, for a system in physical state $\rho_{phys}$, be given by the Born rule: $p_i = \text{Tr}(\rho_{phys} P_i)$.
+**Theorem G.1.7 (Born Rule from Cost Optimisation).** In the PU framework, POP assigns to each sharp event projector $P$ a predictive weight $f(P)$ that is normalized, non-negative, additive under orthogonal refinement, and non-contextual (Definition G.1.1; Lemmas G.1.1ba–G.1.1b). By Gleason's theorem (Theorem G.1.3), $f$ must take the trace form $f(P)=\mathrm{Tr}(\rho_{phys}P)$. Therefore the realized outcome probabilities of "Evolve" are given by the Born rule (G.1.4).
 
 **G.1.8 Hilbert-Space Uniqueness under POP + PCE**
 
 The existence of a well-behaved cost functional satisfying the premises of Theorem G.1.3 not only leads to the Born rule but also provides a justification for the emergence of the Hilbert space structure itself as the unique optimal framework for predictive processing under POP/PCE.
 
-**Theorem G.1.8 (Hilbert-Space Uniqueness from POP + PCE).**
-Let $\mathfrak{A}$ be an abstract algebraic structure describing the predictive possibilities and operations of a system governed by POP and PCE. Assume that this structure admits a physically meaningful, non-negative, bounded, additive, and non-contextual cost functional $f$ defined on its projections (representing potential outcomes), satisfying the conditions derived from PCE consistency that lead to Theorem G.1.3 (i.e., $f(P)=\text{Tr}(\rho P)$ must hold for the PCE-optimal state $\rho$). Then, for consistency with the requirements of representing such a trace functional, the algebraic structure $\mathfrak{A}$ must be representable as an algebra of operators acting on a complex Hilbert space $\mathcal{H}$, unique up to isomorphism (for $\dim \ge 2$). This theorem rigorously justifies Proposition 4 (Emergence of Complex Hilbert Space $\mathcal{H}_0$) in the main text.
+**Theorem G.1.8 (Hilbert-Space Uniqueness under POP + PCE).** Assume that the abstract algebraic structure describing potential outcomes admits a normalized non-contextual additive frame functional $f$ on its sharp events (projectors) satisfying the hypotheses of Theorem G.1.3. Then, for consistency with representing such a trace-state functional, the outcome structure is representable as an algebra of operators acting on a complex Hilbert space.
 
 *Proof.*
-1.  **Existence of Trace Form Cost Functional:** By Theorem G.1.7, POP/PCE optimization leads to an effective cost structure for outcome branches $P$ that necessitates $f(P) = \text{Tr}(\rho_{phys} P)$, where $\rho_{phys}$ is the system's physical state (a positive semi-definite operator). The trace functional is central.
-2.  **GNS Construction for Hilbert Space Representation:** The state $\omega(A) = \text{Tr}(\rho_{phys} A)$ is a positive linear functional on any C*-algebra $\mathfrak{A}_{ops}$ of operators that includes the projectors and observables. The Gelfand-Naimark-Segal (GNS) construction [Reed & Simon 1980] guarantees that for any such state on a C*-algebra, there exists a unique (up to unitary equivalence) Hilbert space $\mathcal{H}_\omega$, a representation $\pi_\omega: \mathfrak{A}_{ops} \to B(\mathcal{H}_\omega)$ (bounded operators on $\mathcal{H}_\omega$), and a cyclic vector $|\Omega_\omega\rangle \in \mathcal{H}_\omega$ such that $\omega(A) = \langle \Omega_\omega | \pi_\omega(A) | \Omega_\omega \rangle$.
-3.  **Why Complex Hilbert Space?:** The PCE imperative for efficiency selects the complex field $\mathbb{C}$ over real ($\mathbb{R}$) or quaternionic ($\mathbb{H}$) alternatives. While all can support vector space structures, the complex Hilbert space is uniquely efficient for the tasks required by POP.
-   *   **Local Tomography & Information Cost:** A key measure of efficiency is the balance between the predictive power of the representation and the information cost (e.g., number of measurements) needed to determine a state (local tomography). The dimension of the state space (number of parameters) determines this cost. For the PCE-Attractor, the orbit dimension $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ equals the Golay code dimension $k$, providing independent geometric confirmation of the information-theoretic structure via the correspondence established in Theorem U.7a. For a $d$-dimensional system, this is $d^2-1$ for complex spaces, $(d(d+1)/2)-1$ for real spaces, and $(d(2d-1))-1$ for quaternionic spaces. While real spaces require fewer parameters, they lack the expressive power to efficiently model interference phenomena and the $U(1)$ phase crucial for emergent gauge theories (Section G.2). Complex Hilbert spaces provide the necessary structure efficiently, while quaternionic spaces are significantly less efficient (more parameters) without providing necessary additional predictive utility.
-   *   **Symmetry, Dynamics, and Composition:** The complex structure provides the unique framework where the generators of continuous symmetries (Lie algebra) are naturally identified with the observables themselves (via Stone's theorem), simplifying the dynamics. Furthermore, the tensor product structure for composing subsystems is uniquely straightforward in complex Hilbert spaces, unlike real or quaternionic spaces where the local structure does not necessarily determine the global structure [Hardy 2001; Wootters 1990]. Crucially, the $U(1)$ phase freedom that gives rise to electromagnetism (Section G.7) is a natural feature of the complex structure.
-   *   **PCE Selection:** A system based on $\mathbb{R}$ or $\mathbb{H}$ would incur higher information acquisition costs (more measurements for tomography) and/or higher complexity costs to represent the necessary dynamics compared to a system based on $\mathbb{C}$. PCE, by minimizing these costs within the potential $V(x)$, selects the complex Hilbert space as the most resource-efficient substrate for prediction.
-4.  **Uniqueness & Optimality:** The combination of (a) Gleason's theorem (underpinned by POP/PCE cost consistency) selecting the trace-form for costs/probabilities, and (b) the GNS construction providing a unique Hilbert space representation for systems supporting such trace-form states, establishes that the complex Hilbert space structure is uniquely determined (up to isomorphism) as the necessary arena for the self-consistent, PCE-optimized predictive processing modeled by the PU framework. This also makes Proposition 4 (Emergence of Complex Hilbert Space) a derived theorem based on Theorem G.1.8
+
+1. By Theorem G.1.3, there exists a density operator $\rho$ such that $f(P)=\text{Tr}(\rho P)$ for all sharp events $P$.
+
+2. Let $\mathfrak{A}$ be the unital *-algebra generated by these sharp events and their finite linear combinations (predictive observables). Extending $f$ by linearity and continuity gives a positive normalized state $\omega$ on $\mathfrak{A}$. By the GNS construction, $(\mathfrak{A},\omega)$ admits a cyclic representation $(\pi,\mathcal{H}_\omega,|\Omega\rangle)$ with $\omega(A)=\langle\Omega|\pi(A)|\Omega\rangle$ and projections represented as orthogonal projectors on $\mathcal{H}_\omega$.
+
+3. The remaining choice is the scalar field. A PCE-stable interference theory must support a continuous one-parameter phase symmetry that leaves all probabilities $f(P)$ invariant, i.e. a connected abelian phase group acting on amplitudes. For real Hilbert spaces the unit-norm scalars are $\{\pm1\}$ (discrete, no continuous phase). For quaternionic Hilbert spaces the unit-norm scalars form $SU(2)$ (three-parameter, non-abelian). The complex case has unit-norm scalars $U(1)$, giving the minimal connected abelian phase redundancy compatible with interference and the emergent $U(1)$ gauge sector. Moreover, a non-abelian quaternionic phase group would introduce additional local phase generators, conflicting with the PU capacity bound on independently estimable gauge generators (Theorem G.8.2e). Therefore the PU fixed point selects the complex Hilbert-space representation. ∎
 
 **Corollary G.1.9 (PCE Instability of Alternative Predictive Algebras).**
 Any proposed alternative algebraic structure for prediction (e.g., classical probability on phase space, real or quaternionic Hilbert spaces, Jordan algebras, $L^p$ spaces with $p \neq 2$) would be unstable under PCE optimization compared to the complex Hilbert space structure.
-*Proof.* Let $\mathfrak{A}$ denote a proposed predictive algebra (states, sharp outcomes, and composition rules) used by an MPU. For $\mathfrak{A}$ to be PCE-stable, the POP/PCE accounting of outcome branches must admit a nonnegative, finitely additive, non-contextual frame functional $f(P)$ on sharp outcomes (Definition G.1.1), because any contextual dependence introduces avoidable bookkeeping and is penalized by the PCE potential $V(x)$ (Lemma G.1.1b and Appendix D, Definition D.1). Under these premises and $\dim(\mathcal{H}_0)\ge 3$ (Theorem 23), Theorem G.1.7 enforces the trace-form rule for costs/probabilities,
+*Proof.* Let $\mathfrak{A}$ denote a proposed predictive algebra (states, sharp outcomes, and composition rules) used by an MPU. For $\mathfrak{A}$ to be PCE-stable, the POP/PCE accounting of outcome branches must admit a nonnegative, normalized, finitely additive, non-contextual frame functional $f(P)$ on sharp outcomes (Definition G.1.1), because any contextual dependence introduces avoidable bookkeeping and is penalized by the PCE potential $V(x)$ (Lemma G.1.1b and Appendix D, Definition D.1). Under these premises and $\dim(\mathcal{H}_0)\ge 3$ (Theorem 23), Theorem G.1.7 enforces the trace-form rule for probabilities,
 $$
 f(P)=\operatorname{Tr}(\rho_{phys}P),
 \qquad
@@ -195,36 +181,24 @@ This establishes that non-classical state space structure is logically necessary
 
 Having established the necessity of a complex Hilbert space $\mathcal{H}$ and the Born rule from PCE principles, we now derive the origin of gauge symmetries.
 
-**Proposition G.M1 (SM gauge group from PCE cost minimization under the Local Module Hypothesis).**
+**Proposition G.M1 (SM gauge group from PCE-preserving local frame symmetry).** Let $\mathcal{P} \to M$ be the bundle of local predictive frames over spacetime $M$, where a frame at $x \in M$ is an orthonormal basis of the local Hilbert space $\mathcal{H}_x$ that diagonalizes the local PCE potential (minimizes redundant encoding of predictive state information). Then:
 
-Let $\mathcal P\to M$ be the bundle of predictive frames that **preserve PCE** under refinements. The fiber consists of **ordered, PCE‑adapted orthonormal frames**, on which the group of frame transformations acts freely.
-(i) The group $G_x$ of local predictive‑frame transformations that preserve the predictive state $\omega$ acts **freely and transitively** on the fiber, making $\mathcal P$ a **principal $G$‑bundle**.
-(ii) A PCE‑least‑action transport defines a **connection** $A$ on $\mathcal P$ with curvature $F=dA+A\wedge A$.
-(iii) **Local Module Hypothesis (LMH).** If the local MPU Hilbert space decomposes as a direct sum of predictive modules $H_x\cong \mathbb C\oplus\mathbb C^2\oplus\mathbb C^3$ (as expected when predictive partitions decouple to leading order under PCE locality) and the predictive‑frame symmetry acts **locally** as a product group
+1. The group $G$ of PCE-preserving local frame transformations acts freely and transitively on each fibre, so $\mathcal{P}$ is a principal $G$-bundle.
+2. Parallel transport of predictive frames under PCE least-action defines a connection $A$ on $\mathcal{P}$, whose curvature $F = dA + A\wedge A$ encodes the obstruction to globally consistent minimal-cost framing — i.e., emergent gauge field strength.
+3. For the PCE-selected inactive-sector module decomposition (Theorem G.8.4b),
 $$
-G\ \cong\ G_1\times G_2\times G_3,
+\mathcal{H}_x^{(int)} \cong \mathbb{C}^1 \oplus \mathbb{C}^2 \oplus \mathbb{C}^3,
 $$
-then the total PCE coherence cost **adds** across modules.
-*Partition‑to‑Module Lemma.* If a predictive partition $\mathcal H=\bigoplus_i \mathcal H_i$ saturates the PCE locality bound and inter‑module predictive mutual information vanishes at leading order, then there exists a local frame in which PCE coherence costs **add** across modules up to higher‑order corrections: $\mathcal C\big(\bigoplus_i\mathcal H_i\big)=\sum_i \mathcal C(\mathcal H_i)+O(\epsilon_{\rm int})$.
+the maximal unitary symmetry preserving the direct-sum structure is
+$$
+G_{int}=U(1)\times U(2)\times U(3),
+$$
+with Lie algebra $\mathfrak{u}(1)\oplus\mathfrak{u}(2)\oplus\mathfrak{u}(3)=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)^3$. The PU capacity bound on independently estimable gauge generators (Theorem G.8.2e; Eq. G.8.0) gives $n_G\le 12$. Since $\dim\mathfrak{su}(3)+\dim\mathfrak{su}(2)=8+3=11$, at most one additional abelian generator can be gauged. Therefore the PCE-minimal faithful gauged algebra is
+$$
+\mathfrak{g}_{SM}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1).
+$$
 
-For a simple compact factor $G_i$ acting irreducibly on an $n$‑dimensional module, we posit a PCE-motivated cost functional. All quadratic Casimirs $C_2$ below use the standard physics convention (long roots of length‑squared 2; for $SU(N)$, $\mathrm{Tr}(T_aT_b)=\tfrac{1}{2}\delta_{ab}$). A minimal, physically motivated form is:
-$$
-\mathcal C(G_i)=\frac{n}{n+1}\,C_2(U_i),
-$$
-where $C_2(U_i)$ is the quadratic Casimir of the representation $U_i$ of $G_i$ on $\mathbb{C}^n$. This form follows from the PCE risk expansion on complex projective space $\mathrm{CP}^{n-1}$: the expected second‑order predictive loss along Killing‑normalized generators scales as $\frac{n}{n+1}\mathrm{Tr}\big(\sum_a H_a^2\,\rho\big)=\frac{n}{n+1}C_2(U_i)$; cross‑module terms vanish under the Lemma above. For $U(1)$, we use the aggregate cost over fields: $\mathcal C_{U(1)}\propto \sum_{\text{fields}} (\text{multiplicity})\cdot Y^2$.
-
-**Minimization under LMH** yields:
-*   On $\mathbb C^2$: The unique simple option with a faithful 2‑dimensional complex irrep is $SU(2)$. Minimal cost selects the fundamental representation with $C_2(SU(2)_{\mathbf{2}})=\frac{3}{4}$.
-*   On $\mathbb C^3$: Candidates are $SU(3)$ in the fundamental and $SU(2)$ in the spin-1 (adjoint) representation. The respective costs are:
-    $$
-    \mathcal C(SU(3)_{\mathbf{3}}) = \frac{3}{4}\,C_2(SU(3)_{\mathbf{3}})=\frac{3}{4}\cdot\frac{4}{3}=1
-    \quad<\quad
-    \mathcal C(SU(2)_{j=1})=\frac{3}{4}\,C_2(SU(2)_{j=1})=\frac{3}{4}\cdot 2=\frac{3}{2}.
-    $$
-    PCE selects the lower-cost option, $SU(3)$. Thus, the non‑abelian part is **$SU(2)\times SU(3)$** acting in fundamentals.
-*   **Abelian factor:** A **single** non‑trivial $U(1)$ factor is **sufficient** and **cost‑minimal** for SM‑like chiral content. With a common proportionality constant across abelian sectors, **any additional non‑trivial $U(1)$** strictly increases the abelian cost; hence one and only one $U(1)$ is cost‑minimal.
-
-**Note on irreducible competitors.** Competing **simple** groups acting irreducibly on $\mathbb C^5 \cong \mathbb C^2 \oplus \mathbb C^3$ (e.g., $SU(5)$) are disfavored by the cost (2.0 vs 1.5) and **ruled out** in PU by the **capacity bound** ($\dim SU(5)=24 > n_{\max}$, Equation G.8.0). Orthogonal/symplectic alternatives have real/pseudoreal fundamentals that obstruct the required **chirality**, providing a second, independent exclusion. ∎
+*Note:* Competing simple groups (e.g. $SU(5)$) act irreducibly on $\mathbb{C}^5$ and require additional generators or break the module decomposition, increasing predictive overhead under PCE and violating the capacity bound. ∎
 
 For the simplest case of a single predictive field, the group of PCE-preserving automorphisms is $U(1)$. The physical predictions (probabilities $p_i$) derived from a state vector $|\Psi(x)\rangle$ depend only on the squared amplitudes. This implies an inherent redundancy: multiplying the state vector by a local phase factor leaves all local physical predictions unchanged:
 $$
@@ -585,7 +559,7 @@ A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 
 ### G.8.4a Gauge Algebra via Exhaustive Partition Analysis
 
-This section derives the Standard Model gauge algebra via exhaustive classification of module decompositions, providing complementary verification of the cost-minimization approach in Proposition G.M1. The inactive subspace $\mathcal{B} = \mathbb{C}^b$ with $b = d_0 - a = 8 - 2 = 6$ (where $a = 2$ follows from Theorem Z.1) carries the gauge representation. The derivation proceeds through three stages: exclusion of simple groups, enumeration of viable partitions, and unique selection by physical constraints.
+This section derives the Standard Model gauge algebra via exhaustive classification of module decompositions, supplying the module-decomposition input used in Proposition G.M1. The inactive subspace $\mathcal{B} = \mathbb{C}^b$ with $b = d_0 - a = 8 - 2 = 6$ (where $a = 2$ follows from Theorem Z.1) carries the gauge representation. The derivation proceeds through three stages: exclusion of simple groups, enumeration of viable partitions, and unique selection by physical constraints.
 
 **Theorem G.8.4a (No Simple 12-Dimensional Gauge Algebra).**
 No complex simple Lie algebra has dimension $12$. In particular, any gauge algebra saturating the Lagrangian capacity bound $n_G = 12$ (Theorem G.8.2e) is necessarily non-simple: its semisimple part $[\mathfrak{g},\mathfrak{g}]$ contains at least two simple factors.
@@ -763,7 +737,7 @@ The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(
 **Remark G.8.4c.3: Experimental Status.** Current experimental lower limits on partial lifetimes are $\tau/B(p \to e^+ \pi^0) > 2.4 \times 10^{34}$ years and $\tau/B(p \to \mu^+ \pi^0) > 1.6 \times 10^{34}$ years [Super-Kamiokande Collaboration 2020]. Minimal $SU(5)$ scenarios typically predict $\tau/B(p \to e^+ \pi^0)$ in the $10^{31}$–$10^{32}$ year range (model-dependent), which is excluded by more than two orders of magnitude [Nath & Fileviez Pérez 2007; Langacker 1981]. The framework predicts continued null results in searches for gauge-mediated proton decay modes.
 
 
-**Remark G.8.4d: Complementary Derivation Methods.** The module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ derived via exhaustive partition analysis coincides with the Local Module Hypothesis of Proposition G.M1. Both methods use the same foundational constraints—the capacity bound $n_G \leq 12$, anomaly cancellation, chirality requirements, and PCE optimization—but apply them differently: Proposition G.M1 proceeds by direct cost minimization, while Theorem G.8.4b proceeds by systematic elimination. The convergence of these complementary approaches establishes that the Standard Model gauge structure is uniquely determined by framework principles.
+**Remark G.8.4d: Complementary Derivation Structure.** Proposition G.M1 identifies the emergent gauged algebra as the decomposition-preserving local unitary symmetry once the internal module split is fixed. Theorem G.8.4b derives the unique PCE-selected module decomposition $\mathcal{B}=\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1$ from capacity, locality, chirality, and anomaly constraints. Together they yield $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ without additional hypotheses.
 
 **Remark G.8.4e: Geometric Interpretation via Attractor Orbit.** The PCE-Attractor orbit is the Grassmannian $\text{Gr}(2,8)$ with isotropy group $K = U(2) \times U(6)$. The tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)$ is irreducible under $K$. By Schur's lemma, any $K$-invariant potential $V_{PCE}$ has scalar Hessian $H = \lambda I$ at the minimum with $\lambda = 3/2$ (Corollary T.41.3). 
 
@@ -829,7 +803,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
 
 2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
     Within the stable D=4 arena, PCE selects the optimal gauge group and matter content subject to capacity and consistency constraints.
-    *   **Gauge group $G_{SM}$.** By the cost-minimization principle under Proposition G.M1 and the Local Module Hypothesis, established by exhaustive partition analysis (Theorem G.8.4b, Corollary G.8.4c), the module decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ is uniquely selected. The non-abelian part is $SU(2) \times SU(3)$ acting in fundamentals; adding **exactly one** non-trivial $U(1)$ factor is sufficient and cost-minimal for SM-like chiral content. Simple unification groups are excluded by capacity bounds (Theorem G.8.4a, Corollary G.8.4c.1). The total generator count $n_G = 12$ saturates the Lagrangian capacity bound (Theorem G.8.2e), lies within the channel capacity range (Equation G.8.0), and equals the Golay code dimension $k = 12$ (Theorem Z.13). The tree-level Weinberg angle $\sin^2\theta_W^{(0)} = 3/8$ emerges from PCE isotropy at the PU fixed point without requiring grand unified gauge symmetry; the value $3/8$ coincides with the standard tree-level $SU(5)$ unification prediction [de Boer 1994] (Appendix T, Theorem T.14).
+    *   **Gauge group $G_{SM}$.** By exhaustive partition analysis (Theorem G.8.4b, Corollary G.8.4c), the decomposition $\mathcal{B}=\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1$ is uniquely selected and provides the internal symmetry $U(1)\times U(2)\times U(3)$. The non-abelian part is $SU(2)\times SU(3)$ acting in the fundamental representations; the PU capacity bound on independently estimable generators (Theorem G.8.2e; Eq. G.8.0) then allows at most one additional abelian generator beyond $SU(2)\times SU(3)$, yielding the gauged algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ (Proposition G.M1). Simple unification groups are excluded by the same capacity bounds (Theorem G.8.4a, Corollary G.8.4c.1). The total generator count $n_G=12$ saturates the Lagrangian capacity bound (Theorem G.8.2e), lies within the channel capacity range (Equation G.8.0), and equals the Golay code dimension $k=12$ (Theorem Z.13). The tree-level Weinberg angle $\sin^2\theta_W^{(0)}=3/8$ emerges from PCE isotropy at the PU fixed point without requiring grand unified gauge symmetry; the value $3/8$ coincides with the standard tree-level $SU(5)$ unification prediction [de Boer 1994] (Appendix T, Theorem T.14).
     *   **Hypercharge Uniqueness (one chiral family, no $n^c$).** Let the left‑chiral hypercharges be $y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c}$. Imposing cancellation of all local and mixed gauge and gravitational anomalies in $D=4$ yields the constraints:
         $$
         \begin{alignedat}{2}
@@ -839,7 +813,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
         &[U(1)]^3: &\quad &N_c(2y_q^3+y_{u^c}^3+y_{d^c}^3)+2y_\ell^3+y_{e^c}^3=0.
         \end{alignedat}
         $$
-        Treating $N_c$ as a variable, the anomaly constraints admit the family $y_\ell=-N_c y_q,\ y_{e^c}=2N_c y_q,\ y_{d^c}=(N_c-1)y_q,\ y_{u^c}=-(N_c+1)y_q$. Witten’s global $SU(2)$ anomaly enforces $N_c+1$ even $\Rightarrow N_c$ odd. The SM gauge group dimension is $n_G = (N_c^2-1) + (2^2-1) + 1 = N_c^2+3$. PU’s capacity bound $n_G \le n_{\max}$ (Equation G.8.0). If we take the central estimate $n_{\max} \approx 12$, then $N_c^2+3 \le 12$, implying $N_c^2\le 9$, so $N_c\le 3$. With $N_c=3$, the PCE cost of the hypercharge configuration, modeled as being proportional to the sum of squared charges, $S \propto \sum_i n_i y_i^2$, is equal for both anomaly‑allowed branches. Choosing the conventional SM branch gives, up to an overall normalization/sign factor, the unique Standard Model hypercharge assignments:
+        Treating $N_c$ as a variable, the anomaly constraints admit the family $y_\ell = -N_c y_q,\; y_{e^c}=2N_c y_q,\; y_{d^c}=(N_c-1)y_q,\; y_{u^c}=-(N_c+1)y_q$. Witten’s global $SU(2)$ anomaly enforces $N_c+1$ even $\Rightarrow N_c$ odd. SM gauge group dimension is $n_G=(N_c^2-1)+(2^2-1)+1=N_c^2+3$. PU capacity bound $n_G\le n_{\max}$ (Equation G.8.0) with central estimate $n_{\max}\approx 12$ implies $N_c^2+3\le 12$, hence $N_c\le 3$. Taking $N_c=3$ yields, up to overall normalization and overall sign (absorbed into the $U(1)$ generator and coupling), the unique Standard Model hypercharge assignments:
         $$
         y_q=\tfrac{1}{6},\quad y_{u^c}=-\tfrac{2}{3},\quad y_{d^c}=\tfrac{1}{3},\quad y_\ell=-\tfrac{1}{2},\quad y_{e^c}=1.
         $$

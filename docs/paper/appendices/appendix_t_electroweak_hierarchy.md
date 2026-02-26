@@ -762,7 +762,7 @@ This makes the cancellation in $\beta_\lambda(\mu_G)$ a determined consequence o
 
 **Remark T.26.2: Numerical Consistency.** With $g_U = \sqrt{\pi/6} \approx 0.724$ (Theorem T.39a), the marginality condition gives $y_t(\mu_G) = (57/200)^{1/4} g_U \approx 0.44$. Two-loop SM RG evolution from $\mu_G \sim 10^{15}$ GeV to the top pole mass scale, starting from $\alpha_U^{-1}=24$ (i.e.\ all three gauge couplings equal at matching), yields:
 - $y_t(M_t) \approx 0.93$–$0.99$, consistent with $y_t^{\text{obs}}(M_t) \approx 0.99$;
-- $\sin^2\theta_W(M_Z) \approx 0.231$ after threshold corrections (Theorem T.17);
+- $\sin^2\theta_W(M_Z) = 0.2312 \pm 0.0003$ after threshold corrections (Theorem T.18);
 - $\alpha_s(M_Z) \approx 0.117$–$0.119$, consistent with $0.1179 \pm 0.0010$ (experimental).
 
 The top Yukawa starts below its infrared quasi-fixed-point value, so RG amplification from $\mu_G$ to $M_t$ (a factor $\sim 30$ in energy scale) generates the required growth. Two-loop corrections to $\beta_\lambda(\mu_G)$ are suppressed by $(16\pi^2)^{-1}$ relative to the one-loop result and do not qualitatively alter the marginality mechanism.

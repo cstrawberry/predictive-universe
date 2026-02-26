@@ -1284,7 +1284,7 @@ Item 3 has been resolved. Items 1-2 require explicit construction of the PCE pot
 
 $$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.25 + 0.23 = 19.48$$
 
-The factor of $\kappa_{EW}/2$ arises from the $\mathbb{Z}_2$ orientation-reversal action of CP on $SU(2) \cong S^3$, which bisects the electroweak configuration space into CP-even and CP-odd sectors of equal Haar measure; baryogenesis samples only the CP-odd sector. The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
+The CP-odd baryogenesis insertion is a $\mathbb{Z}_2$ half-step whose square reproduces the full electroweak locking step (Theorem Y.11.2). Since PCE costs add under sequential composition, the associated large-deviation exponent halves, giving $\kappa_{CP}=\kappa_{EW}/2$ (Lemma Y.8.1(e)). The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
 
 **Open Problem (Gravitational Response).** The covariant form of variable gravitational coupling consistent with $\nabla^\mu T_{\mu\nu} = 0$ is constrained to:
 

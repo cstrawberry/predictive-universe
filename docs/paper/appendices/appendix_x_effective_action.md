@@ -23,13 +23,13 @@ $$
 \tag{X.2}
 $$
 
-For rigorous convexity and domain control, $W$ and $\Gamma$ are defined in Euclidean signature; Minkowski‑space results follow by analytic continuation where appropriate. In Euclidean conventions, assuming the probability distribution can be written in Boltzmann form, $p_\theta[\varphi] = e^{-S_E[\varphi]} / Z$, where $Z$ is the partition function. The **dimensionless** Euclidean action is
+For rigorous convexity and domain control, $W$ and $\Gamma$ are defined in Euclidean signature; Minkowski‑space results follow by analytic continuation where appropriate. In Euclidean conventions, when the probability distribution admits a Boltzmann form, $p_\theta[\varphi] = e^{-S_E[\varphi]} / Z_0$, where $Z_0:=\int\mathcal{D}\varphi\,e^{-S_E[\varphi]}$ is the partition function. The **dimensionless** Euclidean action is
 
 $$
-S_E[\varphi]\;:=\;-\ln p_\theta[\varphi]\;+\;\ln Z.
+S_E[\varphi]\;:=\;-\ln p_\theta[\varphi]\;-\;\ln Z_0,
 $$
 
-This ensures that $W,\Gamma$ coincide with the standard definitions in statistical field theory, adapted to the PU coarse‑graining context. At vanishing sources $J=0$, stationary configurations $\delta\Gamma/\delta\Phi=0$ are the PU macrostates at the chosen resolution.
+defined up to an additive constant. This ensures that $W,\Gamma$ agree with the standard definitions in statistical field theory up to $J$‑independent additive constants, adapted to the PU coarse‑graining context. At vanishing sources $J=0$, stationary configurations $\delta\Gamma/\delta\Phi=0$ are the PU macrostates at the chosen resolution.
 
 **Proposition X.1 (Information geometry and curvature).**
 Let $\mathcal G_{ab}(x,y)=\delta^2 W/\delta J^a(x)\delta J^b(y)$ be the connected two‑point kernel. Then
@@ -61,7 +61,7 @@ where $\ell_1^{\mathrm F}(y)$ is the fermionic threshold function (e.g., Litim r
 $$
 \alpha^{-1}(k)\;=\;\alpha^{-1}(\mu^{\*})\;-\;\frac{2}{3\pi}\sum_{f} N_c^{(f)} Q_f^{2}\int_{\ln \mu^{\*}}^{\ln k}\!dt\;\ell_1^{\mathrm F}\!\left(\frac{m_f^{2}}{e^{2t}}\right).
 $$
-With the PU normalization $\kappa^{\*}=1$ one has the **boundary condition** $\alpha(\mu^{\*})=u^{\*}/(4\pi)$ from Appendix Z, and the piecewise integral (set by fermion thresholds $m_f$) produces a predictive **band** for $\alpha^{-1}(m_Z)$.
+With the PU bulk normalization $\kappa^{\*}_{\mathrm{bulk}}=1$ (Appendix Z, Theorem Z.14) one has the **boundary condition** $\alpha_{\mathrm{bulk}}(\mu^{\*})=u^{\*}/(4\pi)$, and the piecewise integral (set by fermion thresholds $m_f$) produces a predictive **band** for $\alpha^{-1}(m_Z)$.
 
 **Corollary X.2 (Fixed points and relevant directions).**
 At a fixed point, directions with negative eigenvalues of the $\Gamma_k$ stability matrix are RG‑relevant (grow under $k\downarrow 0$), while positive‑eigenvalue directions are irrelevant.
@@ -134,7 +134,7 @@ $$
 \end{pmatrix},
 $$
 
-with $\Gamma^{R}$ retarded, $\Gamma^{A}=(\Gamma^{R})^\dagger$, and $-i,\Gamma^{K}\succeq 0$ (noise positivity). Near local equilibrium the KMS condition constrains $\Gamma^{K}$ consistently with the fluctuation–dissipation relations implied by the local second law (Appendix E). Setting $\Phi_+=\Phi_-=\Phi$ yields the physical coarse‑grained equations with causal dissipation.
+with $\Gamma^{R}$ retarded, $\Gamma^{A}=(\Gamma^{R})^\dagger$, and $-i\Gamma^{K}\succeq 0$ (noise positivity). Near local equilibrium the KMS condition constrains $\Gamma^{K}$ consistently with the fluctuation–dissipation relations implied by the local second law (Appendix E). Setting $\Phi_+=\Phi_-=\Phi$ yields the physical coarse‑grained equations with causal dissipation.
 
 
 
@@ -147,7 +147,7 @@ V_{\rm eff}(u;k)\ :=\ \frac{1}{\mathcal{V}}\;\Gamma_k[u\ \text{const}],\qquad \m
 \tag{X.10}
 $$
 
-Appendix G.9 defines a **rate‑level PCE potential** $\phi(u)$ capturing the power‑benefit trade‑off for maintaining $U(1)$ coherence; its LAN expansion near $u=0$ has curvature $\gamma_{\rm eff}=2$. The PU **capacity constraint** (Appendix W; flat spectrum at the PCE‑Attractor) reads
+Appendix G.9 defines a **rate‑level PCE potential** $\phi(u)$ capturing the power‑benefit trade‑off for maintaining $U(1)$ coherence; in the $U(1)$ sector the rate-level cost term is quadratic as in Appendix W (Equation (W.0.1)), hence $\gamma_{\rm eff}=2$. The PU **capacity constraint** (Appendix W; flat spectrum at the PCE‑Attractor) reads
 
 $$
 M\ln(1+\lambda u)=\ln d_0.
