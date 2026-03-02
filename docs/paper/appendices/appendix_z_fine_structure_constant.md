@@ -6,7 +6,7 @@ This appendix presents a complete derivation, with zero continuously adjustable 
 - The electromagnetic fine-structure constant α at the Thomson limit
 - The spatial dimension D of emergent spacetime
 
-Both results emerge from a single information-theoretic structure—the interface mode count M = 24—which is itself uniquely determined by the framework's foundational constants (d₀ = 8, ε = ln 2).
+Both results emerge from a single information-theoretic structure—the interface mode count $M = 24$—which is uniquely fixed at the PCE-Attractor by the framework's foundational constants ($d_0 = 8$ and the SPAP/Landauer bound $\varepsilon \ge \ln 2$, saturated as $\varepsilon=\ln 2$ at equilibrium).
 
 **Organization:**
 
@@ -77,14 +77,14 @@ $$\mathcal{O}_{\rho_0} = \{U\rho_0 U^\dagger : U \in U(8)\} \cong U(8)/[U(2) \ti
 |:------------|:------------------|:----------|
 | PCE-Attractor orbit | Equilibrium manifold $\mathcal{O}_{\rho_0} \cong \mathrm{Gr}(2,8)$ | Definition 15a, Theorem Z.6.3a |
 | Fine structure constant | Bures metric curvature determines $\alpha$ | Theorem Z.26 |
-| Mass hierarchies | Geodesic distances in E₈ embedding give $Y_{ij}$ | Theorem T.39 |
+| Mass hierarchies | Geodesic distances in $E_8$ embedding give $Y_{ij}$ | Theorem T.39 |
 | CKM/PMNS mixing | Berry holonomy around flavor loops | Theorems T.53–T.56 |
 | Generation structure | Topological sectors from $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ | Proposition R.3.5 |
 | CP violation | Holonomy phases from sector mismatch | Theorem T.56 |
 | Strong CP solution | $\sigma$-invariance on real locus | Theorem K.6.5 |
 
 **Proposition Z.1.5 (Grassmannian Parameter Emergence).** *The Standard Model parameters emerge from geometric structures on $\text{Gr}(2,8)$ and its associated lattice embeddings:*
-- *Geodesic distances on $\text{Gr}(2,8)$ with E₈ metric → mass ratios*
+- *Geodesic distances on $\text{Gr}(2,8)$ with $E_8$ metric → mass ratios*
 - *Berry holonomy around closed loops → CP phases*
 - *Homotopy classes in $\pi_2(\Sigma_8)$ → generation quantum numbers*
 - *Bures curvature contractions → coupling corrections*
@@ -96,7 +96,7 @@ The orbit $\mathcal{O}_{\rho_0} = \{U\rho_0 U^\dagger : U \in U(8)\} \cong \text
 - Complex dimension: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12 = k$ (Golay signal dimension, Theorem Z.13)
 - Real dimension: $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 2ab = 24 = M$ (interface mode count, Theorem Z.5)
 
-The mass hierarchy derivation (Theorem T.39) embeds generation vacua into E₈ root space, with Yukawa couplings suppressed by $\exp(-\alpha d^2_{E_8})$ where $\alpha = 3/2$ (Corollary T.41.3). The CP phase derivation (Theorem T.56) computes Berry holonomy $\delta = 66.7°$ from the E₈ sector mismatch between up and down quarks. The generation count $N_g = 3$ follows from anomaly cancellation on $\pi_2(\Sigma_8)$ (Proposition R.3.5). ∎
+The mass hierarchy derivation (Theorem T.39) embeds generation vacua into $E_8$ root space, with Yukawa couplings suppressed by $\exp(-\alpha d^2_{E_8})$ where $\alpha = 3/2$ (Corollary T.41.3). The CP phase derivation (Theorem T.56) computes Berry holonomy $\delta = 66.7°$ from the $E_8$ sector mismatch between up and down quarks. The generation count $N_g = 3$ follows from anomaly cancellation on $\pi_2(\Sigma_8)$ (Proposition R.3.5). ∎
 
 **Remark Z.1.5.1: Geometric Unification.** The appearance of the same Grassmannian across coupling constants, mass hierarchies, and mixing angles reflects the single underlying predictive structure. The determination of $\text{Gr}(2,8)$ follows uniquely from the logical constant $K_0 = 3$ through the derivation chain above.
 
@@ -105,9 +105,9 @@ The mass hierarchy derivation (Theorem T.39) embeds generation vacua into E₈ r
 ## Z.2 MPU Invariants and the Active Kernel
 
 ### Z.2.1 Foundational Constants Recap
-- **Hilbert space dimension:** d₀ = 8 (from Theorem 15/23, minimal self-referential logic requires K₀ = 3 bits)
-- **Irreducible cost:** ε = ln 2 nats (from Theorem 31, Appendix J)
-- **Horizon constant:** K₀ = 3 bits
+- **Hilbert space dimension:** $d_0 = 8$ (Theorem 23; minimal self-referential logic requires $K_0 = 3$ bits, Theorem 15)
+- **Irreducible ND-RID cost:** $\varepsilon \ge \ln 2$ nats (Theorem 31, proved in Appendix J as Theorem J.1); at the PCE-Attractor (Definition 15a) the bound is saturated: $\varepsilon = \ln 2$.
+- **Horizon constant:** $K_0 = 3$ bits (Theorem 15)
 
 ### Z.2.2 The Principle of Physical Instantiation (PPI)
 - Abstract logical costs must manifest as actual physical systems
@@ -115,13 +115,14 @@ The mass hierarchy derivation (Theorem T.39) embeds generation vacua into E₈ r
 
 ### Z.2.3 Physical Instantiation of the Irreducible Cost
 
-**Theorem Z.1 (Physical Instantiation of Irreducible Cost).** The irreducible cost ε = ln 2 (Theorem 31) arises from a logically necessary 2-to-1 state merge in the SPAP cycle. The Principle of Physical Instantiation (PPI) requires this abstract logical cost to manifest as an actual physical system. The dimension of the active kernel is uniquely determined:
+**Theorem Z.1 (Physical Instantiation of Irreducible Cost).** The SPAP cycle necessarily implements a 2-to-1 logical merge (Lemma Z.2), so any physical implementation satisfies the Landauer lower bound $\varepsilon \ge \ln 2$ (Theorem 31, Appendix J). At the PCE-Attractor (Definition 15a), PCE selects the saturating implementation $\varepsilon=\ln 2$. The Principle of Physical Instantiation (PPI) then fixes the active kernel dimension uniquely:
 $$a = 2$$
 
 *Proof.*
 
-**Step 1 (Irreducible entropy cost).** By Landauer's principle, a logically irreversible operation erasing one bit of information requires entropy production of at least ln 2 nats. The SPAP cycle (Theorem 10) necessarily performs a 2-to-1 state merge (Lemma Z.2), so the thermodynamic cost is:
-$$\varepsilon = \ln 2$$
+**Step 1 (Irreducible entropy cost).** By Landauer's principle, a logically irreversible operation erasing one bit of information requires entropy production of at least ln 2 nats. The SPAP cycle (Theorem 10) necessarily performs a 2-to-1 state merge (Lemma Z.2), so the per-cycle thermodynamic cost satisfies
+$$\varepsilon \ge \ln 2.$$
+At the PCE-Attractor, PCE selects the minimal saturating realization, hence $\varepsilon=\ln 2$.
 
 **Step 2 (PPI Requirement — Axiom).** The Principle of Physical Instantiation (Appendix P, Definition P.6.2) requires that the abstract logical cost ε be realized by an actual physical subsystem, and that among physically admissible realizations the realized one is resource-minimal (PPI-optimality).
 
@@ -137,7 +138,7 @@ with equality only for the maximally mixed state.
 
 **Remark: Axiomatic Status.** This derivation uses exactly:
 - SPAP (Theorem 10): requires a 2-to-1 merge.
-- Landauer's principle (Physics): implies ε = ln 2.
+- Landauer's principle (Physics): implies ε ≥ ln 2 (saturated to ε = ln 2 at the PCE-Attractor).
 - PPI (Definition P.6.2): requires physical instantiation of ε and selects a resource-minimal admissible realization.
 - Entropy capacity bound: gives $S(\rho)\le \ln a$.
 
@@ -147,25 +148,30 @@ Thus the result $a = 2$ is a theorem, not a free parameter.
 
 The complete chain (zero continuously adjustable parameters) from axioms to M = 24:
 
-$$\boxed{\text{SPAP} \xrightarrow{\text{Thm J.1}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{QFI structure}} M = 2ab = 24}$$
+$$\boxed{\text{SPAP} \xrightarrow{\text{Thm J.1}} \varepsilon \ge \ln 2 \xrightarrow{\text{Def 15a}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{QFI structure}} M = 2ab = 24}$$
 
 | Step | Result | Justification | Status |
 |------|--------|---------------|--------|
 | 1 | ε ≥ ln 2 | SPAP logical merge + Landauer principle | Theorem J.1 |
 | 2 | ε = ln 2 (saturated) | Optimal erasure achieves bound | Theorem 31 |
 | 3 | a = 2 | Admissibility $\ln a \ge \varepsilon$ + PPI-optimality | Theorem Z.1 |
-| 4 | b = d₀ − a = 6 | Hilbert space complement | Definition |
+| 4 | $b = d_0 - a = 6$ | Hilbert space complement | Definition |
 | 5 | M = 2ab = 24 | QFI mode count on interface | Theorem Z.5 |
 
 The number 24 emerges not as a parameter but as the inevitable consequence of physically instantiating the minimal irreversible information process. Every quantity traces to framework axioms (PPI, PCE) and mathematical identities (Shannon, Landauer).
 
 ### Z.2.5 The PCE-Attractor Density Operator
 
-The PCE-optimal baseline density operator $\rho_0$ is maximally mixed on the $a = 2$ active subspace and zero on the $b = d_0 - a = 6$ inactive complement:
-$$\rho_0 = \frac{I_a}{a} \oplus 0_b = \frac{I_2}{2} \oplus 0_6$$
-with eigenvalues (1/2, 1/2, 0, 0, 0, 0, 0, 0).
+At the PCE-Attractor, the MPU occupies a mixed state with a maximally mixed active kernel and null inactive complement:
 
-This state saturates the Landauer bound: $S(\rho_0|_A) = \ln 2 = \varepsilon$, confirming the active subspace exactly instantiates the irreducible cost with no excess.
+$$\rho_0 = \frac{1}{a} I_a \oplus 0_b = \frac{1}{2} I_2 \oplus 0_6$$
+
+This state has active-subspace entropy
+$$S(\rho_0|_A)=\ln a=\ln 2.$$
+At the PCE-Attractor the dissipation bound is saturated, $\varepsilon=\ln 2$, so the entropy capacity of the active kernel matches the logically required cost with no excess:
+$$\ln a = \varepsilon.$$
+
+The same state simultaneously maximizes QFI along the interface directions $AB \oplus BA$. This is the unique state achieving maximal predictive capacity under minimal entropy cost.
 
 ---
 
@@ -185,7 +191,7 @@ The SPAP update rule is φ_{t+1} = NOT(p_t), where p_t is the prediction stored 
 
 **Lemma Z.1 (Minimal Configuration Count).** The on-cycle injectivity conditions (O1)–(O3) from Theorem 15 require the joint state space {(φ, p, c)} to have at least 2³ = 8 distinguishable configurations.
 
-*Proof.* Condition (O1) requires on-cycle injectivity: distinct input configurations must map to distinct output configurations within a single cycle phase. The three registers (φ, p, c) are logically independent—each can independently take values in {0,1}. The SPAP step φ_{t+1} = NOT(p_t) must be executed using the previously stored prediction without destroying the control information. By the pigeonhole principle, if fewer than 2³ = 8 physical configurations were available, at least two distinct logical triples would map to the same physical state, violating (O1). Therefore d₀ ≥ 8. ∎
+*Proof.* Condition (O1) requires on-cycle injectivity: distinct input configurations must map to distinct output configurations within a single cycle phase. The three registers (φ, p, c) are logically independent—each can independently take values in {0,1}. The SPAP step φ_{t+1} = NOT(p_t) must be executed using the previously stored prediction without destroying the control information. By the pigeonhole principle, if fewer than 2³ = 8 physical configurations were available, at least two distinct logical triples would map to the same physical state, violating (O1). Therefore d_0 ≥ 8. ∎
 
 ### Z.3.2 The Irreversible Merge Structure
 
@@ -198,23 +204,23 @@ The SPAP update rule is φ_{t+1} = NOT(p_t), where p_t is the prediction stored 
 
 The input space for the cycle map G_cycle: L_t ↦ L_{t+1} is {0,1} × {0,1}, containing 4 distinct logical states. The output space is {0,1} × {p_ready}, containing only 2 distinct logical states. Since |input| = 4 > 2 = |output|, the map G_cycle is at least 2-to-1. This constitutes a logically irreversible merge with compression factor 4/2 = 2. ∎
 
-**Lemma Z.3 (Landauer Cost of SPAP Merge).** The minimal dimensionless entropy cost of the SPAP merge is exactly ln 2.
+**Lemma Z.3 (Landauer Cost of SPAP Merge).** The SPAP merge has minimum dimensionless entropy cost $\ln 2$, hence any implementation satisfies $\varepsilon \ge \ln 2$.
 
-*Proof.* By Landauer's principle (Section J.3), the minimum entropy increase in the environment required to implement a logically irreversible operation mapping N input states to M output states is ΔS_env^(min) = k_B ln(N/M). For the SPAP merge (Lemma Z.2), N = 4 and M = 2, giving:
-$$\varepsilon = \frac{\Delta S_{\mathrm{env}}^{(\min)}}{k_B} = \ln\left(\frac{4}{2}\right) = \ln 2$$
-This is independent of the total system dimension d₀, depending only on the logical structure of the merge. ∎
+*Proof.* By Landauer's principle (Section J.3), the minimum entropy increase in the environment required to implement a logically irreversible operation mapping $N$ input states to $M$ output states is $\Delta S_{\mathrm{env}}^{(\min)} = k_B \ln(N/M)$. For the SPAP merge (Lemma Z.2), $N = 4$ and $M = 2$, so the minimum dimensionless cost is
+$$\varepsilon_{\min} := \frac{\Delta S_{\mathrm{env}}^{(\min)}}{k_B} = \ln\left(\frac{4}{2}\right) = \ln 2.$$
+Therefore any physical implementation satisfies $\varepsilon \ge \varepsilon_{\min} = \ln 2$. This depends only on the logical structure of the merge, not on the total system dimension $d_0$. ∎
 
 ### Z.3.3 The Structural Constraint
 
 **Theorem Z.2 (Landauer-SPAP Structural Relation).** The framework's axioms imply the identity:
 $$d_0 = 2a^2$$
-where d₀ = 2^{K₀} is the MPU Hilbert space dimension and a = e^ε is the active kernel dimension.
+where $d_0 = 2^{K_0}$ is the MPU Hilbert space dimension and $a$ is the active kernel dimension (Theorem Z.1).
 
 *Proof.* The proof proceeds by analyzing the information-theoretic structure of the SPAP cycle.
 
-**Step 1: Active Kernel from PPI.** The Principle of Physical Instantiation requires the abstract Landauer cost ε = ln 2 to be physically instantiated. The minimal physical system capable of undergoing a ln 2 erasure is a two-level system. Therefore a = e^ε = 2.
+**Step 1: Active Kernel.** By Theorem Z.1, the PCE-Attractor selects $a=2$ (with $\varepsilon=\ln 2$ on the saturating branch).
 
-**Step 2: Pre-Merge State Space.** The SPAP cycle requires encoding two types of information: the outcome-relevant information (state component φ and stored prediction p, each in an a-dimensional space) and the prediction-relevant information (the correlation enabling reflexive update). By the injectivity condition (O1) from Theorem 15, the cycle map must be injective within each phase. Consider the tensor product structure $\mathcal{H}_{\text{pre}} = \mathcal{H}_\phi \otimes \mathcal{H}_p \otimes \mathcal{H}_c$ where $\mathcal{H}_\phi$ encodes the state (dimension a), $\mathcal{H}_p$ encodes the prediction (dimension a), and $\mathcal{H}_c$ encodes match/mismatch distinguishability (dimension 2). The minimal pre-merge configuration space satisfying injectivity has dimension $\dim(\mathcal{H}_{\text{pre}}) = a \times a \times 2 = 2a^2$.
+**Step 2: Pre-Merge State Space.** The SPAP cycle requires encoding two types of information: the outcome-relevant information (state component $\phi$ and stored prediction $p$, each in an $a$-dimensional space) and the prediction-relevant information (the correlation enabling reflexive update). By the injectivity condition (O1) from Theorem 15, the cycle map must be injective within each phase. Consider the tensor product structure $\mathcal{H}_{\text{pre}} = \mathcal{H}_\phi \otimes \mathcal{H}_p \otimes \mathcal{H}_c$ where $\mathcal{H}_\phi$ encodes the state (dimension $a$), $\mathcal{H}_p$ encodes the prediction (dimension $a$), and $\mathcal{H}_c$ encodes match/mismatch distinguishability (dimension $2$). The minimal pre-merge configuration space satisfying injectivity has dimension $\dim(\mathcal{H}_{\text{pre}}) = a \times a \times 2 = 2a^2$.
 
 **Step 3: Post-Merge State Space.** After the irreversible reset, the ancilla $p$ is fixed; the remaining logical degrees of freedom are the updated state $\phi_{t+1}$ (dimension $a$) together with the match/mismatch control bit $c_{t+1}$ (dimension $2$). Thus the post-merge state space has dimension:
 
@@ -230,25 +236,27 @@ $$
 
 With $a=2$ (Step 1), this is exactly the SPAP merge: a 2-to-1 irreversible map.
 
-**Step 5: Identification with Hilbert Space Dimension.** The total configuration space must accommodate the full pre-merge structure. By the Minimal Predictive Algebra argument (Section 7.1.3), d₀ ≥ 2a². The Principle of Compression Efficiency (PCE) selects the minimal sufficient dimension; any d₀ > 2a² introduces superfluous complexity without predictive benefit. Therefore d₀ = 2a².
+**Step 5: Identification with Hilbert Space Dimension.** The total configuration space must accommodate the full pre-merge structure. By the Minimal Predictive Algebra argument (Section 7.1.3), $d_0 \ge 2a^2$. The Principle of Compression Efficiency (PCE) selects the minimal sufficient dimension; any $d_0 > 2a^2$ introduces superfluous complexity without predictive benefit. Therefore $d_0 = 2a^2$.
 
-**Step 6: Verification.** Substituting a = 2: d₀ = 2 × 4 = 8 = 2³ = 2^{K₀}, confirming K₀ = 3. ∎
+**Step 6: Verification.** Substituting $a = 2$ gives $d_0 = 2 \times 4 = 8 = 2^3 = 2^{K_0}$, confirming $K_0 = 3$. ∎
 
-**Corollary Z.1 (Equivalent Forms of the Structural Relation).** The identity d₀ = 2a² can be expressed as:
+**Corollary Z.1 (Equivalent Forms of the Structural Relation).** The identity $d_0 = 2a^2$ can be expressed as:
 
-1. **In terms of K₀ and ε:**
-$$K_0 = 1 + \frac{2\varepsilon}{\ln 2}$$
-With ε = ln 2: K₀ = 1 + 2 = 3.
+1. **In terms of $K_0$ and $a$ (always):**
+$$K_0 = \log_2 d_0 = \log_2(2a^2)=1+2\log_2 a.$$
+On the saturating branch where $\varepsilon=\ln a$ (PCE-Attractor), this is equivalently:
+$$K_0 = 1 + \frac{2\varepsilon}{\ln 2}.$$
+With $a=2$ (Theorem Z.1): $K_0 = 1 + 2 = 3$ and $\varepsilon=\ln 2$.
 
 2. **Active fraction identity:**
-$$\frac{a}{d_0} = \frac{1}{2a} = \frac{1}{4}$$
+$$\frac{a}{d_0} = \frac{1}{2a} = \frac{1}{4}.$$
 
 3. **Inactive fraction identity:**
-$$\frac{b}{d_0} = 1 - \frac{1}{2a} = \frac{3}{4}$$
+$$\frac{b}{d_0} = 1 - \frac{1}{2a} = \frac{3}{4}.$$
 
 ---
 
-## Z.4 Algebraic Constraints on d₀
+## Z.4 Algebraic Constraints on d_0
 
 ### Z.4.1 Division Algebra Structure
 
@@ -256,28 +264,28 @@ $$\frac{b}{d_0} = 1 - \frac{1}{2a} = \frac{3}{4}$$
 
 *Proof.* This is the Radon-Hurwitz theorem (Hurwitz 1923), a proven result in algebra. The algebraic structure required for division—every non-zero element has a multiplicative inverse—constrains possible dimensions through the composition of quadratic forms and the existence of normed division algebras. ∎
 
-### Z.4.2 Uniqueness of d₀ = 8
+### Z.4.2 Uniqueness of d_0 = 8
 
-**Corollary Z.2 (Octonionic Maximality).** The dimension d₀ = 8 is uniquely determined by four independent constraints:
+**Corollary Z.2 (Octonionic Maximality).** The dimension d_0 = 8 is uniquely determined by four independent constraints:
 
-1. **Binary structure:** d₀ = 2^n (power of 2) — from discrete quantum measurement and bit-based encoding
-2. **Self-referential logic:** d₀ ≥ 8 (Theorem 15, from K₀ = 3 bits) — minimum for SPAP operations
+1. **Binary structure:** d_0 = 2^n (power of 2) — from discrete quantum measurement and bit-based encoding
+2. **Self-referential logic:** d_0 ≥ 8 (Theorem 15, from K_0 = 3 bits) — minimum for SPAP operations
 3. **Radon-Hurwitz theorem:** Maximal division algebra has dimension 8 — algebraic completeness
 4. **PCE:** Disfavors unused dimensions (cost without benefit) — efficiency principle
 
-The intersection uniquely determines d₀ = 8.
+The intersection uniquely determines d_0 = 8.
 
-*Proof.* The binary structure requirement (point 1) follows from the discrete nature of quantum measurement outcomes and the bit-based encoding of the Horizon Constant K₀ = 3 bits. This restricts d₀ to powers of 2: {2, 4, 8, 16, ...}.
+*Proof.* The binary structure requirement (point 1) follows from the discrete nature of quantum measurement outcomes and the bit-based encoding of the Horizon Constant K_0 = 3 bits. This restricts d_0 to powers of 2: {2, 4, 8, 16, ...}.
 
-The self-referential logic requirement (point 2) establishes d₀ ≥ 8 as the minimum dimension supporting the logical operations necessary for SPAP. Dimensions d₀ < 8 cannot accommodate the required informational structure.
+The self-referential logic requirement (point 2) establishes d_0 ≥ 8 as the minimum dimension supporting the logical operations necessary for SPAP. Dimensions d_0 < 8 cannot accommodate the required informational structure.
 
-The Radon-Hurwitz constraint (point 3) establishes d₀ ≤ 8 for maximal algebraic completeness. Higher dimensions (16, 32, ...) do not support division algebra structure.
+The Radon-Hurwitz constraint (point 3) establishes d_0 ≤ 8 for maximal algebraic completeness. Higher dimensions (16, 32, ...) do not support division algebra structure.
 
-The PCE requirement (point 4) penalizes unused dimensions through operational cost V_op. For d₀ > 8, the additional dimensions provide no algebraic benefit while incurring maintenance costs.
+The PCE requirement (point 4) penalizes unused dimensions through operational cost V_op. For d_0 > 8, the additional dimensions provide no algebraic benefit while incurring maintenance costs.
 
-The intersection of these four independent constraints uniquely determines d₀ = 8. ∎
+The intersection of these four independent constraints uniquely determines d_0 = 8. ∎
 
-**Remark Z.1: Octonionic Connection.** The octonion structure connects to the exceptional Lie algebra E₈, whose root system relates to octonion multiplication. This provides a bridge between the algebraic structure of the MPU Hilbert space H₀ and the geometric structure of optimal lattices.
+**Remark Z.1: Octonionic Connection.** The octonion structure connects to the exceptional Lie algebra $E_8$, whose root system relates to octonion multiplication. This provides a bridge between the algebraic structure of the MPU Hilbert space H₀ and the geometric structure of optimal lattices.
 
 **Remark Z.1a: Algebraic Context of $d_0 = 8$.** The MPU Hilbert space dimension $d_0 = 8$ (Theorem 23), derived from the horizon constant $K_0 = 3$ (Theorem 15), occupies a distinguished position in algebraic structure.
 
@@ -421,8 +429,8 @@ $$M = 2 \times a \times b = 2 \times 2 \times 6 = 24$$
 
 Each factor has independent origin:
 - Factor 2: Complex structure (Hermitian = symmetric + antisymmetric)
-- Factor a = 2: Active subspace dimension (from ε = ln 2)
-- Factor b = 6: Inactive subspace dimension (from d₀ - a = 8 - 2)
+- Factor $a = 2$: Active subspace dimension (from PCE-Attractor saturation $\varepsilon=\ln 2$, Theorem Z.1)
+- Factor $b = 6$: Inactive subspace dimension (from $d_0 - a = 8 - 2$)
 
 ### Z.7.4 QFI Complexity Functional
 
@@ -447,11 +455,15 @@ since each interface generator has $F_Q[\rho_0; G_\mu] = 1$ (Theorem Z.5, Step 5
 
 ### Z.8.1 The Operational Alphabet-Capacity Theorem
 
-**Definition Z.4 (Operational Alphabet Capacity).** The operational alphabet capacity C_op(ρ) of a state ρ is the maximum number of operationally distinguishable signals that can be reliably prepared, transmitted, and detected using ρ as the reference state.
+**Definition Z.4 (Operational Alphabet Capacity).** The operational alphabet capacity of a state $\rho$ at coupling strength $u$ is quantified by the LAN/QFI capacity surrogate $g_{\rm true}(u)$ (Appendix W):
+$$
+g_{\rm true}(u)=\sum_{i=1}^M \ln(1+\lambda_i u),
+$$
+where $\{\lambda_i\}$ are the QFI eigenvalues of the propagated channel linearized at $u=0$.
 
 **Theorem Z.6 (Operational Alphabet-Capacity).** For the PCE-Attractor state, the operational alphabet capacity is:
-$$C_{\mathrm{op}}(\rho_0) = M \cdot \ln(1 + \lambda u) = 24 \ln(1 + u)$$
-where u is the coupling strength and λ = 1 is the QFI eigenvalue.
+$$g_{\rm true}(u)=\sum_{i=1}^M \ln(1+\lambda_i u)=24\ln(1+u),$$
+where $u$ is the coupling strength and $\lambda_i=1$ is the (flat) QFI spectrum on the interface.
 
 *Proof.* The LAN/QFI capacity surrogate used throughout PU (Appendix W, Eq. (W.0.1)) is
 $$
@@ -459,13 +471,13 @@ g_{\rm true}(u)=\sum_{i=1}^M \ln(1+\lambda_i u).
 $$
 By Theorem Z.5, the QFI spectrum is flat at the attractor: $\lambda_i=1$ for all $i$. Therefore
 $$
-C_{\rm op}(\rho_0)=g_{\rm true}(u)=\sum_{i=1}^M \ln(1+u)=M\ln(1+u)=24\ln(1+u).
+g_{\rm true}(u)=\sum_{i=1}^M \ln(1+u)=M\ln(1+u)=24\ln(1+u).
 $$
 ∎
 
 ### Z.8.2 The Bare Coupling
 
-**Theorem Z.7 (Bare Coupling from Capacity Saturation).** At the PCE-Attractor, the operational capacity saturates at $C_{\mathrm{op}} = \ln d_0$, and this uniquely determines the bare coupling:
+**Theorem Z.7 (Bare Coupling from Capacity Saturation).** At the PCE-Attractor, the operational alphabet capacity saturates at $g_{\rm true}(u^*)=\ln d_0$, and this uniquely determines the bare coupling:
 $$u^* = d_0^{1/M} - 1 = 8^{1/24} - 1 = 2^{1/8} - 1 \approx 0.09051$$
 
 *Proof.*
@@ -475,14 +487,14 @@ $$\phi(u) = A_{\mathrm{PCE}} u^2 - \Gamma_0 \sum_{i=1}^{M} \ln(1 + \lambda_i u),
 By Lemma W.1, $\phi$ is strictly convex on $[0,\infty)$ and has a unique minimizer once capacity constraints are imposed.
 
 **Step 2 (Flat spectrum at the attractor).** At the PCE-Attractor, the QFI spectrum is flat with $\lambda_i = 1$ for all $i = 1, \ldots, M$ (Theorem Z.5, Step 5). Therefore the capacity-like term is exactly $M\ln(1+u)$, and (Theorem Z.6) gives
-$$C_{\mathrm{op}}(\rho_0) = M\ln(1+u).$$
+$$g_{\rm true}(u) = M\ln(1+u).$$
 
 **Step 3 (Alphabet bound as a hard constraint).** The MPU Hilbert space $\mathcal{H}_0=\mathbb{C}^{d_0}$ supports at most $d_0$ perfectly distinguishable states, hence the operational alphabet capacity is bounded by
-$$C_{\mathrm{op}}(\rho_0)\le \ln d_0,$$
+$$g_{\rm true}(u)\le \ln d_0,$$
 an information-theoretic constraint on encodability [Holevo 1973].
 
-**Step 4 (Saturation from constrained convex minimization).** On the cap-active branch at $\mu^\*$ (Appendix W, standing assumptions), the unconstrained minimizer of $\phi(u)$ would violate the hard bound $C_{\mathrm{op}}\le \ln d_0$. Since $\phi$ is strictly convex and the feasible set defined by $C_{\mathrm{op}}(\rho_0)\le \ln d_0$ is convex and closed, the constrained minimizer lies on the constraint boundary:
-$$C_{\mathrm{op}}(\rho_0) = \ln d_0.$$
+**Step 4 (Saturation from constrained convex minimization).** On the cap-active branch at $\mu^\*$ (Appendix W, standing assumptions), the unconstrained minimizer of $\phi(u)$ would violate the hard bound $g_{\rm true}(u)\le \ln d_0$. Since $\phi$ is strictly convex and the feasible set defined by $g_{\rm true}(u)\le \ln d_0$ is convex and closed, the constrained minimizer lies on the constraint boundary:
+$$g_{\rm true}(u^*) = \ln d_0.$$
 Equivalently, the KKT conditions force the capacity constraint to be active whenever the unconstrained optimum is infeasible [Boyd & Vandenberghe 2004, §5.5.3].
 
 **Step 5 (Solving for $u^*$).** Substituting the flat spectrum into the saturation condition:
@@ -497,7 +509,7 @@ Numerical evaluation: $u^* = 2^{0.125} - 1 \approx 1.09051 - 1 = 0.09051$. ∎
 
 **Definition Z.8f (Fundamental Mass Scale).** The mass scale connecting Planck physics to the interface structure is:
 
-$$\mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} = \frac{m_P}{2\sqrt{8\ln 2}} \approx 0.212 \cdot m_P$$
+$$\mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} \quad (\varepsilon=\ln 2\ \text{at the PCE-Attractor}) \quad = \frac{m_P}{2\sqrt{8\ln 2}} \approx 0.212 \cdot m_P$$
 
 *Derivation.* From the Mass-Information Equivalence (Theorem N.5), a system with relational information content $\mathcal{I}_{\mathrm{rel}}$ has inertial mass $m = \mathcal{I}_{\mathrm{rel}} \cdot m_P / (2\sqrt{8\varepsilon})$. For vacuum configurations in the Leech lattice, the relational information content is encoded by the lattice norm: $\mathcal{I}_{\mathrm{rel}}(v) = |v|$ in Planck units. The coefficient $\mu_0$ sets the mass per unit norm.
 
@@ -548,7 +560,7 @@ The formula $\Delta_J(J) = J(J-1)$ counts independent tensorial modes. Note the 
 
 **Step 3 (Parity contribution from minimum displacement).** Parity transformation $P: \mathbf{x} \to -\mathbf{x}$ maps lattice points to their reflections. For $P = -1$ states, the wavefunction must be antisymmetric, requiring occupation of reflected lattice sites. The minimum cost of such displacement in the Leech lattice is $|v|^2_{\min} = 4 = a^2$.
 
-Physically, the pseudoscalar operator $\text{Tr}(F_{\mu\nu}\tilde{F}^{\mu\nu})$ contains the Levi-Civita tensor $\varepsilon^{\mu\nu\rho\sigma}$, which implements precisely one parity flip.
+Physically, the pseudoscalar operator $\mathrm{tr}(F_{\mu\nu}\tilde{F}^{\mu\nu})$ contains the Levi-Civita tensor $\varepsilon^{\mu\nu\rho\sigma}$, which implements precisely one parity flip.
 
 **Step 4 (C-parity contribution from error-correction distance).** Charge conjugation $C$ exchanges particle with antiparticle structure. In the Golay-Leech framework, distinguishing particle from antiparticle corresponds to distinguishing codewords at the minimum Hamming distance.
 
@@ -579,7 +591,7 @@ All four empirical shell assignments are exactly reproduced from first principle
 
 **Remark Z.8h.2: Derivation Chain.** The shell formula connects to framework axioms via:
 
-$$\varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{a^2} \text{Base shell} = 4, \quad \Delta_P(-) = 4$$
+$$\varepsilon \ge \ln 2 \xrightarrow{\text{Def 15a}} \varepsilon=\ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{a^2} \text{Base shell} = 4, \quad \Delta_P(-) = 4$$
 
 $$\text{Golay } [24,12,8] \xrightarrow{d = 8} \Delta_C(-) = 8$$
 
@@ -593,45 +605,48 @@ Both costs are determined by the same underlying structure: the Landauer partiti
 
 ### Z.9.1 Propagating Generators
 
-**Definition Z.5 (Propagating Generator).** A generator G is propagating if its action on ρ₀ can be transmitted to neighboring MPUs through ND-RID interactions and subsequently detected with fidelity above a threshold. The propagating property is constrained by the ND-RID channel capacity bound $C_{\max}(f_{\text{RID}}) < \ln d_0$ (Theorem E.2) and the channel density structure $\sigma_{\text{eff}} = \chi/(\eta \delta^2)$ (Theorem E.3).
+**Definition Z.5 (Propagating Generator).** A generator $G$ is propagating if its action on $\rho_0$ can be transmitted to neighboring MPUs through ND-RID interactions and subsequently detected with fidelity above a threshold. The propagating property is constrained by the ND-RID channel capacity bound $C_{\max}(f_{\text{RID}}) < \ln d_0$ (Theorem E.2) and the channel density structure $\sigma_{\text{eff}} = \chi/(\eta \delta^2)$ (Theorem E.3).
 
 ### Z.9.2 Operational Distinguishability
 
-**Definition Z.6 (Operational Distinguishability).** Two propagating generators G_α, G_β are ε-distinguishable if:
-$$\mathcal{F}(T(G_\alpha \cdot \rho_0), T(G_\beta \cdot \rho_0)) < 1 - \varepsilon$$
-where T denotes propagation through ND-RID and F is the fidelity measure.
+**Definition Z.6 (Operational Distinguishability).** Two propagating generators $G_\alpha, G_\beta$ are $\epsilon_{\rm dist}$-distinguishable if:
+$$\mathcal{F}(T(G_\alpha \cdot \rho_0), T(G_\beta \cdot \rho_0)) < 1 - \epsilon_{\rm dist},$$
+where $T$ denotes propagation through ND-RID and $\mathcal{F}$ is the fidelity measure. Let $\theta_{\rm cap}(\epsilon_{\rm dist})\le \pi/2$ denote the minimal angular cap radius associated to the threshold $\epsilon_{\rm dist}$ under the propagation model $T$ (so that non-overlap at separation $\ge 2\theta_{\rm cap}(\epsilon_{\rm dist})$ enforces the above fidelity inequality).
 
 ### Z.9.3 Angular Resolution
 
-**Lemma Z.4 (Angular Localization).** For $0<\delta\le \pi/2$, the solid angle of a spherical cap of angular radius $\delta$ on $S^{D-1}$ satisfies
+**Lemma Z.4 (Angular Localization).** For $0<\theta\le \pi/2$, the solid angle of a spherical cap of angular radius $\theta$ on $S^{D-1}$ satisfies
 $$
-\Delta\Omega(\delta)=|S^{D-2}|\int_0^\delta \sin^{D-2}\theta\,d\theta \ge c_D\,\delta^{D-1},
+\Delta\Omega(\theta)=|S^{D-2}|\int_0^\theta \sin^{D-2}\varphi\,d\varphi \ge c_D\,\theta^{D-1},
 $$
 with
 $$
 c_D:=\frac{|S^{D-2}|}{D-1}\left(\frac{2}{\pi}\right)^{D-2}.
 $$
-In particular, if $\varepsilon$-distinguishability enforces a cap radius $\delta(\varepsilon)\le \pi/2$, then each distinguishable channel has $\Delta\Omega(\varepsilon)\ge c_D\,\delta(\varepsilon)^{D-1}$.
+In particular, if $\epsilon_{\rm dist}$-distinguishability enforces cap radius $\theta_{\rm cap}(\epsilon_{\rm dist})\le \pi/2$, then each distinguishable channel has
+$$
+\Delta\Omega(\theta_{\rm cap}(\epsilon_{\rm dist}))\ge c_D\,\theta_{\rm cap}(\epsilon_{\rm dist})^{D-1}.
+$$
 
 *Proof.* The cap formula is
 $$
-\Delta\Omega(\delta)=|S^{D-2}|\int_0^\delta \sin^{D-2}\theta\,d\theta.
+\Delta\Omega(\theta)=|S^{D-2}|\int_0^\theta \sin^{D-2}\varphi\,d\varphi.
 $$
-For $0\le \theta \le \pi/2$, $\sin\theta \ge \frac{2}{\pi}\theta$. Hence, for $0<\delta\le \pi/2$,
+For $0\le \varphi \le \pi/2$, $\sin\varphi \ge \frac{2}{\pi}\varphi$. Hence, for $0<\theta\le \pi/2$,
 $$
-\Delta\Omega(\delta)\ge |S^{D-2}|\int_0^\delta \left(\frac{2}{\pi}\theta\right)^{D-2}d\theta
-= \frac{|S^{D-2}|}{D-1}\left(\frac{2}{\pi}\right)^{D-2}\delta^{D-1},
+\Delta\Omega(\theta)\ge |S^{D-2}|\int_0^\theta \left(\frac{2}{\pi}\varphi\right)^{D-2}d\varphi
+= \frac{|S^{D-2}|}{D-1}\left(\frac{2}{\pi}\right)^{D-2}\theta^{D-1},
 $$
 which yields the stated constant $c_D$. ∎
 
 ### Z.9.4 Spherical Code Reduction and Exact Kissing Correspondence
 
-**Corollary Z.4 (Spherical Code Reduction).** Any set of mutually distinguishable propagating generators {G_α} corresponds to a spherical code on S^{D-1} with minimum angular separation 2δ(ε).
+**Corollary Z.4 (Spherical Code Reduction).** Any set of mutually $\epsilon_{\rm dist}$-distinguishable propagating generators $\{G_\alpha\}$ corresponds to a spherical code on $S^{D-1}$ with minimum angular separation $2\theta_{\rm cap}(\epsilon_{\rm dist})$.
 
-*Proof.* Let n̂_α ∈ S^{D-1} denote the central direction of the support of T(G_α). If two signals are distinguishable per Definition Z.6, their supports must be sufficiently separated to satisfy the ε-distinguishability criterion. By Lemma Z.4, each signal occupies a minimum solid angle ΔΩ(ε).
+*Proof.* Let n̂_α ∈ S^{D-1} denote the central direction of the support of T(G_α). If two signals are distinguishable per Definition Z.6, their supports must be sufficiently separated to satisfy the $\epsilon_{\rm dist}$-distinguishability criterion. By Lemma Z.4, each signal occupies a minimum solid angle $\Delta\Omega(\theta_{\rm cap}(\epsilon_{\rm dist}))$.
 
-For signals to be distinguishable, their angular supports must not overlap significantly. This requires the angle between their central directions to be at least 2δ(ε):
-$$\angle(\hat{n}_\alpha, \hat{n}_\beta) \geq 2\delta(\varepsilon)$$
+For signals to be distinguishable, their angular supports must not overlap significantly. This requires the angle between their central directions to be at least $2\theta_{\rm cap}(\epsilon_{\rm dist})$:
+$$\angle(\hat{n}_\alpha, \hat{n}_\beta) \geq 2\theta_{\rm cap}(\epsilon_{\rm dist}).$$
 
 This maps the problem of counting distinguishable channels to the classical problem of spherical codes: finding the maximum number of points on S^{D-1} with minimum angular separation. ∎
 
@@ -655,7 +670,7 @@ Non-overlap requires $|x-y|\ge 2$, hence $\sin(\theta/2)\ge 1/2$ and therefore $
 
 **Step 3 (Kissing number equality).** The largest $N$ for which unit balls can be tangent to a central unit ball in $\mathbb R^D$ is, by definition, the kissing number $K(D)$. Thus the maximal number of distinguishable channels in the tangent regime is $M_{\mathrm{phys}}=K(D)$. ∎
 
-**Remark Z.4: Information-Geometry Bridge.** This theorem establishes the fundamental connection between quantum information geometry (distinguishable generators) and classical discrete geometry (sphere packing). The information-theoretic constraint (ε-distinguishability) translates directly into a geometric constraint (minimum angular separation) with no arbitrary functions intervening.
+**Remark Z.4: Information-Geometry Bridge.** This theorem establishes the fundamental connection between quantum information geometry (distinguishable generators) and classical discrete geometry (sphere packing). The information-theoretic constraint ($\epsilon_{\rm dist}$-distinguishability) translates directly into a geometric constraint (minimum angular separation) once $\theta_{\rm cap}(\epsilon_{\rm dist})$ is fixed by the propagation model $T$.
 
 ---
 
@@ -674,10 +689,10 @@ The kissing numbers for low dimensions are established results from discrete geo
 | 1 | 2 | Linear |
 | 2 | 6 | Hexagonal |
 | 3 | 12 | FCC/HCP |
-| 4 | 24 | D₄ (24-cell) |
+| 4 | 24 | $D_4$ (24-cell) |
 | 5 | 40 | — |
 | 6 | 72 | — |
-| 8 | 240 | E₈ |
+| 8 | 240 | $E_8$ |
 
 **Definition Z.8 (24-Cell Vertices).** The 24 vertices of the regular 24-cell, which form an optimal kissing configuration in 4 dimensions, are given by the unit Hurwitz integers. In Cartesian coordinates, these consist of:
 - **Type I (8 vectors):** Permutations of $(\pm 1, 0, 0, 0)$
@@ -691,11 +706,11 @@ whose minimal vectors are the 24 permutations of $(\pm 1,\pm 1,0,0)$, correspond
 
 ### Z.10.2 Universal Geometric Capacity Bound
 
-**Theorem Z.8 (Universal Geometric Capacity Bound).** Let M_phys(ρ; ε) denote the maximum number of operationally distinguishable spatial channels at discrimination accuracy ε. Then:
-$$M_{\mathrm{phys}}(\rho; \varepsilon) \leq A(D, 2\delta(\varepsilon))$$
-where A(D, θ) is the maximal size of a spherical code on S^{D-1} with minimum angular separation θ.
+**Theorem Z.8 (Universal Geometric Capacity Bound).** Let $M_{\mathrm{phys}}(\rho;\epsilon_{\rm dist})$ denote the maximum number of operationally distinguishable spatial channels at discrimination accuracy $\epsilon_{\rm dist}$. Then:
+$$M_{\mathrm{phys}}(\rho;\epsilon_{\rm dist}) \le A\\!\left(D,2\theta_{\rm cap}(\epsilon_{\rm dist})\right),$$
+where $A(D,\theta)$ is the maximal size of a spherical code on $S^{D-1}$ with minimum angular separation $\theta$.
 
-*Proof.* Follows immediately from Corollary Z.4 and the definition of spherical codes. The maximum number of non-overlapping angular caps on S^{D-1} with minimum separation 2δ(ε) is precisely A(D, 2δ(ε)). Each distinguishable generator G_α corresponds to one such angular cap. ∎
+*Proof.* Follows immediately from Corollary Z.4 and the definition of spherical codes. The maximum number of non-overlapping angular caps on $S^{D-1}$ with minimum separation $2\theta_{\rm cap}(\epsilon_{\rm dist})$ is precisely $A(D, 2\theta_{\rm cap}(\epsilon_{\rm dist}))$. Each distinguishable generator $G_\alpha$ corresponds to one such angular cap. ∎
 
 ### Z.10.3 Equilibrium Saturation
 
@@ -726,7 +741,7 @@ V_{\text{total}} = V_{\text{op}}(\rho) + V_{\text{prop}}(D) - V_{\text{benefit}}
 $$
 
 where:
-- $V_{\text{op}}(\rho) = c_1 \text{Tr}[\rho \ln \rho] + c_2 \text{rank}(\rho)$: operational cost (Definition D.1)
+- $V_{\text{op}}(\rho) = c_1 \mathrm{tr}[\rho \ln \rho] + c_2 \text{rank}(\rho)$: operational cost (Definition D.1)
 - $V_{\text{prop}}(D) = c_3 D(D-1)/2$: geometric maintenance cost scaling with curvature degrees of freedom
 - $V_{\text{benefit}}(M, u) = c_4 M \ln(1 + u)$: predictive benefit from capacity utilization
 - $V_{\text{mc}}(M_{\text{int}}, D) = \begin{cases}c_{\text{dark}}\,\dfrac{(M_{\text{int}} - K(D))^2}{K(D)}, & M_{\text{int}} > K(D) \\c_{\text{dim}}\,\dfrac{D(D-1)\,[K(D) - M_{\text{int}}]}{K(D)}, & M_{\text{int}} < K(D)\end{cases}$: mode-channel mismatch cost
@@ -832,7 +847,7 @@ The exact value $K(4) = 24$ was established by Musin (2008). For intermediate di
 
 **Remark Z.11.1: Dimensional Uniqueness from $K_0$.** The derivation chain $K_0 \to d_0 \to a \to M \to D$ produces a consistent solution only for $K_0 = 3$:
 
-| $K_0$ | $d_0 = 2^{K_0}$ | $a = e^{\ln 2} = 2$ | $b = d_0 - a$ | $M = 2ab$ | $K(D) = M$? |
+| $K_0$ | $d_0 = 2^{K_0}$ | $a = 2$ | $b = d_0 - a$ | $M = 2ab$ | $K(D) = M$? |
 |:-----:|:---------------:|:-------------------:|:-------------:|:---------:|:------------|
 | 2 | 4 | 2 | 2 | 8 | No: $K(2) = 6$, $K(3) = 12$ |
 | **3** | **8** | **2** | **6** | **24** | **Yes: $K(4) = 24$** |
@@ -847,7 +862,7 @@ The table demonstrates that among values $K_0 \in \{2, 3, 4, 5\}$, only $K_0 = 3
 
 **Remark Z.5: Robustness.** The discrete nature of kissing numbers means D = 4 remains the unique solution for any M_int ∈ [13, 39].
 
-**Remark Z.6: Frustration for Other Values.** If the foundational constants yielded M_int = 8, no integer dimension exactly saturates this value (K(2)=6, K(3)=12). The system would exhibit geometric frustration. Similarly, M_int = 96 cannot be matched (K(8)=240 is too large). This demonstrates that D=4 emerges not despite but because of the specific values d₀=8 and ε=ln 2.
+**Remark Z.6: Frustration for Other Values.** If the foundational constants yielded M_int = 8, no integer dimension exactly saturates this value (K(2)=6, K(3)=12). The system would exhibit geometric frustration. Similarly, M_int = 96 cannot be matched (K(8)=240 is too large). This demonstrates that $D=4$ emerges not despite but because of the specific values $d_0=8$ and the saturating PCE-Attractor cost $\varepsilon=\ln 2$.
 
 **Corollary Z.5b (Generalization to Arbitrary MPU Structure).** For any hypothetical MPU with parameters $(d_0, a, b)$ where $a + b = d_0$, the emergent dimension would satisfy $K(D) = 2ab$. This generalization demonstrates that $D = 4$ is tied to the specific values $d_0 = 8$ and $\varepsilon = \ln 2$. Different fundamental constants would yield different dimensions or geometric frustration:
 - If $d_0 = 4$ and $a = 2$: $M_{\mathrm{int}} = 8$, but $K(2) = 6$ and $K(3) = 12$—no exact solution exists
@@ -865,8 +880,8 @@ The framework does not simply accommodate $D = 4$; it predicts it as the unique 
 
 | Constraint | Statement | Status |
 |------------|-----------|--------|
-| C1 (Algebraic) | M = 2ab with a + b = d₀ = 8, a = e^ε = 2 | ✓ |
-| C2 (Capacity) | M ln(1 + λu) = ln d₀ with λ = 1 | ✓ |
+| C1 (Algebraic) | $M = 2ab$ with $a+b=d_0=8$ and $a=2$ (Theorem Z.1) | ✓ |
+| C2 (Capacity) | $M\ln(1+u)=\ln d_0$ with $\lambda_i=1$ (Theorems Z.6–Z.7) | ✓ |
 | C3 (Geometric) | K(D) = M where K(4) = 24 | ✓ |
 | C4 (Coding) | Optimal binary code [M, M/2, 8] exists | ✓ (Golay) |
 | C5 (Packing) | Unique optimal sphere packing Λ_M exists | ✓ (Leech) |
@@ -887,7 +902,7 @@ The framework does not simply accommodate $D = 4$; it predicts it as the unique 
 - C2: ✓ (Yields u* = 2^{1/8}-1)
 - C3: ✓ (K(4) = 24)
 - C4: ✓ (Golay code [24,12,8] exists and is unique optimal)
-- C5: ✓ (Leech lattice Λ₂₄ exists and is unique optimal)
+- C5: ✓ (Leech lattice $\Lambda_{24}$ exists and is unique optimal)
 - C6: ✓ (24 = 8 × 3 ≡ 0 (mod 8))
 - C7: ✓ (24 = 2 × 12)
 - C8: ✓ (24 is minimal satisfying C1-C7)
@@ -897,7 +912,7 @@ The framework does not simply accommodate $D = 4$; it predicts it as the unique 
 - C7: ✗ (25/2 = 12.5 ≠ 12)
 
 **For M = 32:**
-- C1: ✗ (Requires d₀ = 10 ≠ 8)
+- C1: ✗ (Requires d_0 = 10 ≠ 8)
 - C3: ✗ (K(4) = 24 ≠ 32)
 - C8: ✗ (Not minimal)
 
@@ -911,16 +926,16 @@ The framework does not simply accommodate $D = 4$; it predicts it as the unique 
 
 | Factorization | Interpretation |
 |---------------|----------------|
-| 24 = 8 × 3 | (d₀) × (N_generations) |
-| 24 = 4 × 6 | (D) × (b = d₀ - a) |
+| 24 = 8 × 3 | (d_0) × (N_generations) |
+| 24 = 4 × 6 | (D) × (b = d_0 - a) |
 | 24 = 2 × 12 | (a) × (modular weight) |
 | 24 = 2³ × 3 | Binary structure × generational structure |
 
 *Proof.* Each factorization maps to established results:
 
-The 8×3 factorization connects d₀=8 (Section Z.4) to three fermion generations (Appendix R).
+The 8×3 factorization connects d_0=8 (Section Z.4) to three fermion generations (Appendix R).
 
-The 4×6 factorization connects emergent spacetime dimension D=4 (Theorem Z.11) to the inactive subspace dimension b=6. Both values are derived: D=4 from K(D)=24, and b=6 from d₀-a=8-2.
+The 4×6 factorization connects emergent spacetime dimension D=4 (Theorem Z.11) to the inactive subspace dimension b=6. Both values are derived: D=4 from K(D)=24, and b=6 from d_0-a=8-2.
 
 The 2×12 factorization connects the Landauer pointer dimension a=2 (Theorem Z.1) to the modular weight 12 (Theorem Z.4).
 
@@ -1482,7 +1497,7 @@ P = np.array([
 # Verification 1: Self-orthogonality
 PPT = (P @ P.T) % 2
 assert np.array_equal(PPT, np.eye(12, dtype=np.int32))
-print("✓ P · P^T = I₁₂ (mod 2)")
+print("✓ P · P^T = I_12 (mod 2)")
 
 # Verification 2: Minimum distance = 8
 I12 = np.eye(12, dtype=np.int32)
@@ -1501,7 +1516,7 @@ print(f"✓ Minimum distance d = {min_weight}")
 print(f"\n✓ Framework derivation chain:")
 print(f"  ε = ln 2 ≈ {np.log(2):.6f}")
 print(f"  a = e^ε = {int(np.round(np.exp(np.log(2))))}")
-print(f"  d₀ = 8, b = d₀ - a = 6")
+print(f"  d_0 = 8, b = d_0 - a = 6")
 print(f"  M = 2ab = {2 * 2 * 6}")
 print(f"  k = M/2 = {24 // 2}")
 print(f"  k² = bM = {12**2} = {6 * 24} ✓")
@@ -1525,13 +1540,13 @@ print(f"  A_eff = Λ L_P² / (8π e^{{-S_inst}}) ≈ {A_eff:.2f}")
 
 **Output:**
 ```
-✓ P · P^T = I₁₂ (mod 2)
+✓ P · P^T = I_12 (mod 2)
 ✓ Minimum distance d = 8
 
 ✓ Framework derivation chain:
   ε = ln 2 ≈ 0.693147
   a = e^ε = 2
-  d₀ = 8, b = d₀ - a = 6
+  d_0 = 8, b = d_0 - a = 6
   M = 2ab = 24
   k = M/2 = 12
   k² = bM = 144 = 144 ✓
@@ -1642,7 +1657,7 @@ $$\lambda=\frac{2}{a}=1,$$
 and the QFI-active subspace has dimension $M=2ab=24$ (Theorem Z.5). The information-theoretic quadratic kernel $\mathcal{K}$ is therefore canonically normalized on the QFI-active subspace.
 
 **Step 3 (Capacity saturation fixes $u^*$ in QFI-natural units).** The operational alphabet capacity at $\rho_0$ is
-$$C_{\mathrm{op}}(\rho_0)=M\ln(1+\lambda u)=24\ln(1+u)$$
+$$g_{\rm true}(u)=M\ln(1+\lambda u)=24\ln(1+u)$$
 (Theorem Z.6). At the PCE-Attractor the zero-slack boundary holds (Definition 15a, condition ii), so
 $$M\ln(1+\lambda u^*)=\ln d_0\qquad\Rightarrow\qquad u^*=d_0^{1/M}-1=8^{1/24}-1=2^{1/8}-1$$
 (Theorem Z.7; [Holevo 1973]).
@@ -1710,7 +1725,7 @@ $$G_{\mathrm{can}} = \frac{G_{\mathrm{disc}}}{6}$$
 
 ### Z.17.1 The Interface Mismatch Problem
 
-**Definition Z.10 (Discrete-Continuum Mismatch).** The discrete-continuum mismatch quantifies the geometric distance between the discrete K₀-qubit gauge structure and the continuous U(1) topology:
+**Definition Z.10 (Discrete-Continuum Mismatch).** The discrete-continuum mismatch quantifies the geometric distance between the discrete K_0-qubit gauge structure and the continuous U(1) topology:
 $$\Delta_{\mathrm{dc}} = ||G_{\mathrm{disc}} - G_{\mathrm{cont}}||_{\mathrm{QFI}}$$
 
 **Theorem Z.15 (Interface Mismatch Cost).** The PCE potential includes an interface mismatch contribution of the form:
@@ -1719,7 +1734,7 @@ $$V_{\mathrm{interface}} = \frac{k_{\mathrm{dc}}}{2}\Delta_{\mathrm{dc}}^2$$
 This parallels the V_proxy structure from Appendix D (Theorem D.1), where misalignment between discrete representation and continuum physics creates a quadratic cost.
 
 *Physical Justification.* At the PCE-Attractor, two distinct structures coexist:
-1. The discrete K₀-qubit gauge structure of the MPU
+1. The discrete K_0-qubit gauge structure of the MPU
 2. The emergent continuous U(1) gauge symmetry of electromagnetism
 
 These structures must match for consistent physics, but their distinct topologies create interface effects analogous to the proxy misalignment cost in the core PCE potential.
@@ -1734,7 +1749,7 @@ These structures must match for consistent physics, but their distinct topologie
 $$\Gamma^{(2)} = \mathcal{G}^{-1}$$
 where G is the connected correlation function and Γ^{(2)} is the quadratic effective action kernel.
 
-**Step 2 (Effect of State Concentration).** The PCE-Attractor state ρ₀ = I₂/2 ⊕ 0₆ concentrates population in the 2-dimensional active subspace. Compare with the uniform reference state ρ_uniform = I₈/8.
+**Step 2 (Effect of State Concentration).** The PCE-Attractor state ρ₀ = I_2/2 ⊕ 0_6 concentrates population in the 2-dimensional active subspace. Compare with the uniform reference state ρ_uniform = I_8/8.
 
 **Step 3 (Enhanced Correlations).** For concentrated states, quantum correlations are enhanced relative to uniform states:
 $$\mathcal{G}[\rho_0] > \mathcal{G}[\rho_{\mathrm{uniform}}]$$
@@ -1809,7 +1824,7 @@ $$
 1. Correction vanishes at u* = 0
 2. First-order in u* (from perturbation theory)
 3. State-weighting enters linearly (trace is a linear operation)
-4. Embedding factor is 1/√K₀ (from QFI geometry, not 1/K₀)
+4. Embedding factor is 1/√K_0 (from QFI geometry, not 1/K_0)
 5. Sign is negative (from Legendre structure)
 6. H-invariance requires factorization (Schur's lemma)
 
@@ -1819,15 +1834,15 @@ $$\delta\kappa = -c \cdot \frac{a}{d_0} \cdot \frac{u^*}{\sqrt{K_0}}$$
 where c is an O(1) constant. The capacity-rigidity mechanism (Theorem Z.14) fixes c = 1: the Legendre identity $\Gamma^{(2)} = \mathcal{K}$ holds in QFI-natural units where $\lambda_i=1$ and $u^*$ is pinned by capacity saturation, leaving no rescaling freedom.
 
 **Why Not Alternative Forms:**
-- Not (a/d₀)²: Trace is linear in ρ₀, not quadratic
-- Not 1/K₀: QFI gives √K₀ scaling (see Theorem Z.19)
+- Not (a/d_0)²: Trace is linear in ρ₀, not quadratic
+- Not 1/K_0: QFI gives √K_0 scaling (see Theorem Z.19)
 - Not u*²: First-order perturbation theory
 - Not positive: Legendre transform structure requires negative sign
 
 **Dimensional Analysis Check:**
-- a/d₀: dimensionless ratio ✓
+- a/d_0: dimensionless ratio ✓
 - u*: dimensionless coupling ✓
-- 1/√K₀: dimensionless ✓
+- 1/√K_0: dimensionless ✓
 - Product: dimensionless correction to dimensionless κ ✓
 
 ### Z.17.5 Supporting Theorems
@@ -1841,28 +1856,28 @@ The uniform trace: Tr[K] = 2ab = 24.
 
 The state-weighted trace: Since ρ₀ E_{jk} = p_j E_{jk}, summing over ab interface pairs gives Tr[ρ₀K] = ab · (1/a) = b = 6.
 
-Ratio: 6/24 = 1/4 = a/d₀. ∎
+Ratio: 6/24 = 1/4 = a/d_0. ∎
 
-**Theorem Z.19 (Discrete-Continuous Embedding Factor).** The collective phase coordinate from K₀ discrete qubits embeds into continuous U(1) with geometric factor exactly $1/\sqrt{K_0}$. This result is exact for any finite K₀, derived from finite-dimensional linear algebra with no asymptotic approximations.
+**Theorem Z.19 (Discrete-Continuous Embedding Factor).** The collective phase coordinate from K_0 discrete qubits embeds into continuous U(1) with geometric factor exactly $1/\sqrt{K_0}$. This result is exact for any finite K_0, derived from finite-dimensional linear algebra with no asymptotic approximations.
 *Proof (QFI Matrix Diagonalization).*
 
 **Step 1 (QFI Matrix).** For the GHZ family |ψ(θ⃗)⟩ = exp(-i Σ_j θ_j Z_j)|GHZ⟩, the QFI matrix is:
 $$F_{ij} = 4\, \mathrm{Cov}_{\mathrm{GHZ}}(Z_i, Z_j) = 4 J_{K_0}$$
-where J_{K₀} is the K₀ × K₀ all-ones matrix.
+where J_{K_0} is the K_0 × K_0 all-ones matrix.
 
-**Step 2 (Democratic Eigenvector).** The all-ones matrix J_{K₀} has eigenvalue K₀ along the democratic direction:
+**Step 2 (Democratic Eigenvector).** The all-ones matrix J_{K_0} has eigenvalue K_0 along the democratic direction:
 $$\vec{v} = \frac{1}{\sqrt{K_0}}(1, 1, \ldots, 1)$$
-with eigenvalue λ_dem = K₀ (all other eigenvalues are 0).
+with eigenvalue λ_dem = K_0 (all other eigenvalues are 0).
 
-**Step 3 (QFI Eigenvalue).** The QFI matrix F = 4J_{K₀} has democratic eigenvalue 4K₀.
+**Step 3 (QFI Eigenvalue).** The QFI matrix F = 4J_{K_0} has democratic eigenvalue 4K_0.
 
 **Step 4 (Normalization Derivation).** If we define the single continuous phase coordinate φ = v⃗ · θ⃗, then the generator that produces a unit-QFI displacement in φ has the exact normalization:
 $$G_{\mathrm{cont}} = \frac{\sum_i Z_i}{\sqrt{K_0}}$$
 up to an overall factor from the pure-state F_Q = 4·Var(H) convention.
 
-**Step 5 (Exactness).** Because the democratic overlap is computed with the inner product induced by F (or equivalently, g_B), the 1/√K₀ factor is exact at K₀ = 3 from finite linear algebra alone—no appeal to central limit theorem asymptotics is needed.
+**Step 5 (Exactness).** Because the democratic overlap is computed with the inner product induced by F (or equivalently, g_B), the 1/√K_0 factor is exact at K_0 = 3 from finite linear algebra alone—no appeal to central limit theorem asymptotics is needed.
 
-For K₀ = 3: The QFI matrix is the 3×3 all-ones matrix times 4. Its eigenvalue along (1,1,1)/√3 is exactly 12. The embedding factor is exactly 1/√3. ∎
+For K_0 = 3: The QFI matrix is the 3×3 all-ones matrix times 4. Its eigenvalue along (1,1,1)/√3 is exactly 12. The embedding factor is exactly 1/√3. ∎
 
 ### Z.17.6 Effective Normalization
 
@@ -1949,7 +1964,7 @@ $$K(D) = M = 24 \implies D = 4$$
 This is not coincidence but structural unity: the same information-theoretic substrate determines both the strength of electromagnetic interactions and the dimensionality of the arena in which they occur.
 
 The 24-mode structure is overdetermined by eight independent constraints (Theorem Z.12), transforms apparent fine-tuning into mathematical necessity, and provides the unique solution satisfying:
-- Algebraic structure (from d₀ = 8, a = 2)
+- Algebraic structure (from d_0 = 8, a = 2)
 - Information capacity (saturation equation)
 - Geometric packing (kissing number)
 - Error correction (Golay code)
@@ -2084,11 +2099,11 @@ The 12+12 structure predicts specific correlation patterns in the 24×24 mode co
 **Lemma Z.9 (Variance of Qubit Sum).** For independent binary variables s_i ∈ {+1, -1} with P(s_i = +1) = P(s_i = -1) = 1/2:
 $$\mathrm{Var}\left(\sum_{i=1}^{K_0} s_i\right) = K_0$$
 
-*Proof.* Each s_i has mean zero and variance E[s_i²] - E[s_i]² = 1 - 0 = 1. By independence: Var(Σ_i s_i) = Σ_i Var(s_i) = K₀. ∎
+*Proof.* Each s_i has mean zero and variance E[s_i²] - E[s_i]² = 1 - 0 = 1. By independence: Var(Σ_i s_i) = Σ_i Var(s_i) = K_0. ∎
 
 ### Z.25.2 Central Limit Theorem Normalization
 
-The democratic generator G_disc = Σ_{i=1}^{K₀} Z_i has variance K₀ (Lemma Z.9). For embedding into continuous U(1) with standard normalization:
+The democratic generator G_disc = Σ_{i=1}^{K_0} Z_i has variance K_0 (Lemma Z.9). For embedding into continuous U(1) with standard normalization:
 $$\mathrm{Var}(G_{\mathrm{cont}}) = 1 \implies G_{\mathrm{cont}} = \frac{G_{\mathrm{disc}}}{\sqrt{K_0}}$$
 
 ### Z.25.3 Interface Correction from CLT
@@ -2106,8 +2121,8 @@ The complete description involves two distinct physical regimes:
 
 **Regime 1: Substrate → Continuum (Framework)**
 - Scale: MPU substrate to emergent continuum
-- Physics: Discrete K₀-qubit structure embeds into continuous U(1)
-- Effect: Interface correction -π/√K₀
+- Physics: Discrete K_0-qubit structure embeds into continuous U(1)
+- Effect: Interface correction -π/√K_0
 - Result: Thomson-limit boundary condition α⁻¹(0) ≈ 137.036 (including second-order)
 
 **Regime 2: Continuum Effective Theory (Standard QED)**
@@ -2147,7 +2162,7 @@ Agreement: $|127.93 - 127.952|/127.952 \approx 1.7 \times 10^{-4}$, within the $
 | Aspect | Interface Correction | QED Vacuum Polarization |
 |--------|---------------------|-------------------------|
 | **Origin** | Discrete → continuous | Virtual particle loops |
-| **Form** | Constant: π/√K₀ | Logarithmic: ~ ln(μ/m) |
+| **Form** | Constant: π/√K_0 | Logarithmic: ~ ln(μ/m) |
 | **Scale dependence** | None (one-time) | Increases with ln μ |
 | **Framework** | PU (substrate) | QFT (effective theory) |
 
@@ -2175,7 +2190,7 @@ $$\rho_1 = -\frac{i}{\omega}[G_{\mathrm{disc}}, \rho_0] = 0$$
 
 *Proof.* Both ρ₀ and G_disc are diagonal in the computational basis with S₃ permutation symmetry. Therefore [G_disc, ρ₀] = 0, giving ρ₁ = 0. ∎
 
-**Corollary Z.9 (Protected Active Fraction).** The active fraction a/d₀ = 1/4 is exact to all orders in u* due to symmetry protection.
+**Corollary Z.9 (Protected Active Fraction).** The active fraction a/d_0 = 1/4 is exact to all orders in u* due to symmetry protection.
 
 ### Z.27.3 Sources of Second-Order Corrections
 
@@ -2278,12 +2293,12 @@ $$
 *Proof.*
 
 **Step 1 (Visible Operator Space).** The gauge field couples to the system through the state $\rho_0$, which has support only on the active subspace $A$. For an operator $X$, the variance in state $\rho_0$ is:
-$$\text{Var}_{\rho_0}(X) = \text{Tr}[\rho_0 X^2] - (\text{Tr}[\rho_0 X])^2$$
+$$\text{Var}_{\rho_0}(X) = \mathrm{tr}[\rho_0 X^2] - (\mathrm{tr}[\rho_0 X])^2$$
 For $\rho_0 = I_a/a \oplus 0_b$, direct calculation gives:
-$$\text{Tr}[\rho_0 X^2] = \frac{1}{a}\sum_{j \in A}\sum_{m=1}^{d_0} |X_{jm}|^2$$
+$$\mathrm{tr}[\rho_0 X^2] = \frac{1}{a}\sum_{j \in A}\sum_{m=1}^{d_0} |X_{jm}|^2$$
 This depends only on matrix elements $X_{jm}$ with the first index $j \in A$. The visible operator space $\mathcal{V}$ consists of operators with nonzero variance, spanned by matrix elements with first index in $A$. Its complex dimension is:
 $$\dim_{\mathbb{C}}(\mathcal{V}) = a \times d_0 = 2 \times 8 = 16$$
-This counts the $a^2 = 4$ active-active elements plus the $ab = 12$ active-inactive elements. Note that BA elements (first index in $B$) do not contribute to $\text{Tr}[\rho_0 X^2]$ and are therefore not visible to the gauge coupling.
+This counts the $a^2 = 4$ active-active elements plus the $ab = 12$ active-inactive elements. Note that BA elements (first index in $B$) do not contribute to $\mathrm{tr}[\rho_0 X^2]$ and are therefore not visible to the gauge coupling.
 
 **Step 2 (Democratic Distribution).** The discrete-continuum mismatch vector $\Delta G$, arising from the tension between the $K_0$-qubit structure and the continuous $U(1)$ manifold, is uniformly distributed over the visible operator space $\mathcal{V}$. This follows from the permutation symmetry of the democratic generator $G_{\mathrm{disc}} = Z_1 + Z_2 + Z_3$ under qubit exchange.
 
@@ -2539,8 +2554,8 @@ Expected deviations: ±10-20% due to finite-size effects.
 1. **Platform:** Synthetic dimension simulation using internal atomic states or photonic mode spaces.
 
 2. **Forced embedding:** Engineer system with M_int = 24 active modes in effective dimension D_eff ≠ 4:
-   - Prepare d₀ = 8 dimensional system
-   - Create PCE-attractor-like state: ρ₀ = I₂/2 ⊕ 0₆
+   - Prepare d_0 = 8 dimensional system
+   - Create PCE-attractor-like state: ρ₀ = I_2/2 ⊕ 0_6
    - Embed in lattice with engineered D_eff
 
 3. **Stability monitoring:** over time scales t ≫ τ_min:
@@ -2574,9 +2589,9 @@ For D_eff = 4 (K(4) = 24 = M_int):
 
 **Test Protocol:**
 
-1. **Platform:** Quantum system supporting d₀ = 8 with full QFI spectroscopy capability.
+1. **Platform:** Quantum system supporting d_0 = 8 with full QFI spectroscopy capability.
 
-2. **State preparation:** Prepare PCE-attractor state ρ₀ = I₂/2 ⊕ 0₆.
+2. **State preparation:** Prepare PCE-attractor state ρ₀ = I_2/2 ⊕ 0_6.
 
 3. **Full QFI spectroscopy:** Measure sensitivity F_Q[ρ₀, G_i] for all 24 generators connecting active to inactive subspace.
 
@@ -2697,9 +2712,9 @@ Several alternative approaches to dimensional emergence have been proposed:
 | Causal set theory | Defines but does not derive D |
 | Loop quantum gravity | Assumes D=4 |
 | String theory | D=10/11, compactification not uniquely determined |
-| **This framework** | **Derives D=4 from d₀=8, ε=ln 2** |
+| **This framework** | **Derives D=4 from d_0=8, ε=ln 2** |
 
-The framework differs by deriving rather than assuming the dimensional parameter. Given only logical necessity (d₀ = 8) and thermodynamic necessity (ε = ln 2), dimensional selection follows from mode-channel matching: K(D) = 2ab = 24 ⟹ D = 4.
+The framework differs by deriving rather than assuming the dimensional parameter. Given only logical necessity (d_0 = 8) and thermodynamic necessity (ε = ln 2), dimensional selection follows from mode-channel matching: K(D) = 2ab = 24 ⟹ D = 4.
 
 This approach inverts the usual logic. Rather than starting with D-dimensional spacetime and deriving physical consequences, we start with pre-geometric information structure (the MPU) and derive that D=4 emerges as the unique thermodynamically stable configuration.
 
@@ -2711,7 +2726,7 @@ This approach inverts the usual logic. Rather than starting with D-dimensional s
 |------------|-------|--------|
 | Spacetime dimension | D = 4 | Theorem Z.11 |
 | Fine-structure constant | α⁻¹ ≈ 137.036092 ± 0.000050 | Theorem Z.26 |
-| Active fraction | a/d₀ = 1/4 | Corollary Z.1 |
+| Active fraction | a/d_0 = 1/4 | Corollary Z.1 |
 | Mode count | M = 24 | Theorem Z.5 |
 | Error correction structure | Golay [24,12,8] | Theorem Z.13 |
 | Z-pole coupling | α⁻¹(M_Z) = 127.93 | Corollary Z.8 |

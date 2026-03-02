@@ -16,19 +16,24 @@ To ensure compliance with Postulate 2, the maximum possible strength of the CC e
 
 **10.2.1 Theorem 39 (Upper Bound on CC ($\alpha_{CC,max} < 0.5$))**
 
-Upholding the causality definition in Postulate 2 is guaranteed if the maximum operational Consciousness Complexity $\alpha_{CC,max} = \sup_{S} \text{CC}(S)$ (**Definition 30**) is strictly bounded to preclude deterministic FTL signaling. A sufficient universal bound on the operational norm is:
+Upholding the causality definition in Postulate 2 is guaranteed if the maximum operational Consciousness Complexity $\alpha_{CC,max} = \sup_{S} \mathrm{CC}(S)$ (**Definition 30**) is strictly bounded to preclude deterministic FTL signaling. A sufficient universal bound on the operational norm is:
 $$
 \alpha_{CC,max} < 0.5 \quad \text{(61)}
 $$
-*Proof:* Deterministic FTL signaling using CC would require a system $S_A$ (Alice) with maximal capability $\alpha_{CC,max}$ to reliably force a specific outcome $i$ of a quantum measurement performed by a distant system $S_B$ (Bob) at a space-like separated location, overriding the Born rule probability $p_i = P_{Born}(i)$.
-1.  **Forcing Outcome $i$ ($P_{obs}(i) = 1$):** Requires probability modification $\Delta P(i) = 1 - p_i$. The maximum achievable modification is bounded by the operational norm: $|\Delta P| \le \alpha_{CC,max}$ (Definition 30). Forcing outcome $i$ requires $\alpha_{CC,max} \ge |1 - p_i|$. This must be impossible for any $p_i \in (0, 1)$.
-2.  **Forcing Outcome NOT $i$ ($P_{obs}(i) = 0$):** Requires $\Delta P(i) = -p_i$. This requires $\alpha_{CC,max} \ge |-p_i| = p_i$. This must also be impossible for any $p_i \in (0, 1)$.
-3.  **Single-channel forcing threshold:** To force either outcome $i$ or its complement with a *single fixed channel*, the required capability is $\alpha_{\mathrm{req}}(p_i)=\max\{p_i,\,1-p_i\}$.
-4.  **Sufficient universal bound:** The minimum of $\alpha_{\mathrm{req}}(p)$ over $p\in(0,1)$ is $0.5$ (at $p=0.5$). Hence, a sufficient condition that precludes deterministic forcing for any baseline probability $p_i$ is
+*Proof:* Deterministic FTL signaling with a fixed local measurement at $S_B$ would require $S_A$ (Alice) to encode at least two distinguishable messages by choosing between two contexts that yield two *deterministic* and *distinct* outcome distributions at $S_B$ (Bob). For any POVM, coarse-grain to a binary partition $\{E_i,\ I-E_i\}$; let the baseline Born probability for outcome $i$ be $p_i=P_{Born}(i)\in(0,1)$.
+1.  **Deterministic endpoints:** Encoding two deterministic messages with this binary partition requires the existence of contexts achieving both $P_{obs}(i)=1$ and $P_{obs}(i)=0$ (equivalently, certainty of $E_i$ and certainty of $I-E_i$).
+2.  **Required CC to reach both endpoints:** Achieving $P_{obs}(i)=1$ requires $\Delta P(i)=1-p_i$, and achieving $P_{obs}(i)=0$ requires $\Delta P(i)=-p_i$.
+3.  **Operational bound:** By Definition 30, for any context and any effect, $|\Delta P(i)|\le \alpha_{CC,max}$. Therefore, the existence of contexts that achieve *both* endpoints implies
+    $$
+    \alpha_{CC,max}\ge \max\{p_i,\,1-p_i\}.
+    $$
+4.  **Universal sufficient ceiling:** For any $p_i\in(0,1)$, $\max\{p_i,1-p_i\}\ge 0.5$, with equality at $p_i=0.5$. Hence if $\alpha_{CC,max}<0.5$, no binary coarse-graining can be driven to both deterministic endpoints by context choice, so no deterministic message alphabet can be realized at spacelike separation.
+5.  Therefore $\alpha_{CC,max}<0.5$ suffices to preclude deterministic FTL signaling and the construction of deterministic causal paradoxes. Hence:
 $$
-\alpha_{CC,max} < 0.5.
+\alpha_{CC,max}<0.5.
 $$
-5.  **Conclusion:** Under this bound on the operational norm, deterministic forcing of single-shot outcomes is impossible, precluding deterministic FTL signaling via this mechanism, while statistical influence remains allowed. The full argument for the impossibility of deterministic signaling, including the role of information-rate limits and multi-shot protocols, is provided in Theorem 42 and Appendix F. QED
+
+Under the information-rate bound for the balanced baseline $p=1/2$, $I(C;Y) \le 4 \ln 2 \cdot (\kappa \mathrm{CC})^2$ nats/trial (Theorem 41), so any AQFT-violating channel would require $\mathrm{CC}\sim O(1)$, excluded by Theorem 39 and gravitational backreaction (Appendix S).
 
 **10.3 The Statistical FTL Influence Hypothesis**
 
@@ -61,14 +66,20 @@ $$
 so the single-shot advantage over random is exactly $\delta=O(\mathrm{CC})$.
 
 
-**Lemma 10.1 (Pre-lightcone decoding infeasibility).**
-Let a QCP (Section 10.3.2) with bias $\delta \le \kappa\,\mathrm{CC}$ be used to transmit a bit with target error probability $\le\alpha_{\mathrm{err}}$ between stations with spacelike separation $L$. Let $r_{\max}$ be the maximum local measurement rate per channel. Reliable pre-lightcone decoding requires the number of pre-lightcone trials, $N_{\text{pre}} \le r_{\max} L/c$, to exceed the number of trials required for decoding, $N_{\text{decode}} \gtrsim \ln(1/\alpha_{\mathrm{err}})/(2\delta^2)$. This implies the condition:
+**Lemma 10.1 (Pre-lightcone decoding condition).**
+If a QCP is used to attempt decoding strictly before a light signal could arrive, let the spatial separation be $L$. The maximum number of trials before the lightcone is
 $$
-\frac{r_{\max} L}{c} \gtrsim \frac{\ln(1/\alpha_{\mathrm{err}})}{2\delta^2}
+N_{\text{pre}} \le r_{\max}\frac{L}{c},
 $$
-This condition is excluded by the framework's rate and resource bounds for realistic parameters, preventing the construction of a tachyonic anti-telephone.
-
-*Proof.* The bound on $N_{\text{decode}}$ follows from standard channel coding results (e.g., via Chernoff-Hoeffding bounds [Chernoff 1952; Hoeffding 1963]) for a binary symmetric channel with crossover probability $1/2-\delta$. The maximum local measurement rate $r_{\max}$ is fundamentally limited by the MPU cycle time $\tau_{\min}$ (Theorem 29) and the ND-RID channel capacity (Theorem E.2). For any realistic bias $\delta \ll 1$ (since $\mathrm{CC} < 0.5$), the required number of trials $N_{\text{decode}}$ grows quadratically with $1/\delta^2$, while the available pre-lightcone budget $N_{\text{pre}}$ grows linearly with separation $L$. The inequality can only be satisfied in extreme, physically unrealizable regimes of bias or measurement rate. For example, for $\delta=0.01, \alpha_{\mathrm{err}}=0.01$, one needs $N_{\text{decode}} \approx 2.3 \times 10^4$ trials. At a separation of $L=1$ km and a high rate of $r_{\max}=1$ GHz, only $N_{\text{pre}} \approx 3.3 \times 10^3$ trials are available before a light signal could arrive, demonstrating the infeasibility. QED
+where $r_{\max}$ is the maximum local measurement rate per channel. For a binary decision with bias parameter $\delta$ and target error probability $\alpha_{\text{err}}$, any decoding strategy that attains error $\le\alpha_{\text{err}}$ requires at least
+$$
+N_{\text{decode}} \ge \frac{\ln(1/\alpha_{\text{err}})}{2\delta^2}
+$$
+trials (Chernoff/Hoeffding). Therefore, achieving decoding strictly before the lightcone with error $\le\alpha_{\text{err}}$ requires
+$$
+r_{\max} \frac{L}{c} \ge \frac{\ln(1/\alpha_{\text{err}})}{2\delta^2}.
+$$
+If this inequality fails, pre-lightcone decoding with error $\le\alpha_{\text{err}}$ is impossible. QED
 
 **AQFT compliance.** Operator locality holds (Corollary F.1); the context-conditioned dependence arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Equation (F.4). Under the information‑rate bound for the balanced baseline $p=\tfrac12$, $I(C;Y) \le 4\ln 2 \cdot (\kappa \cdot \mathrm{CC})^2$ nats/trial (Theorem 41), this statistical influence cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42). The full consistency analysis is provided in **Appendix F**.
 
@@ -80,8 +91,8 @@ $$
 
 **Physical self-limitation.** The context needed to achieve a bias $\delta$ carries a resource cost that contributes to the MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ (Appendix B) and induces gravitational self-dephasing (Appendix S). The power cost of maintaining the context scales as (Appendix S, Equation S.5):
 $$
-P_{\text{context}}(\mathrm{CC}) = A\!\left[\frac{\mathrm{CC}}{\alpha_{CC,\max}-\mathrm{CC}}\right]^2,\qquad
-\alpha_{CC,\max}<\tfrac12,
+P_{\text{context}}(\mathrm{CC}) = A\!\left[\frac{\mathrm{CC}}{\alpha_{CC,max}-\mathrm{CC}}\right]^2,\qquad
+\alpha_{CC,max}<\tfrac12,
 $$
 the resulting gravitational backreaction induces a time-dilation $\Delta\tau_d$ across the system (Appendix S, Equation S.18):
 $$
@@ -95,11 +106,10 @@ The framework must rigorously demonstrate that the allowed statistical FTL influ
 
 **10.4.1 Theorem 40 (Statistical Detection Limit)**
 
-Detecting the hypothesized statistical FTL influence (Postulate 3) requires analyzing Bob's outcome statistics conditioned on Alice's context $C_A$. Let $\delta$ be the magnitude of the resulting context-induced shift in Bob's marginal outcome probability (for a fixed local measurement setting), dependent on $C_A$. By Theorem 36, $|\delta| \le \text{CC}(S_A) \le \alpha_{CC,max} < 0.5$. To statistically resolve this shift with high confidence, a minimum number of experimental trials $N$ is required, scaling inversely with the square of the effect size:
+Detecting the hypothesized statistical FTL influence (Postulate 3) requires analyzing Bob's outcome statistics conditioned on Alice's context $C_A$. Let $p_0(b)$ and $p_1(b)$ denote Bob's marginal probability for some fixed event $b$ under two context conditions of Alice, and define the context-induced effect size $\Delta:=|p_1(b)-p_0(b)|$ (for the symmetric QCP, $\Delta=2|\delta|$). Under the CC-bounded influence mechanism, $\Delta$ is bounded by the operational CC scale (Definition 30; Theorem 36) and therefore remains small when $\alpha_{CC,max}<0.5$. By Hoeffding/Chernoff bounds, to detect $\Delta\ne0$ at significance level $\alpha_{\mathrm{det}}$ it suffices (and for binary tests is necessary up to constants) that
 $$
-N \gtrsim O\left(\frac{1}{\delta^2}\right) \approx O\left(\frac{1}{\text{CC}^2}\right) \quad \text{(62)}
+N \ge \frac{\ln(2/\alpha_{\mathrm{det}})}{2\Delta^2}\quad \text{(62)}
 $$
-*Proof:* To statistically distinguish between two probability distributions $P_1(b)$ and $P_2(b)$ (corresponding to Alice's contexts $C_{A1}, C_{A2}$) based on $N$ trials, the difference $\Delta P = |P_1(b) - P_2(b)|$ must be significantly larger than the statistical uncertainty $\sigma_{\hat{p}} = \sqrt{p(1-p)/N}$. For $k$-sigma significance, $\Delta P \gtrsim k \sigma_{\hat{p}}$, yielding $N \gtrsim k^2 p(1-p) / (\Delta P)^2$. Since the maximum shift $\Delta P_{marginal} \le \text{CC}$, the required trials scale as $N \gtrsim O(1/\text{CC}^2)$. QED
 
 **10.4.2 Theorem 41 (No-Paradox Information Rate with Constant)**
 

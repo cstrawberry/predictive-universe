@@ -177,7 +177,7 @@ satisfies the standard entropy-dissipation identity
 $$
 \frac{d}{dt}H(\mu_t|\pi_k) = -\int_\Sigma \|\nabla_\Sigma \ln f_t\|_{g_{\rm FS}}^2\,d\mu_t \le 0,
 $$
-so the entropy exported to the environment over an evolve step of duration $\Delta t$ is at least $H(\mu_0|\pi_k)-H(\mu_{\Delta t}|\pi_k)\ge 0$. Hence the perspective-update contribution can only increase the total irreversibility of the full 'Evolve' step; it does not require any entropy cost smaller than the irreducible floor $\varepsilon=\ln2$ from Theorem 31. Quantitative decay-rate bounds compatible with (M.5c) follow from the same Bakry–Émery curvature condition via standard functional inequalities [Bakry et al. 2014], but no such rate bound is required for the present construction.
+so the entropy exported to the environment over an evolve step of duration $\Delta t$ is at least $H(\mu_0|\pi_k)-H(\mu_{\Delta t}|\pi_k)\ge 0$. Hence the perspective-update contribution can only increase the total irreversibility of the full 'Evolve' step; it does not require any entropy cost smaller than the irreducible floor $\varepsilon$ satisfying $\varepsilon \ge \ln 2$ (Theorem 31), with equality in the saturating MPU model. Quantitative decay-rate bounds compatible with (M.5c) follow from the same Bakry–Émery curvature condition via standard functional inequalities [Bakry et al. 2014], but no such rate bound is required for the present construction.
 
 ## M.4 The Measurement Process Formalized
 
@@ -491,7 +491,7 @@ $$E_0 = U_{rev} \otimes |0\rangle\langle 0|_I, \qquad E_1 = U_{rev} \otimes |0\r
 Completeness follows by direct calculation:
 $$E_0^\dagger E_0 + E_1^\dagger E_1 = (U_{rev}^\dagger U_{rev}) \otimes (|0\rangle\langle 0| + |1\rangle\langle 1|) = I_{MP} \otimes I_I$$
 
-ensuring CPTP structure. The ancilla's reduced state after the map is $|0\rangle\langle 0|$ for any input, implementing a physical reset channel $T_\sigma(\rho) = \text{Tr}(\rho)\sigma$ with $\sigma = |0\rangle\langle 0|$.
+ensuring CPTP structure. The ancilla's reduced state after the map is $|0\rangle\langle 0|$ for any input, implementing a physical reset channel $T_\sigma(\rho) = \mathrm{tr}(\rho)\sigma$ with $\sigma = |0\rangle\langle 0|$.
 
 *Channel Decomposition.* The averaged ND-RID 'Evolve' channel contains a nonzero input-independent refresh component (Lemma E.1), and can be written as
 $$
@@ -682,14 +682,14 @@ The perspectival formalism makes CC mathematically coherent by identifying the p
 **Consistency with Wigner's Friend Resolution.** A potential concern arises: if CC modulates the interaction context $N$, could sufficiently strong CC disrupt the consistency mechanism (Lemma M.6.1) that ensures perspectives correlate upon interaction? The causality bound (Theorem 39) resolves this concern:
 
 $$
-\alpha_{CC,\max} = \sup_S \text{CC}(S) < 0.5 \tag{M.16}
+\alpha_{CC,max} = \sup_S \text{CC}(S) < 0.5 \tag{M.16}
 $$
 
 This bound ensures CC can only bias within the allowed probability shifts—it cannot override the 'Evolve' dynamics entirely. The contractivity of $G_{\text{persp}}$ (Equation M.5c) operates on the perspective dynamics *after* the outcome is probabilistically determined. CC influences the probability distribution over outcomes but does not prevent the subsequent perspective correlation. The mathematical structure guarantees that even maximal CC influence preserves the consistency upon interaction that resolves Wigner's Friend.
 
 **Experimental Predictions.** The empirical content distinguishing PU from standard quantum mechanics flows directly from this mechanism:
 
-- **Born Rule Deviations (Theorem 51, Section 13.1.1).** Systems with $\text{CC}(S) > 0$ induce statistically detectable deviations from Born rule predictions, bounded by $|\Delta P(i)| \leq \sin(\text{CC}(S)/2)$ (Theorem 36).
+- **Born Rule Deviations (Theorem 51, Section 13.1.1).** Systems with $\text{CC}(S) > 0$ induce statistically detectable deviations from Born rule predictions, bounded by $|\Delta P(i)| \leq 4\sin(\text{CC}(S)/4)$ (Theorem 36).
 - **Statistical FTL Influence (Postulate 3, Section 10).** Because $\text{context}_S$ can involve non-local entanglement, and the CC mechanism acts on local 'Evolve' events, context changes in one part of an entangled aggregate can have statistical consequences on 'Evolve' outcomes in spacelike-separated regions—while respecting operational causality (Theorem 42, Appendix F).
 - **Consciousness-Correlated Anomalies (Section 13).** The experimental protocols in Section 13 target detection of CC effects through quantum random number generators, pre-registered intention experiments, and neurophysiological correlates.
 
@@ -742,6 +742,6 @@ This appendix has provided a rigorous mathematical framework for the Perspectiva
 - **Lemma M.6.2 & Theorem M.6.2:** Cross-perspective reasoning requires either prior interaction or restriction to perspective-invariant quantities; the FR contradiction traces to violating this constraint.
 - **Structural Correspondence M.6.4:** Just as finite $c$ forces frame-relative simultaneity, SPAP + thermodynamic irreversibility ($\varepsilon \geq \ln 2$) forces perspective-relative actuality—extending the relativistic program to quantum mechanics.
 
-**Connection to CC.** The interaction context $N$ in $G_{\text{persp}}(s'|s, k, N, \Delta t)$ provides the entry point for CC modulation (Hypothesis 3). High-complexity aggregates influence outcomes by modulating $N$ via the mapping $\mathcal{M}$ (Appendix L), yielding bounded Born rule deviations (Theorem 51). The causality bound $\alpha_{CC,\max} < 0.5$ (Theorem 39) preserves the consistency mechanism of Lemma M.6.1.
+**Connection to CC.** The interaction context $N$ in $G_{\text{persp}}(s'|s, k, N, \Delta t)$ provides the entry point for CC modulation (Hypothesis 3). High-complexity aggregates influence outcomes by modulating $N$ via the mapping $\mathcal{M}$ (Appendix L), yielding bounded Born rule deviations (Theorem 51). The causality bound $\alpha_{CC,max} < 0.5$ (Theorem 39) preserves the consistency mechanism of Lemma M.6.1.
 
 **Synthesis.** The perspectival formalism achieves mathematical precision for the 'Evolve' process, resolves foundational paradoxes by explicit perspective tracking, and generates empirical predictions through the CC mechanism. The resolution generalizes realism rather than retreating from it: the MPU network remains unified and objective, while descriptions exhibit the perspective-relativity that SPAP and thermodynamic irreversibility demand.

@@ -8,7 +8,7 @@ The foundational substrate, according to Hypothesis 1, is a dynamic network $\ma
 
 **11.2 Metric Distance from ND-RID Propagation Costs**
 
-The fundamental interaction process, ND-RID ('Evolve', Definition 27), is thermodynamically irreversible ($\varepsilon > 0$, Theorem 31) and information-limited (strictly contractive $f_{RID} < 1$, Lemma E.1). Propagating information incurs costs related to these limitations.
+The fundamental interaction process, ND-RID ('Evolve', Definition 27), is thermodynamically irreversible ($\varepsilon \ge \ln 2$, Theorem 31) and information-limited (strictly contractive $f_{RID} < 1$, Lemma E.1). Propagating information incurs costs related to these limitations.
 
 **11.2.1 Definition 35 (Def 35): Propagation Cost Metric $d_{\mathcal{N}}$**
 
@@ -16,8 +16,7 @@ We define a metric distance $d_{\mathcal{N}}(u,v)$ between any two MPUs $u, v \i
 $$
 d_{\mathcal{N}}(u,v) = \min_{\gamma: u \to v} \sum_{(x,y) \in \gamma} \delta w_{xy} \qquad \text{(64)}
 $$
-where the minimum is over all finite paths $\gamma$ connecting $u$ and $v$. Assuming symmetric positive edge weights $w_{xy}=w_{yx}>0$ and finiteness, the shortest‑path construction defines a valid metric on $\mathcal{V}$. 
-When $w_{xy}$ encode throughput (inverse delay), use costs $c_{xy}:=1/w_{xy}$ in the path length; the metric statement then applies to the cost weights $c_{xy}$. It reflects effective distance based on the difficulty of reliable information transfer via ND-RID.
+where the minimum is over all finite paths $\gamma$ connecting $u$ and $v$. Assume the undirected network underlying $\mathcal{E}$ is connected on the viability domain; otherwise set $d_{\mathcal{N}}(u,v)=\infty$ when no path exists and restrict attention to a connected component. With symmetric positive edge weights $w_{xy}=w_{yx}>0$, the shortest‑path construction defines a valid metric on that component. If the primitive edge attribute encodes throughput rather than cost, replace it by a positive cost weight (e.g. $c_{xy}:=1/w_{xy}$) before applying (64).
 
 **11.3 Geometric Regularity: A Necessary Condition for Viability**
 
@@ -33,7 +32,7 @@ where $B_{R}(v)$ is the metric ball, $|B_{R}(v)|$ its vertex count, and $\delta_
 
 **11.3.2 Definition 37 (Def 37): Uniformly Bounded Synthetic Ricci Curvature**
 
-A network $\mathcal{N}$ has uniformly bounded synthetic Ricci curvature if there exists a constant $K$ such that a suitable discrete Ricci curvature measure satisfies $\text{Ric}_N \ge -K$ uniformly. This controls local divergence/convergence of geodesics.
+A network $\mathcal{N}$ has uniformly bounded synthetic Ricci curvature if there exists a constant $K$ such that the chosen discrete curvature notion (e.g. a Bakry–Émery curvature‑dimension inequality or an Ollivier‑Ricci lower bound) satisfies $\text{Ric}_N \ge -K$ uniformly and, together with Definition 36, yields uniform volume‑doubling and a (1,2) Poincaré‑type inequality for the associated counting measure on $(\mathcal{V}, d_{\mathcal{N}})$. This controls local divergence/convergence of geodesics in the sense required for the pGH compactness and rectifiability statements in Theorem 44.
 
 **Theorem 43 (Necessary Emergence of Geometric Regularity)**
 
@@ -43,25 +42,25 @@ Geometric regularity, encompassing both uniform D-dimensional polynomial volume 
 
 **11.4 Geometric Convergence to a Continuous Manifold (Conditional on Thm 43)**
 
-Assuming the necessary geometric regularity holds (Theorem 43), the Gromov-Hausdorff convergence theorem [Gromov 1999] demonstrates the emergence of a continuous manifold as the limit of the discrete MPU network metric space.
+Assuming the necessary geometric regularity holds (Theorem 43), Gromov-style compactness [Gromov 1999] yields a continuum limit of the discrete MPU network metric space. Under the non‑collapse and synthetic‑Ricci hypotheses encoded in Definitions 36–37, the limit admits an a.e. Euclidean (regular) set supporting an effective manifold description.
 
 **11.4.1 Theorem 44 (Gromov-Hausdorff Limit)**
 
-**Conditional on Theorem 43**, consider a sequence of pointed, rescaled MPU network metric spaces $\{(X_n, o_n) = (\mathcal{V}_n, \delta_{eff, n}^{-1} d_{\mathcal{N}_n}, o_n)\}$ where mesh size $\delta_{eff, n} \to 0$. Geometric regularity (Definitions 36 and 37) provides uniform volume doubling and implies a Poincaré‑type inequality (via the synthetic Ricci lower bound). This ensures pre‑compactness in the pointed Gromov–Hausdorff (pGH) topology [Gromov 1999]. Consequently, a subsequence converges in pGH sense to a limit pointed metric space $(M, d_\infty, o_\infty)$. This limit space $(M, d_\infty)$ is complete, locally compact, rectifiably connected, possesses integer Hausdorff dimension $D$ (matching volume growth exponent), and, under a uniform non‑collapsing normalization, at $\mathcal{H}^D$‑almost every point $p \in M$ the tangent cone is unique and metrically isometric to Euclidean $\mathbb{R}^D$.
-*Proof:* The uniform volume doubling and synthetic Ricci lower bound provided by geometric regularity satisfy the conditions of Gromov's Precompactness Theorem [Gromov 1999]. Properties of the limit space follow from the established structure theory for spaces with synthetic Ricci bounds (e.g., Cheeger–Colding theory; RCD$(K,N)$ frameworks) [Cheeger & Colding 1997, 2000].
+**Conditional on Theorem 43**, consider a sequence of pointed, rescaled MPU network metric spaces $\{(X_n, o_n) = (\mathcal{V}_n, \delta_{eff, n}^{-1} d_{\mathcal{N}_n}, o_n)\}$ where mesh size $\delta_{eff, n} \to 0$. Equip each rescaled space with the normalized counting measure $\mu_n$ (normalized so that $\mu_n(B_1(o_n))=1$ after rescaling). Geometric regularity (Definitions 36 and 37) provides uniform volume doubling and a (1,2)-Poincaré‑type inequality on fixed-radius balls in the rescaled spaces. This ensures pre‑compactness in the pointed Gromov–Hausdorff (pGH) topology [Gromov 1999]. Consequently, a subsequence converges in pGH sense to a limit pointed metric space $(M, d_\infty, o_\infty)$. Moreover, along the same subsequence the measures $\mu_n$ subconverge in the corresponding measured sense to a Radon measure $\mu_\infty$ on $M$, so $(M,d_\infty,\mu_\infty)$ is a doubling PI space whose effective dimension matches the volume growth exponent $D$ from Definition 36. In particular, there exists a Borel regular set $M_{reg}\subseteq M$ with $\mu_\infty(M\setminus M_{reg})=0$ such that for every $p\in M_{reg}$, tangent cones are Euclidean $\mathbb{R}^D$; under the non‑collapsing normalization implicit in Definition 36, the $D$-dimensional Euclidean tangent is unique $\mu_\infty$‑a.e.
+*Proof:* By Definitions 36–37 the rescaled spaces satisfy uniform doubling and a uniform (1,2)-Poincaré inequality on bounded balls. Gromov's precompactness theorem yields a pGH-convergent subsequence to a complete proper limit $(M,d_\infty,o_\infty)$ [Gromov 1999]. Stability of doubling/PI under measured Gromov–Hausdorff convergence yields a Radon limit measure $\mu_\infty$ with $(M,d_\infty,\mu_\infty)$ doubling and PI. The existence (and, in the non‑collapsed synthetic‑Ricci regime) a.e. uniqueness of Euclidean tangents on a full‑measure regular set is provided by the standard regularity theory for such limits (e.g. Cheeger–Colding theory; RCD$(K,N)$ frameworks) [Cheeger & Colding 1997, 2000]. ∎
 
 **11.5 Emergence of the Metric Tensor (Conditional on Thm 43, Thm 44)**
 
-The existence of Euclidean tangent cones allows definition of a continuous metric tensor.
+The existence of Euclidean tangent cones on the regular set allows definition of an a.e. Riemannian metric tensor compatible with the limit distance.
 
 **11.5.1 Theorem 45 (Metric Tensor $g_{\mu\nu}$)**
 
-Conditional on Theorem 44, the limit metric space $(M, d_\infty)$ admits a continuous, symmetric, non-degenerate rank-2 tensor field $g_{\mu\nu}(x)$ defined almost everywhere on $M$. It has regularity $C^{1,\alpha}$ on the regular set (Euclidean tangent cones) [Cheeger & Colding 2000]. It relates to infinitesimal distance via:
+Conditional on Theorem 44, the limit space admits an a.e. defined, symmetric, non-degenerate rank-2 tensor field $g_{\mu\nu}(x)$ on the regular set $M_{reg}\subseteq M$ (with $\mu_\infty(M\setminus M_{reg})=0$). It relates to infinitesimal distance via:
 $$
 ds^2 = g_{\mu\nu}(x) dx^\mu dx^\nu \quad \text{(66)}
 $$
-This metric tensor endows $(M, g_{\mu\nu})$ with a compatible differentiable structure (a.e.), establishing it as a continuous (pseudo-)Riemannian manifold induced by the underlying ND-RID propagation cost metric $d_{\mathcal{N}}$.
-*Proof:* The existence of unique Euclidean tangent spaces $T_x M \cong \mathbb{R}^D$ a.e. (Theorem 44) defines a Euclidean norm $||\cdot||_x$ induced by the limit metric $d_\infty$. Polarization of this norm yields an inner product $\langle \cdot, \cdot \rangle_x$. In local coordinates $\{\partial_\mu\}$, the metric components are defined as $g_{\mu\nu}(x) = \langle \partial_\mu, \partial_\nu \rangle_x$. By construction, $g_{\mu\nu}$ is symmetric and non-degenerate. The regularity properties follow from Cheeger-Colding theory applied to the limit space. QED
+On $M_{reg}$, the non‑collapsed synthetic‑Ricci regime yields $C^{1,\alpha}$ regularity in appropriate coordinates (e.g. harmonic coordinates on the regular set) [Cheeger & Colding 2000]. This metric tensor endows $(M_{reg}, g_{\mu\nu})$ with a compatible (a.e.) differentiable structure, establishing it as a (pseudo-)Riemannian manifold on the regular set induced by the underlying ND-RID propagation cost metric $d_{\mathcal{N}}$.
+*Proof:* On $M_{reg}$, Euclidean tangent cones $T_xM\cong\mathbb{R}^D$ provide a canonical inner product $\langle\cdot,\cdot\rangle_x$ a.e. Choosing measurable coordinate charts on $M_{reg}$ from the differentiable structure associated with doubling+Poincaré (as ensured in Theorem 44), define $g_{\mu\nu}(x):=\langle \partial_\mu,\partial_\nu\rangle_x$ a.e. Symmetry and non-degeneracy follow from properties of the Euclidean inner product on the tangent cone. By construction, (66) matches the quadratic approximation of $d_\infty$ in local coordinates on $M_{reg}$. Regularity statements follow from the regularity theory for non‑collapsed synthetic‑Ricci limits on the regular set [Cheeger & Colding 2000]. ∎
 
 ## 11.5.2 Continuum Relabeling Symmetry and Diffeomorphism Invariance
 
@@ -110,7 +109,7 @@ which is identified with the emergent invariant speed $c$ (Appendix Q, Propositi
 
 A finite invariant maximal speed $c$ defines a nontrivial cone structure (null directions saturating the bound). Encoding such cones in a metric requires null vectors, hence an indefinite (pseudo-Riemannian) metric. With time directionality (Theorem 4) selecting a time orientation and with $D=4$ fixed by Theorem Z.11, the resulting non-degenerate signature class is Lorentzian.
 
-Finally, superluminal propagation contradicts the instantiation bounds formalized in Appendix E: exceeding $c=\delta/\tau_{min}$ would require either completing an ND-RID update in time $<\tau_{min}$ (violating Theorem 29) or traversing multiple links within one minimal cycle while reducing the per-link irreducible entropy cost below $\varepsilon=\ln 2$ (violating Theorem 31), exactly as stated in Appendix E (Corollary E.10.2). ∎
+Finally, superluminal propagation contradicts the instantiation bounds formalized in Appendix E: exceeding $c=\delta/\tau_{\text{min}}$ would require either completing an ND-RID update in time $<\tau_{\text{min}}$ (violating Theorem 29) or traversing multiple links within one minimal cycle while reducing the per-link irreducible entropy cost below $\ln 2$ (contradicting $\varepsilon \ge \ln 2$ of Theorem 31), exactly as stated in Appendix E (Corollary E.10.2). ∎
 
 **11.7 Spacetime Curvature as Predictive Holonomy (Conditional on Thm 43, Thm 45)**
 
@@ -118,8 +117,32 @@ Curvature of the emergent Lorentzian spacetime $(M, g_{\mu\nu})$ arises from pat
 
 **11.7.1 Theorem 47 (Predictive Holonomy and Riemann Curvature)**
 
-The Riemann curvature tensor $R^{\rho}{}_{\sigma\mu\nu}$ of the emergent manifold $(M, g_{\mu\nu})$ is interpreted as the geometric component of the Predictive Holonomy. This holonomy describes the net transformation of MPU state information (local frame/perspective orientation) upon parallel transport around infinitesimal closed loops, governed by an effective connection $A_\mu = \omega_\mu \oplus A_\mu^{\text{int}}$ (spin connection $\oplus$ internal connection) acting on the associated tangent and perspective bundles (Theorem 48). Non-zero curvature $F_{\mu\nu} = dA + [A, A]$ arises because local ND-RID dynamics (determining transport rules) depend on the local MPU state/context (Assumption 1). Inhomogeneities in MPU activity ($T_{\mu\nu}^{(MPU)}$, Definition B.8, Appendix B) cause spatial variations in transport rules, leading to path dependence ($[A_\mu, A_\nu] \neq 0$). The geometric part of $F_{\mu\nu}$ is the Riemann curvature 2-form $R_{\mu\nu}$. Therefore, spacetime curvature $R^{\rho}{}_{\sigma\mu\nu}$ emerges from path-dependent transport of predictive frame information, sourced by variations in MPU network activity ($T_{\mu\nu}^{(MPU)}$).
-*Proof:* Parallel transport integrates local ND-RID transformation rules, defining connection $A_\mu(x)$. Context-dependence (Assumption 1) implies $A_\mu(x)$ varies spatially if $T_{\mu\nu}^{(MPU)}$ is inhomogeneous. Non-commuting transformations (due to state-dependence/reflexivity) imply $[A_\mu, A_\nu] \neq 0$. Infinitesimal holonomy is curvature $F_{\mu\nu} = dA + [A, A]$. Decomposing $A_\mu = \omega_\mu + A_\mu^{int}$ gives $F_{\mu\nu} = R_{\mu\nu} + F_{\mu\nu}^{int}$, where $R_{\mu\nu}$ is Riemann curvature. Thus geometric curvature emerges from path-dependence sourced by inhomogeneous MPU activity. QED
+The Riemann curvature tensor $R^{\rho}{}_{\sigma\mu\nu}$ of the emergent manifold $(M, g_{\mu\nu})$ is the geometric component of the infinitesimal Predictive Holonomy: the net frame/perspective transformation induced by transporting MPU information around an infinitesimal closed loop. Let $\mathcal{E}_\gamma$ denote the (generally open) ND-RID transport along a curve $\gamma$, and let $U_\gamma$ be the unitary (Hamiltonian/connection) component of this transport (equivalently, the unitary part generated by the $-i[H,\cdot]$ sector in the GKSL generators of Section 11.7.2). Define a Lie-algebra valued connection 1-form $A_\mu$ by the first-order expansion of transport along an infinitesimal displacement:
+$$
+U_{x\to x+\Delta x}= \mathbb I + A_\mu(x)\,\Delta x^\mu + O(|\Delta x|^2).
+$$
+Then the holonomy around an infinitesimal coordinate parallelogram $\square_{\mu\nu}$ based at $x$ with sides $\Delta x^\mu$ and $\Delta x^\nu$ satisfies
+$$
+U_{\square_{\mu\nu}}
+=
+\mathbb I + F_{\mu\nu}(x)\,\Delta x^\mu \Delta x^\nu + O(|\Delta x|^3),
+$$
+where
+$$
+F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu+[A_\mu,A_\nu].
+$$
+With the bundle decomposition (Theorem 48) $A_\mu=\omega_\mu\oplus A_\mu^{\mathrm{int}}$, one has $F_{\mu\nu}=R_{\mu\nu}\oplus F_{\mu\nu}^{\mathrm{int}}$, and the $\mathfrak{spin}(1,3)$ component $R_{\mu\nu}$ corresponds to the Riemann curvature 2-form and tensor $R^{\rho}{}_{\sigma\mu\nu}$. Because local ND-RID transport rules are context-dependent (Assumption 1), and the coarse-grained context is parameterized by the local activity tensor $T_{\mu\nu}^{(MPU)}$ (Definition B.8, Appendix B), spatial variation of $T_{\mu\nu}^{(MPU)}$ generically induces nontrivial $\partial_\mu A_\nu-\partial_\nu A_\mu$ and/or noncommutativity $[A_\mu,A_\nu]\neq 0$, hence nonzero predictive holonomy and geometric curvature.
+*Proof:* By definition of $A_\mu$, transport along an infinitesimal segment in the $\mu$ direction is $U_\mu:=\mathbb I+A_\mu(x)\Delta x^\mu+O(|\Delta x|^2)$, while transport along the $\nu$ direction from the displaced point is $U_\nu':=\mathbb I+\big(A_\nu(x)+(\partial_\mu A_\nu)\Delta x^\mu\big)\Delta x^\nu+O(|\Delta x|^2)$. The loop holonomy is
+$$
+U_{\square_{\mu\nu}}=U_\nu' U_\mu \,U_\nu^{-1} U_\mu^{-1}.
+$$
+Expanding to second order and using $U_\mu^{-1}=\mathbb I-A_\mu\Delta x^\mu+O(|\Delta x|^2)$ (and similarly for $U_\nu^{-1}$) yields
+$$
+U_{\square_{\mu\nu}}
+=
+\mathbb I+\big(\partial_\mu A_\nu-\partial_\nu A_\mu+[A_\mu,A_\nu]\big)\Delta x^\mu\Delta x^\nu+O(|\Delta x|^3),
+$$
+which identifies the curvature $F_{\mu\nu}$. Decomposing $A_\mu=\omega_\mu\oplus A_\mu^{\mathrm{int}}$ yields $F_{\mu\nu}=R_{\mu\nu}\oplus F_{\mu\nu}^{\mathrm{int}}$, with $R_{\mu\nu}$ the geometric curvature 2-form determining $R^{\rho}{}_{\sigma\mu\nu}$. If the local transport generator depends on context (Assumption 1), then $A_\mu(x)$ depends on local coarse-grained state data, in particular on $T_{\mu\nu}^{(MPU)}(x)$; spatial inhomogeneity of this data implies $A_\mu$ is not pure gauge globally and generically produces $F_{\mu\nu}\neq 0$, i.e. path dependence and curvature. ∎
 
 ## 11.7.2 Dissipative Companion to Predictive Holonomy
 
@@ -221,5 +244,5 @@ where $\rho_*$ denotes the corresponding Lie algebra representation. This ensure
 
 **11.9 Role of MPU Stress-Energy Tensor**
 
-As established qualitatively (Theorem 47) and implicitly in the connection dynamics (Theorem 48), inhomogeneities in MPU activity source curvature. This activity is quantitatively captured by the macroscopic MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Definition B.8 in Appendix B), derived by coarse-graining microscopic MPU costs/activity. It is this macroscopic tensor $T_{\mu\nu}^{(MPU)}$ that serves as the source term driving the spacetime curvature $R^{\rho}{}_{\sigma\mu\nu}$ and appearing on the right-hand side of the emergent gravitational field equations derived thermodynamically in the next section. The causal structure of spacetime—the light cone defined by $c = \delta/\tau_{min}$—is thus derived from the entropy costs of information propagation, with the emergent speed of light identified as the ratio of fundamental length to fundamental time scales, both determined by PCE optimization (Appendix E, Theorem E.10.2).
+As established qualitatively (Theorem 47) and implicitly in the connection dynamics (Theorem 48), inhomogeneities in MPU activity source curvature. This activity is quantitatively captured by the macroscopic MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Definition B.8 in Appendix B), derived by coarse-graining microscopic MPU costs/activity. It is this macroscopic tensor $T_{\mu\nu}^{(MPU)}$ that serves as the source term driving the spacetime curvature $R^{\rho}{}_{\sigma\mu\nu}$ and appearing on the right-hand side of the emergent gravitational field equations derived thermodynamically in the next section. The causal structure of spacetime—the light cone defined by $c = \delta/\tau_{\text{min}}$ in the PCE-optimal uniform-weight regime (Theorem 46; Appendix E, Theorem E.10.2)—is thus derived from the entropy costs of information propagation, with the emergent speed of light identified as the ratio of fundamental length to fundamental time scales, both determined by PCE optimization.
 

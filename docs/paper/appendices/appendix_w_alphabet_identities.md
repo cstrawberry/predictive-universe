@@ -309,7 +309,7 @@ $$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in all sectors}
 
 $$\frac{M_2}{M_Y} = \frac{3}{1} = 3$$
 
-At the PU fixed point $\mathfrak{A}_{PU}$ and its matching to the SM at scale $\mu_G$ (Appendix T, Section T.13), the gauge-kinetic normalization fixes the tree-level value $\sin^2\theta_W(\mu_G)=3/8$ (Appendix T, Theorem T.14). Standard-model renormalization group evolution to $M_Z$ including the PU threshold structure yields $\sin^2\theta_W(M_Z)=0.2312\pm0.0003$ (Appendix T, Theorem T.18), consistent with $0.23122\pm0.00003$.
+At the PU fixed point $\mathfrak{A}_{PU}$ and its matching to the SM at scale $\mu_G$ (Appendix T, Section T.13), the gauge-kinetic normalization fixes the PU-normalized tree-level value $\sin^2\theta_W^{(0)}=3/8$ (Appendix T, Theorem T.14). Standard-model renormalization group evolution to $M_Z$ including the PU threshold structure yields $\sin^2\theta_W(M_Z)=0.2312\pm0.0003$ (Appendix T, Theorem T.18), consistent with $0.23122\pm0.00003$.
 
 ## W.4 Hypercharge from anomalies and Yukawa invariance
 

@@ -66,18 +66,18 @@ This definition ensures $PP(t) \in (0, 1]$, with $PP = 1$ corresponding to perfe
 
 For the adaptive predictive cycle (Definition 4) to maintain meaningful coupling to the system or environment being predicted—so that predictions effectively guide actions or internal regulation relevant to solving the POP (Axiom 1)—its Predictive Performance $PP(t)$ must remain strictly above a positive lower bound $\alpha$.
 
-*Proof:* Consider any task‑level objective that leverages predictions to select actions $a(t)$ with expected utility $U(a, S(t+\Delta t))$. Let $\Delta U(t)$ denote the expected decision advantage over a baseline policy that ignores predictions. Assume:
-(i) $\Delta U(t)$ is non‑negative and strictly increasing in predictive quality at the operating point, and
-(ii) $\Delta U(t)$ is continuous in $PP(t)$ with $\Delta U(t) \to 0$ as $PP(t) \to 0$ (e.g., under any proper scoring rule, predictions that incur arbitrarily large $PE$ carry vanishingly little decision‑relevant information about outcomes).
-
-Operational viability requires $\Delta U(t) \geq \Delta U_{min} > 0$. By continuity and strict monotonicity, there exists $\alpha \in (0, 1)$ such that $PP(t) \leq \alpha$ implies $\Delta U(t) < \Delta U_{min}$, contradicting viability. Therefore, sustained operation necessitates maintaining $PP(t) > \alpha$. QED
+*Proof:* Fix the proper scoring rule $S$ used to define $PE$ (Definition 7) and let $f_{random}$ be a matched random‑chance predictor for the same outcome space and scoring rule. Let $PE_{random}:=\mathbb{E}[S(\hat y_{random}(t),y(t))]$ be the expected error of $f_{random}$ under the task distribution, and define
+$$
+\alpha \;:=\; \frac{1}{1+k_{PP}\,PE_{random}} \in (0,1).
+$$
+Since $PP(t)=1/(1+k_{PP}PE(t))$ is strictly decreasing in $PE(t)$, the condition $PP(t)\le \alpha$ implies $PE(t)\ge PE_{random}$, i.e. the system is not strictly super‑chance at that cycle under the chosen scoring rule. A sustained loop that solves the POP requires strictly super‑chance predictive coupling on the relevant task class; otherwise the Verification phase supplies no systematic advantage signal for $D_{cyc}$ and the loop cannot maintain meaningful coupling to the predicted target. Hence, during viable operation one must have $PP(t)>\alpha$. ∎
 
 #### 3.3.3 Theorem 9 (Necessity of Upper Performance Bound $\beta < 1$)
 
 For the adaptive predictive cycle (Definition 4), operating under RID constraints (Definition 6) and finite resources (Section 2.4.4), facing potential environmental changes (dynamics of $\hat{C}_{target}(t)$, Definition 21), and using error‑driven adaptation, to retain the capacity for learning, adaptation, and efficient operation, its Predictive Performance $PP(t)$ must be kept strictly below 1. That is, there exists an operational upper bound $\beta < 1$ such that $PP(t) \leq \beta$.
 
 *Proof:*
-1. **Persistent Excitation for Adaptation:** The update phase ($D_{cyc}$) relies on informative error signals $PE(t)$. To guarantee finite detection and tracking of nonstationary changes, a standard identifiability condition is persistent excitation: over any sufficiently long window, the error channel exhibits non‑zero informativeness (e.g., $\mathbb{E}[PE(t)] \geq \varepsilon_E > 0$ or $\text{Var}[PE(t)] \geq v_0 > 0$). If $PP(t) \equiv 1$ for extended periods, $PE(t) \equiv 0$, eliminating information needed for adaptation and violating persistent excitation.
+1. **Nonzero Error is Necessary for Update Identifiability:** The update phase ($D_{cyc}$) is driven by discrepancy information carried by $PE(t)$. If $PP(t)\equiv 1$ on a window, then $PE(t)\equiv 0$ on that window, so the interaction history on that window contains no discrepancy information capable of distinguishing the current target process from an alternative target process that matches the observed history up to the window's start but diverges afterward. Consequently, no update rule that depends only on the observed interaction history can guarantee tracking of nonstationary $\hat{C}_{target}(t)$ if $PE$ is identically zero over macroscopic windows. Therefore, viable adaptive operation in nonstationary contexts requires the existence of a strictly positive excitation floor $\varepsilon_E>0$ such that over update windows the error channel satisfies $\mathbb{E}[PE(t)]\ge \varepsilon_E$.
 2. **Mapping Excitation to a PP Ceiling:** Since $PP(t) = 1/(1 + k_{PP} \cdot PE(t))$ is strictly decreasing in $PE(t)$, any lower bound $\varepsilon_E > 0$ on the error signal implies an upper bound on $PP$:
    $$
    PP(t) \le 1/(1 + k_{PP} \varepsilon_E) =: \beta < 1.
@@ -105,11 +105,15 @@ Based on the necessity of both lower and upper performance bounds (Theorem 8, Th
 
 The process modeled by the adaptive Fundamental Predictive Loop (Definition 4), subject to POP (Axiom 1) and RID (Definition 6) constraints, can only be sustained if its Predictive Performance $PP(t)$ is dynamically maintained within the Space of Becoming, i.e., $\alpha < PP(t) < \beta$.
 
-*Justification:* This principle elevates the conclusions of Theorem 8 and Theorem 9 to a core postulate of operational viability. While presented as an axiom for structural clarity within the framework's deductive flow, it also functions as a necessary condition derived from the requirements for meaningful and adaptive prediction. It asserts that maintaining performance within the derived bounds $(\alpha, \beta)$ is not just beneficial but strictly necessary for the continued existence and operation of the predictive systems modeled by this framework.
+*Justification:* Theorem 8 supplies a necessary lower bound $PP(t)>\alpha$ for nontrivial predictive coupling, and Theorem 9 supplies a necessary upper bound $PP(t)<\beta$ for adaptability and efficiency under RID and finite resources. Axiom 3 records this viability requirement as the standing constraint on sustained operation: $\alpha<PP(t)<\beta$.
 
 #### 3.3.7 Proposition 1 (Dynamic Regulation Requirement)
 
 Any system governed by Operational Viability (Axiom 3), existing in an environment where perturbations can affect its Predictive Performance $PP(t)$, must possess regulatory mechanisms (e.g., the adaptation dynamics detailed in Section 6) to actively maintain $PP(t)$ within the Space of Becoming $(\alpha, \beta)$.
-*Proof:* Assume Axiom 3 holds but no regulation exists. External or internal perturbations can cause $PP(t)$ to fluctuate. Without active counter-mechanisms, $PP(t)$ will eventually drift outside the interval $(\alpha, \beta)$ with non-zero probability, leading to operational failure according to Axiom 3. Therefore, sustained operation necessitates active regulatory dynamics that detect deviations and adjust system parameters (like complexity $C(t)$) to restore performance to the viable range. QED
+*Proof:* Let $\tau := \inf\{t\ge 0: PP(t)\notin (\alpha,\beta)\}$ be the first exit time from the viability interval. In the absence of regulation, the internal parameters governing $PP(t)$ are fixed while perturbations act. Since perturbations can affect $PP(t)$, there exist an integer window length $m\ge 1$ and a constant $p_{exit}>0$ such that, conditional on any history with $PP(t)\in(\alpha,\beta)$, the probability that $PP$ exits $(\alpha,\beta)$ within the next $m$ cycles is at least $p_{exit}$. Then
+$$
+\Pr[\tau>km] \le (1-p_{exit})^k \to 0 \quad \text{as } k\to\infty,
+$$
+so $\Pr[\tau<\infty]=1$, contradicting sustained operation under Axiom 3. Therefore, maintaining $PP(t)\in(\alpha,\beta)$ requires active regulation that counteracts perturbations by adjusting internal parameters (e.g., complexity $C(t)$) based on deviation signals. ∎
 
 

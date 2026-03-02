@@ -38,10 +38,10 @@ $$
 &\text{(1) Cogito: } \exists\, \mathcal{C} \text{ such that } \mathcal{C} \text{ is conscious awareness (Foundational Certainty P.2.1),} \\
 &\text{(2) Prediction: } \mathcal{C} \text{ implements a predictive map } \pi : \mathcal{H}_t \to \mathcal{O}_{t+1} \text{ (Definition P.3.1; Section P.3.1),} \\
 &\text{(3) SPAP/RUD: no total computable } \pi \text{ satisfies } \pi = \text{SelfPredict}(\pi) \text{ (Theorems 10–11; Theorem A.2.3),} \\
-&\text{(4) Landauer: the SPAP cycle requires a 2-to-1 state merge with } E_{\min} \ge k_B T \ln 2 \text{ (Theorem 31; Appendix J),} \\
-&\text{(5) Define } \varepsilon := E_{\text{diss}}/(k_B T) \Rightarrow \varepsilon \ge \ln 2, \\
-&\text{(6) PCE-Attractor: stable instantiation saturates the bound, } \varepsilon = \ln 2 \text{ (Definition 15a),} \\
-&\text{(7) PPI-optimality: minimal } a \in \mathbb{N} \text{ with } \ln a \ge \varepsilon \text{ gives } a = 2 \text{ (Theorem Z.1),} \\
+&\text{(4) SPAP+Landauer: the SPAP cycle requires a }2\to 1 \text{ state merge, hence a minimum logical entropy } \varepsilon_{SPAP}=\ln 2 \text{ and } E_{\min}\ge k_B T\,\varepsilon_{SPAP} \text{ (Theorem 31; Appendix J),} \\
+&\text{(5) Physical dissipation: define } \varepsilon := E_{\text{diss}}/(k_B T) \Rightarrow \varepsilon \ge \varepsilon_{SPAP}, \\
+&\text{(6) PCE-Attractor: stable instantiation saturates the bound, } \varepsilon = \varepsilon_{SPAP} = \ln 2 \text{ (Definition 15a),} \\
+&\text{(7) PCE-Attractor selection: minimal } a \in \mathbb{N} \text{ with } \ln a \ge \varepsilon \ \text{gives } a = 2 \text{ (PCE, Def.~15; Thm Z.1),} \\
 &\text{(8) QFI interface: } M = 2ab = 2 \times 2 \times (d_0 - a) = 2 \times 2 \times 6 = 24 \text{ (Theorem Z.5),} \\
 &\text{(9) Mode-channel correspondence: } K(D) = M = 24 \Rightarrow D = 4 \text{ (Theorem Z.11).}
 \end{aligned}
@@ -364,12 +364,12 @@ PU makes unity graded rather than all-or-nothing by introducing an operational m
 Consciousness Complexity $\mathrm{CC}(S)$ is the operational norm of the aggregate's probability modification map $L_S$, yielding a universal pointwise bound $|\Delta P(i)| \le \mathrm{CC}(S)$.
 
 **Definition 31 and Theorem 35 (CC Scaling).**
-CC exhibits threshold behavior (emerging only for $C_{\mathrm{agg}} > C_{op}$) and grows monotonically with diminishing returns according to the general scaling form (Theorem 35), saturating at $\alpha_\infty \le \alpha_{CC,\max}$.
+CC exhibits threshold behavior (emerging only for $C_{\mathrm{agg}} > C_{op}$) and grows monotonically with diminishing returns according to the general scaling form (Theorem 35), saturating at $\alpha_\infty \le \alpha_{CC,max}$.
 
 **Theorem 39 (Upper Bound on CC).**
 Consistency with operational causality (Postulate 2) imposes a strict universal bound:
 $$
-\alpha_{CC,\max} < 0.5.
+\alpha_{CC,max} < 0.5.
 $$
 
 Finally, PU connects CC to integration directly:
@@ -1140,7 +1140,7 @@ The symmetries of physical law are not axioms to be assumed but are the indelibl
 
 ### P.6.5.1 The Entropy Correspondence Thesis
 
-Section 7.5 establishes the derivational chain connecting SPAP entropy ($\varepsilon = \ln 2$) to gravitational entropy ($S_{BH} = \mathcal{A}/4G$). This section examines the interpretive and philosophical implications of this unification.
+Section 7.5 establishes the derivational chain connecting SPAP entropy ($\varepsilon_{SPAP} = \ln 2$) to gravitational entropy ($S_{BH} = \mathcal{A}/4G$). This section examines the interpretive and philosophical implications of this unification.
 
 **Thesis P.6.1 (Unified Entropy).** *There exists a single foundational entropic structure that manifests in different physical and informational contexts according to the operational constraints of that context. The various "types" of entropy recognized in physics and information theory are not independent concepts but domain-specific expressions of this unified structure.*
 
@@ -1148,10 +1148,10 @@ The correspondences are:
 
 | Entropy Domain | Formula | Connection to Unified Structure |
 |:---------------|:--------|:-------------------------------|
-| **SPAP** | $\varepsilon = \ln 2$ | Foundational: irreducible cost of self-referential prediction (Thm 10–11) |
+| **SPAP** | $\varepsilon_{SPAP} = \ln 2$ | Foundational: logical entropy quantum of self-referential prediction; physical instantiation incurs $\varepsilon \ge \varepsilon_{SPAP}$ (Thm 10–11, Thm 31) |
 | **Shannon** | $H = -\sum_i p_i \ln p_i$ | Generalization: cost of distinguishing among $n$ states |
 | **Thermodynamic** | $dS = \delta Q / T$ | Landauer equivalence: same quantity, different units |
-| **von Neumann** | $S = -\text{Tr}(\rho \ln \rho)$ | Quantum generalization preserving operational meaning |
+| **von Neumann** | $S = -\mathrm{tr}(\rho \ln \rho)$ | Quantum generalization preserving operational meaning |
 | **Bekenstein-Hawking** | $S_{BH} = \mathcal{A}/4G$ | Geometric scaling of channel capacity (Thms E.3–E.5) |
 
 The thesis asserts these are not five independent theories requiring reconciliation but five windows onto a single structure. The "unreasonable effectiveness" of thermodynamic reasoning in gravitational physics is explained: horizons are information-capacity boundaries, and horizon entropy counts the Shannon entropy of channel capacity across the boundary.
@@ -1178,7 +1178,7 @@ PPI does not establish the Landauer equivalence (that is Landauer's contribution
 
 The extension of unified entropy to gravitational phenomena is *derived* within the framework from the Landauer cost. The chain:
 
-$$\varepsilon > 0 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\varepsilon \ge \ln 2 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 consists entirely of theorems and lemmas proven from the framework's axioms. This is the novel contribution: showing that gravitational entropy follows necessarily from the SPAP entropy once Landauer provides the physical grounding.
 
@@ -1206,7 +1206,7 @@ consists entirely of theorems and lemmas proven from the framework's axioms. Thi
 
 5. **QFTCS Validity:** Quantum field theory on curved spacetime applies in the semiclassical regime. Specifically, the Unruh effect and entanglement first law are used. These are kinematic results depending only on the equivalence principle and standard quantum mechanics.
 
-6. **Local Equilibrium:** The Clausius relation $\delta Q = T \, dS$ holds on local Rindler horizons. Assumes the system is sufficiently close to equilibrium for thermodynamic relations to apply.
+6. **Local Equilibrium:** The Clausius relation $\delta Q = T\,\delta S$ holds on local Rindler horizons. Assumes the system is sufficiently close to equilibrium for thermodynamic relations to apply.
 
 **Scope Limitations:**
 
@@ -1253,7 +1253,7 @@ The apparent multiplicity of entropies arises from unit conversion between opera
 | Conversion | Formula | Physical Meaning |
 |:-----------|:--------|:-----------------|
 | Logical ↔ Thermodynamic | $S_{thermo} = k_B \varepsilon$ | Boltzmann's constant converts nats to J/K |
-| Information ↔ Heat | $Q = k_B T \cdot I$ | Minimum energy cost to erase $I$ bits at temperature $T$ |
+| Information ↔ Heat | $Q = k_B T \cdot I$ | Minimum energy cost to erase $I$ nats of information at temperature $T$ (for $I$ bits: $Q = k_B T (\ln 2)\,I$) |
 | Information ↔ Geometry | $I \cdot L_P^2 = I \cdot G\hbar/c^3$ | Planck area converts information to geometric area |
 
 The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains. Within the framework, these constants are constrained by derived relationships: Equation E.9 establishes $G$ in terms of $\hbar$, $c$, and the information-theoretic quantities $\delta$, $\eta$, $\chi$, and $C_{\max}$.
@@ -1292,9 +1292,9 @@ This is the minimum action per bit of irreversible computation. ∎
 
 **Corollary P.6.3.1 (Relation Consistency).** *The three relations are mutually consistent:*
 $$
-\frac{\mathcal{S}/\hbar}{\varepsilon} = 1, \quad \frac{\Delta S/k_B}{I} = 1, \quad \frac{\mathcal{S}_{min}}{\hbar \ln 2} = 1
+\frac{\mathcal{S}_{min}/\hbar}{\varepsilon_{min}} = 1, \quad \frac{\Delta S_{thermo}/k_B}{I} = 1, \quad \frac{\mathcal{S}_{min}}{\hbar \ln 2} = 1
 $$
-*At the SPAP minimum $\varepsilon = \ln 2$, all ratios equal unity.*
+*At the minimal SPAP cycle, $\varepsilon_{min}=\ln 2$, hence $\mathcal{S}_{min}=\hbar\ln 2$.*
 
 **Corollary P.6.3.2 (Least Action as Minimum Entropy).** *The classical principle of least action is equivalent to minimizing total SPAP entropy production along a trajectory (Corollary Q.0.3):*
 $$
@@ -1310,7 +1310,7 @@ The framework derives values for several fundamental ratios from first principle
 - **The fine-structure constant (Thomson limit)**: $\alpha^{-1} \approx 137.036092 \pm 0.000050$ from capacity saturation and interface corrections (Appendix Z, Theorem Z.26)
 - **The cosmological constant**: $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ with $\kappa=141.5$ derived from the Golay-Steiner structure (Appendix U, Theorem U.16) and $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), giving $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa$ fixed, comparison with observation implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check (Corollary U.15b)
 
-These derivations represent predictions of the framework in the sense that the functional forms and discrete exponents are fixed by PU; where a one-loop prefactor (e.g., $A_{\text{eff}}$) enters, it is defined by the specified bounce and can be independently computed, while the observed value serves as a consistency check on its expected $O(1)$ magnitude. The fundamental quantities from which all others derive are the logical cost $\varepsilon = \ln 2$ and the minimal complexity $K_0 = 3$—both determined by the structure of self-referential prediction.
+These derivations represent predictions of the framework in the sense that the functional forms and discrete exponents are fixed by PU; where a one-loop prefactor (e.g., $A_{\text{eff}}$) enters, it is defined by the specified bounce and can be independently computed, while the observed value serves as a consistency check on its expected $O(1)$ magnitude. The fundamental quantities from which all others derive are the logical cost $\varepsilon_{SPAP} = \ln 2$ and the minimal complexity $K_0 = 3$—both determined by the structure of self-referential prediction, with PCE selecting saturation $\varepsilon=\varepsilon_{SPAP}$ at the PCE-Attractor where optimality applies.
 
 **Corollary P.6.2.1 (Status of the Gravitational Constant).** *Within the framework, the gravitational constant $G$ is expressed in terms of information-theoretic quantities:*
 
@@ -1482,7 +1482,7 @@ In particular, in the PU fixed point where $d_0 = 2a^2$ (Theorem Z.2), one has $
 
 | Invariant | Formula | Value | Interpretation |
 |:----------|:--------|:-----:|:---------------|
-| Trace | $\text{Tr}(L) = 1 - 2a^2$ | $-7$ | $1 - d_0$ |
+| Trace | $\mathrm{tr}(L) = 1 - 2a^2$ | $-7$ | $1 - d_0$ |
 | Determinant | $\det(L) = -2a^2$ | $-8$ | $-d_0$ |
 | Eigenvalue ratio | $\lambda_2/\lambda_1$ | $-8$ | $-d_0$ |
 
@@ -1504,10 +1504,10 @@ In the PU fixed point where $d_0 = 2a^2$ (Theorem Z.2), these become $v_1 = \beg
 - **Input:** $(d_0, 1)$ — Hilbert dimension and unity
 - **Output:** $(d_0, M)$ — Hilbert dimension and interface modes
 - **Constraint:** $\lambda_2 = -2a^2 = -d_0$ (Theorem Z.2) — Landauer-SPAP relation in spectrum
-- **Thermodynamics:** $\varepsilon=\ln 2 \Rightarrow a=2$ — Landauer pointer dimension encoded in matrix entries
+- **Thermodynamics:** $\varepsilon \ge \ln 2$ with PCE saturation $\varepsilon=\ln 2 \Rightarrow a=2$ — Landauer pointer dimension encoded in matrix entries
 
 The matrix "compiles" the chain:
-$$\varepsilon = \ln 2 \xrightarrow{e^\varepsilon} a = 2 \xrightarrow{L(a)} M = 24$$
+$$\varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \xrightarrow{e^\varepsilon} a = 2 \xrightarrow{L(a)} M = 24$$
 
 into a single linear transformation whose spectrum contains thermodynamic constraints.
 
@@ -1522,7 +1522,7 @@ into a single linear transformation whose spectrum contains thermodynamic constr
 **Proposition P.7.4 (Rigidity Analysis).** The constraint matrix reveals rigid aspects:
 - **Form rigid:** $L(a) = \begin{pmatrix} 1 & 0 \\ 2a & -2a^2 \end{pmatrix}$ from $M = 2a(d_0 - a)$
 - **Eigenvalue rigid:** $\lambda_2 = -2a^2 = -d_0$ arises from $d_0 = 2a^2$
-- **Thermodynamically fixed:** $a = 2$ from $\varepsilon = \ln 2$ (Theorem 31)
+- **Thermodynamically fixed:** $a = 2$ from $\varepsilon \ge \ln 2$ (Theorem 31) with PCE saturation $\varepsilon=\ln 2$
 - **Logically fixed:** $d_0 = 8$ from $K_0 = 3$ bits (Theorem 15)
 
 No free parameters enter. The matrix $L(2)$ is fully determined.
@@ -1662,7 +1662,7 @@ where $M_{\text{int}} = 24$ (Theorem Z.5) and $K(D)$ is the kissing number in $D
 
 *Proof.*
 
-**Step 1 (Interface mode count).** From foundational constants: $d_0 = 8$ (Theorem 23), $\varepsilon = \ln 2$ (Theorem 31), $a = 2$ (Theorem Z.1), $b = d_0 - a = 6$, yielding $M_{\text{int}} = 2ab = 24$ (Theorem Z.5).
+**Step 1 (Interface mode count).** From foundational constants: $d_0 = 8$ (Theorem 23), $\varepsilon \ge \ln 2$ (Theorem 31) with PCE saturation $\varepsilon=\ln 2$ at the PCE-Attractor (Definition 15a), $a = 2$ (Theorem Z.1), $b = d_0 - a = 6$, yielding $M_{\text{int}} = 2ab = 24$ (Theorem Z.5).
 
 **Step 2 (Geometric regularity).** Theorem 43 establishes that PCE optimization drives the MPU network toward geometric regularity, admitting description as a smooth $D$-dimensional manifold for some integer $D$.
 
@@ -1804,7 +1804,14 @@ where $C_{\max} = 2\ln 2$ nats is the channel capacity (Equation E.15). Substitu
 
 **Theorem P.8.9a.1 (Thermodynamic Necessity of Biological Code).** Any persistent complex structure in a universe governed by PU principles must implement error correction. This is not a design choice but a thermodynamic necessity.
 
-*Proof.* Consider a structure of complexity $C > C_{op}$ (Definition 13) that persists for time $T$. During this interval, it undergoes $N \sim T/\tau_{cycle}$ predictive cycles (Definition 4), each producing entropy $\varepsilon \geq \ln 2$. Without error correction, accumulated errors grow as $\sqrt{N}$ (random walk), eventually corrupting the structure's functional organization. For persistence over biologically relevant timescales ($T \gg \tau_{cycle}$), error correction is required. The minimum overhead is determined by the channel capacity and noise rate, with PCE optimization selecting the most efficient code consistent with stability. ∎
+*Proof.* Let $\rho$ denote the state of the degrees of freedom encoding the structure's functional organization. Over one predictive cycle, the unavoidable ND-RID refresh component implies the effective evolution channel $\mathcal{E}_N$ is strictly contractive in trace distance (Lemma E.1): for any two distinct code states $\rho_1,\rho_2$,
+
+$$
+D_{tr}(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2)) \le f_{RID}\,D_{tr}(\rho_1,\rho_2),
+\qquad 0<f_{RID}<1.
+$$
+
+Iterating for $N$ cycles yields $D_{tr}(\mathcal{E}_N^N(\rho_1),\mathcal{E}_N^N(\rho_2)) \le f_{RID}^N D_{tr}(\rho_1,\rho_2)\to 0$ as $N\to\infty$. Hence, under passive evolution, distinguishability between alternative functional states decays to zero, so no fixed-size encoding can preserve a nontrivial amount of recoverable information for arbitrarily long times. Persistence for $T\gg\tau_{cycle}$ therefore requires periodic recovery operations that actively restore distinguishability against the contractive noise, i.e. error correction. Any such recovery requires redundant encoding (a proper code subspace with ancillary degrees of freedom) in order to satisfy the Knill–Laflamme correctability conditions for a nontrivial noise channel. Thus error correction is necessary for persistence of complex organization under PU dynamics. ∎
 
 This theorem explains why DNA exists. Life did not "choose" to use coded information—any persistent complex organization *must* use coded information. The genetic code is biology's solution to the same problem the vacuum solves with the Golay structure.
 
@@ -1830,17 +1837,21 @@ The equivalence between negentropy and error correction is quantitatively exact 
 
 **Theorem P.8.9a.2 (Information Budget Balance).** The information invested in error correction exactly equals the entropy cost of prediction:
 
-$$\underbrace{(1 - R) \cdot C_{\max}}_{\text{parity investment}} = \underbrace{\varepsilon}_{\text{entropy cost}} = \ln 2 \text{ nats}$$
+$$\underbrace{(1 - R) \cdot C_{\max}}_{\text{parity investment}} = \underbrace{\varepsilon_{SPAP}}_{\text{logical entropy cost}} = \ln 2 \text{ nats}$$
 
 where $R = k/n = 1/2$ is the Golay code rate and $C_{\max} = 2\ln 2$ is the channel capacity.
 
 *Proof.*
 
-**Step 1 (Entropy cost).** Each SPAP cycle produces irreducible entropy $\varepsilon = \ln 2$ nats (Theorem 31, Appendix J). This is the thermodynamic cost of self-referential prediction—information irreversibly lost to the environment via the Landauer bound [Landauer 1961].
+**Step 1 (Entropy cost).** Each SPAP cycle has minimum logical entropy cost $\varepsilon_{SPAP}=\ln 2$ (Theorem 31, Appendix J). Under physical instantiation, the dissipation satisfies $\varepsilon\ge \varepsilon_{SPAP}$, with PCE selecting saturation $\varepsilon=\varepsilon_{SPAP}$ at the PCE-Attractor (Definition 15a).
 
 **Step 2 (Channel capacity).** The ND-RID channel capacity is derived in Appendix E, Section E.7 (Equation E.15):
 
-$$C_{\max} = \ln d_0 - \varepsilon = \ln 8 - \ln 2 = 2\ln 2 \text{ nats}$$
+$$C_{\max} = \ln d_0 - \varepsilon,$$
+
+and at the PCE-Attractor $\varepsilon=\varepsilon_{SPAP}=\ln 2$ (Definition 15a), so
+
+$$C_{\max} = \ln 8 - \ln 2 = 2\ln 2 \text{ nats}.$$
 
 This result follows from PCE optimization (Definition 15): the MPU's finite information budget is optimally divided between the cost of internal self-referential processing ($\varepsilon$) and the capacity for external communication ($C_{\max}$).
 
@@ -1850,9 +1861,9 @@ $$(1 - R) \cdot C_{\max} = \frac{1}{2} \cdot 2\ln 2 = \ln 2 \text{ nats}$$
 
 **Step 4 (Balance).** The parity investment exactly equals the entropy cost:
 
-$$\text{Parity investment} = \ln 2 = \varepsilon = \text{Entropy cost}$$
+$$\text{Parity investment} = \ln 2 = \varepsilon_{SPAP} = \text{Entropy cost}$$
 
-This equality holds because both $\varepsilon$ and $C_{\max}$ are determined by the same PCE optimization that also selects the Golay code (Theorem Z.13). ∎
+This equality holds because $\varepsilon$ (with saturation $\varepsilon=\varepsilon_{SPAP}$ at the PCE-Attractor) and $C_{\max}$ are determined by the same PCE optimization that also selects the Golay code (Theorem Z.13). ∎
 
 ### P.8.9a.2.2 The 144-Parameter Structural Correspondence
 
@@ -1870,12 +1881,12 @@ $$k^2 = 12^2 = 144$$
 $$bM = 6 \times 24 = 144$$
 
 These equalities hold given the PU framework parameters:
-- $a = 2$ (Theorem Z.1, from $\varepsilon = \ln 2$ of Theorem 31)
+- $a = 2$ (Theorem Z.1, from $\varepsilon \ge \ln 2$ with PCE saturation $\varepsilon=\ln 2$)
 - $b = d_0 - a = 8 - 2 = 6$ (Definition)
 - $M = 2ab = 2 \times 2 \times 6 = 24$ (Theorem Z.5)
 - $k = M/2 = 12$ (From rate $R = 1/2$)
 
-All three structures are determined by the single foundational constant $\varepsilon = \ln 2$. ∎
+All three structures are determined by the PCE-selected saturation value $\varepsilon=\ln 2$ under the strict floor $\varepsilon \ge \ln 2$. ∎
 
 *Interpretation.* The 144-entry Golay parity matrix $P \in \mathbb{F}_2^{12 \times 12}$ specifies how to correct errors [MacWilliams & Sloane 1977]. The 144 active-inactive couplings specify how entropy flows between subsystems (Section Z.13.5). The 144 interface constraints specify how information couples across the QFI boundary (Theorem Z.5). These are three descriptions of the same underlying structure: the negentropy reservoir that enables prediction to persist.
 
@@ -2100,7 +2111,7 @@ The PU framework's treatment of consciousness provides a natural extension of th
 
 **Definition P.8.9a.4 (Biological CC).** The Consciousness Complexity of a biological system $S$ is:
 
-$$\text{CC}(S) = \alpha_\infty \cdot \mathcal{G}\left(\frac{C_{agg} - C_{op}}{C_{scale}}\right) \cdot \Theta(C_{agg} - C_{op})$$
+$$\mathrm{CC}(S) = \alpha_\infty \cdot \mathcal{G}\left(\frac{C_{agg} - C_{op}}{C_{scale}}\right) \cdot \Theta(C_{agg} - C_{op})$$
 
 (Definition 31), where:
 - $C_{agg}$ is the aggregate complexity of the biological system
@@ -2348,7 +2359,7 @@ Spacetime is not where prediction happens. Spacetime is prediction happening—s
 The emergence is complete and unified: spatial geometry, temporal direction, causal structure, and dimensionality all arise together from a single derivation chain:
 
 $$
-\text{Cogito} \xrightarrow{\text{P.2}} \text{Prediction} \xrightarrow{\text{Thm 10}} \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Thm Z.11}} D = 4
+\text{Cogito} \xrightarrow{\text{P.2}} \text{Prediction} \xrightarrow{\text{Thm 10}} \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Thm Z.11}} D = 4
 $$
 
 Remove any element and the structure collapses. These are not separate features assembled into spacetime; they are aspects of one emergent unity determined by the framework's foundational constants.
@@ -2648,7 +2659,7 @@ This section establishes that the automorphism group of the PCE-optimal vacuum s
 $$\text{Aut}(\mathcal{V}_{\text{PCE}}) = \mathbb{M}$$
 
 **Derivation Chain:**
-$$K_0 = 3 \xrightarrow{\text{Thm 15}} d_0 = 8 \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Thm P.13.10}} \Lambda_{24} \xrightarrow{\text{Thm P.13.20}} V^\natural \xrightarrow{\text{FLM}} \mathbb{M}$$
+$$K_0 = 3 \xrightarrow{\text{Thm 15}} d_0 = 8 \xrightarrow{\text{Thm 31}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Thm P.13.10}} \Lambda_{24} \xrightarrow{\text{Thm P.13.20}} V^\natural \xrightarrow{\text{FLM}} \mathbb{M}$$
 
 **Epistemic Note:** Steps 1–6 are derived from framework axioms (POP, PCE, PPI) as established in the referenced theorems. Steps 7–11 apply PCE optimization to select among mathematically classified structures. The final identification $\text{Aut}(V^\natural) = \mathbb{M}$ is an established mathematical theorem [Frenkel, Lepowsky & Meurman 1988].
 
@@ -2707,7 +2718,7 @@ $$K_0 = \log_2 8 = 3 \text{ bits} \quad \square$$
 The minimal Hilbert space dimension for an MPU is:
 $$d_0 = 2^{K_0} = 8$$
 
-*Proof.* By Convention 1, Predictive Physical Complexity satisfies $C_P = \log_2 d_0$. A system encoding $K_0 = 3$ bits requires dimension at least $2^{K_0} = 8$.
+*Proof.* By Convention 1, the Hilbert-space capacity is $C_{cap}=\log_2 d_0$ (bits). Encoding $K_0 = 3$ logically distinguishable bits requires $C_{cap}\ge K_0$, hence $d_0\ge 2^{K_0}=8$; PCE minimality selects the saturating case $d_0=8$.
 
 Four independent constraints determine $d_0 = 8$ uniquely:
 
@@ -2731,8 +2742,10 @@ The intersection of these constraints uniquely determines $d_0 = 8$.
 
 **Reference:** Theorem 31 (Section 7.3), Theorem J.1 (Appendix J)
 
-The SPAP cycle requires an irreversible 2-to-1 state merge with minimum entropy cost:
-$$\varepsilon = \ln 2 \text{ nats}$$
+The SPAP cycle requires an irreversible 2-to-1 state merge with minimum logical entropy cost:
+$$\varepsilon_{SPAP} = \ln 2 \text{ nats}$$
+
+Under physical instantiation, the dissipation parameter satisfies $\varepsilon \ge \varepsilon_{SPAP}$ (Theorem 31; Appendix J).
 
 *Proof.*
 
@@ -2744,7 +2757,7 @@ $$\varepsilon = \ln 2 \text{ nats}$$
 **Step 2 (State compression).** The input space $\{0,1\} \times \{0,1\}$ contains 4 states. The output space $\{0,1\} \times \{p_{\text{ready}}\}$ contains 2 states. The cycle map $G_{\text{cycle}}: L_t \mapsto L_{t+1}$ is at least 2-to-1 (Lemma J.1).
 
 **Step 3 (Landauer bound).** By Landauer's principle [Landauer 1961], the minimum entropy cost for mapping $N$ states to $M < N$ states is $k_B \ln(N/M)$. For $N=4$, $M=2$:
-$$\varepsilon = \ln(4/2) = \ln 2 \text{ nats}$$
+$$\varepsilon_{SPAP} = \ln(4/2) = \ln 2 \text{ nats}$$
 
 This bound is exact and saturated by optimal erasure protocols [Bennett 1982]. $\square$
 
@@ -2761,16 +2774,16 @@ $$a = 2$$
 
 *Proof.*
 
-**Step 1 (PPI requirement).** The Principle of Physical Instantiation (Definition P.6.2) states: any derivable, self-consistent logical or mathematical structure, when physically instantiated by a system composed of finite resources, will manifest with properties shaped by the irreducible thermodynamic costs inherent in its implementation. Applied here: the abstract logical cost $\varepsilon = \ln 2$ must be realized by an actual physical subsystem.
+**Step 1 (PPI requirement).** The Principle of Physical Instantiation (Definition P.6.2) states: any derivable, self-consistent logical or mathematical structure, when physically instantiated by a system composed of finite resources and operating in finite time, will manifest in the physical world with properties and dynamics shaped by the irreducible thermodynamic costs inherent in its implementation. Applied here: the SPAP merge implies an irreducible per-cycle entropy cost $\varepsilon$ satisfying $\varepsilon \ge \ln 2$ (Theorem 31); this cost must be realized by an actual physical subsystem. Among all PPI-admissible realizations, the Principle of Compression Efficiency (PCE, Definition 15) selects the one minimizing resource cost — the PCE-Attractor — which corresponds to $\varepsilon = \ln 2$ (saturation of the Landauer lower bound).
 
 **Step 2 (Shannon entropy identity).** The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space is exactly:
 $$S(\rho_{\text{uniform}}) = \ln a \text{ nats}$$
 
 **Step 3 (PPI + PCE correspondence).** PPI requires the cost $\varepsilon$ to be instantiated. PCE (Definition 15) requires minimal resource usage. The unique value satisfying both:
-- $\ln a \geq \varepsilon$ (sufficient to instantiate the cost—PPI)
+- $\ln a \geq \varepsilon_{SPAP}$ (sufficient to instantiate the cost—PPI)
 - $\ln a$ minimal (no excess capacity—PCE)
 
-is $a = 2$ for $\varepsilon=\ln 2$. $\square$
+is $a = 2$ for $\varepsilon_{SPAP}=\ln 2$. $\square$
 
 **Epistemic Status:** Framework-derived from PPI (Definition P.6.2) and PCE (Definition 15).
 
@@ -2783,7 +2796,7 @@ $$b = d_0 - a = 6$$
 $$\rho_0 = \frac{1}{2}I_2 \oplus 0_6$$
 
 The von Neumann entropy restricted to the active subspace satisfies:
-$$S(\rho_0|_{\mathcal{A}}) = \ln 2 = \varepsilon$$
+$$S(\rho_0|_{\mathcal{A}}) = \ln 2 = \varepsilon_{SPAP}$$
 
 confirming the active subspace exactly instantiates the irreducible cost with no excess.
 
@@ -2863,7 +2876,7 @@ The value $M = 24$ satisfies multiple independent mathematical constraints:
 
 *Proof of individual constraints.*
 
-**C1:** From the derivation chain: $\varepsilon = \ln 2$ (Theorem P.13.3), $a = 2$ (Theorem P.13.4), $b = d_0 - a = 6$, $M = 2ab = 24$ (Theorem P.13.5).
+**C1:** From the derivation chain: $\varepsilon_{SPAP} = \ln 2$ (Theorem P.13.3), $a = 2$ (Theorem P.13.4), $b = d_0 - a = 6$, $M = 2ab = 24$ (Theorem P.13.5).
 
 **C2:** The kissing number $K(D)$ is the maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$ dimensions. $K(4) = 24$ [Musin 2008]. For comparison: $K(3) = 12$, $K(5) = 40$, $K(8) = 240$.
 
@@ -2875,7 +2888,7 @@ The value $M = 24$ satisfies multiple independent mathematical constraints:
 
 **C6:** The Dedekind eta function satisfies $\eta(\tau)^{24} = \Delta(\tau)$, where $\Delta$ is the unique normalized weight-12 cusp form for $SL_2(\mathbb{Z})$ [Serre 1973]. $\square$
 
-**Remark on Interpretation:** The framework derives $M = 24$ from the chain $\varepsilon = \ln 2 \to a = 2 \to b = 6 \to M = 2ab = 24$ (Theorem Z.5). As established in Section Z.5, the value 24 has independent mathematical origins: the modular discriminant $\Delta(\tau) = \eta(\tau)^{24}$ requires the exponent 24 from the weight-12 modular form requirement combined with complex doubling ($M = 2 \times 12$). The convergence of the framework-derived value with these distinguished structures across multiple mathematical domains is not coincidental but reflects the framework's claim (Section P.7): PCE optimization and mathematical extremality solve the same underlying problem.
+**Remark on Interpretation:** The framework derives $M = 24$ from the chain $\varepsilon_{SPAP} = \ln 2 \to a = 2 \to b = 6 \to M = 2ab = 24$ (Theorem Z.5). As established in Section Z.5, the value 24 has independent mathematical origins: the modular discriminant $\Delta(\tau) = \eta(\tau)^{24}$ requires the exponent 24 from the weight-12 modular form requirement combined with complex doubling ($M = 2 \times 12$). The convergence of the framework-derived value with these distinguished structures across multiple mathematical domains is not coincidental but reflects the framework's claim (Section P.7): PCE optimization and mathematical extremality solve the same underlying problem.
 
 ---
 
@@ -3157,7 +3170,7 @@ This follows from the framework's identification of perspective changes with coo
 $$Z(\gamma \cdot \tau) = Z(\tau) \quad \forall \gamma \in SL_2(\mathbb{Z})$$
 
 **Step 5 (VOA translation).** For a VOA $V$, the partition function is the character:
-$$\chi_V(\tau) = \text{Tr}_V(q^{L_0 - c/24}), \quad q = e^{2\pi i \tau}$$
+$$\chi_V(\tau) = \mathrm{tr}_V(q^{L_0 - c/24}), \quad q = e^{2\pi i \tau}$$
 
 For holomorphic VOAs (those with a single irreducible module, namely themselves), the character $\chi_V(\tau)$ is automatically modular invariant [Zhu 1996]. PCE minimality (Proposition P.13.6.4) has already selected a holomorphic structure, so modular invariance follows. $\square$
 
@@ -3269,7 +3282,7 @@ $$
 \ln N_G(\delta)=\dim(G)\ln(1/\delta)+O(1).
 $$
 
-**Step 2 (Irreducible work/entropy cost).** Maintaining $\ln N_G(\delta)$ nats of distinguishability in a physical control register incurs an operational cost proportional to the irreducible entropy per update, $\varepsilon=\ln 2$ (Theorem 31), consistent with Landauer's principle [Landauer 1961]. Absorbing proportionality constants into $c_0$ yields the stated scaling for $V_{\text{op}}(G;\delta)$.
+**Step 2 (Irreducible work/entropy cost).** Maintaining $\ln N_G(\delta)$ nats of distinguishability in a physical control register incurs an operational cost proportional to the irreducible entropy per update, $\varepsilon\ge \ln 2$ (Theorem 31), with saturation $\varepsilon=\ln 2$ at the PCE-Attractor (Definition 15a), consistent with Landauer's principle [Landauer 1961]. Absorbing proportionality constants into $c_0$ yields the stated scaling for $V_{\text{op}}(G;\delta)$.
 
 **Step 3 (Consistency with the PCE potential).** $V_{\text{op}}$ is a term in the PCE potential (Definition D.1, Appendix D), penalizing the resources needed to maintain operational degrees of freedom. The precision cost for symmetry implementation is a specific instance of this operational maintenance cost. $\square$
 
@@ -3532,7 +3545,7 @@ $$\boxed{\text{Aut}(\mathcal{V}_{\text{PCE}}) = \mathbb{M}}$$
 **Reference:** [Conway & Norton 1979; Borcherds 1992]
 
 For each $g \in \mathbb{M}$, the McKay-Thompson series
-$$T_g(\tau) = \sum_{n \geq -1} \text{Tr}_{V^\natural_n}(g) \cdot q^n$$
+$$T_g(\tau) = \sum_{n \geq -1} \mathrm{tr}_{V^\natural_n}(g) \cdot q^n$$
 
 is the hauptmodul for a genus-zero subgroup $\Gamma_g \leq SL_2(\mathbb{R})$.
 
@@ -3771,7 +3784,7 @@ The Monster's size ($\approx 8 \times 10^{53}$) reflects the symmetry content of
 
 Monstrous Moonshine, conjectured by Conway and Norton [Conway & Norton 1979] and proved by Borcherds [Borcherds 1992], establishes that for each element $g \in \mathbb{M}$, the McKay-Thompson series
 
-$$T_g(\tau) = \sum_{n \geq -1} \text{Tr}_{V^\natural_n}(g) \cdot q^n$$
+$$T_g(\tau) = \sum_{n \geq -1} \mathrm{tr}_{V^\natural_n}(g) \cdot q^n$$
 
 is the hauptmodul for a genus-zero subgroup of $SL_2(\mathbb{R})$.
 
@@ -3919,7 +3932,7 @@ This is a claim about nature, not a logical deduction. PCE could be wrong. Natur
 **Internal Consistency Constraint.** The minimum values are not merely convenient but are uniquely forced by the framework's internal structure. Three independent relations must hold simultaneously:
 - $d_0 = 2^{K_0}$ (Theorem 23, from encoding requirements)
 - $d_0 = 2a^2$ (Theorem Z.2, from SPAP tensor structure)
-- $a = 2$ (Theorem Z.1, from physical instantiation with $\varepsilon = \ln 2$)
+- $a = 2$ (Theorem Z.1, from $\varepsilon \ge \ln 2$ with PCE saturation $\varepsilon=\ln 2$)
 
 Combining these: $2^{K_0} = 2(e^{\varepsilon})^2$. For integer $a$ (required by discrete state counting), the unique minimal solution is $\varepsilon = \ln 2$, $a = 2$, $d_0 = 8$, $K_0 = 3$. Alternative values such as $\varepsilon = \ln 3$ yield $a = 3$, $d_0 = 18$, which violates $d_0 = 2^{K_0}$ for integer $K_0$. Thus the minimum is not arbitrary but is the unique value satisfying all structural constraints.
 
@@ -3965,7 +3978,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
 | $v$ (Higgs VEV) | $252\pm5~\mathrm{GeV}$ | $246.22~\mathrm{GeV}$ | Particle Data Group 2024 | $+1.2\sigma$ |
-| $\sin^2\theta_W(M_Z)$ | $0.2310\pm0.0015$ | $0.23122\pm0.00003$ | Particle Data Group 2024 | $-0.15\sigma$ |
+| $\sin^2\theta_W(M_Z)$ | $0.2312\pm0.0015$ | $0.23122\pm0.00003$ | Particle Data Group 2024 | $-0.01\sigma$ |
 | $m_H$ | $125\pm2.5~\mathrm{GeV}$ | $125.25\pm0.17~\mathrm{GeV}$ | Particle Data Group 2024 | $-0.10\sigma$ |
 
 **CKM Matrix and Quark Mixing (Appendix T):**

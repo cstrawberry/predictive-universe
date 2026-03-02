@@ -67,16 +67,16 @@ In summary, PU presents reality governed by the logic, thermodynamics, and optim
 **Table 14.1: Entropy domain unification across the PU framework.**
 | Domain | Entropy Expression | Operational Context |
 |:-------|:-------------------|:--------------------|
-| Logical (SPAP) | $\varepsilon = \ln 2$ | Irreducible cost of self-referential prediction cycle |
+| Logical (SPAP) | $\varepsilon \ge \ln 2$ | Irreducible cost of self-referential prediction cycle |
 | Information (Shannon) | $H = -\sum p_i \ln p_i$ | Uncertainty measure for distinguishability |
 | Thermodynamic | $dS = \delta Q / T$ | Heat flow in physical processes |
-| Quantum (von Neumann) | $S(\rho) = -\text{Tr}(\rho \ln \rho)$ | Quantum statistical entropy |
+| Quantum (von Neumann) | $S(\rho) = -\mathrm{tr}(\rho \ln \rho)$ | Quantum statistical entropy |
 | Gravitational (BH) | $S_{BH} = \mathcal{A}/4G$ | Horizon entropy from area law |
 
-The fundamental constants ($k_B, \hbar, c, G$) serve as exchange rates between domains. At the PCE-Attractor with active kernel dimension $a=2$ (Equation G.1.9.4), the entropy quantum associated with one binary SPAP resolution is fixed as:
+The fundamental constants ($k_B, \hbar, c, G$) serve as exchange rates between domains. At the PCE-Attractor with active kernel dimension $a=2$ (Equation G.1.9.4), the lower bound $\varepsilon \ge \ln 2$ is saturated, and the entropy quantum associated with one binary SPAP resolution is fixed as:
 
 $$
-S_{\text{SPAP}} = k_B \varepsilon = k_B \ln 2 = -k_B\,\text{Tr}\left(\frac{I_2}{2} \ln \frac{I_2}{2}\right) = S_{vN}\!\left(\frac{I_2}{2}\right).
+S_{\text{SPAP}} = k_B \ln 2 = -k_B\,\mathrm{tr}\left(\frac{I_2}{2} \ln \frac{I_2}{2}\right) = S_{vN}\!\left(\frac{I_2}{2}\right).
 $$
 
 More general Shannon, thermodynamic, and von Neumann entropies correspond to multi-bit uncertainty/mixtures built from this unit; the unification claim is therefore a statement about shared counting structure and unit conversion under the PPI mapping, not an identity $S_{vN} \equiv k_B\ln 2$ for arbitrary states.
@@ -148,11 +148,11 @@ Via Jensen’s inequality, the average entropy production is non-negative: $\lan
 
 As Appendix O establishes:
 
-> "For a coherent forward step involving $N$ MPUs, the total predictive entropy production satisfies $\Sigma_{\text{tot}}\ge N\varepsilon$. The corresponding time-reversed macro-trajectory has path-probability ratio bounded by $e^{-N\varepsilon}=2^{-N}$ (since $\varepsilon=\ln 2$), so macroscopic coherent reversal is exponentially suppressed in $N$."
+> "For a coherent forward step involving $N$ MPUs, the total predictive entropy production satisfies $\Sigma_{\text{tot}}\ge N\varepsilon$. The corresponding time-reversed macro-trajectory has path-probability ratio bounded by $e^{-N\varepsilon}\le 2^{-N}$ (since $\varepsilon\ge \ln 2$), so macroscopic coherent reversal is exponentially suppressed in $N$."
 
-Here, $N$ is the number of MPUs contributing to a coherent macroscopic time step. This exponential bound follows directly from the definition of entropy production as a forward/reverse path-likelihood ratio (equivalently from the integral fluctuation theorem via Markov's inequality): $P(\Sigma_{\text{tot}}\le -a)\le e^{-a}$, so taking $a=N\varepsilon$ yields $P(\Sigma_{\text{tot}}\le -N\varepsilon)\le e^{-N\varepsilon}=2^{-N}$. For a macroscopic system with $10^{23}$ MPUs, this gives $\sim 2^{-10^{23}}$, which is physically absolute for any realistic timescale.
+Here, $N$ is the number of MPUs contributing to a coherent macroscopic time step. This exponential bound follows directly from the definition of entropy production as a forward/reverse path-likelihood ratio (equivalently from the integral fluctuation theorem via Markov's inequality): $P(\Sigma_{\text{tot}}\le -a)\le e^{-a}$, so taking $a=N\varepsilon$ yields $P(\Sigma_{\text{tot}}\le -N\varepsilon)\le e^{-N\varepsilon}\le 2^{-N}$. For a macroscopic system with $10^{23}$ MPUs, this gives an upper bound $\le 2^{-10^{23}}$, which is physically absolute for any realistic timescale.
 
-**Information-Theoretic Barrier:** Beyond thermodynamics, the ND-RID channel capacity bounds provide an independent barrier to retrocausality. **Theorem E.2** (Appendix E) establishes that $C_{\max} < \ln d_0$, where $d_0 = 8$ is the minimal MPU Hilbert space dimension (**Theorem 23**), yielding $C_{\max} < \ln 8 \approx 2.08$ nats. This bound arises because the strict contractivity $f_{RID} < 1$ of the average 'Evolve' channel (guaranteed by $\varepsilon > 0$, **Lemma E.1**) fundamentally limits the reliable classical information transmissible through ND-RID interactions.
+**Information-Theoretic Barrier:** Beyond thermodynamics, the ND-RID channel capacity bounds provide an independent barrier to retrocausality. **Theorem E.2** (Appendix E) establishes strict sub-isometric capacity $C_{\max}(f_{RID}) < \ln d_0$, where $d_0 = 8$ is the minimal MPU Hilbert space dimension (**Theorem 23**). In the PCE-optimal regime, Appendix E sharpens this to $C_{\max}(f_{RID}) \le \ln(d_0)-\varepsilon$ (Eq. E.15), so at the PCE-Attractor ($d_0=8$, $\varepsilon=\ln 2$) one has $C_{\max}^* = 2\ln 2 \approx 1.386$ nats. This limitation follows from strict contractivity $f_{RID} < 1$ of the average 'Evolve' channel (Lemma E.1), enforced by irreversible entropy production $\varepsilon \ge \ln 2$ (Theorem 31).
 
 Crucially, this capacity bound applies to *any* information channel mediated by ND-RID dynamics, regardless of the temporal direction posited. A hypothetical retrocausal channel—transmitting information from future to past—would necessarily operate through the same physical substrate (MPU interactions) and thus be subject to identical capacity constraints. The finite capacity $C_{\max} < \ln d_0$ means that even if retrocausal information transfer were logically coherent (which it is not, per Layer 1), it could not achieve the sustained, high-fidelity transmission required for macroscopic causal reversal. Combined with the exponential suppression of reverse trajectories from Layer 2, this information-theoretic constraint renders retrocausality physically impossible at all scales.
 
@@ -199,7 +199,7 @@ A potential objection arises: How can PU prohibit retrocausality while simultane
 
 The AQFT analysis in **Appendix F** makes this distinction precise. **Corollary F.1** establishes that the emergent algebra of observables satisfies standard Einstein Causality (microcausality):
 $$
-[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = {0}
+[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = 0
 $$
 for spacelike-separated regions $\mathcal{O}_1$ and $\mathcal{O}_2$. Local operators commute, ensuring no direct causal influence between spacelike-separated measurements.
 
@@ -321,12 +321,13 @@ These derived asymmetries yield chronology protection not as a conjecture but as
 
 **Stage 1: The Logical Barrier.** Suppose a CTC existed allowing signal transmission from event $B$ to event $A$, where $A$ is in the causal past of $B$. An agent at $A$ could use information received from $B$ to update predictions about the interval $[A, B]$. This constitutes a self-referential prediction system to which SPAP applies (**Theorems 10–11**).
 
-The agent can construct a diagonal strategy: let $P_f$ be a predictor forecasting a binary outcome $\phi$ of the agent’s state at time $B$. If the agent receives prediction $\hat{\phi}*{P_f}$ via the CTC at time $A$, they implement:
+The agent can construct a diagonal strategy: let $P_f$ be a predictor forecasting a binary outcome $\phi$ of the agent’s state at time $B$. If the agent receives prediction $\hat{\phi}_{P_f}$ via the CTC at time $A$, they implement:
+
 $$
-\phi*{B} = \text{NOT}(\hat{\phi}_{P_f})
+\phi_B = \text{NOT}(\hat{\phi}_{P_f}).
 $$
 
-Perfect prediction requires $\hat{\phi}*{P_f} = \phi_B$, yielding $\hat{\phi}*{P_f} = \text{NOT}(\hat{\phi}_{P_f})$—a logical contradiction. The CTC would carry logically inconsistent information.
+Perfect prediction requires $\hat{\phi}_{P_f} = \phi_B$, yielding $\hat{\phi}_{P_f} = \text{NOT}(\hat{\phi}_{P_f})$—a logical contradiction. The CTC would carry logically inconsistent information.
 
 **Stage 2: The Information-Theoretic Barrier.** The channel capacity bound $C_{\max}(f_{RID}) < \ln d_0$ (**Theorem E.2**) applies to any information transfer mediated by ND-RID dynamics. This bound arises from strict contractivity $f_{RID} < 1$ (**Lemma E.1**), which follows from $\varepsilon \geq \ln 2$ (**Theorem 31**).
 
@@ -605,13 +606,13 @@ The impossibility of simultaneous perfect prediction for complementary aspects (
 
 $$\text{SPAP} \xrightarrow{\text{Lemma J.1}} \text{2-to-1 merge} \xrightarrow{\text{Landauer}} \varepsilon \geq \ln 2 \xrightarrow{\text{PPI}} \Delta S_{env} \geq k_B \ln 2$$
 
-The logically irreversible state merge required by the SPAP update cycle (Lemma J.1) entails, via Landauer's principle [Landauer 1961], a minimum entropy production of $\varepsilon = \ln 2$ nats per cycle (Theorem 31, proven in Appendix J, Theorem J.1). The Principle of Physical Instantiation (Definition P.6.2) guarantees this logical cost manifests as thermodynamic entropy in any physical implementation.
+The logically irreversible state merge required by the SPAP update cycle (Lemma J.1) entails, via Landauer's principle [Landauer 1961], a minimum entropy production of $\varepsilon \ge \ln 2$ nats per cycle (Theorem 31, proven in Appendix J, Theorem J.1). The Principle of Physical Instantiation (Definition P.6.2) guarantees this logical cost manifests as thermodynamic entropy in any physical implementation.
 
 **Step 4 (Mutual consistency via channel structure).** The two constraints are mutually consistent through the ND-RID channel structure. Let $\mathcal{E}_N$ denote the average 'Evolve' channel (Definition 27). Both constraints trace to the strict contractivity of this channel:
 
-The SPAP entropy cost $\varepsilon > 0$ (Theorem 31) implies, via the channel decomposition in Lemma E.1, that $\mathcal{E}_N$ has contractivity factor $f_{RID} < 1$. This strict contractivity simultaneously:
+The SPAP entropy cost $\varepsilon \ge \ln 2$ (Theorem 31) implies, via the channel decomposition in Lemma E.1, that $\mathcal{E}_N$ has contractivity factor $f_{RID} < 1$. This strict contractivity simultaneously:
 
-*(i) Underlies the uncertainty constraint:* A strictly contractive channel cannot preserve complete distinguishability between all states. Achieving $f_{RID} = 1$ would require the evolution to be information-preserving, i.e., an isometry on the system (unitary when input and output dimensions match) [Pérez-García et al. 2006; Wolf 2012]. An isometric channel on a finite-dimensional space preserves distinguishability and hence all information, enabling in principle the simultaneous extraction of values for all observables. But $\varepsilon > 0$ precludes isometry, ensuring that some observables remain epistemically inaccessible when others are determined—the operational content of complementarity.
+*(i) Underlies the uncertainty constraint:* A strictly contractive channel cannot preserve complete distinguishability between all states. Achieving $f_{RID} = 1$ would require the evolution to be information-preserving, i.e., an isometry on the system (unitary when input and output dimensions match) [Pérez-García et al. 2006; Wolf 2012]. An isometric channel on a finite-dimensional space preserves distinguishability and hence all information, enabling in principle the simultaneous extraction of values for all observables. But $\varepsilon \ge \ln 2$ precludes isometry, ensuring that some observables remain epistemically inaccessible when others are determined—the operational content of complementarity.
 
 *(ii) Underlies the irreversibility constraint:* The same contractivity $f_{RID} < 1$ directly implies the channel capacity bound $C(\mathcal{E}_N) < \ln d_0$ (Theorem E.2). This capacity limitation is the information-theoretic expression of the second law: not all information present in the input can be reliably transmitted through the channel; some is necessarily dissipated.
 
@@ -647,11 +648,11 @@ $$I_{sim}(A,B;\rho) < H(\rho) \quad \text{for } [\hat{A},\hat{B}] \neq 0 \quad \
 
 $$I_{seq}(\mathcal{E}_N) \equiv C(\mathcal{E}_N) < \ln d_0 \quad \text{(capacity bound, Theorem E.2)}$$
 
-Both bounds derive from the strict contractivity of ND-RID channels ($f_{RID} < 1$, Lemma E.1), which itself follows from $\varepsilon > 0$ (Theorem 31).
+Both bounds derive from the strict contractivity of ND-RID channels ($f_{RID} < 1$, Lemma E.1), which itself follows from $\varepsilon \ge \ln 2$ (Theorem 31).
 
-*Proof.* The irreversible entropy production $\varepsilon > 0$ (Theorem 31) implies that the dynamical channel $\mathcal{E}_N$ implementing 'Evolve' cannot preserve perfect distinguishability between states (Lemma E.1). This strict contractivity ($f_{RID} < 1$) simultaneously:
+*Proof.* The irreversible entropy production $\varepsilon \ge \ln 2$ (Theorem 31) implies that the dynamical channel $\mathcal{E}_N$ implementing 'Evolve' cannot preserve perfect distinguishability between states (Lemma E.1). This strict contractivity ($f_{RID} < 1$) simultaneously:
 
-1. *Limits simultaneous information:* For non-commuting observables, any measurement instrument $\mathcal{M}$ that extracts information about $\hat{A}$ necessarily disturbs the state. This disturbance is unavoidable because measurement implements an ND-RID interaction with $\varepsilon > 0$. By the data processing inequality [Lindblad 1975], information about $\hat{B}$ in the post-measurement state is reduced. The total extractable information about both observables is bounded by the original entropy $H(\rho)$, with strict inequality when $[\hat{A},\hat{B}] \neq 0$ because no simultaneous eigenstate exists (Lemma 14.2a).
+1. *Limits simultaneous information:* For non-commuting observables, any measurement instrument $\mathcal{M}$ that extracts information about $\hat{A}$ necessarily disturbs the state. This disturbance is unavoidable because measurement implements an ND-RID interaction with $\varepsilon \ge \ln 2$. By the data processing inequality [Lindblad 1975], information about $\hat{B}$ in the post-measurement state is reduced. The total extractable information about both observables is bounded by the original entropy $H(\rho)$, with strict inequality when $[\hat{A},\hat{B}] \neq 0$ because no simultaneous eigenstate exists (Lemma 14.2a).
 
 2. *Limits sequential information:* The channel capacity $C(\mathcal{E}_N) = I_{seq}(\mathcal{E}_N)$ satisfies (Theorem E.2):
 
@@ -659,7 +660,7 @@ $$C(\mathcal{E}_N) \leq \ln d_0 - D_{KL}(\mathcal{E}_N(\rho^*) \| \rho^*) < \ln 
 
 where $\rho^*$ is the capacity-achieving input and the strict inequality follows from $f_{RID} < 1$ because $\mathcal{E}_N$ is not information-preserving (not an isometry) [Wolf 2012]. Strong converse bounds further formalize the sharp threshold between reliable and unreliable rates [Winter 1999; König & Wehner 2009].
 
-Both limitations trace to the same physical fact: the ND-RID channel is strictly contractive because $\varepsilon > 0$. ∎
+Both limitations trace to the same physical fact: the ND-RID channel is strictly contractive because $\varepsilon \ge \ln 2$. ∎
 
 #### Unified Dimensional Structure
 
@@ -676,7 +677,7 @@ At the fundamental scale where $\Delta S \sim \ln 2$ nats and $\Delta t \sim \ta
 
 $$\frac{\mathcal{S}}{\hbar} = \sum_{\text{cycles}} \varepsilon_i$$
 
-The constants $\hbar$, $k_B$, $c$, and $G$ form a complete set of exchange rates connecting the operational domains of the framework (Section P.6.5.5), with $\varepsilon = \ln 2$ as the fundamental quantum of entropy from which domain-specific expressions derive.
+The constants $\hbar$, $k_B$, $c$, and $G$ form a complete set of exchange rates connecting the operational domains of the framework (Section P.6.5.5), with $\ln 2$ as the fundamental entropy quantum (so $\varepsilon \ge \ln 2$ per non-trivial cycle, with saturation $\varepsilon=\ln 2$ at the PCE-Attractor) from which domain-specific expressions derive.
 
 #### Implications
 
@@ -684,7 +685,7 @@ The constants $\hbar$, $k_B$, $c$, and $G$ form a complete set of exchange rates
 
 - *Quantum mechanics* describes coherent prediction (phase relationships preserved).
 - *Thermodynamics* describes incoherent prediction (phase relationships lost through environmental coupling).
-- *Decoherence* is the transition between descriptions, driven by the cumulative effect of ND-RID interactions with $\varepsilon > 0$.
+- *Decoherence* is the transition between descriptions, driven by the cumulative effect of ND-RID interactions with $\varepsilon \ge \ln 2$.
 
 Both descriptions emerge from the ND-RID channel structure. Coherent evolution corresponds to the unitary component of $\mathcal{E}_N$; thermal behavior emerges from the contractive component with $f_{RID} < 1$. The transition occurs when environmental coupling dominates, converting quantum superpositions to classical mixtures at a rate determined by $\varepsilon/\tau_{min}$ [Zurek 2003]. The decoherence timescale $\tau_D$ satisfies $\tau_D^{-1} \propto \varepsilon \cdot N_{env}/\tau_{min}$, where $N_{env}$ counts environmental degrees of freedom coupled to the system.
 
@@ -692,7 +693,7 @@ Both descriptions emerge from the ND-RID channel structure. Coherent evolution c
 
 The derivation chain (Appendix E, Theorems E.1–E.5):
 
-$$\varepsilon > 0 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\varepsilon \ge \ln 2 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 shows that horizon entropy inherits the SPAP structure (in natural units $c = \hbar = k_B = 1$). Thermodynamic and quantum descriptions remain consistent because both derive from the same $\varepsilon = \ln 2$ foundation. The Bekenstein-Hawking entropy is not analogous to thermodynamic entropy; it *is* thermodynamic entropy, counting the ND-RID channel degrees of freedom crossing the horizon (Theorem E.9.1).
 
@@ -878,9 +879,9 @@ This provides an information-theoretic answer to "why 3+1 dimensions?": because 
 
 Similarly, the number of fermion generations $N_g = 3$ is derived through two independent pathways that must coincide (Appendix R):
 
-1. **Topological Pathway (Proposition R.3.5):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges. Combined with gauge-topology correspondence and anomaly cancellation for the family $U(1)_F$ symmetry, this uniquely selects three generations with family charges $\{a, -a, 0\}$. The mixed gauge anomaly $\sum_f \text{Tr}(T_a\{T_b, T_c\}) = 0$, mixed gauge-gravitational anomaly $\sum_f \text{Tr}(T_a) = 0$, and pure gravitational anomaly $\sum_f 1 = 0 \pmod{2}$ require $N_g = 3$ for SM fermion content.
+1. **Topological Pathway (Proposition R.3.5):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges. Combined with gauge-topology correspondence and anomaly cancellation for the family $U(1)_F$ symmetry, this uniquely selects three generations with family charges $\{a, -a, 0\}$. The mixed gauge anomaly $\sum_f \mathrm{tr}(T_a\{T_b, T_c\}) = 0$, mixed gauge-gravitational anomaly $\sum_f \mathrm{tr}(T_a) = 0$, and pure gravitational anomaly $\sum_f 1 = 0 \pmod{2}$ require $N_g = 3$ for SM fermion content.
 
-2. **Geometric Pathway (Proposition R.4.2):** E₈ geometry with capacity saturation $M = 24$ and kissing number $K(4) = 24$ determines the maximum number of generation centers on Gr(2,8). The Leech lattice $\Lambda_{24}$ contains the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing independent geometric support for three generations from optimal information geometry.
+2. **Geometric Pathway (Proposition R.4.2):** $E_8$ geometry with capacity saturation $M = 24$ and kissing number $K(4) = 24$ determines the maximum number of generation centers on Gr(2,8). The Leech lattice $\Lambda_{24}$ contains the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing independent geometric support for three generations from optimal information geometry.
 
 3. **CP Violation Requirement (Proposition R.3.5):** The Jarlskog invariant $J_{CP}$ vanishes identically for $N_g \leq 2$. Non-zero CP violation—necessary for baryogenesis—requires at least three generations.
 
@@ -941,11 +942,9 @@ $$
 \ln\!\left(\frac{m_j}{m_i}\right)=\alpha\,d^2_{E_8}(r_i,r_j),
 $$
 with $\alpha=\alpha_{UV}=3/2$ fixed by the PU Bures width $\sigma_B^2=1/24$ (Corollary T.41.6), and the IR-dressed $\alpha_{IR}\approx 1.41$ determined by the same Gr$(2,8)$ curvature corrections that appear in the gauge sector (Appendix T, Section T.24.2; Appendix Z). The generation points $\{r_i\}$ are fixed by the Golay-derived triad constraints (Theorem T.42.1). Together with the PU-derived electroweak scale $v$ and the PU normalization of the charged-lepton Yukawa prefactor (Appendix T, Theorem T.44), one obtains absolute charged-lepton mass predictions (Appendix T, Section T.21.11):
-$$
-m_\tau \approx 1.80\,\mathrm{GeV}\ \ (O(1\%)\ \text{theoretical width}),\qquad
-m_\mu \approx 105.5\,\mathrm{MeV},\qquad
-m_e \approx 0.5120\,\mathrm{MeV}.
-$$
+$$ \ln\\!\Big(\frac{m_\tau}{m_\mu}\Big)=2.8212,\qquad \ln\\!\Big(\frac{m_\mu}{m_e}\Big)=5.3306,\qquad \ln\\!\Big(\frac{m_\tau}{m_e}\Big)=8.1518. $$
+$$ (\text{obs}: 2.8224,\ 5.3316,\ 8.1540;\ \text{all }{<}0.06\%\ \text{in log-space; Thm T.42.6}) $$
+$$ m_\tau^{(0)}\approx 0.94\,\mathrm{GeV}\ \text{at leading order (Remark T.45.1); factor-of-}\sim 2\ \text{normalization gap open pending sub-leading corrections.} $$
 The same mechanism extends to quark hierarchies and CKM structure (Appendix T), so the Golay vacuum code fixes not only the existence of superselection sectors but also quantitative mass data within those sectors.
 
 This viewpoint also sharpens the role of the threefold internal decomposition in Appendix R. The emergence of a tripled internal structure (Lemma R.4.5 and Proposition R.4.7) is naturally read as a triplication of defect-family structure relative to the same vacuum code substrate, i.e., three constrained families of sectors compatible with the same global encoding geometry.

@@ -66,7 +66,7 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 ## N.4 The Unified Cost of Transgression (UCT)
 
  **Theorem N.UCT (Unified Cost of Transgression).**
- Consider a process where an MPU (or MPU aggregate, with rest mass $m_0$) is accelerated along a trajectory with proper acceleration profile $a(t)$, while simultaneously performing a predictive task to achieve performance $PP(t)$ and undergoing internal predictive acceleration $A_{pred}(t)$. The total work $W_{\text{tot}}$ required for this joint process is bounded below:
+ Consider a process where an MPU (or MPU aggregate, with rest mass $m_0$) follows a worldline parameterized by proper time $\tau$ with proper acceleration profile $a(\tau)$, while simultaneously performing a predictive task to achieve performance $PP(\tau)$ and undergoing internal predictive acceleration $A_{pred}(\tau)$ over a proper-time duration $\tau_f$. The total work $W_{\text{tot}}$ required for this joint process is bounded below:
 
  $$
  W_{\text{tot}} = W_{\text{kin}} + W_{\text{pred}}
@@ -74,50 +74,66 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 
  $$
  \boxed{
- W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt
+ W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int_0^{\tau_f} R\left( C_{req}(\tau), T_{eff}(\tau) \right) d\tau
  }
  \tag{N.5}
  $$
 
  where the components, derived from framework principles, are:
- *   **$C_{req}(t) = C_{SPAP}(PP(t)) + C_{noise,external}(a(t)) + C_{noise,internal}(A_{pred}(t))$** is the total required complexity. It comprises contributions from the predictive task itself ($C_{SPAP}$), complexity needed to counteract noise from external physical acceleration ($C_{noise,external}$), and complexity to counteract noise from internal predictive acceleration ($C_{noise,internal}$).
- *   $C_{SPAP}(PP(t))$: Baseline complexity to achieve performance $PP(t)$ approaching the SPAP limit [Thm. 14].
- *   $C_{noise,external}(a(t))$: Additional complexity to counteract Unruh noise (derived from PCE conditions [Lemma N.4]).
- *   $C_{noise,internal}(A_{pred}(t))$: Additional complexity to counteract self-generated thermal noise from rapid changes in internal processing rates [Section N.3.3].
- *   **$T_{eff}(t) = T_{bath} + T_U(a(t)) + T_{internal_eff}(A_{pred}(t))$** is the total effective temperature.
+ *   **$C_{req}(\tau) = C_{SPAP}(PP(\tau)) + C_{noise,external}(a(\tau)) + C_{noise,internal}(A_{pred}(\tau))$** is the total required complexity. It comprises contributions from the predictive task itself ($C_{SPAP}$), complexity needed to counteract noise from external physical acceleration ($C_{noise,external}$), and complexity to counteract noise from internal predictive acceleration ($C_{noise,internal}$).
+ *   $C_{SPAP}(PP(\tau))$: Baseline complexity to achieve performance $PP(\tau)$ approaching the SPAP limit [Thm. 14].
+ *   $C_{noise,external}(a(\tau))$: Additional complexity to counteract Unruh noise (derived from PCE conditions [Lemma N.4]).
+ *   $C_{noise,internal}(A_{pred}(\tau))$: Additional complexity to counteract self-generated thermal noise from rapid changes in internal processing rates [Section N.3.3].
+ *   **$T_{eff}(\tau) = T_{bath} + T_U(a(\tau)) + T_{internal_eff}(A_{pred}(\tau))$** is the total effective temperature.
  *   **$R(C, T_{eff})$** is the PU physical operational cost function, generalized for temperature dependence [Section N.3.1].
 
  The optimal trajectory is one that minimizes this total work integral, forcing a trade-off between reaching a destination quickly (increasing $W_{kin}$ and $W_{pred}$ via external acceleration) and adapting or learning quickly (increasing $W_{pred}$ via internal predictive acceleration), all while maintaining high predictive accuracy (increasing $W_{pred}$ via the $C_{SPAP}$ term).
 
-> **Box N.1: Worked Numerical Estimate of the Unified Cost of Transgression**
+> **Box N.1: Derived Scaling of Kinetic vs Predictive Contributions**
 >
-> To make the UCT concrete, we construct a hypothetical scenario with parameters chosen to demonstrate a regime where kinetic and predictive costs become comparable. These values are illustrative, not derived. For this example, we focus only on the Unruh-mediated cost ($C_{noise,internal}=0$).
+> Consider a trajectory segment with constant proper acceleration $a$ over a proper-time duration $\tau_f$. The final rapidity is $\eta=a\tau_f/c$, so that
 >
-> **Assumptions:**
+> $$
+> \gamma(v_f)=\cosh\eta,\qquad v_f=c\tanh\eta.
+> $$
 >
-> * **Probe:** Mass $m_0 = 1$ kg.
-> * **Trajectory:** Achieve a final velocity $v_f = 0.96c$ after proper time $\tau = 1$ s under constant proper acceleration. $T_{\rm bath}\approx0$.
-> * **Predictive Task:** Maintain a constant performance gap $\delta_{SPAP} = \alpha_{SPAP} - PP = 10^{-6}$.
-> * **PU Parameters:** We use the simplified scaling $C_{SPAP} \approx K / \delta_{SPAP}^2$, with $K$ absorbing the slowly varying $\log(1/\delta_{SPAP})$ factor in Lemma N.2, and set $K = 1$ bit.
-> * **Cost Model:** We adopt a simple cost model $R(C, T_{\rm eff})=k_R C (k_B T_{\rm eff})$ and a noise model $C_{\rm noise,external}(a)=k_N (a/g_{\text{earth}})^2$. We choose illustrative parameters such that the costs are comparable: a cost-scaling factor $k_R=2.3 \times 10^{39} \text{ s}^{-1}$ (assuming complexity $C$ is measured in bits) and a noise-sensitivity factor $k_N=1.0 \times 10^{-4} \text{ bits}$.
+> The Unruh temperature is (Equation N.4)
 >
-> **Calculations:**
+> $$
+> T_U(a)=\frac{\hbar a}{2\pi c k_B}.
+> $$
 >
-> 1. **Kinetic Cost:**
->    * $\gamma=1/\sqrt{1-0.96^2}\approx3.57$.
->    * $W_{\rm kin}=m_0c^2(\gamma-1)\approx (1 \text{ kg})(3\times10^8 \text{ m/s})^2(3.57-1) \approx 2.31\times10^{17}$ J.
+> In the Landauer-saturating limit for a logically irreversible refresh of $C$ bits of predictive state (Theorem 31), the Unruh-induced incremental energy dissipation per refresh is (Theorem N.3)
 >
-> 2. **Predictive Cost:**
->    * The required constant proper acceleration is $a=(c/\tau)\cosh^{-1}\gamma\approx5.84\times10^8$ m/s².
->    * $T_U=\hbar a/(2\pi c k_B)\approx 2.36\times10^{-12}$ K.
->    * $C_{SPAP} = (1 \text{ bit}) / (10^{-6})^2 = 1.0 \times 10^{12}$ bits.
->    * $C_{\rm noise,external} \approx (1.0 \times 10^{-4} \text{ bits}) \cdot (5.84\times10^8/9.8)^2 \approx 3.55 \times 10^{11}$ bits.
->    * $C_{\rm req} = C_{SPAP} + C_{noise,external} \approx 1.355 \times 10^{12}$ bits.
->    * $P_{\rm pred}=k_R\,C_{\rm req}\,(k_BT_U) \approx (2.3\times10^{39}) \cdot (1.355\times10^{12}) \cdot (1.38\times10^{-23} \cdot 2.36\times10^{-12}) \approx 1.02 \times 10^{17}$ W.
->    * $W_{\rm pred}=P_{\rm pred}\,\tau \approx 1.02 \times 10^{17}$ J.
+> $$
+> E_{pred}(a,C)=k_B T_U(a)\,(\ln 2)\,C=\frac{\hbar\ln 2}{2\pi c}\,a\,C.
+> $$
 >
-> **Conclusion:**
-> In this illustrative model, kinetic work ($\sim2.31\times10^{17}$ J) and predictive work ($\sim1.02\times10^{17}$ J) are of the same order of magnitude. Notably, the noise-mitigation complexity ($C_{noise}$) is a significant fraction ($\sim 26\%$) of the task complexity ($C_{SPAP}$), demonstrating a tangible "Unruh cost" that couples motion and prediction and illustrates the trade-off enforced by the UCT.
+> If such refreshes occur on a cycle time $\tau_{cycle}$ (Definition 27), the corresponding Unruh-induced incremental predictive power is
+>
+> $$
+> P_{pred}(a,C)=\frac{E_{pred}(a,C)}{\tau_{cycle}}=\frac{\lambda_{PM}}{\tau_{cycle}}\,a\,C,
+> $$
+>
+> where $\lambda_{PM}=\hbar\ln 2/(2\pi c)$ (Definition N.4). Hence the Unruh-induced incremental predictive work over the segment is
+>
+> $$
+> W_{pred}=\int_0^{\tau_f} P_{pred}\,d\tau=\frac{\lambda_{PM}}{\tau_{cycle}}\,a\,\tau_f\,C.
+> $$
+>
+> The kinetic work is (Lemma N.3)
+>
+> $$
+> W_{kin}=m_0c^2(\gamma(v_f)-1)=m_0c^2(\cosh\eta-1).
+> $$
+>
+> Their ratio on this segment is therefore
+>
+> $$
+> \frac{W_{pred}}{W_{kin}}=\frac{\lambda_{PM}}{m_0c^2\,\tau_{cycle}}\;C\;\frac{\eta}{\cosh\eta-1},
+> $$
+>
+> isolating the purely derived scaling that controls when Unruh-induced predictive work can compete with kinetic work. The full UCT bound (Equation N.5) adds background and internal contributions through $T_{eff}(\tau)$ and the full $C_{req}(\tau)$.
 
 
 ## N.5 Proof of the UCT Theorem
@@ -125,9 +141,9 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 We restate the theorem (Equation N.5) for convenience before proceeding with the proof.
 
 > **Theorem N.UCT (Unified Cost of Transgression).**
-> For a process where an MPU (or MPU aggregate, with mass $m_0$) follows a trajectory with proper acceleration $a(t)$, achieves predictive performance $PP(t)$, and undergoes predictive acceleration $A_{pred}(t)$, in a background thermal bath at temperature $T_{bath}$, the total work $W_{\text{tot}}$ is bounded by:
+> For a process where an MPU (or MPU aggregate, with mass $m_0$) follows a worldline parameterized by proper time $\tau$ with proper acceleration $a(\tau)$, achieves predictive performance $PP(\tau)$, and undergoes predictive acceleration $A_{pred}(\tau)$, in a background thermal bath at temperature $T_{bath}$ over a proper-time duration $\tau_f$, the total work $W_{\text{tot}}$ is bounded by:
 > $$
-> W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int R\left( C_{req}(t), T_{eff}(t) \right) dt
+> W_{\text{tot}} \ge m_0c^2(\gamma(v_f)-1) + \int_0^{\tau_f} R\left( C_{req}(\tau), T_{eff}(\tau) \right) d\tau
 > $$
 > where $v_f$ is the final velocity, $T_{eff}(t)$ is the total effective temperature including Unruh and internal heating effects, and $C_{req}(t)$ is the total required predictive complexity including SPAP, external noise, and internal noise components (as defined in N.4).
 
@@ -168,22 +184,22 @@ is well-defined and non-decreasing in $T_{\text{eff}}$, with strict increase on 
 
 1.  **Work Decomposition:** The total work $W_{\text{tot}}$ is the sum of the work done to accelerate the agent ($W_{\text{kin}}$) and the work done to perform predictive computation ($W_{\text{pred}}$).
 
-2.  **Lower Bound on Predictive Work:** The predictive power cost at time $t$ is at least $P_{\text{pred}}(t)\ge R(C_{\text{req}}(t),T_{\text{eff}}(t))$ (Lemma N.1). Over an infinitesimal proper-time interval $dt$, the required work is $dW_{\text{pred}} \ge R(C_{\text{req}}(t),T_{\text{eff}}(t))\, dt$. Integrating gives:
+2.  **Lower Bound on Predictive Work:** The predictive power cost at proper time $\tau$ is at least $P_{\text{pred}}(\tau)\ge R(C_{\text{req}}(\tau),T_{\text{eff}}(\tau))$ (Lemma N.1). Over an infinitesimal proper-time interval $d\tau$, the required work is $dW_{\text{pred}} \ge R(C_{\text{req}}(\tau),T_{\text{eff}}(\tau)), d\tau$. Integrating gives:
     $$
-    W_{\text{pred}} \ge \int_0^{T_f} R(C_{\text{req}}(t),T_{\text{eff}}(t))\, dt,
+    W_{\text{pred}} \ge \int_0^{\tau_f} R(C_{\text{req}}(\tau),T_{\text{eff}}(\tau)), d\tau,
     $$
-    where $C_{\text{req}}(t)=C_{\text{SPAP}}(PP(t))+C_{\text{noise,external}}(a(t))+C_{\text{noise,internal}}(A_{\text{pred}}(t))$ as in the theorem statement.
+    where $C_{\text{req}}(\tau)=C_{\text{SPAP}}(PP(\tau))+C_{\text{noise,external}}(a(\tau))+C_{\text{noise,internal}}(A_{\text{pred}}(\tau))$ as in the theorem statement.
 
-3.  **Explicit SPAP lower bound (optional form):** By Lemma N.2, for $\delta(t)=\alpha_{\text{SPAP}}-PP(t)\in(0,\delta_0]$,
+3.  **Explicit SPAP lower bound (optional form):** By Lemma N.2, for $\delta(\tau)=\alpha_{\text{SPAP}}-PP(\tau)\in(0,\delta_0]$,
     $$
-    C_{\text{SPAP}}(PP(t)) \ge c_{\text{SPAP}}\,\frac{\log(1/\delta(t))}{\delta(t)^2}.
+    C_{\text{SPAP}}(PP(\tau)) \ge c_{\text{SPAP}}\,\frac{\log(1/\delta(\tau))}{\delta(\tau)^2}.
     $$
     Since $R(C,T)$ is non-decreasing in $C$ (Definition 3), this yields the explicit lower bound
     $$
-    W_{\text{pred}} \ge \int_0^{T_f} R\!\left(c_{\text{SPAP}}\,\frac{\log(1/\delta(t))}{\delta(t)^2}+C_{\text{noise,external}}(a(t))+C_{\text{noise,internal}}(A_{\text{pred}}(t)),\,T_{\text{eff}}(t)\right)\,dt.
+    W_{\text{pred}} \ge \int_0^{\tau_f} R\\!\left(c_{\text{SPAP}}\,\frac{\log(1/\delta(\tau))}{\delta(\tau)^2}+C_{\text{noise,external}}(a(\tau))+C_{\text{noise,internal}}(A_{\text{pred}}(\tau)),\,T_{\text{eff}}(\tau)\right)\,d\tau.
     $$
 
-4.  **Add Kinetic Work:** The kinetic work required to accelerate from rest to velocity $v_f$ is at least $W_{\text{kin}}\ge m_0c^2(\gamma(v_f)-1)$ (Lemma N.1). Summing $W_{\text{tot}}=W_{\text{kin}}+W_{\text{pred}}$ gives the stated bound (N.5). QED.
+4.  **Add Kinetic Work:** The kinetic work required to accelerate from rest to velocity $v_f$ is at least $W_{\text{kin}}\ge m_0c^2(\gamma(v_f)-1)$ (Lemma N.3). Summing $W_{\text{tot}}=W_{\text{kin}}+W_{\text{pred}}$ gives the stated bound (N.5). QED.
 
 ## N.6 Interpretation and Programme
 
@@ -254,7 +270,7 @@ Binary pulsars are ideal for this test for several key reasons:
 
 **PU Framework (GR + UCT):** The UCT introduces a new, independent channel for energy loss.
 
-*   **The Physical Mechanism:** The neutron star is not merely a point mass but a complex MPU aggregate ($C_{agg} \gg C_{op}$). As it accelerates through its orbit, its constituent MPUs experience an Unruh temperature `T_U(a)`. According to the UCT, the system must continuously expend energy to maintain its predictive coherence against this Unruh-induced thermal noise. This expenditure acts as a continuous power drain, a "predictive drag," which removes energy from the orbital system. The precise emission channel for this dissipated energy (e.g., thermal photons, neutrinos, or a non-standard channel) is a subject for deeper theoretical work, but its effect on the orbit is modelable as a pure energy loss.
+*   **The Physical Mechanism:** The neutron star is not merely a point mass but a complex MPU aggregate ($C_{agg} \gg C_{op}$). As it accelerates through its orbit, its constituent MPUs experience an Unruh temperature $T_U(a)$. According to the UCT, the system must continuously expend energy to maintain its predictive coherence against this Unruh-induced thermal noise. This expenditure acts as a continuous power drain, a "predictive drag," which removes energy from the orbital system. The precise emission channel for this dissipated energy (e.g., thermal photons, neutrinos, or a non-standard channel) is a subject for deeper theoretical work, but its effect on the orbit is modelable as a pure energy loss.
 *   **The Total Energy Loss:** The total energy loss rate of the system becomes the sum of the two effects:
 $$ \frac{dE}{dt}_{\text{Total}} = \frac{dE}{dt}_{\text{GR (GW)}} + P_{UCT}(t) $$
     where $P_{UCT} > 0$ is the anomalous power loss due to predictive drag.
@@ -264,9 +280,13 @@ $$ \frac{dE}{dt}_{\text{Total}} = \frac{dE}{dt}_{\text{GR (GW)}} + P_{UCT}(t) $$
 The key to detecting this effect lies in the fact that the two energy loss mechanisms have different functional dependencies on the orbital parameters.
 
 *   **The GR Signal:** The power radiated in GWs depends on the third time derivative of the system's quadrupole moment. For a binary orbit, this scales in a complex way with the stars' velocities and separation, but is characteristically strongest near periastron where both are maximized.
-*   **The UCT Signal:** The power loss $P_{UCT}$ is posited to depend on the magnitude of the proper acceleration vector, $a(t)$. We can use a simple phenomenological power-law model for this dissipation:
-$$ P_{UCT}(t) = k_{UCT} \cdot a(t)^n $$
-    where $k_{UCT}$ is a new fundamental constant representing the coupling between acceleration and predictive cost, and $n$ is a dimensionless exponent. While the full UCT (Equation N.5) suggests a complex relationship, an expansion for low Unruh temperatures plausibly leads to a dominant power-law behavior, with $n \geq 2$ being a natural starting point for modeling (cf. Box N.1). In an elliptical orbit, the acceleration $a(t)$ is at its maximum at periastron and its minimum at apastron.
+*   **The UCT Signal:** In the Landauer-saturating limit for a logically irreversible refresh of predictive state (Theorem 31), the acceleration-dependent component of the UCT is fixed by the Unruh increment of the predictive power cost. The corresponding anomalous dissipation is:
+    $$
+    P_{UCT}(t)=\frac{k_B T_U(a(t))\,(\ln 2)}{\tau_{cycle}}\,C_{eff}(t)=\frac{\lambda_{PM}}{\tau_{cycle}}\,a(t)\,C_{eff}(t),
+    $$
+    where $T_U(a)=\hbar a/(2\pi c k_B)$ (Equation N.4), $\lambda_{PM}=\hbar\ln 2/(2\pi c)$ (Definition N.4), and $C_{eff}(t)$ is the effective number of refreshed predictive bits whose maintenance is driven by the acceleration-induced noise component of the environment (a component of $C_{req}$ in Equation N.5). The leading-order UCT signature is therefore linear in $a(t)$, with a single amplitude parameter $C_{eff}/\tau_{cycle}$ for a given system.
+
+In an elliptic orbit, the acceleration magnitude varies periodically. Therefore, the anomalous power loss $P_{UCT}(t)$ would also vary periodically, having its maximum value at periastron. This would lead to a subtle, non-Keplerian distortion of the orbit and a deviation in the observed orbital period derivative, $\dot{P}_b$, from the GR prediction.
 
 While both energy loss effects are strongest near periastron, their precise functional dependencies on the orbital phase are different. This means the UCT adds an energy loss term with a **unique temporal signature** over the course of a single orbit. It is this unique *shape* of the energy loss profile that allows it, in principle, to be distinguished from the GR prediction.
 
@@ -283,8 +303,8 @@ The search for this effect constitutes a high-precision data analysis challenge.
 
 3.  **Construct the Alternative Hypothesis (Model$_{UCT}$):**
     *   Begin with the standard Model$_{GR}$.
-    *   Introduce a new term that models the cumulative effect of the anomalous energy loss $P_{UCT}(t) = k_{UCT} \cdot a(t)^n$ on the orbit. This requires integrating this power loss over time to calculate the resulting additional contribution to the orbital period derivative, $(dP_b/dt)_{UCT}$. The new parameters $k_{UCT}$ and $n$ are free parameters in the fit.
-    *   This defines a new, expanded timing model: Model$_{UCT}$ = Model$_{GR}$ + Correction$_{UCT}(k_{UCT}, n)$.
+    *   Introduce a new term that models the cumulative effect of the anomalous energy loss $P_{UCT}(t)=\lambda_{PM}\,a(t)\,\Xi$ on the orbit, where $\Xi := C_{eff}/\tau_{cycle}$ is an effective accelerated-complexity rate for the system. This requires integrating this power loss over time to calculate the resulting additional contribution to the orbital period derivative, $(dP_b/dt)_{UCT}$. The single parameter $\Xi$ is a free parameter in the fit.
+    *   This defines a new, expanded timing model: Model$_{UCT}$ = Model$_{GR}$ + Correction$_{UCT}(\Xi)$.
 
 4.  **Perform a Bayesian Model Comparison:**
     *   Use a Bayesian inference framework (e.g., employing nested sampling or MCMC techniques) to simultaneously fit both Model$_{GR}$ and Model$_{UCT}$ to the dataset.
@@ -292,7 +312,7 @@ The search for this effect constitutes a high-precision data analysis challenge.
     *   The test consists of comparing the evidence via the **Bayes factor**:
 $$ B = \frac{Z(\text{Model}_{UCT})}{Z(\text{Model}_{GR})} $$
 
-*   If $B \approx 1$, the data show no preference for the more complex UCT model. GR remains the most efficient description. This would place stringent upper limits on the value of $k_{UCT}$.
+*   If $B \approx 1$, the data show no preference for the more complex UCT model. GR remains the most efficient description. This would place stringent upper limits on the effective accelerated-complexity rate $\Xi=C_{eff}/\tau_{cycle}$.
 *   If $B \gg 1$ (e.g., $B > 100$, conventionally "strong evidence"), this would indicate that the data *require* the additional UCT term to be explained. This would be a momentous discovery.
 
 #### N.8.5 Challenges and Outlook
@@ -302,7 +322,7 @@ This is an extraordinarily difficult measurement that pushes the boundaries of p
 *   **Magnitude Problem:** The astounding success of GR implies that the $P_{UCT}$ term, if it exists, must be an extremely small fraction of the $P_{GW}$ term. We would be searching for a deviation at perhaps the 1-in-10,000 level or smaller of an already tiny effect.
 *   **Degeneracy Problem:** The primary systematic challenge is ensuring that any detected signal isn't mimicking some other subtle, unmodeled physical effect. High-eccentricity systems are essential, as they provide a wide dynamic range of acceleration, which is key to tracing out the functional form of $P_{UCT}(a)$ and distinguishing it from other potential systematics. A full analysis must rigorously account for or model effects like tidal dissipation and magnetospheric interactions, even if they are expected to be negligible.
 
-Despite these hurdles, this is a well-posed and compelling scientific question. It transforms the abstract UCT principle into a search for a specific, anomalous signature in one of the most precise datasets in all of science. A positive detection would provide the first empirical evidence for the thermodynamic cost of acceleration and a confirmation of the Predictive Universe framework. A null result would be equally valuable, placing the first-ever direct empirical constraints on the fundamental parameters of Prediction Relativity.
+Despite these hurdles, this is a well-posed and compelling scientific question. It transforms the abstract UCT principle into a search for a specific, anomalous signature in one of the most precise datasets in all of science. A positive detection would provide the first empirical evidence for the thermodynamic cost of acceleration and a confirmation of the Predictive Universe framework. A null result would be equally valuable, placing the first-ever direct empirical constraints on the effective accelerated-complexity rate $\Xi=C_{eff}/\tau_{cycle}$ entering the UCT signal model.
 
 ## N.9 The UCT as a Strategic Choice Between Intensive and Extensive Knowledge Acquisition
 
@@ -339,24 +359,35 @@ The preceding technical development can be distilled into a single equation that
 
 ### N.10.1 The Prediction-Motion Equation
 
-**Theorem N.3 (Predictive Energy Cost Under Acceleration).**
-The minimum energy required to maintain predictive complexity $C$ while undergoing proper acceleration $a$ is:
+**Theorem N.3 (Predictive Energy Cost Under Acceleration).** In the Landauer-saturating limit for a logically irreversible refresh of predictive state (Theorem 31), the minimum Unruh-induced incremental energy dissipation associated with refreshing $C$ bits of predictive state for an MPU undergoing proper acceleration $a$ is:
 
 $$
-\boxed{E_{\text{pred}}(a, C) = \frac{\hbar \varepsilon}{2\pi c} \cdot a \cdot C}
+\boxed{E_{\text{pred}}(a, C) = \frac{\hbar \ln 2}{2\pi c} \cdot a \cdot C}
 \tag{N.14}
 $$
 
-where $\varepsilon = \ln 2$ is the irreducible thermodynamic cost of self-reference (Theorem 31).
+This contribution grows linearly with proper acceleration and refreshed predictive complexity, giving a motion-dependent lower bound on the dissipation required to preserve predictive state in an accelerated frame.
 
-*Proof.* An MPU undergoing proper acceleration $a$ perceives the vacuum as a thermal bath at the Unruh temperature [Unruh 1976] (Equation N.4):
-$$T_U = \frac{\hbar a}{2\pi c k_B}$$
+*Proof.* By Landauer's principle [Landauer 1961], the minimum energy dissipated to erase one bit of information in an environment at temperature $T$ is $k_B T \ln 2$. A logically irreversible refresh of $C$ predictive bits therefore has Landauer-saturating dissipation
 
-The fundamental cost of maintaining self-referential prediction requires dissipation of at least $\varepsilon = \ln 2$ nats per predictive cycle (Theorem 31, Appendix J). By Landauer's principle [Landauer 1961], the energy cost per bit of complexity at temperature $T$ is $E = k_B T \cdot \varepsilon$. For $C$ bits of predictive complexity maintained against Unruh noise:
+$$
+E_{\min}(T,C)=k_B T (\ln 2)\,C.
+$$
 
-$$E_{\text{pred}} = k_B T_U \cdot \varepsilon \cdot C = k_B \cdot \frac{\hbar a}{2\pi c k_B} \cdot \varepsilon \cdot C = \frac{\hbar \varepsilon}{2\pi c} \cdot a \cdot C$$
+For an MPU undergoing proper acceleration $a$, the effective Unruh temperature contribution is (Equation N.4)
 
-This represents the leading-order cost in the regime where Unruh temperature dominates ($T_U \gg T_{\text{bath}}$). The full UCT (Equation N.5) incorporates additional contributions from background temperature and internal heating. ∎
+$$
+T_U(a)=\frac{\hbar a}{2\pi c k_B}.
+$$
+
+Isolating the acceleration-dependent (Unruh-induced) increment by setting $T=T_U(a)$ gives
+
+$$
+E_{\text{pred}}(a,C)=k_B T_U(a) (\ln 2)\,C
+=\frac{\hbar \ln 2}{2\pi c}\,a\,C,
+$$
+
+which is the stated formula. \u220e
 
 **Remark N.10.1: Structural Analogy to $E = mc^2$.**
 Just as Einstein's equation reveals mass-energy equivalence through $c^2$, Equation (N.14) reveals motion-cognition coupling through $c$. The speed of light appears in both the kinematic barrier ($v < c$) and the epistemic cost ($E_{\text{pred}} \propto 1/c$). This is not coincidental—it reflects the deep unity established by the UCT: reaching relativistic velocities requires acceleration, which thermodynamically degrades predictive capacity through the Unruh mechanism.
@@ -428,20 +459,20 @@ These are not two limits that happen to share a numerical value. They are **one 
 For any system that must maintain predictive coherence (biological organisms, AI systems, measurement apparatus), the optimal trajectory minimizes total work:
 
 $$
-W_{\text{tot}} = W_{\text{kin}} + W_{\text{pred}} = m_0 c^2 (\gamma - 1) + \int_0^\tau P_{\text{pred}}(t) \, dt
+W_{\text{tot}} = m_0c^2(\gamma-1) + \int_0^{\tau_f} P_{\text{pred}}(\tau) \, d\tau
 \tag{N.18}
 $$
 
-where $\tau$ is the proper time of the process and $P_{\text{pred}}(t)$ is the instantaneous predictive power cost:
+where:
 
 $$
-P_{\text{pred}}(t) = \frac{\lambda_{PM} \cdot a(t) \cdot C(t)}{\tau_{cycle}}
+P_{\text{pred}}(\tau) = \frac{\lambda_{PM} \cdot a(\tau) \cdot C(\tau)}{\tau_{cycle}}
 \tag{N.18a}
 $$
 
 Here $\tau_{cycle}$ is the characteristic predictive cycle time of the MPU (Definition 27), ensuring dimensional consistency: $[P_{\text{pred}}] = [ML][LT^{-2}][1]/[T] = [ML^2T^{-3}] = [\text{Power}]$.
 
-*Proof.* This follows directly from the UCT bound (Equation N.5) in the Unruh-dominated regime ($T_{\text{bath}} \ll T_U$, $T_{\text{internal}} \ll T_U$). The operational cost function $R(C, T_{\text{eff}})$ reduces to $R \approx P_{\text{pred}} = \lambda_{PM} \cdot a \cdot C / \tau_{cycle}$ when Unruh noise dominates. Integrating this power over proper time yields the total predictive work. ∎
+*Proof.* By Theorem N.3, the Unruh-induced incremental energy dissipation associated with refreshing $C$ predictive bits under proper acceleration $a$ is $E_{\text{pred}}=\lambda_{PM}aC$. If such refreshes occur on a cycle time $\tau_{\text{cycle}}$ (Definition 27), the corresponding Unruh-induced incremental predictive power is $P_{\text{pred}}=E_{\text{pred}}/\tau_{\text{cycle}}=\lambda_{PM}aC/\tau_{\text{cycle}}$. Substituting this $P_{\text{pred}}$ into the UCT work decomposition yields the stated simplified form. ∎
 
 This implies that intelligent systems should favor smooth trajectories over sharp accelerations, even when the latter would minimize travel time. The PCE potential (Section N.1) naturally drives systems toward such optimal paths.
 
@@ -524,7 +555,7 @@ At PCE equilibrium, the inequality is saturated. This saturation condition refle
 
 A system "at rest" is not static. The KMS characterization of equilibrium states (Theorem G.1.9.5) reveals that equilibrium involves continuous modular flow—ongoing dynamical processing that maintains detailed balance with the environment. This is the hallmark of open-system thermodynamics: a steady state maintained by continuous exchange with a reservoir [Breuer & Petruccione 2002].
 
-**Theorem N.4 (Equilibrium as Steady-State Exchange).** A system maintaining relational information $\mathcal{I}_{rel}$ at equilibrium participates in continuous information exchange with its environment at rate $1/\tau_{min}$ per channel, where $\tau_{min} = \sqrt{8\varepsilon} \cdot t_P$ is the minimum temporal discretization (Appendix Q, Theorem Q.6.1).
+**Theorem N.4 (Equilibrium as Steady-State Exchange).** A system maintaining relational information $\mathcal{I}_{rel}$ at equilibrium participates in continuous information exchange with its environment at rate $1/\tau_{min}$ per channel, where $\tau_{\text{min}} = \sqrt{8\ln 2} \cdot t_P$ is the minimum temporal discretization (Appendix Q, Theorem Q.6.1).
 
 *Proof.*
 
@@ -540,13 +571,13 @@ where $K^* = (\ln 2) \cdot I_2 \oplus (+\infty) \cdot I_6$ is the modular Hamilt
 **Step 2 (Physical realization of modular flow).** The modular flow is physically realized by the 'Evolve' process (Definition 27). Each boundary channel implements ND-RID dynamics with the PCE-Attractor as fixed point (Corollary G.1.9.1). The characteristic timescale of this flow is set by the minimum processing time $\tau_{min}$ derived from PCE optimization (Theorem Q.6.1):
 
 $$
-\tau_{min} = \sqrt{8\varepsilon} \cdot t_P \approx 2.355 \cdot t_P \approx 1.27 \times 10^{-43} \, \text{s}
+\tau_{\text{min}} = \sqrt{8\ln 2} \cdot t_P \approx 2.355 \cdot t_P \approx 1.27 \times 10^{-43} \, \text{s}
 \tag{N.23}
 $$
 
 **Step 3 (Detailed balance and steady-state exchange).** By Theorem G.1.9.3, PCE optimization drives ND-RID channels toward quantum detailed balance: $\sigma_{irr} \to 0$. In the open-system thermodynamics framework [Spohn 1978], quantum detailed balance is a sufficient condition for a stationary equilibrium state (no net currents), even though microscopic transitions continue to occur. The equilibrium is therefore dynamical rather than static: transitions occur continuously, with net zero flow.
 
-The key insight is that maintaining correlations between system and environment requires ongoing information exchange. Consider a boundary channel connecting system $S$ to environment $E$. The mutual information $I(S:E)$ characterizes shared correlations. In the presence of any noise or decoherence—which is unavoidable given $\varepsilon > 0$ (Theorem 31)—these correlations would decay unless actively maintained [Zurek 2003]. The steady-state condition requires that correlation-building processes balance correlation-degrading processes, necessitating continuous exchange at the channel rate.
+The key insight is that maintaining correlations between system and environment requires ongoing information exchange. Consider a boundary channel connecting system $S$ to environment $E$. The mutual information $I(S:E)$ characterizes shared correlations. In the presence of any noise or decoherence—which is unavoidable given $\varepsilon \ge \ln 2$ (Theorem 31)—these correlations would decay unless actively maintained [Zurek 2003]. The steady-state condition requires that correlation-building processes balance correlation-degrading processes, necessitating continuous exchange at the channel rate.
 
 **Step 4 (Channel exchange rate).** Each of the $N_{\partial}$ boundary channels participates in this exchange at rate $\nu = 1/\tau_{min}$, where $\tau_{min} = \sqrt{8\varepsilon} \cdot t_P$ is the minimum temporal discretization derived from PCE optimization (Theorem Q.6.1). This identification of the discretization timescale with the physical exchange rate follows from the ND-RID channel structure: each channel implements one SPAP cycle (Definition 27) per minimum temporal interval, as the SPAP cycle cannot complete faster than the fundamental discretization allows. The minimum time to execute the Predict $\to$ Verify $\to$ Update loop is precisely $\tau_{min}$, making this both the discretization scale and the channel processing rate. The KMS condition with $\beta = 1$ characterizes the equilibrium state with respect to the modular flow, confirming that this rate achieves detailed balance. ∎
 
@@ -565,10 +596,10 @@ $$
 \frac{d\mathcal{S}}{d\tau} = N_{\partial} \times \frac{\varepsilon}{\tau_{min}} = \frac{\mathcal{I}_{rel}}{C_{\max}} \times \frac{\varepsilon}{\tau_{min}}
 $$
 
-At the PCE-optimal operating point, $C_{\max} = 2\varepsilon = 2\ln 2$ (Equation E.15, derived from channel capacity optimization). Therefore:
+At the PCE-optimal operating point for the PU substrate, Equation E.15 gives $C_{\max}=2\ln 2$. So:
 
 $$
-\frac{d\mathcal{S}}{d\tau} = \frac{\mathcal{I}_{rel}}{2\varepsilon} \times \frac{\varepsilon}{\tau_{min}} = \frac{\mathcal{I}_{rel}}{2\tau_{min}}
+\frac{d\mathcal{S}}{d\tau} = \frac{\mathcal{I}_{rel}}{2 \tau_{\text{min}}}
 \tag{N.25}
 $$
 
@@ -583,7 +614,7 @@ $$
 \tag{N.26}
 $$
 
-where $\varepsilon = \ln 2$ (Theorem 31), $\delta = \sqrt{8\varepsilon} \cdot L_P \approx 2.355 \, L_P$ is the spatial discretization scale (Appendix Q, Equation Q.18), and $m_P = \sqrt{\hbar c/G}$ is the Planck mass.
+where $\varepsilon$ is evaluated at its minimum $\varepsilon=\ln 2$ (Theorem 31), $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \, L_P$ is the spatial discretization scale (Appendix Q, Equation Q.18), and $m_P = \sqrt{\hbar c/G}$ is the Planck mass.
 
 *Proof.*
 
@@ -673,33 +704,30 @@ where $E_P = m_P c^2 \approx 1.96 \times 10^9$ J is the Planck energy.
 
 **Step 2 (Motion as pattern evolution).** "Motion" is the continuous evolution of this relational pattern. A displacement $\Delta x$ corresponds to updating the correlations: $\mathcal{P}(S) \to \mathcal{P}'(S)$.
 
-**Step 3 (Acceleration as forced reconfiguration).** Acceleration $a$ is the rate of change of velocity, which corresponds to a rate of reconfiguration of the relational pattern. Unlike steady motion (which can be inertial, requiring no ongoing work), acceleration requires active updating of $\mathcal{I}_{rel}$ bits of relational information beyond the equilibrium maintenance rate.
+**Step 3 (Acceleration as thermodynamic overhead).** In equilibrium, maintaining the relational state requires entropy flow at rate $d\mathcal{S}/d\tau=\mathcal{I}_{rel}/(2\tau_{\text{min}})$ (Corollary N.4.1). Under proper acceleration $a$, the environment acquires an Unruh temperature contribution $T_U(a)=\hbar a/(2\pi c k_B)$ (Equation N.4), increasing the minimum energy dissipated per unit entropy flow by $k_B T_U(a)$ (Landauer).
 
-**Step 4 (Entropy cost of reconfiguration).** Each bit of relational information that must be updated costs at least $\varepsilon = \ln 2$ nats of entropy (Theorem 31). For acceleration $a$ over time $\delta t$, the velocity change $\delta v = a \cdot \delta t$ requires updating a fraction of the relational state proportional to $\delta v/c$ (the relativistic factor measuring departure from the original rest frame).
-
-**Step 5 (Force as entropy gradient).** The force required is:
+**Step 4 (Unruh-induced predictive power for relational maintenance).** The Unruh-induced incremental power required to maintain the relational state is therefore
 
 $$
-F = \frac{dE}{dx} = \frac{d}{dx}\left(\text{entropy cost of maintaining } \mathcal{I}_{rel} \text{ in new relational state}\right)
+P_{UCT}(a)=k_B T_U(a)\,\frac{d\mathcal{S}}{d\tau}
+=\frac{\hbar a}{2\pi c}\cdot\frac{\mathcal{I}_{rel}}{2\tau_{\text{min}}}.
 $$
 
-By the Unruh mechanism (Section N.3), acceleration $a$ couples to an effective temperature $T_U = \hbar a/(2\pi c k_B)$ [Unruh 1976], which increases the entropy cost of maintaining coherent predictions. The energy cost is:
+**Step 5 (Mass as the proportionality coefficient).** Using Theorem N.5 in the equivalent form
 
 $$
-E_{pred} = \lambda_{PM} \cdot a \cdot \mathcal{I}_{rel} = \frac{\hbar \varepsilon}{2\pi c} \cdot a \cdot \mathcal{I}_{rel}
+m=\frac{\hbar}{2c^2\tau_{\text{min}}}\mathcal{I}_{rel},
 $$
 
-where $\lambda_{PM} = \hbar\varepsilon/(2\pi c)$ is the prediction maintenance coefficient (Equation N.4), and we identify the system's predictive capacity with its relational information $\mathcal{I}_{rel}$.
-
-**Step 6 (Newton's second law recovered).** The energy cost $E_{pred}$ represents work that must be done against the entropic resistance to relational reconfiguration. The connection between the Unruh-derived prediction maintenance cost and the inertial response is established through the thermodynamic identity derived in Section N.3.
-
-The prediction maintenance coefficient $\lambda_{PM} = \hbar\varepsilon/(2\pi c)$ (Equation N.4) couples acceleration to information processing through the Unruh temperature. The total thermodynamic cost of acceleration combines this Unruh coupling with the entropy flow accounting of Theorem N.5. Specifically, maintaining $\mathcal{I}_{rel}$ nats of relational information while undergoing acceleration $a$ requires continuous entropy production at a rate that, when integrated via the Action-Entropy Identity (Corollary Q.0.1), yields the force-acceleration relation:
+we obtain
 
 $$
-F = m \cdot a \quad \text{with} \quad m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P
+P_{UCT}(a)=\frac{c}{2\pi}\,m\,a.
 $$
 
-This identification follows because both the rest-frame entropy maintenance (Theorem N.5) and the acceleration-induced prediction costs (Section N.3) are governed by the same fundamental entropy scale $\varepsilon = \ln 2$ and temporal discretization $\tau_{min} = \sqrt{8\varepsilon} \cdot t_P$. The mass appearing in Newton's second law is thus the same quantity derived from relational information content. ∎
+Thus $m$ is the coefficient that converts proper acceleration into a minimal additional predictive power overhead required for relational maintenance. **Clarification:** This linear-in-$a$ dependence arises from the Unruh temperature $T_U = \hbar a/(2\pi c k_B)$ (which is itself linear in $a$) coupling to the Landauer energy cost per nat of entropy. This is distinct from Unruh radiation power (which scales as $a^3$); here we compute the Landauer dissipation cost of maintaining $\mathcal{I}_{rel}$ nats of relational state against the Unruh thermal background \u2014 a first-order thermodynamic overhead, not a radiation reaction force.
+
+**Step 6 (Inertial parameter).** In the emergent mechanical description, the same $m$ is the coefficient of the free-particle action $S_{free}=-mc^2\int d\tau$ and therefore the inertial parameter governing response to applied forces. Since Theorem N.5 derives $m$ from $\mathcal{I}_{rel}$, inertial mass is fixed by the thermodynamic cost of updating and maintaining relational state. \u220e
 
 **Remark N.11.1: Resolution of Mach's Principle.** Mach [1883] proposed that inertia arises from interaction with distant matter, but provided no mechanism. Theorem N.6 quantifies this intuition: a system's inertia is proportional to its relational information $\mathcal{I}_{rel}$, which encodes correlations with the entire network. The "distant stars" contribute insofar as they are correlated with the system. A hypothetical system with $\mathcal{I}_{rel} = 0$ would have zero mass—but such a system would possess no correlations with any environment and would be operationally indistinguishable from vacuum. The Machian principle is thus realized: mass is constitutively relational, not an intrinsic property.
 
@@ -764,7 +792,7 @@ $$
 \mathcal{M}(\mathcal{E}(\rho), \mathcal{E}(\sigma)) \leq \mathcal{M}(\rho, \sigma)
 $$
 
-for all CPTP maps $\mathcal{E}$ and all density operators $\rho, \sigma$. Examples include the trace distance $D_{tr}(\rho, \sigma) = \frac{1}{2}\|\rho - \sigma\|_1$, the relative entropy $S(\rho \| \sigma) = \text{Tr}(\rho \ln \rho - \rho \ln \sigma)$ when $\text{supp}(\rho) \subseteq \text{supp}(\sigma)$, quantum fidelity-derived measures [Uhlmann 1976; Jozsa 1994], and generalized relative entropy monotones [Petz 1986; Ruskai 1994].
+for all CPTP maps $\mathcal{E}$ and all density operators $\rho, \sigma$. Examples include the trace distance $D_{tr}(\rho, \sigma) = \frac{1}{2}\|\rho - \sigma\|_1$, the relative entropy $S(\rho \| \sigma) = \mathrm{tr}(\rho \ln \rho - \rho \ln \sigma)$ when $\text{supp}(\rho) \subseteq \text{supp}(\sigma)$, quantum fidelity-derived measures [Uhlmann 1976; Jozsa 1994], and generalized relative entropy monotones [Petz 1986; Ruskai 1994].
 
 **Theorem N.10 (ND-RID Contractivity as Universal DPI).** The 'Evolve' channel $\mathcal{E}_N$ implementing ND-RID dynamics (Definition 27) satisfies the data processing inequality with strict contractivity:
 
@@ -884,7 +912,7 @@ The correspondence operates as follows:
 | Information Theory | Gravity |
 |:-------------------|:--------|
 | CPTP channel $\mathcal{E}_N$ | ND-RID 'Evolve' process (Definition 27) |
-| Contractivity $f_{RID} < 1$ | Irreversibility $\varepsilon > 0$ (Theorem 31) |
+| Contractivity $f_{RID} < 1$ | Irreversibility $\varepsilon \ge \ln 2$ (Theorem 31) |
 | Universal $f_{RID}$ | Universal gravitational coupling |
 | DPI: $\mathcal{M}(\mathcal{E}(\rho), \mathcal{E}(\sigma)) \leq \mathcal{M}(\rho, \sigma)$ | EP: $m_I = m_G$ for all matter (Theorem N.7) |
 | DPI violation (side channels) | EP violation (new physics) |
@@ -1002,28 +1030,28 @@ $$
 
 *Proof.* Direct from Theorem N.5, since the prefactor $m_P/(2\sqrt{8\varepsilon})$ cancels in ratios. ∎
 
-**Theorem N.9 (Integration with E$_8$ Mass Hierarchy).** The charged lepton mass ratios derived in Appendix T arise from differences in relational information content determined by E$_8$ geodesic distances:
+**Theorem N.9 (Integration with $E_8$ Mass Hierarchy).** The charged lepton mass ratios derived in Appendix T arise from differences in relational information content determined by $E_8$ geodesic distances:
 
 $$
 \ln\left(\frac{m_j}{m_i}\right) = \ln\left(\frac{\mathcal{I}_j}{\mathcal{I}_i}\right) = \alpha_{IR} \cdot d^2_{ij}
 \tag{N.43}
 $$
 
-where $d_{ij}$ is the Euclidean distance between generation roots in the E$_8$ root system (Appendix R, Section R.2) and $\alpha_{IR} = 1.418$ is the hierarchy coefficient (Theorem T.24.2.1).
+where $d_{ij}$ is the Euclidean distance between generation roots in the $E_8$ root system (Appendix R, Section R.2) and $\alpha_{IR} = 1.418$ is the hierarchy coefficient (Theorem T.24.2.1).
 
-*Proof.* By Proposition N.5, mass ratios equal information ratios. The E$_8$ geometric structure (Appendix R) determines how relational information distributes across generations. At the PCE-Attractor, the probability of occupying a generation vacuum $|g_i\rangle$ follows a Gaussian distribution on the Grassmannian Gr(2,8) with hierarchy coefficient $\alpha_{IR}$ (Theorem T.39):
+*Proof.* By Proposition N.5, mass ratios equal information ratios. The $E_8$ geometric structure (Appendix R) determines how relational information distributes across generations. At the PCE-Attractor, the probability of occupying a generation vacuum $|g_i\rangle$ follows a Gaussian distribution on the Grassmannian Gr(2,8) with hierarchy coefficient $\alpha_{IR}$ (Theorem T.39):
 
 $$
 P(g_i) \propto e^{-\alpha_{IR} \cdot d^2_{E_8}}
 $$
 
-where $d^2_{E_8}$ denotes squared Euclidean distances in the E$_8$ root lattice. The relational information content scales with this probability:
+where $d^2_{E_8}$ denotes squared Euclidean distances in the $E_8$ root lattice. The relational information content scales with this probability:
 
 $$
 \mathcal{I}_i \propto P(g_i)
 $$
 
-The three generations form a triangle in E$_8$ root space (Appendix T, Theorem T.42.2a). The mass hierarchy arises through the Path Additivity Principle (Theorem T.42.2a): the physical mass ratio $\ln(m_j/m_i)$ is computed along the dominant Yukawa tunneling path connecting generations sequentially rather than directly. For the charged lepton triad with E$_8$ distances $(d^2_{\tau\mu}, d^2_{\mu e}, d^2_{\tau e}) = (2, 4, 6)$:
+The three generations form a triangle in $E_8$ root space (Appendix T, Theorem T.42.2a). The mass hierarchy arises through the Path Additivity Principle (Theorem T.42.2a): the physical mass ratio $\ln(m_j/m_i)$ is computed along the dominant Yukawa tunneling path connecting generations sequentially rather than directly. For the charged lepton triad with $E_8$ distances $(d^2_{\tau\mu}, d^2_{\mu e}, d^2_{\tau e}) = (2, 4, 6)$:
 
 $$
 \ln\left(\frac{m_\tau}{m_e}\right) = \ln\left(\frac{m_\tau}{m_\mu}\right) + \ln\left(\frac{m_\mu}{m_e}\right) = \alpha_{IR}(d^2_{\tau\mu} + d^2_{\mu e}) = \alpha_{IR} \cdot d^2_{\tau e}
@@ -1035,7 +1063,7 @@ $$
 \ln\left(\frac{m_j}{m_i}\right) = \alpha_{IR} \cdot d^2_{ij}
 $$
 
-where $d^2_{ij}$ is the squared E$_8$ distance between generation roots $r_i$ and $r_j$.
+where $d^2_{ij}$ is the squared $E_8$ distance between generation roots $r_i$ and $r_j$.
 
 ∎
 
@@ -1045,9 +1073,9 @@ $$
 \mathcal{R}_\ell = \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)} = \frac{d^2_{31}}{d^2_{32}} = \frac{6}{2} = 3
 $$
 
-reflects pure E$_8$ geometry, independent of the overall scale set by $\mathcal{I}_{rel}$.
+reflects pure $E_8$ geometry, independent of the overall scale set by $\mathcal{I}_{rel}$.
 
-*Proof.* From Theorem N.9, the ratio depends only on squared E$_8$ distances between generation roots: $d^2_{32} = d^2_{\tau\mu} = 2$ and $d^2_{31} = d^2_{\tau e} = 6$ (Appendix T, Theorem T.24.3). Therefore $\mathcal{R}_\ell = 6/2 = 3$. The observed value $\mathcal{R}_\ell^{obs} = 2.889$ (Particle Data Group 2024) agrees with the prediction to 3.8% (Appendix T, Section T.25.4). ∎
+*Proof.* From Theorem N.9, the ratio depends only on squared $E_8$ distances between generation roots: $d^2_{32} = d^2_{\tau\mu} = 2$ and $d^2_{31} = d^2_{\tau e} = 6$ (Appendix T, Theorem T.24.3). Therefore $\mathcal{R}_\ell = 6/2 = 3$. The observed value $\mathcal{R}_\ell^{obs} = 2.889$ (Particle Data Group 2024) agrees with the prediction to 3.8% (Appendix T, Section T.25.4). ∎
 
 ### N.11.8 The Complete Derivation Chain
 
@@ -1094,7 +1122,7 @@ $$
 The UCT can be rewritten entirely in information-theoretic terms:
 
 $$
-W_{tot} \geq \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot E_P \cdot (\gamma - 1) + \int R(C_{req}, T_{eff}) \, dt
+W_{tot} \geq \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot E_P \cdot (\gamma - 1) + \int_0^{\tau_f} R(C_{req}(\tau), T_{eff}(\tau))\, d\tau
 $$
 
 Both terms represent information costs: the first is the relativistic cost of updating relational information; the second is the cost of maintaining predictive accuracy against noise.
@@ -1117,7 +1145,7 @@ $$
 | Theorem N.6 | Inertia = relational update resistance | Origin of inertia explained |
 | Theorem N.7 | $m_I = m_G$ for simple systems | Equivalence principle derived |
 | Theorem N.8 | $\delta_C \propto P_{context}$ for complex systems | Complexity-dependent deviation |
-| Theorem N.9 | Mass ratios from E$_8$ geometry | Connection to Appendix T |
+| Theorem N.9 | Mass ratios from $E_8$ geometry | Connection to Appendix T |
 
 **The Unified Picture:**
 
@@ -1127,7 +1155,7 @@ $$
 | $E = mc^2$ | Empirical relation | Information maintenance (Cor N.5.1) |
 | Inertia | Unexplained resistance | Update resistance (Thm N.6) |
 | $m_I = m_G$ | Postulated equivalence | Both measure $\mathcal{I}_{rel}$ (Thm N.7) |
-| Mass ratios | Free parameters | E$_8$ geometry (Thm N.9) |
+| Mass ratios | Free parameters | $E_8$ geometry (Thm N.9) |
 
 The Mass-Information Identity completes the unification program of Appendix N. The universe is a network of predictive relationships. Mass is the measure of how much relationship a system contains. Rest energy is the cost of maintaining those relationships. Inertia is the resistance to changing them. The equivalence principle holds because both gravitational and inertial effects measure the same underlying quantity—relational information content.
 

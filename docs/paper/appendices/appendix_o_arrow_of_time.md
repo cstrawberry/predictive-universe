@@ -96,22 +96,19 @@ The existence of a directed arrow of time is a logical prerequisite for the exis
 **2. Layer 2: The Physical Enforcement via a Thermodynamic Ratchet**
 
 The crucial question then becomes: What prevents the physical laws governing the MPU network from violating this logical requirement? The answer is a physical enforcement mechanism that locks the logical arrow into irreversible physical reality.
-*   **The Irreversible 'Evolve' Process:** The Verification/Update phase of the predictive cycle is physically realized by the 'Evolve' process (Definition 27). As rigorously proven in Appendix J (Theorem J.1), every 'Evolve' event that processes non-trivial self-referential information—a process argued to be ubiquitous in a network of mutually predicting agents—incurs a minimal, irreversible thermodynamic cost, dissipating an entropy of at least $\varepsilon = \ln 2$ nats to the environment.
-*   **The Ubiquitous Ratchet:** Theorem J.1 establishes a hard lower bound on entropy production per nontrivial update cycle: $\Sigma_{\text{pred}} \ge \varepsilon = \ln 2$. Consider a coherent macroscopic "forward step" in which $N$ MPUs undergo such update cycles. Additivity of entropy production across these cycles gives
+*   **The Irreversible 'Evolve' Process:** The Verification/Update phase of the predictive cycle is physically realized by the 'Evolve' process (Definition 27). As rigorously proven in Appendix J (Theorem J.1), every 'Evolve' event that processes non-trivial self-referential information—a process argued to be ubiquitous in a network of mutually predicting agents—incurs an irreversible thermodynamic cost, dissipating an entropy of at least $\varepsilon$, with $\varepsilon \ge \ln 2$ nats, to the environment.
+*   **The Ubiquitous Ratchet:** Theorem J.1 establishes a hard lower bound on entropy production per nontrivial update cycle: $\Sigma_{\text{pred}} \ge \varepsilon \ge \ln 2$. Consider a coherent macroscopic "forward step" in which $N$ MPUs undergo such update cycles. Additivity of entropy production across these cycles gives
     $$
     \Sigma_{\text{tot}}=\sum_{k=1}^N \Sigma_{\text{pred}}^{(k)} \ge N\varepsilon.
     $$
     For the corresponding time-reversed macro-trajectory, the standard path-probability relation $\Sigma_{\text{tot}}=\log(P_F/P_R)$ implies
     $$
-    \frac{P_R}{P_F}=e^{-\Sigma_{\text{tot}}}\le e^{-N\varepsilon}=2^{-N}.
+    \frac{P_R}{P_F}=e^{-\Sigma_{\text{tot}}}\le e^{-N\varepsilon}\le e^{-N\ln 2}=2^{-N}.
     $$
-    Thus coherent macroscopic reversals require exponentially unlikely negative-entropy trajectories, and their probability is suppressed at least as $e^{-N\varepsilon}$.
-
-These results are consistent with fluctuation theorems. Microreversible dynamics satisfy an integral fluctuation relation of the form $\langle e^{-\Sigma_{\text{pred}}} \rangle = 1$, hence $\langle \Sigma_{\text{pred}} \rangle \ge 0$ (Jensen). Moreover, by Markov's inequality, for any $a>0$,
-$$
-\mathbb P(\Sigma_{\text{tot}}\le -a)\le e^{-a},
-$$
-so taking $a=N\varepsilon$ gives $\mathbb P(\Sigma_{\text{tot}}\le -N\varepsilon)\le e^{-N\varepsilon}$.
+    Thus, coherent macroscopic reversals are exponentially suppressed in the number of update cycles $N$; equivalently, for any such macro-history,
+    $$
+    P_R \le \exp(-N\varepsilon)\,P_F \le 2^{-N}P_F.
+    $$
 
 **3. Synthesis**
 

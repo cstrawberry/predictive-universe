@@ -58,7 +58,7 @@ where $\hbar$ is the universal conversion factor between SPAP entropy units (nat
 
 1. **Spatial sector:** The discrete cost for spatial variations Γ-converges to a positive-definite quadratic form defining the emergent Riemannian metric on spatial slices.
 
-2. **Temporal sector:** The irreversibility of the 'Evolve' process ($\varepsilon > 0$, Theorem 31) introduces a sign asymmetry. The dissipative structure of temporal updates yields a kinetic term with opposite sign to the spatial gradient terms, establishing the Lorentzian signature $(-, +, +, +)$.
+2. **Temporal sector:** The irreversibility of the 'Evolve' process ($\varepsilon \ge \ln 2$, Theorem 31) introduces a sign asymmetry. The dissipative structure of temporal updates yields a kinetic term with opposite sign to the spatial gradient terms, establishing the Lorentzian signature $(-, +, +, +)$.
 
 3. **Combined action:** The full Γ-limit yields the standard action for fields in curved spacetime, with $\hbar$ appearing as the conversion factor between discrete (nats) and continuous (J·s) descriptions.
 

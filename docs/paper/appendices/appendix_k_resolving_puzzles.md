@@ -38,7 +38,7 @@ The hierarchy among couplings at a common fundamental scale arises from the info
 
 **Electroweak Scale, Weinberg Angle, and Higgs Mass:** These three fundamental puzzles are resolved simultaneously through a unified derivation in Appendix T. The electroweak scale emerges from the Golay-Steiner structure with electroweak complexity $\kappa_{EW} = bk/2 + \dim(G/H) - m/2 = 38.5$, yielding:
 $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 246 \text{ GeV}$$
-**(Theorem T.5)**. The Weinberg angle at the PU fixed point is $\sin^2\theta_W(\mu_*) = 3/8$ from PCE isotropy conditions **(Theorem T.14)**, and the Higgs quartic coupling satisfies $\lambda(\mu_*) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV. These results use zero continuously adjustable parameters and are derived from:
+**(Theorem T.5)**. The PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$ from PCE isotropy conditions **(Theorem T.14)**, and the Higgs quartic coupling satisfies $\lambda(\mu_\lambda) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV. These results use zero continuously adjustable parameters and are derived from:
 - Signal-parity decomposition of M = 24 modes into k = 12 signal and k = 12 parity subspaces via the Extended Binary Golay Code (Proposition T.1)
 - Electroweak coset $\mathcal{M}_{EW} = (SU(2)_L \times U(1)_Y)/U(1)_{em} \cong S^3$ with dimension 3 (Definition T.6)
 - Discrete action $S_{EW} = N_0 + \dim(G/H) - m/2 = 38.5$ from alignment constraints and zero-mode subtraction (Theorem T.4)
@@ -51,20 +51,19 @@ The unified derivation connects these three observables through the same underly
 
 1. **Topological**: The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Theorem R.3.1) and anomaly cancellation constraints (Section R.4), this uniquely selects three generations with family charges $\{a, -a, 0\}$ (Proposition R.3.5).
 
-2. **Geometric**: The E₈ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (Section R.2.1). Squared E₈ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ determine mass ratios via Gaussian suppression on the PCE-Attractor orbit Gr(2,8) with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3).
+2. **Geometric**: The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (Section R.2.1). Squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ determine mass ratios via Gaussian suppression on the PCE-Attractor orbit Gr(2,8) with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3).
 
 The Mass Hierarchy Invariant:
 $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$$
 **(Equation R.17)** provides a discrete prediction with zero continuously adjustable parameters. In the charged lepton sector, the observed value $\mathcal{R}_\ell \approx 2.889$ matches the discrete prediction $\mathcal{R} = 3$ to within 3.8%, providing strong phenomenological support. Absolute mass scales are set by the emergent VEV through sector prefactors $c_f$ determined by Bures/gauge normalization (Appendix T, Section T.21).
 
 Appendix T (Section T.25) establishes precise predictions with zero continuously adjustable parameters:
-- $m_\tau = 1.80$ GeV (observed: 1.777 GeV, deviation: 1.3%)
-- $m_\mu = 105$ MeV (observed: 105.7 MeV, deviation: 0.6%)
-- $\ln(m_\tau/m_\mu) = 2.836$ (observed: 2.822, deviation: 0.5%)
+- $m_\tau^{(0)} \approx 0.94$ GeV at leading order; factor $\approx 1.9$ normalization gap open pending two-loop threshold and Van Vleck–Morette corrections (Remark T.45.1; Lemma T.45.1a). Anchored to $m_\tau^{\rm obs} = 1776.86$ MeV (Particle Data Group (2024)), the $E_8$ log-ratio predictions give $m_\mu = 105.78$ MeV (observed: 105.66 MeV, deviation: $+0.12\%$) and $m_e = 0.5121$ MeV (observed: 0.5110 MeV, deviation: $+0.22\%$)
+- $\ln(m_\tau/m_\mu) = 2.8212$ (observed: 2.8224, deviation: $\approx 0.04\%$)
 - Cabibbo angle $|V_{us}| = 0.2261$ from frustration-induced tunneling between quark sector vacua (observed: $0.2243 \pm 0.0008$, deviation: +0.8%)
 - Lepton-quark bridge $c_\ell/c_d = 8/3$ from gauge normalization constraints (Theorem T.44)
 
-The τ/μ mass ratio achieves **0.5% precision** with zero continuously adjustable parameters—the single most precise test of the geometric mass hierarchy (Appendix T, Section T.25.8.1).
+The τ/μ mass ratio achieves $\approx\mathbf{0.04\%}$ **precision** in the log ratio ($|\Delta\ln|=0.0012$), with zero adjustable parameters, representing the single most precise test of the geometric hierarchy mechanism.
 
 **Summary of Derived Constants:**
 The framework successfully derives from first principles:
@@ -73,9 +72,9 @@ The framework successfully derives from first principles:
 - Gravitational constant $G$ (from thermodynamic channel capacity)
 - Fine-structure constant $\alpha$ (zero continuously adjustable parameters: $\alpha^{-1} \approx 137.036$)
 - Electroweak scale $v$ (from Golay complexity: $v \approx 246$ GeV)
-- Weinberg angle ($\sin^2\theta_W = 3/8$ at attractor)
+- Weinberg angle ($\sin^2\theta_W^{(0)} = 3/8$ at PU fixed point)
 - Higgs mass ($m_H \approx 125$ GeV from metastability)
-- Fermion mass ratios (E₈ geometry: lepton $\mathcal{R}$ to 3.8% accuracy)
+- Fermion mass ratios ($E_8$ geometry: lepton $\mathcal{R}$ to 3.8% accuracy)
 - Spacetime dimension ($D = 4$ from two independent pathways)
 
 If the fundamental rules and parameters of the MPU model and POP/PCE optimization are simple, the complex pattern of observed fundamental constants arises as the unique stable minimum of the high-dimensional PCE potential landscape. Fine-tuning in observed constants is reinterpreted as thermodynamic or informational optimality.
@@ -231,7 +230,7 @@ using the identification $G = \eta\delta^2 c^3/(4\hbar\chi C_{\max})$ from Equat
 
 ## K.6 Strong CP Problem Resolution
 
-**Puzzle:** Quantum Chromodynamics (QCD) permits a CP-violating term proportional to $\theta_{\text{QCD}} \, \text{Tr}(G_{\mu\nu} \tilde{G}^{\mu\nu})$, yet the experimental bound on the neutron electric dipole moment constrains $|\bar{\theta}| < 10^{-10}$ (Abel et al. 2020). Why is this parameter so unnaturally small, and why does CP violation appear in the weak sector but not in the strong sector?
+**Puzzle:** Quantum Chromodynamics (QCD) permits a CP-violating term proportional to $\theta_{\text{QCD}} \, \mathrm{tr}(G_{\mu\nu} \tilde{G}^{\mu\nu})$, yet the experimental bound on the neutron electric dipole moment constrains $|\bar{\theta}| < 10^{-10}$ (Abel et al. 2020). Why is this parameter so unnaturally small, and why does CP violation appear in the weak sector but not in the strong sector?
 
 **PU Resolution:** The framework provides a complete resolution through two independent geometric mechanisms operating on the PCE-Attractor orbit $\text{Gr}(2,8)$. Both mechanisms derive from the same foundational structure but utilize distinct mathematical features, ensuring robustness of the prediction $\bar{\theta} = 0$.
 
@@ -316,7 +315,7 @@ $$\sigma^*\omega(X,Y) = \omega(\sigma_*X, \sigma_*Y) = g_{KE}(J\sigma_*X, \sigma
 **Proposition K.6.2 (Parity Transformation of Gauge Fields).** Under the parity transformation $P: \mathbf{x} \to -\mathbf{x}$, the components of the gluon field strength tensor transform as:
 $$P: G^{0i} \to -G^{0i}, \quad G^{ij} \to G^{ij}$$
 
-*Proof.* The field strength tensor $G_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu + ig[A_\mu, A_\nu]$ transforms under parity according to the vector nature of $A_\mu$. Since $A_0$ is a scalar and $A_i$ are vectors under parity, we have $P: A_0(\mathbf{x}) \to A_0(-\mathbf{x})$ and $P: A_i(\mathbf{x}) \to -A_i(-\mathbf{x})$. Combined with $\partial_0 \to \partial_0$ and $\partial_i \to -\partial_i$, the components transform as stated. The dual tensor $\tilde{G}^{\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}G_{\rho\sigma}$ inherits opposite parity, yielding $P: \text{Tr}(G\tilde{G}) \to -\text{Tr}(G\tilde{G})$. ∎
+*Proof.* The field strength tensor $G_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu + ig[A_\mu, A_\nu]$ transforms under parity according to the vector nature of $A_\mu$. Since $A_0$ is a scalar and $A_i$ are vectors under parity, we have $P: A_0(\mathbf{x}) \to A_0(-\mathbf{x})$ and $P: A_i(\mathbf{x}) \to -A_i(-\mathbf{x})$. Combined with $\partial_0 \to \partial_0$ and $\partial_i \to -\partial_i$, the components transform as stated. The dual tensor $\tilde{G}^{\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}G_{\rho\sigma}$ inherits opposite parity, yielding $P: \mathrm{tr}(G\tilde{G}) \to -\mathrm{tr}(G\tilde{G})$. ∎
 
 **Theorem K.6.1 (σ-Correspondence with CP).** The anti-holomorphic involution $\sigma$ on $\text{Gr}(2,8)$ corresponds to the combined CP transformation acting on the moduli space of gauge vacua. Specifically:
 
@@ -449,18 +448,18 @@ $$\text{Gr}(2,8)^{\sigma} = \{W \in \text{Gr}(2,8) : \sigma(W) = W\} \cong \text
 
 **Corollary K.6.4 (σ-Invariant Vacuum).** The PCE-Attractor vacuum, being σ-invariant, lies in the real locus $\text{Gr}_{\mathbb{R}}(2,8)$. All physical parameters associated with this vacuum take real values.
 
-### K.6.8 Second Mechanism: E₈ Root Reality
+### K.6.8 Second Mechanism: $E_8$ Root Reality
 
-The quark mass matrix contribution $\arg(\det M_q)$ is controlled by the Yukawa coupling structure, which derives from E₈ geometry on the attractor orbit.
+The quark mass matrix contribution $\arg(\det M_q)$ is controlled by the Yukawa coupling structure, which derives from $E_8$ geometry on the attractor orbit.
 
-**Definition K.6.11 (E₈ Root System).** The E₈ root system consists of 240 vectors in $\mathbb{R}^8$ of squared norm 2:
+**Definition K.6.11 ($E_8$ Root System).** The $E_8$ root system consists of 240 vectors in $\mathbb{R}^8$ of squared norm 2:
 
 - **Type I (112 roots):** All permutations of $(\pm 1, \pm 1, 0, 0, 0, 0, 0, 0)$
 - **Type II (128 roots):** All vectors $(\pm\frac{1}{2}, \pm\frac{1}{2}, \ldots, \pm\frac{1}{2})$ with an even number of minus signs
 
-**Lemma K.6.2 (E₈ Reality).** All E₈ roots have real coordinates: $E_8 \subset \mathbb{R}^8$.
+**Lemma K.6.2 ($E_8$ Reality).** All $E_8$ roots have real coordinates: $E_8 \subset \mathbb{R}^8$.
 
-**Lemma K.6.3 (E₈ Distance Spectrum).** For distinct roots $r_i, r_j \in E_8$, the squared Euclidean distance satisfies:
+**Lemma K.6.3 ($E_8$ Distance Spectrum).** For distinct roots $r_i, r_j \in E_8$, the squared Euclidean distance satisfies:
 $$d^2_{E_8}(r_i, r_j) = |r_i - r_j|^2 \in \{2, 4, 6, 8\}$$
 
 *Proof.* Direct calculation using the root coordinates. For roots with $|r|^2 = 2$:
@@ -468,9 +467,9 @@ $$d^2 = |r_i|^2 + |r_j|^2 - 2\langle r_i, r_j \rangle = 4 - 2\langle r_i, r_j \r
 
 The inner product $\langle r_i, r_j \rangle \in \{-2, -1, 0, 1, 2\}$ for distinct roots, giving $d^2 \in \{0, 2, 4, 6, 8\}$. Excluding $d^2 = 0$ (same root), the result follows. ∎
 
-**Theorem K.6.7 (Yukawa Reality from E₈).** The Yukawa coupling matrix $Y_{ij}$ derived from E₈ geodesic overlaps has real positive entries:
+**Theorem K.6.7 (Yukawa Reality from $E_8$).** The Yukawa coupling matrix $Y_{ij}$ derived from $E_8$ geodesic overlaps has real positive entries:
 $$Y_{ij} \propto \exp(-\gamma \, d^2_{E_8}(r_i, r_j)) \in \mathbb{R}_{>0}$$
-where $\gamma = 4\alpha/d_0 = 3/4$ combines the hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3) with the factor $4/d_0 = 1/2$ arising from the Bures-E₈ distance scaling (Lemma T.41.4), and $d^2_{E_8}$ is the squared E₈ root distance.
+where $\gamma = 4\alpha/d_0 = 3/4$ combines the hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3) with the factor $4/d_0 = 1/2$ arising from the Bures-$E_8$ distance scaling (Lemma T.41.4), and $d^2_{E_8}$ is the squared $E_8$ root distance.
 
 *Proof.* 
 
@@ -480,12 +479,12 @@ where $\gamma = 4\alpha/d_0 = 3/4$ combines the hierarchy coefficient $\alpha = 
 $$Y_{ij} \propto \int d\mu(x) \, \psi_i(x) \, \psi_j(x) \propto \exp\left(-\frac{d_B^2(p_i, p_j)}{4\sigma_B^2}\right)$$
 where $d_B$ is the Bures distance and $\sigma_B^2 = 1/24$ from capacity saturation (Lemma T.41.2).
 
-**Step 3 (E₈ correspondence).** By Lemma T.41.4, the Bures and E₈ distances are related by $d_B^2 = \frac{1}{8}d_{E_8}^2$ for small SU(2) rotations. Substituting with $\sigma_B^2 = 1/24$ yields:
+**Step 3 ($E_8$ correspondence).** By Lemma T.41.4, the Bures and $E_8$ distances are related by $d_B^2 = \frac{1}{8}d_{E_8}^2$ for small SU(2) rotations. Substituting with $\sigma_B^2 = 1/24$ yields:
 $$Y_{ij} \propto \exp\left(-\frac{d_{E_8}^2}{32\sigma_B^2}\right) = \exp\left(-\frac{3}{4} d_{E_8}^2\right)$$
 
 **Step 4 (Reality).** From Lemma K.6.2, $r_i, r_j \in \mathbb{R}^8$. The Euclidean distance $d_{E_8}^2 = |r_i - r_j|^2$ is manifestly real and positive. The exponential of a real negative number is real and positive. Therefore $Y_{ij} \in \mathbb{R}_{>0}$. ∎
 
-**Theorem K.6.8 (Yukawa Decomposition).** In the E₈ triad basis, the Yukawa matrix decomposes as:
+**Theorem K.6.8 (Yukawa Decomposition).** In the $E_8$ triad basis, the Yukawa matrix decomposes as:
 $$Y_f = D_f \cdot R_f$$
 where $D_f = \text{diag}(y_1^f, y_2^f, y_3^f)$ with $y_i^f \in \mathbb{R}_{>0}$ and $R_f \in O(3)$ is an orthogonal mixing matrix.
 
@@ -510,7 +509,7 @@ $$M_q = U_q \cdot D_q$$
 where $D_q$ is diagonal with real positive entries and $U_q$ is unitary. Consequently:
 $$\arg(\det M_q) = \arg(\det U_q) + \arg(\det D_q) = \arg(\det U_q)$$
 
-*Proof.* The Yukawa matrices $Y_q$ are real positive by Theorem K.6.7. The physical mass matrices are $M_q = v \cdot Y_q / \sqrt{2}$ where $v = 246$ GeV is the Higgs VEV. Since $Y_q \in \mathbb{R}_{>0}^{3\times 3}$, the singular value decomposition gives $Y_q = U_L \cdot D \cdot U_R^{\dagger}$ where $D$ is diagonal real positive. The determinant of a real positive diagonal matrix is real positive: $\det D_q > 0$, hence $\arg(\det D_q) = 0$.
+*Proof.* The Yukawa matrices $Y_q$ are real positive by Theorem K.6.7. The physical mass matrices are $M_q = v \cdot Y_q / \sqrt{2}$ where $v$ is the Higgs VEV. Since $Y_q \in \mathbb{R}_{>0}^{3\times 3}$, the singular value decomposition gives $Y_q = U_L \cdot D \cdot U_R^{\dagger}$ where $D$ is diagonal real positive. The determinant of a real positive diagonal matrix is real positive: $\det D_q > 0$, hence $\arg(\det D_q) = 0$.
 
 The unitary matrices $U_L, U_R$ arise from diagonalization, not from the Yukawa structure. In the CKM basis where one unitary freedom is fixed, the residual phase is the CKM phase $\delta$, which appears in weak interactions but not in $\det M_q$. ∎
 
@@ -526,22 +525,22 @@ $$\arg(\det M_q) = 6\arg(v) + \arg(\det Y_u) + \arg(\det Y_d) = 0 + 0 + 0 = 0$$
 **Theorem K.6.11 (Strong CP Resolution).** The physical CP-violating parameter vanishes exactly:
 $$\bar{\theta} = \theta_{\text{QCD}} + \arg(\det M_q) = 0 + 0 = 0$$
 
-*Proof.* Combining Theorem K.6.6 ($\theta_{\text{QCD}} = 0$ from σ-invariance and PCE minimization) with Corollary K.6.5 ($\arg(\det M_q) = 0$ from E₈ reality). ∎
+*Proof.* Combining Theorem K.6.6 ($\theta_{\text{QCD}} = 0$ from σ-invariance and PCE minimization) with Corollary K.6.5 ($\arg(\det M_q) = 0$ from $E_8$ reality). ∎
 
 **Theorem K.6.12 (Independence of Mechanisms).** The two mechanisms are mathematically independent:
 
 1. **Mechanism I** (θ_QCD = 0): Uses the complex structure of $\text{Gr}(2,8)$ via the anti-holomorphic involution σ
-2. **Mechanism II** (arg(det M_q) = 0): Uses the real structure of $\mathbb{R}^8$ via E₈ root coordinates
+2. **Mechanism II** (arg(det M_q) = 0): Uses the real structure of $\mathbb{R}^8$ via $E_8$ root coordinates
 
-*Proof.* Mechanism I operates on the parameter space of gauge vacua, utilizing the Kähler geometry of $\text{Gr}(2,8)$ and the action of complex conjugation as an anti-holomorphic involution. Mechanism II operates on the internal flavor space, utilizing the fact that E₈ roots lie in real Euclidean space $\mathbb{R}^8$.
+*Proof.* Mechanism I operates on the parameter space of gauge vacua, utilizing the Kähler geometry of $\text{Gr}(2,8)$ and the action of complex conjugation as an anti-holomorphic involution. Mechanism II operates on the internal flavor space, utilizing the fact that $E_8$ roots lie in real Euclidean space $\mathbb{R}^8$.
 
-The mechanisms share the common origin $d_0 = 8$ (Theorem 23) but employ disjoint geometric features: complex structure ($\mathbb{C}^8$ with conjugation $\sigma$) versus real structure ($\mathbb{R}^8$ with E₈ root lattice). Neither mechanism implies the other; both are required for the complete resolution.
+The mechanisms share the common origin $d_0 = 8$ (Theorem 23) but employ disjoint geometric features: complex structure ($\mathbb{C}^8$ with conjugation $\sigma$) versus real structure ($\mathbb{R}^8$ with $E_8$ root lattice). Neither mechanism implies the other; both are required for the complete resolution.
 
 These structures are mathematically disjoint: $\text{Gr}(2,8)$ is a continuous complex manifold while $E_8$ is a discrete lattice in real Euclidean space. No theorem in Mechanism I is used in Mechanism II, and vice versa. ∎
 
-**Remark K.6.2: Contrast with Fine-Tuning.** In standard treatments, $\bar{\theta} \approx 0$ would require $\theta_{\text{QCD}} \approx -\arg(\det M_q)$ with both terms potentially $\mathcal{O}(1)$ but canceling to 10 decimal places. In the PU framework, $\theta_{\text{QCD}} = 0$ is forced by σ-invariance + PCE and $\arg(\det M_q) = 0$ is forced by E₈ reality. **No cancellation is required.** Each term is independently zero.
+**Remark K.6.2: Contrast with Fine-Tuning.** In standard treatments, $\bar{\theta} \approx 0$ would require $\theta_{\text{QCD}} \approx -\arg(\det M_q)$ with both terms potentially $\mathcal{O}(1)$ but canceling to 10 decimal places. In the PU framework, $\theta_{\text{QCD}} = 0$ is forced by σ-invariance + PCE and $\arg(\det M_q) = 0$ is forced by $E_8$ reality. **No cancellation is required.** Each term is independently zero.
 
-### K.6.10 E₈ Triad Selection
+### K.6.10 $E_8$ Triad Selection
 
 **Definition K.6.12 (Mass Ratio Invariant).** For three generations with masses $m_3 > m_2 > m_1$:
 $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}}$$
@@ -551,7 +550,7 @@ $$\mathcal{R} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$$
 
 *Proof.* From the Gaussian suppression formula (Theorem T.41.5): $\ln(m_3/m_g) = \alpha \, d^2_{3g}$. Therefore $\mathcal{R} = d^2_{31}/d^2_{32}$. With $d^2 \in \{2, 4, 6, 8\}$ and requiring $d^2_{31} > d^2_{32}$ (since $m_1 < m_2$), the allowed ratios with $\mathcal{R} > 1$ are: $4/3, 3/2, 2, 3, 4$. ∎
 
-**Theorem K.6.14 (PCE Triad Selection).** For each discrete $\mathcal{R}$ value, there exists a unique PCE-optimal E₈ triad minimizing the total action cost (Theorem T.42.1).
+**Theorem K.6.14 (PCE Triad Selection).** For each discrete $\mathcal{R}$ value, there exists a unique PCE-optimal $E_8$ triad minimizing the total action cost (Theorem T.42.1).
 
 *Proof.* Given $\mathcal{R} = d^2_{31}/d^2_{32}$, the constraint $d^2_{31} = \mathcal{R} \cdot d^2_{32}$ with both values in $\{2, 4, 6, 8\}$ typically has a unique solution.
 
@@ -559,7 +558,7 @@ For $\mathcal{R} = 3$ (charged leptons): $d^2_{31} = 3 \cdot d^2_{32}$ requires 
 
 Among triads with the same $\mathcal{R}$, PCE selects the one minimizing total complexity cost $\propto \exp(-\alpha d^2_{32}) + \exp(-\alpha d^2_{31})$, which corresponds to minimizing $d^2_{32}$ (the smaller distance dominates). ∎
 
-**Table K.6.1: E₈ Triad Assignments**
+**Table K.6.1: $E_8$ Triad Assignments**
 
 | Sector | $\mathcal{R}_{\text{obs}}$ | Nearest $\mathcal{R}$ | $(d^2_{32}, d^2_{31})$ | Agreement |
 |:-------|:---------------------------|:----------------------|:-----------------------|:----------|
@@ -587,10 +586,10 @@ where $\Sigma$ is a surface bounded by $\gamma$. If $\gamma \subset \text{Gr}(2,
 
 **Theorem K.6.17 (Type Classification).** Under the geometric framework:
 
-- **Type I** is forbidden by σ-invariance and E₈ reality
+- **Type I** is forbidden by σ-invariance and $E_8$ reality
 - **Type II** is permitted and generates the CKM phase
 
-*Proof.* Type I violation requires either: (a) $\theta_{\text{QCD}} \neq 0$, forbidden by σ-invariance (Theorem K.6.6); or (b) complex Yukawa phases, forbidden by E₈ reality (Theorem K.6.7).
+*Proof.* Type I violation requires either: (a) $\theta_{\text{QCD}} \neq 0$, forbidden by σ-invariance (Theorem K.6.6); or (b) complex Yukawa phases, forbidden by $E_8$ reality (Theorem K.6.7).
 
 Type II violation arises from the Berry connection on the generation manifold. By Theorem T.53, the CP-violating phase is:
 $$\delta = \oint_{\gamma} \mathcal{A}_B$$
@@ -604,7 +603,7 @@ where the combined uncertainty reflects geometric and wavepacket contributions.
 $$\delta = \delta_{\text{flat}} \times f_{\text{sinc}} = 70.53° \times 0.9454 = 66.7°$$
 where:
 
-- $\delta_{\text{flat}} = 2\arctan(\sqrt{2}/2) = 70.53°$ is the base phase from the up-down sector mismatch in E₈ root space
+- $\delta_{\text{flat}} = 2\arctan(\sqrt{2}/2) = 70.53°$ is the base phase from the up-down sector mismatch in $E_8$ root space
 - $f_{\text{sinc}} = \text{sinc}(1/\sqrt{3}) = 0.9454$ is the coherent averaging factor over the generation wavepacket (Theorem T.55)
 
 The experimental value $\delta_{\text{exp}} = 65.7° \pm 1.5°$ (Particle Data Group 2024) agrees within $+0.7\sigma$. ∎
@@ -624,7 +623,7 @@ The preservation of Type II CP violation is essential for baryogenesis via the S
 
 1. **Baryon number violation:** Electroweak sphalerons (Appendix Y, Section Y.4)
 2. **C and CP violation:** Berry holonomy $\delta = 66.7°$ (Theorem K.6.18)
-3. **Departure from equilibrium:** SPAP irreversibility $\varepsilon > 0$ (Theorem 31)
+3. **Departure from equilibrium:** SPAP irreversibility $\varepsilon \ge \ln 2$ (Theorem 31)
 
 **Theorem K.6.19 (Baryon Asymmetry).** The cosmological baryon asymmetry is:
 $$\eta_B = (6.2 \pm 0.5) \times 10^{-10}$$
@@ -717,7 +716,7 @@ Explicitly:
 | **Nelson-Barr** | Spontaneous CP | New scalars | Model-dependent | Viable |
 | **Massless u** | θ unphysical | None | $m_u = 0$ | Ruled out |
 | **Anthropic** | Selection | None | Non-predictive | Unfalsifiable |
-| **PU (this work)** | σ-invariance + E₈ | None | $\bar{\theta} = 0$ exactly | Testable |
+| **PU (this work)** | σ-invariance + $E_8$ | None | $\bar{\theta} = 0$ exactly | Testable |
 
 **Key Distinction:** The PU solution requires no new particles or symmetries beyond the Standard Model. The same geometric structures determine:
 
@@ -739,7 +738,7 @@ The Strong CP Problem is resolved through two independent geometric mechanisms:
 | Component | Value | Mechanism | Reference |
 |:----------|:------|:----------|:----------|
 | $\theta_{\text{QCD}}$ | 0 | σ-invariance + PCE minimization | Theorem K.6.6 |
-| $\arg(\det M_q)$ | 0 | E₈ root reality + SO(3) selection | Corollary K.6.5 |
+| $\arg(\det M_q)$ | 0 | $E_8$ root reality + SO(3) selection | Corollary K.6.5 |
 | $\bar{\theta}$ | 0 | Combined | Theorem K.6.11 |
 | CKM phase $\delta$ | 66.7° | Berry holonomy (Type II) | Theorem K.6.18 |
 | $\eta_B$ | $(6.2 \pm 0.5) \times 10^{-10}$ | Baryogenesis | Theorem K.6.19 |
@@ -748,7 +747,7 @@ The Strong CP Problem is resolved through two independent geometric mechanisms:
 
 1. **σ-invariance forces θ_QCD = 0**: The anti-holomorphic involution on Gr(2,8) corresponds to CP in QFT. Physical (Hermitian) observables are σ-invariant, restricting θ to {0, π}. PCE then selects θ = 0.
 
-2. **E₈ reality forces arg(det M_q) = 0**: Yukawa couplings derive from Gaussian overlaps on the real E₈ lattice, producing real positive determinants with zero phase.
+2. **$E_8$ reality forces arg(det M_q) = 0**: Yukawa couplings derive from Gaussian overlaps on the real $E_8$ lattice, producing real positive determinants with zero phase.
 
 3. **No fine-tuning**: Both contributions vanish independently through different geometric mechanisms.
 
@@ -791,12 +790,12 @@ in excellent agreement with the observed hierarchy.
 - Connection to cosmological constant: both $v$ and $\Lambda$ emerge from the same Golay-Steiner structure via different complexity channels ($\kappa_{EW} = 38.5$ vs. $\kappa_\Lambda = 141.5$, Appendix U)
 
 **Weinberg Angle and Higgs Mass:** The same mechanism determines:
-- Weinberg angle: $\sin^2\theta_W(\mu_*) = 3/8$ from PCE isotropy requiring equal gauge kinetic stiffness **(Theorem T.14)**
-- Higgs quartic: $\lambda(\mu_*) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV
+- Weinberg angle: $\sin^2\theta_W^{(0)} = 3/8$ from PCE isotropy requiring equal gauge kinetic stiffness **(Theorem T.14)**
+- Higgs quartic: $\lambda(\mu_\lambda) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV
 
 **Phenomenological Success:**
 - Hierarchy: $v \approx 246$ GeV (input) → test internal consistency
-- $\sin^2\theta_W(M_Z) \approx 0.231$ from RG evolution (predicted from tree-level value 3/8)
+- $\sin^2\theta_W(M_Z) \approx 0.2312$ from one-loop SM RG evolution with Bures-matched boundary $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2+5Z_1)$ **(Theorem T.16, T.18)**
 - $m_H \approx 125$ GeV from metastability (predicted with zero continuously adjustable parameters)
 - Fermion mass ratios (Appendix T, Section T.25)
 
@@ -1077,7 +1076,7 @@ The following results have been derived with precise numerical predictions:
 |:-------|:------|:-------|
 | Fine-structure constant | $\alpha^{-1} \approx 137.036092 \pm 0.000050$ | Appendix Z (zero continuously adjustable parameters) |
 | Electroweak scale | $v \approx 246$ GeV from $\kappa_{EW} = 38.5$ | Appendix T, Theorem T.5 |
-| Weinberg angle | $\sin^2\theta_W(\mu_*) = 3/8$ | Appendix T, Theorem T.14 |
+| Weinberg angle | $\sin^2\theta_W^{(0)} = 3/8$ | Appendix T, Theorem T.14 |
 | Higgs mass | $m_H \approx 125$ GeV from metastability | Appendix T, Theorem T.28 |
 | Fermion mass ratios | Lepton $\mathcal{R} = 3$ to 3.8% accuracy | Appendices R, T |
 | Gravitational constant | $G$ from channel capacity, $\delta/L_P \approx 2.355$ | Appendices E, Q |
@@ -1130,7 +1129,7 @@ The framework makes precise, falsifiable predictions across multiple domains:
 
 **Consciousness and Complexity:**
 - Consciousness Complexity scaling (Section 13): Neural activity $\sim N^{0.8}$ vs. $N^{0.6}$ for random networks
-- CC threshold behavior and causality bound $\alpha_{CC,\max} < 0.5$
+- CC threshold behavior and causality bound $\alpha_{CC,max} < 0.5$
 
 **Cosmology:**
 - Modified $f\sigma_8(z)$ from $G_{\text{eff}}$ evolution

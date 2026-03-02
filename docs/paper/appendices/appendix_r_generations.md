@@ -2,7 +2,7 @@
 
 ## R.0 Introduction
 
-This appendix develops a first-principles pathway by which the threefold generation structure of the Standard Model (SM) fermion sector and the hierarchical pattern of fermion masses emerge from the topology and geometry of a fundamental internal Perspective Space associated with a Minimal Predictive Unit (MPU). The Perspective Space $\Sigma_8$ is the complete flag manifold, rigorously defined in **Section 7.2.5** (Theorem 26, formalized in Appendix M.2),
+This appendix develops a first-principles pathway by which the threefold generation structure of the Standard Model (SM) fermion sector and the hierarchical pattern of fermion masses emerge from the topology and geometry of a fundamental internal Perspective Space associated with a Minimal Predictive Unit (MPU). The Perspective Space $\Sigma_8$ is the complete flag manifold, rigorously defined in **Section 7.2.7** (Theorem 26, formalized in Appendix M.2),
 
 $$
 \Sigma_8 \cong U(8)/U(1)^8,
@@ -15,8 +15,8 @@ naturally attached to an MPU with Hilbert space $H_0 \cong \mathbb{C}^8$, the mi
 $$
 H_0 \cong H_{\mathrm{active}} \oplus H_{\mathrm{inert}} \cong \mathbb{C}^2 \oplus \mathbb{C}^6
 $$
-driven by the irreducible cost $\varepsilon = \ln 2$ of the predictive cycle. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which requires the abstract logical cost to manifest as an $a = e^\varepsilon = 2$ dimensional active kernel. The partition determines both:
-1. The **gauge structure:** $G_{\mathrm{SM}} = SU(2)_L \times SU(3)_C \times U(1)_Y$ (from Proposition G.M1, verified by Theorem G.8.4b)
+driven by the Landauer bound $\varepsilon \ge \ln 2$, saturated at the PCE-Attractor as $\varepsilon = \ln 2$, per predictive cycle. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which requires the abstract logical cost to manifest as an $a = e^\varepsilon = 2$ dimensional active kernel. The partition determines both:
+1. The **gauge structure:** $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ (from Proposition G.M1, verified by Theorem G.8.4b)
 2. The **perspective space:** $\Sigma_8 = U(8)/U(1)^8$ (complete flag manifold)
 
 The generation structure derived in this appendix thus shares a common origin with the gauge structure: both arise from the topology and symmetries of the fundamental MPU state space, as optimized by PCE. This provides a unified geometric foundation for the SM's horizontal (gauge) and vertical (generation) structures.
@@ -25,18 +25,18 @@ The generation structure derived in this appendix thus shares a common origin wi
 
 1. **Topological (Sections R.1-R.4):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent integer topological charges. Combined with gauge-topology correspondence and anomaly cancellation, this uniquely selects three generations with family charges $\{a, -a, 0\}$.
 
-2. **Geometric (Sections R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared E$_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (for roots normalized by $|r|^2 = 2$, so $r_i\cdot r_j \in \{2,1,0,-1,-2\}$ and $|r_i-r_j|^2 = 4 - 2\,r_i\cdot r_j$) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a second independent three-fold structure. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
+2. **Geometric (Sections R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (for roots normalized by $|r|^2 = 2$, so $r_i\cdot r_j \in \{2,1,0,-1,-2\}$ and $|r_i-r_j|^2 = 4 - 2\,r_i\cdot r_j$) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a second independent three-fold structure. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
 
 **Mass Hierarchy from $E_8$ Geometry:** Beyond counting generations, this appendix shows how the hierarchical pattern of fermion masses arises from geodesic distances between generation vacua in the $E_8$ root system. The allowed squared distances $d^2 \in \{2, 4, 6, 8\}$ between $E_8$ roots lead to a discrete geometric invariant with zero continuously adjustable parameters:
 $$
 \mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}
 $$
-This $\xi$-independent ratio provides sharp, falsifiable predictions. In the charged lepton sector, the observed value $\mathcal{R}_\ell \approx 2.889$ matches the discrete value 3 to within 3.8%, providing strong phenomenological support.
+This $\xi$-independent ratio (with $\xi$ defined in Section R.5.3) provides sharp, falsifiable predictions. In the charged lepton sector, the observed value $\mathcal{R}_\ell \approx 2.889$ matches the discrete value 3 to within 3.8%, providing strong phenomenological support.
 
 **Reading Guide:**
 - **For topology only:** Sections R.1-R.3 (standard flag manifold results)
 - **For generation counting:** Sections R.1, R.3, R.4 (dual mechanisms)
-- **For mass hierarchy:** Sections R.5-R.7 (E₈ geometry, Yukawa derivation)
+- **For mass hierarchy:** Sections R.5-R.7 ($E_8$ geometry, Yukawa derivation)
 - **For phenomenology:** Section R.6 (experimental comparison)
 - **For complete derivation:** Read sequentially R.0-R.9
 
@@ -59,7 +59,7 @@ To aid clarity, we summarize the key mathematical objects and their notation:
 | $\pi_2(\Sigma_8)$ | Second homotopy group, $\mathbb{Z}^7$ | Theorem R.1.1 |
 | $\omega_i$ | Generators of $H^2(\Sigma_8;\mathbb{Z})$ | Eq. R.4 |
 | $q = (q_1,\ldots,q_7)$ | Topological charge vector | Eq. R.6 |
-| $G_{\mathrm{SM}}$ | SM gauge group, $SU(3) \times SU(2) \times U(1)$ | Appendix G.8 |
+| $G_{\mathrm{SM}}$ | SM gauge group, $SU(3)_C \times SU(2)_L \times U(1)_Y$ | Appendix G.8 |
 | $L_{\mathrm{light}}$ | Light sublattice (non-Abelian neutral) | Definition R.3.2 |
 | $U(1)_F$ | Emergent family symmetry | Section R.4 |
 | $F(q)$ | Family charge of sector $q$ | Theorem R.3.4 |
@@ -82,7 +82,7 @@ To aid clarity, we summarize the key mathematical objects and their notation:
 
 Let $\Sigma_8 := U(8)/U(1)^8$ be the complete flag manifold of $\mathbb{C}^8$. It is a compact, simply connected Kähler manifold of complex dimension $28$ and real dimension $56$.
 
-### R.1.1 Theorem R.1.1 (Homotopy of Σ8).
+### R.1.1 Theorem R.1.1 (Homotopy of $\Sigma_8$).
 
 The Perspective Space $\Sigma_8$ is simply connected and its second homotopy group is $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$.
 
@@ -127,31 +127,31 @@ $$
 
 A topological sector is specified by a charge vector $q = (q_1,\dots,q_7)\in\mathbb{Z}^7$. The configuration space of the theory decomposes into disconnected sectors labeled by these charges.
 
-## R.2 E₈ as Information-Optimal Geometry in Eight Dimensions
+## R.2 $E_8$ as Information-Optimal Geometry in Eight Dimensions
 
 ### R.2.1 Motivation and Optimality
 
-The relevant state-space for a single MPU includes pure states ($\mathbb{CP}^7$) and the perspective space $\Sigma_8 = U(8)/U(1)^8$ governing measurements and transitions. Finite resources (Postulate 3) favor discrete coordinatizations that maximize packing density, minimize distortion, and maximize symmetry for uniform local neighborhoods.
+The relevant state-space for a single MPU includes pure states ($\mathbb{CP}^7$) and the perspective space $\Sigma_8 = U(8)/U(1)^8$ governing measurements and transitions. Finite physical resources and PCE optimization favor discrete coordinatizations that maximize packing density, minimize distortion, and maximize symmetry for uniform local neighborhoods.
 
-In eight dimensions, the **E₈ root system** emerges as the natural coordinatization of the 8-dimensional real subspace (weight space / Cartan subalgebra) for several converging reasons:
+In eight dimensions, the **$E_8$ root system** emerges as the natural coordinatization of the 8-dimensional real subspace (weight space / Cartan subalgebra) for several converging reasons:
 
 1. **Packing optimality:** The $E_8$ lattice achieves the optimal sphere packing density in 8 dimensions (Viazovska 2017). This supplies a canonical discrete scaffold on the 8D real subspace that can organize internal "positions" efficiently.
 
-2. **Division algebra structure:** The framework's $d_0 = 8$ is related to octonionic structure via the Radon-Hurwitz theorem (**Appendix Z, Theorem Z.3**), which constrains division algebras to dimensions $\{1, 2, 4, 8\}$. **Appendix Z (Corollary Z.2)** establishes the octonionic connection: the existence of octonions (dimension 8) is tied to the maximal value $\rho(8) = 8$ in the Radon-Hurwitz function, providing a division-algebraic foundation for $d_0 = 8$. The E₈ root system naturally encodes this octonionic structure.
+2. **Division algebra structure:** The framework's $d_0 = 8$ is related to octonionic structure via the Radon-Hurwitz theorem (**Appendix Z, Theorem Z.3**), which constrains division algebras to dimensions $\{1, 2, 4, 8\}$. **Appendix Z (Corollary Z.2)** establishes the octonionic connection: the existence of octonions (dimension 8) is tied to the maximal value $\rho(8) = 8$ in the Radon-Hurwitz function, providing a division-algebraic foundation for $d_0 = 8$. The $E_8$ root system naturally encodes this octonionic structure.
 
-3. **Maximal symmetry:** The 240 roots of E₈ provide maximal symmetry for uniform local neighborhoods, consistent with PCE's preference for high-symmetry configurations that minimize descriptive complexity.
+3. **Maximal symmetry:** The 240 roots of $E_8$ provide maximal symmetry for uniform local neighborhoods, consistent with PCE's preference for high-symmetry configurations that minimize descriptive complexity.
 
-**Conclusion:** E₈ provides a privileged, symmetry-rich, discrete internal geometry consistent with PCE motivations. We adopt E₈ as the canonical internal coordinate system on the effective 8D real subspace.
+**Conclusion:** $E_8$ provides a privileged, symmetry-rich, discrete internal geometry consistent with PCE motivations. We adopt $E_8$ as the canonical internal coordinate system on the effective 8D real subspace.
 
-**Remark R.2.0: E₈ Uniqueness from Information-Theoretic Optimality.**
+**Remark R.2.0: $E_8$ Uniqueness from Information-Theoretic Optimality.**
 
-Several factors single out E₈ as the natural geometric structure for the 8-dimensional MPU state space, all deriving from information-theoretic optimality principles consistent with PCE:
+Several factors single out $E_8$ as the natural geometric structure for the 8-dimensional MPU state space, all deriving from information-theoretic optimality principles consistent with PCE:
 
 1. **Rank Matching:** $E_8$ has rank 8, matching the 8-dimensional Cartan subalgebra (weight space) relevant to $U(8)$.
 
-2. **Sphere Packing Optimality:** The E₈ lattice achieves the optimal sphere packing density in 8 dimensions (Viazovska 2017), minimizing wasted volume. This aligns with PCE's drive for maximal information density per unit volume, as optimal packing maximizes the number of distinguishable states in a bounded region.
+2. **Sphere Packing Optimality:** The $E_8$ lattice achieves the optimal sphere packing density in 8 dimensions (Viazovska 2017), minimizing wasted volume. This aligns with PCE's drive for maximal information density per unit volume, as optimal packing maximizes the number of distinguishable states in a bounded region.
 
-3. **Kissing Number Maximization:** E₈ has kissing number 240, the maximum for any lattice in 8 dimensions. This maximizes local distinguishability—each lattice point contacts exactly 240 nearest neighbors, providing the densest local error-correction structure. Higher kissing numbers correspond to more robust error correction under PCE.
+3. **Kissing Number Maximization:** $E_8$ has kissing number 240, the maximum for any lattice in 8 dimensions. This maximizes local distinguishability—each lattice point contacts exactly 240 nearest neighbors, providing the densest local error-correction structure. Higher kissing numbers correspond to more robust error correction under PCE.
 
 4. **Radon-Hurwitz Connection and Cayley Integers:** The existence of the octonions (the unique 8-dimensional normed division algebra) is tied to dimension 8 being a Radon-Hurwitz dimension (**Theorem Z.3**, Appendix Z). The $E_8$ lattice is isomorphic to the ring of Cayley integers (integral octonions), defined as the $\mathbb{Z}$-span of $\{1, e_1, \ldots, e_7, \omega\}$ where $\omega = \tfrac{1}{2}(1 + e_1 + \cdots + e_7)$ and $\{e_i\}$ are the standard octonion units (Conway & Sloane 1999). The norm form $N(x) = x\bar{x}$ on the Cayley integers is positive-definite with minimum value 1 on non-zero elements, and the set of unit-norm elements $\{x : N(x) = 1\}$ has cardinality exactly 240, matching the $E_8$ root count. This provides a direct algebraic bridge between the division algebra structure underlying $d_0 = 8$ and the geometric optimality of $E_8$.
 
@@ -199,38 +199,38 @@ Among all simple Lie algebras of rank 8, only $E_8$ satisfies the full set of PC
 
 Thus $E_8$ is singled out by the conjunction of (i) uniqueness as the even unimodular lattice in dimension 8 and (ii) provably optimal packing density in dimension 8. We therefore adopt $E_8$ as the canonical discrete scaffold on the effective 8D real subspace.
 
-### R.2.2 E₈ Root System Structure
+### R.2.2 $E_8$ Root System Structure
 
-The E₈ root system in $\mathbb{R}^8$ consists of 240 vectors of squared length 2:
+The $E_8$ root system in $\mathbb{R}^8$ consists of 240 vectors of squared length 2:
 
 - **Type I (112 roots):** All permutations of $(\pm 1, \pm 1, 0, 0, 0, 0, 0, 0)$ with all possible sign combinations. There are $\binom{8}{2} = 28$ ways to choose two positions, and 4 sign patterns $\{(+,+), (+,-), (-,+), (-,-)\}$ for each choice, giving $28 \times 4 = 112$ roots.
 
 - **Type II (128 roots):** All sign patterns of $(\pm 1/2, \pm 1/2, \ldots, \pm 1/2)$ with an even number of minus signs. There are $2^8 = 256$ total sign patterns; requiring even parity gives $256/2 = 128$ roots.
 
-**Inner products and distances:** For distinct E₈ roots $r, s$ with $|r|^2 = |s|^2 = 2$:
+**Inner products and distances:** For distinct $E_8$ roots $r, s$ with $|r|^2 = |s|^2 = 2$:
 - Inner products: $r \cdot s \in \{-1, 0, 1\}$ for $r \neq \pm s$
 - Squared distances: $|r - s|^2 = 4 - 2r \cdot s \in \{2, 4, 6\}$
 - For antipodal roots $s = -r$: $|r - s|^2 = 8$
 
-**Discrete distance set:** The allowed squared distances between E₈ roots are:
+**Discrete distance set:** The allowed squared distances between $E_8$ roots are:
 $$
 d^2 \in \{2, 4, 6, 8\}
 \tag{R.7}
 $$
 
-**Existence of triads:** For any chosen "heaviest" root $r_3$, there exist roots $r_1, r_2$ such that:
+**Existence of neighbors:** For any chosen "heaviest" root $r_3$, there exist roots $r_2, r_0, r_1$ such that:
 - $r_3 \cdot r_2 = +1$ (distance² = 2)
-- $r_3 \cdot r_1 = -1$ (distance² = 6)
 - $r_3 \cdot r_0 = 0$ (distance² = 4)
+- $r_3 \cdot r_1 = -1$ (distance² = 6)
 
-This follows from the simply-laced structure and the combinatorics of sign patterns in Type II roots. Consequently, for any chosen "heaviest" root $r_3$, one can select $r_1, r_2$ such that $d^2_{31}$ and $d^2_{32}$ take distinct values in $\{2, 4, 6, 8\}$, enabling nontrivial discrete ratios.
+This follows from the simply-laced structure and the combinatorics of Type II roots: given any Type II root, flipping 2 signs gives a root with dot product +1, flipping 4 signs gives dot product 0, and flipping 6 signs gives dot product -1 (preserving even parity of minus signs).
 
-### R.2.3 Pedagogical Example: E₈ Root Distances and Mass Ratios
+### R.2.3 Pedagogical Example: $E_8$ Root Distances and Mass Ratios
 
-To make the E₈ geometry concrete, we provide an explicit example of root distances and their implications for mass ratios.
+To make the $E_8$ geometry concrete, we provide an explicit example of root distances and their implications for mass ratios.
 
-**Example R.2.1 (Squared Distances Between E₈ Roots).**
-Consider three roots in the E₈ root system expressed in the standard orthonormal basis of $\mathbb{R}^8$:
+**Example R.2.1 (Squared Distances Between $E_8$ Roots).**
+Consider three roots in the $E_8$ root system expressed in the standard orthonormal basis of $\mathbb{R}^8$:
 $$
 \begin{align}
 \alpha_1 &= (1, -1, 0, 0, 0, 0, 0, 0), \\
@@ -248,10 +248,10 @@ d^2(\alpha_2, \alpha_3) &= \left|\left(-\tfrac{1}{2}, \tfrac{1}{2}, -\tfrac{3}{2
 \end{align}
 $$
 
-All values lie in the allowed set $\{2, 4, 6, 8\}$. These are the **only** possible squared distances between E₈ roots—a discrete geometric constraint arising from the root system structure with no continuous parameters.
+All values lie in the allowed set $\{2, 4, 6, 8\}$. These are the **only** possible squared distances between $E_8$ roots—a discrete geometric constraint arising from the root system structure with no continuous parameters.
 
 **Mass Ratio Implication:**
-If three generation vacua $v_1, v_2, v_3$ in the Perspective Space project onto E₈ roots with these relative separations, the mass ratio invariant becomes:
+If three generation vacua $v_1, v_2, v_3$ in the Perspective Space project onto $E_8$ roots with these relative separations, the mass ratio invariant becomes:
 $$
 \mathcal{R} = \frac{d^2(v_3, v_1)}{d^2(v_3, v_2)} = \frac{6}{4} = \frac{3}{2}.
 $$
@@ -410,7 +410,7 @@ with $L_{\mathrm{block}}>0$ and $L_{\mathrm{mix}}(N)$ nondecreasing in $N$ (addi
 
 ## R.4 Three Generations from Dual Mechanisms
 
-This section demonstrates that the three-generation structure is multiply over-determined through two independent pathways: topological (from $\pi_2$ anomaly cancellation) and geometric (from E₈/Leech lattice structure). The convergence of these mechanisms provides strong evidence for the necessity of three generations.
+This section demonstrates that the three-generation structure is multiply over-determined through two independent pathways: topological (from $\pi_2$ anomaly cancellation) and geometric (from $E_8$/Leech lattice structure). The convergence of these mechanisms provides strong evidence for the necessity of three generations.
 
 ### R.4.1 Topological Pathway: Anomaly Cancellation
 
@@ -432,7 +432,7 @@ This section demonstrates that the three-generation structure is multiply over-d
 
 This topological mechanism derives three generations from first principles with zero continuously adjustable parameters.
 
-### R.4.2 Geometric Pathway: E₈/Leech Lattice Structure
+### R.4.2 Geometric Pathway: $E_8$/Leech Lattice Structure
 
 **The 24-Dimensional Leech Lattice:**
 
@@ -446,19 +446,19 @@ Remarkably, the number 24 appears as the interface mode count $M = 24$ derived i
 2. **Geometric:** $\Lambda_{24}$ optimal packing in 24D (Cohn-Kumar-Miller-Radchenko-Viazovska)
 3. **Algebraic:** Extended binary Golay code of length 24 (dimension 12) (Conway & Sloane 1999; **Appendix Z, Theorem Z.13**)
 
-**E₈ Triple Structure in 24 Dimensions:**
+**$E_8$ Triple Structure in 24 Dimensions:**
 
-The connection between the Leech lattice and E₈ is more subtle than a direct product. The key observations are:
+The connection between the Leech lattice and $E_8$ is more subtle than a direct product. The key observations are:
 
-1. **Scaled E₈ Sublattice:** The Leech lattice $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ (scaling by $\sqrt{2}$ ensures minimum norm 4, matching Leech's rootless property). This sublattice has index $2^{12} = 4096$ in $\Lambda_{24}$.
+1. **Scaled $E_8$ Sublattice:** The Leech lattice $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ (scaling by $\sqrt{2}$ ensures minimum norm 4, matching Leech's rootless property). This sublattice has index $2^{12} = 4096$ in $\Lambda_{24}$.
 
 2. **Niemeier vs. Leech:** The direct sum $E_8 \oplus E_8 \oplus E_8$ (without scaling) is a different even unimodular 24D lattice—a Niemeier lattice with $240+240+240 = 720$ roots (minimum norm 2). This is NOT isometric to the Leech lattice, which is rootless (minimum norm 4).
 
-3. **Gluing Construction:** The Leech lattice can be obtained from the scaled triple $\sqrt{2}E_8^3$ via a gluing construction involving cosets and the extended binary Golay code. The precise construction is technical but establishes that optimal 24D packing naturally exhibits **three-fold E₈ structure** when properly scaled.
+3. **Gluing Construction:** The Leech lattice can be obtained from the scaled triple $\sqrt{2}E_8^3$ via a gluing construction involving cosets and the extended binary Golay code. The precise construction is technical but establishes that optimal 24D packing naturally exhibits **three-fold $E_8$ structure** when properly scaled.
 
-**Physical Interpretation:** The appearance of three E₈ factors (scaled appropriately) in the unique optimal 24-dimensional packing provides independent geometric support for three generations. The number 3 emerges from optimal information geometry, not from arbitrary choice.
+**Physical Interpretation:** The appearance of three $E_8$ factors (scaled appropriately) in the unique optimal 24-dimensional packing provides independent geometric support for three generations. The number 3 emerges from optimal information geometry, not from arbitrary choice.
 
-**Note:** Throughout this appendix, when we refer to "E₈ root distances" for generation vacua, we work in the unscaled E₈ root system with minimum norm 2. The connection to Leech involves the scaled version $\sqrt{2}E_8$, but the discrete distance ratios remain unchanged under uniform scaling.
+**Note:** Throughout this appendix, when we refer to "$E_8$ root distances" for generation vacua, we work in the unscaled $E_8$ root system with minimum norm 2. The connection to Leech involves the scaled version $\sqrt{2}E_8$, but the discrete distance ratios remain unchanged under uniform scaling.
 
 **Remark R.4.1: Modular Forms and the Number 24.**
 The appearance of $M = 24$ in the interface mode count (**Appendix Z**) and the Leech lattice dimension is not coincidental. The number 24 has a unique status in mathematics due to modular forms: the Dedekind eta function $\eta(\tau)^{24} = \Delta(\tau)$ achieves weight 12, the natural weight for modular forms determined by the first Chern class of the canonical bundle over modular curves. This connects:
@@ -466,7 +466,7 @@ The appearance of $M = 24$ in the interface mode count (**Appendix Z**) and the 
 - **Topology:** Ramification index gives weight 12
 - **Analysis:** Modular invariance under $SL(2,\mathbb{Z})$ 
 - **Geometry:** Optimal sphere packing in 24 dimensions (Leech lattice)
-- **Algebra:** Three copies of E₈ (from division algebras: $3 \times 8 = 24$)
+- **Algebra:** Three copies of $E_8$ (from division algebras: $3 \times 8 = 24$)
 - **Information theory:** Interface modes $2 \times 2 \times 6 = 24$ (this appendix)
 
 The convergence of these independent mathematical structures at 24 suggests deep underlying unity between optimization (PCE), consistency (anomaly cancellation), and symmetry (exceptional groups).
@@ -476,7 +476,7 @@ The convergence of these independent mathematical structures at 24 suggests deep
 The number 3 appears from three independent optimality criteria:
 
 1. **Topological:** $\pi_2(\Sigma_8)$ anomaly cancellation → $\{a,-a,0\}$ pattern (Section R.4.1)
-2. **Geometric:** Leech/E₈ triple embedding → 3 E₈ factors (this section)
+2. **Geometric:** Leech/$E_8$ triple embedding → 3 $E_8$ factors (this section)
 3. **Information:** $M = 24$ factorization supports natural grouping structure (**Appendix Z, Section Z.12**)
 
 The convergence of these three mechanisms makes the three-generation structure multiply over-determined.
@@ -485,7 +485,7 @@ The convergence of these three mechanisms makes the three-generation structure m
 
 **Mechanism 1 (Topological):** From the homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$, gauge embedding, and anomaly cancellation (Theorems R.3.1, R.3.4), we derive $N=3$ with family charges $\{a, -a, 0\}$ as the unique minimal solution permitting CP violation. This derivation uses only topology, representation theory, and anomaly polynomials—no geometry.
 
-**Mechanism 2 (Geometric):** From optimal sphere packing in 24 dimensions (Cohn, Kumar, Miller, Radchenko & Viazovska 2017), the Leech lattice $\Lambda_{24}$ naturally decomposes into three scaled E₈ sublattices. The number 24 itself emerges from modular form theory (Dedekind eta weight structure) and interface mode counting (**Appendix Z**). The three-fold structure arises from the factorization $24 = 3 \times 8$ where 8 is the maximal division algebra dimension (Radon-Hurwitz). This mechanism uses only packing theory, lattice theory, and modular forms—no homotopy theory.
+**Mechanism 2 (Geometric):** From optimal sphere packing in 24 dimensions (Cohn, Kumar, Miller, Radchenko & Viazovska 2017), the Leech lattice $\Lambda_{24}$ naturally decomposes into three scaled $E_8$ sublattices. The number 24 itself emerges from modular form theory (Dedekind eta weight structure) and interface mode counting (**Appendix Z**). The three-fold structure arises from the factorization $24 = 3 \times 8$ where 8 is the maximal division algebra dimension (Radon-Hurwitz). This mechanism uses only packing theory, lattice theory, and modular forms—no homotopy theory.
 
 **Mechanism 3 (Information-theoretic):** From the QFI mode count $M = 2ab = 24$ with $a=2$ (Landauer pointer) and $b=6$ (inactive complement), the factorization $24 = 8 \times 3$ naturally suggests three sectors of dimension 8. This aligns with $d_0 = 8$ (MPU dimension) and three-fold replication. The appearance is natural from the capacity saturation structure (**Appendix Z, Theorem Z.6**).
 
@@ -507,9 +507,9 @@ This convergence reflects a single optimization principle—PCE—operating at d
 
 ---
 
-#### R.4.2.1.1 E₈ as PCE-Optimal Lattice Structure in Eight Dimensions
+#### R.4.2.1.1 $E_8$ as PCE-Optimal Lattice Structure in Eight Dimensions
 
-**Theorem R.4.3 (E₈ as Optimal Lattice Structure in Eight Dimensions).**
+**Theorem R.4.3 ($E_8$ as Optimal Lattice Structure in Eight Dimensions).**
 
 Let $d_0 = 8$ be the MPU Hilbert space dimension (Theorem 23). The unique even unimodular lattice in $d_0 = 8$ dimensions is $E_8$.
 
@@ -685,7 +685,7 @@ The optimality of the Leech lattice for sphere packing in 24 dimensions was prov
 
 #### R.4.2.1.5 Compatibility with M = 24 Factorization
 
-**Proposition R.4.7 (Compatibility of E₈ Triple Structure with M = 24).**
+**Proposition R.4.7 (Compatibility of $E_8$ Triple Structure with M = 24).**
 
 The Leech lattice contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$. This three-fold structure is compatible with the factorization $24 = 3 \times d_0$ where $d_0 = 8$.
 
@@ -831,7 +831,7 @@ $$
 \text{Golay code} \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(D)=24} D=4 \xrightarrow{\text{local}} \text{24-cell} \xrightarrow{\text{network}} \text{4D spacetime}
 $$
 
-The Golay code's error-correction properties (Theorem R.4.4) suggest a robustness mechanism: the same 12+12 partition that optimizes information protection may also constrain local geometric realizations toward noise-tolerant configurations. This is a heuristic stability argument; quantitative stability against explicit fluctuation/noise models would require specifying the dynamical perturbation model and showing that the induced geometry remains within the relevant regularity class.
+The Golay code's distance criterion is exactly the lattice-stability criterion under the binary gluing correspondence: minimum code distance $d=8$ is equivalent to absence of norm-2 vectors in the glued lattice (Proposition R.4.2a). Hence PCE selection for optimal error correction on the $M=24$ interface simultaneously enforces geometric stability (minimum norm $4$) of the corresponding vacuum lattice, without an additional dynamical assumption.
 
 ### R.4.2.3 Golay Distance and Lattice Stability
 
@@ -843,9 +843,9 @@ A norm-$2$ vector (“root”) in an overlattice must arise from a nontrivial gl
 
 For length 24 and dimension 12, coding bounds imply $d\le 8$ (Theorem R.4.4), and the unique code attaining $d=8$ is the extended binary Golay code $\mathcal{G}_{24}$. Hence $d=8$ is necessary and sufficient for the (even unimodular) gluing of $L_0$ to yield a rootless lattice, and this glued lattice is the Leech lattice $\Lambda_{24}$. ∎
 
-**Corollary R.4.2b (Error Correction Implies Geometric Stability).** The Golay code's information-theoretic optimality (maximum error correction for length 24, rate 1/2) directly *causes* the Leech lattice's geometric optimality (unique rootless even unimodular lattice in 24 dimensions). This is not coincidence but logical entailment: PCE optimization of error correction automatically yields PCE optimization of packing geometry.
+**Corollary R.4.2b (Error Correction Implies Geometric Stability).** The Golay code's information-theoretic optimality (maximum error correction for length 24, rate 1/2) entails the Leech lattice's geometric optimality (unique rootless even unimodular lattice in 24 dimensions): under the gluing correspondence, PCE optimization of error correction yields PCE optimization of packing geometry.
 
-*Proof.* By Proposition R.4.2a, rootlessness requires $d \geq 8$. By Theorem Z.13, $d = 8$ is the maximum achievable for $[24, 12]$ codes, uniquely attained by the Golay code. Therefore:
+*Proof.* By Proposition R.4.2a, rootlessness requires $d \ge 8$. By Theorem R.4.4, any $[24,12,d]$ code satisfies $d \le 8$, and the unique code attaining $d=8$ is the extended binary Golay code $\mathcal{G}{24}$. By Theorem Z.13, PCE selects this optimal code on the $M=24$ interface. Therefore:
 $$\text{PCE-optimal error correction} \Rightarrow d = 8 \Rightarrow \text{rootlessness} \Rightarrow \Lambda_{24}\ (\text{hence optimal 24D packing})$$
 Each implication is a theorem; their composition is logical necessity. ∎
 
@@ -897,7 +897,7 @@ Each level selects a unique object from a finite set, with the selections interl
 
 ### R.4.2.5 Automorphism Group and Symmetry Structure
 
-**Proposition R.4.4 (Automorphism Group).** See Proposition R.4.8. ∎
+**Proposition R.4.4 (Automorphism Group).** The stabilizer in $\mathrm{Aut}(\Lambda_{24})$ of a coordinate frame has the form $2^{12}:M_{24}$, where $M_{24}=\mathrm{Aut}(\mathcal{G}_{24})$. This follows from Proposition R.4.8 (Step 4). ∎
 
 **Remark R.4.2b: Physical Status of Sporadic Symmetries.** The emergence of sporadic simple groups ($\text{Co}_0$, $\text{Co}_1$, $M_{24}$) as automorphism groups of the framework's fundamental structures is mathematically necessary but physically subtle. These groups act on the 24-dimensional mode space, not directly on the 4-dimensional emergent spacetime. Physical observables in emergent spacetime reflect only those symmetries compatible with the dimensional reduction $24 \to 4$ via the mode-channel correspondence.
 
@@ -965,9 +965,9 @@ The dual derivation provides robust evidence for three generations:
 
 **Phenomenological Success:** The observed three-generation structure of the Standard Model is precisely what these mechanisms predict, with no free parameters adjusted to match observation.
 
-## R.5 Mass Hierarchy from E₈ Geometry
+## R.5 Mass Hierarchy from $E_8$ Geometry
 
-Having established why there are three generations, we now derive why they have hierarchical masses. The key insight is that Yukawa couplings arise from overlap integrals of wavepackets localized at different points in the E₈ root system, with geodesic distances determined by the discrete E₈ geometry.
+Having established why there are three generations, we now derive why they have hierarchical masses. The key insight is that Yukawa couplings arise from overlap integrals of wavepackets localized at different points in the $E_8$ root system, with geodesic distances determined by the discrete $E_8$ geometry.
 
 ### R.5.1 Kähler Geometry and PCE-Compatible Potential
 
@@ -977,7 +977,7 @@ K(Z, Z^\dagger) = \sum_{k=1}^7 \log\det(I_k + Z_k Z_k^\dagger),
 $$
 with metric $g = i\partial\bar\partial K$, where $Z_k$ are the coordinate matrices parametrizing the flag.
 
-The $U(8)$ moment map evaluated at a point $x \in \Sigma_8$ is $\mu_{U(8)}(x) = U(x)\Lambda U(x)^\dagger$ where $\Lambda = \mathrm{diag}(\lambda_1,\dots,\lambda_8)$ with $\lambda_i - \lambda_{i+1} = \alpha_i > 0$. A PCE-symmetric choice is $\alpha_i = 1$ for all $i$.
+The $U(8)$ moment map evaluated at a point $x \in \Sigma_8$ is $\mu_{U(8)}(x) = U(x)\Lambda U(x)^\dagger$ where $\Lambda = \mathrm{diag}(\lambda_1,\dots,\lambda_8)$ with $\lambda_i - \lambda_{i+1} = \delta_i > 0$. A PCE-symmetric choice is $\delta_i = 1$ for all $i$.
 
 Projecting to $\mathfrak{g}_{\rm SM}$ gives $\mu_{G_{\rm SM}} = \mathrm{pr}_{\mathfrak{g}_{\rm SM}} \mu_{U(8)}$. A PCE-compatible potential on $\Sigma_8$ is:
 $$
@@ -992,7 +992,7 @@ V_S = \sum_{\sigma \in \mathcal{F}} e^{-\langle B, \Lambda_\sigma \rangle}
 $$
 where $\mathcal{F}$ is the set of torus-fixed points (Schubert cells), $\Lambda_\sigma$ is the diagonal matrix at fixed point $\sigma$, and $B$ is a diagonal matrix encoding the topological sector. This function has unique minimum at the fixed point where $\langle B, \Lambda_\sigma \rangle$ is maximal.
 
-### R.5.2 Generation Vacua and E₈ Root Distances
+### R.5.2 Generation Vacua and $E_8$ Root Distances
 
 Each topological sector $q \in L_{\mathrm{light}}$ selects a preferred vacuum by adding a small linear pinning term:
 $$
@@ -1006,21 +1006,21 @@ Minimizing $V_q = V + \eta V_B$ over fixed points selects distinct minima. For t
 - $p_2$: vacuum for generation 2 (family charge $-a$)  
 - $p_3$: vacuum for generation 3 (family charge $0$)
 
-**Connection to E₈ Root System:**
+**Connection to $E_8$ Root System:**
 
-The effective 8D real subspace (Cartan subalgebra) admits an E₈ coordinatization (Section R.2). Each vacuum $p_g$ corresponds to a point in this E₈ root space. For PCE-optimal configurations, these points lie at or near E₈ roots.
+The effective 8D real subspace (Cartan subalgebra) admits an $E_8$ coordinatization (Section R.2). Each vacuum $p_g$ corresponds to a point in this $E_8$ root space. For PCE-optimal configurations, these points lie at or near $E_8$ roots.
 
-The charge pattern $\{a, -a, 0\}$ exhibits $\mathbb{Z}_2$ symmetry under $p_1 \leftrightarrow p_2$ exchange. In the absence of symmetry-breaking effects, this would enforce $d_\Sigma(p_1, p_3) = d_\Sigma(p_2, p_3)$. However, topological sector selection via the pinning term $V_B(q)$ and the discrete E₈ geometry can break this degeneracy, allowing distinct distances:
+The charge pattern $\{a, -a, 0\}$ exhibits $\mathbb{Z}_2$ symmetry under $p_1 \leftrightarrow p_2$ exchange. In the absence of symmetry-breaking effects, this would enforce $d_\Sigma(p_1, p_3) = d_\Sigma(p_2, p_3)$. However, topological sector selection via the pinning term $V_B(q)$ and the discrete $E_8$ geometry can break this degeneracy, allowing distinct distances:
 $$
 d^2_{31} \neq d^2_{32}
 \tag{R.13}
 $$
 
-This symmetry breaking is essential for generating the non-trivial mass ratio invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that distinguishes between the first two generations. The discrete values of $\mathcal{R}$ are determined by which pairs of E₈ roots are selected for $r_1$ and $r_2$ relative to $r_3$.
+This symmetry breaking is essential for generating the non-trivial mass ratio invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that distinguishes between the first two generations. The discrete values of $\mathcal{R}$ are determined by which pairs of $E_8$ roots are selected for $r_1$ and $r_2$ relative to $r_3$.
 
-**E₈ Root Distances:**
+**$E_8$ Root Distances:**
 
-If we identify the vacuum positions with E₈ roots $r_1, r_2, r_3$, then the squared geodesic distances correspond to squared E₈ root separations:
+If we identify the vacuum positions with $E_8$ roots $r_1, r_2, r_3$, then the squared geodesic distances correspond to squared $E_8$ root separations:
 $$
 d^2_{\Sigma}(p_g, p_{g'}) \propto |r_g - r_{g'}|^2
 $$
@@ -1062,7 +1062,7 @@ $$
 Y_{gg'} \propto \exp\left[ -\frac{1}{2\xi_{\mathrm{eff}}^2}\left(d^2_{\Sigma}(p_g, p_3) + d^2_{\Sigma}(p_{g'}, p_3) + \beta d^2_{\Sigma}(p_g, p_{g'})\right)\right],
 \tag{R.15}
 $$
-where $\xi_{\mathrm{eff}}$ is an effective width combining $\xi$ and $\xi_H$, and $\beta$ is a geometrical factor depending on the relative Hessian curvatures. The squared Bures distance $d_B^2$ on $Gr(2,8)$ relates to the $E_8$ root distance $d_{E_8}^2$ via the interface mode geometry: for small SU(2) rotations of angle $u$ in a single AB block, $d_B^2 = u^2/4$ while $d_{E_8}^2 = 2u^2$, giving $d_B^2 = (1/8) d_{E_8}^2$. This factor of $1/8$ arises from the Bures metric normalization $g_B = F_Q/4$, which gives $d_B^2 = u^2/4$, combined with the $E_8$ root normalization $\|r\|^2 = 2$, which gives $d_{E_8}^2 = 2u^2$ (Lemma T.41.4).
+where $\xi_{\mathrm{eff}}$ is an effective width combining $\xi$ and $\xi_H$, and $\beta$ is a geometrical factor depending on the relative Hessian curvatures. The squared Bures distance $d_B^2$ on $\text{Gr}(2,8)$ relates to the $E_8$ root distance $d_{E_8}^2$ via the interface mode geometry: for small SU(2) rotations of angle $u$ in a single AB block, $d_B^2 = u^2/4$ while $d_{E_8}^2 = 2u^2$, giving $d_B^2 = (1/8) d_{E_8}^2$. This factor of $1/8$ arises from the Bures metric normalization $g_B = F_Q/4$, which gives $d_B^2 = u^2/4$, combined with the $E_8$ root normalization $\|r\|^2 = 2$, which gives $d_{E_8}^2 = 2u^2$ (Lemma T.41.4).
 
 For simplicity, we parametrize this as:
 $$
@@ -1078,7 +1078,7 @@ This geometry naturally produces hierarchical masses:
 - Off-diagonal couplings $Y_{12}, Y_{13}, Y_{23}$ suppressed by combinations of distances
 - Diagonal dominance leads to mass eigenstates approximately aligned with generation basis
 
-With typical E₈ distances $d^2 \in \{2, 4, 6, 8\}$ and $\alpha_1, \alpha_2 \sim O(1)$ in natural units, this produces the observed hierarchy $m_3 : m_2 : m_1 \sim 1 : 10^{-2} : 10^{-4}$ for charged leptons or quarks.
+With typical $E_8$ distances $d^2 \in \{2, 4, 6, 8\}$ and $\alpha_1, \alpha_2 \sim O(1)$ in natural units, this produces the observed hierarchy $m_3 : m_2 : m_1 \sim 1 : 10^{-2} : 10^{-4}$ for charged leptons or quarks.
 
 ### R.5.4 The ξ-Free Mass Invariant
 
@@ -1088,15 +1088,15 @@ $$
 \tag{R.16}
 $$
 
-From the Gaussian overlap formula (R.15), assuming $r_H \approx r_3$ (Higgs aligned with heaviest generation) and dominant contributions from generation-3 separation terms, the diagonal Yukawa couplings behave as:
+From the Gaussian overlap formula (R.15), with Higgs aligned at $p_3$ (Section R.5.3) and taking diagonal entries ($g=g'$), we obtain
 $$
-Y_g \sim Y_3 \exp\left(-2\alpha_1 d^2_{3g}\right)
+Y_g := Y_{gg} = Y_{33}\exp\left(-2\alpha_1 d^2_{3g}\right)\qquad (g\in\{1,2,3\}),
 $$
-for $g = 1, 2$, where we neglect smaller corrections from $\alpha_2$ terms.
+since $d_\Sigma^2(p_g,p_g)=0$ eliminates the $\alpha_2$ term on the diagonal.
 
-Taking logarithms:
+Taking logarithms and identifying $m_g\propto Y_g$ in the generation basis defined by the vacuum minima:
 $$
-\ln(Y_3/Y_g) = \ln(m_3/m_g) \approx 2\alpha_1 d^2_{3g}
+\ln(Y_3/Y_g) = \ln(m_3/m_g) = 2\alpha_1 d^2_{3g}\qquad (g=1,2).
 $$
 
 Therefore the ratio becomes:
@@ -1107,15 +1107,16 @@ $$
 
 **Key property:** This invariant is independent of:
 - The width parameter $\xi$ (cancels in the ratio)
-- The Hessian constants $\alpha_1, \alpha_2$ (cancel in the ratio)
+- The diagonal curvature scale $\alpha_1$ (cancels in the ratio)
+- The off-diagonal curvature scale $\alpha_2$ (does not enter Eq. (R.17))
 - Overall normalization
 - Higgs vacuum expectation value
 
-It depends only on the geometric distances in E₈ root space.
+It depends only on the geometric distances in $E_8$ root space.
 
 **Discrete Prediction:**
 
-Since $d^2 \in \{2, 4, 6, 8\}$ from E₈ geometry (Eq. R.14), the invariant $\mathcal{R}$ must lie in the discrete set formed by all ratios of allowed squared distances. The allowed ratios are:
+Since $d^2 \in \{2, 4, 6, 8\}$ from $E_8$ geometry (Eq. R.14), the invariant $\mathcal{R}$ must lie in the discrete set formed by all ratios of allowed squared distances. The allowed ratios are:
 $$
 \mathcal{R} \in \left\{\frac{2}{4}, \frac{2}{6}, \frac{2}{8}, \frac{4}{2}, \frac{4}{6}, \frac{4}{8}, \frac{6}{2}, \frac{6}{4}, \frac{6}{8}, \frac{8}{2}, \frac{8}{4}, \frac{8}{6}\right\}
 $$
@@ -1142,18 +1143,18 @@ Before evaluating experimental agreement, we clarify how this appendix advances 
 | **Aspect** | **Previous Approach** | **This Appendix** |
 |------------|----------------------|-------------------|
 | **Generation Count** | Topological only (anomaly cancellation) | Topology + Geometry (over-determined by two mechanisms) |
-| **Mass Hierarchy** | PCE minimality (qualitative order) | E₈ geodesic distances (quantitative ratios) |
+| **Mass Hierarchy** | PCE minimality (qualitative order) | $E_8$ geodesic distances (quantitative ratios) |
 | **Predictions** | $N=3$, hierarchical pattern | Discrete $\mathcal{R}$ values: $\left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$ |
 | **Mixing Angles** | Small (qualitative statement) | Exponential suppression $\exp(-d^2/2\sigma^2)$ with $d^2$ from geometry |
 | **Free Parameters** | Family charge unit $a$ (integer) | **Zero** ($\mathcal{R}$ is ratio of root distances) |
 | **Experimental Test** | Verify $N=3$ | Measure $\mathcal{R}$ in each fermion sector |
 | **Success Metric** | Correct generation count | $\mathcal{R}_\ell$: 3.8% agreement with discrete value 3 |
 
-**Key Advancement:** The addition of E₈ geometry transforms generation structure from a "why three?" explanation to a "what mass ratios?" prediction engine with no adjustable parameters. The discrete nature of root distances in E₈ provides falsifiable predictions distinct from phenomenological fits.
+**Key Advancement:** The addition of $E_8$ geometry transforms generation structure from a "why three?" explanation to a "what mass ratios?" prediction engine with no adjustable parameters. The discrete nature of root distances in $E_8$ provides falsifiable predictions distinct from phenomenological fits.
 
 ### R.6.1 Observational Data and Theoretical Predictions
 
-This section evaluates the framework's predictions against experimental data from the Particle Data Group (Navas et al. 2024). We compute the mass ratio invariant $\mathcal{R}$ for each fermion sector and compare with the discrete values predicted by E₈ root geometry.
+This section evaluates the framework's predictions against experimental data from the Particle Data Group (Navas et al. 2024). We compute the mass ratio invariant $\mathcal{R}$ for each fermion sector and compare with the discrete values predicted by $E_8$ root geometry.
 
 **Charged Lepton Sector:**
 
@@ -1174,27 +1175,27 @@ $$
 \tag{R.19}
 $$
 
-**Comparison with E₈ discrete set:**
+**Comparison with $E_8$ discrete set:**
 - Closest discrete value: $\mathcal{R} = 3$
 - Difference: $|2.889 - 3|/3 \approx 3.8\%$
 - This strongly supports the geometric picture with $(d^2_{31}, d^2_{32}) = (6, 2)$
 
-**E₈ Realization:**
+**$E_8$ Realization:**
 
 For a Type II root $r_3 = (\frac{1}{2}, \frac{1}{2}, \ldots, \frac{1}{2})$ (8 entries, even number of minus signs):
 - Flipping 6 signs (preserving even parity) gives $r_1$ with $r_3 \cdot r_1 = \tfrac{1}{4}(2 - 6) = -1$, hence $d^2_{31} = 4 - 2(-1) = 6$
 - Flipping 2 signs gives $r_2$ with $r_3 \cdot r_2 = \tfrac{1}{4}(6 - 2) = +1$, hence $d^2_{32} = 4 - 2(+1) = 2$
 - This configuration yields $\mathcal{R} = 6/2 = 3$
 
-The existence of such triads is generic in E₈, confirming the geometric mechanism.
+The existence of such triads is generic in $E_8$, confirming the geometric mechanism.
 
 **Assessment:**
 
-The discrete set $\{4/3, 3/2, 2, 3, 4\}$ contains five values spanning a factor of 3. The observed value $\mathcal{R}_\ell \approx 2.889$ lies within 3.8% of the discrete prediction $\mathcal{R} = 3$, providing strong support for the E₈ geometric mechanism. The agreement is notable given that:
+The discrete set $\{4/3, 3/2, 2, 3, 4\}$ contains five values spanning a factor of 3. The observed value $\mathcal{R}_\ell \approx 2.889$ lies within 3.8% of the discrete prediction $\mathcal{R} = 3$, providing strong support for the $E_8$ geometric mechanism. The agreement is notable given that:
 
 1. The prediction has **zero continuously adjustable parameters** (no fitting to lepton masses)
 2. The predicted values form a **discrete set** (not a continuous range)
-3. The mechanism derives from **first principles** (E₈ geometry + PCE)
+3. The mechanism derives from **first principles** ($E_8$ geometry + PCE)
 
 The consistency between observed and predicted values suggests the framework captures genuine structural features of fermion mass generation.
 
@@ -1222,7 +1223,7 @@ $$
 \theta_{12} \sim \frac{Y_{12}}{Y_{22}} \sim \exp\left[-\alpha_1(d^2_{13} - d^2_{23}) - \alpha_2 d^2_{12}\right]
 $$
 
-With E₈ distances $d^2 \sim O(1)$ in natural units and $\alpha_i \sim O(1)$, typical mixing angles are $\theta \sim 0.01-0.1$, consistent with the observed CKM matrix structure where $\theta_{12} \approx 0.22$, $\theta_{13} \approx 0.004$, $\theta_{23} \approx 0.04$.
+With $E_8$ distances $d^2 \sim O(1)$ in natural units and $\alpha_i \sim O(1)$, typical mixing angles are $\theta \sim 0.01-0.1$, consistent with the observed CKM matrix structure where $\theta_{12} \approx 0.22$, $\theta_{13} \approx 0.004$, $\theta_{23} \approx 0.04$.
 
 The hierarchy $\theta_{13} \ll \theta_{23} \ll \theta_{12}$ arises naturally from the geometric separations: states 1 and 3 are most separated (largest $d^2_{13}$, hence smallest $\theta_{13}$), while states 1 and 2 are closer (smaller $d^2_{12}$, hence larger $\theta_{12}$).
 
@@ -1262,7 +1263,7 @@ The observed value $J_{CP} \approx 3 \times 10^{-5}$ is consistent with small mi
 The framework provides first-principles explanations for:
 
 1. **Generation count:** $N = 3$ from dual over-determination (topology + geometry)
-2. **Mass hierarchy:** Exponential suppression from E$_8$ geodesic distances on the attractor orbit $\text{Gr}(2,8)$
+2. **Mass hierarchy:** Exponential suppression from $E_8$ geodesic distances on the attractor orbit $\text{Gr}(2,8)$
 3. **Discrete mass ratios:** $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ from allowed root distances $d^2 \in \{2, 4, 6, 8\}$
 4. **Small mixing angles:** Exponential suppression from large vacuum separations
 5. **CP violation:** Jarlskog invariant non-zero for $N \geq 3$
@@ -1274,7 +1275,7 @@ The framework provides first-principles explanations for:
 The framework does not yet fully determine:
 
 1. **Absolute Yukawa values:** Under $K$-invariance, the single Hessian eigenvalue $\alpha = 3/2$ is fixed (Corollary T.41.3); absolute values require the overall normalization scale and potential $K$-breaking effects
-2. **Specific vacuum locations:** Requires minimizing $V_q$ with explicit E$_8$ embedding
+2. **Specific vacuum locations:** Requires minimizing $V_q$ with explicit $E_8$ embedding
 3. **CP phase $\delta_{CP}$:** Derived in Section T.22 as $\delta = 66.7°$ from Berry holonomy
 4. **Running to low energies:** Requires RG evolution (standard QFT)
 
@@ -1282,7 +1283,7 @@ Item 3 has been resolved. Items 1-2 require explicit construction of the PCE pot
 
 **Baryogenesis Complexity (Resolved in Appendix Y).** The baryon asymmetry $\eta_B \approx 6 \times 10^{-10}$ is derived from the anomaly-holonomy coupling mechanism where Berry holonomy on $\text{Gr}(2,8)$ generates an effective $\theta$-angle for electroweak sphalerons. The baryogenesis complexity is:
 
-$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.25 + 0.23 = 19.48$$
+$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = \frac{38.5}{2} + \frac{\ln 2}{3} = 19.25 + 0.2310\dots = 19.4810\dots$$
 
 The CP-odd baryogenesis insertion is a $\mathbb{Z}_2$ half-step whose square reproduces the full electroweak locking step (Theorem Y.11.2). Since PCE costs add under sequential composition, the associated large-deviation exponent halves, giving $\kappa_{CP}=\kappa_{EW}/2$ (Lemma Y.8.1(e)). The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
 
@@ -1297,8 +1298,8 @@ where $c_1$ is determined by the response kernel $\delta^2\Gamma/\delta g_{\mu\n
 This derivation occupies a middle ground between pure mathematics and phenomenological modeling:
 
 **Strengths:**
-- Derives the **necessity** of three generations from topology + E₈ geometry + anomaly cancellation
-- Provides **mechanism** for mass hierarchy via E₈ root distances
+- Derives the **necessity** of three generations from topology + $E_8$ geometry + anomaly cancellation
+- Provides **mechanism** for mass hierarchy via $E_8$ root distances
 - Achieves **unification** of horizontal (gauge) and vertical (generation) SM structure
 - Makes **discrete predictions** ($\mathcal{R}$ values) with phenomenological support
 - **Over-determination:** Two independent mechanisms (topology + geometry) both give 3
@@ -1322,7 +1323,7 @@ The SM CKM CP violation, enabled by three generations, provides a mechanism for 
 
 This provides an independent, cosmological motivation for the three-generation structure beyond the information-theoretic arguments of this appendix. The convergence of:
 - Topological necessity (anomaly cancellation)
-- Geometric necessity (E₈ structure)  
+- Geometric necessity ($E_8$ structure)  
 - Cosmological necessity (baryogenesis)
 
 strongly suggests three generations are fundamentally required rather than environmentally selected.
@@ -1330,7 +1331,7 @@ strongly suggests three generations are fundamentally required rather than envir
 ## R.9 Summary
 
 *   **Topology:** The second homotopy group of the MPU's Perspective Space is $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$, providing seven independent topological charges.
-*   **E₈ Geometry:** The E₈ root system emerges as the information-optimal coordinatization in 8 dimensions, with discrete squared distances $d^2 \in \{2, 4, 6, 8\}$ between roots.
+*   **$E_8$ Geometry:** The $E_8$ root system emerges as the information-optimal coordinatization in 8 dimensions, with discrete squared distances $d^2 \in \{2, 4, 6, 8\}$ between roots.
 *   **Gauge–Topology Correspondence:** An embedding of the Standard Model gauge group into the MPU's internal symmetry group induces a homomorphism from the topological charges to the Cartan weight lattice of the gauge group.
 *   **PCE Selection:** The Principle of Compression Efficiency selects for physically viable sectors by enforcing non-Abelian charge neutrality via the **light sublattice** and requiring anomaly cancellation for an emergent family symmetry $U(1)_F$.
 *   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$. This is **over-determined** by two independent derivation mechanisms:
@@ -1339,7 +1340,7 @@ strongly suggests three generations are fundamentally required rather than envir
     
 The interface mode structure $M = 24 = 8 \times 3$ (**Appendix Z**, Theorem Z.5) provides further structural consistency through the Golay-Leech correspondence.
 *   **Interface Modes:** The number 24 appears independently in interface mode count (**Appendix Z, Theorem Z.5**), Leech lattice dimension, and Golay code dimension (**Appendix Z, Theorem Z.13**), reflecting deep information-geometric optimality.
-*   **Mass Hierarchy:** E₈ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with zero continuously adjustable parameters.
-*   **Phenomenological Success:** Charged lepton sector shows $\mathcal{R}_\ell \approx 2.889$, within 3.8% of the discrete value 3, strongly supporting the E₈ geometric mechanism.
+*   **Mass Hierarchy:** $E_8$ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with zero continuously adjustable parameters.
+*   **Phenomenological Success:** Charged lepton sector shows $\mathcal{R}_\ell \approx 2.889$, within 3.8% of the discrete value 3, strongly supporting the $E_8$ geometric mechanism.
 *   **Masses and Mixings:** A PCE-compatible potential on the Perspective Space creates distinct vacuum states for each generation. Yukawa couplings arise from the overlap of Gaussian wavepackets centered at these vacua, naturally producing hierarchical masses and small CKM mixing angles controlled by the geodesic distances between the vacua. The same mechanism allows for large PMNS mixing if the leptonic vacua have smaller separations or different Hessian ratios.
 *   **Unified Origin:** The generation structure shares a common origin with gauge structure—both arise from the topology and symmetries of the fundamental MPU state space as optimized by PCE.

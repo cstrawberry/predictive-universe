@@ -6,13 +6,13 @@ The Predictive Universe framework predicts that any sustained context capable of
 
 Let $\text{CC}(S)$ denote the operational bias capability of system $S$ (Definition 30). The framework's CC scaling law (Definition 32) is:
 $$
-\text{CC}(S) = \alpha_{CC,\max} \frac{C_{agg} - C_{op}}{C_{scale} + (C_{agg} - C_{op})}
+\text{CC}(S) = \alpha_{CC,max} \frac{C_{agg} - C_{op}}{C_{scale} + (C_{agg} - C_{op})}
 \tag{S.1}
 $$
 
 Define the active context complexity above baseline as $C_{context} := C_{agg} - C_{op}$. Solving for $C_{context}$ in terms of $\text{CC}$ yields:
 $$
-C_{context} = C_{scale} \frac{\text{CC}}{\alpha_{CC,\max} - \text{CC}}
+C_{context} = C_{scale} \frac{\text{CC}}{\alpha_{CC,max} - \text{CC}}
 \tag{S.2}
 $$
 
@@ -24,17 +24,17 @@ $$
 
 The additional power required to maintain the context is:
 $$
-P_{context} = R(C_{op} + C_{context}) - R(C_{op}) = r_p C_{context}^2 = r_p C_{scale}^2 \left[\frac{\text{CC}}{\alpha_{CC,\max} - \text{CC}}\right]^2
+P_{context} = R(C_{op} + C_{context}) - R(C_{op}) = r_p C_{context}^2 = r_p C_{scale}^2 \left[\frac{\text{CC}}{\alpha_{CC,max} - \text{CC}}\right]^2
 \tag{S.4}
 $$
 
-Defining the constant $A := r_p C_{scale}^2$ (dimensions of power) and setting $\alpha := \alpha_{CC,\max}$ for brevity, the power cost is:
+Defining the constant $A := r_p C_{scale}^2$ (dimensions of power), the power cost is:
 $$
-\boxed{P_{context}(\text{CC}) = A \left[\frac{\text{CC}}{\alpha - \text{CC}}\right]^2}
+\boxed{P_{context}(\text{CC}) = A \left[\frac{\text{CC}}{\alpha_{CC,max} - \text{CC}}\right]^2}
 \tag{S.5}
 $$
 
-**Physical interpretation:** The power cost scales quadratically with context complexity above threshold, reflecting the increasing resource requirements for maintaining more refined internal states capable of greater quantum outcome bias. As $\text{CC} \to \alpha$, the power requirement diverges, enforcing a practical upper limit independent of the causality constraint.
+**Physical interpretation:** The power cost scales quadratically with context complexity above threshold, reflecting the increasing resource requirements for maintaining more refined internal states capable of greater quantum outcome bias. As $\text{CC} \to \alpha_{CC,max}$, the power requirement diverges, enforcing a practical upper limit.
 
 **Connection to Appendix L:** This power $P_{context}$ is a component of the total aggregate power $P_{agg}$ analyzed in Appendix L (Theorem L.6). For systems implementing CC through electromagnetic field generation, $P_{context}$ contributes to both the radiated power $P_{EM}$ and internal operational costs $P_{other}$, with the complete energy accounting given by $P_{agg} = P_{EM} + P_{other}$ (Equation L.36).
 
@@ -68,11 +68,11 @@ where $T_{\mu\nu}^{(baseline)}$ represents the minimal operational state stress-
 
 **Result (Self-limiting CC bound under resource ceiling).** If an operational ceiling $u_{context} \le u_{\max}$ holds, then using $P_{context} \ge \Gamma_0 C_{context}/\tau_c$ (where $\Gamma_0$ is the power conversion factor, Definition 20), we have $u_{context} \ge \Gamma_0 C_{context}/V_S$ and hence:
 $$
-\boxed{\text{CC} \le \alpha_{CC,\max} \frac{u_{\max}}{u_{\max} + \kappa_* C_{scale}}}, \qquad \kappa_* := \Gamma_0/V_S
+\boxed{\text{CC} \le \alpha_{CC,max} \frac{u_{\max}}{u_{\max} + \kappa_* C_{scale}}}, \qquad \kappa_* := \Gamma_0/V_S
 \tag{S.10}
 $$
 
-Higher available energy density raises the operational cap, while causal consistency still enforces $\text{CC} < \alpha_{CC,\max}$ (Theorem 39).
+Higher available energy density raises the operational cap, while causal consistency still enforces $\text{CC} < \alpha_{CC,max}$ (Theorem 39).
 
 **Theorem S.1 (Local CC biases preserve no-signaling; gravitational bound).**
 
@@ -195,7 +195,7 @@ $$
 
 with positive coefficients $k_b, k_c$ determined by the specific predictive task and system architecture. The coefficient $k_b$ quantifies the predictive utility per unit of effective CC, while $k_c$ represents the resource scarcity factor (related to $\lambda$ in the global PCE potential, Definition D.1).
 
-For $\text{CC} \ll \alpha$, we approximate $P_{context}(\text{CC}) \approx (A/\alpha^2) \text{CC}^2$ from Equation S.5. Substituting into Equation S.22:
+For $\text{CC} \ll \alpha_{CC,max}$, we approximate $P_{context}(\text{CC}) \approx (A/\alpha_{CC,max}^2)\text{CC}^2$ from Equation S.5. Substituting into Equation S.22:
 $$
 B_{net}(\text{CC}) = k_b \text{CC} - \left(k_b K_{eff} \text{CC} + k_c\right) \frac{A}{\alpha^2} \text{CC}^2
 \tag{S.23}
@@ -463,7 +463,7 @@ This establishes the second inequality.
 
 **Step 3 (Power to CC):** From Equation S.5, $P_{context} = A[\text{CC}/(\alpha - \text{CC})]^2$. For the scaling relation:
 $$
-P_{context}^2 = A^2 \left[\frac{\text{CC}(S_A)}{\alpha - \text{CC}(S_A)}\right]^4
+P_{context}^2 = A^2 \left[\frac{\text{CC}(S_A)}{\alpha_{CC,max} - \text{CC}(S_A)}\right]^4
 $$
 Substituting establishes the third inequality. $\square$
 

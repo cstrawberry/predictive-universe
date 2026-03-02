@@ -211,7 +211,7 @@ $$
 by the additivity of QFI for tensor product states. ∎
 
 **Application:**
-- One irreversible comparison event costs at least $\varepsilon = \ln 2$ nats (Landauer principle [Landauer 1961], Theorem 31)
+- One irreversible comparison event costs at least $\varepsilon$, with $\varepsilon \ge \ln 2$, nats (Landauer principle [Landauer 1961], Theorem 31)
 - At the PCE-optimal operating point, the per-cycle information budget is $C_{\mathrm{max}}^* = 2\varepsilon$ (Appendix Q, Equation Q.10)
 - Therefore at most $N := C_{\mathrm{max}}^*/\varepsilon = 2$ independent Landauer-costed comparison events can be supported per cycle; the bridge-law normalization uses this maximal count
 

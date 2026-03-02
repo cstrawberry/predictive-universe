@@ -16,7 +16,7 @@ Natural units where $\hbar=c=k_B=1$ are used for core derivations, restored wher
 
 **E.2 Irreversibility and Thermodynamic Costs of Reflexive MPU Interactions**
 
-The 'Evolve' process (Definition 27) instantiates Non-Deterministic Reflexive Interaction Dynamics (ND–RID, Definition A.2.2), represented formally by a quantum instrument $\mathcal{I}_N = \{\mathcal{E}_{N,o}\}_{o \in O}$, where $\mathcal{E}_{N,o}$ are completely positive (CP) maps satisfying $\sum_o \mathcal{E}_{N,o}^\dagger(\mathbb{I}) \le \mathbb{I}$. The probability of outcome $o$ given initial state $\rho$ is $P(o|\rho, N) = \text{Tr}[\mathcal{E}_{N,o}(\rho)]$, and the post-outcome state is $\rho'_o = \mathcal{E}_{N,o}(\rho) / P(o|\rho, N)$. The average channel is the trace-preserving (TP) CP map $\mathcal{E}_N(\rho) = \sum_o \mathcal{E}_{N,o}(\rho)$.
+The 'Evolve' process (Definition 27) instantiates Non-Deterministic Reflexive Interaction Dynamics (ND–RID, Definition A.2.2), represented formally by a quantum instrument $\mathcal{I}_N = \{\mathcal{E}_{N,o}\}_{o \in O}$, where $\mathcal{E}_{N,o}$ are completely positive (CP) maps satisfying $\sum_o \mathcal{E}_{N,o}^\dagger(\mathbb{I}) \le \mathbb{I}$. The probability of outcome $o$ given initial state $\rho$ is $P(o|\rho, N) = \mathrm{tr}[\mathcal{E}_{N,o}(\rho)]$, and the post-outcome state is $\rho'_o = \mathcal{E}_{N,o}(\rho) / P(o|\rho, N)$. The average channel is the trace-preserving (TP) CP map $\mathcal{E}_N(\rho) = \sum_o \mathcal{E}_{N,o}(\rho)$.
 
 **Theorem E.1 (Minimal Entropy Production Bound for ND–RID Step).** The minimal necessary total entropy production $\Delta S_{tot}(o)$ (system + environment, in units of $k_B$) for the pathway of an 'Evolve'/ND–RID interaction yielding outcome $o$ and state $\rho'_o$ from initial state $\rho$, associated with an information gain $I(\rho; \mathcal{E}_{N}, o) > 0$ (nats), satisfies the lower bound:
 $$
@@ -1183,9 +1183,9 @@ Throughout this section:
 - $\mathcal{S}(\mathcal{H})$ denotes the set of density operators (positive semidefinite, trace-one) on Hilbert space $\mathcal{H}$
 - $\mathcal{B}(\mathcal{H})$ denotes the algebra of bounded linear operators on $\mathcal{H}$
 - $\mathcal{U}(\mathcal{H})$ denotes the group of unitary operators on $\mathcal{H}$
-- $\text{Tr}_B[\cdot]$ denotes the partial trace over subsystem $B$
+- $\mathrm{tr}_B[\cdot]$ denotes the partial trace over subsystem $B$
 - $D_{\text{tr}}(\rho, \sigma) = \frac{1}{2}\|\rho - \sigma\|_1$ denotes trace distance
-- $S(\rho) = -\text{Tr}(\rho \ln \rho)$ denotes von Neumann entropy (in nats) [von Neumann 1932]
+- $S(\rho) = -\mathrm{tr}(\rho \ln \rho)$ denotes von Neumann entropy (in nats) [von Neumann 1932]
 - $I(A:B)_\rho = S(\rho_A) + S(\rho_B) - S(\rho_{AB})$ denotes quantum mutual information
 - $d_0 = 8$ is the MPU Hilbert space dimension (Theorem 23)
 - $\delta$ is the fundamental MPU spacing (Definition 35)
@@ -1281,7 +1281,7 @@ The minimal number of Kraus operators required is $r = \text{rank}(\mathcal{J}_{
 
 We now prove that physical locality bounds the Kraus rank. Let $\mathcal{E}_N^{(A)}$ arise from a joint operation on $\mathcal{H}_A \otimes \mathcal{H}_B$ followed by tracing out $B$. The most general such operation is:
 
-$$\mathcal{E}_N^{(A)}(\rho_A) = \text{Tr}_B\left[\mathcal{E}_{AB}(\rho_A \otimes \sigma_B)\right]$$
+$$\mathcal{E}_N^{(A)}(\rho_A) = \mathrm{tr}_B\left[\mathcal{E}_{AB}(\rho_A \otimes \sigma_B)\right]$$
 
 where $\mathcal{E}_{AB}$ is a CPTP map on $\mathcal{H}_A \otimes \mathcal{H}_B$ and $\sigma_B \in \mathcal{S}(\mathcal{H}_B)$ is the initial state of $B$.
 
@@ -1289,7 +1289,7 @@ where $\mathcal{E}_{AB}$ is a CPTP map on $\mathcal{H}_A \otimes \mathcal{H}_B$ 
 
 *Proof of Claim:* Any CPTP map $\mathcal{E}_{AB}$ on $\mathcal{H}_A \otimes \mathcal{H}_B$ has Kraus operators $\{M_j\}$ with $M_j: \mathcal{H}_A \otimes \mathcal{H}_B \to \mathcal{H}_A \otimes \mathcal{H}_B$. Expanding in an orthonormal basis $\{|b\rangle\}$ of $\mathcal{H}_B$:
 
-$$\mathcal{E}_N^{(A)}(\rho_A) = \sum_j \text{Tr}_B\left[M_j(\rho_A \otimes \sigma_B)M_j^\dagger\right] = \sum_j \sum_{b,b'} \langle b|M_j(\rho_A \otimes \sigma_B)M_j^\dagger|b'\rangle \delta_{bb'}$$
+$$\mathcal{E}_N^{(A)}(\rho_A) = \sum_j \mathrm{tr}_B\left[M_j(\rho_A \otimes \sigma_B)M_j^\dagger\right] = \sum_j \sum_{b,b'} \langle b|M_j(\rho_A \otimes \sigma_B)M_j^\dagger|b'\rangle \delta_{bb'}$$
 
 Define $K_{jb} := \langle b|M_j|\cdot\rangle \sqrt{\sigma_B}$ as operators on $\mathcal{H}_A$. Then:
 
@@ -1299,7 +1299,7 @@ The number of independent Kraus operators is at most $(\text{rank of } \mathcal{
 
 **Step 3 (Stinespring dilation with bounded environment).** By the Stinespring dilation theorem [Stinespring 1955], any CPTP map $\mathcal{E}_N^{(A)}$ on $\mathcal{H}_A$ with Kraus rank $r$ admits the representation:
 
-$$\mathcal{E}_N^{(A)}(\rho_A) = \text{Tr}_E\left[V(\rho_A \otimes |0\rangle_E\langle 0|)V^\dagger\right]$$
+$$\mathcal{E}_N^{(A)}(\rho_A) = \mathrm{tr}_E\left[V(\rho_A \otimes |0\rangle_E\langle 0|)V^\dagger\right]$$
 
 where $V: \mathcal{H}_A \otimes \mathcal{H}_{E,\text{in}} \to \mathcal{H}_A \otimes \mathcal{H}_{E,\text{out}}$ is an isometry and $\dim(\mathcal{H}_E) = r$.
 
@@ -1323,7 +1323,7 @@ is unitary, satisfying $U_{AB}^\dagger U_{AB} = U_{AB} U_{AB}^\dagger = \mathbb{
 
 **Step 6 (Contractivity as partial trace effect).** The strict contractivity $f_{\text{RID}} < 1$ of the reduced channel $\mathcal{E}_N^{(A)}$ (Lemma E.1) arises because:
 
-$$\mathcal{E}_N^{(A)}(\rho_A) = \text{Tr}_B\left[U_{AB}(\rho_A \otimes \rho_B)U_{AB}^\dagger\right]$$
+$$\mathcal{E}_N^{(A)}(\rho_A) = \mathrm{tr}_B\left[U_{AB}(\rho_A \otimes \rho_B)U_{AB}^\dagger\right]$$
 
 The partial trace over $B$ discards the correlations established by $U_{AB}$ between $A$ and $B$. This produces apparent information loss when examining $A$ alone. Quantitatively, the data processing inequality [Nielsen & Chuang 2010, Theorem 9.2] ensures:
 
@@ -1593,7 +1593,7 @@ The correlation term decays exponentially with rate $-2\ln f > 0$. This violates
 
 *Proof.* By Lemma E.9.5.3, the joint evolution $U_{AB}$ of interacting MPUs is unitary. The reduced channel on MPU $A$:
 
-$$\mathcal{E}_N^{(A)}(\rho_A) = \text{Tr}_B\left[U_{AB}(\rho_A \otimes \rho_B)U_{AB}^\dagger\right]$$
+$$\mathcal{E}_N^{(A)}(\rho_A) = \mathrm{tr}_B\left[U_{AB}(\rho_A \otimes \rho_B)U_{AB}^\dagger\right]$$
 
 exhibits $f_{\text{RID}} < 1$ (Lemma E.1) because the partial trace discards $A$-$B$ correlations established by $U_{AB}$.
 

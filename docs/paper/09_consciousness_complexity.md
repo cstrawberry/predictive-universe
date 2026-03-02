@@ -20,14 +20,13 @@ Given context-dependent ND-RID probabilities (Assumption 1), and that the aggreg
 
 **9.2.1 Theorem 34 (POP/PCE Drives Emergent Biasing)**
 
-Given context-dependent ND-RID probabilities (Assumption 1), the adaptive dynamics (Section 6) of a sufficiently complex MPU aggregate ($C_{agg} > C_{op}$), driven by the **Prediction Optimization Problem (Axiom 1)** and the Principle of Compression Efficiency (Definition 15), will necessarily lead the aggregate to develop and utilize the capability to influence the outcome probabilities $P_{obs}(o | ..., S_{agg})$ of local 'Evolve'/ND-RID processes involving its constituent MPUs, by modulating its own internal state $S_{agg}$. This emergent biasing capability represents an optimized strategy for enhancing the aggregate's overall predictive performance and achieving its operational goals more efficiently.
+Assume context-dependent ND-RID probabilities (Assumption 1). Let $S$ be an MPU aggregate with $C_{agg} > C_{op}$. Let $\mathcal U$ denote the set of reachable, dynamically stable internal context states $u$ of the aggregate on the timescale of the local 'Evolve'/ND-RID events of interest, and let $P_{obs}(\cdot|u)$ be the induced distribution over those local outcomes (for a fixed local measurement setting). Let $V(u)$ denote the effective PCE potential governing the adaptive dynamics restricted to this reduced description (Definition D.1, Appendix D). Assume there exists a reachable reference context $u_0\in\mathcal U$ such that $P_{obs}(\cdot|u_0)=P_{Born}$, and that there exists at least one $u_+\in\mathcal U$ with $V(u_+) < V(u_0)$ and $P_{obs}(\cdot|u_+)\ne P_{Born}$. Then any asymptotically stable attractor $u^*\in\arg\min_{u\in\mathcal U}V(u)$ satisfies $P_{obs}(\cdot|u^*)\ne P_{Born}$ and therefore realizes a nonzero probability-modification map $L_S$ (Definition 30), implying $\mathrm{CC}(S)>0$.
+
 *Proof:*
-1.  **Exploitable Dependence:** Assumption 1 states $P_{obs}$ depends on the local context $S_{agg}$.
-2.  **Optimization Imperative:** POP (Axiom 1) and PCE (Definition 15) drive exploitation of all available mechanisms to improve predictive quality $Q$ and efficiency.
-3.  **Aggregate Capabilities:** Aggregates with $C_{agg} > C_{op}$ can instantiate sophisticated internal states $S_{agg}$ and implement advanced optimization strategies.
-4.  **Strategic Advantage of Biasing:** Modulating $S_{agg}$ to influence $P_{obs}$ offers a pathway to improve aggregate predictive success or efficiency (e.g., stabilizing desired states, enhancing information gain). Adaptation dynamics (Section 6), by exploring the state space while minimizing the PCE Potential $V(x)$ (Definition D.1, Appendix D), will reinforce configurations $S_{agg}$ that lead to statistically favorable biases in $P_{obs}$.
-5.  **Inevitable Emergence:** Because context-dependence provides a handle for optimization, and POP/PCE drive exploitation of such handles, the development and utilization of biasing becomes an inevitable emergent strategy for sufficiently complex aggregates ($C_{agg} > C_{op}$) possessing adaptive capacity. The system learns to adopt internal states $S_{agg}$ that "steer" the 'Evolve' process indeterminacy within allowed physical limits (Theorem 39), favoring outcomes beneficial to the aggregate's POP. The physical realization of this steering mechanism is rigorously detailed in Appendix L, with gravitational self-limitation analyzed in Appendix S.
-6.  **Definition of Capability:** This learned, optimized ability constitutes the emergent biasing capability. QED
+1. By definition of an attractor, $V(u^*)\le V(u)$ for all $u\in\mathcal U$, hence $V(u^*)\le V(u_+) < V(u_0)$.
+2. Therefore $u^*\ne u_0$, and thus $P_{obs}(\cdot|u^*)\ne P_{obs}(\cdot|u_0)=P_{Born}$.
+3. For a local event with state $\rho$ and POVM element $E_i$, define $\Delta P(i):=P_{obs}(i|u^*)-P_{Born}(i)$.
+4. Since $\Delta P$ is not identically zero, the map $L_S$ defined operationally by $\Delta P(i)=\mathrm{tr}(L_S(\rho)E_i)$ is nonzero. By Definition 30, $\mathrm{CC}(S)=\|L_S\|_{\mathrm{op}}>0$. QED
 
 **9.3 Consciousness Complexity (CC): Operational Definition and Scaling**
 
@@ -35,7 +34,11 @@ We define Consciousness Complexity (CC) operationally as the quantitative measur
 
 **9.3.1 Definition 30 (Def 30): Operational CC**
 
-The operational **Consciousness Complexity (CC)** of an MPU aggregate system $S$ is defined through the probability modification map $L_S$ acting on quantum states. The CC value is the operational norm of this map:
+The operational **Consciousness Complexity** (CC) of an MPU aggregate system $S$ is defined through a probability modification map $L_S$ acting on quantum states, required to be Hermitian-preserving and trace-annihilating on states:
+$$
+L_S(\rho)^\dagger=L_S(\rho),\qquad \mathrm{tr}(L_S(\rho))=0\quad\text{for all }\rho\ge0,\ \mathrm{tr}\,\rho=1.
+$$
+The CC value is the operational norm of this map:
 $$
 \mathrm{CC}(S):=\|L_S\|_{\mathrm{op}} \quad \text{(54)}
 $$
@@ -43,24 +46,29 @@ where
 $$
 \|L_S\|_{\mathrm{op}}:=\sup_{\substack{\rho\ge0,\ \mathrm{tr}\,\rho=1\\ 0\le E\le I}}\big|\mathrm{tr}\!\big(L_S(\rho)E\big)\big|.
 $$
-This ensures the pointwise bound
+Trace-annihilation implies normalization preservation: for any POVM $\{E_i\}$ with $\sum_iE_i=I$,
+$$
+\sum_i \Delta P(i)=\sum_i \mathrm{tr}\!\big(L_S(\rho)E_i\big)=\mathrm{tr}\!\big(L_S(\rho)\big)=0.
+$$
+In particular, the pointwise bound
 $$
 |\Delta P(i)|=\big|\mathrm{tr}\!\big(L_S(\rho)E_i\big)\big|\le \mathrm{CC}(S)
 $$
-for all positive operator-valued measures (POVMs).
+holds for all POVMs.
 
-**Lemma 9.1 (Variational characterization).** For Hermitian $H$,
+**Lemma 9.1 (Variational characterization).** For Hermitian $H$ with $\mathrm{tr}\,H=0$,
 $$
 \sup_{0\le E\le I}\big|\mathrm{tr}(H E)\big|=\tfrac12\|H\|_1,
 $$
-with the supremum attained by the projector onto the positive eigenspace of $H$ (or negative eigenspace for the negative maximum).
+with the supremum attained by the projector onto the positive (or negative) eigenspace of $H$.
 
-*Proof:* Decompose $H = H_+ - H_-$ with $H_\pm \ge 0$, $H_+H_- = 0$, and $\mathrm{tr}(H_\pm) = (1/2)\|H\|_1$. Choosing $E = \mathrm{supp}(H_+)$ yields $\mathrm{tr}(H E) = \mathrm{tr}(H_+)= (1/2)\|H\|_1$; taking $E = \mathrm{supp}(H_-)$ gives the negative extremum. QED
+*Proof:* Decompose $H=H_+-H_-$ with $H_\pm\ge0$ and $H_+H_-=0$. Since $\mathrm{tr}\,H=0$, we have $\mathrm{tr}(H_+)=\mathrm{tr}(H_-)=\tfrac12\|H\|_1$. Choosing $E=\mathrm{supp}(H_+)$ gives $\mathrm{tr}(H E)=\mathrm{tr}(H_+)=\tfrac12\|H\|_1$, and choosing $E=\mathrm{supp}(H_-)$ gives the negative extremum. QED
 
-**Corollary 9.1.** For Hermitian-preserving $L_S$,
+**Corollary 9.1.** For Hermitian-preserving, trace-annihilating $L_S$,
 $$
-\|L_S\|_{\mathrm{op}}=\tfrac12\sup_{\rho}\big\|L_S(\rho)\big\|_1.
+\|L_S\|_{\mathrm{op}}=\tfrac12\sup_{\rho}\big\|L_S(\rho)\big\|_1,
 $$
+where the supremum ranges over density operators $\rho$.
 
 **9.3.2 Definition 31 (Def 31): Physical Constraints on CC Scaling**
 
@@ -84,7 +92,11 @@ where:
 *   $C_{op}$ is the operational threshold (Definition 13),
 *   $\Theta$ is the Heaviside step function.
 
-*Proof:* Normalize the complexity above threshold by $x = (C_{agg} - C_{op})/C_{scale} \ge 0$. The function $\mathcal{G}$ encodes monotonicity and concavity, with a finite asymptote at 1, while $\alpha_\infty$ enforces the global upper bound. The Heaviside factor enforces the threshold property. QED
+*Proof:* For $C_{agg}\le C_{op}$, Definition 31 gives $\text{CC}(C_{agg})=0$, enforced by $\Theta(C_{agg}-C_{op})$. For $C_{agg}>C_{op}$, set $x=(C_{agg}-C_{op})/C_{scale}\ge0$ and define
+$$
+\alpha_\infty:=\lim_{C_{agg}\to\infty}\text{CC}(C_{agg}).
+$$
+Existence of this limit follows from monotonicity and the global upper bound in Definition 31 (a bounded monotone function has a limit equal to its supremum). If $\alpha_\infty=0$, take $\mathcal G\equiv0$. Otherwise define $\mathcal G(x):=\text{CC}(C_{op}+C_{scale}x)/\alpha_\infty$ for $x\ge0$. Then $0\le\mathcal G(x)<1$, $\mathcal G(0)=0$, $\lim_{x\to\infty}\mathcal G(x)=1$, and $\mathcal G'\ge0$, $\mathcal G''\le0$ follow directly from the corresponding properties of $\text{CC}$ under the affine reparameterization. Substituting back yields Equation (55). QED
 
 **9.3.4 Definition 32 (Def 32): Specific CC Scaling Model Example**
 
@@ -104,8 +116,8 @@ The operational Consciousness Complexity CC(S) (Definition 30) of an MPU aggrega
 
 1.  **Internal State as Context ($\mathrm{context}_S$):** The aggregate's internal state providing context is formally the **context state $\mathrm{context}_S(t)$** (defined via the minimal sufficient statistic construction in Appendix L, Definition L.1). Operationally, it represents the coarse-grained, predictively sufficient slice of the aggregate state $\rho_{agg}(t)$ relevant to influencing local ND-RID within available resources.
 2.  **Physical Manifestation of Context:** $\mathrm{context}_S(t)$ manifests physically through properties like the reduced density operator, entanglement structure, patterns in the coarse-grained MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Appendix B), or emergent curvature patterns.
-3.  **Modulation Pathway:** These collective physical patterns ($\mathrm{context}_S$) act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Equation (B.9)) of the underlying 'Evolve'/ND-RID process. Concretely, a proposed controlled AC-Stark pathway utilizes context-conditioned classical fields to induce shifts in MPU level splittings ($\Delta E \propto \alpha E^2/\Delta$). This tunes the effective jump rates $\gamma_k$ within the Lindblad description, consequently modulating the local 'Evolve' probabilities. The required mapping $\mathcal{M}:\mathcal{C}_{ctx} \to \mathcal{P}_{control}$ must be Lipschitz and low-cost and satisfy the POP/PCE cost–benefit inequality (L.2) to remain dynamically stable. See **Appendix L** for the rigorous formal construction (Definition L.1; Definition L.2; Lemma L.1; Theorem L.1). The electromagnetic channel dominates by factor $\mathcal{R} \sim 10^{36}$ (Theorem L.5), while gravitational self-limitation (Appendix S) bounds achievable CC. A system with high CC possesses the optimized ability (via Theorem 34) to generate and control these patterns to bias the outcomes of the 'Evolve' process.
-4.  **Primary Locus of Observable Effect:** The principal observable consequence is hypothesized to be the biasing of probabilities associated with probabilistic amplitude actualization within the universal 'Evolve' process. This leads to measurable deviations $|\Delta P| \le \text{CC}(S)$ from the baseline Born rule (Proposition 7) that would otherwise solely govern the 'Evolve' outcome probabilities in the absence of such high-complexity contextual influence.
+3.  **Modulation Pathway:** These collective physical patterns ($\mathrm{context}_S$) act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Equation (B.9)) of the underlying 'Evolve'/ND-RID process. Concretely, a proposed controlled AC-Stark pathway utilizes context-conditioned classical fields to induce shifts in MPU level splittings ($\Delta E \propto \alpha_{pol} E^2/\Delta$, with $\alpha_{pol}$ the effective polarizability coefficient). This tunes the effective jump rates $\gamma_k$ within the Lindblad description, consequently modulating the local 'Evolve' probabilities. The required mapping $\mathcal{M}:\mathcal{C}_{ctx} \to \mathcal{P}_{control}$ must be Lipschitz and low-cost and satisfy the POP/PCE cost–benefit inequality (L.2) to remain dynamically stable. See **Appendix L** for the rigorous formal construction (Definition L.1; Definition L.2; Lemma L.1; Theorem L.1). The electromagnetic channel dominates by factor $\mathcal{R} \sim 10^{36}$ (Theorem L.5), while gravitational self-limitation (Appendix S) bounds achievable CC. A system with high CC possesses the optimized ability (via Theorem 34) to generate and control these patterns to bias the outcomes of the 'Evolve' process.
+4.  **Primary Locus of Observable Effect:** The principal observable consequence is hypothesized to be the biasing of probabilities associated with probabilistic amplitude actualization within the universal 'Evolve' process. This leads to measurable deviations $|\Delta P| \le \mathrm{CC}(S)$ from the baseline Born rule (Proposition 7) that would otherwise solely govern the 'Evolve' outcome probabilities in the absence of such high-complexity contextual influence.
 5.  **Operational Nature:** CC measures this biasing capability. The link between specific content of $\mathrm{context}_S$ (e.g., intent) and bias direction is learned via adaptation (driven by POP/PCE), potentially related to interpretive postulates (Postulate 1), but the mechanism of influence on the 'Evolve' parameters is proposed as objective physics.
 6.  **Implications for Locality:** Since $\mathrm{context}_S$ can involve non-local entanglement, and the CC mechanism acts by influencing local 'Evolve' events, a context change in one part of an entangled aggregate might have statistical consequences (via entanglement and the modified 'Evolve' probabilities) on 'Evolve' outcomes in space-like separated parts. This underpins the statistical FTL influence hypothesis (Postulate 3), which operates within the causality constraints established by Theorem 39.
 7.  **Physical Realization:** The challenge lies in the mapping $\mathcal{M}: \mathrm{context}_S \to (\text{Physical Control})$ respecting POP/PCE constraints (Appendix L, Lemma L.1, Theorem L.1), which generates the physical fields or boundary conditions that modulate the 'Evolve' process, alongside the physics of the interaction channel itself (Appendix L).
@@ -137,32 +149,31 @@ K_{S_A\otimes S_B}(E_A\otimes I_B)=K_{S_A}(E_A)\otimes I_B,
 $$
 ensuring each party’s marginal is invariant under the other party’s POVM choice.
 
-**Small-deformation realizations:** for small $\varepsilon$,
+**Small-deformation realizations:** for small $\xi$,
 $$
-\mathrm{tr}\!\big(e^{\varepsilon L_S}(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,(E_i+\varepsilon K_S(E_i))\big)+O(\varepsilon^2).
+\mathrm{tr}\!\big(e^{\xi L_S}(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,(E_i+\xi K_S(E_i))\big)+O(\xi^2).
 $$
 Two operational implementations are possible:
 
-1.  **CPTP pre-processing** $\rho \mapsto e^{\varepsilon L_S}(\rho)$ when $L_S$ is a GKLS generator.
-2.  **Calibrated POVM deformations** $E_{i,\varepsilon}=E_i+\varepsilon K_S(E_i)$ with positivity on $\ker(E_i)$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$. Additionally, imposing the completeness-preserving constraint $\sum_i K_S(E_i)=0$ ensures $\sum_i E_{i,\varepsilon}=I+O(\varepsilon^2)$.
+1.  **CPTP pre-processing** $\rho \mapsto e^{\xi L_S}(\rho)$ when $L_S$ is a GKLS generator.
+2.  **Calibrated POVM deformations** $E_{i,\xi}=E_i+\xi K_S(E_i)$ with positivity on $\ker(E_i)$: for all $v \in \ker(E_i)$, $v^\dagger K_S(E_i)v \ge 0$. Additionally, imposing the completeness-preserving constraint $\sum_i K_S(E_i)=0$ ensures $\sum_i E_{i,\xi}=I+O(\xi^2)$.
 
-**Theorem (Heisenberg–Schrödinger identity for CPTP semigroups).** Let $\Lambda_\varepsilon=e^{\varepsilon\mathcal L}$ be a CPTP quantum Markov semigroup on $\mathcal B(\mathcal H)$ [Lindblad 1976; Gorini–Kossakowski–Sudarshan 1976; Nielsen & Chuang 2010] and let $\{E_i\}_i$ be any POVM on $\mathcal H$. Define the Heisenberg‑picture effects
+**Theorem (Heisenberg–Schrödinger identity for CPTP semigroups).** Let $\Lambda_\xi=e^{\xi\mathcal L}$ be a CPTP quantum Markov semigroup on $\mathcal B(\mathcal H)$ [Lindblad 1976; Gorini–Kossakowski–Sudarshan 1976; Nielsen & Chuang 2010] and let $\{E_i\}_i$ be any POVM on $\mathcal H$. Define the Heisenberg‑picture effects
 $$
-E_{i,\varepsilon}:=\Lambda_\varepsilon^{*}(E_i).
+E_{i,\xi}:=\Lambda_\xi^{*}(E_i).
 $$
-Then $\{E_{i,\varepsilon}\}_i$ is a POVM for every $\varepsilon\ge 0$ and, for any state $\rho$,
+Then $\{E_{i,\xi}\}_i$ is a POVM for every $\xi\ge 0$ and, for any state $\rho$,
 $$
-\operatorname{tr}\big[\Lambda_\varepsilon(\rho)\,E_i\big]=\operatorname{tr}\big[\rho\,E_{i,\varepsilon}\big].
+\operatorname{tr}\big[\Lambda_\xi(\rho)\,E_i\big]=\operatorname{tr}\big[\rho\,E_{i,\xi}\big].
 $$
-*Proof.* Since $\Lambda_\varepsilon$ is CPTP, its dual $\Lambda_\varepsilon^*$ is completely positive and unital, hence $E_{i,\varepsilon}\ge 0$ and $\sum_i E_{i,\varepsilon}=I$. The probability identity is duality. ∎
+*Proof.* Since $\Lambda_\xi$ is CPTP, its dual $\Lambda_\xi^*$ is completely positive and unital, hence $E_{i,\xi}\ge 0$ and $\sum_i E_{i,\xi}=I$. The probability identity is duality. ∎
 
-*Corollary (all‑orders normalization & positivity; linearized form).* Writing $K(E_i):=\tfrac{d}{d\varepsilon}\big|_{\varepsilon=0}\Lambda_\varepsilon^*(E_i)$ gives $\sum_i K(E_i)=\mathcal L^*(I)=0$.
+*Corollary (all‑orders normalization & positivity; linearized form).* Writing $K(E_i):=\tfrac{d}{d\xi}\big|_{\xi=0}\Lambda_\xi^*(E_i)$ gives $\sum_i K(E_i)=\mathcal L^*(I)=0$.
 
-**CTB generator semigroup.** For $L_S(\rho)=\alpha(\sigma-\rho)$ with $\sigma\ge0$, $\mathrm{tr}\,\sigma=1$ and $\alpha\ge0$, the semigroup $T_t:=e^{tL_S}$ acts as
+**CTB generator semigroup.** For $L_S(\rho)=\nu_S(\sigma-\rho)$ with $\sigma\ge0$, $\mathrm{tr}\,\sigma=1$, $\nu_S>0$, the semigroup $T_t=e^{tL_S}$ is CPTP with
 $$
-T_t(\rho)=e^{-\alpha t}\,\rho+\big(1-e^{-\alpha t}\big)\sigma,
+T_t(\rho)=e^{-\nu_S t}\rho+(1-e^{-\nu_S t})\sigma.
 $$
-which is CPTP for all $t\ge0$ and has unique fixed point $\sigma$.
 
 *Proof:* $T_t$ is a convex mixture of two CPTP maps (identity and the constant replacement map $\rho\mapsto\sigma$), and $\{T_t\}$ satisfies the semigroup property $T_t\circ T_s= T_{t+s}$. QED
 
@@ -201,7 +212,7 @@ and
 $$
 P_{\mathrm{obs}}(i)=(1-\alpha_S)\,P_{\mathrm{Born}}(i)+\alpha_S\,p_{\mathrm{target}}(S,i) \quad \text{(59)}
 $$
-with $0\le\alpha_S<1$. (Note: The Context-Targeted Bias model physically represents a convex combination, so the upper bound should be inclusive, representing a complete replacement of the Born rule with the target distribution in the maximal case. See Section 10.4 and Appendix F for proof that this modification respects operator locality.) Under a unitary $U$, $\sigma_{USU^\dagger}=U\sigma_S U^\dagger$, so $L_S$ and $K_S$ transform covariantly.
+with $0\le\alpha_S\le1$. (Note: The upper bound corresponds to complete replacement of the Born rule distribution by the target distribution in the maximal case. The constraint $\alpha_S\le1$ is equivalent to $\mathrm{CC}(S)\le r(\sigma_S)$ for the chosen target state.) Under a unitary $U$, $\sigma_{USU^\dagger}=U\sigma_S U^\dagger$, so $L_S$ and $K_S$ transform covariantly.
 
 *Remarks:*
 *   The normalization ensures $\|L_S\|_{\mathrm{op}} = \alpha_S r(\sigma_S) = \mathrm{CC}(S)$.
@@ -217,7 +228,7 @@ The CTB model (Definition 34) is consistent with the framework’s requirements 
 2.  **Zero CC:** $\mathrm{CC}(S)=0$ implies $\alpha_S=0$, hence $\Delta P=0$.
 3.  **Magnitude bound:** For all $\rho,E$, $|\Delta P| = \alpha_S|p_{\mathrm{target}} - p_i| \le \alpha_S r(\sigma_S) = \mathrm{CC}(S)$ by Lemma 9.1.
 4.  **Context dependence:** $\Delta P$ depends on $\sigma_S$, hence on $\mathrm{context}_S$.
-5.  **Positivity:** $P_{\mathrm{obs}}$ is a convex combination with weight $\alpha_S\in[0,1)$, so $0 \le P_{\mathrm{obs}} \le 1$. QED
+5.  **Positivity:** $p_{\mathrm{obs}}$ is a convex combination of $p_i$ and $p_{\mathrm{target}}$, with weight $\alpha_S\in[0,1]$. QED
 
 **9.5.5 Theorem 38 (Maximum Bias Effect with CTB Model)**
 

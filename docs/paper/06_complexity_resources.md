@@ -42,7 +42,7 @@ where $\sigma_{link} = \chi/(\eta\delta^2)$ is the effective surface density of 
 $$
 G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}(f_{RID})}
 $$
-The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At PCE equilibrium with $C_{\max}^* = \ln d_0 - \varepsilon = 2\ln 2$ (Equation E.15), this determines $G$ in terms of the microscopic MPU parameters. ∎
+The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At the PCE-Attractor (Definition 15a), admissibility requires $\varepsilon \ge \ln 2$ (Theorem 31) and PCE selects the saturation $\varepsilon=\ln 2$. For the minimal MPU with $d_0=8$ (Theorem 23), Equation E.15 gives $C_{\max}^*=\ln d_0-\varepsilon=\ln 8-\ln 2=2\ln 2$, which determines $G$ in terms of the microscopic MPU parameters. ∎
 
 **Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by the single capacity bound $C_{\max} < \ln d_0$ arising from ND-RID contractivity.*
 
@@ -52,7 +52,11 @@ $$
 $$
 The logical structure of self-reference (SPAP) propagates through thermodynamics (Landauer cost) to information theory (channel capacity) to geometry (gravitational coupling).
 
-**Remark 6.0.2: PCE Optimization.** At the PCE-Attractor (Definition 15a), the capacity saturates its optimal value $C_{\max}^* = \ln d_0 - \varepsilon = \ln 8 - \ln 2 = 2\ln 2$ (Equation E.15). This represents the optimal partition of the MPU's information budget between internal processing cost ($\varepsilon$) and external communication capacity ($C_{\max}$).
+**Remark 6.0.2: PCE Optimization.** At the PCE-Attractor (Definition 15a), $\varepsilon$ is minimized subject to $\varepsilon \ge \ln 2$ (Theorem 31). For the minimal MPU ($d_0=8$, Theorem 23) this yields $\varepsilon=\ln 2$ and hence the PCE-optimal channel capacity
+$$
+C_{\max}^*=\ln d_0-\varepsilon=\ln 8-\ln 2=2\ln 2 \quad \text{(Equation E.15)}.
+$$
+This partitions the MPU information budget between the irreducible internal processing cost ($\varepsilon$) and the remaining external communication capacity ($C_{\max}$).
 
 ---
 
@@ -116,16 +120,24 @@ where the expectation $\mathbb{E}[\cdot]$ averages over relevant environmental c
 **6.2.3 Theorem 17 (Complexity Lower Bound ($C > C_{op}$))**
 
 Any system operating sustainably within the Space of Becoming ($\alpha < PP(t) < \beta$, Axiom 3) in an environment presenting a non-trivial predictive challenge (where the baseline performance achievable with minimal operational complexity $C_{op}$ is at or below the viability threshold, i.e., $PP(C_{op}) \le \alpha$) necessarily requires an operational complexity $C(t) = C_P(\mu(t))$ strictly greater than the Operational Threshold $C_{op}$.
-*Proof:* Assume a system operates sustainably with $PP(t) > \alpha$. By definition (Definition 13), $C_{op}$ is the minimum complexity required to achieve performance $A > A_{random} + \epsilon_{acc}$, corresponding to some performance level $PP(C_{op}) > 0$. The viability threshold $\alpha$ represents a performance level significantly better than chance. If the environment is sufficiently complex such that the minimal performance $PP(C_{op})$ achievable at the threshold complexity is not sufficient for viability (i.e., if $PP(C_{op}) \le \alpha$), then achieving the required sustained performance $PP(t) > \alpha$ necessitates investing complexity *beyond* this minimum threshold $C_{op}$ to capture more environmental regularity or improve the model. Therefore, under the condition $PP(C_{op}) \le \alpha$, viable operation requires $C(t) > C_{op}$. QED
+*Proof:* Fix an environment/task distribution and define the maximal achievable average performance at complexity budget $C$ by
+$$
+PP_{\max}(C):=\sup\{\mathbb{E}[PP(f_\mu)]\mid \mu\in\mathcal{S}_{phys},\ C_P(\mu)\le C\}.
+$$
+Because the feasible set $\{\mu:\ C_P(\mu)\le C\}$ is nested in $C$, $PP_{\max}(C)$ is non-decreasing in $C$. The hypothesis $PP(C_{op})\le \alpha$ states that, at the operational threshold budget, even the best achievable performance is at or below the viability boundary: $PP_{\max}(C_{op})\le \alpha$. Viability requires sustained operation with $PP(t)>\alpha$, hence the realized complexity must satisfy $PP_{\max}(C(t))>\alpha$. Monotonicity then forces $C(t)>C_{op}$. ∎
 
 **6.2.4 Physical Nature of Complexity Transformations (Thermodynamic Irreversibility)**
 
-The adaptation process involves changing the system's complexity $C(t) \to C(t+1)$ (Section 6.4). This corresponds to a physical transformation within the system's representational medium (Theorem 7). Implementing such changes requires physical operations that consume resources (transient Adaptation Costs, part of the SC in Definition 15). Model adaptation involves information processing (e.g., incorporating new data, computing updates) and typically requires logically irreversible information erasure (e.g., discarding outdated model components or hypotheses). By the fundamental link between information and thermodynamics (Landauer's Principle; specifically the consequence $\varepsilon > 0$, Theorem 31), logically irreversible operations performed in finite time inevitably lead to entropy production and energy dissipation. Therefore, complexity transformation ($C(t) \to C(t+1)$) is generally a thermodynamically irreversible physical process associated with resource costs and entropy generation, constraining the dynamics and efficiency of adaptation.
+The adaptation process involves changing the system's complexity $C(t) \to C(t+1)$ (Section 6.4). This corresponds to a physical transformation within the system's representational medium (Theorem 7). Implementing such changes requires physical operations that consume resources (transient Adaptation Costs, part of the SC in Definition 15). Model adaptation involves information processing (e.g., incorporating new data, computing updates) and typically requires logically irreversible information erasure (e.g., discarding outdated model components or hypotheses). By the fundamental link between information and thermodynamics (Landauer's Principle; specifically the bound $\varepsilon \ge \ln 2$, Theorem 31), any logically irreversible operation that must be physically instantiated and cyclically reset incurs irreducible entropy production and energy dissipation. Therefore, complexity transformation ($C(t) \to C(t+1)$) is generally a thermodynamically irreversible physical process associated with resource costs and entropy generation, constraining the dynamics and efficiency of adaptation.
 
 **6.2.5 Definition 19 (Def 19): Complexity-Performance Scaling Principles**
 
 The function $PP(C, \hat{C}_{target})$ describing the achievable Predictive Performance (Definition 7) within the viable operational range $(\alpha, \beta)$ as a function of invested complexity $C \ge C_{op}$ (Equation 1) and the estimated target complexity $\hat{C}_{target}$ (Definition 21) must adhere to the following general principles, derived from operational requirements and physical limitations:
-1.  Performance Bounds: $PP(C, \hat{C}_{target}) \in [\alpha, \beta)$ for finite $C \ge C_{op}$. Specifically, $PP(C_{op}, \hat{C}_{target}) \approx \alpha$ (or equals $\alpha$ if $\hat{C}_{target}$ represents difficulty above baseline), and $\lim_{C \to \infty} PP(C, \hat{C}_{target}) = \beta$. The upper bound $\beta$ is approached asymptotically but not reached for finite complexity $C$, reflecting the need for adaptation (Theorem 9) and efficiency considerations (PCE, Definition 15).
+1.  **Bounds and Diminishing Returns:** $PP(C, \hat{C}_{target})$ is bounded within the viable operational range $(\alpha, \beta)$, with
+$$
+PP(C_{op},\hat{C}_{target})=\alpha,\qquad \lim_{C\to\infty} PP(C,\hat{C}_{target})=\beta.
+$$
+The upper bound $\beta$ is approached asymptotically but not reached for finite complexity $C$, reflecting the need for adaptation (Theorem 9) and efficiency considerations (PCE, Definition 15).
 2.  **Monotonicity with Complexity:** Performance increases with complexity investment above the baseline: $\partial PP / \partial C > 0$ for $C > C_{op}$.
 3.  **Diminishing Returns:** The marginal gain in performance decreases as complexity increases: $\partial^2 PP / \partial C^2 < 0$ for $C > C_{op}$. Achieving further improvements becomes progressively harder.
 4.  **Dependence on Relative Complexity:** Performance depends primarily on the ratio of invested complexity above baseline relative to the task difficulty, i.e., on a function of $x = (C-C_{op})/\hat{C}_{target}$. Increasing the target difficulty $\hat{C}_{target}$ for a fixed complexity $C$ decreases performance $PP$.
@@ -145,7 +157,7 @@ where the function $F: \mathbb{R}_{\geq 0} \rightarrow [0, 1)$ satisfies:
 
 **6.3 Derivation of the Law of Prediction from POP / PCE**
 
-We now derive the explicit complexity–performance relationship—the *Law of Prediction*—by modeling the dynamics of predictive improvement under the framework's core optimization principles. The Principle of Compression Efficiency (PCE, Definition 15) implies that any adaptive system will exhibit diminishing returns: as complexity increases, the marginal gain in performance decreases because the most cost-effective improvements are made first. We formalize this by constructing and solving the simplest differential equation that captures this fundamental economic principle.
+We now derive the explicit complexity–performance relationship—the *Law of Prediction*—from the scaling principles (Definition 19) together with a PCE composition constraint: allocating relative complexity in independent refinement stages compounds multiplicatively on the remaining performance gap. This "memoryless compounding" is the unique scale-free rule compatible with Definition 19 and with stagewise PCE optimization.
 
 **6.3.1 Theorem 19 (Law of Prediction — Exponential Saturation Model)**
 
@@ -159,37 +171,21 @@ C(PP,\hat C_{\mathrm{target}}) = C_{op} +\frac{\hat C_{\mathrm{target}}}{\kappa_
 $$
 Here $\kappa_{\mathrm{eff}}$ is a dimensionless efficiency constant. Equation (22) realizes the generic form Equation (21) with $F(x)=1-e^{-\kappa_{\mathrm{eff}}x}$, satisfying the required properties (Theorem 18) and exhibiting logarithmic divergence of $C$ as $PP\rightarrow\beta$.
 
-*Proof:*
-1.  **Modeling Diminishing Returns:** We model the principle of diminishing returns by positing that the marginal increase in performance with respect to complexity, $d(PP)/dC$, is proportional to the remaining performance gap $(\beta - PP(C))$ and inversely proportional to the target complexity $\hat{C}_{target}$. This gives the differential equation:
+*Proof:* Define the dimensionless relative complexity
 $$
-    \frac{d(PP)}{dC} = \kappa_{\mathrm{eff}} \frac{\beta - PP(C)}{\hat{C}_{target}}
-    $$
-    where $\kappa_{\mathrm{eff}} > 0$ is the dimensionless efficiency constant.
-2.  **Integration:** We separate variables and integrate from the initial condition $(C_{op}, \alpha)$ to the state $(C, PP(C))$:
+x:=\frac{C-C_{op}}{\hat{C}_{target}}\ge 0,
 $$
-    \int_{\alpha}^{PP(C)} \frac{d(PP')}{\beta - PP'} = \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} \int_{C_{op}}^{C} dC'
-    $$
-3.  **Solving the Integral:** The integration yields:
+and the normalized performance gap
 $$
-    \left[ -\ln(\beta - PP') \right]_{\alpha}^{PP(C)} = \frac{\kappa_{\mathrm{eff}}}{\hat{C}_{target}} (C - C_{op})
-    $$
+g(x):=\frac{\beta-PP(C,\hat{C}_{target})}{\beta-\alpha}\in(0,1],\qquad g(0)=1.
 $$
-    \ln\left(\frac{\beta - \alpha}{\beta - PP(C)}\right) = \kappa_{\mathrm{eff}}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}
-    $$
-    This is the integrated form, which directly corresponds to Equation (23) when solved for $C$.
-4.  **Deriving the Final Form:** Exponentiating both sides and rearranging to solve for $PP(C)$:
+PCE together with the relative-complexity scaling of Definition 19 implies that independent refinement stages add in $x$ and compound on the remaining gap: if a system first allocates $x_1$ units of relative complexity and then allocates an additional $x_2$ units (with the second refinement operating on the residual prediction error left after the first), the resulting normalized gap satisfies the composition law
 $$
-    \frac{\beta - \alpha}{\beta - PP(C)} = \exp\left(\kappa_{\mathrm{eff}}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
-    $$
+g(x_1+x_2)=g(x_1)\,g(x_2)\qquad \text{for all }x_1,x_2\ge 0. \quad (\ast)
 $$
-    \beta - PP(C) = (\beta - \alpha) \exp\left(-\kappa_{\mathrm{eff}}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
-    $$
-$$
-    PP(C,\hat C_{\mathrm{target}}) = \beta - (\beta - \alpha) \exp\left(-\kappa_{\mathrm{eff}}\frac{C-C_{op}}{\hat C_{\mathrm{target}}}\right)
-    $$
-    This confirms Equation (22). QED
+Assuming $g$ is continuous (operational continuity of $PP$ under small complexity changes), $(\ast)$ together with $g(0)=1$ implies the standard exponential form $g(x)=e^{-\kappa_{eff}x}$ for a unique constant $\kappa_{eff}>0$. Substituting back yields Equation (22), and solving Equation (22) for $C$ yields Equation (23). ∎
 
-*Justification from Information Theory:* This result, derived from the PCE principle of diminishing returns, is strongly supported by an independent argument from rate-distortion theory. In rate-distortion theory, the complexity (rate) required to describe a source with a given distortion (Prediction Error, $PE$) typically scales as $C(PE) \propto -\log(PE)$. Within the PU framework, for high performance, $PE$ is proportional to the performance gap $(\beta-PP)$. Applying the rate-distortion principle to this operational gap, we find that the required excess complexity $(C-C_{op})$ should scale as $-\log(\beta-PP)$. This leads directly to the logarithmic relationship in Equation (23), confirming that the exponential saturation model is not only the simplest phenomenological choice but is also consistent with fundamental information-theoretic bounds on efficient representation.
+*Remark:* Equation (23) implies $(C-C_{op})\propto -\ln(\beta-PP)$ as $PP\to\beta$, consistent with logarithmic rate–distortion scaling when the operational prediction error is proportional to the performance gap.
 
 **6.4 Adaptation Dynamics Driven by PCE**
 
@@ -233,9 +229,10 @@ The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **
 
 1.  **Lower Bound (from $P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23, Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 \nu (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0 \nu \frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
     $$
-    \Gamma_0 \gtrsim P_{min} = R(C_{op}) \ge \frac{k_B T \ln(d_0)}{\tau_{min}} \ge \frac{3 k_B T \ln 2}{\tau_{min}} \quad \text{(27)}
+    \Gamma_0 \gtrsim P_{min}=R(C_{op}) \gtrsim \frac{n_{irr}\,k_B T\,\varepsilon}{\tau_{\text{min}}}
+\ge \frac{k_B T \ln 2}{\tau_{\text{min}}} \quad \text{(27)}
     $$
-    If the cycle rate $\nu \approx 1/\tau_{min}$, this simplifies to $\Gamma_0 \gtrsim 3 k_B T \ln 2$.
+    where $n_{irr}\ge 1$ is the number of logically irreversible merges that must be reset per minimal cycle and $\varepsilon \ge \ln 2$ is the irreducible dimensionless entropy cost per such merge (Theorem 31). If the cycle rate $\nu \approx 1/\tau_{\text{min}}$, this corresponds to $\Gamma_0 \gtrsim n_{irr}\,k_B T\,\varepsilon$.
 2.  **Upper Bound (from $\varepsilon$):** The irreducible thermodynamic cost, quantified by dimensionless entropy production $\varepsilon \ge \ln 2$ (Theorem 31), associated with the necessary irreversible state change during an 'Evolve' interaction, provides an upper bound. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), must be considered relative to this fundamental dissipation $E_{dissip} \ge k_B T \varepsilon$. For thermodynamically consistent energy valuation:
      $$
     \Gamma_0 \lesssim \frac{k_B T \varepsilon \nu}{\Delta PP_{max}} =: \Gamma_{0,crit} \quad \text{(28)}
@@ -360,22 +357,22 @@ $$
 \frac{dC}{dt} = \eta_{adapt} \cdot \Psi(t) \cdot V_{mod}(PP(t)) + F_{corr}(PP(t)) \quad \text{(39)}
 $$
 where $PP(t) = PP(C(t), \hat{C}_{target}(t))$ is the instantaneous performance (Equation 22). The components are:
-1.  **Rate Modulation $V_{mod}(PP)$:** A smooth function $V_{mod}: (0, 1] \to [0, 1]$ that scales the adaptation rate. $V_{mod}(PP) \approx 1$ deep within the viable range $(\alpha, \beta)$, but $V_{mod}(PP) \to 0$ as $PP$ approaches the boundaries $\alpha^+$ or $\beta^-$, and $V_{mod}(PP) = 0$ outside $[\alpha, \beta]$. This prevents the standard adaptation driver $\Psi$ from pushing the system out of bounds or causing instability near the edges. Example form: $V_{mod}(PP) = \sin^2(\pi (PP-\alpha)/(\beta-\alpha))$ for $PP \in [\alpha, \beta]$, and 0 otherwise.
-2.  **Corrective Force $F_{corr}(PP)$:** A strong restoring force active only *outside* the interval $[\alpha, \beta]$, designed to rapidly push the complexity $C$ back towards the viable range. $F_{corr} > 0$ (increasing C) if $PP < \alpha$, $F_{corr} < 0$ (decreasing C) if $PP > \beta$, and $F_{corr} = 0$ if $\alpha \le PP \le \beta$. Example form:
+1.  **Rate Modulation $V_{mod}(PP)$:** A smooth function $V_{mod}: (0, 1] \to [0, 1]$ that scales the adaptation rate. $V_{mod}(PP) \approx 1$ deep within the viable range $(\alpha, \beta)$, but $V_{mod}(PP) \to 0$ as $PP$ approaches the boundaries $\alpha^+$ or $\beta^-$, and $V_{mod}(PP) = 0$ outside $[\alpha, \beta]$. This prevents the standard adaptation driver $\Psi$ from pushing the system out of bounds or causing instability near the edges. Define
+$$
+V_{mod}(PP)=\sin^2\\!\Bigl(\pi\,\frac{PP-\alpha}{\beta-\alpha}\Bigr),
+$$
+so that $V_{mod}(\alpha)=V_{mod}(\beta)=0$ and $V_{mod}((\alpha+\beta)/2)=1$. For $PP \notin [\alpha, \beta]$, set $V_{mod}(PP)=0$.
+2.  **Corrective Force $F_{corr}(PP)$:** A strong restoring force active only *outside* the interval $[\alpha, \beta]$, designed to rapidly push the complexity $C$ back towards the viable range. $F_{corr} > 0$ (increasing C) if $PP < \alpha$, $F_{corr} < 0$ (decreasing C) if $PP > \beta$, and $F_{corr} = 0$ if $\alpha \le PP \le \beta$. Define
     $$
-    F_{corr}(PP) = \gamma_{corr} \cdot \left[ (\alpha - PP)\Theta(\alpha - PP) - (PP - \beta)\Theta(PP - \beta) \right] \quad \text{(40)}
+    F_{corr}(PP)=-\lambda \left( H(PP-(\beta-\delta)) - H((\alpha+\delta)-PP) \right) \quad \text{(40)}
     $$
-    where $\gamma_{corr} > 0$ is a large corrective force constant, and $\Theta$ is the Heaviside step function.
+    where $H$ is the Heaviside step function, $\delta>0$ is a small margin, and $\lambda>0$ is a restoring coefficient.
 
 *Function:* This combined dynamics (Equation 39) ensures that complexity adaptation primarily follows the optimization gradient $\Psi$ (scaled by $V_{mod}$) within the viable range $(\alpha, \beta)$, while strong corrective forces $F_{corr}$ prevent sustained operation outside these critical bounds, upholding Axiom 3.
 
 **6.7 Model-Form Robustness**
 
-The specific functional forms chosen in several places throughout this framework—such as the resource cost functions $R(C)$ and $R_I(C)$ (Definition 3), the exponential Law of Prediction (Equation 22), the Consciousness Complexity (CC) scaling model (Definition 32), or the $G(R)$ interpolation for scale-dependent gravity (Equation I.3)—are often presented as minimal phenomenological models. These forms are chosen to be the simplest mathematical expressions that satisfy the qualitative principles and constraints derived from the framework's core logic (e.g., monotonicity, bounds, diminishing returns, convexity/concavity where appropriate).
-
-It is important to emphasize that the fundamental conclusions and core qualitative behaviors predicted by the Predictive Universe framework are expected to be robust against reasonable variations in these specific functional forms. For instance, replacing an exponential saturation curve (like in the Law of Prediction) with a logistic function or a Hill function, provided the new function still respects the required asymptotic bounds and monotonicity, should not alter the fundamental qualitative dynamics of complexity adaptation or the existence of optimal operating points.
-
-Deriving the precise functional forms for these relationships from the underlying POP/PCE optimization dynamics acting on the full PCE Potential $V(x)$ (Appendix D) is a complex task representing a key direction for future theoretical development (as discussed in the overall plan for deepening derivations). The current use of specific, simple functional forms serves to make the framework's quantitative aspects tractable and allows for concrete modeling, while the underlying logical and thermodynamic constraints provide the more fundamental, robust structure. The framework's strength lies in these derived principles rather than in the exact details of any single phenomenological choice, which should be understood as illustrative instantiations of those principles. In particular, we assume **Dominant Cost Convexity (DSC)**—that the convexity of $R(C)$ dominates any concavity in $PP(C)$—to ensure uniqueness of the reliability optimum and to formalize the variance penalty on heterogeneous complexities; see Appendices C–D for the precise statements and proofs.
+The optimization and stability results in this section depend only on the stated boundary conditions and regularity/convexity hypotheses (Definitions 19–22). When an explicit closed form is required, it is fixed either by the composition constraint underlying Theorem 19 or by the admissibility requirements built into the dynamical definition (Definition 22). Any substitution must preserve the stated monotonicity/convexity and boundary conditions; under those conditions, existence/uniqueness of the target-tracking dynamics (Theorem 22) and viability enforcement remain valid.
 
 **6.8 Functional Interpretation: Adaptation as Implicit Error Management**
 
@@ -386,13 +383,13 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 *   **Performance Measurement:** $PP(t)$ acts as the system's measurement of its current operational state relative to the desired state $PP_{op}$.
 *   **Error Signal:** The deviation $(PP_{op} - PP)$ serves as an error signal.
 *   **Control Actions:** Adjusting $\hat{C}_{target}$ (Equation 38) adapts the internal representation of the environment. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
-*   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and environmental representation $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon > 0$), enabling sustained viable prediction.
+*   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and environmental representation $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon \ge \ln 2$), enabling sustained viable prediction.
 
 **6.9 Self-Consistent Determination of Viability Bounds $\alpha$ and $\beta$**
 
-The framework derives the necessity of the operational performance bounds $\alpha$ and $\beta$ that define the **Space of Becoming**. While their existence is proven, their precise numerical values are a target for future derivation from the framework's fundamental parameters.
+In the PU framework, $\alpha$ and $\beta$ are derived thresholds tied to the structure of SPAP, ND-RID, and thermodynamic bounds. Key constraints include:
 
-*   **The Lower Bound $\alpha$:** This is the threshold of viability, where a predictive signal becomes distinguishable from noise. In PU it is constrained by the minimal information content of a predictive act ($\varepsilon = \ln 2$, Theorem 31) and by the minimal MPU state-space dimension ($d_0 = 2^{K_0} = 8$ with $K_0 = 3$, Theorem 15; Theorem 23). $\alpha$ represents the minimal signal-to-noise ratio required for the adaptation dynamics of the system (the coupled equations for $C$ and $C_{target}$) to enter and remain in the stable viability basin defining the Space of Becoming (Definition 8; Theorem 8–Theorem 9). In the low-complexity regime near $C=C_{op}$, the controlling stability conditions are governed by ND-RID contractivity and capacity limits (Appendix E) that constrain the onset of reliable prediction.
+*   **Lower Bound $\alpha$:** $\alpha$ is constrained by the minimal information content of a predictive act. Specifically, SPAP/erasure implies a necessary overhead of at least one bit of irreducible uncertainty, with $\varepsilon \ge \ln 2$ (Theorem 31), suggesting $\alpha \ge 0.5$ (for binary tasks) or a more general bound $\alpha > 0$.
 
 *   **The Upper Bound $\beta$:** This is the threshold of adaptability, where the marginal cost of further predictive improvement becomes prohibitive under PCE. Its value is set by a dynamic stability condition: the system must be able to afford the resource cost of achieving the next increment of performance without entering a regime of runaway costs or instability. This constrains the relationship between the marginal cost functions ($R'$, $R_I'$) and the performance gap $(\beta - PP)$ at the limit of high complexity. Deriving $\beta$ requires a full, self-consistent solution of the PCE optimization problem at its upper boundary, likely yielding a value for $\beta$ that is a complex function of the framework's core cost and efficiency parameters ($r_p$, $\gamma_p$, $r_I$, $\kappa_{eff}$, $\lambda$, $\Gamma_0$).
 

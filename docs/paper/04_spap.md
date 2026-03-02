@@ -227,30 +227,31 @@ Self-reference not only imposes logical limits but also influences the relations
 **4.5.1 Theorem 13 (Complexity Growth in Self-Modeling)**
 
 Consider a system engaging in recursive self-modeling, where the model $M_n$ at level $n$ includes a representation of the model $M_{n-1}$ from the previous level. Let $C(M)$ be a measure of complexity (e.g., Predictive Physical Complexity $C_P$, or algorithmic complexity). If each functionally distinct level of self-representation requires a minimum non-zero complexity overhead $k > 0$ to encode the additional structure and distinguish it from the previous level, then recursive self-modeling leads to complexity growth that is at least linear in the recursion depth $n$.
-*Proof:* Let $C(M_n)$ denote the complexity of the model at recursion level $n$. Base Case: $C(M_0) = c_0$. Inductive Step: Assume $C(M_{n-1})$. Model $M_n$ includes $M_{n-1}$ plus structure for level $n$. For functional distinction, $M_n$ must differ representationally. Standard coding theory implies distinguishable structures differ by some minimum complexity, hence $C(M_n) \ge C(M_{n-1}) + k$ for some $k > 0$. Inductively, $C(M_n) \ge c_0 + nk$. Thus, complexity grows at least linearly with recursion depth $n$:
+*Proof:* By hypothesis, each functionally distinct self-representation level incurs a minimum non-zero overhead $k>0$. Formally, for every $n\ge 1$,
 $$
-C(M_n) \ge c_0 + nk \quad \text{(12)}
+C(M_n)\ge C(M_{n-1})+k.
 $$
-This implies $C(M_n) = \Omega(n)$. QED
+Iterating yields $C(M_n)\ge C(M_0)+nk=c_0+nk$, which is (12). Hence $C(M_n)=\Omega(n)$. ∎
 
 **4.5.2 Theorem 14 (Predictive Complexity Divergence Near $\alpha_{SPAP}$)**
 
 For self-referential predictive systems subject to SPAP (operating within a model class $\mathcal{M}$ possessing Property R, Definition 10), let $\alpha_{SPAP} < 1$ be the theoretical maximum achievable average predictive performance (PP) for those aspects limited by SPAP (Theorem 10, Theorem 11). Let $C_{pred}(\alpha)$ denote the minimum necessary Predictive Physical Complexity ($C_P$, Equation 1) required by any physically realizable model $M \in \mathcal{M}$ to consistently achieve an average performance $\alpha$ (where $\alpha = PP$) on these SPAP-limited aspects.
 
-As performance $\alpha$ approaches the SPAP limit $\alpha_{SPAP}$ from below ($\delta_{SPAP} \to 0^+$), the required complexity diverges because any physically realizable strategy must verify/calibrate its SPAP-limited success rate to additive accuracy $\delta_{SPAP}$ at high confidence. Over a time horizon $\mathcal{T}$ verification/update steps, maintaining a uniform failure probability budget implies a per-step failure probability of order $1/\mathcal{T}$ (union bound), leading to a sample/processing cost that scales at least as
+As performance $\alpha$ approaches the SPAP limit $\alpha_{SPAP}$ from below, define the performance gap
 $$
-\mathcal{C}_{stat}(\delta_{SPAP}) = \Omega\left( \frac{\mathcal{T}}{\delta_{SPAP}^2} \right), \tag{13}
+\delta_{SPAP}:=\alpha_{SPAP}-\alpha \in (0,1).
 $$
-up to the logarithmic dependence on the target failure probability.
+The calibration/verification cost required to operate within $\delta_{SPAP}$ of the SPAP boundary is governed by the universal statistical lower bound established in Appendix B.3 (Theorem B.2): achieving additive accuracy $\delta_{SPAP}$ with failure probability at most $\beta$ requires at least $\Omega(\log(1/\beta)/\delta_{SPAP}^2)$ effective verification/update operations. In particular, enforcing a uniform failure-probability budget over a horizon of $\mathcal{T}$ verification/update steps via $\beta=1/\mathcal{T}$ yields
+$$
+\mathcal{C}_{stat}(\delta_{SPAP}) = \Omega\left( \frac{\log \mathcal{T}}{\delta_{SPAP}^2} \right). \tag{13}
+$$
 
-Imposing the natural self-calibrated confidence requirement that the probability of violating the target accuracy is at most the target accuracy gap itself (i.e. failure probability $\le \delta_{SPAP}$) yields the sharp lower bound proved in Appendix B.3 (Theorem B.2):
+Imposing the natural self-calibrated confidence requirement that the probability of violating the target accuracy is at most the target accuracy gap itself (i.e. failure probability $\le \delta_{SPAP}$, so $\beta=\delta_{SPAP}$) yields the sharp lower bound proved in Appendix B.3 (Theorem B.2):
 $$
 \mathcal{C}_{pred}(\alpha) = \Omega\left( \frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2} \right). \tag{14}
 $$
 
-*Proof Outline:*
-1. Achieving additive accuracy $\delta_{SPAP}$ with failure probability $\le \beta$ requires $\Omega(\log(1/\beta)/\delta_{SPAP}^2)$ effective verification/calibration operations (Appendix B.3).
-2. Taking $\beta=\delta_{SPAP}$ gives $\Omega(\log(1/\delta_{SPAP})/\delta_{SPAP}^2)$, which implies (14).
+*Proof:* This is a direct specialization of Appendix B.3 (Theorem B.2). The general bound with failure probability $\beta$ gives $\Omega(\log(1/\beta)/\delta_{SPAP}^2)$; substituting $\beta=1/\mathcal{T}$ gives (13), and substituting $\beta=\delta_{SPAP}$ gives (14). ∎
 
 
 **Remark 3: Conceptual Synthesis—Prediction Relativity and its Physical Mechanism.**

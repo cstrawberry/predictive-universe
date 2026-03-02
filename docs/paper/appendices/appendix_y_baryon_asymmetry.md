@@ -109,10 +109,10 @@ Multiplying by $N_g$ gives (Y.1).
 $$\delta = \delta_{\text{flat}} \times f_{\text{sinc}} = 70.53° \times 0.9454 = 66.7°$$
 
 *where:*
-- $\delta_{\text{flat}} = 2\arctan(\sqrt{2}/2) = 70.53°$ is the base phase from the up-down sector mismatch in E₈ root space
+- $\delta_{\text{flat}} = 2\arctan(\sqrt{2}/2) = 70.53°$ is the base phase from the up-down sector mismatch in $E_8$ root space
 - $f_{\text{sinc}} = \text{sinc}(1/\sqrt{3}) = 0.9454$ is the coherent averaging factor over the generation wavepacket (Theorem T.55)
 
-The CP phase is non-zero because the up and down quark sectors occupy geometrically distinct triads in the E₈ root lattice:
+The CP phase is non-zero because the up and down quark sectors occupy geometrically distinct triads in the $E_8$ root lattice:
 - Down quarks: $(d^2_{32}, d^2_{31}) = (2, 4)$
 - Up quarks: $(d^2_{32}, d^2_{31}) = (4, 8)$
 
@@ -120,7 +120,7 @@ This mismatch generates a non-trivial Berry curvature, and the holonomy around t
 
 ### Y.3.3 Departure from Thermal Equilibrium
 
-The SPAP cycle is intrinsically irreversible (Theorem 31: $\varepsilon > 0$). At the cosmological level, the arrow of time (Appendix O) and horizon thermodynamics (Section 12) enforce departure from global thermal equilibrium during cosmic expansion.
+The SPAP cycle is intrinsically irreversible (Theorem 31: $\varepsilon \ge \ln 2$). At the cosmological level, the arrow of time (Appendix O) and horizon thermodynamics (Section 12) enforce departure from global thermal equilibrium during cosmic expansion.
 
 Specifically, the electroweak crossover at $T \sim 160$ GeV provides the epoch where sphaleron processes are active but the expansion rate $H(T)$ prevents full equilibration, satisfying the Sakharov out-of-equilibrium condition.
 
@@ -171,7 +171,7 @@ This factor governs the magnitude of CP-odd corrections to sphaleron rates.
 
 ### Y.5.1 The Predictive Flavor Bundle
 
-**Definition Y.5** (Predictive Flavor Bundle). *Over the electroweak vacuum manifold $\mathcal{M}_{EW}$, the predictive flavor bundle $\mathcal{E} \to \mathcal{M}_{EW}$ has fiber at each point carrying the generation structure inherited from the E₈ embedding (Appendix R).*
+**Definition Y.5** (Predictive Flavor Bundle). *Over the electroweak vacuum manifold $\mathcal{M}_{EW}$, the predictive flavor bundle $\mathcal{E} \to \mathcal{M}_{EW}$ has fiber at each point carrying the generation structure inherited from the $E_8$ embedding (Appendix R).*
 
 The Berry connection on this bundle is:
 $$\mathcal{A} = i\sum_{\alpha,\beta} \bar{z}_{\alpha\beta}\, dz_{\alpha\beta} \tag{Y.5}$$
@@ -185,7 +185,7 @@ $$\mathcal{F} = d\mathcal{A} = i\sum_{\alpha,\beta} dz_{\alpha\beta} \wedge d\ba
 
 $$\gamma = \oint_{\gamma} \mathcal{A} = \int_{\Sigma} \mathcal{F} \tag{Y.7}$$
 
-For the flavor-changing loop $\gamma: u_3 \to d_3 \to d_2 \to u_2 \to u_3$, the holonomy is computed in Theorem T.56 from the E$_8$ sector mismatch:
+For the flavor-changing loop $\gamma: u_3 \to d_3 \to d_2 \to u_2 \to u_3$, the holonomy is computed in Theorem T.56 from the $E_8$ sector mismatch:
 $$\delta = 2\arctan\left(\frac{\sqrt{2}}{2}\right) \times \text{sinc}\left(\frac{1}{\sqrt{3}}\right) = 70.53° \times 0.9454 = 66.7°$$
 
 The CP-violating phase entering the master formula is:
@@ -199,7 +199,7 @@ $$\Delta S_{CP} = \frac{\sin\delta}{16\pi^2} \int d^4x \, W^a_{\mu\nu}\tilde{W}^
 *Proof.* 
 
 **Step 1 (Anomaly-holonomy correspondence).** The Berry connection $\mathcal{A}$ on the generation manifold $\text{Gr}(2,8)$ couples to the electroweak gauge field through the covariant derivative in the flavor-changing vertices. The path integral over fermion fields yields the anomaly functional:
-$$\Gamma_{\text{anom}}[A, \mathcal{A}] = \frac{1}{16\pi^2}\int d^4x \, \text{Tr}(\mathcal{F}) \cdot W\tilde{W}$$
+$$\Gamma_{\text{anom}}[A, \mathcal{A}] = \frac{1}{16\pi^2}\int d^4x \, \mathrm{tr}(\mathcal{F}) \cdot W\tilde{W}$$
 where $\mathcal{F} = d\mathcal{A} + \mathcal{A} \wedge \mathcal{A}$ is the Berry curvature.
 
 **Step 2 (Holonomy evaluation).** For a flavor loop $\gamma$ enclosing surface $\Sigma$ on $\text{Gr}(2,8)$:
@@ -463,9 +463,7 @@ where the uncertainty is the conservative truncation bound for the first neglect
 **Step 2 (QED running).** Standard QED running from $q^2 = 0$ to the sphaleron scale $T_{sph} \approx 160$ GeV gives:
 $$\alpha_{em}^{-1}(T_{sph}) \approx 127.5$$
 
-**Step 3 (Weinberg angle).** From Appendix T, Theorem T.14, the Weinberg angle at the matching scale is:
-$$\sin^2\theta_W(\mu_G) = \frac{3}{8}$$
-Standard SM RG running to the electroweak scale gives:
+**Step 3 (Weinberg angle).** From Appendix T, Theorem T.14, the PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$. After matching to SM-canonical gauge fields with Bures wavefunction factors $(Z_1, Z_2)$ (Definition T.17a, Theorem T.18), the SM-canonical boundary value at $\mu_G$ is $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2 + 5Z_1) \approx 0.408$. One-loop SM RG running to the sphaleron scale gives:
 $$\sin^2\theta_W(T_{sph}) \approx 0.234$$
 
 **Step 4 (Combination).** By definition of the Weinberg angle:
@@ -489,7 +487,7 @@ This derivation uses zero continuously adjustable parameters beyond $K_0 = 3$. �
 | $N_g$ | 3 | Proposition R.3.5 |
 | $\delta$ | $66.7°$ | Theorem T.56 |
 | $\alpha_{em}^{-1}$(Thomson) | $137.036092 \pm 0.000050$ | Theorem Z.26 |
-| $\sin^2\theta_W(\mu_G)$ | $3/8$ | Theorem T.14 |
+| $\sin^2\theta_W^{(0)}$ | $3/8$ | Gauge normalization (Theorem T.14) |
 | $\alpha_W$ | $\approx 1/30$ | Derived: $\alpha_W = \alpha_{em}/\sin^2\theta_W$ |
 | $c_{sph}$ | $28/79 = 0.354$ | $(8N_g + 4n_H)/(22N_g + 13n_H)$ with $N_g = 3$ |
 
@@ -579,7 +577,7 @@ All derived quantities are consistent with observation.
 | $N_g = 3$ | Derived | Anomaly cancellation (Proposition R.3.5) |
 | $\delta = 66.7°$ | Derived | Berry holonomy (Theorem T.56) |
 | $\alpha_{em}^{-1} = 137.036092 \pm 0.000050$ | Derived | Capacity saturation (Theorem Z.26) |
-| $\sin^2\theta_W = 3/8$ | Derived | Bures geometry (Theorem T.14) |
+| $\sin^2\theta_W^{(0)} = 3/8$ | Derived | Bures geometry (Theorem T.14) |
 | $\alpha_W \approx 1/30$ | Derived | $\alpha_{em}/\sin^2\theta_W$ at $T_{sph}$ |
 | $c_{sph} = 28/79$ | Derived | $(8N_g + 4n_H)/(22N_g + 13n_H)$ |
 | $f_{wash} = 0.63$ | Calculated | $\exp(-\int \Gamma_{sph}/H \, dT/T)$ |
@@ -913,7 +911,7 @@ $$\dim(G/H) = (3 + 1) - 1 = 3$$
 
 The CKM CP phase arises from Berry holonomy on Gr(2,8).
 
-**Step 1:** The E₈ triads for quark sectors are:
+**Step 1:** The $E_8$ triads for quark sectors are:
 - Down: $(d^2_{32}, d^2_{31}) = (2, 4)$
 - Up: $(d^2_{32}, d^2_{31}) = (4, 8)$
 

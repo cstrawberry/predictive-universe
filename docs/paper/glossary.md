@@ -28,7 +28,7 @@
 
 *   **$B_3$ (Three Bits):** (Theorem 15) Minimum information capacity (8 states) for core SPAP logic, establishing $K_0 \equiv B_3 = 3$ bits.
 
-*   **Born Rule:** (Proposition 7, Theorem G.1.7) Probability of outcome $i$ from state $\rho$ measured via projector $P_i$ is $P(i) = \text{Tr}(\rho P_i)$. For pure state $|\psi\rangle$ and basis projector $P_i=|i\rangle\langle i|$, $P(i)=|\langle i|\psi\rangle_s|^2$. Derived via PCE consistency (Appendix G).
+*   **Born Rule:** (Proposition 7, Theorem G.1.7) Probability of outcome $i$ from state $\rho$ measured via projector $P_i$ is $P(i) = \mathrm{tr}(\rho P_i)$. For pure state $|\psi\rangle$ and basis projector $P_i=|i\rangle\langle i|$, $P(i)=|\langle i|\psi\rangle_s|^2$. Derived via PCE consistency (Appendix G).
 
 *   **Bures Metric (Bures Distance):** (Appendix Z, Section Z.17) The natural Riemannian metric on the space of density operators measuring distinguishability between quantum states. For pure states, equivalent to the Fubini-Study metric. Selected by PCE for interface geometry because it saturates the quantum Cramér-Rao bound, providing the optimal estimation geometry for predictive systems.
 
@@ -54,7 +54,7 @@
 
 *   **Continuum Limit:** (Section 11, Appendix F) Convergence of the discrete MPU network structure (geometry and dynamics) to a continuous spacetime manifold $(M, g_{\mu\nu})$ and an effective AQFT description, conditional on Geometric Regularity (Theorem 43).
 
-*   **CPTP (Completely Positive Trace-Preserving):** (Appendix E, Appendix G) A quantum channel $\mathcal{E}$ is CPTP if it maps density operators to density operators, preserves trace ($\text{Tr}(\mathcal{E}(\rho)) = \text{Tr}(\rho)$), and remains positive when extended to any ancilla system. The 'Evolve' channel is CPTP by construction, with strict contractivity ($f_{RID} < 1$) guaranteed by irreversibility ($\varepsilon > 0$).
+*   **CPTP (Completely Positive Trace-Preserving):** (Appendix E, Appendix G) A quantum channel $\mathcal{E}$ is CPTP if it maps density operators to density operators, preserves trace ($\mathrm{tr}(\mathcal{E}(\rho)) = \mathrm{tr}(\rho)$), and remains positive when extended to any ancilla system. The 'Evolve' channel is CPTP by construction, with strict contractivity ($f_{RID} < 1$) guaranteed by irreversibility ($\varepsilon > 0$).
 
 *   **CTB Model (Context-Targeted Bias):** (Definition 34, Equation 58–59) Example model for CC influence where probability shifts towards a context-defined target distribution: $P_{obs}(i) = (1-\text{CC}) P_{Born}(i) + \text{CC} p_{target}(i)$.
 
@@ -76,9 +76,9 @@
 
 *   **$\varepsilon$ (Epsilon):** (Definition 28, Theorem 31, Appendix J) The fundamental, minimal dimensionless entropy production ($\Delta S_{min}/k_B$, in nats) associated with the necessary logical state merging inherent in the physical execution of the SPAP update cycle during 'Evolve'. Bounded below: $\varepsilon \ge \ln 2$ (Theorem J.1).
 
-*   **E$_8$ Root System:** (Appendix R, Section R.2) The exceptional root system in 8 dimensions consisting of 240 vectors of squared length 2; the associated $E_8$ lattice achieves the optimal sphere packing density in 8D (Viazovska 2017). Provides the information-optimal coordinatization of the MPU's internal 8-dimensional real subspace with kissing number 240, maximal symmetry, and self-duality. Squared distances between distinct roots are restricted to $d^2 \in \{2, 4, 6, 8\}$, constraining the discrete values of the Mass Hierarchy Invariant $\mathcal{R}$.
+*   **$E_8$ Root System:** (Appendix R, Section R.2) The exceptional root system in 8 dimensions consisting of 240 vectors of squared length 2; the associated $E_8$ lattice achieves the optimal sphere packing density in 8D (Viazovska 2017). Provides the information-optimal coordinatization of the MPU's internal 8-dimensional real subspace with kissing number 240, maximal symmetry, and self-duality. Squared distances between distinct roots are restricted to $d^2 \in \{2, 4, 6, 8\}$, constraining the discrete values of the Mass Hierarchy Invariant $\mathcal{R}$.
 
-*   **$f_{RID}$:** (Lemma E.1) The maximal contractivity factor ($0 \le f_{RID} < 1$) of the average 'Evolve' channel $\mathcal{E}_N$ with respect to trace distance. Strict inequality $f_{RID}<1$ is guaranteed by irreversibility ($\varepsilon>0$).
+*   **$f_{RID}$:** (Lemma E.1) The maximal contractivity factor ($0 \le f_{RID} < 1$) of the average 'Evolve' channel $\mathcal{E}_N$ with respect to trace distance. Strict inequality $f_{RID}<1$ is guaranteed by irreversibility ($\varepsilon \ge \ln 2$).
 
 *   **Fundamental Predictive Loop:** (Definition 4) The core operational cycle of MPU dynamics: Internal Prediction ($P_{int}$), Verification ($V$ via 'Evolve'), and Update/Cycle ($D_{cyc}$).
 
@@ -111,7 +111,7 @@
 
 *   **Information:** (Definition 1) Functionally defined as any physically instantiated pattern or structure that has the objective potential to reduce uncertainty or Prediction Error ($PE$) relevant to a system's POP when processed by a suitable predictive system ($C \ge K_0$).
 
-*   **Kissing Number ($K(D)$):** (Appendix Z, Definition Z.7, Section Z.10) The maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$-dimensional Euclidean space. Key values: $K(3) = 12$, $K(4) = 24$ (24-cell), $K(8) = 240$ (E$_8$). The mode-channel correspondence (Theorem Z.10) requires $M_{\rm int} = K(D)$ at equilibrium; the dimension-selection theorem (Theorem Z.11) then uniquely selects $D = 4$ since $K(4) = M = 24$.
+*   **Kissing Number ($K(D)$):** (Appendix Z, Definition Z.7, Section Z.10) The maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$-dimensional Euclidean space. Key values: $K(3) = 12$, $K(4) = 24$ (24-cell), $K(8) = 240$ ($E_8$). The mode-channel correspondence (Theorem Z.10) requires $M_{\rm int} = K(D)$ at equilibrium; the dimension-selection theorem (Theorem Z.11) then uniquely selects $D = 4$ since $K(4) = M = 24$.
 
 *   **KMS (Kubo-Martin-Schwinger) Condition:** (Appendix G.1.9) The thermal equilibrium condition for quantum states at inverse temperature $\beta$, requiring $\langle A B(i\hbar\beta) \rangle = \langle B A \rangle$ for observables $A, B$. In the PU framework, the KMS condition characterizes the PCE-equilibrium thermal states and connects to the modular Hamiltonian structure in the entropy unification (Theorem G.1.9).
 
@@ -132,7 +132,7 @@
 
 *   **Logical Indeterminacy:** (Definition 12) The fundamental, in-principle unpredictability arising directly from the logical structure of self-reference (SPAP) and reflexive interaction (RID/RU) in systems possessing sufficient computational richness (Property R). Hypothesized source of quantum randomness (Hypothesis 2).
 
-*   **Mass Hierarchy Invariant ($\mathcal{R}$):** (Appendix R, Definition R.5.1) The parameter-free ratio $\mathcal{R} := \ln(m_3/m_1)/\ln(m_3/m_2) = d^2_{31}/d^2_{32}$ relating fermion mass ratios to E$_8$ root distances. Independent of width parameter $\xi$, Hessian constants $\alpha_1, \alpha_2$, and overall normalization. Restricted to discrete values $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ by E$_8$ geometry. Charged lepton sector shows $\mathcal{R}_\ell^{\rm obs} \approx 2.889$, consistent with $\mathcal{R} = 3$ to 3.8%.
+*   **Mass Hierarchy Invariant ($\mathcal{R}$):** (Appendix R, Definition R.5.1) The parameter-free ratio $\mathcal{R} := \ln(m_3/m_1)/\ln(m_3/m_2) = d^2_{31}/d^2_{32}$ relating fermion mass ratios to $E_8$ root distances. Independent of width parameter $\xi$, Hessian constants $\alpha_1, \alpha_2$, and overall normalization. Restricted to discrete values $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ by $E_8$ geometry. Charged lepton sector shows $\mathcal{R}_\ell^{\rm obs} \approx 2.889$, consistent with $\mathcal{R} = 3$ to 3.8%.
 
 *   **Mode-Channel Correspondence:** (Appendix Z, Theorem Z.10) The PCE equilibrium condition requiring internal QFI modes to match external spatial channels: $M_{\rm int} = M_{\rm phys}$. At thermodynamic equilibrium with isotropic environment, $M_{\rm phys} = K(D)$ (kissing number). Combined with $M_{\rm int} = 2ab = 24$, Theorem Z.11 uniquely selects $D = 4$ as the emergent spacetime dimension.
 

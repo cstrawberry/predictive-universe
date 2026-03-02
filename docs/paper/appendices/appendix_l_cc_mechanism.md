@@ -107,7 +107,7 @@ Proof. From Theorem 34, POP/PCE dynamics drive aggregates with $C_{\text{agg}} >
 
 The mapping $\mathcal{M}: \text{context}_S \to \mathcal{P}_{\text{control}}(t)$ (Definition L.2) for a high-complexity MPU aggregate $S$ generates classical electromagnetic radiation $E_{\text{rad}}(t)$ through coherent charge oscillations within the aggregate. The electromagnetic energy contributes to the stress-energy tensor:
 
-$$ T_{\mu\nu}^{(\text{EM})} = \frac{1}{4\pi}\left(F_{\mu\alpha}F_{\nu}{}^{\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right) \tag{L.4} $$
+$$ T_{\mu\nu}^{(\text{EM})} = \frac{1}{\mu_0}\left(F_{\mu\alpha}F_{\nu}{}^{\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right) \tag{L.4} $$
 
 where $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$ is the electromagnetic field strength tensor. This contribution is properly incorporated into the total MPU stress-energy tensor $T_{\mu\nu}^{(\text{MPU})}$ (Appendix B, Definition B.8).
 
@@ -145,37 +145,43 @@ Stress-Energy Derivation: The electromagnetic field energy density is:
 
 $$ u_{\text{EM}}(x,t) = \frac{\varepsilon_0}{2}|\vec{E}_{\text{rad}}(x,t)|^2 + \frac{1}{2\mu_0}|\vec{B}_{\text{rad}}(x,t)|^2 \tag{L.10} $$
 
-From Appendix G (Equation G.5.3), the Maxwell action in curved spacetime is:
+From Appendix G (Equation G.5.3), restoring SI units yields the Maxwell action in curved spacetime:
 
-$$ S_{\text{EM}}[A] = -\frac{1}{16\pi} \int d^4x \, \sqrt{-g} \, F_{\mu\nu}F^{\mu\nu} \tag{L.11} $$
+$$ S_{\text{EM}}[A] = -\frac{1}{4\mu_0} \int d^4x \, \sqrt{-g} \, F_{\mu\nu}F^{\mu\nu} \tag{L.11} $$
 
 Functional variation with respect to the metric yields the electromagnetic stress-energy tensor:
 
 $$ T_{\mu\nu}^{(\text{EM})} = -\frac{2}{\sqrt{-g}}\frac{\delta S_{\text{EM}}}{\delta g^{\mu\nu}} \tag{L.12} $$
 
-The variation proceeds using $\delta\sqrt{-g} = -\frac{1}{2}\sqrt{-g} , g_{\alpha\beta}\delta g^{\alpha\beta}$ and $\delta(g^{\mu\nu}F_{\mu\alpha}F_{\nu\beta}g^{\alpha\beta}) = -F_{\mu\alpha}F_{\nu\beta}g^{\alpha\beta}\delta g^{\mu\nu} + 2F_{\mu\alpha}F_{\nu}{}^{\alpha}\delta g^{\mu\nu}$. Computing:
+The variation proceeds using $\delta\sqrt{-g} = -\frac{1}{2}\sqrt{-g}\, g_{\alpha\beta}\delta g^{\alpha\beta}$ and $\delta(F_{\alpha\beta}F^{\alpha\beta}) = 2F_{\mu\alpha}F_{\nu}{}^{\alpha}\delta g^{\mu\nu}$. Computing:
 
-$$ \begin{aligned} \delta S_{\text{EM}} &= -\frac{1}{16\pi}\int d^4x \left[\delta\sqrt{-g} , F_{\alpha\beta}F^{\alpha\beta} + \sqrt{-g} , \delta(F_{\alpha\beta}F^{\alpha\beta})\right] \ &= -\frac{1}{16\pi}\int d^4x , \sqrt{-g} \left[-\frac{1}{2}F_{\alpha\beta}F^{\alpha\beta}g_{\mu\nu} + 2F_{\mu\alpha}F_{\nu}{}^{\alpha}\right]\delta g^{\mu\nu} \end{aligned} $$
+$$
+\begin{aligned}
+\delta S_{\text{EM}}
+&= -\frac{1}{4\mu_0}\int d^4x \left[\delta\sqrt{-g}\, F_{\alpha\beta}F^{\alpha\beta} + \sqrt{-g}\, \delta(F_{\alpha\beta}F^{\alpha\beta})\right] \\
+&= -\frac{1}{4\mu_0}\int d^4x\,\sqrt{-g}\left[-\frac{1}{2}F_{\alpha\beta}F^{\alpha\beta}g_{\mu\nu} + 2F_{\mu\alpha}F_{\nu}{}^{\alpha}\right]\delta g^{\mu\nu}
+\end{aligned}
+$$
 
 yields Equation L.4 (see Wald 1984, §4.3 for full derivation). This electromagnetic contribution is properly incorporated into the total MPU stress-energy tensor $T_{\mu\nu}^{(\text{MPU})}$ as described in Appendix B, Definition B.8. ∎
 
 ### **Corollary L.2.1 (AC Stark Interaction)**
 
-The field $E_{\text{rad}}(t)$ couples to target MPU via dipole interaction:
+The field $\vec{E}_{\text{rad}}(t)$ couples to target MPU via dipole interaction:
 
-$$ H_{\text{int}}(t) = -\vec{d}{\text{TLS}} \cdot \vec{E}{\text{rad}}(t) \tag{L.13} $$
+$$ H_{\text{int}}(t) = -\vec{d}_{\text{TLS}} \cdot \vec{E}_{\text{rad}}(t) \tag{L.13} $$
 
 In the off-resonant regime $|\Delta| \gg \Gamma$ where $\Delta = \omega_{\text{TLS}} - \omega_{\text{rad}}$ is detuning and $\Gamma$ is natural linewidth, second-order time-dependent perturbation theory yields the AC Stark shift:
 
-$$ \delta(t) = \frac{\Omega_R^2(t)}{4\Delta(t)}, \quad \Omega_R(t) = \frac{|\vec{d}{\text{TLS}} \cdot \vec{\epsilon}{\text{rad}}| E_0(t)}{\hbar} \tag{L.14} $$
+$$ \delta_{\text{Stark}}(t) = \frac{\Omega_R^2(t)}{4\Delta(t)}, \qquad \Omega_R(t) = \frac{|\vec{d}_{\text{TLS}} \cdot \vec{\epsilon}_{\text{rad}}|\,E_0(t)}{\hbar} \tag{L.14} $$
 
-This shift modulates transition frequencies, thereby modulating Lindblad decoherence rates $\gamma_k$ through their dependence on level spacings. The modified rates bias 'Evolve' process probabilities within the bound $|\Delta P(i)| \le \text{CC}(S)$ (Definition 30).
+This shift modulates transition frequencies, thereby modulating Lindblad decoherence rates $\gamma_k$ through their dependence on level spacings. The modified rates bias 'Evolve' process probabilities within the bound $|\Delta P(i)| \le \mathrm{CC}(S)$ (Definition 30).
 
 ### **Proposition L.1 (Spectral Selectivity Through Resonance)**
 
 The AC Stark shift magnitude scales as:
 
-$$ \delta \propto \frac{1}{|\omega_{\text{TLS}} - \omega_{\text{rad}}|} \tag{L.15} $$
+$$ \delta_{\text{Stark}} \propto \frac{1}{|\omega_{\text{TLS}} - \omega_{\text{rad}}|} \tag{L.15} $$
 
 Target selectivity arises from this resonance condition. Maximum effect occurs when aggregate oscillation frequency $\omega_{\text{rad}}$ matches target transition frequency $\omega_{\text{TLS}}$. Off-resonance suppression by factor $\sim \omega_{\text{TLS}}/|\Delta|$ provides spectral addressing—the ability to selectively influence specific quantum systems based on their transition frequencies.
 ## **L.3 Gravitational Time Dilation from Aggregate Energy**
@@ -1000,7 +1006,7 @@ Stable under feedback if $\text{context}_S$ is influenced by past CC effects
 
 Satisfying the cost-benefit constraint (Equation L.3)
 
-(v) Threshold Emergence: The mapping $\mathcal{M}: \text{context}S \to \mathcal{P}{\text{control}}$ exists only when $C_{\text{agg}}(S) > C_{op}$. Below threshold, $\text{CC}(S) = 0$ regardless of available power $P_{\text{agg}}$.
+(v) Threshold Emergence: The mapping $\mathcal{M}: \text{context}_S \to \mathcal{P}_{\text{control}}$ exists only when $C_{\text{agg}}(S) > C_{op}$. Below threshold, $\text{CC}(S) = 0$ regardless of available power $P_{\text{agg}}$.
 
 Proof of Necessity.
 
@@ -1085,7 +1091,7 @@ where $\Gamma_{\text{context}}$ is effective decoherence rate. For aggregates wi
 
 $$ \tau_c \lesssim \frac{C_{\text{agg}} - C_{op}}{\lambda R_{\text{agg}}} $$
 
-Justification. Maintaining $\text{context}S$ requires continuous resource expenditure against decoherence. PCE optimization (Appendix D) balances coherence benefit vs. cost, yielding $\tau_c \sim 1/\Gamma{\text{context}}$. Resource bound follows from Definition 3 (operational cost). ∎
+Justification. Maintaining $\text{context}_S$ requires continuous resource expenditure against decoherence. PCE optimization (Appendix D) balances coherence benefit vs. cost, yielding $\tau_c \sim 1/\Gamma_{\text{context}}$. Resource bound follows from Definition 3 (operational cost). ∎
 
 ### **Proposition L.9.5 (Energy-Range-Time Trade-off)**
 
@@ -1161,15 +1167,15 @@ This section provides detailed implementation of the AC Stark mechanism introduc
 
 ## **L.11.1 Coherent Dipole Radiation Mechanism**
 
-The MPU aggregate $S$, via the POP/PCE-optimized mapping $\mathcal{M}(\text{context}S(t))$ (Theorem L.1), drives coherent oscillations of internal degrees of freedom (collective electronic or ionic modes, or synchronized MPU transitions). These coherent oscillations involve effective charge displacements or currents, leading to the generation of classical electromagnetic radiation $E{\text{rad}}(t)$. The specific characteristics of this radiation (frequency $\omega_{\text{rad}}$, amplitude $E_0(t)$, phase $\phi_{\text{rad}}(t)$, polarization $\vec{\epsilon}_{\text{rad}}(t)$) are determined by $\mathcal{M}(\text{context}_S(t))$.
+The MPU aggregate $S$, via the POP/PCE-optimized mapping $\mathcal{M}(\text{context}_S(t))$ (Theorem L.1), drives coherent oscillations of internal degrees of freedom (collective electronic or ionic modes, or synchronized MPU transitions). These coherent oscillations involve effective charge displacements or currents, leading to the generation of classical electromagnetic radiation $\vec{E}_{\text{rad}}(t)$. The specific characteristics of this radiation (frequency $\omega_{\text{rad}}$, amplitude $E_0(t)$, phase $\phi_{\text{rad}}(t)$, polarization $\vec{\epsilon}_{\text{rad}}(t)$) are determined by $\mathcal{M}(\text{context}_S(t))$.
 
 The interaction occurs during the 'Evolve' process over duration $\tau_{\text{int}} \gtrsim \tau_{\text{min}}$ (Theorem 29). The interaction Hamiltonian describing the coupling is (in a suitable interaction picture):
 
-$$ H_{\text{int}}(t) = -\vec{d}{\text{TLS}} \cdot \vec{E}{\text{rad}}(t) \approx \hbar,\delta(t),\sigma_z \tag{L.86} $$
+$$ H_{\text{int}}(t) = -\vec{d}_{\text{TLS}} \cdot \vec{E}_{\text{rad}}(t) \approx \hbar\,\delta_{\text{Stark}}(t)\,\sigma_z \tag{L.86} $$
 
 where the off-resonant AC Stark shift is:
 
-$$ \delta(t) \simeq \frac{\Omega_R^2(t)}{4,\Delta(t)}, \quad \Omega_R(t) = \frac{|\vec{d}{\text{TLS}}\cdot\vec{\epsilon}{\text{rad}}(t)|,E_0(t)}{\hbar}, \quad \Delta(t)=\omega_{\text{TLS}}-\omega_{\text{rad}}(t) \tag{L.87} $$
+$$ \delta_{\text{Stark}}(t) \simeq \frac{\Omega_R^2(t)}{4\Delta(t)}, \quad \Omega_R(t) = \frac{|\vec{d}_{\text{TLS}}\cdot\vec{\epsilon}_{\text{rad}}(t)|\,E_0(t)}{\hbar}, \quad \Delta(t)=\omega_{\text{TLS}}-\omega_{\text{rad}}(t) \tag{L.87} $$
 
 The operator $\sigma_z = |e\rangle\langle e| - |g\rangle\langle g|$ projects onto the TLS energy eigenstates.
 
@@ -1179,7 +1185,7 @@ The 'Evolve' process for the target MPU is described by a master equation for it
 
 $$ \dot{\rho} = -\frac{i}{\hbar}[H_{\text{TLS}} + H_{\text{int}}(t),\rho] + \sum_k \gamma_k^{(0)}\mathcal{L}_k[\rho] \tag{L.88} $$
 
-where $H_{\text{TLS}}$ is the MPU's intrinsic TLS Hamiltonian (part of $\hat{H}$ from Theorem 29), and $\mathcal{L}k$ are baseline Lindblad superoperators (rates $\gamma_k^{(0)}$) for the ND-RID process. The interaction $H{\text{int}}(t)$ induces a time-dependent AC Stark shift $\pm \hbar \delta(t)$ in the TLS energy levels. If the Lindblad rates $\gamma_k^{(0)}$ depend on energy level spacings or couplings affected by these shifts (e.g., via density of states in Fermi's Golden Rule), the effective rates $\gamma_k$ become modulated by $E_0(t)$.
+where $H_{\text{TLS}}$ is the MPU's intrinsic TLS Hamiltonian (part of $\hat{H}$ from Theorem 29), and $\mathcal{L}_k$ are baseline Lindblad superoperators (rates $\gamma_k^{(0)}$) for the ND-RID process. The interaction $H_{\text{int}}(t)$ induces a time-dependent AC Stark shift $\pm \hbar \delta_{\text{Stark}}(t)$ in the TLS energy levels. If the Lindblad rates $\gamma_k^{(0)}$ depend on energy level spacings or couplings affected by these shifts (e.g., via density of states in Fermi's Golden Rule), the effective rates $\gamma_k$ become modulated by $E_0(t)$.
 
 Defining a dimensionless control field magnitude:
 
@@ -1191,13 +1197,13 @@ $$ \gamma_k(t) \approx \gamma_k^{(0)}\bigl[1+\chi_k(\omega_{\text{rad}}(t), \Del
 
 where $\chi_k$ is a dimensionless rate susceptibility, dependent on $d_{\text{TLS}}$, $E_{\text{max}}$, and details of the TLS-environment coupling modulated by the Stark shift.
 
-**Note on Born Rule:** The CC influence modulates the *parameters* governing the ND-RID process (the Lindblad rates $\gamma_k$), not the Born rule itself. The Born rule, interpreted in this framework as emergent from ND-RID over many 'Evolve' cycles (Section 7), remains the fundamental probability assignment mechanism. CC bias operates by changing the *effective Hamiltonian* and *decoherence rates* that enter into this emergent Born rule, analogous to how external magnetic fields modify energy levels without changing quantum mechanical probability axioms. The probability shifts therefore arise from modified quantum states evolving under modified dynamics, not from violations of quantum probability rules.
+**Note on Born Rule:** The CC influence modulates the *parameters* governing the ND-RID process (the Lindblad rates $\gamma_k$), not the Born rule itself. The Born rule, interpreted in this framework as emergent from ND-RID over many 'Evolve' cycles (Section 8), remains the fundamental probability assignment mechanism. CC bias operates by changing the *effective Hamiltonian* and *decoherence rates* that enter into this emergent Born rule, analogous to how external magnetic fields modify energy levels without changing quantum mechanical probability axioms. The probability shifts therefore arise from modified quantum states evolving under modified dynamics, not from violations of quantum probability rules.
 
 The outcome probabilities $P_{\text{obs}}(i)$ of the 'Evolve' process are then:
 
-$$ P_{\text{obs}}(i)=\text{tr}!\big(e^{\varepsilon L_S}(\rho),E_i\big)=\text{tr}!\big(\rho,(E_i+\varepsilon K_S(E_i))\big)+O(\varepsilon^2) \tag{L.91} $$
+$$ P_{\text{obs}}(i)=\mathrm{tr}\!\big(E_i\,e^{\tau_{\text{int}} L_S}(\rho)\big)=\mathrm{tr}\!\big(\rho\,(E_i+\tau_{\text{int}}\,L_S^\dagger(E_i))\big)+O(\tau_{\text{int}}^2) \tag{L.91} $$
 
-with $\varepsilon$ a context-controlled scale (when $L_S$ is a GKLS generator) chosen so that $|\Delta P(i)|\le \text{CC}(S)$.
+with $\tau_{\text{int}}$ the interaction duration (so $\tau_{\text{int}}L_S$ is dimensionless) and the context dependence of $L_S$ chosen so that $|\Delta P(i)|\le \mathrm{CC}(S)$.
 
 ## **L.11.3 Parameter Estimation and Feasibility**
 
@@ -1213,11 +1219,11 @@ AC Stark shift and susceptibility:
 
 Let $\gamma_0$ be the baseline ND-RID jump rate over interaction window $\tau_{\text{int}}$. For small Stark modulation,
 
-$$ |\Delta P|\sim \Delta\gamma,\tau_{\text{int}} = \gamma_0\tau_{\text{int}}\left(\frac{\Delta\gamma}{\gamma_0}\right) $$
+$$ |\Delta P|\sim \Delta\gamma\,\tau_{\text{int}} = \gamma_0\tau_{\text{int}}\left(\frac{\Delta\gamma}{\gamma_0}\right) $$
 
 so the bias scales linearly with the fractional rate shift and with the baseline interaction probability over $\tau_{\text{int}}$.
 
-With $E_{\text{max}}=2\times10^{3}$ V/m and $d_{\text{TLS}}\approx1.6\times10^{-28}$ C·m, the Rabi frequency is $\Omega_R=d_{\text{TLS}}E_{\text{max}}/\hbar\approx 3.0\times10^{9}$ rad/s. For detuning $\Delta=2\pi\times10$ GHz the off-resonant AC Stark shift is $\delta\simeq \Omega_R^2/(4\Delta)\approx 3.7\times10^{7}$ rad/s, giving a fractional level shift $\delta/\omega_{\text{TLS}}\approx 6\times10^{-4}$. For $\Delta=2\pi\times1$ GHz this rises to $\sim 6\times10^{-3}$. Achieving a 5% fractional shift at $\Delta=2\pi\times10$ GHz requires $E\sim 1.85\times10^{4}$ V/m, while $E = 3.6\times10^{4}$ V/m would yield approximately 19% shift (or engineered enhancement/reduced detuning). Within the small-shift regime, modulation of decoherence/transition rates via Equation L.90 may yield detectable probability biases with higher fields, reduced detuning, or cavity/plasmonic enhancements consistent with resource bounds.
+With $E_{\text{max}}=2\times10^{3}$ V/m and $d_{\text{TLS}}\approx1.6\times10^{-28}$ C·m, the Rabi frequency is $\Omega_R=d_{\text{TLS}}E_{\text{max}}/\hbar\approx 3.0\times10^{9}$ rad/s. For detuning $\Delta=2\pi\times10$ GHz the off-resonant AC Stark shift is $\delta_{\text{Stark}}\simeq \Omega_R^2/(4\Delta)\approx 3.7\times10^{7}$ rad/s, giving a fractional level shift $\delta_{\text{Stark}}/\omega_{\text{TLS}}\approx 6\times10^{-4}$. For $\Delta=2\pi\times1$ GHz this rises to $\sim 6\times10^{-3}$. Achieving a 5% fractional shift at $\Delta=2\pi\times10$ GHz requires $E\sim 1.85\times10^{4}$ V/m, while $E = 3.6\times10^{4}$ V/m would yield approximately 19% shift (or engineered enhancement/reduced detuning). Within the small-shift regime, modulation of decoherence/transition rates via Equation L.90 may yield detectable probability biases with higher fields, reduced detuning, or cavity/plasmonic enhancements consistent with resource bounds.
 
 ## **L.11.4 Worked Example: Complete Calculation for Engineered System**
 
@@ -1391,7 +1397,7 @@ This dual analysis demonstrates framework robustness. CC is simultaneously:
 - **Thermodynamically rigorous** (this appendix)
 - **Self-limiting via gravitational feedback** (Appendix S, Sections S.3-S.4)
 - **Self-limiting via decoherence** (Appendix S, Section S.7)
-- **Causality-bounded** ($\alpha_{CC,\max} < 0.5$, Theorem 39, interpreted gravitationally in Section S.5)
+- **Causality-bounded** ($\alpha_{CC,max} < 0.5$, Theorem 39, interpreted gravitationally in Section S.5)
 
 No "runaway" or "unbounded" CC effects are possible; multiple independent mechanisms enforce physical constraints.
 
@@ -1466,27 +1472,27 @@ This reframing has five consequences beyond those already established in Appendi
 
 The AC Stark coupling parameters — transition frequency $\omega_{\text{TLS}}$, dipole moment $\vec{d}_{\text{TLS}}$, rate susceptibility $\chi_k$, and instantaneous state $\rho_T$ — are fixed properties of the target MPU $T$ but are **unknown** to aggregate $S$ in the absence of prior interaction. From the perspective of $S$, before any causal contact, these quantities are distributed according to some prior $\pi(\theta_T)$ over the space $\Theta_T$ of possible target configurations $\theta_T := (\omega_{\text{TLS}}, \vec{d}_{\text{TLS}}, \chi_k, \rho_T)$.
 
-The aggregate acquires knowledge about $\theta_T$ exclusively through ND-RID interactions (Definition 6, Definition 27) within its causal past. Each such interaction costs $\varepsilon \geq \ln 2$ per information-resolving step (Theorem 31) and transfers at most $C_{\max} < \ln d_0$ nats (Theorem E.2). The context state $\text{context}_S(t)$ (Definition L.1) encodes, through PCE optimization (Definition 15), the minimal sufficient statistic extracted from this interaction history for the purpose of influencing $T$'s 'Evolve' parameters. This is the PU relational definition of information (Definition 1): a pattern constitutes information for $S$ if and only if $S$ can process it to achieve $\mathbb{E}[\Delta Q] > 0$ — here, to improve the achievable bias $|\Delta P|$ on target $T$.
+The aggregate acquires knowledge about $\theta_T$ exclusively through ND-RID interactions (Definition 6, Definition 27) within its causal past. Each such interaction costs $\varepsilon \geq \ln 2$ per information-resolving step (Theorem 31) and transfers at most $C_{\max}(f_{RID}) < \ln d_0$ nats (Theorem E.2), with the PCE-optimal sharpening $C_{\max}(f_{RID}) \le \ln(d_0)-\varepsilon$ (Appendix E, Eq. E.15). The context state $\text{context}_S(t)$ (Definition L.1) encodes, through PCE optimization (Definition 15), the minimal sufficient statistic extracted from this interaction history for the purpose of influencing $T$'s 'Evolve' parameters. This is the PU relational definition of information (Definition 1): a pattern constitutes information for $S$ if and only if $S$ can process it to achieve $\mathbb{E}[\Delta Q] > 0$ — here, to improve the achievable bias $|\Delta P|$ on target $T$.
 
 #### **L.12.2.2 The Causal Interaction Ensemble**
 
 Let $\mathcal{H}_{ST}(t) = {N_1, N_2, \ldots, N_K}$ denote the ordered sequence of ND-RID interaction events between $S$ (or systems causally connected to $S$) and $T$ up to time $t$, with $K \geq 0$ events. The joint distribution over pairs $(\text{context}_S(t), \theta_T)$, induced by the causal interaction history, is:
 
 $$
-\mathcal{P}_{\text{causal}}(\text{context}_S, \theta_T) := \sum_{K=0}^{\infty} p_K \int \mathcal{P}(\text{context}_S \mid \mathcal{H}_{ST}^{(K)}) \cdot \mathcal{P}(\theta_T \mid \mathcal{H}_{ST}^{(K)}) , d\mathcal{H}_{ST}^{(K)} \tag{L.92}
+\mathcal{P}_{\text{causal}}(\text{context}_S, \theta_T) := \sum_{K=0}^{\infty} p_K \int \mathcal{P}(\text{context}_S \mid \mathcal{H}_{ST}^{(K)}) \cdot \mathcal{P}(\theta_T \mid \mathcal{H}_{ST}^{(K)}) \, d\mathcal{H}_{ST}^{(K)} \tag{L.92}
 $$
 
-where $p_K$ is the probability of having had $K$ causal interactions. *Note: Equation L.92 is schematic; rigorously, the integration $\int (\cdots), d\mathcal{H}_{ST}^{(K)}$ is taken over the space of ordered $K$-tuples of ND-RID event times and channels equipped with the product measure induced by Definition 27. Since $0 \leq \mathcal{P}(\text{context}_S \mid \mathcal{H}) \leq 1$, $(p_K)_{K \geq 0}$ is a probability mass function with $\sum_{K=0}^{\infty} p_K = 1$, and the integrand is bounded, the series defines a well-posed mixture distribution; for finite observation intervals with finite event rates, $p_K$ is rapidly decaying in $K$.*
+where $p_K$ is the probability of having had $K$ causal interactions. *Note: Equation L.92 is schematic; rigorously, the integration $\int (\cdots)\, d\mathcal{H}_{ST}^{(K)}$ is taken over the space of ordered $K$-tuples of ND-RID event times and channels equipped with the product measure induced by Definition 27. Since $0 \leq \mathcal{P}(\text{context}_S \mid \mathcal{H}) \leq 1$, $(p_K)_{K \geq 0}$ is a probability mass function with $\sum_{K=0}^{\infty} p_K = 1$, and the integrand is bounded, the series defines a well-posed mixture distribution; for finite observation intervals with finite event rates, $p_K$ is rapidly decaying in $K$.*
 
 **Definition L.12.1 (Causal Information as Target-Conditioned Relational Information).** The **causal information content** of aggregate $S$ about target $T$ at time $t$ is the mutual information (in nats) between $S$'s context state $\text{context}_S(t)$ (Definition L.1) and the target configuration $\theta_T$ relevant for CC coupling, under the joint law $\mathcal{P}_{\text{causal}}$ induced by the causal ND-RID interaction history $\mathcal{H}_{ST}(t)$. Formally:
 
 $$
-\mathcal{I}(S \to T,t) := I_{\mathcal{P}_{\text{causal}}}!\left(\text{context}_S(t), \theta_T\right) \leq I(S:T)_t \leq \mathcal{I}_{\text{rel}}(S)_t \tag{L.93}
+\mathcal{I}(S \to T,t) := I_{\mathcal{P}_{\text{causal}}}\!\left(\text{context}_S(t);\theta_T\right) \leq I(S:T)_t \leq \mathcal{I}_{\text{rel}}(S)_t \tag{L.93}
 $$
 
 The first inequality is a data-processing bound, since $\text{context}_S$ and $\theta_T$ are obtained from the physical subsystems $S$ and $T$ by (possibly coarse-graining) channels; the second follows because $T$ is a subsystem of the environment $E$ of $S$, so $I(S:T) \leq I(S:E) = \mathcal{I}_{\text{rel}}(S)$ (Definition N.6). The quantity lies in $[0, \mathcal{I}_{\max}]$ where $\mathcal{I}_{\max} \leq K \cdot C_{\max}$ for any causal history containing at most $K$ ND-RID interactions (Theorem E.2). In particular, $\mathcal{I}(S \to T,t) > 0$ if and only if $\text{context}_S(t)$ and $\theta_T$ are not independent under $\mathcal{P}_{\text{causal}}$.
 
-*Connection to target mass:* Since $S$ is part of the environment of $T$, we also have $I(S:T)_t \leq \mathcal{I}_{\text{rel}}(T)*t$. Combined with Theorem N.5 (mass–information relation $m_T = \mathcal{I}_{\text{rel}}(T)/(2\sqrt{8\varepsilon}) \cdot m_P$), this provides a mass-dependent upper scale on the relational information that can, in principle, be shared with a target, while the actual causal information $\mathcal{I}(S \to T,t)$ remains limited by causal history and channel capacity. Heavier targets have higher relational information content and therefore require more causal interaction history to model accurately — their quantum structure is informationally denser relative to the predictive substrate.
+*Connection to target mass:* Since $S$ is part of the environment of $T$, we also have $I(S:T)_t \leq \mathcal{I}_{\text{rel}}(T)_t$. Combined with Theorem N.5 (mass–information relation $m_T = \mathcal{I}_{\text{rel}}(T)/(2\sqrt{8\varepsilon}) \cdot m_P$), this provides a mass-dependent upper scale on the relational information that can, in principle, be shared with a target, while the actual causal information $\mathcal{I}(S \to T,t)$ remains limited by causal history and channel capacity. Heavier targets have higher relational information content and therefore require more causal interaction history to model accurately — their quantum structure is informationally denser relative to the predictive substrate.
 
 **Lemma L.12.1 (Zero Causal Information Without Contact).** When $S$ and $T$ have had no causal contact up to time $t$ (i.e., $\mathcal{H}_{ST}(t)$ is empty), $\mathcal{I}(S \to T,t) = 0$.
 
@@ -1494,7 +1500,7 @@ The first inequality is a data-processing bound, since $\text{context}_S$ and $\
 
 #### **L.12.2.3 Temporal Ordering of Causal Information: The Arrow of Time Constraint**
 
-A critical constraint from Appendix O (Theorem O.3): causal information can only flow in the direction of the arrow of time. The thermodynamic ratchet — $\varepsilon \geq \ln 2$ entropy production per non-trivial ND-RID cycle, yielding macroscopic reversal probability $\leq e^{-N\varepsilon} = 2^{-N}$ (Theorem O.3) — ensures that information acquisition is strictly forward-directed. Formally, any interaction event $N_k$ contributing to $\mathcal{H}_{ST}(t)$ must satisfy $N_k \in \text{past}(t)$. Future interaction events are inaccessible to the context state at time $t$.
+A critical constraint from Appendix O (Theorem O.3): causal information can only flow in the direction of the arrow of time. The thermodynamic ratchet — $\varepsilon \geq \ln 2$ entropy production per non-trivial ND-RID cycle, yielding macroscopic reversal probability $\leq e^{-N\varepsilon}\le 2^{-N}$ (Theorem O.3) — ensures that information acquisition is strictly forward-directed. Formally, any interaction event $N_k$ contributing to $\mathcal{H}_{ST}(t)$ must satisfy $N_k \in \text{past}(t)$. Future interaction events are inaccessible to the context state at time $t$.
 
 **Corollary L.12.2 (Past-Directed Causal Information).** For each time $t$, the causal information content $\mathcal{I}(S \to T,t)$ is determined solely by the $S$–$T$ causal history $\mathcal{H}_{ST}(t)$ up to time $t$ (i.e., by ND-RID events in the causal past of $S$), and cannot depend on future events occurring after $t$. As a consequence, $\mathcal{I}(S \to T,t)$ is monotonically non-decreasing in $t$.
 
@@ -1511,7 +1517,7 @@ Appendix O (Definition O.1, Theorem O.4) establishes that both electromagnetic a
 The formal expression (Appendix P, Section P.11.4) is:
 
 $$
-\tau(x_T, t) = \tau_{\text{medium}}!\left[1 + \delta\tau_{\text{CC}}(x_T, t)\right] \tag{L.94}
+\tau(x_T, t) = \tau_{\text{medium}}\left[1 + \delta\tau_{\text{CC}}(x_T, t)\right] \tag{L.94}
 $$
 
 where $\tau_{\text{medium}} = \hbar/\langle\hat{H}_{\text{eff}}\rangle$ is the background cycle time (Equation O.1, Equation L.0) and $\delta\tau_{\text{CC}}(x_T, t)$ is the controlled modulation generated by the aggregate's context state. The Fourier decomposition of this modulation yields (Appendix O, Theorem O.4; Appendix L, Theorem L.8):
@@ -1538,7 +1544,7 @@ Appendix O (Section O.6.1) identifies the physical signal $N(t) = E_{\text{rad}}
 The drift potential in the Ornstein-Uhlenbeck generator (Appendix M, Equation M.5a) is:
 
 $$
-V_k(s') = \frac{\lambda_{\text{drift}}}{2}, d_\Sigma^2(s', s_k) \tag{L.96}
+V_k(s') = \frac{\lambda_{\text{drift}}}{2}\, d_\Sigma^2(s', s_k) \tag{L.96}
 $$
 
 where $\lambda_{\text{drift}} > 0$ sets the strength of drift toward the outcome perspective $s_k$ and is directly controlled by the quality of the signal $N(t)$. A poorly tuned signal (low causal information) produces near-zero $\lambda_{\text{drift}}$: the perspective dynamics are near-isotropically diffusive, with no preferential drift toward any outcome, yielding $|\Delta P| \approx 0$. A precisely tuned signal (high causal information) produces large $\lambda_{\text{drift}}$: the perspective drifts strongly toward the intended outcome, approaching the projective limit $G_{\text{persp}} \to \delta_\Sigma(s', s_k)$ (Appendix M, Equation M.4).
@@ -1564,7 +1570,7 @@ $$
 Since the rate of causal information acquisition is bounded by the available predictive complexity, the effect of acceleration on $d\mathcal{I}/dt|_{\max}$ can be traced through three steps. First, the Unruh temperature $T_U(a)$ increases the effective environmental noise temperature to $T_{\text{eff}} = T_{\text{bath}} + T_U(a)$. Second, by the temperature dependence of the operational cost function $R(C, T_{\text{eff}})$ (Appendix N, Section N.3.1), the marginal cost $\partial R/\partial C$ increases with $T_{\text{eff}}$, so at fixed total power budget $P_{\text{tot}}$, the sustainable predictive complexity falls by $\Delta C_{\text{available}}$ (Equation L.98). Third, the maximum rate of information acquisition per ND-RID channel is $C_{\max}/\tau_{\text{cycle}}$ (Theorem E.2); with $\Delta C_{\text{available}}$ fewer bits of complexity available for target-directed modeling, the effective number of simultaneous channels directed at $T$ falls proportionally to first order in $|\Delta C_{\text{available}}|/C$, which is the regime of validity of Equation L.98. Combining these steps gives:
 
 $$
-\left.\frac{d\mathcal{I}(S \to T)}{dt}\right|_{\max}^{(a)} \leq \left.\frac{d\mathcal{I}(S \to T)}{dt}\right|_{\max}^{(0)} \cdot \max!\left{0, 1 - \frac{\lambda_{PM} \cdot a}{k_B T_{\text{internal}} \cdot \varepsilon}\right} \tag{L.99}
+\left.\frac{d\mathcal{I}(S \to T)}{dt}\right|_{\max}^{(a)} \leq \left.\frac{d\mathcal{I}(S \to T)}{dt}\right|_{\max}^{(0)} \cdot \max\left\{0, 1 - \frac{\lambda_{PM} \cdot a}{k_B T_{\text{internal}} \cdot \varepsilon}\right\} \tag{L.99}
 $$
 
 for $a$ below the critical acceleration $a_{\text{crit}}$ (Appendix N, Equation N.4a), with the floor at zero reflecting that acquisition rates are non-negative. This provides a physically transparent consequence: a CC aggregate attempting to acquire causal information about a target while itself accelerating pays an additional thermodynamic tax through Unruh noise, directly reducing the rate at which its context state can be refined to improve $\eta_{\text{res}}$. In the limit of extreme acceleration, CC reach is self-limited not only by gravitational dephasing (Appendix S) but by predictive capacity degradation.
@@ -1578,13 +1584,13 @@ for $a$ below the critical acceleration $a_{\text{crit}}$ (Appendix N, Equation 
 The AC Stark shift:
 
 $$
-\delta(t) \simeq \frac{\Omega_R^2(t)}{4,\Delta(t)}, \qquad \Omega_R(t) = \frac{|\vec{d}_{\text{TLS}} \cdot \vec{\epsilon}_{\text{rad}}(t)|, E_0(t)}{\hbar} \tag{L.100}
+\delta_{\text{Stark}}(t) \simeq \frac{\Omega_R^2(t)}{4\Delta(t)}, \qquad \Omega_R(t) = \frac{|\vec{d}_{\text{TLS}} \cdot \vec{\epsilon}_{\text{rad}}(t)|\, E_0(t)}{\hbar} \tag{L.100}
 $$
 
 depends on the aggregate's knowledge of $\hat{d}_{\text{TLS}}$ and $\omega_{\text{TLS}}$ through the choices of $\vec{\epsilon}_{\text{rad}}$ and $\omega_{\text{rad}}$, set by $\mathcal{M}(\text{context}_S)$ (Definition L.2, Theorem L.1). The **model–target resonance factor** is defined as the optimal expected target alignment under context-dependent control:
 
 $$
-\eta_{\text{res}}(S, T) := \sup_{\hat{\mathbf{d}}(\cdot), \hat{\omega}(\cdot)} \mathbb{E}_{\mathcal{P}_{\text{causal}}}!\left[ \left|\hat{\mathbf{d}}(\text{context}_S) \cdot \hat{\mathbf{d}}_{\text{TLS}}\right|^2 \cdot \frac{\Delta_{\text{opt}}^2}{\Delta_{\text{opt}}^2 + (\omega_{\text{TLS}} - \hat{\omega}(\text{context}_S))^2} \right] \in [0,1] \tag{L.101}
+\eta_{\text{res}}(S, T) := \sup_{\hat{\mathbf{d}}(\cdot), \hat{\omega}(\cdot)} \mathbb{E}_{\mathcal{P}_{\text{causal}}}\!\left[ \left|\hat{\mathbf{d}}(\text{context}_S) \cdot \hat{\mathbf{d}}_{\text{TLS}}\right|^2 \cdot \frac{\Delta_{\text{opt}}^2}{\Delta_{\text{opt}}^2 + (\omega_{\text{TLS}} - \hat{\omega}(\text{context}_S))^2} \right] \in [0,1] \tag{L.101}
 $$
 
 where $\Delta_{\text{opt}} > 0$ is the design detuning scale; the second factor lies in $[0,1]$ and equals $1$ when $\hat{\omega} = \omega_{\text{TLS}}$. Perfect causal information ($\mathcal{I}(S \to T) = \mathcal{I}_{\max}$) gives $\eta_{\text{res}} = 1$; zero causal information (Lemma L.12.1) restricts to information-free policies and yields a target-independent baseline value $\eta_{\text{prior}} \geq 0$.
@@ -1634,13 +1640,13 @@ The Reflexivity Constraint (Theorem 33) thus actively shapes the equilibrium $I_
 Combining the resonance factor with the operational CC bound (Definition 30, Theorem 34):
 
 $$
-|\Delta P(i; S \to T)| \leq \text{CC}(S) \cdot \eta_{\text{res}}(S, T) \leq \text{CC}(S) \tag{L.106}
+|\Delta P(i; S \to T)| \leq \mathrm{CC}(S) \cdot \eta_{\text{res}}(S, T) \leq \mathrm{CC}(S) \tag{L.106}
 $$
 
 **Corollary L.12.7 (EM Resonance Factor from Posterior Moments).** In the EM/AC Stark implementation (Section L.11), an optimal polarization policy chooses $\hat{\mathbf{d}}(\text{context}_S)$ as the principal eigenvector of the conditional second-moment matrix $M(\text{context}_S) := \mathbb{E}[\hat{\mathbf{d}}_{\text{TLS}}\hat{\mathbf{d}}_{\text{TLS}}^\top \mid \text{context}_S]$, achieving conditional alignment value $\lambda_{\max}(M(\text{context}_S))$. An optimal frequency estimate for minimizing squared detuning error is $\hat{\omega}(\text{context}_S) = \mathbb{E}[\omega_{\text{TLS}} \mid \text{context}_S]$. With these choices, Equation L.101 yields:
 
 $$
-\eta_{\text{res}}^{\text{EM}}(S,T) = \mathbb{E}_{\mathcal{P}_{\text{causal}}}!\left[ \lambda_{\max}!\left(\mathbb{E}[\hat{\mathbf{d}}_{\text{TLS}}\hat{\mathbf{d}}_{\text{TLS}}^\top \mid \text{context}_S]\right) \cdot \frac{\Delta_{\text{opt}}^2}{\Delta_{\text{opt}}^2 + (\omega_{\text{TLS}} - \hat{\omega}(\text{context}_S))^2} \right] \tag{L.107}
+\eta_{\text{res}}^{\text{EM}}(S,T) = \mathbb{E}_{\mathcal{P}_{\text{causal}}}\!\left[ \lambda_{\max}\!\left(\mathbb{E}[\hat{\mathbf{d}}_{\text{TLS}}\hat{\mathbf{d}}_{\text{TLS}}^\top \mid \text{context}_S]\right) \cdot \frac{\Delta_{\text{opt}}^2}{\Delta_{\text{opt}}^2 + (\omega_{\text{TLS}} - \hat{\omega}(\text{context}_S))^2} \right] \tag{L.107}
 $$
 
 Boundary conditions: at $\mathcal{I}(S \to T) = \mathcal{I}_{\max}$, the posterior concentrates on the true $(\hat{\mathbf{d}}_{\text{TLS}}, \omega_{\text{TLS}})$, giving $\eta_{\text{res}}^{\text{EM}} \to 1$; at $\mathcal{I}(S \to T) = 0$, both estimates revert to prior-only values, giving $\eta_{\text{res}}^{\text{EM}}(0) = \eta_{\text{prior}} \geq 0$. Monotonicity follows from Proposition L.12.1.

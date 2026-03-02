@@ -242,19 +242,19 @@ $$
 \mathcal{L}V(x) = \lim_{\Delta t \to 0} \frac{\mathbb{E}[V(x(t+\Delta t)) - V(x(t)) | x(t)=x]}{\Delta t}
 $$
 $$
-\mathcal{L}V(x) = \nabla V(x)^T (-\eta(x) \nabla V(x)) + \frac{1}{2} \text{Tr}\left( ( \sqrt{2D(x)} )^T (\nabla^2 V(x)) (\sqrt{2D(x)}) \right)
+\mathcal{L}V(x) = \nabla V(x)^T (-\eta(x) \nabla V(x)) + \frac{1}{2} \mathrm{tr}\left( ( \sqrt{2D(x)} )^T (\nabla^2 V(x)) (\sqrt{2D(x)}) \right)
 $$
 $$
-\mathcal{L}V(x) = -\nabla V(x)^T \eta(x) \nabla V(x) + \text{Tr}(D(x) \nabla^2 V(x))
+\mathcal{L}V(x) = -\nabla V(x)^T \eta(x) \nabla V(x) + \mathrm{tr}(D(x) \nabla^2 V(x))
 \quad \text{(D.9)}
 $$
 Using the bounds on $\eta(x)$ (A2) and $D(x)$ (A3), and noting that the Hessian $\nabla^2 V(x)$ is bounded on the compact set $\mathcal{K}$ (which follows from $V$ being $C^2$ as per Assumption A1), we get:
 $$
-\mathcal{L}V(x) \le -\eta_{min} \|\nabla V(x)\|^2 + \text{Tr}(D(x) \nabla^2 V(x))
+\mathcal{L}V(x) \le -\eta_{min} \|\nabla V(x)\|^2 + \mathrm{tr}(D(x) \nabla^2 V(x))
 \le -\eta_{min} \|\nabla V(x)\|^2 + C_{noise}
 \quad \text{(D.10)}
 $$
-where $C_{noise} = \sup_{x \in \mathcal{K}} |\text{Tr}(D(x) \nabla^2 V(x))|$ is a positive constant related to $D_{max}$ and the bounds on the Hessian eigenvalues on the compact set $\mathcal{K}$. This inequality shows that whenever the gradient $\|\nabla V(x)\|$ is sufficiently large (specifically, when $\|\nabla V(x)\|^2 > C_{noise}/\eta_{min}$), the negative drift term dominates, $\mathcal{L}V(x) < 0$, and the potential $V(x)$ decreases on average.
+where $C_{noise} = \sup_{x \in \mathcal{K}} |\mathrm{tr}(D(x) \nabla^2 V(x))|$ is a positive constant related to $D_{max}$ and the bounds on the Hessian eigenvalues on the compact set $\mathcal{K}$. This inequality shows that whenever the gradient $\|\nabla V(x)\|$ is sufficiently large (specifically, when $\|\nabla V(x)\|^2 > C_{noise}/\eta_{min}$), the negative drift term dominates, $\mathcal{L}V(x) < 0$, and the potential $V(x)$ decreases on average.
 
 ### D.6.3 Characterization of the Critical Set $\mathcal{E}_{*}$
 
