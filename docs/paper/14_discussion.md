@@ -562,7 +562,7 @@ The problem has two components: (i) constructive existence of a continuum theory
 
 3. **Action-Entropy Identity.** The identity $S_{\text{action}} = d_0 \cdot \varepsilon = 8\ln 2$ (Corollary Q.0.1) sets the characteristic action scale of the MPU network. Combined with the PCE-optimal spacing $\delta$, this establishes a minimum energy scale for gauge-invariant excitations, yielding $\Delta > 0$ independently of the other two routes.
 
-**Dissolution.** The Millennium Prize problem therefore decomposes:
+**Dissolution.** 
 
 **(A) Physical component (resolved).** The lattice Yang–Mills theory at physical resolution $\delta > 0$ captures the complete operational content. The mass gap $\Delta > 0$ is established via Routes 1–3 above. Confinement, the glueball spectrum, and all operationally accessible observables are derivable without invoking $a \to 0$.
 
