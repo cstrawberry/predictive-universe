@@ -3399,11 +3399,11 @@ $$f_{\mathrm{sinc}} = \mathrm{sinc}\left(\frac{1}{\sqrt{3}}\right) = 0.9454$$
 $$\delta = 70.53° \times 0.9454 = 66.68° \approx 66.7°$$
 
 **Experimental comparison** (Particle Data Group 2024):
-$$\delta_{\mathrm{exp}} = 65.4° \pm 3.3°$$
+$$\delta_{\mathrm{exp}} = 65.7° \pm 1.5°$$
 
 |Quantity|Theory|Experiment |Deviation|
 |:-------|:----:|:----------:|:-------:|
-|δ |66.7° |65.4° ± 3.3°|+0.4σ |
+|δ |66.7° |65.7° ± 1.5°|+0.7σ |
 
 ∎
 
@@ -3459,14 +3459,14 @@ where off-diagonal elements in the second and third rows follow from unitarity c
 |$\vert V_{ub}\vert$ |Sector interference |0.00392 |0.00382 ± 0.00024 |+0.4σ |
 |$\vert V_{us}\vert$ |(√3/2)·sin(15.15°)·f_curv|0.2261 |0.2243 ± 0.0008 |+2.3σ |
 |$\vert V_{ud}\vert$ |Unitarity |0.9741 |0.97373 ± 0.00031 |+1.2σ |
-|δ |70.53°·sinc(1/√3) |66.7° |65.4° ± 3.3° |+0.4σ |
+|δ |70.53°·sinc(1/√3) |66.7° |65.7° ± 1.5° |+0.7σ |
 |J |Derived |3.22×10⁻⁵|(3.08±0.15)×10⁻⁵ |+0.9σ |
 
 **Statistical Analysis:**
 
 For the four independent predictions ($\vert V_{cb}\vert$, $\vert V_{ub}\vert$, $\vert V_{us}\vert$, $\delta$):
-$$\chi^2 = (0.2)^2 + (0.4)^2 + (2.3)^2 + (0.4)^2 = 0.04 + 0.16 + 5.29 + 0.16 = 5.65$$
-$$\chi^2/\mathrm{d.o.f.} = 5.65/4 = 1.41$$
+$$\chi^2 = (0.2)^2 + (0.4)^2 + (2.3)^2 + (0.7)^2 = 0.04 + 0.16 + 5.29 + 0.49 = 5.98$$
+$$\chi^2/\mathrm{d.o.f.} = 5.98/4 = 1.50$$
 
 This indicates good overall agreement with experiment. The $\vert V_{us}\vert$ tension (+2.3σ) is driven by the stiffness ratio sensitivity (Remark T.52.1): the isotropic limit c_d/c_u = 1.00 yields $\vert V_{us}\vert = 0.2241$, essentially matching the PDG fit value.
 

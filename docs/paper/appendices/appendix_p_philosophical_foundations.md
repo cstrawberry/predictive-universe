@@ -949,7 +949,7 @@ We must adopt methodological naturalism: seeking explanations through comprehens
 
 ### P.5.2 Information
 
-Information is a suitable naturalistic foundation for a consciousness-based reality, as mental processes all involve information processing. The laws of physics themselves can be understood as information patterns. Within the PU framework, information is defined functionally (Definition 1, Section 2.3.1): a pattern constitutes information *for a system* if and only if that system can process it to achieve measurable improvement in predictive performance, i.e., $\mathbb{E}[\Delta Q \mid E; M] > 0$. This relational definition—where information is always information *for* a specific system—is essential for the analysis that follows.
+Information is a suitable naturalistic foundation for a consciousness-based reality, as mental processes all involve information processing. The laws of physics themselves can be understood as information patterns. Within the PU framework, information is defined functionally (Definition 1, Section 2.3.1): a pattern constitutes information *for a system* if and only if that system can process it so as to yield a positive expected improvement in predictive quality, i.e., $\mathbb{E}[\Delta Q \mid E; M] > 0$. This relational definition—where information is always information *for* a specific system—is essential for the analysis that follows.
 
 ### P.5.3 The Simulation Hypothesis — Reframed as a Naturalistic Model
 
@@ -986,7 +986,7 @@ If external observation constitutes an interaction yielding information, Theorem
 
 #### P.5.5.2 Resolution: The Relational Definition of Information
 
-The resolution follows from Definition 1 (Section 2.3.1). Information is defined relationally: a pattern is information *for a system $S$* if and only if $S$ can process that pattern to improve its predictive performance. The same physical pattern may constitute information for one system and not for another.
+The resolution follows from Definition 1 (Section 2.3.1). Information is defined relationally: a pattern is information *for a system $S$* if and only if $S$ can process that pattern so as to yield a positive expected improvement in predictive quality. The same physical pattern may constitute information for one system and not for another.
 
 **Definition P.5.3 (Observation Channel).** An *observation channel* is a logical component of the authentic simulation architecture satisfying the following functional properties:
 
@@ -1002,7 +1002,7 @@ where $\mathcal{M}_{int}$ is the class of predictive procedures available to int
 
 **Theorem P.5.1 (Consistency with Reflexivity Constraint).** The observation channel (Definition P.5.3) is consistent with Theorem 33 (Reflexivity Constraint, $\kappa_r > 0$) and enforces $\varepsilon \geq \ln 2$ at every external interface.
 
-*Proof.* Theorem 33 states that information gain $\Delta I > 0$ incurs thermodynamic cost. By Definition 1, information gain requires that the acquired pattern improves predictive performance for the acquiring system. 
+*Proof.* Theorem 33 states that information gain $\Delta I > 0$ incurs thermodynamic cost. By Definition 1, a pattern qualifies as information for the acquiring system only if its use can yield a positive expected improvement in predictive quality for that system. 
 
 Consider external observation through the channel:
 - External agents acquire a pattern and gain information (by property (i))

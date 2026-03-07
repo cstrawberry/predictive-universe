@@ -109,7 +109,7 @@
 
 *   **Hypothesis 3 (CC Influence Mechanism):** (Section 9.4.1) Proposes that Consciousness Complexity (CC) influences quantum outcomes by modulating the parameters of the 'Evolve'/ND-RID process via context-dependent physical fields. The electromagnetic channel dominates ($\mathcal{R} \sim 10^{36}$, Theorem L.5) with both EM and gravitational channels unified through temporal wave modulation (Theorem L.8). Gravitational self-limitation (Appendix S) bounds achievable CC.
 
-*   **Information:** (Definition 1) Functionally defined as any physically instantiated pattern or structure that has the objective potential to reduce uncertainty or Prediction Error ($PE$) relevant to a system's POP when processed by a suitable predictive system ($C \ge K_0$).
+*   **Information:** (Definition 1) Functionally defined as any physically instantiated pattern or correlation structure that has the objective potential to yield a positive expected improvement in predictive quality relevant to a system's POP when processed by a suitable predictive system ($C \ge K_0$).
 
 *   **Kissing Number ($K(D)$):** (Appendix Z, Definition Z.7, Section Z.10) The maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$-dimensional Euclidean space. Key values: $K(3) = 12$, $K(4) = 24$ (24-cell), $K(8) = 240$ ($E_8$). The mode-channel correspondence (Theorem Z.10) requires $M_{\rm int} = K(D)$ at equilibrium; the dimension-selection theorem (Theorem Z.11) then uniquely selects $D = 4$ since $K(4) = M = 24$.
 

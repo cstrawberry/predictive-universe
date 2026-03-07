@@ -10,7 +10,7 @@ For concreteness, all predictive-quality functionals $Q$ are assumed measurable 
 
 **2.2 Axiom 2 (Ax 2): Predictive Capacity Foundation**
 
-To generate predictions that are demonstrably better than chance (i.e., to achieve a positive expected predictive improvement, $\Delta Q > 0$, relative to a baseline random predictor), a system must possess an internal model ($M_t$) capable of capturing and exploiting discoverable regularities within the relevant data streams. The capacity for effective prediction relies fundamentally on the system's ability to leverage Information (Definition 1) via its internal modeling processes ($M_t$) to reduce uncertainty about future states pertinent to its operational goals (Axiom 1).
+To generate predictions that are demonstrably better than chance (i.e., to achieve a positive expected predictive improvement, $\Delta Q > 0$, relative to a baseline random predictor), a system must possess an internal model ($M_t$) capable of capturing and exploiting discoverable regularities within the relevant data streams. The capacity for effective prediction relies fundamentally on the system's ability to leverage Information (Definition 1) via its internal modeling processes ($M_t$) to achieve a positive expected improvement in predictive quality with respect to future states pertinent to its operational goals (Axiom 1).
 
 **2.3 Information and Prediction-Based Knowledge**
 
@@ -18,21 +18,21 @@ We define information and knowledge not intrinsically, but functionally in terms
 
 **2.3.1 Definition 1 (Def 1): Information**
 
-Within the Predictive Universe framework, information is defined functionally as any physically instantiated (I), substrate-independent (S) pattern or correlation structure (P) that, when processed by a suitable predictive system (E), has the objective potential to reduce uncertainty or Prediction Error (PE) (F) concerning states relevant (R) to that system's Prediction Optimization Problem (POP, Axiom 1). A suitable system must possess sufficient complexity ($C \ge K_0$, the Horizon Constant; see **Section 5, Theorem 15**) and an appropriate model class $\mathcal{M}$.
+Within the Predictive Universe framework, information is defined functionally as any physically instantiated (I), substrate-independent (S) pattern or correlation structure (P) that, when processed by a suitable predictive system (E), has the objective potential to yield a positive expected improvement in predictive quality (F) concerning states relevant (R) to that system's Prediction Optimization Problem (POP, Axiom 1). A suitable system must possess sufficient complexity ($C \ge K_0$, the Horizon Constant; see **Section 5, Theorem 15**) and an appropriate model class $\mathcal{M}$.
 
 *Elaboration:*
 *   **(P) Pattern:** A discernible structure, regularity, or deviation from randomness that allows for distinctions relevant to prediction.
 *   **(I) Physical Instantiation:** The pattern must be embodied in a physical configuration or process, linking it to physical dynamics, resource costs, and thermodynamic constraints.
-*   **(S) Substrate Independence:** The functional content of the pattern (its potential to reduce uncertainty) is, in principle, substrate-independent and can be represented on different physical substrates.
+*   **(S) Substrate Independence:** The functional content of the pattern (its potential predictive utility) is, in principle, substrate-independent and can be represented on different physical substrates.
 *   **(E) System Enablement:** The potential of the pattern to serve as information is relative to a system capable of detecting and processing it to improve its predictions ($C \ge K_0$, $M_t \in \mathcal{M}$).
 *   **(F) Functional Potential.** Let $\mathcal{M}$ denote the admissible class of inference/prediction procedures available to the system under the POP constraints (energy, time, and complexity). The pattern constitutes information if there exists a procedure $M\in\mathcal{M}$ and a measurable feature/event $E$ (representing the pattern) in the relevant $\sigma$‑algebra with nonzero probability such that the expected improvement in predictive quality, conditioned on utilizing $E$ via $M$, is strictly positive:
     $$
     \mathbb{E}\big[\Delta Q \mid E;\, M\big] > 0.
     $$
     Equivalently, the definition requires the existence of an admissible procedure and an operationally relevant input distribution under which the system achieves an overall positive expected improvement $\mathbb{E}[\Delta Q]>0$.
-*   **(R) Relevant States:** The states about which uncertainty can be reduced are determined contextually by the system's operational goals as defined by its specific POP.
+*   **(R) Relevant States:** The relevant states are determined contextually by the system's operational goals as defined by its specific POP, namely those state distinctions whose prediction can materially improve predictive quality under the system's operative resource constraints.
 
-In essence, information is any physically grounded pattern exploitable by a predictive system to achieve measurable improvements in its predictive performance relevant to its adaptive goals.
+In essence, information is any physically grounded pattern exploitable by a predictive system to achieve measurable improvements in predictive quality relevant to its adaptive goals.
 
 **2.3.2 Definition 2 (Def 2): Prediction-Based Knowledge**
 
