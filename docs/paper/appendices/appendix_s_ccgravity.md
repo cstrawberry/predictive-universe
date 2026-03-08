@@ -16,7 +16,7 @@ C_{context} = C_{scale} \frac{\text{CC}}{\alpha_{CC,max} - \text{CC}}
 \tag{S.2}
 $$
 
-We adopt a quadratic operational cost function $R(C)$ expanded around the baseline $C_{op}$. PCE optimization (Theorem D.5) biases the long-run stationary regime toward configurations that minimize the total potential $V(x)$, naturally positioning them near cost minima where $R'(C_{op})$ vanishes or is absorbed into the baseline. The leading order expansion consistent with the convexity requirement (Definition 3) is:
+We adopt a quadratic operational cost function $R(C)$ expanded around the baseline $C_{op}$. PCE optimization drives the dynamics toward lower-potential configurations and, in low-noise detailed-balance stationary regimes (Theorem D.5), biases stationary mass toward the corresponding minima of the total potential $V(x)$, naturally positioning the system near cost minima where $R'(C_{op})$ vanishes or is absorbed into the baseline. The leading order expansion consistent with the convexity requirement (Definition 3) is:
 $$
 R(C) \approx R(C_{op}) + r_p (C - C_{op})^2, \quad \text{where } r_p = \tfrac{1}{2}R''(C_{op}) > 0
 \tag{S.3}
@@ -225,7 +225,7 @@ $$
 \tag{S.27}
 $$
 
-**Physical interpretation:** This demonstrates that any attempt to increase CC by raising the power $P_{context}$ ultimately triggers self-gravity-induced dephasing that reduces the effective bias $\text{CC}_{eff}$. The PCE optimum balances the benefit of the bias against both its direct resource cost ($k_c P_{context}$) and its indirect gravitational self-sabotage ($k_b K_{eff} \text{CC} P_{context}$). Systems are driven toward this equilibrium by the long-run stochastic adaptation dynamics described in Appendix D (Theorem D.5); in low-noise detailed-balance regimes the stationary measure concentrates near the corresponding PCE-optimal configurations.
+**Physical interpretation:** This demonstrates that any attempt to increase CC by raising the power $P_{context}$ ultimately triggers self-gravity-induced dephasing that reduces the effective bias $\text{CC}_{eff}$. The PCE optimum balances the benefit of the bias against both its direct resource cost ($k_c P_{context}$) and its indirect gravitational self-sabotage ($k_b K_{eff} \text{CC} P_{context}$). Systems are driven toward the corresponding low-potential neighborhood by the long-run stochastic adaptation dynamics described in Appendix D (Theorem D.5); in low-noise detailed-balance regimes the stationary measure concentrates near the associated PCE-optimal configurations.
 
 **Limiting behavior:**
 - **Low resource cost** ($k_c \ll k_b K_{eff}$): $\text{CC}^* \propto \alpha/\sqrt{A K_{eff}}$, limited primarily by gravitational feedback

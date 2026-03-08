@@ -290,8 +290,8 @@ $$\lambda_i = \lambda_0 = 1 \quad \forall i \in \{1, \ldots, M\}$$
 
 ### W.3a.3 Uniform Per-Generator Capacity
 
-**Theorem W.3a.3 (Uniform Capacity from PCE Isotropy).** At the PCE-Attractor, each gauge generator carries equal information capacity:
-$$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in all sectors}$$
+**Theorem W.3a.3 (Uniform Capacity from PCE Isotropy in an Orthonormal Generator Basis).** At the PCE-Attractor, if each gauge sector is described in a generator basis that is orthonormal with respect to the inherited QFI metric on the embedded gauge subspace, then each generator carries equal information capacity:
+$$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in that orthonormal basis.}$$
 
 *Proof.*
 
@@ -301,7 +301,7 @@ $$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in all sectors}
 
 **Step 3.** Restriction of the flat metric to any subspace remains flat: $g_{\mathrm{QFI}}|_{\mathcal{I}_s} = \lambda_0 \cdot I_{M_s}$.
 
-**Step 4.** PCE non-discrimination: Non-uniform allocation would violate inherited flatness and increase $V_{\mathrm{op}}$ without benefit. ∎
+**Step 4.** In a basis orthonormal with respect to this inherited metric, every basis vector has the same norm and therefore the same single-generator QFI weight $\lambda_0$. This is the sense in which PCE isotropy enforces equal per-generator capacity. $\square$
 
 ### W.3a.4 Mode Ratio and Electroweak Structure
 
@@ -309,7 +309,7 @@ $$\lambda_i^{(s)} = \lambda_0 = 1 \quad \text{for all generators in all sectors}
 
 $$\frac{M_2}{M_Y} = \frac{3}{1} = 3$$
 
-At the PU fixed point $\mathfrak{A}_{PU}$ and its matching to the SM at scale $\mu_G$ (Appendix T, Section T.13), the gauge-kinetic normalization fixes the PU-normalized tree-level value $\sin^2\theta_W^{(0)}=3/8$ (Appendix T, Theorem T.14). Standard-model renormalization group evolution to $M_Z$ including the PU threshold structure yields $\sin^2\theta_W(M_Z)=0.2312\pm0.0003$ (Appendix T, Theorem T.18), consistent with $0.23122\pm0.00003$.
+At the PU fixed point $\mathfrak{A}_{PU}$ and its matching to the SM at scale $\mu_G$ (Appendix T, Section T.13), the gauge-kinetic normalization fixes the PU-normalized tree-level value $\sin^2\theta_W^{(0)}=3/8$ (Appendix T, Theorem T.14). Standard-model renormalization group evolution to $M_Z$ then yields the observed Z-pole value for the numerical target tuple of Appendix T, Theorem T.18, namely $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$, equivalently $Z_i=1+\Delta_i/24$.
 
 ## W.4 Hypercharge from anomalies and Yukawa invariance
 

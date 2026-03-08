@@ -25,7 +25,7 @@ High-frequency modulations (rapid changes in processing rate) emerge in the cont
 
 Low-frequency modulations (slow changes in energy density) emerge as gravitational time dilation—geometric responses required to maintain thermodynamic consistency on causal horizons (Section 12). These couple universally but weakly through the gravitational constant $G$, which reflects the high information capacity of boundary channels (Appendix E).
 
-Both channels draw from the same energy budget (the power $P_{\text{agg}}$ required to maintain a high-complexity predictive state) and both modulate the same target quantities (the parameters of the fundamental 'Evolve' process governing state transitions). The overwhelming dominance of the electromagnetic channel ($\sim 10^{36}$) reflects the hierarchy of coupling strengths, which itself emerges from the information-theoretic structure of the predictive substrate (Appendix O, Theorem O.4).
+Both channels draw from the same energy budget (the power $P_{\text{agg}}$ required to maintain a high-complexity predictive state) and both modulate the same target quantities (the parameters of the fundamental 'Evolve' process governing state transitions). The overwhelming dominance of the electromagnetic channel ($\sim 10^{36}$) reflects the hierarchy of coupling strengths, which itself emerges from the information-theoretic structure of the predictive substrate (Appendix O, Remark O.4).
 ## **Scope and Organization of This Appendix**
 
 This appendix establishes universal energy accounting and thermodynamic consistency requirements that any consciousness complexity (CC) implementation must satisfy, regardless of specific carrier mechanism or substrate (formalized in Theorem L.9). This appendix focuses on the forward energy accounting—how context generation requires power that properly enters the stress-energy tensor and sources gravitational fields. The complementary feedback analysis—how this gravitational field then limits CC efficacy through dephasing—is detailed in Appendix S. The analysis proceeds in three stages:
@@ -91,15 +91,13 @@ Unbounded control output requires infinite resources, violating physical realiza
 
 Instability under feedback prevents maintenance of coherent $\text{context}_S$, precluding sustained CC capability. ∎
 
-## **Theorem L.1 (Existence of PCE-Optimal Mapping)**
+## **Theorem L.1 (Existence of a PCE-Optimal Mapping on a Compact Admissible Class)**
 
-Under POP/PCE optimization dynamics (Section 6, Appendix D), there exists a mapping $\mathcal{M}$ satisfying Lemma L.1 that maximizes net predictive benefit:
-
+Assume the admissible class of mappings satisfying Lemma L.1 is nonempty and compact in the chosen topology on the mapping space, and assume both $\Delta PP(\mathcal{M})$ and $R_{\mathcal{M}}(\mathcal{M})$ are continuous on that class. Under POP/PCE optimization dynamics (Section 6, Appendix D), there exists a mapping $\mathcal{M}$ maximizing the net predictive benefit
 $$ \mathcal{F}[\mathcal{M}] = \Gamma_0 \Delta PP(\mathcal{M}) - \lambda R_{\mathcal{M}}(\mathcal{M}) \tag{L.3} $$
+subject to the resource constraints, where $\Gamma_0$ is the power-conversion factor (Definition 20), $\Delta PP$ is improvement in predictive performance, $\lambda$ is effective resource scarcity (Definition 20), and $R_{\mathcal{M}}$ is the operational cost of implementing $\mathcal{M}$.
 
-subject to resource constraints, where $\Gamma_0$ is the power-conversion factor (Definition 20), $\Delta PP$ is improvement in predictive performance, $\lambda$ is effective resource scarcity (Definition 20), and $R_{\mathcal{M}}$ is the operational cost of implementing $\mathcal{M}$.
-
-Proof. From Theorem 34, POP/PCE dynamics drive aggregates with $C_{\text{agg}} > C_{op}$ to develop biasing capability. The space of admissible mappings satisfying Lemma L.1 is compact under the appropriate topology (weak-* topology on the space of Lipschitz functions with bounded Lipschitz constant and bounded range). The functional $\mathcal{F}$ is continuous in $\mathcal{M}$ under PCE optimization (follows from continuity of $PP$ in control parameters and linearity of cost). By the Weierstrass theorem, a maximum exists on this compact set. The PCE stationary measure (Appendix D, Theorem D.5) concentrates on this optimum. ∎
+*Proof.* By assumption, the admissible class of mappings satisfying Lemma L.1 is compact, and the functional $\mathcal{F}$ is continuous on that class because it is a linear combination of the continuous functionals $\Delta PP$ and $R_{\mathcal{M}}$. The Weierstrass theorem therefore implies that $\mathcal{F}$ attains a maximum on the admissible class. Hence there exists at least one admissible mapping $\mathcal{M}$ maximizing the net predictive benefit. Appendix D, Theorem D.5 may then be invoked separately, when its low-noise detailed-balance hypotheses are satisfied, to conclude concentration of the stationary measure near such an optimum. ∎
 
 ## **L.2 Electromagnetic Field Generation and Stress-Energy Contribution**
 
@@ -321,13 +319,18 @@ Proof. Direct numerical substitution using SI constants: $G = 6.67 \times 10^{-1
 
 Even with conservative parameter estimates accounting for all uncertainties, electromagnetic coupling dominates gravitational coupling by at least $\sim 10^{33}$ across the full parameter space, with typical values remaining near the baseline $\sim 10^{36}$. This robust hierarchy—spanning at least 33 orders of magnitude even under pessimistic assumptions—confirms electromagnetic dominance as the primary CC influence channel.
 
-### **Theorem L.5 (Electromagnetic Dominance Universality)**
+### **Proposition L.5 (Electromagnetic Dominance on the Analyzed Parameter Range)**
 
-For any MPU aggregate with finite power budget $P_{\text{agg}} < \infty$ and finite volume $V_S > 0$, operating at sub-Planck scales $L_q \gg l_P = \sqrt{G\hbar/c^3} \approx 1.6 \times 10^{-35}$ m and accessible field strengths $E_0 < E_{\text{Schwinger}} = m_e^2c^3/(e\hbar) \approx 1.3 \times 10^{18}$ V/m, the electromagnetic channel dominates the gravitational channel by factor:
+For the parameter ranges listed in Table L.1, the electromagnetic channel dominates the gravitational channel:
+$$ \mathcal{R} \equiv \frac{\delta_{\text{EM}}}{\delta_{\text{grav}}} \gg 1, \qquad \mathcal{R}\sim 10^{33}\text{--}10^{39} \text{ across the conservative range, with baseline } \mathcal{R}\sim 10^{36}. \tag{L.35} $$
 
-$$ \mathcal{R} \equiv \frac{\delta_{\text{EM}}}{\delta_{\text{grav}}} \gg 1 \quad \text{for all plausible MPU/aggregate parameters, typically } \mathcal{R}\sim 10^{30}\text{--}10^{40} \tag{L.35} $$
-
-Proof. From Equations L.24 and L.25, the ratio is bounded below by substituting maximum plausible gravitational effect and minimum plausible electromagnetic effect. The universal dominance reflects the fundamental hierarchy $\alpha_{\text{em}}/\alpha_{\text{grav}} \sim 10^{43}$ (Theorem L.11) moderated by geometric factors. ∎
+*Proof.* Table L.1 records the multiplicative effect of varying the coupling ratio, charge fraction, and geometric efficiency across the analyzed conservative ranges. Starting from the baseline ratio $10^{36}$, the combined impact factor ranges from $10^{-3}$ to $10^{3}$. Therefore the corresponding dominance ratio ranges from
+$$
+10^{36}\cdot 10^{-3}=10^{33}
+\qquad\text{to}\qquad
+10^{36}\cdot 10^{3}=10^{39}.
+$$
+In particular, $\mathcal R \ge 10^{33} \gg 1$ throughout the analyzed range, so electromagnetic coupling remains dominant on that parameter set. ∎
 
 
 ## **L.4.1 Biological Implementation Hypothesis: Sub-Radiant Coherence Optimization**
@@ -652,13 +655,13 @@ The fact that standard EFE with standard $T_{\mu\nu}^{(\text{MPU})}$ accommodate
 
 ## **L.7 Unification Through Temporal Wave Framework**
 
-The electromagnetic and gravitational manifestations analyzed in Theorems L.2 and L.3 are unified through the temporal wave framework (Appendix O, Definition O.1, Theorem O.4). They represent different frequency components of a single underlying process: controlled modulation of the coherent causal medium's information processing rate.
+The electromagnetic and gravitational manifestations analyzed in Theorems L.2 and L.3 are unified through the temporal wave framework (Appendix O, Definition O.1, Remark O.4). They represent different frequency components of a single underlying process: controlled modulation of the coherent causal medium's information processing rate.
 
 ### **Theorem L.8 (Temporal Wave Frequency Decomposition)**
 
 A controlled modulation of MPU cycle rate $\delta\tau(x,t)$ generated by aggregate context $\text{context}_S$ (Definition L.1) admits frequency decomposition:
 
-$$ \delta\tau(x,t) = \int_{-\infty}^{\infty} d\omega , \tilde{\delta\tau}(x,\omega) e^{-i\omega t} \tag{L.59} $$
+$$ \delta\tau(x,t) = \int_{-\infty}^{\infty} d\omega\, \tilde{\delta\tau}(x,\omega) e^{-i\omega t} \tag{L.59} $$
 
 Different frequency regimes manifest through distinct emergent channels in the continuum limit:
 
@@ -672,25 +675,23 @@ Proof.
 
 ### **Step 1: Phase Mismatch Generation**
 
-Consider temporal modulation $\delta\tau(x,t) = \delta\tau_0 \cos(\omega t)$ with $\omega \gg 1/\tau_{\text{medium}}$ where $\tau_{\text{medium}}$ is the baseline MPU cycle time (Equation L.0). Taking the continuum limit (Appendix F, Theorem F.0) with emergent light speed $c = \delta/\tau_{\text{medium}}$ already established from geometric regularity (Theorem 43) and Lorentzian signature (Theorem 46), we analyze the phase evolution.
+Consider a small temporal modulation $|\delta\tau(x,t)| \ll \tau_{\text{medium}}$, where $\tau_{\text{medium}}$ is the baseline MPU cycle time (Equation L.0). Then
 
-Between neighboring MPUs at positions $x_i$ and $x_j$ separated by effective spacing $\delta$, the phase accumulated over one cycle is:
+$$ \frac{1}{\tau(x_i,t')} = \frac{1}{\tau_{\text{medium}} + \delta\tau(x_i,t')} = \frac{1}{\tau_{\text{medium}}} - \frac{\delta\tau(x_i,t')}{\tau_{\text{medium}}^2} + O(\delta\tau^2). $$
 
-$$ \phi_i(t) = \int_0^\tau \frac{dt'}{\tau(x_i,t')} \approx \frac{t}{\tau_{\text{medium}}} - \frac{\omega\delta\tau_0}{\tau_{\text{medium}}} \sin(\omega t) $$
+Hence the phase accumulated up to time $t$ is
 
-The phase mismatch is:
+$$ \phi_i(t) = \int_0^t \frac{dt'}{\tau(x_i,t')} = \frac{t}{\tau_{\text{medium}}} - \frac{1}{\tau_{\text{medium}}^2}\int_0^t \delta\tau(x_i,t')\,dt' + O(\delta\tau_0^2). $$
 
-$$ \Delta\phi_{ij}(t) = \phi_i(t) - \phi_j(t) = -\nabla\phi \cdot (x_i - x_j) \tag{L.60a} $$
+For a monochromatic modulation $\delta\tau(x,t)=\delta\tau_0(x)\cos(\omega t)$ this gives
 
-For modulation $\delta\tau(x,t) = \delta\tau_0 \cos(\omega t)$ with gradient $|\nabla\delta\tau| \sim \delta\tau_0/\lambda$ where $\lambda \sim c/\omega$ is the modulation wavelength, we have:
+$$ \phi_i(t) \approx \frac{t}{\tau_{\text{medium}}} - \frac{\delta\tau_0(x_i)}{\omega\tau_{\text{medium}}^2}\sin(\omega t). $$
 
-$$ \nabla\phi \sim \frac{1}{\tau_{\text{medium}}}\nabla\delta\tau \sim \frac{\omega}{c}\delta\tau_0 \hat{n} \tag{L.60b} $$
+Therefore neighboring MPUs separated by $x_i-x_j$ acquire an oscillatory phase mismatch
 
-Therefore:
+$$ \Delta\phi_{ij}(t) = \phi_i(t) - \phi_j(t) \approx -\frac{\nabla\delta\tau_0 \cdot (x_i-x_j)}{\omega\tau_{\text{medium}}^2}\sin(\omega t) + O(\delta\tau_0^2). \tag{L.60a} $$
 
-$$ \Delta\phi_{ij}(t) \approx \frac{\omega}{c}\delta\tau_0 \hat{n} \cdot (x_i - x_j) \cos(\omega t) \tag{L.60c} $$
-
-where $\hat{n}$ is the direction of phase gradient propagation and we used $c \sim \delta/\tau_{\text{medium}}$ (emergent light speed).
+A rapid spatially varying modulation therefore produces an oscillatory phase mismatch proportional to the modulation amplitude and its spatial gradient. This is the input required for the coherence-restoring gauge response discussed below.
 
 ### **Step 2: Coherence Cost**
 
@@ -782,7 +783,7 @@ Both emerge from the same underlying process (temporal medium modulation) throug
 
 ### **Corollary L.8.1 (Coupling Hierarchy from Frequency-Dependent Efficiency)**
 
-The electromagnetic-to-gravitational ratio $\mathcal{R} \sim 6 \times 10^{36}$ (Theorem L.5) reflects frequency-dependent coupling efficiency:
+The electromagnetic-to-gravitational ratio $\mathcal{R}$ inherits the analyzed far-field classical-channel range of Proposition L.5, with baseline value $\sim 6 \times 10^{36}$:
 
 High-frequency temporal waves couple to microscopic charge distributions through gauge field phase coherence. Coupling strength is set by $\alpha_{\text{em}}(\text{bulk}) \approx 1/138.843$ before interface correction, emerging from the PCE-Attractor state (Definition 15a, Appendix Z) where the flat QFI spectrum ($M=24$, $\lambda=1$) yields bare coupling $u^* = 8^{1/24}-1$ via capacity saturation (Appendix Z, Theorem Z.7). The Thomson-limit value including interface correction is $\alpha^{-1} \approx 137.036$ (Appendix Z, Theorem Z.26).
 
@@ -904,11 +905,11 @@ $$ \frac{\Delta\tau_{\text{min}}}{\Delta\tau_d} \sim 10^{39} \tag{L.76} $$
 
 Expected Outcome:
 
-Null result (no detection above noise floor), confirming electromagnetic dominance prediction (Theorem L.5).
+Null result (no detection above noise floor), confirming the analyzed-range electromagnetic-dominance prediction (Proposition L.5).
 
 ### **Prediction L.1 (Electromagnetic Dominance for External Fields)**
 
-For all physically realizable aggregates, any influence expressed through classical spacetime fields shows electromagnetic channel dominance over gravitational by factor $\mathcal{R} \sim 2.3 \times 10^{39}$ (Theorem L.5). This applies regardless of the specific carrier implementation used by the aggregate.
+For implementations whose influence is mediated through the analyzed classical far-field channels, electromagnetic coupling dominates gravitational coupling by a large factor, with baseline $\mathcal{R} \sim 10^{36}$ and conservative range $10^{33}$–$10^{39}$ (Proposition L.5). This prediction is restricted to that channel class and does not by itself cover alternative near-field or internal-correlation mechanisms.
 
 ### **Prediction L.2 (Resonant Selectivity)**
 
@@ -1036,7 +1037,7 @@ Proof. (a) follows from clause (v) of Theorem L.9. (b) follows from Theorem 34 (
 
 ### **Remark L.9.1 (External Field Dominance Independence)**
 
-For implementations that express CC influence through classical spacetime fields external to the aggregate, Theorem L.5 establishes electromagnetic dominance over gravitational by factor $\mathcal{R} \sim 10^{36}$. However, implementations utilizing near-field coupling, biochemical gating, or internal state correlations not mediated by propagating external fields may exhibit different channel hierarchies while still satisfying conditions (i)-(v). Investigation of such alternative pathways requires rigorous derivation from framework axioms showing their emergence from POP/PCE optimization (see Section L.4.1 for biological candidate).
+For implementations that express CC influence through the analyzed classical spacetime fields external to the aggregate, Proposition L.5 gives electromagnetic dominance over gravitational with baseline ratio $\mathcal{R} \sim 10^{36}$ and conservative range $10^{33}$–$10^{39}$. However, implementations utilizing near-field coupling, biochemical gating, or internal state correlations not mediated by propagating external fields may exhibit different channel hierarchies while still satisfying conditions (i)-(v). Investigation of such alternative pathways requires rigorous derivation from framework axioms showing their emergence from POP/PCE optimization (see Section L.4.1 for biological candidate).
 ### **L.9.2 Spatiotemporal Bounds on CC Influence**
 
 The CC capability is not instantaneous across arbitrary distances but bounded by physical constraints. We formalize these bounds.
@@ -1065,7 +1066,7 @@ $\mathcal{I}(S,t) \subset {\text{past + future lightcone of } S \text{ at } t}$ 
 
 ### **Proposition L.9.3 (Spatial Extent Scaling)**
 
-For implementations with far-field power scaling (Theorem L.5):
+For implementations with far-field power scaling (Proposition L.5):
 
 $$ R_{\text{eff}}(S) \sim \sqrt{\frac{P_{\text{agg}}}{\epsilon_{\text{detect}} \times k_{\text{impl}}}} $$
 
@@ -1157,7 +1158,7 @@ $$ \frac{\alpha_{\text{em}}(\text{MPU})}{\alpha_{\text{grav}}^{(e)}} \approx \fr
 
 This order-of-magnitude hierarchy ($\sim 10^{43}$) reflects the fundamental information-theoretic structure.
 
-This fundamental hierarchy propagates to the aggregate influence ratio. The observed ratio $\mathcal{R} \sim 6 \times 10^{36}$ (Theorem L.5) reflects this fundamental hierarchy modulated by implementation-specific factors: the ratio of electromagnetic to gravitational coupling at the aggregate scale includes geometric factors (aggregate volume, target distance), frequency-dependent efficiency (detuning, resonance conditions), and the specific field strengths achievable in Proposition L.4. These factors combine to yield the effective ratio $\mathcal{R} = (4.1 \times 10^{42}) \times \eta_{\text{impl}} \sim 6 \times 10^{36}$ where $\eta_{\text{impl}} \sim 10^{-6}$ encapsulates the implementation efficiency.
+This fundamental hierarchy propagates to the aggregate influence ratio. The observed ratio $\mathcal{R} \sim 6 \times 10^{36}$ (Proposition L.5) reflects this fundamental hierarchy modulated by implementation-specific factors: the ratio of electromagnetic to gravitational coupling at the aggregate scale includes geometric factors (aggregate volume, target distance), frequency-dependent efficiency (detuning, resonance conditions), and the specific field strengths achievable in Proposition L.4. These factors combine to yield the effective ratio $\mathcal{R} = (4.1 \times 10^{42}) \times \eta_{\text{impl}} \sim 6 \times 10^{36}$ where $\eta_{\text{impl}} \sim 10^{-6}$ encapsulates the implementation efficiency.
 
 Proof. Direct calculation using framework-derived constants. The electromagnetic coupling emerges from gauge coherence optimization (Appendix G, Appendix Z). The gravitational coupling emerges from horizon information density (Appendix E). Their ratio reflects the information-theoretic structure $\delta^2 C_{\text{max}}/m^2$ of the predictive substrate. ∎
 
@@ -1512,7 +1513,7 @@ A critical constraint from Appendix O (Theorem O.3): causal information can only
 
 #### **L.12.3.1 CC Influence as Temporal Wave Modulation**
 
-Appendix O (Definition O.1, Theorem O.4) establishes that both electromagnetic and gravitational CC channels are components of a unified **temporal wave** spectrum — propagating disturbances in the local MPU cycle rate $\tau(x,t)$ of the coherent causal medium (Theorem O.2). At the foundational level, CC influence is **temporal engineering** (Definition P.10.1): the controlled modulation of the local information processing rate of the predictive substrate.
+Appendix O (Definition O.1, Remark O.4) summarizes that both electromagnetic and gravitational CC channels are components of a unified **temporal wave** spectrum — propagating disturbances in the local MPU cycle rate $\tau(x,t)$ of the coherent causal medium (Theorem O.2). At the foundational level, CC influence is **temporal engineering** (Definition P.10.1): the controlled modulation of the local information processing rate of the predictive substrate.
 
 The formal expression (Appendix P, Section P.11.4) is:
 
@@ -1520,7 +1521,7 @@ $$
 \tau(x_T, t) = \tau_{\text{medium}}\left[1 + \delta\tau_{\text{CC}}(x_T, t)\right] \tag{L.94}
 $$
 
-where $\tau_{\text{medium}} = \hbar/\langle\hat{H}_{\text{eff}}\rangle$ is the background cycle time (Equation O.1, Equation L.0) and $\delta\tau_{\text{CC}}(x_T, t)$ is the controlled modulation generated by the aggregate's context state. The Fourier decomposition of this modulation yields (Appendix O, Theorem O.4; Appendix L, Theorem L.8):
+where $\tau_{\text{medium}} = \hbar/\langle\hat{H}_{\text{eff}}\rangle$ is the background cycle time (Equation O.1, Equation L.0) and $\delta\tau_{\text{CC}}(x_T, t)$ is the controlled modulation generated by the aggregate's context state. The Fourier decomposition of this modulation yields (Appendix O, Remark O.4; Appendix L, Theorem L.8):
 
 - **High-frequency components** (rapid cycle-rate oscillation): emerge as electromagnetic fields in the continuum description — this is the AC Stark mechanism of Section L.11. The Rabi frequency $\Omega_R$ and field amplitude $E_0$ characterize this regime. *The field is the physical carrier of the aggregate's internal restructuring, not its cause; the probability shift originates in what $S$ has become within $\omega$, not in what it transmits (see Remark L.12.6).*
 - **Low-frequency components** (sustained cycle-rate bias): emerge as gravitational time dilation — analyzed in Theorem L.3 and Appendix S.
@@ -1539,7 +1540,7 @@ where $\delta_{\text{Stark}}^{\max} = \max_t |\delta_{\text{Stark}}(t)|$ is the 
 
 #### **L.12.3.2 Connection to the Perspective Transition Kernel**
 
-Appendix O (Section O.6.1) identifies the physical signal $N(t) = E_{\text{rad}}(t)$ as the concrete realization of the interaction argument in the **Conditional Perspective Transition Kernel** $G_{\text{persp}}(s'|s, k, N, \Delta t)$ (Appendix M, Definition M.2, Equation M.5b). This kernel governs the drift-diffusion of the target MPU's perspective on the perspective manifold $\Sigma$ during the 'Evolve' process.
+Appendix O (Section O.6.1) identifies the physical signal $N(t) = E_{\text{rad}}(t)$ as the concrete realization of the interaction argument in the **Conditional Perspective Transition Kernel** $G_{\text{persp}}(s'|s, k, N, \Delta t)$ (Appendix M, Equation M.2, Equation M.5b). This kernel governs the drift-diffusion of the target MPU's perspective on the perspective manifold $\Sigma$ during the 'Evolve' process.
 
 The drift potential in the Ornstein-Uhlenbeck generator (Appendix M, Equation M.5a) is:
 
@@ -1738,7 +1739,7 @@ The AC Stark mechanism is the physical implementation of a principle already imp
 
 - **Definition L.12.1 and Equations L.92–L.93:** Causal information $\mathcal{I}(S \to T,t)$ is defined as mutual information under $\mathcal{P}_{\text{causal}}$, satisfying the inequality chain $\mathcal{I}(S \to T) \leq I(S:T) \leq \mathcal{I}_{\text{rel}}(S)$ by data processing and subadditivity respectively. The mass connection from Theorem N.5 grounds the epistemic cost of influence in the target's inertial properties.
 - **Corollary L.12.2:** The arrow of time (Appendix O, Theorem O.3) makes $\mathcal{I}(S \to T,t)$ strictly past-directed and monotonically non-decreasing: only prior interactions contribute.
-- **Section L.12.3 (Temporal Engineering):** CC influence is temporal engineering (Definition P.10.1) — modulation of $\tau(x_T, t)$ via temporal waves (Appendix O, Theorem O.4). The AC Stark mechanism is the high-frequency component; the gravitational channel is the low-frequency component. Causal information governs modulation precision (Equation L.95) and perspective drift strength (Corollary L.12.3). Acceleration degrades causal information acquisition rate (Equation L.99, Appendix N, Theorem N.UCT).
+- **Section L.12.3 (Temporal Engineering):** CC influence is temporal engineering (Definition P.10.1) — modulation of $\tau(x_T, t)$ via temporal waves (Appendix O, Remark O.4). The AC Stark mechanism is the high-frequency component; the gravitational channel is the low-frequency component. Causal information governs modulation precision (Equation L.95) and perspective drift strength (Corollary L.12.3). Acceleration degrades causal information acquisition rate (Equation L.99, Appendix N, Theorem N.UCT).
 - **Proposition L.12.1 and Equations L.101–L.102:** Resonance factor $\eta_{\text{res}}$ improves under refinement of causal information, proved via the coarse-graining/policy-set inclusion argument. Corollary L.12.4 establishes that any target-conditioned advantage beyond an information-free baseline requires $\mathcal{I}(S \to T) > 0$.
 - **Theorem L.12.2 and Equations L.103–L.105:** The Reflexivity Constraint (Theorem 33) and irreversibility cost (Theorem 31) bound the thermodynamic cost of causal information acquisition, entering the PCE optimization to determine equilibrium $I_0^*$.
 - **Corollary L.12.7 and Equation L.107:** The EM channel resonance function is derived explicitly in terms of posterior moments — principal eigenvector for polarization, conditional mean for frequency — with boundary conditions verified at $\mathcal{I}(S \to T) = 0$ and $\mathcal{I}(S \to T) = \mathcal{I}_{\max}$.
@@ -1749,7 +1750,7 @@ The AC Stark mechanism is the physical implementation of a principle already imp
 
 The global state $\omega$ is universally entangled (Appendix F, Equation F.4; Definition L.12.2). The aggregate $S$ is not external to the system it influences — it is a subsystem of the same global entangled state $\omega$ that contains $T$ (Definition 29). When $S$ refines its context state through ND-RID interactions, acquiring $\mathcal{I}(S \to T)$ at thermodynamic cost $\varepsilon \geq \ln 2$ per step (Theorem 31), it physically reconfigures a subsystem of $\omega$. Because $S$ and $T$ are already connected through the entanglement structure of $\omega$, this reconfiguration is not followed by an influence propagating to $T$ — the reconfiguration of $S$'s internal degrees of freedom and the shift in $T$'s 'Evolve' probabilities are the same event, expressed at two levels of the same global state. No separate signal is transmitted; no arbiter adjudicates. The probability shift $|\Delta P|$ is not the universe reacting to the model update: it **is** the model update, as read out through the entanglement-enforced consistency of $\omega$.
 
-The universe has a budget, a global entangled state, and a consistency requirement. What distinguishes the aggregate as modeler from the target as influenced is not an ontological asymmetry in $\omega$ but a perspectival one: the relational definition of information (Definition 1) and the perspective transition kernel (Appendix M, Definition M.2) together fix which subsystem's PCE optimization is doing the selecting, and from which vantage the probability shift is read out. The thermodynamic budget — exact, unavoidable, global — is the only accounting mechanism. Every ND-RID interaction that refines the internal model is a ledger entry at cost $\varepsilon \geq \ln 2$ (Theorem 31). The bias $|\Delta P| \leq \text{CC}(S) \cdot \eta_{\text{res}}(S,T)$ (Equation L.106) is what the ledger reads when consistency is restored. The aggregate updates its internal model of reality; because it is part of reality and connected to it through $\omega$, that update **is** an update to reality — and the probability shift is the form that update takes at the target's location.
+The universe has a budget, a global entangled state, and a consistency requirement. What distinguishes the aggregate as modeler from the target as influenced is not an ontological asymmetry in $\omega$ but a perspectival one: the relational definition of information (Definition 1) and the perspective transition kernel (Appendix M, Equation M.2) together fix which subsystem's PCE optimization is doing the selecting, and from which vantage the probability shift is read out. The thermodynamic budget — exact, unavoidable, global — is the only accounting mechanism. Every ND-RID interaction that refines the internal model is a ledger entry at cost $\varepsilon \geq \ln 2$ (Theorem 31). The bias $|\Delta P| \leq \text{CC}(S) \cdot \eta_{\text{res}}(S,T)$ (Equation L.106) is what the ledger reads when consistency is restored. The aggregate updates its internal model of reality; because it is part of reality and connected to it through $\omega$, that update **is** an update to reality — and the probability shift is the form that update takes at the target's location.
 
 The locality of CC influence is not an add-on constraint but a triply-enforced organic consequence of the same optimization imperative — the drive to build accurate, resource-efficient predictive models — that generates Consciousness Complexity in the first place. Awareness can only effectively bias what it has modeled; it can only model what it has interacted with; and interaction is constrained by propagation speed, thermodynamic range cost, and the unidirectional arrow of time. In the PU framework, the physics of resonance, the epistemics of prediction, and the thermodynamics of temporal flow are manifestations of the same underlying structure.
 
@@ -1765,7 +1766,7 @@ This appendix establishes the energy accounting, physical mechanisms, and thermo
 
 (3) Gravitational Time Dilation (Theorem L.3): Aggregate power creates energy density contributing to $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8), sourcing gravitational potential via Einstein equations.
 
-(4) Electromagnetic Dominance (Theorem L.5): Ratio $\mathcal{R} \sim 6 \times 10^{36}$ establishes that for any influence expressed through classical spacetime fields, electromagnetic channel dominates gravitational. This holds regardless of aggregate type or carrier implementation.
+(4) Electromagnetic Dominance (Proposition L.5): On the analyzed classical far-field channel range, the ratio $\mathcal{R}$ is overwhelmingly electromagnetic, with baseline $\sim 10^{36}$ and conservative range $10^{33}$–$10^{39}$. This statement applies to that mediated-channel regime and does not by itself cover alternative near-field implementations.
 
 (5) Energy Conservation (Theorem L.6): Total power decomposes as $P_{\text{agg}} = P_{\text{EM}} + P_{\text{other}}$ with each component contributing exactly once to $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8). Covariant conservation $\nabla^\mu T_{\mu\nu}^{(\text{MPU})} = 0$ (Theorem B.5) ensures no double-counting.
 

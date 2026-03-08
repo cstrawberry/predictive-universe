@@ -271,17 +271,17 @@ To apply Theorem E.4a and derive an area law, we use the following standard prop
 2. **Finite Lieb-Robinson Velocity**: Locality and bounded interaction strength imply a finite information propagation speed $v_{\text{LR}}$ (Proposition F.1), so that for local observables $O_A,O_B$:
 $$
 \|[\mathcal{E}_N^{*n}(O_A),O_B]\| \le C \|O_A\|\|O_B\| e^{-\mu(d(A,B)-v_{\text{LR}} n\tau)}.
-\tag{E.3}
+\tag{E.3c}
 $$
 3. **Mixing (trace-distance contraction)**: If $\mathcal{E}_N$ satisfies Lemma E.1 with $f_{\text{RID}}<1$ and is primitive (unique fixed point $\rho_{\text{fix}}$), then for any state $\rho$:
 $$
 D_{\mathrm{tr}}(\mathcal{E}_N^{n}(\rho),\rho_{\text{fix}})
 \le f_{\text{RID}}^{n}\,D_{\mathrm{tr}}(\rho,\rho_{\text{fix}})
 \le f_{\text{RID}}^{n}.
-\tag{E.4}
+\tag{E.4b}
 $$
 Define the (discrete-time) mixing gap $\Delta_{\text{gap}}:=-(1/\tau)\ln f_{\text{RID}}>0$.
-4. **Exponential Clustering**: For local primitive dynamics with a finite Lieb-Robinson bound and a positive mixing gap, the stationary (Gibbs-like) state exhibits exponential decay of connected correlations beyond a finite correlation length $\xi$ that scales as $\xi=O(v_{\text{LR}}/\Delta_{\text{gap}})$ (see, e.g., Kastoryano & Temme 2013 for a complete proof in the dissipative setting). A convenient parameterization consistent with (E.3) is:
+4. **Exponential Clustering**: For local primitive dynamics with a finite Lieb-Robinson bound and a positive mixing gap, the stationary (Gibbs-like) state exhibits exponential decay of connected correlations beyond a finite correlation length $\xi$ that scales as $\xi=O(v_{\text{LR}}/\Delta_{\text{gap}})$ (see, e.g., Kastoryano & Temme 2013 for a complete proof in the dissipative setting). A convenient parameterization consistent with (E.3c) is:
 $$
 \xi=\max\left(\frac{2 v_{\text{LR}}}{\Delta_{\text{gap}}},\frac{2}{\mu}\right).
 $$
@@ -629,13 +629,13 @@ The preceding sections established that the entropy associated with a causal bou
 
 The progression from bounds to attractor completes the logical arc of the thermodynamic derivations:
 
-| Section | Result | Status |
-|---------|--------|--------|
-| E.2 | $\varepsilon \geq \ln 2$ (irreversibility) | Bound |
-| E.3 | $f_{RID} < 1$ (contractivity) | Bound |
-| E.4 | $C_{\max} < \ln d_0$ (capacity limit) | Bound |
-| E.6 | $S \leq \mathcal{A}/4G$ (area law) | Bound |
-| **E.8.3** | $S \to \mathcal{A}/4G$ (saturation) | **Attractor** |
+| Item | Result | Status |
+|------|--------|--------|
+| Theorem 31 | $\varepsilon \geq \ln 2$ (irreversibility) | Bound |
+| Lemma E.1 | $f_{RID} < 1$ (contractivity) | Bound |
+| Theorem E.2 | $C_{\max} < \ln d_0$ (capacity limit) | Bound |
+| Theorem E.6 / Theorem 49 | $S \leq \mathcal{A}/4G$ (area law) | Bound |
+| **Theorem E.8.3.4** | $S \to \mathcal{A}/4G$ (saturation) | **Attractor** |
 
 ### E.8.3.2 Bulk vs. Boundary Information Storage
 
@@ -713,7 +713,7 @@ $$
 \text{Overhead} = O\left(\log\frac{1}{f_{eff}}\right) = O\left(\frac{L}{\delta} \cdot \log\frac{1}{f_{RID}}\right)
 \tag{E.8.3e}
 $$
-This confirms that the compensation cost scales linearly with $L/\delta$ [Nielsen & Chuang 2010; Preskill 1998].
+This confirms that the compensation cost scales linearly with $L/\delta$ [Nielsen & Chuang 2010; Preskill 1998b].
 
 **Step 4 (Thermodynamic Cost from $V_{prop}$).** From Lemma E.8.3.1, accessing bulk information at depth $r$ produces entropy:
 $$
@@ -1156,19 +1156,19 @@ This section derives global unitarity from the causal and thermodynamic structur
 
   *Remark (Consistency with P.5):* The closed-system assumption is consistent with the authentic simulation architecture (Appendix P.5). "No external degrees of freedom accessible to internal systems" refers to internal physical reality; external observation channels (Definition P.5.3) operate outside this substrate by construction, satisfying internal inaccessibility ($\mathbb{E}[\Delta Q \mid E; M] = 0$ for all internal procedures $M \in \mathcal{M}_{int}$) and non-intervention.
 
-- **Definition 6 / Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. The defining characteristic is the dependence of state transformation on outcome, creating a reflexive loop.
+- **Recall Definition 6 / Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. The defining characteristic is the dependence of state transformation on outcome, creating a reflexive loop.
 
-- **Definition 26 (Internal Evolution):** Between 'Evolve' interactions, each MPU evolves unitarily via $U_0(\Delta t) = e^{-i\hat{H}\Delta t/\hbar}$ with self-adjoint Hamiltonian $\hat{H}$.
+- **Recall Definition 26 (Internal Evolution):** Between 'Evolve' interactions, each MPU evolves unitarily via $U_0(\Delta t) = e^{-i\hat{H}\Delta t/\hbar}$ with self-adjoint Hamiltonian $\hat{H}$.
 
-- **Definition 27 ('Evolve'/ND-RID):** The interaction process between MPUs, implementing reflexive state updates. By construction, 'Evolve' acts on pairs of interacting MPUs through their joint Hilbert space $\mathcal{H}_A \otimes \mathcal{H}_B$, without coupling to additional external systems. This is an instance of ND-RID (Definition 6, Definition A.2.2).
+- **Recall Definition 27 ('Evolve'/ND-RID):** The interaction process between MPUs, implementing reflexive state updates. By construction, 'Evolve' acts on pairs of interacting MPUs through their joint Hilbert space $\mathcal{H}_A \otimes \mathcal{H}_B$, without coupling to additional external systems. This is an instance of ND-RID (Definition 6, Definition A.2.2).
 
-- **Definition 35 (Propagation Cost Metric):** The fundamental MPU spacing $\delta$ defines the characteristic length scale of the network, with the propagation cost metric $d_{\mathcal{N}}(u,v)$ measuring minimum cumulative cost along network paths.
+- **Recall Definition 35 (Propagation Cost Metric):** The fundamental MPU spacing $\delta$ defines the characteristic length scale of the network, with the propagation cost metric $d_{\mathcal{N}}(u,v)$ measuring minimum cumulative cost along network paths.
 
-- **Theorem 23 (MPU Dimension):** The MPU Hilbert space dimension is $d_0 = 8$.
+- **Recall from Theorem 23:** The MPU Hilbert space dimension is $d_0 = 8$.
 
-- **Theorem 29 (Minimum Cycle Time):** The MPU cycle time satisfies $\tau \geq \tau_{\min} > 0$, establishing finite processing speed.
+- **Recall from Theorem 29:** The spectral structure of the internal Hamiltonian determines a characteristic minimal processing timescale $\tau_{min}>0$, establishing finite processing speed.
 
-- **Theorem 31 (Entropy Cost):** The minimum dimensionless entropy production per SPAP cycle is $\varepsilon \geq \ln 2$ nats, arising from the 2-to-1 logical state merge inherent in self-referential prediction (Appendix J, Lemma J.1).
+- **Recall from Theorem 31:** The minimum dimensionless entropy production per SPAP cycle is $\varepsilon \geq \ln 2$ nats, arising from the 2-to-1 logical state merge inherent in self-referential prediction (Appendix J, Lemma J.1).
 
 - **Lemma E.1 (Strict Contractivity):** If the average Evolve channel contains a nonzero input-independent refresh component, $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$, then it is strictly contractive in trace distance with factor $f_{\text{RID}}=1-p<1$. If $\sigma\succ0$, the channel is strictly positive and hence primitive (unique full-rank fixed point). No universal quantitative lower bound on $p$ follows from $\varepsilon$ alone.
 
@@ -1704,33 +1704,41 @@ for some $\alpha > 0$. Long-range correlations incur linearly growing PCE cost. 
 
 ### E.10.2 Thermodynamic Derivation of the Light Cone
 
-**Theorem E.10.2 (Maximum Propagation Velocity from PCE).** The maximum velocity for information propagation is:
+**Theorem E.10.2 (Maximum Serialized Propagation Velocity from PCE).** Under the additional hypotheses that (i) propagation between non-adjacent MPUs is implemented by serialized nearest-neighbor ND-RID traversals, and (ii) the continuum no-preferred-frame identification fixes
+$$
+\frac{\delta}{L_P} = \frac{\tau_{\min}}{t_P},
+$$
+the maximum serialized propagation velocity is
+$$
+v_{\text{max}} = \frac{\delta}{\tau_{\min}} = c.
+$$
 
-$$v_{\text{max}} = \frac{\delta}{\tau_{\min}} = c$$
-
-where $\tau_{\min}$ is the minimum MPU cycle time (Theorem 29) and $c$ is the emergent speed of light (Theorem 46).
+Here $\tau_{\min}$ is the minimum MPU cycle time (Theorem 29), $\delta$ is the MPU spacing, and $c$ is the emergent invariant speed appearing in Theorem 46.
 
 *Proof.*
 
-**Step 1 (Minimum time per link).** Each ND-RID interaction requires minimum time $\tau_{\min}$ (Theorem 29). This bound arises from the finite complexity of the predictive update cycle and cannot be circumvented without violating the logical structure of the Fundamental Predictive Loop (Definition 4).
+**Step 1 (Minimum time per effective link).** Each ND-RID interaction requires minimum time $\tau_{\min}$ (Theorem 29). This bound arises from the finite complexity of the predictive update cycle and cannot be circumvented without violating the logical structure of the Fundamental Predictive Loop (Definition 4).
 
-**Step 2 (Maximum propagation rate).** Information propagating across distance $R$ must traverse $R/\delta$ links, each requiring time $\geq \tau_{\min}$:
+**Step 2 (Serialized traversal bound).** Under hypothesis (i), information propagating across distance $R$ must traverse $R/\delta$ effective links in sequence, each requiring time $\geq \tau_{\min}$. Hence
+$$
+t_{\min}(R) = \frac{R}{\delta}\,\tau_{\min}.
+$$
 
-$$t_{\min}(R) = \frac{R}{\delta} \cdot \tau_{\min}$$
+**Step 3 (Serialized velocity bound).** The corresponding maximum serialized propagation velocity is therefore
+$$
+v_{\max}^{(\mathrm{ser})} = \frac{R}{t_{\min}(R)} = \frac{\delta}{\tau_{\min}}.
+$$
 
-**Step 3 (Velocity bound).** The maximum propagation velocity is:
+**Step 4 (Identification with $c$).** Under hypothesis (ii),
+$$
+\frac{\delta}{L_P} = \frac{\tau_{\min}}{t_P},
+$$
+and since $c=L_P/t_P$ by definition of the Planck units, one obtains
+$$
+v_{\max}^{(\mathrm{ser})} = \frac{\delta}{\tau_{\min}} = \frac{L_P}{t_P} = c.
+$$
 
-$$v_{\max} = \frac{R}{t_{\min}(R)} = \frac{\delta}{\tau_{\min}}$$
-
-**Step 4 (Identification with $c$).** Lorentz invariance of the emergent spacetime (Theorem 46) requires that spatial and temporal discretization scales maintain the same ratio as the Planck units:
-
-$$\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}$$
-
-where $L_P$ and $t_P$ are the Planck length and time. This ratio equality follows from the requirement that the discretization not select a preferred frame. Since $c = L_P/t_P$ by definition of Planck units:
-
-$$v_{\max} = \frac{\delta}{\tau_{\min}} = \frac{L_P}{t_P} = c$$
-
-The emergent speed of light is thus identified with the maximum causal propagation velocity of the MPU network. ∎
+Thus, in the serialized nearest-neighbor regime with the stated scale identification, the emergent invariant speed is identified with the maximum causal propagation velocity of the MPU network. ∎
 
 *Remark: Relation to Standard Lieb-Robinson Bounds.* The standard Lieb-Robinson theorem [Lieb & Robinson 1972] establishes finite propagation speed in quantum lattice systems through analytic bounds on commutator growth, requiring local bounded Hamiltonians and finite interaction range. The present derivation reaches the same conclusion—finite maximum velocity—through thermodynamic arguments: the entropy cost $\varepsilon \geq \ln 2$ per link and finite processing time $\tau_{\min}$ per cycle together bound $v_{\max}$. The two approaches are complementary; the thermodynamic derivation clarifies *why* the velocity is bounded (information processing has irreducible cost), while the standard proof provides rigorous analytic bounds.
 
@@ -1742,14 +1750,22 @@ per active channel. Faster propagation would require $\varepsilon < \ln 2$, viol
 
 *Proof.* Each link traversal produces entropy $\geq \varepsilon = \ln 2$ (Theorem 31) and requires time $\geq \tau_{\min}$ (Theorem 29). The minimum rate follows by division. ∎
 
-**Corollary E.10.2 (Thermodynamic Origin of Locality).** Locality is not a primitive axiom but emerges from:
+**Corollary E.10.2 (Thermodynamic Origin of Locality in the Serialized ND-RID Regime).** In the serialized nearest-neighbor propagation regime of Theorem E.10.2, locality is not a primitive axiom but emerges from:
 1. Finite entropy cost per link: $\varepsilon \geq \ln 2$ (Theorem 31)
 2. Finite minimum cycle time: $\tau_{\min} > 0$ (Theorem 29)
 3. PCE optimization minimizing total entropy production (Definition 15)
 
-Superluminal propagation would require either $\varepsilon < \ln 2$ (violating Theorem 31) or $\tau < \tau_{\min}$ (violating Theorem 29). Both are forbidden by the logical structure of self-referential prediction established in Appendix J.
+Within this regime, superluminal serialized propagation would require either $\tau < \tau_{\min}$ (violating Theorem 29) or a breakdown of the scale identification used in Theorem E.10.2. Both are excluded by the assumptions of that theorem.
 
-*Proof.* Suppose information could propagate at speed $v > c = \delta/\tau_{\min}$. Then crossing distance $\delta$ would require time $t < \tau_{\min}$. But each link crossing requires executing the ND-RID update cycle, which by Theorem 29 cannot complete in time less than $\tau_{\min}$. Alternatively, if $t = \tau_{\min}$ but multiple links were traversed, the entropy production per link would be $< \varepsilon$, violating Theorem 31. Both possibilities contradict established bounds, so $v \leq c$. ∎
+*Proof.* Suppose a serialized ND-RID signal could propagate at speed
+$$
+v > \frac{\delta}{\tau_{\min}}.
+$$
+Then traversing one effective link of length $\delta$ would require time $t < \tau_{\min}$, contradicting Theorem 29. Therefore serialized propagation satisfies
+$$
+v \le \frac{\delta}{\tau_{\min}}.
+$$
+Under the scale identification of Theorem E.10.2, this upper bound is $c$. ∎
 
 ### E.10.3 Summary
 

@@ -4,7 +4,7 @@
 
 *   **$\delta_{SPAP}$ (Delta-SPAP):** (Appendix B.3, Theorem B.2) The statistical error margin $\delta_{SPAP} = \alpha_{SPAP} - \alpha$ below the fundamental self-prediction limit $\alpha_{SPAP}$. Appears explicitly in the poly-logarithmic complexity divergence bound derived in Theorem B.2 as $C_{\text{uni}}(\delta_{\rm SPAP}) = \Omega(\log(1/\delta_{\rm SPAP}) / (\delta_{\rm SPAP})^2)$ (**Equation B.5**).
 
-*   **$\alpha_{SPAP}$ (Alpha-SPAP):** (Theorem 10, Theorem 11) The fundamental upper bound on average self-prediction performance ($PP<1$) for systems possessing Property R, regarding SPAP-limited aspects. Distinct from the operational upper bound $\beta$. Approaching $\alpha_{SPAP}$ requires divergent complexity as $\delta_{SPAP} \to 0$ (Theorem 14).
+*   **$\alpha_{SPAP}$ (Alpha-SPAP):** (Theorem 10, Theorem 11) The fundamental upper bound on average self-prediction performance ($PP<1$) for systems possessing Property R, regarding SPAP-limited aspects. Distinct from the operational upper bound $\beta$. Theorem 14 gives a log-enhanced quadratic lower bound on the effective verification/update resources required as $\delta_{SPAP}\to0$, and the same asymptotic lower bound applies to $C_P$ whenever the chosen complexity notion lower-bounds those operations.
 
 *   **$\alpha_{CC,max}$ (Alpha-CC-max):** (Theorem 39) The strict upper bound on Consciousness Complexity (CC), requiring $\alpha_{CC,max} < 0.5$ to forbid deterministic FTL signaling (Postulate 2).
 
@@ -66,7 +66,7 @@
 
 *   **Dual Dynamics:** (Section 7.3.3) The two modes of MPU evolution: (1) continuous, deterministic, unitary **Internal Prediction** (Definition 26, Equation 43) governed by $\hat{H}$, and (2) discrete, stochastic **'Evolve' Interaction** (Definition 27) instantiating ND-RID.
 
-*   **Dynamically Enforced Functional Correspondence:** (Theorem 2, Appendix D) Principle stating that POP/PCE adaptation dynamics concentrate the invariant measure on configurations where the operational complexity proxy $\langle\hat{C}_v\rangle$ is aligned with the theoretical Predictive Physical Complexity $C_P(v)$. Justified via work-cost gap feedback (Lemma D.2, Theorem D.5).
+*   **Dynamically Enforced Functional Correspondence:** (Theorem 2, Appendix D) Principle stating that true stable PCE equilibria must satisfy $C_P(v)=\langle\hat{C}_v\rangle$, while POP/PCE adaptation dynamics drive the operational proxy toward that condition up to a controlled noise floor. Justified via work-cost gap feedback (Lemma D.2, Proposition D.1, Corollary D.2) together with the ergodic/detailed-balance analysis of Theorem D.5.
 
 *   **EFE (Einstein Field Equations):** (Section 12, Theorem 50) Emergent equation relating spacetime curvature to MPU stress-energy: $R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}$ (Equation 76). Derived thermodynamically from the Clausius relation applied to local horizons.
 
@@ -84,7 +84,7 @@
 
 *   **$g_{\mu\nu}$:** (Theorem 45, Theorem 46) The emergent Lorentzian metric tensor field on the spacetime manifold $M$, derived from the large-scale structure of the ND-RID propagation cost metric $d_{\mathcal{N}}$.
 
-*   **Geometric Regularity:** (Definition 36, Definition 37, Theorem 43) Property of the MPU network exhibiting uniform D-dimensional polynomial volume growth and uniformly bounded synthetic Ricci curvature. Argued to be a necessary condition for viable equilibrium states under POP/PCE (Appendix C, Theorem C.6) and dynamically selected via Gibbs concentration of the invariant measure (Appendix D, Theorem D.5).
+*   **Geometric Regularity:** (Definition 36, Definition 37, Theorem 43) Property of the MPU network exhibiting uniform D-dimensional polynomial volume growth and uniformly bounded synthetic Ricci curvature. Argued to be a necessary condition for viable equilibrium states under POP/PCE (Appendix C, Theorem C.6); Appendix D shows that every global minimum of the full potential is regular and that low-noise detailed-balance stationary regimes concentrate near this regular low-potential sector.
 
 *   **Generation Vacua ($p_1, p_2, p_3$):** (Appendix R, Section R.5.2) The three distinct minima of the PCE-compatible potential $V_q$ on the Perspective Space $\Sigma_8$, each corresponding to one fermion generation. Geodesic distances between vacua $d_\Sigma(p_g, p_{g'})$ determine Yukawa couplings via Gaussian overlap integrals, producing hierarchical masses.
 
@@ -99,7 +99,7 @@
 
 *   **Interface Correction ($\delta\kappa$):** (Appendix Z, Section Z.17, Theorem Z.17) The first-order correction to the bulk normalization constant arising from discrete-continuous mismatch at the MPU interface: $\delta\kappa = -(a/d_0) \cdot (u^*/\sqrt{K_0}) \approx -0.01307$. Sign determined a priori from Legendre transform structure (Theorem Z.16); magnitude from active participation fraction and QFI embedding factor. Yields $\kappa_{\rm eff} = 1 + \delta\kappa \approx 0.9869$.
 
-*   **Instanton Complexity ($\kappa$):** (Appendix U, Theorem U.16) Dimensionless semiclassical action exponent controlling vacuum tunneling suppression in the cosmological-constant relation $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$. In PU, $\kappa=141.5$ is derived from the Golay-Steiner structure; under the canonical Bures/Fisher normalization fixed in Appendix T, $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), while the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as an internal consistency check (Appendix V). (Do not confuse this $\kappa$ with the gauge-field normalization factors $\kappa_{\mathrm{bulk}}, \kappa_{\mathrm{eff}}$ used in Appendix Z.)
+*   **Instanton Complexity ($\kappa$):** (Appendix U, Theorem U.16) Dimensionless semiclassical action exponent controlling vacuum tunneling suppression in the cosmological-constant relation $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$. In Appendix U, the reference value $\kappa_{\mathrm{ref}}=141.5$ arises from the leading-order Golay-Steiner zero-mode count; under the canonical Bures/Fisher normalization fixed in Appendix T, $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), while the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as an internal consistency check (Appendix V). (Do not confuse this $\kappa$ with the gauge-field normalization factors $\kappa_{\mathrm{bulk}}, \kappa_{\mathrm{eff}}$ used in Appendix Z.)
 
 *   **Horizon Constant ($K_0$):** (Theorem 15) The fundamental minimum Predictive Physical Complexity ($C_P = 3$ bits) required for a system to function as a *minimal predictor*, capable of both encoding SPAP logic and achieving prediction accuracy reliably better than chance (> ½). Represents the absolute floor for non-trivial predictive agency. Necessarily $C_{op} \ge K_0$.
 
@@ -156,7 +156,7 @@
 
 *   **PCE-Attractor Orbit:** (Theorem Z.6.3a) The orbit of the PCE-Attractor state $\rho_0 = \frac{1}{a}I_a \oplus 0_b$ under unitary conjugation is $\mathcal{O}_{\rho_0} \cong U(d_0)/(U(a) \times U(b)) \cong \text{Gr}(2,8)$, a compact Hermitian symmetric space of complex dimension $ab = 12$ and real dimension $2ab = 24 = M$. This identification provides an independent geometric derivation of the interface mode count.
 
-*   **Module Decomposition Theorem:** (Theorem G.8.4b, Appendix G) The unique decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ of the inactive subspace $\mathcal{B} = \mathbb{C}^6$, derived via exhaustive partition analysis under: (i) Lagrangian capacity bound $n_G \leq 12$ (Theorem G.8.2e); (ii) coherence-compression saturation selecting $n_G = 12$; (iii) chirality requirement (complex representations); (iv) faithfulness (no redundant generators); and (v) anomaly cancellation. Establishes the Standard Model gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ as the unique 12-dimensional solution (Corollary G.8.4c), providing complementary verification of Proposition G.M1. Under symmetry breaking, this decomposition induces a splitting of the attractor orbit isotropy group $U(6) \to U(3) \times U(2) \times U(1)$ (Remark G.8.4e). 
+*   **Module Decomposition Theorem:** (Theorem G.8.4b, Appendix G) In the capacity-saturating PCE regime of Equation (G.8.5), the unique decomposition of the inactive fiber $\mathcal{B} = \mathbb{C}^6$ is $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$. The derivation uses exhaustive partition analysis under: (i) the Lagrangian capacity bound $n_G \leq 12$ (Theorem G.8.2e); (ii) the saturation inequality selecting algebras with $n_G = 12$ whenever attainable; (iii) chirality compatibility; (iv) faithfulness; and (v) anomaly cancellation. Under these conditions, the abstract Standard Model gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ is the unique 12-dimensional solution (Corollary G.8.4c). Theorem G.8.4e proves that this fiberwise $(3,2,1)$ decomposition does not globalize on the bare universal quotient bundle $Q \to \mathrm{Gr}(2,8)$; the quantitative gauge-threshold sector is therefore formulated on the minimal flag lift $\widetilde X = \mathrm{Flag}_{1,2,3}(Q)$, where $\pi^*Q$ tautologically splits.
 
 *   **QFI (Quantum Fisher Information):** (Appendix Z, Section Z.5) A fundamental measure of the information content of a quantum state about an unknown parameter, quantifying the maximum achievable precision in parameter estimation. For a state $\rho(\theta)$ parameterized by $\theta$, the QFI $F(\theta)$ bounds estimation precision via the quantum Cramér-Rao bound: $\text{Var}(\hat{\theta}) \ge 1/(nF)$. In the PU framework, the QFI spectrum determines the MPU's information-sensitivity modes.
 
@@ -180,13 +180,13 @@
 
 *   **Proposition 5 (Schrödinger Equation):** (Section 8.1) Internal Prediction evolves the MPU state via $i\hbar\partial_t|\psi\rangle = \hat{H}|\psi\rangle$.
 
-*   **Proposition 6 (Uncertainty Relations):** (Section 8.2) Non-commuting observables satisfy Heisenberg uncertainty relations from the Hilbert space structure.
+*   **Proposition 6 (Interpretation of Superposition):** (Section 8.2) Superposition states represent multiple predictive branches available prior to actualization.
 
-*   **Proposition 7 (Born Rule):** (Section 8.3, Theorem G.1.7) Measurement probabilities follow $P(i) = |\langle i|\psi\rangle|^2$, derived from PCE consistency.
+*   **Proposition 7 (Emergence of the Born Rule):** (Section 8.3, Theorem G.1.7) Measurement probabilities follow $P(i) = |\langle i|\psi\rangle|^2$, derived from PCE consistency.
 
-*   **Propositions 8–11 (QM Emergence):** (Sections 8.4–8.7) Entanglement, measurement collapse, and decoherence emerge from multi-MPU 'Evolve' dynamics.
+*   **Propositions 8–11 (QM Emergence):** (Sections 8.4–8.7) Uncertainty relations, measurement actualization, entanglement, and internal Schrödinger evolution emerge from the MPU Hilbert-space and 'Evolve' dynamics.
 
-*   **Prediction Coherence Boundary:** (Remark 3) The conceptual name for **$\alpha_{SPAP}$**, the fundamental upper bound on self-prediction performance. It represents the theoretical maximum for predictive accuracy that cannot be exceeded due to the logical limits of self-reference (SPAP). Approaching this boundary requires quadratically divergent Predictive Physical Complexity (Theorem 14), forming the basis for **Prediction Relativity**.
+*   **Prediction Coherence Boundary:** (Remark 3) The conceptual name for **$\alpha_{SPAP}$**, the fundamental upper bound on self-prediction performance. It represents the theoretical maximum for predictive accuracy that cannot be exceeded due to the logical limits of self-reference (SPAP). Approaching this boundary requires a log-enhanced quadratic lower bound on the effective verification/update resources needed to maintain accuracy within $\delta_{SPAP}$ of the boundary (Theorem 14), forming the basis for **Prediction Relativity**.
 
 *  **PP(t) (Predictive Performance):** (Definition 7, Equation 8) A normalized measure ($PP \in (0, 1]$) quantifying the effectiveness (quality $Q$) of a system’s predictions, inversely related to Prediction Error ($PE$). Viable systems operate with $\alpha < PP < \beta$.
 
@@ -194,7 +194,12 @@
 
 *   **$k_{PP}$ (Performance Scale):** Positive constant that rescales $PE$ in Definition 7 via $PP(t)=\frac{1}{1+k_{PP}PE(t)}$. If $PE$ has units, then $k_{PP}$ carries reciprocal units so that $k_{PP}PE$ is dimensionless.
 
-*   **Prediction Relativity:** (Remark 3) Concept encapsulating the fundamental limits on predictive accuracy ($\alpha_{SPAP}<1$) arising from self-reference (SPAP) and the associated divergent resource costs ($C_P \propto 1/(\alpha_{SPAP}-\alpha)^2$) required to approach these limits (Theorem 14), analogous to the speed of light limit ($v \to c$) in Special Relativity.
+*   **Prediction Relativity:** (Remark 3) Concept encapsulating the fundamental limits on predictive accuracy ($\alpha_{SPAP}<1$) arising from self-reference (SPAP) and the associated lower bound
+$$
+\Omega\!\left(\frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2}\right),
+\qquad \delta_{SPAP}:=\alpha_{SPAP}-\alpha,
+$$
+on the verification/update resources required to approach that limit (Theorem 14), analogous to the speed of light limit ($v \to c$) in Special Relativity. When the chosen complexity notion $C_P$ lower-bounds those verification/update operations, the same asymptotic lower bound transfers to $C_P$.
 
 *   **Property R (Computational Richness):** (Definition 10, Appendix A) The necessary level of computational capability (representation, simulation/reasoning, predicate evaluation) required for a system to engage in the self-referential processing leading to SPAP and RUD limits. Emerges through two complementary foundations: (I) Logical necessity from predictive structure (§A.0.2), establishing *why* computational capacity must exist; and (II) Physical instantiation via POP/PCE optimization (§A.0.3-A.0.5), demonstrating *how* it manifests in finite resource systems. See Appendix A.0 for complete derivation.
 
@@ -230,11 +235,11 @@
 
 *   **Theorem 23 (Minimal Hilbert Space Dimension):** (Section 7.2.2) The MPU Hilbert space dimension must satisfy $d_0 \ge 2^{K_0} = 8$. This follows from the requirement that the state space encode the $K_0 = 3$ bits of SPAP-compatible internal logic.
 
-*   **Theorem 29 (Minimum Cycle Time):** (Section 7.3.3) The minimum time $\tau_0$ for an MPU predictive cycle is bounded by the energy-time uncertainty relation: $\tau_0 \ge \hbar/\langle\hat{H}\rangle$. Relates the operational Hamiltonian to the fundamental temporal resolution.
+*   **Theorem 29 (Physical Interpretation of Internal Hamiltonian):** (Section 7.3.3) The expectation $\langle\hat{H}\rangle$ gives the baseline operational energy associated with sustaining the predictive cycle, and the spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min}>0$.
 
 *   **Theorem 31 (Irreversibility Cost):** (Section 7.3.4, Appendix J) The physical instantiation of the SPAP update cycle necessarily incurs entropy production $\varepsilon \ge \ln 2$ per cycle, derived from Landauer's principle applied to the logically irreversible 2-to-1 state merge in SPAP.
 
-*   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.1–11.3.2, Theorem C.6, Appendix D) Theorem asserting POP/PCE dynamics concentrate the long-run stationary regime on configurations exhibiting large-scale geometric regularity (Definition C.3). Justified by necessity arguments (Appendix C) and long-run dynamical concentration (Appendix D, Theorem D.5). Foundational for emergence of smooth spacetime.
+*   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.1–11.3.2, Theorem C.6, Appendix D) Theorem asserting that geometric regularity is necessary for the low-potential sector selected by POP/PCE, with every global minimum geometrically regular. Justified by necessity arguments (Appendix C) and the variational/ergodic analysis of Appendix D. Foundational for emergence of smooth spacetime.
 
 *   **UCT (Unified Cost of Transgression):** (Appendix N) The thermodynamic/operational cost functional that quantifies the resource penalty for attempts to surpass the Prediction Coherence Boundary; unifies predictive and relativistic limits.
 

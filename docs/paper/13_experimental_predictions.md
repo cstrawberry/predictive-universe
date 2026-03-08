@@ -9,7 +9,7 @@ The Predictive Universe framework, particularly the Consciousness Complexity (CC
 - Reflexivity Constraint: $\kappa_r > 0$ (Theorem 33).
 - PCE equilibrium reached (Definition 15a).
 - Gauge sector realized as $G_{SM}$ (Theorem G.8.4b).
-- Cosmological sector uses $\kappa = 141.5$ (Theorem U.16) unless stated conditional.
+- Cosmological sector uses the Appendix U reference exponent $\kappa_{\mathrm{ref}} = 141.5$ (Theorem U.16) together with the stated prefactor convention.
 - Mapping constants use canonical Bures/Fisher normalization (Appendix T, Section T.24).
 - Uncertainty budgets follow T1 (PU truncation), T2 (mapping/regularization), T3 (experimental/scheme).
 - External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
@@ -63,10 +63,11 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
 
 *   **Experimental Setup:**
     1.  **QRNG:** Well-characterized QRNG producing stable, verifiable baseline probabilities $P_{\mathrm{Born}}(i) \neq 0.5$ for some outcome $i$. Multiple parallel QRNGs can increase data rate.
-    2.  **High-Complexity System (S):**
-        *   *Biological:* Human participant performing standardized tasks generating specific internal states ($\mathrm{context}_S$, e.g., focused attention/intention). Optional physiological monitoring (EEG, fMRI, HRV).
-        *   *Artificial:* Sophisticated AI system. Major Challenge: Designing and verifying the physical interaction pathway $N(t)$ coupling the AI's internal $\text{context}_S$ (Definition L.1) to the QRNG's physical process, respecting constraints (speed, cost $\varepsilon \ge \ln 2$, PCE, orthogonality to noise, mapping stability Theorem L.1). The electromagnetic channel dominates (Theorem L.5, $\mathcal{R} \sim 10^{36}$), requiring coherent field generation (Theorem L.2). Statistical requirements (Appendix L, Protocol L.1) and gravitational self-limitation (Appendix S) provide experimental benchmarks. This requires significant R&D and confirmation that the AI meets the operational criteria ($C_{agg}>C_{op}$) necessary for potential CC > 0.
-    3.  **Interaction Control & Shielding:** Meticulous shielding (EM, thermal, acoustic, vibration). Well-defined interaction pathway $N(t)$. Measurement and control/compensation for conventional physical side-effects from S. Continuous environmental monitoring.
+
+2.  **High-Complexity System (S):**
+    *   *Biological:* Human participant performing standardized tasks generating specific internal states ($\mathrm{context}_S$, e.g., focused attention/intention). Optional physiological monitoring (EEG, fMRI, HRV).
+    *   *Artificial:* Sophisticated AI system. Major Challenge: Designing and verifying the physical interaction pathway $N(t)$ coupling the AI's internal $\text{context}_S$ (Definition L.1) to the QRNG's physical process, respecting constraints (speed, cost $\varepsilon \ge \ln 2$, PCE, orthogonality to noise, mapping stability Theorem L.1). On the analyzed far-field classical-channel parameter range, the electromagnetic channel dominates with baseline ratio $\mathcal{R}\sim 10^{36}$ and conservative range $\mathcal{R}\sim 10^{33}\text{--}10^{39}$ (Proposition L.5), requiring coherent field generation (Theorem L.2). Statistical requirements (Appendix L, Protocol L.1) and gravitational self-limitation (Appendix S) provide experimental benchmarks. This requires significant R&D and confirmation that the AI meets the operational criteria ($C_{agg}>C_{op}$) necessary for potential CC > 0.
+3.  **Interaction Control & Shielding:** Meticulous shielding (EM, thermal, acoustic, vibration). Well-defined interaction pathway $N(t)$. Measurement and control/compensation for conventional physical side-effects from S. Continuous environmental monitoring.
     4.  **Automation & Data Acquisition:** Automated randomization of conditions (baseline, neutral, specific context runs), synchronized recording of QRNG outcomes and $\mathrm{context}_S$ indicators, precise timestamps, secure storage for large datasets ($10^7 - 10^9+$ trials). Mandatory blinding procedures.
 
 *   **Procedure:**
@@ -224,17 +225,13 @@ The framework's two-mechanism model for the dark sector (Appendix I) is falsifia
 
 If the QCD vacuum configuration space inherits Leech lattice geometry through PCE optimization of the $M = 24$ interface modes (Theorem Z.5), glueball masses follow from the shell structure with spin corrections.
 
-**Theorem Z.8h (Shell-$J^{PC}$ Correspondence).** For a glueball with quantum numbers $J^{PC}$, the Leech lattice shell squared norm is:
-
-$$|v|^2(J^{PC}) = a^2 + \Delta_J(J) + \Delta_P(P) + \Delta_C(C)$$
-
-where:
-- Base shell $= a^2 = 4$ (Landauer: $a = 2$, Theorem Z.1)
-- Spin contribution $\Delta_J(J) = J(J-1)$ for $J \geq 1$, and $\Delta_J(0) = 0$
-- Parity contribution $\Delta_P(+) = 0$, $\Delta_P(-) = a^2 = 4$ (minimum lattice displacement)
-- C-parity contribution $\Delta_C(+) = 0$, $\Delta_C(-) = d_{\text{Golay}} = 8$ (error-correction distance, Theorem Z.13)
-
-*Proof.* The ground state $0^{++}$ sits at the minimum Leech shell $|v|^2_{\min} = 4 = a^2$ (Proposition Z.13a). Parity inversion requires minimum lattice displacement, costing $\Delta_P(-) = |v|^2_{\min} = a^2 = 4$. C-parity distinguishes particle from antiparticle at the Golay minimum distance $d = 8$. Spin-$J$ states with $J \geq 2$ require $J(J-1)$ additional tensorial modes beyond scalar and vector representations. ∎
+**Imported result (Theorem Z.8h, Shell-$J^{PC}$ Correspondence).** For a glueball with quantum numbers $J^{PC}$, the Leech lattice shell squared norm is
+$$|v|^2(J^{PC}) = a^2 + \Delta_J(J) + \Delta_P(P) + \Delta_C(C),$$
+where
+- Base shell $= a^2 = 4$ (Landauer: $a = 2$, Theorem Z.1),
+- $\Delta_J(J) = J(J-1)$ for $J \ge 1$ and $\Delta_J(0) = 0$,
+- $\Delta_P(+) = 0$, $\Delta_P(-) = a^2 = 4$,
+- $\Delta_C(+) = 0$, $\Delta_C(-) = d_{\text{Golay}} = 8$ (Theorem Z.13).
 
 **Complete Mass Formula.** For a glueball with spin $J$ on shell $|v|^2(J^{PC})$:
 
@@ -254,7 +251,7 @@ where $a(2b-a) = 2(12-2) = 20$ is the residual mode capacity for spin encoding.
 | $2^{-+}$   | 2          | 4          | 0          | 10              | 1.140  | 1.803     | $1.93 \pm 0.08$   | 6.6%  |
 
 
-**Corollary Z.8h.1 (Hierarchy of Symmetry Costs).** The discrete symmetry costs obey $\Delta_C(-) > \Delta_P(-) > \Delta_J(J)$ for $J \leq 2$, with hierarchy $8 > 4 > 2 \geq 0$. This explains why C-odd glueballs are heaviest, followed by P-odd, with spin providing finer structure.
+**Imported result (Corollary Z.8h.1, Hierarchy of Symmetry Costs).** The discrete symmetry costs obey $\Delta_C(-) > \Delta_P(-) > \Delta_J(J)$ for $J \le 2$, with hierarchy $8 > 4 > 2 \ge 0$. This explains why C-odd glueballs are heaviest, followed by P-odd, with spin providing finer structure.
 
 The framework quantities—$a = 2$, $b = 6$, $d_{\text{Golay}} = 8$, $|v|^2_{\min} = 4$—are all derived from axioms (Theorems Z.1, Z.5, Z.13). The shell-to-$J^{PC}$ mapping (Theorem Z.8h) is now derived from first principles rather than empirically assigned.
 
@@ -563,25 +560,29 @@ Discrepancy: $+0.000093 \pm 0.000050$ ($\sim 1.9\sigma$, 0.68 ppm). Consistent w
 
 **Falsification Conditions:**
 - Discovery of fourth-generation quarks or leptons at colliders
+- Discovery of extra light active neutrino species
 - Cosmological evidence for fourth light neutrino species ($N_\nu > 3.2$ at 95% CL)
 - Z-pole width measurement inconsistent with three light neutrino families
 
-**Current Status:**
+**Current experimental handle:** The clean LEP observable is the effective number of light active neutrino species coupled to the $Z$:
 $$
-N_\nu = 2.9840 \pm 0.0082 \quad \text{(ALEPH \textit{et al.} 2006)}
+N_\nu = 2.9840 \pm 0.0082 \quad \text{(ALEPH \textit{et al.} 2006)}.
 $$
-Fully consistent with $N_{\mathrm{gen}} = 3$. Direct searches exclude vectorlike quarks that decay to a $W$ boson and a light quark with masses below $\sim 1.5\ \mathrm{TeV}$ (ATLAS Collaboration 2024).
+
+This is an indirect consistency check for the three-generation claim under the standard identification "one light active neutrino per generation" and in the absence of additional light active species.
+
+Indirectly consistent with $N_{\mathrm{gen}} = 3$ under the standard LEP identification of $N_\nu$ with the number of light active neutrino flavors. Direct searches exclude vectorlike quarks that decay to a $W$ boson and a light quark with masses below $\sim 1.5\ \mathrm{TeV}$ (ATLAS Collaboration 2024).
 
 
 ---
 
 ### 13.10.4 Gauge Group Structure
 
-**Prediction:** The Standard Model gauge group $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ is uniquely selected.
+**Prediction:** In the capacity-saturating PCE regime, the Standard Model gauge group $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ is uniquely selected.
 
-**Derivation Summary:** The PU gauge-search space is the set of compact reductive Lie algebras $\mathfrak{g}\subseteq\mathfrak{u}(6)$ acting faithfully on the inactive module $\mathcal{B}\cong\mathbb{C}^6$ induced by the $b=6$ Landauer partition, together with anomaly-free chiral matter assignments compatible with the induced module decomposition $\mathbb{C}^6=\oplus_i \mathbb{C}^{n_i}$ (Appendix G.8.4). Within this finite search space, PCE selects the maximal-benefit solution at fixed capacity cost by saturating the sharp generator bound $n_G\le 12$ (Theorem G.8.2e). The exhaustive partition analysis (Theorem G.8.4b) and its anomaly filters (Corollary G.8.4c) show that the unique surviving partition is $(3,2,1)$, forcing $\mathfrak{g}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)_Y$ with $n_G=12=8+3+1$.
+**Derivation Summary:** The PU gauge-search space is the set of compact reductive Lie algebras $\mathfrak{g}\subseteq\mathfrak{u}(6)$ acting faithfully on the inactive module $\mathcal{B}\cong\mathbb{C}^6$ induced by the $b=6$ Landauer partition, together with anomaly-free chiral matter assignments compatible with the induced module decomposition $\mathbb{C}^6=\oplus_i \mathbb{C}^{n_i}$ (Appendix G.8.4). Within this finite search space, the sharp generator bound is $n_G\le 12$ (Theorem G.8.2e). When the PCE objective satisfies the saturation inequality of Equation (G.8.5), so that algebras attaining $n_G = 12$ are strictly preferred whenever attainable, the exhaustive partition analysis (Theorem G.8.4b) and its anomaly filters (Corollary G.8.4c) show that the unique surviving partition is $(3,2,1)$, forcing $\mathfrak{g}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)_Y$ with $n_G=12=8+3+1$.
 
-**Derivation Status:** The uniqueness statement is rigorous conditional on (i) Proposition G.M1 (module-locality of the leading PCE objective) and (ii) the requirement that the low-energy chiral sector be anomaly-free and chirality-compatible within the same $b=6$ module decomposition (Appendix G.8.4c). Under these conditions, no other compact reductive $\mathfrak{g}\subseteq\mathfrak{u}(6)$ with $n_G\le 12$ both saturates the PCE optimum and admits anomaly-free chiral content; discovery of an additional long-range gauge factor would therefore falsify the locality assumption rather than merely adjust a fitted parameter.
+**Derivation Status:** The uniqueness statement is rigorous conditional on (i) Proposition G.M1 (module-locality of the leading PCE objective), (ii) the saturation regime of Equation (G.8.5), and (iii) the requirement that the low-energy chiral sector be anomaly-free and chirality-compatible within the same $b=6$ module decomposition (Appendix G.8.4c). Under these conditions, no other compact reductive $\mathfrak{g}\subseteq\mathfrak{u}(6)$ with $n_G\le 12$ both saturates the PCE optimum and admits anomaly-free chiral content; discovery of an additional long-range gauge factor would falsify at least one of these assumptions rather than merely adjust a fitted parameter.
 
 **Falsification Conditions:**
 - Discovery of additional gauge bosons ($Z'$, $W'$) at accessible energies indicating enlarged gauge group
@@ -624,7 +625,7 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 |:-----------|:----------------|:-------------------|:-----------|:------:|
 | Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
 | Fine-structure constant $\alpha^{-1}$ | $137.036092 \pm 0.000050$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
-| Generation number $N_{\mathrm{gen}}$ | 3 | $2.984 \pm 0.008$ | Proposition R.3.5 | ✓ |
+| Light active neutrino count $N_{\nu}$ | 3 under the standard identification from $N_{\mathrm{gen}}=3$ | $2.984 \pm 0.008$ | Proposition R.3.5 + LEP $Z$ width | indirect |
 | Gauge group $G_{\mathrm{SM}}$ (conditional on Proposition G.M1) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ✓ |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ✓ |
 
@@ -656,4 +657,4 @@ where $\kappa_B = \kappa_{EW}/2 + \varepsilon/N_g = 19.48$. The CP-violating fac
 
 **Falsification Criterion:** If future CMB measurements (LiteBIRD) converge outside the range $(5.7, 6.7) \times 10^{-10}$, the framework requires refinement.
 
-**Correlated Prediction (Theorem Y.11):** The hierarchy unification relation $\eta_B \sim \sqrt{v/M_{Pl}}$ implies that any BSM modification to the electroweak scale produces correlated shifts: $\delta\eta_B/\eta_B \approx (1/2)\delta v/v$.
+**Correlated Prediction (Theorem Y.11):** The baryogenesis hierarchy relation of Theorem Y.11 gives a leading square-root sensitivity, so within the same prefactor regime any BSM modification to the electroweak scale produces correlated shifts: $\delta\eta_B/\eta_B \approx (1/2)\delta v/v$.

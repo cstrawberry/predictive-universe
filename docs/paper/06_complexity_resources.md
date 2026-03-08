@@ -107,7 +107,11 @@ We now establish the general principles governing the relationship between inves
 
 **6.2.1 Definition 17 (Def 17): Physical Realizability**
 
-A predictive model $M$ or system state $\mu$ characterized by $C_P$ is physically realizable if there exists a finite refinement level $n$ and at least one admissible construction/operation program $p\in\mathcal{P}_n(\mu)$ (Section 2.4.1) that maps $\mu_{\rm ref}\mapsto\mu$, achieves the required predictive accuracy, and respects all constraints in $\mathcal{L}_{\rm phys}^{(n)}$. Equivalently, $C_{P,n}(\mu)<\infty$ for some (hence all larger) $n$, and $C_P(\mu)\le C_{\max}<\infty$ (Appendix Q).
+A predictive model $M$ or system state $\mu$ characterized by $C_P$ is physically realizable if there exists at least one admissible construction/operation program that realizes $\mu$ while satisfying the full physical constraint hierarchy. Equivalently, there exists a refinement level $n_0$ such that $C_{P,n}(\mu)<\infty$ for all $n\ge n_0$, and the monotone limit
+$$
+C_P(\mu)=\lim_{n\to\infty} C_{P,n}(\mu)
+$$
+is finite. Any witness program admissible for the full constraint set supplies a finite upper bound on every sufficiently refined stage.
 
 **6.2.2 Definition 18 (Def 18): PPC Requirement $C_{PPC}(PP_{target})$**
 
@@ -161,7 +165,17 @@ We now derive the explicit complexity–performance relationship—the *Law of P
 
 **6.3.1 Theorem 19 (Law of Prediction — Exponential Saturation Model)**
 
-Let a system adapt its operational complexity $C(t)=\langle\hat C_v\rangle(t) \ge C_{op}$, to meet the estimated task difficulty $\hat C_{\mathrm{target}}(t)$. For viability bounds $\alpha<PP<\beta$ (Definition 8), the achievable **Predictive Performance** is given by the following minimal model (consistent with the principles of Definition 19 and discussed in Section 6.7):
+Assume Definition 19 and, in addition, the following stagewise PCE composition rule: if relative complexity is allocated in two independent refinement stages with normalized residual performance gap
+$$
+g(x):=\frac{\beta-PP(C,\hat{C}_{target})}{\beta-\alpha},
+\qquad x:=\frac{C-C_{op}}{\hat C_{target}},
+$$
+then the residual gap compounds multiplicatively,
+$$
+g(x_1+x_2)=g(x_1)\,g(x_2)
+\qquad\text{for all }x_1,x_2\ge 0.
+$$
+Let a system adapt its operational complexity $C(t)=\langle\hat C_v\rangle(t) \ge C_{op}$ to meet the estimated task difficulty $\hat C_{\mathrm{target}}(t)$. For viability bounds $\alpha<PP<\beta$ (Definition 8), the achievable **Predictive Performance** is given by the following minimal model (consistent with the principles of Definition 19 and discussed in Section 6.7):
 $$
 PP(C,\hat C_{\mathrm{target}}) =\beta-(\beta-\alpha)\, \exp\!\Bigl[-\kappa_{\mathrm{eff}}\, \tfrac{C-C_{op}}{\hat C_{\mathrm{target}}}\Bigr] \quad \text{(22)}
 $$
@@ -179,11 +193,11 @@ and the normalized performance gap
 $$
 g(x):=\frac{\beta-PP(C,\hat{C}_{target})}{\beta-\alpha}\in(0,1],\qquad g(0)=1.
 $$
-PCE together with the relative-complexity scaling of Definition 19 implies that independent refinement stages add in $x$ and compound on the remaining gap: if a system first allocates $x_1$ units of relative complexity and then allocates an additional $x_2$ units (with the second refinement operating on the residual prediction error left after the first), the resulting normalized gap satisfies the composition law
+By the stated composition hypothesis, independent refinement stages add in $x$ and multiply the residual gap:
 $$
 g(x_1+x_2)=g(x_1)\,g(x_2)\qquad \text{for all }x_1,x_2\ge 0. \quad (\ast)
 $$
-Assuming $g$ is continuous (operational continuity of $PP$ under small complexity changes), $(\ast)$ together with $g(0)=1$ implies the standard exponential form $g(x)=e^{-\kappa_{eff}x}$ for a unique constant $\kappa_{eff}>0$. Substituting back yields Equation (22), and solving Equation (22) for $C$ yields Equation (23). ∎
+Assuming $g$ is continuous, $(\ast)$ together with $g(0)=1$ implies $g(x)=e^{-\kappa_{\mathrm{eff}}x}$ for a unique constant $\kappa_{\mathrm{eff}}>0$. Substituting back yields Equation (22), and solving Equation (22) for $C$ yields Equation (23). ∎
 
 *Remark:* Equation (23) implies $(C-C_{op})\propto -\ln(\beta-PP)$ as $PP\to\beta$, consistent with logarithmic rate–distortion scaling when the operational prediction error is proportional to the performance gap.
 
@@ -227,12 +241,15 @@ $$
 
 The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **system-level constant** of the PCE potential, constrained by thermodynamic limits inherent in the MPU framework.
 
-1.  **Lower Bound (from $P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23, Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 \nu (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0 \nu \frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
+1.  **Lower Bound (from $P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23 and Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates that $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0 \frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
     $$
     \Gamma_0 \gtrsim P_{min}=R(C_{op}) \gtrsim \frac{n_{irr}\,k_B T\,\varepsilon}{\tau_{\text{min}}}
 \ge \frac{k_B T \ln 2}{\tau_{\text{min}}} \quad \text{(27)}
     $$
-    where $n_{irr}\ge 1$ is the number of logically irreversible merges that must be reset per minimal cycle and $\varepsilon \ge \ln 2$ is the irreducible dimensionless entropy cost per such merge (Theorem 31). If the cycle rate $\nu \approx 1/\tau_{\text{min}}$, this corresponds to $\Gamma_0 \gtrsim n_{irr}\,k_B T\,\varepsilon$.
+    where $n_{irr}\ge 1$ is the number of logically irreversible merges that must be reset per minimal cycle and $\varepsilon \ge \ln 2$ is the irreducible dimensionless entropy cost per such merge (Theorem 31). If the cycle rate satisfies $\nu \approx 1/\tau_{\text{min}}$, Equation (27) is equivalently
+    $$
+    \Gamma_0 \gtrsim n_{irr}\,k_B T\,\varepsilon\,\nu.
+    $$
 2.  **Upper Bound (from $\varepsilon$):** The irreducible thermodynamic cost, quantified by dimensionless entropy production $\varepsilon \ge \ln 2$ (Theorem 31), associated with the necessary irreversible state change during an 'Evolve' interaction, provides an upper bound. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), must be considered relative to this fundamental dissipation $E_{dissip} \ge k_B T \varepsilon$. For thermodynamically consistent energy valuation:
      $$
     \Gamma_0 \lesssim \frac{k_B T \varepsilon \nu}{\Delta PP_{max}} =: \Gamma_{0,crit} \quad \text{(28)}

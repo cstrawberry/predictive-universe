@@ -193,24 +193,28 @@ Averaging (C.10a) over neighbors and substituting the previous display gives (C.
 
 We first demonstrate that anomalous dimension (Definition C.1 violated) leads to violations of global coherence (R2) and resource efficiency (R3).
 
-**Theorem C.1 (Path Length Scaling in Regular vs. Irregular Geometries).**
+**Theorem C.1 (Path Length Scaling in Regular Geometries and in Irregular Families with $d_{min}>1$).**
 Let $\mathcal{N}=(\mathcal{V}, \mathcal{E})$ be an MPU network with cost distance $d_{\mathcal{N}}$. Let $L$ denote a characteristic macroscopic Euclidean distance scale within the network's embedding.
 * (a) **Regular Geometry:** If $\mathcal{N}$ exhibits uniform D-dimensional polynomial volume growth (Def C.1), the average cost distance $\langle d_{\mathcal{N}}(L) \rangle$ and the maximum cost distance $d_{\mathcal{N}, max}(L)$ between points separated by Euclidean distance $L$ scale approximately linearly with $L$:
-  $$ 
+  $$
     \langle d_{\mathcal{N}}(L) \rangle \approx c_{avg} L, \quad d_{\mathcal{N}, max}(L) \approx c_{max} L
     \tag{C.11}
     $$
 where $c_{avg}, c_{max}$ depend on the average microscopic cost $\delta_{eff}$ and the discrete graph structure.
-* (b) **Irregular Geometry (Anomalous Dimension):** If $\mathcal{N}$ exhibits anomalous dimension (e.g., fractal-like structure, significant bottlenecks), the average and/or maximum cost path distances typically scale super-linearly with the Euclidean scale $L$:
+* (b) **Irregular Geometry in Families with Super-Linear Chemical Distance:** If $\mathcal{N}$ belongs to an irregular graph family for which the chemical distance satisfies $d_{graph}(L)\propto L^{d_{min}}$ with $d_{min}>1$ (as in the fractal/percolation examples cited below), then the maximum cost path distance scales super-linearly:
 $$
-\langle d_{\mathcal{N}}(L) \rangle \propto L^{\beta}, \quad d_{\mathcal{N}, max}(L) \propto L^{\gamma} \quad (\text{with } \beta \ge 1, \gamma > 1)
-    \tag{C.12}
+d_{\mathcal{N}, max}(L) \propto L^{\gamma}, \quad \gamma=d_{min}>1.
+\tag{C.12}
 $$
-At least one exponent (typically $\gamma$ reflecting worst-case paths) must be strictly greater than 1.
+The average cost distance may also be super-linear in such families, but that requires an additional family-specific estimate and is not proved here.
 
 *Proof:*
 * **(a) Regular:** A network satisfying Def C.1 implies that the number of vertices grows like $R^D$, characteristic of a D-dimensional space. In such spaces, for points separated by Euclidean distance $L$, the shortest path length in terms of graph steps ($d_{graph}$) scales linearly with $L$ on average, $d_{graph} \approx L / \delta_{graph}$, where $\delta_{graph}$ is the typical distance per step. The cost metric $d_{\mathcal{N}}$ (Definition 35) accumulates costs $w_{uv} \approx \delta_{eff}/\delta_{graph}$ along the path, where $\delta_{eff}$ is the average cost per step. Thus, the total cost distance is $d_{\mathcal{N}} \approx d_{graph} \times (\delta_{eff})$. Substituting the linear scaling of $d_{graph}$ yields $d_{\mathcal{N}}(L) \approx (L / \delta_{graph}) \times \delta_{eff} = (\delta_{eff}/\delta_{graph}) L$. Since $\delta_{eff}/\delta_{graph}$ is a ratio of microscopic scales, $d_{\mathcal{N}}(L)$ scales linearly with $L$. Both average and maximum path lengths are expected to exhibit this linear scaling in well-behaved, regular D-dimensional structures.
-* **(b) Irregular:** Networks with anomalous dimension lack the uniform scaling properties of regular lattices or manifolds. They often contain bottlenecks (regions of reduced connectivity forcing long detours) or exhibit fractal geometry where paths are inherently tortuous. Standard results in graph theory and percolation theory [Havlin & Ben-Avraham 1987] show that shortest path lengths (chemical distance $d_{graph}$) on such structures scale super-linearly with Euclidean distance $L$, i.e., $d_{graph} \propto L^{d_{min}}$ where $d_{min} > 1$ is the fractal path dimension. Since the cost metric $d_{\mathcal{N}}$ accumulates costs along these paths, $d_{\mathcal{N}} \approx \delta_{eff} d_{graph}$, it inherits this super-linear scaling, particularly for the maximum path length: $d_{\mathcal{N}, max}(L) \propto L^\gamma$ with $\gamma = d_{min} > 1$. The average path length exponent $\beta$ may also be greater than 1, or remain $\approx 1$ if only sparse regions are highly irregular, but the maximum path length exponent $\gamma$ characteristically exceeds 1. QED
+* **(b) Irregular family with $d_{min}>1$:** In the cited fractal/percolation families, shortest path lengths (chemical distance $d_{graph}$) scale as $d_{graph} \propto L^{d_{min}}$ with $d_{min}>1$ [Havlin & Ben-Avraham 1987]. Since the cost metric accumulates costs along such paths, $d_{\mathcal{N}} \approx \delta_{eff} d_{graph}$, the maximum cost path distance inherits the same exponent:
+$$
+d_{\mathcal{N}, max}(L)\propto L^{d_{min}}.
+$$
+This proves the stated super-linear worst-case scaling for that class of irregular families. ∎
 
 **Theorem C.2 (Quantitative Viability Failure due to Anomalous Dimension).** MPU networks $\mathcal{N}_{irreg}$ exhibiting anomalous dimension, leading to super-linear maximum path scaling $d_{\mathcal{N}, max}(L) \propto L^{\gamma}$ with $\gamma > 1$ (Theorem C.1(b)), necessarily violate core PU framework requirements (R2: Global Coherence, R3: Resource Efficiency) for sufficiently large system size $L$, rendering them non-viable.
 
@@ -287,47 +291,49 @@ where:
 
 *Proof:* Follows directly from the finite critical scales ($L_{crit}^{(R2)}$) derived or implied in the proofs of Theorems C.2 and C.4, which show that violations become inevitable beyond certain thresholds of irregularity. QED
 
-**Theorem C.6 (PU ⇒ local doubling + (1,2)–Poincaré with constants)**
+**Theorem C.6 (Conditional coarse-grained doubling and $(1,2)$-Poincaré bounds)**
 
-This theorem strengthens the necessity statement of Theorem 43 by providing a direct, constructive proof of geometric regularity from the framework's microscopic principles. Let $(\mathcal{N},d_{\mathcal{N}},\mu)$ be the predictive network endowed with the cost‑metric $d_{\mathcal{N}}$ and counting measure $\mu$ coarse‑grained at resolution $\delta$ (App. E/Q). Assume:
+Let $(\mathcal{N},d_{\mathcal{N}},\mu)$ be the predictive network endowed with the cost-metric $d_{\mathcal{N}}$ and counting measure $\mu$ coarse-grained at resolution $\delta$ (App. E/Q). Assume:
 
-1. **Uniform PCE saturation**: On every ball $B(x,r)$ with $r\ge 10\delta$, the per‑edge capacity weights $w_e$ satisfy
-   $\displaystyle 1-\varepsilon_C \le \frac{w_e}{C^*_{\max}}\le 1+\varepsilon_C,\qquad C^*_{\max}=2\ln 2,$
-   with $\varepsilon_C \le \frac{1-f_{\mathrm{RID}}}{1+f_{\mathrm{RID}}}$ (from the KKT stationarity of POP with RID contractivity $f_{\mathrm{RID}}$ from Lemma E.1).
-2. **Bounded geometry**: Node degree $\Delta_{\min}\le \deg(v)\le \Delta_{\max}$, packing $\eta$ and link‑area density $\chi$ as in App. E/Q; minimal link length $\delta$.
+1. **Uniform PCE saturation:** on every ball $B(x,r)$ with $r\ge 10\delta$, the per-edge capacity weights satisfy
+   $$
+   1-\varepsilon_C \le \frac{w_e}{C_{\max}^*}\le 1+\varepsilon_C,\qquad C_{\max}^*=2\ln 2,
+   $$
+   with $\varepsilon_C \le \frac{1-f_{\mathrm{RID}}}{1+f_{\mathrm{RID}}}$.
+2. **Bounded geometry:** $\Delta_{\min}\le \deg(v)\le \Delta_{\max}$, minimal link length $\delta$, and bounded packing/link-density parameters as in App. E/Q.
+3. **Coarse-grained packing and isoperimetry:** for $r\ge 10\delta$, balls admit the packing comparison and boundary-area lower bound used below, with distortion factors $\eta^\uparrow/\eta^\downarrow$, $\rho^\uparrow/\rho^\downarrow$, and $\chi$.
 
-Then for all $r\ge 10\delta$ and $x\in\mathcal{N}$:
+Then for all $r\ge 10\delta$ and all $x\in\mathcal N$:
 
-* (Doubling)
+- **Doubling**
+  $$
+  \mu(B(x,2r))\le D_\star\,\mu(B(x,r)),
+  \qquad
+  D_\star:=2^D(1+4\varepsilon_C)\frac{\Delta_{\max}}{\Delta_{\min}}\frac{\eta^\uparrow}{\eta^\downarrow}.
+  $$
 
+- **Local $(1,2)$-Poincaré inequality**
+  there exist $\lambda=4$ and
+  $$
+  C_{\mathrm{PI}}(r):=\frac{\sqrt{2\Delta_{\max}}}{3\chi}\frac{1+\varepsilon_C}{1-\varepsilon_C}\frac{\rho^\uparrow(r)}{\rho^\downarrow(r)}
+  $$
+  such that for every locally Lipschitz $f$,
+  $$
+  \fint_{B(x,r)}|f-f_{B(x,r)}|\,d\mu
+  \le
+  C_{\mathrm{PI}}(r)\,r
+  \left(\fint_{B(x,4r)} |\nabla f|^2\,d\mu\right)^{1/2}.
+  $$
+
+*Proof.* Under assumptions (1) and (2), the local edge weights and degrees are uniformly controlled. Assumption (3) supplies the coarse-grained ball-packing comparison, which yields the displayed doubling constant after inserting the weight and degree distortion factors. The same assumption supplies the boundary-area lower bound
 $$
-\mu\!\left(B(x,2r)\right)\ \le\ D_\star\ \mu\!\left(B(x,r)\right),\qquad
-D_\star\ :=\ 2^{D}\left(1+4\varepsilon_C\right)\frac{\Delta_{\max}}{\Delta_{\min}}\frac{\eta^\uparrow}{\eta^\downarrow},
+h(B)\ge \frac{3\chi}{\rho^\uparrow(r)}\frac{1-\varepsilon_C}{r(1+\varepsilon_C)}.
 $$
-
-where $\eta^\uparrow/\eta^\downarrow$ bounds local packing variation at scale $r$.
-
-* ((1,2)–Poincaré, λ‑local) there exist $\lambda=4$ and
-
+Cheeger’s inequality then gives
 $$
-C_{\mathrm{PI}}(r)\ :=\ \frac{\sqrt{2\,\Delta_{\max}}}{3\,\chi}\,
-\frac{(1+\varepsilon_C)}{(1-\varepsilon_C)}\,\frac{\rho^\uparrow(r)}{\rho^\downarrow(r)}\,,
+\lambda_1(B)\ge \frac{h(B)^2}{2\Delta_{\max}},
 $$
-
-such that for every locally Lipschitz $f$
-
-$$
-\fint_{B(x,r)}\!\!\!|f-f_{B(x,r)}|\,\mathrm d\mu\ \le
-C_{\mathrm{PI}}(r)\,r \left(\fint_{B(x,4r)} |\nabla f|^2\,\mathrm d\mu\right)^{1/2}.
-$$
-
-*Proof.*
-(i) *Local homogeneity from PCE + RID.* KKT stationarity of POP under RID contractivity gives a uniformity modulus
-$\varepsilon_C\le(1-f_{\mathrm{RID}})/(1+f_{\mathrm{RID}})$ for the optimal link weights. This bounds local density fluctuations of nodes/links at scale $\ge 10\delta$.
-(ii) *Doubling.* Pack $B(x,2r)$ by $2^{D}$ disjoint translates of $B(x,r)$ up to packing distortion $\eta^\uparrow/\eta^\downarrow$ and degree distortion $\Delta_{\max}/\Delta_{\min}$. The weight uniformity adds a factor $(1+4\varepsilon_C)$.
-(iii) *Cheeger–Poincaré.* The graph‑Cheeger constant on $B(x,r)$ satisfies
-$h(B)\ge \frac{w_{\min}\,\chi\,4\pi r^2}{w_{\max}\,\rho^\uparrow(r)\,\frac{4}{3}\pi r^3} = \frac{3\chi}{\rho^\uparrow(r)}\,\frac{(1-\varepsilon_C)}{r(1+\varepsilon_C)}$.
-Cheeger’s inequality gives $\lambda_1(B)\ge h(B)^2/(2\Delta_{\max})$. Combine $\mathrm{Var}_B(f)\le \lambda_1(B)^{-1}\mathcal{E}(f,f)$ with $\mathcal{E}(f,f)$ bounded by the coarse‑grained Dirichlet form to obtain the stated $(1,2)$–Poincaré with $\lambda=4$ and $C_{\mathrm{PI}}(r)$ above.  ∎
+and the standard variance-versus-Dirichlet-form estimate produces the stated local $(1,2)$-Poincaré inequality with $\lambda=4$ and the displayed constant $C_{\mathrm{PI}}(r)$. ∎
 
 ## C.7 Conclusion
 

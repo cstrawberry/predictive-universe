@@ -51,7 +51,7 @@ The Extended Binary Golay Code $\mathcal{G}_{24}$ is the unique $[n, k, d]$ bina
 
 **Theorem U.1 (Golay Uniqueness).** The extended binary Golay code is the unique binary linear code achieving the parameters $[24, 12, 8]$.
 
-*Proof.* This is a classical result in coding theory (Pless 1968; Conway & Sloane 1999). The uniqueness follows from the Golay code saturating the Griesmer bound for binary linear codes. Within the PU framework, Theorem Z.13 establishes that PCE optimization uniquely selects this code structure for the $M = 24$ interface modes. QED
+*Proof.* This is a classical uniqueness theorem in coding theory; see Pless (1968) and Delsarte & Goethals (1975). Saturation of the Griesmer bound alone does not prove uniqueness, so the classification result must be imported from the coding-theory literature. Within the PU framework, Theorem Z.13 then uses that external uniqueness theorem to single out the Golay structure once the $[24,12,8]$ parameters are fixed. QED
 
 ### U.3.2 Octad Structure
 
@@ -189,8 +189,7 @@ where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
 ### U.6.3 Identification of Modes with Vertices
 
-**Theorem U.7b (Mode-Vertex Correspondence).** The 24 QFI-active interface modes of the PCE-Attractor correspond bijectively to the 24 vertices of the 24-cell polytope. This correspondence identifies the real dimension of the Grassmannian orbit $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 2ab = 24$ with the 24-cell vertex count, connecting the internal Hilbert space structure to four-dimensional geometric optimality.
-
+**Theorem U.7b (Mode-Vertex Structural Correspondence).** The 24 QFI-active interface modes of the PCE-Attractor admit a 24-element structural correspondence with the 24 vertices of the 24-cell polytope. This correspondence identifies the real dimension of the Grassmannian orbit $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 2ab = 24$ with the 24-cell vertex count, connecting the internal Hilbert space structure to four-dimensional geometric optimality at the level of counting, symmetry data, and design structure.
 
 *Proof.*
 
@@ -204,7 +203,7 @@ where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
 **Step 5 (Geometric realization).** The 24-cell is the unique regular convex 4-polytope whose 24 vertices form the optimal kissing configuration $K(4) = 24$ (Conway & Sloane 1999). By Definition Z.8, these vertices correspond to the unit Hurwitz integers on $S^3$. As established in Corollary Z.5a, the 24-cell provides the microscopic geometric realization of the mode-channel correspondence.
 
-**Step 6 (Spherical design property).** The 24-cell vertices form a tight spherical 5-design on $S^3$ (Delsarte, Goethals & Seidel 1977). This is the unique such configuration with 24 points. The correspondence between interface modes and 24-cell vertices is structurally canonical: both sets have cardinality 24, both inherit the same symmetry group (the automorphism group of the $D_4$ root lattice), and the spherical design property of the vertices exactly matches the quadrature requirements for preserving zero modes (Theorem U.13). $\square$
+**Step 6 (Spherical design property).** The 24-cell vertices form a tight spherical 5-design on $S^3$ (Delsarte, Goethals & Seidel 1977). The correspondence established here is structural rather than a proved literal bijection of geometric objects: both sides contribute the same cardinality 24, the same four-dimensional optimal-packing data, and the same spherical-design information needed for the zero-mode argument of Theorem U.13. This is sufficient for the transfer of the design/quadrature input used in the later construction. $\square$
 
 **Remark U.2: Nature of the Correspondence.** The mode-vertex correspondence established in Theorem U.7b is structural rather than literal: the 24 QFI-active interface modes span the real tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)_{\mathbb{R}}$, a 24-dimensional real vector space (complex dimension 12), while the 24-cell vertices span $\mathbb{R}^4$. The correspondence identifies the combinatorial and symmetry structures of these two 24-element sets, enabling the transfer of spherical design properties to the discretized action. This is analogous to how the Golay code organizes the same 24 modes for error correction (Theorem Z.13) without the modes literally being binary codewords.
 
@@ -386,21 +385,23 @@ where $\lambda = C_{\max}/\varepsilon = 2$ is the PCE capacity ratio.
 
 ### U.9.2 Standard Laplace Asymptotics
 
-**Theorem U.14 (Morse-Bott Formula).** Let $f: \mathbb{R}^N \to \mathbb{R}$ have a critical manifold $\mathcal{C}$ of dimension $m$ where $f = f^*$ is constant. If the Hessian restricted to the normal bundle is non-degenerate with $N - m$ positive eigenvalues, then:
-
+**Theorem U.14 (Morse-Bott Formula).** Let $f: \mathbb{R}^N \to \mathbb{R}$ be $C^2$ in a neighborhood of a compact critical manifold $\mathcal{C}$ of dimension $m$, assume $f|_{\mathcal{C}} = f^*$ is constant, and assume the Hessian of $f$ restricted to the normal bundle of $\mathcal{C}$ is non-degenerate and positive definite. Then, as $\lambda\to+\infty$,
 $$\int_{\mathbb{R}^N} e^{-\lambda f(x)} dx = C \cdot \lambda^{-(N-m)/2} \cdot e^{-\lambda f^*} \cdot (1 + O(\lambda^{-1}))$$
+where $C$ depends on the determinant of the normal Hessian and the induced volume of $\mathcal{C}$.
 
-where $C$ depends on the determinant of the normal Hessian and the volume of $\mathcal{C}$.
-
-*Proof.* Standard result in asymptotic analysis; see Nicolaescu (2011). $\square$
+*Proof.* Under the stated smoothness and non-degeneracy hypotheses, this is the standard Morse-Bott Laplace asymptotic obtained by choosing local coordinates $(u,v)$ near $\mathcal C$ with $u$ tangent to $\mathcal C$ and $v$ normal to it, expanding
+$$
+f(u,v)=f^*+\frac12\langle H_u v,v\rangle + O(\|v\|^3),
+$$
+and then integrating first in the normal Gaussian directions and then along $\mathcal C$. The compactness of $\mathcal C$ controls the tangential integral, and the positive-definite normal Hessian gives the factor $\lambda^{-(N-m)/2}$ together with the determinant contribution absorbed into $C$. This is the Morse-Bott version of Laplace's method cited from Nicolaescu (2011), and the present statement records exactly the hypotheses needed for that theorem to apply. ∎
 
 ### U.9.3 Application to the Vacuum Instanton
 
-The discretized bounce $u^*$ lies on a critical manifold of dimension $m = 5$ (the collective coordinates). Applying Theorem U.14 with $\lambda = 2$:
-
-$$Z \propto 2^{-(N-5)/2} \cdot e^{-2 S^*}$$
-
-where $N$ is the total number of Gaussian directions and $S^* = S_{\text{disc}}(u^*)$ is the instanton action.
+The discretized bounce $u^*$ lies on a critical manifold of dimension $m = 5$ (the collective coordinates). Theorem U.14 therefore identifies the leading Morse-Bott zero-mode counting pattern
+$$
+Z = A_{\mathrm{MB}}(\lambda)\,\lambda^{-(N-5)/2} e^{-\lambda S^*}(1+O(\lambda^{-1})),
+$$
+where $A_{\mathrm{MB}}(\lambda)$ collects determinant and Jacobian factors, $N$ is the total number of Gaussian directions, and $S^* = S_{\text{disc}}(u^*)$ is the instanton action. In the PU application $\lambda = C_{\max}/\varepsilon = 2$ is fixed rather than taken to $+\infty$, so this formula is used only to identify the zero-mode power $(N-5)/2$ entering the exponent-counting convention below; the omitted $O(\lambda^{-1})$ term is not discarded as a controlled small correction.
 
 ---
 
@@ -440,33 +441,32 @@ The Morse-Bott correction factor $\lambda^{-m/2} = 2^{-m/2}$ (with $\lambda = C_
 
 **Convention U.14a (Complexity Parameter).** The instanton complexity $\kappa$ is defined as the effective number of complex normal directions contributing to the exponential suppression factor $e^{-2\kappa}$. All power-law prefactors in $\lambda$, determinants, and Jacobian contributions from the Morse-Bott measure are absorbed into the effective prefactor $A_{\text{eff}}$. This convention separates the dominant exponential scaling (controlled by $\kappa$) from subleading polynomial corrections (packaged into $A_{\text{eff}} \sim O(1)$).
 
-**Theorem U.15 (Complexity Deficit from Zero Modes).** The $m = 5$ collective zero modes reduce the effective complexity by:
-
-$$\delta = \frac{m}{2} = \frac{5}{2} = 2.5$$
+**Theorem U.15 (Leading-Order Complexity Deficit from Zero Modes).** Under the leading-order Morse-Bott counting pattern of Section U.9.3 and Convention U.14a, the $m = 5$ collective zero modes contribute the deficit
+$$
+\delta = \frac{m}{2} = \frac{5}{2} = 2.5
+$$
+to the exponent-counting parameter used in the vacuum weight.
 
 *Proof.*
 
-**Step 1 (Morse-Bott structure).** By Theorem U.14, the partition function has the form:
+**Step 1 (Leading-order zero-mode count).** Section U.9.3 identifies the Morse-Bott power
+$$
+\lambda^{-(N_{\mathbb{R}}-m)/2}
+$$
+with $\lambda = C_{\max}/\varepsilon = 2$ (Appendix Q), $N_{\mathbb{R}} = 288$ the real dimension of the integration domain (Remark U.3a), and $m = 5$ the real dimension of the zero-mode manifold (Corollary U.10). At the manuscript's fixed $\lambda$, this is used as a leading-order counting pattern rather than as a controlled exact asymptotic evaluation.
 
-$$Z = A \cdot \lambda^{-(N_{\mathbb{R}}-m)/2} \cdot e^{-\lambda S^*}$$
+**Step 2 (Convention-based exponent parameter).** The base complexity $\kappa_0 = 144$ counts the complex dimension of $\text{Gr}_{\mathbb{C}}(12,24)$ (Theorem U.3), with $N_{\mathbb{R}} = 2\kappa_0$. By Convention U.14a, the leading-order exponent-counting parameter is
+$$
+\kappa_{\mathrm{ref}} := \frac{N_{\mathbb{R}} - m}{2} = \frac{288 - 5}{2} = 141.5,
+$$
+with the remaining determinant, Jacobian, and finite-$\lambda$ factors absorbed into $A_{\text{eff}}$.
 
-where $\lambda = C_{\max}/\varepsilon = 2$ (Appendix Q), $N_{\mathbb{R}} = 288$ is the real dimension of the integration domain (Remark U.3a), $m = 5$ is the real dimension of the zero-mode manifold (Corollary U.10), $S^*$ is the instanton action, and $A$ collects determinant and Jacobian factors.
+**Step 3 (Complex vs real dimensions).** The $m = 5$ collective coordinates—four translations in $\mathbb{R}^4$ and one dilatation in $\mathbb{R}^+$—are intrinsically real degrees of freedom arising from spacetime symmetries of the Euclidean bounce. Each real zero mode removes one real direction from the Gaussian normal bundle. Since the reference exponent parameter counts complex directions, the corresponding deficit is
+$$
+\delta := \kappa_0 - \kappa_{\mathrm{ref}} = 144 - 141.5 = \frac{m}{2} = \frac{5}{2} = 2.5.
+$$
 
-**Step 2 (Complexity identification).** The base complexity $\kappa_0 = 144$ counts the complex dimension of $\text{Gr}_{\mathbb{C}}(12, 24)$ (Theorem U.3), with $N_{\mathbb{R}} = 2\kappa_0$. By Convention U.14a, we identify $\kappa$ as the effective number of complex Gaussian directions contributing to the exponential suppression:
-
-$$\kappa := \frac{N_{\mathbb{R}} - m}{2} = \frac{288 - 5}{2} = 141.5$$
-
-All $\lambda$-power prefactors and the factor $A$ are absorbed into $A_{\text{eff}}$.
-
-**Step 3 (Complex vs real dimensions).** The $m = 5$ collective coordinates—four translations in $\mathbb{R}^4$ and one dilatation in $\mathbb{R}^+$—are intrinsically real degrees of freedom arising from spacetime symmetries of the Euclidean bounce. Each real zero mode removes one real direction from the Gaussian normal bundle. Since $\kappa$ counts complex dimensions and each complex dimension comprises two real dimensions:
-
-$$\delta := \kappa_0 - \kappa = 144 - 141.5 = \frac{m}{2} = \frac{5}{2} = 2.5$$
-
-**Step 4 (Result).** The instanton complexity is:
-
-$$\kappa = \kappa_0 - \delta = 144 - \frac{5}{2} = 141.5$$
-
-$\square$
+Thus the five real collective coordinates contribute the stated leading-order deficit in the exponent-counting parameter. $\square$
 
 ---
 
@@ -534,13 +534,13 @@ uses the following explicit instantiation steps:
 
 **Uncertainty budget for $\Lambda L_P^2$.** Write
 $$
-\ln(\Lambda L_P^2)=\ln(8\pi)+\ln A_{\text{eff}}-2\kappa.
+\ln(\Lambda L_P^2)=\ln(8\pi)+\ln A_{\text{eff}}-2\kappa_{\mathrm{ref}}.
 $$
-Within the PU model, $\kappa=141.5$ is discrete and exact (Theorem U.16). The complete theory uncertainty is therefore entirely in $\ln A_{\text{eff}}$, with contributions that can be stated explicitly:
+Within the Appendix U conventions, the reference value $\kappa_{\mathrm{ref}}=141.5$ comes from the leading-order zero-mode count of Theorem U.15. The explicit budget written below therefore quantifies the prefactor sector at fixed reference exponent; any correction to the leading-order exponent count would have to be tracked separately. The prefactor-sector contributions that can be stated explicitly are:
 
 * **(T2) determinant evaluation:** $\sigma_{\ln K}$ from truncating the heat-kernel/zeta evaluation of $\zeta'_\alpha(0)$ on $\text{Gr}(2,8)$;
 * **(T3) extensivity counting:** $\sigma_{\ln N_{\text{eff}}}$ from the finite-volume/channel-count convention (Appendix E);
-* **(T2) higher-loop corrections:** $\sigma_{\ge 2\text{-loop}}$, expected to scale as $O(1/\kappa)$ on compact symmetric spaces under Convention U.14a.
+* **(T2) higher-loop corrections:** $\sigma_{\ge 2\text{-loop}}$, expected to scale as $O(1/\kappa_{\mathrm{ref}})$ on compact symmetric spaces under Convention U.14a.
 
 Once $(K,N_{\text{eff}})$ are evaluated to relative precision $\sigma_K/K$ and $\sigma_N/N_{\text{eff}}$, the propagated theory uncertainty is:
 $$
@@ -552,31 +552,32 @@ For observational comparison, Appendix V.1 provides the observational contributi
 
 ## U.11 Main Result
 
-**Theorem U.16 (Cosmological Constant Complexity).** The instanton complexity parameter is:
+**Theorem U.16 (Reference Cosmological Constant Complexity).** Under the leading-order zero-mode counting convention of Theorem U.15, the reference exponent parameter is
 
-$$\boxed{\kappa = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5}$$
+$$\boxed{\kappa_{\mathrm{ref}} = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5}$$
 
 where:
 - $k = 12$ is the Golay code dimension (Theorem Z.13)
 - $D = 4$ is the emergent spacetime dimension (Theorem Z.11)
 - The base complexity $k^2 = 144$ is the Grassmannian bound (Theorem U.3)
-- The deficit $(D+1)/2 = 5/2$ arises from collective zero modes preserved by the spherical 5-design (Theorem U.13)
+- The deficit $(D+1)/2 = 5/2$ is the leading-order zero-mode deficit supplied by Theorem U.15
 
-**Corollary U.17 (Cosmological Constant).** The vacuum energy density satisfies:
+**Corollary U.17 (Reference Cosmological Constant Scale).** With this reference exponent, the vacuum weight is parameterized as
 
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-2\kappa} = 8\pi A_{\text{eff}} \cdot e^{-283}$$
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-2\kappa_{\mathrm{ref}}} = 8\pi A_{\text{eff}} \cdot e^{-283}$$
 
-With $A_{\text{eff}} := K \cdot N_{\text{eff}}$ (Section U.1), the baseline exponential factor is:
+With $A_{\text{eff}} := K \cdot N_{\text{eff}}$ (Section U.1), the baseline reference exponential factor is
 
 $$8\pi e^{-283} = 3.13 \times 10^{-122}$$
 
 Thus:
 
-- Baseline exponential scale: $8\pi e^{-283} = 3.13 \times 10^{-122}$.
+- Baseline reference scale: $8\pi e^{-283} = 3.13 \times 10^{-122}$.
 - PU prefactor (computed): for $A_{\text{eff}} = 0.923 \pm 0.011$,
   $$
-  \Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-283} = (2.88 \pm 0.03)\times 10^{-122}.
+  \Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-283} = (2.88 \pm 0.03)\times 10^{-122},
   $$
+  which is the corresponding reference value under the stated convention.
 
 The observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849) \times 10^{-122}$ (Appendix V, Equation (V.5)) implies $A_{\text{eff}}^{(\text{obs})} = 0.917 \pm 0.016$ (Corollary U.15b), consistent with the computed $A_{\text{eff}}^{(\text{th})} = 0.923 \pm 0.011$.
 
@@ -608,11 +609,11 @@ Both structures exist at $M = 24$ as derived consequences of PCE optimization (T
 
 ### U.12.3 Comparison with Observation
 
-| Quantity | Derived | From Observation | Notes |
-|----------|---------|------------------|-------|
-| $\kappa$ | 141.5 | — | Grassmannian geometry (Theorem U.16) |
-| $\Lambda L_P^2$ (for $A_{\text{eff}}=1$) | $3.13 \times 10^{-122}$ | $(2.86599 \pm 0.04849) \times 10^{-122}$ | 9% |
-| $\kappa_{\text{inv}}$ (setting $A_{\text{eff}}=1$) | — | $141.543 \pm 0.009$ | 0.03% from $\kappa=141.5$ |
+| Quantity | Reference Value | From Observation | Notes |
+|----------|-----------------|------------------|-------|
+| $\kappa_{\mathrm{ref}}$ | 141.5 | — | Leading-order Grassmannian zero-mode count (Theorem U.16) |
+| $\Lambda L_P^2$ (for $A_{\text{eff}}=1$) | $3.13 \times 10^{-122}$ | $(2.86599 \pm 0.04849) \times 10^{-122}$ | baseline reference scale |
+| $\kappa_{\text{inv}}$ (setting $A_{\text{eff}}=1$) | — | $141.543 \pm 0.009$ | 0.03% from $\kappa_{\mathrm{ref}}=141.5$ |
 | $A_{\text{eff}}^{(\text{obs})}$ | $O(1)$ | $0.917 \pm 0.016$ | Corollary U.15b |
 
 ---
@@ -733,9 +734,9 @@ $$\boxed{\kappa_Q = \dim_\mathbb{C}(\mathbb{CP}^{11}) = 11}$$
 
 **Corollary U.20a (Complexity Ratio).**
 
-$$\frac{\kappa_\Lambda}{\kappa_Q} = \frac{141.5}{11} \approx 12.86$$
+$$\frac{\kappa_{\Lambda,\mathrm{ref}}}{\kappa_Q} = \frac{141.5}{11} \approx 12.86$$
 
-Given the identifications in Theorem U.16 and Identification U.20, this ratio reflects the hierarchy between vacuum energy (suppressed by $e^{-283}$) and primordial perturbations (suppressed by $e^{-22}$).
+Under the Appendix U reference-exponent conventions of Theorem U.16 and Identification U.20, this ratio summarizes the hierarchy between the vacuum reference scale (suppressed by $e^{-283}$) and primordial perturbations (suppressed by $e^{-22}$).
 
 ### U.16.3 Bundle Structure
 
@@ -1278,7 +1279,7 @@ These criteria are testable by CMB-S4, LiteBIRD, and future 21-cm observations.
 
 | Sector | Configuration Space | $\kappa$ | Physical Scale |
 |:-------|:-------------------:|:--------:|:--------------:|
-| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $141.5$ | $\Lambda L_P^2 \approx 3.1 \times 10^{-122}$ |
+| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $141.5$ | $\Lambda L_P^2 \approx 2.88 \times 10^{-122}$ |
 | Primordial | $\mathbb{CP}^{11}$ | $11$ | $Q \approx 1.18 \times 10^{-5}$ |
 
 The hierarchy $\kappa_\Lambda / \kappa_Q = 12.86$ explains why the cosmological constant is exponentially smaller than primordial perturbations.
@@ -1287,7 +1288,7 @@ The hierarchy $\kappa_\Lambda / \kappa_Q = 12.86$ explains why the cosmological 
 
 **Summary U.71 (Structural Unity).** Both sectors connect to the Golay code $[24, 12, 8]$ (Theorem Z.13):
 
-- **Vacuum**: Full code structure $\to$ Grassmannian $\text{Gr}_\mathbb{C}(12,24)$ $\to$ $\kappa_\Lambda = 141.5$ (Theorem U.16)
+- **Vacuum**: Full code structure $\to$ Grassmannian $\text{Gr}_\mathbb{C}(12,24)$ $\to$ reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ (Theorem U.16)
 - **Primordial**: Signal subspace $\mathbb{C}^{12}$ $\to$ Projective space $\mathbb{CP}^{11}$ $\to$ $\kappa_Q = 11$ (Identification U.20)
 - **Inflation dynamics**: 24-cell 5-design $\to$ 12-line graph $\to$ $\mathbb{CP}^1_{\text{inv}}$ $\to$ Starobinsky (Assumption U.48, Identification U.44a)
 - **Observable predictions**: Conditional on Assumption U.26, Assumption U.41, Identification U.51
@@ -1298,13 +1299,13 @@ The framework achieves predictions for inflationary observables from the Golay-S
 
 ## U.27 Conclusion
 
-This appendix derives the cosmological constant and inflationary observables from the Golay-Steiner structure at $M = 24$. A single information-theoretic organization determines both sectors:
+This appendix derives the cosmological constant reference scale and inflationary observables from the Golay-Steiner structure at $M = 24$. A single information-theoretic organization determines both sectors:
 
-**Vacuum Sector.** The complexity $\kappa_\Lambda = 141.5$ yields:
-
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283} \approx 3 \times 10^{-122}$$
-
-matching the observed $2.87 \times 10^{-122}$ (Corollary U.17).
+**Vacuum Sector.** The reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ yields the baseline scale
+$$
+\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283},
+$$
+which for the computed prefactor $A_{\text{eff}} = 0.923 \pm 0.011$ gives the reference value $(2.88 \pm 0.03)\times10^{-122}$, close to the observed $2.87 \times 10^{-122}$ (Corollary U.17).
 
 **Primordial Sector.** The complexity $\kappa_Q = 11$ and geometric e-fold count $N_e = 59.4$ yield:
 
@@ -1319,13 +1320,13 @@ matching the observed $2.87 \times 10^{-122}$ (Corollary U.17).
 
 | Sector | Configuration Space | $\kappa$ | Suppression |
 |:-------|:-------------------:|:--------:|:-----------:|
-| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $141.5$ | $e^{-283}$ |
+| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ | $e^{-283}$ |
 | Primordial | $\mathbb{CP}^{11}$ | $11$ | $e^{-22}$ |
 
-The ratio $\kappa_\Lambda/\kappa_Q \approx 13$ explains the hierarchy between vacuum energy and primordial perturbations.
+The ratio $\kappa_{\Lambda,\mathrm{ref}}/\kappa_Q \approx 13$ summarizes the hierarchy between vacuum energy and primordial perturbations in the Appendix U reference scheme.
 
 **Falsifiability.** The predictions $r = 0.0034$ and $n_s = 0.9663$ are testable by CMB-S4 and LiteBIRD. Detection outside the range $0.002 < r < 0.006$ at $>3\sigma$ would falsify the framework.
 
-The primordial predictions are conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48. The vacuum result (Theorem U.16) is more robust, depending only on the Grassmannian structure and spherical 5-design.
+The primordial predictions are conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48. The vacuum sector fixes a leading-order reference exponent from the Grassmannian structure and spherical 5-design, while the overall normalization remains encoded in the stated Appendix U convention for $A_{\text{eff}}$.
 
 ---

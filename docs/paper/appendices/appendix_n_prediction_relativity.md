@@ -20,11 +20,12 @@ The master equation of the PU framework is the stochastic differential equation 
 
 The PCE Potential incorporates costs that diverge as the system approaches fundamental physical or logical limits. Two such divergences are critical:
 
-*   **Predictive Divergence** [Thm. 14]. To achieve a predictive performance $PP$ on a self-referential task limited by the **Prediction Coherence Boundary** ($\alpha_{SPAP} < 1$), the required Predictive Physical Complexity $C_P$ diverges. The scaling law [Thm. 14, Equation 14] is:
+*   **Predictive Divergence** [Thm. 14]. For a self-referential task with performance gap $\delta_{\text{SPAP}}:=\alpha_{SPAP}-PP$, Theorem 14 furnishes a universal lower bound on the required universal complexity scale:
     $$
-    C_P(PP) = \Omega\left(\frac{\log(1/(\alpha_{SPAP} - PP))}{(\alpha_{SPAP} - PP)^2}\right)
+    C_{\text{uni}}(PP) = \Omega\left(\frac{\log(1/(\alpha_{SPAP} - PP))}{(\alpha_{SPAP} - PP)^2}\right)
     \tag{N.2}
     $$
+    Any transfer of this lower bound to a specific predictive-complexity notion such as $C_P$ requires the explicit bridge hypothesis that the operational predictive complexity dominates the universal SPAP complexity in the regime under study.
 
 *   **Relativistic Divergence** (Special Relativity). The kinetic energy required to accelerate a particle of rest mass $m_0$ to a velocity $v$ diverges as $v$ approaches the invariant speed $c$:
     $$
@@ -155,10 +156,15 @@ P_{pred} \ge R(C, T_{eff})
 $$
 *Proof.* This is a direct application and necessary physical generalization of Definition 3 from the PU framework. The function $R(C)$ is the minimum power required to operate the physical structures of complexity $C$. This power cost is fundamentally thermodynamic in origin (e.g., related to Landauer's principle) and is therefore dependent on the effective temperature of the environment in which the computation takes place, as outlined in Section N.3.1.
 
-**Lemma N.2 (Predictive-divergence bound — PU Thm 14).** There exist constants $c_{\text{SPAP}}>0$ and $\delta_0>0$ such that for every target error $\delta_{\text{SPAP}}=\alpha_{\text{SPAP}}-PP\in(0,\delta_0]$, the required complexity satisfies
+**Lemma N.2 (Conditional transfer of the SPAP divergence bound).** Let $\delta_{\text{SPAP}}=\alpha_{\text{SPAP}}-PP\in(0,\delta_0]$. Theorem 14 yields constants $c_{\text{SPAP}}>0$ and $\delta_0>0$ such that
 $$
-C_{\text{SPAP}}(PP) \ge c_{\text{SPAP}}\,\frac{\log(1/\delta_{\text{SPAP}})}{\delta_{\text{SPAP}}^2}.
+C_{\text{uni}}(PP) \ge c_{\text{SPAP}}\,\frac{\log(1/\delta_{\text{SPAP}})}{\delta_{\text{SPAP}}^2}.
 $$
+If, for the operational predictive-complexity notion used in this appendix, one assumes the bridge hypothesis
+$$
+C_{\text{SPAP}}(PP)\ge C_{\text{uni}}(PP),
+$$
+then the same lower bound holds with $C_{\text{SPAP}}$ in place of $C_{\text{uni}}$.
 
 **Lemma N.3 (Relativistic work).** The minimum work to accelerate a mass $m_0$ from rest to final velocity $v_f$ is $W_{kin}(v_f) = m_0c^2(\gamma(v_f)-1)$.
 

@@ -212,33 +212,21 @@ Therefore any physical implementation satisfies $\varepsilon \ge \varepsilon_{\m
 
 ### Z.3.3 The Structural Constraint
 
-**Theorem Z.2 (Landauer-SPAP Structural Relation).** The framework's axioms imply the identity:
-$$d_0 = 2a^2$$
-where $d_0 = 2^{K_0}$ is the MPU Hilbert space dimension and $a$ is the active kernel dimension (Theorem Z.1).
+**Theorem Z.2 (Landauer-SPAP Structural Relation).** At the PCE-saturating branch, the MPU Hilbert-space dimension is
+$$d_0 = 8 = 2a^2.$$
 
-*Proof.* The proof proceeds by analyzing the information-theoretic structure of the SPAP cycle.
+*Proof.*
 
-**Step 1: Active Kernel.** By Theorem Z.1, the PCE-Attractor selects $a=2$ (with $\varepsilon=\ln 2$ on the saturating branch).
+**Step 1 (Lower bound).** Theorem 15 establishes that the self-referential prediction/update cycle requires at least $2^{K_0} = 8$ operationally distinguishable internal configurations. Theorem 23 restates this as $d_0 \geq 8$.
 
-**Step 2: Pre-Merge State Space.** The SPAP cycle requires encoding two types of information: the outcome-relevant information (state component $\phi$ and stored prediction $p$, each in an $a$-dimensional space) and the prediction-relevant information (the correlation enabling reflexive update). By the injectivity condition (O1) from Theorem 15, the cycle map must be injective within each phase. Consider the tensor product structure $\mathcal{H}_{\text{pre}} = \mathcal{H}_\phi \otimes \mathcal{H}_p \otimes \mathcal{H}_c$ where $\mathcal{H}_\phi$ encodes the state (dimension $a$), $\mathcal{H}_p$ encodes the prediction (dimension $a$), and $\mathcal{H}_c$ encodes match/mismatch distinguishability (dimension $2$). The minimal pre-merge configuration space satisfying injectivity has dimension $\dim(\mathcal{H}_{\text{pre}}) = a \times a \times 2 = 2a^2$.
-
-**Step 3: Post-Merge State Space.** After the irreversible reset, the ancilla $p$ is fixed; the remaining logical degrees of freedom are the updated state $\phi_{t+1}$ (dimension $a$) together with the match/mismatch control bit $c_{t+1}$ (dimension $2$). Thus the post-merge state space has dimension:
-
+**Step 2 (Constructive realization).** The sufficiency part of Theorem 15 exhibits an explicit realization of the full SPAP subdynamics with three binary registers: the present active symbol $\phi \in \{0,1\}$, the stored predictive symbol $p \in \{0,1\}$, and the control/phase bit $c \in \{0,1\}$. On the PCE-saturating branch with $a = 2$ (Theorem Z.1), the supporting Hilbert space is
 $$
-d_{\text{post}} = a \times 2 = 2a
+\mathcal{H}_{\min} = \mathcal{H}_\phi \otimes \mathcal{H}_p \otimes \mathcal{H}_c, \qquad \dim \mathcal{H}_{\min} = a \cdot a \cdot 2 = 2a^2 = 8.
 $$
 
-**Step 4: Consistency with Compression Factor.** The irreversible merge compresses a $2a^2$-dimensional space to $2a$, achieving a compression factor:
+**Step 3 (PCE exclusion of $d_0 > 8$).** Suppose the PCE-selected MPU had $d_0 > 8$. The SPAP functionality is exhausted by the operational triple $(\phi, p, c)$ from Theorem 15, spanning exactly 8 operational classes. Any additional dimensions are either (i) never reached by the operational dynamics, or (ii) refinements within one of the 8 classes that can be compressed without changing the predictive map. In both cases there exists an admissible realization with the same predictive functionality and strictly smaller maintained state space. By Definition 3, the operational resource cost $R(C)$ is strictly increasing in maintained complexity. By Definition D.1, the PCE potential contains a strictly positive operational-cost term increasing with maintained support. By PPI-optimality (Definition P.6.2), the realized implementation is the minimal-cost one. Therefore $d_0 > 8$ cannot be PCE-optimal.
 
-$$
-\frac{d_{\text{pre}}}{d_{\text{post}}} = \frac{2a^2}{2a} = a
-$$
-
-With $a=2$ (Step 1), this is exactly the SPAP merge: a 2-to-1 irreversible map.
-
-**Step 5: Identification with Hilbert Space Dimension.** The total configuration space must accommodate the full pre-merge structure. By the Minimal Predictive Algebra argument (Section 7.1.3), $d_0 \ge 2a^2$. The Principle of Compression Efficiency (PCE) selects the minimal sufficient dimension; any $d_0 > 2a^2$ introduces superfluous complexity without predictive benefit. Therefore $d_0 = 2a^2$.
-
-**Step 6: Verification.** Substituting $a = 2$ gives $d_0 = 2 \times 4 = 8 = 2^3 = 2^{K_0}$, confirming $K_0 = 3$. ∎
+Hence $d_0 = 8 = 2a^2$. ∎
 
 **Corollary Z.1 (Equivalent Forms of the Structural Relation).** The identity $d_0 = 2a^2$ can be expressed as:
 
@@ -809,41 +797,23 @@ The unique global minimum is at $D = 4$. No other integer $D$ yields zero mismat
 
 ## Z.11 Dimensional Selection
 
-**Theorem Z.11 (Dimensional Selection from First Principles).** *The emergent spacetime dimension is uniquely determined:*
-$$D = 4$$
+**Theorem Z.11 (Dimensional Selection).** At the PU attractor, the internal mode count, realized spatial channel count, and geometric kissing bound coincide:
+$$
+M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D) = 24.
+$$
+Consequently the emergent spacetime dimension is uniquely $D = 4$.
 
-*Proof.*
+*Proof.* By Theorem Z.5, $M_{\mathrm{int}} = 2ab = 24$. Let $m := M_{\mathrm{phys}}$ denote the number of realized spatial channels at dimension $D$, and $K := K(D)$ the kissing-number bound of Theorem Z.7a. The PCE potential (Definition D.1) is
+$$
+V_{\mathrm{tot}} = V_{\mathrm{op}} + V_{\mathrm{prop}} - V_{\mathrm{benefit}} + V_{\mathrm{mc}},
+$$
+where $V_{\mathrm{benefit}} = c_4\, m \ln(1+u)$ and $V_{\mathrm{mc}}$ is the dark-mode/empty-channel mismatch penalty (Lemma Z.5).
 
-**Step 1 (Interface mode count).** From foundational constants:
-- $d_0 = 8$ (Theorem 15/23)
-- $\varepsilon = \ln 2$ (Theorem 31)
-- $a = 2$ (Theorem Z.1)
-- $b = d_0 - a = 6$
-- $M_{int} = 2ab = 24$ (Theorem Z.5)
+**Step 1 (Saturation).** Suppose $m < \min(M_{\mathrm{int}}, K)$. Then there is at least one unused internal mode and one unused admissible channel. Activating one channel by assigning a dark internal mode to an open geometric slot does not increase $V_{\mathrm{op}}$ (the mode was already maintained) and does not increase $V_{\mathrm{prop}}$ ($D$ is fixed). The benefit term changes by $\Delta V_{\mathrm{benefit}} = -c_4 \ln(1+u) < 0$, and the dark-mode mismatch $\Delta := M_{\mathrm{int}} - m$ drops by one, giving $V_{\mathrm{mc}}(m+1) - V_{\mathrm{mc}}(m) < 0$. Therefore $V_{\mathrm{tot}}$ strictly decreases, contradicting minimality. Hence $m = \min(M_{\mathrm{int}}, K(D))$.
 
-**Step 2 (Geometric regularity).** Theorem 43 guarantees the network admits a smooth $D$-dimensional manifold limit for some integer $D$, but does not specify which.
+**Step 2 (Dimension comparison).** If $K(D) < 24$: by Step 1, $m = K(D)$ and there remain $24 - K(D) > 0$ dark modes with strictly positive mismatch penalty. If $K(D) > 24$: by Step 1, $m = 24$ and all internal modes are saturated, so the benefit cannot increase, but the propagation cost $V_{\mathrm{prop}}(D)$ is strictly increasing in $D$, and there are $K(D) - 24 > 0$ empty channels carrying a positive penalty. In both cases, $D \neq 4$ has strictly higher $V_{\mathrm{tot}}$ than $D = 4$.
 
-**Step 3 (Channel capacity).** At equilibrium (Postulate 4), Theorem Z.9 establishes $M_{phys} = K(D)$.
-
-**Step 4 (PCE optimization).** Theorem Z.10 requires $M_{int} = M_{phys}$, with the equilibrium being the unique global PCE minimum.
-
-**Step 5 (Unique solution).** Combining:
-$$24 = M_{int} = M_{phys} = K(D)$$
-
-Consulting the kissing numbers [Conway & Sloane 1999; Musin 2008]:
-
-| $D$ | $K(D)$ |
-|:---:|:------:|
-| 1 | 2 |
-| 2 | 6 |
-| 3 | 12 |
-| **4** | **24** |
-| 5 | 40 |
-| 6 | 72 |
-| 7 | 126 |
-| 8 | 240 |
-
-The exact value $K(4) = 24$ was established by Musin (2008). For intermediate dimensions, bounds constrain $K(5) \leq 44$, $K(6) \leq 78$, $K(7) \leq 134$ [Conway & Sloane 1999]. Since $K(D)$ increases monotonically with $D$ and we have $K(4) = 24$, $K(8) = 240$, no intermediate dimension can yield exactly 24. The unique solution is $D = 4$. ∎
+**Step 3 (Unique solution).** The kissing numbers $K(1)=2$, $K(2)=6$, $K(3)=12$, $K(4)=24$, $K(5)=40$, ..., $K(8)=240$ show $D = 4$ is the unique integer with $K(D) = 24 = M_{\mathrm{int}}$. At this dimension the mismatch penalty vanishes and $M_{\mathrm{phys}} = 24$. ∎
 
 **Remark Z.11.1: Dimensional Uniqueness from $K_0$.** The derivation chain $K_0 \to d_0 \to a \to M \to D$ produces a consistent solution only for $K_0 = 3$:
 
@@ -1858,26 +1828,36 @@ The state-weighted trace: Since ρ₀ E_{jk} = p_j E_{jk}, summing over ab inter
 
 Ratio: 6/24 = 1/4 = a/d_0. ∎
 
-**Theorem Z.19 (Discrete-Continuous Embedding Factor).** The collective phase coordinate from K_0 discrete qubits embeds into continuous U(1) with geometric factor exactly $1/\sqrt{K_0}$. This result is exact for any finite K_0, derived from finite-dimensional linear algebra with no asymptotic approximations.
+**Theorem Z.19 (Discrete-Continuous Embedding Factor).** The collective phase coordinate from $K_0$ discrete qubits embeds into continuous $U(1)$ with geometric factor exactly $1/\sqrt{K_0}$. This statement concerns the democratic coordinate direction in parameter space; the corresponding unit-QFI generator carries an additional factor $1/2$.
+
 *Proof (QFI Matrix Diagonalization).*
 
-**Step 1 (QFI Matrix).** For the GHZ family |ψ(θ⃗)⟩ = exp(-i Σ_j θ_j Z_j)|GHZ⟩, the QFI matrix is:
-$$F_{ij} = 4\, \mathrm{Cov}_{\mathrm{GHZ}}(Z_i, Z_j) = 4 J_{K_0}$$
-where J_{K_0} is the K_0 × K_0 all-ones matrix.
+**Step 1 (QFI Matrix).** For the GHZ family $|\psi(\vec\theta)\rangle=\exp(-i\sum_j \theta_j Z_j)|\mathrm{GHZ}\rangle$, the QFI matrix is
+$$
+F_{ij}=4\,\mathrm{Cov}_{\mathrm{GHZ}}(Z_i,Z_j)=4J_{K_0},
+$$
+where $J_{K_0}$ is the $K_0\times K_0$ all-ones matrix.
 
-**Step 2 (Democratic Eigenvector).** The all-ones matrix J_{K_0} has eigenvalue K_0 along the democratic direction:
-$$\vec{v} = \frac{1}{\sqrt{K_0}}(1, 1, \ldots, 1)$$
-with eigenvalue λ_dem = K_0 (all other eigenvalues are 0).
+**Step 2 (Democratic Eigenvector).** The democratic direction is
+$$
+\vec v=\frac{1}{\sqrt{K_0}}(1,1,\ldots,1),
+$$
+with eigenvalue $K_0$ for $J_{K_0}$, hence eigenvalue $4K_0$ for $F$.
 
-**Step 3 (QFI Eigenvalue).** The QFI matrix F = 4J_{K_0} has democratic eigenvalue 4K_0.
+**Step 3 (Coordinate embedding factor).** Defining the collective phase coordinate by
+$$
+\phi=\vec v\cdot \vec\theta,
+$$
+shows that the discrete democratic direction enters the continuous coordinate with geometric coefficient exactly $1/\sqrt{K_0}$.
 
-**Step 4 (Normalization Derivation).** If we define the single continuous phase coordinate φ = v⃗ · θ⃗, then the generator that produces a unit-QFI displacement in φ has the exact normalization:
-$$G_{\mathrm{cont}} = \frac{\sum_i Z_i}{\sqrt{K_0}}$$
-up to an overall factor from the pure-state F_Q = 4·Var(H) convention.
+**Step 4 (Unit-QFI generator).** The democratic generator is $G_{\mathrm{disc}}=\sum_i Z_i$. Because the QFI eigenvalue along $\vec v$ is $4K_0$, the generator normalized to unit QFI is
+$$
+G_{\mathrm{unit}}=\frac{1}{2\sqrt{K_0}}\cdot \frac{G_{\mathrm{disc}}}{\sqrt{K_0}}
+=\frac{1}{2K_0}\sum_i Z_i.
+$$
+For $K_0=3$ this gives $G_{\mathrm{unit}}=G_{\mathrm{disc}}/6$, in agreement with Lemma Z.8.
 
-**Step 5 (Exactness).** Because the democratic overlap is computed with the inner product induced by F (or equivalently, g_B), the 1/√K_0 factor is exact at K_0 = 3 from finite linear algebra alone—no appeal to central limit theorem asymptotics is needed.
-
-For K_0 = 3: The QFI matrix is the 3×3 all-ones matrix times 4. Its eigenvalue along (1,1,1)/√3 is exactly 12. The embedding factor is exactly 1/√3. ∎
+**Step 5 (Exactness).** No asymptotic approximation is used: the factor $1/\sqrt{K_0}$ is the exact normalized democratic coordinate, and the extra factor $1/2$ appears only when one passes from that coordinate to a unit-QFI generator. ∎
 
 ### Z.17.6 Effective Normalization
 
@@ -2284,38 +2264,49 @@ $$\sum_{\alpha < \beta} K(e_\alpha, e_\beta) = \frac{S_B}{2} = 384$$
 
 The orbit $Gr(2,8)$ is embedded in the full state space $\mathcal{D}(\mathbb{C}^8)$. The gauge coupling probes not only the intrinsic geometry but also how the orbit bends in the ambient space.
 
-**Theorem Z.24 (Extrinsic Correction Factor).** The effective curvature for the gauge coupling includes an extrinsic contribution:
-
+**Theorem Z.24 (Extrinsic Correction Factor under Democratic Visible-Space Distribution).** Assume that the discrete-continuum mismatch vector $\Delta G$ is isotropically distributed over the visible operator space
 $$
-K_{\mathrm{eff}} = K_{\mathrm{avg}}^{\mathrm{Bures}} \times \frac{M-1}{ad_0}
+\mathcal V:=\operatorname{span}_{\mathbb{C}}\{E_{jm}: j\in A,\, 1\le m\le d_0\},
+$$
+the linear subspace of $\mathrm{End}(\mathbb{C}^{d_0})$ spanned by matrix units with first index in the active block, with respect to the Hilbert-Schmidt structure induced by $\rho_0=\frac{1}{a}I_a\oplus 0_b$. Then the effective curvature entering the gauge-coupling correction is
+$$
+K_{\mathrm{eff}}=K_{\mathrm{avg}}^{\mathrm{Bures}}\times \frac{M-1}{ad_0}.
 $$
 
 *Proof.*
 
-**Step 1 (Visible Operator Space).** The gauge field couples to the system through the state $\rho_0$, which has support only on the active subspace $A$. For an operator $X$, the variance in state $\rho_0$ is:
-$$\text{Var}_{\rho_0}(X) = \mathrm{tr}[\rho_0 X^2] - (\mathrm{tr}[\rho_0 X])^2$$
-For $\rho_0 = I_a/a \oplus 0_b$, direct calculation gives:
-$$\mathrm{tr}[\rho_0 X^2] = \frac{1}{a}\sum_{j \in A}\sum_{m=1}^{d_0} |X_{jm}|^2$$
-This depends only on matrix elements $X_{jm}$ with the first index $j \in A$. The visible operator space $\mathcal{V}$ consists of operators with nonzero variance, spanned by matrix elements with first index in $A$. Its complex dimension is:
-$$\dim_{\mathbb{C}}(\mathcal{V}) = a \times d_0 = 2 \times 8 = 16$$
-This counts the $a^2 = 4$ active-active elements plus the $ab = 12$ active-inactive elements. Note that BA elements (first index in $B$) do not contribute to $\mathrm{tr}[\rho_0 X^2]$ and are therefore not visible to the gauge coupling.
-
-**Step 2 (Democratic Distribution).** The discrete-continuum mismatch vector $\Delta G$, arising from the tension between the $K_0$-qubit structure and the continuous $U(1)$ manifold, is uniformly distributed over the visible operator space $\mathcal{V}$. This follows from the permutation symmetry of the democratic generator $G_{\mathrm{disc}} = Z_1 + Z_2 + Z_3$ under qubit exchange.
-
-**Step 3 (Projection Factor).** For a vector uniformly distributed in a complex vector space of dimension $D_{\mathrm{vis}} = ad_0 = 16$, the expected squared projection onto any single normalized basis direction is $1/D_{\mathrm{vis}}$:
-$$\mathbb{E}[|\langle v | \hat{n} \rangle|^2] = \frac{1}{ad_0} = \frac{1}{16}$$
-
-**Step 4 (Ricci Contraction).** The tangent space $\mathfrak{m} = T_{AB} \oplus T_{BA}$ at $\rho_0$ has real dimension $M = 24$. On the homogeneous Kähler-Einstein space $Gr(a, d_0)$, the Riemann tensor is $H$-invariant under the isotropy group $H = S(U(a) \times U(b))$. For any unit vector $e_1 \in \mathfrak{m}$, the Ricci curvature sums the sectional curvatures over the $M - 1 = 23$ orthogonal directions:
-$$\mathrm{Ric}(e_1, e_1) = \sum_{\beta > 1} K(e_1, e_\beta) = (M-1) K_{\mathrm{avg}}^{\mathrm{Bures}} = 23 \times \frac{32}{23} = 32$$
-
-**Step 5 (Effective Curvature).** The effective curvature $K_{\mathrm{eff}}$ is the Ricci scalar seen by the gauge field, obtained by multiplying the intrinsic Ricci curvature by the projection factor:
-$$K_{\mathrm{eff}} = \mathrm{Ric}(e_1, e_1) \times \frac{1}{ad_0} = 32 \times \frac{1}{16} = 2$$
-
-Equivalently, expressing in terms of the original factors:
+**Step 1 (Visible operator space).** For
 $$
-K_{\mathrm{eff}} = K_{\mathrm{avg}}^{\mathrm{Bures}} \times \frac{M-1}{ad_0} = \frac{32}{23} \times \frac{23}{16} = 2
+\rho_0=\frac{1}{a}I_a\oplus 0_b,
+$$
+one computes
+$$
+\operatorname{tr}[\rho_0 X^2]=\frac{1}{a}\sum_{j\in A}\sum_{m=1}^{d_0}|X_{jm}|^2.
+$$
+Hence $\operatorname{Var}_{\rho_0}(X)$ depends only on the matrix elements with first index in $A$, and any operator supported entirely outside $\mathcal V$ has vanishing variance. The visible operator space $\mathcal V$ is the $ad_0$-dimensional complex linear subspace of operators with support in the active rows, with complex dimension
+$$
+\dim_{\mathbb C}(\mathcal V)=ad_0.
 $$
 
+**Step 2 (Democratic distribution hypothesis).** By assumption, $\Delta G$ is isotropically distributed in $\mathcal V$. Therefore the expected squared projection of $\Delta G$ onto any fixed normalized visible direction is
+$$
+\mathbb E\bigl[|\langle v,\hat n\rangle|^2\bigr]=\frac{1}{ad_0}.
+$$
+
+**Step 3 (Intrinsic curvature contraction).** On the tangent space $\mathfrak m=T_{AB}\oplus T_{BA}$ of real dimension $M$, the isotropy-invariant Ricci contraction gives
+$$
+\operatorname{Ric}(e_1,e_1)=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}.
+$$
+
+**Step 4 (Effective curvature).** Multiplying the intrinsic Ricci contraction by the visible-space projection factor yields
+$$
+K_{\mathrm{eff}}=(M-1)K_{\mathrm{avg}}^{\mathrm{Bures}}\cdot \frac{1}{ad_0}
+=K_{\mathrm{avg}}^{\mathrm{Bures}}\times \frac{M-1}{ad_0}.
+$$
+For $a=2$, $d_0=8$, $M=24$, and $K_{\mathrm{avg}}^{\mathrm{Bures}}=32/23$, this gives
+$$
+K_{\mathrm{eff}}=\frac{32}{23}\cdot \frac{23}{16}=2.
+$$
 ∎
 
 **Corollary Z.11 (Effective Curvature).** The effective curvature for the second-order correction is:
@@ -2337,26 +2328,36 @@ The effective curvature depends only on the active kernel dimension. This traces
 
 ### Z.27.6 Second-Order Correction Formula
 
-**Theorem Z.25 (Complete Second-Order Correction).** The second-order correction to the fine-structure constant is:
-$$\Delta^{(2)} = \frac{\pi u^*}{24\sqrt{K_0}}$$
-
-*Proof.* The second-order correction arises from the curvature of the Grassmannian orbit $\mathrm{Gr}(2,8)$ traversed by the $U(1)$ gauge holonomy. While the first-order correction (Theorem Z.17) captures the pointwise discrete-continuum mismatch, the second-order correction captures how this mismatch accumulates around a closed orbit.
-
-**Step 1 (Holonomy origin of $2\pi$).** The minimal closed $U(1)$ orbit on $\mathrm{Gr}(2,8)$ contains a holomorphic $\mathbb{CP}^1$ 2-cycle. With the standard normalization of the Grassmannian Kähler generator (the class generating $H^2(\mathrm{Gr}(k,n),\mathbb{Z})$), the curvature 2-form integrates over the minimal holomorphic curve as:
-$$\oint_{\mathbb{CP}^1} \omega = 2\pi.$$
-This is the canonical integrality normalization: the generator integrates to $2\pi$ over the minimal curve [Griffiths & Harris 1978, Ch. 1.5]. In PU terms, the $2\pi$ is the holonomy accumulated over one complete minimal gauge orbit.
-
-**Step 2 (Factor assembly).** The second-order correction combines: (i) the holonomy factor $2\pi$ from the closed-orbit integration; (ii) the active participation fraction $a/d_0$ (Theorem Z.18); (iii) the discrete-continuum embedding $1/\sqrt{K_0}$ (Theorem Z.19); (iv) the per-mode curvature contribution $K_{\mathrm{eff}}/M$ (Theorem Z.24); and (v) the coupling strength $u^*$ (Theorem Z.7). Their product gives:
-$$\Delta^{(2)} = 2\pi \cdot \frac{a}{d_0} \cdot \frac{1}{\sqrt{K_0}} \cdot \frac{K_{\mathrm{eff}}}{M} \cdot u^*.$$
-
-**Step 3 (Evaluation).** Substituting $a/d_0 = 1/4$, $K_{\mathrm{eff}} = 2$ (Theorem Z.24), $M = 24$:
-$$\Delta^{(2)} = 2\pi \cdot \frac{1}{4} \cdot \frac{1}{\sqrt{K_0}} \cdot \frac{2}{24} \cdot u^* = \frac{\pi u^*}{24\sqrt{K_0}}.$$
-
-With $K_0 = 3$ and $u^* = 2^{1/8} - 1 \approx 0.09051$:
-
+**Theorem Z.25 (Complete Second-Order Correction within the Holonomy Model).** Under the holonomy normalization of the minimal $\mathbb{CP}^1$ orbit and the democratic-distribution hypothesis of Theorem Z.24, the second-order correction to the fine-structure constant is
 $$
-\Delta^{(2)} = \frac{\pi \times 0.09051}{24\sqrt{3}} \approx 0.00684.
+\Delta^{(2)}=\frac{\pi u^*}{24\sqrt{K_0}}.
 $$
+
+*Proof.* In the closed-orbit holonomy model, one circuit of the minimal $U(1)$ orbit contributes the geometric holonomy factor
+$$
+\oint_{\mathbb{CP}^1}\omega=2\pi.
+$$
+The correction is then modeled as the product of:
+1. the holonomy factor $2\pi$;
+2. the active participation fraction $a/d_0$ from Theorem Z.18;
+3. the democratic embedding factor $1/\sqrt{K_0}$ from Theorem Z.19;
+4. the effective per-mode curvature $K_{\mathrm{eff}}/M$ from Theorem Z.24;
+5. the coupling strength $u^*$ from Theorem Z.7.
+
+Therefore
+$$
+\Delta^{(2)}=2\pi\cdot \frac{a}{d_0}\cdot \frac{1}{\sqrt{K_0}}\cdot \frac{K_{\mathrm{eff}}}{M}\cdot u^*.
+$$
+With $a/d_0=1/4$, $K_{\mathrm{eff}}=2$, and $M=24$, this becomes
+$$
+\Delta^{(2)}=2\pi\cdot \frac14\cdot \frac{1}{\sqrt{K_0}}\cdot \frac{2}{24}\cdot u^*
+=\frac{\pi u^*}{24\sqrt{K_0}}.
+$$
+For $K_0=3$ and $u^*=2^{1/8}-1\approx 0.0905077327$,
+$$
+\Delta^{(2)}\approx \frac{\pi(0.0905077327)}{24\sqrt3}\approx 0.00684012.
+$$
+∎
 
 
 

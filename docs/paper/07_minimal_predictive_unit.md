@@ -397,11 +397,9 @@ The thermodynamic cost $\varepsilon \ge \ln 2$ has immediate information-theoret
 
 The MPU state space has dimension $d_0 = 8$ (Theorem 23), corresponding to $K_0 = 3$ bits of complexity (Theorem 15). This yields $\ln d_0 = \ln 8 = 3\ln 2$ nats of maximum information capacity per MPU.
 
-**Lemma E.1 (Strict Contractivity).** *The averaged dynamical channel $\mathcal{E}_N$ implementing the 'Evolve' process (Definition 27) is strictly contractive in trace distance:*
-
+**Imported result (Lemma E.1, Strict Contractivity).** The averaged dynamical channel $\mathcal{E}_N$ implementing the 'Evolve' process (Definition 27) is strictly contractive in trace distance:
 $$D_{tr}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \leq f_{RID} \cdot D_{tr}(\rho_1, \rho_2)$$
-
-*where the contractivity factor satisfies $f_{RID} < 1$.*
+with contractivity factor $f_{RID} < 1$.
 
 Lemma E.1 provides the structural origin of strict contraction: the averaged ND-RID channel contains a nonzero input-independent refresh component,
 $$
@@ -442,9 +440,9 @@ a=2
 $$
 (Theorem Z.1).
 
-**Theorem Z.1 (Landauer Pointer).** The dimension $a$ of the active kernel satisfies:
+**Imported result (Theorem Z.1, Landauer Pointer).** The dimension $a$ of the active kernel satisfies
+$$a = 2.$$
 
-$$a = 2$$
 
 The PCE-Attractor density operator (Appendix Z, Section Z.2.5) takes the form:
 
@@ -477,15 +475,11 @@ Both trace to the same source: the SPAP logical entropy $\varepsilon_{SPAP}=\ln 
 
 The ND-RID interaction channels implementing the 'Evolve' process across MPU boundaries have bounded capacity $C_{\max} < \ln d_0$ (Theorem E.2). When many such channels cross a macroscopic boundary, their cumulative capacity determines the total information that can be processed across that boundary.
 
-**Theorem E.3 (Channel Counting).** *Given geometric regularity (Theorem 43—which is itself a necessary consequence of POP/PCE optimization, proven in Appendices C and D), the number of effective independent channels crossing a codimension-1 boundary of area $\mathcal{A}$ scales as:*
-
+**Imported result (Theorem E.3, Channel Counting).** Given geometric regularity (Theorem 43, with necessity proved in Appendices C and D), the number of effective independent channels crossing a codimension-1 boundary of area $\mathcal{A}$ scales as
 $$N_{eff} = \sigma_{link} \cdot \mathcal{A}$$
-
-*where the channel density is:*
-
-$$\sigma_{link} = \frac{\chi}{\eta \delta^2}$$
-
-*Here $\delta$ is the mean MPU spacing in the emergent geometry, $\eta$ is a geometric inefficiency factor ($\eta\ge 1$) encoding packing/orientation losses in the geometric channel count, and $\chi \leq 1$ accounts for inter-channel correlations that reduce effective independence. For any viable MPU network configuration, Theorem 43 holds necessarily (Theorem C.6), so this channel counting applies universally to physical configurations.*
+where
+$$\sigma_{link} = \frac{\chi}{\eta \delta^2}.$$
+Here $\delta$ is the mean MPU spacing, $\eta \ge 1$ is the geometric inefficiency factor, and $\chi \le 1$ accounts for inter-channel correlations that reduce effective independence.
 
 The total information capacity across the boundary is:
 
@@ -493,7 +487,7 @@ $$I_{boundary} = N_{eff} \times C_{\max} = \sigma_{link} \cdot C_{\max} \cdot \m
 
 This is an area law: boundary information scales with area, not volume.
 
-**Theorem E.5 (Thermodynamic Consistency).** *Given an entropy–area proportionality $\delta S=\eta\,\delta\mathcal{A}$ for local horizons, Clausius consistency implies Einstein dynamics with coupling $G=1/(4\eta)$ (Jacobson-style argument). In PU, $\eta$ is supplied operationally by boundary-channel counting, and $G$ is then defined by $1/(4G)=\eta$ (Theorem E.5 in Appendix E).*
+**Imported result (Theorem E.5, Thermodynamic Consistency).** Given an entropy–area proportionality $\delta S=\eta\,\delta\mathcal{A}$ for local horizons, Clausius consistency implies Einstein dynamics with coupling $G=1/(4\eta)$; in PU, $\eta$ is supplied operationally by boundary-channel counting, and $G$ is then defined by $1/(4G)=\eta$.
 
 The derivation uses kinematic results from quantum field theory on curved spacetime:
 

@@ -23,7 +23,7 @@ These foundations are complementary, not redundant. The logical foundation estab
 
 **Definition 23 (MPU):** Fundamental unit operating at complexity $C_{\text{op}} \geq K_0 \equiv B_3$ (Theorem 15, Corollary 3). MPUs possess Hilbert space $\mathcal{H}_0$ with $\dim(\mathcal{H}_0) \geq 8$ (Theorem 23) and operate via dual dynamics: Internal Prediction ($P_{\text{int}}$, Definition 26) and 'Evolve'/ND-RID interaction (Definition 27).
 
-**Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon \geq \ln 2$, Theorem 31) and contractive: when the ND-RID update contains a nonzero input-independent refresh component, Lemma E.1 gives $f_{\text{RID}}<1$.
+**Recall of Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon \geq \ln 2$, Theorem 31) and contractive: when the ND-RID update contains a nonzero input-independent refresh component, Lemma E.1 gives $f_{\text{RID}}<1$.
 
 ### A.0.2 Foundation I: Logical Necessity from Predictive Structure
 
@@ -224,14 +224,14 @@ V_{\text{tot}}(p_{\text{err}}) := V_{\text{rel}}(p_{\text{err}}) + V_{\text{err}
 $$
 defined on $(0, p_{\text{err},0}]$.
 
-**Theorem A.0.5 (Existence & Uniqueness of Optimal Error Rate)**
-There exists a unique value $p_{\text{err}}^* \in (0, p_{\text{err},0}]$ minimizing $V_{\text{tot}}(p_{\text{err}})$.
+**Theorem A.0.5 (Existence of an Optimal Error Rate; Uniqueness under Dominant Cost Convexity)**
+There exists at least one value $p_{\text{err}}^* \in (0, p_{\text{err},0}]$ minimizing $V_{\text{tot}}(p_{\text{err}})$. If, in addition, the **Assumption of Dominant Cost Convexity** holds, then this minimizer is unique.
 
 *Proof.*
 *   **Continuity:** Both $V_{\text{rel}}$ and $V_{\text{err}}$ are continuous on $(0, p_{\text{err},0}]$ and $C^1$ on any closed subinterval $[\epsilon, p_{\text{err},0}]$ with $\epsilon>0$, under standard assumptions for $R(C)$ and $PP(C)$.
 *   **Blow-up at $p_{\text{err}}\to 0^+$:** By Proposition A.0.4, $C_{\text{err}}(p_{\text{err}})=A\ln(p_{\text{err},0}/p_{\text{err}})\to\infty$ as $p_{\text{err}}\to 0^+$. By Definition 3a, $R(C)$ is unbounded as $C\to\infty$ (with $\gamma_p>1$), hence $V_{\text{rel}}(p_{\text{err}})=\lambda R(C_{\text{err}}(p_{\text{err}}))\to\infty$. Meanwhile $V_{\text{err}}(p_{\text{err}})\ge 0$ and remains bounded because $PP(C)$ is bounded on $[0, C_{\text{alloc}}]$ (Definition 7). Therefore $\lim_{p_{\text{err}}\to 0^+} V_{\text{tot}}(p_{\text{err}})=\infty$.
 *   **Existence:** Since $V_{\text{tot}}(p_{\text{err},0})$ is finite and $V_{\text{tot}}(p_{\text{err}})\to\infty$ as $p_{\text{err}}\to 0^+$, there exists $\epsilon>0$ such that $V_{\text{tot}}(p_{\text{err}})>V_{\text{tot}}(p_{\text{err},0})$ for all $p_{\text{err}}\in(0,\epsilon]$. Restricting to the compact interval $[\epsilon, p_{\text{err},0}]$, Weierstrass' theorem implies $V_{\text{tot}}$ attains a minimum at some $p_{\text{err}}^*\in[\epsilon,p_{\text{err},0}]\subset(0,p_{\text{err},0}]$. If $p_{\text{err}}^*<p_{\text{err},0}$, then by differentiability on $(0,p_{\text{err},0})$ it satisfies the first-order condition $V_{\text{tot}}'(p_{\text{err}}^*)=0$.
-*   **Uniqueness:** The second derivative is $V_{\text{tot}}''(p) = V_{\text{rel}}''(p) + V_{\text{err}}''(p)$. For $V_{\text{rel}}$:
+*   **Uniqueness under Dominant Cost Convexity:** The second derivative is $V_{\text{tot}}''(p) = V_{\text{rel}}''(p) + V_{\text{err}}''(p)$. For $V_{\text{rel}}$:
     $$
     V_{\text{rel}}''(p) = \lambda [R''(C_{\text{err}}) (-A/p)^2 + R'(C_{\text{err}}) (A/p^2)] > 0
     $$
@@ -245,7 +245,7 @@ p_{\text{err}}^* \approx \frac{\lambda r_p(T_{\text{eff}})\, \gamma_p A^{\gamma_
 $$
 Thus, up to the slowly varying logarithmic factor, $p_{\text{err}}^* = \Theta((\ln T)^{\gamma_p-1}/T)$ as $T\to\infty$, and hence $p_{\text{err}}^* < 1/2$ for sufficiently large $T$. □
 
-**Conclusion of Theorem A.0.2:** Under QEC Compatibility and Dominant Cost Convexity assumptions, PCE optimization necessarily drives the scalar error-rate parameter to the unique optimal value $p_{\text{err}}^* > 0$ (strictly positive due to Theorem A.0.3) yet satisfying robustness conditions ($p_{\text{err}}^* < 1/2$ for sufficient $T$). While uniqueness of the full network equilibrium in high-dimensional configuration space is not established here, the concentration near the optimal error rate under the global convergence dynamics (Theorem D.5) enables reliable execution of SPAP and RUD logical arguments, constituting Effective Operational Property R. □
+**Conclusion of Theorem A.0.2:** Under QEC Compatibility and Dominant Cost Convexity assumptions, PCE optimization necessarily drives the scalar error-rate parameter to the unique optimal value $p_{\text{err}}^* > 0$ (strictly positive due to Theorem A.0.3) yet satisfying robustness conditions ($p_{\text{err}}^* < 1/2$ for sufficient $T$). While uniqueness of the full network equilibrium in high-dimensional configuration space is not established here, Appendix D provides the corresponding dynamical picture: ergodic stationary averaging for the full stochastic adaptation dynamics, and in low-noise detailed-balance regimes stationary concentration near the low-potential sector containing the optimal error-rate neighborhood. This is sufficient for reliable execution of SPAP and RUD logical arguments, constituting Effective Operational Property R. □
 
 **Epistemic Status:** The derivation relies on:
 1.  **QEC Compatibility:** Strong assumption about underlying MPU physics. Requires: (a) sufficiently local noise, (b) implementable QEC codes, (c) baseline error below fault-tolerance threshold. While plausible given the framework's optimization dynamics favoring structures enabling reliable computation, this represents a substantive physical postulate requiring empirical verification.
@@ -266,23 +266,30 @@ This exponential growth provides resources for representing complex computations
 
 **Assumptions for Theorem A.0.6:** The following assumes QEC Compatibility as introduced in Theorem A.0.2 (sufficiently local baseline ND-RID noise, implementable quantum error correction codes within the MPU network, baseline error $p_{\text{err},0}$ below fault-tolerance threshold $p_{\text{th}}$), a universal gate set implementable via ND-RID channels (ensuring any unitary can be approximated via Solovay-Kitaev decomposition), and fault-tolerance threshold conditions enabling arbitrarily low logical error rates with polynomial overhead.
 
-**Theorem A.0.6 (Network Universality)**
-A network of $n$ MPUs, operating with error rate $p_{\text{err}}^*$ satisfying robustness conditions, achieves full Property R:
-1.  **Representation:** For any Turing machine with $k$ states and $m$ tape symbols, a standard Gödel encoding of the transition table requires $L_{TM} = O(k \cdot m \cdot \log(k \cdot m))$ bits. A network of $n \geq \lceil L_{TM}/3 \rceil = O(k \cdot m \cdot \log(k \cdot m))$ MPUs (each providing 3 bits via $K_0$) provides adequate state space for encoding the machine description. This bound represents the description storage requirement alone, ignoring QEC redundancy and working memory overhead.
-2.  **Simulation/Reason:** By the Solovay–Kitaev theorem [Kitaev 1997; Dawson & Nielsen 2006]
- and QEC Compatibility, the network can implement arbitrary quantum unitaries to arbitrary precision with polynomial overhead. Since quantum computers efficiently simulate classical computation, the network can simulate any Turing machine.
-3.  **Evaluate Predicates:** Fault-tolerance ($p_{\text{err},0} < p_{\text{th}}$ under QEC Compatibility) ensures logical error rates can be suppressed to arbitrarily small values with polynomial overhead, enabling reliable execution of arbitrarily deep circuits for evaluating computable predicates.
+**Theorem A.0.6 (Conditional Network Universality with Explicit Overhead Scope)**
+A network of $n$ MPUs, operating with error rate $p_{\text{err}}^*$ satisfying robustness conditions and with sufficient additional resources for working memory, error-correction overhead, and circuit execution, can realize full Property R. More precisely:
+1.  **Representation:** For any Turing machine with $k$ states and $m$ tape symbols, a standard Gödel encoding of the transition table requires $L_{TM} = O(k \cdot m \cdot \log(k \cdot m))$ bits. A network of
+    $$
+    n \geq \left\lceil \frac{L_{TM}}{3} \right\rceil = O(k \cdot m \cdot \log(k \cdot m))
+    $$
+    MPUs (each providing 3 bits via $K_0$) provides the lower bound required to encode the machine description. This bound covers description storage only.
+2.  **Simulation/Reason:** By the Solovay–Kitaev theorem [Kitaev 1997; Dawson & Nielsen 2006] and QEC Compatibility, the network can implement arbitrary quantum unitaries to arbitrary precision with polynomial overhead. Since quantum computers efficiently simulate classical computation, the network can simulate any Turing machine once the required overhead resources are available.
+3.  **Evaluate Predicates:** Fault-tolerance ($p_{\text{err},0} < p_{\text{th}}$ under QEC Compatibility) ensures logical error rates can be suppressed to arbitrarily small values with polynomial overhead, enabling reliable execution of arbitrarily deep circuits for evaluating computable predicates when the corresponding working-memory and code-overhead requirements are met.
 
-*Proof.* Representation capacity follows from exponential state space growth. The Gödel encoding of a $k$-state, $m$-symbol Turing machine transition table requires specifying for each of $k \cdot m$ pairs (state, symbol) the write symbol, move direction, and next state, requiring $O(k \cdot m \cdot \log(k \cdot m))$ bits total. With each MPU contributing 3 bits ($K_0$), the network requires $n = O(k \cdot m \cdot \log(k \cdot m))$ MPUs. Simulation capability follows from Solovay-Kitaev theorem guaranteeing any unitary approximation with polynomial gate overhead, combined with classical-to-quantum simulation. Evaluation reliability follows from fault-tolerance threshold theorem enabling arbitrarily low logical error rates below physical threshold. □
+*Proof.* Representation capacity follows from exponential state space growth. The Gödel encoding of a $k$-state, $m$-symbol Turing machine transition table requires specifying for each of $k \cdot m$ pairs (state, symbol) the write symbol, move direction, and next state, requiring $O(k \cdot m \cdot \log(k \cdot m))$ bits total. With each MPU contributing 3 bits ($K_0$), the network requires $n = O(k \cdot m \cdot \log(k \cdot m))$ MPUs as a lower bound for machine-description storage. Simulation capability follows from the Solovay-Kitaev theorem guaranteeing any unitary approximation with polynomial gate overhead, combined with classical-to-quantum simulation. Evaluation reliability follows from the fault-tolerance threshold theorem enabling arbitrarily low logical error rates below physical threshold. Full operational universality therefore holds only when the additional working-memory, QEC, and circuit-execution resources assumed in the theorem statement are also provided. □
 
 **Corollary A.0.3 (Resource Requirements for SPAP/RUD)**
 The SPAP diagonalization (Theorems A.1.1, A.1.3) requires:
-*   Representing predictor's Gödel number: $O(k \cdot m \cdot \log(k \cdot m))$ bits for predictor with $k$ states and $m$ symbols
-*   Simulating predictor's prediction: Circuit depth $O(\text{poly}(k))$
+*   Representing predictor's Gödel number: $O(k \cdot m \cdot \log(k \cdot m))$ bits for a predictor with $k$ states and $m$ symbols
+*   Simulating predictor's prediction: Circuit depth $O(\mathrm{poly}(k))$
 *   Implementing NOT operation: Single gate
 *   Verification: Comparison operation, constant depth
 
-For SPAP logic with minimal self-reference (small $k$, $m$), $n \sim O(10^2)$ MPUs may suffice for basic representation. More complex predictors with $k$ states and $m$ symbols require $n = O(k \cdot m \cdot \log(k \cdot m))$ MPUs for representation alone. Additional MPUs are needed for working memory, error correction (QEC overhead), and circuit depth. Complex self-referential computations (RUD arguments, Theorems A.2.3-A.2.4) typically require $n \sim O(10^3 - 10^6)$ MPUs depending on predictor complexity and target reliability.
+Thus the representation lower bound is
+$$
+n = O(k \cdot m \cdot \log(k \cdot m))
+$$
+MPUs for description storage alone. The total MPU requirement additionally depends on working memory, error-correction overhead, and the required circuit depth. No universal numeric MPU count follows from the present derivation without a separate model for those overhead terms.
 
 **Definition A.0.6 (Effective Operational Property R - Refined)**
 The MPU network possesses Effective Operational Property R when:
@@ -430,9 +437,24 @@ $$
 f(n) = G(n, \dots, \text{ProofSearch}_{\le g_i(n)}[\phi_i(\dots, e, \dots)], \dots)
 \quad (\text{Appendix A.1.6, Theorem A.1.5; cf.\ main-text Equation~(9)})
 $$
- This existence is guaranteed by Kleene's Second Recursion Theorem, a fundamental result in computability theory.
 
-*Proof Reference:* A self-contained proof is given in Theorem A.4.1a (Section A.4.1). Applying the theorem to the program transformer implicit in the right-hand side yields the fixed-point index $e$ required here. Standard references include [Mendelson 2015; Kleene 1952].
+*Proof:* Define the operator
+$$
+\Psi(\alpha,n):=
+G\bigl(n,\dots,\text{ProofSearch}_{\le g_i(n)}[\phi_i(\dots,\alpha,\dots)],\dots\bigr).
+$$
+Each bounded proof search is total computable: for fixed $n$, the bound $g_i(n)$ is computable, only finitely many candidate proof codes of length at most $g_i(n)$ must be checked, and proof verification in the underlying formal system is decidable. The substitution map inserting the parameter $\alpha$ into the Gödel-coded formula $\phi_i$ is computable. Because $G$ is total computable and only finitely many bounded proof-search terms appear, the operator $\Psi$ is total computable.
+
+By Kleene's Second Recursion Theorem (Theorem A.4.1a; Kleene 1952), there exists an index $\beta$ such that
+$$
+\varphi_\beta(n)=\Psi(\beta,n)\qquad\text{for all }n\in\mathbb{N}.
+$$
+Set $f:=\varphi_\beta$ and $e:=\beta$. Then
+$$
+f(n)=
+G\bigl(n,\dots,\text{ProofSearch}_{\le g_i(n)}[\phi_i(\dots,e,\dots)],\dots\bigr),
+$$
+which is exactly the required self-referential fixed-point equation. Since $\Psi$ is total computable, $f$ is total and computable. ∎
 
 *Significance:* Theorem A.1.5 guarantees the existence of computable processes that can refer to and depend on provable properties about themselves within bounded resources. This provides the formal basis for constructing systems like $S_{diag}$ and $S'_{diag}$ used in the SPAP proofs (Theorems A.1.1, A.1.3), demonstrating that such self-referential conditional logic is mathematically sound and constructible within computationally rich frameworks like those enabled by Effective Operational Property R.
 
@@ -540,7 +562,7 @@ The LITE construction leverages standard tools from mathematical logic:
 *   **Gödel Coding:** A bijection $⟨·⟩: \Sigma^* \to \mathbb{N}$ assigns unique natural number codes to syntactic expressions in PA, denoted $⌈\psi⌉$ for a formula $\psi$.
 *   **Provability Predicate:** The primitive recursive relation $Prf(p, c)$ asserts that $p$ is the Gödel code of a PA proof for the formula with Gödel code $c$ [Mendelson 2015; Kleene 1952].
 *   **Bounded Proof Search Predicate:** For a total computable function $g: \mathbb{N} \to \mathbb{N}$ and a formula $\psi$, $Prf_{\le g(n)}(⌈\psi⌉) \equiv \exists p \le g(n) \, Prf(p, ⌈\psi⌉)$ asserts a proof of $\psi$ exists with code $p \le g(n)$. This predicate is decidable for fixed $n, ⌈\psi⌉$.
-*   **Kleene's Second Recursion Theorem:** For any total computable operator $\Psi: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, there exists an index $\beta \in \mathbb{N}$ such that the partial computable function $φ_β$ satisfies $φ_β(n) = \Psi(\beta, n)$ for all $n \in \mathbb{N}$ [Kleene 1952]. This allows a function to consistently refer to its own Gödel code. *Proof sketch:* By the $s$-$m$-$n$ theorem there is a total computable $s$ with $φ_{s(a)}(n)=\Psi(φ_a(a),n)$; letting $\hat{s}$ index $s$ and setting $\beta=s(\hat{s})$ yields $φ_\beta(n)=\Psi(\beta,n)$. A full proof appears as Theorem A.4.1a below.
+*   **Kleene's Second Recursion Theorem:** For any total computable operator $\Psi: \mathbb{N} \times \mathbb{N} \to \mathbb{N}$, there exists an index $\beta \in \mathbb{N}$ such that the partial computable function $φ_β$ satisfies $φ_β(n) = \Psi(\beta, n)$ for all $n \in \mathbb{N}$ [Kleene 1952]. This allows a function to consistently refer to its own Gödel code. A full proof appears as Theorem A.4.1a below.
 
 ### A.4.2 The LITE Function Construction
 
@@ -576,18 +598,24 @@ $$
 Here, $\beta$ is the Gödel code of $f$ itself. The first case is prioritized. If Con(PA) holds, the predicates $Prf_{\le g(n)}(⌈ϕ_{\beta}(n)⌉)$ and $Prf_{\le g(n)}(⌈¬ϕ_{\beta}(n)⌉)$ cannot both hold, so the first two cases are mutually exclusive; regardless, the third branch ensures the definition returns a unique output for every $n$.
 
 **Theorem A.4.1 (Totality and Computability of the LITE Function).**
-Assume Con(PA) and that $g, H_1, H_2$ are total computable functions. Then the LITE function $f$ defined by Equation (A.4.1) via the Recursion Theorem exists, is total, and is computable.
+Assume that $g, H_1, H_2$ are total computable functions. Then the LITE function $f$ defined by Equation (A.4.1) via the Recursion Theorem exists, is total, and is computable.
 
-*Proof Outline:*
-1.  **The Operator $\Psi$ is Total Computable:** The operator $\Psi(\alpha, n)$ which implements the case distinction in Equation (A.4.1) involves:
-    a.  Computing $g(n), H_1(n), H_2(n)$ (computable).
-    b.  Constructing $⌈ϕ_{\alpha}(n)⌉$ and $⌈¬ϕ_{\alpha}(n)⌉$ (computable using $Sub$).
-    c.  Evaluating $Prf_{\le g(n)}(⌈ϕ_{\alpha}(n)⌉)$ and $Prf_{\le g(n)}(⌈¬ϕ_{\alpha}(n)⌉)$ (decidable finite searches).
-    d.  Applying the case logic to output a natural number.
-    Thus, $\Psi(\alpha, n)$ is total computable.
-2.  **Existence of Fixed Point $\beta$:** By Kleene's Second Recursion Theorem, since $\Psi$ is total computable, there exists an index $\beta$ such that $φ_{\beta}(n) = \Psi(\beta, n)$.
-3.  **Totality of $f = φ_{\beta}$:** Since $f(n) = \Psi(\beta, n)$ and $\Psi$ is total, $f(n)$ is defined for all $n \in \mathbb{N}$.
-4.  **Computability of $f$:** By definition, $f = φ_{\beta}$ is a computable function. QED
+*Proof:* Define the operator $\Psi:\mathbb{N}\times\mathbb{N}\to\mathbb{N}$ by
+$$
+\Psi(\alpha,n)=
+\begin{cases}
+n + H_1(n), & \text{if } Prf_{\le g(n)}(⌈ϕ_{\alpha}(n)⌉), \\
+n + H_2(n), & \text{if } \neg Prf_{\le g(n)}(⌈ϕ_{\alpha}(n)⌉) \land Prf_{\le g(n)}(⌈¬ϕ_{\alpha}(n)⌉), \\
+n + 1, & \text{otherwise}.
+\end{cases}
+$$
+Because $g,H_1,H_2$ are total computable, the values $g(n),H_1(n),H_2(n)$ are computable for every $n$. The maps $\alpha\mapsto⌈ϕ_{\alpha}(n)⌉$ and $\alpha\mapsto⌈¬ϕ_{\alpha}(n)⌉$ are computable by the usual primitive-recursive substitution operations on Gödel codes. Each bounded proof predicate $Prf_{\le g(n)}(\cdot)$ is decidable by finite search, because only finitely many candidate proofs of size at most $g(n)$ must be tested and proof verification is computable. Hence $\Psi$ is a total computable operator.
+
+By Theorem A.4.1a (Kleene's Second Recursion Theorem; Kleene 1952), there exists an index $\beta$ such that
+$$
+\phi_\beta(n)=\Psi(\beta,n)\qquad\text{for all }n\in\mathbb{N}.
+$$
+Set $f:=\phi_\beta$. Then $f$ satisfies Equation (A.4.1), so the LITE function exists. Since $\Psi$ is total, $f(n)=\Psi(\beta,n)$ is defined for every $n$, proving totality. Because $f=\phi_\beta$, it is computable. If Con(PA) holds, the first two branches are mutually exclusive, but that consistency assumption is not needed for the three conclusions stated here. ∎
 
 ### A.4.3 LITE's Instantiation of Property R Capabilities
 

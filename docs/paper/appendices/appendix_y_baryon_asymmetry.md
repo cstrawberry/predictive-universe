@@ -25,11 +25,9 @@ $$\xrightarrow{\text{Thm Y.9}} \eta_B = (6.2 \pm 0.5) \times 10^{-10}$$
 
 ### Y.2.1 The NOT Operation and Binary Duality
 
-**Theorem 10** (SPAP — Self-Referential Paradox of Accurate Prediction). *Any non-trivial predictive system $\mathcal{P}$ attempting to predict its own future state $\phi_{t+1}$ while the prediction $p$ is stored internally generates a logical contradiction resolvable only through:*
-
-$$\phi_{t+1} = \text{NOT}(p_{\text{stored}})$$
-
-*This creates a fundamental binary duality in all predictive processes.*
+**Recall from Theorem 10 (SPAP).** Any non-trivial predictive system $\mathcal{P}$ attempting to predict its own future state $\phi_{t+1}$ while the prediction $p$ is stored internally generates a logical contradiction resolved by the update rule
+$$\phi_{t+1} = \text{NOT}(p_{\text{stored}}).$$
+This binary contradiction is the source of the duality structure used below.
 
 The NOT operation on binary states generates two complementary branches:
 - Branch $\mathcal{A}$: prediction was 0 → outcome is 1
@@ -68,10 +66,9 @@ where bars denote the conjugate sector. This state is annihilated by $\mathsf{C}
 
 ### Y.2.2 The 2-to-1 Merge and Branch Selection
 
-**Theorem 31** (Landauer Cost). *Resolution of the SPAP contradiction requires irreversible state merging with minimum entropy cost:*
-$$\varepsilon = \ln 2 \text{ nats}$$
-
-*Proof.* See Appendix J, Theorem J.1. The SPAP update cycle requires a logical mapping that is at least 2-to-1, resulting in unavoidable state merging. By Landauer's principle, this incurs minimum entropy production $k_B \ln 2$. ∎
+**Recall from Theorem 31.** Resolution of the SPAP contradiction requires irreversible state merging with minimum entropy cost
+$$\varepsilon = \ln 2 \text{ nats}.$$
+This Landauer floor is the thermodynamic input used in the branch-selection argument below.
 
 **Corollary Y.1.1** (Irreversible Branch Selection). *At the verification step of each SPAP cycle, the 2-to-1 merge selects one branch of the NOT duality and irreversibly erases the other. This selection determines whether the local predictive outcome manifests as "particle" or "antiparticle."*
 
@@ -104,13 +101,13 @@ Multiplying by $N_g$ gives (Y.1).
 
 ### Y.3.2 C and CP Violation
 
-**Theorem T.56** (CP Phase from Berry Holonomy). *The CP-violating phase in the CKM matrix arises as the Berry holonomy around the minimal flavor-changing loop on the generation manifold $\text{Gr}(2,8)$:*
+**Imported result (Theorem T.56, CP Phase from Berry Holonomy).** The CP-violating phase in the CKM matrix arises as the Berry holonomy around the minimal flavor-changing loop on the generation manifold $\text{Gr}(2,8)$:
 
 $$\delta = \delta_{\text{flat}} \times f_{\text{sinc}} = 70.53° \times 0.9454 = 66.7°$$
 
-*where:*
-- $\delta_{\text{flat}} = 2\arctan(\sqrt{2}/2) = 70.53°$ is the base phase from the up-down sector mismatch in $E_8$ root space
-- $f_{\text{sinc}} = \text{sinc}(1/\sqrt{3}) = 0.9454$ is the coherent averaging factor over the generation wavepacket (Theorem T.55)
+where
+- $\delta_{\text{flat}} = 2\arctan(\sqrt{2}/2) = 70.53°$ is the base phase from the up-down sector mismatch in $E_8$ root space,
+- $f_{\text{sinc}} = \text{sinc}(1/\sqrt{3}) = 0.9454$ is the coherent averaging factor over the generation wavepacket (Theorem T.55).
 
 The CP phase is non-zero because the up and down quark sectors occupy geometrically distinct triads in the $E_8$ root lattice:
 - Down quarks: $(d^2_{32}, d^2_{31}) = (2, 4)$
@@ -463,7 +460,7 @@ where the uncertainty is the conservative truncation bound for the first neglect
 **Step 2 (QED running).** Standard QED running from $q^2 = 0$ to the sphaleron scale $T_{sph} \approx 160$ GeV gives:
 $$\alpha_{em}^{-1}(T_{sph}) \approx 127.5$$
 
-**Step 3 (Weinberg angle).** From Appendix T, Theorem T.14, the PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$. After matching to SM-canonical gauge fields with Bures wavefunction factors $(Z_1, Z_2)$ (Definition T.17a, Theorem T.18), the SM-canonical boundary value at $\mu_G$ is $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2 + 5Z_1) \approx 0.408$. One-loop SM RG running to the sphaleron scale gives:
+**Step 3 (Weinberg angle).** From Appendix T, Theorem T.14, the PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$. For the numerical target tuple of Appendix T, Theorem T.18, namely $(\Delta_1,\Delta_2)=(15.14,20.94)$ and $(Z_1,Z_2)=\left(1+\frac{15.14}{24},\,1+\frac{20.94}{24}\right)$, the SM-canonical boundary value at $\mu_G$ is $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2 + 5Z_1) \approx 0.408$. One-loop SM RG running to the sphaleron scale gives:
 $$\sin^2\theta_W(T_{sph}) \approx 0.234$$
 
 **Step 4 (Combination).** By definition of the Weinberg angle:
@@ -656,28 +653,29 @@ The PU mechanism operates during a different dynamical regime than standard EWBG
 
 ### Y.10.3.1 Statement of Result
 
-**Theorem Y.11** (Hierarchy Unification). *The baryon asymmetry and the electroweak hierarchy are not independent. They satisfy:*
+**Theorem Y.11** (Hierarchy Link with Derived Efficiency Prefactor). *The baryon asymmetry and the electroweak hierarchy are not independent. Their dominant exponential dependence satisfies a square-root relation, with a derived dimensionless prefactor:*
 
-$$\boxed{\eta_B \sim \sqrt{\frac{v}{M_{Pl}}}}$$
+$$\boxed{\eta_B = \mathcal{P}_{\mathrm{eff}}\sqrt{\frac{v}{M_{Pl}}}}$$
 
 *Equivalently:*
 
-$$\boxed{\eta_B^2 \sim \frac{v}{M_{Pl}}}$$
+$$\boxed{\eta_B^2 = \mathcal{P}_{\mathrm{eff}}^2\frac{v}{M_{Pl}}}$$
 
-*Proof.* From Theorem T.5, the electroweak scale satisfies:
-$$\frac{v}{M_{Pl}} \sim e^{-\kappa_{EW}}, \quad \kappa_{EW} = 38.5$$
+*Proof.* From Theorem T.5, the electroweak scale satisfies
+$$\frac{v}{M_{Pl}} \sim e^{-\kappa_{EW}}, \quad \kappa_{EW}=38.5.$$
 
-From Theorem Y.8, the baryogenesis complexity is:
-$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.25 + 0.23 = 19.48$$
+From Theorem Y.8, the baryogenesis complexity is
+$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g}.$$
+Therefore the dominant exponential dependence is
+$$e^{-\kappa_B} \sim e^{-\kappa_{EW}/2} = \sqrt{e^{-\kappa_{EW}}} = \sqrt{\frac{v}{M_{Pl}}}.$$
 
-The dominant contribution is $\kappa_{EW}/2$. Therefore:
-$$\eta_B \sim e^{-\kappa_B} \sim e^{-\kappa_{EW}/2} = \sqrt{e^{-\kappa_{EW}}} = \sqrt{\frac{v}{M_{Pl}}}$$
-
-∎
+The remaining CP, washout, and irreversibility factors are dimensionless and are collected into the prefactor
+$$\mathcal{P}_{\mathrm{eff}} := \mathcal{C}_{eff}\mathcal{F}_{CP}f_{wash}e^{-\varepsilon/N_g}.$$
+Hence the full hierarchy link takes the stated prefactor-weighted square-root form. ∎
 
 ### Y.10.3.2 Numerical Verification
 
-**Proposition Y.11.1** (Numerical Consistency). *The hierarchy unification relation holds quantitatively:*
+**Proposition Y.11.1** (Numerical Consistency). *The leading square-root scaling holds quantitatively once the derived prefactor is included:*
 
 | Quantity | Expression | Value |
 |:---------|:-----------|:-----:|
@@ -735,15 +733,15 @@ Any mechanism that explains $\kappa_{EW}$ automatically constrains $\eta_B$, and
 
 ### Y.10.3.5 Experimental Consequences
 
-**Prediction Y.1** (Sphaleron Saturation). *The geometric CP mechanism predicts that modifies the electroweak scale must produce correlated modifications to the baryon asymmetry:*
+**Prediction Y.1** (Sphaleron Saturation). *The geometric CP mechanism predicts that any deformation that modifies the electroweak scale within the same baryogenesis regime produces correlated modifications to the baryon asymmetry at leading order:*
 
 $$\frac{\delta\eta_B}{\eta_B} \approx \frac{1}{2}\frac{\delta v}{v}$$
 
-*Proof.* From $\eta_B \propto \sqrt{v}$:
-$$\delta\eta_B = \frac{\partial\eta_B}{\partial v}\delta v = \frac{\eta_B}{2v}\delta v$$
+*Proof.* From the leading scaling $\eta_B \propto \sqrt{v}$ at fixed prefactor regime,
+$$\delta\eta_B = \frac{\partial\eta_B}{\partial v}\delta v = \frac{\eta_B}{2v}\delta v.$$
 
 Therefore:
-$$\frac{\delta\eta_B}{\eta_B} = \frac{1}{2}\frac{\delta v}{v}$$
+$$\frac{\delta\eta_B}{\eta_B} = \frac{1}{2}\frac{\delta v}{v}. $$
 
 ∎
 

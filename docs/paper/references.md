@@ -122,8 +122,9 @@
 *   Coleman, S., & Weinberg, E. (1973). Radiative Corrections as the Origin of Spontaneous Symmetry Breaking. *Physical Review D*, *7*(6), 1888–1912. DOI: 10.1103/PhysRevD.7.1888
 *   Coleman, S. (1977). The fate of the false vacuum: Semiclassical theory. *Physical Review D*, *15*(10), 2929–2936; Erratum: *Physical Review D*, *16*, 1248 (1977). DOIs: 10.1103/PhysRevD.15.2929; 10.1103/PhysRevD.16.1248
 *   Coleman, S. (1985). *Aspects of Symmetry: Selected Erice Lectures*. Cambridge University Press. DOI: 10.1017/CBO9780511565045
-*   Conway, J. H. (1969). A characterisation of Leech's lattice. *Inventiones Mathematicae*, *7*(2), 137–142.
-*   Conway, J. H. (1969). A group of order 8,315,553,613,086,720,000. *Bulletin of the London Mathematical Society*, *1*(1), 79–88. DOI: 10.1112/blms/1.1.79
+
+*   Conway, J. H. (1969a). A characterisation of Leech's lattice. *Inventiones Mathematicae*, *7*(2), 137–142.
+*   Conway, J. H. (1969b). A group of order 8,315,553,613,086,720,000. *Bulletin of the London Mathematical Society*, *1*(1), 79–88. DOI: 10.1112/blms/1.1.79
 *   Conway, J. H., & Norton, S. P. (1979). Monstrous Moonshine. *Bulletin of the London Mathematical Society*, *11*, 308–339.
 *   Conway, J. H., & Sloane, N. J. A. (1999). *Sphere Packings, Lattices and Groups* (3rd ed.). Springer-Verlag.
 *   Cook, M. (2004). Universality in elementary cellular automata. *Complex Systems*, *15*(1), 1–40. DOI: 10.25088/ComplexSystems.15.1.1
@@ -459,8 +460,9 @@
 *   Post, E. L. (1921). Introduction to a General Theory of Elementary Propositions. *American Journal of Mathematics*, *43*(3), 163–185. DOI: 10.2307/2370324
 *   Poulin, D. (2010). Lieb–Robinson Bound and Locality for General Markovian Quantum Dynamics. *Physical Review Letters*, *104*(19), 190401. DOI: 10.1103/PhysRevLett.104.190401
 *   Pound, R. V., & Rebka, G. A. (1960). Apparent weight of photons. *Physical Review Letters*, *4*(7), 337–341.
-*   Preskill, J. (1998). *Lecture Notes for Physics 229: Quantum Information and Computation*. California Institute of Technology. 
-*   Preskill, J. (1998). Reliable quantum computers. *Proceedings of the Royal Society of London A*, *454*(1969), 385–410. DOI: 10.1098/rspa.1998.0167
+
+*   Preskill, J. (1998a). *Lecture Notes for Physics 229: Quantum Information and Computation*. California Institute of Technology.
+*   Preskill, J. (1998b). Reliable quantum computers. *Proceedings of the Royal Society of London A*, *454*(1969), 385–410. DOI: 10.1098/rspa.1998.0167
 *   Price, H. (2012). Does time-symmetry imply retrocausality? How the quantum world says "maybe". *Studies in History and Philosophy of Modern Physics*, *43*(2), 75–83. DOI: 10.1016/j.shpsb.2011.12.003
 *   Putnam, H. (1967). Psychological predicates. In W. H. Capitan & D. D. Merrill (Eds.), *Art, Mind, and Religion* (pp. 37–48). University of Pittsburgh Press.
 *   Qureshi, T. (2020). Demystifying the delayed-choice quantum eraser. *European Journal of Physics*, *41*(5), 055403. DOI: 10.1088/1361-6404/ab923e

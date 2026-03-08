@@ -145,7 +145,7 @@ Now take any alternative proposal $\mathfrak{A}_{alt}$:
 $$
 V(x)_{alt}=V(x)_{complex_H}+V_{penalty,struc},
 $$
-with $V_{penalty,struc}>0$ whenever $\mathfrak{A}_{alt}$ is genuinely inequivalent. Under the PCE adaptation dynamics (Appendix D, Equation D.8) and the long-run stochastic behavior characterized in Theorem D.5, configurations with strictly higher potential are disfavored in the low-noise stationary regime, and are outcompeted by those implementing the complex Hilbert-space structure.
+with $V_{penalty,struc}>0$ whenever $\mathfrak{A}_{alt}$ is genuinely inequivalent. Under the PCE adaptation dynamics (Appendix D, Equation D.8), higher-potential configurations are dynamically disfavored; and in the low-noise detailed-balance stationary regimes covered by Theorem D.5, stationary mass concentrates near the lower-potential sector, so inequivalent alternatives with $V_{penalty,struc}>0$ are outcompeted by implementations of the complex Hilbert-space structure.
 
 The examples listed fall into this dichotomy:
 
@@ -609,12 +609,25 @@ The exceptional dimensions listed above do not include $12$. Therefore no simple
 
 **Step 3 (Implication for capacity-saturating gauge algebras).** If a gauge algebra $\mathfrak{g}$ saturates the Lagrangian capacity bound $n_G = 12$ (Theorem G.8.2e), then $\dim \mathfrak{g} = 12$. By Step 2, $\mathfrak{g}$ cannot be simple. Therefore its semisimple part $[\mathfrak{g},\mathfrak{g}]$ must be a direct sum of at least two simple Lie algebras. In particular, any simple unification candidate with $\dim \mathfrak{g} > 12$ (such as $SU(5)$, $SO(10)$, or $E_6$ with dimensions $24$, $45$, and $78$ respectively) is excluded outright by the bound $n_G \leq 12$. ∎
 
-**Theorem G.8.4b (Unique Module Decomposition).**
-Let $\mathfrak{g}$ be a reductive Lie algebra of dimension at most 12 acting faithfully on $\mathcal{B} = \mathbb{C}^6$. If $\mathfrak{g}$ supports chiral fermion representations and anomaly-free matter content, then the unique module decomposition is:
+**Theorem G.8.4b (Unique Module Decomposition in the Capacity-Saturating PCE Regime).**
+Let $\mathfrak{g}$ be a reductive Lie algebra of dimension at most 12 acting faithfully on $\mathcal{B} = \mathbb{C}^6$. Assume:
+1. $\mathfrak{g}$ supports chiral fermion representations;
+2. the matter content is anomaly-free; and
+3. the PCE objective is in the saturation regime of Equation (G.8.5),
+   $$
+   \eta_{\text{ben}}(D) > \lambda_c(D)\alpha_{\text{load}}/C_{\max},
+   $$
+   so that algebras attaining $n_G = 12$ are strictly preferred whenever attainable.
+
+Then the unique module decomposition is
 $$
 \mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1
 $$
-and $\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ with $\dim(\mathfrak{g}) = 12$.
+and
+$$
+\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)
+$$
+with $\dim(\mathfrak{g}) = 12$.
 
 *Proof.*
 
@@ -739,11 +752,120 @@ The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(
 
 **Remark G.8.4d: Complementary Derivation Structure.** Proposition G.M1 identifies the emergent gauged algebra as the decomposition-preserving local unitary symmetry once the internal module split is fixed. Theorem G.8.4b derives the unique PCE-selected module decomposition $\mathcal{B}=\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1$ from capacity, locality, chirality, and anomaly constraints. Together they yield $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ without additional hypotheses.
 
-**Remark G.8.4e: Geometric Interpretation via Attractor Orbit.** The PCE-Attractor orbit is the Grassmannian $\text{Gr}(2,8)$ with isotropy group $K = U(2) \times U(6)$. The tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)$ is irreducible under $K$. By Schur's lemma, any $K$-invariant potential $V_{PCE}$ has scalar Hessian $H = \lambda I$ at the minimum with $\lambda = 3/2$ (Corollary T.41.3). 
+**Theorem G.8.4e (Topological No-Go for a $(1,2,3)$ Reduction of the Universal Quotient Bundle).** Let
+$$
+X=\mathrm{Gr}(2,8),
+\qquad
+0\to S\to \underline{\mathbb C}^8\to Q\to 0
+$$
+be the tautological exact sequence, with $Q$ the universal rank-$6$ quotient bundle. Then $Q$ admits no smooth complex line subbundle. Consequently there is no smooth splitting
+$$
+Q=Q_Y\oplus Q_W\oplus Q_C,
+\qquad
+\operatorname{rk}_{\mathbb C}(Q_Y,Q_W,Q_C)=(1,2,3),
+$$
+and no global section
+$$
+\sigma\in \Gamma\!\left(\mathrm{Fr}(Q)/(U(1)\times U(2)\times U(3))\right).
+$$
 
-The gauge decomposition $\mathbb{C}^6 = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ induces a symmetry-breaking pattern $U(6) \to U(3) \times U(2) \times U(1)$ that splits the tangent space into components:
-$$\text{Hom}(\mathbb{C}^2, \mathbb{C}^6) = \text{Hom}(\mathbb{C}^2, \mathbb{C}^3) \oplus \text{Hom}(\mathbb{C}^2, \mathbb{C}^2) \oplus \text{Hom}(\mathbb{C}^2, \mathbb{C}^1)$$
-with complex dimensions $6 + 4 + 2 = 12$. Realizing multiple distinct Hessian eigenvalues from this structure would require constructing an explicit $V_{PCE}$ that respects the reduced symmetry $U(2) \times U(3) \times U(2) \times U(1)$ but not the full $K$.
+*Proof.* A $(1,2,3)$ reduction would in particular give a complex line subbundle $L\subset Q$. We show that no such $L$ exists.
+
+Fix a line $\ell\subset \mathbb C^8$ and consider the closed submanifold
+$$
+Y:=\{\,W\in \mathrm{Gr}(2,8):\ell\subset W\,\}\cong \mathbb{CP}^6.
+$$
+Let $i:Y\hookrightarrow X$ denote the inclusion. On $Y$, the tautological bundle splits as
+$$
+i^*S\cong \underline{\ell}\oplus \mathcal O_{\mathbb{CP}^6}(-1),
+$$
+so
+$$
+i^*Q\cong \underline{\mathbb C}^7/\mathcal O_{\mathbb{CP}^6}(-1),
+$$
+the universal quotient bundle on $\mathbb{CP}^6$. Writing $h:=c_1(\mathcal O_{\mathbb{CP}^6}(1))$, its total Chern class is
+$$
+c(i^*Q)=\frac{1}{1-h}=1+h+h^2+h^3+h^4+h^5+h^6,
+$$
+hence
+$$
+c_k(i^*Q)=h^k,\qquad k=0,\dots,6.
+$$
+
+Now suppose $L\subset Q$ is a line subbundle. Since $\operatorname{Pic}(X)\cong \mathbb Z$ for the Grassmannian, there is an integer $m$ with
+$$
+L\cong \mathcal O_X(m).
+$$
+Restricting to $Y$ gives
+$$
+i^*L\cong \mathcal O_{\mathbb{CP}^6}(m).
+$$
+The inclusion $i^*L\hookrightarrow i^*Q$ is equivalent to a nowhere-zero section of
+$$
+i^*Q\otimes \mathcal O_{\mathbb{CP}^6}(-m).
+$$
+Therefore its top Chern class must vanish:
+$$
+c_6\!\left(i^*Q\otimes \mathcal O_{\mathbb{CP}^6}(-m)\right)=0.
+$$
+
+For a rank-$6$ bundle $E$ and line bundle $M$ with $c_1(M)=\lambda$, one has
+$$
+c_6(E\otimes M)=\sum_{j=0}^6 c_{6-j}(E)\lambda^j.
+$$
+Here $\lambda=-mh$, so
+$$
+c_6\!\left(i^*Q\otimes \mathcal O_{\mathbb{CP}^6}(-m)\right)
+=
+\sum_{j=0}^6 h^{6-j}(-mh)^j
+=
+\bigl(1-m+m^2-m^3+m^4-m^5+m^6\bigr)h^6.
+$$
+The polynomial
+$$
+f(m):=1-m+m^2-m^3+m^4-m^5+m^6
+$$
+has no integer zero: if $m\neq -1$, then
+$$
+f(m)=\frac{m^7+1}{m+1},
+$$
+so $f(m)=0$ would imply $m^7+1=0$, hence $m=-1$, but $f(-1)=7\neq 0$. Therefore
+$$
+c_6\!\left(i^*Q\otimes \mathcal O_{\mathbb{CP}^6}(-m)\right)\neq 0
+$$
+for every $m\in \mathbb Z$, contradiction. Thus $Q$ has no line subbundle, hence no $(1,2,3)$ splitting. ∎
+
+**Postulate G.8.4e.1 (Minimal Flag Lift for the Quantitative Gauge Sector).** Let
+$$
+\pi:\widetilde X:=\mathrm{Flag}_{1,2,3}(Q)\to X=\mathrm{Gr}(2,8)
+$$
+be the universal flag bundle of the quotient bundle $Q$. On $\widetilde X$, the pulled-back quotient bundle carries the tautological ordered subbundles
+$$
+0\subset \widetilde Q_Y \subset \widetilde Q_Y\oplus \widetilde Q_W \subset \pi^*Q
+$$
+with
+$$
+\operatorname{rk}_{\mathbb C}(\widetilde Q_Y,\widetilde Q_W,\widetilde Q_C)=(1,2,3),
+\qquad
+\pi^*Q\cong \widetilde Q_Y\oplus \widetilde Q_W\oplus \widetilde Q_C.
+$$
+The quantitative gauge-threshold sector is formulated on $\widetilde X$, not on the bare Grassmannian $X$.
+
+**Remark G.8.4e.2 (Scope of the Lift).** Theorem G.8.4b and Corollary G.8.4c remain statements about the abstract inactive fiber $\mathcal B\cong \mathbb C^6$. Theorem G.8.4e shows that this fiberwise $(3,2,1)$ decomposition does not globalize on the bare universal quotient bundle $Q\to \mathrm{Gr}(2,8)$. Postulate G.8.4e.1 is the minimal global extension in which the abstract decomposition can be realized as smooth bundle data. The derivations of $d_0=8$, $a=2$, $M=24$, $D=4$, the first-order fine-structure constant, and the three-generation theorem remain on bare $\mathrm{Gr}(2,8)$; only the quantitative gauge-threshold sector is lifted.
+
+**Remark G.8.4e.3 (Four-Level Obstruction and Resolution Chain — Motivation for the Flag Lift).** Four independent mathematical results collectively forced the reformulation of the gauge-threshold sector from bare $\mathrm{Gr}(2,8)$ to the minimal flag lift:
+
+1. **Pointwise Bures bound.** For any traceless generator $X$ with $\mathrm{Tr}(X^2) = 1/2$ and any rank-2 projector $P$ on $\mathbb{C}^8$, the Bures norm satisfies $\|X^\#\|_B^2(P) = \frac{1}{2}\mathrm{Tr}(BB^\dagger) \leq 1/8$. This bound is pointwise and measure-independent, so any orbit-averaged Bures-norm $Z_i$ satisfies $Z_i \leq 1/8 = 0.125$. The required gauge-matching values $Z_i \approx 1.7$ exceed this bound by a factor of $\sim 14$.
+
+2. **$\mathrm{Ad}(U(8))$-invariance of spectral quadratic forms.** For any $U(8)$-equivariant Laplace-type operator on a $U(8)$-equivariant bundle over $\mathrm{Gr}(2,8)$, the renormalized quadratic form on generators is $\mathrm{Ad}(U(8))$-invariant, hence proportional to $\mathrm{Tr}(Y^2)$ for traceless generators. This forces equal thresholds $\Delta_1 = \Delta_2 = \Delta_3$ for any one-loop computation on the bare homogeneous geometry.
+
+3. **Topological no-go (Theorem G.8.4e).** The universal quotient bundle $Q \to \mathrm{Gr}(2,8)$ admits no complex line subbundle, and therefore no global smooth $(1,2,3)$ splitting. This is a topological obstruction: the top Chern class $c_6(i^*Q \otimes \mathcal{O}(-m)) = f(m) \cdot h^6$ is nonzero for every integer $m$, where $f(m) = 1 - m + m^2 - m^3 + m^4 - m^5 + m^6 > 0$ for all $m \in \mathbb{Z}$.
+
+4. **Nonzero singlet hypercharge from the SU(5) embedding and trace constraint (Remark T.17a.1).** The SU(5)-normalized hypercharge generator $\hat Y$ (Theorem T.9) has eigenvalues $(-2,-2,-2,3,3,0,0,0)/(2\sqrt{15})$ on $\mathbb{C}^8$. The unique $G_{\mathrm{SM}}$-module decomposition $\mathcal{B} = \mathbb{C}^3_C \oplus \mathbb{C}^2_W \oplus \mathbb{C}^1_Y$ (Theorem G.8.4b) identifies the per-component sector charges $y_C = -1/\sqrt{15}$ and $y_W = 3/(2\sqrt{15})$ from the eigenvalue assignment. Tracelessness of $\hat Y$ on $\mathbb{C}^8$ then forces the singlet charge: $3y_C + 2y_W + y_Y = \mathrm{Tr}(\hat Y|_{\mathcal{B}}) = -\mathrm{Tr}(\hat Y|_{\mathcal{A}}) = 2/\sqrt{15}$, and since $3y_C + 2y_W = 0$, this gives $y_Y = 2/\sqrt{15}$. The resulting $U(1)$ Dynkin index $T_1(Y) = 2y_Y^2 = 8/15$ makes the $3 \times 3$ Dynkin matrix $T$ invertible ($\det T = -8/15$). Without this charge, $\Delta_1$ would be rigidly constrained to $\approx 19.93$, incompatible with the target $15.14$.
+
+Obstruction (1) blocks the original Bures-norm-based Definition T.17a. Obstruction (2) blocks the effective-action replacement on bare $\mathrm{Gr}(2,8)$. Obstruction (3) proves that no construction — from the PU axioms or otherwise — can produce the required gauge-sector splitting as subbundles of the bare quotient bundle $Q$. Finding (4) demonstrates that the lifted spectral structure possesses the correct Dynkin index anatomy to accommodate the target threshold tuple, with all charges determined by the embedding rather than by free parameters.
+
+The minimal flag lift $\widetilde X = \mathrm{Flag}_{1,2,3}(Q)$ resolves all three obstructions and supplies the structural prediction (4) simultaneously: on $\widetilde X$, the pulled-back bundle $\pi^*Q$ tautologically splits as $(1,2,3)$, the operator $D^{\mathrm{PCE}}_{\widetilde X}$ is $G_{\mathrm{SM}}$-equivariant but not $U(8)$-equivariant, the spectral threshold shifts $\Delta_i$ are gauge-factor-dependent by construction, and the Dynkin index matrix that governs the decomposition is invertible with all entries determined by the representation theory of the $SU(5)$ embedding.
 
 **Theorem G.8.4f (12-Fold Structural Correspondence).** *The number 12 appears as a structural constant across multiple framework domains:*
 
@@ -991,16 +1113,22 @@ This decomposition is fundamental to the entropy unification program: the total 
 
 Consider two channels $\mathcal{E}_A$ and $\mathcal{E}_B$ with the same fixed point and predictive utility but $\sigma_{irr}^{(A)} < \sigma_{irr}^{(B)}$. Channel $\mathcal{E}_A$ achieves the same predictive outcome at lower cost, so PCE selects $\mathcal{E}_A$. In the limit of PCE optimization, $\sigma_{irr} \to 0$. QED
 
-**Theorem G.1.9.3 (Detailed Balance Characterization).** For a quantum dynamical semigroup with faithful stationary state $\sigma$, the generator $\mathcal{L}$ satisfies $\sigma_{irr}[\rho; e^{t\mathcal{L}}] = 0$ for all states $\rho$ and $t > 0$ if and only if $\mathcal{L}$ satisfies quantum detailed balance with respect to $\sigma$:
-
+**Theorem G.1.9.3 (Detailed Balance Characterization).** For a quantum dynamical semigroup with faithful stationary state $\sigma$, write the GKLS generator in its canonical Hamiltonian–dissipative decomposition
 $$
-\mathrm{tr}(A \cdot \mathcal{L}(B) \cdot \sigma) = \mathrm{tr}(\mathcal{L}^{\dagger_\sigma}(A) \cdot B \cdot \sigma)
+\mathcal{L}=\mathcal{L}_H+\mathcal{L}_D,
+\qquad
+\mathcal{L}_H(\rho):=-i[H,\rho],
+$$
+where $H=H^\dagger$ commutes with $\sigma$ (so $\mathcal{L}_H$ preserves $\sigma$ without entropy production) and $\mathcal{L}_D$ is the purely dissipative (Lindblad) part. Then $\sigma_{irr}[\rho; e^{t\mathcal{L}}] = 0$ for all states $\rho$ and all $t>0$ if and only if the dissipative part satisfies quantum detailed balance with respect to $\sigma$:
+$$
+\mathcal{L}_D=\mathcal{L}_D^{\dagger_\sigma},
+\qquad\text{equivalently}\qquad
+\langle A,\mathcal{L}_D(B)\rangle_\sigma=\langle \mathcal{L}_D(A),B\rangle_\sigma
 \tag{G.1.9.8}
 $$
+for all observables $A,B$, where $\langle A,B\rangle_\sigma:=\mathrm{tr}(A^\dagger B\,\sigma)$ and $\mathcal{L}_D^{\dagger_\sigma}$ is the adjoint of the dissipative part with respect to this inner product [Spohn 1978; Fagnola & Umanità 2007].
 
-where $\mathcal{L}^{\dagger_\sigma}$ is the adjoint with respect to the $\sigma$-weighted inner product $\langle A, B \rangle_\sigma = \mathrm{tr}(A^\dagger B \sigma)$ [Spohn 1978; Fagnola & Umanità 2007].
-
-*Proof.* The equivalence between vanishing irreversible entropy production and quantum detailed balance is a standard result in quantum dynamical semigroups. The condition $\sigma_{irr} = 0$ is equivalent to the channel satisfying the quantum detailed balance condition, which generalizes the classical notion of microscopic reversibility [Kossakowski et al. 1977]. QED
+*Proof.* The semigroup acts on the finite-dimensional operator algebra of the MPU active sector and the stationary state $\sigma$ is faithful by hypothesis, so the detailed-balance characterization theorems of Spohn [1978] and Fagnola & Umanità [2007] apply. The Hamiltonian part $\mathcal{L}_H$ is $\sigma$-skew-adjoint ($\mathcal{L}_H^{\dagger_\sigma}=-\mathcal{L}_H$) and generates unitary evolution that preserves relative entropy; it therefore contributes zero irreversible entropy production regardless of the detailed-balance condition. The irreversible entropy production is governed entirely by the dissipative part $\mathcal{L}_D$. For such semigroups, vanishing irreversible entropy production for all initial states and times is equivalent to the dissipative part being self-adjoint with respect to the $\sigma$-weighted inner product, i.e. $\mathcal{L}_D=\mathcal{L}_D^{\dagger_\sigma}$. This is exactly the stated detailed-balance condition. ∎
 
 **Corollary G.1.9.1 (PCE-Optimal ND-RID Satisfies Detailed Balance).** The PCE-optimal ND-RID channel $\mathcal{E}_N^*$ satisfies quantum detailed balance with respect to the PCE-Attractor state $\tau^*$.
 

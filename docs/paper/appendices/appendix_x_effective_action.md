@@ -31,9 +31,12 @@ $$
 
 defined up to an additive constant. This ensures that $W,\Gamma$ agree with the standard definitions in statistical field theory up to $J$‑independent additive constants, adapted to the PU coarse‑graining context. At vanishing sources $J=0$, stationary configurations $\delta\Gamma/\delta\Phi=0$ are the PU macrostates at the chosen resolution.
 
-**Proposition X.1 (Information geometry and curvature).**
-Let $\mathcal G_{ab}(x,y)=\delta^2 W/\delta J^a(x)\delta J^b(y)$ be the connected two‑point kernel. Then
-
+**Proposition X.1 (Legendre-Dual Response Kernel on the Regular Sector).**
+Let $\mathcal G_{ab}(x,y)=\delta^2 W/\delta J^a(x)\delta J^b(y)$ be the connected two‑point kernel, and restrict to a regular sector on which the source-to-field map
+$$
+\Phi_a(x)=\frac{\delta W}{\delta J^a(x)}
+$$
+is Fréchet differentiable and locally invertible. Then
 $$
 \Gamma^{(2)}_{ab}(x,y):=\frac{\delta^2\Gamma}{\delta\Phi_a(x)\delta\Phi_b(y)}
 \quad\text{satisfies}\quad
@@ -41,7 +44,41 @@ $$
 \tag{X.3}
 $$
 
-Under conditions where the distribution $p_\theta$ forms an exponential family parameterized by sources related to $\theta$, and assuming local asymptotic normality (LAN), the Fisher information metric is related to the connected correlator $\mathcal G_{ab}$. The Hessian of $\Gamma$ (the inverse propagator in QFT language) is the functional inverse of $\mathcal G_{ab}$.
+If, in addition, the family $p_\theta$ is an exponential family parametrised by sources related to $\theta$ and the local asymptotic normality hypotheses hold, then the connected correlator $\mathcal G_{ab}$ agrees with the Fisher information kernel in that asymptotic statistical regime. The Hessian of $\Gamma$ is therefore the inverse response kernel on the same regular sector.
+
+*Proof.* By definition of the Legendre transform,
+$$
+\frac{\delta \Gamma}{\delta \Phi_a(x)}=J^a(x).
+$$
+Differentiate this identity with respect to $\Phi_b(y)$:
+$$
+\frac{\delta^2 \Gamma}{\delta \Phi_a(x)\delta \Phi_b(y)}
+=
+\frac{\delta J^a(x)}{\delta \Phi_b(y)}.
+$$
+Likewise, differentiating $\Phi_a(x)=\delta W/\delta J^a(x)$ with respect to $J^b(y)$ gives
+$$
+\frac{\delta \Phi_a(x)}{\delta J^b(y)}
+=
+\frac{\delta^2 W}{\delta J^a(x)\delta J^b(y)}
+=
+\mathcal G_{ab}(x,y).
+$$
+On the regular sector the Jacobians $\delta\Phi/\delta J$ and $\delta J/\delta \Phi$ are inverse operators, so
+$$
+\int d^dz\,
+\frac{\delta \Phi_a(x)}{\delta J^c(z)}
+\frac{\delta J^c(z)}{\delta \Phi_b(y)}
+=
+\delta_{ab}\delta^{(d)}(x-y).
+$$
+Substituting the two derivative identities yields
+$$
+\int d^dz\,\mathcal G_{ac}(x,z)\,\Gamma^{(2)}_{cb}(z,y)
+=
+\delta_{ab}\delta^{(d)}(x-y),
+$$
+which is (X.3). The Fisher-information statement is asymptotic and holds only under the exponential-family and LAN hypotheses stated above. ∎
 
 
 ## X.2 Wilsonian Coarse‑Graining and Functional RG
@@ -103,7 +140,7 @@ with curvature invariants $\mathcal O_i$ (e.g., $R^2,R_{\mu\nu}R^{\mu\nu},\dots$
 
 $$
 \frac{\delta \Gamma^{\text{grav}}}{\delta g_{\mu\nu}}
-= \frac{\sqrt{-g}}{16\pi G}\,\Big(R^{\mu\nu}-\tfrac12 R g^{\mu\nu}+\Lambda g^{\mu\nu}\Big)
+= -\,\frac{\sqrt{-g}}{16\pi G}\,\Big(R^{\mu\nu}-\tfrac12 R g^{\mu\nu}+\Lambda g^{\mu\nu}\Big)
 = -\,\frac12 \sqrt{-g}\,T^{(MPU)\,\mu\nu}.
 \tag{X.8}
 $$
@@ -154,14 +191,14 @@ M\ln(1+\lambda u)=\ln d_0.
 \tag{X.11}
 $$
 
-At the **PCE-Attractor** (Definition 15a), the system by definition operates at the capacity boundary. This means the constrained minimization of the rate-level potential $\phi(u)$ is equivalent to finding the stationary point of the full effective potential $V_{\rm eff}$ under the capacity constraint (X.11), which can be formalized with a Lagrange multiplier $\zeta$:
+At the **PCE-Attractor** (Definition 15a), the system operates at the capacity boundary. In the homogeneous single-coupling truncation used here—where derivative operators, wavefunction renormalization, and all couplings other than $u$ are held fixed—the constrained minimization of the rate-level potential $\phi(u)$ is modeled by the stationary condition of the truncated effective potential $V_{\rm eff}$ under the capacity constraint (X.11). This can be written with a Lagrange multiplier $\zeta$ as:
 
 $$
  \frac{d}{du}\Big(V_{\rm eff}(u;k)+\zeta\,[M\ln(1+\lambda u)-\ln d_0]\Big)\Big|_{u=u^*}=0.
  \tag{X.12}
  $$
 
-Using this equivalence with $\gamma_{\rm eff}=2$ reproduces the zero‑slack condition employed in Appendix Z and the identities **Sections Z.7-Z.8**.
+Using this truncated equivalence with $\gamma_{\rm eff}=2$ reproduces the zero‑slack condition employed in Appendix Z and the identities **Sections Z.7-Z.8**.
 
 **Theorem X.3 (Predictive Ward Identity and Unity Normalization at the PCE-Attractor).** At the PCE-Attractor (Definition 15a), the bulk normalization is uniquely fixed:
 $\kappa^*_{\mathrm{bulk}}=1.$
@@ -180,11 +217,11 @@ This is determined by an overconstrained system: (i) Legendre duality for $(W,\G
 
 3.  In PU, $\mathcal{K}$ is canonically normalized by QFI geometry (Appendix Z, Theorem Z.5) and the attractor coupling $u^*$ is fixed by capacity saturation in those same units (Appendix Z, Theorem Z.7). The usual $U(1)$ field/coupling rescaling that would make $\kappa$ a convention is therefore obstructed, and the proportionality between the physical quadratic gauge kernel and $\mathcal{K}$ is uniquely $\kappa^*_{\mathrm{bulk}}=1$ (Appendix Z, Theorem Z.14).
 
-Hence, at the MPU operational scale $\mu^*$ corresponding to the PCE-Attractor, the canonical Maxwell normalization is recovered. This fixes the bulk normalization $\kappa^*_{\mathrm{bulk}}=1$. The physical Thomson-limit coupling includes the interface correction from discrete-continuous embedding (Section Z.17):
+Hence, at the MPU operational scale $\mu^*$ corresponding to the PCE-Attractor, the canonical Maxwell normalization is recovered. This fixes the bulk normalization $\kappa^*_{\mathrm{bulk}}=1$. The leading Thomson-limit coupling includes the first interface correction from discrete-continuous embedding (Section Z.17):
 $$
-g^2 = u, \qquad \alpha^{-1} = \frac{4\pi\kappa_{\mathrm{eff}}}{u^*} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}}
+g^2 = u, \qquad \alpha^{-1} = \frac{4\pi\kappa_{\mathrm{eff}}}{u^*} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + O((u^*)^2)
 $$
-where $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ and the active fraction is $a/d_0=1/4$.
+where $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ and the active fraction is $a/d_0=1/4$. The next curvature-controlled term is written explicitly in Section X.10.
 
 ## X.7 Computational Pipeline and Renormalization Conditions
 
@@ -330,7 +367,7 @@ In PU, the bulk gauge normalization $\kappa^*_{\mathrm{bulk}}=1$ at the PCE-Attr
 **(ii) Bulk–Boundary Equivalence from Capacity Saturation (Operational Holography).**
 Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43), Appendix E derives an area-law capacity bound from ND-RID contractivity (Lemma E.1 and Theorem E.2), with effective channel count scaling as area (Theorem E.3). At saturation, boundary encoding becomes a PCE minimum (Theorem E.8.3.2).
 
-For bulk and boundary descriptions to be MPU-equivalent (Definition X.9.1), capacity saturation alone is insufficient; one additionally requires a reconstruction map preserving operational distributions. Theorem E.8.2 (Channel-Capacity Holography) establishes that under the conditions of geometric regularity (Theorem 43), area-law entropy scaling (Theorem 49), and ND-RID channel structure (Definition 27), such reconstruction exists without assuming AdS geometry or conformal boundary structure. Under these reconstruction conditions, a bulk geometric description and a boundary channel description are MPU-equivalent for exterior observables; this is the PU form of holographic equivalence [Susskind 1995; Bousso 2002]. The duality arises because capacity saturation together with reconstruction implies both descriptions yield identical outcome distributions for all exterior measurements at the coarse-graining scale $\delta$.
+For bulk and boundary descriptions to be MPU-equivalent (Definition X.9.1), capacity saturation alone is insufficient; one additionally requires a compatible reconstruction map preserving operational distributions. Theorem E.8.2 (Channel-Capacity Holography) establishes that under the conditions of geometric regularity (Theorem 43), area-law entropy scaling (Theorem 49), ND-RID channel structure (Definition 27), and a compatible nested reconstruction family, such reconstruction exists without assuming AdS geometry or conformal boundary structure. Under these reconstruction conditions, a bulk geometric description and a boundary channel description are MPU-equivalent for exterior observables; this is the PU form of holographic equivalence [Susskind 1995; Bousso 2002]. The duality arises because capacity saturation together with reconstruction implies both descriptions yield identical outcome distributions for all exterior measurements at the coarse-graining scale $\delta$.
 
 **(iii) Strong/Weak "Duality" as Scheme/Variable Degeneracy at a Fixed Attractor.**
 PU does not treat the bare coupling as a freely tunable parameter at the attractor: capacity saturation fixes $u$ through (X.11). Explicitly,

@@ -106,10 +106,52 @@ The framework must rigorously demonstrate that the allowed statistical FTL influ
 
 **10.4.1 Theorem 40 (Statistical Detection Limit)**
 
-Detecting the hypothesized statistical FTL influence (Postulate 3) requires analyzing Bob's outcome statistics conditioned on Alice's context $C_A$. Let $p_0(b)$ and $p_1(b)$ denote Bob's marginal probability for some fixed event $b$ under two context conditions of Alice, and define the context-induced effect size $\Delta:=|p_1(b)-p_0(b)|$ (for the symmetric QCP, $\Delta=2|\delta|$). Under the CC-bounded influence mechanism, $\Delta$ is bounded by the operational CC scale (Definition 30; Theorem 36) and therefore remains small when $\alpha_{CC,max}<0.5$. By Hoeffding/Chernoff bounds, to detect $\Delta\ne0$ at significance level $\alpha_{\mathrm{det}}$ it suffices (and for binary tests is necessary up to constants) that
+Detecting the hypothesized statistical FTL influence (Postulate 3) requires analyzing Bob's outcome statistics conditioned on Alice's context $C_A$. Let $p_0(b)$ and $p_1(b)$ denote Bob's marginal probability for some fixed event $b$ under two context conditions of Alice, and define the context-induced effect size $\Delta:=|p_1(b)-p_0(b)|$ (for the symmetric QCP, $\Delta=2|\delta|$). Under the CC-bounded influence mechanism, $\Delta$ is bounded by the operational CC scale (Definition 30; Theorem 36) and therefore remains small when $\alpha_{CC,max}<0.5$. For the direct two-context comparison test with $n$ iid trials collected under each context and decision rule $|\hat p_1-\hat p_0|>\Delta/2$, total sample size $N=2n$ satisfying
 $$
-N \ge \frac{\ln(2/\alpha_{\mathrm{det}})}{2\Delta^2}\quad \text{(62)}
+N \ge \frac{16}{\Delta^2}\ln\!\left(\frac{4}{\alpha_{\mathrm{det}}}\right)\quad \text{(62)}
 $$
+guarantees total decision error at most $\alpha_{\mathrm{det}}$. In particular, detection requires
+$$
+N=\Theta\!\left(\frac{\log(1/\alpha_{\mathrm{det}})}{\Delta^2}\right).
+$$
+
+*Proof:* Under the null hypothesis $H_0:p_1(b)=p_0(b)=p$, a false positive for the threshold test implies
+$$
+|\hat p_1-\hat p_0|>\frac{\Delta}{2}.
+$$
+If both $|\hat p_1-p|<\Delta/4$ and $|\hat p_0-p|<\Delta/4$, then by the triangle inequality
+$$
+|\hat p_1-\hat p_0|\le |\hat p_1-p|+|\hat p_0-p|<\frac{\Delta}{2},
+$$
+so a false positive can occur only if at least one sample mean deviates from its expectation by at least $\Delta/4$. Hoeffding's inequality therefore gives
+$$
+\mathbb{P}_{H_0}(\text{false positive})
+\le 2e^{-2n(\Delta/4)^2}+2e^{-2n(\Delta/4)^2}
+=4e^{-n\Delta^2/8}.
+$$
+
+Under the alternative hypothesis $H_1:|p_1(b)-p_0(b)|=\Delta$, assume without loss of generality that $p_1(b)-p_0(b)=\Delta$. A missed detection for the same threshold test implies
+$$
+|\hat p_1-\hat p_0|\le \frac{\Delta}{2}.
+$$
+If both $|\hat p_1-p_1|<\Delta/4$ and $|\hat p_0-p_0|<\Delta/4$, then
+$$
+\hat p_1-\hat p_0>(p_1-\Delta/4)-(p_0+\Delta/4)=\Delta-\frac{\Delta}{2}=\frac{\Delta}{2},
+$$
+so a missed detection can occur only if at least one sample mean deviates from its expectation by at least $\Delta/4$. Again Hoeffding gives
+$$
+\mathbb{P}_{H_1}(\text{missed detection})\le 4e^{-n\Delta^2/8}.
+$$
+
+Hence the total decision error is bounded by $4e^{-n\Delta^2/8}$. Requiring this to be at most $\alpha_{\mathrm{det}}$ yields
+$$
+n\ge \frac{8}{\Delta^2}\ln\!\left(\frac{4}{\alpha_{\mathrm{det}}}\right),
+$$
+equivalently
+$$
+N=2n\ge \frac{16}{\Delta^2}\ln\!\left(\frac{4}{\alpha_{\mathrm{det}}}\right).
+$$
+The final $\Theta(\log(1/\alpha_{\mathrm{det}})/\Delta^2)$ scaling follows immediately. ∎
 
 **10.4.2 Theorem 41 (No-Paradox Information Rate with Constant)**
 
@@ -136,7 +178,7 @@ The consistency of the framework's stance—allowing potential statistical FTL i
 
 *   Emergent Operator Locality (Microcausality): Appendix F establishes (Corollary F.1) that the algebra of local observables $\mathfrak{A}(\mathcal{O})$ emerging from the MPU network satisfies standard Einstein Causality.
 
-*   **State‑Mediated Statistical Influence:** Within the structure of commuting local observables mandated by emergent Einstein Causality, the potential statistical FTL influence (Postulate 3) is interpreted as arising *solely* from the properties of the globally prepared physical state $\omega_{C_A}$, which is influenced by Alice's local CC context $C_A$ (via the mapping $\mathcal{M}$ and ND-RID dynamics). Bob's local measurement statistics for $B \in \mathfrak{A}(\mathcal{O}_B)$, given by $\omega_{C_A}(B)$, can then depend on Alice's distant context $C_A$ because the shared state $\omega_{C_A}$ carries these potentially non-local correlations (Equation F.4). This dependence on the *state*, rather than direct operator influence, is compatible with the established operator locality (as formalized in Corollary F.1 of Appendix F).
+*   **State‑Mediated Statistical Influence:** Within the structure of commuting local observables mandated by emergent Einstein Causality, the potential statistical FTL influence (Postulate 3) is interpreted as arising *solely* from the properties of the globally prepared physical state $\omega_{C_A}$, which is influenced by Alice's local CC context $C_A$ (via the mapping $\mathcal{M}$ and ND-RID dynamics). The non-local dependence appears in joint expectations such as $\omega_{C_A}(A\otimes B)$ (Equation F.4). Bob's unconditional local statistics are the marginals $\omega_{C_A}(\mathbf{1}_A\otimes B)$, which must remain independent of $C_A$ if operational causality is to hold. The non-local dependence is therefore carried by joint or post-selected statistics, not by Bob's unconditional marginal alone.
 
 *   **Consistency Analysis:** AQFT allows the mathematical coexistence of emergent operator locality (Equation (F.2), Corollary F.1) and potential state‑mediated statistical non‑locality (Equation (F.4)). Compatibility with operational causality (Postulate 2) is rigorously maintained because: (i) The CC effect is bounded ($\text{CC} < 0.5$, Theorem 39), preventing deterministic forcing of outcomes. (ii) More fundamentally, the underlying ND-RID interactions mediating any influence are subject to irreducible irreversibility ($\varepsilon \ge \ln 2$, Theorem 31) and finite information capacity ($f_{RID}<1, C_{\max}<\ln d_0$, Theorem E.2). These limits, analyzed within AQFT in Appendix F (Section F.6), severely constrain the rate and fidelity of any information transfer via this channel (Theorems 40, 41), rendering the construction of paradox-inducing causal loops via deterministic signaling impossible (Theorem 42).
 

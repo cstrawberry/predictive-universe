@@ -86,13 +86,20 @@ Define the decision rule $\varphi:=\mathbf{1}\{\hat p>1/2\}$. Under $p_+=1/2+\de
 $$
 D(P_+\|P_-)\ \ge\ D(\mathrm{Bern}(1-\beta)\|\mathrm{Bern}(\beta)).
 $$
-For $\beta\in(0,1/2)$,
+For $\beta\in(0,1/4]$,
 $$
 D(\mathrm{Bern}(1-\beta)\|\mathrm{Bern}(\beta))
-=(1-2\beta)\log\!\left(\frac{1-\beta}{\beta}\right)
-\ge \log\!\left(\frac{1}{2\beta}\right),
+=(1-2\beta)\log\!\left(\frac{1-\beta}{\beta}\right).
 $$
-since $\frac{1-\beta}{\beta}\ge \frac{1}{2\beta}$ and $1-2\beta\in(0,1)$.
+Since $\beta\le 1/4$, one has $1-2\beta\ge 1/2$ and
+$$
+\frac{1-\beta}{\beta}\ge \frac{3}{4\beta}.
+$$
+Hence
+$$
+D(\mathrm{Bern}(1-\beta)\|\mathrm{Bern}(\beta))
+\ge \frac{1}{2}\log\!\left(\frac{3}{4\beta}\right).
+$$
 
 On the other hand, $P_\pm$ are product measures, so
 $$
@@ -108,13 +115,21 @@ D(\mathrm{Bern}(p_+)\|\mathrm{Bern}(p_-))
 $$
 Combining these bounds yields
 $$
-16N\delta^2\ \ge\ \log\!\left(\frac{1}{2\beta}\right)
+16N\delta^2\ \ge\ \frac{1}{2}\log\!\left(\frac{3}{4\beta}\right)
 \quad\Rightarrow\quad
-N\ \ge\ \frac{1}{16\delta^2}\log\!\left(\frac{1}{2\beta}\right).
+N\ \ge\ \frac{1}{32\delta^2}\log\!\left(\frac{3}{4\beta}\right).
 $$
-Taking the natural self-calibrated confidence choice $\beta=\delta$ (a strategy that claims accuracy $\delta$ but fails with probability much larger than $\delta$ is not operationally meaningful in the SPAP self-referential context, since the failure probability feeds back into the prediction loop) gives $N=\Omega(\log(1/\delta)/\delta^2)$. Finally, each sample acquisition and each internal update is counted as an elementary operation in $\mathrm{Cost}(\cdot;\delta)$, hence $C_{\text{uni}}(\delta)\ge N$, proving (B.5). ∎
+Taking the natural self-calibrated confidence choice $\beta=\delta$ (which lies in $(0,1/4]$ under the standing assumption $\delta\le 1/4$) gives
+$$
+N=\Omega\!\left(\frac{\log(1/\delta)}{\delta^2}\right).
+$$
+Likewise, for a horizon budget $\beta=1/\mathcal{T}$ with $\mathcal{T}\ge 4$, one obtains
+$$
+N=\Omega\!\left(\frac{\log \mathcal{T}}{\delta^2}\right).
+$$
+Finally, each sample acquisition and each internal update is counted as an elementary operation in $\mathrm{Cost}(\cdot;\delta)$, hence $C_{\text{uni}}(\delta)\ge N$, proving (B.5). ∎
 
-This log-enhanced quadratic divergence of the dimensionless unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ (Eq B.5) represents a fundamental information-processing lower bound within the PU framework. This lower bound underlies the divergence of the Predictive Physical Complexity $C_{pred}(\alpha)$ in Theorem 14 of the main text, since any physically realizable predictor must supply at least $C_{\text{uni}}(\delta_{\rm SPAP})$ effective computational resources to sustain performance $\alpha=\alpha_{SPAP}-\delta_{\rm SPAP}$.
+This log-enhanced quadratic divergence of the dimensionless unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ (Eq B.5) represents a fundamental information-processing lower bound within the PU framework. It gives the minimum effective verification/update resources required to sustain performance $\alpha=\alpha_{SPAP}-\delta_{\rm SPAP}$. If the operational complexity notion $C_{pred}(\alpha)$ is taken to lower-bound those effective verification/update resources, then Theorem 14 inherits the same asymptotic lower bound for $C_{pred}(\alpha)$.
 
 ## B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure
 
@@ -186,7 +201,7 @@ $$
 
 Under geometric regularity (Theorem 43), there exists a local chart in which neighbors of $v$ can be indexed as $v\pm e_j$ and a local discrete divergence operator $\nabla_j^{(v)}$ is well-defined. Choose local energy flux operators $\hat{q}_{v,j}$ consistent with the edge currents (e.g. $\hat{q}_{v,j}:=\hat{J}_{v\to v+e_j}$ in that chart). Then (B.11) can be written in the directional form:
 $$
-\frac{d}{dt}\hat{\rho}_v + \sum_{j=1}^3 \nabla_j^{(v)} \hat{q}_{v,j} = 0. \tag{B.11}
+\frac{d}{dt}\hat{\rho}_v + \sum_{j=1}^3 \nabla_j^{(v)} \hat{q}_{v,j} = 0.
 $$
 Define the momentum density by $\hat{\pi}_{v,j} := \hat{q}_{v,j}/c^2$ and define the stress operators $\hat{p}_{v,jk}$ by requiring local momentum conservation:
 $$
@@ -247,7 +262,7 @@ $$
 $$
 Then $\hat{\Theta}^{\mu\nu}_{(MPU)}$ is symmetric and satisfies:
 $$
-\partial_\mu^{(v)}\hat{\Theta}^{\mu\nu}_{(MPU)} = 0. \tag{B.15}
+\partial_\mu^{(v)}\hat{\Theta}^{\mu\nu}_{(MPU)} = 0.
 $$
 
 *Proof:* From the assumed local conservation of total angular momentum and (B.13), expand the divergence:

@@ -1308,7 +1308,7 @@ The framework derives values for several fundamental ratios from first principle
 
 - **The Planck ratio**: $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ from PCE optimization (Appendix Q, Equation Q.18)
 - **The fine-structure constant (Thomson limit)**: $\alpha^{-1} \approx 137.036092 \pm 0.000050$ from capacity saturation and interface corrections (Appendix Z, Theorem Z.26)
-- **The cosmological constant**: $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ with $\kappa=141.5$ derived from the Golay-Steiner structure (Appendix U, Theorem U.16) and $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), giving $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa$ fixed, comparison with observation implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check (Corollary U.15b)
+- **The cosmological constant**: $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa_{\mathrm{ref}}}$ with reference exponent $\kappa_{\mathrm{ref}}=141.5$ supplied by the Appendix U leading-order Golay-Steiner zero-mode count (Theorem U.16) and $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), giving the corresponding reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa_{\mathrm{ref}}$ fixed, comparison with observation implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check (Corollary U.15b)
 
 These derivations represent predictions of the framework in the sense that the functional forms and discrete exponents are fixed by PU; where a one-loop prefactor (e.g., $A_{\text{eff}}$) enters, it is defined by the specified bounce and can be independently computed, while the observed value serves as a consistency check on its expected $O(1)$ magnitude. The fundamental quantities from which all others derive are the logical cost $\varepsilon_{SPAP} = \ln 2$ and the minimal complexity $K_0 = 3$—both determined by the structure of self-referential prediction, with PCE selecting saturation $\varepsilon=\varepsilon_{SPAP}$ at the PCE-Attractor where optimality applies.
 
@@ -2034,7 +2034,7 @@ $$
 $$
 If $V_{gen}(x)<V_{gen}(y)$ then $W(x)>W(y)$ and the ratio grows exponentially with $t$, so selection drives the population toward (local) minima of $V_{gen}$.
 
-Mutations, recombination, and environmental variability provide stochastic exploration of nearby configurations, so the effective trait dynamics is a stochastic descent on $V_{gen}$: variants sample $x+\delta x$ and selection preferentially retains those with lower $V_{gen}$. This is the generational analog of the stochastic PCE adaptation dynamics (Appendix D, Equation D.8), and Theorem D.5 establishes concentration of the long-run stationary measure on the set of global minima when exploration is sufficiently non-degenerate. Hence biological evolution implements PCE optimization at the generational level with the identifications stated. ∎
+Mutations, recombination, and environmental variability provide stochastic exploration of nearby configurations, so the effective trait dynamics is a stochastic descent on $V_{gen}$: variants sample $x+\delta x$ and selection preferentially retains those with lower $V_{gen}$. This is the generational analog of the stochastic PCE adaptation dynamics (Appendix D, Equation D.8): the relevant mathematical statement is ergodic stationary averaging in general and, in low-noise detailed-balance regimes, stationary concentration near the minima of the effective potential. Hence biological evolution implements PCE optimization at the generational level with the identifications stated. ∎
 
 ### P.8.9a.5.2 Resolution of Evolutionary Puzzles
 
@@ -2443,7 +2443,7 @@ The critical distinction:
 
 What emerges at $C_{\mathrm{agg}} > C_{op}$ is not consciousness but consciousness's reflexive capability—the ability to recognize and influence its own predictive processes. This is consciousness becoming aware of itself as the temporal substrate and developing the capability to modulate that substrate.
 
-*Note:* The capability 'emerges' through complexity increase (POP/PCE optimization driving $C_{\mathrm{agg}} > C_{op}$), not temporal learning in the conventional sense. The optimization process (Appendix D, Theorem D.5) is stochastic evolution whose long-run stationary regime concentrates on PCE-minimizing configurations, not experiential acquisition of skill.
+*Note:* The capability 'emerges' through complexity increase (POP/PCE optimization driving $C_{\mathrm{agg}} > C_{op}$), not temporal learning in the conventional sense. The optimization process (Appendix D, Theorem D.5) is stochastic evolution with an ergodic stationary regime and, in its low-noise detailed-balance subcase, stationary concentration near PCE-minimizing configurations, not experiential acquisition of skill.
 
 ### P.11.4 Frequency as the Language of Self-Modulation
 
@@ -2460,7 +2460,7 @@ This modulation represents awareness exercising optimized control over its own o
 - **High frequencies:** Rapid modulation of processing rates creating electromagnetic fields (Appendix O, Definition O.1)
 - **Low frequencies:** Sustained energy density contributions creating gravitational time dilation (Appendix L, Theorem L.3)
 
-These are not metaphors—the actual electromagnetic and gravitational effects (Theorems L.2, L.3) emerge from controlled modulation of temporal processing rates, unified through the temporal wave framework (Appendix O, Theorem O.4).
+These are not metaphors—the actual electromagnetic and gravitational effects (Theorems L.2, L.3) emerge from controlled modulation of temporal processing rates, unified through the temporal wave framework (Appendix O, Remark O.4).
 
 ### P.11.5 The Thermodynamics of Awareness
 
@@ -2653,15 +2653,15 @@ These are not independent features of the world but necessary consequences of an
 
 ## Abstract
 
-This section establishes that the automorphism group of the PCE-optimal vacuum structure is the Monster group $\mathbb{M}$. The derivation proceeds through a chain of necessary implications from the framework's foundational axioms (POP, PCE, PPI) through established mathematical results, with explicit identification of each step's epistemic status.
+This section identifies the Monster group $\mathbb{M}$ as the vacuum symmetry on the Leech/Moonshine branch singled out by the operational criteria developed below. The derivation combines framework-derived branch conditions with established mathematical results, with explicit identification of each step's epistemic status.
 
 **Main Result:**
-$$\text{Aut}(\mathcal{V}_{\text{PCE}}) = \mathbb{M}$$
+$$\text{Aut}(\mathcal{V}_{\text{PCE}}) = \mathbb{M} \quad \text{on the Moonshine branch}$$
 
 **Derivation Chain:**
-$$K_0 = 3 \xrightarrow{\text{Thm 15}} d_0 = 8 \xrightarrow{\text{Thm 31}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Thm P.13.10}} \Lambda_{24} \xrightarrow{\text{Thm P.13.20}} V^\natural \xrightarrow{\text{FLM}} \mathbb{M}$$
+$$K_0 = 3 \xrightarrow{\text{Thm 15}} d_0 = 8 \xrightarrow{\text{Thm 31}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.5}} M = 24 \xrightarrow{\text{Thm P.13.10}} \Lambda_{24} \xrightarrow{\text{Thms P.13.21-P.13.22, P.13.27}} V^\natural \xrightarrow{\text{Thm P.13.29}} \mathbb{M}$$
 
-**Epistemic Note:** Steps 1–6 are derived from framework axioms (POP, PCE, PPI) as established in the referenced theorems. Steps 7–11 apply PCE optimization to select among mathematically classified structures. The final identification $\text{Aut}(V^\natural) = \mathbb{M}$ is an established mathematical theorem [Frenkel, Lepowsky & Meurman 1988].
+**Epistemic Note:** Steps 1–6 are framework-derived. The later steps impose branch criteria and then use established mathematical classification theorems. The final identification $\text{Aut}(V^\natural) = \mathbb{M}$ is an established mathematical theorem [Frenkel, Lepowsky & Meurman 1988].
 
 ---
 
@@ -2957,33 +2957,33 @@ Since the lattice lives in this 24-dimensional mode space, the norm $|v|^2$ is t
 **Step 5 (Chain completion).** Therefore:
 $$\text{PCE-Attractor} \xrightarrow{\text{Thm P.13.5}} g_{\text{QFI}}=\lambda I_{24},\quad \text{vacuum isolation}\implies \text{rootless}\xrightarrow{\text{Thm Z.8c}}\Lambda_{24}.$$
 
-PCE uniquely selects the Leech lattice.
+This identifies the Leech lattice once the even/unimodular/rootless 24-dimensional branch criteria are imposed.
 
-**Epistemic Status:** Step (3) is purely mathematical (Theorem Z.8c). Step (4) is Theorem P.13.5. Step (2) states the vacuum isolation requirement in the framework.
+**Epistemic Status:** The rootless uniqueness step is mathematical (Theorem Z.8c). The framework contribution is the conditional branch criterion that singles out the corresponding lattice class.
 
 ---
 
-### Theorem P.13.10 (PCE Selects the Leech Lattice)
+### Theorem P.13.10 (Leech-Lattice Identification on the Even/Unimodular/Rootless 24D Branch)
 
 **Reference:** Theorem R.4.6 (Appendix R, Section R.4.2.1.4)
 
-PCE uniquely selects the Leech lattice $\Lambda_{24}$ among 24-dimensional lattices.
+Assume the vacuum lattice is required to be even, unimodular, rootless, and 24-dimensional. Then the lattice is uniquely the Leech lattice $\Lambda_{24}$.
 
 *Proof.*
 
-**Step 1 (PCE constraints).** By Selection Principles P.13.7–P.13.9, PCE favors a lattice that is:
-- Even (Selection Principle P.13.7)
-- Unimodular (Selection Principle P.13.8)
-- Rootless (Selection Principle P.13.9)
-- 24-dimensional (from $M = 24$, Theorem P.13.5)
+**Step 1 (Branch criteria).** By Selection Principles P.13.7–P.13.9 together with $M = 24$ (Theorem P.13.5), the branch under consideration requires a lattice that is:
+- Even
+- Unimodular
+- Rootless
+- 24-dimensional
 
 **Step 2 (Niemeier classification).** By the Niemeier classification [Niemeier 1973], exactly 24 even unimodular lattices exist in dimension 24. These are distinguished by their root systems.
 
-**Step 3 (Rootless uniqueness).** Among the 24 Niemeier lattices, exactly one is rootless: the Leech lattice $\Lambda_{24}$ [Leech 1967; Conway 1969]. The remaining 23 lattices all have non-trivial root systems with $|\Phi| \ge 48$ roots and therefore contain vectors with $|v|^2=2$.
+**Step 3 (Rootless uniqueness).** Among the 24 Niemeier lattices, exactly one is rootless: the Leech lattice $\Lambda_{24}$ [Leech 1967; Conway 1969a]. The remaining 23 lattices all have non-trivial root systems with $|\Phi| \ge 48$ roots and therefore contain vectors with $|v|^2=2$.
 
-**Step 4 (Conclusion).** PCE uniquely selects $\Lambda_{24}$. $\square$
+**Step 4 (Conclusion).** Under the stated branch criteria, the lattice is uniquely $\Lambda_{24}$. $\square$
 
-**Epistemic Status:** Framework-derived. PCE determines even, unimodular, rootless constraints; mathematical classification (Niemeier) then uniquely identifies $\Lambda_{24}$.
+**Epistemic Status:** Conditional framework-to-mathematics bridge. The framework supplies the branch criteria; Niemeier classification then identifies $\Lambda_{24}$.
 
 ---
 
@@ -3288,24 +3288,24 @@ $$
 
 ---
 
-### Definition P.13.2 (Precision-Independent Effective Symmetry Cost)
+### Definition P.13.2 (Precision-Independent Effective Operational Symmetry-Family Cost)
 
-For a symmetry group $G$ whose action must be represented by MPUs through a finite-precision control specification at resolution $\delta>0$, let $V_{\text{op}}(G;\delta)$ denote the operational cost required to maintain that representation at precision $\delta$ (Theorem P.13.18). The precision-independent effective symmetry cost is defined by
+For a symmetry group $G$ whose full action family must be represented by MPUs through a finite-precision control specification at resolution $\delta>0$, let $V_{\text{op}}(G;\delta)$ denote the operational cost required to maintain that representation at precision $\delta$ (Theorem P.13.18). The precision-independent effective symmetry cost is defined by
 $$
 V_{eff}^{sym}(G) := \lim_{\delta \to 0} V_{\text{op}}(G;\delta),
 $$
 when the limit exists in $[0,\infty]$.
 
-Operational predictions are expressed in terms of configurations in the support of the low-noise stationary measure (Theorem D.5, Appendix D). When a symmetry action must be instantiated uniformly along the operational refinement $\delta\to 0$, it is compatible with a resolution-independent PU description only if $V_{eff}^{sym}(G) < \infty$; if $V_{eff}^{sym}(G) = \infty$, the action cannot be implemented as an exact symmetry uniformly across refinements (though it may still appear as an effective symmetry at finite $\delta$).
+Operational predictions are expressed in terms of configurations sampled from the relevant stationary regime of the dynamics (Theorem D.5, Appendix D); in low-noise detailed-balance regimes this stationary measure is concentrated near the low-potential sector. When a full symmetry action family must be instantiated uniformly along the operational refinement $\delta\to 0$, it is compatible with a resolution-independent PU description only if $V_{eff}^{sym}(G) < \infty$; if $V_{eff}^{sym}(G) = \infty$, the action family cannot be implemented as an exact uniformly refinable operational symmetry (though it may still appear as an effective symmetry at finite $\delta$).
 
-### Theorem P.13.19 (Continuous Symmetry Penalty)
+### Theorem P.13.19 (Continuous Operational Symmetry-Family Penalty)
 
-For any Lie group $G$ with $\dim(G) > 0$:
+For any Lie group $G$ with $\dim(G) > 0$, if its full action family must be represented uniformly in the refinement limit $\delta\to 0$, then
 $$
-V_{eff}^{sym}(G) = +\infty
+V_{eff}^{sym}(G) = +\infty.
 $$
 
-Thus, any non-trivial continuous Lie group action cannot be maintained as an exact symmetry uniformly in the refinement limit $\delta\to 0$ (though it may still appear as an effective symmetry at finite operational resolution). For discrete (finite) groups:
+Thus, no non-trivial continuous Lie-group action can survive as an exact uniformly refinable operational symmetry family under this criterion (though it may still appear as an effective symmetry at finite operational resolution). For discrete (finite) groups:
 $$
 V_{eff}^{sym}(G_{\text{discrete}}) < \infty
 $$
@@ -3319,7 +3319,7 @@ V_{eff}^{sym}(G) = \lim_{\delta \to 0} \Bigl(c_0 \cdot \dim(G) \cdot \ln(1/\delt
 <\infty & \text{if } \dim(G) = 0.
 \end{cases}
 $$
-For finite groups, symmetry operations are exact (no continuous control precision parameter is required), so $V_{\text{op}}$ remains finite. $\square$
+For finite groups, the action set is finite, so no logarithmically divergent control-family precision parameter is forced and $V_{\text{op}}$ remains finite. $\square$
 
 
 ### Corollary P.13.19a
@@ -3404,9 +3404,9 @@ In the quantum realization, $s$ lifts to a unitary involution $S$ on the corresp
 
 ---
 
-### Theorem P.13.24 (Canonicity Correspondence)
+### Theorem P.13.24 (Conditional Identification of the Canonical Involution)
 
-The canonical $\mathbb{Z}_2$ symmetry arising from the SPAP merge/reset corresponds, in the Leech-lattice vacuum selected by PCE, to the lattice inversion $v\mapsto -v$ (and its canonical lift to the lattice VOA).
+If the SPAP-induced canonical $\mathbb{Z}_2$ on the Leech-lattice branch is required to be realized by the unique nontrivial central involution of $\mathrm{Aut}(\Lambda_{24})$, then that involution is the lattice inversion $v\mapsto -v$ (and the corresponding canonical lift to the lattice VOA).
 
 | Structure                    | Ambient symmetry group              | Canonical $\mathbb{Z}_2$ | Action                     |
 | ---------------------------- | ----------------------------------- | ------------------------ | -------------------------- |
@@ -3417,9 +3417,9 @@ The canonical $\mathbb{Z}_2$ symmetry arising from the SPAP merge/reset correspo
 
 1. Because $r$ has exactly two inputs and one output, the condition $r\circ \pi=r$ leaves only two possibilities: $\pi=e$ and the bit-flip $s$. Thus $\{e,s\}$ is the unique nontrivial order-2 symmetry intrinsic to the irreducible SPAP erasure at $\varepsilon=\ln 2$.
 2. For the Leech lattice, the center of $\mathrm{Aut}(\Lambda_{24})=Co_0$ is $\{\pm 1\}$, so $-1$ is the unique nontrivial central involution and acts by pairing each lattice vector with its inverse $v\mapsto -v$.
-3. The PCE fixed point contains an irreducible binary identification (the SPAP $2\to 1$ erasure). In a lattice realization of the vacuum degrees of freedom, this intrinsic binary identification must be implemented by a canonical order-2 lattice automorphism whose action pairs elements into $\{v,-v\}$ orbits. By uniqueness in (2), this is exactly $v\mapsto -v$, with its canonical lift to the lattice VOA (Theorem P.13.21).
+3. Therefore, once one requires the SPAP binary identification to be realized by a canonical central lattice involution on the Leech branch, the only available choice is $v\mapsto -v$. The lift to the lattice VOA is then the canonical involution of Theorem P.13.21.
 
-Thus the FLM orbifold involution is fixed by the intrinsic binary merge/reset structure at the PCE fixed point. $\square$
+Thus the FLM orbifold involution is identified with the SPAP involution only under this central-realization hypothesis. $\square$
 
 ---
 
@@ -3465,28 +3465,34 @@ The product structure on $V^\natural_2$ (from the VOA structure) makes it the Gr
 
 ## P.13.11 Main Selection Theorem
 
-### Theorem P.13.27 (PCE-Optimal Vacuum VOA)
+### Theorem P.13.27 (Moonshine-Module Identification on the Leech Branch)
 
+Assume:
+1. the Leech-lattice branch of Theorem P.13.10,
+2. the operational exact-symmetry criterion of Definition P.13.2 and Theorem P.13.19, which excludes uniformly refinable positive-dimensional weight-one symmetry families, and
+3. the central-involution branch of Theorem P.13.24.
+
+Then the resulting holomorphic $c = 24$ vacuum VOA is the Moonshine module:
 $$\mathcal{V}_{\text{PCE}} = V^\natural$$
 
 *Proof.*
 
-**Step 1 (Lattice selection).** By Theorem P.13.10, PCE selects the Leech lattice $\Lambda_{24}$.
+**Step 1 (Lattice selection).** By Theorem P.13.10, the branch lattice is $\Lambda_{24}$.
 
 **Step 2 (Lattice VOA).** By Theorem P.13.14, $\Lambda_{24}$ admits a VOA structure $V_{\Lambda_{24}}$ with $c = 24$ and $\dim(V_1) = 24$.
 
-**Step 3 (Precision cost).** By Corollary P.13.19a and Definition P.13.2, the $U(1)^{24}$ symmetry generated by weight-one currents incurs infinite operational cost: $V_{eff}^{sym}(U(1)^{24}) = +\infty$.
+**Step 3 (Operational symmetry criterion).** By Corollary P.13.19a and Definition P.13.2, the $U(1)^{24}$ symmetry generated by weight-one currents is excluded as an exact uniformly refinable operational symmetry family on this branch.
 
-**Step 4 (Canonical orbifold).** The canonical $\mathbb{Z}_2$ structure from the PCE-Attractor (Theorem P.13.23) corresponds to the $(-1)$ involution on $\Lambda_{24}$ (Theorem P.13.24). The lift $\theta$ to the VOA (Theorem P.13.21) eliminates weight-one currents: $\dim((V_{\Lambda_{24}})^\theta_1) = 0$.
+**Step 4 (Canonical orbifold branch).** On the branch of Theorem P.13.24, the canonical $\mathbb{Z}_2$ structure from the PCE-Attractor is identified with the $(-1)$ involution on $\Lambda_{24}$. The lift $\theta$ to the VOA (Theorem P.13.21) eliminates weight-one currents: $\dim((V_{\Lambda_{24}})^\theta_1) = 0$.
 
 **Step 5 (FLM construction).** By Theorem P.13.22, the $\theta$-orbifold of $V_{\Lambda_{24}}$ is the Moonshine module $V^\natural$.
 
 **Step 6 (Uniqueness verification).** By Theorem P.13.16, among holomorphic $c = 24$ VOAs with $\dim(V_1) = 0$ and Griess algebra on $V_2$, exactly one exists: $V^\natural$.
 
-**Step 7 (Conclusion).** PCE uniquely selects:
+**Step 7 (Conclusion).** On this branch,
 $$\mathcal{V}_{\text{PCE}} = V^\natural \quad \square$$
 
-**Epistemic Status:** Framework-derived. PCE determines $\dim(V_1) = 0$ through the precision cost principle; mathematical uniqueness (Theorem P.13.16) and the FLM construction (Theorem P.13.22) then identify $V^\natural$.
+**Epistemic Status:** Conditional framework-to-mathematics identification. The framework fixes the branch criteria; the mathematical uniqueness theorem and the FLM construction then identify $V^\natural$.
 
 ---
 
@@ -3506,7 +3512,7 @@ for some constant $C$, where $j(\tau) = q^{-1} + 744 + 196884q + \cdots$
 
 **Step 3 (Constant term interpretation).** The constant term is $744 + C = \dim(V_1)$. Modular invariance is satisfied for any value of $C$.
 
-**Step 4 (PCE selection).** Among modular-invariant options, PCE selects $C = -744$ (i.e., $\dim(V_1) = 0$) as the unique configuration with finite operational cost. By Theorem P.13.19, any $\dim(V_1) > 0$ incurs infinite precision cost from $U(1)^{\dim(V_1)}$ continuous symmetry. $\square$
+**Step 4 (PCE selection).** Among modular-invariant options, PCE selects $C = -744$ (i.e., $\dim(V_1) = 0$) as the unique configuration with finite operational cost. By Theorem P.13.19, any positive-dimensional continuous weight-one symmetry incurs infinite precision cost, so any case with $\dim(V_1) > 0$ is excluded. $\square$
 
 **Epistemic Status:** Framework-derived. Modular invariance is required by perspective consistency; PCE optimization via the precision cost principle (Theorem P.13.19) uniquely selects $\dim(V_1) = 0$ within the modular-invariant class.
 
@@ -3530,13 +3536,14 @@ $$\approx 8.08 \times 10^{53}$$
 
 ---
 
-### Theorem P.13.30 (Monster as Vacuum Symmetry)
+### Theorem P.13.30 (Monster as Vacuum Symmetry on the Moonshine Branch)
 
+On the branch where Theorem P.13.27 identifies $\mathcal{V}_{\text{PCE}} = V^\natural$,
 $$\boxed{\text{Aut}(\mathcal{V}_{\text{PCE}}) = \mathbb{M}}$$
 
-*Proof.* By Theorem P.13.27, $\mathcal{V}_{\text{PCE}} = V^\natural$. By Theorem P.13.29, $\text{Aut}(V^\natural) = \mathbb{M}$. $\square$
+*Proof.* By Theorem P.13.27, $\mathcal{V}_{\text{PCE}} = V^\natural$ on the branch under consideration. By Theorem P.13.29, $\text{Aut}(V^\natural) = \mathbb{M}$. $\square$
 
-**Epistemic Status:** Follows from PCE selection (framework) combined with Frenkel, Lepowsky & Meurman 1988 (mathematics).
+**Epistemic Status:** Follows from the branch identification of Theorem P.13.27 together with Frenkel, Lepowsky & Meurman 1988.
 
 ---
 
@@ -3561,9 +3568,9 @@ $$\boxed{
 \begin{aligned}
 &\text{SPAP (Thm 10)} \xrightarrow{\text{Lemma J.1}} \text{2-to-1 merge} \xrightarrow{\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \\[0.3em]
 &\xrightarrow{\text{PPI+PCE}} a = 2 \xrightarrow{d_0 = 8} b = 6 \xrightarrow{\text{QFI}} M = 24 \\[0.3em]
-&\xrightarrow{\text{PCE}} \mathcal{G}_{24} \xrightarrow{\text{glue}} \Lambda_{24} \\[0.3em]
+&\xrightarrow{\text{24D even/unimodular/rootless branch}} \Lambda_{24} \\[0.3em]
 &\xrightarrow{\text{P.13.6.1-2}} \text{Scale inv.} \to \text{CFT} \to \text{VOA} \xrightarrow{\text{P.13.6.3-4}} c = 24,\ \text{holomorphic} \\[0.3em]
-&\xrightarrow{\text{lattice VOA}} V_{\Lambda_{24}} \xrightarrow{\text{Precision Cost}} \dim(V_1) = 0 \xrightarrow{\theta\text{-orbifold}} V^\natural \xrightarrow{\text{FLM}} \text{Aut}(V^\natural) = \mathbb{M}
+&\xrightarrow{\text{lattice VOA}} V_{\Lambda_{24}} \xrightarrow{\text{operational exact-symmetry criterion}} \dim(V_1)=0 \xrightarrow{\text{central involution branch}+\theta\text{-orbifold}} V^\natural \xrightarrow{\text{FLM}} \text{Aut}(V^\natural)=\mathbb{M}
 \end{aligned}
 }$$
 
@@ -3579,17 +3586,17 @@ $$\boxed{
 | 4 | $a = 2$ | Framework | Theorem Z.1 (PPI + PCE) |
 | 5 | $b = 6$ | Definition | $b = d_0 - a$ |
 | 6 | $M = 24$ | Framework | Theorem Z.5 |
-| 7 | Even, unimodular, rootless | Framework-derived | Selection Principles P.13.7–P.13.9, Theorem Z.8c |
-| 8 | $\Lambda_{24}$ | PCE + Mathematics | Niemeier classification |
+| 7 | Even, unimodular, rootless, 24D branch criteria | Conditional framework input | Selection Principles P.13.7–P.13.9 |
+| 8 | $\Lambda_{24}$ | Mathematics after branch criteria | Niemeier classification |
 | 9 | $\mathcal{G}_{24}$ | PCE + Mathematics | Griesmer, Pless |
 | 10 | Scale inv. $\to$ CFT $\to$ VOA | Framework | Propositions P.13.6.1–P.13.6.2 |
 | 11 | $c = 24$, holomorphic | Framework | Propositions P.13.6.3–P.13.6.4 |
 | 12 | Modular invariance required | Framework | Proposition P.13.6.5 |
 | 13 | $V_{\Lambda_{24}}$ | Mathematics | Borcherds, FLM |
-| 14 | Precision cost $\to \dim(V_1) = 0$ | Framework | Theorem P.13.19, Definition P.13.2|
-| 15 | Canonical $\theta$-orbifold | Framework + Mathematics | Theorems P.13.21–P.13.24 |
-| 16 | $V^\natural$ | Mathematics | FLM construction |
-| 17 | $\text{Aut}(V^\natural) = \mathbb{M}$ | Mathematics | FLM |
+| 14 | Operational exact-symmetry criterion $\to \dim(V_1) = 0$ | Conditional framework criterion | Theorem P.13.19, Definition P.13.2 |
+| 15 | Canonical central involution / $\theta$-orbifold branch | Conditional framework + mathematics | Theorems P.13.21–P.13.24 |
+| 16 | $V^\natural$ | Mathematics on that branch | FLM construction |
+| 17 | $\text{Aut}(V^\natural) = \mathbb{M}$ | Mathematics on that branch | FLM |
 
 
 **Legend:**
@@ -3681,21 +3688,21 @@ $$\mathcal{T} \cong \mathcal{E} \cong \mathcal{P}$$
 
 where $\mathcal{T}$ is temporal structure, $\mathcal{E}$ is entropy production, and $\mathcal{P}$ is perspectival structure. These three aspects are equivalent manifestations of SPAP—specifying any one determines the other two.
 
-The Monster group derivation reveals a fourth equivalent aspect:
+The Monster group derivation adds a downstream vacuum-symmetry aspect to the SPAP triad:
 
-$$\mathcal{T} \cong \mathcal{E} \cong \mathcal{P} \cong \mathcal{S}$$
+$$\mathcal{T} \cong \mathcal{E} \cong \mathcal{P}, \qquad \mathcal{S}\ \text{is fixed on the corresponding Leech/Moonshine branch}$$
 
-where $\mathcal{S}$ denotes the vacuum symmetry structure (the Monster group $\mathbb{M}$). This equivalence holds because:
+where $\mathcal{S}$ denotes the vacuum symmetry structure (the Monster group $\mathbb{M}$). The relation is as follows:
 
-**($\mathcal{E} \to \mathcal{S}$):** The entropy cost $\varepsilon = \ln 2$ determines $a = 2$, which determines $M = 24$, which determines the Leech lattice, which determines $V^\natural$, whose automorphism group is $\mathbb{M}$. The thermodynamic cost fixes the symmetry.
+**($\mathcal{E} \to \mathcal{S}$):** Once the branch criteria leading to $M = 24$ and the Leech/Moonshine identification are imposed, the entropy-cost chain feeds the symmetry endpoint $\mathbb{M}$.
 
-**($\mathcal{S} \to \mathcal{E}$):** The Monster is the automorphism group of a structure ($V^\natural$) that exists only because the Leech lattice is rootless, which occurs only because $M = 24$, which follows from $a = 2$ (Theorem Z.1). The symmetry structure encodes the thermodynamic cost.
+**($\mathcal{S} \to \mathcal{E}$):** On the branch identified with $V^\natural$, the resulting symmetry structure records the same fixed parameter chain back to $M = 24$ and $a = 2$; this is branch-internal bookkeeping rather than a new primitive equivalence.
 
-**($\mathcal{T} \to \mathcal{S}$):** Temporal structure requires the predict-verify-update cycle, which requires SPAP, which produces $\varepsilon = \ln 2$, which determines $\mathbb{M}$ through the chain. The arrow of time determines vacuum symmetry.
+**($\mathcal{T} \to \mathcal{S}$):** Temporal structure enters through the same SPAP chain that, together with the additional branch criteria, reaches the vacuum-symmetry endpoint.
 
-**($\mathcal{P} \to \mathcal{S}$):** Perspectival structure requires the self-other partition, which requires $d_0 = 8$ dimensions for SPAP encoding, which partitions as $(a,b) = (2,6)$, yielding $M = 24$ and ultimately $\mathbb{M}$. The structure of perspective determines vacuum symmetry.
+**($\mathcal{P} \to \mathcal{S}$):** Perspectival structure contributes through the same $d_0 = 8 \to (a,b) = (2,6) \to M = 24$ chain feeding the branch selection.
 
-The Monster group is thus not an isolated mathematical curiosity but an integral part of the unified structure that SPAP generates. It stands in the same relation to the vacuum that the arrow of time stands to thermodynamics, or that perspective stands to observation.
+The Monster group is thus a downstream vacuum-symmetry output of the SPAP chain on this branch, not a fourth primitive equivalent of the original triad.
 
 ### P.13.16.2 The Vacuum as Optimal Predictive Coherence
 
@@ -3717,25 +3724,20 @@ The Monster group $\mathbb{M} = \text{Aut}(\mathcal{V}_{\text{PCE}})$ is then th
 
 One might ask: could the vacuum symmetry have been different? Could a universe satisfying POP and PCE have a vacuum with symmetry group other than $\mathbb{M}$?
 
-The derivation chain establishes: **No**, given the framework's foundations and PCE optimization criteria.
+The derivation chain establishes a distinguished Leech/Moonshine branch once the operational criteria of Sections P.13.4–P.13.11 are imposed. Within that branch, the vacuum symmetry is $\mathbb{M}$.
 
-The key constraint is the irreducible thermodynamic cost $\varepsilon = \ln 2$. This is not a parameter but a derived quantity:
+The key thermodynamic input is the lower-bound parameter $\varepsilon = \ln 2$, used at the PCE fixed point. Together with the additional branch criteria, it leads to:
 
-1. SPAP requires a 2-to-1 state merge (Lemma J.1)
-2. Landauer's principle gives minimum cost $\ln(4/2) = \ln 2$
-3. This bound is exact and saturated
-
-From $\varepsilon = \ln 2$, the entire chain follows necessarily:
 - $a = 2$ (PPI-optimality, Theorem Z.1)
 - $b = d_0 - a = 6$ (given $d_0 = 8$ from SPAP logic)
 - $M = 2ab = 24$ (QFI structure)
-- Leech lattice (unique rootless even unimodular in 24D)
+- Leech lattice on the 24D even/unimodular/rootless branch
 - $V_{\Lambda_{24}}$ with $\dim(V_1) = 24$ (lattice VOA)
-- Precision cost $\to \dim(V_1) = 0$ required
-- Canonical $\theta$-orbifold yields $V^\natural$
+- Operational exact-symmetry criterion favoring $\dim(V_1) = 0$
+- Central-involution branch plus $\theta$-orbifold yielding $V^\natural$
 - $\mathbb{M} = \text{Aut}(V^\natural)$
 
-Each step follows from PCE optimization applied to the available mathematical structures. The Monster emerges with the same degree of necessity as other PCE-selected structures in the framework.
+Each step combines framework input with an additional branch criterion or mathematical classification result. The Monster therefore emerges as the symmetry of this selected branch.
 
 ### P.13.17.2 Counterfactual Analysis
 
@@ -3743,7 +3745,7 @@ The structural relation $d_0 = 2a^2$ is derived in Theorem Z.2 (Appendix Z, Sect
 
 | $\varepsilon$ | $a$ (minimal admissible) | $K_0 = 1 + 2\varepsilon/\ln 2$ | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | Viability |
 |---------------|---------------------|-------------------------------|--------------|-----------------|-----------|
-| $\ln 2$ | 2 | 3 (integer) | 8 | 24 | Viable: PU fixed point |
+| $\ln 2$ | 2 | 3 (integer) | 8 | 24 | Viable branch point |
 | $\ln 3$ | 3 | 4.17 (non-integer) | 18 | 90 | Non-viable: $K_0 \notin \mathbb{Z}$ |
 | $\ln 4$ | 4 | 5 (integer) | 32 | 224 | Non-viable: MCC fails ($K(D)\neq 224$) and no unique lattice selection |
 
@@ -3751,15 +3753,15 @@ Only $\varepsilon=\ln 2$ satisfies simultaneously:
 
 1. Integer $K_0$ (logical bits).
 2. Mode-channel matching $K(D)=M$ (MCC), yielding $K(4)=24$.
-3. Unique rootless even unimodular lattice selection (Niemeier at dimension 24).
+3. Access to the unique rootless even unimodular 24D branch.
 
 All other values violate at least one of these constraints:
 
 * **Non-integer $K_0$**: SPAP cannot be implemented with fractional bits.
 * **Mode-channel mismatch**: even when $K_0$ is integer, the induced $M$ can fail $K(D)=M$ (e.g., $224$ lies strictly between $K(7)=126$ and $K(8)=240$, so cannot equal any $K(D)$).
-* **No uniqueness theorem beyond dimension 24**: Niemeier uniqueness of a rootless even unimodular lattice is specific to dimension $24$, so the PCE vacuum-selection mechanism does not yield a unique lattice for larger $d_0$.
+* **No unique rootless 24D branch**: the Niemeier uniqueness input is specific to dimension $24$, so the later vacuum-selection steps used here are unavailable away from that branch.
 
-The Monster group therefore characterizes the vacuum structure that PCE optimization selects—the unique ground state consistent with the predictive foundations.
+The Monster group therefore characterizes the distinguished branch selected by these combined criteria.
 
 ### P.13.17.3 The Monster as Fixed Point
 
@@ -3956,9 +3958,9 @@ $$K(D) = M = 24 \implies D = 4$$
 
 The cosmological constant follows from the Golay-Steiner vacuum structure (Corollary U.17):
 
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$$
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa_{\mathrm{ref}}}$$
 
-where $\kappa=141.5$ is derived in Theorem U.16, and $A_{\text{eff}}=0.923\pm0.011$ is the PU-theory prefactor fixed under the canonical Bures/Fisher normalization (Corollary U.15b). This gives $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check. The exponential suppression $e^{-283}\sim 10^{-123}$ resolves the 122-order hierarchy.
+where $\kappa_{\mathrm{ref}}=141.5$ is the Appendix U reference exponent from the leading-order zero-mode count (Theorem U.16), and $A_{\text{eff}}=0.923\pm0.011$ is the PU-theory prefactor fixed under the canonical Bures/Fisher normalization (Corollary U.15b). This gives the corresponding reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa_{\mathrm{ref}}$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check. The exponential suppression $e^{-283}\sim 10^{-123}$ captures the leading hierarchy.
 
 ### P.14.5 Theoretical Predictions and Experimental Comparison
 

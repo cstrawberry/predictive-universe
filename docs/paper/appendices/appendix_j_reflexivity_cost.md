@@ -55,28 +55,28 @@ Physical implementation requires encoding logical states into distinct, non-over
 
 The parameter $\varepsilon$ (Definition 28) represents the fundamental, minimal dimensionless entropy production ($S/k_B$, in nats) associated with the necessary irreversible update step of the MPU’s 'Evolve' process (Definition 27). This irreversible step must physically execute the logical state merging inherent in the SPAP cycle when self-referential information is processed.
 
-**Theorem J.1 (Logical Lower Bound on $\varepsilon$, Proof of Theorem 31)**
+**Theorem J.1 (Guarantee-Level Logical Lower Bound on $\varepsilon$, Proof of Theorem 31)**
 
-Any physical process implementing the logically irreversible state merging inherent in the SPAP self-predictive update cycle (Lemma J.1), as required for a finite-memory, cyclic self-referential system, necessarily incurs a minimal dimensionless entropy production $\varepsilon$ satisfying:
+For a finite-memory, cyclic SPAP implementation that closes the update cycle by resetting an ancilla register to a fixed ready state and must operate correctly for both admissible pre-reset ancilla values without retaining side information about that value at the end of the cycle, the per-cycle lower-bound parameter $\varepsilon$ satisfies:
 $$
 \boxed{ \varepsilon \ge \ln 2 }
 \tag{J.2}
 $$
-This bound is strictly positive and arises fundamentally from the logical structure of self-reference when implemented using finite resources, independent of the specific physical substrate or noise level.
+This is a guarantee-level lower bound: it is the minimum entropy budget required to implement the SPAP-mandated merge uniformly over the admissible pre-reset states. Once that operational requirement is imposed, the bound is independent of substrate details.
 
 **Scope:** This theorem applies to finite-memory SPAP implementations that close the update cycle by resetting an ancilla register to a fixed ready state (Section J.2). The explicit 3-qubit MPU model of Section 7.1.3 realizes the saturating case $\varepsilon = \ln 2$.
-
 
 *Proof:*
 1.  The minimal, finite-memory SPAP update cycle (as constructed in the proof of Theorem A.1.1 with ancilla reuse) requires a logical mapping over one cycle from the input state $(\phi_t, p_t)$ to the output state $(\phi_{t+1}, p_{t+1})$. Lemma J.1 proves that this mapping is at least 2-to-1, resulting in an unavoidable logical state merging.
 2.  Any physical implementation of this logical mapping must map distinct physical states encoding the initial logical states to physical states encoding the final logical states.
 3.  The logical merging implies a contraction in the effective volume of the corresponding physical state space regions.
-4.  By Landauer's principle (Section J.3), such a logical state compression or information erasure requires a minimum irreversible entropy production in the environment to maintain consistency with underlying physical laws (like Liouville's theorem or unitarity for the combined system+environment). The minimum entropy production is $k_B \ln(N/M)$, where $N$ is the number of initial logical states mapping to $M$ final logical states.
-5.  The minimal SPAP cycle involves at least a 2-to-1 mapping (e.g., 4 input states to 2 output states after reset), giving a compression factor of at least 2 ($N/M \ge 2$). The minimal associated entropy production is $k_B \ln 2$.
-6.  The dimensionless entropy cost $\varepsilon$ associated with the irreversible 'Evolve' interaction step (which executes this update) must be sufficient to account for this logically required minimal dissipation. Therefore, $\varepsilon$ must be greater than or equal to this logical minimum: $\varepsilon \ge k_B \ln 2 / k_B = \ln 2$.
-7.  The bound is independent of the total state space dimension, provided the system can physically instantiate the required SPAP registers (in particular $d_0 \ge 8$ as per Theorem 23).
+4.  Landauer's principle bounds the average environment entropy increase for a logically irreversible map by the Shannon-entropy decrease of the erased logical register for the input ensemble under consideration.
+5.  In the SPAP cycle, the post-reset state does not determine the pre-reset ancilla value. For the admissible ensemble assigning probability $1/2$ to each pre-reset ancilla value, the erased Shannon entropy is $\ln 2$.
+6.  Therefore any implementation that must work uniformly over that admissible ensemble requires at least $k_B \ln 2$ of environment entropy increase on average over that ensemble.
+7.  By definition, $\varepsilon$ is the per-cycle lower-bound budget required for this SPAP-mandated merge uniformly over admissible internal states. Hence $\varepsilon \ge k_B \ln 2 / k_B = \ln 2$.
+8.  The bound is independent of the total state-space dimension, provided the system can physically instantiate the required SPAP registers (in particular $d_0 \ge 8$ as per Theorem 23).
 
-    **Remark J.1.1 (distribution-dependent vs guarantee-level Landauer cost).** Standard Landauer bounds are typically stated for average dissipation and depend on the input distribution (resetting a known state can cost arbitrarily little). In the SPAP setting, the prediction register value before reset is not fixed by the post-reset logical state (the reset removes it), and the cycle must be correct for both admissible pre-reset values. Considering the admissible ensemble that places probability $1/2$ on each pre-reset value yields a Shannon entropy decrease of $\ln 2$ in the register, hence any physical implementation requires at least $\ln 2$ nats of environment entropy increase for that ensemble. The parameter $\varepsilon$ is taken as the per-cycle lower bound required to implement the SPAP-mandated merge uniformly over admissible internal states.
+    **Remark J.1.1 (distribution-dependent vs guarantee-level Landauer cost).** Standard Landauer bounds are ensemble-dependent. The present theorem fixes the admissible ensemble by the SPAP requirement that the cycle remain correct for both pre-reset ancilla values while erasing that value from the post-reset description. For that admissible ensemble, the Shannon-entropy decrease is $\ln 2$, yielding the stated guarantee-level lower bound on $\varepsilon$.
 
 **J.5 Novelty and Distinction from Existing Bounds**
 
@@ -88,18 +88,18 @@ The $\varepsilon \ge \ln 2$ bound represents the irreducible thermodynamic footp
 
 **J.6 Significance for the Predictive Universe Framework**
 
-The result $\varepsilon \ge \ln 2 > 0$ is a cornerstone for the entire framework:
-1.  **Guarantees ND-RID Irreversibility:** Ensures the 'Evolve' channel $\mathcal{E}_N$ is thermodynamically irreversible (Corollary E.1), as its mean entropy production must be positive whenever non-trivial information is processed.
+The guarantee-level lower bound $\varepsilon \ge \ln 2 > 0$ is a cornerstone for the entire framework:
+1.  **Guarantees ND-RID Irreversibility:** In the coarse-grained ND-RID description, the SPAP-type refresh/reset component carries a strictly positive entropy budget, so the mean entropy production remains positive whenever non-trivial self-referential updating is implemented.
 2.  **Implies Strict Channel Contractivity:** The finite-memory SPAP cycle closure requires an input-independent refresh/reset in the coarse-grained 'Evolve' step, yielding a decomposition $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$ and hence strict trace-distance contraction $f_{RID}=1-p<1$ (Lemma E.1).
 3.  **Bounds Channel Capacity:** Fundamentally limits the reliable classical information capacity $C_{\max}$ of ND-RID channels to strictly less than $\ln d_0$ (Theorem E.2), as strictly contractive channels have reduced capacity.
 4.  **Grounds Area Law:** The bounded channel capacity $C_{\max}$ (which depends on $\varepsilon$) determines the coefficient in the Horizon Entropy Area Law $S_{max} \propto C_{\max} \mathcal{A}$ (Theorem E.6), linking the macroscopic Area Law to microscopic irreversibility.
 5.  **Enables Emergent Gravity:** The Area Law coefficient determines the emergent Planck scale $L_P$ and Newton's constant $G$ (Equation E.9, E.10), thus linking gravity to the fundamental thermodynamic cost of self-reference.
 6.  **Grounds Reflexivity Constraint:** Ensures the positivity $\kappa_r > 0$ (Theorem 33) in the trade-off between information gain and state disturbance, as $\kappa_r \ge \Delta I_{min} \varepsilon > 0$.
-7.  **Supports Emergent Locality:** Finite propagation speeds underlying emergent operator locality (Corollary F.1) follow from bounded-range interactions and uniformly bounded local generator strength in the ND-RID dynamics (Appendix F, Proposition F.1). The nonzero cost $\varepsilon>0$ supplies irreversibility and capacity limits, but the Lieb-Robinson light-cone estimate depends on locality/boundedness rather than on $\varepsilon$.
+7.  **Supports Emergent Locality:** Finite propagation speeds underlying emergent operator locality (Corollary F.1) follow from bounded-range interactions and uniformly bounded local generator strength in the ND-RID dynamics (Appendix F, Proposition F.1). The nonzero lower-bound cost $\varepsilon>0$ supplies irreversibility and capacity limits, but the Lieb-Robinson light-cone estimate depends on locality/boundedness rather than on $\varepsilon$.
 
-The strict positivity of $\varepsilon$ is therefore the fundamental thermodynamic cost linked directly to the necessity of self-referential prediction using finite resources, cascading through the framework to shape emergent thermodynamics, information limits, geometry, and causality.
+The strict positivity of the lower-bound parameter $\varepsilon$ is therefore the fundamental thermodynamic budget linked directly to the necessity of self-referential prediction using finite resources, cascading through the framework to shape emergent thermodynamics, information limits, geometry, and causality.
 
 **J.7 Conclusion**
 
-This appendix provided a rigorous derivation showing that any physical implementation of the SPAP reflexive update cycle, as required for a finite-memory predictive system operating cyclically, incurs a minimal dimensionless thermodynamic cost $\varepsilon \ge \ln 2$ (Theorem J.1), formalizing Theorem 31. This cost arises from the unavoidable logical state merging inherent in the self-referential loop, as proved by Lemma J.1, and its link to fundamental dissipation via Landauer's principle. This distinct, structurally mandated cost ensures ND-RID irreversibility (Corollary E.1), necessitates a nonzero refresh component in the averaged ND-RID 'Evolve' channel and therefore strict trace-distance contractivity ($f_{RID}<1$, Lemma E.1), bounds information capacity ($C_{\max} < \ln d_0$, Theorem E.2), grounds the Area Law (Theorem E.6/49) and emergent gravity scale (Equation E.9), establishes the Reflexivity Constraint (Theorem 33), and is compatible with emergent locality (Corollary F.1), which follows from bounded-range dynamics (Appendix F).
+This appendix provided a rigorous derivation showing that any finite-memory SPAP implementation that must reset the prediction ancilla uniformly over its admissible pre-reset states requires a per-cycle lower-bound budget $\varepsilon \ge \ln 2$ (Theorem J.1), formalizing Theorem 31. This cost arises from the unavoidable logical state merging inherent in the self-referential loop, as proved by Lemma J.1, together with Landauer's principle for the admissible pre-reset ensemble. This distinct, structurally mandated lower-bound budget ensures ND-RID irreversibility (Corollary E.1), necessitates a nonzero refresh component in the averaged ND-RID 'Evolve' channel and therefore strict trace-distance contractivity ($f_{RID}<1$, Lemma E.1), bounds information capacity ($C_{\max} < \ln d_0$, Theorem E.2), grounds the Area Law (Theorem E.6/49) and emergent gravity scale (Equation E.9), establishes the Reflexivity Constraint (Theorem 33), and is compatible with emergent locality (Corollary F.1), which follows from bounded-range dynamics (Appendix F).
 

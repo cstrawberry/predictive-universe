@@ -82,7 +82,7 @@ The quoted uncertainty is dominated by $H_0$ and $\Omega_{\Lambda}$; the relativ
 
 ### V.1.4 Consistency Check via Inversion
 
-Using the PU-theory inputs $\kappa=141.5$ (Theorem U.16) and $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), Equation (V.2) gives $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, consistent with the observed value (V.5) within the combined $1\sigma$ budget.
+Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16) and $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), Equation (V.2) gives the corresponding reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, consistent with the observed value (V.5) within the combined $1\sigma$ budget.
 
 Setting $A_{\text{eff}}=1$ in Equation (V.3):
 
@@ -90,23 +90,23 @@ $$
 \boxed{\kappa \;=\; -\tfrac12 \ln\!\left(\frac{2.86599\times10^{-122}}{8\pi}\right) \;=\; 141.543\ \pm\ 0.009} \tag{V.6}
 $$
 
-Holding $\kappa$ fixed, the observed value (V.5) implies the effective prefactor
+Holding $\kappa_{\mathrm{ref}}$ fixed, the observed value (V.5) implies the effective prefactor
 
 $$
-A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016,
+A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa_{\mathrm{ref}}}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016,
 $$
 
 consistent with the PU-theory estimate $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b).
 
-For the PU-theory value $\kappa=141.5$ (Theorem U.16), the corresponding instanton action from Equation (V.1) is
+For the Appendix U reference value $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16), the corresponding reference instanton action from Equation (V.1) is
 
 $$
-S_{\mathrm{inst}} = 2\kappa = 283~\text{nats} = 408.3~\text{bits}. \tag{V.7}
+S_{\mathrm{inst}} = 2\kappa_{\mathrm{ref}} = 283~\text{nats} = 408.3~\text{bits}. \tag{V.7}
 $$
 
-**Sensitivity to $H_0$.** Since $\Lambda L_P^2 \propto H_0^2$, a shift $H_0\to H_0(1+\epsilon)$ changes $\kappa$ by $\Delta \kappa \simeq -\epsilon$; hence a 1% change in $H_0$ shifts $\kappa$ by $\sim 0.01$.
+**Sensitivity to $H_0$.** Since $\Lambda L_P^2 \propto H_0^2$, a shift $H_0\to H_0(1+\epsilon)$ changes the inferred $\kappa$ by $\Delta \kappa \simeq -\epsilon$; hence a 1% change in $H_0$ shifts $\kappa$ by $\sim 0.01$.
 
-**Dependence on the $O(1)$ prefactor.** The dependence of $\kappa$ on the prefactor is modest ($\partial \kappa/\partial \ln A_{\text{eff}} = +\tfrac12$), as shown for representative $A_{\text{eff}}$ values in Table V.1. An error budget that separates observational and prefactor contributions is
+**Dependence on the $O(1)$ prefactor.** The dependence of the inferred $\kappa$ on the prefactor is modest ($\partial \kappa/\partial \ln A_{\text{eff}} = +\tfrac12$), as shown for representative $A_{\text{eff}}$ values in Table V.1. An error budget that separates observational and prefactor contributions is
 
 $$
 \sigma_\kappa^{2}\ \simeq\ \tfrac14\!\left[\ \sigma_{\ln(\Lambda L_P^{2})}^{\,2}\ +\ \sigma_{\ln A_{\text{eff}}}^{\,2}\ \right].
@@ -118,7 +118,7 @@ $$
 |:------:|:-------:|:----------:|:-------:|:---------------------:|:-------:|
 | $\kappa$ | 141.20 | **141.54** | 141.89 | 142.04 | 142.09 |
 
-Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts $\kappa$ by less than 1, whereas the derived $\kappa=141.5$ is fixed by the Golay-Steiner structure (Theorem U.16).
+Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts the inferred $\kappa$ by less than 1, whereas the reference value $\kappa_{\mathrm{ref}}=141.5$ comes from the leading-order Golay-Steiner zero-mode counting convention of Appendix U.
 
 ---
 

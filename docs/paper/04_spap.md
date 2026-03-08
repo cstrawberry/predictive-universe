@@ -40,20 +40,43 @@ where $F$ is computable, and ProofSearch represents a bounded search for proofs 
 **4.2.2 Theorem 10 (Deterministic SPAP - Impossibility of Perfect Self-Prediction)**
 
 Let $\mathcal{M}$ be a model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$ capable of representing basic arithmetic. There exists no single deterministic prediction function $P_f$, implementable within $\mathcal{M}$, that can guarantee perfect prediction of the future state $S(t+\Delta t)$ for all possible systems $S$ constructible within $\mathcal{M}$ that engage in self-prediction based on $P_f$.
-*Proof:* Assume, for contradiction, that a perfect deterministic predictor $P_f$ exists. Construct a system $S_{diag}$ within $\mathcal{M}$ that uses $P_f$ to predict a binary aspect $\phi$ of its own next state, yielding prediction $\hat{\phi}_{P_f}$. $S_{diag}$ then deterministically sets its actual next state for that component using the rule:
+*Proof:* Assume, for contradiction, that a single deterministic predictor $P_f$ as stated exists. By Property R (Definition 10), the model class $\mathcal{M}$ can represent coded descriptions of systems in $\mathcal{M}$, simulate the action of predictors on those coded descriptions, and evaluate the relevant binary predicates about predicted outcomes. Using these capabilities, construct a system $S_{diag}\in\mathcal{M}$ whose nominated binary next-state component $\phi_{t+1}\in\{0,1\}$ is defined by first querying $P_f$ on its own current description and then applying the update rule
 $$
 \phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f}) \quad \text{(10)}
 $$
-If $P_f$ were perfect, it must predict the actual outcome: $\hat{\phi}_{P_f} = \phi_{t+1}$. Substituting the system's rule gives $\hat{\phi}_{P_f} = \text{NOT}(\hat{\phi}_{P_f})$, which is a logical contradiction. Thus, $P_f$ cannot perfectly predict $S_{diag}$. (Formal proof in Appendix A.1, specifically Theorem A.1.1 in Appendix A.1.2; robustness to computational error discussed via Theorem A.1.2 in Appendix A.1.3).
+where $\hat{\phi}_{P_f}$ denotes the value predicted by $P_f$ for that same component of $S_{diag}$ at time $t+\Delta t$.
+
+Because the construction uses only representation, simulation, and predicate-evaluation operations guaranteed by Property R, the system $S_{diag}$ is constructible within $\mathcal{M}$. If $P_f$ were perfect for every such system, then in particular it would be perfect for $S_{diag}$, so
+$$
+\hat{\phi}_{P_f}=\phi_{t+1}.
+$$
+Substituting the defining rule of $S_{diag}$ gives
+$$
+\hat{\phi}_{P_f}=\text{NOT}(\hat{\phi}_{P_f}).
+$$
+No element of $\{0,1\}$ satisfies this equation. This contradiction shows that no universal perfect deterministic predictor $P_f$ can exist. ∎
 
 **4.2.3 Theorem 11 (Probabilistic SPAP)**
 
 Let $\mathcal{M}$ be a model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$. There exists no single probabilistic predictor $P_f: \mathcal{S} \times \mathcal{M} \rightarrow \Delta(\mathcal{S})$ implementable within $\mathcal{M}$ that can guarantee assignment of probabilities that exactly match the true distribution of outcomes for all aspects of all self-predicting systems $S$ constructible within $\mathcal{M}$.
-*Proof:* Assume, for contradiction, that a perfect probabilistic predictor $P_f$ exists. Construct system $S'_{diag}$ within $\mathcal{M}$ that uses $P_f$ to compute the predicted probability $p = Prob_{P_f}(\phi=1)$ for a binary aspect $\phi$ of its next state. $S'_{diag}$ then deterministically sets its actual outcome probability using the rule:
+*Proof:* Assume, for contradiction, that a single probabilistic predictor $P_f: \mathcal{S}\times\mathcal{M}\to\Delta(\mathcal{S})$ as stated exists. By Property R (Definition 10), systems in $\mathcal{M}$ can represent their own descriptions, simulate the action of $P_f$ on those descriptions, and evaluate predicates concerning the predicted distribution. Construct a system $S'_{diag}\in\mathcal{M}$ with a nominated binary next-state aspect $\phi_{t+1}\in\{0,1\}$ that first computes the predicted marginal
 $$
-Prob_{actual}(\phi=1) = \begin{cases} 0, & \text{if } p > 0.5 \\ 1, & \text{if } p \le 0.5 \end{cases} \quad \text{(11)}
+p:=P_f(\phi_{t+1}=1\mid S'_{diag},t).
 $$
-Perfect prediction requires the predicted probability $p$ to equal the actual probability determined by the rule: $p = Prob_{actual}(\phi=1)$. If $p>0.5$, this equality implies $p=0$, a contradiction. If $p \le 0.5$, this equality implies $p=1$, also a contradiction. In no case can the predicted probability $p$ match the actual probability determined by the rule. (The formal justification for the system's ability to reliably execute this paradoxical logic, which requires Effective Operational Property R, is provided by Theorem A.0.2 in Appendix A.0).
+It then defines the actual one-step law for that same aspect by
+$$
+P_{actual}(\phi_{t+1}=1) = \begin{cases} 0, & \text{if } p > 0.5 \\ 1, & \text{if } p \le 0.5 \end{cases} \quad \text{(11)}
+$$
+
+Because this construction again uses only the represent/simulate/evaluate operations guaranteed by Property R, the system $S'_{diag}$ is constructible within $\mathcal{M}$. If $P_f$ were exact for every such self-predicting system, then it would be exact for $S'_{diag}$, so its predicted marginal $p$ would have to equal the actual marginal specified by the rule above.
+
+There are two cases.
+
+1. If $p>0.5$, then the defining rule sets $P_{actual}(\phi_{t+1}=1)=0$, so exactness requires $p=0$, contradicting $p>0.5$.
+
+2. If $p\le 0.5$, then the defining rule sets $P_{actual}(\phi_{t+1}=1)=1$, so exactness requires $p=1$, contradicting $p\le 0.5$.
+
+Both cases are impossible. Hence no universal probabilistic predictor can assign probabilities that exactly match the true outcome law for every self-predicting system in $\mathcal{M}$. ∎
 
 **4.2.4 Corollary 1 (Fundamental Limits)**
 
@@ -199,7 +222,15 @@ Beyond the SPAP paradoxes concerning predictive *accuracy*, the structure of Ref
 
 **4.3.1 Theorem 12 (Reflexive Undecidability Statement)**
 
-Let $\mathcal{C}_{RID}$ be a class of systems governed by Reflexive Interaction Dynamics (either D-RID or ND-RID, **Definitions A.2.1 and A.2.2** in Appendix A.2.1), and consider computational problems concerning properties of these systems that can only be assessed through interaction using a suitable computational model (e.g., an **Interactive Turing Machine, ITM**, as discussed in Appendix A.2). There exist computational problems $P$ regarding properties of systems $S \in \mathcal{C}_{RID}$ such that no interacting algorithm (modeled, e.g., as an ITM or PITM) can be guaranteed to halt and correctly decide $P$ for all $S \in \mathcal{C}_{RID}$. This Reflexive Undecidability arises fundamentally because the interactions performed by the querying algorithm necessarily alter the state of the RID system being analyzed, potentially changing the very property being computed in a way that prevents universal convergence to a correct answer. (Formal proofs establishing the existence of such problems for both D-RID and ND-RID via diagonalization are provided in Appendix A.2.3 (Theorems A.2.3 and A.2.4). The robustness of these results to computational error is addressed through the analysis of inherent costs and probabilistic formulations (cf. Theorems A.1.2 and A.1.4 in Appendix A)).
+Let $\mathcal{C}_{RID}$ be a class of systems governed by Reflexive Interaction Dynamics (either D-RID or ND-RID, **Definitions A.2.1 and A.2.2** in Appendix A.2.1). Assume that in the deterministic case the transition map $T$ and outcome map $V$ are computable, and in the non-deterministic case the kernels $V_{prob}$ and $T_{prob}$ are computable; assume further that system descriptions can be represented and reliably manipulated within a framework possessing Effective Operational Property R (Definition A.0.1). Consider computational problems concerning properties of these systems that can only be assessed through interaction using a suitable computational model (e.g., an **Interactive Turing Machine, ITM**, or a probabilistic ITM, as discussed in Appendix A.2). Then there exist computational problems $P$ regarding properties of systems $S \in \mathcal{C}_{RID}$ such that no interacting algorithm can be guaranteed to halt and correctly decide $P$ for all $S \in \mathcal{C}_{RID}$.
+
+*Proof:* Split into the deterministic and non-deterministic cases.
+
+For deterministic RID systems satisfying the stated computability and representability hypotheses, Theorem A.2.3 constructs a diagonal system $S_{diag}\in\mathcal{C}_{DRID}$ and a property $P$ such that any total halting interactive decider $M_{decide}$ is forced to output an incorrect decision on $S_{diag}$. Hence there exists a property of systems in the deterministic subclass that is not uniformly decidable by finite interaction.
+
+For non-deterministic RID systems satisfying the corresponding computability and representability hypotheses, Theorem A.2.4 constructs a diagonal ND-RID system $S'_{diag}\in\mathcal{C}_{NDRID}$ and a statistical property $P$ such that any finite-time probabilistic interactive decider fails to decide $P$ with arbitrarily high confidence on all inputs. Hence there exists a property of systems in the non-deterministic subclass that is not uniformly decidable by finite interaction.
+
+Since $\mathcal{C}_{RID}$ contains these deterministic and non-deterministic RID subclasses, there exist computational problems regarding systems in $\mathcal{C}_{RID}$ that no interacting algorithm can be guaranteed to halt and correctly decide for all systems in the class. This is exactly the claimed Reflexive Undecidability. ∎
 
 **4.3.2 Remark 2 (Relation to SPAP, Incompleteness)**
 
@@ -235,23 +266,28 @@ Iterating yields $C(M_n)\ge C(M_0)+nk=c_0+nk$, which is (12). Hence $C(M_n)=\Ome
 
 **4.5.2 Theorem 14 (Predictive Complexity Divergence Near $\alpha_{SPAP}$)**
 
-For self-referential predictive systems subject to SPAP (operating within a model class $\mathcal{M}$ possessing Property R, Definition 10), let $\alpha_{SPAP} < 1$ be the theoretical maximum achievable average predictive performance (PP) for those aspects limited by SPAP (Theorem 10, Theorem 11). Let $C_{pred}(\alpha)$ denote the minimum necessary Predictive Physical Complexity ($C_P$, Equation 1) required by any physically realizable model $M \in \mathcal{M}$ to consistently achieve an average performance $\alpha$ (where $\alpha = PP$) on these SPAP-limited aspects.
-
-As performance $\alpha$ approaches the SPAP limit $\alpha_{SPAP}$ from below, define the performance gap
+For self-referential predictive systems subject to SPAP (operating within a model class $\mathcal{M}$ possessing Property R, Definition 10), let $\alpha_{SPAP} < 1$ be the theoretical maximum achievable average predictive performance (PP) for those aspects limited by SPAP (Theorem 10, Theorem 11). Define the performance gap
 $$
 \delta_{SPAP}:=\alpha_{SPAP}-\alpha \in (0,1).
 $$
-The calibration/verification cost required to operate within $\delta_{SPAP}$ of the SPAP boundary is governed by the universal statistical lower bound established in Appendix B.3 (Theorem B.2): achieving additive accuracy $\delta_{SPAP}$ with failure probability at most $\beta$ requires at least $\Omega(\log(1/\beta)/\delta_{SPAP}^2)$ effective verification/update operations. In particular, enforcing a uniform failure-probability budget over a horizon of $\mathcal{T}$ verification/update steps via $\beta=1/\mathcal{T}$ yields
+Let $C_{\text{uni}}(\delta_{SPAP})$ denote the minimum effective verification/update complexity required to maintain performance within $\delta_{SPAP}$ of the SPAP boundary on these SPAP-limited aspects.
+
+Then the universal statistical lower bound of Appendix B.3 (Theorem B.2) yields
+$$
+C_{\text{uni}}(\delta_{SPAP}) = \Omega\left( \frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2} \right). \tag{14}
+$$
+More generally, enforcing a uniform failure-probability budget over a horizon of $\mathcal{T}$ verification/update steps via $\beta=1/\mathcal{T}$ yields
 $$
 \mathcal{C}_{stat}(\delta_{SPAP}) = \Omega\left( \frac{\log \mathcal{T}}{\delta_{SPAP}^2} \right). \tag{13}
 $$
 
-Imposing the natural self-calibrated confidence requirement that the probability of violating the target accuracy is at most the target accuracy gap itself (i.e. failure probability $\le \delta_{SPAP}$, so $\beta=\delta_{SPAP}$) yields the sharp lower bound proved in Appendix B.3 (Theorem B.2):
+If, for the chosen operational realization, the complexity notion $C_{pred}(\alpha)$ lower-bounds the effective verification/update operations required by the task, i.e.
 $$
-\mathcal{C}_{pred}(\alpha) = \Omega\left( \frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2} \right). \tag{14}
+C_{pred}(\alpha)\ge C_{\text{uni}}(\delta_{SPAP}),
 $$
+then the same asymptotic lower bound transfers to $C_{pred}(\alpha)$.
 
-*Proof:* This is a direct specialization of Appendix B.3 (Theorem B.2). The general bound with failure probability $\beta$ gives $\Omega(\log(1/\beta)/\delta_{SPAP}^2)$; substituting $\beta=1/\mathcal{T}$ gives (13), and substituting $\beta=\delta_{SPAP}$ gives (14). ∎
+*Proof:* Appendix B.3 (Theorem B.2) proves the lower bound for the effective verification/update complexity needed to calibrate SPAP-limited performance to additive accuracy $\delta_{SPAP}$. Substituting $\beta=1/\mathcal{T}$ gives the horizon-budget form (13), and substituting $\beta=\delta_{SPAP}$ gives the self-calibrated form (14). The final sentence is the immediate consequence of the explicitly stated comparison hypothesis $C_{pred}(\alpha)\ge C_{\text{uni}}(\delta_{SPAP})$. ∎
 
 
 **Remark 3: Conceptual Synthesis—Prediction Relativity and its Physical Mechanism.**

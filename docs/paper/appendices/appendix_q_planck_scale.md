@@ -1287,11 +1287,11 @@ $$\boxed{\frac{\delta}{L_P} = \frac{\tau_{min}}{t_P}}$$
 
 *Proof.*
 
-**Step 1 (Finite-Speed Bound).** The finite causal propagation speed in the MPU substrate satisfies
+**Step 1 (Reference speed identification).** In the serialized nearest-neighbor propagation regime of Appendix E, and with the same no-preferred-frame scale identification used in Theorem E.10.2, the emergent causal speed satisfies
 $$
-c = \frac{\delta}{\tau_{min}}
+c = \frac{\delta}{\tau_{min}},
 $$
-as established in Appendix E (Theorem E.10.2), with $\delta$ the microscopic spatial spacing (Definition 35) and $\tau_{min}$ the minimum cycle time (Theorem 29).
+with $\delta$ the microscopic spatial spacing (Definition 35) and $\tau_{min}$ the minimum cycle time (Theorem 29).
 
 **Step 2 (Planck Unit Relation).** The Planck length and Planck time are defined through:
 
@@ -1301,11 +1301,12 @@ from which the identity $L_P/t_P = c$ follows by direct calculation:
 
 $$\frac{L_P}{t_P} = \sqrt{\frac{\hbar G/c^3}{\hbar G/c^5}} = \sqrt{c^2} = c$$
 
-**Step 3 (Scale Identification).** For the emergent discrete structure to be consistent with the continuum Planck scale physics, we identify the emergent speed $c$ appearing in Theorem 46 with the speed $c$ defining the Planck units. This identification ensures dimensional consistency between the discrete MPU network and the emergent continuum spacetime.
+**Step 3 (Scale Identification).** The equality imported from Appendix E should therefore be read as a condition on the PCE-optimal continuum scaling of the serialized regime, not as a theorem independent of that hypothesis.
 
-**Step 4 (Ratio Equality).** Equating the two expressions for $c$:
-
-$$\frac{\delta}{\tau_{min}} = \frac{L_P}{t_P}$$
+**Step 4 (Ratio Equality).** Under this identification,
+$$
+\frac{\delta}{\tau_{min}} = \frac{L_P}{t_P}.
+$$
 
 yields the stated result upon rearrangement:
 

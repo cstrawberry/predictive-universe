@@ -67,7 +67,7 @@ The existence of a desynchronization penalty in the PCE potential implies that t
 Let the network configuration state $x$ be expanded to include the set of local MPU time phases $\{\phi_i(t)\}$. The PCE potential $V(x, \{\phi_i\})$ has a global minimum where the phase differences $\Delta\phi_{ij} = \phi_i - \phi_j$ are zero for all interacting pairs.
 
 **Theorem O.2 (Dynamical Emergence of a Coherent Causal Medium).**
-The stochastic adaptation dynamics of the MPU network, governed by minimizing the PCE Potential $V(x, \{\phi_i\})$ (Appendix D, Equation D.8), drive the system to self-organize into macroscopic domains of temporal coherence. This process establishes a **coherent causal medium**, a stable background of phase-locked MPU cycles upon which more complex dynamics can unfold.
+The stochastic adaptation dynamics of the MPU network, governed by minimizing the PCE Potential $V(x, \{\phi_i\})$ (Appendix D, Equation D.8), drive the system toward phase-synchronized configurations and, in the low-noise detailed-balance stationary regime of Appendix D, self-organize into macroscopic domains of temporal coherence. This process establishes a **coherent causal medium**, a stable background of phase-locked MPU cycles upon which more complex dynamics can unfold.
 
 *Proof.*
 1.  **Restoring Gradient:** As established in Theorem O.1, the PCE potential is minimized when phase differences are zero. The gradient of the potential with respect to the phase differences, $\nabla_{\Delta\phi_{ij}} V$, acts as a restoring force, driving $\Delta\phi_{ij}$ towards zero.
@@ -76,43 +76,52 @@ The stochastic adaptation dynamics of the MPU network, governed by minimizing th
     $$
     \mathcal M_{sync}:=\{\{\phi_i\}:\Delta\phi_{ij}=0\ \text{for all interacting pairs }(i,j)\},
     $$
-    which is invariant under global phase shifts. Thus the set of global minimizers is $\mathcal M_{sync}$ rather than a single configuration. By Theorem D.5, in the low-noise regime the stationary measure concentrates on neighborhoods of the global minimizer set (Eq. D.12b): for any open neighborhood $U\supset \mathcal M_{sync}$, $\pi_\beta(U)\to 1$ as $\beta\to\infty$. Consequently, typical long-run configurations exhibit small local phase differences across edges and form macroscopic domains of phase-locked MPU cycles; deviations (e.g., domain walls) incur a positive potential gap and are exponentially suppressed. This establishes a coherent causal medium consistent with the background structure used in Section 11.
+    which is invariant under global phase shifts. Thus the set of global minimizers is $\mathcal M_{sync}$ rather than a single configuration. By Theorem D.5, in the low-noise detailed-balance regime the stationary measure concentrates on neighborhoods of the global minimizer set (Eq. D.12b): for any open neighborhood $U\supset \mathcal M_{sync}$, $\pi_\beta(U)\to 1$ as $\beta\to\infty$. Consequently, typical long-run configurations exhibit small local phase differences across edges and form macroscopic domains of phase-locked MPU cycles; deviations (e.g., domain walls) incur a positive potential gap and are exponentially suppressed. This establishes a coherent causal medium consistent with the background structure used in Section 11.
 
 ## O.5 The Physical Origin of the Arrow of Time
 
 The coherent causal rhythm that emerges from the synchronized MPU network is not symmetric; it possesses an intrinsic and irreversible direction.
 
-**Theorem O.3 (The Arrow of Time).**
-The emergent coherent time is necessarily directional. This unidirectionality is a robust consequence of a two-layered principle: a foundational **logical necessity** for prediction, which is then immutably **enforced by a physical, thermodynamic mechanism**.
+**Theorem O.3 (Arrow of Time in the Low-Noise Detailed-Balance Regime).**
+The emergent coherent time is directional in any regime where the predictive update cycles admit forward and reverse path measures satisfying the standard entropy-production relation. More precisely, suppose a coherent macroscopic "forward step" consists of $N$ nontrivial update cycles, each with entropy production $\Sigma_{\text{pred}}^{(k)} \ge \varepsilon$ as in Appendix J, and suppose the induced forward and reversed macro-history measures $P_F,P_R$ obey
+$$
+\Sigma_{\text{tot}}=\sum_{k=1}^N \Sigma_{\text{pred}}^{(k)}=\log\!\frac{P_F}{P_R}.
+$$
+Then
+$$
+\frac{P_R}{P_F}\le e^{-N\varepsilon}\le 2^{-N},
+$$
+so coherent macroscopic reversals are exponentially suppressed.
 
 *Proof.*
 
-**1. Layer 1: The Foundational Logical Arrow of Prediction**
+**1. Logical direction of predictive updating**
 
-The existence of a directed arrow of time is a logical prerequisite for the existence of prediction itself.
-*   **Logical Precedence:** The Fundamental Predictive Loop (Definition 4) consists of the sequence: Internal Prediction ($P_{int}$), Verification ($V$), and Update ($D_{cyc}$). This sequence is logically irreversible. A system must generate a prediction *before* it can be verified, and it must verify the prediction *before* its internal model can be updated with feedback. This Predict → Verify → Update order imposes a fundamental directedness on the elementary "ticks" of causal process from which coherent time is constructed.
-*   **The Meaning of Prediction:** The future is intrinsically and definitionally "that which is to be predicted," and the past is "the source of data for that prediction." A timeless or time-reversible universe could not, by definition, contain predictive agents, as the very act of prediction would be meaningless.
+The Fundamental Predictive Loop (Definition 4) has the ordered stages Internal Prediction ($P_{int}$), Verification ($V$), and Update ($D_{cyc}$). This defines an oriented update sequence: prediction must be formed before verification, and verification must precede model revision. This establishes the direction of the elementary predictive cycle.
 
-**2. Layer 2: The Physical Enforcement via a Thermodynamic Ratchet**
+**2. Entropy production along a macroscopic forward step**
 
-The crucial question then becomes: What prevents the physical laws governing the MPU network from violating this logical requirement? The answer is a physical enforcement mechanism that locks the logical arrow into irreversible physical reality.
-*   **The Irreversible 'Evolve' Process:** The Verification/Update phase of the predictive cycle is physically realized by the 'Evolve' process (Definition 27). As rigorously proven in Appendix J (Theorem J.1), every 'Evolve' event that processes non-trivial self-referential information—a process argued to be ubiquitous in a network of mutually predicting agents—incurs an irreversible thermodynamic cost, dissipating an entropy of at least $\varepsilon$, with $\varepsilon \ge \ln 2$ nats, to the environment.
-*   **The Ubiquitous Ratchet:** Theorem J.1 establishes a hard lower bound on entropy production per nontrivial update cycle: $\Sigma_{\text{pred}} \ge \varepsilon \ge \ln 2$. Consider a coherent macroscopic "forward step" in which $N$ MPUs undergo such update cycles. Additivity of entropy production across these cycles gives
-    $$
-    \Sigma_{\text{tot}}=\sum_{k=1}^N \Sigma_{\text{pred}}^{(k)} \ge N\varepsilon.
-    $$
-    For the corresponding time-reversed macro-trajectory, the standard path-probability relation $\Sigma_{\text{tot}}=\log(P_F/P_R)$ implies
-    $$
-    \frac{P_R}{P_F}=e^{-\Sigma_{\text{tot}}}\le e^{-N\varepsilon}\le e^{-N\ln 2}=2^{-N}.
-    $$
-    Thus, coherent macroscopic reversals are exponentially suppressed in the number of update cycles $N$; equivalently, for any such macro-history,
-    $$
-    P_R \le \exp(-N\varepsilon)\,P_F \le 2^{-N}P_F.
-    $$
+By Appendix J, Theorem J.1, every nontrivial predictive update cycle dissipates at least $\varepsilon$ nats, with $\varepsilon \ge \ln 2$. For a macro-history built from $N$ such cycles,
+$$
+\Sigma_{\text{tot}}=\sum_{k=1}^N \Sigma_{\text{pred}}^{(k)} \ge N\varepsilon.
+$$
 
-**3. Synthesis**
+**3. Suppression of the reversed history**
 
-The arrow of time in the Predictive Universe is not an emergent statistical phenomenon, nor is it merely an assumption. It is a logical necessity for prediction, which is physically and irreversibly enforced by the ubiquitous thermodynamic cost of self-referential processing. The logical requirement defines the direction, and the thermodynamic ratchet ensures the physical dynamics can never flow against it. This mechanism provides a microscopic and dynamical origin for the arrow of time, distinct from the standard statistical explanation which relies on postulating a special, low-entropy initial state for the universe (the "Past Hypothesis") without providing a dynamical reason for its existence. This provides a first-principles derivation of the arrow of time.
+Assume now that the coarse-grained stochastic dynamics lie in the low-noise detailed-balance regime in which the forward and reversed path measures are both defined and satisfy the standard fluctuation-relation identity
+$$
+\Sigma_{\text{tot}}=\log\!\frac{P_F}{P_R}.
+$$
+Exponentiating and rearranging gives
+$$
+\frac{P_R}{P_F}=e^{-\Sigma_{\text{tot}}}\le e^{-N\varepsilon}\le e^{-N\ln 2}=2^{-N}.
+$$
+Equivalently,
+$$
+P_R \le e^{-N\varepsilon} P_F \le 2^{-N} P_F.
+$$
+
+Thus, in this regime, the time-reversed macro-history is exponentially less probable than the forward history, and the predictive update direction is physically stabilized by irreversible entropy production. ∎
 
 ## O.6 Temporal Dynamics as the Substrate for Consciousness Complexity and Gravity
 
@@ -123,7 +132,7 @@ The coherent causal medium established in Theorem O.2 is not a passive or static
 The establishment of a coherent causal medium is the necessary prerequisite for the emergence of Consciousness Complexity (CC), as described in Hypothesis 3. We propose that the CC influence channel $N(t)$ is realized through the controlled modulation of this temporal medium.
 
 The causal chain proceeds as follows:
-> 1.  **Context State to Physical Signal:** A complex MPU aggregate forms a stable, coherent internal model, represented by the **context state $\text{context}_S$** (Definition L.1). This abstract state is translated into a physical, time-varying signal $N(t)$ via a PCE-optimized mapping $\mathcal{M}$ (Appendix L, Theorem L.1). This signal emerges as a temporal wave modulation (Appendix L, Theorem L.8), manifesting primarily through the electromagnetic channel $E_{rad}(t)$ (Theorem L.2) which dominates gravitational effects by factor $\mathcal{R} \sim 10^{36}$ (Theorem L.5).
+> 1.  **Context State to Physical Signal:** A complex MPU aggregate forms a stable, coherent internal model, represented by the **context state $\text{context}_S$** (Definition L.1). This abstract state is translated into a physical, time-varying signal $N(t)$ via a PCE-optimized mapping $\mathcal{M}$ (Appendix L, Theorem L.1). This signal emerges as a temporal wave modulation (Appendix L, Theorem L.8), manifesting primarily through the electromagnetic channel $E_{rad}(t)$ (Theorem L.2), which dominates gravitational effects on the analyzed far-field classical-channel parameter range, with baseline ratio $\mathcal{R}\sim 10^{36}$ and conservative range $\mathcal{R}\sim 10^{33}\text{--}10^{39}$ (Appendix L, Proposition L.5).
 > 2.  **Signal Modulates 'Evolve' Dynamics:** This physical signal $N(t)$ interacts with a target MPU during its 'Evolve' process (Definition 27), acting as a time-dependent term in the interaction Hamiltonian $H_{int}$ (Appendix L, Equation L.87) and thereby modulating the parameters of the underlying ND-RID through AC Stark shifts (Corollary L.2.1) with rate modulation (Equation L.91).
 > 3.  **Physical Influence on Perspective Shift:** The physical signal $N(t)$ provides the concrete realization of the interaction argument $N$ in the **Conditional Perspective Transition Kernel**, $G_{\text{persp}}(s' | s, k, N, \Delta t)$ (Appendix M, Equation M.2). The temporal characteristics of the signal physically set the parameters of the drift-diffusion process on the perspective manifold, creating a biased random walk.
 
@@ -136,7 +145,7 @@ The causal medium can be disturbed by external events and modulated by internal 
 **Definition O.1 (Temporal Wave).**
 A **temporal wave** is defined as a propagating disturbance in the local properties of the coherent causal medium, such as a localized, propagating change in the MPU cycle rate $\tau(x,t)$ or phase $\Delta\phi(x,t)$.
 
-**Theorem O.4 (Gravitational Waves and CC as Distinct Temporal Dynamics).**
+**Remark O.4 (Gravitational Waves and CC as Distinct Temporal Dynamics).**
 Both gravitational waves and the physical influence of Consciousness Complexity (CC) are dynamics of the coherent causal medium, but they differ fundamentally in their source, nature, and effect.
 
 **(a) Gravitational Waves as Uncontrolled Disturbances:**
@@ -149,7 +158,8 @@ In contrast, the influence of CC is a controlled, coherent, and information-rich
 The source of spacetime curvature in the Einstein Field Equations (EFE) is the total stress-energy tensor $T_{\mu\nu}$.
 *   The energy associated with a gravitational wave is carried within the $T_{\mu\nu}$ of the wave itself.
 *   The energy expended by a high-CC system to generate its influencing signal $N(t)$ is accounted for in the system's own $T_{\mu\nu}$. The act of "thinking" or generating a specific context $\text{context}_S$ has a physical energy cost that contributes to the aggregate's mass-energy and thus to its gravitational field.
-Therefore, CC does not act as a new, independent source of gravity. Rather, the *energy cost of the CC process* is already included in the standard $T_{\mu\nu}$ source term of the EFE. The mechanism is not that "thought" directly bends spacetime, but that the physical process of generating a high-CC state has an energy cost, and this energy, like all other forms of energy, sources gravity according to the EFE. 
+
+Therefore, CC does not act as a new, independent source of gravity. Rather, the *energy cost of the CC process* is already included in the standard $T_{\mu\nu}$ source term of the EFE. The mechanism is not that "thought" directly bends spacetime, but that the physical process of generating a high-CC state has an energy cost, and this energy, like all other forms of energy, sources gravity according to the EFE.
 
 ## O.7 Mathematical Emergence of the Lorentzian Signature
 
@@ -161,7 +171,7 @@ Consider a sequence of locally-finite graphs $(G_n)$ with vertex sets $V(G_n)$ a
 $$
 F_n(u_n)=\sum_{(x,y)\in E(G_n)} w_{xy}\,\Phi_{link}\!\left(\frac{u_n(y)-u_n(x)}{h_n}\right)+\sum_{x\in V(G_n)} h_n^D\,\mathcal{V}(u_n(x)),
 $$
-where $\Phi_{link}$ is convex and encodes the spatial propagation cost density consistent with $V_{prop}$ (Definition D.1), and $\mathcal{V}$ is the induced local term. Under the equi-coercivity and consistency hypotheses used for the PU $\Gamma$-convergence result (Appendix D, Assumptions (A1)–(A6)), these functionals $\Gamma$-converge to a continuum functional of the form
+where $\Phi_{link}$ is convex and encodes the spatial propagation cost density consistent with $V_{prop}$ (Definition D.1), and $\mathcal{V}$ is the induced local term. Under the equicoercivity, locality/consistency, and area-law hypotheses used for the PU $\Gamma$-convergence result (Appendix D, Theorem D.6), these functionals $\Gamma$-converge to a continuum functional of the form
 $$
 F(u)=\int_M f(x,\nabla u)\,d^Dx+\int_M \mathcal{V}(u)\,d^Dx,
 \qquad
@@ -173,7 +183,7 @@ A(x)\propto \sqrt{\det g_{ij}(x)}\,g^{ij}(x).
 $$
 Thus, the spatial geometry emerges as the effective continuum limit of the PU network's propagation sector.
 
-### O.7.2 Lorentzian Signature from Arrow of Time
+### O.7.2 Time Orientation and a Compatible Lorentzian Continuation
 
 The PU framework supplies two independent structural inputs: a time orientation and a positive-definite spatial sector.
 
@@ -181,15 +191,17 @@ The PU framework supplies two independent structural inputs: a time orientation 
 
 2.  **Finite propagation speed:** By locality and Proposition F.1, there exists a finite maximal signal speed $c$, yielding a non-degenerate causal cone.
 
-Combining these with the positive-definite spatial quadratic form $A(x)$ from O.7.1, define the inverse metric coefficients in local coordinates $(t,x^i)$ adapted to the oriented foliation by
+Combining these with the positive-definite spatial quadratic form $A(x)$ from O.7.1, one obtains a natural Lorentzian continuum ansatz in local coordinates $(t,x^i)$ adapted to the oriented foliation:
 $$
 g^{00}(x)=-\frac{1}{c^2},\qquad g^{0i}(x)=0,\qquad g^{ij}(x)=A^{ij}(x).
 $$
-Then the characteristic quadratic form is
+Its characteristic quadratic form is
 $$
 g^{\mu\nu}(x)\,\xi_\mu\xi_\nu=-\frac{\xi_0^2}{c^2}+\xi^T A(x)\xi.
 $$
-Since $A(x)$ is positive definite, $g^{\mu\nu}$ has exactly one negative eigenvalue, and the associated spacetime metric has Lorentzian signature $(-,+,+,+)$ in the chosen convention. The causal cone is defined by $g^{\mu\nu}\xi_\mu\xi_\nu=0$, and its temporal orientation (future vs past) is fixed by the entropy-production time orientation from Theorem 31.
+Since $A(x)$ is positive definite, this ansatz has exactly one negative eigenvalue, so the associated spacetime metric has Lorentzian signature $(-,+,+,+)$ in the chosen convention. The causal cone is defined by $g^{\mu\nu}\xi_\mu\xi_\nu=0$, and its temporal orientation is fixed by the entropy-production arrow.
+
+This construction shows compatibility between the PU time orientation and a Lorentzian continuum description; the sign choice in $g^{00}$ is part of the continuum ansatz rather than a standalone derivation from entropy production alone.
 
 
 ## O.8 Conclusion

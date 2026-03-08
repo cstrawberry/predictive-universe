@@ -266,9 +266,8 @@ The resolution employs the geometric structures established in earlier sections:
 **Definition K.6.2 (PCE-Attractor State).**
 $$\rho_0 = \frac{1}{a}I_a \oplus 0_b = \frac{1}{2}\begin{pmatrix} I_2 & 0 \\ 0 & 0_6 \end{pmatrix}$$
 
-**Theorem Z.6.3a (Attractor Orbit).** The orbit of $\rho_0$ under unitary conjugation is:
+**Imported result (Theorem Z.6.3a, Attractor Orbit).** The orbit of $\rho_0$ under unitary conjugation is:
 $$\mathcal{O}_{\rho_0} = \{U\rho_0 U^\dagger : U \in U(8)\} \cong \text{Gr}(2,8)$$
-
 the complex Grassmannian of 2-planes in $\mathbb{C}^8$, with complex dimension $\dim_{\mathbb{C}} = ab = 12$ and real dimension $\dim_{\mathbb{R}} = 2ab = 24 = M$.
 
 ### K.6.3 The σ-Involution on Gr(2,8)
@@ -632,7 +631,7 @@ $$\eta_B = (6.2 \pm 0.5) \times 10^{-10}$$
 $$
 \eta_B = \mathcal{C}_{eff} \cdot \mathcal{F}_{CP} \cdot f_{wash} \cdot e^{-\kappa_B}.
 $$
-The baryogenesis complexity is $\kappa_B = \kappa_{CP} + \kappa_{gen}$ with $\kappa_{CP} = \kappa_{EW}/2 = 19.25$ (Theorem T.5) and $\kappa_{gen} = \varepsilon/N_g = (\ln 2)/3 \approx 0.231$, hence $\kappa_B = 19.48$ (Appendix Y, Theorem Y.8.1). The CP factor is $\mathcal{F}_{CP}=\tanh(\mathcal{S}\sin\delta)$ (Appendix Y, Theorem Y.9) with $\mathcal{S}=1/(2\pi\alpha_W)\approx 4.77$ and $\delta=66.7^\circ$ (Theorem K.6.18), so $\mathcal{S}\sin\delta\approx 4.4$ and $\mathcal{F}_{CP}\approx 1$. The efficiency coefficient is $\mathcal{C}_{eff}=\frac{c_{sph}}{2N_g}\mathcal{S}f_{neq}$ (Appendix Y, Proposition Y.9.1) with $c_{sph}=28/79$, $N_g=3$, and $f_{neq}\approx 1$, giving $\mathcal{C}_{eff}\approx 0.282$. With $f_{wash}\approx 0.63\pm 0.05$ (Appendix Y, Proposition Y.9.2) and $e^{-\kappa_B}=e^{-19.48}\approx 3.49\times 10^{-9}$, one obtains
+The baryogenesis complexity is $\kappa_B = \kappa_{CP} + \kappa_{gen}$ with $\kappa_{CP} = \kappa_{EW}/2 = 19.25$ (Theorem T.5) and $\kappa_{gen} = \varepsilon/N_g = (\ln 2)/3 \approx 0.231$, hence $\kappa_B = 19.48$ (Appendix Y, Theorem Y.8). The CP factor is $\mathcal{F}_{CP}=\tanh(\mathcal{S}\sin\delta)$ (Appendix Y, Theorem Y.9) with $\mathcal{S}=1/(2\pi\alpha_W)\approx 4.77$ and $\delta=66.7^\circ$ (Theorem K.6.18), so $\mathcal{S}\sin\delta\approx 4.4$ and $\mathcal{F}_{CP}\approx 1$. The efficiency coefficient is $\mathcal{C}_{eff}=\frac{c_{sph}}{2N_g}\mathcal{S}f_{neq}$ (Appendix Y, Proposition Y.9.1) with $c_{sph}=28/79$, $N_g=3$, and $f_{neq}\approx 1$, giving $\mathcal{C}_{eff}\approx 0.282$. With $f_{wash}\approx 0.63\pm 0.05$ (Appendix Y, Proposition Y.9.2) and $e^{-\kappa_B}=e^{-19.48}\approx 3.49\times 10^{-9}$, one obtains
 $$
 \eta_B \approx 0.282 \times 1 \times 0.63 \times 3.49\times 10^{-9} = 6.2\times 10^{-10},
 $$
@@ -795,11 +794,11 @@ in excellent agreement with the observed hierarchy.
 
 **Phenomenological Success:**
 - Hierarchy: $v \approx 246$ GeV (input) → test internal consistency
-- $\sin^2\theta_W(M_Z) \approx 0.2312$ from one-loop SM RG evolution with Bures-matched boundary $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2+5Z_1)$ **(Theorem T.16, T.18)**
+- $\sin^2\theta_W(M_Z)$: conditional on the lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$ on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$, one-loop SM RG evolution from the matching boundary $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2+5Z_1)$ with $Z_i=1+\Delta_i/24$ yields the observed Z-pole range **(Theorem T.16, T.18)**
 - $m_H \approx 125$ GeV from metastability (predicted with zero continuously adjustable parameters)
 - Fermion mass ratios (Appendix T, Section T.25)
 
-This resolution is complete and rigorous, transforming the hierarchy problem from a fine-tuning puzzle into a demonstration of discrete information-theoretic structure in the vacuum.
+This resolution of the electroweak hierarchy is complete for $v$ and $m_H$; the quantitative gauge-threshold sector ($\sin^2\theta_W$, $\alpha_s$, $\alpha_{\mathrm{em}}^{-1}$ at the Z pole) remains conditional on the lifted spectral computation.
 
 
 ## K.8 Cosmological Constant and Primordial Perturbations

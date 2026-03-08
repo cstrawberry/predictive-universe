@@ -210,12 +210,12 @@ F_Q[\rho_\theta^{\otimes N}] = \sum_{i=1}^N F_Q[\rho_\theta] = N \cdot F_Q[\rho_
 $$
 by the additivity of QFI for tensor product states. ∎
 
-**Application:**
+**Application (conditional i.i.d. repetition model):**
 - One irreversible comparison event costs at least $\varepsilon$, with $\varepsilon \ge \ln 2$, nats (Landauer principle [Landauer 1961], Theorem 31)
 - At the PCE-optimal operating point, the per-cycle information budget is $C_{\mathrm{max}}^* = 2\varepsilon$ (Appendix Q, Equation Q.10)
-- Therefore at most $N := C_{\mathrm{max}}^*/\varepsilon = 2$ independent Landauer-costed comparison events can be supported per cycle; the bridge-law normalization uses this maximal count
+- If the comparison events contributing to this budget are modeled as independent identically prepared Landauer-costed comparison channels, then at most $N := C_{\mathrm{max}}^*/\varepsilon = 2$ such events can be supported per cycle; the bridge-law normalization adopts this maximal i.i.d. count
 
-Thus, at $C=C_{\mathrm{max}}^*$, the repetition multiplier is $N=2$.
+Thus, under the i.i.d. repetition model at $C=C_{\mathrm{max}}^*$, the repetition multiplier is $N=2$.
 
 #### H.4.2.4 Factor 3: Spatial Projection ($(D-1)/D = 3/4$)
 
@@ -273,39 +273,45 @@ $\square$
 
 #### H.4.2.6 Why the Four Factors Multiply (Product Structure)
 
-**Theorem H.3 (Multiplicative Structure from Sequential Coarse-Graining).**
-*Under the attractor symmetries (isotropy), each coarse-graining map acts as a scalar rescaling on the QFI quadratic form in expectation. For scalar rescalings, the effects multiply.*
+**Theorem H.3 (Multiplicative Structure under Factorized Scalar Coarse-Graining).**
+*Assume the bridge-law maps are applied sequentially so that each stage rescales the already coarse-grained QFI quadratic form by a scalar on the image of the previous stage, and assume the repetition factor is implemented by i.i.d. copies as in Theorem H.1b. Then the total response factor is the product of the individual scalar factors.*
 
-*Proof.* Let $A$ and $B$ be linear maps that, under isotropy averaging, act as scalar multiples:
+*Proof.* Let
 $$
-\mathbb{E}[|A\hat{X}|^2] = \alpha \cdot \mathbb{E}[|\hat{X}|^2], \quad \mathbb{E}[|B\hat{X}|^2] = \beta \cdot \mathbb{E}[|\hat{X}|^2]
+Q(\hat X):=\mathbb{E}[|\hat X|^2].
 $$
-
-For the composition:
+Suppose $B$ satisfies
 $$
-\mathbb{E}[|AB\hat{X}|^2] = \alpha \cdot \beta \cdot \mathbb{E}[|\hat{X}|^2]
+Q(B\hat X)=\beta\,Q(\hat X),
 $$
-
-This follows because under the symmetry (Haar) average at the attractor, the intermediate vector $B\hat{X}$ is again isotropically distributed (up to scaling), so the $A$ projection applies with its scalar factor $\alpha$. ∎
+and suppose $A$ acts by a scalar on the image of $B$ in the sense that
+$$
+Q(AB\hat X)=\alpha\,Q(B\hat X).
+$$
+Then
+$$
+Q(AB\hat X)=\alpha\beta\,Q(\hat X).
+$$
+Iterating this identity across the active-subspace projection, spatial projection, and generator normalization yields the product of their scalar factors. The repetition factor multiplies independently by QFI additivity when the repetitions are i.i.d. Hence, under these factorization hypotheses, the total bridge-law coefficient is the product of the displayed factors. ∎
 
 **Application to the Four Factors:**
 
 1. **$\Pi_{\mathrm{act}}$ (active participation):** Scalar factor $a/d_0$ by Theorem H.1a
 2. **$\Pi_{\mathrm{sp}}$ (spatial projection):** Scalar factor $(D-1)/D$ by Theorem H.2
 3. **Normalization:** Factor $1/\sqrt{K_0}$ by Theorem H.1c
-4. **Repetition:** Factor $N = C/\varepsilon$ by Theorem H.1b (QFI additivity for i.i.d.)
+4. **Repetition:** Factor $N = C/\varepsilon$ by Theorem H.1b under the i.i.d. repetition model
 
-The chain $\Pi_{\mathrm{sp}} \circ \Pi_{\mathrm{act}}$ composes multiplicatively:
+The chain $\Pi_{\mathrm{sp}} \circ \Pi_{\mathrm{act}}$ is multiplicative once the scalar-action hypothesis is imposed:
 $$
-\mathbb{E}[|\Pi_{\mathrm{sp}} \Pi_{\mathrm{act}} \hat{X}|^2] = \frac{a}{d_0} \cdot \frac{D-1}{D}
+\mathbb{E}[|\Pi_{\mathrm{sp}} \Pi_{\mathrm{act}} \hat{X}|^2] = \frac{a}{d_0} \cdot \frac{D-1}{D}\,\mathbb{E}[|\hat X|^2].
 $$
 
-The repetition count multiplies by QFI additivity. The normalization factor is multiplicative by construction.
+The repetition count multiplies by QFI additivity in the i.i.d. setting. The normalization factor is multiplicative by construction.
 
-**Therefore:** The product structure is **forced** by:
-1. Sequential coarse-graining becoming scalar under symmetry
-2. QFI additivity over independent repetitions
-3. Generator normalization being multiplicative
+**Therefore:** the product structure holds under:
+1. scalar action on the already coarse-grained quadratic form at each stage,
+2. QFI additivity over independent repetitions, and
+3. multiplicative generator normalization.
 
 #### H.4.2.7 Why Only These Four Factors (Completeness)
 
@@ -329,7 +335,7 @@ Curvature data ($K_{\mathrm{eff}} = 2$, scalar curvature $S_B = 768$, etc.) ente
 
 #### H.4.2.8 Combined Result
 
-Combining the four rigorously derived factors at the operating point $C = C_{\mathrm{max}} = 2\varepsilon$:
+Combining the four factors within the bridge-law normalization and the factorized scalar coarse-graining ansatz of Theorem H.3 at the operating point $C = C_{\mathrm{max}} = 2\varepsilon$:
 $$
 \eta'(2\varepsilon) = \frac{C_{\mathrm{max}}}{\varepsilon} \cdot \frac{a}{d_0} \cdot \frac{D-1}{D} \cdot \frac{1}{\sqrt{K_0}} = 2 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}} = \frac{3}{8\sqrt{3}} \approx 0.2165
 \tag{H.4b}
@@ -343,7 +349,7 @@ a_0 = c^2\sqrt{\frac{\Lambda}{3}} \approx 5.44 \times 10^{-10} \text{ m/s}^2
 \tag{H.5}
 $$
 
-With the derived efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$:
+With the corresponding efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$:
 $$
 g_0 = \eta' \cdot a_0 \approx 0.2165 \times 5.44 \times 10^{-10} \approx 1.18 \times 10^{-10} \text{ m/s}^2
 \tag{H.6}
@@ -520,7 +526,7 @@ $$
 
 Through careful dimensional analysis, all core PU equations are shown to be homogeneous according to the defined units. The Unruh–de Sitter temperature matching criterion (Proposition H.1) yields the cosmic acceleration floor $a_0 = c^2\sqrt{\Lambda/3}$.
 
-The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is **rigorously derived** from PU constants via the QFI linear-response bridge law (Definition H.0), combining four factors each proven by standard mathematical theorems:
+The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed once the QFI linear-response bridge law of Definition H.0 is adopted and the four normalized factors are inserted into that bridge-law formula:
 
 | Factor | Value | Source |
 |--------|-------|--------|
@@ -533,7 +539,7 @@ The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agre
 
 The derivation is conditional on Definition H.0, whose validity is tested by predictive agreement.
 
-This derivation removes the last phenomenological parameter from the scale-dependent gravity model of Appendix I, tying galaxy dynamics directly to PU constants and the cosmological vacuum structure.
+With that bridge-law normalization fixed, the scale-dependent gravity model of Appendix I has no remaining continuously adjustable parameter.
 
 
 

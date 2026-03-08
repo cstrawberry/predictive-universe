@@ -119,6 +119,10 @@ The transition from the discrete MPU network to continuum physics is formalized 
     $$
     This convergence must hold uniformly on local algebras supported in balls of a fixed physical radius (see Appendix D; regularity in Appendix C).
 
+4.  **Compatible Embeddings:** The canonical maps $\iota_n$ used to form the inductive limit are isometric $*$-monomorphisms that agree on overlaps, so the quasi-local inductive limit is well-defined.
+
+5.  **Lightcone Identification:** The geometric causal cone of the emergent Lorentzian manifold is identified with the limiting Lieb–Robinson cone, so that the invariant speed of the continuum geometry coincides with the limiting propagation speed controlling the commutator estimate.
+
 In the ND–RID setting with MPU cycle time $\tau$, interaction radius $r_0$ (max graph distance per update), bounded local interaction norm $J$, and maximal network degree $z_{\max}$, these hypotheses imply a uniform Lieb–Robinson bound with constants depending on these micro-parameters; in particular, the emergent Lieb-Robinson velocity scales as $v_{LR}=O(r_0/\tau)$. Then, the continuum limit exists and defines a net $\mathfrak{A}(\mathcal{O})$ on a Lorentzian manifold $(M, g_{\mu\nu})$ with the following properties:
 
 1.  **Geometric Limit:** The sequence of discrete metric spaces converges to the manifold: $(\mathcal{V}_b, d_b) \to (M, g_{\mu\nu})$ (realizing Theorem 43 and Theorem 46).
@@ -183,7 +187,32 @@ AQFT allows for a rigorous, state-dependent definition of the macroscopic MPU st
 
 *   **Theorem F.1 (Covariant Conservation of $T_{\mu\nu}^{(MPU)}$ in AQFT).** Assuming the effective action $S_{eff}[\omega, g]$ is generally covariant (invariant under diffeomorphisms of $M$), the variationally defined stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}(x)$ (Equation F.3) is covariantly conserved ($\nabla^{\mu} T_{\mu\nu}^{(\mathrm{MPU})} = 0$) when the emergent dynamical equations for the state $\omega$ (derived from $\delta S_{eff} / \delta \omega = 0$) and the geometry $g_{\mu\nu}$ (if it is also dynamical) are satisfied (on-shell).
 
-*Proof:* This is a standard result from classical and quantum field theory in curved spacetime, following from Noether's second theorem applied to the diffeomorphism invariance of the action functional. If the action is invariant under a symmetry, the variation of the action with respect to the symmetry parameter leads to a conserved current or tensor. For diffeomorphism invariance, this conserved quantity is the stress-energy tensor, and its conservation is expressed as covariant divergence being zero on-shell.
+*Proof:* Let $\xi^\mu$ be a smooth compactly supported vector field on $M$ generating an infinitesimal diffeomorphism. General covariance of the effective action means
+$$
+\delta_\xi S_{eff}[\omega,g]=0.
+$$
+On shell, the variation with respect to the state $\omega$ vanishes by the emergent equations of motion, so only the metric variation contributes. Using Equation (F.3),
+$$
+0=\delta_\xi S_{eff}
+=\frac{1}{2}\int_M d^4x\,\sqrt{-g}\,T^{\mu\nu}_{(\mathrm{MPU})}\,\delta_\xi g_{\mu\nu}.
+$$
+For an infinitesimal diffeomorphism,
+$$
+\delta_\xi g_{\mu\nu}=\nabla_\mu \xi_\nu+\nabla_\nu \xi_\mu.
+$$
+Since the variational stress-energy tensor is symmetric in its indices,
+$$
+0=\int_M d^4x\,\sqrt{-g}\,T^{\mu\nu}_{(\mathrm{MPU})}\nabla_\mu \xi_\nu.
+$$
+Integrating by parts and using the compact support of $\xi$ to remove the boundary term gives
+$$
+0=-\int_M d^4x\,\sqrt{-g}\,\bigl(\nabla_\mu T^{\mu}{}_{\nu\,(\mathrm{MPU})}\bigr)\xi^\nu.
+$$
+Because $\xi^\nu$ is arbitrary, the fundamental lemma of the calculus of variations implies
+$$
+\nabla_\mu T^{\mu}{}_{\nu\,(\mathrm{MPU})}=0.
+$$
+Thus the variationally defined stress-energy tensor is covariantly conserved on shell. ∎
 
 **F.6 Rigorous Formulation of Locality and Statistical FTL**
 
@@ -197,8 +226,7 @@ AQFT provides the precise language to formulate PU's stance on locality, disting
     $$
     \omega_{C_{A,1}}(A \otimes B) \neq \omega_{C_{A,2}}(A \otimes B) \quad \text{(Statistical FTL Correlation)} \quad \tag{F.4}
     $$
-    This dependence of joint statistics on a distant context is a manifestation of correlations encoded in the global state $\omega$ and modulated by Alice's local CC context. Crucially, this does *not* violate operator locality (Corollary F.1) or the no-signaling principle for Bob's local, unconditional statistics, as $\mathrm{Tr}_A[\omega_{C_A}(A \otimes B)]$ remains independent of $C_A$. The influence is mediated by the *state* $\omega$, not by superluminal propagation of effects through local operations.
-    This dependence of local statistics on a distant context is a manifestation of correlations encoded in the global state $\omega$. Crucially, this does *not* violate operator locality (Corollary F.1), as the operators themselves still commute. The influence is mediated by the *state* $\omega$, not by superluminal propagation of effects through local operations.
+    This dependence of joint statistics on a distant context is a manifestation of correlations encoded in the global state $\omega$ and modulated by Alice's local CC context. Crucially, this does *not* violate operator locality (Corollary F.1) or the no-signaling principle for Bob's local, unconditional statistics, because Bob's marginals are the quantities $\omega_{C_A}(\mathbf{1}_A \otimes B)$ and remain independent of $C_A$ for every local observable $B \in \mathfrak{A}(\mathcal{O}_B)$. The influence is mediated by the *state* $\omega$, not by superluminal propagation of effects through local operations.
 
 4.  **Compatibility with Operational Causality:** Operator locality together with local CP‑TP structure implies no‑signaling at the level of marginals: for any local CPTP map $\Phi_A$ on $A$,
 $$
@@ -249,14 +277,20 @@ The spin-statistics theorem requires four ingredients, all of which are derived 
 | **Positive Energy** | Bounded-below Hamiltonian $\hat{H}_v \geq 0$ | Theorem 29, Appendix B |
 | **Local Field Algebra** | Emergent net $\mathfrak{A}(\mathcal{O})$ | Theorem F.0, Definition F.2 |
 
-**Theorem F.0** establishes that under the stated convergence conditions, the discrete MPU algebras converge to a Haag-Kastler net. **Corollary F.1** establishes that spacelike-separated observables commute in the continuum limit. **Theorem 46** establishes the Lorentzian signature with finite invariant speed $c$. **Theorem 29** establishes the existence of a self-adjoint Hamiltonian operator $\hat{H}_v$ for each MPU with bounded-below spectrum, which lifts to a positive-energy representation of the emergent Poincaré group via the coarse-graining procedure of Section F.4.
+**Summary.** Theorem F.0 establishes that under the stated convergence conditions, the discrete MPU algebras converge to a Haag-Kastler net. Corollary F.1 establishes that spacelike-separated observables commute in the continuum limit. Theorem 46 establishes the Lorentzian signature with finite invariant speed $c$. Theorem 29 establishes the existence of a self-adjoint Hamiltonian operator $\hat{H}_v$ for each MPU with bounded-below spectrum, which lifts to a positive-energy representation of the emergent Poincaré group via the coarse-graining procedure of Section F.4.
 
 ---
 
 ### F.9.2 The Spin-Statistics Theorem
 
 **Theorem F.2 (Spin-Statistics Connection).**
-In the emergent AQFT $(\mathfrak{A}, \mathcal{H}, U(\Lambda))$ satisfying the Haag-Kastler axioms (Theorem F.0), fields transforming under integer-spin representations of the Lorentz group satisfy Bose-Einstein statistics (symmetric multi-particle wavefunctions), while fields transforming under half-integer-spin representations satisfy Fermi-Dirac statistics (antisymmetric multi-particle wavefunctions).
+Assume the emergent AQFT $(\mathfrak{A}, \mathcal{H}, U(\Lambda))$ satisfies the Haag-Kastler axioms (Theorem F.0) and, in addition, admits a Wightman realization with:
+1. a unitary representation of the cover of the proper orthochronous Lorentz group acting covariantly on fields,
+2. a unique invariant vacuum $\Omega$,
+3. the spectrum condition, and
+4. local commutativity at spacelike separation.
+
+Then fields transforming under integer-spin representations of the Lorentz group satisfy Bose-Einstein statistics, while fields transforming under half-integer-spin representations satisfy Fermi-Dirac statistics.
 
 Formally: let $\phi(x)$ be a local field operator in $\mathfrak{A}(\mathcal{O})$ transforming under the $(j_1, j_2)$ representation of $SL(2,\mathbb{C})$, with spin $s = j_1 + j_2$. Then for spacelike separation $(x - y)^2 > 0$:
 
@@ -267,9 +301,9 @@ $$
 
 where $[A, B]_- = AB - BA$ (commutator) applies for integer $s$, and $[A, B]_+ = AB + BA$ (anticommutator) applies for half-integer $s$.
 
-*Proof.* Under the hypotheses of Theorem 46 and Corollary F.1, the emergent net admits a Wightman realization: there is a unitary representation of the (cover of the) proper orthochronous Lorentz group acting covariantly on fields, a unique invariant vacuum $\Omega$, the spectrum condition, and local commutativity at spacelike separation. These are the assumptions entering the spin–statistics theorem (Pauli 1940; Streater & Wightman 1964; Haag 1996).
+*Proof.* Under the stated hypotheses, the assumptions entering the spin–statistics theorem are available (Pauli 1940; Streater & Wightman 1964; Haag 1996).
 
-Let $\phi$ be a (nontrivial) field transforming with spin $s$ and define the vacuum two‑point function
+Let $\phi$ be a nontrivial field transforming with spin $s$ and define the vacuum two‑point function
 $$
 W(x-y):=\langle \Omega\,|\,\phi(x)\phi(y)\,|\,\Omega\rangle .
 $$
@@ -290,7 +324,7 @@ Combining with locality yields
 $$
 W(x-y)=\sigma(-1)^{2s}W(x-y).
 $$
-If $\sigma\neq(-1)^{2s}$ then $W(x-y)=-W(x-y)$, so $W(x-y)=0$ for spacelike separations. By standard positivity/reconstruction results in the Wightman framework (in particular the Reeh–Schlieder property implied by the spectrum condition), this forces $\phi\equiv 0$, contradicting nontrivial emergence. Hence $\sigma=(-1)^{2s}$: integer-spin fields are bosonic and half-integer-spin fields are fermionic. ∎
+If $\sigma\neq(-1)^{2s}$ then $W(x-y)=-W(x-y)$, so $W(x-y)=0$ for spacelike separations. By Wightman positivity and reconstruction results, this forces $\phi\equiv 0$, contradicting nontriviality. Hence $\sigma=(-1)^{2s}$: integer-spin fields are bosonic and half-integer-spin fields are fermionic. ∎
 
 ---
 
@@ -352,7 +386,7 @@ The only one‑dimensional irreducible representations of $S_N$ are the trivial 
 ### F.9.4 The CPT Theorem
 
 **Theorem F.4 (CPT Invariance).**
-The emergent AQFT $(\mathfrak{A}, \mathcal{H}, U(\Lambda))$ is invariant under the combined operation of charge conjugation (C), parity (P), and time reversal (T). Specifically, there exists an antiunitary operator $\Theta$ implementing CPT such that for any local field $\phi(x)$:
+Assume the emergent AQFT $(\mathfrak{A}, \mathcal{H}, U(\Lambda))$ admits a Wightman/Jost realization with Poincaré covariance, a unique invariant vacuum, the spectrum condition, locality, and the analyticity properties of Wightman functions. Then there exists an antiunitary operator $\Theta$ implementing CPT such that for any local field $\phi(x)$:
 
 $$
 \Theta \phi(x) \Theta^{-1} = \eta_\phi \phi^\dagger(-x)
@@ -361,19 +395,19 @@ $$
 
 where $\eta_\phi = \pm 1$ is a phase factor and $\phi^\dagger$ denotes the charge-conjugate field.
 
-*Proof.* Under the hypotheses of Theorem 46 and Corollary F.1, the emergent field theory satisfies the Wightman (equivalently Jost) axioms: Poincaré covariance, uniqueness of the vacuum, the spectrum condition, locality, and the analyticity properties of Wightman functions. In this setting, CPT invariance is a theorem (Jost 1957; Streater & Wightman 1964; Haag 1996).
+*Proof.* Under the stated hypotheses, CPT invariance is the Jost/Wightman CPT theorem (Jost 1957; Streater & Wightman 1964; Haag 1996).
 
 Let
 $$
 W_n(x_1,\dots,x_n)=\langle\Omega|\,\phi(x_1)\cdots\phi(x_n)\,|\Omega\rangle
 $$
-denote vacuum $n$‑point functions. The spectrum condition implies that $W_n$ extends analytically to the extended tube domain in complexified Minkowski space. Local commutativity implies **weak local commutativity** at Jost points, which yields invariance of the boundary values under the "strong reflection" map $(x_1,\dots,x_n)\mapsto(-x_n,\dots,-x_1)$ up to complex conjugation and the appropriate spinorial phases.
+denote vacuum $n$‑point functions. The spectrum condition implies that $W_n$ extends analytically to the extended tube domain in complexified Minkowski space. Local commutativity implies weak local commutativity at Jost points, which yields invariance of the boundary values under the strong-reflection map $(x_1,\dots,x_n)\mapsto(-x_n,\dots,-x_1)$ up to complex conjugation and the appropriate spinorial phases.
 
 By the reconstruction theorem, this strong-reflection symmetry is implemented on the Hilbert space by an antiunitary operator $\Theta_{CPT}$ leaving $\Omega$ invariant and acting on fields by
 $$
 \Theta_{CPT}\,\phi(x)\,\Theta_{CPT}^{-1}=\eta\,\phi^\dagger(-x),
 $$
-with $\eta$ fixed by the Lorentz representation. Therefore all Wightman functions (and hence all local observable predictions, including the S‑matrix where it exists) are invariant under the combined CPT transformation. ∎
+with $\eta$ fixed by the Lorentz representation. Therefore all Wightman functions, and hence all local observable predictions, are invariant under the combined CPT transformation. ∎
 
 ---
 

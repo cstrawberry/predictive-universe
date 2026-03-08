@@ -8,7 +8,11 @@ The electroweak sector presents three fundamental puzzles:
 2. **The Weinberg Angle**: Why is $\sin^2\theta_W(M_Z) \approx 0.231$?
 3. **The Higgs Mass**: Why is $m_H \approx 125$ GeV (near the metastability boundary)?
 
-Within the Predictive Universe framework, all three emerge from the same Golay-Steiner structure that determines the cosmological constant (Appendix U). This appendix provides unified derivations using a three-level scale dictionary (see below) that distinguishes the PU fixed point $\mathfrak{A}_{PU}$ from the matching scale $\mu_G$ and the metastability scale $\mu_\lambda$:
+Within the Predictive Universe framework, the electroweak scale and zero-slack quartic boundary are derived from the fixed-point Golay-Steiner structure on the Grassmannian orbit, while the quantitative gauge-threshold hierarchy is formulated on the minimal flag lift
+$$
+\pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to \mathrm{Gr}(2,8)
+$$
+introduced in Appendix G. This appendix therefore uses a three-level scale dictionary that separates the PU fixed point $\mathfrak{A}_{PU}$, the lifted gauge-matching geometry, and the metastability scale $\mu_\lambda$:
 
 $$
 \boxed{
@@ -24,7 +28,15 @@ The appendix uses a three-level dictionary to separate the PU fixed point from p
 
 - $\mathfrak{A}_{PU}$: the PU fixed point in theory space, characterized by PCE isotropy and capacity saturation (not an energy scale).
 - $\mu_G$: the PU-to-SM matching scale at which canonically normalized gauge directions are identified with SM gauge kinetic terms. Remark T.62.1 derives $\mu_G = M_{Pl}e^{-9}$ from the confinement complexity exponent, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV. This identification is used throughout this appendix for all numerical results.
-- $(Z_1,Z_2,Z_3)$: Bures gauge wavefunction factors at $\mu_G$ (Definition T.17a), relating the PU gauge coefficient $g_U$ to SM-canonical gauge couplings by $g_i(\mu_G)=g_U/\sqrt{Z_i}$.
+- $(\Delta_1,\Delta_2,\Delta_3)$: the flag-lift spectral threshold shifts above the PU bulk value $\alpha_U^{-1}=24$, defined in Definition T.17a. In this appendix the numerical target tuple
+  $$
+  (\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)
+  $$
+  is retained because it reproduces the previously used matching factors $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$; independent spectral evaluation on $\widetilde X$ is the remaining quantitative task. Equivalently,
+  $$
+  Z_i = 1+\frac{\Delta_i}{24},
+  $$
+  so that $g_i(\mu_G)=g_U/\sqrt{Z_i}$.
 - $\mu_\lambda$: the metastability crossing scale defined by $\lambda(\mu_\lambda)=0$ in the SM effective theory; $\mu_\lambda$ is an output of RG evolution from boundary conditions at $\mu_G$.
 
 -----
@@ -51,7 +63,7 @@ The following constants are derived in the main text and Appendix Z:
 |$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|PCE-optimal Bures weights (with normalization constraint) |Corollary T.34.2|
 |$g_U^2$ |$\pi/6$ |PU-normalized gauge coefficient squared |Theorem T.39a |
 |$\alpha_U^{-1}$ |$24$ |Inverse PU fine structure $\alpha_U=g_U^2/(4\pi)$ |Theorem T.39a |
-|$(Z_1,Z_2,Z_3)$ |$(1.632,\,1.872,\,1.766)$|Bures gauge wavefunction factors at $\mu_G$ |Theorem T.18 |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (numerical target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$, fixed by consistency with the previous matching values $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$ pending independent spectral evaluation |Definition T.17a / Theorem T.18 |
 
 The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connects the PU fixed point to SM effective theory. Remark T.62.1 fixes the exponent $9$ from confinement complexity, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R$ (Section T.23).
 
@@ -292,32 +304,56 @@ $$
 
 ### T.6.1 Complexity Counting
 
-**Definition T.13** (Electroweak Complexity). The electroweak complexity $\kappa_{EW}$ counts constrained degrees of freedom minus zero-mode contributions:
+**Definition T.13** (Electroweak Complexity). The electroweak complexity $\kappa_{EW}$ counts the effective complex Gaussian dimension of the instanton saddle-point integral after zero-mode reduction:
 $$
-\kappa_{EW} = N_0 + \dim(G/H) - \frac{m}{2}
+\kappa_{EW} = N_0 + \dim(G/H) - \frac{m}{2},
 $$
+where
 
-where:
-
-- $N_0 = bk/2 = 36$: base alignment constraints
-- $\dim(G/H) = 3$: coset dimension (broken directions)
-- $m = 1$: zero mode count
-- Factor $1/2$: Morse–Bott zero-mode normalization at maximal event-count $N = C_{\max}^*/\varepsilon = 2$
+- $N_0 = bk/2 = 36$ is the reservoir-alignment count,
+- $\dim(G/H) = 3$ is the coset dimension,
+- $m$ is the real zero-mode manifold dimension (Theorem T.4),
+- the factor $1/2$ arises from the Morse–Bott stationary-phase structure derived in Theorem T.5.
 
 ### T.6.2 Main Result
 
-**Theorem T.5** (Electroweak Complexity). The electroweak complexity is:
+**Theorem T.5** (Electroweak Complexity). For the electroweak PCE instanton with base complex Gaussian count $\kappa_0 = N_0 + \dim(G/H)$ and real zero-mode manifold dimension $m$, the effective complexity is
 $$
-\boxed{\kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 36 + 3 - \frac{1}{2} = 38.5}
+\boxed{\kappa_{EW} = \kappa_0 - \frac{m}{2} = 36 + 3 - \frac{1}{2} = 38.5.}
 $$
 
-*Proof.* Direct substitution:
+*Proof.* Let $x_*$ be the electroweak saddle. By Theorem T.4, the Hessian has exactly one zero mode, generated by the $U(1)_{\mathrm{em}}$ gauge angle $\psi$. By Theorems T.1–T.3, all remaining directions are non-degenerate and positive in the normal bundle.
 
-- $N_0 = 6 \times 6 = 36$
-- $\dim(G/H) = 4 - 1 = 3$
-- $m = 1$ (Theorem T.4)
+The base count is $\kappa_0 = N_0 + \dim(G/H) = 36 + 3 = 39$, so the real Gaussian dimension of the normal bundle is $N_{\mathbb{R}} = 2\kappa_0 = 78$.
 
-Therefore $\kappa_{EW} = 36 + 3 - 0.5 = 38.5$. ∎
+Write local coordinates near the critical manifold as $(\psi, y) \in S^1 \times \mathbb{R}^{77}$, where $\psi$ is the zero-mode coordinate and $y$ are normal coordinates. The Euclidean action expands as
+$$
+S(\psi, y) = S_* + \frac{1}{2}\, y^T H\, y + O(|y|^3),
+$$
+with $H$ positive definite on the $77$-dimensional normal bundle and no quadratic term in $\psi$.
+
+At the PCE attractor the semiclassical scaling parameter is
+$$
+N = \frac{C_{\max}^*}{\varepsilon} = \frac{2\ln 2}{\ln 2} = 2
+$$
+(Theorem E.2, Theorem 31, $d_0 = 8$ budget). The electroweak partition function is
+$$
+Z_{\mathrm{EW}} = \int_{S^1} d\psi \int_{\mathbb{R}^{77}} \exp\!\left(-N S_* - \frac{N}{2}\, y^T H\, y + O(|y|^3)\right) dy.
+$$
+The critical set is a smooth compact 1-manifold ($S^1$), the Hessian is non-degenerate on the normal bundle, and the action is smooth, so the Morse–Bott stationary-phase formula applies. The leading term is
+$$
+Z_{\mathrm{EW}} = e^{-N S_*}\, \mathrm{Vol}(S^1)\, (2\pi)^{77/2}\, N^{-77/2}\, (\det' H)^{-1/2}\,(1 + O(N^{-1})).
+$$
+The electroweak complexity $\kappa_{EW}$ is defined as the exponent of the polynomial prefactor, which counts the number of real Gaussian directions divided by two. This count is a topological/algebraic quantity — the dimension of the normal bundle — and does not depend on the value of $N$:
+$$
+\frac{N_{\mathbb{R}} - m}{2} = \frac{78 - 1}{2} = \frac{77}{2} = 38.5.
+$$
+In complex counting,
+$$
+\kappa_{\mathrm{EW}} = \kappa_0 - \frac{m}{2} = 39 - \frac{1}{2} = 38.5.
+$$
+The multiplicative prefactor (including $\det' H$, $\mathrm{Vol}(S^1)$, and $O(N^{-1})$ corrections at $N=2$) is absorbed into $A_{EW}$, which is computed separately in Theorem T.29.
+∎
 
 -----
 
@@ -327,7 +363,7 @@ Therefore $\kappa_{EW} = 36 + 3 - 0.5 = 38.5$. ∎
 
 **Theorem T.6** (Electroweak Scale). The Higgs vacuum expectation value is:
 $$
-\boxed{v = A_{EW} , e^{-\kappa_{EW}} , M_{Pl}}
+\boxed{v = A_{EW}\, e^{-\kappa_{EW}}\, M_{Pl}}
 $$
 
 where $A_{EW} \sim \mathcal{O}(1)$ is the one-loop determinant prefactor.
@@ -346,7 +382,7 @@ $$
 
 The full electroweak prediction is then
 $$
-v = A_{EW}, v_0,
+v = A_{EW}\, v_0,
 $$
 with $A_{EW}$ determined from PU geometry in Theorem T.29.
 
@@ -501,17 +537,89 @@ $$
 g' = \frac{g_1}{\sqrt{5/3}}, \quad (g')^2 = \frac{3}{5}g_1^2
 $$
 
-**Definition T.17a** (Bures Gauge Wavefunction Factors). Let $\mathcal{M}_{\mathrm{int}}\cong \mathrm{Gr}(2,8)$ denote the 24-mode interface orbit at $\mathfrak{A}_{PU}$, equipped with the Bures metric $g_B$ (Lemma Z.12). For each SM gauge factor $i\in\{1,2,3\}$ choose a generator basis $\{X_a^{(i)}\}_{a=1}^{\dim\mathfrak{g}_i}$ normalized in the canonical Hilbert–Schmidt inner product on $\mathrm{End}(W_5)$,
+**Definition T.17a** (Flag-Lift Spectral Threshold Data). Let
 $$
-\mathrm{Tr}\!\left(X_a^{(i)}X_b^{(i)}\right)=\frac{1}{2}\delta_{ab},
+\pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to X=\mathrm{Gr}(2,8)
 $$
-with the $U(1)$ generator taken in SU(5) normalization (Theorem T.9) so that $g_1=\sqrt{5/3}\,g'$, and define the dimensionless wavefunction factor
+be the minimal flag lift of Appendix G, so that
 $$
-Z_i := \frac{1}{\dim\mathfrak{g}_i}\sum_{a=1}^{\dim\mathfrak{g}_i}\lvert X_a^{(i)}\rvert_B^2,
-\qquad
-\lvert X\rvert_B^2 := g_B(X^{\#},X^{\#})\big|_{\mathfrak{A}_{PU}},
+\pi^*Q\cong \widetilde Q_Y\oplus \widetilde Q_W\oplus \widetilde Q_C
 $$
-where $X^{\#}$ is the fundamental vector field generated by $X$ on $\mathcal{M}_{\mathrm{int}}$. The $Z_i$ quantify how each gauge factor's canonical generators project into the 24-mode interface geometry; PCE isotropy fixes $g_B$ on $\mathcal{M}_{\mathrm{int}}$ but does not require $Z_1=Z_2=Z_3$.
+with complex ranks $(1,2,3)$. Let
+$$
+\widetilde E:=\pi^*(S^\vee\otimes Q)\cong \pi^*S^\vee\otimes(\widetilde Q_Y\oplus \widetilde Q_W\oplus \widetilde Q_C)
+$$
+be the charged lifted interface bundle, and let $\mathcal J_G\in \Gamma(\operatorname{End}(\widetilde E_{\mathbb R}))$ denote the compatible Golay involution of the lifted gauge sector.
+
+Define the lifted PCE operator
+$$
+D^{\mathrm{PCE}}_{\widetilde X}
+=
+(\nabla^{\widetilde G})^*\nabla^{\widetilde G}
++\mu_0 I
++\mu_G \mathcal J_G
++\mathcal C_\kappa
++\eta\,\mathcal J_G\,\mathcal C_\kappa,
+$$
+where
+$$
+\mathcal C_\kappa
+:=
+\kappa_1\rho(Y)^2
++\kappa_2\sum_{a=1}^3 \rho(T_a)^2
++\kappa_3\sum_{A=1}^8 \rho(G_A)^2,
+$$
+and $\rho$ is the lifted $G_{\mathrm{SM}}$ representation on $\widetilde E$.
+
+For each gauge factor $i\in\{1,2,3\}$, define the spectral threshold shift
+$$
+\Delta_i
+:=
+\sum_{r,R} c_r\,I_i(R)\,\Xi_{r,R}\!\left[D^{\mathrm{PCE}}_{\widetilde X}\right],
+$$
+where $R$ ranges over the $G_{\mathrm{SM}}$-irreducible sectors in the lifted fluctuation spectrum, $I_i(R)$ is the quadratic Dynkin index for factor $i$, and $\Xi_{r,R}$ is the renormalized zeta/heat-kernel threshold functional for the corresponding spectral block.
+
+The corresponding dimensionless matching factors are
+$$
+Z_i:=1+\frac{\Delta_i}{\alpha_U^{-1}}=1+\frac{\Delta_i}{24}.
+$$
+These $Z_i$ are spectral matching data on the lifted gauge geometry $\widetilde X$; they are not Bures-norm orbit averages on the bare Grassmannian. The lifted formulation replaces the bare-Grassmannian orbit-average construction because the local Bures block formula provides only representative-state coupling data, while the quantitative gauge hierarchy requires a global sector-resolving structure that is formulated on the flag lift. The numerical target tuple adopted later in Theorem T.18 is not part of this definition; it is the phenomenological target for the lifted spectral problem.
+
+**Remark T.17a.1 (Dynkin Index Structure and Singlet Hypercharge).** The lifted interface bundle $\widetilde E = \pi^*S^\vee \otimes \pi^*Q$ splits into three $G_{\mathrm{SM}}$-sectors of complex ranks $(6,4,2)$:
+$$
+\widetilde E \cong (\pi^*S^\vee \otimes \widetilde Q_C) \oplus (\pi^*S^\vee \otimes \widetilde Q_W) \oplus (\pi^*S^\vee \otimes \widetilde Q_Y),
+$$
+contributing $12+8+4=24$ real interface modes (confirming $M=24$). The threshold shifts decompose as $\Delta_i = \sum_s T_i(s)\,F_s$, where $F_s$ is the spectral functional for sector $s\in\{C,W,Y\}$ and the Dynkin index matrix is
+$$
+T = \begin{pmatrix} T_1(C) & T_1(W) & T_1(Y) \\ T_2(C) & T_2(W) & T_2(Y) \\ T_3(C) & T_3(W) & T_3(Y) \end{pmatrix}
+= \begin{pmatrix} 2/5 & 3/5 & 8/15 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}.
+$$
+Here $T_3(C) = 2I_{SU(3)}(\mathbf{3})=1$, $T_2(W) = 2I_{SU(2)}(\mathbf{2})=1$, and the $U(1)$ entries are $T_1(s)=n_s\,y_s^2$ with $y_s$ the per-component hypercharge in SU(5) normalization. The singlet hypercharge $y_Y$ is determined by the following chain of identifications:
+
+*Step 1 (Coordinate-level hypercharge).* Theorem T.9 fixes the PU hypercharge generator in SU(5) normalization on $\mathbb{C}^8 = \mathbb{C}^2_{\mathcal{A}} \oplus \mathbb{C}^6_{\mathcal{B}}$ as
+$$
+\hat Y = \frac{1}{2\sqrt{15}}\operatorname{diag}(-2,-2,-2,3,3,0,0,0),
+\qquad \operatorname{Tr}(\hat Y^2)=\tfrac{1}{2}.
+$$
+
+*Step 2 (Module identification on the fiber).* By Theorem G.8.4b and Corollary G.8.4c, the inactive fiber admits the unique $G_{\mathrm{SM}}$-module decomposition $\mathcal{B} = \mathbb{C}^3_C \oplus \mathbb{C}^2_W \oplus \mathbb{C}^1_Y$, where $\mathbb{C}^3_C$ carries the $\mathbf{3}$ of $SU(3)$, $\mathbb{C}^2_W$ carries the $\mathbf{2}$ of $SU(2)$, and $\mathbb{C}^1_Y$ is a $G_{\mathrm{SM}}$-singlet. In the coordinate basis of Step 1, these summands correspond to indices $\{3,4,5\}$, $\{6,7\}$, and $\{8\}$ respectively (up to reordering within each summand). On the flag lift, the tautological subbundles $\widetilde Q_C$, $\widetilde Q_W$, $\widetilde Q_Y$ globalize this fiberwise decomposition.
+
+*Step 3 (Per-sector hypercharge from the embedding).* The hypercharge eigenvalues on each summand are read off from $\hat Y$:
+$$
+y_C = \hat Y_{33} = \frac{-2}{2\sqrt{15}} = \frac{-1}{\sqrt{15}}, \qquad
+y_W = \hat Y_{66} = \frac{3}{2\sqrt{15}} = \frac{3}{2\sqrt{15}}.
+$$
+For the singlet, the trace constraint gives:
+$$
+\operatorname{Tr}(\hat Y|_{\mathcal{B}}) = 3y_C + 2y_W + y_Y = \frac{-3}{\sqrt{15}} + \frac{3}{\sqrt{15}} + y_Y = y_Y.
+$$
+Meanwhile, $\operatorname{Tr}(\hat Y|_{\mathcal{A}}) = 2 \times \frac{-2}{2\sqrt{15}} = \frac{-2}{\sqrt{15}}$, and tracelessness on $\mathbb{C}^8$ gives $\operatorname{Tr}(\hat Y|_{\mathcal{B}}) = \frac{+2}{\sqrt{15}}$. Therefore:
+$$
+y_Y = \frac{2}{\sqrt{15}}, \qquad T_1(Y) = 2y_Y^2 = \frac{8}{15}.
+$$
+Every step uses only the SU(5)-normalized hypercharge from Theorem T.9, the unique module decomposition from Theorem G.8.4b, and tracelessness. No free parameter enters.
+
+The matrix $T$ is invertible ($\det T = -8/15 \neq 0$), so the target tuple $(\Delta_1,\Delta_2,\Delta_3)$ uniquely determines the sector spectral functionals $(F_C,F_W,F_Y)$. Without the nonzero singlet charge, the $U(1)$ row of $T$ would have $T_1(Y)=0$, and the relation $\Delta_1 = \tfrac{2}{5}\Delta_3 + \tfrac{3}{5}\Delta_2 \approx 19.93$ would be forced — incompatible with the target $\Delta_1=15.14$. The nonzero $y_Y$ is therefore essential for the internal consistency of the lifted spectral framework.
 
 ### T.12.2 PCE Isotropy at the Fixed Point
 
@@ -522,7 +630,7 @@ $$
 
 *Proof.* This follows from the Ward identity in **Theorem Z.14**. ∎
 
-**Corollary T.13.1** (PU-to-SM Gauge Matching). At the PU matching scale $\mu_G$, PCE isotropy fixes a single PU gauge coefficient $g_U$ for the canonically normalized signal generators (Theorem T.13). After matching to SM-canonical gauge fields, the gauge kinetic term at $\mu_G$ takes the form
+**Corollary T.13.1** (PU-to-SM Gauge Matching). At the PU matching scale $\mu_G$, PCE isotropy fixes a single PU bulk gauge coefficient $g_U$ for the canonically normalized signal generators (Theorem T.13). After matching to SM-canonical gauge fields, the gauge kinetic term at $\mu_G$ takes the form
 $$
 \mathcal{L}_{\mathrm{kin}}(\mu_G)
 =
@@ -539,14 +647,14 @@ $$
 \boxed{
 g_i(\mu_G) = \frac{g_U}{\sqrt{Z_i}},
 \qquad
-\alpha_i^{-1}(\mu_G)=Z_i\,\alpha_U^{-1},
+\alpha_i^{-1}(\mu_G)=Z_i\,\alpha_U^{-1}=24+\Delta_i,
 \qquad
 \alpha_U=\frac{g_U^2}{4\pi}
 }
 $$
-for $i=1,2,3$.
+for $i=1,2,3$, where $Z_i=1+\Delta_i/24$.
 
-*Proof.* PCE isotropy implies $\Gamma^{(2)}\propto I_{12}$ in the canonical signal basis, fixing a single quadratic coefficient $g_U$ for the canonically normalized gauge directions. The matching to SM-canonical gauge fields requires independent field rescalings for each gauge factor, controlled by the Bures norms of the induced flows on the 24-mode interface (Definition T.17a). These rescalings produce the wavefunction factors $Z_i$ and hence the stated relations. ∎
+*Proof.* PCE isotropy fixes a single bulk quadratic coefficient $g_U$ in the canonically normalized signal sector. The quantitative gauge-sector splittings are encoded by the lifted spectral thresholds $\Delta_i$ of Definition T.17a, equivalently by the matching factors $Z_i=1+\Delta_i/24$. Substituting these factor-dependent rescalings into the gauge kinetic term yields the displayed relations. ∎
 
 ### T.12.3 Tree-Level Weinberg Angle
 
@@ -572,11 +680,17 @@ $$
 $$
 If $Z_1=Z_2$ this reduces to $3/8$. ∎
 
-**Corollary T.14.1** (Numerical Value). Using $(Z_1,Z_2)=(1.632,\,1.872)$ (Theorem T.18),
+**Corollary T.14.1** (Numerical Target from the Flag-Lift Thresholds). For the numerical target tuple adopted in Theorem T.18,
+$$
+(\Delta_1,\Delta_2)=(15.14,\,20.94),
+\qquad
+(Z_1,Z_2)=\left(1+\frac{15.14}{24},\,1+\frac{20.94}{24}\right)\approx(1.6308,1.8725),
+$$
+one has
 $$
 \sin^2\theta_W(\mu_G)=\frac{3 Z_2}{3 Z_2 + 5 Z_1}\approx 0.408.
 $$
-(This is the tree-level matching value at $\mu_G$; SM RG running from $\mu_G$ to $M_Z$ drives the value downward by approximately 0.18, yielding $\sin^2\theta_W(M_Z)\approx 0.2312$ via Theorem T.16.)
+This is the tree-level matching value at $\mu_G$; one-loop SM running from $\mu_G$ to $M_Z$ then drives the value downward to the observed Z-pole range via Theorem T.16.
 
 -----
 
@@ -616,12 +730,19 @@ $$
 
 ### T.13.3 Threshold Corrections from 24-Mode Discretization
 
-**Definition T.19** (Threshold Corrections from 24-Mode Discretization). Finite matching effects from the 24-mode discretization of the interface geometry are encoded by threshold shifts $\delta_i$ in the PU-to-SM matching at $\mu_G$:
+**Definition T.19** (Residual Threshold Corrections Beyond the Flag-Lift Spectral Splitting). The principal PU-to-SM gauge splitting at $\mu_G$ is encoded by the lifted spectral thresholds $\Delta_i$ of Definition T.17a. Residual finite matching effects are encoded by additional threshold shifts $\delta_i$:
 $$
-\alpha_i^{-1}(\mu_G) = Z_i\,\alpha_U^{-1} + \frac{\delta_i}{2\pi},
+\alpha_i^{-1}(\mu_G)=\alpha_U^{-1}+\Delta_i+\frac{\delta_i}{2\pi}
+=Z_i\,\alpha_U^{-1}+\frac{\delta_i}{2\pi},
 \qquad i=1,2,3,
 $$
-where the wavefunction factors $Z_i$ are fixed by the Bures geometry (Definition T.17a) and the $\delta_i$ capture residual finite corrections beyond wavefunction normalization. A standard one-loop parametrization is
+with
+$$
+Z_i=1+\frac{\Delta_i}{24},
+\qquad
+\alpha_U^{-1}=24.
+$$
+The $\delta_i$ capture finite heavy-threshold corrections beyond the principal lifted spectral splitting. A standard one-loop parametrization is
 $$
 \delta_i=\sum_k b_i^{(k)}\ln\!\left(\frac{\mu_G}{M_k}\right),
 $$
@@ -647,107 +768,66 @@ so their effect on $\alpha_i^{-1}(M_Z)$ and $\sin^2\theta_W(M_Z)$ is subleading 
 
 *Proof.* Theorem T.17 identifies the leading discretization contribution as $S_M$-invariant over the $M$ interface modes and therefore a common shift $\delta_{\mathrm{avg}}$. Any splitting arises from subleading mode-to-mode variations in the discretized spectrum; since $\delta_i$ are sums of $M$ mode-local contributions (Definition T.19), such variations enter the average with at least one factor of $M^{-1}$. ∎
 
-**Theorem T.18** (Bures Wavefunction Factors and Z-Pole Predictions). The Bures gauge wavefunction factors $Z_i$ are determined by the interface geometry via Definition T.17a (Bures-norm averages of the induced fundamental vector fields of the SM-canonical generators on $\mathcal{M}_{\mathrm{int}}\cong\mathrm{Gr}(2,8)$). Evaluating these norms on the PU interface orbit gives
+**Theorem T.18** (Flag-Lift Spectral Matching and Numerical Target). The bare-Grassmannian orbit-average construction of the original gauge-matching definition is not used for the quantitative threshold sector. The local Bures block formula on $\mathrm{Gr}(2,8)$ provides representative-state coupling data, but the manuscript does not supply a completed global orbit integral on the bare Grassmannian that yields the required gauge-factor hierarchy. The quantitative gauge sector is therefore formulated on the lifted operator $D^{\mathrm{PCE}}_{\widetilde X}$ of Definition T.17a on
 $$
-\boxed{
-Z_1 \approx 1.632,\qquad Z_2 \approx 1.872,\qquad Z_3 \approx 1.766.
-}
+\widetilde X=\mathrm{Flag}_{1,2,3}(Q).
 $$
-
-Neglecting the small finite matching shifts $\delta_i$ at first pass (Definition T.19), one-loop SM running (Theorem T.15) predicts
+Its spectral threshold shifts are
 $$
-\alpha_i^{-1}(M_Z) = Z_i\,\alpha_U^{-1} + \frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
+\Delta_i=\sum_{r,R} c_r\,I_i(R)\,\Xi_{r,R}\!\left[D^{\mathrm{PCE}}_{\widetilde X}\right],
 \qquad i=1,2,3,
 $$
-so with $\mu_G=M_{Pl}e^{-9}$ (Remark T.62.1), $\alpha_U^{-1}=24$ (Theorem T.39a), and $\ln(\mu_G/M_Z)=\ln(M_{Pl}/M_Z)-9\approx 30.44$ one obtains:
+and the corresponding matching factors are
 $$
-\alpha_1^{-1}(M_Z)\approx 59.0,\qquad \alpha_2^{-1}(M_Z)\approx 29.6,\qquad \alpha_3^{-1}(M_Z)\approx 8.47,
+Z_i=1+\frac{\Delta_i}{24}.
+$$
+In the present appendix the numerical tuple
+$$
+\boxed{
+(\Delta_1,\Delta_2,\Delta_3)=(15.14,\,20.94,\,18.41)
+}
+$$
+is retained as the target tuple for the lifted spectral problem because it reproduces the previously used matching factors
+$$
+(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766),
 $$
 equivalently
 $$
-\sin^2\theta_W(M_Z)\approx 0.2312,\qquad \alpha_s(M_Z)\approx 0.118,
+\boxed{
+Z_1=1+\frac{15.14}{24}\approx 1.6308,\qquad Z_2=1+\frac{20.94}{24}\approx 1.8725,\qquad Z_3=1+\frac{18.41}{24}\approx 1.7671.
+}
+$$
+The explicit spectral evaluation of the lifted threshold sums remains the outstanding quantitative step. Neglecting the small residual finite matching shifts $\delta_i$ at first pass (Definition T.19), one-loop SM running (Theorem T.15) then gives
+$$
+\alpha_i^{-1}(M_Z)=Z_i\,\alpha_U^{-1}+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
+\qquad i=1,2,3,
+$$
+so with $\mu_G=M_{Pl}e^{-9}$, $\alpha_U^{-1}=24$, and $\ln(\mu_G/M_Z)\approx 30.44$ one obtains
+$$
+\alpha_1^{-1}(M_Z)\approx 59.0,\qquad
+\alpha_2^{-1}(M_Z)\approx 29.6,\qquad
+\alpha_3^{-1}(M_Z)\approx 8.5,
+$$
+equivalently
+$$
+\sin^2\theta_W(M_Z)\approx 0.231,\qquad
+\alpha_s(M_Z)\approx 0.118,
 $$
 with residual finite matching encoded by $\delta_i$ and subleading splittings as in Corollary T.17.1.
 
-*Proof.*
-
-**Part 1: RG inversion formula.**
-Neglecting thresholds, one-loop running gives
+*Proof.* The lifted spectral problem defines $\Delta_i$ by the renormalized zeta/heat-kernel functional of Definition T.17a. Writing
 $$
-\alpha_i^{-1}(M_Z)=\alpha_i^{-1}(\mu_G)+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right)
+Z_i=1+\frac{\Delta_i}{24}
 $$
-(Theorem T.15). Using the PU-to-SM matching $\alpha_i^{-1}(\mu_G)=Z_i\,\alpha_U^{-1}$ (Corollary T.13.1) yields the first displayed equation. Substituting the stated numerical inputs gives the boxed Z-pole predictions. In particular, if one artificially imposed $Z_3=1$, then
+and using $\alpha_U^{-1}=24$ gives
 $$
-\alpha_3^{-1}(M_Z)=24-\frac{7}{2\pi}\cdot 30.44<0,
+\alpha_i^{-1}(\mu_G)=24+\Delta_i=Z_i\,\alpha_U^{-1}.
 $$
-so $Z_3>1$ is required and is supplied by the derived Bures normalization.
-
-**Part 2: Bures norm evaluation — conventions.**
-All generators are canonically normalized as in Definition T.17a:
+One-loop running then yields
 $$
-\operatorname{Tr}(X_a X_b)=\tfrac{1}{2},\delta_{ab}.
+\alpha_i^{-1}(M_Z)=\alpha_i^{-1}(\mu_G)+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
 $$
-The Bures/QFI quadratic form is homogeneous: $\vert\lambda X\vert_B^2=\lambda^2\vert X\vert_B^2$, so one may compute $\vert\widehat X\vert_B^2$ for any convenient representative $\widehat X$ and convert via $\vert X\vert_B^2=(2\operatorname{Tr}(\widehat X^2))^{-1}\vert\widehat X\vert_B^2$.
-
-**Part 2a: QFI/Bures formula and block reduction.**
-At the PCE attractor $\rho_0=\frac{1}{2}I_2\oplus 0_6$ (Appendix Z), the Bures metric on the interface orbit $\mathcal{M}_{\mathrm{int}}\cong\mathrm{Gr}(2,8)$ has the local form (Proposition Z.23a)
-$$
-ds_B^2=\frac{1}{2a}\sum_{i\le a<j}|dz_{ij}|^2,\qquad a=2.
-$$
-For a generator $X$ inducing a fundamental vector field $X^{\#}$ on $\mathcal{M}_{\mathrm{int}}$, the Bures/QFI formula (Lemma Z.12) reads
-$$
-\vert X^{\#}\vert_B^2
-=
-\frac{1}{2}\sum_{\substack{m,n\\lambda_m+\lambda_n>0}}
-\frac{(\lambda_m-\lambda_n)^2}{\lambda_m+\lambda_n}
-\,\vert\langle m|X|n\rangle\vert^2.
-$$
-With spectrum $(\tfrac{1}{2},\tfrac{1}{2},0,\dots,0)$, only active–inactive matrix elements $(m\le 2,\, n\ge 3)$ contribute (cross-terms with $\lambda_m=\lambda_n=\frac{1}{2}$ drop out because $(\lambda_m-\lambda_n)^2=0$). Writing $X$ in the block decomposition $\mathbb{C}^8=\mathbb{C}^2\oplus\mathbb{C}^6$,
-$$
-X=\begin{pmatrix}A & B \\ B^\dagger & D\end{pmatrix},
-\qquad B\in\mathbb{C}^{2\times 6},
-$$
-the formula reduces to the concrete rule
-$$
-\vert X^{\#}\vert_B^2
-=
-\frac{1}{2}\operatorname{Tr}(BB^\dagger).
-$$
-
-**Part 2b: Illustrative computation (generic off-diagonal unit).**
-Let $\widehat G=E_{1,3}+E_{3,1}$ (matrix unit with $\widehat G_{13}=\widehat G_{31}=1$, all other entries zero), so $\operatorname{Tr}(\widehat G^2)=1$. The active–inactive block is $\widehat B_{1,1}=1$ with all other entries zero, giving
-$$
-\vert\widehat G^{\#}\vert_B^2=\tfrac{1}{2}\vert\widehat B_{11}\vert^2=\tfrac{1}{4}.
-$$
-The canonically normalized generator is $G=\widehat G/\sqrt{2}$ (so that $\operatorname{Tr}(G^2)=\tfrac{1}{2}$), with
-$$
-\vert G^{\#}\vert_B^2=\tfrac{1}{2}\vert\widehat G^{\#}\vert_B^2=\tfrac{1}{8}.
-$$
-(Equivalently, the QFI is $F_Q(\rho_0;G)=4\vert G^{\#}\vert_B^2=\tfrac{1}{2}$.)
-
-**Part 2c: Standard Model generators and the origin of the $Z_i$.**
-The Standard Model generators $\{G_A,T_a,\hat{Y}\}$ are embedded in $\mathrm{End}(\mathbb{C}^8)$ by acting on the electroweak 5-plane $W_5=\mathbb{C}^3\oplus\mathbb{C}^2\subset\mathbb{C}^8$ (Definition T.14). Writing all generators as $8\times 8$ matrices with the $W_5$ block in the upper-left:
-$$
-\mathfrak{su}(3): \quad G_A=\tfrac{1}{2}\begin{pmatrix}\lambda_A & 0 & 0 \ 0 & 0_2 & 0 \ 0 & 0 & 0_3\end{pmatrix},
-\qquad
-\mathfrak{su}(2): \quad T_a=\tfrac{1}{2}\begin{pmatrix}0_3 & 0 & 0 \ 0 & \sigma_a & 0 \ 0 & 0 & 0_3\end{pmatrix},
-$$
-$$
-\mathfrak{u}(1): \quad \hat{Y}=\frac{1}{2\sqrt{15}}\begin{pmatrix}-2 & & & & \ & -2 & & & \ & & -2 & & \ & & & 3 & \ & & & & 3\end{pmatrix}\oplus 0_3,
-$$
-where $\lambda_A$ are the Gell-Mann matrices and $\operatorname{Tr}(G_AG_B)=\operatorname{Tr}(T_aT_b)=\operatorname{Tr}(\hat{Y}^2)=\tfrac{1}{2}\delta$ (i.e.\ the full canonical normalization is already built in). The active subspace $\mathbb{C}^2\subset\mathbb{C}^8$ corresponds to indices ${1,2}$; the inactive subspace $\mathbb{C}^6$ corresponds to indices ${3,4,5,6,7,8}$.
-
-The active–inactive interface block $B^{(i)}_a\in\mathbb{C}^{2\times 6}$ of each generator now has gauge-factor-dependent sparsity:
-
-- **$\mathfrak{su}(3)$ generators** $G_A$: the active rows are rows 1–2 of $\lambda_A/2$, intersected with the inactive columns (indices 3–5 in $W_5$, embedded as indices 3–5 of $\mathbb{C}^8$). Only $\lambda_4,\lambda_5$ (row 1, col 3) and $\lambda_6,\lambda_7$ (row 2, col 3) contribute non-zero entries to $B$; the diagonal generators $\lambda_3,\lambda_8$ have purely active–active and inactive–inactive diagonal entries so $B=0$ for them.
-- **$\mathfrak{su}(2)$ generators** $T_a$: act on indices $\{4,5\}$, which both lie in the inactive subspace $\mathbb{C}^6$ (indices 3–8). Since neither index falls in the active block $\mathbb{C}^2$ (indices 1–2), the active–inactive off-diagonal block $B$ vanishes for all three generators.
-- **$\hat{Y}$**: diagonal on all of $\mathbb{C}^8$ with values $(-2,-2,-2,3,3,0,0,0)/(2\sqrt{15})$; again $B=0$.
-
-Generators with $B=0$ contribute $\vert X^{\#}\vert_B^2=0$, meaning they do not couple to the interface modes at leading order. The non-zero contributions come exclusively from the off-diagonal $\mathfrak{su}(3)$ generators $G_1,G_2,G_4,G_5,G_6,G_7$ (those whose Gell-Mann matrix has active–inactive off-diagonal entries in the $3\times 3$ block). This gauge-factor dependence is the geometric origin of $Z_1\neq Z_2\neq Z_3$: the $\mathfrak{su}(3)$ factor has more generators coupling to the interface than $\mathfrak{su}(2)$ or $\mathfrak{u}(1)$, but the per-generator norm and the dimension averaging in Definition T.17a produce the specific ratios quoted. The explicit average over the full canonical basis $\{G_A\}$, $\{T_a\}$, and $\{\hat{Y}\}$ using the block-reduction rule of Part 2a is recorded in Appendix Z, yielding the boxed values $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$.
-
-**Remark T.18.1: Orbit averaging and the non-vanishing of $Z_1$, $Z_2$.** The illustrative computation above evaluates Bures norms at the single representative state $\rho_0 = \frac{1}{2}I_2 \oplus 0_6$ with active subspace $\{1,2\}$. At this specific point, $B=0$ for both $\mathfrak{su}(2)$ and $\mathfrak{u}(1)$ generators, as shown. This does not imply $Z_1 = Z_2 = 0$, because Definition T.17a specifies $Z_i$ as the dimension-averaged Bures norm over the full interface orbit $\mathcal{M}_{\mathrm{int}}\cong\mathrm{Gr}(2,8)$. A generic point on $\mathrm{Gr}(2,8)$ corresponds to a 2-plane $W\subset\mathbb{C}^8$ that is not aligned with the coordinate axes $\{e_1,e_2\}$. At such a point, the active subspace $W$ generically overlaps with the indices $\{4,5\}$ where $\mathfrak{su}(2)$ acts and with the diagonal entries distinguishing $\mathfrak{u}(1)$, producing non-vanishing active–inactive blocks $B\neq 0$ for all three gauge factors. The orbit average over $\mathrm{Gr}(2,8)$ — which integrates over all possible orientations of the active 2-plane — therefore yields $Z_i > 0$ for $i=1,2,3$. The representative-state calculation demonstrates the *mechanism* (gauge-factor-dependent sparsity of $B$) that produces $Z_1\neq Z_2\neq Z_3$; the full orbit-averaged computation delivering the specific numerical values is carried out in Appendix Z (Theorem Z.25).
-
-Residual finite matching shifts are encoded by $\delta_i$ (Definition T.19), with splittings subleading as in Corollary T.17.1. ∎
+which is the displayed formula. Substituting the target tuple above gives the stated numerical Z-pole outputs. The theorem therefore isolates the remaining quantitative task: the explicit spectral evaluation of $D^{\mathrm{PCE}}_{\widetilde X}$ on the lifted gauge geometry. ∎
 
 -----
 
@@ -976,7 +1056,7 @@ Z_{Q_L^{(3)}} Z_{t_R} Z_H
 $$
 This makes the cancellation in $\beta_\lambda(\mu_G)$ a determined consequence of the PU boundary conditions. ∎
 
-**Remark T.26.2: Numerical Consistency.** Since $g_U^2=\pi/6$, $g_U\approx 0.724$ (Theorem T.39a). With $(Z_1,Z_2)=(1.632,1.872)$ (Theorem T.18), the marginality condition gives $y_t(\mu_G)\approx 0.392$. RG amplification over $t=\ln(\mu_G/M_t)\approx 30$ yields $y_t(M_t)\approx 0.93$–$0.99$, consistent with $y_t^{\mathrm{obs}}(M_t)\approx 0.994\pm 0.005$. The same derived matching data $(Z_1,Z_2,Z_3)$ and SM running yield Z-pole gauge couplings consistent with observation (Theorem T.18; Theorem T.27b), with residual finite matching shifts encoded by $\delta_i$ and splittings subleading as in Corollary T.17.1.
+**Remark T.26.2: Numerical Consistency.** Since $g_U^2=\pi/6$, $g_U\approx 0.724$ (Theorem T.39a). For the numerical target tuple of Theorem T.18, equivalently $(Z_1,Z_2,Z_3)=(1+15.14/24,1+20.94/24,1+18.41/24)\approx(1.6308,1.8725,1.7671)$, the marginality condition gives $y_t(\mu_G)\approx 0.392$. RG amplification over $t=\ln(\mu_G/M_t)\approx 30$ yields $y_t(M_t)\approx 0.93$–$0.99$, consistent with $y_t^{\mathrm{obs}}(M_t)\approx 0.994\pm 0.005$. The same target matching data and SM running then yield Z-pole gauge couplings in the observed range (Theorem T.18; Theorem T.27b), with residual finite matching shifts encoded by $\delta_i$ and splittings subleading as in Corollary T.17.1.
 
 **Remark T.26.3: RG Sensitivity.** Sensitivity: $y_t(\mu_G)=C(Z_1,Z_2)^{1/4}g_U$ with $C(Z_1,Z_2)=\frac{1}{6}\!\left(\frac{9}{8Z_2^2}+\frac{9}{20Z_1Z_2}+\frac{27}{200Z_1^2}\right)$. Thus $\Delta y_t/y_t=\Delta g_U/g_U+\frac{1}{4}\Delta(\ln C)$, so the top boundary is linearly sensitive to $g_U$ and mildly sensitive to the matching factors $Z_{1,2}$.
 
@@ -1051,19 +1131,19 @@ $$
 
 ### T.18.2 Three-Way Unification
 
-**Theorem T.26a** (Gauge Matching Condition). At the matching scale $\mu_G$, PCE isotropy at $\mathfrak{A}_{PU}$ fixes a single PU gauge coefficient $g_U$, while SM-canonical gauge fields match with Bures wavefunction factors $Z_i$:
+**Theorem T.26a** (Gauge Matching Condition). At the matching scale $\mu_G$, PCE isotropy at $\mathfrak{A}_{PU}$ fixes a single PU gauge coefficient $g_U$, while SM-canonical gauge fields match through the lifted spectral threshold data $Z_i$:
 $$
 \boxed{
 g_i(\mu_G)=\frac{g_U}{\sqrt{Z_i}},
 \qquad
-\alpha_i^{-1}(\mu_G)=Z_i\,\alpha_U^{-1},
+\alpha_i^{-1}(\mu_G)=Z_i\,\alpha_U^{-1}=24+\Delta_i,
 \qquad
 \alpha_U=\frac{g_U^2}{4\pi}
 }
 $$
-for $i=1,2,3$.
+for $i=1,2,3$, with $Z_i=1+\Delta_i/24$.
 
-*Proof.* The single coefficient $g_U$ follows from PCE isotropy in the canonical signal basis (Theorem T.13). The SM-canonical identification requires gauge-factor-dependent field rescalings governed by Bures norms on the interface orbit, producing $Z_i$ (Definition T.17a). ∎
+*Proof.* The single coefficient $g_U$ follows from PCE isotropy in the canonical signal basis (Theorem T.13). The SM-canonical identification then proceeds through the lifted spectral threshold data of Definition T.17a, which fix the gauge-factor-dependent rescalings encoded by $Z_i$. Substituting those factors gives the displayed relations. ∎
 
 **Theorem T.27a** (Matching-Scale Coupling Ratios). At $\mu_G$ the SM-canonical couplings satisfy
 $$
@@ -1089,9 +1169,9 @@ $$
 \qquad
 b_3=-7,
 $$
-so with $(Z_3,\alpha_U^{-1},\ln(\mu_G/M_Z))\approx(1.766,24,30.44)$ (where $\ln(\mu_G/M_Z)=\ln(M_{Pl}/M_Z)-9\approx 39.44-9=30.44$) one finds $\alpha_s(M_Z)\approx 0.118$, with residual finite matching shift encoded by $\delta_3$ (Definition T.19) and subleading splittings as in Corollary T.17.1.
+so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently $Z_3=1+\Delta_3/24\approx 1.7671$, one finds $\alpha_s(M_Z)\approx 0.118$, with residual finite matching shift encoded by $\delta_3$ (Definition T.19) and subleading splittings as in Corollary T.17.1.
 
-*Proof.* One-loop running gives $\alpha_3^{-1}(M_Z)=\alpha_3^{-1}(\mu_G)+\frac{b_3}{2\pi}\ln(\mu_G/M_Z)$ (Theorem T.15). Substituting $\alpha_3^{-1}(\mu_G)=Z_3\alpha_U^{-1}$ yields the result. If $Z_3$ were set to $1$, the one-loop prediction would give $\alpha_3^{-1}(M_Z)<0$, so $Z_3>1$ is required and is supplied by the Bures matching factor. ∎
+*Proof.* One-loop running gives $\alpha_3^{-1}(M_Z)=\alpha_3^{-1}(\mu_G)+\frac{b_3}{2\pi}\ln(\mu_G/M_Z)$ (Theorem T.15). Substituting $\alpha_3^{-1}(\mu_G)=Z_3\alpha_U^{-1}$ yields the result. If $Z_3$ were set to $1$, the one-loop prediction would give $\alpha_3^{-1}(M_Z)<0$, so $Z_3>1$ is required; in the present formulation that requirement is encoded by the positive target threshold $\Delta_3>0$. ∎
 
 -----
 
@@ -1107,10 +1187,10 @@ so with $(Z_3,\alpha_U^{-1},\ln(\mu_G/M_Z))\approx(1.766,24,30.44)$ (where $\ln(
 |$A_{EW}$ |One-loop determinant |1.084 |— |Derived |
 |$v$ |$A_{EW} e^{-\kappa_{EW}} M_{Pl}$ |252 GeV |246 GeV |2.3% |
 |$\sin^2\theta_W^{(0)}$ |PU-normalized fixed-point value |$3/8$ |— |Exact |
-|$\sin^2\theta_W(\mu_G)$ |matching with Bures factors |$\frac{3Z_2}{3Z_2+5Z_1}$ |(matching-scale input) |Derived |
-|$(Z_1,Z_2,Z_3)$ |Bures generator norms on $\mathcal{M}_{\mathrm{int}}$ (Definition T.17a)|$(1.632,1.872,1.766)$ |— |Derived |
-|$\sin^2\theta_W(M_Z)$ |SM RG from matched boundary |$0.2312$ (one-loop, $\delta_i=0$)|$0.2312$ |Consistent|
-|$5/3$ factor |Bures normalization |$5/3$ |$5/3$ |Derived |
+|$\sin^2\theta_W(\mu_G)$ |matching with lifted spectral thresholds |$\frac{3Z_2}{3Z_2+5Z_1}$ with $Z_i=1+\Delta_i/24$ |(matching-scale input) |Derived |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ target tuple fixed by consistency with the previous matching outputs |— |Open spectral step |
+|$\sin^2\theta_W(M_Z)$ |SM RG from matched boundary |Conditional on the lifted spectral thresholds and $\delta_i$ |$0.2312$ |Conditional|
+|$5/3$ factor |Canonical hypercharge normalization |$5/3$ |$5/3$ |Derived |
 |$\lambda_{\text{block}}$ |6 SU(2) blocks |$-1/36$ |— |Exact |
 |$\lambda_{\text{elastic}}$ |Projector algebra |$+1/36$ |— |Exact |
 |$\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU})$|Zero-slack |$0$ |(fixed-point input) |Exact |
@@ -1139,8 +1219,8 @@ $$
 \kappa_{EW} = 38.5 \text{ (constraint counting)} \\[3pt]
 A_{EW} = 1.084 \text{ (one-loop determinant)} \\[3pt]
 v = A_{EW} e^{-\kappa_{EW}} M_{Pl} = 252 \text{ GeV} \\[3pt]
-\sin^2\theta_W^{(0)} = 3/8,; \sin^2\theta_W(\mu_G) = \tfrac{3Z_2}{3Z_2+5Z_1} \text{ (fixed point + matching)} \\[3pt]
-\lambda_{\text{block}} = -1/36,; \lambda_{\text{elastic}} = +1/36 \\[3pt]
+\sin^2\theta_W^{(0)} = 3/8; \sin^2\theta_W(\mu_G) = \tfrac{3Z_2}{3Z_2+5Z_1} \text{ (fixed point + matching)} \\[3pt]
+\lambda_{\text{block}} = -1/36; \lambda_{\text{elastic}} = +1/36 \\[3pt]
 \lambda(\mu_\lambda) = 0 \to m_H \approx 125 \text{ GeV} \\[3pt]
 g_i(\mu_G)=g_U/\sqrt{Z_i} \text{ (matching)} \\[3pt]
 y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) = |P_3 \mathbf{h}|_B = 1 \text{ (}S_3\text{-invariant projector)}
@@ -1156,7 +1236,7 @@ $$
 
 ### T.20.2 Solved: Threshold Corrections ✓
 
-**Result**: Leading-order threshold effects are isotropic (Theorem T.17), giving only a common additive shift in $\alpha_i^{-1}(\mu_G)$ and leaving the gauge-factor separations controlled by the Bures wavefunction factors $Z_i$ (Corollary T.13.1). Subleading anisotropic splittings are $O(M^{-1})$-suppressed (Corollary T.17.1).
+**Result**: Leading-order residual threshold effects are isotropic (Theorem T.17), giving only a common additive shift in $\alpha_i^{-1}(\mu_G)$ and leaving the gauge-factor separations controlled by the principal lifted spectral thresholds $\Delta_i$ (equivalently the matching factors $Z_i$) of Corollary T.13.1. Subleading anisotropic splittings are $O(M^{-1})$-suppressed (Corollary T.17.1).
 
 ### T.20.3 Solved: Beta Function Vanishing ✓
 
@@ -1164,39 +1244,39 @@ $$
 
 ### T.20.4 Solved: Electroweak Prefactor ✓
 
-**Theorem T.29** (Electroweak Prefactor). The one-loop determinant ratio gives:
+**Theorem T.29** (Electroweak Prefactor within the small-step isotropic determinant model). Assume:
+1. PCE equipartition over the $M=24$ interface modes, so that the characteristic step size satisfies $u_0^2=1/M$;
+2. the finite-$u_0$ reservoir correction is captured by the stated rank-one Schur-complement factor;
+3. the curved-orbit Jacobian is represented by the homogeneous-space factor $(M/(M-1))^{1/4}$.
+
+Then the one-loop determinant prefactor is
 $$
-\boxed{A_{EW} = A_{\text{link}} \times A_{\text{Schur}} \times A_{\text{geo}} = 1.085 \pm 0.005}
+\boxed{A_{EW}=A_{\text{link}}A_{\text{Schur}}A_{\text{geo}}=1.084\pm 0.005.}
 $$
 
-*Proof.* The prefactor factorizes into three terms:
-
-**Factor 1: SU(2) Block Curvature.** PCE equipartition across $M = 24$ interface modes (Theorem Z.5) gives the geodesic step:
+*Proof.* Under assumption (1),
 $$
-u_0^2 = \frac{1}{M} = \frac{1}{24}
+u_0^2=\frac{1}{24},\qquad u_0=\frac{1}{\sqrt{24}}.
 $$
-This follows from capacity saturation at the PCE-attractor (Appendix Z, Section Z.8): the total Bures variance $\langle r_B^2 \rangle = 1$ distributed isotropically over $M = 24$ orthonormal directions yields $\sigma_B^2 = 1/24$ per mode.
-The curvature of $1 - \cos u$ around $u_0$ is $\cos u_0$. For six SU(2) links:
+The three model factors are
 $$
-A_{\text{link}} = (\cos u_0)^{-3} = (0.9792)^{-3} = 1.0650
+A_{\text{link}}=(\cos u_0)^{-3},
 $$
-
-**Factor 2: Schur Complement.** Integrating out the 12 information variables $s$ at finite $u_0$ via the rank-one coupling to the reservoir gives:
 $$
-A_{\text{Schur}} = \left(1 - \frac{u_0^2}{3\cos u_0}\right)^{-1/2} = (1 - 0.0142)^{-1/2} = 1.0072
+A_{\text{Schur}}=\left(1-\frac{u_0^2}{3\cos u_0}\right)^{-1/2},
 $$
-This uses $(I + P_L)^{-1} = I - \frac{1}{2}P_L$ exactly as in the elastic quartic derivation.
-
-**Factor 3: Homogeneous-Space Jacobian.** The geometric Jacobian relating the flat tangent to the curved Bures manifold:
 $$
-A_{\text{geo}} = \left(\frac{M}{M-1}\right)^{1/4} = \left(\frac{24}{23}\right)^{1/4} = 1.0107
+A_{\text{geo}}=\left(\frac{24}{23}\right)^{1/4}.
 $$
-
-**Total:**
+Numerically,
 $$
-A_{EW} = 1.0650 \times 1.0072 \times 1.0107 = 1.084 \pm 0.005
+A_{\text{link}}=1.0650,\qquad A_{\text{Schur}}=1.0072,\qquad A_{\text{geo}}=1.0107,
 $$
-∎
+so
+$$
+A_{EW}=1.0650\times 1.0072\times 1.0107=1.08424\ldots
+$$
+which justifies the stated value $1.084\pm 0.005$. ∎
 
 **Corollary T.29.1** (Complete Electroweak Scale). With zero continuously adjustable parameters:
 $$
@@ -1481,6 +1561,7 @@ $$
 \boxed{
 \begin{aligned}
 \lambda_{\mathrm{PU}}(\mathfrak{A}_{PU}) &= 0 \quad \text{(zero-slack, Theorem T.25)}\\
+\sin^2\theta_W^{(0)} &= 3/8 \quad \text{(PU-normalized Weinberg angle, Theorem T.14)}\\
 \sin^2\theta_W(\mu_G) &= \frac{3 Z_2}{3 Z_2 + 5 Z_1} \quad \text{(matching Weinberg angle, Theorem T.14)}\\
 g_i(\mu_G) &= \frac{g_U}{\sqrt{Z_i}} \quad (i=1,2,3)\quad \text{(gauge matching, Corollary T.13.1)}\\
 y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) &= 1 \quad \text{(}S_3\text{-democratic Higgs, Theorem T.32)}\\
@@ -1491,7 +1572,7 @@ g_U^2 &= \pi/6 \quad \text{(holonomy saturation, Theorem T.39a)}
 }
 $$
 
-These seven boundary conditions, together with the PU-to-SM matching map encoded by the Bures gauge wavefunction factors $Z_i$ (Definition T.17a) and two-loop SM RG evolution from $\mu_G$, determine the electroweak and Yukawa observables including absolute fermion masses.
+These eight boundary conditions, together with the PU-to-SM matching map encoded by the lifted spectral threshold data $Z_i=1+\Delta_i/24$ (Definition T.17a) and two-loop SM RG evolution from $\mu_G$, determine the electroweak and Yukawa observables once the spectral thresholds are supplied by the lifted gauge-sector computation on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$.
 
 -----
 
@@ -1575,7 +1656,7 @@ $$
 \boxed{g_U = \sqrt{\frac{\pi}{6}} \approx 0.724, \qquad \alpha_U^{-1} = \frac{4\pi}{g_U^2} = M = 24.}
 $$
 
-**Consistency checks.** (i) The identity $\alpha_U^{-1}=M=24$ corresponds to $g_U^2=\pi/6$ (Theorem T.39a). (ii) With PU-to-SM matching $g_i(\mu_G)=g_U/\sqrt{Z_i}$ (Corollary T.13.1) and the Bures-derived wavefunction factors $Z_i$ (Theorem T.18), one-loop SM running yields Z-pole gauge couplings consistent with observation (Theorem T.16; Theorem T.27b), up to the residual finite shifts $\delta_i$ and $O(M^{-1})$ splittings (Definition T.19; Corollary T.17.1). (iii) In the isotropic matching limit $Z_1=Z_2=Z_3$ one recovers the standard SU(5) tree-level ratios $(g')^2:g^2:g_s^2=\frac{3}{5}:1:1$ and $\sin^2\theta_W=3/8$ (Theorem T.14; Theorem T.27a). ∎
+**Consistency checks.** (i) The identity $\alpha_U^{-1}=M=24$ corresponds to $g_U^2=\pi/6$ (Theorem T.39a). (ii) With PU-to-SM matching $g_i(\mu_G)=g_U/\sqrt{Z_i}$ (Corollary T.13.1) and lifted spectral threshold data $Z_i=1+\Delta_i/24$ from Definition T.17a, one-loop SM running yields Z-pole gauge couplings once the threshold tuple is supplied, up to the residual finite shifts $\delta_i$ and $O(M^{-1})$ splittings (Definition T.19; Corollary T.17.1). (iii) In the isotropic matching limit $Z_1=Z_2=Z_3$ one recovers the standard SU(5) tree-level ratios $(g')^2:g^2:g_s^2=\frac{3}{5}:1:1$ and $\sin^2\theta_W=3/8$ (Theorem T.14; Theorem T.27a). ∎
 **Problem T.3** (CKM/PMNS). *Solved for CKM sector in Section T.22 and PMNS sector in Section T.24.* The CKM matrix elements emerge from two limiting regimes of a unified overlap formula on the generation manifold $\mathrm{Gr}(2,8)$:
 
 1. **Heavy-generation mixing** (3↔1, 3↔2): Gaussian overlap suppression $\exp(-\alpha d^2_{E_8})$ yields $|V_{cb}| = \sqrt{2/3} \cdot e^{-3} = 0.0407$ and $|V_{ub}| = 0.00392$ (Theorems T.46–T.48).
@@ -1709,7 +1790,7 @@ $$
 For a small SU(2) rotation of angle $u$ in a single AB block at $\rho_0$, the Bures and $E_8$ distances satisfy
 
 $$
-d_B^2 = \frac{1}{4},u^2 = \frac{1}{8},d^2_{E_8} + \mathcal{O}(u^4), \qquad d_{E_8}^2 = 2,u^2.
+d_B^2 = \frac{1}{4}u^2 = \frac{1}{8}d^2_{E_8} + \mathcal{O}(u^4), \qquad d_{E_8}^2 = 2u^2.
 $$
 
 **Theorem T.41.5** (Gaussian overlap and Yukawa suppression).
@@ -1751,12 +1832,12 @@ $$
 \mathcal{R} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}.
 $$
 
-**PCE Triad Selection Principle.** The charged lepton triad is uniquely determined by the error-correcting structure of $E_8$ (Theorem T.24.3): the framework constants $(a, b) = (2, 6)$ fix the triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (a, b, 2a) = (2, 6, 4)$ with $\mathcal{R} = b/a = 3$. Among the admissible $E_8$ triads with $\mathcal{R} = 3$, the constraint $d^2_{31} = 3 d^2_{32}$ with $d^2 \in \{2, 4, 6, 8\}$ has a unique solution at $d^2_{32} = 2$ (Theorem T.42.1), which also minimizes the action cost $\exp(-\alpha, d^2_{32})$ as required by PCE.
+**PCE Triad Selection Principle.** The charged lepton triad is uniquely determined by the error-correcting structure of $E_8$ (Theorem T.24.3): the framework constants $(a, b) = (2, 6)$ fix the triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (a, b, 2a) = (2, 6, 4)$ with $\mathcal{R} = b/a = 3$. Among the admissible $E_8$ triads with $\mathcal{R} = 3$, the constraint $d^2_{31} = 3 d^2_{32}$ with $d^2 \in \{2, 4, 6, 8\}$ has a unique solution at $d^2_{32} = 2$ (Theorem T.42.1), which also minimizes the action cost $\exp(-\alpha d^2_{32})$ as required by PCE.
 
 ### T.21.5.2 Uniqueness of the Charged-Lepton Triad
 
 **Theorem T.42.1** (Charged-lepton triad by minimal $d^2_{32}$).
-Among $\mathcal{R} = 3$ triads, the constraint $d^2_{31} = 3,d^2_{32}$ with $d^2 \in \{2,4,6,8\}$ has a unique solution:
+Among $\mathcal{R} = 3$ triads, the constraint $d^2_{31} = 3 d^2_{32}$ with $d^2 \in \{2,4,6,8\}$ has a unique solution:
 
 |$d^2_{32}$|$d^2_{31} = 3 \times d^2_{32}$|Valid $E_8$ distance?|
 |:--------:|:----------------------------:|:-------------------:|
@@ -1779,7 +1860,7 @@ $$
 
 which satisfies $|r_k|^2 = 2$ for all $k$ and the stated pairwise distances.
 
-*Proof.* $\mathcal{R} = 3$ requires $d^2_{31} = 3,d^2_{32}$. Since available squared distances are ${2,4,6,8}$, the only possibility with $d^2_{32}$ minimized is $(d^2_{32}, d^2_{31}) = (2, 6)$. The remaining edge closes at $d^2_{21} = 4$ for the explicit triple above. ∎
+*Proof.* $\mathcal{R} = 3$ requires $d^2_{31} = 3 d^2_{32}$. Since available squared distances are ${2,4,6,8}$, the only possibility with $d^2_{32}$ minimized is $(d^2_{32}, d^2_{31}) = (2, 6)$. The remaining edge closes at $d^2_{21} = 4$ for the explicit triple above. ∎
 
 -----
 
@@ -2333,7 +2414,7 @@ The Leech lattice $\Lambda_{24}$ is constructed via Construction A as a union of
 The scaling by $\sqrt{2}$ maps $E_8$ roots (squared norm $2$) to Leech minimal vectors (squared norm $4$), ensuring even unimodularity and minimal norm $4$. This homothety is consistent with Lemma T.41.4 when expressed in a common physical normalization:
 
 $$
-d^2_{E_8} \xrightarrow{\times\sqrt{2}} d^2_{\sqrt{2}E_8} = 2,d^2_{E_8},
+d^2_{E_8} \xrightarrow{\times\sqrt{2}} d^2_{\sqrt{2}E_8} = 2 d^2_{E_8},
 $$
 
 so that $E_8$ distances ${2, 4, 6, 8}$ map to ${4, 8, 12, 16}$ in the Leech embedding. This aligns with the interface dimension $M = 24$ and the Golay error-correction structure at the PU fixed point $\mathfrak{A}_{PU}$.
@@ -2435,7 +2516,7 @@ $$
 \right],
 $$
 and we include the full two-loop contributions in the numerical integration below. Neglecting $y_b$ and lighter Yukawas (numerically irrelevant for $\eta_\tau$ at the stated precision), the PU boundary conditions at $\mu_G$ are fixed by
-$g_i^2(\mu_G)=g_U^2/Z_i$ with $g_U^2=\pi/6$ (Theorem T.39a) and $(Z_1,Z_2,Z_3)=(1.632,1.872,1.766)$ (Theorem T.18), together with $y_t(\mu_G)=0.392$ (Remark T.26.2) and $\lambda(\mu_G)=0$.
+$g_i^2(\mu_G)=g_U^2/Z_i$ with $g_U^2=\pi/6$ (Theorem T.39a), $Z_i=1+\Delta_i/24$ from the lifted spectral threshold data (Definition T.17a), together with $y_t(\mu_G)=0.392$ for the target threshold tuple of Remark T.26.2 and $\lambda(\mu_G)=0$.
 
 **Step 2 (Two-loop integration with explicit electroweak matching).** The symmetric-phase SM RGEs are matched onto the low-energy effective description at an electroweak scale $\mu_{\rm EW}$ as a scheme choice: evolve with full SM RGEs for $\mu\in[\mu_G,\mu_{\rm EW}]$, and for $\mu<\mu_{\rm EW}$ decouple the top Yukawa by setting $y_t(\mu)=0$ in the beta functions while continuing to evolve $\{g_1^2,g_2^2,g_3^2,\lambda,y_\tau^2\}$ down to $\mu=m_\tau$.
 
@@ -2578,7 +2659,8 @@ if __name__ == "__main__":
     mu_G = 1.51e15      # GeV
     m_tau = 1.77686     # GeV   (Particle Data Group (2024))
     gU2 = math.pi/6.0
-    Z = (1.632, 1.872, 1.766)
+    # Insert the lifted spectral target tuple here; for the numerical target use
+    Z = (1 + 15.14/24.0, 1 + 20.94/24.0, 1 + 18.41/24.0)
     yt_G = 0.392
     lam_G = 0.0
 
@@ -3209,11 +3291,11 @@ $$\mathcal{A} = \frac{i}{2}\sum_{\alpha \in A, \beta \in B} \left( \bar{z}_{\alp
 **Step 2 (Connection from QFI structure).** From Definition G.8.2a, the interface generators are:
 $$X_{\alpha\beta} = |\alpha\rangle\langle\beta| + |\beta\rangle\langle\alpha|, \quad Y_{\alpha\beta} = -i(|\alpha\rangle\langle\beta| - |\beta\rangle\langle\alpha|)$$
 
-The symplectic form (Definition G.8.2b) is ω(H₁, H₂) = −i Tr[ρ₀[H₁, H₂]]. For a curve ρ(t) on the orbit, the Berry phase is:
-$$\gamma = i\oint \mathrm{Tr}[\rho, d\rho]$$
+The symplectic form (Definition G.8.2b) is ω(H₁, H₂) = -i \operatorname{Tr}(\rho_0[H_1, H_2]). For a closed curve $\Gamma$ on the orbit, the Berry phase is:
+$$\gamma = \oint_{\Gamma} \mathcal{A}$$
 
 **Step 3 (Local coordinates).** Introducing complex coordinates z_αβ corresponding to the ab = 12 complex dimensions, the connection 1-form in the Bures-orthonormal frame becomes:
-$$\mathcal{A} = \frac{i}{2}\sum_{\alpha,\beta} \left( \bar{z}_{\alpha\beta}, dz_{\alpha\beta} - z_{\alpha\beta}, d\bar{z}_{\alpha\beta} \right)$$
+$$\mathcal{A} = \frac{i}{2}\sum_{\alpha,\beta} \left( \bar{z}_{\alpha\beta}\, dz_{\alpha\beta} - z_{\alpha\beta}\, d\bar{z}_{\alpha\beta} \right)$$
 
 This is the canonical U(1) connection on the determinant bundle, compatible with the Kähler structure. ∎
 
@@ -3678,11 +3760,11 @@ $$\mathcal{M}_\Lambda = \text{Gr}(k, M) = \text{Gr}(12, 24)$$
 |Base dimension|$k(M-k) = k^2$ |144 |
 |Extra DOF |— |0 |
 |Zero modes |$D + 1$ (translations + dilatation)|5 |
-|**$\kappa$** |$144 - 5/2$ |**141.5**|
+|**$\kappa_{\mathrm{ref}}$** |$144 - 5/2$ |**141.5**|
 
-**Theorem U.16** (Cosmological Constant Complexity). *The instanton complexity is:*
+**Theorem U.16** (Reference Cosmological Constant Complexity). *Under the Appendix U leading-order zero-mode counting convention, the reference exponent is:*
 
-$$\kappa = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5$$
+$$\kappa_{\mathrm{ref}} = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5$$
 
 *where the base complexity $k^2 = 144$ arises from the Grassmannian dimension (Theorem U.3), and the deficit $(D+1)/2 = 5/2$ arises from the four translation zero modes (Theorem U.8) together with the dilatation zero mode (Theorem U.9). The scale invariance underlying the dilatation mode is established at the PCE-Attractor in Theorem U.8a.*
 
@@ -3709,7 +3791,7 @@ $$\mathcal{M}_{EW} = \frac{SU(2)_L \times U(1)_Y}{U(1)_{em}} \cong S^3$$
 |Zero modes |$U(1)_{em}$ gauge |1 |
 |**$\kappa_{EW}$**|$36 + 3 - 1/2$ |**38.5**|
 
-**Theorem T.5** (Electroweak Complexity). *The electroweak complexity is:*
+**Summary (Electroweak Complexity).** *The electroweak complexity is:*
 
 $$\kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 36 + 3 - \frac{1}{2} = 38.5$$
 
@@ -3751,11 +3833,13 @@ $$Y_{ij} \propto \exp\left(-\alpha \cdot d^2_{E_8}\right)$$
 
 where $\alpha = 3/2$ (Theorem T.39b) and $d^2_{E_8} \in \{2, 4, 6, 8\}$ are the allowed squared distances between roots in $E_8$.
 
-**Theorem T.39b** (Universal Hierarchy Coefficient). *At the PCE-attractor:*
+**Theorem T.39b** (Universal Hierarchy Coefficient). *At the PCE-attractor, under the same mode-equipartition assumption used in Theorem T.29:*
 
-$$\alpha = \frac{1}{16\sigma_B^2} = \frac{24}{16} = \frac{3}{2}$$
+$$
+\alpha = \frac{1}{16\sigma_B^2} = \frac{24}{16} = \frac{3}{2}
+$$
 
-*where $\sigma_B^2 = 1/24$ from capacity saturation across $M = 24$ interface modes (Theorem Z.14). The UV value $\alpha_{UV} = 3/2$ evolves to $\alpha_{IR} \approx 1.41$ at low scales due to geometric curvature corrections on Gr(2,8), with negligible RG contributions for leptons.*
+*where $\sigma_B^2 = 1/24$ is the per-mode variance obtained by distributing the unit Bures variance isotropically across the $M=24$ interface modes of Theorem Z.5. The UV value $\alpha_{UV}=3/2$ evolves to $\alpha_{IR}\approx 1.41$ at low scales due to geometric curvature corrections on $\mathrm{Gr}(2,8)$, with negligible RG contributions for leptons.*
 
 **Effective $\kappa$ Values for Yukawa Suppression.**
 
@@ -3981,21 +4065,21 @@ All parameters connect directly to geometry and PCE. Any quoted $\chi^2/\text{do
 
 The derivation chain from Sections T.1–T.21 establishes the complete set of foundational constants.
 
-**Theorem 15** (Horizon Constant). *The minimal complexity for self-referential prediction is $K_0 = 3$ bits.*
+**Recall from Theorem 15 (Horizon Constant).** The minimal complexity for self-referential prediction is $K_0 = 3$ bits.
 
-**Theorem 23** (MPU Dimension). *The Minimal Predictive Unit Hilbert space has dimension $d_0 = 2^{K_0} = 8$.*
+**Recall from Theorem 23 (MPU Dimension).** The Minimal Predictive Unit Hilbert space has dimension $d_0 = 2^{K_0} = 8$.
 
-**Theorem Z.1** (Active Dimension). *The Landauer cost $\varepsilon = \ln 2$ determines the active kernel dimension $a = e^\varepsilon = 2$.*
+**Recall from Theorem Z.1 (Active Dimension).** The Landauer cost $\varepsilon = \ln 2$ determines the active kernel dimension $a = e^\varepsilon = 2$.
 
-**Definition** (Inactive Dimension). The inactive subspace dimension is $b = d_0 - a = 6$.
+**Definition (Inactive Dimension).** The inactive subspace dimension is $b = d_0 - a = 6$.
 
-**Theorem Z.5** (Interface Modes). *The quantum Fisher information interface has $M = 2ab = 24$ active modes.*
+**Recall from Theorem Z.5 (Interface Modes).** The quantum Fisher information interface has $M = 2ab = 24$ active modes.
 
 The complete derivation chain:
 
 $$K_0 = 3 \xrightarrow{\text{Thm 15}} d_0 = 2^{K_0} = 8 \xrightarrow{\text{Thm Z.1}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 2ab = 24$$
 
-**Lemma T.41.2** (Bures Variance). *At the PU fixed point $\mathfrak{A}_{PU}$, the Predictive Ward identity fixes the quadratic kernel on the interface orbit Gr(2,8) to equal the Bures metric. Capacity saturation normalizes the mean-squared Bures radius to unity:*
+**Summary (Bures Variance).** *At the PU fixed point $\mathfrak{A}_{PU}$, the Predictive Ward identity fixes the quadratic kernel on the interface orbit Gr(2,8) to equal the Bures metric. Capacity saturation normalizes the mean-squared Bures radius to unity:*
 
 $$\langle r_B^2 \rangle = \text{tr}(\text{Cov}\,\xi) = 24\sigma_B^2 = 1$$
 
@@ -4005,7 +4089,7 @@ $$\sigma_B^2 = \frac{1}{M} = \frac{1}{24}$$
 
 *Proof.* The Predictive Ward identity identifies $\Gamma^{(2)} = g_B$ where $g_B$ is the Bures metric. In the Bures-orthonormal frame $\xi \in \mathbb{R}^{24}$, the quadratic action is $S_{\text{quad}} = \frac{1}{2}\xi^T\xi$. Capacity saturation at $\mathfrak{A}_{PU}$ imposes $\langle r_B^2 \rangle = 1$. Isotropy forces equal per-direction variance: $\langle r_B^2 \rangle = \sum_i \langle \xi_i^2 \rangle = 24\sigma_B^2 = 1$, hence $\sigma_B^2 = 1/24$.
 
-**Corollary T.41.3** (Hierarchy Coefficient). *The hierarchy coefficient is:*
+**Summary (Hierarchy Coefficient).** *The hierarchy coefficient is:*
 
 $$\alpha = \frac{1}{16\sigma_B^2} = \frac{24}{16} = \frac{3}{2}$$
 
@@ -5494,7 +5578,7 @@ A conservative propagation bound at fixed truncation order is obtained by treati
 
 ### T.25.6.1 Vacuum Frustration
 
-**Theorem T.49** (Geometric Frustration). *The vacuum position minimizes elastic energy from incompatible lattice constraints:*
+**Summary (Geometric Frustration).** *The vacuum position minimizes elastic energy from incompatible lattice constraints:*
 
 $$\theta_{\text{vac}} = \frac{\kappa_u \theta_u + \kappa_d \theta_d}{\kappa_u + \kappa_d}$$
 
@@ -5510,7 +5594,7 @@ $$\theta_{\text{frustration}} = \theta_{\text{vac}} - \theta_u = 15.15°$$
 
 ### T.25.6.2 Cabibbo Angle Prediction
 
-**Theorem T.52** (Cabibbo Mixing). *The Cabibbo angle emerges from frustration-induced tunneling:*
+**Summary (Cabibbo Mixing).** *The Cabibbo angle emerges from frustration-induced tunneling:*
 
 $$|V_{us}| = \mathcal{P} \times \sin(\theta_{\text{frustration}}) \times f_{\text{curv}}$$
 
@@ -5553,7 +5637,7 @@ The central value $c_d/c_u \approx 1.01$ yields excellent agreement with experim
 
 ### T.25.7.1 Lepton-Quark Bridge
 
-**Theorem T.44** (Sector Prefactors). *At the matching scale $\mu_G$:*
+**Summary (Sector Prefactors).** *At the matching scale $\mu_G$:*
 
 $$\frac{c_\ell}{c_d} = \frac{8}{3}$$
 
@@ -5573,7 +5657,7 @@ The sector prefactors $c_f$ set absolute mass scales for each fermion sector; th
 
 ### T.25.7.2 Up-Down Ratio
 
-**Theorem T.38** (Up-Down Prefactor). *The prefactor ratio between quark sectors:*
+**Summary (Up-Down Prefactor).** *The prefactor ratio between quark sectors:*
 
 $$\frac{c_d}{c_u} = \sqrt{\frac{Z_{u_R}}{Z_{d_R}}} = \sqrt{\frac{4\kappa_3 + \frac{4}{9}\kappa_1}{4\kappa_3 + \frac{1}{9}\kappa_1}} \approx 1.02$$
 

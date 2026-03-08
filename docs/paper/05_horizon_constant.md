@@ -60,11 +60,12 @@ Any system engaging in non-trivial self-referential prediction, irrespective of 
 * (ii) **Predictive Generation ($b_p$):** An internal mechanism or model to generate representations of potential future states.
 * (iii) **Verification & Update ($b_v$):** The ability to compare its predictions with actual outcomes and initiate an update to its internal state or model.
 
-*Proof (outline):*
-* (i) Self-reference requires the system to identify itself and differentiate its current state from others. Without state distinction, referencing a specific "self-state" is ill-defined.
-* (ii) Prediction involves forming an internal representation of a future state. Without an internal modeling mechanism, the system cannot generate a prediction that is distinct from a mere reaction to current input.
-* (iii) For adaptive or meaningful prediction, the system must assess its predictions against outcomes. Without verification, learning and model improvement are impossible, and predictive accuracy is undefined. For example, a memoryless device or one that cannot compare its output to subsequent events cannot verify its predictions and thus cannot adapt or even ascertain if its predictions are successful.
-Thus, these three capabilities ($b_m, b_p, b_v$) are jointly necessary as the logical bedrock for any system that can predictively model aspects of itself and its environment in an operational cycle. QED
+*Proof.*
+* (i) **State distinction is necessary.** A self-referential predictor must encode at least one present internal state and distinguish that state from alternatives. Otherwise the phrases "the current internal state," "the predicted successor state," and "the updated state after verification" collapse into an undifferentiated symbol with no operational content. In that case self-reference is not well formed.
+* (ii) **Predictive generation is necessary.** Prediction requires an internal representation of a possible future state prior to the actual outcome. If the system lacks any mechanism for generating such a representation, then it can only react to current input after the fact; it is not performing prediction.
+* (iii) **Verification and update are necessary.** A predictive act is operationally meaningful only if the system can compare the realized outcome with the previously generated prediction and modify its state or model accordingly. Without such a comparison, predictive success or failure is undefined for the system itself, and no adaptive predictive cycle can be instantiated.
+
+These three capabilities are jointly necessary. Removing any one of them destroys one of the three indispensable stages of the predictive loop: identifiable self-state, internally generated forecast, and outcome-conditioned correction. Therefore any non-trivial self-referential predictor must realize all of $b_m$, $b_p$, and $b_v$. ∎
 
 
 The Horizon Constant $K_0$ will represent the minimal physical complexity required to instantiate these capabilities in a way that enables both the encoding of the SPAP self-referential loop and the achievement of predictive accuracy better than chance.

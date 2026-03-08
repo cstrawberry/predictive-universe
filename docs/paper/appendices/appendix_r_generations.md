@@ -994,16 +994,25 @@ where $\mathcal{F}$ is the set of torus-fixed points (Schubert cells), $\Lambda_
 
 ### R.5.2 Generation Vacua and $E_8$ Root Distances
 
-Each topological sector $q \in L_{\mathrm{light}}$ selects a preferred vacuum by adding a small linear pinning term:
+Each topological sector $q \in L_{\mathrm{light}}$ is coupled to a linear pinning term
 $$
 \eta V_B = -\eta \langle\mu_{U(8)}, B(q)\rangle,
 $$
-where $\eta>0$ is small and $B(q)$ is a diagonal matrix encoding the topological charge $q$. 
+where $\eta > 0$ is small and $B(q)$ is a diagonal matrix encoding the topological charge $q$.
 
-Minimizing $V_q = V + \eta V_B$ over fixed points selects distinct minima. For the three sectors $q^{(1)}, q^{(2)}, q^{(3)}$ with family charges $\{a, -a, 0\}$, this yields three vacuum configurations:
+**Theorem R.5.1 (Three Generation Vacua).** For sufficiently small $\eta > 0$, the sector-resolved potentials $V_q = V_0 + \eta V_B$ have exactly one nondegenerate local minimum in each of the three sectors $q \in \{q_+, q_-, q_0\}$ with family charges $\{+a, -a, 0\}$, and no other local minima in the same low-energy window.
 
+*Proof.* Set $V_0(x) := \frac{\kappa_\Sigma}{2}|\mu_{G_{\mathrm{SM}}}(x)|^2$. The space $\Sigma_8$ is a compact coadjoint orbit of $U(8)$, hence a compact Hamiltonian Kähler manifold. By Kirwan's theory [1984], $V_0$ is minimally degenerate in the sense of Kirwan, with critical sets that are unions of group orbits. For our setting this implies the stronger Morse–Bott condition, by the following special-case argument: $\Sigma_8$ is a coadjoint orbit and the critical sets of $V_0$ are themselves compact group orbits (intersections of $\Sigma_8$ with level sets of the norm-square), hence smooth compact submanifolds. At the minimal critical set $\mathcal{C}_{\min}$ (the zero level set of $\mu_{G_{\mathrm{SM}}}$, or the closest critical value), $V_0$ attains its minimum, so the normal Hessian is necessarily non-negative; the strict positivity of the normal Hessian at $\mathcal{C}_{\min}$ follows from the fact that the Kähler metric on $\Sigma_8$ ensures $\nabla^2 V_0$ restricted to the normal bundle is a sum of squares of moment-map components (Guillemin–Zara 2001, §3), which vanishes only along $\mathcal{C}_{\min}$ itself. Thus $\mathcal{C}_{\min}$ is a smooth compact critical manifold with non-degenerate normal Hessian — i.e., $V_0$ is Morse–Bott at $\mathcal{C}_{\min}$.
+
+Let $\mathcal{C}_q$ denote the minimal critical manifold of $V_0$ in sector $q$. The pinning function $h_q(x) := -\langle\mu_{U(8)}(x), B(q)\rangle$ is the component of the moment map along the regular torus direction $B(q)$. On a compact Hamiltonian torus orbit, the Atiyah–Guillemin–Sternberg convexity theorem guarantees that a regular linear functional attains its minimum at a unique vertex — i.e., a unique torus-fixed (Schubert) point $p_q$. Hence $h_q|_{\mathcal{C}_q}$ is Morse with a unique minimum.
+
+By the Morse–Bott perturbation theorem (Banyaga–Hurtubise 2004), for sufficiently small $\eta > 0$ the perturbed function $V_0 + \eta h_q$ has, near each critical manifold of $V_0$, one nondegenerate critical point for each critical point of $h_q$ restricted to that manifold, with Morse index equal to the sum of the normal index and the restricted index. Since $\mathcal{C}_q$ is a minimal critical manifold (normal index $0$) and $p_q$ is a minimum of $h_q|_{\mathcal{C}_q}$ (tangent index $0$), the perturbed potential $V_q$ has exactly one nondegenerate local minimum near $\mathcal{C}_q$.
+
+The three minima are distinct because they belong to different topological sectors. Additional minima outside the low-energy window are excluded by the positive energy gap $\gamma := \inf_{x \notin U}(V_0(x) - V_0(\mathcal{C})) > 0$ for a sufficiently small neighborhood $U$ of the union $\mathcal{C} = \mathcal{C}_+ \cup \mathcal{C}_- \cup \mathcal{C}_0$. Choosing $\eta$ so that $\eta\|h_q\|_{C^0} < \gamma/3$ ensures the perturbation cannot create new low-energy minima outside $U$. ∎
+
+The three vacua are:
 - $p_1$: vacuum for generation 1 (family charge $+a$)
-- $p_2$: vacuum for generation 2 (family charge $-a$)  
+- $p_2$: vacuum for generation 2 (family charge $-a$)
 - $p_3$: vacuum for generation 3 (family charge $0$)
 
 **Connection to $E_8$ Root System:**
