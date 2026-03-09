@@ -51,16 +51,20 @@ The 'Evolve' process (Definition 27), triggered by an interaction $N(t)$, repres
 
 *   **Transition Probability Measure:** The transformation is characterized by a transition probability measure, denoted $d\mathbb{P}(f | i, N, \Delta t)$. This gives the probability for a system starting in initial state $i = (|\psi\rangle, s)$ to transition into an infinitesimal region of the final state space centered around $f = (|\psi'\rangle, s')$, under the influence of interaction $N$ during the interval $\Delta t$.
 *   **Structure Imposed by Framework Principles:** The structure of this transition measure is constrained by the principles established earlier:
-    1.  *(Amplitude Actualization)* The state amplitude component undergoes a probabilistic transition, actualizing into one of the basis states $|k\rangle_s$ corresponding to the initial perspective $s$ (assuming $s$ defines the relevant interaction basis for the immediate outcome). Let $P_k = |k\rangle_s\langle k|_s$ be the projector onto this outcome state.
-    2.  *(Born Rule Probability)* The probability for the system to actualize into the specific outcome state $|k\rangle_s$ is given precisely by the Born rule probability $P_{Born}(k | |\psi\rangle, s) = |\langle k | \psi \rangle_s|^2$. This rule is derived from POP/PCE consistency principles (Appendix G, Theorem G.1.7).
+    1.  *(Amplitude Actualization)* The state amplitude component undergoes a probabilistic transition, actualizing into one of the basis states $|k\rangle_{s_{\mathrm{int}}}$ corresponding to the interaction-selected perspective $s_{\mathrm{int}}=s_{\mathrm{int}}(N)$. For a measurement interaction, $s_{\mathrm{int}}=s_{meas}$ is fixed by the apparatus. Let $P_k = |k\rangle_{s_{\mathrm{int}}}\langle k|_{s_{\mathrm{int}}}$ be the projector onto this outcome state.
+    2.  *(Born Rule Probability)* The probability for the system to actualize into the specific outcome state $|k\rangle_{s_{\mathrm{int}}}$ is given by
+        $$
+        P_{Born}(k | |\psi\rangle, s_{\mathrm{int}}) = |\langle k | \psi \rangle_{s_{\mathrm{int}}}|^2.
+        $$
+        This rule is derived from POP/PCE consistency principles (Appendix G, Theorem G.1.7).
     3.  *(Perspective Shift)* Concurrently with or subsequent to the amplitude actualization yielding outcome $k$, the perspective index undergoes a stochastic transition $s \to s'$. The distribution of the final perspective $s'$ depends on the initial perspective $s$, the specific outcome $k$, and the nature of the interaction $N$.
 
-*   **Formal Decomposition of the Transition:** Based on these constraints, we decompose the probability measure for the transition $(|\psi\rangle, s) \to (|k\rangle_s, s')$ occurring via interaction $N$ over $\Delta t$. The joint probability (density with respect to $s'$) for actualizing the amplitude into state $|k\rangle_s$ *and* transitioning the perspective to $s'$ can be expressed as:
+*   **Formal Decomposition of the Transition:** Based on these constraints, we decompose the probability measure for the transition $(|\psi\rangle, s) \to (|k\rangle_{s_{\mathrm{int}}}, s')$ occurring via interaction $N$ over $\Delta t$. The joint probability (density with respect to $s'$) for actualizing the amplitude into state $|k\rangle_{s_{\mathrm{int}}}$ *and* transitioning the perspective to $s'$ can be expressed as:
     $$
-    \frac{d\mathbb{P}( (|k\rangle_s, s') | (|\psi\rangle, s), N, \Delta t)}{d\mu(s')} = P_{Born}(k | |\psi\rangle, s) \times G_{persp}(s' | s, k, N, \Delta t) \quad \text{(M.2)}
+    \frac{d\mathbb{P}( (|k\rangle_{s_{\mathrm{int}}}, s') | (|\psi\rangle, s), N, \Delta t)}{d\mu(s')} = P_{Born}(k | |\psi\rangle, s_{\mathrm{int}}) \times G_{persp}(s' | s, k, N, \Delta t) \quad \text{(M.2)}
     $$
     where:
-    *   $P_{Born}(k | |\psi\rangle, s) = |\langle k | \psi \rangle_s|^2$ is the probability of amplitude actualization to outcome $k$, derived from framework principles (Appendix G).
+    *   $P_{Born}(k | |\psi\rangle, s_{\mathrm{int}})$ is the probability of amplitude actualization to outcome $k$ in the interaction-selected basis.
     *   $G_{persp}(s' | s, k, N, \Delta t)$ is the Conditional Perspective Transition Kernel. This function represents the probability density (with respect to the measure $d\mu(s')$) for the perspective index to transition from the initial perspective $s$ to the final perspective $s'$, *given that* outcome $k$ was actualized during the interaction $N$ over the interval $\Delta t$.
     *   $G_{persp}$ must satisfy the properties of a Markov kernel density on the perspective space $\Sigma$. For fixed $s, k, N, \Delta t$, it must be non-negative and normalized with respect to the invariant measure $\mu(s')$ on $\Sigma$:
         $$ \int_{\Sigma} G_{persp}(s' | s, k, N, \Delta t) \, d\mu(s') = 1 \quad \forall s, k, N, \Delta t \quad \text{(M.3)} $$
@@ -90,12 +94,11 @@ The specific functional form of the conditional kernel $G_{persp}(s' | s, k, N, 
 #### M.3.3.1 Constructive derivation of $G_{\mathrm{persp}}$
 
 We now exhibit an explicit generator on the perspective manifold
-$\Sigma\cong U(d_{0})/U(1)^{d_{0}}$ whose time-$t$ transition kernel coincides with the heuristic form (M.5) in the weak-measurement limit and, crucially, satisfies the robustness conditions of Theorem L.1.
+$\Sigma\cong U(d_{0})/U(1)^{d_{0}}$ whose time-$t$ transition kernel has the same short-time Gaussian-with-drift structure as the heuristic form (M.5) in the weak-measurement limit and, crucially, satisfies the robustness conditions of Theorem L.1.
 
 **(a) Geometric setup**
 
-Equip $\Sigma$ with its standard Riemannian metric $g_{FS}$ induced by the Fubini–Study form.
-Let $\Delta_{\Sigma}$ denote the associated (positive) Laplace–Beltrami operator; its heat semigroup $e^{-t\Delta_{\Sigma}}$ is the canonical isotropic diffusion on $\Sigma$.
+Equip $\Sigma$ with the quotient Riemannian metric $g_\Sigma$ of Definition 25. Let $\Delta_{\Sigma}:=\operatorname{div}_{\Sigma}\nabla_{\Sigma}$ denote the corresponding **nonpositive** Laplace–Beltrami operator, so that $e^{t\Delta_{\Sigma}}$ is the heat semigroup on $\Sigma$.
 
 **(b) Interaction-biased Lindblad generator**
 
@@ -108,21 +111,22 @@ V_{k}(s')
 $$
 
 where $s_{k}$ is the perspective corresponding to $\lvert k\rangle_{s}$.
-Following standard diffusion‐with‐drift constructions (see Breuer & Petruccione 2002, §3.4), we introduce the (backward) diffusion generator on $\Sigma$ in weighted-gradient form:
+Following standard diffusion-with-drift constructions (see Breuer & Petruccione 2002, §3.4), we introduce the backward diffusion generator on $\Sigma$ in weighted-gradient form:
 
 $$
 \mathcal{L}_{\Sigma}^{(k)} f
   \;=\;
   \Delta_{\Sigma} f
   \;-\;
-  \langle \nabla_{\Sigma} V_{k},\,\nabla_{\Sigma} f\rangle,
+  \langle \nabla_{\Sigma} V_{k},\,\nabla_{\Sigma} f\rangle.
 \tag{M.5a}
 $$
 
-which preserves constants ($\mathcal{L}_{\Sigma}^{(k)}1=0$) and generates a Markov semigroup. It is an Ornstein–Uhlenbeck–type generator that is reversible with respect to the Gibbs weight $\exp[-V_{k}(s')]$ and drifts every perspective toward $s_{k}$. In divergence form with respect to the weighted measure $e^{-V_k}\,d\mathrm{vol}_{\Sigma}$ this is equivalently
+This preserves constants ($\mathcal{L}_{\Sigma}^{(k)}1=0$) and generates a Markov semigroup. It is reversible with respect to the Gibbs weight $\exp[-V_{k}(s')]\,d\mathrm{vol}_{\Sigma}$ and drifts perspectives toward $s_{k}$. In divergence form,
 $$
 \mathcal{L}_{\Sigma}^{(k)} f
-=e^{V_k}\,\nabla_{\Sigma}\cdot\big(e^{-V_k}\,\nabla_{\Sigma} f\big).
+=
+e^{V_k}\,\operatorname{div}_{\Sigma}\\!\big(e^{-V_k}\,\nabla_{\Sigma} f\big).
 $$
 
 **(c) Markov kernel and normalisation**
@@ -131,10 +135,17 @@ The corresponding transition kernel at interaction duration $\Delta t$ is
 $$
 G_{\mathrm{persp}}\bigl(s'\,|\,s,k,N,\Delta t\bigr)
 \;=\;
-\Bigl[e^{-\Delta t\,\mathcal L_{\Sigma}^{(k)}}\Bigr](s,s').
+\Bigl[e^{\Delta t\,\mathcal L_{\Sigma}^{(k)}}\Bigr](s,s').
 \tag{M.5b}
 $$
-Because $\mathcal L_{\Sigma}^{(k)}$ is elliptic on the compact manifold $\Sigma$, $e^{-\Delta t\mathcal L_{\Sigma}^{(k)}}$ is a **strictly positive, smooth** Markov kernel satisfying the normalisation (M.3).
+Because $\mathcal L_{\Sigma}^{(k)}$ is elliptic on the compact manifold $\Sigma$, $e^{\Delta t\mathcal L_{\Sigma}^{(k)}}$ is a strictly positive, smooth Markov kernel satisfying the normalisation (M.3). For small $\Delta t$, the kernel of the heat semigroup generated by $\Delta_{\Sigma}$ admits the standard short-time expansion in Riemannian normal coordinates about the initial point $s$:
+$$
+p_{\Delta t}(s,s')
+\sim
+\frac{1}{(4\pi\Delta t)^{\dim\Sigma/2}}
+\exp\Big(-\frac{d_{\Sigma}^2(s,s')}{4\Delta t}\Big)\,(1+O(\Delta t)),
+$$
+see e.g. [Gray 2004]. The drift potential $V_k$ biases the diffusion toward the outcome-dependent region, and in the regime where the transition remains within a convex normal neighborhood the resulting short-time transition density is well-approximated by a Gaussian in geodesic distance with width $\sigma^2=\Theta(\Delta t)$; no closed-form expression for $\sigma^2$ is required for subsequent bounds.
 For small $\Delta t$, the kernel of the heat semigroup generated by $\Delta_{\Sigma}$ admits the standard short-time expansion in Riemannian normal coordinates about the *initial* point $s$:
 $$
 p_{\Delta t}(s,s')
@@ -256,55 +267,71 @@ Both descriptions (M.10) and (M.11) are correct—they describe the same physica
 
 **Remark M.6.1: Idealized Isolation.** The Wigner's Friend scenario stipulates idealized isolation of $F$'s laboratory—no decoherence channels connect $F+Q$ to $W$'s environment during the intermediate period. In realistic settings, environmental decoherence would establish shared perspective records through uncontrolled 'Evolve' events before $W$ deliberately opens the laboratory [Zurek 2003; Schlosshauer 2007]. The paradox arises precisely because the gedanken experiment suppresses these channels.
 
-**Lemma M.6.1 (Correlated Perspective Dynamics).** Let $W$ and $F$ be observers with perspectives $s_W, s_F \in \Sigma$ respectively. When $W$ physically interacts with the system $F+Q$ at time $t_2$, the joint 'Evolve' event is characterized by a transition kernel on the product space:
-
+**Lemma M.6.1 (Correlated Perspective Dynamics in the Strong-Readout Limit).** Let $W$ and $F$ be observers with perspectives $s_W, s_F \in \Sigma$ respectively. Suppose that when $W$ physically interacts with the system $F+Q$ at time $t_2$, the realized record value is $k$, each single-perspective update is generated by $\mathcal L_\Sigma^{(k)}$, and the post-actualization perspective noises acting on $W$ and on $F$ are conditionally independent given $k$. Then the joint 'Evolve' event is characterized by the product transition kernel
 $$
-G_{\text{persp}}^{(WF)}\big((s'_W, s'_F)\,|\,(s_W, s_F), k, N_{W(FQ)}, \Delta t\big) \tag{M.12}
+G_{\text{persp}}^{(WF)}\big((s'_W, s'_F)\,|\,(s_W, s_F), k, N_{W(FQ)}, \Delta t\big)
+=
+G_{\text{persp}}(s'_W | s_W, k, N, \Delta t)\,G_{\text{persp}}(s'_F | s_F, k, N, \Delta t).
+\tag{M.12}
 $$
+Moreover:
 
-This kernel satisfies:
+(i) in the strong-readout limit $\lambda_{\text{drift}}\to\infty$, the joint law converges weakly to a measure concentrated on configurations for which both $s'_W$ and $s'_F$ encode the same outcome $k$;
 
-(i) **Outcome consistency:** For any outcome $k$, the marginals of $G_{\text{persp}}^{(WF)}$ are concentrated on configurations where both $s'_W$ and $s'_F$ encode the same outcome $k$.
-
-(ii) **Wasserstein contractivity:** The kernel inherits Wasserstein-2 contractivity from the single-perspective kernel (Equation M.5c):
-
+(ii) on any region where
 $$
-W_2\!\left(\mu^{(WF)} \cdot G_{\text{persp}}^{(WF)}, \nu^{(WF)} \cdot G_{\text{persp}}^{(WF)}\right) \leq e^{-\kappa_{\text{eff}} \Delta t} W_2(\mu^{(WF)}, \nu^{(WF)}) \tag{M.13}
+\mathrm{Ric}_\Sigma+\mathrm{Hess}_\Sigma V_k\succeq \kappa_{\text{eff}}\,g_\Sigma,
+$$
+the product semigroup is Wasserstein-2 contractive:
+$$
+W_2\!\left(\mu^{(WF)} \cdot G_{\text{persp}}^{(WF)}, \nu^{(WF)} \cdot G_{\text{persp}}^{(WF)}\right) \leq e^{-\kappa_{\text{eff}} \Delta t} W_2(\mu^{(WF)}, \nu^{(WF)}).
+\tag{M.13}
 $$
 
 *Proof.*
 
-**Construction of the joint kernel.** The physical interaction $N_{W(FQ)}$ couples $W$ to the $F+Q$ system and establishes a definite outcome label $k$ via probabilistic amplitude actualization (Born rule). Conditioned on the realized $k$, each observer's perspective variable undergoes the single-perspective update generated by $\mathcal L_{\Sigma}^{(k)}$ in Equation (M.5a) with the same drift target $s_k$. When the post-actualization perspective noise acting on $W$ and on $F$ is conditionally independent given $k$, the joint kernel is the product Markov kernel
+**Construction of the joint kernel.** Under the conditional-independence hypothesis, conditioning on the realized record value $k$ gives the product kernel displayed in (M.12). Equivalently, (M.12) is the transition kernel of the product semigroup generated by
 $$
-G_{\text{persp}}^{(WF)}\big((s'_W, s'_F)\,|\,(s_W, s_F), k, N, \Delta t\big) = G_{\text{persp}}(s'_W | s_W, k, N, \Delta t) \cdot G_{\text{persp}}(s'_F | s_F, k, N, \Delta t).
-\tag{M.14}
+\mathcal L_{\Sigma\times\Sigma}^{(k)}:=\mathcal L_{\Sigma}^{(k)}\otimes I + I\otimes \mathcal L_{\Sigma}^{(k)}.
 $$
-Equivalently, (M.14) is the transition kernel of the product semigroup generated on $\Sigma\times\Sigma$ by $\mathcal L_{\Sigma\times\Sigma}^{(k)}:=\mathcal L_{\Sigma}^{(k)}\otimes I + I\otimes \mathcal L_{\Sigma}^{(k)}$.
 
-**Proof of (i).** For each factor, Equation (M.4) implies that in the projective limit $\lambda_{\text{drift}}\to\infty$ the kernel $G_{\text{persp}}(s'|s,k,N,\Delta t)$ converges weakly to $\delta_\Sigma(s',s_k)$ for fixed $(s,k,\Delta t)$. Therefore the product kernel (M.14) converges weakly to $\delta_{\Sigma\times\Sigma}((s'_W,s'_F),(s_k,s_k))$. In particular, the joint law concentrates on configurations where both $s'_W$ and $s'_F$ encode the same outcome $k$.
+**Proof of (i).** For each factor, the strong-readout limit $\lambda_{\text{drift}}\to\infty$ forces the single-perspective kernel to converge weakly to $\delta_\Sigma(\cdot,s_k)$. Therefore the product kernel converges weakly to
+$$
+\delta_{\Sigma\times\Sigma}((s'_W,s'_F),(s_k,s_k)),
+$$
+which is concentrated on shared-outcome configurations.
 
-**Proof of (ii).** Equip $\Sigma\times\Sigma$ with the product metric $d_{\Sigma \times \Sigma}^2((s_1,s_2),(s'_1,s'_2)):=d_\Sigma^2(s_1,s'_1)+d_\Sigma^2(s_2,s'_2)$. On any region where the single-factor Bakry–Émery lower bound $\mathrm{Ric}_\Sigma+\mathrm{Hess}_\Sigma V_k\succeq \kappa_{\text{eff}} g_{\rm FS}$ holds (as in Equation M.5c), the corresponding product bound holds on $\Sigma\times\Sigma$ with the same constant $\kappa_{\text{eff}}$ for the potential $V_k^{(WF)}(s'_W,s'_F):=V_k(s'_W)+V_k(s'_F)$. By the Bakry–Émery criterion, the product semigroup generated by $\mathcal L_{\Sigma\times\Sigma}^{(k)}$ is $W_2$-contractive at rate $\kappa_{\text{eff}}$, yielding Equation (M.13) for joint measures on $\Sigma\times\Sigma$ [Cheeger & Ebin 1975; Bakry & Émery 1985; Ambrosio, Gigli & Savaré 2008]. ∎
+**Proof of (ii).** Equip $\Sigma\times\Sigma$ with the product metric
+$$
+d_{\Sigma \times \Sigma}^2((s_1,s_2),(s'_1,s'_2))
+:=
+d_\Sigma^2(s_1,s'_1)+d_\Sigma^2(s_2,s'_2).
+$$
+If the single-factor Bakry–Émery lower bound holds with constant $\kappa_{\text{eff}}$, then the product potential
+$$
+V_k^{(WF)}(s'_W,s'_F):=V_k(s'_W)+V_k(s'_F)
+$$
+satisfies the same lower bound on the product manifold. The Bakry–Émery criterion therefore yields the displayed $W_2$ contraction estimate for the product semigroup [Bakry & Émery 1985; Ambrosio, Gigli & Savaré 2008]. ∎
 
-**Theorem M.6.1 (Wigner's Friend Resolution).** Let $F$ and $W$ be observers with initial perspectives $s_F, s_W \in \Sigma$. Suppose $F$ undergoes an 'Evolve' interaction with system $Q$ at time $t_1$, yielding outcome $k$ and updated perspective $s'_F$. If $W$ subsequently interacts with the $F + Q$ system at time $t_2 > t_1$, then:
+**Theorem M.6.1 (Wigner's Friend Resolution for Record-Reading Interactions).** Let $F$ and $W$ be observers with initial perspectives $s_F, s_W \in \Sigma$. Suppose that at time $t_1$ the observer $F$ undergoes an 'Evolve' interaction with system $Q$, yielding record value $k$ and updated perspective $s'_F$. Assume that at a later time $t_2>t_1$, $W$ performs a record-reading interaction on the $F+Q$ system in the same outcome basis, and that the strong-readout hypotheses of Lemma M.6.1 hold for the resulting joint kernel. Then:
 
-(i) For $t_1 < t < t_2$: Outcome $k$ is actual relative to $s'_F$; no definite outcome exists relative to $s_W$.
+(i) For $t_1 < t < t_2$, outcome $k$ is actual relative to $s'_F$, while no definite outcome need be actual relative to $s_W$.
 
-(ii) For $t > t_2$: The interaction induces correlated perspective dynamics on $\Sigma_W \times \Sigma_F$ via the kernel $G_{\text{persp}}^{(WF)}$ (Lemma M.6.1), and outcome $k$ becomes actual relative to both post-interaction perspectives.
+(ii) After the readout interaction at $t_2$, the joint post-interaction perspective law on $\Sigma_W\times\Sigma_F$ becomes concentrated near configurations encoding the same record value $k$; in the ideal strong-readout limit it converges to a configuration with shared outcome label $k$.
 
 No contradiction arises because actuality is indexed by perspective throughout.
 
 *Proof.*
 
-**Part (i):** By the structure of the 'Evolve' process (Definition 27), actualization occurs only relative to the perspective participating in the interaction. At $t_1$, $F$ interacts with $Q$, triggering:
+**Part (i).** By Definition 27, actualization occurs only relative to the perspective participating in the interaction. At $t_1$, $F$ interacts with $Q$, so the pair $(Q,F)$ undergoes amplitude actualization with Born probability in the measurement basis and a perspective transition
+$$
+s_F\to s'_F.
+$$
+Since $W$ does not interact with the $F+Q$ system during $(t_1,t_2)$, no corresponding actualization relative to $s_W$ is forced by this event alone. Hence $k$ is actual relative to $s'_F$ but not necessarily relative to $s_W$.
 
-- Amplitude actualization: $|\psi\rangle \to |k\rangle$ with probability $P(k) = |\langle k|\psi\rangle|^2$ (Born rule, Proposition 7)
-- Perspective transition: $s_F \to s'_F$ via the kernel $G_{\text{persp}}(s'_F|s_F, k, N_{FQ}, \Delta t)$
+**Part (ii).** By assumption, the interaction at $t_2$ is a readout of the same record basis. Conditioned on the record value $k$, Lemma M.6.1 supplies a joint kernel on $\Sigma_W\times\Sigma_F$ whose strong-readout limit is concentrated on configurations encoding that same value $k$ for both observers. Therefore the post-interaction perspectives become correlated to the same record, and in the ideal limit they converge to a common outcome-labeled configuration. This is exactly the sense in which the later interaction produces inter-perspective consistency.
 
-Since $W$ does not interact with the $F+Q$ system during $(t_1, t_2)$, $W$'s perspective $s_W$ undergoes no 'Evolve' event. Relative to $s_W$, the state remains the entangled superposition $|\Psi\rangle_{FQ}$. The two descriptions coexist without contradiction because they are indexed to different perspectives.
-
-**Part (ii):** At $t_2$, $W$ interacts with the $F+Q$ system. This triggers 'Evolve' dynamics governed by the joint kernel $G_{\text{persp}}^{(WF)}$ (Lemma M.6.1). By property (i) of Lemma M.6.1, the post-interaction perspectives $(s'_W, s'_F)$ are concentrated on configurations encoding the same outcome $k$. The drift-diffusion dynamics (Equation M.5a) acting on both components with the shared target $s_k$ ensures convergence toward this consistent configuration. The contractivity property (ii) guarantees that any initial discrepancy between perspectives is exponentially suppressed with rate $\kappa_{\text{eff}}$ (Equation M.13), establishing robust convergence.
-
-The key mechanism is that the physical interaction $N_{W(FQ)}$ at $t_2$ determines a unique outcome $k$ via the Born rule applied to the joint state, and both perspectives then drift toward the perspective $s_k$ encoding this outcome. The interaction correlates the perspectives by subjecting them to a common 'Evolve' event with a shared actualized outcome. ∎
+Because the two assertions are indexed to different perspectives before $t_2$ and to a later correlated interaction after $t_2$, there is no contradiction. ∎
 
 ### M.6.3 Worked Example: Explicit Perspective Tracking
 
@@ -587,7 +614,7 @@ This ratio equality follows from the definition of Planck units in terms of the 
 
 ---
 
-### Corollary E.10.2 (Thermodynamic Origin of Locality)
+### Thermodynamic Origin of Locality
 
 Locality is not a primitive axiom but emerges from:
 
@@ -640,9 +667,9 @@ The resolution of Wigner's Friend via perspectival states has several implicatio
 
 **2. No Privileged Observers.** All perspectives $s \in \Sigma$ are equally valid; none occupies a "God's eye view" from which actuality is absolute. This democratic structure parallels the equivalence of inertial frames in special relativity. Just as no inertial frame is privileged for determining "true" simultaneity, no perspective is privileged for determining "true" outcome actuality.
 
-**3. Extended Wigner's Friend Scenarios Dissolve.** The Frauchiger-Renner contradiction (and similar extended scenarios [Brukner 2018; Bong et al. 2020]) relies on the assumption that statements about outcomes can be reasoned about across perspectives without tracking perspective shifts. Once perspective indices are explicit, the chain of reasoning that produces contradiction cannot be consistently constructed—each inferential step is valid only within its perspective (Theorem M.6.2, Lemma M.6.2).
+**3. Extended Wigner's Friend Scenarios Dissolve.** The Frauchiger-Renner contradiction relies on an inference that imports another agent's post-actualization statement into an uncorrelated perspective. Theorem M.6.2 shows that the contradiction-producing chain already fails at that step. More generally, any extended Wigner's-Friend scenario that requires the same kind of uncorrelated cross-perspective import is blocked by Lemma M.6.2.
 
-**4. Consistency with Standard Predictions.** For all experimentally accessible scenarios, the perspectival framework reproduces the predictions of standard quantum mechanics. The perspectives involved in any actual experiment (preparation device, measured system, detection apparatus, human observer) become correlated through their chain of physical interactions, ensuring agreement on outcomes. The perspectival structure becomes evident only in gedanken experiments specifically designed to query the "state" of an observer from an external viewpoint prior to interaction.
+**4. Agreement with Standard Laboratory Quantum Mechanics.** In ordinary laboratory scenarios where preparation devices, measured systems, apparatuses, and observers become physically correlated through the measurement chain, the perspectival framework reproduces the standard quantum predictions for the registered outcomes. Distinctively perspectival effects appear in gedanken setups that compare uncorrelated perspectives before interaction, while the separate CC program studies bounded deviations from Born statistics when a high-CC aggregate modulates the interaction context $N$.
 
 **5. Resolution of the "Absoluteness" Debate.** Recent no-go theorems [Brukner 2018; Bong et al. 2020] have been interpreted as ruling out "observer-independent facts." The PU framework clarifies this: facts about outcomes *are* observer-independent once the perspective is specified. What is ruled out is not objective facts per se, but *perspective-independent* facts about inherently perspectival quantities. This parallels relativity: the time-ordering of spacelike-separated events is not "subjective"—it is objectively frame-dependent.
 
@@ -679,13 +706,13 @@ where $\text{CC}(S) = \|L_S\|_{\text{op}}$ is the operational norm of the probab
 
 The perspectival formalism makes CC mathematically coherent by identifying the precise entry point for conscious influence: the interaction context $N$ that parameterizes the 'Evolve' dynamics, rather than the quantum state itself.
 
-**Consistency with Wigner's Friend Resolution.** A potential concern arises: if CC modulates the interaction context $N$, could sufficiently strong CC disrupt the consistency mechanism (Lemma M.6.1) that ensures perspectives correlate upon interaction? The causality bound (Theorem 39) resolves this concern:
+**Consistency with Wigner's Friend Resolution.** A potential concern arises: if CC modulates the interaction context $N$, could sufficiently strong CC disrupt the consistency mechanism (Lemma M.6.1) that ensures perspectives correlate upon interaction? The causality bound (Theorem 39) controls the size of the allowed probability modification:
 
 $$
 \alpha_{CC,max} = \sup_S \text{CC}(S) < 0.5 \tag{M.16}
 $$
 
-This bound ensures CC can only bias within the allowed probability shifts—it cannot override the 'Evolve' dynamics entirely. The contractivity of $G_{\text{persp}}$ (Equation M.5c) operates on the perspective dynamics *after* the outcome is probabilistically determined. CC influences the probability distribution over outcomes but does not prevent the subsequent perspective correlation. The mathematical structure guarantees that even maximal CC influence preserves the consistency upon interaction that resolves Wigner's Friend.
+This bound alone does not prove preservation of the record-correlation mechanism. That preservation requires an additional hypothesis: for the readout interaction under consideration, the CC-modulated kernel must still satisfy the strong-readout and contractive assumptions of Lemma M.6.1, equivalently the post-actualization perspective dynamics must remain in the same Bakry–Émery-controlled class used there. Under that hypothesis, CC changes the distribution of realized outcomes but does not obstruct the subsequent correlation of perspectives conditioned on the realized record value.
 
 **Experimental Predictions.** The empirical content distinguishing PU from standard quantum mechanics flows directly from this mechanism:
 
@@ -742,6 +769,6 @@ This appendix has provided a rigorous mathematical framework for the Perspectiva
 - **Lemma M.6.2 & Theorem M.6.2:** Cross-perspective reasoning requires either prior interaction or restriction to perspective-invariant quantities; the FR contradiction traces to violating this constraint.
 - **Structural Correspondence M.6.4:** Just as finite $c$ forces frame-relative simultaneity, SPAP + thermodynamic irreversibility ($\varepsilon \geq \ln 2$) forces perspective-relative actuality—extending the relativistic program to quantum mechanics.
 
-**Connection to CC.** The interaction context $N$ in $G_{\text{persp}}(s'|s, k, N, \Delta t)$ provides the entry point for CC modulation (Hypothesis 3). High-complexity aggregates influence outcomes by modulating $N$ via the mapping $\mathcal{M}$ (Appendix L), yielding bounded Born rule deviations (Theorem 51). The causality bound $\alpha_{CC,max} < 0.5$ (Theorem 39) preserves the consistency mechanism of Lemma M.6.1.
+**Connection to CC.** The interaction context $N$ in $G_{\text{persp}}(s'|s, k, N, \Delta t)$ provides the entry point for CC modulation (Hypothesis 3). High-complexity aggregates influence outcomes by modulating $N$ via the mapping $\mathcal{M}$ (Appendix L), yielding bounded Born rule deviations (Theorem 51). The causality bound $\alpha_{CC,max} < 0.5$ (Theorem 39) controls the size of those deviations; preservation of the consistency mechanism of Lemma M.6.1 requires, in addition, that the CC-modulated readout kernel remain within the strong-readout and contractive class assumed there.
 
 **Synthesis.** The perspectival formalism achieves mathematical precision for the 'Evolve' process, resolves foundational paradoxes by explicit perspective tracking, and generates empirical predictions through the CC mechanism. The resolution generalizes realism rather than retreating from it: the MPU network remains unified and objective, while descriptions exhibit the perspective-relativity that SPAP and thermodynamic irreversibility demand.

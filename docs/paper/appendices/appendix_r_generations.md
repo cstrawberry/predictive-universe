@@ -384,33 +384,37 @@ gives $F_1^3+F_2^3+F_3^3 = 3F_1F_2F_3$. Imposing also $\sum_g F_g^3=0$ yields $F
 
 Therefore the minimal anomaly-free solution that permits CP violation is $N=3$ with family charges $\{a,-a,0\}$. ∎
 
-**Proposition R.3.5 (Uniqueness and necessity of three generations).**
+**Proposition R.3.5 (Minimal three-generation solution within the MDL surrogate).**
 
 (a) The three-sector solution $\{a, -a, 0\}$ is the unique minimal solution to the anomaly constraints (R.11) that admits CP violation.
 
 (b) CP violation requires at least three generations with complex mixing. The pattern $\{a, -a, 0\}$ is the simplest charge configuration that permits this structure.
 
-(c) PCE favors minimal solutions: configurations with $N > 3$ incur higher descriptive complexity without additional predictive benefit at low energies.
-
-(d) A strict Minimum Description Length (MDL) penalty on family duplication, combined with the unique predictive benefit of CP violation at $N=3$, establishes three generations as the unique, stable global minimum of the PCE potential.
-
-*Proof.*
-
-(a) From Theorem R.3.4, $N=2$ satisfies anomaly cancellation but cannot support a physical CKM phase. The pattern $\{a,-a,0\}$ with $N=3$ is the minimal anomaly-free charge assignment that permits CP violation.
-
-(b) With $N=2$, the quark mixing matrix is $2\times 2$ and any complex phases can be removed by rephasing, so the rephasing-invariant Jarlskog quantity vanishes. With $N=3$, a physical rephasing-invariant phase exists, and CP violation is possible.
-
-(c) Under MDL, the description length of a theory with $N$ replicated predictive blocks can be lower-bounded as
+(c) Within the surrogate description-length model
 $$
 L_{\mathrm{model}}(N)\ \ge\ L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N),
 $$
-with $L_{\mathrm{block}}>0$ and $L_{\mathrm{mix}}(N)$ nondecreasing in $N$ (additional generations add replicated field content and additional mixing structure). Hence $L_{\mathrm{model}}(N)$ is strictly increasing in $N$.
+with $L_{\mathrm{block}}>0$ and $L_{\mathrm{mix}}(N)$ nondecreasing, the description-length term is minimized at the smallest admissible value of $N$.
 
-(d) Therefore, among anomaly-free models that can realize a physical CKM phase, PCE/MDL selects the smallest admissible $N$, namely $N=3$. ∎
+(d) Consequently, when the admissible class is restricted to anomaly-free family-charge assignments that permit a physical CKM phase, the MDL surrogate selects $N=3$ as the minimal admissible choice.
 
-## R.4 Three Generations from Dual Mechanisms
+*Proof.*
 
-This section demonstrates that the three-generation structure is multiply over-determined through two independent pathways: topological (from $\pi_2$ anomaly cancellation) and geometric (from $E_8$/Leech lattice structure). The convergence of these mechanisms provides strong evidence for the necessity of three generations.
+(a) From Theorem R.3.4, $N=2$ satisfies anomaly cancellation but cannot support a physical CKM phase. The pattern $\{a,-a,0\}$ with $N=3$ is therefore the minimal anomaly-free charge assignment that permits CP violation.
+
+(b) With $N=2$, the quark mixing matrix is $2\times 2$ and any complex phases can be removed by rephasing, so the rephasing-invariant Jarlskog quantity vanishes. With $N=3$, a physical rephasing-invariant phase exists, and CP violation is possible.
+
+(c) The lower bound
+$$
+L_{\mathrm{model}}(N)\ \ge\ L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N)
+$$
+together with $L_{\mathrm{block}}>0$ and nondecreasing $L_{\mathrm{mix}}(N)$ shows that the surrogate description-length penalty is strictly increasing in $N$.
+
+(d) Therefore, among anomaly-free models in this surrogate class that can realize a physical CKM phase, the smallest admissible value of $N$ is preferred, namely $N=3$. This is the conclusion established by the argument. ∎
+
+## R.4 Three-Fold Structure: Topological Derivation and Geometric Compatibility
+
+This section compares two distinct appearances of a three-fold pattern in the framework. The topological route of Sections R.1–R.4.1 carries the actual derivation of $N=3$ from anomaly cancellation together with the CP-violation requirement. The geometric route of Section R.4.2 shows that the Leech/$E_8$ construction contains a natural three-fold scaffold compatible with that generation count. The convergence is structurally suggestive, but only the topological route proves the count.
 
 ### R.4.1 Topological Pathway: Anomaly Cancellation
 
@@ -428,11 +432,11 @@ This section demonstrates that the three-generation structure is multiply over-d
 
 6. **CP violation requirement:** Demand $N \geq 3$ for non-vanishing Jarlskog invariant (Proposition R.3.5).
 
-7. **Unique solution:** Combined constraints yield $N=3$ with pattern $\{a, -a, 0\}$ as the minimal solution.
+7. **Minimal solution:** Combined constraints yield $N=3$ with pattern $\{a, -a, 0\}$ as the smallest admissible solution in the modeled class.
 
-This topological mechanism derives three generations from first principles with zero continuously adjustable parameters.
+This topological mechanism derives three generations from first principles within the stated anomaly and MDL surrogate assumptions.
 
-### R.4.2 Geometric Pathway: $E_8$/Leech Lattice Structure
+### R.4.2 Geometric Compatibility: $E_8$/Leech Lattice Structure
 
 **The 24-Dimensional Leech Lattice:**
 
@@ -440,7 +444,7 @@ The Leech lattice $\Lambda_{24}$ achieves the optimal sphere packing density in 
 
 **Connection to M = 24:**
 
-Remarkably, the number 24 appears as the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition: $M = 2ab = 2(2)(6) = 24$. This coincidence is not accidental but reflects a deep information-geometric optimality:
+The number 24 also appears as the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition: $M = 2ab = 2(2)(6) = 24$. This shared count links three mathematical structures:
 
 1. **Information-theoretic:** $M = 24$ QFI modes at the PCE-Attractor (Appendix Z)
 2. **Geometric:** $\Lambda_{24}$ optimal packing in 24D (Cohn-Kumar-Miller-Radchenko-Viazovska)
@@ -454,9 +458,9 @@ The connection between the Leech lattice and $E_8$ is more subtle than a direct 
 
 2. **Niemeier vs. Leech:** The direct sum $E_8 \oplus E_8 \oplus E_8$ (without scaling) is a different even unimodular 24D lattice—a Niemeier lattice with $240+240+240 = 720$ roots (minimum norm 2). This is NOT isometric to the Leech lattice, which is rootless (minimum norm 4).
 
-3. **Gluing Construction:** The Leech lattice can be obtained from the scaled triple $\sqrt{2}E_8^3$ via a gluing construction involving cosets and the extended binary Golay code. The precise construction is technical but establishes that optimal 24D packing naturally exhibits **three-fold $E_8$ structure** when properly scaled.
+3. **Gluing Construction:** The Leech lattice can be obtained from the scaled triple $\sqrt{2}E_8^3$ via a gluing construction involving cosets and the extended binary Golay code.
 
-**Physical Interpretation:** The appearance of three $E_8$ factors (scaled appropriately) in the unique optimal 24-dimensional packing provides independent geometric support for three generations. The number 3 emerges from optimal information geometry, not from arbitrary choice.
+**Physical Interpretation:** The appearance of three scaled $E_8$ factors in the Leech construction supplies a geometric three-fold scaffold compatible with the generation structure selected topologically. It is supporting structure rather than an independent derivation of $N_g=3$.
 
 **Note:** Throughout this appendix, when we refer to "$E_8$ root distances" for generation vacua, we work in the unscaled $E_8$ root system with minimum norm 2. The connection to Leech involves the scaled version $\sqrt{2}E_8$, but the discrete distance ratios remain unchanged under uniform scaling.
 
@@ -471,30 +475,17 @@ The appearance of $M = 24$ in the interface mode count (**Appendix Z**) and the 
 
 The convergence of these independent mathematical structures at 24 suggests deep underlying unity between optimization (PCE), consistency (anomaly cancellation), and symmetry (exceptional groups).
 
-**Proposition R.4.2 (Over-Determined Three-Fold Structure).**
+**Proposition R.4.2 (Three-Fold Compatibility of Topology, Geometry, and Mode Count).**
 
-The number 3 appears from three independent optimality criteria:
+The number 3 enters the framework in three distinct ways:
 
-1. **Topological:** $\pi_2(\Sigma_8)$ anomaly cancellation → $\{a,-a,0\}$ pattern (Section R.4.1)
-2. **Geometric:** Leech/$E_8$ triple embedding → 3 $E_8$ factors (this section)
-3. **Information:** $M = 24$ factorization supports natural grouping structure (**Appendix Z, Section Z.12**)
+1. **Topological:** $\pi_2(\Sigma_8)$ anomaly cancellation together with the CP-violation requirement yields the minimal family-charge pattern $\{a,-a,0\}$ (Section R.4.1).
+2. **Geometric:** the Leech lattice contains a scaled triple $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ (this section).
+3. **Information:** the interface mode count factors as $M = 24 = 3 \times 8$ (**Appendix Z, Section Z.12**).
 
-The convergence of these three mechanisms makes the three-generation structure multiply over-determined.
+These three appearances are mutually compatible with a three-generation interpretation. Among them, the topological mechanism is the actual derivation of $N=3$; the geometric and information-theoretic appearances provide supporting three-fold structure.
 
-*Proof.* Each mechanism independently selects or strongly favors a three-fold structure:
-
-**Mechanism 1 (Topological):** From the homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$, gauge embedding, and anomaly cancellation (Theorems R.3.1, R.3.4), we derive $N=3$ with family charges $\{a, -a, 0\}$ as the unique minimal solution permitting CP violation. This derivation uses only topology, representation theory, and anomaly polynomials—no geometry.
-
-**Mechanism 2 (Geometric):** From optimal sphere packing in 24 dimensions (Cohn, Kumar, Miller, Radchenko & Viazovska 2017), the Leech lattice $\Lambda_{24}$ naturally decomposes into three scaled $E_8$ sublattices. The number 24 itself emerges from modular form theory (Dedekind eta weight structure) and interface mode counting (**Appendix Z**). The three-fold structure arises from the factorization $24 = 3 \times 8$ where 8 is the maximal division algebra dimension (Radon-Hurwitz). This mechanism uses only packing theory, lattice theory, and modular forms—no homotopy theory.
-
-**Mechanism 3 (Information-theoretic):** From the QFI mode count $M = 2ab = 24$ with $a=2$ (Landauer pointer) and $b=6$ (inactive complement), the factorization $24 = 8 \times 3$ naturally suggests three sectors of dimension 8. This aligns with $d_0 = 8$ (MPU dimension) and three-fold replication. The appearance is natural from the capacity saturation structure (**Appendix Z, Theorem Z.6**).
-
-**Independence verification:** 
-- Mechanism 1 relies on $\pi_2$ structure, gauge representation theory
-- Mechanism 2 relies on sphere packing optimality, lattice constructions
-- Mechanism 3 relies on quantum Fisher information, capacity bounds
-
-These mathematical domains are logically independent—there is no a priori reason they should select the same number. Yet all three point to $N=3$. The coincidence is therefore recorded as an internal rigidity/coherence check across independent derivations; assigning a numerical probability would require specifying an explicit alternative-model ensemble and prior. ∎
+*Proof.* Mechanism 1 is Proposition R.3.5: from $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, gauge embedding, anomaly cancellation, and the requirement of nontrivial CP violation, the smallest admissible solution is $N=3$ with charges $\{a,-a,0\}$. Mechanism 2 is the lattice-theoretic statement proved in this section: $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8^3$, so the 24-dimensional geometric construction carries a natural three-fold block structure. Mechanism 3 is the factorization $M=24=3\times 8$, which is numerically compatible with grouping the interface into three 8-dimensional blocks. Thus the three mathematical structures are compatible with one another, but only the first one proves the generation count. ∎
 
 ### R.4.2.1 The Golay Bridge: From Error Correction to Optimal Geometry
 
@@ -755,36 +746,22 @@ The appearance of $M_{24} = \text{Aut}(\mathcal{G}_{24})$ reflects the Golay cod
 
 **Theorem R.4.9 (The Golay Bridge).**
 
-The extended binary Golay code $\mathcal{G}_{24}$ is the unique mathematical object (up to code equivalence and lattice isometry) that simultaneously:
+The extended binary Golay code $\mathcal{G}_{24}$ is the unique binary linear code (up to code equivalence) that both
 
-1. Achieves the maximum minimum distance ($d = 8$) among rate-1/2 binary linear codes of length 24
-2. Provides the glue vectors completing $\sqrt{2}E_8^3$ into the unique rootless even unimodular lattice $\Lambda_{24}$
+1. achieves the maximum minimum distance ($d = 8$) among rate-1/2 binary linear codes of length 24, and
+2. supplies the gluing data completing $\sqrt{2}E_8^3$ into the rootless even unimodular lattice $\Lambda_{24}$.
 
-This dual role arises necessarily from PCE optimization operating in both domains.
+This establishes a precise bridge between the coding-theoretic and lattice-theoretic 24-dimensional constructions.
 
 *Proof.*
 
-**Step 1 (Information-theoretic optimality).** By Theorem R.4.4, PCE optimization on the $M = 24$ interface modes selects the error-correcting code maximizing minimum distance at rate $R = 1/2$. The Golay code $[24, 12, 8]$ is the unique code achieving this bound.
+**Step 1 (Information-theoretic optimality).** By Theorem R.4.4, the unique PCE-optimal binary linear code at interface mode count $M=24$ is the Golay code $[24,12,8]$.
 
-**Step 2 (Geometric optimality).** By Theorem R.4.6, PCE optimization on 24-dimensional lattice geometry selects the unique rootless even unimodular lattice. By Lemma R.4.5, this lattice is constructed by gluing $\sqrt{2}E_8^3$ with cosets indexed by $\mathcal{G}_{24}$.
+**Step 2 (Geometric construction).** By Lemma R.4.5, the Leech lattice is obtained by gluing $\sqrt{2}E_8^3$ with cosets indexed by $\mathcal{G}_{24}$.
 
-**Step 3 (Structural correspondence).** Both optimization problems:
+**Step 3 (Compatibility of structural constraints).** The properties required in the gluing construction—self-duality, divisibility, and minimum weight 8—are precisely the coding-theoretic properties singled out in Step 1.
 
-- Operate on the same underlying space (24 modes/dimensions)
-- Invoke the same symmetry requirement (isotropy/permutation invariance)
-- Select for the same optimality criterion (maximum "distance" under structural constraints)
-
-The Golay code's properties that make it optimal for error correction—self-duality, weight divisibility by 4, minimum weight 8—are precisely the properties required for the gluing construction to produce a rootless even unimodular lattice.
-
-**Step 4 (Uniqueness argument).** Suppose a different code $\mathcal{C} \neq \mathcal{G}_{24}$ could serve as gluing code for a rootless even unimodular lattice in 24 dimensions. Then $\mathcal{C}$ must be:
-
-- Self-dual (for lattice self-duality)
-- Have minimum weight $\geq 8$ (for rootless property)
-- Have dimension 12 (for correct index)
-
-But the Golay code is the unique self-dual binary code of length 24 with minimum weight 8 (Pless 1968). Therefore $\mathcal{C} = \mathcal{G}_{24}$.
-
-**Step 5 (PCE unification).** The convergence is necessary, not coincidental: both error-correction optimality and geometric packing optimality derive from PCE's principle of maximum efficiency under finite resources. At $M = 24$, the information-theoretic constraint (mode count) and the geometric constraint (lattice dimension) coincide, forcing the same optimal structure. ∎
+**Step 4 (Uniqueness within the binary linear class).** Suppose a binary linear code $\mathcal{C}$ distinct from $\mathcal{G}_{24}$ served as gluing data for a rootless even unimodular lattice obtained from $\sqrt{2}E_8^3$. Then $\mathcal{C}$ would have to be self-dual of length 24 and have minimum weight at least 8. By the uniqueness theorem for the binary linear $[24,12,8]$ code, this forces $\mathcal{C}$ to be equivalent to $\mathcal{G}_{24}$. Therefore the same code appears in both constructions. ∎
 
 ---
 
@@ -957,13 +934,13 @@ Confirmation of these predictions would provide direct empirical support for the
 
 ### R.4.3 Synthesis: Why Three is Necessary
 
-The dual derivation provides robust evidence for three generations:
+The strongest derivation of three generations in this appendix is the topological one:
 
-**Robustness:** If either mechanism failed (e.g., if $\pi_2(\Sigma_8)$ had different rank, or if optimal 24D packing had different structure), the other would still select three generations.
+**Topological derivation:** Sections R.3–R.4.1 show that anomaly cancellation together with the requirement of nontrivial CP violation selects $N=3$ as the smallest admissible family count in the modeled class.
 
-**Over-determination:** Two independent derivation pathways converge on the same result: (1) topological anomaly cancellation on $\Sigma_8$ (Sections R.3–R.4.1), and (2) $E_8$/Leech lattice geometric structure (Section R.4.2). The QFI mode factorization $M = 24 = 8 \times 3$ (**Appendix Z**, Theorem Z.5) provides a consistency check confirming compatibility with the framework's information-theoretic structure. The framework does not merely accommodate three generations; it requires them from both topological and geometric perspectives.
+**Geometric compatibility:** Section R.4.2 shows that the Leech/$E_8$ construction and the factorization $M = 24 = 8 \times 3$ carry a compatible three-fold structure. This is a nontrivial internal coherence check, but it is not a second independent proof of the generation count.
 
-**Phenomenological Success:** The observed three-generation structure of the Standard Model is precisely what these mechanisms predict, with no free parameters adjusted to match observation.
+**Phenomenological Success:** The observed three-generation structure of the Standard Model matches the topological prediction, with the geometric sector providing additional structural support.
 
 ## R.5 Mass Hierarchy from $E_8$ Geometry
 
@@ -1091,57 +1068,45 @@ With typical $E_8$ distances $d^2 \in \{2, 4, 6, 8\}$ and $\alpha_1, \alpha_2 \s
 
 ### R.5.4 The ξ-Free Mass Invariant
 
-**Definition R.5.1 (Mass Hierarchy Invariant).** Define the ratio:
+**Definition R.5.1 (Mass Hierarchy Invariant in the diagonal-alignment approximation).** Assume:
+
+1. the Higgs is localized near the heaviest generation vacuum $p_3$ as in Section R.5.3;
+2. the mass eigenstates are approximately aligned with the generation minima, so diagonal entries dominate; and
+3. the same diagonal suppression coefficient $\alpha_1$ governs generations 1 and 2 in the Gaussian overlap model.
+
+Define the ratio
 $$
-\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{\ln(Y_3/Y_1)}{\ln(Y_3/Y_2)}
+\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{\ln(Y_3/Y_1)}{\ln(Y_3/Y_2)}.
 \tag{R.16}
 $$
 
-From the Gaussian overlap formula (R.15), with Higgs aligned at $p_3$ (Section R.5.3) and taking diagonal entries ($g=g'$), we obtain
+Under these hypotheses, the Gaussian overlap formula (R.15) gives
 $$
 Y_g := Y_{gg} = Y_{33}\exp\left(-2\alpha_1 d^2_{3g}\right)\qquad (g\in\{1,2,3\}),
 $$
-since $d_\Sigma^2(p_g,p_g)=0$ eliminates the $\alpha_2$ term on the diagonal.
+because $d_\Sigma^2(p_g,p_g)=0$ eliminates the $\alpha_2$ term on the diagonal.
 
-Taking logarithms and identifying $m_g\propto Y_g$ in the generation basis defined by the vacuum minima:
+Taking logarithms and using the diagonal-alignment identification $m_g\propto Y_g$ yields
 $$
 \ln(Y_3/Y_g) = \ln(m_3/m_g) = 2\alpha_1 d^2_{3g}\qquad (g=1,2).
 $$
-
-Therefore the ratio becomes:
+Therefore
 $$
-\mathcal{R} = \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{2\alpha_1 d^2_{31}}{2\alpha_1 d^2_{32}} = \frac{d^2_{31}}{d^2_{32}}
+\mathcal{R} = \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{2\alpha_1 d^2_{31}}{2\alpha_1 d^2_{32}} = \frac{d^2_{31}}{d^2_{32}}.
 \tag{R.17}
 $$
 
-**Key property:** This invariant is independent of:
-- The width parameter $\xi$ (cancels in the ratio)
-- The diagonal curvature scale $\alpha_1$ (cancels in the ratio)
-- The off-diagonal curvature scale $\alpha_2$ (does not enter Eq. (R.17))
-- Overall normalization
-- Higgs vacuum expectation value
+Within this approximation, the ratio is independent of the width parameter $\xi$, the common diagonal scale $\alpha_1$, the diagonal normalization, and the Higgs vacuum expectation value.
 
-It depends only on the geometric distances in $E_8$ root space.
+**Discrete Prediction within the approximation.**
 
-**Discrete Prediction:**
-
-Since $d^2 \in \{2, 4, 6, 8\}$ from $E_8$ geometry (Eq. R.14), the invariant $\mathcal{R}$ must lie in the discrete set formed by all ratios of allowed squared distances. The allowed ratios are:
+Since $d^2 \in \{2,4,6,8\}$ from $E_8$ geometry (Eq. R.14), the ratio $\mathcal{R}$ must lie in the discrete set formed by the allowed squared-distance ratios. Imposing $m_3>m_2>m_1$ gives
 $$
-\mathcal{R} \in \left\{\frac{2}{4}, \frac{2}{6}, \frac{2}{8}, \frac{4}{2}, \frac{4}{6}, \frac{4}{8}, \frac{6}{2}, \frac{6}{4}, \frac{6}{8}, \frac{8}{2}, \frac{8}{4}, \frac{8}{6}\right\}
-$$
-
-Simplifying and removing duplicates:
-$$
-\boxed{\mathcal{R} \in \left\{\frac{1}{4}, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}}
-$$
-
-Since masses obey $m_3 > m_2 > m_1$ (convention: generation 3 is heaviest), we have $\ln(m_3/m_1) > \ln(m_3/m_2) > 0$, hence $\mathcal{R} > 1$. The physically relevant discrete set is:
-$$
-\boxed{\mathcal{R} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}}
+\boxed{\mathcal{R} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}}.
 \tag{R.18}
 $$
 
-This is a sharp, falsifiable prediction with zero continuously adjustable parameters.
+This is a sharp, falsifiable prediction of the diagonal-alignment Gaussian model, with no continuously adjustable parameter remaining once the discrete distance data are fixed.
 
 ## R.6 Phenomenological Comparison with Observed Fermion Masses
 

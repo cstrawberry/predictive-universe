@@ -269,7 +269,31 @@ L_{info} + \Pi_L^T \Pi_L & -\Pi_L^T & 0 & 0\\
 \end{pmatrix}
 $$
 
-*Proof.* Direct calculation of second derivatives. ∎
+*Proof.* The potential is
+$$
+V_{EW}(s,r,\xi,\psi)=\frac12 s^T L_{info}s+\frac12|r-\Pi_L s|^2+\frac{\mu}{2}|\xi|^2+0\cdot\psi^2,
+$$
+since $R=I_6$ in the isotropic ansatz. Expanding the quadratic mismatch term gives
+$$
+\frac12|r-\Pi_L s|^2
+=\frac12 r^Tr-r^T\Pi_L s+\frac12 s^T\Pi_L^T\Pi_L s.
+$$
+Hence
+$$
+V_{EW}(s,r,\xi,\psi)
+=\frac12 s^T(L_{info}+\Pi_L^T\Pi_L)s-r^T\Pi_L s+\frac12 r^Tr+\frac{\mu}{2}\xi^T\xi.
+$$
+Taking second derivatives with respect to the block variables $(s,r,\xi,\psi)$ yields
+$$
+\frac{\partial^2 V_{EW}}{\partial s^2}=L_{info}+\Pi_L^T\Pi_L,\qquad
+\frac{\partial^2 V_{EW}}{\partial s\,\partial r}=-\Pi_L^T,\qquad
+\frac{\partial^2 V_{EW}}{\partial r^2}=I_6,
+$$
+$$
+\frac{\partial^2 V_{EW}}{\partial \xi^2}=\mu I_3,\qquad
+\frac{\partial^2 V_{EW}}{\partial \psi^2}=0,
+$$
+and all remaining mixed second derivatives vanish because no term couples $\xi$ or $\psi$ to the other variables at quadratic order. Therefore the Hessian has the claimed block form. ∎
 
 ### T.5.2 Positivity Analysis
 
@@ -479,12 +503,28 @@ $$
 
 ### T.11.1 Uniqueness of Minimal Solution
 
-**Theorem T.10** (Minimal Rational Hypercharge). The unique minimal-norm rational solution to the tracelessness constraint with Golay integrality is:
+**Theorem T.10** (Minimal Rational Hypercharge). Up to an overall sign, the unique minimal-norm rational solution to the tracelessness constraint with Golay integrality is
 $$
-y_c = -\frac{1}{3}, \quad y_w = +\frac{1}{2}
+(y_c,y_w)=\left(-\frac13,\frac12\right).
+$$
+Choosing the orientation in which the weak-doublet entry is positive gives
+$$
+y_c = -\frac{1}{3}, \quad y_w = +\frac{1}{2}.
 $$
 
-*Proof.* From $3y_c + 2y_w = 0$, parametrize as $(y_c, y_w) = (-2t, 3t)$. Minimal common denominator requires $t = 1/6$, giving $y_c = -1/3$, $y_w = +1/2$. This matches the SU(5) hypercharge on $\bar{5} = \bar{3} \oplus 2$. ∎
+*Proof.* From $3y_c + 2y_w = 0$, write
+$$
+(y_c,y_w)=(-2t,3t)
+$$
+with $t\in\mathbb Q$. Golay integrality requires the smallest admissible denominator, namely $t=\pm 1/6$. This gives the two rational solutions
+$$
+\left(-\frac13,\frac12\right),\qquad \left(\frac13,-\frac12\right),
+$$
+which differ by an overall sign and have the same Euclidean norm. Thus the minimal-norm solution is unique only up to that overall sign. Adopting the standard orientation in which the weak-doublet entry is positive yields
+$$
+y_c=-\frac13,\qquad y_w=\frac12.
+$$
+This is the conventional SU(5) normalization on $\bar5=\bar3\oplus 2$. ∎
 
 ### T.11.2 Design-Preserving Inner Product
 
@@ -3556,7 +3596,7 @@ This indicates good overall agreement with experiment. The $\vert V_{us}\vert$ t
 
 ## T.22.9 Complete Parameter Chain
 
-All parameters trace to the foundational derivation with zero continuously adjustable parameters:
+The core counting parameters trace to the foundational derivation, while the quantitative hierarchy sector later in this appendix uses the additional threshold, prefactor, and matching data introduced in those sections:
 
 |Parameter |Value |Origin |Section |
 |:-----------------|:----------------|:------------------------------------------------------|:-------|
@@ -3725,9 +3765,9 @@ All complexity parameters trace to the same logical foundation established in th
 |9 |$\sigma_B^2$ |$1/M = 1/24$ |Bures variance from capacity saturation |Lemma T.41.2 |
 |10 |$\alpha$ |$1/(16\sigma_B^2) = 3/2$|Hierarchy coefficient |Corollary T.41.3|
 
-**Proposition T.59** (Foundational Completeness). *Every parameter in the complexity formula derives from $K_0 = 3$ through the chain above. No additional free parameters enter the hierarchy derivations.*
+**Proposition T.59** (Foundational Completeness of the Core Counting Chain). *Every parameter in the backbone chain $K_0 \to d_0 \to \varepsilon \to a \to b \to M \to k \to D$ derives from $K_0 = 3$ through the chain above. Quantitative hierarchy derivations later in this appendix additionally use the threshold data, prefactors, and matching prescriptions introduced in those sections.*
 
-*Proof.* Direct inspection of the derivation chain. The logical necessity of $K_0 = 3$ (Theorem 15) initiates the cascade. Each subsequent step follows necessarily: $d_0 = 2^{K_0}$ (minimum Hilbert space for $K_0$ bits); $\varepsilon = \ln 2$ (Theorem J.1, Landauer bound for SPAP); $a = e^\varepsilon$ (Theorem Z.1, active dimension from entropy cost); $b = d_0 - a$ (complement); $M = 2ab$ (Theorem Z.5, interface mode count); $k = M/2$ (Theorem Z.13, PCE-optimal code dimension); $D = 4$ (Theorem Z.11, unique dimension with $K(D) = 24$). ∎
+*Proof.* The logical necessity of $K_0 = 3$ (Theorem 15) initiates the backbone cascade. Each subsequent step follows from the cited results: $d_0 = 2^{K_0}$ (minimum Hilbert space for $K_0$ bits); $\varepsilon = \ln 2$ (Theorem J.1, Landauer bound for SPAP); $a = e^\varepsilon$ (Theorem Z.1, active dimension from entropy cost); $b = d_0 - a$ (complement); $M = 2ab$ (Theorem Z.5, interface mode count); $k = M/2$ (Theorem Z.13, PCE-optimal code dimension); and $D = 4$ (Theorem Z.11, unique dimension with $K(D) = 24$). This proves foundational completeness only for the backbone counting chain. The later hierarchy sections supplement that chain with the additional sector-specific inputs stated there. ∎
 
 -----
 

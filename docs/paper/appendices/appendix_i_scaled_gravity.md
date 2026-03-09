@@ -57,11 +57,11 @@ The parameter relaxation described in Section I.5 implies that the MPU network's
 
 **Proposition I.3 (Information Resolution Threshold).**
 
-If the MPU network relaxes its parameters when the local environmental information density drops below the thermodynamic threshold required to distinguish a predictive gradient against the vacuum background, then the crossover acceleration is uniquely determined by the cosmological constant.
+If the MPU network relaxes its parameters when the local environmental information density drops below the thermodynamic threshold required to distinguish a predictive gradient against the vacuum background, then, in a de Sitter background with cosmological constant $\Lambda>0$, the crossover acceleration is uniquely determined by $\Lambda$.
 
 **Physical Setup:**
 
-**1. Cosmic Resolution Floor:** In a universe dominated by cosmological constant $\Lambda$, the de Sitter horizon defines a minimum resolvable energy quantum. The associated de Sitter temperature is [Gibbons & Hawking 1977]:
+**1. Cosmic Resolution Floor:** In a universe dominated by cosmological constant $\Lambda>0$, the de Sitter horizon defines a minimum resolvable energy quantum. The associated de Sitter temperature is [Gibbons & Hawking 1977]:
 $$
 T_{dS} = \frac{\hbar c}{2\pi k_B}\sqrt{\frac{\Lambda}{3}}
 \tag{I.3.1}
@@ -82,6 +82,16 @@ $$
 \tag{I.3.3}
 $$
 
+*Proof.* By hypothesis, the crossover occurs precisely at the threshold where the local Unruh temperature equals the de Sitter background temperature. Substituting Equations (I.3.1) and (I.3.2) into the threshold condition $T_U(a_0)=T_{dS}$ gives
+$$
+\frac{\hbar a_0}{2\pi c k_B} = \frac{\hbar c}{2\pi k_B}\sqrt{\frac{\Lambda}{3}}.
+$$
+Multiplying both sides by $2\pi c k_B/\hbar$ yields
+$$
+a_0 = c^2\sqrt{\frac{\Lambda}{3}}.
+$$
+This proves existence of a threshold acceleration with the stated value. For uniqueness, observe that for $a\ge0$ the function $T_U(a)=\hbar a/(2\pi c k_B)$ is strictly increasing in $a$, while $T_{dS}$ is a fixed positive constant when $\Lambda>0$. Therefore the equation $T_U(a)=T_{dS}$ has exactly one nonnegative solution, namely Equation (I.3.3). ∎
+
 **Physical Interpretation:**
 - For $a \gg a_0$: $T_U \gg T_{dS}$, local gradients detectable $\to$ high-fidelity channels $\to$ $G \approx G_0$
 - For $a \ll a_0$: $T_U \ll T_{dS}$, gradients masked by cosmic noise $\to$ channel relaxation $\to$ $G$ increases
@@ -92,13 +102,13 @@ a_0 \approx 5.4 \times 10^{-10} \text{ m/s}^2
 \tag{I.3.4}
 $$
 
-**Connection to Empirical Scale:** The relationship to the empirical MOND scale $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ involves an efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ **rigorously derived** from PU constants (Appendix H, Definition H.0 and Equation H.4b). This factor arises from the product of four terms, each proven by standard mathematical theorems:
+**Connection to Empirical Scale:** The relationship to the empirical MOND scale $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ involves an efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ fixed once the bridge-law normalization of Appendix H (Definition H.0 and Equation H.4b) is adopted. Within that normalization the factor arises from the product of four terms:
 - Active participation fraction $a/d_0 = 1/4$ (isotropy theorem)
 - Repetition multiplier $C/\varepsilon = 2$ (QFI additivity for i.i.d.)
 - Spatial projection $(D-1)/D = 3/4$ (rotational invariance)
 - Democratic normalization $1/\sqrt{K_0} = 1/\sqrt{3}$ (QFI additivity for generators)
 
-**Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The efficiency factor $\eta' = 3/(8\sqrt{3})$ is **rigorously derived** from PU interface geometry via the QFI linear-response bridge law (Appendix H, Definition H.0), leaving **no numerically fitted parameters** in the galactic scale prediction.
+**Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The additional factor $\eta' = 3/(8\sqrt{3})$ is not obtained from that temperature equality alone; it is the conditional consequence of the QFI linear-response bridge law adopted in Appendix H, Definition H.0. Once that bridge-law normalization is fixed, no continuously adjustable parameter remains in the galactic-scale prediction.
 
 ---
 
@@ -140,12 +150,18 @@ The PU framework provides two distinct mechanisms to augment gravity: adapting l
 
 **I.7.1 Galactic Scales: Law Modification as the Low-Cost Solution**
 
-In the moderate potential wells of galaxies, the required gravitational enhancement is small. Here, PCE selects the most efficient mechanism: a local adaptation of MPU network parameters. This "parameter relaxation" (Section I.5) manifests as a scale-dependent Newton constant, $G(R)$ (Eq. I.4). This is the low-cost solution, as it represents a passive relaxation of the substrate and the required asymptotic enhancement $A_G$ is small enough to remain consistent with global cosmological constraints. In the weak-field limit, this is formally equivalent to an effective dark matter density that tracks the baryonic distribution:
-
+In the weak-field, spherically symmetric regime this is formally equivalent to an effective dark matter density:
 $$
-\nabla^2\Phi \simeq 4\pi G_0 \left[ \rho_b(R) + \rho_{\mathrm{DM,eff}}(R) \right], \quad \text{where} \quad \rho_{\mathrm{DM,eff}}(R) = \left[ \frac{G(R)}{G_0} - 1 \right] \rho_b(R).
+\nabla^2\Phi \simeq 4\pi G_0 \left[ \rho_b(r) + \rho_{\mathrm{DM,eff}}(r) \right],
+\quad \text{where} \quad
+\rho_{\mathrm{DM,eff}}(r)
+=
+\left[ \frac{G(r)}{G_0} - 1 \right] \rho_b(r)
++
+\frac{G'(r)\,M_b(r)}{4\pi G_0\,r^2}.
 \tag{I.6}
 $$
+Here $M_b'(r)=4\pi r^2\rho_b(r)$. When $G'(r)=0$, this reduces to the simpler proportional-tracking form.
 
 **Local‑tests limit.** In high‑acceleration, small‑scale regimes (Solar System, binary pulsars), the adaptation saturates and $G_{\rm eff}(L)\to G_0$. Equivalently, the local running index
 $$
@@ -173,12 +189,36 @@ where $K$ is a causally supported kernel representing the network's correlation 
 **Anisotropic stress.** The lensing–dynamics identity (I.8) assumes a metric theory with minimal coupling and negligible anisotropic stress so that both probes are sensitive to the same potential; departures from this condition are separately testable.
 
 **Theorem I.5 (Lensing–dynamics identity).**
-For any axisymmetric lens with kinematic measurement at $r_\sigma$ and Einstein radius $b_E$ within a scale window where $G_{\rm eff}(L) \approx G_0(L/L_0)^{\bar\gamma}$, assuming the emergent gravity remains a **metric theory with minimal coupling**, and that kinematics and lensing probe the same gravitational potential, then:
+For any axisymmetric lens with kinematic measurement at $r_\sigma$ and Einstein radius $b_E$ within a scale window where $G_{\rm eff}(L) \approx G_0(L/L_0)^{\bar\gamma}$, assume that the emergent gravity remains a **metric theory with minimal coupling**, that anisotropic stress is negligible, that the lensing and dynamical masses are inferred using the standard constant-$G_0$ templates from the same underlying potential, and that the comparison is performed in a window where the same enclosed baryonic mass normalization applies to both probes. Then
 $$
-\boxed{\ \frac{M_{\rm lens}}{M_{\rm dyn}}\ \approx\ \Big(\frac{b_E}{r_\sigma}\Big)^{\bar\gamma}\ }
+\boxed{\ \frac{M_{\rm lens}}{M_{\rm dyn}}\ \approx\ C_{\rm geom}\,\Big(\frac{b_E}{r_\sigma}\Big)^{\bar\gamma}\ }
 \tag{I.8}
 $$
-up to measurable geometric factors. This provides a parameter-free test of the model by comparing the mass inferred from lensing to the mass inferred from dynamics, with the discrepancy predicted by the logarithmic slope $\bar\gamma$ derived from PU principles.
+where $C_{\rm geom}$ collects the measurable geometry factors and equals $1$ in the idealized symmetric limit. Thus, after dividing out the known geometry factors, the ratio is controlled by the running slope $\bar\gamma$.
+
+*Proof.* Let $M_b$ denote the common enclosed baryonic mass normalization in the comparison window. If the true force law at radius $L$ uses $G_{\rm eff}(L)$ but the observer infers mass with the standard constant-$G_0$ formula, then the inferred dynamical mass at $r_\sigma$ is proportional to
+$$
+M_{\rm dyn}\propto \frac{v^2(r_\sigma)\,r_\sigma}{G_0}
+= \frac{G_{\rm eff}(r_\sigma)}{G_0}\,M_b \times C_{\rm dyn},
+$$
+where $C_{\rm dyn}$ is the geometry factor converting the exact kinematic observable into the enclosed-mass normalization. Likewise the inferred lensing mass at impact scale $b_E$ is proportional to
+$$
+M_{\rm lens}\propto \frac{\hat\alpha(b_E)\,b_E\,c^2}{4G_0}
+= \frac{G_{\rm eff}(b_E)}{G_0}\,M_b \times C_{\rm lens},
+$$
+because in a metric theory with negligible anisotropic stress the deflection normalization is linear in the same potential and, by hypothesis, the same enclosed baryonic-mass normalization is being compared. Therefore
+$$
+\frac{M_{\rm lens}}{M_{\rm dyn}}
+=
+\frac{C_{\rm lens}}{C_{\rm dyn}}\,
+\frac{G_{\rm eff}(b_E)}{G_{\rm eff}(r_\sigma)}
+=
+C_{\rm geom}\,
+\frac{G_0(b_E/L_0)^{\bar\gamma}}{G_0(r_\sigma/L_0)^{\bar\gamma}}
+=
+C_{\rm geom}\Big(\frac{b_E}{r_\sigma}\Big)^{\bar\gamma}.
+$$
+This is Equation (I.8). ∎
 
 **I.8 Consistency with Local Tests of GR**
 
@@ -216,15 +256,15 @@ The scale-dependent gravity framework derived from PU principles leads to severa
 A direct test of the scale-dependent $G(R)$ model is to fit it to observed galaxy rotation curves. The SPARC database [Lelli et al. 2016], providing high-quality rotation curves and detailed baryonic mass models for 152 disk galaxies, offers an ideal dataset. A full comparison requires:
 
 *   Accurate baryonic mass models for each galaxy, requiring estimates of stellar mass-to-light ratios $\Upsilon_\ast$.
-**Theorem I.6 (Well-posed generalized Poisson law).** For a local energy functional of the form
+**Theorem I.6 (Well-posed generalized Poisson law).** Let $\Omega\subset\mathbb R^3$ be a bounded Lipschitz domain and consider the local energy functional
 $$
 \mathcal E[\Phi]=\int_\Omega \left[ \frac{1}{8\pi G}\Psi(|\nabla\Phi|^2)+\rho\,\Phi\right]\,d^3x,
 $$
-where $\Psi(u)$ is $C^1$, strictly convex, coercive, and nondecreasing in $u=|\nabla\Phi|^2$, the Euler–Lagrange equation is
+where $\Psi(u)$ is $C^1$, strictly convex, coercive, and nondecreasing in $u=|\nabla\Phi|^2$. Then the Euler–Lagrange equation is
 $$
-\nabla\!\cdot\!\big(\mu(|\nabla\Phi|)\,\nabla\Phi\big)=4\pi G\,\rho,\qquad \text{with}\quad \mu(s) := \Psi'(s^2).
+\nabla\\!\cdot\\!\big(\mu(|\nabla\Phi|)\,\nabla\Phi\big)=4\pi G\,\rho,\qquad \text{with}\quad \mu(s) := \Psi'(s^2).
 $$
-Under these conditions, the generalized Poisson equation admits a unique weak solution for suitable boundary data (e.g., Dirichlet) [Minty 1962; Evans 2010].
+With homogeneous Dirichlet boundary condition $\Phi|_{\partial\Omega}=0$, the generalized Poisson equation admits a unique weak solution in $H_0^1(\Omega)$ [Minty 1962; Evans 2010]. For inhomogeneous Dirichlet data, the same argument applies after a standard $H^1$ lifting of the boundary values.
 
 *Proof.* Let $\Omega\subset\mathbb{R}^3$ be bounded Lipschitz and impose homogeneous Dirichlet data. Set $V=H_0^1(\Omega)$ and define the nonlinear operator $A:V\to V^*$ by
 $$
@@ -266,7 +306,34 @@ By the Minty–Browder theorem, hemicontinuity, strict monotonicity, and coerciv
 $$
 g(r)\sim \frac{\sqrt{GMa_0}}{r},\qquad v_{\rm circ}^4(r)\sim GMa_0.
 $$
-This recovers the baryonic Tully-Fisher relation as a direct consequence of the asymptotic form of the effective gravitational law [Milgrom 1983; McGaugh 2012].
+
+*Proof.* Outside the point source, spherical symmetry reduces the generalized Poisson law to
+$$
+\frac{1}{r^2}\frac{d}{dr}\big(r^2\mu(g(r))\,g(r)\big)=0,
+$$
+so there exists a constant $C$ such that
+$$
+r^2\mu(g(r))\,g(r)=C.
+$$
+Matching to the enclosed mass $M$ gives $C=GM$. In the large-$r$ regime one has $g(r)\to0$, so the assumed asymptotic law $\mu(s)\sim s/a_0$ gives
+$$
+r^2\,\frac{g(r)}{a_0}\,g(r)\sim GM,
+$$
+that is,
+$$
+g(r)^2\sim \frac{GMa_0}{r^2}.
+$$
+Taking the positive square root yields
+$$
+g(r)\sim \frac{\sqrt{GMa_0}}{r}.
+$$
+The circular velocity satisfies $v_{\rm circ}^2(r)=r\,g(r)$, hence
+$$
+v_{\rm circ}^2(r)\sim \sqrt{GMa_0},
+\qquad
+v_{\rm circ}^4(r)\sim GMa_0.
+$$
+This is the baryonic Tully–Fisher scaling. ∎
 
 *   A joint Bayesian inference analysis (e.g., using nested sampling [Feroz & Hobson 2008; Feroz et al. 2009, 2019]) to determine the universal parameter set $(L_0,A_G,m)$ and the per-galaxy $\Upsilon_\ast$ values by comparing predicted and observed rotation curves. When inferring $A_G$ from rotation curves, the effective far‑field enhancement reflects the baryon‑mass‑weighted $\langle\varepsilon_G\rangle_b$ rather than $A_G$ itself; the numerical fits naturally absorb this via the $\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R)\,\rho_b(R)$ source.
 

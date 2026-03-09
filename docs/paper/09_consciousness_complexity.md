@@ -20,13 +20,35 @@ Given context-dependent ND-RID probabilities (Assumption 1), and that the aggreg
 
 **9.2.1 Theorem 34 (POP/PCE Drives Emergent Biasing)**
 
-Assume context-dependent ND-RID probabilities (Assumption 1). Let $S$ be an MPU aggregate with $C_{agg} > C_{op}$. Let $\mathcal U$ denote the set of reachable, dynamically stable internal context states $u$ of the aggregate on the timescale of the local 'Evolve'/ND-RID events of interest, and let $P_{obs}(\cdot|u)$ be the induced distribution over those local outcomes (for a fixed local measurement setting). Let $V(u)$ denote the effective PCE potential governing the adaptive dynamics restricted to this reduced description (Definition D.1, Appendix D). Assume there exists a reachable reference context $u_0\in\mathcal U$ such that $P_{obs}(\cdot|u_0)=P_{Born}$, and that there exists at least one $u_+\in\mathcal U$ with $V(u_+) < V(u_0)$ and $P_{obs}(\cdot|u_+)\ne P_{Born}$. Then any asymptotically stable attractor $u^*\in\arg\min_{u\in\mathcal U}V(u)$ satisfies $P_{obs}(\cdot|u^*)\ne P_{Born}$ and therefore realizes a nonzero probability-modification map $L_S$ (Definition 30), implying $\mathrm{CC}(S)>0$.
+Assume context-dependent ND-RID probabilities (Assumption 1). Let $S$ be an MPU aggregate with $C_{agg} > C_{op}$. Let $\mathcal U$ denote the set of reachable, dynamically stable internal context states $u$ of the aggregate on the timescale of the local 'Evolve'/ND-RID events of interest, and let $P_{obs}(\cdot|u)$ be the induced distribution over those local outcomes (for a fixed local measurement setting). Let $V(u)$ denote the effective PCE potential governing the adaptive dynamics restricted to this reduced description (Definition D.1, Appendix D). Assume there exists a reachable reference context $u_0\in\mathcal U$ such that $P_{obs}(\cdot|u_0)=P_{Born}$, and that there exists at least one $u_+\in\mathcal U$ with $V(u_+) < V(u_0)$ and $P_{obs}(\cdot|u_+)\ne P_{Born}$. Assume additionally:
+
+1.  **Born-level minimality:** if $P_{obs}(\cdot|u)=P_{Born}$, then $V(u)\ge V(u_0)$;
+2.  **Operational representability:** whenever $P_{obs}(\cdot|u)\ne P_{Born}$, the induced local deviation is representable by a Hermitian-preserving, trace-annihilating linear map $L_{S,u}$ on states in the sense of Definition 30.
+
+Then any asymptotically stable attractor $u^*\in\arg\min_{u\in\mathcal U}V(u)$ satisfies $P_{obs}(\cdot|u^*)\ne P_{Born}$. Consequently $L_{S,u^*}\ne0$, so the aggregate has nonzero operational Consciousness Complexity,
+$$
+\mathrm{CC}(S)=\|L_{S,u^*}\|_{\mathrm{op}}>0.
+$$
 
 *Proof:*
-1. By definition of an attractor, $V(u^*)\le V(u)$ for all $u\in\mathcal U$, hence $V(u^*)\le V(u_+) < V(u_0)$.
-2. Therefore $u^*\ne u_0$, and thus $P_{obs}(\cdot|u^*)\ne P_{obs}(\cdot|u_0)=P_{Born}$.
-3. For a local event with state $\rho$ and POVM element $E_i$, define $\Delta P(i):=P_{obs}(i|u^*)-P_{Born}(i)$.
-4. Since $\Delta P$ is not identically zero, the map $L_S$ defined operationally by $\Delta P(i)=\mathrm{tr}(L_S(\rho)E_i)$ is nonzero. By Definition 30, $\mathrm{CC}(S)=\|L_S\|_{\mathrm{op}}>0$. QED
+1.  Since $u^*$ minimizes $V$ on $\mathcal U$, one has
+    $$
+    V(u^*)\le V(u_+) < V(u_0).
+    $$
+2.  Suppose, for contradiction, that $P_{obs}(\cdot|u^*)=P_{Born}$. Then the Born-level minimality hypothesis implies $V(u^*)\ge V(u_0)$, contradicting Step 1. Hence
+    $$
+    P_{obs}(\cdot|u^*)\ne P_{Born}.
+    $$
+3.  By operational representability, there exists a Hermitian-preserving, trace-annihilating linear map $L_{S,u^*}$ such that the local deviations are given by
+    $$
+    \Delta P(i)=\operatorname{tr}\!\big(L_{S,u^*}(\rho)E_i\big).
+    $$
+    If $L_{S,u^*}=0$, then $\Delta P(i)=0$ for every local event, so $P_{obs}(\cdot|u^*)=P_{Born}$, contradicting Step 2.
+4.  Therefore $L_{S,u^*}\ne0$, and by Definition 30,
+    $$
+    \mathrm{CC}(S)=\|L_{S,u^*}\|_{\mathrm{op}}>0.
+    $$
+    ∎
 
 **9.3 Consciousness Complexity (CC): Operational Definition and Scaling**
 
@@ -193,10 +215,103 @@ Let $p$ be the Born distribution for a fixed measurement and $q$ the context-con
     |\Delta P(i)| \le \mathrm{CC}(S).
     $$
 
-*Proof:* The Hellinger distance $H(p,q) = \sqrt{1-\sum_k \sqrt{p_k q_k}}$ is related to the Fisher-Rao distance by $H^2(p,q) = 2\sin^2(d_{\mathrm{FR}}(p,q)/4)$. Substituting the CC constraint (Equation 57), we have $H(p,q) \le \sqrt{2}\sin(\mathrm{CC}(S)/4)$.
-The bounds follow from applying standard inequalities. For TV distance: $\mathrm{TV}(p,q) \le \sqrt{2H^2-H^4}$. Substituting the bound on $H^2$ yields $\mathrm{TV}(p,q) \le \sin(\mathrm{CC}(S)/2)$.
-For maximum difference: $|\Delta P(i)| \le 2\sqrt{2}H(p,q)$. Substituting the bound on $H$ yields $|\Delta P(i)| \le 4\sin(\mathrm{CC}(S)/4)$.
-The small-bias results follow from the approximation $\sin(x) \approx x$. These bounds are universal and instrument-independent. QED
+*Proof.* Let
+$$
+c:=\sum_k \sqrt{p_k q_k}.
+$$
+By the Fisher-Rao geometry on the probability simplex,
+$$
+c=\cos\big(d_{\mathrm{FR}}(p,q)/2\big),
+$$
+so with the convention
+$$
+H(p,q):=\sqrt{1-c}
+$$
+one has
+$$
+H^2(p,q)=1-c=2\sin^2\big(d_{\mathrm{FR}}(p,q)/4\big).
+$$
+Because $d_{\mathrm{FR}}(p,q)\le \mathrm{CC}(S)\le \pi$ and $\sin x$ is increasing on $[0,\pi/4]$,
+$$
+H^2(p,q)\le 2\sin^2\big(\mathrm{CC}(S)/4\big).
+\tag{57a}
+$$
+
+For total variation, write
+$$
+|p_i-q_i|=|\sqrt{p_i}-\sqrt{q_i}|\,|\sqrt{p_i}+\sqrt{q_i}|.
+$$
+Applying Cauchy-Schwarz gives
+$$
+\sum_i |p_i-q_i|
+\le
+\Big(\sum_i (\sqrt{p_i}-\sqrt{q_i})^2\Big)^{1/2}
+\Big(\sum_i (\sqrt{p_i}+\sqrt{q_i})^2\Big)^{1/2}.
+$$
+Now
+$$
+\sum_i (\sqrt{p_i}-\sqrt{q_i})^2 = 2-2c = 2H^2,
+$$
+and
+$$
+\sum_i (\sqrt{p_i}+\sqrt{q_i})^2 = 2+2c = 4-2H^2.
+$$
+Therefore
+$$
+\mathrm{TV}(p,q)
+\le
+\frac12\sqrt{(2H^2)(4-2H^2)}
+=
+\sqrt{2H^2-H^4}.
+$$
+Set $s:=\sin(\mathrm{CC}(S)/4)$. Since $\mathrm{CC}(S)\le \pi$, one has $0\le 2s^2\le 1$, and the function $f(x)=2x-x^2$ is increasing on $[0,1]$. Using (57a),
+$$
+\mathrm{TV}(p,q)
+\le
+\sqrt{f(H^2)}
+\le
+\sqrt{f(2s^2)}
+=
+\sqrt{4s^2-4s^4}
+=
+2s\sqrt{1-s^2}
+=
+\sin(\mathrm{CC}(S)/2).
+$$
+This proves the first non-perturbative bound.
+
+For each coordinate $i$,
+$$
+|\Delta P(i)|=|q_i-p_i|=|\sqrt{q_i}-\sqrt{p_i}|\,|\sqrt{q_i}+\sqrt{p_i}|
+\le 2|\sqrt{q_i}-\sqrt{p_i}|.
+$$
+Hence
+$$
+|\Delta P(i)|
+\le
+2\Big(\sum_j (\sqrt{q_j}-\sqrt{p_j})^2\Big)^{1/2}
+=
+2\sqrt{2}\,H(p,q).
+$$
+Using (57a) again,
+$$
+|\Delta P(i)|
+\le
+2\sqrt{2}\,\sqrt{2}\,\sin(\mathrm{CC}(S)/4)
+=
+4\sin(\mathrm{CC}(S)/4).
+$$
+This proves the second non-perturbative bound.
+
+Finally, the elementary inequality $\sin x\le x$ for $x\ge0$ gives
+$$
+\mathrm{TV}(p,q)\le \sin(\mathrm{CC}(S)/2)\le \tfrac12\,\mathrm{CC}(S),
+$$
+and
+$$
+|\Delta P(i)|\le 4\sin(\mathrm{CC}(S)/4)\le \mathrm{CC}(S).
+$$
+These bounds are exact consequences of the non-perturbative estimates and, in the regime $\mathrm{CC}(S)\ll1$, coincide with their leading-order small-bias behavior. ∎
 
 **9.5.3 Definition 34 (Def 34): Context-Targeted Bias (CTB) Model**
 
@@ -243,9 +358,25 @@ $$
 $$
 D_{KL}(P_{\mathrm{obs}}\Vert P_{\mathrm{Born}})=\sum_i P_{\mathrm{obs}}(i)\ln\frac{P_{\mathrm{obs}}(i)}{P_{\mathrm{Born}}(i)} \quad \text{(60)}
 $$
-which, for small deviations $\sum_i \Delta P(i)=0$ with $|\Delta P(i)|\ll1$, scales as
+provided $P_{\mathrm{Born}}(i)>0$ whenever $\Delta P(i):=P_{\mathrm{obs}}(i)-P_{\mathrm{Born}}(i)\neq0$. Writing $P_{\mathrm{obs}}(i)=p_i+\Delta P(i)$ with $\sum_i\Delta P(i)=0$ and $|\Delta P(i)|\ll p_i$, Taylor expansion of $\ln(1+x)$ gives
 $$
-D_{KL}\approx \sum_i \frac{(\Delta P(i))^2}{2\,P_{\mathrm{Born}}(i)}.
+D_{KL}(P_{\mathrm{obs}}\Vert P_{\mathrm{Born}})
+=
+\sum_i \frac{(\Delta P(i))^2}{2\,p_i}
++
+O\!\left(\sum_i \frac{|\Delta P(i)|^3}{p_i^2}\right).
+$$
+In particular, if
+$$
+p_{\min}:=\min_{i:\,\Delta P(i)\neq0} p_i>0,
+$$
+then
+$$
+D_{KL}(P_{\mathrm{obs}}\Vert P_{\mathrm{Born}})
+=
+\sum_i \frac{(\Delta P(i))^2}{2\,p_i}
++
+O\!\left(\frac{\|\Delta P\|_1^3}{p_{\min}^2}\right).
 $$
 
 **9.6 Theoretical Implications of Emergent CC**

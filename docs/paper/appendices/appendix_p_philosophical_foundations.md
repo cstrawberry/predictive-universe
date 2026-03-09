@@ -1553,13 +1553,13 @@ The Predictive Universe framework advances a specific claim about the ontologica
 
 **Thesis P.8.1 (Spacetime Emergence).** Spacetime—including its dimensionality, geometry, causal structure, and temporal direction—emerges from the structure of error-corrected predictive coherence across the MPU network. Spacetime is not the stage on which prediction occurs; spacetime is the geometric manifestation of prediction maintaining itself optimally under finite-resource constraints.
 
-This claim has precise mathematical content. The emergence is "strong" in the following sense: the specific geometry of spacetime—four-dimensional Lorentzian manifold with the observed gauge structure—is uniquely determined by the framework's foundational constants ($d_0 = 8$ and $\varepsilon \ge \ln 2$, with saturation $\varepsilon = \ln 2$ at the PCE-Attractor) through the derivation chain established in Section P.7.2 and detailed in Appendix Z. To ask what spacetime is "made of" is to ask what structure prediction requires for self-maintenance under thermodynamic constraints. The answer—optimal error correction on 24 information modes—determines every geometric feature.
+This claim has precise mathematical content. The emergence is "strong" in the following restricted sense: once the foundational constants are fixed and the mode-channel, code-selection, gauge-search, and continuum-limit hypotheses introduced in Section P.7.2 and the technical appendices are adopted, the manuscript derives a four-dimensional Lorentzian effective spacetime with the stated gauge structure. The derivation fixes a discrete backbone of geometric data; it does not show that every geometric feature of the observed world follows without the additional branch, lift, and matching assumptions introduced later in the manuscript.
 
 ---
 
 ## P.8.2 The Derivation Chain: From Prediction to Geometry
 
-The complete derivation chain from foundational axioms to emergent spacetime structure, with zero continuously adjustable parameters, proceeds as follows (cf. Section P.7.2; Appendix Z):
+The derivation chain from foundational axioms to the backbone spacetime structure proceeds as follows (cf. Section P.7.2; Appendix Z):
 
 $$\text{Cogito} \to \text{Prediction} \to \text{SPAP} \xrightarrow{+\text{Landauer}} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \to a = 2 \to M = 24 \to D = 4$$
 
@@ -3344,9 +3344,13 @@ The map $(-1): \Lambda_{24} \to \Lambda_{24}$ given by $v \mapsto -v$ is:
 
 *Proof.* Standard lattice theory. The map $(-1)$ preserves the lattice structure and inner product, commutes with all orthogonal transformations, and satisfies $(-1)^2 = \text{id}$. $\square$
 
-**Proposition P.13.20a (Canonicity of (-1) for Indecomposable Lattices).** For an indecomposable even lattice $\Lambda$ (one that cannot be written as an orthogonal direct sum of proper sublattices), the $(-1)$ involution is the unique central element of order 2 in $\text{Aut}(\Lambda)$. In particular, this applies to the Leech lattice $\Lambda_{24}$.
+**Proposition P.13.20a (Canonicity of (-1) for the Leech Lattice).** For the Leech lattice $\Lambda_{24}$, the involution $(-1)$ is the unique nontrivial central element of order 2 in $\text{Aut}(\Lambda_{24})=\text{Co}_0$.
 
-*Proof.* The map $v \mapsto -v$ commutes with all orthogonal transformations, hence lies in the center of $\text{Aut}(\Lambda)$. It has order 2. For an indecomposable lattice, any central involution must act as $\pm 1$ uniformly on the entire lattice (a non-uniform sign pattern would define an orthogonal decomposition). Since $+1$ is the identity, $(-1)$ is the unique non-trivial central involution. The Leech lattice is indecomposable [Conway 1969]. $\square$
+*Proof.* By Theorem P.13.20, the map $v\mapsto -v$ is a central automorphism of $\Lambda_{24}$ of order 2. Conway's description of the full automorphism group gives
+$$
+Z(\text{Co}_0)=\{\pm1\}
+$$
+[Conway 1969]. Hence the only central elements are $\pm1$, and the unique non-identity central involution is $(-1)$. ∎
 
 ---
 
@@ -3356,19 +3360,35 @@ The map $(-1): \Lambda_{24} \to \Lambda_{24}$ given by $v \mapsto -v$ is:
 
 The $(-1)$ involution on $\Lambda_{24}$ lifts to an involution $\theta$ on $V_{\Lambda_{24}}$ with:
 
-1. **Action on Heisenberg:** $\theta(\alpha^i_{-n}|0\rangle) = (-1)^n \alpha^i_{-n}|0\rangle$
+1. **Action on Heisenberg:** $\theta(\alpha^i_{-n}|0\rangle) = -\,\alpha^i_{-n}|0\rangle$
 2. **Action on lattice vectors:** $\theta(e_v) = e_{-v}$
 
+More generally, for a pure Heisenberg monomial one has
+$$
+\theta\!\left(\alpha^{i_1}_{-n_1}\cdots \alpha^{i_m}_{-n_m}|0\rangle\right)
+=
+(-1)^m\alpha^{i_1}_{-n_1}\cdots \alpha^{i_m}_{-n_m}|0\rangle.
+$$
+
 In particular, on weight-one currents:
-$$\theta(\alpha^i_{-1}|0\rangle) = -\alpha^i_{-1}|0\rangle$$
+$$
+\theta(\alpha^i_{-1}|0\rangle) = -\alpha^i_{-1}|0\rangle
+$$
+so the weight-one currents are $\theta$-odd, and $(V_{\Lambda_{24}})^\theta$ has $\dim((V_{\Lambda_{24}})^\theta_1) = 0$.
 
-So the weight-one currents are $\theta$-odd, and $(V_{\Lambda_{24}})^\theta$ has $\dim((V_{\Lambda_{24}})^\theta_1) = 0$.
-
-*Proof.* Standard lift of lattice automorphisms to VOA automorphisms [Frenkel, Lepowsky & Meurman 1988, §5.4]. The sign $(-1)^n$ on Heisenberg generators follows from the action on the underlying Fock space. $\square$
+*Proof.* For any lattice isometry $g$, the standard lattice-VOA lift acts on Heisenberg creation operators by the linear action of $g$ on the underlying lattice space and on lattice operators by $e_v\mapsto e_{gv}$ [Frenkel, Lepowsky & Meurman 1988, §5.4]. Taking $g=-1$ therefore gives
+$$
+\theta(\alpha^i_{-n}|0\rangle)=(-\alpha^i)_{-n}|0\rangle=-\alpha^i_{-n}|0\rangle
+$$
+for every mode number $n$, and
+$$
+\theta(e_v)=e_{-v}.
+$$
+Applying $\theta$ multiplicatively to a monomial with $m$ Heisenberg creation operators yields the factor $(-1)^m$. The weight-one space of $V_{\Lambda_{24}}$ is spanned by the vectors $\alpha^i_{-1}|0\rangle$, so every weight-one current is odd and no nonzero weight-one vector survives in the fixed-point subspace. ∎
 
 **Corollary P.13.21a (Canonical Properties of θ).** When lifting lattice automorphisms to VOA automorphisms, the $(-1)$ lift $\theta$ is distinguished by:
 1. Centrality (commutes with all other automorphisms)
-2. Acting by $(-1)^n$ on Heisenberg mode number $n$
+2. Acting by $-1$ on each Heisenberg creation operator, equivalently by $(-1)^m$ on a state with $m$ Heisenberg factors
 3. Acting as $e_v \mapsto e_{-v}$ on lattice vertex operators
 
 There is no other involution of $V_\Lambda$ with these properties.
