@@ -93,9 +93,9 @@ The adaptation dynamics of systems within the PU framework are governed by the P
 
  2.  **Maximal Efficiency (Capacity Saturation):** The system operates at the "zero-slack" or "branch boundary" condition, where the unconstrained minimum of the rate-level PCE potential $\phi(u)$ coincides with the information capacity limit ($V_{benefit} = \ln d_0$).
 
- 3.  **Canonical Instantiation (Minimal Complexity Action):** At the Attractor scale $\mu^*$, the bulk gauge normalization satisfies $\kappa^*_{\mathrm{bulk}}=1$ (Appendix Z, Theorem Z.14; Appendix X, Theorem X.3). This follows from Legendre duality and the predictive Ward identity together with QFI geometric rigidity ($\lambda_i=1$, Theorem Z.5) and capacity saturation fixing $u^*=2^{1/8}-1$ (Theorem Z.7), obstructing the field-rescaling freedom that would otherwise make $\kappa$ a convention in standard $U(1)$ gauge theory.
+ The equality $\kappa^*_{\mathrm{bulk}}=1$ is not part of the definition of $x_{attr}$; it is a downstream U(1)-sector consequence derived at the attractor in Appendix Z (Theorem Z.14) and Appendix X (Theorem X.3).
 
- This orbit (equivalence class under the symmetries of $V$ and gauge redundancy) is the unique, PCE-favored selection used for predictions with zero continuously adjustable parameters; throughout we fix a canonical representative and denote it by $x_{attr}$.
+ This orbit (equivalence class under the symmetries of $V$ and gauge redundancy) is the unique, PCE-favored selection used for predictions once the additional sector-specific consequences are derived; throughout we fix a canonical representative and denote it by $x_{attr}$.
 
 **6.1.3 Definition 16 (Def 16): Prediction Optimization Problem - Operational Goal**
 

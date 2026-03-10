@@ -16,12 +16,12 @@ These foundations are complementary, not redundant. The logical foundation estab
 
 #### Foundational Definitions Recap:
 
-**Definition 10 (Property R - Computational Richness):** A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses Property R relative to a consistent formal logical system $\mathcal{F}$ (e.g., Peano Arithmetic) if models $M \in \mathcal{M}$ and the associated formalism provide the machinery to:
+**Summary of Definition 10 (Property R - Computational Richness):** A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses Property R relative to a consistent formal logical system $\mathcal{F}$ (e.g., Peano Arithmetic) if models $M \in \mathcal{M}$ and the associated formalism provide the machinery to:
 1.  **Represent:** Encode system states $s$, models $M$ (e.g., via Gödel numbering $\ulcorner M \urcorner$), predictions $\hat{s}$, and computational processes as objects manipulable within $\mathcal{F}$.
 2.  **Simulate/Reason:** Simulate the execution of any model $M \in \mathcal{M}$ applied to a state $s$, or formally reason about this process within $\mathcal{F}$, subject to fundamental computational limits.
 3.  **Evaluate Predicates:** Represent and evaluate logical formulas within $\mathcal{F}$ concerning the behavior, output, or predictive accuracy of models in $\mathcal{M}$, including self-referential predicates.
 
-**Definition 23 (MPU):** Fundamental unit operating at complexity $C_{\text{op}} \geq K_0 \equiv B_3$ (Theorem 15, Corollary 3). MPUs possess Hilbert space $\mathcal{H}_0$ with $\dim(\mathcal{H}_0) \geq 8$ (Theorem 23) and operate via dual dynamics: Internal Prediction ($P_{\text{int}}$, Definition 26) and 'Evolve'/ND-RID interaction (Definition 27).
+**Summary of Definition 23 (MPU):** Fundamental unit operating at complexity $C_{\text{op}} \geq K_0 \equiv B_3$ (Theorem 15, Corollary 3). MPUs possess Hilbert space $\mathcal{H}_0$ with $\dim(\mathcal{H}_0) \geq 8$ (Theorem 23) and operate via dual dynamics: Internal Prediction ($P_{\text{int}}$, Definition 26) and 'Evolve'/ND-RID interaction (Definition 27).
 
 **Recall of Definition A.2.2 (ND-RID):** Non-Deterministic Reflexive Interaction Dynamics govern the MPU 'Evolve' process, characterized by probabilistic outcomes $P(o|x,y)$ and state transitions $P(x'|x,y,o)$. Fundamentally irreversible ($\varepsilon \geq \ln 2$, Theorem 31) and contractive: when the ND-RID update contains a nonzero input-independent refresh component, Lemma E.1 gives $f_{\text{RID}}<1$.
 

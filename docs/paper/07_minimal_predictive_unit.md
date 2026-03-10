@@ -148,7 +148,7 @@ given by $a \otimes b \otimes c \mapsto abc$. The domain algebra, $M_2(\mathbb{C
 
 This implies that $\mathfrak{A}$ contains a subalgebra isomorphic to $M_8(\mathbb{C})$. By the structure theory of C*-algebras, any nonzero representation of $M_8(\mathbb{C})$ is a direct sum of its unique 8-dimensional irreducible representation. Consequently, any faithful representation of $\mathfrak{A}$ must act on a Hilbert space $\mathcal{H}$ of dimension at least 8. Any dimension $d_0 < 8$ is informationally insufficient to non-destructively manage the three required independent quantum binary degrees of freedom. This establishes $d_0 = 8$ as a strict algebraic lower bound. ∎
 
-This establishes $d_0 = 8$ as a strict lower bound. The Principle of Compression Efficiency ensures it is also the unique, stable dimension by penalizing superfluous complexity.
+This establishes $d_0 \ge 8$ as a strict lower bound. The Principle of Compression Efficiency can select the saturating case only after the active-operational-dimension hypotheses stated below are imposed.
 
 **Theorem (PCE Stability of $d_0 = 8$ from Algebraic Completeness).**
 Let the PCE potential for an MPU with an active operational dimension $d$ be $V(d) = V_{cost}(d) - V_{benefit}(d)$, subject to the algebraic lower bound $d \ge 8$. The stability of the minimal dimension $d^*=8$ is a necessary consequence of PCE optimization under the following physically-motivated conditions:
@@ -160,19 +160,21 @@ Under these conditions, any configuration with an active dimension $d > 8$ is de
 
 *Proof.* For any dimension $d > 8$, the change in the potential from adding the $d$-th dimension is $\Delta V(d) = \Delta V_{cost}(d) - \Delta V_{benefit}(d)$. By condition (2), the marginal cost is strictly positive, $\Delta V_{cost}(d) > 0$. By condition (1), the marginal benefit vanishes, $\Delta V_{benefit}(d)=0$. Therefore, the marginal change in the potential is strictly positive: $\Delta V(d) > 0$ for all $d > 8$. This implies that the potential $V(d)$ is a strictly increasing function for $d > 8$. The unique global minimum of $V(d)$ on the allowed domain $d \in \{8, 9, 10, \dots\}$ must therefore occur at the boundary, $d^*=8$. ∎
 
-It is crucial to interpret $d$ as the **active operational dimension**—the dimension of the subspace of the MPU's full Hilbert space that is actively coupled into the predictive loop. A physical device instantiating an MPU may possess a larger Hilbert space, but PCE will favor dynamics where any unused, superfluous sectors are energetically penalized and dynamically decoupled from the core cycle. This "freezing out" of inefficient degrees of freedom ensures that the effective operational dimension converges to the minimal, algebraically complete value of 8. This rigorous algebraic argument confirms and deepens the result of Theorem 15, establishing $d_0 = 8$ and its informational capacity $K_0 = 3$ bits as a unique, stable, and fundamental feature of the Predictive Universe.
+It is crucial to interpret $d$ as the **active operational dimension**—the dimension of the subspace of the MPU's full Hilbert space that is actively coupled into the predictive loop. A physical device instantiating an MPU may possess a larger Hilbert space, but PCE will favor dynamics where any unused, superfluous sectors are energetically penalized and dynamically decoupled from the core cycle. This "freezing out" of inefficient degrees of freedom ensures that the effective operational dimension converges to the minimal, algebraically complete value of 8. This argument identifies $d^*=8$ as the minimal active operational dimension under the stated PCE hypotheses. It does not change Theorem 23, which remains the conditional lower-bound statement $d_0 \ge 2^{K_0}=8$.
 
 **7.2 MPU State Representation: Perspectival State and Hilbert Space**
 
 We now detail the necessary mathematical structure for representing the state of an MPU.
 
-**7.2.1 Theorem 23 (Minimal MPU Hilbert Space Dimension)**
+**7.2.1 Theorem 23 (Conditional Minimal MPU Hilbert Space Dimension)**
 
-Minimal Predictive Units operate at the minimal adaptive-cycle complexity $C(MPU) = C_{op}$ (Definition 13). Prior results establish $C_{op} \ge K_0 \equiv B_3$ (Theorem 15, Corollary 3), where $K_0$ is the minimum complexity for the SPAP logic. We adopt the capacity–dimension link that a $K_0$-bit structural capacity requires at least $2^{K_0}$ distinguishable basis states in the amplitude space. Therefore, the corresponding Hilbert space $\mathcal{H}_0$ for the MPU state $|\psi(t)\rangle$ must have a dimension $d_0$ satisfying
+Assume the capacity–dimension link that a $K_0$-bit structural capacity requires at least $2^{K_0}$ distinguishable basis states in the amplitude space. Then the corresponding Hilbert space $\mathcal{H}_0$ for the MPU state $|\psi(t)\rangle$ must have dimension $d_0$ satisfying
 $$
 d_0 \;\ge\; 2^{K_0} \;=\; 8 \quad \text{(41)}
 $$
-and this bound is also guaranteed by the algebraic argument above when the register decomposition holds. Hence every minimal MPU possesses the Hilbert-space dimensionality needed to encode the structural capacity for SPAP logic.
+for $K_0=3$.
+
+*Proof.* Under the stated capacity–dimension link, encoding a $K_0$-bit structural capacity requires at least $2^{K_0}$ mutually distinguishable basis states. A Hilbert space of dimension $d_0$ contains at most $d_0$ perfectly distinguishable basis states, so one must have $d_0 \ge 2^{K_0}$. Substituting the previously established value $K_0 = 3$ yields $d_0 \ge 8$. Under the additional PCE-stability hypotheses stated immediately above, the minimal saturating active operational dimension is $d_0 = 8$. ∎
 
 **7.2.2 Proposition 4 (Emergence of Complex Hilbert Space $\mathcal{H}_0$)**
 
@@ -293,14 +295,11 @@ The effective dimensionless entropy cost $\varepsilon$ associated with the irrev
 $$
 \varepsilon = \frac{\Delta S_{min}}{k_B} \ge \ln 2 \quad \text{(45)}
 $$
-*Proof.* The minimal dimensionless entropy production $\varepsilon$ required by any physically realisable implementation of the SPAP/DSRO update over one 'Evolve' cycle is bounded below by the Landauer limit associated with the necessary logical state merging.
-1.  **Logical Lower Bound:** The SPAP logic embedded in the MPU’s reflexive update mandates a minimal 2-to-1 merge of logical states (Proposition 5). Appendix J (Sections J.2–J.3) shows—via Landauer’s principle—that any physical realisation of this merge dissipates a universal minimum $\varepsilon_{logic} = \ln 2$ nats.
-2.  **Total Cycle Cost:** The total effective dimensionless entropy production $\varepsilon$ associated with the irreversible 'Evolve' interaction cycle must be sufficient to account for this logically required cost.
-    $$
-    \varepsilon \ge \varepsilon_{logic} = \ln 2
-    $$
-
-*Proof Summary:* The strict lower bound $\varepsilon \ge \ln 2$ arises fundamentally from the logical structure of the self-referential SPAP update cycle inherent in the MPU's 'Evolve' process (Definition 27). As rigorously derived in Appendix J (Theorem J.1), any physical implementation of this cycle necessitates a logically irreversible merging of the state space to resolve the self-reference and close the predictive loop under finite complexity constraints (Section J.2). Applying Landauer's principle to this unavoidable logical erasure yields the universal minimum dimensionless entropy cost $\varepsilon_{logic} = \ln 2$ that must be dissipated to the environment per cycle involving non-trivial self-referential information gain (Section J.3). The total effective cost $\varepsilon$ associated with the 'Evolve' step must account for this fundamental logical requirement, hence $\varepsilon \ge \ln 2$. ∘
+*Proof.* Lemma J.1 shows that a finite-memory SPAP cycle reusing its prediction ancilla implements a logically irreversible 2-to-1 merge of admissible logical states. Theorem J.1 applies exactly to that cycle-closure map and proves that any physical implementation requires a guarantee-level lower-bound entropy budget of at least $k_B \ln 2$ per cycle. By Definition 28, $\varepsilon$ is the corresponding dimensionless lower-bound parameter:
+$$
+\varepsilon = \frac{\Delta S_{min}}{k_B} \ge \ln 2.
+$$
+This is Equation (45). QED
 
 The strict positivity and universality of this irreducible cost $\varepsilon$ are of profound consequence. Beyond underpinning the Reflexivity Constraint (Theorem 33) and limiting ND-RID channel capacity (Appendix E), it serves as the fundamental thermodynamic ratchet that physically enforces the emergent arrow of time, ensuring the directionality of macroscopic evolution (Appendix O, Theorem O.3). The full derivation of $\varepsilon \ge \ln 2$ is provided in **Appendix J**.
 
@@ -310,11 +309,11 @@ Any physical MPU reflexive interaction ('Evolve' process, Definition 27) associa
 $$
 \frac{\Delta S_{min}(o)}{k_B} \geq I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon \cdot \Theta(I(\rho; \mathcal{E}_{N}, o)) \quad \text{(46)}
 $$
-where $D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)]$ is the quantum relative entropy (nats) representing the minimal feedback cost, $\varepsilon \ge \ln 2$ is the irreducible erasure cost (Theorem 31), and $\Theta(I)$ is the Heaviside step function. When non-trivial self-referential information is gained ($I > 0$), the minimum necessary dimensionless entropy production is explicitly bounded by:
+where $D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)]$ is the quantum relative entropy (nats) representing the minimal feedback cost, $\varepsilon \ge \ln 2$ is the irreducible erasure cost (Theorem 31), and $\Theta(I)$ is the Heaviside step function. If $\operatorname{supp}\rho'_o \nsubseteq \operatorname{supp}\mathcal{E}_{N}(\rho)$, the relative-entropy term is understood as $+\infty$. When non-trivial self-referential information is gained ($I > 0$), the minimum necessary dimensionless entropy production is explicitly bounded by:
 $$
 \frac{\Delta S_{min}(o)}{k_B} \ge I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon \quad \text{(47)}
 $$
-*Proof:* The total minimal entropy production sums contributions from information acquisition cost ($k_B I$), feedback control cost ($k_B D_{KL}$), and the irreversible update execution cost ($k_B \varepsilon$, incurred only when $I>0$). (See Appendix E.2 for details and references). QED
+*Proof.* Appendix E, Theorem E.1, is precisely the ND-RID measurement-feedback inequality for the 'Evolve' instrument of Definition 27. Theorem 31 supplies the SPAP term $\varepsilon \ge \ln 2$. Substituting these two inputs gives Equation (46). If $I>0$, then $\Theta(I)=1$, and Equation (47) follows immediately. If the support inclusion fails, then $D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] = +\infty$, so both inequalities remain valid in the extended-real sense. QED
 
 **7.4.6 Theorem 33 (The Reflexivity Constraint $\kappa_r > 0$)**
 
@@ -395,7 +394,7 @@ The minimum heat dissipation is $Q_{min} = k_B T \ln 2$ per cycle.
 
 The thermodynamic cost $\varepsilon \ge \ln 2$ has immediate information-theoretic consequences. The key insight is that irreversible entropy production implies the dynamical evolution channel cannot preserve perfect distinguishability between states.
 
-The MPU state space has dimension $d_0 = 8$ (Theorem 23), corresponding to $K_0 = 3$ bits of complexity (Theorem 15). This yields $\ln d_0 = \ln 8 = 3\ln 2$ nats of maximum information capacity per MPU.
+On the minimal saturating branch singled out in Theorem 23, the MPU state space has dimension $d_0 = 8$, corresponding to $K_0 = 3$ bits of complexity (Theorem 15). This yields $\ln d_0 = \ln 8 = 3\ln 2$ nats of maximum information capacity per MPU.
 
 **Imported result (Lemma E.1, Strict Contractivity).** The averaged dynamical channel $\mathcal{E}_N$ implementing the 'Evolve' process (Definition 27) is strictly contractive in trace distance:
 $$D_{tr}(\mathcal{E}_N(\rho_1), \mathcal{E}_N(\rho_2)) \leq f_{RID} \cdot D_{tr}(\rho_1, \rho_2)$$
@@ -573,14 +572,14 @@ This value emerges from balancing competing effects: smaller $\delta$ increases 
 
 ### 7.5.5 The $\varepsilon$-Duality
 
-The quantity $\varepsilon = \ln 2$ plays two roles that are unified:
+The quantity $\varepsilon = \ln 2$ plays two roles that are unified on the attractor-saturating branch:
 
 | Role | Manifestation |
 |:-----|:--------------|
-| **Thermodynamic cost** | Minimum entropy production per SPAP cycle (Theorem 31) |
-| **Structure generator** | Determines $a = e^{\varepsilon} = 2$, initiating the Golay chain (Theorem Z.1) |
+| **Thermodynamic cost** | Minimum entropy production per SPAP cycle is bounded below by $\varepsilon \ge \ln 2$ (Theorem 31) and saturates at the PCE-Attractor |
+| **Structure generator** | At $\varepsilon = \ln 2$, minimal admissibility and PPI-optimality force $a = 2$, initiating the Golay chain (Theorem Z.1) |
 
-These are not independent facts but two aspects of the same constraint:
+These are not independent facts but two aspects of the same branch-specific constraint:
 
 $$\varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm 31}} \text{thermodynamic cost} \quad \text{AND} \quad \varepsilon_{SPAP} = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{} M = 24 \xrightarrow{} [24,12,8]$$
 

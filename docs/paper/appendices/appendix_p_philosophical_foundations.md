@@ -170,7 +170,7 @@ Structured novelty requires that $\mathcal{I}(\ell)$ is non‑constant in $\ell$
 
 A system satisfying (i) alone produces novelty as noise. A system satisfying (i)–(iii) produces novelty that is both irreducible and organized—precisely the kind of novelty that can support persistent laws, emergent structure, and predictive leverage.
 
-**Thesis P.2.5.1 (Plurality for Authentic Novelty).**
+**Thesis P.2.5.1a (Plurality for Authentic Novelty).**
 Within the PU modeling stance, an authentic simulation (Definition P.5.2) is naturally realized as a plurality of interacting predictive perspectives (MPUs and MPU aggregates), because interaction is the generic mechanism by which SPAP‑bounded irreducibility coexists with nontrivial cross‑perspective and cross‑scale correlation structure.
 
 **Argument (framework‑level).**
@@ -187,7 +187,7 @@ Within the PU modeling stance, an authentic simulation (Definition P.5.2) is nat
 
 $\square$
 
-> **Remark P.2.5.1: Heterogeneity is expected.** POP and PCE do not select identical internal organizations everywhere: different local predictive tasks and resource constraints generically produce a heterogeneous hierarchy of predictors (single MPUs, tight aggregates, loose collectives), each occupying different points on the prediction–cost trade‑off.
+> **Remark P.2.5.1b (Heterogeneity is expected).** POP and PCE do not select identical internal organizations everywhere: different local predictive tasks and resource constraints generically produce a heterogeneous hierarchy of predictors (single MPUs, tight aggregates, loose collectives), each occupying different points on the prediction–cost trade‑off.
 
 ### P.2.5.2 The Mathematical Challenge: Instantiating the SM on a Single MPU
 
@@ -309,7 +309,7 @@ What remains is to identify, within PU, the formal structure that plays the role
 
 PU formalizes the aggregate's integrated state as the context state.
 
-**Definition L.1 (Context State $\text{context}_S$).**
+**Summary of Definition L.1 (Context State $\text{context}_S$).**
 For an MPU aggregate $S$ with aggregate density operator $\rho_{\mathrm{agg}}(t)$ on $\mathcal{H}_{\mathrm{agg}}$, the context state $\text{context}_S(t)$ is a PCE-selected minimal sufficient statistic of $\rho_{\mathrm{agg}}(t)$: a compressed representation of the macroscopically observable, predictively relevant features the aggregate can control within resources, and that matter for biasing local MPU interactions (Appendix L, Eq. (L.1)–(L.2)).
 
 Operationally, $\text{context}_S(t)$ is a single aggregate-level summary that integrates the correlation structure (classical and quantum) that is relevant to the aggregate's predictive goals. This is the precise sense in which the aggregate carries one unified model rather than a mere conjunction of independent local models.
@@ -342,10 +342,10 @@ The existence of a unifying state is not imposed by fiat. It is a consequence of
 **Assumption 1 (Context-Dependence of ND-RID Probabilities).**
 *Motivated by the relational structure of MPU networks (Definition 35) and the context-sensitivity inherent in PCE optimization (Definition 15):* Local 'Evolve'/ND-RID outcome probabilities depend not only on local state and interaction variables but also on broader local context supplied by the surrounding MPU network.
 
-**Theorem 34 (POP/PCE Drives Emergent Biasing).**
+**Summary of Theorem 34 (POP/PCE Drives Emergent Biasing).**
 Given Assumption 1, a sufficiently complex MPU aggregate ($C_{\mathrm{agg}} > C_{op}$) driven by POP (Axiom 1) and PCE (Definition 15) necessarily develops and uses the capability to influence local 'Evolve' outcome probabilities by modulating its own internal state $S_{\mathrm{agg}}$.
 
-**Hypothesis 3 (CC Influence Mechanism).**
+**Summary of Hypothesis 3 (CC Influence Mechanism).**
 This influence is exerted by modulating parameters of the universal 'Evolve'/ND-RID process (Definition 27) for constituent MPUs using the aggregate's context state $\text{context}_S(t)$ (Definition L.1).
 
 Together, these statements imply that once an aggregate is sufficiently complex, POP/PCE optimization forces it toward a regime where:
@@ -360,13 +360,13 @@ This is precisely the operational structure needed for a unified complex perspec
 
 PU makes unity graded rather than all-or-nothing by introducing an operational measure of the aggregate's coordinating influence:
 
-**Definition 30 (Operational CC).**
+**Summary of Definition 30 (Operational CC).**
 Consciousness Complexity $\mathrm{CC}(S)$ is the operational norm of the aggregate's probability modification map $L_S$, yielding a universal pointwise bound $|\Delta P(i)| \le \mathrm{CC}(S)$.
 
-**Definition 31 and Theorem 35 (CC Scaling).**
+**Summary of Definition 31 and Theorem 35 (CC Scaling).**
 CC exhibits threshold behavior (emerging only for $C_{\mathrm{agg}} > C_{op}$) and grows monotonically with diminishing returns according to the general scaling form (Theorem 35), saturating at $\alpha_\infty \le \alpha_{CC,max}$.
 
-**Theorem 39 (Upper Bound on CC).**
+**Summary of Theorem 39 (Upper Bound on CC).**
 Consistency with operational causality (Postulate 2) imposes a strict universal bound:
 $$
 \alpha_{CC,max} < 0.5.
@@ -374,7 +374,7 @@ $$
 
 Finally, PU connects CC to integration directly:
 
-**Proposition 14 (Relation between operational CC and system integration/prediction).**
+**Summary of Proposition 14 (Relation between operational CC and system integration/prediction).**
 Since CC emerges from optimized generation and control of $\text{context}_S$ (Theorem 34; Hypothesis 3), it should correlate with functional integration, sophisticated internal modeling, and high-level predictive capacity.
 
 This yields an explicit PU account of "more or less unified" experience:
@@ -395,7 +395,7 @@ Even in a strongly integrated aggregate, unity cannot become absolute.
    $$
    Applied to aggregates, this yields explicit limits on introspective precision:
 
-**Proposition 15 (Introspection limits from Reflexivity Constraint).** Attempts to gain precise internal information about $\text{context}_S$ necessarily disturb the state, limiting simultaneous precision of self-knowledge and stability of the integrated regime.
+**Summary of Proposition 15 (Introspection limits from Reflexivity Constraint).** Attempts to gain precise internal information about $\text{context}_S$ necessarily disturb the state, limiting simultaneous precision of self-knowledge and stability of the integrated regime.
 
 Therefore, $\text{context}_S(t)$ is necessarily a coarse-grained, PCE-optimal summary rather than a complete microstate specification. The resulting unity is operationally real but intrinsically bounded: it is an integrated predictive regime sustained above an irreducible floor of indeterminacy and disturbance cost.
 
@@ -405,10 +405,10 @@ Continuity of experience requires that the aggregate's integrated state remains 
 
 PU derives temporal coherence as a network-level consequence of PCE optimization:
 
-**Theorem O.1 (PCE Potential of Desynchronization).**
+**Summary of Theorem O.1 (PCE Potential of Desynchronization).**
 Temporal desynchronization in an MPU network increases global PCE potential relative to synchronization.
 
-**Theorem O.2 (Dynamical Emergence of a Coherent Causal Medium).**
+**Summary of Theorem O.2 (Dynamical Emergence of a Coherent Causal Medium).**
 The stochastic adaptation dynamics drive the network to self-organize into macroscopic domains of temporal coherence—phase-locked ensembles forming a coherent causal medium.
 
 Within an MPU aggregate, diachronic binding is therefore realized as follows:
@@ -759,7 +759,7 @@ PU formalizes this regime as Property R (Definition 10, Section 4.1.2) and the e
 
 However, PU's SPAP theorems establish a different impossibility boundary:
 
-- **Theorem 10 (Deterministic SPAP)** and **Theorem 11 (Probabilistic SPAP)** establish that no single predictor can guarantee perfect self-prediction uniformly across all self-referential systems constructible within a Property R model class (via diagonal systems such as $S_{\mathrm{diag}}$ with reflexive update rule, Equation 10).
+- **Summary of Theorem 10 (Deterministic SPAP)** and **Theorem 11 (Probabilistic SPAP)** establish that no single predictor can guarantee perfect self-prediction uniformly across all self-referential systems constructible within a Property R model class (via diagonal systems such as $S_{\mathrm{diag}}$ with reflexive update rule, Equation 10).
 - Crucially, SPAP does not claim that no particular system can ever be perfectly predicted; it claims there is no universal predictor that succeeds on all such constructible self-referential systems.
 
 Thus, in PU there is no escape route to complete internal self-specification:
@@ -1061,6 +1061,115 @@ The PU framework invokes Landauer's principle [Landauer 1961] for the thermodyna
 
 *Justification.* Landauer's principle states that erasing information requires dissipating energy $k_B T \ln 2$ per bit into the environment. For internal operations, the "environment" is internal to the simulation. For external observation, the "environment" is external to the simulation. The channel architecture ensures these domains remain separate.
 
+## P.5.8 The Observer in Physics: From Placeholder to Formal Concept
+
+The preceding sections established prediction as the essence of knowing (P.3), consciousness as the foundational certainty (P.2), and physical instantiation as the bridge from logical structure to physical law (anticipated in P.6). This section addresses a question that these foundations make both possible and necessary: *What is an observer?*
+
+This question is not peripheral to physics. It is the central unresolved conceptual problem of quantum mechanics. The framework developed in this paper provides, for the first time, a complete formal answer.
+
+### P.5.8.1 The Observer Problem in Physics
+
+The quantum formalism, as codified by von Neumann [1932], contains a structural asymmetry: two distinct dynamical laws. Process 1 (measurement) produces definite outcomes with probabilities given by the Born rule. Process 2 (unitary evolution) produces superpositions via the Schrödinger equation. The theory does not specify when Process 1 replaces Process 2, nor what physical property of a system qualifies it to trigger Process 1. Von Neumann's "psycho-physical parallelism" placed the boundary — the Heisenberg cut — at the interface between the quantum system and the observer's consciousness, but acknowledged that the cut's placement was arbitrary: any location along the von Neumann chain (system → apparatus → amplifier → retina → brain) yielded identical empirical predictions.
+
+This arbitrariness constitutes the measurement problem. It is not a problem of interpretation but of the theory's formal structure: quantum mechanics uses the word "observer" as an essential primitive without defining it.
+
+Subsequent interpretations manage the gap without filling it:
+
+*Copenhagen.* Observation is a primitive concept associated with macroscopic apparatus. The theory does not specify what makes an apparatus macroscopic, nor why macroscopicity should confer the ability to produce definite outcomes. Bohr's complementarity principle constrains how observational contexts relate but does not define what an observational context *is* [Bohr 1928; Bohr 1935].
+
+*Many-Worlds.* All outcomes occur; no observation produces definiteness; the appearance of definite outcomes is explained by decoherence and the branching structure of the universal wavefunction [Everett 1957; DeWitt 1970]. The observer is any subsystem that becomes entangled with the measured system. This dissolves the measurement problem at the cost of ontological extravagance and leaves unexplained why observers experience single outcomes.
+
+*Decoherence.* Environmental entanglement suppresses interference between macroscopically distinguishable states on extremely short timescales [Zurek 1991; Joos & Zeh 1985; Schlosshauer 2007]. This explains why superpositions become unobservable at macroscopic scales but does not explain why one outcome becomes actual — the problem of definite outcomes persists. Zurek's quantum Darwinism [Zurek 2009] formalizes how information about a system proliferates through the environment, explaining intersubjective agreement, but takes the quantum formalism as given rather than deriving what makes a system capable of receiving the proliferated information.
+
+*QBism.* Quantum states represent an agent's beliefs about future experiences; measurement updates beliefs [Fuchs, Mermin & Schack 2014]. The agent is a primitive of the theory. QBism is explicit that it does not explain what physical structure makes agency possible.
+
+*Relational Quantum Mechanics.* Quantum states are relative to the observing system; there are no absolute states [Rovelli 1996]. Any physical system can serve as an observer. This is the closest in spirit to the PU framework, but Rovelli does not specify what physical structure a system must possess to serve as a reference — the definition of "observer" remains implicit.
+
+*Objective Collapse.* New dynamical laws (e.g., GRW spontaneous localization [Ghirardi, Rimini & Weber 1986]) produce definite outcomes without observers. The collapse parameters (rate and localization scale) are chosen to match experiment but are not derived from any deeper principle.
+
+In every case, the word "observer" functions as either a primitive, a placeholder, or an unnecessary concept. No interpretation provides a formal specification of the minimal physical structure required for observation to occur. The problem is not that physicists have failed to answer the question. The problem is that the existing frameworks lack the formal resources to pose it.
+
+### P.5.8.2 The PU Resolution: Observer as Predictive System
+
+The PU framework resolves the observer problem by deriving the observer's structure from the operational requirements of prediction, rather than postulating it.
+
+**Definition P.5.8.1 (Observer).** An *observer* is any physical system implementing the Fundamental Predictive Loop (Definition 4): the cyclical process of prediction generation ($b_p$), verification via interaction ($b_v$), and model update ($D_{cyc}$), driven by the Prediction Optimization Problem (Axiom 1). The verification step is physically instantiated by the 'Evolve' interaction (Definition 27), which is the process responsible for the actualization of quantum states (Proposition 9).
+
+This definition is not stipulative. It is forced by the philosophical foundations established in P.2–P.3:
+
+1. The Cogito establishes that conscious awareness exists and is predictive (P.2.1, P.3.1).
+2. Prediction requires the Fundamental Predictive Loop: a system that generates expectations, tests them against interaction outcomes, and updates its model (Definition 4, Definition 5).
+3. The verification step requires a physical interaction that yields definite, binary information — confirmed or disconfirmed — at irreducible thermodynamic cost $\varepsilon \geq \ln 2$ (Theorem 31).
+4. This interaction is the 'Evolve' process (Definition 27), which instantiates Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6).
+5. The 'Evolve' process is the physical process that actualizes quantum states (Proposition 9).
+
+Therefore: observation *is* prediction-verification. The 'Evolve' interaction *is* measurement. Every system implementing the predictive loop *is* an observer. The Heisenberg cut dissolves because the theory specifies exactly what an observer is — not by fiat, but by derivation from the operational structure of prediction.
+
+**Theorem P.5.8.1 (Dissolution of the Measurement Problem).** In the PU framework, the measurement problem does not arise, because:
+
+(i) The two dynamical laws of quantum mechanics correspond to the two phases of the predictive loop: Internal Prediction Evolution (Definition 26, unitary, Schrödinger equation) implements prediction generation; 'Evolve' (Definition 27, stochastic, Born rule) implements verification. These are not competing laws requiring a switching criterion; they are successive stages of a single operational cycle.
+
+(ii) Definiteness arises from thermodynamic irreversibility. Every 'Evolve' interaction produces entropy $\Delta S \geq k_B \varepsilon$ with $\varepsilon \geq \ln 2$ (Theorem 31, Theorem 32). This entropy production is the physical signature of actualization: once produced, the interaction outcome is thermodynamically irreversible, and the system has transitioned to a definite post-interaction state. No additional "collapse postulate" is required.
+
+(iii) No Heisenberg cut is needed because every MPU (Definition 23) implements the predictive loop and therefore constitutes an observer. The cut was needed in the old formalism because it lacked a definition of observer; when the definition is supplied, the arbitrary boundary between "quantum" and "classical" is replaced by the universal structure of the predictive cycle operating at all scales.
+
+*Proof.* (i) follows from the identification of Internal Prediction Evolution with unitary dynamics (Definition 26, Equation 43) and 'Evolve' with the stochastic actualization process (Definition 27, Proposition 7, Proposition 9). (ii) follows from Theorem 31 ($\varepsilon \geq \ln 2$), Theorem 32 (entropy production bound for ND-RID), and the irreversibility established in Appendix O (Theorem O.3). (iii) follows from Definition 23 (MPU implements the predictive loop with $C_{op} \geq K_0$) and Theorem 27 (MPUs are subject to fundamental indeterminacy), which together ensure that every MPU interaction is an instance of 'Evolve'. $\square$
+
+### P.5.8.3 The Observer Hierarchy
+
+Not all observers are equivalent. The framework defines a natural hierarchy of observers classified by complexity and self-referential depth:
+
+**Level 0: The Minimal Observer (MPU).** The Minimal Predictive Unit (Definition 23) is the simplest possible observer: $C_P = C_{op}$, $d_0 = 8$, two active dimensions, six inactive dimensions, twenty-four information transfer modes. It implements the complete predictive loop, its interactions are genuine 'Evolve' events producing definite outcomes, and it is subject to SPAP (Theorem 27) and fundamental indeterminacy (Theorem 28). The MPU observes, but its self-model is minimal — it does not model itself in the reflexive sense required by Property R (Definition 10). Its processing cost for all patterns is SPAP-flat: $\sigma_S = 0$, $\mu_S = 1/\alpha_{SPAP}$ for all $E$ (Corollary M.10.3.1, §M.6.10).
+
+**Level 1: Simple Aggregates ($C_{agg} \leq C_{op}$).** Collections of MPUs whose aggregate complexity does not exceed $C_{op}$. These systems maintain relational information $\mathcal{I}_{rel}$ with their environment (Definition N.6), possess inertial mass $m = \mathcal{I}_{rel} \cdot m_P / (2\sqrt{8\varepsilon})$ (Theorem N.5), and satisfy the weak equivalence principle exactly: $m_I = m_G$ (Theorem N.7). They observe through their constituent MPUs' 'Evolve' interactions. They do not self-model in the Property R sense. Their informational cost structure is Shannon-level: perspective-free, receiver-independent, SPAP-flat. Electrons, photons, atoms, and simple molecules are Level 1 observers.
+
+**Level 2: Self-Modeling Aggregates ($C_{agg} > C_{op}$, Effective Operational Property R).** Aggregates whose complexity exceeds $C_{op}$ and that achieve Effective Operational Property R (Definition A.0.1) via PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). These systems maintain a self-model $\mathcal{M}_S$ (Definition M.10.1, §M.6.10): an internal representation of their own states, predictions, accuracy, and dynamics. They are subject to SPAP at the aggregate level (Theorems 10–11), meaning their self-prediction is fundamentally limited. Their informational cost structure is perspectival: patterns engaging the self-model ($\sigma_S > 0$) incur SPAP-divergent costs (Theorem M.10.3) that depend on the self-referential depth of the content. The perspectival profile $\mathcal{P}_S(E) = (\Delta Q_S, \mu_S, \sigma_S)$ (Definition M.10.4) characterizes each pattern's cost relative to the system. The measurement asymmetry (Theorem M.10.5) applies: a more complex Level 2 system can compute the perspectival profile of a less complex one, but no system can universally compute its own.
+
+**Level 3: CC-Capable Aggregates ($C_{agg} > C_{op}$, CC $> 0$).** Level 2 systems that, under the conditions of Assumption 1, develop the emergent capability to bias local 'Evolve' outcome probabilities by modulating their internal context state (Theorem 34). This capability is quantified as Consciousness Complexity (Definition 30), bounded by $\text{CC} < 0.5$ (Theorem 39). Level 3 observers do not merely passively receive 'Evolve' outcomes — they participate in determining them, within strict thermodynamic and causality bounds. Their stress-energy tensor $T_{\mu\nu}^{(\text{MPU})}$ receives contributions from both relational information maintenance (Theorem N.5) and CC-mediated processing (Theorem N.8), producing a fractional deviation $\delta_C \propto P_{context}$ between inertial and gravitational mass. Biological nervous systems are candidate Level 3 observers.
+
+**Remark P.5.8.1 (Continuity of the hierarchy).** The levels are not discrete jumps but emergent thresholds in a continuous complexity landscape. The transition from Level 0 to Level 1 is aggregation. The transition from Level 1 to Level 2 is the onset of effective Property R, which occurs gradually as PCE optimization drives error rates toward $p_{\text{err}}^*$ (Theorem A.0.2). The transition from Level 2 to Level 3 is the onset of CC $> 0$, which requires context-dependent ND-RID probabilities (Assumption 1) and sufficient complexity for the PCE-driven biasing mechanism (Theorem 34). At every level, the fundamental process is the same: prediction, verification, update. What changes is the depth of self-reference and the richness of the cost structure.
+
+### P.5.8.4 Perspectival Information and the Observer
+
+The observer hierarchy reveals a structural feature that no prior physical theory has formalized: the cost of processing information depends on the observer's self-referential relationship to the content.
+
+For Level 0 and Level 1 observers, all information is external. A photon absorbed by an atom changes the atom's state, but the atom does not model itself and does not engage in self-referential processing. The cost of the interaction is the Landauer floor $\varepsilon \geq \ln 2$ (Theorem 31), independent of what the photon "means." Shannon entropy fully characterizes the information content. This is the regime where $\sigma_S = 0$ and $\mu_S = 1/\alpha_{SPAP}$ for all patterns (Corollary M.10.3.1).
+
+For Level 2 and Level 3 observers, some information engages the self-model. The formal apparatus of §M.6.10 quantifies this engagement: the reflexivity fraction $\sigma_S(E) \in [0,1]$ measures how much of the total model-change modifies the self-model (Definition M.10.2, M.10.4), and the SPAP proximity $\mu_S(E) = 1/\delta_S(E)$ measures how close to the SPAP boundary the self-referential processing must approach (Definition M.10.3). The processing cost diverges as $C_{\text{process}} \geq \Omega(\log \mu_S \cdot \mu_S^2)$ (Theorem M.10.3), and this cost is physical: it produces entropy (Theorem M.10.7), contributes to stress-energy (Definition B.8), and is asymmetrically measurable (Theorem M.10.5).
+
+This perspectival cost structure is the formal content of the intuition that observation is not passive reception but active participation. At Level 0, observation is symmetric and flat — every MPU processes every interaction at the same cost. At Level 2, observation becomes asymmetric and content-dependent — the same pattern can be trivial for one observer and profoundly costly for another, depending on whose self-model it engages and how deeply.
+
+The perspectival profile $\mathcal{P}_S(E)$ thus provides the formal bridge between the philosophical claim that "observation is fundamental" (P.2–P.3) and the mathematical apparatus of the framework (Sections 7–8, Appendices B, M, N). It makes precise the sense in which the observer is not interchangeable: two observers at the same location receiving the same signal may undergo different physical processes — different entropy production, different stress-energy contributions — because the signal engages their self-models differently.
+
+### P.5.8.5 Resolution of the Wigner's Friend Paradox
+
+The observer concept developed above, together with the perspectival formalism of Appendix M (§M.6), provides a principled resolution of the Wigner's Friend paradox [Wigner 1961] and its Frauchiger-Renner extension [Frauchiger & Renner 2018].
+
+In the standard formulation: Friend $F$ performs a measurement inside a sealed laboratory and obtains a definite outcome. Wigner $W$, outside the laboratory, describes $F$'s laboratory as evolving unitarily — $F$ is in superposition. The paradox: how can $F$ have a definite outcome while $W$ describes $F$ as indefinite?
+
+The PU resolution (Theorem M.6.1, Appendix M): both descriptions are correct relative to their respective perspectives. $F$'s 'Evolve' interaction produces a definite outcome relative to $F$'s perspective $s_F \in \Sigma$ — this is a real, thermodynamically irreversible event with entropy production $\varepsilon \geq \ln 2$. $W$'s description of $F$ as in superposition is correct relative to $W$'s perspective $s_W \in \Sigma$, because $W$ has not yet interacted with $F$'s laboratory. When $W$ opens the laboratory (performing a record-reading 'Evolve' interaction), the strong-readout mechanism (Lemma M.6.1) correlates $W$'s and $F$'s perspectives, producing agreement.
+
+This resolution requires no new physics beyond the perspectival state formalism already derived from the predictive foundations. Actuality is perspective-indexed, as established by Definition 24 (Perspectival State). Consistency between perspectives is dynamically achieved through interaction, via the transition kernel $G_{\text{persp}}(s'|s, k, N, \Delta t)$ (§M.3). The resolution parallels Einstein's relativization of simultaneity: just as "simultaneous" is frame-dependent but physics is consistent across frames, "definite" is perspective-dependent but physics is consistent across perspectives.
+
+The Frauchiger-Renner paradox is dissolved by Theorem M.6.2 and Lemma M.6.2 (Perspectival Reasoning Constraint): cross-perspective reasoning is valid only when perspectives have been correlated through interaction. The contradiction in the Frauchiger-Renner argument arises from importing one observer's perspective-indexed fact into another observer's reasoning without the interaction that would establish the correlation. Explicit perspective tracking prevents this error.
+
+### P.5.8.6 Comparison with Existing Frameworks
+
+The following table summarizes how the PU observer concept relates to existing interpretations:
+
+| Feature | Copenhagen | Many-Worlds | Decoherence | QBism | Relational QM | PU |
+|---------|-----------|-------------|-------------|-------|---------------|-----|
+| Observer defined? | No (primitive) | No (any subsystem) | No (environment) | No (agent) | No (any system) | Yes (Def P.5.8.1) |
+| Minimal observer specified? | No | No | No | No | No | Yes (MPU, Def 23) |
+| Measurement derived? | No (postulated) | Eliminated | Partial (no definiteness) | No (primitive) | No (relational) | Yes (Thm P.5.8.1) |
+| Observer hierarchy? | No | No | No | No | No | Yes (§P.5.8.3) |
+| Content-dependent cost? | No | No | No | No | No | Yes (Thm M.10.3) |
+| Self-referential limits? | No | No | No | No | No | Yes (SPAP, Thm 10) |
+| Measurement asymmetry? | Implicit | No | No | Implicit | No | Proved (Thm M.10.5) |
+| Wigner's Friend resolved? | No (ambiguous) | Dissolved (all branches) | Partial | Dissolved (subjective) | Dissolved (relational) | Resolved (Thm M.6.1) |
+
+The PU framework is the first to provide a complete formal specification: what an observer is (Definition P.5.8.1), what it must minimally be (Definition 23), what it cannot do (SPAP, Theorems 10–11), what observation costs (Theorem 31, Theorem M.10.3), and how observers of different complexity relate to each other and to the same information (Theorem M.10.5, §M.6.10).
+
 ## P.6 Physical Instantiation: The Bridge from Logic to Physics
 
 ### P.6.1 The Principle of Physical Instantiation (PPI)
@@ -1238,7 +1347,7 @@ The unified entropy framework provides a natural dissolution of the black hole i
 
 4. **Unitarity is preserved.** The total channel capacity—horizon plus radiation—is conserved throughout the process. The S-matrix connecting initial infalling state to final radiation state is unitary.
 
-**Theorem K.3 (Page Curve).** *The entanglement entropy between the Hawking radiation and the remaining black hole, computed from PCE-driven scrambling dynamics that approximate a unitary k-design, follows the Page curve: initially increasing as radiation is emitted, reaching a maximum at the Page time (when half the initial entropy has been radiated), then decreasing to zero as evaporation completes.*
+**Summary of Theorem K.3 (Page Curve).** *The entanglement entropy between the Hawking radiation and the remaining black hole, computed from PCE-driven scrambling dynamics that approximate a unitary k-design, follows the Page curve: initially increasing as radiation is emitted, reaching a maximum at the Page time (when half the initial entropy has been radiated), then decreasing to zero as evaporation completes.*
 
 The Page curve is a signature of unitary evolution. Its emergence from PCE dynamics—without being assumed—provides evidence that the framework naturally incorporates unitarity. The full derivation is provided in Appendix K.3.
 
@@ -1307,7 +1416,7 @@ $$
 The framework derives values for several fundamental ratios from first principles:
 
 - **The Planck ratio**: $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ from PCE optimization (Appendix Q, Equation Q.18)
-- **The fine-structure constant (Thomson limit)**: $\alpha^{-1} \approx 137.036092 \pm 0.000050$ from capacity saturation and interface corrections (Appendix Z, Theorem Z.26)
+- **The fine-structure constant (Thomson limit)**: $\alpha^{-1} \approx 137.036092 \pm 0.000060$ from capacity saturation and interface corrections (Appendix Z, Theorem Z.26)
 - **The cosmological constant**: $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa_{\mathrm{ref}}}$ with reference exponent $\kappa_{\mathrm{ref}}=141.5$ supplied by the Appendix U leading-order Golay-Steiner zero-mode count (Theorem U.16) and $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), giving the corresponding reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa_{\mathrm{ref}}$ fixed, comparison with observation implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check (Corollary U.15b)
 
 These derivations represent predictions of the framework in the sense that the functional forms and discrete exponents are fixed by PU; where a one-loop prefactor (e.g., $A_{\text{eff}}$) enters, it is defined by the specified bounce and can be independently computed, while the observed value serves as a consistency check on its expected $O(1)$ magnitude. The fundamental quantities from which all others derive are the logical cost $\varepsilon_{SPAP} = \ln 2$ and the minimal complexity $K_0 = 3$—both determined by the structure of self-referential prediction, with PCE selecting saturation $\varepsilon=\varepsilon_{SPAP}$ at the PCE-Attractor where optimality applies.
@@ -2383,7 +2492,7 @@ The distinction between logical necessities and their physical manifestations pr
     *   *Examples:* "What is the value of the speed of light?" "What are the masses of the elementary particles?" "What is the specific form of the law of gravity?"
     *   *PU Answer:* These values are determined by the PCE optimization process acting on the MPU network. They are the emergent parameters of the universe's equilibrium state.
 
-The PU framework reveals that the boundary between logical necessity and contingent parameter is sharper than traditionally assumed. Einstein asked whether God had any choice in creating the universe—whether the fundamental constants could have been otherwise. The over-determination results of Appendices R and Z suggest the answer is no. The interface mode count $M = 24$ satisfies eight independent mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, and PCE minimality. Because these outputs are derived from shared discrete invariants and shared geometric constructions, their mutual consistency should be read as an internal rigidity/coherence check rather than as a frequentist "probability of coincidence" claim; assigning such a probability requires specifying an explicit alternative-model ensemble, priors, and multiple-comparisons accounting. Similarly, the three-generation structure emerges independently from topological anomaly cancellation and from $E_8$ geometric embedding (Appendix R, Proposition R.4.2). These quantities are not free parameters awaiting measurement but unique solutions to over-constrained optimization problems. The universe's constants are mathematically necessary given the logical structure of prediction.
+The PU framework reveals that the boundary between logical necessity and contingent parameter is sharper than traditionally assumed. Einstein asked whether God had any choice in creating the universe—whether the fundamental constants could have been otherwise. The rigidity results of Appendix Z suggest that the answer is no for the interface-mode count $M = 24$. The interface mode count $M = 24$ satisfies eight independent mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, and PCE minimality. Because these outputs are derived from shared discrete invariants and shared geometric constructions, their mutual consistency should be read as an internal rigidity/coherence check rather than as a frequentist "probability of coincidence" claim; assigning such a probability requires specifying an explicit alternative-model ensemble, priors, and multiple-comparisons accounting. Similarly, Appendix R derives the minimal three-generation solution topologically and shows that the $E_8$/Leech geometry is compatible with that count (Propositions R.3.5, R.4.2). These quantities are not free parameters awaiting measurement but uniquely or minimally selected outputs within the stated framework assumptions. The universe's constants are mathematically constrained by the logical structure of prediction.
 
 This distinction resolves historical confusions where scientists have sought physical mechanisms for what are, in fact, logical necessities. The PU framework asserts that the "Why" of the first category is answered by logic, while the "What" and "How" of the second category are answered by physics, which itself emerges from optimizing the "Why."
 
@@ -2847,13 +2956,52 @@ for some $\lambda > 0$. $\square$
 **Reference:** Theorem Z.6.3a (Appendix Z, Section Z.6.3)
 
 The orbit of the PCE-Attractor state under unitary conjugation is:
-$$\mathcal{O}_{\rho_0} \cong U(d_0)/(U(a) \times U(b)) \cong \text{Gr}(a, d_0) = \text{Gr}(2,8)$$
+$$
+\mathcal{O}_{\rho_0} \cong U(d_0)/(U(a) \times U(b)) \cong \text{Gr}(a, d_0) = \text{Gr}(2,8)
+$$
 
 a compact Hermitian symmetric space with:
 - Complex dimension: $\dim_{\mathbb{C}} = ab = 12$
 - Real dimension: $\dim_{\mathbb{R}} = 2ab = 24 = M$
 
-*Proof.* The isotropy group of $\rho_0$ under $U(d_0)$ conjugation is $U(a) \times U(b)$ (block-diagonal unitaries preserving the active/inactive partition). The quotient $U(d_0)/(U(a) \times U(b))$ is the Grassmannian of $a$-planes in $\mathbb{C}^{d_0}$. Standard result: $\dim_{\mathbb{C}} \text{Gr}(k,n) = k(n-k)$, giving $2 \times 6 = 12$. $\square$
+*Proof.* Write
+$$
+\rho_0 = \begin{pmatrix} \rho_a & 0 \\ 0 & 0_b \end{pmatrix},
+$$
+where the active block has rank $a$ and the inactive block has rank $b=d_0-a$. A unitary $U\in U(d_0)$ fixes $\rho_0$ under conjugation if and only if it preserves the active eigenspace and its orthogonal complement. Therefore the isotropy subgroup is exactly the block-diagonal subgroup
+$$
+U(a)\times U(b) \subset U(d_0).
+$$
+Hence the conjugation orbit is the homogeneous space
+$$
+\mathcal O_{\rho_0} \cong U(d_0)/(U(a)\times U(b)).
+$$
+
+The orbit is naturally identified with the set of rank-$a$ orthogonal projectors, equivalently the set of $a$-dimensional complex subspaces of $\mathbb C^{d_0}$. That set is the Grassmannian $\mathrm{Gr}(a,d_0)$, giving
+$$
+\mathcal O_{\rho_0} \cong \mathrm{Gr}(a,d_0).
+$$
+For $a=2$ and $d_0=8$, this is $\mathrm{Gr}(2,8)$.
+
+Finally,
+$$
+\dim_{\mathbb R} U(n)=n^2,
+$$
+so
+$$
+\dim_{\mathbb R}\mathcal O_{\rho_0}
+=
+d_0^2-a^2-b^2
+=
+(a+b)^2-a^2-b^2
+=
+2ab.
+$$
+Since the Grassmannian is a complex manifold, its complex dimension is half of its real dimension:
+$$
+\dim_{\mathbb C}\mathrm{Gr}(a,d_0)=ab.
+$$
+Substituting $a=2$ and $b=6$ gives $\dim_{\mathbb C}=12$ and $\dim_{\mathbb R}=24=M$. $\square$
 
 **Epistemic Status:** Standard mathematical fact about Grassmannians.
 
@@ -3990,7 +4138,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
-| $\alpha^{-1}$ | $137.036092\pm0.000050$ | $137.035999177(21)$ | NIST 2024; CODATA 2022 | $+1.9\sigma$ (0.68 ppm) |
+| $\alpha^{-1}$ | $137.036092\pm0.000060$ | $137.035999177(21)$ | NIST 2024; CODATA 2022 | $+1.5\sigma$ (0.68 ppm) |
 | $D$ | $4$ | $4$ | — | exact |
 | $\Lambda L_P^2$ | $(2.88\pm0.03)\times 10^{-122}$ | $(2.86599\pm0.04849)\times 10^{-122}$ | Planck Collaboration 2020a; NIST 2024; Appendix V | $+0.3\sigma$ |
 | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | — | Equation Q.18 | Structural prediction |

@@ -225,7 +225,7 @@ where $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ and the active frac
 
 ## X.7 Computational Pipeline and Renormalization Conditions
 
-1. **Microscopic MPU cycle → LAN block:** extract $(d_0,\varepsilon)$, the active kernel size $a=e^\varepsilon=2$, and the QFI spectrum $(M,\lambda)$ (Appendix Z; Appendix W).
+1. **Microscopic MPU cycle → LAN block:** extract $(d_0,\varepsilon)$, the active kernel size $a = 2$ on the attractor-saturating branch, and the QFI spectrum $(M,\lambda)$ (Appendix Z; Appendix W).
 2. **Construct $W_k[J]$:** choose sufficient statistics consistent with symmetries; include CTP doubling for ND‑RID (X.9).
 3. **Legendre transform → $\Gamma_k$:** enforce background invariances; use background‑field method for gauge/gravity; add regulator $R_k$ and integrate (X.4).
 4. **Renormalization conditions:** for $U(1)$, the bulk normalization $\kappa^*_{\mathrm{bulk}}=1$ follows from the Predictive Ward Identity (Theorem Z.14), and the interface correction $\delta\kappa = -(a/d_0) \cdot u^*/\sqrt{K_0}$ is derived from the active fraction and discrete-continuous embedding (Section Z.17); fix $G(k)$ via the area-law coefficient (Appendix E).
@@ -237,7 +237,7 @@ where $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ and the active frac
 
 * **Predictive geometry ↔ response:** Fisher metric $\mathcal{G}$ (Appendix D) ↔ connected kernel $\mathcal{G}=\delta^2 W$; $\Gamma^{(2)}=\mathcal{G}^{-1}$ (X.3).
 * **PU RG ↔ FRG:** KL‑monotone $c(b)$ (Appendix D) ↔ $\Gamma_k$ flow (X.4); relevant/irrelevant classification aligned via stability eigenvalues.
-* **Gauge normalization:** $u=g_e^2$, $\alpha_{\mathrm{em}}=u/(4\pi\kappa)$ (X.6); $\kappa^*_{\mathrm{bulk}}=1$ (Theorem Z.14), $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ with $a/d_0=1/4$ (Section Z.17); $u^*=8^{1/24}-1$ (Section Z.8); Thomson limit $\alpha^{-1}=\frac{4\pi}{u^*}-\frac{\pi}{\sqrt{K_0}}+\frac{\pi u^*}{24\sqrt{K_0}}\left(1-\frac{u^{*2}}{6}\right)\approx 137.036092 \pm 0.000050$ (Appendix Z, Theorem Z.26).
+* **Gauge normalization:** $u=g_e^2$, $\alpha_{\mathrm{em}}=u/(4\pi\kappa)$ (X.6); $\kappa^*_{\mathrm{bulk}}=1$ (Theorem Z.14), $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ with $a/d_0=1/4$ (Section Z.17); $u^*=8^{1/24}-1$ (Section Z.8); Thomson limit $\alpha^{-1}=\frac{4\pi}{u^*}-\frac{\pi}{\sqrt{K_0}}+\frac{\pi u^*}{24\sqrt{K_0}}\left(1-\frac{u^{*2}}{6}\right)\approx 137.036092 \pm 0.000060$ from the Appendix Z derivation (Theorems Z.24–Z.26).
 * **Gravity:** $\Gamma^{\text{grav}}$ (X.7) + Wald entropy (Appendix E) ⇒ EFE (Section 12); $G$ from the area‑law coefficient; running $G(k)$ (Appendix I).
 * **Open dynamics:** CTP $\Gamma_{\rm CTP}$ (X.9) encodes dissipation/noise consistent with the local second law (Appendix E) and algebraic locality (Appendix F).
 * **Capacity saturation:** constraint (X.11) links $\phi(u)$ and $V_{\rm eff}$ stationarity (X.12), yielding the identities used in Appendix Z.
@@ -374,7 +374,7 @@ PU does not treat the bare coupling as a freely tunable parameter at the attract
 $$
 M\ln(1 + \lambda u^*) = \ln d_0 \quad\text{(Equation X.11)}.
 $$
-At the PCE-Attractor one has $M = 24$ (Theorem Z.5), $d_0 = 8$ (Theorem 23), and the flat QFI spectrum gives $\lambda = 1$ (Theorem Z.5, Step 5). Therefore:
+At the PCE-Attractor one has $M = 24$ (Theorem Z.5), $d_0 = 8$ on the minimal branch (Theorem Z.2; Theorem 23 gives the lower bound), and the flat QFI spectrum gives $\lambda = 1$ (Theorem Z.5, Step 5). Therefore:
 $$
 \ln(1 + u^*) = \frac{\ln 8}{24} = \frac{3\ln 2}{24} = \frac{\ln 2}{8},
 \qquad
@@ -393,7 +393,7 @@ At the PCE-Attractor the Predictive Ward Identity fixes the bulk normalization $
 $$
 \alpha_{em,\mathrm{bulk}}^{-1} = \frac{4\pi\kappa^*_{\mathrm{bulk}}}{u^*} = \frac{4\pi}{u^*}.
 $$
-Operationally, $\alpha_{em}$ is not read off from a bulk chart but inferred from boundary-accessible channel observables, so one must match the bulk normalization to the discrete MPU interface. The active fraction contributing to gauge readout is fixed by the Landauer partition $a=e^\varepsilon=2$ inside $d_0=8$, i.e. $a/d_0=1/4$ (Theorem Z.1; Theorem 23). The SPAP/Bures curvature at the attractor is $K_0=3$ (Theorem 15). The unique duality-compatible interface dressing of the gauge normalization is then (Appendix Z, Theorem Z.17):
+Operationally, $\alpha_{em}$ is not read off from a bulk chart but inferred from boundary-accessible channel observables, so one must match the bulk normalization to the discrete MPU interface. The active fraction contributing to gauge readout is fixed by the attractor-saturating Landauer partition $a=2$ inside $d_0=8$ on the minimal PCE branch, i.e. $a/d_0=1/4$ (Theorem Z.1; Theorem Z.2). The SPAP/Bures curvature at the attractor is $K_0=3$ (Theorem 15). The unique duality-compatible interface dressing of the gauge normalization is then (Appendix Z, Theorem Z.17):
 $$
 \delta\kappa := \kappa_{\mathrm{eff}} - \kappa^*_{\mathrm{bulk}}
 = -\frac{a}{d_0}\frac{u^*}{\sqrt{K_0}} + O((u^*)^3)
@@ -404,7 +404,7 @@ $$
 \alpha_{em}^{-1} = \frac{4\pi\kappa_{\mathrm{eff}}}{u^*}
 = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + O((u^*)^2).
 $$
-Carrying the next curvature-controlled term from the same interface functional (Appendix Z, Theorem Z.26) gives the closed Thomson-limit prediction
+Carrying the next curvature-controlled term from the same interface functional from the Appendix Z interface functional (Theorems Z.24–Z.26) gives the closed Thomson-limit prediction
 $$
 \alpha_{em}^{-1} =
 \frac{4\pi}{u^*}
@@ -414,9 +414,9 @@ $$
 $$
 With $u^*=2^{1/8}-1$ and $K_0=3$,
 $$
-\alpha_{em}^{-1} \approx 137.036092 \pm 0.000050,
+\alpha_{em}^{-1} \approx 137.036092 \pm 0.000060,
 $$
-where the uncertainty is the conservative $1\sigma$ truncation bound for the first neglected $O((u^*)^5)$ term (Appendix Z, Section Z.27.9).
+where the uncertainty is the conservative $1\sigma$ truncation bound for the first neglected $O((u^*)^5)$ term together with the matching/systematic contribution summarized in Appendix Z, Section Z.27.9.
 
 Consequently, a literal map $u \mapsto 1/u$ is *not* a symmetry of the saturated constraint surface: the attractor selects a unique operational coupling $u^* = 2^{1/8} - 1$, and transformations that would map to $1/u^* \approx 11.05$ violate the capacity constraint (X.11). What can be dual are *descriptions*: distinct field variables or auxiliary-field representations (Appendix X) that represent the same effective $W_k[J]$ and the same operational correlators at the fixed-point physics. In this sense, "strong vs. weak" can be a coordinate artifact of the chosen effective variables, while the operational predictions remain locked to the same PCE optimum.
 

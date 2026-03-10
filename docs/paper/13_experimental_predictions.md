@@ -9,7 +9,7 @@ The Predictive Universe framework, particularly the Consciousness Complexity (CC
 - Reflexivity Constraint: $\kappa_r > 0$ (Theorem 33).
 - PCE equilibrium reached (Definition 15a).
 - Gauge sector realized as $G_{SM}$ (Theorem G.8.4b).
-- Cosmological sector uses the Appendix U reference exponent $\kappa_{\mathrm{ref}} = 141.5$ (Theorem U.16) together with the stated prefactor convention.
+- Cosmological sector uses the Appendix U reference exponent $\kappa_{\mathrm{ref}} = 141.5$ (Theorem U.16) only within the Appendix U five-mode reference-counting convention, together with the stated prefactor convention of Corollary U.15b.
 - Mapping constants use canonical Bures/Fisher normalization (Appendix T, Section T.24).
 - Uncertainty budgets follow T1 (PU truncation), T2 (mapping/regularization), T3 (experimental/scheme).
 - External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
@@ -218,7 +218,7 @@ The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\mat
 Beyond the direct experimental search for CC, the framework's quantitative predictions for fundamental constants and emergent gravity provide sharp, falsifiable tests.
 
 **13.8.1 The Fine-Structure Constant Prediction Window**
-The framework predicts the Thomson-limit fine-structure constant $\alpha^{-1} ≈ 137.036092 \pm 0.000050$ directly from the PCE-Attractor structure (Appendix Z, Theorem Z.26), where the quoted $1\sigma$ theory uncertainty is a conservative truncation bound (Section Z.27.9). This value agrees with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$ to 0.68 ppm (a ~2σ discrepancy under the stated theory uncertainty). The prediction is falsifiable: if future measurements of $\alpha(0)$ deviate from this value beyond the stated uncertainty budget, the PCE-Attractor model for the origin of the U(1) coupling would be invalidated. As a consistency check, applying standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$, in agreement with experiment (Appendix Z, Corollary Z.8).
+The framework predicts, from the Appendix Z derivation (Theorems Z.24–Z.26), the Thomson-limit fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000060$, where the quoted $1\sigma$ theory uncertainty is the conservative combined budget of Section Z.27.9. This value agrees with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$ to 0.68 ppm (a ~1.5σ discrepancy under the stated theory uncertainty). The prediction is falsifiable: if future measurements of $\alpha(0)$ deviate from this value beyond the stated uncertainty budget, the PCE-Attractor model for the origin of the U(1) coupling would be invalidated. As a consistency check, applying standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$, in agreement with experiment (Appendix Z, Corollary Z.8).
 
 **13.8.2 The Multi-Scale Gravity / Dark Sector Window**
 The framework's two-mechanism model for the dark sector (Appendix I) is falsifiable through its demand for cross-scale consistency with a minimal set of universal parameters. The model can be falsified in several ways:
@@ -472,7 +472,7 @@ The Golay alignment prediction connects to other PU predictions through the unif
 
 | Prediction | Source | Connection to $M = 24$ |
 |------------|--------|------------------------|
-| Fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000050$ (Thomson) | Section 13.8.1, Appendix Z | Capacity saturation at PCE-Attractor |
+| Fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000060$ (Thomson) | Section 13.8.1, Appendix Z | Capacity saturation at PCE-Attractor |
 | Spacetime dimensionality $D = 4$ | Appendix Z, Theorem Z.11 (see also Appendix H, Theorem H.4) | Kissing number $K(4) = 24$ |
 | Vacuum stability | Appendix Z, Proposition Z.13a | Leech lattice rootlessness from Golay $d = 8$ |
 | Gauge group structure | Appendix W | $\dim[\mathfrak{g}_{\text{SM}}] = 12 = k$ |
@@ -501,7 +501,7 @@ The framework generates several falsifiable predictions once the core PU invaria
 
 The predictions fall into three epistemic categories that must be distinguished to prevent conflation of claims of different logical type:
 
-*Quantitative predictions* are numerical values derived from the framework together with the appendix-specific input data stated in their derivations and compared directly to measured quantities. These include $\alpha^{-1} = 137.036092 \pm 0.000050$ (Theorem Z.26), $D = 4$ (Theorem Z.11), $\Lambda L_P^2 = (2.88 \pm 0.03) \times 10^{-122}$ (Appendix U), and the glueball mass ratios (Theorem Z.8h). Falsification is straightforward: measured values falling outside stated uncertainty bounds refute the prediction.
+*Quantitative predictions* are numerical values derived from the framework together with the appendix-specific input data stated in their derivations and compared directly to measured quantities. These include $\alpha^{-1} = 137.036092 \pm 0.000060$ (Theorem Z.26), $D = 4$ (Theorem Z.11), $\Lambda L_P^2 = (2.88 \pm 0.03) \times 10^{-122}$ (Appendix U), and the glueball mass ratios (Theorem Z.8h). Falsification is straightforward: measured values falling outside stated uncertainty bounds refute the prediction.
 
 *Structural predictions* assert that specific mathematical structures emerge necessarily or conditionally from the framework's axioms and stated surrogate principles. These include Lorentz invariance (Theorem 46), the gauge group $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ (Theorem G.8.4b, conditional on Proposition G.M1), the Born rule (Proposition 7), the three-generation claim as formulated in Appendix R, and chronology protection (Theorem 14.1). Falsification requires discovering that the predicted structure is violated in nature — for example, observation of fundamental Lorentz violation or a functioning closed timelike curve.
 
@@ -527,10 +527,10 @@ The predictions fall into three epistemic categories that must be distinguished 
 
 **Prediction:** At the Thomson limit (zero momentum transfer):
 $$
-\alpha^{-1}_{\mathrm{theory}} = 137.036092 \pm 0.000050
+\alpha^{-1}_{\mathrm{theory}} = 137.036092 \pm 0.000060
 $$
 
-**Derivation Summary:** Theorem Z.26 combines bulk, interface, and curvature contributions:
+**Derivation Summary:** Within the Appendix Z derivation, Theorem Z.26 combines bulk, interface, and curvature contributions:
 $$
 \alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right)
 $$
@@ -545,7 +545,7 @@ where $u^* = 2^{1/8} - 1$ (Theorem Z.7) and $K_0 = 3$ (Theorem 15).
 $$
 \alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(NIST 2024)}
 $$
-Discrepancy: $+0.000093 \pm 0.000050$ ($\sim 1.9\sigma$, 0.68 ppm). Consistent within theoretical uncertainty.
+Discrepancy: $+0.000093 \pm 0.000060$ ($\sim 1.5\sigma$, 0.68 ppm). Consistent within theoretical uncertainty.
 
 **Consistency Check:** Standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$ (Corollary Z.8), consistent with the experimental value $127.952 \pm 0.009$ (Particle Data Group 2024).
 
@@ -623,7 +623,7 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Prediction | Framework Value | Experimental Value | Derivation | Status |
 |:-----------|:----------------|:-------------------|:-----------|:------:|
 | Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
-| Fine-structure constant $\alpha^{-1}$ | $137.036092 \pm 0.000050$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
+| Fine-structure constant $\alpha^{-1}$ | $137.036092 \pm 0.000060$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
 | Light active neutrino count $N_{\nu}$ | 3 under the standard identification from $N_{\mathrm{gen}}=3$ | $2.984 \pm 0.008$ | Proposition R.3.5 + LEP $Z$ width | indirect |
 | Gauge group $G_{\mathrm{SM}}$ (conditional on Proposition G.M1) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ✓ |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ✓ |
@@ -636,7 +636,7 @@ All predictions are currently consistent with observation. The framework will be
 
 | Prediction | Dominant Uncertainty Source | Estimated Magnitude |
 |:-----------|:---------------------------|:--------------------|
-| $\alpha^{-1}$ | Fifth-order terms $O(u^{*5})$ with $100\times$ safety factor | $\pm 0.000050$ |
+| $\alpha^{-1}$ | subgroup-projection/matching systematics; interface-series and sinc truncations subleading | $\pm 0.000060$ |
 | $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
 | $N_{\mathrm{gen}}$ | None (topologically exact) | 0 |
 | $D$ | None (combinatorially exact) | 0 |

@@ -54,7 +54,35 @@ $$
 where $\lambda(d) = K_0 + \Delta C(d)$ are the eigenvalues of $\hat{C}_v$.
 The operators $\hat R(C_v)$ and $\hat R_I(C_v)$ are Hermitian because the cost functions $R(\cdot)$ and $R_I(\cdot)$ are real-valued. They are positive-semidefinite because $R(C) \ge 0$ and $R_I(C) \ge 0$ for $C \ge K_0$ (Definition 3), and $\lambda(d) \ge K_0$ for all $d \ge 0$. The physical relevance of using $\langle\hat{R}\rangle$ and $\langle\hat{R}_I\rangle$ in dynamics relies on Theorem 2 (Dynamically Enforced Functional Correspondence) ensuring alignment of $\langle \hat{C}_v \rangle$ with $C_P$.
 
-*Proof:* The definition of operators via functional calculus on a Hermitian operator ($\hat{C}_v$) is a standard mathematical construction. The properties of self-adjointness (Hermitian) and positive-semidefiniteness for $\hat{R}$ and $\hat{R}_I$ follow directly from the real-valued and non-negative nature of the functions $R(\cdot)$ and $R_I(\cdot)$ when applied to the non-negative eigenvalues $\lambda(d)$ of $\hat{C}_v$.
+*Proof.* By Definition B.1,
+$$
+\hat C_v = \sum_{d=0}^{\infty}\lambda(d)\hat P_d
+$$
+with mutually orthogonal spectral projectors $\hat P_d$ and real eigenvalues $\lambda(d)\ge K_0$. The Borel functional calculus for a self-adjoint operator therefore gives
+$$
+R(\hat C_v)=\sum_{d=0}^{\infty}R(\lambda(d))\hat P_d,
+\qquad
+R_I(\hat C_v)=\sum_{d=0}^{\infty}R_I(\lambda(d))\hat P_d,
+$$
+which is exactly Equation (B.3).
+
+Because $R$ and $R_I$ are real-valued on the spectrum of $\hat C_v$, both $R(\hat C_v)$ and $R_I(\hat C_v)$ are self-adjoint. To prove positive semidefiniteness, let $|\psi\rangle\in\mathcal H_v$. Then
+$$
+\langle \psi|R(\hat C_v)|\psi\rangle
+=
+\sum_{d=0}^{\infty} R(\lambda(d))\,\langle \psi|\hat P_d|\psi\rangle
+=
+\sum_{d=0}^{\infty} R(\lambda(d))\,\|\hat P_d\psi\|^2
+\ge 0,
+$$
+because each coefficient $R(\lambda(d))$ is non-negative for $\lambda(d)\ge K_0$. The same calculation gives
+$$
+\langle \psi|R_I(\hat C_v)|\psi\rangle
+=
+\sum_{d=0}^{\infty} R_I(\lambda(d))\,\|\hat P_d\psi\|^2
+\ge 0.
+$$
+Hence both operators are Hermitian and positive-semidefinite. ∎
 
 ## B.3 Fundamental Complexity Bound for SPAP Prediction
 
@@ -130,6 +158,18 @@ $$
 Finally, each sample acquisition and each internal update is counted as an elementary operation in $\mathrm{Cost}(\cdot;\delta)$, hence $C_{\text{uni}}(\delta)\ge N$, proving (B.5). ∎
 
 This log-enhanced quadratic divergence of the dimensionless unified complexity $C_{\text{uni}}(\delta_{\rm SPAP})$ (Eq B.5) represents a fundamental information-processing lower bound within the PU framework. It gives the minimum effective verification/update resources required to sustain performance $\alpha=\alpha_{SPAP}-\delta_{\rm SPAP}$. If the operational complexity notion $C_{pred}(\alpha)$ is taken to lower-bound those effective verification/update resources, then Theorem 14 inherits the same asymptotic lower bound for $C_{pred}(\alpha)$.
+
+**Corollary B.2.1 (Pattern-Specific Cost Inheritance).** Let $S$ be a predictive system with Effective Operational Property R (Definition A.0.1) and self-model $\mathcal{M}_S$ (Appendix M, §M.6.10, Definition M.10.1). Let $E$ be a pattern whose integration requires $S$'s self-predictive performance on the affected self-model component to reach level $PP_S^{(E)}$, placing it within $\delta_S(E) = \alpha_{SPAP} - PP_S^{(E)} > 0$ of the SPAP boundary (Appendix M, §M.6.10, Definition M.10.3). Then the minimum computational cost for $S$ to integrate $E$ into its self-model satisfies:
+$$
+C_{\text{integrate}}(S, E) \geq C_{\text{uni}}(\delta_S(E))
+\tag{B.5a}
+$$
+
+*Proof.* Integration of $E$ requires $S$ to update its self-model from $\theta_S$ to $\theta_S' = \theta_S + \delta\theta_S(E)$ such that the self-consistency condition (Appendix M, Equation M.18) is satisfied at performance level $PP_S^{(E)}$. This entails that $S$'s self-predictive performance on the self-model component affected by $E$ must reach at least $PP_S^{(E)}$, which lies within $\delta_S(E) = \alpha_{SPAP} - PP_S^{(E)}$ of the SPAP boundary.
+
+The restriction of $S$'s predictive task to this self-referential subtask — predicting the component of its own state affected by $\delta\theta_S(E)$ while knowing that its state depends on its prediction — is an instance of self-prediction within a model class possessing Property R, to which Theorem B.2 applies. Specifically, the subtask embeds the binary estimation problem of Theorem B.2's proof as follows: the self-model parameter $\theta_j$ affected by $E$ is either correctly calibrated ($|\hat{\theta}_j - \theta_j| \leq \delta_S(E)$) or not, yielding a binary hypothesis $H_\pm$ separated by $2\delta_S(E)$ in the Fisher metric. Any strategy that integrates $E$ to the required performance level must distinguish these hypotheses with failure probability at most $\delta_S(E)$ (the self-calibrated confidence choice, Definition B.2). By the sample-complexity lower bound of Theorem B.2, this requires at least $C_{\text{uni}}(\delta_S(E))$ elementary physical operations.
+
+Since integration of $E$ requires achieving this performance level on the self-referential subtask, we obtain $C_{\text{integrate}}(S, E) \geq C_{\text{uni}}(\delta_S(E))$. $\square$
 
 ## B.4 Microscopic Energy Density Operator $\hat{\rho}_v$ and Interaction Structure
 

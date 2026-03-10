@@ -19,7 +19,7 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 
 | Quantity | PU program | Central value | $1\sigma$ budget | Dominant contributions |
 |:--|:--|:--|:--|:--|
-| $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$ | $137.036092$ | $\pm 0.000050$ | interface-correction truncation and PU-to-QED matching (Appendix Z, Section Z.27.9); compare $\alpha_{\mathrm{em}}^{-1} = 137.035999177(21)$ [NIST 2024] |
+| $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$ | $137.036092$ | $\pm 0.000060$ | combined Section Z.27.9 budget, dominated by PU-to-QED matching; compare $\alpha_{\mathrm{em}}^{-1} = 137.035999177(21)$ [NIST 2024] |
 | $\Lambda L_P^2$ (vacuum sector) | Eq. (V.2) with $\kappa=141.5$ and $A_{\text{eff}}=0.923\pm0.011$ (Appendix U) | $(2.88\times10^{-122})$ | $\pm 0.03\times10^{-122}$ | $A_{\text{eff}}$ theory/systematic dominates; Eq. (V.5) gives $(\Lambda L_P^2)_{\text{obs}}=(2.86599\pm0.04849)\times10^{-122}$, implying $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ |
 
 ## V.1 The Cosmological Constant: Inversion for the Instanton Complexity $\kappa$
@@ -82,7 +82,7 @@ The quoted uncertainty is dominated by $H_0$ and $\Omega_{\Lambda}$; the relativ
 
 ### V.1.4 Consistency Check via Inversion
 
-Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16) and $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b), Equation (V.2) gives the corresponding reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, consistent with the observed value (V.5) within the combined $1\sigma$ budget.
+Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16, five-mode reference-counting convention) and the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b, prefactor convention), Equation (V.2) gives the corresponding reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, consistent with the observed value (V.5) within the combined $1\sigma$ budget.
 
 Setting $A_{\text{eff}}=1$ in Equation (V.3):
 
@@ -90,13 +90,13 @@ $$
 \boxed{\kappa \;=\; -\tfrac12 \ln\!\left(\frac{2.86599\times10^{-122}}{8\pi}\right) \;=\; 141.543\ \pm\ 0.009} \tag{V.6}
 $$
 
-Holding $\kappa_{\mathrm{ref}}$ fixed, the observed value (V.5) implies the effective prefactor
+Holding $\kappa_{\mathrm{ref}}$ fixed within that Appendix U reference convention, the observed value (V.5) implies the effective prefactor
 
 $$
 A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa_{\mathrm{ref}}}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016,
 $$
 
-consistent with the PU-theory estimate $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b).
+consistent with the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b).
 
 For the Appendix U reference value $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16), the corresponding reference instanton action from Equation (V.1) is
 
@@ -118,17 +118,17 @@ $$
 |:------:|:-------:|:----------:|:-------:|:---------------------:|:-------:|
 | $\kappa$ | 141.20 | **141.54** | 141.89 | 142.04 | 142.09 |
 
-Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts the inferred $\kappa$ by less than 1, whereas the reference value $\kappa_{\mathrm{ref}}=141.5$ comes from the leading-order Golay-Steiner zero-mode counting convention of Appendix U.
+Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts the inferred $\kappa$ by less than 1, whereas the reference value $\kappa_{\mathrm{ref}}=141.5$ comes from the Appendix U leading-order reference-counting convention.
 
 ---
 
-## V.2 Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor (Zero Continuously Adjustable Parameters)
+## V.2 Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor (No Continuous Fit Parameters)
 
-This section provides the direct computational program for the fine-structure constant, as rigorously derived in **Appendix Z**. The calculation has zero continuously adjustable parameters, relying only on the framework's foundational constants.
+This section provides the direct computational program for the fine-structure constant as recorded in **Appendix Z**. The calculation introduces no continuous fit parameters once the discrete Appendix Z assumptions and normalization conventions are fixed.
 
 ### V.2.1 Foundational Inputs (Derived from PU First Principles)
 
-*   **MPU Hilbert Space Dimension:** $d_0 = 8$ (from $K_0=3$ bits, Theorem 23).
+*   **MPU Hilbert Space Dimension:** $d_0 \ge 8$ (from $K_0=3$ bits, Theorem 23); the PCE-minimal active-operational branch used in Appendix Z selects the saturating case $d_0 = 8$ (Chapter 7; Theorem Z.2).
 *   **Irreducible Cost:** $\varepsilon = \ln 2$ nats (from SPAP cycle, Theorem 31).
 
 ### V.2.2 Derived Spectral Parameters for the PCE-Attractor
@@ -147,7 +147,7 @@ $$
 
 ### V.2.4 Calculation of the Bare Coupling $u^*$
 
-Substitute the derived spectral parameters ($M=24, \lambda=1$) and the fundamental alphabet size ($d_0=8$) into the capacity saturation condition (V.8):
+Substitute the derived spectral parameters ($M=24, \lambda=1$) and the foundational alphabet size ($d_0=8$ on the Appendix Z branch) into the capacity saturation condition (V.8):
 $$
 24 \ln(1 + 1 \cdot u^*) = \ln 8
 $$
@@ -162,14 +162,14 @@ $$
 
 ### V.2.5 From $u^*$ to the Thomson-Limit $\alpha$
 
-The Predictive Ward Identity (Theorem Z.14), together with QFI geometric rigidity ($\lambda_i=1$, Theorem Z.5) and capacity saturation (Theorem Z.7), uniquely fixes the bulk normalization constant $\kappa^*_{\mathrm{bulk}}=1$ by obstructing the field-rescaling freedom present in standard $U(1)$ gauge theory. The physical Thomson-limit coupling includes the discrete-to-continuous interface dressing (Section Z.17) and the curvature-controlled correction (Theorems Z.25–Z.26). Define
+The Predictive Ward Identity (Theorem Z.14), together with QFI geometric rigidity ($\lambda_i=1$, Theorem Z.5) and capacity saturation (Theorem Z.7), fixes the bulk normalization constant $\kappa^*_{\mathrm{bulk}}=1$ by obstructing the field-rescaling freedom present in standard $U(1)$ gauge theory. The physical Thomson-limit coupling includes the discrete-to-continuous interface dressing (Section Z.17) and the curvature-controlled correction of Theorems Z.24–Z.26. Define
 $$
 \Delta^{(2)} := \frac{\pi u^*}{24\sqrt{K_0}}\left(1-\frac{u^{*2}}{6}\right).
 $$
 With $u^* = 8^{1/24}-1 = 2^{1/8}-1$ and $K_0 = 3$:
 
 $$
-\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \Delta^{(2)} + O(u^{*5}) \approx 137.036092 \pm 0.000050}
+\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \Delta^{(2)} + O(u^{*5}) \approx 137.036092 \pm 0.000060}
 \tag{V.10}
 $$
-This is a Thomson-limit prediction with zero continuously adjustable parameters within the PU mapping contract. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and mapping/systematic contributions.
+This is a Thomson-limit prediction within the Appendix Z derivation. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and matching/systematic contributions.

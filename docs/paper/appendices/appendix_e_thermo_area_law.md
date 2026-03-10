@@ -16,20 +16,20 @@ Natural units where $\hbar=c=k_B=1$ are used for core derivations, restored wher
 
 **E.2 Irreversibility and Thermodynamic Costs of Reflexive MPU Interactions**
 
-The 'Evolve' process (Definition 27) instantiates Non-Deterministic Reflexive Interaction Dynamics (ND–RID, Definition A.2.2), represented formally by a quantum instrument $\mathcal{I}_N = \{\mathcal{E}_{N,o}\}_{o \in O}$, where $\mathcal{E}_{N,o}$ are completely positive (CP) maps satisfying $\sum_o \mathcal{E}_{N,o}^\dagger(\mathbb{I}) \le \mathbb{I}$. The probability of outcome $o$ given initial state $\rho$ is $P(o|\rho, N) = \mathrm{tr}[\mathcal{E}_{N,o}(\rho)]$, and the post-outcome state is $\rho'_o = \mathcal{E}_{N,o}(\rho) / P(o|\rho, N)$. The average channel is the trace-preserving (TP) CP map $\mathcal{E}_N(\rho) = \sum_o \mathcal{E}_{N,o}(\rho)$.
+The 'Evolve' process (Definition 27) instantiates Non-Deterministic Reflexive Interaction Dynamics (ND–RID, Definition A.2.2), represented formally by a normalized quantum instrument $\mathcal{I}_N = \{\mathcal{E}_{N,o}\}_{o \in O}$, where $\mathcal{E}_{N,o}$ are completely positive (CP) maps satisfying $\sum_o \mathcal{E}_{N,o}^\dagger(\mathbb{I}) = \mathbb{I}$. The probability of outcome $o$ given initial state $\rho$ is $P(o|\rho, N) = \mathrm{tr}[\mathcal{E}_{N,o}(\rho)]$, and the post-outcome state is $\rho'_o = \mathcal{E}_{N,o}(\rho) / P(o|\rho, N)$. The average channel is the trace-preserving (TP) CP map $\mathcal{E}_N(\rho) = \sum_o \mathcal{E}_{N,o}(\rho)$.
 
 **Theorem E.1 (Minimal Entropy Production Bound for ND–RID Step).** The minimal necessary total entropy production $\Delta S_{tot}(o)$ (system + environment, in units of $k_B$) for the pathway of an 'Evolve'/ND–RID interaction yielding outcome $o$ and state $\rho'_o$ from initial state $\rho$, associated with an information gain $I(\rho; \mathcal{E}_{N}, o) > 0$ (nats), satisfies the lower bound:
 $$
 \frac{\Delta S_{tot}(o)}{k_B} \geq I(\rho; \mathcal{E}_{N}, o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)] + \varepsilon \cdot \Theta(I(\rho; \mathcal{E}_{N}, o))
 \tag{E.1}
 $$
-where $I$ is the quantum mutual information gain, $D_{KL}$ is the quantum relative entropy representing feedback cost, $\varepsilon \ge \ln 2$ is the fundamental minimum dimensionless entropy production from the SPAP update cycle logic (Theorem 31, derived in Appendix J, Theorem J.1), and $\Theta(I)$ is the Heaviside step function.
+where $I$ is the quantum mutual information gain, $D_{KL}$ is the quantum relative entropy representing feedback cost, $\varepsilon \ge \ln 2$ is the fundamental minimum dimensionless entropy production from the SPAP update cycle logic (Theorem 31, derived in Appendix J, Theorem J.1), and $\Theta(I)$ is the Heaviside step function. If $\operatorname{supp}\rho'_o \nsubseteq \operatorname{supp}\mathcal{E}_{N}(\rho)$, the relative-entropy term is understood as $+\infty$.
 
-*Proof:* This theorem synthesizes standard second‑law‑with‑information inequalities for measurement and feedback [Sagawa & Ueda 2010]; Parrondo, Horowitz & Sagawa, Nat. Phys. 11, 131 (2015) with the PU framework’s SPAP‑based irreducible cost $\varepsilon$ (Theorem 31, Appendix J). The contributions $I(\rho;\mathcal{E}_N,o)$ and $D_{KL}[\rho'_o\|\mathcal{E}_N(\rho)]$ capture information acquisition and feedback costs, respectively. The $\varepsilon\ge \ln 2$ term applies only on those cycles that execute self‑referential SPAP processing with nonzero information gain ($I>0$), as enforced by the factor $\Theta(I)$. Thus
+*Proof:* Because $\sum_o \mathcal{E}_{N,o}^\dagger(\mathbb{I}) = \mathbb{I}$, the family $\{\mathcal{E}_{N,o}\}_{o\in O}$ is a normalized quantum instrument and $\mathcal{E}_{N}=\sum_o \mathcal{E}_{N,o}$ is CPTP. For a fixed outcome $o$, the finite-dimensional quantum measurement-feedback second law of Sagawa and Ueda (2010), reviewed in Parrondo, Horowitz and Sagawa (2015), gives
 $$
-\Delta S_{tot}/k_B \;\ge\; I + D_{KL} + \varepsilon\,\Theta(I),
+\frac{\Delta S_{tot}(o)}{k_B} \ge I(\rho;\mathcal{E}_N,o) + D_{KL}[\rho'_o || \mathcal{E}_{N}(\rho)],
 $$
-with additivity reflecting independent sources of entropy production. QED
+provided the feedback state is supported on $\operatorname{supp}\mathcal{E}_{N}(\rho)$; if the support inclusion fails, the relative entropy is $+\infty$ and the bound is immediate. The present ND-RID step also includes the SPAP cycle-closure update. By Theorem J.1, every finite-memory realization of that update carries the additional guarantee-level lower bound $\varepsilon \ge \ln 2$ whenever non-trivial self-referential information is processed. This contribution is activated exactly on the $I>0$ branch and therefore contributes $\varepsilon \Theta(I)$. Adding this SPAP lower-bound term to the measurement-feedback lower bound yields Equation (E.1). QED
 
 **Corollary E.1 (Fundamental Irreversibility of ND–RID 'Evolve').** The average 'Evolve' channel $\mathcal{E}_N = \sum_o \mathcal{E}_{N,o}$ is thermodynamically irreversible whenever it facilitates non-trivial information gain $I > 0$ related to self-referential processing.
 *Proof.* If $I>0$ for some pathway involving self-referential update logic, then from Equation (E.1), the minimum total entropy production $\Delta S_{tot}(o)/k_B \ge I + \varepsilon > 0$ (since $\varepsilon \ge \ln 2 > 0$). Averaging over outcomes $o$ will yield a positive mean entropy production for the process, precluding thermodynamic reversibility. A process is thermodynamically reversible if and only if the total entropy production is zero. QED
@@ -360,7 +360,7 @@ For Gibbs states in any dimension, a distribution-free boundary law holds for mu
 
 The PU input required downstream (Section 12) is an entropy–area proportionality for local causal horizons. PU supplies this *operationally* from boundary-channel counting (Theorem E.3, Corollary E.2, and Lemma E.5.1), without requiring a general entanglement-entropy area theorem in $3+1$ dimensions.
 
-**Theorem E.5 (Operational area law and definition of the effective Newton coupling).**
+**Summary of Theorem E.5 (Operational area law and definition of the effective Newton coupling).**
 Let $\mathcal{H}$ be a causal-horizon cross-section of area $\mathcal{A}$ in the emergent geometry (Theorem 43). The maximum equilibrium boundary entropy obtainable from ND–RID channels crossing $\mathcal{H}$ obeys
 $$
 S_{max}(\mathcal{H})
@@ -498,7 +498,7 @@ $$
 C_{\max}^{*} = \ln(d_0) - \varepsilon
 \tag{E.14}
 $$
-Using the framework's logically-derived values for the fundamental MPU parameters, $d_0=8$ (from the Horizon Constant $K_0=3$ bits, Theorem 23) and $\varepsilon=\ln 2$ (from the minimal SPAP cycle cost, Theorem 31), the PCE-optimal channel capacity is calculated to be:
+Using the minimal-branch and attractor-saturating values of the fundamental MPU parameters, $d_0=8$ (Theorem Z.2; Theorem 23 gives the lower bound) and $\varepsilon=\ln 2$ (Definition 15a; Theorem 31 gives the lower bound), the PCE-optimal channel capacity is calculated to be:
 $$
 C_{\max}^{*} = \ln(8) - \ln(2) = 2\ln 2
 \tag{E.15}
@@ -987,11 +987,11 @@ This reduces the logical status of "equilibrium saturation" from an assumption t
 
 Any ND-RID channel crossing $\Sigma$ counts as a boundary link. Capacity saturation (Definition E.9.2) is a *derived property* of these channels under PCE dynamics (Theorem E.8.3.4), not a definitional prerequisite.
 
-**Definition E.9.2 (Channel Saturation).** A channel is *saturated* when it transmits at the maximum reliable rate. From Equation E.15, the PCE-optimal channel capacity is:
+**Definition E.9.2 (Channel Saturation).** A channel is *saturated* when it transmits at the maximum reliable rate. From Equation E.15, the PCE-optimal channel capacity on the minimal/saturating branch is:
 
 $$C_{\max}(f_{\text{RID}}) = \ln(d_0) - \varepsilon = \ln(8) - \ln(2) = 2\ln 2 \approx 1.386 \text{ nats}$$
 
-where $d_0 = 8$ is the MPU Hilbert space dimension (Theorem 23) and $\varepsilon = \ln 2$ is the irreducible SPAP entropy cost (Theorem 31).
+where $d_0 = 8$ is the minimal-branch MPU Hilbert space dimension (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $\varepsilon = \ln 2$ is the attractor-saturating SPAP entropy cost (Definition 15a; Theorem 31 gives $\varepsilon\ge \ln 2$).
 
 ### E.9.2 The Universal Area Law
 
@@ -1152,7 +1152,7 @@ The preceding results establish that causal boundaries have finite information c
 
 This section derives global unitarity from the causal and thermodynamic structure established in preceding sections. For reference, the key prior results upon which the derivation depends are:
 
-- **Hypothesis 1 (MPU Reality Model):** Physical reality, from the internal perspective, is fundamentally constituted by a network of interacting Minimal Predictive Units (MPUs). This network $\mathcal{N}$ constitutes the complete internal substrate; no external degrees of freedom are accessible to internal systems.
+- **Summary of Hypothesis 1 (MPU Reality Model):** Physical reality, from the internal perspective, is fundamentally constituted by a network of interacting Minimal Predictive Units (MPUs). This network $\mathcal{N}$ constitutes the complete internal substrate; no external degrees of freedom are accessible to internal systems.
 
   *Remark (Consistency with P.5):* The closed-system assumption is consistent with the authentic simulation architecture (Appendix P.5). "No external degrees of freedom accessible to internal systems" refers to internal physical reality; external observation channels (Definition P.5.3) operate outside this substrate by construction, satisfying internal inaccessibility ($\mathbb{E}[\Delta Q \mid E; M] = 0$ for all internal procedures $M \in \mathcal{M}_{int}$) and non-intervention.
 
@@ -1164,15 +1164,15 @@ This section derives global unitarity from the causal and thermodynamic structur
 
 - **Recall Definition 35 (Propagation Cost Metric):** The fundamental MPU spacing $\delta$ defines the characteristic length scale of the network, with the propagation cost metric $d_{\mathcal{N}}(u,v)$ measuring minimum cumulative cost along network paths.
 
-- **Recall from Theorem 23:** The MPU Hilbert space dimension is $d_0 = 8$.
+- **Recall from Theorem 23:** The MPU Hilbert space dimension satisfies $d_0 \ge 8$ for $K_0=3$; the minimal branch used in the Appendix Z backbone has $d_0 = 8$ (Theorem Z.2).
 
 - **Recall from Theorem 29:** The spectral structure of the internal Hamiltonian determines a characteristic minimal processing timescale $\tau_{min}>0$, establishing finite processing speed.
 
-- **Recall from Theorem 31:** The minimum dimensionless entropy production per SPAP cycle is $\varepsilon \geq \ln 2$ nats, arising from the 2-to-1 logical state merge inherent in self-referential prediction (Appendix J, Lemma J.1).
+- **Recall from Theorem 31:** The minimum dimensionless entropy production per SPAP cycle satisfies $\varepsilon \geq \ln 2$ nats, arising from the 2-to-1 logical state merge inherent in self-referential prediction (Appendix J, Lemma J.1). On the PCE-Attractor this bound is saturated to $\varepsilon=\ln 2$ (Definition 15a).
 
-- **Lemma E.1 (Strict Contractivity):** If the average Evolve channel contains a nonzero input-independent refresh component, $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$, then it is strictly contractive in trace distance with factor $f_{\text{RID}}=1-p<1$. If $\sigma\succ0$, the channel is strictly positive and hence primitive (unique full-rank fixed point). No universal quantitative lower bound on $p$ follows from $\varepsilon$ alone.
+- **Summary of Lemma E.1 (Strict Contractivity):** If the average Evolve channel contains a nonzero input-independent refresh component, $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$, then it is strictly contractive in trace distance with factor $f_{\text{RID}}=1-p<1$. If $\sigma\succ0$, the channel is strictly positive and hence primitive (unique full-rank fixed point). No universal quantitative lower bound on $p$ follows from $\varepsilon$ alone.
 
-- **Theorem E.2 (Capacity Bound):** The classical information capacity satisfies $C_{\max} \equiv C(\mathcal{E}_N) < \ln d_0$.
+- **Summary of Theorem E.2 (Capacity Bound):** The classical information capacity satisfies $C_{\max} \equiv C(\mathcal{E}_N) < \ln d_0$.
 
 - **Theorem E.10.2 (Velocity Bound):** Information propagation velocity is bounded by $v_{\max} = \delta/\tau_{\min} = c$.
 
@@ -1187,9 +1187,9 @@ Throughout this section:
 - $D_{\text{tr}}(\rho, \sigma) = \frac{1}{2}\|\rho - \sigma\|_1$ denotes trace distance
 - $S(\rho) = -\mathrm{tr}(\rho \ln \rho)$ denotes von Neumann entropy (in nats) [von Neumann 1932]
 - $I(A:B)_\rho = S(\rho_A) + S(\rho_B) - S(\rho_{AB})$ denotes quantum mutual information
-- $d_0 = 8$ is the MPU Hilbert space dimension (Theorem 23)
+- $d_0 = 8$ on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge 8$)
 - $\delta$ is the fundamental MPU spacing (Definition 35)
-- $\varepsilon = \ln 2$ is the irreducible SPAP entropy cost (Theorem 31)
+- $\varepsilon = \ln 2$ on the attractor branch (Definition 15a; Theorem 31 gives $\varepsilon\ge \ln 2$)
 
 ### E.9.5.3 Information Capacity of Cauchy Surfaces
 
@@ -1243,7 +1243,7 @@ $$\dim(\mathcal{H}_{\Sigma_1}) = \dim(\mathcal{H}_{\Sigma_2})$$
 
 *Proof.*
 
-**Step 1 (MPU counting).** A Cauchy surface $\Sigma$ intersects a definite number $N_{\text{MPU}}(\Sigma)$ of MPUs in the network. By Theorem 23, each MPU has Hilbert space dimension $d_0 = 8$. The total Hilbert space dimension is:
+**Step 1 (MPU counting).** A Cauchy surface $\Sigma$ intersects a definite number $N_{\text{MPU}}(\Sigma)$ of MPUs in the network. On the minimal MPU branch used here, each MPU has Hilbert space dimension $d_0 = 8$ (Theorem Z.2; Theorem 23 gives the lower bound $d_0\ge 8$). The total Hilbert space dimension is:
 
 $$\dim(\mathcal{H}_{\Sigma}) = d_0^{N_{\text{MPU}}(\Sigma)} = 8^{N_{\text{MPU}}(\Sigma)}$$
 
@@ -1623,8 +1623,8 @@ For reference, we collect the key numerical values appearing in this section:
 
 | Quantity | Symbol | Value | Source |
 |:---------|:-------|:------|:-------|
-| MPU Hilbert space dimension | $d_0$ | 8 | Theorem 23 |
-| Irreducible entropy cost | $\varepsilon$ | $\ln 2 \approx 0.693$ nats | Theorem 31 (Appendix J) |
+| MPU Hilbert space dimension | $d_0$ | 8 on the minimal branch | Theorem 23; Theorem Z.2 |
+| Irreducible entropy cost | $\varepsilon$ | $\ln 2 \approx 0.693$ nats on the attractor branch | Theorem 31 (Appendix J); Definition 15a |
 | Maximum channel capacity | $C_{\max}$ | $\ln d_0 - \varepsilon = 2\ln 2 \approx 1.386$ nats | Eq. E.15 (Appendix E) |
 | Contractivity factor bound | $f_{\text{RID}}$ | $\le 1-p$ for some $p\in(0,1]$ (refresh weight) | Lemma E.1 |
 | MPU spacing / Planck length | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | Appendix Q, Eq. Q.18 |
@@ -1704,7 +1704,7 @@ for some $\alpha > 0$. Long-range correlations incur linearly growing PCE cost. 
 
 ### E.10.2 Thermodynamic Derivation of the Light Cone
 
-**Theorem E.10.2 (Maximum Serialized Propagation Velocity from PCE).** Under the additional hypotheses that (i) propagation between non-adjacent MPUs is implemented by serialized nearest-neighbor ND-RID traversals, and (ii) the continuum no-preferred-frame identification fixes
+**Summary of Theorem E.10.2 (Maximum Serialized Propagation Velocity from PCE).** Under the additional hypotheses that (i) propagation between non-adjacent MPUs is implemented by serialized nearest-neighbor ND-RID traversals, and (ii) the continuum no-preferred-frame identification fixes
 $$
 \frac{\delta}{L_P} = \frac{\tau_{\min}}{t_P},
 $$
@@ -1744,11 +1744,11 @@ Thus, in the serialized nearest-neighbor regime with the stated scale identifica
 
 **Corollary E.10.1 (Entropy Production Rate Bound).** The rate of entropy production for information propagation is bounded below:
 
-$$\frac{dS}{dt} \geq \frac{\varepsilon}{\tau_{\min}} = \frac{\ln 2}{\tau_{\min}}$$
+$$\frac{dS}{dt} \geq \frac{\varepsilon}{\tau_{\min}} \geq \frac{\ln 2}{\tau_{\min}}$$
 
-per active channel. Faster propagation would require $\varepsilon < \ln 2$, violating Theorem 31.
+per active channel. Faster propagation would require violating either the Landauer lower bound $\varepsilon \ge \ln 2$ or the minimum-tick bound $\tau_{\min}>0$.
 
-*Proof.* Each link traversal produces entropy $\geq \varepsilon = \ln 2$ (Theorem 31) and requires time $\geq \tau_{\min}$ (Theorem 29). The minimum rate follows by division. ∎
+*Proof.* Each link traversal produces entropy $\geq \varepsilon$ with $\varepsilon \geq \ln 2$ by Theorem 31, and requires time $\geq \tau_{\min}$ by Theorem 29. The minimum rate follows by division. ∎
 
 **Corollary E.10.2 (Thermodynamic Origin of Locality in the Serialized ND-RID Regime).** In the serialized nearest-neighbor propagation regime of Theorem E.10.2, locality is not a primitive axiom but emerges from:
 1. Finite entropy cost per link: $\varepsilon \geq \ln 2$ (Theorem 31)

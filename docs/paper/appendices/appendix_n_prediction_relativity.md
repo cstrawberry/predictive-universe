@@ -1025,6 +1025,31 @@ $$
 
 **Remark N.11.2: Distinguishing Prediction.** Standard physics predicts $\delta_C = 0$ exactly. Quantum-spacetime phenomenology commonly parameterizes potential new effects as Planck-suppressed corrections controlled by ratios such as $E/E_P$ (or $p/E_P$), without dependence on macroscopic computational activity [Amelino-Camelia 2013]. The PU prediction $\delta_C \propto P_{context}$ is distinctive: the deviation depends on the system's computational activity, not just its mass. This provides a qualitative signature even if the quantitative effect is unmeasurably small with current technology.
 
+**Proposition N.8.1 (Self-Model Maintenance Stress-Energy Contribution).** Let $S$ be a system with Effective Operational Property R (Definition A.0.1) that maintains a self-model $\mathcal{M}_S$ (Definition M.10.1). Then $S$'s ongoing self-model maintenance produces a stress-energy contribution to $T_{\mu\nu}^{(\text{MPU})}$ that depends on its characteristic self-referential depth $\delta_{\text{maint}}$ and is structurally distinct from the CC-mediated correction of Theorem N.8.
+
+*Proof.*
+
+**Step 1 (Self-predictive maintenance cost).** Each verification cycle requires $S$ to predict aspects of its own state to sustain self-model coherence. This ongoing self-prediction operates at a characteristic self-predictive performance level $PP_{\text{maint}}$, placing $S$ within $\delta_{\text{maint}} = \alpha_{SPAP} - PP_{\text{maint}}$ of the SPAP boundary. By Theorem 14 (= Theorem B.2, Equation B.5), the per-cycle verification cost satisfies $C_{\text{uni}}(\delta_{\text{maint}}) = \Omega(\log(1/\delta_{\text{maint}})/\delta_{\text{maint}}^2)$.
+
+**Step 2 (Thermodynamic cost).** By Theorem 31, each irreversible operation in the verification/calibration loop produces entropy $\Delta S \geq k_B \ln 2$. Since each elementary operation involves at least one irreversible bit transition (Theorem 31, Proposition 5), we have $n_{\text{erase}} \geq C_{\text{uni}}(\delta_{\text{maint}})$. By Section 7.4.7, the resulting minimal average power from logical erasures satisfies:
+$$
+P_{\text{self}} \geq C_{\text{uni}}(\delta_{\text{maint}}) \cdot k_B T \ln 2 \;/\; \tau_{\text{cycle}}
+\tag{N.44}
+$$
+
+**Step 3 (Propagation to stress-energy).** This power is a component of the MPU's total energy budget and enters the microscopic energy density operator $\hat{\rho}_v$ (Definition B.3) through the interaction-specific irreversible cost terms, propagating to $T_{\mu\nu}^{(\text{MPU})}$ (Definition B.8) via the Belinfante symmetrization (Theorem B.4) and coarse-graining (Equation B.15). Consequently, two systems with identical relational information content $\mathcal{I}_{rel}$ (and hence identical baseline rest mass via Theorem N.5) but different characteristic self-referential depth ($\delta_{\text{maint},1} \neq \delta_{\text{maint},2}$) produce different ongoing entropy production rates during self-model maintenance, contributing different dissipative power to $T_{\mu\nu}^{(\text{MPU})}$.
+
+**Step 4 (Structural distinction from Theorem N.8).** The self-model maintenance mechanism is structurally distinct from the CC-mediated Born rule deviation of Theorem N.8, which derives $\delta_C$ from CC modulation of quantum outcomes via gravitational decoherence (Equation N.39). Self-model maintenance dissipation originates from the SPAP-regulated verification loop (Theorem 14) rather than from modulation of 'Evolve' probabilities (Definition 30). Both effects enter stress-energy through the same Landauer chain (Theorem 31 $\to$ Lemma E.1 $\to$ PPI), but they arise from independent physical processes and their magnitudes are governed by different parameters: Theorem N.8 by $P_{context}$ and $K_\Gamma$; self-model maintenance by $\delta_{\text{maint}}$ and $\tau_{\text{cycle}}$. No derivation currently establishes a quantitative relationship between these magnitudes; independent estimation of $\delta_{\text{maint}}$ and $\tau_{\text{cycle}}$ for specific physical systems is required to bound the self-model maintenance contribution.
+
+**Step 5 (UCT extension).** The UCT (Appendix N, Section N.4) extends this distinction to the kinematic regime. The total predictive work $W_{\text{pred}}$ along a worldline includes all costs of maintaining predictive coherence, of which self-model maintenance is a component. Under acceleration $a$, the Unruh temperature $T_U = \hbar a / (2\pi c k_B)$ (Theorem N.3) raises the Landauer floor for every irreversible operation (Theorem 31), amplifying all predictive maintenance costs including the self-model component. The self-model contribution to the UCT's $W_{\text{pred}}$ integral is:
+$$
+W_{\text{pred}}^{(\text{self})} \geq \int k_B(T + T_U) \cdot C_{\text{uni}}(\delta_{\text{maint}}) \cdot \ln 2 \cdot \tau_{\text{cycle}}^{-1} \, dt
+\tag{N.45}
+$$
+which depends on $\delta_{\text{maint}}$ as well as the acceleration profile. Two systems with identical $\mathcal{I}_{rel}$ but different self-referential depth ($\delta_{\text{maint},1} \neq \delta_{\text{maint},2}$) therefore face different total $W_{\text{pred}}$ for the same acceleration, connecting the informational structure of perspectival profiles (§M.6.10) to the kinematic structure of Prediction Relativity. $\square$
+
+**Remark N.8.1 (Magnitude and Observability).** The self-model maintenance contribution to stress-energy (Equation N.44) is controlled by $\delta_{\text{maint}}$ and $\tau_{\text{cycle}}$, both of which are system-specific parameters not yet bounded from first principles within the framework. For current experimental sensitivity (MICROSCOPE: $\eta < 10^{-15}$ [Touboul et al. 2022]), the relevant question is whether the fractional stress-energy difference between self-referential and non-self-referential systems of equal $\mathcal{I}_{rel}$ exceeds the Eötvös bound. Determining this requires independent modeling of $\delta_{\text{maint}}$ for specific physical systems (e.g., biological neural networks vs. crystalline solids of equal mass), which constitutes an open problem.
+
 ### N.11.7 Connection to Particle Mass Hierarchies
 
 **Proposition N.5 (Mass Ratios from Information Ratios).** For two systems with relational information contents $\mathcal{I}_1$ and $\mathcal{I}_2$:
@@ -1137,7 +1162,7 @@ Both terms represent information costs: the first is the relativistic cost of up
 
 This section has established:
 
-**Theorem N.5 (Mass-Information Equivalence):**
+**Summary of Theorem N.5 (Mass-Information Equivalence):**
 $$
 m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{rel} \cdot m_P
 $$

@@ -100,11 +100,36 @@ Statistical-mechanics input enters only as a background constraint on physically
 
 Since the theoretical $C_P$ (Equation 1) is generally uncomputable, systems must employ a physically meaningful and accessible operational proxy within their dynamics. Essential properties required for such a proxy include: (1) Physical Cost Monotonicity (higher proxy value implies non-decreasing operational cost rate $\langle\hat{R}\rangle$), (2) Approximate Compositional Additivity (complexity of independent systems adds), and (3) Computational Accessibility (computable spectrum/projectors). Within the quantum setting emerging in the PU framework (Section 8), quantum circuit complexity provides a canonical representative of this admissible proxy class. We therefore use a (coarse-grained) circuit-complexity observable, defined up to affine rescaling within the admissible family, as the operational proxy.
 
-**Theorem 1 (Operational Complexity Operator $\hat{C}_v$):** For each MPU $v$, there exists a class (unique up to affine scaling within the admissible proxy family of Appendix D) of Hermitian, positive semi-definite operators $\hat{C}_v$, acting on the MPU Hilbert space $\mathcal{H}_v$ (formalized in Proposition 4), serving as an operational complexity observable. It is defined via its spectral decomposition:
+**Theorem 1 (Operational Complexity Operator $\hat{C}_v$):** Fix an admissible coarse-grained proxy family for MPU $v$ at the chosen operational resolution, represented by mutually orthogonal projectors $\{\hat P_d\}_{d=0}^{d_{\max}}$ on $\mathcal{H}_v$ satisfying
 $$
- \hat{C}_v = \sum_{d=0}^{\infty} (K_0 + \Delta C(d)) \hat{P}_d \quad \text{(2)}
- $$
- where $\hat{P}_d$ are orthogonal projectors onto subspaces of states preparable with additional circuit complexity index $d$ relative to a reference state $|\text{ref}\rangle \equiv |K_0\rangle$, and $\lambda(d)=K_0+\Delta C(d)$ are the associated complexity eigenvalues, with $\Delta C(d)$ a non-decreasing function and $\Delta C(0)=0$. $K_0$ is the Horizon Constant (Theorem 15). For finite-dimensional $\mathcal{H}_v$ at fixed operational resolution, only finitely many projectors are nonzero (equivalently, there exists $d_{\max}$ such that $\hat{P}_d=0$ for all $d>d_{\max}$).
+\hat P_d\hat P_{d'}=\delta_{dd'}\hat P_d,
+\qquad
+\sum_{d=0}^{d_{\max}} \hat P_d = I,
+$$
+together with a non-decreasing eigenvalue assignment $\lambda(d)=K_0+\Delta C(d)$ with $\Delta C(0)=0$. Then
+$$
+\hat{C}_v = \sum_{d=0}^{d_{\max}} (K_0 + \Delta C(d)) \hat{P}_d \quad \text{(2)}
+$$
+is a Hermitian positive semi-definite operator on $\mathcal{H}_v$. For every $|\psi\rangle\in\mathcal H_v$,
+$$
+\langle\psi|\hat{C}_v|\psi\rangle
+=
+\sum_{d=0}^{d_{\max}} (K_0 + \Delta C(d))\,\|\hat P_d\psi\|^2.
+$$
+Hence $\hat{C}_v$ defines an operational complexity observable. Any affine rescaling $a\hat C_v+bI$ with $a>0$ preserves the ordering of complexity shells and remains in the same admissible proxy class.
+
+*Proof.* The projector relations imply that the sum in Equation (2) is a finite linear combination of bounded self-adjoint operators, hence $\hat C_v$ is self-adjoint. Because $K_0>0$ and $\Delta C(d)\ge 0$ for all $d$, every eigenvalue $\lambda(d)=K_0+\Delta C(d)$ is nonnegative. Therefore, for any $|\psi\rangle\in\mathcal H_v$,
+$$
+\langle\psi|\hat C_v|\psi\rangle
+=
+\sum_{d,d'=0}^{d_{\max}} \lambda(d)\langle\psi|\hat P_d\hat P_{d'}|\psi\rangle
+=
+\sum_{d=0}^{d_{\max}} \lambda(d)\langle\psi|\hat P_d|\psi\rangle
+=
+\sum_{d=0}^{d_{\max}} \lambda(d)\,\|\hat P_d\psi\|^2
+\ge 0.
+$$
+Thus $\hat C_v$ is positive semi-definite. The displayed expectation formula shows that $\langle\psi|\hat C_v|\psi\rangle$ is the spectral average of the operational complexity shells in state $|\psi\rangle$, so $\hat C_v$ serves as an operational complexity observable. Finally, if $a>0$, then $a\hat C_v+bI$ has eigenvalues $a\lambda(d)+b$, which preserve the same ordering in $d$; therefore such affine rescalings remain in the same admissible proxy class. ∎
 
 The expectation value $\langle\psi|\hat{C}_v|\psi\rangle$ serves as the system's internal, operational measure of complexity used in adaptation dynamics. Its physical relevance hinges on its dynamically enforced alignment with the theoretical $C_P$. The critical justification for using this operational proxy in place of the theoretical $C_P$ relies on Theorem 2 (Dynamically Enforced Functional Correspondence), rigorously detailed in Appendix D.
 
@@ -153,18 +178,61 @@ $$
 
 The corresponding operators used in operational dynamics are derived via functional calculus.
 
-**Theorem 3 (Resource Cost Operators $\hat{R}, \hat{R}_I$):** The operational resource cost operators, acting on the MPU Hilbert space $\mathcal{H}_v$, are defined via Borel functional calculus applied to the operational complexity operator $\hat{C}_v$ (Theorem 1):
+**Theorem 3 (Resource Cost Operators $\hat{R}, \hat{R}_I$):** Let
 $$
-\hat{R}(C_v) := R(\hat{C}_v) = \sum_{d=0}^{\infty} R(K_0 + \Delta C(d)) \hat{P}_d \quad \text{(6)}
+\hat C_v = \sum_{d=0}^{d_{\max}} \lambda(d)\hat P_d,
+\qquad
+\lambda(d)=K_0+\Delta C(d),
+$$
+be the operational complexity operator of Theorem 1. Then the operational resource-cost operators are defined by functional calculus as
+$$
+\hat{R}(C_v) := R(\hat{C}_v) = \sum_{d=0}^{d_{\max}} R\bigl(K_0 + \Delta C(d)\bigr) \hat{P}_d \quad \text{(6)}
+$$
+and
+$$
+\hat{R}_I(C_v) := R_I(\hat{C}_v) = \sum_{d=0}^{d_{\max}} R_I\bigl(K_0 + \Delta C(d)\bigr) \hat{P}_d \quad \text{(7)}.
+$$
+For every state $|\psi\rangle$,
+$$
+\langle\psi|\hat R(C_v)|\psi\rangle
+=
+\sum_{d=0}^{d_{\max}} R\bigl(\lambda(d)\bigr)\,\|\hat P_d\psi\|^2,
 $$
 $$
-\hat{R}_I(C_v) := R_I(\hat{C}_v) = \sum_{d=0}^{\infty} R_I(K_0 + \Delta C(d)) \hat{P}_d \quad \text{(7)}
+\langle\psi|\hat R_I(C_v)|\psi\rangle
+=
+\sum_{d=0}^{d_{\max}} R_I\bigl(\lambda(d)\bigr)\,\|\hat P_d\psi\|^2.
 $$
-where $R(\cdot)$ and $R_I(\cdot)$ are the cost functions (Definition 3) applied to the eigenvalues $\lambda(d)=K_0+\Delta C(d)$ of $\hat{C}_v$ associated with projector $\hat{P}_d$. (See Appendix B.2 for construction details).
 
-*Justification:* The physical relevance of using the expectation values $\langle \hat{R}(C_v) \rangle$ and $\langle \hat{R}_I(C_v) \rangle$ to represent actual resource costs within the system's dynamics (e.g., in defining $\Psi$ (Definition 20) or the Stress-Energy Tensor (Definition B.8, Appendix B) is established by Theorem 2. Since the system dynamics governed by POP/PCE necessarily drive viable equilibrium states to satisfy $C_P(v) = \langle \hat{C}_v \rangle_{x^*}$, applying the cost functions $R, R_I$ to the eigenvalues of $\hat{C}_v$ yields operators whose expectation values accurately reflect the true resource costs $R(C_P)$ and $R_I(C_P)$ in those physically relevant states.
+*Proof.* Since $\hat C_v$ is self-adjoint with finite spectrum $\{\lambda(d)\}_{d=0}^{d_{\max}}$, the spectral theorem gives
+$$
+f(\hat C_v)=\sum_{d=0}^{d_{\max}} f\bigl(\lambda(d)\bigr)\hat P_d
+$$
+for every Borel function $f$ on $\sigma(\hat C_v)$. Applying this to $f=R$ and $f=R_I$ yields Equations (6) and (7). Taking expectation values in a state $|\psi\rangle$ and using $\langle\psi|\hat P_d|\psi\rangle=\|\hat P_d\psi\|^2$ gives the displayed formulas. ∎
 
-In the subsequent modeling of adaptation dynamics (e.g., the Adaptation Driving Force, Definition 20), the operational cost is treated using a mean-field approximation, applying the cost function directly to the expectation value of the complexity: $R(\langle \hat{C}_v \rangle; T_{\text{eff}})$. This approximation, $\langle R(\hat{C}_v) \rangle \approx R(\langle \hat{C}_v \rangle)$, is physically well-justified within the PU framework. The Principle of Compression Efficiency (PCE) is expected to drive the system towards equilibrium states that are sharply peaked in the eigenbasis of the complexity operator, minimizing costly fluctuations. In such low-variance states, the difference between the expectation of the (convex) function and the function of the expectation becomes negligible, ensuring the accuracy of the dynamical model.
+*Justification.* Theorem 2 states that at viable equilibria one has
+$$
+C_P(v)=\langle \hat C_v\rangle_{x^\star}.
+$$
+This identifies the scalar theoretical complexity with the expectation of the operational proxy, but it does not by itself imply
+$$
+\langle R(\hat C_v)\rangle = R\bigl(C_P(v)\bigr)
+\qquad\text{or}\qquad
+\langle R_I(\hat C_v)\rangle = R_I\bigl(C_P(v)\bigr)
+$$
+for arbitrary states. For the convex physical-cost function $R$, Jensen's inequality gives
+$$
+\langle R(\hat C_v)\rangle \ge R\bigl(\langle \hat C_v\rangle\bigr)=R\bigl(C_P(v)\bigr).
+$$
+For the logarithmic representative $R_I(C;T_{\text{eff}})=\frac{r_I(T_{\text{eff}})}{\ln 2}\ln(C/K_0)$, concavity gives
+$$
+\langle R_I(\hat C_v)\rangle \le R_I\bigl(\langle \hat C_v\rangle\bigr)=R_I\bigl(C_P(v)\bigr).
+$$
+Exact equality holds only in sharply peaked or affine regimes. Accordingly, the operator expectations are exact spectral averages, while the mean-field replacement
+$$
+\langle R(\hat C_v)\rangle \approx R\bigl(\langle \hat C_v\rangle\bigr)
+$$
+is an additional low-variance approximation used later in the adaptation dynamics.
 
 **2.5 Foundational Theorems: Necessary Conditions for Prediction**
 
@@ -178,9 +246,17 @@ Several conditions are logically necessary for any system to perform prediction 
 
 *Proof.* If these states are indistinguishable (almost surely identical as measurable random variables), then no verification of predictive performance is possible, and improvement ΔQ cannot be assessed. ∎
 
-**Theorem 6 (Necessity of discoverable regularities).** Prediction better than chance requires mutual information I(S(t); S(t + Δt)) > 0 under the true dynamics.
+**Theorem 6 (Necessity of discoverable regularities).** Prediction based only on the present-state data $S(t)$ and achieving better-than-chance performance requires mutual information $I(S(t); S(t + \Delta t)) > 0$ under the true dynamics.
 
-*Proof.* If I(S(t); S(t + Δt)) = 0, then S(t) and S(t + Δt) are independent. For any predictor Ŝ formed from S(t), the data-processing inequality yields I(Ŝ; S(t + Δt)) ≤ I(S(t); S(t + Δt)) = 0. Hence no predictor can improve the Bayes risk (or cross-entropy) relative to the marginal distribution of S(t + Δt). ∎
+*Proof.* Assume a predictor $\hat S$ is formed solely from the present-state information, so $\hat S = f(S(t))$ for some measurable map $f$. If $I(S(t); S(t + \Delta t)) = 0$, then $S(t)$ and $S(t + \Delta t)$ are independent. The data-processing inequality applied to the Markov chain
+$$
+\hat S \leftarrow S(t) \rightarrow S(t+\Delta t)
+$$
+gives
+$$
+I(\hat S; S(t+\Delta t)) \le I(S(t); S(t+\Delta t)) = 0.
+$$
+Hence $\hat S$ is independent of the future state. Therefore conditioning on $\hat S$ cannot change the conditional law of $S(t+\Delta t)$ relative to the marginal law, so no predictor using only $S(t)$ can improve Bayes risk, cross-entropy, or any equivalent proper-scoring prediction criterion relative to the marginal predictor. Thus better-than-chance prediction from present-state data alone requires $I(S(t); S(t+\Delta t))>0$. ∎
 
 **Theorem 7 (Necessity of a representational medium).** Prediction requires a physical medium capable of encoding and processing the relevant states S(t), internal models M_t, and predictions Ŝ(t + Δt).
 
@@ -217,7 +293,7 @@ $$
 |:---------|:-------------------------------------------------------------|:-----------------|
 | Time | The directed ordering of predictive cycles required for verification/update (Theorem 4), sharpened to a thermodynamic arrow by ND‑RID irreversibility and per‑cycle cost $\varepsilon\ge\ln 2$; minimal tick set by $\tau_{min}>0$. | Theorem 4; Definition 27; Theorem 29; Theorem 31; Appendix O |
 | Space | Metric structure induced by coherence/propagation costs on $\mathcal{N}$: $d_{\mathcal{N}}$ from propagation costs (Definition 35) whose PCE‑selected regularity yields a continuum manifold with metric tensor $g_{\mu\nu}$. | Definition 35; Theorem 43–45 |
-| Spacetime unity | Finite $\tau_{\min}$ and bounded propagation costs imply an invariant maximum causal speed $c$ (Theorem 46). With the emergent dimension fixed to $D=4$ by mode/channel matching (Theorem Z.11; Appendix P, P.8.11), Theorem 46 then yields a Lorentzian signature for the continuum effective metric. | Theorem 46; Theorem Z.11; Appendix P (P.8.11) |
+| Spacetime unity | Finite $\tau_{\min}$ and bounded propagation costs imply an invariant maximum causal speed $c$ (Theorem 46). With the emergent dimension fixed to $D=4$ from the mode-channel correspondence (Theorem Z.11; Appendix P, P.8.11), Theorem 46 then yields a Lorentzian signature for the continuum effective metric. | Theorem 46; Theorem Z.11; Appendix P (P.8.11) |
 | Energy | Resource-cost rate required to maintain predictive organization: $R(C)$ and $R_I(C)$ (Definition 3) lift to cost operators (Theorem 3), with an operational Hamiltonian/energy scale set by the minimum cycle time $\tau_{\min}$ (Theorem 29). Coarse-graining yields $T_{\mu\nu}^{(MPU)}$. | Definition 3; Theorem 3; Theorem 29; Appendix B (Definition B.8) |
 | Matter | Persistent, localized predictive structure: MPUs (Definition 23) and their stable aggregates (Definition 29) support field-like degrees of freedom on $(M,g)$ whose stable internal sectors are determined by the topology of the MPU perspective space (Definition 25 with $d_0=8$; Appendix R). | Definition 23; Definition 25; Definition 29; Appendix R |
 | Force | Effective interactions as the PCE-optimal response of $\mathfrak{P}$ to gradients/curvatures of the same underlying cost structure: (i) generalized "forces" as gradients of $V$ in configuration space (Definition 20; Appendix D, Definition D.1), (ii) gauge forces via connection dynamics and minimal coupling (Appendix G), (iii) gravity as metric response sourced by $T_{\mu\nu}^{(MPU)}$ (Theorem 50). | Definition 20; Appendix D (Definition D.1); Appendix G; Theorem 50; Appendix X |
@@ -231,7 +307,7 @@ Because the categories are projections of one structure, canonical inter‑categ
 
 1. **Mass–energy equivalence.** Rest energy is the maintenance cost of relational/predictive information. PU recovers $E=mc^2$ [Einstein 1905b] as a consequence of identifying mass with the action/energy required to maintain relational information content; see Corollary N.5.1 and the associated development in Appendix N.
 
-2. **Lorentzian spacetime with invariant $c$.** The same physical instantiation constraints that enforce $\tau_{\min}>0$ (Theorem 29) and $\varepsilon\ge\ln 2$ (Theorem 31) bound causal influence propagation and yield an invariant maximum speed $c$. With the emergent dimension fixed to $D=4$ by mode/channel matching (Theorem Z.11), Theorem 46 then yields the Lorentzian signature.
+2. **Lorentzian spacetime with invariant $c$.** The same physical instantiation constraints that enforce $\tau_{\min}>0$ (Theorem 29) and $\varepsilon\ge\ln 2$ (Theorem 31) bound causal influence propagation and yield an invariant maximum speed $c$. With the emergent dimension fixed to $D=4$ from the mode-channel correspondence (Theorem Z.11), Theorem 46 then yields the Lorentzian signature.
 
 3. **Forces from connections/gradients.** In the continuum effective description, interactions are encoded in the connections required for predictive coherence: the internal connection $A_\mu$ (Appendix G) and the geometric/spin connection (Theorem 48) together form the transport structure whose curvature yields physical interaction content (Theorem 47). In the classical limit, inertial response and Newton's second law are recovered from the same entropy/action accounting (Theorem N.6), tying "force" to the cost of relational reconfiguration.
 

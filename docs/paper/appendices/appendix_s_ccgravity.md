@@ -1,6 +1,6 @@
 # Appendix S: Resource Cost, Stress-Energy, and the Gravitational Self-Limitation of CC
 
-The Predictive Universe framework predicts that any sustained context capable of biasing quantum outcome statistics (operational CC) carries a resource cost that manifests as stress-energy, producing a gravitational self-dephasing effect that limits its own efficacy. This appendix provides the quantitative analysis of this gravitational feedback mechanism, complementing the primary influence mechanisms (electromagnetic, biological) detailed in Appendix L. While electromagnetic coupling dominates practical CC influence by a factor of approximately $6\times10^{36}$ (Theorem L.5), the gravitational feedback analyzed here provides universal self-limitation and connects CC to fundamental spacetime structure.
+The Predictive Universe framework predicts that any sustained context capable of biasing quantum outcome statistics (operational CC) carries a resource cost that manifests as stress-energy, producing a gravitational self-dephasing effect that limits its own efficacy. This appendix provides the quantitative analysis of this gravitational feedback mechanism, complementing the primary influence mechanisms (electromagnetic, biological) detailed in Appendix L. While electromagnetic coupling dominates practical CC influence by a factor of approximately $6\times10^{36}$ (Proposition L.5), the gravitational feedback analyzed here provides universal self-limitation and connects CC to fundamental spacetime structure.
 
 ## S.1 Resource Cost of the Context State
 
@@ -639,7 +639,7 @@ This appendix analyzes gravitational feedback effects that limit CC efficacy. Fo
    - Universal temporal wave framework (Theorem L.8)
 
 2. **Electromagnetic dominance**
-   - Quantitative demonstration: $\mathcal{R} \sim 6 \times 10^{36}$ for external fields (Theorem L.5)
+   - Quantitative demonstration: $\mathcal{R} \sim 6 \times 10^{36}$ for external fields (Proposition L.5)
    - Worked example with realistic parameters (Section L.11.4)
    - Detection achievable in ~6 seconds with modern ion trap arrays
 
@@ -714,7 +714,7 @@ Different frequency regimes couple through different emergent channels:
 - Rapid phase modulation requires compensating gauge fields (Appendix G)
 - Manifests as electromagnetic radiation (Appendix L, Theorem L.2)
 - Coupling strength: $\alpha_{em} \sim 10^{-2}$ (Appendix Z)
-- Dominates practical influence: $\mathcal{R} \sim 6\times10^{36}$ (Appendix L, Theorem L.5)
+- Dominates practical influence: $\mathcal{R} \sim 6\times10^{36}$ (Appendix L, Proposition L.5)
 
 
 **Low-frequency regime** ($\omega \ll 1/\tau_{medium}$):
@@ -763,7 +763,7 @@ To distinguish electromagnetic from gravitational CC mechanisms, the following d
 **Test 2 (Distance Scaling):** Measure $|\Delta P(r)|$ at varying target distances:
 - EM far-field: $|\Delta P| \propto 1/r^2$ (Equation L.80)
 - EM near-field: $|\Delta P| \propto 1/r^3$ (evanescent regime)
-- Gravitational: $|\Delta P| \propto 1/r^2$ but with coefficient $\sim 10^{-36}$ smaller (Theorem L.5)
+- Gravitational: $|\Delta P| \propto 1/r^2$ but with coefficient $\sim 10^{-36}$ smaller (Proposition L.5)
 - Protocol: Logarithmic distance scan; fit scaling exponent and amplitude
 
 **Test 3 (Frequency Dependence):** Vary modulation frequency $\omega$ of context state:
@@ -776,7 +776,7 @@ To distinguish electromagnetic from gravitational CC mechanisms, the following d
 - Gravitational shielding: Not possible (equivalence principle)
 - Protocol: Compare CC effect with/without EM shielding at constant $P_{context}$
 
-**Expected Outcome:** EM dominance (Theorem L.5) predicts Tests 1-3 follow EM scaling, Test 4 shows strong shielding effect. Observation of gravitational-dominated behavior would require $\mathcal{R} \lesssim 1$, contradicting Theorem L.5 and indicating new physics.
+**Expected Outcome:** EM dominance (Proposition L.5) predicts Tests 1-3 follow EM scaling, Test 4 shows strong shielding effect. Observation of gravitational-dominated behavior would require $\mathcal{R} \lesssim 1$, contradicting Proposition L.5 and indicating new physics.
 
 ### S.8.5 Theoretical Integration Points
 

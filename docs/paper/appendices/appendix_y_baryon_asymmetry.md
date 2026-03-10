@@ -33,36 +33,22 @@ The NOT operation on binary states generates two complementary branches:
 - Branch $\mathcal{A}$: prediction was 0 → outcome is 1
 - Branch $\mathcal{B}$: prediction was 1 → outcome is 0
 
-**Proposition Y.1** (Charge Conjugation as NOT). *The charge conjugation operator $\mathsf{C}$ corresponds to the logical NOT operation on the predictive state space, with the $\mathbb{Z}_2$ structure of SPAP mapped to the discrete symmetry sector of CPT.*
+**Proposition Y.1** (Predictive $\mathbb{Z}_2$ Involution and Charge-Conjugation Modeling). *The SPAP update determines a canonical logical $\mathbb{Z}_2$ involution on the predictive two-branch state space. Interpreting that involution as particle-antiparticle exchange is an additional physical identification, modeled by charge conjugation $\mathsf{C}$ on a chosen two-state sector.*
 
 This proposition establishes a correspondence principle between logical and physical structures:
 
-| SPAP Logic | Particle Physics |
-|:-----------|:-----------------|
-| Binary state $\phi \in \{0,1\}$ | Particle/antiparticle |
-| NOT operation | Charge conjugation $\mathsf{C}$ |
-| $\mathbb{Z}_2$ symmetry | CPT discrete symmetry |
-| 2-to-1 merge | Pair annihilation |
+| SPAP Logic | Particle Physics Interpretation |
+|:-----------|:--------------------------------|
+| Binary state $\phi \in \{0,1\}$ | Two-state particle/antiparticle sector |
+| NOT operation | Modeled by charge conjugation $\mathsf{C}$ |
+| $\mathbb{Z}_2$ symmetry | Discrete exchange symmetry in the chosen sector |
+| 2-to-1 merge | Effective annihilation / branch-selection analogue |
 
-*Proof.* The SPAP cycle (Theorem 10) requires a 2-to-1 logical merge mapping four input states to two output states (Lemma Z.2). This merge structure induces a $\mathbb{Z}_2$ symmetry on the predictive state space.
-
-**Step 1 (Binary structure from SPAP).** The SPAP update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ operates on binary states $\phi \in \{0,1\}$. The NOT operation is the unique non-trivial involution on $\{0,1\}$, generating the group $\mathbb{Z}_2$.
-
-**Step 2 (Physical instantiation via PPI).** By the Principle of Physical Instantiation (Definition P.6.2), the abstract $\mathbb{Z}_2$ symmetry must be realized physically. In relativistic quantum field theory, the CPT theorem [Pauli 1955; Lüders 1954] establishes that $\mathsf{CPT}$ is the unique antiunitary involution preserving the Poincaré algebra. The SPAP $\mathbb{Z}_2$ corresponds to the charge-conjugation component $\mathsf{C}$ of this fundamental symmetry.
-
-**Step 3 (Basis identification).** Define predictive basis states $|0\rangle$ and $|1\rangle$ as eigenstates of the SPAP phase register. Under the physical realization of NOT:
-$$\mathsf{C}|0\rangle = |1\rangle, \quad \mathsf{C}|1\rangle = |0\rangle$$
-
-**Step 4 (Entangled vacuum).** The CPT-invariant vacuum state, prior to SPAP verification, exists in the maximally entangled form:
-$$|\Omega\rangle = \frac{1}{\sqrt{2}}\left(|0\rangle|\bar{0}\rangle + |1\rangle|\bar{1}\rangle\right)$$
-where bars denote the conjugate sector. This state is annihilated by $\mathsf{C} \otimes \mathsf{C} - I$, ensuring CPT invariance of the vacuum.
-
-**Justification of Correspondence.** The C↔NOT identification is constrained by:
-1. **Uniqueness:** NOT is the unique non-trivial involution on $\{0,1\}$; $\mathsf{C}$ is the unique charge-reversing involution in QFT
-2. **Algebraic match:** Both generate $\mathbb{Z}_2$ group structure
-3. **Physical consistency:** Both relate states that are complementary in a precise operational sense
-
-**Falsifiability:** If a physical system exhibited charge-conjugation-like symmetry without $\mathbb{Z}_2$ structure, the correspondence would fail. ∎
+*Proof.* The SPAP update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ acts on the binary set $\{0,1\}$, and NOT is the unique non-trivial involution on that set. Therefore the predictive state space carries a canonical $\mathbb{Z}_2$ action. By the Principle of Physical Instantiation (Definition P.6.2), any concrete realization of this two-branch structure must choose a physical involution exchanging the two branches. In a relativistic particle-antiparticle sector, a natural choice is charge conjugation $\mathsf{C}$. The CPT theorem [Pauli 1955; Lüders 1954] guarantees that such a charge-conjugation operator fits consistently into the usual discrete-symmetry structure of local relativistic QFT, but it does not by itself prove that every predictive $\mathbb{Z}_2$ involution must equal $\mathsf{C}$. After adopting this modeling identification, one may choose a basis $|0\rangle,|1\rangle$ with
+$$
+\mathsf{C}|0\rangle = |1\rangle, \qquad \mathsf{C}|1\rangle = |0\rangle.
+$$
+The proposition therefore establishes a model-level correspondence between the predictive involution and charge conjugation, not an unconditional derivation of $\mathsf{C}$ from CPT. ∎
 
 ### Y.2.2 The 2-to-1 Merge and Branch Selection
 
@@ -117,11 +103,12 @@ This mismatch generates a non-trivial Berry curvature, and the holonomy around t
 
 ### Y.3.3 Departure from Thermal Equilibrium
 
-The SPAP cycle is intrinsically irreversible (Theorem 31: $\varepsilon \ge \ln 2$). At the cosmological level, the arrow of time (Appendix O) and horizon thermodynamics (Section 12) enforce departure from global thermal equilibrium during cosmic expansion.
+The SPAP cycle is intrinsically irreversible (Theorem 31: $\varepsilon \ge \ln 2$). At the cosmological level, the arrow of time (Appendix O) and the nonzero thermodynamic cost of predictive updating prevent exact global equilibrium. In the PU baryogenesis mechanism, the electroweak epoch is the regime in which sphaleron transitions are active, while the residual nonequilibrium efficiency is encoded by the complexity-suppression factor introduced later as $e^{-\kappa_B}$.
 
-Specifically, the electroweak crossover at $T \sim 160$ GeV provides the epoch where sphaleron processes are active but the expansion rate $H(T)$ prevents full equilibration, satisfying the Sakharov out-of-equilibrium condition.
-
-*Proof of Theorem Y.2.* Conditions (1)-(3) follow respectively from Theorem G.8.4b + index theory, Theorem T.56, and Theorem 31 + cosmological dynamics. These are derived consequences of the PU axioms, not independent assumptions. ∎
+*Proof of Theorem Y.2.*  
+(1) Equation (Y.1), derived from the chiral $SU(2)_L$ anomaly, gives $\partial_\mu J^\mu_{B+L}\neq 0$ whenever the topological density $W\tilde W$ has nonzero integral, so baryon number is violated.  
+(2) The electroweak interaction is chiral and therefore distinguishes charge-conjugate configurations, and Theorem T.56 supplies a nonzero Berry-holonomy phase $\delta = 66.7^\circ$, so CP is violated.  
+(3) Theorem 31 provides a strictly positive irreversible budget $\varepsilon \ge \ln 2$ for the underlying predictive update, Appendix O supplies the macroscopic arrow of time, and the later baryogenesis formula encodes the remaining departure from equilibrium by the factor $e^{-\kappa_B}$. Hence the framework contains a built-in nonequilibrium source during the electroweak epoch. These are derived consequences of the PU axioms, not independent assumptions. ∎
 
 ---
 
@@ -190,47 +177,69 @@ $$\sin\delta = \sin(66.7°) = 0.918 \tag{Y.8}$$
 
 ### Y.5.3 CP-Odd Effective Action
 
-**Theorem Y.6.1** (CP-Odd Effective Action from Berry Holonomy). *The Berry holonomy $\delta$ induces a CP-odd term in the electroweak effective action:*
-$$\Delta S_{CP} = \frac{\sin\delta}{16\pi^2} \int d^4x \, W^a_{\mu\nu}\tilde{W}^{a\mu\nu}$$
+**Theorem Y.6.1** (CP-Odd Effective Action from Berry Holonomy). *Fix the flavor loop $\gamma$ on $\text{Gr}(2,8)$ used in Theorem T.56, and let $\delta = \oint_\gamma \mathcal{A} = \int_\Sigma \mathcal{F}$ be its gauge-invariant holonomy angle. Any local CP-odd contribution of this sector to the four-dimensional electroweak effective action has the form*
+$$
+\Delta S_{CP} = \frac{f(\delta)}{16\pi^2} \int d^4x \, W^a_{\mu\nu}\tilde{W}^{a\mu\nu},
+$$
+*where $f$ is an odd $2\pi$-periodic scalar function. In the single-harmonic truncation used for the rate estimate below, $f(\delta)=\sin\delta$.*
 
 *Proof.* 
 
-**Step 1 (Anomaly-holonomy correspondence).** The Berry connection $\mathcal{A}$ on the generation manifold $\text{Gr}(2,8)$ couples to the electroweak gauge field through the covariant derivative in the flavor-changing vertices. The path integral over fermion fields yields the anomaly functional:
-$$\Gamma_{\text{anom}}[A, \mathcal{A}] = \frac{1}{16\pi^2}\int d^4x \, \mathrm{tr}(\mathcal{F}) \cdot W\tilde{W}$$
-where $\mathcal{F} = d\mathcal{A} + \mathcal{A} \wedge \mathcal{A}$ is the Berry curvature.
+**Step 1 (Holonomy is the scalar input).** The Berry curvature $\mathcal{F} = d\mathcal{A} + \mathcal{A}\wedge\mathcal{A}$ is a 2-form on the generation manifold $\text{Gr}(2,8)$, so it cannot itself appear as a scalar coefficient in a four-dimensional spacetime action. For a fixed flavor loop $\gamma$, the gauge-invariant scalar associated with the Berry sector is instead the holonomy angle
+$$
+\delta = \oint_\gamma \mathcal{A} = \int_\Sigma \mathcal{F},
+$$
+by Stokes' theorem and Theorem T.56.
 
-**Step 2 (Holonomy evaluation).** For a flavor loop $\gamma$ enclosing surface $\Sigma$ on $\text{Gr}(2,8)$:
-$$\oint_\gamma \mathcal{A} = \int_\Sigma \mathcal{F} = \delta$$
-by Stokes' theorem and the definition of $\delta$ (Theorem T.56).
+**Step 2 (Allowed local CP-odd operator).** In four spacetime dimensions, the lowest-order local gauge-invariant CP-odd operator built from the $SU(2)_L$ field strength is $W^a_{\mu\nu}\tilde W^{a\mu\nu}$. Therefore any local CP-odd coupling induced by the Berry-holonomy sector must have the scalar form
+$$
+\Delta S_{CP} = \frac{f(\delta)}{16\pi^2}\int d^4x\,W^a_{\mu\nu}\tilde W^{a\mu\nu}
+$$
+for some scalar function $f$.
 
-**Step 3 (Effective theta term).** Periodicity of the holonomy angle implies the physical CP-odd coupling is its sine. Therefore the CP-odd correction can be written as
-$$\Delta S_{CP} = \frac{\sin\theta_{\text{eff}}}{16\pi^2}\int d^4x\, W\tilde{W},
-\qquad \theta_{\text{eff}}=\delta.$$
-Using the Chern-Simons definition (Y.3),
-$$\int d^4x\,W\tilde{W} = \frac{32\pi^2}{g^2}\,\Delta N_{CS},$$
+**Step 3 (Parity and periodicity).** Because $\delta$ is an angle, $f$ must be $2\pi$-periodic. Because $W\tilde W$ is CP-odd, $f$ must be odd: $f(-\delta)=-f(\delta)$. The single-harmonic truncation keeps the leading odd periodic term and sets
+$$
+f(\delta)=\sin\delta.
+$$
+
+**Step 4 (Unit topological transition).** With this truncation,
+$$
+\Delta S_{CP} = \frac{\sin\delta}{16\pi^2}\int d^4x\,W\tilde W.
+$$
+Using the Chern-Simons identity (Y.3),
+$$
+\int d^4x\,W\tilde W = \frac{32\pi^2}{g^2}\,\Delta N_{CS},
+$$
 so for $\Delta N_{CS}=\pm 1$,
-$$\Delta S_{CP}(\pm)=\pm\frac{2\sin\delta}{g^2}
-=\pm\sin\delta\frac{S_{sph}}{8\pi^2},$$
+$$
+\Delta S_{CP}(\pm)=\pm\frac{2\sin\delta}{g^2}
+=\pm\sin\delta\frac{S_{sph}}{8\pi^2},
+$$
 since $S_{sph}=16\pi^2/g^2$.
 
-**Step 4 (Sphaleron rate asymmetry).** The CP-odd term modifies sphaleron transition rates. For transitions in the $\pm$ directions (increasing/decreasing $N_{CS}$):
-$$\Gamma_{\text{sph}}^{(\pm)} = \Gamma_{\text{sph}}^{(0)} \exp\left(\pm \frac{\sin\delta \cdot S_{\text{sph}}}{8\pi^2}\right) = \Gamma_{\text{sph}}^{(0)} \exp\left(\pm \mathcal{S} \sin\delta\right)$$
+**Step 5 (Rate asymmetry).** The CP-odd action shift modifies the forward and backward sphaleron rates to
+$$
+\Gamma_{\text{sph}}^{(\pm)} = \Gamma_{\text{sph}}^{(0)} \exp\left(\pm \frac{\sin\delta \cdot S_{\text{sph}}}{8\pi^2}\right) = \Gamma_{\text{sph}}^{(0)} \exp\left(\pm \mathcal{S} \sin\delta\right),
+$$
+where $\mathcal{S}=S_{sph}/(8\pi^2)$. Therefore
+$$
+\frac{\Gamma^{(+)} - \Gamma^{(-)}}{\Gamma^{(+)} + \Gamma^{(-)}} = \tanh(\mathcal{S} \cdot \sin\delta) \tag{Y.9}
+$$
 
-The asymmetry between $+$ and $-$ transitions is:
-$$\frac{\Gamma^{(+)} - \Gamma^{(-)}}{\Gamma^{(+)} + \Gamma^{(-)}} = \tanh(\mathcal{S} \cdot \sin\delta) \tag{Y.9}$$
+**Step 6 (Numerical evaluation).** With $\mathcal{S} = 4.77$ and $\sin\delta = 0.918$:
+$$
+\mathcal{S} \cdot \sin\delta = 4.77 \times 0.918 = 4.37886 \approx 4.38
+$$
+and therefore
+$$
+\tanh(4.37886) = 0.999686\ldots \approx 0.9997.
+$$
+This is the saturation regime. ∎
 
-**Step 5 (Numerical evaluation).** With $\mathcal{S} = 4.77$ and $\sin\delta = 0.918$:
-$$\mathcal{S} \cdot \sin\delta = 4.77 \times 0.918 = 4.38$$
-$$\tanh(4.38) = 0.9997 \approx 1$$
-
-**Step 6 (Saturation regime).** Since $\mathcal{S} \cdot \sin\delta \gg 1$, the sphaleron asymmetry *saturates* at unity. This is qualitatively different from perturbative treatments where the asymmetry would be linear in the CP phase.
-
-∎
-
-**Proposition Y.7** (Saturated CP Asymmetry). *When $\mathcal{S} \cdot \sin\delta \gg 1$, the sphaleron asymmetry saturates:*
+**Proposition Y.7** (Saturated CP Asymmetry in the Single-Harmonic Truncation). *Under the single-harmonic choice $f(\delta)=\sin\delta$, when $\mathcal{S} \cdot \sin\delta \gg 1$, the sphaleron asymmetry saturates:*
 $$\mathcal{F}_{CP} \equiv \frac{\Gamma^{(+)} - \Gamma^{(-)}}{\Gamma^{(+)} + \Gamma^{(-)}} = \tanh(\mathcal{S} \sin\delta) \to 1$$
 
-*In this regime, the baryon asymmetry is controlled by the efficiency of converting this maximal asymmetry into net baryon number, not by the magnitude of the CP phase directly.*
+*In this regime, the baryon asymmetry is controlled by the efficiency of converting the near-maximal CP asymmetry into net baryon number, not by small variations of the phase itself.*
 
 ### Y.5.4 Comparison with Spontaneous Baryogenesis
 
@@ -299,7 +308,11 @@ where $\kappa$ counts the effective dimensionality of the relevant configuration
 
 ### Y.6.2 Derivation of Baryogenesis Complexity
 
-**Theorem Y.8** (Baryogenesis Complexity). *The baryogenesis complexity is:*
+**Theorem Y.8** (Baryogenesis Complexity). *Assume that:*
+1. *the CP half-step law of Theorem Y.11.2 holds for the relevant electroweak saddle sector, so $\kappa_{CP}=\kappa_{EW}/2$; and*
+2. *to leading exponential order, the baryogenesis measure factorizes into independent CP-odd gauge and generation-coherence sectors, so the corresponding suppression factors multiply and the exponents add.*
+
+*Then the baryogenesis complexity is:*
 
 $$\boxed{\kappa_B = \kappa_{CP} + \kappa_{gen} = 19.25 + 0.23 = 19.48} \tag{Y.11}$$
 
@@ -367,10 +380,23 @@ The single-verification form ($\varepsilon/N_g$ rather than $2\varepsilon/N_g$) 
 
 ∎
 
-**Step 4: Independence of Components.** The two contributions $\kappa_{CP}$ and $\kappa_{gen}$ arise from distinct aspects: the CP-odd gauge moduli (bulk geometry) and the generational coherence (boundary information). Their independence follows from the factorization of the instanton measure into gauge and flavor components.
+**Step 4: Leading-Exponential Factorization.** By the factorization hypothesis in the theorem statement, the baryogenesis measure separates at leading exponential order into a CP-odd gauge contribution and a generation-coherence contribution:
+$$
+d\mu_B = d\mu_{CP}\, d\mu_{gen}\,(1+o(1)).
+$$
+Hence the suppression factors multiply:
+$$
+e^{-\kappa_B} = e^{-\kappa_{CP}} e^{-\kappa_{gen}},
+$$
+and therefore the exponents add:
+$$
+\kappa_B = \kappa_{CP} + \kappa_{gen}.
+$$
 
 **Step 5: Total Complexity.**
-$$\kappa_B = \kappa_{CP} + \kappa_{gen} = 19.25 + 0.23 = 19.48$$
+$$
+\kappa_B = \kappa_{CP} + \kappa_{gen} = 19.25 + 0.23 = 19.48.
+$$
 
 The value $\kappa_{gen} = 0.23$ corresponds to single verification ($\varepsilon/N_g$), consistent with the CP-odd projection already captured in $\kappa_{CP}$.
 
@@ -453,7 +479,7 @@ $$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W}$$
 
 **Step 1 (Fine structure constant).** From Appendix Z, Theorem Z.26, the Thomson-limit fine structure constant is derived from capacity saturation on the PCE-Attractor with interface corrections:
 $$
-\alpha_{em}^{-1}(\text{Thomson}) = 137.036092 \pm 0.000050
+\alpha_{em}^{-1}(\text{Thomson}) = 137.036092 \pm 0.000060
 $$
 where the uncertainty is the conservative truncation bound for the first neglected higher-order term (Appendix Z, Section Z.27.9).
 
@@ -483,7 +509,7 @@ This derivation uses zero continuously adjustable parameters beyond $K_0 = 3$. �
 | $\varepsilon$ | $\ln 2 = 0.6931$ | Theorem 31 |
 | $N_g$ | 3 | Proposition R.3.5 |
 | $\delta$ | $66.7°$ | Theorem T.56 |
-| $\alpha_{em}^{-1}$(Thomson) | $137.036092 \pm 0.000050$ | Theorem Z.26 |
+| $\alpha_{em}^{-1}$(Thomson) | $137.036092 \pm 0.000060$ | Theorem Z.26 |
 | $\sin^2\theta_W^{(0)}$ | $3/8$ | Gauge normalization (Theorem T.14) |
 | $\alpha_W$ | $\approx 1/30$ | Derived: $\alpha_W = \alpha_{em}/\sin^2\theta_W$ |
 | $c_{sph}$ | $28/79 = 0.354$ | $(8N_g + 4n_H)/(22N_g + 13n_H)$ with $N_g = 3$ |
@@ -573,7 +599,7 @@ All derived quantities are consistent with observation.
 | $\varepsilon = \ln 2$ | Derived | Landauer limit (Theorem 31) |
 | $N_g = 3$ | Derived | Anomaly cancellation (Proposition R.3.5) |
 | $\delta = 66.7°$ | Derived | Berry holonomy (Theorem T.56) |
-| $\alpha_{em}^{-1} = 137.036092 \pm 0.000050$ | Derived | Capacity saturation (Theorem Z.26) |
+| $\alpha_{em}^{-1} = 137.036092 \pm 0.000060$ | Derived | Capacity saturation (Theorem Z.26) |
 | $\sin^2\theta_W^{(0)} = 3/8$ | Derived | Bures geometry (Theorem T.14) |
 | $\alpha_W \approx 1/30$ | Derived | $\alpha_{em}/\sin^2\theta_W$ at $T_{sph}$ |
 | $c_{sph} = 28/79$ | Derived | $(8N_g + 4n_H)/(22N_g + 13n_H)$ |
@@ -661,16 +687,32 @@ $$\boxed{\eta_B = \mathcal{P}_{\mathrm{eff}}\sqrt{\frac{v}{M_{Pl}}}}$$
 
 $$\boxed{\eta_B^2 = \mathcal{P}_{\mathrm{eff}}^2\frac{v}{M_{Pl}}}$$
 
-*Proof.* From Theorem T.5, the electroweak scale satisfies
-$$\frac{v}{M_{Pl}} \sim e^{-\kappa_{EW}}, \quad \kappa_{EW}=38.5.$$
+*Proof.* From Theorem T.6 and Proposition T.4, the electroweak scale satisfies
+$$
+\frac{v}{M_{Pl}} = A_{EW} e^{-\kappa_{EW}},
+\qquad
+\kappa_{EW}=38.5,
+\qquad
+A_{EW}=1.084\pm0.005.
+$$
 
 From Theorem Y.8, the baryogenesis complexity is
-$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g}.$$
-Therefore the dominant exponential dependence is
-$$e^{-\kappa_B} \sim e^{-\kappa_{EW}/2} = \sqrt{e^{-\kappa_{EW}}} = \sqrt{\frac{v}{M_{Pl}}}.$$
+$$
+\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g}.
+$$
+Therefore
+$$
+e^{-\kappa_B}
+=
+e^{-\varepsilon/N_g} e^{-\kappa_{EW}/2}
+=
+e^{-\varepsilon/N_g} A_{EW}^{-1/2}\sqrt{\frac{v}{M_{Pl}}}.
+$$
 
-The remaining CP, washout, and irreversibility factors are dimensionless and are collected into the prefactor
-$$\mathcal{P}_{\mathrm{eff}} := \mathcal{C}_{eff}\mathcal{F}_{CP}f_{wash}e^{-\varepsilon/N_g}.$$
+The remaining CP and washout factors are dimensionless and are collected into the prefactor
+$$
+\mathcal{P}_{\mathrm{eff}} := \mathcal{C}_{eff}\mathcal{F}_{CP}f_{wash}e^{-\varepsilon/N_g}A_{EW}^{-1/2}.
+$$
 Hence the full hierarchy link takes the stated prefactor-weighted square-root form. ∎
 
 ### Y.10.3.2 Numerical Verification
@@ -684,34 +726,56 @@ Hence the full hierarchy link takes the stated prefactor-weighted square-root fo
 | Observed $\eta_B$ | — | $6.1 \times 10^{-10}$ |
 | Ratio | $\sqrt{v/M_{Pl}}/\eta_B$ | $7.4$ |
 
-The factor of $\sim 7$ is accounted for by the prefactors:
-$$\mathcal{C}_{eff} \times \mathcal{F}_{CP} \times f_{wash} \times e^{-\varepsilon/N_g} = 0.282 \times 0.9997 \times 0.63 \times 0.79 = 0.14$$
+The factor of $\sim 7$ is accounted for by the derived prefactor:
+$$
+\mathcal{C}_{eff} \times \mathcal{F}_{CP} \times f_{wash} \times e^{-\varepsilon/N_g} \times A_{EW}^{-1/2}
+=
+0.282 \times 0.9997 \times 0.63 \times 0.79 \times 1.084^{-1/2}
+\approx 0.135
+$$
 
 Therefore:
-$$\eta_B = 0.14 \times \sqrt{\frac{v}{M_{Pl}}} = 0.14 \times 4.5 \times 10^{-9} = 6.2 \times 10^{-10} \checkmark$$
+$$
+\eta_B \approx 0.135 \times \sqrt{\frac{v}{M_{Pl}}}
+\approx 0.135 \times 4.5 \times 10^{-9}
+\approx 6.1 \times 10^{-10} \checkmark
+$$
 
 ### Y.10.3.3 Origin of the Square Root
 
-**Theorem Y.11.2** (CP as Square Root Operator). *The square root relationship arises because CP is a $\mathbb{Z}_2$ symmetry that bisects configuration space.*
+**Theorem Y.11.2** (Conditional CP Half-Step Law). *Assume that the CP involution acts freely on the relevant electroweak saddle sector, preserves the reduced measure on that sector, and splits the leading PCE complexity equally between the CP-even and CP-odd components. Then*
+$$
+\kappa_{CP} = \frac{\kappa_{EW}}{2},
+\qquad
+e^{-\kappa_{CP}} = e^{-\kappa_{EW}/2}.
+$$
 
-*Proof.* 
+*Proof.*
 
-**Step 1 (CP structure).** The CP transformation is an involution: $(\mathsf{CP})^2 = 1$. This generates a $\mathbb{Z}_2$ action on the electroweak configuration space $\mathcal{M}_{EW}$.
+**Step 1 (CP involution).** The CP transformation satisfies $(\mathsf{CP})^2 = 1$, so it defines a $\mathbb{Z}_2$ action on the relevant electroweak configuration sector $\mathcal{M}_{EW}$.
 
-**Step 2 (Sector decomposition).** Under $\mathbb{Z}_2$, the configuration space decomposes:
-$$\mathcal{M}_{EW} = \mathcal{M}_{+} \sqcup \mathcal{M}_{-}$$
-where $\mathcal{M}_{+}$ is CP-even and $\mathcal{M}_{-}$ is CP-odd.
+**Step 2 (Sector decomposition).** By the hypothesis that this action is free on the relevant saddle sector and preserves the reduced measure, the sector decomposes into two measure-matched components,
+$$
+\mathcal{M}_{EW} = \mathcal{M}_{+} \sqcup \mathcal{M}_{-},
+$$
+interchanged by CP.
 
-**Step 3 (Complexity bisection).** For a symmetric $\mathbb{Z}_2$ action that bisects the configuration space volume, each sector carries half the total complexity:
-$$\kappa(\mathcal{M}_{\pm}) = \frac{1}{2}\kappa(\mathcal{M}_{EW}) = \frac{\kappa_{EW}}{2}$$
+**Step 3 (Equal leading complexity split).** By the equal-split hypothesis, the leading PCE complexity carried by each component is half of the total electroweak complexity:
+$$
+\kappa(\mathcal{M}_{+}) = \kappa(\mathcal{M}_{-}) = \frac{\kappa_{EW}}{2}.
+$$
 
-**Step 4 (Baryogenesis selection).** Baryon number violation is CP-odd (it distinguishes matter from antimatter). Therefore baryogenesis samples only $\mathcal{M}_{-}$:
-$$\kappa_B = \kappa(\mathcal{M}_{-}) + \kappa_{gen} = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g}$$
+**Step 4 (Definition of the CP contribution).** The baryogenesis CP contribution is the leading suppression exponent attached to the CP-odd component, so
+$$
+\kappa_{CP} := \kappa(\mathcal{M}_{-}) = \frac{\kappa_{EW}}{2}.
+$$
 
-**Step 5 (Square root emergence).** In terms of suppression factors:
-$$e^{-\kappa_{EW}/2} = \sqrt{e^{-\kappa_{EW}}}$$
+**Step 5 (Suppression factor).** Exponentiating the previous identity gives
+$$
+e^{-\kappa_{CP}} = e^{-\kappa_{EW}/2}.
+$$
 
-The $\mathbb{Z}_2$ structure of CP converts multiplication into square root. ∎
+This is the square-root relation used in Theorem Y.8. ∎
 
 **Corollary Y.11.3** (Topological Origin). *The factor of 2 in $\kappa_B = \kappa_{EW}/2$ is exact, not approximate. It reflects the topological structure of $\mathbb{Z}_2$, which has exactly two elements.*
 

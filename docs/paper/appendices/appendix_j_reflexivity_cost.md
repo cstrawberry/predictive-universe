@@ -28,7 +28,7 @@ G_{cycle}: (\phi_t, p_t) \mapsto (\phi_{t+1}, p_{t+1}) := (\text{NOT}(P_f(\phi_t
 $$
 The logical domain relevant to the reset step is $\{0,1\}\times\{0,1\}$ (four distinguishable configurations of $(\phi,p)$ immediately before reset), while the codomain is $\{0,1\}\times\{p_{ready}\}$ (two configurations) because $p_{ready}$ is fixed.
 
-**Lemma J.1 (Necessary Logical State Merging in SPAP Cycle)**
+**Summary of Lemma J.1 (Necessary Logical State Merging in SPAP Cycle)**
 
 Any deterministic system implementing the minimal self-referential SPAP cycle with finite memory (specifically, reusing a binary ancilla $p$ to store the prediction $\hat{\phi}$ and resetting it for the next cycle) requires a logical mapping over one cycle from its input state $(\phi_t, p_t)$ to its output state $(\phi_{t+1}, p_{t+1})$ that is at least 2-to-1, resulting in an unavoidable logical state merging.
 
@@ -55,7 +55,7 @@ Physical implementation requires encoding logical states into distinct, non-over
 
 The parameter $\varepsilon$ (Definition 28) represents the fundamental, minimal dimensionless entropy production ($S/k_B$, in nats) associated with the necessary irreversible update step of the MPU’s 'Evolve' process (Definition 27). This irreversible step must physically execute the logical state merging inherent in the SPAP cycle when self-referential information is processed.
 
-**Theorem J.1 (Guarantee-Level Logical Lower Bound on $\varepsilon$, Proof of Theorem 31)**
+**Summary of Theorem J.1 (Guarantee-Level Logical Lower Bound on $\varepsilon$, Proof of Theorem 31)**
 
 For a finite-memory, cyclic SPAP implementation that closes the update cycle by resetting an ancilla register to a fixed ready state and must operate correctly for both admissible pre-reset ancilla values without retaining side information about that value at the end of the cycle, the per-cycle lower-bound parameter $\varepsilon$ satisfies:
 $$

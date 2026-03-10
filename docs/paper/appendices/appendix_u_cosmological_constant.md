@@ -8,17 +8,13 @@ $$\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}, \qquad Q \sim 10^{-5}$$
 
 where $L_P$ is the Planck length. The cosmological constant constitutes the largest hierarchy in physics; the primordial amplitude sets the scale of structure formation.
 
-In the Predictive Universe framework, both scales derive from the information-theoretic structure of the Extended Binary Golay Code $\mathcal{G}_{24}$. The vacuum sector involves the full configuration space $\text{Gr}_\mathbb{C}(12,24)$ with complexity $\kappa_\Lambda = 141.5$; the primordial sector involves the signal subspace $\mathbb{CP}^{11}$ with complexity $\kappa_Q = 11$. Both are suppressed by instanton mechanisms:
-
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \, e^{-2\kappa_\Lambda}, \qquad Q^2 = \frac{1}{2} A_Q \, e^{-2\kappa_Q}$$
-
-where $A_{\text{eff}}$ and $A_Q$ are dimensionless $O(1)$ prefactors. For the vacuum sector:
-
+In the Predictive Universe framework, both scales are organized by the information-theoretic structure of the Extended Binary Golay Code $\mathcal{G}_{24}$. The vacuum sector is modeled by the configuration space $\text{Gr}_\mathbb{C}(12,24)$ and the primordial sector by the signal subspace $\mathbb{CP}^{11}$. The Appendix U vacuum discussion is a **reference semiclassical scheme**: it introduces a reference exponent $\kappa_{\mathrm{ref}}$ and a convention-dependent prefactor $A_{\text{eff}}$ for the vacuum weight,
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \, e^{-2\kappa_{\mathrm{ref}}}, \qquad Q^2 = \frac{1}{2} A_Q \, e^{-2\kappa_Q}$$
+with $A_{\text{eff}}$ and $A_Q$ dimensionless $O(1)$ prefactors. For the vacuum sector:
 $$A_{\text{eff}} := K \cdot N_{\text{eff}}$$
+Here $K$ is the one-loop determinant ratio from Gaussian fluctuations around the bounce, and $N_{\text{eff}}$ is the polynomial extensivity factor from Appendix E. Corollary U.15b supplies two distinct statements: an algebraic observational inversion giving $A_{\text{eff}}^{(\text{obs})}$, and the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ obtained only after adopting the transferred determinant convention from Appendix T.
 
-Here $K$ is the one-loop determinant ratio from Gaussian fluctuations around the bounce, and $N_{\text{eff}}$ is the polynomial extensivity factor from Appendix E. For a minimal bounce in MPU units, $A_{\text{eff}}$ is a dimensionless computable constant; under the canonical Bures/Fisher normalization fixed in Appendix T it evaluates to $A_{\text{eff}} = 1/A_{EW} = 0.923 \pm 0.011$ (Corollary U.15b).
-
-This appendix derives $\kappa_\Lambda = 141.5$ (Sections U.3–U.14) and $\kappa_Q = 11$ (Sections U.15–U.27) from first principles, demonstrating that the Golay-Steiner structure determines both cosmological scales.
+This appendix derives the Grassmannian base count and the primordial complexity $\kappa_Q = 11$ from the stated geometric inputs. The vacuum value $\kappa_{\mathrm{ref}} = 141.5$ is the Appendix U reference exponent under the leading-order five-mode counting convention introduced in Theorems U.15-U.16, not an unconditional consequence of the virial identity alone.
 
 ---
 
@@ -106,7 +102,18 @@ Physical dynamics occur on the cotangent bundle $T^*\mathcal{M}$.
 
 **Corollary U.4 (Phase Space Dimension).**
 
-$$\dim(T^*\text{Gr}(12, 24)) = 2 \times 144 = 288$$
+For $\mathcal{M}=\text{Gr}_{\mathbb{C}}(12,24)$, the underlying real manifold has dimension
+$$
+\dim_{\mathbb{R}}(\mathcal{M}) = 2 \cdot 144 = 288.
+$$
+Hence the real cotangent bundle has dimension
+$$
+\dim_{\mathbb{R}}(T^*\mathcal{M}) = 2\,\dim_{\mathbb{R}}(\mathcal{M}) = 576.
+$$
+Equivalently, regarded as a holomorphic vector bundle, $T^*\mathcal{M}$ has complex dimension
+$$
+\dim_{\mathbb{C}}(T^*\mathcal{M}) = 2\,\dim_{\mathbb{C}}(\mathcal{M}) = 288.
+$$
 
 ---
 
@@ -124,40 +131,83 @@ where $\mathcal{O}$ is the set of 759 octads and $\bar{u} = \frac{1}{24}\sum_{i=
 
 Let $B$ be the $759 \times 24$ incidence matrix defined by $B_{O,i} = 1$ if $i \in O$ and $0$ otherwise.
 
-**Theorem U.5 (Octad Hessian).** The Hessian of the centered octad potential is:
+**Theorem U.5 (Octad Hessian).** Let
+$$
+Q(u)=\sum_{O\in\mathcal O}\left(\sum_{i\in O}(u_i-\bar u)\right)^2,
+\qquad
+\bar u=\frac1{24}\sum_{i=1}^{24}u_i.
+$$
+Then the Hessian of the centered octad potential is
+$$
+\nabla^2 Q(0)=2(r-\lambda)\left(I-\frac1{24}\mathbf1\mathbf1^T\right).
+$$
+Equivalently, if $Q(u)=u^T A_{oct} u$, then
+$$
+A_{oct}=(r-\lambda)\left(I-\frac1{24}\mathbf1\mathbf1^T\right).
+$$
+Hence:
+- the Hessian has eigenvalue $0$ on $\text{span}\{\mathbf1\}$ and eigenvalue $2(r-\lambda)=352$ on $\mathbf1^\perp$;
+- the quadratic-form operator $A_{oct}$ has eigenvalue $0$ on $\text{span}\{\mathbf1\}$ and eigenvalue $r-\lambda=176$ on $\mathbf1^\perp$.
 
-$$H = \nabla^2 Q(0) = (r - \lambda)\left(I - \frac{1}{24}\mathbf{1}\mathbf{1}^T\right)$$
-
-with eigenvalues:
-- $0$ on $\text{span}\{\mathbf{1}\}$ (multiplicity 1)
-- $r - \lambda = 176$ on $\mathbf{1}^\perp$ (multiplicity 23)
-
-*Proof.* For a 2-design with parameters $(v, k_{\text{block}}, \lambda)$:
-
-$$B^T B = (r - \lambda)I + \lambda \mathbf{1}\mathbf{1}^T$$
-
-The centered Gram matrix is:
-
-$$H = B^T B - \frac{bk_{\text{block}}}{v}\mathbf{1}\mathbf{1}^T = (r - \lambda)\left(I - \frac{1}{v}\mathbf{1}\mathbf{1}^T\right)$$
-
-The projection $P_{\mathbf{1}^\perp} = I - \frac{1}{24}\mathbf{1}\mathbf{1}^T$ has eigenvalue 0 on $\text{span}\{\mathbf{1}\}$ and eigenvalue 1 on the 23-dimensional orthogonal complement. $\square$
+*Proof.* For each octad $O$, let $b_O\in\mathbb R^{24}$ be its incidence vector and set
+$$
+c_O:=b_O-\frac{k_{\text{block}}}{24}\mathbf1.
+$$
+Then
+$$
+\sum_{i\in O}(u_i-\bar u)=c_O^T u,
+$$
+so
+$$
+Q(u)=\sum_{O\in\mathcal O}(c_O^T u)^2
+=u^T\left(\sum_{O\in\mathcal O} c_O c_O^T\right)u.
+$$
+Therefore
+$$
+A_{oct}=\sum_{O\in\mathcal O} c_O c_O^T,
+\qquad
+\nabla^2Q(0)=2A_{oct}.
+$$
+Writing $B$ for the $759\times24$ incidence matrix, the 2-design identity gives
+$$
+B^T B=(r-\lambda)I+\lambda \mathbf1\mathbf1^T.
+$$
+Since each point lies in exactly $r$ octads and $bk_{\text{block}}=24r$,
+$$
+A_{oct}
+=
+B^T B-\frac{2k_{\text{block}}r}{24}\mathbf1\mathbf1^T+\frac{bk_{\text{block}}^2}{24^2}\mathbf1\mathbf1^T
+=
+(r-\lambda)\left(I-\frac1{24}\mathbf1\mathbf1^T\right).
+$$
+The operator $P_{\mathbf1^\perp}=I-\frac1{24}\mathbf1\mathbf1^T$ is the orthogonal projector onto $\mathbf1^\perp$, so it has eigenvalue $0$ on $\text{span}\{\mathbf1\}$ and eigenvalue $1$ on $\mathbf1^\perp$. The two eigenvalue statements follow immediately. $\square$
 
 ### U.5.3 Connection to Framework Constants
 
-**Theorem U.6 (Hessian-Framework Identity).** The non-zero Hessian eigenvalue satisfies:
+**Theorem U.6 (Octad Regularity Parameter-Framework Identity).** The octad regularity parameter satisfies
+$$
+r-\lambda=d_0(M-a)=8\times22=176.
+$$
+Consequently, by Theorem U.5, the non-zero eigenvalue of the quadratic-form operator $A_{oct}$ is $176$, while the non-zero eigenvalue of the Hessian $\nabla^2Q(0)$ is
+$$
+2(r-\lambda)=352.
+$$
 
-$$r - \lambda = d_0(M - a) = 8 \times 22 = 176$$
-
-*Proof.* From the 2-design formula:
-
-$$r - \lambda = \frac{r(v - k_{\text{block}})}{v - 1} = \frac{253 \times 16}{23} = 176$$
-
-The right-hand side equals $d_0(M - a)$ because:
-- The octad size $k_{\text{block}} = 8 = d_0$ (Golay minimum distance equals MPU dimension)
-- The point count $v = 24 = M$ (code length equals interface modes)
-- Therefore $v - k_{\text{block}} = M - d_0 = 24 - 8 = 16$
-
-The identity $d_0(M - a) = 8 \times 22 = 176$ follows from $M - a = 24 - 2 = 22$. $\square$
+*Proof.* For a $2$-$(v,k_{\text{block}},\lambda)$ design,
+$$
+r=\frac{\lambda(v-1)}{k_{\text{block}}-1},
+\qquad
+r-\lambda=\frac{\lambda(v-k_{\text{block}})}{k_{\text{block}}-1}.
+$$
+Using the Steiner parameters of $S(5,8,24)$ gives
+$$
+r-\lambda=\frac{253(24-8)}{23}=\frac{253\cdot16}{23}=176.
+$$
+Since $k_{\text{block}}=8=d_0$, $v=24=M$, and $a=2$, we have
+$$
+d_0(M-a)=8(24-2)=8\cdot22=176.
+$$
+Thus $r-\lambda=d_0(M-a)=176$. The final statement follows immediately from Theorem U.5, which identifies $\nabla^2Q(0)=2A_{oct}$. $\square$
 
 **Remark U.6a.** This identity connects the Steiner design parameters directly to PU constants, confirming the structural relationship between coding theory and the framework established in Theorem Z.13 and the Golay Bridge (Theorem R.4.9).
 
@@ -237,66 +287,36 @@ $$\frac{\partial \phi^*_a}{\partial a_\mu}\bigg|_{a=0} = -\partial_\mu \phi^*$$
 
 ### U.7.2 Scale Invariance at the PCE Attractor
 
-**Theorem U.8a (Scale Invariance from PCE-Attractor Properties).** At the PCE-Attractor (Definition 15a), the effective action satisfies the **virial identity**:
-
-$$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = 0$$
-
-where $\phi^*_\rho(x) = \phi^*(\rho x)$ is the dilated bounce.
+**Theorem U.8a (Virial Stationarity under Dilations).** Let $S_{\text{cont}}$ be the flat Euclidean action of Definition U.4 and let $\phi^*$ be an $O(4)$-symmetric critical point. For the rescaled family $\phi^*_\rho(x) = \phi^*(\rho x)$,
+$$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = 0.$$
 
 *Proof.*
 
-**Step 1 (PCE-Attractor characterization).** By Definition 15a, the PCE-Attractor is the unique global minimum characterized by three co-occurring conditions: (i) maximal symmetry with flat QFI spectrum; (ii) capacity saturation at the zero-slack boundary where $M\ln(1+\lambda u^*) = \ln d_0$; and (iii) canonical bulk gauge normalization with $\kappa^*_{\mathrm{bulk}}=1$ (Appendix Z, Theorem Z.14; Appendix X, Theorem X.3).
+**Step 1 (Scaling of the kinetic and potential pieces).** In $D$ Euclidean dimensions,
+$$S_{\text{cont}}[\phi^*_\rho] = \rho^{2-D} S_{\text{kin}}(1) + \rho^{-D} S_{\text{pot}}(1),$$
+where $S_{\text{kin}}(1)$ and $S_{\text{pot}}(1)$ are the kinetic and potential contributions of $\phi^*$.
 
-**Step 2 (Effective potential at the Attractor).** From Appendix X (Equation X.10), the effective potential is defined as:
+**Step 2 (Differentiate at $\rho=1$).** Differentiating gives
+$$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = (2-D)S_{\text{kin}}(1) - D S_{\text{pot}}(1).$$
 
-$$V_{\text{eff}}(u;k) := \frac{1}{\mathcal{V}}\Gamma_k[u\text{ const}]$$
+**Step 3 (Criticality of the bounce).** Because $\phi^*$ is a critical point of $S_{\text{cont}}$, the derivative of the restricted one-parameter family must vanish at $\rho=1$. Hence
+$$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1}=0.$$
+For $D=4$ this yields the virial identity $S_{\text{kin}}(1)=2S_{\text{pot}}(1)$. $\square$
 
-At the PCE-Attractor, the constrained stationarity condition (Appendix X, Equation X.12) requires:
+**Remark U.8b (What the virial identity does and does not prove).** The conclusion of Theorem U.8a is a first-variation statement. By itself it does **not** imply that the Hessian has a null vector along dilations. A dilatation zero mode requires a stronger hypothesis: a genuine smooth family of exact critical points generated by scaling.
 
-$$\frac{d}{du}\Big(V_{\text{eff}}(u;k) + \zeta\,[M\ln(1+\lambda u) - \ln d_0]\Big)\Big|_{u=u^*} = 0$$
+**Theorem U.9 (Conditional Dilatation Zero Mode).** Assume, in addition, that there exists a smooth one-parameter family $\rho \mapsto \phi_\rho$ of exact critical points of $S_{\text{cont}}$ with $\phi_1=\phi^*$ and tangent
+$$\frac{\partial \phi_\rho}{\partial (\ln \rho)}\bigg|_{\rho=1} = x^\mu \partial_\mu \phi^*.$$
+Then the Hessian annihilates the dilatation tangent vector:
+$$D^2 S_{\text{cont}}(\phi^*)\!\left[x^\mu \partial_\mu \phi^*, \eta\right] = 0 \qquad \text{for all test directions }\eta.$$
 
-where $\zeta$ is the Lagrange multiplier enforcing capacity saturation. The zero-slack condition means the unconstrained minimum coincides with the capacity boundary, so $\zeta = 0$ at the Attractor.
-
-**Step 3 (Derrick-type analysis).** For the continuum action (Definition U.4), consider the one-parameter family of dilated configurations $\phi^*_\rho(x) = \phi^*(\rho x)$. The action decomposes as:
-
-$$S_{\text{cont}}[\phi^*_\rho] = S_{\text{kin}}(\rho) + S_{\text{pot}}(\rho)$$
-
-where $S_{\text{kin}}(\rho) = \rho^{2-D} S_{\text{kin}}(1)$ and $S_{\text{pot}}(\rho) = \rho^{-D} S_{\text{pot}}(1)$ under standard field-theoretic scaling. For a stationary point $\phi^*$ of $S_{\text{cont}}$, the Derrick theorem requires:
-
-$$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = (2-D) S_{\text{kin}}(1) - D \cdot S_{\text{pot}}(1) = 0$$
-
-This yields the virial constraint $S_{\text{kin}}(1) = \frac{D}{D-2} S_{\text{pot}}(1)$ for $D > 2$.
-
-**Step 4 (Virial identity at the PCE-Attractor).** At the PCE-Attractor in $D = 4$ (Theorem Z.11), the virial constraint becomes:
-
-$$S_{\text{kin}}(1) = 2 \cdot S_{\text{pot}}(1)$$
-
-The total action $S_{\text{cont}}[\phi^*] = S_{\text{kin}}(1) + S_{\text{pot}}(1) = 3 S_{\text{pot}}(1)$ is stationary under dilation by construction. The PCE zero-slack condition (Definition 15a, condition ii) additionally enforces that this stationary point is a minimum: the capacity saturation $M\ln(1+\lambda u^*) = \ln d_0$ fixes the bounce amplitude $u^*$, eliminating the flat direction that would otherwise allow arbitrary rescaling. The scale $\rho = 1$ is selected as the unique fixed point satisfying both the Derrick constraint and capacity saturation.
-
-The virial identity follows:
-
-$$\frac{d}{d\rho} S_{\text{cont}}[\phi^*_\rho]\bigg|_{\rho=1} = 0$$
-
-**Step 5 (Connection to Predictive Ward Identity).** The scale invariance is not accidental but follows from the Predictive Ward Identity and capacity rigidity (Appendix X, Theorem X.3; Appendix Z, Theorem Z.14). The Legendre transform structure (Appendix X, Equation X.3) ensures that the 1PI effective action $\Gamma^{(2)} = \mathcal{G}^{-1} = \mathcal{K}$ inherits the scale properties of the information-theoretic kernel $\mathcal{K}$, which is constructed from the QFI structure. The flat QFI spectrum (Definition 15a, condition i) implies uniform scaling across all 24 modes, precluding any preferred scale.
-
-**Step 6 (PCE optimality).** The virial identity is equivalent to the statement that the PCE-Attractor configuration cannot reduce its action by rescaling. Any $\rho \neq 1$ would break the capacity saturation condition: rescaling the bounce changes the effective coupling $u_{\text{eff}}(\rho) \neq u^*$, violating the zero-slack optimality. The scale $\rho = 1$ is the unique fixed point of the combined PCE constraints. $\square$
-
-**Remark U.8b: Robustness of Scale Invariance.** The scale invariance at the PCE-Attractor is structurally protected by three independent mechanisms: (i) the Derrick virial constraint at the stationary bounce solution; (ii) the zero-slack condition fixing the bounce amplitude through capacity saturation; and (iii) the Predictive Ward Identity together with capacity/QFI rigidity uniquely fixing $\kappa^*_{\mathrm{bulk}}=1$ (Theorem X.3; Theorem Z.14). Breaking scale invariance would require violating at least one of these conditions, shifting $\kappa$ by $0.5$ and changing $\Lambda$ by a factor of $e \approx 2.7$ (see Section U.13.1).
-
-**Theorem U.9 (Dilatation Zero Mode).** Under Theorem U.8, the second variation annihilates the dilatation tangent vector:
-
-$$\frac{\partial \phi^*_\rho}{\partial (\ln \rho)}\bigg|_{\rho=1} = x^\mu \partial_\mu \phi^*$$
-
-*Proof.* The virial identity states that $\phi^*$ is a critical point of $S_{\text{cont}}$ restricted to the 1-parameter family of dilations. The second variation vanishes on the tangent direction. $\square$
+*Proof.* Let $E(\phi):=\delta S_{\text{cont}}/\delta\phi$. Since each $\phi_\rho$ is a critical point, $E(\phi_\rho)=0$ for all $\rho$. Differentiating at $\rho=1$ gives
+$$DE(\phi^*)\!\left[\frac{\partial \phi_\rho}{\partial (\ln \rho)}\bigg|_{\rho=1}\right]=0.$$
+The linearization $DE(\phi^*)$ is the Hessian operator, so the displayed tangent vector lies in the Hessian kernel. $\square$
 
 ### U.7.3 Total Zero Mode Count
 
-**Corollary U.10 (Collective Coordinates).** The continuum instanton $\phi^*$ at the PCE attractor has exactly $m = D + 1 = 5$ collective zero modes:
-
-- 4 translation modes (one per spacetime direction)
-- 1 dilatation mode (scale)
-
-The dilatation zero mode arises from the scale invariance established in Theorem U.8: the PCE-Attractor's Derrick/virial identity produces a conformal flat direction at $\rho = 1$. In standard semiclassical instanton analysis, an $O(4)$-symmetric Euclidean saddle in $D=4$ has four translational collective coordinates, and when the action is scale invariant it additionally admits a dilation collective coordinate corresponding to rescaling of the profile [Coleman 1977; Callan & Coleman 1977]. The value $m = 5$ thus follows from both the PCE structure (Theorem U.8–U.9) and standard collective-coordinate counting independently.
+**Corollary U.10 (Collective Coordinates).** The continuum bounce $\phi^*$ has four translational zero modes by Theorem U.8. It has a fifth dilatation zero mode only under the additional exact-scale-family hypothesis of Theorem U.9. In the remainder of Appendix U, the value $m=5$ is used only as the Appendix U leading-order reference-counting convention for the vacuum sector.
 
 ---
 
@@ -306,25 +326,33 @@ The dilatation zero mode arises from the scale invariance established in Theorem
 
 The continuum Euclidean information action for vacuum fluctuations is constructed from the framework's fundamental structures.
 
-**Definition U.4 (Continuum Information Action).** The continuum action $S_{\text{cont}}[\phi]$ for a scalar fluctuation field $\phi: S^3 \times \mathbb{R} \to \mathbb{R}$ on the unit 3-sphere times Euclidean time is:
+**Definition U.4 (Continuum Information Action).** The continuum action $S_{\text{cont}}[\phi]$ for a scalar fluctuation field $\phi:\mathbb{R}^4\to\mathbb{R}$ is
 
-$$S_{\text{cont}}[\phi] = \frac{1}{\varepsilon}\int_{\mathbb{R}} d\tau \int_{S^3} d\Omega_3 \left[\frac{1}{2}(\partial_\tau \phi)^2 + \frac{1}{2}|\nabla_{S^3}\phi|^2 + V_{\text{eff}}(\phi) - V_{\text{eff}}(0)\right]$$
+$$
+S_{\text{cont}}[\phi] = \frac{1}{\varepsilon}\int_{\mathbb{R}^4} d^4x \left[\frac{1}{2}|\nabla \phi|^2 + V_{\text{eff}}(\phi) - V_{\text{eff}}(0)\right]
+$$
 
-where $\varepsilon = \ln 2$ is the Landauer cost (Theorem 31), $d\Omega_3$ is the round metric on $S^3$, $\nabla_{S^3}$ is the spherical gradient, and $V_{\text{eff}}(\phi)$ is the effective potential from the PCE rate-level potential (Appendix X, Equation X.10). The subtraction $V_{\text{eff}}(0)$ ensures finite action for vacuum-to-vacuum trajectories.
+where $\varepsilon = \ln 2$ is the Landauer cost (Theorem 31). For an $O(4)$-symmetric profile $\phi(x)=\varphi(r)$ with $r=|x|$, this is equivalently
 
-**Remark U.4a (O(4) Invariance).** The action $S_{\text{cont}}$ is manifestly O(4)-invariant: the kinetic term $(\partial_\tau \phi)^2 + |\nabla_{S^3}\phi|^2$ is the standard Laplacian on $S^3 \times \mathbb{R} \cong \mathbb{R}^4 \setminus \{0\}$, and the potential $V_{\text{eff}}$ depends only on the field value, not its location. This invariance is inherited from the isotropy of the PCE-Attractor state (Definition 15a).
+$$
+S_{\text{cont}}[\varphi] = \frac{1}{\varepsilon}\int_0^\infty r^3 dr \int_{S^3} d\sigma_3 \left[\frac{1}{2}(\partial_r \varphi)^2 + \frac{1}{2r^2}|\nabla_{S^3}\varphi|^2 + V_{\text{eff}}(\varphi) - V_{\text{eff}}(0)\right]
+$$
+
+where $d\sigma_3$ is the normalized round measure on $S^3$. The subtraction $V_{\text{eff}}(0)$ ensures finite action for vacuum-to-vacuum trajectories.
+
+**Remark U.4a (O(4) Invariance).** The action above is the flat Euclidean action written in polar coordinates. The factors $r^3$ and $r^{-2}$ are required for the identification with $\mathbb{R}^4$. The radial form is used only to expose the angular quadrature on each sphere $r=\text{const}$.
 
 ### U.8.2 Discrete Sampling
 
-**Definition U.5 (Discrete Sampling).** Let $X = \{x_1, \ldots, x_{24}\} \subset S^3$ be the 24-cell vertices (Definition Z.8). For a continuum field configuration $\phi$, define the discrete vector:
+**Definition U.5 (Discrete Sampling).** Let $X = \{x_1, \ldots, x_{24}\} \subset S^3$ be the 24-cell vertices (Definition Z.8). For a continuum field configuration $\phi$, define the sampled functions
 
-$$u_i = \phi(x_i), \quad i = 1, \ldots, 24$$
+$$u_i(r) = \phi(r x_i), \quad i = 1, \ldots, 24.$$
 
-**Definition U.6 (Discrete Action).** The **discrete action** $S_{\text{disc}}: \mathbb{R}^{24} \to \mathbb{R}$ is defined by evaluating the spherical integral via design quadrature:
-
-$$S_{\text{disc}}(u) = \frac{1}{\varepsilon}\int_{\mathbb{R}} d\tau \left[\frac{1}{2}\sum_{i=1}^{24}\dot{u}_i^2 + \frac{1}{24}\sum_{i,j}W_{ij}(u_i - u_j)^2 + \frac{1}{24}\sum_{i=1}^{24}V_{\text{eff}}(u_i)\right]$$
-
-where $W_{ij}$ encodes the adjacency structure of the 24-cell (derived from the $D_4$ root lattice, Definition Z.8) and the factor $1/24$ normalizes the spherical average. The quadrature replaces $\int_{S^3} d\Omega_3 \to \frac{1}{24}\sum_{i=1}^{24}$, which is exact for polynomials of degree $\leq 5$ by the spherical 5-design property (Theorem U.7).
+**Definition U.6 (Discrete Action).** The **discrete action** $S_{\text{disc}}$ is obtained by replacing the normalized angular average on each sphere by the 24-cell quadrature:
+$$
+S_{\text{disc}}(u) = \frac{1}{\varepsilon}\int_0^\infty r^3 dr \left[\frac{1}{24}\sum_{i=1}^{24}\frac{1}{2}(\partial_r u_i)^2 + \frac{1}{24r^2}\sum_{i,j}W_{ij}(u_i-u_j)^2 + \frac{1}{24}\sum_{i=1}^{24}\big(V_{\text{eff}}(u_i)-V_{\text{eff}}(0)\big)\right]
+$$
+where $W_{ij}$ encodes the chosen discrete angular Dirichlet form and the factor $1/24$ normalizes the spherical average. The quadrature $\int_{S^3} d\sigma_3 \to \frac{1}{24}\sum_{i=1}^{24}$ is exact for polynomials of degree $\leq 5$ by the spherical 5-design property (Theorem U.7).
 
 ### U.8.3 Quadrature Exactness
 
@@ -350,26 +378,27 @@ The maximum total degree is $2 + 2 = 4$. $\square$
 
 ### U.8.5 Zero Mode Preservation
 
-**Theorem U.13 (Design-Preserving Zero Modes).** Let $X \subset S^3$ be the 24-cell (a spherical 5-design, identified with interface modes by Theorem U.7). Let $S_{\text{cont}}[\phi]$ (Definition U.4) satisfy:
+**Theorem U.13 (Design-Exact Evaluation on the Collective-Coordinate Subspace).** Let $X \subset S^3$ be the 24-cell (a spherical 5-design, identified with interface modes by Theorem U.7). Let $S_{\text{cont}}[\phi]$ (Definition U.4) satisfy:
 1. O(4) invariance (Remark U.4a)
 2. Translation invariance (Theorem U.8)
-3. Scale invariance at $\phi = \phi^*$ (Theorem U.8a)
+3. The hypotheses needed to define the sampled collective-coordinate subspace, including the conditional dilatation mode only when Theorem U.9 applies
 
-Define $S_{\text{disc}}$ by spherical quadrature on $X$. Then the second variation $D^2 S_{\text{disc}}(u^*)$ at the discretized bounce $u^* = (\phi^*(x_1), \ldots, \phi^*(x_{24}))$ has a kernel of dimension exactly $m = D + 1 = 5$.
+Define $S_{\text{disc}}$ by spherical quadrature on $X$. Then the restriction of $D^2 S_{\text{disc}}(u^*)$ to the sampled continuum collective-coordinate subspace agrees exactly with the corresponding restriction of $D^2 S_{\text{cont}}(\phi^*)$. In particular, every sampled continuum zero mode remains a discrete zero mode.
 
 *Proof.*
 
-**Step 1.** By Theorems U.8 and U.9, the continuum second variation $D^2 S_{\text{cont}}(\phi^*)$ has a 5-dimensional kernel spanned by:
+**Step 1.** By Theorem U.8, and by Theorem U.9 whenever the extra scale-family hypothesis is assumed, the continuum second variation has the sampled collective-coordinate directions
+$$
+\{-\partial_\mu \phi^*\}_{\mu=1}^4 \cup \{x^\nu \partial_\nu \phi^*\ \text{when Theorem U.9 applies}\}.
+$$
 
-$$\{-\partial_\mu \phi^*\}_{\mu=1}^4 \cup \{x^\nu \partial_\nu \phi^*\}$$
+**Step 2.** By Lemma U.12, all integrands in the relevant matrix elements of $D^2 S_{\text{cont}}$ are polynomials of degree $\leq 4$ in the angular variables.
 
-**Step 2.** By Lemma U.12, all integrands in $D^2 S_{\text{cont}}$ are polynomials of degree $\leq 4$ in angular variables.
+**Step 3.** Since $4 < 5$ and $X$ is a spherical 5-design, Theorem U.11 guarantees that the quadrature evaluation is exact for all terms in those matrix elements.
 
-**Step 3.** Since $4 < 5$ and $X$ is a spherical 5-design, Theorem U.11 guarantees that the quadrature evaluation is **exact** for all terms in the second variation.
+**Step 4.** Therefore the discrete second variation agrees exactly with the continuum second variation on the sampled collective-coordinate subspace. Any sampled continuum zero mode in that subspace remains a discrete zero mode.
 
-**Step 4.** Therefore, the discrete second variation $D^2 S_{\text{disc}}(u^*)$ inherits the continuum kernel structure exactly. The 5 null directions of the continuum descend to 5 null directions of the discrete Hessian.
-
-**Step 5.** No additional null directions arise because the octad quadratic form $Q(u)$ contributes a strictly positive $(r - \lambda) = 176$ eigenvalue on $\mathbf{1}^\perp$ (Theorem U.5), and the centering removes only the trivial uniform mode. $\square$
+No claim about the **absence** of additional discrete null directions is made here; excluding extra null directions would require a separate global spectral analysis of $D^2 S_{\text{disc}}(u^*)$. $\square$
 
 ---
 
@@ -441,7 +470,7 @@ The Morse-Bott correction factor $\lambda^{-m/2} = 2^{-m/2}$ (with $\lambda = C_
 
 **Convention U.14a (Complexity Parameter).** The instanton complexity $\kappa$ is defined as the effective number of complex normal directions contributing to the exponential suppression factor $e^{-2\kappa}$. All power-law prefactors in $\lambda$, determinants, and Jacobian contributions from the Morse-Bott measure are absorbed into the effective prefactor $A_{\text{eff}}$. This convention separates the dominant exponential scaling (controlled by $\kappa$) from subleading polynomial corrections (packaged into $A_{\text{eff}} \sim O(1)$).
 
-**Theorem U.15 (Leading-Order Complexity Deficit from Zero Modes).** Under the leading-order Morse-Bott counting pattern of Section U.9.3 and Convention U.14a, the $m = 5$ collective zero modes contribute the deficit
+**Theorem U.15 (Leading-Order Complexity Deficit from Zero Modes).** Assume the Appendix U leading-order reference-counting convention of Corollary U.10, namely that the relevant collective-coordinate manifold has real dimension $m = 5$ (four translations and one dilatation mode). Under the leading-order Morse-Bott counting pattern of Section U.9.3 and Convention U.14a, these collective coordinates contribute the deficit
 $$
 \delta = \frac{m}{2} = \frac{5}{2} = 2.5
 $$
@@ -453,7 +482,7 @@ to the exponent-counting parameter used in the vacuum weight.
 $$
 \lambda^{-(N_{\mathbb{R}}-m)/2}
 $$
-with $\lambda = C_{\max}/\varepsilon = 2$ (Appendix Q), $N_{\mathbb{R}} = 288$ the real dimension of the integration domain (Remark U.3a), and $m = 5$ the real dimension of the zero-mode manifold (Corollary U.10). At the manuscript's fixed $\lambda$, this is used as a leading-order counting pattern rather than as a controlled exact asymptotic evaluation.
+with $\lambda = C_{\max}/\varepsilon = 2$ (Appendix Q), $N_{\mathbb{R}} = 288$ the real dimension of the integration domain (Remark U.3a), and $m = 5$ the assumed real dimension of the collective-coordinate manifold. At the manuscript's fixed $\lambda$, this is used as a leading-order counting pattern rather than as a controlled exact asymptotic evaluation.
 
 **Step 2 (Convention-based exponent parameter).** The base complexity $\kappa_0 = 144$ counts the complex dimension of $\text{Gr}_{\mathbb{C}}(12,24)$ (Theorem U.3), with $N_{\mathbb{R}} = 2\kappa_0$. By Convention U.14a, the leading-order exponent-counting parameter is
 $$
@@ -461,12 +490,12 @@ $$
 $$
 with the remaining determinant, Jacobian, and finite-$\lambda$ factors absorbed into $A_{\text{eff}}$.
 
-**Step 3 (Complex vs real dimensions).** The $m = 5$ collective coordinates—four translations in $\mathbb{R}^4$ and one dilatation in $\mathbb{R}^+$—are intrinsically real degrees of freedom arising from spacetime symmetries of the Euclidean bounce. Each real zero mode removes one real direction from the Gaussian normal bundle. Since the reference exponent parameter counts complex directions, the corresponding deficit is
+**Step 3 (Complex vs real dimensions).** The collective coordinates are intrinsically real degrees of freedom arising from spacetime symmetries of the Euclidean bounce. Each real zero mode removes one real direction from the Gaussian normal bundle. Since the reference exponent parameter counts complex directions, the corresponding deficit is
 $$
 \delta := \kappa_0 - \kappa_{\mathrm{ref}} = 144 - 141.5 = \frac{m}{2} = \frac{5}{2} = 2.5.
 $$
 
-Thus the five real collective coordinates contribute the stated leading-order deficit in the exponent-counting parameter. $\square$
+Thus the assumed five real collective coordinates contribute the stated leading-order deficit in the Appendix U reference-counting parameter. If only the four translational zero modes are exact, the corresponding leading-order deficit would be $2$ instead of $2.5$. $\square$
 
 ---
 
@@ -490,47 +519,47 @@ $$\alpha = \frac{1}{16\sigma_B^2} = \frac{3}{2}$$
 
 as in Remark U.14.1. Since $\dim_{\mathbb{R}}\text{Gr}(2,8) = 24$, $\zeta_\alpha(s)$ converges for $\Re(s) > 12$ and admits meromorphic continuation to $s=0$ via the heat kernel (e.g. Vassilevich 2003).
 
-**Corollary U.15b (Observed Prefactor).** Using the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}$ (Appendix V, Equation (V.5)), the measured prefactor can be inferred:
+**Corollary U.15b (Observed Prefactor and Adopted Forward-Evaluation Convention).** Using the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}$ (Appendix V, Equation (V.5)), the prefactor inferred from the Appendix U reference formula is
 
 $$
-A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016.
+A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa_{\mathrm{ref}}}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016.
 $$
 
-Within the PU framework, the prefactor can also be computed theoretically via the one-loop determinant $A_{EW}$ (Theorem T.29), yielding
+This observational inversion is an algebraic consequence of Corollary U.17 once $\kappa_{\mathrm{ref}}$ is fixed.
+
+For the forward evaluation used in Appendix U, adopt the transferred determinant convention
+$$
+K_{\text{transfer}} := A_{EW}^{-1},
+$$
+where $A_{EW}=1.084 \pm 0.005$ is the electroweak determinant-model value of Theorem T.29. This transfer is a modeling convention rather than a vacuum-sector theorem. Including the conservative systematic allowance $\sigma_{T3}=0.010$ for (i) ghost/zero-mode normalization and (ii) minimal-bounce extensivity conventions in $N_{\text{eff}}$, the Appendix U working value is
 
 $$
-A_{\text{eff}}^{(\text{th})} = (A_{\text{link}} A_{\text{Schur}} A_{\text{geo}})^{-1} = A_{EW}^{-1} = 0.922 \pm 0.004,
+\boxed{A_{\text{eff}} = 0.923 \pm 0.011 \qquad (\text{Appendix U working convention},\ 1\sigma).}
 $$
 
-where the quoted uncertainty propagates the determinant uncertainty in $A_{EW}=1.085\pm 0.005$ (Theorem T.29).
-
-To map the Euclidean bounce normalization to the cosmological constant convention in (U.1), we include a conservative systematic term $\sigma_{T3}=0.010$ accounting for (i) ghost/zero-mode normalization and (ii) minimal-bounce extensivity conventions in $N_{\text{eff}}$ (Appendix E). We therefore adopt the combined PU theory estimate
+This gives the corresponding reference evaluation
 
 $$
-\boxed{A_{\text{eff}} = 0.923 \pm 0.011 \qquad (\text{PU theory},\ 1\sigma).}
+\boxed{\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa_{\mathrm{ref}}} = (2.88 \pm 0.03)\times 10^{-122}.}
 $$
 
-This gives the corresponding prediction for the dimensionless cosmological constant:
-
-$$
-\boxed{\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa} = (2.88 \pm 0.03)\times 10^{-122}.}
-$$
-
-The observed inference $A_{\text{eff}}^{(\text{obs})}=0.917\pm 0.016$ is consistent with $A_{\text{eff}}^{(\text{th})}$ within the combined uncertainty. ∎
+The agreement between $A_{\text{eff}}^{(\text{obs})}$ and the Appendix U working value is an internal consistency check on the adopted prefactor convention. ∎
 
 **PPI mapping chain (vacuum weight).** The identification
 $$
-\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}
+\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa_{\mathrm{ref}}}
 $$
 uses the following explicit instantiation steps:
 
-1. **Grassmannian identification.** The vacuum configuration space is identified as $\text{Gr}_\mathbb{C}(12,24)$ via the Golay code structure (Theorem U.3); alternatives with different code parameters yield $\kappa \neq 141.5$ and are excluded by PCE optimization.
+1. **Grassmannian identification.** The Appendix U vacuum model uses $\text{Gr}_\mathbb{C}(12,24)$ as the relevant reference configuration space (Theorem U.3), so the base count is $k^2=144$ with $k=12$.
 
-2. **Action mapping.** The instanton action is identified as $S_{\text{inst}}=(C_{\max}/\varepsilon)\kappa$ with $C_{\max}/\varepsilon=2$ (Appendix Q). Alternatives $S_{\text{inst}}\neq 2\kappa$ are excluded within the PU model because $(C_{\max},\varepsilon)$ are fixed MPU invariants and $\kappa$ is defined precisely as the exponent-counting complexity parameter by Convention U.14a.
+2. **Action mapping.** The instanton action is identified as $S_{\text{inst}}=(C_{\max}/\varepsilon)\kappa$ with $C_{\max}/\varepsilon=2$ (Appendix Q). Within the Appendix U reference scheme this gives $S_{\text{inst}}=2\kappa_{\mathrm{ref}}$.
 
-3. **Prefactor definition and scope.** $A_{\text{eff}}:=K\cdot N_{\text{eff}}$ absorbs all power-law factors from determinants, Jacobians, gauge-volume normalizations, and extensivity counting (Convention U.14a). Competing choices of regularization or normalization correspond to reshuffling finite terms between $K$ and $N_{\text{eff}}$ but do not modify the exponential factor, and are fixed by the stated conventions for Planck normalization and extensivity (Appendix E, Section U.1).
+3. **Einstein-normalization factor.** The PPI mapping identifies the vacuum amplitude with the coefficient of $g_{\mu\nu}$ in the Einstein-equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$. Accordingly, when the result is written as the dimensionless quantity $\Lambda L_P^2$, a pure numerical factor $8\pi$ appears (Appendix V, normalization note following Equation (V.2)).
 
-4. **Competing saddles are suppressed.** Any additional bounce with complexity $\kappa'=\kappa+\Delta\kappa$ contributes at relative weight $\le e^{-2\Delta\kappa}$ compared to the dominant saddle. Because $\kappa$ takes half-integer values of the form $k^2-(D+1)/2$, distinct competitors satisfy $\Delta\kappa\ge 0.5$, so even the nearest possible competitor contributes at most an $e^{-1}$ fraction and only renormalizes $A_{\text{eff}}$ by an $O(1)$ factor.
+4. **Prefactor definition and scope.** $A_{\text{eff}}:=K\cdot N_{\text{eff}}$ absorbs all power-law factors from determinants, Jacobians, gauge-volume normalizations, and extensivity counting (Proposition U.15a and Convention U.14a). Different regularization choices reshuffle finite terms inside $A_{\text{eff}}$ but do not change the exponential factor.
+
+5. **Competing saddles are suppressed.** Any additional bounce with complexity $\kappa'=\kappa_{\mathrm{ref}}+\Delta\kappa$ contributes at relative weight $e^{-2\Delta\kappa}$ compared to the dominant reference saddle. Because the Appendix U reference count is half-integer spaced, the nearest competitor has $\Delta\kappa\ge 0.5$ and changes only the $O(1)$ prefactor scale.
 
 **Uncertainty budget for $\Lambda L_P^2$.** Write
 $$
@@ -552,7 +581,7 @@ For observational comparison, Appendix V.1 provides the observational contributi
 
 ## U.11 Main Result
 
-**Theorem U.16 (Reference Cosmological Constant Complexity).** Under the leading-order zero-mode counting convention of Theorem U.15, the reference exponent parameter is
+**Theorem U.16 (Reference Cosmological Constant Complexity).** Under Theorem U.15 and the Appendix U leading-order five-mode reference-counting convention, the reference exponent parameter is
 
 $$\boxed{\kappa_{\mathrm{ref}} = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5}$$
 
@@ -561,6 +590,8 @@ where:
 - $D = 4$ is the emergent spacetime dimension (Theorem Z.11)
 - The base complexity $k^2 = 144$ is the Grassmannian bound (Theorem U.3)
 - The deficit $(D+1)/2 = 5/2$ is the leading-order zero-mode deficit supplied by Theorem U.15
+
+This theorem records the Appendix U reference exponent only within the stated leading-order counting convention; it does not assert that the five-mode count has already been established as an unconditional property of the continuum Hessian.
 
 **Corollary U.17 (Reference Cosmological Constant Scale).** With this reference exponent, the vacuum weight is parameterized as
 
@@ -869,22 +900,109 @@ Verification: $24 + 192 + 144 + 192 + 24 = 576 = 24^2$. $\square$
 ### U.18.2 Spherical Design Property
 
 **Theorem U.30 (24-Cell as Spherical 5-Design).** The 24-cell vertices form a spherical 5-design on $S^3$: for any polynomial $p : \mathbb{R}^4 \to \mathbb{R}$ of degree at most $5$,
-
-$$\frac{1}{24} \sum_{v \in V_{24}} p(v) = \frac{1}{\text{Vol}(S^3)} \int_{S^3} p(x) \, d\sigma(x)$$
-
+$$
+\frac{1}{24} \sum_{v \in V_{24}} p(v) = \frac{1}{\text{Vol}(S^3)} \int_{S^3} p(x) \, d\sigma(x)
+$$
 The 24-cell is not a 6-design.
 
-*Proof.* Define the Gegenbauer moments $S_\ell := \sum_{v,w \in V_{24}} C_\ell^{(\alpha)}(\langle v, w \rangle)$ where $C_\ell^{(\alpha)}$ are Gegenbauer polynomials with $\alpha = (D-2)/2 = 1$ for $D = 4$. A configuration is a $t$-design if and only if $S_\ell = 0$ for $\ell = 1, \ldots, t$ (Delsarte, Goethals & Seidel 1977).
+*Proof.* Define the Gegenbauer moments
+$$
+S_\ell := \sum_{v,w \in V_{24}} C_\ell^{(\alpha)}(\langle v, w \rangle),
+\qquad
+\alpha = (D-2)/2 = 1
+$$
+for $D=4$. By the Delsarte–Goethals–Seidel criterion [Delsarte, Goethals & Seidel 1977], the configuration is a spherical $t$-design iff $S_\ell=0$ for $\ell=1,\dots,t$.
 
-Using Lemma U.29 and the explicit Gegenbauer polynomials $C_\ell^{(1)}(x)$:
-- $C_1^{(1)}(x) = 2x$: $S_1 = 2[24(1) + 192(1/2) + 144(0) + 192(-1/2) + 24(-1)] = 2[24 + 96 - 96 - 24] = 0$
-- $C_2^{(1)}(x) = 4x^2 - 1$: Similar calculation yields $S_2 = 0$
-- $C_3^{(1)}(x) = 8x^3 - 4x$: $S_3 = 0$
-- $C_4^{(1)}(x) = 16x^4 - 12x^2 + 1$: $S_4 = 0$
-- $C_5^{(1)}(x) = 32x^5 - 32x^3 + 6x$: $S_5 = 0$
-- $C_6^{(1)}(x) = 64x^6 - 80x^4 + 24x^2 - 1$: $S_6 = 576 \neq 0$
+Lemma U.29 gives the inner-product multiplicities
+$$
+N(1)=24,
+\quad
+N(1/2)=192,
+\quad
+N(0)=144,
+\quad
+N(-1/2)=192,
+\quad
+N(-1)=24.
+$$
+Therefore
+$$
+S_\ell
+=
+24\,C_\ell^{(1)}(1)
++
+192\,C_\ell^{(1)}(1/2)
++
+144\,C_\ell^{(1)}(0)
++
+192\,C_\ell^{(1)}(-1/2)
++
+24\,C_\ell^{(1)}(-1).
+$$
 
-Thus the 24-cell is a 5-design but not a 6-design. $\square$
+Using the explicit Gegenbauer polynomials:
+- $C_1^{(1)}(x)=2x$, so
+  $$
+  S_1
+  =
+  24(2)+192(1)+144(0)+192(-1)+24(-2)
+  =
+  48+192-192-48
+  =
+  0.
+  $$
+- $C_2^{(1)}(x)=4x^2-1$, so
+  $$
+  S_2
+  =
+  24(3)+192(0)+144(-1)+192(0)+24(3)
+  =
+  72-144+72
+  =
+  0.
+  $$
+- $C_3^{(1)}(x)=8x^3-4x$, so
+  $$
+  S_3
+  =
+  24(4)+192(-1)+144(0)+192(1)+24(-4)
+  =
+  96-192+192-96
+  =
+  0.
+  $$
+- $C_4^{(1)}(x)=16x^4-12x^2+1$, so
+  $$
+  S_4
+  =
+  24(5)+192(-1)+144(1)+192(-1)+24(5)
+  =
+  120-192+144-192+120
+  =
+  0.
+  $$
+- $C_5^{(1)}(x)=32x^5-32x^3+6x$, so
+  $$
+  S_5
+  =
+  24(6)+192(0)+144(0)+192(0)+24(-6)
+  =
+  144-144
+  =
+  0.
+  $$
+- $C_6^{(1)}(x)=64x^6-80x^4+24x^2-1$, so
+  $$
+  S_6
+  =
+  24(7)+192(1)+144(-1)+192(1)+24(7)
+  =
+  168+192-144+192+168
+  =
+  576 \neq 0.
+  $$
+
+Thus $S_\ell=0$ for $\ell=1,\dots,5$, while $S_6\neq 0$. Hence the 24-cell is a spherical 5-design but not a 6-design. $\square$
 
 **Corollary U.31 (Design Strength and Dimension).** The design strength $t = 5$ satisfies:
 
@@ -930,18 +1048,16 @@ $$\text{Aut}(V_{24}) = W(F_4), \qquad |W(F_4)| = 1152 = 2^7 \times 3^2$$
 
 *Proof.* Classical result; see Conway & Sloane (1999), Chapter 4, §8. $\square$
 
-**Theorem U.36 (Eigenspace Decomposition).** The signal subspace decomposes under the $W(F_4)$ action according to the adjacency eigenspaces:
-
-$$\mathcal{S} \cong \mathbf{1} \oplus \mathbf{2} \oplus \mathbf{9}$$
-
+**Theorem U.36 (Invariant Eigenspace Decomposition).** The signal subspace decomposes into the adjacency eigenspaces
+$$\mathcal{S} = \mathcal{S}_{8} \oplus \mathcal{S}_{-4} \oplus \mathcal{S}_{0}$$
 where:
-- $\mathbf{1}$: The 1-dimensional eigenspace with eigenvalue $8$ (spanned by the all-ones vector)
-- $\mathbf{2}$: The 2-dimensional eigenspace $\mathcal{S}_2$ with eigenvalue $-4$
-- $\mathbf{9}$: The 9-dimensional eigenspace $\mathcal{S}_9$ with eigenvalue $0$
+- $\mathcal{S}_{8}$ is the 1-dimensional eigenspace with eigenvalue $8$ (spanned by the all-ones vector)
+- $\mathcal{S}_{-4}$ is the 2-dimensional eigenspace with eigenvalue $-4$
+- $\mathcal{S}_{0}$ is the 9-dimensional eigenspace with eigenvalue $0$
 
 Each eigenspace is $W(F_4)$-invariant.
 
-*Proof.* The adjacency matrix $A$ commutes with the $W(F_4)$ action, so eigenspaces are invariant subspaces. The multiplicities follow from Lemma U.34. $\square$
+*Proof.* The adjacency matrix $A$ commutes with the $W(F_4)$ action. Therefore each spectral projector of $A$ commutes with the group action, and its image is a $W(F_4)$-invariant subspace. Lemma U.34 gives the multiplicities of the eigenvalues $8$, $-4$, and $0$ as $1$, $2$, and $9$, respectively. Hence $\mathcal{S}$ decomposes as the direct sum of the three invariant eigenspaces displayed above. No irreducibility claim is used here. $\square$
 
 **Corollary U.37 (Invariant Projective Spaces).** The projectivizations of the eigenspaces yield $W(F_4)$-invariant projective submanifolds:
 
@@ -949,12 +1065,24 @@ Each eigenspace is $W(F_4)$-invariant.
 - $\mathbb{P}(\mathbf{2}) = \mathbb{CP}^1_{\text{inv}}$ (2-sphere)
 - $\mathbb{P}(\mathbf{9}) = \mathbb{CP}^8_{\text{inv}}$ (8-dimensional)
 
-**Theorem U.38 (Minimal Invariant Sector).** Among the non-trivial $W(F_4)$-invariant projective submanifolds of $\mathbb{CP}^{11}$, the space $\mathbb{CP}^1_{\text{inv}} = \mathbb{P}(\mathcal{S}_2)$ arising from the eigenvalue-$(-4)$ eigenspace is the **minimal positive-dimensional** invariant submanifold.
+**Theorem U.38 (Minimal Adjacency-Eigenspace Sector).** Among the non-trivial projectivizations of the $W(F_4)$-invariant adjacency eigenspaces inside $\mathbb{CP}^{11}$, the space $\mathbb{CP}^1_{\text{inv}} = \mathbb{P}(\mathcal{S}_{-4})$ arising from the eigenvalue-$(-4)$ eigenspace is the minimal positive-dimensional invariant sector.
 
-*Remark.* The 9-dimensional eigenspace $\mathcal{S}_9$ (eigenvalue $0$) also yields an invariant submanifold $\mathbb{CP}^8_{\text{inv}}$. The physical selection of $\mathbb{CP}^1_{\text{inv}}$ for single-field inflation follows from:
-1. **Minimality**: Single-field inflation requires the minimal non-trivial target space
-2. **Kinetic structure**: The eigenvalue $(-4)$ yields the largest kinetic coefficient $\lambda^2 = 12$ (Proposition U.44; Identification U.44a), compared to $\lambda^2 = 8$ on the $0$-eigenspace (8-regular graph: Laplacian eigenvalue equals degree minus adjacency eigenvalue)
-3. **PCE selection**: The PCE potential (Definition 15) favors the sector with maximal gradient energy, selecting the $(-4)$ eigenspace
+*Proof.* By Theorem U.36, the adjacency representation decomposes as
+$$
+\mathcal S \cong \mathbf 1 \oplus \mathbf 2 \oplus \mathbf 9,
+$$
+and each summand is $W(F_4)$-invariant. Corollary U.37 identifies their projectivizations as
+- $\mathbb P(\mathbf 1)=\{\text{point}\}$,
+- $\mathbb P(\mathbf 2)=\mathbb{CP}^1_{\text{inv}}$,
+- $\mathbb P(\mathbf 9)=\mathbb{CP}^8_{\text{inv}}$.
+
+The only non-trivial positive-dimensional members of this list are $\mathbb{CP}^1_{\text{inv}}$ and $\mathbb{CP}^8_{\text{inv}}$, and
+$$
+1<8.
+$$
+Hence $\mathbb{CP}^1_{\text{inv}}$ is the minimal positive-dimensional projectivized adjacency-eigenspace sector. $\square$
+
+*Remark.* The stronger physical claim that this sector is selected for single-field inflation uses the kinetic and PCE arguments listed below. Those arguments do not prove that $\mathbb{CP}^1_{\text{inv}}$ is minimal among all possible $W(F_4)$-invariant projective submanifolds of $\mathbb{CP}^{11}$; they prove only the adjacency-eigenspace comparison stated above.
 
 ---
 
@@ -1007,17 +1135,17 @@ the Dirichlet energy $E[\psi] = \frac{1}{2}\psi^\dagger L \psi$ is unique up to 
 
 ### U.21.2 Kinetic Coefficient
 
-**Proposition U.44 (Laplacian on Invariant Sector).** On the 2-dimensional eigenspace $\mathcal{S}_2$ (eigenvalue $-4$), the graph Laplacian acts as:
+**Proposition U.44 (Laplacian on Invariant Sector).** On the 2-dimensional eigenspace $\mathcal{S}_{-4}$ (eigenvalue $-4$), the graph Laplacian acts as:
 
-$$L|_{\mathcal{S}_2} = (D - A)|_{\mathcal{S}_2} = (8I - (-4)I)|_{\mathcal{S}_2} = 12I$$
+$$L|_{\mathcal{S}_{-4}} = (D - A)|_{\mathcal{S}_{-4}} = (8I - (-4)I)|_{\mathcal{S}_{-4}} = 12I$$
 
-*Proof.* The eigenvalue of $A$ on $\mathcal{S}_2$ is $-4$ (Lemma U.34). The degree matrix is $D = 8I$. Thus $L|_{\mathcal{S}_2} = 8I - (-4I) = 12I$. $\square$
+*Proof.* The eigenvalue of $A$ on $\mathcal{S}_{-4}$ is $-4$ (Lemma U.34). The degree matrix is $D = 8I$. Thus $L|_{\mathcal{S}_{-4}} = 8I - (-4I) = 12I$. $\square$
 
 **Identification U.44a (Effective Field Theory Kinetic Term).** The graph Laplacian eigenvalue $\lambda^2 = 12$ is identified with the kinetic coefficient in the effective single-field Lagrangian:
 
 $$\mathcal{L}_{\text{kin}} = \frac{\lambda^2 \bar{M}_{Pl}^2}{2} (\partial d_{FS})^2, \qquad \lambda^2 = 12$$
 
-where $d_{FS}$ is the Fubini-Study distance on $\mathbb{CP}^1_{\text{inv}} = \mathbb{P}(\mathcal{S}_2)$.
+where $d_{FS}$ is the Fubini-Study distance on $\mathbb{CP}^1_{\text{inv}} = \mathbb{P}(\mathcal{S}_{-4})$.
 
 *Justification.* This identification assumes that the discrete graph Dirichlet energy induces, in the continuum limit, a sigma-model kinetic term with the Fubini-Study target metric. If the coarse-graining map rescales $d_{FS}$ by an $O(1)$ constant, $\lambda^2$ would shift accordingly. The coefficient $\lambda^2 = 12$ then sets the field-space curvature scale.
 
@@ -1256,15 +1384,14 @@ The predictions are compared against Planck 2018 results (Planck Collaboration 2
 
 ### U.25.2 Falsification Criteria
 
-**Theorem U.69 (Falsification Conditions).** Conditional on Assumptions U.26, U.41, U.48; Identifications U.20, U.44a, U.51; and the fiducial choice $\phi_0 = \phi_{\max}$ so that $N_e = 59.4$ (Result U.60), the primordial-sector predictions would be falsified by:
+**Theorem U.69 (Falsification Conditions).** Conditional on Assumptions U.26, U.41, U.48; Identifications U.20, U.44a, U.51; and the fiducial choice $\phi_0 = \phi_{\max}$ so that $N_e = 59.4$ (Result U.60), the primordial-sector predictions would be falsified by any statistically significant measurement lying outside the Appendix U $3\sigma$ theory windows:
 
-1. **Tensor detection**: $r > 0.006$ at $>3\sigma$ (prediction: $r = 0.0034$)
-2. **Tensor null**: $r < 0.002$ at $>3\sigma$ (prediction: $r = 0.0034$)
-3. **Spectral index**: $|n_s - 0.9663| > 0.010$ at $>3\sigma$
-4. **Non-Gaussianity**: $|f_{NL}^{\text{local}}| > 1$ at $>3\sigma$ (prediction: $0.014$)
-5. **Running**: $|dn_s/d\ln k| > 0.01$ at $>3\sigma$ (prediction: $5.7 \times 10^{-4}$)
+1. **Tensor ratio**: $r \notin [0.00271,\,0.00409]$ at $>3\sigma$ (prediction: $r = 0.0034 \pm 0.00023$)
+2. **Spectral index**: $n_s \notin [0.9630,\,0.9696]$ at $>3\sigma$ (prediction: $n_s = 0.9663 \pm 0.0011$)
+3. **Local non-Gaussianity**: $f_{NL}^{\text{local}} \notin [0.0125,\,0.0155]$ at $>3\sigma$ (prediction: $0.0140 \pm 0.0005$)
+4. **Running**: $dn_s/d\ln k \notin [-(6.9\times10^{-4}),\,-(4.5\times10^{-4})]$ at $>3\sigma$ (prediction: $-(5.7 \pm 0.4)\times10^{-4}$)
 
-If $N_e$ differs from 59.4, replace the numerical values using $n_s \simeq 1 - 2/N_e$, $r \simeq 12/N_e^2$, $dn_s/d\ln k \simeq -2/N_e^2$, $f_{NL}^{\text{local}} \simeq 5/(6N_e)$, and $n_t \simeq -3/(2N_e^2)$.
+If $N_e$ differs from 59.4, replace the central values using $n_s \simeq 1 - 2/N_e$, $r \simeq 12/N_e^2$, $dn_s/d\ln k \simeq -2/N_e^2$, $f_{NL}^{\text{local}} \simeq 5/(6N_e)$, and $n_t \simeq -3/(2N_e^2)$, and propagate the corresponding theory windows.
 
 These criteria are testable by CMB-S4, LiteBIRD, and future 21-cm observations.
 
@@ -1279,35 +1406,35 @@ These criteria are testable by CMB-S4, LiteBIRD, and future 21-cm observations.
 
 | Sector | Configuration Space | $\kappa$ | Physical Scale |
 |:-------|:-------------------:|:--------:|:--------------:|
-| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $141.5$ | $\Lambda L_P^2 \approx 2.88 \times 10^{-122}$ |
+| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $\kappa_{\mathrm{ref}} = 141.5$ in the Appendix U reference-counting convention | Reference value $\Lambda L_P^2 \approx 2.88 \times 10^{-122}$ |
 | Primordial | $\mathbb{CP}^{11}$ | $11$ | $Q \approx 1.18 \times 10^{-5}$ |
 
-The hierarchy $\kappa_\Lambda / \kappa_Q = 12.86$ explains why the cosmological constant is exponentially smaller than primordial perturbations.
+The hierarchy $\kappa_{\Lambda,\mathrm{ref}} / \kappa_Q = 12.86$ summarizes the separation between the Appendix U vacuum reference scale and the primordial perturbation scale.
 
 ### U.26.2 Golay-Steiner Unification
 
 **Summary U.71 (Structural Unity).** Both sectors connect to the Golay code $[24, 12, 8]$ (Theorem Z.13):
 
-- **Vacuum**: Full code structure $\to$ Grassmannian $\text{Gr}_\mathbb{C}(12,24)$ $\to$ reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ (Theorem U.16)
+- **Vacuum**: Full code structure $\to$ Grassmannian $\text{Gr}_\mathbb{C}(12,24)$ $\to$ Appendix U reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ (Theorem U.16)
 - **Primordial**: Signal subspace $\mathbb{C}^{12}$ $\to$ Projective space $\mathbb{CP}^{11}$ $\to$ $\kappa_Q = 11$ (Identification U.20)
 - **Inflation dynamics**: 24-cell 5-design $\to$ 12-line graph $\to$ $\mathbb{CP}^1_{\text{inv}}$ $\to$ Starobinsky (Assumption U.48, Identification U.44a)
-- **Observable predictions**: Conditional on Assumption U.26, Assumption U.41, Identification U.51
+- **Observable predictions**: conditional on Assumption U.26, Assumption U.41, Identification U.51
 
-The framework achieves predictions for inflationary observables from the Golay-Steiner structure, conditional on the identifications and assumptions stated in this appendix.
+The framework achieves inflationary predictions from the Golay-Steiner structure, conditional on the identifications and assumptions stated in this appendix. The vacuum sector supplies a reference exponent and reference scaling law within the counting and prefactor conventions stated in Theorems U.15-U.17.
 
 ---
 
 ## U.27 Conclusion
 
-This appendix derives the cosmological constant reference scale and inflationary observables from the Golay-Steiner structure at $M = 24$. A single information-theoretic organization determines both sectors:
+This appendix derives the cosmological constant reference scale and the primordial observables from the Golay-Steiner structure at $M = 24$, but with different logical status in the two sectors.
 
-**Vacuum Sector.** The reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ yields the baseline scale
+**Vacuum Sector.** Under the Appendix U leading-order five-mode counting convention, the reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ yields the baseline scale
 $$
 \Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283},
 $$
-which for the computed prefactor $A_{\text{eff}} = 0.923 \pm 0.011$ gives the reference value $(2.88 \pm 0.03)\times10^{-122}$, close to the observed $2.87 \times 10^{-122}$ (Corollary U.17).
+which, with the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$, gives the reference value $(2.88 \pm 0.03)\times10^{-122}$, close to the observed $2.87 \times 10^{-122}$ (Corollary U.17).
 
-**Primordial Sector.** The complexity $\kappa_Q = 11$ and geometric e-fold count $N_e = 59.4$ yield:
+**Primordial Sector.** Conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48, the complexity $\kappa_Q = 11$ and geometric e-fold count $N_e = 59.4$ yield:
 
 | Observable | Prediction | Observed |
 |:-----------|:----------:|:--------:|
@@ -1325,8 +1452,8 @@ which for the computed prefactor $A_{\text{eff}} = 0.923 \pm 0.011$ gives the re
 
 The ratio $\kappa_{\Lambda,\mathrm{ref}}/\kappa_Q \approx 13$ summarizes the hierarchy between vacuum energy and primordial perturbations in the Appendix U reference scheme.
 
-**Falsifiability.** The predictions $r = 0.0034$ and $n_s = 0.9663$ are testable by CMB-S4 and LiteBIRD. Detection outside the range $0.002 < r < 0.006$ at $>3\sigma$ would falsify the framework.
+**Falsifiability.** The primordial predictions are testable by CMB-S4 and LiteBIRD through the quantitative windows stated in Theorem U.69.
 
-The primordial predictions are conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48. The vacuum sector fixes a leading-order reference exponent from the Grassmannian structure and spherical 5-design, while the overall normalization remains encoded in the stated Appendix U convention for $A_{\text{eff}}$.
+The primordial predictions are conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48. The vacuum sector fixes a leading-order reference exponent from the Grassmannian structure and spherical 5-design, while the overall normalization remains encoded in the stated Appendix U prefactor convention for $A_{\text{eff}}$.
 
 ---

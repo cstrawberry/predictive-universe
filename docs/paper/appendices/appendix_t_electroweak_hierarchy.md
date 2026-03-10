@@ -52,9 +52,9 @@ The following constants are derived in the main text and Appendix Z:
 |Constant |Value |Origin |Reference |
 |:-----------------------------|:----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------|
 |$K_0$ |3 bits |Horizon constant (SPAP logic) |Theorem 15 |
-|$d_0$ |8 |MPU Hilbert space dimension |Theorem 23 |
-|$\varepsilon$ |$\ln 2$ |Irreducible Landauer cost (Theorem 31: SPAP merge achieves the Landauer bound exactly) |Theorem 31 |
-|$a$ |2 |Active kernel dimension ($e^\varepsilon = 2$, uniquely forced by PPI-optimality) |Theorem Z.1 |
+|$d_0$ |8 on the minimal Appendix Z branch |MPU Hilbert space dimension: lower bound from Theorem 23, equality from Theorem Z.2 |Theorem 23; Theorem Z.2 |
+|$\varepsilon$ |$\ln 2$ on the attractor branch |Irreducible Landauer cost: lower bound from Theorem 31, saturation at Definition 15a |Theorem 31; Definition 15a |
+|$a$ |2 |Active kernel dimension on the attractor-saturating branch (Theorem Z.1) |Theorem Z.1 |
 |$b$ |6 |Inactive subspace dimension ($d_0 - a$) |Definition |
 |$M$ |24 |QFI interface mode count ($2ab$) |Theorem Z.5 |
 |$k$ |12 |Golay code dimension ($M/2$) |Theorem Z.13 |
@@ -192,24 +192,36 @@ where $P$ is the Golay parity matrix (Definition T.2).
 
 ### T.4.2 The Octad Hessian
 
-**Definition T.10** (Octad Hessian). The Steiner system $S(5,8,24)$ induces a design-preserving quadratic form on $\mathbb{R}^{24}$:
+**Definition T.10** (Centered Octad Quadratic-Form Operator). The Steiner system $S(5,8,24)$ induces the centered quadratic-form operator on $\mathbb{R}^{24}$:
 $$
-H_{oct} = (r - \lambda)\left(I_{24} - \frac{1}{24}\mathbf{1}_{24}\mathbf{1}_{24}^T\right)
+A_{oct} = (r - \lambda)\left(I_{24} - \frac{1}{24}\mathbf{1}_{24}\mathbf{1}_{24}^T\right)
 $$
-where $r - \lambda = 176$ is the octad regularity parameter (Appendix U, Section U.10).
+where $r - \lambda = 176$ is the octad regularity parameter (Appendix U, Theorem U.6). The actual Hessian of the centered octad potential is
+$$
+\nabla^2 Q(0)=2A_{oct}
+$$
+by Theorem U.5.
 
-**Lemma T.2** (Kernel of $H_{oct}$). The octad Hessian has:
+**Lemma T.2** (Spectrum of $A_{oct}$). The centered octad quadratic-form operator has:
 
-- One-dimensional kernel: $\ker(H_{oct}) = \text{span}(\mathbf{1}_{24})$
+- One-dimensional kernel: $\ker(A_{oct}) = \text{span}(\mathbf{1}_{24})$
 - Positive eigenvalue $176$ with multiplicity 23 on $\mathbf{1}_{24}^\perp$
 
-*Proof.* Direct calculation: $H_{oct} \mathbf{1}_{24} = (r-\lambda)(I_{24} - \frac{1}{24}\mathbf{1}_{24}\mathbf{1}_{24}^T)\mathbf{1}_{24} = 0$. For $v \perp \mathbf{1}_{24}$: $H_{oct} v = (r-\lambda)v$. ∎
+*Proof.* Direct calculation:
+$$
+A_{oct}\mathbf{1}_{24} = (r-\lambda)\left(I_{24} - \frac{1}{24}\mathbf{1}_{24}\mathbf{1}_{24}^T\right)\mathbf{1}_{24} = 0.
+$$
+For $v \perp \mathbf{1}_{24}$,
+$$
+A_{oct}v=(r-\lambda)v.
+$$
+Hence the spectrum is as stated. ∎
 
 ### T.4.3 The Information-Subspace Laplacian
 
-**Definition T.11** (Golay-Steiner Laplacian). The information-subspace Laplacian is the pullback of $H_{oct}$ via the embedding $T$:
+**Definition T.11** (Golay-Steiner Laplacian). The information-subspace Laplacian is the pullback of $A_{oct}$ via the embedding $T$:
 $$
-L_{info} = \frac{1}{24} T^T H_{oct} T = \frac{176}{24} T^T \left(I_{24} - \frac{1}{24}\mathbf{1}_{24}\mathbf{1}_{24}^T\right) T
+L_{info} = \frac{1}{24} T^T A_{oct} T = \frac{176}{24} T^T \left(I_{24} - \frac{1}{24}\mathbf{1}_{24}\mathbf{1}_{24}^T\right) T
 $$
 
 This is a $12 \times 12$ matrix acting on information coordinates $s \in \mathbb{R}^{12}$.
@@ -228,7 +240,7 @@ $$
 
 By Lemma T.1, $P\mathbf{1}_{12} = (11, 7, 7, \ldots, 7)^T \neq \mathbf{1}_{12}$. Therefore no $s$ maps to $\mathbf{1}_{24}$.
 
-**Step 2** (Positivity inheritance). Since $\ker(H_{oct}) = \text{span}(\mathbf{1}_{24})$ and $\mathbf{1}_{24} \notin \text{im}(T)$, the restriction of $H_{oct}$ to $\text{im}(T)$ is positive definite. Therefore $L_{info} \succ 0$. ∎
+**Step 2** (Positivity inheritance). Since $\ker(A_{oct}) = \text{span}(\mathbf{1}_{24})$ and $\mathbf{1}_{24} \notin \text{im}(T)$, the restriction of $A_{oct}$ to $\text{im}(T)$ is positive definite. Therefore $L_{info} \succ 0$. ∎
 
 ### T.4.4 The Complete Discrete Action
 
@@ -503,7 +515,11 @@ $$
 
 ### T.11.1 Uniqueness of Minimal Solution
 
-**Theorem T.10** (Minimal Rational Hypercharge). Up to an overall sign, the unique minimal-norm rational solution to the tracelessness constraint with Golay integrality is
+**Theorem T.10** (Primitive $1/6$-Quantized Hypercharge). Assume the hypercharge generator on $W_5$ has diagonal entries $(y_c,y_c,y_c,y_w,y_w)\in\mathbb Q^5$, satisfies the tracelessness condition
+$$
+3y_c+2y_w=0,
+$$
+and is normalized so that all charges are integer multiples of $1/6$ while the pair $(6y_c,6y_w)$ is primitive in $\mathbb Z^2$. Then, up to an overall sign, the unique admissible rational solution is
 $$
 (y_c,y_w)=\left(-\frac13,\frac12\right).
 $$
@@ -512,19 +528,31 @@ $$
 y_c = -\frac{1}{3}, \quad y_w = +\frac{1}{2}.
 $$
 
-*Proof.* From $3y_c + 2y_w = 0$, write
+*Proof.* Set
 $$
-(y_c,y_w)=(-2t,3t)
+m:=6y_c,\qquad n:=6y_w.
 $$
-with $t\in\mathbb Q$. Golay integrality requires the smallest admissible denominator, namely $t=\pm 1/6$. This gives the two rational solutions
+By hypothesis, $(m,n)\in\mathbb Z^2$ is primitive and the tracelessness relation becomes
 $$
-\left(-\frac13,\frac12\right),\qquad \left(\frac13,-\frac12\right),
+3m+2n=0.
 $$
-which differ by an overall sign and have the same Euclidean norm. Thus the minimal-norm solution is unique only up to that overall sign. Adopting the standard orientation in which the weak-doublet entry is positive yields
+Every integer solution has the form
+$$
+(m,n)=(-2\ell,3\ell),\qquad \ell\in\mathbb Z.
+$$
+Primitivity forces $|\ell|=1$, because $\gcd(2|\ell|,3|\ell|)=|\ell|$. Thus the only primitive integer solutions are
+$$
+(-2,3)\qquad\text{and}\qquad (2,-3).
+$$
+Dividing by $6$ gives the two admissible rational solutions
+$$
+\left(-\frac13,\frac12\right),\qquad \left(\frac13,-\frac12\right).
+$$
+They differ only by an overall sign. Adopting the orientation in which the weak-doublet entry is positive yields
 $$
 y_c=-\frac13,\qquad y_w=\frac12.
 $$
-This is the conventional SU(5) normalization on $\bar5=\bar3\oplus 2$. ∎
+This is the conventional $\bar5=\bar3\oplus2$ hypercharge assignment. ∎
 
 ### T.11.2 Design-Preserving Inner Product
 
@@ -1289,10 +1317,11 @@ $$
 2. the finite-$u_0$ reservoir correction is captured by the stated rank-one Schur-complement factor;
 3. the curved-orbit Jacobian is represented by the homogeneous-space factor $(M/(M-1))^{1/4}$.
 
-Then the one-loop determinant prefactor is
+Then the three-factor determinant model gives the central value
 $$
-\boxed{A_{EW}=A_{\text{link}}A_{\text{Schur}}A_{\text{geo}}=1.084\pm 0.005.}
+\boxed{A_{EW}=A_{\text{link}}A_{\text{Schur}}A_{\text{geo}}=1.08407\ldots}
 $$
+and, with the manuscript's separate modeling allowance for omitted higher-order determinant and Jacobian terms, the quoted working value is $A_{EW}=1.084\pm0.005$.
 
 *Proof.* Under assumption (1),
 $$
@@ -1308,42 +1337,58 @@ $$
 $$
 A_{\text{geo}}=\left(\frac{24}{23}\right)^{1/4}.
 $$
-Numerically,
+Evaluating these gives
 $$
-A_{\text{link}}=1.0650,\qquad A_{\text{Schur}}=1.0072,\qquad A_{\text{geo}}=1.0107,
+A_{\text{link}}=1.06496178\ldots,\qquad
+A_{\text{Schur}}=1.00716802\ldots,\qquad
+A_{\text{geo}}=1.01069671\ldots,
 $$
-so
+hence
 $$
-A_{EW}=1.0650\times 1.0072\times 1.0107=1.08424\ldots
+A_{EW}=1.06496178\ldots\times1.00716802\ldots\times1.01069671\ldots
+=1.08406869\ldots.
 $$
-which justifies the stated value $1.084\pm 0.005$. ∎
+Rounding the central value to three decimals gives $A_{EW}=1.084$. The additional $\\pm0.005$ quoted in later numerical sections is the manuscript's model allowance for omitted higher-order determinant and Jacobian terms; it is not produced by the multiplication above. ∎
 
-**Corollary T.29.1** (Complete Electroweak Scale). With zero continuously adjustable parameters:
+**Corollary T.29.1** (Complete Electroweak Scale within the determinant model). Fix the determinant prescriptions of Theorem T.29. Then no further continuously tuned parameter enters the evaluation
 $$
-v = A_{EW} \cdot e^{-\kappa_{EW}} \cdot M_{Pl} = 1.084 \times e^{-38.5} \times 1.221 \times 10^{19} \text{ GeV} = 252 \text{ GeV}
+v = A_{EW} \cdot e^{-\kappa_{EW}} \cdot M_{Pl}
+    = 1.084 \times e^{-38.5} \times 1.221 \times 10^{19}\,\text{GeV}
+    = 252\,\text{GeV}.
 $$
-Agreement with $v_{\text{obs}} = 246.22$ GeV: **2.3%**.
+Compared with $v_{\text{obs}} = 246.22\,\text{GeV}$, this is a $2.35\%$ deviation.
 
-**Remark T.29.1: Zero Continuously Adjustable Parameters.** The inputs are:
+**Remark T.29.1: Parameter scope.** The inputs used here are:
 
-- $u_0^2 = 1/24$ from PCE equipartition over $M = 24$ interface modes (Theorem Z.5, Section Z.8)
-- Canonical Bures normalization (same as $\lambda$ derivation)
-- $(24/23)^{1/4}$ from homogeneous-space geometry
+- $u_0^2 = 1/24$ from PCE equipartition over $M = 24$ interface modes (Theorem Z.5, Section Z.8),
+- the rank-one Schur-complement prescription of Theorem T.29,
+- the homogeneous-space Jacobian factor $(24/23)^{1/4}$,
+- the previously fixed normalization conventions.
 
-All conventions were fixed in prior derivations. The electroweak scale is now **completely determined**.
+Accordingly, this subsection introduces no additional continuous fit parameter once the determinant model of Theorem T.29 is fixed. The numerical value of $v$ is therefore conditional on that model, not an unconditional consequence of the earlier sections alone.
 
 ### T.20.5 Solved: Left-Chiral Row-Pair Structure ✓
 
-**Theorem T.30** (Left-Chiral Tensor Decomposition). The 6-dimensional left-chiral space admits a canonical decomposition:
+**Theorem T.30** (Left-Chiral Tensor Decomposition). Once the six left-chiral links are partitioned into the three row pairs $(1,2)$, $(3,4)$, and $(5,6)$, the resulting 6-dimensional space admits a natural identification
 $$
 \mathbb{R}^6 \cong \mathbb{R}^3 \otimes \mathbb{R}^2
 $$
-where:
+unique up to independent orthogonal changes of basis in the two factors, where:
 
-- $\mathbb{R}^3$: “pair-index” space (MOG row pairs 1–2, 3–4, 5–6)
-- $\mathbb{R}^2$: “in-pair” space (equal/alternating within each pair)
+- $\mathbb{R}^3$: “pair-index” space labeling the three row pairs
+- $\mathbb{R}^2$: “in-pair” space distinguishing the two entries within each pair
 
-*Proof.* The six left-chiral links correspond to the six rows of the MOG array (Curtis 1976; Wilson 2009). These group naturally into three pairs, exhibiting the $S_3 \times \mathbb{Z}_2$ structure. ∎
+*Proof.* Let $e_1,\dots,e_6$ be the standard basis of $\mathbb{R}^6$. Let $f_1,f_2,f_3$ be the standard basis of $\mathbb{R}^3$ and $g_+,g_-$ the standard basis of $\mathbb{R}^2$. Define a linear map on basis vectors by
+$$
+e_{2a-1}\mapsto f_a\otimes g_+,\qquad
+e_{2a}\mapsto f_a\otimes g_-,
+\qquad a=1,2,3.
+$$
+Because both spaces have dimension $6$, this basis correspondence extends uniquely to a linear isomorphism
+$$
+\Phi:\mathbb{R}^6\to\mathbb{R}^3\otimes\mathbb{R}^2.
+$$
+The pair labels determine the $\mathbb{R}^3$ factor, while the within-pair labels determine the $\mathbb{R}^2$ factor. Any other choice of orthonormal bases in the pair-index and in-pair spaces composes $\Phi$ with an element of $O(3)\times O(2)$. Therefore the tensor decomposition is natural once the row-pair partition is fixed, but not absolutely canonical before that choice. ∎
 
 **Definition T.24** (Canonical Basis). Define orthonormal bases:
 
@@ -1363,30 +1408,37 @@ where $\mathbf{t}$ is the $S_3$-trivial direction and ${\mathbf{u}, \mathbf{w}}$
 
 ### T.20.6 Solved: Generation Projectors ✓
 
-**Theorem T.31** (Generation Projector Construction). The left-chiral space admits a unique $S_3$-canonical decomposition into three orthogonal rank-2 planes:
+**Theorem T.31** (Generation projector construction in the fixed $S_3\times \mathbb{Z}_2$ basis). Relative to the tensor-product structure of Theorem T.8 and the bases of Definition T.24, the left-chiral space admits the orthogonal rank-2 decomposition
 $$
-\mathbb{R}^6 = \text{Ran}(P_1) \oplus \text{Ran}(P_2) \oplus \text{Ran}(P_3)
+\mathbb{R}^6 = \text{Ran}(P_1) \oplus \text{Ran}(P_2) \oplus \text{Ran}(P_3),
 $$
 with $P_1 + P_2 + P_3 = I_6$ and $P_i P_j = \delta_{ij} P_i$.
 
-*Proof.* Define six orthonormal vectors via tensor products:
+*Proof.* Define
 $$
 \begin{aligned}
-v_0 &= \mathbf{t} \otimes \mathbf{e} = \frac{1}{\sqrt{6}}(1, 1, 1, 1, 1, 1)\\
-v_1 &= \mathbf{t} \otimes \mathbf{a} = \frac{1}{\sqrt{6}}(1, -1, 1, -1, 1, -1)\\
-v_2 &= \mathbf{u} \otimes \mathbf{e} = \tfrac{1}{2}(1, 1, -1, -1, 0, 0)\\
-v_3 &= \mathbf{w} \otimes \mathbf{e} = \frac{1}{\sqrt{12}}(1, 1, 1, 1, -2, -2)\\
-v_4 &= \mathbf{u} \otimes \mathbf{a} = \tfrac{1}{2}(1, -1, -1, 1, 0, 0)\\
-v_5 &= \mathbf{w} \otimes \mathbf{a} = \frac{1}{\sqrt{12}}(1, -1, 1, -1, -2, 2)
+v_0 &= \mathbf{t} \otimes \mathbf{e} = \frac{1}{\sqrt{6}}(1, 1, 1, 1, 1, 1),\\
+v_1 &= \mathbf{t} \otimes \mathbf{a} = \frac{1}{\sqrt{6}}(1, -1, 1, -1, 1, -1),\\
+v_2 &= \mathbf{u} \otimes \mathbf{e} = \tfrac{1}{2}(1, 1, -1, -1, 0, 0),\\
+v_3 &= \mathbf{w} \otimes \mathbf{e} = \frac{1}{\sqrt{12}}(1, 1, 1, 1, -2, -2),\\
+v_4 &= \mathbf{u} \otimes \mathbf{a} = \tfrac{1}{2}(1, -1, -1, 1, 0, 0),\\
+v_5 &= \mathbf{w} \otimes \mathbf{a} = \frac{1}{\sqrt{12}}(1, -1, 1, -1, -2, 2).
 \end{aligned}
 $$
-
-These form an orthonormal basis. The projectors are:
+Because $\{\mathbf t,\mathbf u,\mathbf w\}$ is an orthonormal basis of $\mathbb R^3$ and $\{\mathbf e,\mathbf a\}$ is an orthonormal basis of $\mathbb R^2$, the six tensor products $\{v_0,\dots,v_5\}$ form an orthonormal basis of $\mathbb R^6$. Define
 $$
-P_3 = v_0 v_0^T + v_1 v_1^T, \quad P_1 = v_2 v_2^T + v_3 v_3^T, \quad P_2 = v_4 v_4^T + v_5 v_5^T
+P_3 = v_0 v_0^T + v_1 v_1^T,\qquad
+P_1 = v_2 v_2^T + v_3 v_3^T,\qquad
+P_2 = v_4 v_4^T + v_5 v_5^T.
 $$
+Since the $v_i$ are orthonormal, each $P_i$ is an orthogonal rank-2 projector, $P_iP_j=\delta_{ij}P_i$, and $P_1+P_2+P_3=I_6$.
 
-Orthonormality of $\{v_i\}$ implies completeness and orthogonality of $\{P_i\}$. ∎
+The plane $\text{Ran}(P_3)=\mathbf t\otimes\mathbb R^2$ is canonical for the $S_3$ action because $\mathbf t$ spans the unique $S_3$-trivial line in the pair-index factor. The complementary planes
+$$
+\text{Ran}(P_1)=\text{span}\{\mathbf u\otimes\mathbf e,\mathbf w\otimes\mathbf e\},\qquad
+\text{Ran}(P_2)=\text{span}\{\mathbf u\otimes\mathbf a,\mathbf w\otimes\mathbf a\}
+$$
+are the even- and odd-parity copies of the standard $S_3$ representation determined by the fixed $\\mathbb Z_2$ basis $(\mathbf e,\mathbf a)$. ∎
 
 **Corollary T.31.1** (Explicit Rational Form). The top-generation projector is:
 $$
@@ -1394,7 +1446,7 @@ P_3 = \frac{1}{6}\left(\mathbf{1}_6 \mathbf{1}_6^T + \mathbf{s}\mathbf{s}^T\righ
 $$
 where $\mathbf{1}_6 = (1,1,1,1,1,1)^T$ and $\mathbf{s} = (1,-1,1,-1,1,-1)^T$.
 
-**Corollary T.31.2** ($S_3$ Invariance). The projector $P_3$ is the unique rank-2 $S_3$-invariant plane containing the democratic direction. $P_1$ and $P_2$ transform as the standard $S_3$ representation.
+**Corollary T.31.2** ($S_3$ invariance and parity splitting). The projector $P_3$ is the canonical rank-2 $S_3$-invariant plane containing the democratic direction. In the fixed parity basis of Definition T.24, $P_1$ and $P_2$ are the even- and odd-parity copies of the standard $S_3$ representation.
 
 -----
 
@@ -1462,30 +1514,57 @@ $$
 
 ### T.20.8 Yukawa Hierarchy from Geometric Tilts
 
-**Theorem T.33** (Tilt Mechanism). Small symmetry-breaking perturbations tilt $\mathbf{h}$ out of $\text{Ran}(P_3)$:
+**Theorem T.33** (Tilt Mechanism). For $0\le |\phi|\le \pi/4$, label the light generations so that $y_1\le y_2$. Small symmetry-breaking perturbations tilt $\mathbf{h}$ out of $\text{Ran}(P_3)$:
 $$
-\mathbf{h}(\vartheta, \phi) = \cos\vartheta \cdot v_0 + \sin\vartheta \cdot (\cos\phi \cdot v_2 + \sin\phi \cdot v_4)
+\mathbf{h}(\vartheta, \phi) = \cos\vartheta \cdot v_0 + \sin\vartheta \cdot (\cos\phi \cdot v_2 + \sin\phi \cdot v_4).
+$$
+The corresponding Yukawa magnitudes are
+$$
+y_3 = \cos\vartheta,\qquad
+y_2 = \sin\vartheta \cdot |\cos\phi|,\qquad
+y_1 = \sin\vartheta \cdot |\sin\phi|.
 $$
 
-The Yukawa couplings become:
+*Proof.* By Theorem T.31,
 $$
-y_3 = \cos\vartheta, \quad y_1 = \sin\vartheta \cdot |\cos\phi|, \quad y_2 = \sin\vartheta \cdot |\sin\phi|
+P_3=v_0v_0^T+v_1v_1^T,\qquad
+P_1=v_2v_2^T+v_3v_3^T,\qquad
+P_2=v_4v_4^T+v_5v_5^T,
 $$
-
-*Proof.* Direct calculation using projector orthogonality. ∎
+with $\{v_0,\dots,v_5\}$ orthonormal. Therefore
+$$
+P_3\mathbf h(\vartheta,\phi)=\cos\vartheta\,v_0,
+$$
+because $v_0$ is orthogonal to $v_2$ and $v_4$, and similarly
+$$
+P_1\mathbf h(\vartheta,\phi)=\sin\vartheta\cos\phi\,v_2,\qquad
+P_2\mathbf h(\vartheta,\phi)=\sin\vartheta\sin\phi\,v_4.
+$$
+Taking Bures norms and using $\|v_0\|_B=\|v_2\|_B=\|v_4\|_B=1$ gives
+$$
+\|P_3\mathbf h\|_B=\cos\vartheta,\qquad
+\|P_1\mathbf h\|_B=\sin\vartheta|\cos\phi|,\qquad
+\|P_2\mathbf h\|_B=\sin\vartheta|\sin\phi|.
+$$
+For $0\le |\phi|\le \pi/4$ one has $|\sin\phi|\le |\cos\phi|$, so the more suppressed light mode is the $P_2$ component. Ordering the light generations by increasing magnitude therefore gives
+$$
+y_1=\|P_2\mathbf h\|_B=\sin\vartheta|\sin\phi|,\qquad
+y_2=\|P_1\mathbf h\|_B=\sin\vartheta|\cos\phi|.
+$$
+This proves the stated formulas. ∎
 
 **Corollary T.33.1** ($E_8$ Distance Correspondence). By Appendix R (Section R.6), the tilt parameters relate to $E_8$ geodesic distances via:
 $$
-\mathcal{R} = \frac{\ln(y_3/y_1)}{\ln(y_3/y_2)} = \frac{d_{31}^2}{d_{32}^2} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}
+\mathcal{R} = \frac{\ln(y_3/y_1)}{\ln(y_3/y_2)} = \frac{d_{31}^2}{d_{32}^2} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}.
 $$
 
-**Corollary T.33.2** (Observed Tilts). Matching experimental mass ratios requires:
+**Corollary T.33.2** (Observed Tilts). Matching the observed continuous ratios gives:
 
-|Sector |$\vartheta$|$\phi$|$\mathcal{R}$|
-|-----------|-----------|------|-------------|
-|Up quarks |0.42° |0.10° |3 |
-|Down quarks|1.28° |2.87° |3/2 |
-|Leptons |3.41° |0.28° |2–3 |
+|Sector |$\vartheta$|$\phi$|$\mathcal{R}_{\mathrm{obs}}$|
+|-----------|-----------|------|-----------------------------|
+|Up quarks |0.42° |0.10° |2.29 |
+|Down quarks|1.28° |2.87° |1.79 |
+|Leptons |3.41° |0.28° |2.89 |
 
 All tilts are at the degree or sub-degree level, consistent with $E_8$ pinning and elastic projector effects.
 
@@ -1677,7 +1756,10 @@ K_{\mathrm{hol}} = 2a = 4.
 $$
 This equals the effective curvature $K_{\mathrm{eff}} = 4/a = 2$ scaled by $2a/(4/a) = a^2 = 4$ — or equivalently, $K_{\mathrm{hol}} = 2a$ directly from the metric normalization. (Theorem Z.24 gives $K_{\mathrm{eff}} = 4/a = 2$ for the *average* over all tangent 2-planes; the holomorphic sectional curvature is $2a = 4$ for the specific $\mathbb{CP}^1$ 2-planes.)
 
-**Step 3 (Holonomy per mode).** At capacity saturation, the $M = 24$ interface modes are utilized democratically (PCE isotropy). The total holonomy $2\pi$ distributed equally across $M$ modes gives holonomy per mode $2\pi/M$. The area of the minimal geodesic loop corresponding to one mode is $\mathcal{A}*1 = (2\pi/M)/K_{\mathrm{hol}} = (2\pi/24)/4 = \pi/48$.
+**Step 3 (Holonomy per mode).** At capacity saturation, the $M = 24$ interface modes are utilized democratically (PCE isotropy). The total holonomy $2\pi$ distributed equally across $M$ modes gives holonomy per mode $2\pi/M$. The area of the minimal geodesic loop corresponding to one mode is
+$$
+\mathcal{A}_1 = \frac{(2\pi/M)}{K_{\mathrm{hol}}} = \frac{(2\pi/24)}{4} = \frac{\pi}{48}.
+$$
 
 **Step 4 (Gauge-coupling identification).** The Bures connection $\mathcal{A}_B$ is identified with the gauge connection at matching: the holonomy $\oint_\gamma \mathcal{A}_B$ around a minimal mode loop equals $g_U^2/2$ (the factor $1/2$ arises because the gauge kinetic term $-\frac{1}{4}F^2$ introduces a factor $1/2$ relative to the geometric connection in the standard normalization $\alpha = g^2/(4\pi)$). Thus:
 $$
@@ -1763,7 +1845,7 @@ $$
 The interface directions are mutually orthogonal and isotropic, hence
 
 $$
-g_B = \frac{1}{4},I_{24}.
+g_B = \frac{1}{4} I_{24}.
 $$
 
 ### T.21.2.3 $E_8$ Root Space
@@ -1906,48 +1988,55 @@ which satisfies $|r_k|^2 = 2$ for all $k$ and the stated pairwise distances.
 
 ## T.21.6 Hierarchy Invariant and Phenomenology
 
-**Corollary T.42.2** (Hierarchy invariant).
-The ratio of logarithmic mass splittings is
-
+**Corollary T.42.2** (Leading-order hierarchy invariant).
+At quadratic order in the hierarchy law,
 $$
-\mathcal{R} = \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} = 3.
+\mathcal{R}_{\mathrm{LO}}
+= \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)}
+= \frac{d^2_{31}}{d^2_{32}}
+= 3.
 $$
 
 Experimentally, using charged-lepton masses,
-
 $$
-\mathcal{R}_{\mathrm{obs}} = \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)} = \frac{\ln(3477.23)}{\ln(16.817)} = 2.889,
+\mathcal{R}_{\mathrm{obs}}
+= \frac{\ln(m_\tau/m_e)}{\ln(m_\tau/m_\mu)}
+= \frac{\ln(3477.23)}{\ln(16.817)}
+= 2.889.
 $$
 
-matching the geometric prediction at the $3.8%$ level.
+Thus the leading-order value $3$ differs from observation by $0.111$, i.e. by about $3.7\%$ relative to the leading-order prediction. The quartic curvature correction is incorporated later in Theorem T.42.6.
 
 ### T.21.6.1 Infrared Effective Exponent
 
-**Proposition T.42.3** (Infrared extraction).
-The infrared effective exponent extracted from data is
-
+**Proposition T.42.3** (Infrared extraction from charged-lepton data). The effective exponent extracted directly from the $(\tau,\mu)$ ratio is
 $$
-\alpha_{\mathrm{IR}} = \frac{\ln(m_\tau/m_\mu)}{d^2_{32}} = \frac{\ln(m_\tau/m_\mu)}{2} = 1.411.
+\alpha_{\mathrm{IR}}^{\mathrm{obs}}
+:= \frac{\ln(m_\tau/m_\mu)}{d^2_{32}}
+ = \frac{\ln(m_\tau/m_\mu)}{2}
+ = 1.411.
 $$
 
-This is in excellent agreement with $\alpha_{\mathrm{IR}} \approx \sqrt{2} = 1.414$.
+This observed value is within $0.21\%$ of $\sqrt{2}=1.41421356\ldots$.
 
-### T.21.6.2 Phenomenological Predictions with $\alpha_{\mathrm{IR}} = 1.418$
+### T.21.6.2 Phenomenological Predictions with $\alpha_{\mathrm{IR}}^{\mathrm{pred}} = 1.418$
 
-From Theorem T.24.2.1, the sinc-corrected infrared hierarchy coefficient is
-
+From Theorem T.24.2.1, the sinc-corrected model prediction is
 $$
-\alpha_{\mathrm{IR}} = \alpha_{\mathrm{UV}} \times f_{\mathrm{sinc}} = \frac{3}{2} \times \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = 1.418.
+\alpha_{\mathrm{IR}}^{\mathrm{pred}}
+= \alpha_{\mathrm{UV}} \times f_{\mathrm{sinc}}
+= \frac{3}{2} \times \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}}
+= 1.418.
 $$
 
 For the charged-lepton triad at leading order,
-
 $$
 \begin{aligned}
-\ln\!\left(\frac{m_\tau}{m_\mu}\right) &= \alpha_{\mathrm{IR}} \cdot 2 = 2.836, \\[4pt]
-\ln\!\left(\frac{m_\mu}{m_e}\right) &= \alpha_{\mathrm{IR}} \cdot 4 = 5.672, \\[4pt]
+\ln\!\left(\frac{m_\tau}{m_\mu}\right) &= \alpha_{\mathrm{IR}}^{\mathrm{pred}} \cdot 2 = 2.836, \\[4pt]
+\ln\!\left(\frac{m_\mu}{m_e}\right) &= \alpha_{\mathrm{IR}}^{\mathrm{pred}} \cdot 4 = 5.672, \\[4pt]
 \ln\!\left(\frac{m_\tau}{m_e}\right) &= \ln\!\left(\frac{m_\tau}{m_\mu}\right) + \ln\!\left(\frac{m_\mu}{m_e}\right) = 8.508.
 \end{aligned}
+$$
 $$
 
 **Remark T.21.6.2a: Path Additivity.** *The $\tau/e$ ratio is computed as the sum of adjacent ratios, reflecting the physical structure of the $E_8$ generation triad. The generations $(\tau, \mu, e)$ form a triangle in $E_8$ root space. Using standard $E_8$ normalization where roots have squared norm $|r|^2 = 2$, the inner products are $\langle r_\tau, r_\mu \rangle = 1$, $\langle r_\mu, r_e \rangle = 0$, $\langle r_\tau, r_e \rangle = -1$, corresponding to squared distances $d^2 = 2|r|^2 - 2\langle r_i, r_j \rangle = 4 - 2\langle r_i, r_j \rangle$, yielding $(d^2_{\tau\mu}, d^2_{\mu e}, d^2_{\tau e}) = (2, 4, 6)$. The dominant Yukawa tunneling path is $\tau \to \mu \to e$, not the direct $\tau \to e$ geodesic. This path structure ensures that logarithmic mass ratios satisfy the mathematical identity $\ln(m_\tau/m_e) = \ln(m_\tau/m_\mu) + \ln(m_\mu/m_e)$ automatically.*
@@ -2034,7 +2123,7 @@ The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ encodes the tangent spa
 The few-percent deviations in Table T.21.1 arise from the $\mathcal{O}(d^4)$ curvature correction on $\mathrm{Gr}(2,8)$. This section provides a complete derivation using:
 
 1. The Van Vleck–Morette determinant for Gaussian overlaps on curved manifolds [DeWitt 1965]
-1. The effective sectional curvature $K_{\mathrm{eff}} = 2$ from Theorem Z.24
+1. The effective sectional curvature $K_{\mathrm{eff}} = 2$ imported from Theorem Z.24 from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12)
 1. The Golay decoding partition structure [MacWilliams & Sloane 1977]
 1. The path-additivity principle for generation triangles
 
@@ -2045,30 +2134,38 @@ The generation manifold $\mathcal{M}_{\mathrm{gen}} = \mathrm{Gr}(2,8)$ is a com
 **Lemma T.42.1** (Curvature Expansion of Gaussian Overlap). *On a Kähler manifold with sectional curvature $K_{\mathrm{sec}}$ in the holomorphic 2-plane, two isotropic Gaussian wavepackets of covariance $\sigma_B^2$ centered at points separated by squared geodesic distance $d^2$ have overlap integral satisfying:*
 
 $$
--\ln \mathcal{I}(d^2) = \alpha_{\mathrm{flat}}\,d^2 - \frac{K_{\mathrm{sec}}}{12}\,\sigma_B^2\,d^4 + \mathcal{O}(d^6)
+-\ln \mathcal{I}(d^2) = \alpha_{\mathrm{flat}}\,d^2 - \frac{K_{\mathrm{sec}}}{12}\,\sigma_B^2\,d^4 + \mathcal{O}(d^6).
 $$
 
-*where the coefficient $1/12$ is the universal Van Vleck factor arising from the world-function expansion [Gray & Vanhecke 1979, Eq. 2.7].*
+*The coefficient $1/12$ is the universal Van Vleck coefficient entering the first curvature correction to the off-diagonal kernel.*
 
-*Proof.* The proof follows the standard heat-kernel/Van Vleck determinant expansion in normal coordinates at the geodesic midpoint [DeWitt 1965].
+*Proof.* The generation manifold used later is $\mathrm{Gr}(2,8)$, a compact Hermitian symmetric space. In particular it is complete, analytic, has bounded curvature, and satisfies $\nabla R=0$. Therefore the standard short-distance off-diagonal asymptotic expansions of DeWitt (1965) for the Van Vleck–Morette determinant and of Gray–Vanhecke (1979) for geodesic Gaussian integrals apply in a normal-coordinate ball about the geodesic midpoint.
 
-**Step 1** (World-function expansion). Synge's world-function $\sigma(p,q) = \frac{1}{2}d^2(p,q)$ admits a covariant Taylor expansion. In Riemannian normal coordinates centered at the midpoint $m$:
+Let $\mathcal I_0(d^2)=\exp(-\alpha_{\mathrm{flat}}\,d^2)$ denote the flat-space overlap of two equal isotropic Gaussians of covariance $\sigma_B^2$. The first curvature correction to the off-diagonal overlap kernel in a holomorphic 2-plane of sectional curvature $K_{\mathrm{sec}}$ has the form
 $$
-\sigma(m, x) = \frac{1}{2}|x|^2 + \frac{1}{12} R_{ijkl}(m),x^i x^j x^k x^l + \mathcal{O}(|x|^6)
+\mathcal I(d^2)
+=
+\mathcal I_0(d^2)
+\left(
+1+\frac{K_{\mathrm{sec}}}{12}\,\sigma_B^2\,d^4+\mathcal O(d^6)
+\right).
 $$
-The coefficient $1/12$ arises from the fourth-order term in the geodesic deviation equation [Gray & Vanhecke 1979, Theorem 3.1].
-
-**Step 2** (Van Vleck–Morette determinant). The determinant of the mixed second derivatives of $\sigma$ enters the path integral measure:
+Taking negative logarithms and using $-\log(1+x)=-x+\mathcal O(x^2)$ gives
 $$
-\Delta_{\mathrm{VM}}(p,q) = \det\left(-\nabla_p \nabla_q \sigma\right)^{1/2} = 1 - \frac{1}{12} R_{ij} x^i x^j + \mathcal{O}(|x|^4)
+-\log \mathcal I(d^2)
+=
+-\log \mathcal I_0(d^2)
+-\frac{K_{\mathrm{sec}}}{12}\,\sigma_B^2\,d^4+\mathcal O(d^6).
 $$
-where $R_{ij}$ is the Ricci tensor [DeWitt 1965, Eq. 14.38].
-
-**Step 3** (Gaussian integral). The overlap integral of two Gaussians centered at $p$ and $q$ is computed by shifting to midpoint coordinates. The Van Vleck determinant modifies the flat-space Gaussian integral. After completing the integration, the net coefficient of $d^4$ is:
+Since $-\log \mathcal I_0(d^2)=\alpha_{\mathrm{flat}}\,d^2$ and the square of the $d^4$ correction contributes only at order $d^8$, this yields
 $$
--\frac{K_{\mathrm{sec}}(v, Jv)}{12}\,\sigma_B^2
+-\ln \mathcal I(d^2)
+=
+\alpha_{\mathrm{flat}}\,d^2
+-\frac{K_{\mathrm{sec}}}{12}\,\sigma_B^2\,d^4
++\mathcal O(d^6).
 $$
-where $K_{\mathrm{sec}}(v, Jv)$ is the sectional curvature in the holomorphic 2-plane spanned by the geodesic tangent $v$ and its Kähler partner $Jv$. ∎
+This is the claimed expansion. ∎
 
 **Remark T.42.1.1: Universality of 1/12.** *The coefficient $1/12$ is universal across all Riemannian manifolds and appears in:*
 
@@ -2086,15 +2183,15 @@ $$
 \boxed{\beta_{\mathrm{geom}} = \frac{K_{\mathrm{eff}}}{12}\,\sigma_B^2 = \frac{1}{C} = \frac{1}{bM} = \frac{1}{144}}
 $$
 
-*where $K_{\mathrm{eff}} = 2$ is the effective sectional curvature (Theorem Z.24), $\sigma_B^2 = 1/24$ is the Bures variance (Lemma T.41.2), and $C = bM = 144$ is the vacuum capacity (Theorem Z.13a).*
+*where $K_{\mathrm{eff}} = 2$ is the effective sectional curvature imported from Theorem Z.24 from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12), $\sigma_B^2 = 1/24$ is the Bures variance (Lemma T.41.2), and $C = bM = 144$ is the vacuum capacity (Theorem Z.13a).*
 
 *Proof.*
 
-**Step 1** (Effective curvature from Theorem Z.24). The effective sectional curvature for interface modes is:
+**Step 1** (Effective curvature from Theorem Z.24). From the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12), the effective sectional curvature for interface modes is:
 $$
 K_{\mathrm{eff}} = K_{\mathrm{avg}}^{\mathrm{Bures}} \times \frac{M-1}{ad_0} = \frac{32}{23} \times \frac{23}{16} = 2
 $$
-This value is established in Appendix Z (Theorem Z.24) in the context of the fine-structure constant derivation. The same geometric quantity governs the mass hierarchy curvature correction because both arise from Gaussian overlap integrals on the same manifold $\mathrm{Gr}(2,8)$.
+This value follows from the symmetric-space structure of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12) and is reused here because the same Gaussian overlap functional on $\mathrm{Gr}(2,8)$ is being evaluated.
 
 **Step 2** (Bures variance from Lemma T.41.2). Capacity saturation at the PCE-attractor yields:
 $$
@@ -2132,24 +2229,33 @@ $$
 **Theorem T.42.2a** (Path Additivity Principle). *The physical mass ratio $\ln(m_\tau/m_e)$ is computed as the path sum of adjacent-edge predictions along the dominant tunneling path $\tau \to \mu \to e$, not by applying the curvature formula (Theorem T.42.6) directly at $d^2_{\tau e} = 6$:*
 
 $$
-\ln\!\left(\frac{m_\tau}{m_e}\right) = \ln\!\left(\frac{m_\tau}{m_\mu}\right) + \ln\!\left(\frac{m_\mu}{m_e}\right)
+\ln\!\left(\frac{m_\tau}{m_e}\right) = \ln\!\left(\frac{m_\tau}{m_\mu}\right) + \ln\!\left(\frac{m_\mu}{m_e}\right).
 $$
 
-*where each term on the right is evaluated using Theorem T.42.6 with its own $D_{\mathrm{eff}}(d^2)$. This is a physical prescription (sequential tunneling dominates over direct geodesic tunneling), automatically consistent with the mathematical identity $\ln(A/C) = \ln(A/B) + \ln(B/C)$.*
+*where each term on the right is evaluated using Theorem T.42.6 with its own $D_{\mathrm{eff}}(d^2)$. This is the manuscript's dominant-path prescription for the generation triangle.*
 
-*Proof.*
-
-**Step 1** (Triangle geometry). The three generations form a triangle in $E_8$ root space, not a collinear configuration. The “direct” geodesic from $r_\tau$ to $r_e$ (with $d^2 = 6$) does not pass through $r_\mu$.
-
-**Step 2** (Dominant tunneling channel). The Yukawa hierarchy arises from wavefunction overlap between generation vacua. For the $\tau/e$ ratio, the dominant contribution comes from the sequential path $\tau \to \mu \to e$:
-
-- First tunneling: $\tau \to \mu$ with amplitude $\propto e^{-\alpha d^2_{\tau\mu}/2}$
-- Second tunneling: $\mu \to e$ with amplitude $\propto e^{-\alpha d^2_{\mu e}/2}$
-- Total amplitude: product of individual amplitudes
-
-**Step 3** (Curvature correction assignment). The sequential path construction assigns each edge its own curvature correction via the effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ of Theorem T.42.5: the $\tau\mu$ edge ($d^2=2$) uses the sub-threshold value $D_{\mathrm{eff}} = 3/8$, while the $\mu e$ edge ($d^2=4$) uses the threshold value $D_{\mathrm{eff}} = 13/6$. This avoids the need to define $D_{\mathrm{eff}}$ at $d^2 = 6$ (which lies outside the two established regimes).
-
-**Step 4** (Suppression of direct channel). The “direct” $\tau \to e$ tunneling (not passing through $\mu$) would require a different operator structure in the Yukawa sector. In the Standard Model with three generations, the physical mass eigenvalues arise from diagonalizing the $3 \times 3$ Yukawa matrix, where the path-mediated contribution dominates. ∎
+*Proof.* Let
+$$
+L_{\tau\mu}:=\ln\!\left(\frac{m_\tau}{m_\mu}\right),\qquad
+L_{\mu e}:=\ln\!\left(\frac{m_\mu}{m_e}\right)
+$$
+be the adjacent-edge logarithmic suppressions obtained from Theorem T.42.6 at $d^2_{\tau\mu}=2$ and $d^2_{\mu e}=4$. The dominant-path prescription in the theorem statement says that the effective long-range transition $\tau\to e$ is represented, at the order retained in this model, by composing the two adjacent channels rather than by introducing an independent direct $d^2_{\tau e}=6$ formula. Therefore the corresponding suppression factors multiply:
+$$
+e^{-L_{\tau e}} = e^{-L_{\tau\mu}}\,e^{-L_{\mu e}}.
+$$
+Taking negative logarithms gives
+$$
+L_{\tau e}=L_{\tau\mu}+L_{\mu e}.
+$$
+Substituting back the definitions of the $L_{ij}$ yields
+$$
+\ln\!\left(\frac{m_\tau}{m_e}\right)
+=
+\ln\!\left(\frac{m_\tau}{m_\mu}\right)
++
+\ln\!\left(\frac{m_\mu}{m_e}\right).
+$$
+The role of the $E_8$ triangle geometry is only to explain why the adjacent edges use the already-defined values $D_{\mathrm{eff}}(2)$ and $D_{\mathrm{eff}}(4)$, while no separate value at $d^2=6$ is introduced. ∎
 
 **Remark T.42.2.1a: Consistency Check.** *Path additivity ensures internal consistency: the $\tau/e$ prediction is uniquely determined by the adjacent-edge predictions, with no additional parameters or choices required for the longest-range ratio.*
 
@@ -2783,7 +2889,7 @@ All quantities trace to established theorems:
 |$g_U^2$ |$\pi/6$ |Theorem T.39a |Holonomy per mode $2\pi/M$ |
 |$\mathcal{N}_{PU}$ |$1/(72\sqrt{12})$ |Section T.21.11 |Democratic × capacity × isotropy |
 |$M$ |$24$ |Theorem Z.5 |$2ab$ (QFI-active modes) |
-|$K_{\mathrm{eff}}$ |$2$ |Theorem Z.24 |$4/a$ (holomorphic 2-plane curvature) |
+|$K_{\mathrm{eff}}$ |$2$ from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12) |Theorem Z.24 |$K_{\mathrm{avg}}^{\mathrm{Bures}} \times (M-1)/(ad_0)$ from the symmetric-space geometry (Lemma Z.12) |
 |$\sigma_B^2$ |$1/24$ |Lemma T.41.2 |Capacity saturation |
 |$1/12$ |Universal |Van Vleck–Morette|World-function expansion coefficient |
 |$\beta_{\mathrm{geom}}$ |$1/144$ |Theorem T.42.2 |$(K_{\mathrm{eff}}/12)\sigma_B^2 = 1/C$ |
@@ -3753,9 +3859,9 @@ All complexity parameters trace to the same logical foundation established in th
 |Step|Quantity |Value |Origin |Reference |
 |:---|:----------------------------------|:-----------------------|:------------------------------------------------------------------|:---------------|
 |1 |$K_0$ |3 bits |Minimum self-referential complexity |Theorem 15 |
-|2 |$d_0$ |$2^{K_0} = 8$ |MPU Hilbert space dimension |Theorem 23 |
-|3 |$\varepsilon$ |$\ln 2$ |SPAP thermodynamic cost |Theorem 31 |
-|4 |$a$ |$e^\varepsilon = 2$ |Active kernel dimension |Theorem Z.1 |
+|2 |$d_0$ |$8$ on the minimal Appendix Z branch |MPU Hilbert space dimension |Theorem 23; Theorem Z.2 |
+|3 |$\varepsilon$ |$\ln 2$ on the attractor branch |SPAP thermodynamic cost |Theorem 31; Definition 15a |
+|4 |$a$ |$2$ |Active kernel dimension on the attractor-saturating branch |Theorem Z.1 |
 |5 |$b$ |$d_0 - a = 6$ |Inactive subspace dimension |Definition |
 |5a |$\dim_{\mathbb{C}}(\text{Gr}(2,8))$|$ab = 12$ |Attractor orbit complex dimension; equals Golay $k$ |Theorem Z.6.3a |
 |5b |$\dim_{\mathbb{R}}(\text{Gr}(2,8))$|$2ab = 24$ |Attractor orbit real dimension; equals Golay $n$ and mode count $M$|Theorem Z.6.3a |
@@ -3767,7 +3873,7 @@ All complexity parameters trace to the same logical foundation established in th
 
 **Proposition T.59** (Foundational Completeness of the Core Counting Chain). *Every parameter in the backbone chain $K_0 \to d_0 \to \varepsilon \to a \to b \to M \to k \to D$ derives from $K_0 = 3$ through the chain above. Quantitative hierarchy derivations later in this appendix additionally use the threshold data, prefactors, and matching prescriptions introduced in those sections.*
 
-*Proof.* The logical necessity of $K_0 = 3$ (Theorem 15) initiates the backbone cascade. Each subsequent step follows from the cited results: $d_0 = 2^{K_0}$ (minimum Hilbert space for $K_0$ bits); $\varepsilon = \ln 2$ (Theorem J.1, Landauer bound for SPAP); $a = e^\varepsilon$ (Theorem Z.1, active dimension from entropy cost); $b = d_0 - a$ (complement); $M = 2ab$ (Theorem Z.5, interface mode count); $k = M/2$ (Theorem Z.13, PCE-optimal code dimension); and $D = 4$ (Theorem Z.11, unique dimension with $K(D) = 24$). This proves foundational completeness only for the backbone counting chain. The later hierarchy sections supplement that chain with the additional sector-specific inputs stated there. ∎
+*Proof.* The logical necessity of $K_0 = 3$ (Theorem 15) initiates the backbone cascade. Each subsequent step follows from the cited results: Theorem 23 gives the lower bound $d_0 \ge 2^{K_0}=8$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch; Theorem 31 gives $\varepsilon \ge \ln 2$, and Definition 15a supplies the attractor saturation $\varepsilon=\ln 2$; Theorem Z.1 then fixes $a = 2$ on that branch; $b = d_0 - a$ (complement); $M = 2ab$ (Theorem Z.5, interface mode count); $k = M/2$ (Theorem Z.13, PCE-optimal code dimension); and $D = 4$ from the mode-channel correspondence (Theorem Z.11). This proves foundational completeness only for the backbone counting chain. The later hierarchy sections supplement that chain with the additional sector-specific inputs stated there. ∎
 
 -----
 
@@ -3802,17 +3908,17 @@ $$\mathcal{M}_\Lambda = \text{Gr}(k, M) = \text{Gr}(12, 24)$$
 |Zero modes |$D + 1$ (translations + dilatation)|5 |
 |**$\kappa_{\mathrm{ref}}$** |$144 - 5/2$ |**141.5**|
 
-**Theorem U.16** (Reference Cosmological Constant Complexity). *Under the Appendix U leading-order zero-mode counting convention, the reference exponent is:*
+**Summary of Appendix U Theorem U.16.** Under the Appendix U leading-order five-mode reference-counting convention, the reference exponent is
 
 $$\kappa_{\mathrm{ref}} = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5$$
 
-*where the base complexity $k^2 = 144$ arises from the Grassmannian dimension (Theorem U.3), and the deficit $(D+1)/2 = 5/2$ arises from the four translation zero modes (Theorem U.8) together with the dilatation zero mode (Theorem U.9). The scale invariance underlying the dilatation mode is established at the PCE-Attractor in Theorem U.8a.*
+where the base complexity $k^2 = 144$ arises from the Grassmannian dimension (Theorem U.3), and the deficit $(D+1)/2 = 5/2$ arises from the Appendix U reference-counting convention summarized in Theorem U.15 and recorded in Theorem U.16.
 
 **Result.**
 
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283} = (2.88 \pm 0.03)\times 10^{-122}.$$
 
-Using $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this is consistent with the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}$ (Appendix V, Eq. (V.5)).
+Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this reference evaluation is consistent with the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}$ (Appendix V, Eq. (V.5)).
 
 -----
 
@@ -3845,7 +3951,7 @@ With $e^{-38.5} \approx 1.90 \times 10^{-17}$ and $M_{Pl} = 1.22 \times 10^{19}$
 
 $$v \approx 252 \text{ GeV}$$
 
-with the prefactor $A_{EW} = 1.085 \pm 0.005$ derived from first principles in Theorem T.29 via SU(2) block curvature, Schur complement, and homogeneous-space Jacobian factors. This result, with zero continuously adjustable parameters, achieves 2.3% agreement with $v_{obs} = 246.22$ GeV.
+with the prefactor $A_{EW} = 1.084 \pm 0.005$ obtained in Theorem T.29 within the three-factor determinant model via SU(2) block curvature, the rank-one Schur factor, and the homogeneous-space Jacobian factor. Once that model is fixed, no further continuous tuning enters this subsection. The resulting value is $2.3\%$ above $v_{obs} = 246.22$ GeV.
 
 -----
 
@@ -3892,7 +3998,7 @@ $$
 
 **Remark.** Although the Yukawa mechanism shares the foundational constants ($M = 24$, $\sigma_B^2 = 1/24$) with the instanton mechanism, the suppression arises from geodesic distances on $E_8$ rather than from configuration space dimensionality. This represents a complementary realization of the Golay-Steiner structure.
 
-**Proposition T.58** ($E_8$ Optimality). *The $E_8$ root system is uniquely selected by information-theoretic criteria:*
+**Summary of Proposition T.58** ($E_8$ Optimality). *The $E_8$ root system is uniquely selected by information-theoretic criteria:*
 
 1. *Packing optimality: $E_8$ achieves the densest sphere packing in 8 dimensions (Viazovska 2017)*
 1. *Division algebra structure: The octonionic connection via $\rho(8) = 8$ in the Radon-Hurwitz function (Corollary Z.2)*
@@ -3904,17 +4010,17 @@ $$
 
 ### T.23.8 The Unified Hierarchy Table
 
-**Theorem T.62** (Unified Hierarchy Structure). *Exponential hierarchies in the framework derive from the Golay-Steiner structure through two mechanisms:*
+**Theorem T.62** (Compiled hierarchy table). *The previously derived hierarchy relations organize into the following two classes.*
 
-**Mechanism A: Instanton Complexity (Configuration Space Dimension)**
+**Mechanism A: Configuration-space instanton exponents**
 
-|Quantity |Configuration Space |Base |Coset|Zero Modes|$\kappa$|Suppression |
+|Quantity |Configuration Space |Base |Coset|Zero Modes|$\kappa$|Scaling |
 |:--------|:----------------------------------|:---:|:---:|:--------:|:------:|:-------------------|
-|$\Lambda$|Gr(12,24) |144 |0 |5 |141.5 |$10^{-122}$ |
-|$v$ |$SU(2) \times U(1)/U(1)$ |36 |+3 |1 |38.5 |$10^{-17} M_{Pl}$ |
-|$\eta_B$ |CP-odd sector of $\mathcal{M}_{EW}$|19.25|0 |$+0.23$ |19.48 |$10^{-9}$ |
-|$M_R$ |$E_8$ instanton ($d^2_{31} = 6$) |– |– |– |9 |$10^{-4} M_{Pl}$ |
-|$G_F$ |(derived from $v$) |— |— |— |77 |$10^{-5}$ GeV$^{-2}$|
+|$\Lambda$|Gr(12,24) |144 |0 |5 |141.5 |$\Lambda L_P^2 \propto e^{-2\kappa}$ |
+|$v$ |$SU(2) \times U(1)/U(1)$ |36 |+3 |1 |38.5 |$v/M_{Pl} \propto e^{-\kappa}$ |
+|$\eta_B$ |CP-odd sector of $\mathcal{M}_{EW}$|19.25|0 |$+0.23$ |19.48 |$\eta_B \propto e^{-\kappa}$ |
+|$M_R$ |$E_8$ instanton ($d^2_{31} = 6$) |– |– |– |9 |$M_R/M_{Pl} = e^{-9}$ |
+|$G_F$ |(derived from $v$) |— |— |— |77 |$G_F \propto e^{2\kappa_{EW}} M_{Pl}^{-2}$ |
 
 **Remark T.62.1: QCD Confinement Scale.** The matching scale $\mu_G = M_{Pl} \cdot e^{-\kappa_{\text{QCD}}}$ with $\kappa_{\text{QCD}} = \text{rank}(E_8) + 1 = 9$ yields:
 
@@ -3932,7 +4038,7 @@ $$\Lambda_{\text{QCD}}^{\overline{\text{MS}}} \approx 200\text{–}220 \text{ Me
 
 consistent with the world average $\Lambda_{\text{QCD}}^{(5)} = 210 \pm 14$ MeV (Particle Data Group 2024). The suppression $e^{-9} \approx 1.2 \times 10^{-4}$ places the unification scale approximately four orders of magnitude below the Planck scale, with QCD running providing the remaining hierarchy to the confinement scale.
 
-**Mechanism B: $E_8$ Geodesic Distances**
+**Mechanism B: $E_8$ geodesic-distance exponents**
 
 |Quantity |$d^2_{E_8}$|$\kappa_Y = \alpha d^2$|Suppression |
 |:------------|:---------:|:---------------------:|:--------------------|
@@ -3941,7 +4047,33 @@ consistent with the world average $\Lambda_{\text{QCD}}^{(5)} = 210 \pm 14$ MeV 
 |$Y_{tc}$ |6 |9 |$1.2 \times 10^{-4}$ |
 |$M_R/M_{Pl}$ |6 |9 |$1.23 \times 10^{-4}$|
 
-*Proof.* Each row follows from the complexity formula applied to the specified configuration space. The base dimension, coset contribution, and zero mode count are calculated from the geometry as detailed in Appendices T and U. ∎
+*Proof.* The vacuum row is Theorem U.16:
+$$
+\kappa_{\Lambda,\mathrm{ref}} = 144 - \frac{5}{2} = 141.5,
+$$
+so $\Lambda L_P^2 \propto e^{-2\kappa_{\Lambda,\mathrm{ref}}}=e^{-283}$ at fixed prefactor. The electroweak row is the counting result of Section T.23.5:
+$$
+\kappa_{EW}=36+3-\frac12=38.5,
+$$
+hence $v/M_{Pl}\propto e^{-38.5}$. The baryogenesis row is Theorem Y.8:
+$$
+\kappa_B=\frac{\kappa_{EW}}2+\frac{\varepsilon}{N_g}=19.25+0.23=19.48.
+$$
+The seesaw row is Theorem T.64:
+$$
+\kappa_R=\alpha_{UV}d^2_{31}=\frac32\cdot6=9,
+\qquad
+M_R/M_{Pl}=e^{-9}.
+$$
+Finally, Proposition T.61 gives
+$$
+G_F=\frac1{\sqrt2\,v^2}.
+$$
+Since $v\propto e^{-\kappa_{EW}}M_{Pl}$, it follows that
+$$
+G_F\propto e^{2\kappa_{EW}}M_{Pl}^{-2}=e^{77}M_{Pl}^{-2}.
+$$
+Thus the $G_F$ row is a derived inverse-square consequence of the electroweak scale rather than an additional direct suppression. The $E_8$-distance rows follow from $\kappa_Y=\alpha d^2$ with $\alpha=3/2$ from Theorem T.39b. ∎
 
 -----
 
@@ -4001,9 +4133,9 @@ For the electroweak scale:
 
 The different numerical values arise from the different dimensions and symmetries of these configuration spaces, not from different mechanisms. ∎
 
-**Corollary T.65.1** (No Fine-Tuning). *The observed hierarchies require no fine-tuning. The cosmological constant is naturally $\sim 10^{-122}$ because the Grassmannian Gr(12, 24) has dimension 144 and preserves exactly 5 zero modes. The electroweak scale is naturally $\sim 10^{-17} M_{Pl}$ because the coset $SU(2) \times U(1)/U(1)$ with reservoir alignment has effective dimension 39 and preserves exactly 1 zero mode.*
+**Corollary T.65.1** (No fine-tuning of the counting data). *Within the counting conventions used in Theorem U.16 and Section T.23.5, the leading hierarchy exponents are fixed by discrete geometric data: the vacuum reference exponent uses Grassmannian dimension $144$ with $5$ zero modes, and the electroweak exponent uses effective dimension $39$ with $1$ zero mode.*
 
-*The discrete structure provides intrinsic protection: the complexity parameters $\kappa$ and $\kappa_{EW}$ are determined by integer-valued configuration space dimensions and zero mode counts. Continuous perturbations cannot shift these discrete quantities. The Golay code minimum distance $d = 8$ creates a gap protecting the vacuum structure, while the Leech lattice rootlessness (Proposition Z.13a) ensures topological stability.*
+*This means the leading counting inputs are not continuously adjusted inside the framework once the relevant configuration spaces and symmetry data are fixed. Continuous effects can still enter through prefactors, threshold corrections, and matching conventions, so the discrete counting does not by itself eliminate every source of numerical variation. The Golay code minimum distance $d = 8$ supplies a structural gap in the coding sector, while the Leech-lattice rootlessness statement governs the corresponding vacuum-isolation claim in the lattice sector.*
 
 -----
 
@@ -4107,9 +4239,9 @@ The derivation chain from Sections T.1–T.21 establishes the complete set of fo
 
 **Recall from Theorem 15 (Horizon Constant).** The minimal complexity for self-referential prediction is $K_0 = 3$ bits.
 
-**Recall from Theorem 23 (MPU Dimension).** The Minimal Predictive Unit Hilbert space has dimension $d_0 = 2^{K_0} = 8$.
+**Recall from Theorem 23 (MPU Dimension).** Theorem 23 gives $d_0 \ge 2^{K_0} = 8$; on the minimal PCE branch used throughout the Appendix Z backbone one has $d_0 = 8$ (Theorem Z.2).
 
-**Recall from Theorem Z.1 (Active Dimension).** The Landauer cost $\varepsilon = \ln 2$ determines the active kernel dimension $a = e^\varepsilon = 2$.
+**Recall from Theorem Z.1 (Active Dimension).** On the attractor-saturating branch $\varepsilon = \ln 2$, Theorem Z.1 fixes the active kernel dimension to $a = 2$.
 
 **Definition (Inactive Dimension).** The inactive subspace dimension is $b = d_0 - a = 6$.
 
@@ -5264,7 +5396,7 @@ $$r_1 = (-1, -1, 0, 0, 0, 0, 0, 0) \quad \Rightarrow \quad d^2_{31} = 8, \quad d
 
 ### T.25.3.3 Lattice Geometry
 
-**Lemma T.44** ($E_8$ Lattice Angles). The angle $\theta$ between $E_8$ roots with squared distance $d^2$ satisfies:
+**Summary of Lemma T.44** ($E_8$ Lattice Angles). The angle $\theta$ between $E_8$ roots with squared distance $d^2$ satisfies:
 
 $$\cos\theta = \frac{4 - d^2}{4}$$
 

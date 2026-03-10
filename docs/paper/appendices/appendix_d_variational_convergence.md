@@ -409,12 +409,12 @@ By the fundamental theorem of $\Gamma$-convergence [Dal Maso 1993; Braides 2002]
 
 This appendix thus provides the rigorous foundation for the dynamical aspects of the Predictive Universe framework.
 
-**Theorem 2 (Dynamically Enforced Functional Correspondence - Justified):**
+**Summary of Theorem 2 (Dynamically Enforced Functional Correspondence - Justified):**
 The exact equilibrium statement of Theorem 2 is Corollary D.1: any true stable PCE equilibrium must satisfy $C_P(v)=\langle\hat C_v\rangle_{x^*}$ for all $v$. On the operational side, the work-cost gap feedback mechanism (Lemma D.2) and the stochastic contraction estimate of Proposition D.1 / Corollary D.2 show that the proxy-complexity coordinates are driven toward that equilibrium up to a controlled noise floor. The ergodic stationary regime of Theorem D.5 then identifies the long-run averages of the proxy variables with expectations under the invariant measure; in low-noise detailed-balance regimes, that invariant measure assigns exponentially dominant weight to neighborhoods of the lowest-potential regular set.
 
 *Proof Reference:* Corollary D.1 gives exact alignment at true stable equilibria. Lemma D.2, Proposition D.1, and Corollary D.2 provide the physical feedback mechanism and quantitative tracking bound. Theorem D.5 provides ergodic stationary averaging and, in its detailed-balance subcase, low-noise concentration near the low-potential regular set.
 
-**Theorem 43 (Dynamical Emergence of Geometric Regularity - Justified):**
+**Summary of Theorem 43 (Dynamical Emergence of Geometric Regularity - Justified):**
 The slow adaptation dynamics of the MPU network (Equation D.8), driven by minimizing the PCE Potential $V(x)$ which inherently penalizes irregularity (Theorem D.2, Lemma D.3), admit an ergodic stationary regime under Assumptions (A1)-(A6) (Theorem D.5). By Theorem D.3, every global minimum of the full potential $V(x)$ is geometrically regular (Definition C.3). Hence, in low-noise detailed-balance regimes, the stationary measure concentrates on neighborhoods of geometrically regular configurations; more generally, regularity characterizes the lowest-potential sector selected by POP/PCE.
 
 *Proof Reference:* Lemma D.3 and Theorem D.2 identify irregularity as a positive contribution to the potential; Theorem D.3 proves that global minima are regular; Theorem D.5 provides ergodicity and, in its detailed-balance subcase, low-noise concentration near the regular low-potential sector.

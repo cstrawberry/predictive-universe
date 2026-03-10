@@ -550,8 +550,8 @@ A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 2.  **Capacity Constraint:** $n_G \leq n_{\max}$. The channel capacity estimate (Equation G.8.0) yields the range $n_{\max} \approx 7.5$–$20$. The geometric bound from the Lagrangian dimension of the QFI symplectic structure (Theorem G.8.2e) yields $n_G \leq ab = 12$. This bound equals the complex dimension of the attractor orbit: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$, providing a geometric interpretation of the gauge dimension constraint. Since $12$ lies within the channel capacity range, the geometric bound provides the sharp constraint $n_G \leq 12$. This value equals both the Golay code dimension $k = 12$ (Theorem Z.13) and the complex dimension of the attractor orbit $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ (Theorem Z.6.3a). The triple coincidence—channel capacity bound, code dimension, and orbit dimension—provides strong evidence for the structural uniqueness of the gauge sector. The convergence of channel capacity, symplectic geometry, and error-correction theory at the value 12 constitutes a non-trivial consistency check on the framework.
     
     The bound $n_G \leq 12$ traces to two foundational parameters through the derivation chain:
-    $$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{d_0 = 8} b = d_0 - a = 6 \xrightarrow{} ab = 12$$
-    where $d_0 = 8$ is the minimal Hilbert space dimension for on-cycle injectivity of self-referential logic (Theorem 23, Lemma Z.1) and $\varepsilon = \ln 2$ is the SPAP entropy cost from the 2-to-1 state merge (Theorem 31, Appendix J).
+    $$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon \ge \ln 2 \xrightarrow[\text{at attractor}]{\text{Def. 15a, Thm Z.1}} a = 2 \xrightarrow[\text{minimal branch}]{\text{Thm Z.2}} b = d_0 - a = 6 \xrightarrow{} ab = 12$$
+    where $d_0 = 8$ is the minimal Hilbert space dimension for on-cycle injectivity of self-referential logic on the Appendix Z branch (Theorem Z.2; Theorem 23 gives the lower bound) and $\varepsilon = \ln 2$ is the attractor-saturating SPAP entropy cost (Definition 15a; Theorem 31 gives the lower bound).
 
 3.  **Structural Stability:** $D$ must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors $D=4$.
 4.  **Information Efficiency:** $D$ should optimize information‑theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor $D=4$.
@@ -918,10 +918,10 @@ This state is stabilized by 24 independent generators: 12 X-type generators $S_i
 
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 
-The PU framework provides a robust, multi-layered argument for the co-selection of D=4 spacetime and the Standard Model gauge group with its specific fermion content and three-generation structure. This selection is a derived consequence of minimizing the global PCE potential under the standing principles of compression efficiency and predictive invariance.
+The PU framework provides a robust, multi-layered argument for the co-selection of $D=4$ spacetime and the Standard Model gauge group with its specific fermion content and three-generation structure. This selection is a derived consequence of minimizing the global PCE potential under the standing principles of compression efficiency and predictive invariance.
 
-1.  **Primacy of D=4 for Structural Stability and Information Efficiency:**
-    As argued in Sections G.8.2.4 and G.8.2.5, D=4 is strongly and uniquely favored by PCE. The mode count $M = 2ab = 24$ equals both the real dimension of the attractor orbit $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 24$ and the kissing number $K(4) = 24$ in four dimensions, establishing a geometric bridge between internal Hilbert space structure and emergent spacetime dimensionality. It is the dimension that robustly supports stable, complex MPU aggregates (via inverse-square force structure) and favorable network information efficiency. These factors make D=4 the unique, stable dimensional arena for a complex, predictive universe. This stability-based selection is independently confirmed by the mode-channel correspondence derived in Appendix Z (Theorem Z.11): the $M=24$ interface modes of the PCE-Attractor must match the kissing number $K(D)$ for optimal geometric packing, and $K(D)=24$ has the unique solution $D=4$. The convergence of these two independent derivations—one from dynamical stability, one from information-geometric correspondence—provides strong evidence that $D=4$ is multiply determined by the framework's principles.
+1.  **Primacy of $D=4$ for Structural Stability and Information Efficiency:**
+    As argued in Sections G.8.2.4 and G.8.2.5, $D=4$ is strongly and uniquely favored by the Appendix G stability analysis. The mode count $M = 2ab = 24$ equals both the real dimension of the attractor orbit $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 24$ and the kissing number $K(4) = 24$ in four dimensions, establishing a geometric bridge between internal Hilbert space structure and emergent spacetime dimensionality. This stability-based selection is independently reinforced by the mode-channel correspondence derived in Appendix Z (Theorems Z.10–Z.11): the $M=24$ interface modes of the PCE-Attractor match the kissing number $K(D)$, and $K(D)=24$ has the unique solution $D=4$.
 
 2.  **Selection of $G_{SM}$, Hypercharge, and Three Generations within D=4:**
     Within the stable D=4 arena, PCE selects the optimal gauge group and matter content subject to capacity and consistency constraints.
@@ -963,7 +963,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
        Quantitative constraints on electroweak coupling ratios at the PCE-attractor—including a branch-specific prediction for $\sin^2\theta_W(\mu^*)$ under the cap-active alignment (Assumption W.3.A)—are derived in Appendix W (Theorem W.11; Eqs. W.3.1–W.3.3).
 
     *   **PCE Corollary – Singlet Neutrality.** Assigning non‑zero hypercharge to a pure non‑abelian singlet increases PCE cost without predictive gain; the minimum sets the hypercharge of any potential sterile right-handed neutrino to zero.
-    *   **Three Generations (Unique Minimizer).** Appendix R (Proposition R.3.5) shows—using PCE together with anomaly cancellation and CP violation requirements—that (i) the smallest nontrivial anomaly-consistent family structure is $N=3$ with offsets $\{a,-a,0\}$, (ii) abelian "doping" is disfavored, and (iii) the three-generation structure is over-determined by both topological (anomaly cancellation) and geometric ($E_8$/Leech lattice) constraints (Proposition R.4.2).
+    *   **Three Generations (Unique Minimizer).** Appendix R shows that, in the modeled family-charge sector, the smallest nontrivial anomaly-consistent family structure compatible with CP violation is $N=3$ with offsets $\{a,-a,0\}$ (Proposition R.3.5). Proposition R.4.2 adds that the $E_8$/Leech and $M=24=8\times 3$ structures are compatible with this count, but they do not provide a second independent derivation.
 
 3.  **Confluence and Co-selection:**
     D=4 provides the stable arena; within it, the SM gauge group with its uniquely determined chiral fermion content is PCE-efficient, and the family replication uniquely selected by PCE is $N=3$. The capacity bound $n_G \leq 12$ excludes simple unification groups (Corollary G.8.4c.1), predicting proton stability against gauge-mediated decay (Corollary G.8.4c.2).
@@ -975,7 +975,7 @@ The specific numerical values of gauge couplings ($g_s,g_2,g_Y$) and fermion Yuk
 
 ## G.9 Rate-Level PCE Potential and the Pathway to $\alpha_{\mathrm{em}}$
 
-This section develops the general formalism for deriving gauge couplings from a rate-level PCE potential, which balances the **power cost** of maintaining gauge coherence against the **predictive information rate** benefit it provides. This general framework is further constrained by the alphabet identities derived in Appendix W. The complete derivation of the fine-structure constant at the Thomson limit, with zero continuously adjustable parameters, which uses the framework's foundational constants ($d_0=8$, $\varepsilon\ge \ln 2$), with saturation $\varepsilon=\ln 2$ at the PCE-Attractor to fix the spectral inputs to this program and solve for $\alpha^{-1} ≈ 137.036$ at the unique PCE-Attractor (Definition 15a), is presented in Appendix Z.
+This section develops the general formalism for deriving gauge couplings from a rate-level PCE potential, which balances the **power cost** of maintaining gauge coherence against the **predictive information rate** benefit it provides. This general framework is further constrained by the alphabet identities derived in Appendix W. The complete derivation of the fine-structure constant at the Thomson limit is presented in Appendix Z: no continuous fit parameter enters the final formula, and the value $\alpha^{-1} \approx 137.036$ follows from the symmetric-space curvature and minimal holonomy of the attractor Grassmannian (Theorems Z.24–Z.26; Lemmas Z.12, Z.14) at the PCE-Attractor (Definition 15a).
 
 The rate-level PCE potential for a $U(1)$ gauge coupling $u=g_e^2$ is given by:
 $$
@@ -983,7 +983,7 @@ $$
 $$
 where $P_{\mathrm{cost}}(u) \approx A_{\mathrm{PCE}} u^{\gamma_{\mathrm{eff}}}$ is the power cost of maintaining coherence and $V_{\mathrm{benefit}}(u) = \sum_i \ln(1+\lambda_i u)$ is the per-event predictive information gain, derived from the Local Asymptotic Normality (LAN) of the MPU's predictive channel. The system seeks the value $u^*$ that minimizes this potential, subject to the alphabet capacity constraint $V_{\mathrm{benefit}}(u) \le \ln d_0$.
 
-As rigorously established in Appendix X, this rate-level potential and its minimization are equivalent to finding the stationary point of the full QFT effective potential. The physical coupling is then $\alpha_{\mathrm{em}}(\mu^*) = u^*/(4\pi\kappa)$, where the normalization $\kappa$ is determined by the emergent field theory (Appendix X.3). The inputs to this calculation—specifically the QFI spectrum $\{\lambda_i\}$—are operational functionals of the baseline PCE-optimal MPU cycle. Appendix Z demonstrates that at the PCE-Attractor, these spectral inputs are uniquely determined by the framework's foundational constants, leading to a complete calculation of $\alpha_{\mathrm{em}}$ with zero continuously adjustable parameters.
+As rigorously established in Appendix X, this rate-level potential and its minimization are equivalent to finding the stationary point of the full QFT effective potential. The physical coupling is then $\alpha_{\mathrm{em}}(\mu^*) = u^*/(4\pi\kappa)$, where the normalization $\kappa$ is determined by the emergent field theory (Appendix X.3). The inputs to this calculation—specifically the QFI spectrum $\{\lambda_i\}$—are operational functionals of the baseline PCE-optimal MPU cycle. Appendix Z demonstrates that at the PCE-Attractor these spectral inputs are uniquely determined by the framework's foundational constants, leading to a complete calculation of $\alpha_{\mathrm{em}}$ from the Appendix Z derivation chain.
 
 
 ## G.1.9 Unified Origin of Probability Measures from ND-RID Equilibration
@@ -1007,9 +1007,9 @@ $$
 \tag{G.1.9.1}
 $$
 
-The bound is exact and saturated by optimal erasure protocols [Bennett 1982]. This entropy cost satisfies $\varepsilon\ge \ln 2$ (Theorem 31) and is saturated, $\varepsilon=\ln 2$, at the PCE-Attractor. It appears both as a thermodynamic constraint in the MPU internal cycle and as a structural constraint on the dimension of the active kernel (forcing $a=2$ at saturation). It thus ties the emergence of the quantum state space, the arrow of time, and the scaling of spacetime coupling together through one irreducible information-theoretic constant.
+The bound is exact and saturated by optimal erasure protocols [Bennett 1982]. This entropy cost satisfies $\varepsilon\ge \ln 2$ (Theorem 31) and is saturated, $\varepsilon=\ln 2$, at the PCE-Attractor (Definition 15a). It appears both as a thermodynamic constraint in the MPU internal cycle and as a structural constraint on the dimension of the active kernel (forcing $a=2$ on that branch). It thus ties the emergence of the quantum state space, the arrow of time, and the scaling of spacetime coupling together through one irreducible information-theoretic constant.
 
-**Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space satisfies $S(\rho) \le \ln a$ nats, with equality only for the maximally mixed state [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible $a$ (Theorem Z.1):
+**Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space satisfies $S(\rho) \le \ln a$ nats, with equality only for the maximally mixed state [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible $a$ on the attractor-saturating branch (Theorem Z.1):
 
 $$
 a = 2
@@ -1018,7 +1018,7 @@ $$
 
 This 2-dimensional "Landauer Pointer" is the minimal physical realization of the irreducible cost.
 
-**Stage 3: The PCE-Attractor State.** With $d_0 = 8$ (Theorem 23) and $a = 2$, the inactive subspace has dimension $b = d_0 - a = 6$. The PCE-Attractor (Definition 15a) is the unique equilibrium state maximally mixed on the active subspace and zero on the inactive complement:
+**Stage 3: The PCE-Attractor State.** With $d_0 = 8$ on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $a = 2$, the inactive subspace has dimension $b = d_0 - a = 6$. The PCE-Attractor (Definition 15a) is the unique equilibrium state maximally mixed on the active subspace and zero on the inactive complement:
 
 $$
 \tau^* = \rho_0 = \frac{I_2}{2} \oplus 0_6
@@ -1410,7 +1410,7 @@ $$a = D - 2$$
 
 where $a = 2$ is the Landauer active dimension (Theorem Z.1) and $D = 4$ is the emergent spacetime dimension (Theorem Z.11).
 
-*Proof.* From Theorem Z.1, PPI-optimality with Landauer cost $\varepsilon = \ln 2$ selects active dimension $a = 2$. From Theorem Z.11, the mode-channel correspondence $M = K(D)$ with $M = 24$ uniquely selects $D = 4$. Therefore $D - 2 = 4 - 2 = 2 = a$.
+*Proof.* From Theorem Z.1, PPI-optimality on the attractor-saturating branch $\varepsilon = \ln 2$ selects active dimension $a = 2$. From Theorem Z.11, the mode-channel correspondence $M = K(D)$ with $M = 24$ uniquely selects $D = 4$ from the mode-channel correspondence. Therefore $D - 2 = 4 - 2 = 2 = a$.
 
 This equality holds specifically at the PCE-optimal point. Checking alternatives:
 
@@ -1494,11 +1494,11 @@ up to unitary equivalence.
 
 *Proof.*
 
-**Step 1 (Active kernel dimension from PPI).** By Theorem Z.1, the irreducible Landauer cost $\varepsilon = \ln 2$ (Theorem 31) requires physical instantiation on a subsystem whose entropy capacity can accommodate the Landauer cost. The von Neumann entropy of a state on an $a$-dimensional space satisfies $S(\rho) \le \ln a$ [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible value:
+**Step 1 (Active kernel dimension from PPI).** By Theorem Z.1, the irreducible Landauer cost $\varepsilon = \ln 2$ on the attractor branch (Definition 15a; Theorem 31 gives the lower bound) requires physical instantiation on a subsystem whose entropy capacity can accommodate the Landauer cost. The von Neumann entropy of a state on an $a$-dimensional space satisfies $S(\rho) \le \ln a$ [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible value:
 $$
 a = 2 \tag{G.10.4}
 $$
-This is the "Landauer Pointer"—the minimal 2-dimensional active kernel within the $d_0 = 8$ MPU Hilbert space (Theorem 23).
+This is the "Landauer Pointer"—the minimal 2-dimensional active kernel within the $d_0 = 8$ MPU Hilbert space on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge 8$).
 
 **Step 2 (Unitarity requirement).** PPI requires the logical operation to preserve the Hilbert space structure. The involution must therefore be realized as a unitary operator $U_\iota \in U(2)$ acting on $\mathcal{H}_a \cong \mathbb{C}^2$.
 
@@ -1542,7 +1542,29 @@ $$
 $$
 with $\ker(\pi) = \{I, -I\}$.
 
-*Proof.* This is a standard result in Lie theory [Hall 2015]. The homomorphism $\pi: \text{SU}(2) \to \text{SO}(3)$ is given by the adjoint action: for $U \in \text{SU}(2)$ and $\vec{v} \in \mathbb{R}^3$ identified with the traceless Hermitian matrix $V = \vec{v} \cdot \vec{\sigma}$, define $\pi(U)$ by $U V U^\dagger = (\pi(U)\vec{v}) \cdot \vec{\sigma}$. Both $U$ and $-U$ yield the same rotation, so $\ker(\pi) = \{I, -I\} \cong \mathbb{Z}_2$. ∎
+*Proof.* Identify $\mathbb{R}^3$ with the real vector space of traceless Hermitian $2\times2$ matrices by
+$$
+\vec v=(v_1,v_2,v_3) \longleftrightarrow V:=v_1\sigma_1+v_2\sigma_2+v_3\sigma_3.
+$$
+For $U\in \mathrm{SU}(2)$ define $\pi(U)$ by
+$$
+U V U^\dagger = (\pi(U)\vec v)\cdot \vec\sigma .
+$$
+Conjugation preserves Hermiticity, trace, and determinant, so $\pi(U)$ preserves the Euclidean norm $|\vec v|^2 = \det(V)$ and orientation. Hence $\pi(U)\in \mathrm{SO}(3)$. The assignment $U\mapsto \pi(U)$ is a continuous homomorphism because
+$$
+(U_1U_2)V(U_1U_2)^\dagger
+=
+U_1\bigl(U_2VU_2^\dagger\bigr)U_1^\dagger.
+$$
+
+To compute the kernel, suppose $\pi(U)=I$. Then $UVU^\dagger=V$ for every traceless Hermitian $V$, so $U$ commutes with every Pauli matrix and therefore with all of $M_2(\mathbb C)$. Hence $U=\lambda I$ for some scalar $\lambda$. Since $U\in \mathrm{SU}(2)$, $\det U=\lambda^2=1$, so $\lambda=\pm1$. Thus
+$$
+\ker(\pi)=\{I,-I\}\cong \mathbb Z_2.
+$$
+
+It remains to show surjectivity. The differential at the identity sends $X\in \mathfrak{su}(2)$ to the infinitesimal action $V\mapsto [X,V]$. In the Pauli basis this identifies $\mathfrak{su}(2)$ with $\mathfrak{so}(3)$, so $d\pi_e$ is an isomorphism of Lie algebras. Therefore the image $\pi(\mathrm{SU}(2))$ is a connected Lie subgroup of $\mathrm{SO}(3)$ with Lie algebra all of $\mathfrak{so}(3)$, hence it is an open subgroup. Because $\mathrm{SU}(2)$ is compact, its image is compact and therefore closed in $\mathrm{SO}(3)$. Since $\mathrm{SO}(3)$ is connected, the only nonempty subset that is both open and closed is the whole group, so $\pi$ is surjective.
+
+Thus $\pi$ is a surjective homomorphism with kernel $\{\pm I\}$, hence a two-sheeted covering map. Finally, $\mathrm{SU}(2)\cong S^3$ is simply connected, so this covering is universal. ∎
 
 ### G.10.4.2 Spinor Sign Flip Under 2π Rotation
 
@@ -1681,8 +1703,8 @@ This result is consistent with the spin-statistics theorem of axiomatic quantum 
 | Step | Result | Origin | Status | Reference |
 |:----:|:-------|:-------|:------:|:----------|
 | 1 | $\iota^2 = \text{id}$, $\iota \neq \text{id}$ | SPAP logical structure | Derived | Theorem 10, Lemma G.10.1 |
-| 2 | $\varepsilon = \ln 2$ | Landauer + 2-to-1 merge | Derived | Theorem 31, Lemma Z.2 |
-| 3 | $a = 2$ | PPI-optimality | Derived | Theorem Z.1 |
+| 2 | $\varepsilon = \ln 2$ on the attractor branch | Landauer + 2-to-1 merge | Derived | Theorem 31, Definition 15a, Lemma Z.2 |
+| 3 | $a = 2$ | PPI-optimality on the attractor-saturating branch | Derived | Theorem Z.1 |
 | 4 | $U_\iota = \sigma_x \in U(2)$ | Unitary realization | Derived | Theorem G.10.2 |
 | 5 | SU(2) symmetry | PCE + completeness | Derived | Theorem G.10.3 |
 | 6 | Double cover SU(2) → SO(3) | Lie theory | Recovered | Theorem G.10.4 |
@@ -1717,11 +1739,11 @@ This appendix has demonstrated how the Predictive Universe framework derives fun
 
 2. **Gauge Structure:** U(1) electromagnetism arises as the minimal PCE-optimal mechanism for maintaining predictive coherence across local phase freedom (Section G.7). The full Standard Model gauge group $SU(3) \times SU(2) \times U(1)$ emerges from the thermodynamically optimal $\mathbb{C}^2 \oplus \mathbb{C}^6$ partition of the MPU Hilbert space (Section G.8).
 
-3. **Spacetime Dimension:** $D = 4$ is uniquely selected by the mode-channel correspondence $M = K(D)$, where the 24 QFI interface modes match the kissing number $K(4) = 24$ (Theorem Z.11).
+3. **Spacetime Dimension:** $D = 4$ is uniquely selected from the mode-channel correspondence (Appendix Z) $M = K(D)$, where the 24 QFI interface modes match the kissing number $K(4) = 24$ (Theorems Z.10–Z.11).
 
-4. **Three Generations:** Anomaly cancellation, CP violation requirements, and $E_8$ geometric constraints uniquely minimize the generation potential at $N_g = 3$ (Appendix R, Propositions R.3.5, R.4.2).
+4. **Three Generations:** Appendix R derives $N_g = 3$ from anomaly cancellation together with the CP-violation requirement in the modeled family-charge sector; the $E_8$/Leech construction supplies a compatible three-fold scaffold rather than a second proof (Appendix R, Propositions R.3.5, R.4.2).
 
-5. **Fine-Structure Constant:** The value $\alpha_{em}^{-1} = 137.036092 \pm 0.000050$ emerges as the unique PCE-optimal equilibrium balancing U(1) coherence costs against predictive information rates (Section G.9), with the calculation reduced to evaluation of operational functionals on the MPU baseline cycle.
+5. **Fine-Structure Constant:** The value $\alpha_{em}^{-1} = 137.036092 \pm 0.000060$ emerges from the Appendix Z U(1) sector (Theorems Z.24–Z.26), with no continuous fit parameters.
 
 6. **Unified Probability Measures:** Quantum (Born), thermal (Boltzmann), and gravitational (Unruh-Hawking) probability distributions arise from a common mechanism—ND-RID equilibration to Gibbs fixed points under PCE optimization (Section G.1.9).
 

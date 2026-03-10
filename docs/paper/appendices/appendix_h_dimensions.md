@@ -326,7 +326,7 @@ so $F_{ij}$ is the (pullback) Riemannian metric on the statistical manifold at t
 
 **Consequence:** If $g_0$ is defined as the **linear-response susceptibility** at the attractor (per spatial channel, per Landauer event), it **cannot** depend on curvature invariants by construction.
 
-Curvature data ($K_{\mathrm{eff}} = 2$, scalar curvature $S_B = 768$, etc.) enters only for:
+Curvature data ($K_{\mathrm{eff}} = 2$ from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12), scalar curvature $S_B = 768$, etc.) enters only for:
 - Environmental corrections (different $\rho$, not at attractor)
 - Finite-deviation effects (large parameter shifts)
 - VVM-type focusing (geodesic bundles, higher-order expansion)
@@ -447,13 +447,13 @@ The linear-response derivation (Section H.4.2) yields $\eta' = 3/(8\sqrt{3})$ ex
 - Large parameter shifts (beyond linear response)
 - Geodesic focusing effects (finite "diffusion time")
 
-**Effective Curvature ($K_{\mathrm{eff}} = 2$).** From Theorem Z.24:
+**Effective Curvature (From Symmetric-Space Geometry).** From the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12):
 $$
 K_{\mathrm{eff}} = K_{\mathrm{avg}}^{\mathrm{Bures}} \cdot \frac{M-1}{ad_0} = \frac{32}{23} \cdot \frac{23}{16} = 2
 \tag{H.11}
 $$
 
-The exact value $K_{\mathrm{eff}} = 2$ arises from a remarkable cancellation: the $(M-1) = 23$ factors cancel exactly.
+The exact value $K_{\mathrm{eff}} = 2$ arises from the same $(M-1)=23$ cancellation used in Appendix Z, as derived from the symmetric-space structure (Lemma Z.12).
 
 **Van Vleck-Morette Expansion.** For transverse Jacobi modes with sectional curvature $K$, geodesic focusing yields [DeWitt & Brehme 1960]:
 $$
@@ -517,7 +517,8 @@ $$
 
 **Derivation Chain:**
 $$
-\boxed{\text{SPAP} \xrightarrow{K_0=3} d_0 = 8 \xrightarrow{\varepsilon=\ln 2} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{D=4} \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}}}
+\boxed{\text{SPAP} \xrightarrow{K_0=3} d_0 \ge 8 \xrightarrow{\text{minimal branch}} d_0 = 8 \xrightarrow{\varepsilon=\ln 2\ \text{on attractor branch}} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{\text{mode-channel model}} D=4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}}}
+$$
 $$
 
 
@@ -535,7 +536,7 @@ The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed once the Q
 | Spatial projection | $(D-1)/D = 3/4$ | Rotational invariance |
 | Generator normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | Democratic generator normalization (Theorem H.1c) |
 
-The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry independently predicts the Thomson-limit fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000050$ (Appendix Z, Theorem Z.26), corresponding to a 0.68 ppm offset from the current experimental central value (a $\sim 2\sigma$ discrepancy under the adopted theory uncertainty).
+The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry independently predicts the Thomson-limit fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000060$ from the Appendix Z derivation (Theorems Z.24–Z.26), corresponding to a 0.68 ppm offset from the current experimental central value (a $\sim 1.5\sigma$ discrepancy under the adopted theory uncertainty).
 
 The derivation is conditional on Definition H.0, whose validity is tested by predictive agreement.
 

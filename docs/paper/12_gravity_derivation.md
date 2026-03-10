@@ -264,7 +264,11 @@ $$
 
 **Uniqueness Lemma 12.1 (Uniqueness of Einstein Tensor).**
 In four dimensions, the only generally covariant, symmetric, divergence-free rank-2 tensor field derivable from a Lagrangian containing at most second derivatives of $g_{\mu\nu}$, and consistent with the emergent Bekenstein-Hawking entropy density fixed by PU principles (Appendix E), is the Einstein tensor plus a cosmological term: $\mathcal E_{\mu\nu}=G_{\mu\nu}+\Lambda g_{\mu\nu} = R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu}+\Lambda g_{\mu\nu}$.
-*Proof Summary:* Lovelock's theorem [Lovelock 1971] limits second-order covariant gravitational actions in D=4 to the Einstein-Hilbert term plus $\Lambda$. Higher-curvature terms generally modify the Wald entropy formula, deviating from the Bekenstein-Hawking form derived from ND-RID limits (Appendix E). Consistency with the framework's emergent thermodynamics selects the unique EFE structure (Equation 76). QED
+*Proof.* Lovelock's classification theorem [Lovelock 1971] states that in $D=4$ every local diffeomorphism-invariant metric action whose Euler-Lagrange equations are symmetric, divergence-free, and involve at most second derivatives yields field equations of the form
+$$
+\mathcal E_{\mu\nu} = c_1 G_{\mu\nu} + c_0 g_{\mu\nu},
+$$
+because the only additional Lovelock density, the Gauss-Bonnet term, is topological in four dimensions and contributes no local field equations. Hence no independent second-order covariant rank-2 tensor beyond $G_{\mu\nu}$ and $g_{\mu\nu}$ is available under the stated hypotheses. Appendix E fixes the horizon entropy density to the Bekenstein-Hawking value $1/(4G)$, which calibrates the normalization of the Einstein-Hilbert term and therefore sets $c_1=1$ in the units used in Equation (76). Writing $c_0=\Lambda$ gives the stated tensor. Any higher-curvature correction would either violate the hypothesis of at most second derivatives or modify the Wald entropy density away from the Appendix E coefficient. Therefore the only tensor consistent with all stated hypotheses is $G_{\mu\nu}+\Lambda g_{\mu\nu}$. QED
 
 ## 12.4 Interpretation: Gravity as Predictive Thermodynamics
 

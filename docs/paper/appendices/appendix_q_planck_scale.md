@@ -33,7 +33,7 @@ $$\mathcal{S}^{phys}_{disc} := \hbar\,\mathcal{S}_{disc}$$
 
 $$\mathcal{S}_{disc} \geq N_{ops} \cdot \ln 2$$
 
-*Proof.* Each non-trivial operation contributes at least the SPAP minimum $\varepsilon = \ln 2$ nats by Theorem 31. QED
+*Proof.* Each non-trivial operation contributes at least the Landauer lower bound $\varepsilon \ge \ln 2$ by Theorem 31. Summing over $N_{\text{ops}}$ operations gives the stated inequality. QED
 
 **Remark: Entropy Unification.** The quantity $\varepsilon$ appearing here is the same SPAP entropy that, through the derivation chain of Thesis P.6.1 (Appendix P), connects to Shannon, von Neumann, thermodynamic, and Bekenstein-Hawking entropy. The discrete predictive action thus inherits this unified structure: it counts entropy in the foundational sense established by the framework.
 
@@ -652,11 +652,11 @@ Squaring yields the stated relation. $\square$
 
 **Remark Q.0.5a.2: Phenomenological Status.** The Leech lattice shell structure provides a discrete mass spectrum at the fundamental scale. Connection to observed particle masses requires: (i) identification of vacuum excitations with physical particles, (ii) symmetry breaking mechanisms selecting specific lattice points, and (iii) RG flow from $\mu_0 \sim 0.2 \, m_P$ to electroweak scales. These developments appear in Appendices R (fermion generations) and T (electroweak hierarchy).
 
-**Corollary Q.0.5b (Landauer-Shell Correspondence).** *The minimum Leech shell $|v|^2_{\min} = 4$ equals the squared Landauer pointer dimension $a^2 = (e^\varepsilon)^2 = 4$. This equality traces through the derivation chain:*
+**Corollary Q.0.5b (Landauer-Shell Correspondence).** *The minimum Leech shell $|v|^2_{\min} = 4$ equals the squared Landauer pointer dimension $a^2 = 4$. This equality traces through the derivation chain:*
 
-$$\varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = e^\varepsilon = 2 \xrightarrow{} a^2 = 4 = |v|^2_{\min}$$
+$$\varepsilon \ge \ln 2 \xrightarrow[\text{attractor}]{\text{Def 15a}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{} a^2 = 4 = |v|^2_{\min}$$
 
-*Proof.* The equality $a^2 = 4$ follows from $a = e^{\ln 2} = 2$. The equality $|v|^2_{\min} = 4$ follows from Leech lattice rootlessness (Proposition Q.0.5). Both quantities trace to the SPAP entropy $\varepsilon = \ln 2$ through the derivation chain connecting information-theoretic constraints to lattice geometry. $\square$
+*Proof.* On the attractor-saturating branch, Theorem Z.1 gives $a = 2$, so $a^2 = 4$. The equality $|v|^2_{\min} = 4$ follows from Leech lattice rootlessness (Proposition Q.0.5). Both quantities therefore meet at the common value 4 on that branch. $\square$
 
 **Corollary Q.0.5c (Discrete Mass Spectrum).** *The allowed squared masses for vacuum excitations form the discrete set:*
 
@@ -683,7 +683,7 @@ The identity $e^{iN\ln 2} = 2^{iN}$ follows from the definition $2^z := e^{z \ln
 | Domain | Quantity | Role in Correspondence |
 |:-------|:---------|:-----------------------|
 | Quantum mechanics | $e^{i\mathcal{S}/\hbar}$ | Phase factor governing interference |
-| Thermodynamics | $\varepsilon = \ln 2$ | Irreversible entropy cost per cycle (Theorem 31) |
+| Thermodynamics | $\varepsilon \ge \ln 2$ | Irreversible entropy cost per cycle, with equality only on the attractor/SPAP-minimum branch (Theorem 31; Definition 15a) |
 | Computation | $N$ | Count of irreversible logical operations |
 
 The path integral sums phases $2^{iN}$ over histories, with $N$ counting irreversible computational steps. Interference arises from the complex arithmetic of these phase contributions.
@@ -1212,8 +1212,7 @@ derived from the area law (Equation E.9). The PCE-optimal values of each paramet
 
 ### Q.2.1 Channel Capacity: $C_{\max}^* = 2\ln 2$
 
-By Equation (E.14), the PCE-optimal channel capacity satisfies $C_{\max}^* = \ln d_0 - \varepsilon$. With $d_0 = 8$ (Theorem 23) and $\varepsilon = \ln 2$ (Theorem 31), one obtains:
-
+By Equation (E.14), the PCE-optimal channel capacity satisfies $C_{\max}^* = \ln d_0 - \varepsilon$. On the minimal Appendix Z branch one has $d_0 = 8$ (Theorem Z.2), and at the PCE-Attractor one has $\varepsilon = \ln 2$ (Definition 15a; Theorem 31 gives the lower bound). Therefore:
 $$\boxed{C_{\max}^* = \ln 8 - \ln 2 = 2\ln 2 = 2\varepsilon} \tag{Q.10}$$
 
 
@@ -1343,25 +1342,23 @@ $$
 
 **Remark Q.6.1: Decomposition of the Discretization Scale.** The unified discretization factor $\sqrt{d_0 \cdot \varepsilon}$ admits a transparent information-theoretic decomposition:
 
-- **Factor $d_0 = 8$:** The MPU Hilbert space dimension, determined by the horizon constant $K_0 = 3$ through $d_0 = 2^{K_0}$ (Theorem 23). This encodes the logical structure required for self-referential prediction.
+- **Factor $d_0 = 8$:** Theorem 23 gives the lower bound $d_0 \ge 2^{K_0} = 8$, and the minimal PCE branch used in the Appendix Z backbone selects $d_0 = 8$ (Theorem Z.2). This encodes the logical structure required for self-referential prediction.
 
-- **Factor $\varepsilon = \ln 2$:** The irreducible thermodynamic cost of self-referential prediction (Theorem 31), arising from the 2-to-1 state merge required by the SPAP cycle (Lemma J.1).
+- **Factor $\varepsilon = \ln 2$:** Theorem 31 gives the irreducible thermodynamic lower bound $\varepsilon \ge \ln 2$, and the PCE-Attractor saturates that bound to $\varepsilon = \ln 2$ (Definition 15a).
 
-The discretization scale $\sqrt{d_0 \cdot \varepsilon} = \sqrt{8\ln 2} \approx 2.355$ thus represents the geometric mean of the logical capacity ($d_0$) and thermodynamic cost ($\varepsilon$) of self-reference.
+The discretization scale $\sqrt{d_0 \cdot \varepsilon} = \sqrt{8\ln 2} \approx 2.355$ thus represents the geometric mean of the logical capacity and thermodynamic cost of self-reference on the minimal/saturating branch.
 
 **Remark Q.6.2: Complete Derivation Chain.** The full derivation from logical axioms to spacetime discretization proceeds through two parallel pathways originating from $K_0$:
 
-$$\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[6pt] \text{SPAP merge} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{array} \bigg\} \xrightarrow[\text{consistency}]{\text{P.14.3}} d_0 \cdot \varepsilon = 8\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{d_0 \cdot \varepsilon}$$
+$$\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 \ge 2^{K_0} = 8 \xrightarrow{\text{Thm Z.2}} d_0 = 8 \\[6pt] \text{SPAP merge} \xrightarrow{\text{Thm 31}} \varepsilon \ge \ln 2 \xrightarrow{\text{Def 15a}} \varepsilon = \ln 2 \end{array} \bigg\} \xrightarrow[\text{consistency}]{\text{P.14.3}} d_0 \cdot \varepsilon = 8\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{d_0 \cdot \varepsilon}$$
 
 The discretization scale emerges from two independent derivations constrained by internal consistency (P.14.3):
 
-1. **The Hilbert space dimension** $d_0 = 2^{K_0} = 8$ derives from the horizon constant $K_0 = 3$ (Theorem 15) via Theorem 23, representing the minimum state space for encoding $K_0$ bits of self-referential structure.
+1. **The Hilbert space dimension** satisfies $d_0 \ge 2^{K_0}=8$ by Theorem 23, with equality $d_0=8$ on the minimal PCE branch (Theorem Z.2).
 
-2. **The entropy cost** $\varepsilon = \ln 2$ derives independently from the SPAP 2-to-1 state merge (Lemma J.1) via Theorem 31, representing the irreducible thermodynamic price of logically necessary information compression.
+2. **The entropy cost** satisfies $\varepsilon \ge \ln 2$ by Theorem 31, with equality $\varepsilon = \ln 2$ on the attractor-saturating branch (Definition 15a).
 
-The mutual consistency constraint $d_0 = 2(e^\varepsilon)^2$ (P.14.3) uniquely selects the values $K_0 = 3$ and $\varepsilon = \ln 2$ as the only solution satisfying all framework requirements.
-
-These two quantities, though both originating from $K_0$, arise through independent derivation chains—one algebraic (state counting), one thermodynamic (Landauer's principle). Their product $d_0 \cdot \varepsilon = 8 \ln 2$ determines the discretization scale through PCE optimization (Equation Q.18).
+The mutual consistency constraint relates the minimal-branch values $d_0 = 8$ and $a = 2$ through Theorem Z.2. It does not require the general identity $a = e^\varepsilon$.
 
 ### Q.6.4 Experimental Predictions
 
@@ -1385,8 +1382,8 @@ Any residual corrections must be expressible in Lorentz-scalar combinations and 
 | Spatial discretization | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | PCE optimization (Q.18) |
 | Temporal discretization | $\tau_{min}/t_P$ | $\sqrt{8\ln 2} \approx 2.355$ | Lorentz consistency (Prop. Q.6.1) |
 | Information budget | $C_{\max}^*$ | $2\ln 2$ | Capacity saturation (Q.10) |
-| Hilbert space dimension | $d_0$ | $8 = 2^{K_0}$ | Theorem 23 |
-| Irreducible entropy cost | $\varepsilon$ | $\ln 2$ | Theorem 31 |
+| Hilbert space dimension | $d_0$ | $8$ on the minimal branch | Theorem 23; Theorem Z.2 |
+| Irreducible entropy cost | $\varepsilon$ | $\ln 2$ on the attractor branch | Theorem 31; Definition 15a |
 | Independence factor | $\chi^*$ | $1$ | Lemma Q.2.2 |
 | Geometric inefficiency | $\eta^*$ | $1$ | Lemma Q.2.3 |
 

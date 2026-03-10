@@ -26,11 +26,11 @@ $$G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$$
 $$\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}$$
 This relationship is further constrained by the PCE-driven optimization of these parameters in the vacuum state. Appendix Q provides the complete calculation (with zero continuously adjustable parameters) of the ratio $\delta/L_P \approx 2.355$ through minimization of the global PCE potential, linking the microscopic MPU scale to the emergent Planck scale. The derivation proceeds by constructing $V_{vac}(\delta, \chi, \eta, C_{\max})$ and finding the unique stable equilibrium satisfying all framework constraints (Appendix Q, Equations Q.1-Q.18).
 
-**Electromagnetic coupling $\alpha$:** The fine-structure constant at the Thomson limit is rigorously derived with zero continuously adjustable parameters from the PCE-Attractor structure in Appendix Z. The complete 2506-line derivation establishes:
+**Electromagnetic coupling $\alpha$:** The fine-structure constant at the Thomson limit is derived in Appendix Z with no continuous fit parameters. The complete derivation establishes:
 $$\boxed{D = 4}$$
 
-$$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000050}$$
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. This derivation uses zero continuously adjustable parameters and proceeds through a seven-stage chain: MPU invariants ($d_0 = 8$, $\varepsilon = \ln 2$) → active kernel dimension $a = 2$ via Physical Instantiation Principle (Theorem Z.1) → interface mode count $M = 2ab = 24$ (Theorem Z.5) → PCE-Attractor orbit $\mathrm{Gr}(2,8)$ → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from Bures metric geometry, and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension **D = 4** through two independent mechanisms: mode-channel matching (Appendix Z, Theorem Z.11) and external stability requirements (Appendix G, Section G.8.2), providing multiply-determined confirmation of dimensional selection.
+$$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000060}$$
+where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The derivation proceeds through a seven-stage chain: MPU invariants ($d_0 = 8$, $\varepsilon = \ln 2$) → active kernel dimension $a = 2$ via the Physical Instantiation Principle (Theorem Z.1) → interface mode count $M = 2ab = 24$ (Theorem Z.5) → PCE-Attractor orbit $\mathrm{Gr}(2,8)$ → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1–Z.21). The second-order correction arises from Bures metric geometry from the Grassmannian curvature (Lemma Z.12) and minimal holonomy (Lemma Z.14), and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension $D = 4$ from the mode-channel correspondence (Theorems Z.10–Z.11), while Appendix G supplies an independent stability-based reinforcement.
 
 **Strong coupling $g_s$ and weak coupling $g_w$:** These relate to the effective "stiffness" or cost coefficients ($\kappa_F$ in Equation G.5.2) in the emergent gauge field actions (Appendix G), determined by PCE optimization balancing the benefit of predictive coherence provided by gauge fields against their resource cost. The unified gauge structure $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ with dimension 12 emerges from the thermodynamically optimal partition $H_0 \cong \mathbb{C}^2 \oplus \mathbb{C}^6$ (Appendix G, Proposition G.M1; Appendix Z, Theorem Z.1). At the PCE-optimal attractor, the unified coupling satisfies $g_U^2 = \pi/6$ with $\alpha_U^{-1} = 24$ (Appendix T, Theorem T.39a), derived from first principles via Bures holonomy on $\mathrm{Gr}(2,8)$.
 
@@ -47,11 +47,11 @@ $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 246 \text{ GeV}$$
 
 The unified derivation connects these three observables through the same underlying Golay code structure that determines the cosmological constant (Appendix U).
 
-**Fermion Masses and Yukawa Couplings:** The specific values arise from geometric overlaps of generation vacua on the MPU's internal Perspective Space $\Sigma_8 = U(8)/U(1)^8$, as rigorously derived in Appendix R. The three-generation structure is multiply over-determined through two independent mechanisms:
+**Fermion Masses and Yukawa Couplings:** The specific values arise from geometric overlaps of generation vacua on the MPU's internal Perspective Space $\Sigma_8 = U(8)/U(1)^8$, as rigorously derived in Appendix R. The generation count itself is derived topologically, while the geometric sector supplies the mass-hierarchy mechanism and a compatible three-fold scaffold:
 
-1. **Topological**: The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Theorem R.3.1) and anomaly cancellation constraints (Section R.4), this uniquely selects three generations with family charges $\{a, -a, 0\}$ (Proposition R.3.5).
+1. **Topological:** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Theorem R.3.1), the family-charge anomaly constraints, and the CP-violation requirement, this yields the minimal admissible three-generation pattern with family charges $\{a, -a, 0\}$ (Proposition R.3.5).
 
-2. **Geometric**: The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (Section R.2.1). Squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ determine mass ratios via Gaussian suppression on the PCE-Attractor orbit Gr(2,8) with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3).
+2. **Geometric:** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (Section R.2.1). Squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ determine mass ratios via Gaussian suppression on the PCE-Attractor orbit Gr(2,8) with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3), and furnish a three-fold compatibility structure consistent with $N=3$.
 
 The Mass Hierarchy Invariant:
 $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$$
@@ -256,9 +256,9 @@ The resolution employs the geometric structures established in earlier sections:
 | Quantity | Symbol | Value | Source |
 |:---------|:-------|:------|:-------|
 | Minimal complexity | $K_0$ | 3 | Theorem 15 |
-| Hilbert space dimension | $d_0$ | $2^{K_0} = 8$ | Theorem 23 |
-| SPAP dissipation | $\varepsilon$ | $\ln 2$ | Theorem 31 |
-| Active dimension | $a$ | $e^\varepsilon = 2$ | Theorem Z.1 |
+| Hilbert space dimension | $d_0$ | 8 on the minimal Appendix Z branch | Theorem 23; Theorem Z.2 |
+| SPAP dissipation | $\varepsilon$ | $\ln 2$ on the attractor branch | Theorem 31; Definition 15a |
+| Active dimension | $a$ | 2 | Theorem Z.1 |
 | Inactive dimension | $b$ | $d_0 - a = 6$ | Definition |
 | Interface modes | $M$ | $2ab = 24$ | Theorem Z.5 |
 | Golay code dimension | $k$ | $M/2 = 12$ | Theorem Z.13 |
@@ -443,7 +443,40 @@ $$\text{Gr}(2,8)^{\sigma} = \{W \in \text{Gr}(2,8) : \sigma(W) = W\} \cong \text
 2. Diffeomorphic to $O(8)/(O(2) \times O(6))$
 3. Of real dimension $\dim_{\mathbb{R}}(\text{Gr}_{\mathbb{R}}(2,8)) = 12$
 
-*Proof.* These are standard results for real forms of complex Grassmannians (Helgason 1978). The σ-fixed locus consists of 2-planes in $\mathbb{C}^8$ that are invariant under complex conjugation, which are precisely the complexifications of real 2-planes in $\mathbb{R}^8$. The stabilizer of a real 2-plane under $O(8)$ is $O(2) \times O(6)$, giving the quotient structure. ∎
+*Proof.* Let $\sigma$ denote complex conjugation on $\mathbb C^8$, and let $W\in \mathrm{Gr}(2,8)^\sigma$. The condition $\sigma(W)=W$ means that $W$ is the complexification of a unique real 2-plane $V:=W\cap \mathbb R^8$, so $W=V\otimes_{\mathbb R}\mathbb C$. Conversely, if $V\subset \mathbb R^8$ is a real 2-plane, then $V\otimes_{\mathbb R}\mathbb C$ is fixed by complex conjugation. Therefore
+$$
+\mathrm{Gr}(2,8)^\sigma \cong \mathrm{Gr}_{\mathbb R}(2,8).
+$$
+
+The orthogonal group $O(8)$ acts transitively on real 2-planes in $\mathbb R^8$: given $V_1,V_2\in \mathrm{Gr}_{\mathbb R}(2,8)$, choose orthonormal bases of $V_1$ and $V_2$ and extend them to orthonormal bases of $\mathbb R^8$; the linear map sending one basis to the other lies in $O(8)$ and carries $V_1$ to $V_2$. The stabilizer of the standard plane $\mathbb R^2\oplus 0\subset \mathbb R^8$ consists exactly of block-diagonal orthogonal transformations preserving that plane and its orthogonal complement, namely $O(2)\times O(6)$. Hence
+$$
+\mathrm{Gr}_{\mathbb R}(2,8) \cong O(8)/(O(2)\times O(6)).
+$$
+
+For the dimension,
+$$
+\dim O(8)=\frac{8\cdot 7}{2}=28,\qquad
+\dim O(2)=1,\qquad
+\dim O(6)=\frac{6\cdot5}{2}=15,
+$$
+so
+$$
+\dim_{\mathbb R}\mathrm{Gr}_{\mathbb R}(2,8)=28-1-15=12.
+$$
+
+To prove total reality, let $W=V\otimes_{\mathbb R}\mathbb C$ be a fixed point. The complex tangent space of $\mathrm{Gr}(2,8)$ at $W$ is
+$$
+T_W\mathrm{Gr}(2,8) \cong \mathrm{Hom}_{\mathbb C}(W,W^\perp).
+$$
+The differential $d\sigma$ acts on this space by complex conjugation, and the tangent space of the fixed locus is the $+1$ eigenspace
+$$
+T_W\mathrm{Gr}_{\mathbb R}(2,8) \cong \mathrm{Hom}_{\mathbb R}(V,V^\perp).
+$$
+The complex structure is multiplication by $i$, while $d\sigma(iA)=-i\,d\sigma(A)$. Thus no nonzero vector in the fixed tangent space is invariant after multiplication by $i$; equivalently
+$$
+T_W\mathrm{Gr}_{\mathbb R}(2,8) \cap i\,T_W\mathrm{Gr}_{\mathbb R}(2,8)=\{0\}.
+$$
+Hence the fixed locus is totally real. ∎
 
 **Corollary K.6.4 (σ-Invariant Vacuum).** The PCE-Attractor vacuum, being σ-invariant, lies in the real locus $\text{Gr}_{\mathbb{R}}(2,8)$. All physical parameters associated with this vacuum take real values.
 
@@ -533,7 +566,7 @@ $$\bar{\theta} = \theta_{\text{QCD}} + \arg(\det M_q) = 0 + 0 = 0$$
 
 *Proof.* Mechanism I operates on the parameter space of gauge vacua, utilizing the Kähler geometry of $\text{Gr}(2,8)$ and the action of complex conjugation as an anti-holomorphic involution. Mechanism II operates on the internal flavor space, utilizing the fact that $E_8$ roots lie in real Euclidean space $\mathbb{R}^8$.
 
-The mechanisms share the common origin $d_0 = 8$ (Theorem 23) but employ disjoint geometric features: complex structure ($\mathbb{C}^8$ with conjugation $\sigma$) versus real structure ($\mathbb{R}^8$ with $E_8$ root lattice). Neither mechanism implies the other; both are required for the complete resolution.
+The mechanisms share the common origin $d_0 = 8$ on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) but employ disjoint geometric features: complex structure ($\mathbb{C}^8$ with conjugation $\sigma$) versus real structure ($\mathbb{R}^8$ with $E_8$ root lattice). Neither mechanism implies the other; both are required for the complete resolution.
 
 These structures are mathematically disjoint: $\text{Gr}(2,8)$ is a continuous complex manifold while $E_8$ is a discrete lattice in real Euclidean space. No theorem in Mechanism I is used in Mechanism II, and vice versa. ∎
 
@@ -720,7 +753,7 @@ Explicitly:
 **Key Distinction:** The PU solution requires no new particles or symmetries beyond the Standard Model. The same geometric structures determine:
 
 - Fine-structure constant α (Appendix Z)
-- Spacetime dimension D = 4 (Theorem Z.11)
+- Spacetime dimension $D = 4$ (Theorem Z.11)
 - Cosmological constant Λ (Appendix U)
 - Electroweak scale v (Appendix T)
 - Baryon asymmetry η_B (Appendix Y)
@@ -805,41 +838,33 @@ This resolution of the electroweak hierarchy is complete for $v$ and $m_H$; the 
 
 **Puzzle:** Quantum field theory predicts vacuum energy $\rho_{vac} \sim M_{Pl}^4$, yet observation requires $\rho_{vac} \sim (10^{-3} \text{ eV})^4$—a discrepancy of 120 orders of magnitude. Similarly, the primordial perturbation amplitude $Q \sim 10^{-5}$ and inflationary observables lack derivation from first principles.
 
-**PU Resolution:** Appendix U provides a complete derivation of the cosmological constant from the Golay-Steiner instanton mechanism. The vacuum is not empty but carries the information-theoretic structure of the Extended Binary Golay Code $\mathcal{G}_{24}$. Vacuum fluctuations are exponentially suppressed by instanton complexity:
-$$\boxed{\Lambda L_P^2 = 8\pi A_{eff} e^{-2\kappa}}$$
-**(Equation U.1)**, where $\kappa$ is the instanton complexity and $A_{\text{eff}} = 0.923 \pm 0.011$ is the effective prefactor from Gaussian determinants and polynomial extensivity (Appendix U, Corollary U.17).
+**PU Resolution:** Appendix U supplies a reference scaling law for the cosmological constant within a specific semiclassical counting convention based on the Golay-Steiner vacuum model. The vacuum is modeled by the information-theoretic structure of the Extended Binary Golay Code $\mathcal{G}_{24}$, and the reference weight is written as
+$$\boxed{\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa_{\mathrm{ref}}}}$$
+(Corollary U.17), where $A_{\text{eff}} := K \cdot N_{\text{eff}}$ is the dimensionless prefactor of Proposition U.15a.
 
-**Instanton Complexity:** The complexity parameter $\kappa$ counts the real dimensions of configuration space through which an instanton must tunnel:
+**Reference Exponent:** The underlying configuration space is the complex Grassmannian
+$$\mathcal{M} = \text{Gr}_{\mathbb{C}}(12,24)$$
+of complex dimension $\kappa_0 = k(M-k)=144$ (Theorem U.3). Appendix U then introduces the leading-order reference-counting convention
+$$\kappa_{\mathrm{ref}} = \frac{N_{\mathbb{R}} - m}{2},$$
+with $N_{\mathbb{R}}=288$ and $m=5$ used as the Appendix U five-mode reference count, giving
+$$\kappa_{\mathrm{ref}} = 141.5$$
+(Theorems U.15-U.16). This is a reference exponent within that convention; it is not established unconditionally by the virial identity alone.
 
-**Grassmannian Bound:** Vacuum fluctuations correspond to deformations of the Golay code subspace, parametrized by the complex Grassmannian:
-$$\mathcal{M} = \text{Gr}_{\mathbb{C}}(k, M) = \text{Gr}_{\mathbb{C}}(12, 24)$$
-with complex dimension $\kappa_0 = k(M-k) = 144$ **(Theorem U.3)**.
-
-**Phase Space:** Dynamics occur on the cotangent bundle $T^*\mathcal{M}$ with real dimension $N_{\mathbb{R}} = 2\kappa_0 = 288$ **(Corollary U.4)**.
-
-**Zero Mode Subtraction:** Morse-Bott analysis identifies $m = 5$ collective zero modes corresponding to continuous symmetries (time translation, spatial translations, scale invariance on $S^3$). These modes do not contribute to tunneling complexity. The physical complexity is:
-$$\kappa = \frac{N_{\mathbb{R}} - m}{2} = \frac{288 - 5}{2} = 141.5$$
-**(Theorem U.15)**.
-
-**Geometric Foundation:** The derivation connects fundamental framework constants to the cosmological constant:
+**Geometric Foundation:** The reference count is tied to the following discrete structures:
 - **Interface modes:** $M = 2ab = 24$ where $a = 2$ (active kernel, Theorem Z.1) and $b = 6$ (inactive complement)
-- **Code structure:** Extended Binary Golay Code $[24, 12, 8]$ is PCE-optimal (Theorem Z.13)
-- **Steiner system:** The 759 octads form $S(5, 8, 24)$ (Theorem U.2)
+- **Code structure:** Extended Binary Golay Code $[24,12,8]$ is PCE-optimal (Theorem Z.13)
+- **Steiner system:** the 759 octads form $S(5, 8, 24)$ (Theorem U.2)
 - **Hessian identity:** $r - \lambda = 176 = d_0(M - a)$ connects design parameters to PU constants (Theorem U.6)
-- **24-cell polytope:** The 24 vertices form a tight spherical 5-design on $S^3$ (Theorem U.7), establishing mode-vertex correspondence (Theorem U.7b)
+- **24-cell polytope:** the 24 vertices form a tight spherical 5-design on $S^3$ (Theorem U.7), establishing mode-vertex correspondence (Theorem U.7b)
 
-**Numerical Prediction:**
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2 \times 141.5} = 8\pi A_{\text{eff}} e^{-283}$$
+**Reference Evaluation:**
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-283}$$
 
-For $A_{\text{eff}} = 1$, this yields $\Lambda L_P^2 = 3.13\times10^{-122}$. Using the PU-theory prefactor $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), the prediction becomes $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, consistent with the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times10^{-122}$ (Appendix V, Eq. (V.5)). Equivalently, holding $\kappa$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ (Corollary U.15b, U.17), providing an independent consistency check on the prefactor's expected $O(1)$ magnitude.
+For $A_{\text{eff}} = 1$, this gives $\Lambda L_P^2 = 3.13\times10^{-122}$. Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ from Corollary U.15b gives the reference evaluation $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, to be compared with the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times10^{-122}$ (Appendix V, Eq. (V.5)). Equivalently, holding $\kappa_{\mathrm{ref}}$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$, providing an internal consistency check on the prefactor's expected $O(1)$ size.
 
-**Key Insight:** The cosmological constant hierarchy is explained by the same Golay code structure that determines the electroweak scale (Appendix T). Both hierarchies reflect discrete information-theoretic complexity:
-- Electroweak: $v/M_{Pl} = e^{-38.5} \sim 10^{-17}$ (38.5 real dimensions)
-- Cosmological: $\Lambda L_P^2 = e^{-283} \sim 10^{-122}$ (141.5 complex dimensions)
-
-The factor-of-7 ratio in exponents ($283/38.5 \approx 7.35$) reflects the different configuration spaces: electroweak involves real alignment constraints while cosmological involves complex Grassmannian tunneling with higher dimensional overhead.
-
-This resolution derives the exponential hierarchy from error-correcting code structure, with the one-loop prefactor $A_{\text{eff}}$ fixed by the specified determinant/extensivity conventions and independently computable under the canonical normalization (Appendix U, Corollary U.15b). The framework transforms the cosmological constant problem from an inexplicable fine-tuning into a demonstration of optimal Golay-Steiner structure in the vacuum.
+**Key Insight:** The same Golay code structure organizes both the electroweak and vacuum sectors, but the logical status differs. The electroweak scale uses the determinant model of Appendix T, whereas the cosmological-constant reference exponent additionally depends on the Appendix U five-mode reference-counting convention and the Appendix U prefactor convention. The numerical ratio
+$$\frac{2\kappa_{\Lambda,\mathrm{ref}}}{\kappa_{EW}} = \frac{283}{38.5} \approx 7.35$$
+is therefore a comparison between two reference exponents, not an unconditional theorem about exact vacuum and electroweak actions.
 
 **Primordial Sector:** The same Golay-Steiner structure determines inflationary observables through a second complexity channel. The primordial configuration space is $\mathbb{CP}^{11}$ (the projectivization of the 12-dimensional signal subspace), with complexity $\kappa_Q = 11$ **(Identification U.20)**. This yields the primordial perturbation amplitude:
 $$Q = \frac{e^{-\kappa_Q}}{\sqrt{2}} = \frac{e^{-11}}{\sqrt{2}} = 1.18 \times 10^{-5}$$
@@ -1073,15 +1098,17 @@ The following results have been derived with precise numerical predictions:
 
 | Result | Value | Source |
 |:-------|:------|:-------|
-| Fine-structure constant | $\alpha^{-1} \approx 137.036092 \pm 0.000050$ | Appendix Z (zero continuously adjustable parameters) |
+| Fine-structure constant | $\alpha^{-1} \approx 137.036092 \pm 0.000060$ | Appendix Z, Theorems Z.24–Z.26 (no continuous fit parameters once those assumptions are fixed) |
 | Electroweak scale | $v \approx 246$ GeV from $\kappa_{EW} = 38.5$ | Appendix T, Theorem T.5 |
 | Weinberg angle | $\sin^2\theta_W^{(0)} = 3/8$ | Appendix T, Theorem T.14 |
 | Higgs mass | $m_H \approx 125$ GeV from metastability | Appendix T, Theorem T.28 |
 | Fermion mass ratios | Lepton $\mathcal{R} = 3$ to 3.8% accuracy | Appendices R, T |
 | Gravitational constant | $G$ from channel capacity, $\delta/L_P \approx 2.355$ | Appendices E, Q |
-| Cosmological constant | $\Lambda L_P^2 = e^{-283} \sim 10^{-122}$ | Appendix U |
-| Primordial observables | $n_s = 0.9663$, $r = 0.0034$, $A_s = 2.08 \times 10^{-9}$ | Appendix U |
-| Spacetime dimension | $D = 4$ from two independent mechanisms | Appendices Z, H |
+| Cosmological constant | Appendix U reference evaluation $\Lambda L_P^2 = 8\pi A_{\text{eff}}e^{-283}\sim 10^{-122}$ under the stated counting and prefactor conventions | Appendix U |
+| Primordial observables | $n_s = 0.9663$, $r = 0.0034$, $A_s = 2.08 \times 10^{-9}$, conditional on the Appendix U primordial identifications and assumptions | Appendix U |
+| Spacetime dimension | $D = 4$ from mode-channel correspondence, independently reinforced in Appendices G and H | Appendices Z, G, H |
+| Arrow of time | From irreducible SPAP entropy $\varepsilon = \ln 2$ | Appendix O |
+| Cosmic censorship | Operational throughput bounds exclude naked singularities | Section K.5, Theorem K.5.4 |
 | Arrow of time | From irreducible SPAP entropy $\varepsilon = \ln 2$ | Appendix O |
 | Cosmic censorship | Operational throughput bounds exclude naked singularities | Section K.5, Theorem K.5.4 |
 | UV finiteness | Intrinsic cutoff $\Lambda_{\text{MPU}} \approx 0.424\, m_P c$ | Section K.10, Theorem K.10.4 |
@@ -1119,7 +1146,7 @@ The following areas have established conceptual frameworks with detailed calcula
 The framework makes precise, falsifiable predictions across multiple domains:
 
 **Fundamental Constants:**
-- $\alpha^{-1} = 137.036092 \pm 0.000050$ (test with improved QED measurements)
+- $\alpha^{-1} = 137.036092 \pm 0.000060$ (test with improved QED measurements)
 - $\sin^2\theta_W$ and $m_H$ consistency checks with RG evolution to high precision
 
 **Particle Physics:**

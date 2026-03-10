@@ -21,11 +21,11 @@ driven by the Landauer bound $\varepsilon \ge \ln 2$, saturated at the PCE-Attra
 
 The generation structure derived in this appendix thus shares a common origin with the gauge structure: both arise from the topology and symmetries of the fundamental MPU state space, as optimized by PCE. This provides a unified geometric foundation for the SM's horizontal (gauge) and vertical (generation) structures.
 
-**Dual Pathway to Three Generations:** This appendix demonstrates that the three-generation structure is multiply over-determined through two independent mechanisms:
+**Generation Count and Geometric Compatibility:** This appendix contains one derivation of the generation count and one geometric compatibility analysis:
 
-1. **Topological (Sections R.1-R.4):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent integer topological charges. Combined with gauge-topology correspondence and anomaly cancellation, this uniquely selects three generations with family charges $\{a, -a, 0\}$.
+1. **Topological derivation (Sections R.1-R.4.1):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent integer topological charges. Combined with the family-charge anomaly constraints and the requirement of nontrivial CP violation, this yields the minimal admissible three-generation pattern with family charges $\{a,-a,0\}$.
 
-2. **Geometric (Sections R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (for roots normalized by $|r|^2 = 2$, so $r_i\cdot r_j \in \{2,1,0,-1,-2\}$ and $|r_i-r_j|^2 = 4 - 2\,r_i\cdot r_j$) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a second independent three-fold structure. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
+2. **Geometric compatibility (Sections R.4.2 and R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (for roots normalized by $|r|^2 = 2$, so $r_i\cdot r_j \in \{2,1,0,-1,-2\}$ and $|r_i-r_j|^2 = 4 - 2\,r_i\cdot r_j$) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a nontrivial three-fold scaffold compatible with the topological count. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
 
 **Mass Hierarchy from $E_8$ Geometry:** Beyond counting generations, this appendix shows how the hierarchical pattern of fermion masses arises from geodesic distances between generation vacua in the $E_8$ root system. The allowed squared distances $d^2 \in \{2, 4, 6, 8\}$ between $E_8$ roots lead to a discrete geometric invariant with zero continuously adjustable parameters:
 $$
@@ -35,7 +35,7 @@ This $\xi$-independent ratio (with $\xi$ defined in Section R.5.3) provides shar
 
 **Reading Guide:**
 - **For topology only:** Sections R.1-R.3 (standard flag manifold results)
-- **For generation counting:** Sections R.1, R.3, R.4 (dual mechanisms)
+- **For generation counting:** Sections R.1-R.4.1 (topological derivation) together with Section R.4.2 (geometric compatibility)
 - **For mass hierarchy:** Sections R.5-R.7 ($E_8$ geometry, Yukawa derivation)
 - **For phenomenology:** Section R.6 (experimental comparison)
 - **For complete derivation:** Read sequentially R.0-R.9
@@ -638,39 +638,27 @@ This is a disjoint union of $|\mathcal{G}_{24}| = 2^{12} = 4096$ cosets of $L_0$
 
 #### R.4.2.1.4 Leech Lattice from PCE Constraints
 
-**Theorem R.4.6 (Leech Lattice from PCE Constraints).**
+**Theorem R.4.6 (Leech Lattice under the 24D admissibility criteria).**
 
-The unique PCE-optimal geometric structure for the $M = 24$ interface modes is the Leech lattice $\Lambda_{24}$.
+Assume the admissible 24-dimensional vacuum lattice is required to be:
+
+1. even,
+2. unimodular, and
+3. rootless, i.e. to have no vectors of squared norm $2$,
+
+with the rootless condition supplied by the QFI-isotropy argument of Appendix Z (Theorem Z.8c). Then the unique compatible lattice is the Leech lattice $\Lambda_{24}$.
 
 *Proof.*
 
-**Step 1 (Dimension matching).** The interface mode count $M = 24$ satisfies eight logically distinct mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, and PCE minimality. The Golay code alone exhibits triple over-determination: it is simultaneously the unique binary linear code with parameters $[24,12,8]$ (up to equivalence) (Pless 1968), the glue code used to construct the Leech lattice $\Lambda_{24}$ from $\sqrt{2}E_8^3$ (Conway & Sloane 1999), and the code whose weight-8 codewords support the Steiner system $S(5,8,24)$, a $5$-$(24,8,1)$ design in which any 5 points lie in exactly one 8-element block (Assmus & Mattson 1969); both the code and design are unique up to isomorphism.
+**Step 1 (Classification input).** By the Niemeier classification (Niemeier 1973), every even unimodular lattice in 24 dimensions is isometric to one of exactly 24 lattices, the Niemeier lattices.
 
-**Step 2 (Even unimodular requirement).** PCE optimization favors lattice structures that:
+**Step 2 (Root-system characterization).** Each Niemeier lattice is characterized by its root system, namely the set of vectors of squared norm $2$. Twenty-three of the Niemeier lattices have nonempty root system. Exactly one has empty root system.
 
-- Are *self-dual* ($\Lambda^* = \Lambda$): minimizes representational redundancy ($V_{\text{op}}$)
-- Are *even* (all $|v|^2 \in 2\mathbb{Z}$): ensures uniform quantization compatible with the flat QFI metric
+**Step 3 (Rootless branch).** The unique Niemeier lattice with empty root system is the Leech lattice $\Lambda_{24}$ (Leech 1967; Conway 1969).
 
-These requirements restrict consideration to even unimodular lattices in 24 dimensions.
+**Step 4 (Application of the admissibility criteria).** Under the stated criteria, the admissible lattice must lie in the 24-dimensional even unimodular class and must be rootless. By Steps 1–3, there is exactly one such lattice, namely $\Lambda_{24}$.
 
-**Step 3 (Niemeier classification).** By the Niemeier classification (Niemeier 1973), there exist exactly 24 even unimodular lattices in 24 dimensions. These are characterized by their root systems—vectors with squared norm 2. The 24 Niemeier lattices have root systems ranging from the empty set (Leech) to $D_{24}$, $A_{24}$, $E_8^3$, and various combinations.
-
-**Step 4 (Rootless selection from PCE isotropy).** By Theorem Z.5, the QFI metric on the $M=24$ interface is flat and isotropic. Appendix Z (Theorem Z.8c) shows that QFI isotropy at $M=24$ forces the vacuum lattice to be rootless (minimum squared norm $\ge 4$). Therefore, among Niemeier lattices, the unique compatible choice is the Leech lattice $\Lambda_{24}$.
-
-**Step 5 (Uniqueness).** Among the 24 Niemeier lattices, exactly one is rootless: the Leech lattice $\Lambda_{24}$ (Leech 1967; Conway 1969).
-
-**Step 6 (Optimality verification).** The Leech lattice achieves:
-
-| Property | Value | Status |
-|----------|-------|--------|
-| Sphere packing density | $\Delta_{24} = \pi^{12}/(12!) \approx 0.00193$ | Optimal (Cohn et al. 2017) |
-| Kissing number | 196,560 | Maximum in 24D |
-| Self-duality | $\Lambda_{24}^* = \Lambda_{24}$ | Minimizes redundancy |
-| Minimum norm | 4 | Rootless (maximizes isotropy) |
-| Covering radius | $\sqrt{2}$ | Deep holes form 23 orbits under $\text{Aut}(\Lambda_{24})$, in bijection with the 23 Niemeier lattices with roots |
-
-
-The optimality of the Leech lattice for sphere packing in 24 dimensions was proved by Cohn, Kumar, Miller, Radchenko, and Viazovska (2017). ∎
+Therefore the admissibility criteria select the Leech lattice uniquely. ∎
 
 ---
 
@@ -885,20 +873,20 @@ Whether sporadic group structure produces observable signatures—such as specif
 ### R.4.2.6 Over-Determination and Structural Consistency
 
 **Independence verification:** 
-- Mechanism 1 (Topological): relies on $\pi_2(\Sigma_8)$ structure and gauge representation theory (Sections R.3–R.4.1)
-- Mechanism 2 (Geometric): relies on sphere packing optimality and $E_8$/Leech lattice constructions (Section R.4.2)
+- Mechanism 1 (Topological derivation): relies on $\pi_2(\Sigma_8)$ structure, family-charge anomaly constraints, and the CP-violation requirement (Sections R.3–R.4.1)
+- Mechanism 2 (Geometric compatibility): relies on sphere packing optimality and $E_8$/Leech lattice constructions (Section R.4.2)
 
-These two mechanisms are independent at the derivation level, though they share foundational constants ($d_0 = 8$, $\varepsilon = \ln 2$) at the axiomatic level. Each provides a complete derivation of $N_{\text{gen}} = 3$.
+These two strands are logically distinct, though they share foundational constants ($d_0 = 8$, $\varepsilon = \ln 2$) at the axiomatic level. Only Mechanism 1 derives $N_{\text{gen}} = 3$; Mechanism 2 shows that the geometric sector carries a compatible three-fold structure once the topological count is fixed.
 
 **Structural compatibility from QFI mode count:** The interface mode count $M = 24$ (**Appendix Z**, Theorem Z.5) admits the factorization:
 $$
 M = 24 = 8 \times 3 = d_0 \times N_{\text{gen}}
 $$
-This factorization does not independently derive $N_{\text{gen}} = 3$; rather, it demonstrates that the generation structure derived by Mechanisms 1 and 2 is compatible with the information-theoretic mode count. The QFI structure thus provides a consistency check, not a third derivation pathway.
+This factorization does not independently derive $N_{\text{gen}} = 3$; rather, it shows that the topological count is compatible with organizing the interface modes into three 8-dimensional blocks. The QFI structure is therefore a consistency check, not an additional derivation pathway.
 
-**Qualitative assessment:** The convergence of two independent derivation pathways on the value $N_{\text{gen}} = 3$, together with compatibility from the QFI mode factorization, constitutes strong evidence for structural necessity rather than coincidence. The framework does not select $N = 3$ by parameter choice but derives it through independent routes sharing only the foundational constants $(d_0 = 8, \varepsilon = \ln 2)$.
+**Qualitative assessment:** The convergence of one derivation with two nontrivial compatibility checks supports the internal coherence of the framework. The manuscript does not select $N = 3$ by parameter choice, but the proved result is the topological minimality claim together with geometric and information-theoretic compatibility.
 
-**Remark: Methodological Note.** The strength of the over-determination argument rests on the logical independence of the two derivation pathways. Both mechanisms provide complete derivations of $N = 3$ using different mathematical structures. The QFI mode factorization $M = d_0 \times N_{\text{gen}}$ provides an independent consistency check. Their agreement reflects the internal coherence of the framework. ∎
+**Remark: Methodological Note.** The strength of the consistency argument rests on the agreement between the topological derivation, the $E_8$/Leech scaffold, and the QFI factorization. The latter two do not provide independent proofs of $N = 3$; they supply supporting structural checks. ∎
 
 ---
 
@@ -1116,7 +1104,7 @@ Before evaluating experimental agreement, we clarify how this appendix advances 
 
 | **Aspect** | **Previous Approach** | **This Appendix** |
 |------------|----------------------|-------------------|
-| **Generation Count** | Topological only (anomaly cancellation) | Topology + Geometry (over-determined by two mechanisms) |
+| **Generation Count** | Topological only (anomaly cancellation) | Topological derivation + geometric compatibility check |
 | **Mass Hierarchy** | PCE minimality (qualitative order) | $E_8$ geodesic distances (quantitative ratios) |
 | **Predictions** | $N=3$, hierarchical pattern | Discrete $\mathcal{R}$ values: $\left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$ |
 | **Mixing Angles** | Small (qualitative statement) | Exponential suppression $\exp(-d^2/2\sigma^2)$ with $d^2$ from geometry |
@@ -1236,7 +1224,7 @@ The observed value $J_{CP} \approx 3 \times 10^{-5}$ is consistent with small mi
 
 The framework provides first-principles explanations for:
 
-1. **Generation count:** $N = 3$ from dual over-determination (topology + geometry)
+1. **Generation count:** $N = 3$ from the topological anomaly-cancellation and CP-violation argument of Sections R.3-R.4.1, with Section R.4.2 providing geometric compatibility
 2. **Mass hierarchy:** Exponential suppression from $E_8$ geodesic distances on the attractor orbit $\text{Gr}(2,8)$
 3. **Discrete mass ratios:** $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ from allowed root distances $d^2 \in \{2, 4, 6, 8\}$
 4. **Small mixing angles:** Exponential suppression from large vacuum separations
@@ -1272,11 +1260,11 @@ where $c_1$ is determined by the response kernel $\delta^2\Gamma/\delta g_{\mu\n
 This derivation occupies a middle ground between pure mathematics and phenomenological modeling:
 
 **Strengths:**
-- Derives the **necessity** of three generations from topology + $E_8$ geometry + anomaly cancellation
+- Derives the **minimality** of three generations from topology, anomaly cancellation, and the CP-violation requirement in the modeled family-charge class
 - Provides **mechanism** for mass hierarchy via $E_8$ root distances
 - Achieves **unification** of horizontal (gauge) and vertical (generation) SM structure
 - Makes **discrete predictions** ($\mathcal{R}$ values) with phenomenological support
-- **Over-determination:** Two independent mechanisms (topology + geometry) both give 3
+- Supplies **compatibility checks:** the $E_8$/Leech and QFI mode structures are nontrivially consistent with the topological count $N=3$
 
 **Limitations:**
 - Requires **specific choices** (embedding ansatz, potential form) motivated by PCE but not uniquely derived
@@ -1308,11 +1296,7 @@ strongly suggests three generations are fundamentally required rather than envir
 *   **$E_8$ Geometry:** The $E_8$ root system emerges as the information-optimal coordinatization in 8 dimensions, with discrete squared distances $d^2 \in \{2, 4, 6, 8\}$ between roots.
 *   **Gauge–Topology Correspondence:** An embedding of the Standard Model gauge group into the MPU's internal symmetry group induces a homomorphism from the topological charges to the Cartan weight lattice of the gauge group.
 *   **PCE Selection:** The Principle of Compression Efficiency selects for physically viable sectors by enforcing non-Abelian charge neutrality via the **light sublattice** and requiring anomaly cancellation for an emergent family symmetry $U(1)_F$.
-*   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$. This is **over-determined** by two independent derivation mechanisms:
-    1. Topological anomaly cancellation + CP requirement (Sections R.3–R.4.1)
-    2. $E_8$/Leech lattice geometric structure (Section R.4.2)
-    
-The interface mode structure $M = 24 = 8 \times 3$ (**Appendix Z**, Theorem Z.5) provides further structural consistency through the Golay-Leech correspondence.
+*   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$ (Sections R.3–R.4.1). Section R.4.2 and the factorization $M = 24 = 8 \times 3$ provide structural compatibility checks rather than a second independent derivation.
 *   **Interface Modes:** The number 24 appears independently in interface mode count (**Appendix Z, Theorem Z.5**), Leech lattice dimension, and Golay code dimension (**Appendix Z, Theorem Z.13**), reflecting deep information-geometric optimality.
 *   **Mass Hierarchy:** $E_8$ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with zero continuously adjustable parameters.
 *   **Phenomenological Success:** Charged lepton sector shows $\mathcal{R}_\ell \approx 2.889$, within 3.8% of the discrete value 3, strongly supporting the $E_8$ geometric mechanism.
