@@ -452,7 +452,7 @@ where $\zeta_{\mathcal{O}}(s) = \sum_{(m_1,m_2) \neq (0,0)} \text{mult}(m_1, m_2
 
 $$\alpha = \frac{1}{16\sigma_B^2} = \frac{1}{16 \cdot (1/24)} = \frac{24}{16} = \frac{3}{2}$$
 
-where $\sigma_B^2 = 1/M = 1/24$ arises from capacity saturation across the $M = 24$ interface modes (Theorem Z.5).
+where $\sigma_B^2 = 1/M = 1/24$ uses the interface-mode count $M=24$ from Theorem Z.5 together with the canonical unit-radius normalization convention of Lemma T.41.2.
 
 *Derivation.* The instanton action scales with complexity as $S_{\text{inst}} = (C_{\max}/\varepsilon)\kappa$ (Section U.4). Substituting $C_{\max}/\varepsilon = 2$ yields $S_{\text{inst}} = 2\kappa$.
 

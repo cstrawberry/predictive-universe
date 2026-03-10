@@ -486,13 +486,13 @@ where the uncertainty is the conservative truncation bound for the first neglect
 **Step 2 (QED running).** Standard QED running from $q^2 = 0$ to the sphaleron scale $T_{sph} \approx 160$ GeV gives:
 $$\alpha_{em}^{-1}(T_{sph}) \approx 127.5$$
 
-**Step 3 (Weinberg angle).** From Appendix T, Theorem T.14, the PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$. For the numerical target tuple of Appendix T, Theorem T.18, namely $(\Delta_1,\Delta_2)=(15.14,20.94)$ and $(Z_1,Z_2)=\left(1+\frac{15.14}{24},\,1+\frac{20.94}{24}\right)$, the SM-canonical boundary value at $\mu_G$ is $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2 + 5Z_1) \approx 0.408$. One-loop SM RG running to the sphaleron scale gives:
+**Step 3 (Weinberg angle).** From Appendix T, Theorem T.14, the PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$. Adopting the Appendix T target tuple of Theorem T.18, namely $(\Delta_1,\Delta_2)=(15.14,20.94)$ and $(Z_1,Z_2)=\left(1+\frac{15.14}{24},\,1+\frac{20.94}{24}\right)$, the SM-canonical boundary value at $\mu_G$ is $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2 + 5Z_1) \approx 0.408$. One-loop SM RG running to the sphaleron scale gives:
 $$\sin^2\theta_W(T_{sph}) \approx 0.234$$
 
 **Step 4 (Combination).** By definition of the Weinberg angle:
 $$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W} = \frac{1/127.5}{0.234} \approx \frac{1}{29.8} \approx \frac{1}{30}$$
 
-This derivation uses zero continuously adjustable parameters beyond $K_0 = 3$. ∎
+This numerical evaluation is conditional on the Appendix T target tuple and the standard one-loop RG running used above. ∎
 
 ### Y.7.5 Complete Numerical Calculation
 

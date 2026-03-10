@@ -36,9 +36,9 @@ where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The derivation proceeds through a seven
 
 The hierarchy among couplings at a common fundamental scale arises from the information-theoretic costs of maintaining gauge coherence on the noisy MPU substrate. Modeling this as continuous-time quantum error correction, the minimal Predictive Physical Complexity $C_P(G, g)$ required to maintain coherence scales polynomially with the group's self-interaction complexity, quantified by the quadratic Casimir of the adjoint representation $C_2(\text{Adj})$. For $U(1)$, $C_2(\text{Adj}) = 0$; for $SU(2)$, $C_2(\text{Adj}) = 2$; for $SU(3)$, $C_2(\text{Adj}) = 3$. PCE optimization balancing coherence cost against predictive benefit predicts the UV hierarchy $g_1^* > g_2^* > g_3^*$, which standard renormalization group evolution transforms into the observed low-energy hierarchy $g_3 > g_2 > g_1$.
 
-**Electroweak Scale, Weinberg Angle, and Higgs Mass:** These three fundamental puzzles are resolved simultaneously through a unified derivation in Appendix T. The electroweak scale emerges from the Golay-Steiner structure with electroweak complexity $\kappa_{EW} = bk/2 + \dim(G/H) - m/2 = 38.5$, yielding:
-$$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 246 \text{ GeV}$$
-**(Theorem T.5)**. The PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$ from PCE isotropy conditions **(Theorem T.14)**, and the Higgs quartic coupling satisfies $\lambda(\mu_\lambda) = 0$ at the metastability boundary **(Theorem T.25)**, predicting $m_H \approx 125$ GeV. These results use zero continuously adjustable parameters and are derived from:
+**Electroweak Scale, Weinberg Angle, and Higgs Mass:** These three fundamental puzzles are addressed simultaneously through the Appendix T construction. The electroweak scale emerges from the Golay-Steiner structure with electroweak complexity $\kappa_{EW} = bk/2 + \dim(G/H) - m/2 = 38.5$, yielding:
+$$v = A_{EW} e^{-\kappa_{EW}} M_{Pl} \approx 252 \text{ GeV}$$
+**(Theorem T.5 / Corollary T.29.1)**. The PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$ from the PCE isotropy conditions **(Theorem T.14)**, while the Higgs-mass prediction near $125$ GeV is conditional on the Standard Model metastability-boundary matching used in **Theorem T.28**. These results require no continuous fitting inside the stated Appendix T setup, but the Higgs and threshold sectors rely on the explicit matching assumptions recorded there.
 - Signal-parity decomposition of M = 24 modes into k = 12 signal and k = 12 parity subspaces via the Extended Binary Golay Code (Proposition T.1)
 - Electroweak coset $\mathcal{M}_{EW} = (SU(2)_L \times U(1)_Y)/U(1)_{em} \cong S^3$ with dimension 3 (Definition T.6)
 - Discrete action $S_{EW} = N_0 + \dim(G/H) - m/2 = 38.5$ from alignment constraints and zero-mode subtraction (Theorem T.4)
@@ -627,12 +627,12 @@ Type II violation arises from the Berry connection on the generation manifold. B
 $$\delta = \oint_{\gamma} \mathcal{A}_B$$
 where $\mathcal{A}_B$ is the Berry connection and $\gamma$ is the flavor-changing loop. This holonomy is non-zero even when the connection 1-form is real, because the loop encloses non-trivial curvature. The σ-involution preserves the loop $\gamma$ but reverses the orientation of the configuration space volume form (Lemma Y.8.1: $\mathsf{CP}^* \Omega_3 = -\Omega_3$ on $SU(2) \cong S^3$), allowing non-zero holonomy consistent with overall CP as a symmetry of the vacuum. ∎
 
-**Theorem K.6.18 (CKM Phase from Berry Holonomy).** The CKM CP-violating phase arises as the Berry holonomy around the minimal flavor-changing loop:
+**Theorem K.6.18 (CKM Phase from Berry Holonomy).** The CKM CP-violating phase is imported from the Berry-holonomy model of Appendix T:
 $$\delta = 66.7° \pm 1.2°$$
 where the combined uncertainty reflects geometric and wavepacket contributions.
 
-*Proof.* By Theorem T.56, the CP phase is computed from the geometric structure of the generation manifold:
-$$\delta = \delta_{\text{flat}} \times f_{\text{sinc}} = 70.53° \times 0.9454 = 66.7°$$
+*Proof.* By the conditional Berry-holonomy calculation of Theorem T.56, the CP phase is computed from the geometric structure of the generation manifold:
+$$\delta = \delta_{\text{flat}} \times f_{\text{sinc}} = 70.53^\circ \times 0.9454 = 66.7^\circ$$
 where:
 
 - $\delta_{\text{flat}} = 2\arctan(\sqrt{2}/2) = 70.53°$ is the base phase from the up-down sector mismatch in $E_8$ root space

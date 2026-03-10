@@ -25,25 +25,19 @@ with $f(0)=0$ and hence $0\le f(P)\le 1$ for every projector $P$. Operationally,
 
 **G.1.2 Non-contextuality Enforced by POP / PCE**
 
-**Lemma G.1.1b (Non-contextuality from Dynamical Stability).** The cost frame function $f(P)$ depends only on the projector $P$ and not on the larger partition $\Pi$ in which it is embedded. That is, if $P$ appears as an element in two different partitions $\Pi_1$ and $\Pi_2$, then $f(P|\Pi_1)=f(P|\Pi_2)=f(P)$.
-
-**Proof.** Fix a projector $P$ and two partitions $\Pi_1$ and $\Pi_2$ that both contain $P$. Consider any payoff function that depends only on whether $P$ occurs. If $f(P|\Pi_1)\neq f(P|\Pi_2)$, the POP-expected payoff of the same physical decision problem would depend on how $\mathbf{1}-P$ is decomposed, yielding incompatible POP-optimal behavior for an identical predictive task. Such context dependence is pure representational overhead and therefore strictly increases PCE potential. Hence at the PCE optimum the assignment is non-contextual, so $f(P)$ is well-defined. ∎
-
-**Lemma G.1.1ba (Additivity of $f$ over Orthogonal Sums).** The cost frame function $f$ is additive over orthogonal sums: if $P$ is a projector that decomposes into a sum of orthogonal projectors $P=\sum_j Q_j$ with $Q_jQ_k=0$ for $j\neq k$, then:
+**Lemma G.1.1b (Non-contextuality under refinement invariance).** Assume the POP/PCE cost functional is refinement-invariant in the following sense: if two measurement contexts $\Pi_1,\Pi_2$ realize the same projector $P$ and induce the same payoff problem on the active sector, then replacing one context by the other cannot change the admissible cost assigned to $P$. Then the cost frame function depends only on $P$:
 $$
-f(P)=\sum_j f(Q_j)
-\quad \text{(G.1.2)}
+f(P\mid \Pi_1)=f(P\mid \Pi_2)=:f(P).
 $$
 
-**Proof.** Let $P=\sum_{j=1}^k Q_j$ be an orthogonal refinement. Consider any bounded payoff function $u$ that depends only on the coarse-grained event "$P$ occurs" versus "$\mathbf{1}-P$ occurs", assigning payoffs $u_P$ and $u_{\neg P}$ respectively. Using the coarse partition $\{P,\mathbf{1}-P\}$,
+*Proof.* Suppose $f(P\mid \Pi_1)\neq f(P\mid \Pi_2)$ for some projector $P$ realized in two contexts with the same induced payoff problem. Then the value assigned to $P$ depends on contextual data that, by refinement invariance, has no operational effect on the POP/PCE objective. Replacing the larger of the two values by the smaller preserves the payoff problem and strictly decreases cost, contradicting optimality of the original assignment. Hence the assignment is context-independent. QED
+
+**Lemma G.1.1ba (Additivity under payoff-refinement consistency).** Assume, in addition to Lemma G.1.1b, that POP/PCE assignments are consistent under orthogonal refinements of the same payoff problem: whenever $P,Q$ are orthogonal projectors, the expected value assigned to the coarse event $P+Q$ equals the sum of the expected values assigned to the refined mutually exclusive events $P$ and $Q$. Then
 $$
-\mathbb{E}[u]=f(P)\,u_P+(1-f(P))\,u_{\neg P}.
+f(P+Q)=f(P)+f(Q)\qquad (PQ=0).
 $$
-Using the refined partition $\{Q_1,\dots,Q_k,\mathbf{1}-P\}$,
-$$
-\mathbb{E}[u]=\Big(\sum_j f(Q_j)\Big)u_P+\Big(1-\sum_j f(Q_j)\Big)u_{\neg P}.
-$$
-POP requires the same expected value for the same physical decision problem, independent of representational refinement. Since $u_P,u_{\neg P}$ are arbitrary, this forces $f(P)=\sum_j f(Q_j)$. ∎
+
+*Proof.* Let $u$ be any payoff functional that assigns unit reward to the event $P+Q$ and zero elsewhere. The same physical decision problem can be represented either coarsely, by the single event $P+Q$, or finely, by the orthogonal refinement into the mutually exclusive events $P$ and $Q$. By payoff-refinement consistency, both representations must yield the same expected value. The coarse representation gives $f(P+Q)$; the refined representation gives $f(P)+f(Q)$. Hence $f(P+Q)=f(P)+f(Q)$. QED
 
 **G.1.3 Gleason-type Result for the Cost Functional**
 
@@ -117,15 +111,9 @@ The derivation shows that the Born rule is not an ad-hoc postulate but emerges a
 
 The existence of a well-behaved cost functional satisfying the premises of Theorem G.1.3 not only leads to the Born rule but also provides a justification for the emergence of the Hilbert space structure itself as the unique optimal framework for predictive processing under POP/PCE.
 
-**Theorem G.1.8 (Hilbert-Space Uniqueness under POP + PCE).** Assume that the abstract algebraic structure describing potential outcomes admits a normalized non-contextual additive frame functional $f$ on its sharp events (projectors) satisfying the hypotheses of Theorem G.1.3. Then, for consistency with representing such a trace-state functional, the outcome structure is representable as an algebra of operators acting on a complex Hilbert space.
+**Theorem G.1.8 (Selection of the complex Hilbert-space branch).** Under POP/PCE, the state space carries a Hilbert-space representation. If one further imposes the branch-selection criterion that phase redundancy be realized by the minimal connected abelian group compatible with the active kernel, then the preferred realization is the complex Hilbert space.
 
-*Proof.*
-
-1. By Theorem G.1.3, there exists a density operator $\rho$ such that $f(P)=\mathrm{tr}(\rho P)$ for all sharp events $P$.
-
-2. Let $\mathfrak{A}$ be the unital *-algebra generated by these sharp events and their finite linear combinations (predictive observables). Extending $f$ by linearity and continuity gives a positive normalized state $\omega$ on $\mathfrak{A}$. By the GNS construction, $(\mathfrak{A},\omega)$ admits a cyclic representation $(\pi,\mathcal{H}_\omega,|\Omega\rangle)$ with $\omega(A)=\langle\Omega|\pi(A)|\Omega\rangle$ and projections represented as orthogonal projectors on $\mathcal{H}_\omega$.
-
-3. The remaining choice is the scalar field. A PCE-stable interference theory must support a continuous one-parameter phase symmetry that leaves all probabilities $f(P)$ invariant, i.e. a connected abelian phase group acting on amplitudes. For real Hilbert spaces the unit-norm scalars are $\{\pm1\}$ (discrete, no continuous phase). For quaternionic Hilbert spaces the unit-norm scalars form $SU(2)$ (three-parameter, non-abelian). The complex case has unit-norm scalars $U(1)$, giving the minimal connected abelian phase redundancy compatible with interference and the emergent $U(1)$ gauge sector. Moreover, a non-abelian quaternionic phase group would introduce additional local phase generators, conflicting with the PU capacity bound on independently estimable gauge generators (Theorem G.8.2e). Therefore the PU fixed point selects the complex Hilbert-space representation. ∎
+*Proof.* The reconstruction results established in Sections G.1.1–G.1.7 and the standard GNS/Wigner analysis provide a Hilbert-space representation of the predictive states and symmetries. At this stage the representation need not yet distinguish between the real, complex, and quaternionic Hilbert-space branches. Impose the additional branch-selection criterion that the physically instantiated phase symmetry be the minimal connected abelian phase group compatible with the active kernel. The real branch has only the discrete phase group $\{\pm 1\}$ and therefore lacks the connected $U(1)$ phase needed for the later gauge construction; the quaternionic branch carries a non-abelian $Sp(1)\cong SU(2)$ phase redundancy, which introduces extra gauge structure relative to the complex branch. The complex branch realizes the required connected phase symmetry with the minimal connected abelian group $U(1)$. Hence, under this added criterion, the preferred Hilbert-space realization is the complex one. QED
 
 **Corollary G.1.9 (PCE Instability of Alternative Predictive Algebras).**
 Any proposed alternative algebraic structure for prediction (e.g., classical probability on phase space, real or quaternionic Hilbert spaces, Jordan algebras, $L^p$ spaces with $p \neq 2$) would be unstable under PCE optimization compared to the complex Hilbert space structure.
@@ -609,125 +597,28 @@ The exceptional dimensions listed above do not include $12$. Therefore no simple
 
 **Step 3 (Implication for capacity-saturating gauge algebras).** If a gauge algebra $\mathfrak{g}$ saturates the Lagrangian capacity bound $n_G = 12$ (Theorem G.8.2e), then $\dim \mathfrak{g} = 12$. By Step 2, $\mathfrak{g}$ cannot be simple. Therefore its semisimple part $[\mathfrak{g},\mathfrak{g}]$ must be a direct sum of at least two simple Lie algebras. In particular, any simple unification candidate with $\dim \mathfrak{g} > 12$ (such as $SU(5)$, $SO(10)$, or $E_6$ with dimensions $24$, $45$, and $78$ respectively) is excluded outright by the bound $n_G \leq 12$. ∎
 
-**Theorem G.8.4b (Unique Module Decomposition in the Capacity-Saturating PCE Regime).**
-Let $\mathfrak{g}$ be a reductive Lie algebra of dimension at most 12 acting faithfully on $\mathcal{B} = \mathbb{C}^6$. Assume:
-1. $\mathfrak{g}$ supports chiral fermion representations;
-2. the matter content is anomaly-free; and
-3. the PCE objective is in the saturation regime of Equation (G.8.5),
-   $$
-   \eta_{\text{ben}}(D) > \lambda_c(D)\alpha_{\text{load}}/C_{\max},
-   $$
-   so that algebras attaining $n_G = 12$ are strictly preferred whenever attainable.
-
-Then the unique module decomposition is
+**Theorem G.8.4b (Unique module decomposition under SM-type anomaly data).** Assume the capacity-saturating regime of Equation (G.8.5), faithfulness of the inactive-sector action, chirality of the low-energy matter sector, non-trivial abelian coupling to the color factor, and the existence of one SM-type chiral family satisfying the linear and cubic anomaly equations with a single hypercharge generator. Then the unique inactive-sector module decomposition is
 $$
-\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1
+\mathcal{B}\cong \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1.
 $$
-and
+
+*Proof.* The unordered partitions of $6$ are
 $$
-\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)
+6,\;5+1,\;4+2,\;4+1+1,\;3+3,\;3+2+1,\;3+1+1+1,\;2+2+2,\;2+2+1+1,\;2+1+1+1+1,\;1+1+1+1+1+1.
 $$
-with $\dim(\mathfrak{g}) = 12$.
-
-*Proof.*
-
-**Step 1 (Reductivity from compactness).** The gauge group $G$ acting on the MPU Hilbert space is compact (Appendix G, Sections G.1–G.3). By standard structure theory of compact Lie groups, its complexified Lie algebra $\mathfrak{g}$ is reductive:
+For each partition, the maximal compact semisimple algebra preserving the decomposition is the direct sum of the corresponding $\mathfrak{su}(n_i)$ factors, together with abelian summands from blockwise rephasings. Capacity saturation with $n_G=12$ excludes all partitions whose maximal reductive algebra has dimension strictly less than $12$, leaving only candidates compatible with a $3$-block and a $2$-block. The partitions $3+3$ and $2+2+2$ have no one-dimensional block and therefore fail the assumed SM-type hypercharge realization with a single surviving abelian generator coupled non-trivially to color. The partition $3+1+1+1$ has too small a non-abelian weak factor to support the assumed chiral doublet structure. The partition $3+2+1$ admits the reductive algebra
 $$
-\mathfrak{g} = \mathfrak{z}(\mathfrak{g}) \oplus [\mathfrak{g},\mathfrak{g}]
+\mathfrak{su}(3)\oplus \mathfrak{su}(2)\oplus \mathfrak{u}(1),
 $$
-where $\mathfrak{z}(\mathfrak{g})$ is the center (abelian) and $[\mathfrak{g},\mathfrak{g}]$ is semisimple. For representations of reductive Lie algebras, every finite-dimensional complex representation is completely reducible. Hence the faithful action of $\mathfrak{g}$ on the inactive subspace $\mathcal{B} = \mathbb{C}^6$ decomposes as a direct sum of irreducible $\mathfrak{g}$-modules:
+whose dimension is $8+3+1=12$, and it supports the assumed anomaly-free SM-type hypercharge equations. No other partition simultaneously saturates the capacity bound and realizes the stated anomaly data. Therefore the unique admissible decomposition under the stated assumptions is $\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1$. QED
+
+**Corollary G.8.4c (Conditional gauge-algebra selection).** Under the hypotheses of Theorem G.8.4b, the unique capacity-saturating reductive gauge algebra acting faithfully on the inactive sector is
 $$
-\mathcal{B} \cong \mathbb{C}^{n_1} \oplus \cdots \oplus \mathbb{C}^{n_r}
+\mathfrak{g}_{\mathrm{SM}}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1),
+\qquad
+\dim \mathfrak{g}_{\mathrm{SM}} = 8+3+1 = 12.
 $$
-with each $\mathbb{C}^{n_i}$ an irreducible $\mathfrak{g}$-module. We refer to $(n_1,\ldots,n_r)$ as the module dimension partition of $\mathcal{B}$.
-
-**Step 2 (Partition enumeration).** The module dimensions $(n_1, \ldots, n_r)$ partition $b = 6$. The eleven unordered partitions of 6, together with the maximal faithful algebra for each partition (taking $\mathfrak{u}(n) = \mathfrak{su}(n) \oplus \mathfrak{u}(1)$ with $\dim(\mathfrak{u}(n)) = n^2$), are:
-
-| Partition | Maximal Faithful Algebra | $\dim$ | 
-|:---------:|:-------------------------|:------:|
-| $(6)$ | $\mathfrak{u}(6)$ | 36 |
-| $(5,1)$ | $\mathfrak{u}(5) \oplus \mathfrak{u}(1)$ | 26 |
-| $(4,2)$ | $\mathfrak{u}(4) \oplus \mathfrak{u}(2)$ | 20 |
-| $(4,1,1)$ | $\mathfrak{u}(4) \oplus \mathfrak{u}(1)^2$ | 18 |
-| $(3,3)$ | $\mathfrak{u}(3)^2$ | 18 |
-| $(3,2,1)$ | $\mathfrak{u}(3) \oplus \mathfrak{u}(2) \oplus \mathfrak{u}(1)$ | 14 |
-| $(3,1,1,1)$ | $\mathfrak{u}(3) \oplus \mathfrak{u}(1)^3$ | 12 |
-| $(2,2,2)$ | $\mathfrak{u}(2)^3$ | 12 |
-| $(2,2,1,1)$ | $\mathfrak{u}(2)^2 \oplus \mathfrak{u}(1)^2$ | 10 |
-| $(2,1,1,1,1)$ | $\mathfrak{u}(2) \oplus \mathfrak{u}(1)^4$ | 8 |
-| $(1^6)$ | $\mathfrak{u}(1)^6$ | 6 |
-
-**Step 3 (Capacity bound filter).** The constraint $n_G \leq 12$ (Theorem G.8.2e) eliminates partitions whose maximal faithful algebra exceeds 12:
-
-- $(6)$: $\dim = 36 > 12$. Eliminated.
-- $(5,1)$: $\dim = 26 > 12$. Eliminated.
-- $(4,2)$: $\dim = 20 > 12$. Eliminated.
-- $(4,1,1)$: $\dim = 18 > 12$. Eliminated.
-- $(3,3)$: $\dim = 18 > 12$. Eliminated.
-- $(3,2,1)$: $\dim = 14 > 12$. Requires subalgebra analysis (Step 7).
-
-Remaining candidates with maximal $\dim \leq 12$: $(3,1,1,1)$, $(2,2,2)$, $(2,2,1,1)$, $(2,1,1,1,1)$, $(1^6)$.
-
-**Step 4 (Coherence-compression saturation filter).** From Equation G.8.1, the predictive benefit satisfies $V_{\text{benefit}} \propto \eta_{\text{ben}}(D) \cdot n_G$, creating an incentive to maximize the generator count up to the capacity bound. This follows from the PCE potential structure (Equation G.8.5): when $\eta_{\text{ben}}(D) > \lambda_c(D)\alpha_{\text{load}}/C_{\max}$, the coefficient of the linear $n_G$ term in $V_{\text{net}}$ is negative, favoring larger $n_G$. PCE optimization therefore selects algebras achieving $n_G = 12$ when this is attainable, provided the PCE potential structure satisfies this condition. Partitions with maximal dimension strictly less than 12 are PCE-suboptimal under this condition:
-
-- $(2,2,1,1)$: $\dim_{\max} = 10 < 12$. Eliminated.
-- $(2,1,1,1,1)$: $\dim_{\max} = 8 < 12$. Eliminated.
-- $(1^6)$: $\dim_{\max} = 6 < 12$. Eliminated.
-
-Remaining candidates: $(3,1,1,1)$, $(2,2,2)$, and $(3,2,1)$ (pending subalgebra analysis).
-
-**Step 5 (Chirality filter).** Chiral fermions require complex representations inequivalent to their conjugates. For $SU(2)$, the fundamental representation $\mathbf{2}$ is pseudoreal: if $\psi$ transforms as $\psi \to U\psi$ for $U \in SU(2)$, then $\epsilon \psi^*$ (where $\epsilon = i\sigma_2$ is the antisymmetric tensor) transforms identically, establishing $\mathbf{2} \cong \bar{\mathbf{2}}$. All irreducible representations of $SU(2)$ are either real (integer spin) or pseudoreal (half-integer spin).
-
-For partition $(2,2,2)$, the maximal semisimple subalgebra is $\mathfrak{su}(2)^3$, acting on three copies of $\mathbb{C}^2$. Each $\mathbb{C}^2$ carries the pseudoreal fundamental. All representations of $SU(2)^3$ are self-conjugate, precluding chiral matter. Partition $(2,2,2)$ is eliminated.
-
-Remaining candidates: $(3,1,1,1)$ and $(3,2,1)$.
-
-**Step 6 (Anomaly filter on $(3,1,1,1)$).** For partition $(3,1,1,1)$, the maximal algebra is $\mathfrak{u}(3) \oplus \mathfrak{u}(1)^3$ with $\dim = 9 + 3 = 12$. Although this partition satisfies the capacity bound and coherence-compression saturation, it fails the anomaly constraints.
-
-Consider the $[SU(3)]^2 \times U(1)_i$ anomaly for each $U(1)_i$ factor. The anomaly coefficient is:
-$$
-\mathcal{A}_i = \sum_{\text{left-chiral}} Y_i \cdot T(R) - \sum_{\text{right-chiral}} Y_i \cdot T(R)
-$$
-where $T(R)$ is the Dynkin index of representation $R$ (with $T(\mathbf{3}) = 1/2$). The single $\mathbb{C}^3$ module transforms as the fundamental $\mathbf{3}$ of $SU(3)$. For anomaly cancellation $\mathcal{A}_i = 0$, either:
-(a) The $\mathbf{3}$ is vector-like (equal left and right chiralities), eliminating chiral fermions, or
-(b) $Y_i^{(\mathbf{3})} = 0$ for all $i$.
-
-Option (b) renders all $U(1)$ factors trivial on the color sector. Standard Model phenomenology requires hypercharge to couple non-trivially to quarks ($Y_q \neq 0$). This requirement follows from the observed electric charges of quarks: $Q = T_3 + Y/2$ with $Q(u) = +2/3$ and $Q(d) = -1/3$ necessitates nonzero $Y_q$. Partition $(3,1,1,1)$ cannot support anomaly-free chiral matter with appropriate abelian-color coupling. Eliminated.
-
-Remaining candidate: $(3,2,1)$.
-
-**Step 7 (Subalgebra analysis of $(3,2,1)$).** The maximal faithful algebra for $(3,2,1)$ is $\mathfrak{u}(3) \oplus \mathfrak{u}(2) \oplus \mathfrak{u}(1)$ with $\dim = 9 + 4 + 1 = 14 > 12$. We seek a 12-dimensional subalgebra acting faithfully.
-
-Decompose:
-$$
-\mathfrak{u}(3) = \mathfrak{su}(3) \oplus \mathfrak{u}(1)_3, \quad \mathfrak{u}(2) = \mathfrak{su}(2) \oplus \mathfrak{u}(1)_2
-$$
-The three $\mathfrak{u}(1)$ factors $(\mathfrak{u}(1)_3, \mathfrak{u}(1)_2, \mathfrak{u}(1)_1)$ span a 3-dimensional abelian subalgebra. To achieve $\dim(\mathfrak{g}) = 12$, we must reduce by 2 dimensions, leaving exactly one $\mathfrak{u}(1)$ factor.
-
-The anomaly cancellation conditions for Standard Model fermion content with $N_c = 3$ colors require (cf. Section G.8.5):
-$$
-[SU(3)]^2 U(1): \quad 2y_q + y_{u^c} + y_{d^c} = 0
-$$
-$$
-[SU(2)]^2 U(1): \quad 3y_q + y_\ell = 0
-$$
-These constraints, together with gravitational anomaly cancellation, fix the relative $U(1)$ charges up to an overall normalization. The solution is unique: a single linear combination $U(1)_Y$ (hypercharge) survives as the physical abelian factor. The orthogonal combinations are either anomalous or decouple. Therefore exactly one physical $U(1)$ remains:
-$$
-\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)_Y
-$$
-with $\dim = 8 + 3 + 1 = 12$.
-
-**Step 8 (Faithfulness verification).** The algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)_Y$ acts on $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ as follows:
-- $\mathfrak{su}(3)$ acts faithfully on $\mathbb{C}^3$ via the fundamental representation, trivially on $\mathbb{C}^2 \oplus \mathbb{C}^1$.
-- $\mathfrak{su}(2)$ acts faithfully on $\mathbb{C}^2$ via the fundamental representation, trivially on $\mathbb{C}^3 \oplus \mathbb{C}^1$.
-- $\mathfrak{u}(1)_Y$ acts with eigenvalues determined by hypercharge assignments on each summand.
-
-For the combined action to be faithful, no nonzero element of $\mathfrak{g}$ can annihilate all of $\mathcal{B}$. Since each simple factor acts faithfully on its designated module, and $U(1)_Y$ distinguishes the summands via distinct hypercharge values (as fixed by anomaly cancellation in Step 7), the combined action is faithful. ∎
-
-**Corollary G.8.4c (Standard Model Gauge Algebra Uniqueness).**
-The gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ is the unique Lie algebra of dimension at most 12 acting faithfully on $\mathbb{C}^6$ that satisfies: (i) the Lagrangian capacity bound $n_G \leq 12$; (ii) coherence-compression saturation $n_G = 12$; (iii) chirality compatibility (complex representations); and (iv) anomaly-free chiral matter content.
-
-*Proof.* Theorem G.8.4b establishes that $(3,2,1)$ is the unique partition surviving all constraints. The module decomposition $\mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ forces the algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ as the unique 12-dimensional faithful, chirality-compatible, anomaly-free solution. ∎
+In particular, this algebra saturates the geometric bound of Theorem G.8.2e.
 
 **Corollary G.8.4c.1 (Exclusion of Simple Unification Groups).**
 *Grand unified theories based on simple gauge groups are excluded by the capacity bound:*
@@ -944,7 +835,7 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
          y_q+y_H+y_{u^c}=0,\qquad y_q-y_H+y_{d^c}=0,\qquad y_\ell-y_H+y_{e^c}=0,
           $$
 
-       **Theorem G.8.1 (Hypercharges fixed up to overall scale).** With one Higgs doublet $H$, impose Yukawa gauge invariance
+       **Theorem G.8.1a (Hypercharges fixed up to overall scale).** With one Higgs doublet $H$, impose Yukawa gauge invariance
        $$
        y_q+y_H+y_{u^c}=0,\qquad y_q-y_H+y_{d^c}=0,\qquad y_\ell-y_H+y_{e^c}=0,
        $$
@@ -1093,7 +984,7 @@ so $\mathcal{E}_N$ is strictly positive. Strict positivity implies primitivity a
 
 The connection between PCE optimization and the thermal structure of the fixed point requires analysis of entropy production.
 
-**Definition G.1.9.1 (Entropy Production Decomposition).** For a quantum dynamical semigroup generator $\mathcal{L}$ with faithful stationary state $\sigma$ (i.e., $\mathcal{L}^*(\sigma) = 0$ with $\sigma \succ 0$), the entropy production for the induced CPTP map $\Phi_t = e^{t\mathcal{L}}$ acting on state $\rho$ decomposes as [Spohn 1978]:
+**Definition G.1.9.2a (Entropy Production Decomposition).** For a quantum dynamical semigroup generator $\mathcal{L}$ with faithful stationary state $\sigma$ (i.e., $\mathcal{L}^*(\sigma) = 0$ with $\sigma \succ 0$), the entropy production for the induced CPTP map $\Phi_t = e^{t\mathcal{L}}$ acting on state $\rho$ decomposes as [Spohn 1978]:
 
 $$
 \Delta S_{tot}[\rho; \Phi_t] = -\Delta D(\rho \| \sigma) + \sigma_{irr}[\rho; \Phi_t]
@@ -1107,11 +998,9 @@ where:
 
 This decomposition is fundamental to the entropy unification program: the total entropy production $\Delta S_{tot}$ is the thermodynamic entropy (measurable as heat divided by temperature), while the relative entropy $D_{KL}$ is the information-theoretic entropy. The Spohn decomposition makes explicit that these are components of a single quantity.
 
-**Theorem G.1.9.2 (PCE Selection of Detailed Balance).** The Principle of Compression Efficiency (Definition 15) drives the ND-RID channel toward configurations satisfying $\sigma_{irr} = 0$.
+**Proposition G.1.9.2 (PCE preference for detailed-balance channels).** Suppose the ND-RID admissible class contains two channels with the same stationary state and the same predictive utility, and suppose the POP/PCE cost functional is monotone in the irreversible entropy production term $\sigma_{irr}$. Then PCE prefers the channel with smaller $\sigma_{irr}$; in particular, if a channel with $\sigma_{irr}=0$ is admissible, it is preferred over all channels with the same utility and larger irreversible entropy production.
 
-*Proof.* The term $\sigma_{irr}$ represents entropy production beyond the minimum required for fixed-point convergence. This constitutes pure thermodynamic waste—entropy generated without predictive benefit. Definition 15 mandates minimizing Signal Cost while maintaining predictive utility. Since $\sigma_{irr}$ contributes to Signal Cost (via the thermodynamic resource expenditure $k_B T \sigma_{irr}$) without improving Meaning Potential, PCE optimization selects for channels with $\sigma_{irr} \to 0$. 
-
-Consider two channels $\mathcal{E}_A$ and $\mathcal{E}_B$ with the same fixed point and predictive utility but $\sigma_{irr}^{(A)} < \sigma_{irr}^{(B)}$. Channel $\mathcal{E}_A$ achieves the same predictive outcome at lower cost, so PCE selects $\mathcal{E}_A$. In the limit of PCE optimization, $\sigma_{irr} \to 0$. QED
+*Proof.* Under the stated monotonicity hypothesis, two channels with identical predictive utility and stationary state are ordered entirely by their contribution to the irreversible cost term. Therefore the channel with smaller $\sigma_{irr}$ has lower POP/PCE cost. If an admissible channel with $\sigma_{irr}=0$ exists, it minimizes this contribution among that comparison class. QED
 
 **Theorem G.1.9.3 (Detailed Balance Characterization).** For a quantum dynamical semigroup with faithful stationary state $\sigma$, write the GKLS generator in its canonical Hamiltonian–dissipative decomposition
 $$
@@ -1130,11 +1019,11 @@ for all observables $A,B$, where $\langle A,B\rangle_\sigma:=\mathrm{tr}(A^\dagg
 
 *Proof.* The semigroup acts on the finite-dimensional operator algebra of the MPU active sector and the stationary state $\sigma$ is faithful by hypothesis, so the detailed-balance characterization theorems of Spohn [1978] and Fagnola & Umanità [2007] apply. The Hamiltonian part $\mathcal{L}_H$ is $\sigma$-skew-adjoint ($\mathcal{L}_H^{\dagger_\sigma}=-\mathcal{L}_H$) and generates unitary evolution that preserves relative entropy; it therefore contributes zero irreversible entropy production regardless of the detailed-balance condition. The irreversible entropy production is governed entirely by the dissipative part $\mathcal{L}_D$. For such semigroups, vanishing irreversible entropy production for all initial states and times is equivalent to the dissipative part being self-adjoint with respect to the $\sigma$-weighted inner product, i.e. $\mathcal{L}_D=\mathcal{L}_D^{\dagger_\sigma}$. This is exactly the stated detailed-balance condition. ∎
 
-**Corollary G.1.9.1 (PCE-Optimal ND-RID Satisfies Detailed Balance).** The PCE-optimal ND-RID channel $\mathcal{E}_N^*$ satisfies quantum detailed balance with respect to the PCE-Attractor state $\tau^*$.
+**Corollary G.1.9.3a (PCE-Optimal ND-RID Satisfies Detailed Balance).** The PCE-optimal ND-RID channel $\mathcal{E}_N^*$ satisfies quantum detailed balance with respect to the PCE-Attractor state $\tau^*$.
 
 ### G.1.9.4 The Gibbs Structure of PCE-Optimal Fixed Points
 
-**Definition G.1.9.2 (Modular Hamiltonian).** For any faithful density operator $\rho$ on a finite-dimensional Hilbert space $\mathcal{H}$, the modular Hamiltonian $K_\rho$ is the unique self-adjoint operator satisfying [Haag 1996]:
+**Definition G.1.9.4a (Modular Hamiltonian).** For any faithful density operator $\rho$ on a finite-dimensional Hilbert space $\mathcal{H}$, the modular Hamiltonian $K_\rho$ is the unique self-adjoint operator satisfying [Haag 1996]:
 
 $$
 \rho = \frac{e^{-K_\rho}}{Z}, \quad Z = \mathrm{tr}(e^{-K_\rho})
@@ -1249,7 +1138,7 @@ where $\delta Q$ is the energy flux through the horizon and $T_U$ is the Unruh t
 
 *Proof.* This follows from the Tomita-Takesaki theory of modular operators [Takesaki 1970; Haag 1996]. The modular Hamiltonian $K$ generates the modular automorphism group $\sigma_t$, and the entanglement first law is the linearization of the relative entropy formula $S(\rho \| \sigma) = \mathrm{tr}(\rho \ln \rho - \rho \ln \sigma)$ around the reference state [Blanco et al. 2013]. The specific form (G.1.9.17) uses the Bisognano-Wichmann identification of $K$ with the boost generator. This result is kinematic—it follows from quantum field theory on curved spacetime and does not assume the Einstein equations [Jacobson 2016; Casini, Huerta & Myers 2011]. QED
 
-**Corollary G.1.9.2 (Thermodynamic Consistency Fixes $\eta_{ent}$).** Requiring the local Clausius relation $\delta S = \delta Q/T$ to hold for all Rindler horizons uniquely determines the entanglement entropy coefficient (Theorem E.5):
+**Corollary G.1.9.7a (Thermodynamic Consistency Fixes $\eta_{ent}$).** Requiring the local Clausius relation $\delta S = \delta Q/T$ to hold for all Rindler horizons uniquely determines the entanglement entropy coefficient (Theorem E.5):
 
 $$
 \eta_{ent} = \frac{1}{4G}
@@ -1266,32 +1155,13 @@ $$
 
 ### G.1.9.7 The Unified Mechanism
 
-**Theorem G.1.9.8 (Unified Origin of Physical Probability).** In the Predictive Universe framework, probability measures across quantum, thermal, and gravitational contexts emerge from a common mechanism: ND-RID equilibration to Gibbs fixed points under PCE optimization.
-
-The unification is characterized by:
-
-1. **Common Dynamics:** All probability measures arise from equilibration under ND-RID channels satisfying quantum detailed balance (Corollary G.1.9.1).
-
-2. **Common Reference State:** The baseline fixed point is the PCE-Attractor $\tau^* = (I_a/a) \oplus 0_b$, derived from SPAP (Theorem G.1.9.4).
-
-3. **Common Thermodynamic Form:** All equilibrium states satisfy the KMS condition with respect to their modular Hamiltonians (Theorem G.1.9.5).
-
-4. **Constraint-Dependent Modular Hamiltonian:** The physical context determines $K^*$ via Equation (G.1.9.12), with:
-   - Quantum (reference): $K^* = -\ln \rho_{phys}$
-   - Thermal: $K^* = K^*_{PCE} + \beta H$
-   - Gravitational: $K^* = K^*_{PCE} + (2\pi/\kappa)K_{boost}$
-
-5. **Common Capacity Bound:** All distributions respect the channel capacity limit $C_{\max}(f_{RID}) < \ln d_0$ (Theorem E.2) imposed by ND-RID irreversibility.
-
-The Gibbs structure $\rho^* = Z^{-1}e^{-K^*}$ connects directly to the unified entropy framework (Thesis P.6.1). The von Neumann entropy $S(\rho^*) = \langle K^* \rangle + \ln Z$ is the domain-specific expression of the foundational SPAP entropy $\varepsilon = \ln 2$, scaled by the constraint geometry.
-
-*Proof.* The theorem synthesizes Theorems G.1.9.1–G.1.9.7. The derivation chain establishes:
-
+**Theorem G.1.9.8 (Unified Gibbs-form template for physical probability).** Within the finite-dimensional active sector, the probability assignments that appear in the Born-rule, thermal, and modular-equilibrium applications all take the Gibbs-form template
 $$
-\text{SPAP} \xrightarrow{\varepsilon \geq \ln 2} \text{Contractivity } f_{RID} < 1 \xrightarrow{\text{PCE}} \text{Detailed Balance} \xrightarrow{} \text{Gibbs Fixed Point}
+\rho = Z^{-1}e^{-K},
 $$
+with the modular Hamiltonian $K$ determined by the relevant constraint geometry.
 
-The constraint geometry $\mathcal{C}$ enters through the specific form of $K^*_{constraint}$, while the universal Gibbs structure $\rho^* = Z^{-1}e^{-K^*}$ is fixed by PCE optimization through the ND-RID channel. QED
+*Proof.* Sections G.1.1–G.1.8 identify measurement probabilities with expectation values computed from density operators. Theorems G.1.9.4 and G.1.9.5 show that the PCE-attractor state and its support-restricted equilibrium description are of Gibbs/KMS form. Theorem G.1.9.6 then records how additional physical constraints modify the modular Hamiltonian additively while preserving the same Gibbs-form template. Therefore the probability structures considered in these sections share a common Gibbs-form representation, with differences encoded in the constraint term entering $K$. QED
 
 ### G.1.9.8 The Conversion Factor: $\varepsilon = \ln 2$
 
@@ -1459,7 +1329,7 @@ where $\hat{\phi}_t$ is the stored prediction. The NOT operation defines a $\mat
 
 This involution is the logical foundation of the entire framework. The SPAP update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_t)$ operates on binary states $\phi \in \{0,1\}$, and NOT is the unique non-trivial involution on this set, generating the cyclic group $\mathbb{Z}_2 = \{e, \iota\}$ with $\iota \circ \iota = e$.
 
-**Lemma G.10.1 (Irreducibility of $\mathbb{Z}_2$).** The $\mathbb{Z}_2$ structure of the SPAP involution cannot be reduced to the trivial group.
+**Lemma G.10.1a (Irreducibility of $\mathbb{Z}_2$).** The $\mathbb{Z}_2$ structure of the SPAP involution cannot be reduced to the trivial group.
 
 *Proof.* Suppose the SPAP update could be implemented with $\iota = \text{id}$. Then $\phi_{t+1} = \hat{\phi}_t$, and the system would achieve perfect self-prediction, contradicting Theorem 10 (Deterministic SPAP). The diagonalization argument (Appendix A.1, Theorem A.1.1) establishes that any predictor $P_f$ applied to the diagonal system $S_{diag}$ with rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$ yields a contradiction: $\hat{\phi} = \text{NOT}(\hat{\phi})$. Therefore, the non-trivial involution $\iota \neq \text{id}$ is logically necessary for any system possessing Property R (Definition 10). ∎
 
@@ -1486,29 +1356,12 @@ This establishes the chain: $\text{SPAP} \xrightarrow{\mathbb{Z}_2} \varepsilon 
 
 ### G.10.2.1 The Active Kernel Dimension
 
-**Theorem G.10.2 (Unitary Realization of SPAP Involution).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the logical involution $\iota$ to be realized as a unitary operator on the active kernel $\mathcal{H}_a \cong \mathbb{C}^a$ with $a = 2$ (Theorem Z.1). The PCE-optimal realization satisfying $U_\iota^2 = I$ is:
+**Theorem G.10.2 (Unitary realization of the SPAP involution up to basis choice).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the logical involution $\iota$ to be realized as a nontrivial unitary involution on the active kernel $\mathcal{H}_a \cong \mathbb{C}^a$ with $a = 2$ (Theorem Z.1). Any such realization is unitarily equivalent to a Pauli involution. In a basis where the involution exchanges the two active basis states, one may write
 $$
-U_\iota = \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \tag{G.10.3}
+U_\iota = \sigma_x.
 $$
-up to unitary equivalence.
 
-*Proof.*
-
-**Step 1 (Active kernel dimension from PPI).** By Theorem Z.1, the irreducible Landauer cost $\varepsilon = \ln 2$ on the attractor branch (Definition 15a; Theorem 31 gives the lower bound) requires physical instantiation on a subsystem whose entropy capacity can accommodate the Landauer cost. The von Neumann entropy of a state on an $a$-dimensional space satisfies $S(\rho) \le \ln a$ [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible value:
-$$
-a = 2 \tag{G.10.4}
-$$
-This is the "Landauer Pointer"—the minimal 2-dimensional active kernel within the $d_0 = 8$ MPU Hilbert space on the minimal Appendix Z branch (Theorem Z.2; Theorem 23 gives $d_0\ge 8$).
-
-**Step 2 (Unitarity requirement).** PPI requires the logical operation to preserve the Hilbert space structure. The involution must therefore be realized as a unitary operator $U_\iota \in U(2)$ acting on $\mathcal{H}_a \cong \mathbb{C}^2$.
-
-**Step 3 (Involution constraint).** The logical requirement $\iota^2 = \text{id}$ translates to $U_\iota^2 = e^{i\theta} I$ for some phase $\theta$. In the SPAP context, the computational basis $\{|0\rangle, |1\rangle\}$ is physically defined by the state register encoding—these are not abstract mathematical states but correspond to distinguishable physical configurations of the prediction apparatus. The requirement that the NOT operation maps between these physically distinguished basis states, combined with $\iota^2 = \text{id}$ at the logical level, constrains $U_\iota^2 = I$ (rather than a general phase).
-
-**Step 4 (Non-triviality).** By Lemma G.10.1, $U_\iota \neq I$. Combined with $U_\iota^2 = I$, the operator must have eigenvalues $\{+1, -1\}$ with at least one of each.
-
-**Step 5 (PCE selection).** Among Hermitian unitaries with eigenvalues $\pm 1$ on $\mathbb{C}^2$, PCE (Definition 15) selects the operator that directly implements the swap $|0\rangle \leftrightarrow |1\rangle$ in the computational basis defined by the SPAP register. This is precisely $\sigma_x$, which achieves the logical NOT with minimal circuit complexity (single gate, depth 1).
-
-**Step 6 (Uniqueness up to basis choice).** Any Hermitian unitary with eigenvalues $\pm 1$ on $\mathbb{C}^2$ is unitarily equivalent to $\sigma_z = \text{diag}(1, -1)$, hence also to $\sigma_x = V\sigma_z V^\dagger$ where $V$ is the Hadamard gate. In the computational basis defined by the SPAP register, $\sigma_x$ is the canonical choice implementing NOT. The PCE-Attractor state $\tau^* = \frac{I_2}{2} \oplus 0_6$ (Equation G.1.9.3) provides the canonical basis in which $\sigma_x$ is the natural realization. ∎
+*Proof.* A unitary involution satisfies $U_\iota^\dagger U_\iota=I$ and $U_\iota^2=I$, so its spectrum lies in $\{+1,-1\}$. Nontriviality excludes $U_\iota=\pm I$, hence in dimension $2$ the operator is unitarily equivalent to $\mathrm{diag}(1,-1)$. Conjugating by the Hadamard matrix sends $\mathrm{diag}(1,-1)$ to $\sigma_x$, so every nontrivial unitary involution on $\mathbb{C}^2$ is unitarily equivalent to a Pauli involution, and $\sigma_x$ is a convenient representative after basis choice. QED
 
 ---
 
@@ -1599,31 +1452,14 @@ The spinor sign flip under $2\pi$ rotation is thus ultimately traceable to the l
 
 ## G.10.5 Lorentzian Extension to Spin(1,3)
 
-**Theorem G.10.5 (Emergence of Spin(1,3)).** The combination of the SU(2) structure on the active kernel (Theorem G.10.3) with the temporal direction required for prediction (Theorem O.3) extends to the spin group Spin(1,3), the double cover of the Lorentz group SO$^+(1,3)$.
-
-*Proof.*
-
-**Step 1 (Temporal direction from prediction).** By Theorem O.3 (The Arrow of Time), prediction requires a distinguished temporal direction: prediction precedes verification precedes update. This causal ordering defines the arrow of time (Appendix O) and establishes a temporal asymmetry that must be incorporated into the symmetry structure.
-
-**Step 2 (Lorentz algebra structure).** The proper orthochronous Lorentz group SO$^+(1,3)$ has Lie algebra $\mathfrak{so}(1,3)$ of dimension 6, spanned by three rotation generators $J_i$ and three boost generators $K_i$. The complexification satisfies [Weinberg 1995; Hall 2015]:
+**Theorem G.10.5 (Compatibility of the spinor sector with $Spin(1,3)$).** Once the emergent spacetime sector is identified with a Lorentzian $3+1$-dimensional geometry and the internal two-state spin sector is represented by $SU(2)$, the standard relativistic spinor completion is the double cover
 $$
-\mathfrak{so}(1,3)_{\mathbb{C}} \cong \mathfrak{sl}(2,\mathbb{C}) \oplus \mathfrak{sl}(2,\mathbb{C}) \tag{G.10.9}
+Spin(1,3)\cong SL(2,\mathbb{C}).
 $$
-where we use the isomorphism $\mathfrak{su}(2)_{\mathbb{C}} \cong \mathfrak{sl}(2,\mathbb{C})$. Defining $\vec{N}^\pm = \frac{1}{2}(\vec{J} \pm i\vec{K})$, these satisfy two independent $\mathfrak{su}(2)$ algebras: $[N_i^+, N_j^+] = i\epsilon_{ijk}N_k^+$, $[N_i^-, N_j^-] = i\epsilon_{ijk}N_k^-$, and $[N_i^+, N_j^-] = 0$. The real Lorentz algebra is recovered by taking the real form with $\vec{J} = \vec{N}^+ + \vec{N}^-$ (Hermitian) and $\vec{K} = -i(\vec{N}^+ - \vec{N}^-)$ (anti-Hermitian).
 
-**Step 3 (Universal cover).** The universal cover of the proper orthochronous Lorentz group SO$^+(1,3)$ is:
-$$
-\text{Spin}(1,3) \cong \text{SL}(2,\mathbb{C}) \tag{G.10.10}
-$$
-with the double cover projection $\pi: \text{SL}(2,\mathbb{C}) \to \text{SO}^+(1,3)$. The kernel $\ker(\pi) = \{I, -I\} \cong \mathbb{Z}_2$ coincides with the rotation case.
+*Proof.* Theorem G.10.4 establishes the compact spin representation $SU(2)\to SO(3)$ for the spatial sector. For a Lorentzian spacetime in $3+1$ dimensions, the connected Lorentz group is $SO^+(1,3)$, whose universal double cover is the Lie group $SL(2,\mathbb{C})\cong Spin(1,3)$. The compact subgroup of this cover is precisely $SU(2)$, so the two-state spin sector embeds in the standard relativistic spinor representation. Thus, under the Lorentzian spacetime identification, the spinor sector is compatible with the usual $Spin(1,3)$ structure. QED
 
-**Step 4 (Embedding of spatial structure).** The restriction of SL(2,$\mathbb{C}$) to unitary elements recovers SU(2):
-$$
-\text{SL}(2,\mathbb{C}) \cap U(2) = \text{SU}(2) \tag{G.10.11}
-$$
-This corresponds to the spatial rotation subgroup. The SPAP involution $\sigma_x \in \text{SU}(2) \subset \text{SL}(2,\mathbb{C})$ embeds naturally into the Lorentzian structure. ∎
-
-**Definition G.10.2 (Weyl Spinors).** A left-handed Weyl spinor is a field $\psi_L$ transforming under the $(\frac{1}{2}, 0)$ representation of SL(2,$\mathbb{C}$), corresponding to the fundamental representation of the first $\mathfrak{sl}(2,\mathbb{C})$ factor with the second acting trivially. A right-handed Weyl spinor $\psi_R$ transforms under $(0, \frac{1}{2})$. A Dirac spinor combines both: $\Psi = (\psi_L, \psi_R)^T$.
+**Definition G.10.5a (Weyl Spinors).** A left-handed Weyl spinor is a field $\psi_L$ transforming under the $(\frac{1}{2}, 0)$ representation of SL(2,$\mathbb{C}$), corresponding to the fundamental representation of the first $\mathfrak{sl}(2,\mathbb{C})$ factor with the second acting trivially. A right-handed Weyl spinor $\psi_R$ transforms under $(0, \frac{1}{2})$. A Dirac spinor combines both: $\Psi = (\psi_L, \psi_R)^T$.
 
 ---
 
@@ -1672,23 +1508,13 @@ Mass acquisition via the Higgs mechanism involves coupling to the electroweak sy
 
 ### G.10.7.1 Fermi-Dirac Statistics from Spinor Structure
 
-**Theorem G.10.7 (Pauli Exclusion from Spinor Structure).** Identical spinor fields obey Fermi-Dirac statistics with antisymmetric multi-particle wavefunctions:
+**Proposition G.10.7 (Fermionic exchange sign for spinor states).** In the spinor sector identified above, exchange of two identical single-particle spinor states is represented by the antisymmetric sign rule
 $$
-\Psi(x_1, x_2) = -\Psi(x_2, x_1) \tag{G.10.14}
+\psi(x_1,x_2) = -\psi(x_2,x_1),
 $$
+which is the finite-dimensional precursor of Fermi-Dirac statistics.
 
-*Proof.*
-
-**Step 1 (Exchange and rotation in configuration space).** Consider two identical particles in $\mathbb{R}^3$. The configuration space with coincident points removed is $(\mathbb{R}^3 \times \mathbb{R}^3 \setminus \Delta)/S_2$ where $\Delta$ is the diagonal and $S_2$ is the permutation group. For the relative coordinate $\vec{r} = \vec{x}_1 - \vec{x}_2$, the exchange $\vec{x}_1 \leftrightarrow \vec{x}_2$ corresponds to $\vec{r} \mapsto -\vec{r}$, which is homotopic to a $\pi$ rotation of particle 1 about particle 2 followed by a $\pi$ rotation of particle 2 about the center of mass. In the covering space, this corresponds to a $2\pi$ rotation acting on the internal degrees of freedom [Finkelstein & Rubinstein 1968; Berry & Robbins 1997].
-
-**Step 2 (Spinor phase under exchange).** By Corollary G.10.4.1, spinor fields acquire a phase factor of $(-1)$ under $2\pi$ rotation (Equation G.10.8). The spin-statistics connection follows from the requirement that the total wavefunction be single-valued on the physical configuration space.
-
-**Step 3 (Antisymmetry).** The wavefunction for two identical spinors therefore satisfies:
-$$
-\Psi(x_2, x_1) = (-1) \cdot \Psi(x_1, x_2) = -\Psi(x_1, x_2) \tag{G.10.15}
-$$
-
-**Step 4 (Exclusion principle).** Setting $x_1 = x_2$ in Equation (G.10.15) yields $\Psi(x, x) = -\Psi(x, x)$, which implies $\Psi(x, x) = 0$. Two identical spinors cannot occupy the same quantum state. ∎
+*Proof.* A $2\pi$ rotation acts as $-1$ on a spin-$1/2$ state, so the exchange path in the two-particle configuration space carries the usual spinorial sign. Imposing antisymmetry under exchange yields the Pauli-exclusion counting rule on multiparticle states. This establishes the fermionic exchange sign in the spinor sector. A full relativistic spin-statistics theorem would require the additional locality and spectrum assumptions of relativistic QFT and is not proved here. QED
 
 This result is consistent with the spin-statistics theorem of axiomatic quantum field theory [Streater & Wightman 1964; Pauli 1940], which is recovered in the emergent AQFT framework (Theorem F.2, Appendix F).
 

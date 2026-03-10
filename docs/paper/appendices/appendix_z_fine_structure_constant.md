@@ -985,9 +985,9 @@ $$\dim[\mathfrak{g}_{\mathrm{SM}}] = k = 12$$
 *Proof.* From independent derivations:
 
 **Derivation A (Gauge structure from Appendix G):**
-- Classification of simple Lie algebra dimensions excludes simple gauge algebras at the capacity-saturating value $n_G = 12$ (Theorem G.8.4a), and exhaustive partition analysis of reductive algebras then filters by capacity, chirality, and anomaly constraints (Theorem G.8.4b)
+- Classification of simple Lie algebra dimensions excludes simple gauge algebras at the capacity-saturating value $n_G = 12$ (Theorem G.8.4a), and exhaustive partition analysis of reductive algebras then filters by capacity, chirality, and the SM-type anomaly/hypercharge constraints of Theorem G.8.4b
 - Macroscopic coherence-compression saturation selects $n_G = 12$ when attainable (Section G.3; Corollary G.8.4c)
-- The unique solution satisfying all constraints is $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ with dimension 12
+- Under those hypotheses the surviving solution is $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ with dimension 12
 
 **Derivation B (Golay structure from Theorem Z.13):**
 - Block length $n = M = 24$ (Theorem Z.5)
@@ -1016,7 +1016,7 @@ $$\boxed{24 \longleftrightarrow 6_{\text{Lorentz}} + 12_{\text{Gauge}} + 6_{\tex
 
 **Step 1 (Lorentz).** From Theorem Z.11, $D = 4$. By Proposition Z.3, $\dim[\mathfrak{so}(3,1)] = 6$.
 
-**Step 2 (Gauge).** From Appendix G (Theorem G.8.4b, Corollary G.8.4c), exhaustive partition analysis and PCE uniquely select $\dim[\mathfrak{g}_{\mathrm{SM}}] = 12$.
+**Step 2 (Gauge).** From Appendix G (Theorem G.8.4b, Corollary G.8.4c), the capacity-saturating SM-type anomaly regime yields $\dim[\mathfrak{g}_{\mathrm{SM}}] = 12$.
 
 **Step 3 (Residual).** $R := M - 6 - 12 = 6$.
 
@@ -2029,7 +2029,7 @@ PCE potential $V_{PCE}$ has scalar Hessian at the minimum:
 
 $$H = \nabla^2 V_{PCE}|_{x_0} = \lambda I_{24}$$
 
-With the Bures variance fixed by capacity saturation (Lemma T.41.2), $\sigma_B^2 = 1/M = 1/24$:
+With the Bures variance fixed by the canonical unit-radius convention of Lemma T.41.2, $\sigma_B^2 = 1/M = 1/24$:
 
 $$\lambda = \frac{1}{16\sigma_B^2} = \frac{3}{2}$$
 

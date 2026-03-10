@@ -11,12 +11,12 @@ $$
 
 naturally attached to an MPU with Hilbert space $H_0 \cong \mathbb{C}^8$, the minimal dimension required for self-referential logic (Theorem 23). This derivation is a key component of the framework's ability to explain the Standard Model's structure from first principles.
 
-**Connection to Gauge Structure:** The perspective space $\Sigma_8$ and its associated topology emerge from the same fundamental structure as the Standard Model gauge group. As established in **Appendix G** (Proposition G.M1, verified by Theorem G.8.4b and Corollary G.8.4c; Section G.8.5), the MPU Hilbert space $H_0 \cong \mathbb{C}^8$ admits a thermodynamically optimal partition:
+**Connection to Gauge Structure:** The perspective space $\Sigma_8$ and its associated topology emerge from the same fundamental structure as the Standard Model gauge group. As established in **Appendix G** (Proposition G.M1 together with the capacity-saturating, SM-type anomaly analysis of Theorem G.8.4b and Corollary G.8.4c; Section G.8.5), the MPU Hilbert space $H_0 \cong \mathbb{C}^8$ admits a thermodynamically optimal partition:
 $$
 H_0 \cong H_{\mathrm{active}} \oplus H_{\mathrm{inert}} \cong \mathbb{C}^2 \oplus \mathbb{C}^6
 $$
 driven by the Landauer bound $\varepsilon \ge \ln 2$, saturated at the PCE-Attractor as $\varepsilon = \ln 2$, per predictive cycle. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which requires the abstract logical cost to manifest as an $a = e^\varepsilon = 2$ dimensional active kernel. The partition determines both:
-1. The **gauge structure:** $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ (from Proposition G.M1, verified by Theorem G.8.4b)
+1. The **gauge structure:** $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ in the conditional sense of Theorem G.8.4b
 2. The **perspective space:** $\Sigma_8 = U(8)/U(1)^8$ (complete flag manifold)
 
 The generation structure derived in this appendix thus shares a common origin with the gauge structure: both arise from the topology and symmetries of the fundamental MPU state space, as optimized by PCE. This provides a unified geometric foundation for the SM's horizontal (gauge) and vertical (generation) structures.
@@ -1238,10 +1238,10 @@ The framework does not yet fully determine:
 
 1. **Absolute Yukawa values:** Under $K$-invariance, the single Hessian eigenvalue $\alpha = 3/2$ is fixed (Corollary T.41.3); absolute values require the overall normalization scale and potential $K$-breaking effects
 2. **Specific vacuum locations:** Requires minimizing $V_q$ with explicit $E_8$ embedding
-3. **CP phase $\delta_{CP}$:** Derived in Section T.22 as $\delta = 66.7°$ from Berry holonomy
+3. **CP phase $\delta_{CP}$:** Obtained conditionally in Section T.22 as $\delta = 66.7^\circ$ from the Berry-holonomy model
 4. **Running to low energies:** Requires RG evolution (standard QFT)
 
-Item 3 has been resolved. Items 1-2 require explicit construction of the PCE potential $V_{PCE}$ on the attractor orbit.
+Item 3 is resolved within that Berry-holonomy model. Items 1-2 require explicit construction of the PCE potential $V_{PCE}$ on the attractor orbit.
 
 **Baryogenesis Complexity (Resolved in Appendix Y).** The baryon asymmetry $\eta_B \approx 6 \times 10^{-10}$ is derived from the anomaly-holonomy coupling mechanism where Berry holonomy on $\text{Gr}(2,8)$ generates an effective $\theta$-angle for electroweak sphalerons. The baryogenesis complexity is:
 
