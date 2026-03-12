@@ -776,7 +776,7 @@ $$
 
 *Proof.* From Theorem Z.5, the interface mode count is $M = 2ab = 24$. The rate-$\frac{1}{2}$ Golay code $[24, 12, 8]$ partitions these into $k = 12$ signal and $n - k = 12$ parity modes (Theorem Z.13). From Theorem G.8.2e, the Lagrangian capacity bound is $n_G^{max} = k = 12$. The Standard Model gauge algebra saturates this bound: $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12$ (Theorem G.8.4b). The complex Grassmannian dimension is $\dim_{\mathbb{C}}(\text{Gr}(a, d_0)) = a(d_0 - a) = 2 \times 6 = 12$ (Theorem Z.6.3a). ∎
 
-**Corollary G.8.4f.1 (Gauge-Code Correspondence).** *The rate-$\frac{1}{2}$ Golay code structure determines the gauge sector dimension: the 12 signal modes correspond to 12 gauge generators, while the 12 parity modes provide error-correcting redundancy. This correspondence reflects the optimal balance between information capacity and error protection at the PCE-Attractor.*
+**Corollary G.8.4f.1 (Gauge-Code Correspondence).** *The rate-$\frac{1}{2}$ Golay code structure fixes the same 12+12 organizational split that reappears in the gauge sector: the Standard Model algebra saturates the 12-generator capacity bound, while the complementary 12-dimensional half of the rate-$\frac{1}{2}$ partition carries the constrained dynamical content. The correspondence is structural; it does not require a unique identification of “signal” versus “parity” with gauge versus matter.*
 
 **Theorem G.8.4g (Classical Code-Gauge Structural Analogy).** *The gauge structure of the Standard Model exhibits a structural analogy to classical error-correcting code organization.*
 
@@ -785,19 +785,12 @@ $$
 | Classical Code Structure | Gauge Theory Structure |
 |:-------------------------|:-----------------------|
 | Block length: $n = 24$ | Interface modes: $M = 24$ |
-| Message dimension: $k = 12$ | Dynamical degrees of freedom |
-| Parity dimension: $n - k = 12$ | Gauge generators: $n_G = 12$ |
+| Rate-$\frac{1}{2}$ split: $k = n-k = 12$ | Capacity-saturating 12+12 organization |
 | Codewords | Gauge-invariant configurations |
 | Syndrome space | Gauge-variant quantities |
 | Minimum distance: $d = 8$ | Robustness scale |
 
-*Proof.* The extended binary Golay code $[24, 12, 8]$ is self-dual: $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$. The rate-$\frac{1}{2}$ structure partitions the 24-dimensional space into:
-- 12 signal dimensions (message space)
-- 12 parity dimensions (redundancy for error detection/correction)
-
-For the Standard Model gauge algebra: $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12 = n - k$.
-
-The correspondence identifies organizational structure: 12-dimensional redundancy (parity/gauge) protecting or constraining 12-dimensional content (message/matter). This is a structural parallel at the level of dimensionality, not an algebraic isomorphism. ∎
+*Proof.* The extended binary Golay code $[24, 12, 8]$ is self-dual: $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$. The rate-$\frac{1}{2}$ structure partitions the 24-dimensional space into two 12-dimensional halves. For the Standard Model gauge algebra, $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12$, saturating the Lagrangian capacity bound of Theorem G.8.2e. The correspondence identifies the same 24-mode organization and its 12+12 split: one 12-dimensional sector is realized as the gauge-generator budget, while the complementary 12-dimensional sector carries the constrained dynamical content. This is a structural parallel at the level of dimensionality and organization, not an algebraic isomorphism and not a unique identification of message versus parity with gauge versus matter. ∎
 
 **Remark G.8.4g.1: Clarification on CSS Quantum Codes.** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ has parameters $[[24, 0, 8]]$ with zero logical qubits, since $k_{\text{quantum}} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The quantum Singleton bound $n - k \geq 2(d-1)$ requires $k \leq 10$ for $[[24, k, 8]]$, confirming that $[[24, 12, 8]]$ is impossible. The analogy presented here concerns the **classical** code structure, not CSS quantum parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ partition ($k = n - k = 12$) and the gauge/matter sector organization.
 

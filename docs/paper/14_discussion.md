@@ -33,7 +33,7 @@ The PU framework carries significant implications, offering a perspective potent
 
 *   **Process Ontology & Relational Reality:** Suggests reality is the ongoing process of prediction, verification, and update by interacting MPUs (Definition 4, Definition 23, Definition 27). Existence lies in maintaining this cycle. Interactions are inherently relational attempts to bridge predictive models under POP (Axiom 1) and ND-RID (Definition 6) constraints. Quantum randomness (Hypothesis 2) is grounded in the Logical Indeterminacy (Definition 12) of these reflexive, relational dynamics. Furthermore, the inherent sequentiality of the MPU's P-V-U cycle (Definition 4) establishes a local, logical direction of processing, which, when combined with the ubiquitous irreversible thermodynamic cost $\varepsilon \ge \ln 2$ (Theorem 31, rigorously derived in Appendix J) incurred during the 'Evolve' step, gives rise to the macroscopic, consistently directed arrow of time (Appendix O, Theorem O.3).
 
-*   **Energy as Predictive Cost:** Energy is framed as the resource bill for prediction. Baseline work ($\hat H_{v}$), complexity upkeep ($\langle\hat R\rangle, \langle\hat R_I\rangle$), interaction ($\hat V_{vv'}$), and the physical manifestation of the irreversible update cost ($\varepsilon\ge\ln2$) contribute to the MPU Stress-Energy Tensor $T_{\mu\nu}^{(\text{MPU})}$ (Appendix B, Definition B.8). Because prediction requires resources scaling with target complexity and incurs irreversible costs, the energy needed reflects predictive effort. Gravity couples to this predictive work via $T_{\mu\nu}^{(\text{MPU})}$. While the direct contribution of computational complexity costs ($\langle\hat R\rangle, \langle\hat R_I\rangle$) to curvature is typically negligible compared to standard mass-energy, it plays a crucial role in the self-limitation of CC (Appendix S), where gravitational self-dephasing (Theorem S.1) and the Schwarzschild interpretation of the causality bound (Theorem S.2) establish fundamental limits on CC efficacy. Perfect foresight is impossible (Theorem 10, Theorem 11), and maintaining accuracy arbitrarily close to the SPAP boundary requires verification/update resources that obey the lower bound of Theorem 14.
+*   **Energy as Predictive Cost:** Energy is framed as the resource bill for prediction. Baseline work ($\hat H_{v}$), complexity upkeep ($\langle\hat R\rangle, \langle\hat R_I\rangle$), interaction ($\hat V_{vv'}$), and the physical manifestation of the irreversible update cost ($\varepsilon\ge\ln2$) contribute to the MPU Stress-Energy Tensor $T_{\mu\nu}^{(\text{MPU})}$ (Appendix B, Definition B.8). Because prediction requires resources scaling with target complexity and incurs irreversible costs, the energy needed reflects predictive effort. Gravity couples to this predictive work via $T_{\mu\nu}^{(\text{MPU})}$. While the direct contribution of computational complexity costs ($\langle\hat R\rangle, \langle\hat R_I\rangle$) to curvature is typically negligible compared to standard mass-energy, it plays a crucial role in the self-limitation of CC (Appendix S), where gravitational self-dephasing (Theorem S.1) and the Schwarzschild interpretation of the causality bound (Theorem S.2) establish fundamental limits on CC efficacy. Perfect foresight is impossible (Theorem 10, Theorem 11), and maintaining accuracy arbitrarily close to the SPAP boundary requires verification/update resources that obey the lower bound of Theorem 14. This cost structure is observer-relative: a more complex system can model a less complex system's perspectival response externally at SPAP-flat sender cost, while the less complex receiver may still pay a large reflexive processing cost internally; thermodynamically faithful replay does not erase this asymmetry, because replay must reproduce the receiver-side burden up to nonnegative overhead.
   
 *   **Causality from Unified Predictive Limits (Operational Speed & Processing Cost):** The robustness of causality in the PU framework emerges not from fundamentally separate mechanisms, but from two interconnected facets of the same underlying principle: the optimized limits of physical prediction. The Principle of Compression Efficiency (PCE, Definition 15), acting on MPUs under fundamental constraints (logical limits like SPAP via $K_0$; operational limits like finite cycle time $\tau_{min}$ and interaction cost $\varepsilon$), dynamically shapes the network's capabilities in ways that prevent paradoxes (Postulate 2).
 
@@ -974,7 +974,54 @@ In the continuum effective description (Appendix X), the same equivalence relati
 
 3. **Structural correspondence:** In the capacity-saturating regime of Theorem G.8.4b, the *dimension* of the gauge algebra $\mathfrak{g}_{\mathrm{SM}}$ (12 generators) matches the Lagrangian capacity bound from the symplectic structure on the interface (Theorem G.8.2e). This is a structural/dimensional correspondence, not a literal isomorphism between a finite stabilizer group and a continuous gauge group.
 
-This status is made precise in Appendix G.8.4g: the classical Golay code provides a *structural analogy* for the gauge organization, with the code's $k = 12$ signal dimensions corresponding to the $\dim(\mathfrak{g}_{SM}) = 12$ gauge generators in the same capacity-saturating regime, and the $n - k = 12$ parity dimensions providing constraint structure that matches the Lagrangian capacity bound (Theorem G.8.2e).
+This status is made precise in Appendix G.8.4g: the classical Golay code provides a *structural analogy* for the gauge organization, with the rate-$\frac{1}{2}$ partition $k = n-k = 12$ matching the same 12+12 organizational split that reappears in the capacity-saturating regime, while the 12-generator gauge budget itself is fixed by Theorem G.8.2e. The point is the structure of the 24-mode organization, not a literal identification of classical message/parity degrees of freedom with a continuous gauge group.
+
+## 14.6 Scope of the Core Derivations
+
+The manuscript is strongest when its outputs are sorted by logical level. Some results are fixed inside the discrete predictive scaffold. Some are conditional consequences of explicit bridge assumptions already stated in the paper. Others are quantitative model layers built on top of the fixed backbone. Making that separation explicit sharpens the derivation rather than weakening it.
+
+### 14.6.1 What is fixed by the core chain
+
+Within the formal model, the SPAP/Landauer chain fixes $K_0 = 3$, selects the minimal saturating $d_0 = 8$, fixes $\varepsilon = \ln 2$ at the attractor, and yields $a = 2$, $b = 6$, and $M = 24$. Proposition T.59 isolates this backbone from the later quantitative hierarchy layer.
+
+Within the Appendix Z mode-channel correspondence model, $M = 24$ then selects $D = 4$ (Theorem Z.11). Within Appendix G.8, once chirality, anomaly cancellation, and the capacity-saturating regime are imposed, Theorem G.8.4b and Corollary G.8.4c fix the faithful decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ and the abstract gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$. Appendix R gives the three-generation route at proposition level under its stated anomaly, CP-violation, and MDL-surrogate assumptions. Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26, i.e. through the displayed third-order formula with explicit $+O(u^{*5})$ remainder.
+
+### 14.6.2 What is conditional, convention-carried, or model-level
+
+Sections 11 and 12 are explicitly conditional on the regularity and convergence hypotheses recorded in Appendices C and D. Section 11.4 additionally assumes a non-collapsed synthetic-Ricci regularity regime for the rescaled spaces. Appendix F adds a separate AQFT layer with its own bounded-degree/short-range, uniform Lieb-Robinson, controlled coarse-graining, compatible-embedding, and lightcone-identification hypotheses through Theorem F.0. The Einstein-equation step of Section 12 also uses local thermodynamic equilibrium through Postulate 4. Theorem 43 is therefore best read as the manuscript's formal regularity theorem; the later manifold, AQFT, and gravity conclusions invoke the additional bridge assumptions explicitly where they are needed.
+
+The cosmological-constant sector has a similarly clean split. Appendix U fixes the reference exponent $\kappa_{\mathrm{ref}} = 141.5$ under the stated leading-order reference-counting convention of Theorem U.15 and Theorem U.16. The order-one prefactor $A_{\mathrm{eff}}$ is explicitly defined, but the Appendix U working value $A_{\mathrm{eff}} = 0.923 \pm 0.011$ used for forward evaluation is tied to the transferred-determinant convention recorded in Corollary U.15b. The stable statement is therefore the exponential scale together with the stated prefactor convention.
+
+Appendix T likewise sits on top of the fixed backbone. Proposition T.59 closes the core counting chain, while later quantitative hierarchy results use the threshold data, prefactors, running, and matching prescriptions introduced in those sections.
+
+### 14.6.3 Continuum-closure status boundary
+
+Appendix C.7 makes the present status boundary explicit. Appendix C proves that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages this as conditional coarse-grained doubling and local $(1,2)$-Poincaré control under its stated hypotheses. What Appendix C does not by itself provide is the non-collapsed synthetic-Ricci regime used in Section 11.4, the AQFT convergence hypotheses of Theorem F.0, or the local-thermodynamic-equilibrium input used in Section 12. For nearby mathematical literature on graph Poincaré inequalities and split-type properties in lattice systems, see [Levi et al. 2023; Matsui 2013; Naaijkens & Ogata 2022].
+
+### 14.6.4 Thomson limit versus matching-scale gauge data
+
+Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-limit statement in terms of the Appendix Z bulk, interface, curvature, holonomy, and $SU(2)$ geodesic-chord data. The lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)$ of Appendix T belongs to PU-to-SM gauge matching at the scale $\mu_G$ and to the later RG flow to $M_Z$; it does not enter the Thomson-limit formula itself.
+
+### 14.6.5 Consolidated status
+
+| Sector | Best current status |
+|:-------|:--------------------|
+| SPAP/Landauer backbone $K_0 \to d_0 \to \varepsilon \to a \to b \to M$ | Theorem-level within the formal model |
+| $D = 4$ | Theorem-level within the Appendix Z mode-channel correspondence model |
+| $N_g = 3$ | Proposition-level in Appendix R within its stated anomaly, CP-violation, and MDL-surrogate assumptions |
+| Abstract gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ | Theorem-level under chirality, anomaly cancellation, and the Appendix G.8 capacity regime |
+| Thomson-limit $\alpha$ | Theorem-level through Theorem Z.26, with displayed third-order formula and explicit $+O(u^{*5})$ remainder |
+| Continuum manifold / Lorentzian geometry | Conditional on Theorem 43 and the non-collapsed synthetic-Ricci regime stated in Section 11.4 |
+| AQFT route | Conditional on Theorem 43 together with the additional hypotheses of Theorem F.0 |
+| Einstein route / field equations | Conditional on Theorem 43, Theorem 49, and Postulate 4 |
+| Appendix T matching-scale observables | Conditional on threshold data, running, matching, and the quantitative constructions introduced there |
+| Appendix U reference exponent $\kappa_{\mathrm{ref}}$ | Fixed under the Appendix U reference-counting convention |
+| Appendix U working numerical prefactor $A_{\mathrm{eff}}$ | Working forward-evaluation convention of Corollary U.15b |
+| CC influence, detailed flavor numerics, and baryogenesis numerics | Model layer |
+
+### 14.6.6 Final scope statement
+
+Read in this way, the manuscript already has a clear and economical architecture: a compact discrete backbone, a conditional continuum/AQFT/gravity bridge whose remaining load is explicitly visible, and a set of quantitative model layers for later phenomenology. This does not shrink the achievement of the paper. It identifies exactly where the derivation is already strongest and where further closure still depends on stated assumptions, conventions, or downstream modeling.
 
 
 

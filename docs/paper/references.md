@@ -387,6 +387,7 @@
 *   Marklof, J., & Strömbergsson, A. (2017). The three gap theorem and the space of lattices. *The American Mathematical Monthly*, 124(8), 741–745.
 *   Marshall, A. W., Olkin, I., & Arnold, B. C. (2011). *Inequalities: Theory of Majorization and Its Applications* (2nd ed.). Springer. DOI: 10.1007/978-0-387-68276-1
 *   Martin, P. C., & Schwinger, J. (1959). Theory of many-particle systems. I. *Physical Review*, *115*(6), 1342–1373. DOI: 10.1103/PhysRev.115.1342
+*   Matsui, T. (2013). Boundedness of entanglement entropy and split property of quantum spin chains. *Reviews in Mathematical Physics*, *25*(9), 1350017. DOI: 10.1142/S0129055X13500177
 *   Matsumoto, K. (2002). A new approach to the Cramér-Rao-type bound of the pure-state model. *Journal of Physics A: Mathematical and General*, *35*(13), 3111–3123. DOI: 10.1088/0305-4470/35/13/307
 *   Mattingly, D. (2005). Modern Tests of Lorentz Invariance. *Living Reviews in Relativity*, *8*, 5. DOI: 10.12942/lrr-2005-5
 *   McGaugh, S. S. (2012). The Baryonic Tully-Fisher Relation of Gas-Rich Galaxies as a Test of ΛCDM and MOND. *The Astronomical Journal*, *143*(2), 40. DOI: 10.1088/0004-6256/143/2/40
@@ -402,6 +403,7 @@
 *   Mosonyi, M., & Ogawa, T. (2017). Quantum hypothesis testing and the operational interpretation of the quantum Rényi relative entropies. *Communications in Mathematical Physics*, *355*, 373–426. DOI: 10.1007/s00220-017-2960-6
 *   Mukhanov, V. (2005). *Physical Foundations of Cosmology*. Cambridge University Press.
 *   Musin, O. R. (2008). The kissing number in four dimensions. *Annals of Mathematics*, *168*(1), 1–32. DOI: 10.4007/annals.2008.168.1
+*   Naaijkens, P., & Ogata, Y. (2022). The split and approximate split property in 2D systems: Stability and absence of superselection sectors. *Communications in Mathematical Physics*, *392*(3), 921–950. DOI: 10.1007/s00220-022-04356-3
 *   Nachtergaele, B., & Sims, R. (2010). Lieb–Robinson bounds in quantum many-body physics. In R. Sims & D. Ueltschi (Eds.), *Entropy and the Quantum* (*Contemporary Mathematics*, Vol. 529, pp. 141–176). American Mathematical Society. DOI: 10.1090/conm/529
 *   Nagel, T. (1974). What Is It Like to Be a Bat? *The Philosophical Review*, *83*(4), 435–450.
 *   Nakahara, M. (2003). *Geometry, Topology and Physics* (2nd ed.). CRC Press.

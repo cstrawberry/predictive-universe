@@ -2130,6 +2130,8 @@ Agreement: $|127.93 - 127.952|/127.952 \approx 1.7 \times 10^{-4}$, within the $
 
 The interface correction modifies the starting point (Thomson limit), while QED running describes evolution from that starting point.
 
+The lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)$ introduced in Appendix T serves a different role: it matches the common PU gauge normalization to the factor-dependent $SU(3)$, $SU(2)$, and $U(1)$ sectors at the PU-to-SM matching scale $\mu_G$, with later RG flow to $M_Z$. It does not enter the Thomson-limit theorem of Appendix Z. Theorem Z.26 therefore stands as a Thomson-limit result, through its displayed third-order formula and explicit $+O(u^{*5})$ remainder, independently of the later Appendix T matching problem.
+
 ---
 
 ## Z.27 Higher-Order Corrections
@@ -2480,7 +2482,7 @@ $$\text{Third-order (SU(2) sinc): } \Delta^{(2+3)} = \Delta^{(2)}\left(1 - \frac
 
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) \approx 137.036092 \pm 0.000060}$$
 
-The boxed Thomson-limit formula is the result of Theorems Z.24–Z.26. No continuous parameter is fitted anywhere in this chain.
+The boxed Thomson-limit formula is the result of Theorems Z.24–Z.26 and is stated through third order with explicit remainder $+O(u^{*5})$. It is a Thomson-limit result. The lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)$ used later in Appendix T for PU-to-SM matching at $\mu_G$ and subsequent RG flow to $M_Z$ does not enter this derivation. No continuous parameter is fitted anywhere in this chain.
 
 ---
 

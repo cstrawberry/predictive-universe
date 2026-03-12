@@ -462,6 +462,6 @@ with $c_{1,2}$ controlled by the degree of non‑saturation (entropy deficit) an
 * (D) **Hypercharge structure** compactly fixed by anomaly + Yukawa relations (Theorem W.14; Corollary W.15).
 * (E) **Deterministic pipeline** from axioms/invariants to numbers (W.6).
 * (F) **Transparent variance dependence** via $F_\lambda$ (W.2.4), quantifying robustness.
-* (G) **Predictive Power:** As shown in **Appendix Z**, this formalism, when combined with the framework's fundamental constants, enables a complete calculation of the fine-structure constant with zero continuously adjustable parameters.
+* (G) **Predictive Power:** As shown in **Appendix Z**, this formalism, when combined with the framework's fundamental constants, yields the Thomson-limit fine-structure calculation through the displayed third-order formula of Theorems Z.24–Z.26. This fixes the low-energy boundary condition in the sense used there. The lifted threshold tuple of Appendix T belongs to the separate PU-to-SM matching problem at $\mu_G$ and later RG flow to $M_Z$, not the Thomson-limit formula itself. No continuously adjustable fit parameter enters the displayed Appendix Z Thomson-limit expression once its stated inputs are fixed.
 
 
