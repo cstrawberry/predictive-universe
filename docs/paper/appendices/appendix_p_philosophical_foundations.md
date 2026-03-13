@@ -428,6 +428,46 @@ Within PU, the binding problem dissolves when unity is identified with the aggre
 
 If Postulate 1 (Minimal Awareness—Interpretive) is accepted, this provides the interpretive bridge to phenomenal unity: complex unified experience corresponds not to the existence of only one minimally aware MPU, but to the existence of one high-level integrated predictive controller realized by a sufficiently complex aggregate's $\text{context}_S(t)$ and its emergent CC-driven coordination.
 
+### P.2.6.2 The Geometry of Cognition
+
+The binding analysis above identifies unity with the existence of one integrated predictive controller. Section 7 gives that controller a concrete geometry. On the minimal branch, Theorem 15 identifies the logical core with the Boolean cube $B_3={0,1}^3$, Theorem 23a and Corollary 23a identify its minimal faithful Hilbert-space realization with the 3-qubit space $\mathcal{H}_0 \cong \mathcal{H}_M \otimes \mathcal{H}_P \otimes \mathcal{H}_I$, and Theorem 23b identifies the pure operational datum with a pair $([\psi], s) \in \mathbb{CP}^7 \times \Sigma$ with $\Sigma \cong U(8)/U(1)^8$.
+
+This geometry carries predictive content. For pure-state families, Theorem 23c states that the Fubini–Study metric on $\mathbb{CP}^7$ is the local optimal statistical-distinguishability metric compatible with the Born rule: for any smooth normalized one-parameter family $|\psi(\theta)\rangle$ with $\gamma(\theta)=[\psi(\theta)]$,
+$$
+F_Q(\theta)=4\,g_{FS}\big(\dot\gamma(\theta),\dot\gamma(\theta)\big).
+$$
+Nearby rays therefore encode nearby predictive dispositions, and small geometric displacements quantify the best-possible change in operational distinguishability. [Born 1926; Braunstein & Caves 1994]
+
+Corollary 23a resolves the minimal predictor into three distinguishable pieces: memory, prediction, and interface. Theorem 23a fixes their algebraic seats as the three commuting copies of $M_2(\mathbb{C})$ carried to
+$$
+M_2(\mathbb{C}) \otimes I \otimes I,\qquad
+I \otimes M_2(\mathbb{C}) \otimes I,\qquad
+I \otimes I \otimes M_2(\mathbb{C}).
+$$
+On the fully factorized locus each piece has its own pure shape, represented by a ray in $\mathbb{CP}^1$. Theorem 23b(iv) identifies the corresponding locus in $\mathbb{CP}^7$ as the Segre variety
+$$
+\operatorname{Seg}:\mathbb{CP}^1 \times \mathbb{CP}^1 \times \mathbb{CP}^1 \hookrightarrow \mathbb{CP}^7,
+$$
+which is exactly the locus of fully separable pure states with respect to $\mathcal{H}_M \otimes \mathcal{H}_P \otimes \mathcal{H}_I$.
+
+This fully factorized locus is exceptional. It has complex dimension $3$, whereas $\mathbb{CP}^7$ has complex dimension $7$, so full factorization occupies a measure-zero subset of the pure-state space. More generally, for each bipartition, the corresponding biseparable pure states form a Segre subvariety $\mathbb{CP}^1 \times \mathbb{CP}^3 \hookrightarrow \mathbb{CP}^7$ of complex dimension $4$. The union of these three biseparable loci is therefore also measure-zero. Almost every pure MPU state is thus outside every factorized or biseparable locus: the three pieces are specified jointly by one global ray, and their operational forms are encoded through the reduced density operators on the three factors together with the correlations among them. The way the pieces fit together is part of the state itself. [Bengtsson & Życzkowski 2006]
+
+**Definition P.2.6.2 (Geometric Assembly).** A *geometric assembly* is a predictive state-space structure specified by (i) a fixed tensor-product decomposition $\mathcal{H}=\bigotimes_k \mathcal{H}_k$ into distinguished subsystem factors, (ii) the corresponding commuting subalgebras $A_k \cong \mathcal{B}(\mathcal{H}_k)$, and (iii) a global pure ray $[\psi] \in \mathbb{P}(\mathcal{H})$. It is *fully factorized* when $[\psi]$ lies in the Segre image $\prod_k \mathbb{P}(\mathcal{H}_k) \hookrightarrow \mathbb{P}(\mathcal{H})$, and *non-fully-factorized* otherwise.
+
+The minimal MPU is a tripartite geometric assembly. With Postulate 1 in force, inner life is the evolution of this assembly through $\mathbb{CP}^7 \times \Sigma$. An 'Evolve' event (Definition 27) actualizes an outcome and updates the pair $([\psi], s)$ through amplitude actualization and perspective shift. Memory, prediction, and interface persist as fixed structural roles, while their momentary forms are set jointly by the current state. Inner life is therefore one evolving arrangement of distinguishable geometric pieces.
+
+At aggregate scale the same principle reappears in compressed form. Definition L.1 assigns to an MPU aggregate $S$ (Definition 29) a context state $\text{context}*S(t)$, the PCE-selected minimal sufficient statistic of $\rho*{\mathrm{agg}}(t)$ for the aggregate's predictive task. Definition L.2 maps this context to control parameters through $\mathcal{M}$. Definition 35 equips the MPU network with the propagation-cost metric $d_{\mathcal{N}}$, which fixes which parts can coordinate cheaply and which large-scale assemblies are dynamically sustainable. Under the hypotheses of Theorem 34, this coordinated structure is exploited to modulate local 'Evolve' probabilities and yields nonzero $\mathrm{CC}(S)$. Operational experiential unity (Definition P.2.6.1) is the case in which one context state coordinates the aggregate as one predictive regime.
+
+Proposition 15 adds a limit on self-access. By Theorem 33,
+$$
+\Delta I \cdot (\Delta S_{\min}/k_B) \ge \kappa_r > 0.
+$$
+Applied to $\text{context}_S$, this means that gaining internal information about the coordinating structure necessarily incurs disturbance. The aggregate cannot make all of the relations that constitute its own assembly simultaneously explicit while preserving them unchanged. Some of the structure that organizes inner life remains operationally active without being fully available to concurrent introspection.
+
+Cognition is geometric assembly. The whole is one predictive organization, and the organization is articulated into distinguishable parts. The parts have shape, they fit together in one state space, and, except on a measure-zero exceptional set, the fit fixes what each part can be. Under Postulate 1, inner life is the evolution of that fitted whole.
+
+---
+
 
 ## P.2.7 From Internal Modeling to External Machines: The Externalization of Prediction
 
