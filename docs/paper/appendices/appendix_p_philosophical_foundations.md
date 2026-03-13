@@ -456,7 +456,7 @@ This fully factorized locus is exceptional. It has complex dimension $3$, wherea
 
 The minimal MPU is a tripartite geometric assembly. With Postulate 1 in force, inner life is the evolution of this assembly through $\mathbb{CP}^7 \times \Sigma$. An 'Evolve' event (Definition 27) actualizes an outcome and updates the pair $([\psi], s)$ through amplitude actualization and perspective shift. Memory, prediction, and interface persist as fixed structural roles, while their momentary forms are set jointly by the current state. Inner life is therefore one evolving arrangement of distinguishable geometric pieces.
 
-At aggregate scale the same principle reappears in compressed form. Definition L.1 assigns to an MPU aggregate $S$ (Definition 29) a context state $\text{context}*S(t)$, the PCE-selected minimal sufficient statistic of $\rho*{\mathrm{agg}}(t)$ for the aggregate's predictive task. Definition L.2 maps this context to control parameters through $\mathcal{M}$. Definition 35 equips the MPU network with the propagation-cost metric $d_{\mathcal{N}}$, which fixes which parts can coordinate cheaply and which large-scale assemblies are dynamically sustainable. Under the hypotheses of Theorem 34, this coordinated structure is exploited to modulate local 'Evolve' probabilities and yields nonzero $\mathrm{CC}(S)$. Operational experiential unity (Definition P.2.6.1) is the case in which one context state coordinates the aggregate as one predictive regime.
+At aggregate scale the same principle reappears in compressed form. Definition L.1 assigns to an MPU aggregate $S$ (Definition 29) a context state $\text{context}_S(t)$, the PCE-selected minimal sufficient statistic of $\rho_{\mathrm{agg}}(t)$ for the aggregate's predictive task. Definition L.2 maps this context to control parameters through $\mathcal{M}$. Definition 35 equips the MPU network with the propagation-cost metric $d_{\mathcal{N}}$, which fixes which parts can coordinate cheaply and which large-scale assemblies are dynamically sustainable. Under the hypotheses of Theorem 34, this coordinated structure is exploited to modulate local 'Evolve' probabilities and yields nonzero $\mathrm{CC}(S)$. Operational experiential unity (Definition P.2.6.1) is the case in which one context state coordinates the aggregate as one predictive regime.
 
 Proposition 15 adds a limit on self-access. By Theorem 33,
 $$
@@ -465,6 +465,84 @@ $$
 Applied to $\text{context}_S$, this means that gaining internal information about the coordinating structure necessarily incurs disturbance. The aggregate cannot make all of the relations that constitute its own assembly simultaneously explicit while preserving them unchanged. Some of the structure that organizes inner life remains operationally active without being fully available to concurrent introspection.
 
 Cognition is geometric assembly. The whole is one predictive organization, and the organization is articulated into distinguishable parts. The parts have shape, they fit together in one state space, and, except on a measure-zero exceptional set, the fit fixes what each part can be. Under Postulate 1, inner life is the evolution of that fitted whole.
+
+### P.2.6.3 Knowledge, Geometry, and the Sequential Bottleneck
+
+The preceding section established that cognition is geometric assembly: a predictive state-space structure whose parts have shape, fit together in one state space, and are generically mutually determined. This section draws out three consequences—for the form of knowledge, for the nature of comprehension and intuition, and for the structural pressures governing communication between predictive systems.
+
+#### Why Prediction Selects Geometry
+
+The geometric character of the minimal MPU state space is not an additional ornament on the formalism. On the minimal branch, the operational pure-state datum is $([\psi],s)\in \mathbb{CP}^7 \times \Sigma$ (Theorem 23b), and the Fubini–Study metric on $\mathbb{CP}^7$ is the local optimal statistical-distinguishability metric for pure predictive families (Theorem 23c). Geometry therefore enters PU at the level of the minimal predictive unit itself: nearby rays encode nearby predictive dispositions, and the factorization $\mathcal{H}_0\cong \mathcal{H}_M \otimes \mathcal{H}_P \otimes \mathcal{H}_I$ makes the relation between whole and parts geometrically explicit.
+
+At aggregate scale, the relevant object is not another copy of $\mathbb{CP}^7 \times \Sigma$ but the PCE-selected context state of Definition L.1. There the aggregate density operator $\rho_{\mathrm{agg}}(t)$ is compressed to
+$$
+\text{context}_S(t)\in\mathcal{C}_{\text{ctx}}\subseteq\mathbb{R}^{|\mathcal{I}|},
+$$
+a minimal sufficient statistic built from control-relevant expectation values. The point is not that PU has already proved a unique aggregate geometry analogous to the Fubini–Study geometry of the minimal MPU. The point is that PCE selects structured, low-cost state descriptions that preserve predictively relevant relations while discarding irrelevant detail, and such descriptions naturally admit geometric interpretation.
+
+This fits a broader pattern already present in the manuscript. At the minimal level, prediction is carried by the geometry of $\mathbb{CP}^7 \times \Sigma$ (Theorems 23b–23c). At network scale, POP/PCE also drive the emergence of geometric regularity in the interaction structure (Theorem 43). The aggregate context state sits between these levels as a compressed predictive coordinate system.
+
+**Thesis P.2.6.3a (Geometry as a PCE-Structured State Space).** Within PU, prediction is explicitly geometric at the minimal MPU level, and PCE drives aggregates toward compressed state descriptions that are naturally interpreted geometrically. The theorem-backed minimal case is $\mathbb{CP}^7 \times \Sigma$; the aggregate case is the structured context space $\mathcal{C}_{\text{ctx}}$ of Definition L.1.
+
+#### Intuition as Geometric Apprehension
+
+Expert intuition presents three well-documented properties that are difficult to hold simultaneously under standard accounts: it operates holistically (the judgment arrives as a single apprehension, not a sequential chain), it is precise (in domains with sufficient regularity and feedback, intuitive judgments reliably match or exceed deliberate analysis), and it resists verbal transfer (experts cannot articulate the basis for their judgments in a way that enables novices to reproduce the performance). [de Groot 1965; Klein 1998; Kahneman & Klein 2009]
+
+Within PU, these properties can be interpreted as consequences of how predictive structure is stored and accessed. At the minimal level, a geometric assembly is specified globally rather than serially. At the aggregate level, Definition L.1 describes a compressed context state that coordinates many predictively relevant variables at once. The proposal below is therefore an interpretation of expert performance in PU terms, not a separately proved theorem of the framework.
+
+*Simultaneity.* A geometric assembly (Definition P.2.6.2) is a global ray $[\psi] \in \mathbb{P}(\mathcal{H})$ that specifies subsystem form jointly. At aggregate scale, the analogous idea is that one context state coordinates many variables at once. Recognizing a familiar situation is then not naturally modeled as traversing an explicit verbal chain, but as matching the present context against previously stabilized patterns encoded in the aggregate's predictive organization.
+
+*Precision.* At the minimal level, Theorem 23c shows that geometry and statistical distinguishability coincide locally. By analogy, aggregate precision depends on how well $\text{context}_S(t)$ preserves the distinctions relevant to the task. When the compression is well matched to environmental structure and supported by repeated feedback, rapid judgments can remain reliable because the relevant distinctions have already been built into the organization of the context state.
+
+*Non-transferability.* Natural language is a sequential channel. The expert's internal organization is not: many relations are coordinated at once inside $\text{context}_S(t)$. Verbal report therefore serializes what is internally available in parallel, and that serialization can omit exactly the relational detail that makes the expert judgment reliable.
+
+A further constraint follows from the reflexivity constraint. By Theorem 33,
+$$
+\Delta I \cdot (\Delta S_{\min}/k_B) \ge \kappa_r > 0.
+$$
+Any attempt by the aggregate to gain information about its own coordinating state necessarily disturbs that state. The expert's model is therefore partly opaque even to the expert (Proposition 15). What can be articulated is the portion of the operative organization that survives both serialization and self-inspection; the remainder stays causally effective without being fully linguistically recoverable.
+
+#### Comprehension as Dimensionality Reconstruction
+
+Consider what happens when a predictive aggregate receives a sequential symbolic input—a sentence, a mathematical expression, a verbal instruction. The signal arrives serially, but the receiver must integrate it into $\text{context}_S(t)$, the structured state coordinating its current predictive regime. In PU terms, comprehension is therefore naturally described as the construction of a context-state update from a temporally ordered symbolic stream.
+
+Each stage of this construction is a structure-building operation. Lexical access maps symbols to usable internal elements. Parsing supplies relations across the sequence. Semantic composition builds a more integrated representation. Integration places the result into the receiver's current context state.
+
+This construction is costly for three reasons that fit the PU framework:
+
+(i) *Ambiguity from projection.* A sequential string typically underdetermines the richer structure the receiver must recover. Additional context, prior knowledge, and inference are needed to select among multiple admissible reconstructions.
+
+(ii) *Effort from omitted structure.* The more relational structure is left implicit in the signal, the more work the receiver must do to rebuild it internally.
+
+(iii) *Misunderstanding from contextual mismatch.* Two aggregates exposed to the same string need not construct the same update, because the resulting interpretation depends on the prior organization of $\text{context}_S(t)$.
+
+Now consider the alternative. If the communicated form preserves more of the receiver-relevant relational structure, less reconstruction is required. The receiver can rely more on direct alignment with its current predictive organization and less on serial inference from an underspecified projection.
+
+This has a modest but precise PU consequence. The ND-RID channel capacity $C_{\max} < \ln d_0$ (Theorem E.2) bounds the information any single channel can transmit per interaction. A format that forces the receiver to rebuild missing relational structure spends part of that limited transmission budget on recoverable overhead rather than on the predictive content itself. Formats that preserve more structure do not evade the same capacity bound, but they can reduce reconstruction cost and loss.
+
+**Thesis P.2.6.3b (Comprehension as Dimensionality Reconstruction).** Comprehension, in PU terms, is the PCE-costly construction of a context-state update from a sequential input whose relational structure is only partially explicit. The cost increases with ambiguity, contextual mismatch, and omitted structure. When the communicated form preserves more of the receiver-relevant structure, the reconstruction burden is reduced.
+
+#### Communication Between Predictive Systems: The Geometric Pressure
+
+The preceding point suggests an architectural pressure rather than a completed theorem of the present manuscript. Whenever sender and receiver already possess richly structured internal states, forcing communication through a narrow sequential code introduces additional projection and reconstruction work. Under PCE, that extra work is disfavored unless the interface itself leaves no alternative.
+
+Between some aggregates, low-dimensional sensorimotor interfaces make sequential symbolic coding efficient: vocalization, writing, and gesture are workable ways of trading limited-bandwidth signals for recoverable structure.
+
+Between other systems, the interface may permit richer state-to-state coupling than ordinary linguistic exchange. In that regime, the relevant comparison is not symbols versus no symbols in the abstract, but whether the interface preserves relational structure directly or instead requires the receiver to rebuild it from a serialized projection.
+
+Theorem E.2 supplies the universal bound $C_{\max} < \ln d_0$ for any single ND-RID channel. It implies that capacity wasted on avoidable projection and translation overhead is genuine physical cost. PCE therefore favors, other things equal, formats that preserve receiver-relevant structure more directly.
+
+**Thesis P.2.6.3c (Geometric Pressure Against the Sequential Bottleneck).** For communication between predictive systems, PU implies a pressure against unnecessary serialization. Specifically:
+
+(i) When the interface is intrinsically low-dimensional, sequential symbolic encoding remains PCE-efficient.
+
+(ii) When the interface permits richer structured exchange and sender and receiver are sufficiently aligned, PCE favors formats that preserve relational structure more directly.
+
+(iii) The size of this advantage is implementation-dependent, because it depends on channel capacity, alignment of internal organization, and the overhead required for re-encoding between substrates.
+
+The structural expectation is therefore conditional rather than absolute: wherever interface constraints relax and substrate alignment improves, POP/PCE create pressure toward less lossy, more structurally faithful communication.
+
+
 
 ---
 
