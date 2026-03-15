@@ -19,7 +19,7 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 
 | Quantity | PU program | Central value | $1\sigma$ budget | Dominant contributions |
 |:--|:--|:--|:--|:--|
-| $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$ | $137.036092$ | $\pm 0.000060$ | combined Section Z.27.9 budget, dominated by PU-to-QED matching; compare $\alpha_{\mathrm{em}}^{-1} = 137.035999177(21)$ [NIST 2024] |
+| $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$ | $137.036092$ | $\pm 0.000060$ | combined Section Z.27.9 budget, dominated by subgroup-projection/matching systematics; compare $\alpha_{\mathrm{em}}^{-1} = 137.035999177(21)$ [NIST 2024] |
 | $\Lambda L_P^2$ (vacuum sector) | Eq. (V.2) with $\kappa=141.5$ and $A_{\text{eff}}=0.923\pm0.011$ (Appendix U) | $(2.88\times10^{-122})$ | $\pm 0.03\times10^{-122}$ | $A_{\text{eff}}$ theory/systematic dominates; Eq. (V.5) gives $(\Lambda L_P^2)_{\text{obs}}=(2.86599\pm0.04849)\times10^{-122}$, implying $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ |
 
 ## V.1 The Cosmological Constant: Inversion for the Instanton Complexity $\kappa$
@@ -172,4 +172,4 @@ $$
 \boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \Delta^{(2)} + O(u^{*5}) \approx 137.036092 \pm 0.000060}
 \tag{V.10}
 $$
-This is a Thomson-limit prediction within the Appendix Z derivation. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and matching/systematic contributions.
+This is a Thomson-limit prediction within the Appendix Z derivation. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and subgroup-projection/matching systematics, with the latter dominant.

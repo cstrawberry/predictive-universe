@@ -481,7 +481,7 @@ $$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W}$$
 $$
 \alpha_{em}^{-1}(\text{Thomson}) = 137.036092 \pm 0.000060
 $$
-where the uncertainty is the conservative truncation bound for the first neglected higher-order term (Appendix Z, Section Z.27.9).
+where the quoted $1\sigma$ uncertainty is the combined Appendix Z, Section Z.27.9 theory budget, dominated by subgroup-projection/matching systematics rather than by truncation.
 
 **Step 2 (QED running).** Standard QED running from $q^2 = 0$ to the sphaleron scale $T_{sph} \approx 160$ GeV gives:
 $$\alpha_{em}^{-1}(T_{sph}) \approx 127.5$$

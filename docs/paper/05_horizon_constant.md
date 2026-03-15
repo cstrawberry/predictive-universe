@@ -49,7 +49,7 @@ where $\varepsilon$ is the per-merge entropy cost in nats satisfying $\varepsilo
 
 **5.2 Minimal Complexity for Self-Reference and Prediction ($K_0$)**
 
-We investigate the minimum complexity needed for a system to instantiate the core logic of the self-referential contradictions underlying SPAP *and* achieve minimal predictive success. Before quantifying this minimum complexity ($K_0$) in bits, we first establish the fundamental logical capabilities that any self-referential predictive system must possess. As established by Convention 1 (Section 2.4.1), the Hilbert-space capacity is $C_{cap}=\log_2 d_0$ (bits), providing the translation between the number of distinguishable internal configurations required by the logic and the minimal dimension $d_0$ required to realize them. This link will be essential in what follows.
+We investigate the minimum complexity needed for a system to instantiate the core logic of the self-referential contradictions underlying SPAP. We then show that the same three-bit register size also admits a minimal predictive mode with super-chance performance on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. Before quantifying this complexity threshold ($K_0$) in bits, we first establish the fundamental logical capabilities that any self-referential predictive system must possess. As established by Convention 1 (Section 2.4.1), the Hilbert-space capacity is $C_{cap}=\log_2 d_0$ (bits), providing the translation between the number of distinguishable internal configurations required by the logic and the minimal dimension $d_0$ required to realize them. This link will be essential in what follows.
 
 **5.2.1 Fundamental Logical Capabilities for Self-Referential Prediction**
 
@@ -68,7 +68,7 @@ Any system engaging in non-trivial self-referential prediction, irrespective of 
 These three capabilities are jointly necessary. Removing any one of them destroys one of the three indispensable stages of the predictive loop: identifiable self-state, internally generated forecast, and outcome-conditioned correction. Therefore any non-trivial self-referential predictor must realize all of $b_m$, $b_p$, and $b_v$. ∎
 
 
-The Horizon Constant $K_0$ will represent the minimal physical complexity required to instantiate these capabilities in a way that enables both the encoding of the SPAP self-referential loop and the achievement of predictive accuracy better than chance.
+The Horizon Constant $K_0$ will represent the minimal physical complexity required to instantiate these capabilities so that the SPAP self-referential loop is encodable. The theorem below then shows that the same three-bit register size also supports a basic super-chance predictive mode on $\mathcal{E}_{\mathrm{basic}}(\gamma)$.
 
 **5.2.2 Theorem 15 (Horizon Constant: Minimal Complexity for SPAP Encodability and Minimal Prediction)**
 
@@ -130,6 +130,8 @@ Thus the required single-cycle distinguishability is at least $3$ bits: $\log_2 
 - Reflex/update: $(\phi,p_{stored},1)\mapsto(\mathrm{NOT}(p_{stored}),\phi,0)$, which sets the next $\phi$ to $\mathrm{NOT}(p_{stored})$ while swapping the old $\phi$ into the auxiliary register to keep the map bijective (O1).
 The phase-boundary map is a bijection between the phase slices, and the reflex/update map is a bijection from the $c_{phase}=1$ slice to the $c_{phase}=0$ slice. Hence the visited internal transitions are injective and the SPAP update $\phi_{t+1}=\mathrm{NOT}(p_{stored})$ is realized without ambiguity. ∎
 
+This completes the three-bit sufficiency construction for SPAP encodability. The next part addresses a separate claim: using the same three-bit register size, one can also implement a predictive mode with super-chance performance on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. The present construction proves encodability of the SPAP reflex rule; the next one proves basic predictive success.
+
 **(3) Minimal Predictive Success.** Consider the predictor $\hat X_{t+1}:=X_t$ ("predict persistence"). Its correctness indicator is $\mathbf{1}\{\hat X_{t+1}=X_{t+1}\}=\mathbf{1}\{X_{t+1}=X_t\}$. Therefore, for any stationary ergodic process in $\mathcal{E}_{basic}(\gamma)$,
 $$
 \lim_{T\to\infty}\frac1T\sum_{t=0}^{T-1}\mathbf{1}\{\hat X_{t+1}=X_{t+1}\}
@@ -149,7 +151,7 @@ $$
 \quad \text{(17)}
 $$
 
-*Proof.* The adaptive Fundamental Predictive Loop (Definition 4) includes, as an internal sub‑dynamic, the SPAP logic and the capabilities $b_m,b_p,b_v, D_{cyc}$ (Definition 5; Proposition 5.2.1). By Theorem 15, the minimal $C_P$ that realizes this sub‑dynamic and permits super‑chance operation on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ is $K_0=3$. Therefore, any system meeting the Definition 13 criterion must have $C_P\ge 3$. ∎
+*Proof.* The adaptive Fundamental Predictive Loop (Definition 4) includes, as an internal sub-dynamic, the SPAP logic and the capabilities $b_m,b_p,b_v,D_{cyc}$ (Definition 5; Proposition 5.2.1). By Theorem 15(1), any realization of the SPAP sub-dynamics satisfying (O1)-(O3) requires at least $K_0=3$ bits. Theorem 15(2)-(3) then shows that this lower bound is sharp by exhibiting a three-bit realization that both encodes the SPAP update and admits a basic super-chance predictive mode on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. Therefore, any system meeting the Definition 13 criterion must have $C_P\ge 3$. ∎
 
 **Remark (Explicit Relation).** Since $C_{op}$ is defined as the minimal physical complexity that achieves a target accuracy gap $\epsilon_{acc}>0$ under the full loop, $C_{op}\ge K_0=3$. Achieving larger accuracy gaps generally requires additional structure; informally, in many regimes one expects $C_{op}\approx K_0 + O\!\big(\ln(1/\epsilon'_{acc})\big)$ (cf. Law of Prediction, Theorem 19), with constants depending on the environment class and $A(\cdot)$.
 
@@ -178,7 +180,7 @@ Any physical system exhibiting the operational characteristics modeled by the Pr
 
 |  Symbol  | Name                  | Logical Purpose                                                                                               | Complexity (Bits) | Example: 3‑Qubit MPU (Sec. 7.1.3)            |
 | :------: | :-------------------- | :------------------------------------------------------------------------------------------------------------ | :---------------- | :------------------------------------------- |
-|   $K_0$  | Horizon Constant      | Minimal SPAP sub‑dynamics (O1–O3) and basic super‑chance prediction on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ | Exactly 3         | $d_0=8$ Hilbert subspace, SPAP two‑phase map |
+|   $K_0$  | Horizon Constant      | Minimal SPAP sub‑dynamics (O1–O3); the same three-bit register size also admits a basic super-chance predictive mode on $\mathcal{E}_{\mathrm{basic}}(\gamma)$ | Exactly 3         | $d_0=8$ Hilbert subspace, SPAP two-phase map |
 | $C_{op}$ | Operational Threshold | Full adaptive loop at target margin $\epsilon_{acc}>0$                                                        | $\ge K_0=3$       | Can equal $K_0$ for minimal $\epsilon_{acc}$ |
 
 
