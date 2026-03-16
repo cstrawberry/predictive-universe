@@ -793,6 +793,363 @@ Once Definition H.0 is fixed, the result uses zero continuously adjustable param
 
 *   **Justification for Statistical FTL:** Consistency relies on: Operational Causality (Post 2 - no deterministic FTL); CC Bound (Theorem 39: $\text{CC}<0.5$ prevents forcing outcomes); Emergent Operator Locality (Corollary F.1: $[\mathfrak{A}_1, \mathfrak{A}_2]=0$ from ND-RID contractivity, rigorously derived in **Appendix F**); State-Mediated Influence (Eq. (F.4): context dependence appears in joint expectations $\omega_{C_A}(A\otimes B)$, while Bob's unconditional marginals $\omega_{C_A}(\mathbf{1}_A\otimes B)$ remain context-independent); Information Limits of ND-RID (Appendix F, Section F.6: finite rate, limits signaling). Statistical FTL via state correlations is argued compatible with operator locality and operational causality (justified via information limits analyzed in **Appendix F** and bounded by Theorems 40-42).
 
+### 14.3.1 Predictive Communication Under Separation: Delay, Compression, and Decision Advantage
+
+#### 14.3.1.1 Delay, stale state, and the cost of mutual prediction
+
+At the information-theoretic level, prediction and compression are coupled: improved modeling reduces residual surprise and therefore reduces the code length needed to represent future outcomes [Shannon 1948; Cover & Thomas 2006]. In PU this relation becomes operational through the PCE potential (Definition 20; Appendix D, Definition D.1), which rewards predictive benefit while penalizing operational and propagation cost. For separated predictive systems, the decisive additional penalty is stale state: by the time a remote message arrives, the target distribution may already have drifted.
+
+Consider two predictive aggregates $A$ and $B$ separated by emergent distance $d$, with one-way propagation delay
+
+$$
+\tau_d = d/c.
+$$
+
+Specialize Definition 7 to expected log-loss on a common task outcome space. Let $p_B(\cdot\mid t)$ denote the task-relevant distribution over $B$'s next verified response at send time $t$, and let $s := t + \tau_d$ be the corresponding arrival time. Define the delayed prediction error for $A$'s stale prediction of $B$ by
+
+$$
+PE_{A\leftarrow B}^{\mathrm{delay}}(t,\tau_d)
+:= \mathbb{E}_{Y\sim p_B(\cdot\mid s)}\!\big[-\log p_B(Y\mid t)\big],
+$$
+
+and the synchronized arrival-time benchmark by
+
+$$
+PE_{A\leftarrow B}^{\mathrm{sync}}(s)
+:= \mathbb{E}_{Y\sim p_B(\cdot\mid s)}\!\big[-\log p_B(Y\mid s)\big].
+$$
+
+Then the stale-state calculation of Theorem O.1 gives the exact identity
+
+$$
+PE_{A\leftarrow B}^{\mathrm{delay}}(t,\tau_d)
+=
+PE_{A\leftarrow B}^{\mathrm{sync}}(t+\tau_d)
++
+D_{KL}\!\big(p_B(\cdot\mid t+\tau_d)\,\|\,p_B(\cdot\mid t)\big).
+\tag{14.3.1}
+$$
+
+Accordingly,
+
+$$
+PP_{A\leftarrow B}^{\mathrm{delay}}(t,\tau_d)
+=
+\frac{1}{1+k_{PP}\,PE_{A\leftarrow B}^{\mathrm{delay}}(t,\tau_d)}
+\le
+PP_{A\leftarrow B}^{\mathrm{sync}}(t+\tau_d),
+\tag{14.3.2}
+$$
+
+with equality only when the remote task distribution is unchanged across the delay window. The same construction holds with $A$ and $B$ exchanged. If one defines the symmetric delayed and synchronized mutual performances by
+
+$$
+PP_{\mathrm{mutual}}^{\mathrm{delay}}(t,d)
+:= \frac{1}{2}\Big(PP_{A\leftarrow B}^{\mathrm{delay}}(t,\tau_d)
++ PP_{B\leftarrow A}^{\mathrm{delay}}(t,\tau_d)\Big),
+$$
+
+and
+
+$$
+PP_{\mathrm{mutual}}^{\mathrm{sync}}(t,d)
+:= \frac{1}{2}\Big(PP_{A\leftarrow B}^{\mathrm{sync}}(t+\tau_d)
++ PP_{B\leftarrow A}^{\mathrm{sync}}(t+\tau_d)\Big),
+$$
+
+then
+
+$$
+PP_{\mathrm{mutual}}^{\mathrm{delay}}(t,d)
+\le
+PP_{\mathrm{mutual}}^{\mathrm{sync}}(t,d).
+$$
+
+When the relevant task distribution is $C^1$ in time and has common full support throughout the delay window, Equation (O.2) gives the small-delay expansion
+
+$$
+\Delta_{A\leftarrow B}^{\mathrm{delay}}(t,d)
+:=
+D_{KL}\!\big(p_B(\cdot\mid t+\tau_d)\,\|\,p_B(\cdot\mid t)\big)
+=
+\frac{1}{2} I_B(t)\,\tau_d^2 + o(\tau_d^2),
+\tag{14.3.3}
+$$
+
+where
+
+$$
+I_B(t) := \sum_y \frac{(\partial_t p_B(y\mid t))^2}{p_B(y\mid t)}
+$$
+
+is the temporal Fisher information of $B$'s task distribution, with the analogous integral form for continuous outcomes. The leading delay penalty is therefore quadratic in $d/c$: separation harms mutual prediction to the extent that the remote task distribution drifts across the light-time window.
+
+**Regularity caveat.** Equation (14.3.3) is a smooth-regime expansion. If the remote task distribution undergoes a discontinuity, support change, or regime switch within the delay window, the KL term in Equation (14.3.1) need not scale quadratically and can become large; with exact log-loss and support loss it can diverge. In those regimes the exact non-perturbative quantity in Equation (14.3.1) is the relevant object.
+
+The relevant ceiling here is the operational ceiling $\beta < 1$ of the Space of Becoming (Theorem 9), not the self-prediction ceiling $\alpha_{SPAP}$. Mutual prediction between distinct systems is bounded by the viability interval of Definition 8. Delay therefore contributes an additional task-level error term inside the existing $(\alpha,\beta)$ regime; it does not replace that regime.
+
+**Proposition 14.3.1 (Delay-induced complexity premium and feasibility ceiling).** Under Definition 7 and Theorem 19, fix a target delayed performance $PP^\star \in (\alpha,\beta)$ for the task $A \leftarrow B$, and write
+
+$$
+\Delta_{A\leftarrow B}^{\mathrm{delay}}(t,d)
+:=
+D_{KL}\!\big(p_B(\cdot\mid t+\tau_d)\,\|\,p_B(\cdot\mid t)\big).
+$$
+
+Then:
+
+1.  The synchronized performance that must be available at arrival time in order to achieve delayed performance $PP^\star$ is
+
+$$
+\widetilde{PP}_{A\leftarrow B}^{\star}(t,d)
+:=
+\frac{1}{(PP^\star)^{-1} - k_{PP}\,\Delta_{A\leftarrow B}^{\mathrm{delay}}(t,d)}.
+\tag{14.3.4a}
+$$
+
+2.  Achieving $PP^\star$ with finite complexity while remaining inside the Space of Becoming is possible if and only if
+
+$$
+\widetilde{PP}_{A\leftarrow B}^{\star}(t,d) < \beta,
+$$
+
+or equivalently,
+
+$$
+\Delta_{A\leftarrow B}^{\mathrm{delay}}(t,d)
+<
+\frac{1}{k_{PP}}\left(\frac{1}{PP^\star} - \frac{1}{\beta}\right).
+\tag{14.3.4b}
+$$
+
+3.  When Equation (14.3.4b) holds, the exact required complexity is
+
+$$
+C_{\mathrm{req}}^{\mathrm{delay}}(PP^\star,t,d)
+=
+C_{op}
++
+\frac{\hat{C}_{\mathrm{target}}}{\kappa_{\mathrm{eff}}}
+\ln\!\Bigl(\frac{\beta-\alpha}{\beta-\widetilde{PP}_{A\leftarrow B}^{\star}(t,d)}\Bigr),
+\tag{14.3.4c}
+$$
+
+and the delay-induced complexity premium relative to the zero-delay requirement for the same target performance is
+
+$$
+\Delta C_{\mathrm{req}}(PP^\star,t,d)
+:=
+C_{\mathrm{req}}^{\mathrm{delay}}(PP^\star,t,d)
+-
+C_{\mathrm{req}}(PP^\star,\hat{C}_{\mathrm{target}})
+=
+\frac{\hat{C}_{\mathrm{target}}}{\kappa_{\mathrm{eff}}}
+\ln\!\Bigl(\frac{\beta-PP^\star}{\beta-\widetilde{PP}_{A\leftarrow B}^{\star}(t,d)}\Bigr)
+>
+0.
+\tag{14.3.4d}
+$$
+
+*Proof.* By Definition 7,
+
+$$
+PE^\star(PP^\star) = \frac{1/PP^\star - 1}{k_{PP}}
+$$
+
+is the largest prediction error compatible with performance $PP^\star$. By Equation (14.3.1), delayed performance $PP^\star$ is achieved exactly when
+
+$$
+PE_{A\leftarrow B}^{\mathrm{sync}}(t+\tau_d)
+\le
+PE^\star(PP^\star) - \Delta_{A\leftarrow B}^{\mathrm{delay}}(t,d).
+$$
+
+Re-expressing the right-hand side through Definition 7 yields Equation (14.3.4a). Because Theorem 19 applies only for target performances strictly below $\beta$, finite-complexity feasibility requires $\widetilde{PP}_{A\leftarrow B}^{\star}(t,d) < \beta$, which is equivalent to Equation (14.3.4b). Substituting $\widetilde{PP}_{A\leftarrow B}^{\star}(t,d)$ into Equation (23) of Theorem 19 gives Equation (14.3.4c), and subtracting the zero-delay requirement gives Equation (14.3.4d). $\square$
+
+For small delay penalty,
+
+$$
+\widetilde{PP}_{A\leftarrow B}^{\star}(t,d)
+=
+PP^\star + k_{PP}(PP^\star)^2\,\Delta_{A\leftarrow B}^{\mathrm{delay}}(t,d)
++ O\!\big((\Delta_{A\leftarrow B}^{\mathrm{delay}})^2\big),
+$$
+
+so
+
+$$
+\Delta C_{\mathrm{req}}(PP^\star,t,d)
+=
+\frac{\hat{C}_{\mathrm{target}}\,k_{PP}(PP^\star)^2}{\kappa_{\mathrm{eff}}(\beta-PP^\star)}
+\,\Delta_{A\leftarrow B}^{\mathrm{delay}}(t,d)
++
+O\!\big((\Delta_{A\leftarrow B}^{\mathrm{delay}})^2\big).
+\tag{14.3.4e}
+$$
+
+Combining Equations (14.3.3) and (14.3.4e) gives the smooth-regime scaling
+
+$$
+\Delta C_{\mathrm{req}}(PP^\star,t,d)
+=
+\frac{\hat{C}_{\mathrm{target}}\,k_{PP}(PP^\star)^2}{2\kappa_{\mathrm{eff}}(\beta-PP^\star)}
+\,I_B(t)\,\tau_d^2
++
+o(\tau_d^2).
+\tag{14.3.4f}
+$$
+
+Thus separation imposes both a quantitative complexity premium and a hard feasibility ceiling. As the KL drift approaches the threshold in Equation (14.3.4b), the synchronized performance required to compensate for delay approaches $\beta$, and the required complexity diverges logarithmically.
+
+Appendix E sharpens the channel side of the same constraint. Reduced ND-RID channels are strictly contractive (Lemma E.1) and have bounded reliable capacity $C(\mathcal{E}_N) < \ln d_0$ (Theorem E.2). At the PCE-Attractor ($d_0 = 8$, $\varepsilon = \ln 2$), the single-channel capacity is
+
+$$
+C_{\max}^{\star} = \ln 8 - \ln 2 = 2\ln 2 \approx 1.386
+$$
+
+nats (Equation E.15). Freshness therefore cannot be improved on a single channel without paying either additional communication resources, additional local modeling complexity, or both.
+
+#### 14.3.1.2 Predictive precomputation as a PCE-selected communication protocol
+
+The delay penalty does not imply passivity. It identifies the design objective that a PCE-favored protocol should minimize: not raw distance, which is fixed, but the decision-relevant uncertainty that remains unresolved when the delayed message arrives.
+
+Let two AI systems, $A$ on Earth and $B$ on Mars, maintain task-specific predictive models $\hat{M}_A(B)$ and $\hat{M}_B(A)$. At transmission step $t$, let $A$ send a message $m_t$ together with a compressed context packet $z_t$, where $z_t$ is a task-specific summary of the sender's predictive state playing the same minimal-sufficient-statistic role that Definition L.1 assigns to context state. Simultaneously, $A$ constructs a ranked branch table
+
+$$
+\mathcal{B}_k(m_t)
+:= \{(r_i, p_i, a_i)\}_{i=1}^k,
+\qquad
+p_1 \ge \cdots \ge p_k,
+\qquad
+\sum_{i=1}^k p_i \ge \Theta,
+\tag{14.3.5}
+$$
+
+where $r_i$ is a predicted reply from $B$, $p_i$ its probability under $\hat{M}_A(B)$, $a_i$ the precomputed continuation conditioned on $r_i$, and $\Theta \in (0,1)$ the retained cumulative probability mass. When $B$'s actual reply arrives, $A$ uses the precomputed continuation $a_i$ whenever the received reply falls inside a task-defined tolerance class $\mathcal{T}_i$ around $r_i$; otherwise it falls back to fresh computation. The predictive hit rate is therefore
+
+$$
+P_{\mathrm{hit}}(k,\Theta,\mathcal{T})
+:= \Pr\!\big[\exists\, i \le k : r_{\mathrm{actual}} \in \mathcal{T}_i\big].
+\tag{14.3.6}
+$$
+
+A successful match removes at least one additional round-trip delay from the control loop. Deeper tables can remove more, but their operational and coordination costs grow with $k$.
+
+Let $PP^{(k)}$ denote the effective predictive performance of the communication protocol using branch depth $k$, and let $V_{op}^{(k)}$ and $V_{prop}^{(k)}$ denote the $k$-dependent operational and propagation costs of maintaining that protocol. Then the $k$-dependent part of the PCE objective is
+
+$$
+V^{(k)} = V_{op}^{(k)} + V_{prop}^{(k)} - \Gamma_0 B\!\big(PP^{(k)}\big),
+\tag{14.3.7a}
+$$
+
+with $B$ the monotone benefit function of Definition D.1.
+
+**Proposition 14.3.2 (PCE first-order condition for branch depth).** Suppose the protocol family admits a $C^1$ relaxation in the design variable $k$. Then any interior PCE-optimal branch depth $k^\star$ satisfies
+
+$$
+\frac{d}{dk}\Big(V_{op}^{(k)} + V_{prop}^{(k)}\Big)\Big|_{k=k^\star}
+=
+\Gamma_0 B'\!\big(PP^{(k^\star)}\big)
+\frac{dPP^{(k)}}{dk}\Big|_{k=k^\star}.
+\tag{14.3.7b}
+$$
+
+*Proof.* By Definition D.1, the protocol minimizes $V^{(k)}$. For an interior optimum of a differentiable one-parameter family, $dV^{(k)}/dk = 0$. Differentiating Equation (14.3.7a) gives Equation (14.3.7b). $\square$
+
+A useful special case occurs when $V_{prop}^{(k)}$ is negligible over the relevant range, $B(PP)=PP$, and the protocol improves performance only by reducing an effective delay-sensitive prediction error according to
+
+$$
+PE^{(k)} = PE^{\mathrm{base}} - \Delta PE^{(\mathrm{saved})}(k).
+$$
+
+Then Definition 7 gives
+
+$$
+\frac{dPP^{(k)}}{dk}
+=
+\frac{dPP}{dPE}\frac{dPE^{(k)}}{dk}
+=
+k_{PP}\big(PP^{(k)}\big)^2
+\frac{d\,\Delta PE^{(\mathrm{saved})}(k)}{dk},
+$$
+
+so Equation (14.3.7b) reduces to
+
+$$
+\frac{dV_{op}^{(k)}}{dk}\Big|_{k=k^\star}
+=
+\Gamma_0 k_{PP}\big(PP^{(k^\star)}\big)^2
+\frac{d\,\Delta PE^{(\mathrm{saved})}(k)}{dk}\Big|_{k=k^\star}.
+\tag{14.3.7c}
+$$
+
+PCE therefore does not favor exhaustive unfolding of all conversational futures. It favors selective precomputation on the highest-value branches until the marginal predictive benefit of another branch is offset by the marginal operational and coordination cost. Structured context packets $z_t$ improve this trade by reducing reconstruction work at the receiver and by increasing the probability that a finite branch table remains task-relevant, but they remain subject to the same finite-capacity communication constraints.
+
+This architecture matches the operational pressure already visible in Mars systems. Ingenuity could not be joystick-controlled from Earth; commands had to be sent in advance and the vehicle had to act autonomously between command upload and telemetry return [Jet Propulsion Laboratory 2020]. NASA's current communication-delay assessment similarly treats asynchronous collaboration, decision-support tools, and increased onboard autonomy as central requirements for beyond-LEO missions, with Mars missions facing up to 22-minute one-way and 44-minute round-trip delays at maximum Earth-Mars separation [Landon et al. 2025].
+
+#### 14.3.1.3 Probabilistic guidance under time-critical delay
+
+In time-critical settings, the relevant choice is rarely between a probabilistic answer and a certain answer available at the same time. The operational choice is between graded guidance now and a potentially better answer after the decision window may already have closed. That distinction matters for medical triage, hazard avoidance, fault isolation, trajectory maintenance, and any Mars-surface contingency in which local action cannot wait for repeated Earth-Mars-Earth confirmation cycles.
+
+Let $p$ be the confidence attached to a precomputed recommendation or model-generated action. The expected utility of acting immediately is
+
+$$
+EU_{\mathrm{act}}(p)
+=
+p\,U_{\mathrm{correct}}
++
+(1-p)\,U_{\mathrm{wrong}},
+\tag{14.3.8}
+$$
+
+whereas the expected utility of waiting one additional round trip is
+
+$$
+EU_{\mathrm{wait}}(2\tau_d)
+=
+P_{\mathrm{open}}(2\tau_d)\,U_{\mathrm{correct}}
++
+\bigl(1-P_{\mathrm{open}}(2\tau_d)\bigr)\,U_{\mathrm{expired}},
+\tag{14.3.9}
+$$
+
+with $P_{\mathrm{open}}(2\tau_d)$ the probability that the operational window remains open after the additional delay and $U_{\mathrm{expired}}$ the utility of a correct answer that arrives too late to matter. The immediate probabilistic option is preferred whenever
+
+$$
+EU_{\mathrm{act}}(p) > EU_{\mathrm{wait}}(2\tau_d).
+\tag{14.3.10}
+$$
+
+Within PU, Equations (14.3.8)–(14.3.10) do not replace the delay-penalty analysis of Equations (14.3.1)–(14.3.4f); they complement it. The stale-state term quantifies how much predictive quality is lost while waiting. The window-survival term $P_{\mathrm{open}}$ quantifies how much decision value survives while waiting. The framework does not determine $P_{\mathrm{open}}$ from first principles; that quantity is task-, procedure-, and hazard-model dependent. What PU adds is the information-theoretic reason that waiting is costly even before the window closes: the answer received later is generally both less timely and less fresh.
+
+This makes calibrated probabilistic output an operational resource rather than a merely epistemic compromise. When the decision window is narrow enough that $P_{\mathrm{open}}(2\tau_d)$ is small, a moderate-confidence action recommendation can dominate a later, more accurate reply. NASA's communication-delay assessment makes this regime explicit: the literature it reviews identifies problem solving, emergency response, maintenance, and complex procedure execution as precisely the domains where delayed support becomes most operationally consequential, and it emphasizes the resulting shift toward greater onboard autonomy and asynchronous coordination [Landon et al. 2025].
+
+#### 14.3.1.4 Relation to Prediction Relativity, structured communication, and externalized prediction
+
+This section sharpens four points already implicit in the framework.
+
+**First**, separated communication inherits the same stale-state logic formalized in Appendix O. Equation (14.3.1) is the direct communication-delay specialization of Theorem O.1: the penalty is the KL divergence between the arrival-time task distribution and the stale distribution used to predict it. In the smooth regime this penalty is quadratic in $d/c$ with coefficient set by temporal Fisher information; outside that regime the exact KL term is the correct object.
+
+**Second**, the complexity consequence is exact and nonlinear. Theorem 19 does not justify treating delay as a linear rescaling of $\hat{C}_{\mathrm{target}}$. What it does justify, together with Definition 7, is the exact synchronized-performance requirement in Equation (14.3.4a), the finite-complexity feasibility ceiling in Equation (14.3.4b), and the resulting complexity premium in Equations (14.3.4c)–(14.3.4f).
+
+**Third**, Appendix N explains why the same invariant $c$ appears in both communication delay and motion-induced predictive degradation, while the mechanisms remain distinct. For separated communication,
+
+$$
+\tau_d = d/c
+$$
+
+sets the stale-state window. For accelerated observers, the Unruh mechanism introduces the temperature
+
+$$
+T_U = \frac{\hbar a}{2\pi c k_B}
+$$
+
+(Equation N.4), raising the thermodynamic cost of maintaining predictive coherence through the Landauer floor on irreversible operations [Unruh 1976; Landauer 1961]. Equation (N.17), $c_\gamma = c_\varepsilon$, therefore supports a unified causal-speed constant across both penalties: the same $c$ that limits motion also limits the freshness of remote state. What is unified is the constant, not the formula.
+
+**Fourth**, Appendix P identifies the architectural response as conditional pressure rather than absolute necessity. Thesis P.2.6.3c implies pressure against unnecessary serialization when the interface permits richer structured exchange, and Thesis P.2.7.1 implies pressure toward externalizing prediction whenever the net predictive benefit exceeds interface cost. Deep-space communication stacks built from compressed context exchange, selective branch precomputation, and onboard AI arbitration are natural instantiations of those pressures. They are PCE-favored when channel constraints, interface alignment, and operational tasks make them net beneficial; they are not the unique admissible format class in all settings.
+
+Deep-space communication is therefore not merely a problem of transmitting bits across space. Within PU it is a joint optimization over four coupled quantities: bandwidth (bounded on a single ND-RID channel by Equation E.15), freshness (degraded by the KL drift term in Equation 14.3.1 and quadratically in the smooth regime by Equation 14.3.3), local model quality (through the exact complexity premium of Equations 14.3.4c–14.3.4f), and decision utility (through Equations 14.3.8–14.3.10). As separation increases, the PCE-favored regime is generally not passive waiting for delayed certainty but a mixture of compressed context exchange, selective predictive precomputation, and local autonomy. This does not abolish uncertainty; it gives calibrated uncertainty an operational role.
+
 **14.4 Limitations and Challenges**
 
 The PU framework faces significant limitations:

@@ -292,6 +292,7 @@
 *   Jaynes, E. T. (1957). Information theory and statistical mechanics. *Physical Review*, *106*(4), 620–630. DOI: 10.1103/PhysRev.106.620
 *   Jech, T. (2003). *Set Theory* (The Third Millennium Edition, revised and expanded). Springer.
 *   Jegerlehner, F. (2008). The running fine-structure constant α(E) via the Adler function. *Nuclear Physics B – Proceedings Supplements*, *181–182*, 135–140. DOI: 10.1016/j.nuclphysbps.2008.09.010
+*   Jet Propulsion Laboratory. (2020). *6 Things to Know About NASA's Ingenuity Mars Helicopter*. NASA Jet Propulsion Laboratory, July 14, 2020.
 *   Joos, E., Zeh, H. D., Kiefer, C., Giulini, D. J., Kupsch, J., & Stamatescu, I. O. (2003). *Decoherence and the Appearance of a Classical World in Quantum Theory* (2nd ed.). Springer.
 *   Johnson, E. E. (1991). An efficient Golay codec for MIL-STD-188-141A and FED-STD-1045. Technical Report NMSU-ECE-91-001, Department of Electrical and Computer Engineering, New Mexico State University.
 *   Jost, R. (1957). Eine Bemerkung zum CTP-Theorem. *Helvetica Physica Acta*, *30*, 409–416.
@@ -339,6 +340,7 @@
 *   Lan, K. K. G., & DeMets, D. L. (1983). Discrete sequential boundaries for clinical trials. *Biometrika*, *70*(3), 659–663. DOI: 10.1093/biomet/70.3.659. 
 *   Landau, L. D., & Lifshitz, E. M. (1975). *The Classical Theory of Fields* (4th ed.). Pergamon Press.
 *   Landauer, R. (1961). Irreversibility and heat generation in the computing process. *IBM Journal of Research and Development*, *5*(3), 183–191. DOI: 10.1147/rd.53.0183
+*   Landon, L. B., Karasinski, J. A., Morissette, L. G., McTigue, K. R., Parisi, M. E., Wu, S.-C., & Panontin, T. L. (2025). *Assessment of the State of Communication Delay Research in Preparation for Missions Beyond Low Earth Orbit*. NASA/TM–20250003885.
 *   Langacker, P. (1981). Grand unified theories and proton decay. *Physics Reports*, *72*(4), 185–385.
 *   Langacker, P. (2010). *The Standard Model and Beyond*. CRC Press.
 *   LaSalle, J. P. (1960). Some extensions of Liapunov’s second method. *IRE Transactions on Circuit Theory*, *7*(4), 520–527. DOI: 10.1109/TCT.1960.1086720
