@@ -29,14 +29,14 @@ where $B_{R}(v) = \{u \in \mathcal{V}_n \mid d_{\mathcal{N}_n}(v, u) \leq R\}$ i
 
 This section provides a constructive argument demonstrating how local MPU interaction rules, consistent with the Predictive Universe (PU) principles, can lead to an emergent positive lower bound on a specific discrete measure of Ricci curvature—the Ollivier-Ricci curvature ($\operatorname{Ric}_{\mathrm{OR}}$) [Ollivier 2009]. This offers a microscopic basis for satisfying the "uniformly bounded synthetic Ricci curvature" condition (Definition C.2; main text Definition 37), which is an essential component of geometric regularity (Definition C.3).
 
-This derivation models the one-step transition probabilities $\mathcal{P}\delta_v(u) = P_{vu}$ from an MPU $v$ to a neighboring MPU $u$ (where $d(v,u)=1$ in the underlying MPU graph, using the cost metric $d_{\mathcal{N}}$ from main text Definition 35). These probabilities are assumed to be influenced by the local Predictive Physical Complexity $C_P(x)$ at different MPUs, reflecting how predictive load or information processing requirements affect network flow and resource allocation as governed by PCE.
+This derivation uses a representative admissible one-step law for the transition probabilities $\mathcal{P}\delta_v(u) = P_{vu}$ from an MPU $v$ to a neighboring MPU $u$ (where $d(v,u)=1$ in the underlying MPU graph, using the cost metric $d_{\mathcal{N}}$ from main text Definition 35). The purpose of the model is to exhibit a concrete local response kernel whose sensitivity to the local Predictive Physical Complexity $C_P(x)$ can be estimated. The exact functional form is not claimed to be unique; the regularity argument uses only positivity of neighbor weights, bounded comparability of the baseline kernel, and finite local sensitivity to changes in $C_P$.
 
-Let the transition probability from $v$ to a neighbor $u$ be given by a model of the form:
+Let the transition probability from $v$ to a neighbor $u$ be given by the representative model
 $$
 P_{vu} = \frac{P^{(0)}_{vu} \exp(-\lambda_{R} I'(C_P(u)))}{Z_v}
 \tag{C.2}
 $$
-where $P^{(0)}_{vu}$ is a baseline, symmetric transition probability (e.g., $1/\text{deg}(v)$ if unbiased, reflecting the underlying network topology before complexity-dependent weighting), $I'(C_P(u))$ is the derivative of an effective local cost-rate function $I(c)$ (evaluated at the complexity $c=C_P(u)$ of the target MPU $u$), $\lambda_{R} > 0$ is a sensitivity parameter determining how strongly $I'$ influences transitions,¹ and $Z_v = \sum_{w \sim v} P^{(0)}_{vw} \exp(-\lambda_{R} I'(C_P(w)))$ is the local normalization factor ensuring $\sum_{u \sim v} P_{vu} = 1$. The function $I(c)$ represents the PCE-optimal effective cost associated with operating at complexity $c$.
+where $P^{(0)}_{vu}$ is a baseline transition probability (e.g. $1/\deg(v)$ in the unbiased case), $I'(C_P(u))$ is the derivative of an effective local cost-rate function $I(c)$ evaluated at $c=C_P(u)$, $\lambda_{R} > 0$ is a sensitivity parameter,¹ and $Z_v = \sum_{w \sim v} P^{(0)}_{vw} \exp(-\lambda_{R} I'(C_P(w)))$ is the local normalization factor ensuring $\sum_{u \sim v} P_{vu} = 1$. The function $I(c)$ represents the PCE-optimal effective cost associated with operating at complexity $c$.
 
 The Ollivier-Ricci curvature for an edge directed from $v$ to $u$ is defined using the Wasserstein-1 distance $W_1$ between the probability distributions $\mathcal{P}\delta_v = \{P_{vx}\}_{x \sim v}$ and $\mathcal{P}\delta_u = \{P_{ux}\}_{x \sim u}$:
 $$
@@ -136,7 +136,11 @@ $$
 \eta_{R} \;:=\; C_{geom}\,\lambda_{R}\,e^{\lambda_{R} B}\,M\,L_{C_P}.
 \tag{C.8}
 $$
-For the MPU network to function as a stable, information-processing substrate, this parameter $\eta_{R}$ must be strictly less than 1. The parameter $\eta_R$ bounds the Wasserstein-1 distance, which in turn bounds the distinguishability of the local one-step evolution distributions originating from nodes $v$ and $u$. If $\eta_R \ge 1$, it would imply that a small, bounded difference in the underlying control parameter ($C_P$) could lead to a large, potentially maximal difference in the resulting probability distributions. This signifies a channel with extremely high sensitivity or "information gain" regarding the parameter $C_P$. Such high sensitivity is fundamentally incompatible with the established information-theoretic limits of the underlying ND-RID channels, which are strictly contractive ($f_{RID} < 1$, Lemma E.1) and have a finite classical capacity $C_{\max} < \ln d_0$ (Theorem E.2). A value of $\eta_R \ge 1$ implies a large information gain from a small parameter change; if sustained, this would correspond to an effective local channel for inferring $C_P$ whose capacity could exceed the fundamental ND-RID bounds. Such a configuration is physically unrealizable or thermodynamically prohibitive. Therefore, the Principle of Compression Efficiency (PCE), by enforcing consistency with these fundamental constraints, must select for effective interaction parameters and network configurations such that $\eta_{R} < 1$.
+For the MPU network to function in the regular-response regime relevant for the later geometric argument, it is sufficient that the induced Wasserstein response between adjacent one-step evolution laws be uniformly strictly smaller than the edge length. For the representative kernel (C.2), the quantitative sufficient condition is
+$$
+\eta_{R} < 1.
+$$
+Thus the exact expression (C.8) is a convenient sufficient bound for this kernel, not a separate theorem-level axiom of PU.
 
 Using the local-support estimate $W_1 \le \frac{3}{2}\|\cdot\|_1$ (absorbed into $C_{geom}$ as noted after (C.3)) together with (C.7), we have
 $$
@@ -154,14 +158,14 @@ $$
 \tag{C.10}
 $$
 
-Since PCE, through consistency with fundamental ND-RID information limits, enforces $\eta_{R} < 1$, it follows that $\kappa_{R} > 0$. Equivalently, adopting a lazy one‑step kernel with idleness $\alpha\in(0,1)$ reduces $W_1$ and can strictly increase $\kappa_R$ for fixed local parameters. This establishes a strictly positive lower bound on this measure of discrete Ricci curvature, arising from the interplay of PCE-optimized local complexity variations and the information-theoretic constraints of the underlying MPU interactions. A network with such a positive lower bound on Ricci curvature (meaning it is bounded below by $\kappa_R > 0$) satisfies a key component of geometric regularity (Definition C.2, Definition C.3), providing a constructive basis for the emergence of a well-behaved spacetime geometry. The subsequent sections of this appendix detail why violations of such regularity are penalized by PCE.
+Since the regular-response regime requires $\eta_{R} < 1$ for the representative kernel, it follows that $\kappa_{R} > 0$. Equivalently, adopting a lazy one-step kernel with idleness $\alpha\in(0,1)$ reduces $W_1$ and can strictly increase $\kappa_R$ for fixed local parameters. This establishes a strictly positive lower bound on this measure of discrete Ricci curvature, arising from the interplay of PCE-optimized local complexity variations and the information-theoretic constraints of the underlying MPU interactions. A network with such a positive lower bound on Ricci curvature (meaning it is bounded below by $\kappa_R > 0$) satisfies a key component of geometric regularity (Definition C.2, Definition C.3), providing a constructive basis for the emergence of a well-behaved spacetime geometry. The subsequent sections of this appendix detail why violations of such regularity are penalized by PCE.
 
 
 ¹ Footnote: The parameter $\lambda_R$ is specific to this curvature model (Equation C.2) and represents the sensitivity of local transition probabilities to gradients in the effective cost-rate $I'$. It should not be confused with the resource scarcity Lagrange multiplier $\lambda$ from main text Definition 20.
 
 
-**Remark C.3.3a (From Ollivier-Ricci to a continuum scalar curvature estimator).**  
-Let $(\mathcal N_h,d_h)$ be a sequence of MPU networks whose rescaled edge lengths satisfy $d_h(x,y)\approx h$ for adjacent vertices and whose lazy random-walk kernels define Ollivier-Ricci curvature $\kappa_h(x,y)$ via Equation (C.3). In the PU scaling one may identify $h\approx\delta_{eff}$ (Section 11). Under quasi-uniform sampling and local isotropy (the empirical second-moment matrix of neighbor direction vectors satisfies $\frac{1}{\deg(x)}\sum_{y\sim x}\hat v_{x\to y}\hat v_{x\to y}^T=\frac{1}{D}I+o(1)$), the small-scale expansion gives
+**Remark C.3.3a (From Ollivier-Ricci to a continuum scalar curvature estimator).**
+This estimator remark belongs to the later continuum bridge. It is not part of the regular-global-minimum theorem itself; it is used only when connecting discrete curvature control to the locality/consistency clause of Theorem D.6 and the continuum discussion of Section 11.4. Let $(\mathcal N_h,d_h)$ be a sequence of MPU networks whose rescaled edge lengths satisfy $d_h(x,y)\approx h$ for adjacent vertices and whose lazy random-walk kernels define Ollivier-Ricci curvature $\kappa_h(x,y)$ via Equation (C.3). In the PU scaling one may identify $h\approx\delta_{eff}$ (Section 11). Under quasi-uniform sampling and local isotropy (the empirical second-moment matrix of neighbor direction vectors satisfies $\frac{1}{\deg(x)}\sum_{y\sim x}\hat v_{x\to y}\hat v_{x\to y}^T=\frac{1}{D}I+o(1)$), the small-scale expansion gives
 $$
 \kappa_h(x,y)=\frac{h^2}{2(D+2)}\,\mathrm{Ric}_g(v,v)+O(h^3),
 \tag{C.10a}
@@ -171,7 +175,7 @@ $$
 R_h(x):=\frac{2D(D+2)}{h^2}\cdot\frac{1}{\deg(x)}\sum_{y\sim x}\kappa_h(x,y)=R_g(x)+O(h),
 \tag{C.10b}
 $$
-so that $R_h\to R_g$ in $L^1_{\mathrm{loc}}$ under refinement. This provides the discrete-to-continuum bridge used in the locality/consistency hypothesis of Theorem D.6 (Appendix D). [Ollivier 2009; van der Hoorn et al. 2020]
+so that $R_h\to R_g$ in $L^1_{\mathrm{loc}}$ under refinement. This is the discrete-to-continuum bridge used later in the locality/consistency hypothesis of Theorem D.6 [Ollivier 2009; van der Hoorn et al. 2020].
 
 *Justification of the neighbor-average step.* Under the local isotropy condition (which improves as the mesh refines, with error $O(h)$ relative to the continuum limit)
 $$
@@ -339,7 +343,7 @@ and the standard variance-versus-Dirichlet-form estimate produces the stated loc
 
 This appendix establishes a regularity-necessity theorem, not the whole continuum bridge. Sections C.1–C.6 show that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages these penalties as conditional coarse-grained doubling and local $(1,2)$-Poincaré bounds under its stated hypotheses. In this precise sense, Theorem 43 is the manuscript's formal regularity theorem.
 
-What remains additional should stay explicit. The present Appendix C theorem stack does not by itself supply (i) the non-collapsed synthetic-Ricci regime invoked in Section 11.4 to obtain a.e. Euclidean tangent structure on the limit space, (ii) the AQFT convergence hypotheses of Theorem F.0—bounded-degree/short-range control, a uniform Lieb-Robinson bound, controlled coarse-graining, compatible embeddings, and lightcone identification—or (iii) the local-thermodynamic-equilibrium input used in Section 12.
+What remains additional should stay explicit. The present Appendix C theorem stack does not by itself supply (i) the non-collapsed synthetic-Ricci regime invoked in Section 11.4 to obtain a.e. Euclidean tangent structure on the limit space, (ii) the AQFT convergence hypotheses of Theorem F.0—bounded-degree/short-range control, a uniform Lieb-Robinson bound, controlled coarse-graining, compatible embeddings, and lightcone identification—or (iii) the local-horizon KMS/Clausius bridge used in Section 12, which is formalized separately in Theorem 48a.
 
 Read this way, regularity is not an arbitrary add-on: it is forced as a viability requirement, while the later continuum, AQFT, and gravity consequences are conditional on the additional bridge assumptions exactly where the manuscript states them.
 

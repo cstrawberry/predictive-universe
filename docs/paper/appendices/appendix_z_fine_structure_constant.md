@@ -78,7 +78,7 @@ $$\mathcal{O}_{\rho_0} = \{U\rho_0 U^\dagger : U \in U(8)\} \cong U(8)/[U(2) \ti
 | Fine structure constant | Bures metric curvature determines $\alpha$ | Theorem Z.26 |
 | Mass hierarchies | Geodesic distances in $E_8$ embedding give $Y_{ij}$ | Theorem T.39 |
 | CKM/PMNS mixing | Berry holonomy around flavor loops | Theorems T.53–T.56 |
-| Generation structure | Topological sectors from $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ | Proposition R.3.5 |
+| Generation structure | Topological sectors from $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ | Theorem R.3.4 |
 | CP violation | Holonomy phases from sector mismatch | Theorem T.56 |
 | Strong CP solution | $\sigma$-invariance on real locus | Theorem K.6.5 |
 
@@ -95,7 +95,7 @@ The orbit $\mathcal{O}_{\rho_0} = \{U\rho_0 U^\dagger : U \in U(8)\} \cong \text
 - Complex dimension: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12 = k$ (Golay signal dimension, Theorem Z.13)
 - Real dimension: $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = 2ab = 24 = M$ (interface mode count, Theorem Z.5)
 
-The mass hierarchy derivation (Theorem T.39) embeds generation vacua into $E_8$ root space, with Yukawa couplings suppressed by $\exp(-\alpha d^2_{E_8})$ where $\alpha = 3/2$ (Corollary T.41.3). The CP phase derivation (Theorem T.56) computes Berry holonomy $\delta = 66.7°$ from the $E_8$ sector mismatch between up and down quarks. The generation count $N_g = 3$ follows from anomaly cancellation on $\pi_2(\Sigma_8)$ (Proposition R.3.5). ∎
+The mass hierarchy derivation (Theorem T.39) embeds generation vacua into $E_8$ root space, with Yukawa couplings suppressed by $\exp(-\alpha d^2_{E_8})$ where $\alpha = 3/2$ (Corollary T.41.3). The CP phase derivation (Theorem T.56) computes Berry holonomy $\delta = 66.7^\circ$ from the $E_8$ sector mismatch between up and down quarks. The generation count $N_g = 3$ follows from anomaly cancellation on $\pi_2(\Sigma_8)$ (Theorem R.3.4). ∎
 
 **Remark Z.1.5.1: Geometric Unification.** The appearance of the same Grassmannian across coupling constants, mass hierarchies, and mixing angles reflects the single underlying predictive structure. The determination of $\text{Gr}(2,8)$ follows from the logical constant $K_0 = 3$ together with the minimal active-operational branch and the attractor saturation conditions stated above.
 
@@ -255,24 +255,23 @@ $$\frac{b}{d_0} = 1 - \frac{1}{2a} = \frac{3}{4}.$$
 
 ### Z.4.2 Uniqueness of d_0 = 8
 
-**Corollary Z.2 (Octonionic Maximality).** The dimension d_0 = 8 is uniquely determined by four independent constraints:
+**Corollary Z.2 (Minimal-Branch Determination of $d_0 = 8$).** On the minimal PCE branch, the Hilbert-space dimension is uniquely
+$$
+d_0 = 8.
+$$
 
-1. **Binary structure:** d_0 = 2^n (power of 2) — from discrete quantum measurement and bit-based encoding
-2. **Self-referential logic:** d_0 ≥ 8 (Theorem 15, from K_0 = 3 bits) — minimum for SPAP operations
-3. **Radon-Hurwitz theorem:** Maximal division algebra has dimension 8 — algebraic completeness
-4. **PCE:** Disfavors unused dimensions (cost without benefit) — efficiency principle
+*Proof.* The binary/discrete encoding constraint restricts admissible Hilbert-space capacities to powers of two, so $d_0 = 2^n$ for some integer $n$. Theorem 15 fixes $K_0 = 3$, and Theorem 23 then gives the exact lower bound
+$$
+d_0 \ge 2^{K_0} = 8.
+$$
+Therefore every admissible minimal branch has $d_0 \in \{8,16,32,\dots\}$.
 
-The intersection uniquely determines d_0 = 8.
+PCE minimality excludes every strictly larger power of two. Once the SPAP-compatible lower bound $d_0 \ge 8$ is met, any additional dormant basis directions increase storage, control, and maintenance overhead without reducing the SPAP lower bound or creating any new theorem-level operational necessity at the minimal branch. Hence the saturating admissible value is
+$$
+d_0 = 8.
+$$
 
-*Proof.* The binary structure requirement (point 1) follows from the discrete nature of quantum measurement outcomes and the bit-based encoding of the Horizon Constant K_0 = 3 bits. This restricts d_0 to powers of 2: {2, 4, 8, 16, ...}.
-
-The self-referential logic requirement (point 2) establishes d_0 ≥ 8 as the minimum dimension supporting the logical operations necessary for SPAP. Dimensions d_0 < 8 cannot accommodate the required informational structure.
-
-The Radon-Hurwitz constraint (point 3) establishes d_0 ≤ 8 for maximal algebraic completeness. Higher dimensions (16, 32, ...) do not support division algebra structure.
-
-The PCE requirement (point 4) penalizes unused dimensions through operational cost V_op. For d_0 > 8, the additional dimensions provide no algebraic benefit while incurring maintenance costs.
-
-The intersection of these four independent constraints uniquely determines d_0 = 8. ∎
+The Radon-Hurwitz theorem (Theorem Z.3) then supplies a secondary algebraic coherence check: $8$ is also the maximal normed-division-algebra dimension. This explains the octonionic context of the $d_0 = 8$ branch, but it is not part of the necessity proof. ∎
 
 **Remark Z.1: Octonionic Connection.** The octonion structure connects to the exceptional Lie algebra $E_8$, whose root system relates to octonion multiplication. This provides a bridge between the algebraic structure of the MPU Hilbert space H₀ and the geometric structure of optimal lattices.
 
@@ -697,15 +696,15 @@ where $A(D,\theta)$ is the maximal size of a spherical code on $S^{D-1}$ with mi
 
 ### Z.10.3 Equilibrium Saturation
 
-**Theorem Z.9 (Equilibrium Saturation).** At thermodynamic equilibrium in an isotropic environment, the channel configuration maximizes entropy subject to the distinguishability constraint. The unique entropy-maximizing configuration has equal angular caps at the tangent limit:
+**Theorem Z.9 (Equilibrium Saturation).** At thermodynamic equilibrium, the channel configuration maximizes entropy subject to the distinguishability constraint and the fixed total solid-angle budget. The unique entropy-maximizing configuration has equal angular caps at the tangent limit:
 $$M_{\mathrm{phys}}(\rho_{\mathrm{eq}}) = K(D)$$
 
-*Proof.* Consider N distinguishable channels with angular supports {Ω_i} satisfying the non-overlapping constraint Σ_{i=1}^N Ω_i ≤ Ω_total = |S^{D-1}|. The Shannon entropy of the channel distribution is:
-$$S = -\sum_{i=1}^N p_i \ln p_i, \quad p_i = \frac{\Omega_i}{\Omega_{\mathrm{total}}}$$
+*Proof.* Consider $N$ distinguishable channels with angular supports $\{\Omega_i\}$ satisfying the non-overlapping constraint $\sum_{i=1}^N \Omega_i \le \Omega_{\mathrm{total}} = |S^{D-1}|$. The Shannon entropy of the channel distribution is
+$$S = -\sum_{i=1}^N p_i \ln p_i, \quad p_i = \frac{\Omega_i}{\Omega_{\mathrm{total}}}.$$
 
-For fixed N and total solid angle, entropy is maximized when all Ω_i are equal (by strict concavity of -x ln x). This follows from the method of Lagrange multipliers: maximizing S subject to Σ_i p_i = 1 yields p_i = 1/N for all i.
+For fixed $N$ and total solid angle, entropy is maximized when all $\Omega_i$ are equal (by strict concavity of $-x \ln x$). This follows from the method of Lagrange multipliers: maximizing $S$ subject to $\sum_i p_i = 1$ yields $p_i = 1/N$ for all $i$.
 
-The maximum N subject to the non-overlapping constraint occurs when caps are tangent—touching but not overlapping. This defines the kissing configuration.
+The maximum $N$ subject to the non-overlapping constraint occurs when caps are tangent—touching but not overlapping. This defines the kissing configuration.
 
 At thermodynamic equilibrium (Postulate 4), the system naturally evolves toward maximum entropy configurations subject to physical constraints. The PCE potential V(x) drives the system to minimize free energy, which at fixed temperature is equivalent to maximizing entropy. At the tangent limit for unit neighbors on the radius-$2$ shell, the center-to-center angular separation threshold is
 $$

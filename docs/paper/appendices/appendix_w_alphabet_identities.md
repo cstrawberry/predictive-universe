@@ -439,7 +439,7 @@ $\square$
 ## W.8 Emergent GR: assumptions and controlled deviations
 
 **Theorem W.19 (Einstein dynamics under thermodynamic assumptions).**
-Assume: (i) a stable AQFT limit on a Lorentzian manifold; (ii) local thermodynamic equilibrium near local causal horizons (with approximate boost Killing flow); (iii) saturation of the horizon information bound inducing an area law; (iv) the Clausius relation $\delta Q=T\,{\rm d}S$ for local Rindler wedges. Then the macroscopic dynamics obey the Einstein field equations with constant $G$ set by the area–entropy proportionality.
+Assume: (i) a stable AQFT limit on a Lorentzian manifold; (ii) local thermodynamic equilibrium near local causal horizons, with the local KMS/Clausius bridge formalized by Theorem 48a under the Appendix F/G hypotheses; (iii) saturation of the horizon information bound inducing an area law; (iv) the Clausius relation $\delta Q=T\,{\rm d}S$ for local Rindler wedges. Then the macroscopic dynamics obey the Einstein field equations with constant $G$ set by the area-entropy proportionality.
 
 **Proposition W.20 (Leading corrections).**
 Deviations from (ii)–(iii) induce effective‑action corrections of the form

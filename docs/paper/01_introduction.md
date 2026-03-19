@@ -141,7 +141,7 @@ This pillar derives general relativity as a macroscopic thermodynamic consequenc
 2.  **Information Channel Limits:** The fundamental cost $\varepsilon$ ensures MPU interaction channels are information-limited ($C_{\max} < \ln d_0$) (**Appendix E**). This establishes a universal bottleneck on information flow.
 3.  **The Geometric Stage:** PCE optimization is shown to drive the MPU network towards **Geometric Regularity** (Theorem 43), creating a stable, regular network structure that can be described as a continuous manifold (justified in **Appendices C & D**).
 4.  **Area Law and Gravity's Scale:** On this regular geometric stage, the information channel limits (from step 2), which arise from the channel's strict contractivity due to the $\varepsilon$-cost, lead directly to the **Horizon Entropy Area Law** (Theorem 49, derived in **Appendix E**). This derivation also defines the emergent **Gravitational Constant $G$** in terms of underlying MPU network parameters.
-5.  **Einstein's Field Equations:** Applying local thermodynamic principles (Postulate 4) to causal horizons, using the derived Area Law and the **MPU Stress-Energy Tensor** ($T_{\mu\nu}^{(MPU)}$ from **Appendix B**) as the source of heat flow, uniquely yields **Einstein's Field Equations** (Theorem 50) as the system's equation of state.
+5.  **Einstein's Field Equations:** Applying local thermodynamic principles at causal horizons—sharpened in Section 12 by Theorem 48a—using the derived Area Law and the **MPU Stress-Energy Tensor** ($T_{\mu\nu}^{(MPU)}$ from **Appendix B**) as the source of heat flow, uniquely yields **Einstein's Field Equations** (Theorem 50) as the system's equation of state.
 
 **Pillar III: Emergence of Consciousness Complexity (CC) and a Unified Dark Sector**
 

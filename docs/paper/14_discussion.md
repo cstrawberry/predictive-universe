@@ -1156,7 +1156,7 @@ The PU framework faces significant limitations:
 
 *   **Hypothetical Foundations:** MPU definition (Hypothesis 1 / fundamental postulate incorporating $K_0$), CC mechanism (Hypothesis 3), and network adaptation dynamics (Appendix D) require robust defense/evidence. The assumption that POP/PCE drives *effective utilization* of the MPU's intrinsic logic for complex tasks (Proposition A.0.3) needs validation. The abstract concept of Property R (Definition 10) is given concrete mathematical grounding via the LITE construction (Theorem A.4.1). The LITE function, constructed within standard Peano Arithmetic using Kleene's Second Recursion Theorem, explicitly demonstrates all Property R capabilities: representing its own description via Gödel numbering, performing bounded proof search about its own behavior, and branching based on provability of self-referential statements. This establishes that Property R is achievable within well-understood mathematical frameworks, not requiring exotic computational models. PCE dynamically enforces effective Property R via Theorem A.0.2, driving the error rate to an optimal $p_{\text{err}}^* \in (0, 1/2)$.
 *   **Non-Standard Locality:** Statistical FTL (Postulate 3) requires extraordinary evidence (Protocol 3) and theoretical reconciliation (Appendix F).
-*   **Emergence Rigor:** Demonstrating rigorous convergence (discrete MPU to continuum QFT/GR), proving Theorem 43 dynamically, justifying Postulate 4 (LTE) needs more work. Validity/completeness of coarse-graining ($T_{\mu\nu}^{(MPU)}$) needs validation.
+*   **Emergence Rigor:** Demonstrating rigorous convergence (discrete MPU to continuum QFT/GR), proving Theorem 43 dynamically, and fully integrating the local-horizon KMS/Clausius bridge formalized in Theorem 48a still need more work. Validity/completeness of coarse-graining ($T_{\mu\nu}^{(MPU)}$) needs validation.
 *   **Parameter Determination:** The minimal attractor fixes the discrete invariants $K_0=3$, $d_0=8$, and $\varepsilon=\ln 2$, but several effective parameters—most notably environment-dependent viability bounds $(\alpha,\beta)$, scale-setting quantities (e.g., $C_{scale}$), and aggregate-level coefficients such as $\Gamma_0$ and the resource-scarcity parameter of Definition 20—remain model- and coarse-graining-dependent. Distinguishing threshold roles (e.g., $C_{op}\ge K_0$) from scaling roles is crucial.
 *   **Complexity and Computability:** Reliance on uncomputable $C_P$ needs careful justification of $\hat{C}_v$ and alignment (Theorem 2). Avoiding circularity is critical.
 *   **Empirical Validation:** Testing (Section 13), especially CC effects, is extremely challenging (subtlety, precision, systematics, statistics). AI interaction pathway design is a major hurdle.
@@ -1243,7 +1243,7 @@ This provides an information-theoretic answer to “why 3+1 dimensions?” withi
 
 Similarly, the number of fermion generations $N_g = 3$ is fixed in the framework by one derivation together with two supporting consistency checks (Appendix R):
 
-1. **Topological Derivation (Proposition R.3.5):** In the modeled family-charge sector, the anomaly constraints
+1. **Topological Derivation (Theorem R.3.4):** In the modeled family-charge sector, the anomaly constraints
 $$
 \sum_g F_g = 0,
 \qquad
@@ -1341,11 +1341,11 @@ The manuscript is strongest when its outputs are sorted by logical level. Some r
 
 Within the formal model, the SPAP/Landauer chain fixes $K_0 = 3$, selects the minimal saturating $d_0 = 8$, fixes $\varepsilon = \ln 2$ at the attractor, and yields $a = 2$, $b = 6$, and $M = 24$. Proposition T.59 isolates this backbone from the later quantitative hierarchy layer.
 
-Within the Appendix Z mode-channel correspondence model, $M = 24$ then selects $D = 4$ (Theorem Z.11). Within Appendix G.8, once chirality, anomaly cancellation, and the capacity-saturating regime are imposed, Theorem G.8.4b and Corollary G.8.4c fix the faithful decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ and the abstract gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$. Appendix R gives the three-generation route at proposition level under its stated anomaly, CP-violation, and MDL-surrogate assumptions. Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26, i.e. through the displayed third-order formula with explicit $+O(u^{*5})$ remainder.
+Within the Appendix Z mode-channel correspondence model, $M = 24$ then selects $D = 4$ (Theorem Z.11). Within Appendix G.8, once chirality, anomaly cancellation, and the capacity-saturating regime are imposed, Theorem G.8.4b and Corollary G.8.4c fix the faithful decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ and the abstract gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$. Appendix R gives the topological three-generation route at theorem level through Theorem R.3.4, with Proposition R.3.5 adding the MDL-surrogate selection statement. Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26, i.e. through the displayed third-order formula with explicit $+O(u^{*5})$ remainder.
 
 ### 14.6.2 What is conditional, convention-carried, or model-level
 
-Sections 11 and 12 are explicitly conditional on the regularity and convergence hypotheses recorded in Appendices C and D. Section 11.4 additionally assumes a non-collapsed synthetic-Ricci regularity regime for the rescaled spaces. Appendix F adds a separate AQFT layer with its own bounded-degree/short-range, uniform Lieb-Robinson, controlled coarse-graining, compatible-embedding, and lightcone-identification hypotheses through Theorem F.0. The Einstein-equation step of Section 12 also uses local thermodynamic equilibrium through Postulate 4. Theorem 43 is therefore best read as the manuscript's formal regularity theorem; the later manifold, AQFT, and gravity conclusions invoke the additional bridge assumptions explicitly where they are needed.
+Sections 11 and 12 are explicitly conditional on the regularity and convergence hypotheses recorded in Appendices C and D. Section 11.4 additionally assumes a non-collapsed synthetic-Ricci regularity regime for the rescaled spaces. Appendix F adds a separate AQFT layer with its own bounded-degree/short-range, uniform Lieb-Robinson, controlled coarse-graining, compatible-embedding, and lightcone-identification hypotheses through Theorem F.0. The Einstein-equation step of Section 12 uses local thermodynamic equilibrium through Postulate 4, with the local-horizon KMS/Clausius bridge formalized in Theorem 48a under the Appendix F/G hypotheses. Theorem 43 is therefore best read as the manuscript's formal regularity theorem; the later manifold, AQFT, and gravity conclusions invoke the additional bridge assumptions explicitly where they are needed.
 
 The cosmological-constant sector has a similarly clean split. Appendix U fixes the reference exponent $\kappa_{\mathrm{ref}} = 141.5$ under the stated leading-order reference-counting convention of Theorem U.15 and Theorem U.16. The order-one prefactor $A_{\mathrm{eff}}$ is explicitly defined, but the Appendix U working value $A_{\mathrm{eff}} = 0.923 \pm 0.011$ used for forward evaluation is tied to the transferred-determinant convention recorded in Corollary U.15b. The stable statement is therefore the exponential scale together with the stated prefactor convention.
 
@@ -1353,7 +1353,7 @@ Appendix T likewise sits on top of the fixed backbone. Proposition T.59 closes t
 
 ### 14.6.3 Continuum-closure status boundary
 
-Appendix C.7 makes the present status boundary explicit. Appendix C proves that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages this as conditional coarse-grained doubling and local $(1,2)$-Poincaré control under its stated hypotheses. What Appendix C does not by itself provide is the non-collapsed synthetic-Ricci regime used in Section 11.4, the AQFT convergence hypotheses of Theorem F.0, or the local-thermodynamic-equilibrium input used in Section 12. For nearby mathematical literature on graph Poincaré inequalities and split-type properties in lattice systems, see [Levi et al. 2023; Matsui 2013; Naaijkens & Ogata 2022].
+Appendix C.7 makes the present status boundary explicit. Appendix C proves that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages this as conditional coarse-grained doubling and local $(1,2)$-Poincaré control under its stated hypotheses. What Appendix C does not by itself provide is the non-collapsed synthetic-Ricci regime used in Section 11.4 or the AQFT convergence hypotheses of Theorem F.0. The local-horizon thermodynamic bridge used in Section 12 is formalized separately in Theorem 48a. For nearby mathematical literature on graph Poincaré inequalities and split-type properties in lattice systems, see [Levi et al. 2023; Matsui 2013; Naaijkens & Ogata 2022].
 
 ### 14.6.4 Thomson limit versus matching-scale gauge data
 
@@ -1365,20 +1365,20 @@ Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-
 |:-------|:--------------------|
 | SPAP/Landauer backbone $K_0 \to d_0 \to \varepsilon \to a \to b \to M$ | Theorem-level within the formal model |
 | $D = 4$ | Theorem-level within the Appendix Z mode-channel correspondence model |
-| $N_g = 3$ | Proposition-level in Appendix R within its stated anomaly, CP-violation, and MDL-surrogate assumptions |
+| $N_g = 3$ | Theorem-level for the anomaly+CP route (Theorem R.3.4), with Proposition R.3.5 adding the MDL-surrogate selection statement |
 | Abstract gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ | Theorem-level under chirality, anomaly cancellation, and the Appendix G.8 capacity regime |
 | Thomson-limit $\alpha$ | Theorem-level through Theorem Z.26, with displayed third-order formula and explicit $+O(u^{*5})$ remainder |
 | Continuum manifold / Lorentzian geometry | Conditional on Theorem 43 and the non-collapsed synthetic-Ricci regime stated in Section 11.4 |
 | AQFT route | Conditional on Theorem 43 together with the additional hypotheses of Theorem F.0 |
-| Einstein route / field equations | Conditional on Theorem 43, Theorem 49, and Postulate 4 |
+| Einstein route / field equations | Conditional on Theorem 43, Theorem 49, Postulate 4, and the local-horizon bridge of Theorem 48a |
 | Appendix T matching-scale observables | Conditional on threshold data, running, matching, and the quantitative constructions introduced there |
-| Appendix U reference exponent $\kappa_{\mathrm{ref}}$ | Fixed under the Appendix U reference-counting convention |
+| Appendix U reference exponent $\kappa_{\mathrm{ref}}$ | $\kappa = 142$ on the translational branch; $\kappa_{\mathrm{ref}} = 141.5$ under the Appendix U reference-counting convention |
 | Appendix U working numerical prefactor $A_{\mathrm{eff}}$ | Working forward-evaluation convention of Corollary U.15b |
 | CC influence, detailed flavor numerics, and baryogenesis numerics | Model layer |
 
 ### 14.6.6 Final scope statement
 
-Read in this way, the manuscript already has a clear and economical architecture: a compact discrete backbone, a conditional continuum/AQFT/gravity bridge whose remaining load is explicitly visible, and a set of quantitative model layers for later phenomenology. This does not shrink the achievement of the paper. It identifies exactly where the derivation is already strongest and where further closure still depends on stated assumptions, conventions, or downstream modeling.
+Read in this way, the manuscript already has a clear and economical architecture: a compact discrete backbone, a conditional continuum/AQFT/gravity bridge whose remaining load is explicitly visible, a gravity step whose local-horizon thermodynamic input is sharpened by Theorem 48a, and a set of quantitative model layers for later phenomenology. This identifies exactly where the derivation is already strongest and where further closure still depends on stated assumptions, conventions, or downstream modeling.
 
 
 

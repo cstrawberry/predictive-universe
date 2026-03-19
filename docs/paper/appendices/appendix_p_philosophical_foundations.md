@@ -1324,7 +1324,7 @@ The following cases illustrate the PPI in action, showing how specific physical 
 *   **Case III: From the Requirement for Absolute Geometric Space to General Relativity**
     *   *Abstract Requirement:* A system that must operate within an absolute, static, non-participatory geometric background.
     *   *Instantiation Problem:* In PU, "space" is the interacting MPU network. MPUs are active thermodynamic processors with a stress-energy tensor $T_{\mu\nu}^{(MPU)}$ (PU Appendix B), contradicting the premise of a passive background.
-    *   *Thermodynamic Bridge:* Local thermodynamic equilibrium must hold (Clausius relation on local causal horizons, PU Postulate 4), linking heat flow from $T_{\mu\nu}^{(MPU)}$ to entropy change from the Area Law (PU Theorem 49).
+    *   *Thermodynamic Bridge:* Local thermodynamic equilibrium must hold on local causal horizons (PU Postulate 4), and under the Appendix F/G bridge this local-horizon input is formalized by Theorem 48a, linking heat flow from $T_{\mu\nu}^{(MPU)}$ to entropy change from the Area Law (PU Theorem 49).
     *   *Physical Manifestation (General Relativity):* For universal thermodynamic consistency, geometry ($g_{\mu\nu}$) must dynamically respond to $T_{\mu\nu}^{(MPU)}$ via the Einstein Field Equations (PU Theorem 50, rigorously derived in **Section 12**).
     *   *Conclusion:* General Relativity is the law of geometry under local thermodynamic-equilibrium constraints.
 
@@ -2610,7 +2610,7 @@ The distinction between logical necessities and their physical manifestations pr
     *   *Examples:* "What is the value of the speed of light?" "What are the masses of the elementary particles?" "What is the specific form of the law of gravity?"
     *   *PU Answer:* These values are determined by the PCE optimization process acting on the MPU network. They are the emergent parameters of the universe's equilibrium state.
 
-The PU framework reveals that the boundary between logical necessity and contingent parameter is sharper than traditionally assumed. Einstein asked whether God had any choice in creating the universe—whether the fundamental constants could have been otherwise. The rigidity results of Appendix Z suggest that the answer is no for the interface-mode count $M = 24$. The interface mode count $M = 24$ satisfies eight independent mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, and PCE minimality. Because these outputs are derived from shared discrete invariants and shared geometric constructions, their mutual consistency should be read as an internal rigidity/coherence check rather than as a frequentist "probability of coincidence" claim; assigning such a probability requires specifying an explicit alternative-model ensemble, priors, and multiple-comparisons accounting. Similarly, Appendix R derives the minimal three-generation solution topologically and shows that the $E_8$/Leech geometry is compatible with that count (Propositions R.3.5, R.4.2). These quantities are not free parameters awaiting measurement but uniquely or minimally selected outputs within the stated framework assumptions. The universe's constants are mathematically constrained by the logical structure of prediction.
+The PU framework reveals that the boundary between logical necessity and contingent parameter is sharper than traditionally assumed. Einstein asked whether God had any choice in creating the universe—whether the fundamental constants could have been otherwise. The rigidity results of Appendix Z suggest that the answer is no for the interface-mode count $M = 24$. The interface mode count $M = 24$ satisfies eight independent mathematical constraints simultaneously (Appendix Z, Theorem Z.12): algebraic structure, capacity saturation, kissing geometry, Golay optimality, Leech lattice uniqueness, unimodularity, modular weight, and PCE minimality. Because these outputs are derived from shared discrete invariants and shared geometric constructions, their mutual consistency should be read as an internal rigidity/coherence check rather than as a frequentist "probability of coincidence" claim; assigning such a probability requires specifying an explicit alternative-model ensemble, priors, and multiple-comparisons accounting. Similarly, Appendix R derives the minimal three-generation solution topologically and shows that the $E_8$/Leech geometry is compatible with that count (Theorem R.3.4; Proposition R.4.2). These quantities are not free parameters awaiting measurement but uniquely or minimally selected outputs within the stated framework assumptions. The universe's constants are mathematically constrained by the logical structure of prediction.
 
 This distinction resolves historical confusions where scientists have sought physical mechanisms for what are, in fact, logical necessities. The PU framework asserts that the "Why" of the first category is answered by logic, while the "What" and "How" of the second category are answered by physics, which itself emerges from optimizing the "Why."
 
@@ -2947,21 +2947,21 @@ $$d_0 = 2^{K_0} = 8$$
 
 *Proof.* By Convention 1, the Hilbert-space capacity is $C_{cap}=\log_2 d_0$ (bits). Encoding $K_0 = 3$ logically distinguishable bits requires $C_{cap}\ge K_0$, hence $d_0\ge 2^{K_0}=8$; PCE minimality selects the saturating case $d_0=8$.
 
-Four independent constraints determine $d_0 = 8$ uniquely:
+Three structural constraints determine $d_0 = 8$ on the minimal branch:
 
 1. **Binary structure:** $d_0 = 2^n$ for integer $n$, from discrete quantum measurement and bit-based encoding of $K_0$.
 
 2. **Self-referential logic:** $d_0 \geq 8$ from Theorem 15, as the minimum for SPAP operations.
 
-3. **Radon-Hurwitz consistency:** Normed division algebras exist only in dimensions 1, 2, 4, 8 (real numbers, complex numbers, quaternions, octonions) [Hurwitz 1898]. The value $d_0 = 8$ coincides with the maximal division algebra dimension.
+3. **PCE minimality:** Dimensions $d_0 > 8$ incur operational cost $V_{\text{op}}$ without adding any theorem-level operational necessity at the minimal branch, violating Definition 15.
 
-4. **PCE minimality:** Dimensions $d_0 > 8$ incur operational cost $V_{\text{op}}$ without algebraic benefit, violating Definition 15.
+Therefore the saturating minimal-branch value is $d_0 = 8$.
 
-The intersection of these constraints uniquely determines $d_0 = 8$.
+**Radon-Hurwitz coherence check.** Normed division algebras exist only in dimensions 1, 2, 4, 8 (real numbers, complex numbers, quaternions, octonions) [Hurwitz 1898]. The value $d_0 = 8$ therefore also coincides with the maximal normed-division-algebra dimension. This is a secondary algebraic coherence check, not an independent upper-bound proof inside PU.
 
 **Structural Consistency Check (Theorem Z.2).** The identity $d_0 = 2a^2$ derived in Theorem Z.2 from SPAP tensor product structure provides an independent verification: with $a = 2$ (Theorem Z.1), we obtain $d_0 = 2 \times 4 = 8$, consistent with $d_0 = 2^{K_0} = 2^3 = 8$. This consistency is non-trivial and reflects the mutual determination of $K_0$, $\varepsilon$, $a$, and $d_0$ by SPAP structure. $\square$
 
-**Epistemic Status:** Framework-derived from Convention 1, PCE minimality, with Radon-Hurwitz consistency and verification via Theorem Z.2.
+**Epistemic Status:** Framework-derived from Convention 1 and PCE minimality; Radon-Hurwitz and Theorem Z.2 provide secondary coherence checks.
 
 ---
 

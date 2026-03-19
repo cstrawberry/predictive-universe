@@ -137,7 +137,7 @@ In eight dimensions, the **$E_8$ root system** emerges as the natural coordinati
 
 1. **Packing optimality:** The $E_8$ lattice achieves the optimal sphere packing density in 8 dimensions (Viazovska 2017). This supplies a canonical discrete scaffold on the 8D real subspace that can organize internal "positions" efficiently.
 
-2. **Division algebra structure:** The framework's $d_0 = 8$ is related to octonionic structure via the Radon-Hurwitz theorem (**Appendix Z, Theorem Z.3**), which constrains division algebras to dimensions $\{1, 2, 4, 8\}$. **Appendix Z (Corollary Z.2)** establishes the octonionic connection: the existence of octonions (dimension 8) is tied to the maximal value $\rho(8) = 8$ in the Radon-Hurwitz function, providing a division-algebraic foundation for $d_0 = 8$. The $E_8$ root system naturally encodes this octonionic structure.
+2. **Division algebra structure:** The framework's $d_0 = 8$ is related to octonionic structure via the Radon-Hurwitz theorem (**Appendix Z, Theorem Z.3**), which constrains division algebras to dimensions $\{1, 2, 4, 8\}$. **Appendix Z (Corollary Z.2)** establishes the octonionic connection: the existence of octonions (dimension 8) is tied to the maximal value $\rho(8) = 8$ in the Radon-Hurwitz function, providing a secondary coherence check on the 8-dimensional branch rather than the proof of necessity for $d_0 = 8$. The $E_8$ root system naturally encodes this octonionic structure.
 
 3. **Maximal symmetry:** The 240 roots of $E_8$ provide maximal symmetry for uniform local neighborhoods, consistent with PCE's preference for high-symmetry configurations that minimize descriptive complexity.
 
@@ -153,7 +153,7 @@ Several factors single out $E_8$ as the natural geometric structure for the 8-di
 
 3. **Kissing Number Maximization:** $E_8$ has kissing number 240, the maximum for any lattice in 8 dimensions. This maximizes local distinguishability—each lattice point contacts exactly 240 nearest neighbors, providing the densest local error-correction structure. Higher kissing numbers correspond to more robust error correction under PCE.
 
-4. **Radon-Hurwitz Connection and Cayley Integers:** The existence of the octonions (the unique 8-dimensional normed division algebra) is tied to dimension 8 being a Radon-Hurwitz dimension (**Theorem Z.3**, Appendix Z). The $E_8$ lattice is isomorphic to the ring of Cayley integers (integral octonions), defined as the $\mathbb{Z}$-span of $\{1, e_1, \ldots, e_7, \omega\}$ where $\omega = \tfrac{1}{2}(1 + e_1 + \cdots + e_7)$ and $\{e_i\}$ are the standard octonion units (Conway & Sloane 1999). The norm form $N(x) = x\bar{x}$ on the Cayley integers is positive-definite with minimum value 1 on non-zero elements, and the set of unit-norm elements $\{x : N(x) = 1\}$ has cardinality exactly 240, matching the $E_8$ root count. This provides a direct algebraic bridge between the division algebra structure underlying $d_0 = 8$ and the geometric optimality of $E_8$.
+4. **Radon-Hurwitz Connection and Cayley Integers:** The same $d_0 = 8$ branch already fixed by SPAP and PCE is also the octonionic Radon-Hurwitz dimension (**Theorem Z.3**, Appendix Z). This does not prove $d_0 = 8$ inside PU; it provides a secondary algebraic coherence check. The $E_8$ lattice is isomorphic to the ring of Cayley integers (integral octonions), defined as the $\mathbb{Z}$-span of $\{1, e_1, \ldots, e_7, \omega\}$ where $\omega = \tfrac{1}{2}(1 + e_1 + \cdots + e_7)$ and $\{e_i\}$ are the standard octonion units (Conway & Sloane 1999). The norm form $N(x) = x\bar{x}$ on the Cayley integers is positive-definite with minimum value 1 on non-zero elements, and the set of unit-norm elements $\{x : N(x) = 1\}$ has cardinality exactly 240, matching the $E_8$ root count. This supplies a secondary algebraic bridge between the $d_0 = 8$ branch and the geometric optimality of $E_8$.
 
 5. **Self-Duality:** $E_8$ is self-dual, meaning $E_8^* = E_8$. This symmetry simplifies the geometric structure, eliminates arbitrary orientation choices, and ensures that the dual lattice (relevant for Fourier transforms in quantum mechanics) coincides with the original. Self-duality is a natural PCE attractor as it minimizes representational redundancy.
 
@@ -430,11 +430,11 @@ This section compares two distinct appearances of a three-fold pattern in the fr
 
 5. **Anomaly constraints:** Require $\sum_g F_g = 0$ and $\sum_g F_g^3 = 0$ (Theorem R.3.4).
 
-6. **CP violation requirement:** Demand $N \geq 3$ for non-vanishing Jarlskog invariant (Proposition R.3.5).
+6. **CP violation requirement:** Demand $N \geq 3$ for non-vanishing Jarlskog invariant (Theorem R.3.4).
 
 7. **Minimal solution:** Combined constraints yield $N=3$ with pattern $\{a, -a, 0\}$ as the smallest admissible solution in the modeled class.
 
-This topological mechanism derives three generations from first principles within the stated anomaly and MDL surrogate assumptions.
+This topological mechanism derives three generations from first principles within the stated anomaly and CP-violation assumptions; Proposition R.3.5 then records the additional MDL-surrogate selection statement.
 
 ### R.4.2 Geometric Compatibility: $E_8$/Leech Lattice Structure
 
@@ -485,7 +485,7 @@ The number 3 enters the framework in three distinct ways:
 
 These three appearances are mutually compatible with a three-generation interpretation. Among them, the topological mechanism is the actual derivation of $N=3$; the geometric and information-theoretic appearances provide supporting three-fold structure.
 
-*Proof.* Mechanism 1 is Proposition R.3.5: from $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, gauge embedding, anomaly cancellation, and the requirement of nontrivial CP violation, the smallest admissible solution is $N=3$ with charges $\{a,-a,0\}$. Mechanism 2 is the lattice-theoretic statement proved in this section: $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8^3$, so the 24-dimensional geometric construction carries a natural three-fold block structure. Mechanism 3 is the factorization $M=24=3\times 8$, which is numerically compatible with grouping the interface into three 8-dimensional blocks. Thus the three mathematical structures are compatible with one another, but only the first one proves the generation count. ∎
+*Proof.* Mechanism 1 is Theorem R.3.4: from $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, gauge embedding, anomaly cancellation, and the requirement of nontrivial CP violation, the smallest admissible solution is $N=3$ with charges $\{a,-a,0\}$. Mechanism 2 is the lattice-theoretic statement proved in this section: $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8^3$, so the 24-dimensional geometric construction carries a natural three-fold block structure. Mechanism 3 is the factorization $M=24=3\times 8$, which is numerically compatible with grouping the interface into three 8-dimensional blocks. Thus the three mathematical structures are compatible with one another, but only the first one proves the generation count. ∎
 
 ### R.4.2.1 The Golay Bridge: From Error Correction to Optimal Geometry
 

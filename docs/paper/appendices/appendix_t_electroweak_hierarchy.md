@@ -1736,10 +1736,10 @@ $$
 $$
 
 where $\sigma_B^2$ is the variance (per Bures-orthonormal direction) of the generation-localizing Gaussian on the interface orbit $\mathrm{Gr}(2,8)$ at the attractor. Isotropy and capacity equipartition across the $M=24$ interface directions fix
-
 $$
-\sigma_B^2 = \frac{1}{24} \quad\Longrightarrow\quad \alpha_{\mathrm{UV}} = \frac{24}{16} = \frac{3}{2}.
+\sigma_B^2 = \frac{1}{24} \quad\Longrightarrow\quad \alpha_{\mathrm{UV}} = \frac{24}{16} = \frac{3}{2},
 $$
+with $\sigma_B^2 = 1/24$ established explicitly in Lemma T.41.2.
 
 At low scales, the effective exponent extracted from data satisfies
 
@@ -3478,7 +3478,7 @@ $$u = \sqrt{\sigma^2_{\mathcal{G}}} = \sqrt{1/3} = \frac{1}{\sqrt{N_g}} = \frac{
 
 **Remark T.54.3: Consistency Check.** *The relation u² = 1/N_g connects generation number to interface variance:*
 $$N_g = \frac{1}{u^2} = 3$$
-*confirming internal consistency with Proposition R.3.5 (three generations from anomaly + CP).*
+*confirming internal consistency with Theorem R.3.4 (three generations from anomaly + CP).*
 
 ### T.22.6.6 Conditional CKM CP Phase
 
@@ -3854,8 +3854,8 @@ $$
 **Summary of Proposition T.58** ($E_8$ Optimality). *The $E_8$ root system is uniquely selected by information-theoretic criteria:*
 
 1. *Packing optimality: $E_8$ achieves the densest sphere packing in 8 dimensions (Viazovska 2017)*
-1. *Division algebra structure: The octonionic connection via $\rho(8) = 8$ in the Radon-Hurwitz function (Corollary Z.2)*
-1. *Maximal symmetry: 240 roots provide uniform local neighborhoods consistent with PCE*
+2. *Secondary octonionic coherence: the same $d_0 = 8$ branch singled out by SPAP and PCE is the octonionic Radon-Hurwitz dimension, providing algebraic context for the $E_8$ construction rather than the proof of necessity*
+3. *Maximal symmetry: 240 roots provide uniform local neighborhoods consistent with PCE*
 
 *The triad assignments $(d^2_{31}, d^2_{32})$ in Theorem T.37 are the unique optimal assignments achieving 87-96% agreement with observed mass ratios.*
 

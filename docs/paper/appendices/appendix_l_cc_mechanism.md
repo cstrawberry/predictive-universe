@@ -603,7 +603,7 @@ From quantum field theory in curved spacetime, the Unruh temperature associated 
 
 $$ T = \frac{\hbar\kappa}{2\pi k_B c} \tag{L.51} $$
 
-Local thermodynamic consistency (Postulate 4) requires the Clausius relation:
+Local thermodynamic consistency near causal horizons (Postulate 4, sharpened locally by Theorem 48a) requires the Clausius relation
 
 $$ \delta Q = T \delta S \tag{L.52} $$
 

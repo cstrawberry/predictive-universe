@@ -52,7 +52,7 @@
 
 *   **Complexity Hierarchy:** (Section 2.4.1) Iterative refinement sequence $\{C_{P,n}\}$ used to define $C_P$ self-consistently without presupposing derived physical laws.
 
-*   **Continuum Limit:** (Section 11, Appendix F) Convergence of the discrete MPU network structure (geometry and dynamics) to a continuous spacetime manifold $(M, g_{\mu\nu})$ and an effective AQFT description, conditional on Geometric Regularity (Theorem 43).
+*   **Continuum Limit:** (Section 11, Appendix F) Convergence of the discrete MPU network structure (geometry and dynamics) to a continuous spacetime manifold $(M, g_{\mu\nu})$ and an effective AQFT description, conditional on Theorem 43 together with the explicit continuum-bridge hypotheses used in Section 11.4 and Theorem F.0.
 
 *   **CPTP (Completely Positive Trace-Preserving):** (Appendix E, Appendix G) A quantum channel $\mathcal{E}$ is CPTP if it maps density operators to density operators, preserves trace ($\mathrm{tr}(\mathcal{E}(\rho)) = \mathrm{tr}(\rho)$), and remains positive when extended to any ancilla system. The 'Evolve' channel is CPTP by construction, with strict contractivity ($f_{RID} < 1$) guaranteed by irreversibility ($\varepsilon > 0$).
 
@@ -174,7 +174,7 @@
 
 *   **Postulate 3 (Statistical FTL Influence):** (Section 10.3.1) Hypothesis asserting that the CC mechanism acting on entangled systems allows for statistical influence across space-like separations, compatible with Postulate 2 due to bounds ($\text{CC} < 0.5$) and ND-RID information limits.
 
-*   **Postulate 4 (Local Thermodynamic Equilibrium):** (Section 12.1.2) Assumption that MPU networks admit states treatable as being in LTE near local causal horizons, enabling thermodynamic derivation of gravity.
+*   **Postulate 4 (Local Thermodynamic Equilibrium):** (Section 12.1.2) Assumption that MPU networks admit states treatable as being in LTE near local causal horizons, enabling the thermodynamic derivation of gravity. In Section 12, the local-horizon version used in the Jacobson-type derivation is sharpened, under the Appendix F/G bridge, by Theorem 48a.
 
 *   **Proposition 4 (MPU Hilbert Space):** (Section 7.2) The MPU state is represented in a complex Hilbert space $\mathcal{H}_0$ of dimension $d_0 \ge 8$.
 
@@ -223,7 +223,7 @@ on the verification/update resources required to approach that limit (Theorem 14
 
 *   **Space of Becoming:** (Definition 8) The open interval $(\alpha, \beta)$, representing the necessary operational range for Predictive Performance $PP(t)$ for viable, adaptive MPU functioning (Axiom 3).
 
-*   **SPAP (Self-Referential Paradox of Accurate Prediction):** (**Section 4.2, Theorems 10, 11, A.1.1, A.1.3**) Theorems demonstrating the logical impossibility of guaranteed perfect self-prediction (deterministic or probabilistic) for systems possessing sufficient computational richness (Property R). Establishes fundamental Logical Indeterminacy and performance limit $\alpha_{SPAP}$.
+*   **SPAP (Self-Referential Paradox of Accurate Prediction):** (**Section 4.2, Theorems 10, 11, A.1.1, A.1.3**) Theorems demonstrating the logical impossibility of guaranteed perfect self-prediction (deterministic or probabilistic) for systems possessing the represent / simulate / predicate-evaluate subcapacity needed for diagonalization, and therefore in particular for any system possessing Property R. Establishes fundamental Logical Indeterminacy and performance limit $\alpha_{SPAP}$.
 
 *   **Statistical FTL Influence:** (Postulate 3, Section 10.3) Hypothesized effect where CC modulation by Alice can statistically influence the marginal probabilities of outcomes for Bob's measurements on an entangled system at a space-like separated location, argued to be consistent with operational causality (Postulate 2) due to information limits (Theorem 42, Appendix F).
 
@@ -239,7 +239,7 @@ on the verification/update resources required to approach that limit (Theorem 14
 
 *   **Theorem 31 (Irreversibility Cost):** (Section 7.3.4, Appendix J) The physical instantiation of the SPAP update cycle necessarily incurs entropy production $\varepsilon \ge \ln 2$ per cycle, derived from Landauer's principle applied to the logically irreversible 2-to-1 state merge in SPAP.
 
-*   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.1–11.3.2, Theorem C.6, Appendix D) Theorem asserting that geometric regularity is necessary for the low-potential sector selected by POP/PCE, with every global minimum geometrically regular. Justified by necessity arguments (Appendix C) and the variational/ergodic analysis of Appendix D. Foundational for emergence of smooth spacetime.
+*   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.1–11.3.2, Theorem C.6, Appendix D) Theorem asserting that geometric regularity is necessary for the low-potential sector selected by POP/PCE, with every global minimum geometrically regular. Justified by necessity arguments (Appendix C) and the variational/ergodic analysis of Appendix D. Foundational for emergence of smooth spacetime, while the later manifold, AQFT, and gravity steps use additional explicit bridge hypotheses.
 
 *   **UCT (Unified Cost of Transgression):** (Appendix N) The thermodynamic/operational cost functional that quantifies the resource penalty for attempts to surpass the Prediction Coherence Boundary; unifies predictive and relativistic limits.
 

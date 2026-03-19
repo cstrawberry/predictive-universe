@@ -72,7 +72,7 @@ The gauge structure $\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \op
 
 $$\partial_\mu J_{B+L}^\mu = \frac{N_g g^2}{16\pi^2} W^a_{\mu\nu}\tilde{W}^{a\mu\nu} \tag{Y.1}$$
 
-where $N_g = 3$ is the number of generations (Proposition R.3.5), $W^a_{\mu\nu}$ is the $SU(2)_L$ field strength, and $\tilde{W}^{a\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$ is its dual.
+where $N_g = 3$ is the number of generations (Theorem R.3.4), $W^a_{\mu\nu}$ is the $SU(2)_L$ field strength, and $\tilde{W}^{a\mu\nu} = \frac{1}{2}\epsilon^{\mu\nu\rho\sigma}W^a_{\rho\sigma}$ is its dual.
 
 *Derivation:* For a single left-handed $SU(2)_L$ doublet, the $SU(2)$ chiral anomaly contributes
 $$
@@ -355,7 +355,7 @@ $$\kappa_{gen} = \frac{\varepsilon}{N_g} = \frac{\ln 2}{3} = 0.231$$
 
 **(a) Information-theoretic setup.** The CKM matrix $V$ encodes flavor mixing across $N_g = 3$ generations. CP violation requires the Jarlskog invariant:
 $$J_{CP} = \text{Im}(V_{us}V_{cb}V_{ub}^*V_{cs}^*) \neq 0$$
-This is non-zero only if $N_g \geq 3$ (Proposition R.3.5).
+This is non-zero only if $N_g \geq 3$ (Theorem R.3.4).
 
 **(b) Coherent superposition.** The generation state during a flavor-changing process is:
 $$|\psi_{gen}\rangle = \sum_{g=1}^{N_g} c_g |g\rangle$$
@@ -373,7 +373,7 @@ $$\kappa_{gen} = \frac{\varepsilon}{N_g} = \frac{\ln 2}{3} = 0.231$$
 
 **(e) Democratic distribution.** The $1/N_g$ distribution follows from:
 - PCE optimization: Maximum entropy distribution minimizes description length
-- $S_{N_g}$ symmetry: Generation manifold has permutation symmetry (Proposition R.3.5)
+- $S_{N_g}$ symmetry: Generation manifold has permutation symmetry up to relabeling of the three family-charge sectors (Theorem R.3.4)
 - CKM unitarity: $\sum_g |V_{ig}|^2 = 1$ enforces normalization
 
 The single-verification form ($\varepsilon/N_g$ rather than $2\varepsilon/N_g$) follows because the CP-sector selection is already accounted for in $\kappa_{CP} = \kappa_{EW}/2$.
@@ -450,7 +450,7 @@ $$\mathcal{C}_{eff} = \frac{c_{sph}}{2N_g} \cdot \mathcal{S} \cdot f_{neq} \tag{
 
 **Step 2 (Sphaleron conversion factor).** The sphaleron-to-baryon conversion efficiency arises from chemical equilibrium relations during sphaleron freeze-out [Khlebnikov & Shaposhnikov 1988]. For $N_g$ generations and $n_H$ Higgs doublets:
 $$c_{sph} = \frac{8N_g + 4n_H}{22N_g + 13n_H}$$
-With $N_g = 3$ (Proposition R.3.5) and $n_H = 1$:
+With $N_g = 3$ (Theorem R.3.4) and $n_H = 1$:
 $$c_{sph} = \frac{8 \times 3 + 4 \times 1}{22 \times 3 + 13 \times 1} = \frac{28}{79} \approx 0.354$$
 This is not a free parameter but a calculable consequence of the derived Standard Model content.
 
@@ -507,7 +507,7 @@ This numerical evaluation is conditional on the Appendix T target tuple and the 
 | $k = M/2$ | 12 | Golay code dimension |
 | $\kappa_{EW}$ | 38.5 | Theorem T.5 |
 | $\varepsilon$ | $\ln 2 = 0.6931$ | Theorem 31 |
-| $N_g$ | 3 | Proposition R.3.5 |
+| $N_g$ | 3 | Theorem R.3.4 |
 | $\delta$ | $66.7°$ | Theorem T.56 |
 | $\alpha_{em}^{-1}$(Thomson) | $137.036092 \pm 0.000060$ | Theorem Z.26 |
 | $\sin^2\theta_W^{(0)}$ | $3/8$ | Gauge normalization (Theorem T.14) |
@@ -597,7 +597,7 @@ All derived quantities are consistent with observation.
 |:----------|:-------|:-------|
 | $K_0 = 3$ | Foundational | Horizon constant (axiom) |
 | $\varepsilon = \ln 2$ | Derived | Landauer limit (Theorem 31) |
-| $N_g = 3$ | Derived | Anomaly cancellation (Proposition R.3.5) |
+| $N_g = 3$ | Derived | Anomaly cancellation (Theorem R.3.4) |
 | $\delta = 66.7°$ | Derived | Berry holonomy (Theorem T.56) |
 | $\alpha_{em}^{-1} = 137.036092 \pm 0.000060$ | Derived | Capacity saturation (Theorem Z.26) |
 | $\sin^2\theta_W^{(0)} = 3/8$ | Derived | Bures geometry (Theorem T.14) |
@@ -842,7 +842,7 @@ K_0 = 3 &\xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[4pt]
 &\xrightarrow{\text{Thm Z.5}} M = 2ab = 24, \quad k = 12 \\[4pt]
 &\xrightarrow{\text{Thm T.5}} \kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 38.5 \\[4pt]
 &\xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \\[4pt]
-&\xrightarrow{\text{Prop R.3.5}} N_g = 3 \\[4pt]
+&\xrightarrow{\text{Thm R.3.4}} N_g = 3 \\[4pt]
 &\xrightarrow{\text{Thm Y.8}} \kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.48 \\[4pt]
 &\xrightarrow{\text{Thm T.56}} \delta = 66.7° \implies \sin\delta = 0.918 \\[4pt]
 &\xrightarrow{\text{Thm Y.9}} \eta_B = \mathcal{C}_{eff} \cdot \tanh(\mathcal{S}\sin\delta) \cdot f_{wash} \cdot e^{-\kappa_B} \\[4pt]
@@ -990,7 +990,7 @@ $$f_{sinc} = \text{sinc}(1/\sqrt{3}) = \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = 0.9
 
 ### Y.A.3 Derivation of $N_g = 3$
 
-**Source:** Proposition R.3.5 (Appendix R)
+**Source:** Theorem R.3.4 (Appendix R)
 
 Three generations emerge from two independent constraints:
 

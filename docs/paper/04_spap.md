@@ -16,9 +16,9 @@ A formal model class $\mathcal{M}$, used by predictive systems $S$, possesses **
 2.  **Simulate/Reason:** Simulate the execution (the predictive process) of any model $M \in \mathcal{M}$ applied to a given state $s$, or formally reason about this execution within $\mathcal{F}$. This capability is subject to fundamental computational limits like the Halting Problem or Reflexive Undecidability (Theorem 12, Appendix A.2).
 3.  **Evaluate Predicates:** Represent and evaluate logical formulas or predicates within $\mathcal{F}$ concerning the behavior, output, or predictive accuracy of models in $\mathcal{M}$ (e.g., determine if "model $M$ predicts outcome $\phi=1$ from state $s$" is provable, or check if "prediction $\hat{s}$ matches actual outcome $s'$").
 
-Property R establishes the level of computational sophistication required for a system to engage in the kind of self-referential reasoning that leads to the SPAP paradoxes. Property R emerges through **two complementary foundations** rigorously established in **Appendix A.0**: (I) **Logical Necessity** (§A.0.2), which demonstrates that Property R follows necessarily from the fundamental structure of prediction itself, independent of physical implementation; and (II) **Physical Instantiation** (§A.0.3-A.0.5), which demonstrates how this abstract necessity manifests in finite resource systems through POP/PCE optimization dynamics.
+Property R establishes a sufficient level of computational sophistication for the kind of self-referential reasoning that leads to the SPAP paradoxes. Property R emerges through **two complementary foundations** rigorously established in **Appendix A.0**: (I) **Logical Necessity** (§A.0.2), which demonstrates that Property R follows from the predict-verify architecture once the Logical-Structural Assumptions of Appendix A are made explicit; and (II) **Physical Instantiation** (§A.0.3-A.0.5), which demonstrates how this abstract capacity manifests in finite resource systems through POP/PCE optimization dynamics.
 
-The **logical foundation** (§A.0.2) derives Property R from the predict-verify cycle, establishing it as logically prior to SPAP and eliminating circular reasoning. The **physical instantiation** (§A.0.3-A.0.5) demonstrates how MPU networks, each with minimal capacity $K_0 = 3$ bits, achieve **Effective Operational Property R** through PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). This derivation is conditional upon the **Assumption of QEC Compatibility** (§A.0.4). For complete derivations, proofs, and mathematical validation, see Appendix A.0.
+The **logical foundation** (§A.0.2) derives Property R from the predict-verify cycle together with the stated Logical-Structural Assumptions, establishing it as logically prior to SPAP and eliminating circular reasoning. The **physical instantiation** (§A.0.3-A.0.5) demonstrates how MPU networks, each with minimal capacity $K_0 = 3$ bits, achieve **Effective Operational Property R** through PCE-driven error optimization (Theorem A.0.2) and network composition (Theorem A.0.6). This derivation is conditional upon the **Assumption of QEC Compatibility** (§A.0.4). For complete derivations, proofs, and mathematical validation, see Appendix A.0. The diagonal SPAP proofs below use only the represent / simulate / predicate-evaluate subcapacity singled out in Definition 10; full Property R is therefore sufficient but stronger than strictly necessary for Theorems 10–11.
 
 **4.1.3 Proposition 2 (Sufficient Conditions for Property R)**
 
@@ -27,7 +27,7 @@ Any model class $\mathcal{M}$ that is **Turing-complete** possesses Property R r
 
 **4.2 The Self-Referential Paradox of Accurate Prediction (SPAP)**
 
-We now formally establish the core theorems demonstrating the fundamental limitations on guaranteed accurate self-prediction for systems possessing Property R. These proofs utilize diagonalization arguments, constructing self-referential systems whose behavior logically contradicts the assumption of a perfect predictor. (Detailed formal proofs in Appendix A.1).
+We now formally establish the core theorems demonstrating the fundamental limitations on guaranteed accurate self-prediction for systems whose formalism can represent coded self-descriptions, simulate the nominated predictor on those descriptions, and evaluate the relevant predicates about the predicted outputs. Any framework possessing Property R satisfies these conditions. These proofs utilize diagonalization arguments, constructing self-referential systems whose behavior logically contradicts the assumption of a perfect predictor. (Detailed formal proofs in Appendix A.1).
 
 **4.2.1 Definition 11 (Def 11): Dynamic Self-Reference Operator (DSRO)**
 
@@ -39,14 +39,14 @@ where $F$ is computable, and ProofSearch represents a bounded search for proofs 
 
 **4.2.2 Theorem 10 (Deterministic SPAP - Impossibility of Perfect Self-Prediction)**
 
-Let $\mathcal{M}$ be a model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$ capable of representing basic arithmetic. There exists no single deterministic prediction function $P_f$, implementable within $\mathcal{M}$, that can guarantee perfect prediction of the future state $S(t+\Delta t)$ for all possible systems $S$ constructible within $\mathcal{M}$ that engage in self-prediction based on $P_f$.
-*Proof:* Assume, for contradiction, that a single deterministic predictor $P_f$ as stated exists. By Property R (Definition 10), the model class $\mathcal{M}$ can represent coded descriptions of systems in $\mathcal{M}$, simulate the action of predictors on those coded descriptions, and evaluate the relevant binary predicates about predicted outcomes. Using these capabilities, construct a system $S_{diag}\in\mathcal{M}$ whose nominated binary next-state component $\phi_{t+1}\in\{0,1\}$ is defined by first querying $P_f$ on its own current description and then applying the update rule
+Let $\mathcal{M}$ be a model class whose formalism can represent coded descriptions of systems in $\mathcal{M}$, simulate the nominated predictor on those coded descriptions, and evaluate the relevant binary predicates about predicted outcomes. In particular, any model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$ capable of representing basic arithmetic satisfies these conditions. There exists no single deterministic prediction function $P_f$, implementable within $\mathcal{M}$, that can guarantee perfect prediction of the future state $S(t+\Delta t)$ for all possible systems $S$ constructible within $\mathcal{M}$ that engage in self-prediction based on $P_f$.
+*Proof:* Assume, for contradiction, that a single deterministic predictor $P_f$ as stated exists. By the represent / simulate / predicate-evaluate subcapacity just stated, the model class $\mathcal{M}$ can represent coded descriptions of systems in $\mathcal{M}$, simulate the action of predictors on those coded descriptions, and evaluate the relevant binary predicates about predicted outcomes. Using these capabilities, construct a system $S_{diag}\in\mathcal{M}$ whose nominated binary next-state component $\phi_{t+1}\in\{0,1\}$ is defined by first querying $P_f$ on its own current description and then applying the update rule
 $$
 \phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f}) \quad \text{(10)}
 $$
 where $\hat{\phi}_{P_f}$ denotes the value predicted by $P_f$ for that same component of $S_{diag}$ at time $t+\Delta t$.
 
-Because the construction uses only representation, simulation, and predicate-evaluation operations guaranteed by Property R, the system $S_{diag}$ is constructible within $\mathcal{M}$. If $P_f$ were perfect for every such system, then in particular it would be perfect for $S_{diag}$, so
+Because the construction uses only these representation, simulation, and predicate-evaluation operations, the system $S_{diag}$ is constructible within $\mathcal{M}$. If $P_f$ were perfect for every such system, then in particular it would be perfect for $S_{diag}$, so
 $$
 \hat{\phi}_{P_f}=\phi_{t+1}.
 $$
@@ -58,8 +58,8 @@ No element of $\{0,1\}$ satisfies this equation. This contradiction shows that n
 
 **4.2.3 Theorem 11 (Probabilistic SPAP)**
 
-Let $\mathcal{M}$ be a model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$. There exists no single probabilistic predictor $P_f: \mathcal{S} \times \mathcal{M} \rightarrow \Delta(\mathcal{S})$ implementable within $\mathcal{M}$ that can guarantee assignment of probabilities that exactly match the true distribution of outcomes for all aspects of all self-predicting systems $S$ constructible within $\mathcal{M}$.
-*Proof:* Assume, for contradiction, that a single probabilistic predictor $P_f: \mathcal{S}\times\mathcal{M}\to\Delta(\mathcal{S})$ as stated exists. By Property R (Definition 10), systems in $\mathcal{M}$ can represent their own descriptions, simulate the action of $P_f$ on those descriptions, and evaluate predicates concerning the predicted distribution. Construct a system $S'_{diag}\in\mathcal{M}$ with a nominated binary next-state aspect $\phi_{t+1}\in\{0,1\}$ that first computes the predicted marginal
+Let $\mathcal{M}$ be a model class whose formalism can represent coded descriptions of systems in $\mathcal{M}$, simulate the nominated predictor on those coded descriptions, and evaluate predicates concerning the predicted distribution. In particular, any model class possessing Property R (Definition 10) relative to a consistent formal system $\mathcal{F}$ satisfies these conditions. There exists no single probabilistic predictor $P_f: \mathcal{S} \times \mathcal{M} \rightarrow \Delta(\mathcal{S})$ implementable within $\mathcal{M}$ that can guarantee assignment of probabilities that exactly match the true distribution of outcomes for all aspects of all self-predicting systems $S$ constructible within $\mathcal{M}$.
+*Proof:* Assume, for contradiction, that a single probabilistic predictor $P_f: \mathcal{S}\times\mathcal{M}\to\Delta(\mathcal{S})$ as stated exists. By the represent / simulate / predicate-evaluate subcapacity just stated, systems in $\mathcal{M}$ can represent their own descriptions, simulate the action of $P_f$ on those descriptions, and evaluate predicates concerning the predicted distribution. Construct a system $S'_{diag}\in\mathcal{M}$ with a nominated binary next-state aspect $\phi_{t+1}\in\{0,1\}$ that first computes the predicted marginal
 $$
 p:=P_f(\phi_{t+1}=1\mid S'_{diag},t).
 $$
@@ -68,7 +68,7 @@ $$
 P_{actual}(\phi_{t+1}=1) = \begin{cases} 0, & \text{if } p > 0.5 \\ 1, & \text{if } p \le 0.5 \end{cases} \quad \text{(11)}
 $$
 
-Because this construction again uses only the represent/simulate/evaluate operations guaranteed by Property R, the system $S'_{diag}$ is constructible within $\mathcal{M}$. If $P_f$ were exact for every such self-predicting system, then it would be exact for $S'_{diag}$, so its predicted marginal $p$ would have to equal the actual marginal specified by the rule above.
+Because this construction again uses only the represent / simulate / predicate-evaluate operations just stated, the system $S'_{diag}$ is constructible within $\mathcal{M}$. If $P_f$ were exact for every such self-predicting system, then it would be exact for $S'_{diag}$, so its predicted marginal $p$ would have to equal the actual marginal specified by the rule above.
 
 There are two cases.
 

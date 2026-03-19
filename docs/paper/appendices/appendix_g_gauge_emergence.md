@@ -847,10 +847,10 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
        Quantitative constraints on electroweak coupling ratios at the PCE-attractor—including a branch-specific prediction for $\sin^2\theta_W(\mu^*)$ under the cap-active alignment (Assumption W.3.A)—are derived in Appendix W (Theorem W.11; Eqs. W.3.1–W.3.3).
 
     *   **PCE Corollary – Singlet Neutrality.** Assigning non‑zero hypercharge to a pure non‑abelian singlet increases PCE cost without predictive gain; the minimum sets the hypercharge of any potential sterile right-handed neutrino to zero.
-    *   **Three Generations (Unique Minimizer).** Appendix R shows that, in the modeled family-charge sector, the smallest nontrivial anomaly-consistent family structure compatible with CP violation is $N=3$ with offsets $\{a,-a,0\}$ (Proposition R.3.5). Proposition R.4.2 adds that the $E_8$/Leech and $M=24=8\times 3$ structures are compatible with this count, but they do not provide a second independent derivation.
+    *   **Three Generations (Unique Minimizer).** Appendix R shows that, in the modeled family-charge sector, the smallest nontrivial anomaly-consistent family structure compatible with CP violation is $N=3$ with offsets $\{a,-a,0\}$ (Theorem R.3.4). Proposition R.4.2 adds that the $E_8$/Leech and $M=24=8\times 3$ structures are compatible with this count, but they do not provide a second independent derivation.
 
 3.  **Confluence and Co-selection:**
-    D=4 provides the stable arena; within it, the SM gauge group with its uniquely determined chiral fermion content is PCE-efficient, and the family replication uniquely selected by PCE is $N=3$. The capacity bound $n_G \leq 12$ excludes simple unification groups (Corollary G.8.4c.1), predicting proton stability against gauge-mediated decay (Corollary G.8.4c.2).
+    D=4 provides the stable arena; within it, the SM gauge group with its uniquely determined chiral fermion content is PCE-efficient, and the minimal anomaly-consistent family replication compatible with CP violation is $N=3$. The capacity bound $n_G \leq 12$ excludes simple unification groups (Corollary G.8.4c.1), predicting proton stability against gauge-mediated decay (Corollary G.8.4c.2).
     
 ### G.8.6 Emergent Couplings and Masses
 
@@ -1560,7 +1560,7 @@ This appendix has demonstrated how the Predictive Universe framework derives fun
 
 3. **Spacetime Dimension:** $D = 4$ is uniquely selected from the mode-channel correspondence (Appendix Z) $M = K(D)$, where the 24 QFI interface modes match the kissing number $K(4) = 24$ (Theorems Z.10–Z.11).
 
-4. **Three Generations:** Appendix R derives $N_g = 3$ from anomaly cancellation together with the CP-violation requirement in the modeled family-charge sector; the $E_8$/Leech construction supplies a compatible three-fold scaffold rather than a second proof (Appendix R, Propositions R.3.5, R.4.2).
+4. **Three Generations:** Appendix R derives $N_g = 3$ from anomaly cancellation together with the CP-violation requirement in the modeled family-charge sector; the $E_8$/Leech construction supplies a compatible three-fold scaffold rather than a second proof (Appendix R, Theorem R.3.4; Proposition R.4.2).
 
 5. **Fine-Structure Constant:** The value $\alpha_{em}^{-1} = 137.036092 \pm 0.000060$ emerges from the Appendix Z U(1) sector (Theorems Z.24–Z.26), with no continuous fit parameters.
 

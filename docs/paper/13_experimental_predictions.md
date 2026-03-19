@@ -555,7 +555,7 @@ Discrepancy: $+0.000093 \pm 0.000060$ ($\sim 1.5\sigma$, 0.68 ppm). Consistent w
 
 **Prediction:** Exactly $N_{\mathrm{gen}} = 3$ generations of Standard Model fermions.
 
-**Derivation Summary:** The manuscript's strongest derivation of $N_{\mathrm{gen}}=3$ is topological: anomaly cancellation on $\Sigma_8 = U(8)/U(1)^8$, together with the requirement of nontrivial CP violation, selects the minimal admissible charge pattern $\{a, -a, 0\}$ (Theorem R.3.4, Proposition R.3.5). The geometric $M = 24 = 8 \times 3$ and Leech/$E_8$ constructions of Appendix R provide a compatible three-fold structure, but they do not independently prove the generation count without the additional topological and modeling assumptions stated there.
+**Derivation Summary:** The manuscript's strongest derivation of $N_{\mathrm{gen}}=3$ is topological: anomaly cancellation on $\Sigma_8 = U(8)/U(1)^8$, together with the requirement of nontrivial CP violation, selects the minimal admissible charge pattern $\{a, -a, 0\}$ (Theorem R.3.4). Proposition R.3.5 adds the MDL-surrogate selection statement on the same modeled class. The geometric $M = 24 = 8 \times 3$ and Leech/$E_8$ constructions of Appendix R provide a compatible three-fold structure, but they do not independently prove the generation count without the additional topological and modeling assumptions stated there.
 
 **Falsification Conditions:**
 - Discovery of fourth-generation quarks or leptons at colliders
@@ -624,7 +624,7 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 |:-----------|:----------------|:-------------------|:-----------|:------:|
 | Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
 | Fine-structure constant $\alpha^{-1}$ | $137.036092 \pm 0.000060$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
-| Light active neutrino count $N_{\nu}$ | 3 under the standard identification from $N_{\mathrm{gen}}=3$ | $2.984 \pm 0.008$ | Proposition R.3.5 + LEP $Z$ width | indirect |
+| Light active neutrino count $N_{\nu}$ | 3 under the standard identification from $N_{\mathrm{gen}}=3$ | $2.984 \pm 0.008$ | Theorem R.3.4 + LEP $Z$ width | indirect |
 | Gauge group $G_{\mathrm{SM}}$ (conditional on Proposition G.M1, Eq. (G.8.5), and the SM-type anomaly/hypercharge data of Theorem G.8.4b) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ✓ |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ✓ |
 

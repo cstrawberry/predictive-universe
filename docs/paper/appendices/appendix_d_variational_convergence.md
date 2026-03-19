@@ -356,10 +356,61 @@ with $C_\delta:=\operatorname{Vol}(\mathcal K)/\operatorname{Vol}(U_\delta)<\inf
 
 The results derived in this appendix provide the rigorous dynamical justification for Theorems 2 and 43, establishing them as necessary consequences of the framework's core optimization principles operating through stochastic dynamics. The convergence from the discrete MPU network to a continuum description governed by a standard action is made precise by the following theorem.
 
+**Lemma D.6a (Equicoercivity of the discrete predictive action from PU bounded geometry).**
+
+Let $\{(\mathcal G_h,d_h,\mu_h)\}_{h\downarrow 0}$ be the family of PU weighted graphs used in Theorem D.6, with the PU macroscopic rescaling already applied. Assume
+$$
+\mathcal F_h=\mathcal F_h^{EH}+\mathcal F_h^{MPU},
+\qquad
+\mathcal F_h^{EH}\ge 0,
+\quad
+\mathcal F_h^{MPU}\ge 0.
+$$
+Assume further that for every fixed sublevel $M<\infty$ there exists $h_0(M)>0$ such that for all $h<h_0(M)$, every configuration with $\mathcal F_h\le M$ satisfies the bounded-geometry hypotheses already established in Appendix C, namely:
+
+- uniform $D$-dimensional two-sided volume bounds,
+- local doubling,
+- bounded degree, properness, and minimal link length.
+
+Then for each $M$, the sublevel family
+$$
+\mathfrak S_h(M):=\{(\mathcal G_h,d_h,\mu_h): \mathcal F_h\le M\}
+$$
+is precompact in the pointed measured Gromov-Hausdorff topology. In particular, $\{\mathcal F_h\}$ is equicoercive.
+
+*Proof.* Fix $M<\infty$ and basepoints $x_h\in\mathcal G_h$.
+
+**Step 1 (packing bound).** Fix $R>0$ and $\varepsilon\in(0,R)$. Let $S\subset B(x_h,R)$ be a maximal $\varepsilon$-separated set. Then the balls $\{B(s,\varepsilon/2):s\in S\}$ are pairwise disjoint and contained in $B(x_h,R+\varepsilon/2)$. Two-sided volume control gives
+$$
+|S|\,K_1\Big(\frac{\varepsilon/2}{h}\Big)^D
+\le
+\sum_{s\in S}\mu_h(B(s,\varepsilon/2))
+\le
+\mu_h(B(x_h,R+\varepsilon/2))
+\le
+K_2\Big(\frac{R+\varepsilon/2}{h}\Big)^D.
+$$
+Hence
+$$
+|S|
+\le
+\frac{K_2}{K_1}\Big(\frac{2R+\varepsilon}{\varepsilon}\Big)^D
+\le
+\frac{K_2}{K_1}\Big(\frac{3R}{\varepsilon}\Big)^D
+=: \nu(\varepsilon,R).
+$$
+Because $S$ is maximal, it is also an $\varepsilon$-net, so the same bound controls covering numbers.
+
+**Step 2 (pointed GH precompactness).** Gromov's covering-number criterion now yields pointed GH precompactness.
+
+**Step 3 (measured precompactness).** On each bounded ball the measures are uniformly finite, and the covering bound gives tightness. Prokhorov therefore upgrades pointed GH subsequences to pointed measured GH subsequences.
+
+So every bounded-action sequence has a pointed measured Gromov-Hausdorff convergent subsequence. This is exactly equicoercivity. ∎
+
 **Theorem D.6 (Gamma-limit of discrete predictive action).**
 Let $\{(\mathcal G_h,\mu_h)\}_{h\downarrow0}$ be a family of weighted graphs (or triangulations) with mesh $h\to0$, equipped with a discrete curvature proxy and an MPU (matter) term. Let $\mathcal F_h=\mathcal F_h^{EH}+\mathcal F_h^{MPU}$ denote the corresponding discrete predictive action. Suppose:
 
-(i) **Equicoercivity:** For every $M<\infty$, the sublevel sets $\{\,g\mid \mathcal F_h[g]\le M\,\}$ are precompact in the pointed Gromov-Hausdorff topology of Section 11 (after the standard PU rescaling).
+(i) **Equicoercivity:** holds by Lemma D.6a.
 
 (ii) **Locality & consistency:** Along any convergent sequence $(\mathcal G_h,\mu_h)\to(M,g)$ in that topology, the discrete curvature term converges to the Einstein-Hilbert term with scalar curvature $R_g$ (e.g., via Regge convergence or via the Ollivier-to-continuum estimator of Remark C.3.3a), and the MPU term converges in $L^1_{\mathrm{loc}}$ to $\int_M \mathcal L_{MPU}(g,\phi)\sqrt{-g}\,d^4x$.
 

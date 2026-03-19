@@ -353,6 +353,7 @@
 *   Leifer, M. S., & Pusey, M. F. (2017). Is a time symmetric interpretation of quantum theory possible without retrocausality? *Proceedings of the Royal Society A*, *473*(2202), 20160607. DOI: 10.1098/rspa.2016.0607
 *   Lelli, F., McGaugh, S. S., & Schombert, J. M. (2016). SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves. *The Astronomical Journal*, *152*(6), 157. DOI: 10.3847/0004-6256/152/6/157
 *   Lelli, F., McGaugh, S. S., & Schombert, J. M. (2017). One law to rule them all: The radial acceleration relation of galaxies. *The Astrophysical Journal*, *836*(2), 152.
+*   Levi, M., Santagati, F., Tabacco, A., & Vallarino, M. (2023). Poincaré inequalities on graphs. *Analysis Mathematica*, *49*(2), 529–544. DOI: 10.1007/s10476-023-0215-5
 *   Levin, D. A., & Peres, Y. (2017). *Markov Chains and Mixing Times* (2nd ed.). American Mathematical Society.
 *   Levin, M. (2007). Gap junctional communication in morphogenesis. *Progress in Biophysics and Molecular Biology*, *94*(1–2), 186–206.
 *   Levin, M. (2014). Molecular bioelectricity: How endogenous voltage potentials control cell behavior and instruct pattern regulation in vivo. *Molecular Biology of the Cell*, *25*(24), 3835–3850. DOI: 10.1091/mbc.e13-12-0708

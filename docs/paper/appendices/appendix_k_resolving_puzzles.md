@@ -49,7 +49,7 @@ The unified derivation connects these three observables through the same underly
 
 **Fermion Masses and Yukawa Couplings:** The specific values arise from geometric overlaps of generation vacua on the MPU's internal Perspective Space $\Sigma_8 = U(8)/U(1)^8$, as rigorously derived in Appendix R. The generation count itself is derived topologically, while the geometric sector supplies the mass-hierarchy mechanism and a compatible three-fold scaffold:
 
-1. **Topological:** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Theorem R.3.1), the family-charge anomaly constraints, and the CP-violation requirement, this yields the minimal admissible three-generation pattern with family charges $\{a, -a, 0\}$ (Proposition R.3.5).
+1. **Topological:** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent topological charges (Theorem R.1.1). Combined with gauge-topology correspondence (Theorem R.3.1), the family-charge anomaly constraints, and the CP-violation requirement, this yields the minimal admissible three-generation pattern with family charges $\{a,-a,0\}$ (Theorem R.3.4).
 
 2. **Geometric:** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (Section R.2.1). Squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ determine mass ratios via Gaussian suppression on the PCE-Attractor orbit Gr(2,8) with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3), and furnish a three-fold compatibility structure consistent with $N=3$.
 
