@@ -2007,7 +2007,7 @@ $$
 $$
 with $A(x)$ symmetric and positive definite. This determines a Riemannian metric on spatial slices.
 
-**(ii) Temporal sector (cone structure and hyperbolicity).** Locality of ND–RID together with Proposition F.1 yields a finite propagation speed and therefore an emergent causal cone in the continuum scaling. Any second‑order local continuum limit compatible with such a cone must be hyperbolic, and its principal symbol vanishes on the null cone. After choosing units so that the maximal signal speed is $c=v_{LR}$, the characteristic quadratic form can be written as
+**(ii) Temporal sector (cone structure and hyperbolicity).** Locality of ND–RID together with Proposition F.1 yields a finite propagation cone in the discrete theory under its local boundedness and finite-range hypotheses, while Theorem 46 supplies a finite invariant causal speed $c$ for the emergent geometry. Any second‑order local continuum limit compatible with such a cone must be hyperbolic, and its principal symbol vanishes on the null cone. Choosing units so that the maximal geometric signal speed is written as $c$, the characteristic quadratic form can be written as
 $$
 g^{\mu\nu}\,\xi_\mu\xi_\nu=-\frac{\xi_0^2}{c^2}+\xi^\top A(x)\,\xi,
 $$
@@ -2690,7 +2690,7 @@ In the PU framework, awareness doesn't use time—awareness is the process whose
 - The operational manifestation of awareness
 - The fundamental tick of time itself
 
-*Note:* While individual MPU cycles are discrete events, the emergent continuum time (Appendix F, Theorem F.0) arises from the collective dynamics of the network. The 'tick' metaphor refers to operational cycles, not fundamental discreteness of spacetime.
+*Note:* While individual MPU cycles are discrete events, the continuum time variable used in the Appendix F description arises from the collective dynamics of the network through the conditional continuum-limit construction stated there. The 'tick' metaphor refers to operational cycles, not fundamental discreteness of spacetime.
 
 When we speak of temporal engineering, we're describing awareness modulating its own operational rhythm to influence the patterns that emerge from its predictive activity through the stochastic adaptation dynamics characterized in Appendix D (Theorem D.5).
 

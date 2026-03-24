@@ -204,11 +204,11 @@ A potential objection arises: How can PU prohibit retrocausality while simultane
 - **Retrocausality** involves influence from future to past within a single worldline or causal chain—effects preceding their causes in timelike-separated events. This is **absolutely prohibited** by Theorem O.3.
 - **Statistical FTL** involves correlations between spacelike-separated events, neither of which is in the other’s causal past or future. These correlations are mediated by the globally prepared quantum state $\omega_{C_A}$, not by reversal of causal processes.
 
-The AQFT analysis in **Appendix F** makes this distinction precise. **Corollary F.1** establishes that the emergent algebra of observables satisfies standard Einstein Causality (microcausality):
+The AQFT analysis in **Appendix F** makes this distinction precise at the level of the continuum-bridge theorem. When the hypotheses of Theorem F.0 are satisfied, **Corollary F.1** yields standard Einstein Causality (microcausality):
 $$
 [\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = 0
 $$
-for spacelike-separated regions $\mathcal{O}_1$ and $\mathcal{O}_2$. Local operators commute, ensuring no direct causal influence between spacelike-separated measurements.
+for spacelike-separated regions $\mathcal{O}_1$ and $\mathcal{O}_2$. In that AQFT regime, local operators commute, ensuring no direct causal influence between spacelike-separated measurements.
 
 The statistical FTL influence hypothesized in Postulate 3 is **state-mediated**, not operator-mediated. As formalized in **Equation F.4**:
 $$
@@ -808,7 +808,7 @@ $$
 $$
 Once Definition H.0 is fixed, the result uses zero continuously adjustable parameters and connects microscopic quantum geometry directly to galactic dynamics without invoking dark matter particles.
 
-*   **Internal Justification for Emergence (via Appendices):** PU's viability relies on emergence mechanisms justified internally: Complexity Alignment (Theorem 2, Appendix D via work-cost gap feedback); Applicability of SPAP/RUD limits (grounded in the MPU's intrinsic $K_0$ complexity, Definition 23, with network context enabling effective reliable computation, Proposition A.0.3); Geometric Regularity (Theorem 43, Appendices C/D via POP/PCE optimization against irregularity); Thermodynamics/Area Law (Theorem 49, Appendix E via ND-RID limits); Stress-Energy Tensor (Appendices B/F via coarse-graining/conservation); Locality Framing (Appendix F, Postulate 3 statistical FTL argued compatible with emergent operator locality Corollary F.1 and operational causality Theorem 42); and the Baryon Asymmetry (Appendix Y, from the generic properties of the emergent gauge bundle).
+*   **Internal Justification for Emergence (via Appendices):** PU's viability relies on emergence mechanisms justified internally: Complexity Alignment (Theorem 2, Appendix D via work-cost gap feedback); Applicability of SPAP/RUD limits (grounded in the MPU's intrinsic $K_0$ complexity, Definition 23, with network context enabling effective reliable computation, Proposition A.0.3); Geometric Regularity (Theorem 43, Appendices C/D via POP/PCE optimization against irregularity); Thermodynamics/Area Law (Theorem 49, Appendix E via ND-RID limits); Stress-Energy Tensor (Appendices B/F via coarse-graining/conservation); Locality Framing (Appendix F, where Postulate 3 statistical FTL is analyzed for compatibility with operator locality when the continuum-bridge hypotheses of Theorem F.0 hold, together with operational causality Theorem 42); and the Baryon Asymmetry (Appendix Y, from the generic properties of the emergent gauge bundle).
 
 *   **Emergence and Self-Organization:** PU is built on emergence, deriving QM/GR from collective MPU dynamics under POP/PCE and constraints (SPAP, $\varepsilon$). Macroscopic features like geometric regularity (Theorem 43) result from self-organization driven by optimization (Appendices C, D). CC (Hypothesis 3) proposes feedback within the emergent hierarchy.
 
@@ -816,7 +816,7 @@ Once Definition H.0 is fixed, the result uses zero continuously adjustable param
 
 *   **Connections to Information Processing:** PU provides a potential physical realization for "it from bit" ideas [Wheeler 1990], portraying reality as an efficient, self-regulating information processing system.
 
-*   **Justification for Statistical FTL:** Consistency relies on: Operational Causality (Post 2 - no deterministic FTL); CC Bound (Theorem 39: $\text{CC}<0.5$ prevents forcing outcomes); Emergent Operator Locality (Corollary F.1: $[\mathfrak{A}_1, \mathfrak{A}_2]=0$ from ND-RID contractivity, rigorously derived in **Appendix F**); State-Mediated Influence (Eq. (F.4): context dependence appears in joint expectations $\omega_{C_A}(A\otimes B)$, while Bob's unconditional marginals $\omega_{C_A}(\mathbf{1}_A\otimes B)$ remain context-independent); Information Limits of ND-RID (Appendix F, Section F.6: finite rate, limits signaling). Statistical FTL via state correlations is argued compatible with operator locality and operational causality (justified via information limits analyzed in **Appendix F** and bounded by Theorems 40-42).
+*   **Justification for Statistical FTL:** Consistency relies on: Operational Causality (Post 2 - no deterministic FTL); CC Bound (Theorem 39: $\text{CC}<0.5$ prevents forcing outcomes); Emergent Operator Locality (Corollary F.1: $[\mathfrak{A}_1, \mathfrak{A}_2]=0$ when the continuum-bridge hypotheses of Appendix F hold); State-Mediated Influence (Eq. (F.4): context dependence appears in joint expectations $\omega_{C_A}(A\otimes B)$, while Bob's unconditional marginals $\omega_{C_A}(\mathbf{1}_A\otimes B)$ remain context-independent); Information Limits of ND-RID (Appendix F, Section F.6: finite rate, limits signaling). Statistical FTL via state correlations is argued compatible with operator locality and operational causality under that AQFT bridge and is further bounded by Theorems 40-42.
 
 ### 14.3.1 Predictive Communication Under Separation: Delay, Compression, and Decision Advantage
 

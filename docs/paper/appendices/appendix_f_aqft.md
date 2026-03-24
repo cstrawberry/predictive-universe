@@ -20,7 +20,7 @@ This construction defines a net of algebras $\mathcal{O} \mapsto \mathfrak{A}_n(
 
 **F.2 Emergence of Einstein Causality from ND-RID Limits**
 
-Standard relativistic causality (microcausality) — namely that observables in space-like separated regions commute — follows directly from the finite effective light-cone enforced by ND-RID dynamics.
+Standard relativistic causality (microcausality) — namely that observables in space-like separated regions commute — is obtained in the continuum AQFT limit once the bridge hypotheses of Theorem F.0 are imposed, in particular the uniform Lieb-Robinson control and the identification of the limiting Lieb-Robinson cone with the geometric causal cone.
 
 
 **Proposition F.1 (Discrete Lieb–Robinson Bound).**
@@ -146,7 +146,7 @@ Let $H_n$ be uniformly local, finite-range Hamiltonians on $\Lambda_n$ that gene
 $$
 \big\|[\tau_t^{(n)}(A),B]\big\|\le C\,\|A\|\,\|B\|\,e^{-\mu\big(d_n(X,Y)-v_{\rm LR}|t|\big)}.
 $$
-This holds by our hypotheses (bounded degree, finite range). For each bounded $O$ and $t\in\mathbb R$, $\tau_t^{(n)}$ restricts to $\mathfrak A_n(\Lambda_n(O))$ up to exponentially small tails controlled by the bound. Passing to the inductive limit along the embeddings yields a strongly continuous one-parameter group of $*$-automorphisms $\tau_t$ on $\mathcal A$.
+This is one of the explicit hypotheses of Theorem F.0; Appendix F uses it but does not derive it from the earlier appendices. For each bounded $O$ and $t\in\mathbb R$, $\tau_t^{(n)}$ restricts to $\mathfrak A_n(\Lambda_n(O))$ up to exponentially small tails controlled by the bound. Passing to the inductive limit along the embeddings yields a strongly continuous one-parameter group of $*$-automorphisms $\tau_t$ on $\mathcal A$.
 
 (Locality / LR-causality.) Let $O_1,O_2\subset\mathbb R^d$ be bounded and spacelike separated with Minkowski distance $\mathrm{dist}_M(O_1,O_2)>0$. Fix $t$ with $v_{\rm LR}|t|<\mathrm{dist}_E(O_1,O_2)$, where $\mathrm{dist}_E$ is the Euclidean separation of the spatial projections at the relevant time slice. Choose representatives $A_n\in\mathfrak A_n(\Lambda_n(O_1))$, $B_n\in\mathfrak A_n(\Lambda_n(O_2))$ with $\iota_n(A_n)\to A\in\mathcal A(O_1)$ and $\iota_n(B_n)\to B\in\mathcal A(O_2)$ in norm. Because $a_n\downarrow 0$, the graph distances satisfy $d_n(\Lambda_n(O_1),\Lambda_n(O_2))\to\infty$ with $a_n d_n\to \mathrm{dist}_E(O_1,O_2)$. The Lieb–Robinson bound then gives
 $$
@@ -156,13 +156,14 @@ Taking $n\to\infty$ and using continuity of the inductive-limit embeddings,
 $$
 [\tau_t(A),B]=\lim_{n\to\infty}[\iota_n(\tau_t^{(n)}(A_n)),\iota_n(B_n)]=0.
 $$
-In particular, at equal times $t=0$ we have $[\mathcal A(O_1),\mathcal A(O_2)]=\{0\}$ whenever $O_1\subset O_2'$. 
-
-**Principle of Lightcone Identification.** The same microscopic nearest-neighbor propagation bound that yields Theorem 46 also defines a discrete support cone of slope $\delta_{\mathrm{eff}}/\tau_{\min}$. The Lieb-Robinson cone is an outer cone for the same dynamics, and in the continuum scaling limit their slopes coincide. Hence the limiting Lieb-Robinson cone is the geometric lightcone and $v_{\rm LR}=c$ in the continuum description. Under this identification, the LR-causality commutator vanishing implies Haag-Kastler locality (Einstein causality): if $v_{\rm LR}|t|<\mathrm{dist}_E(O_1,O_2)$ then $[\tau_t(\mathcal A(O_1)),\mathcal A(O_2)]=\{0\}$.
+Thus the limiting net satisfies causal containment with respect to the limiting Lieb-Robinson cone. If, in addition, the limiting Lieb-Robinson cone is identified with the geometric causal cone of the emergent Lorentzian metric, equivalently if the extra bridge hypothesis $v_{LR}^{(n)}\to c$ holds, then one obtains Haag-Kastler locality:
+$$
+[\mathcal A(O_1),\mathcal A(O_2)]=\{0\}\qquad \text{for } O_1\subset O_2'.
+$$
 
 (Covariance and additivity.) Spatial translations on $\Lambda_n$ act by $*$-automorphisms $\alpha_a^{(n)}$ that commute with $\tau_t^{(n)}$; the uniform geometric regularity ensures these descend to a strongly continuous representation $a\mapsto\alpha_a$ of translations on $\mathcal A$ with $\alpha_a\big(\mathcal A(O)\big)=\mathcal A(O+a)$. Additivity holds since $\mathcal A(\cup_i O_i)=C^*(\cup_i \mathcal A(O_i))$ by construction.
 
-Thus $\{\mathcal A(O)\}_{O}$ with automorphisms $\{\alpha_a,\tau_t\}$ satisfies isotony, locality (Einstein causality under the lightcone identification), additivity, and covariance. This is the desired continuum AQFT net. [Bratteli & Robinson 1997; Nachtergaele & Sims 2010] ∎
+Thus $\{\mathcal A(O)\}_{O}$ with automorphisms $\{\alpha_a,\tau_t\}$ satisfies isotony, additivity, covariance, and locality once the lightcone-identification hypothesis is imposed. This is the content of the conditional continuum bridge stated in Theorem F.0. [Bratteli & Robinson 1997; Nachtergaele & Sims 2010] ∎
 
 *   **Definition F.3 (Emergent AQFT Net and Properties).** Conditional on Theorem F.0, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
 
@@ -219,7 +220,8 @@ Thus the variationally defined stress-energy tensor is covariantly conserved on 
 
 AQFT provides the precise language to formulate PU's stance on locality, distinguishing between operator-level locality and state-mediated influence. This section provides the rigorous justification for the consistency of Postulate 3 (Statistical FTL Influence) with Postulate 2 (Causality as No Deterministic FTL Signaling).
 
-1.  **Emergent Einstein Causality for Algebra $\mathfrak{A}$:** As derived in Corollary F.1, the emergent net $\mathfrak{A}(\mathcal{O})$ satisfies the standard AQFT axiom of Einstein Causality: $[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}$ for space-like separated regions $\mathcal{O}_1, \mathcal{O}_2$. This implies that local measurements or operations performed in $\mathcal{O}_1$ cannot causally influence local measurements or operations performed in $\mathcal{O}_2$ in a way that violates the commutation relation for local observables.
+1.  **Emergent Einstein Causality for Algebra $\mathfrak{A}$:** When the continuum-bridge hypotheses of Theorem F.0 hold, Corollary F.1 yields the standard AQFT axiom of Einstein Causality:
+$[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}$ for space-like separated regions $\mathcal{O}_1, \mathcal{O}_2$. In that continuum AQFT regime, local measurements or operations performed in $\mathcal{O}_1$ cannot causally influence local measurements or operations performed in $\mathcal{O}_2$ in a way that violates the commutation relation for local observables.
 
 2.  **CC Influence Mediated by Global State $\omega$:** The CC mechanism (Hypothesis 3) acts on a pre-existing, globally defined state $\omega$ of the MPU network, which may possess non-local correlations like entanglement (Proposition 10). The influence is a *local* process: a high-CC system $S_A$ in region $\mathcal{O}_A$, via its internal context $C_A$, locally biases the parameters of the 'Evolve' process for interactions occurring within $\mathcal{O}_A$. This bias acts upon the outcomes determined by Logical Indeterminacy (Definition 12). While SPAP (Theorems 10, 11) proves that outcomes are fundamentally unpredictable (logically indeterminate), the CC mechanism proposes that the *probability distribution* over these indeterminate outcomes is not fixed but can be subtly modulated by emergent complexity. The mechanism leverages the inherent context-sensitivity of the ND-RID parameters (Assumption 1) to favor specific outcomes within the logically allowed possibilities. This does not change the global state $\omega$ instantaneously. Instead, the statistical FTL effect (Postulate 3) arises because the outcomes of these locally biased 'Evolve' events in $\mathcal{O}_A$ are correlated, through the entanglement present in the state $\omega$, with the outcomes of 'Evolve' events in a space-like separated region $\mathcal{O}_B$. The influence is mediated by the pre-existing correlations in the state, not by a superluminal change of the state itself.
 
@@ -227,7 +229,7 @@ AQFT provides the precise language to formulate PU's stance on locality, disting
     $$
     \omega_{C_{A,1}}(A \otimes B) \neq \omega_{C_{A,2}}(A \otimes B) \quad \text{(Statistical FTL Correlation)} \quad \tag{F.4}
     $$
-    This dependence of joint statistics on a distant context is a manifestation of correlations encoded in the global state $\omega$ and modulated by Alice's local CC context. Crucially, this does *not* violate operator locality (Corollary F.1) or the no-signaling principle for Bob's local, unconditional statistics, because Bob's marginals are the quantities $\omega_{C_A}(\mathbf{1}_A \otimes B)$ and remain independent of $C_A$ for every local observable $B \in \mathfrak{A}(\mathcal{O}_B)$. The influence is mediated by the *state* $\omega$, not by superluminal propagation of effects through local operations.
+    This dependence of joint statistics on a distant context is a manifestation of correlations encoded in the global state $\omega$ and modulated by Alice's local CC context. When the continuum AQFT limit of Corollary F.1 applies, it does *not* violate operator locality or the no-signaling principle for Bob's local, unconditional statistics, because Bob's marginals are the quantities $\omega_{C_A}(\mathbf{1}_A \otimes B)$ and remain independent of $C_A$ for every local observable $B \in \mathfrak{A}(\mathcal{O}_B)$. The influence is mediated by the *state* $\omega$, not by superluminal propagation of effects through local operations.
 
 4.  **Compatibility with Operational Causality:** Operator locality together with local CP‑TP structure implies no‑signaling at the level of marginals: for any local CPTP map $\Phi_A$ on $A$,
 $$
@@ -238,7 +240,7 @@ so Alice’s local choice cannot deterministically alter Bob’s marginal. Diffe
    *   CC Bound: $\text{CC} \le \alpha_{CC,max} < 0.5$ (Theorem 39) prevents Alice from deterministically *forcing* Bob's outcome for any initial state, irrespective of entanglement.
    *   ND-RID Information Limits: The underlying irreversible ND-RID interactions mediating state changes and correlations are subject to irreducible costs ($\varepsilon \ge \ln 2$, Theorem 31), strict contractivity ($f_{RID} < 1$, Lemma E.1), and finite channel capacity ($C_{\max} < \ln d_0$, Theorem E.2). As analyzed in Section 10 (Theorem 40, Theorem 41) and implied by the properties of channels in AQFT (Section F.2, Prop F.1), these limits fundamentally restrict the rate and fidelity of any potential information transfer via this mechanism, preventing the construction of deterministic signaling protocols required for causal paradoxes (Theorem 42).
 
-AQFT formalizes how emergent operator locality for observables coexists with constrained state-mediated statistical non-locality for expectations and outcome probabilities. The influence is in the preparation of the global state ensemble, not in the local interaction rule.
+AQFT formalizes how operator locality for observables, when the continuum bridge applies, coexists with constrained state-mediated statistical non-locality for expectations and outcome probabilities. The influence is in the preparation of the global state ensemble, not in the local interaction rule.
 
 **F.7 Maintaining Lorentz Invariance**
 
@@ -253,32 +255,32 @@ The framework is argued to maintain Lorentz invariance despite the hypothesis of
 AQFT provides a robust mathematical framework for analyzing the properties of the hypothesized continuum limit of the MPU network. The analysis presented here is strictly conditional on the validity of Theorem F.0 (the convergence to a stable AQFT) and Theorem 43 (geometric regularity). Subject to these assumptions, AQFT allows for:
 *   Precise definition of emergent physical states and dynamics.
 *   Rigorous definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ (Definition F.4).
-*   Demonstration that the emergent algebra $\mathfrak{A}$ satisfies standard Einstein Causality (Microcausality, as stated in Corollary F.1) as a consequence of the underlying ND-RID properties (Corollary F.1).
-*   A clear formulation of the framework's stance on locality, allowing for a hypothesized state-mediated statistical FTL influence (Equation F.4, Postulate 3) that is compatible with emergent operator locality (as stated in Corollary F.1) as analyzed in Section F.6.
+*   Formulation of Einstein Causality (Microcausality) through Corollary F.1 when the lightcone-identification hypothesis of Theorem F.0 is satisfied.
+*   A clear formulation of the framework's stance on locality, allowing for a hypothesized state-mediated statistical FTL influence (Equation F.4, Postulate 3) that is compatible with emergent operator locality when the Appendix F continuum bridge applies, as analyzed in Section F.6.
 *   Confirmation that consistency with operational causality (Postulate 2) is maintained via the CC bound (Theorem 39) and the information limitations of the underlying ND-RID interactions (Theorem 40, Theorem 41, as analyzed in Section F.6), preventing deterministic signaling (Theorem 42).
 
-Establishing the full convergence from discrete MPU dynamics to a stable, local AQFT satisfying the Haag-Kastler axioms, rigorously deriving the emergent dynamics generator $\mathcal{L}^*$, and definitively proving the impossibility of deterministic signaling within this formal setting are key future theoretical tasks for validating the PU framework's consistency and its unique stance on locality.
+Establishing the full convergence from discrete MPU dynamics to a stable, local AQFT satisfying the Haag-Kastler axioms, rigorously deriving the emergent dynamics generator $\mathcal{L}^*$, and proving the remaining bridge hypotheses of Theorem F.0 are key future theoretical tasks for validating the PU framework's consistency and its unique stance on locality.
 
 
 ## F.9 Spin-Statistics Connection and CPT Theorem
 
-The preceding sections establish that the emergent AQFT on the continuum manifold $(M, g_{\mu\nu})$ satisfies the standard Haag-Kastler axioms: isotony, covariance under the emergent Poincaré group, and Einstein causality (Corollary F.1). The stress-energy tensor (Definition F.4) is covariantly conserved and the dynamics preserve positivity of energy in the sense of the spectrum condition. These are precisely the prerequisites for the two deepest structural theorems of relativistic quantum field theory: the spin-statistics connection and CPT invariance. This section demonstrates that both emerge as theorems within the PU framework, with the spin-statistics connection admitting an additional PCE-based interpretation.
+Conditional on Theorem F.0 and on the additional Wightman/Jost realization hypotheses stated below, the preceding sections furnish an emergent AQFT setting on the continuum manifold $(M, g_{\mu\nu})$ with isotony, covariance, and Einstein causality in the sense used in Appendix F. The stress-energy tensor of Definition F.4 is covariantly conserved on-shell, and the positive-energy input is supplied by Theorem 29 together with the additional representation-theoretic assumptions stated below. These are the prerequisites for the standard spin-statistics and CPT theorems. The results of this section are therefore formulated conditionally on those AQFT/Wightman hypotheses, with the spin-statistics connection admitting an additional PCE-based interpretation.
 
 ---
 
 ### F.9.1 Prerequisites from the PU Framework
 
-The spin-statistics theorem requires four ingredients, all of which are derived results in the PU framework:
+The spin-statistics theorem requires four ingredients, available in the PU framework either as established results or as hypotheses explicitly stated in the corresponding theorems:
 
 **Table F.1: PU-to-AQFT prerequisites invoked in Appendix F.**
 | Prerequisite | PU Source | Reference |
 |--------------|-----------|-----------|
 | **Lorentz Invariance** | Emergent from causal structure of MPU network | Theorem 46 |
-| **Microcausality** | Emergent from Lieb-Robinson bounds on ND-RID | Corollary F.1 |
+| **Microcausality** | Available in the continuum AQFT limit | Corollary F.1 |
 | **Positive Energy** | Bounded-below Hamiltonian $\hat{H}_v \geq 0$ | Theorem 29, Appendix B |
-| **Local Field Algebra** | Emergent net $\mathfrak{A}(\mathcal{O})$ | Theorem F.0, Definition F.2 |
+| **Local Field Algebra** | Emergent net $\mathfrak{A}(\mathcal{O})$ under the continuum bridge | Theorem F.0, Definition F.2 |
 
-**Summary.** Theorem F.0 establishes that under the stated convergence conditions, the discrete MPU algebras converge to a Haag-Kastler net. Corollary F.1 establishes that spacelike-separated observables commute in the continuum limit. Theorem 46 establishes the Lorentzian signature with finite invariant speed $c$. Theorem 29 establishes the existence of a self-adjoint Hamiltonian operator $\hat{H}_v$ for each MPU with bounded-below spectrum, which lifts to a positive-energy representation of the emergent Poincaré group via the coarse-graining procedure of Section F.4.
+**Summary.** Conditional on the convergence hypotheses stated in Theorem F.0, the discrete MPU algebras converge to a Haag-Kastler net, and Corollary F.1 then yields spacelike commutativity in the continuum limit. Theorem 46 supplies the Lorentzian-signature and finite-speed input used by the continuum discussion. Theorem 29 supplies a bounded-below local Hamiltonian input. The passage from these ingredients to a positive-energy relativistic representation is used here only together with the additional AQFT/Wightman realization hypotheses stated below.
 
 ---
 
@@ -435,17 +437,15 @@ CPT is a symmetry of the emergent dynamical equations (S-matrix elements, field 
 
 ### F.9.6 Summary
 
-The spin-statistics connection and CPT theorem emerge as derived consequences of the PU framework's foundational structure:
+The spin-statistics connection and CPT theorem are available in the PU manuscript only after imposing the conditional continuum bridge together with the additional Wightman/Jost realization hypotheses used in Theorems F.2 and F.4.
 
-**Table F.2: AQFT structural theorems and their derived prerequisites in PU.**
-| Theorem | Prerequisites (all derived) | Status |
+**Table F.2: AQFT structural theorems and their prerequisites as used in Appendix F.**
+| Theorem | Prerequisites as used here | Status |
 |---------|----------------------------|--------|
-| **Spin-Statistics** (F.2) | Lorentz invariance (Thm 46), Microcausality (Cor F.1), Positive energy (Thm 29), Local field algebra (Thm F.0) | **Theorem** |
-| **CPT Invariance** (F.4) | Spin-Statistics (Thm F.2), Analyticity (from positive energy) | **Theorem** |
+| **Spin-Statistics** (F.2) | Lorentz invariance (Thm 46), microcausality in the Theorem F.0 continuum limit (Cor F.1), positive energy (Thm 29), local field algebra (Thm F.0), and the Wightman realization hypotheses stated in Theorem F.2 | Conditional theorem |
+| **CPT Invariance** (F.4) | The AQFT/Wightman/Jost analyticity, locality, and spectrum-condition hypotheses stated in Theorem F.4, together with the spin-statistics input of Theorem F.2 | Conditional theorem |
 
-The PCE interpretation (Proposition F.2, Theorem F.3) provides additional insight: Bose and Fermi statistics are the unique *optimal* ways to describe identical particles consistent with quantum superposition and locality—any other choice would incur unnecessary complexity costs. The framework thus explains not only *that* the spin-statistics connection holds, but *why* it represents an optimal information structure.
-
-CPT invariance of the dynamics is fully consistent with the thermodynamic arrow of time: the former is a symmetry of *what evolutions are possible*, while the latter is a selection principle for *which evolutions occur*. This distinction, often left implicit in standard QFT, is made explicit and necessary within the PU framework.
+The PCE interpretation (Proposition F.2, Theorem F.3) provides additional insight: Bose and Fermi statistics are the unique *optimal* ways to describe identical particles consistent with quantum superposition and locality in the AQFT regime under discussion. Within that same AQFT/Wightman regime, CPT invariance of the dynamics is consistent with the thermodynamic arrow of time: the former is a symmetry of *what evolutions are possible*, while the latter is a selection principle for *which evolutions occur*.
 
 
 

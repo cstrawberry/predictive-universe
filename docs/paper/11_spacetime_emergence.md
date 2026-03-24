@@ -1,6 +1,6 @@
 # 11 Emergence of Spacetime Geometry (Conditional Derivation)
 
-This section details the proposed emergence of continuum spacetime geometry from the underlying discrete MPU network, conditional upon the Necessary Emergence of Geometric Regularity (Theorem 43) justified in Appendices C and D. The emergence process is presented in stages: demonstrating convergence of the discrete network metric space to a continuous manifold, identifying the metric tensor, and deriving the Lorentzian signature and invariant speed from the causal structure of MPU interactions. The interpretation of curvature as predictive holonomy is also discussed.
+This section details the proposed emergence of continuum spacetime geometry from the underlying discrete MPU network. The discussion remains conditional: Theorem 43 supplies the manuscript's regularity theorem, while the limit-space regularity input used in Section 11.4 and the AQFT bridge hypotheses collected in Appendix F remain additional ingredients. The emergence process is presented in stages: demonstrating convergence of the discrete network metric space to a continuous manifold, identifying the metric tensor, and deriving the Lorentzian signature and invariant speed from the causal structure of MPU interactions. The interpretation of curvature as predictive holonomy is also discussed.
 
 **11.1 The MPU Network as Pre-Geometric Structure**
 

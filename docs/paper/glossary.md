@@ -70,7 +70,7 @@
 
 *   **EFE (Einstein Field Equations):** (Section 12, Theorem 50) Emergent equation relating spacetime curvature to MPU stress-energy: $R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}$ (Equation 76). Derived thermodynamically from the Clausius relation applied to local horizons.
 
-*   **Einstein Causality (Microcausality):** (Appendix F, Corollary F.1) Standard QFT principle stating that operators associated with space-like separated regions commute: $[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}$ if $\mathcal{O}_1$ is space-like to $\mathcal{O}_2$. Emerges from ND-RID limits (Proposition F.1).
+*   **Einstein Causality (Microcausality):** (Appendix F, Corollary F.1) Standard QFT principle stating that operators associated with space-like separated regions commute: $[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}$ if $\mathcal{O}_1$ is space-like to $\mathcal{O}_2$. In the PU manuscript this appears conditionally: it follows from Appendix F once the continuum-bridge hypotheses of Theorem F.0 are satisfied.
 
 *   **'Evolve' Process:** (Definition 27, Appendix M) The stochastic interaction and update phase of the MPU cycle, implementing ND-RID. Involves probabilistic amplitude actualization (Born rule) and a stochastic perspective shift. Fundamentally irreversible ($\varepsilon \ge \ln 2$).
 
