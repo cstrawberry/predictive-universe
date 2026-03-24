@@ -18,7 +18,7 @@ $$
 \boxed{
 \begin{aligned}
 v &= A_{EW} \, e^{-\kappa_{EW}} \, M_{Pl}, \quad \kappa_{EW} = 38.5 \\[6pt]
-\sin^2\theta_W^{(0)} &= \frac{3}{8},\quad \sin^2\theta_W(\mu_G) = \frac{3 Z_2}{3 Z_2 + 5 Z_1} \quad \text{(Definition T.17a)} \\[6pt]
+\sin^2\theta_W^{(0)} &= \frac{3}{8},\quad \sin^2\theta_W(\mu_G) = \frac{3 Z_2}{3 Z_2 + 5 Z_1} \quad \text{(Definition T.17; Definition T.17a)} \\[6pt]
 \lambda_{\mathrm{PU}}(\mathfrak{A}_{PU}) &= 0 \quad \text{(zero-slack boundary condition)}
 \end{aligned}
 }
@@ -574,7 +574,7 @@ $$
 
 ### T.12.1 Gauge Coupling Relations
 
-**Definition T.17a** (Coupling Conventions). Define:
+**Definition T.17** (Coupling Conventions). Define:
 
 - $g_1$: GUT-normalized $U(1)_Y$ coupling (couples to $\hat{Y}$)
 - $g_2 = g$: $SU(2)_L$ coupling (couples to $T_a$)
@@ -605,11 +605,11 @@ D^{\mathrm{PCE}}_{\widetilde X}
 =
 (\nabla^{\widetilde G})^*\nabla^{\widetilde G}
 +\mu_0 I
-+\mu_G \mathcal J_G
++m_{\mathcal J}\,\mathcal J_G
 +\mathcal C_\kappa
 +\eta\,\mathcal J_G\,\mathcal C_\kappa,
 $$
-where
+where $m_{\mathcal J}$ denotes the Golay-involution coupling strength, distinct from the PU-to-SM matching scale $\mu_G = M_{Pl}e^{-9}$ of Remark T.62.1, and
 $$
 \mathcal C_\kappa
 :=
@@ -637,7 +637,24 @@ These $Z_i$ are spectral matching data on the lifted gauge geometry $\widetilde 
 $$
 \widetilde E \cong (\pi^*S^\vee \otimes \widetilde Q_C) \oplus (\pi^*S^\vee \otimes \widetilde Q_W) \oplus (\pi^*S^\vee \otimes \widetilde Q_Y),
 $$
-contributing $12+8+4=24$ real interface modes (confirming $M=24$). The threshold shifts decompose as $\Delta_i = \sum_s T_i(s)\,F_s$, where $F_s$ is the spectral functional for sector $s\in\{C,W,Y\}$ and the Dynkin index matrix is
+contributing $12+8+4=24$ real interface modes (confirming $M=24$).
+
+**Proposition T.17a.2 (Interface Bundle as Pulled-Back Tangent Bundle).** *The charged lifted interface bundle is the pull-back of the holomorphic tangent bundle of the base Grassmannian:*
+$$
+\widetilde E = \pi^*(S^\vee\otimes Q) \cong \pi^*\bigl(T^{1,0}\mathrm{Gr}(2,8)\bigr).
+$$
+
+*Proof.* For $\mathrm{Gr}(2,8)$ one has the standard holomorphic identification $T^{1,0}\mathrm{Gr}(2,8)\cong S^\vee\otimes Q$, since tangent directions at a $2$-plane are linear maps from the tautological subspace to the quotient. Pulling back along $\pi$ gives the stated isomorphism. ∎
+
+**Remark T.17a.3 (Sector-wise Action of $\mathcal C_\kappa$).** On the three lifted sectors $\widetilde E_s = \pi^*S^\vee\otimes \widetilde Q_s$, the endomorphism $\mathcal C_\kappa$ acts by scalar multiplication:
+$$
+\mathcal C_\kappa|_{\widetilde E_Y}=\frac{4\kappa_1}{15}I,\qquad
+\mathcal C_\kappa|_{\widetilde E_W}=\left(\frac{3\kappa_1}{20}+\frac{3\kappa_2}{4}\right)I,\qquad
+\mathcal C_\kappa|_{\widetilde E_C}=\left(\frac{\kappa_1}{15}+\frac{4\kappa_3}{3}\right)I.
+$$
+These values follow from the sector charges of Remark T.17a.1 together with the fundamental quadratic Casimirs $C_2(\mathbf 2)=3/4$ and $C_2(\mathbf 3)=4/3$ in the SU(5)-normalized convention used here.
+
+The threshold shifts decompose as $\Delta_i = \sum_s T_i(s)\,F_s$, where $F_s$ is the spectral functional for sector $s\in\{C,W,Y\}$ and the Dynkin index matrix is
 $$
 T = \begin{pmatrix} T_1(C) & T_1(W) & T_1(Y) \\ T_2(C) & T_2(W) & T_2(Y) \\ T_3(C) & T_3(W) & T_3(Y) \end{pmatrix}
 = \begin{pmatrix} 2/5 & 3/5 & 8/15 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}.
@@ -750,7 +767,7 @@ This is the tree-level matching value at $\mu_G$; one-loop SM running from $\mu_
 
 ### T.13.1 One-Loop Beta Functions
 
-**Definition T.15a** (SM Beta Coefficients). The one-loop coefficients (GUT-normalized) are:
+**Definition T.15b** (SM Beta Coefficients). The one-loop coefficients (GUT-normalized) are:
 $$
 b_1 = \frac{41}{10}, \quad b_2 = -\frac{19}{6}, \quad b_3 = -7
 $$
@@ -767,7 +784,7 @@ $$
 A_i(\mu_G)=Z_i\,\alpha_U^{-1}+\frac{\delta_i}{2\pi}
 \qquad (i=1,2,3)
 $$
-(Definition T.19), the Z-pole weak mixing angle is
+(Definition T.19a), the Z-pole weak mixing angle is
 $$
 \boxed{
 \sin^2\theta_W(M_Z)=\frac{3A_2(M_Z)}{3A_2(M_Z)+5A_1(M_Z)}
@@ -818,11 +835,11 @@ $$
 $$
 so their effect on $\alpha_i^{-1}(M_Z)$ and $\sin^2\theta_W(M_Z)$ is subleading compared to the one-loop logarithmic running from $\mu_G$ to $M_Z$.
 
-*Proof.* Theorem T.17 identifies the leading discretization contribution as $S_M$-invariant over the $M$ interface modes and therefore a common shift $\delta_{\mathrm{avg}}$. Any splitting arises from subleading mode-to-mode variations in the discretized spectrum; since $\delta_i$ are sums of $M$ mode-local contributions (Definition T.19), such variations enter the average with at least one factor of $M^{-1}$. ∎
+*Proof.* Theorem T.17 identifies the leading discretization contribution as $S_M$-invariant over the $M$ interface modes and therefore a common shift $\delta_{\mathrm{avg}}$. Any splitting arises from subleading mode-to-mode variations in the discretized spectrum; since $\delta_i$ are sums of $M$ mode-local contributions (Definition T.19a), such variations enter the average with at least one factor of $M^{-1}$. ∎
 
 **Theorem T.18** (Flag-Lift Spectral Matching and Numerical Target). The bare-Grassmannian orbit-average construction of the original gauge-matching definition is not used for the quantitative threshold sector. The local Bures block formula on $\mathrm{Gr}(2,8)$ provides representative-state coupling data, but the manuscript does not supply a completed global orbit integral on the bare Grassmannian that yields the required gauge-factor hierarchy. The quantitative gauge sector is therefore formulated on the lifted operator $D^{\mathrm{PCE}}_{\widetilde X}$ of Definition T.17a on
 $$
-\widetilde X=\mathrm{Flag}_{1,2,3}(Q).
+\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\cong SU(8)/S(U(2)\times U(1)\times U(2)\times U(3)).
 $$
 Its spectral threshold shifts are
 $$
@@ -849,7 +866,7 @@ $$
 Z_1=1+\frac{15.14}{24}\approx 1.6308,\qquad Z_2=1+\frac{20.94}{24}\approx 1.8725,\qquad Z_3=1+\frac{18.41}{24}\approx 1.7671.
 }
 $$
-The explicit spectral evaluation of the lifted threshold sums remains the outstanding quantitative step. Neglecting the small residual finite matching shifts $\delta_i$ at first pass (Definition T.19), one-loop SM running (Theorem T.15) then gives
+The explicit spectral evaluation of the lifted threshold sums remains the outstanding quantitative step. Neglecting the small residual finite matching shifts $\delta_i$ at first pass (Definition T.19a), one-loop SM running (Theorem T.15) then gives
 $$
 \alpha_i^{-1}(M_Z)=Z_i\,\alpha_U^{-1}+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
 \qquad i=1,2,3,
@@ -1172,7 +1189,7 @@ $$
 \qquad
 b_3=-7,
 $$
-so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently $Z_3=1+\Delta_3/24\approx 1.7671$, one finds $\alpha_s(M_Z)\approx 0.118$, with residual finite matching shift encoded by $\delta_3$ (Definition T.19) and subleading splittings as in Corollary T.17.1.
+so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently $Z_3=1+\Delta_3/24\approx 1.7671$, one finds $\alpha_s(M_Z)\approx 0.118$, with residual finite matching shift encoded by $\delta_3$ (Definition T.19a) and subleading splittings as in Corollary T.17.1.
 
 *Proof.* One-loop running gives $\alpha_3^{-1}(M_Z)=\alpha_3^{-1}(\mu_G)+\frac{b_3}{2\pi}\ln(\mu_G/M_Z)$ (Theorem T.15). Substituting $\alpha_3^{-1}(\mu_G)=Z_3\alpha_U^{-1}$ yields the result. If $Z_3$ were set to $1$, the one-loop prediction would give $\alpha_3^{-1}(M_Z)<0$, so $Z_3>1$ is required; in the present formulation that requirement is encoded by the positive target threshold $\Delta_3>0$. ∎
 
@@ -1713,7 +1730,7 @@ $$
 \boxed{g_U = \sqrt{\frac{\pi}{6}} \approx 0.724, \qquad \alpha_U^{-1} = \frac{4\pi}{g_U^2} = M = 24.}
 $$
 
-**Consistency checks.** (i) The identity $\alpha_U^{-1}=M=24$ corresponds to $g_U^2=\pi/6$ (Theorem T.39a). (ii) With PU-to-SM matching $g_i(\mu_G)=g_U/\sqrt{Z_i}$ (Corollary T.13.1) and lifted spectral threshold data $Z_i=1+\Delta_i/24$ from Definition T.17a, one-loop SM running yields Z-pole gauge couplings once the threshold tuple is supplied, up to the residual finite shifts $\delta_i$ and $O(M^{-1})$ splittings (Definition T.19; Corollary T.17.1). (iii) In the isotropic matching limit $Z_1=Z_2=Z_3$ one recovers the standard SU(5) tree-level ratios $(g')^2:g^2:g_s^2=\frac{3}{5}:1:1$ and $\sin^2\theta_W=3/8$ (Theorem T.14; Theorem T.27a). ∎
+**Consistency checks.** (i) The identity $\alpha_U^{-1}=M=24$ corresponds to $g_U^2=\pi/6$ (Theorem T.39a). (ii) With PU-to-SM matching $g_i(\mu_G)=g_U/\sqrt{Z_i}$ (Corollary T.13.1) and lifted spectral threshold data $Z_i=1+\Delta_i/24$ from Definition T.17a, one-loop SM running yields Z-pole gauge couplings once the threshold tuple is supplied, up to the residual finite shifts $\delta_i$ and $O(M^{-1})$ splittings (Definition T.19a; Corollary T.17.1). (iii) In the isotropic matching limit $Z_1=Z_2=Z_3$ one recovers the standard SU(5) tree-level ratios $(g')^2:g^2:g_s^2=\frac{3}{5}:1:1$ and $\sin^2\theta_W=3/8$ (Theorem T.14; Theorem T.27a). ∎
 **Problem T.3** (CKM/PMNS). *Solved for CKM sector in Section T.22 and PMNS sector in Section T.24.* The CKM matrix elements emerge from two limiting regimes of a unified overlap formula on the generation manifold $\mathrm{Gr}(2,8)$:
 
 1. **Heavy-generation mixing** (3↔1, 3↔2): Gaussian overlap suppression $\exp(-\alpha d^2_{E_8})$ yields $|V_{cb}| = \sqrt{2/3} \cdot e^{-3} = 0.0407$ and $|V_{ub}| = 0.00392$ (Theorems T.46–T.48).

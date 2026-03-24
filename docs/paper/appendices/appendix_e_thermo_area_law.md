@@ -489,6 +489,32 @@ This "tiling" argument self-consistently reproduces the $S=\mathcal{A}/(4G)$ for
 
 The consistency of this unit cell interpretation with the primary derivation in Theorem E.6 requires an alignment between the "entropy per effective channel" ($C_{\max}(f_{RID})$ in nats, from Theorem E.2) and this fundamental SPAP cost ($\ln 2$ nats). Specifically, the product of channel density and capacity per channel must yield the same overall entropy density: $\sigma_{eff_link} \cdot C_{\max}(f_{RID}) = (\text{density of SPAP cells}) \cdot \ln 2$. Since density of SPAP cells is $1/\Delta\mathcal{A}_{cell} = 1/(4G\ln2)$, this requires $\sigma_{eff_link} \cdot C_{\max}(f_{RID}) = 1/(4G)$. This is precisely what Equation (E.7) (and its natural units version, Equation E.10) states, confirming the structural consistency between the two viewpoints. Essentially, PCE optimizes the network such that the effective boundary channel capacity $C_{\max}$ (influenced by $\varepsilon=\ln 2$) and the effective channel density $\sigma_{eff_link}$ (influenced by $\delta$) combine to yield the emergent value of $G$ and thus the Bekenstein-Hawking entropy with the standard $1/4$ coefficient.
 
+**Corollary E.6.1 (Channel Capacity in SPAP Units).** *At the PCE-Attractor, the PCE-saturating channel capacity equals $a$ SPAP entropy quanta:*
+$$
+C_{\max}^{*} = a\varepsilon = a\ln 2
+\tag{E.13d}
+$$
+
+*Proof.* Equation (E.14) gives $C_{\max}^{*} = \ln(d_0) - \varepsilon$. On the minimal PCE branch, $d_0 = 8$ (Theorem Z.2; Theorem 23 supplies the lower bound), and at the PCE-Attractor $\varepsilon = \ln 2$ (Definition 15a; Theorem 31 supplies the lower bound). Hence
+$$
+C_{\max}^{*} = \ln 8 - \ln 2 = 2\ln 2.
+$$
+By Theorem Z.1, $a = 2$. Therefore $C_{\max}^{*} = a\ln 2 = a\varepsilon$. $\square$
+
+**Corollary E.6.2 (MPU-SPAP Cell Hierarchy).** *At the PCE-Attractor, each MPU boundary cell of area $\delta^2$ contains exactly $a$ SPAP entropy cells of area $\Delta\mathcal{A}_{cell}$:*
+$$
+\delta^2 = a\,\Delta\mathcal{A}_{cell}
+\tag{E.13e}
+$$
+
+*Proof.* Equation (E.16) gives $\delta^2 = 8\ln 2\,L_P^2$. Equation (E.13b) gives $\Delta\mathcal{A}_{cell} = 4G\ln 2 = 4\ln 2\,L_P^2$ in natural units, where $G = L_P^2$. Therefore
+$$
+\frac{\delta^2}{\Delta\mathcal{A}_{cell}} = \frac{8\ln 2}{4\ln 2} = 2 = a.
+$$
+Equivalently, Corollary E.6.1 gives $C_{\max}^{*} = 2\ln 2$, while Equation (E.13) gives $\Delta S_{\text{SPAP}} = \ln 2$, so $C_{\max}^{*}/\Delta S_{\text{SPAP}} = a$. $\square$
+
+*Remark.* Corollaries E.6.1 and E.6.2 establish a two-level horizon-entropy decomposition. The SPAP cell is the fundamental thermodynamic unit, carrying $\ln 2$ nats, while the MPU cell is the computational unit, carrying $C_{\max}^{*} = 2\ln 2$ nats. At the PCE-Attractor the ratio between the two levels is $a = 2$, the active kernel dimension.
+
 **E.7 PCE-Derived Planck-MPU Scale Relation**
 
 The relationship between the emergent gravitational constant $G$ and the microscopic MPU parameters (Equation E.9) is not merely a consistency requirement but is quantitatively fixed by the framework's core optimization principle. As rigorously derived in Appendix Q, the Principle of Compression Efficiency (PCE, Definition 15) dictates the optimal values for the network parameters that determine the scale ratio $\delta/L_P$.
@@ -1787,5 +1813,5 @@ This appendix provided a theoretical derivation of the Horizon Entropy Area Law 
 
 **Stage 1 (Boundary Correlations and Operational Area Law, Sections E.6.1–E.6.3):** The MPU network's ND-RID dynamics satisfy locality, a finite Lieb-Robinson velocity, a spectral gap, and exponential clustering (Lemma E.6.1). A rigorous distribution-free boundary law holds for total correlations measured by mutual information in any finite-range Gibbs state (Theorem E.4a). A von Neumann entanglement-entropy area law is proven in the 1D gapped setting (Hastings); in higher dimensions an entanglement area-scaling inequality is treated as a semiclassical ansatz (Theorem E.4').
 
-**Stage 2 (Operational Channel Counting, Sections E.6.4–E.6.5):** ND-RID irreversibility implies strict contractivity ($f_{RID}<1$, Lemma E.1), which bounds the per-link capacity (Theorem E.2). Geometric regularity implies the number of effective independent channels crossing a smooth surface scales with its area (Theorem E.3, Lemma E.5.1). Combining these yields $S_{max}\propto\mathcal{A}$ and packages the proportionality constant into the standard normalization $S_{max}=k_B\mathcal{A}/(4G)$ (Theorem E.5).
+**Stage 2 (Operational Channel Counting, Sections E.6.4–E.6.5):** ND-RID irreversibility implies strict contractivity ($f_{RID}<1$, Lemma E.1), which bounds the per-link capacity (Theorem E.2). Geometric regularity implies the number of effective independent channels crossing a smooth surface scales with its area (Theorem E.3, Lemma E.5.1). Combining these yields $S_{max}\propto\mathcal{A}$ and packages the proportionality constant into the standard normalization $S_{max}=k_B\mathcal{A}/(4G)$ (Theorem E.5). The resulting horizon-entropy decomposition has two levels: each MPU cell of area $\delta^2$ contains exactly $a = 2$ SPAP entropy sub-cells of area $\Delta\mathcal{A}_{cell} = 4G\ln 2$, and the corresponding per-cell capacity is $C_{\max}^{*} = a\varepsilon = 2\ln 2$ (Corollaries E.6.1–E.6.2).
 **Synthesis:** Equation (E.9) links the emergent coupling $G$ to microscopic MPU parameters. Identifying this $G$ with the experimentally measured Newton constant is a calibration step; after calibration, Equations E.14–E.16 constrain the allowed microscopic parameter combinations. Section 12 uses the proportionality $\delta S\propto\delta\mathcal{A}$ to derive the Einstein Field Equations via the Clausius relation.

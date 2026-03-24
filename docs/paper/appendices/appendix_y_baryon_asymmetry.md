@@ -795,6 +795,43 @@ $$\eta_B \sim \sqrt{v/M_{Pl}}$$
 
 Any mechanism that explains $\kappa_{EW}$ automatically constrains $\eta_B$, and vice versa. The two problems have a common origin in the Golay-Steiner structure (Theorem T.5). ∎
 
+**Corollary Y.11.4a (Hierarchy Bridge Ratio).** *The prefactor $\mathcal{P}_{\mathrm{eff}}$ can be determined independently from theory and observation, and the two determinations agree at the $0.6\%$ level.*
+
+*Proof.* Theorem Y.11 gives
+$$
+\mathcal{P}_{\mathrm{eff}} = \mathcal{C}_{eff}\,\mathcal{F}_{CP}\,f_{wash}\,e^{-\varepsilon/N_g}A_{EW}^{-1/2}.
+$$
+At the PCE-Attractor, $\varepsilon = \ln 2$ and $N_g = 3$, so
+$$
+e^{-\varepsilon/N_g} = e^{-\ln 2/3} = 2^{-1/3}.
+$$
+Using $\mathcal{C}_{eff} = 0.282$, $\mathcal{F}_{CP} = 0.9997$, $f_{wash} = 0.63$, and $A_{EW} = 1.084$ gives
+$$
+\mathcal{P}_{\mathrm{eff}}^{(\mathrm{th})}
+=
+0.282 \times 0.9997 \times 0.63 \times 2^{-1/3} \times 1.084^{-1/2}
+=
+0.1354.
+$$
+Independently, with $\eta_B^{\mathrm{obs}} = 6.12 \times 10^{-10}$, $v_{\mathrm{obs}} = 246.22\,\mathrm{GeV}$, and $M_{Pl} = 1.2209 \times 10^{19}\,\mathrm{GeV}$,
+$$
+\mathcal{P}_{\mathrm{eff}}^{(\mathrm{obs})}
+=
+\frac{\eta_B^{\mathrm{obs}}}{\sqrt{v_{\mathrm{obs}}/M_{Pl}}}
+=
+\frac{6.12 \times 10^{-10}}{\sqrt{246.22/(1.2209 \times 10^{19})}}
+=
+0.1363.
+$$
+Therefore
+$$
+\frac{\left|\mathcal{P}_{\mathrm{eff}}^{(\mathrm{th})} - \mathcal{P}_{\mathrm{eff}}^{(\mathrm{obs})}\right|}{\mathcal{P}_{\mathrm{eff}}^{(\mathrm{obs})}}
+\approx 0.0065,
+$$
+i.e. $0.6\%$. ∎
+
+**Remark Y.11.4a.** The ratio $\eta_B / \sqrt{v/M_{Pl}}$ removes the common exponential suppression carried by the two observables and isolates the derived $O(1)$ prefactor $\mathcal{P}_{\mathrm{eff}}$.
+
 ### Y.10.3.5 Experimental Consequences
 
 **Prediction Y.1** (Sphaleron Saturation). *The geometric CP mechanism predicts that any deformation that modifies the electroweak scale within the same baryogenesis regime produces correlated modifications to the baryon asymmetry at leading order:*

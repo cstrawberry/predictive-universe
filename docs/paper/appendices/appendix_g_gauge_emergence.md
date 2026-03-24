@@ -742,6 +742,39 @@ $$
 $$
 The quantitative gauge-threshold sector is formulated on $\widetilde X$, not on the bare Grassmannian $X$.
 
+**Proposition G.8.4e.1a (Identification with a Standard Partial Flag Manifold).** *The flag lift $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ is isomorphic to the partial flag manifold*
+$$
+\widetilde X\cong \mathrm{Flag}(2,3,5;\mathbb C^8)=SU(8)/S(U(2)\times U(1)\times U(2)\times U(3)).
+$$
+
+*Proof.* A point of $\widetilde X$ is a pair $(W,L_1\subset L_2\subset \mathbb C^8/W)$ with $\dim W=2$, $\dim L_1=1$, and $\dim L_2=3$. Let $p:\mathbb C^8\to \mathbb C^8/W$ be the quotient map and set
+$$
+V_1:=W,\qquad V_2:=p^{-1}(L_1),\qquad V_3:=p^{-1}(L_2).
+$$
+Since $\ker p=W$ has dimension $2$, the preimage of a $k$-dimensional subspace of $\mathbb C^8/W$ has dimension $k+2$. Hence
+$$
+0\subset V_1\subset V_2\subset V_3\subset \mathbb C^8
+$$
+with
+$$
+\dim V_1=2,\qquad \dim V_2=3,\qquad \dim V_3=5.
+$$
+Conversely, a flag $0\subset V_1\subset V_2\subset V_3\subset \mathbb C^8$ of dimensions $(2,3,5)$ recovers
+$$
+W=V_1,\qquad L_1=V_2/V_1,\qquad L_2=V_3/V_1.
+$$
+The two constructions are inverse to each other, so $\widetilde X\cong \mathrm{Flag}(2,3,5;\mathbb C^8)$. The stabilizer of a reference flag with block sizes $(2,1,2,3)$ is $S(U(2)\times U(1)\times U(2)\times U(3))$. The complex dimension is
+$$
+\dim_{\mathbb C}(\widetilde X)=12+11=23,
+$$
+since $\dim_{\mathbb C}\mathrm{Gr}(2,8)=2\cdot 6=12$ and the fiber $\mathrm{Flag}(1,3;\mathbb C^6)$ has complex dimension $11$. Therefore $\dim_{\mathbb R}(\widetilde X)=46$. $\square$
+
+The block decomposition $\mathbb C^8=A\oplus B\oplus C\oplus D$ with
+$$
+\dim A=2,\qquad \dim B=1,\qquad \dim C=2,\qquad \dim D=3
+$$
+identifies the four blocks with the active subspace and the lifted $Y$, $W$, and $C$ sectors at the reference point.
+
 **Remark G.8.4e.2 (Scope of the Lift).** Theorem G.8.4b and Corollary G.8.4c remain statements about the abstract inactive fiber $\mathcal B\cong \mathbb C^6$. Theorem G.8.4e shows that this fiberwise $(3,2,1)$ decomposition does not globalize on the bare universal quotient bundle $Q\to \mathrm{Gr}(2,8)$. Postulate G.8.4e.1 is the minimal global extension in which the abstract decomposition can be realized as smooth bundle data. The derivations of $d_0=8$, $a=2$, $M=24$, $D=4$, the first-order fine-structure constant, and the three-generation theorem remain on bare $\mathrm{Gr}(2,8)$; only the quantitative gauge-threshold sector is lifted.
 
 **Remark G.8.4e.3 (Four-Level Obstruction and Resolution Chain — Motivation for the Flag Lift).** Four independent mathematical results collectively forced the reformulation of the gauge-threshold sector from bare $\mathrm{Gr}(2,8)$ to the minimal flag lift:

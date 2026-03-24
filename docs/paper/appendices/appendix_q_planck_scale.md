@@ -1180,6 +1180,55 @@ exhibits exact cancellation because the three conversion factors form a closed l
 
 The Rindler-Landauer result $\tau_U = 2\pi c/a$ is not an isolated calculation but the computational face of the same structure that yields Einstein's equations. The cancellation of $\hbar$, $k_B$, and $\ln 2$ reveals that gravity, thermodynamics, and information theory are not three theories that happen to connect at horizons—they are three descriptions of a single geometric reality. The gravitational constant $G$, the Bekenstein-Hawking entropy, and the horizon computational rate are mutually determined by the requirement of self-consistency across all local causal boundaries.
 
+---
+
+#### Q.0.9.8.8 Effective Horizon MPU Count
+
+**Theorem Q.0.18 (Effective Horizon MPU Count).** *For a Schwarzschild black hole of mass $M$, the horizon area measured in units of the PCE-optimal MPU area $\delta^2$ is*
+$$
+N_{\mathrm{MPU}}^{\mathrm{eff}}(M)
+:=
+\frac{\mathcal{A}_H}{\delta^2}
+=
+\frac{2\pi}{\ln 2}\left(\frac{M}{m_P}\right)^2.
+$$
+
+*Proof.* The Schwarzschild horizon area is
+$$
+\mathcal{A}_H = \frac{16\pi G^2 M^2}{c^4} = 16\pi \left(\frac{M}{m_P}\right)^2 L_P^2,
+$$
+using $m_P = \sqrt{\hbar c/G}$ and $L_P^2 = G\hbar/c^3$. Equation (E.16) gives $\delta^2 = 8\ln 2\,L_P^2$. Therefore
+$$
+N_{\mathrm{MPU}}^{\mathrm{eff}}(M)
+=
+\frac{\mathcal{A}_H}{\delta^2}
+=
+\frac{16\pi (M/m_P)^2 L_P^2}{8\ln 2\,L_P^2}
+=
+\frac{2\pi}{\ln 2}\left(\frac{M}{m_P}\right)^2.
+$$
+$\square$
+
+**Corollary Q.0.18a (Entropy Decomposition at the PCE-Attractor).** *At the PCE-Attractor, the effective horizon MPU count and the per-channel capacity reproduce the Bekenstein-Hawking entropy:*
+$$
+N_{\mathrm{MPU}}^{\mathrm{eff}}(M)\,C_{\max}^{*}
+=
+\frac{\mathcal{A}_H}{4L_P^2}
+=
+S_{\mathrm{BH}}(M).
+$$
+
+*Proof.* Equation (E.15) gives $C_{\max}^{*} = 2\ln 2$. Using Theorem Q.0.18 and Equation (E.16),
+$$
+N_{\mathrm{MPU}}^{\mathrm{eff}}(M)\,C_{\max}^{*}
+=
+\frac{\mathcal{A}_H}{8\ln 2\,L_P^2}(2\ln 2)
+=
+\frac{\mathcal{A}_H}{4L_P^2}
+=
+S_{\mathrm{BH}}(M).
+$$
+At $M = m_P$, this gives $N_{\mathrm{MPU}}^{\mathrm{eff}}(m_P) = 2\pi/\ln 2$ and $S_{\mathrm{BH}}(m_P) = 4\pi$. $\square$
 
 ## Q.1 Foundational Relation and the Optimization Goal
 

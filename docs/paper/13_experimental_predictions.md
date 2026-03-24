@@ -657,3 +657,13 @@ where $\kappa_B = \kappa_{EW}/2 + \varepsilon/N_g = 19.48$. The CP-violating fac
 **Falsification Criterion:** If future CMB measurements (LiteBIRD) converge outside the range $(5.7, 6.7) \times 10^{-10}$, the framework requires refinement.
 
 **Correlated Prediction (Theorem Y.11):** The baryogenesis hierarchy relation of Theorem Y.11 gives a leading square-root sensitivity, so within the same prefactor regime any BSM modification to the electroweak scale produces correlated shifts: $\delta\eta_B/\eta_B \approx (1/2)\delta v/v$.
+
+**Hierarchy Bridge Cross-Check (Corollary Y.11.4a):** The ratio $\mathcal{P}_{\mathrm{eff}} = \eta_B / \sqrt{v/M_{Pl}}$ removes the common exponential suppression and isolates the derived $O(1)$ prefactor. The theory value
+$$
+\mathcal{P}_{\mathrm{eff}}^{(\mathrm{th})}
+=
+\mathcal{C}_{eff}\,\mathcal{F}_{CP}\,f_{wash}\,2^{-1/3}A_{EW}^{-1/2}
+=
+0.1354
+$$
+agrees with the observational determination $\mathcal{P}_{\mathrm{eff}}^{(\mathrm{obs})} = 0.1363$ at the $0.6\%$ level.
