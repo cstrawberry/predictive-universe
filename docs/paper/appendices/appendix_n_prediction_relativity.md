@@ -244,7 +244,11 @@ The process is as follows:
 
 * This self-generated thermal noise is precisely what is measured at the emergent level as the Unruh temperature $T_U$.
 
-Therefore, the Unruh effect is not something that happens to an accelerating object; it is the thermodynamic byproduct of the object performing the acceleration. The formula $T_U = \hbar a / (2\pi c k_B)$ emerges as the fundamental "equation of state" that links the rate of relational change ($a$) to its necessary thermodynamic cost ($T_U$). While this interpretation provides a fundamental origin for the existence of a thermal bath associated with acceleration, deriving the precise linear relationship from the microscopic MPU dynamics and $\varepsilon$-cost dissipation rates remains a significant challenge for future theoretical work.
+Therefore, the Unruh effect is not something that happens to an accelerating object; it is the thermodynamic byproduct of the object performing the acceleration. The formula $T_U = \hbar a / (2\pi c k_B)$ emerges as the fundamental "equation of state" that links the rate of relational change ($a$) to its necessary thermodynamic cost ($T_U$). At the characteristic minimum-cycle scale $a_* := c/\tau_{min}$, the associated Euclidean thermal period is
+$$
+\beta(a_*) = \frac{\hbar}{k_B T_U(a_*)} = 2\pi\tau_{min},
+$$
+so the same topological factor $2\pi$ reappears in the comparison between Unruh periodicity and the derived minimum MPU timescale. This is a formal scale identity. Deriving a genuine self-generated Unruh bath directly from the microscopic MPU dynamics and $\varepsilon$-cost dissipation rates remains a significant challenge for future theoretical work.
 
 ### N.7.3 Consistency of the Two Descriptive Layers
 

@@ -1280,6 +1280,22 @@ Neither is derivable from the other. The measure-theoretic entropy $\varepsilon$
 
 **Remark G.1.9.10d: Connection to Modular Flow.** The KMS condition (Theorem G.1.9.5) characterizes equilibrium states with respect to modular flow $\sigma_t(A) = e^{iK^* t} A e^{-iK^* t}$ at inverse temperature $\beta = 1$. On the active subspace, $K^*|_{\mathcal{A}} = (\ln 2)\cdot I_2$ (Theorem G.1.9.4), so the modular Hamiltonian eigenvalue is $\ln 2$. The ratio $2\pi/\ln 2 \approx 9.065$ appearing in Corollary G.1.9.10b characterizes the action-entropy conversion: one topological quantum of phase ($2\pi$) corresponds to $2\pi/\ln 2$ units of SPAP entropy.
 
+**Remark G.1.9.10e: Derived Mass-Time Identity.** On the attractor-saturating branch, Definition Z.8f and Theorem Q.6.1 give
+$$
+\mu_0 c^2 \tau_{min} = \frac{\hbar}{2}.
+$$
+Indeed,
+$$
+\mu_0 c^2 \tau_{min}
+=
+\frac{m_P}{2\sqrt{8\ln 2}}\,c^2 \cdot \sqrt{8\ln 2}\,t_P
+=
+\frac{m_P c^2 t_P}{2}
+=
+\frac{\hbar}{2}.
+$$
+This is an exact algebraic identity between the derived mass scale and the derived minimum cycle time. It does not by itself establish Margolus-Levitin saturation or a self-generated Unruh bath for the MPU.
+
 ### G.8.7 Mode-Polarization Correspondence
 
 **Definition G.8.7a (Gauge Polarization Space).** In $D = 4$ spacetime, each massless gauge boson has $n_{\mathrm{pol}} = D - 2 = 2$ transverse polarizations. The total gauge polarization space has dimension:

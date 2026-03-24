@@ -412,6 +412,24 @@ together with $L_{\mathrm{block}}>0$ and nondecreasing $L_{\mathrm{mix}}(N)$ sho
 
 (d) Therefore, among anomaly-free models in this surrogate class that can realize a physical CKM phase, the smallest admissible value of $N$ is preferred, namely $N=3$. This is the conclusion established by the argument. ∎
 
+**Corollary R.3.5a** (Golay Correction Radius Equals Generation Count). The Golay correction radius equals the minimal generation count:
+$$
+t = \left\lfloor \frac{d_{\min}-1}{2} \right\rfloor = 3 = N_g.
+$$
+
+*Proof.* Theorem Z.13 fixes the PCE-optimal code as $[24,12,8]$, so $d_{\min}=8$ and therefore
+$$
+t=\left\lfloor\frac{8-1}{2}\right\rfloor=3.
+$$
+Theorem R.3.4 gives $N_g=3$. Hence $t=N_g$. ∎
+
+**Corollary R.3.5b** (Topological Rank Identity). On the minimal Appendix Z branch,
+$$
+\operatorname{rank}\pi_2(\Sigma_8) = d_0 - 1 = N_g + D = 7.
+$$
+
+*Proof.* Theorem R.1.1 gives $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, so $\operatorname{rank}\pi_2(\Sigma_8)=7$. On the minimal branch, Theorem Z.2 gives $d_0=8$, hence $d_0-1=7$. Theorem R.3.4 gives $N_g=3$ and Theorem Z.11 gives $D=4$, so $N_g+D=7$. Therefore all quantities coincide. ∎
+
 ## R.4 Three-Fold Structure: Topological Derivation and Geometric Compatibility
 
 This section compares two distinct appearances of a three-fold pattern in the framework. The topological route of Sections R.1–R.4.1 carries the actual derivation of $N=3$ from anomaly cancellation together with the CP-violation requirement. The geometric route of Section R.4.2 shows that the Leech/$E_8$ construction contains a natural three-fold scaffold compatible with that generation count. The convergence is structurally suggestive, but only the topological route proves the count.

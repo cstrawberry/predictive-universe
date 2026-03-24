@@ -819,6 +819,17 @@ The table demonstrates that among values $K_0 \in \{2, 3, 4, 5\}$, only $K_0 = 3
 
 **Corollary Z.11.1 (Geometric Necessity).** *The physical universe occupies the sole point where information-theoretic requirements (SPAP structure) align with geometric packing constraints (kissing number). Alternative $K_0$ values would be information-theoretically viable but geometrically unrealizable—no integer dimension $D$ satisfies $K(D) = M$ for $M \in \{8, 56, 120, ...\}$.*
 
+**Corollary Z.11.2 (Low-Dimensional Kissing Staircase).** On the minimal Appendix Z branch,
+$$
+(K(1),K(2),K(3),K(4)) = (a,b,k,M) = (2,6,12,24).
+$$
+
+*Proof.* The standard low-dimensional kissing numbers are
+$$
+K(1)=2,\quad K(2)=6,\quad K(3)=12,\quad K(4)=24.
+$$
+On the minimal Appendix Z branch, Theorem Z.1 gives $a=2$, Theorem Z.2 gives $d_0=8$, hence $b=d_0-a=6$. Theorem Z.13 gives $k=12$, and Theorem Z.5 gives $M=24$. Theorem Z.11 identifies the top step as $K(D)=M$ with $D=4$. Substituting yields the stated identity. ∎
+
 **Remark Z.4a: Euclidean vs Lorentzian.** The kissing number $K(4) = 24$ refers to sphere packing in 4-dimensional Euclidean space. This is the Euclideanized spacetime geometry relevant to the instanton saddle-point calculation (Section U.9). The Euclidean rotation group is $\text{Spin}(4) \cong SU(2) \times SU(2)$. Upon analytic continuation back to Lorentzian signature, $D = 4$ yields the physical 3+1 spacetime with metric signature $(-,+,+,+)$ and structure group $\text{Spin}(1,3)$.
 
 **Remark Z.5: Robustness.** The discrete nature of kissing numbers means D = 4 remains the unique solution for any M_int ∈ [13, 39].

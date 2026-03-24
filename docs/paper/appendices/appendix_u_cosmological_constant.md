@@ -68,6 +68,22 @@ The Steiner system parameters are:
 | $r$ (blocks per point) | $bk_{\text{block}}/v$ | 253 |
 | $\lambda$ (pairs per block) | $r(k_{\text{block}}-1)/(v-1)$ | 77 |
 
+**Corollary U.2a (Pair Multiplicity).** For the Steiner system $S(5,8,24)$, every pair of points lies in exactly
+$$
+\lambda = \frac{\binom{24-2}{5-2}}{\binom{8-2}{5-2}} = \frac{\binom{22}{3}}{\binom{6}{3}} = 77
+$$
+octads.
+
+*Proof.* Since Theorem U.2 identifies the octads with the Steiner system $S(5,8,24)$, every 5-subset lies in exactly one block. For a Steiner system $S(t,k,v)$, the number of blocks through a fixed $s$-subset is
+$$
+\lambda_s = \frac{\binom{v-s}{t-s}}{\binom{k-s}{t-s}}
+$$
+for $0 \le s \le t$. Setting $(t,k,v,s)=(5,8,24,2)$ gives
+$$
+\lambda = \lambda_2 = \frac{\binom{22}{3}}{\binom{6}{3}} = \frac{1540}{20} = 77.
+$$
+This agrees with the parameter table above. ∎
+
 ---
 
 ## U.4 The Configuration Space
