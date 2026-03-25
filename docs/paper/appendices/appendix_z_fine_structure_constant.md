@@ -36,7 +36,7 @@ $$\boxed{D = 4}$$
 
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000060}$$
 
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The second-order correction is derived analytically in Section Z.27 from the symmetric-space curvature of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14). The third-order factor $(1 - u^{*2}/6)$ arises from the SU(2) geodesic-chord relation in each interface subblock: for an SU(2) rotation by angle $\theta$, the chord-to-geodesic ratio is
+where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The second-order correction is derived analytically in Section Z.27 from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14). The third-order factor $(1 - u^{*2}/6)$ arises from the SU(2) geodesic-chord relation in each interface subblock: for an SU(2) rotation by angle $\theta$, the chord-to-geodesic ratio is
 $$
 \frac{2\sin(\theta/2)}{\theta}=\frac{\sin(\theta/2)}{\theta/2}=1-\frac{\theta^2}{24}+O(\theta^4).
 $$
@@ -509,7 +509,7 @@ Squaring yields $m^2(v) = \mu_0^2 |v|^2$. ∎
 
 $$\Delta_{\mathrm{gap}} = \mu_0 \sqrt{|v|^2_{\min}} = \mu_0 \sqrt{4} = 2\mu_0$$
 
-The factor of 2 arises from the Leech lattice's minimum squared norm $|v|^2_{\min} = 4$ (rootlessness, Proposition Z.13a).
+The factor of 2 arises from the Leech lattice's minimum squared norm $|v|^2_{\min} = 4$ (Theorem Z.8c).
 
 **Remark Z.8g.2: Physical Interpretation.** The mass scale $\mu_0$ represents the minimum energy cost of creating a distinguishable excitation above the vacuum. Its value is set by the Leech lattice geometry and the Landauer partition.
 
@@ -530,7 +530,7 @@ where the contributions are:
 
 *Proof.*
 
-**Step 1 (Base shell from Landauer partition).** The ground state $0^{++}$ has no spin, positive parity, and positive C-parity. It must sit at the minimum Leech shell $|v|^2_{\min} = 4$. By Proposition Z.13a, this equals $a^2 = 4$; on the attractor-saturating branch one has $a=2$ by Theorem Z.1, using $\varepsilon = \ln 2$ from Definition 15a together with the lower bound of Theorem 31.
+**Step 1 (Base shell from Landauer partition).** The ground state $0^{++}$ has no spin, positive parity, and positive C-parity. It must sit at the minimum Leech shell $|v|^2_{\min} = 4$ (Theorem Z.8c). On the attractor-saturating branch one has $a=2$ by Theorem Z.1, using $\varepsilon = \ln 2$ from Definition 15a together with the lower bound of Theorem 31, hence $a^2 = 4 = |v|^2_{\min}$ as required for the base-shell identification.
 
 **Step 2 (Spin contribution from tensorial structure).** For spin-$J$ states with $J \geq 2$, the symmetric traceless tensor representation requires $J(J-1)$ additional polarization modes beyond the base scalar and vector cases:
 - $J = 0$: $\Delta_J = 0$ (scalar, no tensor structure)
@@ -2262,7 +2262,7 @@ The orbit $Gr(2,8)$ is embedded in the full state space $\mathcal{D}(\mathbb{C}^
 $$
 \mathcal V:=\operatorname{span}_{\mathbb{C}}\{E_{jm}: j\in A,\, 1\le m\le d_0\}
 $$
-be the visible operator space with the Hilbert-Schmidt structure induced by $\rho_0=\frac{1}{a}I_a\oplus 0_b$. The curvature contraction entering the gauge-coupling correction is isotropic over $\mathcal V$ as a consequence of the symmetric-space structure of $\mathrm{Gr}(a, d_0)$ (Lemma Z.12 below). The effective curvature is
+be the visible operator space with the Hilbert-Schmidt structure induced by $\rho_0=\frac{1}{a}I_a\oplus 0_b$. The curvature contraction entering the gauge-coupling correction is isotropic over $\mathcal V$ as a consequence of the symmetric-space structure of $\mathrm{Gr}(a, d_0)$ (Lemma Z.24a below). The effective curvature is
 $$
 K_{\mathrm{eff}}=K_{\mathrm{avg}}^{\mathrm{Bures}}\times \frac{M-1}{ad_0}.
 $$
@@ -2291,7 +2291,7 @@ $$
 $$
 \langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y) = \frac{1}{a}\sum_{j \in A}\sum_{m=1}^{d_0}\overline{X_{jm}}Y_{jm},
 $$
-which assigns equal norm $1/a$ to every basis element $E_{jm} \in \mathcal{V}$, regardless of whether $m \in A$ or $m \in B$. This metric has $U(a) \times U(d_0)$ symmetry. Under this symmetry, $\mathcal{V} \cong \mathbb{C}^a \otimes \mathbb{C}^{d_0}$ is irreducible, so by Schur's lemma any covariant quadratic contraction on $\mathcal{V}$ is proportional to the identity (Lemma Z.12). Therefore the effective squared projection onto any normalized visible direction is
+which assigns equal norm $1/a$ to every basis element $E_{jm} \in \mathcal{V}$, regardless of whether $m \in A$ or $m \in B$. This metric has $U(a) \times U(d_0)$ symmetry. Under this symmetry, $\mathcal{V} \cong \mathbb{C}^a \otimes \mathbb{C}^{d_0}$ is irreducible, so by Schur's lemma any covariant quadratic contraction on $\mathcal{V}$ is proportional to the identity (Lemma Z.24a). Therefore the effective squared projection onto any normalized visible direction is
 $$
 \frac{1}{\dim_{\mathbb{C}}(\mathcal{V})}=\frac{1}{ad_0}.
 $$
@@ -2328,7 +2328,7 @@ $$K_{\mathrm{eff}} = \frac{4}{2} = 2.$$
 
 This algebraic simplification is a reformulation of the democratic visible-space model above; it is not an independent derivation without that model assumption.
 
-**Lemma Z.12 (Derived Isotropy of the Visible-Space Projection).** At the PCE-Attractor, the $\rho_0$-weighted Hilbert-Schmidt metric on $\mathcal{V}$ forces the curvature contraction entering the gauge-coupling correction to be isotropic over $\mathcal{V}$. No independent distributional hypothesis is required.
+**Lemma Z.24a (Derived Isotropy of the Visible-Space Projection).** At the PCE-Attractor, the $\rho_0$-weighted Hilbert-Schmidt metric on $\mathcal{V}$ forces the curvature contraction entering the gauge-coupling correction to be isotropic over $\mathcal{V}$. No independent distributional hypothesis is required.
 
 *Proof.* The inner product $\langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y)$ on $\mathcal{V}$ evaluates to $(1/a)\sum_{j \in A}\sum_m \overline{X_{jm}}Y_{jm}$. Since $\rho_0 = (1/a)I_A \oplus 0_B$ has a constant eigenvalue $1/a$ on the active block $A$, this inner product weights every basis element $E_{jm}$ ($j \in A$, $1 \le m \le d_0$) identically: $\|E_{jm}\|^2_{\rho_0} = 1/a$ for all $m$. The column index $m$ therefore carries the full $U(d_0)$ symmetry of the standard Hilbert-Schmidt metric, not merely the $U(b)$ symmetry of $\rho_0$'s inactive block. Under $U(a) \times U(d_0)$, the space $\mathcal{V} \cong \mathbb{C}^a \otimes \mathbb{C}^{d_0}$ is irreducible (standard representation theory). Any $U(a)$-covariant Hermitian form on $\mathcal{V}$ must therefore be a scalar multiple of $\langle \cdot, \cdot \rangle_{\rho_0}$ by Schur's lemma. The curvature contraction entering the gauge-coupling correction is $H$-covariant by the equivariance of the Grassmannian embedding, and $U(a)$-covariant a fortiori. Therefore it is proportional to the identity on $\mathcal{V}$, yielding the uniform projection factor $1/(ad_0)$. Equivalently, $K_{\mathrm{eff}} = S_B / (M \cdot ad_0) = 4/a$ is a geometric invariant of $\mathrm{Gr}(a, d_0)$ that requires no distributional input. ∎
 
@@ -2404,7 +2404,7 @@ consistent to better than $10^{-6}$. ∎
 
 ### Z.27.8 The Complete Formula
 
-**Theorem Z.26 (Fine-Structure Constant to Third Order).** Combining the bulk Ward identity (Theorem Z.14), the first-order interface correction (Theorem Z.17), the symmetric-space curvature correction (Theorem Z.24; Lemma Z.12), the minimal holonomy normalization (Lemma Z.14; Theorem Z.25), and the SU(2) geodesic-chord factor (Lemma Z.13), the fine-structure constant at the Thomson limit is:
+**Theorem Z.26 (Fine-Structure Constant to Third Order).** Combining the bulk Ward identity (Theorem Z.14), the first-order interface correction (Theorem Z.17), the symmetric-space curvature correction (Theorem Z.24; Lemma Z.24a), the minimal holonomy normalization (Lemma Z.14; Theorem Z.25), and the SU(2) geodesic-chord factor (Lemma Z.13), the fine-structure constant at the Thomson limit is:
 $$\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) + O(u^{*5})$$
 
 With $u^* = 2^{1/8} - 1$ and $K_0 = 3$:
@@ -2842,7 +2842,7 @@ Every quantity in the final formulas traces back to:
 - $\varepsilon \ge \ln 2$ from ND-RID irreversibility (Theorem 31), with $\varepsilon = \ln 2$ at PCE-Attractor saturation (Definition 15a)
 - $\pi$ (geometric necessity)
 
-No continuous parameters are tuned at any stage. The Thomson-limit $\alpha^{-1}$ formula follows from the symmetric-space curvature of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14; Theorem Z.25). The dimensional selection $D=4$ follows from the mode-channel correspondence (Theorems Z.10–Z.11).
+No continuous parameters are tuned at any stage. The Thomson-limit $\alpha^{-1}$ formula follows from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14; Theorem Z.25). The dimensional selection $D=4$ follows from the mode-channel correspondence (Theorems Z.10–Z.11).
 
 ---
 
@@ -2870,7 +2870,7 @@ M = 2ab = 24 \text{ (Theorem Z.5)} \\[4pt]
 \Downarrow \\[4pt]
 \Lambda_{24} \text{ (Proposition R.4.2a)} \\[4pt]
 \Downarrow \\[4pt]
-|v|^2_{\min} = 4 \text{ (Proposition Z.13a)} \\[4pt]
+|v|^2_{\min} = 4 \text{ (Theorem Z.8c)} \\[4pt]
 \Downarrow \\[4pt]
 m^2 \propto |v|^2 \text{ (Theorem Z.8g)} \\[4pt]
 \Downarrow \\[4pt]
@@ -2905,7 +2905,7 @@ n_{\text{pol}} = D - 2 = 2 \text{ after selecting } D=4 \\[4pt]
 | $M$ | 24 | QFI mode count | Theorem Z.5 |
 | $\mathcal{G}_{24}$ | $[24,12,8]$ | Error correction optimality | Theorem Z.13 |
 | $\Lambda_{24}$ | Leech | Golay gluing | Proposition R.4.2a |
-| $|v|^2_{\min}$ | 4 | Rootlessness | Proposition Z.13a |
+| $|v|^2_{\min}$ | 4 | Rootlessness | Theorem Z.8c |
 | $n_G$ | 12 | Lagrangian bound | Theorem G.8.2e |
 | $D$ | 4 | $K(D)=24$ | Theorem Z.11 |
 | $\Delta_{\text{gap}}$ | $2\mu_0$ | Energy-norm relation | Corollary Z.8g.1 |

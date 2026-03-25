@@ -326,7 +326,7 @@ so $F_{ij}$ is the (pullback) Riemannian metric on the statistical manifold at t
 
 **Consequence:** If $g_0$ is defined as the **linear-response susceptibility** at the attractor (per spatial channel, per Landauer event), it **cannot** depend on curvature invariants by construction.
 
-Curvature data ($K_{\mathrm{eff}} = 2$ from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12), scalar curvature $S_B = 768$, etc.) enters only for:
+Curvature data ($K_{\mathrm{eff}} = 2$ from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a), scalar curvature $S_B = 768$, etc.) enters only for:
 - Environmental corrections (different $\rho$, not at attractor)
 - Finite-deviation effects (large parameter shifts)
 - VVM-type focusing (geodesic bundles, higher-order expansion)
@@ -447,13 +447,13 @@ The linear-response derivation (Section H.4.2) yields $\eta' = 3/(8\sqrt{3})$ ex
 - Large parameter shifts (beyond linear response)
 - Geodesic focusing effects (finite "diffusion time")
 
-**Effective Curvature (From Symmetric-Space Geometry).** From the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12):
+**Effective Curvature (From Symmetric-Space Geometry).** From the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a):
 $$
 K_{\mathrm{eff}} = K_{\mathrm{avg}}^{\mathrm{Bures}} \cdot \frac{M-1}{ad_0} = \frac{32}{23} \cdot \frac{23}{16} = 2
 \tag{H.11}
 $$
 
-The exact value $K_{\mathrm{eff}} = 2$ arises from the same $(M-1)=23$ cancellation used in Appendix Z, as derived from the symmetric-space structure (Lemma Z.12).
+The exact value $K_{\mathrm{eff}} = 2$ arises from the same $(M-1)=23$ cancellation used in Appendix Z, as derived from the symmetric-space structure (Lemma Z.24a).
 
 **Van Vleck-Morette Expansion.** For transverse Jacobi modes with sectional curvature $K$, geodesic focusing yields [DeWitt & Brehme 1960]:
 $$

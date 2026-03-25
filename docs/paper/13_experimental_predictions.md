@@ -474,7 +474,7 @@ The Golay alignment prediction connects to other PU predictions through the unif
 |------------|--------|------------------------|
 | Fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000060$ (Thomson) | Section 13.8.1, Appendix Z | Capacity saturation at PCE-Attractor |
 | Spacetime dimensionality $D = 4$ | Appendix Z, Theorem Z.11 (see also Appendix H, Theorem H.4) | Kissing number $K(4) = 24$ |
-| Vacuum stability | Appendix Z, Proposition Z.13a | Leech lattice rootlessness from Golay $d = 8$ |
+| Vacuum stability | Appendix R, Proposition R.4.2a; Appendix Z, Theorem Z.8c and Proposition Z.13a | Golay $d = 8$ forces rootlessness, and rootlessness yields vacuum isolation |
 | Gauge group structure | Appendix W | $\dim[\mathfrak{g}_{\text{SM}}] = 12 = k$ |
 
 This web of interconnected predictions—all flowing from the single structure $(a, b, d_0) = (2, 6, 8)$ and the PCE optimization principle—provides robust cross-validation opportunities. Confirmation or falsification in any domain constrains the others.

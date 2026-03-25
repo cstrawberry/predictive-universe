@@ -339,7 +339,7 @@ For any observable $O$ and any two states $\rho,\sigma$, one has $|\mathrm{Tr}(O
 Theorem E.4a controls *total* correlations across $\partial A$ at nonzero temperature in any dimension. In contrast, a von Neumann entropy area law for ground states is fully rigorous in the 1D gapped setting (Hastings), while in higher dimensions one typically adopts an area-scaling ansatz for entanglement entropy as a semiclassical consistency input.
 
 
-### E.6.2 Theorem E.4' (Entanglement Entropy Area Scaling)
+### E.6.2 Entanglement Entropy Area Scaling
 
 In local many-body systems, correlations between a region and its complement are limited by boundary interactions. In one spatial dimension this can be made fully rigorous for gapped Hamiltonians, while in higher dimensions it is widely expected (and verified in many models) but not known in complete generality. Since the PU area law used downstream is derived operationally from boundary-channel counting (Theorem E.3, Corollary E.2, and Lemma E.5.1), the entanglement picture is optional context rather than a required input.
 

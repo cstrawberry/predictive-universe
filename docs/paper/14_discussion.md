@@ -1207,7 +1207,7 @@ The PCE-optimal organization of 24 QFI modes takes the form of the extended bina
 
 This resolves the "unreasonable stability" puzzle: Why do coherent structures persist despite quantum uncertainty? Because PCE optimization produces error correction as a necessary feature. Stability emerges from information-theoretic optimality.
 
-The rootlessness of the Leech lattice (Proposition Z.13a) reinforces this: the absence of vectors at squared norm 2 creates a gap between the vacuum and all excitations. Small perturbations cannot reach alternative configurations. The vacuum is stable because it is isolated—a direct consequence of the Golay code's minimum distance $d = 8$.
+The rootlessness of the Leech lattice (Theorem Z.8c; Proposition Z.13a) reinforces this: the absence of vectors at squared norm 2 creates a gap between the vacuum and all excitations. Small perturbations cannot reach alternative configurations. The vacuum is stable because it is isolated—a direct consequence of the Golay code's minimum distance $d = 8$.
 
 #### Mass Gap Robustness
 
@@ -1304,7 +1304,7 @@ The framework operates through six critical bridging mechanisms that convert abs
 The Principle of Physical Instantiation (Definition P.6.2) requires the abstract Landauer cost $\varepsilon = \ln 2$ to be instantiated on a physical subsystem. Admissibility requires $\ln a \ge \varepsilon$; PPI-optimality selects the minimal admissible $a \in \mathbb{N}$, yielding $a = 2$.
 
 **2. Golay-Leech Bridge: $d = 8 \to$ Vacuum Stability**
-The error correction distance $d_{\min} = 8$ of the Golay code $[24,12,8]$ produces, via Conway-Sloane gluing construction, the rootless Leech lattice $\Lambda_{24}$ (Proposition Z.13a). Rootlessness—absence of vectors at squared norm 2—creates a gap between vacuum and excitations, ensuring topological stability.
+The error correction distance $d_{\min} = 8$ of the Golay code $[24,12,8]$ produces, via Conway-Sloane gluing construction, the rootless Leech lattice $\Lambda_{24}$ (Proposition R.4.2a; Theorem Z.8c). Rootlessness—absence of vectors at squared norm 2—creates a gap between vacuum and excitations, ensuring topological stability.
 
 **3. Geometric Frustration Bridge: D₄/A₂ $\to$ CKM Mixing**
 The D₄ lattice constraint (generation 1) and A₂ lattice constraint (generation 2) exhibit geometric mismatch in the shared vacuum valley (Theorem T.49). The root-weight duality projection factor $\mathcal{P} = \sqrt{3}/2 = \cos(30°)$ converts this frustration into the Cabibbo angle: $|V_{us}| = \mathcal{P} \cdot \theta_{\text{valley}} \cdot f_{\text{corr}} \approx 0.225$ (Theorem T.52).

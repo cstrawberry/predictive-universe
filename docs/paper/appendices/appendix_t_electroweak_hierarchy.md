@@ -846,7 +846,7 @@ $$
 $$
 Consequently, leading thresholds only renormalize the common coupling offset $\alpha_U^{-1}\mapsto \alpha_U^{-1}+\delta_{\mathrm{avg}}/(2\pi)$ and do not affect the separations $\alpha_i^{-1}-\alpha_j^{-1}$ set by the $Z_i$.
 
-*Proof.* PCE isotropy implies the QFI/Bures metric on the 24-mode interface is proportional to $I_{24}$ (Lemma Z.12). In this limit the discretization correction depends only on the mode count $M=24$ and is independent of the gauge factor, giving a common shift $\delta_{\mathrm{avg}}$. Since $\delta_{\mathrm{avg}}$ enters additively in all three $\alpha_i^{-1}(\mu_G)$, differences are unchanged. ∎
+*Proof.* PCE isotropy implies the QFI/Bures metric on the 24-mode interface is isotropic at leading order (Lemma Z.24a). In this limit the discretization correction depends only on the mode count $M=24$ and is independent of the gauge factor, giving a common shift $\delta_{\mathrm{avg}}$. Since $\delta_{\mathrm{avg}}$ enters additively in all three $\alpha_i^{-1}(\mu_G)$, differences are unchanged. ∎
 
 **Corollary T.17.1** (Subleading Threshold Splittings). Subleading anisotropies can generate splittings $\delta_i-\delta_j$ suppressed by at least one power of $M^{-1}$ relative to the common leading shift:
 $$
@@ -2096,7 +2096,7 @@ The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ encodes the tangent spa
 The few-percent deviations in Table T.21.1 arise from the $\mathcal{O}(d^4)$ curvature correction on $\mathrm{Gr}(2,8)$. This section provides a complete derivation using:
 
 1. The Van Vleck–Morette determinant for Gaussian overlaps on curved manifolds [DeWitt 1965]
-1. The effective sectional curvature $K_{\mathrm{eff}} = 2$ imported from Theorem Z.24 from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12)
+1. The effective sectional curvature $K_{\mathrm{eff}} = 2$ imported from Theorem Z.24 from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a)
 1. The Golay decoding partition structure [MacWilliams & Sloane 1977]
 1. The path-additivity principle for generation triangles
 
@@ -2156,15 +2156,15 @@ $$
 \boxed{\beta_{\mathrm{geom}} = \frac{K_{\mathrm{eff}}}{12}\,\sigma_B^2 = \frac{1}{C} = \frac{1}{bM} = \frac{1}{144}}
 $$
 
-*where $K_{\mathrm{eff}} = 2$ is the effective sectional curvature imported from Theorem Z.24 from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12), $\sigma_B^2 = 1/24$ is the Bures variance (Lemma T.41.2), and $C = bM = 144$ is the vacuum capacity (Theorem Z.13a).*
+*where $K_{\mathrm{eff}} = 2$ is the effective sectional curvature imported from Theorem Z.24 from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a), $\sigma_B^2 = 1/24$ is the Bures variance (Lemma T.41.2), and $C = bM = 144$ is the vacuum capacity (Theorem Z.13a).*
 
 *Proof.*
 
-**Step 1** (Effective curvature from Theorem Z.24). From the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12), the effective sectional curvature for interface modes is:
+**Step 1** (Effective curvature from Theorem Z.24). From the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a), the effective sectional curvature for interface modes is:
 $$
 K_{\mathrm{eff}} = K_{\mathrm{avg}}^{\mathrm{Bures}} \times \frac{M-1}{ad_0} = \frac{32}{23} \times \frac{23}{16} = 2
 $$
-This value follows from the symmetric-space structure of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12) and is reused here because the same Gaussian overlap functional on $\mathrm{Gr}(2,8)$ is being evaluated.
+This value follows from the symmetric-space structure of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and is reused here because the same Gaussian overlap functional on $\mathrm{Gr}(2,8)$ is being evaluated.
 
 **Step 2** (Bures variance from Lemma T.41.2). Capacity saturation at the PCE-attractor yields:
 $$
@@ -2862,7 +2862,7 @@ All quantities trace to established theorems:
 |$g_U^2$ |$\pi/6$ |Theorem T.39a |Holonomy per mode $2\pi/M$ |
 |$\mathcal{N}_{PU}$ |$1/(72\sqrt{12})$ |Section T.21.11 |Democratic × capacity × isotropy |
 |$M$ |$24$ |Theorem Z.5 |$2ab$ (QFI-active modes) |
-|$K_{\mathrm{eff}}$ |$2$ from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.12) |Theorem Z.24 |$K_{\mathrm{avg}}^{\mathrm{Bures}} \times (M-1)/(ad_0)$ from the symmetric-space geometry (Lemma Z.12) |
+|$K_{\mathrm{eff}}$ |$2$ from the symmetric-space geometry of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) |Theorem Z.24 |$K_{\mathrm{avg}}^{\mathrm{Bures}} \times (M-1)/(ad_0)$ from the symmetric-space geometry (Lemma Z.24a) |
 |$\sigma_B^2$ |$1/24$ |Lemma T.41.2 |Capacity saturation |
 |$1/12$ |Universal |Van Vleck–Morette|World-function expansion coefficient |
 |$\beta_{\mathrm{geom}}$ |$1/144$ |Theorem T.42.2 |$(K_{\mathrm{eff}}/12)\sigma_B^2 = 1/C$ |
