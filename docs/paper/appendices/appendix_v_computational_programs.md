@@ -134,8 +134,8 @@ This section provides the direct computational program for the fine-structure co
 ### V.2.2 Derived Spectral Parameters for the PCE-Attractor
 
 As derived in Appendix Z (Theorem Z.5) from the subspace structure induced by the Landauer Pointer mechanism, the QFI spectrum at the PCE-Attractor is flat and uniquely determined:
-*   **Number of Information Modes:** $M = 2ab = 2 \cdot (e^\varepsilon) \cdot (d_0 - e^\varepsilon) = 2 \cdot 2 \cdot (8-2) = 24$.
-*   **Per-Mode Sensitivity:** $\lambda = 2/a = 2/e^\varepsilon = 1$ (here $\lambda$ denotes the QFI eigenvalue of the interface modes; it is unrelated to the resource-scarcity parameter of Definition 20).
+*   **Number of Information Modes:** $M = 2ab = 2 \cdot 2 \cdot (8-2) = 24$.
+*   **Per-Mode Sensitivity:** $\lambda = 2/a = 2/2 = 1$ (here $\lambda$ denotes the QFI eigenvalue of the interface modes; it is unrelated to the resource-scarcity parameter of Definition 20).
 
 ### V.2.3 Capacity Saturation Condition
 

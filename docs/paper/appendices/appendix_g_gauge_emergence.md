@@ -159,11 +159,11 @@ The self-referential structure of SPAP (Theorem 10, Theorem 11) logically exclud
 
 **Step 3 (Conclusion).** Step 1 establishes that SPAP-implementing systems necessarily possess complementary observable pairs. Step 2 establishes that simplex state spaces cannot support complementary pairs. Therefore, no SPAP-implementing system can have a simplex state space. ∎
 
-*Remark G.1.10a: Logical Foundation.* This result derives from the Logical Necessity foundation of Property R (§A.0.2), which establishes computational richness from the structure of prediction itself, independent of physical implementation. The exclusion of simplex state spaces therefore follows from the logical structure of self-reference without invoking PCE optimization dynamics. The derivation chain is:
+**Remark G.1.10a (Logical Foundation).** This result derives from the Logical Necessity foundation of Property R (§A.0.2), which establishes computational richness from the structure of prediction itself, independent of physical implementation. The exclusion of simplex state spaces therefore follows from the logical structure of self-reference without invoking PCE optimization dynamics. The derivation chain is:
 $$\text{SPAP} \xrightarrow{\text{Def 12}} \text{Logical Indeterminacy} \xrightarrow{\text{Cor 1, Prop 8}} \text{Complementarity} \xrightarrow{\text{Step 2}} \text{Non-simplex}$$
 This establishes that non-classical state space structure is logically necessary for self-referential predictive systems. The PCE-based arguments (Theorems G.1.7, G.1.8) then determine the specific form (complex Hilbert space with Born rule) among non-classical alternatives.
 
-*Remark G.1.10b: Connection to Hilbert Space Formalism.* Within the MPU Hilbert space $\mathcal{H}_0$ established by Theorem G.1.8, complementary observables necessarily satisfy $[\hat{A}, \hat{B}] \neq 0$ (Lemma 14.2a). The present result provides a logically prior exclusion of classical alternatives, while the efficiency-based derivations of Section G.1 determine the specific quantum structure among non-classical candidates.
+**Remark G.1.10b (Connection to Hilbert Space Formalism).** Within the MPU Hilbert space $\mathcal{H}_0$ established by Theorem G.1.8, complementary observables necessarily satisfy $[\hat{A}, \hat{B}] \neq 0$ (Lemma 14.2a). The present result provides a logically prior exclusion of classical alternatives, while the efficiency-based derivations of Section G.1 determine the specific quantum structure among non-classical candidates.
 
 **G.2 Local Phase Freedom and Emergence of Gauge Structure**
 
@@ -1069,7 +1069,7 @@ $$
 
 The full modular Hamiltonian is formally written as $K^* = (\ln 2) \cdot I_2 \oplus (+\infty) \cdot I_6$, where the infinite values on the inactive subspace $\mathcal{B}$ enforce the zero eigenvalues via the limiting procedure $\lim_{K \to \infty} e^{-K} = 0$.
 
-*Proof.* Direct computation from Definition G.1.9.2. On the active subspace $\mathcal{A}$:
+*Proof.* Direct computation from Definition G.1.9.4a. On the active subspace $\mathcal{A}$:
 
 $$
 e^{-K^*|_{\mathcal{A}}} = e^{-(\ln 2) I_2} = \frac{1}{2} I_2
@@ -1115,7 +1115,7 @@ where $K^*_{PCE} = (\ln 2) \cdot I_a \oplus (+\infty) \cdot I_b$ is the baseline
 
 **Part A (Quantum Measurement—Reference Case):** The quantum measurement case serves as the reference point of the unification. The Born rule derivation (Sections G.1.1–G.1.4) establishes that PCE-enforced non-contextuality and additivity yield $p_i = \mathrm{tr}(\rho_{phys} P_i)$ via Gleason's theorem [Gleason 1957]. 
 
-By Definition G.1.9.2, any density matrix $\rho_{phys}$ admits the Gibbs representation $\rho_{phys} = Z^{-1}e^{-K}$ with $K = -\ln \rho_{phys}$. This is the identity case of the Gibbs structure—not an additional constraint but the baseline from which constraint modifications are measured. The measurement context (perspective $s \in \Sigma$) determines the basis $\{P_i\}$ in which probabilities are evaluated:
+By Definition G.1.9.4a, any faithful density matrix $\rho_{phys}$ admits the Gibbs representation $\rho_{phys} = Z^{-1}e^{-K}$ with $K = -\ln \rho_{phys}$. This is the identity case of the Gibbs structure—not an additional constraint but the baseline from which constraint modifications are measured. The measurement context (perspective $s \in \Sigma$) determines the basis $\{P_i\}$ in which probabilities are evaluated:
 
 $$
 p_i = \mathrm{tr}\left(\frac{e^{-K^*}}{Z} P_i\right) = \mathrm{tr}(\rho_{phys} P_i)
@@ -1140,13 +1140,13 @@ K^*_{horizon} = \frac{2\pi}{\kappa} K_{boost}
 \tag{G.1.9.15}
 $$
 
-where $\kappa$ is the surface gravity. This yields the Unruh temperature $T_U = \hbar\kappa/(2\pi k_B c)$ for accelerated observers [Unruh 1976], which is the kinematic result underlying the entanglement first law (Equation E.6e) and the thermodynamic derivation of gravity (Section 12). The constraint here arises from the geometric structure of the horizon itself—boost invariance of the vacuum state restricts the form of $K^*$ to be proportional to $K_{boost}$. QED
+where $\kappa$ is the surface gravity. This yields the Unruh temperature $T_U = \hbar\kappa/(2\pi k_B c)$ for accelerated observers [Unruh 1976], which is the kinematic result underlying the entanglement first law (Equation G.1.9.16) and the thermodynamic derivation of gravity (Section 12). The constraint here arises from the geometric structure of the horizon itself—boost invariance of the vacuum state restricts the form of $K^*$ to be proportional to $K_{boost}$. QED
 
 ### G.1.9.6 Connection to the Entanglement First Law
 
 The modular Hamiltonian structure connects directly to the entanglement first law, which is central to the derivation of Einstein's equations (Section 12, Theorem 50).
 
-**Theorem G.1.9.7 (Entanglement First Law from Modular Structure).** For small perturbations $\delta\rho$ to the vacuum state across a causal horizon $\mathcal{H}$, the first law of entanglement entropy relates entropy change to the modular Hamiltonian expectation value (Equation E.6e):
+**Theorem G.1.9.7 (Entanglement First Law from Modular Structure).** For small perturbations $\delta\rho$ to the vacuum state across a causal horizon $\mathcal{H}$, the first law of entanglement entropy relates entropy change to the modular Hamiltonian expectation value (Equation G.1.9.16):
 
 $$
 \delta S_{ent} = \delta \langle K \rangle
@@ -1173,7 +1173,7 @@ $$
 
 This identifies the gravitational constant $G$ as an emergent quantity determined by the MPU network's entanglement structure, consistent with the Bekenstein-Hawking entropy formula [Bekenstein 1973; Hawking 1975].
 
-The result $\eta_{ent} = 1/(4G)$ connects directly to the gravitational entropy in the unified entropy framework (Section P.6.5). The Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ arises from the channel capacity of ND-RID interactions crossing the horizon (Theorems E.3–E.5). This is not an analogy but an identity: horizon entropy counts the Shannon entropy of channel capacity across the boundary, measured in Planck units. The derivation chain from SPAP to horizon entropy (Section P.6.5.2) makes this explicit:
+The result $\eta_{ent} = 1/(4G)$ connects directly to the gravitational entropy in the unified entropy framework (Section P.6.5). The Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ arises from the channel capacity of ND-RID interactions crossing the horizon (Theorems E.3 and E.5). This is not an analogy but an identity: horizon entropy counts the Shannon entropy of channel capacity across the boundary, measured in Planck units. The derivation chain from SPAP to horizon entropy (Section P.6.5.2) makes this explicit:
 
 $$
 \varepsilon \ge \ln 2 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
@@ -1570,7 +1570,7 @@ This result is consistent with the spin-statistics theorem of axiomatic quantum 
 
 | Step | Result | Origin | Status | Reference |
 |:----:|:-------|:-------|:------:|:----------|
-| 1 | $\iota^2 = \text{id}$, $\iota \neq \text{id}$ | SPAP logical structure | Derived | Theorem 10, Lemma G.10.1 |
+| 1 | $\iota^2 = \text{id}$, $\iota \neq \text{id}$ | SPAP logical structure | Derived | Theorem 10, Definition G.10.1, Lemma G.10.1a |
 | 2 | $\varepsilon = \ln 2$ on the attractor branch | Landauer + 2-to-1 merge | Derived | Theorem 31, Definition 15a, Lemma Z.2 |
 | 3 | $a = 2$ | PPI-optimality on the attractor-saturating branch | Derived | Theorem Z.1 |
 | 4 | $U_\iota = \sigma_x \in U(2)$ | Unitary realization | Derived | Theorem G.10.2 |

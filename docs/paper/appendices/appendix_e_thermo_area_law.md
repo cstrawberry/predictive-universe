@@ -1231,7 +1231,7 @@ where $\mathcal{S}(\mathcal{H}_{\Sigma})$ denotes the set of density operators o
 
 **Assumption E.9.5.1 (Closed System).** The MPU network $\mathcal{N}$ constitutes a closed system from the internal perspective: no information exchange occurs with degrees of freedom accessible to internal systems. 
 
-This assumption follows from Hypothesis 1 (Section 7.1) together with the authentic simulation architecture (Appendix P.5). External observation channels (Definition P.5.3) satisfy internal inaccessibility ($\mathbb{E}[\Delta Q \mid E; M] = 0$ for all internal procedures $M \in \mathcal{M}_{int}$, Definition P.5.3(ii)) and non-intervention (Definition P.5.3(iii)), ensuring that from the internal perspective, the network evolves as if closed (Remark P.5.1). External observation extracts information without constituting an interaction from the internal viewpoint.
+This assumption follows from Hypothesis 1 (Section 7.1) together with the authentic simulation architecture (Appendix P.5). External observation channels (Definition P.5.3) satisfy internal inaccessibility ($\mathbb{E}[\Delta Q \mid E; M] = 0$ for all internal procedures $M \in \mathcal{M}_{int}$, condition (ii) of Definition P.5.3) and non-intervention (condition (iii) of Definition P.5.3), ensuring that from the internal perspective, the network evolves as if closed (Remark P.5.1). External observation extracts information without constituting an interaction from the internal viewpoint.
 
 For the derivation of global unitarity (Theorem E.9.5), this internal closure is sufficient: the Stinespring environment for any reduced subsystem dynamics is contained within $\mathcal{H}_{\Sigma}$ as experienced by internal systems, and information conservation holds for internal evolution.
 
@@ -1641,7 +1641,7 @@ For the joint system: $S(U_{AB}\rho_{AB}U_{AB}^\dagger) = S(\rho_{AB})$. No info
 
 This distinction—between subsystem-level apparent erasure and global conservation—is central to the entropy unification thesis (Thesis P.6.1, Appendix P). What appears as "entropy production" from a subsystem perspective is "correlation generation" from the global perspective.
 
-This principle extends to observation channels (Appendix P.5): external observation accesses correlated information without participating in internal dynamics. The observation channel's internal inaccessibility ($\Delta I_{int} = 0$, Definition P.5.3(ii)) ensures no internal entropy production is triggered, while external agents extracting information incur costs in their own thermodynamic context. ∎
+This principle extends to observation channels (Appendix P.5): external observation accesses correlated information without participating in internal dynamics. The observation channel's internal inaccessibility ($\Delta I_{int} = 0$, condition (ii) of Definition P.5.3) ensures no internal entropy production is triggered, while external agents extracting information incur costs in their own thermodynamic context. ∎
 
 ### E.9.5.10 Numerical Values
 

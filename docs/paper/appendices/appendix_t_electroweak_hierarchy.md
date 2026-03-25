@@ -116,7 +116,7 @@ $$
 
 In particular, no row of $P$ sums to 1, so $P\mathbf{1}_{12} \neq \mathbf{1}_{12}$.
 
-*Proof.* Direct computation from Definition T.2. The first row is $[0,1,1,1,1,1,1,1,1,1,1,1]$ with sum 11. Rows 2–12 each contain exactly 7 ones. ∎
+*Proof.* Direct computation from Definition T.2a. The first row is $[0,1,1,1,1,1,1,1,1,1,1,1]$ with sum 11. Rows 2–12 each contain exactly 7 ones. ∎
 
 ### T.2.3 The Signal-Parity Decomposition
 
@@ -188,7 +188,7 @@ $$
 T s = \begin{pmatrix} s \ P s \end{pmatrix} = \begin{pmatrix} I_{12} \ P \end{pmatrix} s
 $$
 
-where $P$ is the Golay parity matrix (Definition T.2).
+where $P$ is the Golay parity matrix (Definition T.2a).
 
 ### T.4.2 The Octad Hessian
 
@@ -949,7 +949,7 @@ $$
 
 **Theorem T.18a** (Link Count). The electroweak sector contains exactly 6 left-chiral SU(2) links, corresponding to $b=6$ inactive modes.
 
-*Proof.* By Definition T.3, the left-chiral projection $\Pi_L:\mathbb{R}^{12}\to\mathbb{R}^6$ selects exactly $k/2=6$ independent information modes that couple to $SU(2)_L$, and $\Pi_L\Pi_L^T=I_6$ identifies these as six independent directions. Each such direction supports an independent $SU(2)_L$ doublet rotation (via the $3\otimes 2$ factorization of Theorem T.8), so each corresponds to one left-chiral SU(2) link. Therefore the electroweak sector contains exactly 6 independent left-chiral SU(2) links. This matches the inactive dimension $b=6$ used in the alignment-counting definition of $N_0$ (Definition T.5). ∎
+*Proof.* By Definition T.3a, the left-chiral projection $\Pi_L:\mathbb{R}^{12}\to\mathbb{R}^6$ selects exactly $k/2=6$ independent information modes that couple to $SU(2)_L$, and $\Pi_L\Pi_L^T=I_6$ identifies these as six independent directions. Each such direction supports an independent $SU(2)_L$ doublet rotation (via the $3\otimes 2$ factorization of Theorem T.8), so each corresponds to one left-chiral SU(2) link. Therefore the electroweak sector contains exactly 6 independent left-chiral SU(2) links. This matches the inactive dimension $b=6$ used in the alignment-counting definition of $N_0$ (Definition T.5a). ∎
 
 ### T.14.3 Canonical Field and Total Potential
 
@@ -1595,15 +1595,15 @@ S(\kappa)=8\kappa_3\ln\kappa_3 + 3\kappa_2\ln\kappa_2 + \kappa_1\ln\kappa_1
 $$
 subject to the two linear constraints
 $$
-\text{(C1)}\quad 8\kappa_3 + 3\kappa_2 + \kappa_1 = 12,\qquad \text{(C2)}\quad 21\kappa_1 + 55\kappa_2 - 48\kappa_3 = 0.
+\mathcal{W}\colon\; 8\kappa_3 + 3\kappa_2 + \kappa_1 = 12,\qquad \mathcal{N}\colon\; 21\kappa_1 + 55\kappa_2 - 48\kappa_3 = 0.
 $$
-(C1) enforces that the weighted sum of Bures weights equals the gauge algebra dimension $n_G = 12$; (C2) is the normalization constraint from Corollary T.34.1.
+$\mathcal{W}$ enforces that the weighted sum of Bures weights equals the gauge algebra dimension $n_G = 12$; $\mathcal{N}$ is the normalization constraint from Corollary T.34.1.
 
-*Derivation.* Introduce Lagrange multipliers $\mu$ for (C1) and $\nu$ for (C2). The stationarity conditions are
+*Derivation.* Introduce Lagrange multipliers $\mu$ for $\mathcal{W}$ and $\nu$ for $\mathcal{N}$. The stationarity conditions are
 $$
 n_i(1+\ln\kappa_i) = \mu\,n_i + \nu\,c_i, \qquad i\in\{1,2,3\},
 $$
-where $(n_1,n_2,n_3)=(1,3,8)$ are the multiplicities and $(c_1,c_2,c_3)=(21,55,-48)$ are the (C2) coefficients. Thus
+where $(n_1,n_2,n_3)=(1,3,8)$ are the multiplicities and $(c_1,c_2,c_3)=(21,55,-48)$ are the $\mathcal{N}$ coefficients. Thus
 $$
 1+\ln\kappa_1 = \mu + 21\nu,\quad 1+\ln\kappa_2 = \mu + \tfrac{55}{3}\nu,\quad 1+\ln\kappa_3 = \mu - 6\nu.
 $$
@@ -1616,7 +1616,7 @@ $$
 $$
 (Here the exponents arise from $27/(1/3)=81$ and $(73/3)/(1/3)=73$ after expressing everything in terms of $y = e^{-\nu/3}$.)
 
-Substituting into (C2): $21\kappa_3 y^{-81} + 55\kappa_3 y^{-73} = 48\kappa_3$, which simplifies to
+Substituting into $\mathcal{N}$: $21\kappa_3 y^{-81} + 55\kappa_3 y^{-73} = 48\kappa_3$, which simplifies to
 $$
 21y^{-81} + 55y^{-73} = 48.
 $$
@@ -1626,7 +1626,7 @@ $$
 $$
 which has a unique solution $y^*\in(0,1)$ by monotonicity (the left side is decreasing, the right side increasing in $y$ for $y > 0$).
 
-Substituting into (C1) determines $\kappa_3$:
+Substituting into $\mathcal{W}$ determines $\kappa_3$:
 $$
 \kappa_3 = \frac{12}{8 + 3y^{-73} + y^{-81}}.
 $$
@@ -1675,7 +1675,7 @@ These eight boundary conditions, together with the PU-to-SM matching map encoded
 |$y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) = 1$|Exact |$S_3$ projector (Theorem T.32) |
 |$\mathcal{R}$ values |Derived |$E_8$ triads: discrete set ${4/3, 3/2, 2, 3, 4}$ |
 |$c_\ell/c_d = 8/3$ |Constraint|Normalization constraint (Corollary T.34.1) |
-|$\kappa_1, \kappa_2, \kappa_3$ |Fixed |PCE optimum under constraints (C1) and (C2): Corollary T.34.2|
+|$\kappa_1, \kappa_2, \kappa_3$ |Fixed |PCE optimum under constraints $\mathcal{W}$ and $\mathcal{N}$: Corollary T.34.2|
 |$\alpha = 3/2$ |Derived |Capacity saturation (Corollary T.41.3) |
 |$c_d/c_u \approx 1.00$–$1.02$ |Derived |Right-handed hypercharge (Theorem T.38) |
 
@@ -3516,6 +3516,27 @@ $$u = \sqrt{\sigma^2_{\mathcal{G}}} = \sqrt{1/3} = \frac{1}{\sqrt{N_g}} = \frac{
 $$N_g = \frac{1}{u^2} = 3$$
 *confirming internal consistency with Theorem R.3.4 (three generations from anomaly + CP).*
 
+### T.22.6.5a Sinc Correction Factor
+
+**Theorem T.55** (Sinc Correction Factor). *Under the variance assignment of Theorem T.54.2, uniform phase fluctuations on the bounded generation interval $[-u,u]$ renormalize the Berry phase by the coherent-average factor*
+$$
+f_{\mathrm{sinc}}=\left|\frac{1}{2u}\int_{-u}^{u} e^{i\xi}\,d\xi\right|=\frac{\sin u}{u}.
+$$
+*With $u=1/\sqrt{N_g}=1/\sqrt{3}$,*
+$$
+f_{\mathrm{sinc}}=\mathrm{sinc}(1/\sqrt{3})=0.9454.
+$$
+
+*Proof.* By Theorem T.54.2, $u=1/\sqrt{3}$. For a uniform distribution on $[-u,u]$,
+$$
+\frac{1}{2u}\int_{-u}^{u} e^{i\xi}\,d\xi=\frac{e^{iu}-e^{-iu}}{2iu}=\frac{\sin u}{u}.
+$$
+Since $0<u<\pi$, the modulus equals $\sin u/u$. Substituting $u=1/\sqrt{3}$ gives
+$$
+f_{\mathrm{sinc}}=\frac{\sin(1/\sqrt{3})}{1/\sqrt{3}}=0.9454.
+$$
+∎
+
 ### T.22.6.6 Conditional CKM CP Phase
 
 **Theorem T.56** (Conditional CKM CP phase in the Berry-holonomy model). Assume the Berry-holonomy model of Sections T.22.6–T.22.7: (i) the relevant flavor loop is the minimal loop specified in Theorem T.53; (ii) the generation subspace carries the variance assignment of Theorem T.54.2; and (iii) phase fluctuations are uniformly distributed on the bounded interval used in Theorem T.55. Then the CKM phase is
@@ -3839,7 +3860,7 @@ $$\mathcal{M}_{EW} = \frac{SU(2)_L \times U(1)_Y}{U(1)_{em}} \cong S^3$$
 
 $$\kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 36 + 3 - \frac{1}{2} = 38.5$$
 
-*The base complexity $bk/2 = b^2 = 36$ counts reservoir-alignment constraints (Proposition T.2), while the coset dimension $\dim(G/H) = 3$ adds the broken gauge directions. The single zero mode $m = 1$ from U(1)$_{em}$ is established in Theorem T.4.*
+*The base complexity $bk/2 = b^2 = 36$ counts reservoir-alignment constraints (Proposition T.2b), while the coset dimension $\dim(G/H) = 3$ adds the broken gauge directions. The single zero mode $m = 1$ from U(1)$_{em}$ is established in Theorem T.4.*
 
 **Result.**
 
@@ -4212,7 +4233,7 @@ This follows from the derivation chain:
 
 **Step 2** (Coherent averaging for mass hierarchy). The mass eigenvalue is the expectation over the extended generation wavepacket. For a state distributed over angular extent $u$, the Gaussian suppression factor varies across the wavepacket. The observed suppression is the coherent average:
 
-$$\langle e^{-\alpha d^2} \rangle = e^{-\alpha d^2_0} \cdot \frac{1}{2u}\int_{-u}^{u} e^{i\phi},d\phi = e^{-\alpha d^2_0} \cdot \text{sinc}(u)$$
+$$\langle e^{-\alpha d^2} \rangle = e^{-\alpha d^2_0} \cdot \frac{1}{2u}\int_{-u}^{u} e^{i\phi}\,d\phi = e^{-\alpha d^2_0} \cdot \text{sinc}(u)$$
 
 This follows the identical structure as the CP phase derivation (Theorem T.55), where the sinc factor arises from the Fourier transform of a uniform distribution over bounded support consistent with PCE.
 
@@ -4764,10 +4785,10 @@ $$u = \sqrt{\sigma^2_{\mathcal{G}}} = \frac{1}{\sqrt{N_g}} = \frac{1}{\sqrt{3}} 
 
 **Theorem T.24.18** (Sinc Correction Factor). *The generation wavefunction has finite angular extent, leading to coherent phase averaging:*
 
-$$f_{\text{sinc}} = \frac{\sin(u)}{u} = \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = \frac{0.5463}{0.5774} = 0.9454$$
+$$f_{\text{sinc}} = \frac{\sin(u)}{u} = \frac{\sin(1/\sqrt{3})}{1/\sqrt{3}} = \frac{0.5458}{0.5774} = 0.9454$$
 
 *Proof.* The observed mixing amplitude is the expectation over the extended wavepacket. For a phase uniformly distributed over angular extent $2u$:
-$$\langle e^{i\phi} \rangle = \frac{1}{2u}\int_{-u}^{u} e^{i\phi},d\phi = \frac{\sin u}{u}$$
+$$\langle e^{i\phi} \rangle = \frac{1}{2u}\int_{-u}^{u} e^{i\phi}\,d\phi = \frac{\sin u}{u}$$
 
 -----
 

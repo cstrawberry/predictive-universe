@@ -717,7 +717,7 @@ $$ \vec{E} = -\nabla A_0 - \frac{\partial \vec{A}}{\partial t} \propto \omega^2 
 
 ### **Step 4: Identification with EM Radiation**
 
-This oscillating electric field, coupled with corresponding magnetic field from $\nabla \times \vec{E} = -\partial \vec{B}/\partial t$, satisfies Maxwell's equations in the continuum limit (Appendix G, Equations G.5.1-G.5.4). The field energy density:
+This oscillating electric field, coupled with corresponding magnetic field from $\nabla \times \vec{E} = -\partial \vec{B}/\partial t$, satisfies Maxwell's equations in the continuum limit (Appendix G, Equations G.5.1–G.5.3). The field energy density:
 
 $$ u_{\text{EM}} = \frac{\varepsilon_0}{2}|\vec{E}|^2 + \frac{1}{2\mu_0}|\vec{B}|^2 \propto \omega^4 \delta\tau_0^2 \tag{L.64} $$
 

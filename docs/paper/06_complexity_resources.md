@@ -276,7 +276,7 @@ where $\eta_{adapt} > 0$ is the adaptation rate parameter. It has dimensions of 
 
 *Interpretation:* Complexity $C(t)$ evolves over time, driven by the imbalance $\Psi(t)$ between marginal benefits and costs, towards the locally optimal value $C^*(t)$ where $\Psi(t)$ approaches zero. This equilibrium $C^*(t)$ represents an efficient operating point satisfying the PCE principle (Definition 14, Equation 18). The dynamics depend explicitly on the current state ($C, \hat{C}_{target}$), the system's energy valuation ($\Gamma_0$), resource scarcity ($\lambda$), intrinsic performance efficiency ($\kappa_{\mathrm{eff}}$), informational overhead ($r_I$), and the marginal physical cost $R'$.
 
-*Remark 4: Interpretation of $\kappa_{\mathrm{eff}}$*
+**Remark 4 (Interpretation of $\kappa_{\mathrm{eff}}$).**
 The dimensionless performance-efficiency parameter $\kappa_{\mathrm{eff}}$, introduced in the Law of Prediction (Equation 22), can be expressed in terms of equilibrium quantities. At equilibrium the Adaptation Driving Force vanishes, $\Psi=0$ (Equation 18), and by definition (Equation 24):
 $$
 \Gamma_0 \,\frac{\partial PP}{\partial C} = \lambda R' + R_I'.

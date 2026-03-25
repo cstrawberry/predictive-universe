@@ -15,7 +15,7 @@ naturally attached to an MPU with Hilbert space $H_0 \cong \mathbb{C}^8$, the mi
 $$
 H_0 \cong H_{\mathrm{active}} \oplus H_{\mathrm{inert}} \cong \mathbb{C}^2 \oplus \mathbb{C}^6
 $$
-driven by the Landauer bound $\varepsilon \ge \ln 2$, saturated at the PCE-Attractor as $\varepsilon = \ln 2$, per predictive cycle. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which requires the abstract logical cost to manifest as an $a = e^\varepsilon = 2$ dimensional active kernel. The partition determines both:
+driven by the Landauer bound $\varepsilon \ge \ln 2$, saturated at the PCE-Attractor as $\varepsilon = \ln 2$, per predictive cycle. This partition is rigorously derived in **Appendix Z (Theorem Z.1)** via the Principle of Physical Instantiation (PPI), which fixes the active kernel dimension to $a = 2$ on the attractor-saturating branch. The partition determines both:
 1. The **gauge structure:** $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ in the conditional sense of Theorem G.8.4b
 2. The **perspective space:** $\Sigma_8 = U(8)/U(1)^8$ (complete flag manifold)
 
@@ -1265,7 +1265,7 @@ Item 3 is resolved within that Berry-holonomy model. Items 1-2 require explicit 
 
 $$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = \frac{38.5}{2} + \frac{\ln 2}{3} = 19.25 + 0.2310\dots = 19.4810\dots$$
 
-The CP-odd baryogenesis insertion is a $\mathbb{Z}_2$ half-step whose square reproduces the full electroweak locking step (Theorem Y.11.2). Since PCE costs add under sequential composition, the associated large-deviation exponent halves, giving $\kappa_{CP}=\kappa_{EW}/2$ (Lemma Y.8.1(e)). The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
+The CP-odd baryogenesis insertion is a $\mathbb{Z}_2$ half-step whose square reproduces the full electroweak locking step (Theorem Y.11.2). Since PCE costs add under sequential composition, the associated large-deviation exponent halves, giving $\kappa_{CP}=\kappa_{EW}/2$ (part (e) of Lemma Y.8.1). The CP asymmetry saturates ($\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \to 1$) due to the large sphaleron action $\mathcal{S} \cdot \sin\delta \approx 4.4 \gg 1$, yielding $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$ in agreement with observation.
 
 **Open Problem (Gravitational Response).** The covariant form of variable gravitational coupling consistent with $\nabla^\mu T_{\mu\nu} = 0$ is constrained to:
 

@@ -196,7 +196,7 @@ $$
 \Delta\Phi = \Phi(x + L_q) - \Phi(x)
 = +c^2 \, R_{0m0n} \, x^m L_q^n + \frac{c^2}{2} \, R_{0m0n} \, L_q^m L_q^n + O(|x|^2|L_q|, |x||L_q|^2, |L_q|^3).
 $$
-Substituting into the phase formula (S.54) and using the decoherence-rate definition (S.56),
+Substituting into the phase formula (S.54) and using the decoherence rate,
 $$
 \Gamma_{\mathrm{deco}}^{(ij)} := \frac{|\Delta\phi_{ij}^{(\mathrm{grav})}|}{\tau_c},
 $$

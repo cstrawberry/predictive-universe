@@ -723,7 +723,7 @@ Both descriptions emerge from the ND-RID channel structure. Coherent evolution c
 
 **Corollary 14.2d (Thermodynamic Methods in Gravitational Physics).** The success of thermodynamic methods in gravitational physics—Bekenstein-Hawking entropy [Bekenstein 1973; Hawking 1975], Jacobson's derivation of Einstein's equations [Jacobson 1995], holographic bounds [Susskind 1995]—is explained by the common SPAP foundation.
 
-The derivation chain (Appendix E, Theorems E.1–E.5):
+The derivation chain (Appendix E, Theorems E.1–E.3 and E.5):
 
 $$\varepsilon \ge \ln 2 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 

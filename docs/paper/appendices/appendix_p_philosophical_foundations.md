@@ -444,7 +444,7 @@ M_2(\mathbb{C}) \otimes I \otimes I,\qquad
 I \otimes M_2(\mathbb{C}) \otimes I,\qquad
 I \otimes I \otimes M_2(\mathbb{C}).
 $$
-On the fully factorized locus each piece has its own pure shape, represented by a ray in $\mathbb{CP}^1$. Theorem 23b(iv) identifies the corresponding locus in $\mathbb{CP}^7$ as the Segre variety
+On the fully factorized locus each piece has its own pure shape, represented by a ray in $\mathbb{CP}^1$. Part (iv) of Theorem 23b identifies the corresponding locus in $\mathbb{CP}^7$ as the Segre variety
 $$
 \operatorname{Seg}:\mathbb{CP}^1 \times \mathbb{CP}^1 \times \mathbb{CP}^1 \hookrightarrow \mathbb{CP}^7,
 $$
@@ -1199,7 +1199,7 @@ A critical requirement is that the observation channel preserves internal conser
 **Theorem P.5.3 (Internal Conservation).** All conservation laws derivable from internal symmetries hold exactly within the authentic simulation, independent of external observation.
 
 *Proof.*
-1. By Definition P.5.3(iii), external observation is non-interventional
+1. By condition (iii) of Definition P.5.3, external observation is non-interventional
 2. Internal dynamics depend only on internal states
 3. Conservation laws are properties of internal dynamics derivable from internal symmetries via Noether's theorem
 4. External observation does not modify internal states or dynamics
@@ -1419,7 +1419,7 @@ The correspondences are:
 | **Shannon** | $H = -\sum_i p_i \ln p_i$ | Generalization: cost of distinguishing among $n$ states |
 | **Thermodynamic** | $dS = \delta Q / T$ | Landauer equivalence: same quantity, different units |
 | **von Neumann** | $S = -\mathrm{tr}(\rho \ln \rho)$ | Quantum generalization preserving operational meaning |
-| **Bekenstein-Hawking** | $S_{BH} = \mathcal{A}/4G$ | Geometric scaling of channel capacity (Thms E.3–E.5) |
+| **Bekenstein-Hawking** | $S_{BH} = \mathcal{A}/4G$ | Geometric scaling of channel capacity (Thms E.3, E.5) |
 
 The thesis asserts these are not five independent theories requiring reconciliation but five windows onto a single structure. The "unreasonable effectiveness" of thermodynamic reasoning in gravitational physics is explained: horizons are information-capacity boundaries, and horizon entropy counts the Shannon entropy of channel capacity across the boundary.
 
@@ -1441,7 +1441,7 @@ The Principle of Physical Instantiation (Definition P.6.2) provides the *univers
 
 PPI does not establish the Landauer equivalence (that is Landauer's contribution). PPI ensures the equivalence applies to all logical operations within the framework—there are no abstract computations exempt from thermodynamic costs.
 
-**3. Theorems E.1–E.5 (Derived Extension)**
+**3. Theorems E.1–E.3 and E.5 (Derived Extension)**
 
 The extension of unified entropy to gravitational phenomena is *derived* within the framework from the Landauer cost. The chain:
 
@@ -1455,7 +1455,7 @@ consists entirely of theorems and lemmas proven from the framework's axioms. Thi
 |:----------|:-------|:-----|
 | Landauer's principle | Incorporated (empirical) | Physical content of equivalence |
 | PPI | Axiom | Guarantees universality |
-| Theorems E.1–E.5 | Derived | Extension to gravity |
+| Theorems E.1–E.3 and E.5 | Derived | Extension to gravity |
 
 ---
 
@@ -1774,7 +1774,7 @@ In the PU fixed point where $d_0 = 2a^2$ (Theorem Z.2), these become $v_1 = \beg
 - **Thermodynamics:** $\varepsilon \ge \ln 2$ with PCE saturation $\varepsilon=\ln 2 \Rightarrow a=2$ — Landauer pointer dimension encoded in matrix entries
 
 The matrix "compiles" the chain:
-$$\varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \xrightarrow{e^\varepsilon} a = 2 \xrightarrow{L(a)} M = 24$$
+$$\varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \xrightarrow{\text{PPI}} a = 2 \xrightarrow{L(a)} M = 24$$
 
 into a single linear transformation whose spectrum contains thermodynamic constraints.
 
@@ -2916,7 +2916,7 @@ $$\boxed{\text{SPAP} \implies \mathcal{T} \cong \mathcal{E} \cong \mathcal{P}}$$
 
 These are not independent features of the world but necessary consequences of any system that can model itself. The framework thus provides a unified origin for three fundamental aspects of physical reality: the existence of time, the directionality of entropy, and the perspectival nature of observation — all emerging from the logical structure of self-referential prediction.
 
-The Triad Identity also induces a content-based partition of information with respect to any recipient system $B$ (Remark O.4.5). Patterns with $\sigma_B = 0$ (Definition M.10.2) are externally targeted and SPAP-flat: they can be integrated at baseline cost regardless of delivery mechanism. Patterns with $\sigma_B > 0$ engage $B$'s self-model $\mathcal{M}_B$. In shallow cases the self-consistency condition may already be satisfied at $PP = 0$, so $\mu_B(E) = 1/\alpha_{SPAP}$ despite nonzero self-model engagement (Remark M.10.3). But as the self-referential depth increases, $\mu_B(E)$ grows and the processing cost enters the SPAP-divergent regime of Theorem M.10.3 and Corollary B.2.1, reaching unprocessability at the exact self-restoration boundary $\mu_B(E) \to \infty$ (Theorems M.10.4 and M.10.6). This categorization is determined by what the information is about — the self-referential depth of the content-recipient pair — not by the channel through which it arrives. The partition resolves the apparent tension between global information conservation (Theorem E.9.5) and the perspectival arrow (Theorem O.4): all information is conserved, but self-referential content cannot be used for self-reversal by the system it references, because the act of integration is itself another irreversible forward step (Theorem O.4(iii)). Even sub-exact reconstruction targeting deep self-model parameters enters the divergent cost regime of Theorem M.10.3 (Remark O.4.4): the processing cost depends on what the information is about, not on the confidence level of the source.
+The Triad Identity also induces a content-based partition of information with respect to any recipient system $B$ (Remark O.4.5). Patterns with $\sigma_B = 0$ (Definition M.10.2) are externally targeted and SPAP-flat: they can be integrated at baseline cost regardless of delivery mechanism. Patterns with $\sigma_B > 0$ engage $B$'s self-model $\mathcal{M}_B$. In shallow cases the self-consistency condition may already be satisfied at $PP = 0$, so $\mu_B(E) = 1/\alpha_{SPAP}$ despite nonzero self-model engagement (Remark M.10.3). But as the self-referential depth increases, $\mu_B(E)$ grows and the processing cost enters the SPAP-divergent regime of Theorem M.10.3 and Corollary B.2.1, reaching unprocessability at the exact self-restoration boundary $\mu_B(E) \to \infty$ (Theorems M.10.4 and M.10.6). This categorization is determined by what the information is about — the self-referential depth of the content-recipient pair — not by the channel through which it arrives. The partition resolves the apparent tension between global information conservation (Theorem E.9.5) and the perspectival arrow (Theorem O.4): all information is conserved, but self-referential content cannot be used for self-reversal by the system it references, because the act of integration is itself another irreversible forward step (clause (iii) of Theorem O.4). Even sub-exact reconstruction targeting deep self-model parameters enters the divergent cost regime of Theorem M.10.3 (Remark O.4.4): the processing cost depends on what the information is about, not on the confidence level of the source.
 
 
 # Appendix P.13: The Monster Group as Vacuum Symmetry

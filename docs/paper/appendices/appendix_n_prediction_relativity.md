@@ -578,7 +578,7 @@ $$
 
 where $K^* = (\ln 2) \cdot I_2 \oplus (+\infty) \cdot I_6$ is the modular Hamiltonian (Theorem G.1.9.4). The KMS condition characterizes thermal equilibrium as a state undergoing continuous modular evolution [Haag 1996]—not stasis, but steady-state dynamics.
 
-**Step 2 (Physical realization of modular flow).** The modular flow is physically realized by the 'Evolve' process (Definition 27). Each boundary channel implements ND-RID dynamics with the PCE-Attractor as fixed point (Corollary G.1.9.1). The characteristic timescale of this flow is set by the minimum processing time $\tau_{min}$ derived from PCE optimization (Theorem Q.6.1):
+**Step 2 (Physical realization of modular flow).** The modular flow is physically realized by the 'Evolve' process (Definition 27). Each boundary channel implements ND-RID dynamics with the PCE-Attractor as equilibrium configuration (Theorem G.1.9.1 and the subsequent remark). The characteristic timescale of this flow is set by the minimum processing time $\tau_{min}$ derived from PCE optimization (Theorem Q.6.1):
 
 $$
 \tau_{\text{min}} = \sqrt{8\ln 2} \cdot t_P \approx 2.355 \cdot t_P \approx 1.27 \times 10^{-43} \, \text{s}
