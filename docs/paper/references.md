@@ -7,6 +7,7 @@
 *   Aharonov, Y., Bergmann, P. G., & Lebowitz, J. L. (1964). Time Symmetry in the Quantum Process of Measurement. *Physical Review*, *134*(6B), B1410–B1416. DOI: 10.1103/PhysRev.134.B1410
 *   Aharonov, Y., & Zubairy, M. S. (2005). Time and the quantum: erasing the past and impacting the future. *Science*, *307*(5711), 875–879. DOI: 10.1126/science.1107787
 *   Aharonov, Y., & Vaidman, L. (2008). The Two-State Vector Formalism: An Updated Review. In J. G. Muga, R. Sala Mayato, & I. L. Egusquiza (Eds.), *Time in Quantum Mechanics* (Lecture Notes in Physics, Vol. 734, pp. 399–447). Springer. DOI: 10.1007/978-3-540-73473-4_13
+*   Albert, D. (2000). *Time and Chance*. Harvard University Press.
 *   Albert, D. (2012). On the Origin of Everything. Review of L. Krauss, *A Universe from Nothing*. *New York Times*
 *   ALEPH, DELPHI, L3, OPAL, and SLD Collaborations (Schael, S., *et al.*) (2006). Precision electroweak measurements on the Z resonance. *Physics Reports*, *427*(5–6), 257–454. DOI: 10.1016/j.physrep.2005.12.006
 *   Amari, S.-I. (1998). Natural gradient works efficiently in learning. *Neural Computation*, *10*(2), 251–276.
@@ -94,6 +95,7 @@
 *   Carnap, R. (1932). The Elimination of Metaphysics Through Logical Analysis of Language. *Erkenntnis*, *2*. Reprinted in A. J. Ayer (ed.), *Logical Positivism*. New York: The Free Press, 1959.
 *   Carroll, S. M. (2001). The cosmological constant. *Living Reviews in Relativity*, *4*(1), 1. DOI: 10.12942/lrr-2001-1
 *   Carroll, S. M. (2004). *Spacetime and Geometry: An Introduction to General Relativity*. Addison Wesley.
+*   Carroll, S. M. (2020). Why Boltzmann brains are bad. In S. Dasgupta, R. Dotan, & B. Weslake (Eds.), *Current Controversies in Philosophy of Science* (pp. 7–20). Routledge.
 *   Carroll, S. M., & Parola, A. (2024). What Emergence Can Possibly Mean. arXiv:2410.15468 [physics.hist-ph].
 *   Casini, H., Huerta, M., & Myers, R. C. (2011). Towards a derivation of holographic entanglement entropy. *Journal of High Energy Physics*, *2011*(5), 036. DOI: 10.1007/JHEP05(2011)036
 *   Caves, C. M., Fuchs, C. A., Manne, K. K., & Renes, J. M. (2004). Gleason-type derivations of the quantum probability rule for generalized measurements. *Foundations of Physics*, *34*(2), 193–209. DOI: 10.1023/B\:FOOP.0000019581.00318.a5 
@@ -141,6 +143,7 @@
 *   D'Onofrio, M., Rummukainen, K., & Tranberg, A. (2014). Sphaleron rate in the minimal standard model. *Physical Review Letters*, *113*(14), 141602. DOI: 10.1103/PhysRevLett.113.141602
 *   Dal Maso, G. (1993). *An Introduction to Γ-convergence*. Birkhäuser.
 *   Darwin, C. (1859). *On the Origin of Species by Means of Natural Selection*. John Murray.
+*   Davies, P. C. W. (1977). *The Physics of Time Asymmetry*. University of California Press.
 *   Dawson, C. M., & Nielsen, M. A. (2006). The Solovay-Kitaev algorithm. *Quantum Information & Computation*, *6*(1), 81–95. DOI: 10.5555/2011679.2011685
 *   de Boer, W. (1994). Grand Unified Theories and Supersymmetry in Particle Physics and Cosmology. arXiv:hep-ph/9402266
 *   Dicke, R. H. (1954). Coherence in spontaneous radiation processes. *Physical Review*, *93*(1), 99–110.
@@ -325,6 +328,9 @@
 *   Kobayashi, S., & Nomizu, K. (1969). *Foundations of Differential Geometry* (Vol. II). Interscience Publishers.
 *   Koch, C., & Hepp, K. (2006). Quantum mechanics in the brain. *Nature*, *440*(7084), 611. DOI: 10.1038/440611a
 *   Kolchinsky, A., & Wolpert, D. H. (2018). Semantic information, autonomous agency and non-equilibrium statistical physics. *Interface Focus*, *8*(6), 20180041. DOI: 10.1098/rsfs.2018.0041
+*   Wolpert, D. H. (1992). Memory systems, computation, and the second law of thermodynamics. *International Journal of Theoretical Physics*, *31*(4), 743–785. DOI: 10.1007/BF00670829
+*   Wolpert, D. H., & Kipper, J. (2024). Memory systems, the epistemic arrow of time, and the second law. *Entropy*, *26*(2), 170. DOI: 10.3390/e26020170
+*   Wolpert, D., Rovelli, C., & Scharnhorst, J. (2025). Disentangling Boltzmann brains, the time-asymmetry of memory, and the second law. *Entropy*, *27*(12), 1227. DOI: 10.3390/e27121227
 *   Korkine, A., & Zolotareff, G. (1873). Sur les formes quadratiques. *Mathematische Annalen*, *6*, 366–389. DOI: 10.1007/BF01442795
 *   Kossakowski, A., Frigerio, A., Gorini, V., & Verri, M. (1977). Quantum detailed balance and KMS condition. *Communications in Mathematical Physics*, *57*(2), 97–110. DOI: 10.1007/BF01625769
 *   König, R., & Wehner, S. (2009). A strong converse for classical channel coding using entangled inputs. *Physical Review Letters*, *103*(7), 070504. DOI: 10.1103/PhysRevLett.103.070504
@@ -482,12 +488,14 @@
 *   Rao, R. P. N., & Ballard, D. H. (1999). Predictive coding in the visual cortex: A functional interpretation of some extra-classical receptive-field effects. *Nature Neuroscience*, *2*(1), 79–87. DOI: 10.1038/4580
 *   Raychaudhuri, A. (1955). Relativistic Cosmology. I. *Physical Review*, *98*(4), 1123–1126. DOI: 10.1103/PhysRev.98.1123
 *   Reed, M., & Simon, B. (1980). *Methods of Modern Mathematical Physics, Vol. 1: Functional Analysis* (Revised and enlarged ed.). Academic Press.
+*   Reichenbach, H. (1956). *The Direction of Time*. University of California Press.
 *   Richardson, T., & Urbanke, R. (2008). *Modern Coding Theory*. Cambridge University Press. DOI: 10.1017/CBO9780511791338
 *   Rindler, W. (1966). Kruskal space and the uniformly accelerated frame. *American Journal of Physics*, *34*(12), 1174–1178.
 *   Roberts, D. A., & Yoshida, B. (2017). Chaos and complexity by design. *Journal of High Energy Physics*, *2017*(04), 121. DOI: 10.1007/JHEP04(2017)121
 *   Robertson, H. P. (1929). The Uncertainty Principle. *Physical Review*, *34*(1), 163–164. DOI: 10.1103/PhysRev.34.163
 *   Rosenfeld, L. (1940). Sur le tenseur d'impulsion‐énergie. *Mémoires de l'Académie Royale de Belgique, Classe des Sciences*, *18*(6), 1–30.
 *   Rovelli, C. (1996). Relational quantum mechanics. *International Journal of Theoretical Physics*, *35*(8), 1637–1678. DOI: 10.1007/BF02302261
+*   Rovelli, C. (2022). Memory and entropy. *Entropy*, *24*(8), 1022. DOI: 10.3390/e24081022
 *   Rowe, W. (1975). *The Cosmological Argument*. Princeton: Princeton University Press.
 *   Ruskai, M. B. (1994). Beyond strong subadditivity? Improved bounds on the contraction of generalized relative entropy. *Reviews in Mathematical Physics*, *6*(5a), 1147–1161.
 *   Russell, B. (1903). *The Principles of Mathematics*. Cambridge University Press.
