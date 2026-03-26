@@ -1399,7 +1399,7 @@ Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-
 | AQFT route | Conditional on Theorem 43 together with the additional hypotheses of Theorem F.0 |
 | Einstein route / field equations | Conditional on Theorem 43, Theorem 49, Postulate 4, and the local-horizon bridge of Theorem 48a |
 | Appendix T matching-scale observables | Conditional on threshold data, running, matching, and the quantitative constructions introduced there |
-| Appendix U reference exponent $\kappa_{\mathrm{ref}}$ | $\kappa = 142$ on the translational branch if no additional discrete null directions occur; $\kappa_{\mathrm{ref}} = 141.5$ only on the Appendix U five-mode reference branch, which Theorem U.8c does not realize in the current continuum action |
+| Appendix U reference exponent $\kappa_{\mathrm{ref}}$ | $\kappa = 142$ is the corresponding four-mode branch value, whose theorem-level realization would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity; $\kappa_{\mathrm{ref}} = 141.5$ only on the Appendix U five-mode reference branch, which Theorem U.8c does not realize in the current continuum action |
 | Appendix U working numerical prefactor $A_{\mathrm{eff}}$ | Working forward-evaluation convention of Corollary U.15b |
 | CC influence, detailed flavor numerics, and baryogenesis numerics | Model layer |
 

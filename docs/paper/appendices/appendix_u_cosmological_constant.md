@@ -14,7 +14,7 @@ with $A_{\text{eff}}$ and $A_Q$ dimensionless $O(1)$ prefactors. For the vacuum 
 $$A_{\text{eff}} := K \cdot N_{\text{eff}}$$
 Here $K$ is the one-loop determinant ratio from Gaussian fluctuations around the bounce, and $N_{\text{eff}}$ is the polynomial extensivity factor from Appendix E. Corollary U.15b supplies two distinct statements: an algebraic observational inversion giving $A_{\text{eff}}^{(\text{obs})}$, and the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ obtained only after adopting the transferred determinant convention from Appendix T.
 
-This appendix derives the Grassmannian base count and the primordial complexity $\kappa_Q = 11$ from the stated geometric inputs. The vacuum value $\kappa_{\mathrm{ref}} = 141.5$ is the Appendix U reference exponent under the leading-order five-mode counting convention introduced in Theorems U.15-U.16. Theorem U.8c below shows that the pure-coordinate dilatation tangent is a strict negative mode of the current Definition U.4 continuum action, so the five-mode branch remains a reference convention rather than a theorem-level vacuum closure inside the present continuum setup. The translational branch gives $\kappa = 142$ if no additional discrete null directions occur beyond the sampled translation modes.
+This appendix derives the Grassmannian base count and the primordial complexity $\kappa_Q = 11$ from the stated geometric inputs. The vacuum value $\kappa_{\mathrm{ref}} = 141.5$ is the Appendix U reference exponent under the leading-order five-mode counting convention introduced in Theorems U.15-U.16. Theorem U.8c below shows that the pure-coordinate dilatation tangent is a strict negative mode of the current Definition U.4 continuum action. Theorem U.13 further shows, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. The five-mode branch therefore remains a reference convention rather than a theorem-level vacuum closure inside the present continuum setup. The value $\kappa = 142$ is the corresponding four-mode branch value; realizing it at theorem level would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity.
 
 ---
 
@@ -414,27 +414,87 @@ The maximum total degree is $2 + 2 = 4$. $\square$
 
 ### U.8.5 Zero Mode Preservation
 
-**Theorem U.13 (Design-Exact Evaluation on the Collective-Coordinate Subspace).** Let $X \subset S^3$ be the 24-cell (a spherical 5-design, identified with interface modes by Theorem U.7). Let $S_{\text{cont}}[\phi]$ (Definition U.4) satisfy:
-1. O(4) invariance (Remark U.4a)
-2. Translation invariance (Theorem U.8)
-3. The hypotheses needed to define the sampled collective-coordinate subspace, including the conditional dilatation mode only when Theorem U.9 applies
+**Theorem U.13 (Design-Exact Evaluation on the Collective-Coordinate Subspace).** Let $X \subset S^3$ be the 24-cell (a spherical 5-design, identified with interface modes by Theorem U.7). Let $\phi^*(x)=\varphi(|x|)$ be a non-trivial finite-action $O(4)$-symmetric critical point of $S_{\text{cont}}$ (Definition U.4), let $u^*$ be its sample on $X$, and define the sampled directions
+$$
+t_\mu(r,i):=-\partial_\mu \phi^*(r x_i) = -\varphi'(r)(x_i)_\mu, \qquad
+d(r,i):=(r x_i)^\nu \partial_\nu \phi^*(r x_i)=r\varphi'(r).
+$$
+Let
+$$
+\mathcal C_{\mathrm{samp}}:=\mathrm{span}\{t_1,t_2,t_3,t_4,d\}.
+$$
+Let $S_{\text{disc}}$ be the discrete action of Definition U.6, and assume the chosen discrete angular Dirichlet form has the same Hessian matrix elements as the continuum angular term on $\mathcal C_{\mathrm{samp}}$. Then the restriction of $D^2 S_{\text{disc}}(u^*)$ to $\mathcal C_{\mathrm{samp}}$ agrees exactly with the corresponding restriction of $D^2 S_{\text{cont}}(\phi^*)$ to the continuum span of $\{-\partial_\mu \phi^*\}_{\mu=1}^4$ and $x^\nu \partial_\nu \phi^*$. Consequently:
+1. the four sampled translation directions are null directions of the restricted quadratic form $D^2 S_{\text{disc}}(u^*)|_{\mathcal C_{\mathrm{samp}}}$;
+2. the sampled pure-coordinate dilatation direction satisfies
+$$
+D^2 S_{\text{disc}}(u^*)[d,d] = -4S_{\text{kin}}(1) < 0;
+$$
+3. the kernel of $D^2 S_{\text{disc}}(u^*)|_{\mathcal C_{\mathrm{samp}}}$ is exactly $\mathrm{span}\{t_1,t_2,t_3,t_4\}$.
 
-Define $S_{\text{disc}}$ by spherical quadrature on $X$. Then the restriction of $D^2 S_{\text{disc}}(u^*)$ to the sampled continuum collective-coordinate subspace agrees exactly with the corresponding restriction of $D^2 S_{\text{cont}}(\phi^*)$. In particular, every sampled continuum zero mode remains a discrete zero mode.
+In particular, under the stated sampled-sector exactness hypothesis, the 24-cell discretization does not create a fifth zero mode on the sampled five-dimensional collective-coordinate sector. This theorem does not assert that the sampled translation directions are full-discrete zero modes of $D^2 S_{\text{disc}}(u^*)$; establishing that, and excluding any additional nullity outside $\mathcal C_{\mathrm{samp}}$, requires a separate global spectral analysis.
 
 *Proof.*
 
-**Step 1.** By Theorem U.8, and by Theorem U.9 whenever the extra scale-family hypothesis is assumed, the continuum second variation has the sampled collective-coordinate directions
+**Step 1.** For an $O(4)$-symmetric profile $\phi^*(x)=\varphi(r)$ with $r=|x|$, the continuum translation and pure-coordinate dilatation directions are
 $$
-\{-\partial_\mu \phi^*\}_{\mu=1}^4 \cup \{x^\nu \partial_\nu \phi^*\ \text{when Theorem U.9 applies}\}.
+-\partial_\mu \phi^*(x) = -\varphi'(r)\frac{x_\mu}{r},
+\qquad
+x^\nu \partial_\nu \phi^*(x) = r\varphi'(r).
+$$
+Restricting to the sample points $x=r x_i$ gives the displayed formulas for $t_\mu$ and $d$. Their angular dependence is linear and constant, respectively.
+
+**Step 2.** By Lemma U.12, all angular integrands coming from the radial and potential pieces of the relevant matrix elements of $D^2 S_{\text{cont}}(\phi^*)$ are polynomials of degree at most $4$. Since $X$ is a spherical $5$-design, Theorem U.11 makes the quadrature exact for those terms. By the stated sampled-sector exactness hypothesis, the angular contribution in Definition U.6 also agrees with the continuum angular contribution on $\mathcal C_{\mathrm{samp}}$. Therefore the full restricted Hessians agree exactly on $\mathcal C_{\mathrm{samp}}$.
+
+**Step 3.** By Theorem U.8, each continuum translation direction $-\partial_\mu \phi^*$ lies in the kernel of the continuum Hessian. Using Step 2, the sampled directions $t_\mu$ therefore satisfy
+$$
+D^2 S_{\text{disc}}(u^*)[t_\mu,\eta]=0
+\qquad
+\text{for all }\eta\in \mathcal C_{\mathrm{samp}},\ \mu=1,\dots,4.
+$$
+Thus the four sampled translation directions are null directions of the restricted quadratic form.
+
+**Step 4.** By Theorem U.8c,
+$$
+D^2 S_{\text{cont}}(\phi^*)[x^\nu \partial_\nu \phi^*,x^\nu \partial_\nu \phi^*]
+= -4S_{\text{kin}}(1)<0.
+$$
+Applying Step 2 to the sampled direction $d$ gives
+$$
+D^2 S_{\text{disc}}(u^*)[d,d]=-4S_{\text{kin}}(1)<0.
 $$
 
-**Step 2.** By Lemma U.12, all integrands in the relevant matrix elements of $D^2 S_{\text{cont}}$ are polynomials of degree $\leq 4$ in the angular variables.
+**Step 5.** Let
+$$
+v=\sum_{\mu=1}^4 a_\mu t_\mu + b\,d \in \mathcal C_{\mathrm{samp}}
+$$
+and suppose $v$ lies in the kernel of the restricted quadratic form. Taking $\eta=d$ and using Step 3 yields
+$$
+0=D^2 S_{\text{disc}}(u^*)[v,d]
+=b\,D^2 S_{\text{disc}}(u^*)[d,d].
+$$
+Step 4 forces $b=0$. Hence every restricted-kernel vector lies in $\mathrm{span}\{t_1,t_2,t_3,t_4\}$.
 
-**Step 3.** Since $4 < 5$ and $X$ is a spherical 5-design, Theorem U.11 guarantees that the quadrature evaluation is exact for all terms in those matrix elements.
-
-**Step 4.** Therefore the discrete second variation agrees exactly with the continuum second variation on the sampled collective-coordinate subspace. Any sampled continuum zero mode in that subspace remains a discrete zero mode.
-
-No claim about the **absence** of additional discrete null directions is made here; excluding extra null directions would require a separate global spectral analysis of $D^2 S_{\text{disc}}(u^*)$. $\square$
+It remains to prove that the four sampled translation directions are linearly independent. If
+$$
+\sum_{\mu=1}^4 a_\mu t_\mu = 0,
+$$
+then for every $r>0$ and every vertex $x_i\in X$,
+$$
+0=-\varphi'(r)\sum_{\mu=1}^4 a_\mu (x_i)_\mu.
+$$
+Because $\phi^*$ is non-trivial, $\varphi'$ is not identically zero, so there exists $r_0$ with $\varphi'(r_0)\neq 0$. Therefore
+$$
+\sum_{\mu=1}^4 a_\mu (x_i)_\mu = 0
+\qquad
+\text{for all }i=1,\dots,24.
+$$
+The 24-cell vertices span $\mathbb{R}^4$ because they include $\pm e_1,\pm e_2,\pm e_3,\pm e_4$. Hence $a_\mu=0$ for all $\mu$, so $\mathrm{span}\{t_1,t_2,t_3,t_4\}$ is four-dimensional. Combining this with the previous paragraph proves
+$$
+\ker\!\left(D^2 S_{\text{disc}}(u^*)|_{\mathcal C_{\mathrm{samp}}}\right)
+=
+\mathrm{span}\{t_1,t_2,t_3,t_4\}.
+$$
+$\square$
 
 ---
 
@@ -531,7 +591,7 @@ $$
 \delta := \kappa_0 - \kappa_{\mathrm{ref}} = 144 - 141.5 = \frac{m}{2} = \frac{5}{2} = 2.5.
 $$
 
-Thus the assumed five real collective coordinates contribute the stated leading-order deficit in the Appendix U reference-counting parameter. By Theorem U.8c, the current Definition U.4 continuum action does not realize the pure-coordinate dilatation direction as a zero mode; if no additional discrete null directions occur beyond the translational ones, the corresponding leading-order deficit would be $2$ instead of $2.5$. $\square$
+Thus the assumed five real collective coordinates contribute the stated leading-order deficit in the Appendix U reference-counting parameter. By Theorem U.8c, the current Definition U.4 continuum action does not realize the pure-coordinate dilatation direction as a zero mode. Under the sampled-sector exactness hypothesis of Theorem U.13, the sampled translation+dilatation restriction of the discrete Hessian also has no fifth zero mode. A theorem-level four-mode branch would still require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity; in that branch the corresponding leading-order deficit would be $2$ instead of $2.5$. $\square$
 
 ---
 
@@ -663,7 +723,7 @@ The derivation employs two distinct but related design structures:
 | Structure | Type | Role | Reference |
 |-----------|------|------|-----------|
 | Golay octads | Steiner 2-design | Sets quadratic normalization: $\kappa_0 = k^2$ | Theorem Z.13 |
-| 24-cell vertices | Spherical 5-design | Preserves the sampled translation zero modes exactly; a fifth dilatation mode is only a reference convention in Appendix U | Theorem U.7, Theorem U.13, Theorem U.8c |
+| 24-cell vertices | Spherical 5-design | Supplies exact sampled-sector quadrature input; under Theorem U.13, the sampled translation+dilatation restriction has exactly four translational null directions and a negative pure-coordinate dilatation direction | Theorem U.7, Theorem U.13, Theorem U.8c |
 
 Both structures exist at $M = 24$ as derived consequences of PCE optimization (Theorem Z.12), contributing without introducing free parameters.
 
@@ -685,7 +745,7 @@ Both structures exist at $M = 24$ as derived consequences of PCE optimization (T
 | Quantity | Branch Value | From Observation | Notes |
 |----------|--------------|------------------|-------|
 | $\kappa_{\mathrm{ref}}$ | 141.5 | — | Appendix U five-mode reference count (Theorem U.16) |
-| $\kappa_{\mathrm{trans}}$ | 142 | — | Translational branch; theorem-level closure still requires exclusion of additional discrete null directions |
+| $\kappa_{\mathrm{trans}}$ | 142 | — | Four-mode branch value; theorem-level closure still requires a full discrete spectral proof of exactly four translational zero modes and no additional nullity |
 | $A_{\text{eff}}^{(\text{obs})}$ on $m=5$ branch | $O(1)$ | $0.917 \pm 0.016$ | Corollary U.15b |
 | $A_{\text{eff}}^{(\text{obs},4)}$ on $m=4$ branch | $O(1)$ | $2.49 \pm 0.04$ | same observed $\Lambda L_P^2$ with exponent $142$ |
 
@@ -767,7 +827,7 @@ The preceding sections derived the Appendix U five-mode reference exponent $\kap
 
 $$\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}.$$
 
-Theorem U.8c shows that the pure-coordinate dilatation mode used in that five-mode branch is obstructed in the current Definition U.4 continuum action. If no additional discrete null directions occur beyond the translational ones, the corresponding four-mode branch would instead give
+Theorem U.8c shows that the pure-coordinate dilatation mode used in that five-mode branch is obstructed in the current Definition U.4 continuum action. Theorem U.13 further shows, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. If a separate full discrete spectral analysis establishes exactly four translational zero modes and no additional nullity, the corresponding four-mode branch would instead give
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-284} = (1.06 \pm 0.01)\times 10^{-122},$$
 so matching the observed $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}$ (Appendix V, Eq. (V.5)) on that branch would require $A_{\text{eff}}^{(\text{obs},4)} = 2.49 \pm 0.04$.
 
@@ -816,7 +876,7 @@ $$\boxed{\kappa_Q = \dim_\mathbb{C}(\mathbb{CP}^{11}) = 11}$$
 
 $$\frac{\kappa_{\Lambda,\mathrm{ref}}}{\kappa_Q} = \frac{141.5}{11} \approx 12.86, \qquad \frac{\kappa_{\Lambda,\mathrm{trans}}}{\kappa_Q} = \frac{142}{11} \approx 12.91$$
 
-Under the Appendix U reference-exponent conventions of Theorem U.16 and Identification U.20, the first ratio summarizes the five-mode reference hierarchy between the vacuum branch and primordial perturbations. The second ratio is the corresponding translational-branch value singled out by Theorem U.8c if no additional discrete null directions occur.
+Under the Appendix U reference-exponent conventions of Theorem U.16 and Identification U.20, the first ratio summarizes the five-mode reference hierarchy between the vacuum branch and primordial perturbations. The second ratio is the corresponding four-mode branch value. Theorem U.8c excludes the pure-coordinate dilatation zero mode in the current continuum action, and Theorem U.13 shows, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode; theorem-level realization of the full four-mode branch still requires a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity.
 
 ### U.16.3 Bundle Structure
 
@@ -1458,7 +1518,7 @@ These criteria are testable by CMB-S4, LiteBIRD, and future 21-cm observations.
 | Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $\kappa_{\mathrm{ref}} = 141.5$ on the Appendix U five-mode reference branch; $\kappa_{\mathrm{trans}} = 142$ on the translational branch | Reference value $\Lambda L_P^2 \approx 2.88 \times 10^{-122}$ on the five-mode branch; $(1.06 \pm 0.01) \times 10^{-122}$ on the translational branch at the same prefactor |
 | Primordial | $\mathbb{CP}^{11}$ | $11$ | $Q \approx 1.18 \times 10^{-5}$ |
 
-The hierarchy $\kappa_{\Lambda,\mathrm{ref}} / \kappa_Q = 12.86$ summarizes the Appendix U five-mode reference separation between the vacuum branch and the primordial perturbation scale. The translational branch gives $\kappa_{\Lambda,\mathrm{trans}} / \kappa_Q = 12.91$.
+The hierarchy $\kappa_{\Lambda,\mathrm{ref}} / \kappa_Q = 12.86$ summarizes the Appendix U five-mode reference separation between the vacuum branch and the primordial perturbation scale. The corresponding four-mode branch value gives $\kappa_{\Lambda,\mathrm{trans}} / \kappa_Q = 12.91$.
 
 ### U.26.2 Golay-Steiner Unification
 
@@ -1481,7 +1541,7 @@ This appendix derives the cosmological constant reference scale and the primordi
 $$
 \Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}.
 $$
-With the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$, this gives the branch-dependent reference value $(2.88 \pm 0.03)\times10^{-122}$ (Corollary U.17). Theorem U.8c shows that the pure-coordinate dilatation mode used in that five-mode branch is obstructed in the current Definition U.4 continuum action; if no additional discrete null directions occur beyond the four translations, the corresponding four-mode branch gives $(1.06 \pm 0.01)\times10^{-122}$ at the same prefactor and would require $A_{\text{eff}}^{(\text{obs},4)} = 2.49 \pm 0.04$ to match observation.
+With the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$, this gives the branch-dependent reference value $(2.88 \pm 0.03)\times10^{-122}$ (Corollary U.17). Theorem U.8c shows that the pure-coordinate dilatation mode used in that five-mode branch is obstructed in the current Definition U.4 continuum action. Theorem U.13 further shows, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. If a separate full discrete spectral analysis establishes exactly four translational zero modes and no additional nullity, the corresponding four-mode branch gives $(1.06 \pm 0.01)\times10^{-122}$ at the same prefactor and would require $A_{\text{eff}}^{(\text{obs},4)} = 2.49 \pm 0.04$ to match observation.
 
 **Primordial Sector.** Conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48, the complexity $\kappa_Q = 11$ and geometric e-fold count $N_e = 59.4$ yield:
 
