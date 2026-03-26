@@ -4309,7 +4309,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
 | $v$ (Higgs VEV) | $252\pm5~\mathrm{GeV}$ | $246.22~\mathrm{GeV}$ | Particle Data Group 2024 | $+1.2\sigma$ |
-| $\sin^2\theta_W(M_Z)$ | $0.2312\pm0.0015$ | $0.23122\pm0.00003$ | Particle Data Group 2024 | $-0.01\sigma$ |
+| $\sin^2\theta_W(M_Z)$ | $0.2312\pm0.0015$ (conditional on the lifted spectral target tuple of Appendix T; Remark T.17a.4 shows the local two-coefficient truncation does not realize it) | $0.23122\pm0.00003$ | Particle Data Group 2024 | Conditional |
 | $m_H$ | $125\pm2.5~\mathrm{GeV}$ | $125.25\pm0.17~\mathrm{GeV}$ | Particle Data Group 2024 | $-0.10\sigma$ |
 
 **CKM Matrix and Quark Mixing (Appendix T):**
@@ -4348,7 +4348,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | $\eta_B$ (baryon asymmetry) | $(6.2 \pm 0.5) \times 10^{-10}$ | $(6.12 \pm 0.04) \times 10^{-10}$ | Planck 2020 | $+0.2\sigma$ |
 | $\theta_{QCD}$ (strong CP) | $0$ | $< 10^{-10}$ | nEDM bounds | Consistent |
 
-**Statistical Summary:** For the 12 quantities in the CKM, neutrino, and baryon-asymmetry tables with explicit $1\sigma$ pulls $z_i$, define $\chi^2 := \sum_i z_i^2$. Using the pulls listed above yields $\chi^2 = 5.35$ for 12 degrees of freedom, i.e. $\chi^2/\text{d.o.f.} = 0.446$. Including the additional five outputs with conservative theory budgets from Appendices T/Z/U (namely $\alpha^{-1}$, $\Lambda L_P^2$, $v$, $\sin^2\theta_W(M_Z)$, and $m_H$) gives $\chi^2/\text{d.o.f.}\approx0.60$ for the 17-output set. As emphasized in Appendix T, these $\chi^2$ values are diagnostic (budget- and correlation-model dependent), but they indicate no statistically significant tension within the stated uncertainties.
+**Statistical Summary:** For the 12 quantities in the CKM, neutrino, and baryon-asymmetry tables with explicit $1\sigma$ pulls $z_i$, define $\chi^2 := \sum_i z_i^2$. Using the pulls listed above yields $\chi^2 = 5.35$ for 12 degrees of freedom, i.e. $\chi^2/\text{d.o.f.} = 0.446$. Including the additional five outputs with conservative theory budgets from Appendices T/Z/U (namely $\alpha^{-1}$, $\Lambda L_P^2$, $v$, $\sin^2\theta_W(M_Z)$, and $m_H$) gives $\chi^2/\text{d.o.f.}\approx0.60$ for the 17-output set, with the understanding that this aggregate is conditional if the threshold-dependent $\sin^2\theta_W(M_Z)$ entry is included. As emphasized in Appendix T, these $\chi^2$ values are diagnostic (budget- and correlation-model dependent), but they indicate no statistically significant tension within the stated uncertainties once that conditional status is kept explicit.
 
 All predictions trace to two PCE-selected values: $\varepsilon = \ln 2$ and $K_0 = 3$. The derivation chains are documented in the referenced appendices.
 
@@ -4387,9 +4387,9 @@ $$\boxed{
 \begin{aligned}
 &\textbf{Logical:} \quad \varepsilon \geq \ln 2 \\[4pt]
 &\textbf{PCE hypothesis:} \quad \varepsilon = \ln 2, \; K_0 = 3 \text{ (assumed, falsifiable)} \\[4pt]
-&\textbf{Predictions:} \quad \alpha^{-1}, D, \Lambda, v, m_H, \sin^2\theta_W, \text{CKM}, \text{PMNS}, \eta_B, \ldots \\[4pt]
-&\textbf{Experimental tests:} \quad 18+ \text{ quantities; for the 12 with explicit pulls, } \chi^2/\text{d.o.f.} = 0.446 \\[4pt]
-&\textbf{Conclusion:} \quad \text{PCE remains consistent with current tests within stated budgets}
+&\textbf{Predictions:} \quad \alpha^{-1}, D, \Lambda, v, m_H, \sin^2\theta_W^{(0)}, \text{CKM}, \text{PMNS}, \eta_B, \ldots \\[4pt]
+&\textbf{Experimental tests:} \quad 18+ \text{ quantities; for the 12 with explicit pulls, } \chi^2/\text{d.o.f.} = 0.446;\ \text{the 17-output aggregate is conditional if } \sin^2\theta_W(M_Z) \text{ is included} \\[4pt]
+&\textbf{Conclusion:} \quad \text{PCE remains consistent with current tests within stated budgets; the global lifted-threshold computation remains open}
 \end{aligned}
 }$$
 

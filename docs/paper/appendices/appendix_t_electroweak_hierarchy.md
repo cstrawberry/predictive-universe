@@ -32,7 +32,7 @@ The appendix uses a three-level dictionary to separate the PU fixed point from p
   $$
   (\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)
   $$
-  is retained because it reproduces the previously used matching factors $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$; independent spectral evaluation on $\widetilde X$ is the remaining quantitative task. Equivalently,
+  is retained because it reproduces the previously used matching factors $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$; the explicit global spectral evaluation on $\widetilde X$ remains the outstanding quantitative task, and Remark T.17a.4 records that a sector-independent two-coefficient local heat-kernel truncation gives $F_Y^{\mathrm{loc},2}\approx 12.67>0$, not the target negative hypercharge-sector contribution. Equivalently,
   $$
   Z_i = 1+\frac{\Delta_i}{24},
   $$
@@ -63,7 +63,7 @@ The following constants are derived in the main text and Appendix Z:
 |$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|PCE-optimal Bures weights (with normalization constraint) |Corollary T.34.2|
 |$g_U^2$ |$\pi/6$ |PU-normalized gauge coefficient squared |Theorem T.39a |
 |$\alpha_U^{-1}$ |$24$ |Inverse PU fine structure $\alpha_U=g_U^2/(4\pi)$ |Theorem T.39a |
-|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (numerical target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$, fixed by consistency with the previous matching values $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$ pending independent spectral evaluation |Definition T.17a / Theorem T.18 |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (numerical target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$, fixed by consistency with the previous matching values $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$ pending global spectral evaluation; Remark T.17a.4 records that a sector-independent two-coefficient local heat-kernel truncation gives $F_Y^{\mathrm{loc},2}\approx 12.67>0$ rather than the target negative hypercharge-sector contribution |Definition T.17a / Remark T.17a.4 / Theorem T.18 |
 
 The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connects the PU fixed point to SM effective theory. Remark T.62.1 fixes the exponent $9$ from confinement complexity, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R$ (Section T.23).
 
@@ -705,6 +705,55 @@ Every step uses only the SU(5)-normalized hypercharge from Theorem T.9, the uniq
 
 The matrix $T$ is invertible ($\det T = -8/15 \neq 0$), so the target tuple $(\Delta_1,\Delta_2,\Delta_3)$ uniquely determines the sector spectral functionals $(F_C,F_W,F_Y)$. Without the nonzero singlet charge, the $U(1)$ row of $T$ would have $T_1(Y)=0$, and the relation $\Delta_1 = \tfrac{2}{5}\Delta_3 + \tfrac{3}{5}\Delta_2 \approx 19.93$ would be forced — incompatible with the target $\Delta_1=15.14$. The nonzero $y_Y$ is therefore essential for the internal consistency of the lifted spectral framework.
 
+**Remark T.17a.4 (Two-Coefficient Local Heat-Kernel Truncation Check).** Let $\nabla_s^{\widetilde G}$ denote the restriction of $\nabla^{\widetilde G}$ to the sector $\widetilde E_s$, and consider the sector-local operators obtained from $D^{\mathrm{PCE}}_{\widetilde X}$ by retaining only the scalar part $\mu_0 I+\mathcal C_\kappa|_{\widetilde E_s}$:
+$$
+L_s^{\mathrm{loc}}:=(\nabla_s^{\widetilde G})^*\nabla_s^{\widetilde G}+(\mu_0+\lambda_s)I
+\qquad (s\in\{C,W,Y\}),
+$$
+with
+$$
+\lambda_C=\frac{\kappa_1}{15}+\frac{4\kappa_3}{3},\qquad
+\lambda_W=\frac{3\kappa_1}{20}+\frac{3\kappa_2}{4},\qquad
+\lambda_Y=\frac{4\kappa_1}{15}
+$$
+from Remark T.17a.3. If the renormalized threshold functional of Definition T.17a is approximated by a sector-independent two-coefficient local heat-kernel ansatz at the $A_0$ and $A_2$ levels, then
+$$
+F_s^{\mathrm{loc},2}=n_s(B_0+B_1\lambda_s),
+\qquad (n_C,n_W,n_Y)=(6,4,2),
+$$
+because $A_0$ is proportional to rank and, under this truncation, the retained sector dependence of $A_2$ enters affinely through the scalar endomorphism $(\mu_0+\lambda_s)I$. Using the three-decimal PCE-optimal values of Corollary T.34.2,
+$$
+(\kappa_1,\kappa_2,\kappa_3)\approx(0.695,0.729,1.140),
+$$
+gives
+$$
+\lambda_C\approx 1.5663,\qquad
+\lambda_W=0.6510,\qquad
+\lambda_Y\approx 0.1853.
+$$
+Solving
+$$
+\Delta_1=\frac{2}{5}F_C+\frac{3}{5}F_W+\frac{8}{15}F_Y,\qquad
+\Delta_2=F_W,\qquad
+\Delta_3=F_C
+$$
+for the target tuple $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$ gives
+$$
+F_C=18.41,\qquad
+F_W=20.94,\qquad
+F_Y=\frac{15}{8}\Delta_1-\frac{9}{8}\Delta_2-\frac{3}{4}\Delta_3=-8.9775.
+$$
+Matching $F_C^{\mathrm{loc},2}=18.41$ and $F_W^{\mathrm{loc},2}=20.94$ determines
+$$
+B_1\approx -2.3671,\qquad
+B_0\approx 6.7760,
+$$
+and therefore
+$$
+F_Y^{\mathrm{loc},2}=2(B_0+B_1\lambda_Y)\approx 12.67>0.
+$$
+Hence this sector-independent two-coefficient local truncation does not realize the target tuple; any successful realization must depend on spectral information beyond this local truncation.
+
 ### T.12.2 PCE Isotropy at the Fixed Point
 
 **Theorem T.13** (Predictive Ward Identity). At the PU fixed point $\mathfrak{A}_{PU}$, the susceptibility is flat across all canonically normalized signal directions:
@@ -885,7 +934,7 @@ $$
 Z_1=1+\frac{15.14}{24}\approx 1.6308,\qquad Z_2=1+\frac{20.94}{24}\approx 1.8725,\qquad Z_3=1+\frac{18.41}{24}\approx 1.7671.
 }
 $$
-The explicit spectral evaluation of the lifted threshold sums remains the outstanding quantitative step. Neglecting the small residual finite matching shifts $\delta_i$ at first pass (Definition T.19a), one-loop SM running (Theorem T.15) then gives
+The explicit global spectral evaluation of the lifted threshold sums remains the outstanding quantitative step. Remark T.17a.4 records that the sector-independent two-coefficient local heat-kernel truncation gives $F_Y^{\mathrm{loc},2}\approx 12.67>0$ rather than the target negative hypercharge-sector contribution, so it does not realize the target tuple. Neglecting the small residual finite matching shifts $\delta_i$ at first pass (Definition T.19a), one-loop SM running (Theorem T.15) then gives
 $$
 \alpha_i^{-1}(M_Z)=Z_i\,\alpha_U^{-1}+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
 \qquad i=1,2,3,
@@ -915,7 +964,7 @@ One-loop running then yields
 $$
 \alpha_i^{-1}(M_Z)=\alpha_i^{-1}(\mu_G)+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
 $$
-which is the displayed formula. Substituting the target tuple above gives the stated numerical Z-pole outputs. The theorem therefore isolates the remaining quantitative task: the explicit spectral evaluation of $D^{\mathrm{PCE}}_{\widetilde X}$ on the lifted gauge geometry. ∎
+which is the displayed formula. Substituting the target tuple above gives the stated numerical Z-pole outputs. The theorem therefore isolates the remaining quantitative task: the explicit global spectral evaluation of $D^{\mathrm{PCE}}_{\widetilde X}$ on the lifted gauge geometry beyond the sector-independent two-coefficient local truncation of Remark T.17a.4, which does not realize the target tuple. ∎
 
 -----
 
@@ -1227,7 +1276,7 @@ so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently
 |$v$ |$A_{EW} e^{-\kappa_{EW}} M_{Pl}$ |252 GeV |246 GeV |2.3% |
 |$\sin^2\theta_W^{(0)}$ |PU-normalized fixed-point value |$3/8$ |— |Exact |
 |$\sin^2\theta_W(\mu_G)$ |matching with lifted spectral thresholds |$\frac{3Z_2}{3Z_2+5Z_1}$ with $Z_i=1+\Delta_i/24$ |(matching-scale input) |Derived |
-|$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ target tuple fixed by consistency with the previous matching outputs |— |Open spectral step |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ target tuple fixed by consistency with the previous matching outputs; Remark T.17a.4 shows that the sector-independent two-coefficient local heat-kernel truncation gives $F_Y^{\mathrm{loc},2}\approx 12.67>0$ rather than the target negative hypercharge-sector contribution |— |Open global spectral step |
 |$\sin^2\theta_W(M_Z)$ |SM RG from matched boundary |Conditional on the lifted spectral thresholds and $\delta_i$ |$0.2312$ |Conditional|
 |$5/3$ factor |Canonical hypercharge normalization |$5/3$ |$5/3$ |Derived |
 |$\lambda_{\text{block}}$ |6 SU(2) blocks |$-1/36$ |— |Exact |
