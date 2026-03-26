@@ -1268,7 +1268,7 @@ Thus $bM = k^2$ holds if and only if $a = 2$, the Landauer-derived value (Theore
 - **Information-theoretic origin:** The error-correction structure $[24, 12, 8]$ from PCE optimization (Theorem Z.13)
 - **Geometric origin:** The Grassmannian $\text{Gr}(2,8)$ with $\dim_{\mathbb{C}} = ab = 12 = k$ and $\dim_{\mathbb{R}} = 2ab = 24 = n$
 
-The syndrome-partition identity demonstrates these structures are mutually determining: each uniquely implies the other through $a = 2$. This identity provides a structural bound consistent with the inferred instanton complexity $\kappa \approx 141.5$.
+The syndrome-partition identity demonstrates these structures are mutually determining: each uniquely implies the other through $a = 2$. This identity provides a structural bound consistent with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$; Theorem U.8c there qualifies that value as a reference branch, while the translational branch gives $\kappa_{\mathrm{trans}} = 142$ if no additional discrete null directions occur.
 
 *Remark.* The three derivation paths—thermodynamic (Landauer), information-theoretic (Golay), and geometric (Grassmannian)—employ distinct mathematical frameworks yet converge on identical numerical values. This overdetermination provides strong evidence for the structural uniqueness of the PCE-Attractor.
 
@@ -1393,7 +1393,7 @@ $$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (L + g_c)$$
 **Step 4 (Derivation Chain).** The complete chain:
 $$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{k = M/2} k = 12 \xrightarrow{k^2} k^2 = 144$$
 
-unifies thermodynamic (Landauer), information-theoretic (Golay), and geometric (Leech) structures as manifestations of $a = 2$, with the structural bound $k^2 = 144$ consistent with the inferred $\kappa \approx 141.5$. ∎
+unifies thermodynamic (Landauer), information-theoretic (Golay), and geometric (Leech) structures as manifestations of $a = 2$, with the structural bound $k^2 = 144$ consistent with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ and the translational branch $\kappa_{\mathrm{trans}} = 142$ if no additional discrete null directions occur. ∎
 
 ---
 
@@ -1417,7 +1417,7 @@ specifying how information modes couple to redundancy modes for error correction
 
 **Step 4 (Structural Correspondence).** The interaction tensor and parity matrix have identical information content (144 bits) and compatible algebraic structure ($6 \times 24 \leftrightarrow 12 \times 12$). Both are uniquely determined by the constraint $a = 2$. ∎
 
-**Remark Z.13e.1: Information-Theoretic Interpretation.** The identity $C_{\mathrm{interaction}} = C_{\mathrm{stabilization}} = 144$ suggests that the structure governing hidden-visible coupling corresponds structurally to the error-correction organization. This resonates with Wheeler's "it from bit" intuition: physical structure emerges from information-theoretic optimization. The inferred instanton complexity $\kappa \approx 141.5$ indicates that minimal vacuum fluctuations activate most but not all of this constraint structure, with saturation ratio $\kappa/k^2 \approx 0.98$.
+**Remark Z.13e.1: Information-Theoretic Interpretation.** The identity $C_{\mathrm{interaction}} = C_{\mathrm{stabilization}} = 144$ suggests that the structure governing hidden-visible coupling corresponds structurally to the error-correction organization. This resonates with Wheeler's "it from bit" intuition: physical structure emerges from information-theoretic optimization. The Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ indicates that minimal vacuum fluctuations activate most but not all of this constraint structure, with saturation ratio $\kappa_{\mathrm{ref}}/k^2 = 141.5/144 \approx 0.9826$; the translational branch gives $\kappa_{\mathrm{trans}}/k^2 = 142/144 \approx 0.9861$ if no additional discrete null directions occur.
 
 **Remark Z.13e.2: Uniqueness.** The Golay code is unique up to equivalence (Theorem Z.13b). Therefore, the 144-bit structure is not one choice among many but the unique solution to PCE optimization at rate-½ with block length 24.
 
@@ -1493,22 +1493,24 @@ print(f"  d_0 = 8 on the minimal active branch, b = d_0 - a = {8 - a}")
 print(f"  M = 2ab = {2 * a * (8 - a)}")
 print(f"  k = M/2 = {24 // 2}")
 print(f"  k² = bM = {12**2} = {(8 - a) * (2 * a * (8 - a))} ✓")
-# Verification 4: Structural bound and inferred complexity
+# Verification 4: Structural bound and Appendix U reference exponent
 k = 12  # Golay code dimension
 kappa_bound = k**2  # Structural bound from Golay structure
-kappa_derived = 141.5  # Derived from Golay-Steiner structure (Appendix U, Theorem U.16)
+kappa_ref = 141.5  # Appendix U five-mode reference exponent (Theorem U.16)
+kappa_trans = 142.0  # Translational branch if no additional discrete null directions occur
 print(f"\n✓ Structural bound k² = {kappa_bound}")
-print(f"✓ Derived κ = {kappa_derived} (from Golay-Steiner structure)")
-print(f"✓ Relation: κ = k² - (D+1)/2 = 144 - 2.5 = 141.5 ✓")
+print(f"✓ Appendix U five-mode reference exponent κ_ref = {kappa_ref}")
+print(f"✓ Translational branch κ_trans = {kappa_trans:g} if no additional discrete null directions occur")
+print(f"✓ Reference relation: κ_ref = k² - (D+1)/2 = 144 - 2.5 = 141.5")
 print(f"✓ Total information content: {P.size} bits")
 
-# Verification 5: Cosmological constant prefactor
+# Verification 5: Cosmological constant prefactor on the five-mode reference branch
 Lambda_LP2 = 2.87e-122
-S_inst = 2 * kappa_derived
-A_eff = Lambda_LP2 / (8 * np.pi * np.exp(-S_inst))
-print(f"\n✓ Cosmological constant check:")
-print(f"  S_inst = 2κ = {S_inst}")
-print(f"  A_eff = Λ L_P² / (8π e^{{-S_inst}}) ≈ {A_eff:.2f}")
+S_inst_ref = 2 * kappa_ref
+A_eff_ref = Lambda_LP2 / (8 * np.pi * np.exp(-S_inst_ref))
+print(f"\n✓ Cosmological constant check on the five-mode reference branch:")
+print(f"  S_inst_ref = 2κ_ref = {S_inst_ref}")
+print(f"  A_eff_ref^(obs) = Λ L_P² / (8π e^{{-S_inst_ref}}) ≈ {A_eff_ref:.2f}")
 ```
 
 **Output:**
@@ -1525,8 +1527,10 @@ print(f"  A_eff = Λ L_P² / (8π e^{{-S_inst}}) ≈ {A_eff:.2f}")
   k² = bM = 144 = 144 ✓
 
 ✓ Structural bound k² = 144
-✓ Derived κ = 141.5 (Golay-Steiner); computed A_eff^(th) ≈ 0.923; observational A_eff^(obs) ≈ 0.917 (from observed Λ)
-✓ Bound satisfied: κ < k² ✓
+✓ Appendix U five-mode reference exponent κ_ref = 141.5
+✓ Translational branch κ_trans = 142 if no additional discrete null directions occur
+✓ Reference relation: κ_ref = k² - (D+1)/2 = 144 - 2.5 = 141.5
+✓ Bound satisfied: κ_ref < k² ✓
 ✓ Total information content: 144 bits
 ```
 
@@ -1557,7 +1561,7 @@ $$\left| \langle u_i, P_i \rangle \right| > 0.9$$
 
 #### Z.13.5.7 Summary: The 144-Structure as Derived Necessity
 
-**Theorem Z.13f (Synthesis).** The structural identity $k^2 = bM = 144$, combined with the inferred $\kappa \approx 141.5$ satisfying $\kappa < k^2$, encapsulates a chain of structural necessities:
+**Theorem Z.13f (Synthesis).** The structural identity $k^2 = bM = 144$, combined with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ satisfying $\kappa_{\mathrm{ref}} < k^2$, encapsulates a chain of structural necessities:
 
 $$\boxed{\text{Landauer cost } (\varepsilon = \ln 2) \xrightarrow{\text{Thm Z.1}} \text{Partition } (2,6) \xleftrightarrow{bM = k^2} \text{Golay } [24,12,8] \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(4)=24} D = 4}$$
 

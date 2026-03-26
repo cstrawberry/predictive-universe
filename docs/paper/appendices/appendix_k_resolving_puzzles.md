@@ -821,7 +821,7 @@ in excellent agreement with the observed hierarchy.
 - The discrete action $S_{EW} = \kappa_{EW}$ counts real configuration space dimensions subject to alignment (Theorem T.4)
 - Gaussian fluctuations around the vacuum minimum contribute at most $O(1)$ corrections, never $O(M_{Pl}^2/v^2) \sim 10^{34}$
 - The PCE-Attractor orbit Gr(2,8) with Bures metric provides the geometric arena; the code structure selects specific minima
-- Connection to cosmological constant: both $v$ and $\Lambda$ emerge from the same Golay-Steiner structure via different complexity channels ($\kappa_{EW} = 38.5$ vs. $\kappa_\Lambda = 141.5$, Appendix U)
+- Connection to cosmological constant: both $v$ and $\Lambda$ emerge from the same Golay-Steiner structure via different complexity channels ($\kappa_{EW} = 38.5$ versus the Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$; Theorem U.8c qualifies that value as branch-dependent, while the translational branch gives $\kappa_{\Lambda,\mathrm{trans}} = 142$ if no additional discrete null directions occur)
 
 **Weinberg Angle and Higgs Mass:** The same mechanism determines:
 - Weinberg angle: $\sin^2\theta_W^{(0)} = 3/8$ from PCE isotropy requiring equal gauge kinetic stiffness **(Theorem T.14)**
@@ -850,7 +850,7 @@ of complex dimension $\kappa_0 = k(M-k)=144$ (Theorem U.3). Appendix U then intr
 $$\kappa_{\mathrm{ref}} = \frac{N_{\mathbb{R}} - m}{2},$$
 with $N_{\mathbb{R}}=288$ and $m=5$ used as the Appendix U five-mode reference count, giving
 $$\kappa_{\mathrm{ref}} = 141.5$$
-(Theorems U.15-U.16). This is a reference exponent within that convention; it is not established unconditionally by the virial identity alone.
+(Theorems U.15-U.16). Theorem U.8c strengthens the status statement: in the current Definition U.4 continuum action, the pure-coordinate dilatation tangent is a strict negative mode rather than a zero mode, so the five-mode value remains a reference branch rather than a theorem-level vacuum closure. If no additional discrete null directions occur beyond the four translations, the corresponding translational branch gives $\kappa_{\mathrm{trans}}=142$.
 
 **Geometric Foundation:** The reference count is tied to the following discrete structures:
 - **Interface modes:** $M = 2ab = 24$ where $a = 2$ (active kernel, Theorem Z.1) and $b = 6$ (inactive complement)
@@ -862,9 +862,9 @@ $$\kappa_{\mathrm{ref}} = 141.5$$
 **Reference Evaluation:**
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-283}$$
 
-For $A_{\text{eff}} = 1$, this gives $\Lambda L_P^2 = 3.13\times10^{-122}$. Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ from Corollary U.15b gives the reference evaluation $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, to be compared with the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times10^{-122}$ (Appendix V, Eq. (V.5)). Equivalently, holding $\kappa_{\mathrm{ref}}$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$, providing an internal consistency check on the prefactor's expected $O(1)$ size.
+For $A_{\text{eff}} = 1$, this gives $\Lambda L_P^2 = 3.13\times10^{-122}$. Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ from Corollary U.15b gives the five-mode branch reference evaluation $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, while the translational branch gives $\Lambda L_P^2 = (1.06 \pm 0.01)\times10^{-122}$ at the same prefactor. Holding $\kappa_{\mathrm{ref}}$ fixed, the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times10^{-122}$ (Appendix V, Eq. (V.5)) implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ on the five-mode reference branch; the translational branch would require $A_{\text{eff}}^{(\text{obs},4)}=2.49\pm0.04$.
 
-**Key Insight:** The same Golay code structure organizes both the electroweak and vacuum sectors, but the logical status differs. The electroweak scale uses the determinant model of Appendix T, whereas the cosmological-constant reference exponent additionally depends on the Appendix U five-mode reference-counting convention and the Appendix U prefactor convention. The numerical ratio
+**Key Insight:** The same Golay code structure organizes both the electroweak and vacuum sectors, but the logical status differs. The electroweak scale uses the determinant model of Appendix T, whereas the cosmological-constant reference exponent additionally depends on the Appendix U five-mode reference-counting convention and the Appendix U prefactor convention. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for the five-mode branch is obstructed in the current Definition U.4 continuum action. The numerical ratio
 $$\frac{2\kappa_{\Lambda,\mathrm{ref}}}{\kappa_{EW}} = \frac{283}{38.5} \approx 7.35$$
 is therefore a comparison between two reference exponents, not an unconditional theorem about exact vacuum and electroweak actions.
 
@@ -882,7 +882,7 @@ $$Q = \frac{e^{-\kappa_Q}}{\sqrt{2}} = \frac{e^{-11}}{\sqrt{2}} = 1.18 \times 10
 | $\Delta N_e$ | $\pm 0.5$ | N/A | Geometric uncertainty |
 | $f_{\text{amp}}$ | $0.98$ | N/A | Amplitude correction |
 
-The hierarchy $\kappa_\Lambda/\kappa_Q = 141.5/11 \approx 13$ explains why the cosmological constant ($e^{-283}$) is exponentially smaller than primordial perturbations ($e^{-22}$). Both sectors derive from the Golay code $[24, 12, 8]$: the vacuum sector involves the full Grassmannian $\text{Gr}_\mathbb{C}(12,24)$, while the primordial sector involves the signal subspace $\mathbb{CP}^{11}$.
+On the Appendix U five-mode reference branch, the hierarchy $\kappa_{\Lambda,\mathrm{ref}}/\kappa_Q = 141.5/11 \approx 13$ explains why the cosmological-constant reference scale ($e^{-283}$) is exponentially smaller than primordial perturbations ($e^{-22}$). The translational branch gives $142/11 \approx 13$ and $e^{-284}$ instead. Both sectors derive from the Golay code $[24, 12, 8]$: the vacuum sector involves the full Grassmannian $\text{Gr}_\mathbb{C}(12,24)$, while the primordial sector involves the signal subspace $\mathbb{CP}^{11}$.
 
 
 ## K.9 Cosmology: Time-Varying Gravitational Coupling and Unified Dark Sector

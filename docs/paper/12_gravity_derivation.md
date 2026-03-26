@@ -332,7 +332,7 @@ R_{\mu\nu} - \tfrac{1}{2}Rg_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_
 $$
 The coefficient $\eta$ appearing in $\delta S = \eta\,\delta\mathcal{A}$ is related to the gravitational coupling by $\eta=1/(4G)$ in the standard normalization (Theorem E.5).
 
-**Part C (Cosmological).** The de Sitter horizon at $r_\Lambda = \sqrt{3/\Lambda}$ has Gibbons-Hawking temperature $T_{dS} = (\hbar c/2\pi k_B)\sqrt{\Lambda/3}$ [Gibbons & Hawking 1977]. The instanton tunneling rate $\Gamma \propto e^{-2\kappa}$ with $\kappa = 141.5$ determines the vacuum energy density (Appendix U, Theorem U.16). ∎
+**Part C (Cosmological).** The de Sitter horizon at $r_\Lambda = \sqrt{3/\Lambda}$ has Gibbons-Hawking temperature $T_{dS} = (\hbar c/2\pi k_B)\sqrt{\Lambda/3}$ [Gibbons & Hawking 1977]. The instanton tunneling rate $\Gamma \propto e^{-2\kappa}$ determines the vacuum energy density; Appendix U records a five-mode reference branch with $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16) and Theorem U.8c shows that the pure-coordinate dilatation mode needed to realize that branch is obstructed in the current continuum action. ∎
 
 **Remark 12.2.1: Common Origin.** The ND-RID channel structure that produces Born rule probabilities (via capacity bound $C_{\max} < \ln d_0$, Theorem E.2) also determines $G$ via Equation E.9:
 $$

@@ -442,9 +442,9 @@ This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV, consistent with the ex
 |:--------------|:--------------------------|:------------------------|
 |Configuration |Full Grassmannian Gr(12,24)|Left-chiral × reservoir |
 |Base complexity|$k^2 = 144$ |$bk/2 = 36$ |
-|Zero modes |5 |1 |
-|**Complexity** |$\kappa_\Lambda = 141.5$ |$\kappa_{EW} = 38.5$ |
-|**Suppression**|$e^{-283} \sim 10^{-123}$ |$e^{-38.5} \sim 10^{-17}$|
+|Zero modes |4 exact translations, with a five-mode reference count used only on the Appendix U reference branch |1 |
+|**Complexity** |$\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the five-mode reference branch; $\kappa_{\Lambda,\mathrm{trans}} = 142$ on the translational branch if no additional discrete null directions occur |$\kappa_{EW} = 38.5$ |
+|**Suppression**|$e^{-283}$ on the five-mode reference branch; $e^{-284}$ on the translational branch |$e^{-38.5} \sim 10^{-17}$|
 
 -----
 
@@ -3812,7 +3812,7 @@ This correspondence connects the information-theoretic complexity parameter $\ka
 
 -----
 
-### T.23.4 The Cosmological Constant: $\kappa = 141.5$
+### T.23.4 The Cosmological Constant: Appendix U Reference Branch
 
 **Configuration Space.** Vacuum fluctuations correspond to deformations of the Golay code subspace within the 24-mode interface:
 
@@ -3824,20 +3824,20 @@ $$\mathcal{M}_\Lambda = \text{Gr}(k, M) = \text{Gr}(12, 24)$$
 |:-------------|:----------------------------------|:--------|
 |Base dimension|$k(M-k) = k^2$ |144 |
 |Extra DOF |— |0 |
-|Zero modes |$D + 1$ (translations + dilatation)|5 |
+|Zero modes |$D + 1$ on the Appendix U five-mode reference branch |5 |
 |**$\kappa_{\mathrm{ref}}$** |$144 - 5/2$ |**141.5**|
 
 **Summary of Appendix U Theorem U.16.** Under the Appendix U leading-order five-mode reference-counting convention, the reference exponent is
 
 $$\kappa_{\mathrm{ref}} = k^2 - \frac{D+1}{2} = 144 - \frac{5}{2} = 141.5$$
 
-where the base complexity $k^2 = 144$ arises from the Grassmannian dimension (Theorem U.3), and the deficit $(D+1)/2 = 5/2$ arises from the Appendix U reference-counting convention summarized in Theorem U.15 and recorded in Theorem U.16.
+where the base complexity $k^2 = 144$ arises from the Grassmannian dimension (Theorem U.3), and the deficit $(D+1)/2 = 5/2$ arises from the Appendix U reference-counting convention summarized in Theorem U.15 and recorded in Theorem U.16. Theorem U.8c shows that the pure-coordinate dilatation tangent needed to realize that five-mode branch is obstructed in the current Definition U.4 continuum action.
 
 **Result.**
 
-$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283} = (2.88 \pm 0.03)\times 10^{-122}.$$
+$$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283} = (2.88 \pm 0.03)\times 10^{-122}$$
 
-Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this reference evaluation is consistent with the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}$ (Appendix V, Eq. (V.5)).
+on the Appendix U five-mode reference branch. Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this gives the branch-dependent reference evaluation; the translational branch instead yields $(1.06 \pm 0.01)\times 10^{-122}$ at the same prefactor.
 
 -----
 
@@ -3935,7 +3935,7 @@ $$
 
 |Quantity |Configuration Space |Base |Coset|Zero Modes|$\kappa$|Scaling |
 |:--------|:----------------------------------|:---:|:---:|:--------:|:------:|:-------------------|
-|$\Lambda$|Gr(12,24) |144 |0 |5 |141.5 |$\Lambda L_P^2 \propto e^{-2\kappa}$ |
+|$\Lambda$|Gr(12,24) |144 |0 |5 on the Appendix U five-mode reference branch |141.5 |$\Lambda L_P^2 \propto e^{-2\kappa}$ on that reference branch |
 |$v$ |$SU(2) \times U(1)/U(1)$ |36 |+3 |1 |38.5 |$v/M_{Pl} \propto e^{-\kappa}$ |
 |$\eta_B$ |CP-odd sector of $\mathcal{M}_{EW}$|19.25|0 |$+0.23$ |19.48 |$\eta_B \propto e^{-\kappa}$ |
 |$M_R$ |$E_8$ instanton ($d^2_{31} = 6$) |– |– |– |9 |$M_R/M_{Pl} = e^{-9}$ |
@@ -3970,7 +3970,7 @@ consistent with the world average $\Lambda_{\text{QCD}}^{(5)} = 210 \pm 14$ MeV 
 $$
 \kappa_{\Lambda,\mathrm{ref}} = 144 - \frac{5}{2} = 141.5,
 $$
-so $\Lambda L_P^2 \propto e^{-2\kappa_{\Lambda,\mathrm{ref}}}=e^{-283}$ at fixed prefactor. The electroweak row is the counting result of Section T.23.5:
+so $\Lambda L_P^2 \propto e^{-2\kappa_{\Lambda,\mathrm{ref}}}=e^{-283}$ at fixed prefactor on the Appendix U five-mode reference branch. Theorem U.8c shows that this row is branch-dependent rather than a theorem-level consequence of the current Definition U.4 continuum action. The electroweak row is the counting result of Section T.23.5:
 $$
 \kappa_{EW}=36+3-\frac12=38.5,
 $$
@@ -3994,7 +3994,7 @@ G_F\propto e^{2\kappa_{EW}}M_{Pl}^{-2}=e^{77}M_{Pl}^{-2}.
 $$
 Thus the $G_F$ row is a derived inverse-square consequence of the electroweak scale rather than an additional direct suppression. The $E_8$-distance rows follow from $\kappa_Y=\alpha d^2$ with $\alpha=3/2$ from Theorem T.39b. ∎
 
-**Corollary T.62a** (Reference Vacuum–Electroweak Sum Rule). Under the Appendix U leading-order five-mode reference-counting convention of Theorem U.16,
+**Corollary T.62a** (Five-Mode Reference Vacuum–Electroweak Sum Rule). Within the Appendix U five-mode reference branch of Theorem U.16,
 $$
 2\kappa_{\Lambda,\mathrm{ref}} + 2\kappa_{EW} = 360 = \binom{D+2}{2}M.
 $$
@@ -4007,7 +4007,7 @@ Theorem Z.11 gives $D=4$ and Theorem Z.5 gives $M=24$, so
 $$
 \binom{D+2}{2}M=\binom{6}{2}\cdot 24 = 15\cdot 24 = 360.
 $$
-Therefore the two expressions agree. ∎
+Therefore the two expressions agree on that reference branch. Theorem U.8c shows that this identity is branch-specific rather than a theorem-level vacuum closure for the current Definition U.4 continuum action. ∎
 
 -----
 
@@ -4015,19 +4015,23 @@ Therefore the two expressions agree. ∎
 
 The following relationships emerge from the unified framework and provide internal consistency checks.
 
-**Proposition T.63a** (Complexity Ratio). *The ratio of cosmological to electroweak complexity is:*
+**Proposition T.63a** (Reference Complexity Ratio). *On the Appendix U five-mode reference branch, the ratio of cosmological to electroweak complexity is*
 
-$$\frac{\kappa}{\kappa_{EW}} = \frac{144 - 2.5}{36 + 2.5} = \frac{141.5}{38.5} \approx 3.68$$
+$$\frac{\kappa_{\Lambda,\mathrm{ref}}}{\kappa_{EW}} = \frac{141.5}{38.5} \approx 3.68.$$
 
-*This ratio is determined by the respective configuration space geometries and zero mode structures.*
+*If no additional discrete null directions occur beyond the four translations, the translational branch gives*
 
-**Corollary T.63.1** (Complexity Difference). *The complexity difference determines the relative suppression:*
+$$\frac{\kappa_{\Lambda,\mathrm{trans}}}{\kappa_{EW}} = \frac{142}{38.5} \approx 3.69.$$
 
-$$\kappa - \kappa_{EW} = 103$$
+**Corollary T.63.1** (Reference Complexity Difference). *On the five-mode reference branch,*
 
-*yielding:*
+$$\kappa_{\Lambda,\mathrm{ref}} - \kappa_{EW} = 103,$$
 
-$$\frac{\Lambda}{v^4} \sim e^{-2 \times 103} \sim 10^{-89}$$
+*yielding the leading exponential comparison*
+
+$$\frac{\Lambda}{v^4} \sim e^{-206} = 3.43 \times 10^{-90}.$$
+
+*The translational branch gives $\kappa_{\Lambda,\mathrm{trans}} - \kappa_{EW} = 103.5$, hence $e^{-207} = 1.26 \times 10^{-90}$.*
 
 **Corollary T.63.2** (Baryogenesis-Electroweak Relationship). *The baryogenesis complexity satisfies:*
 
@@ -4037,13 +4041,15 @@ $$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.48$$
 
 $$\eta_B \sim \sqrt{\frac{v}{M_{Pl}}}$$
 
-**Proposition T.64a** (Near-Integer Ratios). *The complexities satisfy:*
+**Proposition T.64a** (Near-Integer Ratios). *The complexity ratios satisfy*
 
-$$\frac{\kappa}{k^2} = \frac{141.5}{144} = 1 - \frac{5}{288} \approx 0.983$$
+$$\frac{\kappa_{\Lambda,\mathrm{ref}}}{k^2} = \frac{141.5}{144} = 1 - \frac{5}{288} \approx 0.983,$$
 
-$$\frac{\kappa_{EW}}{b^2} = \frac{38.5}{36} \approx 1.069$$
+$$\frac{\kappa_{\Lambda,\mathrm{trans}}}{k^2} = \frac{142}{144} = 1 - \frac{1}{72} \approx 0.986,$$
 
-*The base complexities $k^2$ and $b^2$ are modified only by zero mode corrections of order unity.*
+$$\frac{\kappa_{EW}}{b^2} = \frac{38.5}{36} \approx 1.069.$$
+
+*The base complexities $k^2$ and $b^2$ are modified only by zero-mode corrections of order unity. Theorem U.8c shows that the five-mode cosmological value is a reference-branch statement rather than a theorem-level continuum zero-mode count.*
 
 -----
 
@@ -4056,8 +4062,8 @@ $$\frac{\kappa_{EW}}{b^2} = \frac{38.5}{36} \approx 1.069$$
 For the cosmological constant:
 
 - Configuration space: Gr(12, 24)
-- Complexity: $\kappa = 141.5$
-- Suppression: $e^{-283} \sim 10^{-123}$
+- Complexity: $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the Appendix U five-mode reference branch; if no additional discrete null directions occur beyond the four translations, the translational branch gives $\kappa_{\Lambda,\mathrm{trans}} = 142$
+- Suppression: $e^{-283}$ on the five-mode reference branch; $e^{-284}$ on the translational branch
 
 For the electroweak scale:
 
@@ -4065,9 +4071,9 @@ For the electroweak scale:
 - Complexity: $\kappa_{EW} = 38.5$
 - Suppression: $e^{-38.5} \sim 10^{-17}$
 
-The different numerical values arise from the different dimensions and symmetries of these configuration spaces, not from different mechanisms. ∎
+The different numerical values arise from the different dimensions and symmetries of these configuration spaces, not from different mechanisms. Theorem U.8c shows that the five-mode cosmological value is branch-dependent rather than a theorem-level continuum zero-mode count. ∎
 
-**Corollary T.65.1** (No fine-tuning of the counting data). *Within the counting conventions used in Theorem U.16 and Section T.23.5, the leading hierarchy exponents are fixed by discrete geometric data: the vacuum reference exponent uses Grassmannian dimension $144$ with $5$ zero modes, and the electroweak exponent uses effective dimension $39$ with $1$ zero mode.*
+**Corollary T.65.1** (No fine-tuning of the counting data on the reference branches). *Within the counting conventions used in Theorem U.16 and Section T.23.5, the leading hierarchy exponents are fixed by discrete geometric data: the vacuum reference exponent uses Grassmannian dimension $144$ with the Appendix U five-mode reference count, and the electroweak exponent uses effective dimension $39$ with $1$ zero mode. Theorem U.8c shows that the vacuum five-mode statement is branch-dependent rather than theorem-level for the current Definition U.4 continuum action.*
 
 *This means the leading counting inputs are not continuously adjusted inside the framework once the relevant configuration spaces and symmetry data are fixed. Continuous effects can still enter through prefactors, threshold corrections, and matching conventions, so the discrete counting does not by itself eliminate every source of numerical variation. The Golay code minimum distance $d = 8$ supplies a structural gap in the coding sector, while the Leech-lattice rootlessness statement governs the corresponding vacuum-isolation claim in the lattice sector.*
 
@@ -4081,9 +4087,9 @@ The different numerical values arise from the different dimensions and symmetrie
 |**Extra dimensions** |Geometric dilution |Requires tuning |Requires tuning |
 |**Anthropic/landscape** |Selection from $10^{500}$ vacua |Non-predictive |Non-predictive |
 |**Technical naturalness**|Symmetry protection |Does not apply |Partial |
-|**PU Framework** |Exponential from config. space dim.|$\kappa = 141.5$ derived |$\kappa_{EW} = 38.5$ derived |
+|**PU Framework** |Exponential from config. space dim.|Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$, with translational branch $\kappa_{\Lambda,\mathrm{trans}} = 142$ if no additional discrete null directions occur |$\kappa_{EW} = 38.5$ derived |
 
-The PU framework **derives** both exponential suppressions from the same counting mechanism, providing predictive relationships between scales rather than treating them as independent parameters. The discrete nature of the configuration space dimensions ($k^2 = 144$, $b^2 = 36$) and zero mode counts ($m \in \{1, 5\}$) ensures that the complexity parameters are protected against continuous quantum corrections.
+The PU framework **derives** the electroweak suppression and a branch-dependent cosmological reference suppression from the same counting mechanism, providing predictive relationships between scales rather than treating them as independent parameters. The discrete nature of the configuration space dimensions ($k^2 = 144$, $b^2 = 36$) and exact zero-mode counts ($m \in \{1, 4\}$ in the current continuum action) protects the leading exponents against continuous quantum corrections, while the Appendix U five-mode count is retained only as the stated reference branch singled out by Theorem U.16 and qualified by Theorem U.8c.
 
 -----
 

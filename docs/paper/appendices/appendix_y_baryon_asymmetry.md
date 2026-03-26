@@ -302,7 +302,7 @@ where $\kappa$ counts the effective dimensionality of the relevant configuration
 
 | Quantity | Complexity | Configuration Space | Suppression | Result |
 |:---------|:----------:|:--------------------|:-----------:|:-------|
-| $\Lambda L_P^2$ | $\kappa = 141.5$ | $\text{Gr}(12, 24)$ | $e^{-2\kappa}$ | $\sim 10^{-123}$ |
+| $\Lambda L_P^2$ | $\kappa_{\mathrm{ref}} = 141.5$ on the Appendix U five-mode reference branch | $\text{Gr}(12, 24)$ | $e^{-2\kappa}$ on that branch | $\sim 10^{-122}$ |
 | $v/M_{Pl}$ | $\kappa_{EW} = 38.5$ | $(SU(2) \times U(1))/U(1)$ | $e^{-\kappa}$ | $\sim 10^{-17}$ |
 | $\eta_B$ | $\kappa_B = 19.48$ | CP-odd sphaleron moduli | $e^{-\kappa}$ | $\sim 10^{-9}$ |
 

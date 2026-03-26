@@ -82,7 +82,7 @@ This framework serves as an existence proof challenging that assumption and demo
 
 2. **Such formalization can generate structures isomorphic to known physics:** The emergence of quantum mechanical formalism (Section 8), Lorentzian spacetime geometry (Section 11), Einstein's Field Equations (Section 12), and Standard Model structures (Appendices G, R).
 
-3. **Quantitative predictions can be derived:** Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor with zero continuously adjustable parameters (Appendix Z), derivation of three fermion generations (Appendix R), first-principles derivation of the cosmological constant $\kappa = 141.5$ from Golay-Steiner structure (Appendix U).
+3. **Quantitative predictions can be derived:** Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor with zero continuously adjustable parameters (Appendix Z), derivation of three fermion generations (Appendix R), and a branch-dependent cosmological-constant reference scaling law from Golay-Steiner structure (Appendix U), where Theorem U.8c blocks a theorem-level pure-dilatation realization of the Appendix U five-mode branch.
 
 4. **Falsifiable experimental protocols can be formulated:** Detailed protocols with power analyses and statistical requirements for testing Consciousness Complexity effects (Section 13).
 

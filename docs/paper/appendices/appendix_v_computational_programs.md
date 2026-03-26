@@ -1,6 +1,6 @@
 # Appendix V: Computational Programs and Numerical Consistency Checks
 
-This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program evaluates the PU prediction $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ using the derived instanton complexity $\kappa=141.5$ (Appendix U) and the PU-theory prefactor $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b); the inversion form is included as a numerical consistency check that converts the observed $\Lambda L_P^2$ into $A_{\text{eff}}^{(\text{obs})}$ or an effective $\kappa$ under a chosen prefactor. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap that has zero continuously adjustable parameters once the baseline MPU invariants are computed from a specified model.
+This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program evaluates the Appendix U five-mode reference branch $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ using the reference exponent $\kappa=141.5$ (Appendix U, Theorem U.16) and the PU-theory prefactor $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b); the inversion form is included as a numerical consistency check that converts the observed $\Lambda L_P^2$ into $A_{\text{eff}}^{(\text{obs})}$ or an effective $\kappa$ under a chosen prefactor. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that five-mode branch is obstructed in the current Definition U.4 continuum action, so the forward value is branch-dependent rather than theorem-level vacuum closure. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap that has zero continuously adjustable parameters once the baseline MPU invariants are computed from a specified model.
 
 **Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=e^2/(4\pi)$.
 
@@ -20,7 +20,7 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 | Quantity | PU program | Central value | $1\sigma$ budget | Dominant contributions |
 |:--|:--|:--|:--|:--|
 | $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$ | $137.036092$ | $\pm 0.000060$ | combined Section Z.27.9 budget, dominated by subgroup-projection/matching systematics; compare $\alpha_{\mathrm{em}}^{-1} = 137.035999177(21)$ [NIST 2024] |
-| $\Lambda L_P^2$ (vacuum sector) | Eq. (V.2) with $\kappa=141.5$ and $A_{\text{eff}}=0.923\pm0.011$ (Appendix U) | $(2.88\times10^{-122})$ | $\pm 0.03\times10^{-122}$ | $A_{\text{eff}}$ theory/systematic dominates; Eq. (V.5) gives $(\Lambda L_P^2)_{\text{obs}}=(2.86599\pm0.04849)\times10^{-122}$, implying $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ |
+| $\Lambda L_P^2$ (vacuum sector) | Eq. (V.2) with $\kappa_{\mathrm{ref}}=141.5$ and $A_{\text{eff}}=0.923\pm0.011$ on the Appendix U five-mode reference branch | $(2.88\times10^{-122})$ | $\pm 0.03\times10^{-122}$ | branch-dependent reference evaluation only; Theorem U.8c blocks the pure-coordinate dilatation realization in the current continuum action. Eq. (V.5) gives $(\Lambda L_P^2)_{\text{obs}}=(2.86599\pm0.04849)\times10^{-122}$, implying $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ on that branch and $A_{\text{eff}}^{(\text{obs},4)}=2.49\pm0.04$ on the translational branch |
 
 ## V.1 The Cosmological Constant: Inversion for the Instanton Complexity $\kappa$
 
@@ -82,7 +82,11 @@ The quoted uncertainty is dominated by $H_0$ and $\Omega_{\Lambda}$; the relativ
 
 ### V.1.4 Consistency Check via Inversion
 
-Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16, five-mode reference-counting convention) and the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b, prefactor convention), Equation (V.2) gives the corresponding reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, consistent with the observed value (V.5) within the combined $1\sigma$ budget.
+Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16, five-mode reference-counting convention) and the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b, prefactor convention), Equation (V.2) gives the corresponding five-mode reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that five-mode branch is obstructed in the current Definition U.4 continuum action, so this agreement with the observed value (V.5) is branch-dependent rather than theorem-level vacuum closure. Holding the same prefactor fixed on the translational branch instead gives
+
+$$
+\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-284} = (1.06 \pm 0.01)\times10^{-122}.
+$$
 
 Setting $A_{\text{eff}}=1$ in Equation (V.3):
 
@@ -96,7 +100,11 @@ $$
 A_{\text{eff}}^{(\text{obs})} := \frac{\Lambda L_P^2}{8\pi e^{-2\kappa_{\mathrm{ref}}}} = \frac{\Lambda L_P^2}{8\pi e^{-283}} = 0.917 \pm 0.016,
 $$
 
-consistent with the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b).
+consistent with the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b) on that five-mode reference branch. On the translational branch $m=4$, the same observation would require
+
+$$
+A_{\text{eff}}^{(\text{obs},4)} := \frac{\Lambda L_P^2}{8\pi e^{-284}} = 2.49 \pm 0.04.
+$$
 
 For the Appendix U reference value $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16), the corresponding reference instanton action from Equation (V.1) is
 

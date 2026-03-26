@@ -9,7 +9,7 @@ The Predictive Universe framework, particularly the Consciousness Complexity (CC
 - Reflexivity Constraint: $\kappa_r > 0$ (Theorem 33).
 - PCE equilibrium reached (Definition 15a).
 - Gauge sector realized as $G_{SM}$ (Theorem G.8.4b).
-- Cosmological sector uses the Appendix U reference exponent $\kappa_{\mathrm{ref}} = 141.5$ (Theorem U.16) only within the Appendix U five-mode reference-counting convention, together with the stated prefactor convention of Corollary U.15b.
+- Cosmological sector uses the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ (Theorem U.16) only as a branch-dependent reference convention together with the stated prefactor convention of Corollary U.15b; Theorem U.8c blocks a theorem-level pure-dilatation realization of that branch in the current continuum action.
 - Mapping constants use canonical Bures/Fisher normalization (Appendix T, Section T.24).
 - Uncertainty budgets follow T1 (PU truncation), T2 (mapping/regularization), T3 (experimental/scheme).
 - External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
