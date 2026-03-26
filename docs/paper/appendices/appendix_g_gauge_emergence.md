@@ -726,11 +726,25 @@ c_6\!\left(i^*Q\otimes \mathcal O_{\mathbb{CP}^6}(-m)\right)\neq 0
 $$
 for every $m\in \mathbb Z$, contradiction. Thus $Q$ has no line subbundle, hence no $(1,2,3)$ splitting. ∎
 
-**Postulate G.8.4e.1 (Minimal Flag Lift for the Quantitative Gauge Sector).** Let
+**Theorem G.8.4e.1 (Universal Property of the Minimal Flag Lift for the Quantitative Gauge Sector).** Let
 $$
 \pi:\widetilde X:=\mathrm{Flag}_{1,2,3}(Q)\to X=\mathrm{Gr}(2,8)
 $$
-be the universal flag bundle of the quotient bundle $Q$. On $\widetilde X$, the pulled-back quotient bundle carries the tautological ordered subbundles
+be the flag bundle of the quotient bundle $Q$, so a point of the fiber $\widetilde X_x$ is a pair of subspaces
+$$
+L_Y\subset L_{YW}\subset Q_x,
+\qquad
+\dim_{\mathbb C}L_Y=1,
+\qquad
+\dim_{\mathbb C}L_{YW}=3.
+$$
+The quotient bundle $Q$ carries the canonical Hermitian quotient metric induced from $\underline{\mathbb C}^8$, and $\pi^*Q$ carries its pullback. For each such flag define
+$$
+L_W:=L_{YW}\cap L_Y^\perp,
+\qquad
+L_C:=L_{YW}^\perp.
+$$
+Then $\widetilde X$ carries canonical smooth complex subbundles
 $$
 0\subset \widetilde Q_Y \subset \widetilde Q_Y\oplus \widetilde Q_W \subset \pi^*Q
 $$
@@ -738,9 +752,106 @@ with
 $$
 \operatorname{rk}_{\mathbb C}(\widetilde Q_Y,\widetilde Q_W,\widetilde Q_C)=(1,2,3),
 \qquad
-\pi^*Q\cong \widetilde Q_Y\oplus \widetilde Q_W\oplus \widetilde Q_C.
+\pi^*Q\cong \widetilde Q_Y\oplus \widetilde Q_W\oplus \widetilde Q_C
 $$
-The quantitative gauge-threshold sector is formulated on $\widetilde X$, not on the bare Grassmannian $X$.
+as an orthogonal direct sum.
+
+Moreover, for every smooth map $q:Y\to X$, smooth lifts $\widetilde q:Y\to \widetilde X$ satisfying $\pi\circ \widetilde q=q$ are in natural bijection with orthogonal ordered splittings
+$$
+q^*Q\cong E_Y\oplus E_W\oplus E_C,
+\qquad
+\operatorname{rk}_{\mathbb C}(E_Y,E_W,E_C)=(1,2,3),
+$$
+with respect to the pulled-back Hermitian metric, via
+$$
+E_s\cong \widetilde q^*\widetilde Q_s,
+\qquad
+s\in\{Y,W,C\}.
+$$
+Equivalently, if $p:Z\to X$ is a smooth manifold and
+$$
+p^*Q\cong E_Y\oplus E_W\oplus E_C
+$$
+is an orthogonal ordered rank-$(1,2,3)$ splitting, then there exists a unique smooth map
+$$
+F:Z\to \widetilde X
+$$
+over $X$ such that
+$$
+E_s\cong F^*\widetilde Q_s,
+\qquad
+s\in\{Y,W,C\}.
+$$
+Hence $\widetilde X$ is, up to unique isomorphism over $X$, the universal global lift carrying the ordered inactive-sector decomposition. By Theorem G.8.4e, no such splitting exists on $X$ itself. Therefore every quantitative gauge-threshold construction whose global smooth data require the ordered $Y/W/C$ decomposition must be formulated on $\widetilde X$, or on a space mapping uniquely to it over $X$.
+
+*Proof.* Let
+$$
+0\subset S_1\subset S_3\subset \pi^*Q
+$$
+be the tautological rank-$1$ and rank-$3$ subbundles on the flag bundle. Define
+$$
+\widetilde Q_Y:=S_1,
+\qquad
+\widetilde Q_W:=S_3\cap S_1^\perp,
+\qquad
+\widetilde Q_C:=S_3^\perp,
+$$
+where orthogonal complements are taken with respect to the pulled-back Hermitian metric on $\pi^*Q$. These are smooth subbundles: locally one may choose a smooth unitary frame of $\pi^*Q$ adapted to $S_1\subset S_3$, and in such a frame $S_1^\perp$, $S_3^\perp$, and $S_3\cap S_1^\perp$ are represented by coordinate subspaces of constant rank. Fiberwise one has
+$$
+(\widetilde Q_Y)_\xi=L_Y,
+\qquad
+(\widetilde Q_Y\oplus \widetilde Q_W)_\xi=L_{YW},
+\qquad
+(\widetilde Q_C)_\xi=L_{YW}^\perp,
+$$
+so
+$$
+\pi^*Q\cong \widetilde Q_Y\oplus \widetilde Q_W\oplus \widetilde Q_C
+$$
+orthogonally.
+
+Now let $q:Y\to X$ and suppose
+$$
+q^*Q\cong E_Y\oplus E_W\oplus E_C
+$$
+is an orthogonal ordered splitting. For each $y\in Y$, the pair
+$$
+(E_Y)_y\subset (E_Y\oplus E_W)_y\subset Q_{q(y)}
+$$
+defines a point of the fiber $\widetilde X_{q(y)}$. This gives a map
+$$
+\widetilde q:Y\to \widetilde X,
+\qquad
+\widetilde q(y)=\bigl(q(y);(E_Y)_y\subset (E_Y\oplus E_W)_y\bigr).
+$$
+In a local unitary trivialization of $q^*Q$ adapted to the splitting, the corresponding flag coordinates vary smoothly, so $\widetilde q$ is smooth. By construction $\pi\circ \widetilde q=q$ and the pulled-back tautological subbundles recover the original splitting:
+$$
+\widetilde q^*\widetilde Q_s\cong E_s,
+\qquad
+s\in\{Y,W,C\}.
+$$
+
+Conversely, given a smooth lift $\widetilde q:Y\to \widetilde X$ with $\pi\circ \widetilde q=q$, pull back the orthogonal decomposition of $\pi^*Q$:
+$$
+q^*Q\cong \widetilde q^*\widetilde Q_Y\oplus \widetilde q^*\widetilde Q_W\oplus \widetilde q^*\widetilde Q_C.
+$$
+This is an orthogonal rank-$(1,2,3)$ splitting. The two constructions are inverse by fiberwise inspection, and uniqueness of the lift follows because a point of $\widetilde X_{q(y)}$ is exactly a rank-$1$ subspace together with a containing rank-$3$ subspace of $Q_{q(y)}$.
+
+Now let $p:Z\to X$ be a smooth manifold equipped with such a splitting of $p^*Q$. Applying the preceding bijection to $q=p$ gives a unique smooth map $F:Z\to \widetilde X$ over $X$ with
+$$
+E_s\cong F^*\widetilde Q_s,
+\qquad
+s\in\{Y,W,C\}.
+$$
+If $Z'$ is another smooth manifold over $X$ equipped with a tautological orthogonal ordered rank-$(1,2,3)$ splitting of the pullback of $Q$ and satisfying the same property, then the tautological splitting on $\widetilde X$ gives a unique map $G:\widetilde X\to Z'$ over $X$, while the tautological splitting on $Z'$ gives a unique map $H:Z'\to \widetilde X$ over $X$. The composites $H\circ G$ and $G\circ H$ preserve the respective tautological splittings, and the identity maps do as well; by uniqueness one has
+$$
+H\circ G=\mathrm{id}_{\widetilde X},
+\qquad
+G\circ H=\mathrm{id}_{Z'},
+$$
+so $Z'\cong \widetilde X$ uniquely over $X$.
+
+Finally, if $X$ itself carried a global orthogonal ordered $(1,2,3)$ splitting of $Q$, the bijection above with $q=\mathrm{id}_X$ would produce a lift $X\to \widetilde X$. Pulling back $\widetilde Q_Y$ along that lift would give a line subbundle of $Q$, contradicting Theorem G.8.4e. Hence no such splitting exists on the bare Grassmannian, and every global construction whose smooth data require that ordered decomposition must pass through the universal lift $\widetilde X$. ∎
 
 **Proposition G.8.4e.1a (Identification with a Standard Partial Flag Manifold).** *The flag lift $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ is isomorphic to the partial flag manifold*
 $$
@@ -775,7 +886,7 @@ $$
 $$
 identifies the four blocks with the active subspace and the lifted $Y$, $W$, and $C$ sectors at the reference point.
 
-**Remark G.8.4e.2 (Scope of the Lift).** Theorem G.8.4b and Corollary G.8.4c remain statements about the abstract inactive fiber $\mathcal B\cong \mathbb C^6$. Theorem G.8.4e shows that this fiberwise $(3,2,1)$ decomposition does not globalize on the bare universal quotient bundle $Q\to \mathrm{Gr}(2,8)$. Postulate G.8.4e.1 is the minimal global extension in which the abstract decomposition can be realized as smooth bundle data. The derivations of $d_0=8$, $a=2$, $M=24$, $D=4$, the first-order fine-structure constant, and the three-generation theorem remain on bare $\mathrm{Gr}(2,8)$; only the quantitative gauge-threshold sector is lifted.
+**Remark G.8.4e.2 (Scope of the Lift).** Theorem G.8.4b and Corollary G.8.4c remain statements about the abstract inactive fiber $\mathcal B\cong \mathbb C^6$. Theorems G.8.4e and G.8.4e.1 show that this fiberwise $(3,2,1)$ decomposition does not globalize on the bare universal quotient bundle $Q\to \mathrm{Gr}(2,8)$ and that $\widetilde X$ is, up to unique isomorphism over $\mathrm{Gr}(2,8)$, the corresponding universal global lift on which the ordered decomposition is realized as smooth bundle data. The derivations of $d_0=8$, $a=2$, $M=24$, $D=4$, the first-order fine-structure constant, and the three-generation theorem remain on bare $\mathrm{Gr}(2,8)$; only the quantitative gauge-threshold sector is lifted.
 
 **Remark G.8.4e.3 (Four-Level Obstruction and Resolution Chain — Motivation for the Flag Lift).** Four independent mathematical results collectively forced the reformulation of the gauge-threshold sector from bare $\mathrm{Gr}(2,8)$ to the minimal flag lift:
 

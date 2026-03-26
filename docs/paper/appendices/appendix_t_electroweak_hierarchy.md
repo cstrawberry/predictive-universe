@@ -12,7 +12,7 @@ Within the Predictive Universe framework, the electroweak scale and zero-slack q
 $$
 \pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to \mathrm{Gr}(2,8)
 $$
-introduced in Appendix G. This appendix therefore uses a three-level scale dictionary that separates the PU fixed point $\mathfrak{A}_{PU}$, the lifted gauge-matching geometry, and the metastability scale $\mu_\lambda$:
+characterized by Theorem G.8.4e.1 in Appendix G. This appendix therefore uses a three-level scale dictionary that separates the PU fixed point $\mathfrak{A}_{PU}$, the lifted gauge-matching geometry, and the metastability scale $\mu_\lambda$:
 
 $$
 \boxed{
@@ -608,7 +608,7 @@ $$
 $$
 \pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to X=\mathrm{Gr}(2,8)
 $$
-be the minimal flag lift of Appendix G, so that
+be the minimal flag lift characterized in Theorem G.8.4e.1, so that
 $$
 \pi^*Q\cong \widetilde Q_Y\oplus \widetilde Q_W\oplus \widetilde Q_C
 $$
