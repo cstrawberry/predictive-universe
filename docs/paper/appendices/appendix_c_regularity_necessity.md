@@ -339,6 +339,46 @@ $$
 $$
 and the standard variance-versus-Dirichlet-form estimate produces the stated local $(1,2)$-Poincaré inequality with $\lambda=4$ and the displayed constant $C_{\mathrm{PI}}(r)$. ∎
 
+**Theorem C.6a (Obstruction to deriving the Section 11.4 non-collapsed synthetic-Ricci regime from the present theorem stack).**
+Consider the rescaled spaces of Theorem 44,
+$$
+X_n := (\mathcal{V}_n,\delta_{eff,n}^{-1}d_{\mathcal N_n},o_n),
+\qquad \delta_{eff,n}\to 0.
+$$
+Assume only the hypotheses and conclusions already established in Definitions C.1–C.3, Theorem C.6, Theorem 43, Lemma D.6a, and Theorem D.6. Then these results do not suffice to derive the Euclidean-tangent conclusion of Theorem 44. More precisely:
+
+1. **Scale-invariant non-collapse.** Definition C.1 does not furnish fixed-radius lower-density bounds on the rescaled spaces, and Theorem C.6 does not by itself upgrade to family-uniform fixed-radius doubling/Poincaré control for the rescaled sequence.
+2. **Limit-energy identification.** Appendix D provides pointed measured Gromov–Hausdorff precompactness of bounded-action families and action-level consistency, but no theorem identifying the limit Cheeger energy as a quadratic form.
+3. **Curvature-class transfer.** The discrete curvature control of Definition C.2 is not upgraded anywhere in Appendix C/D to a uniform synthetic-curvature condition stable under the convergence used in Theorem 44.
+
+Consequently, under the current PU hypotheses one can justify at most the compactness part of the continuum bridge once the separate bounded-geometry hypotheses of Lemma D.6a are imposed, while the existence of a full-measure regular set with unique Euclidean $\mathbb{R}^D$ tangent cones remains an additional assumption.
+
+*Proof.* For a fixed rescaled radius $\rho>0$, the corresponding original-space radius is
+$$
+R=\rho\,\delta_{eff,n}.
+$$
+Definition C.1 applies only for $R>R_0$, equivalently
+$$
+\rho>R_0/\delta_{eff,n}.
+$$
+Because $\delta_{eff,n}\to 0$, any fixed $\rho$ eventually lies below this threshold. Hence Definition C.1 does not supply fixed-radius lower-density or two-sided volume-growth control on the rescaled sequence.
+
+Theorem C.6 is a coarse-grained single-network statement: it assumes $r\ge 10\delta$ and yields constants $D_\star$ and $C_{\mathrm{PI}}(r)$ depending on the coarse-graining/distortion data. The present theorem stack contains no theorem showing that these data can be chosen uniformly across the rescaled family on every bounded radius range. Therefore Theorem C.6 does not by itself furnish the family-uniform fixed-radius doubling/Poincaré package required for a non-collapsed limit theory.
+
+Lemma D.6a then gives pointed measured Gromov–Hausdorff precompactness for bounded-action families once its separate bounded-geometry hypotheses are imposed, while Theorem D.6(ii) concerns convergence of the discrete curvature action to the Einstein–Hilbert term. Neither statement proves non-collapse, quadraticity of the limit Cheeger energy, or Euclidean tangent cones.
+
+Finally, Definition C.2 provides a discrete curvature bound, but the present Appendix C/D theorem stack contains no theorem transferring it to a measured-Gromov–Hausdorff-stable synthetic curvature class such as the non-collapsed regime invoked in Theorem 44. These three missing ingredients are exactly the additional inputs isolated in Section 11.4. Therefore the Euclidean-tangent conclusion of Theorem 44 is not derivable from Theorem 43 together with the current Appendix D bridge alone. ∎
+
+**Remark C.6b (Sufficient additional ingredients for closure).** Any theorem closing the bridge to Theorem 44 must supply at least one result in each of the following categories:
+
+| Category | Required statement |
+|:---|:---|
+| Scale-free non-collapse | $\mu_n(B_r(x)) \geq c\,r^D$ for all bounded $x$ and fixed $0 < r \leq 1$ after rescaling |
+| Limit-energy identification | Mosco convergence of the rescaled random-walk Dirichlet forms, or another route identifying the limit Cheeger energy as quadratic |
+| Curvature-class transfer | A discrete $CD(K,D)$ or $RCD(K,D)$ condition uniform in $n$ and stable under measured Gromov–Hausdorff convergence |
+
+Without all three, Theorem 44 remains genuinely conditional.
+
 ## C.7 Conclusion and status boundary
 
 This appendix establishes a regularity-necessity theorem, not the whole continuum bridge. Sections C.1–C.6 show that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages these penalties as conditional coarse-grained doubling and local $(1,2)$-Poincaré bounds under its stated hypotheses. In this precise sense, Theorem 43 is the manuscript's formal regularity theorem.

@@ -735,7 +735,7 @@ Both structures exist at $M = 24$ as derived consequences of PCE optimization (T
 | $m_{\mathrm{ref}}$ | Appendix U five-mode reference count | 5 |
 | $\delta_{\mathrm{ref}} = m_{\mathrm{ref}}/2$ | Reference Morse-Bott deficit | 2.5 |
 | $\kappa_{\mathrm{ref}} = \kappa_0 - \delta_{\mathrm{ref}}$ | Five-mode reference exponent | **141.5** |
-| $m_{\mathrm{trans}}$ | Exact translational zero modes | 4 |
+| $m_{\mathrm{trans}}$ | Translational branch count (global closure pending) | 4 |
 | $\delta_{\mathrm{trans}} = m_{\mathrm{trans}}/2$ | Translational deficit | 2 |
 | $\kappa_{\mathrm{trans}} = \kappa_0 - \delta_{\mathrm{trans}}$ | Translational branch exponent | **142** |
 | $A_{\text{eff}} := K \cdot N_{\text{eff}}$ | One-loop prefactor definition (Section U.1) | $O(1)$ |
@@ -768,7 +768,7 @@ This provides a testable prediction: small explicit scale breaking shifts $\kapp
 
 For general emergent dimension $D'$:
 
-- Exact translational zero modes: $m_{\mathrm{trans}} = D'$
+- Translational branch count: $m_{\mathrm{trans}} = D'$ (global zero-mode closure requires the separate full discrete spectral analysis noted above)
 - A further dilatation mode would require an additional exact-scale-family hypothesis of the type isolated in Theorem U.9
 - Deficit: $\delta = m/2$
 - Requires $M = K(D')$ (mode-channel correspondence, Theorem Z.10) and existence of appropriate spherical design
@@ -823,7 +823,7 @@ Near-saturation occurs in either branch because:
 
 ## U.15 Introduction to the Primordial Sector
 
-The preceding sections derived the Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ from the Golay-Steiner counting convention, yielding the reference suppression $\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}$ (Corollary U.17). With the PU-theory prefactor $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this gives the branch-dependent reference value
+The preceding sections derived the Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ from the Golay-Steiner counting convention, yielding the reference suppression $\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}$ (Corollary U.17). With the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$ (Corollary U.15b), this gives the branch-dependent reference value
 
 $$\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}.$$
 

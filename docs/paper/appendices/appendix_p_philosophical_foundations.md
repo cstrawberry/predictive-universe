@@ -4324,7 +4324,7 @@ The cosmological constant follows from the Golay-Steiner vacuum structure (Corol
 
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa_{\mathrm{ref}}}$$
 
-where $\kappa_{\mathrm{ref}}=141.5$ is the Appendix U reference exponent from the leading-order zero-mode count (Theorem U.16), and $A_{\text{eff}}=0.923\pm0.011$ is the PU-theory prefactor fixed under the canonical Bures/Fisher normalization (Corollary U.15b). This gives the corresponding reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa_{\mathrm{ref}}$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check. The exponential suppression $e^{-283}\sim 10^{-123}$ captures the leading hierarchy.
+where $\kappa_{\mathrm{ref}}=141.5$ is the Appendix U reference exponent from the leading-order zero-mode count (Theorem U.16), and $A_{\text{eff}}=0.923\pm0.011$ is the Appendix U working prefactor adopted under the transferred-determinant convention of Corollary U.15b. This gives the corresponding reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}$; holding $\kappa_{\mathrm{ref}}$ fixed, the observed value implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ as a consistency check. The exponential suppression $e^{-283}\sim 10^{-123}$ captures the leading hierarchy.
 
 ### P.14.5 Theoretical Predictions and Experimental Comparison
 
