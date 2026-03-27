@@ -3733,22 +3733,50 @@ In the quantum realization, $s$ lifts to a unitary involution $S$ on the corresp
 
 ---
 
-### Theorem P.13.24 (Conditional Identification of the Canonical Involution)
+### Theorem P.13.24 (Canonical Involution from Weight-One Rigidity)
 
-If the SPAP-induced canonical $\mathbb{Z}_2$ on the Leech-lattice branch is required to be realized by the unique nontrivial central involution of $\mathrm{Aut}(\Lambda_{24})$, then that involution is the lattice inversion $v\mapsto -v$ (and the corresponding canonical lift to the lattice VOA).
+Let $g \in \mathrm{Aut}(\Lambda_{24})$ satisfy $g^2 = I$, and let $\hat g$ be a standard lift of $g$ to $V_{\Lambda_{24}}$. Then
+$$
+\dim\big((V_{\Lambda_{24}})^{\hat g}_1\big)=0
+\quad\Longleftrightarrow\quad
+g=-1.
+$$
+In particular, among standard lifts of lattice involutions on the Leech branch, vanishing fixed weight-one space singles out the lift attached to $g=-1$; no separate centrality assumption is required.
 
-| Structure                    | Ambient symmetry group              | Canonical $\mathbb{Z}_2$ | Action                     |
-| ---------------------------- | ----------------------------------- | ------------------------ | -------------------------- |
-| SPAP erasure $r$             | $\{\pi\in S_2: r\circ \pi=r\}$     | $\{e,s\}$               | flips $0\leftrightarrow 1$ |
-| Leech lattice $\Lambda_{24}$ | $\mathrm{Aut}(\Lambda_{24}) = Co_0$ | $\{I,-1\}$              | sends $v\mapsto -v$        |
+Consequently, if a selected Leech-branch vacuum $\mathcal V$ is realized as an orbifold extension of $V_{\Lambda_{24}}$ by an involutive standard lift $\hat g$ of some involution $g \in \mathrm{Aut}(\Lambda_{24})$, and if no positive-dimensional weight-one symmetry family survives on that branch, then $g=-1$ and $\hat g=\theta$.
 
 *Proof.*
 
-1. Because $r$ has exactly two inputs and one output, the condition $r\circ \pi=r$ leaves only two possibilities: $\pi=e$ and the bit-flip $s$. Thus $\{e,s\}$ is the unique nontrivial order-2 symmetry intrinsic to the irreducible SPAP erasure at $\varepsilon=\ln 2$.
-2. For the Leech lattice, the center of $\mathrm{Aut}(\Lambda_{24})=Co_0$ is $\{\pm 1\}$, so $-1$ is the unique nontrivial central involution and acts by pairing each lattice vector with its inverse $v\mapsto -v$.
-3. Therefore, once one requires the SPAP binary identification to be realized by a canonical central lattice involution on the Leech branch, the only available choice is $v\mapsto -v$. The lift to the lattice VOA is then the canonical involution of Theorem P.13.21.
+1. By Theorem P.13.14, because the Leech lattice is rootless,
+$$
+(V_{\Lambda_{24}})_1=\mathfrak h(-1)|0\rangle \cong \mathfrak h:=\Lambda_{24}\otimes_{\mathbb Z}\mathbb C,
+$$
+and there are no lattice-vector contributions in weight one.
 
-Thus the FLM orbifold involution is identified with the SPAP involution only under this central-realization hypothesis. $\square$
+2. For a standard lift of a lattice isometry, the action on the Heisenberg creation operators is the linear action of the underlying lattice automorphism. Therefore $\hat g$ acts on $(V_{\Lambda_{24}})_1$ exactly as $g$ acts on $\mathfrak h$, and
+$$
+(V_{\Lambda_{24}})^{\hat g}_1 \cong \mathfrak h^g.
+$$
+Hence
+$$
+\dim\big((V_{\Lambda_{24}})^{\hat g}_1\big)=\dim(\mathfrak h^g).
+$$
+
+3. Since $g^2=I$, the minimal polynomial of $g$ divides $x^2-1=(x-1)(x+1)$, whose roots are distinct. Thus $g$ is diagonalizable over $\mathbb C$ with eigenvalues contained in $\{+1,-1\}$.
+
+4. If $\dim((V_{\Lambda_{24}})^{\hat g}_1)=0$, then $\mathfrak h^g=0$. So $g$ has no $+1$-eigenvectors. By Step 3, all eigenvalues are therefore $-1$, which implies $g=-I$ on $\mathfrak h$. Since $\Lambda_{24}$ spans $\mathfrak h$, this means $g(v)=-v$ for every $v\in\Lambda_{24}$, i.e. $g=-1$.
+
+5. Conversely, if $g=-1$, then by Theorem P.13.21 the corresponding standard lift is $\theta$, and
+$$
+\theta(\alpha^i_{-1}|0\rangle)=-\alpha^i_{-1}|0\rangle
+$$
+for every weight-one Heisenberg current. Hence $(V_{\Lambda_{24}})^\theta_1=0$, proving the converse implication.
+
+6. For the final claim, the untwisted sector of the orbifold contains $(V_{\Lambda_{24}})^{\hat g}$, so
+$$
+(V_{\Lambda_{24}})^{\hat g}_1 \subseteq \mathcal V_1.
+$$
+If $(V_{\Lambda_{24}})^{\hat g}_1\neq 0$, choose $u\neq 0$ in that space. By standard VOA theory, the zero mode $u_0$ of a weight-one state is a derivation, so $\exp(tu_0)$ is an automorphism for every $t$. Because $u$ lies in the untwisted fixed-point subVOA, these automorphisms survive on the orbifold branch, producing a nontrivial positive-dimensional continuous weight-one symmetry family there, contrary to hypothesis. Hence $(V_{\Lambda_{24}})^{\hat g}_1=0$, and Steps 4–5 force $g=-1$ and $\hat g=\theta$. $\square$
 
 ---
 
@@ -3799,7 +3827,7 @@ The product structure on $V^\natural_2$ (from the VOA structure) makes it the Gr
 Assume:
 1. the Leech-lattice branch of Theorem P.13.10,
 2. the operational exact-symmetry criterion of Definition P.13.2 and Theorem P.13.19, which excludes uniformly refinable positive-dimensional weight-one symmetry families, and
-3. the central-involution branch of Theorem P.13.24.
+3. the selected vacuum is realized as an orbifold extension of $V_{\Lambda_{24}}$ by an involutive standard lift $\hat g$ of some involution $g\in \mathrm{Aut}(\Lambda_{24})$, realizing the canonical $\mathbb{Z}_2$ of Theorem P.13.23.
 
 Then the resulting holomorphic $c = 24$ vacuum VOA is the Moonshine module:
 $$\mathcal{V}_{\text{PCE}} = V^\natural$$
@@ -3810,9 +3838,16 @@ $$\mathcal{V}_{\text{PCE}} = V^\natural$$
 
 **Step 2 (Lattice VOA).** By Theorem P.13.14, $\Lambda_{24}$ admits a VOA structure $V_{\Lambda_{24}}$ with $c = 24$ and $\dim(V_1) = 24$.
 
-**Step 3 (Operational symmetry criterion).** By Corollary P.13.19a and Definition P.13.2, the $U(1)^{24}$ symmetry generated by weight-one currents is excluded as an exact uniformly refinable operational symmetry family on this branch.
+**Step 3 (Orbifold branch and weight-one exclusion).** Under assumption 3, the orbifold vacuum $\mathcal{V}_{\text{PCE}}$ has untwisted sector $(V_{\Lambda_{24}})^{\hat g}$, so
+$$
+(V_{\Lambda_{24}})^{\hat g}_1 \subseteq \mathcal{V}_{\text{PCE},1}.
+$$
+If $(V_{\Lambda_{24}})^{\hat g}_1\neq 0$, choose $u\neq 0$ in that space. By standard VOA theory, $u_0$ is a derivation and $\exp(tu_0)$ is an automorphism for every $t$; because $u$ lies in the untwisted fixed-point sector, this yields a nontrivial one-parameter family of automorphisms surviving on the selected branch, contradicting assumption 2. Therefore
+$$
+\dim\big((V_{\Lambda_{24}})^{\hat g}_1\big)=0.
+$$
 
-**Step 4 (Canonical orbifold branch).** On the branch of Theorem P.13.24, the canonical $\mathbb{Z}_2$ structure from the PCE-Attractor is identified with the $(-1)$ involution on $\Lambda_{24}$. The lift $\theta$ to the VOA (Theorem P.13.21) eliminates weight-one currents: $\dim((V_{\Lambda_{24}})^\theta_1) = 0$.
+**Step 4 (Weight-one rigidity).** By Theorem P.13.24, the vanishing of the fixed-point weight-one space forces the underlying lattice involution to be $g=-1$. Its standard lift is therefore the involution $\theta$ of Theorem P.13.21.
 
 **Step 5 (FLM construction).** By Theorem P.13.22, the $\theta$-orbifold of $V_{\Lambda_{24}}$ is the Moonshine module $V^\natural$.
 
@@ -3821,7 +3856,7 @@ $$\mathcal{V}_{\text{PCE}} = V^\natural$$
 **Step 7 (Conclusion).** On this branch,
 $$\mathcal{V}_{\text{PCE}} = V^\natural \quad \square$$
 
-**Epistemic Status:** Conditional framework-to-mathematics identification. The framework fixes the branch criteria; the mathematical uniqueness theorem and the FLM construction then identify $V^\natural$.
+**Epistemic Status:** Conditional framework-to-mathematics identification. The framework fixes the Leech branch and excludes surviving positive-dimensional weight-one symmetry families; once the selected branch is realized as an orbifold by an involutive standard lift, Theorem P.13.24 forces $g=-1$, and the FLM orbifold theorem then identifies $V^\natural$.
 
 ---
 
@@ -3899,7 +3934,7 @@ $$\boxed{
 &\xrightarrow{\text{PPI+PCE}} a = 2 \xrightarrow{d_0 = 8} b = 6 \xrightarrow{\text{QFI}} M = 24 \\[0.3em]
 &\xrightarrow{\text{24D even/unimodular/rootless branch}} \Lambda_{24} \\[0.3em]
 &\xrightarrow{\text{P.13.6.1-2}} \text{Scale inv.} \to \text{CFT} \to \text{VOA} \xrightarrow{\text{P.13.6.3-4}} c = 24,\ \text{holomorphic} \\[0.3em]
-&\xrightarrow{\text{lattice VOA}} V_{\Lambda_{24}} \xrightarrow{\text{operational exact-symmetry criterion}} \dim(V_1)=0 \xrightarrow{\text{central involution branch}+\theta\text{-orbifold}} V^\natural \xrightarrow{\text{FLM}} \text{Aut}(V^\natural)=\mathbb{M}
+&\xrightarrow{\text{lattice VOA}} V_{\Lambda_{24}} \xrightarrow{\text{involutive standard-lift orbifold branch}} \mathcal{V}_{\text{PCE}} \xrightarrow{\text{weight-one exclusion + P.13.24}} \theta\text{-orbifold} \xrightarrow{\text{FLM}} V^\natural \xrightarrow{\text{FLM}} \text{Aut}(V^\natural)=\mathbb{M}
 \end{aligned}
 }$$
 
@@ -3922,8 +3957,8 @@ $$\boxed{
 | 11 | $c = 24$, holomorphic | Framework | Propositions P.13.6.3–P.13.6.4 |
 | 12 | Modular invariance required | Framework | Proposition P.13.6.5 |
 | 13 | $V_{\Lambda_{24}}$ | Mathematics | Borcherds, FLM |
-| 14 | Operational exact-symmetry criterion $\to \dim(V_1) = 0$ | Conditional framework criterion | Theorem P.13.19, Definition P.13.2 |
-| 15 | Canonical central involution / $\theta$-orbifold branch | Conditional framework + mathematics | Theorems P.13.21–P.13.24 |
+| 14 | Operational exact-symmetry criterion excludes surviving positive-dimensional weight-one symmetry on the selected branch | Conditional framework criterion | Definition P.13.2, Theorem P.13.19 |
+| 15 | In an involutive standard-lift orbifold realization, Theorem P.13.24 forces $g=-1$ (hence $\hat g=\theta$) | Conditional framework + mathematics | Theorems P.13.21–P.13.24 |
 | 16 | $V^\natural$ | Mathematics on that branch | FLM construction |
 | 17 | $\text{Aut}(V^\natural) = \mathbb{M}$ | Mathematics on that branch | FLM |
 
