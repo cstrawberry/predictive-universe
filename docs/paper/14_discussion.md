@@ -1366,9 +1366,19 @@ The manuscript is strongest when its outputs are sorted by logical level. Some r
 
 ### 14.6.1 What is fixed by the core chain
 
-Within the formal model, the SPAP/Landauer chain fixes $K_0 = 3$, selects the minimal saturating $d_0 = 8$, fixes $\varepsilon = \ln 2$ at the attractor, and yields $a = 2$, $b = 6$, and $M = 24$. Proposition T.59 isolates this backbone from the later quantitative hierarchy layer.
+Within the formal model, the one-parameter backbone is already explicit. Proposition T.59 proves that the chain
+$$
+K_0 \to d_0 \to \varepsilon \to a \to b \to M \to k \to D
+$$
+is fixed by $K_0 = 3$, and Corollary T.59a records the resulting backbone data
+$$
+(K_0,d_0,a,b,M,k,D)=(3,8,2,6,24,12,4),
+\qquad
+\varepsilon=\ln 2
+$$
+on the minimal Appendix Z / attractor branch. This is the manuscript's exact one-parameter core: once $K_0 = 3$ is fixed, no further discrete choice enters the backbone itself.
 
-Within the Appendix Z mode-channel correspondence model, $M = 24$ then selects $D = 4$ (Theorem Z.11). Within Appendix G.8, once chirality, anomaly cancellation, and the capacity-saturating regime are imposed, Theorem G.8.4b and Corollary G.8.4c fix the faithful decomposition $\mathcal{B} = \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1$ and the abstract gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$. Appendix R gives the topological three-generation route at theorem level through Theorem R.3.4, with Proposition R.3.5 adding the MDL-surrogate selection statement. Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26, i.e. through the displayed third-order formula with explicit $+O(u^{*5})$ remainder.
+Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z mode-channel correspondence model, the backbone already includes $D = 4$ (Theorem Z.11). The abstract gauge algebra appears only after the additional chirality, anomaly-cancellation, and capacity-regime assumptions of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the topological three-generation theorem on its own anomaly+CP route (Theorem R.3.4), and Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The stronger slogan "$K_0 = 3$ determines everything" should therefore be read as: it determines the discrete backbone exactly, and it seeds later sectors only together with their stated local hypotheses.
 
 ### 14.6.2 What is conditional, convention-carried, or model-level
 
@@ -1376,7 +1386,7 @@ Sections 11 and 12 are explicitly conditional on the regularity and convergence 
 
 The cosmological-constant sector has a similarly clean split. Appendix U records the five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ under the stated leading-order reference-counting convention of Theorem U.15 and Theorem U.16, while Theorem U.8c shows that the pure-coordinate dilatation tangent is a strict negative mode of the current Definition U.4 continuum action. The order-one prefactor $A_{\mathrm{eff}}$ is explicitly defined, but the Appendix U working value $A_{\mathrm{eff}} = 0.923 \pm 0.011$ used for forward evaluation is tied to the transferred-determinant convention recorded in Corollary U.15b. The stable statement is therefore a branch-dependent reference scaling law together with the stated prefactor convention, rather than a fully closed theorem-level vacuum magnitude.
 
-Appendix T likewise sits on top of the fixed backbone. Proposition T.59 closes the core counting chain, while later quantitative hierarchy results use the threshold data, prefactors, running, and matching prescriptions introduced in those sections.
+Appendix T likewise sits on top of the fixed backbone. Proposition T.59 closes the core counting chain. In the lifted threshold sector, Remark T.17a.4 and Proposition T.17a.5 provide a theorem-level local no-go for sector-independent affine truncations, while the global sector-resolving spectral evaluation of the lifted threshold sums remains open. The later quantitative hierarchy results therefore continue to depend on the threshold data, prefactors, running, and matching prescriptions introduced in those sections.
 
 ### 14.6.3 Continuum-closure status boundary
 
@@ -1390,15 +1400,14 @@ Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-
 
 | Sector | Best current status |
 |:-------|:--------------------|
-| SPAP/Landauer backbone $K_0 \to d_0 \to \varepsilon \to a \to b \to M$ | Theorem-level within the formal model |
-| $D = 4$ | Theorem-level within the Appendix Z mode-channel correspondence model |
+| One-parameter backbone $K_0 \to d_0 \to \varepsilon \to a \to b \to M \to k \to D$ | Theorem-level on the minimal Appendix Z / attractor branch; Proposition T.59 and Corollary T.59a give $(K_0,d_0,a,b,M,k,D)=(3,8,2,6,24,12,4)$ and $\varepsilon=\ln 2$, with $D=4$ understood inside the Appendix Z mode-channel correspondence model |
 | $N_g = 3$ | Theorem-level for the anomaly+CP route (Theorem R.3.4), with Proposition R.3.5 adding the MDL-surrogate selection statement |
 | Abstract gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ | Theorem-level under chirality, anomaly cancellation, and the Appendix G.8 capacity regime |
 | Thomson-limit $\alpha$ | Theorem-level through Theorem Z.26, with displayed third-order formula and explicit $+O(u^{*5})$ remainder |
 | Continuum manifold / Lorentzian geometry | Conditional on Theorem 43 and the non-collapsed synthetic-Ricci regime stated in Section 11.4 |
 | AQFT route | Conditional on Theorem 43 together with the additional hypotheses of Theorem F.0 |
 | Einstein route / field equations | Conditional on Theorem 43, Theorem 49, Postulate 4, and the local-horizon bridge of Theorem 48a |
-| Appendix T matching-scale observables | Conditional on threshold data, running, matching, and the quantitative constructions introduced there |
+| Appendix T matching-scale observables | Conditional on threshold data, running, matching, and the quantitative constructions introduced there; Remark T.17a.4 and Proposition T.17a.5 rule out the sector-independent local affine truncation, but the global sector-resolving spectral evaluation of the lifted threshold sums is still open |
 | Appendix U reference exponent $\kappa_{\mathrm{ref}}$ | $\kappa = 142$ is the corresponding four-mode branch value, whose theorem-level realization would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity; $\kappa_{\mathrm{ref}} = 141.5$ only on the Appendix U five-mode reference branch, which Theorem U.8c does not realize in the current continuum action |
 | Appendix U working numerical prefactor $A_{\mathrm{eff}}$ | Working forward-evaluation convention of Corollary U.15b |
 | CC influence, detailed flavor numerics, and baryogenesis numerics | Model layer |

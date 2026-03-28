@@ -1796,13 +1796,13 @@ No free parameters enter. The matrix $L(2)$ is fully determined.
 
 **Corollary P.7.4.1 (Counterfactual Analysis).** For hypothetical universes:
 
-| $\varepsilon$ | $a$ (minimal admissible) | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | $\lambda_2$ |           $K(D) = M$?          |
-| :------------ | :----------------------: | :----------: | :-------------: | :---------: | :----------------------------: |
-| $\ln 2$       |             2            |       8      |        24       |     $-8$    |            $D = 4$ ✓           |
-| $\ln 3$       |             3            |      18      |        90       |    $-18$    |  No (since $K(6)=72<K(7)=126$) |
-| $\ln 4$       |             4            |      32      |       224       |    $-32$    | No (since $K(7)=126<K(8)=240$) |
+| $\varepsilon$ | $a$ (minimal admissible) | $d_0 = 2a^2$ | $M = 2a(d_0-a)$ | $\lambda_2$ |                            $K(D) = M$?                           |
+| :------------ | :----------------------: | :----------: | :-------------: | :---------: | :--------------------------------------------------------------: |
+| $\ln 2$       |             2            |       8      |        24       |     $-8$    |                          $D = 4$ ✓                               |
+| $\ln 3$       |             3            |      18      |        90       |    $-18$    | No (standard bounds give $K(6)\le77<90<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012]) |
+| $\ln 4$       |             4            |      32      |       224       |    $-32$    | No (standard bounds give $K(7)\le134<224<240=K(8)$ [Boyvalenkov et al. 2012]) |
 
-Only $\varepsilon = \ln 2$ yields $M$ equal to a kissing number (indeed $K(4)=24$).
+Only $\varepsilon=\ln 2$ yields $M$ equal to a kissing number (indeed $K(4)=24$) within the rigorously checked range above.
 
 #### P.7.4.6 Summary
 
@@ -1958,14 +1958,14 @@ The unique solution is $D = 4$. ∎
 
 **Corollary P.8.3 (Four Dimensions as Necessity).** Emergent spacetime is 4-dimensional not because of anthropic selection or mathematical elegance, but because:
 
-- Fewer dimensions: $K(3) = 12 < 24$, insufficient channels, predictive coherence fails
-- More dimensions: $K(5) = 40 > 24$, excess channels, resources wasted
+- Fewer dimensions: $K(3)=12<24$, insufficient channels, predictive coherence fails
+- More dimensions: already in dimension $5$ one has at least $40$ channels [Boyvalenkov et al. 2012], so every $D\ge5$ has strictly more than $24$ channels by monotonicity
 
-Four dimensions is the unique PCE optimum given $M = 24$.
+Four dimensions is the unique PCE optimum given $M=24$.
 
-**Remark P.8.2: Geometric Frustration and Self-Consistency.** The discrete nature of kissing numbers means that arbitrary values of $M_{\text{int}}$ would not necessarily have integer-dimensional solutions. For example, if foundational constants yielded $M_{\text{int}} = 30$, no dimension $D$ satisfies $K(D) = 30$ exactly ($K(4) = 24$, $K(5) = 40$). Such a universe would exhibit "geometric frustration"—inability to achieve perfect mode-channel matching—potentially preventing stable spacetime emergence.
+**Remark P.8.2: Geometric Frustration and Self-Consistency.** The discrete nature of kissing numbers means that arbitrary values of $M_{\text{int}}$ would not necessarily have integer-dimensional solutions. For example, if foundational constants yielded $M_{\text{int}}=30$, no dimension $D$ satisfies $K(D)=30$ exactly: $K(4)=24$, while standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012], and kissing numbers are monotone nondecreasing in the dimension. Such a universe would exhibit "geometric frustration"—inability to achieve perfect mode-channel matching—potentially preventing stable spacetime emergence.
 
-This observation has deeper implications. The specific values $d_0 = 8$ and $\varepsilon = \ln 2$ that yield $M = 24$ are precisely those for which an exact solution exists. As analyzed in **Remark Z.6**, this is not coincidental: if foundational constants yielded $M_{\text{int}} = 8$ (from $d_0 = 4$), no integer dimension satisfies $K(D) = 8$ ($K(2) = 6$, $K(3) = 12$); similarly, $M_{\text{int}} = 96$ (from $d_0 = 16$) finds no match ($K(8) = 240$ is too large). The framework does not merely accommodate $D = 4$—it predicts it as the unique solution to mode-channel matching given self-consistent foundational constants.
+This observation has deeper implications. The specific values $d_0=8$ and $\varepsilon=\ln 2$ that yield $M=24$ are precisely those for which an exact solution exists. As analyzed in **Remark Z.6**, this is not coincidental: if foundational constants yielded $M_{\text{int}}=8$ (from $d_0=4$), no integer dimension satisfies $K(D)=8$ because $K(2)=6<8<12=K(3)$; similarly, $M_{\text{int}}=96$ (from $d_0=16$) finds no match because standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012]. The framework does not merely accommodate $D=4$—it predicts it as the unique solution to mode-channel matching given self-consistent foundational constants.
 
 Universes with geometrically frustrated mode counts may be logically conceivable but physically unrealizable, as they cannot achieve the stable PCE equilibrium required for spacetime emergence. The derivation chain:
 $$\varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{M = 2ab} M = 24 \xrightarrow{K(D) = M} D = 4$$
@@ -3187,7 +3187,7 @@ The value $M = 24$ satisfies multiple independent mathematical constraints:
 
 **C1:** From the derivation chain: $\varepsilon_{SPAP} = \ln 2$ (Theorem P.13.3), $a = 2$ (Theorem P.13.4), $b = d_0 - a = 6$, $M = 2ab = 24$ (Theorem P.13.5).
 
-**C2:** The kissing number $K(D)$ is the maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$ dimensions. $K(4) = 24$ [Musin 2008]. For comparison: $K(3) = 12$, $K(5) = 40$, $K(8) = 240$.
+**C2:** The kissing number $K(D)$ is the maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$ dimensions. $K(4)=24$ [Musin 2008]. For comparison: $K(3)=12$, $K(8)=240$, and standard bounds place $K(5)$ between $40$ and $44$ [Mittelmann & Vallentin 2010; Boyvalenkov et al. 2012].
 
 **C3:** The extended binary Golay code $\mathcal{G}_{24}$ has parameters $[24, 12, 8]$ and is unique up to equivalence [Pless 1968].
 
@@ -4122,7 +4122,7 @@ Only $\varepsilon=\ln 2$ satisfies simultaneously:
 All other values violate at least one of these constraints:
 
 * **Non-integer $K_0$**: SPAP cannot be implemented with fractional bits.
-* **Mode-channel mismatch**: even when $K_0$ is integer, the induced $M$ can fail $K(D)=M$ (e.g., $224$ lies strictly between $K(7)=126$ and $K(8)=240$, so cannot equal any $K(D)$).
+* **Mode-channel mismatch**: even when $K_0$ is integer, the induced $M$ can fail $K(D)=M$ (e.g., standard bounds give $K(7)\le134<224<240=K(8)$ [Boyvalenkov et al. 2012], so $224$ cannot equal any $K(D)$).
 * **No unique rootless 24D branch**: the Niemeier uniqueness input is specific to dimension $24$, so the later vacuum-selection steps used here are unavailable away from that branch.
 
 The Monster group therefore characterizes the distinguished branch selected by these combined criteria.
@@ -4344,7 +4344,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
 | $v$ (Higgs VEV) | $252\pm5~\mathrm{GeV}$ | $246.22~\mathrm{GeV}$ | Particle Data Group 2024 | $+1.2\sigma$ |
-| $\sin^2\theta_W(M_Z)$ | $0.2312\pm0.0015$ (conditional on the lifted spectral target tuple of Appendix T; Remark T.17a.4 shows the local two-coefficient truncation does not realize it) | $0.23122\pm0.00003$ | Particle Data Group 2024 | Conditional |
+| $\sin^2\theta_W(M_Z)$ | $0.2312\pm0.0015$ (conditional on the lifted spectral target tuple of Appendix T; Remark T.17a.4 and Proposition T.17a.5 show that sector-independent affine local truncations do not realize it) | $0.23122\pm0.00003$ | Particle Data Group 2024 | Conditional |
 | $m_H$ | $125\pm2.5~\mathrm{GeV}$ | $125.25\pm0.17~\mathrm{GeV}$ | Particle Data Group 2024 | $-0.10\sigma$ |
 
 **CKM Matrix and Quark Mixing (Appendix T):**

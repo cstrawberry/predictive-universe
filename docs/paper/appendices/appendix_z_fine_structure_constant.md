@@ -50,7 +50,7 @@ which multiplies the second-order curvature term.
 
 1. **Internal modes $\to$ operational channels.** Identification: $M=2ab$ counts the real tangent directions of the attractor orbit (Theorem Z.6.3a) and is interpreted as the number of locally distinguishable interaction channels. Assumptions: local homogeneity/isotropy at the attractor and a locally Euclidean tangent cone for channel packing.
 
-2. **Operational channels $\to$ dimension.** Identification: channel packing in a locally Euclidean $D$-dimensional tangent space has maximal channel number $K(D)$ (kissing number), hence equilibrium requires $M=K(D)$ (Theorem Z.11). Alternatives: dimensions with $K(D)\neq M$ either waste internal modes or lack sufficient channels; both raise the PCE potential. Robustness: $K(3)=12$, $K(4)=24$, $K(5)=40$, so $D=4$ is isolated by a gap $|K(D)-24|\ge 12$ for the nearest alternatives.
+2. **Operational channels $\to$ dimension.** Identification: channel packing in a locally Euclidean $D$-dimensional tangent space has maximal channel number $K(D)$ (kissing number), hence equilibrium requires $M=K(D)$ (Theorem Z.11). Alternatives: dimensions with $K(D)\neq M$ either waste internal modes or lack sufficient channels; both raise the PCE potential. Robustness: $K(3)=12$, $K(4)=24$, and standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012], so $D=4$ is isolated by a gap of at least $12$ from the nearest neighboring dimensions.
 
 3. **Coupling identification.** The coefficient $u^*$ is fixed by capacity saturation of the internal QFI spectrum (Theorem Z.7) with the flat Bures/QFI eigenvalues $\lambda_i=1$ at the attractor (Theorem Z.5); the physical electromagnetic coupling is $\alpha_{\mathrm{em}}=u^*/(4\pi\kappa_{\mathrm{eff}})$ after the interface correction (Theorem Z.26).
 
@@ -285,7 +285,7 @@ which satisfy the Clifford relations $\{\gamma_i,\gamma_j\} = 2\delta_{ij} I$ an
 
 *Bott Periodicity.* Real and complex Clifford algebras exhibit 8-fold and 2-fold periodicity respectively. The value $d_0 = 8 = 2^3$ sits at the end of the first real period, where algebraic structure is maximally rich before repeating.
 
-*Consistency with Dimensional Selection.* For $K_0 \neq 3$, the framework becomes inconsistent with mode-channel matching (Theorem Z.11). Specifically, $K_0 = 2$ yields $M = 8$ with no integer $D$ satisfying $K(D) = 8$; $K_0 = 4$ yields $M = 56$ with no solution between $K(5) = 40$ and $K(6) = 72$. Only $K_0 = 3$ produces $M = 24 = K(4)$, yielding the unique self-consistent dimensional structure with $D = 4$.
+*Consistency with Dimensional Selection.* For $K_0 \neq 3$, the framework becomes inconsistent with mode-channel matching (Theorem Z.11). Specifically, $K_0 = 2$ yields $M = 8$ with no integer $D$ satisfying $K(D) = 8$; $K_0 = 4$ yields $M = 56$ with no solution because standard bounds give $K(5)\le44<56<72\le K(6)$ [Mittelmann & Vallentin 2010]. Only $K_0 = 3$ produces $M = 24 = K(4)$, yielding the unique self-consistent dimensional structure with $D = 4$.
 
 ---
 
@@ -800,47 +800,69 @@ Consequently the unique PCE-optimal dimension is $D = 4$.
 $$
 M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D).
 $$
-Hence $K(D)=24$. The standard kissing numbers in low dimensions satisfy
+Hence $K(D)=24$. The exact unrestricted kissing numbers in dimensions $1$ through $4$ are
 $$
-K(1)=2,\quad K(2)=6,\quad K(3)=12,\quad K(4)=24,\quad K(5)=40,\quad K(6)=72,
+K(1)=2,\quad K(2)=6,\quad K(3)=12,\quad K(4)=24.
 $$
-so $D=4$ is the unique positive integer with $K(D)=24$. Substituting back gives $M_{\mathrm{phys}}=24$. ∎
+Standard bounds further give $K(5)\ge40$ [Boyvalenkov et al. 2012], and kissing numbers are monotone nondecreasing in the dimension. Therefore every $D\ge5$ satisfies $K(D)\ge40>24$, so $D=4$ is the unique positive integer with $K(D)=24$. Substituting back gives $M_{\mathrm{phys}}=24$. ∎
 
-**Remark Z.11.1: Dimensional Uniqueness from $K_0$.** The derivation chain $K_0 \to d_0 \to a \to M \to D$ produces a consistent solution only for $K_0 = 3$:
+**Remark Z.11.1: Dimensional Uniqueness from $K_0$.** The derivation chain $K_0 \to d_0 \to a \to M \to D$ produces a consistent mode-channel solution only for $K_0 = 3$. With $a=2$ fixed (Theorem Z.1) and $d_0=2^{K_0}$ on the minimal branch, the mode count is
+$$
+M(K_0)=2a(d_0-a)=4(2^{K_0}-2).
+$$
 
 | $K_0$ | $d_0 = 2^{K_0}$ | $a = 2$ | $b = d_0 - a$ | $M = 2ab$ | $K(D) = M$? |
 |:-----:|:---------------:|:-------------------:|:-------------:|:---------:|:------------|
-| 2 | 4 | 2 | 2 | 8 | No: $K(2) = 6$, $K(3) = 12$ |
-| **3** | **8** | **2** | **6** | **24** | **Yes: $K(4) = 24$** |
-| 4 | 16 | 2 | 14 | 56 | No: $K(5) = 40$, $K(6) = 72$ |
-| 5 | 32 | 2 | 30 | 120 | No: $K(7) = 126$, $K(8) = 240$ |
+| 1 | 2 | 2 | 0 | 0 | No: degenerate ($b=0$) |
+| 2 | 4 | 2 | 2 | 8 | No: $K(2)=6<8<12=K(3)$ |
+| **3** | **8** | **2** | **6** | **24** | **Yes: $K(4)=24$** |
+| 4 | 16 | 2 | 14 | 56 | No: $K(5)\le44<56<72\le K(6)$ |
+| 5 | 32 | 2 | 30 | 120 | No: $K(6)\le77<120<126\le K(7)$ |
+| 6 | 64 | 2 | 62 | 248 | No: $K(8)=240<248<306\le K(9)$ |
 
-The table demonstrates that among values $K_0 \in \{2, 3, 4, 5\}$, only $K_0 = 3$ produces a mode count $M$ that equals $K(D)$ for some integer dimension $D$. For larger $K_0$, the mode counts $M \in \{248, 504, ...\}$ exceed known kissing numbers for low dimensions, making geometric realization increasingly improbable. This is not imposed but emerges: the SPAP-derived $K_0 = 3$ (Theorem 15) uniquely produces $M = 24$, which uniquely matches $K(4) = 24$.
+Within the rigorously checked range $K_0\in\{1,\ldots,6\}$, only $K_0=3$ produces $M=K(D)$ for some integer $D$, namely $D=4$. The exclusions use the standard bounds
+$$
+K(5)\le44<56<72\le K(6),\qquad
+K(6)\le77<120<126\le K(7),\qquad
+K(8)=240<248<306\le K(9),
+$$
+with $K(5)\le44$ from [Mittelmann & Vallentin 2010], $72\le K(6)$, $126\le K(7)$, $K(8)=240$, and $306\le K(9)$ from [Boyvalenkov et al. 2012], and the sharpened upper bound $K(6)\le77$ from [de Laat et al. 2024]. For larger $K_0$, the load-bearing exclusion in the framework comes from the SPAP lower bound $K_0\ge3$ together with the minimal-branch selection $d_0=8$ (Theorem 15 and Theorem Z.2), rather than from a complete kissing-number classification.
 
-**Corollary Z.11.1 (Geometric Necessity).** *The physical universe occupies the sole point where information-theoretic requirements (SPAP structure) align with geometric packing constraints (kissing number). Alternative $K_0$ values would be information-theoretically viable but geometrically unrealizable—no integer dimension $D$ satisfies $K(D) = M$ for $M \in \{8, 56, 120, ...\}$.*
+**Corollary Z.11.1 (Geometric Necessity).** *The physical universe occupies the sole rigorously checked point where the SPAP-selected minimal branch aligns with geometric packing constraints: within $K_0 \in \{1,\ldots,6\}$, only $K_0 = 3$ yields $K(D)=M$, namely $K(4)=24$. For larger $K_0$, the framework excludes them by the SPAP lower bound together with the minimal-branch selection, rather than by exact kissing-number identities alone.*
 
 **Corollary Z.11.2 (Low-Dimensional Kissing Staircase).** On the minimal Appendix Z branch,
 $$
 (K(1),K(2),K(3),K(4)) = (a,b,k,M) = (2,6,12,24).
 $$
+Moreover, the pair $(a,d_0)=(2,8)$ is the unique solution in positive integers to the staircase system
+$$
+(K(1),K(2),K(3),K(4)) = (a,\,d_0-a,\,a(d_0-a),\,2a(d_0-a)).
+$$
+The first two equations determine $(a,d_0)$ uniquely, while the last two are consistency checks.
 
 *Proof.* The standard low-dimensional kissing numbers are
 $$
 K(1)=2,\quad K(2)=6,\quad K(3)=12,\quad K(4)=24.
 $$
-On the minimal Appendix Z branch, Theorem Z.1 gives $a=2$, Theorem Z.2 gives $d_0=8$, hence $b=d_0-a=6$. Theorem Z.13 gives $k=12$, and Theorem Z.5 gives $M=24$. Theorem Z.11 identifies the top step as $K(D)=M$ with $D=4$. Substituting yields the stated identity. ∎
+On the minimal Appendix Z branch, Theorem Z.1 gives $a=2$, Theorem Z.2 gives $d_0=8$, hence $b=d_0-a=6$. Theorem Z.13 gives $k=12$, and Theorem Z.5 gives $M=24$. Theorem Z.11 identifies the top step as $K(D)=M$ with $D=4$. Substituting yields the staircase identity.
+
+For uniqueness, $K(1)=2$ forces $a=2$, and then $K(2)=6$ forces $d_0=a+6=8$. Hence $b=6$, so
+$$
+a(d_0-a)=2\cdot 6=12,\qquad 2a(d_0-a)=24,
+$$
+which agrees with $K(3)$ and $K(4)$. Thus $(a,d_0)=(2,8)$ is the unique positive-integer solution, and the third and fourth identities are over-determined consistency checks. ∎
 
 **Remark Z.4a: Euclidean vs Lorentzian.** The kissing number $K(4) = 24$ refers to sphere packing in 4-dimensional Euclidean space. This is the Euclideanized spacetime geometry relevant to the instanton saddle-point calculation (Section U.9). The Euclidean rotation group is $\text{Spin}(4) \cong SU(2) \times SU(2)$. Upon analytic continuation back to Lorentzian signature, $D = 4$ yields the physical 3+1 spacetime with metric signature $(-,+,+,+)$ and structure group $\text{Spin}(1,3)$.
 
 **Remark Z.5: Robustness.** The discrete nature of kissing numbers means D = 4 remains the unique solution for any M_int ∈ [13, 39].
 
-**Remark Z.6: Frustration for Other Values.** If the foundational constants yielded M_int = 8, no integer dimension exactly saturates this value (K(2)=6, K(3)=12). The system would exhibit geometric frustration. Similarly, M_int = 96 cannot be matched (K(8)=240 is too large). This demonstrates that $D=4$ emerges not despite but because of the specific values $d_0=8$ and the saturating PCE-Attractor cost $\varepsilon=\ln 2$.
+**Remark Z.6: Frustration for Other Values.** If the foundational constants yielded $M_{\mathrm{int}}=8$, no integer dimension exactly saturates this value, since $K(2)=6<8<12=K(3)$. The system would exhibit geometric frustration. Similarly, $M_{\mathrm{int}}=96$ cannot be matched, because standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012], so no integer dimension $D$ satisfies $K(D)=96$. This demonstrates that $D=4$ emerges not despite but because of the specific values $d_0=8$ and the saturating PCE-Attractor cost $\varepsilon=\ln 2$.
 
-**Corollary Z.5b (Generalization to Arbitrary MPU Structure).** For any hypothetical MPU with parameters $(d_0, a, b)$ where $a + b = d_0$, the emergent dimension would satisfy $K(D) = 2ab$. This generalization demonstrates that $D = 4$ is tied to the specific values $d_0 = 8$ and $\varepsilon = \ln 2$. Different fundamental constants would yield different dimensions or geometric frustration:
-- If $d_0 = 4$ and $a = 2$: $M_{\mathrm{int}} = 8$, but $K(2) = 6$ and $K(3) = 12$—no exact solution exists
-- If $d_0 = 16$ and $a = 4$: $M_{\mathrm{int}} = 96$, but $K(8) = 240$ is too large—again no exact solution
+**Corollary Z.5b (Generalization to Arbitrary MPU Structure).** For any hypothetical MPU with parameters $(d_0,a,b)$ where $a+b=d_0$, the emergent dimension would satisfy $K(D)=2ab$. This generalization demonstrates that $D=4$ is tied to the specific values $d_0=8$ and $\varepsilon=\ln 2$. Different fundamental constants would yield different dimensions or geometric frustration:
+- If $d_0=4$ and $a=2$, then $M_{\mathrm{int}}=8$, but $K(2)=6<8<12=K(3)$, so no exact solution exists
+- If $d_0=16$ and $a=4$, then $M_{\mathrm{int}}=96$, while standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012], so again no exact solution exists
 
-The framework does not simply accommodate $D = 4$; it predicts it as the unique solution to mode-channel matching given the foundational constants.
+The framework does not simply accommodate $D=4$; it predicts it as the unique solution to mode-channel matching given the foundational constants.
 
 ---
 
@@ -2592,10 +2614,10 @@ For D_eff = 3 (K(3) = 12 < 24):
 - System exhibits frustration: 24 modes cannot pack into 12 channels
 - Observable: Decoherence, mode competition, instability
 
-For D_eff = 5 (K(5) = 40 > 24):
+For D_eff = 5 (standard bounds give $K(5)\ge40>24$ [Boyvalenkov et al. 2012]):
 - System has excess channel capacity
 - Possible outcomes: Spontaneous dimensional compactification, symmetry breaking
-- Signature: Spontaneous reduction of N_coord from 40 toward 24
+- Signature: Spontaneous reduction of $N_{\mathrm{coord}}$ from at least $40$ toward $24$
 
 For D_eff = 4 (K(4) = 24 = M_int):
 - System stable, remains in PCE-attractor state

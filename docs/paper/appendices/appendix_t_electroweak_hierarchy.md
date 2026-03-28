@@ -32,7 +32,7 @@ The appendix uses a three-level dictionary to separate the PU fixed point from p
   $$
   (\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)
   $$
-  is retained because it reproduces the previously used matching factors $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$; the explicit global spectral evaluation on $\widetilde X$ remains the outstanding quantitative task, and Remark T.17a.4 records that a sector-independent two-coefficient local heat-kernel truncation gives $F_Y^{\mathrm{loc},2}\approx 12.67>0$, not the target negative hypercharge-sector contribution. Equivalently,
+  is retained because it reproduces the previously used matching factors $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$. The explicit global spectral evaluation on $\widetilde X$ remains the outstanding quantitative task. Remark T.17a.4 and Proposition T.17a.5 show that the sector-independent local truncation, even in affine per-rank form, forces $F_Y>0$ and therefore cannot realize the required negative hypercharge-sector contribution. Thus the current status is a theorem-level local no-go together with a retained target tuple, not yet a derivation of the tuple itself. Equivalently,
   $$
   Z_i = 1+\frac{\Delta_i}{24},
   $$
@@ -63,7 +63,7 @@ The following constants are derived in the main text and Appendix Z:
 |$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|PCE-optimal Bures weights (with normalization constraint) |Corollary T.34.2|
 |$g_U^2$ |$\pi/6$ |PU-normalized gauge coefficient squared |Theorem T.39a |
 |$\alpha_U^{-1}$ |$24$ |Inverse PU fine structure $\alpha_U=g_U^2/(4\pi)$ |Theorem T.39a |
-|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (numerical target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$, fixed by consistency with the previous matching values $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$ pending global spectral evaluation; Remark T.17a.4 records that a sector-independent two-coefficient local heat-kernel truncation gives $F_Y^{\mathrm{loc},2}\approx 12.67>0$ rather than the target negative hypercharge-sector contribution |Definition T.17a / Remark T.17a.4 / Theorem T.18 |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (retained target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$, retained because they reproduce the previous matching values $(Z_1,Z_2,Z_3)\approx(1.632,1.872,1.766)$; Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, while the global sector-resolving spectral evaluation of the lifted threshold sums remains open |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 |
 
 The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connects the PU fixed point to SM effective theory. Remark T.62.1 fixes the exponent $9$ from confinement complexity, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R$ (Section T.23).
 
@@ -754,6 +754,53 @@ F_Y^{\mathrm{loc},2}=2(B_0+B_1\lambda_Y)\approx 12.67>0.
 $$
 Hence this sector-independent two-coefficient local truncation does not realize the target tuple; any successful realization must depend on spectral information beyond this local truncation.
 
+**Proposition T.17a.5 (Affine Per-Rank Sign Obstruction).** Let
+$$
+F_s=n_s(A+B\lambda_s),
+\qquad
+(n_C,n_W,n_Y)=(6,4,2),
+$$
+with
+$$
+\lambda_Y<\lambda_W<\lambda_C.
+$$
+If this affine per-rank ansatz matches the positive color and weak target values
+$$
+F_C=18.41,\qquad F_W=20.94,
+$$
+then it necessarily gives $F_Y>0$. Consequently no sector-independent affine per-rank ansatz can realize a negative hypercharge contribution while simultaneously matching the color and weak channels.
+
+*Proof.* Matching the color and weak channels fixes
+$$
+B=\frac{F_C/n_C-F_W/n_W}{\lambda_C-\lambda_W}.
+$$
+Since
+$$
+\frac{18.41}{6}<\frac{20.94}{4}
+\qquad\text{and}\qquad
+\lambda_C>\lambda_W,
+$$
+one has $B<0$, so $A+B\lambda$ is strictly decreasing in $\lambda$. Therefore
+$$
+\frac{F_Y}{n_Y}=A+B\lambda_Y>A+B\lambda_W=\frac{F_W}{n_W}>0,
+$$
+because $\lambda_Y<\lambda_W$. Hence $F_Y>0$. ∎
+
+**Corollary T.17a.5a (Negative Affine Slope).** In the notation of Remark T.17a.4, the unique affine coefficient determined by the color and weak equations is
+$$
+B_1=\frac{18.41/6-20.94/4}{\lambda_C-\lambda_W}\approx -2.3671<0.
+$$
+
+**Remark T.17a.5b (Status of the Lifted Threshold Sector).** The local theorem-level conclusion is therefore a no-go statement: the retained tuple
+$$
+(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)
+$$
+cannot come from a sector-independent affine local truncation. The explicit global sector-resolving spectral evaluation on
+$$
+\widetilde X=\mathrm{Flag}_{1,2,3}(Q)
+$$
+remains the outstanding quantitative step.
+
 ### T.12.2 PCE Isotropy at the Fixed Point
 
 **Theorem T.13** (Predictive Ward Identity). At the PU fixed point $\mathfrak{A}_{PU}$, the susceptibility is flat across all canonically normalized signal directions:
@@ -934,7 +981,7 @@ $$
 Z_1=1+\frac{15.14}{24}\approx 1.6308,\qquad Z_2=1+\frac{20.94}{24}\approx 1.8725,\qquad Z_3=1+\frac{18.41}{24}\approx 1.7671.
 }
 $$
-The explicit global spectral evaluation of the lifted threshold sums remains the outstanding quantitative step. Remark T.17a.4 records that the sector-independent two-coefficient local heat-kernel truncation gives $F_Y^{\mathrm{loc},2}\approx 12.67>0$ rather than the target negative hypercharge-sector contribution, so it does not realize the target tuple. Neglecting the small residual finite matching shifts $\delta_i$ at first pass (Definition T.19a), one-loop SM running (Theorem T.15) then gives
+The explicit global spectral evaluation of the lifted threshold sums remains the outstanding quantitative step. Remark T.17a.4 and Proposition T.17a.5 now give a theorem-level local no-go: once the positive color and weak channels are matched, every sector-independent affine local truncation still forces $F_Y>0$. The lifted threshold sector therefore remains retained rather than derived until a genuinely sector-resolving global spectral evaluation is completed independently. Neglecting the small residual finite matching shifts $\delta_i$ at first pass (Definition T.19a), one-loop SM running (Theorem T.15) then gives
 $$
 \alpha_i^{-1}(M_Z)=Z_i\,\alpha_U^{-1}+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
 \qquad i=1,2,3,
@@ -964,7 +1011,7 @@ One-loop running then yields
 $$
 \alpha_i^{-1}(M_Z)=\alpha_i^{-1}(\mu_G)+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
 $$
-which is the displayed formula. Substituting the target tuple above gives the stated numerical Z-pole outputs. The theorem therefore isolates the remaining quantitative task: the explicit global spectral evaluation of $D^{\mathrm{PCE}}_{\widetilde X}$ on the lifted gauge geometry beyond the sector-independent two-coefficient local truncation of Remark T.17a.4, which does not realize the target tuple. ∎
+which is the displayed formula. Substituting the target tuple above gives the stated numerical Z-pole outputs. The theorem therefore isolates the remaining quantitative task: the explicit global spectral evaluation of $D^{\mathrm{PCE}}_{\widetilde X}$ on the lifted gauge geometry beyond the sector-independent affine local truncations ruled out by Remark T.17a.4 and Proposition T.17a.5. ∎
 
 -----
 
@@ -1276,7 +1323,7 @@ so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently
 |$v$ |$A_{EW} e^{-\kappa_{EW}} M_{Pl}$ |252 GeV |246 GeV |2.3% |
 |$\sin^2\theta_W^{(0)}$ |PU-normalized fixed-point value |$3/8$ |— |Exact |
 |$\sin^2\theta_W(\mu_G)$ |matching with lifted spectral thresholds |$\frac{3Z_2}{3Z_2+5Z_1}$ with $Z_i=1+\Delta_i/24$ |(matching-scale input) |Derived |
-|$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ target tuple fixed by consistency with the previous matching outputs; Remark T.17a.4 shows that the sector-independent two-coefficient local heat-kernel truncation gives $F_Y^{\mathrm{loc},2}\approx 12.67>0$ rather than the target negative hypercharge-sector contribution |— |Open global spectral step |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ retained target tuple reproducing the previous matching outputs; Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$, so deriving the tuple requires the open global spectral evaluation |— |Open global spectral step |
 |$\sin^2\theta_W(M_Z)$ |SM RG from matched boundary |Conditional on the lifted spectral thresholds and $\delta_i$ |$0.2312$ |Conditional|
 |$5/3$ factor |Canonical hypercharge normalization |$5/3$ |$5/3$ |Derived |
 |$\lambda_{\text{block}}$ |6 SU(2) blocks |$-1/36$ |— |Exact |
@@ -1728,7 +1775,7 @@ These eight boundary conditions, together with the PU-to-SM matching map encoded
 |$\alpha = 3/2$ |Derived |Capacity saturation (Corollary T.41.3) |
 |$c_d/c_u \approx 1.00$–$1.02$ |Derived |Right-handed hypercharge (Theorem T.38) |
 
-**Compression factor**: $21 \to 1$ continuous parameter + 3 discrete choices.
+**Compression factor**: $21 \to 1$ continuous parameter + 3 discrete choices once the lifted threshold data are supplied. At the threshold layer, Remark T.17a.4 and Proposition T.17a.5 already rule out the sector-independent local affine truncation, while the global sector-resolving spectral evaluation remains open.
 
 **Theorem T.37** ($E_8$ Triad Assignment). The optimal sector assignment is:
 

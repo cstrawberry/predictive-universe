@@ -518,7 +518,7 @@ The predictions fall into three epistemic categories that must be distinguished 
 - Gravitational force law deviating from $1/r^2$ at any experimentally accessible scale
 - Detection of Kaluza-Klein excitations indicating compact extra dimensions
 
-**Robustness:** The discrete nature of kissing numbers provides stability. The mode count $M = 24$ would need to change by at least 7 (to $M \leq 17$ or $M \geq 31$) to permit alternative dimensionality, since $K(3) = 12$ and $K(5) = 40$.
+**Robustness:** The discrete nature of kissing numbers provides stability. The mode count $M=24$ would need to leave the interval $[13,39]$ before alternative dimensionality becomes even eligible, since $K(3)=12$ and standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012].
 
 **Current Status:** All observations consistent with $D = 4$. Gravitational inverse-square law confirmed to $\sim 52\ \mu\mathrm{m}$ (Lee *et al.* 2020). LHC searches exclude large extra dimensions to multi-TeV scales (ATLAS Collaboration 2021).
 

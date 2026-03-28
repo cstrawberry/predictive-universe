@@ -66,6 +66,7 @@
 *   Bottou, L., Curtis, F. E., & Nocedal, J. (2018). Optimization methods for large-scale machine learning. *SIAM Review*, *60*(2), 223–311. DOI: 10.1137/16M1080173 
 *   Bousso, R. (2002). The holographic principle. *Reviews of Modern Physics*, *74*, 825–874.
 *   Boyd, S., & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.
+*   Boyvalenkov, P., Dodunekov, S., & Musin, O. R. (2012). A survey on the kissing numbers. *Serdica Mathematical Journal*, *38*(4), 507–522.
 *   Braides, A. (2002). *Γ-convergence for Beginners*. Oxford University Press.
 *   Brandão, F. G. S. L., Harrow, A. W., & Horodecki, M. (2016). Local random quantum circuits are approximate polynomial-designs. *Communications in Mathematical Physics*, *346*(2), 397–434. DOI: 10.1007/s00220-016-2706-8
 *   Bratteli, O., & Robinson, D. W. (1997). *Operator Algebras and Quantum Statistical Mechanics: Equilibrium States. Models in Quantum Statistical Mechanics* (2nd ed.). Springer. DOI: 10.1007/978-3-662-03444-6
@@ -150,6 +151,7 @@
 *   Deffner, S., & Campbell, S. (2017). Quantum speed limits: from Heisenberg's uncertainty principle to optimal quantum control. *Journal of Physics A: Mathematical and Theoretical*, *50*(45), 453001. DOI: 10.1088/1751-8121/aa8c2f
 *   Degrassi, G., et al. (2012). Higgs mass and vacuum stability in the Standard Model at NNLO. JHEP 08, 098.
 *   de Groot, A. D. (1965). *Thought and Choice in Chess*. Mouton.
+*   de Laat, D., Leijenhorst, N., & de Muinck Keizer, W. H. H. (2024). Optimality and uniqueness of the $D_4$ root system. Preprint, arXiv:2404.18794.
 *   Dehaene, S., Lau, H., & Kouider, S. (2017). What is consciousness, and could machines have it? *Science*, *358*(6362), 486–492. DOI: 10.1126/science.aan8871
 *   Deligne, P., et al. (Eds.). (1999). *Quantum Fields and Strings: A Course for Mathematicians* (Vols. 1–2). American Mathematical Society.
 *   Delsarte, P., & Goethals, J.-M. (1975). Unrestricted codes with the Golay parameters are unique. *Discrete Mathematics*, *12*(3), 211–224. DOI: 10.1016/0012-365X(75)90047-2
@@ -410,6 +412,7 @@
 *   Milnor, J. W., & Stasheff, J. D. (1974). *Characteristic Classes*. Princeton University Press.
 *   Minty, G. J. (1962). Monotone (nonlinear) operators in Hilbert space. *Duke Mathematical Journal*, *29*(3), 341–346. DOI: 10.1215/S0012-7094-62-02933-2 
 *   Misner, C. W., Thorne, K. S., & Wheeler, J. A. (1973). *Gravitation*. W. H. Freeman.
+*   Mittelmann, H. D., & Vallentin, F. (2010). High-accuracy semidefinite programming bounds for kissing numbers. *Experimental Mathematics*, *19*(2), 175–179. DOI: 10.1080/10586458.2010.10129070. arXiv:0902.1105.
 *   Mordell, L. J. (1938). The definite quadratic forms in eight variables with determinant unity. *Journal de Mathématiques Pures et Appliquées*, *17*, 41–46.
 *   Mosonyi, M., & Hiai, F. (2011). On the Symmetrized Rényi Relative Entropies and Related Metrics. *IEEE Transactions on Information Theory*, *57*(4), 2474–2487. DOI: 10.1109/TIT.2011.2110065
 *   Mosonyi, M., & Ogawa, T. (2017). Quantum hypothesis testing and the operational interpretation of the quantum Rényi relative entropies. *Communications in Mathematical Physics*, *355*, 373–426. DOI: 10.1007/s00220-017-2960-6

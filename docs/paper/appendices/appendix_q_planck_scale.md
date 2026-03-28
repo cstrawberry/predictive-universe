@@ -1264,6 +1264,11 @@ derived from the area law (Equation E.9). The PCE-optimal values of each paramet
 By Equation (E.14), the PCE-optimal channel capacity satisfies $C_{\max}^* = \ln d_0 - \varepsilon$. On the minimal Appendix Z branch one has $d_0 = 8$ (Theorem Z.2), and at the PCE-Attractor one has $\varepsilon = \ln 2$ (Definition 15a; Theorem 31 gives the lower bound). Therefore:
 $$\boxed{C_{\max}^* = \ln 8 - \ln 2 = 2\ln 2 = 2\varepsilon} \tag{Q.10}$$
 
+**Remark Q.10.1 (Bit-Budget Characterization).** Since $d_0 = 2^{K_0}$ on the minimal branch and $\varepsilon = \ln 2$ at the PCE-Attractor, the capacity-cost ratio has the structural form
+$$
+\frac{C_{\max}^*}{\varepsilon} = \frac{\ln(d_0)-\varepsilon}{\varepsilon} = K_0 - 1.
+$$
+At $K_0 = 3$ this gives $C_{\max}^*/\varepsilon = 2$: of the $K_0=3$ bits per MPU cycle, one bit pays the irreversible Landauer cost of the SPAP merge, leaving $K_0-1=2$ bits of residual channel capacity. This identity is the structural source of the ratio-2 appearances that explicitly use $C_{\max}/\varepsilon$ elsewhere in the framework, while downstream applications may impose additional local assumptions.
 
 ### Q.2.2 Correlation Factor: $\chi^* = 1$
 

@@ -388,7 +388,7 @@ $$u_i(r) = \phi(r x_i), \quad i = 1, \ldots, 24.$$
 $$
 S_{\text{disc}}(u) = \frac{1}{\varepsilon}\int_0^\infty r^3 dr \left[\frac{1}{24}\sum_{i=1}^{24}\frac{1}{2}(\partial_r u_i)^2 + \frac{1}{24r^2}\sum_{i,j}W_{ij}(u_i-u_j)^2 + \frac{1}{24}\sum_{i=1}^{24}\big(V_{\text{eff}}(u_i)-V_{\text{eff}}(0)\big)\right]
 $$
-where $W_{ij}$ encodes the chosen discrete angular Dirichlet form and the factor $1/24$ normalizes the spherical average. The quadrature $\int_{S^3} d\sigma_3 \to \frac{1}{24}\sum_{i=1}^{24}$ is exact for polynomials of degree $\leq 5$ by the spherical 5-design property (Theorem U.7).
+where $W_{ij}$ encodes a chosen real self-adjoint discrete angular quadratic form on the 24-cell sample, with constants in its kernel, and the factor $1/24$ normalizes the spherical average. The quadrature $\int_{S^3} d\sigma_3 \to \frac{1}{24}\sum_{i=1}^{24}$ is exact for polynomials of degree $\leq 5$ by the spherical 5-design property (Theorem U.7).
 
 ### U.8.3 Quadrature Exactness
 
@@ -423,7 +423,7 @@ Let
 $$
 \mathcal C_{\mathrm{samp}}:=\mathrm{span}\{t_1,t_2,t_3,t_4,d\}.
 $$
-Let $S_{\text{disc}}$ be the discrete action of Definition U.6, and assume the chosen discrete angular Dirichlet form has the same Hessian matrix elements as the continuum angular term on $\mathcal C_{\mathrm{samp}}$. Then the restriction of $D^2 S_{\text{disc}}(u^*)$ to $\mathcal C_{\mathrm{samp}}$ agrees exactly with the corresponding restriction of $D^2 S_{\text{cont}}(\phi^*)$ to the continuum span of $\{-\partial_\mu \phi^*\}_{\mu=1}^4$ and $x^\nu \partial_\nu \phi^*$. Consequently:
+Let $S_{\text{disc}}$ be the discrete action of Definition U.6, and assume the chosen self-adjoint discrete angular quadratic form has the same Hessian matrix elements as the continuum angular term on $\mathcal C_{\mathrm{samp}}$. Then the restriction of $D^2 S_{\text{disc}}(u^*)$ to $\mathcal C_{\mathrm{samp}}$ agrees exactly with the corresponding restriction of $D^2 S_{\text{cont}}(\phi^*)$ to the continuum span of $\{-\partial_\mu \phi^*\}_{\mu=1}^4$ and $x^\nu \partial_\nu \phi^*$. Consequently:
 1. the four sampled translation directions are null directions of the restricted quadratic form $D^2 S_{\text{disc}}(u^*)|_{\mathcal C_{\mathrm{samp}}}$;
 2. the sampled pure-coordinate dilatation direction satisfies
 $$
@@ -495,6 +495,49 @@ $$
 \mathrm{span}\{t_1,t_2,t_3,t_4\}.
 $$
 $\square$
+
+**Proposition U.13a (Explicit Signed Sampled Angular Operator).** Let $X=\{x_1,\dots,x_{24}\}\subset S^3$ be the 24-cell vertices, and define a symmetric weight matrix by
+$$
+W_{ij}=
+\begin{cases}
+1, & x_i\cdot x_j=\frac12,\\[2mm]
+-\frac12, & x_i\cdot x_j=0,\\[2mm]
+0, & x_i\cdot x_j=-\frac12,\\[2mm]
+\frac14, & x_i\cdot x_j=-1,\\[2mm]
+0, & i=j.
+\end{cases}
+$$
+Let
+$$
+(L_W f)_i := 2\sum_{j=1}^{24} W_{ij}(f_i-f_j),
+$$
+so that
+$$
+\frac1{24}\sum_{i,j}W_{ij}(f_i-f_j)^2
+=
+\frac1{24}\sum_i f_i(L_W f)_i
+$$
+for every vertex function $f:X\to\mathbb R$. Then $L_W$ is a real self-adjoint sampled angular operator with exact characteristic polynomial
+$$
+\chi_{L_W}(x)=x(x-3)^4(x-8)^9(x-15)^8(x-24)^2.
+$$
+In particular, the constant mode is the unique zero mode, the operator is positive semidefinite on the orthogonal complement of constants, and the nonzero sampled angular eigenvalues are exactly $3,8,15,24$.
+
+*Proof.* The weights depend only on the 24-cell inner-product classes, so $L_W$ is real and self-adjoint. An exact rational computation of the resulting $24\times24$ matrix gives the factorized characteristic polynomial above. Because the constant vector is annihilated by every difference operator $f_i-f_j$, it is a zero mode. The factorization then shows that no other zero mode occurs and that every remaining eigenvalue is positive. ∎
+
+**Corollary U.13a.1 (Coordinate Module at Eigenvalue $3$).** For each coordinate function $x^{(\mu)}_i=(x_i)_\mu$ one has
+$$
+L_W x^{(\mu)} = 3x^{(\mu)}
+\qquad
+(\mu=1,\dots,4).
+$$
+Since the eigenvalue $3$ has multiplicity $4$, its eigenspace is exactly
+$$
+\mathrm{span}\{x^{(1)},x^{(2)},x^{(3)},x^{(4)}\}.
+$$
+Thus the signed sampled operator realizes the translation-sector angular eigenvalue exactly at the sampled level. This does not by itself prove that the full discrete Hessian has no additional zero modes outside the sampled collective-coordinate sector or determine the four-mode prefactor.
+
+*Proof.* Exact matrix multiplication with the weight choice of Proposition U.13a gives $L_W x^{(\mu)}=3x^{(\mu)}$ for each $\mu$. The characteristic polynomial from Proposition U.13a shows that the eigenvalue $3$ has multiplicity $4$, so these four coordinate functions span the full eigenspace. ∎
 
 ---
 
