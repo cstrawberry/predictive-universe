@@ -229,7 +229,7 @@ on the verification/update resources required to approach that limit (Theorem 14
 
 *   **Statistical FTL Influence:** (Postulate 3, Section 10.3) Hypothesized effect where CC modulation by Alice can statistically influence the marginal probabilities of outcomes for Bob's measurements on an entangled system at a space-like separated location, argued to be consistent with operational causality (Postulate 2) due to information limits (Theorem 42, Appendix F).
 
-*   **24-Cell:** (Appendix Z, Definition Z.8) The unique regular convex 4-polytope with 24 vertices, forming the optimal kissing configuration $K(4) = 24$ in 4 dimensions. Self-dual and tiles $\mathbb{R}^4$. Equivalent to the minimal vectors of the $D_4$ root lattice after normalization.
+*   **24-Cell:** (Appendix Z, Definition Z.8) The standard 24-point configuration on $S^3$ given by the unit Hurwitz integers, realizing the optimal kissing configuration $K(4)=24$ in 4 dimensions and spanning $\mathbb{R}^4$. This is the standard coordinate realization conventionally called the 24-cell vertex set; Theorem U.30 verifies its spherical 5-design exactness. Equivalent, after normalization and orthogonal identification, to the minimal vectors of the $D_4$ root lattice.
 
 *   **$\mathcal{T}$ (Simulation Horizon/Steps):** (Used in Theorems 14, B.2) Dimensionless number of steps or cycles over which a SPAP-limited prediction task is performed or a simulation is run.
 

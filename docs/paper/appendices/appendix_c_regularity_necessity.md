@@ -158,39 +158,50 @@ $$
 \tag{C.10}
 $$
 
-Since the regular-response regime requires $\eta_{R} < 1$ for the representative kernel, it follows that $\kappa_{R} > 0$. Equivalently, adopting a lazy one-step kernel with idleness $\alpha\in(0,1)$ reduces $W_1$ and can strictly increase $\kappa_R$ for fixed local parameters. This establishes a strictly positive lower bound on this measure of discrete Ricci curvature, arising from the interplay of PCE-optimized local complexity variations and the information-theoretic constraints of the underlying MPU interactions. A network with such a positive lower bound on Ricci curvature (meaning it is bounded below by $\kappa_R > 0$) satisfies a key component of geometric regularity (Definition C.2, Definition C.3), providing a constructive basis for the emergence of a well-behaved spacetime geometry. The subsequent sections of this appendix detail why violations of such regularity are penalized by PCE.
+Since the regular-response regime requires $\eta_{R} < 1$ for the representative kernel, it follows that $\kappa_{R} > 0$. Equivalently, adopting a lazy one-step kernel with idleness $\alpha\in(0,1)$ reduces $W_1$ and can strictly increase $\kappa_R$ for fixed local parameters. This exhibits a strictly positive lower bound for this specific Ollivier-Ricci model under the local assumptions built into Equations (C.2)-(C.10). It is not, by itself, a theorem that one-step neighbor data determine a Bakry-Émery lower bound, a measured-Gromov-Hausdorff-stable curvature class, or the Section 11.4 continuum branch. Those further transfers require the additional weighted-shell/local-isotropy input of Remark C.3.3a or an equivalent replacement, extra radius-2 / curvature-matrix control, and the separate convergence hypotheses isolated later in Theorem C.6a and Appendix F. The subsequent sections of this appendix detail why violations of regularity are penalized by PCE.
 
 
 ¹ Footnote: The parameter $\lambda_R$ is specific to this curvature model (Equation C.2) and represents the sensitivity of local transition probabilities to gradients in the effective cost-rate $I'$. It should not be confused with the resource scarcity Lagrange multiplier $\lambda$ from main text Definition 20.
 
 
 **Remark C.3.3a (From Ollivier-Ricci to a continuum scalar curvature estimator).**
-This estimator remark belongs to the later continuum bridge. It is not part of the regular-global-minimum theorem itself; it is used only when connecting discrete curvature control to the locality/consistency clause of Theorem D.6 and the continuum discussion of Section 11.4. Let $(\mathcal N_h,d_h)$ be a sequence of MPU networks whose rescaled edge lengths satisfy $d_h(x,y)\approx h$ for adjacent vertices and whose lazy random-walk kernels define Ollivier-Ricci curvature $\kappa_h(x,y)$ via Equation (C.3). In the PU scaling one may identify $h\approx\delta_{eff}$ (Section 11). Under quasi-uniform sampling and local isotropy (the empirical second-moment matrix of neighbor direction vectors satisfies $\frac{1}{\deg(x)}\sum_{y\sim x}\hat v_{x\to y}\hat v_{x\to y}^T=\frac{1}{D}I+o(1)$), the small-scale expansion gives
+This estimator remark belongs to the later continuum bridge. It is not part of the regular-global-minimum theorem itself, and the first-shell averaging input used here is an additional bridge hypothesis rather than a consequence of the present Appendix C theorem stack. In particular, the current manuscript does not show that one-shell data alone determine the graph-side Bakry-Émery / RCD lower bound needed later; that transfer requires extra radius-2 information. Let $(\mathcal N_h,d_h)$ be a sequence of MPU networks whose rescaled edge lengths satisfy $d_h(x,y)\approx h$ for adjacent vertices and whose lazy random-walk kernels define Ollivier-Ricci curvature $\kappa_h(x,y)$ via Equation (C.3). In the PU scaling one may identify $h\approx\delta_{eff}$ (Section 11). Assume quasi-uniform sampling together with first-shell weights $\omega_{xy}\ge 0$ satisfying
+$$
+\sum_{y\sim x}\omega_{xy}=1,
+\qquad
+\max_{y\sim x}\left|\omega_{xy}-\frac{1}{\deg(x)}\right|=o(1),
+$$
+and the weighted local-isotropy tensor condition
+$$
+\sum_{y\sim x}\omega_{xy}\,\hat v_{x\to y}\hat v_{x\to y}^{\mathsf T}
+=\frac{1}{D}I+O(h)
+$$
+locally uniformly as $h\to0$. Then the small-scale expansion gives
 $$
 \kappa_h(x,y)=\frac{h^2}{2(D+2)}\,\mathrm{Ric}_g(v,v)+O(h^3),
 \tag{C.10a}
 $$
-where $v$ is the unit tangent in the $x\to y$ direction and $\mathrm{Ric}_g$ is the continuum Ricci tensor. Averaging over neighbors yields a local scalar curvature proxy
+where $v$ is the unit tangent in the $x\to y$ direction and $\mathrm{Ric}_g$ is the continuum Ricci tensor. Averaging with the shell weights yields a local scalar curvature proxy
 $$
-R_h(x):=\frac{2D(D+2)}{h^2}\cdot\frac{1}{\deg(x)}\sum_{y\sim x}\kappa_h(x,y)=R_g(x)+O(h),
+R_h(x):=\frac{2D(D+2)}{h^2}\sum_{y\sim x}\omega_{xy}\kappa_h(x,y)=R_g(x)+O(h),
 \tag{C.10b}
 $$
 so that $R_h\to R_g$ in $L^1_{\mathrm{loc}}$ under refinement. This is the discrete-to-continuum bridge used later in the locality/consistency hypothesis of Theorem D.6 [Ollivier 2009; van der Hoorn et al. 2020].
 
-*Justification of the neighbor-average step.* Under the local isotropy condition (which improves as the mesh refines, with error $O(h)$ relative to the continuum limit)
+*Justification of the neighbor-average step.* Under the weighted local-isotropy condition,
 $$
-\frac{1}{\deg(x)}\sum_{y \sim x} \hat{v}_{x \to y}\,\hat{v}_{x \to y}^{\mathsf{T}}
+\sum_{y \sim x} \omega_{xy}\,\hat{v}_{x \to y}\hat{v}_{x \to y}^{\mathsf{T}}
 = \frac{1}{D} I + O(h),
 $$
 write $\mathrm{Ric}_g(x)$ in an orthonormal basis at $x$. Then
 $\mathrm{Ric}_g(\hat{v}, \hat{v}) = \hat{v}^{\mathsf{T}} \mathrm{Ric}_g(x) \hat{v}$ and therefore
 $$
-\frac{1}{\deg(x)}\sum_{y \sim x} \mathrm{Ric}_g(\hat{v}_{x \to y}, \hat{v}_{x \to y})
-= \mathrm{Tr}\!\left(\mathrm{Ric}_g(x) \cdot \frac{1}{\deg(x)}\sum_{y \sim x} \hat{v}_{x \to y} \hat{v}_{x \to y}^{\mathsf{T}}\right)
+\sum_{y \sim x} \omega_{xy}\, \mathrm{Ric}_g(\hat{v}_{x \to y}, \hat{v}_{x \to y})
+= \mathrm{Tr}\!\left(\mathrm{Ric}_g(x) \cdot \sum_{y \sim x} \omega_{xy}\, \hat{v}_{x \to y} \hat{v}_{x \to y}^{\mathsf{T}}\right)
 = \frac{1}{D}\,\mathrm{Tr}(\mathrm{Ric}_g(x)) + O(h)
 = \frac{1}{D} R_g(x) + O(h).
 $$
-Averaging (C.10a) over neighbors and substituting the previous display gives (C.10b).
+Averaging (C.10a) with the shell weights and substituting the previous display gives (C.10b).
 
 
 ## C.4 Penalization of Anomalous Network Dimension
@@ -347,13 +358,16 @@ X_n := (\mathcal{V}_n,\delta_{eff,n}^{-1}d_{\mathcal N_n},o_n),
 $$
 Assume only the hypotheses and conclusions already established in Definitions C.1–C.3, Theorem C.6, Theorem 43, Lemma D.6a, and Theorem D.6. Then these results do not suffice to derive the Euclidean-tangent conclusion of Theorem 44. More precisely:
 
-1. **Scale-invariant non-collapse.** Definition C.1 does not furnish fixed-radius lower-density bounds on the rescaled spaces, and Theorem C.6 does not by itself upgrade to family-uniform fixed-radius doubling/Poincaré control for the rescaled sequence.
-2. **Limit-energy identification.** Appendix D provides pointed measured Gromov–Hausdorff precompactness of bounded-action families and action-level consistency, but no theorem identifying the limit Cheeger energy as a quadratic form.
-3. **Curvature-class transfer.** The discrete curvature control of Definition C.2 is not upgraded anywhere in Appendix C/D to a uniform synthetic-curvature condition stable under the convergence used in Theorem 44.
+1. **Weighted-shell/local-isotropy closure.** Neither Appendix C nor Appendix D proves asymptotically equal first-shell weights, the empirical tensor condition of Remark C.3.3a, or an equivalent replacement sufficient to justify the scalar-curvature averaging step.
+2. **Scale-invariant non-collapse.** Definition C.1 does not furnish fixed-radius lower-density bounds on the rescaled spaces, and Theorem C.6 does not by itself upgrade to family-uniform fixed-radius doubling/Poincaré control for the rescaled sequence.
+3. **Limit-energy identification.** Appendix D provides pointed measured Gromov–Hausdorff precompactness of bounded-action families and action-level consistency, but no theorem identifying the limit Cheeger energy as a quadratic form.
+4. **Curvature-class transfer.** The discrete curvature control of Definition C.2 is not upgraded anywhere in Appendix C/D to a uniform synthetic-curvature condition stable under the convergence used in Theorem 44.
 
-Consequently, under the current PU hypotheses one can justify at most the compactness part of the continuum bridge once the separate bounded-geometry hypotheses of Lemma D.6a are imposed, while the existence of a full-measure regular set with unique Euclidean $\mathbb{R}^D$ tangent cones remains an additional assumption.
+Consequently, under the current PU hypotheses one can justify at most the compactness part of the continuum bridge once the separate bounded-geometry hypotheses of Lemma D.6a are imposed, while the first-shell averaging step, the quadraticity of the limit energy, and the existence of a full-measure regular set with unique Euclidean $\mathbb{R}^D$ tangent cones remain additional assumptions.
 
-*Proof.* For a fixed rescaled radius $\rho>0$, the corresponding original-space radius is
+*Proof.* Remark C.3.3a already states the scalar-curvature estimator only under extra first-shell hypotheses. The present theorem stack contains no theorem deriving asymptotically equal shell weights or the weighted local-isotropy tensor from the discrete PU dynamics. Hence even the first-shell averaging step is conditional.
+
+For a fixed rescaled radius $\rho>0$, the corresponding original-space radius is
 $$
 R=\rho\,\delta_{eff,n}.
 $$
@@ -365,25 +379,26 @@ Because $\delta_{eff,n}\to 0$, any fixed $\rho$ eventually lies below this thres
 
 Theorem C.6 is a coarse-grained single-network statement: it assumes $r\ge 10\delta$ and yields constants $D_\star$ and $C_{\mathrm{PI}}(r)$ depending on the coarse-graining/distortion data. The present theorem stack contains no theorem showing that these data can be chosen uniformly across the rescaled family on every bounded radius range. Therefore Theorem C.6 does not by itself furnish the family-uniform fixed-radius doubling/Poincaré package required for a non-collapsed limit theory.
 
-Lemma D.6a then gives pointed measured Gromov–Hausdorff precompactness for bounded-action families once its separate bounded-geometry hypotheses are imposed, while Theorem D.6(ii) concerns convergence of the discrete curvature action to the Einstein–Hilbert term. Neither statement proves non-collapse, quadraticity of the limit Cheeger energy, or Euclidean tangent cones.
+Lemma D.6a then gives pointed measured Gromov–Hausdorff precompactness for bounded-action families once its separate bounded-geometry hypotheses are imposed, while Theorem D.6 concerns only convergence of the discrete action functional to the Einstein-Hilbert plus MPU action. It does not prove Mosco convergence of the rescaled Dirichlet forms, quadraticity of the limit Cheeger energy, or Euclidean tangent cones.
 
-Finally, Definition C.2 provides a discrete curvature bound, but the present Appendix C/D theorem stack contains no theorem transferring it to a measured-Gromov–Hausdorff-stable synthetic curvature class such as the non-collapsed regime invoked in Theorem 44. These three missing ingredients are exactly the additional inputs isolated in Section 11.4. Therefore the Euclidean-tangent conclusion of Theorem 44 is not derivable from Theorem 43 together with the current Appendix D bridge alone. ∎
+Finally, Definition C.2 provides a discrete curvature bound, but the present Appendix C/D theorem stack contains no theorem transferring it to a measured-Gromov–Hausdorff-stable synthetic curvature class such as the one invoked in Theorem 44. These four missing ingredients are exactly the additional inputs isolated in Section 11.4. Therefore the Euclidean-tangent conclusion of Theorem 44 is not derivable from Theorem 43 together with the current Appendix D bridge alone. ∎
 
 **Remark C.6b (Sufficient additional ingredients for closure).** Any theorem closing the bridge to Theorem 44 must supply at least one result in each of the following categories:
 
 | Category | Required statement |
 |:---|:---|
+| First-shell averaging | Asymptotically equal shell weights and the empirical isotropy tensor of Remark C.3.3a, or an equivalent replacement strong enough to justify the scalar-curvature averaging step |
 | Scale-free non-collapse | $\mu_n(B_r(x)) \geq c\,r^D$ for all bounded $x$ and fixed $0 < r \leq 1$ after rescaling |
 | Limit-energy identification | Mosco convergence of the rescaled random-walk Dirichlet forms, or another route identifying the limit Cheeger energy as quadratic |
-| Curvature-class transfer | A discrete $CD(K,D)$ or $RCD(K,D)$ condition uniform in $n$ and stable under measured Gromov–Hausdorff convergence |
+| Curvature-class transfer | A discrete $CD(K,D)$ or $RCD(K,D)$ condition, or an equivalent radius-2 curvature-transfer theorem, uniform in $n$ and stable under measured Gromov–Hausdorff convergence |
 
-Without all three, Theorem 44 remains genuinely conditional.
+Without all four, Theorem 44 remains genuinely conditional.
 
 ## C.7 Conclusion and status boundary
 
 This appendix establishes a regularity-necessity theorem, not the whole continuum bridge. Sections C.1–C.6 show that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages these penalties as conditional coarse-grained doubling and local $(1,2)$-Poincaré bounds under its stated hypotheses. In this precise sense, Theorem 43 is the manuscript's formal regularity theorem.
 
-What remains additional should stay explicit. The present Appendix C theorem stack does not by itself supply (i) the non-collapsed synthetic-Ricci regime invoked in Section 11.4 to obtain a.e. Euclidean tangent structure on the limit space, (ii) the AQFT convergence hypotheses of Theorem F.0—bounded-degree/short-range control, a uniform Lieb-Robinson bound, controlled coarse-graining, compatible embeddings, and lightcone identification—or (iii) the local-horizon KMS/Clausius bridge used in Section 12, which is formalized separately in Theorem 48a.
+What remains additional should stay explicit. The present Appendix C theorem stack does not by itself supply (i) the weighted-shell/local-isotropy closure used in Remark C.3.3a or an equivalent first-shell replacement, (ii) the radius-2 curvature transfer and fixed-radius non-collapse package invoked in Section 11.4, (iii) Mosco convergence / quadratic limit-energy identification for the infinitesimally Hilbertian branch used there, (iv) the branch-appropriate Euclidean rigidity input yielding local $\mathbb{R}^4$ structure on the selected non-collapsed branch, (v) the AQFT convergence hypotheses of Theorem F.0—bounded-degree/short-range control, a uniform Lieb-Robinson bound, controlled coarse-graining with coherent Hamiltonian control, compatible embeddings, and lightcone identification—or (vi) the local-horizon KMS/Clausius bridge used in Section 12, which is formalized separately in Theorem 48a.
 
 Read this way, regularity is not an arbitrary add-on: it is forced as a viability requirement, while the later continuum, AQFT, and gravity consequences are conditional on the additional bridge assumptions exactly where the manuscript states them.
 

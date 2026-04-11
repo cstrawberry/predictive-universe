@@ -422,11 +422,11 @@ $$
 \mathcal F[g,\phi]=\frac{c^3}{16\pi G}\int_M R_g\,\sqrt{-g}\,d^4x \ +\ \int_M \mathcal L_{MPU}(g,\phi)\,\sqrt{-g}\,d^4x,
 $$
 
-and minimizers of $\mathcal F_h$ converge (up to subsequences) to minimizers of $\mathcal F$ (the Einstein-Hilbert plus MPU action). The convergence of the discrete metric spaces is understood in the pointed Gromov-Hausdorff sense (Section 11).
+and minimizers of $\mathcal F_h$ converge (up to subsequences) to minimizers of $\mathcal F$ (the Einstein-Hilbert plus MPU action). The convergence of the discrete metric spaces is understood in the pointed Gromov-Hausdorff sense (Section 11). This is an action-level $\Gamma$-limit statement: it identifies the limit variational functional but does not by itself imply Mosco convergence of the rescaled random-walk Dirichlet forms, quadraticity of the limit Cheeger energy, or the Euclidean-rigidity conclusions used later on the infinitesimally Hilbertian branch of Section 11.4.
 
 **Remark D.6.1 (PU motivation for hypotheses).**
 (i) Appendix C shows that configurations with anomalous volume growth (Definition C.1) or without a uniform positive discrete Ricci lower bound (Definition C.2-C.3) violate at least one of (LV)–(RE) at sufficiently large scale (Theorem C.5). In the low-noise detailed-balance subcase of Theorem D.5, the stationary measure therefore places exponentially dominant weight on the bounded-geometry low-potential sector, motivating the equicoercivity hypothesis needed for $\Gamma$-convergence [Gromov 1999].
-(ii) Remark C.3.3a supplies an explicit local scalar curvature estimator built from Ollivier-Ricci curvature at mesh scale $h$, providing a concrete realization of the locality/consistency requirement for the Einstein-Hilbert term.
+(ii) Remark C.3.3a supplies, conditional on the weighted-shell/local-isotropy bridge input or an equivalent replacement, an explicit local scalar curvature estimator built from Ollivier-Ricci curvature at mesh scale $h$, providing a concrete realization of the locality/consistency requirement for the Einstein-Hilbert term at the action level. It does not by itself furnish the Mosco/quadratic limit-energy or Euclidean-rigidity input used later in Section 11.4.
 (iii) Appendix E derives the thermodynamic area law and fixes the emergent gravitational constant $G$ (Theorem E.6), providing the normalization invoked in (iii).
 
 *Proof.* Write
@@ -458,7 +458,7 @@ Therefore $\mathcal F_h$ $\Gamma$-converges to $\mathcal F$.
 
 By the fundamental theorem of $\Gamma$-convergence [Dal Maso 1993; Braides 2002], $\Gamma$-convergence together with equicoercivity implies convergence (up to subsequences) of minimizers of $\mathcal F_h$ to minimizers of $\mathcal F$, and convergence of minimum values. $\square$
 
-This appendix thus provides the rigorous foundation for the dynamical aspects of the Predictive Universe framework.
+This appendix thus provides the variational and action-level part of the PU dynamical bridge. The Mosco/quadratic limit-energy step, the branch-specific Euclidean rigidity input, and the AQFT coarse-graining closure remain additional hypotheses exactly where later sections state them.
 
 **Summary of Theorem 2 (Dynamically Enforced Functional Correspondence - Justified):**
 The exact equilibrium statement of Theorem 2 is Corollary D.1: any true stable PCE equilibrium must satisfy $C_P(v)=\langle\hat C_v\rangle_{x^*}$ for all $v$. On the operational side, the work-cost gap feedback mechanism (Lemma D.2) and the stochastic contraction estimate of Proposition D.1 / Corollary D.2 show that the proxy-complexity coordinates are driven toward that equilibrium up to a controlled noise floor. The ergodic stationary regime of Theorem D.5 then identifies the long-run averages of the proxy variables with expectations under the invariant measure; in low-noise detailed-balance regimes, that invariant measure assigns exponentially dominant weight to neighborhoods of the lowest-potential regular set.

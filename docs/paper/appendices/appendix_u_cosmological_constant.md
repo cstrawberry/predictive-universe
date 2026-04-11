@@ -233,7 +233,7 @@ Thus $r-\lambda=d_0(M-a)=176$. The final statement follows immediately from Theo
 
 ### U.6.1 The 24-Cell Polytope
 
-The **24-cell** is the unique regular self-dual polytope in four dimensions. Its 24 vertices, normalized to lie on $S^3 \subset \mathbb{R}^4$, are:
+The standard 24-point configuration used in Appendix U is the set of unit Hurwitz integers on $S^3 \subset \mathbb{R}^4$. It realizes the optimal kissing count $K(4)=24$, spans $\mathbb{R}^4$, and is the configuration whose spherical 5-design exactness is verified later in Theorem U.30. Its coordinates are:
 
 **Type I (8 vertices):**
 $$\pm e_1, \pm e_2, \pm e_3, \pm e_4$$
@@ -249,9 +249,9 @@ $$\frac{1}{|X|} \sum_{x \in X} P(x) = \int_{S^{n-1}} P(x) \, d\sigma(x)$$
 
 where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
-**Theorem U.7 (24-Cell Design Property).** The 24 vertices of the 24-cell form a tight spherical 5-design on $S^3$.
+**Theorem U.7 (24-Cell Design Property).** The 24 vertices of the 24-cell form a spherical 5-design on $S^3$.
 
-*Proof.* Delsarte, Goethals, and Seidel (1977). The 24-cell achieves the lower bound for the cardinality of a spherical 5-design in dimension 4. $\square$
+*Proof.* The explicit verification is given later in Theorem U.30: the Gegenbauer moments vanish for degrees $\ell=1,\dots,5$ and fail at degree $\ell=6$. This is exactly the spherical 5-design statement used in Appendix U. No tightness or uniqueness claim is needed here. $\square$
 
 ### U.6.3 Identification of Modes with Vertices
 
@@ -267,9 +267,9 @@ where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
 **Step 4 (Dimensional selection).** Theorem Z.11 establishes that $K(D) = 24$ uniquely selects $D = 4$, since $K(4) = 24$ is the only integer solution.
 
-**Step 5 (Geometric realization).** The 24-cell is the unique regular convex 4-polytope whose 24 vertices form the optimal kissing configuration $K(4) = 24$ (Conway & Sloane 1999). By Definition Z.8, these vertices correspond to the unit Hurwitz integers on $S^3$. As established in Corollary Z.5a, the 24-cell provides the microscopic geometric realization of the mode-channel correspondence.
+**Step 5 (Geometric realization).** By Definition Z.8, fix the standard 24-point configuration on $S^3$ given by the unit Hurwitz integers. This configuration realizes the optimal kissing count $K(4)=24$ and provides a concrete 24-point geometric model for the mode-channel correspondence.
 
-**Step 6 (Spherical design property).** The 24-cell vertices form a tight spherical 5-design on $S^3$ (Delsarte, Goethals & Seidel 1977). The correspondence established here is structural rather than a proved literal bijection of geometric objects: both sides contribute the same cardinality 24, the same four-dimensional optimal-packing data, and the same spherical-design information needed for the zero-mode argument of Theorem U.13. This is sufficient for the transfer of the design/quadrature input used in the later construction. $\square$
+**Step 6 (Spherical design property).** The same 24 points form a spherical 5-design on $S^3$ (Theorem U.7; verified explicitly in Theorem U.30). The correspondence established here is structural rather than a proved literal bijection of geometric objects: both sides contribute the same cardinality $24$, the same four-dimensional channel-counting data, and the spherical-design exactness needed for the zero-mode argument of Theorem U.13. These are the only 24-cell facts used later; no stronger uniqueness or rigidity statement at the level of 24-point spherical 5-designs is invoked. $\square$
 
 **Remark U.2: Nature of the Correspondence.** The mode-vertex correspondence established in Theorem U.7b is structural rather than literal: the 24 QFI-active interface modes span the real tangent space $T_{x_0}\text{Gr}(2,8) \cong \text{Hom}(\mathbb{C}^2, \mathbb{C}^6)_{\mathbb{R}}$, a 24-dimensional real vector space (complex dimension 12), while the 24-cell vertices span $\mathbb{R}^4$. The correspondence identifies the combinatorial and symmetry structures of these two 24-element sets, enabling the transfer of spherical design properties to the discretized action. This is analogous to how the Golay code organizes the same 24 modes for error correction (Theorem Z.13) without the modes literally being binary codewords.
 
@@ -987,7 +987,7 @@ For general emergent dimension $D'$:
 - Deficit: $\delta = m/2$
 - Requires $M = K(D')$ (mode-channel correspondence, Theorem Z.10) and existence of appropriate spherical design
 
-For $D = 4$ (Theorem Z.11): the 24-cell is the unique tight spherical 5-design with $|X| = 24 = K(4)$, locking the structure through the mode-channel correspondence. Theorem U.8c shows that this design-exactness does not by itself create a fifth pure-coordinate dilatation zero mode in the current continuum action.
+For $D = 4$ (Theorem Z.11): the 24-cell realizes the optimal kissing configuration $K(4)=24$ and furnishes the spherical 5-design exactness used in Appendix U. This locks the mode-channel correspondence at the level of cardinality, dimension, and quadrature input. Theorem U.8c shows that this design-exactness does not by itself create a fifth pure-coordinate dilatation zero mode in the current continuum action.
 
 ---
 
@@ -1177,7 +1177,7 @@ $$\boxed{Q = \frac{e^{-\kappa_Q}}{\sqrt{2}} = \frac{e^{-11}}{\sqrt{2}} = 1.181 \
 
 ### U.18.1 24-Cell Geometry
 
-The 24-cell is the unique regular 4-polytope with 24 vertices, 96 edges, 96 triangular faces, and 24 octahedral cells. Its vertex set on $S^3 \subset \mathbb{R}^4$ is:
+For the explicit design computation we use the same standard 24-point configuration on $S^3 \subset \mathbb{R}^4$. Its vertex set is:
 
 **Definition U.28 (24-Cell Vertices).**
 
@@ -1334,7 +1334,7 @@ $$t = D + 1$$
 
 where $D = 4$ is the emergent spacetime dimension (Theorem Z.11).
 
-*Remark.* This is a structurally determined coincidence: the 24-cell achieves design strength exactly one greater than the ambient dimension, the maximum possible for a polytope with this symmetry.
+*Remark.* The identity $t=D+1=5$ records the arithmetic relation between the explicit design strength of Theorem U.30 and the dimensional value $D=4$ from Theorem Z.11. No stronger rigidity statement about 24-point spherical 5-designs is used in Appendix U.
 
 ---
 

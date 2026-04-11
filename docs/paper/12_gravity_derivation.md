@@ -6,7 +6,7 @@ Under the following explicit premises, which are themselves derived results or f
 
 *   (A1) **Local Thermodynamic Equilibrium:** The MPU network admits coarse-grained states treatable as being in local thermodynamic equilibrium near causal horizons (**Postulate 4**); under the Appendix F/G bridge this local-horizon input is sharpened by Theorem 48a.
 *   (A2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation 69) and an entropy density given by the **Area Law derived from ND-RID information limits in Appendix E**.
-*   (A3) **Geometric Regularity:** The MPU network dynamically converges to a configuration that ensures a smooth manifold limit with controlled curvature, as justified by necessity (**Appendix C**) and dynamical stability (**Appendix D**).
+*   (A3) **Geometric Regularity and continuum closure:** The MPU network lies on the conditional Section 11.4 branch: Theorem 43 supplies the regularity-necessity layer, and in addition the weighted-shell/local-isotropy input, or an equivalent replacement, the radius-2 curvature-transfer theorem, the Mosco/quadratic limit-energy identification, and the branch-appropriate Euclidean-rigidity theorem needed for Theorems 44–46 are all assumed.
 *   (A4) **Conserved Energy-Momentum Source:** A covariantly conserved effective stress–energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ emerges from the underlying MPU dynamics, with $\nabla_\mu T^{\mu\nu}=0$ (**Appendix B**).
 *   (A5) **Local Lorentz Invariance (LLI):** The emergent dynamics are locally Lorentz invariant, a direct consequence of the causal structure derived from MPU interactions (**Theorem 46**).
 

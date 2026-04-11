@@ -676,11 +676,11 @@ The kissing numbers for low dimensions are established results from discrete geo
 | 6 | 72 | — |
 | 8 | 240 | $E_8$ |
 
-**Definition Z.8 (24-Cell Vertices).** The 24 vertices of the regular 24-cell, which form an optimal kissing configuration in 4 dimensions, are given by the unit Hurwitz integers. In Cartesian coordinates, these consist of:
+**Definition Z.8 (24-Cell Vertices).** Fix the standard 24-point configuration on $S^3$ given by the unit Hurwitz integers. In Cartesian coordinates, these consist of:
 - **Type I (8 vectors):** Permutations of $(\pm 1, 0, 0, 0)$
 - **Type II (16 vectors):** $(\pm \frac{1}{2}, \pm \frac{1}{2}, \pm \frac{1}{2}, \pm \frac{1}{2})$ with all sign combinations
 
-All 24 vectors have unit length. The Type I vectors form the vertices of a cross-polytope, while the Type II vectors form the vertices of a hypercube scaled by $1/2$. Together they constitute the 24-cell, which is self-dual and admits a regular honeycomb tiling of 4-dimensional Euclidean space. The 24-cell realizes the optimal kissing configuration $K(4)=24$ [Conway & Sloane 1999; Musin 2008].
+All 24 vectors have unit length and span $\mathbb{R}^4$. This is the standard coordinate realization conventionally called the 24-cell vertex set. It realizes the optimal kissing configuration $K(4)=24$ [Musin 2008], and Theorem U.30 proves that its uniform measure on $S^3$ is a spherical 5-design.
 
 Equivalently, the $D_4$ root lattice can be defined as
 $$D_4=\{(x_1,x_2,x_3,x_4)\in\mathbb Z^4:\ \sum_{i=1}^4 x_i\in 2\mathbb Z\},$$
@@ -1613,17 +1613,16 @@ Each step follows from the previous by theorem or definition. No continuously ad
 
 ### Z.14.1 24-Cell Structure
 
-**Corollary Z.5 (24-Cell Constraints).** The 24-cell polytope in 4 dimensions simultaneously satisfies:
-1. Its 24 vertices form optimal kissing configuration K(4) = 24
-2. Its symmetry group is the Weyl group of F₄ with order 1,152 = 2⁷ × 3²
-3. Its dual is also a 24-cell (self-dual)
-4. It admits a regular honeycomb that tiles 4-dimensional Euclidean space
+**Corollary Z.5 (24-Cell Constraints).** The standard 24-point configuration of Definition Z.8 simultaneously satisfies:
+1. Its 24 points realize the optimal kissing configuration $K(4)=24$
+2. It spans $\mathbb{R}^4$ and is vertex-transitive under the Weyl group $W(F_4)$
+3. Its uniform measure on $S^3$ is a spherical 5-design (Theorem U.30)
 
-The high degree of F₄ symmetry ensures uniform local environments, minimizing operational cost $V_{\text{op}}$. The 24-cell is the unique regular convex 4-polytope that is self-dual and not a member of the simplex/hypercube/cross-polytope families, and it is the only regular polytope unique to four dimensions [Conway & Sloane 1999].
+These are the geometric facts used later in the PU chain. They provide a concrete 24-point four-dimensional packing model with enough symmetry for uniform channel bookkeeping and with exact degree-5 quadrature for the Appendix U zero-mode computation.
 
-Predictive holonomy around closed loops in this 24-neighbor structure induces spacetime curvature (Theorem 47): parallel transport of predictive information accumulates a holonomy characterized by the Riemann tensor $R^{\rho}{}_{\sigma\mu\nu}$. The uniform $F_4$ environment constrains admissible curvature components and suppresses anisotropies in $V_{\text{op}}$.
+Predictive holonomy around closed loops in this 24-neighbor structure induces spacetime curvature (Theorem 47): parallel transport of predictive information accumulates a holonomy characterized by the Riemann tensor $R^{\rho}{}_{\sigma\mu\nu}$. The $W(F_4)$ symmetry constrains admissible anisotropies in $V_{\text{op}}$ at this bookkeeping level.
 
-*Proof.* Standard results: the classification of regular convex 4-polytopes shows that, besides the simplex, hypercube, and cross-polytope families (which exist in all dimensions), the 24-cell is the unique additional regular polytope unique to $D=4$ and is self-dual. Its vertex set realizes $K(4)=24$ and its symmetry group is the Weyl group of $F_4$; the associated regular 24-cell honeycomb provides a tiling of $\mathbb{R}^4$ [Conway & Sloane 1999]. ∎
+*Proof.* Definition Z.8 gives the coordinates. The kissing-count statement is the classical value $K(4)=24$. The coordinate set spans $\mathbb{R}^4$, and its symmetry group is the Weyl group $W(F_4)$. The spherical 5-design statement is Theorem U.30. ∎
 
 **Corollary Z.5a (24-Cell Constraints on Network Parameters).** The saturation $K(4) = 24$ realized by the 24-cell ($D_4$ lattice) constrains the geometric inefficiency factor $\eta$ and the independence factor $\chi$ appearing in the channel density $\sigma_{\mathrm{eff}} = \chi/(\eta \delta^2)$ (Theorem E.3). At lattice scale,
 $$

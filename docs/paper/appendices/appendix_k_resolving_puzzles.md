@@ -857,7 +857,7 @@ $$\kappa_{\mathrm{ref}} = 141.5$$
 - **Code structure:** Extended Binary Golay Code $[24,12,8]$ is PCE-optimal (Theorem Z.13)
 - **Steiner system:** the 759 octads form $S(5, 8, 24)$ (Theorem U.2)
 - **Hessian identity:** $r - \lambda = 176 = d_0(M - a)$ connects design parameters to PU constants (Theorem U.6)
-- **24-cell polytope:** the 24 vertices form a tight spherical 5-design on $S^3$ (Theorem U.7), establishing mode-vertex correspondence (Theorem U.7b)
+- **24-cell polytope:** the 24 vertices form a spherical 5-design on $S^3$ (Theorems U.7 and U.30), establishing mode-vertex correspondence (Theorem U.7b)
 
 **Reference Evaluation:**
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-283}$$

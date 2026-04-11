@@ -32,7 +32,7 @@ where $B_{R}(v)$ is the metric ball, $|B_{R}(v)|$ its vertex count, and $\delta_
 
 **11.3.2 Definition 37 (Def 37): Uniformly Bounded Synthetic Ricci Curvature**
 
-A network $\mathcal{N}$ has uniformly bounded synthetic Ricci curvature if there exists a constant $K$ such that the chosen discrete curvature notion (e.g. a Bakry–Émery curvature‑dimension inequality or an Ollivier‑Ricci lower bound) satisfies $\text{Ric}_N \ge -K$ uniformly and, together with Definition 36, yields uniform volume‑doubling and a (1,2) Poincaré‑type inequality for the associated counting measure on $(\mathcal{V}, d_{\mathcal{N}})$. This controls local divergence/convergence of geodesics in the sense required for the pGH compactness and rectifiability statements in Theorem 44.
+A network $\mathcal{N}$ has uniformly bounded synthetic Ricci curvature if it belongs to a class for which there exists a constant $K$ and a discrete curvature-dimension / Bochner control, or an equivalent radius-2 curvature-transfer theorem, yielding $\text{Ric}_N \ge -K$ uniformly and, together with Definition 36, uniform volume-doubling and a (1,2) Poincaré-type inequality for the associated counting measure on $(\mathcal{V}, d_{\mathcal{N}})$. This controls local divergence/convergence of geodesics in the sense required for the measured compactness and rectifiability statements used in Theorem 44. A stand-alone one-step Ollivier-Ricci lower bound counts here only when accompanied by such a transfer mechanism.
 
 **Theorem 43 (Necessary Emergence of Geometric Regularity)**
 
@@ -42,17 +42,34 @@ Assume the regularity-penalty hypotheses established in Appendix C and the varia
 
 **11.4 Geometric Convergence to a Continuous Manifold (Conditional on Thm 43)**
 
-Assuming Theorem 43, Appendix D supplies the bounded-action compactness framework for continuum limits of the discrete MPU network metric space. The stronger hypotheses needed to obtain a.e. Euclidean tangent cones on the limit space are not supplied by Appendix C alone and remain explicit additional assumptions at this stage. On that conditional branch, the limit admits an a.e. Euclidean regular set supporting an effective manifold description.
+Assuming Theorem 43, Appendix D supplies the bounded-action compactness framework for continuum limits of the discrete MPU network metric space. The branch used below requires four additional inputs that Appendices C and D do not derive: first-shell weighted-shell/local-isotropy control, or an equivalent replacement, for the scalar-curvature averaging step; a radius-2 curvature-transfer theorem placing the rescaled family in a measured-Gromov-Hausdorff-stable synthetic-curvature class; Mosco convergence of the rescaled Dirichlet forms, or an equivalent theorem identifying the limit Cheeger energy as quadratic; and a branch-appropriate Euclidean-rigidity/regularity theorem on the selected non-collapsed branch. On that explicit conditional branch, the limit admits an a.e. Euclidean regular set supporting an effective manifold description.
 
 **11.4.1 Theorem 44 (Gromov-Hausdorff Limit)**
 
-**Conditional on Theorem 43 and on a non-collapsed synthetic-Ricci regularity regime for the rescaled spaces**, consider a sequence of pointed, rescaled MPU network metric spaces $\{(X_n, o_n) = (\mathcal{V}_n, \delta_{eff, n}^{-1} d_{\mathcal{N}_n}, o_n)\}$ where mesh size $\delta_{eff, n} \to 0$. Equip each rescaled space with the normalized counting measure $\mu_n$ (normalized so that $\mu_n(B_1(o_n))=1$ after rescaling). Assume in addition that on every bounded radius range the rescaled sequence satisfies family-uniform doubling and $(1,2)$-Poincaré control compatible with the bounded-geometry hypotheses of Lemma D.6a, and that the measured limit lies in a non-collapsed synthetic-Ricci class for which the regularity theory yields Euclidean tangent cones on a full-measure regular set. Then the family is pre‑compact in the pointed Gromov–Hausdorff topology [Gromov 1999]. Consequently, a subsequence converges in pGH sense to a limit pointed metric space $(M, d_\infty, o_\infty)$. Moreover, along the same subsequence the measures $\mu_n$ subconverge in the corresponding measured sense to a Radon measure $\mu_\infty$ on $M$, so $(M,d_\infty,\mu_\infty)$ is a doubling PI space. Under the stated non-collapsed synthetic-Ricci hypothesis, there exists a Borel regular set $M_{reg}\subseteq M$ with $\mu_\infty(M\setminus M_{reg})=0$ such that for every $p\in M_{reg}$ the tangent cones are Euclidean $\mathbb{R}^D$, and the $D$-dimensional Euclidean tangent is unique $\mu_\infty$‑a.e.
+**Conditional on Theorem 43 and on the following additional bridge inputs for the rescaled spaces**, consider a sequence of pointed, rescaled MPU network metric spaces
+$$
+\{(X_n,o_n)\}=\{(\mathcal{V}_n,\delta_{eff,n}^{-1}d_{\mathcal N_n},o_n)\},
+\qquad
+\delta_{eff,n}\to 0,
+$$
+equipped with normalized counting measures $\mu_n$ such that $\mu_n(B_1(o_n))=1$ after rescaling. Assume:
 
-*Proof:* Lemma D.6a supplies pointed measured Gromov–Hausdorff precompactness for bounded-action families once the rescaled sequence satisfies its bounded-geometry hypotheses. The assumed family-uniform doubling and $(1,2)$-Poincaré control pass to the measured limit, yielding a Radon measure $\mu_\infty$ with $(M,d_\infty,\mu_\infty)$ doubling and PI. The additional non-collapsed synthetic-Ricci hypothesis is then precisely the extra input under which the regularity theory yields Euclidean tangent cones and their a.e. uniqueness on a full-measure regular set. ∎
+1. **Weighted-shell/local-isotropy input.** The first-shell weights satisfy the asymptotic equal-weight and weighted-isotropy conditions of Remark C.3.3a, or an equivalent replacement strong enough to justify the scalar-curvature averaging step used in the action bridge.
+2. **Radius-2 curvature transfer.** On every bounded radius range, the rescaled family satisfies a family-uniform discrete curvature-dimension / Bochner estimate, or an equivalent radius-2 two-ball theorem, stable under the measured convergence used below and yielding fixed-radius doubling and $(1,2)$-Poincaré control compatible with Lemma D.6a.
+3. **Quadratic limit energy.** The rescaled random-walk Dirichlet forms Mosco-converge to the limit Cheeger energy, or another theorem identifies the limit first-order energy as a quadratic form.
+4. **Euclidean rigidity and regularity on the selected branch.** The measured limit lies on a non-collapsed branch for which the relevant comparison-volume rigidity theorem, quantitative Reifenberg theorem, or equivalent branch-specific regularity theorem yields Euclidean tangents on the regular set, their $\mu_\infty$-a.e. uniqueness, and the coordinate regularity used in Theorem 45.
+
+Then the family is pre-compact in the pointed measured Gromov–Hausdorff topology. Consequently, a subsequence converges in the measured sense to a limit pointed metric-measure space
+$$
+(M,d_\infty,\mu_\infty,o_\infty).
+$$
+Moreover, $(M,d_\infty,\mu_\infty)$ is a doubling PI space, the limit Cheeger energy is quadratic, and hence the limit is infinitesimally Hilbertian. Under assumption (4), there exists a Borel regular set $M_{reg}\subseteq M$ with $\mu_\infty(M\setminus M_{reg})=0$ such that for every $p\in M_{reg}$ the tangent cones are Euclidean $\mathbb{R}^D$; on the PU branch selected by Theorem Z.11, this means $\mathbb{R}^4$. The Euclidean tangent is unique $\mu_\infty$-a.e.
+
+*Proof:* Lemma D.6a supplies pointed measured Gromov–Hausdorff precompactness once the rescaled sequence satisfies its bounded-geometry hypotheses. Assumption (2) provides the family-uniform fixed-radius doubling/Poincaré package and the curvature-class stability required for passage to the measured limit. Assumption (3) identifies the limit Cheeger energy as quadratic, so the limit is infinitesimally Hilbertian. Assumption (4) is exactly the Euclidean-rigidity/regularity input on the selected non-collapsed branch and yields the stated regular set, the $\mu_\infty$-a.e. uniqueness of Euclidean tangents, and the coordinate regularity used in Theorem 45. Assumption (1) furnishes the first-shell averaging input needed whenever the scalar-curvature proxy of Remark C.3.3a is used to connect the discrete curvature term to the continuum Einstein-Hilbert term. ∎
 
 **11.5 Emergence of the Metric Tensor (Conditional on Thm 43, Thm 44)**
 
-The existence of Euclidean tangent cones on the regular set allows definition of an a.e. Riemannian metric tensor compatible with the limit distance.
+On the selected continuum branch, the quadratic limit energy together with Euclidean tangent cones on the regular set allows definition of an a.e. Riemannian metric tensor compatible with the limit distance.
 
 **11.5.1 Theorem 45 (Metric Tensor $g_{\mu\nu}$)**
 
@@ -60,8 +77,13 @@ Conditional on Theorem 44, the limit space admits an a.e. defined, symmetric, no
 $$
 ds^2 = g_{\mu\nu}(x) dx^\mu dx^\nu \quad \text{(66)}
 $$
-On $M_{reg}$, the non‑collapsed synthetic‑Ricci regime yields $C^{1,\alpha}$ regularity in appropriate coordinates (e.g. harmonic coordinates on the regular set) [Cheeger & Colding 2000]. This metric tensor endows $(M_{reg}, g_{\mu\nu})$ with a compatible (a.e.) differentiable structure, establishing it as a (pseudo-)Riemannian manifold on the regular set induced by the underlying ND-RID propagation cost metric $d_{\mathcal{N}}$.
-*Proof:* On $M_{reg}$, Euclidean tangent cones $T_xM\cong\mathbb{R}^D$ provide a canonical inner product $\langle\cdot,\cdot\rangle_x$ a.e. Choosing measurable coordinate charts on $M_{reg}$ from the differentiable structure associated with doubling+Poincaré (as ensured in Theorem 44), define $g_{\mu\nu}(x):=\langle \partial_\mu,\partial_\nu\rangle_x$ a.e. Symmetry and non-degeneracy follow from properties of the Euclidean inner product on the tangent cone. By construction, (66) matches the quadratic approximation of $d_\infty$ in local coordinates on $M_{reg}$. Regularity statements follow from the regularity theory for non‑collapsed synthetic‑Ricci limits on the regular set [Cheeger & Colding 2000]. ∎
+On $M_{reg}$, the quadraticity of the limit Cheeger energy makes the first-order differential structure infinitesimally Hilbertian, and the branch-appropriate Euclidean-rigidity/regularity theorem assumed in Theorem 44 yields the stated $C^{1,\alpha}$ regularity in appropriate coordinates. This metric tensor endows $(M_{reg}, g_{\mu\nu})$ with a compatible (a.e.) differentiable structure, establishing it as a (pseudo-)Riemannian manifold on the regular set induced by the underlying ND-RID propagation cost metric $d_{\mathcal{N}}$.
+
+*Proof:* The quadratic Cheeger energy from Theorem 44 implies infinitesimal Hilbertianity, so the first-order differential structure on the doubling PI limit carries a pointwise inner product a.e. On $M_{reg}$, the Euclidean tangent cones $T_xM\cong\mathbb{R}^D$ provide the canonical local model; on the PU branch, $D=4$. Choosing measurable coordinate charts on $M_{reg}$ from the regularity theorem invoked in Theorem 44, define
+$$
+g_{\mu\nu}(x):=\langle \partial_\mu,\partial_\nu\rangle_x
+$$
+a.e. Symmetry and non-degeneracy follow from the Euclidean inner product on the tangent cone. By construction, (66) matches the quadratic approximation of $d_\infty$ in local coordinates on $M_{reg}$. The stated $C^{1,\alpha}$ regularity is exactly the regularity furnished on the selected branch by the Euclidean-rigidity/regularity hypothesis assumed in Theorem 44. ∎
 
 ## 11.5.2 Continuum Relabeling Symmetry and Diffeomorphism Invariance
 
