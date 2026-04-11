@@ -821,7 +821,7 @@ in excellent agreement with the observed hierarchy.
 - The discrete action $S_{EW} = \kappa_{EW}$ counts real configuration space dimensions subject to alignment (Theorem T.4)
 - Gaussian fluctuations around the vacuum minimum contribute at most $O(1)$ corrections, never $O(M_{Pl}^2/v^2) \sim 10^{34}$
 - The PCE-Attractor orbit Gr(2,8) with Bures metric provides the geometric arena; the code structure selects specific minima
-- Connection to cosmological constant: both $v$ and $\Lambda$ emerge from the same Golay-Steiner structure via different complexity channels ($\kappa_{EW} = 38.5$ versus the Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$; Theorem U.8c qualifies that value as branch-dependent, while the corresponding four-mode branch value is $\kappa_{\Lambda,\mathrm{trans}} = 142$ and would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity)
+- Connection to cosmological constant: both $v$ and $\Lambda$ emerge from the same Golay-Steiner structure via different complexity channels ($\kappa_{EW} = 38.5$ versus the Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$; Theorem U.8c qualifies that value as branch-dependent, while the corresponding four-mode branch value is $\kappa_{\Lambda,\mathrm{trans}} = 142$ on the corrected full-discrete branch of Theorem U.13b under its explicit false-vacuum spectral hypotheses)
 
 **Weinberg Angle and Higgs Mass:** The same mechanism determines:
 - Weinberg angle: $\sin^2\theta_W^{(0)} = 3/8$ from PCE isotropy requiring equal gauge kinetic stiffness **(Theorem T.14)**
@@ -850,7 +850,7 @@ of complex dimension $\kappa_0 = k(M-k)=144$ (Theorem U.3). Appendix U then intr
 $$\kappa_{\mathrm{ref}} = \frac{N_{\mathbb{R}} - m}{2},$$
 with $N_{\mathbb{R}}=288$ and $m=5$ used as the Appendix U five-mode reference count, giving
 $$\kappa_{\mathrm{ref}} = 141.5$$
-(Theorems U.15-U.16). Theorem U.8c strengthens the status statement: in the current Definition U.4 continuum action, the pure-coordinate dilatation tangent is a strict negative mode rather than a zero mode, so the five-mode value remains a reference branch rather than a theorem-level vacuum closure. The corresponding four-mode branch value is $\kappa_{\mathrm{trans}}=142$, but realizing that branch at theorem level would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity.
+(Theorems U.15-U.16). Theorem U.8c strengthens the status statement: in the current Definition U.4 continuum action, the pure-coordinate dilatation tangent is a strict negative mode rather than a zero mode, so the five-mode value remains a reference branch rather than a theorem-level vacuum closure. The corresponding four-mode branch value is $\kappa_{\mathrm{trans}}=142$, and Theorem U.13b closes the corrected full discrete problem under the explicit false-vacuum spectral hypotheses stated there.
 
 **Geometric Foundation:** The reference count is tied to the following discrete structures:
 - **Interface modes:** $M = 2ab = 24$ where $a = 2$ (active kernel, Theorem Z.1) and $b = 6$ (inactive complement)

@@ -542,6 +542,91 @@ Theorem E.2 supplies the universal bound $C_{\max} < \ln d_0$ for any single ND-
 
 The structural expectation is therefore conditional rather than absolute: wherever interface constraints relax and substrate alignment improves, POP/PCE create pressure toward less lossy, more structurally faithful communication.
 
+#### Geodesic Coherence as a Modeling Surrogate
+
+The preceding analysis established that comprehension is dimensionality reconstruction (Thesis P.2.6.3b) and that PCE creates pressure toward communication formats that preserve relational structure (Thesis P.2.6.3c). To record that pressure in a compact mathematical vocabulary without overstating what has already been proved, it is useful to introduce a modeling-level weighted graph attached to a predictor's already-compressed organization.
+
+**Definition P.2.6.3d (Model-Graph Surrogate).** Let $S$ be an aggregate predictor with context state $\text{context}_S(t)$ as in Definition L.1. A *model-graph surrogate* for $S$ is any finite weighted graph
+$$
+\mathcal K_S=(\mathcal V,\mathcal E,w), \qquad w:\mathcal E\to\mathbb R_{>0},
+$$
+whose vertices represent externally chosen functional components of the predictor's operative model and whose edge weights estimate the reconstruction or coordination cost of moving between those components. The choice of vertices and weights is a coarse-graining device, not an additional theorem of PU.
+
+For a path $\gamma=(v_0,\dots,v_n)$ in $\mathcal K_S$, define the surrogate reconstruction cost
+$$
+R_{\mathrm{recon}}(\gamma):=\sum_{m=0}^{n-1} w(v_m,v_{m+1}).
+$$
+
+**Proposition P.2.6.3d.1 (Shortest Paths Minimize the Surrogate Cost).** On any model-graph surrogate $\mathcal K_S$, a shortest path between two vertices minimizes $R_{\mathrm{recon}}$ among all paths with the same endpoints.
+
+*Proof.* This is immediate from the definition of shortest path in a positively weighted graph. $\square$
+
+This elementary observation becomes interpretively useful once low edge weight is read as strong contextual scaffolding: the lower the incremental reconstruction cost, the less serial rebuilding the receiver must do to move from one component of the model to the next. In that surrogate sense, shortest paths encode maximally coherent orderings relative to the chosen coarse-graining. The reconstruction-cost viewpoint is also compatible with classical rate-distortion reasoning about the price of lossy compression [Berger 1971].
+
+> **Remark P.2.6.3d.1a (Status).** Definition P.2.6.3d does not claim that PU has already derived a unique aggregate metric analogous to the Fubini–Study metric of Theorem 23c. It only records a convenient modeling vocabulary for discussing coarse-grained reconstruction overhead in systems whose internal organization has already been compressed by PCE.
+
+> **Remark P.2.6.3d.1b (Precedents).** Weighted shortest-path models are standard in network science [Newman 2010], and statistical distinguishability metrics have a long information-geometric history [Rao 1945; Amari 1985; Amari & Nagaoka 2000]. The PU-specific point is narrower: once one has a PCE-selected context state and a propagation-cost notion such as Definition 35, it is natural to discuss communication bottlenecks using weighted-graph surrogates.
+
+> **Remark P.2.6.3d.1c (Tacit versus explicit order).** Because the surrogate graph records relations that need not be serially verbalizable, it provides a compact way to discuss the tacit/explicit gap already emphasized in the preceding subsection [Polanyi 1966].
+
+**Proposition P.2.6.3d.2 (Conditional Gibbs–Zipf Template).** Suppose a ranked family of weights satisfies
+$$
+p_{(r)} = Z^{-1} e^{-c_{(r)}/\mu},
+\qquad
+\mu>0,
+$$
+and the ranked costs obey
+$$
+c_{(r)} = a\ln(r+V)+b
+$$
+for constants $a>0$, $V\ge 0$, and $b\in\mathbb R$. Then
+$$
+p_{(r)} = Z'^{-1}(r+V)^{-a/\mu}.
+$$
+
+*Proof.* Substitute the cost law into the Gibbs form and absorb the constant factor $e^{-b/\mu}$ into $Z'$. $\square$
+
+This proposition is a general mathematical template rather than a derived law of PU. It shows that Zipf–Mandelbrot statistics follow whenever a system has both a Gibbs-type activation law and logarithmic ranked costs [Shannon 1959; Mandelbrot 1953, 1966; Zipf 1949]. Whether a particular predictive architecture satisfies those extra hypotheses is an empirical and model-specific question.
+
+### P.2.6.4 Perspectival Geometry
+
+The same surrogate vocabulary can be indexed by predictor.
+
+**Definition P.2.6.4 (Perspectival Geometry).** A *perspectival geometry* is a family of model-graph surrogates $\{\mathcal K_S\}$ indexed by predictors $S$, where different predictors may coarse-grain and weight comparable task structure differently because their context states, training histories, and operational constraints differ.
+
+#### Shared Paths Across Predictors
+
+A minimal quantitative comparison survives even when two predictors do not agree perfectly.
+
+**Proposition P.2.6.4.1 (Shared-Path Distortion Bound).** Let $S_1,S_2$ be predictors with model-graph surrogates that share a common subgraph. If corresponding shared edges satisfy
+$$
+|w_1(e)-w_2(e)|\le \epsilon
+$$
+for every shared edge $e$, then any shared path $\gamma$ with $|\gamma|$ edges satisfies
+$$
+|R_{\mathrm{recon}}^{(1)}(\gamma)-R_{\mathrm{recon}}^{(2)}(\gamma)|\le \epsilon |\gamma|.
+$$
+
+*Proof.* Sum the edgewise differences and apply the triangle inequality. $\square$
+
+This bound is elementary, but it makes one point explicit: shared structure does not guarantee identical reconstruction cost, yet it does bound disagreement linearly in path length when the local edgewise discrepancy is small.
+
+#### Sequential Cost and Anholonomy
+
+One may also distinguish the edge-sum surrogate from a history-dependent sequential cost.
+
+**Definition P.2.6.4.2 (Sequential Cost and Anholonomy).** On a model-graph surrogate one may introduce a history-dependent sequential cost $R_{\mathrm{seq}}(\gamma)$ for traversing a path $\gamma$, where the incremental cost of each step is allowed to depend on the previously accumulated context rather than only on the current edge weight. For a closed loop $\gamma$, define the associated *anholonomy*
+$$
+\mathcal A_S(\gamma):=R_{\mathrm{seq}}(\gamma^+)-R_{\mathrm{seq}}(\gamma^-),
+$$
+where $\gamma^+$ and $\gamma^-$ denote the two traversal orientations.
+
+**Proposition P.2.6.4.3 (Markov Limit).** If the sequential cost reduces to the edge-sum model on every path, so that $R_{\mathrm{seq}}(\gamma)=R_{\mathrm{recon}}(\gamma)$, then $\mathcal A_S(\gamma)=0$ for every closed loop.
+
+*Proof.* In that case both orientations have the same edge-sum cost. $\square$
+
+This terminology records a possible modeling distinction between pairwise and history-dependent reconstruction, but PU does not presently derive a unique sequential-cost law for aggregate predictors. The definitions are therefore bookkeeping tools for later models, not additional theorem-level physics.
+
 
 
 ---

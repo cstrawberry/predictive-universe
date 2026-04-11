@@ -443,7 +443,7 @@ This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV, consistent with the ex
 |Configuration |Full Grassmannian Gr(12,24)|Left-chiral × reservoir |
 |Base complexity|$k^2 = 144$ |$bk/2 = 36$ |
 |Zero modes |4 exact translations, with a five-mode reference count used only on the Appendix U reference branch |1 |
-|**Complexity** |$\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the five-mode reference branch; $\kappa_{\Lambda,\mathrm{trans}} = 142$ is the corresponding four-mode branch value, whose theorem-level realization would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity |$\kappa_{EW} = 38.5$ |
+|**Complexity** |$\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the five-mode reference branch; $\kappa_{\Lambda,\mathrm{trans}} = 142$ is the corrected four-mode branch value under the explicit false-vacuum spectral hypotheses of Theorem U.13b |$\kappa_{EW} = 38.5$ |
 |**Suppression**|$e^{-283}$ on the five-mode reference branch; $e^{-284}$ on the translational branch |$e^{-38.5} \sim 10^{-17}$|
 
 -----
@@ -4115,7 +4115,7 @@ The following relationships emerge from the unified framework and provide intern
 
 $$\frac{\kappa_{\Lambda,\mathrm{ref}}}{\kappa_{EW}} = \frac{141.5}{38.5} \approx 3.68.$$
 
-*The corresponding four-mode branch value, whose theorem-level realization would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity, is*
+*The corresponding corrected four-mode branch value, under the explicit false-vacuum spectral hypotheses of Theorem U.13b, is*
 
 $$\frac{\kappa_{\Lambda,\mathrm{trans}}}{\kappa_{EW}} = \frac{142}{38.5} \approx 3.69.$$
 
@@ -4127,7 +4127,7 @@ $$\kappa_{\Lambda,\mathrm{ref}} - \kappa_{EW} = 103,$$
 
 $$\frac{\Lambda}{v^4} \sim e^{-206} = 3.43 \times 10^{-90}.$$
 
-*The corresponding four-mode branch value gives $\kappa_{\Lambda,\mathrm{trans}} - \kappa_{EW} = 103.5$, hence $e^{-207} = 1.26 \times 10^{-90}$.*
+*The corresponding corrected four-mode branch value gives $\kappa_{\Lambda,\mathrm{trans}} - \kappa_{EW} = 103.5$, hence $e^{-207} = 1.26 \times 10^{-90}$.*
 
 **Corollary T.63.2** (Baryogenesis-Electroweak Relationship). *The baryogenesis complexity satisfies:*
 
@@ -4145,7 +4145,7 @@ $$\frac{\kappa_{\Lambda,\mathrm{trans}}}{k^2} = \frac{142}{144} = 1 - \frac{1}{7
 
 $$\frac{\kappa_{EW}}{b^2} = \frac{38.5}{36} \approx 1.069.$$
 
-*The base complexities $k^2$ and $b^2$ are modified only by zero-mode corrections of order unity. Theorem U.8c shows that the five-mode cosmological value is a reference-branch statement rather than a theorem-level continuum zero-mode count.*
+*The base complexities $k^2$ and $b^2$ are modified only by zero-mode corrections of order unity. Theorem U.8c shows that the five-mode cosmological value is a reference-branch statement rather than a theorem-level continuum zero-mode count, while Theorem U.13b closes the corrected four-mode branch under its explicit false-vacuum spectral hypotheses.*
 
 -----
 
@@ -4158,7 +4158,7 @@ $$\frac{\kappa_{EW}}{b^2} = \frac{38.5}{36} \approx 1.069.$$
 For the cosmological constant:
 
 - Configuration space: Gr(12, 24)
-- Complexity: $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the Appendix U five-mode reference branch; the corresponding four-mode branch value is $\kappa_{\Lambda,\mathrm{trans}} = 142$, but realizing that branch at theorem level would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity
+- Complexity: $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the Appendix U five-mode reference branch; the corresponding corrected four-mode branch value is $\kappa_{\Lambda,\mathrm{trans}} = 142$ under the explicit false-vacuum spectral hypotheses of Theorem U.13b
 - Suppression: $e^{-283}$ on the five-mode reference branch; $e^{-284}$ on the translational branch
 
 For the electroweak scale:
@@ -4167,7 +4167,7 @@ For the electroweak scale:
 - Complexity: $\kappa_{EW} = 38.5$
 - Suppression: $e^{-38.5} \sim 10^{-17}$
 
-The different numerical values arise from the different dimensions and symmetries of these configuration spaces, not from different mechanisms. Theorem U.8c shows that the five-mode cosmological value is branch-dependent rather than a theorem-level continuum zero-mode count. ∎
+The different numerical values arise from the different dimensions and symmetries of these configuration spaces, not from different mechanisms. Theorem U.8c shows that the five-mode cosmological value is branch-dependent rather than a theorem-level continuum zero-mode count, while the corrected four-mode branch is theorem-level on the discrete side under the stated hypotheses. ∎
 
 **Corollary T.65.1** (No fine-tuning of the counting data on the reference branches). *Within the counting conventions used in Theorem U.16 and Section T.23.5, the leading hierarchy exponents are fixed by discrete geometric data: the vacuum reference exponent uses Grassmannian dimension $144$ with the Appendix U five-mode reference count, and the electroweak exponent uses effective dimension $39$ with $1$ zero mode. Theorem U.8c shows that the vacuum five-mode statement is branch-dependent rather than theorem-level for the current Definition U.4 continuum action.*
 
@@ -4183,7 +4183,7 @@ The different numerical values arise from the different dimensions and symmetrie
 |**Extra dimensions** |Geometric dilution |Requires tuning |Requires tuning |
 |**Anthropic/landscape** |Selection from $10^{500}$ vacua |Non-predictive |Non-predictive |
 |**Technical naturalness**|Symmetry protection |Does not apply |Partial |
-|**PU Framework** |Exponential from config. space dim.|Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$, with corresponding four-mode branch value $\kappa_{\Lambda,\mathrm{trans}} = 142$ whose theorem-level realization would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity |$\kappa_{EW} = 38.5$ derived |
+|**PU Framework** |Exponential from config. space dim.|Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$, with corresponding corrected four-mode branch value $\kappa_{\Lambda,\mathrm{trans}} = 142$ under the explicit false-vacuum spectral hypotheses of Theorem U.13b |$\kappa_{EW} = 38.5$ derived |
 
 The PU framework **derives** the electroweak suppression and a branch-dependent cosmological reference suppression from the same counting mechanism, providing predictive relationships between scales rather than treating them as independent parameters. The discrete nature of the configuration space dimensions ($k^2 = 144$, $b^2 = 36$) and exact zero-mode counts ($m \in \{1, 4\}$ in the current continuum action) protects the leading exponents against continuous quantum corrections, while the Appendix U five-mode count is retained only as the stated reference branch singled out by Theorem U.16 and qualified by Theorem U.8c.
 

@@ -10,7 +10,9 @@
 *   Albert, D. (2000). *Time and Chance*. Harvard University Press.
 *   Albert, D. (2012). On the Origin of Everything. Review of L. Krauss, *A Universe from Nothing*. *New York Times*
 *   ALEPH, DELPHI, L3, OPAL, and SLD Collaborations (Schael, S., *et al.*) (2006). Precision electroweak measurements on the Z resonance. *Physics Reports*, *427*(5–6), 257–454. DOI: 10.1016/j.physrep.2005.12.006
+*   Amari, S.-I. (1985). *Differential-Geometrical Methods in Statistics* (Lecture Notes in Statistics, Vol. 28). Springer-Verlag.
 *   Amari, S.-I. (1998). Natural gradient works efficiently in learning. *Neural Computation*, *10*(2), 251–276.
+*   Amari, S.-I. and Nagaoka, H. (2000). *Methods of Information Geometry* (Translations of Mathematical Monographs, Vol. 191). American Mathematical Society.
 *   Arıkan, E. (2009). Channel polarization: A method for constructing capacity-achieving codes for symmetric binary-input memoryless channels. *IEEE Transactions on Information Theory*, *55*(7), 3051–3073. DOI: 10.1109/TIT.2009.2021379
 *   Ambrosio, L., Gigli, N., & Savaré, G. (2008). *Gradient Flows in Metric Spaces and in the Space of Probability Measures* (2nd ed.). Birkhäuser. DOI: 10.1007/978-3-7643-8722-8
 *   Ambrosio, L., Gigli, N., & Savaré, G. (2014). Metric measure spaces with Riemannian Ricci curvature bounded from below. *Duke Mathematical Journal*, *163*(7), 1405–1490. DOI: 10.1215/00127094-2681605
@@ -43,10 +45,14 @@
 *   Belinfante, F. J. (1939). On the spin angular momentum of mesons. *Physica*, *6*(9–10), 887–898. DOI: 10.1016/S0031-8914(39)80090-X
 *   Bell, J. S. (1964). On the Einstein Podolsky Rosen paradox. *Physics Physique Физика*, *1*(3), 195–200.
 *   Bell, J. S., & Jackiw, R. (1969). A PCAC puzzle: $\pi^0 \to \gamma\gamma$ in the σ-model. *Il Nuovo Cimento A*, *60*(1), 47–61. DOI: 10.1007/BF02823296
+*   Bem, D. J., & Honorton, C. (1994). Does psi exist? Replicable evidence for an anomalous process of information transfer. *Psychological Bulletin*, *115*(1), 4–18. DOI: 10.1037/0033-2909.115.1.4
+*   Bem, D. J. (2011). Feeling the future: Experimental evidence for anomalous retroactive influences on cognition and affect. *Journal of Personality and Social Psychology*, *100*(3), 407–425. DOI: 10.1037/a0021524
+*   Bem, D. J., Tressoldi, P. E., Rabeyron, T., & Duggan, M. (2016). Feeling the future: A meta-analysis of 90 experiments on the anomalous anticipation of random future events. *F1000Research*, *4*, 1188. DOI: 10.12688/f1000research.7177.2
 *   Bengtsson, I., & Życzkowski, K. (2006). *Geometry of Quantum States: An Introduction to Quantum Entanglement*. Cambridge University Press.
 *   Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525–532. DOI: 10.1147/rd.176.0525
 *   Bennett, C. H. (1982). The thermodynamics of computation—a review. *International Journal of Theoretical Physics*, *21*(12), 905–940. DOI: 10.1007/BF02084158
 *   Berger, M., Gauduchon, P., & Mazet, E. (1971). *Le spectre d'une variété riemannienne*. Lecture Notes in Mathematics, Vol. 194. Springer-Verlag.
+*   Berger, T. (1971). *Rate Distortion Theory: A Mathematical Basis for Data Compression.* Prentice-Hall.
 *   Berry, M. V. (1984). Quantal phase factors accompanying adiabatic changes. *Proceedings of the Royal Society of London A*, *392*(1802), 45–57. DOI: 10.1098/rspa.1984.0023
 *   Berry, M. V., & Robbins, J. M. (1997). Indistinguishability for quantum particles: spin, statistics and the geometric phase. *Proceedings of the Royal Society A*, *453*(1963), 1771–1790. DOI: 10.1098/rspa.1997.0096
 *   Bertrand, J. (1873). Théorème relatif au mouvement d’un point attiré vers un centre fixe. *Comptes Rendus de l’Académie des Sciences*, *77*, 849–853.
@@ -292,6 +298,8 @@
 *   Jacobson, T. (1995). Thermodynamics of spacetime: The Einstein equation of state. *Physical Review Letters*, *75*(7), 1260–1263. DOI: 10.1103/PhysRevLett.75.1260
 *   Jacobson, T. (2016). Entanglement equilibrium and the Einstein equation. *Physical Review Letters*, *116*(20), 201101. DOI: 10.1103/PhysRevLett.116.201101
 *   Jaffe, A., & Witten, E. (2000). Quantum Yang–Mills theory. In *The Millennium Prize Problems* (pp. 129–152). Clay Mathematics Institute.
+*   Jahn, R. G., & Dunne, B. J. (1987). *Margins of Reality: The Role of Consciousness in the Physical World*. Harcourt Brace Jovanovich.
+*   Jahn, R. G., & Dunne, B. J. (2005). The PEAR proposition. *Journal of Scientific Exploration*, *19*(2), 195–245.
 *   James, W. (1911). *Some Problems of Philosophy*. New York: Longmans, Green and Co.
 *   Jarlskog, C. (1985). Commutator of the Quark Mass Matrices in the Standard Electroweak Model and a Measure of Maximal CP Nonconservation. *Physical Review Letters*, *55*(10), 1039–1042. DOI: 10.1103/PhysRevLett.55.1039
 *   Jaynes, E. T. (1957). Information theory and statistical mechanics. *Physical Review*, *106*(4), 620–630. DOI: 10.1103/PhysRev.106.620
@@ -302,6 +310,9 @@
 *   Johnson, E. E. (1991). An efficient Golay codec for MIL-STD-188-141A and FED-STD-1045. Technical Report NMSU-ECE-91-001, Department of Electrical and Computer Engineering, New Mexico State University.
 *   Jost, R. (1957). Eine Bemerkung zum CTP-Theorem. *Helvetica Physica Acta*, *30*, 409–416.
 *   Jozsa, R. (1994). Fidelity for mixed quantum states. *Journal of Modern Optics*, 41(12), 2315–2323.
+*   Jung, C. G. (1952). Synchronizität als ein Prinzip akausaler Zusammenhänge. In C. G. Jung & W. Pauli, *Naturerklärung und Psyche* (pp. 1–107). Rascher Verlag.
+*   Jung, C. G., & Pauli, W. (1955). *The Interpretation of Nature and the Psyche* (Bollingen Series LI). Pantheon Books.
+*   JUNO Collaboration (An, F., *et al.*) (2016). Neutrino Physics with JUNO. *Journal of Physics G*, *43*, 030401. DOI: 10.1088/0954-3899/43/3/030401
 *   JUNO Collaboration (An, F., *et al.*) (2016). Neutrino Physics with JUNO. *Journal of Physics G*, *43*, 030401. DOI: 10.1088/0954-3899/43/3/030401
 *   JUNO Collaboration (Abusleme, A., *et al.*) (2024). Potential to identify neutrino mass ordering with reactor antineutrinos at JUNO. arXiv:2405.18008.
 *   Kahneman, D., & Klein, G. (2009). Conditions for intuitive expertise: A failure to disagree. *American Psychologist*, *64*(6), 515–526. DOI: 10.1037/a0016755
@@ -396,6 +407,8 @@
 *   Maldacena, J. (1999). The large-N limit of superconformal field theories and supergravity. *International Journal of Theoretical Physics*, *38*(4), 1113–1133.
 *   Maldacena, J. (2003). Non-Gaussian features of primordial fluctuations in single field inflationary models. *Journal of High Energy Physics*, *2003*(05), 013.
 *   Manasse, F. K., & Misner, C. W. (1963). Fermi normal coordinates and some basic concepts in differential geometry. *Journal of Mathematical Physics*, *4*, 735–745.
+*   Mandelbrot, B. (1953). An informational theory of the statistical structure of language. In W. Jackson (Ed.), *Communication Theory*, pp. 486–502. Butterworths.
+*   Mandelbrot, B. (1966). Information theory and psycholinguistics: A theory of word frequencies. In P. F. Lazarsfeld and N. W. Henry (Eds.), *Readings in Mathematical Social Science*, pp. 350–368. MIT Press.
 *   Manton, N. S., & Sutcliffe, P. (2004). *Topological Solitons*. Cambridge University Press (Cambridge Monographs on Mathematical Physics). DOI: 10.1017/CBO9780511617034
 *   Margolus, N., & Levitin, L. B. (1998). The maximum speed of dynamical evolution. *Physica D: Nonlinear Phenomena*, *120*(1–2), 188–195. DOI: 10.1016/S0167-2789(98)00054-2
 *   Marklof, J., & Strömbergsson, A. (2017). The three gap theorem and the space of lattices. *The American Mathematical Monthly*, 124(8), 741–745.
@@ -426,6 +439,7 @@
 *   Nelson, R. D., Radin, D. I., Shoup, R., & Bancel, P. A. (2002). Correlations of continuous random data with major world events. *Foundations of Physics Letters*, *15*(6), 537–550.
 *   nEXO Collaboration (Albert, J. B., *et al.*) (2018). Sensitivity and discovery potential of the proposed nEXO experiment to neutrinoless double-β decay. *Physical Review C*, *97*, 065503. DOI: 10.1103/PhysRevC.97.065503
 *   nEXO Collaboration (Adhikari, G., *et al.*) (2022). nEXO: neutrinoless double beta decay search beyond 10²⁸ year half-life sensitivity. *Journal of Physics G*, *49*, 015104. DOI: 10.1088/1361-6471/ac3631
+*   Newman, M. E. J. (2010). *Networks: An Introduction.* Oxford University Press.
 *   Nicolaescu, L.I. (2011). *An Invitation to Morse Theory*, 2nd ed. Springer.
 *   Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information* (10th Anniversary ed.). Cambridge University Press. DOI: 10.1017/CBO9780511976667
 *   Niemeier, H.-V. (1973). Definite quadratische Formen der Dimension 24 und Diskriminante 1. *Journal of Number Theory*, *5*(2), 142–178. DOI: 10.1016/0022-314X(73)90068-1
@@ -470,6 +484,7 @@
 *   Plavala, M. (2016). All measurements in a probabilistic theory are compatible if and only if the state space is a simplex. *Physical Review A*, *94*, 042108. DOI: 10.1103/PhysRevA.94.042108
 *   Plavala, M. (2021). General Probabilistic Theories: An Introduction. *arXiv*, arXiv:2103.07469. DOI: 10.48550/arXiv.2103.07469
 *   Pless, V. (1968). On the uniqueness of the Golay codes. *Journal of Combinatorial Theory*, *5*(3), 215–228. DOI: 10.1016/S0021-9800(68)80067-5
+*   Polanyi, M. (1966). *The Tacit Dimension.* Doubleday.
 *   Polchinski, J. (1988). Scale and conformal invariance in quantum field theory. *Nuclear Physics B*, *303*, 226–236.
 *   Polyak, B. T. (1963). Gradient methods for minimizing functionals. *USSR Computational Mathematics and Mathematical Physics*, *3*(4), 864–878. DOI: 10.1016/0041-5553(63)90382-3
 *   Pontecorvo, B. (1957). Mesonium and antimesonium. *Soviet Physics JETP*, *6*, 429.
@@ -488,13 +503,16 @@
 *   Radin, D., Michel, L., Galdamez, K., Wendland, P., Rickenbach, R., & Delorme, A. (2012). Consciousness and the double-slit interference pattern: Six experiments. *Physics Essays*, *25*(2), 157–171.
 *   Radin, D., Michel, L., Johnston, J., & Delorme, A. (2013). Psychophysical interactions with a double-slit interference pattern: Experiments and a model. *Physics Essays*, *26*(4), 553–566.
 *   Ragy, S., Jarzyna, M., & Demkowicz-Dobrzański, R. (2016). Compatibility in multiparameter quantum metrology. *Physical Review A*, *94*(5), 052108. DOI: 10.1103/PhysRevA.94.052108
+*   Rao, C. R. (1945). Information and the accuracy attainable in the estimation of statistical parameters. *Bulletin of the Calcutta Mathematical Society*, *37*, 81–91.
 *   Rao, R. P. N., & Ballard, D. H. (1999). Predictive coding in the visual cortex: A functional interpretation of some extra-classical receptive-field effects. *Nature Neuroscience*, *2*(1), 79–87. DOI: 10.1038/4580
 *   Raychaudhuri, A. (1955). Relativistic Cosmology. I. *Physical Review*, *98*(4), 1123–1126. DOI: 10.1103/PhysRev.98.1123
 *   Reed, M., & Simon, B. (1980). *Methods of Modern Mathematical Physics, Vol. 1: Functional Analysis* (Revised and enlarged ed.). Academic Press.
 *   Reichenbach, H. (1956). *The Direction of Time*. University of California Press.
+*   Rhine, J. B. (1934). *Extra-Sensory Perception*. Boston Society for Psychic Research.
 *   Richardson, T., & Urbanke, R. (2008). *Modern Coding Theory*. Cambridge University Press. DOI: 10.1017/CBO9780511791338
 *   Rindler, W. (1966). Kruskal space and the uniformly accelerated frame. *American Journal of Physics*, *34*(12), 1174–1178.
-*   Roberts, D. A., & Yoshida, B. (2017). Chaos and complexity by design. *Journal of High Energy Physics*, *2017*(04), 121. DOI: 10.1007/JHEP04(2017)121
+*   Ritchie, S. J., Wiseman, R., & French, C. C. (2012). Failing the future: Three unsuccessful attempts to replicate Bem's 'retroactive facilitation of recall' effect. *PLoS ONE*, *7*(3), e33423. DOI: 10.1371/journal.pone.0033423
+*   Roberts, D. A., & Yoshida, B. (2017). Chaos and complexity by design. *Journal of High Energy Physics*, *2017*(04), 121. DOI: 10.1007/JHEP04(2017)1211007/JHEP04(2017)121
 *   Robertson, H. P. (1929). The Uncertainty Principle. *Physical Review*, *34*(1), 163–164. DOI: 10.1103/PhysRev.34.163
 *   Rosenfeld, L. (1940). Sur le tenseur d'impulsion‐énergie. *Mémoires de l'Académie Royale de Belgique, Classe des Sciences*, *18*(6), 1–30.
 *   Rovelli, C. (1996). Relational quantum mechanics. *International Journal of Theoretical Physics*, *35*(8), 1637–1678. DOI: 10.1007/BF02302261
@@ -525,6 +543,7 @@
 *   Series, C. (1985). The modular surface and continued fractions. *Journal of the London Mathematical Society*, *s2-31*, 69–80.
 *   Seth, A. K. (2021). *Being You: A New Science of Consciousness*. Dutton.
 *   Shannon, C. E. (1948). A mathematical theory of communication. *The Bell System Technical Journal*, *27*(3), 379–423. DOI: 10.1002/j.1538-7305.1948.tb01338.x
+*   Shannon, C. E. (1959). Coding theorems for a discrete source with a fidelity criterion. *IRE National Convention Record*, Part 4, 142–163.
 *   Simon, B. (1983). Holonomy, the Quantum Adiabatic Theorem, and Berry's Phase. *Physical Review Letters*, *51*(24), 2167–2170. DOI: 10.1103/PhysRevLett.51.2167
 *   Shiraishi, N., Funo, K., & Saito, K. (2016). Speed limit for classical stochastic processes. *Physical Review Letters*, *117*(19), 190601. DOI: 10.1103/PhysRevLett.117.190601
 *   Shirokov, M. E. (2006). The Holevo capacity of infinite dimensional quantum channels and the additivity problem. *Communications in Mathematical Physics*, *262*(1), 137–159. DOI: 10.1007/s00220-005-1494-8
@@ -542,6 +561,7 @@
 *   Steinhaus, H. (1957). Problem. *Colloquium Mathematicum*, *5*, 116.
 *   Stinespring, W. F. (1955). Positive functions on C*-algebras. *Proceedings of the American Mathematical Society*, *6*(2), 211–216. DOI: 10.1090/S0002-9939-1955-0069403-4
 *   Stone, M. H. (1932). On one-parameter unitary groups in Hilbert space. *Annals of Mathematics*, *33*(3), 643–648. DOI: 10.2307/1968538
+*   Storm, L., Tressoldi, P. E., & Di Risio, L. (2010). Meta-analysis of free-response studies, 1992–2008: Assessing the noise reduction model in parapsychology. *Psychological Bulletin*, *136*(4), 471–485. DOI: 10.1037/a0019457
 *   Strawson, G. (2006). Realistic monism: why physicalism entails panpsychism. *Journal of Consciousness Studies*, *13*(10–11), 3–31.
 *   Streater, R. F., & Wightman, A. S. (1964). *PCT, Spin and Statistics, and All That*. W. A. Benjamin.
 *   Sturm, K.-T. (2006). On the geometry of metric measure spaces. I and II. *Acta Mathematica*, *196*(1), 65–131 and 133–177. DOIs: 10.1007/s11511-006-0002-8 and 10.1007/s11511-006-0003-7
@@ -550,6 +570,7 @@
 *   Świerczkowski, S. (1958). On successive settings of an arc on the circumference of a circle. *Fundamenta Mathematicae*, *46*, 187–189.
 *   Synge, J. L. (1960). *Relativity: The General Theory*. North-Holland.
 *   Takesaki, M. (1970). Tomita's theory of modular Hilbert algebras and its applications. *Lecture Notes in Mathematics*, 128. Springer. DOI: 10.1007/BFb0065832
+*   Targ, R., & Puthoff, H. (1974). Information transmission under conditions of sensory shielding. *Nature*, *251*, 602–607. DOI: 10.1038/251602a0
 *   ’t Hooft, G. (1976). Symmetry breaking through Bell–Jackiw anomalies. *Physical Review Letters*, *37*(1), 8–11. DOI: 10.1103/PhysRevLett.37.8
 *   Teilhard de Chardin, P. (1959). *The Phenomenon of Man* (B. Wall, Trans.). Harper & Row. (Original work published 1955).
 *   Tegmark, M. (2000). Importance of quantum decoherence in brain processes. *Physical Review E*, *61*(4), 4194–4206. DOI: 10.1103/PhysRevE.61.4194
@@ -612,6 +633,7 @@
 *   Zermelo, E. (1908). Untersuchungen über die Grundlagen der Mengenlehre I. *Mathematische Annalen*, *65*, 261–281. DOI: 10.1007/BF01449999
 *   Zhao, M. (2006). Electrical fields in wound healing—An overriding signal that directs cell migration. *Seminars in Cell & Developmental Biology*, *20*(6), 674–682.
 *   Zinn-Justin, J. (2002). *Quantum Field Theory and Critical Phenomena* (4th ed.). Oxford University Press (International Series of Monographs on Physics). DOI: 10.1093/acprof:oso/9780198509233.001.0001
+*   Zipf, G. K. (1949). *Human Behavior and the Principle of Least Effort.* Addison-Wesley.
 *   Zhu, Y. (1996). Modular invariance of characters of vertex operator algebras. *Journal of the American Mathematical Society*, *9*, 237–302.
 *   Zurek, W. H. (1989). Thermodynamic cost of computation, algorithmic complexity and the information metric. *Nature*, *341*(6238), 119–124.
 *   Zurek, W. H. (1991). Decoherence and the transition from quantum to classical. *Physics Today*, *44*(10), 36–44.

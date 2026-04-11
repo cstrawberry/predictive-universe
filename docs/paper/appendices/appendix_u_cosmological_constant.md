@@ -14,7 +14,7 @@ with $A_{\text{eff}}$ and $A_Q$ dimensionless $O(1)$ prefactors. For the vacuum 
 $$A_{\text{eff}} := K \cdot N_{\text{eff}}$$
 Here $K$ is the one-loop determinant ratio from Gaussian fluctuations around the bounce, and $N_{\text{eff}}$ is the polynomial extensivity factor from Appendix E. Corollary U.15b supplies two distinct statements: an algebraic observational inversion giving $A_{\text{eff}}^{(\text{obs})}$, and the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ obtained only after adopting the transferred determinant convention from Appendix T.
 
-This appendix derives the Grassmannian base count and the primordial complexity $\kappa_Q = 11$ from the stated geometric inputs. The vacuum value $\kappa_{\mathrm{ref}} = 141.5$ is the Appendix U reference exponent under the leading-order five-mode counting convention introduced in Theorems U.15-U.16. Theorem U.8c below shows that the pure-coordinate dilatation tangent is a strict negative mode of the current Definition U.4 continuum action. Theorem U.13 further shows, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. The five-mode branch therefore remains a reference convention rather than a theorem-level vacuum closure inside the present continuum setup. The value $\kappa = 142$ is the corresponding four-mode branch value; realizing it at theorem level would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity.
+This appendix derives the Grassmannian base count and the primordial complexity $\kappa_Q = 11$ from the stated geometric inputs. The vacuum value $\kappa_{\mathrm{ref}} = 141.5$ is the Appendix U reference exponent under the leading-order five-mode counting convention introduced in Theorems U.15-U.16. Theorem U.8c below shows that the pure-coordinate dilatation tangent is a strict negative mode of the current Definition U.4 continuum action, so the five-mode branch remains a reference convention rather than a theorem-level vacuum closure inside the present continuum setup. Theorem U.13 proves, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. Proposition U.13a and Corollary U.13a.1 then identify the exact sampled angular spectrum, and Theorem U.13b closes the corrected full discrete problem under the explicit false-vacuum spectral hypotheses stated there. Within those hypotheses the corresponding four-mode branch value is $\kappa = 142$.
 
 ---
 
@@ -386,7 +386,7 @@ $$u_i(r) = \phi(r x_i), \quad i = 1, \ldots, 24.$$
 
 **Definition U.6 (Discrete Action).** The **discrete action** $S_{\text{disc}}$ is obtained by replacing the normalized angular average on each sphere by the 24-cell quadrature:
 $$
-S_{\text{disc}}(u) = \frac{1}{\varepsilon}\int_0^\infty r^3 dr \left[\frac{1}{24}\sum_{i=1}^{24}\frac{1}{2}(\partial_r u_i)^2 + \frac{1}{24r^2}\sum_{i,j}W_{ij}(u_i-u_j)^2 + \frac{1}{24}\sum_{i=1}^{24}\big(V_{\text{eff}}(u_i)-V_{\text{eff}}(0)\big)\right]
+S_{\text{disc}}(u) = \frac{1}{\varepsilon}\int_0^\infty r^3 dr \left[\frac{1}{24}\sum_{i=1}^{24}\frac{1}{2}(\partial_r u_i)^2 + \frac{1}{48r^2}\sum_{i,j}W_{ij}(u_i-u_j)^2 + \frac{1}{24}\sum_{i=1}^{24}\big(V_{\text{eff}}(u_i)-V_{\text{eff}}(0)\big)\right]
 $$
 where $W_{ij}$ encodes a chosen real self-adjoint discrete angular quadratic form on the 24-cell sample, with constants in its kernel, and the factor $1/24$ normalizes the spherical average. The quadrature $\int_{S^3} d\sigma_3 \to \frac{1}{24}\sum_{i=1}^{24}$ is exact for polynomials of degree $\leq 5$ by the spherical 5-design property (Theorem U.7).
 
@@ -431,7 +431,7 @@ D^2 S_{\text{disc}}(u^*)[d,d] = -4S_{\text{kin}}(1) < 0;
 $$
 3. the kernel of $D^2 S_{\text{disc}}(u^*)|_{\mathcal C_{\mathrm{samp}}}$ is exactly $\mathrm{span}\{t_1,t_2,t_3,t_4\}$.
 
-In particular, under the stated sampled-sector exactness hypothesis, the 24-cell discretization does not create a fifth zero mode on the sampled five-dimensional collective-coordinate sector. This theorem does not assert that the sampled translation directions are full-discrete zero modes of $D^2 S_{\text{disc}}(u^*)$; establishing that, and excluding any additional nullity outside $\mathcal C_{\mathrm{samp}}$, requires a separate global spectral analysis.
+In particular, under the stated sampled-sector exactness hypothesis, the 24-cell discretization does not create a fifth zero mode on the sampled five-dimensional collective-coordinate sector. The later full-discrete closure is supplied by Theorem U.13b after three further inputs are fixed: the corrected Definition U.6 angular coefficient, the explicit signed sampled operator of Proposition U.13a, and the radial spectral hypotheses isolated in Lemmas U.13a.2-U.13a.3.
 
 *Proof.*
 
@@ -535,9 +535,180 @@ Since the eigenvalue $3$ has multiplicity $4$, its eigenspace is exactly
 $$
 \mathrm{span}\{x^{(1)},x^{(2)},x^{(3)},x^{(4)}\}.
 $$
-Thus the signed sampled operator realizes the translation-sector angular eigenvalue exactly at the sampled level. This does not by itself prove that the full discrete Hessian has no additional zero modes outside the sampled collective-coordinate sector or determine the four-mode prefactor.
+Thus the signed sampled operator realizes the translation-sector angular eigenvalue exactly at the sampled level. Together with the corrected Definition U.6 angular coefficient, this identifies the exact $\lambda=3$ angular input used in Theorem U.13b. The remaining radial spectral inputs are isolated in Lemmas U.13a.2 and U.13a.3.
 
 *Proof.* Exact matrix multiplication with the weight choice of Proposition U.13a gives $L_W x^{(\mu)}=3x^{(\mu)}$ for each $\mu$. The characteristic polynomial from Proposition U.13a shows that the eigenvalue $3$ has multiplicity $4$, so these four coordinate functions span the full eigenspace. ∎
+
+**Lemma U.13a.2 (Explicit $s$-Wave Spectral Input).** Work in $D=4$. Assume $V_{\mathrm{eff}}\in C^3(\mathbb R)$ satisfies
+$$
+V_{\mathrm{eff}}(0)=V_{\mathrm{eff}}'(0)=0,
+\qquad
+V_{\mathrm{eff}}''(0)>0,
+$$
+and has a lower true vacuum separated from $\phi=0$ by a single barrier. Let $\phi^*(x)=\varphi(|x|)$ be a non-trivial finite-action $O(4)$-symmetric one-bounce saddle of Definition U.4 with
+$$
+\varphi'(0)=0,
+\qquad
+\lim_{r\to\infty}\varphi(r)=0,
+\qquad
+\varphi'(r)<0\ \text{for }r>0.
+$$
+Define the radial $s$-wave operator on regular finite-action radial fluctuations by
+$$
+\mathcal L_0 f := -f''-\frac3r f' + V_{\mathrm{eff}}''(\varphi(r))f.
+$$
+Assume, as the explicit external spectral input imported from the single-field false-vacuum fluctuation analysis of Coleman, *The Fate of the False Vacuum: Semiclassical Theory* (1977), together with Callan-Coleman, *The Fate of the False Vacuum II: First Quantum Corrections* (1977), that for a single scalar field in flat $D=4$ Euclidean space with a finite-action monotone one-bounce profile approaching the false vacuum at infinity, the radial $s$-wave operator $\mathcal L_0$ has exactly one negative eigenvalue and no zero eigenvalue. Then the $s$-wave sector has Morse index one and trivial kernel.
+
+*Proof.* The present hypotheses are exactly the single-field, flat-space, $O(4)$-symmetric one-bounce hypotheses under which the Coleman / Callan-Coleman fluctuation analysis is invoked: $D=4$, finite action, approach to the false vacuum at infinity, and a monotone radial profile with no interior zero of $-\varphi'$. The imported statement is isolated here as a named hypothesis so that Theorem U.13b does not rely on any unstated external theorem. Theorem U.8c supplies the manuscript-side compatibility check that the natural pure-coordinate dilatation variation is strictly negative rather than null. ∎
+
+**Lemma U.13a.3 (Translation-Channel Ground State and Higher-Channel Positivity).** Under the bounce hypotheses of Lemma U.13a.2, for each sampled angular eigenvalue $\lambda$ define
+$$
+\mathcal L_\lambda f := -f''-\frac3r f' + \frac{\lambda}{r^2}f + V_{\mathrm{eff}}''(\varphi(r))f
+$$
+on regular finite-action radial fluctuations, and let
+$$
+g(r):=-\varphi'(r).
+$$
+Then $g(r)>0$ for $r>0$ and
+$$
+\mathcal L_3 g = 0.
+$$
+Moreover, the quadratic form of the translation channel satisfies
+$$
+Q_3[f]:=\int_0^\infty r^3\left(f'(r)^2+\left(\frac3{r^2}+V_{\mathrm{eff}}''(\varphi(r))\right)f(r)^2\right)dr
+=
+\int_0^\infty r^3 g(r)^2\left(\frac{f}{g}\right)'^{\!2}dr \ge 0,
+$$
+so
+$$
+\ker \mathcal L_3 = \mathrm{span}\{g\}.
+$$
+Consequently, for every $\lambda>3$,
+$$
+Q_\lambda[f]=Q_3[f]+(\lambda-3)\int_0^\infty r\,f(r)^2\,dr,
+$$
+hence $\mathcal L_\lambda$ is bounded below and has trivial kernel.
+
+*Proof.* The bounce equation is
+$$
+-\varphi''-\frac3r\varphi'+V_{\mathrm{eff}}'(\varphi)=0.
+$$
+Differentiating gives
+$$
+-\varphi'''-\frac3r\varphi''+\frac3{r^2}\varphi'+V_{\mathrm{eff}}''(\varphi)\varphi'=0,
+$$
+which is exactly $\mathcal L_3\varphi'=0$, hence $\mathcal L_3 g=0$. Monotonicity gives $g>0$ on $(0,\infty)$.
+
+Write $f=gh$. Then
+$$
+Q_3[f]
+=
+\int_0^\infty r^3\left(g^2 h'^2 + 2gg'hh' + \left(g'^2 + \left(\frac3{r^2}+V_{\mathrm{eff}}''(\varphi)\right)g^2\right)h^2\right)dr.
+$$
+Since $\mathcal L_3 g=0$, one has
+$$
+(r^3 g')' = r^3\left(\frac3{r^2}+V_{\mathrm{eff}}''(\varphi)\right)g.
+$$
+Integrating the cross term by parts, and using the regularity at $r=0$ together with the exponential decay at $r\to\infty$ to eliminate the boundary contribution, yields
+$$
+Q_3[f]=\int_0^\infty r^3 g^2 h'^2\,dr\ge0.
+$$
+Equality forces $h'=0$, so $f=Cg$. This proves $\ker\mathcal L_3=\mathrm{span}\{g\}$.
+
+For $\lambda>3$,
+$$
+Q_\lambda[f]=Q_3[f]+(\lambda-3)\int_0^\infty r\,f(r)^2\,dr \ge 0.
+$$
+If $Q_\lambda[f]=0$, then the second term gives $f=0$ almost everywhere. Thus $\mathcal L_\lambda$ has trivial kernel. In particular, every sampled angular sector with $\lambda>3$ is strictly positive on nonzero fluctuations. ∎
+
+**Theorem U.13b (Full-Discrete Four-Mode Closure under the Stated False-Vacuum Spectral Hypotheses).** Work in $D=4$. Let $W_{ij}$ be the explicit signed weight matrix of Proposition U.13a, let $L_W$ be the associated sampled angular operator, and let Definition U.6 use the corrected angular coefficient $\frac{1}{48r^2}$. Assume $V_{\mathrm{eff}}\in C^3(\mathbb R)$ has a false vacuum at $\phi=0$ with
+$$
+V_{\mathrm{eff}}(0)=V_{\mathrm{eff}}'(0)=0,
+\qquad
+V_{\mathrm{eff}}''(0)>0,
+$$
+and a lower true vacuum separated from $\phi=0$ by a single barrier. Assume the continuum action of Definition U.4 admits a non-trivial finite-action $O(4)$-symmetric one-bounce saddle
+$$
+\phi^*(x)=\varphi(|x|)
+$$
+with
+$$
+\varphi'(0)=0,
+\qquad
+\lim_{r\to\infty}\varphi(r)=0,
+\qquad
+\varphi'(r)<0\ \text{for }r>0,
+$$
+and assume the $s$-wave spectral input of Lemma U.13a.2. Let
+$$
+u^*(r,i)=\varphi(r)
+$$
+be the 24-cell sample of the bounce. Then the full discrete Hessian $D^2 S_{\mathrm{disc}}(u^*)$ has exactly four zero modes,
+$$
+\ker D^2 S_{\mathrm{disc}}(u^*) = \mathrm{span}\{t_1,t_2,t_3,t_4\},
+$$
+where
+$$
+t_\mu(r,i):=-\varphi'(r)(x_i)_\mu,
+\qquad
+\mu=1,\dots,4.
+$$
+Equivalently, the full discrete Hessian has nullity $4$, and its restriction to the orthogonal complement of the translation space is non-degenerate.
+
+*Proof.* By Proposition U.13a,
+$$
+\chi_{L_W}(x)=x(x-3)^4(x-8)^9(x-15)^8(x-24)^2,
+$$
+so the sampled angular spectrum is
+$$
+\{0,3^4,8^9,15^8,24^2\}.
+$$
+By Corollary U.13a.1, the $\lambda=3$ eigenspace is exactly the coordinate module
+$$
+E_3 = \mathrm{span}\{x^{(1)},x^{(2)},x^{(3)},x^{(4)}\}.
+$$
+
+Let $Y\in \mathbb R^{24}$ satisfy $L_W Y=\lambda Y$, and set
+$$
+\eta_i(r)=f(r)Y_i.
+$$
+Because $L_W$ is self-adjoint for the sampled inner product
+$$
+\langle Y,Z\rangle_{24}:=\frac1{24}\sum_{i=1}^{24}Y_i Z_i,
+$$
+different angular eigenspaces are orthogonal. Because $u^*(r,i)=\varphi(r)$ is independent of $i$, the potential term $V_{\mathrm{eff}}''(u^*_i)=V_{\mathrm{eff}}''(\varphi(r))$ is also $i$-independent, so it commutes with the angular projection and the Hessian decomposes as an orthogonal direct sum over the sampled angular eigenspaces. Using the corrected Definition U.6 coefficient, the Hessian quadratic form separates by angular eigenspaces as
+$$
+D^2 S_{\mathrm{disc}}(u^*)[\eta,\eta]
+=
+\frac{\|Y\|_{24}^2}{\varepsilon}\int_0^\infty r^3\left(f'(r)^2+\left(\frac{\lambda}{r^2}+V_{\mathrm{eff}}''(\varphi(r))\right)f(r)^2\right)dr,
+$$
+where
+$$
+\|Y\|_{24}^2:=\frac1{24}\sum_{i=1}^{24}Y_i^2.
+$$
+Thus the full discrete Hessian is the orthogonal direct sum of the radial operators $\mathcal L_\lambda$ attached to the sampled eigenvalues $\lambda\in\{0,3,8,15,24\}$.
+
+For $\lambda=3$, Lemma U.13a.3 gives
+$$
+\ker \mathcal L_3 = \mathrm{span}\{-\varphi'\}.
+$$
+Since $\dim E_3=4$, the full discrete kernel in the $\lambda=3$ sector is exactly
+$$
+E_3\otimes \mathrm{span}\{-\varphi'\}
+=
+\mathrm{span}\{t_1,t_2,t_3,t_4\},
+$$
+where $t_\mu(r,i)=-\varphi'(r)(x_i)_\mu$. These are precisely the sampled translation modes.
+
+For the constant angular sector $\lambda=0$, Lemma U.13a.2 gives Morse index one and trivial kernel. Hence the $s$-wave sector contributes no zero modes.
+
+For the remaining sampled eigenvalues $\lambda=8,15,24$, Lemma U.13a.3 gives trivial kernel and bounded-below quadratic form. Hence those higher angular sectors contribute no zero modes.
+
+Therefore the full discrete Hessian has no kernel outside the translation sector. Since the translation sector contributes exactly four linearly independent zero modes, one for each coordinate function on the 24-cell,
+$$
+\ker D^2 S_{\mathrm{disc}}(u^*)=\mathrm{span}\{t_1,t_2,t_3,t_4\}.
+$$
+The orthogonal complement of this four-dimensional space has no kernel, so the normal Hessian is non-degenerate. ∎
 
 ---
 
@@ -634,7 +805,7 @@ $$
 \delta := \kappa_0 - \kappa_{\mathrm{ref}} = 144 - 141.5 = \frac{m}{2} = \frac{5}{2} = 2.5.
 $$
 
-Thus the assumed five real collective coordinates contribute the stated leading-order deficit in the Appendix U reference-counting parameter. By Theorem U.8c, the current Definition U.4 continuum action does not realize the pure-coordinate dilatation direction as a zero mode. Under the sampled-sector exactness hypothesis of Theorem U.13, the sampled translation+dilatation restriction of the discrete Hessian also has no fifth zero mode. A theorem-level four-mode branch would still require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity; in that branch the corresponding leading-order deficit would be $2$ instead of $2.5$. $\square$
+Thus the assumed five real collective coordinates contribute the stated leading-order deficit in the Appendix U reference-counting parameter. By Theorem U.8c, the current Definition U.4 continuum action does not realize the pure-coordinate dilatation direction as a zero mode. Under the sampled-sector exactness hypothesis of Theorem U.13, the sampled translation+dilatation restriction of the discrete Hessian also has no fifth zero mode. Under the corrected Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b, the four-mode branch has exactly four translational zero modes and no additional nullity; in that branch the corresponding leading-order deficit is $2$ instead of $2.5$. $\square$
 
 ---
 
@@ -778,7 +949,7 @@ Both structures exist at $M = 24$ as derived consequences of PCE optimization (T
 | $m_{\mathrm{ref}}$ | Appendix U five-mode reference count | 5 |
 | $\delta_{\mathrm{ref}} = m_{\mathrm{ref}}/2$ | Reference Morse-Bott deficit | 2.5 |
 | $\kappa_{\mathrm{ref}} = \kappa_0 - \delta_{\mathrm{ref}}$ | Five-mode reference exponent | **141.5** |
-| $m_{\mathrm{trans}}$ | Translational branch count (global closure pending) | 4 |
+| $m_{\mathrm{trans}}$ | Translational branch count under the hypotheses of Theorem U.13b | 4 |
 | $\delta_{\mathrm{trans}} = m_{\mathrm{trans}}/2$ | Translational deficit | 2 |
 | $\kappa_{\mathrm{trans}} = \kappa_0 - \delta_{\mathrm{trans}}$ | Translational branch exponent | **142** |
 | $A_{\text{eff}} := K \cdot N_{\text{eff}}$ | One-loop prefactor definition (Section U.1) | $O(1)$ |
@@ -788,7 +959,7 @@ Both structures exist at $M = 24$ as derived consequences of PCE optimization (T
 | Quantity | Branch Value | From Observation | Notes |
 |----------|--------------|------------------|-------|
 | $\kappa_{\mathrm{ref}}$ | 141.5 | — | Appendix U five-mode reference count (Theorem U.16) |
-| $\kappa_{\mathrm{trans}}$ | 142 | — | Four-mode branch value; theorem-level closure still requires a full discrete spectral proof of exactly four translational zero modes and no additional nullity |
+| $\kappa_{\mathrm{trans}}$ | 142 | — | Four-mode branch value under the corrected Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b |
 | $A_{\text{eff}}^{(\text{obs})}$ on $m=5$ branch | $O(1)$ | $0.917 \pm 0.016$ | Corollary U.15b |
 | $A_{\text{eff}}^{(\text{obs},4)}$ on $m=4$ branch | $O(1)$ | $2.49 \pm 0.04$ | same observed $\Lambda L_P^2$ with exponent $142$ |
 
@@ -803,15 +974,15 @@ If scale invariance is explicitly broken at the PCE attractor, the dilatation mo
 - $m = D = 4$ (translations only)
 - $\delta = D/2 = 2$
 - $\kappa = 144 - 2 = 142$
-- $\Lambda$ increases by factor $e^{2 \times 0.5} = e \approx 2.7$
+- $\Lambda$ decreases by factor $e^{2\times 0.5}=e\approx 2.72$
 
-This provides a testable prediction: small explicit scale breaking shifts $\kappa$ by $0.5$ and increases $\Lambda$ by factor $e$.
+This provides a testable prediction: small explicit scale breaking shifts $\kappa$ by $0.5$ and decreases $\Lambda$ by factor $e$.
 
 ### U.13.2 Dimension Dependence
 
 For general emergent dimension $D'$:
 
-- Translational branch count: $m_{\mathrm{trans}} = D'$ (global zero-mode closure requires the separate full discrete spectral analysis noted above)
+- Translational branch count: $m_{\mathrm{trans}} = D'$; for $D=4$ the corrected full discrete closure is Theorem U.13b under the explicit false-vacuum spectral hypotheses stated there, while other dimensions would require the corresponding discrete spectral proof
 - A further dilatation mode would require an additional exact-scale-family hypothesis of the type isolated in Theorem U.9
 - Deficit: $\delta = m/2$
 - Requires $M = K(D')$ (mode-channel correspondence, Theorem Z.10) and existence of appropriate spherical design
@@ -842,12 +1013,13 @@ The Steiner design $S(5,8,24)$ has strength $t = 5$ (Theorem U.2).
 
 The spherical 5-design (24-cell) integrates polynomials of degree $\leq 5$ exactly (Theorem U.7).
 
-Appendix U uses a five-mode reference count $m_{\mathrm{ref}} = 5$ in Theorems U.15-U.16, but Corollary U.10 and Theorem U.8c make clear that this is not a theorem-level zero-mode count for the current Definition U.4 continuum action.
+Appendix U uses a five-mode reference count $m_{\mathrm{ref}} = 5$ in Theorems U.15-U.16, but Corollary U.10 and Theorem U.8c make clear that this is not a theorem-level zero-mode count for the current Definition U.4 continuum action. By contrast, Theorem U.13b gives a corrected full-discrete four-mode closure under the explicit false-vacuum spectral hypotheses stated there.
 
 Thus the repeated appearance of "5" has the following logical status:
 - Combinatorial (Steiner $t$): exact theorem-level statement
 - Geometric (spherical design degree): exact theorem-level statement
-- Vacuum zero-mode count: Appendix U reference convention only
+- Vacuum five-mode count: Appendix U reference convention only
+- Vacuum four-mode count: full-discrete theorem under the explicit hypotheses of Theorem U.13b
 
 ### U.14.3 Saturation Ratio
 
@@ -870,7 +1042,7 @@ The preceding sections derived the Appendix U five-mode reference exponent $\kap
 
 $$\Lambda L_P^2 = (2.88 \pm 0.03)\times 10^{-122}.$$
 
-Theorem U.8c shows that the pure-coordinate dilatation mode used in that five-mode branch is obstructed in the current Definition U.4 continuum action. Theorem U.13 further shows, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. If a separate full discrete spectral analysis establishes exactly four translational zero modes and no additional nullity, the corresponding four-mode branch would instead give
+Theorem U.8c shows that the pure-coordinate dilatation mode used in that five-mode branch is obstructed in the current Definition U.4 continuum action, and Theorem U.13 shows under its sampled-sector exactness hypothesis that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. Under the corrected Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b, the corresponding four-mode branch instead gives
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-284} = (1.06 \pm 0.01)\times 10^{-122},$$
 so matching the observed $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times 10^{-122}$ (Appendix V, Eq. (V.5)) on that branch would require $A_{\text{eff}}^{(\text{obs},4)} = 2.49 \pm 0.04$.
 
@@ -919,7 +1091,7 @@ $$\boxed{\kappa_Q = \dim_\mathbb{C}(\mathbb{CP}^{11}) = 11}$$
 
 $$\frac{\kappa_{\Lambda,\mathrm{ref}}}{\kappa_Q} = \frac{141.5}{11} \approx 12.86, \qquad \frac{\kappa_{\Lambda,\mathrm{trans}}}{\kappa_Q} = \frac{142}{11} \approx 12.91$$
 
-Under the Appendix U reference-exponent conventions of Theorem U.16 and Identification U.20, the first ratio summarizes the five-mode reference hierarchy between the vacuum branch and primordial perturbations. The second ratio is the corresponding four-mode branch value. Theorem U.8c excludes the pure-coordinate dilatation zero mode in the current continuum action, and Theorem U.13 shows, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode; theorem-level realization of the full four-mode branch still requires a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity.
+Under the Appendix U reference-exponent conventions of Theorem U.16 and Identification U.20, the first ratio summarizes the five-mode reference hierarchy between the vacuum branch and primordial perturbations. The second ratio is the corresponding four-mode branch value under the corrected Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b. Theorem U.8c excludes the pure-coordinate dilatation zero mode in the current continuum action, and Theorem U.13 shows under its sampled-sector exactness hypothesis that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode.
 
 ### U.16.3 Bundle Structure
 
@@ -1558,21 +1730,21 @@ These criteria are testable by CMB-S4, LiteBIRD, and future 21-cm observations.
 
 | Sector | Configuration Space | $\kappa$ | Physical Scale |
 |:-------|:-------------------:|:--------:|:--------------:|
-| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $\kappa_{\mathrm{ref}} = 141.5$ on the Appendix U five-mode reference branch; $\kappa_{\mathrm{trans}} = 142$ on the translational branch | Reference value $\Lambda L_P^2 \approx 2.88 \times 10^{-122}$ on the five-mode branch; $(1.06 \pm 0.01) \times 10^{-122}$ on the translational branch at the same prefactor |
+| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $\kappa_{\mathrm{ref}} = 141.5$ on the Appendix U five-mode reference branch; $\kappa_{\mathrm{trans}} = 142$ on the corrected four-mode branch of Theorem U.13b | Reference value $\Lambda L_P^2 \approx 2.88 \times 10^{-122}$ on the five-mode branch; $(1.06 \pm 0.01) \times 10^{-122}$ on the same-prefactor four-mode branch of Theorem U.13b |
 | Primordial | $\mathbb{CP}^{11}$ | $11$ | $Q \approx 1.18 \times 10^{-5}$ |
 
-The hierarchy $\kappa_{\Lambda,\mathrm{ref}} / \kappa_Q = 12.86$ summarizes the Appendix U five-mode reference separation between the vacuum branch and the primordial perturbation scale. The corresponding four-mode branch value gives $\kappa_{\Lambda,\mathrm{trans}} / \kappa_Q = 12.91$.
+The hierarchy $\kappa_{\Lambda,\mathrm{ref}} / \kappa_Q = 12.86$ summarizes the Appendix U five-mode reference separation between the vacuum branch and the primordial perturbation scale. Under the hypotheses of Theorem U.13b, the corresponding four-mode branch value gives $\kappa_{\Lambda,\mathrm{trans}} / \kappa_Q = 12.91$.
 
 ### U.26.2 Golay-Steiner Unification
 
 **Summary U.71 (Structural Unity).** Both sectors connect to the Golay code $[24, 12, 8]$ (Theorem Z.13):
 
-- **Vacuum**: Full code structure $\to$ Grassmannian $\text{Gr}_\mathbb{C}(12,24)$ $\to$ Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ (Theorem U.16), with Theorem U.8c obstructing the pure-coordinate dilatation realization inside the current continuum action
+- **Vacuum**: Full code structure $\to$ Grassmannian $\text{Gr}_\mathbb{C}(12,24)$ $\to$ Appendix U five-mode reference exponent $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ (Theorem U.16), with Theorem U.8c obstructing the pure-coordinate dilatation realization inside the current continuum action, while Theorem U.13b closes the corrected full-discrete four-mode branch under the explicit false-vacuum spectral hypotheses stated there
 - **Primordial**: Signal subspace $\mathbb{C}^{12}$ $\to$ Projective space $\mathbb{CP}^{11}$ $\to$ $\kappa_Q = 11$ (Identification U.20)
 - **Inflation dynamics**: 24-cell 5-design $\to$ 12-line graph $\to$ $\mathbb{CP}^1_{\text{inv}}$ $\to$ Starobinsky (Assumption U.48, Identification U.44a)
 - **Observable predictions**: conditional on Assumption U.26, Assumption U.41, Identification U.51
 
-The framework achieves inflationary predictions from the Golay-Steiner structure, conditional on the identifications and assumptions stated in this appendix. The vacuum sector supplies a reference exponent and reference scaling law within the counting and prefactor conventions stated in Theorems U.15-U.17, but Theorem U.8c shows that the current continuum action does not realize the five-mode branch as a theorem-level pure-coordinate dilatation family.
+The framework achieves inflationary predictions from the Golay-Steiner structure, conditional on the identifications and assumptions stated in this appendix. The vacuum sector now carries two logically distinct statements: a five-mode reference exponent within the stated counting convention, and a corrected full-discrete four-mode closure under the explicit false-vacuum spectral hypotheses of Theorem U.13b.
 
 ---
 
@@ -1584,7 +1756,7 @@ This appendix derives the cosmological constant reference scale and the primordi
 $$
 \Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}.
 $$
-With the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$, this gives the branch-dependent reference value $(2.88 \pm 0.03)\times10^{-122}$ (Corollary U.17). Theorem U.8c shows that the pure-coordinate dilatation mode used in that five-mode branch is obstructed in the current Definition U.4 continuum action. Theorem U.13 further shows, under its sampled-sector exactness hypothesis, that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. If a separate full discrete spectral analysis establishes exactly four translational zero modes and no additional nullity, the corresponding four-mode branch gives $(1.06 \pm 0.01)\times10^{-122}$ at the same prefactor and would require $A_{\text{eff}}^{(\text{obs},4)} = 2.49 \pm 0.04$ to match observation.
+With the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$, this gives the branch-dependent reference value $(2.88 \pm 0.03)\times10^{-122}$ (Corollary U.17). Theorem U.8c shows that the pure-coordinate dilatation mode used in that five-mode branch is obstructed in the current Definition U.4 continuum action, and Theorem U.13 shows under its sampled-sector exactness hypothesis that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. Under the corrected Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b, the corresponding four-mode branch gives $(1.06 \pm 0.01)\times10^{-122}$ at the same prefactor and would require $A_{\text{eff}}^{(\text{obs},4)} = 2.49 \pm 0.04$ to match observation.
 
 **Primordial Sector.** Conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48, the complexity $\kappa_Q = 11$ and geometric e-fold count $N_e = 59.4$ yield:
 
@@ -1599,10 +1771,10 @@ With the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$, this g
 
 | Sector | Configuration Space | $\kappa$ | Suppression |
 |:-------|:-------------------:|:--------:|:-----------:|
-| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the five-mode reference branch; $\kappa_{\Lambda,\mathrm{trans}} = 142$ on the translational branch | $e^{-283}$ on the five-mode reference branch; $e^{-284}$ on the translational branch |
+| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $\kappa_{\Lambda,\mathrm{ref}} = 141.5$ on the five-mode reference branch; $\kappa_{\Lambda,\mathrm{trans}} = 142$ on the four-mode branch of Theorem U.13b | $e^{-283}$ on the five-mode reference branch; $e^{-284}$ on the four-mode branch of Theorem U.13b |
 | Primordial | $\mathbb{CP}^{11}$ | $11$ | $e^{-22}$ |
 
-The ratio $\kappa_{\Lambda,\mathrm{ref}}/\kappa_Q \approx 13$ summarizes the hierarchy between vacuum energy and primordial perturbations in the Appendix U reference scheme.
+The ratio $\kappa_{\Lambda,\mathrm{ref}}/\kappa_Q \approx 13$ summarizes the hierarchy between vacuum energy and primordial perturbations in the Appendix U reference scheme, while under the hypotheses of Theorem U.13b the corresponding four-mode branch ratio is $\kappa_{\Lambda,\mathrm{trans}}/\kappa_Q \approx 13$.
 
 **Falsifiability.** The primordial predictions are testable by CMB-S4 and LiteBIRD through the quantitative windows stated in Theorem U.69.
 

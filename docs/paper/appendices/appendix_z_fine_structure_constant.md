@@ -1290,7 +1290,7 @@ Thus $bM = k^2$ holds if and only if $a = 2$, the Landauer-derived value (Theore
 - **Information-theoretic origin:** The error-correction structure $[24, 12, 8]$ from PCE optimization (Theorem Z.13)
 - **Geometric origin:** The Grassmannian $\text{Gr}(2,8)$ with $\dim_{\mathbb{C}} = ab = 12 = k$ and $\dim_{\mathbb{R}} = 2ab = 24 = n$
 
-The syndrome-partition identity demonstrates these structures are mutually determining: each uniquely implies the other through $a = 2$. This identity provides a structural bound consistent with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$; Theorem U.8c there qualifies that value as a reference branch, while the corresponding four-mode branch value is $\kappa_{\mathrm{trans}} = 142$ and would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity.
+The syndrome-partition identity demonstrates these structures are mutually determining: each uniquely implies the other through $a = 2$. This identity provides a structural bound consistent with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$; Theorem U.8c there qualifies that value as a reference branch, while the corresponding corrected four-mode branch value is $\kappa_{\mathrm{trans}} = 142$ under the explicit false-vacuum spectral hypotheses of Theorem U.13b.
 
 *Remark.* The three derivation paths—thermodynamic (Landauer), information-theoretic (Golay), and geometric (Grassmannian)—employ distinct mathematical frameworks yet converge on identical numerical values. This overdetermination provides strong evidence for the structural uniqueness of the PCE-Attractor.
 
@@ -1415,7 +1415,7 @@ $$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (L + g_c)$$
 **Step 4 (Derivation Chain).** The complete chain:
 $$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{k = M/2} k = 12 \xrightarrow{k^2} k^2 = 144$$
 
-unifies thermodynamic (Landauer), information-theoretic (Golay), and geometric (Leech) structures as manifestations of $a = 2$, with the structural bound $k^2 = 144$ consistent with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ and the corresponding four-mode branch value $\kappa_{\mathrm{trans}} = 142$, whose theorem-level realization would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity. ∎
+unifies thermodynamic (Landauer), information-theoretic (Golay), and geometric (Leech) structures as manifestations of $a = 2$, with the structural bound $k^2 = 144$ consistent with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ and the corresponding corrected four-mode branch value $\kappa_{\mathrm{trans}} = 142$ under the explicit false-vacuum spectral hypotheses of Theorem U.13b. ∎
 
 ---
 
@@ -1439,7 +1439,7 @@ specifying how information modes couple to redundancy modes for error correction
 
 **Step 4 (Structural Correspondence).** The interaction tensor and parity matrix have identical information content (144 bits) and compatible algebraic structure ($6 \times 24 \leftrightarrow 12 \times 12$). Both are uniquely determined by the constraint $a = 2$. ∎
 
-**Remark Z.13e.1: Information-Theoretic Interpretation.** The identity $C_{\mathrm{interaction}} = C_{\mathrm{stabilization}} = 144$ suggests that the structure governing hidden-visible coupling corresponds structurally to the error-correction organization. This resonates with Wheeler's "it from bit" intuition: physical structure emerges from information-theoretic optimization. The Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ indicates that minimal vacuum fluctuations activate most but not all of this constraint structure, with saturation ratio $\kappa_{\mathrm{ref}}/k^2 = 141.5/144 \approx 0.9826$; the corresponding four-mode branch value gives $\kappa_{\mathrm{trans}}/k^2 = 142/144 \approx 0.9861$, but realizing that branch at theorem level would require a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity.
+**Remark Z.13e.1: Information-Theoretic Interpretation.** The identity $C_{\mathrm{interaction}} = C_{\mathrm{stabilization}} = 144$ suggests that the structure governing hidden-visible coupling corresponds structurally to the error-correction organization. This resonates with Wheeler's "it from bit" intuition: physical structure emerges from information-theoretic optimization. The Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ indicates that minimal vacuum fluctuations activate most but not all of this constraint structure, with saturation ratio $\kappa_{\mathrm{ref}}/k^2 = 141.5/144 \approx 0.9826$; the corresponding corrected four-mode branch value gives $\kappa_{\mathrm{trans}}/k^2 = 142/144 \approx 0.9861$, and Theorem U.13b records that corrected branch under its explicit false-vacuum spectral hypotheses.
 
 **Remark Z.13e.2: Uniqueness.** The Golay code is unique up to equivalence (Theorem Z.13b). Therefore, the 144-bit structure is not one choice among many but the unique solution to PCE optimization at rate-½ with block length 24.
 
@@ -1519,11 +1519,13 @@ print(f"  k² = bM = {12**2} = {(8 - a) * (2 * a * (8 - a))} ✓")
 k = 12  # Golay code dimension
 kappa_bound = k**2  # Structural bound from Golay structure
 kappa_ref = 141.5  # Appendix U five-mode reference exponent (Theorem U.16)
-kappa_trans = 142.0  # Corresponding four-mode branch value
+kappa_trans = 142.0  # Corrected four-mode branch value under Theorem U.13b hypotheses
 print(f"\n✓ Structural bound k² = {kappa_bound}")
 print(f"✓ Appendix U five-mode reference exponent κ_ref = {kappa_ref}")
-print(f"✓ Corresponding four-mode branch value κ_trans = {kappa_trans:g}; theorem-level realization requires a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity")
+print(f"✓ Corresponding four-mode branch value κ_trans = {kappa_trans:g}; corrected full-discrete closure is recorded in Theorem U.13b under its explicit false-vacuum spectral hypotheses")
 print(f"✓ Reference relation: κ_ref = k² - (D+1)/2 = 144 - 2.5 = 141.5")
+assert kappa_ref < kappa_bound
+print(f"✓ Bound satisfied: κ_ref < k² ✓")
 print(f"✓ Total information content: {P.size} bits")
 
 # Verification 5: Cosmological constant prefactor on the five-mode reference branch
@@ -1550,10 +1552,14 @@ print(f"  A_eff_ref^(obs) = Λ L_P² / (8π e^{{-S_inst_ref}}) ≈ {A_eff_ref:.2
 
 ✓ Structural bound k² = 144
 ✓ Appendix U five-mode reference exponent κ_ref = 141.5
-✓ Corresponding four-mode branch value κ_trans = 142; theorem-level realization requires a separate full discrete spectral proof of exactly four translational zero modes and no additional nullity
+✓ Corresponding four-mode branch value κ_trans = 142; corrected full-discrete closure is recorded in Theorem U.13b under its explicit false-vacuum spectral hypotheses
 ✓ Reference relation: κ_ref = k² - (D+1)/2 = 144 - 2.5 = 141.5
 ✓ Bound satisfied: κ_ref < k² ✓
 ✓ Total information content: 144 bits
+
+✓ Cosmological constant check on the five-mode reference branch:
+  S_inst_ref = 2κ_ref = 283.0
+  A_eff_ref^(obs) = Λ L_P² / (8π e^{-S_inst_ref}) ≈ 0.92
 ```
 
 
