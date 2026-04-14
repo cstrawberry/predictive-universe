@@ -868,6 +868,26 @@ The hierarchy unification theorem implies:
 
 4. **Predictive correlation.** The relationship $\delta\eta_B/\eta_B \approx (1/2)\delta v/v$ is a parameter-free prediction that can be tested against any BSM scenario.
 
+**Theorem Y.11.6 (Generation-Locked Baryogenesis in the Appendix Y Channel).** Within the PU electroweak baryogenesis mechanism of this appendix, the same data that make flavor CP violation possible are structurally required by the baryogenesis formula. In particular:
+
+1. Theorem R.3.4 shows that the smallest anomaly-free family-charge pattern permitting physical CP violation in the modeled class is the three-sector pattern $\{a,-a,0\}$, hence $N_g=3$.
+2. Theorem T.56 gives a nonzero CKM phase $\delta$ from Berry holonomy on the generation manifold.
+3. Theorem Y.2 uses exactly these two inputs—$N_g=3$ and nonzero $\delta$—to realize the Sakharov conditions in the PU channel.
+4. Theorems Y.8 and Y.9 then make both inputs enter the baryogenesis formula through
+$$
+\kappa_B=\frac{\kappa_{EW}}{2}+\frac{\varepsilon}{N_g},
+\qquad
+\mathcal F_{CP}=\tanh(\mathcal S\sin\delta).
+$$
+
+Consequently, within the Appendix Y channel, the flavor-topology sector and the cosmological matter-asymmetry sector are structurally locked: if $N_g<3$ or $\delta=0$, the present mechanism ceases to produce the observed-type baryogenesis channel.
+
+*Proof.* Theorem R.3.4 proves that two generations cannot support a physical CKM phase after rephasing, whereas the minimal anomaly-free family-charge pattern allowing CP violation is the three-sector pattern $\{a,-a,0\}$. Theorem T.56 then gives a nonzero CKM phase $\delta$ as Berry holonomy. Theorem Y.2 imports both facts into the Sakharov analysis: baryon violation uses the electroweak anomaly with coefficient proportional to $N_g$, while CP violation uses the nonzero Berry-holonomy phase $\delta$. Finally, Theorem Y.8 inserts $N_g$ into the exponent through the generation-sharing term $\varepsilon/N_g$, and Theorem Y.9 inserts $\delta$ into the CP factor through $\sin\delta$. If $N_g<3$, the modeled class loses physical CKM CP violation; if $\delta=0$, then $\mathcal F_{CP}=\tanh(0)=0$. In either case the present Appendix Y mechanism collapses. ∎
+
+**Corollary Y.11.6a (Three Generations Are Operational in the Appendix Y Mechanism).** In the present PU baryogenesis channel, three generations are not merely compatible with the asymmetry calculation; they are part of the mechanism's operating conditions.
+
+*Proof.* Immediate from Theorem Y.11.6. ∎
+
 ## Y.11 Derivation Chain Summary
 
 The complete logical chain from $K_0 = 3$ to $\eta_B$:

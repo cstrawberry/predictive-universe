@@ -1478,7 +1478,27 @@ Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-
 | Appendix U working numerical prefactor $A_{\mathrm{eff}}$ | Working forward-evaluation convention of Corollary U.15b |
 | CC influence, detailed flavor numerics, and baryogenesis numerics | Model layer |
 
-### 14.6.6 Final scope statement
+### 14.6.6 What remains to make the present patch airtight
+
+At the manuscript's present explicitly stated scope, the remaining former Tier-1 gaps are now closed negatively, so the patch is internally airtight at that scope:
+
+1. **Vacuum closure:** Theorem U.73a refutes quartic homogeneity on the theorem-level false-vacuum bounce branch, so Theorem U.13b's four-mode closure is the sole current theorem-level vacuum closure.
+2. **Hurwitz structural identification:** Theorem 23a.1c refutes the proposed functorial/categorical identification of
+$$
+K_0=3
+$$
+with the Hurwitz count
+$$
+\#\{\mathbb C,\mathbb H,\mathbb O\}=3.
+$$
+Corollary 23a.1b therefore remains a numerical coherence check rather than a shared categorical invariant.
+3. **Uniform source-energy floor:** Theorem P.15.1a refutes any system-specific uniform positive infimum of $\Delta_\Sigma$ over self-model-engaging patterns, and does so even on the subset where $\Delta_\Sigma>0$.
+
+These three negative closures remove the last open-problem labels that previously gated the patch. The manuscript is therefore airtight at the level it explicitly claims.
+
+What still remains are strengthening projects rather than consistency gaps: a functorial strengthening of Theorem X.8a, a single-source derivation of the minimal-branch integer ledger, a direct structural proof of the Steiner-electroweak identity, quantitative source-energy rate theory, autonomous complexity growth under the Source Principle, cosmological backreaction estimates, dimension-sensitive falsifiers, and uniqueness of the canonical arena hierarchy. Those would deepen the framework, but their absence no longer leaves any unresolved Tier-1 logical hole.
+
+### 14.6.7 Final scope statement
 
 Read in this way, the manuscript already has a clear and economical architecture: a compact discrete backbone, a conditional continuum/AQFT/gravity bridge whose remaining load is explicitly visible, a gravity step whose local-horizon thermodynamic input is sharpened by Theorem 48a, and a set of quantitative model layers for later phenomenology. This identifies exactly where the derivation is already strongest and where further closure still depends on stated assumptions, conventions, or downstream modeling.
 

@@ -390,6 +390,8 @@ $$
 $$
 Corollary U.2a gives $\lambda=77$ for $S(5,8,24)$, hence $2\kappa_{EW}=\lambda$. ∎
 
+**Remark T.5d (Cross-Appendix Significance of the Steiner–Electroweak Identity).** The identity $2\kappa_{EW} = 77 = \lambda_{S(5,8,24)}$ is an exact algebraic consequence of the electroweak counting data $(b,k,\dim(G/H),m) = (6,12,3,1)$. It connects the electroweak instanton mechanism directly to the Golay-Steiner coding structure that governs the interface mode geometry ($M=24$), the gauge generator budget ($n_G=12$), and the vacuum configuration space ($\mathrm{Gr}_\mathbb{C}(12,24)$). The electroweak hierarchy and the code-theoretic structure of the vacuum are therefore not independent at the level of the currently derived backbone data: they share the same Steiner pair-count as their common complexity anchor. A direct theorem forcing this equality without routing through the specific numerical values remains open.
+
 -----
 
 ## T.7 Numerical Verification of Electroweak Scale
@@ -4104,6 +4106,8 @@ $$
 \binom{D+2}{2}M=\binom{6}{2}\cdot 24 = 15\cdot 24 = 360.
 $$
 Therefore the two expressions agree on that reference branch. Theorem U.8c shows that this identity is branch-specific rather than a theorem-level vacuum closure for the current Definition U.4 continuum action. ∎
+
+**Remark T.62b (Cross-Appendix Significance of the Vacuum–Electroweak Sum Rule).** The identity $2\kappa_{\Lambda,\mathrm{ref}} + 2\kappa_{EW} = 360 = \binom{D+2}{2}M$ holds on the Appendix U five-mode reference branch and carries the branch-dependent status of that branch. Its structural content is that the two largest instanton complexity exponents in the framework sum to exactly $15M$, where $15 = \binom{D+2}{2}$ encodes the emergent spacetime dimension $D=4$ and $M=24$ is the interface mode count. This sum rule is therefore sensitive to the spacetime dimension through $\binom{D+2}{2}$: any $D \neq 4$ would give a different right-hand side, so the identity provides a cross-check linking the hierarchy mechanism to the dimensional selection of Theorem Z.11. Turning that sensitivity into a standalone falsifier would require an external observable that constrains the effective dimensional count independently of the identity itself; the present manuscript does not yet supply such an independent bound.
 
 -----
 

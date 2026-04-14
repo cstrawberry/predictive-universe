@@ -153,6 +153,18 @@
 
 *   **Perspectival State ($S_{(s)}(t)$):** (Definition 24, Appendix M) The complete state of an MPU, represented by the pair $(S(t), s)$, where $S(t)=|\psi(t)\rangle \in \mathcal{H}_0$ is the state amplitude and $s \in \Sigma$ is the perspective index representing the interaction context/basis.
 
+*   **Perspectival Excess ($\Delta_\Sigma(S;E)$):** (Appendix P.15) The scalar excess of SPAP proximity over the SPAP-flat baseline, defined by
+$$
+\Delta_\Sigma(S;E)=\mu_S(E)-\frac{1}{\alpha_{SPAP}}.
+$$
+It vanishes on SPAP-flat patterns and is unbounded above by Theorem M.10.4.
+
+*   **Source Energy ($\mathcal{E}_{\mathrm{src}}$):** (Appendix P.15) The excess reflexive thermodynamic dissipation generated when a predictive system processes patterns whose SPAP proximity exceeds the SPAP-flat baseline. Over an interval $\Delta t$,
+$$
+\mathcal{E}_{\mathrm{src}}(S,\Delta t)=\sum_j Q_{\mathrm{src}}(S,E_j),
+$$
+where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of reflexive integration and vanishes on SPAP-flat inputs. It is distinct from the baseline operational cost of the predictive loop.
+
 
 *   **PCE-Attractor Orbit:** (Theorem Z.6.3a) The orbit of the PCE-Attractor state $\rho_0 = \frac{1}{a}I_a \oplus 0_b$ under unitary conjugation is $\mathcal{O}_{\rho_0} \cong U(d_0)/(U(a) \times U(b)) \cong \text{Gr}(2,8)$, a compact Hermitian symmetric space of complex dimension $ab = 12$ and real dimension $2ab = 24 = M$. This identification provides an independent geometric derivation of the interface mode count.
 

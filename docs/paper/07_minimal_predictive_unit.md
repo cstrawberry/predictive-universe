@@ -205,6 +205,75 @@ $$
 $$
 corresponding to the Memory, Prediction, and Interface subsystems of Section 7.1.3. The explicit 3-qubit MPU of Section 7.1.3 is therefore the minimal faithful realization of the stated algebraic assumptions, unique up to unitary equivalence.
 
+**Corollary 23a.1 (Complex Clifford Form of the Minimal Predictive Algebra).**
+On the minimal branch,
+$$
+K_0=3,
+\qquad
+\mathfrak A_{\min}\cong M_2(\mathbb C)^{\otimes 3}\cong M_8(\mathbb C)\cong \mathrm{Cl}_{\mathbb C}(6).
+$$
+Equivalently, the minimal predictive algebra is the standard complex Clifford algebra of rank $6=2K_0$ acting on the 8-dimensional complex state space.
+
+*Proof.* Theorem 15 gives $K_0=3$. Theorem 23a identifies the minimal faithful algebra as
+$$
+\mathfrak A_{\min}\cong M_2(\mathbb C)^{\otimes 3}\cong M_8(\mathbb C).
+$$
+The standard complex Clifford classification gives
+$$
+\mathrm{Cl}_{\mathbb C}(2n)\cong M_{2^n}(\mathbb C).
+$$
+Setting $n=3$ yields $\mathrm{Cl}_{\mathbb C}(6)\cong M_8(\mathbb C)$, hence the claim. ∎
+
+**Remark 23a.1a (Hurwitz Coherence Check).** On the minimal branch, $d_0=8$ is also the maximal dimension of a normed division algebra over $\mathbb R$. This is a secondary coherence check already compatible with the Appendix Z branch data; it is not an independent derivation of $d_0=8$.
+
+**Corollary 23a.1b (Numerical Hurwitz Coincidence).** The Horizon Constant equals the number of non-real normed division algebras over $\mathbb R$:
+$$
+K_0=3=\#\{\mathbb C,\mathbb H,\mathbb O\}.
+$$
+
+*Proof.* Theorem 15 gives $K_0=3$. Hurwitz's classification gives exactly three non-real normed division algebras over $\mathbb R$, namely $\mathbb C$, $\mathbb H$, and $\mathbb O$. ∎
+
+**Theorem 23a.1c (Negative Resolution of the Hurwitz Coincidence).** Let $\mathsf{SPAP}_{\min}$ be the groupoid whose objects are minimal-branch SPAP register configurations
+$$
+(\mathcal H_0,\mathfrak A_M,\mathfrak A_P,\mathfrak A_I)
+$$
+realizing the conclusions of Theorem 23a and Corollary 23a, and whose morphisms are unitary intertwiners preserving the three labeled functional factors. Let $\mathsf{Hur}_{\neq\mathbb R}$ be the groupoid of non-real normed real division algebras over $\mathbb R$ with algebra isomorphisms. Then no functor
+$$
+F:\mathsf{SPAP}_{\min}\to \mathsf{Hur}_{\neq\mathbb R}
+$$
+has essential image consisting of the three Hurwitz objects
+$$
+\mathbb C,\quad \mathbb H,\quad \mathbb O.
+$$
+In particular, the equality
+$$
+K_0=3=\#\{\mathbb C,\mathbb H,\mathbb O\}
+$$
+is not the count of a shared categorical image, and the two categories are not equivalent.
+
+*Proof.* By Theorem 23a, every faithful minimal realization of the minimal predictive algebra is unitarily equivalent to the standard representation of $M_2(\mathbb C)^{\otimes 3}$ on $(\mathbb C^2)^{\otimes 3}$. Corollary 23a identifies the three distinguished commuting factors with the Memory, Prediction, and Interface subsystems. Therefore every object of $\mathsf{SPAP}_{\min}$ is isomorphic to the standard 3-qubit configuration
+$$
+\big((\mathbb C^2)^{\otimes 3},
+M_2(\mathbb C)\otimes I\otimes I,
+I\otimes M_2(\mathbb C)\otimes I,
+I\otimes I\otimes M_2(\mathbb C)\big),
+$$
+so $\mathsf{SPAP}_{\min}$ has exactly one isomorphism class of objects.
+
+Hurwitz's theorem classifies the non-real normed division algebras over $\mathbb R$ as exactly three non-isomorphic objects,
+$$
+\mathbb C,\qquad \mathbb H,\qquad \mathbb O.
+$$
+Thus $\mathsf{Hur}_{\neq\mathbb R}$ has three isomorphism classes.
+
+Now let $F:\mathsf{SPAP}_{\min}\to \mathsf{Hur}_{\neq\mathbb R}$ be any functor. Functors send isomorphic source objects to isomorphic target objects. Since all objects of $\mathsf{SPAP}_{\min}$ are mutually isomorphic, every object in the essential image of $F$ lies in a single target isomorphism class. Hence
+$$
+\#\big(\operatorname{EssIm}(F)/\cong\big)\le 1.
+$$
+This makes it impossible for the essential image to consist of all three non-isomorphic Hurwitz objects. Therefore no such functor exists, and a fortiori the categories are not equivalent. ∎
+
+**Remark 23a.1d (What Survives).** Corollary 23a.1b remains a valid numerical coherence check. A coarser comparison between the ordered three-register tower and the first three nontrivial Cayley-Dickson stages may still be mathematically useful, but that would be a separate construction on a different source category; it is not the same as a functor from the canonical minimal-branch SPAP configuration category.
+
 **Theorem 23b (Operational Pure-State Geometry on the Minimal Branch).**
 On the minimal active branch $d_0=8$, the MPU pure-state description admits the following quotient form.
 

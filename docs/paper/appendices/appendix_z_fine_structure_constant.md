@@ -285,6 +285,18 @@ which satisfy the Clifford relations $\{\gamma_i,\gamma_j\} = 2\delta_{ij} I$ an
 
 *Bott Periodicity.* Real and complex Clifford algebras exhibit 8-fold and 2-fold periodicity respectively. The value $d_0 = 8 = 2^3$ sits at the end of the first real period, where algebraic structure is maximally rich before repeating.
 
+*Clifford Complexification Bridge.* The standard complexification identity $\mathrm{Cl}_{\mathbb{R}}(0,n)\otimes_{\mathbb{R}}\mathbb{C}\cong\mathrm{Cl}_{\mathbb{C}}(n)$ at $n=6$ gives
+$$
+\mathrm{Cl}_{\mathbb{C}}(6)\cong\mathrm{Cl}_{\mathbb{R}}(0,6)\otimes_{\mathbb{R}}\mathbb{C}.
+$$
+From the Bott periodicity table, $\mathrm{Cl}_{\mathbb{R}}(0,6)\cong M_8(\mathbb{R})$. Thus the minimal SPAP algebra
+$$
+\mathfrak{A}_{\min}\cong M_8(\mathbb{C})\cong\mathrm{Cl}_{\mathbb{C}}(6)\cong\mathrm{Cl}_{\mathbb{R}}(0,6)\otimes_{\mathbb{R}}\mathbb{C}
+$$
+is the complexification of an 8-dimensional real matrix algebra acting faithfully on $\mathbb{R}^8$. Since the octonions $\mathbb{O}$ also form an 8-dimensional real algebra, the division-algebra coherence check and the Clifford coherence check share the same 8-dimensional real foundation.
+
+This is a secondary algebraic consistency relation only. The present manuscript does **not** derive an octonionic $\mathrm{Spin}(7)$ action inside the minimal SPAP dynamics, and it does **not** prove that $\mathrm{Cl}_{\mathbb{R}}(0,6)$ is selected by a predictive-substrate real-structure theorem rather than by dimensional coincidence. Identifying the PU invariant that would pick out this real form — and, if it exists, the analogue of the Cayley $4$-form stabilizer — remains open.
+
 *Consistency with Dimensional Selection.* For $K_0 \neq 3$, the framework becomes inconsistent with mode-channel matching (Theorem Z.11). Specifically, $K_0 = 2$ yields $M = 8$ with no integer $D$ satisfying $K(D) = 8$; $K_0 = 4$ yields $M = 56$ with no solution because standard bounds give $K(5)\le44<56<72\le K(6)$ [Mittelmann & Vallentin 2010]. Only $K_0 = 3$ produces $M = 24 = K(4)$, yielding the unique self-consistent dimensional structure with $D = 4$.
 
 ---
@@ -2942,3 +2954,60 @@ n_{\text{pol}} = D - 2 = 2 \text{ after selecting } D=4 \\[4pt]
 | $\Delta_{\text{gap}}$ | $2\mu_0$ | Energy-norm relation | Corollary Z.8g.1 |
 
 All of these quantities descend from the framework's discrete axioms, branch selections, and the symmetric-space geometry of the attractor Grassmannian.
+
+### Z.35.1 Cross-Appendix Geometric Synthesis
+
+**Theorem Z.35a (Canonical Hierarchy of Configuration Spaces on the Minimal Branch).** On the minimal branch
+$$
+(d_0,a,b,M,k)=(8,2,6,24,12),
+$$
+the principal geometric arenas used across the manuscript are canonically linked as follows:
+$$
+\Sigma_8 \cong U(8)/U(1)^8,
+\qquad
+X=\mathrm{Gr}(2,8),
+\qquad
+\pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to X,
+\qquad
+\mathrm{Gr}_{\mathbb C}(12,24)=\mathrm{Gr}_{\mathbb C}(k,M).
+$$
+There is a canonical surjective forgetting map
+$$
+q:\Sigma_8\to \mathrm{Gr}(2,8),\qquad q(F_\bullet)=F_2,
+$$
+the lift $\widetilde X$ is the universal ordered $(1,2,3)$ splitting lift over $X$ for the quantitative gauge sector, and the vacuum Grassmannian is induced from the same attractor data through
+$$
+k=\dim_{\mathbb C}\mathrm{Gr}(2,8)=12,
+\qquad
+M=\dim_{\mathbb R}\mathrm{Gr}(2,8)=24.
+$$
+
+*Proof.* Definition 25 and Theorem 26 identify the perspective manifold as $\Sigma_8\cong U(8)/U(1)^8$, the complete flag manifold of $\mathbb C^8$. Any complete flag determines a distinguished 2-plane $F_2$, giving the forgetting map $q(F_\bullet)=F_2$, and every 2-plane extends to a complete flag, so $q$ is surjective. Theorem Z.6.3a identifies the PCE-attractor orbit with $\mathrm{Gr}(2,8)$. Theorem G.8.4e.1 identifies $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ as the universal ordered-splitting lift of the universal quotient bundle over $\mathrm{Gr}(2,8)$. Theorem U.7a gives $\dim_{\mathbb C}\mathrm{Gr}(2,8)=12$ and $\dim_{\mathbb R}\mathrm{Gr}(2,8)=24$, and Theorem U.3 defines the Appendix U vacuum configuration space as $\mathrm{Gr}_{\mathbb C}(12,24)$. ∎
+
+**Theorem Z.35b (Holonomy-Controlled Phase and Coupling Sector).** The currently derived PU abelian and CP phase data are controlled by holonomy or curvature integrals on the relevant geometric bundles and manifolds:
+
+1. the Thomson-limit fine-structure constant uses the symmetric-space Bures curvature on $\mathrm{Gr}(2,8)$ together with the minimal holonomy generator of $\pi_2(\mathrm{Gr}(2,8))$;
+2. the CKM phase is Berry holonomy around the minimal flavor loop on $\mathrm{Gr}(2,8)$;
+3. the baryogenesis CP-odd insertion depends on the same Berry-holonomy angle $\delta$;
+4. the strong-CP parameter is represented in PU as determinant-line-bundle holonomy over $\mathrm{Gr}(2,8)$.
+
+Therefore the presently derived abelian and CP phase sector is holonomy-controlled.
+
+*Proof.* Item 1 is the Appendix Z derivation of Theorems Z.24-Z.26 together with Lemma Z.14. Item 2 is Theorems T.53-T.56. Item 3 is Theorem Y.6.1 together with the imported phase $\delta$ from Appendix T. Item 4 is Proposition K.6.4. ∎
+
+**Theorem Z.35c (Minimal-Branch Propagation of the Golay-Leech Structure).** Once the minimal branch fixes $M=24$, the same code-lattice structure propagates through multiple sectors in a theorem-level way:
+
+1. PCE selects the extended binary Golay code $[24,12,8]$;
+2. the number $12$ simultaneously equals
+$$
+\frac{M}{2}=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8);
+$$
+3. the Golay distance condition $d=8$ is equivalent to rootlessness of the glued 24-dimensional lattice;
+4. on the even unimodular rootless 24-dimensional branch, the vacuum lattice is uniquely the Leech lattice;
+5. the scaled three-fold scaffold $\sqrt{2}E_8^3$ is compatible with, but does not independently derive, the topological three-generation result.
+
+Therefore a single code-lattice backbone propagates from interface optimization to gauge-capacity saturation, vacuum stability, and compatible three-fold internal geometry.
+
+*Proof.* Item 1 is Theorem Z.13. Item 2 is Theorem G.8.4f together with Theorem U.7a. Item 3 is Proposition R.4.2a. Item 4 is Theorem R.4.10. Item 5 is Proposition R.4.2. ∎
+
+**Remark Z.35d (Logical Boundary).** Theorems Z.35a-Z.35c unify the branch-determined geometry, holonomy, and code-lattice propagation already supported by the manuscript. They do not assert a single master partition function for every sector or a literal single moduli stack underlying all PU constructions. They also do not prove uniqueness of the hierarchy: the present manuscript does not yet show that every minimal-branch collection of PCE/QFI-compatible arenas must be isomorphic to the displayed diagram.

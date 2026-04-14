@@ -430,6 +430,44 @@ $$
 
 *Proof.* Theorem R.1.1 gives $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, so $\operatorname{rank}\pi_2(\Sigma_8)=7$. On the minimal branch, Theorem Z.2 gives $d_0=8$, hence $d_0-1=7$. Theorem R.3.4 gives $N_g=3$ and Theorem Z.11 gives $D=4$, so $N_g+D=7$. Therefore all quantities coincide. ∎
 
+**Corollary R.3.5c (Minimal-Branch Structural Identity).** On the minimal branch,
+$$
+2^{K_0}=N_g+D+1.
+$$
+Equivalently,
+$$
+K_0=\log_2(N_g+D+1).
+$$
+
+*Proof.* Theorem 15 gives $K_0=3$ and hence $2^{K_0}=8$. On the minimal Appendix Z branch, Theorem Z.2 gives $d_0=8$. Corollary R.3.5b gives $d_0-1=N_g+D$. Therefore $d_0=N_g+D+1=8=2^{K_0}$. Taking $\log_2$ of both sides gives the equivalent formula. ∎
+
+**Corollary R.3.5d (Three Independently Derived Threes).** On the minimal branch,
+$$
+K_0=N_g=t_{\mathrm{Golay}}=3,
+$$
+where
+$$
+t_{\mathrm{Golay}}=\left\lfloor\frac{d_{\min}-1}{2}\right\rfloor
+$$
+is the Golay correction radius.
+
+*Proof.* Theorem 15 gives $K_0=3$. Theorem R.3.4 gives $N_g=3$. Corollary R.3.5a gives $t_{\mathrm{Golay}}=3=N_g$. Combining the three equalities proves the claim. ∎
+
+**Proposition R.3.5e (Minimal-Branch Integer Ledger).** The recurrent minimal-branch integers satisfy the exact ledger
+
+| Integer | Rigorous identity on the minimal branch | Source chain |
+|:--:|:--|:--|
+| $3$ | $K_0=N_g=t_{\mathrm{Golay}}$ | Theorem 15; Theorem R.3.4; Corollary R.3.5a |
+| $4$ | $D=4$ | Theorem Z.11 |
+| $7$ | $\operatorname{rank}\pi_2(\Sigma_8)=d_0-1=N_g+D$ | Theorem R.1.1; Corollary R.3.5b |
+| $8$ | $d_0=8=2^{K_0}$ | Theorem 23; Theorem Z.2; Theorem 15 |
+| $12$ | $12=M/2=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8)$ | Theorem Z.5; Theorem U.7a; Theorem G.8.4f |
+| $24$ | $24=M=K(4)$ | Theorem Z.5; Theorem Z.11 |
+
+*Proof.* The first four rows are exactly Corollaries R.3.5a-R.3.5d together with Theorems R.1.1, 15, Z.2, and Z.11. The $12$-row is Theorem G.8.4f together with Theorem U.7a. The $24$-row combines Theorems Z.5 and Z.11. These are exact minimal-branch identities. ∎
+
+**Remark R.3.5e.1.** Proposition R.3.5e records a compact ledger of exact equalities on the minimal branch. It does not by itself reduce all six integers to one deeper Bott-theoretic source. Whether a single Bott-periodicity-based functor underlies all six entries, or whether some of the equalities are genuinely only coincident in the present formulation, remains open.
+
 ## R.4 Three-Fold Structure: Topological Derivation and Geometric Compatibility
 
 This section compares two distinct appearances of a three-fold pattern in the framework. The topological route of Sections R.1–R.4.1 carries the actual derivation of $N=3$ from anomaly cancellation together with the CP-violation requirement. The geometric route of Section R.4.2 shows that the Leech/$E_8$ construction contains a natural three-fold scaffold compatible with that generation count. The convergence is structurally suggestive, but only the topological route proves the count.
@@ -833,6 +871,21 @@ $$\text{PCE-optimal error correction} \Rightarrow d = 8 \Rightarrow \text{rootle
 Each implication is a theorem; their composition is logical necessity. ∎
 
 ---
+
+**Proposition R.4.2c (Golay-Leech Propagation Across Gauge, Vacuum, and Generation Sectors).** Once the minimal branch fixes $M=24$, the same code-lattice structure propagates through multiple sectors in a theorem-level way:
+
+1. PCE selects the extended binary Golay code $[24,12,8]$.
+2. The number $12$ simultaneously equals
+$$
+\frac{M}{2}=ab=k=n_G=\dim_{\mathbb C}\mathrm{Gr}(2,8).
+$$
+3. The Golay distance condition $d=8$ is equivalent to rootlessness of the glued 24-dimensional lattice.
+4. On the even unimodular rootless 24-dimensional branch, the vacuum lattice is uniquely the Leech lattice.
+5. The scaled three-fold scaffold $\sqrt{2}E_8^3$ is compatible with, but does not independently derive, the three-generation result.
+
+Therefore a single code-lattice backbone propagates from interface optimization to gauge-capacity saturation, vacuum stability, and a compatible three-fold internal geometry.
+
+*Proof.* Item 1 is Theorem Z.13. Item 2 is Theorem G.8.4f together with Theorem U.7a. Item 3 is Proposition R.4.2a. Item 4 is Theorem R.4.10. Item 5 is Proposition R.4.2, which explicitly preserves the logical boundary that the topological route, not the lattice scaffold, derives $N_g=3$. Composing these statements yields the claimed propagation chain. ∎
 
 ### R.4.2.4 Niemeier Classification and Unique Selection
 

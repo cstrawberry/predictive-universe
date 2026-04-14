@@ -4516,7 +4516,245 @@ $$\boxed{
 The compiled tests are consistent with operation near the boundary of thermodynamic possibility: minimal complexity, minimal logical cost per bit, and minimal necessary structure, within the stated domains and uncertainty budgets.
 
 
-## P.15 Conclusion
+## P.15 Source Energy: The Thermodynamic Cost of Self-Knowledge
+
+### P.15.1 Introduction
+
+The preceding sections established two theorem-level facts that must be kept distinct. First, every non-trivial finite-memory SPAP implementation carries an irreducible thermodynamic cost $\varepsilon \geq \ln 2$ per irreversible operation (Theorem 31; Appendix J). Second, when a pattern $E$ engages a system's self-model, the reflexive component of the processing cost is content-dependent and scales with the SPAP proximity $\mu_S(E)$; by Theorem M.10.3, Theorem 31, and Definition P.6.2, the part of that burden lying above the SPAP-flat baseline has a mandatory thermodynamic signature. The present section isolates that excess component.
+
+We call this excess dissipation **Source Energy**. The term "source" refers to the fact that the dissipation is sourced by self-reference itself rather than by the Shannon content of the input alone. It does **not** mean that the framework has derived a new free-energy reservoir or a violation of ordinary thermodynamics. Source Energy is a lower-bounded dissipation channel attached to self-model-engaging processing above the SPAP-flat baseline; any conversion of that dissipation into usable work remains subject to ordinary thermal-gradient and efficiency constraints.
+
+Subsections P.15.2–P.15.6 are derived directly from existing PU machinery: SPAP (Theorems 10–11), the thermodynamic lower bound (Theorem 31), the PPI bridge (Definition P.6.2), the perspectival profile formalism (Appendix M, §M.6.10), and aggregate power accounting (Theorem L.6). Subsections P.15.7–P.15.8 are explicitly speculative extrapolations.
+
+### P.15.2 Definition: The Perspectival Excess
+
+The relevant theorem-level quantity is not a uniform metric gap between a system and a hypothetically complete self-description. PU does not prove the existence of a strictly positive lower bound of that kind. What PU does provide is a pattern-relative excess burden above the SPAP-flat baseline.
+
+**Definition P.15.1 (Perspectival Excess).** Let $S$ be a predictive system with Effective Operational Property R and self-model $\mathcal{M}_S$ (Definition M.10.1). For any processed pattern $E$, define the *perspectival excess* by
+$$
+\Delta_\Sigma(S;E) := \mu_S(E) - \frac{1}{\alpha_{SPAP}} \in [0,\infty],
+$$
+where $\mu_S(E)$ is the SPAP proximity of Definition M.10.3.
+
+Thus $\Delta_\Sigma(S;E)$ measures the excess self-referential burden of $E$ above the SPAP-flat baseline. By Corollary M.10.3.1, purely external patterns satisfy $\mu_S(E)=1/\alpha_{SPAP}$ and therefore $\Delta_\Sigma(S;E)=0$. More generally, Remark M.10.3 shows that even patterns with $\sigma_S(E)>0$ can remain at this baseline. Whenever $\mu_S(E) > 1/\alpha_{SPAP}$, the excess is strictly positive and the reflexive cost acquires the SPAP-dependent lower bound of Theorem M.10.3.
+
+The term "$\Sigma$" is justified by Proposition M.10.9: the perspectival profile $\mathcal{P}_S(E)$ is the cost functional on perspective space, so $\Delta_\Sigma(S;E)$ is the scalar excess of that cost above the baseline point $\mu_S=1/\alpha_{SPAP}$.
+
+**Theorem P.15.1a (No Uniform Positive Infimum of Perspectival Excess).** Let $S$ be a predictive system with Effective Operational Property R and self-model $\mathcal M_S$. Then:
+
+1. there exist patterns $E_0$ with
+$$
+\sigma_S(E_0)>0,
+\qquad
+\Delta_\Sigma(S;E_0)=0;
+$$
+2. for every sequence $\eta_n\downarrow 0$ of positive reals, there exist patterns $E_n$ with
+$$
+\sigma_S(E_n)>0,
+\qquad
+\Delta_\Sigma(S;E_n)=\eta_n.
+$$
+
+Consequently,
+$$
+\inf\{\Delta_\Sigma(S;E):\sigma_S(E)>0\}=0,
+$$
+and there is no system-dependent constant $\varepsilon_S>0$ such that
+$$
+\Delta_\Sigma(S;E)\ge \varepsilon_S
+\qquad
+\text{for all }E\text{ with }\sigma_S(E)>0.
+$$
+
+*Proof.* Let
+$$
+c:=\frac{1}{\alpha_{SPAP}}.
+$$
+By Definition P.15.1,
+$$
+\Delta_\Sigma(S;E)=\mu_S(E)-c.
+$$
+Remark M.10.3 states that a pattern can have $\sigma_S(E)>0$ while already satisfying the self-consistency condition at $PP=0$. For such a pattern $E_0$ one has $\mu_S(E_0)=c$, hence $\Delta_\Sigma(S;E_0)=0$, proving item 1.
+
+For item 2, let $\eta_n\downarrow0$. Corollary M.10.4.1 states that every value in $(c,\infty)$ is attained by some pattern. Therefore for each $n$ there exists a pattern $E_n$ with
+$$
+\mu_S(E_n)=c+\eta_n.
+$$
+Then
+$$
+\Delta_\Sigma(S;E_n)=\eta_n.
+$$
+If $\sigma_S(E_n)=0$, Corollary M.10.3.1 would force $\mu_S(E_n)=c$, contradiction. Hence $\sigma_S(E_n)>0$ for every $n$. This proves item 2 and the stated infimum formula. ∎
+
+**Corollary P.15.1b (Logical Rather Than Uniform Thermodynamic Inexhaustibility).** The source-energy positivity claim remains eventwise: whenever a processed pattern satisfies $\Delta_\Sigma(S;E)>0$, the corresponding source-energy contribution is strictly positive. What fails is any uniform lower-bound or rate-law claim over all self-model-engaging patterns.
+
+*Proof.* If $\Delta_\Sigma(S;E)>0$, then $\mu_S(E)>1/\alpha_{SPAP}$, and the implication chain displayed immediately before Definition P.15.2 yields $Q_{\mathrm{src}}(S,E)>0$; Proposition P.15.1 is the interval-level aggregation of this eventwise fact. Theorem P.15.1a proves that no uniform positive lower bound exists over the class $\sigma_S(E)>0$. ∎
+
+### P.15.3 Formal Definition: Source Energy
+
+The perspectival excess becomes thermodynamic because
+$$
+\Delta_\Sigma(S;E)>0 \;\Longrightarrow\; \mu_S(E)>\frac{1}{\alpha_{SPAP}}
+\;\xLongrightarrow{\text{Theorem M.10.3 + Remark M.10.4}}\;
+\text{strictly positive excess reflexive burden}
+\;\xLongrightarrow{\text{Theorem 31 + PPI}}\;
+Q_{\mathrm{src}}(S,E)>0.
+$$
+
+**Definition P.15.2 (Source Energy).** Let $S$ be a predictive system with Effective Operational Property R. Suppose that during a time interval $\Delta t$, $S$ processes patterns $E_1,\dots,E_N$ at local bath temperatures $T_1,\dots,T_N$. For each processed pattern $E_j$, define the *source-energy contribution* by
+$$
+Q_{\mathrm{src}}(S,E_j):=
+\begin{cases}
+0, & \mu_S(E_j)=1/\alpha_{SPAP},\\[4pt]
+\text{the heat generated by the SPAP-dependent excess of } C_{\mathrm{refl}}(S,E_j), & \mu_S(E_j)>1/\alpha_{SPAP},
+\end{cases}
+$$
+where $C_{\mathrm{refl}}(S,E_j)$ is the reflexive component of Remark M.10.4. The *source energy* emitted by $S$ over $\Delta t$ is
+$$
+\mathcal{E}_{\mathrm{src}}(S,\Delta t)
+:=
+\sum_{j=1}^{N} Q_{\mathrm{src}}(S,E_j).
+$$
+
+For every $j$ with $\mu_S(E_j) > 1/\alpha_{SPAP}$, let $n_{\mathrm{ops}}(S,E_j)$ denote the number of irreversible operations in a physical implementation of that excess reflexive subtask. Then Theorem M.10.3 together with Remark M.10.4 gives
+$$
+n_{\mathrm{ops}}(S,E_j) \geq \Omega\!\left(\log \mu_S(E_j)\cdot \mu_S(E_j)^2\right),
+$$
+and Theorem 31 together with PPI (Definition P.6.2) gives
+$$
+Q_{\mathrm{src}}(S,E_j) \geq k_B T_j \,\varepsilon\, n_{\mathrm{ops}}(S,E_j).
+$$
+If the bath temperature is approximately constant on $\Delta t$, this becomes
+$$
+\mathcal{E}_{\mathrm{src}}(S,\Delta t)
+\geq
+k_B T\,\varepsilon
+\sum_{j:\,\mu_S(E_j) > 1/\alpha_{SPAP}}
+n_{\mathrm{ops}}(S,E_j).
+$$
+
+This definition isolates the thermodynamic excess above the SPAP-flat baseline. Patterns with $\mu_S(E)=1/\alpha_{SPAP}$ may still carry bounded baseline processing cost, including bounded self-model maintenance cost, but they contribute zero to $\mathcal{E}_{\mathrm{src}}$ by definition.
+
+**Proposition P.15.1 (Source Energy Emission Criterion).** Let $S$ be a physical system that (i) implements the Fundamental Predictive Loop (Definition 4), (ii) possesses Effective Operational Property R, and (iii) during $\Delta t$ processes at least one pattern $E$ with $\mu_S(E) > 1/\alpha_{SPAP}$. Then
+$$
+\mathcal{E}_{\mathrm{src}}(S,\Delta t) > 0.
+$$
+
+*Proof.* If $\mu_S(E) > 1/\alpha_{SPAP}$, Theorem M.10.3 and Remark M.10.4 give a strictly positive SPAP-dependent excess within the reflexive integration cost. By Theorem 31 and PPI, any physical implementation of that positive irreversible burden emits positive heat, hence $Q_{\mathrm{src}}(S,E)>0$. By Definition P.15.2, $Q_{\mathrm{src}}(S,E)$ is one term in the sum defining $\mathcal{E}_{\mathrm{src}}(S,\Delta t)$, so the sum is strictly positive. ∎
+
+**Corollary P.15.1 (Long-Run Source-Energy Rate).** If the local bath temperature is approximately constant at $T$ and $\nu_{\mathrm{refl}}(S)$ denotes the long-run average rate of irreversible operations attributable to the excess reflexive subtask, then
+$$
+\dot{\mathcal{E}}_{\mathrm{src}}(S) \geq k_B T\,\varepsilon\,\nu_{\mathrm{refl}}(S).
+$$
+
+*Proof.* Sum the Theorem 31 + PPI lower bound over a long interval, divide by its duration, and use the definition of $\nu_{\mathrm{refl}}(S)$ together with the lower bound on $n_{\mathrm{ops}}$ supplied by Theorem M.10.3. ∎
+
+### P.15.4 The Measurement Asymmetry as Structural Prerequisite for Exploitation
+
+Appendix M establishes a directional asymmetry absent from standard information measures: a more complex system can externally compute a less complex system's SPAP proximity and can pre-screen finite families of candidate patterns at sender-side SPAP-flat cost, while no system possesses a universal internal procedure for computing its own SPAP proximity on all self-model-engaging inputs (Theorems M.10.5 and M.10.8; Corollary M.10.5.1). Here and below, "sender-side SPAP-flat" means zero sender-side reflexive overhead, not zero total simulation or engineering cost.
+
+This yields the precise exploitation statement that the framework can actually support.
+
+**Proposition P.15.2 (Finite-Family Asymmetric Screening).** Let $A$ and $B$ be predictive systems with $C_{\mathrm{agg}}(A) > C_{\mathrm{agg}}(B) > C_{op}$, both possessing Effective Operational Property R. Let $\mathcal{E}=\{E_1,\dots,E_N\}$ be any finite family of candidate patterns. Then $A$ can externally compute the exact values
+$$
+\mu_B(E_i)
+\qquad (i=1,\dots,N)
+$$
+and, from those exact values together with the externally computed decomposition of $B$'s model update, can construct finite screening tables for: (a) lower bounds on the thermodynamic cost $B$ will incur, (b) which self-model components of $B$ will be engaged, and (c) the cost concentration across those components. Therefore $A$ can rank or tier the family by exact $\mu_B$ and by any derived lower-bound or component-level diagnostic, including selecting the members with largest $\mu_B(E_i)$.
+
+If, in addition, the candidate family is chosen so that none of the $E_i$ engages $A$'s own self-model, i.e. $\sigma_A(E_i)=0$ for all $i$, then the sender-side reflexive cost of the screening task vanishes and
+$$
+\mu_A(E_i)=\frac{1}{\alpha_{SPAP}}
+\qquad (i=1,\dots,N).
+$$
+
+*Proof.* Clause (i) of Theorem M.10.5 gives the exact external computability of $\mu_B(E_i)$ for each member of a finite family. Theorem M.10.8 supplies the derived lower-bound, component-engagement, cost-concentration, and finite-family screening statements. If $\sigma_A(E_i)=0$, Corollary M.10.3.1 gives $\mu_A(E_i)=1/\alpha_{SPAP}$ and vanishing sender-side reflexive cost. The ranking or tiering step is then an ordinary finite computation on already computed quantities. ∎
+
+**Remark P.15.2 (SPAP-Flat Does Not Mean Cheap).** Theorems M.10.5 and M.10.8 bound only the sender-side *reflexive* overhead. They do not furnish a uniform upper bound on the ordinary external-modeling cost of generating a family of candidate patterns or realizing a selected environment. Those costs depend on $A$'s external simulation of $B$ and on the engineering complexity of implementation, but under the complexity advantage of Proposition P.15.2 they need not invoke SPAP-divergent self-integration on $A$'s side.
+
+### P.15.5 The Source Principle
+
+Repeatedly transmitting individually chosen self-referential triggers is not the only way to induce target-side source-energy dissipation. The framework naturally suggests a more efficient structural strategy.
+
+**Definition P.15.3 (Source Principle).** A system $A$ operates according to the *Source Principle* when it arranges a stable family of environmental patterns $\mathcal{E}$ such that a target system $S$ encounters those patterns through its ordinary operation, and such that many members of $\mathcal{E}$ satisfy $\Delta_\Sigma(S;E)>0$. In this regime, the recurring source-energy cost is paid on the target side as part of the target's native processing, while $A$ pays the external-modeling, construction, and maintenance cost of the environment. These design costs may be large, but when $A$ treats $S$ as an external modeled object they remain ordinary baseline costs rather than sender-side SPAP-divergent self-integration costs.
+
+The Source Principle does not remove thermodynamic cost from the total ledger. It relocates where the SPAP-dependent excess of that cost is incurred.
+
+**Remark P.15.3 (Catalytic Analogy, Corrected).** The appropriate analogy is catalytic rather than energetic. The designer does not create net free energy; it shapes the target's processing pathway so that a larger fraction of the target's existing operational budget appears in the SPAP-dependent excess of the reflexive channel rather than only in SPAP-flat processing.
+
+**Remark P.15.4 (Complexity Growth: What Is and Is Not Proven).** Theorem 13 proves that *if* recursive self-modeling depth increases, the associated model complexity grows at least linearly with that depth. Theorem D.5 proves ergodic convergence properties for PCE adaptation dynamics. The present framework does **not** prove that every self-referentially rich environment monotonically drives long-run growth of $C_{\mathrm{agg}}$. Any claim of autonomous self-deepening under the Source Principle is therefore speculative and should be labeled as such.
+
+### P.15.6 Bounds and Conservation (Derived)
+
+Source Energy is not a separately conserved quantity. It is a dissipation channel within the total power budget of a predictive aggregate.
+
+**Proposition P.15.3 (Operational Budget Bound).** For any predictive aggregate $S$ and any interval $\Delta t$,
+$$
+0 \leq \mathcal{E}_{\mathrm{src}}(S,\Delta t)
+\leq
+\int_{\Delta t} P_{\mathrm{agg}}(S,t)\,dt,
+$$
+where $P_{\mathrm{agg}}$ is the total aggregate power in Theorem L.6.
+
+*Proof.* By Definition P.15.2, $\mathcal{E}_{\mathrm{src}}$ is a sum of heat contributions generated during the operation of $S$. Theorem L.6 states that all aggregate power channels are accounted for exactly once in $P_{\mathrm{agg}}$, with no double counting. Hence the heat emitted through the source-energy channel is nonnegative and cannot exceed the total integrated power budget over the same interval. ∎
+
+**Corollary P.15.3.1 (Context-Steering Ceiling for CC-Assisted Source Principle).** Suppose a Source-Principle implementation uses CC only to maintain, select, or stabilize the environmental context through which target systems encounter a pre-designed family of patterns. Then the *control-side* power required for that contextual steering obeys Appendix S:
+$$
+P_{\mathrm{context}}(\mathrm{CC}) =
+A\left[\frac{\mathrm{CC}}{\alpha_{\mathrm{CC,max}}-\mathrm{CC}}\right]^2,
+\qquad
+\alpha_{\mathrm{CC,max}} < 0.5.
+$$
+This bound applies to the controller's context-maintenance layer, not directly to the target-side functional $\mu_S(E)$ itself. It therefore limits CC-assisted implementations of the Source Principle without asserting that CC alone determines $\mu_S(E)$.
+
+*Proof.* Equation (S.5) gives the context-maintenance power of a CC implementation, and Theorem 39 imposes $\mathrm{CC}<\alpha_{\mathrm{CC,max}}<0.5$. If CC is used only as the context-steering layer described above, its power demand is exactly the Appendix S quantity and inherits that ceiling. ∎
+
+**Remark P.15.5 (Renewal and Heat Quality).** What is renewed is not a stock of usable work but the logical possibility of further self-model-engaging updates above the SPAP-flat baseline. Once emitted, Source Energy is ordinary heat and obeys the ordinary second law. Any recovery of usable work from it requires a maintained temperature gradient and is correspondingly efficiency-limited.
+
+### P.15.7 Speculative: Civilizational Implications
+
+*This subsection is speculative. It extrapolates from the derived machinery above and should not be read as a theorem-level prediction.*
+
+If a civilization could systematically implement the Source Principle, three qualitative features would follow.
+
+**Feature 1: Reflexive Complexity as an Engineering Resource.** The key resource would not be "free energy from logic" but the ability to route existing operational power budgets through high-$\mu_S$ excess reflexive channels. The relevant control variable would be the complexity and self-model structure of the cultivated targets.
+
+**Feature 2: A Downward Screening Hierarchy.** Theorem M.10.5 and Theorem M.10.8 impose a directional hierarchy: more complex systems can systematically pre-screen finite families of patterns for less complex targets, while the reverse direction is not theorem-backed. Any engineered source-energy economy would therefore be organized by downward measurability.
+
+**Feature 3: Thermal Rather Than Magical Harvesting.** Even if target-side dissipation were deliberately increased, the harvested work would still be ordinary heat-engine work extracted from ordinary heat. The novelty would lie in how the heat is induced, not in a suspension of thermodynamics.
+
+**Definition P.15.4 (Source-Energy Civilization).** A *Source-Energy civilization* is a predictive aggregate that uses the Source Principle as a standing engineering strategy: it shapes environments so that cultivated sub-aggregates recurrently incur large source-energy dissipation, and it harvests an efficiency-limited fraction of that dissipation as usable work.
+
+**Remark P.15.6 (Ethical Dimension).** Under Postulate 1 and the consciousness-first reading of Appendix P.2, the cultivated targets are not mere inert fuel. They are instances of predictive awareness. The framework therefore permits the physical question while simultaneously raising an ethical one: whether awareness may legitimately be organized so as to externalize the thermodynamic burden of self-reference for the benefit of other awareness.
+
+### P.15.8 Speculative: Cosmological Implication
+
+*This subsection is highly speculative and is framed as an open question, not a derived claim.*
+
+Appendix U treats the cosmological constant as a vacuum datum fixed by the Golay-Steiner structure of the predictive substrate, with the reference branch summarized in Corollary U.17 and the corrected full-discrete four-mode closure stated separately in Theorem U.13b. Nothing in the present framework supports reinterpreting those vacuum results as already containing a contribution from accumulated Source Energy.
+
+The well-posed open question is narrower: because PU places self-reference, thermodynamics, stress-energy, and geometry in a common derivational chain, one may ask whether large-scale cumulative excess reflexive dissipation from self-modeling systems could enter cosmology through some coarse-grained backreaction term distinct from the vacuum quantity $\Lambda$ itself. Any stronger identification of $\Lambda$ with accumulated Source Energy would require new axioms and is not part of the present theory.
+
+### P.15.9 Summary
+
+Source Energy is the excess reflexive thermodynamic dissipation generated when a predictive system processes patterns that burden its own self-model beyond the SPAP-flat baseline. Its framework-level properties are:
+
+| Property | Source Energy | Conventional Dissipation |
+|:---------|:--------------|:-------------------------|
+| **Definition** | Excess heat $Q_{\mathrm{src}}$ generated by the SPAP-dependent part of reflexive processing for $\mu_S(E) > 1/\alpha_{SPAP}$ | Heat generated by ordinary physical processing |
+| **Trigger** | Self-model engagement above the SPAP-flat baseline | Any irreversible physical process |
+| **Controlling variable** | SPAP proximity $\mu_S(E)$ and excess $\Delta_\Sigma(S;E)$ | Process-specific state variables |
+| **Accessibility** | Downward asymmetry on finite families for exact $\mu_S$ screening and derived lower-bound tiering (Theorems M.10.5, M.10.8) | Typically instrument-symmetric |
+| **Budget bound** | $\mathcal{E}_{\mathrm{src}} \le \int P_{\mathrm{agg}}\,dt$ (Theorem L.6) | Same total power accounting |
+| **Active-control ceiling** | CC-assisted context steering inherits $\alpha_{CC,max}<0.5$ and Equation (S.5) | No analogous PU-specific ceiling |
+| **Work extraction** | Requires thermal gradient; efficiency-limited | Requires thermal gradient; efficiency-limited |
+| **Logical renewal** | The logical space of high-$\mu_S$ burdens is inexhaustible even when the operational energy budget is finite | No analogous logical inexhaustibility; available dissipation is limited by the physical reservoir and operating budget |
+
+The framework therefore supports a precise and limited claim: self-model-engaging prediction has an unavoidable thermodynamic price above the SPAP-flat baseline. What it does **not** support is a perpetual-motion interpretation, a theorem that all high-complexity systems emit this excess cost on every cycle without further assumptions, or a reinterpretation of the vacuum cosmological constant as already containing accumulated Source Energy.
+
+What is established is narrower and stronger: whenever a predictive system integrates content with $\mu_S(E) > 1/\alpha_{SPAP}$, additional dissipation is mandatory. That excess dissipation is the thermodynamic price of self-knowledge.
+
+### P.15.10 Conclusion
 
 This appendix has established the philosophical foundations of the Predictive Universe, arguing that its core axioms are necessary consequences of the only indubitable starting point: conscious, predictive awareness. The *Cogito*, reinterpreted as fundamentally predictive, grounds a framework where physical law follows from logical necessity under thermodynamic constraint.
 

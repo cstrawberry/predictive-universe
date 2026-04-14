@@ -1748,6 +1748,171 @@ The framework achieves inflationary predictions from the Golay-Steiner structure
 
 ---
 
+**Proposition U.72 (Shared Zero-Mode Counting Law for the Present Electroweak and Vacuum Hierarchies).** The currently derived electroweak and vacuum hierarchy exponents all take the form
+$$
+\kappa=\kappa_0-\frac{m}{2},
+$$
+where $\kappa_0$ is the base complex Gaussian count and $m$ is the real collective-coordinate count on the relevant branch. More precisely:
+
+1. Electroweak sector:
+$$
+\kappa_{EW}=39-\frac12=38.5.
+$$
+2. Appendix U five-mode reference branch:
+$$
+\kappa_{\Lambda,\mathrm{ref}}=144-\frac52=141.5.
+$$
+3. Corrected four-mode vacuum branch under Theorem U.13b:
+$$
+\kappa_{\Lambda,\mathrm{trans}}=144-2=142.
+$$
+
+*Proof.* Theorem T.5 gives the electroweak base count $\kappa_0^{EW}=39$ and zero-mode count $m_{EW}=1$, hence $\kappa_{EW}=39-\frac12=38.5$. Theorem U.3 gives the vacuum base count
+$$
+\kappa_0^\Lambda=\dim_{\mathbb C}\mathrm{Gr}_{\mathbb C}(12,24)=12(24-12)=144.
+$$
+Under the Appendix U five-mode reference counting convention of Theorems U.15-U.16, one subtracts $m=5$, obtaining $\kappa_{\Lambda,\mathrm{ref}}=144-\frac52=141.5$. Theorem U.8c simultaneously shows that this is a reference-counting branch rather than theorem-level continuum closure. Under the corrected Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b, the full discrete problem has exactly four translational zero modes and no additional nullity, hence $\kappa_{\Lambda,\mathrm{trans}}=144-\frac42=142$. ∎
+
+**Corollary U.72a (Reference-Branch Vacuum–Electroweak Sum Rule).** On the Appendix U five-mode reference branch,
+$$
+2\kappa_{\Lambda,\mathrm{ref}}+2\kappa_{EW}=360=\binom{D+2}{2}M.
+$$
+
+*Proof.* Corollary T.62a proves the identity. Using Theorem Z.11 and Theorem Z.5 gives
+$$
+\binom{D+2}{2}M=\binom{6}{2}\cdot 24=360.
+$$
+∎
+
+**Proposition U.73 (Conditional Weighted-Conformal Zero Mode on the Definition U.4 Branch).** Work in $D=4$ with the continuum action of Definition U.4. Assume:
+
+1. $\phi^*(x)=\varphi(|x|)$ is a non-trivial finite-action $O(4)$-symmetric critical point of $S_{\mathrm{cont}}$;
+2. the effective potential is quartic-homogeneous on the relevant branch,
+$$
+V_{\mathrm{eff}}(\lambda\phi)=\lambda^4V_{\mathrm{eff}}(\phi)
+\qquad (\lambda>0),
+$$
+so that the weighted dilations
+$$
+(T_\rho\phi)(x):=\rho^{-1}\phi(x/\rho)
+$$
+preserve the Definition U.4 action.
+
+Then:
+
+(a) $T_\rho\phi^*$ is again an exact critical point of $S_{\mathrm{cont}}$ for every $\rho>0$;
+
+(b) the weighted conformal tangent
+$$
+s_{\mathrm{conf}}(x):=\frac{d}{d\ln\rho}\Big[\rho^{-1}\phi^*(x/\rho)\Big]_{\rho=1}
+=-\phi^*(x)-x^\mu\partial_\mu\phi^*(x)
+$$
+lies in the Hessian kernel;
+
+(c) $s_{\mathrm{conf}}$ is nonzero and linearly independent of the four translational zero modes of Theorem U.8.
+
+Consequently the translation plus weighted-conformal orbit is a five-dimensional exact collective-coordinate branch through $\phi^*$, and on that branch the Appendix U exponent is
+$$
+\kappa_\Lambda=144-\frac52=141.5.
+$$
+This does not contradict Theorem U.8c, which concerns the distinct pure-coordinate tangent $s_{\mathrm{coord}}(x)=x^\mu\partial_\mu\phi^*(x)$.
+
+*Proof.* Let $y=x/\rho$. Then
+$$
+(T_\rho\phi)(x)=\rho^{-1}\phi(y),
+\qquad
+\partial_\mu(T_\rho\phi)(x)=\rho^{-2}(\partial_\mu\phi)(y).
+$$
+Because $D=4$, the kinetic term is invariant:
+$$
+\int_{\mathbb R^4}\frac12|\nabla T_\rho\phi|^2\,d^4x
+=
+\int_{\mathbb R^4}\frac12|\nabla\phi|^2\,d^4y.
+$$
+By quartic homogeneity,
+$$
+V_{\mathrm{eff}}(T_\rho\phi(x))
+=
+V_{\mathrm{eff}}(\rho^{-1}\phi(y))
+=
+\rho^{-4}V_{\mathrm{eff}}(\phi(y)),
+$$
+so after the change of variables $d^4x=\rho^4\,d^4y$, the potential term is also invariant. Hence
+$$
+S_{\mathrm{cont}}[T_\rho\phi]=S_{\mathrm{cont}}[\phi]
+\qquad
+\text{for all }\phi,\rho>0.
+$$
+Since $T_\rho$ is an invertible smooth action on field space, critical points are carried to critical points, proving (a).
+
+Differentiate the exact critical family $\rho\mapsto T_\rho\phi^*$ at $\rho=1$. The derivative is $s_{\mathrm{conf}}$, so differentiating the Euler-Lagrange equation along that family yields
+$$
+D^2S_{\mathrm{cont}}(\phi^*)[s_{\mathrm{conf}},\eta]=0
+\qquad
+\text{for all test directions }\eta,
+$$
+proving (b).
+
+For (c), the translation zero modes are $t_\mu=-\partial_\mu\phi^*$. Because $\phi^*$ is $O(4)$-symmetric, each $t_\mu$ transforms in the vector representation, while $s_{\mathrm{conf}}=-\varphi(r)-r\varphi'(r)$ is an $O(4)$ scalar. Under any $O(4)$-invariant inner product, scalar and vector isotypic components are orthogonal. If $s_{\mathrm{conf}}=0$, then $r\varphi'(r)=-\varphi(r)$, so $\varphi(r)=c/r$; finite action then forces $c=0$, contradicting non-triviality. Hence $s_{\mathrm{conf}}\neq 0$ and cannot lie in the translation span. Theorem U.3 gives the base complex count $\dim_{\mathbb C}\mathrm{Gr}_{\mathbb C}(12,24)=144$, and subtracting one half of the five real collective coordinates gives $\kappa_\Lambda=144-\frac52=141.5$. The distinction from Theorem U.8c is immediate because $s_{\mathrm{conf}}=-\phi^*-s_{\mathrm{coord}}$ is not the pure-coordinate tangent. ∎
+
+**Theorem U.73a (Quartic Homogeneity Refuted on the Theorem-Level False-Vacuum Branch).** Work under the hypotheses of Theorem U.13b, and let
+$$
+\phi^*(x)=\varphi(|x|)
+$$
+be the associated non-trivial finite-action $O(4)$-symmetric one-bounce saddle. Then there is no interval $I\subset\mathbb R$ containing $0$ and the nonzero values attained by $\varphi$ on which
+$$
+V_{\mathrm{eff}}(\lambda\phi)=\lambda^4V_{\mathrm{eff}}(\phi)
+$$
+holds for all $\phi\in I$ and all $\lambda>0$ with $\lambda\phi\in I$. In particular, the quartic-homogeneity hypothesis of Proposition U.73 does not hold on the theorem-level false-vacuum bounce branch.
+
+*Proof.* Theorem U.13b gives
+$$
+V_{\mathrm{eff}}\in C^3(\mathbb R),
+\qquad
+V_{\mathrm{eff}}(0)=V_{\mathrm{eff}}'(0)=0,
+\qquad
+V_{\mathrm{eff}}''(0)>0,
+$$
+and provides a non-trivial one-bounce saddle $\phi^*(x)=\varphi(|x|)$ with
+$$
+\lim_{r\to\infty}\varphi(r)=0,
+\qquad
+\varphi'(r)<0\ \,(r>0).
+$$
+Because the bounce is non-trivial, there exists a nonzero value $a$ attained by $\varphi$. Assume, for contradiction, that quartic homogeneity holds on an interval containing $0$ and $a$. Then for all sufficiently small $t>0$,
+$$
+V_{\mathrm{eff}}(ta)=t^4V_{\mathrm{eff}}(a).
+$$
+But Taylor expansion at $0$ gives
+$$
+V_{\mathrm{eff}}(ta)=\frac12V_{\mathrm{eff}}''(0)a^2t^2+o(t^2)
+\qquad (t\to0^+).
+$$
+Dividing by $t^2$ and letting $t\to0^+$ yields
+$$
+\frac12V_{\mathrm{eff}}''(0)a^2=0,
+$$
+contradicting $a\neq0$ and $V_{\mathrm{eff}}''(0)>0$. Therefore quartic homogeneity is impossible on this branch. ∎
+
+**Corollary U.73b (The Four-Mode Branch Is the Sole Current Theorem-Level Vacuum Closure).** On the theorem-level false-vacuum branch of Appendix U, Proposition U.73 cannot be upgraded to an unconditional five-mode closure. The only current theorem-level vacuum closure is the four-mode branch of Theorem U.13b, with
+$$
+\kappa_\Lambda=142.
+$$
+
+*Proof.* Proposition U.73 requires quartic homogeneity. Theorem U.73a refutes that hypothesis on the theorem-level false-vacuum branch. Theorem U.13b supplies the four-mode closure. ∎
+
+**Remark U.73c (Logical Boundary).** Theorem U.73a closes the issue negatively for the bounce branch actually used to obtain theorem-level vacuum closure. It does not exclude the possibility that a different, explicitly massless continuum action could have an asymptotically quartic UV regime; it shows only that such a regime is not the current Appendix U closure branch. Theorem K.10.7 supplies RG/fixed-point language but not an exact scale-invariant fixed-point theorem at the bounce scale; Theorem U.3 fixes the Gaussian base count $144$ but does not determine the homogeneity degree of $V_{\mathrm{eff}}$; and Proposition R.4.2a constrains the lattice sector rather than the local false-vacuum mass term.
+
+**Remark U.73d.** Corollary U.15b gives
+$$
+A_{\mathrm{eff}}^{(\mathrm{obs})}=0.917\pm0.016
+$$
+on the five-mode reference branch and
+$$
+A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04
+$$
+on the four-mode branch. This keeps the phenomenological comparison explicit while preserving the theorem-level conclusion that only the four-mode branch is presently closed.
+
 ## U.27 Conclusion
 
 This appendix derives the cosmological constant reference scale and the primordial observables from the Golay-Steiner structure at $M = 24$, but with different logical status in the two sectors.
