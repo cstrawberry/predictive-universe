@@ -922,6 +922,16 @@ $$
 
 **Corollary G.8.4f.1 (Gauge-Code Correspondence).** *The rate-$\frac{1}{2}$ Golay code structure fixes the same 12+12 organizational split that reappears in the gauge sector: the Standard Model algebra saturates the 12-generator capacity bound, while the complementary 12-dimensional half of the rate-$\frac{1}{2}$ partition carries the constrained dynamical content. The correspondence is structural; it does not require a unique identification of “signal” versus “parity” with gauge versus matter.*
 
+**Remark G.8.4f.2 (Root-System Reading of the 12-Generator Step).** By Corollary Z.11.2, the shared value
+$$
+12 = k = n_G = \dim_{\mathbb{C}}(\text{Gr}(2,8))
+$$
+is the root count $|\Phi(A_3)|$. Thus the capacity-saturating gauge budget appearing here is the $A_3$ rung of the canonical chain
+$$
+A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8.
+$$
+The Appendix G 12-fold correspondence therefore sits on the same low-rank root scaffold whose $D_4$ step gives the 24-mode spacetime closure in Appendix Z and whose terminal inclusion into $E_8$ matches the internal geometry used in Appendices R and T.
+
 **Theorem G.8.4g (Classical Code-Gauge Structural Analogy).** *The gauge structure of the Standard Model exhibits a structural analogy to classical error-correcting code organization.*
 
 *Statement.* For the self-dual extended binary Golay code $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$ with parameters $[24, 12, 8]$ [MacWilliams & Sloane 1977]:

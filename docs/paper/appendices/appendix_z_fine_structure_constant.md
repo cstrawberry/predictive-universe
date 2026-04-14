@@ -678,15 +678,15 @@ In the context of the MPU network with emergent geometric regularity (Theorem 43
 
 The kissing numbers for low dimensions are established results from discrete geometry:
 
-| D | K(D) | Optimal Configuration |
-|---|------|----------------------|
-| 1 | 2 | Linear |
-| 2 | 6 | Hexagonal |
-| 3 | 12 | FCC/HCP |
-| 4 | 24 | $D_4$ (24-cell) |
-| 5 | 40 | — |
-| 6 | 72 | — |
-| 8 | 240 | $E_8$ |
+| D | K(D) | Optimal Configuration | Root-System Realization |
+|---|------|----------------------|-------------------------|
+| 1 | 2 | Linear | $A_1$ |
+| 2 | 6 | Hexagonal | $A_2$ |
+| 3 | 12 | FCC/HCP | $A_3 \cong D_3$ |
+| 4 | 24 | $D_4$ (24-cell) | $D_4$ |
+| 5 | 40 | — | — |
+| 6 | 72 | — | — |
+| 8 | 240 | $E_8$ | $E_8$ |
 
 **Definition Z.8 (24-Cell Vertices).** Fix the standard 24-point configuration on $S^3$ given by the unit Hurwitz integers. In Cartesian coordinates, these consist of:
 - **Type I (8 vectors):** Permutations of $(\pm 1, 0, 0, 0)$
@@ -842,27 +842,62 @@ with $K(5)\le44$ from [Mittelmann & Vallentin 2010], $72\le K(6)$, $126\le K(7)$
 
 **Corollary Z.11.1 (Geometric Necessity).** *The physical universe occupies the sole rigorously checked point where the SPAP-selected minimal branch aligns with geometric packing constraints: within $K_0 \in \{1,\ldots,6\}$, only $K_0 = 3$ yields $K(D)=M$, namely $K(4)=24$. For larger $K_0$, the framework excludes them by the SPAP lower bound together with the minimal-branch selection, rather than by exact kissing-number identities alone.*
 
-**Corollary Z.11.2 (Low-Dimensional Kissing Staircase).** On the minimal Appendix Z branch,
+**Corollary Z.11.2 (Low-Dimensional Root-System Staircase).** On the minimal Appendix Z branch,
+$$
+(|\Phi(A_1)|,|\Phi(A_2)|,|\Phi(A_3)|,|\Phi(D_4)|) = (a,b,k,M) = (2,6,12,24).
+$$
+Equivalently,
 $$
 (K(1),K(2),K(3),K(4)) = (a,b,k,M) = (2,6,12,24).
 $$
 Moreover, the pair $(a,d_0)=(2,8)$ is the unique solution in positive integers to the staircase system
 $$
-(K(1),K(2),K(3),K(4)) = (a,\,d_0-a,\,a(d_0-a),\,2a(d_0-a)).
+(|\Phi(A_1)|,|\Phi(A_2)|,|\Phi(A_3)|,|\Phi(D_4)|) = (a,\,d_0-a,\,a(d_0-a),\,2a(d_0-a)),
 $$
-The first two equations determine $(a,d_0)$ uniquely, while the last two are consistency checks.
+and there is a nested chain of root subsystems
+$$
+A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8.
+$$
 
-*Proof.* The standard low-dimensional kissing numbers are
+*Proof.* In the standard orthonormal basis $e_1,\dots,e_8$, the classical simply-laced root systems may be realized as
 $$
-K(1)=2,\quad K(2)=6,\quad K(3)=12,\quad K(4)=24.
+\Phi(A_n)=\{e_i-e_j:1\le i\ne j\le n+1\},\qquad n=1,2,3,
 $$
-On the minimal Appendix Z branch, Theorem Z.1 gives $a=2$, Theorem Z.2 gives $d_0=8$, hence $b=d_0-a=6$. Theorem Z.13 gives $k=12$, and Theorem Z.5 gives $M=24$. Theorem Z.11 identifies the top step as $K(D)=M$ with $D=4$. Substituting yields the staircase identity.
+and
+$$
+\Phi(D_4)=\{\pm e_i \pm e_j:1\le i<j\le 4\}.
+$$
+Hence
+$$
+|\Phi(A_1)|=1\cdot 2=2,\qquad |\Phi(A_2)|=2\cdot 3=6,\qquad |\Phi(A_3)|=3\cdot 4=12,
+$$
+and
+$$
+|\Phi(D_4)|=4\binom{4}{2}=24.
+$$
+The inclusions $A_1 \subset A_2 \subset A_3$ are immediate from the index sets. Also $\Phi(A_3)\subset \Phi(D_4)$ because each $e_i-e_j$ is of the form $\pm e_p \pm e_q$ with opposite signs. The standard $E_8$ root system is
+$$
+\Phi(E_8)=\{\pm e_i \pm e_j:1\le i<j\le 8\}\cup\left\{\frac12(\pm e_1\pm\cdots\pm e_8):\text{even number of minus signs}\right\},
+$$
+so every root of $D_4$ is a root of $E_8$. Therefore
+$$
+A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8.
+$$
 
-For uniqueness, $K(1)=2$ forces $a=2$, and then $K(2)=6$ forces $d_0=a+6=8$. Hence $b=6$, so
+On the minimal Appendix Z branch, Theorem Z.1 gives $a=2$, Theorem Z.2 gives $d_0=8$, hence $b=d_0-a=6$. Theorem Z.13 gives $k=12$, and Theorem Z.5 gives $M=24$. Substituting yields
+$$
+(a,b,k,M)=(2,6,12,24)=(|\Phi(A_1)|,|\Phi(A_2)|,|\Phi(A_3)|,|\Phi(D_4)|).
+$$
+
+After normalization to unit length, the roots of $A_1$ give the two points of $S^0$, the roots of $A_2$ give the regular hexagon in $S^1$, the roots of $A_3$ give the cuboctahedral FCC configuration in $S^2$, and the roots of $D_4$ give the 24-cell in $S^3$. Hence the equivalent kissing-number statement follows.
+
+For uniqueness, $|\Phi(A_1)|=2$ forces $a=2$, and then $|\Phi(A_2)|=6$ forces $d_0=a+6=8$. Hence $b=6$, so
 $$
 a(d_0-a)=2\cdot 6=12,\qquad 2a(d_0-a)=24,
 $$
-which agrees with $K(3)$ and $K(4)$. Thus $(a,d_0)=(2,8)$ is the unique positive-integer solution, and the third and fourth identities are over-determined consistency checks. ∎
+which agrees with $|\Phi(A_3)|$ and $|\Phi(D_4)|$. Thus $(a,d_0)=(2,8)$ is the unique positive-integer solution, and the third and fourth identities are over-determined consistency checks. ∎
+
+**Remark Z.11.2a (Interpretive Status and Scope).** The staircase is a closure statement on the minimal branch, not a second dynamical derivation of every rung from packing alone. The top step $|\Phi(D_4)|=M=24$ is independently forced by the mode-channel correspondence of Theorems Z.10-Z.11. The lower steps $|\Phi(A_1)|=a$, $|\Phi(A_2)|=b$, and $|\Phi(A_3)|=k$ are exact branch identities once $(a,b,k)=(2,6,12)$ is fixed. Its content is that the full discrete backbone lands on the canonical low-rank chain $A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8$. This places the Appendix Z closure directly inside the root-system machinery already used elsewhere: $D_4$ reappears in the Dirac-sector geometry of Theorem T.24.3, $A_2$ reappears in Theorem T.24.5 and in the geometric mismatch between $A_2$ and $D_4$ of Theorems T.49-T.52, and the terminal inclusion $D_4 \subset E_8$ lands in the Appendix R $E_8$ scaffold. The staircase is therefore a low-dimensional closure of existing project geometry. The higher-count structures $|\Phi(E_8)|=240$ and the Leech-lattice data in dimension 24 enter the framework through their own later roles and are not additional rungs of this minimal-branch identity.
 
 **Remark Z.4a: Euclidean vs Lorentzian.** The kissing number $K(4) = 24$ refers to sphere packing in 4-dimensional Euclidean space. This is the Euclideanized spacetime geometry relevant to the instanton saddle-point calculation (Section U.9). The Euclidean rotation group is $\text{Spin}(4) \cong SU(2) \times SU(2)$. Upon analytic continuation back to Lorentzian signature, $D = 4$ yields the physical 3+1 spacetime with metric signature $(-,+,+,+)$ and structure group $\text{Spin}(1,3)$.
 

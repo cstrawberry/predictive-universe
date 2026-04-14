@@ -1245,7 +1245,7 @@ This inverts the fine-tuning puzzle. The question is not "why are constants tune
 
 ### 14.5.3 The Unity of Mathematics and Physics
 
-The convergence of independent mathematical structures at $M = 24$—modular forms ($\eta^{24}$), optimal lattices ($\Lambda_{24}$), perfect codes ($\mathcal{G}_{24}$), kissing numbers ($K(4)$)—is often presented as mysterious. The framework dissolves this mystery.
+The convergence of independent mathematical structures at $M = 24$—modular forms ($\eta^{24}$), optimal lattices ($\Lambda_{24}$), perfect codes ($\mathcal{G}_{24}$), the $D_4$ root system, and the kissing number $K(4)$—is often presented as mysterious. The framework dissolves this mystery.
 
 Both mathematics and physics are manifestations of optimal structure under constraints:
 
@@ -1253,7 +1253,7 @@ Both mathematics and physics are manifestations of optimal structure under const
 
 - **Physics** instantiates what structures *do* achieve under finite resources. PCE selects configurations maximizing predictive accuracy per unit cost, yielding the same optimal structures discovered mathematically.
 
-Both activities converge on the same objects because they solve the same problem. The Golay code is mathematically optimal (maximum $d$ for length 24, rate 1/2) AND physically optimal (PCE-selected). The Leech lattice is mathematically optimal (densest 24D packing) AND physically optimal (mode space geometry). These are identities, not coincidences.
+Both activities converge on the same objects because they solve the same problem. The Golay code is mathematically optimal (maximum $d$ for length 24, rate 1/2) AND physically optimal (PCE-selected). The Leech lattice is mathematically optimal (densest 24D packing) AND physically optimal (mode space geometry). These are identities, not coincidences. On the minimal Appendix Z branch this same convergence sharpens to the low-rank root-system chain $A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8$, with root counts $(|\Phi(A_1)|,|\Phi(A_2)|,|\Phi(A_3)|,|\Phi(D_4)|)=(a,b,k,M)=(2,6,12,24)$. The 12-step of the discrete backbone is therefore the $A_3$ rung, the 24-mode spacetime closure is the $D_4$ rung, and the chain lands directly in the $E_8$ scaffold already used for flavor geometry rather than floating as a free numerical pattern.
 
 **Perspective on Wigner's Puzzle:** The "unreasonable effectiveness of mathematics in physics" [Wigner 1960] admits a natural interpretation within this framework: mathematics and physics can be viewed as the same optimization problem—one abstract, one thermodynamic. At $M = 24$, this perspective becomes explicit. Whether this fully resolves Wigner's puzzle remains a matter of philosophical interpretation.
 
