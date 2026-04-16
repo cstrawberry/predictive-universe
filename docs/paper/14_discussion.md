@@ -1496,7 +1496,7 @@ Corollary 23a.1b therefore remains a numerical coherence check rather than a sha
 
 These three negative closures remove the last open-problem labels that previously gated the patch. The manuscript is therefore airtight at the level it explicitly claims.
 
-What still remains are strengthening projects rather than consistency gaps: a functorial strengthening of Theorem X.8a, a single-source derivation of the minimal-branch integer ledger, a direct structural proof of the Steiner-electroweak identity, quantitative source-energy rate theory, autonomous complexity growth under the Source Principle, cosmological backreaction estimates, dimension-sensitive falsifiers, and uniqueness of the canonical arena hierarchy. Those would deepen the framework, but their absence no longer leaves any unresolved Tier-1 logical hole.
+What still remains are strengthening projects rather than consistency gaps: a functorial strengthening of Theorem X.8a, a single-source derivation of the minimal-branch integer ledger, a direct structural proof of the Steiner-electroweak identity, a source-energy rate theory beyond fixed high-$\mu_S$/temperature strata, autonomous complexity growth under the Source Principle, cosmological backreaction estimates, and uniqueness of the canonical arena hierarchy. Those would deepen the framework, but their absence no longer leaves any unresolved Tier-1 logical hole.
 
 ### 14.6.7 Final scope statement
 

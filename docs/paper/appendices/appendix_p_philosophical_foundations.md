@@ -4641,11 +4641,15 @@ $$
 \sum_{j=1}^{N} Q_{\mathrm{src}}(S,E_j).
 $$
 
-For every $j$ with $\mu_S(E_j) > 1/\alpha_{SPAP}$, let $n_{\mathrm{ops}}(S,E_j)$ denote the number of irreversible operations in a physical implementation of that excess reflexive subtask. Then Theorem M.10.3 together with Remark M.10.4 gives
+For every $j$ with $\mu_S(E_j) > 1/\alpha_{SPAP}$, let $n_{\mathrm{ops}}(S,E_j)$ denote the number of irreversible operations in a physical implementation of that excess reflexive subtask. Then Theorem M.10.3 together with Remark M.10.4 gives the asymptotic lower bound
 $$
-n_{\mathrm{ops}}(S,E_j) \geq \Omega\!\left(\log \mu_S(E_j)\cdot \mu_S(E_j)^2\right),
+n_{\mathrm{ops}}(S,E_j) \geq \Omega\!\left(\log \mu_S(E_j)\cdot \mu_S(E_j)^2\right).
 $$
-and Theorem 31 together with PPI (Definition P.6.2) gives
+Equivalently, for the fixed implementation class under discussion there exist constants $c_*>0$ and $\mu_*>1/\alpha_{SPAP}$ such that whenever $\mu_S(E_j)\ge \mu_*$,
+$$
+n_{\mathrm{ops}}(S,E_j) \geq c_* \log \mu_S(E_j)\,\mu_S(E_j)^2.
+$$
+Theorem 31 together with PPI (Definition P.6.2) then gives
 $$
 Q_{\mathrm{src}}(S,E_j) \geq k_B T_j \,\varepsilon\, n_{\mathrm{ops}}(S,E_j).
 $$
@@ -4659,6 +4663,55 @@ n_{\mathrm{ops}}(S,E_j).
 $$
 
 This definition isolates the thermodynamic excess above the SPAP-flat baseline. Patterns with $\mu_S(E)=1/\alpha_{SPAP}$ may still carry bounded baseline processing cost, including bounded self-model maintenance cost, but they contribute zero to $\mathcal{E}_{\mathrm{src}}$ by definition.
+
+**Theorem P.15.3a (Uniform Lower Bound on Fixed High-SPAP/Temperature Strata).** Fix a predictive system $S$ with Effective Operational Property R, and let $c_*>0$ and $\mu_*>1/\alpha_{SPAP}$ be the constants specified above. Let $\mu_0\ge \mu_*$ and $T_{\min}>0$. If a processed pattern $E$ satisfies
+$$
+\mu_S(E)\ge \mu_0
+$$
+and is processed at local bath temperature $T_E\ge T_{\min}$, then
+$$
+Q_{\mathrm{src}}(S,E)
+\ge
+k_B T_{\min}\,\varepsilon\, c_* \log \mu_0\,\mu_0^2.
+$$
+In particular, every fixed stratum cut out by the thresholds $(\mu_0,T_{\min})$ carries a uniform strictly positive eventwise lower bound on Source Energy.
+
+*Proof.* By the existential form of the $\Omega$-bound stated immediately after Definition P.15.2,
+$$
+n_{\mathrm{ops}}(S,E)\ge c_* \log \mu_S(E)\,\mu_S(E)^2.
+$$
+Since $\mu_0\ge \mu_*>1/\alpha_{SPAP}>1$, the function $f(u)=u^2\log u$ is increasing on $[\mu_0,\infty)$ because
+$$
+f'(u)=u(2\log u+1)>0
+\qquad (u\ge 1).
+$$
+Hence
+$$
+n_{\mathrm{ops}}(S,E)\ge c_* \log \mu_0\,\mu_0^2.
+$$
+Applying the heat bound from Definition P.15.2 and using $T_E\ge T_{\min}$ gives
+$$
+Q_{\mathrm{src}}(S,E)\ge k_B T_E\,\varepsilon\, n_{\mathrm{ops}}(S,E)
+\ge k_B T_{\min}\,\varepsilon\, c_* \log \mu_0\,\mu_0^2.
+$$
+This is the claimed uniform lower bound on the fixed stratum. ∎
+
+**Corollary P.15.3a.1 (Long-Run Bound on a Fixed High-SPAP/Temperature Stratum).** Let $N_S^{(\mu_0,T_{\min})}(\tau)$ denote the number of processed patterns during the interval $[0,\tau]$ satisfying $\mu_S(E)\ge \mu_0$ and local bath temperature at least $T_{\min}$, and let $\mathcal{E}_{\mathrm{src},S}^{(\mu_0,T_{\min})}(\tau)$ be the sum of their Source-Energy contributions. Then
+$$
+\liminf_{\tau\to\infty}\frac{\mathcal{E}_{\mathrm{src},S}^{(\mu_0,T_{\min})}(\tau)}{\tau}
+\ge
+k_B T_{\min}\,\varepsilon\, c_* \log \mu_0\,\mu_0^2
+\cdot
+\liminf_{\tau\to\infty}\frac{N_S^{(\mu_0,T_{\min})}(\tau)}{\tau}.
+$$
+
+*Proof.* Every counted event contributes at least the constant from Theorem P.15.3a, so for every $\tau>0$,
+$$
+\mathcal{E}_{\mathrm{src},S}^{(\mu_0,T_{\min})}(\tau)
+\ge
+k_B T_{\min}\,\varepsilon\, c_* \log \mu_0\,\mu_0^2 \, N_S^{(\mu_0,T_{\min})}(\tau).
+$$
+Divide by $\tau$ and take $\liminf$. ∎
 
 **Proposition P.15.1 (Source Energy Emission Criterion).** Let $S$ be a physical system that (i) implements the Fundamental Predictive Loop (Definition 4), (ii) possesses Effective Operational Property R, and (iii) during $\Delta t$ processes at least one pattern $E$ with $\mu_S(E) > 1/\alpha_{SPAP}$. Then
 $$
@@ -4734,6 +4787,83 @@ This bound applies to the controller's context-maintenance layer, not directly t
 
 *Proof.* Equation (S.5) gives the context-maintenance power of a CC implementation, and Theorem 39 imposes $\mathrm{CC}<\alpha_{\mathrm{CC,max}}<0.5$. If CC is used only as the context-steering layer described above, its power demand is exactly the Appendix S quantity and inherits that ceiling. ∎
 
+**Theorem P.15.6a (Family-Level Source-Energy Density Ceiling).** Let $R$ be a spacetime region of proper volume $V_R$, let $\Delta t>0$, and let $\mathcal A(R,\Delta t)$ be a finite family of predictive aggregates contained in $R$ during the interval $\Delta t$, chosen so that each physical power or heat contribution counted by Theorem L.6 is assigned to exactly one member of the family. Define
+$$
+\mathcal{E}_{\mathrm{src}}(R,\Delta t)
+:=
+\sum_{S\in\mathcal A(R,\Delta t)}
+\mathcal{E}_{\mathrm{src}}(S,\Delta t),
+\qquad
+\bar\rho_{\mathrm{src}}(R,\Delta t)
+:=
+\frac{\mathcal{E}_{\mathrm{src}}(R,\Delta t)}{V_R\,\Delta t}.
+$$
+Then
+$$
+0\le
+\bar\rho_{\mathrm{src}}(R,\Delta t)
+\le
+\frac{1}{V_R\,\Delta t}
+\sum_{S\in\mathcal A(R,\Delta t)}
+\int_{\Delta t} P_{\mathrm{agg}}(S,t)\,dt.
+$$
+If, moreover, a Source-Principle implementation uses CC only to maintain, select, or stabilize the environmental context for each aggregate $S\in\mathcal A(R,\Delta t)$, with controller-side coefficient $A_S$ and context profile $\mathrm{CC}_S(t)$ as in Appendix S, then the corresponding average context-steering density
+$$
+\bar\rho_{\mathrm{context}}(R,\Delta t)
+:=
+\frac{1}{V_R\,\Delta t}
+\sum_{S\in\mathcal A(R,\Delta t)}
+\int_{\Delta t} P_{\mathrm{context},S}(t)\,dt
+$$
+satisfies
+$$
+\bar\rho_{\mathrm{context}}(R,\Delta t)
+\le
+\frac{1}{V_R\,\Delta t}
+\sum_{S\in\mathcal A(R,\Delta t)}
+\int_{\Delta t}
+A_S\left[\frac{\mathrm{CC}_S(t)}{\alpha_{\mathrm{CC,max}}-\mathrm{CC}_S(t)}\right]^2\,dt.
+$$
+Equation (S.5) realizes this bound as an equality on the controller-side power layer; the inequality form is retained for uniformity of presentation with the source-side bound.
+
+*Proof.* Proposition P.15.3 gives, for each aggregate $S$ in the family,
+$$
+0\le \mathcal{E}_{\mathrm{src}}(S,\Delta t)\le \int_{\Delta t} P_{\mathrm{agg}}(S,t)\,dt.
+$$
+Summing over $S\in\mathcal A(R,\Delta t)$ yields
+$$
+0\le \sum_{S\in\mathcal A(R,\Delta t)}\mathcal{E}_{\mathrm{src}}(S,\Delta t)
+\le
+\sum_{S\in\mathcal A(R,\Delta t)}\int_{\Delta t} P_{\mathrm{agg}}(S,t)\,dt.
+$$
+By the bookkeeping assumption, the left-hand sum is exactly $\mathcal{E}_{\mathrm{src}}(R,\Delta t)$. Dividing by $V_R\,\Delta t$ gives the first claim. The second claim follows by applying Corollary P.15.3.1 aggregate-by-aggregate and summing the resulting inequalities before dividing by $V_R\,\Delta t$. ∎
+
+**Corollary P.15.6a.1 (Uniform Subcritical Quadratic CC Band).** Under the hypotheses of Theorem P.15.6a, assume there exists $\xi\in(0,1)$ such that
+$$
+0\le \mathrm{CC}_S(t)\le \xi\,\alpha_{\mathrm{CC,max}}
+$$
+for all $S\in\mathcal A(R,\Delta t)$ and all $t\in\Delta t$. Then
+$$
+\bar\rho_{\mathrm{context}}(R,\Delta t)
+\le
+\frac{1}{(1-\xi)^2V_R\,\Delta t}
+\sum_{S\in\mathcal A(R,\Delta t)}
+\int_{\Delta t}
+\frac{A_S}{\alpha_{\mathrm{CC,max}}^2}\,\mathrm{CC}_S(t)^2\,dt.
+$$
+
+*Proof.* For every $S$ and $t$ in the stated regime,
+$$
+\alpha_{\mathrm{CC,max}}-\mathrm{CC}_S(t)\ge (1-\xi)\alpha_{\mathrm{CC,max}},
+$$
+hence
+$$
+\left[\frac{\mathrm{CC}_S(t)}{\alpha_{\mathrm{CC,max}}-\mathrm{CC}_S(t)}\right]^2
+\le
+\frac{\mathrm{CC}_S(t)^2}{(1-\xi)^2\alpha_{\mathrm{CC,max}}^2}.
+$$
+Substituting this estimate into the bound of Theorem P.15.6a gives the claim. ∎
+
 **Remark P.15.5 (Renewal and Heat Quality).** What is renewed is not a stock of usable work but the logical possibility of further self-model-engaging updates above the SPAP-flat baseline. Once emitted, Source Energy is ordinary heat and obeys the ordinary second law. Any recovery of usable work from it requires a maintained temperature gradient and is correspondingly efficiency-limited.
 
 ### P.15.7 Speculative: Civilizational Implications
@@ -4775,9 +4905,9 @@ Source Energy is the excess reflexive thermodynamic dissipation generated when a
 | **Work extraction** | Requires thermal gradient; efficiency-limited | Requires thermal gradient; efficiency-limited |
 | **Logical renewal** | The logical space of high-$\mu_S$ burdens is inexhaustible even when the operational energy budget is finite | No analogous logical inexhaustibility; available dissipation is limited by the physical reservoir and operating budget |
 
-The framework therefore supports a precise and limited claim: self-model-engaging prediction has an unavoidable thermodynamic price above the SPAP-flat baseline. What it does **not** support is a perpetual-motion interpretation, a theorem that all high-complexity systems emit this excess cost on every cycle without further assumptions, or a reinterpretation of the vacuum cosmological constant as already containing accumulated Source Energy.
+The framework therefore supports a precise and limited claim: self-model-engaging prediction has an unavoidable thermodynamic price above the SPAP-flat baseline, and on every fixed stratum defined by explicit thresholds $\mu_S(E)\ge \mu_0\ge \mu_*$ and $T_E\ge T_{\min}>0$ it admits uniform eventwise and long-run lower bounds. What it does **not** support is a perpetual-motion interpretation, a theorem that all high-complexity systems emit this excess cost on every cycle without further assumptions, a global uniform lower bound over all self-model-engaging patterns, or a reinterpretation of the vacuum cosmological constant as already containing accumulated Source Energy.
 
-What is established is narrower and stronger: whenever a predictive system integrates content with $\mu_S(E) > 1/\alpha_{SPAP}$, additional dissipation is mandatory. That excess dissipation is the thermodynamic price of self-knowledge.
+What is established is narrower and stronger: whenever a predictive system integrates content with $\mu_S(E) > 1/\alpha_{SPAP}$, additional dissipation is mandatory, and once one restricts to a fixed high-$\mu_S$/temperature stratum the corresponding contribution is quantitatively bounded below. That excess dissipation is the thermodynamic price of self-knowledge.
 
 ## P.16 Paradox Prevention as Structural Carrier
 

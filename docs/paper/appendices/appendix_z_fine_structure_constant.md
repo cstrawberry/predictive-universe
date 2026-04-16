@@ -897,6 +897,18 @@ a(d_0-a)=2\cdot 6=12,\qquad 2a(d_0-a)=24,
 $$
 which agrees with $|\Phi(A_3)|$ and $|\Phi(D_4)|$. Thus $(a,d_0)=(2,8)$ is the unique positive-integer solution, and the third and fourth identities are over-determined consistency checks. ∎
 
+**Corollary Z.11.3 (Minimal-Branch Falsifier from Mode-Channel Matching).** On the minimal Appendix Z branch one has
+$$
+M=24=K(4),
+$$
+and $D=4$ is the unique positive integer satisfying $K(D)=24$. Consequently, any operational result establishing any one of the following falsifies the minimal-branch mode-channel chain:
+
+1. $D\neq 4$;
+2. $M\neq 24$;
+3. $M\neq K(D)$.
+
+*Proof.* Theorem Z.5 gives $M=24$ on the minimal branch. Theorem Z.11 gives $K(D)=24$ and uniquely selects $D=4$. Any one of the listed outcomes contradicts at least one of these necessary equalities. ∎
+
 **Remark Z.11.2a (Interpretive Status and Scope).** The staircase is a closure statement on the minimal branch, not a second dynamical derivation of every rung from packing alone. The top step $|\Phi(D_4)|=M=24$ is independently forced by the mode-channel correspondence of Theorems Z.10-Z.11. The lower steps $|\Phi(A_1)|=a$, $|\Phi(A_2)|=b$, and $|\Phi(A_3)|=k$ are exact branch identities once $(a,b,k)=(2,6,12)$ is fixed. Its content is that the full discrete backbone lands on the canonical low-rank chain $A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8$. This places the Appendix Z closure directly inside the root-system machinery already used elsewhere: $D_4$ reappears in the Dirac-sector geometry of Theorem T.24.3, $A_2$ reappears in Theorem T.24.5 and in the geometric mismatch between $A_2$ and $D_4$ of Theorems T.49-T.52, and the terminal inclusion $D_4 \subset E_8$ lands in the Appendix R $E_8$ scaffold. The staircase is therefore a low-dimensional closure of existing project geometry. The higher-count structures $|\Phi(E_8)|=240$ and the Leech-lattice data in dimension 24 enter the framework through their own later roles and are not additional rungs of this minimal-branch identity.
 
 **Remark Z.4a: Euclidean vs Lorentzian.** The kissing number $K(4) = 24$ refers to sphere packing in 4-dimensional Euclidean space. This is the Euclideanized spacetime geometry relevant to the instanton saddle-point calculation (Section U.9). The Euclidean rotation group is $\text{Spin}(4) \cong SU(2) \times SU(2)$. Upon analytic continuation back to Lorentzian signature, $D = 4$ yields the physical 3+1 spacetime with metric signature $(-,+,+,+)$ and structure group $\text{Spin}(1,3)$.

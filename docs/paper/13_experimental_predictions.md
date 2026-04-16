@@ -511,12 +511,17 @@ The predictions fall into three epistemic categories that must be distinguished 
 
 **Prediction:** Emergent spacetime has exactly $D = 4$ macroscopic dimensions.
 
-**Derivation Summary:** The mode-channel correspondence (Theorem Z.10) requires $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$ at thermodynamic equilibrium, where $K(D)$ is the kissing number in $D$ dimensions. With $M_{\mathrm{int}} = 2ab = 24$ (Theorem Z.5), the equation $K(D) = 24$ has unique solution $D = 4$ (Theorem Z.11).
+**Derivation Summary:** The mode-channel correspondence (Theorem Z.10) requires $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$ at thermodynamic equilibrium, where $K(D)$ is the kissing number in $D$ dimensions. With $M_{\mathrm{int}} = 2ab = 24$ (Theorem Z.5), the equation $K(D) = 24$ has unique solution $D = 4$ (Theorem Z.11). On the minimal Appendix Z branch this is equivalently the chain
+$$
+M=24=K(4),
+$$
+and Corollary Z.11.3 makes the resulting falsifier explicit.
 
 **Falsification Conditions:**
 - Discovery of large extra dimensions accessible at collider energies
 - Gravitational force law deviating from $1/r^2$ at any experimentally accessible scale
 - Detection of Kaluza-Klein excitations indicating compact extra dimensions
+- Any operational determination, within the minimal Appendix Z mode-channel chain, that the effective mode count is not $M=24$ or that mode-channel matching fails, i.e. $M\neq K(D)$
 
 **Robustness:** The discrete nature of kissing numbers provides stability. The mode count $M=24$ would need to leave the interval $[13,39]$ before alternative dimensionality becomes even eligible, since $K(3)=12$ and standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012].
 
