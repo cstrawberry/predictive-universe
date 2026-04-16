@@ -14,6 +14,7 @@
 *   Amari, S.-I. (1998). Natural gradient works efficiently in learning. *Neural Computation*, *10*(2), 251–276.
 *   Amari, S.-I. and Nagaoka, H. (2000). *Methods of Information Geometry* (Translations of Mathematical Monographs, Vol. 191). American Mathematical Society.
 *   Arıkan, E. (2009). Channel polarization: A method for constructing capacity-achieving codes for symmetric binary-input memoryless channels. *IEEE Transactions on Information Theory*, *55*(7), 3051–3073. DOI: 10.1109/TIT.2009.2021379
+*   Aristotle. *De Anima* (On the Soul). In J. Barnes (Ed.), *The Complete Works of Aristotle: The Revised Oxford Translation* (Vol. 1, pp. 641–692). Princeton University Press, 1984.
 *   Ambrosio, L., Gigli, N., & Savaré, G. (2008). *Gradient Flows in Metric Spaces and in the Space of Probability Measures* (2nd ed.). Birkhäuser. DOI: 10.1007/978-3-7643-8722-8
 *   Ambrosio, L., Gigli, N., & Savaré, G. (2014). Metric measure spaces with Riemannian Ricci curvature bounded from below. *Duke Mathematical Journal*, *163*(7), 1405–1490. DOI: 10.1215/00127094-2681605
 *   Ambrosio, L., Gigli, N., & Savaré, G. (2015). Bakry–Émery curvature-dimension condition and Riemannian Ricci curvature bounds. *Annals of Probability*, *43*(1), 339–404. DOI: 10.1214/14-AOP907
@@ -48,6 +49,7 @@
 *   Bem, D. J., & Honorton, C. (1994). Does psi exist? Replicable evidence for an anomalous process of information transfer. *Psychological Bulletin*, *115*(1), 4–18. DOI: 10.1037/0033-2909.115.1.4
 *   Bem, D. J. (2011). Feeling the future: Experimental evidence for anomalous retroactive influences on cognition and affect. *Journal of Personality and Social Psychology*, *100*(3), 407–425. DOI: 10.1037/a0021524
 *   Bem, D. J., Tressoldi, P. E., Rabeyron, T., & Duggan, M. (2016). Feeling the future: A meta-analysis of 90 experiments on the anomalous anticipation of random future events. *F1000Research*, *4*, 1188. DOI: 10.12688/f1000research.7177.2
+*   Bergson, H. (1907). *L'Évolution créatrice*. Félix Alcan. (English translation: *Creative Evolution*, A. Mitchell, Trans., Henry Holt, 1911.)
 *   Bengtsson, I., & Życzkowski, K. (2006). *Geometry of Quantum States: An Introduction to Quantum Entanglement*. Cambridge University Press.
 *   Bennett, C. H. (1973). Logical reversibility of computation. *IBM Journal of Research and Development*, *17*(6), 525–532. DOI: 10.1147/rd.176.0525
 *   Bennett, C. H. (1982). The thermodynamics of computation—a review. *International Journal of Theoretical Physics*, *21*(12), 905–940. DOI: 10.1007/BF02084158
@@ -107,6 +109,7 @@
 *   Casini, H., Huerta, M., & Myers, R. C. (2011). Towards a derivation of holographic entanglement entropy. *Journal of High Energy Physics*, *2011*(5), 036. DOI: 10.1007/JHEP05(2011)036
 *   Caves, C. M., Fuchs, C. A., Manne, K. K., & Renes, J. M. (2004). Gleason-type derivations of the quantum probability rule for generalized measurements. *Foundations of Physics*, *34*(2), 193–209. DOI: 10.1023/B\:FOOP.0000019581.00318.a5 
 *   Cesa-Bianchi, N., & Lugosi, G. (2006). *Prediction, Learning, and Games*. Cambridge University Press.
+*   Chalmers, D. J. (1995). Facing up to the problem of consciousness. *Journal of Consciousness Studies*, *2*(3), 200–219.
 *   Chalmers, D. J. (1996). *The Conscious Mind: In Search of a Fundamental Theory*. Oxford University Press.
 *   Cheeger, J., & Ebin, D. G. (1975). *Comparison Theorems in Riemannian Geometry*. North-Holland.
 *   Cheeger, J. (1999). Differentiability of Lipschitz functions on metric measure spaces. *Geometric & Functional Analysis*, *9*(3), 428–517. DOI: 10.1007/s000390050094
@@ -275,6 +278,8 @@
 *   Helgason, S. (1984). Groups and Geometric Analysis: Integral Geometry, Invariant Differential Operators, and Spherical Functions. Pure and Applied Mathematics, Vol. 113. Academic Press.
 *   Helstrom, C. W. (1976). *Quantum Detection and Estimation Theory*. Academic Press.
 *   Hoeffding, W. (1963). Probability inequalities for sums of bounded random variables. *Journal of the American Statistical Association*, *58*(301), 13–30. DOI: 10.1080/01621459.1963.10500830
+*   Hofstadter, D. R. (1979). *Gödel, Escher, Bach: An Eternal Golden Braid*. Basic Books.
+*   Hofstadter, D. R. (2007). *I Am a Strange Loop*. Basic Books.
 *   Hohwy, J. (2013). *The Predictive Mind*. Oxford University Press.
 *   Hohwy, J. (2016). The self-evidencing brain. *Noûs*, *50*(2), 259–285. DOI: 10.1111/nous.12062
 *   Holevo, A. S. (1973). Bounds for the quantity of information transmitted by a quantum communication channel. *Problemy Peredachi Informatsii*, *9*(3), 3–11. (English translation: *Problems of Information Transmission*, *9*(3), 177–183 (1973))
@@ -555,6 +560,7 @@
 *   Sommerfeld, A. (1916). Zur Quantentheorie der Spektrallinien. *Annalen der Physik*, *356*(17), 1–94.
 *   Sós, V. T. (1958). On the distribution mod 1 of the sequence $n\alpha$. *Annales Universitatis Scientiarum Budapestinensis de Rolando Eötvös Nominatae, Sectio Mathematica*, *1*, 127–134.
 *   Sorensen, R. (2022). *Nothing: A Philosophical History*. New York: Oxford University Press.
+*   Spinoza, B. (1677). *Ethica, Ordine Geometrico Demonstrata*. Posthumous publication. (English translation: *Ethics*, E. Curley, Trans., in *The Collected Works of Spinoza*, Vol. 1, Princeton University Press, 1985.)
 *   Spohn, H. (1978). Entropy production for quantum dynamical semigroups. *Journal of Mathematical Physics*, *19*(5), 1227–1230. DOI: 10.1063/1.523789
 *   Starobinsky, A. A. (1980). A new type of isotropic cosmological models without singularity. *Physics Letters B*, *91*, 99–102.
 *   Steane, A. M. (1996). Error correcting codes in quantum theory. *Physical Review Letters*, *77*(5), 793–797. DOI: 10.1103/PhysRevLett.77.793
@@ -613,6 +619,7 @@
 *   Wetterich, C. (1993). Exact evolution equation for the effective potential. *Physics Letters B*, *301*(1), 90–94. DOI: 10.1016/0370-2693(93)90726-X
 *   Weyl, H. (1916). Über die Gleichverteilung von Zahlen mod. Eins. *Mathematische Annalen*, *77*(3), 313–352.
 *   Wheeler, J. A. (1978). The “past” and the delayed-choice double-slit experiment. In *Mathematical Foundations of Quantum Theory* (pp. 9–48). Academic Press.
+*   Whitehead, A. N. (1929). *Process and Reality: An Essay in Cosmology*. Macmillan. (Corrected edition: D. R. Griffin & D. W. Sherburne, Eds., Free Press, 1978.)
 *   Wheeler, J. A. (1989). Information, physics, quantum: The search for links. In *Proceedings of the 3rd International Symposium on Foundations of Quantum Mechanics* (pp. 354–368). Physical Society of Japan.
 *   Wheeler, J. A. (1990). Information, physics, quantum: The search for links. In W. H. Zurek (Ed.), *Complexity, Entropy, and the Physics of Information* (pp. 3–28). Addison-Wesley.
 *   Wigner, E. P. (1960). The unreasonable effectiveness of mathematics in the natural sciences. *Communications on Pure and Applied Mathematics*, *13*(1), 1–14. DOI: 10.1002/cpa.3160130102

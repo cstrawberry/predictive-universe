@@ -350,9 +350,52 @@ $$D^2 S_{\text{cont}}(\phi^*)\!\left[x^\mu \partial_\mu \phi^*, \eta\right] = 0 
 $$DE(\phi^*)\!\left[\frac{\partial \phi_\rho}{\partial (\ln \rho)}\bigg|_{\rho=1}\right]=0.$$
 The linearization $DE(\phi^*)$ is the Hessian operator, so the displayed tangent vector lies in the Hessian kernel. $\square$
 
+**Corollary U.9.1 (Virial Stationarity Is Not Enough).** The first-variation virial identity
+$$
+\left.\frac{d}{d\rho}S_{\mathrm{cont}}[\phi_\rho^*]\right|_{\rho=1} \;=\; 0
+$$
+does not imply $H\eta_D=0$. At a critical point $\phi^*$,
+$$
+\left.\frac{d^2}{d\rho^2}S_{\mathrm{cont}}[\phi_\rho^*]\right|_{\rho=1} \;=\; \langle\eta_D,\,H\,\eta_D\rangle,
+$$
+and even vanishing of this quadratic form is strictly weaker than kernel membership $H\eta_D=0$. Theorem U.8a alone therefore cannot justify an exact fifth zero mode.
+
+*Proof.* The first derivative vanishes because $\phi^*$ is stationary along any trial family passing through it (virial stationarity). The second derivative is the Hessian quadratic form along the chosen tangent, which is a single pairing $\langle\eta_D,H\eta_D\rangle$. Vanishing of one quadratic pairing does not imply that $H\eta_D=0$ as a vector: for instance, with $H=\mathrm{diag}(1,-1)$ and $\eta_D=(1,1)$, one has $\langle\eta_D,H\eta_D\rangle=0$ while $H\eta_D=(1,-1)\ne 0$. ∎
+
+**Remark U.9.2 (Exact-Scale-Family Dichotomy).** Theorem U.9, Corollary U.9.1, and Theorem U.8d together isolate the logical alternatives for a fifth zero mode:
+
+1. *Exact-scale-family branch.* If a smooth one-parameter family of exact critical points exists with dilatation tangent $\eta_D=x^\mu\partial_\mu\phi^*$, then Theorem U.9 gives $H\eta_D=0$ and one is on the $\nu=1$ side of Theorem U.16a.
+2. *Negative-direction branch near a reference action.* If the pure-dilatation quadratic form is strictly negative at a chosen reference action, then Theorem U.8d shows that this negativity persists under sufficiently small $C^1$ perturbations of that action.
+3. *Virial non-implication.* Corollary U.9.1 shows that first-variation virial stationarity does not by itself imply a zero mode.
+
+Thus $\nu=1$ requires an exact-scale-family construction of the type stated in Theorem U.9; it is not obtained merely from virial stationarity.
+
 ### U.7.3 Total Zero Mode Count
 
-**Corollary U.10 (Collective Coordinates).** The continuum bounce $\phi^*$ has four translational zero modes by Theorem U.8. It has a fifth dilatation zero mode only under the additional exact-scale-family hypothesis of Theorem U.9; Theorem U.8c shows that this hypothesis is not realized by the pure-coordinate scaling direction of the current Definition U.4 continuum action. In the remainder of Appendix U, the value $m=5$ is therefore used only as the Appendix U leading-order reference-counting convention for the vacuum sector.
+**Corollary U.10 (Collective Coordinates).** The continuum bounce $\phi^*$ has four translational zero modes by Theorem U.8. It has a fifth dilatation zero mode only under the additional exact-scale-family hypothesis of Theorem U.9; Theorem U.8c shows that this hypothesis is not realized by the pure-coordinate scaling direction of the current Definition U.4 continuum action. If, in addition, the pure-dilatation quadratic form is negative at a chosen reference action, Theorem U.8d shows that this negativity persists under sufficiently small $C^1$ perturbations of that action. In the remainder of Appendix U, the value $m=5$ is therefore used only as the Appendix U leading-order reference-counting convention for the vacuum sector.
+
+**Theorem U.8d (Persistence of a Negative Pure-Dilatation Direction).** Let $\eta\mapsto S_\eta$ be a $C^1$ family of local Euclidean actions on a common Hessian form domain, with corresponding non-trivial finite-action critical points $\phi^*_\eta$ depending continuously on $\eta$. Let
+$$
+s_\eta(x) \;:=\; x^\mu\,\partial_\mu\phi^*_\eta(x)
+$$
+denote the pure-coordinate dilatation tangent and $H_\eta:=D^2 S_\eta(\phi^*_\eta)$ the Hessian. Suppose that at $\eta=0$ one has
+$$
+\langle s_0,\,H_0\,s_0\rangle \;<\; 0.
+$$
+Then there exists $\delta>0$ such that for all $|\eta|<\delta$,
+$$
+\langle s_\eta,\,H_\eta\,s_\eta\rangle \;<\; 0.\tag{U.8d}
+$$
+
+*Proof.* Continuity of $\eta\mapsto S_\eta$ and $\eta\mapsto\phi^*_\eta$ on the common Hessian form domain gives continuity of
+$$
+Q(\eta):=\langle s_\eta,H_\eta s_\eta\rangle.
+$$
+Since $Q(0)<0$, continuity implies the existence of $\delta>0$ such that $Q(\eta)<0$ for all $|\eta|<\delta$. ∎
+
+**Corollary U.8d.1 (Generic Small Deformations Do Not Create a Fifth Zero Mode at the Reference Action).** Under the hypotheses of Theorem U.8d, generic sufficiently small deformations of the reference action do not turn the pure-coordinate dilatation tangent into a zero mode.
+
+*Proof.* Immediate from Theorem U.8d, which keeps the corresponding quadratic form strictly negative throughout a neighborhood of the reference action. ∎
 
 ---
 
@@ -901,7 +944,19 @@ where:
 - The base complexity $k^2 = 144$ is the Grassmannian bound (Theorem U.3)
 - The deficit $(D+1)/2 = 5/2$ is the leading-order zero-mode deficit supplied by Theorem U.15
 
-This theorem records the Appendix U reference exponent only within the stated leading-order counting convention; it does not assert that the five-mode count has already been established as an unconditional property of the continuum Hessian. Theorem U.8c strengthens this status statement: within the current Definition U.4 continuum action class, the pure-coordinate dilatation tangent is a strict negative mode rather than a zero mode.
+This theorem records the Appendix U reference exponent only within the stated leading-order counting convention; it does not assert that the five-mode count has already been established as an unconditional property of the continuum Hessian.
+
+**Theorem U.16a (Exact Complexity Dichotomy with a Zero-Mode Indicator).** Assume the Morse–Bott hypotheses hold with critical-manifold dimension $m=4+\nu$, $\nu\in\{0,1\}$, where $\nu=1$ only if the exact-scale-family hypothesis of Theorem U.9 holds. Then the instanton complexity is
+$$
+\kappa \;=\; \frac{N_{\mathbb R}-(4+\nu)}{2} \;=\; 142 - \frac{\nu}{2}, \qquad N_{\mathbb R}=288.
+$$
+Hence the two exact branches are
+$$
+\nu=0:\;\kappa=142,\quad e^{-2\kappa}=e^{-284};\qquad \nu=1:\;\kappa=141.5,\quad e^{-2\kappa}=e^{-283}.
+$$
+The current reference value $\kappa_{\mathrm{ref}}=141.5$ of Theorem U.16 is therefore exact on the $\nu=1$ branch and a leading-order reference-counting convention on the $\nu=0$ branch.
+
+*Proof.* Apply the Morse–Bott deficit formula $\kappa=(N_{\mathbb R}-m)/2$ with $N_{\mathbb R}=288$ and $m=4+\nu$. For $\nu=0$, $\kappa=(288-4)/2=142$ and $2\kappa=284$. For $\nu=1$, $\kappa=(288-5)/2=141.5$ and $2\kappa=283$. ∎ Theorem U.8c strengthens this status statement: within the current Definition U.4 continuum action class, the pure-coordinate dilatation tangent is a strict negative mode rather than a zero mode.
 
 **Corollary U.17 (Reference Cosmological Constant Scale).** With this reference exponent, the vacuum weight is parameterized as
 
@@ -925,6 +980,22 @@ Thus:
 
 The observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849) \times 10^{-122}$ (Appendix V, Equation (V.5)) implies $A_{\text{eff}}^{(\text{obs})} = 0.917 \pm 0.016$ on the five-mode reference branch, while the translational branch would require
 $$A_{\text{eff}}^{(\text{obs},4)} := \frac{\Lambda L_P^2}{8\pi e^{-284}} = 2.49 \pm 0.04.$$
+
+**Corollary U.17a (Conditional Four-Mode Forward-Evaluation Branch).** If the full false-vacuum spectral problem has no zero modes beyond the four translational modes of Theorem U.8, then
+$$
+m_{\mathrm{vac}} \;=\; 4,\qquad \kappa_{\mathrm{vac}} \;=\; 142,
+$$
+and therefore
+$$
+\Lambda L_P^2 \;=\; 8\pi\,A_{\mathrm{eff}}\,e^{-284}.\tag{U.17a}
+$$
+With the Appendix U working prefactor $A_{\mathrm{eff}}=0.923\pm 0.011$, this forward evaluation gives
+$$
+\Lambda L_P^2 \;=\; (1.06\pm 0.01)\times 10^{-122},
+$$
+and the corresponding observational inversion is $A_{\mathrm{eff}}^{(\mathrm{obs},4)}=\Lambda L_P^2/(8\pi e^{-284})=2.49\pm 0.04$.
+
+*Proof.* Under the stated spectral hypothesis one has $\nu=0$ in Theorem U.16a, hence $\kappa_{\mathrm{vac}}=142$. Substituting this exponent into the Appendix U vacuum formula gives (U.17a). The numerical value and inversion formula are algebraic consequences of that substitution. ∎
 
 ---
 
@@ -955,6 +1026,28 @@ Both structures exist at $M = 24$ as derived consequences of PCE optimization (T
 | $A_{\text{eff}} := K \cdot N_{\text{eff}}$ | One-loop prefactor definition (Section U.1) | $O(1)$ |
 
 ### U.12.3 Comparison with Observation
+
+### U.12.4 Branch-Status Registry
+
+**Proposition U.12.4a (Appendix U Branch-Status Registry).** The branch-sensitive quantities of Appendix U carry the following exact status labels.
+
+| Quantity | Value / formula | Status | Dependence |
+|:---------|:----------------|:-------|:-----------|
+| $m_{\mathrm{ref}}$ | $5$ | Reference-counting convention | Theorems U.15–U.16 |
+| translational zero modes | $4$ | Theorem-level | Theorem U.8 |
+| fifth zero mode from exact scale family | conditional | Conditional theorem | Theorem U.9 |
+| persistence of a negative pure-dilatation quadratic form | local neighborhood statement | Conditional theorem | Theorem U.8d |
+| $\kappa_{\mathrm{ref}}$ | $141.5$ | Reference-branch exponent | Theorem U.16 |
+| $\kappa = 142 - \nu/2$ | $\nu\in\{0,1\}$ | Exact dichotomy once nullity branch is specified | Theorem U.16a |
+| $A_{\mathrm{eff}}^{(\mathrm{obs})}$ | $0.917\pm 0.016$ | Observational inversion on the $m=5$ reference branch | Corollary U.15b |
+| $A_{\mathrm{eff}}$ | $0.923\pm 0.011$ | Working forward-evaluation convention | Corollary U.15b |
+| $\Lambda L_P^2 = 8\pi A_{\mathrm{eff}}e^{-283}$ | five-mode branch value | Reference scaling law | Corollary U.17 |
+| $\Lambda L_P^2 = 8\pi A_{\mathrm{eff}}e^{-284}$ | four-mode forward evaluation | Conditional on the four-mode branch | Corollary U.17a |
+| $\kappa_Q$ | $11$ | Theorem-level primordial identification | Identification U.20 |
+
+*Proof.* Each row is a direct restatement of the cited theorem, corollary, identification, or convention. The table contains no additional input beyond those statements. ∎
+
+---
 
 | Quantity | Branch Value | From Observation | Notes |
 |----------|--------------|------------------|-------|

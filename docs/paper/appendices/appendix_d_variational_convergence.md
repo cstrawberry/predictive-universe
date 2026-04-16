@@ -424,6 +424,73 @@ $$
 
 and minimizers of $\mathcal F_h$ converge (up to subsequences) to minimizers of $\mathcal F$ (the Einstein-Hilbert plus MPU action). The convergence of the discrete metric spaces is understood in the pointed Gromov-Hausdorff sense (Section 11). This is an action-level $\Gamma$-limit statement: it identifies the limit variational functional but does not by itself imply Mosco convergence of the rescaled random-walk Dirichlet forms, quadraticity of the limit Cheeger energy, or the Euclidean-rigidity conclusions used later on the infinitesimally Hilbertian branch of Section 11.4.
 
+**D.6bis Cell-Averaged Closure of the Variational Limit**
+
+**Theorem D.6b (Cell-Averaged Curvature Closure).** Let $U\Subset M$ be a precompact chart domain of a limit branch, $(\mathcal G_h,d_h,\mu_h,g_h)\to(U,g)$ a bounded-action convergent sequence, and $\mathcal P_h(U)=\{C_v^{(h)}\}_{v\in V_h(U)}$ an admissible quasi-uniform cell decomposition with $\mu_h(v)=\int_{C_v^{(h)}} dV_g$. Let $R_h(v;g_h)$ be the discrete scalar-curvature proxy on $v$ (Remark C.3.3a) and
+$$
+\overline R_g^{(h)}(v) \;:=\; \frac{1}{\mu_h(v)}\int_{C_v^{(h)}} R_g\,dV_g
+$$
+the cell average of the continuum scalar curvature. Assume: (i) cellwise consistency $\sum_{v}\mu_h(v)\,|R_h(v;g_h)-\overline R_g^{(h)}(v)|\to 0$ along every bounded-action convergent sequence; (ii) recovery discretization: for every admissible continuum $g$, a canonical discretization $I_h g$ satisfies the same estimate; (iii) coefficient convergence $\alpha_h\to\alpha\in\mathbb R$. Define
+$$
+\mathcal F^{\mathrm{curv}}_{h,U}[g_h] \;:=\; \alpha_h\sum_{v\in V_h(U)}\mu_h(v)\,R_h(v;g_h).
+$$
+Then $\mathcal F^{\mathrm{curv}}_{h,U}\xrightarrow{\Gamma}\mathcal F^{\mathrm{curv}}_U[g]=\alpha\int_U R_g\,dV_g$ in local $L^1$, and along every convergent $g_h\to g$, $\mathcal F^{\mathrm{curv}}_{h,U}[g_h]\to\alpha\int_U R_g\,dV_g$.
+
+*Proof.* Using $\sum_v\mu_h(v)\,\overline R_g^{(h)}(v)=\sum_v\int_{C_v^{(h)}}R_g\,dV_g=\int_U R_g\,dV_g$,
+$$
+\bigl|\mathcal F^{\mathrm{curv}}_{h,U}[g_h] - \alpha_h\int_U R_g\,dV_g\bigr| \;\le\; |\alpha_h|\sum_v\mu_h(v)\,|R_h(v;g_h)-\overline R_g^{(h)}(v)|.
+$$
+By (i) the right side tends to $0$, and (iii) gives $\alpha_h\to\alpha$, yielding the $\Gamma$-liminf and pointwise convergence. For the $\Gamma$-limsup, use the canonical recovery sequence $g_h=I_h g$ from (ii). ∎
+
+**Corollary D.6b.1 (Volume-Term Closure).** If the discrete sector also contains a cell-volume term $\mathcal V_{h,U}[g_h]:=\beta_h\sum_v\mu_h(v)$ with $\beta_h\to\beta$, then $\mathcal V_{h,U}\xrightarrow{\Gamma}\beta\int_U dV_g$. Combined with Theorem D.6b, the most general local gravitational limit obtained by this argument is $\alpha\int_U R_g\,dV_g+\beta\int_U dV_g$.
+
+*Proof.* Immediate from $\sum_v\mu_h(v)=\int_U dV_g$. ∎
+
+**Theorem D.6c (Cell-Averaged Matter Closure).** Let $\phi_h\to\phi$ be a convergent sequence of coarse-grained matter fields, $\ell_h(v;g_h,\phi_h)$ the discrete MPU matter density at $v$, and $\overline{\mathcal L}^{(h)}_{\mathrm{MPU}}(v):=\mu_h(v)^{-1}\int_{C_v^{(h)}}\mathcal L_{\mathrm{MPU}}(g,\phi)\,dV_g$. Assume (i) cellwise consistency $\sum_v\mu_h(v)|\ell_h(v;g_h,\phi_h)-\overline{\mathcal L}^{(h)}_{\mathrm{MPU}}(v)|\to 0$ along every bounded-action convergent sequence; (ii) recovery discretization as in Theorem D.6b. Define $\mathcal F^{\mathrm{MPU}}_{h,U}[g_h,\phi_h]:=\sum_v\mu_h(v)\ell_h(v;g_h,\phi_h)$. Then
+$$
+\mathcal F^{\mathrm{MPU}}_{h,U} \;\xrightarrow{\Gamma}\; \int_U \mathcal L_{\mathrm{MPU}}(g,\phi)\,dV_g.
+$$
+
+*Proof.* Exactly as in Theorem D.6b. ∎
+
+**Corollary D.6c.1 (Predictive-Action Additive Closure).** Under Lemma D.6a and the hypotheses of Theorem D.6b, Corollary D.6b.1, and Theorem D.6c with a common canonical recovery discretization,
+$$
+\mathcal F_{h,U}:=\mathcal F^{\mathrm{curv}}_{h,U}+\mathcal V_{h,U}+\mathcal F^{\mathrm{MPU}}_{h,U} \;\xrightarrow{\Gamma}\; \alpha\int_U R_g\,dV_g + \beta\int_U dV_g + \int_U\mathcal L_{\mathrm{MPU}}\,dV_g,
+$$
+and minimizer sequences admit $\Gamma$-convergent subsequences. ∎
+
+**Theorem D.6d (Closed Einstein–Hilbert + MPU $\Gamma$-Limit).** Combining Corollary D.6c.1 with the four-dimensional Wald/diffeomorphism normalization of Theorem 12.1a fixes
+$$
+\alpha \;=\; \frac{c^3}{16\pi G},\qquad \beta \;=\; -\frac{c^3\Lambda}{8\pi G},
+$$
+so the $\Gamma$-limit is
+$$
+\mathcal F[g,\phi] \;=\; \frac{c^3}{16\pi G}\int_M (R_g-2\Lambda)\sqrt{-g}\,d^4x + \int_M \mathcal L_{\mathrm{MPU}}(g,\phi)\sqrt{-g}\,d^4x,
+$$
+and minimizer sequences converge up to subsequences. In the vacuum-absorbed convention (Corollary B.8d.2), the constant term is absorbed geometrically and the same corollary reduces to
+$$
+\mathcal F[g,\phi] \;=\; \frac{c^3}{16\pi G}\int_M R_g\,\sqrt{-g}\,d^4x + \int_M\mathcal L_{\mathrm{MPU}}(g,\phi)\,\sqrt{-g}\,d^4x,
+$$
+with $\Lambda$ reappearing as an integration constant in §12.
+
+*Proof.* Corollary D.6c.1 provides the generic limit. Theorem 12.1a fixes $\alpha,\beta$ uniquely under diffeomorphism invariance, second-order EOM, and Wald consistency. The minimizer statement is inherited from equicoercivity (Lemma D.6a) and $\Gamma$-convergence. ∎
+
+**Theorem D.6e (Mosco–Cheeger Closure of the Spatial Sector).** Let $(X_n,d_n,\mu_n)$ be the rescaled MPU network metric-measure spaces on the geometric branch, and let the rescaled propagation-cost Dirichlet forms be
+$$
+\mathcal E_n(f) \;=\; \tfrac12\sum_{x\sim y}c^{(n)}_{xy}\bigl(f(x)-f(y)\bigr)^2.
+$$
+Assume: (i) the uniform local doubling and local $(1,2)$-Poincaré regime of Theorem C.6; (ii) asymptotic shell isotropy (vanishing odd first-shell moments; convergence of the second moment to a positive quadratic tensor); (iii) uniform locality ($\sum_{\ell(x,y)>R} c_{xy}=o(1)$ for each fixed macroscopic $R$); (iv) $L^2$-interpolation/recovery maps between the discrete spaces and the metric-measure limit; (v) the action-level $\Gamma$-limit of the spatial sector is finite on a dense Lipschitz core. Then, after passage to a subsequence, $\mathcal E_n$ Mosco-converges to a strongly local regular Dirichlet form $\mathcal E_\infty$ on the measured-GH limit $(X,d,\mu)$; on the quadratic shell branch, $\mathcal E_\infty(f)=\int_X|\nabla f|_h^2\,d\mu$ for a measurable cotangent metric $h$, and $\mathcal E_\infty$ is the Cheeger energy of $(X,d,\mu)$.
+
+*Proof.* The $\Gamma$-liminf follows from lower semicontinuity of the discrete carré-du-champ under $L^2$-convergence combined with (iii), which removes nonlocal jump contributions. The $\Gamma$-limsup is supplied by the recovery maps of (iv). Strong locality follows from (iii); regularity follows from the density of the Lipschitz core and the Markov property inherited from the discrete quadratic form. Asymptotic shell isotropy (ii) forces the second-order part of the limit form to be quadratic and represented by a measurable cotangent tensor $h$, identifying $\mathcal E_\infty$ with the Cheeger energy on the quadratic branch. ∎
+
+**Theorem 44a (Regular-Branch Manifold Closure).** Assume the hypotheses of Theorem C.6c and a quantitative Euclidean rigidity input on the selected shell branch: for each point on that branch there is a scale $r_x>0$ such that every ball $B_r(x)$, $r\le r_x$, is quantitatively volume-cone / Reifenberg close to $B_r^{\mathbb R^4}(0)$, with error tending to zero under blow-up; and a radius-2 curvature-transfer estimate controlling the Ricci proxy in harmonic coordinates. Then the regular set $X_{\mathrm{reg}}\subset X$ is open, every point of $X_{\mathrm{reg}}$ has unique tangent cone $\mathbb R^4$, and $X_{\mathrm{reg}}$ carries a $C^{1,\alpha}$ Riemannian metric $h_{ij}$ with
+$$
+d\mu \;=\; \sqrt{\det h}\,d^4 x,\qquad \mathcal E_\infty(f) \;=\; \int_{X_{\mathrm{reg}}} h^{ij}\,\partial_i f\,\partial_j f\,\sqrt{\det h}\,d^4 x.
+$$
+Combined with Corollary O.7b.1, the regular branch carries a $C^{1,\alpha}$ Lorentzian metric $g$ with entropy-orthogonal local form $g=-\alpha(x)^{-1}\,dt^2+h_{ij}\,dx^i\,dx^j$.
+
+*Proof.* The $\mathrm{RCD}^*(K,4)$ structure from Theorem C.6c gives almost-everywhere Euclidean tangents. Quantitative Euclidean rigidity upgrades this to an open regular set via $\varepsilon$-regularity. Radius-2 curvature transfer then yields harmonic-coordinate bounds and $C^{1,\alpha}$ regularity of the metric coefficients. The representation of $\mathcal E_\infty$ is the local form of the Cheeger energy from Theorem D.6e. The Lorentzian extension follows from Corollary O.7b.1. ∎
+
 **Remark D.6.1 (PU motivation for hypotheses).**
 (i) Appendix C shows that configurations with anomalous volume growth (Definition C.1) or without a uniform positive discrete Ricci lower bound (Definition C.2-C.3) violate at least one of (LV)–(RE) at sufficiently large scale (Theorem C.5). In the low-noise detailed-balance subcase of Theorem D.5, the stationary measure therefore places exponentially dominant weight on the bounded-geometry low-potential sector, motivating the equicoercivity hypothesis needed for $\Gamma$-convergence [Gromov 1999].
 (ii) Remark C.3.3a supplies, conditional on the weighted-shell/local-isotropy bridge input or an equivalent replacement, an explicit local scalar curvature estimator built from Ollivier-Ricci curvature at mesh scale $h$, providing a concrete realization of the locality/consistency requirement for the Einstein-Hilbert term at the action level. It does not by itself furnish the Mosco/quadratic limit-energy or Euclidean-rigidity input used later in Section 11.4.

@@ -358,16 +358,90 @@ This represents the thermodynamically relevant coarse-grained average $\langle \
 
 **Theorem B.5 (Macroscopic Covariant Conservation of $T_{\mu\nu}^{(MPU)}$)**
 
-Assuming a generally covariant emergent effective theory, $T_{\mu\nu}^{(MPU)}(x)$ satisfies:
+On the regular branch, $T_{\mu\nu}^{(MPU)}(x)$ satisfies
 $$
 \nabla^{\mu} T_{\mu\nu}^{\text{(MPU)}} = 0 \tag{B.16}
 $$
-where $\nabla^{\mu}$ is the covariant derivative compatible with the emergent metric $g_{\mu\nu}$.
-*Proof:* Follows from diffeomorphism invariance via Noether's second theorem (Appendix F, Thm F.1).
+where $\nabla^{\mu}$ is the covariant derivative compatible with the emergent metric $g_{\mu\nu}$. The conservation law follows both microscopically and variationally:
+
+1. *Microscopic route.* Theorem B.8b(b) (Belinfante Continuum Limit and Conservation) establishes distributional divergence-freeness of the continuum limit $\mathbf T^{\mu\nu}$ from the discrete weak-conservation identity (B.20) via Definition B.8a and mesh-consistency.
+2. *Variational route.* Theorem F.1 (diffeomorphism invariance of the derived generally covariant effective action of Theorem X.5a, Appendix X) yields $\nabla^\mu T_{\mu\nu}=0$ on-shell through Noether's second theorem; the variational tensor coincides with the coarse-grained expectation-value tensor by Theorem B.8c (Variational Identification).
+
+The two routes agree because both refer to the same object — Corollary B.8d.1 (Source-Term Identity) consolidates the four-way identity at the microscopic, variational, thermodynamic, and conservation levels.
 
 ## B.9 Correspondence with Standard Forms
 
 The emergent tensor reproduces known physical forms.
+
+**Definition B.8a (Admissible Coarse-Graining).** A refinement family $\{\mathcal G_h\}_{h\downarrow 0}$ of the PU substrate, together with discrete Belinfante tensors $\Theta_h^{\mu\nu}(v)$ and sampling maps producing tensor-valued Radon measures
+$$
+\mathbf T_h^{\mu\nu} \;:=\; \sum_{v\in V_h} \Theta_h^{\mu\nu}(v)\,\mu_h(v)\,\delta_{x_v},\tag{B.19}
+$$
+is *admissible* if: (i) for every compact $K\subset M_{\mathrm{reg}}$, $\sup_{h>0}|\mathbf T_h|(K)<\infty$; (ii) for every $\psi\in C_c^\infty(T^*M_{\mathrm{reg}})$, the discrete weak-conservation identity
+$$
+\sum_{v\in V_h}\Theta_h^{\mu\nu}(v)\,\mu_h(v)\,(\nabla_\mu^h \psi_\nu^{(h)})(v) \;=\; 0\tag{B.20}
+$$
+holds with $\nabla_\mu^h$ the discrete covariant derivative; (iii) the discrete gradient approximates the continuum gradient uniformly on compact supports: $\sup_{v\in K_h}\lvert(\nabla_\mu^h\psi_\nu^{(h)})(v)-(\nabla_\mu\psi_\nu)(x_v)\rvert=O(h)$.
+
+Two admissible coarse-grainings $(\mathbf T_h),(\widetilde{\mathbf T}_h)$ are *$\varepsilon$-equivalent* if $|\mathbf T_h-\widetilde{\mathbf T}_h|(K)=O(h)\cdot|\mathbf T_h|(K)$ for every compact $K$.
+
+**Theorem B.8b (Belinfante Continuum Limit and Conservation).** Let $(\mathbf T_h)_{h>0}$ be an admissible coarse-graining on the Lorentzian branch of Theorem 45 and Corollary 46a. Then:
+
+(a) There exist a subsequence $h_j\to 0$ and a symmetric tensor-valued Radon measure $\mathbf T^{\mu\nu}$ on $M_{\mathrm{reg}}$ such that $\mathbf T_{h_j}^{\mu\nu}\rightharpoonup \mathbf T^{\mu\nu}$ in weak-$*$ on compact subsets.
+
+(b) $\mathbf T$ is distributionally divergence-free: $\int_{M_{\mathrm{reg}}}\nabla_\mu\psi_\nu\,d\mathbf T^{\mu\nu}=0$ for every $\psi\in C_c^\infty(T^*M_{\mathrm{reg}})$.
+
+(c) If $\mathbf T$ is absolutely continuous with respect to $dV_g$ (equivalent to local thermodynamic equilibrium, Postulate 4), then there exists $T_{(\mathrm{MPU})}^{\mu\nu}\in L^1_{\mathrm{loc}}(M_{\mathrm{reg}})$ with $d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}\,dV_g$ and $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$ in the distributional sense. ∎
+
+*Proof.* (a) Hypothesis (i) gives a uniform total-variation bound $|\mathbf T_h|(K)\le C_K<\infty$. By Banach–Alaoglu applied to $\mathcal M(K)$ as the dual of $C(K;T^{*2}M_{\mathrm{reg}})$, a weak-$*$ convergent subsequence on $K$ exists. A diagonal argument over an exhaustion of $M_{\mathrm{reg}}$ gives a globally defined weak-$*$ limit $\mathbf T$. Symmetry is preserved by weak-$*$ convergence.
+
+(b) For $\psi\in C_c^\infty(T^*M_{\mathrm{reg}})$, (B.20) together with hypothesis (iii) gives
+$$
+0 \;=\; \sum_{v\in V_h}\Theta_h^{\mu\nu}(v)\,\mu_h(v)\,(\nabla_\mu\psi_\nu)(x_v) \;+\; E_h,
+$$
+with $|E_h|\le C_K\cdot O(h)$. Passing to the convergent subsequence and taking $h_j\to 0$ yields $\int\nabla_\mu\psi_\nu\,d\mathbf T^{\mu\nu}=0$.
+
+(c) Under absolute continuity, the Radon–Nikodym theorem supplies $T_{(\mathrm{MPU})}^{\mu\nu}=d\mathbf T^{\mu\nu}/dV_g\in L^1_{\mathrm{loc}}$. Integration by parts of (b) against compactly supported $\psi$, with vanishing boundary terms, gives $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$. ∎
+
+**Corollary B.8b.1 (Independence of Admissible Coarse-Graining).** If $(\mathbf T_h)$ and $(\widetilde{\mathbf T}_h)$ are $\varepsilon$-equivalent admissible coarse-grainings, their continuum limits coincide: $\mathbf T^{\mu\nu}=\widetilde{\mathbf T}^{\mu\nu}$. When both admit pointwise representations under local equilibrium, $T_{(\mathrm{MPU})}^{\mu\nu}=\widetilde T_{(\mathrm{MPU})}^{\mu\nu}$ almost everywhere.
+
+*Proof.* For any compactly supported $\phi\in C(K;T^{*2}M_{\mathrm{reg}})$, $\lvert\langle\mathbf T_h-\widetilde{\mathbf T}_h,\phi\rangle\rvert\le|\mathbf T_h-\widetilde{\mathbf T}_h|(K)\cdot\sup_K|\phi|=O(h)\cdot C_K\cdot\sup_K|\phi|$, so the limits agree on a dense set and therefore as measures. Radon–Nikodym uniqueness gives a.e. equality of densities. ∎
+
+**Theorem B.8c (Variational Identification of the Continuum Source Tensor).** Let $S_{(\mathrm{MPU})}[g,\Phi]=\int_{M_{\mathrm{reg}}}\mathcal L_{(\mathrm{MPU})}(g,\Phi)\sqrt{|g|}\,d^4x$ be the continuum matter action obtained from Theorem D.6d. Assume: (H B.8c.1) $S_{(\mathrm{MPU})}$ is Gâteaux differentiable with respect to compactly supported smooth metric perturbations $\delta g_{\mu\nu}$; (H B.8c.2) the discrete first variations agree with the continuum first variation up to $O(h)$ remainders under the admissible coarse-graining of Definition B.8a. Then
+$$
+\delta_g S_{(\mathrm{MPU})}[g,\Phi;\delta g] \;=\; \tfrac12\int_{M_{\mathrm{reg}}}\delta g_{\mu\nu}\,d\mathbf T^{\mu\nu},
+$$
+and under local equilibrium,
+$$
+T_{(\mathrm{MPU})}^{\mu\nu} \;=\; -\frac{2}{\sqrt{|g|}}\,\frac{\delta S_{(\mathrm{MPU})}}{\delta g_{\mu\nu}}.\tag{B.21}
+$$
+
+*Proof.* By (H B.8c.2), $\delta_g S_h^{(\mathrm{MPU})}[\delta g]=\tfrac12\int\delta g_{\mu\nu}\,d\mathbf T_h^{\mu\nu}+r_h(\delta g)$ with $r_h(\delta g)=O(h)$. For fixed $\delta g$, weak-$*$ convergence (Theorem B.8b) gives $\int\delta g_{\mu\nu}\,d\mathbf T_{h_j}^{\mu\nu}\to\int\delta g_{\mu\nu}\,d\mathbf T^{\mu\nu}$. Combined with (H B.8c.1), which supplies $\delta_g S_{h_j}^{(\mathrm{MPU})}\to\delta_g S_{(\mathrm{MPU})}$, this yields the stated identity. Absolute continuity and the definition of the metric functional derivative give (B.21). ∎
+
+**Theorem B.8d (Horizon-Flux Closure).** Let $\mathcal H$ be a smooth local horizon patch in a local Rindler region with null generator $k^\mu$, affine parameter $\lambda$, and approximate boost Killing field $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$. Assume (H B.8d.1) continuity of $T_{(\mathrm{MPU})}^{\mu\nu}$ on $\mathcal H$ (a consequence of Postulate 4). Let $\mathcal H_h$ be an admissible family of discrete face-unions approximating $\mathcal H$ with face fluxes $q_h(f)$ induced by the current operators of Definition B.5. Then:
+
+(a) *Flux convergence.*
+$$
+\sum_{f\subset\mathcal H_h} q_h(f) \;\xrightarrow[h\to 0]{}\; \int_{\mathcal H} T_{\mu\nu}^{(\mathrm{MPU})}\,\chi^\mu\,d\Sigma^\nu.
+$$
+
+(b) *Clausius flux formula.* To first order in $\lambda$,
+$$
+\delta Q_\mathcal H \;=\; \int_{\mathcal H} T_{\mu\nu}^{(\mathrm{MPU})}\,\chi^\mu\,d\Sigma^\nu \;=\; -\kappa\int_\mathcal H \lambda\,T_{\mu\nu}^{(\mathrm{MPU})}\,k^\mu k^\nu\,d\lambda\,dA,
+$$
+reproducing Equation (68). ∎
+
+*Proof.* (a) On the null surface with $d\Sigma^\nu=k^\nu\,d\lambda\,dA$, the integrand $T_{(\mathrm{MPU})}^{\mu\nu}\chi^\mu k^\nu$ is continuous by (H B.8d.1) and the smoothness of $\chi,k$. Admissibility of the horizon discretization makes the face-sum $\sum_f\Theta_h^{\mu\nu}(x_f)\chi^\mu(x_f)n^\nu(x_f)\Delta A_f$ a Riemann sum, with $O(h)$ error per face; the sum converges to the continuum integral.
+
+(b) Substituting $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$ into (a) and discarding $O(\lambda^2)$ corrections yields (b). ∎
+
+**Corollary B.8d.1 (Source-Term Identity).** On $M_{\mathrm{reg}}$ under the admissibility and local-equilibrium hypotheses of Definition B.8a and (H B.8d.1), the tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ coincides simultaneously with: (1) the continuum Belinfante limit of Theorem B.8b; (2) the metric variational source $-\tfrac{2}{\sqrt{|g|}}\,\delta S_{(\mathrm{MPU})}/\delta g_{\mu\nu}$ of Theorem B.8c; (3) a covariantly conserved symmetric tensor ($\nabla_\mu T^{\mu\nu}=0$ by Theorem B.8b(b) and, independently, by Corollary 45a.1); (4) the horizon heat-flux source of Theorem B.8d. The gravity derivation of §12 therefore uses one and the same stress-energy object at the microscopic, variational, thermodynamic, and conservation levels. ∎
+
+*Proof.* Items (1), (2), (4) follow from Theorems B.8b, B.8c, B.8d. Item (3) follows from Theorem B.8b(b) directly and, independently, from Corollary 45a.1 applied to the scalar-density matter action of Theorem 45a. The two routes agree because they refer to the same underlying tensor identified by (1) and (2). ∎
+
+**Corollary B.8d.2 (Vacuum Normalization and $\Lambda$-Absorption).** The continuum Belinfante tensor is defined up to an additive metric-proportional constant absorbed into the cosmological constant. Under the shift $T'_{\mu\nu}:=T_{\mu\nu}^{(\mathrm{MPU})}+\sigma g_{\mu\nu}$ for constant $\sigma$, the Einstein equation (76a) is equivalent to its form with $T'_{\mu\nu}$ and $\Lambda':=\Lambda-(8\pi G/c^4)\sigma$. The PCE-Attractor vacuum normalization $T_{\mu\nu}^{(\mathrm{MPU})}|_{\mathrm{vac}}=0$ (Theorem B.6(a)) fixes $\sigma$ uniquely, placing the vacuum contribution into $\Lambda$ (whose value is determined by Appendix U).
+
+*Proof.* Substitute $T'_{\mu\nu}=T_{\mu\nu}^{(\mathrm{MPU})}+\sigma g_{\mu\nu}$ into (76a) and collect the metric-proportional terms on the geometric side. Theorem B.6(a) fixes the vacuum contribution to zero in the PU convention, so $\sigma$ is determined. ∎
 
 **Theorem B.6 (Correspondence with Standard Physical Forms)**
 

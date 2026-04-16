@@ -93,6 +93,63 @@ Concretely, the PU dynamics and objective are expressed in terms of relational/p
 
 As a result, the effective description must be expressible in a diffeomorphism-covariant form. Appendix X makes this concrete by identifying the gravitational sector of the effective action as a scalar-density integral over the emergent manifold (Equation X.7), and Section 12 then uses the standard locality and second-order consistency constraints (Lovelock uniqueness [Lovelock 1971]) to isolate the Einstein–Hilbert structure as the correct leading-order covariant dynamics at the MPU scale (Theorem 50).
 
+**11.5.3 Theorem 45a (Relabeling–Covariance Closure)**
+
+Let $M_{\mathrm{reg}}$ be the regular set of Theorem 45 with emergent metric $g_{\mu\nu}$, and let $\Psi$ denote the full collection of continuum fields obtained as $\Gamma$-limits of the coarse-grained PU dynamics.
+
+**Hypothesis 11.5.3.1** (Local finite-order continuum description). For every precompact chart domain $U\Subset M_{\mathrm{reg}}$ and every chart $(\phi,U)$, the effective action has the local form
+$$
+S_U[\Psi] \;=\; \int_{\phi(U)} L\bigl(x,j^k\Psi(x)\bigr)\,d^4 x,\tag{67a}
+$$
+for some finite jet order $k$, where $j^k\Psi$ denotes the $k$-jet of $\Psi$. This is the Wilsonian truncation of Appendix X, also used in §11.3 and §12.
+
+**Hypothesis 11.5.3.2** (Geometric-object status of the fields). The fields $\Psi$ are tensor/spinor geometric objects on $M_{\mathrm{reg}}$ with covariant pushforward under diffeomorphisms. This follows from the $\Gamma$-limit construction of §O.7.1 which produces tensor-valued continuum limits from the discrete PU substrate.
+
+**Hypothesis 11.5.3.3** (Relabeling neutrality). For any orientation-preserving $C^\infty$ diffeomorphism $\chi:U\to U'$ representing a change of continuum bookkeeping coordinates,
+$$
+S_U[\Psi] \;=\; S_{U'}[\chi_*\Psi].\tag{67b}
+$$
+
+**Theorem 45a (Relabeling–Covariance Closure).** Under Hypotheses 11.5.3.1–11.5.3.3:
+
+(a) *Scalar density form.* There exists a scalar local Lagrangian $\mathcal L$ — a function of the $k$-jet of $\Psi$ transforming as a scalar under diffeomorphisms — such that
+$$
+S_U[\Psi] \;=\; \int_U \sqrt{|g|}\,\mathcal L(j^k\Psi)\,d^4 x,\tag{67c}
+$$
+equivalently the density $L=\sqrt{|g|}\,\mathcal L$ is a scalar density of weight one.
+
+(b) *Diffeomorphism invariance of the global action.* For every compactly supported diffeomorphism $\varphi$ of $M_{\mathrm{reg}}$,
+$$
+S[\varphi^*\Psi] \;=\; S[\Psi].\tag{67d}
+$$
+
+Continuum diffeomorphism invariance is therefore a derived consequence of the substrate-level relabeling neutrality of §11.5.2. ∎
+
+*Proof.* (a) In one chart, $S_U[\Psi]=\int_{\phi(U)} L\,d^4x$. In a second chart $(\phi',U')$, the same physical functional has $S_{U'}[\chi_*\Psi]=\int_{\phi'(U')} L'\,d^4x'$. By Hypothesis 11.5.3.3 these are equal for every admissible field configuration. Pulling back via $\chi$:
+$$
+\int_{\phi(U)} L\bigl(x,j^k\Psi(x)\bigr)\,d^4x \;=\; \int_{\phi(U)} L'\bigl(\chi(x),j^k(\chi_*\Psi)(\chi(x))\bigr)\,|\det D\chi(x)|\,d^4x.
+$$
+Since the equality holds for arbitrary $U$ and arbitrary local field data, the integrands satisfy the pointwise density transformation law $L'(x',\,\cdot\,)=L(x,\,\cdot\,)\,|\det D\chi^{-1}(x')|$. This is exactly the weight-one scalar-density transformation. The metric determinant $\sqrt{|g|}$ transforms by the same Jacobian factor under coordinate changes (Wald 1984, §2.4), so the ratio $\mathcal L:=L/\sqrt{|g|}$ is a scalar, giving (67c).
+
+(b) Equivalence of passive coordinate relabeling (used in (a)) and active diffeomorphism of the manifold is standard (Wald 1984, §2.4; Hawking & Ellis 1973, §2.4): on a compactly supported region, the active diffeomorphism $\varphi$ acting on fields as $\Psi\mapsto\varphi^*\Psi$ is equivalent to a passive coordinate change. Applied to (67c): $\varphi$ acts on $\mathcal L$ as a scalar, on $\sqrt{|g|}\,d^4x$ as an invariant volume form, giving $S[\varphi^*\Psi]=S[\Psi]$. ∎
+
+**Corollary 45a.1 (Derived Noether Identity for the Matter Sector).** Let $S[\Psi,g]=S_{\mathrm{geom}}[g]+S_{\mathrm{MPU}}[\Psi,g]$ with $S_{\mathrm{MPU}}$ of the scalar-density form of Theorem 45a, and define the matter stress-energy tensor
+$$
+T^{\mu\nu} \;:=\; -\frac{2}{\sqrt{|g|}}\,\frac{\delta S_{\mathrm{MPU}}}{\delta g_{\mu\nu}}.\tag{67e}
+$$
+If the matter fields satisfy their Euler–Lagrange equations, then $\nabla_\mu T^{\mu\nu}=0$.
+
+*Proof.* Let $\xi^\mu$ be a compactly supported smooth vector field on $M_{\mathrm{reg}}$, and consider the infinitesimal diffeomorphism it generates. By Theorem 45a(b),
+$$
+0 \;=\; \delta_\xi S_{\mathrm{MPU}} \;=\; \int d^4x\,\sqrt{|g|}\,\Bigl[\frac{1}{\sqrt{|g|}}\frac{\delta S_{\mathrm{MPU}}}{\delta\Psi}\,\delta_\xi\Psi + \frac{1}{\sqrt{|g|}}\frac{\delta S_{\mathrm{MPU}}}{\delta g_{\mu\nu}}\,\delta_\xi g_{\mu\nu}\Bigr].
+$$
+On-shell $\delta S_{\mathrm{MPU}}/\delta\Psi=0$, so only the metric variation contributes. Using $\delta_\xi g_{\mu\nu}=\mathcal L_\xi g_{\mu\nu}=\nabla_\mu\xi_\nu+\nabla_\nu\xi_\mu$, the symmetry of $T^{\mu\nu}$, and integration by parts against compactly supported $\xi$:
+$$
+0 \;=\; \int d^4x\,\sqrt{|g|}\,(\nabla_\mu T^{\mu\nu})\,\xi_\nu.
+$$
+Since $\xi$ is arbitrary, $\nabla_\mu T^{\mu\nu}=0$. ∎
+
+Premise (A4) of §12 is therefore a derived consequence of Theorem 45a together with the matter equations of motion.
 
 **11.6 Lorentzian Signature and Invariant Speed (Conditional on Thm 43, Thm 45)**
 
@@ -133,6 +190,10 @@ so in that regime $c=v_{max}=\delta/\tau_{min}$.
 A finite invariant maximal speed $c$ defines a nontrivial cone structure. Encoding such cones in a metric requires null vectors, hence an indefinite metric. With time directionality (Theorem 4) selecting a time orientation and with $D=4$ fixed by Theorem Z.11, the resulting non-degenerate signature class is Lorentzian.
 
 Finally, superluminal propagation contradicts the instantiation bounds formalized in Appendix E: exceeding $c=\delta/\tau_{\text{min}}$ would require either completing an ND-RID update in time $<\tau_{\text{min}}$ (violating Theorem 29) or traversing multiple links within one minimal cycle while reducing the per-link irreducible entropy cost below $\ln 2$ (contradicting $\varepsilon \ge \ln 2$ of Theorem 31), exactly as stated in Appendix E (Corollary E.10.2). ∎
+
+**Corollary 46a (Local Lorentz Kinematics).** By Theorems O.7a and O.7b and Corollary O.7b.1 of Appendix O, the finite nondegenerate causal cone of Theorem 46 together with the positive-definite spatial $\Gamma$-limit of §O.7.1 forces a Lorentzian principal symbol on the emergent manifold and derives local Lorentz invariance with structure group $SO^+(1,3)$. Premise (A5) of §12 is therefore a theorem of the emergent-spacetime branch, and the Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle $G=\mathrm{Spin}(1,3)\times U(d_0)$ of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$.
+
+*Proof.* Direct application of Theorems O.7a (signature forcing), O.7b (speed normalization), and Corollary O.7b.1 (derived local Lorentz invariance and frame-bundle structure) to the output of Theorem 46 and §O.7.1. The three-spatial-dimensional hypothesis of Theorem O.7a is supplied by Theorem Z.11. ∎
 
 **11.7 Spacetime Curvature as Predictive Holonomy (Conditional on Thm 43, Thm 45)**
 
@@ -268,6 +329,52 @@ $$
 P := P_{\mathrm{Spin}}(M) \times_M P_U(E)
 $$
 is a principal $\text{Spin}(1,3)\times U(d_0)$ bundle whose fibre over $x$ consists exactly of the pairs $(\mathcal{F}_x,\mathcal{P}_x)$ described above. The right action is free and transitive because each factor action is free and transitive. For any representation $\rho$ of the product group, the standard associated-bundle construction gives $E_\rho=P\times_\rho V_\rho$. A principal connection on the product bundle is equivalently a pair $(\omega_\mu,A_\mu^{\mathrm{int}})$, so the covariant derivative has the displayed direct-sum form, and the curvature splits because the Lie algebra is the direct sum $\mathfrak{spin}(1,3)\oplus\mathfrak{u}(d_0)$. These are the standard bundle constructions of gauge theory and general relativity, now applied with the hypotheses verified in the present setting [Nakahara 2003; Wald 1984]. QED
+
+**11.8.2 Theorem 48b (Global Product-Bundle Gluing).** Let $M_{\mathrm{reg}}$ be the connected, oriented, time-oriented regular Lorentzian branch, $F_{SO^+(1,3)}\to M_{\mathrm{reg}}$ its orthonormal frame bundle, and $E\to M_{\mathrm{reg}}$ the rank-$d_0$ Hermitian predictive bundle determined by local predictive fibers and their unitary transition maps. Assume
+$$
+w_2(M_{\mathrm{reg}}) \;=\; 0.
+$$
+Then:
+
+1. $F_{SO^+(1,3)}$ admits a spin lift $P_{\mathrm{spin}}\to M_{\mathrm{reg}}$ with structure group $\mathrm{Spin}(1,3)$.
+2. The unitary bundle $E$ is associated to a principal $U(d_0)$-bundle $P_{\mathrm{int}}\to M_{\mathrm{reg}}$.
+3. The fiber product $P:=P_{\mathrm{spin}}\times_{M_{\mathrm{reg}}} P_{\mathrm{int}}$ is a principal bundle with structure group $G=\mathrm{Spin}(1,3)\times U(d_0)$.
+
+Theorem 48 therefore becomes exact globally on the spin-admissible branch.
+
+*Proof.* Choose a good cover $\{U_i\}$ of $M_{\mathrm{reg}}$. The oriented time-oriented orthonormal frame bundle has transition maps $\Lambda_{ij}:U_{ij}\to SO^+(1,3)$ satisfying the Čech cocycle condition. The condition $w_2(M_{\mathrm{reg}})=0$ is exactly the obstruction-vanishing condition for lifting $\Lambda_{ij}$ to $\widetilde\Lambda_{ij}:U_{ij}\to\mathrm{Spin}(1,3)$. Similarly the Hermitian bundle $E$ has unitary transition maps $u_{ij}:U_{ij}\to U(d_0)$ with the cocycle condition. Then
+$$
+g_{ij} \;:=\; (\widetilde\Lambda_{ij},u_{ij}) : U_{ij}\to\mathrm{Spin}(1,3)\times U(d_0)
+$$
+is again a cocycle, hence defines a principal $\mathrm{Spin}(1,3)\times U(d_0)$-bundle. ∎
+
+**Corollary 48b.1 (Exact Obstruction).** On a connected oriented time-oriented branch, the only obstruction to globalizing the $\mathrm{Spin}(1,3)$ factor is $w_2(M_{\mathrm{reg}})$. Theorem 48 is therefore globally exact on the spin-admissible branch $w_2=0$ and otherwise only local.
+
+*Proof.* The spin-lift obstruction theorem applied to the orthonormal frame bundle; the internal $U(d_0)$ part carries no analogous obstruction class in the present construction. ∎
+
+**11.8.3 Theorem 48c (Conditional Global CPTP Transport Closure).** Let $P(M_{\mathrm{reg}},\mathrm{Spin}(1,3)\times U(d_0))$ be the principal bundle of Theorem 48 (globally exact under Theorem 48b), and let $\mathcal W=S\otimes E$ be the associated spin-internal bundle (Theorem G.4b). Assume:
+
+(i) *Bundle-respecting Stinespring dilation.* The local CPTP transport maps $\Phi_\gamma$ admit Stinespring dilations whose system-side unitary factor lifts the parallel transport of the product connection on $\mathcal W=S\otimes E$ (Theorem G.4b); equivalently, the dilation environment is chosen so that the system-side unitary $U_\gamma|_{\mathcal W}$ commutes with the bundle gauge action and reduces to the product-connection holonomy in the closed-system limit $\mathcal H_{\mathrm{env}}\to\mathbb C$.
+
+(ii) *Markovian semigroup limit.* On bounded local time windows, the family $\{\Phi_\gamma\}$ admits a strongly continuous Markovian semigroup limit on $\mathrm{End}(\mathcal W_x)$.
+
+Then every local CPTP transport map along a curve $\gamma$,
+$$
+\Phi_\gamma:\mathrm{End}(\mathcal W_x)\to\mathrm{End}(\mathcal W_y),
+$$
+admits a Stinespring dilation
+$$
+\Phi_\gamma(\rho) \;=\; \mathrm{Tr}_{\mathrm{env}}\!\bigl(U_\gamma(\rho\otimes|0\rangle\langle 0|)U_\gamma^\dagger\bigr),
+$$
+with $U_\gamma$ unitary on $\mathcal W\otimes\mathcal H_{\mathrm{env}}$. Moreover, by hypothesis (i) the system-side unitary part $U_\gamma|_{\mathcal W}$ is generated by the product connection on $S\otimes E$ (Theorem G.4b), and by (ii) the Markovian generator takes the globally covariant GKSL form
+$$
+\mathcal L(\rho) \;=\; -i[H_D,\rho] + \sum_a\Bigl(L_a\rho L_a^\dagger - \tfrac12\{L_a^\dagger L_a,\rho\}\Bigr),
+$$
+where $H_D$ uses the spin-plus-internal covariant derivative of Definition G.4.1 and Theorem G.4b.
+
+*Proof.* Every CPTP map admits a minimal Stinespring dilation [Stinespring 1955]; hypothesis (i) selects the bundle-respecting realization in which the system-side unitary factor lifts the parallel transport of the product connection on $S\otimes E$ (Theorem G.4b). Tracing out the environment gives the open-system transport. Under hypothesis (ii), the Lindblad–GKSL form is the standard classification of completely positive Markov semigroups [Gorini–Kossakowski–Sudarshan 1976; Lindblad 1976]. Covariance follows because the Hamiltonian part is built from the same product connection on every chart overlap, so $H_D$ transforms covariantly under the bundle's transition functions. ∎
+
+Theorem 48c closes the gap between Theorem 47 (predictive holonomy as curvature) and Theorem 48 (fibre-bundle representation): under the stated open-system hypotheses, the CPTP transport law is a completion of the same underlying bundle transport.
 
 **11.9 Role of MPU Stress-Energy Tensor**
 

@@ -268,25 +268,94 @@ A(x)\propto \sqrt{\det g_{ij}(x)}\,g^{ij}(x).
 $$
 Thus, the spatial geometry emerges as the effective continuum limit of the PU network's propagation sector.
 
-### O.7.2 Time Orientation and a Compatible Lorentzian Continuation
+### O.7.2 Hyperbolic Signature Closure and Operational Speed
 
-The PU framework supplies two independent structural inputs: a time orientation and a positive-definite spatial sector.
+The PU framework supplies three independent structural inputs — the positive-definite spatial $\Gamma$-limit $A(x)$ of O.7.1, a time orientation from Theorem 31 and Appendix J, and a nondegenerate causal cone from Proposition F.1 and Theorem 46. On the three-spatial-dimensional branch fixed by Theorem Z.11, these three inputs force the Lorentzian signature and the operational speed normalization simultaneously.
 
-1.  **Time orientation:** By Theorem 31 and Appendix J, nontrivial ND-RID update cycles have strictly positive entropy production. This singles out a temporal orientation ("future") as the direction of increasing cumulative entropy production.
+**Hypothesis O.7.2.1 (Positive-definite spatial $\Gamma$-limit).** The spatial $\Gamma$-limit of §O.7.1 yields a symmetric positive-definite matrix field $A^{ij}(x)$ on the regular set $M_{\mathrm{reg}}$ of Theorem 45.
 
-2.  **Finite propagation speed:** By locality and Proposition F.1, there exists a finite maximal signal speed $c$, yielding a non-degenerate causal cone.
+**Hypothesis O.7.2.2 (Entropy-selected time coordinate).** Theorem 31 together with the 2-to-1 state-merge of the SPAP update cycle (Appendix J) supplies a distinguished local time coordinate $t$ on $M_{\mathrm{reg}}$ with future direction fixed by increasing cumulative entropy production.
 
-Combining these with the positive-definite spatial quadratic form $A(x)$ from O.7.1, one obtains a natural Lorentzian continuum ansatz in local coordinates $(t,x^i)$ adapted to the oriented foliation:
+**Hypothesis O.7.2.3 (Second-order continuum closure).** Any local second-order continuum closure for a scalar probe field compatible with the quadratic limit on $M_{\mathrm{reg}}$ has principal symbol
 $$
-g^{00}(x)=-\frac{1}{c^2},\qquad g^{0i}(x)=0,\qquad g^{ij}(x)=A^{ij}(x).
+p_x(\xi) \;=\; G^{\mu\nu}(x)\,\xi_\mu\xi_\nu \;=\; a(x)\,\xi_0^2 + 2\,b^i(x)\,\xi_0\xi_i + A^{ij}(x)\,\xi_i\xi_j,
 $$
-Its characteristic quadratic form is
-$$
-g^{\mu\nu}(x)\,\xi_\mu\xi_\nu=-\frac{\xi_0^2}{c^2}+\xi^T A(x)\xi.
-$$
-Since $A(x)$ is positive definite, this ansatz has exactly one negative eigenvalue, so the associated spacetime metric has Lorentzian signature $(-,+,+,+)$ in the chosen convention. The causal cone is defined by $g^{\mu\nu}\xi_\mu\xi_\nu=0$, and its temporal orientation is fixed by the entropy-production arrow.
+with $\xi_0,\xi_i$ the cotangent components in the chart of Hypothesis O.7.2.2. This is the same second-order continuum premise used in §11.3 and §11.4.
 
-This construction shows compatibility between the PU time orientation and a Lorentzian continuum description; the sign choice in $g^{00}$ is part of the continuum ansatz rather than a standalone derivation from entropy production alone.
+**Hypothesis O.7.2.4 (Nondegenerate causal cone).** The operational causal cone of Proposition F.1 and Theorem 46 is nondegenerate at every point of $M_{\mathrm{reg}}$ and coincides with the characteristic cone of $p_x$: for every nonzero spatial covector $k_i$, the polynomial
+$$
+\omega \;\longmapsto\; p_x(\omega,k) \;=\; a(x)\,\omega^2 + 2b^i(x)\,\omega\,k_i + A^{ij}(x)\,k_i\,k_j
+$$
+has two distinct real roots in $\omega$.
+
+**Theorem O.7a (Hyperbolic Signature Closure).** Under Hypotheses O.7.2.1–O.7.2.4 and the three-spatial-dimensional hypothesis of Theorem Z.11, for every $x\in M_{\mathrm{reg}}$:
+
+(a) *Negative time-time component.* $a(x)<0$.
+
+(b) *Lorentzian inertia.* The symmetric matrix
+$$
+G^{\mu\nu}(x) \;=\; \begin{pmatrix} a(x) & b^j(x)\\ b^i(x) & A^{ij}(x)\end{pmatrix}
+$$
+has inertia $(1,0,3)$: exactly one negative eigenvalue and three positive eigenvalues. Equivalently, the principal symbol has Lorentzian signature $(-,+,+,+)$. ∎
+
+*Proof of (a).* Fix $x$ and consider the characteristic polynomial in $\omega$ with $k\in\mathbb R^3\setminus\{0\}$. The spatial cotangent space at $x$ is three-dimensional by Theorem Z.11, so the orthogonal complement $\{k : b^i k_i=0\}\subset\mathbb R^3$ is a two-dimensional subspace and contains infinitely many nonzero $k$. For any nonzero $k$ in this subspace, the polynomial simplifies to $p_x(\omega,k)=a(x)\omega^2+A^{ij}(x)k_i k_j$ with discriminant
+$$
+\Delta(k) \;=\; -4\,a(x)\,A^{ij}(x)\,k_i k_j.
+$$
+By Hypothesis O.7.2.1, $A^{ij}k_ik_j>0$; by Hypothesis O.7.2.4, $\Delta(k)>0$. Hence $a(x)<0$.
+
+*Proof of (b).* Write $G^{\mu\nu}$ in block form with $a<0$ and $A$ positive-definite. Apply the Haynsworth/Sylvester inertia additivity for the Schur complement: since $A$ is invertible,
+$$
+\mathrm{inertia}(G) \;=\; \mathrm{inertia}(A) + \mathrm{inertia}\bigl(a - b^\top A^{-1}b\bigr).
+$$
+$A$ positive-definite yields inertia $(0,0,3)$. $A^{-1}$ positive-definite yields $b^\top A^{-1}b\ge 0$, hence $a-b^\top A^{-1}b\le a<0$ is a negative scalar with inertia $(1,0,0)$. Summing, $\mathrm{inertia}(G)=(1,0,3)$. ∎
+
+**Corollary O.7a.1 (Entropy-orthogonal normal form).** Under the hypotheses of Theorem O.7a, at each $x\in M_{\mathrm{reg}}$ there exists a linear change of cotangent coordinates preserving the entropy-selected future cone such that
+$$
+p_x(\xi) \;=\; -\alpha(x)\,(\xi_0')^2 + \widetilde A^{ij}(x)\,\xi_i'\xi_j',\qquad \alpha(x)>0,\quad \widetilde A(x)\succ 0.
+$$
+After an $x$-dependent spatial orthogonalization this reduces to
+$$
+p_x(\xi) \;=\; -\alpha(x)\,(\xi_0')^2 + \delta^{ij}\,\xi_i'\xi_j'.
+$$
+
+*Proof.* Set $\alpha(x):=-a(x)>0$ and complete the square in $\xi_0$:
+$$
+p_x(\xi) \;=\; -\alpha\bigl(\xi_0 - \alpha^{-1}b^i\xi_i\bigr)^2 + \bigl(A^{ij}+\alpha^{-1}b^ib^j\bigr)\xi_i\xi_j.
+$$
+Define $\xi_0':=\xi_0-\alpha^{-1}b^i\xi_i$ and $\xi_i':=\xi_i$. The spatial quadratic form $\widetilde A^{ij}:=A^{ij}+\alpha^{-1}b^ib^j$ is positive-definite as the sum of the positive-definite $A$ and a positive-semidefinite rank-one term. The shear is a triangular transformation with unit diagonal entries in the basis ordering $(\xi_1',\xi_2',\xi_3',\xi_0')$, hence orientation-preserving, and the entropy-selected future cone of Hypothesis O.7.2.2 maps to itself. Spatial orthonormalization $\widetilde A = O^\top D O$ with $D=\mathrm{diag}(\mu_1,\mu_2,\mu_3)$, $\mu_i>0$, followed by $\xi_i'\mapsto \sqrt{\mu_i}\,(O\xi')_i$, brings the spatial block to $\delta^{ij}$ without affecting $\xi_0'$. ∎
+
+**Theorem O.7b (Operational Speed Normalization).** Assume the hypotheses of Corollary O.7a.1 and the coincidence of the characteristic cone with the operational causal frontier (Hypothesis O.7.2.4). Let $c(x)$ denote the local frontier speed from Theorem 46. Then in entropy-orthogonal spatially orthonormal coordinates,
+$$
+p_x(\xi) \;=\; -\frac{\xi_0^2}{c(x)^2} + \delta^{ij}\,\xi_i\xi_j.
+$$
+On the PCE-optimal uniform-weight branch of Theorem 46, the propagation weights are position-independent, so $c(x)\equiv c=\delta/\tau_{\min}$, with $\delta$ the MPU spacing (Appendix Q) and $\tau_{\min}$ the minimum MPU processing time (Theorem 29). On general regular branches, the same edge-weight bounds used in Theorem 46 give
+$$
+\frac{\delta w_{\min}}{\tau_{\min}}\le c(x)\le \frac{\delta w_{\max}}{\tau_{\min}}.
+$$
+In the uniform-weight branch these bounds coincide and recover $c=\delta/\tau_{\min}$. ∎
+
+*Proof.* After Corollary O.7a.1, $p_x(\xi)=-\alpha(x)\xi_0^2+|\xi|^2$. The null condition $p_x(\xi)=0$ for fixed $|\xi|$ gives $\omega=\pm|k|/\sqrt{\alpha(x)}$; the characteristic (group) propagation speed is $v_{\mathrm{char}}(x)=\partial\omega/\partial|k|=1/\sqrt{\alpha(x)}$. By Hypothesis O.7.2.4, the characteristic cone coincides with the operational frontier, so $v_{\mathrm{char}}(x)=c(x)$, hence $\alpha(x)=1/c(x)^2$. The uniform-weight specialization is the last sentence of Theorem 46. On general regular branches, the same proof of Theorem 46 gives $\delta w_{\min}/\tau_{\min}\le c(x)\le \delta w_{\max}/\tau_{\min}$. ∎
+
+**Corollary O.7b.1 (Derived Local Lorentz Invariance).** As a consequence of Theorems O.7a and O.7b:
+
+(a) After the rescaling $\xi_0\mapsto c(x)\,\xi_0$, the principal symbol takes the standard Minkowski form $p_x(\xi)=\eta^{\mu\nu}\xi_\mu\xi_\nu=-\xi_0^2+\delta^{ij}\xi_i\xi_j$. Its linear isometry group is $O(1,3)$.
+
+(b) Requiring preservation of spatial orientation (from the oriented spatial $\Gamma$-limit of §O.7.1) and of the entropy-selected future cone (Hypothesis O.7.2.2) restricts $O(1,3)$ to the proper orthochronous Lorentz group $SO^+(1,3)$.
+
+(c) The orthonormal frame bundle of the emergent metric obtained by duality from $p_x$ has structure group $SO^+(1,3)$.
+
+(d) When the spin obstruction class $w_2(M_{\mathrm{reg}})\in H^2(M_{\mathrm{reg}};\mathbb Z/2)$ vanishes, the unique connected double cover of $SO^+(1,3)$ is $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$, and the Lorentzian factor $\mathrm{Spin}(1,3)$ of the principal bundle of Theorem 48 is structurally forced conditional on the spin condition.
+
+*Proof.* (a) Direct substitution of the rescaling yields the Minkowski form; $O(1,3)$ is the defining isometry group.
+
+(b) The four components of $O(1,3)$ are distinguished by the signs of $\det\Lambda$ and $\Lambda^0{}_0$. Orientation from §O.7.1 restricts to $\det\Lambda=+1$; the entropy-selected future cone (Hypothesis O.7.2.2) restricts to $\Lambda^0{}_0>0$. The intersection is $SO^+(1,3)$.
+
+(c) Standard differential geometry: the orthonormal frame bundle of an oriented time-oriented Lorentzian metric has structure group $SO^+(1,3)$.
+
+(d) $\pi_1(SO^+(1,3))=\mathbb Z/2$, and the unique connected double cover is $\mathrm{Spin}(1,3)\cong SL(2,\mathbb C)$. The spin lift of the frame bundle exists iff the second Stiefel–Whitney class vanishes; when it does, the spin lift is unique up to bundle isomorphism, and the Lorentzian factor of the principal bundle of Theorem 48 is $\mathrm{Spin}(1,3)$. ∎
+
+Premise (A5) of §12 is therefore a theorem of the emergent-spacetime branch rather than an external assumption.
 
 
 ## O.8 Conclusion

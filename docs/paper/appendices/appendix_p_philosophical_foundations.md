@@ -4387,6 +4387,31 @@ This is a claim about nature, not a logical deduction. PCE could be wrong. Natur
 
 Combining these: $2^{K_0} = 2(e^{\varepsilon})^2$. For integer $a$ (required by discrete state counting), the unique minimal solution is $\varepsilon = \ln 2$, $a = 2$, $d_0 = 8$, $K_0 = 3$. Alternative values such as $\varepsilon = \ln 3$ yield $a = 3$, $d_0 = 18$, which violates $d_0 = 2^{K_0}$ for integer $K_0$. Thus the minimum is not arbitrary but is the unique value satisfying all structural constraints.
 
+**Convention P.14.1a (Manuscript-Wide Status Classes).** Every major PU claim is assigned exactly one of the following statuses:
+
+| Status | Meaning |
+|:-------|:--------|
+| **Theorem** | proved from prior theorem-level or axiomatic inputs, with no retained numerical target |
+| **Conditional theorem** | proved from prior theorem-level or axiomatic inputs plus explicitly stated bridge hypotheses |
+| **Axiom / Postulate** | foundational assumption of the framework |
+| **Hypothesis** | non-derived ontological or empirical assumption whose truth is not established internally |
+| **Model layer** | depends on an ansatz, profile, texture, or unresolved quantitative construction |
+| **Convention** | normalization, branch bookkeeping, or forward-evaluation choice |
+| **Empirical input** | quantity imported from measurement rather than derived |
+
+**Corollary P.14.1b (Threshold–Scaling Parameter Ontology).** The manuscript's parameter roles split as follows.
+
+| Parameter family | Role | Status class |
+|:-----------------|:-----|:-------------|
+| $(K_0,d_0,a,b,M,k,D)$ | discrete structural thresholds on the minimal branch | theorem-level on that branch |
+| $N_g$ | discrete structural threshold in the anomaly+CP family-charge class | theorem-level in that class |
+| $(\Delta_1,\Delta_2,\Delta_3)$ | gauge-threshold data on the flag lift | local part fixed canonically (Proposition T.17a.3a); completed values determined only after the global flag-lift spectral problem is explicitly solved |
+| $(\mu_G,\mu_\lambda,\delta_i)$ | matching / RG scaling quantities | scaling layer |
+| $(A_{\mathrm{eff}},K,N_{\mathrm{eff}})$ | vacuum prefactor / normalization quantities | convention or empirical inversion, depending on use |
+| $(\alpha,\beta,C_{\mathrm{scale}},\Gamma_0)$ and similar environment-sensitive coefficients | viability / coarse-graining scales | model- and environment-dependent scaling layer |
+
+*Proof of Corollary P.14.1b.* Each row is the status assignment of the cited parameter family in the named parts of the framework: $(K_0,d_0,a,b,M,k,D)$ by §P.14.1; $N_g$ by Theorem R.3.4 and Proposition R.3.5f; $(\Delta_1,\Delta_2,\Delta_3)$ by Theorem T.18, Proposition T.17a.3a, and Theorem T.69; the matching/RG layer by Theorem T.35 and Definition T.19a; the vacuum prefactor by Corollary U.15b and Corollary U.17a; the environment-sensitive coefficients by Definition D.1 and Definition 20. Threshold variables and scaling variables therefore play different logical roles throughout the manuscript and must not be conflated. ∎
+
 ### P.14.4 The Derivation Chain
 
 With $\varepsilon = \ln 2$ and $K_0 = 3$ (the PCE-selected minima), the framework derives the following chain (Appendix Z):
@@ -4754,7 +4779,157 @@ The framework therefore supports a precise and limited claim: self-model-engagin
 
 What is established is narrower and stronger: whenever a predictive system integrates content with $\mu_S(E) > 1/\alpha_{SPAP}$, additional dissipation is mandatory. That excess dissipation is the thermodynamic price of self-knowledge.
 
-### P.15.10 Conclusion
+## P.16 Paradox Prevention as Structural Carrier
+
+### P.16.1 Introduction: The Search for the Carrier
+
+A recurring intuition spanning two and a half millennia of inquiry into mind, agency, and unauthored coordination has been that some *positive entity* must carry the phenomenon: something must be doing the seeing, holding the meaning, arranging the convergences. Aristotle's *entelecheia* posited an actualizing principle internal to organized matter (Aristotle, *De Anima* II.1). Stoic *pneuma* identified a pervasive medium responsible for cohesion at every scale. Leibniz proposed monads coordinated by pre-established harmony, removing local interaction at the price of global pre-coordination (Leibniz 1714). Spinoza identified a single substance whose attributes include both extension and thought (Spinoza, *Ethics* I). Whitehead's process metaphysics replaced static substance with actual occasions whose concrescence carries the felt weight of becoming (Whitehead 1929). Bergson's *élan vital* posited a creative impulse driving evolution from within (Bergson 1907). Jung and Pauli's synchronicity hypothesis proposed an acausal connecting principle linking psychic and physical events by meaning rather than energy (Jung 1952; Jung and Pauli 1955). Polanyi's tacit dimension argued that knowing always exceeds what knowing can articulate (Polanyi 1966). Hofstadter located the self in self-referential strange loops (Hofstadter 1979, 2007). Chalmers formalized the residue these accounts try to track as the hard problem of consciousness (Chalmers 1995).
+
+These accounts share a common structural commitment: they posit a positive carrier — a substance, medium, agency, or additional degree of freedom — bearing the explanatory weight. The present section inverts that structure. The intuition that the phenomena in question are real and not reducible to ordinary mechanism is preserved, but the carrier is identified as a *constraint* rather than a substance: the structural complement, in self-model parameter space, of the SPAP-admissible region. The constraint has no degrees of freedom of its own, yet, as the results below establish, it exerts nonzero causal efficacy on every Property-R system via the cost potential it induces.
+
+### P.16.2 The PU Inversion: Constraint Replaces Carrier
+
+The framework's existing apparatus contains all the machinery required for this inversion. Theorem 10 (SPAP) and Theorem 11 (Probabilistic SPAP) establish that any system with Property R faces a strict logical boundary on its self-prediction. Theorem 31 establishes that crossing into the SPAP-divergent regime carries a strictly positive thermodynamic cost, $\varepsilon \geq \ln 2$ per irreversible operation. Theorem M.10.3 establishes that the cost grows as $\Omega(\log \mu_S \cdot \mu_S^2)$ as the SPAP proximity $\mu_S$ rises. Together these results describe a *prohibition* — what every Property-R system must not do in order to remain a self-consistent predictor — and a *cost gradient* attached to that prohibition.
+
+The prohibition is not a substance. There is no register that holds it, no field that carries it, no degree of freedom that instantiates it as a positive value. It is the structural complement of every admissible self-model trajectory: the *not-that* every cycle must avoid. Yet, as the cited theorems establish, this complement is causally efficacious. It produces forces (cost gradients) that bias trajectories. It produces dissipation (Source Energy of Section P.15) that contributes to stress-energy. It produces directed change of self-models without being itself a thing that changes.
+
+The PU inversion is therefore: where prior accounts looked for a positive carrier and either found a metaphysically suspect entity or denied that there was anything to find, PU identifies the carrier as the prohibition set itself. The set has all the explanatory work the carrier was meant to do, and none of the metaphysical baggage.
+
+### P.16.3 Formal Definition
+
+**Definition P.16.1 (Prohibition Set).** Let $S$ be a predictive system with Effective Operational Property R and self-model $\mathcal{M}_S$ (Definition M.10.1), let $\Theta_S$ denote $S$'s self-model parameter space, and let $\Pi_S^{(PP)} : \Theta_S \to \Theta_S$ denote the self-modeling projection at predictive-performance level $PP \in [0, \alpha_{SPAP}]$, with error functional $\|\cdot\|_{\mathcal{F}_S}$ and admissibility gauge $g(\cdot)$ as fixed in Definition M.10.3. The *prohibition set* of $S$, denoted $\mathcal{L}^{\neg}_S$, is the set of candidate post-update self-model configurations $\theta' \in \Theta_S$ that the self-modeling map cannot realize at any admissible $PP$ strictly below the SPAP threshold:
+$$
+\mathcal{L}^{\neg}_S := \left\{ \theta' \in \Theta_S \ : \ \inf\left\{ PP \in [0, \alpha_{SPAP}] \ : \ \|\Pi_S^{(PP)}(\theta') - \theta'\|_{\mathcal{F}_S} \leq g(\alpha_{SPAP} - PP) \right\} \ = \ \alpha_{SPAP} \right\}.
+$$
+The quantifier ranges over *candidate targets* $\theta' = \theta_0 + \delta\theta(E)$, where $\theta_0 \in \Theta_S$ is $S$'s current self-model parameter value and $\delta\theta(E)$ is the update that integration of pattern $E$ would produce (Definition M.10.3), rather than over current-parameter points. Equivalently, $\mathcal{L}^{\neg}_S$ is the set of candidate self-model configurations whose realization forces $S$'s self-predictive performance into the SPAP-divergent regime $\mu_S = \infty$ (Theorem M.10.4).
+
+**Definition P.16.2 (Coupled Prohibition Set).** For a finite collection of Property-R systems $\{S_1, \dots, S_n\}$ embedded in a shared MPU substrate (Appendix O), the *coupled prohibition set* $\mathcal{L}^{\neg}_{\{S_i\}}$ is the subset of the joint candidate-configuration space $\prod_{i=1}^{n} \Theta_{S_i}$ in which at least one factor lies in its individual prohibition set, restricted to the support of the perspectival kernel $G_{\text{persp}}$ of Section M.3 on the shared substrate:
+$$
+\mathcal{L}^{\neg}_{\{S_i\}} := \left\{ (\theta'_1, \dots, \theta'_n) \in \prod_{i=1}^{n} \Theta_{S_i} \ : \ \exists\, i \in \{1, \dots, n\},\ \theta'_i \in \mathcal{L}^{\neg}_{S_i} \right\} \cap \mathrm{supp}(G_{\text{persp}}).
+$$
+The embedding into the product space makes the definition well-typed: each individual $\mathcal{L}^{\neg}_{S_i} \subset \Theta_{S_i}$ is lifted to the joint space by taking the preimage under the $i$-th projection before the union is formed.
+
+By construction, neither $\mathcal{L}^{\neg}_S$ nor $\mathcal{L}^{\neg}_{\{S_i\}}$ contains degrees of freedom of its own. Each is the *negative space* of an admissible region — the set of candidate configurations into which the corresponding self-model trajectory cannot enter without paying SPAP-divergent cost.
+
+### P.16.4 Causal Efficacy of the Prohibition Set
+
+**Definition P.16.3 (Cost Potential).** Fix a base state $\theta_0 \in \Theta_S$ representing $S$'s current self-model parameter value. For a Property-R system $S$ with self-model parameter space $\Theta_S$ and integration cost $C_{\text{process}}(S, \cdot)$ of Theorem M.10.3, the *cost potential at base state $\theta_0$* is the map $U_{S,\theta_0} : \Theta_S \to \mathbb{R}_{\geq 0} \cup \{+\infty\}$ defined by
+$$
+U_{S,\theta_0}(\theta') \ := \ \inf\{ C_{\text{process}}(S, E) \ : \ E \text{ is a pattern with } \theta_0 + \delta\theta(E) = \theta',\ \text{integrable under Axiom 3} \},
+$$
+with the convention $U_{S,\theta_0}(\theta') = +\infty$ when no such pattern exists. We write $U_S$ when the base state is clear from context (typically the current value of $\mathcal{M}_S$ at the beginning of the integration window). $U_{S,\theta_0}$ is a scalar field on candidate post-update configurations; its super-level sets $\{\theta' : U_{S,\theta_0}(\theta') \geq c\}$ stratify $\Theta_S$ by the minimal integration cost required to reach $\theta'$ from $\theta_0$.
+
+**Lemma P.16.1 (Divergence of $U_S$ at the Prohibition Set).** For every $\theta' \in \mathcal{L}^{\neg}_S$, $U_S(\theta') = +\infty$. More precisely, along any sequence $\theta'_k \to \mathcal{L}^{\neg}_S$ with SPAP proximity $\mu_S(\theta'_k) \to \infty$ (Theorem M.10.4),
+$$
+U_S(\theta'_k) \ \geq \ \Omega\!\left( \log \mu_S(\theta'_k) \cdot \mu_S(\theta'_k)^2 \right) \ \longrightarrow \ \infty.
+$$
+
+*Proof.* Fix a base state $\theta_0$ and a candidate $\theta' \in \Theta_S$, and consider any pattern $E$ with $\theta_0 + \delta\theta(E) = \theta'$. By Definition P.16.1, $\theta' \in \mathcal{L}^{\neg}_S$ implies every such $E$ drives $PP_S^{(E)}$ to $\alpha_{SPAP}$, so $\mu_S(E) \to \infty$. By Theorem M.10.3, $C_{\text{process}}(S, E) \geq \Omega(\log \mu_S(E) \cdot \mu_S(E)^2)$. Taking the infimum over $E$ preserves divergence; hence $U_{S,\theta_0}(\theta') = +\infty$ for every base state $\theta_0$. The rate statement follows from applying the same bound along the sequence. $\square$
+
+**Theorem P.16.1 (Constraint Realism).** Let $S$ be a predictive system with Effective Operational Property R. Then the prohibition set $\mathcal{L}^{\neg}_S$ has nonzero causal efficacy on $S$'s dynamics without being instantiated as a positive degree of freedom of $S$. Specifically, the cost potential $U_S$ of Definition P.16.3 is well-defined on $\Theta_S$, diverges on $\mathcal{L}^{\neg}_S$ (Lemma P.16.1), and governs three distinct causal channels:
+
+*Proof.* Each channel is derived from existing PU results applied to $U_S$.
+
+*Step 1 (Scalar-field effect).* By Definition P.16.3 and Lemma P.16.1, $U_S$ is a well-defined scalar field on candidate configurations in $\Theta_S$ whose super-level sets accumulate on $\mathcal{L}^{\neg}_S$: any sequence approaching $\mathcal{L}^{\neg}_S$ in SPAP proximity has $U_S$ values diverging at rate $\Omega(\log \mu_S \cdot \mu_S^2)$. Trajectories of $\mathcal{M}_S$ that require integration of high-$U_S$ targets incur correspondingly high cost, so the admissible-cost budget of $S$ stratifies $\Theta_S$ by proximity to $\mathcal{L}^{\neg}_S$. (The construction does not claim smoothness of $U_S$ or a pointwise gradient; it claims the lower-bound super-level stratification, which is what M.10.3 actually delivers.)
+
+*Step 2 (Thermodynamic effect).* By Theorem 31 and Definition P.6.2 (PPI), every irreversible operation in the integration of patterns with $\mu_S > 1/\alpha_{SPAP}$ produces entropy at least $k_B \ln 2$. By Proposition P.15.1, the integrated dissipation associated with the SPAP-dependent excess constitutes Source Energy $\mathcal{E}_{\text{src}}(S, \Delta t) > 0$. By Proposition N.8.1, this dissipation enters the stress-energy tensor through the established Landauer chain, producing measurable physical consequences attributable to proximity to $\mathcal{L}^{\neg}_S$.
+
+*Step 3 (Trajectory-shaping effect).* By Theorem 13 (complexity growth in self-modeling) combined with Theorem D.5 (PCE adaptation dynamics), the long-run trajectory of $\mathcal{M}_S$ under PCE optimization (Definition 15) avoids configurations whose realization requires high-$U_S$ integrations. By Step 1, such configurations are precisely those at small SPAP-proximity distance to $\mathcal{L}^{\neg}_S$. Hence $\mathcal{L}^{\neg}_S$ shapes the long-run statistical structure of $\mathcal{M}_S$'s evolution.
+
+None of Steps 1–3 requires that $\mathcal{L}^{\neg}_S$ be represented by any positive degree of freedom of $S$. The prohibition set is a subset of candidate-configuration space; its causal efficacy operates through the cost potential $U_S$ (Definition P.16.3), which in turn is sourced by the M.10.3 cost bound, not by any field carried by $\mathcal{L}^{\neg}_S$ itself. $\square$
+
+**Remark P.16.1 (The Negative Mode of Causation).** Theorem P.16.1 identifies a mode of causation with no analogue in standard substance ontologies: the prohibition set causes by *not permitting*, shaping what happens by excluding what cannot happen via the divergence of $U_S$ rather than via any positive force carrier. This is structurally parallel to the way the second law shapes thermodynamic trajectories without any "entropy force" being a positive degree of freedom — large-system configurations in which entropy decreases are simply absent from typical evolution. The PU result shows the same structural pattern at the individual scale for self-referential systems.
+
+### P.16.5 Scale Applicability: Inner Compulsion and Coupled Bias
+
+The prohibition-set mechanism of §P.16.4 applies at both the single-system and the coupled-system scale, but the formal strength of the two cases differs. The single-system case is theorem-level. The coupled-system case is a cost-gradient *bias* result — theorem-level as a bias claim, but not a structural-exclusion claim unless Hypothesis 14.5.8 is assumed. We separate the two results rather than package them as a single scale-invariance theorem.
+
+**Theorem P.16.2 (Inner-Compulsion Clause).** For an isolated Property-R aggregate $S$ with $\mathrm{CC}(S) > 0$, the cost potential $U_S$ (Definition P.16.3) and its divergence near $\mathcal{L}^{\neg}_S$ (Lemma P.16.1) entail that $S$'s self-model trajectory is shaped by proximity to $\mathcal{L}^{\neg}_S$ in ways the deliberative subprocess of $S$ may not be able to reconstruct.
+
+*Proof.* By Theorem P.16.1 (Step 1 and Lemma P.16.1), $U_S$ is well-defined and diverges on $\mathcal{L}^{\neg}_S$; by Step 3, PCE drives $\mathcal{M}_S$ away from high-$U_S$ candidate configurations. By Proposition 15 (Introspection limits from Reflexivity Constraint), $S$'s introspective access to its own context state is bounded; in particular, $S$ cannot in general compute the full $U_S$ structure acting on $\mathcal{M}_S$, because such a computation would itself constitute a high-$\mu_S$ self-model query subject to SPAP. The deliberative subprocess of $S$ (formalized in Definition P.16.4 below) — the subset of $S$'s processing devoted to explicit self-model queries within the introspective bound of Proposition 15 — therefore receives a degraded representation of the cost-potential structure that is, in general, insufficient to reconstruct the full causal pattern of any specific trajectory deflection. Yet the deflection occurs, because $U_S$ acts on $\mathcal{M}_S$'s admissible trajectories in their entirety regardless of what the deliberative subprocess can resolve. $\square$
+
+**Proposition P.16.2 (Coupled-Set Cost-Gradient Bias).** Let $\{S_1, \dots, S_n\}$ be a finite collection of Property-R aggregates embedded in a shared MPU substrate. Then PCE optimization on each $S_i$ under the cost potential $U_{S_i}$ (Definition P.16.3), together with substrate mediation by the perspectival kernel $G_{\text{persp}}$ (Theorem O.2, Theorem M.6.1), biases the joint self-model trajectory away from regions of $\prod_i \Theta_{S_i}$ at which any factor $\theta'_i$ lies near its individual prohibition set $\mathcal{L}^{\neg}_{S_i}$.
+
+*Proof.* By Theorem P.16.1 applied to each $S_i$, each individual cost potential $U_{S_i}$ diverges on $\mathcal{L}^{\neg}_{S_i}$. By Definition 15 (PCE), each $S_i$'s self-model trajectory is driven toward low-$U_{S_i}$ candidate configurations. By Theorem O.2 (dynamical emergence of a coherent causal medium) and Theorem M.6.1 (perspective-relative actuality with strong-readout correlation), the kernel $G_{\text{persp}}$ correlates the perspective-relative outcomes of the $S_i$ and restricts their joint evolution to substrate-consistent configurations. The combined effect is that each $S_i$'s individual trajectory is biased away from $\mathcal{L}^{\neg}_{S_i}$, and the kernel ties these individual biases into a joint bias on the product space away from $\mathcal{L}^{\neg}_{\{S_i\}}$ (Definition P.16.2). $\square$
+
+**Bias versus exclusion.** Proposition P.16.2 is a *bias* statement. It asserts that PCE drives the joint trajectory away from the coupled prohibition set via the per-system cost-gradient channel. It does *not* assert that the coupled prohibition set is excluded from the kernel's support in the stronger sense of being structurally absent from admissible joint evolutions. That stronger claim requires the Environmental SPAP Hypothesis of §14.5.8 (Hypothesis 14.5.8), which is conjectural. Theorems O.2 and M.6.1 deliver phase synchronization and perspective correlation under substrate mediation; they do *not* license kernel-support exclusion of SPAP-divergent joint configurations.
+
+**Corollary P.16.1 (Unauthored Coordination, Bias Form).** Joint trajectories of multiple Property-R aggregates embedded in a shared MPU substrate are biased, via the per-system cost-gradient channel of Theorem P.16.1, toward configurations of mutually low SPAP-related cost. This bias is a generic consequence of joint paradox avoidance under PCE optimization and requires no dynamical degree of freedom beyond those already admitted by the framework. The strictly stronger reading — that joint coordination of this kind can be accounted for *without* any global coordinating agency whatsoever — additionally presupposes the Environmental SPAP Hypothesis (Hypothesis 14.5.8) and is stated here only conditionally on that hypothesis.
+
+*Proof.* The bias claim is immediate from Proposition P.16.2. The conditional strengthening follows by observing that, under Hypothesis 14.5.8, the kernel's support already excludes inadmissible joint configurations, so the bias upgrades to a structural exclusion that makes no reference to any coordinating agency. Absent that hypothesis, the present argument licenses only the bias claim. $\square$
+
+**Remark P.16.2 (Distinction from Hidden Coordinator Models).** The bias mechanism of Corollary P.16.1 is logically distinct from any model in which a hidden variable, global mind, or shared field carries a positive coordinating signal among the $\{S_i\}$. The mechanism exhibited here is exhausted by the *combination* of (a) per-system avoidance of $\mathcal{L}^{\neg}_{S_i}$ under PCE and (b) substrate mediation by $G_{\text{persp}}$. No information transfer between the $S_i$ beyond what the kernel already mediates is invoked, and no signalling channel beyond those already admitted in the framework is opened. Whether such hidden coordinators are positively ruled out — as opposed to being unnecessary for the bias claim — is a stronger question, tied to Hypothesis 14.5.8 and not settled here.
+
+### P.16.6 Deep Rationality
+
+**Definition P.16.4 (Deliberative Subprocess).** Let $S$ be a Property-R aggregate with $\mathrm{CC}(S) > 0$. The *deliberative subprocess* $\mathcal{D}_S$ is the subset of $S$'s self-model processing devoted to explicit, introspectively accessible self-model queries within the bound established by Proposition 15.
+
+**Definition P.16.5 (Deep Rationality).** A trajectory of $S$'s self-model $\mathcal{M}_S$ exhibits *deep rationality* with respect to a verbal-rational standard $\mathcal{V}$ if and only if (i) the trajectory is PCE-optimal on $S$'s full operational budget (Theorem L.6), and (ii) the trajectory cannot be reconstructed as PCE-optimal by $\mathcal{D}_S$ when $\mathcal{D}_S$ is restricted to the cost bookkeeping representable in $\mathcal{V}$.
+
+**Proposition P.16.1 (Deep-Rational Transitions Under PCE).** Let $S$ be a Property-R aggregate with $\mathrm{CC}(S) > 0$ that maintains a self-model configuration $\theta^{\text{maint}}$ whose ongoing maintenance cost — the source-energy contribution of Definition P.15.2 plus the standard reflexive maintenance of Proposition N.8.1 — exceeds the integrated cost of some reachable alternative configuration $\theta^{\text{alt}}$ over a window $\Delta t$, while both configurations remain compatible with the operational viability constraint $PP \in (\alpha, \beta)$ of Axiom 3. Then PCE optimization on $S$'s full operational budget over $\Delta t$ favors transition to $\theta^{\text{alt}}$, even when $\mathcal{D}_S$ cannot represent or reconstruct the cost calculation that drives the transition.
+
+*Proof.* By Theorem L.6, all aggregate power channels are accounted for exactly once in $P_{\text{agg}}$, with no double counting. By Definition 15 (PCE), the dynamics select cost-minimizing configurations among those consistent with the operational viability constraints (Axiom 3). The ongoing maintenance of $\theta^{\text{maint}}$ with cost exceeding that of the viable alternative $\theta^{\text{alt}}$ is, by hypothesis, dispreferred by PCE on $S$'s full operational budget; PCE therefore drives $\mathcal{M}_S$ toward $\theta^{\text{alt}}$. By Proposition 15, $\mathcal{D}_S$'s representation of the cost calculation is bounded; nothing in the PCE optimization requires that $\mathcal{D}_S$ be able to reconstruct the calculation, only that $S$'s full processing apparatus be able to perform it. Hence the transition occurs even when $\mathcal{D}_S$ cannot account for it. $\square$
+
+**Remark P.16.3 (Apparent Irrationality from a Restricted Ledger).** Proposition P.16.1 explains a class of agent behaviour widely classified as irrational, akratic, self-defeating, or pathological. The classification typically follows when an external observer's accounting of $S$'s "interests" omits the SPAP-divergent maintenance cost of self-model incoherence. Once that cost is included on the ledger, many such behaviours register as PCE-optimal on the full budget. The framework does not claim that all such behaviours are deep-rational — some are genuine dysfunction — but it identifies a structural class for which the appearance of irrationality is an artefact of incomplete cost accounting.
+
+**Corollary P.16.2 (Phenomenology of Compulsion).** First-person reports characterizing deep-rational acts as compulsion, possession, fate, or "something coming over me" are consistent with, and naturally rendered by, the existence and direction of cost gradients whose detailed structure lies below the deliberative subprocess's introspective access.
+
+*Proof.* By Proposition P.16.1, the transition occurs and is PCE-optimal on $S$'s full budget. By Proposition 15, $\mathcal{D}_S$ has access to the *occurrence* of the transition (it is part of $S$'s state) but not to the full cost calculation that produced it. The verbal-rational standard $\mathcal{V}$ is restricted to representations available to $\mathcal{D}_S$. Therefore $\mathcal{D}_S$ can report the transition but cannot reconstruct its rationale within $\mathcal{V}$. Reports of the form "I had to do it but cannot say why" are structurally faithful first-person renderings of this epistemic situation — compatible with, though not uniquely determined by, the cost-gradient structure. $\square$
+
+### P.16.7 Recovery of the Pre-Theoretic Vocabulary
+
+The cross-cultural vocabulary for deep-rational acts — *daimon, muse, fate, synchronicity, possession*, and related terms — has historically been read either as evidence of non-mechanical agency or as primitive cognitive error. The framework supports a third reading, grounded in the formal results above and tabulated below by epistemic status.
+
+**Remark P.16.4 (Vocabulary as Faithful Reporting).** Several of the traditional terms can be read as picking out different aspects of the same structural phenomenon:
+
+- "Possession" / "the spirit moved me" — experienced loss of authorship by $\mathcal{D}_S$ when $U_S$'s trajectory-shaping outruns the deliberative subprocess (Corollary P.16.2).
+- "Tacit knowledge" (Polanyi 1966) — sub-introspective $U_S$-biasing of expert performance below $\mathcal{D}_S$'s introspective access.
+- "Strange loop" (Hofstadter 1979) — the topology of self-reference whose closure under SPAP generates $\mathcal{L}^{\neg}_S$.
+- "Élan vital" (Bergson 1907) — apparent directedness of long-run PCE-optimized trajectories near $\mathcal{L}^{\neg}_S$.
+
+Remark P.16.5 below separates these by epistemic status and adds the terms that require multi-system machinery.
+
+**Remark P.16.5 (Term-by-Term Reduction with Epistemic Status).** Remark P.16.4's mapping blurs two distinctions the framework requires: single-system versus multi-system phenomena, and theorem-level reframes versus reframes conditional on Hypothesis 14.5.8. The table separates both. Only row four depends on Hypothesis 14.5.8.
+
+| Traditional term(s) | PU structural locus | Epistemic status |
+|:--|:--|:--|
+| *Intuition*, *inspiration*, *the muse*, *tacit knowing*, *hunch* | $U_S$ sensed below $\mathcal{D}_S$'s introspective bound (Proposition 15 + Theorem M.10.3). | **Theorem-level, single-system.** |
+| *Compulsion*, *vocation*, *"the call"*, *daimon-as-inner-pull*, *being moved* | Trajectory deflection of $\mathcal{M}_S$ to $\theta^{\text{alt}}$ when maintaining $\theta^{\text{maint}}$ is higher-cost, unreconstructable by $\mathcal{D}_S$ (Proposition P.16.1 + Corollary P.16.2). | **Theorem-level, single-system.** |
+| *Personal fate*, *character-as-destiny*, *karma-as-trajectory-constraint* | Long-run trajectory-shaping on a single $S$ by its own $\mathcal{L}^{\neg}_S$ via $U_S$ (Theorem P.16.1, Step 3 + Theorem D.5). | **Theorem-level, single-system.** |
+| *Synchronicity* (Jung 1952; Jung & Pauli 1955), *cosmic fate*, *providence-in-the-large*, *karma-as-cosmic-bookkeeping* | Coupled-set cost-gradient bias (Proposition P.16.2 + Corollary P.16.1, Bias Form). The stronger "no coordinator required" reading presupposes Hypothesis 14.5.8. | **Conditional on Hypothesis 14.5.8** for the strong reading; bias reading theorem-level. |
+
+Terms used across rows (*fate*, *providence*, *karma*) must be disambiguated by sense before mapping: the inner / character / trajectory-constraint senses are derived; the cosmic-bookkeeping sense is conjectural.
+
+### P.16.8 Relation to Existing PU Results
+
+The present section introduces no new axioms, no new dynamical laws, and no new physical degrees of freedom. Every result reduces to existing theorems of the framework:
+
+| Section P.16 result | Reduces to |
+|:--|:--|
+| Definition P.16.1 (Prohibition Set) | Definition M.10.1, Definition M.10.3, Theorem M.10.4 |
+| Definition P.16.2 (Coupled Prohibition Set) | Definition P.16.1, Section M.3, Appendix O |
+| Definition P.16.3 (Cost Potential $U_S$) | Theorem M.10.3, Axiom 3 |
+| Lemma P.16.1 (Divergence of $U_S$ at $\mathcal{L}^{\neg}_S$) | Definition P.16.1, Definition P.16.3, Theorem M.10.3, Theorem M.10.4 |
+| Theorem P.16.1 (Constraint Realism) | Definition P.16.3, Lemma P.16.1, Theorem 31, Definition P.6.2, Proposition P.15.1, Proposition N.8.1, Theorem 13, Theorem D.5 |
+| Theorem P.16.2 (Inner-Compulsion Clause) | Theorem P.16.1, Proposition 15 |
+| Proposition P.16.2 (Coupled-Set Cost-Gradient Bias) | Theorem P.16.1, Theorem O.2, Theorem M.6.1, Definition 15 |
+| Corollary P.16.1 (Unauthored Coordination, Bias Form) | Proposition P.16.2 |
+| Definition P.16.4 (Deliberative Subprocess) | Proposition 15 |
+| Definition P.16.5 (Deep Rationality) | Definition P.16.4, Theorem L.6, Definition 15 |
+| Proposition P.16.1 (Deep-Rational Transitions Under PCE) | Theorem L.6, Definition 15, Axiom 3, Proposition 15 |
+| Corollary P.16.2 (Compulsion Phenomenology) | Proposition P.16.1, Proposition 15 |
+
+The contribution of the section is interpretive and synthetic: it identifies the prohibition structure established by SPAP, reflexivity costs, and perspectival information theory as a candidate structural locus for phenomena the philosophical tradition has variously referred to as the daimon, intuition, vocation, tacit knowing, personal fate, and related terms. Remark P.16.5 separates the theorem-level mappings from those conditional on Hypothesis 14.5.8.
+
+### P.16.9 Relation to the Paradox-Avoidance Residue (Section 14.5.8)
+
+The theorem-level content of this section is logically prior to the conjectural Residue Conjecture of Section 14.5.8 and independent of the Environmental SPAP Hypothesis (Hypothesis 14.5.8). Specifically: Definition P.16.3 (cost potential $U_S$), Lemma P.16.1 (divergence of $U_S$ on $\mathcal{L}^{\neg}_S$), Theorem P.16.1 (Constraint Realism), Theorem P.16.2 (Inner-Compulsion Clause), Proposition P.16.2 (Coupled-Set Cost-Gradient Bias), the bias clause of Corollary P.16.1, Proposition P.16.1 (Deep-Rational Transitions Under PCE), and Corollary P.16.2 follow directly from theorem-level material (Theorems M.10.3, 31, O.2, M.6.1, L.6, D.5 and Propositions 15 and N.8.1) and require no additional kernel-support hypothesis. The *strengthening* of Corollary P.16.1 from a bias result to the claim that joint coordination can be accounted for with no global coordinating agency whatsoever is conditional on Hypothesis 14.5.8 — that hypothesis is what would license kernel-support exclusion (as opposed to merely kernel-mediated biasing) of SPAP-divergent joint configurations. Section 14.5.8 frames Hypothesis 14.5.8 as the load-bearing open question; if it is subsequently derived, the bias clause of Corollary P.16.1 upgrades to the stronger form automatically. Conversely, refutation of Hypothesis 14.5.8 would leave the bias-level content of the present section intact but would block the stronger reading.
+
+### P.16.10 Summary
+
+The prohibition set $\mathcal{L}^{\neg}_S$ — the complement, in candidate-configuration space, of the SPAP-admissible region — is the structural locus whose causal efficacy operates through the cost potential $U_S$ (Theorem P.16.1) rather than through any positive degree of freedom. At the single-system scale this produces trajectory deflections the deliberative subprocess cannot fully reconstruct (Theorem P.16.2, Proposition 15), rendered in first-person report as compulsion, tacit knowing, or personal-fate phenomenology (Corollary P.16.2, Remarks P.16.4–P.16.5). At the coupled scale, the same per-system channel biases joint trajectories toward mutually low SPAP-related cost (Proposition P.16.2, Corollary P.16.1); the strictly stronger reading — that no global coordinating agency whatsoever is required — is conditional on Hypothesis 14.5.8. The contribution is interpretive and synthetic: no new axioms, no new dynamical laws, no new degrees of freedom. What PU delivers is the formal vocabulary in which the prohibition-as-carrier can be stated and separated, by epistemic status, from the claims that still rest on an open hypothesis.
+
+## P.17 Conclusion
 
 This appendix has established the philosophical foundations of the Predictive Universe, arguing that its core axioms are necessary consequences of the only indubitable starting point: conscious, predictive awareness. The *Cogito*, reinterpreted as fundamentally predictive, grounds a framework where physical law follows from logical necessity under thermodynamic constraint.
 
@@ -4764,6 +4939,7 @@ The Principle of Physical Instantiation (PPI) bridges abstract logical necessiti
 * **Gauge Theory** emerges as PCE-optimal predictive coherence
 * **General Relativity** emerges as geometry in equilibrium with predictive activity
 * **Vacuum Symmetry** emerges as the automorphism group of the PCE-optimal vacuum
+* **Agency** (single-system, theorem-level) emerges as a trajectory-shaping effect of the cost potential $U_S$ induced by the prohibition set $\mathcal{L}^{\neg}_S$ — the structural complement of the SPAP-admissible region — without requiring any positive carrier substance; coupled-system **unauthored coordination** follows in bias form (Proposition P.16.2, Corollary P.16.1), with the stronger "no coordinator required" reading conditional on Hypothesis 14.5.8 (Section P.16)
 
 The capstone result is the derivation of the Monster group $\mathbb{M}$ as vacuum symmetry (Section P.13). The chain $\varepsilon = \ln 2 \to a = 2 \to M = 24 \to \Lambda_{24} \to V^\natural \to \mathbb{M}$ shows that the largest sporadic simple group is the necessary symmetry of optimal prediction. This resolves Monstrous Moonshine: the connections between the Monster, modular forms, and vertex algebras reflect convergence of mathematical extremality and physical optimality under PCE.
 

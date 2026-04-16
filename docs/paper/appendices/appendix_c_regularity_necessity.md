@@ -394,6 +394,10 @@ Finally, Definition C.2 provides a discrete curvature bound, but the present App
 
 Without all four, Theorem 44 remains genuinely conditional.
 
+**Theorem C.6c (Noncollapsed RCD${}^*(K,4)$ Bridge).** Assume the hypotheses of Theorem D.6e and, in addition: (i) the rescaled graph Laplacians satisfy a uniform discrete Bakry–Émery estimate $\mathrm{BE}(K,4)$; (ii) *noncollapse*: there exist $v_-,v_+>0$ and $r_0>0$ such that $v_-\,r^4\le\mu_n(B_r(x))\le v_+\,r^4$ for $0<r\le r_0$ uniformly on the selected branch. Then every measured-GH subsequential limit is a noncollapsed $\mathrm{RCD}^*(K,4)$ space $(X,d,\mu)$, and the Mosco-limit quadratic form from Theorem D.6e is exactly its canonical Cheeger energy. In particular, tangent cones are Euclidean $\mathbb R^4$ at $\mu$-a.e. point.
+
+*Proof.* The doubling/Poincaré regime yields measured-GH precompactness. The Mosco limit from Theorem D.6e supplies a strongly local regular Dirichlet form on the limit space. Stability of the $\mathrm{BE}(K,4)$ condition under the joint measured-GH/Mosco passage implies that the limit satisfies the synthetic $\mathrm{RCD}^*(K,4)$ condition. Noncollapse fixes the metric-measure dimension at $4$, preventing dimension drop and placing the limit on the noncollapsed branch. Standard noncollapsed RCD regularity then yields Euclidean tangent cones almost everywhere. ∎
+
 ## C.7 Conclusion and status boundary
 
 This appendix establishes a regularity-necessity theorem, not the whole continuum bridge. Sections C.1–C.6 show that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages these penalties as conditional coarse-grained doubling and local $(1,2)$-Poincaré bounds under its stated hypotheses. In this precise sense, Theorem 43 is the manuscript's formal regularity theorem.

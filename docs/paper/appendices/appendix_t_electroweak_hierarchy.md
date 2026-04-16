@@ -652,7 +652,7 @@ The corresponding dimensionless matching factors are
 $$
 Z_i:=1+\frac{\Delta_i}{\alpha_U^{-1}}=1+\frac{\Delta_i}{24}.
 $$
-These $Z_i$ are spectral matching data on the lifted gauge geometry $\widetilde X$; they are not Bures-norm orbit averages on the bare Grassmannian. The lifted formulation replaces the bare-Grassmannian orbit-average construction because the local Bures block formula provides only representative-state coupling data, while the quantitative gauge hierarchy requires a global sector-resolving structure that is formulated on the flag lift. The numerical target tuple adopted later in Theorem T.18 is not part of this definition; it is the phenomenological target for the lifted spectral problem.
+These $Z_i$ are spectral matching data on the lifted gauge geometry $\widetilde X$; they are not Bures-norm orbit averages on the bare Grassmannian. The lifted formulation replaces the bare-Grassmannian orbit-average construction because the local Bures block formula provides only representative-state coupling data, while the quantitative gauge hierarchy requires a global sector-resolving structure that is formulated on the flag lift. Proposition T.17a.3a gives the canonical base-to-lift matching map: the bare-Grassmannian representative-state Bures data determine the entire fiber-averaged local part of the lifted threshold sector, while the only remaining open ingredient is the genuinely global spectral remainder. The numerical target tuple adopted later in Theorem T.18 is not part of this definition; it is the phenomenological target for the lifted spectral problem.
 
 **Remark T.17a.1 (Dynkin Index Structure and Singlet Hypercharge).** The lifted interface bundle $\widetilde E = \pi^*S^\vee \otimes \pi^*Q$ splits into three $G_{\mathrm{SM}}$-sectors of complex ranks $(6,4,2)$:
 $$
@@ -681,6 +681,32 @@ T = \begin{pmatrix} T_1(C) & T_1(W) & T_1(Y) \\ T_2(C) & T_2(W) & T_2(Y) \\ T_3(
 = \begin{pmatrix} 2/5 & 3/5 & 8/15 \\ 0 & 1 & 0 \\ 1 & 0 & 0 \end{pmatrix}.
 $$
 Here $T_3(C) = 2I_{SU(3)}(\mathbf{3})=1$, $T_2(W) = 2I_{SU(2)}(\mathbf{2})=1$, and the $U(1)$ entries are $T_1(s)=n_s\,y_s^2$ with $y_s$ the per-component hypercharge in SU(5) normalization. The singlet hypercharge $y_Y$ is determined by the following chain of identifications:
+
+**Proposition T.17a.3a (Canonical Base-to-Lift Matching Map).** Let $X=\mathrm{Gr}(2,8)$ and $\pi:\widetilde X\to X$ the minimal flag lift (Postulate G.8.4e.1 and Proposition G.8.4e.1a). Let $b_s$ be any sector-labeled local scalar on $X$ obtained from the representative-state Bures block data, with $s\in\{C,W,Y\}$, and assume $b_s$ is invariant under the compact decomposition-preserving fiber action. Then:
+
+1. there exists a unique fiber-constant lift $\widetilde b_s = b_s\circ\pi\in C^\infty(\widetilde X)$;
+2. every fiber-constant lifted local scalar descends uniquely to the base;
+3. after normalizing the canonical fiber measure to total mass one, the local lifted contribution satisfies
+$$
+F_s^{\mathrm{loc}} \;:=\; \int_{\widetilde X}\widetilde b_s\,d\mu_{\widetilde X} \;=\; \int_X b_s\,d\mu_X;\tag{T.17a.3a}
+$$
+4. writing the full sector functional as
+$$
+F_s \;=\; F_s^{\mathrm{loc}} + R_s^{\mathrm{glob}},\tag{T.17a.3b}
+$$
+the threshold tuple is
+$$
+\Delta \;=\; T\,F \;=\; T\bigl(F^{\mathrm{loc}} + R^{\mathrm{glob}}\bigr),\tag{T.17a.3c}
+$$
+where $T$ is the invertible Dynkin-index matrix above.
+
+The representative-state Bures data on the bare Grassmannian therefore determine the entire local part of the lifted threshold sector, and the only remaining open ingredient is the genuinely global spectral remainder $R^{\mathrm{glob}}$.
+
+*Proof.* By the universal ordered $(1,2,3)$ lift property of Postulate G.8.4e.1 and Proposition G.8.4e.1a, every point of the fiber $\pi^{-1}(x)$ corresponds to an ordered decomposition of the inactive sector over the same base point $x\in X$. Invariance of $b_s$ under the decomposition-preserving compact fiber action then makes $b_s$ constant on each fiber, so $\widetilde b_s:=b_s\circ\pi$ is the unique fiber-constant lift; conversely a fiber-constant lifted scalar takes the same value at every point of $\pi^{-1}(x)$ and defines a unique scalar on $X$.
+
+The fibers of $\pi$ are compact homogeneous spaces, so their normalized invariant measure has total mass one independent of the base point; integrating a fiber-constant lifted scalar over $\widetilde X$ is therefore the same as integrating its descended scalar over $X$, which is (T.17a.3a).
+
+Every spectral threshold functional decomposes canonically into its local coefficient part and the remainder after those local coefficients are removed; (T.17a.3b) is this decomposition by definition. Multiplying by the invertible Dynkin-index matrix $T$ transfers the same decomposition to the physical threshold tuple, giving (T.17a.3c). The local part is therefore fixed by the bare-Grassmannian representative-state Bures data, and only the global remainder remains open. ∎
 
 *Step 1 (Coordinate-level hypercharge).* Theorem T.9 fixes the PU hypercharge generator in SU(5) normalization on $\mathbb{C}^8 = \mathbb{C}^2_{\mathcal{A}} \oplus \mathbb{C}^6_{\mathcal{B}}$ as
 $$
@@ -983,7 +1009,7 @@ $$
 Z_1=1+\frac{15.14}{24}\approx 1.6308,\qquad Z_2=1+\frac{20.94}{24}\approx 1.8725,\qquad Z_3=1+\frac{18.41}{24}\approx 1.7671.
 }
 $$
-The explicit global spectral evaluation of the lifted threshold sums remains the outstanding quantitative step. Remark T.17a.4 and Proposition T.17a.5 now give a theorem-level local no-go: once the positive color and weak channels are matched, every sector-independent affine local truncation still forces $F_Y>0$. The lifted threshold sector therefore remains retained rather than derived until a genuinely sector-resolving global spectral evaluation is completed independently. Neglecting the small residual finite matching shifts $\delta_i$ at first pass (Definition T.19a), one-loop SM running (Theorem T.15) then gives
+The explicit global spectral evaluation of the lifted threshold sums remains the outstanding quantitative step. Remark T.17a.4 and Proposition T.17a.5 now give a theorem-level local no-go: once the positive color and weak channels are matched, every sector-independent affine local truncation still forces $F_Y>0$. The lifted threshold sector therefore remains retained rather than derived until a genuinely sector-resolving global spectral evaluation is completed independently. Proposition T.17a.3a fixes the canonical base-to-lift identification of the local part of the threshold sector, and Theorem T.69 isolates the remaining global spectral remainder once a subtraction scheme is fixed. Theorem T.78 then records the determinacy of any completed flag-lift spectral problem. Neglecting the small residual finite matching shifts $\delta_i$ at first pass (Definition T.19a), one-loop SM running (Theorem T.15) then gives
 $$
 \alpha_i^{-1}(M_Z)=Z_i\,\alpha_U^{-1}+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
 \qquad i=1,2,3,
@@ -5871,5 +5897,235 @@ $$\ln(m_\tau/m_\mu) = 2.8212, \quad \ln(m_\mu/m_e) = 5.3306, \quad \ln(m_\tau/m_
 |$R_\ell$ |3.000 |2.889 |2.889 |exact |
 
 **Controlled remainder / uncertainty.** With $M = 24$ and $d^2 \in \{2, 4\}$ for the charged-lepton links, the expansion parameter is $d^2/M \le 1/6$; the next omitted term contributes a conservative bound $|\Delta\ln| \lesssim 0.005$ to any single logarithm. This bound is the dominant (T2) theory uncertainty for the charged-lepton logarithms.
+
+## T.26 Flag-Lift Threshold Compression and Parameter Rigidity
+
+### T.26.1 Isotypic Decomposition of the Lifted Threshold Operator
+
+**Theorem T.67 (Flag-Lift Threshold Compression).** Let $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ be the minimal flag lift (Definition T.17a), $H:=U(1)\times U(2)\times U(3)$ the decomposition-preserving compact symmetry group, and $\mathcal H_{\mathrm{thr}}$ the Hilbert space on which the threshold operator acts. Let $\mathsf L:\mathcal H_{\mathrm{thr}}\to\mathcal H_{\mathrm{thr}}$ be a self-adjoint $H$-equivariant operator (e.g. the Bures-Laplacian or heat-kernel-derived threshold operator). Then:
+
+(a) $\mathcal H_{\mathrm{thr}}$ admits an $H$-isotypic decomposition
+$$
+\mathcal H_{\mathrm{thr}} \;\cong\; \bigoplus_{\lambda\in\widehat H} V_\lambda \otimes M_\lambda,
+$$
+with $V_\lambda$ irreducible $H$-modules and $M_\lambda$ multiplicity spaces.
+
+(b) On each isotypic block, $\mathsf L|_{V_\lambda\otimes M_\lambda}=I_{V_\lambda}\otimes B_\lambda$ for a unique Hermitian $B_\lambda\in\mathrm{End}(M_\lambda)$.
+
+(c) On the three SM gauge sectors $\lambda=1,2,3$ corresponding to $U(1),SU(2),SU(3)$, all threshold information entering gauge matching reduces to the Hermitian multiplicity operators $B_1,B_2,B_3$.
+
+(d) If matching depends only on sector-averaged thresholds, the lifted data collapse to the triplet
+$$
+\Delta_i \;:=\; \frac{1}{\dim M_i}\,\mathrm{Tr}(B_i),\qquad i=1,2,3.
+$$
+
+(e) Any isotropic singlet shift $\mathsf L\mapsto\mathsf L+\delta_{\mathrm{avg}}I$ adds the same constant to every $\Delta_i$, changing only the common coupling offset. ∎
+
+*Proof.* Compactness of $H$ gives complete reducibility and the isotypic decomposition. $H$-equivariance of $\mathsf L$ preserves isotypic blocks; Schur's lemma on the irreducible factor $V_\lambda$ forces the action on the block $V_\lambda\otimes M_\lambda$ to be $I_{V_\lambda}\otimes B_\lambda$. Self-adjointness of $\mathsf L$ gives Hermitian $B_\lambda$. Parts (c) and (d) specialize to the SM gauge sectors; (e) follows because the shift adds the same scalar to every $B_\lambda$. ∎
+
+**Corollary T.67.1 (Pairwise-Coupling Rigidity at the Matching Scale).** With $g_i(\mu_G)=g_U/\sqrt{Z_i}$ and $Z_i=1+\Delta_i/24$ (Definition T.17a), the inverse couplings at $\mu_G$ satisfy $\alpha_i^{-1}(\mu_G)=\alpha_U^{-1}\,Z_i$, hence
+$$
+\alpha_i^{-1}(\mu_G) - \alpha_j^{-1}(\mu_G) \;=\; \frac{\alpha_U^{-1}}{24}\,(\Delta_i-\Delta_j).\tag{T.67.1}
+$$
+All pairwise electroweak/QCD threshold separations are determined by the threshold triplet and are insensitive to the isotropic common shift.
+
+*Proof.* Since $\alpha_i=g_i^2/(4\pi)$ and $g_i=g_U/\sqrt{Z_i}$, one has
+$$
+\alpha_i=\frac{g_i^2}{4\pi}=\frac{g_U^2}{4\pi\,Z_i}=\frac{\alpha_U}{Z_i},
+$$
+hence $\alpha_i^{-1}=Z_i\,\alpha_U^{-1}$. Subtracting the $i$- and $j$-equations gives (T.67.1). ∎
+
+### T.26.2 Peter–Weyl Block Reduction on the Flag Lift
+
+**Theorem T.68 (Homogeneous Peter–Weyl Block Reduction).** Let $\widetilde X\cong SU(8)/H$ with $H=S(U(2)\times U(1)\times U(2)\times U(3))$ (Appendix G). Let $E_{s,\pm}\to\widetilde X$ be any homogeneous Hermitian bundle associated to a unitary representation $\tau_{s,\pm}:H\to U(V_{s,\pm})$. Then
+$$
+L^2(\widetilde X,E_{s,\pm}) \;\cong\; \widehat\bigoplus_{\Lambda\in\widehat{SU(8)}} V_\Lambda \otimes \mathrm{Hom}_H(V_\Lambda,\tau_{s,\pm}),
+$$
+and every $SU(8)$-equivariant self-adjoint Laplace-type operator $D_{s,\pm}$ acts blockwise as
+$$
+D_{s,\pm} \;\cong\; \widehat\bigoplus_{\Lambda\in\widehat{SU(8)}} I_{V_\Lambda}\otimes B_{\Lambda,s,\pm}
+$$
+for unique Hermitian $B_{\Lambda,s,\pm}\in\mathrm{End}\bigl(\mathrm{Hom}_H(V_\Lambda,\tau_{s,\pm})\bigr)$. The spectrum of $D_{s,\pm}$ is the multiset union of the finite-dimensional spectra of $B_{\Lambda,s,\pm}$, each weighted by $\dim V_\Lambda$.
+
+*Proof.* Sections of $E_{s,\pm}$ identify with $H$-equivariant $V_{s,\pm}$-valued functions on $SU(8)$. Peter–Weyl gives $L^2(SU(8))\cong\bigoplus_\Lambda V_\Lambda\otimes V_\Lambda^*$; taking the $H$-equivariant part yields the induced-bundle decomposition. $SU(8)$-equivariance and Schur's lemma give the block structure. ∎
+
+**Corollary T.68.1 (Exact Threshold Functionals Reduce to Block Sums).** Let $\Phi_r$ be any spectral test function entering the threshold functional $\Xi_{r,R}$ of Definition T.17a, and let $\{\nu_{\Lambda,s,\pm,j}\}$ be the eigenvalues of $B_{\Lambda,s,\pm}$. Every sector/parity threshold contribution is
+$$
+\Xi_{r,s,\pm} \;=\; \sum_{\Lambda\in\widehat{SU(8)}} (\dim V_\Lambda) \sum_j \Phi_r(\nu_{\Lambda,s,\pm,j}),
+$$
+with absolute convergence whenever $\Phi_r$ is of heat-kernel or zeta-regularized type. Hence the three sector numbers $F_s:=\sum_{\pm}\sum_r c_r\,\Xi_{r,s,\pm}$ ($s=Y,W,C$) are exact block sums, and the physical threshold triplet is
+$$
+\Delta \;=\; T\,F,
+$$
+where $T$ is the invertible Dynkin-index matrix of Remark T.17a.3.
+
+*Proof.* Apply the spectral theorem to each finite-dimensional $B_{\Lambda,s,\pm}$ and sum over blocks with multiplicity $\dim V_\Lambda$. ∎
+
+### T.26.3 Local–Global Decomposition of Sector Thresholds
+
+**Theorem T.69 (Canonical Local/Global Threshold Split).** Fix a heat-kernel or zeta-regularized threshold functional $F_s$ for each sector $s\in\{Y,W,C\}$, built from the exact block decomposition of Corollary T.68.1. Once a subtraction scheme is fixed, the contribution of the first two local Seeley–DeWitt coefficients defines a canonical local term $F_s^{\mathrm{loc},2}$, and the remainder
+$$
+R_s^{\mathrm{glob}} \;:=\; F_s - F_s^{\mathrm{loc},2}
+$$
+defines the global spectral remainder. Then:
+
+(a) $F_s^{\mathrm{loc},2}$ depends only on the local two-jet data of the corresponding sector/parity Laplace-type operators.
+
+(b) $R_s^{\mathrm{glob}}$ is independent of local coordinate choices and depends only on the residual global spectral content once the subtraction prescription is fixed.
+
+(c) The exact threshold functional decomposes as
+$$
+F_s \;=\; F_s^{\mathrm{loc},2} + R_s^{\mathrm{glob}}.\tag{T.69.1}
+$$
+
+*Proof.* Heat-kernel asymptotics split any admissible renormalized spectral functional into a finite local coefficient part and a remainder after those coefficients are subtracted. The first two Seeley–DeWitt coefficients are local invariants of the operator and its bundle data, which gives (a). The remainder is what is left after this canonical local subtraction and is therefore global once the subtraction scheme is fixed, giving (b). Equation (T.69.1) is the resulting decomposition. ∎
+
+**Corollary T.69.1 (Finite-Representation Closure Criterion).** Suppose there exists a Casimir cutoff $L$ such that the truncated block sums $F_s^{(\le L)}$ satisfy the target matching equations within the Appendix-T uncertainty budget and the tail estimate $|F_s-F_s^{(\le L)}|\le\varepsilon_s(L)$ is smaller than the remaining tolerance in each sector. Then the threshold triplet $(\Delta_1,\Delta_2,\Delta_3)$ is established from finitely many $SU(8)$ highest-weight blocks.
+
+*Proof.* By Corollary T.68.1 each $F_s$ is an exact convergent block sum. If the partial sum already lies inside the allowed tolerance and the omitted tail is bounded by less than the remaining tolerance, then the exact value lies in the same interval. Applying the invertible map $T$ transfers the conclusion to $\Delta$. ∎
+
+### T.26.4 Sector/Parity Decomposition
+
+**Theorem T.70 (Sector/Parity Split of the Lifted Threshold Operator).** Let
+$$
+D^{\mathrm{PCE}}_{\widetilde X} \;=\; (\nabla^{\widetilde G})^*\nabla^{\widetilde G} + \mu_0 I + m_{\mathcal J}\,\mathcal J_G + \mathcal C_\kappa + \eta\,\mathcal J_G\,\mathcal C_\kappa
+$$
+be the lifted threshold operator (Definition T.17a), $s\in\{Y,W,C\}$ a gauge sector with sector scalar $\lambda_s$ (Remark T.17a.3), and $\mathcal J_G$ a self-adjoint involution ($\mathcal J_G^2=I$, $\mathcal J_G^\dagger=\mathcal J_G$) preserving each sector bundle. Then $E_s$ splits orthogonally as $E_s=E_{s,+}\oplus E_{s,-}$ into the $\pm 1$ eigensubbundles of $\mathcal J_G$, and on each summand
+$$
+D^{\mathrm{PCE}}_{s,\pm} \;=\; (\nabla_s^{\widetilde G})^*\nabla_s^{\widetilde G} + c_{s,\pm}\,I,\qquad c_{s,\pm} \;=\; \mu_0 + \lambda_s \pm m_{\mathcal J} \pm \eta\,\lambda_s.
+$$
+The lifted threshold problem reduces to six scalar-shifted sector/parity Laplace-type operators $\{D^{\mathrm{PCE}}_{s,\pm}\}$. ∎
+
+*Proof.* On the sector-$s$ bundle, Remark T.17a.3 gives $\mathcal C_\kappa=\lambda_s I$, so the restricted operator is $(\nabla_s^{\widetilde G})^*\nabla_s^{\widetilde G}+(\mu_0+\lambda_s)I+(m_{\mathcal J}+\eta\lambda_s)\mathcal J_G$. Orthogonal decomposition by the $\pm 1$ eigenspaces of the self-adjoint involution $\mathcal J_G$ replaces $\mathcal J_G$ by $\pm I$, giving the stated form. ∎
+
+## T.27 RG Rigidity and Yukawa Cancellation
+
+**Theorem T.71 (RG Rigidity of the Electroweak/Flavor Boundary Problem).** Assume the PU fixed-point boundary conditions of Theorem T.35 together with the threshold triplet $(\Delta_1,\Delta_2,\Delta_3)$, the $E_8$ triad assignment, and a fixed loop-order Standard Model RG system. Then the full electroweak/Yukawa observable vector at low energy is uniquely determined. Equivalently, two admissible lifted threshold operators inducing the same triplet produce the same electroweak/Yukawa predictions at the chosen RG order.
+
+*Proof.* Theorem T.35 packages the fixed-point data into a complete set of boundary conditions once the lifted threshold data are supplied. Theorem T.67 shows those spectral data reduce, at matching level, to $(\Delta_1,\Delta_2,\Delta_3)$. The initial conditions for the RG flow are therefore uniquely fixed. At any finite loop order the RG equations form an autonomous first-order ODE system $\mu\,dX/d\mu=\beta(X)$ with smooth right-hand side on the perturbative PU matching branch; standard ODE uniqueness gives a unique running trajectory and therefore unique low-energy observables. ∎
+
+**Theorem T.72 (Sector-Normalization Cancellation).** Assume the Yukawa entries in a fixed fermion sector $f$ at the matching scale have the PU form
+$$
+y_{f,a}(\mu_G) \;=\; \mathcal N_{\mathrm{PU}}\,c_f\,D_{f,a}\,e^{-\alpha\,\ell_{f,a}},\qquad D_{f,a}>0,
+$$
+with $\mathcal N_{\mathrm{PU}}$ the universal normalization, $c_f$ the sector prefactor, $D_{f,a}>0$ the Van Vleck–Morette / geodesic determinant correction, $\ell_{f,a}$ the $E_8$-geometric squared-length datum, and $\alpha$ the hierarchy coefficient. Then for any entries $a,b$ in the same sector,
+$$
+\ln\frac{y_{f,b}}{y_{f,a}} \;=\; -\alpha\,(\ell_{f,b}-\ell_{f,a}) + \ln\frac{D_{f,b}}{D_{f,a}}. \tag{T.72.1}
+$$
+In particular, the absolute normalizations $\mathcal N_{\mathrm{PU}}$ and $c_f$ cancel exactly from all intrasector mass ratios.
+
+*Proof.* Take logarithms of both sides of $y_{f,a}=\mathcal N_{\mathrm{PU}}c_f D_{f,a}e^{-\alpha\ell_{f,a}}$ and subtract the $a$- and $b$-equations. ∎
+
+**Corollary T.72.1 (Pure $E_8$ Hierarchy Law as the Triad-Symmetric Branch).** If $D_{f,a}=D_f$ for all $a$ in the chosen generation orbit, then $\ln(y_{f,b}/y_{f,a})=-\alpha(\ell_{f,b}-\ell_{f,a})$. If moreover $\ell_{f,a}=d^2_{E_8}(r_{f,a},r_{H,f})$, setting $i\leftrightarrow a$, $j\leftrightarrow b$ gives the exact distance law
+$$
+\ln\frac{m_j}{m_i} \;=\; \alpha\,\bigl(d^2_{E_8}(r_{i},r_{H})-d^2_{E_8}(r_{j},r_{H})\bigr). \tag{T.72.2}
+$$
+
+*Proof.* Set $D_{f,b}/D_{f,a}=1$ in Theorem T.72 and relabel. The sign in (T.72.2) is fixed by the direct substitution: if $\ell_b=d^2(r_j,r_H)$ and $\ell_a=d^2(r_i,r_H)$, then $-\alpha(\ell_b-\ell_a)=\alpha(\ell_a-\ell_b)=\alpha(d^2(r_i,r_H)-d^2(r_j,r_H))$, so $\ln(m_j/m_i)=\alpha(d^2(r_i,r_H)-d^2(r_j,r_H))$. With $\alpha>0$ this predicts $m_j>m_i$ whenever $d^2(r_i,r_H)>d^2(r_j,r_H)$, matching the Yukawa $y\propto e^{-\alpha\ell}$ convention: smaller distance to $r_H$ ↔ larger Yukawa ↔ heavier fermion. ∎
+
+**Theorem T.73 (Conditional Van Vleck Symmetry Reduction).** Fix a Higgs reference point $r_H$ and a generation branch $\{r_a\}\subset E_8$. Assume that the relevant flavor manifold admits an isometry group whose isotropy subgroup at $r_H$ acts transitively on each subset of the chosen branch with the same geometric invariants entering the Jacobi equation along geodesics out of $r_H$ (for example, on each fixed-distance shell in an isotropy-symmetric model branch). Let $\gamma_a$ be the geodesic connecting $r_H$ to $r_a$, and let $\mathcal V_a$ be the corresponding Van Vleck–Morette determinant factor entering the complete Yukawa value. Then $\mathcal V_a$ depends only on the isotropy orbit of the initial tangent of $\gamma_a$. In particular, if orbit type on the chosen branch is completely indexed by the discrete squared-distance class $d^2_{E_8}(r_a,r_H)$, then
+$$
+\mathcal V_a \;=\; F\!\bigl(d^2_{E_8}(r_a,r_H)\bigr). \tag{T.73.1}
+$$
+
+*Proof.* Any isometry preserving $r_H$ maps geodesics out of $r_H$ to geodesics out of $r_H$ and conjugates the Jacobi equation along them. The Van Vleck determinant is built from the associated Jacobi map and is invariant under that conjugation. Hence it is constant on isotropy orbits of the initial tangent. If, on the chosen branch, those orbits are indexed by the discrete squared-distance classes, the displayed reduction follows. ∎
+
+**Corollary T.73.1 (Ratio-Level Yukawa Formula on an Isotropy-Symmetric Branch).** On a branch satisfying the distance-class reduction of Theorem T.73, within any fixed flavor sector,
+$$
+\frac{y_b}{y_a} \;=\; \frac{F(d_b^2)}{F(d_a^2)}\,\exp\!\bigl[\tfrac32\,(d_a^2-d_b^2)\bigr],
+$$
+using $\alpha=3/2$ of Theorem T.41.5. Within such a branch, intrasector mass ratios are determined by the discrete $E_8$ distance data together with the orbit-reduced Van Vleck factor.
+
+*Proof.* Apply Theorem T.72 with $\ell=d^2$ and $\alpha=3/2$; substitute $D_a/D_b=F(d_a^2)/F(d_b^2)$ from Theorem T.73. The sign in the exponent follows directly from (T.72.1) under the substitution $\ell=d^2$. ∎
+
+## T.28 Flavor CP: Berry Area and Packet Factorization
+
+**Theorem T.74 (Geometric Berry-Area for Flavor CP).** Let $\mathcal A$ be the Berry connection on the generation manifold $\mathrm{Gr}(2,8)$, and $\mathcal F=d\mathcal A=\omega_{KE}$ its curvature. Let $\gamma$ be a smooth closed flavor loop bounding a smooth oriented surface $\Sigma$. Then the Berry holonomy is gauge-invariant mod $2\pi$ and equals the oriented Kähler area:
+$$
+\delta_{\mathrm{Berry}}(\gamma) \;=\; \oint_\gamma \mathcal A \;=\; \int_\Sigma \omega_{KE} \pmod{2\pi}.
+$$
+
+*Proof.* Under a Berry gauge transformation $\mathcal A\mapsto\mathcal A+d\chi$, the loop integral changes by $\oint_\gamma d\chi=0$ by the endpoint-matching condition, so it is gauge-invariant mod $2\pi$. Since $\gamma=\partial\Sigma$, Stokes' theorem gives $\oint_\gamma\mathcal A=\int_\Sigma d\mathcal A=\int_\Sigma\omega_{KE}$. ∎
+
+**Theorem T.75 (Coherent-Averaging Factorization).** Let $(x,y)$ be local mismatch coordinates on two independent coherence directions transverse to a minimal flavor loop, and assume the local Berry phase linearizes as
+$$
+\phi(x,y) \;=\; \delta_{\mathrm{base}} + u\,x + \sqrt2\,u\,y
+$$
+on the support of a normalized separable packet $\rho(x,y)=\rho_1(x)\rho_2(y)$. Define the effective CP-odd amplitude by
+$$
+\mathcal A_{\mathrm{CP}}^{\mathrm{eff}} \;:=\; \iint e^{\,i\phi(x,y)}\,\rho_1(x)\rho_2(y)\,dx\,dy.
+$$
+Then
+$$
+\mathcal A_{\mathrm{CP}}^{\mathrm{eff}} \;=\; e^{\,i\delta_{\mathrm{base}}}\,\widehat\rho_1(u)\,\widehat\rho_2(\sqrt2\,u),\qquad \widehat\rho_j(k):=\int_{\mathbb R} e^{ikx}\rho_j(x)\,dx.
+$$
+If $\rho_1=\rho_2=\rho_{\mathrm{flat}}=\tfrac12\,\mathbf 1_{[-1,1]}$, then $\widehat\rho_{\mathrm{flat}}(k)=\sin k/k=\mathrm{sinc}(k)$ and $\mathcal A_{\mathrm{CP}}^{\mathrm{eff}}=e^{i\delta_{\mathrm{base}}}\,\mathrm{sinc}(u)\,\mathrm{sinc}(\sqrt2\,u)$. If the phase-extraction map used in Appendix T is linear at this order, then $\delta_{\mathrm{obs}}=\delta_{\mathrm{base}}\,\mathrm{sinc}(u)\,\mathrm{sinc}(\sqrt2\,u)$.
+
+*Proof.* Substitute the linearized phase to factor the double integral:
+$$
+\mathcal A_{\mathrm{CP}}^{\mathrm{eff}} \;=\; e^{i\delta_{\mathrm{base}}}\!\left(\int e^{iux}\rho_1(x)\,dx\right)\!\left(\int e^{i\sqrt2uy}\rho_2(y)\,dy\right) \;=\; e^{i\delta_{\mathrm{base}}}\,\widehat\rho_1(u)\,\widehat\rho_2(\sqrt2\,u).
+$$
+For the top-hat, $\widehat\rho_{\mathrm{flat}}(k)=\tfrac12\int_{-1}^1 e^{ikx}\,dx=\sin k/k$. ∎
+
+**Theorem T.76 (Maximum-Entropy Coherent Packet).** Let $x$ denote the effective mismatch coordinate on the minimal CP loop. Assume: (i) the packet support is bounded by the normalized mismatch cell $x\in[-1,1]$; (ii) the only resolved coarse constraints are normalization $\int\rho=1$ and symmetry $\rho(x)=\rho(-x)$; (iii) PCE selects the equilibrium packet of maximal Shannon entropy under those constraints. Then the packet is uniquely uniform:
+$$
+\rho(x) \;=\; \tfrac12\,\mathbf 1_{[-1,1]}(x),\qquad \widehat\rho(u)=\mathrm{sinc}(u).
+$$
+On the one-direction CKM reduction $\delta_{\mathrm{obs}}=\delta_{\mathrm{base}}\,\mathrm{sinc}(u)$; on the two-direction factorized branch $\delta_{\mathrm{obs}}=\delta_{\mathrm{base}}\,\mathrm{sinc}(u)\,\mathrm{sinc}(\sqrt2\,u)$ (Theorem T.75).
+
+*Proof.* Among probability densities on a compact interval with only normalization and symmetry constraints, the Shannon-entropy maximizer is the uniform density (standard MaxEnt; see Cover–Thomas §12). Its Fourier transform is the sinc function. Combining with Theorem T.75 gives the stated observed phases. ∎
+
+**Corollary T.76.1 (Structural / Profile Split).** After Theorems T.74 and T.75, the CKM/PMNS CP sector splits into a structural part — Berry holonomy area on $\mathrm{Gr}(2,8)$ — and a profile part — the packet characteristic function $\widehat\rho$. On the PCE-MaxEnt branch of Theorem T.76, the profile part is forced to the sinc factors already used in Appendix T. ∎
+
+## T.29 Relative Uniqueness of the Quantitative Parameter Sector
+
+**Theorem T.77 (Relative Uniqueness of the Quantitative SM Parameter Sector).** Fix a connected PU structural branch for which the quantitative gauge-threshold sector is formulated on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Theorem G.8.4e), and fix the two-loop SM RG system. Let $\Delta=(\Delta_1,\Delta_2,\Delta_3)$ be the principal lifted threshold triplet (Theorem T.67) and $\mathcal R_T=(\mathcal T_{E_8},\mathcal V,\mathcal B)$ the residual flavor-geometric data: the chosen $E_8$ generation triads $\mathcal T_{E_8}$, the complete Van Vleck/geodesic data $\mathcal V$ entering the Yukawa sector, and the Berry/coherent-profile data $\mathcal B$ in the CKM/PMNS phase constructions. Then the quantitative Appendix-T parameter vector
+$$
+\Pi_T \;:=\; \bigl(\sin^2\theta_W(M_Z),\,g_i(\mu_G),\,v,\,m_H,\,Y_u,\,Y_d,\,Y_e,\,m_{\nu_a},\,V_{\mathrm{CKM}},\,U_{\mathrm{PMNS}}\bigr)
+$$
+is uniquely determined by $(\Delta,\mathcal R_T)$. Equivalently, two admissible PU realizations on the same structural branch with $(\Delta,\mathcal R_T)=(\Delta',\mathcal R_T')$ produce the same $\Pi_T=\Pi_T'$.
+
+*Proof.* Theorem G.8.4e forces the quantitative threshold arena to $\widetilde X$. Corollary T.67.1 fixes the gauge-matching data from $\Delta$ alone (the isotropic residual of Theorem T.17 shifts only the common offset, not the physically relevant pairwise separations). Theorem T.71 (equivalently Theorem T.35) takes the eight PU fixed-point boundary conditions together with the two-loop RG flow and yields a unique running trajectory once $\Delta$ and $\mathcal T_{E_8}$ are fixed, hence unique electroweak/Higgs observables. Theorem T.36 reduces the 21 SM Yukawas to 7 fundamental quantities via $E_8$ geometry with $\alpha=3/2$ (Theorem T.41.5); Theorems T.72–T.73 fix ratios from $\mathcal T_{E_8}$ and $\mathcal V$, which in combination with the universal normalization $\mathcal N_{\mathrm{PU}}=1/(72\sqrt{12})$ and sector prefactors $c_f$ gives the complete Yukawa matrices. The mixing sector is fixed by Theorems T.74–T.76 once $\mathcal B$ is supplied. Combining the gauge-matching, RG, Yukawa, and mixing steps, every component of $\Pi_T$ is uniquely determined by $(\Delta,\mathcal R_T)$. ∎
+
+**Corollary T.77.1 (No Hidden Continuous Tuning).** On a fixed PU structural branch, every residual non-uniqueness in the quantitative Appendix-T sector is concentrated in $(\Delta,\mathcal R_T)$; no continuous tuning freedom remains inside the RG/matching/evolution machinery once those data are fixed. ∎
+
+**Corollary T.77.2 (Absolute Uniqueness After Residual Closure).** If additionally PU forces:
+1. a completed flag-lift spectral computation of $(\Delta_1,\Delta_2,\Delta_3)$ on $\widetilde X$ (using Corollary T.69.1 and the block-sum expression of Corollary T.68.1);
+2. a unique determination of $(\mathcal T_{E_8},\mathcal V)$ on the selected flavor branch;
+3. a unique determination of $\mathcal B$ in the CKM/PMNS sector (for example by Theorem T.76 on the selected branch);
+
+then $\Pi_T$ is absolutely unique.
+
+*Proof.* Under (1)–(3), the residual data $(\Delta,\mathcal R_T)$ become unique. Theorem T.77 then yields uniqueness of $\Pi_T$. ∎
+
+## T.30 Determinacy After Spectral Completion
+
+**Theorem T.78 (Determinacy of a Completed Flag-Lift Spectral Problem).** Let $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ be the minimal flag lift of the quantitative gauge sector. Fix:
+1. the PU structural branch;
+2. the geometric data needed to define the sector operators $L_s$ on $\widetilde X$;
+3. the renormalized spectral functional $\mathcal R_s$ used to extract $\Delta_s$ from the heat trace.
+Then each completed spectral problem produces a unique threshold value
+$$
+\Delta_s \;=\; \mathcal R_s\!\left[\Theta_s\right],\qquad \Theta_s(t):=\mathrm{Tr}(e^{-tL_s}),
+$$
+and hence a unique triplet $\Delta=(\Delta_1,\Delta_2,\Delta_3)$.
+
+*Proof.* Once the branch, operator data, and renormalization prescription are fixed, each $L_s$ is a definite self-adjoint elliptic operator on a compact manifold. Its spectrum and heat trace are therefore uniquely determined, and applying the fixed functional $\mathcal R_s$ yields a unique real number $\Delta_s$. ∎
+
+**Corollary T.78.1 (No Ambiguity Inside a Completed Spectral Problem).** Two admissible realizations that define the same completed flag-lift spectral problem produce the same threshold triplet $\Delta$. ∎
+
+**Theorem T.79 (Conditional Closure of the Quantitative Parameter Sector).** On a fixed PU structural branch with the two-loop SM RG system, suppose:
+1. a completed flag-lift spectral calculation provides a definite threshold triplet $\Delta$;
+2. the flavor-geometric residual data $(\mathcal T_{E_8},\mathcal V)$ are fixed on the selected branch;
+3. the CP-profile data $\mathcal B$ are fixed.
+Then the quantitative Appendix-T parameter vector
+$$
+\Pi_T \;=\; \bigl(\sin^2\theta_W(M_Z),\,g_i(\mu_G),\,v,\,m_H,\,Y_u,\,Y_d,\,Y_e,\,m_{\nu_a},\,V_{\mathrm{CKM}},\,U_{\mathrm{PMNS}}\bigr)
+$$
+is uniquely determined.
+
+*Proof.* Theorem T.78 fixes $\Delta$ once the spectral problem is completed. Theorem T.71 then fixes the gauge/RG sector, Theorems T.72–T.73 fix the Yukawa ratios on the chosen flavor branch once $(\mathcal T_{E_8},\mathcal V)$ are fixed, and Theorems T.74–T.76 fix the CP sector once $\mathcal B$ is fixed. Combining these steps determines every component of $\Pi_T$. ∎
+
+**Corollary T.79.1 (Status Boundary for the Quantitative Appendix-T Sector).** On a fixed PU structural branch, the RG/matching/evolution machinery contains no further continuous ambiguity once the completed spectral input $\Delta$ and the residual flavor-profile data $(\mathcal T_{E_8},\mathcal V,\mathcal B)$ are fixed. The remaining open quantitative work is therefore concentrated in those inputs rather than in the subsequent evolution. ∎
 
 -----

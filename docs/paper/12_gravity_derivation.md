@@ -7,8 +7,8 @@ Under the following explicit premises, which are themselves derived results or f
 *   (A1) **Local Thermodynamic Equilibrium:** The MPU network admits coarse-grained states treatable as being in local thermodynamic equilibrium near causal horizons (**Postulate 4**); under the Appendix F/G bridge this local-horizon input is sharpened by Theorem 48a.
 *   (A2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation 69) and an entropy density given by the **Area Law derived from ND-RID information limits in Appendix E**.
 *   (A3) **Geometric Regularity and continuum closure:** The MPU network lies on the conditional Section 11.4 branch: Theorem 43 supplies the regularity-necessity layer, and in addition the weighted-shell/local-isotropy input, or an equivalent replacement, the radius-2 curvature-transfer theorem, the Mosco/quadratic limit-energy identification, and the branch-appropriate Euclidean-rigidity theorem needed for Theorems 44–46 are all assumed.
-*   (A4) **Conserved Energy-Momentum Source:** A covariantly conserved effective stress–energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ emerges from the underlying MPU dynamics, with $\nabla_\mu T^{\mu\nu}=0$ (**Appendix B**).
-*   (A5) **Local Lorentz Invariance (LLI):** The emergent dynamics are locally Lorentz invariant, a direct consequence of the causal structure derived from MPU interactions (**Theorem 46**).
+*   (A4) **Conserved Energy-Momentum Source:** A covariantly conserved effective stress–energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ emerges from the underlying MPU dynamics, with $\nabla_\mu T^{\mu\nu}=0$ (**Appendix B**; derived via Corollary 45a.1 from diffeomorphism invariance of the matter action together with the matter equations of motion).
+*   (A5) **Local Lorentz Invariance (LLI):** The emergent dynamics are locally Lorentz invariant, a direct consequence of the causal structure derived from MPU interactions (**Theorem 46**; upgraded to a derived result of the emergent-spacetime branch by Corollary 46a via Theorems O.7a, O.7b, and Corollary O.7b.1).
 
 Under these premises, applying the Clausius relation $\delta Q = T\,\delta S$ to local Rindler horizons, with heat flux $\delta Q > 0$ defined as energy flow into the causal diamond, and combining it with the Raychaudhuri equation, yields Einstein’s field equations (**Theorem 50**).
 
@@ -304,6 +304,35 @@ $$
 $$
 because the only additional Lovelock density, the Gauss-Bonnet term, is topological in four dimensions and contributes no local field equations. Hence no independent second-order covariant rank-2 tensor beyond $G_{\mu\nu}$ and $g_{\mu\nu}$ is available under the stated hypotheses. Appendix E fixes the horizon entropy density to the Bekenstein-Hawking value $1/(4G)$, which calibrates the normalization of the Einstein-Hilbert term and therefore sets $c_1=1$ in the units used in Equation (76). Writing $c_0=\Lambda$ gives the stated tensor. Any higher-curvature correction would either violate the hypothesis of at most second derivatives or modify the Wald entropy density away from the Appendix E coefficient. Therefore the only tensor consistent with all stated hypotheses is $G_{\mu\nu}+\Lambda g_{\mu\nu}$. QED
 
+**Theorem 12.1a (Wald-Normalized Einstein–Hilbert Action Uniqueness).** Work on the derived $D=4$ Lorentzian branch (Corollary 46a). Let the local gravitational action be
+$$
+S_{\mathrm{grav}}[g] \;=\; \int_M \sqrt{-g}\,\mathcal L(g,\partial g,\partial^2 g)\,d^4x,
+$$
+and assume: (i) local diffeomorphism invariance (Theorem 45a); (ii) metric-only gravitational sector; (iii) Euler–Lagrange equations contain at most second derivatives of $g_{\mu\nu}$; (iv) the Wald entropy density on every local bifurcate Rindler horizon equals the PU area-law density $s_{\mathrm{Wald}}=1/(4G)$ (natural units), equivalently Equation (70).
+
+Then, up to a total divergence and the four-dimensional Gauss–Bonnet density,
+$$
+S_{\mathrm{grav}}[g] \;=\; \frac{c^3}{16\pi G}\int_M (R-2\Lambda)\,\sqrt{-g}\,d^4x,
+$$
+and the unique local bulk field equations are
+$$
+G_{\mu\nu} + \Lambda g_{\mu\nu} \;=\; \frac{8\pi G}{c^4}\,T_{\mu\nu}^{(MPU)}. \tag{76a}
+$$
+
+*Proof.* In natural units, Lovelock's theorem in $D=4$ gives Lagrangian density $\sqrt{-g}\,(a_0+a_1 R+a_2\mathcal G)$ up to a total divergence, with
+$$
+\mathcal G \;=\; R^2 - 4 R_{\mu\nu}R^{\mu\nu} + R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}
+$$
+the Gauss–Bonnet density, topological in four dimensions and contributing no local bulk EOM. For the Einstein–Hilbert term, the Wald formula on a bifurcation surface $\Sigma$ with binormal $\varepsilon_{\mu\nu}$ normalized by $\varepsilon_{\mu\nu}\varepsilon^{\mu\nu}=-2$ reads
+$$
+S_{\mathrm{Wald}} \;=\; -2\pi\,a_1 \int_\Sigma \tfrac12\,\bigl(g^{\mu\rho}g^{\nu\sigma}-g^{\mu\sigma}g^{\nu\rho}\bigr)\varepsilon_{\mu\nu}\varepsilon_{\rho\sigma}\,dA.
+$$
+The inner contraction is
+$$
+\bigl(g^{\mu\rho}g^{\nu\sigma}-g^{\mu\sigma}g^{\nu\rho}\bigr)\varepsilon_{\mu\nu}\varepsilon_{\rho\sigma} \;=\; \varepsilon_{\mu\nu}\varepsilon^{\mu\nu} - \varepsilon_{\mu\nu}\varepsilon^{\nu\mu} \;=\; -2 - 2 \;=\; -4,
+$$
+using $\varepsilon^{\nu\mu}=-\varepsilon^{\mu\nu}$. Therefore $S_{\mathrm{Wald}}=4\pi a_1\,A$. Matching to the PU area law $A/(4G)$ gives $4\pi a_1=1/(4G)$, hence $a_1=1/(16\pi G)$. The cosmological term contributes no Wald area density; writing $a_0=-2a_1\Lambda$ yields the stated action. Restoring SI units by the conventional factor $c^3$ gives the SI form. Varying the sum $S_{\mathrm{grav}}+S_{\mathrm{matter}}$ with respect to $g^{\mu\nu}$, using (67e), yields (76a). ∎
+
 ## 12.4 Interpretation: Gravity as Predictive Thermodynamics
 
 Within the Predictive Universe framework, gravity emerges as a macroscopic thermodynamic phenomenon.
@@ -422,3 +451,59 @@ In coordinates this is exactly the geodesic equation displayed above. ∎
 **Corollary 12.3.1 (Universality of $G$ at a coarse-graining scale).** At a fixed coarse-graining scale $\mu$, the area-law coefficient $1/(4G(\mu))$ appearing in the Clausius derivation of EFE and in the Newtonian limit from geodesic motion is the same $G(\mu)$, enforcing universal gravitational coupling at that scale. Slow scale-dependence $G(\mu)$ is discussed in Appendix I and §12.5.
 
 *Proof.* Both the field equation and the test-body limit are derived from the same metric action at fixed scale $\mu$. Therefore the coupling multiplying the geometric sector in the Clausius normalization and the coupling read off from the weak-field limit of the same action are identical by construction. ∎
+
+**12.5.1 Uniqueness of the Free Worldline Functional**
+
+**Theorem 12.3a (Uniqueness of the Free Worldline Functional).** Work on the Lorentzian/local-Lorentz branch of Sections 11–12 (with the derived structure of Corollary 46a). Let $\gamma$ be a future-directed timelike $C^1$ curve in a local freely-falling patch $U\subset M_{\mathrm{reg}}$, and fix a test-body species. Suppose $S_{\mathrm{free}}[\gamma]$ satisfies:
+
+**H 12.3a.1** (Local first-order integral form). $S_{\mathrm{free}}[\gamma]=\int_{\lambda_0}^{\lambda_1} L(x,\dot x)\,d\lambda$ for a Lagrangian $L$ depending on position and tangent vector only.
+
+**H 12.3a.2** (Orientation-preserving reparametrization invariance). For any $C^1$ reparametrization $\lambda=\lambda(s)$ with $d\lambda/ds>0$, $S_{\mathrm{free}}[\gamma]=\int_{s_0}^{s_1} L(x(s),dx/ds)\,ds$.
+
+**H 12.3a.3** (Local Lorentz invariance in freely-falling charts). In any freely-falling chart at $p\in U$ (where $g_{\mu\nu}(p)=\eta_{\mu\nu}$ and $\partial_\rho g_{\mu\nu}(p)=0$), $L$ depends on the tangent vector $\dot x$ only through local Lorentz scalars formed from $\dot x$ and $\eta_{\mu\nu}$ (Corollary O.7b.1).
+
+**H 12.3a.4** (Free sector). The test body is free: no external field coupling enters $L$; any coefficients are intrinsic body constants.
+
+Then there exists a positive constant $m$, depending only on the test-body species, such that
+$$
+S_{\mathrm{free}}[\gamma] \;=\; -mc\int_{\lambda_0}^{\lambda_1}\sqrt{-g_{\mu\nu}(x)\,\dot x^\mu\dot x^\nu}\,d\lambda \;=\; -mc^2\int_\gamma d\tau,\tag{76b}
+$$
+with $d\tau=c^{-1}\sqrt{-g_{\mu\nu}\dot x^\mu\dot x^\nu}\,d\lambda$ the proper-time element. ∎
+
+*Proof.* Fix $p\in U$ and adopt freely-falling coordinates at $p$. Write $L_p(v):=L(p,v)$ on future-directed timelike $v$. *Step 1 (Homogeneity).* H 12.3a.2 with $\lambda(s)=s/\alpha$, $\alpha>0$, gives $L_p(v)\,d\lambda=L_p(\alpha v)\,d\lambda/\alpha$, hence $L_p(\alpha v)=\alpha L_p(v)$ for $\alpha>0$. *Step 2 (Lorentz-scalar dependence).* By H 12.3a.3, $L_p$ depends on $v$ only through the unique (up to sign) Lorentz scalar $s:=-\eta_{\mu\nu}v^\mu v^\nu>0$ for timelike $v$. Write $L_p(v)=\phi_p(s)$. *Step 3 (Functional form).* Substituting Step 2 into Step 1: under $v\mapsto\alpha v$, $s\mapsto\alpha^2 s$, so $\phi_p(\alpha^2 s)=\alpha\,\phi_p(s)$. Setting $r=\alpha^2 s$ with $s=1$ gives $\phi_p(r)=\phi_p(1)\sqrt r$. Therefore $L_p(v)=\phi_p(1)\sqrt{-\eta_{\mu\nu}v^\mu v^\nu}$. *Step 4 (Species constant).* H 12.3a.4 forbids any dependence on $x$ or external fields, so $\phi_p(1)$ is a species-intrinsic constant. The sign $\phi_p(1)=-mc$ with $m>0$ is fixed by requiring the classical non-relativistic limit $L\to \tfrac12 m v^2 -mc^2$ and bounded-below action for physically admissible worldlines. *Step 5 (Covariant completion).* The unique diffeomorphism-covariant lift to $M_{\mathrm{reg}}$ (Theorem 45a) replaces $\eta_{\mu\nu}$ by $g_{\mu\nu}$, giving (76b). ∎
+
+**12.5.2 Geodesic Law from the Proper-Time Action**
+
+**Theorem 12.3b (Proper-Time Extremals Are Metric Geodesics).** Let $S_{\mathrm{free}}$ be the functional of Theorem 12.3a. Then the stationary future-directed timelike curves of $S_{\mathrm{free}}$ satisfy the metric geodesic equation
+$$
+u^\mu\,\nabla_\mu\,u^\nu \;=\; 0,\qquad u^\mu:=dx^\mu/d\tau,\tag{76c}
+$$
+equivalently
+$$
+\frac{d^2 x^\mu}{d\tau^2} + \Gamma^\mu_{\alpha\beta}\,\frac{dx^\alpha}{d\tau}\,\frac{dx^\beta}{d\tau} \;=\; 0,\tag{76d}
+$$
+where $\Gamma^\mu_{\alpha\beta}$ are the Christoffel symbols of $g_{\mu\nu}$. ∎
+
+*Proof.* Drop the overall constant $-mc$ and consider $\widetilde S[\gamma]=\int\sqrt{-g_{\mu\nu}\dot x^\mu\dot x^\nu}\,d\lambda$. The Euler–Lagrange equations for $x^\mu(\lambda)$ with endpoints fixed read
+$$
+\frac{d}{d\lambda}\!\left(\frac{g_{\mu\nu}\dot x^\nu}{\sqrt{-g_{\alpha\beta}\dot x^\alpha\dot x^\beta}}\right) - \frac{\partial_\mu g_{\rho\sigma}\,\dot x^\rho\dot x^\sigma}{2\sqrt{-g_{\alpha\beta}\dot x^\alpha\dot x^\beta}} \;=\; 0.
+$$
+Reparametrize by proper time $\tau$; then $u^\mu=dx^\mu/d\tau$, $g_{\mu\nu}u^\mu u^\nu=-c^2$, and the square root reduces to the constant $c$. The EL equations simplify to
+$$
+\frac{d}{d\tau}(g_{\mu\nu}u^\nu) \;=\; \tfrac12\,\partial_\mu g_{\rho\sigma}\,u^\rho u^\sigma.
+$$
+Expanding the total derivative via $d/d\tau=u^\alpha\partial_\alpha$ and symmetrizing the $\partial_\alpha g_{\mu\nu}u^\alpha u^\nu$ term gives
+$$
+g_{\mu\nu}\frac{du^\nu}{d\tau} + \tfrac12\bigl(\partial_\alpha g_{\mu\nu}+\partial_\nu g_{\mu\alpha}-\partial_\mu g_{\alpha\nu}\bigr)u^\alpha u^\nu \;=\; 0.
+$$
+Using the Christoffel identity $2 g_{\mu\beta}\Gamma^\beta_{\alpha\nu}=\partial_\alpha g_{\mu\nu}+\partial_\nu g_{\mu\alpha}-\partial_\mu g_{\alpha\nu}$ and contracting with $g^{\lambda\mu}$ yields (76d) and equivalently (76c). ∎
+
+**Corollary 12.3b.1 (Action–Entropy–Geodesic Equivalence).** For free timelike worldlines $\gamma$ with fixed endpoints on $M_{\mathrm{reg}}$, the following three conditions are equivalent:
+$$
+\delta\!\left(-mc^2\int_\gamma d\tau\right) \;=\; 0 \;\Longleftrightarrow\; u^\mu\nabla_\mu u^\nu \;=\; 0 \;\Longleftrightarrow\; \delta\!\Bigl(\sum_i \varepsilon_i\Bigr) \;=\; 0,\tag{76e}
+$$
+where $\varepsilon_i\ge\ln 2$ is the per-cycle SPAP entropy at the $i$-th MPU cycle along $\gamma$ (Theorem 31).
+
+*Proof.* Theorems 12.3a–b give the equivalence of the first two conditions. The Action–Entropy Identity (Appendix Q, Theorem Q.0.1) gives $\mathcal S_{\mathrm{classical}}=\hbar\sum_i\varepsilon_i$. For the free sector, $\mathcal S_{\mathrm{free}}=-mc^2\int_\gamma d\tau$, so $\delta\mathcal S_{\mathrm{free}}=\hbar\,\delta\sum_i\varepsilon_i$ and stationarity of one is equivalent to stationarity of the other. ∎
+
+Theorem 12.3 (universality at fixed scale via diff-invariance and stress-energy conservation) and Theorem 12.3b (extremization of the proper-time action) provide two independent derivations of the same geodesic law; both rest on the same underlying metric action at fixed coarse-graining scale.

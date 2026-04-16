@@ -181,11 +181,12 @@ AQFT allows for a rigorous, state-dependent definition of the macroscopic MPU st
 
 *   **Definition F.4 (Macroscopic $T_{\mu\nu}^{(MPU)}$ in AQFT):** Within the emergent AQFT framework (conditional on Definition F.3), the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}(x)$ is defined rigorously in two consistent ways:
     1.  **As Expectation Value:** As the expectation value of a symmetric, operator-valued distribution $\hat{\Theta}_{\mu\nu}(x)$ affiliated with the algebra $\mathfrak{A}$. This distribution $\hat{\Theta}_{\mu\nu}(x)$ represents the continuum limit of the microscopic symmetric tensor operator $\hat{\Theta}_{\mu\nu}^{(MPU)}(v)$ (defined in Theorem B.4, Appendix B). This requires a process of regularization and renormalization in the continuum limit. $T_{\mu\nu}^{(\mathrm{MPU})}(x) = \omega(\hat{\Theta}_{\mu\nu}(x))$, where $\omega$ is the physical state (Section F.4). This definition connects the macroscopic tensor to the underlying MPU activity and costs.
-    2.  **Via Variation of Effective Action:** Assuming the emergent dynamics can be effectively described by a generally covariant effective action $S_{eff}[\omega, g]$ for the matter fields in a given state $\omega$ coupled to gravity $g_{\mu\nu}$, the stress-energy tensor can be variationally defined as:
+    2.  **Via Variation of the Derived Effective Action:** On the regular branch, Theorem X.5a constructs a generally covariant coarse-grained effective action $S_{eff}[\omega,g]$. The stress-energy tensor is therefore variationally defined by
         $$
         T_{\mu\nu}^{(\mathrm{MPU})}(x) := \frac{2}{\sqrt{-g(x)}} \frac{\delta S_{eff}[\omega, g]}{\delta g^{\mu\nu}(x)} \quad \tag{F.3}
         $$
-    Consistency of the framework requires these two definitions to agree for physical states $\omega$ satisfying the emergent dynamical equations (on-shell states).
+        and Theorem B.8c (Variational Identification) identifies this variational tensor with the coarse-grained expectation-value tensor of Appendix B.
+    Consistency of the framework is therefore an on-shell theorem rather than an additional assumption.
 
 *   **Theorem F.1 (Covariant Conservation of $T_{\mu\nu}^{(MPU)}$ in AQFT).** Assuming the effective action $S_{eff}[\omega, g]$ is generally covariant (invariant under diffeomorphisms of $M$), the variationally defined stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}(x)$ (Equation F.3) is covariantly conserved ($\nabla^{\mu} T_{\mu\nu}^{(\mathrm{MPU})} = 0$) when the emergent dynamical equations for the state $\omega$ (derived from $\delta S_{eff} / \delta \omega = 0$) and the geometry $g_{\mu\nu}$ (if it is also dynamical) are satisfied (on-shell).
 
@@ -446,6 +447,47 @@ The spin-statistics connection and CPT theorem are available in the PU manuscrip
 | **CPT Invariance** (F.4) | The AQFT/Wightman/Jost analyticity, locality, and spectrum-condition hypotheses stated in Theorem F.4, together with the spin-statistics input of Theorem F.2 | Conditional theorem |
 
 The PCE interpretation (Proposition F.2, Theorem F.3) provides additional insight: Bose and Fermi statistics are the unique *optimal* ways to describe identical particles consistent with quantum superposition and locality in the AQFT regime under discussion. Within that same AQFT/Wightman regime, CPT invariance of the dynamics is consistent with the thermodynamic arrow of time: the former is a symmetry of *what evolutions are possible*, while the latter is a selection principle for *which evolutions occur*.
+
+## F.10 Discrete Net-Convergence and Local KMS Closure
+
+**Theorem F.10.1 (Discrete Net-Convergence).** Let $M_{\mathrm{reg}}$ be the regular Lorentzian branch from Theorem 44a. For each relatively compact causal diamond $\mathcal O\subset M_{\mathrm{reg}}$, let $R_n(\mathcal O)$ be the set of vertices/cells approximating $\mathcal O$, and let $\mathfrak A_n(\mathcal O)$ be the corresponding local $C^*$-algebra of Definition F.2. Assume:
+
+(i) *Region faithfulness.* The cell unions approximating $\mathcal O$ converge to $\mathcal O$ in measure and causal thickness.
+
+(ii) *Scale-embedding CP maps.* For $m\ge n$ there exist unital completely positive maps $j_n^m(\mathcal O):\mathfrak A_n(\mathcal O)\to\mathfrak A_m(\mathcal O^{+\varepsilon_{n,m}})$ with $\varepsilon_{n,m}\to 0$, asymptotically isometric and asymptotically multiplicative on bounded local observables.
+
+(iii) *Local dynamical compatibility.* For every bounded time window $[-T,T]$ and every $A$ in a dense local $*$-subalgebra, $\sup_{|t|\le T}\lVert j_n^m(\alpha_t^{(n)}A)-\alpha_t^{(m)}(j_n^m A)\rVert\to 0$ as $n,m\to\infty$.
+
+(iv) *Boundary correction vanishing.* Boundary correction terms from the coarse-graining vanish in norm on bounded-time local observables.
+
+Then the equivalence classes of bounded Cauchy families $(A_n)_n$ form a $C^*$-algebra $\mathfrak A(\mathcal O)$, and this limit algebra is independent of the chosen approximating family up to canonical isometric $*$-isomorphism. ∎
+
+*Proof.* The set of bounded local families $(A_n)$ with $\sup_n\lVert A_n\rVert<\infty$ and $\lVert j_n^m(A_n)-A_m\rVert\to 0$ is a $*$-algebra under pointwise operations because the maps $j_n^m$ are asymptotically multiplicative and $*$-preserving. Quotienting by null families $(A_n)$ with $\lVert A_n\rVert\to 0$, the induced norm $\lVert(A_n)\rVert_\infty:=\limsup_n\lVert A_n\rVert$ is a $C^*$-norm; completeness follows from completeness of local operator norms. Region faithfulness and (iv) give independence of the approximating family. ∎
+
+**Theorem F.10.2 (Emergent Haag–Kastler Net).** Under Theorem F.10.1 for all relatively compact causal diamonds, with discrete Lieb–Robinson velocities (Proposition F.1) satisfying $v_{\mathrm{LR}}^{(n)}\to c$, the assignment $\mathcal O\mapsto\mathfrak A(\mathcal O)$ is a Haag–Kastler net on $M_{\mathrm{reg}}$ satisfying isotony, Einstein locality, additivity, the time-slice property, and local covariance under continuum relabelings.
+
+*Proof.* Isotony comes from region inclusion. Einstein locality follows from the Lieb–Robinson bound and $v_{\mathrm{LR}}^{(n)}\to c$: if $\mathcal O_1\perp\mathcal O_2$, the commutator tails are exponentially suppressed at finite $n$ and vanish for spacelike separation in the limit. Additivity follows from the generation of unions by subregion observables. Time-slice follows from finite propagation speed and local dynamical compatibility: a thin Cauchy-slice neighborhood generates the full diamond algebra under bounded-time evolution. Local covariance follows from Theorem 45a applied to the continuum relabeling action on the net. ∎
+
+**Theorem F.10.3 (Local Rindler KMS).** Let $p\in M_{\mathrm{reg}}$, $W_\ell(p)$ a local Rindler wedge in a normal neighborhood of size $\ell$, and $\omega_{n,\ell}$ the PCE/detailed-balance state on $\mathfrak A_n(W_\ell)$. Let the discrete modular Hamiltonian be
+$$
+K_{\mathrm{mod}}^{(n,\ell)} \;=\; K_{\mathrm{PCE}}^{(n,\ell)} + \frac{2\pi}{\kappa(p)}\,K_{\mathrm{boost}}^{(n,\ell)}.
+$$
+Assume: (i) each $\omega_{n,\ell}$ is faithful and KMS for the modular flow generated by $K_{\mathrm{mod}}^{(n,\ell)}$; (ii) under the embeddings of Theorem F.10.1 the boost generators converge in strong resolvent sense to the continuum local boost generator $K_{\mathrm{boost}}^{(\ell)}$; (iii) after vacuum normalization, the background term $K_{\mathrm{PCE}}^{(n,\ell)}$ converges to a central element. Then the normalized limit state $\widehat\omega_{W_\ell}$ on $\mathfrak A(W_\ell)$ is KMS at inverse temperature $\beta_U=2\pi/\kappa(p)$ for the local boost flow, so accelerated observers in the local wedge see the Unruh temperature
+$$
+T_U \;=\; \frac{\hbar\,\kappa(p)}{2\pi\,c\,k_B}.\qquad\Box
+$$
+
+*Proof.* For analytic local observables $A,B$ with convergent representing sequences $A_n,B_n$, the discrete KMS identity $\omega_{n,\ell}(A_n\,\sigma_t^{(n,\ell)}(B_n))=\omega_{n,\ell}(\sigma_{t+i\beta_U}^{(n,\ell)}(B_n)A_n)$ passes to the limit by Theorem F.10.1 on bounded strips and by (ii) in strong resolvent sense. By (iii), the central background shift alters the normalization but not the analytic KMS relation. Taking $n\to\infty$ yields the continuum KMS identity with respect to the boost flow at inverse temperature $2\pi/\kappa(p)$. Restoring SI units gives the Unruh temperature. ∎
+
+**Theorem F.10.4 (Modular First-Law Horizon Flux).** Under the hypotheses of Theorem F.10.3, let $\delta\omega$ be a first-order perturbation of the normalized local wedge state at fixed local geometry. Then
+$$
+\delta S_{\mathrm{rel}} \;=\; \delta\langle\widehat K_{\mathrm{mod}}\rangle \;=\; \frac{2\pi}{\kappa}\,\delta E_{\mathrm{boost}},\qquad \widehat K_{\mathrm{mod}} \;:=\; K_{\mathrm{mod}} - K_{\mathrm{PCE}} \;=\; \frac{2\pi}{\kappa}\,K_{\mathrm{boost}},
+$$
+and restoring physical units, $\delta Q=T_U\,\delta S_{\mathrm{rel}}$ up to $O(\ell^2)$ corrections from the finiteness of the local patch. ∎
+
+*Proof.* For faithful KMS states the modular first law gives $\delta S_{\mathrm{rel}}=\delta\langle\widehat K_{\mathrm{mod}}\rangle$. Theorem F.10.3 identifies $\widehat K_{\mathrm{mod}}=(2\pi/\kappa)K_{\mathrm{boost}}$. On a local Rindler wedge the boost energy variation equals the heat flux through the horizon generator in the normalization of the Clausius derivation, giving $\delta Q=T_U\,\delta S_{\mathrm{rel}}$ to first order in the patch size. ∎
+
+**Corollary F.10.4.1 (A1 and A2 Reduce to Wedge AQFT).** The wedge restriction of the PCE equilibrium state is a local KMS equilibrium state with the correct boost modular generator (Theorem F.10.3). Premise (A1) of §12 (local thermodynamic equilibrium near horizons) and Premise (A2) of §12 (horizon Unruh temperature) are therefore a single AQFT statement on the emergent Haag–Kastler net of Theorem F.10.2, derived from the discrete local net and the Lieb–Robinson bound of Proposition F.1. ∎
 
 
 

@@ -173,6 +173,59 @@ $$
 
 with $\Gamma^{R}$ retarded, $\Gamma^{A}=(\Gamma^{R})^\dagger$, and $-i\Gamma^{K}\succeq 0$ (noise positivity). Near local equilibrium the KMS condition constrains $\Gamma^{K}$ consistently with the fluctuation–dissipation relations implied by the local second law (Appendix E). Setting $\Phi_+=\Phi_-=\Phi$ yields the physical coarse‑grained equations with causal dissipation.
 
+**Theorem X.5a (Conditional Derived Generally Covariant Coarse-Grained Effective Action from ND-RID / PCE).** Assume the regular Lorentzian branch of Sections 11–12. Let $\mathcal P_h$ be an admissible family of cell partitions of $M_{\mathrm{reg}}$ with mesh $h\to 0$, uniformly bounded aspect ratio, and boundary measure $O(h)$ on compact sets. Assume the microscopic ND-RID dynamics satisfy:
+
+1. *Finite-range locality.* For each cell $C\in\mathcal P_h$, one update step depends only on the bounded neighborhood $N(C)$.
+2. *Local detailed balance.* The cell transition weights have the form
+$$
+K_{C,h}(\sigma'\mid\sigma) \;=\; e^{-\ell_{C,h}(\sigma,\sigma')}\,K^{\mathrm{rev}}_{C,h}(\sigma\mid\sigma'),
+$$
+where $\ell_{C,h}$ is the local entropy-production / predictive-cost increment.
+3. *Local additivity of cost.* The total path weight on a finite time slab factors as
+$$
+\mathbb P_h[\sigma] \;\propto\; \exp\!\left(-\sum_n\sum_{C\in\mathcal P_h}\ell_{C,h}(\sigma_n,\sigma_{n+1})\right)
+$$
+up to boundary terms supported on overlaps of neighboring cells.
+4. *Relabeling neutrality.* Two coordinate descriptions of the same coarse-grained history define the same physical weight.
+5. *Regular-field closure.* For the finite list of coarse observables $\Psi^A$ used to describe the branch, the cell variables admit a bounded finite-jet expansion on each compact set with uniformly bounded coefficients.
+6. *Boundary-layer / Legendre-locality.* The boundary remainder $R_h[J;g]$ supported on cell-overlap layers vanishes in norm on bounded test sources at rate $O(h)$ on each compact set, and the Legendre transform preserves the additive cell decomposition up to the same boundary-layer remainder.
+
+For sources $J_A$, define the cell-empirical generating functional
+$$
+W_h[J;g] \;:=\; \log\,\mathbb E_{\mathbb P_h}\exp\!\left(\sum_{C\in\mathcal P_h}|C|\,J_A(x_C)\,\Psi_C^A\right),
+$$
+and let $\Gamma_h[\Psi;g]$ be its Legendre transform with respect to the coarse fields. Then every compact-set subsequential limit of $\Gamma_h$ along a convergent field sequence has the form
+$$
+S_{\mathrm{eff}}[\Psi,g] \;=\; \int_{M_{\mathrm{reg}}}\sqrt{|g|}\,\mathcal L\bigl(x,\Psi,\nabla\Psi,\dots,\nabla^{(r)}\Psi;g\bigr)\,d^4x,\tag{X.9a}
+$$
+where $\mathcal L$ is a scalar local Lagrangian density.
+
+*Proof.* For fixed $h$, finite-range ND-RID and local detailed balance imply that the path weight on a finite time slab is the exponential of a sum of local cell increments $\ell_{C,h}$, plus terms supported only on neighborhood overlaps. The source-coupled logarithmic moment generating functional therefore decomposes as
+$$
+W_h[J;g] \;=\; \sum_{C\in\mathcal P_h}|C|\,w_{C,h}\bigl(J(x_C),\Psi_C,j_h\Psi_C;g(x_C)\bigr) + R_h[J;g],
+$$
+where $j_h\Psi_C$ denotes the finite list of discrete jets entering the local closure and the remainder $R_h$ is supported on the boundary layer of the partition. Assumption (6) gives $R_h[J;g]\to 0$ on compact sets as $h\to 0$.
+
+The Legendre transform preserves additivity up to the same vanishing boundary layer, so there exist local cell Lagrangians $L_{C,h}$ with
+$$
+\Gamma_h[\Psi;g] \;=\; \sum_{C\in\mathcal P_h}|C|\,L_{C,h}\bigl(\Psi_C,j_h\Psi_C;g(x_C)\bigr) + o(1).
+$$
+By regular-field closure, each $L_{C,h}$ admits a finite-jet Taylor expansion around $x_C$ with coefficients uniformly bounded on compact sets, so $L_{C,h}=\mathcal L\bigl(x_C,\Psi(x_C),\nabla\Psi(x_C),\dots,\nabla^{(r)}\Psi(x_C);g(x_C)\bigr)+O(h)$. Summing over cells produces a Riemann sum and yields subsequential convergence to the displayed integral form.
+
+For covariance, let $x\mapsto x'$ be a smooth coordinate relabeling on a compact patch. By relabeling neutrality, the underlying ND-RID path weights and therefore the finite-scale generating functionals describe the same physical histories, so $\Gamma_h[\Psi;g]=\Gamma_h[\Psi',g']$ for the relabeled fields. Passing to a subsequential limit gives $S_{\mathrm{eff}}[\Psi,g]=S_{\mathrm{eff}}[\Psi',g']$. Since $d^4x$ transforms by the Jacobian and $\sqrt{|g|}$ transforms as a density of weight one, the integrand $\sqrt{|g|}\,\mathcal L$ must be a scalar density. Therefore $\mathcal L$ is a scalar local Lagrangian and the action is generally covariant. ∎
+
+**Corollary X.5a.1 (Matter–Gravity Decomposition of the Derived Action).** On the same branch, every such subsequential effective action splits uniquely as
+$$
+S_{\mathrm{eff}}[\Psi,g] \;=\; S_{\mathrm{MPU}}[\Psi,g] + S_{\mathrm{grav}}[g],\tag{X.9b}
+$$
+where $S_{\mathrm{MPU}}$ contains all terms depending on $\Psi$ and $S_{\mathrm{grav}}$ contains the pure-metric local scalar-density terms. In $D=4$, the leading two-derivative geometric term is
+$$
+S_{\mathrm{grav}}[g] \;=\; \frac{1}{16\pi G}\int_{M_{\mathrm{reg}}}(R-2\Lambda)\sqrt{|g|}\,d^4x + S_{\mathrm{grav}}^{(\ge 4)}[g],\tag{X.9c}
+$$
+where $S_{\mathrm{grav}}^{(\ge 4)}$ contains curvature invariants with four or more derivatives.
+
+*Proof.* Decomposition (X.9b) is obtained by collecting in $S_{\mathrm{eff}}$ the terms that do and do not depend on the non-geometric fields $\Psi$. The separation is unique because the dependence on $\Psi$ is algebraic in the jet variables. For the pure-metric part, locality and general covariance imply that the leading scalar densities with at most two derivatives are $\sqrt{|g|}$ and $\sqrt{|g|}R$. Therefore the leading two-derivative sector has the form (X.9c), with the remaining higher-curvature terms absorbed into $S_{\mathrm{grav}}^{(\ge 4)}$. ∎
+
 
 
 ## X.6 Rate‑Level PCE Potential vs. Effective Potential

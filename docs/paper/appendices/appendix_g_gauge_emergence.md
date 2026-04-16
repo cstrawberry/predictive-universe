@@ -207,6 +207,90 @@ The derivative transforms inhomogeneously (acquiring the extra $iq(\partial_{\mu
 
 Maintaining predictive coherence by explicitly tracking all relative phases between the $N$ MPUs in a large aggregate would require managing $\mathcal{O}(N^2)$ relative phases. The propagation cost component of the PCE Potential, $V_{prop}$, would scale super-extensively as $\mathcal{O}(N^2)$, while the available resource budget and predictive benefits scale extensively as $\mathcal{O}(N)$. In contrast, introducing a local gauge field to manage coherence introduces a cost that scales with the number of field degrees of freedom, which is extensive, $\mathcal{O}(N)$. For any sufficiently large system ($N > N_{crit}$), the extensive cost of the gauge field solution is guaranteed to be lower than the super-extensive cost of explicit phase tracking. PCE, which minimizes the total potential $V(x)$, therefore necessarily selects the gauge field solution as the only viable and efficient mechanism for maintaining coherence in large MPU aggregates.
 
+### G.3.1 Connection–Compression Theorem
+
+The super-extensive comparison above can be sharpened into a structural statement about exact local coherence transport. Under locality, exactness, and the quadratic-cost premises already present in the PCE potential construction (Definition D.1; Definition H.0; Theorem G.1.7), a gauge connection is the unique edge-local exact representation of distributed predictive coherence, and the covariant derivative is its continuum limit. PCE further favors this edge-local representation over nonlocal pairwise coherence tables because the former updates with edge complexity while the latter updates with pair complexity.
+
+Let $\mathcal G=(V,E)$ be a finite connected interaction graph of MPUs with bounded maximum degree $d_{\max}$, supplied by the locality postulate of Section 11.3 together with the finite MPU spacing $\delta$ (Appendix Q). Each vertex $v\in V$ carries a one-dimensional complex predictive fiber $L_v$ equipped with a Hermitian inner product and a coarse-grained predictive amplitude $\psi_v\in L_v$. The restriction to rank-one fibers corresponds to the abelian $U(1)$ sector; the non-abelian extension is stated in Corollary G.6b.1 below.
+
+**Assumption G.3.1** (Local phase freedom). Local predictive observables are invariant under independent rephasings
+$$
+\psi_v \;\mapsto\; e^{iq\theta_v}\psi_v,\qquad \theta_v\in\mathbb R,
+$$
+where $q$ is the abelian charge. This is Equation (G.2.1) specialized to site values.
+
+**Assumption G.3.2** (Edge-locality of propagation cost). The propagation component of the PCE potential decomposes as
+$$
+V_{\mathrm{prop}} \;=\; \sum_{(u,v)\in E} Q_{uv},
+$$
+where each $Q_{uv}$ depends only on $\psi_u,\psi_v$ and auxiliary data supported on the edge $(u,v)$ (Definition D.1).
+
+**Assumption G.3.3** (Quadraticity near coherence). In a neighborhood of coherent configurations, $Q_{uv}$ is a Hermitian quadratic form on $(\psi_u,\psi_v)$ after transport. This is a consequence of two prior inputs: the Born-rule derivation (Theorem G.1.7), which establishes that predictive weights are Hermitian bilinear functionals, and Fisher-information linear response (Definition H.0), which fixes the leading-order cost as quadratic in small coherence deviations.
+
+**Assumption G.3.4** (Exactness on coherent configurations).
+$$
+Q_{uv}\;=\;0 \quad\Longleftrightarrow\quad \psi_u\text{ and }\psi_v\text{ are perfectly coherent.}
+$$
+
+**Assumption G.3.5** (Comparison class). Implementations are compared by exactness of local coherence evaluation, number of stored auxiliary degrees of freedom, and update work under a sweep of independent local rephasings. In particular, we distinguish edge-local transporter representations from nonlocal pairwise coherence tables.
+
+**Theorem G.3a (Connection–Compression).** Under Assumptions G.3.1–G.3.5:
+
+(a) *Existence forcing.* Exact edge-local coherence evaluation exists if and only if for every edge $(u,v)$ one specifies a unitary transporter $U_{uv}\in U(1)$ satisfying the lattice gauge covariance law
+$$
+U_{uv} \;\mapsto\; e^{iq\theta_u}\,U_{uv}\,e^{-iq\theta_v}\tag{G.3.4}
+$$
+under the local rephasings of Assumption G.3.1.
+
+(b) *Uniqueness of the cost form.* Given such transporters, the unique Hermitian positive-semidefinite quadratic edge cost on $L_u\oplus L_v$ whose zero set coincides exactly with the coherent subspace (Assumption G.3.4) is
+$$
+Q_{uv} \;=\; \lambda_{uv}\,\bigl|\psi_u - U_{uv}\psi_v\bigr|^2,\qquad \lambda_{uv}>0,\tag{G.3.5}
+$$
+up to overall scale absorbed into the positive edge weight $\lambda_{uv}$.
+
+(c) *Edge-local versus pairwise bookkeeping.* The transporter representation of part (a) updates one edge variable per edge under a global rephasing sweep, hence requires $O(|E|)=O(|V|)$ update work on bounded-degree graphs. By contrast, any scheme that explicitly stores coherence data for all unordered vertex pairs must update every pair touching a rephased vertex and therefore incurs $\Omega(|V|^2)$ work per global sweep. In this asymptotic sense, PCE favors the edge-local transporter representation over nonlocal pairwise coherence tables.
+
+Hence a gauge connection is the unique exact edge-local representation of distributed predictive coherence, and it is asymptotically preferred to nonlocal pairwise coherence tables for exact local bookkeeping. ∎
+
+*Proof.* Part (a). The states $\psi_u\in L_u$ and $\psi_v\in L_v$ inhabit distinct fibers. Any edge-local cost $Q_{uv}$ that depends on both endpoints requires an identification $U_{uv}:L_v\to L_u$; without such a map the symbol "$\psi_u$ compared with $\psi_v$" carries no coordinate-free meaning. The identification must preserve Born weights, since these are invariants of predictive observables (Theorem G.1.7). For any $\psi_v$, the Born weight $|\psi_v|^2$ must equal the Born weight $|U_{uv}\psi_v|^2$; hence $U_{uv}$ is an isometry of one-dimensional Hermitian complex lines, i.e. multiplication by a unit-modulus complex number in chosen local frames, so $U_{uv}\in U(1)$. Under the rephasings $\psi_u\mapsto e^{iq\theta_u}\psi_u$ and $\psi_v\mapsto e^{iq\theta_v}\psi_v$, the transported state $U_{uv}\psi_v$ must land in the rephased fiber $e^{iq\theta_u}L_u$, forcing (G.3.4). Conversely, any such transporters render $|\psi_u - U_{uv}\psi_v|^2$ invariant under local rephasings and define an exact edge-local comparison.
+
+Part (b). Transport $\psi_v$ into $L_u$ via $U_{uv}$ and set $z_1:=\psi_u$, $z_2:=U_{uv}\psi_v\in L_u\cong\mathbb C$. By Assumption G.3.3, $Q_{uv}$ is a Hermitian quadratic form in $(z_1,z_2)$:
+$$
+Q_{uv}(z_1,z_2) \;=\; \begin{pmatrix}\bar z_1 & \bar z_2\end{pmatrix} M \begin{pmatrix}z_1\\ z_2\end{pmatrix},\qquad M=\begin{pmatrix}a & b\\ \bar b & c\end{pmatrix},\quad a,c\in\mathbb R,\quad M\succeq 0.
+$$
+By Assumption G.3.4, $Q_{uv}(z,z)=0$ for every $z\in\mathbb C$, which means $M(1,1)^\top=0$, so $a+b=0$ and $\bar b+c=0$. Positive semidefiniteness forces $a=c=\lambda_{uv}\ge 0$, and the biconditional in G.3.4 forbids $Q_{uv}$ from vanishing on any larger subspace, so $\lambda_{uv}>0$. Therefore
+$$
+M \;=\; \lambda_{uv}\begin{pmatrix} 1 & -1\\ -1 & 1\end{pmatrix},
+$$
+whose kernel is exactly $\{(z,z):z\in\mathbb C\}$, and $Q_{uv}=\lambda_{uv}|z_1-z_2|^2=\lambda_{uv}|\psi_u-U_{uv}\psi_v|^2$.
+
+Part (c). In the transporter representation, one stores one unitary transporter per edge, so a global sweep of independent local rephasings updates $O(|E|)$ edge data. On bounded-degree graphs, $|E|=O(|V|)$. By contrast, a pairwise coherence table stores one datum for each unordered pair $\{u,v\}$, so a rephasing sweep over all vertices touches on the order of $\binom{|V|}{2}$ entries. This is $\Omega(|V|^2)$. Therefore exact edge-local bookkeeping is asymptotically cheaper than exact pairwise bookkeeping on large bounded-degree graphs. ∎
+
+**Corollary G.3a.1 (Covariant First-Order Comparison).** Let $(x^\mu)$ be a local chart, let $\delta$ be the coarse-graining scale, and suppose the transporter admits the asymptotic expansion
+$$
+U_{x,\mu} \;=\; \exp\!\bigl(i\,q\,\delta\,A_\mu(x)\bigr) + O(\delta^2)
+$$
+for a smooth field $A_\mu$. Then for any smooth $\psi$,
+$$
+\lim_{\delta\downarrow 0}\frac{\psi(x) - U_{x,\mu}\,\psi(x+\delta\hat e_\mu)}{\delta} \;=\; -\bigl(\partial_\mu + iqA_\mu(x)\bigr)\psi(x),
+$$
+so the unique first-order local comparison operator is the covariant derivative
+$$
+D_\mu \;:=\; \partial_\mu + iqA_\mu.\tag{G.3.6}
+$$
+
+*Proof.* Taylor-expand:
+$$
+\psi(x+\delta\hat e_\mu) \;=\; \psi(x) + \delta\,\partial_\mu\psi(x) + O(\delta^2),\qquad U_{x,\mu} \;=\; 1 + iq\delta A_\mu(x) + O(\delta^2).
+$$
+Retaining terms through order $\delta$:
+$$
+U_{x,\mu}\,\psi(x+\delta\hat e_\mu) \;=\; \psi(x) + \delta\bigl(\partial_\mu + iqA_\mu(x)\bigr)\psi(x) + O(\delta^2),
+$$
+so $\psi(x)-U_{x,\mu}\psi(x+\delta\hat e_\mu) = -\delta(\partial_\mu+iqA_\mu)\psi(x)+O(\delta^2)$. Dividing by $\delta$ and taking $\delta\downarrow 0$ yields the stated limit. Uniqueness at first order follows from the uniqueness of the edge cost (Theorem G.3a(b)): any other smooth local comparison operator would correspond to a different edge-cost kernel and violate Assumption G.3.4. ∎
+
+Definition G.4.1 therefore emerges as a theorem rather than an ansatz.
+
 **G.4 Emergent Connection and Covariant Derivative**
 
 PCE demands the most resource-efficient mechanism to enable reliable comparison of predictive states across spacetime points despite the local phase freedom. Introducing a connection $A$ with curvature $F=dA+A\wedge A$, the **unique** local, quadratic, second‑order, gauge‑invariant kinetic term is (up to an overall scale and total derivatives) [Yang & Mills 1954; Utiyama 1956]
@@ -238,7 +322,79 @@ A'_{\mu}(x) = A_{\mu}(x) - \partial_{\mu}\theta(x)
 $$
 (Note: Standard convention uses charge $e$ and defines $D_\mu = \partial_\mu - ieA_\mu$, leading to $A'_\mu = A_\mu + (1/e)\partial_\mu\theta$. The physics is identical, differing only by conventions for charge sign and coupling constant placement in the covariant derivative. For this derivation, $iqA_\mu$ is used directly).
 
+**G.4.1 Loop Holonomy and the Holonomy–Flatness Theorem**
+
+**Definition G.4.2 (Loop Holonomy).** For a closed loop $\gamma=(v_0,v_1,\dots,v_n=v_0)$ on $\mathcal G$, the holonomy along $\gamma$ is
+$$
+H_\gamma \;:=\; U_{v_0 v_1}\,U_{v_1 v_2}\cdots U_{v_{n-1}v_n} \;\in\; U(1).\tag{G.4.3}
+$$
+$H_\gamma$ is gauge-invariant: under local rephasings obeying (G.3.4), consecutive phase factors $e^{-iq\theta_{v_k}}$ and $e^{iq\theta_{v_k}}$ cancel, leaving only the endpoint phases, which cancel for a closed loop.
+
+**Theorem G.4a (Holonomy–Flatness).** Let $\{U_{uv}\}$ be a $U(1)$ transporter field on a connected region, and let $A_\mu$ be a smooth continuum field with $U_{x,\mu}=\exp(iq\delta A_\mu(x))+O(\delta^2)$.
+
+(a) *Discrete flatness equivalence.* On any connected region the following are equivalent: (i) there exists a gauge in which every edge transporter is trivial ($U_{uv}=1$); (ii) $H_\gamma=1$ for every closed loop $\gamma$.
+
+(b) *Plaquette holonomy density.* For the elementary plaquette $\square_{\mu\nu}(c)$ centred at $c$ in the $(\mu,\nu)$-plane,
+$$
+H_{\square_{\mu\nu}}(c) \;=\; \exp\!\Bigl(iq\,\delta^2\,F_{\mu\nu}(c) + O(\delta^4)\Bigr),\tag{G.4.4}
+$$
+where
+$$
+F_{\mu\nu} \;:=\; \partial_\mu A_\nu - \partial_\nu A_\mu.\tag{G.4.5}
+$$
+Hence $F_{\mu\nu}$ is the infinitesimal density of loop holonomy: curvature is exactly the local obstruction to globally trivial predictive transport. ∎
+
+*Proof of (a).* The forward implication is immediate. For the converse, assume $H_\gamma=1$ for every closed loop. Fix a root vertex $r$ and a unit vector $e_r\in L_r$. For any vertex $v$, choose a path $v_0=r,v_1,\dots,v_n=v$ and define $e_v:=U_{v_n v_{n-1}}\cdots U_{v_1 v_0}\,e_r$. If two paths $\gamma_1,\gamma_2$ from $r$ to $v$ are chosen, their composition $\gamma_1\gamma_2^{-1}$ is a closed loop with holonomy $1$, so the definition is path-independent. In the transported frame $\{e_v\}$, every edge transporter sends $e_v$ to $e_w$, so $U_{uv}=1$ on every edge.
+
+*Proof of (b).* Since $U(1)$ is abelian,
+$$
+H_{\square_{\mu\nu}}(c) \;=\; \exp\!\left(iq\oint_{\partial\square_{\mu\nu}(c)} A_\alpha\,dx^\alpha\right),
+$$
+and Stokes' theorem gives
+$$
+\oint_{\partial\square_{\mu\nu}(c)} A_\alpha\,dx^\alpha \;=\; \int_{\square_{\mu\nu}(c)} F_{\mu\nu}\,dS^{\mu\nu} \;=\; \delta^2\,F_{\mu\nu}(c) + O(\delta^4),
+$$
+where the $O(\delta^4)$ correction arises from the second-order Taylor expansion of $A_\alpha$ combined with the $\delta^2$ plaquette area. Substituting yields (G.4.4). ∎
+
+**Corollary G.4a.1 (Flatness Equals Pure Gauge on Simply Connected Regions).** Let $\Omega$ be simply connected and $A$ a smooth $U(1)$ connection. Then
+$$
+F \;=\; dA \;=\; 0 \quad\Longleftrightarrow\quad A \;=\; d\chi
+$$
+for some smooth scalar $\chi$.
+
+*Proof.* The forward implication is the Poincaré lemma on the closed 1-form $A$. The reverse follows from $d^2\chi=0$. ∎
+
 The introduction of the connection $A_\mu$ and covariant derivative $D_\mu$ is the minimal structural modification required to allow local, phase-invariant comparison of field values. This represents the most resource-efficient solution, strongly favored by PCE, to overcome the predictive coherence problem arising from local phase freedom. If the $U(1)$ symmetry group is compact (which is physically expected for charge conservation), consistency of the gauge theory (e.g., topological considerations for magnetic monopoles, if they exist) generally requires that the charge $q$ be quantized in units of some fundamental charge $e_0$.
+
+**G.4.2 Joint Spin-Internal Covariant Derivative**
+
+**Theorem G.4b (Joint Covariant Derivative).** Let $S\to M_{\mathrm{reg}}$ be the spinor bundle associated to $P_{\mathrm{spin}}$, and let $E\to M_{\mathrm{reg}}$ be the internal Hermitian bundle associated to $P_{\mathrm{int}}$ (Theorem 48b). Let $\nabla^{\mathrm{spin}}$ and $\nabla^{\mathrm{int}}$ be connections on $S$ and $E$, with local connection one-forms $\Omega_\mu$ and $A_\mu^{\mathrm{int}}$. Then the tensor-product bundle
+$$
+\mathcal W \;:=\; S\otimes E
+$$
+carries a unique product connection
+$$
+D \;:=\; \nabla^{\mathrm{spin}}\otimes 1 + 1\otimes\nabla^{\mathrm{int}}.
+$$
+In any local trivialization,
+$$
+D_\mu\Psi \;=\; \partial_\mu\Psi + \Omega_\mu\Psi + A_\mu^{\mathrm{int}}\Psi.
+$$
+If the internal bundle is reduced to a $U(1)$ charge-$q$ line subbundle, then $A_\mu^{\mathrm{int}}=iqA_\mu$, and the formula reduces exactly to $D_\mu=\partial_\mu+\Omega_\mu+iqA_\mu$. Definition G.4.1 is therefore the local expression of the unique product connection on the globally glued bundle.
+
+*Proof.* Connections on associated bundles correspond to equivariant horizontal distributions on the principal bundles. On the product principal bundle $P_{\mathrm{spin}}\times_M P_{\mathrm{int}}$, the direct sum of the two horizontal distributions is again equivariant and complementary to the vertical distribution; this gives the unique product connection. The local formula is the standard tensor-product connection formula. The $U(1)$ reduction is immediate by restricting to the rank-one subbundle. ∎
+
+**Corollary G.4b.1 (Holonomy and Curvature Factorization).** For every loop $\gamma\subset M_{\mathrm{reg}}$,
+$$
+\mathrm{Hol}_D(\gamma) \;=\; \mathrm{Hol}_{\mathrm{spin}}(\gamma)\otimes\mathrm{Hol}_{\mathrm{int}}(\gamma).
+$$
+Infinitesimally,
+$$
+F_D \;=\; R(\Omega)\otimes 1 + 1\otimes F(A^{\mathrm{int}}).
+$$
+The gravitational and gauge sectors therefore commute as a direct-product connection, and the mixed covariant derivative of Definition G.4.1 is globally consistent.
+
+*Proof.* Parallel transport for a product connection factorizes into the parallel transports of the two factors acting on the respective tensor factors. The curvature is the square of the connection; cross terms vanish because the two summands act on different tensor factors and therefore commute. ∎
 
 **G.5 Field Dynamics from PCE**
 
@@ -263,6 +419,50 @@ S_{\text{field}}[A] = \int d^{4}x\,\sqrt{-g}\;\left(-\frac{1}{4} F_{\mu\nu}(x)F^
 \quad \text{(G.5.3)}
  $$
 Minimizing this action with respect to variations in $A_\nu$ ($\delta S_{field} / \delta A_\nu = 0$) yields the source-free Maxwell equations in curved spacetime: $\nabla_{\mu}F^{\mu\nu} = 0$ (where $\nabla_\mu$ is the metric-compatible covariant derivative). This represents the simplest, most resource-efficient dynamics for the emergent connection field, strongly favored by PCE as it minimizes unnecessary field energy contributions to $V(x)$.
+
+**G.5.1 Plaquette–Maxwell Limit Theorem**
+
+**Theorem G.5a (Plaquette–Maxwell Limit).** Let $\Omega\subset\mathbb R^D$ be a local chart and $\{c\in\delta\mathbb Z^D\}$ a regular lattice refinement. Define the gauge-invariant loop-frustration cost
+$$
+C_{\square_{\mu\nu}}(c) \;:=\; 1 - \Re\,H_{\square_{\mu\nu}}(c).\tag{G.5.4}
+$$
+Then:
+
+(a) *Local expansion.*
+$$
+C_{\square_{\mu\nu}}(c) \;=\; \tfrac{1}{2}\,q^2\,\delta^4\,F_{\mu\nu}(c)^2 + O(\delta^6).
+$$
+
+(b) *Euclidean continuum limit.*
+$$
+\frac{\delta^{D-4}}{q^2}\,\sum_c\,\sum_{\mu<\nu} C_{\square_{\mu\nu}}(c) \;\xrightarrow[\delta\downarrow 0]{}\; \frac14\int_\Omega d^D x\,F_{\mu\nu}F^{\mu\nu}.
+$$
+
+(c) *Lorentzian covariant action.* The covariant Lorentzian action corresponding to the Euclidean limit in (b), obtained via the signature continuation of Appendix X, is
+$$
+S_{\mathrm{field}}[A] \;=\; -\tfrac14\int d^Dx\,\sqrt{-g}\,F_{\mu\nu}F^{\mu\nu},
+$$
+recovering (G.5.3). ∎
+
+*Proof of (a).* By Theorem G.4a(b), $H_{\square_{\mu\nu}}(c)=\exp(iq\delta^2 F_{\mu\nu}(c)+O(\delta^4))$. Write $\phi_{\mu\nu}(c):=q\delta^2 F_{\mu\nu}(c)$. Then $C_{\square_{\mu\nu}}(c)=1-\cos\phi_{\mu\nu}(c)=\tfrac12\phi_{\mu\nu}(c)^2+O(\phi_{\mu\nu}^4)=\tfrac12 q^2\delta^4 F_{\mu\nu}(c)^2+O(\delta^6)$.
+
+*Proof of (b).* Multiply (a) by $\delta^{D-4}/q^2$ and sum. Using $F_{\mu\mu}=0$ and $F_{\nu\mu}=-F_{\mu\nu}$, so $F_{\mu\nu}^2=F_{\nu\mu}^2$, one has $\sum_{\mu,\nu}F_{\mu\nu}^2=2\sum_{\mu<\nu}F_{\mu\nu}^2$. Therefore
+$$
+\frac{\delta^{D-4}}{q^2}\sum_c\sum_{\mu<\nu}\frac{q^2\delta^4}{2}F_{\mu\nu}(c)^2 \;=\; \tfrac12\sum_{\mu<\nu}\sum_c\delta^D\,F_{\mu\nu}(c)^2 \;=\; \tfrac14\sum_{\mu,\nu}\sum_c\delta^D\,F_{\mu\nu}(c)^2.
+$$
+The inner sum is a Riemann sum for $\int_\Omega F_{\mu\nu}F^{\mu\nu}\,d^Dx$, completing (b).
+
+*Proof of (c).* The Euclidean-to-Lorentzian continuation is Appendix X (Equation X.7 with Proposition X.1, Corollary X.2, and Theorem X.3). ∎
+
+**Corollary G.5a.1 (Universality of the Quadratic Gauge Limit).** Let $f:U(1)\to\mathbb R$ be $C^2$ near the identity $1\in U(1)$, with $f(1)=0$ and $1$ a strict local minimum. Then for any such loop penalty,
+$$
+f\bigl(H_{\square_{\mu\nu}}(c)\bigr) \;=\; \kappa_f\,\delta^4\,F_{\mu\nu}(c)^2 + o(\delta^4),
+$$
+with $\kappa_f=\tfrac12\,q^2\,f''(1)>0$. Every smooth gauge-invariant local loop penalty satisfying the stated conditions therefore flows to the same Maxwell action up to an overall positive scale.
+
+*Proof.* Write $f(e^{i\phi})=\kappa_f\phi^2/q^2+o(\phi^2)$ by Taylor expansion around $\phi=0$, with $\kappa_f=\tfrac{q^2}{2}\,f''(1)>0$ by the strict-minimum hypothesis. Substituting the plaquette expansion $\phi=q\delta^2 F_{\mu\nu}(c)+O(\delta^4)$ yields the claim. ∎
+
+The Wilson action ($1-\cos\phi$), the Villain action (Gaussian in $\phi$), and the Manton action (squared geodesic distance on $U(1)$) all satisfy the hypotheses of Corollary G.5a.1 and therefore share the same Maxwell continuum limit. The framework does not depend on the microscopic link penalty, only on its leading quadratic behavior near the coherent configuration.
 
 **G.6 Minimal Coupling to Matter**
 
@@ -304,6 +504,111 @@ $$
 \quad \text{(G.6.3)}
 $$
 where $J^\nu$ is the conserved Noether current associated with the $U(1)$ symmetry of the matter Lagrangian (e.g., $J^\nu = iq(\phi^* (D^\nu \phi) - \phi (D^\nu \phi)^*)$ for a scalar field, $J^\nu = q \bar{\Psi}\gamma^\nu \Psi$ for a Dirac field). The conservation of this current, $\nabla_\nu J^\nu = 0$, is automatically satisfied when the matter field equations (derived from $\delta S_{matter}/\delta\phi^* = 0$ or $\delta S_{matter}/\delta\bar\Psi = 0$) hold.
+
+**G.6.1 Minimal-Coupling Continuum Limit and Variational Closure**
+
+**Theorem G.6a (Minimal-Coupling Continuum Limit).** Let $\phi$ be a complex scalar field on a local chart $\Omega\subset\mathbb R^D$, let $\phi(x+\delta\hat e_\mu)$ denote its value at the neighbor vertex, and define the discrete matter coherence action
+$$
+S^{\mathrm{mat}}_\delta[\phi,A] \;:=\; \delta^{D-2}\sum_x\sum_\mu\bigl|\phi(x) - U_{x,\mu}\,\phi(x+\delta\hat e_\mu)\bigr|^2 \;+\; \delta^D\sum_x m^2|\phi(x)|^2.\tag{G.6.4}
+$$
+Then:
+
+(a) *Flat-space continuum limit.*
+$$
+S^{\mathrm{mat}}_\delta[\phi,A] \;\xrightarrow[\delta\downarrow 0]{}\; \int_\Omega d^D x\Bigl[\sum_\mu |(\partial_\mu + iqA_\mu)\phi|^2 + m^2|\phi|^2\Bigr].
+$$
+
+(b) *Covariant form.* The diffeomorphism-covariant extension of (a) to the emergent curved manifold is
+$$
+S^{\mathrm{mat}}[\phi,A] \;=\; \int d^D x\,\sqrt{|g|}\,\Bigl[g^{\mu\nu}(D_\mu\phi)^*(D_\nu\phi) - m^2|\phi|^2\Bigr],\tag{G.6.1'}
+$$
+with $D_\mu\phi=(\partial_\mu+iqA_\mu)\phi$. Higher-derivative and higher-curvature couplings belong to subleading terms in the derivative expansion and are not part of the leading continuum limit displayed here. ∎
+
+*Proof.* By Corollary G.3a.1,
+$$
+\phi(x) - U_{x,\mu}\,\phi(x+\delta\hat e_\mu) \;=\; -\delta\,(\partial_\mu+iqA_\mu)\phi(x) + O(\delta^2).
+$$
+Taking the modulus squared gives $\delta^2|D_\mu\phi|^2+O(\delta^3)$, and summing $\delta^{D-2}\sum_x\sum_\mu$ produces a Riemann sum for $\int d^D x\sum_\mu|D_\mu\phi|^2$. The mass term is already a Riemann sum for $\int m^2|\phi|^2\,d^Dx$. Taking $\delta\downarrow 0$ gives (a). For (b), the flat-space contraction $\delta^{\mu\nu}$ lifts to $g^{\mu\nu}$ on the emergent Lorentzian manifold, with invariant volume $\sqrt{|g|}\,d^Dx$ (Appendix X, Equation X.7 together with Proposition X.1 and Corollary X.2). The Lorentzian signature is obtained by the same continuation as in Theorem G.5a(c). ∎
+
+**Theorem G.6b (Variational Closure and Noether Current).** Consider the total continuum action
+$$
+S[\phi,A] \;=\; \int d^D x\,\sqrt{|g|}\,\Bigl[g^{\mu\nu}(D_\mu\phi)^*(D_\nu\phi) - m^2|\phi|^2 - \tfrac14 F_{\mu\nu}F^{\mu\nu}\Bigr].\tag{G.6.5}
+$$
+Then:
+
+(a) *Matter equation of motion.* $\delta S/\delta\phi^*=0$ gives
+$$
+D_\mu D^\mu\phi + m^2\phi \;=\; 0.\tag{G.6.6}
+$$
+
+(b) *Sourced gauge equation.* $\delta S/\delta A_\mu=0$ gives
+$$
+\nabla_\nu F^{\nu\mu} \;=\; J^\mu,\qquad J^\mu \;=\; iq\bigl(\phi^*D^\mu\phi - (D^\mu\phi)^*\phi\bigr).\tag{G.6.7}
+$$
+
+(c) *On-shell current conservation.* $\nabla_\mu J^\mu=0$ on the matter-equation solution manifold.
+
+*Proof.* (a) Standard variation with integration by parts, using that the gauge connection does not affect the Leibniz rule on scalar densities.
+
+(b) The variation $\delta A_\mu$ affects the matter action through $D_\mu\phi=\partial_\mu\phi+iqA_\mu\phi$, giving $\delta S_{\mathrm{mat}}=\int\sqrt{|g|}\,J^\mu\,\delta A_\mu\,d^Dx$ with the current as stated. The gauge-field variation gives $\delta S_{\mathrm{field}}=-\int\sqrt{|g|}\,(\nabla_\nu F^{\nu\mu})\,\delta A_\mu\,d^Dx$ after integration by parts and the antisymmetry of $F$. Setting $\delta S=0$ for arbitrary $\delta A_\mu$ yields (b).
+
+(c) Under the infinitesimal gauge transformation $\delta\phi=iq\alpha\phi$, $\delta A_\mu=-\partial_\mu\alpha$ with smooth parameter $\alpha$, gauge invariance of $S$ gives $\delta S=0$. On the matter-equation solution manifold the matter part vanishes identically, so only the gauge-field variation survives: $0=-\int\sqrt{|g|}\,J^\mu\partial_\mu\alpha\,d^Dx=\int\sqrt{|g|}\,(\nabla_\mu J^\mu)\alpha\,d^Dx$, using $\partial_\mu(\sqrt{|g|}V^\mu)=\sqrt{|g|}\nabla_\mu V^\mu$ for any vector $V^\mu$. Since $\alpha$ is arbitrary, $\nabla_\mu J^\mu=0$. ∎
+
+**Corollary G.6b.1 (Non-Abelian Lift).** Let each vertex $v$ carry a rank-$m$ Hermitian predictive fiber $L_v\cong\mathbb C^m$ with a compact Lie subgroup $G\subseteq U(m)$ acting unitarily, local frame freedom $\psi_v\mapsto g_v\psi_v$ with $g_v\in G$, and edge transporters $U_{uv}\in G$ transforming as $U_{uv}\mapsto g_u U_{uv} g_v^{-1}$. Then:
+
+(a) *Quadratic edge-cost form.* Under the rank-$m$ analogs of Assumptions G.3.1–G.3.5, any Hermitian positive-semidefinite quadratic edge cost on $L_u\oplus L_v$ whose zero set is exactly the coherent subspace $\{(z,z):z\in\mathbb C^m\}$ has the form
+$$
+Q_{uv} \;=\; \bigl\langle \psi_u-U_{uv}\psi_v,\;A_{uv}\,(\psi_u-U_{uv}\psi_v)\bigr\rangle,
+$$
+for some positive-definite Hermitian endomorphism $A_{uv}$ on $L_u$. If the relevant $G$-representation is irreducible, Schur's lemma reduces this to the scalar specialization
+$$
+Q_{uv} \;=\; \lambda_{uv}\,\lVert\psi_u-U_{uv}\psi_v\rVert^2,\qquad \lambda_{uv}>0.
+$$
+
+(b) *Covariant derivative.* In the continuum limit with $U_{x,\mu}=\exp(ig\delta A_\mu^a T^a)+O(\delta^2)$ for generators $T^a$ of the Lie algebra $\mathfrak g$,
+$$
+D_\mu \;=\; \partial_\mu + ig A_\mu^a T^a,
+$$
+and $D_\mu\psi$ transforms covariantly: $D_\mu\psi\mapsto g\,D_\mu\psi$ under $\psi\mapsto g\psi$.
+
+(c) *Non-abelian field strength.* The plaquette holonomy satisfies
+$$
+H_{\square_{\mu\nu}}(c)=I + ig\delta^2 F_{\mu\nu}(c)+O(\delta^3),
+$$
+equivalently $H_{\square_{\mu\nu}}(c)=\exp(ig\delta^2 F_{\mu\nu}(c)+O(\delta^3))$, with
+$$
+F_{\mu\nu} \;=\; \partial_\mu A_\nu - \partial_\nu A_\mu + ig[A_\mu,A_\nu].
+$$
+
+(d) *Yang–Mills action.* The class-function loop-frustration cost satisfies
+$$
+1-\tfrac{1}{m}\Re\,\mathrm{Tr}\,H_{\square_{\mu\nu}}(c)
+\;=\;
+\tfrac{g^2\delta^4}{2m}\,\mathrm{Tr}(F_{\mu\nu}(c)^2)+O(\delta^5),
+$$
+and therefore yields the continuum Yang–Mills action
+$$
+S_{\mathrm{YM}}[A] \;=\; -\tfrac12\int d^D x\,\sqrt{|g|}\,\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu}).
+$$
+
+(e) *Minimally coupled matter and conserved current.* The edge-cost continuum limit yields $|D_\mu\Psi|^2=(D_\mu\Psi)^\dagger(D^\mu\Psi)$, and the non-abelian Noether current $J^{a\mu}=ig\bigl(\Psi^\dagger T^a D^\mu\Psi - (D^\mu\Psi)^\dagger T^a\Psi\bigr)$ is covariantly conserved on shell: $D_\mu J^{a\mu}=0$. ∎
+
+*Proof.* (a) Transport $\psi_v\mapsto U_{uv}\psi_v$, write $z_1=\psi_u$, $z_2=U_{uv}\psi_v\in\mathbb C^m$, and expand $Q_{uv}$ as a $2m\times 2m$ Hermitian quadratic form. Exactness on the coherent subspace $z_1=z_2$ forces the block structure
+$$
+M=\begin{pmatrix}A&-A\\ -A&A\end{pmatrix}
+$$
+with $A$ Hermitian $m\times m$, whose kernel is exactly $\{(z,z)\}$ iff $A\succ 0$. This yields the displayed form. If the $G$-representation is irreducible, Schur's lemma implies that every $G$-equivariant positive Hermitian endomorphism is a positive scalar multiple of the identity.
+
+(b) Component-wise application of Corollary G.3a.1.
+
+(c) Expanding each transporter $U_{c,\mu}=I+ig\delta A_\mu+\tfrac12(ig\delta)^2 A_\mu^2+O(\delta^3)$ around the four edges of the plaquette and collecting terms through $\delta^2$ yields
+$$
+H_{\square_{\mu\nu}}(c) \;=\; I + ig\delta^2\bigl(\partial_\mu A_\nu - \partial_\nu A_\mu + ig[A_\mu,A_\nu]\bigr)(c) + O(\delta^3).
+$$
+
+(d) For the class function $f(U)=1-\tfrac{1}{m}\Re\,\mathrm{Tr}\,U$ and $U=I+ig\delta^2F+O(\delta^3)$, the linear term has vanishing real trace and the first nontrivial contribution is quadratic, giving the displayed $O(\delta^4)$ leading term with an $O(\delta^5)$ remainder. Summing plaquettes as in Theorem G.5a(b) yields the Yang–Mills action.
+
+(e) Component-wise Taylor expansion with the covariant derivative $D_\mu=\partial_\mu+igA_\mu^a T^a$ replacing $\partial_\mu+iqA_\mu$, together with the variational argument of Theorem G.6b(c) applied to the non-abelian gauge transformation $\delta\Psi=igT^a\alpha^a\Psi$, $\delta A_\mu^a=-D_\mu\alpha^a$ (adjoint covariant derivative). ∎
 
 **G.7 Summary of $U(1)$ Emergence**
 
@@ -900,7 +1205,7 @@ identifies the four blocks with the active subspace and the lifted $Y$, $W$, and
 
 Obstruction (1) blocks the original Bures-norm-based Definition T.17a. Obstruction (2) blocks the effective-action replacement on bare $\mathrm{Gr}(2,8)$. Obstruction (3) proves that no construction — from the PU axioms or otherwise — can produce the required gauge-sector splitting as subbundles of the bare quotient bundle $Q$. Finding (4) demonstrates that the lifted spectral structure possesses the correct Dynkin index anatomy to accommodate the target threshold tuple, with all charges determined by the embedding rather than by free parameters.
 
-The minimal flag lift $\widetilde X = \mathrm{Flag}_{1,2,3}(Q)$ resolves all three obstructions and supplies the structural prediction (4) simultaneously: on $\widetilde X$, the pulled-back bundle $\pi^*Q$ tautologically splits as $(1,2,3)$, the operator $D^{\mathrm{PCE}}_{\widetilde X}$ is $G_{\mathrm{SM}}$-equivariant but not $U(8)$-equivariant, the spectral threshold shifts $\Delta_i$ are gauge-factor-dependent by construction, and the Dynkin index matrix that governs the decomposition is invertible with all entries determined by the representation theory of the $SU(5)$ embedding. The explicit global spectral evaluation on $\widetilde X$ remains open; Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$ and therefore does not realize the target tuple of Appendix T.
+The minimal flag lift $\widetilde X = \mathrm{Flag}_{1,2,3}(Q)$ resolves all three obstructions and supplies the structural prediction (4) simultaneously: on $\widetilde X$, the pulled-back bundle $\pi^*Q$ tautologically splits as $(1,2,3)$, the operator $D^{\mathrm{PCE}}_{\widetilde X}$ is $G_{\mathrm{SM}}$-equivariant but not $U(8)$-equivariant, the spectral threshold shifts $\Delta_i$ are gauge-factor-dependent by construction, and the Dynkin index matrix that governs the decomposition is invertible with all entries determined by the representation theory of the $SU(5)$ embedding. Proposition T.17a.3a identifies the canonical base-to-lift map for the local threshold contribution, while Theorem T.69 isolates the remaining global spectral remainder once a subtraction prescription is fixed. Any completed flag-lift spectral problem then determines a definite threshold triplet by Theorem T.78. The explicit global spectral evaluation on $\widetilde X$ remains open; Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$ and therefore does not realize the target tuple of Appendix T.
 
 **Theorem G.8.4f (12-Fold Structural Correspondence).** *The number 12 appears as a structural constant across multiple framework domains:*
 

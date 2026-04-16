@@ -468,6 +468,20 @@ is the Golay correction radius.
 
 **Remark R.3.5e.1.** Proposition R.3.5e records a compact ledger of exact equalities on the minimal branch. It does not by itself reduce all six integers to one deeper Bott-theoretic source. Whether a single Bott-periodicity-based functor underlies all six entries, or whether some of the equalities are genuinely only coincident in the present formulation, remains open.
 
+**Proposition R.3.5f (Theorem–Model Boundary for the Generation Sector).** The theorem-level structural content of the generation sector is exactly this: within the family-charge class of Theorem R.3.4, anomaly cancellation together with the requirement of physical CP violation forces the minimal admissible generation number
+$$
+N_g \;=\; 3.
+$$
+The following do **not** enter that theorem and belong to later model layers:
+1. the identification of generations with specific $E_8$ roots, triads, or wavepackets;
+2. the Yukawa-compression and absolute-mass constructions of Appendix T;
+3. the Berry-holonomy CKM/PMNS phase assignments;
+4. the baryogenesis numerics built from those phase constructions.
+
+Consequently, falsifying a texture model, an $E_8$ placement rule, a CKM/PMNS ansatz, or a baryogenesis realization does not by itself refute the theorem-level statement $N_g=3$ unless it also invalidates the anomaly+CP premises of Theorem R.3.4.
+
+*Proof.* Theorem R.3.4 uses only the family-charge anomaly equations together with the requirement that a physical rephasing-invariant CP phase exist; it does not use any $E_8$ placement, Yukawa overlap, Berry-holonomy, seesaw, or baryogenesis machinery. Those ingredients first enter only in later sections of Appendix R and in Appendix T / Appendix Y. The theorem-level structural statement and the later flavor-model constructions are therefore logically separate. ∎
+
 ## R.4 Three-Fold Structure: Topological Derivation and Geometric Compatibility
 
 This section compares two distinct appearances of a three-fold pattern in the framework. The topological route of Sections R.1–R.4.1 carries the actual derivation of $N=3$ from anomaly cancellation together with the CP-violation requirement. The geometric route of Section R.4.2 shows that the Leech/$E_8$ construction contains a natural three-fold scaffold compatible with that generation count. The convergence is structurally suggestive, but only the topological route proves the count.
