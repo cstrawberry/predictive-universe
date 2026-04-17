@@ -201,6 +201,38 @@ Assuming $g$ is continuous, $(\ast)$ together with $g(0)=1$ implies $g(x)=e^{-\k
 
 *Remark:* Equation (23) implies $(C-C_{op})\propto -\ln(\beta-PP)$ as $PP\to\beta$, consistent with logarithmic rate–distortion scaling when the operational prediction error is proportional to the performance gap.
 
+**Definition 19a (Effective Complexity Scale $C_s$).** For a given target complexity $\hat{C}_{target}$, define the e-fold complexity scale of the Law of Prediction by
+$$
+C_s := \frac{\hat{C}_{target}}{\kappa_{\mathrm{eff}}}.
+\tag{22a}
+$$
+Then Equation (22) becomes
+$$
+PP(C)=\beta-(\beta-\alpha)e^{-(C-C_{op})/C_s},
+\tag{22b}
+$$
+and the inverse relation is
+$$
+C(PP)=C_{op}+C_s\ln\!\frac{\beta-\alpha}{\beta-PP}.
+\tag{22c}
+$$
+
+**Proposition 19a (Equilibrium Form of $C_s$).** At a PCE optimum $C^*$ with performance $PP^*$, the effective complexity scale satisfies
+$$
+C_s=\frac{\Gamma_0(\beta-PP^*)}{\lambda R'(C^*)+R_I'(C^*)}.
+\tag{22d}
+$$
+
+*Proof.* At equilibrium, $\Psi(C^*)=0$ (Equation 18), so
+$$
+\Gamma_0 \left.\frac{\partial PP}{\partial C}\right|_{C^*}=\lambda R'(C^*)+R_I'(C^*).
+$$
+From (22b),
+$$
+\left.\frac{\partial PP}{\partial C}\right|_{C^*}=\frac{\beta-PP^*}{C_s}.
+$$
+Substituting and solving for $C_s$ gives (22d). ∎
+
 **6.4 Adaptation Dynamics Driven by PCE**
 
 The Principle of Compression Efficiency (PCE, Definition 15) mandates that systems dynamically adjust their configuration to minimize a global effective potential, balancing predictive benefits against comprehensive resource costs. The adaptation of complexity $C(t)$ is driven by the local gradient of this potential.

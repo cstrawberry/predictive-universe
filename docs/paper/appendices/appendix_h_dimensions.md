@@ -413,6 +413,28 @@ The 2% deviation between prediction and observation is well within the empirical
 **Corollary H.1 (Parameter-Free Galactic Scale).**
 Under Proposition H.1, Definition H.0 (Bridge Law), and Equation (H.4b), the scale-dependent gravity model of Appendix I has its transition scale fully determined by the cosmological constant $\Lambda$ and PU constants $(K_0, \varepsilon, d_0, a, D)$, with **no numerically fitted parameters**. The galactic acceleration scale $g_0 = (1.18 \pm 0.02) \times 10^{-10}$ m/s$^2$ emerges as a derived prediction, where the uncertainty is obtained by propagating the $2\sigma$ observational uncertainty in $(\Lambda L_P^2)_{\mathrm{obs}}$ reported in Appendix V (Eq. V.5) through $g_0\propto\sqrt{\Lambda}$. Note: Observational systematics in $g_0^{\text{obs}}$ dominate at $\sim 20\%$.
 
+**Corollary H.1a (Critical Baryonic Surface-Density Scale).**
+For a thin baryonic sheet with surface density $\Sigma_b$, the Newtonian midplane field is $g_N = 2\pi G\Sigma_b$. The crossover to the low-acceleration galactic regime occurs when $g_N = g_0$. Hence the characteristic baryonic surface-density scale is
+
+$$
+\Sigma_\dagger := \frac{g_0}{2\pi G}.
+\tag{H.6a}
+$$
+
+Using Equation (H.6),
+
+$$
+\Sigma_\dagger
+= \frac{1.18\times 10^{-10}\,\mathrm{m\,s^{-2}}}{2\pi\cdot 6.67430\times 10^{-11}\,\mathrm{m^3\,kg^{-1}\,s^{-2}}}
+= 0.281 \pm 0.005\,\mathrm{kg\,m^{-2}}
+= (134.7 \pm 2.3)\,M_\odot\,\mathrm{pc^{-2}}.
+\tag{H.6b}
+$$
+
+*Proof.* For an infinite thin sheet, Gauss's law gives $g_N = 2\pi G\Sigma_b$. Setting $g_N = g_0$ defines the transition scale. Substituting the PU prediction (H.6) yields the numerical value. ∎
+
+**Remark H.1a.1.** The quantity $\Sigma_\dagger$ is a zero-parameter PU prediction for the characteristic baryonic surface-density threshold at which the low-acceleration galactic regime turns on.
+
 ### H.4.4 Per-Channel Normalization: The Factor of 3
 
 A common normalization error is to divide by the total interface modes $M = 24$ rather than the per-spatial-channel modes $M_{\mathrm{sp}} = 8$.
@@ -423,6 +445,16 @@ $$
 M_{\mathrm{sp}} = \frac{M}{D-1} = \frac{24}{3} = 8
 $$
 *not $M = 24$.*
+
+**Remark H.5.1 (Sector-Dependent Mode-Count Selection).** The manuscript uses three distinct discrete mode counts derived from the backbone, and each is the correct normalization for a different sector. They are not interchangeable:
+
+| Mode count | Value | Sector | Role |
+|:-----------|:-----:|:-------|:-----|
+| $M$ | 24 | spacetime/channel matching | selects $D=4$ via $K(D)=M$ (Theorem Z.11) |
+| $k$ | 12 | gauge / complex orbit | Golay-code dimension and gauge-generator capacity |
+| $M_{\mathrm{sp}}$ | 8 | gravitational bridge | per-spatial-channel normalization (Theorem H.5) |
+
+A quantity tied to a single spatial acceleration component normalizes by $M_{\mathrm{sp}}=8$. Gauge-sector capacities normalize by $k=12$. Structural dimensional-selection statements use $M=24$. Applying $M$ or $k$ indiscriminately to the gravitational bridge violates Theorem H.5 and produces the spurious factor-of-3 discrepancy in $g_0$.
 
 *Proof.* The gravitationally observable quantity is a spatial acceleration—a $(D-1) = 3$ component vector. The total $M = 24$ interface modes distribute across the $D-1 = 3$ spatial channels. The efficiency for observing **one spatial acceleration component** should be normalized by the modes available to that component:
 $$

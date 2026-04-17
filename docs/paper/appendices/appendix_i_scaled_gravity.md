@@ -142,7 +142,7 @@ $$
 \tag{I.4}
 $$
 
-The parameter set $(G_0,L_0,A_G,m)$ is expected to be universal, determined by the fundamental properties of the MPU network and the PCE optimization landscape. $L_0$ is the scale at which $\hat C_{\mathrm{target}}(R)$ becomes sufficiently low in sparse regions to trigger significant parameter relaxation.
+The parameter set $(G_0,L_0,A_G,m)$ is expected to be universal, determined by the fundamental properties of the MPU network and the PCE optimization landscape. Within the present manuscript, only the crossover scale $L_0$ is directly tied to the Appendix H acceleration scale; the amplitude $A_G$ and steepness $m$ remain phenomenological parameters pending either rotation-curve fits or a first-principles closure of the relaxation sector. $L_0$ is the scale at which $\hat C_{\mathrm{target}}(R)$ becomes sufficiently low in sparse regions to trigger significant parameter relaxation.
 
 **I.7 A Multi-Scale Solution from Global PCE Optimization**
 
@@ -353,7 +353,7 @@ L_0\sim1\!-\!10\,\mathrm{kpc},\qquad
 A_G\sim1\!-\!9,\qquad
 m\simeq2\!-\!4.
 $$
-These ranges will be constrained by the forthcoming rotation-curve fits. Note that the range for $A_G$ is widened here compared to Section I.9 to accommodate the full range of needed enhancements (2-10 times).
+These ranges will be constrained by the forthcoming rotation-curve fits. Note that the range for $A_G$ is widened here compared to Section I.9 to accommodate the full range of needed enhancements (2-10 times). No theorem-level value of $A_G$ is derived in the present appendix.
 
 **I.14 Timescale Separation**
 

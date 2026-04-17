@@ -231,6 +231,20 @@ The framework's two-mechanism model for the dark sector (Appendix I) is falsifia
 
 **Data and Code Availability:** All analysis scripts (including power and sample-size simulations), anonymized raw data, experimental logs, and time-stamps (with random seeds where applicable) will be made publicly available at a persistent repository to ensure full transparency and reproducibility. The preregistration will link directly to this repository.
 
+**13.8.2a Critical Baryonic Surface-Density Window**
+The bridge-law prediction for the galactic acceleration scale implies a second zero-parameter galactic observable:
+
+$$
+\Sigma_\dagger = \frac{g_0}{2\pi G} = (134.7 \pm 2.3)\,M_\odot\,\mathrm{pc^{-2}}.
+$$
+
+This is the characteristic baryonic surface-density scale at which rotationally supported systems enter the low-acceleration regime. The prediction follows directly from Corollary H.1a and therefore inherits the same PU backbone as $g_0$.
+
+**Falsification Conditions:**
+- Well-characterized disk-galaxy samples, after finite-thickness and geometry corrections, exhibit a population-level transition surface-density scale significantly outside the stated window.
+- The observed onset of mass discrepancy in high-quality baryonic maps fails to cluster around a single universal $\Sigma_\dagger$.
+- Independent determinations of $g_0$ and the surface-density threshold are mutually inconsistent through $\Sigma_\dagger = g_0/(2\pi G)$.
+
 ### 13.8.3 Glueball Mass Spectrum from Leech Geometry
 
 If the QCD vacuum configuration space inherits Leech lattice geometry through PCE optimization of the $M = 24$ interface modes (Theorem Z.5), glueball masses follow from the shell structure with spin corrections.

@@ -545,17 +545,124 @@ The complexity adaptation dynamics (Section 6.4) are driven by the Adaptation Dr
 ### D.8.1 Effective Complexity Potential and Equilibrium
 
 **Definition D.5 (Effective Complexity Potential).** 
-The effective potential $V_{eff}(C)$ is obtained by marginalizing the full PCE potential $V(x)$ (Definition D.1) over all other degrees of freedom at their quasi-equilibrium values conditioned on complexity $C$. The deterministic complexity dynamics are:
+The effective potential $V_{eff}(C)$ is obtained by reducing the full PCE potential $V(x)$ (Definition D.1) to the complexity coordinate $C$, with the rigorous reduction supplied by Theorem D.5a below. The deterministic complexity dynamics are:
 
 $$
 \dot{C}(t) = \eta_{adapt} \Psi(C(t)), \quad \Psi(C) = -\frac{\partial V_{eff}(C)}{\partial C}
 \tag{D.13}
 $$
 
+**Theorem D.5a (Constrained Reduction and Free-Energy Representation of $V_{eff}$).** Let $\mathcal{K}\subset\mathcal{X}_{adm}$ be the compact invariant set from assumption (A5), let $V\in C^2(\mathcal{K})$ be the PCE potential of Definition D.1, and let $\mathcal{C}:\mathcal{K}\to [C_{op},\infty)$ be a continuous complexity projection. For each admissible $C$ with nonempty level set
+$$
+\Sigma_C:=\{x\in\mathcal{K}:\mathcal{C}(x)=C\},
+$$
+define
+$$
+V_{eff}(C):=\min_{x\in\Sigma_C}V(x).
+\tag{D.13a}
+$$
+Then:
+
+1. $V_{eff}(C)$ is well-defined and the minimum is attained on $\Sigma_C$.
+
+2. If $\sigma_C$ is any finite Borel measure on $\Sigma_C$ with full support, then the low-noise free-energy reduction
+$$
+V_{eff}(C;\theta):=-\theta\ln\int_{\Sigma_C}e^{-V(x)/\theta}\,d\sigma_C(x)
+\tag{D.13b}
+$$
+satisfies
+$$
+\lim_{\theta\downarrow0}V_{eff}(C;\theta)=V_{eff}(C).
+\tag{D.13c}
+$$
+
+3. If locally $x=(C,y)$ and the constrained minimizer on $\Sigma_C$ is unique, written $x_*(C)=(C,y_*(C))$, then
+$$
+V_{eff}(C)=V(C,y_*(C)).
+$$
+
+*Proof.* Because $\mathcal{C}$ is continuous, $\Sigma_C$ is closed in the compact set $\mathcal{K}$ and is therefore compact. Continuity of $V$ on $\Sigma_C$ implies that the minimum in (D.13a) is attained by the Weierstrass theorem, proving (1). For (2), let $m_C:=V_{eff}(C)$. Since $V\ge m_C$ on $\Sigma_C$,
+$$
+\int_{\Sigma_C}e^{-V/\theta}\,d\sigma_C \le e^{-m_C/\theta}\sigma_C(\Sigma_C),
+$$
+hence
+$$
+-\theta\ln\int_{\Sigma_C}e^{-V/\theta}\,d\sigma_C \ge m_C-\theta\ln\sigma_C(\Sigma_C).
+$$
+Conversely, for any $\varepsilon>0$, the set
+$$
+U_\varepsilon:=\{x\in\Sigma_C:V(x)\le m_C+\varepsilon\}
+$$
+is nonempty and relatively open in $\Sigma_C$; by full support, $\sigma_C(U_\varepsilon)>0$. Therefore
+$$
+\int_{\Sigma_C}e^{-V/\theta}\,d\sigma_C \ge e^{-(m_C+\varepsilon)/\theta}\sigma_C(U_\varepsilon),
+$$
+so
+$$
+-\theta\ln\int_{\Sigma_C}e^{-V/\theta}\,d\sigma_C \le m_C+\varepsilon-\theta\ln\sigma_C(U_\varepsilon).
+$$
+Letting $\theta\downarrow0$ and then $\varepsilon\downarrow0$ yields (D.13c). Statement (3) is immediate from the definition of the constrained minimizer in the local split $x=(C,y)$. ∎
+
+**Remark D.5a.1 (Relation to the informal marginalization language).** The phrase “marginalizing over the remaining degrees of freedom at quasi-equilibrium conditioned on $C$” is represented rigorously here by constrained minimization, and equivalently by the low-noise free-energy reduction (D.13b)–(D.13c). In the detailed-balance low-noise regime of Theorem D.5, both constructions select the same reduced potential.
+
 where from Equation (24):
 $$
 \Psi(C) = \Gamma_0 \frac{\partial PP}{\partial C}(C) - \lambda R'(C) - R_I'(C)
 $$
+
+**Theorem D.5b (Schur-Complement Hessian Formula for $V_{eff}$).** Under the hypotheses of Theorem D.5a, assume a local coordinate split $x=(C,y)$ and a unique $C^1$ branch of constrained minimizers $y_*(C)$ satisfying $V_y(C,y_*(C))=0$ and with $V_{yy}(C,y_*(C))$ positive definite. Then $V_{eff}(C)=V(C,y_*(C))$ is twice continuously differentiable and
+$$
+V_{eff}''(C)=V_{CC}(C,y_*(C)) - V_{Cy}(C,y_*(C))V_{yy}(C,y_*(C))^{-1}V_{yC}(C,y_*(C)).
+\tag{D.13d}
+$$
+Consequently,
+$$
+V_{eff}''(C)=-\Psi'(C).
+\tag{D.13e}
+$$
+
+*Proof.* Since $V_y(C,y_*(C))=0$ and $V_{yy}(C,y_*(C))$ is positive definite, the implicit-function theorem gives a $C^1$ branch $y_*(C)$ on the neighborhood under consideration. Differentiating $V_{eff}(C)=V(C,y_*(C))$ once gives
+$$
+V_{eff}'(C)=V_C(C,y_*(C))+V_y(C,y_*(C))y_*'(C)=V_C(C,y_*(C)),
+$$
+because $V_y$ vanishes on the minimizing branch. Differentiating the first-order condition $V_y(C,y_*(C))=0$ yields
+$$
+V_{yC}+V_{yy}y_*'(C)=0,
+$$
+hence
+$$
+y_*'(C)=-V_{yy}^{-1}V_{yC}.
+$$
+Differentiating $V_{eff}'(C)=V_C(C,y_*(C))$ once more gives
+$$
+V_{eff}''(C)=V_{CC}+V_{Cy}y_*'(C)=V_{CC}-V_{Cy}V_{yy}^{-1}V_{yC},
+$$
+which is (D.13d). Identity (D.13e) follows immediately from $\Psi(C)=-V_{eff}'(C)$. ∎
+
+**Corollary D.5b.1 (Explicit Reduced Curvature at the PCE Optimum).** At fixed $\hat{C}_{target}$, the PCE-optimal complexity $C^\star$ satisfies $\Psi(C^\star)=0$ (Equation 18), and the reduced curvature
+$$
+\kappa_C:=V_{eff}''(C^\star)
+$$
+is
+$$
+\kappa_C = -\Gamma_0\,PP''(C^\star) + \lambda R''(C^\star) - \frac{r_I}{(C^\star)^2\ln 2}.
+\tag{D.13f}
+$$
+Using Equation (22),
+$$
+PP''(C)=-(\beta-\alpha)\frac{\kappa_{\mathrm{eff}}^2}{\hat{C}_{target}^2}e^{-\kappa_{\mathrm{eff}}(C-C_{op})/\hat{C}_{target}},
+$$
+so
+$$
+\kappa_C = \Gamma_0(\beta-\alpha)\frac{\kappa_{\mathrm{eff}}^2}{\hat{C}_{target}^2}e^{-\kappa_{\mathrm{eff}}(C^\star-C_{op})/\hat{C}_{target}} + \lambda R''(C^\star) - \frac{r_I}{(C^\star)^2\ln 2}.
+\tag{D.13g}
+$$
+
+*Proof.* From Equation (35), at fixed $\hat{C}_{target}$,
+$$
+\Psi'(C)=\Gamma_0 PP''(C)-\lambda R''(C)+\frac{r_I}{C^2\ln 2}.
+$$
+Applying (D.13e) at $C=C^\star$ gives (D.13f). Substituting the second derivative of the Law of Prediction yields (D.13g). Under DSC (Theorem 22), $\Psi'(C^\star)<0$, so $\kappa_C>0$. ∎
 
 **Theorem D.7 (Uniqueness and Stability of Optimal Complexity).**
 Under the Dominance of Stabilizing Costs (DSC, Theorem 22), which ensures $\Psi'(C) < 0$ for all $C$ in the viable range, the effective potential $V_{eff}(C)$ is strictly convex. Consequently:
