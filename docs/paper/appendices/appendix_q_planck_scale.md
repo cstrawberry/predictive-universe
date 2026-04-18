@@ -107,6 +107,29 @@ $$\boxed{\hbar = \frac{[\text{Action}]}{[\text{Entropy}]} = \frac{\text{J} \cdot
 
 It is the universal exchange rate between mechanical and information-theoretic descriptions of physical processes. This parallels the role of other fundamental constants as exchange rates (Section P.6.5.5): $k_B$ converts between temperature and energy, $c$ between space and time, and $\hbar$ between action and entropy.
 
+**Corollary Q.0.2b (Minimal Physical Action per Irreversible Predictive Cycle).** For every nontrivial MPU cycle $i$, the physical action contribution associated with the discrete predictive cost is
+$$
+\Delta \mathcal{S}^{\mathrm{phys}}_i = \hbar\,\varepsilon_i \ge \hbar \ln 2.
+$$
+In particular, when a quasi-stationary cycle admits a positive operational-cost representation
+$$
+\Delta \mathcal{S}^{\mathrm{phys}}_i
+=
+\int_0^{\tau_i} E_{\mathrm{op},i}(t)\,dt
+=
+\bar E_i\tau_i,
+$$
+where $E_{\mathrm{op},i}(t)$ is the cycle's positive operational energy cost and $\bar E_i$ is its time average, it obeys
+$$
+\bar E_i\,\tau_i \ge \hbar \ln 2.
+$$
+
+*Proof.* From the action-entropy identity,
+$$
+\mathcal S^{\mathrm{phys}}=\hbar\sum_i \varepsilon_i,
+$$
+so a single cycle contributes $\Delta \mathcal S^{\mathrm{phys}}_i=\hbar\varepsilon_i$. By Theorem 31, $\varepsilon_i\ge \ln 2$. The quasi-stationary inequality follows from the stated positive operational-cost representation $\Delta\mathcal S^{\mathrm{phys}}_i=\bar E_i\tau_i$. ∎
+
 **Remark Q.0.1: What Is and Is Not Derived.** The framework derives:
 - The *existence* of $\hbar$ as a necessary conversion factor
 - The *meaning* of $\hbar$ as action-per-nat of SPAP entropy  

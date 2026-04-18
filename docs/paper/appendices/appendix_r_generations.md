@@ -992,7 +992,7 @@ The Golay-Leech structure connects to emergent spacetime through the mode-channe
 The chain is complete:
 $$\text{Golay code} \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(D)=24} D=4 \xrightarrow{\text{local}} \text{24-cell} \xrightarrow{\text{network}} \text{4D spacetime}$$
 
-The Golay code's error-correction properties (Theorem Z.13) suggest a robustness mechanism: the same 12+12 partition that optimizes information protection may also constrain local geometric realizations toward noise-tolerant configurations. This is a heuristic stability argument; quantitative stability against explicit fluctuation/noise models would require specifying the dynamical perturbation model and showing that the induced geometry remains within the relevant regularity class.
+The Golay code's error-correction properties (Theorem Z.13) suggest a robustness mechanism: the same rate-$\frac{1}{2}$ 12+12 organization that optimizes information protection may also constrain local geometric realizations toward noise-tolerant configurations. This is a heuristic stability argument; quantitative stability against explicit fluctuation/noise models would require specifying the dynamical perturbation model and showing that the induced geometry remains within the relevant regularity class.
 
 **Experimental Signatures.** The Golay-Leech structure generates specific testable predictions detailed in **Section Z.29–Z.31**:
 
@@ -1000,7 +1000,7 @@ The Golay code's error-correction properties (Theorem Z.13) suggest a robustness
 
 2. **Dimensional stability (Prediction Z.3):** Systems with $M_{\text{int}} = 24$ modes embedded in $D \neq 4$ effective dimensions should exhibit instability or spontaneous dimensional reduction.
 
-3. **Error correction correlations (Prediction Z.4):** The 24×24 mode correlation matrix should reveal the 12+12 signal-parity decomposition characteristic of the Golay code.
+3. **Error correction correlations (Prediction Z.4):** The 24×24 mode correlation matrix should reveal the rate-$\frac{1}{2}$ 12+12 organization characteristic of the Golay code.
 
 Confirmation of these predictions would provide direct empirical support for the Golay-Leech foundation of emergent spacetime geometry.
 
@@ -1168,6 +1168,8 @@ $$
 \mathcal{R} = \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{2\alpha_1 d^2_{31}}{2\alpha_1 d^2_{32}} = \frac{d^2_{31}}{d^2_{32}}.
 \tag{R.17}
 $$
+
+**Scope.** Equation (R.17) is the path-additive diagonal-alignment reading used for Dirac-type sectors. In the Majorana neutrino sector, the selected triad $T_\nu=(2,6,6)$ is not path-additive under a fully pairwise mass-ratio law; it is read in the anchored form $\mathcal R_\nu=\Delta_1/\Delta_2=3$ (Theorem T.24.11), with the $1\leftrightarrow2$ $A_2$ edge entering the PMNS mixing geometry rather than an independent third mass-ratio equation.
 
 Within this approximation, the ratio is independent of the width parameter $\xi$, the common diagonal scale $\alpha_1$, the diagonal normalization, and the Higgs vacuum expectation value.
 

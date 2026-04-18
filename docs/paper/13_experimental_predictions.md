@@ -618,7 +618,7 @@ $$
 \mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}
 $$
 
-**Derivation Summary:** Equation R.17 derives $\mathcal{R} = d^2_{31}/d^2_{32}$ from $E_8$ root geometry, where the squared geodesic distances between generation vacua satisfy $d^2 \in \{2, 4, 6, 8\}$ (Section R.5).
+**Derivation Summary:** Equation R.17 derives $\mathcal{R} = d^2_{31}/d^2_{32}$ from $E_8$ root geometry, where the squared geodesic distances between generation vacua satisfy $d^2 \in \{2, 4, 6, 8\}$ (Section R.5). For Dirac sectors (charged leptons and quarks) the triad is path-additive and the pairwise suppression law of Theorem N.9 applies directly, so $\mathcal{R}$ is read as $d^2_{31}/d^2_{32}$. For the Majorana neutrino sector the triad $(a,b,b)=(2,6,6)$ is not path-additive, and Lemma T.24.10a shows that a pairwise law on this triad is inconsistent; the hierarchy invariant is therefore read in the anchored form $\mathcal{R}_\nu = \Delta_1/\Delta_2 = b/a = 3$ from Theorem T.24.11, and the $1\leftrightarrow 2$ $A_2$ edge $d^2_{21}=6$ is used as a mixing-geometry input to the PMNS construction of §T.24, not as an independent third mass-ratio equation. The prediction of a discrete value for $\mathcal{R}$ therefore has the same form across sectors, while the *extraction* of $\mathcal{R}$ from data uses path-additive and anchored readings respectively.
 
 **Falsification Conditions:**
 - Precision mass measurements yielding $\mathcal{R}$ values unambiguously between discrete predictions

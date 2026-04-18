@@ -1241,15 +1241,14 @@ The Appendix G 12-fold correspondence therefore sits on the same low-rank root s
 
 *Statement.* For the self-dual extended binary Golay code $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$ with parameters $[24, 12, 8]$ [MacWilliams & Sloane 1977]:
 
-| Classical Code Structure | Gauge Theory Structure |
-|:-------------------------|:-----------------------|
+| Classical Code Structure | Gauge-Sector Reading in PU |
+|:-------------------------|:---------------------------|
 | Block length: $n = 24$ | Interface modes: $M = 24$ |
 | Rate-$\frac{1}{2}$ split: $k = n-k = 12$ | Capacity-saturating 12+12 organization |
-| Codewords | Gauge-invariant configurations |
-| Syndrome space | Gauge-variant quantities |
-| Minimum distance: $d = 8$ | Robustness scale |
+| Protected code organization selected by parity constraints | Low-cost physical organization selected by gauge redundancy constraints |
+| Minimum distance: $d = 8$ | Discrete robustness scale |
 
-*Proof.* The extended binary Golay code $[24, 12, 8]$ is self-dual: $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$. The rate-$\frac{1}{2}$ structure partitions the 24-dimensional space into two 12-dimensional halves. For the Standard Model gauge algebra, $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12$, saturating the Lagrangian capacity bound of Theorem G.8.2e. The correspondence identifies the same 24-mode organization and its 12+12 split: one 12-dimensional sector is realized as the gauge-generator budget, while the complementary 12-dimensional sector carries the constrained dynamical content. This is a structural parallel at the level of dimensionality and organization, not an algebraic isomorphism and not a unique identification of message versus parity with gauge versus matter. ∎
+*Proof.* The extended binary Golay code $[24, 12, 8]$ is self-dual: $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$. The rate-$\frac{1}{2}$ structure partitions the 24-dimensional carrier into two 12-dimensional halves. For the Standard Model gauge algebra, $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12$, saturating the Lagrangian capacity bound of Theorem G.8.2e. The correspondence therefore identifies the same 24-mode organization and its 12+12 split: a 12-dimensional gauge-generator budget together with a complementary constrained sector. The parallel is functional rather than algebraic: both structures implement redundancy that protects predictive content in a 24-dimensional carrier, but the framework does not identify codewords with gauge orbits pointwise, does not identify parity checks with specific gauge generators, and does not promote gauge invariance to a literal coding-theoretic theorem. ∎
 
 **Remark G.8.4g.1: Clarification on CSS Quantum Codes.** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ has parameters $[[24, 0, 8]]$ with zero logical qubits, since $k_{\text{quantum}} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The quantum Singleton bound $n - k \geq 2(d-1)$ requires $k \leq 10$ for $[[24, k, 8]]$, confirming that $[[24, 12, 8]]$ is impossible. The analogy presented here concerns the **classical** code structure, not CSS quantum parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ partition ($k = n - k = 12$) and the gauge/matter sector organization.
 
@@ -1257,7 +1256,7 @@ The Appendix G 12-fold correspondence therefore sits on the same low-rank root s
 $$|\Omega_{\text{Golay}}\rangle = \frac{1}{64} \sum_{c \in \mathcal{G}_{24}} |c\rangle$$
 This state is stabilized by 24 independent generators: 12 X-type generators $S_i^X = X^{g_i}$ (where $g_i$ is the $i$-th row of a generator matrix) and 12 Z-type generators $S_j^Z = Z^{h_j}$ (where $h_j$ is the $j$-th row of a parity-check matrix). The "12 + 12" structure thus manifests as stabilizer generators rather than signal versus parity qubits. The Golay minimum distance 8 implies that the smallest-weight non-identity stabilizer elements have weight 8; equivalently, any Pauli error of weight less than 8 produces a nontrivial syndrome under stabilizer measurement. The state is invariant under the Mathieu group $M_{24} = \text{Aut}(\mathcal{G}_{24})$, with $|M_{24}| = 244,823,040$.
 
-**Remark G.8.4g.2: Functional Analogy.** The analogy suggests that gauge invariance serves a function analogous to error detection: gauge transformations identify physically equivalent configurations, just as parity constraints identify valid codewords. Physical observables must be gauge-invariant, just as transmitted messages must satisfy parity checks. The number 12 appears in both contexts because both derive from the rate-$\frac{1}{2}$ optimization on $M = 24$ modes (Theorem Z.13).
+**Remark G.8.4g.2: Functional Analogy.** Within PU, gauge redundancy can be interpreted as the operational redundancy of an error-correcting vacuum organization. Gauge transformations identify descriptions with the same physical content, just as parity constraints identify codewords belonging to the protected code structure. The force of the analogy is functional rather than algebraic: both organize a 24-mode carrier so that predictive content is preserved against inadmissible perturbations, and the shared appearance of the number 12 reflects the common rate-$\frac{1}{2}$ optimization on $M = 24$ modes (Theorem Z.13).
 
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 
@@ -1375,7 +1374,7 @@ S(\tau^*|_{\mathcal{A}}) = -\mathrm{tr}\left(\frac{I_2}{2} \ln \frac{I_2}{2}\rig
 \tag{G.1.9.4}
 $$
 
-At the PCE-Attractor, quantum entropy and SPAP entropy coincide exactly. This identity confirms the entropy unification thesis: the von Neumann entropy $S(\tau^*|_{\mathcal{A}})$ and the SPAP entropy $\varepsilon$ are not merely equal but are the same quantity expressed in the same units.
+At the PCE-Attractor, quantum entropy and SPAP entropy coincide exactly for the maximally mixed active subspace. This identity confirms the entropy unification thesis: the von Neumann entropy $S(\tau^*|_{\mathcal{A}})$ and the SPAP entropy $\varepsilon$ realize the same counting structure in the same units on the $a=2$ attractor branch.
 
 ### G.1.9.2 ND-RID Channel Structure and Fixed Points
 

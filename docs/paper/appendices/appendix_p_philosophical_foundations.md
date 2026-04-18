@@ -1101,6 +1101,18 @@ The structural parallel is precise:
 
 One disanalogy sharpens the result: we can prove $G$ true by stepping outside $\mathcal{F}$ into a stronger meta-system. For $Q$, there is no "outside $\mathcal{U}$" to step into. The totality contains all possible answerers. This closure is absolute.
 
+#### Gödel, Local Independence, and Global Admissibility
+
+**Remark P.3.5.8.1 (Gödel, Local Independence, and Global Admissibility).** Gödel's incompleteness theorems do not disappear under PU. In ordinary formal settings one can often decide a particular independent sentence by passing to a stronger axiom system. But this maneuver is local: if the strengthened theory is again effectively axiomatized and sufficiently expressive, incompleteness reappears at the new level. The familiar pattern is therefore not final escape but statement-by-statement strengthening.
+
+What PU adds is different. The framework does not claim to have found a magical axiom that abolishes incompleteness. It introduces a global admissibility constraint on what counts as a legitimate completion for an embedded predictive system. The question shifts from "Can one append further axioms until a target sentence becomes decidable?" to "Which extensions remain operationally admissible for a specifier that is itself contained in the totality it seeks to specify?" In this sense PU replaces ad hoc axiom repair with a principled selection problem.
+
+This distinction matters decisively for the fundamental question. For an ordinary undecidable sentence, a theorist may move to a stronger meta-system because both the sentence and the theorist are situated within a wider formal environment. For the totality question, however, every answerer, every specification, and every internally available strengthening remains inside $\mathcal{U}$ (Theorem P.3.5.1). The usual Gödelian strategy of local strengthening therefore cannot deliver a final internal closure. The obstruction is no longer merely that one theory is incomplete, but that the answerer cannot step outside the totality whose complete specification is being demanded.
+
+The contribution of PU is thus metatheoretic rather than anti-Gödelian. The framework does not refute incompleteness; it identifies a class of self-inclusive totality questions for which the familiar cat-and-mouse sequence of local axiomatic strengthening is structurally inadequate. What replaces it is a global admissibility principle grounded in prediction, containment, finite implementation, and the distinction between complete and merely partial specification. The result is not that the fundamental question receives an ordinary complete answer, but that the demand for such an internally totalizing answer is itself shown to be structurally unrealizable.
+
+In that precise sense, PU offers a resolution of the fundamental question: not by producing a final descriptive closure, but by proving why the demand for such a closure outruns the admissible capacities of any embedded predictive system.
+
 The question thus occupies a distinctive logical position:
 
 - *Meaningful:* The question is grasped by any knowledge system capable of formulating it.
@@ -1411,6 +1423,10 @@ The following table summarizes how the PU observer concept relates to existing i
 | Measurement asymmetry? | Implicit | No | No | Implicit | No | Proved (Thm M.10.5) |
 | Wigner's Friend resolved? | No (ambiguous) | Dissolved (all branches) | Partial | Dissolved (subjective) | Dissolved (relational) | Resolved (Thm M.6.1) |
 
+Two distinct admissibility criteria operate here, and it is important not to conflate them. The first is the *temporal* criterion invoked in Section 14.2.2: an interpretive ontology that makes future events into ontologically active inputs to present dynamics, or that replaces the forward predictive loop with an all-at-once global consistency constraint, falls outside PU's admissible class. Copenhagen, Everettian, Bohmian, QBist, relational, GRW, histories, modal, and statistical interpretations are not targeted by the temporal criterion, since none of them require future-to-past influence as part of their basic kinematics. The second, more general criterion is the *Artifact Identification Criterion* of Section 14.2.4: a formal feature carries physical content only if specifying or distinguishing it respects finite channel capacity ($C_{\max} < \ln d_0$, Theorem E.2), the irreducible cycle cost ($\varepsilon \ge \ln 2$, Theorem 31), self-referential limitation (SPAP, Theorems 10–11), and operational finite resolution ($\delta > 0$, Appendix Q).
+
+Under the artifact criterion, PU's disagreement with the Everettian family is of a different character than with the retrocausal family. The disagreement is *not* about dynamics: Everettian unitary evolution is forward-evolving and empirically equivalent to ordinary quantum mechanics on the operational content, so no physics experiment could distinguish them. The disagreement is that the *ontological surplus* of the Everettian picture — an exact branch decomposition of the universal wavefunction treated as a physically instantiated totality beyond any finite perspectival record — cannot be specified within PU's admissibility class. Resolving the exact branch structure and all branch-indexed records demands capacity beyond $C_{\max}$ and distinctions below $\delta$; treating every branch as a completed physical actualization while avoiding any update cost also conflicts with the irreducible actualization cost $\varepsilon \ge \ln 2$. The surplus therefore falls under the artifact criterion in the same structural sense as classical singularities do in Section 14.2.4: it is a feature of the continuum formalism, not of any physically instantiated predictive universe. PU accepts the empirical content of universal unitarity (indeed it derives unitarity in Theorem E.9.5) and the relative-state formal structure, and replaces the branching ontology with the perspective manifold $\Sigma$ together with the 'Evolve' actualization mechanism. The same artifact reading applies to the continuum configuration space of fundamental Bohmian mechanics, exact continuously tunable collapse parameters in GRW, and the ontic future boundary of retrocausal readings — in each case PU preserves the operational content and rejects only the continuum/ontological surplus that fails the criterion.
+
 The PU framework is the first to provide a complete formal specification: what an observer is (Definition P.5.8.1), what it must minimally be (Definition 23), what it cannot do (SPAP, Theorems 10–11), what observation costs (Theorem 31, Theorem M.10.3), and how observers of different complexity relate to each other and to the same information (Theorem M.10.5, §M.6.10).
 
 ## P.6 Physical Instantiation: The Bridge from Logic to Physics
@@ -1502,7 +1518,7 @@ The correspondences are:
 |:---------------|:--------|:-------------------------------|
 | **SPAP** | $\varepsilon_{SPAP} = \ln 2$ | Foundational: logical entropy quantum of self-referential prediction; physical instantiation incurs $\varepsilon \ge \varepsilon_{SPAP}$ (Thm 10–11, Thm 31) |
 | **Shannon** | $H = -\sum_i p_i \ln p_i$ | Generalization: cost of distinguishing among $n$ states |
-| **Thermodynamic** | $dS = \delta Q / T$ | Landauer equivalence: same quantity, different units |
+| **Thermodynamic** | $dS = \delta Q / T$ | Landauer equivalence: shared counting structure under unit conversion |
 | **von Neumann** | $S = -\mathrm{tr}(\rho \ln \rho)$ | Quantum generalization preserving operational meaning |
 | **Bekenstein-Hawking** | $S_{BH} = \mathcal{A}/4G$ | Geometric scaling of channel capacity (Thms E.3, E.5) |
 
@@ -1600,7 +1616,7 @@ The Page curve is a signature of unitary evolution. Its emergence from PCE dynam
 
 ### P.6.5.5 The Conversion Factors
 
-The apparent multiplicity of entropies arises from unit conversion between operational domains, not from conceptual distinction:
+The apparent multiplicity of entropies arises from domain-specific realization and unit conversion, not from distinct foundational counting structures:
 
 | Conversion | Formula | Physical Meaning |
 |:-----------|:--------|:-----------------|
@@ -1608,7 +1624,7 @@ The apparent multiplicity of entropies arises from unit conversion between opera
 | Information ↔ Heat | $Q = k_B T \cdot I$ | Minimum energy cost to erase $I$ nats of information at temperature $T$ (for $I$ bits: $Q = k_B T (\ln 2)\,I$) |
 | Information ↔ Geometry | $I \cdot L_P^2 = I \cdot G\hbar/c^3$ | Planck area converts information to geometric area |
 
-The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains. Within the framework, these constants are constrained by derived relationships: Equation E.9 establishes $G$ in terms of $\hbar$, $c$, and the information-theoretic quantities $\delta$, $\eta$, $\chi$, and $C_{\max}$.
+The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains, while $\varepsilon_{SPAP}=\ln 2$ provides the fundamental entropy quantum of the SPAP update cycle. Within the framework, these constants are constrained by derived relationships: Equation E.9 establishes $G$ in terms of $\hbar$, $c$, and the information-theoretic quantities $\delta$, $\eta$, $\chi$, and $C_{\max}$.
 
 ### P.6.5.5a The Action-Entropy-Information Relations
 
@@ -1692,15 +1708,15 @@ The entropy unification provides rigorous grounding for conjectures that have sh
 
 **The Contribution of the PU Framework:**
 
-The framework achieves what these pioneers conjectured but could not derive from first principles: that the entropy of a black hole is not merely analogous to thermodynamic entropy but *is* thermodynamic entropy, arising from the same information-theoretic foundation that governs heat engines and communication channels.
+The framework achieves what these pioneers conjectured but could not derive from first principles: that black-hole entropy and thermodynamic entropy are linked by the same underlying counting structure, with the Bekenstein-Hawking expression furnishing the gravitational realization of that structure.
 
-The derivation chain—from SPAP through Landauer to channel capacity to area law—makes this identity explicit and traceable:
+The derivation chain—from SPAP through Landauer to channel capacity to area law—makes this correspondence explicit and traceable:
 
 $$\varepsilon_{SPAP} = \ln 2 \to f_{RID} < 1 \to C_{\max} < 3\ln 2 \to \sigma_{link} \to \frac{1}{4G} \to S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 This chain ultimately determines the relationship between the Planck scale and the strength of gravity.
 
-The unification explains why black hole thermodynamics works: horizons are information-capacity boundaries, and the Bekenstein-Hawking entropy counts the Shannon entropy of the channel capacity across the boundary, measured in Planck units. The "unreasonable effectiveness" of thermodynamic reasoning in gravitational physics is not unreasonable—it is the inevitable consequence of entropy being one.
+The unification explains why black hole thermodynamics works: horizons are information-capacity boundaries, and the Bekenstein-Hawking entropy counts the Shannon entropy of the channel capacity across the boundary, measured in Planck units. The "unreasonable effectiveness" of thermodynamic reasoning in gravitational physics is therefore not unreasonable—it reflects the same counting structure reappearing in a geometric domain.
 
 ### P.6.5.7 Irreversibility and Temporal Orientation
 
@@ -1751,9 +1767,9 @@ The mode-channel correspondence (Theorem Z.10) makes this unity explicit. The nu
 
 Both processes solve the same problem: finding structures optimal for prediction under finite resources. They arrive at the same answer because they *are* the same optimization, approached from different directions. 
 
-The "unreasonable effectiveness" dissolves once the common foundation is recognized. Mathematics emerges from prediction as the articulation of its operational structure; physics emerges from prediction as its thermodynamic instantiation. The correspondence between them is the correspondence of a single activity with itself, viewed at different levels of abstraction.
+The "unreasonable effectiveness" dissolves once the common foundation is recognized. Mathematics is the abstract articulation of predictive structure; physics is that same predictive structure under thermodynamic instantiation and finite-resource constraint. The correspondence between them is therefore not accidental but a consequence of their shared origin in prediction and their shared PCE selection of optimal structures.
 
-Wigner asked why the language of mathematics is appropriate for physics. The framework's answer: both *are* the language of prediction—one expressing what prediction can do, the other expressing what prediction does do under resource constraints—and both are constrained by PCE to select the same optimal structures. The effectiveness is not unreasonable but inevitable: mathematical logic is imbued in the predictor, and physics is the predictor's embodied operation.
+Wigner asked why the language of mathematics is appropriate for physics. The framework's answer is that both domains are organized by the same predictive constraints, with physics differing from mathematics only by the additional requirement of physical implementation. The effectiveness is not unreasonable but inevitable at the level of structure, while the specific realized branch is fixed by PPI and PCE.
 
 ### P.7.2 The Complete Derivation Chain
 
@@ -2552,27 +2568,57 @@ This explains the apparent continuity of consciousness across species and develo
 
 Friston's free energy principle [Friston 2010] proposes that biological systems minimize variational free energy. The PU framework reveals structural parallels between the two approaches.
 
-### P.8.9a.8.1 Free Energy as Structurally Analogous to PCE
+### P.8.9a.8.1 Free Energy as an Inferential Restriction of PCE
 
-**Theorem P.8.9a.8 (Structural Analogy between Free Energy and PCE).** The variational free energy $F$ minimized under Friston's principle is structurally analogous to a component of the PCE potential $V(x)$ (Definition D.1) restricted to the sensory-motor domain.
+**Theorem P.8.9a.8 (Variational Free Energy as the Inferential Restriction of PCE).** Fix a sensory-motor architecture and restrict the PCE potential
+$$
+V(x)=V_{op}(x)+V_{prop}(x)-V_{benefit}(x)+V_{penalty}(x)
+$$
+to a branch on which the propagation architecture and penalty terms are held fixed, while only inferential state assignment varies. Let hidden states be $\theta$, observations be $o$, prior $p(\theta)$, likelihood $p(o\mid \theta)$, and recognition density $q(\theta)$. Define the variable inferential restriction
+$$
+V^{\mathrm{inf}}_{\mathrm{PCE}}[q;o]
+:=
+D_{KL}\!\big[q(\theta)\,\|\,p(\theta)\big]
+-\mathbb{E}_{q}\!\big[\ln p(o\mid \theta)\big].
+$$
+Then
+$$
+V^{\mathrm{inf}}_{\mathrm{PCE}}[q;o]
+=
+\mathbb{E}_{q}\!\big[\ln q(\theta)-\ln p(o,\theta)\big]
+=
+F[q;o].
+$$
+Hence, on the fixed-architecture inferential branch, the variable part of variational free-energy minimization is exactly PCE minimization.
 
-*Analysis.* The variational free energy is:
+*Proof.* Using $p(o,\theta)=p(o\mid\theta)p(\theta)$,
+$$
+\mathbb{E}_{q}[\ln q(\theta)-\ln p(o,\theta)]
+=
+\mathbb{E}_{q}[\ln q(\theta)-\ln p(\theta)-\ln p(o\mid\theta)]
+=
+D_{KL}[q\|p(\theta)]-\mathbb{E}_{q}[\ln p(o\mid\theta)].
+$$
+This is precisely $V^{\mathrm{inf}}_{\mathrm{PCE}}[q;o]$. Fixed propagation and penalty contributions add only constants on this restricted branch and therefore do not affect the minimizing $q$. ∎
 
-$$F = D_{KL}[q(\theta) \| p(\theta | o)] - \ln p(o)$$
+**Corollary P.8.9a.8.1 (Thermodynamic Grounding of the Complexity Term).** Any physical realization of a nontrivial update implementing inferential refinement or state reduction on this branch inherits the SPAP/Landauer lower bound $\varepsilon \ge \ln 2$ per irreducible update cycle. Thus the inferential complexity term is thermodynamically grounded at the implementation level rather than merely formal.
 
-where $q(\theta)$ is an approximate posterior over hidden states $\theta$ given observations $o$. This decomposes as:
+*Remark: Scope of Exactness.* The equality above is an exact restricted-branch statement. It does not identify the full network PCE dynamics with variational free energy; it identifies the inferential subfunctional obtained after architecture, propagation, and penalty terms are fixed.
 
-$$F = \underbrace{D_{KL}[q \| p(\theta)]}_{\text{complexity}} + \underbrace{\mathbb{E}_q[-\ln p(o|\theta)]}_{\text{accuracy}}$$
+*Remark: Scope of Disagreement.* The equality above identifies a functional; it does not identify an optimization problem. The *full* PCE objective is minimized subject to the Space of Becoming constraint $\alpha < PP < \beta$ (Axiom 3, Theorem 8, Theorem 9) and, more strongly, subject to the SPAP hard upper bound $PP < \alpha_{SPAP} < 1$ (Theorems 10–11). Friston's variational free energy, taken as a global inferential objective, has no PU-native analogue of the hard upper viability bound $\beta$ or of the SPAP ceiling $\alpha_{SPAP}$. Minimizing $F$ with respect to the recognition density $q$ tightens an upper bound on surprise and, at the optimum where $q$ matches the posterior $p(\theta\mid o)$, yields $F = -\ln p(o)$ [Friston 2010]. Only an unconstrained zero-surprise reading of the free-energy program — in which $-\ln p(o)$ itself is driven toward zero through joint selection of actions, observations, and generative model — would correspond to the endpoint of perfect prediction that PU forbids. PU's claim is that any such endpoint lies outside the admissible class: by Theorem 14, the verification/update resources required to approach $PP = \alpha_{SPAP}$ to within additive accuracy $\delta_{SPAP}$ grow as $\Omega(\log(1/\delta_{SPAP})/\delta_{SPAP}^2)$; by Corollary 14.1, no finite-budget predictive system can sustain the approach. The perfect-prediction limit is therefore not merely unreached in practice; it is *structurally inaccessible* within the PU admissibility class.
 
-The PCE potential (Definition D.1) has the structure:
+This reframes the relationship between the two programs. Friston's functional correctly captures the local inferential update on a fixed-architecture branch, and the equality above is exact on that branch. PU's disagreement concerns the status of the global objective and its admissibility constraints. Standard active-inference formulations introduce prior preferences, expected free energy, and epistemic value to avoid a naive zero-surprise reading and to recover exploration [Friston et al. 2017]; PU's stronger claim is that the exclusion of zero-surprise stasis is not a behavioral correction added at the policy level but follows from the axiomatic viability interval $\alpha < PP < \beta$ together with SPAP. Thus PU does not reject the local variational update; it rejects any interpretation of global free-energy minimization as convergence toward perfect prediction or cost-free closure. The relevant mapping is:
 
-$$V(x) = V_{op}(x) + V_{prop}(x) - V_{benefit}(x)$$
+| Feature | Variational free energy program | PCE / POP under SPAP |
+|:--------|:--------------------------------|:---------------------|
+| Local inferential objective | $F[q;o]$, upper bound on surprise; attains $-\ln p(o)$ when $q = p(\theta\mid o)$ | $V^{\mathrm{inf}}_{\mathrm{PCE}}[q;o]$ (equal to $F$ on the fixed-architecture branch) |
+| Unconstrained zero-surprise endpoint | If read as literal global surprise elimination: $-\ln p(o)\to 0$ and perfect prediction | Forbidden by SPAP; unreachable under finite budget (Theorem 14, Corollary 14.1) |
+| Viability lower bound $\alpha$ | No fundamental bound; avoidance of degenerate fixed points is introduced via prior preferences and expected free energy | Fundamental (Theorem 8, Axiom 3) |
+| Viability upper bound $\beta$ | No PU-native hard upper bound; active inference uses preferences and expected free energy rather than a SPAP ceiling | Fundamental (Theorem 9, Axiom 3); $\beta < \alpha_{SPAP} < 1$ (Remark 1, §3.3.4) |
+| Self-referential limit | Not represented | SPAP: $\alpha_{SPAP} < 1$ (Theorems 10–11) |
+| Physical cost of the complexity term | Not specified | $\varepsilon \ge \ln 2$ per irreducible update cycle (Theorem 31; Corollary P.8.9a.8.1) |
 
-The structural correspondence is:
-- $D_{KL}[q \| p(\theta)] \leftrightarrow V_{op}$ (model complexity cost)
-- $\mathbb{E}_q[-\ln p(o|\theta)] \leftrightarrow -V_{benefit}$ (negative predictive quality)
-
-*Remark: Scope of Analogy.* This correspondence is structural, not operational equivalence. The free energy principle operates on probability distributions $q(\theta)$; the PCE potential operates on network configurations $x$. Both minimize a functional with the structure [complexity cost] + [accuracy term], suggesting shared optimization principles.
+The table makes the division precise. Where Friston's program and PCE overlap — the inferential subfunctional on a fixed architecture — they coincide exactly. Where they differ — the global objective, its admissibility constraints, and the viability structure surrounding it — PCE supplies constraints that are absent from the bare variational functional. The correction has a definite direction: PCE adds, at the axiomatic level, the viability bounds and self-referential limits that active inference reintroduces through policy-level machinery. In that sense, PU does not merely thermodynamically ground active inference; it supplies the axioms — viability bounds and SPAP — without which global free-energy minimization, read as convergence to perfect prediction, terminates in a state that no predictive universe can instantiate.
 
 ### P.8.9a.8.2 What PU Adds Beyond Free Energy
 
@@ -4263,7 +4309,7 @@ The Moonshine correspondence is not a coincidence but a manifestation of PCE opt
 
 As stated in Section P.7 of Appendix P:
 
-> "The 'unreasonable effectiveness' dissolves once the common foundation is recognized. Mathematics emerges from prediction as the articulation of its operational structure; physics emerges from prediction as its thermodynamic instantiation. The correspondence between them is the correspondence of a single activity with itself, viewed at different levels of abstraction."
+> "The 'unreasonable effectiveness' dissolves once the common foundation is recognized. Mathematics is the abstract articulation of predictive structure; physics is that same predictive structure under thermodynamic instantiation and finite-resource constraint. The correspondence between them is therefore not accidental but a consequence of their shared origin in prediction and their shared PCE selection of optimal structures."
 
 Monstrous Moonshine is a theorem about this correspondence—it states that the symmetry of optimal prediction (the Monster) encodes the structure of optimal modular functions (the McKay-Thompson series). The connection follows from their common origin in PCE optimization.
 

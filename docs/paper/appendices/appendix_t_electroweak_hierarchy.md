@@ -1895,6 +1895,8 @@ $$
 \boxed{\ln\!\left(\frac{m_j}{m_i}\right) = \alpha \, d^2_{E_8}(r_i,r_j), \qquad \alpha = \frac{1}{16\,\sigma_B^2}}
 $$
 
+**Scope.** For Dirac-type generation sectors this equation is used as a pairwise mass-ratio law on path-additive triads. In the Majorana self-conjugate neutrino sector, the same geometric suppression is applied in the anchored form of Theorem T.24.11; the third $A_2$ edge controls mixing geometry and is not an independent mass-ratio equation.
+
 where $\sigma_B^2$ is the variance (per Bures-orthonormal direction) of the generation-localizing Gaussian on the interface orbit $\mathrm{Gr}(2,8)$ at the attractor. Isotropy and capacity equipartition across the $M=24$ interface directions fix
 $$
 \sigma_B^2 = \frac{1}{24} \quad\Longrightarrow\quad \alpha_{\mathrm{UV}} = \frac{24}{16} = \frac{3}{2},
@@ -4559,7 +4561,11 @@ The allowed $E_8$ inner products between distinct roots are $\langle r_i, r_j \r
 
 **Constraint 2** (Triangle Closure). The Gram matrix must be positive semi-definite:
 
-$$G = \begin{pmatrix} 2 & \langle r_3, r_2 \rangle & \langle r_3, r_1 \rangle \ \langle r_3, r_2 \rangle & 2 & \langle r_2, r_1 \rangle \ \langle r_3, r_1 \rangle & \langle r_2, r_1 \rangle & 2 \end{pmatrix}$$
+$$G = \begin{pmatrix}
+2 & \langle r_3, r_2 \rangle & \langle r_3, r_1 \rangle \\
+\langle r_3, r_2 \rangle & 2 & \langle r_2, r_1 \rangle \\
+\langle r_3, r_1 \rangle & \langle r_2, r_1 \rangle & 2
+\end{pmatrix}$$
 
 **Lemma T.24.6** (Gram Determinant Formula). *With $a = \langle r_3, r_2 \rangle$, $b = \langle r_3, r_1 \rangle$, $c = \langle r_2, r_1 \rangle$:*
 
@@ -4692,9 +4698,43 @@ $$r_3 - r_1 = (1, 2, 1, 0, \ldots) \Rightarrow d^2(r_3, r_1) = 1 + 4 + 1 = 6 \qu
 $$r_2 - r_1 = (1, 1, 2, 0, \ldots) \Rightarrow d^2(r_2, r_1) = 1 + 1 + 4 = 6 \quad \checkmark$$
 
 **Gram Matrix:**
-$$G = \begin{pmatrix} 2 & 1 & -1 \ 1 & 2 & -1 \ -1 & -1 & 2 \end{pmatrix}$$
+$$G = \begin{pmatrix}
+2 & 1 & -1 \\
+1 & 2 & -1 \\
+-1 & -1 & 2
+\end{pmatrix}$$
 
 **Eigenvalues:** ${1, 1, 4}$. All positive, confirming positive-definiteness.
+
+**Lemma T.24.10a (Obstruction to a Fully Pairwise Majorana Mass Law).** Assume there exists a single coefficient $\alpha_\nu>0$ such that the three oriented ratios
+$$
+\ln\!\frac{m_3}{m_2}=\alpha_\nu d^2_{32},\qquad
+\ln\!\frac{m_3}{m_1}=\alpha_\nu d^2_{31},\qquad
+\ln\!\frac{m_2}{m_1}=\alpha_\nu d^2_{21}
+$$
+all hold, and assume the Majorana triad
+$$
+(d^2_{32},d^2_{31},d^2_{21})=(2,6,6).
+$$
+Then no positive masses $m_1,m_2,m_3$ satisfy these three relations simultaneously.
+
+*Proof.* Logarithmic ratios are additive:
+$$
+\ln\!\frac{m_3}{m_1}
+=
+\ln\!\frac{m_3}{m_2}
++
+\ln\!\frac{m_2}{m_1}.
+$$
+Under the assumed pairwise law this implies
+$$
+d^2_{31}=d^2_{32}+d^2_{21}.
+$$
+But for the Majorana triad $(2,6,6)$,
+$$
+6\neq 2+6.
+$$
+Contradiction. ∎
 
 -----
 
@@ -4702,34 +4742,93 @@ $$G = \begin{pmatrix} 2 & 1 & -1 \ 1 & 2 & -1 \ -1 & -1 & 2 \end{pmatrix}$$
 
 ### T.24.11 Hierarchy from $E_8$ Geometry
 
-**Theorem T.24.11** (Normal Hierarchy). *The neutrino triad $(2, 6, 6)$ determines Normal Hierarchy: $m_1 < m_2 < m_3$.*
+**Theorem T.24.11** (Anchored Majorana Neutrino Hierarchy). *On the minimal PU branch,*
+$$
+d_0=8,\qquad a=2,\qquad b=6,
+$$
+*and the selected Majorana triad is*
+$$
+T_\nu=(d^2_{32},d^2_{31},d^2_{21})=(a,b,b)=(2,6,6).
+$$
+*Define the anchored hierarchy depths relative to the heaviest generation by*
+$$
+\Delta_2:=d^2_{32}=a=2,\qquad \Delta_1:=d^2_{31}=b=6.
+$$
+*Assume the Majorana neutrino masses obey the anchored suppression law*
+$$
+\ln\!\frac{m_3}{m_i}=\alpha_\nu \Delta_i,\qquad i\in\{1,2\},
+$$
+*with $\alpha_\nu>0$. Then:*
 
-*Proof.*
+1. *The spectrum is normally ordered:*
+$$
+m_1<m_2<m_3.
+$$
 
-**Step 1** (Mass-Distance Relation). From Theorem T.39 (Section T.21), the mass relation on the $E_8$ generation manifold is:
+2. *The neutrino hierarchy invariant is*
+$$
+\mathcal R_\nu
+:=
+\frac{\ln(m_3/m_1)}{\ln(m_3/m_2)}
+=
+\frac{\Delta_1}{\Delta_2}
+=
+\frac{b}{a}
+=
+3.
+$$
 
-$$\ln\left(\frac{m_j}{m_i}\right) = \alpha_\nu \cdot d^2_{E_8}(r_i, r_j)$$
+3. *If the Majorana reduction coefficient is*
+$$
+\alpha_\nu=\frac{\sqrt3}{2},
+$$
+*then the mass ratios are fixed:*
+$$
+\frac{m_3}{m_2}=e^{\sqrt3},\qquad
+\frac{m_3}{m_1}=e^{3\sqrt3},\qquad
+\frac{m_2}{m_1}=e^{2\sqrt3}.
+$$
 
-where $\alpha_\nu > 0$ is the neutrino sector hierarchy coefficient.
+*Proof.* Since $b>a>0$ and $\alpha_\nu>0$,
+$$
+\ln\!\frac{m_3}{m_1}=\alpha_\nu b
+>
+\ln\!\frac{m_3}{m_2}=\alpha_\nu a
+>
+0.
+$$
+Hence
+$$
+\frac{m_3}{m_1}>\frac{m_3}{m_2}>1,
+$$
+so $m_1<m_2<m_3$. This proves normal hierarchy.
 
-**Step 2** (Triad Values). For $T_\nu = (2, 6, 6)$:
+The invariant is immediate:
+$$
+\mathcal R_\nu
+=
+\frac{\alpha_\nu b}{\alpha_\nu a}
+=
+\frac{b}{a}
+=
+3.
+$$
 
-- $d^2_{32} = d^2(r_3, r_2) = 2$
-- $d^2_{31} = d^2(r_3, r_1) = 6$
-- $d^2_{21} = d^2(r_2, r_1) = 6$
+If $\alpha_\nu=\sqrt3/2$, then
+$$
+\ln\!\frac{m_3}{m_2}=\frac{\sqrt3}{2}\cdot 2=\sqrt3,
+\qquad
+\ln\!\frac{m_3}{m_1}=\frac{\sqrt3}{2}\cdot 6=3\sqrt3,
+$$
+and subtracting gives
+$$
+\ln\!\frac{m_2}{m_1}=2\sqrt3.
+$$
+Exponentiating yields the stated ratios. ∎
 
-**Step 3** (Mass Ratios). With generation 3 as the heaviest:
-$$\ln(m_3/m_2) = \alpha_\nu \cdot d^2_{32} = 2\alpha_\nu$$
-$$\ln(m_3/m_1) = \alpha_\nu \cdot d^2_{31} = 6\alpha_\nu$$
+**Corollary T.24.11.1** (Impossibility of Inverted Hierarchy). *Within the anchored Majorana hierarchy branch with $a=2$, $b=6$, and $\alpha_\nu>0$, inverted hierarchy is excluded.*
 
-**Step 4** (Ordering). Since $\alpha_\nu > 0$ and $6\alpha_\nu > 2\alpha_\nu > 0$:
-$$\frac{m_3}{m_1} > \frac{m_3}{m_2} > 1$$
-
-This implies $m_1 < m_2 < m_3$: **Normal Hierarchy**.
-
-**Corollary T.24.11.1** (Impossibility of Inverted Hierarchy). *Within the $E_8$ framework with large atmospheric mixing, Inverted Hierarchy is geometrically excluded.*
-
-*Proof.* Inverted Hierarchy requires $d^2_{31} < d^2_{32}$. But Corollary T.24.8.1 requires $d^2_{32} = 2$ for large atmospheric mixing, and $d^2 = 2$ is the minimum nonzero $E_8$ distance. Combined with the hierarchy convention $d^2_{31} \geq d^2_{32}$, only Normal Hierarchy is possible.
+*Proof.* The anchored law gives $\ln(m_3/m_2)=2\alpha_\nu>0$ and $\ln(m_3/m_1)=6\alpha_\nu>0$, with $6\alpha_\nu>2\alpha_\nu$. Therefore $m_3>m_2>m_1$. This ordering is incompatible with inverted hierarchy. ∎
 
 -----
 
@@ -4840,15 +4939,17 @@ This interference structure explains why the neutrino mass scale is neither $v$ 
 
 ### T.24.15 Complete Mass Spectrum
 
-**Theorem T.24.15** (Neutrino Mass Spectrum). *The complete neutrino mass spectrum, derived entirely from $K_0 = 3$:*
+**Theorem T.24.15** (Neutrino Mass Spectrum). *Given the heaviest-state normalization from Theorem T.24.14 and the anchored Majorana hierarchy of Theorem T.24.11, the neutrino mass spectrum is:*
 
 $$\boxed{m_1 = 0.27 \text{ meV}, \quad m_2 = 8.71 \text{ meV}, \quad m_3 = 49.2 \text{ meV}}$$
 
 *Proof.*
 
-**Step 1** (Mass Ratios from $E_8$).
-$$\frac{m_3}{m_2} = e^{\alpha_\nu d^2_{32}} = e^{(\sqrt{3}/2) \cdot 2} = e^{\sqrt{3}} = 5.652$$
-$$\frac{m_3}{m_1} = e^{\alpha_\nu d^2_{31}} = e^{(\sqrt{3}/2) \cdot 6} = e^{3\sqrt{3}} = 180.6$$
+**Step 1** (Anchored Mass Ratios from the Heaviest State).
+$$\frac{m_3}{m_2} = e^{\alpha_\nu \Delta_2} = e^{(\sqrt{3}/2) \cdot 2} = e^{\sqrt{3}} = 5.652$$
+$$\frac{m_3}{m_1} = e^{\alpha_\nu \Delta_1} = e^{(\sqrt{3}/2) \cdot 6} = e^{3\sqrt{3}} = 180.6$$
+Subtracting anchored logarithms gives
+$$\frac{m_2}{m_1}=e^{2\sqrt3}.$$
 
 **Step 2** (Absolute Masses).
 $$m_2 = \frac{m_3}{5.652} = \frac{49.2}{5.652} = 8.71 \text{ meV}$$
@@ -4892,7 +4993,7 @@ $$\frac{\Delta m^2_{31}}{\Delta m^2_{21}} = \frac{2.42 \times 10^{-3}}{7.58 \tim
 
 |Parameter |Input Uncertainty |Effect on $\Delta m^2_{21}$|Effect on $\theta_{12}$|
 |:----------------|:--------------------------------|:--------------------------|:----------------------|
-|$\alpha = 3/2$ |±2% (from $\delta_{\text{geom}}$)|±4% |±0.5° |
+|$\alpha_\nu = \sqrt3/2$ inherited from $\alpha_{\text{UV}}=3/2$ |±2% (from $\delta_{\text{geom}}$)|±4% |±0.5° |
 |$d^2_{ij}$ |Exact (discrete $E_8$) |0 |0 |
 |$M_R$ |±5% (from $y_3$ running) |±10% |0 |
 |$f_{\text{sinc}}$|< 0.1% |< 0.2% |< 0.1° |

@@ -1163,6 +1163,22 @@ $$S \leq \frac{2\pi R E}{\hbar c}$$
 
 At the gravitational limit $E = Mc^2 = Rc^4/(2G)$, this reduces to $S \leq \mathcal{A}/(4L_P^2) = \mathcal{A}/(4G)$ in natural units. ∎
 
+**Corollary E.9.4a (Bekenstein Bound Recovery).** For any system of total energy $E$ confined within radius $R$, the maximum exteriorly accessible entropy satisfies
+$$
+S \le \frac{2\pi R E}{\hbar c}.
+$$
+At the gravitational threshold
+$$
+E=\frac{Rc^4}{2G},
+$$
+this reduces to
+$$
+S \le \frac{\mathcal A}{4L_P^2},
+$$
+or, in natural units, $S \le \mathcal A/(4G)$, coinciding with the PU boundary entropy law.
+
+*Proof.* This is Step 3 of Theorem E.9.4 written as a named recovery corollary. ∎
+
 **Corollary E.9.1 (Holographic Principle).** The degrees of freedom describing a region $A$ are fully encoded on its boundary $\partial A$:
 
 $$\dim(\mathcal{H}_A) \leq \exp\left(\frac{\mathcal{A}}{4G}\right)$$

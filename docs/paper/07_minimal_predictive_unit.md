@@ -407,6 +407,18 @@ Within the framework, $\hat{H}$ admits the following physical interpretation:
 
 These identifications connect the abstract generator of unitary evolution to the physical resource requirements of the predictive loop.
 
+**Corollary 29.1 (Margolus–Levitin Recovery on the Unitary Internal Branch).** For internal prediction dynamics
+$$
+i\hbar\,\partial_t |\psi\rangle = \hat H |\psi\rangle,
+$$
+with time-independent Hamiltonian bounded below by $E_0$, any transition between orthogonal prediction states obeys the standard quantum speed limit
+$$
+t_\perp \ge \frac{\pi\hbar}{2\langle \hat H - E_0\rangle}.
+$$
+Within PU, this is the ordinary unitary-branch orthogonalization limit, compatible with the more primitive irreversible-cycle action bound $\Delta\mathcal S_i\ge \hbar\ln 2$.
+
+*Proof.* By Definition 26 the internal prediction branch is ordinary unitary dynamics on $\mathcal H_0$, and by Theorem 29 the Hamiltonian $\hat H$ is the operational energy generator with a nonzero minimum processing timescale. Applying the standard Margolus–Levitin orthogonalization bound to that unitary branch yields the stated inequality. ∎
+
 **7.3.3.3 Definition 27 (Def 27): Interaction and Perspectival Actualization ('Evolve'/ND-RID)**
 
 Upon significant interaction $N(t)$ with its environment or other MPUs (triggering the verification phase $V$), the MPU undergoes a stochastic 'Evolve' event. This event instantiates Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6), resulting in both the actualization of the state amplitude and a shift in perspective, corresponding to verification ($b_v$) and update initiation ($D_{cyc}$). Appendix M (Section M.3.2) provides the formal mathematical description of this process as a stochastic transition characterized by a probability measure $d\mathbb{P}(f | i, N, \Delta t)$. The process maps the pre-interaction state to a post-interaction state probabilistically:
@@ -531,7 +543,7 @@ Landauer's principle (1961) establishes the fundamental equivalence between logi
 
 > Any physical process that maps $N$ distinguishable input states to $M < N$ distinguishable output states must increase the entropy of the environment by at least $k_B \ln(N/M)$, with equality achievable in the quasi-static limit.
 
-This is not merely a constraint on physical implementations—it is an identity statement: the information-theoretic entropy of state reduction and the thermodynamic entropy of heat production are the same quantity measured in different units. The conversion factor is Boltzmann's constant $k_B$.
+This is not merely a constraint on physical implementations; it fixes the unit conversion between logical state reduction and thermodynamic entropy production. The underlying counting structure is the same, while the physical entropy is obtained by multiplying the dimensionless information cost by Boltzmann's constant $k_B$.
 
 For the SPAP 2-to-1 merge:
 
@@ -539,7 +551,7 @@ $$\Delta S_{env} \geq k_B \ln 2$$
 
 The minimum heat dissipation is $Q_{min} = k_B T \ln 2$ per cycle.
 
-**The role of PPI:** The Principle of Physical Instantiation (Definition P.6.2) guarantees that every logical operation within the framework has a physical implementation. Therefore, the Landauer equivalence is not optional but mandatory—SPAP entropy *necessarily* manifests as thermodynamic entropy. This universality is what transforms the Landauer equivalence from a constraint on specific implementations to a framework-wide identity.
+**The role of PPI:** The Principle of Physical Instantiation (Definition P.6.2) guarantees that every logical operation within the framework has a physical implementation. Therefore, Landauer's principle applies universally within PU: every SPAP state reduction has a thermodynamic realization. This universality extends the principle from a statement about specific physical implementations to a framework-wide bridge between logical and thermodynamic entropy accounting.
 
 **Connection:** $S_{thermo} = k_B \varepsilon$ (Landauer equivalence, universal via PPI)
 

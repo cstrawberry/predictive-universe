@@ -576,8 +576,10 @@ These structures are mathematically disjoint: $\text{Gr}(2,8)$ is a continuous c
 
 ### K.6.10 $E_8$ Triad Selection
 
-**Definition K.6.12 (Mass Ratio Invariant).** For three generations with masses $m_3 > m_2 > m_1$:
+**Definition K.6.12 (Mass Ratio Invariant).** For path-additive Dirac-type generation sectors with masses $m_3 > m_2 > m_1$:
 $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}}$$
+
+For Majorana neutrinos, the corresponding invariant is read in the anchored form $\mathcal R_\nu=\Delta_1/\Delta_2=3$ (Theorem T.24.11); the $1\leftrightarrow2$ $A_2$ edge is a mixing-geometry input rather than an independent mass-ratio equation.
 
 **Theorem K.6.13 (Discrete ℛ Values).** The mass ratio invariant takes values in the discrete set:
 $$\mathcal{R} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$$
@@ -815,7 +817,7 @@ $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl}$$
 $$\frac{v}{M_{Pl}} = A_{EW} e^{-38.5} \approx 2 \times 10^{-17}$$
 in excellent agreement with the observed hierarchy.
 
-**Stability Mechanism:** The hierarchy is protected by the discrete structure of the Golay code. Radiative corrections cannot arbitrarily shift $\kappa_{EW}$ because it is determined by the combinatorial properties of the Extended Binary Golay Code $[24, 12, 8]$—specifically, the signal-parity decomposition of M = 24 interface modes. The code parameters $(n=24, k=12, d=8)$ are topological invariants of the PCE-optimal information structure, not continuous parameters subject to quantum corrections.
+**Stability Mechanism:** The hierarchy is protected by the discrete structure of the Golay code. Radiative corrections cannot arbitrarily shift $\kappa_{EW}$ because it is determined by the combinatorial properties of the Extended Binary Golay Code $[24, 12, 8]$—specifically, the rate-$\frac{1}{2}$ 12+12 organization selected on the $M = 24$ interface. The code parameters $(n=24, k=12, d=8)$ are discrete combinatorial invariants of the PCE-optimal information structure, not continuous parameters subject to quantum corrections.
 
 **Technical Details:**
 - The discrete action $S_{EW} = \kappa_{EW}$ counts real configuration space dimensions subject to alignment (Theorem T.4)

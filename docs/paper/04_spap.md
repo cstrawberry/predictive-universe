@@ -291,6 +291,26 @@ then the same asymptotic lower bound transfers to $C_{pred}(\alpha)$.
 
 *Proof:* Appendix B.3 (Theorem B.2) proves the lower bound for the effective verification/update complexity needed to calibrate SPAP-limited performance to additive accuracy $\delta_{SPAP}$. Substituting $\beta=1/\mathcal{T}$ gives the horizon-budget form (13), and substituting $\beta=\delta_{SPAP}$ gives the self-calibrated form (14). The final sentence is the immediate consequence of the explicitly stated comparison hypothesis $C_{pred}(\alpha)\ge C_{\text{uni}}(\delta_{SPAP})$. ∎
 
+**Corollary 14.1 (Finite-Budget Bound on Reflexive Depth).** Let $B_C(T)$ be the total operational complexity budget available to a predictive system over horizon $T$. If each additional self-modeling level incurs minimum overhead $k>0$ as in Theorem 13, and if $B_C(T)\ge c_0$, then any sustainable recursion depth $n(T)$ satisfies
+$$
+n(T)\le \left\lfloor \frac{B_C(T)-c_0}{k}\right\rfloor .
+$$
+Moreover, if the target predictive performance is
+$$
+\alpha = \alpha_{SPAP} - \delta_{SPAP},
+$$
+then the required verification/update overhead is at least
+$$
+\Omega\!\left(\frac{\log(1/\delta_{SPAP})}{\delta_{SPAP}^2}\right)
+$$
+by Theorem 14. Therefore no finite-budget system can sustain unbounded reflexive depth or arbitrarily SPAP-near self-prediction.
+
+*Proof.* Theorem 13 gives $C(M_n)\ge c_0+nk$. Sustainability within budget $B_C(T)$ requires $c_0+nk\le B_C(T)$, yielding the stated depth bound. The SPAP-near lower bound is Theorem 14 with $\alpha=\alpha_{SPAP}-\delta_{SPAP}$. Combining both bounds proves that finite budget excludes both unbounded recursion depth and arbitrarily SPAP-near predictive performance. ∎
+
+**Corollary 14.1a (Operational Self-Modeling Hierarchy).** Predictive systems are stratified by sustainable reflexive depth, and, under PPI plus the SPAP/Landauer lower bound, higher strata require strictly greater physical implementation budget.
+
+*Proof.* Increasing sustainable depth raises the lower bound $c_0+nk$ from Theorem 13. By PPI, physically instantiated nontrivial updates carry SPAP/Landauer cost, so the increased operational complexity entails increased physical implementation budget. ∎
+
 
 **Remark 3: Conceptual Synthesis—Prediction Relativity and its Physical Mechanism.**
 
