@@ -14,6 +14,53 @@ The Predictive Universe framework, particularly the Consciousness Complexity (CC
 - Uncertainty budgets follow the paper-wide canonical T1 (truncation), T2 (threshold/vacuum), T3 (scheme/mapping) decomposition of Appendix T.25.5.3.
 - External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
 
+**13.0a Operational Evidence Standard for CC and Statistical-Influence Tests**
+
+**Definition 13.0a (CC Evidence Triage).** For each Protocol L.1-L.3 or statistical-influence experiment, define three mutually exclusive explanatory classes:
+$$
+H_0=\text{standard quantum/statistical null},
+\qquad
+H_{PU}=\text{PU CC effect under the stated protocol},
+\qquad
+H_{art}=\text{artifact, leakage, optional stopping, or uncontrolled selection}.
+$$
+Before outcome inspection, the protocol must also fix constants
+$$
+B_*>1,
+\qquad
+0<\rho_*<1,
+$$
+and a nonnegative artifact bound
+$$
+B_{art},
+$$
+where $B_*$ is the required support ratio, $\rho_*$ is the maximum allowed artifact fraction, and $B_{art}$ is the preregistered upper bound on the absolute artifact contribution inferred from sham runs, leakage tests, calibration drifts, and negative controls under the same analysis pipeline. A run is classified as **support** only if all of the following hold:
+
+1. the primary endpoint, exclusion rules, stopping rule, and analysis statistic are fixed before outcome inspection;
+2. the blind analysis gives Bayes factors or likelihood ratios satisfying
+$$
+BF_{PU,0}\ge B_*,
+\qquad
+BF_{PU,art}\ge B_*;
+$$
+3. the signed effect agrees with the protocol-level direction predicted before the run;
+4. the residual artifact bound satisfies
+$$
+B_{art}\le \rho_* |\widehat\Delta|,
+$$
+where $\widehat\Delta$ is the blinded primary estimated effect under the preregistered analysis pipeline, and $\rho_*$ and $B_{art}$ are fixed before unblinding;
+5. an independent replication using the same primary endpoint also satisfies items 1-4.
+
+A run is classified as **null** when the preregistered confidence or posterior interval excludes the protocol target effect scale while no artifact class is favored. A run is classified as **failure** when $H_{art}$ is favored, when the sign is inconsistent with the preregistered direction, when the stopping or exclusion rule is changed after outcome inspection, or when the result is not reproducible under the same endpoint.
+
+**Proposition 13.0b (Mutual Exclusivity of Evidence Classes).** Under Definition 13.0a, a completed run cannot be simultaneously classified as support, null, and failure.
+
+*Proof.* Support requires $BF_{PU,0}\ge B_*$ and $BF_{PU,art}\ge B_*$, the preregistered sign, bounded residual artifact, and independent replication. Null requires exclusion of the target effect scale without favoring the artifact class. The first condition is incompatible with exclusion of the target effect scale for the same primary statistic. Failure requires artifact preference, sign inconsistency, post-outcome rule change, or failed replication; each contradicts one of the support requirements. Hence support is disjoint from null and failure. Null and failure are disjoint by definition because null requires no favored artifact class and no protocol-breaking condition, while failure requires at least one such condition. ∎
+
+**Corollary 13.0c (No Single-Run Upgrade for CC Claims).** No single experiment can promote Hypothesis 3 to theorem-level or established empirical status. At most, a single run can enter the support class of Definition 13.0a and become one datum in a replicated evidence ledger.
+
+*Proof.* Definition 13.0a requires independent replication for support, and theorem-level status requires derivation from prior axioms and theorems rather than empirical frequency data. Therefore one run cannot by itself supply either replicated empirical support or theorem-level derivation. ∎
+
 **13.1 Prediction 1: Potential Born-Rule Deviations**
 
 The core testable prediction of the CC hypothesis (Hypothesis 3) is that systems $S$ with sufficiently high aggregate complexity ($C_{agg} > C_{op}$) and non-zero operational $\mathrm{CC}(S)>0$ (Definition 30) can induce statistically significant deviations from the standard Born rule probabilities (Proposition 7) when interacting with a quantum system undergoing an 'Evolve' event (e.g., measurement).

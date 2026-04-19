@@ -1798,6 +1798,8 @@ This appendix establishes the energy accounting, physical mechanisms, and thermo
 
     Dominance validation (Protocol L.3)
 
+    Evidence adjudication for Protocols L.1-L.3 uses the preregistered Section 13.0a triage: support, null, and failure are assigned only by the fixed endpoint, artifact, sign, stopping-rule, and replication criteria stated there.
+
 ### **Medium-term (biological systems, if applicable):**
 
     Operational $C_{\text{agg}}$ proxy development

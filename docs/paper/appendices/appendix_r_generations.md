@@ -472,15 +472,16 @@ is the Golay correction radius.
 $$
 N_g \;=\; 3.
 $$
-The following do **not** enter that theorem and belong to later model layers:
+This statement has role class ExactThreshold / DiscreteMultiplicity in the sense of Convention P.14.1a. The following do **not** enter that theorem and belong to later conditional or model layers:
 1. the identification of generations with specific $E_8$ roots, triads, or wavepackets;
 2. the Yukawa-compression and absolute-mass constructions of Appendix T;
 3. the Berry-holonomy CKM/PMNS phase assignments;
-4. the baryogenesis numerics built from those phase constructions.
+4. seesaw, Majorana, or low-energy oscillation matching assumptions;
+5. the baryogenesis numerics built from those phase constructions.
 
-Consequently, falsifying a texture model, an $E_8$ placement rule, a CKM/PMNS ansatz, or a baryogenesis realization does not by itself refute the theorem-level statement $N_g=3$ unless it also invalidates the anomaly+CP premises of Theorem R.3.4.
+Consequently, falsifying a texture model, an $E_8$ placement rule, a CKM/PMNS ansatz, a neutrino normalization convention, or a baryogenesis realization does not by itself refute the theorem-level statement $N_g=3$ unless it also invalidates the anomaly+CP premises of Theorem R.3.4. Quantitative flavor outputs are therefore reported with the paper-wide T1/T2/T3 protocol: T1 for finite-order and geometric truncations, T2 for vacuum/regularization/threshold and branch dependence, and T3 for scheme, empirical mapping, and discrete identification ambiguity.
 
-*Proof.* Theorem R.3.4 uses only the family-charge anomaly equations together with the requirement that a physical rephasing-invariant CP phase exist; it does not use any $E_8$ placement, Yukawa overlap, Berry-holonomy, seesaw, or baryogenesis machinery. Those ingredients first enter only in later sections of Appendix R and in Appendix T / Appendix Y. The theorem-level structural statement and the later flavor-model constructions are therefore logically separate. ∎
+*Proof.* Theorem R.3.4 uses only the family-charge anomaly equations together with the requirement that a physical rephasing-invariant CP phase exist. It does not use any $E_8$ placement, Yukawa overlap, Berry-holonomy, seesaw, PMNS construction, baryogenesis machinery, or low-energy extraction convention. Those ingredients first enter later sections of Appendix R and in Appendix T / Appendix Y. Since the premise set of Theorem R.3.4 is disjoint from those later model premises, the structural generation-count statement and the later flavor-model constructions have distinct dependency records. The T1/T2/T3 assignment is then the direct specialization of Convention P.14.1c to the flavor variables: omitted hierarchy orders and geodesic approximations are T1, vacuum/threshold/regularization choices are T2, and scheme, empirical extraction, and generation-label identification are T3. ∎
 
 ## R.4 Three-Fold Structure: Topological Derivation and Geometric Compatibility
 

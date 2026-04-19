@@ -964,6 +964,50 @@ $$
 $$
 as a sum of mode-local contributions from the $M$ interface modes.
 
+**Definition T.19b (Finite Electroweak Matching Ledger).** The PU-to-SM electroweak matching ledger is the ordered tuple
+$$
+\mathfrak M_{EW}=\left(\widetilde X,D^{\mathrm{PCE}}_{\widetilde X},\Delta,Z,\delta,\mu_G,\mathbf b,\rho_{\mathrm{pole}},\mathcal S_{\mathrm{RG}}\right),
+$$
+where:
+
+1. $\widetilde X$ and $D^{\mathrm{PCE}}_{\widetilde X}$ define the lifted spectral problem of Definition T.17a.
+2. $\Delta=(\Delta_1,\Delta_2,\Delta_3)$ are the principal lifted spectral thresholds.
+3. $Z_i=1+\Delta_i/24$ are the principal multiplicative matching factors.
+4. $\delta_i$ are the residual finite heavy-threshold shifts after the principal lifted thresholds have been subtracted.
+5. $\mu_G$ is the matching scale used for the PU-to-SM interface.
+6. $\mathbf b=(b_1,b_2,b_3)$ are the SM beta-function coefficients used for running below $\mu_G$.
+7. $\rho_{\mathrm{pole}}$ denotes the finite pole, threshold, and observable-conversion maps used for $m_H$, $m_t$, $v$, and other pole-level quantities.
+8. $\mathcal S_{\mathrm{RG}}$ denotes the renormalization scheme, loop order, decoupling convention, and comparison scale.
+
+With this ledger the inverse gauge couplings are organized as
+$$
+A_i(\mu_G)=\alpha_i^{-1}(\mu_G)=24+\Delta_i+\frac{\delta_i}{2\pi},
+$$
+$$
+A_i(M_Z)=24+\Delta_i+\frac{b_i}{2\pi}\ln\left(\frac{\mu_G}{M_Z}\right)+\frac{\delta_i}{2\pi}
+$$
+at one-loop order, with higher-loop corrections stored in $\mathcal S_{\mathrm{RG}}$ and observable conversions stored in $\rho_{\mathrm{pole}}$.
+
+**Proposition T.19c (No Double Counting in the Electroweak Matching Ledger).** If the principal thresholds $\Delta_i$ are defined by the lifted spectral functional of Definition T.17a and the residual thresholds $\delta_i$ are defined only after subtracting those principal thresholds, then the decomposition
+$$
+A_i(\mu_G)=24+\Delta_i+\frac{\delta_i}{2\pi}
+$$
+is unique for fixed $(\widetilde X,D^{\mathrm{PCE}}_{\widetilde X},\mu_G,\mathcal S_{\mathrm{RG}})$ and contains no double counting between $\Delta_i$ and $\delta_i$.
+
+*Proof.* Fix the lifted operator, matching scale, and scheme. Definition T.17a assigns a definite principal number $\Delta_i$ to each gauge factor whenever the lifted spectral functional is evaluated or retained as target data. The total finite inverse-coupling shift at $\mu_G$ is a single number
+$$
+\Theta_i:=A_i(\mu_G)-24.
+$$
+Defining the residual by
+$$
+\delta_i:=2\pi(\Theta_i-\Delta_i)
+$$
+therefore gives
+$$
+\Theta_i=\Delta_i+\frac{\delta_i}{2\pi}
+$$
+with no freedom left. If a contribution were counted in both $\Delta_i$ and $\delta_i$, replacing $\Delta_i$ by $\Delta_i+x$ and $\delta_i$ by $\delta_i+2\pi x$ would change the reconstructed shift by a drift of $2x$, which vanishes only at $x=0$. If a contribution were omitted from both, the reconstructed shift would differ from $\Theta_i$. Hence the subtraction definition is both unique and exhaustive for the fixed ledger. ∎
+
 **Theorem T.17** (Isotropic Leading Threshold). At leading order in PCE isotropy, the threshold corrections are isotropic:
 $$
 \delta_1 = \delta_2 = \delta_3 =:\delta_{\mathrm{avg}}.
@@ -1363,17 +1407,21 @@ so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently
 |$c_\ell/c_d$ |Normalization constraint |$8/3$ |— |Constraint|
 |$\mathcal{R}$ values |$E_8$ triads |${4/3, 3/2, 2, 3, 4}$ |(discrete) |Derived |
 
-**Uncertainty budget for electroweak outputs.** Each prediction is reported with the canonical T1/T2/T3 decomposition of Section T.25.5.3, where T1 is truncation (PU truncation, geometric approximations, higher-order backreaction), T2 is threshold/vacuum (SM threshold matching at $\mu_G$, decoupling conventions, vacuum/regularization dependence including bounce-determinant normalization), and T3 is scheme/mapping (mass-definition conversions, QED/isospin conventions, nonperturbative mapping, and any discrete identification ambiguity). The table reports $\sigma_{T1}$, $\sigma_{T2}$, $\sigma_{T3}$ separately; rows for which a category is theoretically zero or negligible at the present working order are marked accordingly:
+**Uncertainty budget for electroweak and transferred-prefactor outputs.** Each prediction is reported with the paper-wide T1/T2/T3 decomposition of Convention P.14.1c and Section T.25.5.3. T1 records internal truncation/control, T2 records matching/threshold/branch/bridge/convention dependence, and T3 records empirical or model-mapping dependence. Rows for which a category is absent at the current working order are marked $0$ or negligible; a combined entry is used only when the manuscript has not yet supplied the pipeline needed to split the components.
 
 |Quantity |Central (PU) |$\sigma_{T1}$ |$\sigma_{T2}$ |$\sigma_{T3}$ |$1\sigma$ theory |Dominant category and term |What shrinks it |
 |---------------------|----------------:|----------------:|----------------:|----------------:|----------------:|---------------------------|-------------------------------------------------------------------------------------------------------------|
-|$A_{EW}$ |$1.085$ |$0.005$ |$0$ |$0$ |$0.005$ |T1 determinant-expansion truncation |compute next curvature/Jacobian terms beyond Theorem T.29 |
-|$v$ |$252\ \text{GeV}$|$1.2\ \text{GeV}$|$5\ \text{GeV}$ |$0$ |$5\ \text{GeV}$ |T2 matching/thresholds at $\mu_G$ |full 2-loop matching and threshold accounting at $\mu_G$ |
-|$\sin^2\theta_W(M_Z)$|$0.2312$ |negligible ($O(M^{-1})$ anisotropy) |$0.0015$ |$0$ |$0.0015$ |T2 matching + RG threshold |compute explicit PU threshold spectrum ($\delta_i$) + 2-loop matching/RG + $O(M^{-1})$ anisotropy corrections|
-|$m_H$ |$125\ \text{GeV}$|negligible |$2.5\ \text{GeV}$ (T2+T3 combined) |included in T2 column |$2.5\ \text{GeV}$|T2 threshold matching combined with T3 pole-mass conversion at the present working order (Theorem T.28) |explicit pole-mass conversion and higher-loop thresholds, which also resolve the combined T2+T3 entry into its separate components |
-|$A_{\text{eff}}$ |$0.923$ |$0.004$ |$0.010$ |$0$ |$0.011$ |T2 bounce-determinant/zero-mode normalization |compute ghost/zero-mode normalization under fixed vacuum convention |
+|$A_{EW}$ |$1.084$ |$0.005$ |$0$ |$0$ |$0.005$ |T1 determinant / curvature / Jacobian truncation |compute next curvature/Jacobian terms beyond Theorem T.29 |
+|$v$ |$252\ \text{GeV}$|$1.2\ \text{GeV}$|$5\ \text{GeV}$ |$0$ |$5\ \text{GeV}$ |T2 matching and threshold dependence at $\mu_G$ |full 2-loop matching and threshold accounting at $\mu_G$ |
+|$\sin^2\theta_W(M_Z)$|$0.2312$ |negligible ($O(M^{-1})$ anisotropy) |$0.0015$ |$0$ |$0.0015$ |T2 lifted thresholds, matching, and RG propagation |compute explicit PU threshold spectrum ($\delta_i$) + 2-loop matching/RG + $O(M^{-1})$ anisotropy corrections|
+|$m_H$ |$125\ \text{GeV}$|negligible |$2.5\ \text{GeV}$ (T2+T3 combined) |included in T2 column |$2.5\ \text{GeV}$|T2 threshold matching combined with T3 pole-mass / observable conversion at the present working order (Theorem T.28) |explicit pole-mass conversion and higher-loop thresholds, which also resolve the combined T2+T3 entry into separate components |
+|$A_{\text{eff}}$ |$0.923$ |$0.004$ |$0.010$ |$0$ at fixed forward-evaluation convention |$0.011$ |T2 bounce-determinant / zero-mode / finite-volume prefactor convention |compute ghost/zero-mode normalization under a fixed vacuum convention and derive the prefactor internally |
 
-The $1\sigma$ theory column is the quadrature sum $\sqrt{\sigma_{T1}^2+\sigma_{T2}^2+\sigma_{T3}^2}$ at the present working order. For $v$, $\sigma_{T1}=1.2\ \text{GeV}$ is propagated from the $A_{EW}$ T1 uncertainty via $\delta v/v = \delta A_{EW}/A_{EW}$, and $\sqrt{1.2^2+5^2}=5.14\ \text{GeV}$ rounds to $5\ \text{GeV}$ at the stated precision. For $A_{\text{eff}}$, $\sqrt{0.004^2+0.010^2}\approx 0.011$. For $m_H$, the $2.5\ \text{GeV}$ is reported as a combined T2+T3 entry because separating threshold-matching and pole-mass-conversion contributions requires the explicit internal pole/threshold pipeline referenced in Theorem T.28; until that pipeline is completed, the combined entry is reported in the T2 column and the T3 column is marked as "included in T2 column" to avoid double-counting.
+The $1\sigma$ theory column is the diagonal quadrature sum
+$$
+\sqrt{\sigma_{T1}^2+\sigma_{T2}^2+\sigma_{T3}^2}
+$$
+at the stated working order. For $v$, $\sigma_{T1}=1.2\ \text{GeV}$ is propagated from the $A_{EW}$ T1 uncertainty via $\delta v/v = \delta A_{EW}/A_{EW}$, and $\sqrt{1.2^2+5^2}=5.14\ \text{GeV}$ rounds to $5\ \text{GeV}$ at the stated precision. For $A_{\text{eff}}$, $\sqrt{0.004^2+0.010^2}=0.01077\approx 0.011$. For $m_H$, the $2.5\ \text{GeV}$ entry is combined because separating threshold matching from pole-mass / observable conversion requires the explicit internal pole/threshold pipeline referenced in Theorem T.28; until that pipeline is completed, the combined entry is reported in the T2 column and the T3 column is marked as included in that column to avoid double-counting. The $A_{\text{eff}}$ row is a transferred vacuum-prefactor bookkeeping row rather than an electroweak observable.
 
 ### T.19.2 Derivation Chain
 
@@ -5622,11 +5670,19 @@ The agreement at the 10–15% level for quarks, compared to 3.7% for leptons, is
 
 ### T.25.5.3 Common-Scale Protocol and Uncertainty Decomposition
 
-A precision test of the quark sector requires running all masses to a common $\overline{\text{MS}}$ scale $\mu_{\text{ref}}$ using a consistent protocol. This section fixes the paper-wide canonical T1/T2/T3 decomposition; every other appendix reporting a T1/T2/T3 budget (Sections T.19.1, T.25.6a.10, the Appendix H.4.3.1 budget for $g_0$, Appendix U vacuum budgets, the Appendix Y baryogenesis budget, the Appendix Z fine-structure budget, and the map.md predictions and assumptions tables) uses the same three categories defined here. Report each prediction with the following T1/T2/T3 uncertainty decomposition:
+A precision test of the quark sector requires running all masses to a common $\overline{\text{MS}}$ scale $\mu_{\text{ref}}$ using a consistent protocol. This section uses the paper-wide T1/T2/T3 protocol of Convention P.14.1c; every other appendix reporting a T1/T2/T3 budget (Sections T.19.1, T.25.6a.10, the Appendix H.4.3.1 budget for $g_0$, Appendix U vacuum budgets, the Appendix Y baryogenesis budget, the Appendix Z fine-structure budget, and the map.md predictions and assumptions tables) uses the same three categories.
 
-- **T1 (truncation):** includes (i) PU truncation error (terms beyond the stated order in $d^2$ for hierarchy quantities, in the slow-roll expansion for primordial quantities, or in the Morse-Bott / determinant expansion for vacuum prefactors), (ii) geometric approximations in evaluating geodesics or chord integrals, and (iii) higher-order backreaction on curvature corrections.
-- **T2 (threshold/vacuum):** includes (i) SM threshold matching systematics at any matching scale used (loop order, decoupling conventions, SMDR/RunDec version dependence), (ii) vacuum/regularization dependence — including bounce-determinant and zero-mode normalization in the Appendix U vacuum sector and frustration-strain field construction in the flavor sector, (iii) primordial vacuum/regularization dependence in the inflationary sector, and (iv) thermal or sphaleron-decoupling threshold systematics when a cosmological rate calculation is compared to late-time observables.
-- **T3 (scheme/mapping):** includes (i) the definition of the experimentally quoted top mass and its map to $m_t^{\overline{\text{MS}}}(m_t)$, (ii) QED/isospin conventions for $m_{u,d,s}$, (iii) nonperturbative renormalization systematics in the extraction of light-quark masses from hadronic observables (if that mapping is used for comparison), (iv) astrophysical, cosmological, or CMB extraction/mapping systematics for quantities inferred from data rather than directly measured in the PU variables, and (v) any discrete identification ambiguity in flavor labeling (triad assignment, generation labeling).
+- **T1 (internal truncation/control):** includes PU truncation error, finite-order hierarchy terms beyond the stated order in $d^2$, slow-roll truncation in primordial quantities, Morse-Bott / determinant / heat-kernel / zeta truncation in prefactors, curvature/Jacobian truncation, finite spectral truncation, geometric approximations in evaluating geodesics or chord integrals, and higher-order backreaction on curvature corrections.
+- **T2 (matching/branch/bridge/convention):** includes PU-to-SM threshold matching at any matching scale used, loop-order and decoupling conventions, RG matching conventions, lifted-threshold branch dependence, vacuum/regularization dependence, bounce-determinant and zero-mode normalization in the Appendix U vacuum sector, frustration-strain regularization in the flavor sector, primordial vacuum/regularization dependence in the inflationary sector, thermal or sphaleron-decoupling threshold systematics, bridge-law normalizations such as Definition H.0, finite-volume/extensivity conventions, and coarse-graining conventions.
+- **T3 (empirical/model mapping):** includes experimentally quoted mass definitions and their map to pole or $\overline{\text{MS}}$ values, QED/isospin conventions for $m_{u,d,s}$, nonperturbative renormalization systematics in light-quark extraction from hadronic observables, astrophysical/cosmological/CMB extraction systematics, target-tuple retention when a spectral value has not yet been derived, phenomenological-kernel fits, and discrete identification ambiguity in flavor labeling (triad assignment, generation labeling).
+
+For independent entries the displayed theory uncertainty is
+$$
+\sigma_Q
+=
+\sqrt{\sigma_{Q,T1}^2+\sigma_{Q,T2}^2+\sigma_{Q,T3}^2}.
+$$
+When a table reports a combined T2+T3 entry, the combined entry is placed in one column and the other column states that it is included there; this prevents double-counting until the missing threshold-to-observable pipeline is supplied.
 
 **Hierarchy invariants.** For same-scale hierarchy invariants
 $$
@@ -5999,7 +6055,7 @@ $$\ln(m_\tau/m_\mu) = 2.8212, \quad \ln(m_\mu/m_e) = 5.3306, \quad \ln(m_\tau/m_
 |$\ln(m_\tau/m_e)$ |8.508 |8.1518 |8.1540 |−0.03% |
 |$R_\ell$ |3.000 |2.889 |2.889 |exact |
 
-**Controlled remainder / uncertainty.** With $M = 24$ and $d^2 \in \{2, 4\}$ for the charged-lepton links, the expansion parameter is $d^2/M \le 1/6$; the next omitted term contributes a conservative bound $|\Delta\ln| \lesssim 0.005$ to any single logarithm. This bound is the dominant (T2) theory uncertainty for the charged-lepton logarithms.
+**Controlled remainder / uncertainty.** With $M = 24$ and $d^2 \in \{2, 4\}$ for the charged-lepton links, the expansion parameter is $d^2/M \le 1/6$; the next omitted term contributes a conservative bound $|\Delta\ln| \lesssim 0.005$ to any single logarithm. This bound is the dominant T1 truncation/control uncertainty for the charged-lepton logarithms.
 
 ## T.26 Flag-Lift Threshold Compression and Parameter Rigidity
 

@@ -132,7 +132,7 @@ $$
 
 #### H.4.2.1 The Bridge Law: QFI Linear Response Per Spatial Channel
 
-The efficiency factor $\eta'$ is not a free parameter but is uniquely determined by PU constants through a rigorously defined **bridge law** connecting the Grassmannian information geometry to gravitational observables.
+The efficiency factor $\eta'$ is a bridge-law normalization. It is not fitted to galaxy data; once Definition H.0 and the operating-point normalization of Equation H.4b are adopted, its value is fixed by the stated QFI linear-response factors. Its status is therefore **conditional theorem / bridge normalization**, not an unconditional theorem-level consequence of the Unruh–de Sitter temperature equality alone.
 
 **Definition H.0 (Gravitational Efficiency - Bridge Law).**
 *The gravitational efficiency $\eta'$ is defined as the Quantum Fisher Information (QFI) linear-response coefficient for estimating an acceleration parameter, per spatial channel, normalized by the maximal per-channel interface QFI:*
@@ -335,11 +335,47 @@ Curvature data ($K_{\mathrm{eff}} = 2$ from the symmetric-space geometry of $\ma
 
 #### H.4.2.8 Combined Result
 
-Combining the four factors within the bridge-law normalization and the factorized scalar coarse-graining ansatz of Theorem H.3 at the operating point $C = C_{\mathrm{max}} = 2\varepsilon$:
+Combining the four factors within the bridge-law normalization and the factorized scalar coarse-graining ansatz of Theorem H.3 at the operating point $C = C_{\mathrm{max}}^* = 2\varepsilon$:
 $$
-\eta'(2\varepsilon) = \frac{C_{\mathrm{max}}}{\varepsilon} \cdot \frac{a}{d_0} \cdot \frac{D-1}{D} \cdot \frac{1}{\sqrt{K_0}} = 2 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}} = \frac{3}{8\sqrt{3}} \approx 0.2165
+\eta'(2\varepsilon) = \frac{C_{\mathrm{max}}^*}{\varepsilon} \cdot \frac{a}{d_0} \cdot \frac{D-1}{D} \cdot \frac{1}{\sqrt{K_0}} = 2 \times \frac{1}{4} \times \frac{3}{4} \times \frac{1}{\sqrt{3}} = \frac{3}{8\sqrt{3}} \approx 0.2165
 \tag{H.4b}
 $$
+
+**Definition H.4.2.8a (Admissible Bridge-Law Class).** Let $\mathcal B_H$ be the class of bridge-law normalizations $\eta$ assigning a positive dimensionless coefficient to the acceleration relation
+$$
+g_0(\eta)=\eta c^2\sqrt{\frac{\Lambda}{3}}.
+$$
+An element $\eta\in\mathcal B_H$ is admissible when it satisfies:
+
+1. **Dimensional closure:** $\eta$ is dimensionless and uses no dimensional input beyond $c$ and $\Lambda$ in $g_0(\eta)$.
+2. **Internal-data closure:** $\eta$ depends only on the PU structural data $(C_{\max}^*,\varepsilon,a,d_0,D,K_0)$ and on an explicitly stated bridge law.
+3. **Factor locality:** each factor in $\eta$ is assigned to exactly one of the four bridge roles: channel capacity, mode dilution, directional projection, or complexity curvature.
+4. **No observational fitting:** $\eta$ is not chosen by fitting galaxy rotation curves, lensing data, or cosmological acceleration data.
+5. **Positive response:** increasing the selected channel-capacity factor while holding the other bridge factors fixed cannot decrease $g_0(\eta)$.
+
+The adopted operating-point representative is
+$$
+\eta_{\times}=\frac{C_{\max}^*}{\varepsilon}\cdot\frac{a}{d_0}\cdot\frac{D-1}{D}\cdot\frac{1}{\sqrt{K_0}}
+=\frac{3}{8\sqrt3},
+\qquad
+C_{\max}^*=2\varepsilon.
+$$
+
+**Proposition H.4.2.8b (Bridge-Law Scaling and Representative Dependence).** For every admissible bridge normalization $\eta\in\mathcal B_H$, all acceleration-scale outputs depending only on the H-sector bridge law scale linearly with $\eta$:
+$$
+\frac{g_0(\eta)}{g_0(\eta_{\times})}=\frac{\eta}{\eta_{\times}}.
+$$
+Consequently, any two admissible bridge laws agree on the dimensionful dependence $c^2\sqrt{\Lambda/3}$ and differ only by the dimensionless bridge coefficient.
+
+*Proof.* The defining H-sector acceleration relation is $g_0(\eta)=\eta c^2\sqrt{\Lambda/3}$. The factor $c^2\sqrt{\Lambda/3}$ is common to every admissible bridge law by dimensional closure. Hence for two admissible coefficients $\eta$ and $\eta'$,
+$$
+\frac{g_0(\eta)}{g_0(\eta')}=\frac{\eta c^2\sqrt{\Lambda/3}}{\eta' c^2\sqrt{\Lambda/3}}=\frac{\eta}{\eta'}.
+$$
+Setting $\eta'=\eta_{\times}$ gives the displayed formula. The five admissibility conditions restrict which dimensionless coefficients may be considered internal bridge laws; they do not alter the common dimensionful dependence. ∎
+
+**Corollary H.4.2.8c (Bridge-Law Falsification Boundary).** A mismatch in the numerical value of $g_0$ falsifies the adopted representative $\eta_{\times}$ only after the upstream value of $\Lambda$, the unit convention for $c$, and the observational acceleration definition have been fixed. It falsifies the whole admissible class $\mathcal B_H$ only if no coefficient satisfying Definition H.4.2.8a remains compatible with the same data.
+
+*Proof.* Proposition H.4.2.8b separates the common dimensionful factor from the dimensionless coefficient. A discrepancy can therefore arise from the adopted coefficient, from the upstream input $\Lambda$, or from the observational definition of the acceleration scale. Once the latter two are fixed, disagreement with $\eta_{\times}$ rules out that representative. Ruling out the whole class requires ruling out every admissible coefficient. ∎
 
 ### H.4.3 Numerical Prediction
 
@@ -364,43 +400,53 @@ a 2% deviation. This agreement lies within the systematic uncertainty of the emp
 
 #### H.4.3.1 Uncertainty Budget
 
-**T1 (truncation):**
-The following contributions have zero theoretical uncertainty:
-- **QFI estimation precision:** The isotropy theorems are exact; numerical precision $\lesssim 10^{-6}$
-- **Capacity determination:** $C_{\mathrm{max}} = 2\varepsilon$ is exact from PCE optimization (Appendix Q)
-- **Dimensional projection:** $(D-1)/D = 3/4$ is exact given $D = 4$
+This budget uses the paper-wide Convention P.14.1c. The value of $\eta'$ has no fitted numerical degree of freedom after Definition H.0 and Equation H.4b are adopted, but that adoption is a T2 bridge-law dependency.
 
-**Combined T1 precision:** $\delta\eta'/\eta' \lesssim 10^{-5}$
+**T1 (internal truncation/control):**
+The algebraic factors in Equation H.4b are exact inside the adopted bridge law:
+- **QFI isotropy average:** exact under Theorem H.1a;
+- **capacity count:** $C_{\mathrm{max}}^*=2\varepsilon$ at the PCE operating point;
+- **dimensional projection:** $(D-1)/D=3/4$ for $D=4$;
+- **democratic generator normalization:** $1/\sqrt{K_0}=1/\sqrt{3}$.
 
-**T2 (threshold/vacuum):**
-No additional continuously adjustable parameters enter beyond the operational definition of $\eta'$ in Definition H.0. The value of $\eta'$ is fixed by Equation (H.4b), so there is no independent parametric uncertainty contribution at this step.
+Numerical rounding gives $\delta\eta'/\eta' \lesssim 10^{-5}$, so the T1 contribution is negligible at the displayed precision.
 
-**T3 (scheme/mapping):**
-The cosmological constant can be written in terms of cosmological parameters (e.g. Planck Collaboration 2020a) as
+**T2 (bridge/branch/convention):**
+Definition H.0 is the active bridge-law normalization connecting the QFI linear-response coefficient to the galactic acceleration channel. Conditional on that normalization and the operating-point value used in Equation H.4b,
 $$
-\Lambda = \frac{3\Omega_\Lambda H_0^2}{c^2}.
+\eta'=\frac{3}{8\sqrt3}.
 $$
-Equivalently, Appendix V reports the observational combination $(\Lambda L_P^2)_{\mathrm{obs}}=(2.86599\pm0.04849)\times10^{-122}$ (Eq. V.5), so $\delta\Lambda/\Lambda=0.0169$ at $1\sigma$.
+Thus the T2 status dependency is present, but its numerical uncertainty is zero inside the adopted bridge law. Alternative bridge laws would be different T2 branches, not variations of a fitted parameter.
 
-Since $g_0 \propto \sqrt{\Lambda}$:
+**T3 (empirical/model mapping):**
+The comparison uses either the observed cosmological constant or the Appendix U branch value selected for forward evaluation. For observational propagation,
 $$
-\frac{\delta g_0}{g_0} = \frac{1}{2}\frac{\delta\Lambda}{\Lambda}.
+\Lambda = \frac{3\Omega_\Lambda H_0^2}{c^2},
 $$
-At $1\sigma$, $\delta\Lambda/\Lambda=0.0169$ gives $\delta g_0/g_0=0.0085$. Propagating instead the $2\sigma$ uncertainty ($\delta\Lambda/\Lambda=0.0338$) gives $\delta g_0/g_0 \approx 0.0169$, i.e. $\delta g_0 \approx 0.02\times10^{-10}\,\mathrm{m/s^2}$ for $g_0\approx 1.18\times 10^{-10}\,\mathrm{m/s^2}$.
+and Appendix V reports
+$$
+(\Lambda L_P^2)_{\mathrm{obs}}=(2.86599\pm0.04849)\times10^{-122},
+$$
+so $\delta\Lambda/\Lambda=0.0169$ at $1\sigma$.
 
-The empirical $g_0$ has systematic uncertainties at the tens-of-percent level (order $\sim 20\%$), dominated by astrophysical systematics and calibration choices [McGaugh et al. 2016; Lelli et al. 2017].
+Since $g_0\propto\sqrt{\Lambda}$,
+$$
+\frac{\delta g_0}{g_0}=\frac12\frac{\delta\Lambda}{\Lambda}.
+$$
+At $1\sigma$, $\delta g_0/g_0=0.0085$. Propagating the $2\sigma$ uncertainty gives $\delta g_0/g_0=0.0169$, i.e. $\delta g_0\approx0.02\times10^{-10}\,\mathrm{m/s^2}$ for $g_0\approx1.18\times10^{-10}\,\mathrm{m/s^2}$.
 
+The empirical $g_0$ inferred from galaxy data has systematic uncertainties at the tens-of-percent level, dominated by astrophysical systematics and calibration choices [McGaugh et al. 2016; Lelli et al. 2017].
 
 **Summary Table:**
 
 | Source | Category | Magnitude | Type |
 |--------|----------|-----------|------|
-| Theoretical ($\eta'$) | T1 | $< 0.01\%$ | Exact |
-| $\Lambda$ input (Eq. V.5) | T3 | $3.4\%$ in $\Lambda$ (2$\sigma$) $\Rightarrow 1.7\%$ in $g_0$ | Observational |
-| Empirical $g_0$ | T3 | ~20% | Observational + Systematic |
+| $\eta'$ algebra after Definition H.0 / Equation H.4b | T1 | $<0.01\%$ | internal rounding / truncation negligible |
+| Definition H.0 + operating-point normalization | T2 | $0$ inside the adopted branch | bridge-normalization status dependency |
+| $\Lambda$ input (Eq. V.5) | T3 | $1.7\%$ in $g_0$ at $2\sigma$ | observational propagation |
+| Empirical $g_0$ extraction | T3 | order $20\%$ | astrophysical systematic |
 
-
-The 2% deviation between prediction and observation is well within the empirical systematic uncertainty. 
+The $2\%$ central deviation between prediction and observation is within the empirical systematic uncertainty.
 
 **Remark H.1.** Writing $H_\Lambda = c\sqrt{\Lambda/3}$ (the de Sitter Hubble parameter) yields $a_0 = cH_\Lambda$. Since $H_\Lambda \approx H_0$, this implies $a_0 \sim cH_0$, connecting the MOND scale to the Hubble scale. The derived result $g_0 = \eta' \cdot cH_\Lambda$ with $\eta' = 3/(8\sqrt{3}) \approx 0.22$ thus connects the galactic acceleration scale directly to the cosmological constant through the PU interface geometry.
 
@@ -410,8 +456,14 @@ The 2% deviation between prediction and observation is well within the empirical
 
 **Remark H.4 (Operating Point Universality).** If a system operates near the PCE-optimal capacity $C=C_{\mathrm{max}}^*=2\varepsilon$ (Appendix Q, Equation Q.10), then Equation (H.4a) fixes $\eta'$ near its attractor value, and hence $g_0$ is approximately universal across such systems.
 
-**Corollary H.1 (Parameter-Free Galactic Scale).**
-Under Proposition H.1, Definition H.0 (Bridge Law), and Equation (H.4b), the scale-dependent gravity model of Appendix I has its transition scale fully determined by the cosmological constant $\Lambda$ and PU constants $(K_0, \varepsilon, d_0, a, D)$, with **no numerically fitted parameters**. The galactic acceleration scale $g_0 = (1.18 \pm 0.02) \times 10^{-10}$ m/s$^2$ emerges as a derived prediction, where the uncertainty is obtained by propagating the $2\sigma$ observational uncertainty in $(\Lambda L_P^2)_{\mathrm{obs}}$ reported in Appendix V (Eq. V.5) through $g_0\propto\sqrt{\Lambda}$. Note: Observational systematics in $g_0^{\text{obs}}$ dominate at $\sim 20\%$.
+**Corollary H.1 (Bridge-Conditional Galactic Scale).**
+Under Proposition H.1, Definition H.0, and Equation H.4b, the acceleration scale entering the Appendix I galaxy-sector model is fixed by
+$$
+g_0=\eta'c^2\sqrt{\frac{\Lambda}{3}},
+\qquad
+\eta'=\frac{3}{8\sqrt3}.
+$$
+Thus $g_0=(1.18\pm0.02)\times10^{-10}$ m/s$^2$ when the $2\sigma$ observational uncertainty in $(\Lambda L_P^2)_{\mathrm{obs}}$ from Appendix V is propagated through $g_0\propto\sqrt{\Lambda}$. There is no fitted numerical parameter in this calculation once the bridge law and the Equation H.4b operating-point normalization are adopted. The status label is conditional theorem / bridge normalization because Definition H.0 is the active bridge assumption. Observational systematics in $g_0^{\text{obs}}$ dominate at order $20\%$.
 
 **Corollary H.1a (Critical Baryonic Surface-Density Scale).**
 For a thin baryonic sheet with surface density $\Sigma_b$, the Newtonian midplane field is $g_N = 2\pi G\Sigma_b$. The crossover to the low-acceleration galactic regime occurs when $g_N = g_0$. Hence the characteristic baryonic surface-density scale is

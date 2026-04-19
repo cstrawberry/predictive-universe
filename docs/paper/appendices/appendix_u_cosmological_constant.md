@@ -884,7 +884,7 @@ For the forward evaluation used in Appendix U, adopt the transferred determinant
 $$
 K_{\text{transfer}} := A_{EW}^{-1},
 $$
-where $A_{EW}=1.084 \pm 0.005$ is the electroweak determinant-model value of Theorem T.29. This transfer is a modeling convention rather than a vacuum-sector theorem. Including the conservative systematic allowance $\sigma_{T3}=0.010$ for (i) ghost/zero-mode normalization and (ii) minimal-bounce extensivity conventions in $N_{\text{eff}}$, the Appendix U working value is
+where $A_{EW}=1.084 \pm 0.005$ is the electroweak determinant-model value of Theorem T.29. This transfer is a modeling convention rather than a vacuum-sector theorem. Including the conservative systematic allowance $\sigma_{T2}=0.010$ for (i) ghost/zero-mode normalization and (ii) minimal-bounce extensivity conventions in $N_{\text{eff}}$, the Appendix U working value is
 
 $$
 \boxed{A_{\text{eff}} = 0.923 \pm 0.011 \qquad (\text{Appendix U working convention},\ 1\sigma).}
@@ -906,7 +906,7 @@ uses the following explicit instantiation steps:
 
 1. **Grassmannian identification.** The Appendix U vacuum model uses $\text{Gr}_\mathbb{C}(12,24)$ as the relevant reference configuration space (Theorem U.3), so the base count is $k^2=144$ with $k=12$.
 
-2. **Action mapping.** The instanton action is identified as $S_{\text{inst}}=(C_{\max}/\varepsilon)\kappa$ with $C_{\max}/\varepsilon=2$ (Appendix Q). Within the Appendix U reference scheme this gives $S_{\text{inst}}=2\kappa_{\mathrm{ref}}$.
+2. **Action mapping.** The instanton action is identified as $S_{\text{inst}}=(C_{\max}^*/\varepsilon)\kappa$ with the operating-point value $C_{\max}^*/\varepsilon=2$ (Appendix Q). Within the Appendix U reference scheme this gives $S_{\text{inst}}=2\kappa_{\mathrm{ref}}$.
 
 3. **Einstein-normalization factor.** The PPI mapping identifies the vacuum amplitude with the coefficient of $g_{\mu\nu}$ in the Einstein-equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$. Accordingly, when the result is written as the dimensionless quantity $\Lambda L_P^2$, a pure numerical factor $8\pi$ appears (Appendix V, normalization note following Equation (V.2)).
 
@@ -918,11 +918,11 @@ uses the following explicit instantiation steps:
 $$
 \ln(\Lambda L_P^2)=\ln(8\pi)+\ln A_{\text{eff}}-2\kappa_{\mathrm{ref}}.
 $$
-Within the Appendix U conventions, the reference value $\kappa_{\mathrm{ref}}=141.5$ comes from the leading-order zero-mode count of Theorem U.15. The explicit budget written below therefore quantifies the prefactor sector at fixed reference exponent; any correction to the leading-order exponent count would have to be tracked separately. The prefactor-sector contributions that can be stated explicitly are:
+Within the Appendix U conventions, the reference value $\kappa_{\mathrm{ref}}=141.5$ is the Appendix U five-mode reference exponent of Theorem U.16, using the leading-order zero-mode deficit of Theorem U.15. The explicit budget written below quantifies the prefactor sector at fixed reference exponent; any correction to the exponent count is a separate T2 branch/status change. The prefactor-sector contributions that can be stated explicitly are:
 
-* **(T2) determinant evaluation:** $\sigma_{\ln K}$ from truncating the heat-kernel/zeta evaluation of $\zeta'_\alpha(0)$ on $\text{Gr}(2,8)$;
-* **(T3) extensivity counting:** $\sigma_{\ln N_{\text{eff}}}$ from the finite-volume/channel-count convention (Appendix E);
-* **(T2) higher-loop corrections:** $\sigma_{\ge 2\text{-loop}}$, expected to scale as $O(1/\kappa_{\mathrm{ref}})$ on compact symmetric spaces under Convention U.14a.
+* **(T1) determinant evaluation:** $\sigma_{\ln K}$ from truncating the heat-kernel/zeta evaluation of $\zeta'_\alpha(0)$ on $\text{Gr}(2,8)$;
+* **(T2) extensivity and zero-mode normalization:** $\sigma_{\ln N_{\text{eff}}}$ from the finite-volume/channel-count convention, ghost normalization, and zero-mode normalization;
+* **(T1) higher-loop corrections:** $\sigma_{\ge 2\text{-loop}}$, expected to scale as $O(1/\kappa_{\mathrm{ref}})$ on compact symmetric spaces under Convention U.14a.
 
 Once $(K,N_{\text{eff}})$ are evaluated to relative precision $\sigma_K/K$ and $\sigma_N/N_{\text{eff}}$, the propagated theory uncertainty is:
 $$
@@ -1029,32 +1029,33 @@ Both structures exist at $M = 24$ as derived consequences of PCE optimization (T
 
 ### U.12.4 Branch-Status Registry
 
-**Proposition U.12.4a (Appendix U Branch-Status Registry).** The branch-sensitive quantities of Appendix U carry the following exact status labels.
+**Proposition U.12.4a (Appendix U Branch-Status Registry).** The branch-sensitive quantities of Appendix U carry the following status and parameter-role labels.
 
-| Quantity | Value / formula | Status | Dependence |
-|:---------|:----------------|:-------|:-----------|
-| $m_{\mathrm{ref}}$ | $5$ | Reference-counting convention | Theorems U.15–U.16 |
-| translational zero modes | $4$ | Theorem-level | Theorem U.8 |
-| fifth zero mode from exact scale family | conditional | Conditional theorem | Theorem U.9 |
-| persistence of a negative pure-dilatation quadratic form | local neighborhood statement | Conditional theorem | Theorem U.8d |
-| $\kappa_{\mathrm{ref}}$ | $141.5$ | Reference-branch exponent | Theorem U.16 |
-| $\kappa = 142 - \nu/2$ | $\nu\in\{0,1\}$ | Exact dichotomy once nullity branch is specified | Theorem U.16a |
-| $A_{\mathrm{eff}}^{(\mathrm{obs})}$ | $0.917\pm 0.016$ | Observational inversion on the $m=5$ reference branch | Corollary U.15b |
-| $A_{\mathrm{eff}}$ | $0.923\pm 0.011$ | Working forward-evaluation convention | Corollary U.15b |
-| $\Lambda L_P^2 = 8\pi A_{\mathrm{eff}}e^{-283}$ | five-mode branch value | Reference scaling law | Corollary U.17 |
-| $\Lambda L_P^2 = 8\pi A_{\mathrm{eff}}e^{-284}$ | four-mode forward evaluation | Conditional on the four-mode branch | Corollary U.17a |
-| $\kappa_Q$ | $11$ | Theorem-level primordial identification | Identification U.20 |
+| Quantity | Value / formula | Status | Parameter role | T1/T2/T3 placement |
+|:---------|:----------------|:-------|:---------------|:-------------------|
+| $m_{\mathrm{ref}}$ | $5$ | Convention | ReferenceConvention / DiscreteMultiplicity | T2 branch convention |
+| translational zero modes | $4$ | Theorem | DiscreteMultiplicity | exact in Theorem U.8; corrected discrete closure in Theorem U.13b |
+| fifth zero mode from exact scale family | conditional | Conditional theorem | DiscreteMultiplicity | T2 branch condition |
+| persistence of a negative pure-dilatation quadratic form | local neighborhood statement | Conditional theorem | ThresholdData | T2 branch obstruction |
+| $\kappa_{\mathrm{ref}}$ | $141.5$ | Convention | ReferenceConvention | T2 branch convention |
+| $\kappa_{\mathrm{trans}}$ | $142$ | Branch theorem | ReferenceConvention | exact on the four-mode branch of Theorem U.13b |
+| $\kappa = 142-\nu/2$ | $\nu\in\{0,1\}$ | Branch theorem | ThresholdData | T2 if branch unresolved |
+| $A_{\mathrm{eff}}^{(\mathrm{obs})}$ | $0.917\pm 0.016$ | Empirical input | EmpiricalInput / ReferenceConvention | T3 observational inversion |
+| $A_{\mathrm{eff}}$ | $0.923\pm 0.011$ | Convention | ReferenceConvention | T1 determinant-transfer truncation plus T2 prefactor convention |
+| $\Lambda L_P^2 = 8\pi A_{\mathrm{eff}}e^{-283}$ | five-mode branch value | Convention | ReferenceConvention | T1+T2 at fixed branch |
+| $\Lambda L_P^2 = 8\pi A_{\mathrm{eff}}e^{-284}$ | four-mode forward evaluation | Branch theorem / Convention | ReferenceConvention | T1+T2 at fixed branch |
+| $\kappa_Q$ | $11$ | Identification | ExactThreshold | exact inside Identification U.20 |
 
-*Proof.* Each row is a direct restatement of the cited theorem, corollary, identification, or convention. The table contains no additional input beyond those statements. ∎
-
----
+The observation-facing inversion table is therefore:
 
 | Quantity | Branch Value | From Observation | Notes |
 |----------|--------------|------------------|-------|
 | $\kappa_{\mathrm{ref}}$ | 141.5 | — | Appendix U five-mode reference count (Theorem U.16) |
 | $\kappa_{\mathrm{trans}}$ | 142 | — | Four-mode branch value under the corrected Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b |
-| $A_{\text{eff}}^{(\text{obs})}$ on $m=5$ branch | $O(1)$ | $0.917 \pm 0.016$ | Corollary U.15b |
-| $A_{\text{eff}}^{(\text{obs},4)}$ on $m=4$ branch | $O(1)$ | $2.49 \pm 0.04$ | same observed $\Lambda L_P^2$ with exponent $142$ |
+| $A_{\text{eff}}^{(\text{obs})}$ on $m=5$ branch | $O(1)$ | $0.917 \pm 0.016$ | Corollary U.15b; T3 observational inversion on the five-mode branch |
+| $A_{\text{eff}}^{(\text{obs},4)}$ on $m=4$ branch | $O(1)$ | $2.49 \pm 0.04$ | same observed $\Lambda L_P^2$ with exponent $142$; T3 observational inversion on the four-mode branch |
+
+*Proof.* The status column restates the cited theorem, corollary, identification, or convention. The parameter-role column is obtained by applying Convention P.14.1a to each occurrence: a zero-mode count is a DiscreteMultiplicity, a branch exponent is a ReferenceConvention or Branch theorem depending on whether the branch is proved, and an observationally inverted prefactor is an EmpiricalInput on the named branch. The T1/T2/T3 column follows Convention P.14.1c. Determinant-transfer truncation is T1, branch and prefactor conventions are T2, and observational inversion is T3. No row changes the numerical formulas; the table only fixes their dependency records. ∎
 
 ---
 

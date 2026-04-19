@@ -2,7 +2,7 @@
 
 **I.1 Aim and Scope**
 
-Within the Predictive-Universe (PU) framework, this appendix develops the model for emergent gravity as a multi-scale, environment-dependent phenomenon. The Principle of Physical Instantiation (PPI), guided by the Principle of Compression Efficiency (PCE), must provide the most resource-efficient and globally self-consistent mechanism for the gravitational binding of structures across all scales. We demonstrate that this leads to a two-tiered solution: a local "Law Modification" (scale-dependent $G(R)$) for galaxies and a non-local "Source Modification" (emergent "predictive matter") for clusters. This composite model is a PCE‑preferred solution that satisfies both local binding requirements and global cosmological constraints. The galaxy‑scale law‑modification is **environment‑dependent** and does not imply a universal large‑scale shift of $G$ relevant for the CMB.
+Within the Predictive-Universe (PU) framework, this appendix develops the dark-sector response stack as a multi-scale, environment-dependent model of emergent gravity. The theorem-level inputs are the emergent-gravity bridge of Sections 11–12 and the acceleration-scale identity of Appendix H conditional on Definition H.0 and Equation H.4b. The galaxy-scale law modification $G(R)$ is a phenomenological kernel constrained by those inputs and by local-gravity limits. The cluster-scale "predictive matter" response is a separate non-local source-modification kernel. The composite model is PCE-motivated and falsifiable, with the parameter roles and T1/T2/T3 dependencies stated explicitly below. The galaxy-scale law modification is **environment-dependent** and does not imply a universal large-scale shift of $G$ relevant for the CMB.
 
 **I.2 Foundations of Emergent Gravity in PU**
 
@@ -142,7 +142,13 @@ $$
 \tag{I.4}
 $$
 
-The parameter set $(G_0,L_0,A_G,m)$ is expected to be universal, determined by the fundamental properties of the MPU network and the PCE optimization landscape. Within the present manuscript, only the crossover scale $L_0$ is directly tied to the Appendix H acceleration scale; the amplitude $A_G$ and steepness $m$ remain phenomenological parameters pending either rotation-curve fits or a first-principles closure of the relaxation sector. $L_0$ is the scale at which $\hat C_{\mathrm{target}}(R)$ becomes sufficiently low in sparse regions to trigger significant parameter relaxation.
+The parameter roles in Equation I.4 are:
+$$
+G_0:\text{ local normalization},\qquad
+L_0:\text{ coarse-graining transition scale tied to }g_0,\qquad
+(A_G,m):\text{ phenomenological-kernel parameters}.
+$$
+Within the present manuscript, only the crossover scale $L_0$ is directly tied to the Appendix H acceleration scale, and that tie is conditional on Definition H.0 and Equation H.4b. The amplitude $A_G$ and steepness $m$ remain phenomenological parameters pending either rotation-curve fits or a first-principles closure of the relaxation sector. Thus $(L_0,A_G,m)$ should be tested for universality, but only $L_0$ currently has a framework-internal bridge relation.
 
 **I.7 A Multi-Scale Solution from Global PCE Optimization**
 
@@ -175,7 +181,7 @@ This adaptation is **environment‑dependent** and does not alter the homogeneou
 
 In the deep potential wells of galaxy clusters, the required gravitational enhancement is large. A "Law Modification" ($G(R)$) that could produce this effect is ruled out *a priori* by the global consistency requirement, as it would violate precise CMB constraints on the value of $G$ in the early universe.
 
-PCE must therefore select the remaining globally consistent mechanism: "Source Modification." Furthermore, the nature of this response is also dictated by PCE. A purely local response ($\rho_{\rm PM}(r)\propto\rho_b(r)$) is informationally sub‑optimal and dynamically inefficient in this regime. The MPU network, operating as an integrated predictive system, seeks the most efficient representation. PCE favors adaptation to the most salient features of the environment relevant for prediction. In deep potential wells, the non‑local gravitational environment, characterized by the baryonic potential $\Phi_b$, becomes the dominant feature. A purely local response would be predictively myopic and less efficient at capturing the global potential structure, incurring high coherence costs disfavored by PCE.
+Within the present model, global PCE optimization favors the remaining globally consistent mechanism: "Source Modification." A purely local response ($\rho_{\rm PM}(r)\propto\rho_b(r)$) is treated as informationally suboptimal in this regime because it ignores the global potential structure. The non-local gravitational environment, characterized by the baryonic potential $\Phi_b$, is therefore modeled as the dominant feature. This is a phenomenological-kernel step until the non-local susceptibility is derived from the microscopic adaptation dynamics.
 
 Therefore, PCE **preferentially selects** a **non‑local "predictive matter" (PM) response**, a collective reconfiguration of the MPU substrate that is a functional of the baryonic potential. The minimal mathematical implementation of this required non‑local principle is an integral model:
 
@@ -243,13 +249,13 @@ The parameters $(G_0, L_0, A_G, m)$ in Equation (I.4) must align with astronomic
 
 **I.10 Phenomenological Predictions**
 
-The scale-dependent gravity framework derived from PU principles leads to several testable predictions:
+Within the status classes of Convention P.14.1a, the scale-dependent gravity framework gives model-level predictions whose parameters must be tested with a common T1/T2/T3 ledger:
 
-1.  **Universal force law:** The mechanism predicts that the enhancement factor $\varepsilon_G(R)$ depends only on scale $R$ and baryonic density (through $\hat C_{target}(R)$ in Hypothesis I.1 which is related to density), leading to tight, universal relations between the baryonic mass distribution and observed kinematics (e.g., baryonic Tully-Fisher Relation, Radial Acceleration Relation), fixed by the universal parameter triple $(L_0,A_G,m)$.
-2.  **Parameter universality:** The parameter set $(L_0,A_G,m)$ should be approximately universal across all galaxies, irrespective of formation history.
-3.  **Absence of particle DM:** The observed phenomena are explained by modified gravity, predicting null results for direct detection experiments searching for conventional dark matter particles (WIMPs, axions, etc.).
+1.  **Model-level force law:** The enhancement factor $\varepsilon_G(R)$ is modeled as a function of scale and baryonic environment through Equation I.4 and Hypothesis I.1. Tight baryon-tracking relations such as the baryonic Tully-Fisher Relation and the Radial Acceleration Relation are therefore predictions of the phenomenological kernel $(L_0,A_G,m)$, not theorem-level consequences of Appendix H alone.
+2.  **Parameter-universality test:** The parameter set $(L_0,A_G,m)$ should be approximately universal across the galaxy class to which Equation I.4 is applied. $L_0$ inherits the bridge-normalization status of $g_0$; $A_G$ and $m$ remain phenomenological until derived from the relaxation sector or inferred with a hierarchical population model.
+3.  **Absence of particle DM in the modeled branch:** The observed phenomena are explained without conventional particle dark matter in this branch, predicting null results for direct detection experiments searching for conventional dark matter particles if this branch is the correct explanation of the relevant anomalies.
 4.  **Cosmological signatures:** The scale dependence of gravity could influence structure growth and cosmological observables. Deviations from $\Lambda$CDM predictions might be observable in cosmic microwave background (CMB) or large-scale structure surveys if $G$ varies with local density or cosmic time.
-5.  **Transient stresses:** The dynamics of complexity adaptation and parameter relaxation might lead to transient effects (e.g., $\rho_\Pi$ in Equation I.7) in highly dynamic events like galaxy cluster mergers, potentially causing observable discrepancies between baryonic matter distribution and gravitational lensing maps (like the apparent offset observed in the Bullet Cluster [Clowe et al. 2006]).
+5.  **Transient stresses:** The dynamics of complexity adaptation and parameter relaxation may lead to transient effects, such as $\rho_\Pi$ in Equation I.7, in highly dynamic events like galaxy cluster mergers. These effects would be tested through discrepancies between baryonic matter distribution and gravitational lensing maps under the same kernel and conservation assumptions.
 
 **I.11 Prospective Rotation-Curve Analysis**
 
@@ -345,6 +351,64 @@ The analysis must account for potential systematic errors. Robustness can be gau
 *   **Comparison to NFW fits:** Comparing the quality of fit and consistency of parameters to standard $\Lambda$CDM models fitting NFW dark matter halos plus baryonic components.
 *   **$\Upsilon_\ast$ consistency:** Checking if fitted stellar $\Upsilon_\ast$ values are consistent with stellar population synthesis models.
 
+**I.12a Dark-Sector Discriminator Protocol**
+
+**Definition I.12a.1 (Matched Residual Experiment).** A matched dark-sector comparison consists of a data vector $y$, covariance matrix $C>0$, shared nuisance parameter vector $\nu$, shared nuisance domain $\mathcal N$, and two model families
+$$
+y_{PU}(\theta_{PU},\nu),\qquad y_{NFW}(\theta_{NFW},\nu),
+$$
+where the same baryonic data, distance priors, inclination priors, stellar mass-to-light priors, and covariance conventions are used for both families. The whitened residuals are
+$$
+r_M(\theta_M,\nu)=C^{-1/2}\bigl(y-y_M(\theta_M,\nu)\bigr),
+\qquad
+\chi^2_M(\theta_M,\nu)=\|r_M(\theta_M,\nu)\|_2^2,
+$$
+for $M\in\{PU,NFW\}$.
+
+**Definition I.12a.2 (PU/NFW Matched Discriminator).** The matched discriminator is
+$$
+\mathcal D_{PU/NFW}
+=
+\min_{\theta_{NFW},\nu\in\mathcal N}\chi^2_{NFW}(\theta_{NFW},\nu)
+-
+\min_{\theta_{PU},\nu\in\mathcal N}\chi^2_{PU}(\theta_{PU},\nu),
+$$
+with both minima computed under the same masking, covariance, nuisance priors, and baryonic preprocessing. Positive $\mathcal D_{PU/NFW}$ favors the PU scaled-gravity family at the matched-residual level; negative $\mathcal D_{PU/NFW}$ favors the NFW family.
+
+For a sample of systems $s=1,\dots,N$, the universality residual for the galaxy-scale triple $\Theta_G=(L_0,A_G,m)$ is
+$$
+\mathcal U_G=\sum_{s=1}^N\left(\Theta_{G,s}-\bar\Theta_G\right)^T\Sigma_{G,s}^{-1}\left(\Theta_{G,s}-\bar\Theta_G\right),
+$$
+where $\Theta_{G,s}$ and $\Sigma_{G,s}$ are the system-level posterior mean and covariance under the same inference convention, and $\bar\Theta_G$ is the pooled inverse-covariance weighted mean.
+
+**Proposition I.12a.3 (Nuisance-Matched Likelihood Separation).** Under Gaussian observational errors with covariance $C$, equal nuisance domain $\mathcal N$, and equal nuisance priors for the two model families, $\mathcal D_{PU/NFW}$ is twice the maximized log-likelihood ratio in favor of PU over NFW, up to model-family constants independent of the fitted parameters. Therefore a nonzero discriminator cannot be produced by using different baryonic nuisance freedom in the two fits.
+
+*Proof.* For either model family $M$, the Gaussian log-likelihood is
+$$
+\log L_M(\theta_M,\nu)
+=-\frac12\bigl(y-y_M(\theta_M,\nu)\bigr)^TC^{-1}\bigl(y-y_M(\theta_M,\nu)\bigr)+K_C,
+$$
+where $K_C$ depends only on $C$ and the data dimension. This is
+$$
+\log L_M(\theta_M,\nu)=-\frac12\chi_M^2(\theta_M,\nu)+K_C.
+$$
+Maximizing over the same nuisance domain and the model-specific parameters gives
+$$
+2\left(\max\log L_{PU}-\max\log L_{NFW}\right)
+=\min\chi^2_{NFW}-\min\chi^2_{PU}
+=\mathcal D_{PU/NFW}.
+$$
+Equal nuisance priors and equal nuisance domains ensure that the maximization does not grant one model extra baryonic freedom unavailable to the other. Thus the discriminator measures matched model separation rather than nuisance double counting. ∎
+
+**Corollary I.12a.4 (Dark-Sector Failure Criteria).** The galaxy-scale PU branch fails on a matched sample if any one of the following holds under Definition I.12a.1:
+
+1. $\mathcal D_{PU/NFW}<0$ by a preregistered significance threshold on the primary sample.
+2. The pooled universality statistic $\mathcal U_G$ rejects one common $(L_0,A_G,m)$ at the preregistered level after baryonic nuisance propagation.
+3. The parameter triple that fits galaxies violates the early-universe, local-gravity, or lensing-safety constraints stated elsewhere in Appendix I.
+4. The same universal parameters cannot be transported to the cluster-lensing comparison without adding a new unconstrained response function.
+
+*Proof.* The first condition says the matched likelihood favors NFW on the primary observable. The second says the claimed universal galaxy-scale triple does not exist within the propagated uncertainties. The third says the successful galaxy fit is incompatible with independent sectors of the same theory. The fourth says the cross-scale branch requires a new free function rather than a transported universal law. Each condition contradicts a distinct necessary component of the Appendix I scaled-gravity claim. ∎
+
 **I.13 Expected Parameter Ranges**
 
 Order-of-magnitude reasoning based on galaxy scaling laws and the empirical $g_0$ scale suggests the following ranges for the universal parameters:
@@ -365,4 +429,4 @@ The PU framework proposes a multi-scale solution to the phenomena attributed to 
 1.  **At galaxy scales,** a PCE-driven parameter relaxation mechanism causes the emergent Newton constant to increase with scale ($G(R)$, Equation I.4), providing a physically motivated framework that naturally explains galaxy rotation curves and baryonic scaling relations while respecting local tests of GR, **as an environment‑dependent relaxation** that leaves the CMB‑era effective $G$ unchanged.
 2.  **At cluster scales**, where a running $G(R)$ is cosmologically constrained, the mass discrepancy is modeled by a **non‑local predictive‑matter response**. A linear, single‑scale kernel is sufficient for **stacked profiles**, while **high‑concentration outliers** (e.g., A1689) demand either a **mild nonlinearity $q>0$** or a **multi‑scale kernel**. All options remain **CMB‑safe** with $A_G\simeq 0$ and are quantitatively testable against lensing data.
 
-This composite model provides a coherent, physically-grounded explanation for dark matter phenomenology across different astrophysical scales and yields a rich set of falsifiable predictions.
+This composite model provides a status-separated dark-sector program: theorem-level identities fix the acceleration scale only after the Appendix H bridge normalization is adopted, the galaxy response law is a phenomenological kernel with testable universal parameters, and the cluster response is a non-local source kernel whose conservation and lensing consequences are explicit model assumptions.

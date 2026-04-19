@@ -4449,36 +4449,82 @@ This is a claim about nature, not a logical deduction. PCE could be wrong. Natur
 
 Combining these: $2^{K_0} = 2(e^{\varepsilon})^2$. For integer $a$ (required by discrete state counting), the unique minimal solution is $\varepsilon = \ln 2$, $a = 2$, $d_0 = 8$, $K_0 = 3$. Alternative values such as $\varepsilon = \ln 3$ yield $a = 3$, $d_0 = 18$, which violates $d_0 = 2^{K_0}$ for integer $K_0$. Thus the minimum is not arbitrary but is the unique value satisfying all structural constraints.
 
-**Convention P.14.1a (Manuscript-Wide Status Classes).** Every major PU claim is assigned exactly one of the following statuses:
+**Convention P.14.1a (Manuscript-Wide Status Classes and Parameter Roles).** Every major PU claim has a primary status label and every numerical or symbolic quantity used in a reported output has a parameter-role label. The status label records what kind of claim is being made. The parameter-role label records what the quantity does inside the derivation or comparison. When a short table cell cannot display the full record, it may use a combined label such as **conditional theorem / model layer**; the full dependency statement in the cited section controls the claim.
 
-| Status | Meaning |
-|:-------|:--------|
-| **Theorem** | proved from prior theorem-level or axiomatic inputs, with no retained numerical target |
-| **Conditional theorem** | proved from prior theorem-level or axiomatic inputs plus explicitly stated bridge hypotheses |
-| **Axiom / Postulate** | foundational assumption of the framework |
-| **Hypothesis** | non-derived ontological or empirical assumption whose truth is not established internally |
-| **Model layer** | depends on an ansatz, profile, texture, or unresolved quantitative construction |
-| **Convention** | normalization, branch bookkeeping, or forward-evaluation choice |
-| **Empirical input** | quantity imported from measurement rather than derived |
+| Status | Dependency-record criterion |
+|:-------|:-----------------------------|
+| **Theorem** | proved from prior theorem-level or axiomatic inputs, with no active bridge, branch, model, convention, empirical, identification, or open-target dependency |
+| **Conditional theorem** | proved from theorem-level or axiomatic inputs plus explicitly stated bridge, branch, or sector-linking hypotheses |
+| **Branch theorem** | proved after a named branch choice, normalization branch, or admissible-class restriction whose alternatives are not all internally excluded |
+| **Axiom / Postulate** | foundational rule or physical-instantiation premise of the framework |
+| **Hypothesis** | non-derived ontological, empirical, or physical assumption whose truth is not established internally |
+| **Model layer** | depends on an ansatz, profile, texture, effective kernel, finite truncation, or unresolved quantitative construction |
+| **Convention** | normalization, reference branch, bookkeeping choice, or forward-evaluation convention |
+| **Empirical input** | quantity imported from measurement rather than derived inside the PU chain |
+| **Identification** | named interpretive or sector-linking assignment recorded explicitly as an identification rather than as a theorem |
+| **Open target** | named missing theorem, computation, or bridge closure needed to upgrade status |
+
+The manuscript uses the following parameter-role classes.
+
+| Parameter role | Meaning |
+|:---------------|:--------|
+| **ExactThreshold** | discrete value fixed by a theorem on a stated branch or admissible class |
+| **DiscreteMultiplicity** | integer count of modes, generators, generations, blocks, cells, or zero modes |
+| **ThresholdData** | finite spectral, determinant, or matching data whose values enter a sector boundary condition |
+| **BridgeNormalization** | normalization that transfers a theorem-level structure into a physical observable channel |
+| **SchemeScale** | renormalization, matching, pole, extraction, or comparison scale |
+| **CoarseGrainingScale** | scale introduced by an effective or finite-resolution coarse-grained description |
+| **ReferenceConvention** | branch, prefactor, forward-evaluation, or counting convention retained for comparison |
+| **PhenomenologicalKernel** | fitted or model-selected response function, texture, profile, kernel, or interpolation law |
+| **EmpiricalInput** | measured number or observational inversion used as an input rather than a derived output |
+
+A quantity may have more than one role only when its appearances are different. For example, $A_{\mathrm{eff}}^{(\mathrm{obs})}$ is an empirical inversion on a stated vacuum branch, while the Appendix U working $A_{\mathrm{eff}}$ is a forward-evaluation convention with determinant and zero-mode normalization uncertainty.
 
 **Corollary P.14.1b (Threshold–Scaling Parameter Ontology).** The manuscript's parameter roles split as follows.
 
-| Parameter family | Role | Status class |
-|:-----------------|:-----|:-------------|
-| $(K_0,d_0,a,b,M,k,D)$ | discrete structural thresholds on the minimal branch | theorem-level on that branch |
-| $N_g$ | discrete structural threshold in the anomaly+CP family-charge class | theorem-level in that class |
-| $(\Delta_1,\Delta_2,\Delta_3)$ | gauge-threshold data on the flag lift | local part fixed canonically (Proposition T.17a.3a); completed values determined only after the global flag-lift spectral problem is explicitly solved |
-| $(\mu_G,\mu_\lambda,\delta_i)$ | matching / RG scaling quantities | scaling layer |
-| $(A_{\mathrm{eff}},K,N_{\mathrm{eff}})$ | vacuum prefactor / normalization quantities | convention or empirical inversion, depending on use |
-| $(\alpha,\beta,C_{\mathrm{scale}},\Gamma_0)$ and similar environment-sensitive coefficients | viability / coarse-graining scales | model- and environment-dependent scaling layer |
+| Parameter family | Role class | Status class |
+|:-----------------|:-----------|:-------------|
+| $(K_0,d_0,a,b,M,k,D)$ | ExactThreshold / DiscreteMultiplicity | theorem-level on the minimal Appendix Z / attractor branch |
+| $N_g$ | ExactThreshold / DiscreteMultiplicity | theorem-level in the anomaly+CP family-charge class |
+| $(\Delta_1,\Delta_2,\Delta_3)$ | ThresholdData | canonical local/global split fixed; completed numerical values require the global flag-lift spectral problem |
+| $(\mu_G,\mu_\lambda,\delta_i)$ | SchemeScale / ThresholdData | matching, RG, and finite-shift layer |
+| $(A_{\mathrm{eff}},K,N_{\mathrm{eff}})$ | ReferenceConvention / EmpiricalInput | convention, determinant calculation, or empirical inversion depending on use |
+| $\eta'$ | BridgeNormalization | fixed once Definition H.0 and the Equation H.4b operating-point normalization are adopted |
+| $(L_0,A_G,m)$ | CoarseGrainingScale / PhenomenologicalKernel | $L_0$ is tied to the $g_0$ bridge scale; $A_G$ and $m$ remain phenomenological until the relaxation sector is derived or fitted |
+| flavor normalizations, CKM/PMNS phases, seesaw normalizations | PhenomenologicalKernel / ThresholdData | model or conditional layer unless a cited theorem proves the specific quantity |
+| $(\alpha,\beta,C_{\mathrm{scale}},\Gamma_0)$ and similar environment-sensitive coefficients | CoarseGrainingScale / PhenomenologicalKernel | model- and environment-dependent scaling layer |
 
-*Proof of Corollary P.14.1b.* Each row is the status assignment of the cited parameter family in the named parts of the framework: $(K_0,d_0,a,b,M,k,D)$ by §P.14.1; $N_g$ by Theorem R.3.4 and Proposition R.3.5f; $(\Delta_1,\Delta_2,\Delta_3)$ by Theorem T.18, Proposition T.17a.3a, and Theorem T.69; the matching/RG layer by Theorem T.35 and Definition T.19a; the vacuum prefactor by Corollary U.15b and Corollary U.17a; the environment-sensitive coefficients by Definition D.1 and Definition 20. Threshold variables and scaling variables therefore play different logical roles throughout the manuscript and must not be conflated. ∎
+*Proof of Corollary P.14.1b.* The first row follows from the minimal Appendix Z / attractor branch: Theorem 15 supplies $K_0=3$, Theorem 23 supplies the lower bound $d_0\ge 8$, Corollary Z.2 fixes the minimal-branch value $d_0=8$, Definition 15a fixes $\varepsilon=\ln 2$, Theorem Z.1 supplies $a=2$, hence $b=d_0-a=6$, Theorem Z.5 supplies $M=24$, Theorem Z.13 supplies $k=12$, and Theorem Z.11 supplies $D=4$. The second row follows from Theorem R.3.4 and Proposition R.3.5f. The flag-lift threshold row follows from Theorem T.18, Proposition T.17a.3a, and Theorem T.69, together with the explicit remaining global spectral problem on $\widetilde X$. The matching/RG row follows from Theorem T.35 and Definition T.19a. The vacuum-prefactor row follows from Corollary U.15b, Corollary U.17a, and Proposition U.12.4a. The $\eta'$ row follows from Definition H.0, Equation H.4b, and Remark H.4. The dark-sector kernel row follows from Equation I.4 and Section I.13. The flavor-model row follows from Proposition R.3.5f and the cited Appendix T flavor constructions. The environment-sensitive row follows from Definition D.1 and Definition 20. Thus each listed family has a fixed role-class ledger, and threshold variables, bridge normalizations, scheme scales, coarse-graining scales, reference conventions, phenomenological kernels, and empirical inputs are not interchangeable. ∎
+
+**Convention P.14.1c (Paper-Wide T1/T2/T3 Uncertainty Protocol).** For any reported numerical quantity $Q$, every non-exact numerical dependency in its derivation or comparison is assigned to exactly one of the following uncertainty classes after exact theorem-level definitions are fixed.
+
+| Category | Dependency content |
+|:---------|:-------------------|
+| **T1** | internal PU truncation, finite-order expansion, determinant/heat-kernel/zeta truncation, curvature/Jacobian truncation, slow-roll truncation, numerical spectral truncation, or controlled geometric approximation inside a fixed branch |
+| **T2** | threshold matching, RG matching, decoupling convention, branch choice, bridge-law normalization, vacuum/regularization dependence, bounce determinant, zero-mode normalization, coarse-graining convention, or finite-volume/extensivity convention |
+| **T3** | empirical input, observational extraction, pole/observable conversion, nonperturbative extraction, astrophysical/CMB mapping, target-tuple retention, phenomenological-kernel fit, or discrete identification ambiguity |
+
+If the independent components are reported separately, the default theory uncertainty is
+$$
+\sigma_Q
+=
+\sqrt{\sigma_{Q,T1}^2+\sigma_{Q,T2}^2+\sigma_{Q,T3}^2}.
+$$
+If two components cannot yet be separated, the table must mark the entry as combined, place it in one displayed column, and state which unresolved pipeline would split it. If a covariance matrix is known, the replacement rule is
+$$
+\sigma_Q^2
+=
+\sum_{i,j\in\{T1,T2,T3\}}\Sigma_{ij}(Q),
+$$
+with the diagonal rule recovered when $\Sigma_{ij}=0$ for $i\ne j$. A zero entry means the corresponding dependency class is absent at the stated working order; it does not assert absence at all future orders.
+
+*Proof.* The role classes in Convention P.14.1a are applied to fixed symbol occurrences. At that level, a non-exact numerical contribution is either an internal approximation within a fixed branch, an internal matching/branch/bridge/convention dependency, or an external empirical/model-identification dependency. These are exactly T1, T2, and T3. If a calculation has overlapping effects, the overlap is either decomposed into distinct numerical components or explicitly recorded as a combined entry, so no contribution is counted twice. For independent components, variance additivity gives the diagonal quadrature formula. For correlated components, the covariance formula is the finite-dimensional variance identity. The zero-entry rule follows because the table is indexed by the current dependency record and working order. ∎
 
 ### P.14.4 The Derivation Chain
 
 With $\varepsilon = \ln 2$ and $K_0 = 3$ (the PCE-selected minima), the framework derives the following chain (Appendix Z):
 
-$$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \xrightarrow{\text{Thm Z.1}} a = 2$$
+$$K_0 = 3 \xrightarrow{\text{Thm 23, Cor Z.2}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} a = 2$$
 
 $$b = d_0 - a = 6 \xrightarrow{\text{Thm Z.5}} M = 2ab = 24$$
 
