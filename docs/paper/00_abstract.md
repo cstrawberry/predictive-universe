@@ -16,6 +16,8 @@ The complete derivation chain from the *Cogito* to observable physics proceeds a
 
 $$\text{Cogito} \xrightarrow{} \text{Prediction} \xrightarrow{} \text{SPAP} + \text{Landauer} \xrightarrow{} \varepsilon \ge \ln 2 \xrightarrow{\text{PCE}} \varepsilon = \ln 2 \xrightarrow{} a = 2 \xrightarrow{} M = 24 \xrightarrow{} D = 4$$
 
+The continuum layer is operational rather than ontological: the real world does not have to become an actual continuum. It only has to generate continuum behavior as a finite-resolution effective closure. Exact real-number continua, exact uniformly refinable Lie symmetries, UV infinities, curvature singularities, and globally completed branch ontologies are treated as mathematical completions whose physical content is limited by finite MPU distinguishability, finite channel capacity, and irreducible update cost.
+
 Physical identifications along this chain are instantiated via the explicit PPI mapping contract (Section 1.1 and local appendix statements): the Landauer bound $\varepsilon \ge \ln 2$ together with PCE saturation at the PCE-Attractor fixes $\varepsilon = \ln 2$ and hence $a = 2$ (via admissibility $\ln a \ge \varepsilon$ and PPI-optimality), the interface mode count $M = 2a(d_0 - a)$ is matched to tangent-space channel capacity via $M = K(D)$, compact symmetries acting faithfully on $\mathcal{B}$ define gauge structure under the capacity bound, and semiclassical vacuum weights are controlled by $S_{\text{inst}} = (C_{\max}/\varepsilon)\kappa$ with all power-law factors absorbed into $A_{\text{eff}}$.
 
 The PU framework thus offers a unified deductive structure linking consciousness, quantum theory, and gravity to the fundamental logic and economics of prediction.

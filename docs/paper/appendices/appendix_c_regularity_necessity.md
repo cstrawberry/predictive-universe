@@ -398,12 +398,76 @@ Without all four, Theorem 44 remains genuinely conditional.
 
 *Proof.* The doubling/Poincaré regime yields measured-GH precompactness. The Mosco limit from Theorem D.6e supplies a strongly local regular Dirichlet form on the limit space. Stability of the $\mathrm{BE}(K,4)$ condition under the joint measured-GH/Mosco passage implies that the limit satisfies the synthetic $\mathrm{RCD}^*(K,4)$ condition. Noncollapse fixes the metric-measure dimension at $4$, preventing dimension drop and placing the limit on the noncollapsed branch. Standard noncollapsed RCD regularity then yields Euclidean tangent cones almost everywhere. ∎
 
+**Lemma C.6d (The $D_4$ Shell Moment Closure).** Let
+$$
+\Xi_{D_4}:=\{\pm e_i\pm e_j:1\le i<j\le4\}\subset\mathbb R^4,
+$$
+where $\{e_i\}_{i=1}^4$ is the standard orthonormal basis. Then
+$$
+|\Xi_{D_4}|=24,\qquad \sum_{\xi\in\Xi_{D_4}}\xi=0,
+$$
+and the second-moment tensor satisfies
+$$
+\frac1{24}\sum_{\xi\in\Xi_{D_4}}\xi^i\xi^j=\frac12\delta^{ij}.
+$$
+Consequently the $24$-mode $D_4$ shell has zero first moment and isotropic nondegenerate second moment.
+
+*Proof.* There are $\binom42=6$ unordered pairs $(i,j)$ and $4$ sign choices for each pair, hence $|\Xi_{D_4}|=24$. For each pair $(i,j)$, the four vectors $\pm e_i\pm e_j$ sum to zero; summing over all pairs gives $\sum_\xi\xi=0$.
+
+For the diagonal second moments, fix $i$. The coordinate $i$ appears in exactly three pairs $(i,j)$ with $j\ne i$, and for each such pair there are four sign choices with $(\xi^i)^2=1$. Thus
+$$
+\sum_{\xi\in\Xi_{D_4}}(\xi^i)^2=3\cdot4=12,
+$$
+so the diagonal average is $12/24=1/2$. For $i\ne j$, only the pair $(i,j)$ contributes to $\sum_\xi \xi^i\xi^j$, and the four sign choices give products $1,-1,-1,1$, whose sum is zero. Hence the off-diagonal averages vanish. ∎
+
+**Theorem C.6e (PCE Shell Isotropy and Noncollapse Closure).** Work on the minimal $M=24$, $D=4$ mode-channel branch of Theorem Z.11, and assume the first-shell channel realization is chart-compatible with the $D_4$ shell of Lemma C.6d up to $o(\delta_n)$ distortion on the rescaled family. Let the local first-shell QFI tensor at $x$ be
+$$
+Q_n(x):=\sum_{a=1}^{24}p_{a,n}(x)\,\xi_{a,n}(x)\xi_{a,n}(x)^T,
+\qquad p_{a,n}(x)\ge0,
+$$
+with fixed local channel budget
+$$
+\operatorname{tr}Q_n(x)=C_\Sigma+o(1),\qquad C_\Sigma>0.
+$$
+Assume the shell contribution to local PCE distinguishability is represented, up to positive affine rescaling, by
+$$
+V_{\mathrm{shell}}(Q)=-\log\det Q
+$$
+on positive definite $Q$, and by $V_{\mathrm{shell}}(Q)=+\infty$ on singular $Q$. Then every PCE-minimizing feasible shell sequence satisfies
+$$
+Q_n(x)\to \frac{C_\Sigma}{4}I_4
+$$
+locally uniformly on the selected branch. In particular:
+
+1. the weighted-shell/local-isotropy input of Theorem 44 is supplied;
+2. rank collapse is impossible in the PCE-minimum sector;
+3. fixed-radius noncollapse holds after rescaling:
+$$
+v_-r^4\le\mu_n(B_r(x))\le v_+r^4
+$$
+for $0<r\le r_0$ with constants independent of $n$ on bounded regular charts;
+4. the shell-isotropy, uniform-locality, and canonical interpolation/recovery inputs of Theorem D.6e are supplied on the $D_4$ operational-continuum branch, apart from the separate action-level finite-core hypothesis explicitly stated in Theorem D.6e.
+
+*Proof.* The QFI tensor $Q$ is the local Fisher information matrix for infinitesimal displacement parameters in the first-shell chart. For a locally unbiased estimator, the Cramér-Rao ellipsoid has volume proportional to $(\det Q)^{-1/2}$. Maximizing predictive distinguishability per fixed channel budget is therefore equivalent to minimizing $-\log\det Q$ at fixed $\operatorname{tr}Q=C_\Sigma$. Singular $Q$ leaves at least one displacement direction with zero QFI, giving infinite estimator volume and hence infinite local predictive-resolution cost. Thus $V_{\mathrm{shell}}(Q)=+\infty$ on $\det Q=0$.
+
+Let $\lambda_1,\dots,\lambda_4$ be the eigenvalues of any positive definite admissible $Q$. Since $\sum_i\lambda_i=\operatorname{tr}Q=C_\Sigma$, the arithmetic-geometric mean inequality gives
+$$
+\det Q=\prod_{i=1}^4\lambda_i\le \left(\frac{C_\Sigma}{4}\right)^4,
+$$
+with equality if and only if
+$$
+\lambda_1=\lambda_2=\lambda_3=\lambda_4=\frac{C_\Sigma}{4}.
+$$
+Therefore $-\log\det Q$ is minimized uniquely at $Q=(C_\Sigma/4)I_4$. Any rank-collapsing sequence has some $\lambda_i\to0$, hence $\det Q\to0$ and $V_{\mathrm{shell}}\to+\infty$, so it cannot lie in the PCE-minimum sector.
+
+Lemma C.6d shows that the equal-capacity $D_4$ shell realizes an isotropic tensor, and the preceding determinant argument shows that every minimizing shell tensor converges to the same isotropic tensor. Since the $D_4$ roots span a rank-four lattice and the chart distortion is $o(\delta_n)$, the graph metric on bounded regular charts is bi-Lipschitz, with constants independent of $n$, to a bounded-degree refinement of the rank-four $D_4$ lattice. Rank-four lattice volume growth gives two-sided bounds $v_-r^4\le\mu_n(B_r(x))\le v_+r^4$ for fixed rescaled radii. The same finite first-shell realization gives uniform locality. Sampling a Lipschitz function on vertices and extending it by the canonical $D_4$ cell interpolation gives recovery maps; conversely, lower semicontinuity follows from the convex quadratic form and the uniform ellipticity $Q_n\to(C_\Sigma/4)I_4$. Hence the shell-isotropy, locality, and interpolation/recovery hypotheses used in Theorem D.6e are supplied on this branch, subject to the finite-core condition stated separately in Theorem D.6e. ∎
+
 ## C.7 Conclusion and status boundary
 
-This appendix establishes a regularity-necessity theorem, not the whole continuum bridge. Sections C.1–C.6 show that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages these penalties as conditional coarse-grained doubling and local $(1,2)$-Poincaré bounds under its stated hypotheses. In this precise sense, Theorem 43 is the manuscript's formal regularity theorem.
+This appendix establishes the regularity-necessity theorem and the first-shell closure used by the operational-continuum branch. Sections C.1–C.6 show that large-scale geometric irregularity is penalized by the viability requirements (LV), (GC), and (RE), and Theorem C.6 packages these penalties as conditional coarse-grained doubling and local $(1,2)$-Poincaré bounds under its stated hypotheses. Theorem C.6c supplies the noncollapsed $\mathrm{RCD}^*(K,4)$ bridge once the uniform $\mathrm{BE}(K,4)$ curvature transfer and noncollapse hold, while Lemma C.6d and Theorem C.6e supply the $D_4$ shell isotropy, PCE noncollapse, and canonical shell data needed for the Mosco–Cheeger closure of Theorem D.6e, subject to the finite-core condition stated there.
 
-What remains additional should stay explicit. The present Appendix C theorem stack does not by itself supply (i) the weighted-shell/local-isotropy closure used in Remark C.3.3a or an equivalent first-shell replacement, (ii) the radius-2 curvature transfer and fixed-radius non-collapse package invoked in Section 11.4, (iii) Mosco convergence / quadratic limit-energy identification for the infinitesimally Hilbertian branch used there, (iv) the branch-appropriate Euclidean rigidity input yielding local $\mathbb{R}^4$ structure on the selected non-collapsed branch, (v) the AQFT convergence hypotheses of Theorem F.0—bounded-degree/short-range control, a uniform Lieb-Robinson bound, controlled coarse-graining with coherent Hamiltonian control, compatible embeddings, and lightcone identification—or (vi) the local-horizon KMS/Clausius bridge used in Section 12, which is formalized separately in Theorem 48a.
+What remains additional should stay explicit. Appendix C does not by itself supply the uniform curvature-transfer theorem needed for Theorem C.6c, the action-level finite-core condition in Theorem D.6e, the quantitative Euclidean-rigidity / harmonic-coordinate input needed by Theorem 44a, the AQFT convergence hypotheses of Theorem F.0, or the local-horizon KMS/Clausius bridge used in Section 12 and formalized separately in Theorem 48a. The operational-continuum branch proves a finite-resolution manifold compression under those stated branch hypotheses; the exact real-number continuum remains an effective completion, not an additional physical substrate.
 
-Read this way, regularity is not an arbitrary add-on: it is forced as a viability requirement, while the later continuum, AQFT, and gravity consequences are conditional on the additional bridge assumptions exactly where the manuscript states them.
+Read this way, regularity is not an arbitrary add-on: it is forced as a viability requirement, while Theorem 43.5 packages the geometric operational-continuum branch on the $M=24$, $D=4$ shell and Appendix F states the remaining algebraic AQFT requirements exactly where they are needed.
 
 

@@ -523,9 +523,9 @@ $$D_\mu\Psi = (\partial_\mu + \Omega_\mu + iq A_\mu)\Psi$$
 
 and associated $U(1)$ holonomies $\exp(iq\oint_\gamma A_\mu dx^\mu)$ (Section G.4).
 
-The present results supply a microscopic origin for a continuous $U(1)$ phase: the SPAP-minimum generator $g_L = e^{i\ln 2}$ generates a **discrete** subgroup $G_L$, while Theorem Q.0.7d–Corollary Q.0.7d′ imply $\overline{G_L} = U(1)$. In particular, the holonomy constraint (Theorem Q.0.4) can be expressed as the quantization of the entropy-holonomy $\Theta(\gamma)$, and Corollary Q.0.7g shows that nontrivial holonomy requires overhead above the Landauer baseline.
+The present results supply a microscopic origin for an effective continuous $U(1)$ phase: the SPAP-minimum generator $g_L = e^{i\ln 2}$ generates the countable cyclic subgroup $G_L$, while Theorem Q.0.7d–Corollary Q.0.7d′ imply $\overline{G_L} = U(1)$. In particular, the holonomy constraint (Theorem Q.0.4) can be expressed as the quantization of the entropy-holonomy $\Theta(\gamma)$, and Corollary Q.0.7g shows that nontrivial holonomy requires overhead above the Landauer baseline.
 
-This realizes the discrete–continuous interface mechanism: the discrete subgroup $G_L$ is not closed, while its topological closure is $U(1)$ (Corollary Q.0.7d′).
+This realizes the discrete–continuous interface mechanism in the operational sense: the exact finite-cycle structure is the integer-indexed subgroup $G_L$, while its topological closure $U(1)$ is the continuum completion used by the effective gauge description. The physical claim is not that the substrate becomes an actual continuum, but that any finite phase tolerance can be met by sufficiently long Landauer-cycle approximants, so the effective gauge description uses the continuous closure.
 
 
 **Remark Q.0.7r′ (Overhead 1-Form and U(1) Gauge Connection).** In the emergent gauge description, define a real 1-form $A$ on configuration space by requiring:

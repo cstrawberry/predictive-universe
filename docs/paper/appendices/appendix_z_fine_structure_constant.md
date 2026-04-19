@@ -2519,13 +2519,13 @@ $$\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$$
 
 **Uncertainty decomposition.** We separate the theory uncertainty into:
 
-* (T2) **interface-series truncation:** omitted higher-order geometric/interface corrections $\Delta_{\ge 5}$;
-* (T2) **SU(2) geodesic-chord truncation:** truncating $\sin u/u$ beyond $O(u^2)$;
-* (T3) **subgroup-projection/matching systematics:** higher-order corrections incurred when projecting the full attractor connection/curvature onto the electromagnetic $U(1)$ generator basis (Appendix X).
+* (T1) **interface-series truncation:** omitted higher-order geometric/interface corrections $\Delta_{\ge 5}$;
+* (T1) **SU(2) geodesic-chord truncation:** truncating $\sin u/u$ beyond $O(u^2)$;
+* (T3) **subgroup-projection/mapping systematics:** higher-order corrections incurred when projecting the full attractor connection/curvature onto the electromagnetic $U(1)$ generator basis (Appendix X).
 
 Numerically, with $u^*=2^{1/8}-1\approx 0.0905077$ and $K_0=3$:
 
-1. **Interface-series truncation (T2).** The omitted term obeys the local bound
+1. **Interface-series truncation (T1).** The omitted term obeys the local bound
    $$
    |\Delta_{\ge 5}|\lesssim c_1 u^{*5},\qquad c_1:=\frac{\pi}{24\sqrt{K_0}},
    $$
@@ -2534,9 +2534,9 @@ Numerically, with $u^*=2^{1/8}-1\approx 0.0905077$ and $K_0=3$:
    c_1 u^{*5} \approx 0.0756\times 6.0\times 10^{-6}\approx 4.5\times 10^{-7}.
    $$
 
-2. **SU(2) truncation (T2).** The next sinc term is $u^{*4}/120\approx 5.6\times 10^{-7}$, and it enters multiplied by the second-order correction scale $\Delta^{(2)}\approx 6.8\times 10^{-3}$, giving a contribution $<4\times 10^{-9}$, negligible on the scale of interest.
+2. **SU(2) truncation (T1).** The next sinc term is $u^{*4}/120\approx 5.6\times 10^{-7}$, and it enters multiplied by the second-order correction scale $\Delta^{(2)}\approx 6.8\times 10^{-3}$, giving a contribution $<4\times 10^{-9}$, negligible on the scale of interest.
 
-3. **Subgroup-projection/matching systematics (T3).** Mapping the Bures curvature to the electromagnetic generator direction incurs an error bounded by
+3. **Subgroup-projection/mapping systematics (T3).** Mapping the Bures curvature to the electromagnetic generator direction incurs an error bounded by
    $$
    |\delta_{\text{match}}|\lesssim c_1 u^{*3} \approx 0.0756\times 7.4\times 10^{-4}\approx 5.6\times 10^{-5}.
    $$

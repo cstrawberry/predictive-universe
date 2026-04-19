@@ -11,7 +11,7 @@ The Predictive Universe framework, particularly the Consciousness Complexity (CC
 - Gauge sector realized as $G_{SM}$ (Theorem G.8.4b).
 - Cosmological sector uses the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ (Theorem U.16) only as a branch-dependent reference convention together with the stated prefactor convention of Corollary U.15b; Theorem U.8c blocks a theorem-level pure-dilatation realization of that branch in the current continuum action.
 - Mapping constants use canonical Bures/Fisher normalization (Appendix T, Section T.24).
-- Uncertainty budgets follow T1 (PU truncation), T2 (mapping/regularization), T3 (experimental/scheme).
+- Uncertainty budgets follow the paper-wide canonical T1 (truncation), T2 (threshold/vacuum), T3 (scheme/mapping) decomposition of Appendix T.25.5.3.
 - External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
 
 **13.1 Prediction 1: Potential Born-Rule Deviations**

@@ -1048,6 +1048,26 @@ $$
 $$
 where $\delta = \sqrt{8\ln 2}\, L_P \approx 2.355\, L_P$ is the PCE-optimal MPU spacing (Appendix Q, Equation Q.18) and $m_P = \sqrt{\hbar c/G}$ is the Planck mass. In natural units ($\hbar = c = 1$), the corresponding wavenumber is $k_{\text{MPU}} = 1/\delta = 1/(\sqrt{8\ln 2} \cdot L_P) \approx 0.424/L_P$, which sets the scale at which the continuum approximation breaks down.
 
+**Theorem K.10.3a (Operational Anti-Continuum Principle).** Let $\mathfrak C$ be a mathematical structure whose exact physical interpretation would require uniformly refinable distinctions at all resolutions $\nu>0$ on a fixed bounded operational domain. Let $N_{\mathfrak C}(\nu)$ be the minimum number of mutually distinguishable alternatives required to specify those distinctions to resolution $\nu$. If
+$$
+\lim_{\nu\to0}\ln N_{\mathfrak C}(\nu)=+\infty,
+$$
+then $\mathfrak C$ cannot be physically instantiated as an exact object by any single finite-resource MPU instantiation. It can enter PU only through finite-resolution quotients, effective closures, or coarse-grained descriptions whose required $N_{\mathfrak C}(\nu)$ is finite at the resolution actually used.
+
+In particular, an exact real-number continuum, an exact uniformly refinable positive-dimensional Lie symmetry, a continuum of ontic branch labels, or a continuum field with independently meaningful sub-$\delta$ modes is not a physically instantiated PU object. Such structures are mathematical completions of finite operational data.
+
+*Proof.* Fix any finite-resource MPU instantiation or protocol $\mathcal P$ on a bounded operational domain. It uses finitely many update cycles and finitely many finite-dimensional channels. Since each update requires at least $\tau_{\min}>0$ (Theorem 29), the number of update layers in any finite duration is finite. Since each channel has finite capacity $C_{\max}<\ln d_0$ (Theorem E.2), the total distinguishability budget of $\mathcal P$ is bounded by some finite number
+$$
+B(\mathcal P)<\infty.
+$$
+Equivalently, the number of mutually distinguishable alternatives that can be selected, stored, transmitted, or erased by $\mathcal P$ is at most $\exp(B(\mathcal P))$.
+
+If $\mathfrak C$ were instantiated exactly by that finite resource object, then the same physical instantiation would have to support the distinctions needed for every resolution $\nu>0$. Since $\ln N_{\mathfrak C}(\nu)\to\infty$, choose $\nu$ such that
+$$
+\ln N_{\mathfrak C}(\nu)>B(\mathcal P).
+$$
+Then $N_{\mathfrak C}(\nu)>\exp(B(\mathcal P))$, contradicting the finite distinguishability bound. The same conclusion follows from Landauer accounting: selecting or erasing one alternative among $N_{\mathfrak C}(\nu)$ alternatives costs at least $\ln N_{\mathfrak C}(\nu)$ nats, which cannot be absorbed by a fixed finite-resource instantiation as $\nu\to0$. Therefore exact continuum structure is not PU-admissible as physical ontology; only finite-resolution approximants or closures carry operational content. ∎
+
 **Theorem K.10.4 (Intrinsic UV Finiteness).** Let $\mathcal{A}_{phys}(\mu)$ denote any operational scattering observable whose preparation and readout are defined at a characteristic external scale $\mu$ (i.e., all operational coarse-graining lengths satisfy $\ell\sim 1/\mu \gg \delta$). Then:
 
 (i) $\mathcal{A}_{phys}(\mu)$ is finite.

@@ -3771,6 +3771,22 @@ $$
 
 *Proof.* $\dim(U(1)^{24}) = 24 > 0$, so the theorem applies. $\square$
 
+### Corollary P.13.19b (Continuous Symmetry as Effective Closure)
+
+Exact positive-dimensional continuous symmetry cannot be an exact uniformly refinable physically instantiated symmetry family in PU. When a continuous symmetry appears in the effective description, it is the closure or coarse-grained completion of finite operational data, not an additional exact continuum ontology.
+
+For the electromagnetic phase branch,
+$$
+G_L=\{e^{iN\ln 2}:N\in\mathbb Z\}
+$$
+is a countable cyclic Landauer-phase subgroup, while Appendix Q proves
+$$
+\overline{G_L}=U(1).
+$$
+Thus the operationally generated object is the integer-cycle Landauer phase subgroup, and the continuum $U(1)$ is the effective topological closure seen by finite-resolution probes.
+
+*Proof.* Theorem P.13.19 shows that any exact uniformly refinable positive-dimensional Lie-group action has $V_{eff}^{sym}=+\infty$, so it cannot be maintained as exact physical symmetry under finite-resource PPI. Appendix Q, Theorem Q.0.7d and Corollary Q.0.7d′ show that the Landauer subgroup $G_L$ is dense in $U(1)$. Therefore every finite phase tolerance can be approximated by some finite cycle count $N$, while the completed continuum group appears only after taking the mathematical closure. This proves that the continuum symmetry is an effective closure of integer-cycle operational phases rather than an exact physically instantiated continuum family. $\square$
+
 ---
 
 ## P.13.8 The Canonical Orbifold Construction

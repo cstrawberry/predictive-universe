@@ -364,7 +364,7 @@ a 2% deviation. This agreement lies within the systematic uncertainty of the emp
 
 #### H.4.3.1 Uncertainty Budget
 
-**T1 (Theoretical - Exact):**
+**T1 (truncation):**
 The following contributions have zero theoretical uncertainty:
 - **QFI estimation precision:** The isotropy theorems are exact; numerical precision $\lesssim 10^{-6}$
 - **Capacity determination:** $C_{\mathrm{max}} = 2\varepsilon$ is exact from PCE optimization (Appendix Q)
@@ -372,10 +372,10 @@ The following contributions have zero theoretical uncertainty:
 
 **Combined T1 precision:** $\delta\eta'/\eta' \lesssim 10^{-5}$
 
-**T2 (Theoretical - Definition):**
+**T2 (threshold/vacuum):**
 No additional continuously adjustable parameters enter beyond the operational definition of $\eta'$ in Definition H.0. The value of $\eta'$ is fixed by Equation (H.4b), so there is no independent parametric uncertainty contribution at this step.
 
-**T3 (Observational):**
+**T3 (scheme/mapping):**
 The cosmological constant can be written in terms of cosmological parameters (e.g. Planck Collaboration 2020a) as
 $$
 \Lambda = \frac{3\Omega_\Lambda H_0^2}{c^2}.

@@ -52,7 +52,7 @@
 
 *   **Complexity Hierarchy:** (Section 2.4.1) Iterative refinement sequence $\{C_{P,n}\}$ used to define $C_P$ self-consistently without presupposing derived physical laws.
 
-*   **Continuum Limit:** (Section 11, Appendix F) Convergence of the discrete MPU network structure (geometry and dynamics) to a continuous spacetime manifold $(M, g_{\mu\nu})$ and an effective AQFT description, conditional on Theorem 43 together with the explicit continuum-bridge hypotheses used in Section 11.4 and Theorem F.0.
+*   **Continuum Limit / Operational Continuum Limit:** (Section 11, Appendix F) The finite-resolution effective closure by which the discrete MPU network admits a manifold and AQFT compression at accessible scales. It is not the ontological claim that the substrate becomes an actual real-number continuum. On the $M=24$, $D=4$ shell branch, Theorem 43.5 packages the geometric branch using Appendix C.6d–C.6e, Appendix D.6e, Theorem C.6c, and Theorem 44a under their stated curvature-transfer, finite-core, and quantitative-rigidity hypotheses; Appendix F supplies the algebraic net under the controlled coarse-graining hypotheses of Theorem F.0, with lightcone normalization supplied on the strict single-clock ND-RID branch by Corollary F.1a.
 
 *   **CPTP (Completely Positive Trace-Preserving):** (Appendix E, Appendix G) A quantum channel $\mathcal{E}$ is CPTP if it maps density operators to density operators, preserves trace ($\mathrm{tr}(\mathcal{E}(\rho)) = \mathrm{tr}(\rho)$), and remains positive when extended to any ancilla system. The 'Evolve' channel is CPTP by construction, with strict contractivity ($f_{RID} < 1$) guaranteed by irreversibility ($\varepsilon > 0$).
 

@@ -1,6 +1,6 @@
-# 11 Emergence of Spacetime Geometry (Conditional Derivation)
+# 11 Emergence of Spacetime Geometry (Operational Continuum Branch)
 
-This section details the proposed emergence of continuum spacetime geometry from the underlying discrete MPU network. The discussion remains conditional: Theorem 43 supplies the manuscript's regularity theorem, while the limit-space regularity input used in Section 11.4 and the AQFT bridge hypotheses collected in Appendix F remain additional ingredients. The emergence process is presented in stages: demonstrating convergence of the discrete network metric space to a continuous manifold, identifying the metric tensor, and deriving the Lorentzian signature and invariant speed from the causal structure of MPU interactions. The interpretation of curvature as predictive holonomy is also discussed.
+This section details the emergence of effective spacetime geometry from the underlying discrete MPU network. The continuum layer is not an additional ontology: the real world does not have to become an actual continuum. It only has to generate continuum behavior as a finite-resolution effective closure. Theorem 43 supplies the regularity-necessity theorem, Theorem 43.5 packages the operational-continuum branch on the $M=24$, $D=4$ shell under its stated hypotheses, and Appendix F supplies the algebraic AQFT bridge under its controlled coarse-graining hypotheses. The emergence process is presented in stages: obtaining the operational continuum compression of the discrete propagation-cost metric, identifying the metric tensor, and deriving the Lorentzian signature and invariant speed from the causal structure of MPU interactions. The interpretation of curvature as predictive holonomy is also discussed.
 
 **11.1 The MPU Network as Pre-Geometric Structure**
 
@@ -20,7 +20,7 @@ where the minimum is over all finite paths $\gamma$ connecting $u$ and $v$. Assu
 
 **11.3 Geometric Regularity: A Necessary Condition for Viability**
 
-For the discrete metric space $(\mathcal{V}, d_{\mathcal{N}})$ to yield a smooth continuum spacetime, the network structure must possess large-scale geometric regularity.
+For the discrete metric space $(\mathcal{V}, d_{\mathcal{N}})$ to admit a stable finite-resolution continuum compression, the network structure must possess large-scale geometric regularity.
 
 **11.3.1 Definition 36 (Def 36): Uniform D-dim Polynomial Volume Growth**
 
@@ -40,32 +40,54 @@ Assume the regularity-penalty hypotheses established in Appendix C and the varia
 
 *Proof.* Appendix C provides the necessity estimates: anomalous dimension destroys viability/coherence (Theorem C.2), large curvature fluctuations raise operational cost and destabilize local dynamics (Theorem C.4), and Theorem C.6 packages these requirements as local doubling/Poincaré control. Appendix D incorporates these penalties into the optimization dynamics: Lemma D.3 quantifies the geometric penalty, Theorem D.2 shows that irregular configurations incur a strict increase in the core potential, and Theorem D.3 concludes that every global minimizer of $V$ is geometrically regular. Under the additional low-noise detailed-balance hypotheses (A1)–(A6) of Appendix D, Theorem D.5 yields the invariant-measure concentration statement. Combining these results proves the theorem. ∎
 
-**11.4 Geometric Convergence to a Continuous Manifold (Conditional on Thm 43)**
+**Theorem 43.5 (Operational Continuum Branch Package).** On the minimal $M=24$, $D=4$ mode-channel branch, assume the following branch hypotheses:
 
-Assuming Theorem 43, Appendix D supplies the bounded-action compactness framework for continuum limits of the discrete MPU network metric space. The branch used below requires four additional inputs that Appendices C and D do not derive: first-shell weighted-shell/local-isotropy control, or an equivalent replacement, for the scalar-curvature averaging step; a radius-2 curvature-transfer theorem placing the rescaled family in a measured-Gromov-Hausdorff-stable synthetic-curvature class; Mosco convergence of the rescaled Dirichlet forms, or an equivalent theorem identifying the limit Cheeger energy as quadratic; and a branch-appropriate Euclidean-rigidity/regularity theorem on the selected non-collapsed branch. On that explicit conditional branch, the limit admits an a.e. Euclidean regular set supporting an effective manifold description.
+1. the first shell is chart-compatible with the $D_4$ realization of Appendix C, Lemma C.6d, up to $o(\delta_n)$ rescaled distortion;
+2. the local shell QFI tensor is optimized by PCE as in Theorem C.6e at fixed local channel budget;
+3. the regularity-necessity hypotheses of Theorem 43 and the doubling/Poincaré hypotheses of Theorem C.6 hold for the rescaled family;
+4. the discrete curvature transfer lies in the uniform $\mathrm{BE}(K,4)$ class required by Theorem C.6c;
+5. the action-level finite-core hypothesis and recovery-map compatibility required by Theorem D.6e hold, with the shell-isotropy and noncollapse components supplied by Theorem C.6e;
+6. for the $C^{1,\alpha}$ manifold upgrade, the quantitative Euclidean-rigidity / harmonic-coordinate input of Theorem 44a holds on the selected noncollapsed branch.
+
+Then the MPU network admits an operational continuum limit in the following precise sense:
+
+1. the rescaled metric-measure spaces have subsequential measured-Gromov-Hausdorff limits;
+2. every selected-branch limit satisfying the preceding hypotheses is noncollapsed $\mathrm{RCD}^*(K,4)$;
+3. the rescaled propagation-cost Dirichlet forms Mosco-converge to the quadratic Cheeger energy;
+4. tangent cones are Euclidean $\mathbb R^4$ at $\mu$-almost every point;
+5. under item 6, the regular set carries a $C^{1,\alpha}$ Riemannian spatial metric and, after adjoining the ND-RID update clock, a Lorentzian effective metric;
+6. the continuum object is an effective finite-resolution closure, not an exact physically instantiated real-number continuum.
+
+*Proof.* Lemma C.6d gives the exact $24$-vector $D_4$ first-shell moment identities:
+$$
+\sum_{\xi\in\Xi_{D_4}}\xi=0,\qquad
+\frac1{24}\sum_{\xi\in\Xi_{D_4}}\xi^i\xi^j=\frac12\delta^{ij}.
+$$
+Theorem C.6e shows that PCE minimization of the local shell QFI volume at fixed channel budget forces
+$$
+Q_n(x)\to \frac{C_\Sigma}{4}I_4,
+$$
+so the first-shell odd moments vanish, the second moment is positive and isotropic, and rank collapse is excluded. The same theorem gives fixed-radius four-dimensional noncollapse and the canonical shell data used by Theorem D.6e. Theorem C.6 supplies the local doubling/Poincaré regime under its stated hypotheses, while the finite-core and recovery assumptions listed above complete the hypotheses of Theorem D.6e. Hence Theorem D.6e identifies the Mosco limit of the rescaled Dirichlet forms with the quadratic Cheeger energy. The uniform $\mathrm{BE}(K,4)$ curvature-transfer hypothesis places the rescaled family in the stable curvature class of Theorem C.6c; together with noncollapse, Theorem C.6c gives noncollapsed $\mathrm{RCD}^*(K,4)$ subsequential limits and almost-everywhere Euclidean $\mathbb R^4$ tangents. If the quantitative rigidity input of Theorem 44a is also imposed, Theorem 44a upgrades the selected regular branch to a $C^{1,\alpha}$ Riemannian spatial metric on the regular set, and Corollary O.7b.1 gives the Lorentzian extension once the finite ND-RID update clock is adjoined. Finally, Theorem K.10.3a excludes exact continuum ontology under finite-resource PPI, so the limit is physically interpreted as a finite-resolution continuum compression of the discrete MPU branch, not as an actual continuum substrate. ∎
+
+**11.4 Geometric Convergence to an Operational Continuum Manifold**
+
+Assuming Theorem 43, the operational-continuum branch is packaged in Theorem 43.5. Appendix C supplies the first-shell $D_4$ isotropy and noncollapse closure; Appendix D supplies the Mosco–Cheeger closure under its finite-core and recovery hypotheses; and Theorem 44a supplies the regular-branch manifold upgrade under its quantitative Euclidean-rigidity input. The resulting continuum description is an effective finite-resolution compression of the MPU network, not an assertion that the physical substrate becomes an exact real-number continuum.
 
 **11.4.1 Theorem 44 (Gromov-Hausdorff Limit)**
 
-**Conditional on Theorem 43 and on the following additional bridge inputs for the rescaled spaces**, consider a sequence of pointed, rescaled MPU network metric spaces
+On the operational-continuum branch of Theorem 43.5, consider a sequence of pointed, rescaled MPU network metric spaces
 $$
 \{(X_n,o_n)\}=\{(\mathcal{V}_n,\delta_{eff,n}^{-1}d_{\mathcal N_n},o_n)\},
 \qquad
 \delta_{eff,n}\to 0,
 $$
-equipped with normalized counting measures $\mu_n$ such that $\mu_n(B_1(o_n))=1$ after rescaling. Assume:
-
-1. **Weighted-shell/local-isotropy input.** The first-shell weights satisfy the asymptotic equal-weight and weighted-isotropy conditions of Remark C.3.3a, or an equivalent replacement strong enough to justify the scalar-curvature averaging step used in the action bridge.
-2. **Radius-2 curvature transfer.** On every bounded radius range, the rescaled family satisfies a family-uniform discrete curvature-dimension / Bochner estimate, or an equivalent radius-2 two-ball theorem, stable under the measured convergence used below and yielding fixed-radius doubling and $(1,2)$-Poincaré control compatible with Lemma D.6a.
-3. **Quadratic limit energy.** The rescaled random-walk Dirichlet forms Mosco-converge to the limit Cheeger energy, or another theorem identifies the limit first-order energy as a quadratic form.
-4. **Euclidean rigidity and regularity on the selected branch.** The measured limit lies on a non-collapsed branch for which the relevant comparison-volume rigidity theorem, quantitative Reifenberg theorem, or equivalent branch-specific regularity theorem yields Euclidean tangents on the regular set, their $\mu_\infty$-a.e. uniqueness, and the coordinate regularity used in Theorem 45.
-
-Then the family is pre-compact in the pointed measured Gromov–Hausdorff topology. Consequently, a subsequence converges in the measured sense to a limit pointed metric-measure space
+equipped with normalized counting measures $\mu_n$ such that $\mu_n(B_1(o_n))=1$ after rescaling. Then the family is pre-compact in the pointed measured Gromov–Hausdorff topology. Consequently, a subsequence converges in the measured sense to a limit pointed metric-measure space
 $$
 (M,d_\infty,\mu_\infty,o_\infty).
 $$
 Moreover, $(M,d_\infty,\mu_\infty)$ is a doubling PI space, the limit Cheeger energy is quadratic, and hence the limit is infinitesimally Hilbertian. Under assumption (4), there exists a Borel regular set $M_{reg}\subseteq M$ with $\mu_\infty(M\setminus M_{reg})=0$ such that for every $p\in M_{reg}$ the tangent cones are Euclidean $\mathbb{R}^D$; on the PU branch selected by Theorem Z.11, this means $\mathbb{R}^4$. The Euclidean tangent is unique $\mu_\infty$-a.e.
 
-*Proof:* Lemma D.6a supplies pointed measured Gromov–Hausdorff precompactness once the rescaled sequence satisfies its bounded-geometry hypotheses. Assumption (2) provides the family-uniform fixed-radius doubling/Poincaré package and the curvature-class stability required for passage to the measured limit. Assumption (3) identifies the limit Cheeger energy as quadratic, so the limit is infinitesimally Hilbertian. Assumption (4) is exactly the Euclidean-rigidity/regularity input on the selected non-collapsed branch and yields the stated regular set, the $\mu_\infty$-a.e. uniqueness of Euclidean tangents, and the coordinate regularity used in Theorem 45. Assumption (1) furnishes the first-shell averaging input needed whenever the scalar-curvature proxy of Remark C.3.3a is used to connect the discrete curvature term to the continuum Einstein-Hilbert term. ∎
+*Proof:* Theorem 43.5 collects the branch hypotheses previously listed separately. In particular, Theorem C.6e supplies the first-shell isotropy and fixed-radius noncollapse, Theorem C.6c supplies the stable noncollapsed $\mathrm{RCD}^*(K,4)$ limit once the uniform curvature-transfer condition holds, Theorem D.6e identifies the Mosco limit of the rescaled Dirichlet forms with the quadratic Cheeger energy under its finite-core/recovery hypotheses, and Theorem 44a supplies the regular-branch Euclidean-rigidity conclusion when its quantitative input is imposed. Therefore the family is precompact, the limit Cheeger energy is quadratic, the limit is infinitesimally Hilbertian, and the full-measure regular set has Euclidean $\mathbb R^4$ tangents on the PU branch selected by Theorem Z.11, with the stronger $C^{1,\alpha}$ regularity available on the Theorem 44a subbranch. ∎
 
 **11.5 Emergence of the Metric Tensor (Conditional on Thm 43, Thm 44)**
 

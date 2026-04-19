@@ -1,6 +1,6 @@
 # Appendix F: AQFT Framework for Continuum Emergence and Locality
 
-This appendix outlines the mathematical framework of Algebraic Quantum Field Theory (AQFT) in curved spacetimes [Haag 1996; Brunetti et al. 2015], providing the rigorous setting necessary to formalize the emergence of continuum physics from the discrete MPU network and to precisely analyze the status of locality and causality within the Predictive Universe (PU) framework. This approach focuses on the algebras of local observables and their relationships, offering a robust way to handle the continuum limit and define concepts like the stress-energy tensor and microcausality. The emergence described here is conditional on Theorem 43 (Necessary Emergence of Geometric Regularity), rigorously justified in Appendices C and D.
+This appendix outlines the mathematical framework of Algebraic Quantum Field Theory (AQFT) in curved spacetimes [Haag 1996; Brunetti et al. 2015], providing the rigorous setting necessary to formalize the operational-continuum description of the discrete MPU network and to precisely analyze the status of locality and causality within the Predictive Universe (PU) framework. This approach focuses on the algebras of local observables and their relationships, offering a robust way to handle the finite-resolution continuum compression and define concepts like the stress-energy tensor and microcausality. The geometric operational-continuum branch is packaged by Theorem 43.5 under its stated hypotheses; the present appendix states the additional algebraic coarse-graining conditions under which this geometric branch supports a stable local AQFT net.
 
 **F.1 Net of Local Observables ($\mathfrak{A}_n(\mathcal{O})$)**
 
@@ -80,7 +80,23 @@ $$
 v_{\rm LR}\ \le\ v_\*\ +\ 2D\,J_{\max}\,r_0\ +\ O\!\Big(\tfrac{r_0}{\tau}\ln z_{\max}\Big).
 $$
 
-Identifying the macroscopic invariant speed $c$ (Theorem 46) with $\lim_{n\to\infty}v_{LR}^{(n)}$ justifies Corollary F.1.
+**Corollary F.1a (Lightcone Normalization on the Strict Single-Clock Branch).** On the strict finite-range single-clock ND-RID branch, let one update layer have support radius $r_0$ in graph distance and minimal cycle time $\tau_{\min}$. Let the physical edge scale in the rescaled geometry be $\delta_{\mathrm{eff},n}$ and define
+$$
+c_n:=\frac{r_0\delta_{\mathrm{eff},n}}{\tau_{\min}}.
+$$
+For integer update times $t=m\tau_{\min}$, the exact support cone of the microscopic update satisfies
+$$
+[\alpha_t^{(n)}(A),B]=0
+\qquad\text{whenever}\qquad
+d_{\mathrm{graph}}(\operatorname{supp}A,\operatorname{supp}B)>mr_0.
+$$
+Equivalently, the physical support-cone speed is at most $c_n$. If the geometric causal cone of Theorem 46 is normalized using the same update radius, edge scale, and clock, and $c_n\to c$, then the strict ND-RID support cone is no wider than the emergent geometric causal cone; if the selected branch saturates one-step propagation, the two cone slopes coincide. For Hamiltonian or Lindbladian Lieb-Robinson tails outside this strict branch, equality of the limiting Lieb-Robinson cone and the geometric cone remains the explicit lightcone-identification hypothesis of Theorem F.0.
+
+*Proof.* In a strict finite-range single-clock ND-RID circuit, after $m$ update layers the support of a local observable can expand by at most $mr_0$ graph steps. The elapsed time is $m\tau_{\min}$ and the physical radius is at most $mr_0\delta_{\mathrm{eff},n}$. Therefore the physical support speed is bounded by
+$$
+\frac{mr_0\delta_{\mathrm{eff},n}}{m\tau_{\min}}=c_n.
+$$
+The same update-clock and support-radius data define the causal propagation cone used in Theorem 46 on this strict branch. Passing to the limit gives the stated cone normalization. ∎
 
 **Corollary F.1 (Emergence of Einstein Causality).**
 If the sequence $\{\mathcal N_n\}$ converges geometrically to a Lorentzian spacetime $(M,g_{\mu\nu})$ with invariant speed $c$ (as derived in Theorem 46), and $v_{LR}^{(n)}\to c$ as $n\to\infty$, then for any two space-like separated regions $\mathcal O_1,\mathcal O_2\subset M$ one has
@@ -122,7 +138,7 @@ The transition from the discrete MPU network to continuum physics is formalized 
 
 4.  **Compatible Embeddings:** The canonical block inclusions and conditional expectations used to form the inductive limit are isometric $*$-monomorphisms that agree on overlaps, so the quasi-local inductive limit is well-defined.
 
-5.  **Lightcone Identification:** The microscopic support cone defined by one update per minimal cycle has slope $\delta_{\mathrm{eff}}/\tau_{\min}$; the same discrete propagation bound yields the invariant speed in Theorem 46, so the limiting Lieb-Robinson cone and the geometric causal cone coincide.
+5.  **Lightcone Identification:** On the strict finite-range single-clock ND-RID branch, the microscopic support cone defined by one update per minimal cycle has physical speed bounded by $\delta_{\mathrm{eff}}/\tau_{\min}$ after the chosen support-radius normalization, and Corollary F.1a identifies the strict support-cone normalization with the geometric causal cone when the same branch data are used. Outside that strict branch, equality of the limiting Lieb-Robinson cone and the geometric causal cone remains an explicit AQFT bridge hypothesis.
 
 In the ND–RID setting with MPU cycle time $\tau$, interaction radius $r_0$ (max graph distance per update), bounded local interaction norm $J$, and maximal network degree $z_{\max}$, these hypotheses imply a uniform Lieb–Robinson bound with constants depending on these micro-parameters; in particular, the emergent Lieb-Robinson velocity scales as $v_{LR}=O(r_0/\tau)$. Then, the continuum limit exists and defines a net $\mathfrak{A}(\mathcal{O})$ on a Lorentzian manifold $(M, g_{\mu\nu})$ with the following properties:
 
