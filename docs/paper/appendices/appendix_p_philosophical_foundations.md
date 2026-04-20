@@ -4463,6 +4463,8 @@ Combining these: $2^{K_0} = 2(e^{\varepsilon})^2$. For integer $a$ (required by 
 | **Empirical input** | quantity imported from measurement rather than derived inside the PU chain |
 | **Identification** | named interpretive or sector-linking assignment recorded explicitly as an identification rather than as a theorem |
 | **Open target** | named missing theorem, computation, or bridge closure needed to upgrade status |
+| **Validation target** | numerical value used only to test a forward derivation after the operator, branch, and convention choices have been fixed; it is not an input to the derivation |
+| **Negative theorem** | proved obstruction excluding a proposed branch, mechanism, or reduction route |
 
 The manuscript uses the following parameter-role classes.
 
@@ -4519,6 +4521,10 @@ $$
 with the diagonal rule recovered when $\Sigma_{ij}=0$ for $i\ne j$. A zero entry means the corresponding dependency class is absent at the stated working order; it does not assert absence at all future orders.
 
 *Proof.* The role classes in Convention P.14.1a are applied to fixed symbol occurrences. At that level, a non-exact numerical contribution is either an internal approximation within a fixed branch, an internal matching/branch/bridge/convention dependency, or an external empirical/model-identification dependency. These are exactly T1, T2, and T3. If a calculation has overlapping effects, the overlap is either decomposed into distinct numerical components or explicitly recorded as a combined entry, so no contribution is counted twice. For independent components, variance additivity gives the diagonal quadrature formula. For correlated components, the covariance formula is the finite-dimensional variance identity. The zero-entry rule follows because the table is indexed by the current dependency record and working order. ∎
+
+**Convention P.14.1d (Prediction-Table Admissibility Rule).** A numerical row may be listed as a PU prediction only when every non-observational input used by that row is labeled theorem-level, branch-level, or convention-fixed at the same point of use. Validation targets, empirical inversions, uncomputed spectral values, phenomenological response kernels, fitted profile functions, transferred prefactors, and unresolved open targets may appear only as validation rows, model rows, consistency checks, or open targets. Any aggregate statistic over mixed-status rows must be labeled by the weakest status class included in the aggregate.
+
+*Proof.* Convention P.14.1a assigns a status to every theorem, model, convention, hypothesis, and open target. Convention P.14.1c forbids leaving a status cell empty in a dependency record. Therefore each numerical row inherits a maximum status equal to the meet of the statuses of its inputs. A row using a validation target, empirical inversion, uncomputed spectral value, phenomenological kernel, transferred prefactor, or unresolved open target cannot have theorem-level status because replacing that input by another admissible value changes the numerical row without contradicting the prior theorem stack. The aggregate-statistic rule follows because a statistic over a set of rows inherits the weakest unresolved dependency among those rows. ∎
 
 ### P.14.4 The Derivation Chain
 

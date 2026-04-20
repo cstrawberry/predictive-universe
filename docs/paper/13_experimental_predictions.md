@@ -279,7 +279,7 @@ The framework's two-mechanism model for the dark sector (Appendix I) is falsifia
 **Data and Code Availability:** All analysis scripts (including power and sample-size simulations), anonymized raw data, experimental logs, and time-stamps (with random seeds where applicable) will be made publicly available at a persistent repository to ensure full transparency and reproducibility. The preregistration will link directly to this repository.
 
 **13.8.2a Critical Baryonic Surface-Density Window**
-The bridge-law prediction for the galactic acceleration scale implies a second zero-parameter galactic observable:
+The bridge-law normalization for the galactic acceleration scale implies a second bridge-level galactic observable:
 
 $$
 \Sigma_\dagger = \frac{g_0}{2\pi G} = (134.7 \pm 2.3)\,M_\odot\,\mathrm{pc^{-2}}.
@@ -558,11 +558,11 @@ This constitutes an independent validation pathway for the PU framework, complem
 
 ## 13.10 Consolidated Falsifiability Analysis
 
-The framework generates several falsifiable predictions once the core PU invariants are fixed. Some are parameter-free within the discrete backbone of the theory; others use additional threshold, prefactor, or matching data stated explicitly in the technical appendices. This section catalogs the primary falsifiable predictions derived in the technical appendices, specifies the conditions under which each would be refuted, and summarizes current experimental status.
+The framework generates falsifiable rows once the core PU invariants are fixed, with status labels carried at the point of use. This section catalogs theorem-level, branch-level, validation-level, and model-level rows derived or formulated in the technical appendices, specifies the conditions under which each row would be refuted at its stated status, and summarizes current experimental status. Some are parameter-free within the discrete backbone of the theory; others use additional threshold, prefactor, or matching data stated explicitly in the technical appendices. This section catalogs the primary falsifiable predictions derived in the technical appendices, specifies the conditions under which each would be refuted, and summarizes current experimental status.
 
 The predictions fall into three epistemic categories that must be distinguished to prevent conflation of claims of different logical type:
 
-*Quantitative predictions* are numerical values derived from the framework together with the appendix-specific input data stated in their derivations and compared directly to measured quantities. These include $\alpha^{-1} = 137.036092 \pm 0.000060$ (Theorem Z.26), $D = 4$ (Theorem Z.11), $\Lambda L_P^2 = (2.88 \pm 0.03) \times 10^{-122}$ (Appendix U), and the glueball mass ratios (Theorem Z.8h). Falsification is straightforward: measured values falling outside stated uncertainty bounds refute the prediction.
+*Theorem-level quantitative predictions* are numerical values obtained from the framework without validation targets, phenomenological kernels, empirical inversions, or uncomputed spectral inputs. *Branch-level quantitative rows* are numerical values obtained after named branch hypotheses, bridge laws, finite-part conventions, or matching conventions are fixed. *Validation and model rows* use validation targets, phenomenological response kernels, transferred prefactors, or unclosed global spectral data; these rows are falsifiable as stated branch/model claims but are not counted as theorem-level PU predictions until their status-carrying inputs are derived from prior PU structure. These include $\alpha^{-1} = 137.036092 \pm 0.000060$ (Theorem Z.26), $D = 4$ (Theorem Z.11), $\Lambda L_P^2 = (2.88 \pm 0.03) \times 10^{-122}$ (Appendix U), and the glueball mass ratios (Theorem Z.8h). Falsification is straightforward: measured values falling outside stated uncertainty bounds refute the prediction.
 
 *Structural predictions* assert that specific mathematical structures emerge necessarily or conditionally from the framework's axioms and stated surrogate principles. These include Lorentz invariance (Theorem 46), the gauge group $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ (Theorem G.8.4b, conditional on Proposition G.M1), the Born rule (Proposition 7), the three-generation claim as formulated in Appendix R, and chronology protection (Theorem 14.1). Falsification requires discovering that the predicted structure is violated in nature — for example, observation of fundamental Lorentz violation or a functioning closed timelike curve.
 
@@ -691,10 +691,10 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
 | Fine-structure constant $\alpha^{-1}$ | $137.036092 \pm 0.000060$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
 | Light active neutrino count $N_{\nu}$ | 3 under the standard identification from $N_{\mathrm{gen}}=3$ | $2.984 \pm 0.008$ | Theorem R.3.4 + LEP $Z$ width | indirect |
-| Gauge group $G_{\mathrm{SM}}$ (conditional on Proposition G.M1, Eq. (G.8.5), and the SM-type anomaly/hypercharge data of Theorem G.8.4b) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ✓ |
-| Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ✓ |
+| Gauge group $G_{\mathrm{SM}}$ (conditional on Proposition G.M1, Eq. (G.8.5), and the SM-type anomaly/hypercharge data of Theorem G.8.4b) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ◐ conditional regime theorem |
+| Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ◐ hierarchy invariant; absolute normalization separate |
 
-All predictions are currently consistent with observation. The framework will be falsified if any prediction falls outside its stated uncertainty bounds in future precision measurements.
+All displayed rows are currently consistent with observation at their stated status level. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row.
 
 ---
 

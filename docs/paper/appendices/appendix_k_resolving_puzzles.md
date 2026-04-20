@@ -4,7 +4,7 @@
 
 This appendix demonstrates how the Predictive Universe (PU) framework resolves several long-standing puzzles in fundamental physics and cosmology. Each section pairs an unsolved problem with specific PU mechanisms derived in the main text and appendices, showing how the framework provides quantitative resolutions or clear pathways toward them. The material ranges from rigorously established results with precise numerical predictions to exploratory directions requiring further theoretical development.
 
-The framework's core insight—that physical law emerges from the operational requirements, logical limitations, and thermodynamic costs of prediction itself as instantiated by the MPU network—yields concrete, testable predictions for fundamental constants, selected hierarchy invariants and mixings, and cosmological parameters. Several of these predictions achieve sub-percent precision with zero continuously adjustable parameters. In the quark sector, mixed-scale comparisons initially show 11–15% deviations, while a common-scheme reduction enables controlled same-scale hierarchy invariants; incorporating the down-sector $A_2/D_4$ frustration correction derived in Section T.25.6a brings these invariants into sub-percent agreement at $\mu=M_Z$, with explicit T1/T2/T3 budgets for both the common-scale reduction (Section T.25.5.3) and the frustration correction (Section T.25.6a.10).
+The framework's core insight—that physical law emerges from the operational requirements, logical limitations, and thermodynamic costs of prediction itself as instantiated by the MPU network—yields concrete, testable predictions for fundamental constants, selected hierarchy invariants and mixings, and cosmological parameters. Several rows achieve sub-percent agreement after their status-carrying inputs are fixed. In the quark sector, mixed-scale comparisons initially show 11–15% deviations, while a common-scheme reduction enables controlled same-scale hierarchy invariants; incorporating the down-sector $A_2/D_4$ frustration correction derived in Section T.25.6a brings these invariants into sub-percent agreement at $\mu=M_Z$, with explicit T1/T2/T3 budgets for both the common-scale reduction (Section T.25.5.3) and the frustration correction (Section T.25.6a.10).
 
 ## K.2 Values of the Fundamental Constants
 
@@ -57,7 +57,7 @@ The Mass Hierarchy Invariant:
 $$\mathcal{R} := \frac{\ln(m_3/m_1)}{\ln(m_3/m_2)} = \frac{d^2_{31}}{d^2_{32}} \in \left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$$
 **(Equation R.17)** provides a discrete prediction with zero continuously adjustable parameters. In the charged lepton sector, the observed value $\mathcal{R}_\ell \approx 2.889$ matches the discrete prediction $\mathcal{R} = 3$ to within 3.8%, providing strong phenomenological support. Absolute mass scales are set by the emergent VEV through sector prefactors $c_f$ determined by Bures/gauge normalization (Appendix T, Section T.21).
 
-Appendix T (Section T.25) establishes precise predictions with zero continuously adjustable parameters:
+Appendix T (Section T.25) establishes status-labeled hierarchy comparisons with no additional continuous fitting after the stated geometric assignments, threshold data, common-scale reductions, and sector normalizations are fixed:
 - $m_\tau^{(0)} \approx 0.94$ GeV at leading order; factor $\approx 1.9$ normalization gap open pending two-loop threshold and Van Vleck–Morette corrections (Remark T.45.1; Lemma T.45.1a). Anchored to $m_\tau^{\rm obs} = 1776.86$ MeV (Particle Data Group (2024)), the $E_8$ log-ratio predictions give $m_\mu = 105.78$ MeV (observed: 105.66 MeV, deviation: $+0.12\%$) and $m_e = 0.5121$ MeV (observed: 0.5110 MeV, deviation: $+0.22\%$)
 - $\ln(m_\tau/m_\mu) = 2.8212$ (observed: 2.8224, deviation: $\approx 0.04\%$)
 - Cabibbo angle $|V_{us}| = 0.2261$ from frustration-induced tunneling between quark sector vacua (observed: $0.2243 \pm 0.0008$, deviation: +0.8%)
@@ -70,7 +70,7 @@ The framework successfully derives from first principles:
 - Speed of light $c$ (from minimal operational scales)
 - Planck constant $\hbar$ (as action-entropy exchange rate)
 - Gravitational constant $G$ (from thermodynamic channel capacity)
-- Fine-structure constant $\alpha$ (zero continuously adjustable parameters: $\alpha^{-1} \approx 137.036$)
+- Fine-structure constant $\alpha$ (theorem-level Thomson calculation: $\alpha^{-1} \approx 137.036$)
 - Electroweak scale $v$ (from Golay complexity: $v \approx 246$ GeV)
 - Weinberg angle ($\sin^2\theta_W^{(0)} = 3/8$ at PU fixed point)
 - Higgs mass ($m_H \approx 125$ GeV from metastability)
@@ -832,7 +832,7 @@ in excellent agreement with the observed hierarchy.
 **Phenomenological Success:**
 - Hierarchy: $v \approx 246$ GeV (input) → test internal consistency
 - $\sin^2\theta_W(M_Z)$: conditional on the lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$ on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$, one-loop SM RG evolution from the matching boundary $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2+5Z_1)$ with $Z_i=1+\Delta_i/24$ yields the observed Z-pole range **(Theorem T.16, T.18)**
-- $m_H \approx 125$ GeV from metastability (predicted with zero continuously adjustable parameters)
+- $m_H \approx 125$ GeV from the Appendix T metastability-boundary matching branch
 - Fermion mass ratios (Appendix T, Section T.25)
 
 This resolution of the electroweak hierarchy is complete for $v$ and $m_H$; the quantitative gauge-threshold sector ($\sin^2\theta_W$, $\alpha_s$, $\alpha_{\mathrm{em}}^{-1}$ at the Z pole) remains conditional on the lifted spectral computation.

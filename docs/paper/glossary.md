@@ -237,6 +237,12 @@ $$
 $$
 on the verification/update resources required to approach that limit (Theorem 14), analogous to the speed of light limit ($v \to c$) in Special Relativity. When the chosen complexity notion $C_P$ lower-bounds those verification/update operations, the same asymptotic lower bound transfers to $C_P$.
 
+*   **Admissible Bridge-Law Class:** (Definition H.4.2.8a) The class of positive dimensionless bridge coefficients $\eta$ in $g_0=\eta c^2\sqrt{\Lambda/3}$ that satisfy dimensional closure, internal-data closure, factor locality, no observational fitting, and positive response.
+
+*   **Matched Dark-Sector Discriminator:** (Definitions I.12a.1-I.12a.2) A likelihood-equivalent residual comparison between PU scaled gravity and NFW dark-matter fits using the same covariance, nuisance parameters, baryonic preprocessing, and masking conventions.
+
+*   **CC Evidence Triage:** (Definition 13.0a) The preregistered classification of CC/statistical-influence experiments into support, null, or failure using fixed endpoints, artifact bounds, sign tests, stopping rules, and independent replication.
+
 *   **Property R (Computational Richness):** (Definition 10, Appendix A) The necessary level of computational capability (representation, simulation/reasoning, predicate evaluation) required for a system to engage in the self-referential processing leading to SPAP and RUD limits. Emerges through two complementary foundations: (I) Logical necessity from predictive structure (§A.0.2), establishing *why* computational capacity must exist; and (II) Physical instantiation via POP/PCE optimization (§A.0.3-A.0.5), demonstrating *how* it manifests in finite resource systems. See Appendix A.0 for complete derivation.
 
 *   **$Q$ (Predictive Quality):** (Section 2.1) General measure of the goodness or utility of a system's predictions relative to its POP goals (e.g., reduced uncertainty, increased accuracy, enhanced operational success). Related to Predictive Performance PP.
@@ -284,6 +290,10 @@ on the verification/update resources required to approach that limit (Theorem 14
 *   **Theorem 29 (Physical Interpretation of Internal Hamiltonian):** (Section 7.3.3) The expectation $\langle\hat{H}\rangle$ gives the baseline operational energy associated with sustaining the predictive cycle, and the spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min}>0$.
 
 *   **Theorem 31 (Irreversibility Cost):** (Section 7.3.4, Appendix J) The physical instantiation of the SPAP update cycle necessarily incurs entropy production $\varepsilon \ge \ln 2$ per cycle, derived from Landauer's principle applied to the logically irreversible 2-to-1 state merge in SPAP.
+
+*   **Parameter Role Classes:** (Appendix P.14.1a) Paper-wide labels for what a quantity does inside a derivation or comparison: ExactThreshold, DiscreteMultiplicity, ThresholdData, BridgeNormalization, SchemeScale, CoarseGrainingScale, ReferenceConvention, PhenomenologicalKernel, and EmpiricalInput. These are not theorem statuses; they prevent exact thresholds, bridge normalizations, fit kernels, and observational inputs from being treated as the same kind of object.
+
+*   **T1/T2/T3 Uncertainty Protocol:** (Appendix P.14.1c; Appendix T.25.5.3) Paper-wide decomposition of numerical uncertainty. T1 records internal truncation and approximation inside a fixed branch; T2 records matching, threshold, branch, bridge, regularization, and convention dependence; T3 records empirical extraction, observable mapping, target-tuple retention, phenomenological-kernel fitting, and discrete identification ambiguity.
 
 *   **Theorem 43 (Necessary Emergence of Geometric Regularity):** (Section 11.3.1–11.3.2, Theorem C.6, Appendix D) Theorem asserting that geometric regularity is necessary for the low-potential sector selected by POP/PCE, with every global minimum geometrically regular. Justified by necessity arguments (Appendix C) and the variational/ergodic analysis of Appendix D. Foundational for emergence of smooth spacetime, while the later manifold, AQFT, and gravity steps use additional explicit bridge hypotheses.
 
