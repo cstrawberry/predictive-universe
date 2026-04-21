@@ -120,66 +120,105 @@ recovering Einstein causality.
 
 The transition from the discrete MPU network to continuum physics is formalized as the convergence of the sequence of discrete nets of algebras $\{\mathfrak{A}_n(\mathcal{O})\}$. This analysis relies critically on the assumption that such a stable continuum limit exists, as formalized in Theorem F.0.
 
-**Theorem F.0 (Conditional Convergence to a Stable, Local AQFT Net).** Assume the discrete MPU dynamics satisfy the following **sufficient conditions**:
+**Theorem F.0 (Conditional Convergence to a Stable, Local AQFT Net).** Assume the discrete MPU dynamics on the operational-continuum branch satisfy the following sufficient conditions:
 
-1.  **Bounded Local Degree & Short-Range Interactions:** A uniform bound on node degrees and a fixed microscopic interaction radius (or exponentially decaying couplings) across all scales.
+1. **Uniform locality and bounded interaction strength.** The Heisenberg generators decompose on each graph as
+   $$
+   \mathcal L_n^*
+   =
+   i[H_n,\cdot]+\mathcal D_n^*,
+   \qquad
+   H_n=\sum_Z h_{n,Z},
+   $$
+   with finite range or exponential decay, uniformly bounded degree, and
+   $$
+   \sup_n\sup_x\sum_{Z\ni x}\|h_{n,Z}\|<\infty,
+   \qquad
+   \sup_n\sup_x\sum_{Z\ni x}\|\mathcal D_{n,Z}^*\|_{\infty\to\infty}<\infty.
+   $$
 
-2.  **Uniform Lieb-Robinson Bound:** There exist constants $v_{\rm LR} < \infty$ and $\mu > 0$ such that commutators for local operators $A, B$ obey the bound:
-    $$
-    \|[A(t),B]\| \le c\,\|A\|\,\|B\|\,e^{-\mu(d - v_{\rm LR}|t|)}
-    $$
-    with constants controlled by the bounded degree, interaction radius, and a uniform bound on the local interaction norm.
+2. **Uniform Lieb-Robinson control.** There are constants $C,\mu,v_{\rm LR}$ independent of $n$ such that for local $A,B$,
+   $$
+   \|[\alpha_t^{(n)}(A),B]\|
+   \le
+   C\|A\|\|B\|
+   e^{-\mu(d_n(\operatorname{supp}A,\operatorname{supp}B)-v_{\rm LR}|t|)}.
+   $$
 
-3.  **Controlled Coarse-Graining:** For every bounded physical region $\mathcal O$ and every bounded time window $|t|\le t_0$, the coarse-graining maps $\Phi_b$ produce local evolutions satisfying
-    $$
-    \|\Phi_b \circ \mathrm{Evolve}_b^{\,t} - \mathrm{Evolve}_{{\rm cont},\mathcal O}^{\,t}\|_\diamond \le C_{\mathcal O,t_0}\, b^\gamma
-    $$
-    with constants depending only on the physical size of $\mathcal O$ and the chosen time window. The limiting evolution on $\mathcal O$ may include a nonvanishing local Hamiltonian part. Equivalently, the coherent contribution on each fixed physical region must either converge to a retained continuum Hamiltonian term or satisfy an independent suppression/cancellation theorem strong enough to make its residual vanish in the displayed norm. This is an additional bridge hypothesis: bounded degree, fixed interaction radius, and locality of the Hamiltonian terms are necessary background conditions, but they do not by themselves prove the estimate. Under the natural extensive normalization of local Hamiltonian densities, the coherent contribution on a fixed physical region is generically $O(1)$ rather than $o(1)$, so a Duhamel-smallness argument alone is insufficient.
+3. **Compatible embeddings and local generator convergence.** The coarse-graining maps $j_n^m:\mathfrak A_n\to\mathfrak A_m$ are isometric $*$-monomorphisms agreeing on overlaps. For every bounded region $\mathcal O$ and every element $A$ in the local algebraic core,
+   $$
+   \lim_{n,m\to\infty}
+   \left\|
+   j_n^m(\mathcal L_{n,\mathcal O}^*A)
+   -
+   \mathcal L_{m,\mathcal O}^*(j_n^mA)
+   \right\|
+   =
+   0.
+   \tag{F.0.1}
+   $$
+   This local generator convergence is the main nontrivial bridge condition of the theorem; the other hypotheses are standard uniform-locality and compatibility conditions. It is satisfied in rigorous lattice QFT limits (e.g.\ free Bose/Fermi scalings, perturbatively renormalized lattice models) and must be checked branch-by-branch.
 
-4.  **Compatible Embeddings:** The canonical block inclusions and conditional expectations used to form the inductive limit are isometric $*$-monomorphisms that agree on overlaps, so the quasi-local inductive limit is well-defined.
+4. **Lightcone identification.** On the strict finite-range single-clock ND-RID branch, Corollary F.1a identifies the limiting support cone with the geometric causal cone when the same update radius, edge scale, and clock are used. Outside that strict branch, the limiting Lieb-Robinson cone is required to coincide with the geometric causal cone.
 
-5.  **Lightcone Identification:** On the strict finite-range single-clock ND-RID branch, the microscopic support cone defined by one update per minimal cycle has physical speed bounded by $\delta_{\mathrm{eff}}/\tau_{\min}$ after the chosen support-radius normalization, and Corollary F.1a identifies the strict support-cone normalization with the geometric causal cone when the same branch data are used. Outside that strict branch, equality of the limiting Lieb-Robinson cone and the geometric causal cone remains an explicit AQFT bridge hypothesis.
+5. **State convergence.** The microscopic states $\omega_n$ are locally normal and compatible with the embeddings:
+   $$
+   \omega_m(j_n^mA)-\omega_n(A)\to0
+   $$
+   on the same local algebraic core.
 
-In the ND–RID setting with MPU cycle time $\tau$, interaction radius $r_0$ (max graph distance per update), bounded local interaction norm $J$, and maximal network degree $z_{\max}$, these hypotheses imply a uniform Lieb–Robinson bound with constants depending on these micro-parameters; in particular, the emergent Lieb-Robinson velocity scales as $v_{LR}=O(r_0/\tau)$. Then, the continuum limit exists and defines a net $\mathfrak{A}(\mathcal{O})$ on a Lorentzian manifold $(M, g_{\mu\nu})$ with the following properties:
+6. **Time-slice core generation.** For every relatively compact globally hyperbolic region $\mathcal O$ and every Cauchy time-slice $\Sigma\subset\mathcal O$, the local algebra generated by the evolved slice core is norm-dense in $\mathfrak A(\mathcal O)$. In the Nachtergaele-Sims uniformly-local lattice setting this property is typically derived from Lieb-Robinson bounds together with generator regularity; it is stated here as an explicit hypothesis because its derivation depends on the selected PU branch data.
 
-1.  **Geometric Limit:** The sequence of discrete metric spaces converges to the manifold: $(\mathcal{V}_b, d_b) \to (M, g_{\mu\nu})$ (realizing Theorem 43 and Theorem 46).
-
-2.  **Algebraic Limit:** The discrete algebras converge to a Haag–Kastler net of local observables, $\mathfrak{A}(\mathcal{O})$.
-
-3.  **AQFT Axioms:** The emergent net satisfies the axioms of isotony, a consistent locality structure, covariance under the emergent isometry group, and the time‑slice property (in their curved‑spacetime formulations).
-
-4.  **Einstein Causality:** Observables in space-like separated regions commute (as derived in Corollary F.1):
-    $$
-    [\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}
-    $$
+Then the inductive-limit net $\mathcal O\mapsto\mathfrak A(\mathcal O)$ exists on the Lorentzian manifold $(M,g_{\mu\nu})$ of Theorem 43.5 and carries a strongly continuous local evolution generated on the core by a closable operator
+$$
+\mathcal L_{\mathrm{cont}}^*
+=
+i[H_{\mathrm{cont}},\cdot]+\mathcal D_{\mathrm{cont}}^*.
+\tag{F.0.2}
+$$
+The Hamiltonian part is retained unless a separate cancellation condition forces it to vanish:
+$$
+j_n^\infty(H_{n,\mathcal O})\to H_{\mathrm{cont},\mathcal O}
+$$
+in local strong-resolvent form. The emergent net satisfies isotony, additivity, covariance under every emergent isometry action represented by compatible microscopic symmetries, the time-slice property, and Einstein causality
+$$
+[\mathfrak A(\mathcal O_1),\mathfrak A(\mathcal O_2)]=\{0\}
+\qquad
+(\mathcal O_1\perp\mathcal O_2).
+$$
+The dual maps generated by $\mathcal L_{\mathrm{cont}}^*$ give the continuum state evolution.
 
 *Proof.* Let $(\Lambda_n)_{n\in\mathbb N}$ be an increasing family of finite interaction graphs with mesh $a_n\downarrow 0$ that coarse-grain bounded regions $O\subset\mathbb R^d$ to finite vertex sets $\Lambda_n(O)\subset\Lambda_n$, with bounded local degree and uniform geometric regularity as assumed in F.0. For each $n$, let $\mathfrak A_n(\Lambda_n)$ be the quasi-local $C^*$-algebra generated by local matrix algebras $\mathfrak A_n(X):=\bigotimes_{x\in X}\mathcal B(\mathcal H_x)$ for finite $X\subset\Lambda_n$, with the natural inclusions $X\subset Y\Rightarrow\mathfrak A_n(X)\hookrightarrow\mathfrak A_n(Y)$. Set $\mathfrak A_n(O):=\overline{\bigcup_{X\subset\Lambda_n(O)}\mathfrak A_n(X)}^{\|\cdot\|}$.
 
 Define the inductive-limit net. Let $\mathcal A$ be the global quasi-local algebra $\mathcal A:=\overline{\bigcup_{n}\iota_n\big(\mathfrak A_n(\Lambda_n)\big)}^{\|\cdot\|}$, where $\iota_n$ are the canonical embeddings. The local algebra for region $O$ is defined as $\mathcal A(O):=\overline{\bigcup_{n}\iota_n\big(\mathfrak A_n(O)\big)}^{\|\cdot\|}$ inside $\mathcal A$.
 **Principle of Compatible Embeddings.** The maps $\iota_n$ are the canonical block inclusions induced by the coarse-graining / conditional-expectation scheme, chosen so that they agree on overlaps (local Hilbert fibers fixed once and for all). This makes the inductive limit well-defined. Then $\mathcal A(O_1)\subset\mathcal A(O_2)$ whenever $O_1\subset O_2$ (isotony) by construction.
 
-Let $H_n$ be uniformly local, finite-range Hamiltonians on $\Lambda_n$ that generate strongly continuous dynamics $\tau_t^{(n)}=\mathrm{Ad}\,e^{itH_n}$ on $\mathfrak A_n(\Lambda_n)$. Assume the uniform Lieb–Robinson bound: there exist $C,\mu,v_{\rm LR}>0$ independent of $n$ such that for all $A\in\mathfrak A_n(X)$ and $B\in\mathfrak A_n(Y)$,
+Let
 $$
-\big\|[\tau_t^{(n)}(A),B]\big\|\le C\,\|A\|\,\|B\|\,e^{-\mu\big(d_n(X,Y)-v_{\rm LR}|t|\big)}.
+\mathcal L_n^*=i[H_n,\cdot]+\mathcal D_n^*
 $$
-This is one of the explicit hypotheses of Theorem F.0; Appendix F uses it but does not derive it from the earlier appendices. For each bounded $O$ and $t\in\mathbb R$, $\tau_t^{(n)}$ restricts to $\mathfrak A_n(\Lambda_n(O))$ up to exponentially small tails controlled by the bound. Passing to the inductive limit along the embeddings yields a strongly continuous one-parameter group of $*$-automorphisms $\tau_t$ on $\mathcal A$.
+be the uniformly local Heisenberg generator on $\mathfrak A_n(\Lambda_n)$, with reversible dynamics $\tau_t^{(n)}$ on the Hamiltonian subbranch and completely positive contraction dynamics $\alpha_t^{(n)}$ when the dissipative ND-RID part is retained. Assume the uniform Lieb-Robinson bound: there exist $C,\mu,v_{\rm LR}>0$ independent of $n$ such that for all $A\in\mathfrak A_n(X)$ and $B\in\mathfrak A_n(Y)$,
+$$
+\big\|[\alpha_t^{(n)}(A),B]\big\|\le C\,\|A\|\,\|B\|\,e^{-\mu\big(d_n(X,Y)-v_{\rm LR}|t|\big)}.
+$$
+For each bounded $O$ and $t\in\mathbb R$, $\alpha_t^{(n)}$ restricts to $\mathfrak A_n(\Lambda_n(O))$ up to exponentially small tails controlled by the bound. The generator convergence condition (F.0.1) makes the local derivations Cauchy on the algebraic core. Since the core is dense and the generators are uniformly dissipative on observables, the limit generator is closable. The Trotter-Kato theorem for contraction semigroups then gives a strongly continuous limiting evolution on $\mathcal A$; it is a $*$-automorphism group on the reversible Hamiltonian subbranch and a completely positive contraction semigroup when the dissipative ND-RID part is retained.
 
 (Locality / LR-causality.) Let $O_1,O_2\subset\mathbb R^d$ be bounded and spacelike separated with Minkowski distance $\mathrm{dist}_M(O_1,O_2)>0$. Fix $t$ with $v_{\rm LR}|t|<\mathrm{dist}_E(O_1,O_2)$, where $\mathrm{dist}_E$ is the Euclidean separation of the spatial projections at the relevant time slice. Choose representatives $A_n\in\mathfrak A_n(\Lambda_n(O_1))$, $B_n\in\mathfrak A_n(\Lambda_n(O_2))$ with $\iota_n(A_n)\to A\in\mathcal A(O_1)$ and $\iota_n(B_n)\to B\in\mathcal A(O_2)$ in norm. Because $a_n\downarrow 0$, the graph distances satisfy $d_n(\Lambda_n(O_1),\Lambda_n(O_2))\to\infty$ with $a_n d_n\to \mathrm{dist}_E(O_1,O_2)$. The Lieb–Robinson bound then gives
 $$
-\big\|[\tau_t^{(n)}(A_n),B_n]\big\|\le C\|A_n\|\,\|B_n\|\exp\!\big(-\mu(d_n-v_{\rm LR}|t|)\big)\xrightarrow[n\to\infty]{}0.
+\big\|[\alpha_t^{(n)}(A_n),B_n]\big\|\le C\|A_n\|\,\|B_n\|\exp\!\big(-\mu(d_n-v_{\rm LR}|t|)\big)\xrightarrow[n\to\infty]{}0.
 $$
 Taking $n\to\infty$ and using continuity of the inductive-limit embeddings,
 $$
-[\tau_t(A),B]=\lim_{n\to\infty}[\iota_n(\tau_t^{(n)}(A_n)),\iota_n(B_n)]=0.
+[\alpha_t(A),B]=\lim_{n\to\infty}[\iota_n(\alpha_t^{(n)}(A_n)),\iota_n(B_n)]=0.
 $$
 Thus the limiting net satisfies causal containment with respect to the limiting Lieb-Robinson cone. If, in addition, the limiting Lieb-Robinson cone is identified with the geometric causal cone of the emergent Lorentzian metric, equivalently if the extra bridge hypothesis $v_{LR}^{(n)}\to c$ holds, then one obtains Haag-Kastler locality:
 $$
 [\mathcal A(O_1),\mathcal A(O_2)]=\{0\}\qquad \text{for } O_1\subset O_2'.
 $$
 
-(Covariance and additivity.) Spatial translations on $\Lambda_n$ act by $*$-automorphisms $\alpha_a^{(n)}$ that commute with $\tau_t^{(n)}$; the uniform geometric regularity ensures these descend to a strongly continuous representation $a\mapsto\alpha_a$ of translations on $\mathcal A$ with $\alpha_a\big(\mathcal A(O)\big)=\mathcal A(O+a)$. Additivity holds since $\mathcal A(\cup_i O_i)=C^*(\cup_i \mathcal A(O_i))$ by construction.
+(Covariance and additivity.) Any microscopic geometric symmetry $\chi_n$ that preserves the selected branch, commutes with the local microscopic dynamics, and converges to an isometry $\chi$ of the limiting geometry acts by $*$-automorphisms $\alpha_{\chi_n}^{(n)}$ compatible with the embeddings. These descend to a strongly continuous representation $\chi\mapsto\alpha_\chi$ on $\mathcal A$ with $\alpha_\chi(\mathcal A(O))=\mathcal A(\chi O)$. Additivity holds since $\mathcal A(\cup_i O_i)=C^*(\cup_i \mathcal A(O_i))$ by construction.
 
-Thus $\{\mathcal A(O)\}_{O}$ with automorphisms $\{\alpha_a,\tau_t\}$ satisfies isotony, additivity, covariance, and locality once the lightcone-identification hypothesis is imposed. This is the content of the conditional continuum bridge stated in Theorem F.0. [Bratteli & Robinson 1997; Nachtergaele & Sims 2010] ∎
+Thus $\{\mathcal A(O)\}_{O}$ with the limiting evolution generated by $\mathcal L_{\mathrm{cont}}^*$ satisfies isotony, additivity, covariance for the represented emergent isometry subgroup, the time-slice property under the time-slice core-generation assumption, and locality once the lightcone-identification hypothesis is imposed. The Hamiltonian term is retained as the local limit of the coherent microscopic generators; it is not discarded by a smallness argument. This is the content of the conditional continuum bridge stated in Theorem F.0. [Bratteli & Robinson 1997; Nachtergaele & Sims 2010] ∎
 
 *   **Definition F.3 (Emergent AQFT Net and Properties).** Conditional on Theorem F.0, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
 
@@ -187,9 +226,14 @@ Thus $\{\mathcal A(O)\}_{O}$ with automorphisms $\{\alpha_a,\tau_t\}$ satisfies 
 
 *   **Emergent Physical States:** Physical states in the continuum AQFT are described by states on the algebra $\mathfrak{A} = \overline{\bigcup_{\mathcal{O}} \mathfrak{A}(\mathcal{O})}$, which are positive, normalized linear functionals $\omega: \mathfrak{A} \to \mathbb{C}$. The physical state $\omega$ on $\mathfrak{A}$ arises as a limit of the stable configurations of the MPU network, capturing expectation values $\langle A \rangle_\omega = \omega(A)$ for operators $A \in \mathfrak{A}$. The specific properties of physical states (e.g., vacuum state, thermal states) are determined by the dynamics and the optimization principles (POP/PCE).
 
-*   **Emergent Dynamics Generator:** The dynamics of the emergent quantum fields are generated by an effective evolution, arising as a limit of the coarse-grained MPU Dual Dynamics. In the Heisenberg picture, time evolution $\alpha_t$ on the algebra $\mathfrak{A}$ is generated by a Liouvillian superoperator $\mathcal{L}^*$: $\partial_t A = \mathcal{L}^*(A)$. This $\mathcal{L}^*$ contains:
-    *   **Hamiltonian part:** Generated by a local continuum Hamiltonian $H_{\mathrm{cont}}$ obtained as the region-wise limit of the coherent part of $\sum \hat{H}_v + \sum \hat{V}_{pot}^{(vv')}$ under the controlled coarse-graining hypothesis above, or by a canonically equivalent representative after a proved cancellation theorem. This part corresponds to unitary evolution $-i[H_{\mathrm{cont}}, \cdot]$ on fixed physical regions. It is not assumed to be $o(1)$ under coarse-graining.
-    *   **Dissipative part:** Generated by the coarse-grained average of the irreversible 'Evolve' process (ND-RID, linked to $\varepsilon \ge \ln 2$, Theorem 31). The full non-equilibrium dynamics are rigorously described by the Schwinger-Keldysh (CTP) effective action formalism, as detailed in **Appendix X.5**, which correctly encodes the dissipative and noise kernels consistent with emergent thermodynamics (Appendix E) and causality.
+*   **Emergent Dynamics Generator:** The dynamics of the emergent quantum fields are generated by the local limit of the coarse-grained MPU Dual Dynamics in Theorem F.0. In the Heisenberg picture, time evolution on the algebra $\mathfrak{A}$ is generated on the local core by
+    $$
+    \mathcal L_{\mathrm{cont}}^*
+    =
+    i[H_{\mathrm{cont}},\cdot]+\mathcal D_{\mathrm{cont}}^*.
+    $$
+    *   **Hamiltonian part:** Generated by a local continuum Hamiltonian $H_{\mathrm{cont}}$ obtained as the region-wise strong-resolvent limit of the coherent microscopic part of $\sum \hat{H}_v+\sum \hat{V}_{pot}^{(vv')}$ under (F.0.1). This part is retained on fixed physical regions. It vanishes only under a separate cancellation condition proving $\Phi_b(H_{b,\mathcal O})=z_b(\mathcal O)I+o(1)$ in the local operator topology.
+    *   **Dissipative part:** Generated by the coarse-grained average of the irreversible 'Evolve' process (ND-RID, linked to $\varepsilon \ge \ln 2$, Theorem 31). The full non-equilibrium dynamics are rigorously described by the Schwinger-Keldysh (CTP) effective action formalism, as detailed in **Appendix X.5**, which encodes the dissipative and noise kernels consistent with emergent thermodynamics (Appendix E) and causality.
 
 **F.5 Rigorous Definition of $T_{\mu\nu}^{(MPU)}$**
 
