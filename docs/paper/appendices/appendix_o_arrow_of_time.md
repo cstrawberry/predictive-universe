@@ -123,6 +123,40 @@ $$
 
 Thus, in this regime, the time-reversed macro-history is exponentially less probable than the forward history, and the predictive update direction is physically stabilized by irreversible entropy production. ∎
 
+**Theorem O.3a (Conditional Single-Cycle Irreversibility Bound).** Let $c$ be one nontrivial MPU 'Evolve' cycle in which a predictive state is verified and then updated. Let $c^\dagger$ denote the formally reversed cycle with the same operational boundary data. Suppose the forward and reversed single-cycle path weights $P_F(c)$ and $P_R(c^\dagger)$ are defined on the same coarse-grained event algebra and satisfy the path entropy-production identity
+$$
+\sigma(c)=\log\frac{P_F(c)}{P_R(c^\dagger)}.
+\tag{O.3a.1}
+$$
+If this coarse-grained cycle lies in the guarantee-level update class whose realized entropy production obeys the pathwise lower bound
+$$
+\sigma(c)\ge\varepsilon\ge\ln 2,
+\tag{O.3a.2}
+$$
+then
+$$
+\frac{P_R(c^\dagger)}{P_F(c)}
+\le
+e^{-\varepsilon}
+\le
+\frac12.
+\tag{O.3a.3}
+$$
+
+*Proof.* A nontrivial 'Evolve' cycle contains the ordered sequence prediction, verification, and update (Definition 4; Definition 27). Appendix J and Theorem 31 supply the guarantee-level entropy budget $\varepsilon\ge\ln 2$ for nontrivial finite-memory update cycles. The present theorem applies to the coarse-grained path class in which that budget is realized as the pathwise entropy-production bound (O.3a.2). Substituting $\sigma(c)\ge\varepsilon$ into the single-path identity (O.3a.1) gives
+$$
+\log\frac{P_F(c)}{P_R(c^\dagger)}\ge\varepsilon.
+$$
+Exponentiating and rearranging gives (O.3a.3). ∎
+
+**Corollary O.3a.1 (No Ensemble Requirement Under a Pathwise Cycle Bound).** When the guarantee-level update bound is imposed pathwise at the coarse-grained cycle level, the arrow of time applies to each processable actualization cycle in that class. Ensembles are then required only to estimate frequencies of outcomes, not to define the directionality of such a single update.
+
+*Proof.* Theorem O.3a uses a single cycle $c$ satisfying the single-cycle entropy-production identity and the pathwise lower bound. No averaging over a population of cycles is used in deriving (O.3a.3). ∎
+
+**Remark O.3a.2 (Scope of the Single-Cycle Bound).** Equation (O.3a.3) is a conditional pathwise consequence of (O.3a.1)-(O.3a.2). Without the pathwise lower bound (O.3a.2), Appendix J still supplies the nonzero cycle entropy budget and the macroscopic theorem O.3 supplies the multi-cycle suppression result, but an individual stochastic microscopic trajectory need not obey a separate universal lower bound on $\sigma(c)$.
+
+**Remark O.3a.3 (Delayed-Choice Consistency).** In delayed-choice and quantum-eraser protocols, a later experimental setting changes which verification channel becomes operationally relevant for the recorded event. It does not reverse the P-V-U order of the actualized MPU cycle. Each recorded event is still processed through a forward update, and whenever it lies in the pathwise guarantee-level class it obeys the single-cycle irreversibility bound (O.3a.3).
+
 ### O.5.1 The Perspectival Arrow: Complexity-Relative Temporal Asymmetry
 
 Theorem O.3 characterizes the arrow of time as a property of the physical medium: the ratio $P_R/P_F \le e^{-N\varepsilon}$ is a statement about forward and reversed path measures. The observer hierarchy of §P.5.8.3 shows that this global asymmetry acquires additional internal structure once some systems possess Effective Operational Property R and an operational self-model. The relevant mechanism is the conjunction of measurement asymmetry (Theorem M.10.5) with the SPAP-dependent integration cost of self-referential patterns (Definition M.10.3; Theorem M.10.3). A more complex system can externally model the self-referential burden of a less complex one, but it cannot thereby impose an exact temporal reversal on the less complex system from within that system's own perspective.
@@ -362,7 +396,7 @@ Premise (A5) of §12 is therefore a theorem of the emergent-spacetime branch rat
 
 The familiar properties of time—its coherence over vast scales and its unwavering forward direction—are not postulated in the Predictive Universe framework but are derived as necessary emergent features of the collective predictive process.
 *   **Temporal Coherence** emerges as a dynamically stable state, enforced by the Principle of Compression Efficiency, which penalizes the predictive errors and resource costs inherent in desynchronization. The MPU network self-organizes into a synchronized coherent causal medium to optimize its collective predictive function.
-*   **The Arrow of Time** is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle.
+*   **The Arrow of Time** is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle. Under the pathwise guarantee-level coarse graining of Theorem O.3a, a single nontrivial 'Evolve' cycle satisfies $P_R/P_F\le e^{-\varepsilon}\le 1/2$ before ensemble averaging is invoked.
 *   **The Perspectival Arrow** reveals that temporal irreversibility possesses internal structure graded by observer complexity (Theorem O.4; Proposition O.4.2). Even a more complex external agent cannot impose an exact reversal of another agent's arrow by communicating a specification of that agent's prior self-state: any such message that is processable is integrated through a further forward update, and the exact-restoration idealization is unprocessable (Corollary O.4.1). The depth of the arrow — the cost of temporal self-restoration — is relative to the observer's position in the complexity hierarchy, paralleling the relativization of simultaneity in Structural Correspondence M.6.4 (Corollary O.4.3). The irreversibility resides in the processing of self-referential content, not in the loss of information (Remark O.4.2): global unitarity preserves all information (Theorem E.9.5), yet no observer can use that conserved information for self-reversal, because integrating a specification of one's own prior self-model is itself another irreversible forward step. A more complex in-universe agent may externally model a less complex one at sender-side SPAP-flat cost, but every modeler remains subject to its own self-referential limits, and the decisive obstruction to exact reversal remains at the receiver (Remark O.4.3). Even highly accurate sub-exact reconstruction that targets deep self-model parameters already enters the divergent cost regime (Remark O.4.4). Communicated information partitions into externally targeted content with $\sigma_B(E) = 0$ and self-referential content with $\sigma_B(E) > 0$; the former is SPAP-flat, while the latter ranges from baseline cost in shallow cases to SPAP-divergent cost for deep self-model demands (Remark O.4.5; Remark M.10.3).
 
 Crucially, this emergent temporal structure is not a passive background. Its dynamic properties provide the physical substrate for the framework's most profound emergent phenomena. The controlled modulation of this medium's coherence provides a channel for Consciousness Complexity to exert its influence, with the energy cost of this modulation being properly accounted for within the standard stress-energy tensor. Meanwhile, uncontrolled, large-scale disturbances in the medium, sourced by bulk fluctuations in $T_{\mu\nu}$, propagate as temporal waves that are physically identical to the gravitational waves of General Relativity. This unifies the emergence of time, the mechanism of CC, and the nature of gravity within a single, coherent, and dynamic picture.

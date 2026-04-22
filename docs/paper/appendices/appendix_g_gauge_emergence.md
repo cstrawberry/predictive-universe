@@ -1237,6 +1237,127 @@ A_1 \subset A_2 \subset A_3 \subset D_4 \subset E_8.
 $$
 The Appendix G 12-fold correspondence therefore sits on the same low-rank root scaffold whose $D_4$ step gives the 24-mode spacetime closure in Appendix Z and whose terminal inclusion into $E_8$ matches the internal geometry used in Appendices R and T.
 
+**Definition G.8.4f.3 (Marked Golay-Leech Interface Frame and Canonical Half-Swap).** Fix the systematic Golay generator matrix
+$$
+G=[I_{12}\mid P]
+$$
+of Theorem Z.13c, with coordinate set
+$$
+\Omega=\{1,\ldots,24\}
+=\Omega_S\sqcup\Omega_P,
+\qquad
+\Omega_S=\{1,\ldots,12\},
+\qquad
+\Omega_P=\{13,\ldots,24\}.
+$$
+A **marked Golay-Leech interface frame** is the choice of this systematic coordinate frame, the ordered signal/parity split above, and the octad trio
+$$
+\begin{aligned}
+O_1&=\{1,2,4,5,13,14,16,17\},\\
+O_2&=\{3,8,10,11,15,20,22,23\},\\
+O_3&=\{6,7,9,12,18,19,21,24\}.
+\end{aligned}
+$$
+The three octads partition $\Omega$. Relative to this marked frame define
+$$
+J_0=(1\,13)(2\,14)\cdots(12\,24).
+$$
+This is the canonical marked Golay half-swap. It is canonical relative to the marked systematic frame. The unmarked Golay-Leech structure selects the code and the Leech gluing data, but it does not by itself select a unique element of $M_{24}$.
+
+**Proposition G.8.4f.4 (Marked Half-Swap is Golay-Leech Admissible).** The involution $J_0$ lies in
+$$
+M_{24}=\operatorname{Aut}(\mathcal G_{24}),
+$$
+preserves the octad trio of Definition G.8.4f.3, and lifts through the Golay gluing construction to the coordinate-frame stabilizer of the Leech lattice. Consequently, after the marked 24-mode interface frame is transported to the lifted real interface bundle $\widetilde E_{\mathbb R}$ of Definition T.17a, $J_0$ defines a self-adjoint orthogonal involution on the lifted gauge sector.
+
+*Proof.* The parity matrix displayed in Theorem Z.13c is symmetric and satisfies
+$$
+PP^T=I_{12}\pmod 2.
+$$
+Hence
+$$
+P=P^T,
+\qquad
+P^2=I_{12}\pmod 2.
+$$
+Every codeword of the systematic Golay code has the form
+$$
+(s,sP),
+\qquad
+s\in\mathbb F_2^{12}.
+$$
+The half-swap sends
+$$
+(s,sP)\longmapsto (sP,s).
+$$
+Set $t=sP$. Since $P^2=I_{12}$ over $\mathbb F_2$,
+$$
+tP=sP^2=s,
+$$
+and therefore
+$$
+(sP,s)=(t,tP)\in\mathcal G_{24}.
+$$
+Thus $J_0$ preserves $\mathcal G_{24}$ and lies in $M_{24}$.
+
+For the octad trio, write
+$$
+\begin{aligned}
+s_1&=(1,1,0,1,1,0,0,0,0,0,0,0),\\
+s_2&=(0,0,1,0,0,0,0,1,0,1,1,0),\\
+s_3&=(0,0,0,0,0,1,1,0,1,0,0,1).
+\end{aligned}
+$$
+Multiplication by the displayed matrix gives
+$$
+s_iP=s_i,
+\qquad
+i=1,2,3.
+$$
+Hence the characteristic vector of $O_i$ is $(s_i,s_i)$, so each $O_i$ is a weight-$8$ Golay codeword. The supports of the three $s_i$ are disjoint and cover $\{1,\ldots,12\}$; therefore $O_1,O_2,O_3$ are disjoint and cover $\Omega$. Since $J_0$ exchanges the two identical halves of each vector $(s_i,s_i)$, it fixes each $O_i$ setwise.
+
+The Golay-Leech construction used in Appendix R and Appendix Z realizes the permutation automorphism group $M_{24}$ as the permutation part of the coordinate-frame stabilizer of the Leech lattice. Therefore the coordinate permutation $J_0\in M_{24}$ lifts to a Leech lattice automorphism. Transporting this marked 24-mode real action to $\widetilde E_{\mathbb R}$ gives a permutation-orthogonal involution. A real orthogonal involution is self-adjoint for the induced Hermitian metric. ∎
+
+**Proposition G.8.4f.5 (Non-Uniqueness Without the Marking).** PCE and PPI force the Golay code and the Golay-Leech backbone on the $M=24$ interface branch, but they do not force a unique nontrivial element
+$$
+\mathcal J_G\in M_{24}.
+$$
+Even after requiring rate-$\frac12$ signal/parity exchange and compatibility with an octad-adapted $24=3\times 8$ decomposition, more than one admissible involution remains.
+
+*Proof.* Let
+$$
+r=(3\,11)(6\,7)(8\,10)(9\,12)
+$$
+on $\{1,\ldots,12\}$, and let
+$$
+g=(3\,11)(6\,7)(8\,10)(9\,12)(15\,23)(18\,19)(20\,22)(21\,24)
+$$
+act by the same permutation $r$ on the signal and parity halves. If $A_r$ is the $12\times12$ permutation matrix of $r$, then the displayed parity matrix of Theorem Z.13c satisfies
+$$
+A_rPA_r^{-1}=P.
+$$
+Equivalently, simultaneous application of $r$ to the signal and parity coordinates preserves the systematic code set
+$$
+\{(s,sP):s\in\mathbb F_2^{12}\}.
+$$
+Hence $g\in M_{24}$. Also $g^2=1$ and $gJ_0=J_0g$, since $g$ acts by the same involution on both halves. Therefore
+$$
+J_1:=gJ_0
+$$
+is an involution in $M_{24}$. Explicitly,
+$$
+J_1=(1\,13)(2\,14)(3\,23)(4\,16)(5\,17)(6\,19)(7\,18)(8\,22)(9\,24)(10\,20)(11\,15)(12\,21).
+$$
+Both $J_0$ and $J_1$ exchange $\Omega_S$ with $\Omega_P$. Moreover, the transpositions of $J_1$ lie inside the same octad trio:
+$$
+\begin{aligned}
+O_1&:\ (1\,13),(2\,14),(4\,16),(5\,17),\\
+O_2&:\ (3\,23),(8\,22),(10\,20),(11\,15),\\
+O_3&:\ (6\,19),(7\,18),(9\,24),(12\,21).
+\end{aligned}
+$$
+Thus $J_1(O_i)=O_i$ for $i=1,2,3$. Since $J_1\ne J_0$, the stated compatibility requirements do not select a unique element of $M_{24}$. A unique working $\mathcal J_G$ is obtained only after the marked half-swap convention of Definition G.8.4f.3 is imposed; otherwise $\mathcal J_G$ remains part of the spectral branch data in Appendix T. ∎
+
 **Theorem G.8.4g (Classical Code-Gauge Structural Analogy).** *The gauge structure of the Standard Model exhibits a structural analogy to classical error-correcting code organization.*
 
 *Statement.* For the self-dual extended binary Golay code $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$ with parameters $[24, 12, 8]$ [MacWilliams & Sloane 1977]:

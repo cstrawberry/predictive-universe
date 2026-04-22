@@ -961,6 +961,183 @@ ensuring tight convergence to the optimal complexity.
 
 The complexity adaptation is provably convergent with exponential rate $\underline{\lambda}\,\eta_{adapt}$ to a unique optimum $C^\star$, and in the stochastic setting remains within the ND-RID noise floor around that optimum. This provides the local tracking component of Theorem 2.
 
+### D.8.5 PCE Marginality and 1/f Spectra
+
+This subsection records the spectral consequence of stochastic PCE dynamics near a marginal viability surface. The result is not an additional dynamical postulate. It is the linear response form of Equation D.8 when the active relaxation spectrum has no preferred update scale inside a finite operational band.
+
+**Definition D.8a (Prediction-Error Spectral Observable).** Let $x^*$ be a PCE operating point for the stochastic dynamics (D.8), and write $\xi_t=x_t-x^*$ in a local chart. A scalar prediction-error observable is any centered linear readout
+$$
+e(t)=\ell(\xi_t),
+\tag{D.17}
+$$
+where $\ell$ is a continuous linear functional on the local tangent space. Its two-sided angular-frequency power spectrum is
+$$
+S_e(\omega)=\int_{-\infty}^{\infty} e^{-i\omega\tau}\,\mathbb E[e(t+\tau)e(t)]\,d\tau.
+\tag{D.18}
+$$
+
+**Lemma D.8a (Modal Lorentzian Spectrum).** Suppose one stable relaxation mode of the linearized PCE flow has the stationary Ornstein-Uhlenbeck form
+$$
+dy_t=-\lambda y_t\,dt+\sqrt{2\lambda a}\,dB_t,
+\qquad \lambda>0,\quad a>0.
+\tag{D.19}
+$$
+Then its stationary variance is $a$, its autocovariance is $a e^{-\lambda|\tau|}$, and its power spectrum is
+$$
+S_\lambda(\omega)=\frac{2a\lambda}{\omega^2+\lambda^2}.
+\tag{D.20}
+$$
+
+*Proof.* The stationary variance of (D.19) solves
+$$
+0=-2\lambda\,\mathrm{Var}(y_t)+2\lambda a,
+$$
+hence $\mathrm{Var}(y_t)=a$. The Markov solution gives
+$$
+\mathbb E[y(t+\tau)y(t)]=a e^{-\lambda|\tau|}.
+$$
+Taking the Fourier transform,
+$$
+\int_{-\infty}^{\infty}a e^{-\lambda|\tau|}e^{-i\omega\tau}\,d\tau
+=
+2a\int_0^\infty e^{-\lambda\tau}\cos(\omega\tau)\,d\tau
+=
+\frac{2a\lambda}{\omega^2+\lambda^2}.
+$$
+This proves (D.20). ∎
+
+**Definition D.8b (Marginal PCE Relaxation Band).** A PCE operating point $x^*$ has an active marginal relaxation band $[\lambda_{\min},\lambda_{\max}]$ if the linearized prediction-error observable decomposes into stable relaxation modes whose rates fill the interval with logarithmic rate density $q(\lambda)\,d\log\lambda$, amplitudes $a(\lambda)>0$, and
+$$
+0<\lambda_{\min}\ll \lambda_{\max}<\infty.
+$$
+The band is called locally scale-neutral when the active mode-weight product
+$$
+h(\lambda):=a(\lambda)q(\lambda)
+\tag{D.21}
+$$
+has no resolved rate dependence on the band, i.e. $h(\lambda)=h_0+o(1)$ over the operationally observed inertial interval.
+
+**Theorem D.8a (Spectral Exponent from the PCE Relaxation Density).** Let $e(t)$ be a prediction-error observable whose active modes satisfy Lemma D.8a and Definition D.8b. Suppose that on an intermediate frequency window
+$$
+\lambda_{\min}\ll \omega\ll \lambda_{\max}
+\tag{D.22}
+$$
+the mode-weight product has the asymptotic form
+$$
+h(\lambda)=A_0\lambda^s(1+o(1)),
+\qquad -1<s<1,\quad A_0>0.
+\tag{D.23}
+$$
+Then
+$$
+S_e(\omega)
+\sim
+\frac{\pi A_0}{\cos(\pi s/2)}\,\omega^{s-1},
+\tag{D.24}
+$$
+and therefore the observed power-law exponent in $S_e(f)\propto f^{-\beta_{\mathrm{spec}}}$ is
+$$
+\boxed{\beta_{\mathrm{spec}}=1-s.}
+\tag{D.25}
+$$
+In particular, the locally scale-neutral case $s=0$ gives
+$$
+S_e(\omega)\sim \frac{\pi A_0}{\omega},
+\qquad
+S_e(f)\propto \frac{1}{f}.
+\tag{D.26}
+$$
+
+*Proof.* Summing the modal spectra (D.20) over the logarithmic rate density gives
+$$
+S_e(\omega)
+=
+\int_{\lambda_{\min}}^{\lambda_{\max}}
+\frac{2a(\lambda)\lambda}{\omega^2+\lambda^2}\,q(\lambda)\,d\log\lambda.
+$$
+Since $d\log\lambda=d\lambda/\lambda$, this reduces to
+$$
+S_e(\omega)
+=
+\int_{\lambda_{\min}}^{\lambda_{\max}}
+\frac{2h(\lambda)}{\omega^2+\lambda^2}\,d\lambda.
+\tag{D.27}
+$$
+Using (D.23) and setting $\lambda=\omega u$,
+$$
+S_e(\omega)
+=
+2A_0\omega^{s-1}
+\int_{\lambda_{\min}/\omega}^{\lambda_{\max}/\omega}
+\frac{u^s}{1+u^2}\,du\,(1+o(1)).
+$$
+Under (D.22), the lower limit tends to $0$ and the upper limit tends to $\infty$. Since $-1<s<1$,
+$$
+\int_0^\infty \frac{u^s}{1+u^2}\,du
+=
+\frac{\pi}{2\cos(\pi s/2)}.
+\tag{D.28}
+$$
+Substituting (D.28) yields (D.24), and (D.25) follows by comparison with $S_e(f)\propto f^{-\beta_{\mathrm{spec}}}$. The case $s=0$ gives (D.26). ∎
+
+**Theorem D.8b (PCE Selection of Pink Spectra on the Scale-Neutral Marginal Branch).** Suppose a marginal relaxation band satisfies the following PCE neutrality conditions:
+
+1. the band is inside the viable Space of Becoming, so no mode in the band is individually prohibited by Axiom 3;
+2. the coarse-grained predictive benefit of retaining an active mode is independent of $\log\lambda$ across the band;
+3. the resource cost of retaining an active mode is independent of $\log\lambda$ across the band after the fixed endpoints $\lambda_{\min},\lambda_{\max}$ are set by the fastest and slowest physically available update processes;
+4. the only remaining operational cost of a nonuniform profile is the description cost of specifying the rate-profile shape.
+
+Then PCE selects a locally scale-neutral active profile $h(\lambda)=h_0$ on the band. Consequently the prediction-error spectrum satisfies
+$$
+S_e(f)\propto \frac{1}{f}
+$$
+throughout the intermediate window $\lambda_{\min}\ll 2\pi f\ll\lambda_{\max}$.
+
+*Proof.* Let $u=\log\lambda$ and let $I=[u_{\min},u_{\max}]$. Normalize the active mode-weight profile on $I$ by
+$$
+\rho(u)=\frac{h(e^u)}{\int_I h(e^v)\,dv}.
+$$
+Under assumptions 1-3, the benefit and physical resource terms in the reduced PCE potential are constant over admissible profiles with the same total active weight. The only profile-dependent term is therefore the operational description cost. The PCE-minimal description of a profile with no rate label is the uniform profile on $I$, equivalently the minimizer of the nonnegative relative-description cost
+$$
+V_{\mathrm{spec}}[\rho]
+=
+\chi\int_I \rho(u)\log\frac{\rho(u)}{|I|^{-1}}\,du,
+\qquad \chi>0.
+\tag{D.29}
+$$
+By Gibbs' inequality,
+$$
+V_{\mathrm{spec}}[\rho]\ge 0,
+$$
+with equality if and only if $\rho(u)=|I|^{-1}$ almost everywhere. Thus PCE selects the rate-unlabeled profile. In the modal representation (D.27), this is exactly the locally scale-neutral branch $h(\lambda)=h_0$ over the observed band, up to endpoint corrections. Theorem D.8a with $s=0$ then gives $S_e(f)\propto 1/f$. ∎
+
+**Corollary D.8b.1 (Finite Pink Band and Endpoint Cutoffs).** In the exactly scale-neutral case $h(\lambda)=h_0$ on $[\lambda_{\min},\lambda_{\max}]$,
+$$
+S_e(\omega)
+=
+\frac{2h_0}{\omega}
+\left[
+\arctan\left(\frac{\lambda_{\max}}{\omega}\right)
+-
+\arctan\left(\frac{\lambda_{\min}}{\omega}\right)
+\right].
+\tag{D.30}
+$$
+Hence no PU system predicts exact $1/f$ behavior at all frequencies. Pink scaling holds only in the finite operational window
+$$
+\lambda_{\min}\ll \omega\ll \lambda_{\max}.
+$$
+
+*Proof.* Substitute $h(\lambda)=h_0$ into (D.27):
+$$
+S_e(\omega)=2h_0\int_{\lambda_{\min}}^{\lambda_{\max}}\frac{d\lambda}{\omega^2+\lambda^2}.
+$$
+The antiderivative is $\omega^{-1}\arctan(\lambda/\omega)$, giving (D.30). If $\lambda_{\min}\ll\omega\ll\lambda_{\max}$, the bracket tends to $\pi/2$, so $S_e(\omega)\sim \pi h_0/\omega$. Outside that interval, one of the endpoint cutoffs is resolved and exact pink scaling is lost. ∎
+
+**Corollary D.8b.2 (Failure Modes Away from Criticality).** Departures from $1/f$ are not failures of PCE. They diagnose departures from the scale-neutral marginal branch. If the active profile satisfies $h(\lambda)\sim \lambda^s$, then the exponent shifts to $\beta_{\mathrm{spec}}=1-s$ by Theorem D.8a. If damage, overload, or loss of adaptive degrees of freedom narrows the band so that $\lambda_{\min}$ and $\lambda_{\max}$ are not widely separated, then the spectrum crosses over to a non-pink finite-band form governed by (D.30).
+
+This identifies pink noise as the macroscopic spectral signature of PCE-regulated predictive systems operating near a marginal viability surface with no privileged update scale.
+
 ## D.9 Conclusion
 
 This appendix has provided a rigorous analysis grounded in the variational perspective of minimizing the PCE Potential $V(x)$ (Definition D.1), modeling the slow adaptation dynamics of the MPU network as a stochastic gradient flow (Equation D.8). We demonstrated through formal proofs and analysis of the potential structure and dynamics that:
@@ -971,6 +1148,8 @@ This appendix has provided a rigorous analysis grounded in the variational persp
 
 3.  **Complexity Adaptation Convergence (Section D.8):** A rigorous analysis of the complexity adaptation dynamics (Equation D.13), driven by the Adaptation Driving Force $\Psi(C)$, establishes exponential convergence to the unique POP-optimal complexity $C^{\star}$ with explicit rate $\underline{\lambda}\,\eta_{adapt}$ (Theorem D.8). Using strong monotonicity, Polyak-Łojasiewicz control, and Ito estimates, we quantify both the deterministic convergence rate (Equation D.15) and the stochastic noise floor (Equation D.16), providing a detailed mechanism for how complexity optimization occurs within the larger PCE landscape.
 
-Section D.6.5 establishes ergodicity of the full stochastic dynamics under Assumptions (A1)-(A6), and in the detailed-balance low-noise subcase it yields Gibbs concentration near the regular low-potential sector of $V(x)$. The analysis throughout this appendix confirms that complexity alignment and geometric regularity are not ad-hoc assumptions but dynamically selected outcomes of the Predictive Universe framework's core optimization principles (POP/PCE) operating within the constrained MPU network under the stated hypotheses. These results provide the precise support needed for the subsequent conditional derivations of emergent spacetime and gravity.
+4.  **Spectral Marginality and 1/f Noise (Section D.8.5):** Linearized stochastic PCE dynamics decompose into relaxation modes whose spectra are Lorentzian. When PCE operates on a marginal viability band with no privileged update scale, the active mode-weight profile is scale-neutral and the summed prediction-error spectrum becomes $S(f)\propto 1/f$ (Theorem D.8b). Deviations from exact pink scaling are controlled by the active rate-density exponent $s$ through $\beta_{\mathrm{spec}}=1-s$ (Theorem D.8a), and finite cutoffs are fixed by the slowest and fastest available update rates (Corollary D.8b.1).
+
+Section D.6.5 establishes ergodicity of the full stochastic dynamics under Assumptions (A1)-(A6), and in the detailed-balance low-noise subcase it yields Gibbs concentration near the regular low-potential sector of $V(x)$. The analysis throughout this appendix confirms that complexity alignment, geometric regularity, and scale-neutral critical spectra are not ad-hoc assumptions but dynamically selected outcomes of the Predictive Universe framework's core optimization principles (POP/PCE) operating within the constrained MPU network under the stated hypotheses. These results provide the precise support needed for the subsequent conditional derivations of emergent spacetime, gravity, and critical adaptive dynamics.
 
 **Remark D.9.1 (Justification for PCE Cost Minimization).** Three arguments support the principle that realized physical configurations minimize the PCE potential $V(x) = V_{\mathrm{op}}(x) + V_{\mathrm{prop}}(x) - V_{\mathrm{benefit}}(x)$ rather than maximizing it, satisfying some other functional, or occupying a random point in the admissible region. First, *thermodynamic stability*: configurations that do not minimize cost relative to perturbations are unstable under the fluctuation-dissipation dynamics of Theorem D.5. Any configuration with avoidable cost is driven toward lower cost by the same irreversible processes that Theorem 31 mandates; the PCE attractor is the fixed point from which no further cost reduction is achievable. Second, *selection pressure*: predictive systems that waste resources on avoidable costs are outcompeted by those that do not, because wasted resources reduce predictive capacity available for adaptation (Axiom 1, POP); the PCE attractor is the endpoint of this selection process, analogous to the ground state in thermodynamics. Third, *uniqueness*: for generic Morse-type potentials on the finite-dimensional configuration space constrained by Theorem E.2 and Theorem K.10.4, local minima are isolated (the set of smooth functions with non-degenerate critical points is open and dense in the $C^2$ topology); PCE therefore predicts discrete, isolated attractor configurations, consistent with the observed discreteness of physical constants and particle spectra. These arguments do not constitute a proof that PCE is the uniquely correct selection principle; they establish that PCE is the natural selection principle within the framework's operational logic and that its predictions are falsifiable: if the realized configuration demonstrably fails to minimize cost over the admissible class, PCE is refuted.

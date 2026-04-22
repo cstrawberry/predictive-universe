@@ -32,11 +32,11 @@ The appendix uses a three-level dictionary to separate the PU fixed point from p
   $$
   (\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)
   $$
-  is used only as an external comparison for the forward block-sum evaluation. The threshold calculation itself is the fixed map
+  is used only as an external comparison for the forward block-sum evaluation. Once the branch data required by Convention T.17a.0 and Theorem T.78 are fixed, the threshold calculation is the fixed map
   $$
   D^{\mathrm{PCE}}_{\widetilde X}\longmapsto F=(F_C,F_W,F_Y)\longmapsto \Delta=TF,
   $$
-  with $T$ the Dynkin-index matrix of Remark T.17a.3 and with tails certified by Corollary T.69.1. Remark T.17a.4 and Proposition T.17a.5 remain the local no-go showing that a sector-independent affine local truncation cannot replace the global sector-resolving block sum. Equivalently,
+  with $T$ the Dynkin-index matrix of Remark T.17a.3 and with tails certified by Corollary T.69.1. Remark T.17a.4 and Proposition T.17a.5 remain the local no-go showing that a sector-independent affine local truncation cannot replace the global sector-resolving block sum, while Theorem T.78.2 records that the current canonical ledger does not yet determine the missing spectral branch data needed to execute the global block sum. Equivalently,
   $$
   Z_i = 1+\frac{\Delta_i}{24},
   $$
@@ -67,7 +67,7 @@ The following constants are derived in the main text and Appendix Z:
 |$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|PCE-optimal Bures weights (with normalization constraint) |Corollary T.34.2|
 |$g_U^2$ |$\pi/6$ |PU-normalized gauge coefficient squared |Theorem T.39a |
 |$\alpha_U^{-1}$ |$24$ |Inverse PU fine structure $\alpha_U=g_U^2/(4\pi)$ |Theorem T.39a |
-|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 |
 
 The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connects the PU fixed point to SM effective theory. Remark T.62.1 fixes the exponent $9$ from confinement complexity, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R$ (Section T.23).
 
@@ -1170,7 +1170,7 @@ Z_2=1+\frac{20.94}{24}\approx1.8725,
 Z_3=1+\frac{18.41}{24}\approx1.7671.
 }
 $$
-Remark T.17a.4 and Proposition T.17a.5 give a theorem-level local no-go: once the positive color and weak validation channels are matched, every sector-independent affine local truncation still forces $F_Y>0$, whereas the validation tuple would require $F_Y=-8.9775$. The lifted threshold sector is therefore evaluated by the sector-resolving global $\mathrm{MS2}_{\mu_G}$ block functional of Definition T.17a, Convention T.69a, and Theorem T.70. Proposition T.17a.3a fixes the canonical base-to-lift identification of the local part of the threshold sector, Theorem T.69 fixes the local/global split, and Theorem T.78 records the determinacy of any completed flag-lift spectral problem. On the minimal residual ledger $\delta_i=0$ of Definition T.19a, one-loop SM running (Theorem T.15) gives
+Remark T.17a.4 and Proposition T.17a.5 give a theorem-level local no-go: once the positive color and weak validation channels are matched, every sector-independent affine local truncation still forces $F_Y>0$, whereas the validation tuple would require $F_Y=-8.9775$. The lifted threshold sector is therefore evaluated by the sector-resolving global $\mathrm{MS2}_{\mu_G}$ block functional of Definition T.17a, Convention T.69a, and Theorem T.70. Proposition T.17a.3a fixes the canonical base-to-lift identification of the local part of the threshold sector, Theorem T.69 fixes the local/global split, and Theorem T.78 records the determinacy of any completed flag-lift spectral problem. Theorem T.78.2 records the complementary status boundary: the present canonical ledger has not yet fixed the branch data needed to execute that completed spectral problem without additional input. On the minimal residual ledger $\delta_i=0$ of Definition T.19a, one-loop SM running (Theorem T.15) gives
 $$
 \alpha_i^{-1}(M_Z)=Z_i\alpha_U^{-1}+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
 \qquad i=1,2,3.
@@ -1918,13 +1918,17 @@ Equivalently, multiplying through by $y^{81}$:
 $$
 21 + 55y^{8} = 48y^{81},
 $$
-which has a unique solution $y^*\in(0,1)$ by monotonicity (the left side is decreasing, the right side increasing in $y$ for $y > 0$).
+which has a unique positive solution $y^*>1$. Equivalently, in the form
+$$
+21y^{-81}+55y^{-73}=48,
+$$
+the left side is strictly decreasing on $(0,\infty)$, tends to $\infty$ as $y\downarrow0$, and tends to $0$ as $y\to\infty$.
 
 Substituting into $\mathcal{W}$ determines $\kappa_3$:
 $$
 \kappa_3 = \frac{12}{8 + 3y^{-73} + y^{-81}}.
 $$
-Numerically, $y^* \approx 0.9827$, giving
+Numerically, $y^* \approx 1.00613$, giving
 $$
 \boxed{\kappa_1^*\approx 0.695,\quad \kappa_2^*\approx 0.729,\quad \kappa_3^*\approx 1.140.}
 $$
@@ -6514,6 +6518,116 @@ If the Golay involution is not homogeneous, the Casimir part is still scalar on 
 
 *Proof.* The fiber map defining $\mathcal J_G|_{E_s}$ lies in $\operatorname{End}_H(\tau_s)$. Since $\tau_s$ is a complex irreducible unitary representation, Schur's lemma gives $\operatorname{End}_H(\tau_s)=\mathbb C I$. Self-adjointness forces the scalar to be real, and $\mathcal J_G^2=I$ forces it to be $+1$ or $-1$. Thus one of the two eigensubbundles is zero on that irreducible sector. ∎
 
+**Theorem T.70.2 (Admissibility Test for Scalar One-Block Parity Closures).** Work in the canonical $\mathrm{MS2}_{\mu_G}$ threshold functional of Definition T.17a and Convention T.69a, and let the lifted threshold operator be the operator of Theorem T.70. Suppose a proposed scalar one-block closure retains a single active $SU(8)$ block $\Lambda_{0,s}$ in each sector and assigns oriented parity eigenvalues
+$$
+\nu_{s,+}=a_s+Q_s,
+\qquad
+\nu_{s,-}=a_s-Q_s,
+\qquad
+s\in\{C,W,Y\},
+$$
+with $a_s>|Q_s|$ and equal active multiplicity $d_s$ in the two parity copies of sector $s$. Then the following conditions are necessary for theorem-level compatibility with the existing lifted threshold formalism.
+
+1. The canonical active contribution is the ordinary zeta-determinant contribution
+$$
+F_s^{\mathrm{act}}
+=
+d_s\log\left(\frac{a_s+Q_s}{\mu_G^2}\right)
++
+d_s\log\left(\frac{a_s-Q_s}{\mu_G^2}\right),
+$$
+not the parity-relative expression
+$$
+d_s\log\left(\frac{a_s+Q_s}{a_s-Q_s}\right).
+$$
+Thus the ratio formula defines a different superdeterminant threshold functional unless the threshold functional itself is replaced before any comparison is made.
+
+2. If the scalar parity splitting comes from the Golay term already present in $D^{\mathrm{PCE}}_{\widetilde X}$, then after the sector scalars $\lambda_s$ of Remark T.17a.3 are fixed there are constants $m_{\mathcal J}$ and $\eta$, common to all three sectors, such that
+$$
+Q_s=m_{\mathcal J}+\eta\lambda_s,
+\qquad
+s\in\{C,W,Y\},
+$$
+up to the harmless relabeling of the two parity signs in a sector. Equivalently, for a fixed oriented parity convention and distinct $\lambda_C,\lambda_W,\lambda_Y$, the three proposed numbers $Q_C,Q_W,Q_Y$ must satisfy
+$$
+(Q_Y-Q_C)(\lambda_W-\lambda_C)
+=
+(Q_W-Q_C)(\lambda_Y-\lambda_C).
+\tag{T.70.2}
+$$
+
+3. A zero-tail certificate for such a closure is valid only if every omitted block is either absent from the sector spectrum of Theorem T.70 or cancels inside the same canonical ordinary $\mathrm{MS2}_{\mu_G}$ functional. Cancellation in a parity-relative determinant line does not by itself certify cancellation for Definition T.17a.
+
+For the PCE-optimal Bures weights of Corollary T.34.2, the sector scalars are
+$$
+\lambda_C=1.565841596738\ldots,
+\qquad
+\lambda_W=0.651237604893\ldots,
+\qquad
+\lambda_Y=0.185223077931\ldots.
+$$
+Consequently the oriented scalar triple
+$$
+Q_C=\frac{392}{215},
+\qquad
+Q_W=\frac{25}{12},
+\qquad
+Q_Y=-\frac{15}{16}
+$$
+does not satisfy (T.70.2). Indeed, fitting $Q_C$ and $Q_W$ to the required affine form gives
+$$
+\eta=-0.284360796256\ldots,
+\qquad
+m_{\mathcal J}=2.268519777212\ldots,
+$$
+and therefore predicts
+$$
+m_{\mathcal J}+\eta\lambda_Y
+=2.215849595287\ldots,
+$$
+not $-15/16$. This failure is not removed by independently relabeling parity signs in the three sectors. If
+$$
+(q_C,q_W,q_Y)=\left(\frac{392}{215},\frac{25}{12},\frac{15}{16}\right),
+$$
+then the finite check over $\epsilon_C,\epsilon_W,\epsilon_Y\in\{\pm1\}$ gives
+$$
+\min_{\epsilon_C,\epsilon_W,\epsilon_Y}
+\left|
+(\epsilon_Yq_Y-\epsilon_Cq_C)(\lambda_W-\lambda_C)
+-
+(\epsilon_Wq_W-\epsilon_Cq_C)(\lambda_Y-\lambda_C)
+\right|
+=
+1.1691836428\ldots>0.
+$$
+Hence this scalar one-block parity closure is not an admissible completion of the existing $D^{\mathrm{PCE}}_{\widetilde X}$ threshold problem.
+
+*Proof.* By Definition T.17a and Convention T.69a, the sector functional is obtained from the zeta function of the sector operator $D_s$ by
+$$
+F_s=-\zeta_s'(0)-\zeta_s(0)\log\mu_G^2.
+$$
+For a finite active pair with eigenvalues $a_s+Q_s$ and $a_s-Q_s$, both counted as eigenvalues of the same sector spectrum with multiplicity $d_s$, the finite part is therefore the sum of the two logarithms. The difference of the two logarithms is the logarithm of a relative determinant line, not the ordinary determinant of the sector operator. This proves part 1.
+
+For part 2, Theorem T.70 gives on sector $s$
+$$
+D_s=(\nabla_s^{\widetilde G})^*\nabla_s^{\widetilde G}
++(\mu_0+\lambda_s)I
++(m_{\mathcal J}+\eta\lambda_s)\mathcal J_G.
+$$
+On an oriented parity eigenspace, $\mathcal J_G$ is $+1$ or $-1$. Hence the splitting around the sector center is exactly the common affine quantity $m_{\mathcal J}+\eta\lambda_s$. Eliminating $m_{\mathcal J}$ and $\eta$ from the three equations $Q_s=m_{\mathcal J}+\eta\lambda_s$ gives (T.70.2).
+
+For part 3, Corollary T.69.1 bounds the omitted part of the same canonical block sum that defines $F_s$. A cancellation statement in a different functional cannot set the ordinary omitted kernel to zero unless an additional theorem identifies the two omitted ordinary block sums. Therefore a zero-tail assertion must be made inside the Definition T.17a functional itself.
+
+Substituting the PCE-optimal weights into Remark T.17a.3 gives the displayed values of $\lambda_C,\lambda_W,\lambda_Y$. Solving the color and weak equations gives the displayed $m_{\mathcal J}$ and $\eta$, and evaluating the affine expression at $\lambda_Y$ gives $2.215849595287\ldots\ne -15/16$. The displayed finite sign check evaluates the same affine compatibility residual after all possible independent parity-label relabelings, and none vanishes. Thus the displayed scalar closure fails the necessary compatibility condition. ∎
+
+**Corollary T.70.3 (Status of One-Block Ratio Completions).** A one-block formula of the form
+$$
+F_s=d_s\log\left(\frac{a_s+Q_s}{a_s-Q_s}\right)
+$$
+can be used in Appendix T only after the paper explicitly replaces the canonical sector determinant by a parity-relative superdeterminant and independently proves that the resulting oriented $Q_s$ arise from admissible branch data fixed before comparison. Without those two additional steps, such a formula is a diagnostic ansatz rather than a completed flag-lift spectral computation in the sense of Theorem T.78.
+
+*Proof.* This is immediate from Theorem T.70.2 and Theorem T.78. ∎
+
 ## T.27 RG Rigidity and Yukawa Cancellation
 
 **Theorem T.71 (RG Rigidity of the Electroweak/Flavor Boundary Problem).** Assume the PU fixed-point boundary conditions of Theorem T.35 together with the threshold triplet $(\Delta_1,\Delta_2,\Delta_3)$, the $E_8$ triad assignment, and a fixed loop-order Standard Model RG system. Then the full electroweak/Yukawa observable vector at low energy is uniquely determined. Equivalently, two admissible lifted threshold operators inducing the same triplet produce the same electroweak/Yukawa predictions at the chosen RG order.
@@ -6648,6 +6762,50 @@ $$
 
 **Corollary T.78.1 (No Ambiguity Inside a Completed Spectral Problem).** Two admissible realizations that define the same completed flag-lift spectral problem produce the same threshold triplet $\Delta$. ∎
 
+**Theorem T.78.2 (Current Non-Closure of the Global Flag-Lift Spectral Gate).** Let $\mathcal D_{\mathrm{cur}}$ denote the canonical threshold data fixed in Definition T.17a, Convention T.17a.0, Convention T.69a, Theorems T.69-T.70, and the flag-lift construction of Theorems G.8.4e-G.8.4e.1 and Proposition G.8.4e.1a. Even after adjoining the marked Golay-Leech half-swap convention of Definition G.8.4f.3, the data $\mathcal D_{\mathrm{cur}}$ do not determine a completed tuple $\mathfrak S_{\widetilde X}$ in the sense of Convention T.17a.0 and Theorem T.78. The following data remain branch inputs unless fixed by an additional theorem before validation comparison:
+
+1. the numerical metric normalization $\beta$ of the homogeneous Laplacian on $\widetilde X$, or an explicit normalization theorem tying it to the lifted Bures/Kähler-Einstein scale;
+2. the homogeneous connection $\nabla^{\widetilde G}$ together with a proof that the chosen $\mathcal J_G$ either commutes with the corresponding sector Laplacians or else defines the stated residual finite block matrices;
+3. the structural parameters $(\mu_0,m_{\mathcal J},\eta)$ independently of the validation tuple;
+4. the complete sector/parity $H$-types $\{\tau_{s,\pm,a}\}$ in the homogeneous case, or the complete matrices $J_{\Lambda,s,a}$ in the residual-symmetry case;
+5. a finite-block tail certificate $\{\varepsilon_s(L)\}$ satisfying Corollary T.69.1 with explicit constants and cutoff.
+
+Consequently the sector spectra, canonical finite parts $F_s$, threshold shifts $\Delta_i$, and matching factors $Z_i$ are not theorem-level numerical outputs of the current canonical ledger. Any assignment of the missing data is an additional spectral branch package. If such a package is appended before validation comparison, Theorem T.78 applies to it; without such a package, the validation tuple remains a comparison target only. The canonical minimal residual ledger remains $\delta_i=0$ and cannot be used to absorb missing principal lifted thresholds.
+
+*Proof.* Convention T.17a.0 defines a completed threshold calculation as the tuple
+$$
+\mathfrak S_{\widetilde X}
+=
+\left(
+\widetilde X,
+D^{\mathrm{PCE}}_{\widetilde X},
+\mathrm{MS2}_{\mu_G},
+\mathcal J_G,
+\mu_0,
+m_{\mathcal J},
+\eta,
+\{\tau_{s,\pm,a}\},
+\{\varepsilon_s(L)\}
+\right),
+$$
+fixed before comparison with any numerical validation tuple. Theorem T.78 requires the same information, including $\beta$, $\nabla^{\widetilde G}$, $(\mu_0,m_{\mathcal J},\eta)$, the Golay involution as an operator on the lifted sector blocks, the sector/parity $H$-types or finite residual matrices, the finite-part prescription, and a tail certificate.
+
+The data listed in $\mathcal D_{\mathrm{cur}}$ fix the manifold $\widetilde X$, the formal determinant prescription, the Dynkin-index matrix $T$, and the structural form of the block spectrum. They do not give numerical values for $\beta$ or $(\mu_0,m_{\mathcal J},\eta)$, nor do they list the required $H$-types or residual matrices. The marked half-swap of Definition G.8.4f.3 is a finite coordinate-frame involution on the marked 24-mode Golay-Leech carrier. To enter Theorem T.70 it must be promoted to an operator-level action on every sector block and must either commute with the chosen sector Laplacians or be represented by explicit finite matrices $J_{\Lambda,s,a}$. Those data are not supplied by the marked coordinate convention alone.
+
+The dependence on the missing data is genuine. Already at any finite retained block set used in Corollary T.69.1, changing $\mu_0$ to $\mu_0+r$ changes the retained ordinary determinant by
+$$
+F_s^{(\le L)}(r)-F_s^{(\le L)}(0)
+=
+\sum_{\Lambda,\pm,a,j}^{\le L}
+(\dim V_\Lambda)
+\log\left(1+\frac{r}{\nu_{\Lambda,s,\pm,a,j}}\right),
+$$
+where the sum is over the retained positive eigenvalues. For every nonempty retained sector and every admissible $r\ne0$ small enough to keep positivity, this expression is not identically zero. Similarly, changing $m_{\mathcal J}$ or $\eta$ changes the parity shifts $m_{\mathcal J}+\eta\lambda_s$, and changing $\beta$ changes every nonzero Casimir contribution. Since the canonical $\mathrm{MS2}_{\mu_G}$ prescription fixes zero additional finite counterterm at $\mu_G$, these variations are not removable by a later counterterm choice. Finally, $T$ is fixed and invertible, so variation of $F$ gives variation of $\Delta=TF$. Therefore the current data do not determine a unique completed spectral output. ∎
+
+**Corollary T.78.3 (Airtight Status of the Lifted Threshold Computation).** The global flag-lift threshold problem is structurally formulated and locally constrained, but it is not numerically closed in the current canonical ledger. A theorem-level closure requires an independently specified spectral branch package containing the missing data listed in Theorem T.78.2, followed by the forward block-sum computation and Corollary T.69.1 tail certificate. Until then, no value of $(\Delta_i,Z_i)$ may be promoted from validation target to derived prediction, and no nonminimal $\delta_i$ may be introduced unless a separate heavy-threshold ledger is explicitly appended.
+
+*Proof.* Immediate from Theorem T.78.2, Definition T.19a, Proposition T.19c, and Corollary T.79.1. ∎
+
 **Theorem T.79 (Conditional Closure of the Quantitative Parameter Sector).** On a fixed PU structural branch with the two-loop SM RG system, suppose:
 1. a completed flag-lift spectral calculation provides a definite threshold triplet $\Delta$;
 2. the flavor-geometric residual data $(\mathcal T_{E_8},\mathcal V)$ are fixed on the selected branch;
@@ -6661,5 +6819,51 @@ is uniquely determined.
 *Proof.* Theorem T.78 fixes $\Delta$ once the spectral problem is completed. Theorem T.71 then fixes the gauge/RG sector, Theorems T.72–T.73 fix the Yukawa ratios on the chosen flavor branch once $(\mathcal T_{E_8},\mathcal V)$ are fixed, and Theorems T.74–T.76 fix the CP sector once $\mathcal B$ is fixed. Combining these steps determines every component of $\Pi_T$. ∎
 
 **Corollary T.79.1 (Status Boundary for the Quantitative Appendix-T Sector).** On a fixed PU structural branch, the RG/matching/evolution machinery contains no further continuous ambiguity once the completed spectral input $\Delta$, the residual heavy-threshold ledger $\delta$ if nonminimal heavy data are appended, and the residual flavor-profile data $(\mathcal T_{E_8},\mathcal V,\mathcal B)$ are fixed. In the canonical minimal $\mathrm{MS2}_{\mu_G}$ ledger, $\delta_i=0$ and the gauge-threshold input is exactly the completed flag-lift spectral output of Theorem T.78. ∎
+
+**Theorem T.79a (Nuclear Extension Determinacy Boundary).** The Appendix-T electroweak/flavor parameter vector $\Pi_T$ does not by itself determine stable isotope patterns, nuclear magic numbers, or spin-dependent nuclear transition anomalies. Those quantities become determinate only after PU supplies a finite self-adjoint nuclear aggregate Hamiltonian
+$$
+H_A^{\mathrm{PU}}(Z,N)
+$$
+for each proton-neutron sector $(Z,N)$, together with the corresponding spin-current and decay operators.
+
+More precisely:
+
+(i) Fixing $\Pi_T$ fixes the elementary masses, mixings, and gauge couplings on the stated branch, but leaves many-body nuclear operators underdetermined.
+
+(ii) If $H_A^{\mathrm{PU}}(Z,N)$ is fixed as a finite self-adjoint operator on the MPU-admissible nuclear aggregate Hilbert space, then isotope stability, shell gaps, and spin-dependent transition rates are uniquely determined by spectral data and matrix elements of that operator.
+
+(iii) Therefore nuclear-isotope claims are theorem-level only after the finite nuclear Hamiltonian and operators have been derived from the PU effective action; before that step they are conditional extension claims, not consequences of Appendix T alone.
+
+*Proof.* For (i), $\Pi_T$ contains elementary sector data:
+$$
+\Pi_T=\bigl(\sin^2\theta_W(M_Z),g_i(\mu_G),v,m_H,Y_u,Y_d,Y_e,m_{\nu_a},V_{\mathrm{CKM}},U_{\mathrm{PMNS}}\bigr).
+$$
+It does not contain a complete many-body nuclear interaction operator. Let $H_A$ be any finite self-adjoint nuclear Hamiltonian compatible with the fixed elementary data and symmetries. For any nonzero finite self-adjoint two-body operator $Q$ that preserves the same elementary one-particle data, the family
+$$
+H_A(\eta)=H_A+\eta Q
+$$
+has the same fixed $\Pi_T$ for sufficiently small $\eta$, but generally changes nuclear binding eigenvalues and spin-dependent matrix elements. Hence the map $\Pi_T\mapsto$ nuclear isotope spectrum is not unique.
+
+For (ii), once $H_A^{\mathrm{PU}}(Z,N)$ is fixed on a finite Hilbert space, the spectral theorem gives a discrete real spectrum. The ground-state energy
+$$
+E_0(Z,N)=\min\operatorname{spec}H_A^{\mathrm{PU}}(Z,N)
+$$
+is unique. Stability against a decay channel $(Z,N)\to\{(Z_i,N_i)\}_i$ is determined by the sign of
+$$
+\Delta E
+=
+\sum_i E_0(Z_i,N_i)-E_0(Z,N)
+$$
+after including the relevant emitted particles. Shell or magic-number gaps are finite differences of the corresponding ground-state energies, for example
+$$
+\Delta_N^2 E_0(Z,N)
+=
+E_0(Z,N+1)-2E_0(Z,N)+E_0(Z,N-1),
+$$
+and spin-dependent rates are determined by matrix elements
+$$
+\langle \psi_f|\,\mathcal O_{\mathrm{spin}}^{\mathrm{PU}}\,|\psi_i\rangle
+$$
+between eigenstates of the fixed Hamiltonian. These are all uniquely defined finite-dimensional quantities. Statement (iii) follows by combining the non-uniqueness in (i) with the uniqueness after operator closure in (ii). ∎
 
 -----

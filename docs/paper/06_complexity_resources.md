@@ -233,6 +233,86 @@ $$
 $$
 Substituting and solving for $C_s$ gives (22d). ∎
 
+**Corollary 19.1 (Power-Law Learning Curves on Logarithmic Complexity Budgets).** Let a predictive system accumulate experience by successively allocating predictive complexity above baseline through a logarithmic budget,
+$$
+C(N)-C_{op}=\eta_{\ell}\ln\!\bigl(N/N_0\bigr),
+\qquad N\ge N_0>0,
+\qquad \eta_{\ell}>0,
+\tag{22e}
+$$
+where $N$ is a monotone non-negative experience parameter and $N_0,\eta_{\ell}$ are constants. Under Theorem 19, the performance gap obeys the exact power law
+$$
+\beta-PP(N)=(\beta-\alpha)\bigl(N/N_0\bigr)^{-s},
+\qquad
+s=\frac{\kappa_{\mathrm{eff}}\eta_{\ell}}{\hat C_{\mathrm{target}}}>0.
+\tag{22f}
+$$
+
+*Proof.* Substitute (22e) into Equation (22b), using $C_s=\hat C_{\mathrm{target}}/\kappa_{\mathrm{eff}}$ from Definition 19a:
+$$
+\beta-PP(N)
+=(\beta-\alpha)\exp\!\left[-\frac{C(N)-C_{op}}{C_s}\right]
+=(\beta-\alpha)\exp\!\left[-\frac{\kappa_{\mathrm{eff}}\eta_{\ell}}{\hat C_{\mathrm{target}}}\ln(N/N_0)\right].
+$$
+Using $\exp[-s\ln(N/N_0)]=(N/N_0)^{-s}$ gives (22f). Positivity of $s$ follows from $\kappa_{\mathrm{eff}},\eta_{\ell},\hat C_{\mathrm{target}}>0$. ∎
+
+**Remark 19.1a (Interpretation of (22e)).** The logarithmic budget (22e) is an admissible PCE-efficient allocation regime whenever each additional experience increment contributes a multiplicatively diminishing update to effective complexity above baseline. The constant $\eta_{\ell}$ has dimensions of complexity per dimensionless experience unit and is fixed operationally by the system's internal accumulation rule; $\hat C_{\mathrm{target}}$ enters only through the Law-of-Prediction scale factor $C_s$.
+
+**Corollary 19.2 (Conditional Neural Scaling Laws).** Let an aggregate predictive system (Definition 29) parametrized by size $N_p$ satisfy the size-to-complexity relation
+$$
+C(N_p)-C_{op}=\eta_p\ln\!\bigl(N_p/N_{p,0}\bigr),
+\qquad \eta_p>0,
+\tag{22g}
+$$
+on a scaling branch where size increments expand the effective predictive complexity logarithmically. Then the achievable performance gap obeys
+$$
+\beta-PP(N_p)=(\beta-\alpha)\bigl(N_p/N_{p,0}\bigr)^{-s_p},
+\qquad
+s_p=\frac{\kappa_{\mathrm{eff}}\eta_p}{\hat C_{\mathrm{target}}}.
+\tag{22h}
+$$
+An analogous identity with exponent $s_d=\kappa_{\mathrm{eff}}\eta_d/\hat C_{\mathrm{target}}$ holds for data-size scaling when $C-C_{op}=\eta_d\ln(N_d/N_{d,0})$. If several independent logarithmic contributions add,
+$$
+C-C_{op}=\sum_i \eta_i\ln(N_i/N_{i,0}),
+$$
+then the performance gap factorizes into
+$$
+\beta-PP=(\beta-\alpha)\prod_i (N_i/N_{i,0})^{-\kappa_{\mathrm{eff}}\eta_i/\hat C_{\mathrm{target}}}.
+$$
+
+*Proof.* Direct substitution of (22g) into (22b) via Definition 19a gives (22h). The data-size and compositional statements follow from the same substitution in the additive logarithmic regime. ∎
+
+**Remark 19.2 (Predictive Content).** Corollaries 19.1-19.2 identify empirically reported power-law regimes for learning curves [Newell & Rosenbloom 1981] and neural-network loss scaling with model size and dataset size [Kaplan et al. 2020; Hoffmann et al. 2022] as conditional images of the Law of Prediction under logarithmic complexity-budget hypotheses. On a fixed branch, the exponents $s,s_p,s_d$ are determined by the performance-efficiency constant $\kappa_{\mathrm{eff}}$, the logarithmic accumulation rate $\eta_\bullet$, and the task-difficulty scale $\hat C_{\mathrm{target}}$. Deviations from power-law behavior are expected when the logarithmic-budget hypothesis fails or when the saturation regime $PP\to\beta$ is reached.
+
+**Remark 19.3 (Weber-Fechner Relation from Equation (5)).** Let a predictive system represent an external stimulus by allocating reflexive-information complexity $C$ above the Horizon Constant $K_0$ (Theorem 15). By Definition 3b, the representative reflexive-information cost rate is
+$$
+R_I(C;T_{\mathrm{eff}})=\frac{r_I(T_{\mathrm{eff}})}{\ln 2}\ln\!\bigl(C/K_0\bigr),
+\qquad C\ge K_0. \quad \text{(5)}
+$$
+If the operational internal signal representing the stimulus is identified with the expended reflexive-information rate $R_I$, then for any two stimulus levels $C_1,C_2>K_0$ the internal difference is
+$$
+\Delta R_I=\frac{r_I}{\ln 2}\ln\!\bigl(C_2/C_1\bigr).
+\tag{5a}
+$$
+A fixed just-noticeable internal increment $\Delta R_I=\delta_R$ is therefore equivalent to the constant-ratio condition
+$$
+\frac{C_2}{C_1}=\exp\!\left(\frac{\delta_R\ln 2}{r_I}\right),
+$$
+or, for small increments, $\Delta C/C\approx \delta_R\ln 2/r_I$.
+
+*Proof.* Subtract Equation (5) at $C_1$ and $C_2$:
+$$
+R_I(C_2)-R_I(C_1)=\frac{r_I}{\ln 2}\left[\ln(C_2/K_0)-\ln(C_1/K_0)\right]
+=\frac{r_I}{\ln 2}\ln(C_2/C_1).
+$$
+Solving $\Delta R_I=\delta_R$ gives the displayed ratio. For infinitesimal increments, differentiating (5) gives
+$$
+\frac{\partial R_I}{\partial C}=\frac{r_I}{C\ln 2},
+$$
+so $dR_I=(r_I/\ln 2)(dC/C)$ and fixed $dR_I$ is equivalent to fixed $dC/C$. ∎
+
+This is the Weber-Fechner relation [Weber 1834; Fechner 1860]: the minimum discriminable stimulus increment is proportional to the stimulus magnitude, with logarithmic compression of perceived intensity. Within PU, the logarithmic form is the representative reflexive-information cost (5) already used by the framework. The identification of an operational internal signal with expended $R_I$ is an explicit psychophysical bridge assumption, not a claim that every stimulus code is exhausted by reflexive-information cost. For self-model-engaging perception, the relevant internal-cost interpretation is the perspectival profile and self-model cost functional of Appendix M.10, especially Definition M.10.1 and Proposition M.10.9. The logarithmic gain is $r_I/\ln 2$, while the Weber fraction is fixed by the chosen just-noticeable internal threshold $\delta_R$ through $\Delta C/C\approx \delta_R\ln 2/r_I$ in the small-increment limit.
+
 **6.4 Adaptation Dynamics Driven by PCE**
 
 The Principle of Compression Efficiency (PCE, Definition 15) mandates that systems dynamically adjust their configuration to minimize a global effective potential, balancing predictive benefits against comprehensive resource costs. The adaptation of complexity $C(t)$ is driven by the local gradient of this potential.
@@ -381,6 +461,49 @@ $$
 $$
 
 *Proof.* Strict concavity of $J$ guarantees a unique maximizer $C^*$. Strong concavity in a neighborhood implies $(C-C^*)\,\partial J/\partial C\le -\mu(C-C^*)^2$ for $C\in\mathcal N(C^*)$. Let $V(t)=\frac{1}{2}(C(t)-C^*)^2$. Then $\dot V = (C-C^*)\dot C = \eta_{adapt}(C-C^*)\partial J/\partial C \le -\eta_{adapt}\mu(C-C^*)^2 = -2\eta_{adapt}\mu V$. By Grönwall's inequality, $V(t)\le e^{-2\eta_{adapt}\mu t}V(0)$, which yields the stated exponential bound on $|C(t)-C^*|$. ∎
+
+**Corollary 22.1 (Gaussian Attractor under Quadratic-Cost PCE).** Let $\mathcal K\subset\mathcal X_{adm}$ be the compact PCE-admissible set of Appendix D (Theorem D.5, assumptions A1-A6). Suppose the PCE potential $V$ has a unique global minimum at $x^*\in\operatorname{int}(\mathcal K)$ and is twice continuously differentiable in a neighborhood of $x^*$, with non-degenerate Hessian
+$$
+H:=\nabla^2 V(x^*)\succ 0.
+$$
+Let $d$ be the local dimension of $\mathcal K$ at $x^*$. In the detailed-balance low-noise regime of Theorem D.5 with stationary density
+$$
+\pi_\theta(dx)=Z_\theta^{-1}\exp[-V(x)/\theta]dx, \quad \text{(D.12a)}
+$$
+the rescaled fluctuation
+$$
+\xi_\theta:=\frac{x-x^*}{\sqrt\theta}
+$$
+converges in distribution as $\theta\downarrow0$ to the centered Gaussian
+$$
+\xi\sim\mathcal N(0,H^{-1}).
+\tag{37a}
+$$
+Consequently, every fixed coordinate projection converges to a one-dimensional Gaussian with variance given by the corresponding diagonal entry of $H^{-1}$. Normalized sums of independent stationary samples of any fixed projection satisfy the ordinary central limit theorem in the low-noise limit. Quantitative Berry-Esseen rates require additional uniform third-moment control and are not asserted from the $C^2$ hypotheses alone.
+
+*Proof.* Since $x^*$ is a non-degenerate interior minimum and $V\in C^2$ near $x^*$,
+$$
+V(x^*+\sqrt\theta\,\xi)=V(x^*)+\frac{\theta}{2}\xi^T H\xi+o(\theta\|\xi\|^2)
+$$
+for bounded $\xi$. The change of variables $x=x^*+\sqrt\theta\,\xi$ gives Jacobian $\theta^{d/2}$. On every bounded $\xi$-set, the rescaled density therefore converges pointwise to
+$$
+\exp\!\left[-\frac12\xi^TH\xi\right].
+$$
+Because $x^*$ is the unique global minimum on compact $\mathcal K$, every closed set outside a sufficiently small neighborhood of $x^*$ has a positive potential gap above $V(x^*)$. Thus the mass of $\pi_\theta$ outside that neighborhood is exponentially small as $\theta\downarrow0$, and the local quadratic approximation controls the partition function. Laplace's method gives
+$$
+Z_\theta e^{V(x^*)/\theta}\theta^{-d/2}\longrightarrow
+\int_{\mathbb R^d}\exp\!\left[-\frac12\xi^TH\xi\right]d\xi
+=\frac{(2\pi)^{d/2}}{\sqrt{\det H}}.
+$$
+Normalizing yields weak convergence to the Gaussian density
+$$
+\frac{\sqrt{\det H}}{(2\pi)^{d/2}}\exp\!\left[-\frac12\xi^TH\xi\right]d\xi.
+$$
+The statement for coordinate projections follows by the continuous mapping theorem. For independent stationary samples of a fixed projection, the limiting Gaussian has finite variance, so the classical Lindeberg-Feller theorem gives the stated central-limit behavior. ∎
+
+**Remark 22.1 (Explanatory Scope).** Corollary 22.1 identifies the empirical ubiquity of Gaussian statistics for small perturbations around stable operating points as the local quadratic normal form of the PCE potential near a non-degenerate attractor. The result is local and low-noise: it does not claim that all stationary PU fluctuations are Gaussian, only that the rescaled fluctuations near a unique non-degenerate PCE minimum have Gaussian leading order.
+
+**Remark 22.2 (Non-Gaussian Regimes).** Corollary 22.1 concerns the strictly local fluctuation regime near a non-degenerate PCE minimum. At degenerate or marginal minima where $H$ has zero eigenvalues, the leading cost is higher order and the local stationary distribution is non-Gaussian. Far from a minimum, or in the presence of multiplicative rather than additive fluctuations, heavier-tailed distributions can arise, including the conditional Pareto regime analyzed in Appendix P.8.9a.11 under multiplicative PCE adaptation.
 
 **6.5.3 Definition 21 (Def 21): Dynamics of $\hat{C}_{target}(t)$**
 

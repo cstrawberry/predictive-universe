@@ -831,7 +831,7 @@ in excellent agreement with the observed hierarchy.
 
 **Phenomenological Success:**
 - Hierarchy: $v \approx 246$ GeV (input) → test internal consistency
-- $\sin^2\theta_W(M_Z)$: conditional on the lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$ on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$, one-loop SM RG evolution from the matching boundary $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2+5Z_1)$ with $Z_i=1+\Delta_i/24$ yields the observed Z-pole range **(Theorem T.16, T.18)**
+- $\sin^2\theta_W(M_Z)$: conditional on the lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$ on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$, one-loop SM RG evolution from the matching boundary $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2+5Z_1)$ with $Z_i=1+\Delta_i/24$ yields the observed Z-pole range **(Theorem T.16, T.18)** if the forward global block-sum computation supplies that tuple; Theorem T.78.2 records that the current canonical ledger does not yet fix the missing spectral branch package
 - $m_H \approx 125$ GeV from the Appendix T metastability-boundary matching branch
 - Fermion mass ratios (Appendix T, Section T.25)
 
@@ -1215,6 +1215,54 @@ UV finiteness and emergent gravity are unified: both arise from the finite infor
 
 ---
 
+**Theorem K.10.16 (Operational Inertial-Range Turbulence Scaling).** Let an MPU-admissible fluid description possess a finite inertial range
+$$
+k_0\ll k\ll k_d\le \Lambda_{\mathrm{MPU}},
+\tag{K.10.20}
+$$
+with forcing confined to $k\lesssim k_0$ and dissipation confined to $k\gtrsim k_d$. Suppose that inside the inertial range:
+
+1. the only conserved transferred scalar relevant to the one-dimensional energy spectrum is the scale-independent energy flux per unit mass $\varepsilon_T$;
+2. PCE compression removes dependence on forcing details, viscosity, molecular structure, and sub-MPU degrees of freedom from the inertial-range closure;
+3. the inertial-range spectrum $E(k)$ is locally determined only by $\varepsilon_T$ and $k$.
+
+Then the spectrum has the universal exponent
+$$
+E(k)=C_K\,\varepsilon_T^{2/3}k^{-5/3},
+\tag{K.10.21}
+$$
+where $C_K$ is a dimensionless branch constant not fixed by dimensional closure alone.
+
+*Proof.* In a statistically stationary inertial range, energy neither accumulates at an intermediate wavenumber nor is created there. The flux entering each inertial shell equals the flux leaving it, so the flux is independent of $k$ and is denoted $\varepsilon_T$. The dimensions are
+$$
+[E(k)]=L^3T^{-2},
+\qquad
+[\varepsilon_T]=L^2T^{-3},
+\qquad
+[k]=L^{-1}.
+$$
+By assumption 3, write
+$$
+E(k)=C_K\varepsilon_T^a k^b
+$$
+with dimensionless $C_K$. Matching dimensions gives
+$$
+L^3T^{-2}=L^{2a-b}T^{-3a}.
+$$
+Thus
+$$
+-3a=-2,\qquad 2a-b=3.
+$$
+The unique solution is
+$$
+a=\frac23,\qquad b=-\frac53.
+$$
+Substitution yields (K.10.21). PCE enters by justifying the absence of additional inertial-range dimensional inputs: operationally irrelevant microscopic detail is compressed away, while the finite MPU cutoff supplies $k_d\le\Lambda_{\mathrm{MPU}}$ rather than a continuum limit. ∎
+
+**Corollary K.10.16.1 (Finite-Resolution Status of the Turbulent Cascade).** PU does not require an exact continuum Navier-Stokes cascade extending to arbitrarily large $k$. The $-5/3$ exponent holds only on the finite operational band $k_0\ll k\ll k_d$, with deviations expected near forcing, dissipation, boundaries, anisotropic constraints, or $k_d\sim\Lambda_{\mathrm{MPU}}$.
+
+*Proof.* Theorem K.10.16 assumes a finite inertial interval. If $k$ approaches $k_0$, forcing details become operationally relevant and assumption 2 fails. If $k$ approaches $k_d$, dissipation or MPU-scale discreteness becomes operationally relevant and assumption 3 fails. Therefore the exponent is a finite-band universality statement, not a claim about an exact all-scale continuum. ∎
+
 ## K.11 Outlook and Future Directions
 
 The Predictive Universe framework has successfully resolved several fundamental puzzles through rigorous derivations. This section summarizes established results, identifies active development areas, and outlines priority theoretical work and experimental validation strategies.
@@ -1251,6 +1299,12 @@ The following areas have established conceptual frameworks with detailed calcula
 3. **Modified cosmology:** homogeneous FLRW constitutive law closed at the background level (Section K.9); derivation of $(A_c,n)$ from the relaxation potential and perturbation-level observational tests remain.
 
 4. **Renormalization-PCE correspondence:** FRG flow identified with PCE-selected compression (Theorem K.10.7); rigorous derivation of the PCE functional $\mathcal{L}_{\text{PCE}}^{(k)}$ from MPU dynamics required.
+
+5. **Nuclear finite-aggregate sector:** Appendix T fixes the elementary electroweak/flavor parameter sector on its stated branch, but isotope stability, magic-number gaps, and spin-dependent nuclear effects require a derived finite nuclear Hamiltonian $H_A^{\mathrm{PU}}$ on the many-nucleon aggregate space. The determinacy boundary is Theorem T.79a.
+
+6. **Critical spectra in adaptive systems:** Appendix D derives $1/f$ spectra on the scale-neutral marginal PCE branch (Theorem D.8b). Domain-specific work remains in identifying the active relaxation cutoffs $\lambda_{\min},\lambda_{\max}$ and the exponent-shift profile $h(\lambda)\sim\lambda^s$ in concrete systems.
+
+7. **Operational turbulence constants:** The inertial-range exponent $-5/3$ follows from finite-resolution PCE cascade closure (Theorem K.10.16). The dimensionless constant $C_K$, intermittency corrections, and boundary-specific deviations remain branch-level fluid-dynamical quantities.
 
 ### K.11.3 Priority Theoretical Work
 

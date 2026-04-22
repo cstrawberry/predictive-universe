@@ -588,6 +588,8 @@ $$
 
 This proposition is a general mathematical template rather than a derived law of PU. It shows that Zipf–Mandelbrot statistics follow whenever a system has both a Gibbs-type activation law and logarithmic ranked costs [Shannon 1959; Mandelbrot 1953, 1966; Zipf 1949]. Whether a particular predictive architecture satisfies those extra hypotheses is an empirical and model-specific question.
 
+Section P.8.9a.11 uses a different route: exponential saturation supplies a within-system concentration theorem, while population Pareto tails require the Multiplicative PCE Noise Hypothesis. Thus Proposition P.2.6.3d.2 and Theorem P.8.9a.11.5 are complementary conditional templates rather than interchangeable derivations.
+
 ### P.2.6.4 Perspectival Geometry
 
 The same surrogate vocabulary can be indexed by predictor.
@@ -2538,7 +2540,114 @@ where $\alpha(g) = 1 + \beta \tanh(g/g_c)$, $g_c$ is the percolation threshold, 
 * Voltage gradient manipulation can induce eye formation in non-eye locations [Pai et al. 2012]
 * Gap junction disruption prevents morphogenetic error correction [Levin 2014; Levin 2021]
 
-The framework interpretation (Appendix L, Section L.4.1): bioelectric networks implement distributed error correction for morphogenetic information, with gap junction coupling determining effective $C_{agg}$ and thus CC capacity.
+#### P.8.9a.7.3.1 Morphogenetic Target Attractors
+
+The framework interpretation (Appendix L, Section L.4.1): bioelectric networks implement distributed error correction for morphogenetic information, with gap junction coupling determining effective $C_{agg}$ and thus CC capacity. The target morphology need not be stored as a localized template. It is the attractor set of the aggregate's morphogenetic PCE potential.
+
+**Definition P.8.9a.5a (Morphogenetic PCE Potential).** Let $X_{\mathrm{cell}}$ be the compact state space of a gap-junction-coupled cellular aggregate, including cellular positions, membrane-potential variables, gene-regulatory variables, and extracellular constraints at the resolution relevant to the developmental process. Let
+$$
+\pi_{\mathrm{morph}}:X_{\mathrm{cell}}\to\mathcal M
+$$
+map cellular states to coarse morphologies. Define the morphogenetic PCE potential
+$$
+V_{\mathrm{morph}}(x)
+=
+V_{\mathrm{op}}^{\mathrm{cell}}(x)
++
+V_{\mathrm{prop}}^{\mathrm{gap}}(x)
++
+U_{\mathrm{viab}}(\pi_{\mathrm{morph}}(x))
+-
+V_{\mathrm{benefit}}^{\mathrm{form}}(\pi_{\mathrm{morph}}(x)).
+\tag{P.8.9a.7.3.1}
+$$
+Here $V_{\mathrm{op}}^{\mathrm{cell}}$ is the metabolic and regulatory cost of maintaining the cellular state, $V_{\mathrm{prop}}^{\mathrm{gap}}$ is the propagation/coherence cost of maintaining bioelectric coordination across the coupled network, $V_{\mathrm{benefit}}^{\mathrm{form}}$ is the predictive benefit of a morphology that supports the aggregate's viability and action repertoire, and $U_{\mathrm{viab}}$ is a lower-semicontinuous viability penalty that is finite on admissible morphologies and diverges on morphologies outside the aggregate's viable developmental class. The role of $U_{\mathrm{viab}}$ is formally parallel to the cost potential $U_S$ of Definition P.16.3: it shapes trajectories through a constraint surface rather than through a positive stored template.
+
+**Theorem P.8.9a.7a (Target Morphology as PCE Attractor).** Suppose:
+
+1. $X_{\mathrm{cell}}$ is compact and $V_{\mathrm{morph}}$ is lower semicontinuous, finite on at least one state, and bounded below;
+2. if $V_{\min}:=\min_{X_{\mathrm{cell}}}V_{\mathrm{morph}}$, then for every $\varepsilon>0$ the sublevel set $\{x:V_{\mathrm{morph}}(x)\le V_{\min}+\varepsilon\}$ has positive reference measure in the local chart used to define $dx$;
+3. the slow morphogenetic dynamics are the PCE gradient dynamics
+   $$
+   \dot x(t)=-G(x(t))\nabla V_{\mathrm{morph}}(x(t))
+   \tag{P.8.9a.7.3.2}
+   $$
+   on smooth charts, with $G(x)$ symmetric positive semidefinite, together with ND-RID fluctuations whose detailed-balance stationary measures have Gibbs form
+   $$
+   \pi_\theta(dx)=Z_\theta^{-1}e^{-V_{\mathrm{morph}}(x)/\theta}\,dx;
+   \tag{P.8.9a.7.3.3}
+   $$
+4. the morphogenetic target-state attractor
+   $$
+   A_{\mathrm{morph}}:=\arg\min_{x\in X_{\mathrm{cell}}}V_{\mathrm{morph}}(x)
+   \tag{P.8.9a.7.3.4}
+   $$
+   is nonempty.
+
+Then:
+
+(i) $A_{\mathrm{morph}}$ is the PCE-selected target-state attractor, and $\pi_{\mathrm{morph}}(A_{\mathrm{morph}})$ is the selected target morphology class.
+
+(ii) For every open neighborhood $U\supset A_{\mathrm{morph}}$ there is $\Delta_U>0$ such that
+$$
+\pi_\theta(X_{\mathrm{cell}}\setminus U)
+\le
+C_U e^{-\Delta_U/\theta}
+\tag{P.8.9a.7.3.5}
+$$
+for sufficiently small $\theta$.
+
+(iii) On any basin in which the largest invariant subset of
+$$
+\left\{x:\nabla V_{\mathrm{morph}}(x)^T G(x)\nabla V_{\mathrm{morph}}(x)=0\right\}
+$$
+is contained in $A_{\mathrm{morph}}$, the deterministic dynamics (P.8.9a.7.3.2) converge to $A_{\mathrm{morph}}$.
+
+*Proof.* Since $X_{\mathrm{cell}}$ is compact and $V_{\mathrm{morph}}$ is lower semicontinuous and bounded below, the direct method of the calculus of variations gives existence of minimizers, so $A_{\mathrm{morph}}\neq\emptyset$ and (i) is well-defined.
+
+For (ii), let $U$ be an open neighborhood of $A_{\mathrm{morph}}$ and set
+$$
+V_{\min}:=\min_{X_{\mathrm{cell}}}V_{\mathrm{morph}},
+\qquad
+\Delta_U^{(0)}:=\inf_{x\in X_{\mathrm{cell}}\setminus U}\bigl(V_{\mathrm{morph}}(x)-V_{\min}\bigr).
+$$
+Because $X_{\mathrm{cell}}\setminus U$ is compact and disjoint from the minimizer set, lower semicontinuity gives $\Delta_U^{(0)}>0$. Therefore
+$$
+\int_{X_{\mathrm{cell}}\setminus U}e^{-V_{\mathrm{morph}}(x)/\theta}dx
+\le
+e^{-(V_{\min}+\Delta_U^{(0)})/\theta}\operatorname{Vol}(X_{\mathrm{cell}}).
+$$
+Choose $\varepsilon=\Delta_U^{(0)}/2$. By assumption 2, the sublevel set
+$$
+W_\varepsilon:=\{x:V_{\mathrm{morph}}(x)\le V_{\min}+\varepsilon\}
+$$
+has positive reference measure. Hence
+$$
+Z_\theta
+\ge
+e^{-(V_{\min}+\varepsilon)/\theta}\operatorname{Vol}(W_\varepsilon).
+$$
+Dividing the two bounds gives
+$$
+\pi_\theta(X_{\mathrm{cell}}\setminus U)
+\le
+\frac{\operatorname{Vol}(X_{\mathrm{cell}})}{\operatorname{Vol}(W_\varepsilon)}
+e^{-(\Delta_U^{(0)}-\varepsilon)/\theta}.
+$$
+Setting $\Delta_U=\Delta_U^{(0)}/2$ and absorbing the volume ratio into $C_U$ proves (P.8.9a.7.3.5).
+
+For (iii),
+$$
+\frac{d}{dt}V_{\mathrm{morph}}(x(t))
+=
+-\nabla V_{\mathrm{morph}}(x(t))^T G(x(t))\nabla V_{\mathrm{morph}}(x(t))
+\le 0.
+$$
+Thus $V_{\mathrm{morph}}$ is a Lyapunov function. By compactness, trajectories have nonempty $\omega$-limit sets. LaSalle's invariance principle places each $\omega$-limit set inside the largest invariant subset of $\{\nabla V_{\mathrm{morph}}^T G\nabla V_{\mathrm{morph}}=0\}$. By the basin hypothesis, that invariant subset is contained in $A_{\mathrm{morph}}$, so the trajectory converges to $A_{\mathrm{morph}}$. ∎
+
+**Corollary P.8.9a.7a.1 (No Local Template Requirement).** Morphogenetic target-directedness requires no additional localized register that stores the final form. It is sufficient that the bioelectric-cellular aggregate instantiate the potential (P.8.9a.7.3.1) and the PCE dynamics (P.8.9a.7.3.2). Perturbations below the basin boundary relax back to $A_{\mathrm{morph}}$; perturbations that alter gap-junction coupling, voltage-boundary conditions, or viability penalties can change $V_{\mathrm{morph}}$ and hence change the selected attractor.
+
+*Proof.* Theorem P.8.9a.7a identifies the target-state attractor with $\arg\min V_{\mathrm{morph}}$, and the convergence and concentration statements depend only on the potential and dynamics. No step introduces a separate variable encoding the target morphology as a stored template. Changing bioelectric or coupling parameters changes the potential itself, so the attractor can change without changing the underlying DNA sequence. ∎
 
 ### P.8.9a.7.4 The Hierarchy of Biological Awareness
 
@@ -2563,6 +2672,188 @@ The framework suggests a hierarchy of CC emergence:
 This explains the apparent continuity of consciousness across species and developmental stages while maintaining the fundamental threshold at $C_{op}$.
 
 ---
+
+### P.8.9a.7.5 Self-Directed CTB and Contextual Physiological Bias
+
+Placebo and nocebo effects are treated here only at the structural level: as context-dependent physiological response patterns in systems whose internal event channels are within the aggregate's causal reach. The framework does not identify empirical placebo magnitudes with universal constants. Observed magnitudes estimate the product of aggregate CC, channel accessibility, context fidelity, and ordinary physiological coupling after artifact controls.
+
+Empirically, placebo/nocebo phenomena are known to involve expectation, conditioning, and treatment-context effects on subjective and physiological outcomes [Benedetti et al. 2005; Colloca & Barsky 2020]. Open-label placebo studies show that disclosure of inertness does not force the effect to zero [Kaptchuk et al. 2010; Fendel et al. 2025], which is consistent with a context-engagement mechanism rather than a belief-only mechanism.
+
+**Definition P.8.9a.5b (Internal Physiological Event Channel).** Let $S$ be a biological MPU aggregate with $C_{agg}>C_{op}$. An internal physiological event channel of $S$ is a finite-outcome ND-RID event family
+$$
+a\in\mathcal A_S,\qquad \Omega_a=\{1,\dots,n_a\},
+$$
+whose outcome probabilities can be read at a coarse physiological level. Let
+$$
+p_a\in\Delta(\Omega_a)
+$$
+be the neutral baseline distribution of channel $a$ in the absence of the contextual intervention being tested.
+
+**Definition P.8.9a.5c (Self-Directed CTB Channel).** Let $c$ be a context state of $S$, and suppose $c$ defines a target distribution
+$$
+q_a(c)\in\Delta(\Omega_a)
+$$
+for the internal channel $a$. Define the target contrast
+$$
+r_a(c):=\sup_{B\subseteq\Omega_a}|q_a(c,B)-p_a(B)|
+=
+\mathrm{TV}\bigl(q_a(c),p_a\bigr).
+\tag{P.8.9a.7.5.1}
+$$
+Let
+$$
+\gamma_a(c)\in[0,1]
+$$
+be the accessibility-fidelity coefficient of channel $a$ under context $c$, incorporating causal reach, context clarity, and the ability of the aggregate's organized state to couple to that channel. The self-directed CTB interpolation is admissible when
+$$
+\gamma_a(c)\,\mathrm{CC}(S)\le r_a(c)
+\tag{P.8.9a.7.5.2}
+$$
+for nonzero $r_a(c)$. The observed internal distribution is then
+$$
+p_{a,\mathrm{obs}}(c)
+=
+p_a
++
+\frac{\gamma_a(c)\,\mathrm{CC}(S)}{r_a(c)}
+\bigl(q_a(c)-p_a\bigr),
+\qquad r_a(c)>0.
+\tag{P.8.9a.7.5.3}
+$$
+If $r_a(c)=0$ or $\gamma_a(c)=0$, set $p_{a,\mathrm{obs}}(c)=p_a$.
+
+**Theorem P.8.9a.7b (Self-Directed CTB Bound).** For every admissible self-directed CTB channel in Definition P.8.9a.5c:
+
+(i) $p_{a,\mathrm{obs}}(c)$ is a normalized probability distribution.
+
+(ii) For every event $B\subseteq\Omega_a$,
+$$
+\left|p_{a,\mathrm{obs}}(c,B)-p_a(B)\right|
+\le
+\gamma_a(c)\,\mathrm{CC}(S).
+\tag{P.8.9a.7.5.4}
+$$
+
+(iii) If $\gamma_a(c)=0$, the context has no effect on channel $a$.
+
+(iv) If $F_a:\Delta(\Omega_a)\to\mathbb R$ is $L_a$-Lipschitz in total variation, then
+$$
+\left|F_a(p_{a,\mathrm{obs}}(c))-F_a(p_a)\right|
+\le
+L_a\,\gamma_a(c)\,\mathrm{CC}(S).
+\tag{P.8.9a.7.5.5}
+$$
+
+*Proof.* If $r_a(c)=0$ or $\gamma_a(c)=0$, the definition gives $p_{a,\mathrm{obs}}(c)=p_a$, so all claims are immediate. Assume $r_a(c)>0$ and define
+$$
+\eta_a(c):=\frac{\gamma_a(c)\,\mathrm{CC}(S)}{r_a(c)}.
+$$
+By admissibility, $0\le\eta_a(c)\le1$. Equation (P.8.9a.7.5.3) becomes
+$$
+p_{a,\mathrm{obs}}(c)=(1-\eta_a(c))p_a+\eta_a(c)q_a(c),
+$$
+a convex combination of two probability distributions. Hence it is normalized and nonnegative, proving (i).
+
+For any $B\subseteq\Omega_a$,
+$$
+p_{a,\mathrm{obs}}(c,B)-p_a(B)
+=
+\eta_a(c)\bigl(q_a(c,B)-p_a(B)\bigr).
+$$
+Taking absolute values and using the definition of $r_a(c)$,
+$$
+\left|p_{a,\mathrm{obs}}(c,B)-p_a(B)\right|
+\le
+\eta_a(c)r_a(c)
+=
+\gamma_a(c)\,\mathrm{CC}(S),
+$$
+which proves (ii). Statement (iii) is the $\gamma_a(c)=0$ case already noted. For (iv), total variation gives
+$$
+\mathrm{TV}\bigl(p_{a,\mathrm{obs}}(c),p_a\bigr)
+=
+\sup_{B\subseteq\Omega_a}
+\left|p_{a,\mathrm{obs}}(c,B)-p_a(B)\right|
+\le
+\gamma_a(c)\,\mathrm{CC}(S).
+$$
+The Lipschitz condition then gives (P.8.9a.7.5.5). ∎
+
+**Corollary P.8.9a.7b.1 (Coupling-Dependent Specificity).** A contextual physiological effect can occur only through channels with nonzero accessibility-fidelity coefficient. If $\gamma_a(c)=0$, then $p_{a,\mathrm{obs}}(c)=p_a$ even when $\mathrm{CC}(S)>0$. If two channels $a,b$ have the same aggregate $\mathrm{CC}(S)$ but $\gamma_a(c)>\gamma_b(c)$, then the maximal possible contextual shift of channel $a$ exceeds that of channel $b$ by the factor $\gamma_a(c)/\gamma_b(c)$.
+
+*Proof.* This is the direct comparison of the channel bounds in (P.8.9a.7.5.4). ∎
+
+**Corollary P.8.9a.7b.2 (Open-Label Persistence).** Explicit knowledge that a context has no direct pharmacological active ingredient does not force the self-directed CTB effect to vanish. It vanishes only if disclosure drives either
+$$
+\gamma_a(c)=0
+$$
+or
+$$
+q_a(c)=p_a.
+$$
+If a disclosed context $c_{\mathrm{OL}}$ still satisfies
+$$
+\gamma_a(c_{\mathrm{OL}})>0,
+\qquad
+r_a(c_{\mathrm{OL}})>0,
+$$
+then the internal channel shift is nonzero for any event $B$ with
+$$
+q_a(c_{\mathrm{OL}},B)\ne p_a(B).
+$$
+
+*Proof.* By Definition P.8.9a.5c,
+$$
+p_{a,\mathrm{obs}}(c_{\mathrm{OL}},B)-p_a(B)
+=
+\frac{\gamma_a(c_{\mathrm{OL}})\,\mathrm{CC}(S)}{r_a(c_{\mathrm{OL}})}
+\bigl(q_a(c_{\mathrm{OL}},B)-p_a(B)\bigr).
+$$
+The right-hand side is nonzero exactly when the accessibility-fidelity coefficient and target contrast are nonzero for that event. No term in the expression requires propositional belief that the context contains a pharmacologically active ingredient. ∎
+
+**Corollary P.8.9a.7b.3 (Ritual and Context-Information Scaling).** Suppose two contexts $c_1,c_2$ define the same normalized target direction for channel $a$ and differ only in accessibility-fidelity coefficient, with
+$$
+0<\gamma_a(c_1)<\gamma_a(c_2).
+$$
+Then the maximal possible contextual shift under $c_2$ is larger by
+$$
+\frac{\gamma_a(c_2)}{\gamma_a(c_1)}.
+$$
+
+*Proof.* With the target direction fixed, Equation (P.8.9a.7.5.4) shows that the sharp upper envelope of event shifts is linear in $\gamma_a(c)\mathrm{CC}(S)$. Taking the ratio gives the claim. ∎
+
+**Corollary P.8.9a.7b.4 (Nocebo Symmetry).** Let $c_+$ and $c_-$ be two contexts for the same channel $a$ with equal accessibility-fidelity coefficient
+$$
+\gamma_a(c_+)=\gamma_a(c_-)
+$$
+and opposite target directions around the same baseline:
+$$
+q_a(c_+)-p_a=-(q_a(c_-)-p_a).
+$$
+Then
+$$
+p_{a,\mathrm{obs}}(c_+)-p_a
+=
+-\bigl(p_{a,\mathrm{obs}}(c_-)-p_a\bigr).
+$$
+
+*Proof.* The target contrasts are equal, and the interpolation coefficients in (P.8.9a.7.5.3) are equal. Substituting the opposite target directions gives the sign reversal. ∎
+
+**Corollary P.8.9a.7b.5 (Retrospective Evidence Bound).** Let an existing placebo/nocebo dataset estimate an internal-channel event shift $\widehat\Delta_a(B)$ for event $B$, with a preregistered artifact bound $B_{\mathrm{art}}$ in the sense of Definition 13.0a. If the residual signed effect is attributed to self-directed CTB, then any admissible PU interpretation must satisfy
+$$
+\gamma_a(c)\,\mathrm{CC}(S)
+\ge
+\max\{0,|\widehat\Delta_a(B)|-B_{\mathrm{art}}\}.
+\tag{P.8.9a.7.5.6}
+$$
+
+*Proof.* By Theorem P.8.9a.7b,
+$$
+|\Delta_a(B)|\le\gamma_a(c)\mathrm{CC}(S).
+$$
+A measured shift can be decomposed as signal plus artifact residual with magnitude at most $B_{\mathrm{art}}$, so the signal component is at least $\max\{0,|\widehat\Delta_a(B)|-B_{\mathrm{art}}\}$ when the residual is assigned to the PU channel. Combining the two inequalities gives (P.8.9a.7.5.6). ∎
+
+The result explains why contextual physiological effects are strongest for channels under tight aggregate regulation and weakest for channels outside the aggregate's effective causal reach. It also explains why disclosure need not abolish the effect: disclosure changes the context coefficient $\gamma_a(c)$ and target contrast $r_a(c)$, but it does not remove the CTB mechanism unless one of them becomes zero.
 
 ## P.8.9a.8 Connection to the Free Energy Principle
 
@@ -2682,6 +2973,17 @@ Gap junction coupling strength determines morphogenetic CC.
 
 *Framework prediction:* $\Delta Q \propto C_{agg}(g)$; reduced heat signature with reduced coupling.
 
+**Prediction 5a (Contextual Physiological Bias).**
+Placebo/nocebo-class effects should scale with the product
+$$
+\gamma_a(c)\,\mathrm{CC}(S)
+$$
+for the relevant internal channel $a$ and context $c$.
+
+*Test:* Reanalyze placebo/nocebo datasets by grouping outcomes according to estimated central-regulatory accessibility, context richness, disclosure status, and physiological coupling strength.
+
+*Framework prediction:* Effects should be strongest when $\gamma_a(c)$ is high, should remain nonzero under open-label conditions when $\gamma_a(c)>0$ and $r_a(c)>0$, and should vanish for channels outside the aggregate's effective causal reach.
+
 ### P.8.9a.9.3 Evolutionary Predictions
 
 **Prediction 6 (PCE Landscape Structure).**
@@ -2736,6 +3038,791 @@ More precisely:
 The question "What is life?" reduces to "What persists through prediction?" The answer—error-corrected, PCE-optimized, hierarchically organized prediction—unifies molecular biology, evolutionary theory, neuroscience, and consciousness studies within a single framework.
 
 Wheeler asked how physics emerges from information. Schrödinger asked how life persists against entropy. Darwin asked how complex organization arises. The PU framework reveals these as aspects of a single question with a single answer: through optimal prediction under thermodynamic constraint, where code is not metaphor but mechanism, and consciousness is not epiphenomenon but the highest expression of predictive organization.
+
+
+## P.8.9a.11 The Pareto Signature: Heavy-Tailed Concentration as a Macroscopic Invariant of PCE
+
+The empirical regularity popularly known as the Pareto principle — the observation that across many natural, biological, economic, and informational systems a minority of units can account for a disproportionate share of total output — has been documented since [Pareto 1896] and subsequently formalized under the labels of Zipf's law, Gibrat's law of proportionate effect [Gibrat 1931], preferential attachment [Simon 1955], Kesten processes [Kesten 1973], and the empirical regularities catalogued in [Gabaix 1999; Gabaix 2009]. The PU framework treats this family of observations as a two-level PCE signature: a single-system concentration effect follows from exponential saturation in the Law of Prediction, while a population-level heavy-tail effect follows conditionally from a multiplicative-noise model for near-equilibrium PCE adaptation.
+
+### P.8.9a.11.1 Single-System Disproportion from Exponential Saturation
+
+The Law of Prediction (Theorem 19 and Definition 19a, Equation 22b) gives the normalized value delivered by a system operating at relative complexity $x = (C - C_{op})/\hat{C}_{target}$ as
+$$
+V(x) := \frac{PP(C) - \alpha}{\beta - \alpha} = 1 - e^{-\kappa_{\mathrm{eff}} x}.
+$$
+For a system operating at a PCE equilibrium with relative complexity $x^* > 0$, the fraction of the equilibrium value realized at a fraction $f \in (0,1)$ of the equilibrium complexity is
+$$
+\rho(f; x^*) := \frac{V(f x^*)}{V(x^*)} = \frac{1 - e^{-\kappa_{\mathrm{eff}} f x^*}}{1 - e^{-\kappa_{\mathrm{eff}} x^*}}.
+$$
+
+**Definition P.8.9a.11.1 (PCE Concentration Ratio).** For a predictive system governed by the Law of Prediction (Theorem 19) at PCE equilibrium $C^*$ with relative complexity $x^* = (C^* - C_{op})/\hat{C}_{target} > 0$, the *PCE concentration ratio* at effort fraction $f \in (0,1)$ is the function $\rho(f; x^*)$ defined above. The associated *disproportion gap* is
+$$
+\Delta_{\rho}(f; x^*) := \rho(f; x^*) - f.
+$$
+
+**Theorem P.8.9a.11.2 (Single-System Pareto Disproportion).** For every $x^* > 0$ and every $f \in (0,1)$, the PCE concentration ratio satisfies
+$$
+\rho(f; x^*) > f,
+$$
+with strict inequality, so $\Delta_{\rho}(f; x^*) > 0$. Moreover, $\rho$ is strictly increasing in $x^*$ at fixed $f$, and
+$$
+\lim_{x^* \to \infty} \rho(f; x^*) = 1 \quad \text{for every } f \in (0,1).
+$$
+
+*Proof.* Fix $f \in (0,1)$ and write $r := \kappa_{\mathrm{eff}} x^* > 0$. Define $h(r) := 1 - e^{-r}$ on $[0,\infty)$. Then $h(0)=0$, $h$ is strictly increasing, and
+$$
+h''(r)=-e^{-r}<0,
+$$
+so $h$ is strictly concave. By strict concavity,
+$$
+h(fr)=h(fr+(1-f)0)>fh(r)+(1-f)h(0)=fh(r).
+$$
+Dividing by $h(r)>0$ gives $\rho(f;x^*)>f$.
+
+For monotonicity, differentiate $\log\rho$ with respect to $r$:
+$$
+\frac{\partial}{\partial r}\log\rho
+=
+\frac{f e^{-fr}}{1-e^{-fr}}-
+\frac{e^{-r}}{1-e^{-r}}.
+$$
+Let $g(s):=s e^{-s}/(1-e^{-s})$ for $s>0$. Then
+$$
+g'(s)=\frac{e^{-s}\bigl[(1-e^{-s})-s\bigr]}{(1-e^{-s})^2}<0,
+$$
+because $1-e^{-s}<s$ for all $s>0$. Since $fr<r$, $g(fr)>g(r)$, and therefore
+$$
+\frac{f e^{-fr}}{1-e^{-fr}}-
+\frac{e^{-r}}{1-e^{-r}}
+=
+\frac{g(fr)-g(r)}{r}>0.
+$$
+Thus $\rho$ is strictly increasing in $r$ and hence in $x^*$. The limit follows directly from
+$$
+\lim_{r\to\infty}\frac{1-e^{-fr}}{1-e^{-r}}=1.
+$$
+∎
+
+**Remark P.8.9a.11.1.** The common 80/20 ratio is one point on this curve rather than a privileged constant. Solving $\rho(0.2;x^*)=0.8$ gives
+$$
+\kappa_{\mathrm{eff}}x^*\approx 8.0407523768.
+$$
+Thus exponential saturation can realize the canonical Pareto ratio at a definite dimensionless equilibrium depth, while Theorem P.8.9a.11.2 covers every concentration ratio of the form $\rho>f$.
+
+**Corollary P.8.9a.11.3 (Concentration Under PCE Optimality).** At any PCE optimum on a branch with fixed $\kappa_{\mathrm{eff}}$, the disproportion gap $\Delta_{\rho}(f;x^*)$ is strictly positive at every effort fraction $f\in(0,1)$. Under the Dominance of Stabilizing Costs assumptions used in Theorem 22, and with $R'(C^*)>0$, a decrease in resource scarcity $\lambda$ increases $C^*$ through the comparative static $dC^*/d\lambda<0$ and therefore increases $\rho(f;x^*)$ at fixed $f$.
+
+*Proof.* Positivity is Theorem P.8.9a.11.2. At an interior PCE optimum, the first-order condition is
+$$
+\Psi(C^*,\lambda)=\Gamma_0\frac{\partial PP}{\partial C}(C^*)-\lambda R'(C^*)-R_I'(C^*)=0.
+$$
+Under DSC, $\partial\Psi/\partial C=J''(C^*)<0$. Differentiating the first-order condition with respect to $\lambda$ gives
+$$
+\frac{dC^*}{d\lambda}
+=
+\frac{R'(C^*)}{J''(C^*)}<0.
+$$
+Thus decreasing $\lambda$ increases $C^*$. Since $x^*=(C^*-C_{op})/\hat C_{target}$, increasing $C^*$ increases $x^*$ when $\hat C_{target}$ is held fixed, and Theorem P.8.9a.11.2 gives monotonicity of $\rho$ in $x^*$. ∎
+
+### P.8.9a.11.2 Population-Level Heavy Tails from Multiplicative PCE Adaptation
+
+At the population level, Pareto concentration appears across a population of adaptive systems rather than inside a single system. PU gives a conditional route to this signature when the near-equilibrium adaptation noise scales with current complexity excess.
+
+Let $\{S_i\}_{i=1}^N$ be a population of predictive aggregates (Definition 29), each undergoing PCE adaptation (Definition 20, Equation D.8). Write the dimensionless complexity excess of system $i$ as
+$$
+\nu_i(t) := \frac{C_i(t)-C_{op}}{C_s},
+$$
+with $C_s$ the effective complexity scale (Definition 19a). Near a stable PCE equilibrium $\nu^*>0$, the deterministic drift is linear to leading order:
+$$
+\dot\nu_i\approx -k(\nu_i-\nu^*)
+$$
+with $k>0$ the local mean-reversion rate.
+
+**Hypothesis P.8.9a.11.4 (Multiplicative PCE Noise).** Under fluctuations in resource availability, environmental complexity estimate $\hat C_{target}$, and inter-MPU communication fidelity, the stochastic component of the near-equilibrium adaptation dynamics of $\nu_i(t)$ is proportional to current complexity excess. The resulting one-dimensional effective diffusion is
+$$
+d\nu_i(t)=\bigl[-k\nu_i(t)+m\bigr]dt+\sigma\nu_i(t)dW_i(t),
+\qquad
+\nu_i(t)\ge \nu_{\min}>0, \tag{P.8.9a.11.1}
+$$
+with $k,m,\sigma>0$, independent standard Brownian motions $W_i$, and reflection at the lower barrier $\nu_{\min}$ representing the operational floor. Since $\nu_i$ is dimensionless, $[k]=[m]=T^{-1}$ and $[\sigma]=T^{-1/2}$.
+
+*Status.* The multiplicative form $\sigma\nu_i dW_i$ is a population-level modeling hypothesis. It is motivated by the complexity-dependence of marginal costs (Equation 26) and by the scaling of communication costs with local network capacity (Appendix D, Definition D.1), but it is not derived from the POP/PCE axioms alone. The population-level results below inherit this conditional status.
+
+**Theorem P.8.9a.11.5 (Pareto Tail from Multiplicative PCE Adaptation).** Let $\nu_i(t)$ evolve according to Equation (P.8.9a.11.1) with $k,m,\sigma>0$ and reflecting lower barrier $\nu_{\min}>0$. Set
+$$
+\alpha_{\mathrm{st}}:=1+\frac{2k}{\sigma^2},
+\qquad
+\beta_{\mathrm{st}}:=\frac{2m}{\sigma^2},
+\qquad
+a_{\min}:=\frac{\beta_{\mathrm{st}}}{\nu_{\min}}.
+$$
+Then the stationary zero-current density on $[\nu_{\min},\infty)$ is
+$$
+p(\nu)=Z^{-1}\nu^{-\alpha_{\mathrm{st}}-1}
+\exp\!\left(-\frac{\beta_{\mathrm{st}}}{\nu}\right), \tag{P.8.9a.11.2}
+$$
+where
+$$
+Z=\beta_{\mathrm{st}}^{-\alpha_{\mathrm{st}}}
+\gamma(\alpha_{\mathrm{st}},a_{\min}),
+\qquad
+\gamma(q,a):=\int_0^a t^{q-1}e^{-t}\,dt.
+$$
+Consequently,
+$$
+p(\nu)\sim A\nu^{-(\zeta+1)}\quad\text{as }\nu\to\infty,
+\qquad
+\zeta=\alpha_{\mathrm{st}}=1+\frac{2k}{\sigma^2}>1. \tag{P.8.9a.11.3}
+$$
+For every integer or real moment order $n$ with $\alpha_{\mathrm{st}}>n$,
+$$
+\mathbb E[\nu^n]
+=
+\beta_{\mathrm{st}}^n
+\frac{\gamma(\alpha_{\mathrm{st}}-n,a_{\min})}
+{\gamma(\alpha_{\mathrm{st}},a_{\min})}. \tag{P.8.9a.11.4}
+$$
+In particular, the mean is finite for all $k>0$, while the variance is finite precisely when $\alpha_{\mathrm{st}}>2$, equivalently $2k>\sigma^2$. In the upper-tail Pareto regime, the concentration exponent is controlled by $\zeta$: increasing $\sigma^2/k$ decreases $\zeta$ and increases upper-tail concentration.
+
+*Proof.* The generator of (P.8.9a.11.1) is
+$$
+\mathcal L f(\nu)=(-k\nu+m)f'(\nu)+\frac12\sigma^2\nu^2f''(\nu).
+$$
+A reflecting stationary density has zero probability current, so
+$$
+(-k\nu+m)p(\nu)-\frac12\frac{d}{d\nu}\bigl(\sigma^2\nu^2p(\nu)\bigr)=0.
+$$
+Solving this first-order equation gives
+$$
+p(\nu)=\frac{C}{\sigma^2\nu^2}
+\exp\!\left(
+\int^\nu \frac{2(-kw+m)}{\sigma^2w^2}\,dw
+\right)
+=
+C'\nu^{-2-2k/\sigma^2}\exp\!\left(-\frac{2m}{\sigma^2\nu}\right).
+$$
+With $\alpha_{\mathrm{st}}=1+2k/\sigma^2$ and $\beta_{\mathrm{st}}=2m/\sigma^2$, the normalizing integral is
+$$
+Z=\int_{\nu_{\min}}^\infty
+\nu^{-\alpha_{\mathrm{st}}-1}e^{-\beta_{\mathrm{st}}/\nu}\,d\nu.
+$$
+The substitution $t=\beta_{\mathrm{st}}/\nu$ gives
+$$
+Z
+=
+\beta_{\mathrm{st}}^{-\alpha_{\mathrm{st}}}
+\int_0^{\beta_{\mathrm{st}}/\nu_{\min}}
+t^{\alpha_{\mathrm{st}}-1}e^{-t}\,dt
+=
+\beta_{\mathrm{st}}^{-\alpha_{\mathrm{st}}}
+\gamma(\alpha_{\mathrm{st}},a_{\min}).
+$$
+The same substitution gives, for $\alpha_{\mathrm{st}}>n$,
+$$
+\int_{\nu_{\min}}^\infty
+\nu^{n-\alpha_{\mathrm{st}}-1}e^{-\beta_{\mathrm{st}}/\nu}\,d\nu
+=
+\beta_{\mathrm{st}}^{n-\alpha_{\mathrm{st}}}
+\gamma(\alpha_{\mathrm{st}}-n,a_{\min}),
+$$
+which yields Equation (P.8.9a.11.4) after division by $Z$. The condition $\alpha_{\mathrm{st}}>1$ is automatic because $k>0$, so the mean is finite; the second moment is finite exactly when $\alpha_{\mathrm{st}}>2$.
+
+As $\nu\to\infty$, the exponential factor tends to $1$, giving the displayed Pareto density tail with $\zeta=\alpha_{\mathrm{st}}=1+2k/\sigma^2$. For a pure Pareto tail with survival function
+$$
+S(x)=\left(\frac{x_0}{x}\right)^\zeta,
+\qquad x\ge x_0,
+\qquad \zeta>1,
+$$
+the cutoff defining the largest fraction $p_{top}$ is
+$$
+x_p=x_0p_{top}^{-1/\zeta}.
+$$
+The share of total tail mass above $x_p$ is
+$$
+\frac{\int_{x_p}^\infty x\,\zeta x_0^\zeta x^{-\zeta-1}\,dx}
+{\int_{x_0}^\infty x\,\zeta x_0^\zeta x^{-\zeta-1}\,dx}
+=
+\left(\frac{x_p}{x_0}\right)^{1-\zeta}
+=
+p_{top}^{(\zeta-1)/\zeta}.
+$$
+This exceeds $p_{top}$ for $0<p_{top}<1$ and increases as $\zeta$ decreases. The stationary density above has the same asymptotic exponent, so the same power controls sufficiently high upper-tail concentration. Since $\zeta=1+2k/\sigma^2$, increasing $\sigma^2/k$ decreases $\zeta$ and makes the upper tail more concentrated. ∎
+
+**Corollary P.8.9a.11.5a (Conditional Taylor Law from Fixed-Shape Inverse-Gamma Families).** Consider a family of stationary laws of the form (P.8.9a.11.2) with common shape $\alpha_{\mathrm{st}}>2$ and common scaled floor $a_{\min}=\beta_{\mathrm{st}}/\nu_{\min}$. Then there are constants $B_1,B_2>0$, depending only on $(\alpha_{\mathrm{st}},a_{\min})$, such that
+$$
+\mathbb E[\nu]=B_1\beta_{\mathrm{st}},
+\qquad
+\operatorname{Var}(\nu)=B_2\beta_{\mathrm{st}}^2.
+$$
+Consequently,
+$$
+\operatorname{Var}(\nu)
+=
+\frac{B_2}{B_1^2}\,\mathbb E[\nu]^2. \tag{P.8.9a.11.5a}
+$$
+Thus Taylor's variance-mean exponent is $b=2$ on any scale family where the multiplicative PCE noise ratio $\sigma^2/k$ and the scaled operational floor are held fixed.
+
+*Proof.* Equation (P.8.9a.11.4) gives
+$$
+B_1=
+\frac{\gamma(\alpha_{\mathrm{st}}-1,a_{\min})}
+{\gamma(\alpha_{\mathrm{st}},a_{\min})},
+$$
+and
+$$
+\mathbb E[\nu^2]
+=
+\beta_{\mathrm{st}}^2
+\frac{\gamma(\alpha_{\mathrm{st}}-2,a_{\min})}
+{\gamma(\alpha_{\mathrm{st}},a_{\min})}.
+$$
+Hence $\operatorname{Var}(\nu)=B_2\beta_{\mathrm{st}}^2$ with
+$$
+B_2=
+\frac{\gamma(\alpha_{\mathrm{st}}-2,a_{\min})}
+{\gamma(\alpha_{\mathrm{st}},a_{\min})}
+-
+\left(
+\frac{\gamma(\alpha_{\mathrm{st}}-1,a_{\min})}
+{\gamma(\alpha_{\mathrm{st}},a_{\min})}
+\right)^2.
+$$
+Eliminating $\beta_{\mathrm{st}}$ gives (P.8.9a.11.5a). ∎
+
+*Status.* Corollary P.8.9a.11.5a is not a derivation of Taylor's law from PCE alone. It is the exact variance-mean consequence of the same stationary inverse-gamma family when the shape and scaled floor are held fixed across the compared subpopulations [Taylor 1961].
+
+**Proposition P.8.9a.11.6 (Small-Noise Inequality Scale).** In the small-noise regime $\sigma^2\ll k$, the local logarithmic fluctuation approximation to Equation (P.8.9a.11.1) has log-variance
+$$
+s^2=\frac{\sigma^2}{2k}+O\!\left(\frac{\sigma^4}{k^2}\right).
+$$
+Consequently, the local lognormal approximation to the Gini coefficient is
+$$
+G=2\Phi\!\left(\frac{s}{\sqrt2}\right)-1
+=2\Phi\!\left(\frac{\sigma}{2\sqrt{k}}\right)-1
++O\!\left(\frac{\sigma^3}{k^{3/2}}\right), \tag{P.8.9a.11.6}
+$$
+where $\Phi$ is the standard normal cumulative distribution function. The $O$-term is an asymptotic local small-noise statement; no uniform finite-noise error bound for the full reflected diffusion is asserted without additional localization or moment assumptions.
+
+*Proof.* The deterministic equilibrium is $\nu^*=m/k$. Write $\nu=\nu^*+\delta$ with $|\delta|\ll \nu^*$. To leading order,
+$$
+d\delta(t)=-k\delta(t)dt+\sigma\nu^*dW(t),
+$$
+so the stationary variance is
+$$
+\operatorname{Var}(\delta)=\frac{\sigma^2(\nu^*)^2}{2k}.
+$$
+For small relative fluctuations,
+$$
+\log \nu=\log\nu^*+\frac{\delta}{\nu^*}+O\left((\delta/\nu^*)^2\right),
+$$
+so
+$$
+\operatorname{Var}(\log\nu)=\frac{\sigma^2}{2k}+O\left(\frac{\sigma^4}{k^2}\right).
+$$
+Using the standard lognormal Gini formula $G=2\Phi(s/\sqrt2)-1$ gives the approximation. The Taylor remainder is local in the relative fluctuation $\delta/\nu^*$; a uniform finite-noise error estimate would require an additional bound controlling the probability of excursions outside the chosen local neighborhood. ∎
+
+### P.8.9a.11.3 Scope, Epistemic Status, and Falsifiability
+
+**Corollary P.8.9a.11.7 (Unified PCE Signature Across Domains).** Any domain populated by adaptive predictive aggregates whose internal optimization is governed by PCE and whose near-equilibrium stochastic adaptation satisfies Hypothesis P.8.9a.11.4 exhibits the following signatures:
+
+1. within each aggregate, value is concentrated disproportionately in a smaller fraction of the operational range (Theorem P.8.9a.11.2);
+2. across aggregates, the stationary distribution of complexity excess has a Pareto upper tail with index $\zeta=1+2k/\sigma^2$ (Theorem P.8.9a.11.5);
+3. across fixed-shape scale families, the variance-mean relation has Taylor exponent $b=2$ (Corollary P.8.9a.11.5a);
+4. in the small-noise regime, the inequality scale is controlled by $\sigma^2/k$ through the lognormal approximation (Proposition P.8.9a.11.6).
+
+*Proof.* Immediate from Theorem P.8.9a.11.2, Hypothesis P.8.9a.11.4, Theorem P.8.9a.11.5, Corollary P.8.9a.11.5a, and Proposition P.8.9a.11.6. ∎
+
+**Remark P.8.9a.11.2 (Universal-Pattern Boundary).** The Pareto section should not be read as deriving every familiar scale law from PCE alone. It supplies a common stationary heavy-tail mechanism under Hypothesis P.8.9a.11.4 and the exact fixed-shape variance-mean consequence of Corollary P.8.9a.11.5a. Other empirical signatures require additional domain hypotheses:
+
+1. Proposition P.2.6.3d.2 gives an independent conditional Gibbs-log-cost route to Zipf-Mandelbrot statistics. Theorem P.8.9a.11.5 supplies a different route to Pareto tails through multiplicative adaptation. The two are compatible but neither eliminates the extra hypotheses of the other.
+2. Approximate $1/f$ spectra follow from mixtures of exponential relaxation modes only when the relaxation-rate measure is approximately logarithmically flat across the observed frequency window [Dutta & Horn 1981]. This is a scale-mixture hypothesis, not a consequence of Equation (P.8.9a.11.1) by itself.
+3. KWW/stretched-exponential or Mittag-Leffler relaxation requires an additional broad waiting-time, empirical KWW response kernel, or stable-subordination kernel [Pollard 1948; Scher & Montroll 1975; Williams & Watts 1970]. Multiplicative PCE adaptation can motivate looking for such kernels, but does not fix them without a domain model.
+4. Benford first-digit statistics follow from approximate equidistribution of logarithmic mantissas or scale-invariant sampling [Benford 1938]. PCE scale invariance is relevant only after the mantissa-equidistribution condition is checked.
+5. Kleiber-type metabolic scaling and biological fractal-network signatures require biological distribution-network hypotheses. Under the standard space-filling terminal-invariant branching-network assumptions in three spatial dimensions, the network model yields $B\propto M^{3/4}$ [Kleiber 1932; West, Brown & Enquist 1997]. PU supplies the $D_{\mathrm{space}}=3$ geometric background on the $D=4$ branch, but the biological network assumptions remain additional empirical structure rather than consequences of POP/PCE alone.
+6. Criticality, avalanche exponents, and self-organized critical signatures require an additional mechanism placing the relevant system near a critical fixed point or critical manifold [Wilson 1971]. PCE can supply an optimization pressure toward high-susceptibility operating points, but it does not by itself fix critical exponents or prove that a domain is tuned to criticality.
+7. Log-periodic corrections require discrete scale invariance or complex scaling dimensions [Sornette 1998]. Continuous PCE scale compression and the multiplicative population diffusion above do not by themselves introduce a preferred discrete scale ratio, so log-periodic modulation remains an additional domain hypothesis.
+
+**Corollary P.8.9a.11.8 (Tier-4 Biological-Fractal Status Boundary).** Biological fractal and allometric signatures are domain-model consequences only after a concrete biological transport or branching package is appended. Such a package must specify the network geometry, terminal-unit assumptions, dissipation functional, and empirical bridge from predictive complexity to biological throughput. Under those added hypotheses, PCE may act as the optimizing pressure over the biological network objective, but neither the fractal dimension nor the Kleiber exponent is fixed by POP/PCE alone.
+
+*Proof.* Item 5 of Remark P.8.9a.11.2 isolates the biological distribution-network assumptions needed for Kleiber-type scaling and fractal-network signatures. Theorems P.8.9a.11.2 and P.8.9a.11.5 establish only the Law-of-Prediction concentration effect and the conditional multiplicative-noise Pareto tail. They contain no biological branching geometry, terminal-invariance condition, or metabolic transport law. Therefore any biological-fractal conclusion requires the stated domain package as an additional status-carrying input. ∎
+
+**Epistemic Status.** Theorem P.8.9a.11.2 is an internal consequence of the Law of Prediction (Theorem 19). Theorem P.8.9a.11.5 is conditional on the Multiplicative PCE Noise Hypothesis, which is a modeling assumption about population-level fluctuations. Corollary P.8.9a.11.5a is an exact fixed-shape consequence of that stationary family, not a derivation of Taylor's law without the fixed-shape and scaled-floor hypotheses. Proposition P.8.9a.11.6 is a local small-noise approximation, not an exact identity for the full stationary density.
+
+**Falsification Conditions.** The PCE concentration signature admits the following tests:
+
+1. *Within-system disproportion:* In a domain where the Law of Prediction's exponential saturation curve has been independently established, a stable equilibrium value-versus-effort curve violating $\rho(f;x^*)>f$ for some $f\in(0,1)$ contradicts Theorem P.8.9a.11.2.
+2. *Tail index structure:* In a population where the effective mean-reversion rate $k$ and multiplicative noise amplitude $\sigma$ can be estimated, the measured upper-tail index should satisfy $\zeta=1+2k/\sigma^2$ within uncertainty if Hypothesis P.8.9a.11.4 applies.
+3. *Fixed-shape Taylor scaling:* In a compared scale family satisfying the fixed-shape and scaled-floor hypotheses of Corollary P.8.9a.11.5a, the variance-mean exponent should be $b=2$ within uncertainty.
+4. *Small-noise inequality scale:* In a small-noise population satisfying Hypothesis P.8.9a.11.4, the Gini coefficient should agree with Equation (P.8.9a.11.6) to the stated local approximation order.
+
+These predictions distinguish the PCE-based account from purely phenomenological power-law fits by tying the tail index to adaptation-rate parameters that are independently measurable in principle.
+
+**Relation to Holographic Saturation.** The Pareto signature is a population-level analogue of the single-horizon result of Theorem E.8.3.4. That theorem states that PCE drives individual causal boundaries toward capacity saturation; Theorem P.8.9a.11.5 states that, under multiplicative adaptation noise, populations of adaptive systems develop heavy-tailed concentration.
+
+**Relation to Existing Theory.** The PU derivation recovers the structural form of Kesten-type multiplicative processes in the population model and the single-system concentration effect directly from exponential PCE saturation. Gibrat-style proportional fluctuations appear as the small-noise logarithmic approximation, Taylor's variance-mean law appears conditionally through Corollary P.8.9a.11.5a, and the Zipf-Mandelbrot template remains the separate Gibbs-log-cost route of Proposition P.2.6.3d.2. Preferential attachment, $1/f$ mixtures, KWW/stretched relaxations, Benford mantissas, criticality, log-periodic modulation, and Kleiber/fractal biological scaling are therefore related external mechanisms or conditional domain models rather than prerequisites for the PU Pareto derivation. Section P.8.9a.12 states the scale-pattern cases as dedicated conditional theorems by making each required domain hypothesis explicit.
+
+## P.8.9a.12 Conditional Universal Patterns from PCE Scale Geometry
+
+The preceding section separates the internal Pareto concentration theorem from population-level and domain-level hypotheses. This subsection records the corresponding conditional universal-pattern theorems. In each case PU supplies the shared PCE scale language, while the theorem states the additional cost, rank, phase, relaxation, discrete-scale, or biological-network condition needed for the named empirical pattern.
+
+**Theorem P.8.9a.12.1 (Conditional Zipf-Mandelbrot Law from Logarithmic PCE Cost).** Let $N\in\mathbb N\cup\{\infty\}$, let ranks be $r=1,\ldots,N$, and suppose the PCE activation weights are Gibbs weights
+$$
+p_r=Z_N^{-1}e^{-\beta E_r},
+\qquad
+\beta>0,
+$$
+with logarithmic ranked PCE cost
+$$
+E_r=E_0+\gamma\log(r+r_0),
+\qquad
+\gamma>0,
+\qquad
+r_0\ge0.
+$$
+Then
+$$
+p_r=
+\frac{(r+r_0)^{-s}}
+{\sum_{q=1}^N(q+r_0)^{-s}},
+\qquad
+s=\beta\gamma.
+\tag{P.8.9a.12.1}
+$$
+For $N=\infty$, the normalizing constant is finite exactly when $s>1$. The exact Zipf exponent $s=1$ is therefore normalizable only on a finite ranked population, a truncated window, or a model with an additional upper cutoff.
+
+*Proof.* Substituting the cost law into the Gibbs form gives
+$$
+e^{-\beta E_r}
+=
+e^{-\beta E_0}(r+r_0)^{-\beta\gamma}.
+$$
+The constant $e^{-\beta E_0}$ is independent of $r$ and is absorbed into $Z_N$, yielding (P.8.9a.12.1) with $s=\beta\gamma$. If $N<\infty$, the finite sum is positive and finite. If $N=\infty$, then $r+r_0$ is comparable to $r$ for large $r$, so
+$$
+\sum_{r=1}^{\infty}(r+r_0)^{-s}
+$$
+converges exactly when the $p$-series $\sum r^{-s}$ converges, namely when $s>1$. For $s=1$ the harmonic comparison diverges. ∎
+
+**Theorem P.8.9a.12.2 (Rank-Pareto Zipf Bridge).** Let $X$ be a positive population variable with Pareto upper survival law
+$$
+\mathbb P(X>x)=\left(\frac{x_0}{x}\right)^{\zeta},
+\qquad
+x\ge x_0>0,
+\qquad
+\zeta>0.
+$$
+For a population of size $N$, define the deterministic rank curve $x_r$ by the expected exceedance equation
+$$
+N\mathbb P(X>x_r)=r,
+\qquad
+1\le r\le N.
+$$
+Then
+$$
+x_r=x_0\left(\frac Nr\right)^{1/\zeta}.
+\tag{P.8.9a.12.2}
+$$
+Thus a Pareto tail with survival exponent $\zeta$ induces a Zipf-type rank-size exponent $1/\zeta$. In particular, the multiplicative PCE adaptation tail of Theorem P.8.9a.11.5 gives the rank exponent
+$$
+\frac1{\zeta}
+=
+\frac1{1+2k/\sigma^2}.
+$$
+
+*Proof.* The defining equation gives
+$$
+N\left(\frac{x_0}{x_r}\right)^{\zeta}=r.
+$$
+Solving for $x_r$ gives
+$$
+\left(\frac{x_r}{x_0}\right)^{\zeta}=\frac Nr,
+\qquad
+x_r=x_0\left(\frac Nr\right)^{1/\zeta}.
+$$
+Substituting $\zeta=1+2k/\sigma^2$ from Theorem P.8.9a.11.5 gives the displayed PCE specialization. ∎
+
+**Theorem P.8.9a.12.3 (Conditional $1/f$ Spectrum from Log-Flat PCE Relaxation Modes).** Suppose an observed PCE-adapted aggregate has independent exponential relaxation modes whose unit-variance mode with relaxation rate $\lambda$ has two-sided spectrum
+$$
+S_{\lambda}(\omega)=\frac{2\lambda}{\lambda^2+\omega^2},
+\qquad
+\omega>0.
+$$
+Suppose further that, across the observed band, the relaxation-rate measure is logarithmically flat,
+$$
+d\mu(\lambda)=A\frac{d\lambda}{\lambda},
+\qquad
+A>0,
+\qquad
+\lambda\in[\lambda_{\min},\lambda_{\max}].
+$$
+Then the mixed spectrum is
+$$
+S(\omega)
+=
+\frac{2A}{\omega}
+\left[
+\arctan\left(\frac{\lambda_{\max}}{\omega}\right)
+-
+\arctan\left(\frac{\lambda_{\min}}{\omega}\right)
+\right].
+\tag{P.8.9a.12.3}
+$$
+In the intermediate window $\lambda_{\min}\ll\omega\ll\lambda_{\max}$,
+$$
+S(\omega)=\frac{\pi A}{\omega}
++
+O\left(\frac{A\lambda_{\min}}{\omega^2}
++
+\frac{A}{\lambda_{\max}}\right),
+\tag{P.8.9a.12.4}
+$$
+with the explicit bound
+$$
+\left|S(\omega)-\frac{\pi A}{\omega}\right|
+\le
+\frac{2A}{\omega}
+\left(
+\frac{\lambda_{\min}}{\omega}
++
+\frac{\omega}{\lambda_{\max}}
+\right).
+$$
+
+*Proof.* The mixture spectrum is
+$$
+S(\omega)
+=
+\int_{\lambda_{\min}}^{\lambda_{\max}}
+\frac{2\lambda}{\lambda^2+\omega^2}
+A\frac{d\lambda}{\lambda}
+=
+2A\int_{\lambda_{\min}}^{\lambda_{\max}}
+\frac{d\lambda}{\lambda^2+\omega^2}.
+$$
+Since
+$$
+\int\frac{d\lambda}{\lambda^2+\omega^2}
+=
+\frac1{\omega}\arctan\left(\frac{\lambda}{\omega}\right),
+$$
+Equation (P.8.9a.12.3) follows. Also
+$$
+0\le \arctan u\le u
+\quad (u\ge0),
+$$
+and
+$$
+0\le \frac{\pi}{2}-\arctan v=\arctan(1/v)\le \frac1v
+\quad (v>0).
+$$
+Therefore
+$$
+\left|
+\arctan\left(\frac{\lambda_{\max}}{\omega}\right)
+-
+\arctan\left(\frac{\lambda_{\min}}{\omega}\right)
+-
+\frac{\pi}{2}
+\right|
+\le
+\frac{\omega}{\lambda_{\max}}
++
+\frac{\lambda_{\min}}{\omega}.
+$$
+Multiplying by $2A/\omega$ gives the stated bound and the asymptotic $1/\omega$ law. ∎
+
+**Theorem P.8.9a.12.4 (Stretched-Exponential Relaxation from Stable-Subordinated PCE Modes).** Let $0<\alpha\le1$ and $\tau>0$. Suppose a PCE relaxation observable is a positive mixture of exponential modes
+$$
+\Phi(t)=\int_0^{\infty}e^{-\lambda t}\,d\mu_{\alpha,\tau}(\lambda),
+\qquad
+t\ge0,
+$$
+where $\mu_{\alpha,\tau}$ is the probability measure whose Laplace transform is
+$$
+\int_0^{\infty}e^{-\lambda t}\,d\mu_{\alpha,\tau}(\lambda)
+=
+\exp[-(t/\tau)^{\alpha}].
+\tag{P.8.9a.12.5}
+$$
+Then
+$$
+\Phi(t)=\exp[-(t/\tau)^{\alpha}].
+\tag{P.8.9a.12.6}
+$$
+For $\alpha=1$ this reduces to ordinary exponential relaxation with rate $1/\tau$; for $0<\alpha<1$ it is the Kohlrausch-Williams-Watts stretched exponential.
+
+*Proof.* For $0<\alpha\le1$, the function $t\mapsto\exp[-(t/\tau)^{\alpha}]$ is completely monotone on $[0,\infty)$. By Bernstein's theorem there is a unique probability measure $\mu_{\alpha,\tau}$ on $[0,\infty)$ with Laplace transform (P.8.9a.12.5). Substituting this transform into the mixture definition of $\Phi$ gives (P.8.9a.12.6). When $\alpha=1$, the transform is $e^{-t/\tau}$, so $\mu_{1,\tau}$ is the point mass at $\lambda=1/\tau$. ∎
+
+**Theorem P.8.9a.12.5 (Benford Mantissas from Multiplicative PCE Phase Mixing).** Fix an integer base $b\ge2$. Let $X>0$ and set
+$$
+Y=\{\log_b X\}\in[0,1),
+$$
+where $\{\cdot\}$ denotes fractional part. If $Y$ is uniform on $[0,1)$, then the first base-$b$ digit $D\in\{1,\ldots,b-1\}$ satisfies
+$$
+\mathbb P(D=d)=\log_b\left(1+\frac1d\right).
+\tag{P.8.9a.12.7}
+$$
+Moreover, suppose a multiplicative PCE phase process has the form
+$$
+X_n=X_0\prod_{j=1}^n A_j,
+\qquad
+A_j>0,
+$$
+where the increments $Z_j=\log_b A_j\pmod1$ are independent and identically distributed on the circle $\mathbb T=\mathbb R/\mathbb Z$. If their common law $\nu$ satisfies
+$$
+|\widehat\nu(m)|<1
+\qquad
+\text{for every }m\in\mathbb Z\setminus\{0\},
+$$
+then
+$$
+\{\log_b X_n\}\Rightarrow \mathrm{Unif}[0,1)
+$$
+and the first-digit probabilities converge to (P.8.9a.12.7).
+
+*Proof.* The event $D=d$ is exactly
+$$
+\log_b d\le \{\log_b X\}<\log_b(d+1),
+$$
+because numbers with first base-$b$ digit $d$ lie in intervals $[d b^m,(d+1)b^m)$ over integer $m$. If $Y$ is uniform, then
+$$
+\mathbb P(D=d)
+=
+\log_b(d+1)-\log_b d
+=
+\log_b\left(1+\frac1d\right).
+$$
+
+For the phase-mixing statement, let $\theta_n=\{\log_b X_n\}$. On $\mathbb T$,
+$$
+\theta_n=\theta_0+Z_1+\cdots+Z_n.
+$$
+If $\mu_n$ is the law of $\theta_n$, then
+$$
+\mu_n=\mu_0*\nu^{*n}.
+$$
+Hence its Fourier coefficients satisfy
+$$
+\widehat\mu_n(m)=\widehat\mu_0(m)\widehat\nu(m)^n.
+$$
+For $m=0$ this coefficient is $1$. For every $m\ne0$, the strict bound $|\widehat\nu(m)|<1$ gives $\widehat\mu_n(m)\to0$. These are exactly the Fourier coefficients of Haar measure on $\mathbb T$, so $\mu_n$ converges weakly to uniform measure. The digit intervals have boundary of uniform measure zero, and therefore their probabilities converge to their uniform lengths, which are the Benford probabilities above. ∎
+
+**Theorem P.8.9a.12.6 (Log-Periodic Corrections from Discrete Scale Invariance).** Let $\lambda>1$ and let $F:(0,\infty)\to\mathbb C$ be locally square-integrable. Suppose
+$$
+F(\lambda x)=\lambda^{\alpha}F(x)
+\qquad
+\text{for all }x>0
+\tag{P.8.9a.12.8}
+$$
+for some $\alpha\in\mathbb R$. Then there is a period-one function $P$ such that
+$$
+F(x)=x^{\alpha}P\left(\frac{\log x}{\log\lambda}\right).
+\tag{P.8.9a.12.9}
+$$
+If $P$ has Fourier coefficients $c_m$, then in $L^2_{\mathrm{loc}}$ on logarithmic scale,
+$$
+F(x)
+=
+x^{\alpha}
+\sum_{m\in\mathbb Z}
+c_m
+\exp\left(
+\frac{2\pi i m\log x}{\log\lambda}
+\right).
+\tag{P.8.9a.12.10}
+$$
+For real-valued $F$, $c_{-m}=\overline{c_m}$. If the first harmonic is the leading nonconstant mode, the leading log-periodic correction has the form
+$$
+F(x)
+=
+x^{\alpha}
+\left[
+c_0
++
+2|c_1|
+\cos\left(
+\frac{2\pi\log x}{\log\lambda}
++
+\phi
+\right)
++
+\cdots
+\right],
+\tag{P.8.9a.12.11}
+$$
+with $\phi=\arg c_1$. Near a critical point $x_c$, the same conclusion applies to the distance variable $y=|x-x_c|$ whenever the discrete scale covariance holds in $y$.
+
+*Proof.* Define
+$$
+u=\frac{\log x}{\log\lambda},
+\qquad
+P(u)=\lambda^{-\alpha u}F(\lambda^u).
+$$
+Then
+$$
+P(u+1)
+=
+\lambda^{-\alpha(u+1)}F(\lambda^{u+1})
+=
+\lambda^{-\alpha u}\lambda^{-\alpha}F(\lambda\lambda^u).
+$$
+Using (P.8.9a.12.8),
+$$
+F(\lambda\lambda^u)=\lambda^{\alpha}F(\lambda^u),
+$$
+so $P(u+1)=P(u)$. Since $x=\lambda^u$, this gives
+$$
+F(x)=\lambda^{\alpha u}P(u)=x^{\alpha}P\left(\frac{\log x}{\log\lambda}\right).
+$$
+The Fourier series of the period-one function $P$ gives
+$$
+P(u)=\sum_{m\in\mathbb Z}c_m e^{2\pi i m u}
+$$
+in $L^2$ over one period, which yields (P.8.9a.12.10) after substituting $u=\log x/\log\lambda$. If $F$ is real-valued then $P$ is real-valued and its Fourier coefficients satisfy $c_{-m}=\overline{c_m}$. Combining the $m=1$ and $m=-1$ terms gives (P.8.9a.12.11). Replacing $x$ by $y=|x-x_c|$ gives the critical-point form. ∎
+
+**Theorem P.8.9a.12.7 (Conditional Kleiber Scaling on the $D_{\mathrm{space}}=3$ Biological Transport Branch).** Consider an idealized terminal-invariant biological transport branch embedded in $D_{\mathrm{space}}=D$ spatial dimensions. Suppose the transport network has branching ratio $n>1$ and levels $k=0,\ldots,K$, with $N_k=n^k$ vessels at level $k$ and $N_K=n^K$ terminal service units. Assume:
+
+1. terminal invariance: terminal length $l_K$ and terminal radius $r_K$ are independent of $K$, and each terminal unit supplies the same metabolic throughput;
+2. space-filling geometry:
+$$
+l_k=l_K n^{(K-k)/D};
+$$
+3. area-preserving transport:
+$$
+N_k r_k^2=N_K r_K^2
+\qquad
+\text{for every }k;
+$$
+4. PCE-optimized biological resource allocation makes body mass proportional to total transport-network volume and metabolic rate proportional to terminal throughput:
+$$
+M\asymp V_{\mathrm{net}},
+\qquad
+B\asymp N_K.
+$$
+
+Then, as $K\to\infty$,
+$$
+B\asymp M^{D/(D+1)}.
+\tag{P.8.9a.12.12}
+$$
+On the PU branch with $D_{\mathrm{space}}=3$,
+$$
+B\asymp M^{3/4}.
+\tag{P.8.9a.12.13}
+$$
+
+*Proof.* The volume of level $k$ vessels is proportional to
+$$
+N_k r_k^2 l_k.
+$$
+By area preservation,
+$$
+N_k r_k^2=N_K r_K^2=n^K r_K^2.
+$$
+By space-filling geometry,
+$$
+l_k=l_K n^{(K-k)/D}.
+$$
+Therefore
+$$
+V_{\mathrm{net}}
+\asymp
+\sum_{k=0}^{K}N_k r_k^2l_k
+=
+r_K^2l_K n^K
+\sum_{k=0}^{K} n^{(K-k)/D}.
+$$
+With $j=K-k$,
+$$
+\sum_{k=0}^{K} n^{(K-k)/D}
+=
+\sum_{j=0}^{K} n^{j/D}
+=
+\frac{n^{(K+1)/D}-1}{n^{1/D}-1}.
+$$
+Thus
+$$
+V_{\mathrm{net}}
+\asymp
+n^K n^{K/D}
+=
+(n^K)^{(D+1)/D}
+=
+N_K^{(D+1)/D},
+$$
+where the omitted multiplicative constants depend on $n,D,l_K,r_K$ but not on $K$. Since $M\asymp V_{\mathrm{net}}$ and $B\asymp N_K$,
+$$
+M\asymp B^{(D+1)/D},
+$$
+and hence
+$$
+B\asymp M^{D/(D+1)}.
+$$
+Setting $D=D_{\mathrm{space}}=3$ gives $B\asymp M^{3/4}$. ∎
+
+**Corollary P.8.9a.12.8 (Tier-4 Biological Fractal Scaling).** Let a biological morphology or transport subnetwork be generated across a finite scale range by a self-similar branching rule with $n$ copies per scale step and length ratio $r\in(0,1)$. If the copies satisfy the standard non-overlap condition on that scale range, then the effective box-counting dimension over the range is
+$$
+D_f=\frac{\log n}{\log(1/r)}.
+\tag{P.8.9a.12.14}
+$$
+For a physical biological network embedded in the PU branch with $D_{\mathrm{space}}=3$, an exact infinite-range non-overlapping self-similar limit must satisfy $D_f\le3$. The biological-fractal conclusion is therefore Tier-4: it follows from an appended biological branching package, not from POP/PCE alone.
+
+*Proof.* After $m$ scale steps there are $n^m$ self-similar pieces, each of diameter proportional to $r^m$. Set $\epsilon=r^m$. The number of $\epsilon$-scale boxes needed satisfies
+$$
+N(\epsilon)\asymp n^m.
+$$
+Since $m=\log\epsilon/\log r$ and $\log r<0$,
+$$
+\frac{\log N(\epsilon)}{\log(1/\epsilon)}
+\to
+\frac{m\log n}{m\log(1/r)}
+=
+\frac{\log n}{\log(1/r)}
+$$
+over the self-similar range. This is the box-counting dimension formula. In an exact non-overlapping embedding into three-dimensional space, box dimension cannot exceed the ambient dimension, so $D_f\le3$. The hypotheses used are the biological branching rule, scale ratio, and non-overlap condition; none is supplied by POP/PCE alone. ∎
+
+**Theorem P.8.9a.12.9 (Standalone Taylor Law for Fixed-Shape PCE Scale Families).** Let $Y$ be a nonnegative random variable with
+$$
+0<\mu_Y:=\mathbb E[Y]<\infty,
+\qquad
+0<\sigma_Y^2:=\operatorname{Var}(Y)<\infty.
+$$
+Let a fixed-shape PCE scale family be given by
+$$
+X_a=aY,
+\qquad
+a>0.
+$$
+Then
+$$
+\mathbb E[X_a]=a\mu_Y,
+\qquad
+\operatorname{Var}(X_a)=a^2\sigma_Y^2,
+$$
+and consequently
+$$
+\operatorname{Var}(X_a)
+=
+\frac{\sigma_Y^2}{\mu_Y^2}\,\mathbb E[X_a]^2.
+\tag{P.8.9a.12.15}
+$$
+Thus Taylor's variance-mean exponent is exactly $2$ on every fixed-shape scale family with finite nonzero mean and variance. Corollary P.8.9a.11.5a is the inverse-gamma PCE stationary-family specialization of this general scale-family theorem.
+
+*Proof.* Linearity of expectation gives
+$$
+\mathbb E[X_a]=\mathbb E[aY]=a\mu_Y.
+$$
+Variance is homogeneous of degree two under deterministic scaling:
+$$
+\operatorname{Var}(X_a)=\operatorname{Var}(aY)=a^2\sigma_Y^2.
+$$
+Since $a=\mathbb E[X_a]/\mu_Y$, substitution gives
+$$
+\operatorname{Var}(X_a)
+=
+\left(\frac{\mathbb E[X_a]}{\mu_Y}\right)^2\sigma_Y^2
+=
+\frac{\sigma_Y^2}{\mu_Y^2}\,\mathbb E[X_a]^2.
+$$
+The exponent is therefore exactly $2$. Corollary P.8.9a.11.5a has common shape and common scaled floor, so its stationary laws differ only by the scale parameter $\beta_{\mathrm{st}}$ and are an instance of the present theorem. ∎
 
 
 ## P.8.10 The Ontological Status of Emergent Spacetime
@@ -4568,7 +5655,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
 | $v$ (Higgs VEV) | $252\pm5~\mathrm{GeV}$ | $246.22~\mathrm{GeV}$ | Particle Data Group 2024 | $+1.2\sigma$ |
-| $\sin^2\theta_W(M_Z)$ | $0.2312\pm0.0015$ (conditional on the lifted spectral target tuple of Appendix T; Remark T.17a.4 and Proposition T.17a.5 show that sector-independent affine local truncations do not realize it) | $0.23122\pm0.00003$ | Particle Data Group 2024 | Conditional |
+| $\sin^2\theta_W(M_Z)$ | $0.2312\pm0.0015$ (conditional on the lifted spectral target tuple of Appendix T; Remark T.17a.4 and Proposition T.17a.5 show that sector-independent affine local truncations do not realize it, and Theorem T.78.2 records that the current canonical ledger does not yet fix the missing spectral branch package) | $0.23122\pm0.00003$ | Particle Data Group 2024 | Conditional |
 | $m_H$ | $125\pm2.5~\mathrm{GeV}$ | $125.25\pm0.17~\mathrm{GeV}$ | Particle Data Group 2024 | $-0.10\sigma$ |
 
 **CKM Matrix and Quark Mixing (Appendix T):**

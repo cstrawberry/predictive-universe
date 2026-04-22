@@ -333,6 +333,7 @@ with $0\le\alpha_S\le1$. (Note: The upper bound corresponds to complete replacem
 *   The normalization ensures $\|L_S\|_{\mathrm{op}} = \alpha_S r(\sigma_S) = \mathrm{CC}(S)$.
 *   For the convex combination in Equation (59) to be physically valid, the interpolation factor $\alpha_S$ must be bounded by 1. This implies a non-trivial physical constraint on the operational CC achievable for a given target state: $\mathrm{CC}(S) \le r(\sigma_S) = 1 - \lambda_{\min}(\sigma_S)$. Consequently, a system's biasing capability is maximized when the target state $\sigma_S$ is pure or near-pure ($\lambda_{\min} \approx 0$). Conversely, attempting to bias outcomes towards a highly mixed target state is inherently less efficient, as the maximum achievable $\mathrm{CC}(S)$ is limited by the target's entropy.
 *   For bipartite $\sigma_{AB}$, define $\sigma_A = \mathrm{tr}_B \sigma_{AB}$ to ensure the marginal invariance conditions stated above.
+*   The same CTB form applies when the targeted event channel is internal to the aggregate $S$. In that case $P_{\mathrm{Born}}$ denotes the neutral baseline distribution of the internal ND-RID event channel, $\sigma_S$ denotes the context-defined target state for that channel, and no additional influence primitive is introduced. Only the event algebra changes: the target is an internal physiological channel rather than an external measurement channel.
 
 **9.5.4 Theorem 37 (Consistency of CTB Model)**
 
