@@ -58,7 +58,8 @@ where $\hbar$ is the universal conversion factor between SPAP entropy units (nat
 
 1. **Spatial sector:** The discrete cost for spatial variations Γ-converges to a positive-definite quadratic form defining the emergent Riemannian metric on spatial slices.
 
-2. **Temporal sector:** The irreversibility of the 'Evolve' process ($\varepsilon \ge \ln 2$, Theorem 31) introduces a sign asymmetry. The dissipative structure of temporal updates yields a kinetic term with opposite sign to the spatial gradient terms, establishing the Lorentzian signature $(-, +, +, +)$.
+2. **Temporal sector:** The irreversibility of the 'Evolve' process ($\varepsilon \ge \ln 2$, Theorem 31) supplies an entropy-selected time direction (Appendix O, §O.4) — Hypothesis O.7.2.2 of the Appendix O signature closure theorem. Promotion of the resulting operational causal frontier to a Lorentzian principal symbol with signature $(-, +, +, +)$ requires the additional hypotheses O.7.2.1, O.7.2.3, and O.7.2.4 (positive-definite spatial block, second-order continuum principal symbol, nondegenerate hyperbolic cone coinciding with the operational causal frontier). Under the full four-hypothesis package, Appendix O Theorem O.7a yields the Lorentzian signature; this matches the parallel Lorentzian-branch alignments at Theorem 46 / Corollary 46a in the main text and at Theorem P.8.5 in Appendix P.
+
 
 3. **Combined action:** The full Γ-limit yields the standard action for fields in curved spacetime, with $\hbar$ appearing as the conversion factor between discrete (nats) and continuous (J·s) descriptions.
 
@@ -659,17 +660,18 @@ $$\Theta_{\Lambda_{24}}(q) = 1 + 196560 q^4 + 16773120 q^6 + 398034000 q^8 + \cd
 
 confirms $|v|^2 \in \{0, 4, 6, 8, \ldots\}$ with the 196,560 minimal vectors at $|v|^2 = 4$. $\square$
 
-**Theorem Q.0.5a (Mass-Action Correspondence).** *For a vacuum excitation corresponding to Leech lattice vector $v$, the mass satisfies:*
+**Theorem Q.0.5a (Mass-Action Correspondence on the Canonical Norm-Information and Saturated-Boundary Branches).** *On the canonical Leech norm-information calibration branch of Appendix Z (Definition Z.8f / Theorem Z.8g, under which $\mathcal{I}_{\mathrm{rel}}(v) = |v|$) and the saturated-boundary mass-information branch of Appendix N (Theorem N.5, under which $m = \mu_0 \mathcal{I}_{\mathrm{rel}}$), a vacuum excitation corresponding to Leech lattice vector $v$ satisfies:*
 
 $$m^2(v) = \mu_0^2 \cdot |v|^2$$
 
 *where $\mu_0 = m_P/(2\sqrt{8\varepsilon})$ is the fundamental mass scale (Definition Z.8f, Appendix Z).*
 
-*Proof.* The Mass-Information Equivalence (Theorem N.5, Appendix N) relates inertial mass to relational information content. For excitations corresponding to Leech lattice vectors, the mass scales with the vector norm:
+*Proof.* On the saturated-boundary mass-information branch, Theorem N.5 (Appendix N) gives $m = \mu_0 \mathcal{I}_{\mathrm{rel}}$ for inertial mass in terms of relational information content. On the canonical Leech norm-information calibration branch, the relational information content of an excitation labeled by $v \in \Lambda_{24}$ satisfies $\mathcal{I}_{\mathrm{rel}}(v) = |v|$. Combining these two branch identifications,
 
-$$m(v) = \mu_0 |v|, \quad \mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} = \frac{m_P}{2\sqrt{8 \ln 2}} \approx 0.212 \, m_P$$
+$$m(v) = \mu_0 |v|, \quad \mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} = \frac{m_P}{2\sqrt{8 \ln 2}} \approx 0.212 \, m_P,$$
 
-Squaring yields the stated relation. $\square$
+and squaring yields the stated relation. Neither branch follows from Leech shell structure alone; the absolute mass scale and discrete spectrum inherit both branch dependencies. $\square$
+
 
 **Remark Q.0.5a.1: Derivation Chain.** The mass-lattice correspondence follows from the derivation chain established in Appendices Z, R, and N. Each step connects SPAP entropy to the Leech lattice structure via the Golay code, with the mass spectrum emerging from the lattice geometry through the Mass-Information Equivalence (Theorem N.5).
 
@@ -863,9 +865,12 @@ This relation holds specifically when operating at the Landauer limit with the S
 
 #### Q.0.9.2 The Characteristic Cycle Time
 
-**Theorem Q.0.10 (Rindler–Landauer Cycle Time).** *For an accelerated observer operating at the thermodynamic optimum (Landauer limit) with the Unruh bath as heat sink, the minimum irreversible bit cycle time is:*
+**Theorem Q.0.10 (Rindler–Landauer Cycle Time at the Thermodynamic Optimum).** *For an accelerated observer operating at the thermodynamic optimum (Landauer limit) with the Unruh bath as heat sink, the Landauer-saturating irreversible bit cycle time is:*
 
 $$\boxed{\tau_U(a) = \frac{2\pi c}{a}}$$
+
+*This is not an absolute minimum cycle time: by Remark Q.0.10a, processes dissipating $E > Q_{\min}$ per cycle achieve shorter cycle times $\tau = \hbar \ln 2 / E < \tau_U$. The formula gives the cycle time at minimum-energy / maximum-thermodynamic-efficiency operation.*
+
 
 *All quantum and thermodynamic constants cancel. The result is purely geometric.*
 
@@ -1026,7 +1031,8 @@ Both derivations employ the same thermal structure (Unruh effect) and the same i
 
 #### Q.0.9.8.2 Black Hole Computational Rate
 
-**Theorem Q.0.12 (Black Hole Bit Rate).** *For a Schwarzschild black hole of mass $M$, the minimum bit-erasure time at the horizon and the corresponding maximum bit rate are:*
+**Theorem Q.0.12 (Black Hole Bit Rate at the Thermodynamic Optimum).** *For a Schwarzschild black hole of mass $M$, the Landauer-saturating bit-erasure time at the horizon and the corresponding efficiency-calibrated bit rate are:*
+
 
 $$\boxed{\tau_{BH} = \frac{8\pi GM}{c^3}, \qquad \dot{N}_{BH} = \frac{c^3}{8\pi GM}}$$
 
@@ -1079,9 +1085,11 @@ $$S_{BH} = \frac{4\pi GM^2}{\hbar c}$$
 
 $$\frac{N_{total}}{S_{BH}} = \frac{640 GM^2/(\hbar c)}{4\pi GM^2/(\hbar c)} = \frac{640}{4\pi} = \frac{160}{\pi} \approx 51$$
 
-The order-unity discrepancy reflects the distinction between instantaneous bit rate (computed at fixed $M$) and the integrated rate over evaporation (during which $M$ decreases). The key result is $N_{total} \sim S_{BH}$: the horizon processes approximately one bit per unit entropy over its lifetime. $\square$
+The displayed calculation multiplies the fixed-initial-mass Landauer-saturating rate $\dot{N}_{BH}(M)$ by the total Page evaporation time $t_{evap}(M)$, giving the coefficient $160/\pi \approx 51$. The key result is proportional scaling $N_{total} \propto S_{BH}$ between the total Landauer-saturating operation count and the Bekenstein-Hawking entropy, with the displayed coefficient reflecting the fixed-$M$/integrated-$M$ distinction noted above. The displayed calculation does not establish single-pass saturation: a properly integrated rate over the evaporating mass $M(t)$ would change the coefficient again, while preserving the proportionality $N \propto S$. $\square$
 
-**Remark Q.0.13a: Information Processing Interpretation.** The black hole horizon is not merely a causal boundary but an information-processing surface. The Bekenstein-Hawking entropy $S_{BH}$ counts the horizon's information content; the Rindler-Landauer rate $\dot{N}_{BH}$ determines how fast this information can be processed. The consistency $N_{total} \sim S_{BH}$ confirms that the horizon processes its full information content exactly once during evaporation—saturating but not exceeding the information-theoretic bounds.
+
+**Remark Q.0.13a: Information Processing Interpretation.** The black hole horizon is not merely a causal boundary but an information-processing surface. The Bekenstein-Hawking entropy $S_{BH}$ counts the horizon's information content; the Rindler-Landauer rate $\dot{N}_{BH}$ determines the Landauer-saturating processing rate. The proportional scaling $N_{total} \propto S_{BH}$ confirms that the horizon performs a number of Landauer-saturating operations proportional to its entropy during evaporation. The displayed coefficient $160/\pi$ does not establish exact single-pass saturation; demonstrating an exact one-erasure-per-entropy-unit relation would require a separate dynamical integration over the evaporating mass and a normalization argument absent from the displayed calculation.
+
 
 ---
 
@@ -1131,12 +1139,15 @@ which is Equation (E.9). $\square$
 
 #### Q.0.9.8.5 The Closed Derivation Loop
 
-**Theorem Q.0.15 (Gravity-Computation Equivalence).** *The following statements are equivalent within the PU framework:*
+**Theorem Q.0.15 (Gravity-Computation Closed Chain on the Gravity-Bridge Package).** *On the gravity-bridge package — comprising (a) horizon saturation, (b) the local Rindler/KMS modular branch of Appendix F, (c) the Clausius relation $\delta Q = T \, dS$ at local Rindler horizons, and (d) the MPU stress-energy source construction of Appendix B — the following statements form a mutually consistent closed chain:*
 
 1. *Einstein's field equations hold (Theorem 12.1)*
 2. *Horizons satisfy the Bekenstein-Hawking area law (Theorem 49)*
-3. *The gravitational constant is $G = \eta\delta^2 c^3/(4\hbar\chi C_{\max})$ (Equation E.9)*
+3. *The gravitational constant is $G = \eta\delta^2 c^3/(4\hbar\chi C_{\max})$ (Equation E.9), on the area-law calibration and residual-budget branches*
 4. *Horizon computational rate is $\dot{N} = \kappa/(2\pi c)$ (Theorem Q.0.12)*
+
+*Each implication step uses one or more components of the bridge package; the closed-chain framing replaces the unconditional equivalence framing. This parallels the Theorem K.10.12 unified-origin chain in Appendix K, where the same gravity-bridge package is required for the channel-capacity-to-Einstein-equations route.*
+
 
 *Proof.*
 
@@ -1175,7 +1186,8 @@ $$\tau_U = \frac{\hbar \ln 2}{k_B T_U \ln 2} = \frac{\hbar \ln 2}{k_B \cdot (\hb
 
 exhibits exact cancellation because the three conversion factors form a closed loop in the space of physical quantities. At horizons—where gravity, thermodynamics, and information meet—the domain-specific descriptions collapse to geometry. $\square$
 
-**Theorem Q.0.17 (Gravity from Computational Self-Consistency).** *Einstein's field equations are the unique second-order geometric equations ensuring that the computational rate at every local horizon saturates, but does not exceed, the Bekenstein bound.*
+**Theorem Q.0.17 (Gravity from Computational Self-Consistency on the Gravity-Bridge Package).** *Given the local Rindler/KMS, Clausius, horizon-saturation, and MPU stress-energy assumptions of Theorem 12.1 (the gravity-bridge package of Theorem Q.0.15), and within the four-dimensional Lovelock hypothesis class, the Einstein field equations are the unique second-order geometric equations consistent with the requirement that the Landauer-saturating computational rate at every local Rindler horizon saturates, but does not exceed, the Bekenstein bound. Computational-rate saturation alone does not entail the Einstein equations without the bridge package; this theorem is a uniqueness statement within the Jacobson chain rather than as an independent derivation.*
+
 
 *Proof.*
 
@@ -1282,10 +1294,13 @@ $$\frac{\delta^2}{L_P^2} = \frac{4\chi C_{\max}}{\eta}$$
 
 derived from the area law (Equation E.9). The PCE-optimal values of each parameter follow from existing theorems:
 
-### Q.2.1 Channel Capacity: $C_{\max}^* = 2\ln 2$
+### Q.2.1 Channel Capacity: $C_{\max}^* = 2\ln 2$ on the Residual-Budget Branch
 
-By Equation (E.14), the PCE-optimal channel capacity satisfies $C_{\max}^* = \ln d_0 - \varepsilon$. On the minimal Appendix Z branch one has $d_0 = 8$ (Theorem Z.2), and at the PCE-Attractor one has $\varepsilon = \ln 2$ (Definition 15a; Theorem 31 gives the lower bound). Therefore:
+On the residual-budget branch of Appendix E (Equation E.14, derived from the PCE resource-partition argument in which the SPAP cost $\varepsilon$ is subtracted from the total information potential $\ln d_0$ to give the available boundary channel capacity), the PCE-optimal channel capacity satisfies $C_{\max}^* = \ln d_0 - \varepsilon$. On the minimal Appendix Z branch one has $d_0 = 8$ (Theorem Z.2), and at the PCE-Attractor one has $\varepsilon = \ln 2$ (Definition 15a; Theorem 31 gives the lower bound). Therefore:
 $$\boxed{C_{\max}^* = \ln 8 - \ln 2 = 2\ln 2 = 2\varepsilon} \tag{Q.10}$$
+
+The residual-budget branch is the load-bearing assumption: alternative resource-partition rules (e.g., one in which the SPAP cost is paid by internal processing without subtraction from external boundary capacity) would yield different values of $C_{\max}^*$ and correspondingly different values of $\delta/L_P$ in §Q.2.4 and §Q.5.
+
 
 **Remark Q.10.1 (Bit-Budget Characterization).** Since $d_0 = 2^{K_0}$ on the minimal branch and $\varepsilon = \ln 2$ at the PCE-Attractor, the capacity-cost ratio has the structural form
 $$
@@ -1340,7 +1355,8 @@ With $\chi^* = 1$ and $\eta^* = 1$ (Sections Q.2.2–Q.2.3) and $C_{\max}^*$ fro
 
 $$\boxed{\frac{\delta^2}{L_P^2} = 8\ln 2, \qquad \frac{\delta}{L_P} = \sqrt{8\ln 2} \approx 2.355} \tag{Q.18}$$
 
-This result demonstrates that the fundamental MPU spatial scale $\delta$ is not a free parameter: it is fixed in Planck units by a universal dimensionless constant arising from capacity saturation and geometric regularity. The value $C_{\max}^*=2\ln2$ follows from the ND-RID saturator (Theorem E.6), and the geometric/channel factors $\chi^*=1$ and $\eta^*=1$ follow from Lemmas Q.2.2 and Q.2.3. The resulting ratio $\delta/L_P$ is therefore uniquely fixed by (Q.3) with no additional degrees of freedom.
+This result demonstrates that the fundamental MPU spatial scale $\delta$ is fixed in Planck units by a universal dimensionless constant on the combined branch of capacity-residual partition, throughput-saturation, and ideal packing. The value $C_{\max}^*=2\ln2$ follows from the residual-budget branch of Appendix E (Equation E.14, §Q.2.1), and the geometric/channel factors $\chi^*=1$ and $\eta^*=1$ follow from the throughput-saturated and ideal-packing branches of Lemmas Q.2.2 and Q.2.3. The resulting ratio $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ is uniquely fixed on this combined branch; removing the residual-budget branch would multiply $C_{\max}^*$ by a coefficient $\lambda_C$ and rescale $\delta/L_P$ by $\sqrt{\lambda_C}$. The branch-independent ratio $\delta/L_P$ is outside the stated residual-budget, throughput-saturated, ideal-packing hypotheses.
+
 
 The value of this ratio emerges from the PCE equilibrium values using the framework's fundamental constants:
 $$\frac{\delta}{L_P} = \sqrt{\frac{4\chi^* C_{\max}^*}{\eta^*}} = \sqrt{\frac{4 \cdot 1 \cdot 2\ln 2}{1}} = \sqrt{8\ln 2}$$

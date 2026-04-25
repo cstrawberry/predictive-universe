@@ -30,10 +30,10 @@ $$
 $$
 As complexity $\bar C_{\mathrm{agg}}$ increases, the marginal predictive gain $\partial PP/\partial C$ decreases (diminishing returns, $\partial^2 PP/\partial C^2 < 0$), while the marginal resource costs ($R', R_I'$) generally increase or remain non-negative ($R'' \ge 0$, $R_I'' \propto -1/C^2 < 0$ for $C>K_0$, but total marginal cost typically non-decreasing). This creates a balance point.
 
-**Proposition I.2 (Saturation of Aggregate Complexity).**
-Given the diminishing returns in predictive performance from increasing complexity ($\partial^2 PP/\partial C^2 < 0$) and the increasing or non-decreasing marginal costs ($R' \ge 0, R_I' > 0$ for $C>K_0$), Equation (I.2) necessarily admits a finite optimal complexity value $\bar C_{\mathrm{agg,sat}}$ beyond which additional complexity investment is disfavoured by PCE. This saturation level depends on the environment and the perceived predictive difficulty $\hat C_{\mathrm{target}}$.
+**Proposition I.2 (Finite Saturation of Aggregate Complexity).**
+Given the diminishing returns in predictive performance from increasing complexity ($\partial^2 PP/\partial C^2 < 0$) and the positive, non-decreasing marginal costs ($R' \ge 0, R_I' > 0$ for $C>K_0$), PCE excludes runaway complexity investment in Equation (I.2): the optimal aggregate complexity $\bar C_{\mathrm{agg,sat}}$ is finite. Whether the optimum is attained at the lower admissible boundary $C = K_0$ or at an interior point depends on the environment and the perceived predictive difficulty $\hat C_{\mathrm{target}}$.
 
-*Proof:* The marginal benefit term $\Gamma_0 (\partial PP/\partial C)$ decreases from a finite value towards zero as $C \to \infty$ (Equation 25). The marginal cost term $\lambda R' + R_I'$ is positive for $C>K_0$ and generally non-decreasing with $C$ (Definition 3). Thus, there must exist a finite complexity $C^*$ where the decreasing benefit curve intersects the increasing or non-decreasing cost curve. This intersection point represents the optimal complexity allocation $\bar C_{\mathrm{agg,sat}}$.
+*Proof:* The marginal benefit term $\Gamma_0 (\partial PP/\partial C)$ decreases from a finite value towards zero as $C \to \infty$ (Equation 25), while the marginal cost term $\lambda R' + R_I'$ remains bounded below by a positive constant for $C > K_0$ (Definition 3). For sufficiently large $C$, marginal cost strictly exceeds marginal benefit, so PCE disfavors arbitrarily large complexity and $\bar C_{\mathrm{agg,sat}}$ is finite. An interior solution $C^* > K_0$ to the marginal-balance equation (I.2) exists when the marginal predictive benefit initially exceeds the marginal cost at $C = K_0$, $\Gamma_0 (\partial PP/\partial C)|_{C=K_0} > \lambda R'(K_0) + R_I'(K_0)$, and the relevant functions are continuous; otherwise the optimum lies at the boundary $\bar C_{\mathrm{agg,sat}} = K_0$. ∎
 
 **I.4 Predictive-Information Saturation in Sparse Regimes**
 
@@ -419,9 +419,9 @@ m\simeq2\!-\!4.
 $$
 These ranges will be constrained by the forthcoming rotation-curve fits. Note that the range for $A_G$ is widened here compared to Section I.9 to accommodate the full range of needed enhancements (2-10 times). No theorem-level value of $A_G$ is derived in the present appendix.
 
-**I.14 Timescale Separation**
+**I.14 Timescale Separation (Quasistatic Local-Relaxation Branch)**
 
-The adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $G(R)$ are much faster (Myr–Gyr for reaching local PCE equilibrium) than potential cosmological drift of the environment or fundamental parameters that might cause $(L_0, A_G, m)$ to evolve (Gyr–Hubble time). This hierarchy justifies treating $G(R)$ as quasi-static when analyzing galaxy dynamics, while allowing for a slow cosmic evolution of the universal parameters themselves.
+On the quasistatic local-relaxation branch, the adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $G(R)$ are assumed to reach local PCE equilibrium on timescales (Myr–Gyr in this branch) short compared with potential cosmological drift of the environment or fundamental parameters that might cause $(L_0, A_G, m)$ to evolve (Gyr–Hubble time). Under this branch assumption, $G(R)$ may be treated as quasi-static when analyzing galaxy dynamics, while allowing for a slow cosmic evolution of the universal parameters themselves. A first-principles derivation of the Myr–Gyr local equilibration scale from the Appendix D adaptation dynamics ($\eta_{\mathrm{adapt}}$ and the local-PL neighborhood structure of Theorem D.8) remains a separate closure lemma; the galaxy-scale phenomenology of Sections I.6-I.13 inherits this quasistatic branch label.
 
 **I.15 Conclusion**
 

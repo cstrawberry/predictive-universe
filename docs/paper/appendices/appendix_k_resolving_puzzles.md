@@ -10,7 +10,7 @@ The framework's core insight—that physical law emerges from the operational re
 
 **Puzzle:** The Standard Model of particle physics and general relativity contain approximately 25 fundamental parameters (masses, coupling constants, mixing angles) whose specific numerical values are precisely measured experimentally but are not derived from first principles within standard frameworks. Why these particular values?
 
-**PU Resolution:** The framework derives specific values of fundamental constants from the parameters characterizing the dynamically determined equilibrium state of the MPU network, governed by minimizing the global PCE Potential $V(x)$ (Appendix D, Definition D.1) and satisfying derived constraints. These equilibrium parameters are shaped by the underlying MPU properties ($C_{op}, K_0, \varepsilon$, ND-RID dynamics, interaction costs $\Phi$) and environmental factors. The following constants have been rigorously derived:
+**PU Resolution:** The framework organizes specific values of fundamental constants into branch-separated derivation chains, all rooted in the dynamically determined equilibrium state of the MPU network governed by minimizing the global PCE Potential $V(x)$ (Appendix D, Definition D.1) and satisfying derived constraints. These equilibrium parameters are shaped by the underlying MPU properties ($C_{op}, K_0, \varepsilon$, ND-RID dynamics, interaction costs $\Phi$) and environmental factors. The constants below carry the branch labels of their source appendices: some are theorem-level on the minimal PCE branch, others are canonical-branch predictions, calibration/exchange-rate definitions, or validation-level quantities conditional on the branch closures specified in their source appendices. The branch table at the end of this section consolidates these distinctions. In the per-quantity discussions, terminology such as "rigorously derived" refers to the within-branch dependence of each chain rather than an unconditional, branch-independent claim.
 
 **Invariant speed of light $c$:** Emerges from the finite minimum MPU processing time $\tau_{min} > 0$ (Theorem 29) and the effective microscopic length scale $\ell_0$ (Definition 35), with $c \approx \ell_0 / \tau_{min}$ (Theorem 46). These scales are set by the minimal operational requirements of the MPU cycle.
 
@@ -65,17 +65,23 @@ Appendix T (Section T.25) establishes status-labeled hierarchy comparisons with 
 
 The τ/μ mass ratio achieves $\approx\mathbf{0.04\%}$ **precision** in the log ratio ($|\Delta\ln|=0.0012$), with zero adjustable parameters, representing the single most precise test of the geometric hierarchy mechanism.
 
-**Summary of Derived Constants:**
-The framework successfully derives from first principles:
-- Speed of light $c$ (from minimal operational scales)
-- Planck constant $\hbar$ (as action-entropy exchange rate)
-- Gravitational constant $G$ (from thermodynamic channel capacity)
-- Fine-structure constant $\alpha$ (theorem-level Thomson calculation: $\alpha^{-1} \approx 137.036$)
-- Electroweak scale $v$ (from Golay complexity: $v \approx 246$ GeV)
-- Weinberg angle ($\sin^2\theta_W^{(0)} = 3/8$ at PU fixed point)
-- Higgs mass ($m_H \approx 125$ GeV from metastability)
-- Fermion mass ratios ($E_8$ geometry: lepton $\mathcal{R}$ to 3.8% accuracy)
-- Spacetime dimension ($D = 4$ from two independent pathways)
+**Branch-Separated Summary of Derived Constants:**
+
+| Quantity | Derivation chain | Branch class |
+|---|---|---|
+| $K_0, d_0, M, D$ | Minimal PCE chain (Theorems 15, 23, Z.5, Z.10–Z.11) | Theorem-level on minimal branch |
+| $c$ | Minimal operational scales (Theorem 29, 46) | Theorem-level on minimal branch |
+| $\hbar$ | Action-entropy exchange rate (Theorem Q.0.1) | Exchange-rate definition; existence is theorem-level on Q.0.2 branch |
+| $k_B$ | Thermodynamic conversion factor (Section 12) | Exchange-rate definition |
+| $\alpha^{-1} = 137.036$ | Appendix Z seven-stage chain | Canonical Z branch prediction (with the branch qualifiers) |
+| $G$, $\delta/L_P \approx 2.355$ | Channel-capacity area-law normalization (Theorem E.6) and Appendix Q packing | Area-law calibration plus Appendix Q branch |
+| $v \approx 246$ GeV | Golay-Steiner electroweak complexity (Theorem T.5 / Corollary T.29.1) | Appendix T determinant-model branch |
+| $\sin^2\theta_W^{(0)} = 3/8$ | PCE isotropy at attractor (Theorem T.14) | Theorem-level on the unbroken-tree branch; running to $M_Z$ remains validation-level |
+| $m_H \approx 125$ GeV | PU quartic boundary matched to SM metastability (Theorem T.28) | Conditional on SM metastability-boundary matching branch |
+| $\Lambda$ | Appendix U Golay-Steiner reference exponent | Five-mode reference branch / four-mode corrected branch (Theorems U.8c, U.13b) |
+| $g_s, g_w, \alpha_s(M_Z), \sin^2\theta_W(M_Z)$ | Lifted spectral threshold tuple (Theorems T.16, T.18, T.78.2) | Validation-level conditional on the forward block-sum spectral package |
+| $N_g = 3$ | Anomaly+CP minimal admissible $N_{\min} = 3$; exact $N_g$ on MDL/PCE minimal-family branch (Theorem R.3.4, Proposition R.3.5) | Theorem-level minimal admissible / branch-level exact realization |
+| Fermion mass ratios | $E_8$ geometric overlaps (Appendix R, T.41-T.45) | Theorem-level discrete predictions; absolute scales calibrated through Appendix T sector prefactors |
 
 If the fundamental rules and parameters of the MPU model and POP/PCE optimization are simple, the complex pattern of observed fundamental constants arises as the unique stable minimum of the high-dimensional PCE potential landscape. Fine-tuning in observed constants is reinterpreted as thermodynamic or informational optimality.
 
@@ -102,16 +108,16 @@ We frame the task of recovering the information of an initial pure state $|\psi_
 - **Contractive Reflexivity:** If sequential measurements cause the state of the black hole to converge towards a stable, predictable final state, the problem would be solvable in principle. This corresponds to the transformation $T$ being a contraction mapping in the space of problem instances.
 - **Expansive Reflexivity:** If sequential measurements cause the state of the black hole to change in an accelerating or increasingly unpredictable manner, the problem instance diverges from the solver, creating a computational infinite regress.
 
-**Theorem K.1 (Expansive Reflexivity of Late-Stage Evaporation).** For a black hole in the final stages of its evaporation, the information retrieval problem exhibits expansive reflexivity. Each measurement of a Hawking quantum induces a proportionally larger and more significant change on the remaining black hole state, preventing a stable, convergent information extraction process.
+**Proposition K.1 (Expansive-Reflexivity Scaling in Late-Stage Evaporation).** For a black hole in the final stages of its evaporation, the standard Hawking-emission scaling laws imply that the fractional impact of one emitted Hawking quantum on the remaining state grows without bound as $M_t \to 0$.
 
 *Proof.*
-1. **Accelerating Dynamics:** As the black hole's mass $M_t$ decreases, its temperature $T_H \propto 1/M_t$ and evaporation rate $dM/dt \propto -1/M_t^2$ both increase.
-2. **Increasing Relative Impact:** The emission of a single Hawking quantum with energy $\Delta E \sim k_B T_H \propto 1/M_t$ represents a fractional mass loss of $\Delta M / M_t \propto 1/M_t^2$. As $M_t \to 0$, this fractional impact diverges.
-3. **Infinite Regress:** An observer attempting to build a complete model of $|S_{BH}(t)\rangle$ by collecting sequential Hawking quanta faces a target that transforms away at an ever-increasing rate. The solution to step $t$ redefines the problem for step $t+1$ so significantly that the new problem is further from complete solution than the previous one was. QED
+1. **Accelerating dynamics.** As the black hole's mass $M_t$ decreases, its temperature $T_H \propto 1/M_t$ and evaporation rate $dM/dt \propto -1/M_t^2$ both increase.
+2. **Diverging relative impact.** A Hawking quantum has characteristic energy $\Delta E \sim k_B T_H \propto 1/M_t$, so the fractional mass change satisfies $|\Delta M|/M_t \propto 1/M_t^2$. Hence, for every threshold $B>0$, there is $M_B>0$ such that $|\Delta M|/M_t>B$ whenever $0<M_t<M_B$.
+3. **Expansive-reflexivity scaling.** A local sequential model of the remaining black-hole state receives an update whose relative scale diverges along the late-stage evaporation sequence. This is the expansive-reflexivity scaling asserted in the proposition. ∎
 
-**Theorem K.2 (Fundamental Unsolvability via Local Sequential Measurement).** Due to the expansive reflexivity inherent in late-stage black hole evaporation, no algorithm based on local, sequential measurements of Hawking radiation can recover the complete information of the initial state $|\psi_{in}\rangle$, regardless of available computational resources.
+**Proposition K.2 (Expansive-Reflexivity Obstruction for Local Sequential Retrieval).** On the Perspectival Information Channel (PIC) branch defined in K.3.2 — under which the channel capacity $C_{\mathrm{PIC}}(t)$ and the per-cycle reflexive update cost $\varepsilon$ together imply $t_{\mathrm{extract}} > t_{\mathrm{evap}}$ for any local sequential Hawking-radiation retrieval protocol — no local sequential algorithm in that protocol class recovers the complete information of the initial state $|\psi_{in}\rangle$ before evaporation completes, regardless of available computational resources internal to the observer.
 
-*Proof.* This is a physical realization of the unsolvability of problems with expansive reflexivity. The problem instance $I_t$ does not converge, preventing any sequential algorithm from building a complete and stable solution. This limitation arises from the logical structure of self-reference in the physical measurement process, analogous to the logical limits established by SPAP (Theorems A.1.1, A.1.3) and RUD (Theorems A.2.3, A.2.4). QED
+*Proof.* Proposition K.1 gives the increasing per-step update load. On the PIC branch, the channel capacity bound and reflexivity cost $\varepsilon$ imply that the cumulative resource budget required for complete sequential retrieval exceeds what is available before $t_{\mathrm{evap}}$; equivalently, $t_{\mathrm{extract}}>t_{\mathrm{evap}}$ for the protocol class. A protocol that finishes after evaporation cannot recover the complete initial-state information before the endpoint. Therefore no local sequential algorithm in the stated protocol class completes the retrieval before evaporation. ∎
 
 ### K.3.2 Thermodynamic Cost and the Perspectival Information Channel
 
@@ -407,16 +413,23 @@ $$V_0 = 2\alpha \sigma_B^2 = 2 \times \frac{3}{2} \times \frac{1}{24} = \frac{1}
 
 *Proof.* The SPAP cycle (Theorem 10) requires Predict → Evolve → Verify → Update. The verification step must yield a definite outcome to update the model. PCE (Definition 15) minimizes complexity for given predictive utility. A measurement yielding complex outcomes would require additional processing to extract real information, incurring higher complexity ($C_P$) for the same predictive content. Real-valued measurement outcomes have strictly lower complexity than complex-valued outcomes (one real number vs. two). In the complex Hilbert space structure (Theorem G.1.8), the unique operators with real spectra are Hermitian operators: $O = O^\dagger$. ∎
 
-**Theorem K.6.4 (Hermiticity ↔ σ-Invariance).** For density matrices on $\mathbb{C}^8$, Hermiticity is equivalent to σ-invariance in the eigenbasis representation.
+**Lemma K.6.4 (σ-Invariance Implies Hermiticity in the Fixed Real Structure).** Let $\sigma$ denote the antiholomorphic involution on $\mathbb{C}^8$ fixed in Definition K.6.3, acting on density matrices by $\sigma(\rho) = \bar\rho$ in the fixed basis. If $\sigma(\rho) = \rho$, then $\rho$ has real matrix elements in that basis and is therefore real-symmetric and Hermitian. The converse is false in general: a Hermitian density matrix need not be σ-invariant under the fixed conjugation, since its eigenvectors cannot generally be chosen real with respect to a fixed real structure unless $\rho$ commutes with $\sigma$.
 
-*Proof.* Let $\rho$ be Hermitian with spectral decomposition $\rho = \sum_i p_i |e_i\rangle\langle e_i|$ with real eigenvalues $p_i$. We can choose phases such that $|e_i\rangle$ has real coefficients. In this real eigenbasis, $\sigma(|e_i\rangle) = \overline{|e_i\rangle} = |e_i\rangle$. Therefore $\sigma(\rho) = \sum_i p_i \sigma(|e_i\rangle)\overline{\langle e_i|} = \sum_i p_i |e_i\rangle\langle e_i| = \rho$.
+*Proof.* (σ-invariance ⇒ real-symmetric Hermitian.) If $\sigma(\rho) = \rho$, then $\bar\rho = \rho$ in the fixed basis, so $\rho$ has real matrix elements. A real positive semidefinite matrix satisfies $\rho = \rho^T = \rho^\dagger$ and is therefore Hermitian.
 
-Conversely, if $\sigma(\rho) = \rho$ in the eigenbasis, then $\bar{\rho} = \rho$, meaning $\rho$ has real matrix elements. A positive semi-definite matrix with real entries satisfies $\rho = \rho^T = \rho^\dagger$. ∎
+(Counterexample to the converse.) The matrix
+$$
+\rho = \frac{1}{2}\begin{pmatrix} 1 & -ia \\ ia & 1 \end{pmatrix}, \qquad 0 < a < 1,
+$$
+is Hermitian and positive definite but satisfies $\sigma(\rho) = \frac{1}{2}\bigl[\begin{smallmatrix} 1 & ia \\ -ia & 1 \end{smallmatrix}\bigr] \neq \rho$. Its eigenvectors $\frac{1}{\sqrt{2}}(1, \mp i)^T$ admit no phase choice making both components real, illustrating that Hermiticity does not imply σ-invariance under the fixed conjugation.
 
-**Theorem K.6.5 (θ-Selection via σ-Invariance).** The physical vacuum must be σ-invariant. Combined with the action $\sigma: \theta \mapsto -\theta$, this uniquely selects:
-$$\theta_{\text{QCD}} \in \{0, \pi\}$$
+Consequently, the strong-CP argument below uses σ-invariance as a PCE symmetry condition characterizing the σ-symmetric attractor branch, not as a derived consequence of Hermiticity alone. ∎
 
-*Proof.* The PCE-Attractor state $\rho_0$ is characterized by maximal symmetry (Definition 15a). The involution $\sigma$ is a symmetry of the underlying geometry $\text{Gr}(2,8)$ (Definition K.6.3). PCE optimization selects states that are invariant under all geometric symmetries of the configuration space, as symmetry-breaking incurs additional complexity cost without predictive benefit (Appendix P, Section P.6.4).
+**Theorem K.6.5 (θ-Selection on the σ-Symmetric PCE-Attractor Branch).** On the σ-symmetric PCE-attractor branch — under which the physical vacuum is required to be invariant under the antiholomorphic involution $\sigma$ of Definition K.6.3 — and using the action $\sigma: \theta \mapsto -\theta$, the vacuum θ-parameter is restricted to:
+$$\theta_{\text{QCD}} \in \{0, \pi\}.$$
+The σ-symmetric attractor branch is supplied by Lemma K.6.4 as a symmetry condition on the PCE-Attractor state $\rho_0$ rather than as a consequence of Hermiticity. The energy-selection step in Theorem K.6.6 then resolves the two-valued σ-symmetric set to $\theta_{\text{QCD}} = 0$.
+
+*Proof.* On the σ-symmetric PCE-attractor branch, the PCE-Attractor state $\rho_0$ is required to be invariant under the geometric involution $\sigma$ of Definition K.6.3, motivated by maximal-symmetry selection (Definition 15a) and the cost of unnecessary symmetry-breaking (Appendix P, Section P.6.4). This σ-invariance is the branch input — not a derived consequence of Hermiticity, by Lemma K.6.4.
 
 For a state parametrized by $\theta$, σ-invariance requires $\sigma(\theta) = \theta$, i.e., $-\theta \equiv \theta \pmod{2\pi}$. This has exactly two solutions: $\theta = 0$ and $\theta = \pi$. ∎
 
@@ -543,12 +556,15 @@ $$M_q = U_q \cdot D_q$$
 where $D_q$ is diagonal with real positive entries and $U_q$ is unitary. Consequently:
 $$\arg(\det M_q) = \arg(\det U_q) + \arg(\det D_q) = \arg(\det U_q)$$
 
-*Proof.* The Yukawa matrices $Y_q$ are real positive by Theorem K.6.7. The physical mass matrices are $M_q = v \cdot Y_q / \sqrt{2}$ where $v$ is the Higgs VEV. Since $Y_q \in \mathbb{R}_{>0}^{3\times 3}$, the singular value decomposition gives $Y_q = U_L \cdot D \cdot U_R^{\dagger}$ where $D$ is diagonal real positive. The determinant of a real positive diagonal matrix is real positive: $\det D_q > 0$, hence $\arg(\det D_q) = 0$.
+*Proof.* The Yukawa matrices $Y_q$ are real with positive entries by Theorem K.6.7, so $M_q = v \cdot Y_q / \sqrt{2}$ is real. For a real matrix, the singular value decomposition is $Y_q = O_L \cdot D \cdot O_R^T$ with $O_L, O_R$ real orthogonal and $D$ diagonal real positive. The determinant $\det Y_q = \det(O_L) \cdot \det(D) \cdot \det(O_R)$ has $\det(D) > 0$, while $\det(O_L), \det(O_R) \in \{+1, -1\}$ are not fixed by Yukawa reality alone — real positive entries do not determine determinant sign in general (counterexample: $\bigl[\begin{smallmatrix} 1 & 2 \\ 3 & 4 \end{smallmatrix}\bigr]$ has positive entries and determinant $-2$).
 
-The unitary matrices $U_L, U_R$ arise from diagonalization, not from the Yukawa structure. In the CKM basis where one unitary freedom is fixed, the residual phase is the CKM phase $\delta$, which appears in weak interactions but not in $\det M_q$. ∎
+On the orientation-preserving real-Yukawa branch — under which the physical Yukawa matrices lie in the positive-determinant connected component of the real nondegenerate Yukawa space, $\det O_L \cdot \det O_R = +1$ — one obtains $\det M_q > 0$, hence $\arg(\det M_q) = 0$. The branch is supplied by the adiabatic-turn-on continuity argument of Theorem K.6.9 under the assumption that the physical Yukawa is reached by a continuous path from the diagonal reference $D_f$ along which $\det Y_f(t) \neq 0$ for all $t \in [0,1]$.
 
-**Corollary K.6.5 (arg(det M_q) = 0).** The contribution from the quark mass matrix to the physical θ-parameter vanishes:
-$$\arg(\det M_q) = 0$$
+The orthogonal matrices $O_L, O_R$ arise from diagonalization, not from the Yukawa structure. In the CKM basis where one orthogonal freedom is fixed, the residual phase is the CKM phase $\delta$, which appears in weak interactions but not in $\det M_q$. ∎
+
+**Corollary K.6.5 (arg(det M_q) = 0 on the Orientation-Preserving Real-Yukawa Branch).** On the orientation-preserving real-Yukawa branch of Theorem K.6.10 — under which $\det Y_u, \det Y_d > 0$ via the adiabatic-turn-on continuity argument of Theorem K.6.9 — the contribution from the quark mass matrix to the physical θ-parameter vanishes:
+$$\arg(\det M_q) = 0.$$
+Without this orientation-preserving branch, real positive Yukawa entries imply only $\arg(\det M_q) \in \{0, \pi\}$ for each real nondegenerate sector. The orientation-preserving branch joins the σ-symmetric PCE-attractor branch (Lemma K.6.4, Theorem K.6.5) as the second branch input required for the strong-CP resolution; both are flagged as PCE-attractor symmetry/orientation conditions characterizing the relevant physical sector.
 
 *Proof.* From Theorem K.6.9, $\det(Y_f) = \det(D_f) \cdot \det(R_f) = (\prod_{i=1}^3 y_i^f) \cdot (+1) \in \mathbb{R}_{>0}$. For both up and down sectors: $\det(Y_u), \det(Y_d) \in \mathbb{R}_{>0}$, implying $\arg(\det Y_u) = \arg(\det Y_d) = 0$. The Higgs VEV $v$ is real by gauge choice: $\arg(v) = 0$. The quark mass matrices are $M_u = v Y_u$, $M_d = v Y_d$. Therefore:
 $$\arg(\det M_q) = 6\arg(v) + \arg(\det Y_u) + \arg(\det Y_d) = 0 + 0 + 0 = 0$$
@@ -721,7 +737,7 @@ Explicitly:
 1. PCE (Definition 15) requires minimal complexity
 2. Physical observables have real spectra (Theorem K.6.3)
 3. Hermiticity: $O = O^\dagger$ (Step 4 of Theorem K.6.3)
-4. Hermiticity ↔ σ-invariance (Theorem K.6.4)
+4. σ-invariance of the PCE-Attractor as branch input, with σ-invariance ⇒ Hermiticity (Lemma K.6.4)
 5. CP ↔ σ via antiunitary structure (Theorem K.6.1)
 6. θ-vacuum embeds in Gr(2,8) with σ: $\theta \mapsto -\theta$ (Proposition K.6.4)
 7. σ-invariance forces $\theta \in \{0,\pi\}$ (Theorem K.6.5)
@@ -835,7 +851,7 @@ in excellent agreement with the observed hierarchy.
 - $m_H \approx 125$ GeV from the Appendix T metastability-boundary matching branch
 - Fermion mass ratios (Appendix T, Section T.25)
 
-This resolution of the electroweak hierarchy is complete for $v$ and $m_H$; the quantitative gauge-threshold sector ($\sin^2\theta_W$, $\alpha_s$, $\alpha_{\mathrm{em}}^{-1}$ at the Z pole) remains conditional on the lifted spectral computation.
+The electroweak hierarchy chain gives a closed internal expression for the scale $v$ once the Appendix T determinant-model branch (Theorems T.5, T.29 with the unit-normalization branch) is fixed. The Higgs mass $m_H \approx 125$ GeV is a conditional prediction obtained by matching the PU quartic boundary $\lambda(\mu_\lambda) = 0$ to the Standard Model metastability trajectory as in Theorem T.28, on the SM metastability-boundary matching branch. The quantitative gauge-threshold sector ($\sin^2\theta_W$, $\alpha_s$, $\alpha_{\mathrm{em}}^{-1}$ at the Z pole) remains conditional on the lifted spectral computation flagged by Theorem T.78.2.
 
 
 ## K.8 Cosmological Constant and Primordial Perturbations
@@ -1159,13 +1175,13 @@ $$
 
 (iii) The UV completion is not a conventional theory of quantized gravitons at high energy but the discrete MPU dynamics from which the metric emerges. What would be identified as gravitons in a perturbative treatment are collective excitations of the MPU network geometry.
 
-**Theorem K.10.12 (Unified Origin of UV Finiteness and Gravity).** The channel capacity bound $C_{\max} < \ln d_0$ simultaneously:
+**Theorem K.10.12 (Unified Origin of UV Finiteness and Gravity on the Gravity-Bridge Package).** The channel capacity bound $C_{\max} < \ln d_0$ supplies the finite boundary-information ingredient. On the gravity-bridge package — comprising (a) horizon saturation, (b) the local Rindler/KMS modular branch of Appendix F, (c) the Clausius relation $\delta Q = T \, dS$ at local Rindler horizons, and (d) the MPU stress-energy source construction of Appendix B (Theorems B.3, B.8b, on the momentum-flux closure and admissible coarse-graining branches) — this ingredient simultaneously:
 
-(i) Excludes UV divergences by limiting information extractable from sub-MPU scales (Theorem K.10.4)
+(i) Excludes UV divergences by limiting information extractable from sub-MPU scales (Theorem K.10.4).
 
-(ii) Enforces the Bekenstein bound $S \leq A/(4G)$ (Theorem 49)
+(ii) Enforces the Bekenstein bound $S \leq A/(4G)$ on the area-law calibration branch (Theorem 49, Theorem E.6).
 
-(iii) Implies Einstein's equations when saturated at horizons (Theorem Q.0.17)
+(iii) Enters the Jacobson-style derivation of Einstein's equations when saturated at horizons (Theorem Q.0.17), with components (b)–(d) of the bridge package supplying the Clausius/KMS/source ingredients beyond the channel-capacity input itself.
 
 *Proof.* All three follow from finite channel capacity:
 
@@ -1211,7 +1227,7 @@ The equivalence established in Theorem Q.0.15—linking Bekenstein-Hawking entro
 
 The non-renormalizability of perturbative quantum gravity receives a definitive explanation: gravity is not a quantum field theory in the conventional sense. The metric $g_{\mu\nu}$ is a collective variable encoding MPU network geometry, and Einstein's equations emerge from thermodynamic consistency at causal boundaries (Theorem K.10.10). Attempting to quantize this emergent structure produces infinities that correctly signal operational mismatch (Corollary K.10.11).
 
-UV finiteness and emergent gravity are unified: both arise from the finite information-processing capacity $C_{\max} < \ln d_0$ of the MPU network (Theorem K.10.12). The cutoff at $\Lambda_{\text{MPU}}$ is not an ad hoc regularization but the scale at which the discrete substrate—from which gravity itself emerges—becomes directly relevant.
+UV finiteness and emergent gravity are unified: both arise from the finite information-processing capacity $C_{\max} < \ln d_0$ of the MPU network together with the gravity-bridge package (horizon saturation; local Rindler/KMS branch of Appendix F; Clausius relation $\delta Q = T \, dS$; MPU stress-energy source construction of Appendix B), as stated in Theorem K.10.12. The cutoff at $\Lambda_{\text{MPU}}$ is not an external regularization but the scale at which the discrete substrate—from which gravity itself emerges—becomes directly relevant.
 
 ---
 
@@ -1278,7 +1294,7 @@ The following results have been derived with precise numerical predictions:
 | Weinberg angle | $\sin^2\theta_W^{(0)} = 3/8$ | Appendix T, Theorem T.14 |
 | Higgs mass | $m_H \approx 125$ GeV from metastability | Appendix T, Theorem T.28 |
 | Fermion mass ratios | Lepton $\mathcal{R} = 3$ to 3.8% accuracy | Appendices R, T |
-| Gravitational constant | $G$ from channel capacity, $\delta/L_P \approx 2.355$ | Appendices E, Q |
+| Gravitational constant | $G$ from channel-capacity area-law normalization (Theorem E.6) on the gravity-bridge package of Theorem K.10.12; $\delta/L_P \approx 2.355$ on the Appendix Q packing branch | Appendices E, Q |
 | Cosmological constant | Appendix U reference evaluation $\Lambda L_P^2 = 8\pi A_{\text{eff}}e^{-283}\sim 10^{-122}$ under the stated counting and prefactor conventions | Appendix U |
 | Primordial observables | $n_s = 0.9663$, $r = 0.0034$, $A_s = 2.08 \times 10^{-9}$, conditional on the Appendix U primordial identifications and assumptions | Appendix U |
 | Spacetime dimension | $D = 4$ from mode-channel correspondence, independently reinforced in Appendices G and H | Appendices Z, G, H |
@@ -1316,7 +1332,7 @@ The following areas have established conceptual frameworks with detailed calcula
 
 4. **Cosmological Model Refinement:** Derive $(A_c,n)$ from the Appendix D relaxation potential, extend the homogeneous constitutive closure to perturbations and lensing, and compare the resulting PU cosmology against the full observational suite (CMB, SNe, BAO, LSS, $H(z)$, local $\dot{G}/G$ bounds).
 
-5. **Topological Cost Terms:** Rigorously derive from fundamental PU principles the effective cost terms for strong CP problem ($V_{\text{topo}}(\theta)$, Section K.6) and other topological effects. Establish connection to instanton calculus in PCE formulation. Derive or justify the stiffness hierarchy assumption $\Lambda_{\text{stiff}} \gg 1$ from the structure of the PCE potential in the space of Yukawa phases.
+5. **Topological Cost Terms:** Rigorously derive from fundamental PU principles the effective cost terms for strong CP problem ($V_{\text{topo}}(\theta)$, Section K.6) and other topological effects. Establish connection to instanton calculus in PCE formulation. derive or justify (a) the stiffness hierarchy assumption $\Lambda_{\text{stiff}} \gg 1$ from the structure of the PCE potential in the space of Yukawa phases, and (b) the orientation-preserving real-Yukawa branch ($\det Y_u, \det Y_d > 0$) used in Theorem K.6.10 / Corollary K.6.5, including the admissibility of the adiabatic continuation path from $D_f$ to the physical Yukawa matrices.
 
 6. **Computational Limits:** Further explore consequences of the curvature-resolution bound (Lemma K.5.3) and full implications of Prediction Relativity (Appendix N) for systems operating near fundamental predictive limits. The operational cosmic censorship theorem (Theorem K.5.4) establishes the basic dichotomy; remaining work includes detailed modeling of the horizon-formation versus manifold-breakdown transition.
 

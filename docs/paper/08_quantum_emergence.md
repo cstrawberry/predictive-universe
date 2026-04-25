@@ -1,5 +1,7 @@
 # 8 Emergence of Quantum Mechanical Formalism
 
+**Conjecture boundary.** The results in this section are effective-formalism results: they show why the quantum-mechanical Hilbert-space/Born-rule/GKSL structures are selected under the stated MPU, PCE, refinement, and non-contextuality hypotheses. They do not remove the separate PPI mapping assumptions used later to identify particular information-geometric structures with Standard Model fields or measured constants.
+
 This section demonstrates that the standard mathematical formalism of Quantum Mechanics (QM) provides a consistent effective description for the dynamics and state representation of Minimal Predictive Units (MPUs), as defined and constrained by the principles established in the preceding sections of the Predictive Universe (PU) framework. The core QM features—complex Hilbert spaces, superposition, the Born rule, uncertainty relations, entanglement, and Schrödinger evolution—are shown to emerge from the operational requirements of the MPU's adaptive predictive cycle (Definition 4), particularly the Dual Dynamics (Section 7.3.3) acting on the Perspectival State (Definition 24), under the fundamental limitations imposed by self-reference (SPAP, Theorem 10, Theorem 11) and reflexive interaction (ND-RID, Definition 6; Reflexivity Constraint, Theorem 33).
 
 **8.1 QM Formalism as Effective Description**

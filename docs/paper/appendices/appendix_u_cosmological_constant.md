@@ -95,12 +95,12 @@ Vacuum fluctuations correspond to deformations of the code subspace. The space o
 
 $$\mathcal{M} = \text{Gr}_{\mathbb{C}}(k, M)$$
 
-**Theorem U.3 (Configuration Dimension).** The base instanton complexity equals the complex dimension of the Grassmannian:
+**Theorem U.3 (Configuration Dimension on the Balanced Golay Branch).** On the balanced rate-½ Golay branch (Theorem Z.13 / P.13.12 / R.4.4 / T.1c), the base instanton complexity equals the complex dimension of the Grassmannian:
 
 $$\kappa_0 = \dim_{\mathbb{C}}(\text{Gr}_{\mathbb{C}}(12, 24)) = k(M - k) = 12 \times 12 = 144$$
 
 where:
-- $k = 12$ is the Golay code dimension (Theorem Z.13)
+- $k = 12$ is the Golay code dimension on the balanced rate-½ branch (Theorem Z.13 with the balanced rate-½ branch input). Off this branch, $\kappa_0 = k(M-k)$ would shift: $k = 11$ gives $\kappa_0 = 143$, $k = 10$ gives $\kappa_0 = 140$, with corresponding shifts in the cosmological constant exponent $e^{-2\kappa_\Lambda}$.
 - $M = 24$ is the number of interface modes (Theorem Z.5)
 - $\text{Gr}_{\mathbb{C}}(12, 24)$ is the Grassmannian of 12-dimensional complex subspaces of $\mathbb{C}^{24}$, the $M$-mode Hilbert space
 
@@ -791,11 +791,11 @@ where $A_{\mathrm{MB}}(\lambda)$ collects determinant and Jacobian factors, $N$ 
 
 ### U.10.1 Complexity-Action Correspondence
 
-**Proposition U.14 (Complexity-Action Relation).** The instanton action $S_{\text{inst}}$ and complexity $\kappa$ are related by:
+**Proposition U.14 (Complexity-Action Relation on the Residual-Budget Branch).** On the residual-budget branch of Appendix E (Equation E.14, where the SPAP cost $\varepsilon$ is subtracted from the total information potential $\ln d_0$ to give the available boundary channel capacity) and Appendix Q (§Q.2.1, Equation Q.10), the instanton action $S_{\text{inst}}$ and complexity $\kappa$ are related by:
 
 $$S_{\text{inst}} = 2\kappa$$
 
-This follows from the PCE-fixed ratio $C_{\max}/\varepsilon = 2$, rigorously derived in Appendix Q from the MPU budget allocation $C_{\max}^* = \ln(d_0) - \varepsilon = 3\ln 2 - \ln 2 = 2\ln 2$.
+This follows from the residual-budget identity $C_{\max}^*/\varepsilon = 2$, which is itself a consequence of the residual-budget allocation $C_{\max}^* = \ln(d_0) - \varepsilon = 3\ln 2 - \ln 2 = 2\ln 2$. With a general capacity ratio $\rho := C_{\max}/\varepsilon$, the instanton action is $S_{\text{inst}} = \rho\kappa$ and the cosmological constant prediction $\Lambda \sim e^{-\rho\kappa_\Lambda}$ would shift by $e^{-(\rho-2)\kappa_\Lambda}$ off the residual-budget branch.
 
 **Remark U.14.1: One-Loop Correction via Zeta Regularization.** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
 
@@ -1153,9 +1153,11 @@ This section extends the analysis to the **primordial sector**, deriving inflati
 
 ### U.16.1 Signal Subspace Geometry
 
-**Definition U.18 (Primordial Configuration Space).** Let $\mathcal{S} \cong \mathbb{C}^{12}$ denote the 12-dimensional complex signal subspace identified by Theorem Z.13. The **primordial configuration space** is its projectivization:
+**Definition U.18 (Primordial Configuration Space on the Balanced Golay Branch).** On the balanced rate-½ Golay branch, let $\mathcal{S} \cong \mathbb{C}^{12}$ denote the 12-dimensional complex signal subspace (Theorem Z.13 with the balanced rate-½ branch input). The **primordial configuration space** is its projectivization:
 
 $$\mathcal{C}_{\text{prim}} := \mathbb{P}(\mathcal{S}) \cong \mathbb{CP}^{11}$$
+
+Off the balanced Golay branch, $\dim_\mathbb{C}(\mathcal{S}) = k$ would not equal 12, and $\mathcal{C}_{\text{prim}} \cong \mathbb{CP}^{k-1}$ would have a different complex dimension; the downstream value $\kappa_Q = 11$ in Identification U.20 inherits this branch.
 
 *Remark.* The vacuum configuration space is $\text{Gr}_\mathbb{C}(12,24)$, the Grassmannian of all 12-dimensional subspaces of $\mathbb{C}^{24}$. The primordial configuration space $\mathbb{CP}^{11}$ is the space of rays within the fixed signal subspace $\mathcal{S}$, representing perturbations around the vacuum rather than deformations of it.
 
@@ -1175,9 +1177,11 @@ $$\frac{\dim_\mathbb{C}(\text{Gr}_\mathbb{C}(12,24))}{\dim_\mathbb{C}(\mathbb{CP
 
 ### U.16.2 Complexity Exponent
 
-**Identification U.20 (Primordial Complexity).** Following Convention U.14a and the structural correspondence between configuration space dimension and instanton complexity, the primordial complexity parameter is identified with the complex dimension of the configuration space:
+**Identification U.20 (Primordial Complexity on the Balanced Golay Branch).** Following Convention U.14a and the structural correspondence between configuration space dimension and instanton complexity, on the balanced rate-½ Golay branch (Definition U.18) the primordial complexity parameter is identified with the complex dimension of the configuration space:
 
-$$\boxed{\kappa_Q = \dim_\mathbb{C}(\mathbb{CP}^{11}) = 11}$$
+$$\boxed{\kappa_Q = \dim_\mathbb{C}(\mathbb{CP}^{11}) = 11 \quad \text{(on the balanced Golay branch)}}$$
+
+A unit shift $k \to k - 1$ off the balanced branch would give $\kappa_Q = k - 1 \to k - 2$, rescaling $Q \sim e^{-\kappa_Q}$ by a factor of $e \approx 2.7$.
 
 *Justification.* By Convention U.14a, the instanton complexity parameter counts the effective number of complex normal directions contributing to the exponential suppression. For the primordial sector on $\mathbb{CP}^{11}$, we identify $\kappa_Q$ with the complex dimension $11$. We assume no additional continuous zero modes beyond gauge redundancies; if collective modes analogous to translations or dilatations were present, they would reduce $\kappa_Q$ as in the vacuum sector ($\kappa_\Lambda = 144 - 2.5$). This identification is consistent with the framework but constitutes an assumption requiring future verification. $\square$
 
@@ -1452,11 +1456,17 @@ $$\ell_v \sim \ell_w \iff |\langle v, w \rangle| = \frac{1}{2}$$
 
 **Degree calculation:** From Lemma U.29, each vertex has inner product $+1/2$ with $192/24 = 8$ vertices and inner product $-1/2$ with $192/24 = 8$ vertices, hence $16$ vertices total with $|\langle v,w\rangle| = 1/2$. These form $8$ antipodal pairs, so each line is adjacent to $8$ lines.
 
-**Spectrum verification:**
-- $\text{tr}(A) = 0$ (no self-loops): $8 + 2(-4) + 9(0) = 0$ $\checkmark$
-- $\text{tr}(A^2) = \sum_i d_i = 12 \times 8 = 96$: $8^2 + 2(16) + 0 = 64 + 32 = 96$ $\checkmark$
+**Strongly regular graph parameters:** Direct enumeration of common neighbors gives: any two adjacent lines have $\lambda = 4$ common neighbors, and any two non-adjacent lines have $\mu = 8$ common neighbors. The line graph is therefore strongly regular with parameters $(v, k, \lambda, \mu) = (12, 8, 4, 8)$.
 
-The characteristic polynomial is $\det(A - \lambda I) = (\lambda - 8)(\lambda + 4)^2 \lambda^9$. $\square$
+**Strongly regular identity:** A strongly regular graph satisfies the matrix identity
+$$A^2 = kI + \lambda A + \mu(J - I - A) = 8I + 4A + 8(J - I - A) = 8J - 4A,$$
+where $J$ is the all-ones matrix.
+
+**Eigenvalue determination:** On the all-ones vector $\mathbf{1}$, $A\mathbf{1} = 8\mathbf{1}$ (the regular degree), so $8$ is an eigenvalue with multiplicity $\geq 1$. On the orthogonal complement $\mathbf{1}^\perp$, $J = 0$, so the strongly regular identity reduces to $A^2 = -4A$, giving eigenvalues in $\{0, -4\}$ on $\mathbf{1}^\perp$. Let $m_8$, $m_{-4}$, $m_0$ denote the multiplicities of $8$, $-4$, $0$. Then $m_8 = 1$ (the all-ones eigenvalue is non-degenerate for a connected regular graph; or by direct verification of the trace identities).
+
+**Trace constraints:** $\operatorname{tr}(A) = 0$ (no self-loops) gives $8 \cdot 1 + (-4) m_{-4} + 0 \cdot m_0 = 0$, so $m_{-4} = 2$. Then $m_0 = 12 - 1 - 2 = 9$. Verification: $\operatorname{tr}(A^2) = 8^2 + 2(-4)^2 + 9(0)^2 = 64 + 32 = 96 = \sum_i d_i = 12 \cdot 8$. ✓
+
+The characteristic polynomial is therefore $\det(A - \lambda I) = (\lambda - 8)(\lambda + 4)^2 \lambda^9$. $\square$
 
 ### U.19.2 Weyl Group Action
 
@@ -1647,7 +1657,7 @@ $$\Delta S_{\min} = \ln 2$$
 
 per bit (Theorem 31).
 
-**Lemma U.54 (Capacity-Registration Ratio).** From Appendix Q, the PCE-optimal capacity ratio is:
+**Lemma U.54 (Capacity-Registration Ratio on the Residual-Budget Branch).** On the residual-budget, throughput-saturated, ideal-packing branch of Appendix Q (§§Q.2.1–Q.5, on which $C_{\max}^* = 2\ln 2$, $\chi^* = 1$, $\eta^* = 1$), the PCE-optimal capacity ratio is:
 
 $$\frac{C^*_{\max}}{\varepsilon} = \frac{2\ln 2}{\ln 2} = 2$$
 
@@ -1802,7 +1812,7 @@ The predictions are compared against Planck 2018 results (Planck Collaboration 2
 
 ### U.25.2 Falsification Criteria
 
-**Theorem U.69 (Falsification Conditions).** Conditional on Assumptions U.26, U.41, U.48; Identifications U.20, U.44a, U.51; and the fiducial choice $\phi_0 = \phi_{\max}$ so that $N_e = 59.4$ (Result U.60), the primordial-sector predictions would be falsified by any statistically significant measurement lying outside the Appendix U $3\sigma$ theory windows:
+**Theorem U.69 (Falsification Conditions).** Conditional on Assumptions U.26, U.41, U.48, U.56; Identifications U.20, U.44a, U.51; the balanced rate-½ Golay branch (used in Identification U.20 via Definition U.18); the residual-budget branch (used in Proposition U.14 via Lemma U.54); and the fiducial choice $\phi_0 = \phi_{\max}$ so that $N_e = 59.4$ (Result U.60), the primordial-sector predictions would be falsified by any statistically significant measurement lying outside the Appendix U $3\sigma$ theory windows:
 
 1. **Tensor ratio**: $r \notin [0.00271,\,0.00409]$ at $>3\sigma$ (prediction: $r = 0.0034 \pm 0.00023$)
 2. **Spectral index**: $n_s \notin [0.9630,\,0.9696]$ at $>3\sigma$ (prediction: $n_s = 0.9663 \pm 0.0011$)

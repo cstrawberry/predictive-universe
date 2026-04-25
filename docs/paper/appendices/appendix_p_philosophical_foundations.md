@@ -1666,11 +1666,11 @@ $$
 $$
 *At the minimal SPAP cycle, $\varepsilon_{min}=\ln 2$, hence $\mathcal{S}_{min}=\hbar\ln 2$.*
 
-**Corollary P.6.3.2 (Least Action as Minimum Entropy).** *The classical principle of least action is equivalent to minimizing total SPAP entropy production along a trajectory (Corollary Q.0.3):*
+**Corollary P.6.3.2 (Stationary Action as Stationary SPAP Entropy, Fixed-Holonomy-Sector Branch).** *Within a fixed holonomy sector (Definition Q.0.2a), the classical stationary-action condition is equivalent to stationarity of the total SPAP entropy production along a trajectory (Corollary Q.0.3):*
 $$
-\delta\mathcal{S} = 0 \iff \delta\left(\sum_i \varepsilon_i\right) = 0
+\delta\mathcal{S} = 0 \iff \delta\left(\sum_i \varepsilon_i\right) = 0.
 $$
-*Classical paths minimize the number of irreversible predictive cycles.*
+*Whether a given stationary history is a minimum of $\sum_i \varepsilon_i$, a maximum, or a saddle depends on the usual second-variation conditions. Classical Euler-Lagrange histories are therefore stationary points — not automatically minimum points — of the total SPAP entropy functional. The stationary-action principle is the continuum Euler-Lagrange expression of this SPAP stationarity, with minimization obtaining only when the second-variation conditions of Corollary Q.0.3 are additionally satisfied. Variations that change the holonomy sector fall outside this equivalence because the topological winding number contributes discretely to $\mathcal{S}/\hbar = \sum_i \varepsilon_i$ across sectors.*
 
 ---
 
@@ -2089,10 +2089,10 @@ $$
 c \leq \frac{\delta \cdot w_{\max}}{\tau_{\min}}
 $$
 
-In the continuum limit, this finite invariant speed $c$ picks out a family of null directions: the boundary of causal influence. These null cones define a causal structure that, together with the PCE-based continuum limit, leads to an indefinite (Lorentzian) metric $g_{\mu\nu}$ as shown in Theorem P.8.5.
+In the continuum limit, this finite invariant speed $c$ defines an operational causal frontier on the emergent manifold. The promotion of this operational frontier to a Lorentzian principal symbol — and thus to an indefinite metric $g_{\mu\nu}$ with null cones in the strict geometric sense — requires the additional hypotheses O.7.2.1-O.7.2.4 of Appendix O (positive-definite spatial block, entropy-selected time coordinate, second-order continuum principal symbol, nondegenerate hyperbolic cone condition). Under those hypotheses together with the three-spatial-dimensional branch fixed by Theorem Z.11, the Lorentzian signature conclusion is supplied by Theorems O.7a-O.7b; see Theorem P.8.5 below and Corollary 46a in the main text.
 
 
-*Proof.* The minimum time to traverse any network edge is $\Delta t_{xy} \geq \tau_{\min}$. The effective speed along an edge is $v_{xy} = d_{\mathcal{N}}(x,y)/\Delta t_{xy} = \delta w_{xy}/\Delta t_{xy}$. The supremum over all edges gives the maximum propagation speed. This finite, invariant maximum speed geometrically defines null cones—the boundary of causal influence. An indefinite metric signature $(-, +, +, +)$ is required to accommodate both null (lightlike) and non-null (timelike, spacelike) separations. ∎
+*Proof.* The minimum time to traverse any network edge is $\Delta t_{xy} \geq \tau_{\min}$. The effective speed along an edge is $v_{xy} = d_{\mathcal{N}}(x,y)/\Delta t_{xy} = \delta w_{xy}/\Delta t_{xy}$. The supremum over all edges gives the maximum propagation speed, establishing the stated upper bound. The finite invariant maximum speed defines an operational causal frontier; this frontier supplies Hypothesis O.7.2.4 (nondegenerate causal cone) of the Appendix O signature closure theorem. The geometric promotion of the operational frontier to null cones of a Lorentzian metric with signature $(-,+,+,+)$ is the content of Theorem P.8.5 below, under the full hypothesis package of Appendix O. ∎
 
 **Corollary P.8.4 (Speed of Light as Network Parameter).** The speed of light $c$ is not a fundamental constant imposed on the theory but emerges from the ratio of microscopic network parameters: the characteristic interaction length $\delta$ and the minimum processing time $\tau_{\min}$. It reflects the intrinsic time scale of the predictive cycle.
 
@@ -2100,23 +2100,21 @@ In the continuum limit, this finite invariant speed $c$ picks out a family of nu
 
 ## P.8.7 The Emergence of the Lorentzian Signature
 
-**Theorem P.8.5 (Lorentzian Signature from Γ-Convergence).** The Lorentzian signature $(-, +, +, +)$ of the emergent metric is not postulated but derived as a mathematical consequence of instantiating a logically directed, thermodynamically irreversible predictive process in the continuum limit.
+**Theorem P.8.5 (Lorentzian Signature on the Appendix O Hyperbolic-Principal-Symbol Branch).** On the branch satisfying Hypotheses O.7.2.1-O.7.2.4 of Appendix O — a second-order continuum principal symbol, a positive-definite spatial block, an entropy-selected time coordinate, and a nondegenerate hyperbolic cone coinciding with the operational causal frontier — the emergent metric has Lorentzian signature $(-, +, +, +)$. This is not a standalone corollary of finite propagation speed; it is the signature theorem of Appendix O (Theorems O.7a-O.7b, Corollary O.7b.1) instantiated on the three-spatial-dimensional branch fixed by Theorem Z.11, with the operational causal frontier supplied by Theorem P.8.4.
 
-*Proof.* Two independent ingredients fix the Lorentzian signature.
+*Proof.* The four hypotheses O.7.2.1-O.7.2.4 are supplied as follows on this branch.
 
-**(i) Spatial sector (positive definiteness).** By Theorem P.8.4 and Appendix D, the discrete PCE/curvature functionals Γ‑converge to a local continuum functional whose leading spatial-gradient term is a positive quadratic form
+**(i) Spatial sector (Hypothesis O.7.2.1, positive definiteness).** By Theorem P.8.4 and Appendix D, the discrete PCE/curvature functionals Γ‑converge to a local continuum functional whose leading spatial-gradient term is a positive quadratic form
 $$
 \int \langle \nabla_x u,\,A(x)\nabla_x u\rangle\,dx,
 $$
-with $A(x)$ symmetric and positive definite. This determines a Riemannian metric on spatial slices.
+with $A(x)$ symmetric and positive definite. This determines a Riemannian metric on spatial slices and supplies the positive spatial block of Hypothesis O.7.2.1.
 
-**(ii) Temporal sector (cone structure and hyperbolicity).** Locality of ND–RID together with Proposition F.1 yields a finite propagation cone in the discrete theory under its local boundedness and finite-range hypotheses, while Theorem 46 supplies a finite invariant causal speed $c$ for the emergent geometry. Any second‑order local continuum limit compatible with such a cone must be hyperbolic, and its principal symbol vanishes on the null cone. Choosing units so that the maximal geometric signal speed is written as $c$, the characteristic quadratic form can be written as
+**(ii) Temporal sector (Hypotheses O.7.2.2-O.7.2.4).** Irreversibility (Theorem 31) together with Appendix O §O.4 supplies the entropy-selected time coordinate (Hypothesis O.7.2.2). Locality of ND-RID together with Proposition F.1 yields a finite propagation cone in the discrete theory; the second-order continuum principal symbol (Hypothesis O.7.2.3) is assumed on this branch and is the load-bearing structural input. Theorem 46 and Theorem P.8.4 supply the finite operational causal frontier coinciding with the characteristic cone (Hypothesis O.7.2.4). Under the four-hypothesis package, Appendix O Theorem O.7a yields Lorentzian signature $(-,+,+,+)$ for the characteristic quadratic form
 $$
 g^{\mu\nu}\,\xi_\mu\xi_\nu=-\frac{\xi_0^2}{c^2}+\xi^\top A(x)\,\xi,
 $$
-which has signature $(-,+,+,+)$ and therefore $g^{00}<0$ in the $(−,+,+,+)$ convention.
-
-Finally, irreversibility (Theorem 31) selects a **time orientation** (future vs past cone) but does not alter the signature determined by the cone/hyperbolicity. ∎
+and Corollary O.7b.1 yields derived local Lorentz invariance with structure group $SO^+(1,3)$. The time orientation selected by Theorem 31 is fixed by Hypothesis O.7.2.2 without altering the signature. ∎
 
 ---
 
@@ -4094,11 +4092,11 @@ In both cases $\hat{\phi}_{t+1} \neq \phi_{t+1}$: the prediction fails. This is 
 - $\mathcal{E}$: Entropy production functional $S(t_2) - S(t_1)$ for $t_2 > t_1$
 - $\mathcal{P}$: Perspectival structure (self-other partition)
 
-**Theorem P.12.3 (Triad Identity).** For any SPAP-implementing system:
+**Theorem P.12.3 (SPAP Triad Common-Origin Theorem).** For any SPAP-implementing system, the temporal ordering structure $\mathcal{T}$, the SPAP entropy production functional $\mathcal{E}$, and the perspectival self/other partition $\mathcal{P}$ are co-generated by the single underlying SPAP cycle structure (Definition 4). The three aspects satisfy mutual structural coupling:
 
-$$\mathcal{T} \cong \mathcal{E} \cong \mathcal{P}$$
+$$\text{SPAP cycle structure} \Longrightarrow (\mathcal{T}, \mathcal{E}, \mathcal{P}) \text{ co-emerge with pairwise implications},$$
 
-in the sense that specifying any one determines the other two.
+and on any SPAP-implementing system the three structures are consistent with one another in the sense of the pairwise implications proved below. The theorem does not claim literal reconstruction isomorphism: $\mathcal{E}$ as a scalar functional does not uniquely recover $\mathcal{T}$ as a total order without additional closed-system/monotonicity data, nor does $\mathcal{T}$ or $\mathcal{E}$ uniquely recover $\mathcal{P}$ without a subsystem-identification map naming the predictor degrees of freedom.
 
 *Proof.*
 
@@ -4118,13 +4116,15 @@ where $N_{cycles}(t_1, t_2) = \lfloor (t_2 - t_1)/\tau_{min} \rfloor$ counts com
 
 **($\mathcal{P} \to \mathcal{E}$).** Given perspective, entropy production is determined: maintaining the self-other distinction requires ongoing SPAP cycles, each producing $\varepsilon \geq \ln 2$. A perspective cannot be static—it must be continuously maintained through predictive activity, and this activity necessarily produces entropy (Theorem 31).
 
-The mutual determination establishes the isomorphism: $\mathcal{T}$, $\mathcal{E}$, and $\mathcal{P}$ are three aspects of the single underlying SPAP structure, not independent entities that happen to correlate. ∎
+The six pairwise implications establish structural coupling among $\mathcal{T}$, $\mathcal{E}$, and $\mathcal{P}$: the three aspects are co-generated by the SPAP cycle structure (Definition 4), not independent entities that happen to correlate. The pairwise implications are load-bearing under explicit auxiliary data: the $\mathcal{T} \to \mathcal{E}$ step supplies a lower bound on entropy from temporal ordering rather than reconstruction, since actual entropy may exceed the SPAP minimum; the $\mathcal{E} \to \mathcal{T}$ step recovers temporal ordering from cumulative SPAP entropy only on closed systems or systems without sufficient external sinks; and the $\mathcal{T} \to \mathcal{P}$ and $\mathcal{E} \to \mathcal{P}$ steps presuppose a subsystem-identification map that localizes the predictor degrees of freedom. Under these auxiliary data, the three aspects form a coherent SPAP triad with common origin in the Fundamental Predictive Loop. ∎
 
 ### P.12.4 Summary
 
-The SPAP structure produces three inseparable aspects:
+The SPAP structure produces three co-emergent aspects that are structurally coupled through their common origin in the Fundamental Predictive Loop:
 
-$$\boxed{\text{SPAP} \implies \mathcal{T} \cong \mathcal{E} \cong \mathcal{P}}$$
+$$\boxed{\text{SPAP cycle structure} \implies (\mathcal{T}, \mathcal{E}, \mathcal{P}) \text{ co-emerge with pairwise implications}}$$
+
+The pairwise implications are proved in Theorem P.12.3 under explicit auxiliary data (closed-system monotonicity for $\mathcal{E} \to \mathcal{T}$; subsystem-identification for $\mathcal{T} \to \mathcal{P}$ and $\mathcal{E} \to \mathcal{P}$). Literal reconstruction isomorphism is not claimed.
 
 | Aspect | Manifestation | SPAP Origin |
 |:-------|:--------------|:------------|
@@ -4535,22 +4535,22 @@ The center of $\text{Co}_0$ is $\{\pm I_{24}\}$, and $\text{Co}_1 = \text{Co}_0/
 
 ## P.13.5 The Golay Code Structure
 
-### Theorem P.13.12 (PCE Selects the Golay Code)
+### Theorem P.13.12 (Golay Code Selection on the Balanced Rate-½ Branch)
 
 **Reference:** Theorem Z.13 (Appendix Z, Section Z.13)
 
-PCE optimization selects the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24, 12, 8]$.
+On the balanced rate-½ branch — in which the $M = 24$ QFI interface modes split into $k = 12$ information-carrying modes and $n - k = 12$ redundancy modes — coding theory uniquely selects the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24, 12, 8]$. The block length $n = M = 24$ and, on this branch, the rate $R = k/n = 1/2$ fix the input data to the Griesmer bound, after which the Golay code is the unique $[24,12,d_{\max}]$ binary linear code up to equivalence.
 
 *Proof.*
 
 **Step 1 (Block length).** The interface mode count determines block length: $n = M = 24$.
 
-**Step 2 (Rate optimization).** The PCE potential for an $[n, k, d]$ code balances:
+**Step 2 (Balanced rate-½ branch).** The PCE potential for an $[n, k, d]$ code balances:
 - Operational cost: $V_{\text{op}} \propto (n - k)$ (parity overhead)
 - Error protection: $V_{\text{error}}(d)$ (decreasing in $d$)
 - Information capacity: $V_{\text{benefit}} \propto k$
 
-At the PCE-Attractor with isotropic QFI (all modes equivalent), the optimal rate is $k/n = 1/2$, giving $k = 12$.
+On the balanced rate-½ branch (Theorem Z.13 Step 3), this balance is realized at $k/n = 1/2$, giving $k = 12$. The branch condition corresponds to the stability requirement $(1-R)\,C_{\max} = \varepsilon_{SPAP}$ developed in Theorem P.8.9a.2: parity investment per channel use matches the per-cycle SPAP entropy cost, so $(1-R)(2\ln 2) = \ln 2$ yields $R = 1/2$. Whether PCE optimization uniquely selects this equality among admissible $[24,k,d]$ codes — rather than merely rendering it consistent — is a separate theorem-level question not closed by the stated branch hypotheses. On the balanced rate-½ branch, $k = 12$ is fixed and Step 3 proceeds.
 
 **Step 3 (Distance optimization).** For $(n, k) = (24, 12)$, the Griesmer bound [Griesmer 1960] gives:
 $$n \geq \sum_{i=0}^{k-1} \lceil d/2^i \rceil$$
@@ -4591,67 +4591,80 @@ where $g_c$ are glue vectors indexed by Golay codewords. This is a disjoint unio
 
 ## P.13.6 VOA Background
 
-The Vertex Operator Algebra (VOA) framework provides the natural mathematical language for vacuum structure. This identification is derived from PCE principles through the following chain of theorems.
+The Vertex Operator Algebra (VOA) framework provides the natural mathematical language for vacuum structure on the exact-scale conformal / chiral 24-boson branch. The identification is established through a chain of propositions below, each of which imports specific branch assumptions from Appendix U (exact-scale family) and Theorem P.13.5 (mode-count to chiral-boson assignment). The final identification with the Moonshine module $V^\natural$ uses these branch assumptions together with the established mathematical classification theorems of Frenkel-Lepowsky-Meurman and Dong-Griess-Lam.
 
-### Proposition P.13.6.1 (Scale Invariance at PCE Fixed Point)
+### Proposition P.13.6.1 (Virial Stationarity and the Exact-Scale Conformal Branch)
 
-The PCE-Attractor $\rho_0$ is a scale-invariant fixed point.
+The PCE-Attractor $\rho_0$ satisfies the first-variation virial stationarity identity supplied by Theorem U.8a. Exact dilatation symmetry, and hence the conformal/VOA construction of the propositions below, holds only on the exact-scale conformal branch in which the PCE continuum limit admits a genuine smooth family of exact critical points generated by scaling (Theorem U.9), not merely the first-variation virial identity.
 
 *Proof.*
 
 **Step 1 (Fixed point property).** By Definition 15a, the PCE-Attractor is the unique minimum of the PCE potential $V(\rho)$. At this minimum:
-$$\nabla V|_{\rho_0} = 0$$
+$$\nabla V|_{\rho_0} = 0.$$
 
-**Step 2 (Scale-invariant construction).** The PCE potential $V = V_{\text{op}} + V_{\text{prop}} - V_{\text{benefit}}$ (Definition D.1) is constructed from:
+**Step 2 (Scale-invariant ingredients in the PCE potential).** The PCE potential $V = V_{\text{op}} + V_{\text{prop}} - V_{\text{benefit}}$ (Definition D.1) is constructed from:
 - Quantum Fisher Information (scale-invariant metric on state space)
 - von Neumann entropy (scale-invariant functional)
 - Trace operations (scale-independent)
 
-None of these quantities depend on an external length scale.
+None of these functional ingredients depend on an external length scale.
 
-**Step 3 (Scale invariance).** The PCE-Attractor admits dilatation symmetry, and the associated dilation family $\phi^*_\rho(x)=\phi^*(\rho x)$ leaves the continuum action invariant (Theorem U.8a). In particular,
+**Step 3 (Virial stationarity, not scale invariance).** Theorem U.8a supplies the first-variation virial identity
 $$
-\frac{d}{d\rho}S_{\rm cont}[\phi^*_\rho]\bigg|_{\rho=1}=0.
+\left.\frac{d}{d\rho}S_{\rm cont}[\phi^*_\rho]\right|_{\rho=1}=0,
 $$
-$\square$
+for the rescaled family $\phi^*_\rho(x) = \phi^*(\rho x)$. This is a stationarity statement along the rescaling family at $\rho = 1$, not invariance of the action under rescaling. By Remark U.8b, first-variation virial stationarity does **not** imply a Hessian zero mode along dilations. By Theorem U.8c, the pure-coordinate dilatation tangent in the Definition U.4 continuum action is in fact a strict **negative** mode of the Hessian, not a zero mode, so the action strictly decreases under pure-coordinate rescaling at second order.
+
+**Step 4 (Exact-scale branch hypothesis).** Genuine dilatation symmetry in the sense required for a conformal/VOA construction is an additional hypothesis: the existence of a smooth one-parameter family of exact critical points $\rho \mapsto \phi_\rho$ with tangent $\partial \phi_\rho / \partial \ln \rho|_{\rho = 1} = x^\mu \partial_\mu \phi^*$ (Theorem U.9). The exact-scale conformal branch of this proposition assumes such a family exists for the PCE continuum limit. On this branch, Theorem U.9 gives $H \eta_D = 0$ and the continuum action admits a genuine one-parameter dilatation symmetry along its critical locus; the later propositions then construct the CFT/VOA structure from this symmetry. $\square$
 
 ---
 
-### Proposition P.13.6.2 (Conformal Structure from Scale Invariance)
+### Proposition P.13.6.2 (Conformal Structure on the Exact-Scale Two-Dimensional Boundary Branch)
 
-Scale invariance at the PCE-Attractor implies conformal field theory structure.
+On the exact-scale conformal branch of Proposition P.13.6.1 and the two-dimensional boundary branch in which the vacuum degrees of freedom are represented on a two-dimensional chiral conformal slice of the emergent spacetime, the vacuum algebra is described by a vertex operator algebra.
 
 *Proof.*
 
-**Step 1 (Scale invariance consequences).** Scale invariance implies the stress-energy tensor is traceless: $T^\mu_\mu = 0$.
+**Step 1 (Exact-scale branch input).** On the exact-scale conformal branch of Proposition P.13.6.1, the continuum action admits a genuine smooth family of exact critical points generated by dilations. The stress-energy tensor of the effective theory is then traceless: $T^\mu_\mu = 0$.
 
-**Step 2 (Two-dimensional structure).** The vacuum structure is probed by the conformal boundary of the emergent spacetime. By Theorem 47 (Section 11.3), the conformal boundary has dimension $D - 1 = 3$. The relevant CFT lives on a 2-dimensional slice: the worldsheet swept by string-like excitations, or equivalently, the Riemann surface on which modular transformations act. The 24 interface modes (Theorem P.13.5) provide the target space degrees of freedom for this 2D structure.
+**Step 2 (Two-dimensional boundary branch).** By Theorem 47 (Section 11.3), the conformal boundary of the emergent $D = 4$ spacetime has dimension $D - 1 = 3$. The two-dimensional boundary branch assumes that the relevant CFT lives on a two-dimensional chiral slice: the worldsheet swept by string-like excitations, or equivalently, the Riemann surface on which modular transformations act. The 24 interface modes (Theorem P.13.5) provide the target-space degrees of freedom for this 2D structure. The identification of the QFI interface modes with the 2D chiral target-space coordinates is the content of this branch.
 
 **Step 3 (Enhancement to conformal symmetry).** In two dimensions, scale invariance combined with unitarity implies an infinite-dimensional enhancement of the global conformal algebra. The Virasoro algebra, with generators $\{L_n\}_{n \in \mathbb{Z}}$ satisfying $[L_m, L_n] = (m-n)L_{m+n} + \frac{c}{12}(m^3 - m)\delta_{m+n,0}$, emerges as the algebra of local conformal transformations [Polchinski 1988].
 
-**Step 4 (Algebraic axiomatization).** The algebraic axiomatization of 2D conformal field theory is precisely a vertex operator algebra [Huang 1997]. $\square$
+**Step 4 (Algebraic axiomatization).** The algebraic axiomatization of 2D conformal field theory is a vertex operator algebra [Huang 1997]. $\square$
 
 ---
 
-### Proposition P.13.6.3 (Central Charge from Mode Count)
+### Proposition P.13.6.3 (Central Charge on the Chiral 24-Boson Branch)
 
-The central charge of the PCE-optimal CFT is $c = M = 24$.
-
+On the chiral 24-boson branch, in which each of the $M = 24$ QFI-active interface modes is realized as an independent chiral bosonic degree of freedom in the effective 2D theory of Proposition P.13.6.2, the central charge of the PCE-optimal CFT is:
+$$c = M = 24.$$
 
 *Proof.*
 
 **Step 1 (Physical interpretation).** In two-dimensional CFT, the central charge $c$ serves as a measure of degrees of freedom along renormalization-group flow (the $c$-theorem) [Zamolodchikov 1986].
 
-**Step 2 (Mode count).** The PCE-Attractor has $M = 24$ QFI-active interface modes (Theorem P.13.5). Each interface mode corresponds to an independent bosonic degree of freedom in the effective 2D theory, contributing $c = 1$ to the total central charge.
+**Step 2 (Mode count).** The PCE-Attractor has $M = 24$ QFI-active interface modes (Theorem P.13.5).
 
-**Step 3 (Identification).** The CFT central charge equals the mode count:
-$$c = M \times 1 = 24 \quad \square$$
+**Step 3 (Chiral-boson assignment branch).** On the chiral 24-boson branch of this proposition, each QFI-active interface mode is realized as an independent chiral bosonic degree of freedom in the effective 2D theory, contributing $c = 1$ to the total central charge. The assignment "each QFI mode $\mapsto$ one $c = 1$ chiral boson" is the branch rule; the mode count $M = 24$ is theorem-level (Theorem P.13.5).
+
+**Step 4 (Identification).** On this branch, the CFT central charge equals the mode count:
+$$c = M \times 1 = 24. \quad \square$$
+
+
+
+**Remark P.13.6.3.1 (Branch Dependence of the Scale-to-VOA Chain).** The VOA endpoint $c = 24$ depends on three branch assumptions chained through Propositions P.13.6.1–P.13.6.3:
+1. The exact-scale conformal branch (Proposition P.13.6.1): the PCE continuum limit admits a smooth one-parameter family of exact critical points generated by dilations, in the sense of Theorem U.9. Appendix U shows that this is strictly stronger than the virial stationarity supplied by Theorem U.8a; in particular, Theorem U.8c shows the pure-coordinate dilatation direction of the Definition U.4 continuum action is a strict negative mode of the Hessian, so the branch hypothesis is nontrivial.
+2. The two-dimensional boundary branch (Proposition P.13.6.2): the relevant CFT lives on a 2D chiral slice of the conformal boundary, with the 24 QFI interface modes identified with the target-space coordinates of that slice.
+3. The chiral 24-boson branch (Proposition P.13.6.3): each QFI-active interface mode is realized as an independent chiral bosonic degree of freedom, each contributing $c = 1$.
+
+These branches together select the endpoint $V_{\mathrm{PCE}} = V^\natural$ and hence $\mathrm{Aut}(V_{\mathrm{PCE}}) = \mathbb{M}$ on the Moonshine branch. A failure of any of the three branch assumptions changes the endpoint categorically — not by a continuous numerical shift.
 
 ---
 
-### Proposition P.13.6.4 (Holomorphy from PCE Minimality)
+### Proposition P.13.6.4 (Holomorphy from PCE Minimality on the Branches of Propositions P.13.6.1–P.13.6.3)
 
-PCE optimization selects a holomorphic (chiral) VOA over a full CFT.
+On the exact-scale conformal / two-dimensional boundary / chiral 24-boson branches of Propositions P.13.6.1–P.13.6.3, PCE optimization selects a holomorphic (chiral) VOA over a full CFT.
 
 *Proof.*
 
@@ -4663,11 +4676,11 @@ PCE optimization selects a holomorphic (chiral) VOA over a full CFT.
 - Doubled state space dimension at each conformal weight
 
 **Step 3 (PCE cost comparison).** The operational cost satisfies:
-$$V_{\text{op}}(\text{full CFT}) = 2 \cdot V_{\text{op}}(\text{chiral CFT})$$
+$$V_{\text{op}}(\text{full CFT}) = 2 \cdot V_{\text{op}}(\text{chiral CFT}).$$
 
 **Step 4 (Equal benefit).** Both structures describe the same vacuum and achieve equivalent predictive benefit $V_{\text{benefit}}$.
 
-**Step 5 (PCE selection).** By Definition 15, PCE minimizes total cost for given benefit. Therefore PCE selects the minimal structure: holomorphic VOA with $c = 24$. $\square$
+**Step 5 (PCE selection).** By Definition 15, PCE minimizes total cost for given benefit. Therefore, on the branches of P.13.6.1–P.13.6.3, PCE selects the minimal structure: holomorphic VOA with $c = 24$. $\square$
 
 ---
 
@@ -4703,17 +4716,21 @@ For holomorphic VOAs (those with a single irreducible module, namely themselves)
 
 ---
 
-### Corollary P.13.6.6 (VOA Structure is Framework-Derived)
+### Corollary P.13.6.6 (VOA Structure on the Exact-Scale / 2D-Boundary / Chiral-24-Boson Branches)
 
-The identification of vacuum structure with holomorphic $c = 24$ VOA follows from PCE:
+The identification of vacuum structure with holomorphic $c = 24$ VOA follows from PCE on the branch chain of Propositions P.13.6.1–P.13.6.5:
 
-$$\text{PCE minimum} \xrightarrow{\text{P.13.6.1}} \text{Scale invariance} \xrightarrow{\text{P.13.6.2}} \text{CFT} \xrightarrow{\text{algebraic}} \text{VOA}$$
+$$\text{PCE minimum} \xrightarrow[\text{exact-scale branch}]{\text{P.13.6.1}} \text{Genuine dilatation symmetry}$$
 
-$$M = 24 \xrightarrow{\text{P.13.6.3}} c = 24$$
+$$\xrightarrow[\text{2D boundary branch}]{\text{P.13.6.2}} \text{CFT} \xrightarrow{\text{algebraic}} \text{VOA}$$
+
+$$M = 24 \xrightarrow[\text{chiral 24-boson branch}]{\text{P.13.6.3}} c = 24$$
 
 $$\text{PCE minimality} \xrightarrow{\text{P.13.6.4}} \text{Holomorphic}$$
 
 $$\text{Perspective consistency} \xrightarrow{\text{P.13.6.5}} \text{Modular invariant}$$
+
+Each arrow labeled with a branch name imports a branch assumption made explicit in the corresponding proposition. The endpoint $V_{\mathrm{PCE}} = V^\natural$ and hence $\mathrm{Aut}(V_{\mathrm{PCE}}) = \mathbb{M}$ hold on the intersection of these branches on the Moonshine branch of Appendix P.
 
 ---
 
@@ -5574,7 +5591,8 @@ A quantity may have more than one role only when its appearances are different. 
 | Parameter family | Role class | Status class |
 |:-----------------|:-----------|:-------------|
 | $(K_0,d_0,a,b,M,k,D)$ | ExactThreshold / DiscreteMultiplicity | theorem-level on the minimal Appendix Z / attractor branch |
-| $N_g$ | ExactThreshold / DiscreteMultiplicity | theorem-level in the anomaly+CP family-charge class |
+| $N_{\min} = 3$ (minimal admissible generation count) | ExactThreshold / DiscreteMultiplicity | theorem-level as the minimal admissible generation count in the anomaly+CP family-charge class (Theorem R.3.4, Proposition R.3.5f). Appendix R explicitly notes that $N \geq 4$ anomaly-free CP-capable extensions such as $\{a,-a,b,-b\}$ exist. |
+| Exact realized $N_g = 3$ | ExactThreshold / DiscreteMultiplicity | branch theorem on the MDL/PCE minimal-family-count selection branch (Proposition R.3.5(c)-(d)): within the surrogate description-length model with $L_{\mathrm{block}} > 0$ and nondecreasing $L_{\mathrm{mix}}(N)$, the smallest admissible $N$ is selected. Exact realization is stated on the MDL/PCE minimal-family-count selection branch. |
 | $(\Delta_1,\Delta_2,\Delta_3)$ | ThresholdData | canonical local/global split fixed; completed numerical values require the global flag-lift spectral problem |
 | $(\mu_G,\mu_\lambda,\delta_i)$ | SchemeScale / ThresholdData | matching, RG, and finite-shift layer |
 | $(A_{\mathrm{eff}},K,N_{\mathrm{eff}})$ | ReferenceConvention / EmpiricalInput | convention, determinant calculation, or empirical inversion depending on use |
@@ -5583,7 +5601,7 @@ A quantity may have more than one role only when its appearances are different. 
 | flavor normalizations, CKM/PMNS phases, seesaw normalizations | PhenomenologicalKernel / ThresholdData | model or conditional layer unless a cited theorem proves the specific quantity |
 | $(\alpha,\beta,C_{\mathrm{scale}},\Gamma_0)$ and similar environment-sensitive coefficients | CoarseGrainingScale / PhenomenologicalKernel | model- and environment-dependent scaling layer |
 
-*Proof of Corollary P.14.1b.* The first row follows from the minimal Appendix Z / attractor branch: Theorem 15 supplies $K_0=3$, Theorem 23 supplies the lower bound $d_0\ge 8$, Corollary Z.2 fixes the minimal-branch value $d_0=8$, Definition 15a fixes $\varepsilon=\ln 2$, Theorem Z.1 supplies $a=2$, hence $b=d_0-a=6$, Theorem Z.5 supplies $M=24$, Theorem Z.13 supplies $k=12$, and Theorem Z.11 supplies $D=4$. The second row follows from Theorem R.3.4 and Proposition R.3.5f. The flag-lift threshold row follows from Theorem T.18, Proposition T.17a.3a, and Theorem T.69, together with the explicit remaining global spectral problem on $\widetilde X$. The matching/RG row follows from Theorem T.35 and Definition T.19a. The vacuum-prefactor row follows from Corollary U.15b, Corollary U.17a, and Proposition U.12.4a. The $\eta'$ row follows from Definition H.0, Equation H.4b, and Remark H.4. The dark-sector kernel row follows from Equation I.4 and Section I.13. The flavor-model row follows from Proposition R.3.5f and the cited Appendix T flavor constructions. The environment-sensitive row follows from Definition D.1 and Definition 20. Thus each listed family has a fixed role-class ledger, and threshold variables, bridge normalizations, scheme scales, coarse-graining scales, reference conventions, phenomenological kernels, and empirical inputs are not interchangeable. ∎
+*Proof of Corollary P.14.1b.* The first row follows from the minimal Appendix Z / attractor branch: Theorem 15 supplies $K_0=3$, Theorem 23 supplies the lower bound $d_0\ge 8$, Corollary Z.2 fixes the minimal-branch value $d_0=8$, Definition 15a fixes $\varepsilon=\ln 2$, Theorem Z.1 supplies $a=2$, hence $b=d_0-a=6$, Theorem Z.5 supplies $M=24$, Theorem Z.13 supplies $k=12$, and Theorem Z.11 supplies $D=4$. The $N_{\min}$ row follows from Theorem R.3.4 (which classifies the anomaly-cancellation solutions $\sum F_g = 0$ and $\sum F_g^3 = 0$ admitting a physical CKM phase and identifies $\{a,-a,0\}$ with $N = 3$ as the minimal such solution) and Proposition R.3.5f (which records this minimality as the theorem-level content). The exact-realized $N_g$ row follows from Proposition R.3.5(c)-(d), which supplies the MDL surrogate description-length monotonicity argument selecting the smallest admissible $N$ within the anomaly+CP family-charge class. The two rows are separated because Theorem R.3.4 explicitly notes that $N \geq 4$ anomaly-free CP-capable solutions exist (for example $\{a,-a,b,-b\}$), so exact realization of $N_g = 3$ is not closed by anomaly cancellation and CP violation alone and requires the MDL/PCE minimal-family branch. The flag-lift threshold row follows from Theorem T.18, Proposition T.17a.3a, and Theorem T.69, together with the explicit remaining global spectral problem on $\widetilde X$. The matching/RG row follows from Theorem T.35 and Definition T.19a. The vacuum-prefactor row follows from Corollary U.15b, Corollary U.17a, and Proposition U.12.4a. The $\eta'$ row follows from Definition H.0, Equation H.4b, and Remark H.4. The dark-sector kernel row follows from Equation I.4 and Section I.13. The flavor-model row follows from Proposition R.3.5f and the cited Appendix T flavor constructions. The environment-sensitive row follows from Definition D.1 and Definition 20. Thus each listed family has a fixed role-class ledger, and threshold variables, bridge normalizations, scheme scales, coarse-graining scales, reference conventions, phenomenological kernels, and empirical inputs are not interchangeable. ∎
 
 **Convention P.14.1c (Paper-Wide T1/T2/T3 Uncertainty Protocol).** For any reported numerical quantity $Q$, every non-exact numerical dependency in its derivation or comparison is assigned to exactly one of the following uncertainty classes after exact theorem-level definitions are fixed.
 
@@ -5685,7 +5703,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
 | $\mathcal{R}_\ell$ (lepton ratio) | $3$ | $2.889$ | Particle Data Group 2024 | 3.8% |
-| $N_g$ (generations) | $3$ | $3$ | Observed | Exact |
+| $N_g$ (generations) | $3$ (on the MDL/PCE minimal-family-count branch; theorem-level $N_{\min}=3$ is the anomaly+CP minimal admissible count) | $3$ | Observed | Minimal admissible theorem-level; exact on MDL/PCE branch |
 
 **Cosmological (Appendix Y):**
 

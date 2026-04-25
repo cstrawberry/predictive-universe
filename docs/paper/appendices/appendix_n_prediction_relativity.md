@@ -67,11 +67,14 @@ Attempting to increase predictive acceleration beyond this critical rate, $A_{pr
 ## N.4 The Unified Cost of Transgression (UCT)
 
  **Theorem N.UCT (Unified Cost of Transgression).**
- Consider a process where an MPU (or MPU aggregate, with rest mass $m_0$) follows a worldline parameterized by proper time $\tau$ with proper acceleration profile $a(\tau)$, while simultaneously performing a predictive task to achieve performance $PP(\tau)$ and undergoing internal predictive acceleration $A_{pred}(\tau)$ over a proper-time duration $\tau_f$. The total work $W_{\text{tot}}$ required for this joint process is bounded below:
+ Consider a process where an MPU (or MPU aggregate, with rest mass $m_0$) follows a worldline parameterized by proper time $\tau$ with proper acceleration profile $a(\tau)$, while simultaneously performing a predictive task to achieve performance $PP(\tau)$ and undergoing internal predictive acceleration $A_{pred}(\tau)$ over a proper-time duration $\tau_f$. The total work $W_{\text{tot}}$ required for this joint process, on the additive-work bookkeeping branch (under which the kinetic and predictive work components are accounted in disjoint, non-overlapping channels), is decomposed as
 
  $$
- W_{\text{tot}} = W_{\text{kin}} + W_{\text{pred}}
+ W_{\text{tot}} = W_{\text{kin}} + W_{\text{pred}}^{\text{incremental}},
  $$
+
+ where $W_{\text{kin}} = m_0 c^2 (\gamma(v_f) - 1)$ is the kinetic energy added to the rest-mass payload (including the predictor machinery as part of $m_0$) and $W_{\text{pred}}^{\text{incremental}}$ denotes the dissipative operational work performed by predictive operations over the proper-time interval — incremental work not included in the boosted rest energy $m_0 c^2 \gamma$. Under this disjoint accounting, $W_{\text{tot}}$ is bounded below by:
+
 
  $$
  \boxed{
@@ -542,24 +545,34 @@ measured in nats, where $S(\cdot)$ denotes von Neumann entropy [von Neumann 1932
 
 This definition connects directly to the interpretation of entanglement as predictive coupling (Proposition 10, Section 8.6): entangled states maximize mutual information $I(A:B)$ relative to individual entropies for given subsystem mixedness, with maximally entangled pure states achieving $I(A:B) = 2S(\rho_A)$. The quantum mutual information $I(S:E)$ quantifies the total information that $S$ and $E$ share about each other [Nielsen & Chuang 2010]—precisely the "predictive coupling" that enables each subsystem to anticipate the other's behavior. The relational information $\mathcal{I}_{rel}$ thus measures the total predictive coupling between $S$ and the rest of the network.
 
-**Proposition N.4 (Boundary Channel Saturation).** For a system at PCE equilibrium with its boundary, the relational information saturates the total channel capacity:
+**Proposition N.4 (Boundary Channel Saturation on the saturated-boundary branch).** For a system whose system-environment boundary lies on the PCE saturated-boundary branch, the relational information saturates the total channel capacity:
 
 $$
 \mathcal{I}_{rel}(S) = N_{\partial} \times C_{\max}
 \tag{N.21}
 $$
 
-where $N_{\partial}$ is the number of independent ND-RID channels crossing the boundary $\partial S$ (Theorem E.3), and $C_{\max} < \ln d_0$ is the channel capacity per link (Theorem E.2).
+where $N_{\partial}$ is the number of independent ND-RID channels crossing the boundary $\partial S$ (Theorem E.3), and $C_{\max} < \ln d_0$ is the channel capacity per link (Theorem E.2). More generally, a utilization-factor formulation
+$$
+\mathcal{I}_{rel}(S) = q \cdot N_{\partial} \times C_{\max}, \qquad 0 < q \leq 1,
+$$
+captures the partial-utilization branch; the canonical saturated-boundary branch used throughout Appendix N corresponds to $q = 1$.
 
-*Proof.* By Theorem E.3, the boundary supports $N_{\partial} = \sigma_{link} \times \mathcal{A}_{\partial}$ independent channels, where $\mathcal{A}_{\partial}$ is the boundary area and $\sigma_{link} = \chi/(\eta\delta^2)$ is the channel density. Each channel carries at most $C_{\max}$ nats of information (Theorem E.2). 
 
-For a system at PCE equilibrium, the Principle of Compression Efficiency drives the system toward maximum utilization of available predictive resources. In the context of boundary channels, this means the system-environment correlations saturate the available channel capacity, as PCE optimization favors states that maximize mutual information subject to the channel capacity constraints established in Theorem E.2. The total relational information is:
+*Proof.* By Theorem E.3, the boundary supports $N_{\partial} = \sigma_{link} \times \mathcal{A}_{\partial}$ independent channels, where $\mathcal{A}_{\partial}$ is the boundary area and $\sigma_{link} = \chi/(\eta\delta^2)$ is the channel density. Each channel carries at most $C_{\max}$ nats of information (Theorem E.2). The total relational information satisfies the channel-capacity upper bound: 
 
 $$
-\mathcal{I}_{rel} = \sum_{i=1}^{N_{\partial}} C_i \leq N_{\partial} \times C_{\max}
+\mathcal{I}_{rel} = \sum_{i=1}^{N_{\partial}} C_i \leq N_{\partial} \times C_{\max}.
 $$
 
-At PCE equilibrium, the inequality is saturated. This saturation condition reflects PCE optimization: the Principle of Compression Efficiency drives the system toward maximum utilization of available channel capacity (Appendix Q). Unlike standard thermal equilibrium, which maximizes entropy subject to energy constraints alone [Jaynes 1957], PCE equilibrium maximizes mutual information subject to channel capacity constraints through the global optimization mechanism established in Theorem Q.6.1. ∎
+PCE optimization drives the system toward maximum utilization of available channel capacity, giving a utilization factor $q \in (0, 1]$ with $\mathcal{I}_{rel} = q \cdot N_{\partial} \cdot C_{\max}$. On the saturated-boundary branch introduced in the statement of this proposition, $q = 1$ and the inequality is saturated:
+
+$$
+\mathcal{I}_{rel}(S) = N_{\partial} \times C_{\max}.
+$$
+
+The saturated-boundary branch is justified for causal/holographic boundaries by the holographic saturation attractor of Appendix E (Theorem E.8.3 and the boundary-encoding PCE minimum of Theorem E.8.3.2). For generic system-environment boundaries, saturation is a branch assumption of this proposition. Unlike standard thermal equilibrium, which maximizes entropy subject to energy constraints alone [Jaynes 1957], PCE equilibrium maximizes mutual information subject to channel capacity constraints through the global optimization mechanism established in Theorem Q.6.1; this establishes the direction of the saturation pressure but does not force exact saturation for every boundary geometry. ∎
+
 
 ### N.11.2 Open-System Thermodynamics and the KMS Condition
 
@@ -593,38 +606,44 @@ The key insight is that maintaining correlations between system and environment 
 
 **Remark N.4.1: Open vs. Closed Systems.** The continuous processing in Theorem N.4 does not violate the second law of thermodynamics. The system $S$ is explicitly an open system exchanging entropy with its environment $E$. The combined system $S \cup E$ may be closed, but $S$ alone is not. The entropy flow from $S$ to $E$ (and vice versa) maintains the steady state while the total entropy of the closed universe increases monotonically (Appendix O, Theorem O.3).
 
-**Corollary N.4.1 (Entropy Flow Rate).** Maintaining relational information $\mathcal{I}_{rel}$ requires entropy flow to the environment at rate:
+**Corollary N.4.1 (Entropy Flow Rate on the saturated-boundary branch).** On the saturated-boundary branch of Proposition N.4, maintaining relational information $\mathcal{I}_{rel}$ requires entropy flow to the environment at rate:
 
 $$
 \frac{d\mathcal{S}}{d\tau} = \frac{\varepsilon \cdot N_{\partial}}{\tau_{min}} = \frac{\varepsilon \cdot \mathcal{I}_{rel}}{C_{\max} \cdot \tau_{min}}
 \tag{N.24}
 $$
 
-*Proof.* Each of $N_{\partial}$ channels exchanges information at rate $1/\tau_{min}$. Each exchange cycle involves an irreducible entropy cost of $\varepsilon$ nats (Theorem 31), which flows to the environment. From Proposition N.4, $N_{\partial} = \mathcal{I}_{rel}/C_{\max}$. Substituting:
+*Proof.* Each of $N_{\partial}$ channels exchanges information at rate $1/\tau_{min}$. Each exchange cycle involves an irreducible entropy cost of $\varepsilon$ nats (Theorem 31), which flows to the environment. On the saturated-boundary branch of Proposition N.4, $N_{\partial} = \mathcal{I}_{rel}/C_{\max}$. Substituting:
 
 $$
-\frac{d\mathcal{S}}{d\tau} = N_{\partial} \times \frac{\varepsilon}{\tau_{min}} = \frac{\mathcal{I}_{rel}}{C_{\max}} \times \frac{\varepsilon}{\tau_{min}}
+\frac{d\mathcal{S}}{d\tau} = N_{\partial} \times \frac{\varepsilon}{\tau_{min}} = \frac{\mathcal{I}_{rel}}{C_{\max}} \times \frac{\varepsilon}{\tau_{min}}.
 $$
 
-At the PCE-optimal operating point for the PU substrate, Equation E.15 gives $C_{\max}=2\ln 2$. So:
+At the PCE-optimal operating point for the PU substrate, Equation E.15 gives $C_{\max}=2\ln 2$. So on the saturated-boundary branch:
 
 $$
-\frac{d\mathcal{S}}{d\tau} = \frac{\mathcal{I}_{rel}}{2 \tau_{\text{min}}}
+\frac{d\mathcal{S}}{d\tau} = \frac{\mathcal{I}_{rel}}{2 \tau_{\text{min}}}.
 \tag{N.25}
 $$
 
-∎
+On a partial-utilization branch with utilization factor $q < 1$, the rate becomes $\mathcal{I}_{rel}/(2q\tau_{min})$, scaling the mass-information coefficient in Theorem N.5 by $1/q$. ∎
+
 
 ### N.11.3 The Mass-Information Identity
 
-**Theorem N.5 (Mass-Information Equivalence).** A system with relational information content $\mathcal{I}_{rel}$ has inertial mass:
+**Theorem N.5 (Mass-Information Equivalence on the saturated-boundary branch).** On the saturated-boundary branch of Proposition N.4, a system with relational information content $\mathcal{I}_{rel}$ has inertial mass:
 
 $$
 \boxed{m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P = \frac{\mathcal{I}_{rel}}{2} \cdot \frac{L_P}{\delta} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{rel} \cdot m_P}
 \tag{N.26}
 $$
 
-where $\varepsilon$ is evaluated at its minimum $\varepsilon=\ln 2$ (Theorem 31), $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \, L_P$ is the spatial discretization scale (Appendix Q, Equation Q.18), and $m_P = \sqrt{\hbar c/G}$ is the Planck mass.
+where $\varepsilon$ is evaluated at its minimum $\varepsilon=\ln 2$ (Theorem 31), $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \, L_P$ is the spatial discretization scale (Appendix Q, Equation Q.18), and $m_P = \sqrt{\hbar c/G}$ is the Planck mass. On a partial-utilization branch with utilization factor $q < 1$, the absolute mass-information coefficient rescales to $m/q$; dimensionless mass ratios are independent of $q$ under universal calibration.
+
+
+
+**Remark N.5.1 (Branch Dependence and Interaction with Leech Norm-Information Calibration).** The absolute mass-information coefficient $m = \mathcal{I}_{rel}/(2\sqrt{8\varepsilon}) \cdot m_P$ depends on the saturated-boundary branch $q = 1$ introduced in Proposition N.4. Downstream, Definition Z.8f (Appendix Z) identifies Leech lattice excitations with relational information content via the canonical norm-information calibration $\mathcal{I}_{rel}(v) = \gamma \cdot |v|$ with canonical branch value $\gamma = 1$. The two branch parameters are logically distinct: $q$ governs whether boundary channels exactly saturate, while $\gamma$ governs the norm-to-information calibration on the Leech lattice. Absolute mass predictions — including the mass gap $\Delta_{\mathrm{gap}} = 2\mu_0$ (Corollary Z.8g.1), the fundamental mass scale $\mu_0 \approx 0.212 \, m_P$ (Definition Z.8f), and the glueball mass scale relative to $m_P$ (Theorem Z.8h) — scale as $\gamma/q$ under joint branch deformation. Dimensionless mass ratios are independent of both $q$ and $\gamma$ under universal calibration. Branch-independent absolute-mass predictions require both the saturated-boundary lemma ($q = 1$) and the Leech norm-information derivation ($\gamma = 1$).
+
 
 *Proof.*
 
@@ -869,7 +888,12 @@ which is strict whenever $p>0$ and $S(\rho\|\sigma)\in(0,\infty)$. ∎
 
 The equivalence principle asserts that all matter couples to gravity universally—inertial and gravitational mass are identical. Within the PU framework, this universality emerges from the universality of ND-RID contractivity.
 
-**Theorem N.11 (Equivalence Principle from Universal Contractivity).** Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be two simple systems (with $C_{agg} \leq C_{op}$, Definition 30) composed of different matter types. The weak equivalence principle $(m_I/m_G)_1 = (m_I/m_G)_2 = 1$ holds if and only if both systems couple to the ND-RID channel $\mathcal{E}_N$ with the same contractivity factor $f_{RID}$.
+**Theorem N.11 (Equivalence Principle from Universal Contractivity; Sufficient Direction Unconditional, Converse on the Non-Compensation Branch).** Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be two simple systems (with $C_{agg} \leq C_{op}$, Definition 30) composed of different matter types.
+
+(Sufficient direction.) If both systems couple to the ND-RID channel $\mathcal{E}_N$ with the same contractivity factor $f_{RID}$, then on the saturated-boundary mass-information branch the weak equivalence principle $(m_I/m_G)_1 = (m_I/m_G)_2 = 1$ holds.
+
+(Converse, on the non-compensation branch.) On the additional branch under which sector-dependent variations in $f_{RID}$ are not compensated by other sector-dependent terms in the entropy-flow / stress-energy map, sector-dependent $f_{RID}$ generically induces matter-dependent corrections to $m_I/m_G$ and therefore EP violations. Off this branch — for instance, if both $m_I$ and $m_G$ inherit the same functional dependence on $f_{RID}$ through $C_{\max}(f_{RID})$ — sector-dependent $f_{RID}$ may cancel in the ratio $m_I/m_G$ and leave EP intact.
+
 
 *Proof.*
 
@@ -894,9 +918,10 @@ $$
 
 By Theorem N.7, this yields $m_I = m_G$ for all matter types.
 
-**Step 4 (Converse).** Suppose $f_{RID}$ differs between matter sectors: $f_{RID}^{(1)} \neq f_{RID}^{(2)}$. Then the channel capacities differ, the entropy flow rates at fixed $\mathcal{I}_{rel}$ differ, and $m_I/m_G$ would acquire matter-dependent corrections. This contradicts the equivalence principle.
+**Step 4 (Converse on the non-compensation branch).** Suppose $f_{RID}$ differs between matter sectors: $f_{RID}^{(1)} \neq f_{RID}^{(2)}$. The channel capacities $C_{\max}(f_{RID}^{(i)})$ then differ between sectors, and the entropy flow rates at fixed $\mathcal{I}_{rel}$ acquire sector-dependent contributions. On the non-compensation branch — under which these sector-dependent contributions are not exactly offset by matching sector-dependent terms in the stress-energy or relational-information maps — the ratio $m_I/m_G$ acquires matter-dependent corrections, contradicting universal EP. Off the non-compensation branch, $f_{RID}$ variations could in principle cancel between numerator and denominator of $m_I/m_G$, leaving EP undetected.
 
-Therefore, EP holds iff $f_{RID}$ is universal. ∎
+Therefore, on the non-compensation branch, EP holds iff $f_{RID}$ is universal. ∎
+
 
 **Corollary N.11.1 (EP Violations as DPI Violations).** Any measured violation of the equivalence principle:
 
@@ -907,11 +932,14 @@ $$
 implies sector-dependent departures from universal ND-RID contractivity. To leading order in the deviation:
 
 $$
-\eta = \frac{\Delta f_{RID}}{f_{RID}} + O\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2 = \frac{f_{RID}^{(1)} - f_{RID}^{(2)}}{f_{RID}} + O\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2
+\eta = \chi_{\text{EP}} \cdot \frac{\Delta f_{RID}}{f_{RID}} + O\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2 = \chi_{\text{EP}} \cdot \frac{f_{RID}^{(1)} - f_{RID}^{(2)}}{f_{RID}} + O\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2
 \tag{N.35}
 $$
 
-*Proof.* From Theorem N.11, mass ratios depend on $f_{RID}$ through the channel capacity $C_{\max}(f_{RID})$. For small sector-dependent variations $\Delta f_{RID} \ll f_{RID}$, Taylor expansion of $m_I/m_G$ yields a linear leading term. The coefficient depends on the specific functional form of the $f_{RID}$-dependence but is $O(1)$ for generic smooth dependence, establishing the scaling to leading order. ∎
+where $\chi_{\text{EP}}$ is an $O(1)$ response coefficient determined by the functional form of the $f_{RID} \mapsto m_I/m_G$ map on the non-compensation branch.
+
+*Proof.* From Theorem N.11 on the non-compensation branch, mass ratios depend on $f_{RID}$ through the channel capacity $C_{\max}(f_{RID})$ via the saturated-boundary mass-information branch. For small sector-dependent variations $\Delta f_{RID} \ll f_{RID}$, Taylor expansion of $m_I/m_G$ yields a linear leading term whose coefficient $\chi_{\text{EP}}$ depends on the specific functional form of the $f_{RID}$-dependence and is $O(1)$ for generic smooth dependence; an unconditional value $\chi_{\text{EP}} = 1$ is not implied by Theorem N.11 alone and requires explicit specification of the $f_{RID} \mapsto m_I/m_G$ map. ∎
+
 
 ### N.11.5a.3 Information-Theoretic Interpretation
 
@@ -967,14 +995,15 @@ $$
 
 For systems with high internal complexity ($C_{agg} > C_{op}$), the equivalence principle receives corrections.
 
-**Theorem N.8 (Complexity Correction to Equivalence Principle).** A system with Consciousness Complexity CC (Definition 30) experiences a fractional deviation between inertial and gravitational mass:
+**Theorem N.8 (Complexity Correction to the Equivalence Principle on the CC-Gravitational Response Branch).** On the CC-gravitational response branch — comprising (a) the Appendix S gravitational-decoherence model with rate $\Gamma_{\mathrm{deco}} = (\Delta E/\hbar) K_{\mathrm{eff}} P_{context}$ at the system's boundary, (b) the saturated-boundary mass-information branch (Theorem N.5) for inertial mass, and (c) the retained-energy / instantaneous-stress-energy convention of Theorem L.3 for the gravitational source — a system with Consciousness Complexity CC (Definition 30) receives a model-level fractional deviation between inertial and gravitational mass:
 
 $$
 \frac{m_G - m_I}{m_I} = \delta_C \approx K_\Gamma \cdot P_{context}
 \tag{N.38}
 $$
 
-where $K_\Gamma$ is the gravitational decoherence coefficient (Appendix S, Equation S.60) and $P_{context}$ is the power associated with maintaining the CC context.
+where $K_\Gamma$ is the gravitational decoherence coefficient (Appendix S, Equation S.60) and $P_{context}$ is the power associated with maintaining the CC context. The decomposition $\delta_C = \delta_G - \delta_I$ and the explicit form of $K_\Gamma$ require the single coupled stress-energy / entropy-flow response model of this branch; alternative bookkeeping (e.g., counting CC processing energy entirely within $m_I$ via Theorem N.5, or entirely within $m_G$ via the stress-energy contribution) yields different coefficient assignments.
+
 
 *Proof.*
 
@@ -998,13 +1027,14 @@ $$
 m_I^{(CC)} = m_I \cdot (1 + \Gamma_{deco} \cdot \tau_{min}) = m_I(1 + \delta_I)
 $$
 
-**Step 4 (Gravitational mass from total stress-energy).** The gravitational mass includes contributions from both the baseline relational information and the CC processing power:
+**Step 4 (Gravitational mass from total stress-energy on the retained-energy convention).** On the retained-energy convention of Theorem L.3 with $E_{\text{grav}}^{\text{inst}} = \eta_{\mathrm{ret}} P_{context} \tau_c$, the gravitational mass receives the CC contribution
 
 $$
-m_G^{(CC)} = m_I + \frac{P_{context}}{c^2} \cdot \tau_c = m_I(1 + \delta_G)
+m_G^{(CC)} = m_I + \frac{\eta_{\mathrm{ret}} P_{context} \tau_c}{c^2} = m_I(1 + \delta_G),
 $$
 
-where $\tau_c$ is the context coherence time.
+where $\tau_c$ is the context coherence time and $\eta_{\mathrm{ret}} \in (0,1]$ is the retention fraction (idealized fully retained estimate uses $\eta_{\mathrm{ret}} = 1$). In dissipative steady state, $\eta_{\mathrm{ret}}$ must be computed from the actual instantaneous stress-energy distribution rather than from cumulative throughput.
+
 
 **Step 5 (Net deviation).** The fractional difference is:
 
@@ -1074,17 +1104,20 @@ $$
 
 where $d_{ij}$ is the Euclidean distance between generation roots in the $E_8$ root system (Appendix R, Section R.2) and $\alpha_{IR} = 1.418$ is the hierarchy coefficient (Theorem T.24.2.1).
 
-*Proof.* By Proposition N.5, mass ratios equal information ratios. The $E_8$ geometric structure (Appendix R) determines how relational information distributes across generations. At the PCE-Attractor, the probability of occupying a generation vacuum $|g_i\rangle$ follows a Gaussian distribution on the Grassmannian Gr(2,8) with hierarchy coefficient $\alpha_{IR}$ (Theorem T.39):
+*Proof.* By Proposition N.5, mass ratios equal information ratios on the saturated-boundary mass-information branch. The $E_8$ geometric structure (Appendix R) determines how relational information distributes across generations. At the PCE-Attractor, the probability of occupying a generation vacuum $|g_i\rangle$ follows a Gaussian distribution on the Grassmannian Gr(2,8) with hierarchy coefficient $\alpha_{IR}$ (Theorem T.39):
 
 $$
 P(g_i) \propto e^{-\alpha_{IR} \cdot d^2_{E_8}}
 $$
 
-where $d^2_{E_8}$ denotes squared Euclidean distances in the $E_8$ root lattice. The relational information content scales with this probability:
+where $d^2_{E_8}$ denotes squared Euclidean distances in the $E_8$ root lattice. On the probability-to-relational-information calibration branch — under which the relational information content of a generation vacuum is identified with its occupation probability up to a multiplicative constant —
 
 $$
-\mathcal{I}_i \propto P(g_i)
+\mathcal{I}_i \propto P(g_i).
 $$
+
+Alternative calibrations (e.g., Shannon information content $\mathcal{I}_i \propto -\ln P(g_i)$, entropy contribution $\mathcal{I}_i \propto P_i \ln(1/P_i)$, or Fisher-metric-based assignments) would yield different mass-ratio formulas; this theorem expresses the Appendix T mass hierarchy in the language of the chosen calibration rather than independently deriving the hierarchy from the mass-information identity alone.
+
 
 The three generations form a triangle in $E_8$ root space (Appendix T, Theorem T.42.2a). The mass hierarchy arises through the Path Additivity Principle (Theorem T.42.2a): the physical mass ratio $\ln(m_j/m_i)$ is computed along the dominant Yukawa tunneling path connecting generations sequentially rather than directly. For the charged lepton triad with $E_8$ distances $(d^2_{\tau\mu}, d^2_{\mu e}, d^2_{\tau e}) = (2, 4, 6)$:
 

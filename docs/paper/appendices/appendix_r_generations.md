@@ -390,13 +390,13 @@ Therefore the minimal anomaly-free solution that permits CP violation is $N=3$ w
 
 (b) CP violation requires at least three generations with complex mixing. The pattern $\{a, -a, 0\}$ is the simplest charge configuration that permits this structure.
 
-(c) Within the surrogate description-length model
+(c) Suppose the realized family-count objective is taken to equal the surrogate expression
 $$
-L_{\mathrm{model}}(N)\ \ge\ L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N),
+L_{\mathrm{fam}}(N) \;=\; L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N),
 $$
-with $L_{\mathrm{block}}>0$ and $L_{\mathrm{mix}}(N)$ nondecreasing, the description-length term is minimized at the smallest admissible value of $N$.
+with $L_{\mathrm{block}} > 0$ and $L_{\mathrm{mix}}(N)$ nondecreasing on the admissible set $\{N \in \mathbb{N} : N \ge 3\}$. Then $L_{\mathrm{fam}}$ is strictly increasing in $N$ and is uniquely minimized at the smallest admissible value $N=3$.
 
-(d) Consequently, when the admissible class is restricted to anomaly-free family-charge assignments that permit a physical CKM phase, the MDL surrogate selects $N=3$ as the minimal admissible choice.
+(d) Consequently, when the admissible class is restricted to anomaly-free family-charge assignments that permit a physical CKM phase, and when the realized family count is selected by the surrogate objective of part (c), the MDL surrogate selects $N=3$ as the minimal admissible choice.
 
 *Proof.*
 
@@ -404,13 +404,21 @@ with $L_{\mathrm{block}}>0$ and $L_{\mathrm{mix}}(N)$ nondecreasing, the descrip
 
 (b) With $N=2$, the quark mixing matrix is $2\times 2$ and any complex phases can be removed by rephasing, so the rephasing-invariant Jarlskog quantity vanishes. With $N=3$, a physical rephasing-invariant phase exists, and CP violation is possible.
 
-(c) The lower bound
+(c) For every $N \ge 3$,
 $$
-L_{\mathrm{model}}(N)\ \ge\ L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N)
+L_{\mathrm{fam}}(N+1) - L_{\mathrm{fam}}(N)
+\;=\;
+L_{\mathrm{block}} + \bigl(L_{\mathrm{mix}}(N+1) - L_{\mathrm{mix}}(N)\bigr).
 $$
-together with $L_{\mathrm{block}}>0$ and nondecreasing $L_{\mathrm{mix}}(N)$ shows that the surrogate description-length penalty is strictly increasing in $N$.
+Since $L_{\mathrm{block}} > 0$ and $L_{\mathrm{mix}}(N+1) - L_{\mathrm{mix}}(N) \ge 0$, the right-hand side is strictly positive. Hence $L_{\mathrm{fam}}$ is strictly increasing on $\{3,4,5,\ldots\}$, and its unique minimum is attained at $N=3$.
 
 (d) Therefore, among anomaly-free models in this surrogate class that can realize a physical CKM phase, the smallest admissible value of $N$ is preferred, namely $N=3$. This is the conclusion established by the argument. ∎
+
+**Remark R.3.5.1 (Surrogate-Equality versus Lower-Bound Formulation).** The selection statement in Proposition R.3.5 relies on the surrogate expression $L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N)$ being taken as the realized family-count objective, not merely as a lower bound on it. A non-monotone objective satisfying only
+$$
+L_{\mathrm{model}}(N) \;\ge\; L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N)
+$$
+can in principle attain its minimum at an interior value $N > 3$, because a strictly increasing lower bound does not force the bounded quantity to be monotone. For example, the assignment $L(3)=100$, $L(4)=5$, $L(N)=N$ for $N \ge 5$ respects the lower bound $B(N)=N$ for every $N \ge 3$ yet is minimized at $N=4$. Proposition R.3.5 therefore establishes the selection result strictly within the surrogate class in which $L_{\mathrm{fam}}$ equals the displayed additive-monotone expression; it establishes minimal admissibility, while exact realized multiplicity is confined to the surrogate-objective selection branch. This is consistent with the theorem-model boundary recorded in Proposition R.3.5f: the theorem-level structural content of the generation sector is minimal admissibility within the anomaly+CP class of Theorem R.3.4; exact realized $N_g = 3$ is on the surrogate-objective selection branch defined in part (c) above.
 
 **Corollary R.3.5a** (Golay Correction Radius Equals Generation Count). The Golay correction radius equals the minimal generation count:
 $$
@@ -602,15 +610,15 @@ These 240 roots provide maximal symmetric discrete structure, ensuring uniform l
 
 #### R.4.2.1.2 Golay Code from PCE Error Optimization
 
-**Theorem R.4.4 (Golay Code from PCE Error Optimization).**
+**Theorem R.4.4 (Golay Code from PCE Error Optimization on the Balanced Rate-½ Branch).**
 
-The $M = 24$ interface modes at the PCE-Attractor (Definition 15a) require error-correcting organization. The unique PCE-optimal structure is the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24, 12, 8]$.
+On the balanced rate-½ branch — under which the $M = 24$ interface modes at the PCE-Attractor (Definition 15a) split into $k = 12$ information-carrying modes and $n - k = 12$ redundancy modes (the same branch supplied by Theorem P.13.12 in Appendix P) — coding theory uniquely selects the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24, 12, 8]$ as the PCE-optimal error-correcting structure.
 
 *Proof.*
 
 **Step 1 (Block length constraint).** The block length is $n = M = 24$, determined by the QFI mode count (Theorem Z.5): $M = 2ab = 2 \times 2 \times 6 = 24$.
 
-**Step 2 (Rate selection).** Under interface isotropy (Appendix Z, Theorem Z.5), Appendix Z (Theorem Z.13b, Steps 3–4) shows that the PCE code objective is minimized at $k=n/2$. With $n=24$ this yields $k=12$, i.e. rate $R=1/2$.
+**Step 2 (Rate selection on the balanced rate-½ branch).** Under interface isotropy (Appendix Z, Theorem Z.5), Appendix Z (Theorem Z.13b, Steps 3–4) shows that on the balanced rate-½ branch the PCE code objective is minimized at $k = n/2$, giving $k = 12$ and rate $R = 1/2$ for $n = 24$. Whether PCE optimization uniquely selects this rate among admissible $[24, k, d]$ codes — rather than merely rendering it consistent — is the open rate-selection question flagged at Theorem P.13.12; the proof proceeds on the balanced rate-½ branch and inherits this branch dependency.
 
 **Step 3 (Distance maximization).** With constraints $(n, k) = (24, 12)$ and symmetric noise, minimizing $L[C]$ reduces to maximizing the minimum distance $d$.
 
@@ -1196,11 +1204,11 @@ Before evaluating experimental agreement, we clarify how this appendix advances 
 | **Mass Hierarchy** | PCE minimality (qualitative order) | $E_8$ geodesic distances (quantitative ratios) |
 | **Predictions** | $N=3$, hierarchical pattern | Discrete $\mathcal{R}$ values: $\left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$ |
 | **Mixing Angles** | Small (qualitative statement) | Exponential suppression $\exp(-d^2/2\sigma^2)$ with $d^2$ from geometry |
-| **Free Parameters** | Family charge unit $a$ (integer) | **Zero** ($\mathcal{R}$ is ratio of root distances) |
+| **Free Parameters** | Family charge unit $a$ (integer) | **Zero on the $E_8$-root-vacuum branch** ($\mathcal{R}$ is ratio of root distances once the discrete root triad is selected; vacuum-root identification is a branch input from R.5.2) |
 | **Experimental Test** | Verify $N=3$ | Measure $\mathcal{R}$ in each fermion sector |
 | **Success Metric** | Correct generation count | $\mathcal{R}_\ell$: 3.8% agreement with discrete value 3 |
 
-**Key Advancement:** The addition of $E_8$ geometry transforms generation structure from a "why three?" explanation to a "what mass ratios?" prediction engine with no adjustable parameters. The discrete nature of root distances in $E_8$ provides falsifiable predictions distinct from phenomenological fits.
+**Key Advancement:** The addition of $E_8$ geometry transforms generation structure from a "why three?" explanation to a "what mass ratios?" prediction engine with no continuously adjustable parameters on the $E_8$-root-vacuum and diagonal-alignment Gaussian branch. The discrete nature of root distances in $E_8$ provides falsifiable predictions distinct from phenomenological fits within that branch.
 
 ### R.6.1 Observational Data and Theoretical Predictions
 
@@ -1386,7 +1394,7 @@ strongly suggests three generations are fundamentally required rather than envir
 *   **PCE Selection:** The Principle of Compression Efficiency selects for physically viable sectors by enforcing non-Abelian charge neutrality via the **light sublattice** and requiring anomaly cancellation for an emergent family symmetry $U(1)_F$.
 *   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$ (Sections R.3–R.4.1). Section R.4.2 and the factorization $M = 24 = 8 \times 3$ provide structural compatibility checks rather than a second independent derivation.
 *   **Interface Modes:** The number 24 appears independently in interface mode count (**Appendix Z, Theorem Z.5**), Leech lattice dimension, and Golay code dimension (**Appendix Z, Theorem Z.13**), reflecting deep information-geometric optimality.
-*   **Mass Hierarchy:** $E_8$ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with zero continuously adjustable parameters.
+*   **Mass Hierarchy:** On the $E_8$-root-vacuum and diagonal-alignment Gaussian branch (R.5.2–R.5.4), $E_8$ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with zero continuously adjustable parameters once the discrete root triad is selected. Whether the PCE potential's three vacua lie exactly at an $E_8$ root triad is a separate selection question not fully closed by this theorem stack.
 *   **Phenomenological Success:** Charged lepton sector shows $\mathcal{R}_\ell \approx 2.889$, within 3.8% of the discrete value 3, strongly supporting the $E_8$ geometric mechanism.
 *   **Masses and Mixings:** A PCE-compatible potential on the Perspective Space creates distinct vacuum states for each generation. Yukawa couplings arise from the overlap of Gaussian wavepackets centered at these vacua, naturally producing hierarchical masses and small CKM mixing angles controlled by the geodesic distances between the vacua. The same mechanism allows for large PMNS mixing if the leptonic vacua have smaller separations or different Hessian ratios.
 *   **Unified Origin:** The generation structure shares a common origin with gauge structure—both arise from the topology and symmetries of the fundamental MPU state space as optimized by PCE.

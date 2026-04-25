@@ -8,9 +8,9 @@ The Predictive Universe framework, particularly the Consciousness Complexity (CC
 - ND-RID irreversibility: $\varepsilon \geq \ln 2$ (Theorem 31).
 - Reflexivity Constraint: $\kappa_r > 0$ (Theorem 33).
 - PCE equilibrium reached (Definition 15a).
-- Gauge sector realized as $G_{SM}$ (Theorem G.8.4b).
-- Cosmological sector uses the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ (Theorem U.16) only as a branch-dependent reference convention together with the stated prefactor convention of Corollary U.15b; Theorem U.8c blocks a theorem-level pure-dilatation realization of that branch in the current continuum action.
-- Mapping constants use canonical Bures/Fisher normalization (Appendix T, Section T.24).
+- Gauge sector realized as $G_{SM}$ on the Appendix G capacity/anomaly/hypercharge branch (Theorem G.8.4b, with the Lagrangian gauge-realization branch for the generator bound).
+- Cosmological sector uses the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ (Theorem U.16) only as a branch-dependent reference convention together with the stated prefactor convention of Corollary U.15b; Theorem U.8c blocks a theorem-level pure-dilatation realization of that branch in the Definition U.4 continuum action.
+- Mapping constants use canonical Bures/Fisher and flavor-geometry normalizations (Appendix T, Section T.24), including the stated Golay, weak-left, Bures-gauge, Yukawa-overlap, and Berry-profile branches.
 - Uncertainty budgets follow the paper-wide canonical T1 (truncation), T2 (threshold/vacuum), T3 (scheme/mapping) decomposition of Appendix T.25.5.3.
 - External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
 
@@ -216,12 +216,12 @@ Using representative achievable values of $|\Delta\alpha|\!\lesssim\!10^{-39}\,\
 $|\Delta P|_{\rm EM}\ \lesssim\ 2.68\times 10^{-13}\,T$ (with $T$ in seconds). This yields $|\Delta P|_{\rm EM} \lesssim 2.7\times 10^{-13}$ at $T=1\,\mathrm{s}$, and $9.6\times 10^{-10}$ at $T=1\,\mathrm{hr}$. Consequently, any observed $|\Delta P|\gtrsim 10^{-6}$ would lie far above this Stark-channel bound under the stated residual-intensity estimate; attributing such a signal to ordinary electromagnetism would therefore require some additional uncontrolled mechanism not modeled by Eq. (81). In contrast, the PU framework predicts $|\Delta P|_{\rm PU}$ could potentially reach $\sim 10^{-4}$ (assuming $\mathrm{CC}(S) \sim 10^{-4}$).
 
 
-**13.5 Prediction/Protocol 3: Exploratory Bell Tests / Statistical FTL Search**
+**13.5 Prediction/Protocol 3: Exploratory Bell Tests / Statistical FTL Search (Two-Branch)**
 
-Addresses the most speculative prediction: potential statistical FTL influence mediated by CC acting on entangled systems (Postulate 3).
+Addresses the most speculative prediction: potential statistical FTL influence mediated by CC acting on entangled systems (Postulate 3). The protocol targets the nonlocal/state-mediated branch of Postulate 3, on which Bob's marginal $P(b)$ can shift with Alice's context; the local CPTP branch preserves no-signaling and permits only joint-correlation changes detectable after classical comparison of records.
 
-*   **Objective:** Sensitive search for statistical dependence of Bob's local measurement outcomes on Alice's remote context $\mathrm{context}_S$ (associated with system $S_A$ at her station), with A and B space-like separated. Secondary search for context-dependent changes in Bell parameters.
-*   **Theoretical Basis:** Postulate 3 allows Alice's context $C_A$ to influence Bob's marginal probabilities $P_{\mathrm{obs}}(b|B, C_A)$, respecting Postulate 2 (no deterministic signaling). Detection requires $N \propto 1/\mathrm{CC}(S_A)^2$ trials (Theorem 40).
+*   **Objective:** Sensitive search for preregistered statistical dependence of Bob's local measurement outcomes on Alice's remote context $\mathrm{context}_S$ (associated with system $S_A$ at her station), with A and B space-like separated. On the local CPTP branch, only joint/conditional correlations after classical comparison can vary; on the nonlocal/state-mediated FTL branch, Bob's marginal itself can shift. Secondary search for context-dependent changes in Bell parameters.
+*   **Theoretical Basis:** Postulate 3 defines both branches. On the local CPTP branch, Bob's marginal probabilities are invariant by standard no-signaling; on the nonlocal/state-mediated FTL branch, Alice's context $C_A$ can shift Bob's marginal $P_{\mathrm{obs}}(b|B,C_A)$ while respecting Postulate 2 (no deterministic signaling). Detection of a marginal shift requires $N \propto 1/\mathrm{CC}(S_A)^2$ trials (Theorem 40); joint-correlation tests require classical comparison of records.
 *   **Experimental Setup:**
     1.  **Entanglement Source:** High-quality, stable source distributing entangled pairs to space-like separated stations (Alice, Bob).
     2.  **Measurement Stations (A, B):** Standard Bell test apparatus (independent, random settings $a, b$). High efficiency desirable. The setting generators are device‑independent and statistically independent of system $S$ and any hidden variables.
@@ -236,7 +236,7 @@ Addresses the most speculative prediction: potential statistical FTL influence m
     *   **Primary Focus (Statistical Influence):** Compare Bob's marginal probabilities $P(o_B | b, C_{A,k})$ across contexts $k$. Test the null hypothesis $H_0: P(o_B | b, C_{A,k=1}) = P(o_B | b, C_{A,k=2})$. Rejection supports Postulate 3. Estimate the shift $\Delta P_{marginal} = |P(o_B | b, C_{A,1}) - P(o_B | b, C_{A,2})|$. By Theorem 36, this shift is bounded by $\Delta P_{marginal} \lesssim \mathrm{CC}(S_A)$. Detection requires $N_{int} \gtrsim O(1/\mathrm{CC}(S_A)^2)$ (Theorem 40).
     *   **Secondary Analysis (Correlations):** Calculate correlations $E(a,b)_k$ and Bell parameters $S_{CHSH, k}$ conditioned on context $k$. Look for differences $S_{CHSH, k=1} \neq S_{CHSH, k=2}$.
     *   **Systematic Error Control (Extreme Rigor):** Exclude conventional communication (light leaks, EM, acoustic), detector/setting correlations with $C_{A,k}$, statistical loopholes, biases.
-*   **Feasibility Assessment:** Extremely challenging. Requires state-of-the-art entanglement/measurement technology, robust space-like separation. Controlling systematics to demonstrate statistical FTL is extraordinarily difficult. Required statistics $N \propto 1/\mathrm{CC}(S_A)^2$ can be immense. Highly exploratory; positive indication needs exceptional scrutiny/replication.
+*   **Feasibility Assessment:** Extremely challenging. Requires state-of-the-art entanglement/measurement technology, robust space-like separation. Controlling systematics to demonstrate statistical FTL on the nonlocal/state-mediated branch is extraordinarily difficult. Required statistics $N \propto 1/\mathrm{CC}(S_A)^2$ can be immense. Highly exploratory; positive indication needs exceptional scrutiny/replication.
 
 **13.6 Staged Experimental Approach and General Considerations**
 
@@ -333,15 +333,15 @@ The framework quantities—$a = 2$, $b = 6$, $d_{\text{Golay}} = 8$, $|v|^2_{\mi
 
 Beyond the CC-specific predictions of Sections 13.1–13.5, the PU framework makes a structural prediction concerning optimal quantum error correction: the parameters of the uniquely optimal error-correcting code should coincide with the PCE-Attractor structure derived in Appendix Z. This prediction has empirical support from existing quantum computing research, providing an independent validation pathway for the framework's core mathematical architecture.
 
-### 13.9.1 Theorem 54 (PCE-Optimal Error Correction Parameters)
+### 13.9.1 Theorem 54 (PCE-Optimal Error Correction Parameters on the Balanced Golay Branch)
 
-Within the binary linear code class analyzed in Appendix Z and Appendix R, the Principle of Compression Efficiency (Definition 15), applied to the $M = 24$ QFI-active interface modes at the PCE-Attractor (Definition 15a), selects error-correcting code parameters $[n, k, d] = [24, 12, 8]$.
+Within the binary linear code class analyzed in Appendix Z and Appendix R, and on the balanced rate-$\tfrac{1}{2}$ Golay branch, the $M=24$ QFI-active interface modes at the PCE-Attractor determine the code parameters $[n,k,d]=[24,12,8]$. The mathematical uniqueness of the extended Golay code is theorem-level once the balanced split $k=12$ is fixed.
 
 *Proof.* Theorem Z.5 fixes the interface mode count to
 $$
 n = M = 2ab = 2 \times 2 \times 6 = 24.
 $$
-Theorem Z.13b proves that, under interface isotropy at the PCE-Attractor, the PCE code objective is minimized at the symmetric point $k=n/2$, hence
+On the balanced Golay branch, the symmetric point is $k=n/2$, hence
 $$
 k = 12.
 $$
@@ -349,11 +349,11 @@ With $(n,k)=(24,12)$ fixed, Theorem R.4.4 applies the Griesmer bound to binary l
 $$
 d_{\max}=8.
 $$
-The same theorem records that the extended binary Golay code $\mathcal{G}_{24}$ uniquely achieves $d=8$ up to code equivalence. Therefore the PCE-optimal binary-linear code parameters are $[24,12,8]$. ∎
+The same theorem records that the extended binary Golay code $\mathcal{G}_{24}$ uniquely achieves $d=8$ up to code equivalence. Therefore the branch-selected binary-linear code parameters are $[24,12,8]$. ∎
 
 ### 13.9.2 Corollary 54.1 (Code-Substrate Alignment Hypothesis)
 
-If the physical quantum substrate exhibits structure aligned with the PCE-Attractor, then error-correcting codes matching the PCE-optimal parameters $[24, 12, 8]$ should demonstrate superior performance—potentially exceeding predictions based solely on mathematical distance bounds—compared to codes with different structural parameters.
+If the physical quantum substrate exhibits structure aligned with the PCE-Attractor, then error-correcting codes matching the balanced-Golay parameters $[24,12,8]$ are predicted to demonstrate superior performance—potentially exceeding predictions based solely on mathematical distance bounds—compared to codes with different structural parameters.
 
 *Rationale:* Standard coding theory establishes that the Golay code saturates mathematical bounds (Hamming, Griesmer, Singleton). However, if the PCE-Attractor structure reflects genuine physical substrate organization, codes aligned with this structure may benefit from reduced effective noise, improved syndrome extraction fidelity, or enhanced logical gate performance. This creates a discriminating prediction between PU and standard quantum information theory.
 
@@ -399,29 +399,29 @@ These mathematical properties suggest the code occupies a special position in th
 
 ### 13.9.4 Theoretical Interpretation: Why the Golay Code?
 
-The PU framework provides a principled explanation for Golay optimality:
+The PU framework provides a principled branch explanation for Golay optimality:
 
-**Standard Theory:** The Golay code is optimal because it saturates mathematical bounds. This is correct but does not explain *why* these particular bounds are physically relevant or why nature should "prefer" this structure.
+**Standard Theory:** The Golay code is optimal because it saturates mathematical bounds. This is correct but does not explain *why* these particular bounds are physically relevant or why this structure is selected.
 
 **PU Explanation:** The Golay code parameters emerge necessarily from the PCE-Attractor structure:
 
 1. $n = 24$ from QFI mode count $M = 2ab$ (Theorem Z.5)
-2. $k = 12$ from PCE symmetric optimization at rate $R = 1/2$ (Theorem Z.13b)
+2. $k = 12$ from the balanced rate-$1/2$ signal/parity branch
 3. $d = 8$ from maximum distance at these constraints (Theorem R.4.4)
 
-The code's exceptional properties—self-duality, Mathieu group $M_{24}$ symmetry, connection to the Leech lattice $\Lambda_{24}$—are consequences of this fundamental alignment, not coincidences.
+The code's exceptional properties—self-duality, Mathieu group $M_{24}$ symmetry, connection to the Leech lattice $\Lambda_{24}$—are consequences of this branch alignment, not independent coincidences.
 
 ### 13.9.5 Theorem 55 (Golay-Leech-Attractor Compatibility Chain)
 
 The PCE-Attractor mode count $M=24$ enters three linked constructions:
 $$
-M=24 \xrightarrow{\text{Theorem Z.13b}} \mathcal{G}_{24},\qquad
+M=24 \xrightarrow{\text{balanced Golay branch}} \mathcal{G}_{24},\qquad
 \mathcal{G}_{24} \xrightarrow{\text{Lemma R.4.5}} \Lambda_{24},\qquad
-M=24=K(D) \xrightarrow{\text{Theorem Z.11}} D=4.
+M=24=K(D) \xrightarrow{\text{Appendix Z tangent-kissing branch}} D=4.
 $$
 Accordingly, the Golay code, the Leech-lattice gluing construction, and the spacetime-dimension selection share a common 24-mode compatibility backbone. The cited results do not by themselves show that each later object uniquely determines every subsequent entry in the chain.
 
-*Proof.* Theorem Z.13b identifies the PCE-optimal binary linear code at interface mode count $M=24$ with the extended Golay code $\mathcal{G}_{24}$. Lemma R.4.5 states that $\mathcal{G}_{24}$ supplies the gluing data in the standard construction of the Leech lattice from $\sqrt{2}E_8^3$. Independently, Theorem Z.11 proves that the mode-channel condition $M=K(D)$ with $M=24$ selects $D=4$. These three cited results share the same numerical backbone $M=24$, which is the precise common structure established here. ∎
+*Proof.* On the balanced rate-$\tfrac{1}{2}$ branch, Theorem Z.13b identifies the binary linear code at interface mode count $M=24$ with the extended Golay code $\mathcal{G}_{24}$. Lemma R.4.5 states that $\mathcal{G}_{24}$ supplies the gluing data in the standard construction of the Leech lattice from $\sqrt{2}E_8^3$. Independently, Theorem Z.11 proves that the mode-channel condition $M=K(D)$ with $M=24$ selects $D=4$. These three cited results share the same numerical backbone $M=24$, which is the precise common structure established here. ∎
 
 ### 13.9.6 Classical vs. Quantum Golay Codes
 
@@ -600,7 +600,7 @@ $$
 $$
 \alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right)
 $$
-where $u^* = 2^{1/8} - 1$ (Theorem Z.7) and $K_0 = 3$ (Theorem 15).
+where $u^*=2^{1/8}-1$ (Theorem Z.7) and $K_0=3$ (Theorem 15), evaluated on the canonical Appendix Z bulk-Ward, interface-derivative, response-sign, visible-space curvature, and separable-curvature branches.
 
 **Falsification Conditions:**
 - Precision measurements yielding $\alpha^{-1}$ outside the range $137.0360 \pm 0.0002$ ($4\sigma$ envelope)
@@ -619,7 +619,7 @@ Discrepancy: $+0.000093 \pm 0.000060$ ($\sim 1.5\sigma$, 0.68 ppm). Consistent w
 
 ### 13.10.3 Generation Number
 
-**Prediction:** Exactly $N_{\mathrm{gen}} = 3$ generations of Standard Model fermions.
+**Prediction:** Minimal admissible $N_{\min}=3$ in the anomaly+CP family-charge class; exact realized $N_{\mathrm{gen}}=3$ on the minimal-family PCE/MDL branch.
 
 **Derivation Summary:** The manuscript's strongest derivation of $N_{\mathrm{gen}}=3$ is topological: anomaly cancellation on $\Sigma_8 = U(8)/U(1)^8$, together with the requirement of nontrivial CP violation, selects the minimal admissible charge pattern $\{a, -a, 0\}$ (Theorem R.3.4). Proposition R.3.5 adds the MDL-surrogate selection statement on the same modeled class. The geometric $M = 24 = 8 \times 3$ and Leech/$E_8$ constructions of Appendix R provide a compatible three-fold structure, but they do not independently prove the generation count without the additional topological and modeling assumptions stated there.
 
@@ -704,15 +704,15 @@ All displayed rows are currently consistent with observation at their stated sta
 |:-----------|:---------------------------|:--------------------|
 | $\alpha^{-1}$ | subgroup-projection/matching systematics; interface-series and sinc truncations subleading | $\pm 0.000060$ |
 | $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
-| $N_{\mathrm{gen}}$ | None (topologically exact) | 0 |
-| $D$ | None (combinatorially exact) | 0 |
+| $N_{\mathrm{gen}}$ | Minimal admissible count exact in the anomaly+CP class; exact realized count depends on the minimal-family branch | branch-discrete |
+| $D$ | Exact on the Appendix Z tangent-kissing mode-channel branch | branch-discrete |
 
-The predictions for $D$ and $N_{\mathrm{gen}}$ are exact within the framework; any deviation would falsify the foundational structure rather than indicate theoretical uncertainty.
+The predictions for $D$ and exact realized $N_{\mathrm{gen}}$ are exact within their named branches. A deviation would falsify the corresponding tangent-kissing or minimal-family branch; only the minimal admissible three-generation result is theorem-level inside the anomaly+CP class alone.
 
 
 ### 13.10.8 Baryon Asymmetry
 
-The baryon-to-photon ratio is derived from the anomaly-holonomy coupling mechanism (Appendix Y):
+The baryon-to-photon ratio is computed on the Appendix Y anomaly-holonomy/sphaleron-transport branch from the coupling mechanism (Appendix Y):
 
 $$\eta_B = \mathcal{C}_{eff} \cdot \mathcal{F}_{CP} \cdot f_{wash} \cdot e^{-\kappa_B} = (6.2 \pm 0.5) \times 10^{-10}$$
 

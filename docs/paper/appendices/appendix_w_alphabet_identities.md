@@ -164,11 +164,13 @@ K(d_0,M)=\frac{a_{\rm cap}-1}{4\pi}\Bigl(1+\frac{1}{D}\Bigr).
 \tag{W.2.2}
 $$
 
-For $(d_0,M)=(8,7)$, where $d_0=8$ is the minimal-branch MPU alphabet size (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $M_e=7$ is the number of effective independent information modes linked to the seven generators of $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ (Appendix R, Section R.3): $a_{\rm cap}=8^{1/7}=1.34590019\dots$, $D=0.46554714\dots$,
+For $(d_0,M_e)=(8,7)$, where $d_0=8$ is the minimal-branch MPU alphabet size (Theorem Z.2; Theorem 23 gives $d_0\ge 8$) and $M_e=7$ on the electromagnetic topological-mode branch — under which the electromagnetic alphabet sector's effective independent information mode count is identified with the seven independent generators of $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ (Appendix R, Section R.3): $a_{\rm cap}=8^{1/7}=1.34590019\dots$, $D=0.46554714\dots$,
 
 $$
-\boxed{K(8,7)=0.0866517}.
+\boxed{K(8,7)=0.0866517 \quad \text{(on the electromagnetic topological-mode branch)}}.
 $$
+
+The Theorem W.10 product inequality holds for any specified $M_e$; the assignment $M_e = 7$ to the electromagnetic alphabet sector requires the topological-mode branch identification. The sensitivity table in §W.2 shows that adjacent values $K(8,6) = 0.0892$, $K(8,7) = 0.0867$, $K(8,8) = 0.0850$ differ by $\sim 2$–$3\%$, so the assignment of $M_e$ is load-bearing for this standalone alphabet identity. (W's identity is not the direct source of the framework's $\alpha^{-1}$ prediction; that derivation in Appendix Z uses $M = 24$ and a different alphabet structure.)
 
 **Proposition W.8 (Cap–coherence curvature bound).**
 At the Jensen‑cap boundary $u=u^\*_{\rm J}$,
@@ -230,7 +232,7 @@ Apply (W.2.3) to obtain the bound with factor $1/F_{\lambda,e}=S_2/(M x^2)$ (for
 
 **PCE motivation for the identity point.**
  *Relation to the PCE-Attractor.*
- This specific point, where the spectrum is flat ($\sigma^2=0$) and the system operates at the capacity boundary ($u_0=u^\*_{\rm J}$), corresponds precisely to the **PCE-Attractor** (Definition 15a). The identity (W.2.6) is therefore not merely an idealized case but a sharp prediction for a system that has converged to this unique, PCE-favored state of maximal efficiency and symmetry.
+ The flat-spectrum part of the equality conditions ($F_{\lambda,e} = 1 \iff \sigma^2 = 0$) is supplied by the PCE-Attractor (Definition 15a) via the QFI flatness result of Theorem W.3a.3. The additional condition $u_0 = u^\*_{\rm J}$ — that the *unconstrained* minimizer of the rate-level PCE potential lies exactly on the Jensen cap boundary — is a separate branch-boundary condition not entailed by the PCE-Attractor in general. On the cap-active branch (Theorem W.5), the unconstrained minimizer satisfies $u^*_T \geq u^*_J$, with equality only on the boundary case; off the boundary, the PCE-Attractor sits at the *constrained* optimum on the cap, the inequality (W.2.5) is strict, and the product at the true optimum is $\geq$ its Jensen-cap value (Remark following Theorem W.10). The identity (W.2.6) is therefore an exact prediction at the flat-spectrum branch-boundary reference point, while the more robust attractor statement is the inequality (W.2.5).
 
 **Sensitivity note (alphabet constant and variance).**
 For $d_0=8$, $K(8,M)$ decreases slowly with $M$:

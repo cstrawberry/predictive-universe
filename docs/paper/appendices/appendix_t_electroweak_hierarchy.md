@@ -61,10 +61,10 @@ The following constants are derived in the main text and Appendix Z:
 |$a$ |2 |Active kernel dimension on the attractor-saturating branch (Theorem Z.1) |Theorem Z.1 |
 |$b$ |6 |Inactive subspace dimension ($d_0 - a$) |Definition |
 |$M$ |24 |QFI interface mode count ($2ab$) |Theorem Z.5 |
-|$k$ |12 |Golay code dimension ($M/2$) |Theorem Z.13 |
+|$k$ |12 |Golay code dimension ($M/2$) on the balanced rate-½ branch |Theorem Z.13 + balanced rate-½ branch |
 |$D$ |4 |Emergent spacetime dimension |Theorem Z.11 |
 |$n_G$ |12 |Gauge algebra dimension |Corollary G.8.4c|
-|$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|PCE-optimal Bures weights (with normalization constraint) |Corollary T.34.2|
+|$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|Branch optimum on the imposed $c_\ell/c_d = 8/3$ normalization branch |Corollary T.34.2 (with imposed Corollary T.34.1) |
 |$g_U^2$ |$\pi/6$ |PU-normalized gauge coefficient squared |Theorem T.39a |
 |$\alpha_U^{-1}$ |$24$ |Inverse PU fine structure $\alpha_U=g_U^2/(4\pi)$ |Theorem T.39a |
 |$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 |
@@ -124,14 +124,14 @@ In particular, no row of $P$ sums to 1, so $P\mathbf{1}_{12} \neq \mathbf{1}_{12
 
 ### T.2.3 The Signal-Parity Decomposition
 
-**Proposition T.1c** (Signal-Parity Structure). The $M = 24$ QFI interface modes decompose into:
+**Proposition T.1c** (Signal-Parity Structure on the Balanced Rate-½ Branch). On the balanced rate-½ branch — the same branch supplied by Theorem P.13.12 (Appendix P) and propagated to Theorem R.4.4 (Appendix R) and Theorem Z.13b (Appendix Z) — the $M = 24$ QFI interface modes decompose into:
 
 - **Signal subspace** $\mathcal{S}$: $k = 12$ information-carrying modes
 - **Parity subspace** $\mathcal{P}$: $k = 12$ redundancy modes
 
 with the parity modes determined by $p = Ps$ for signal vector $s$.
 
-*Proof.* By Theorem Z.13, the PCE-optimal error-correction structure on $M = 24$ modes is uniquely the extended binary Golay code $[24, 12, 8]$. The generator matrix $G = [I_{12} \mid P]$ maps 12-bit signals to 24-bit codewords, establishing the decomposition. ∎
+*Proof.* On the balanced rate-½ branch, where the $M = 24$ interface modes split into $k = M/2 = 12$ information modes and $M - k = 12$ redundancy modes, Theorem Z.13 (combined with the rate-½ branch input) shows that coding theory uniquely selects the extended binary Golay code $[24, 12, 8]$. The generator matrix $G = [I_{12} \mid P]$ then maps 12-bit signals to 24-bit codewords, establishing the decomposition. The rate-½ split is not forced by $M = 24$ alone; whether PCE optimization uniquely selects this rate among admissible $[24, k, d]$ code structures is the open rate-selection question flagged at Theorem P.13.12. ∎
 
 -----
 
@@ -141,22 +141,23 @@ with the parity modes determined by $p = Ps$ for signal vector $s$.
 
 The Standard Model gauge group $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ has dimension 12 (Appendix G, Corollary G.8.4c). The electroweak sector $SU(2)_L \times U(1)_Y$ has dimension 4 and acts on left-chiral fermions.
 
-**Definition T.3a** (Left-Chiral Information Modes). The left-chiral projection $\Pi_L: \mathbb{R}^{12} \to \mathbb{R}^6$ selects the 6 information modes that couple to $SU(2)_L$:
+**Definition T.3a** (Left-Chiral Information Modes on the Weak-Left Projection Branch). On the weak-left projection branch — under which the $SU(2)_L$ chiral interaction selects exactly $k/2 = 6$ of the $k = 12$ Golay signal modes — the left-chiral projection $\Pi_L: \mathbb{R}^{12} \to \mathbb{R}^6$ is the rank-6 projection onto these directions:
 $$
 x = \Pi_L s, \quad x \in \mathbb{R}^6, \quad s \in \mathbb{R}^{12}
 $$
 where $\Pi_L \in \mathbb{R}^{6 \times 12}$ satisfies $\Pi_L \Pi_L^T = I_6$.
 
-The factor of $k/2 = 6$ reflects the left-right asymmetry of the weak interaction: only half of the information modes participate in $SU(2)_L$ gauge transformations.
+The factor $k/2 = 6$ reflects the chiral asymmetry of the weak interaction on the weak-left projection branch. The branch-independent uniqueness of $\Pi_L$ is outside the stated weak-left projection hypotheses; this appendix takes the projection as given and tracks the resulting branch dependencies.
 
 ### T.3.2 Reservoir Coupling
 
 **Definition T.4a** (Reservoir Coordinates). The reservoir space $\mathcal{R} = \mathbb{R}^b$ with $b = 6$ represents the inactive subspace dimensions that couple to the active interface modes.
 
-**Definition T.5a** (Alignment Constraints). The electroweak vacuum requires alignment between the left-chiral information modes $x \in \mathbb{R}^6$ and the reservoir coordinates $r \in \mathbb{R}^6$. The number of independent alignment constraints is:
+**Definition T.5a** (Alignment Constraints on the Weak-Left Projection Branch). On the weak-left projection branch (Definition T.3a), the electroweak vacuum requires alignment between the left-chiral information modes $x \in \mathbb{R}^6$ and the reservoir coordinates $r \in \mathbb{R}^6$. The number of independent alignment constraints is:
 $$
-N_0 = b \times \frac{k}{2} = 6 \times 6 = 36
+N_0 = b \times \frac{k}{2} = 6 \times 6 = 36 \quad \text{(on the weak-left projection branch)}.
 $$
+Off this branch, $N_0$ would be replaced by $b \cdot n_L$ where $n_L$ is the number of weak-left active directions, with $\kappa_{EW} = b n_L + \dim(G/H) - m/2$ shifting accordingly: a unit change in $n_L$ shifts $\kappa_{EW}$ by $b = 6$ and rescales $v$ by $e^{\pm 6}$.
 
 **Proposition T.2b** (Equivalent Forms of $N_0$). The base complexity $N_0 = 36$ admits equivalent expressions:
 $$
@@ -472,13 +473,13 @@ This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV, consistent with the ex
 
 ### T.10.1 Decomposition of the Inactive Subspace
 
-**Theorem T.8** (3 ⊕ 2 Factorization). The $b=6$ sector admits an $S_3 \times \mathbb{Z}_2$-equivariant factorization:
+**Theorem T.8** (3 ⊗ 2 Factorization on the Row-Pair Branch). On the row-pair branch — under which the $b = 6$ inactive directions are organized into three ordered pairs — the $b=6$ sector admits an $S_3 \times \mathbb{Z}_2$-equivariant factorization:
 $$
 \mathbb{R}^6 \cong \mathbb{R}^3 \otimes \mathbb{R}^2,
 $$
 where $\mathbb{R}^3$ carries the triplet index (the fundamental of $SU(3)_C$) and $\mathbb{R}^2$ carries the within-pair index (the fundamental of $SU(2)_L$). The identification is unique up to independent basis changes in the two factors once the underlying $S_3 \times \mathbb{Z}_2$ pairing structure is fixed (made explicit in Theorem T.30).
 
-*Proof.* The module partition from Theorem G.8.4b gives $(n_3,n_2,n_1)=(3,2,1)$, hence $b=n_3 n_2=3\cdot 2=6$. Fixing the $S_3$ pair-index and the $\mathbb{Z}_2$ within-pair splitting determines a decomposition into a 3-index and a 2-index; any two such decompositions differ by an $O(3)\times O(2)$ change of basis. ∎
+*Proof.* The module partition from Theorem G.8.4b gives $(n_3,n_2,n_1) = (3, 2, 1)$ as block sizes in a direct-sum decomposition $3 + 2 + 1 = 6$. Numerically $\dim(\mathbb{R}^6) = 6 = 3 \cdot 2$, but a direct-sum block decomposition into three blocks of sizes $(3, 2, 1)$ does not by itself entail a canonical tensor-product structure $\mathbb{R}^3 \otimes \mathbb{R}^2$ on the $b = 6$ sector. The tensor identification requires the row-pair branch input of Theorem T.30: once the six left-chiral links are organized into three ordered pairs $(1,2), (3,4), (5,6)$, the resulting 6-dimensional space admits the natural identification $\mathbb{R}^6 \cong \mathbb{R}^3 \otimes \mathbb{R}^2$, with the ambiguity reduced to an $O(3) \times O(2)$ change of basis. The numerical coincidence $3 + 2 + 1 = 6 = 3 \cdot 2$ is consistent with this identification but does not force it. ∎
 
 **Definition T.14a** (Electroweak 5-Plane). Write the internal $8$-space as a direct sum of the active and $b=6$ sectors,
 $$
@@ -591,7 +592,7 @@ $$
 
 *Proof.* From $\mathrm{tr}(Y^2) = 5/6$, requiring $\mathrm{tr}(\hat{Y}^2) = 1/2$ gives $c^2 = (5/6)/(1/2) = 5/3$. ∎
 
-**Remark T.12.1: Origin of 5/3.** The factor 5/3, traditionally assumed from SU(5) grand unification, emerges here as a mathematical necessity from design-preserving norms on the electroweak 5-plane. No group embedding beyond $3 \oplus 2$ is required.
+**Remark T.12.1: Origin of 5/3.** The factor 5/3, traditionally assumed from SU(5) grand unification, emerges here on the primitive-(1/6)-quantized, traceless, $(3 + 2)$ hypercharge branch — the three explicit hypotheses of Theorem T.10. Under those hypotheses, the SU(5) group embedding is not separately required: the same constraints (rational charges, tracelessness on the 5-plane, primitive $(1/6)$-quantization) suffice to fix $(y_c, y_w) = (-1/3, 1/2)$ and hence $\mathrm{tr}(Y^2) = 5/6$ giving $c^2 = 5/3$. The Hypercharge $5/3$ row in the summary tables (T.19.1, T.20) inherits this branch and is interpreted as derived on the primitive-(1/6)-quantized $(3+2)$ hypercharge branch rather than unconditionally.
 
 -----
 
@@ -1122,13 +1123,12 @@ and does not affect the separations $\alpha_i^{-1}-\alpha_j^{-1}$ set by the $Z_
 
 *Proof.* PCE isotropy implies the QFI/Bures metric on the 24-mode interface is isotropic at leading order (Lemma Z.24a). Therefore any residual correction depending only on the leading isotropic mode count $M=24$ is independent of the gauge factor, giving a common shift $\delta_{\mathrm{avg}}$. In the minimal ledger, Definition T.19a contains no residual heavy threshold list, so $\delta_{\mathrm{avg}}=0$ by the empty-sum convention. Since $\delta_{\mathrm{avg}}$ enters additively in all three $\alpha_i^{-1}(\mu_G)$, all differences $\alpha_i^{-1}-\alpha_j^{-1}$ are unchanged. ∎
 
-**Corollary T.17.1** (Subleading Threshold Splittings). Subleading anisotropies can generate splittings $\delta_i-\delta_j$ suppressed by at least one power of $M^{-1}$ relative to the common leading shift:
+**Corollary T.17.1** (Subleading Threshold Splittings on the Normalized Mode-Average Branch). On the normalized mode-average residual branch — under which (a) the residual heavy-threshold ledger is normalized as a per-mode average $\delta_i = (1/M) \sum_\alpha x_{\alpha,i}$ over the $M = 24$ interface modes, with $x_{\alpha, i}$ bounded mode-local contributions, and (b) the per-mode anisotropic differences $x_{\alpha, i} - x_{\alpha, j}$ are themselves $O(M^{-1})$ uniformly in $\alpha$ (or, equivalently, satisfy a CLT-type independence condition) — subleading anisotropies generate splittings:
 $$
-\delta_i-\delta_j=O(M^{-1})\qquad (i,j\in\{1,2,3\}),
+\delta_i - \delta_j = O(M^{-1}).
 $$
-so their effect on $\alpha_i^{-1}(M_Z)$ and $\sin^2\theta_W(M_Z)$ is subleading compared to the one-loop logarithmic running from $\mu_G$ to $M_Z$.
 
-*Proof.* Theorem T.17 identifies the leading discretization contribution as $S_M$-invariant over the $M$ interface modes and therefore a common shift $\delta_{\mathrm{avg}}$. Any splitting arises from subleading mode-to-mode variations in the discretized spectrum; since $\delta_i$ are sums of $M$ mode-local contributions (Definition T.19a), such variations enter the average with at least one factor of $M^{-1}$. ∎
+*Proof.* Theorem T.17 identifies the leading discretization contribution as $S_M$-invariant over the $M$ interface modes and therefore a common shift $\delta_{\mathrm{avg}}$. The splitting is $\delta_i - \delta_j = (1/M) \sum_\alpha (x_{\alpha,i} - x_{\alpha,j})$. Without an explicit smallness condition on the per-mode differences, this average can scale as $O(1)$ (correlated case), $O(M^{-1/2})$ (CLT-style independent case), or $O(M^{-1})$ (uniformly small per-mode case). On the normalized mode-average branch with assumption (b), the per-mode difference is $O(M^{-1})$, and averaging preserves this scaling, yielding $\delta_i - \delta_j = O(M^{-1})$. Without this branch, residual anisotropic splittings remain part of the T2 matching uncertainty budget rather than being assumed automatically negligible. ∎
 
 **Theorem T.18** (Conditional Flag-Lift Matching from a Validation Threshold Tuple). The bare-Grassmannian orbit-average construction of the original gauge-matching definition is not used for the quantitative threshold sector. The local Bures block formula on $\mathrm{Gr}(2,8)$ provides representative-state coupling data, but the manuscript does not supply a completed global orbit integral on the bare Grassmannian that yields the required gauge-factor hierarchy. The quantitative gauge sector is therefore formulated on the lifted operator $D^{\mathrm{PCE}}_{\widetilde X}$ of Definition T.17a on
 $$
@@ -1235,9 +1235,9 @@ $$
 
 ### T.14.2 Six Left-Chiral Links
 
-**Theorem T.18a** (Link Count). The electroweak sector contains exactly 6 left-chiral SU(2) links, corresponding to $b=6$ inactive modes.
+**Theorem T.18a** (Link Count on the Weak-Left Projection Branch). On the weak-left projection branch (Definition T.3a) and the row-pair branch (Theorem T.8), the electroweak sector contains exactly 6 left-chiral SU(2) links, corresponding to $b = 6$ inactive modes.
 
-*Proof.* By Definition T.3a, the left-chiral projection $\Pi_L:\mathbb{R}^{12}\to\mathbb{R}^6$ selects exactly $k/2=6$ independent information modes that couple to $SU(2)_L$, and $\Pi_L\Pi_L^T=I_6$ identifies these as six independent directions. Each such direction supports an independent $SU(2)_L$ doublet rotation (via the $3\otimes 2$ factorization of Theorem T.8), so each corresponds to one left-chiral SU(2) link. Therefore the electroweak sector contains exactly 6 independent left-chiral SU(2) links. This matches the inactive dimension $b=6$ used in the alignment-counting definition of $N_0$ (Definition T.5a). ∎
+*Proof.* On the weak-left projection branch, Definition T.3a fixes the rank-6 projection $\Pi_L:\mathbb{R}^{12}\to\mathbb{R}^6$ identifying $k/2 = 6$ independent information modes that couple to $SU(2)_L$, with $\Pi_L\Pi_L^T = I_6$ confirming six independent directions. On the row-pair branch (Theorem T.8), each such direction supports an independent $SU(2)_L$ doublet rotation via the $\mathbb{R}^3 \otimes \mathbb{R}^2$ identification, so each corresponds to one left-chiral SU(2) link. Therefore on the combined branch the electroweak sector contains exactly 6 independent left-chiral SU(2) links, matching the inactive dimension $b = 6$ used in the alignment-counting definition of $N_0$ (Definition T.5a). ∎
 
 ### T.14.3 Canonical Field and Total Potential
 
@@ -1295,70 +1295,79 @@ $$
 
 ### T.15.3 Minimization over Signal Modes
 
-**Theorem T.22** (Elastic Energy). With $r$ eliminated, the reduced energy functional is:
+**Theorem T.22** (Elastic Energy on the canonical unit target-shift branch). With $r$ eliminated, assume the leading coherent reservoir target shift in the $L_{\mathrm{info}}$-orthonormal coordinates of Lemma T.5b takes the form
 $$
-V[s; u] = \frac{1}{2} s^T s + \frac{1}{2} |\Pi_L s - x(u)|^2
+x(u) = \gamma\, u^2 v + O(u^4), \qquad |v| = 1,
 $$
-where $x(u) = u^2 v + O(u^4)$ is the target shift with $|v| = 1$.
+where $\gamma > 0$ is a dimensionless target-shift normalization. The reduced energy functional is then
+$$
+V[s; u] = \frac{1}{2} s^T s + \frac{1}{2} |\Pi_L s - x(u)|^2.
+$$
+The canonical unit target-shift branch used below is $\gamma = 1$.
 
-*Proof.* The SU(2) rotation on each of six left-chiral links produces a coherent $O(u^2)$ shift in the reservoir. ∎
+*Proof.* The SU(2) rotation on each of six left-chiral links produces a coherent $O(u^2)$ shift in the reservoir, establishing the scaling order and the existence of a unit direction $v$. The magnitude coefficient $\gamma$ is the target-shift normalization of the SU(2)-coherent action on the reservoir coordinates; setting $\gamma = 1$ is the canonical unit-normalization choice used throughout this section. ∎
 
-**Theorem T.23** (Optimal Signal Configuration). The stationary $s(u)$ satisfies:
+**Theorem T.23** (Optimal Signal Configuration). Under the target-shift normalization of Theorem T.22, the stationary $s(u)$ satisfies:
 $$
-\frac{\partial V}{\partial s} = s + \Pi_L^T(\Pi_L s - u^2 v) = 0
+\frac{\partial V}{\partial s} = s + \Pi_L^T(\Pi_L s - \gamma u^2 v) = 0
 $$
-giving $(I + P_L)s = \Pi_L^T u^2 v$. Using $(I + P_L)^{-1} = I - \frac{1}{2}P_L$:
+giving $(I + P_L)s = \gamma \Pi_L^T u^2 v$. Using $(I + P_L)^{-1} = I - \frac{1}{2}P_L$:
 $$
-s(u) = \frac{1}{2}\Pi_L^T u^2 v
+s(u) = \frac{\gamma}{2}\Pi_L^T u^2 v.
 $$
+On the canonical unit target-shift branch $\gamma = 1$, this reduces to $s(u) = \tfrac{1}{2}\Pi_L^T u^2 v$.
 
 *Proof.* Since $P_L^2 = P_L$, we have $(I + P_L)(I - \frac{1}{2}P_L) = I + P_L - \frac{1}{2}P_L - \frac{1}{2}P_L^2 = I + P_L - P_L = I$. Substituting:
 $$
-s(u) = (I - \tfrac{1}{2}P_L)\Pi_L^T u^2 v = \Pi_L^T u^2 v - \tfrac{1}{2}\Pi_L^T\Pi_L\Pi_L^T u^2 v = \tfrac{1}{2}\Pi_L^T u^2 v
+s(u) = (I - \tfrac{1}{2}P_L)\gamma \Pi_L^T u^2 v = \gamma \Pi_L^T u^2 v - \tfrac{\gamma}{2}\Pi_L^T\Pi_L\Pi_L^T u^2 v = \tfrac{\gamma}{2}\Pi_L^T u^2 v
 $$
 where we used $\Pi_L \Pi_L^T = I_6$. ∎
 
 ### T.15.4 Minimized Energy and Elastic Quartic
 
-**Theorem T.24** (Elastic Quartic). The minimized energy is:
+**Theorem T.24** (Elastic Quartic). The minimized energy, in terms of the target-shift normalization $\gamma$ of Theorem T.22, is
 $$
-V_{min}(u) = \frac{1}{4}u^4
+V_{min}(u) = \frac{\gamma^2}{4}u^4.
 $$
-In terms of the canonical Higgs field $h = \sqrt{6}\,u$:
+In terms of the canonical Higgs field $h = \sqrt{6}\,u$,
 $$
-\boxed{\lambda_{\text{elastic}} = +\frac{1}{36}}
+\lambda_{\text{elastic}}(\gamma) = +\frac{\gamma^2}{36}.
+$$
+On the canonical unit target-shift branch $\gamma = 1$,
+$$
+\boxed{V_{min}(u) = \frac{1}{4}u^4, \qquad \lambda_{\text{elastic}} = +\frac{1}{36}.}
 $$
 
 *Proof.*
 
-**Step 1** (Mismatch). With $\Pi_L s(u) = \frac{1}{2}u^2 v$:
+**Step 1** (Mismatch). With $\Pi_L s(u) = \tfrac{\gamma}{2}u^2 v$ and $x(u) = \gamma u^2 v$:
 $$
-\Pi_L s - x(u) = \frac{1}{2}u^2 v - u^2 v = -\frac{1}{2}u^2 v
+\Pi_L s - x(u) = \frac{\gamma}{2}u^2 v - \gamma u^2 v = -\frac{\gamma}{2}u^2 v.
 $$
 
 **Step 2** (Energy evaluation).
 $$
-V_{min}(u) = \frac{1}{2}|s|^2 + \frac{1}{2}|\Pi_L s - x|^2 = \frac{1}{2}|\tfrac{1}{2}\Pi_L^T u^2 v|^2 + \frac{1}{2}|-\tfrac{1}{2}u^2 v|^2
+V_{min}(u) = \frac{1}{2}|s|^2 + \frac{1}{2}|\Pi_L s - x|^2 = \frac{1}{2}\left|\tfrac{\gamma}{2}\Pi_L^T u^2 v\right|^2 + \frac{1}{2}\left|-\tfrac{\gamma}{2}u^2 v\right|^2.
 $$
 Since $\Pi_L^T$ is an isometry, $|\Pi_L^T v|^2 = |v|^2 = 1$:
 $$
-V_{min}(u) = \frac{1}{8}u^4 + \frac{1}{8}u^4 = \frac{1}{4}u^4
+V_{min}(u) = \frac{\gamma^2}{8}u^4 + \frac{\gamma^2}{8}u^4 = \frac{\gamma^2}{4}u^4.
 $$
 
 **Step 3** (Field redefinition). With $h = \sqrt{6}\,u$, we have $u^4 = h^4/36$:
 $$
-V_{\text{elastic}}(h) = \frac{1}{4} \cdot \frac{h^4}{36} = \frac{h^4}{144}
+V_{\text{elastic}}(h) = \frac{\gamma^2}{4} \cdot \frac{h^4}{36} = \frac{\gamma^2 h^4}{144}.
 $$
 
 **Step 4** (Landau matching). Matching to $V = \frac{1}{4}\lambda h^4$:
 $$
-\lambda_{\text{elastic}} = 4 \times \frac{1}{144} = \frac{1}{36}
+\lambda_{\text{elastic}}(\gamma) = 4 \times \frac{\gamma^2}{144} = \frac{\gamma^2}{36}.
 $$
-∎
+On the canonical unit target-shift branch $\gamma = 1$, this gives $\lambda_{\text{elastic}} = 1/36$. ∎
 
 **Remark T.24.1: Sign.** The positive sign is necessary: minimization over $s$ lowers the mismatch energy, producing a positive contribution to the quartic.
 
-**Remark T.24.2: Zero Continuously Adjustable Parameters.** The magnitude $1/36$ is fixed by canonical normalizations: $L_{info} = I_{12}$, $\Pi_L\Pi_L^T = I_6$, and $|v| = 1$. This is the same isotropy/projection mechanism used to obtain $K_{eff} = 2$ for $\alpha$.
+**Remark T.24.2: Role of the Target-Shift Branch Assumption.** The magnitude $\gamma^2/36$ is fixed by the canonical normalizations $L_{info} = I_{12}$, $\Pi_L\Pi_L^T = I_6$, $|v| = 1$, and the target-shift normalization $\gamma$. The specific value $\lambda_{\text{elastic}} = 1/36$ corresponds to the canonical unit target-shift branch $\gamma = 1$. This is the same pattern of canonical-branch normalization used to obtain $K_{eff} = 2$ for $\alpha$ on the democratic visible-space branch of Corollary Z.11. The branch-independent identification $\gamma = 1$ is outside the stated target-shift hypotheses.
 
 -----
 
@@ -1366,12 +1375,22 @@ $$
 
 ### T.16.1 Total Quartic at the Fixed Point
 
-**Theorem T.25** (Zero-Slack Cancellation). At the PU fixed point $\mathfrak{A}_{PU}$:
+**Theorem T.25** (Zero-Slack Cancellation on the canonical unit target-shift branch). At the PU fixed point $\mathfrak{A}_{PU}$:
 $$
-\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU}) = \lambda_{\text{block}} + \lambda_{\text{elastic}} = -\frac{1}{36} + \frac{1}{36} = 0
+\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU}; \gamma) = \lambda_{\text{block}} + \lambda_{\text{elastic}}(\gamma) = -\frac{1}{36} + \frac{\gamma^2}{36} = \frac{\gamma^2 - 1}{36}.
 $$
 
-*Proof.* Theorems T.21 and T.24. ∎
+The zero-slack boundary
+$$
+\lambda_{\mathrm{PU}}(\mathfrak{A}_{PU}) = 0
+$$
+holds on the canonical unit target-shift branch $\gamma = 1$.
+
+*Proof.* Theorems T.21 and T.24, with Theorem T.24 evaluated on the target-shift normalization $\gamma$. ∎
+
+
+
+**Remark T.25.1 (Branch Dependence of the Zero-Slack Boundary).** The vanishing of the fixed-point quartic at the PCE attractor depends on the target-shift normalization $\gamma = 1$ introduced in Theorem T.22. The named supporting theorems (T.18a link count, T.19 canonical Higgs field, T.20 block quartic, T.21 block coefficient, T.5b canonical basis, T.23 optimal signal configuration) fix every factor in the derivation except this leading target-shift magnitude, which is the SU(2)-coherent action of the six left-chiral links on the six-dimensional reservoir. Downstream consequences of $\lambda_{\text{PU}} = 0$ — including the Higgs metastability boundary used in Theorem T.28 and the resulting $m_H \approx 125$ GeV prediction — therefore are theorem-level on the canonical unit target-shift branch. A quantitative deviation $\gamma \neq 1$ shifts $\lambda_{\text{PU}}$ by $(\gamma^2 - 1)/36$, which propagates to the Higgs pole mass with sensitivity $\Delta m_H \sim (v^2/m_H)|\gamma^2 - 1|/36$. The branch-independent zero-slack statement is outside the stated target-shift hypotheses.
 
 ### T.16.2 Beta Function Boundary Condition
 
@@ -1506,6 +1525,20 @@ so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently
 
 ## T.19 Complete Electroweak Parameter Summary
 
+**Convention T.19.0 (Branch Ledger for Appendix T Summary Tables).** All branch entries in the Appendix T summary tables (T.19.1, T.20, T.24.26, T.25.8 and parallel rows) are interpreted relative to the controlling branch package of Theorem T.79: a fixed PU structural branch, the two-loop SM RG system, the completed flag-lift spectral data $\Delta$, the flavor-geometric residual data $(\mathcal{T}_{E_8}, \mathcal{V})$, and the CP-profile data $\mathcal{B}$. Branch labels in the tables have the following interpretations:
+
+- "Exact" — exact arithmetic consequence once the structural branch and normalization conventions of the relevant section are fixed (e.g., $\sin^2\theta_W^{(0)} = 3/8$ on the primitive-(1/6)-quantized hypercharge branch; $\lambda_{\mathrm{elastic}} = +1/36$ on the elastic target-shift branch specified in the elastic target-shift branch).
+
+- "Derived" — derived within the adopted Appendix T branches (Golay rate-½, weak-left projection, row-pair, Bures-gauge holonomy normalization, Yukawa probability-overlap, $E_8$ triad selection, generation-internal tensor factorization, Majorana A₂, triplet-projection exponent, PMNS Berry-loop, and the controlling branch package of Theorem T.79), not necessarily unconditional theorem-level output from the foundational PU axioms alone.
+
+- "Validation" — validation-run output produced by the displayed validation tuple $\Delta^{\mathrm{val}}$ in conjunction with SM running. Such entries remain validation targets rather than derived predictions until the global flag-lift threshold problem is fixed by the data specified in Theorem T.78.2.
+
+- "Conditional" or "Branch optimum" — the entry depends on an explicitly imposed normalization or branch input (e.g., $c_\ell/c_d = 8/3$ from Corollary T.34.1).
+
+- "Imposed" or "Constraint" — the entry is supplied as a branch input rather than derived (e.g., the lepton-to-quark tilt normalization).
+
+Theorems T.78.2, T.78.3, and T.79 are the controlling branch-ledger sections for the entire Appendix T quantitative ledger; entries in summary tables that omit branch labels or use unqualified "Derived" are governed by this convention.
+
 ### T.19.1 Derived Quantities
 
 |Parameter |PU Derivation |Predicted |Observed |Status |
@@ -1553,7 +1586,7 @@ $$
 A_{EW} = 1.084 \text{ (one-loop determinant)} \\[3pt]
 v = A_{EW} e^{-\kappa_{EW}} M_{Pl} = 252 \text{ GeV} \\[3pt]
 \sin^2\theta_W^{(0)} = 3/8; \sin^2\theta_W(\mu_G) = \tfrac{3Z_2}{3Z_2+5Z_1} \text{ (fixed point + matching)} \\[3pt]
-\lambda_{\text{block}} = -1/36; \lambda_{\text{elastic}} = +1/36 \\[3pt]
+\lambda_{\text{block}} = -1/36; \lambda_{\text{elastic}}(\gamma) = +\gamma^2/36,\quad \gamma=1 \text{ on the canonical unit target-shift branch} \\[3pt]
 \lambda(\mu_\lambda) = 0 \to m_H \approx 125 \text{ GeV} \\[3pt]
 g_i(\mu_G)=g_U/\sqrt{Z_i} \text{ (matching)} \\[3pt]
 y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) = |P_3 \mathbf{h}|_B = 1 \text{ (}S_3\text{-invariant projector)}
@@ -1883,7 +1916,7 @@ $$
 $$
 equivalently $\kappa_1 = (48\kappa_3 - 55\kappa_2)/21$.
 
-**Corollary T.34.2** (PCE-Optimal Bures Weights with Normalization Constraint). Minimize the strictly convex PCE objective
+**Corollary T.34.2** (PCE-Optimal Bures Weights on the $c_\ell/c_d = 8/3$ Normalization Branch). On the lepton-to-quark tilt normalization branch $c_\ell/c_d = 8/3$ (Corollary T.34.1), minimize the strictly convex PCE objective
 $$
 S(\kappa)=8\kappa_3\ln\kappa_3 + 3\kappa_2\ln\kappa_2 + \kappa_1\ln\kappa_1
 $$
@@ -1953,8 +1986,8 @@ $$
 \sin^2\theta_W(\mu_G) &= \frac{3 Z_2}{3 Z_2 + 5 Z_1} \quad \text{(matching Weinberg angle, Theorem T.14)}\\
 g_i(\mu_G) &= \frac{g_U}{\sqrt{Z_i}} \quad (i=1,2,3)\quad \text{(gauge matching, Corollary T.13.1)}\\
 y_t^{\mathrm{PU}}(\mathfrak{A}_{PU}) &= 1 \quad \text{(}S_3\text{-democratic Higgs, Theorem T.32)}\\
-c_\ell/c_d &= 8/3 \quad \text{(normalization constraint, Corollary T.34.1)}\\
-(\kappa_1,\kappa_2,\kappa_3) &= (\kappa_1^*,\kappa_2^*,\kappa_3^*) \quad \text{(PCE optimum with normalization constraint, Corollary T.34.2)}\\
+c_\ell/c_d &= 8/3 \quad \text{(imposed normalization branch input, Corollary T.34.1; not derived)}\\
+(\kappa_1,\kappa_2,\kappa_3) &= (\kappa_1^*,\kappa_2^*,\kappa_3^*) \quad \text{(branch optimum on the imposed }c_\ell/c_d = 8/3\text{ branch, Corollary T.34.2)}\\
 g_U^2 &= \pi/6 \quad \text{(holonomy saturation, Theorem T.39a)}
 \end{aligned}
 }
@@ -2030,14 +2063,15 @@ $$
 \mathcal{A}_1 = \frac{(2\pi/M)}{K_{\mathrm{hol}}} = \frac{(2\pi/24)}{4} = \frac{\pi}{48}.
 $$
 
-**Step 4 (Gauge-coupling identification).** The Bures connection $\mathcal{A}_B$ is identified with the gauge connection at matching: the holonomy $\oint_\gamma \mathcal{A}_B$ around a minimal mode loop equals $g_U^2/2$ (the factor $1/2$ arises because the gauge kinetic term $-\frac{1}{4}F^2$ introduces a factor $1/2$ relative to the geometric connection in the standard normalization $\alpha = g^2/(4\pi)$). Thus:
+**Step 4 (Gauge-coupling identification on the canonical Bures-gauge holonomy-normalization branch).** On the canonical Bures-gauge holonomy-normalization branch — under which the Bures connection $\mathcal{A}_B$ is identified with the gauge connection at matching with calibration constant $1/2$ — the holonomy $\oint_\gamma \mathcal{A}_B$ around a minimal mode loop equals $g_U^2/2$. The factor $1/2$ is motivated by the gauge kinetic term $-\frac{1}{4}F^2$ relative to the geometric connection in the standard normalization $\alpha = g^2/(4\pi)$, but its derivation from the PU effective action is a separate theorem: with a general calibration constant $\chi_U$, one would have $\oint_\gamma \mathcal{A}_B = \chi_U \cdot g_U^2$, giving $g_U^2 = (2\pi/M)/\chi_U$ and $\alpha_U^{-1} = 2M\chi_U$. The branch choice $\chi_U = 1/2$ yields:
 $$
-\frac{g_U^2}{2} = \frac{2\pi}{M} = \frac{\pi}{12}.
+\frac{g_U^2}{2} = \frac{2\pi}{M} = \frac{\pi}{12},
 $$
-Hence
+hence
 $$
 g_U^2 = \frac{2\pi}{M} \cdot 2 = \frac{4\pi}{M} = \frac{4\pi}{24} = \frac{\pi}{6}.
 $$
+A separate effective-action theorem deriving $\chi_U = 1/2$ from the Bures geometry is required for a branch-independent normalization.
 The corresponding unified fine-structure constant is
 $$
 \alpha_U = \frac{g_U^2}{4\pi} = \frac{1}{24},
@@ -2188,18 +2222,20 @@ $$
 d_B^2 = \frac{1}{4}u^2 = \frac{1}{8}d^2_{E_8} + \mathcal{O}(u^4), \qquad d_{E_8}^2 = 2u^2.
 $$
 
-**Theorem T.41.5** (Gaussian overlap and Yukawa suppression).
-Let $\psi_i,\psi_j$ be generation-localizing wavepackets modeled as isotropic Gaussians on $(\mathrm{Gr}(2,8),g_B)$ with common variance $\sigma_B^2$. For small separation $d_B$,
+**Theorem T.41.5** (Gaussian Overlap and Yukawa Suppression on the Probability-Overlap Branch).
+Let $\psi_i,\psi_j$ be generation-localizing wavepackets modeled as isotropic Gaussians on $(\mathrm{Gr}(2,8),g_B)$ with common variance $\sigma_B^2$. The amplitude overlap is
 
 $$
 \langle \psi_i \mid \psi_j \rangle \propto \exp\!\left(-\frac{d_B^2}{4\,\sigma_B^2}\right).
 $$
 
-The physical Yukawa coupling is proportional to the probability overlap,
+On the probability-overlap Yukawa branch — under which the physical Yukawa coupling is identified with the squared wavefunction overlap rather than with the amplitude overlap or another kernel —
 
 $$
 Y_{ij} \propto \left|\langle \psi_i \mid \psi_j \rangle\right|^2 \propto \exp\!\left(-\frac{d_B^2}{2\,\sigma_B^2}\right).
 $$
+
+The amplitude-overlap branch would instead give $Y_{ij} \propto \exp(-d_B^2/(4\sigma_B^2))$, halving the exponent and yielding $\alpha_{\mathrm{amp}} = 1/(32\sigma_B^2) = 3/4$ rather than $\alpha_{\mathrm{prob}} = 1/(16\sigma_B^2) = 3/2$. The downstream value $\alpha = 3/2$ in Corollary T.41.6 inherits the probability-overlap branch; an effective-action derivation of the Yukawa operator is required to rule out alternative kernel normalizations.
 
 Combining with Lemma T.41.4 gives
 
@@ -2554,7 +2590,7 @@ $$
 
 The effective geodesic dimension $D_{\mathrm{eff}}(d^2)$ quantifies how many independent directions contribute to the quartic curvature correction.
 
-**Theorem T.42.5** (Effective Geodesic Dimension). *The effective dimension $D_{\mathrm{eff}}(d^2)$ depends on position relative to the threshold $d^2_{\mathrm{th}} = 4$:*
+**Theorem T.42.5** (Effective Geodesic Dimension on the Golay assignment branch). *On the Golay effective-dimension branch, the effective dimension $D_{\mathrm{eff}}(d^2)$ entering the Van Vleck curvature correction is assigned by the Golay decoding-structure rule:*
 
 $$
 D_{\mathrm{eff}}(d^2) = \begin{cases}
@@ -2563,7 +2599,7 @@ D_{\mathrm{eff}}(d^2) = \begin{cases}
 \end{cases}
 $$
 
-*where $t = 3$ is the Golay error correction capacity, $d_{\min} = 8$ is the minimum distance, $k = 12$ is the code dimension, and $b = 6$ is the inactive subspace dimension.*
+*where $t = 3$ is the Golay error correction capacity, $d_{\min} = 8$ is the minimum distance, $k = 12$ is the code dimension, and $b = 6$ is the inactive subspace dimension. The Golay data $(t, d_{\min}, k, b)$ are theorem-level inputs from Theorem Z.13. The assignment of these ratios as the effective curvature dimensions entering the Van Vleck expansion is the branch rule used in the charged-lepton hierarchy calculation.*
 
 -----
 
@@ -2586,12 +2622,14 @@ $$
 - **Correctable directions** ($\dim = t = 3$): Error patterns of weight $\leq t$ with distinct syndromes
 - **Non-contributing directions** ($\dim = 24 - t = 21$): Directions that do not change the syndrome or lie outside the correction ball
 
-**Step 4** (QFI weighting and geodesic deviation integral). By the isotropy of the Bures metric (Theorem Z.5, Step 6), all interface modes have equal QFI weight $\lambda_i = 1$. Within the unique-decoding basin ($h < d_{\min}$), only the $t$ correctable error directions contribute independent curvature-sensitive variations along the geodesic—these are the directions whose syndromes change within the decoding cell. The remaining $M-t$ directions are syndrome-degenerate within the decoding ball (they do not change the syndrome in the region that defines unique decoding) and therefore do not provide independent contributions to the curvature correction inside the decoding cell. The effective dimension is the fraction of curvature-sensitive directions normalized by the full syndrome-resolution scale:
+**Step 4** (QFI weighting and branch assignment). By the isotropy of the Bures metric (Theorem Z.5, Step 6), all interface modes have equal QFI weight $\lambda_i = 1$. Within the unique-decoding basin ($h < d_{\min}$), the $t$ correctable error directions carry independent curvature-sensitive syndrome labels, and the remaining $M-t$ directions are syndrome-degenerate within the decoding ball.
+
+On the Golay assignment branch introduced in the statement of this theorem, the effective dimension entering the Van Vleck curvature correction is assigned by the ratio of curvature-sensitive directions to the full syndrome-resolution scale:
 $$
 D_{\mathrm{eff}} = \frac{\dim(\text{curvature-sensitive tangent directions})}{\dim(\text{syndrome resolution scale})} = \frac{t}{d_{\min}} = \frac{3}{8}.
 $$
 
-The denominator $d_{\min} = 8$ is the full syndrome resolution scale (minimum distance of $\mathcal{G}_{24}=[24,12,8]$), while the numerator $t = 3$ is the Golay error-correction capacity that fixes the number of independent correctable directions [Conway & Sloane 1999]. ∎
+The denominator $d_{\min} = 8$ is the full syndrome resolution scale (minimum distance of $\mathcal{G}_{24}=[24,12,8]$), while the numerator $t = 3$ is the Golay error-correction capacity that fixes the number of independent correctable directions [Conway & Sloane 1999]. The numerical identification of this ratio with the Van Vleck effective dimension is the branch rule; the Golay data $(t, d_{\min})$ are theorem-level inputs. ∎
 
 -----
 
@@ -2615,11 +2653,18 @@ $$
 - Radial direction: $+1$
 - Total: $k + 1 = 13$ independent directions
 
-**Step 4** (PCE distribution over inactive modes). The $M = 24$ interface modes connect active ($a = 2$) to inactive ($b = 6$) subspaces (Theorem Z.1). At the decoding boundary, the syndrome map has full rank $k=12$ and the radial boundary mode adds $+1$, giving $k+1=13$ independent directions (Steps 2–3). By QFI isotropy at the attractor (Theorem Z.5, Step 5), no inactive direction is distinguished; therefore these $k+1$ threshold directions distribute uniformly across the $b$ inactive channels. The effective per-channel dimension is:
+**Step 4** (PCE distribution over inactive modes and branch assignment). The $M = 24$ interface modes connect active ($a = 2$) to inactive ($b = 6$) subspaces (Theorem Z.1). At the decoding boundary, the syndrome map has full rank $k=12$ and the radial boundary mode adds $+1$, giving $k+1=13$ independent directions (Steps 2–3). By QFI isotropy at the attractor (Theorem Z.5, Step 5), no inactive direction is distinguished; therefore these $k+1$ threshold directions distribute uniformly across the $b$ inactive channels.
+
+On the Golay assignment branch, the effective per-channel dimension entering the Van Vleck curvature correction is assigned by:
 $$
-D_{\mathrm{eff}} = \frac{k + 1}{b} = \frac{13}{6} \approx 2.167
+D_{\mathrm{eff}} = \frac{k + 1}{b} = \frac{13}{6} \approx 2.167.
 $$
-∎
+
+The numerical identification of this ratio with the Van Vleck effective dimension at the decoding threshold is the branch rule; the Golay data $(k, b)$ are theorem-level inputs. ∎
+
+
+
+**Remark T.42.5.2 (Branch Dependence of the Golay-to-Van-Vleck Assignment).** The numerical values $D_{\mathrm{eff}}(2) = 3/8$ and $D_{\mathrm{eff}}(4) = 13/6$ depend on the Golay assignment branch introduced in Theorem T.42.5. The named supporting theorems (Theorem Z.13 for the Golay parameters, Lemma T.42.4 for the Hamming-chordal correspondence, Lemma T.42.1a for the universal Van Vleck coefficient, Theorem T.42.2 for $\beta_{\mathrm{geom}}$, Theorem Z.5 for QFI isotropy) supply the constituent quantities but do not uniquely force the identification of $t/d_{\min}$ and $(k+1)/b$ as the Van Vleck effective dimensions in the two regimes. An alternative assignment branch $D_{\mathrm{eff}}(d^2) \equiv 1$ for both regimes would respect the same named helper results while changing the curvature-correction weighting. A change $\delta D_{\mathrm{eff}} \sim 0.03$ shifts the $\mu/e$ log prediction by approximately $0.005$, comparable to the stated theory uncertainty.
 
 **Remark T.42.5.1: Physical Interpretation.** *The $\mu/e$ mass ratio ($d^2 = 4$) probes the Golay decoding boundary—the critical stratum where error-correction ambiguity first appears. This boundary position amplifies the effective dimension, explaining why the curvature correction is largest for the $\mu/e$ ratio despite it being intermediate in the hierarchy.*
 
@@ -3306,13 +3351,15 @@ $$|V_{ij}| = \mathcal{P}_{ij} \times \mathcal{O}_{ij}$$
 
 *The overlap decomposes into radial and angular components:*
 
-$$\mathcal{O}_{ij} = \exp\left(-\frac{\alpha \cdot d^2_{\mathrm{eff}}}{2}\right) \times |\sin(\Theta_{ij}/2)|$$
+$$\mathcal{O}_{ij} = \exp\left(-\alpha \cdot d^2_{\mathrm{eff}}\right) \times |\sin(\Theta_{ij}/2)|$$
 
 *where:*
 
-- *d²_eff is the effective Bures distance between generation centers*
-- *Θ_ij is the angular mismatch between vacuum orientations*
-- *α = 3/2 (Corollary T.41.3)*
+- *$d^2_{\mathrm{eff}}$ is the effective $E_8$ root-distance squared between generation centers (Lemma T.41.4 conversion from Bures to $E_8$ distance has been applied)*
+- *$\Theta_{ij}$ is the angular mismatch between vacuum orientations*
+- *$\alpha = 3/2$ on the probability-overlap branch of Theorem T.41.5 (Corollary T.41.3)*
+
+*Convention.* The exponent is $-\alpha \cdot d^2_{\mathrm{eff}}$ (no factor of $1/2$), consistent with the proof below and with the form used in Theorems T.46–T.47 and the heavy-generation calculations $|V_{cb}| = \sqrt{2/3} \cdot e^{-3}$ (Theorem T.47, with $d^2 = 2$ and $\alpha = 3/2$).
 
 *Proof.* The mixing amplitude is the overlap of generation wavefunctions:
 $$V_{ij} = \langle\psi_i|\psi_j\rangle = \int_{\mathrm{Gr}(2,8)} \psi_i^*(P)\psi_j(P),d\mu_B(P)$$
@@ -3373,7 +3420,7 @@ $$|V_{3j}| = \sqrt{\frac{d^2_{3j,f}}{N_g}} \times \exp\left(-\alpha \cdot d^2_{\
 
 *Proof.*
 
-**Step 1 (Geometric prefactor).** The geometric prefactor √(d²/N_g) arises from rotation generators in N_g-dimensional generation space. For an SU(N_g) rotation by angle θ in the i-j plane, the mixing element is proportional to sin(θ). The characteristic angle satisfies sin²θ = d²/(2N_g) for small angles on the Grassmannian, giving |V| ∝ √(d²/N_g).
+**Step 1 (Geometric prefactor on the CKM geometric-prefactor branch).** On the CKM geometric-prefactor branch, the geometric prefactor arises from rotation generators in $N_g$-dimensional generation space. For an $SU(N_g)$ rotation by angle $\theta$ in the $i$-$j$ plane, the mixing element is proportional to $\sin\theta$. Two related conventions appear in the literature: (a) $\sin^2\theta = d^2/N_g$, giving $|V| \propto \sqrt{d^2/N_g}$ (the convention adopted in the displayed formula and used numerically in Theorems T.47–T.48); (b) $\sin^2\theta = d^2/(2N_g)$, giving $|V| \propto \sqrt{d^2/(2N_g)}$ (which would absorb an additional factor of $1/\sqrt{2}$ relative to the displayed numerical results). This appendix uses convention (a) throughout, so $|V_{cb}| = \sqrt{d^2_{32,d}/N_g} \cdot e^{-\alpha d^2_{32,d}} = \sqrt{2/3} \cdot e^{-3}$. The choice between (a) and (b) is the CKM geometric-prefactor branch; convention (b) would multiply both $|V_{cb}|$ and $|V_{ub}|$ by $1/\sqrt{2}$ relative to the convention (a) values used here.
 
 **Step 2 (Exponential suppression).** The exponential factor exp(−αd²) comes from Gaussian wavefunction overlap. From Theorem T.41.5, the Yukawa coupling (and hence mixing amplitude) satisfies:
 $$Y_{ij} \propto \exp\left(-\frac{d^2_{E_8}}{16\sigma^2_B}\right) = \exp(-\alpha d^2_{E_8})$$
@@ -3733,9 +3780,11 @@ This establishes the QFT origin of the geometric CP phase. ∎
 
 ### T.22.6.4 Base Phase from Sector Mismatch
 
-**Theorem T.54** (Base CP Phase). *The CP-violating phase in the flat (infinitesimal wavefunction) limit arises from the mismatch between up and down sector orientations:*
+**Theorem T.54** (Base CP Phase on the Minimal Berry-Area Branch). *On the minimal Berry-area branch — under which the flavor quadrilateral $(u_3, d_3, d_2, u_2)$ on $\mathrm{Gr}(2, 8)$ is assigned the minimal Kähler-Einstein area $2 \arctan(d_{32,d}/d_{32,u})$ via the Simon (1983) solid-angle identification — the CP-violating phase in the flat (infinitesimal wavefunction) limit is:*
 
-$$\delta_{\mathrm{flat}} = 2\arctan\left(\frac{d_{32,d}}{d_{32,u}}\right) = 2\arctan\left(\frac{\sqrt{2}}{2}\right) = 70.53°$$
+$$\delta_{\mathrm{flat}} = 2\arctan\left(\frac{d_{32,d}}{d_{32,u}}\right) = 2\arctan\left(\frac{\sqrt{2}}{2}\right) = 70.53°.$$
+
+*A theorem-level derivation requires an explicit computation of the geodesic-quadrilateral Kähler-Einstein area on $\mathrm{Gr}(2,8)$ with the Bures normalization (specifying vertices, geodesic edges, interior angles, and Gauss-Bonnet defect); this theorem reads this area off via the Simon-style identification rather than deriving it. The downstream value $\delta_{CKM} = 66.7°$ in Theorem T.56 inherits this branch.*
 
 *Proof.*
 
@@ -3752,22 +3801,24 @@ $$\theta_{\mathrm{mismatch}} = \arctan\left(\frac{d_{32,d}}{d_{32,u}}\right) = \
 
 $$\delta_{\mathrm{flat}} = 2\theta_{\mathrm{mismatch}} = 2 \times 35.26° = 70.53°$$
 
-**Step 4 (Stokes verification).**
+**Step 4 (Stokes verification on the minimal Berry-area branch).**
 $$\delta_{\mathrm{flat}} = \int_\Sigma \mathcal{F} = \int_\Sigma \omega_{\mathrm{KE}} = \mathrm{Area}_{\mathrm{KE}}(\Sigma)$$
 
-where Σ is the geodesic quadrilateral bounded by γ. For the Kähler-Einstein metric, this area equals 2 arctan(d_{32,d}/d_{32,u}) by the Gauss-Bonnet theorem applied to the geodesic polygon. ∎
+where $\Sigma$ is the geodesic quadrilateral bounded by $\gamma$. On the minimal Berry-area branch, the Kähler-Einstein area is identified with $2 \arctan(d_{32,d}/d_{32,u})$ via the Simon-style solid-angle identification of Step 3. A direct application of the Gauss-Bonnet theorem to the geodesic quadrilateral on $\mathrm{Gr}(2, 8)$ requires explicit computation of interior angles and curvature integrals; that computation is not supplied here. The displayed area formula is therefore the minimal Berry-area branch identification via the Berry-holonomy prescription. ∎
 
 ### T.22.6.5 Generation Subspace Variance
 
-**Lemma T.54.1** (Tensor Decomposition of Interface Space). *The 24-dimensional interface tangent space T_{ρ₀}Gr(2,8) admits a canonical tensor decomposition:*
+**Lemma T.54.1** (Tensor Decomposition of Interface Space on the Generation–Internal Tensor-Factor Branch). *On the generation–internal tensor-factor branch — under which the 24-dimensional interface tangent space is identified as a tensor product of a generation factor and an internal factor with a specified physical assignment of which directions are "generation" and which are "internal" — the 24-dimensional interface tangent space admits the identification:*
 
-$$T_{\rho_0}\mathrm{Gr}(2,8) = \mathcal{G}_{N_g} \otimes \mathcal{I}_{d_0}$$
+$$T_{\rho_0}\mathrm{Gr}(2,8) \cong \mathcal{G}_{N_g} \otimes \mathcal{I}_{d_0}$$
 
 *where:*
 
-- *𝒢_{N_g} is the N_g = 3 dimensional generation subspace*
-- *ℐ_{d₀} is the d₀ = 8 dimensional internal subspace*
-- *dim_ℝ(T_{ρ₀}) = N_g × d₀ = 3 × 8 = 24*
+- *$\mathcal{G}_{N_g}$ is the $N_g = 3$ dimensional generation subspace*
+- *$\mathcal{I}_{d_0}$ is the $d_0 = 8$ dimensional internal subspace*
+- *$\dim_\mathbb{R}(T_{\rho_0}) = N_g \times d_0 = 3 \times 8 = 24$*
+
+*The dimension equality $24 = 3 \times 8$ is consistent with this identification but does not by itself force a canonical tensor product structure: every 24-dimensional real vector space is abstractly isomorphic to $\mathbb{R}^3 \otimes \mathbb{R}^8$, but the canonical assignment of which directions correspond to "generation index" and which to "internal index" is the additional branch input. The same structural issue appears at Theorem T.8 (the $b = 6$ row-pair branch) and its propagation to the full interface space (the full interface-space factorization).*
 
 *Proof.*
 
@@ -3784,9 +3835,11 @@ $$24 = 3 \times 8 = N_g \times d_0$$
 
 This matches the left-chiral tensor decomposition of Theorem T.30: ℝ⁶ ≅ ℝ³ ⊗ ℝ², extended to the full interface space. ∎
 
-**Theorem T.54.2** (Generation Subspace Variance from First Principles). *The variance per direction in the generation subspace 𝒢_{N_g} is:*
+**Theorem T.54.2** (Generation Subspace Variance on the Generation–Internal Tensor-Factor Branch). *On the generation–internal tensor-factor branch (Lemma T.54.1) and the unit-total-generation-variance branch — under which (a) the canonical tensor factorization of the interface tangent space holds with a specified physical generation/internal assignment, and (b) the projected generation marginal carries unit total variance and is isotropic — the variance per direction in the generation subspace $\mathcal{G}_{N_g}$ is:*
 
-$$\sigma^2_{\mathcal{G}} = \frac{1}{N_g} = \frac{1}{3}$$
+$$\sigma^2_{\mathcal{G}} = \frac{1}{N_g} = \frac{1}{3}.$$
+
+*A general parameterization $\sigma^2_{\mathcal{G}} = \chi_G/N_g$ with branch coefficient $\chi_G$ would rescale the sinc factor $f_{\mathrm{sinc}} = \mathrm{sinc}(\sqrt{\chi_G/N_g})$ used in Theorem T.55 and propagate through $\delta_{CKM}$ and the PMNS predictions of Theorems T.24.19–T.24.22.*
 
 *yielding angular width parameter:*
 
@@ -3974,7 +4027,7 @@ The Jarlskog invariant $J \propto \sin\delta \neq 0$ confirms physical CP violat
 
 ### T.22.10.4 Berry Phase Origin of CP Violation
 
-All CP-violating phases in the Standard Model trace to Berry holonomy on the generation manifold $\text{Gr}(2,8)$:
+The CP-violating phases of the Standard Model are organized in this framework by two distinct mechanisms operating on the generation manifold $\mathrm{Gr}(2,8)$: a Berry-holonomy mechanism for CKM and PMNS phases (Type II CP violation in the language of Remark T.57a.1), and a $\sigma$-invariance plus PCE topological-cost mechanism for strong CP (Type I CP violation, forbidden by $\sigma$-invariance per Theorem K.6.1 with the branch qualifications on K.6.4-K.6.10). The synthesis below identifies the mechanism in each sector:
 
 |Observable |Berry Phase Mechanism |Predicted Value|Reference |
 |:--------------------|:----------------------------------------------------|:--------------|:--------------|
@@ -4003,7 +4056,7 @@ $$
 
 **Step 3 (PMNS phase).** The leptonic sector involves D₄ (charged leptons) and A₂ (neutrinos) geometries. The additional holonomy from the D₄-A₂ mismatch contributes $75°$ (Theorem T.24.22, Steps 3-4), yielding $\delta_{CP} = 232.5°$.
 
-**Step 4 (Strong CP).** The $\sigma$-involution (Definition K.6.3) acts as complex conjugation on $\text{Gr}(2,8)$. PCE-optimal vacua are $\sigma$-invariant (Theorem K.6.5), restricting $\theta_{QCD} \in \{0, \pi\}$. The PCE cost $V_{PCE}(\theta) \propto (1 - \cos\theta)$ selects $\theta = 0$ (Theorem K.6.2). ∎
+**Step 4 (Strong CP via the σ-invariance + topological-cost branch — separate mechanism from Berry holonomy).** Strong CP is governed by a different mechanism than CKM/PMNS Berry holonomy. On the σ-symmetric attractor branch (Theorem K.6.5 as conditioned by the K.6.4 Hermiticity counterexample fix and the orientation-preserving real-Yukawa branch of K.6.7-K.6.10), the σ-involution (Definition K.6.3) restricts $\theta_{QCD} \in \{0, \pi\}$, and on the topological-cost branch (Theorem K.6.2; cf. Appendix K branch ledger K.11 noting the topological cost derivation as a separate closure item), the PCE cost $V_{PCE}(\theta) \propto (1 - \cos\theta)$ selects $\theta = 0$. The Berry-holonomy identification of Steps 1-3 does not apply to the strong-CP sector; the unification claim is that all SM CP-violating phases admit a geometric origin on $\mathrm{Gr}(2, 8)$, not that they share a single Berry-loop mechanism. ∎
 
 **Remark T.57a.1: Type I vs Type II.** The framework distinguishes Type I CP violation (Lagrangian parameters, forbidden by $\sigma$-invariance per Theorem K.6.1) from Type II (Berry holonomy, permitted). This explains why $\bar{\theta} = 0$ while $\delta_{CKM} \neq 0$.
 
@@ -4012,7 +4065,7 @@ $$
 The same framework predicts large PMNS mixing angles because:
 
 - Charged leptons have triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (2, 6, 4)$ from D₄ cubic geometry
-- Neutrinos have triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (2, 6, 6)$ from A₂ hexagonal geometry (Majorana constraint)
+- Neutrinos have triad $(d^2_{32}, d^2_{31}, d^2_{21}) = (2, 6, 6)$ from A₂ hexagonal geometry on the Majorana A₂ generation-geometry branch (Theorem T.24.5)
 - The D₄–A₂ mismatch between charged lepton and neutrino sectors generates large PMNS mixing
 
 The complete derivation of PMNS parameters appears in Section T.24, achieving $\chi^2/\mathrm{dof} = 0.28$ for seven measured quantities.
@@ -4686,9 +4739,11 @@ $$d^2_{21,\nu} \in \{2, 6\} \quad \text{(not } d^2 = 4 \text{)}$$
 - Mass term $\nu^T C \nu$ (symmetric bilinear)
 - SU(2) triplet structure: $\mathbf{2} \otimes_S \mathbf{2} = \mathbf{3}$
 
-**Step 2** (Triplet Geometry). The SU(2) triplet forms three states at 120° angles in weight space, which is exactly the A₂ root system geometry.
+**Step 2** (Majorana A₂ generation-geometry branch). The $SU(2)$ spin-1 (triplet) representation arising from $\mathbf{2} \otimes_S \mathbf{2} = \mathbf{3}$ has weights $\{-1, 0, +1\}$ on the one-dimensional Cartan weight line of $SU(2)$ (rank 1); these three weights are colinear and do not by themselves form a 2-dimensional triangular configuration at $120°$ angles. The $A_2$ root system is the rank-2 root system of $SU(3)$, with six roots in two-dimensional weight space at $60°$ intervals. There is therefore no embedding of the $SU(2)$ spin-1 weight diagram into $A_2$ root space "as a triangle" purely from $SU(2)$ representation theory.
 
-**Step 3** (Forbidden D₄). The D₄ structure (90° angles) is incompatible with SU(2) triplet representations. This follows from group theory: the symmetric tensor product $\mathbf{2} \otimes_S \mathbf{2} = \mathbf{3}$ has weight diagram forming an A₂ triangle with 120° angles between weights ${+1, 0, -1}$. Since the error-correcting lattice must be compatible with the bilinear form structure of the mass term, and D₄ cubic symmetry cannot embed this triangular weight structure, D₄ is excluded for Majorana fermions. This is the group-theoretic origin of the Dirac–Majorana distinction in generation geometry.
+The Majorana $A_2$ generation-geometry branch is the additional structural input: under this branch, the symmetric bilinear structure of Majorana neutrino masses, combined with a flavor-geometric assignment (an $SU(3)_F$-type generation symmetry, an $E_8 \to A_2$ embedding via the 1↔2 generation pair, or an equivalent branch-level prescription), is taken to require $A_2$ hexagonal geometry in the 1↔2 sector with $d^2_{21,\nu} \in \{2, 6\}$.
+
+**Step 3** (Forbidden D₄ on the Majorana A₂ branch). On the Majorana $A_2$ generation-geometry branch, the $D_4$ cubic structure (90° angles) used for charged leptons is replaced by $A_2$ hexagonal geometry, excluding $d^2_{21, \nu} = 4$.
 
 **Step 4** (Allowed Values). From the A₂ angle formula:
 
@@ -5045,8 +5100,13 @@ $$\langle (\hat{X} \cdot \hat{n})^2 \rangle = \frac{1}{3}$$
 
 Therefore $|\hat{X} \cdot \hat{n}|_{\text{RMS}} = 1/\sqrt{3}$.
 
-**Step 6** (Coefficient). From Theorem T.41.5, the Yukawa coupling scales as $Y \propto \exp(-d^2_B/(2\sigma^2_B))$, yielding $\alpha_{\text{UV}} = 1/(16\sigma^2_B)$ via the Bures-to-$E_8$ conversion. The triplet projection reduces the effective Bures norm of the mass operator by $\sqrt{3}$, rescaling the overlap integral:
-$$\alpha_\nu = \alpha_{\text{UV}} \cdot \frac{|O_\nu|_B}{|O_D|_B} = \frac{\alpha_{\text{UV}}}{\sqrt{3}} = \frac{3/2}{\sqrt{3}} = \frac{\sqrt{3}}{2} = 0.8660$$
+**Step 6** (Coefficient on the triplet-projection exponent branch). From Theorem T.41.5 on the probability-overlap branch, the Yukawa coupling scales as $Y \propto \exp(-d^2_B/(2\sigma^2_B))$, yielding $\alpha_{\mathrm{UV}} = 1/(16\sigma^2_B)$ via the Bures-to-$E_8$ conversion of Lemma T.41.4.
+
+On the triplet-projection exponent branch — under which the operator-norm reduction by $\sqrt{3}$ established in Step 5 acts on the Gaussian exponent coefficient $\alpha$ rather than on the prefactor or wavefunction width — the Majorana sector hierarchy coefficient is
+$$
+\alpha_\nu = \frac{\alpha_{\mathrm{UV}}}{\sqrt{3}} = \frac{3/2}{\sqrt{3}} = \frac{\sqrt{3}}{2} = 0.8660.
+$$
+The RMS projection identity $\langle (\hat{X} \cdot \hat{n})^2 \rangle = 1/3$ established in Step 5 motivates the $\sqrt{3}$ factor, but in standard Gaussian overlap integrals an operator-norm rescaling typically modifies the prefactor (rescaling the amplitude) or the width $\sigma_B$ (rescaling the variance, giving $\alpha \to \alpha/3$ rather than $\alpha/\sqrt{3}$); the choice of where the $\sqrt{3}$ enters is the load-bearing branch identification. An effective-action derivation of the Weinberg-operator overlap kernel is required to rule out alternative attributions of the $\sqrt{3}$ factor; a $1/3$ exponent reduction or no exponent reduction would shift $\alpha_\nu$ to $\alpha_{\mathrm{UV}}/3 = 1/2$ or $\alpha_{\mathrm{UV}} = 3/2$ respectively, and the resulting $m_3/m_2$ would shift exponentially.
 
 **Remark T.24.12.1: UV Value Confirmation.** *The relation $\alpha_\nu = \sqrt{3}/2$ provides an internal consistency check:*
 
@@ -5201,7 +5261,7 @@ $$\langle e^{i\phi} \rangle = \frac{1}{2u}\int_{-u}^{u} e^{i\phi}\,d\phi = \frac
 
 ### T.24.19 Atmospheric Angle θ₂₃
 
-**Theorem T.24.19** (Atmospheric Mixing). *The atmospheric mixing angle is:*
+**Theorem T.24.19** (Atmospheric Mixing on the PMNS Geometric-Factor Branch). *On the PMNS geometric-factor branch of Theorem T.24.20, together with the matched-sector baseline and curvature/tilt factors specified in the proof, the atmospheric mixing angle is:*
 
 $$\boxed{\theta_{23} = 47.4°}$$
 
@@ -5248,9 +5308,11 @@ $$\mathcal{E}_{\text{Maj}} = \sqrt{\frac{d^2_{21,\nu} \cdot d^2_{31,\nu}}{d^2_{2
 
 ### T.24.20 Solar Angle θ₁₂
 
-**Theorem T.24.20** (Solar Mixing). *The solar mixing angle is:*
+**Theorem T.24.20** (Solar Mixing on the PMNS Geometric-Factor Branch). *On the PMNS geometric-factor branch — comprising the distance enhancement $f_{\mathrm{dist}} = \sqrt{d^2_{21,\nu}/d^2_{21,\ell}}$, the Schur complement $f_{\mathrm{Schur}} = \sqrt{d^2_{31,\nu}/d^2_{32,\nu}}$, the symmetric-bilinear factor $f_{\mathrm{sym}} = 2$, the curvature correction $f_{\mathrm{curv}}$, the tilt enhancement $f_{\mathrm{tilt}}$, and the sinc-renormalization factor $f_{\mathrm{sinc-renorm}} = 1/f_{\mathrm{sinc}}^2$ specified in the proof, in conjunction with the Majorana A₂ branch (Theorem T.24.5), the triplet-projection exponent branch (Theorem T.24.12), and the generation-internal tensor-factor branch (Lemma T.54.1) — the solar mixing angle is:*
 
-$$\boxed{\theta_{12} = 33.7°}$$
+$$\boxed{\theta_{12} = 33.7°.}$$
+
+*This is a derivation within the adopted PMNS Berry-loop and geometric-factor model branch; Proposition T.24.28 records the full input inventory required for branch-conditional closure of the neutrino sector.*
 
 *Proof.*
 
@@ -5318,7 +5380,7 @@ $$\theta_{12} = \arcsin(0.555) = 33.7°$$
 
 ### T.24.21 Reactor Angle θ₁₃
 
-**Theorem T.24.21** (Reactor Mixing). *The reactor mixing angle is:*
+**Theorem T.24.21** (Reactor Mixing on the PMNS Geometric-Factor Branch). *On the PMNS geometric-factor branch of Theorem T.24.20, together with the Berry-curvature frustration factor specified in the proof, the reactor mixing angle is:*
 
 $$\boxed{\theta_{13} = 8.8°}$$
 
@@ -5370,7 +5432,7 @@ $$\theta_{13} = \arcsin(0.150) = 8.65° \approx 8.7°$$
 
 ### T.24.22 CP Phase from Berry Holonomy
 
-**Theorem T.24.22** (Conditional leptonic CP phase in the Berry-loop model). *Within the Berry-loop model adopted in Section T.24, where the baseline phase, one hexagonal wedge, and the tilt contribution add linearly and the Weinberg operator is assigned the spin-1 Berry factor, the PMNS CP phase is*
+**Theorem T.24.22** (Leptonic CP Phase on the PMNS Berry-Loop Branch). *On the PMNS Berry-loop branch adopted in Section T.24, where the baseline phase, one hexagonal wedge, the tilt contribution, and the spin-1 Berry factor of the Weinberg operator combine as specified in the proof, the PMNS CP phase is*
 $$
 \delta_{CP} = 232.5^\circ.
 $$

@@ -40,7 +40,13 @@ $$
 
 ## S.2 The CC-Context Stress-Energy Tensor $\Delta T_{\mu\nu}^{(CC)}$
 
-Assume the context state occupies volume $V_S$. We model its effective stress-energy contribution as a perfect fluid with equation-of-state parameter $w_c:=p_{context}/u_{context}\in[0,1]$. The radiation-like case $w_c=1/3$ (relativistic internal signaling) can be substituted where needed without changing any derivations. The energy density, time-averaged over the context coherence timescale $\tau_c$, is:
+Assume the context state occupies volume $V_S$. We model its effective stress-energy contribution as a perfect fluid with equation-of-state parameter $w_c:=p_{context}/u_{context}\in[0,1]$. The radiation-like case $w_c=1/3$ (relativistic internal signaling) can be substituted where needed without changing any derivations. The instantaneous energy density sourcing gravity is, on the retained-energy branch (consistent with the Theorem L.3 of Appendix L, which distinguishes instantaneous source energy from cumulative work):
+
+$$
+u_{\mathrm{context}} = \frac{E_{\mathrm{grav}}^{\mathrm{inst}}}{V_S}, \qquad E_{\mathrm{grav}}^{\mathrm{inst}} = \eta_{\mathrm{ret}} P_{\mathrm{context}} \tau_c,
+$$
+
+where $\eta_{\mathrm{ret}} \in (0, 1]$ is the retention fraction (idealized fully retained estimate uses $\eta_{\mathrm{ret}} = 1$). Cumulative work $P_{\mathrm{context}} \tau_c$ done over the coherence interval is not itself the gravitating source unless that energy remains localized in the source region; energy radiated, dissipated, or transported away does not continue to source the local gravitational potential. In dissipative steady state, $\eta_{\mathrm{ret}}$ must be computed from the actual instantaneous stress-energy distribution rather than from cumulative throughput.
 $$
 u_{context} = \frac{P_{context} \tau_c}{V_S}, \qquad p_{context} = w_c u_{context}
 \tag{S.6}
@@ -74,9 +80,11 @@ $$
 
 Higher available energy density raises the operational cap, while causal consistency still enforces $\text{CC} < \alpha_{CC,max}$ (Theorem 39).
 
-**Theorem S.1 (Local CC biases preserve no-signaling; gravitational bound).**
+**Theorem S.1 (Local CPTP CC Branch: No-Signaling and Gravitational Bound).**
 
-Let a bipartite system $AB$ be prepared in state $\rho_{AB}$. Let the local CC device on subsystem $A$ be described by a one-parameter family of completely positive, trace-preserving (CPTP) maps (Nielsen & Chuang, 2010; Watrous, 2018) $\{\Phi_A^{(\epsilon)}\}_{\epsilon}$ with $\|\Phi_A^{(\epsilon)} - \mathcal{E}_A\|_{1 \to 1} \le \alpha < 1/2$, where $\mathcal{E}_A$ is the baseline (zero-CC) channel and $\|\cdot\|_{1 \to 1}$ is the induced trace norm. Let this map act before a product measurement $\{E_i \otimes F_j\}$. Then the marginal on $B$ is unchanged for all $\epsilon$:
+Let a bipartite system $AB$ be prepared in state $\rho_{AB}$. Let the local CC device on subsystem $A$ be described by a one-parameter family of completely positive, trace-preserving (CPTP) maps (Nielsen & Chuang, 2010; Watrous, 2018) $\{\Phi_A^{(\epsilon)}\}_{\epsilon}$ with $\|\Phi_A^{(\epsilon)} - \mathcal{E}_A\|_{\diamond} \le \alpha < 1/2$, where $\mathcal{E}_A$ is the baseline (zero-CC) channel and $\|\cdot\|_{\diamond}$ is the diamond norm — the appropriate channel norm for bipartite stability under tensoring with identity, since the induced trace norm $\|\cdot\|_{1 \to 1}$ does not in general bound $\|(\Phi - \mathcal{E}) \otimes \mathrm{id}\|_{1 \to 1}$ on entangled inputs (Watrous, 2018, §3.3).
+
+This theorem applies on the local CPTP CC branch — under which CC is implemented as a strictly local CPTP perturbation of subsystem $A$. Such perturbations cannot realize Bob-side marginal shifts: they only modify joint correlations detectable after classical comparison of measurement records. The local CPTP CC branch is therefore a separate scope from any main-text claim of statistical Bob-marginal influence; reconciling those would require a different (non-CPTP, or non-local) mechanism rather than the model of this theorem. Let this map act before a product measurement $\{E_i \otimes F_j\}$. Then the marginal on $B$ is unchanged for all $\epsilon$:
 $$
 \sum_i \text{tr}\!\left[(\Phi_A^{(\epsilon)} \otimes \text{id}_B)(\rho_{AB}) (E_i \otimes F_j)\right] = \text{tr}\!\left[\rho_B F_j\right]
 \tag{S.11}
@@ -112,10 +120,10 @@ For the operational bound, let $M$ be any POVM element with $0\le M\le I$ on $AB
 $$
 |\Delta P|=|\text{tr}(M\Delta\rho_{AB})|
 \le \|M\|_\infty\,\|\Delta\rho_{AB}\|_1
-\le \|\Phi_A^{(\epsilon)}-\mathcal E_A\|_{1\to1}\,\|\rho_{AB}\|_1
+\le \|\Phi_A^{(\epsilon)}-\mathcal E_A\|_{\diamond}\,\|\rho_{AB}\|_1
 \le \alpha,
 $$
-since $\|M\|_\infty\le 1$ and $\|\rho_{AB}\|_1=1$.
+since $\|M\|_\infty\le 1$, $\|\rho_{AB}\|_1=1$, and the diamond norm is by definition the supremum over arbitrary ancilla extensions: $\|\Phi\|_{\diamond} := \sup_{\rho_{AB}} \|(\Phi \otimes \mathrm{id})(\rho_{AB})\|_1 / \|\rho_{AB}\|_1$. The induced trace norm $\|\Phi\|_{1 \to 1}$ would in general undercount this for entangled $\rho_{AB}$.
 
 Under the perfect-fluid model (Equation S.8), the Newtonian field of a uniform source implies a potential variation across a characteristic scale $L$ bounded by
 $$
@@ -240,15 +248,16 @@ E_{context} = P_{context} \tau_c
 \tag{S.28}
 $$
 
-The Schwarzschild radius (Schwarzschild, 1916; Misner et al., 1973) corresponding to energy $E_{context}$ is:
+The Schwarzschild radius (Schwarzschild, 1916; Misner et al., 1973) corresponding to energy $E_{context}$ is, on the retained-energy branch (with $E_{\mathrm{grav}}^{\mathrm{inst}} = \eta_{\mathrm{ret}} P_{context} \tau_c$ as in the Theorem L.3 and the Patch 12 fix to S.2 below):
 $$
-r_s = \frac{2G E_{context}}{c^2} = \frac{2G P_{context} \tau_c}{c^2}
+r_s = \frac{2G E_{context}}{c^4} = \frac{2G \eta_{\mathrm{ret}} P_{context} \tau_c}{c^4}
 \tag{S.29}
 $$
+The denominator is $c^4$, not $c^2$: Schwarzschild radius for mass $M$ is $r_s = 2GM/c^2$, and identifying $M = E/c^2$ gives $r_s = 2GE/c^4$. Dimensional check: $[G \cdot E / c^4] = (m^3 / (kg \cdot s^2)) \cdot (kg \cdot m^2 / s^2) / (m^4 / s^4) = m$, as required.
 
 Substituting Equation S.5:
 $$
-r_s = \frac{2G \tau_c}{c^2} A \left[\frac{\text{CC}}{\alpha - \text{CC}}\right]^2
+r_s = \frac{2G \eta_{\mathrm{ret}} \tau_c}{c^4} A \left[\frac{\text{CC}}{\alpha - \text{CC}}\right]^2
 \tag{S.30}
 $$
 
@@ -334,7 +343,7 @@ This establishes the CC bound as a fundamental physical limit, not merely an eng
 
 ## S.6 Non-Local Gravitational Influence via Entanglement
 
-While the gravitational effects analyzed in Sections S.3-S.4 operate locally on the context-generating aggregate, for entangled systems the local gravitational field can affect distant measurement statistics without violating no-signaling. Unlike classical local hidden variable theories ruled out by Bell-type experiments (Bell, 1964; Clauser et al., 1969), the predictive substrate permits statistical correlations that respect no-signaling while allowing non-local influence through shared quantum states. This provides a concrete realization of the statistical FTL influence permitted by Postulate 3 and analyzed in Section 10.
+While the gravitational effects analyzed in Sections S.3-S.4 operate locally on the context-generating aggregate, for entangled systems the local gravitational field can modulate joint $A$-$B$ correlation statistics without violating no-signaling. As with standard quantum entanglement, Alice's local action changes joint correlations detectable only after classical comparison of measurement records, while leaving Bob's marginal statistics unchanged. This is local phase control of entangled joint correlations under no-signaling — a standard quantum mechanical effect — and is not Bob-marginal FTL influence. Reconciliation with any main-text Postulate 3 statement asserting Bob-marginal statistical shifts would require a separate non-CPTP or non-local mechanism beyond the local gravitational dephasing analyzed here.
 
 **Setup:** Consider Alice and Bob sharing a maximally entangled two-qubit state:
 $$
@@ -397,12 +406,13 @@ $$
 \tag{S.42}
 $$
 
-**Interpretation:** This is the *statistical FTL influence* mechanism described in Postulate 3:
+**Interpretation:** This is the *joint-correlation modulation* mechanism — local control of entangled joint statistics under no-signaling:
 
 1. Alice's local action (creating high-CC context) generates local gravitational field
 2. Local gravitational field affects only Alice's particle (local interaction)
 3. Because Alice's particle is entangled with Bob's, the global entanglement correlations are modified
 4. Bob's marginal statistics remain unchanged (no-signaling preserved, Equation S.37)
+5. The modification is detectable only after classical comparison of $A$ and $B$ measurement records, exactly as for any other entangled-state local-unitary effect — this is not Bob-marginal FTL influence.
 5. Joint statistics $P(ij)$ are modified, detectable only through comparison between Alice and Bob
 6. Effect is probabilistic, not deterministic: cannot force specific outcomes
 7. Detection requires many samples: $N \gtrsim 1/|\Delta P|^2 \sim 1/P_{context}^4$
@@ -544,21 +554,23 @@ $$
 \tag{S.55}
 $$
 
-### S.7.3 Decoherence Rate and Coherence Time Suppression
+### S.7.3 Dephasing Rate on the Phase-Uncertainty / Environmental-Tracing Branch
 
-When the gravitational phase shift becomes comparable to unity, $|\Delta\phi_{ij}^{(grav)}| \sim 1$, coherence between states $|i\rangle$ and $|j\rangle$ is lost. This defines an effective decoherence rate:
+A deterministic, fully known gravitational phase shift $|\Delta\phi_{ij}^{(grav)}| \sim 1$ is a unitary phase rotation of the superposition $|i\rangle + |j\rangle$ and does not by itself suppress coherence: the off-diagonal density matrix elements rotate but do not decay. Genuine dephasing occurs on branches with an additional ingredient — either (a) the gravitational potential $\Phi$ (or equivalently $\Delta\tau_d$) fluctuates with variance $\mathrm{Var}(\Delta\phi)$ across unresolved degrees of freedom, (b) the spatial wavepacket components experience different gravitational potentials and become entangled with position degrees of freedom that are then traced out, or (c) the gravitational substrate couples to environmental degrees of freedom whose state is traced out per Zurek-style decoherence (Zurek, 1991, 2003).
+
+On the phase-uncertainty / environmental-tracing branch where one of (a)–(c) supplies a phase variance $\mathrm{Var}(\Delta\phi_{ij})$ over the coherence interval $\tau_c$, the off-diagonal coherence is suppressed by the factor $\exp(-\mathrm{Var}(\Delta\phi_{ij})/2)$, defining the dephasing rate:
 $$
-\Gamma_{deco}^{(ij)} = \frac{1}{\tau_{deco}} \sim \frac{|\Delta\phi_{ij}^{(grav)}|}{\tau_c} \sim \frac{\Delta E_{ij}}{\hbar} K_{eff} P_{context}
+\Gamma_{\mathrm{deph}}^{(ij)} = \frac{1}{\tau_{\mathrm{deph}}} \sim \frac{\mathrm{Var}(\Delta\phi_{ij}^{(grav)})}{2\tau_c}.
 \tag{S.56}
 $$
 
-where $K_{eff} = K/\tau_c$ (Equation S.20).
-
-For a quantum system with characteristic energy splitting $\Delta E$ (e.g., typical level spacing or transition frequency), following standard decoherence theory (Zurek, 1991, 2003), the decoherence rate is:
+If the gravitational phase variance is parameterized by a phenomenological dephasing coefficient $K_{\mathrm{eff}}^{\mathrm{deph}}$ scaled by the energy splitting and the context power, one obtains:
 $$
-\boxed{\Gamma_{deco} = \frac{\Delta E}{\hbar} K_{eff} P_{context}}
+\boxed{\Gamma_{\mathrm{deph}} = \frac{\Delta E}{\hbar} K_{\mathrm{eff}}^{\mathrm{deph}} P_{\mathrm{context}}}
 \tag{S.57}
 $$
+
+where $K_{\mathrm{eff}}^{\mathrm{deph}}$ is the dephasing-branch coefficient, model-distinct from the deterministic-phase coefficient $K_{\mathrm{eff}}$ of Equation S.20 unless an explicit branch identifies them. Without specifying which of (a)–(c) supplies the phase variance, the deterministic-phase analysis of S.7.1–S.7.2 does not by itself yield decoherence; it yields a coherent phase rotation that leaves the state pure.
 
 The effective coherence time is reduced from its baseline value $\tau_{coh}^0$ (determined by environmental decoherence sources) by the gravitational contribution:
 $$

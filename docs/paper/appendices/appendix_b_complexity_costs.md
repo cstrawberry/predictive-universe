@@ -12,7 +12,7 @@ in nats (natural-log base $e$). The physical relevance of all complexity-derived
 
 The theoretical Predictive Physical Complexity $C_{\mathrm P}(\mu)$ (Equation 1) is defined via a limit of algorithmic complexities, making it generally uncomputable. For the system's adaptive dynamics to operate on a physical observable that tracks this complexity, a computable operational proxy is required. Within the emergent quantum setting (Proposition 4), quantum circuit complexity provides a suitable measure, possessing expected properties like monotonicity with physical resources, approximate additivity, and computational accessibility. We formally define the operator representing this observable proxy.
 
-**Definition B.1 (Operational Complexity Operator $\hat{C}_v$)**
+**Definition B.1 (Coarse-Grained Operational Complexity Observable $\hat{C}_v$)**
 
 For each MPU $v$, its operational complexity is represented by a Hermitian, positive-semi-definite operator $\hat C_v$ acting on the MPU's Hilbert space $\mathcal{H}_v$ (Proposition 4), identified with quantum circuit complexity. This operator is defined via its spectral decomposition:
 
@@ -25,16 +25,16 @@ For each MPU $v$, its operational complexity is represented by a Hermitian, posi
  where:
 
  *   $d \in \mathbb{N}_0$ is a dimensionless integer representing the minimum number of fundamental quantum gates (circuit size, relative to a fixed universal gate set) required to prepare states in the subspace $\hat{P}_d \mathcal{H}_v$ starting from a reference state $|K_0\rangle$ corresponding to the Horizon Constant $K_0$.
- *   $\hat{P}_d$ is the orthogonal projector onto the subspace of $\mathcal{H}_v$ consisting of states requiring additional circuit complexity $d$ relative to $|K_0\rangle$. These projectors are orthogonal and complete: $\hat{P}_d \hat{P}_{d'} = \delta_{dd'} \hat{P}_d$ and $\sum_{d} \hat{P}_d = \hat{I}$ (where the sum becomes effectively finite for a finite-dimensional $\mathcal{H}_v$).
+ *   On the operational coarse-graining branch, $\hat{P}_d$ is the orthogonal projector onto an experimentally resolved complexity bin labeled by effective circuit-depth $d$ relative to $|K_0\rangle$. These bins are chosen to partition $\mathcal{H}_v$ into an orthogonal, complete family: $\hat{P}_d \hat{P}_{d'} = \delta_{dd'} \hat{P}_d$ and $\sum_{d} \hat{P}_d = \hat{I}$ (the sum being effectively finite for a finite-dimensional $\mathcal{H}_v$). The bins are not assumed to coincide with the exact mathematical level sets $\{|\psi\rangle : C_{\text{circ}}(|\psi\rangle) = d\}$ of circuit complexity, which do not generally form linear subspaces (a superposition of two low-complexity states can require strictly more gates than either). The operator $\hat{C}_v$ is therefore a coarse-grained observable proxy for circuit complexity, dynamically validated as a tracker of the theoretical $C_P$ by Theorem 2 (Appendix D).
  *   $\lambda(d)$ are the eigenvalues of $\hat{C}_v$, representing the effective Predictive Physical Complexity for states in the subspace $\hat{P}_d \mathcal{H}_v$. These eigenvalues are non-decreasing with $d$:
      $$ \lambda(d) = K_0 + \Delta C(d) \tag{B.2} $$
      where $K_0$ is the Horizon Constant (Theorem 15) and $\Delta C(d) \ge 0$ is the additional complexity due to circuit depth $d$, with $\Delta C(0)=0$.
 
  For an MPU with a finite-dimensional Hilbert space $\mathcal{H}_v$ of dimension $d_0$ (Theorem 23), the sum in Equation (B.1) is understood to be effectively finite. Only a finite number of distinct, non-zero orthogonal projectors $\hat{P}_d$ corresponding to achievable complexity levels can exist, or for $d$ beyond a certain $d_{max}$, the projectors $\hat{P}_d$ become zero or the eigenvalues $\lambda(d)$ cease to increase, reflecting the capacity limit of the $d_0$-dimensional space.
 
-The expectation value $\langle \psi | \hat{C}_v | \psi \rangle$ for a state $|\psi\rangle$ provides the MPU's operational measure of complexity. The justification for this operator serving as a valid, dynamically selected proxy for the theoretical $C_P$ at viable equilibria is rigorously provided by Theorem 2 (Dynamically Enforced Functional Correspondence), detailed in **Appendix D**.
+The expectation value $\langle \psi | \hat{C}_v | \psi \rangle$ for a state $|\psi\rangle$ provides the MPU's operational measure of complexity on the chosen coarse-graining. The justification for this coarse-grained observable serving as a valid, dynamically selected proxy for the theoretical $C_P$ at viable equilibria is rigorously provided by Theorem 2 (Dynamically Enforced Functional Correspondence), detailed in **Appendix D**. Different admissible coarse-grainings define equivalent proxies in the sense of Theorem 2 up to the tracking noise floor established there.
 
-*Proof:* The definition of $\hat{C}_v$ as a Hermitian operator with a spectral decomposition based on quantum circuit complexity levels is standard in quantum information theory. The property of being positive-semidefinite follows from $\lambda(d) = K_0 + \Delta C(d) \ge K_0 > 0$.
+*Proof:* On the operational coarse-graining branch, $\hat{C}_v$ is by construction a Hermitian operator with orthogonal complete spectral projectors $\{\hat{P}_d\}$ and real non-negative eigenvalues $\lambda(d) = K_0 + \Delta C(d) \ge K_0 > 0$. Self-adjointness and positive semi-definiteness follow directly. The coarse-graining choice is the branch input; exact agreement with mathematical circuit-complexity level sets is not claimed and would generally fail because such level sets are not linear subspaces.
 
 ## B.2 Physical Resource-Cost Operators $\hat{R}, \hat{R}_I$
 
@@ -243,11 +243,11 @@ Under geometric regularity (Theorem 43), there exists a local chart in which nei
 $$
 \frac{d}{dt}\hat{\rho}_v + \sum_{j=1}^3 \nabla_j^{(v)} \hat{q}_{v,j} = 0.
 $$
-Define the momentum density by $\hat{\pi}_{v,j} := \hat{q}_{v,j}/c^2$ and define the stress operators $\hat{p}_{v,jk}$ by requiring local momentum conservation:
+Define the momentum density by $\hat{\pi}_{v,j} := \hat{q}_{v,j}/c^2$. On the momentum-flux closure branch — assuming that $\hat{H}_{\mathrm{total}}$ is approximately translation-invariant on the locally regular chart at the relevant coarse-graining scale — Noether's theorem for discrete translation symmetry supplies a local stress tensor $\hat{p}_{v,jk}$ satisfying the discrete conservation identity
 $$
-\frac{d}{dt}\hat{\pi}_{v,j} + \sum_{k=1}^3 \nabla_k^{(v)}\hat{p}_{v,jk} = 0. \tag{B.12}
+\frac{d}{dt}\hat{\pi}_{v,j} + \sum_{k=1}^3 \nabla_k^{(v)}\hat{p}_{v,jk} = 0, \tag{B.12}
 $$
-These equations define $(\hat{\pi}_{v,j}, \hat{p}_{v,jk})$ consistently with the Hamiltonian and energy density in the locally regular chart.
+fixed up to a standard stress-gauge freedom (addition of a discrete divergence-free tensor). These equations determine the admissible class of stress operators $\hat{p}_{v,jk}$ up to that gauge; a choice is then made consistent with the Hamiltonian and energy density in the locally regular chart. When approximate translation invariance fails at the chosen chart (for instance under pronounced geometric irregularity), the construction of this section does not apply and the closure branch must be stated explicitly elsewhere in the derivation.
 
 ## B.6 Canonical Microscopic Stress-Energy Tensor $\hat{T}^{\mu\nu}_{(can)}$
 
@@ -264,7 +264,7 @@ The canonical microscopic stress-energy operator $\hat{T}^{\mu\nu}_{(can)}(v)$ f
 
 (By definition $\hat{\pi}_{v,j}:=\hat{q}_{v,j}/c^2$, one has $\hat{T}^{0j}_{(can)}(v)=\hat{T}^{j0}_{(can)}(v)$.)
 
-**Theorem B.3 (Microscopic Conservation Law for $\hat{T}^{\mu\nu}_{(can)}$)**
+**Theorem B.3 (Microscopic Conservation Law for $\hat{T}^{\mu\nu}_{(can)}$ on the Momentum-Flux Closure Branch)**
 
 The canonical tensor $\hat{T}^{\mu\nu}_{(can)}(v)$ satisfies the local conservation law using a discrete spacetime divergence $\partial_\mu^{(v)}$ (where $\partial_0^{(v)} = (1/c)\, d/dt$, $\partial_j^{(v)} = \nabla_j^{(v)}$):
 $$

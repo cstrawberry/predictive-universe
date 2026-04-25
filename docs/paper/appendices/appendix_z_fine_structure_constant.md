@@ -501,21 +501,28 @@ Numerical evaluation: $u^* = 2^{0.125} - 1 \approx 1.09051 - 1 = 0.09051$. ∎
 
 ### Z.8.3 The Fundamental Mass Scale
 
-**Definition Z.8f (Fundamental Mass Scale).** The mass scale connecting Planck physics to the interface structure is:
+**Definition Z.8f (Fundamental Mass Scale on the canonical Leech norm-information calibration branch).** The mass scale connecting Planck physics to the interface structure is:
 
 $$\mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} \quad (\varepsilon=\ln 2\ \text{at the PCE-Attractor}) \quad = \frac{m_P}{2\sqrt{8\ln 2}} \approx 0.212 \cdot m_P$$
 
-*Derivation.* From the Mass-Information Equivalence (Theorem N.5), a system with relational information content $\mathcal{I}_{\mathrm{rel}}$ has inertial mass $m = \mathcal{I}_{\mathrm{rel}} \cdot m_P / (2\sqrt{8\varepsilon})$. For vacuum configurations in the Leech lattice, the relational information content is encoded by the lattice norm: $\mathcal{I}_{\mathrm{rel}}(v) = |v|$ in Planck units. The coefficient $\mu_0$ sets the mass per unit norm.
+*Derivation.* From the Mass-Information Equivalence (Theorem N.5), a system with relational information content $\mathcal{I}_{\mathrm{rel}}$ has inertial mass $m = \mathcal{I}_{\mathrm{rel}} \cdot m_P / (2\sqrt{8\varepsilon})$. For vacuum configurations in the Leech lattice, the canonical Leech norm-information calibration identifies the relational information content with the lattice norm:
+$$\mathcal{I}_{\mathrm{rel}}(v) = |v| \quad \text{in Planck units (canonical calibration branch)}.$$
 
-**Theorem Z.8g (Energy-Norm Relation).** For a gauge field configuration corresponding to lattice point $v \in \Lambda_{24}$:
+More generally, a universal calibration $\mathcal{I}_{\mathrm{rel}}(v) = \gamma \cdot |v|$ with dimensionless $\gamma > 0$ would rescale absolute masses by a factor $\gamma$ while preserving all dimensionless mass ratios and lattice-norm ordering. The canonical branch $\gamma = 1$ used throughout this appendix fixes the absolute mass scale; ratio predictions are independent of $\gamma$. The coefficient $\mu_0$ sets the mass per unit norm on the canonical branch.
 
-$$m^2(v) = \mu_0^2 \cdot |v|^2$$
+**Theorem Z.8g (Energy-Norm Relation on the canonical Leech norm-information branch).** On the canonical Leech norm-information calibration branch of Definition Z.8f, a gauge field configuration corresponding to lattice point $v \in \Lambda_{24}$ satisfies:
 
-*Proof.* By Definition Z.8f, Leech lattice excitations satisfy $\mathcal{I}_{\mathrm{rel}}(v) = |v|$ in Planck units. The Mass-Information Equivalence (Theorem N.5) then gives:
+$$m^2(v) = \mu_0^2 \cdot |v|^2.$$
 
-$$m(v) = \frac{\mathcal{I}_{\mathrm{rel}}(v)}{2\sqrt{8\varepsilon}} \cdot m_P = \mu_0 \cdot |v|$$
+*Proof.* By the canonical calibration of Definition Z.8f, Leech lattice excitations satisfy $\mathcal{I}_{\mathrm{rel}}(v) = |v|$ in Planck units. The Mass-Information Equivalence (Theorem N.5) then gives:
 
-Squaring yields $m^2(v) = \mu_0^2 |v|^2$. ∎
+$$m(v) = \frac{\mathcal{I}_{\mathrm{rel}}(v)}{2\sqrt{8\varepsilon}} \cdot m_P = \mu_0 \cdot |v|.$$
+
+Squaring yields $m^2(v) = \mu_0^2 |v|^2$ on the canonical branch. On a generalized calibration $\mathcal{I}_{\mathrm{rel}}(v) = \gamma |v|$, the same derivation gives $m^2(v) = \gamma^2 \mu_0^2 |v|^2$, uniformly rescaling all absolute masses by $\gamma^2$ while preserving all squared-norm ratios. ∎
+
+
+
+**Remark Z.8g.3 (Branch Dependence of the Norm-Information Calibration).** The absolute mass scale $\mu_0 \approx 0.212\,m_P$ and the mass gap value $\Delta_{\mathrm{gap}} = 2\mu_0$ (Corollary Z.8g.1) depend on the canonical Leech norm-information calibration $\gamma = 1$ introduced in Definition Z.8f. The named supporting theorems (Theorem N.5 for mass-information equivalence, Theorem Z.8c for Leech rootlessness, Proposition R.4.2a for the Golay-gluing construction) supply the information-to-mass bridge and the lattice geometry but do not uniquely force the identification $\mathcal{I}_{\mathrm{rel}}(v) = |v|$. Dimensionless mass ratios — including the glueball spectrum ratios of Theorem Z.8h and the shell-$J^{PC}$ correspondence — are independent of $\gamma$ under universal calibration. Absolute mass predictions, including the mass gap, the minimum excitation scale $\mu_0$, and the glueball mass scale relative to $m_P$, scale linearly with $\gamma$.
 
 **Corollary Z.8g.1 (Mass Gap Value).** At the PCE-Attractor, the mass gap is:
 
@@ -527,9 +534,11 @@ The factor of 2 arises from the Leech lattice's minimum squared norm $|v|^2_{\mi
 
 ### Z.8.4 Shell-$J^{PC}$ Correspondence
 
-**Theorem Z.8h (Shell-$J^{PC}$ Correspondence).** For a glueball with quantum numbers $J^{PC}$, the Leech lattice shell squared norm is:
+**Theorem Z.8h (Shell-$J^{PC}$ Correspondence on the Canonical Shell-Assignment Branch).** On the canonical shell-assignment branch — under which the discrete cost increments $\Delta_J(J) = J(J - 1)$, $\Delta_P(-) = a^2 = 4$, and $\Delta_C(-) = d_{\text{Golay}} = 8$ are the prescribed assignment rules connecting glueball quantum numbers $J^{PC}$ to Leech lattice shell squared norms — the shell norm is:
 
 $$\boxed{|v|^2(J^{PC}) = a^2 + \Delta_J(J) + \Delta_P(P) + \Delta_C(C)}$$
+
+*The Leech and Golay structures (Theorems Z.8c, Z.13b) supply the available numerical scales $4$ and $8$; the assignment of those scales to the parity flip and the C-conjugation cost, and the use of $J(J-1)$ rather than the standard Casimir $J(J+1)$ for the spin contribution, are the canonical PU shell-assignment rules of this branch.*
 
 where the contributions are:
 
@@ -562,7 +571,7 @@ The Golay code $\mathcal{G}_{24}$ has minimum distance $d = 8$ (Theorem Z.13). T
 
 $$\Delta_C(-) = d_{\text{Golay}} = 8 = 2a^2$$
 
-The factor of 2 reflects that C-parity is a global symmetry (particle-antiparticle), while P-parity is local (spatial reflection). ∎
+The factor of 2 motivates that C-parity is a global symmetry (particle-antiparticle), while P-parity is local (spatial reflection). The identifications "parity flip $\leftrightarrow$ minimum lattice displacement $a^2$" and "C-conjugation cost $\leftrightarrow$ minimum Hamming distance $d_{\text{Golay}}$" are the canonical shell-assignment-branch rules; the lattice and code supply the scales $4$ and $8$, while the assignment of which scale realizes which discrete symmetry cost is the branch input. ∎
 
 **Corollary Z.8h.1 (Hierarchy of Symmetry Costs).** The discrete symmetry costs obey:
 
@@ -770,7 +779,7 @@ and the unique minimum occurs at $M_{\mathrm{int}} = K(D)$. ∎
 
 ### Z.10.5 PCE Mode-Channel Correspondence
 
-**Theorem Z.10 (PCE Mode-Channel Correspondence).** At PCE-optimal equilibrium, three independently derived conditions hold: (i) channels are operationally distinguishable with non-overlapping angular supports (Definition Z.6; Corollary Z.4); (ii) at thermodynamic equilibrium the entropy-maximizing channel configuration has equal angular caps (Theorem Z.9); (iii) PCE benefit maximization saturates the packing at tangency (Step 1 below). Under these conditions the channel-counting problem is equivalent to the kissing-number problem in $\mathbb{R}^D$ (Theorem Z.7a), and every PCE-optimal equilibrium satisfies
+**Theorem Z.10 (PCE Mode-Channel Correspondence on the Tangent-Kissing Channel Branch).** On the tangent-kissing channel branch — under which the ND-RID propagation model fixes the operational distinguishability cap so that the tangent channel threshold is $2\theta_{\rm cap} = \pi/3$ and channels are modeled as unit balls of equal radius tangent to a central unit ball in $\mathbb{R}^D$ — three independently derived conditions hold at PCE-optimal equilibrium: (i) channels are operationally distinguishable with non-overlapping angular supports (Definition Z.6; Corollary Z.4); (ii) at thermodynamic equilibrium the entropy-maximizing channel configuration has equal angular caps (Theorem Z.9); (iii) PCE benefit maximization saturates the packing at tangency (Step 1 below). Under these conditions the channel-counting problem reduces to the kissing-number problem in $\mathbb{R}^D$ (Theorem Z.7a), and every PCE-optimal equilibrium on this branch satisfies
 $$M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D).$$
 Within this family the mismatch sector has a unique global minimum.
 
@@ -802,11 +811,11 @@ The unique global minimum is at $D = 4$. No other integer $D$ yields zero mismat
 
 ## Z.11 Dimensional Selection
 
-**Theorem Z.11 (Dimensional Selection).** By Theorem Z.10, every PCE-optimal equilibrium satisfies $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$. Then at the attractor,
+**Theorem Z.11 (Dimensional Selection on the Tangent-Kissing Channel Branch).** On the tangent-kissing channel branch (Theorem Z.10), every PCE-optimal equilibrium satisfies $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$. Then at the attractor,
 $$
-M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D) = 24.
+M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D) = 24,
 $$
-Consequently the unique PCE-optimal dimension is $D = 4$.
+and the unique PCE-optimal dimension on this branch is $D = 4$. Off the tangent-kissing branch — for instance, with a different operational cap angle $2\theta_{\rm cap} \neq \pi/3$ or non-tangent channel geometry — the relevant problem becomes the spherical-code maximum $A(D, 2\theta_{\rm cap})$ rather than the kissing number $K(D)$, and the matching $M = 24$ may select a different integer dimension or no integer dimension at all.
 
 *Proof.* By Theorem Z.5, $M_{\mathrm{int}} = 2ab = 24$. By Theorem Z.10, every PCE-optimal equilibrium satisfies
 $$
@@ -1205,9 +1214,9 @@ forming the binary Golay code [24, 12, 8] with minimum distance d = 8. This stru
 $$L[C] = p_e(d) \cdot c_{\mathrm{mode}}$$
 where p_e(d) is the error probability as a (monotonically decreasing) function of minimum distance d, and c_mode is the physical cost per mode (equal for all modes by isotropy).
 
-Subject to constraints:
-- Block length n = M = 24 (fixed by QFI mode count)
-- Rate R = k/n = 1/2 (balancing information and redundancy)
+Subject to constraints (the second of which defines the balanced rate-½ branch of Theorem P.13.12):
+- Block length n = M = 24 (fixed by QFI mode count, theorem-level from Theorem Z.5)
+- Rate R = k/n = 1/2 (balancing information and redundancy; branch-level — the stability condition $(1-R)\,C_{\max} = \varepsilon_{SPAP}$ motivates this rate, but a separate rate-selection theorem showing that no admissible rate $R \neq 1/2$ minimizes the PCE potential is outside the stated branch hypotheses)
 
 **Step 4 (Distance Maximization).** With symmetric noise and equal mode costs, minimizing L[C] at fixed (n, R) is equivalent to maximizing minimum distance d.
 
@@ -1272,13 +1281,13 @@ The error correction structure solves the "unreasonable stability" problem:
 
 *Proof.* By Niemeier's classification, the even unimodular lattices of rank 24 are exactly the 24 Niemeier lattices. Of these, 23 have nonempty root systems and therefore contain vectors with $|v|^2=2$. Exactly one has empty root system; this unique rootless lattice is the Leech lattice $\Lambda_{24}$. Hence rootlessness uniquely characterizes $\Lambda_{24}$ and implies $|v|_{\min}^2=4$, while all other Niemeier lattices have $|v|_{\min}^2=2$. ∎
 
-**Proposition Z.8d (Confinement from Rootlessness).** If the vacuum configuration lattice is rootless, the framework predicts Wilson loops satisfy an area law:
+**Proposition Z.8d (Rootlessness and the Flux-Tube Confinement Branch).** Rootlessness of the Leech vacuum lattice supplies a lattice-norm gap ($|v|_{\min}^2 = 4$ rather than $2$) and motivates a flux-tube confinement branch. On the flux-tube confinement branch — under the additional gauge-dynamical assumption that this lattice-norm gap forces the chromoelectric flux into a tube of fixed cross-section with linear energy $V(R) = \sigma R$ rather than spreading over $O(R^2)$ — Wilson loops satisfy an area law:
 
 $$\langle W(C) \rangle \sim \exp(-\sigma \cdot \text{Area}(C))$$
 
-with string tension $\sigma > 0$.
+with string tension $\sigma > 0$. Rootlessness alone supplies the lattice norm gap but is not by itself a Wilson-loop calculation: the area-law conclusion requires the flux-tube branch input above. The argument below is a Hamiltonian flux-energy comparison motivating that branch, not a transfer-matrix or strong-coupling derivation of $\langle W(C) \rangle$.
 
-*Physical argument.* Consider quark-antiquark separation $R$. Two flux configurations compete:
+*Physical argument on the flux-tube branch.* Consider quark-antiquark separation $R$. Two flux configurations compete:
 
 1. **Spread configuration:** Chromoelectric flux distributes over area $\sim R^2$. Each unit of flux corresponds to a lattice displacement with minimum energy cost $|v|^2_{\min} = 4$. Spreading requires occupying $O(R^2)$ lattice sites, giving super-linear energy growth.
 
@@ -1296,9 +1305,361 @@ $$\langle W(C) \rangle \sim e^{-V(R)T} = e^{-\sigma RT} = e^{-\sigma \cdot \text
 
 This area law signifies confinement. In contrast, a rooted lattice admits massless propagation along root directions, yielding perimeter-law decay (Coulombic behavior). ∎
 
-**Corollary Z.8d.1 (Unique Confining Vacuum Selection).** Among the 24 Niemeier lattices, PCE optimization uniquely selects the confining vacuum.
+**Corollary Z.8d.1 (Unique Confining Vacuum Selection on the Combined Balanced Golay and Flux-Tube Confinement Branches).** On the combined balanced rate-½ Golay branch (Theorem Z.13b) and flux-tube confinement branch (Proposition Z.8d), among the 24 Niemeier lattices, PCE optimization uniquely selects the confining vacuum.
 
-*Proof.* PCE optimization selects the extended binary Golay code $\mathcal{G}_{24}=[24,12,8]$ on the $M=24$ interface modes (Theorem Z.13). The gluing construction from $\mathcal{G}_{24}$ produces an even unimodular 24-dimensional lattice with $|v|_{\min}^2=4$ (hence rootless) (Appendix R, Proposition R.4.2a and Lemma R.4.5). By Theorem Z.8c, the unique rootless even unimodular lattice in dimension 24 is the Leech lattice $\Lambda_{24}$. By Proposition Z.8d, a rootless vacuum lattice yields an area law, hence the selected vacuum is confining. ∎
+*Proof.* On the balanced rate-½ branch, PCE optimization selects the extended binary Golay code $\mathcal{G}_{24}=[24,12,8]$ on the $M=24$ interface modes (Theorem Z.13b). The gluing construction from $\mathcal{G}_{24}$ produces an even unimodular 24-dimensional lattice with $|v|_{\min}^2=4$ (hence rootless) (Appendix R, Proposition R.4.2a and Lemma R.4.5). By Theorem Z.8c, the unique rootless even unimodular lattice in dimension 24 is the Leech lattice $\Lambda_{24}$. On the flux-tube confinement branch (Proposition Z.8d), the rootless vacuum lattice yields an area law, hence the selected vacuum is confining on that branch. ∎
+
+#### Z.13.4.1 Hyperon Spin-Correlation Transfer from the Rootless Confining Vacuum
+
+**Empirical anchor.** The STAR Collaboration [2026] measures the hyperon-pair spin-correlation parameter $P_{\Lambda_1\Lambda_2}$ from
+
+$$
+\frac{1}{N}\frac{{\rm d}N}{{\rm d}\cos\theta^*}
+=
+\frac12
+\left[
+1+\alpha_1\alpha_2
+P_{\Lambda_1\Lambda_2}
+\cos\theta^*
+\right].
+$$
+
+In this experimental normalization, a parallel spin configuration gives
+
+$$
+P_{\Lambda_1\Lambda_2}=\frac13,
+$$
+
+an antiparallel configuration gives
+
+$$
+P_{\Lambda_1\Lambda_2}=-1,
+$$
+
+and an uncorrelated configuration gives
+
+$$
+P_{\Lambda_1\Lambda_2}=0.
+$$
+
+Thus the factor $1/3$ below is not a Golay rank factor. It is the experimental maximum relative spin-polarization factor of the STAR $\cos\theta^*$ opening-angle observable.
+
+**Definition Z.8k.1 (Local scalar strange-pair transfer coefficient).** Let
+
+$$
+\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}
+\in[0,1]
+$$
+
+denote the local PU transfer coefficient from a scalar-vacuum $s\bar{s}$ spin memory to the observed inclusive $\Lambda\bar{\Lambda}$ spin-correlation observable.
+
+This coefficient includes all local, scalar-channel effects not fixed by the pure STAR angular normalization:
+
+1. transfer of strange-quark spin memory into the observed $\Lambda$ and $\bar{\Lambda}$;
+2. primary and feed-down hyperon composition;
+3. local hadronization effects inside one PCE coherence patch;
+4. acceptance-independent scalar-channel loss mechanisms.
+
+The coefficient is channel-local and observable-specific. It is not a replacement for the global Golay rank $k=12$, the interface count $M=24$, or the syndrome-partition identity $k^2=bM=144$.
+
+**Theorem Z.8k (PU Scalar-Channel Spin-Correlation Transfer Law).** In proton-proton events whose observed $\Lambda\bar{\Lambda}$ pair is produced through the local, condensate-dominated $0^{++}$ strange-pair channel, PU predicts
+
+$$
+\boxed{
+P^{\rm PU}_{\Lambda\bar{\Lambda}}
+=
+\frac13\,
+\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}\,
+\Omega
+}
+$$
+
+where:
+
+- $1/3$ is the maximal relative polarization of a parallel spin pair in the STAR opening-angle observable;
+- $\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}$ is the local scalar strange-pair transfer coefficient of Definition Z.8k.1;
+- $\Omega$ is the PCE coherence-survival factor of the two-particle separation cell.
+
+For the short-range cell
+
+$$
+|\Delta y|<\frac12,\qquad |\Delta\phi|<\frac{\pi}{3},
+$$
+
+the pair remains inside one local PCE coherence patch, so
+
+$$
+\Omega_{\rm SR}=1.
+$$
+
+Therefore
+
+$$
+\boxed{
+P^{\rm PU}_{\Lambda\bar{\Lambda},{\rm SR}}
+=
+\frac13\,
+\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}.
+}
+$$
+
+For the long-range region,
+
+$$
+0.5<|\Delta y|<2.0
+\quad{\rm and/or}\quad
+\frac{\pi}{3}<|\Delta\phi|<\pi,
+$$
+
+the two-spin memory is no longer contained in a single local PCE coherence patch. PCE coarse-graining averages the traceless two-spin sector over untracked phase/Weyl directions. The identity sector survives, but it contributes no $\cos\theta^*$ slope. Hence
+
+$$
+\boxed{
+P^{\rm PU}_{\Lambda\bar{\Lambda},{\rm LR}}=0.
+}
+$$
+
+The same selection rule gives
+
+$$
+\boxed{
+P^{\rm PU}_{\Lambda\Lambda}
+=
+P^{\rm PU}_{\bar{\Lambda}\bar{\Lambda}}
+=
+0,
+}
+$$
+
+because same-sign hyperon pairs are not the charge-conjugate scalar $s\bar{s}$ vacuum channel. Likewise,
+
+$$
+\boxed{
+P^{\rm PU}_{K^0_S K^0_S}=0,
+}
+$$
+
+because $K^0_S$ is spin-zero and has no spin-correlation slope.
+
+*Proof.* By Proposition Z.8d and Corollary Z.8d.1, the rootless Leech vacuum produces a confining color-neutral sector. In the scalar QCD-vacuum channel, the relevant liberated strange pair has $J^{PC}=0^{++}$ vacuum quantum numbers and therefore carries the local spin memory of a spin-triplet $s\bar{s}$ pair.
+
+The STAR opening-angle observable normalizes a fully parallel spin configuration to $P=1/3$. PU does not alter this experimental normalization. PU contributes the scalar-channel transfer coefficient
+$\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}$, which records how much of the local scalar strange-pair spin memory survives confinement, feed-down, and inclusive reconstruction.
+
+Inside one short-range coherence cell, no nonlocal PCE twirling is applied, so $\Omega_{\rm SR}=1$. Therefore
+
+$$
+P^{\rm PU}_{\Lambda\bar{\Lambda},{\rm SR}}
+=
+\frac13
+\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}.
+$$
+
+Outside the local coherence cell, the traceless two-spin correlation tensor is averaged over untracked local phase/Weyl directions. By Schur averaging, the traceless non-singlet sector averages to zero; the identity sector survives but has no $\cos\theta^*$ slope. Thus
+
+$$
+P^{\rm PU}_{\Lambda\bar{\Lambda},{\rm LR}}=0.
+$$
+
+For $\Lambda\Lambda$ and $\bar{\Lambda}\bar{\Lambda}$, the charge-conjugate scalar $s\bar{s}$ source channel is absent. For $K^0_S K^0_S$, the final particles are spin-zero. Hence all those control channels have zero spin-correlation slope. ∎
+
+**Corollary Z.8k.1 (Angular decoherence envelope).** Let
+
+$$
+r=\Delta R=\sqrt{\Delta y^2+\Delta\phi^2},\qquad
+Y=\frac12,\qquad
+\Phi=\frac{\pi}{3}.
+$$
+
+For isotropic $r$-binning of pair separations, the leading PU coherence-survival envelope is the fraction of the $r$-circle contained in the local short-range rectangle:
+
+$$
+\Omega_{\rm PU}(r)
+=
+\frac{1}{2\pi}
+{\rm meas}
+\left\{
+\theta:
+|r\cos\theta|<Y,\ |r\sin\theta|<\Phi
+\right\}.
+$$
+
+Equivalently,
+
+$$
+\Omega_{\rm PU}(r)=
+\begin{cases}
+1,
+&0\le r\le Y,\\[6pt]
+\dfrac{2}{\pi}\arcsin\!\left(\dfrac{Y}{r}\right),
+&Y<r\le \Phi,\\[10pt]
+\dfrac{2}{\pi}
+\left[
+\arcsin\!\left(\dfrac{\Phi}{r}\right)
+-
+\arccos\!\left(\dfrac{Y}{r}\right)
+\right],
+&\Phi<r\le \sqrt{Y^2+\Phi^2},\\[12pt]
+0,
+&r>\sqrt{Y^2+\Phi^2}.
+\end{cases}
+$$
+
+Hence
+
+$$
+\boxed{
+P^{\rm PU}_{\Lambda\bar{\Lambda}}(r)
+=
+\frac13\,
+\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}\,
+\Omega_{\rm PU}(r).
+}
+$$
+
+The curve is monotone non-increasing after $r=Y$, has compact support at
+
+$$
+r_{\rm max}
+=
+\sqrt{\frac14+\frac{\pi^2}{9}}
+=
+1.1604\ldots,
+$$
+
+and vanishes identically for larger separations.
+
+**Corollary Z.8k.2 (STAR transfer-coefficient extraction).** The STAR Collaboration [2026] reports the short-range measurement
+
+$$
+P_{\Lambda\bar{\Lambda},{\rm SR}}
+=
+0.181\pm0.035_{\rm stat}\pm0.022_{\rm sys}
+$$
+
+corresponds, under the PU scalar-transfer law, to
+
+$$
+\eta^{\rm obs}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}
+=
+3P_{\Lambda\bar{\Lambda},{\rm SR}}
+=
+0.543.
+$$
+
+Combining the statistical and systematic uncertainties in quadrature gives
+
+$$
+\sigma_P
+=
+\sqrt{0.035^2+0.022^2}
+=
+0.04135\ldots,
+$$
+
+so
+
+$$
+\sigma_\eta
+=
+3\sigma_P
+=
+0.1241\ldots.
+$$
+
+Therefore
+
+$$
+\boxed{
+\eta^{\rm obs}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}
+=
+0.543\pm0.124.
+}
+$$
+
+This value is close to
+
+$$
+\frac{13}{24}
+=
+0.541666\ldots,
+$$
+
+but PU does not promote this numerical proximity to a theorem unless an independent PCE minimization proves the observable-specific $13/24$ transfer rule.
+
+**Conjecture Z.8k.3 (Rank-13 scalar-transfer completion).** In the local scalar $0^{++}$ strange-pair channel, the PU transfer coefficient is
+
+$$
+\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}
+=
+\frac{13}{24}.
+$$
+
+Equivalently, the local scalar-channel readout retains the twelve Golay signal directions plus one scalar singlet response direction, normalized by the twenty-four interface modes:
+
+$$
+\eta^{\rm PU}_{0^{++}\rightarrow\Lambda\bar{\Lambda}}
+=
+\frac{12+1}{24}.
+$$
+
+If this conjectural completion is proven from the PCE action, then Theorem Z.8k gives
+
+$$
+\boxed{
+P^{\rm PU}_{\Lambda\bar{\Lambda},{\rm SR}}
+=
+\frac13\cdot\frac{13}{24}
+=
+\frac{13}{72}
+=
+0.180555\ldots.
+}
+$$
+
+This agrees with the STAR central value $0.181$ to within
+
+$$
+0.181-\frac{13}{72}
+=
+4.44\times10^{-4},
+$$
+
+or
+
+$$
+\frac{4.44\times10^{-4}}{0.04135}
+=
+0.0107\ldots\,\sigma.
+$$
+
+**Conjecture boundary.** Conjecture Z.8k.3 is not part of the global Golay-code structure. It is an observable-specific scalar-channel transfer conjecture. It does not change
+
+$$
+k=12,\qquad M=24,\qquad k^2=bM=144,
+$$
+
+because those identities refer to the global interface code and vacuum configuration space, not to the normalized response coefficient of one inclusive hadronic observable.
+
+**Numerical envelope under Conjecture Z.8k.3.**
+
+| $\Delta R$ | $\Omega_{\rm PU}(\Delta R)$ | $P^{\rm PU}_{\Lambda\bar{\Lambda}}(\Delta R)$ |
+|---:|---:|---:|
+| $0\le \Delta R\le0.50$ | $1.000$ | $0.1806$ |
+| $0.60$ | $0.627$ | $0.1132$ |
+| $0.75$ | $0.465$ | $0.0839$ |
+| $0.90$ | $0.375$ | $0.0677$ |
+| $1.10$ | $0.102$ | $0.0185$ |
+| $\Delta R\ge1.1604$ | $0$ | $0$ |
+
+**Falsifiability.** The theorem is falsified, at fixed cuts and after standard detector/acceptance unfolding, if any of the following occur:
+
+1. Same-sign $\Lambda\Lambda$ or $\bar{\Lambda}\bar{\Lambda}$ channels develop a stable nonzero short-range signal of the same order as $\Lambda\bar{\Lambda}$.
+2. The spin-zero $K^0_SK^0_S$ control channel develops a nonzero spin-correlation slope.
+3. Long-range $\Lambda\bar{\Lambda}$ pairs retain a stable nonzero spin-correlation signal after acceptance and background corrections.
+4. The $\Delta R$-resolved $\Lambda\bar{\Lambda}$ signal is incompatible with any compact-support PCE coherence envelope obtained by replacing the ideal rectangular cell with the experiment's actual acceptance kernel.
+
+Conjecture Z.8k.3 is separately falsified if the short-range scalar-transfer coefficient converges far from $13/24$ under improved statistics and feed-down control.
 
 ### Z.13.5 The Syndrome-Partition Correspondence
 
@@ -1357,7 +1718,7 @@ The syndrome-partition identity demonstrates these structures are mutually deter
 
 #### Z.13.5.2 PCE Derivation of Distance-Optimal Codes
 
-**Theorem Z.13b (PCE Selection of Rate-½ and Maximum Distance).** The Principle of Compression Efficiency (Definition 15) uniquely selects the extended Golay code $[24, 12, 8]$ as the optimal error-correcting structure for the $M = 24$ interface modes.
+**Theorem Z.13b (Golay Code on the Balanced Rate-½ Branch).** On the balanced rate-½ branch — under which the $M = 24$ interface modes split into $k = M/2 = 12$ information modes and $M - k = 12$ redundancy modes — coding theory uniquely selects the extended binary Golay code $[24, 12, 8]$ as the maximum-distance binary linear code of dimension $k = 12$. The balanced rate-½ branch input is the load-bearing assumption: the displayed PCE objective in Step 4 below does not by itself uniquely select $k = n/2$ over other rates without an explicit symmetric (imbalance) penalty or a separate PCE rate-selection theorem.
 
 *Proof.*
 
@@ -1370,14 +1731,13 @@ where $V_{\text{op}}$ is the operational cost of redundancy, $V_{\text{error}}$ 
 
 **Step 3 (Isotropy at PCE-Attractor).** At the PCE-Attractor (Definition 15a), all 24 modes have identical QFI eigenvalue $\lambda = 1$ (Theorem Z.5, Step 5). This isotropy implies equal operational costs and benefits per mode: $c_{\text{op}} = c_{\text{benefit}}$.
 
-**Step 4 (Symmetric Optimization).** Under isotropy, the simplified potential:
-$$V_{\text{code}} = c_{\text{op}}(n - 2k) + c_{\text{error}} \cdot p_e(d)$$
+**Step 4 (Symmetric Optimization on the Balanced Rate Branch).** Under isotropy, an imbalance-penalized PCE potential takes the symmetric form
+$$V_{\text{code}}^{\text{sym}} = c_{\text{op}}(n - 2k)^2 + c_{\text{error}} \cdot p_e(d),$$
+which is minimized in $k$ at $k = n/2 = 12$, where the first term vanishes and the operational redundancy/benefit costs are exactly balanced. A linear imbalance term $c_{\text{op}}(n - 2k)$ is monotone in $k$ for $c_{\text{op}} > 0$ and is therefore minimized at the boundary $k = n$, not at $k = n/2$; the linear form is interpreted either as a schematic notation for the symmetric imbalance penalty above or as a branch input rather than a derivation of rate selection. On the balanced rate-½ branch — where the symmetric imbalance penalty is the operative PCE cost and the rate is therefore $k = n/2$ — the rest of the proof proceeds.
 
-is minimized at $k = n/2 = 12$ (rate-½), where the first term vanishes.
+**Step 5 (Distance Maximization at fixed rate).** With $k = 12$ fixed by the balanced rate-½ branch (Step 4), PCE minimizes $V_{\text{error}}(d)$ by maximizing minimum distance $d$. Among binary linear $[24, 12]$ codes, the maximum is $d = 8$ [Assmus & Mattson 1969], uniquely achieved by the Golay code.
 
-**Step 5 (Distance Maximization).** With $k = 12$ fixed, PCE minimizes $V_{\text{error}}(d)$ by maximizing minimum distance $d$. Among binary linear $[24, 12]$ codes, the maximum is $d = 8$ [Assmus & Mattson 1969], uniquely achieved by the Golay code.
-
-**Step 6 (Uniqueness).** The extended Golay code is unique up to equivalence. PCE isotropy precludes preference among equivalent representations. ∎
+**Step 6 (Uniqueness on the balanced rate-½ branch).** The extended Golay code is unique up to equivalence at parameters $[24, 12, 8]$. PCE isotropy precludes preference among equivalent representations. The combined uniqueness is therefore: on the balanced rate-½ branch with $n = 24$ and the maximum-distance criterion at fixed rate, the extended Golay code $[24, 12, 8]$ is selected up to equivalence. ∎
 
 #### Z.13.5.3 Structural Correspondence: Constraint Equations and Quantum Correlations
 
@@ -1706,8 +2066,10 @@ where u(μ) is the effective coupling and κ(μ) is the normalization constant a
 
 ### Z.15.2 Bulk Normalization from Capacity Rigidity
 
-**Theorem Z.14 (Predictive Ward Identity and Bulk Normalization from Capacity Rigidity).** At the PCE-Attractor, the bulk normalization constant is uniquely determined:
-$$\kappa^*_{\mathrm{bulk}} = 1$$
+**Theorem Z.14 (Bulk Normalization on the unit Predictive-Ward branch).** At the PCE-Attractor, assume the predictive Ward map identifies the connected gauge response with the inverse QFI information kernel in QFI-natural units, with no additional gauge-subspace map factor:
+$$\mathcal{G} = \mathcal{K}^{-1} \qquad \text{(unit Predictive-Ward branch)}.$$
+On this branch, the bulk normalization constant is uniquely determined:
+$$\kappa^*_{\mathrm{bulk}} = 1.$$
 
 *Proof.*
 
@@ -1725,12 +2087,13 @@ $$g_{\rm true}(u)=M\ln(1+\lambda u)=24\ln(1+u)$$
 $$M\ln(1+\lambda u^*)=\ln d_0\qquad\Rightarrow\qquad u^*=d_0^{1/M}-1=8^{1/24}-1=2^{1/8}-1$$
 (Theorem Z.7; [Holevo 1973]).
 
-**Step 4 (Predictive Ward identity + Legendre duality).** Let $W[J]$ be the cumulant generating functional (Appendix X, Equation X.1) and $\Gamma[\Phi]$ its Legendre transform (Appendix X, Equation X.2). The predictive Ward identity relates the connected two-point kernel to the inverse information kernel on the QFI-active subspace:
+**Step 4 (Predictive Ward identity + Legendre duality).** Let $W[J]$ be the cumulant generating functional (Appendix X, Equation X.1) and $\Gamma[\Phi]$ its Legendre transform (Appendix X, Equation X.2). On the unit Predictive-Ward branch introduced in the statement of this theorem, the connected two-point kernel is identified with the inverse information kernel on the QFI-active subspace in QFI-natural units:
 $$\mathcal{G}=\left.\frac{\delta^2 W}{\delta J\,\delta J}\right|_{J=0}=\mathcal{K}^{-1}.$$
 By Legendre duality (Appendix X, Proposition X.1; Equation X.3),
 $$\Gamma^{(2)}=\mathcal{G}^{-1},$$
-hence
+hence on this branch
 $$\Gamma^{(2)}=\mathcal{K}.$$
+A generalized Ward-map coefficient $\mathcal{G} = c_{\mathrm W}^{-1}\mathcal{K}^{-1}$ would preserve Legendre duality and give $\Gamma^{(2)} = c_{\mathrm W}\mathcal{K}$, hence $\kappa^*_{\mathrm{bulk}} = c_{\mathrm W}$. The unit Predictive-Ward branch fixes $c_{\mathrm W} = 1$.
 
 **Step 5 (Definition of the bulk normalization).** Define the bulk normalization as the proportionality between the physical quadratic gauge kernel extracted from the 1PI effective action and the information kernel:
 $$\Gamma^{(2)}_{\mathrm{gauge}}=\kappa_{\mathrm{bulk}}\cdot\mathcal{K}.$$
@@ -1744,7 +2107,11 @@ $$\alpha_{\mathrm{em}}(\mu)=\frac{u(\mu)}{4\pi\kappa(\mu)}$$
 $$\kappa^*_{\mathrm{bulk}}=1.$$
 ∎
 
-**Remark Z.14a (Comparison with standard QFT).** In standard QFT, $\kappa$ in $S_{\mathrm{Maxwell}}$ carries no empirical content because a constant field rescaling can be absorbed into a redefinition of the free gauge coupling. In PU, the coupling $u^*$ is fixed by capacity saturation in QFI-natural units (Theorem Z.7) and the QFI normalization $\lambda=1$ is fixed by state-space geometry (Theorem Z.5), so the normalization freedom is removed and $\kappa^*_{\mathrm{bulk}}=1$ is a theorem.
+**Remark Z.14a (Comparison with standard QFT).** In standard QFT, $\kappa$ in $S_{\mathrm{Maxwell}}$ carries no empirical content because a constant field rescaling can be absorbed into a redefinition of the free gauge coupling. In PU, the coupling $u^*$ is fixed by capacity saturation in QFI-natural units (Theorem Z.7) and the QFI normalization $\lambda=1$ is fixed by state-space geometry (Theorem Z.5), which removes the ordinary $U(1)$ rescaling freedom. On the unit Predictive-Ward branch of Theorem Z.14, $\kappa^*_{\mathrm{bulk}}=1$ is then a theorem. The branch-independent Ward-map unit Jacobian $c_{\mathrm W} = 1$ is outside the stated unit Predictive-Ward hypotheses.
+
+
+
+**Remark Z.14c (Branch Dependence and Numerical Sensitivity).** The identification $\mathcal{G} = \mathcal{K}^{-1}$ in QFI-natural units is the unit Predictive-Ward branch assumption of Theorem Z.14. The named supporting theorems (Theorem Z.5 for QFI normalization, Theorem Z.7 for capacity-saturated $u^*$, Proposition X.1 for Legendre duality) establish the two-point structure and the coupling unit scale but do not independently force unit Jacobian on the Ward map. The downstream Thomson-limit prediction $\alpha^{-1} \approx 137.036092$ carries sensitivity $\partial \alpha^{-1}/\partial \kappa_{\mathrm{bulk}} = 4\pi/u^* \approx 138.84$ to deviations $c_{\mathrm W} \neq 1$. Matching the $6 \times 10^{-5}$ stated theory uncertainty requires the Ward-map unit Jacobian to hold to $\sim 4 \times 10^{-7}$. Consequently, the 0.68 ppm $\alpha^{-1}$ prediction is theorem-level on the unit Predictive-Ward branch; the unconditional Ward-map result is outside the stated unit Predictive-Ward hypotheses.
 
 **Remark Z.14b (Mechanism).** Legendre duality fixes $\Gamma^{(2)}=\mathcal{G}^{-1}$, the predictive Ward identity fixes $\mathcal{G}=\mathcal{K}^{-1}$, and QFI/capacity rigidity fixes the units in which $\mathcal{K}$ and $u^*$ are evaluated. The unique value $\kappa^*_{\mathrm{bulk}}=1$ is the consistency condition allowing these constraints to be simultaneously satisfied.
 
@@ -1804,7 +2171,7 @@ These structures must match for consistent physics, but their distinct topologie
 
 ### Z.17.2 Sign Determination from Information Geometry (A PRIORI)
 
-**Theorem Z.16 (Sign from Legendre Transform Structure).** The interface correction has negative sign: δκ < 0.
+**Theorem Z.16 (Sign on the Interface-Response Ordering Branch).** On the interface-response ordering branch — under which the projected connected response kernel $\mathcal{G}|_{\text{interface}}$ on the electromagnetic interface subspace satisfies the Loewner-order inequality $\mathcal{G}|_{\text{interface}}[\rho_0] \succeq \mathcal{G}|_{\text{interface}}[\rho_{\text{ref}}]$ with respect to the chosen uniform reference state $\rho_{\text{ref}} = I_{d_0}/d_0$ — the interface correction has negative sign: $\delta\kappa < 0$.
 
 *Proof.*
 
@@ -1814,10 +2181,9 @@ where G is the connected correlation function and Γ^{(2)} is the quadratic effe
 
 **Step 2 (Effect of State Concentration).** The PCE-Attractor state ρ₀ = I_2/2 ⊕ 0_6 concentrates population in the 2-dimensional active subspace. Compare with the uniform reference state ρ_uniform = I_8/8.
 
-**Step 3 (Enhanced Correlations).** For concentrated states, quantum correlations are enhanced relative to uniform states:
-$$\mathcal{G}[\rho_0] > \mathcal{G}[\rho_{\mathrm{uniform}}]$$
-
-This follows because the active subspace has nonzero population (eigenvalue 1/2) while the inactive subspace has zero population, creating stronger correlations between active and inactive modes than would exist with uniform distribution.
+**Step 3 (Enhanced Projected Correlations on the Interface-Response Ordering Branch).** On the interface-response ordering branch, the projected connected response kernel restricted to the electromagnetic interface subspace satisfies
+$$\mathcal{G}|_{\text{interface}}[\rho_0] \succeq \mathcal{G}|_{\text{interface}}[\rho_{\text{uniform}}]$$
+in the Loewner order. The motivating heuristic is that the active subspace has nonzero population (eigenvalue $1/2$) while the inactive subspace has zero population, creating stronger projected correlations between active and inactive modes than would exist with uniform distribution.
 
 **Step 4 (Legendre Inversion).** By the Legendre transform relation:
 $$\text{Higher } \mathcal{G} \implies \text{Lower } \Gamma^{(2)} = \mathcal{G}^{-1}$$
@@ -1829,13 +2195,11 @@ $$\alpha_{\mathrm{em}} = \frac{u}{4\pi\kappa}$$
 
 The effective normalization κ_eff relates to the effective action through Γ^{(2)}_phys = κ_eff · K. Lower Γ^{(2)} implies lower κ_eff.
 
-**Step 6 (Sign Conclusion).** Since the concentrated state yields lower Γ^{(2)}, we have:
-$$\kappa_{\mathrm{eff}} < \kappa_{\mathrm{bulk}} = 1$$
-
-Therefore:
+**Step 6 (Sign Conclusion on the Branch).** On the interface-response ordering branch, the Loewner inequality $\mathcal{G}|_{\text{interface}}[\rho_0] \succeq \mathcal{G}|_{\text{interface}}[\rho_{\text{uniform}}]$ inverts under Legendre duality to give a lower projected quadratic kernel and hence
+$$\kappa_{\mathrm{eff}} < \kappa_{\mathrm{bulk}} = 1.$$
+Therefore
 $$\delta\kappa = \kappa_{\mathrm{eff}} - \kappa_{\mathrm{bulk}} < 0$$
-
-The sign is **necessarily negative** based purely on the Legendre transform structure of the effective action. ∎
+on this branch. The sign is fixed by the Legendre transform structure of the effective action together with the projected-response ordering branch input; numerically, the opposite sign would shift the first-order term by $2\pi/\sqrt{K_0} \approx 3.628$, far above the within-branch matching uncertainty quoted for $\alpha^{-1}$. ∎
 
 **Summary of Remark Z.9: A Priori Nature.** This proof determines the sign of δκ BEFORE computing any numerical magnitude. The sign follows from:
 - The Legendre structure (Appendix X)
@@ -1855,10 +2219,11 @@ $$\delta\kappa = -\frac{a}{d_0} \cdot \frac{u^*}{\sqrt{K_0}}.$$
 
 **Step 1 (Setup).** The effective quadratic kernel at the attractor is $\Gamma^{(2)} = \kappa \cdot \mathcal{K}$. The interface perturbation couples a single gauge direction (democratic) to the isospectral orbit $T_{\rho_0}\mathcal{O}$, to first order in $u$. Within linear response, the relevant invariant scalar is a bilinear form between (i) the state $\rho_0$ (selecting the active block) and (ii) the discrete/continuum generator mismatch $\Delta G$ projected into the tangent space.
 
-**Step 2 (Isotropy Group Action).** The isotropy group $H = S(U(a) \times U(b))$ acts transitively on the AB-interface directions (they form an irreducible $H$-module), and leaves $\rho_0$ invariant up to block scalings.
+**Step 2 (Isotropy Group Action).** The isotropy group $H = S(U(a) \times U(b))$ acts irreducibly on the AB-interface module $T_{AB} \cong \operatorname{Hom}(B, A)$ as a complex $H$-representation, and leaves $\rho_0$ invariant up to block scalings. (Note: $H$ does not act transitively on the unit sphere of $T_{AB}$, since $H$-orbits preserve singular-value spectra and different rank-one and rank-two unit vectors lie in distinct orbits. The proof uses irreducibility of the module, not sphere transitivity.)
 
-**Step 3 (Factorization in the admissible first-order class).** By Schur's lemma, any $H$-invariant scalar functional in this linear-response class factors as
-$$L(\rho_0, \Delta G) = L_1(\rho_0) \cdot L_2(\Delta G).$$
+**Step 3 (Factorization in the admissible first-order class).** The linear-response functional $L(\rho_0, \Delta G)$ is bilinear: one argument depends on the state $\rho_0$ through its projection onto the information kernel $\mathcal{K}$, and the other depends on the discrete-continuum generator mismatch $\Delta G$ through its projection into the tangent space. Each argument transforms in a distinct irreducible $H$-module — the state factor in the $H$-trivial scalar $\operatorname{Tr}(\rho_0 \mathcal{K})$ direction, and the generator factor in the AB-interface module of Step 2. By Schur's lemma applied to each irreducible factor separately, each argument is determined up to a scalar on its respective module. The bilinear structure of $L$ therefore forces the multiplicative factorization
+$$L(\rho_0, \Delta G) = L_1(\rho_0) \cdot L_2(\Delta G),$$
+with a single residual $O(1)$ overall coefficient to be fixed by Step 7.
 
 **Step 4 (State support fraction).** The state factor is the normalized trace weight of $\rho_0$ against the interface information kernel:
 $$L_1 = \frac{\operatorname{Tr}(\rho_0 \mathcal{K})}{\operatorname{Tr}(\mathcal{K})} = \frac{a}{d_0}.$$
@@ -2418,9 +2783,32 @@ $$K_{\mathrm{eff}} = \frac{4}{2} = 2.$$
 
 This algebraic simplification is a reformulation of the democratic visible-space model above; it is not an independent derivation without that model assumption.
 
+**Lemma Z.24a.0 (Column Covariance of the Curvature Contraction).** Let $\mathcal{V} := \operatorname{span}_{\mathbb{C}}\{E_{jm} : j \in A,\, 1 \le m \le d_0\}$ with the weighted Hilbert-Schmidt form $\langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y)$. the curvature contraction $C: \mathcal{V} \to \mathcal{V}$ entering the gauge-coupling correction of Theorem Z.24 is required to be equivariant under the full column-extended symmetry group $U(A) \times U(d_0)$, not merely under the Grassmannian stabilizer $H = S(U(A) \times U(B))$.
+
+*Proof.* The Kähler-Einstein metric $g_{KE}$ on $\mathrm{Gr}(a, d_0) = U(d_0)/(U(a) \times U(b))$ is $U(d_0)$-invariant by homogeneity (Kobayashi-Nomizu 1969, Vol. II). By Lemma Z.12, the Bures metric satisfies $g_B = \frac{1}{4} g_{KE}$, so $g_B$ inherits $U(d_0)$-invariance. The Riemann curvature tensor is built from the metric by canonical coordinate-independent differential-geometric operations (Levi-Civita connection, covariant differentiation), all of which commute with isometries. Hence the Bures curvature tensor on $\mathrm{Gr}(a, d_0)$ is $U(d_0)$-equivariant as a tensor on tangent spaces.
+
+Under the identification $\mathcal{V} \cong A \otimes (\mathbb{C}^{d_0})^*$, the natural left action of $U(A)$ on the row index and right action of $U(d_0)$ on the column index commute with the projection from ambient Hilbert-Schmidt operators onto $\mathcal{V}$ (the projection is defined by restricting the row index to $A$, which is $U(d_0)$-invariant on the column slot). Therefore the curvature contraction $C$, obtained by tracing the tangent-space curvature tensor through this $U(A) \times U(d_0)$-intertwining projection, inherits $U(A) \times U(d_0)$-equivariance. ∎
+
 **Lemma Z.24a (Derived Isotropy of the Visible-Space Projection).** At the PCE-Attractor, the $\rho_0$-weighted Hilbert-Schmidt metric on $\mathcal{V}$ forces the curvature contraction entering the gauge-coupling correction to be isotropic over $\mathcal{V}$. No independent distributional hypothesis is required.
 
-*Proof.* The inner product $\langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y)$ on $\mathcal{V}$ evaluates to $(1/a)\sum_{j \in A}\sum_m \overline{X_{jm}}Y_{jm}$. Since $\rho_0 = (1/a)I_A \oplus 0_B$ has a constant eigenvalue $1/a$ on the active block $A$, this inner product weights every basis element $E_{jm}$ ($j \in A$, $1 \le m \le d_0$) identically: $\|E_{jm}\|^2_{\rho_0} = 1/a$ for all $m$. The column index $m$ therefore carries the full $U(d_0)$ symmetry of the standard Hilbert-Schmidt metric, not merely the $U(b)$ symmetry of $\rho_0$'s inactive block. Under $U(a) \times U(d_0)$, the space $\mathcal{V} \cong \mathbb{C}^a \otimes \mathbb{C}^{d_0}$ is irreducible (standard representation theory). Any $U(a)$-covariant Hermitian form on $\mathcal{V}$ must therefore be a scalar multiple of $\langle \cdot, \cdot \rangle_{\rho_0}$ by Schur's lemma. The curvature contraction entering the gauge-coupling correction is $H$-covariant by the equivariance of the Grassmannian embedding, and $U(a)$-covariant a fortiori. Therefore it is proportional to the identity on $\mathcal{V}$, yielding the uniform projection factor $1/(ad_0)$. Equivalently, $K_{\mathrm{eff}} = S_B / (M \cdot ad_0) = 4/a$ is a geometric invariant of $\mathrm{Gr}(a, d_0)$ that requires no distributional input. ∎
+*Proof.* The inner product $\langle X, Y\rangle_{\rho_0} = \operatorname{tr}(X^\dagger \rho_0 Y)$ on $\mathcal{V}$ evaluates to $(1/a)\sum_{j \in A}\sum_m \overline{X_{jm}}Y_{jm}$. Since $\rho_0 = (1/a)I_A \oplus 0_B$ has a constant eigenvalue $1/a$ on the active block $A$, this inner product weights every basis element $E_{jm}$ ($j \in A$, $1 \le m \le d_0$) identically: $\|E_{jm}\|^2_{\rho_0} = 1/a$ for all $m$. The column index $m$ therefore carries the full $U(d_0)$ symmetry of the standard Hilbert-Schmidt metric, not merely the $U(b)$ symmetry of $\rho_0$'s inactive block. Under $U(a) \times U(d_0)$, the space $\mathcal{V} \cong \mathbb{C}^a \otimes \mathbb{C}^{d_0}$ is irreducible (standard representation theory; the tensor product of the defining representation of $U(a)$ with the dual defining representation of $U(d_0)$ is irreducible as a representation of the product group).
+
+By Lemma Z.24a.0, the curvature contraction $C: \mathcal{V} \to \mathcal{V}$ is $U(A) \times U(d_0)$-equivariant. Schur's lemma applied to an irreducible module of a product group therefore forces
+$$
+C = c \cdot I_{\mathcal{V}}
+$$
+for some scalar $c \in \mathbb{R}$. Hence the effective squared projection onto any normalized visible direction is the uniform value
+$$
+\frac{1}{\dim_{\mathbb{C}} \mathcal{V}} = \frac{1}{ad_0}.
+$$
+
+Equivalently, $K_{\mathrm{eff}} = S_B / (M \cdot ad_0) = 4/a$ is a geometric invariant of $\mathrm{Gr}(a, d_0)$ that requires no distributional input. ∎
+
+**Remark Z.24a.1 (Necessity and Branch Dependence of Column Extension).** The stabilizer $H = S(U(A) \times U(B))$ of $\rho_0$ is strictly smaller than $U(A) \times U(d_0)$. Under $H$ alone, $\mathcal{V}$ decomposes as
+$$
+\mathcal{V} \cong \mathbb{C} I_A \oplus \mathfrak{sl}(A) \oplus \operatorname{Hom}(B, A),
+$$
+three pairwise non-isomorphic irreducible $H$-modules, so Schur would permit a three-parameter family of $H$-equivariant Hermitian forms. The scalar conclusion $C = c \cdot I_{\mathcal{V}}$ therefore depends essentially on the column-extended $U(d_0)$ equivariance established in Lemma Z.24a.0, which itself derives from the homogeneity of the Kähler-Einstein metric on $\mathrm{Gr}(a, d_0)$. This is why $K_{\mathrm{eff}} = 4/a$ is a geometric invariant rather than a distributional assumption: the extension from $H$ to $U(A) \times U(d_0)$ is the branch condition that must be supplied by the column-extended curvature-contraction construction. Once that construction is fixed, $K_{\mathrm{eff}} = 4/a$ follows as a geometric invariant rather than a distributional assumption.
 
 ### Z.27.6 Minimal Holonomy and Second-Order Correction Formula
 
@@ -2428,7 +2816,13 @@ This algebraic simplification is a reformulation of the democratic visible-space
 
 *Proof.* The Grassmannian $\mathrm{Gr}(a, d_0) = U(d_0)/(U(a) \times U(b))$ is a simply connected compact Kähler manifold. By the long exact sequence of the fibration $U(a) \times U(b) \to U(d_0) \to \mathrm{Gr}(a, d_0)$ and the connectivity of the fiber, $\pi_2(\mathrm{Gr}(a, d_0)) \cong \mathbb{Z}$ [Milnor-Stasheff 1974, §14; Griffiths-Harris 1978, Ch. 1.5]. The generator is the Schubert cycle $\sigma_1$, realized by the embedding $\iota: \mathbb{CP}^1 \hookrightarrow \mathrm{Gr}(a, d_0)$ that maps $[z_0:z_1] \mapsto \mathrm{span}\{z_0 e_1 + z_1 e_2, e_3, \ldots, e_a\}$. The integral of the Kähler form over this generator is $\int_{\sigma_1} \omega = 2\pi$, which is a topological invariant. Any other 2-cycle $\gamma$ satisfies $[\gamma] = n[\sigma_1]$ for some $n \in \mathbb{Z}$, giving $\oint_\gamma \omega = 2\pi n$. Since the curvature correction is proportional to the holonomy factor, and larger $|n|$ incurs a strictly larger geometric cost, PCE minimization (Definition 15) selects $n = 1$. ∎
 
-**Theorem Z.25 (Complete Second-Order Correction).** The second-order correction to the fine-structure constant, combining the symmetric-space curvature of Theorem Z.24 with the minimal holonomy of Lemma Z.14, is
+**Theorem Z.25 (Complete Second-Order Correction on the Canonical Separable Curvature-Response Branch).** Assume the canonical separable second-order response normalization for the $U(1)$ interface matching functional, namely
+$$
+\Delta^{(2)}
+=
+\Omega_{\min}\cdot L_{\mathrm{act}}\cdot L_{\mathrm{emb}}\cdot \frac{K_{\mathrm{eff}}}{M}\cdot u^*,
+$$
+where $\Omega_{\min}$ is the minimal Grassmannian holonomy, $L_{\mathrm{act}}$ is the active participation fraction, $L_{\mathrm{emb}}$ is the discrete-continuous embedding overlap, $K_{\mathrm{eff}}/M$ is the democratic per-mode curvature response, and $u^*$ is the PCE-saturated coupling, combined with unit coefficient in QFI-natural units. Then, combining the symmetric-space curvature of Theorem Z.24 with the minimal holonomy of Lemma Z.14,
 $$
 \Delta^{(2)}=\frac{\pi u^*}{24\sqrt{K_0}}.
 $$
@@ -2437,11 +2831,11 @@ $$
 $$
 \oint_{\mathbb{CP}^1}\omega=2\pi.
 $$
-The correction is the product of:
+By the canonical separable curvature-response normalization stated in the theorem, the correction is the product of:
 1. the minimal holonomy factor $2\pi$ (Lemma Z.14);
 2. the active participation fraction $a/d_0$ from Theorem Z.18;
 3. the embedding factor $1/\sqrt{K_0}$ from Theorem Z.19;
-4. the effective per-mode curvature $K_{\mathrm{eff}}/M$ from Theorem Z.24;
+4. the effective per-mode curvature $K_{\mathrm{eff}}/M$ from Theorem Z.24, where the division by $M$ implements democratic mode averaging over the $M$ interface directions consistent with the $H$-symmetry of the attractor;
 5. the coupling strength $u^*$ from Theorem Z.7.
 
 Therefore
@@ -2458,6 +2852,8 @@ $$
 \Delta^{(2)}\approx \frac{\pi(0.0905077327)}{24\sqrt3}\approx 0.00684012.
 $$
 ∎
+
+**Remark Z.25.1 (Separable-Response Branch Dependence).** Theorem Z.25 is stated on the canonical separable curvature-response branch, in which the second-order $U(1)$ interface matching functional factorizes as the product of the five named scalars with unit coefficient in QFI-natural units. The individual scalars are independently proven by Lemma Z.14, Theorem Z.18, Theorem Z.19, Theorem Z.24, and Theorem Z.7. The separable product structure itself is an additional branch assumption on the second-order response functional, analogous to the democratic visible-space model assumption recorded in Corollary Z.11 for $K_{\mathrm{eff}}$ and to the explicit factorization hypotheses stated in Theorem H.3 for the gravitational bridge-law product structure. Consequently the downstream Thomson-limit prediction $\alpha^{-1}\approx 137.036092$ is theorem-level on the canonical separable curvature-response branch at second order and above.
 
 
 
@@ -2566,7 +2962,19 @@ At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximatio
 
 ### Z.27.10 Derivation Chain Summary
 
-The complete discrete chain with no continuous fit parameters, and with every extra model assumption stated explicitly, is:
+**Branch ledger for the Thomson-limit value $\alpha^{-1} = 137.036092 \pm 0.000060$.** The formula displayed below is exact arithmetic on the canonical Appendix Z normalization branch package, comprising:
+
+1. The tangent-kissing channel branch (Theorems Z.7a, Z.10, Z.11), giving $D = 4$ and $M = K(D) = 24$;
+2. The balanced rate-½ Golay branch (Theorem Z.13b), giving $k = 12$ and the $\mathcal{G}_{24}$ error-correction structure;
+3. The bulk Predictive-Ward unit-normalization branch (Theorem Z.14), giving $\kappa^*_{\text{bulk}} = 1$;
+4. The interface-response ordering branch (Theorem Z.16), giving the sign $\delta\kappa < 0$;
+5. The canonical first-order interface-derivative normalization branch (Theorem Z.17);
+6. The column-covariance branch (Theorem Z.24a) for the Bures-to-gauge identification;
+7. The visible-space democratic curvature projection (Theorem Z.24, Lemma Z.24a);
+8. The canonical separable second-order curvature-response branch (Theorem Z.25);
+9. The SU(2) sinc geodesic-chord branch (Lemma Z.13).
+
+The displayed $6 \times 10^{-5}$ uncertainty is the within-branch T3 subgroup-projection / matching uncertainty, not an uncertainty over alternative branch choices. With $\partial\alpha^{-1}/\partial\kappa^*_{\text{bulk}} \approx 138.8$ near the canonical value, even a $10^{-4}$ deviation in any of the load-bearing branch normalizations exceeds the within-branch uncertainty by orders of magnitude. The complete discrete chain on the canonical branch package, with no continuous fit parameter inside that package, is:
 
 $$\text{SPAP} \to K_0 = 3 \to d_0 \ge 8 \to d_0 = 8 \text{ on the minimal PCE branch} \to \varepsilon \ge \ln 2 \to \varepsilon = \ln 2 \text{ at the attractor} \to a = 2 \to M = 24$$
 
@@ -2576,7 +2984,7 @@ $$\text{Extrinsic factor (democratic visible-space model): } \frac{M-1}{ad_0} = 
 
 $$\text{Effective curvature (same model): } K_{\mathrm{eff}} = \frac{32}{23} \times \frac{23}{16} = 2$$
 
-$$\text{Second-order: } \Delta^{(2)} = \frac{\pi u^*}{24\sqrt{K_0}}$$
+$$\text{Second-order (canonical separable curvature-response branch): } \Delta^{(2)} = \frac{\pi u^*}{24\sqrt{K_0}}$$
 
 $$\text{Third-order (SU(2) sinc): } \Delta^{(2+3)} = \Delta^{(2)}\left(1 - \frac{u^{*2}}{6}\right)$$
 
@@ -2598,16 +3006,18 @@ The boxed Thomson-limit formula is the result of Theorems Z.24–Z.26 and is sta
 
 1. **Platform:** Trapped-ion or cold-atom system with effective d = 8 Hilbert space dimension, realized via three qubits or an eight-level atom.
 
-2. **Initial preparation:** Prepare non-equilibrium state with unequal active eigenvalues using optical pumping. Target state: ρ_hot with eigenvalues approximately (0.4, 0.1, 0.05, 0.05, 0, 0, 0, 0).
+2. **Initial preparation:** Prepare non-equilibrium state with two unequal active eigenvalues using optical pumping. Target state: $\rho_{\text{hot}}$ with eigenvalues $(p_1, p_2, 0, 0, 0, 0, 0, 0)$ with $p_1 \neq p_2$ and $p_1 + p_2 = 1$ (e.g., $(0.7, 0.3, 0, 0, 0, 0, 0, 0)$). The expected counts in step 3 below assume this two-eigenvalue hot state. A four-eigenvalue hot state such as $(0.4, 0.1, 0.05, 0.05, 0, 0, 0, 0)$ activates substantially more modes (see step 3, "alternative state" note).
 
 3. **Mode counting via QFI spectroscopy:**
-   - Apply weak parametric drive coupled to generator G
+   - Apply weak parametric drive coupled to generator $G$
    - Measure response via state tomography
-   - Extract F_Q[ρ_hot, G] from parameter sensitivity
-   - Count generators with F_Q > ε_threshold
-   - Expected initial value: M_math ≈ 26-28 > 24
+   - Extract $F_Q[\rho_{\text{hot}}, G]$ from parameter sensitivity
+   - Count generators with $F_Q > \varepsilon_{\text{threshold}}$
+   - Expected initial value for the two-eigenvalue $\rho_{\text{hot}}$: $M_{\text{math}} \approx 26$, with $\Delta M = 2$ extra intra-active-subspace modes beyond the 24 interface modes
 
-   The excess arises because non-equilibrium states with $p_1 \neq p_2$ in the active subspace activate additional intra-active-subspace modes. For $\rho_{\text{hot}}$ with eigenvalues $(p_1, p_2, 0, \ldots)$ where $p_1 \neq p_2$, the QFI is nonzero for generators within the active block (connecting states with different eigenvalues), contributing $\sim 2$–4 additional modes beyond the 24 interface modes.
+   The excess arises because non-equilibrium states with $p_1 \neq p_2$ in the active subspace activate additional intra-active-subspace modes. For $\rho_{\text{hot}}$ with eigenvalues $(p_1, p_2, 0, \ldots)$ with $p_1 \neq p_2$, the QFI is nonzero for the generator connecting the two unequal active populations, contributing $\sim 2$ additional modes beyond the 24 interface modes.
+
+   *Alternative state.* A four-eigenvalue hot state such as $(0.4, 0.1, 0.05, 0.05, 0, 0, 0, 0)$ activates more pairs: counting unequal nonzero pairs among the four nonzero eigenvalues plus all nonzero-zero pairs gives $M_{\text{math}} \approx 42$ active real modes before any thresholding/noise cuts. If using such a state, the expected count and dark-mode budget are recomputed accordingly.
 
 4. **Thermalization:** Apply controlled decoherence via coupling to engineered thermal bath. Duration: t_therm ~ 10-100 × coherence time.
 
@@ -2630,11 +3040,11 @@ The boxed Thomson-limit formula is the result of Theorems Z.24–Z.26 and is sta
 
 1. **Platform:** Optical lattice or photonic waveguide array with tunable connectivity.
 
-2. **Dimension tuning:** Engineer effective dimensions D_eff = 2, 3, 4, 5 by controlling hopping geometry:
-   - D_eff = 2: Square lattice with nearest-neighbor hopping
-   - D_eff = 3: Cubic lattice
-   - D_eff = 4: Hypercubic lattice via synthetic dimensions
-   - D_eff = 5: Engineered higher-dimensional connectivity
+2. **Dimension tuning:** Engineer effective dimensions $D_{\text{eff}} = 2, 3, 4, 5$ by controlling hopping geometry, with each platform chosen to realize the kissing-number coordination $K(D_{\text{eff}})$ rather than a geometry-default coordination:
+   - $D_{\text{eff}} = 2$: Triangular/hexagonal nearest-neighbor lattice (coordination $6 = K(2)$). Note: a 2D square lattice has nearest-neighbor coordination $4$, not $6 = K(2)$, and would not test the prediction; the test geometry must realize sixfold connectivity.
+   - $D_{\text{eff}} = 3$: FCC or HCP lattice (coordination $12 = K(3)$). A simple cubic lattice has coordination $6$, not $12$; the test geometry must realize twelvefold connectivity.
+   - $D_{\text{eff}} = 4$: $D_4$ lattice via synthetic dimensions (coordination $24 = K(4)$). A 4D hypercubic lattice has coordination $8$, not $24$.
+   - $D_{\text{eff}} = 5$: Engineered connectivity matching $K(5) \geq 40$.
 
 3. **Equilibration:** Allow system to reach thermodynamic equilibrium through unitary dynamics plus weak dissipation.
 
@@ -2694,7 +3104,9 @@ For D_eff = 4 (K(4) = 24 = M_int):
 
 **Prediction Z.4 (Error Correction Correlation Structure).**
 
-**Statement:** The 24×24 mode correlation matrix reveals Golay code structure with 12 signal modes (statistically independent) and 12 redundancy modes (showing error-correction correlations).
+**Statement (on the balanced rate-½ Golay branch).** On the balanced rate-½ Golay branch (Theorem Z.13b), the $24 \times 24$ mode correlation matrix reveals Golay code structure with 12 signal modes (statistically independent) and 12 redundancy modes (showing error-correction correlations governed by the Golay parity-check matrix).
+
+*Branch dependency.* Flat QFI spectroscopy at $\rho_0$ alone (Theorem Z.5) tests the existence and equality of the 24 interface modes; it does not by itself impose the $12 + 12$ parity-check organization. The Golay parity correlation pattern appears on the balanced rate-½ Golay branch and is the additional structural prediction tested here. Equal-mode QFI without Golay parity structure would falsify the balanced-Golay branch but not the underlying flat-spectrum result.
 
 **Test Protocol:**
 
@@ -2962,7 +3374,7 @@ M = 2ab = 24 \text{ (Theorem Z.5)} \\[4pt]
 \Downarrow \\[4pt]
 |v|^2_{\min} = 4 \text{ (Theorem Z.8c)} \\[4pt]
 \Downarrow \\[4pt]
-m^2 \propto |v|^2 \text{ (Theorem Z.8g)} \\[4pt]
+m^2 \propto |v|^2 \text{ (Theorem Z.8g, canonical Leech norm-information calibration branch)} \\[4pt]
 \Downarrow \\[4pt]
 \Delta_{\text{gap}} = 2\mu_0 > 0 \text{ (Corollary Z.8g.1)}
 \end{array}
@@ -2998,7 +3410,7 @@ n_{\text{pol}} = D - 2 = 2 \text{ after selecting } D=4 \\[4pt]
 | $|v|^2_{\min}$ | 4 | Rootlessness | Theorem Z.8c |
 | $n_G$ | 12 | Lagrangian bound | Theorem G.8.2e |
 | $D$ | 4 | $K(D)=24$ | Theorem Z.11 |
-| $\Delta_{\text{gap}}$ | $2\mu_0$ | Energy-norm relation | Corollary Z.8g.1 |
+| $\Delta_{\text{gap}}$ | $2\mu_0$ | Energy-norm relation on the canonical Leech norm-information calibration branch | Corollary Z.8g.1 |
 
 All of these quantities descend from the framework's discrete axioms, branch selections, and the symmetric-space geometry of the attractor Grassmannian.
 

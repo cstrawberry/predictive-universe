@@ -101,9 +101,9 @@ subject to the resource constraints, where $\Gamma_0$ is the power-conversion fa
 
 ## **L.2 Electromagnetic Field Generation and Stress-Energy Contribution**
 
-### **Theorem L.2 (Electromagnetic Field Generation from Aggregate Context)**
+### **Theorem L.2 (Electromagnetic Field Generation on the Coherent-Charge Carrier Branch)**
 
-The mapping $\mathcal{M}: \text{context}_S \to \mathcal{P}_{\text{control}}(t)$ (Definition L.2) for a high-complexity MPU aggregate $S$ generates classical electromagnetic radiation $E_{\text{rad}}(t)$ through coherent charge oscillations within the aggregate. The electromagnetic energy contributes to the stress-energy tensor:
+On the coherent-charge carrier branch — under which the PCE-optimal context-to-control mapping $\mathcal{M}: \text{context}_S \to \mathcal{P}_{\text{control}}(t)$ (Definition L.2) for a high-complexity MPU aggregate $S$ is implemented physically by controllable charge oscillators within the aggregate — the mapping generates classical electromagnetic radiation $E_{\text{rad}}(t)$ through coherent charge oscillations. Theorem L.1 establishes existence of an optimal admissible mapping but does not by itself fix the physical carrier; the coherent-charge realization is the carrier hypothesis under which this theorem applies. The electromagnetic energy then contributes to the stress-energy tensor:
 
 $$ T_{\mu\nu}^{(\text{EM})} = \frac{1}{\mu_0}\left(F_{\mu\alpha}F_{\nu}{}^{\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right) \tag{L.4} $$
 
@@ -184,23 +184,25 @@ $$ \delta_{\text{Stark}} \propto \frac{1}{|\omega_{\text{TLS}} - \omega_{\text{r
 Target selectivity arises from this resonance condition. Maximum effect occurs when aggregate oscillation frequency $\omega_{\text{rad}}$ matches target transition frequency $\omega_{\text{TLS}}$. Off-resonance suppression by factor $\sim \omega_{\text{TLS}}/|\Delta|$ provides spectral addressing—the ability to selectively influence specific quantum systems based on their transition frequencies.
 ## **L.3 Gravitational Time Dilation from Aggregate Energy**
 
-### **Theorem L.3 (Gravitational Time Dilation from Aggregate Energy)**
+### **Theorem L.3 (Gravitational Time Dilation from Instantaneous Aggregate Stress-Energy)**
 
-An MPU aggregate expending power $P_{\text{agg}}$ over interval $\tau_c$ creates gravitational time dilation at location $\vec{x}$ separated by distance $r$ from aggregate center:
+An MPU aggregate with instantaneous internal stress-energy density $T_{00}^{\text{agg}}(\vec{x},t)$ creates gravitational time dilation at location $\vec{x}$ separated by distance $r$ from aggregate center:
 
 $$ \Delta\tau_d = \frac{\Delta\Phi}{c^2} \tau_c \tag{L.16} $$
 
 where $\Delta\Phi$ is the potential difference across target spatial extent $L_q$. For spherically symmetric aggregate with total volume $V_S$ in the weak-field limit and with target located outside the aggregate ($r > R_S = (3V_S/4\pi)^{1/3}$):
 
-$$ \Delta\Phi = G(1 + 3w)\frac{P_{\text{agg}}\tau_c}{c^2 r^2} L_q \tag{L.17} $$
+$$ \Delta\Phi = G(1 + 3w)\frac{E_{\text{grav}}^{\text{inst}}}{c^2 r^2} L_q \tag{L.17} $$
 
-where $w$ is the equation-of-state parameter $p = wu$ relating pressure to energy density. For non-relativistic matter, $w \approx 0$ is appropriate. The gravitational field is sourced by the complete MPU stress-energy tensor $T_{\mu\nu}^{(\text{MPU})}$ (Appendix B, Definition B.8) through Einstein's equations (Theorem 50).
+where $E_{\text{grav}}^{\text{inst}} := \int_{\text{source}} T_{00} \, d^3x$ is the instantaneous source energy retained in the source region, and $w$ is the equation-of-state parameter. For non-relativistic matter, $w \approx 0$. The gravitational field is sourced by the complete MPU stress-energy tensor $T_{\mu\nu}^{(\text{MPU})}$ (Appendix B, Definition B.8) through Einstein's equations (Theorem 50). The cumulative work $P_{\text{agg}} \tau_c$ done over an interval is not itself the gravitating source unless that energy remains localized in the source region during the interval; energy radiated, dissipated, or transported away does not continue to source the local gravitational potential.
 
 Proof.
 
-Power $P_{\text{agg}}$ sustained over interval $\tau_c$ corresponds to energy $E_{\text{agg}} = P_{\text{agg}}\tau_c$. This yields an effective gravitational mass (including pressure contribution):
+Effective gravitational mass is fixed by instantaneous stress-energy in the source region:
 
-$$ M_{\text{eff}} = \int dV \rho_{\text{eff}} = \frac{P_{\text{agg}}\tau_c}{c^2}(1+3w) \tag{L.18} $$
+$$ M_{\text{eff}} = \int dV \rho_{\text{eff}} = \frac{E_{\text{grav}}^{\text{inst}}}{c^2}(1+3w) \tag{L.18} $$
+
+On the retained-energy branch used for the numerical estimates of §L.4, $E_{\text{grav}}^{\text{inst}} = \eta_{\text{ret}} P_{\text{agg}} \tau_c$ with $\eta_{\text{ret}} \in (0,1]$; the idealized fully retained estimate uses $\eta_{\text{ret}} = 1$. In dissipative steady state, $\eta_{\text{ret}}$ must be computed from the actual instantaneous stress-energy distribution (input power balanced by output flux gives $\eta_{\text{ret}} \to 0$ unless internal storage is explicitly modeled).
 
 In the weak-field limit, the exterior gravitational acceleration at distance $r$ is:
 
@@ -539,9 +541,11 @@ $$ P_{\text{EM}} = \int_{\mathcal{S}} \vec{S} \cdot d\vec{A} = \int_{\mathcal{S}
 
 where the Poynting vector $\vec{S}$ describes energy flow.
 
-Stress-Energy Accounting: Following the construction detailed in Appendix B (Definition B.8), the electromagnetic contribution is (from Theorem L.2):
+Stress-Energy Accounting: Following the construction detailed in Appendix B (Definition B.8), the electromagnetic contribution is (from Theorem L.2, Equation L.4):
 
-$$ T_{\mu\nu}^{(\text{EM})} = \frac{1}{4\pi}\left(F_{\mu\alpha}F_{\nu}{}^{\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right) \tag{L.42} $$
+$$ T_{\mu\nu}^{(\text{EM})} = \frac{1}{\mu_0}\left(F_{\mu\alpha}F_{\nu}{}^{\alpha} - \frac{1}{4}g_{\mu\nu}F_{\alpha\beta}F^{\alpha\beta}\right) \tag{L.42} $$
+
+Appendix L uses SI electromagnetic normalization throughout; the prefactor $1/\mu_0$ is the SI form consistent with the Maxwell action $S_{\text{EM}} = -(4\mu_0)^{-1} \int \sqrt{-g}\, F_{\mu\nu}F^{\mu\nu}\, d^4x$ used in Equation L.11 and the Poynting flux $(1/\mu_0)(\vec{E} \times \vec{B})$ used in Equation L.41.
 
 This represents field energy and momentum density. The matter contribution uses perfect fluid approximation in the aggregate's rest frame:
 
@@ -693,35 +697,75 @@ $$ \Delta\phi_{ij}(t) = \phi_i(t) - \phi_j(t) \approx -\frac{\nabla\delta\tau_0 
 
 A rapid spatially varying modulation therefore produces an oscillatory phase mismatch proportional to the modulation amplitude and its spatial gradient. This is the input required for the coherence-restoring gauge response discussed below.
 
-### **Step 2: Coherence Cost**
+### **Step 2: Reformulation via Cycle-Rate Perturbation**
 
-From Appendix C (Theorem C.2), predictive coherence requires minimal phase variation. The cost contribution to $V_{\text{prop}}$ (Definition D.1) from phase mismatch is:
-
-$$ V_{\text{prop}}^{(\text{phase})} = \sum_{\langle ij\rangle} \kappa_{\text{phase}} |\Delta\phi_{ij}|^2 \propto \omega^2 \delta\tau_0^2 \cos^2(\omega t) \tag{L.61} $$
-
-where $\kappa_{\text{phase}}$ emerges from PCE optimization and $\sum_{\langle ij\rangle}$ denotes summation over network links.
+The cycle-time perturbation $\delta\tau$ used in Step 1 produces a phase mismatch $\Delta\phi_{ij} \propto (\nabla\delta\tau_0 \cdot (x_i-x_j))/(\omega \tau_{\text{medium}}^2) \sin(\omega t)$ that scales as $\omega^{-1}$ (Equation L.60a), suppressing high-frequency response. This is not the radiation-zone scaling required for Larmor behavior. The high-frequency electromagnetic branch is therefore parameterized instead by the cycle-rate perturbation
+$$
+\delta\nu(x,t) := \delta(1/\tau)(x,t), \qquad
+\delta\nu(x,t)=\delta\nu_0(x)\cos(\omega t).
+$$
+Setting $1/\tau(x,t)=\nu_0+\delta\nu(x,t)$, the accumulated phase is
+$$
+\phi_i(t)=\nu_0 t+\frac{\delta\nu_0(x_i)}{\omega}\sin(\omega t)+O(\delta\nu_0^2),
+$$
+and the inter-MPU phase mismatch is
+$$
+\Delta\phi_{ij}(t)
+=
+\frac{\nabla\delta\nu_0\cdot(x_i-x_j)}{\omega}\sin(\omega t)
++O(\delta\nu_0^2).
+\tag{L.60b}
+$$
+Thus the near-field phase-mismatch cost is
+$$
+V_{\text{prop}}^{(\text{phase})}
+=
+\sum_{\langle ij\rangle}
+\kappa_{\text{phase}}|\Delta\phi_{ij}|^2
+\propto
+\frac{\delta\nu_0^2}{\omega^2}\sin^2(\omega t),
+\tag{L.61}
+$$
+where $\kappa_{\text{phase}}$ is the PCE phase-stiffness coefficient. This near-field phase-cost expression by itself does not derive electromagnetic radiation. It only identifies the phase-gradient variable whose coherent-charge realization is used in the next step.
 
 ### **Step 3: Gauge Field Compensation**
 
-To minimize $V_{\text{prop}}^{(\text{phase})}$, the system introduces compensating phase through gauge field $A_\mu$. From the minimal coupling prescription (Appendix G, Section G.4), the phase compensation requires gauge field transformation:
-
-$$ A_\mu \to A_\mu - \frac{1}{g_{\text{em}}}\partial_\mu\phi \tag{L.62} $$
-
-where $g_{\text{em}}$ is the emergent electromagnetic coupling (Appendix Z). For phase gradient $\nabla\phi \propto \omega \cos(\omega t)$, the scalar potential becomes:
-
-$$ A_0(x,t) \propto \frac{1}{g_{\text{em}}}\omega \sin(\omega t) $$
-
-The electric field is:
-
-$$ \vec{E} = -\nabla A_0 - \frac{\partial \vec{A}}{\partial t} \propto \omega^2 \cos(\omega t) \tag{L.63} $$
+The minimal coupling prescription (Appendix G, Section G.4) compensates the phase mismatch through
+$$
+A_\mu\to A_\mu-g_{\text{em}}^{-1}\partial_\mu\phi.
+\tag{L.62}
+$$
+Since $\partial_t\phi_i=\delta\nu_0(x_i)\cos(\omega t)$, the local scalar-potential response is
+$$
+A_0(x,t)\propto \frac{1}{g_{\text{em}}}\delta\nu_0(x)\cos(\omega t).
+$$
+The local compensation field is a near-field bookkeeping of the phase mismatch. On the coherent-charge carrier branch of Theorem L.2, the same cycle-rate modulation drives a physical charge-current degree of freedom with dipole moment
+$$
+p(t)=p_0\cos(\omega t),\qquad p_0\propto \delta\nu_0,
+$$
+after the fixed device-dependent conversion from cycle-rate modulation to dipole amplitude is absorbed into $p_0$. The standard radiation-zone Maxwell solution for an oscillating dipole then gives
+$$
+|\vec{E}_{\text{rad}}|\propto \frac{|\ddot p|}{r}
+\propto
+\omega^2\delta\nu_0,
+\tag{L.63}
+$$
+with the corresponding magnetic field fixed by the radiation-zone Maxwell equations. Thus the $\omega^2$ field scaling is inherited from the coherent-charge oscillator realization, not from the near-field phase-compensation term alone.
 
 ### **Step 4: Identification with EM Radiation**
 
-This oscillating electric field, coupled with corresponding magnetic field from $\nabla \times \vec{E} = -\partial \vec{B}/\partial t$, satisfies Maxwell's equations in the continuum limit (Appendix G, Equations G.5.1–G.5.3). The field energy density:
-
-$$ u_{\text{EM}} = \frac{\varepsilon_0}{2}|\vec{E}|^2 + \frac{1}{2\mu_0}|\vec{B}|^2 \propto \omega^4 \delta\tau_0^2 \tag{L.64} $$
-
-corresponds to the electromagnetic stress-energy tensor $T_{\mu\nu}^{(\text{EM})}$ (Equation L.4). The $\omega^4$ scaling matches standard radiation theory (Larmor formula).
+On the coherent-charge carrier branch, the radiation-zone field configuration satisfies Maxwell's equations in the continuum limit (Appendix G, Equations G.5.1-G.5.3). The radiated energy density follows the standard Larmor scaling
+$$
+u_{\text{EM}}
+=
+\frac{\varepsilon_0}{2}|\vec{E}_{\text{rad}}|^2
++
+\frac{1}{2\mu_0}|\vec{B}_{\text{rad}}|^2
+\propto
+\omega^4\delta\nu_0^2.
+\tag{L.64}
+$$
+This corresponds to the electromagnetic stress-energy tensor $T_{\mu\nu}^{(\text{EM})}$ (Equation L.4). On the cycle-time formulation of Step 1, the perturbation amplitudes are related by $\delta\nu_0=-\delta\tau_0/\tau_{\text{medium}}^2+O(\delta\tau_0^2)$ in the small-perturbation regime. The sign is irrelevant for the radiated power. The cycle-rate parameterization is the high-frequency electromagnetic branch, while the cycle-time parameterization remains natural for the low-frequency gravitational branch of subsection (b).
 
 (b) Low-Frequency Regime ($\omega \ll 1/\tau_{\text{medium}}$) → Gravitational Time Dilation
 
@@ -1503,9 +1547,9 @@ The first inequality is a data-processing bound, since $\text{context}_S$ and $\
 
 A critical constraint from Appendix O (Theorem O.3): causal information can only flow in the direction of the arrow of time. The thermodynamic ratchet — $\varepsilon \geq \ln 2$ entropy production per non-trivial ND-RID cycle, yielding macroscopic reversal probability $\leq e^{-N\varepsilon}\le 2^{-N}$ (Theorem O.3) — ensures that information acquisition is strictly forward-directed. Formally, any interaction event $N_k$ contributing to $\mathcal{H}_{ST}(t)$ must satisfy $N_k \in \text{past}(t)$. Future interaction events are inaccessible to the context state at time $t$.
 
-**Corollary L.12.2 (Past-Directed Causal Information).** For each time $t$, the causal information content $\mathcal{I}(S \to T,t)$ is determined solely by the $S$–$T$ causal history $\mathcal{H}_{ST}(t)$ up to time $t$ (i.e., by ND-RID events in the causal past of $S$), and cannot depend on future events occurring after $t$. As a consequence, $\mathcal{I}(S \to T,t)$ is monotonically non-decreasing in $t$.
+**Corollary L.12.2 (Past-Directed Causal Information; Monotonicity on the Lossless-Retention Branch).** For each time $t$, the causal information content $\mathcal{I}(S \to T,t)$ is determined solely by the $S$–$T$ causal history $\mathcal{H}_{ST}(t)$ up to time $t$ (i.e., by ND-RID events in the causal past of $S$), and cannot depend on future events occurring after $t$. On the lossless-retention branch — under which $\text{context}_S(t+\Delta t)$ functions as a refinement of, rather than a lossy compression of, $\text{context}_S(t)$ as a sufficient statistic for $\theta_T$ — $\mathcal{I}(S \to T,t)$ is monotonically non-decreasing in $t$. In general, the cumulative accessible information from $\mathcal{H}_{ST}(t)$ is non-decreasing, while the retained mutual information $I(\text{context}_S(t); \theta_T)$ may decrease under PCE-driven compression, forgetting, or finite-memory overwrites.
 
-*Proof.* By construction, $\text{context}_S(t)$ is a function of the ND-RID record contained in $\mathcal{H}_{ST}(t)$, which consists only of events in the past of $S$ at time $t$. Therefore the joint law $\mathcal{P}_{\text{causal}}(\text{context}_S(t), \theta_T)$, and hence $I(\text{context}_S(t),\theta_T)$, is fully determined by that past record. Theorem O.3 excludes retrocausal dependence of $\text{context}_S(t)$ on post-$t$ events under the thermodynamic arrow of time. Since $\mathcal{H}_{ST}(t)$ can only grow as $t$ increases — each new ND-RID event appends to the record — $\mathcal{I}(S \to T,t)$ is non-decreasing. ∎
+*Proof.* By construction, $\text{context}_S(t)$ is a function of the ND-RID record contained in $\mathcal{H}_{ST}(t)$, which consists only of events in the past of $S$ at time $t$. The joint law $\mathcal{P}_{\text{causal}}(\text{context}_S(t), \theta_T)$, and hence the mutual information $I(\text{context}_S(t),\theta_T)$, is fully determined by that past record. Theorem O.3 excludes retrocausal dependence of $\text{context}_S(t)$ on post-$t$ events under the thermodynamic arrow of time. The history $\mathcal{H}_{ST}(t)$ is monotonically non-decreasing in $t$. On the lossless-retention branch, where the update map from $\text{context}_S(t)$ to $\text{context}_S(t+\Delta t)$ is a refinement (i.e., $\text{context}_S(t)$ is recoverable from $\text{context}_S(t+\Delta t)$), the data processing inequality applied in reverse gives $I(\text{context}_S(t+\Delta t); \theta_T) \ge I(\text{context}_S(t); \theta_T)$, yielding monotonicity. Off this branch, the PCE-driven update can act as a lossy channel reducing retained mutual information, and the data processing inequality applies in the other direction; only the non-decrease of the underlying history is guaranteed. ∎
 
 -----
 

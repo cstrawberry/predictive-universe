@@ -32,7 +32,7 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
    \boxed{S_{\mathrm{inst}}=\left(\frac{C_{\max}}{\varepsilon}\right)\kappa = 2\,\kappa} \tag{V.1}
    $$
 
-   where $C_{\max}/\varepsilon=2$ (rigorously derived in Appendix Q).
+   where $C_{\max}/\varepsilon=2$ on the residual-budget branch of Appendix E (Equation E.14) and Appendix Q (§Q.2.1, Equation Q.10). The residual-budget branch is the load-bearing assumption inherited by every $\Lambda L_P^2 \sim e^{-2\kappa}$ value computed in this section.
 
 2. **Vacuum energy density.** The dimensionless combination $\Lambda L_P^2$ is
 
@@ -130,9 +130,9 @@ Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts the inferred $\
 
 ---
 
-## V.2 Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor (No Continuous Fit Parameters)
+## V.2 Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor on the Canonical Appendix Z Branch
 
-This section provides the direct computational program for the fine-structure constant as recorded in **Appendix Z**. The calculation introduces no continuous fit parameters once the discrete Appendix Z assumptions and normalization conventions are fixed.
+This section provides the direct computational program for the fine-structure constant as recorded in **Appendix Z**. The calculation introduces no continuous fit parameters once the discrete Appendix Z assumptions, branch normalizations, and matching conventions are fixed; it is not an unconditional derivation of those branch normalizations themselves. The relevant Appendix Z branches inherited here include the bulk Predictive-Ward unit-normalization branch (Theorem Z.14, $\kappa^*_{\mathrm{bulk}} = 1$), the canonical first-order interface-derivative normalization branch (Theorem Z.17), the canonical separable second-order curvature-response branch (Theorem Z.25), and the column-covariance branch (Theorem Z.24a) for the Bures-to-gauge identification.
 
 ### V.2.1 Foundational Inputs (Derived from PU First Principles)
 

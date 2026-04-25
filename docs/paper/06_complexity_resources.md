@@ -4,6 +4,8 @@ This section explores the crucial interplay between system complexity, achievabl
 
 ## 6.0 The Capacity Bound as Structural Constraint
 
+**Capacity branch note.** The strict ND-RID bound $C_{\max}<\ln d_0$ is theorem-level under the refresh/contractive channel hypotheses. Exact residual-budget equalities such as $C_{\max}^*=\ln d_0-\varepsilon=2\ln 2$ and ratios such as $C_{\max}^*/\varepsilon=2$ are used only on the residual-budget saturation branch specified in Appendices E/Q; they are not consequences of the capacity upper bound alone.
+
 *Throughout this section, natural units $\hbar = c = k_B = 1$ are used unless otherwise noted.*
 
 A fundamental structural feature of the PU framework is that the ND-RID channel capacity bound $C_{\max} < \ln d_0$ (Theorem E.2) propagates through the derivation chain to constrain multiple physical domains. This bound arises from the irreversibility constraint $\varepsilon \geq \ln 2$ (Theorem 31), which implies strict contractivity $f_{RID} < 1$ (Lemma E.1), which in turn limits classical information capacity.

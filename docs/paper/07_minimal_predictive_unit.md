@@ -625,9 +625,9 @@ The active kernel dimension $a = 2$ initiates the canonical chain:
 
 $$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{\text{PCE}} [24, 12, 8]$$
 
-The endpoint is the extended binary Golay code with parameters $[n, k, d] = [24, 12, 8]$, which PCE uniquely selects as the optimal error-correcting structure for the $M = 24$ interface modes (Theorem Z.13).
+On the balanced rate-$\tfrac{1}{2}$ Golay branch, the endpoint is the extended binary Golay code with parameters $[n,k,d]=[24,12,8]$. The coding-theory uniqueness is theorem-level once the balanced split $k=12$ is fixed; the unconditional rate-$\tfrac{1}{2}$ split is outside the stated balanced-Golay hypotheses.
 
-**Remark (Error Correction Interpretation).** The unified entropy admits an equivalent description as *error correction overhead*. The Golay code rate $R = k/n = 12/24 = 1/2$ means half of all interface modes are dedicated to protecting the other half against errors. The parity modes (the $n - k = 12$ redundancy bits) represent entropy in the following sense: they encode information about the signal modes that would be needed to reconstruct them after corruption.
+**Remark (Error Correction Interpretation).** The unified entropy admits an equivalent description as *error correction overhead*. On this branch the Golay code rate $R = k/n = 12/24 = 1/2$ means half of all interface modes are dedicated to protecting the other half against errors. The parity modes (the $n - k = 12$ redundancy bits) represent entropy in the following sense: they encode information about the signal modes that would be needed to reconstruct them after corruption.
 
 This interpretation complements the channel capacity view:
 - **Channel capacity view**: Entropy measures the information that can be reliably transmitted
@@ -706,7 +706,7 @@ $$\text{SPAP} \xrightarrow{\text{Thm 10, 11}} \text{irreversibility} \xrightarro
 
 ### 7.5.4 The Coefficient $1/4G$
 
-The coefficient $\frac{1}{4}$ in the Bekenstein-Hawking formula $S = \mathcal{A}/4L_P^2$ (where $L_P = \sqrt{G\hbar/c^3}$) has a transparent decomposition within the framework:
+On the area-law calibration branch of Appendix E, the coefficient $\frac{1}{4}$ in the Bekenstein-Hawking formula $S = \mathcal{A}/4L_P^2$ (where $L_P = \sqrt{G\hbar/c^3}$) has a transparent decomposition within the framework:
 
 $$\frac{1}{4G} = \sigma_{link} \times C_{\max} = \frac{\chi C_{\max}}{\eta \delta^2}$$
 
@@ -776,7 +776,7 @@ The gravitational constant $G$ appearing in the EFE is the same $G$ determined b
 
 $$G = \frac{\eta \delta^2 c^3}{4\hbar \chi C_{\max}(f_{RID})} \quad \text{(Equation E.9)}$$
 
-This identification connects the microscopic MPU parameters to macroscopic gravitational dynamics. The emergence of gravity from thermodynamics (Jacobson 1995) is thus grounded in the information-theoretic structure of the predictive substrate.
+This identification connects the microscopic MPU parameters to macroscopic gravitational dynamics on the horizon-saturation, local-thermodynamic, and stress-energy-source branches used in Section 12. The emergence of gravity from thermodynamics (Jacobson 1995) is thus grounded in the information-theoretic structure of the predictive substrate.
 
 The full derivation of the Einstein Field Equations from these thermodynamic principles is provided in Section 12.
 

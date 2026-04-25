@@ -582,6 +582,7 @@
 *   Sorensen, R. (2022). *Nothing: A Philosophical History*. New York: Oxford University Press.
 *   Spinoza, B. (1677). *Ethica, Ordine Geometrico Demonstrata*. Posthumous publication. (English translation: *Ethics*, E. Curley, Trans., in *The Collected Works of Spinoza*, Vol. 1, Princeton University Press, 1985.)
 *   Spohn, H. (1978). Entropy production for quantum dynamical semigroups. *Journal of Mathematical Physics*, *19*(5), 1227–1230. DOI: 10.1063/1.523789
+*   STAR Collaboration. (2026). Measuring spin correlation between quarks during QCD confinement. *Nature*, *650*, 65–71. DOI: 10.1038/s41586-025-09920-0
 *   Starobinsky, A. A. (1980). A new type of isotropic cosmological models without singularity. *Physics Letters B*, *91*, 99–102.
 *   Steane, A. M. (1996). Error correcting codes in quantum theory. *Physical Review Letters*, *77*(5), 793–797. DOI: 10.1103/PhysRevLett.77.793
 *   Steinhaus, H. (1957). Problem. *Colloquium Mathematicum*, *5*, 116.
