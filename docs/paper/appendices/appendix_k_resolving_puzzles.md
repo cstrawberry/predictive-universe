@@ -829,7 +829,7 @@ $$\kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 36 + 3 - 0.5 = 38.5$$
 
 **Exponential Suppression:** The electroweak scale emerges as:
 $$v = A_{EW} e^{-\kappa_{EW}} M_{Pl}$$
-**(Theorem T.5)**, where $A_{EW} = O(1)$ is a prefactor determined by the vacuum energy normalization on the attractor. This yields:
+**(Theorem T.6, with $\kappa_{EW}$ from Theorem T.5 and $A_{EW}$ from Theorem T.29)**, where $A_{EW}=O(1)$ is supplied by the Appendix T determinant-model branch. This yields:
 $$\frac{v}{M_{Pl}} = A_{EW} e^{-38.5} \approx 2 \times 10^{-17}$$
 in excellent agreement with the observed hierarchy.
 

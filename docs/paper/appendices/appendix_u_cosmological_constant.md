@@ -898,6 +898,25 @@ $$
 
 The agreement between $A_{\text{eff}}^{(\text{obs})}$ and the Appendix U working value is an internal consistency check on the adopted prefactor convention within the five-mode reference branch. By Theorem U.8c, that branch is not a theorem-level consequence of the current Definition U.4 continuum action. ∎
 
+**Proposition U.15c (Vacuum Prefactor Status Boundary).** In the current Appendix U vacuum sector, $A_{\mathrm{eff}}$ has exactly two admissible uses:
+
+1. $A_{\mathrm{eff}}^{(\mathrm{obs})}$ or $A_{\mathrm{eff}}^{(\mathrm{obs},4)}$ is an observational inversion after a branch exponent has been fixed;
+2. the Appendix U working value $A_{\mathrm{eff}}=0.923\pm0.011$ is a forward-evaluation convention obtained by transferring the Appendix T determinant-model convention and appending the stated bounce-prefactor allowance.
+
+Neither use is a theorem-level derivation of the vacuum prefactor. A theorem-level value of $A_{\mathrm{eff}}$ requires a fixed ghost, Jacobian, determinant, zero-mode, finite-volume, extensivity, and measure-normalization calculation on the same vacuum branch.
+
+*Proof.* For any fixed exponent $\kappa$ in the vacuum formula
+$$
+\Lambda L_P^2=8\pi A_{\mathrm{eff}}e^{-2\kappa},
+$$
+the observational inversion is algebraically
+$$
+A_{\mathrm{eff}}^{(\mathrm{obs},\kappa)}
+=
+\frac{\Lambda L_P^2}{8\pi e^{-2\kappa}}.
+$$
+This computes the prefactor required to match the observed value after $\kappa$ is chosen; it does not determine $A_{\mathrm{eff}}$ from PU vacuum dynamics. Conversely, the Appendix U working value is obtained by the convention $K_{\mathrm{transfer}}=A_{EW}^{-1}$ together with an explicit systematic allowance for ghost/zero-mode and extensivity conventions. Since Theorem T.29.2 makes $A_{EW}$ model-conditional, the transferred factor cannot have stronger status in Appendix U than the determinant model from which it is transferred. Finally, Proposition U.15a defines the determinant object but does not evaluate all finite determinant, Jacobian, ghost, zero-mode, finite-volume, extensivity, and measure factors on the four-mode false-vacuum branch. Hence the current manuscript has a forward convention and an observational inversion, but not a theorem-level vacuum prefactor. ∎
+
 **PPI mapping chain (vacuum weight).** The identification
 $$
 \Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa_{\mathrm{ref}}}

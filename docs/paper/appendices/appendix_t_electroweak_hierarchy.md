@@ -426,16 +426,20 @@ The full electroweak prediction is then
 $$
 v = A_{EW}\, v_0,
 $$
-with $A_{EW}$ determined from PU geometry in Theorem T.29.
+with $A_{EW}$ specified by the determinant-model branch of Theorem T.29.
 
 ### T.7.2 Prefactor Determination
 
-**Proposition T.4** (Prefactor Consistency). The first-principles calculation (Theorem T.29) derives $A_{EW} = 1.084 \pm 0.005$ from SU(2) block curvature, Schur complement, and homogeneous-space Jacobian factors, yielding:
+**Proposition T.4** (Prefactor Consistency). The determinant model of Theorem T.29 gives the central value $A_{EW}=1.08407\ldots$ from the SU(2) link factor, the rank-one Schur-complement factor, and the homogeneous-space Jacobian factor. With the separate model allowance recorded in Theorem T.29, the working value is
 $$
-v = 1.084 \times 232 \text{ GeV} = 252 \text{ GeV}
+A_{EW}=1.084\pm0.005,
+$$
+and hence
+$$
+v = 1.084 \times 232 \text{ GeV} = 252 \text{ GeV}.
 $$
 
-This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV, consistent with the expected $\mathcal{O}(1)$ range for one-loop determinants.
+This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV. The agreement is a determinant-model consistency check: the central value is fixed once the model is fixed, but the $\pm0.005$ allowance is not a theorem-level remainder bound.
 
 -----
 
@@ -1544,7 +1548,7 @@ Theorems T.78.2, T.78.3, and T.79 are the controlling branch-ledger sections for
 |Parameter |PU Derivation |Predicted |Observed |Status |
 |------------------------------------------|------------------------------------------------------------------------|---------------------------------|------------|----------|
 |$\kappa_{EW}$ |$bk/2 + 3 - 1/2$ |38.5 |— |Exact |
-|$A_{EW}$ |One-loop determinant |1.084 |— |Derived |
+|$A_{EW}$ |One-loop determinant model |1.084 |— |Model layer |
 |$v$ |$A_{EW} e^{-\kappa_{EW}} M_{Pl}$ |252 GeV |246 GeV |2.3% |
 |$\sin^2\theta_W^{(0)}$ |PU-normalized fixed-point value |$3/8$ |— |Exact |
 |$\sin^2\theta_W(\mu_G)$ |matching with lifted spectral thresholds |$\frac{3Z_2}{3Z_2+5Z_1}$ with $Z_i=1+\Delta_i/24$ |(matching-scale input) |Derived |
@@ -1564,7 +1568,7 @@ Theorems T.78.2, T.78.3, and T.79 are the controlling branch-ledger sections for
 
 |Quantity |Central (PU) |$\sigma_{T1}$ |$\sigma_{T2}$ |$\sigma_{T3}$ |$1\sigma$ theory |Dominant category and term |What shrinks it |
 |---------------------|----------------:|----------------:|----------------:|----------------:|----------------:|---------------------------|-------------------------------------------------------------------------------------------------------------|
-|$A_{EW}$ |$1.084$ |$0.005$ |$0$ |$0$ |$0.005$ |T1 determinant / curvature / Jacobian truncation |compute next curvature/Jacobian terms beyond Theorem T.29 |
+|$A_{EW}$ |$1.084$ |$0.005$ model allowance |$0$ |$0$ |$0.005$ |determinant-model curvature / Schur / Jacobian allowance; not a proved remainder bound |derive the determinant construction with explicit remainder bounds or replace it by a theorem-level prefactor |
 |$v$ |$252\ \text{GeV}$|$1.2\ \text{GeV}$|$5\ \text{GeV}$ |$0$ |$5\ \text{GeV}$ |T2 matching and threshold dependence at $\mu_G$ |full 2-loop matching and threshold accounting at $\mu_G$ |
 |$\sin^2\theta_W(M_Z)$|$0.2312$ |negligible ($O(M^{-1})$ anisotropy) |$0.0015$ |$0$ |$0.0015$ |T2 lifted thresholds, matching, and RG propagation |compute explicit PU threshold spectrum ($\delta_i$) + 2-loop matching/RG + $O(M^{-1})$ anisotropy corrections|
 |$m_H$ |$125\ \text{GeV}$|negligible |$2.5\ \text{GeV}$ (T2+T3 combined) |included in T2 column |$2.5\ \text{GeV}$|T2 threshold matching combined with T3 pole-mass / observable conversion at the present working order (Theorem T.28) |explicit pole-mass conversion and higher-loop thresholds, which also resolve the combined T2+T3 entry into separate components |
@@ -1574,7 +1578,7 @@ The $1\sigma$ theory column is the diagonal quadrature sum
 $$
 \sqrt{\sigma_{T1}^2+\sigma_{T2}^2+\sigma_{T3}^2}
 $$
-at the stated working order. For $v$, $\sigma_{T1}=1.2\ \text{GeV}$ is propagated from the $A_{EW}$ T1 uncertainty via $\delta v/v = \delta A_{EW}/A_{EW}$, and $\sqrt{1.2^2+5^2}=5.14\ \text{GeV}$ rounds to $5\ \text{GeV}$ at the stated precision. For $A_{\text{eff}}$, $\sqrt{0.004^2+0.010^2}=0.01077\approx 0.011$. For $m_H$, the $2.5\ \text{GeV}$ entry is combined because separating threshold matching from pole-mass / observable conversion requires the explicit internal pole/threshold pipeline referenced in Theorem T.28; until that pipeline is completed, the combined entry is reported in the T2 column and the T3 column is marked as included in that column to avoid double-counting. The $A_{\text{eff}}$ row is a transferred vacuum-prefactor bookkeeping row rather than an electroweak observable.
+at the stated working order. The $A_{EW}$ entry is a determinant-model allowance, not a controlled theorem-level remainder estimate. For $v$, $\sigma_{T1}=1.2\ \text{GeV}$ is propagated from that allowance via $\delta v/v = \delta A_{EW}/A_{EW}$, and $\sqrt{1.2^2+5^2}=5.14\ \text{GeV}$ rounds to $5\ \text{GeV}$ at the stated precision. For $A_{\text{eff}}$, $\sqrt{0.004^2+0.010^2}=0.01077\approx 0.011$. For $m_H$, the $2.5\ \text{GeV}$ entry is combined because separating threshold matching from pole-mass / observable conversion requires the explicit internal pole/threshold pipeline referenced in Theorem T.28; until that pipeline is completed, the combined entry is reported in the T2 column and the T3 column is marked as included in that column to avoid double-counting. The $A_{\text{eff}}$ row is a transferred vacuum-prefactor bookkeeping row rather than an electroweak observable.
 
 ### T.19.2 Derivation Chain
 
@@ -1583,7 +1587,7 @@ $$
 \text{Golay } [24,12,8] \xrightarrow{b=6, k=12}
 \begin{cases}
 \kappa_{EW} = 38.5 \text{ (constraint counting)} \\[3pt]
-A_{EW} = 1.084 \text{ (one-loop determinant)} \\[3pt]
+A_{EW} = 1.084 \text{ (determinant-model branch)} \\[3pt]
 v = A_{EW} e^{-\kappa_{EW}} M_{Pl} = 252 \text{ GeV} \\[3pt]
 \sin^2\theta_W^{(0)} = 3/8; \sin^2\theta_W(\mu_G) = \tfrac{3Z_2}{3Z_2+5Z_1} \text{ (fixed point + matching)} \\[3pt]
 \lambda_{\text{block}} = -1/36; \lambda_{\text{elastic}}(\gamma) = +\gamma^2/36,\quad \gamma=1 \text{ on the canonical unit target-shift branch} \\[3pt]
@@ -1608,7 +1612,7 @@ $$
 
 **Result**: PCE zero-slack implies $\beta_\lambda(\mu_G) \approx 0$ via gauge-Yukawa cancellation at matching (Section T.16.2).
 
-### T.20.4 Solved: Electroweak Prefactor ✓
+### T.20.4 Model-Conditional: Electroweak Prefactor
 
 **Theorem T.29** (Electroweak Prefactor within the small-step isotropic determinant model). Assume:
 1. PCE equipartition over the $M=24$ interface modes, so that the characteristic step size satisfies $u_0^2=1/M$;
@@ -1646,7 +1650,7 @@ $$
 A_{EW}=1.06496178\ldots\times1.00716802\ldots\times1.01069671\ldots
 =1.08406869\ldots.
 $$
-Rounding the central value to three decimals gives $A_{EW}=1.084$. The additional $\\pm0.005$ quoted in later numerical sections is the manuscript's model allowance for omitted higher-order determinant and Jacobian terms; it is not produced by the multiplication above. ∎
+Rounding the central value to three decimals gives $A_{EW}=1.084$. The additional $\pm0.005$ quoted in later numerical sections is the manuscript's model allowance for omitted higher-order determinant and Jacobian terms; it is not produced by the multiplication above and is not a proved remainder bound. ∎
 
 **Corollary T.29.1** (Complete Electroweak Scale within the determinant model). Fix the determinant prescriptions of Theorem T.29. Then no further continuously tuned parameter enters the evaluation
 $$
@@ -1664,6 +1668,24 @@ Compared with $v_{\text{obs}} = 246.22\,\text{GeV}$, this is a $2.35\%$ deviatio
 - the previously fixed normalization conventions.
 
 Accordingly, this subsection introduces no additional continuous fit parameter once the determinant model of Theorem T.29 is fixed. The numerical value of $v$ is therefore conditional on that model, not an unconditional consequence of the earlier sections alone.
+
+**Theorem T.29.2 (Model-Conditional Status of the Electroweak Prefactor).** In the current Appendix T theorem stack, the statement
+$$
+A_{EW}=1.084\pm0.005
+$$
+is model-conditional. The central value $1.08407\ldots$ is uniquely determined after the three determinant factors in Theorem T.29 are adopted, but the prior PU data used before Theorem T.29 do not determine those factors, and the displayed uncertainty is not an internally derived remainder bound.
+
+*Proof.* Before Theorem T.29, the fixed data relevant to this prefactor are $M=24$, $u_0^2=1/M$, the electroweak exponent $\kappa_{EW}=38.5$, and the requirement that the one-loop prefactor be dimensionless and of order one. These data do not specify a unique determinant functional. The model of Theorem T.29 chooses
+$$
+A_{\mathrm{link}}=(\cos u_0)^{-3},\qquad
+A_{\mathrm{Schur}}=\left(1-\frac{u_0^2}{3\cos u_0}\right)^{-1/2},\qquad
+A_{\mathrm{geo}}=\left(\frac{24}{23}\right)^{1/4}.
+$$
+Those choices give $A_{EW}=1.08406869\ldots$. If the prior data alone fixed $A_{EW}$, then replacing the Schur and homogeneous-space Jacobian prescriptions by the identity factors while retaining the same $M$, $u_0$, $\kappa_{EW}$, and order-one determinant status would be impossible. But that replacement is not excluded by any theorem preceding Theorem T.29 and gives
+$$
+A_{EW}'=(\cos u_0)^{-3}=1.06496178\ldots,
+$$
+which differs from $1.08406869\ldots$ by more than $0.005$. Therefore the prefactor value is not determined by the earlier theorem stack. Since no bound is proved for the omitted determinant, curvature, Schur-complement, or Jacobian terms, the $\pm0.005$ entry is a model allowance rather than a theorem-level error estimate. ∎
 
 ### T.20.5 Solved: Left-Chiral Row-Pair Structure ✓
 
@@ -4223,7 +4245,7 @@ With $e^{-38.5} \approx 1.90 \times 10^{-17}$ and $M_{Pl} = 1.22 \times 10^{19}$
 
 $$v \approx 252 \text{ GeV}$$
 
-with the prefactor $A_{EW} = 1.084 \pm 0.005$ obtained in Theorem T.29 within the three-factor determinant model via SU(2) block curvature, the rank-one Schur factor, and the homogeneous-space Jacobian factor. Once that model is fixed, no further continuous tuning enters this subsection. The resulting value is $2.3\%$ above $v_{obs} = 246.22$ GeV.
+with the prefactor $A_{EW} = 1.084 \pm 0.005$ obtained in Theorem T.29 within the three-factor determinant model via SU(2) block curvature, the rank-one Schur factor, and the homogeneous-space Jacobian factor. Once that model is fixed, no further continuous tuning enters this subsection. By Theorem T.29.2 the value is model-conditional rather than a theorem-level prefactor derivation. The resulting value is $2.3\%$ above $v_{obs} = 246.22$ GeV.
 
 -----
 
@@ -6881,6 +6903,49 @@ is uniquely determined.
 *Proof.* Theorem T.78 fixes $\Delta$ once the spectral problem is completed. Theorem T.71 then fixes the gauge/RG sector, Theorems T.72–T.73 fix the Yukawa ratios on the chosen flavor branch once $(\mathcal T_{E_8},\mathcal V)$ are fixed, and Theorems T.74–T.76 fix the CP sector once $\mathcal B$ is fixed. Combining these steps determines every component of $\Pi_T$. ∎
 
 **Corollary T.79.1 (Status Boundary for the Quantitative Appendix-T Sector).** On a fixed PU structural branch, the RG/matching/evolution machinery contains no further continuous ambiguity once the completed spectral input $\Delta$, the residual heavy-threshold ledger $\delta$ if nonminimal heavy data are appended, and the residual flavor-profile data $(\mathcal T_{E_8},\mathcal V,\mathcal B)$ are fixed. In the canonical minimal $\mathrm{MS2}_{\mu_G}$ ledger, $\delta_i=0$ and the gauge-threshold input is exactly the completed flag-lift spectral output of Theorem T.78. ∎
+
+**Theorem T.79.2 (Appendix-T Deterministic Matching Functor).** Fix an Appendix-T input record
+$$
+\mathfrak I_T
+=
+(\mathfrak S_{\widetilde X},\delta^{\mathrm{heavy}},\mathcal T_{E_8},\mathcal V,\mathcal N_\nu,\mathcal B,\mathcal R_{\mathrm{RG}},\mathcal C_{\mathrm{dec}},\mathcal C_{\mathrm{pole}}),
+$$
+where $\mathfrak S_{\widetilde X}$ is a completed flag-lift spectral tuple in the sense of Theorem T.78, $\delta^{\mathrm{heavy}}$ is either the empty minimal residual ledger or an explicitly listed nonminimal heavy-threshold ledger, $(\mathcal T_{E_8},\mathcal V)$ are the selected flavor-geometric normalization and Van Vleck data, $\mathcal N_\nu$ is the neutrino/Majorana branch record of Proposition T.24.28, $\mathcal B$ is the selected CKM/PMNS CP-profile data, $\mathcal R_{\mathrm{RG}}$ is the fixed loop-order SM RG system with matching scale $\mu_G$, $\mathcal C_{\mathrm{dec}}$ is the fixed decoupling convention, and $\mathcal C_{\mathrm{pole}}$ is the fixed pole/observable conversion convention. Then there is a deterministic map
+$$
+\mathfrak F_T:\mathfrak I_T\longmapsto \Pi_T
+$$
+defined by the following ordered operations:
+
+1. evaluate the sector finite parts $F_s$ from $\mathfrak S_{\widetilde X}$ and set $\Delta=TF$ and $Z_i=1+\Delta_i/24$;
+2. append the residual ledger by setting $\delta_i=0$ on the canonical minimal ledger and otherwise adding only the explicitly listed heavy-threshold shifts;
+3. form the gauge and Higgs boundary data at $\mu_G$ from Theorems T.13-T.17, T.19, T.28, and T.35;
+4. form the charged-fermion and neutrino Yukawa boundary data from $(\mathcal T_{E_8},\mathcal V,\mathcal N_\nu)$;
+5. form the CKM and PMNS matrices from the fixed CP-profile record $\mathcal B$;
+6. evolve the boundary vector by the fixed RG system $\mathcal R_{\mathrm{RG}}$, apply $\mathcal C_{\mathrm{dec}}$, and convert to the requested pole or observable convention using $\mathcal C_{\mathrm{pole}}$.
+
+The map is functorial with respect to data-preserving isomorphisms of input records: an isomorphism of completed spectral tuples, flavor bases, and CP-profile representatives induces the corresponding basis relabeling of Yukawa and mixing matrices and leaves all basis-invariant components of $\Pi_T$ unchanged.
+
+*Proof.* Step 1 is unique by Theorem T.78. Step 2 is unique by Definition T.19a and Proposition T.19c. Step 3 is unique because the gauge boundary values are algebraic functions of $(Z_i,\delta_i)$ and the fixed PU boundary conditions. Steps 4 and 5 are unique by Theorems T.72-T.76 after $(\mathcal T_{E_8},\mathcal V,\mathcal N_\nu,\mathcal B)$ are fixed. Step 6 is unique because a finite loop-order RG system is an autonomous first-order ODE with a smooth right-hand side on the perturbative PU branch, so standard ODE uniqueness gives one trajectory for the fixed initial vector; fixed decoupling and pole-conversion conventions are functions, so they preserve uniqueness. Data-preserving isomorphisms only rename bases or equivalent representatives before applying the same functions. Therefore $\mathfrak F_T$ is a well-defined deterministic functor and contains no further continuous ambiguity beyond the fixed input record. ∎
+
+**Proposition T.79.3 (Flavor, Neutrino, Majorana, and Common-Scale Dependency Ledger).** The dependency record for the Appendix-T flavor and neutrino sector is the following finite ledger.
+
+| Input or convention | Role | Status at point of use | Uncertainty class carried forward | Affected outputs |
+|:--|:--|:--|:--|:--|
+| Completed $\Delta$ from $\mathfrak S_{\widetilde X}$ | ThresholdData | branch theorem after Theorem T.78 data are fixed; validation target if not fixed | T2 until spectral branch is completed | $g_i$, $\sin^2\theta_W$, RG boundary data |
+| Residual $\delta_i$ | ThresholdData / SchemeScale | exact empty ledger value $0$ in the canonical minimal $\mathrm{MS2}_{\mu_G}$ ledger; nonminimal only if an explicit heavy ledger is appended | T2 for nonminimal heavy thresholds | gauge matching and all RG-propagated observables |
+| $\mu_G$ and common-scale transport | SchemeScale | fixed matching convention on the adopted branch | T2 for matching convention; T3 for empirical extraction comparisons | Higgs, Yukawa, neutrino, and common-scale tables |
+| $A_{EW}$ | determinant-model prefactor | model layer by Theorem T.29.2 | model allowance at the stated working order | $v$, quantities using $v/M_{Pl}$, and transferred prefactor rows |
+| $(\mathcal T_{E_8},\mathcal V)$ | flavor-geometric ThresholdData / model profile | branch-fixed data for Theorems T.72-T.73 | T1 for geometric truncations; T2 for branch and normalization choices | charged-lepton and quark Yukawa ratios and normalizations |
+| top-sector normalization $y_t(\mu_G)=1$ | boundary normalization | branch boundary condition | T2 | absolute Yukawa scale and seesaw normalization |
+| Majorana A₂ geometry and anchored neutrino reading | branch geometry | branch/model layer as recorded in Proposition T.24.28 | T2 | neutrino mass hierarchy and PMNS geometry |
+| type-I seesaw and $M_R=\mu_G$ identification | sector-linking identification | conditional branch input | T2 | absolute light-neutrino masses |
+| CKM/PMNS Berry-loop and CP profile $\mathcal B$ | PhenomenologicalKernel / ThresholdData | branch-fixed profile data | T2 for profile branch; T3 for phase-convention or extraction comparisons | CKM, PMNS, Jarlskog, baryogenesis CP factors |
+| common-scale quark reductions | SchemeScale / EmpiricalInput for comparison | comparison convention, not derivation input | T3 | quark-ratio validation tables |
+| baryogenesis washout and thermal factors | PhenomenologicalKernel | Appendix Y model layer unless separately derived | T2, with T3 only for observational extraction | $\eta_B$ comparison |
+
+No empirical mass, mixing, or pole value is permitted to enter the derivation side of this ledger. Empirical quantities may appear only in the comparison columns governed by Convention P.14.1c.
+
+*Proof.* The first two rows follow from Theorem T.78, Definition T.19a, Proposition T.19c, and Corollary T.78.3. The matching-scale and common-scale rows follow from the stated RG/matching conventions and from Section T.25.5.3, where common-scale data are used for comparison. The $A_{EW}$ row follows from Theorem T.29.2. The flavor-geometric rows follow from Theorems T.72-T.73 and Proposition R.3.5f: the generation-count statement is separate from the later texture and normalization data. The Majorana, seesaw, and anchored-reading rows follow from Theorems T.24.11-T.24.15 and Proposition T.24.28, which list the required neutrino-sector inputs. The CKM/PMNS row follows from Theorems T.74-T.76 and the Berry-loop assumptions explicitly stated there. The baryogenesis row follows from Appendix Y, where washout and thermal factors are model-layer inputs. Since each row is assigned to exactly one role and uncertainty class at its point of use, the ledger propagates by the meet rule of Convention P.14.1d and cannot use empirical comparison values as hidden derivation inputs. ∎
 
 **Theorem T.79a (Nuclear Extension Determinacy Boundary).** The Appendix-T electroweak/flavor parameter vector $\Pi_T$ does not by itself determine stable isotope patterns, nuclear magic numbers, or spin-dependent nuclear transition anomalies. Those quantities become determinate only after PU supplies a finite self-adjoint nuclear aggregate Hamiltonian
 $$

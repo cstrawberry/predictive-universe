@@ -698,7 +698,7 @@ The PU mechanism operates during a different dynamical regime than standard EWBG
 
 ### Y.10.3.1 Statement of Result
 
-**Theorem Y.11** (Hierarchy Link with Derived Efficiency Prefactor). *The baryon asymmetry and the electroweak hierarchy are not independent. Their dominant exponential dependence satisfies a square-root relation, with a derived dimensionless prefactor:*
+**Theorem Y.11** (Hierarchy Link with Branch-Fixed Efficiency Prefactor). *The baryon asymmetry and the electroweak hierarchy are not independent. Their dominant exponential dependence satisfies a square-root relation, with a dimensionless prefactor fixed once the Appendix T determinant model, the CP-profile branch, and the washout branch are fixed:*
 
 $$\boxed{\eta_B = \mathcal{P}_{\mathrm{eff}}\sqrt{\frac{v}{M_{Pl}}}}$$
 
@@ -706,7 +706,7 @@ $$\boxed{\eta_B = \mathcal{P}_{\mathrm{eff}}\sqrt{\frac{v}{M_{Pl}}}}$$
 
 $$\boxed{\eta_B^2 = \mathcal{P}_{\mathrm{eff}}^2\frac{v}{M_{Pl}}}$$
 
-*Proof.* From Theorem T.6 and Proposition T.4, the electroweak scale satisfies
+*Proof.* From Theorem T.6 and Proposition T.4 within the determinant model of Theorem T.29, the electroweak scale satisfies
 $$
 \frac{v}{M_{Pl}} = A_{EW} e^{-\kappa_{EW}},
 \qquad
@@ -736,7 +736,7 @@ Hence the full hierarchy link takes the stated prefactor-weighted square-root fo
 
 ### Y.10.3.2 Numerical Verification
 
-**Proposition Y.11.1** (Numerical Consistency). *The leading square-root scaling holds quantitatively once the derived prefactor is included:*
+**Proposition Y.11.1** (Numerical Consistency). *The leading square-root scaling holds quantitatively once the branch-fixed prefactor is included:*
 
 | Quantity | Expression | Value |
 |:---------|:-----------|:-----:|
@@ -745,7 +745,7 @@ Hence the full hierarchy link takes the stated prefactor-weighted square-root fo
 | Observed $\eta_B$ | — | $6.1 \times 10^{-10}$ |
 | Ratio | $\sqrt{v/M_{Pl}}/\eta_B$ | $7.4$ |
 
-The factor of $\sim 7$ is accounted for by the derived prefactor:
+The factor of $\sim 7$ is accounted for by the branch-fixed prefactor:
 $$
 \mathcal{C}_{eff} \times \mathcal{F}_{CP} \times f_{wash} \times e^{-\varepsilon/N_g} \times A_{EW}^{-1/2}
 =
@@ -814,7 +814,7 @@ $$\eta_B \sim \sqrt{v/M_{Pl}}$$
 
 Any mechanism that explains $\kappa_{EW}$ automatically constrains $\eta_B$, and vice versa. The two problems have a common origin in the Golay-Steiner structure (Theorem T.5). ∎
 
-**Corollary Y.11.4a (Hierarchy Bridge Ratio).** *The prefactor $\mathcal{P}_{\mathrm{eff}}$ can be determined independently from theory and observation, and the two determinations agree at the $0.6\%$ level.*
+**Corollary Y.11.4a (Hierarchy Bridge Ratio).** *The prefactor $\mathcal{P}_{\mathrm{eff}}$ has two determinations, one from the adopted Appendix T/Y model branch and one from observational inversion, and the two values agree at the $0.6\%$ level.*
 
 *Proof.* Theorem Y.11 gives
 $$
@@ -824,7 +824,7 @@ At the PCE-Attractor, $\varepsilon = \ln 2$ and $N_g = 3$, so
 $$
 e^{-\varepsilon/N_g} = e^{-\ln 2/3} = 2^{-1/3}.
 $$
-Using $\mathcal{C}_{eff} = 0.282$, $\mathcal{F}_{CP} = 0.9997$, $f_{wash} = 0.63$, and $A_{EW} = 1.084$ gives
+Using the branch-fixed values $\mathcal{C}_{eff} = 0.282$, $\mathcal{F}_{CP} = 0.9997$, $f_{wash} = 0.63$, and $A_{EW} = 1.084$ gives
 $$
 \mathcal{P}_{\mathrm{eff}}^{(\mathrm{th})}
 =
@@ -832,7 +832,7 @@ $$
 =
 0.1354.
 $$
-Independently, with $\eta_B^{\mathrm{obs}} = 6.12 \times 10^{-10}$, $v_{\mathrm{obs}} = 246.22\,\mathrm{GeV}$, and $M_{Pl} = 1.2209 \times 10^{19}\,\mathrm{GeV}$,
+For comparison, with $\eta_B^{\mathrm{obs}} = 6.12 \times 10^{-10}$, $v_{\mathrm{obs}} = 246.22\,\mathrm{GeV}$, and $M_{Pl} = 1.2209 \times 10^{19}\,\mathrm{GeV}$,
 $$
 \mathcal{P}_{\mathrm{eff}}^{(\mathrm{obs})}
 =

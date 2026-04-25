@@ -646,6 +646,32 @@ Density of the core and the Markov property extend the recovery statement to the
 
 The odd $D_4$ shell moments vanish and the second moments converge to a positive definite quadratic tensor by Theorem C.6e. Therefore the limit form has no first-order drift term and its second-order part is represented by a measurable cotangent metric $h$. Strong locality follows from uniform locality, because all macroscopic jump contributions vanish in the limit. Regularity follows from the dense Lipschitz core and the regularity of the discrete Markov forms. On a doubling PI space, the quadratic strongly local relaxation of the slope energy is the Cheeger energy; hence $\mathcal E_\infty$ is the Cheeger energy of $(X,d,\mu)$. ∎
 
+**Proposition D.6f (Sharp Global-Core Competitor Condition).** In Theorem D.6e, the weakest condition that can force asymptotic defect removal while selection remains inside the global core-minimum class is
+$$
+\mathfrak d_n^*
+=
+\inf_{\mathcal C\in\mathcal M_n}\mathfrak D_n(\mathcal C)
+\longrightarrow 0.
+\tag{D.6f.1}
+$$
+Equivalently, there exists a sequence $\mathcal Y_n\in\mathcal M_n$ with $\mathfrak D_n(\mathcal Y_n)\to0$ if and only if Equation (D.6f.1) holds. The $D_4$ shell moment closure, noncollapse, and local Bakry-Émery transfer data by themselves do not imply Equation (D.6f.1), because they do not rank the zero-defect configurations inside the core potential $V_n$.
+
+*Proof.* If Equation (D.6f.1) holds, choose $\mathcal Y_n\in\mathcal M_n$ with
+$$
+\mathfrak D_n(\mathcal Y_n)
+\le
+\mathfrak d_n^*+\frac1n.
+$$
+Then $\mathfrak D_n(\mathcal Y_n)\to0$. Conversely, if $\mathcal Y_n\in\mathcal M_n$ and $\mathfrak D_n(\mathcal Y_n)\to0$, then
+$$
+0\le \mathfrak d_n^*\le \mathfrak D_n(\mathcal Y_n)\to0,
+$$
+so Equation (D.6f.1) holds.
+
+The condition is necessary for any theorem whose selected configurations are required to remain in $\mathcal M_n$. If Equation (D.6f.1) fails, there are $\varepsilon_0>0$ and a subsequence $n_j$ such that $\mathfrak d_{n_j}^*\ge\varepsilon_0$. By the definition of $\mathfrak d_n^*$, every $\mathcal C\in\mathcal M_{n_j}$ then satisfies $\mathfrak D_{n_j}(\mathcal C)\ge\varepsilon_0$, so no sequence selected inside the global core-minimum class can have vanishing total continuum defect.
+
+The sharpness is independent of the local $D_4$ data. At a fixed resolution, take two admissible configurations $r_n$ and $s_n$ with the same first-shell $D_4$ carrier and the same noncollapse data, but with $\mathfrak D_n(r_n)=0$ and $\mathfrak D_n(s_n)=1$. Define a core potential with $V_n(s_n)=0$ and $V_n(r_n)=1$. Then $\mathcal M_n=\{s_n\}$ and $\mathfrak d_n^*=1$, although a zero-defect $D_4$ competitor exists outside $\mathcal M_n$. Thus zero-defect local geometry does not imply zero-defect membership in the global core-minimum class. The extra hypothesis in Theorem D.6e is exactly the assertion that the zero-defect competitor exists inside $\mathcal M_n$. ∎
+
 **Theorem 44a (Regular-Branch Manifold Closure).** Assume the hypotheses of Theorem C.6c and let the selected sequence satisfy $\mathfrak H_n\to0$ in the sense of Theorem D.6e. Then the regular set $X_{\mathrm{reg}}\subset X$ is open, every point of $X_{\mathrm{reg}}$ has unique tangent cone $\mathbb R^4$, and $X_{\mathrm{reg}}$ carries a $C^{1,\alpha}$ Riemannian metric $h_{ij}$ with
 $$
 d\mu=\sqrt{\det h}\,d^4x,

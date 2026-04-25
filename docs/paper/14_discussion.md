@@ -1214,11 +1214,51 @@ The PU framework faces significant limitations:
 
 **Open Conjectures.** Beyond the established results and identified limitations, the framework suggests several open directions with precise mathematical content:
 
-*Complexity-Adaptability Uncertainty Relation.* For any predictive system $S$ operating within the Space of Becoming $(\alpha, \beta)$ with non-trivial self-model complexity $C_{\mathrm{self}}(S) > 0$ and adaptability margin $A(S) = \beta - PP(S)$, the SPAP diagonalization (Theorems 10–11) implies $A(S) > 0$ (the self-referential error prevents exact saturation of $\beta$). The conjectured product bound $C_{\mathrm{self}}(S) \cdot A(S) \geq \ln 2$ — with the Landauer constant $\ln 2$ appearing as the irreducible overhead of the self-referential loop (Theorem 31) — remains open. A proof would require formalizing $C_{\mathrm{self}}$ within the operational complexity framework (Definition 13) and deriving the explicit functional relationship between increments in self-model fidelity and the induced adaptability gap from the SPAP cycle structure.
+**Theorem 14.4a (No PU-Invariant Complexity-Adaptability Product Bound).** Let $A(S):=\beta-PP(S)$ be the adaptability margin of a system operating in the Space of Becoming. The current PU axioms and the Law of Prediction do not permit a universal lower bound
+$$
+C_{\mathrm{self}}(S)A(S)\ge b
+$$
+with fixed $b>0$, and in particular do not permit the bound $C_{\mathrm{self}}(S)A(S)\ge\ln2$, unless an additional theorem fixes an absolute normalization and growth law for $C_{\mathrm{self}}$ stronger than the present operational-complexity ledger.
+
+*Proof.* Theorem 19 gives the admissible exponential-saturation branch
+$$
+PP(C)=\beta-(\beta-\alpha)e^{-(C-C_{op})/C_s},
+\qquad
+C_s=\frac{\hat C_{\mathrm{target}}}{\kappa_{\mathrm{eff}}}>0.
+$$
+For every finite $C>C_{op}$ this satisfies $PP(C)<\beta$, so SPAP-compatible non-saturation is preserved. Consider the admissible self-model complexity normalization
+$$
+C_{\mathrm{self}}(C)=C-C_{op}.
+$$
+Then
+$$
+C_{\mathrm{self}}(C)A(C)
+=
+(C-C_{op})(\beta-\alpha)e^{-(C-C_{op})/C_s}.
+$$
+Writing $x=(C-C_{op})/C_s$, this product is
+$$
+C_s(\beta-\alpha)xe^{-x},
+$$
+which tends to $0$ as $x\to\infty$. Hence for any fixed $b>0$ there is an admissible finite-complexity value with $C_{\mathrm{self}}A<b$. This contradicts any universal positive lower bound. A separate normalization theorem for $C_{\mathrm{self}}$ could define a different quantity, but that would be an additional hypothesis, not a consequence of the current PU structure. ∎
 
 *Finiteness of the Operationally Admissible Inflationary Model Space.* The finite channel capacity (Theorem E.2) and operational finite resolution (Theorem K.10.4), applied to the $\sim 1.3 \times 10^7$ independently measurable CMB modes (bounded by Silk damping and cosmic variance), imply that the space of inflationary models distinguishable by any finite observational protocol is finite. Models differing only in trans-horizon or pre-inflationary structure are operationally equivalent. The precise cardinality of the operationally admissible equivalence classes remains to be determined.
 
-*Classification of Hidden Variable Theories by Self-Referential Accessibility.* Any hidden variable theory in which the measured system can query the hidden variable $\lambda$ governing its own next outcome and condition its state on the result is subject to the SPAP diagonalization: the diagonal system $S_{\mathrm{diag}}$ sets $\phi_{t+1} := \mathrm{NOT}(\phi_\lambda)$, producing $\phi_\lambda = \mathrm{NOT}(\phi_\lambda)$. Such theories are excluded. Whether the admissible class (hidden variables inaccessible to the system they govern) coincides exactly with the no-signalling class, and whether it is non-empty, remain open.
+**Theorem 14.4b (Accessible Hidden-Variable Exclusion).** Let a hidden-variable completion for a binary outcome system be called *self-accessible* when the system whose next outcome is fixed by $\lambda$ has an MPU-admissible query operation $Q$ that returns the outcome bit $h(\lambda)$ before the system's next update, and when the system can condition that next update on $Q(\lambda)$. Every self-accessible completion is incompatible with SPAP.
+
+*Proof.* By self-accessibility, the system can construct the diagonal update rule
+$$
+\phi_{t+1}:=\mathrm{NOT}(Q(\lambda)).
+$$
+Since $Q(\lambda)=h(\lambda)$ is the hidden-variable value that fixes the next outcome bit, consistency requires
+$$
+\phi_{t+1}=h(\lambda).
+$$
+Substituting the diagonal rule gives
+$$
+h(\lambda)=\mathrm{NOT}(h(\lambda)),
+$$
+which is impossible for a binary value. Thus no hidden-variable completion in which the governed system can query and condition on the variable determining its own next outcome is PU-admissible. Hidden-variable completions whose variables are inaccessible to the systems they govern are not excluded by this theorem alone; classifying that inaccessible class against no-signalling remains a separate model-classification problem. ∎
 
 ## 14.5 Interpretive Implications: The Vacuum as Structured Information
 
@@ -1409,7 +1449,110 @@ The passive tier depends on a modeling hypothesis that is compatible with, but n
 
 **Hypothesis 14.5.8 (Environmental SPAP Hypothesis).** The kernel $G_{\text{persp}}$ places zero weight on configurations that would instantiate SPAP violation for any Property-R predictor embedded in the configuration. Equivalently, the support of the kernel coincides with the SPAP-admissible submanifold of $\Sigma$.
 
-**Status.** The Environmental SPAP Hypothesis is a load-bearing modeling hypothesis. Theorems 10–11 establish the internal diagonalization obstruction for self-referential predictors; Theorem M.10.3 establishes cost-functional divergence as $\mu_S(E) \to 1/\alpha_{SPAP}$. Neither result, singly or jointly, establishes that the kernel's *support* is shaped by these constraints — that is an additional claim about the relationship between internal predictor consistency and the global dynamics of the network. Deriving the Environmental SPAP Hypothesis from more primitive PU structure, or showing its negation is incompatible with some other theorem of the framework, is identified here as an open problem.
+**Status.** The Environmental SPAP Hypothesis is a load-bearing modeling hypothesis. Theorems 10–11 establish the internal diagonalization obstruction for self-referential predictors; Theorem M.10.3 establishes cost-functional divergence as $\delta_S(E)\to0^+$, equivalently as $\mu_S(E)\to\infty$. Neither result, singly or jointly, establishes that the kernel's *support* is shaped by these constraints — that is an additional claim about the relationship between internal predictor consistency and the global dynamics of the network.
+
+**Proposition 14.5.8b (Cost-Gradient Bias Does Not Imply Support Exclusion).** The Environmental SPAP Hypothesis is not derivable from Theorems 10–11, Theorem M.10.3, and the PCE cost-gradient machinery alone. Those results imply an avoidance bias away from SPAP-divergent configurations; they do not imply that $G_{\text{persp}}$ assigns zero support to every configuration outside the SPAP-admissible support.
+
+*Proof.* Let $\Sigma$ be a finite or standard Borel configuration space and let $\Sigma_{\mathrm{adm}}\subseteq\Sigma$ denote the SPAP-admissible subset. Theorems 10–11 identify the diagonal obstruction for embedded Property-R predictors. Theorem M.10.3 supplies a lower-bound cost divergence as the SPAP gap closes, and Lemma P.16.1 packages the same divergence as an extended cost potential on candidate configurations. PCE uses this cost information to prefer lower-cost trajectories.
+
+A cost preference does not determine the null sets of a probability kernel. A support conclusion would require an implication of the form
+$$
+B\subseteq\Sigma\setminus\Sigma_{\mathrm{adm}}
+\quad\Longrightarrow\quad
+G_{\text{persp}}(B)=0,
+$$
+or an equivalent rule identifying infinite SPAP cost with zero kernel weight. No such implication is contained in Theorems 10–11, Theorem M.10.3, or the cost-gradient definition of PCE.
+
+Equivalently, let $G_{\mathrm{adm}}$ be a kernel supported on $\Sigma_{\mathrm{adm}}$ and let $H_B$ be any probability kernel supported on a measurable set $B\subseteq\Sigma\setminus\Sigma_{\mathrm{adm}}$ that has not already been assigned zero weight by a separate support axiom. For $0<p<1$,
+$$
+G_p=(1-p)G_{\mathrm{adm}}+pH_B
+$$
+has the same diagonal-obstruction statements and the same cost-gradient ordering on the admissible sector as $G_{\mathrm{adm}}$, but
+$$
+\operatorname{supp}G_p\cap(\Sigma\setminus\Sigma_{\mathrm{adm}})\ne\varnothing.
+$$
+Ruling out the $pH_B$ term is precisely the hard-support claim. If one declares that no such $B$ can carry kernel weight because every point in it has infinite SPAP cost, that declaration is an additional support theorem or primitive support restriction, not a consequence of a gradient bias alone. Therefore the hard-support exclusion is independent of the cited theorem stack. ∎
+
+**Proposition 14.5.8c (Recovery-Limit Boundary Charging).** Let $W$ be a finite operational window containing an Effective Operational Property-R predictor $S$, and let
+$$
+F_W:=\{x\in\Sigma:U_W(x)=+\infty\}
+$$
+be the window-local infinite-cost set for the envelope
+$$
+U_W(x):=\sup_{S'\in\mathfrak P_W}U_{S',\theta_{0,S'}}(\theta_{S',W}'(x))
+$$
+of the cost potentials of Definition P.16.3. There is no theorem-level implication of the form
+$$
+\bigl[\,G_{n,W}\Rightarrow G_W^{(\infty)},\quad G_{n,W}(F_W)=0\ \forall n\,\bigr]
+\;\Longrightarrow\;
+G_W^{(\infty)}(F_W)=0
+$$
+for finite-resource kernels $G_{n,W}$ supported on finite-cost configurations. The obstruction is internal to PU: Corollary M.10.4.1 supplies a finite-cost approach to the SPAP boundary that witnesses boundary charging under weak convergence.
+
+*Proof.* It suffices to consider a window $W$ whose predictor set contains the single Property-R system $S$ supplied by the M.10.4 independent-register branch. Let $E^*$ be a boundary pattern with $\mu_S(E^*)=\infty$ from Theorem M.10.4. Corollary M.10.4.1 constructs the continuous one-parameter family
+$$
+\delta\theta(\lambda)=\lambda\,\delta\theta^*,\qquad \lambda\in[0,1],
+$$
+with $\mu_S(\lambda)<\infty$ for $\lambda<1$ and $\mu_S(\lambda)\to\infty$ as $\lambda\to1^-$. By Definition M.10.3, the finite-gap cases $\delta_S(\lambda)>0$ are processable at finite cost, while Theorem M.10.6 gives infinite cost at the boundary $\lambda=1$. By Proposition M.10.9, the corresponding self-model displacement embeds continuously into $\Sigma$, producing configurations $x_\lambda\in\Sigma$ with
+$$
+x_\lambda\notin F_W\quad(\lambda<1),
+\qquad
+x_1\in F_W,
+\qquad
+x_\lambda\to x_1.
+$$
+Choose $\lambda_n\uparrow1$ and choose budgets $R_n>U_W(x_{\lambda_n})$. The Dirac kernels
+$$
+G_{n,W}:=\delta_{x_{\lambda_n}}
+$$
+are finite-resource kernels and satisfy $G_{n,W}(F_W)=0$ for every $n$. Nevertheless,
+$$
+G_{n,W}=\delta_{x_{\lambda_n}}\Rightarrow \delta_{x_1}=:G_W^{(\infty)}
+$$
+weakly on the compact perspective manifold $\Sigma$, and
+$$
+G_W^{(\infty)}(F_W)=\delta_{x_1}(F_W)=1.
+$$
+Thus weak recovery limits can charge the infinite-cost SPAP boundary. A derivation of the Environmental SPAP Hypothesis by finite-resource approximation would need a stronger convergence mode, such as total-variation convergence with explicit boundary avoidance, or an additional support theorem. ∎
+
+**Proposition 14.5.8d (Window-Family Gluing No-Go).** Let $\mathcal W$ denote the family of finite operational windows with the inclusion partial order $W\subseteq W'$. POP, PCE, PPI, and the present M-appendix kernel machinery do not force the projective consistency condition
+$$
+(\rho_{W'W})_{\#}G_{W'}=G_W,
+\qquad W\subseteq W',
+$$
+for window-local kernels obtained by PCE-minimization. Consequently, no Kolmogorov-style extension assembling the family $\{G_W\}_{W\in\mathcal W}$ into a global support-excluding kernel on $\Sigma$ is currently available from the existing theorem stack.
+
+*Proof.* The obstruction is visible already in a finite two-window PCE subproblem. Let $W\subseteq W'$ and let the restriction map send two terminal configurations $A,B\in\Sigma_{W'}$ to $a,b\in\Sigma_W$ by
+$$
+\rho_{W'W}(A)=a,
+\qquad
+\rho_{W'W}(B)=b.
+$$
+Let the $W$-objective and $W'$-objective be
+$$
+V_W(a)=0,
+\qquad
+V_W(b)=1,
+$$
+and
+$$
+V_{W'}(A)=1,
+\qquad
+V_{W'}(B)=0.
+$$
+This is an admissible finite PCE pattern: enlarging the window changes the predictor set, context data, feasibility constraints, and resource ledger, so the additional terms in the $W'$ objective can reverse the ordering of terminal configurations without contradicting Definition 15 or Definition P.6.2. The corresponding zero-temperature PCE kernels are
+$$
+G_W=\delta_a,
+\qquad
+G_{W'}=\delta_B.
+$$
+Pushing forward gives
+$$
+(\rho_{W'W})_{\#}G_{W'}=\delta_b\ne\delta_a=G_W.
+$$
+Thus PCE-minimization need not commute with window restriction.
+
+The manuscript currently has no theorem excluding this finite pattern. M.3.3 fixes the structural decomposition, normalization, and ideal-limit clauses of $G_{\mathrm{persp}}$, together with the explicit drift-diffusion realization of M.5a-M.5b; it does not establish a projective family of finite-window minimizer kernels. Therefore the standard Kolmogorov extension theorem cannot be invoked to derive the Environmental SPAP support claim. A global support-exclusion theorem requires an additional commutation theorem for PCE-minimization under window restriction or an alternative global construction that does not pass through window-local minimizers. ∎
 
 #### The Residue Conjecture
 
@@ -1435,7 +1578,7 @@ If the Residue Conjecture holds, the structural features a passive residue would
 
 Three open problems are identified by this section and should be tracked explicitly.
 
-1. *Derivation or refutation of the Environmental SPAP Hypothesis.* Establishing whether the hypothesis follows from more primitive PU structure, or is incompatible with some other result of the framework, is the primary theoretical target. Without this step, the Residue Conjecture remains conditional.
+1. *Support-exclusion gap.* Three labeled no-go results localize the obstruction. Proposition 14.5.8b shows that the Environmental SPAP Hypothesis does not follow from SPAP diagonalization, Theorem M.10.3, and PCE cost-gradient bias alone. Proposition 14.5.8c shows that the natural recovery-limit alternative — constructing $G_{\mathrm{persp}}$ as a weak limit of finite-resource update kernels — is obstructed by Corollary M.10.4.1, whose internal finite-cost approach to the SPAP boundary witnesses boundary charging under weak convergence. Proposition 14.5.8d shows that PCE-minimized window-local kernels need not be projectively consistent under window restriction, so a Kolmogorov-style global assembly is also unavailable. Closing the support-exclusion gap requires either (a) an additional support theorem or primitive support restriction, (b) a finite-resource construction with total-variation rather than weak convergence and explicit boundary avoidance, or (c) a non-projective global construction together with a commutation theorem for PCE-minimization under window restriction.
 
 2. *Quantitative magnitude mapping.* A quantitative mapping from the cost-functional divergence of Theorem M.10.3 to a numerical bound on passive-tier outcome-frequency deviation remains to be derived. If such a mapping is established, the divergence structure would impose a corresponding ceiling on admissible passive-tier deviations; the current manuscript does not yet fix the numerical form of that ceiling.
 
@@ -1447,7 +1590,7 @@ If both tiers exist, they are in principle distinguishable by their scaling with
 
 #### Status Summary
 
-The Residue Conjecture introduces no new formal objects; it adds one new hypothesis — the Environmental SPAP Hypothesis — about the objects already present in the framework. Within the current manuscript, the active tier is theorem-level and bounded by Theorem 39; the passive tier is a conjecture conditional on the Environmental SPAP Hypothesis, and the hypothesis itself is an open problem. The present framework supports a strong exclusion statement — no macroscopic acausal control channel is licensed — while leaving open a narrower, structurally constrained question about whether an observer-indexed, non-signalling residue can be derived in a later extension, and whether such a residue would account for the structural fingerprint of a long-disputed empirical corpus.
+The Residue Conjecture introduces no new formal objects; it adds one new hypothesis — the Environmental SPAP Hypothesis — about the objects already present in the framework. Within the current manuscript, the active tier is theorem-level and bounded by Theorem 39; the passive tier is a conjecture conditional on the Environmental SPAP Hypothesis, and Propositions 14.5.8b, 14.5.8c, and 14.5.8d localize three independent obstructions to deriving the hypothesis from the current PU stack: cost-gradient bias does not determine null sets, weak limits of finite-resource recovery kernels can charge the SPAP boundary via the Corollary M.10.4.1 approach family, and PCE-minimized window-local kernels need not be projectively consistent under window restriction. The present framework supports a strong exclusion statement — no macroscopic acausal control channel is licensed — while leaving the passive observer-indexed, non-signalling residue as a conditional model branch rather than a derived consequence.
 
 ## 14.6 Scope of the Core Derivations
 
