@@ -126,8 +126,17 @@ Parameter relaxation is triggered when $T_U(a_0) = T_{dS}$, yielding $a_0 = c^2\
 
 The empirical MOND/RAR scale $g_0 \approx 1.2 \times 10^{-10}$ m/s$^2$ is related by an efficiency factor:
 $$
-g_0 = \eta' \cdot a_0 = \eta' \cdot c^2\sqrt{\frac{\Lambda}{3}}
+g_0 = \eta' \cdot a_0 = \eta' \cdot c^2\sqrt{\frac{\Lambda}{3}}.
 \tag{H.4}
+$$
+On the adopted operating-point bridge representative of Equation H.4b, this becomes the exact locked form
+$$
+g_0
+=
+\frac{3}{8\sqrt3}c^2\sqrt{\frac{\Lambda}{3}}
+=
+\frac{c^2\sqrt{\Lambda}}{8}.
+\tag{H.4c}
 $$
 
 #### H.4.2.1 The Bridge Law: QFI Linear Response Per Spatial Channel
@@ -387,7 +396,14 @@ $$
 
 With the corresponding efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$:
 $$
-g_0 = \eta' \cdot a_0 \approx 0.2165 \times 5.44 \times 10^{-10} \approx 1.18 \times 10^{-10} \text{ m/s}^2
+g_0
+=
+\eta'\cdot a_0
+=
+\frac{3}{8\sqrt3}c^2\sqrt{\frac{\Lambda}{3}}
+=
+\frac{c^2\sqrt{\Lambda}}{8}
+\approx 1.18 \times 10^{-10} \text{ m/s}^2.
 \tag{H.6}
 $$
 
@@ -456,36 +472,120 @@ The $2\%$ central deviation between prediction and observation is within the emp
 
 **Remark H.4 (Operating Point Universality).** If a system operates near the PCE-optimal capacity $C=C_{\mathrm{max}}^*=2\varepsilon$ (Appendix Q, Equation Q.10), then Equation (H.4a) fixes $\eta'$ near its attractor value, and hence $g_0$ is approximately universal across such systems.
 
-**Corollary H.1 (Bridge-Conditional Galactic Scale).**
+**Corollary H.1 (Bridge-Conditional Galactic Scale and Cosmological Acceleration Lock).**
 Under Proposition H.1, Definition H.0, and Equation H.4b, the acceleration scale entering the Appendix I galaxy-sector model is fixed by
 $$
 g_0=\eta'c^2\sqrt{\frac{\Lambda}{3}},
 \qquad
 \eta'=\frac{3}{8\sqrt3}.
 $$
+Equivalently,
+$$
+\boxed{
+g_0=\frac{c^2\sqrt{\Lambda}}{8}
+}
+\tag{H.6c}
+$$
+or
+$$
+8g_0=c^2\sqrt{\Lambda}.
+$$
 Thus $g_0=(1.18\pm0.02)\times10^{-10}$ m/s$^2$ when the $2\sigma$ observational uncertainty in $(\Lambda L_P^2)_{\mathrm{obs}}$ from Appendix V is propagated through $g_0\propto\sqrt{\Lambda}$. There is no fitted numerical parameter in this calculation once the bridge law and the Equation H.4b operating-point normalization are adopted. The status label is conditional theorem / bridge normalization because Definition H.0 is the active bridge assumption. Observational systematics in $g_0^{\text{obs}}$ dominate at order $20\%$.
+
+*Proof.* Proposition H.1 gives
+$$
+a_0=c^2\sqrt{\frac{\Lambda}{3}}.
+$$
+Equation H.4b gives
+$$
+\eta'=\frac{3}{8\sqrt3}.
+$$
+Therefore
+$$
+g_0
+=
+\eta'a_0
+=
+\frac{3}{8\sqrt3}c^2\frac{\sqrt{\Lambda}}{\sqrt3}
+=
+\frac{c^2\sqrt{\Lambda}}{8}.
+$$
+The uncertainty propagation follows from
+$$
+\frac{\delta g_0}{g_0}
+=
+\frac12\frac{\delta\Lambda}{\Lambda},
+$$
+already established in Section H.4.3.1. Since neither $\eta'$ nor the factor $1/8$ is chosen from galaxy data on this branch, the acceleration scale is locked to $\Lambda$ once the bridge normalization is fixed. ∎
 
 **Corollary H.1a (Critical Baryonic Surface-Density Scale).**
 For a thin baryonic sheet with surface density $\Sigma_b$, the Newtonian midplane field is $g_N = 2\pi G\Sigma_b$. The crossover to the low-acceleration galactic regime occurs when $g_N = g_0$. Hence the characteristic baryonic surface-density scale is
-
 $$
 \Sigma_\dagger := \frac{g_0}{2\pi G}.
 \tag{H.6a}
 $$
-
-Using Equation (H.6),
-
+On the acceleration-lock representative this is equivalently
+$$
+\boxed{
+\Sigma_\dagger
+=
+\frac{c^2\sqrt{\Lambda}}{16\pi G}
+}
+\tag{H.6b}
+$$
+or
+$$
+16\pi G\Sigma_\dagger=c^2\sqrt{\Lambda}.
+$$
+Using Equation H.6,
 $$
 \Sigma_\dagger
 = \frac{1.18\times 10^{-10}\,\mathrm{m\,s^{-2}}}{2\pi\cdot 6.67430\times 10^{-11}\,\mathrm{m^3\,kg^{-1}\,s^{-2}}}
 = 0.281 \pm 0.005\,\mathrm{kg\,m^{-2}}
 = (134.7 \pm 2.3)\,M_\odot\,\mathrm{pc^{-2}}.
-\tag{H.6b}
+\tag{H.6d}
 $$
 
-*Proof.* For an infinite thin sheet, Gauss's law gives $g_N = 2\pi G\Sigma_b$. Setting $g_N = g_0$ defines the transition scale. Substituting the PU prediction (H.6) yields the numerical value. ∎
+*Proof.* For an infinite thin sheet, Gauss's law gives $g_N = 2\pi G\Sigma_b$. Setting $g_N=g_0$ defines the transition scale, so $\Sigma_\dagger=g_0/(2\pi G)$. Substituting Corollary H.1 gives
+$$
+\Sigma_\dagger
+=
+\frac{1}{2\pi G}\frac{c^2\sqrt{\Lambda}}{8}
+=
+\frac{c^2\sqrt{\Lambda}}{16\pi G}.
+$$
+The numerical value follows by inserting Equation H.6. ∎
 
 **Remark H.1a.1.** The quantity $\Sigma_\dagger$ is a zero-parameter PU prediction for the characteristic baryonic surface-density threshold at which the low-acceleration galactic regime turns on.
+
+**Corollary H.1b (Redshift Lock on the Constant-$\Lambda$ Branch).**
+Let the acceleration-lock representative be evaluated on a cosmological branch with effective vacuum curvature $\Lambda_{\mathrm{eff}}(z)$. Then the bridge acceleration scale evolves as
+$$
+g_0(z)
+=
+\frac{c^2}{8}\sqrt{\Lambda_{\mathrm{eff}}(z)},
+$$
+and hence
+$$
+\frac{g_0(z)}{g_0(0)}
+=
+\sqrt{
+\frac{\Lambda_{\mathrm{eff}}(z)}
+{\Lambda_{\mathrm{eff}}(0)}
+}.
+\tag{H.6e}
+$$
+On the strict constant-$\Lambda$ branch,
+$$
+g_0(z)=g_0(0).
+$$
+Therefore the Appendix H bridge representative is a $\sqrt{\Lambda}$-locked acceleration scale, not an $H(z)$-locked acceleration scale.
+
+*Proof.* Apply Corollary H.1 at redshift $z$ with $\Lambda$ replaced by the branch value $\Lambda_{\mathrm{eff}}(z)$:
+$$
+g_0(z)=c^2\sqrt{\Lambda_{\mathrm{eff}}(z)}/8.
+$$
+Taking the ratio with the $z=0$ value cancels $c^2/8$ and gives Equation H.6e. If $\Lambda_{\mathrm{eff}}(z)$ is constant, the ratio is $1$. Since $H(z)^2$ includes matter, radiation, curvature, and vacuum contributions on a general FLRW branch, while Equation H.6e uses only the vacuum-curvature term, the lock is to $\Lambda_{\mathrm{eff}}(z)$ rather than to the full Hubble rate. ∎
 
 ### H.4.4 Per-Channel Normalization: The Factor of 3
 

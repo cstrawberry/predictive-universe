@@ -377,6 +377,51 @@ q_{\mathrm{act}}\frac{c}{2\pi}m_Sa.
 $$
 For $a>0$, cancellation and rearrangement give the displayed expression. $\square$
 
+**Corollary N.12b (Proper-Acceleration Entropy Drag Observable).** On the proper-acceleration active-refresh branch of Definition N.12, the excess UCT power of a system $S$ of inertial mass $m_S$ undergoing proper acceleration magnitude $|a|$ is
+$$
+\boxed{
+P_{\mathrm{UCT}}(S;a)
+=
+q_{\mathrm{act}}(S;a)\frac{c}{2\pi}m_S|a|.
+}
+\tag{N.12b}
+$$
+Consequently the dimensionless calorimetric observable
+$$
+\boxed{
+\mathcal Q_a
+:=
+\frac{2\pi P_{\mathrm{excess}}}{c\,m_S|a|}
+}
+\tag{N.12c}
+$$
+equals $q_{\mathrm{act}}$ after ordinary mechanical, electromagnetic, thermal, and material loss channels are subtracted:
+$$
+\mathcal Q_a=q_{\mathrm{act}}.
+$$
+For an ideal freely falling system whose center of mass follows a geodesic, the proper four-acceleration vanishes,
+$$
+a^\mu=u^\nu\nabla_\nu u^\mu=0,
+$$
+and the proper-acceleration UCT channel gives
+$$
+P_{\mathrm{UCT}}=0.
+$$
+Thus the branch predicts a proper-acceleration drag channel, not a coordinate-acceleration or gravitational-field channel.
+
+*Proof.* Definition N.12 defines
+$$
+q_{\mathrm{act}}(S;a)
+=
+\frac{P_{UCT}(S;a)}
+{P_{UCT}^{\mathrm{sat}}(S;a)}
+$$
+with
+$$
+P_{UCT}^{\mathrm{sat}}(S;a)=\frac{c}{2\pi}m_S|a|.
+$$
+Solving for $P_{UCT}$ gives Equation N.12b. Dividing Equation N.12b by $c\,m_S|a|/(2\pi)$ gives $\mathcal Q_a=q_{\mathrm{act}}$. The Unruh temperature entering Theorem N.3 depends on proper acceleration magnitude, not coordinate acceleration. For geodesic motion $a^\mu=0$, so $T_U=0$ for the acceleration-induced increment and the corresponding UCT power vanishes. ∎
+
 **Definition N.12a (Orbital-Acceleration Test Bridge).** For a gravitationally bound binary whose centers of mass follow ideal geodesic motion, the coordinate or relative orbital acceleration is not the proper acceleration entering the Unruh temperature in Equation N.4. A binary-pulsar UCT timing test therefore requires the following additional **orbital-acceleration bridge**:
 
 1. the timing-model orbital acceleration magnitudes $|a_A(t)|$ and $|a_B(t)|$ are admitted as effective relational acceleration variables for the UCT loss channel;
@@ -1237,6 +1282,79 @@ $$
 which depends on $\delta_{\text{maint}}$ as well as the acceleration profile. Two systems with identical $\mathcal{I}_{rel}$ but different self-referential depth ($\delta_{\text{maint},1} \neq \delta_{\text{maint},2}$) therefore face different total $W_{\text{pred}}$ for the same acceleration, connecting the informational structure of perspectival profiles (§M.6.10) to the kinematic structure of Prediction Relativity. $\square$
 
 **Remark N.8.1 (Magnitude and Observability).** The self-model maintenance contribution to stress-energy (Equation N.44) is controlled by $\delta_{\text{maint}}$ and $\tau_{\text{cycle}}$, both of which are system-specific parameters not yet bounded from first principles within the framework. For current experimental sensitivity (MICROSCOPE: $\eta < 10^{-15}$ [Touboul et al. 2022]), the relevant question is whether the fractional stress-energy difference between self-referential and non-self-referential systems of equal $\mathcal{I}_{rel}$ exceeds the Eötvös bound. Determining this requires independent modeling of $\delta_{\text{maint}}$ for specific physical systems (e.g., biological neural networks vs. crystalline solids of equal mass), which constitutes an open problem.
+
+**Theorem N.8.2 (Equivalence–Complexity Lock).** On the saturated-boundary mass-information branch of Theorem N.5 and the MPU stress-energy branch of Appendix B, the weak equivalence principle is the covariance statement that the same scalar predictive update cost is used in the inertial and gravitational projections. Let a compact test system $S$ have baseline relational information $\mathcal I_{\mathrm{rel}}(S)$ and retained internal predictive-complexity fraction $\chi_S$ not absorbed into the universal stress-energy bookkeeping. Then
+$$
+m_I(S)
+=
+\frac{\mathcal I_{\mathrm{rel}}(S)}{2\sqrt{8\varepsilon}}m_P
++
+\Delta m_I(S),
+$$
+$$
+m_G(S)
+=
+\frac{\mathcal I_{\mathrm{rel}}(S)}{2\sqrt{8\varepsilon}}m_P
++
+\Delta m_G(S),
+$$
+and the Eötvös parameter for two systems $A,B$ in the same external field is
+$$
+\eta_{AB}
+:=
+2\frac{|a_A-a_B|}{a_A+a_B}
+=
+\left|
+\frac{m_G(A)}{m_I(A)}
+-
+\frac{m_G(B)}{m_I(B)}
+\right|
++
+O(\delta_A^2+\delta_B^2),
+$$
+where
+$$
+\delta_S:=
+\frac{\Delta m_G(S)-\Delta m_I(S)}
+{\mathcal I_{\mathrm{rel}}(S)m_P/(2\sqrt{8\varepsilon})}.
+$$
+If the retained complexity fractions are linearly coupled on the tested branch,
+$$
+\delta_S=\zeta_{\mathrm{EP}}\chi_S,
+$$
+then
+$$
+\boxed{
+\eta_{AB}
+=
+\zeta_{\mathrm{EP}}|\chi_A-\chi_B|
++
+O(\chi_A^2+\chi_B^2).
+}
+\tag{N.46}
+$$
+Thus PU predicts exact universality when all predictive costs are covariantly included in both projections, and controlled equivalence-principle violation only when a branch retains different inertial and gravitational bookkeeping for internal complexity.
+
+*Proof.* Theorem N.5 gives the common baseline mass
+$$
+m_0(S)=\frac{\mathcal I_{\mathrm{rel}}(S)}{2\sqrt{8\varepsilon}}m_P.
+$$
+Theorem N.7 identifies inertial and gravitational mass for simple systems because both are this same baseline quantity. For a test body in a weak external field,
+$$
+a_S=\frac{m_G(S)}{m_I(S)}g.
+$$
+Therefore
+$$
+\eta_{AB}
+=
+2\frac{|m_G(A)m_I(B)-m_G(B)m_I(A)|}
+{m_G(A)m_I(B)+m_G(B)m_I(A)}.
+$$
+Writing $m_G(S)=m_I(S)(1+\delta_S)$ and expanding to first order gives
+$$
+\eta_{AB}=|\delta_A-\delta_B|+O(\delta_A^2+\delta_B^2).
+$$
+If $\delta_S=\zeta_{\mathrm{EP}}\chi_S$, Equation N.46 follows. When the bookkeeping is covariant, $\Delta m_G(S)=\Delta m_I(S)$ for every $S$, hence every $\delta_S=0$ and $\eta_{AB}=0$. ∎
 
 ### N.11.7 Connection to Particle Mass Hierarchies
 

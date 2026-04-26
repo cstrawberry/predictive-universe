@@ -4386,6 +4386,54 @@ Therefore the two expressions agree on that reference branch. Theorem U.8c shows
 
 **Remark T.62b (Cross-Appendix Significance of the Vacuum–Electroweak Sum Rule).** The identity $2\kappa_{\Lambda,\mathrm{ref}} + 2\kappa_{EW} = 360 = \binom{D+2}{2}M$ holds on the Appendix U five-mode reference branch and carries the branch-dependent status of that branch. Its structural content is that the two largest instanton complexity exponents in the framework sum to exactly $15M$, where $15 = \binom{D+2}{2}$ encodes the emergent spacetime dimension $D=4$ and $M=24$ is the interface mode count. This sum rule is therefore sensitive to the spacetime dimension through $\binom{D+2}{2}$: any $D \neq 4$ would give a different right-hand side, so the identity provides a cross-check linking the hierarchy mechanism to the dimensional selection of Theorem Z.11. Turning that sensitivity into a standalone falsifier would require an external observable that constrains the effective dimensional count independently of the identity itself; the present manuscript does not yet supply such an independent bound. The identity is not a Moonshine-character coefficient identity: the numbers $196883$ and $196884$ do not enter the vacuum zero-mode count, the electroweak Morse-Bott count, or the determinant-prefactor ledgers.
 
+**Corollary T.62c (Vacuum–Electroweak Complexity Product Lock).** On the Appendix U five-mode reference branch, together with the electroweak hierarchy branch of Theorem T.5 and the determinant normalization of Theorem T.29, the measured dimensionless vacuum/electroweak product satisfies
+$$
+\boxed{
+(\Lambda L_P^2)\left(\frac{v}{M_{Pl}}\right)^2
+=
+8\pi A_{\mathrm{eff}}A_{EW}^2e^{-360}.
+}
+\tag{T.62c}
+$$
+Equivalently,
+$$
+-\ln\left[
+\frac{
+(\Lambda L_P^2)(v/M_{Pl})^2
+}{
+8\pi A_{\mathrm{eff}}A_{EW}^2
+}
+\right]
+=
+360
+=
+15M.
+$$
+The product relation is a branch-level cross-domain lock: the cosmological constant and the electroweak scale use different observables and different prefactors, but their leading exponential ledger closes on the same $D=4$, $M=24$ count.
+
+*Proof.* On the Appendix U five-mode reference branch,
+$$
+\Lambda L_P^2
+=
+8\pi A_{\mathrm{eff}}e^{-2\kappa_{\Lambda,\mathrm{ref}}}.
+$$
+On the electroweak determinant branch,
+$$
+\frac{v}{M_{Pl}}=A_{EW}e^{-\kappa_{EW}}.
+$$
+Therefore
+$$
+(\Lambda L_P^2)\left(\frac{v}{M_{Pl}}\right)^2
+=
+8\pi A_{\mathrm{eff}}A_{EW}^2
+e^{-2\kappa_{\Lambda,\mathrm{ref}}-2\kappa_{EW}}.
+$$
+Corollary T.62a gives
+$$
+2\kappa_{\Lambda,\mathrm{ref}}+2\kappa_{EW}=360.
+$$
+Substitution proves Equation T.62c. Since Theorem U.8c identifies the five-mode vacuum count as a reference branch rather than an unconditional continuum closure, the product lock inherits that status. ∎
+
 -----
 
 ### T.23.9 Key Relationships Between Complexity Parameters
@@ -4410,13 +4458,38 @@ $$\frac{\Lambda}{v^4} \sim e^{-206} = 3.43 \times 10^{-90}.$$
 
 *The corresponding corrected four-mode branch value gives $\kappa_{\Lambda,\mathrm{trans}} - \kappa_{EW} = 103.5$, hence $e^{-207} = 1.26 \times 10^{-90}$.*
 
-**Corollary T.63.2** (Baryogenesis-Electroweak Relationship). *The baryogenesis complexity satisfies:*
-
-$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.48$$
-
-*yielding the hierarchy unification (Appendix Y, Theorem Y.11):*
-
-$$\eta_B \sim \sqrt{\frac{v}{M_{Pl}}}$$
+**Corollary T.63.2** (Electroweak–Baryon Square-Root Lock). *The baryogenesis complexity satisfies*
+$$
+\kappa_B=\frac{\kappa_{EW}}{2}+\frac{\varepsilon}{N_g}.
+$$
+On the minimal Appendix Y branch with $\varepsilon=\ln2$ and $N_g=3$,
+$$
+\kappa_B=\frac{\kappa_{EW}}2+\frac{\ln2}{3}=19.48.
+$$
+Combining this with
+$$
+\frac{v}{M_{Pl}}=A_{EW}e^{-\kappa_{EW}}
+$$
+gives the branch-level square-root lock
+$$
+\boxed{
+e^{-\kappa_B}
+=
+2^{-1/3}
+\sqrt{\frac{v}{A_{EW}M_{Pl}}}.
+}
+\tag{T.63.2}
+$$
+Consequently the Appendix Y master formula becomes
+$$
+\boxed{
+\eta_B
+=
+\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}2^{-1/3}
+\sqrt{\frac{v}{A_{EW}M_{Pl}}}.
+}
+$$
+Thus the baryon asymmetry and the electroweak hierarchy are not independent exponential suppressions on this branch; the baryogenesis exponent is the CP-odd half-step of the electroweak exponent plus the generation-shared Landauer correction.
 
 **Proposition T.64a** (Near-Integer Ratios). *The complexity ratios satisfy*
 
@@ -5244,6 +5317,77 @@ $$\frac{\Delta m^2_{31}}{\Delta m^2_{21}} = \frac{2.42 \times 10^{-3}}{7.58 \tim
 |$\Delta m^2_{21}$|$7.58 \times 10^{-5}$ eV²|$(7.53 \pm 0.18) \times 10^{-5}$ eV² |+0.28σ|
 |$\Delta m^2_{31}$|$2.42 \times 10^{-3}$ eV²|$(2.453 \pm 0.033) \times 10^{-3}$ eV²|−1.00σ|
 |Ratio |31.9 |32.6 ± 0.7 |−0.89σ|
+
+**Corollary T.24.16a (A2 Neutrino Cosmology Closure).** On the anchored Majorana $A_2$ branch of Theorems T.24.11–T.24.16, the absolute mass spectrum, the cosmological mass sum, and the direct beta-decay endpoint mass are locked once one oscillation scale is fixed. Using $\Delta m^2_{31}$ as the anchor,
+$$
+m_3
+=
+\sqrt{
+\frac{\Delta m^2_{31}}
+{1-e^{-6\sqrt3}}
+},
+\qquad
+m_2=m_3e^{-\sqrt3},
+\qquad
+m_1=m_3e^{-3\sqrt3}.
+$$
+Hence
+$$
+\boxed{
+\Sigma_\nu
+:=
+m_1+m_2+m_3
+=
+m_3(1+e^{-\sqrt3}+e^{-3\sqrt3}).
+}
+\tag{T.24.16a}
+$$
+With the branch values of Theorem T.24.15,
+$$
+\Sigma_\nu=58.2\,\mathrm{meV}=0.0582\,\mathrm{eV}.
+$$
+The direct beta endpoint mass is
+$$
+m_\beta
+=
+\sqrt{
+c_{13}^2c_{12}^2m_1^2
++
+c_{13}^2s_{12}^2m_2^2
++
+s_{13}^2m_3^2
+},
+$$
+where $s_{ij}:=\sin\theta_{ij}$ and $c_{ij}:=\cos\theta_{ij}$. Using the PMNS branch values $\theta_{12}=33.7^\circ$ and $\theta_{13}=8.7^\circ$ gives
+$$
+\boxed{
+m_\beta=8.85\,\mathrm{meV},
+\qquad
+\frac{m_\beta}{\Sigma_\nu}=0.152.
+}
+\tag{T.24.16b}
+$$
+Thus oscillation data, cosmological mass-sum data, and direct beta-decay endpoint data are three projections of the same $A_2$ Majorana closure.
+
+*Proof.* The anchored hierarchy of Theorem T.24.15 gives
+$$
+\frac{m_3}{m_2}=e^{\sqrt3},
+\qquad
+\frac{m_3}{m_1}=e^{3\sqrt3}.
+$$
+Therefore $m_2=m_3e^{-\sqrt3}$ and $m_1=m_3e^{-3\sqrt3}$. Since
+$$
+\Delta m^2_{31}=m_3^2-m_1^2=m_3^2(1-e^{-6\sqrt3}),
+$$
+solving gives the displayed expression for $m_3$. Summing the three masses proves Equation T.24.16a. The beta endpoint observable is the standard kinematic projection of the mass eigenvalues by the first row of the PMNS matrix:
+$$
+|U_{e1}|^2=c_{13}^2c_{12}^2,
+\qquad
+|U_{e2}|^2=c_{13}^2s_{12}^2,
+\qquad
+|U_{e3}|^2=s_{13}^2.
+$$
+Substitution of the branch masses and angles gives $m_\beta=8.85\,\mathrm{meV}$ and $m_\beta/\Sigma_\nu=0.152$. ∎
 
 **Proposition T.24.16.1** (Theoretical Uncertainty Budget). *The dominant sources of theoretical uncertainty are:*
 

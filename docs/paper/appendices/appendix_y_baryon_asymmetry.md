@@ -69,7 +69,7 @@ The global preponderance of matter over antimatter reflects the cumulative effec
 
 ### Y.3.1 Baryon Number Non-Conservation
 
-The gauge structure $\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ emerges as PCE-preserving automorphisms of predictive frames (Theorem G.8.4b). The chiral coupling of left-handed fermions to $SU(2)_L$ implies the Adler-Bell-Jackiw anomaly:
+The gauge structure $\mathfrak{g} = \mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ emerges as PCE-preserving automorphisms of predictive frames (Theorem G.8.4b). On this branch the gauge anomaly classes vanish by the predictive-descent requirement of Theorem X.8d and Section G.8.2.3. The current $B+L$ is not a gauge/frame redundancy; it is a global current. Its electroweak anomaly is therefore an admissible physical update channel rather than a failure of predictive descent. The chiral coupling of left-handed fermions to $SU(2)_L$ implies the Adler-Bell-Jackiw anomaly:
 
 $$\partial_\mu J_{B+L}^\mu = \frac{N_g g^2}{16\pi^2} W^a_{\mu\nu}\tilde{W}^{a\mu\nu} \tag{Y.1}$$
 
@@ -134,6 +134,18 @@ $$\Delta(B+L) = \int_{\mathcal{V}} d^4x\, \partial_\mu J_{B+L}^\mu = \frac{N_g g
 Using $W\tilde{W} = \partial_\mu K^\mu$ where $K^\mu$ is the Chern-Simons current, Stokes' theorem gives:
 $$\Delta(B+L) = \frac{N_g g^2}{16\pi^2}\left[\int_{\Sigma_f} K^0 - \int_{\Sigma_i} K^0\right] = 2N_g \Delta N_{CS}$$
 ∎
+
+**Corollary Y.4a (Electroweak Anomaly as an Admissible Predictive Update Channel).** On the SM-gauge branch of Theorem G.8.4b, the electroweak relation in Theorem Y.4 is compatible with Predictive Anomaly Descent. The gauge anomaly class vanishes, while the $B+L$ anomaly is a global-current update channel:
+$$
+[\mathcal A_{\mathrm{gauge}}^{\mathrm{tot}}]=0,
+\qquad
+\partial_\mu J_{B+L}^\mu
+=
+\frac{N_g g^2}{16\pi^2}W^a_{\mu\nu}\tilde W^{a\mu\nu}.
+$$
+Thus baryon-plus-lepton number changes are physical transitions between topological sectors, not inconsistencies of the gauge quotient.
+
+*Proof.* Gauge transformations belong to the redundancy groupoid $\mathcal R$ of Theorem X.8d, so their anomaly class must vanish for the branch to be admissible. This is precisely the anomaly-free SM-gauge hypothesis propagated through Theorem G.8.4b. The $B+L$ transformation is not part of the gauge quotient on this branch; it labels a global current. By Corollary X.8d.1, a nonzero Ward identity for such a current is a physical update channel rather than a descent obstruction. Integrating that Ward identity over $\mathcal V$ gives Theorem Y.4, so the topological transition changes $B+L$ while preserving gauge consistency. ∎
 
 ### Y.4.2 Sphaleron Transitions
 
@@ -650,6 +662,34 @@ This is analogous to spontaneous symmetry breaking: the underlying equations are
 
 **Corollary Y.10.1** (No Antimatter Parameter). *The framework contains no free parameter determining matter versus antimatter dominance. The observed matter dominance is a consequence of initial conditions on the predictive boundary.*
 
+**Corollary Y.10.2 (CP Phase as Predictive Orientation Defect).** On the Berry-loop baryogenesis branch, the CKM CP phase is the predictive-orientation holonomy
+$$
+\delta_{\mathrm{CP}}
+=
+\oint_{\gamma_{\mathrm{flavor}}}\mathcal A_{\mathrm{Berry}}
+=
+\int_{\Sigma_{\mathrm{flavor}}}\mathcal F_{\mathrm{Berry}},
+$$
+and the sign of the baryon asymmetry is fixed by the orientation product
+$$
+\mathrm{sign}(\eta_B)
+=
+\mathrm{sign}\!\left(
+\sin\delta_{\mathrm{CP}}\cdot
+\Delta N_{CS}\cdot
+\mathcal T_{\mathrm{KMS}}
+\right),
+$$
+where $\mathcal T_{\mathrm{KMS}}=\pm1$ is the selected thermodynamic time orientation of the KMS drive. Thus CP violation is not an independent scalar insertion on this branch; it is the orientation defect of predictive transport in the generation bundle, projected into the electroweak topological channel.
+
+*Proof.* Theorem T.56 and Theorem Y.6 identify the phase entering the CP source with Berry holonomy over the flavor loop. Stokes' theorem on the chosen Berry surface gives
+$$
+\oint_{\gamma_{\mathrm{flavor}}}\mathcal A_{\mathrm{Berry}}
+=
+\int_{\Sigma_{\mathrm{flavor}}}\mathcal F_{\mathrm{Berry}}.
+$$
+Theorem Y.10 states that matter dominance is fixed by the sign of $\sin\delta$, the initial Chern-Simons boundary condition, and the KMS time orientation. Writing these three signs as the displayed product gives the result. ∎
+
 ---
 
 ## Y.10 Relation to Standard Electroweak Baryogenesis
@@ -850,6 +890,62 @@ $$
 i.e. $0.6\%$. ∎
 
 **Remark Y.11.4a.** The ratio $\eta_B / \sqrt{v/M_{Pl}}$ removes the common exponential suppression carried by the two observables and isolates the derived $O(1)$ prefactor $\mathcal{P}_{\mathrm{eff}}$.
+
+**Corollary Y.11.4b (Electroweak–Baryon Square-Root Lock).** On the Appendix Y canonical baryogenesis branch,
+$$
+\boxed{
+\eta_B
+=
+\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}2^{-1/3}
+\sqrt{\frac{v}{A_{EW}M_{Pl}}}.
+}
+\tag{Y.11.4b}
+$$
+Equivalently,
+$$
+\boxed{
+\frac{\eta_B}
+{
+\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}
+}
+=
+2^{-1/3}
+\sqrt{\frac{v}{A_{EW}M_{Pl}}}.
+}
+$$
+The factor $2^{-1/3}$ is the generation-shared Landauer correction. The square root is the CP half-step of the electroweak instanton exponent.
+
+*Proof.* Theorem Y.9 gives
+$$
+\eta_B
+=
+\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}e^{-\kappa_B}.
+$$
+Theorem Y.8 gives
+$$
+\kappa_B=\frac{\kappa_{EW}}2+\frac{\varepsilon}{N_g}.
+$$
+On the minimal branch, $\varepsilon=\ln2$ and $N_g=3$, so
+$$
+e^{-\varepsilon/N_g}=e^{-\ln2/3}=2^{-1/3}.
+$$
+The electroweak branch gives
+$$
+\frac{v}{M_{Pl}}=A_{EW}e^{-\kappa_{EW}},
+$$
+hence
+$$
+e^{-\kappa_{EW}/2}
+=
+\sqrt{\frac{v}{A_{EW}M_{Pl}}}.
+$$
+Multiplying these two factors gives
+$$
+e^{-\kappa_B}
+=
+2^{-1/3}\sqrt{\frac{v}{A_{EW}M_{Pl}}},
+$$
+and substitution into the master formula proves the result. ∎
 
 ### Y.10.3.5 Experimental Consequences
 

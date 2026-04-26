@@ -115,7 +115,7 @@ $$
 \tag{X.5}
 $$
 
-where dots include gauge‑invariant higher operators and the background‑invariant gauge‑fixing/ghost sector. A Ward identity ensures that the renormalization of the background gauge coupling depends only on the background‑field wavefunction factor $Z_A(k)$. The physical coupling satisfies
+where dots include gauge‑invariant higher operators and the background‑invariant gauge‑fixing/ghost sector. On the Landauer-saturating finite-resolution branch, Theorem Q.0.7d2 supplies the effective continuous $U(1)$ invariance used in this sector as the closure of the dense SPAP/Landauer phase subgroup. After this closure, the standard background-field Ward identity ensures that the renormalization of the background gauge coupling depends only on the background-field wavefunction factor $Z_A(k)$. The physical coupling satisfies
 
 $$
 e^2(k)=\frac{u(k)}{\kappa(k)},\qquad
@@ -291,6 +291,7 @@ where $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ and the active frac
 * **Predictive geometry ↔ response:** Fisher metric $\mathcal{G}$ (Appendix D) ↔ connected kernel $\mathcal{G}=\delta^2 W$; $\Gamma^{(2)}=\mathcal{G}^{-1}$ (X.3).
 * **PU RG ↔ FRG:** KL‑monotone $c(b)$ (Appendix D) ↔ $\Gamma_k$ flow (X.4); relevant/irrelevant classification aligned via stability eigenvalues.
 * **Gauge normalization:** $u=g_e^2$, $\alpha_{\mathrm{em}}=u/(4\pi\kappa)$ (X.6); $\kappa^*_{\mathrm{bulk}}=1$ (Theorem Z.14), $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ with $a/d_0=1/4$ (Section Z.17); $u^*=8^{1/24}-1$ (Section Z.8); Thomson limit $\alpha^{-1}=\frac{4\pi}{u^*}-\frac{\pi}{\sqrt{K_0}}+\frac{\pi u^*}{24\sqrt{K_0}}\left(1-\frac{u^{*2}}{6}\right)\approx 137.036092 \pm 0.000060$ from the Appendix Z derivation (Theorems Z.24–Z.26).
+* **Constraint-coupling duality:** in regular constrained PCE branches, active admissibility constraints carry KKT shadow prices; canonical couplings are the corresponding normalized stiffness or inverse-stiffness images (Theorem X.8c; Appendix Z, Corollary Z.8.2a).
 * **Gravity:** $\Gamma^{\text{grav}}$ (X.7) + Wald entropy (Appendix E) ⇒ EFE (Section 12); $G$ from the area‑law coefficient; running $G(k)$ (Appendix I).
 * **Open dynamics:** CTP $\Gamma_{\rm CTP}$ (X.9) encodes dissipation/noise consistent with the local second law (Appendix E) and algebraic locality (Appendix F).
 * **Capacity saturation:** constraint (X.11) links $\phi(u)$ and $V_{\rm eff}$ stationarity (X.12), yielding the identities used in Appendix Z.
@@ -316,6 +317,307 @@ Therefore PU response theory, effective-action dynamics, RG flow, and perspectiv
 
 
 **Remark X.8a.2 (Status of the Stronger Identity Claim).** Theorem X.8a proves a shared information-geometric control structure at the level of a common structural class. It does not yet identify a single functor, or a single operator-valued object, whose specializations simultaneously yield the Fisher kernel, the Wetterich generator, and the Appendix M drift-diffusion generator. Establishing that stronger functorial identity remains open.
+
+**Corollary X.8b (Effective-Action Projection of Predictive Curvature).** On the regular product-bundle branch of Theorem 47 and Theorem G.4b, and under the effective-action hypotheses of Theorem X.5a, the gauge and gravitational curvature terms in the continuum effective action are projections of the predictive curvature
+$$
+\mathcal F^{\mathrm{pred}}
+=
+R(\Omega)\otimes 1+1\otimes F(A^{\mathrm{int}}).
+$$
+The internal projection $F(A^{\mathrm{int}})$ supplies the background-field gauge kernel of Equation (X.5). The spin/metric projection $R(\Omega)$ supplies the curvature invariants of the gravitational action in Equation (X.7), with the leading Einstein-Hilbert coefficient fixed by the Wald/area-law and local Clausius normalization in Appendix E and Section 12. The CTP sector of Section X.5 adds the dissipative/noise completion required by ND-RID but does not alter the closed-system curvature factorization.
+
+*Proof.* Theorem 47 and Corollary G.4b.1 give the exact product-bundle curvature identity. Equation (X.5) is written solely in terms of the internal field strength $F_{\mu\nu}(\bar A)$ and gauge-invariant higher operators, so it is the effective-action representative of the internal projection of $\mathcal F^{\mathrm{pred}}$. Equation (X.7) is written solely in terms of metric curvature invariants, whose spin-bundle representative is $R(\Omega)$ on the Lorentzian branch. The leading coefficient in Equation (X.7) is fixed by the area-law/Wald/Clausius chain stated in Section X.4 and proved in Section 12. Theorem X.5a supplies the generally covariant coarse-grained action under ND-RID/PCE, and Corollary X.5a.1 gives the matter-gravity decomposition; the open-system CTP terms are additional dissipative kernels and therefore do not change the algebraic identity for the closed-system curvature. ∎
+
+**Theorem X.8c (Constraint-Coupling Duality: Predictive Price Principle).** Consider a regular finite-mode truncation of a PU effective branch after quotienting gauge redundancies or imposing the gauge-fixing used in Section X.3. Let the retained coarse variables be $\Phi\in\mathcal U\subset\mathbb R^n$, let $V_{\mathrm{PCE}}(\Phi)$ be the differentiable PCE objective on that chart, and let the physical admissibility constraints be
+$$
+\mathcal C_A(\Phi)\le 0,
+\qquad
+A=1,\dots,r.
+$$
+Assume that $\mathcal U$ is convex in the retained chart, $V_{\mathrm{PCE}}$ is strictly convex on the branch, each $\mathcal C_A$ is differentiable and convex in a neighborhood of the optimum, the branch satisfies a standard KKT constraint qualification such as Slater regularity together with linear independence of active gradients, and the selected multiplier sequence is finite. Let $\Phi_*$ be the unique branch minimizer. Then there are unique multipliers $\lambda_A$ satisfying
+$$
+D V_{\mathrm{PCE}}[\Phi_*]
++
+\sum_{A=1}^r\lambda_A D\mathcal C_A[\Phi_*]
+=
+0,
+$$
+$$
+\lambda_A\ge 0,
+\qquad
+\mathcal C_A(\Phi_*)\le 0,
+\qquad
+\lambda_A\mathcal C_A(\Phi_*)=0.
+$$
+For every sector whose effective action coefficient is introduced by enforcing an active physical admissibility constraint $\mathcal C_A$, the canonical coefficient is the normalized shadow price
+$$
+\eta_A=\mathcal N_A\lambda_A,
+$$
+where $\mathcal N_A>0$ is the branch normalization fixed by the corresponding Ward, Wald/area-law, interface, or PPI mapping theorem. In a stiffness convention,
+$$
+\Gamma_A
+=
+-\frac{1}{4g_A^2}\int F_A{}_{\mu\nu}F_A{}^{\mu\nu}\sqrt{-g}\,d^4x+\cdots,
+\qquad
+g_A^{-2}=\eta_A.
+$$
+In a rate-coordinate convention with one deformation coordinate $u_A=g_A^2$, capacity function $\mathfrak c_A(u_A)$, and active bound $\mathfrak c_A(u_A)\le C_A^{\max}$, the constrained stationarity condition gives
+$$
+\phi_A'(u_A^*)+\lambda_A\mathfrak c_A'(u_A^*)=0,
+\qquad
+\lambda_A
+=
+-\frac{\phi_A'(u_A^*)}{\mathfrak c_A'(u_A^*)},
+$$
+and the physical coupling is obtained only after the branch normalization,
+$$
+\alpha_A=\frac{u_A^*}{4\pi\kappa_A}.
+$$
+Thus a coupling constant is not an independent continuous input on such a branch: it is the canonical image of an active PCE shadow price, or of the active boundary coordinate together with that shadow price and the fixed normalization map.
+
+*Proof.* Since $V_{\mathrm{PCE}}$ is strictly convex on the retained chart and the feasible set is convex, any minimizer is unique. Let $I=\{A:\mathcal C_A(\Phi_*)=0\}$ be the active set. First-order optimality says that for every feasible first-order direction $v$ in the tangent cone,
+$$
+D V_{\mathrm{PCE}}[\Phi_*]v\ge 0.
+$$
+The active tangent cone is determined by
+$$
+D\mathcal C_A[\Phi_*]v\le 0,
+\qquad
+A\in I.
+$$
+If no nonnegative coefficients $\{\lambda_A\}_{A\in I}$ satisfied
+$$
+D V_{\mathrm{PCE}}[\Phi_*]
++
+\sum_{A\in I}\lambda_A D\mathcal C_A[\Phi_*]
+=
+0,
+$$
+the finite-dimensional Farkas separation theorem would give a vector $v$ such that
+$$
+D\mathcal C_A[\Phi_*]v\le 0
+\quad
+\text{for all }A\in I,
+\qquad
+D V_{\mathrm{PCE}}[\Phi_*]v<0.
+$$
+For sufficiently small positive $t$, differentiability and convexity then give a feasible variation $\Phi_*+tv+o(t)$ with strictly smaller $V_{\mathrm{PCE}}$, contradicting minimality. Hence the multipliers exist. Set $\lambda_A=0$ for inactive constraints. This gives feasibility, nonnegativity, stationarity, and complementarity. If two multiplier families satisfied stationarity, subtracting the two stationarity equations would give a linear dependence among the active gradients. Active-gradient independence forces all multiplier differences to vanish, so the multipliers are unique.
+
+The branch effective action obtained from constrained PCE is the Lagrangian functional
+$$
+\mathcal L_{\mathrm{PCE}}(\Phi,\lambda)
+=
+V_{\mathrm{PCE}}(\Phi)
++
+\sum_A\lambda_A\mathcal C_A(\Phi).
+$$
+Therefore the coefficient multiplying the active constraint functional is exactly $\lambda_A$ before canonical field normalization. The fixed normalization map of the branch rescales this coefficient by the positive factor $\mathcal N_A$, giving $\eta_A=\mathcal N_A\lambda_A$. If the sector is written in the gauge-field stiffness convention, the canonical quadratic coefficient is $g_A^{-2}$, hence $g_A^{-2}=\eta_A$. If the sector is written instead as a one-dimensional rate-coordinate problem, differentiating the constrained Lagrangian
+$$
+\phi_A(u_A)+\lambda_A(\mathfrak c_A(u_A)-C_A^{\max})
+$$
+at the active optimum yields
+$$
+\phi_A'(u_A^*)+\lambda_A\mathfrak c_A'(u_A^*)=0,
+$$
+and therefore the displayed expression for $\lambda_A$. The final relation $\alpha_A=u_A^*/(4\pi\kappa_A)$ is the canonical Heaviside-Lorentz normalization used in Equation (X.6). The continuum effective-action statements use the same identity on the retained regular finite-mode truncations and pass along the convergent subsequence of Theorem X.5a whenever the selected branch has convergent multipliers. ∎
+
+**Definition X.8d.0 (Predictive Anomaly Cocycle).** Fix a regular effective-action sector at MPU resolution $\delta$. Let $\mathcal X$ be the set of local predictive descriptions in that sector, and let
+$$
+\mathcal R\rightrightarrows \mathcal X
+$$
+be the groupoid of transformations declared to be redundancies of predictive description. For an arrow $\gamma:x\to y$ in $\mathcal R$, write the induced source transformation as $J\mapsto \gamma\cdot J$. A family of generating functionals $Z_x[J]$ has anomaly cocycle $\mathcal A$ when
+$$
+Z_y[\gamma\cdot J]
+=
+e^{i\mathcal A_\gamma[J]}Z_x[J],
+$$
+with all phases understood modulo $2\pi$, and with the composition law
+$$
+\mathcal A_{\eta\circ\gamma}[J]
+=
+\mathcal A_\gamma[J]+\mathcal A_\eta[\gamma\cdot J]
+$$
+for every composable pair $x\xrightarrow{\gamma}y\xrightarrow{\eta}z$. A local counterterm cochain is a choice of functionals $B_x[J]$. Its coboundary is
+$$
+(\delta B)_\gamma[J]
+=
+B_x[J]-B_y[\gamma\cdot J].
+$$
+The anomaly class is the cohomology class
+$$
+[\mathcal A]\in H^1(\mathcal R,\mathscr F/2\pi\mathbb Z),
+$$
+where $\mathscr F$ denotes the permitted local functional class of the branch.
+
+**Theorem X.8d (Predictive Anomaly Descent and Inflow Principle).** In the setting of Definition X.8d.0:
+
+1. The predictive functional descends to the quotient $\mathcal X/\mathcal R$ after permitted local counterterms if and only if
+$$
+[\mathcal A]=0.
+$$
+
+2. If a transformation is declared to be a redundancy and $[\mathcal A]\ne0$, then no counterterm-renormalized predictive functional can be assigned consistently on the quotient. Such a sector is PU-inadmissible as a redundancy sector.
+
+3. If the description is split into bulk, boundary, and interface pieces with multiplicative generating functional
+$$
+Z^{\mathrm{tot}}
+=
+Z^{\mathrm{bulk}}Z^{\partial}Z^{\mathrm{int}},
+$$
+then the total anomaly class is
+$$
+[\mathcal A^{\mathrm{tot}}]
+=
+[\mathcal A^{\mathrm{bulk}}]
++
+[\mathcal A^{\partial}]
++
+[\mathcal A^{\mathrm{int}}].
+$$
+The split description descends exactly when
+$$
+[\mathcal A^{\mathrm{bulk}}]
++
+[\mathcal A^{\partial}]
++
+[\mathcal A^{\mathrm{int}}]
+=
+0.
+$$
+This is predictive anomaly inflow.
+
+4. If a transformation is not in $\mathcal R$, then it is not a quotient redundancy. A nonzero variation under that transformation is not a descent failure; it is a physical update channel. For an infinitesimal transformation with parameter $\eta$, the variation of $W=\ln Z$ records the corresponding Ward identity through
+$$
+\delta_\eta W[J]=i\mathcal A_\eta[J]
+$$
+together with the ordinary source-contact terms of the chosen operator basis.
+
+*Proof.* Suppose first that $[\mathcal A]=0$. Then there is a permitted counterterm cochain $B$ such that
+$$
+\mathcal A_\gamma[J]=B_x[J]-B_y[\gamma\cdot J]
+$$
+for every arrow $\gamma:x\to y$. Define
+$$
+\widetilde Z_x[J]:=e^{iB_x[J]}Z_x[J].
+$$
+Then
+$$
+\widetilde Z_y[\gamma\cdot J]
+=
+e^{iB_y[\gamma\cdot J]}Z_y[\gamma\cdot J]
+=
+e^{iB_y[\gamma\cdot J]}e^{i\mathcal A_\gamma[J]}Z_x[J]
+=
+e^{iB_x[J]}Z_x[J]
+=
+\widetilde Z_x[J].
+$$
+Thus $\widetilde Z$ is constant on $\mathcal R$-orbits and descends to the quotient.
+
+Conversely, suppose a permitted counterterm family $B_x$ makes
+$$
+\widetilde Z_y[\gamma\cdot J]=\widetilde Z_x[J]
+$$
+for every redundancy arrow $\gamma:x\to y$. Expanding the definition of $\widetilde Z$ gives
+$$
+e^{iB_y[\gamma\cdot J]}e^{i\mathcal A_\gamma[J]}Z_x[J]
+=
+e^{iB_x[J]}Z_x[J].
+$$
+On the regular sector $Z_x[J]$ is not identically zero, so the equality of phases implies
+$$
+\mathcal A_\gamma[J]=B_x[J]-B_y[\gamma\cdot J]\quad \mathrm{mod}\ 2\pi.
+$$
+Hence $\mathcal A=\delta B$ and $[\mathcal A]=0$. This proves the descent criterion.
+
+If $[\mathcal A]\ne0$ for a declared redundancy, the criterion just proved implies that no permitted counterterm can produce a quotient functional. Therefore two descriptions identified by $\mathcal R$ would assign inequivalent predictive responses to the same physical context, contradicting MPU-equivalence and the quotient requirement used in Definition X.9.1. Such a sector cannot be assigned finite PCE cost as a redundancy sector.
+
+For the bulk-boundary-interface split, the multiplicative law gives
+$$
+Z_y^{\mathrm{tot}}[\gamma\cdot J]
+=
+Z_y^{\mathrm{bulk}}[\gamma\cdot J]
+Z_y^{\partial}[\gamma\cdot J]
+Z_y^{\mathrm{int}}[\gamma\cdot J].
+$$
+Applying the defining anomaly equation to each factor yields the total phase
+$$
+\mathcal A_\gamma^{\mathrm{tot}}[J]
+=
+\mathcal A_\gamma^{\mathrm{bulk}}[J]
++
+\mathcal A_\gamma^{\partial}[J]
++
+\mathcal A_\gamma^{\mathrm{int}}[J].
+$$
+The descent criterion applied to this total cocycle gives
+$$
+[\mathcal A^{\mathrm{tot}}]=0
+\quad\Longleftrightarrow\quad
+[\mathcal A^{\mathrm{bulk}}]+[\mathcal A^{\partial}]+[\mathcal A^{\mathrm{int}}]=0.
+$$
+Finally, if the transformation is not an arrow of $\mathcal R$, the quotient condition is not being imposed. Differentiating $Z\mapsto e^{i\mathcal A_\eta}Z$ at infinitesimal parameter gives $\delta_\eta W=i\mathcal A_\eta$ with the source-contact terms induced by the transformation of $J$. This is a physical Ward identity rather than a contradiction. ∎
+
+**Corollary X.8d.1 (Gauge Redundancies, Family Charges, Horizons, and Global-Current Channels).** On PU regular effective-action branches:
+
+1. Gauge transformations, local Lorentz frame rotations, and diffeomorphism/frame changes that are treated as redundancies must have vanishing total anomaly class. Otherwise the predictive functional does not descend to the physical quotient.
+
+2. Family $U(1)_F$ anomaly constraints, when $U(1)_F$ is treated as a predictive-frame redundancy, are descent constraints rather than optional model-building conditions.
+
+3. Boundary, horizon, or interface degrees of freedom may carry anomaly only when their class cancels the bulk class:
+$$
+[\mathcal A^{\mathrm{bulk}}]+[\mathcal A^{\partial}]+[\mathcal A^{\mathrm{int}}]=0.
+$$
+
+4. The electroweak $B+L$ anomaly used in Appendix Y is admissible because $B+L$ is a global current on that branch, not a gauge redundancy. It is therefore a physical update channel, while the Standard Model gauge anomaly classes still vanish.
+
+*Proof.* Items 1 and 2 are direct applications of Theorem X.8d to transformations included in the redundancy groupoid $\mathcal R$. Item 3 is the bulk-boundary-interface part of the theorem. Item 4 follows because $B+L$ is not part of the gauge quotient defining the Standard Model branch; its anomalous Ward identity changes a physical global charge through topological gauge history rather than changing the value of the predictive functional under an identified gauge frame. ∎
+
+**Theorem X.8e (Gauge Coupling Running as Shadow-Price Flow).** On a regular constrained PCE branch with background-field effective action
+$$
+\Gamma_k^{\mathrm{gauge}}
+=
+-\frac14\int Z_A(k)F_{\mu\nu}F^{\mu\nu}\sqrt{-g}\,d^4x+\cdots,
+$$
+suppose the gauge-field stiffness is the normalized multiplier of an active predictive-coherence constraint:
+$$
+g_A^{-2}(k)=\eta_A(k)=\mathcal N_A(k)\lambda_A(k),
+$$
+where $\lambda_A(k)$ is the KKT shadow price at resolution $k$ and $\mathcal N_A(k)>0$ is the Ward/interface normalization of the branch. Then the beta function is equivalently the logarithmic price flow
+$$
+\beta_A(k)
+:=
+k\frac{dg_A}{dk}
+=
+-\frac12 g_A(k)\,k\frac{d}{dk}\ln\eta_A(k).
+$$
+Equivalently,
+$$
+k\frac{d}{dk}g_A^{-2}(k)
+=
+k\frac{d}{dk}\eta_A(k).
+$$
+A scale $\mu_*$ at which canonically normalized gauge prices coincide,
+$$
+\eta_1(\mu_*)=\eta_2(\mu_*)=\eta_3(\mu_*),
+$$
+is a price-equalization scale. It is the PCE form of gauge-coupling unification on that branch.
+
+*Proof.* By hypothesis $g_A^{-2}=\eta_A$. Taking logarithms gives
+$$
+-2\ln g_A=\ln\eta_A.
+$$
+Differentiating with $k\,d/dk$ yields
+$$
+-2\frac{k\,dg_A/dk}{g_A}=k\frac{d}{dk}\ln\eta_A.
+$$
+Solving gives
+$$
+\beta_A=k\frac{dg_A}{dk}
+=
+-\frac12 g_A k\frac{d}{dk}\ln\eta_A.
+$$
+The derivative identity for $g_A^{-2}$ is just differentiation of $g_A^{-2}=\eta_A$. The final statement follows from the definition of canonical price equality: if the physical stiffnesses are the normalized prices, equality of stiffnesses is equality of the corresponding inverse squared couplings. ∎
 
 ## X.9 Dualities as PCE-Cost Degeneracies
 

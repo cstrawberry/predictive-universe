@@ -108,7 +108,37 @@ $$
 - Spatial projection $(D-1)/D = 3/4$ (rotational invariance)
 - Democratic normalization $1/\sqrt{K_0} = 1/\sqrt{3}$ (QFI additivity for generators)
 
-**Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The additional factor $\eta' = 3/(8\sqrt{3})$ is not obtained from that temperature equality alone; it is the conditional consequence of the QFI linear-response bridge law adopted in Appendix H, Definition H.0. Once that bridge-law normalization is fixed, no continuously adjustable parameter remains in the galactic-scale prediction.
+**Corollary I.3a (Cosmological Acceleration Lock in the Dark-Sector Branch).** On the Appendix H operating-point bridge representative,
+$$
+g_0
+=
+\eta' a_0
+=
+\frac{c^2\sqrt{\Lambda}}{8}.
+$$
+Define
+$$
+g_\Lambda:=\frac{c^2\sqrt{\Lambda}}{8}.
+$$
+Then every galaxy-sector transition written in terms of $g_0$ on this branch is equivalently written in terms of the cosmology-fixed scale $g_\Lambda$. The dimensionless local dark-sector trigger variable is
+$$
+\chi_b(x)
+:=
+\frac{|\nabla\Phi_b(x)|}{g_\Lambda}.
+$$
+No independent MOND-scale fit parameter is present once Definition H.0 and Equation H.4b are adopted.
+
+*Proof.* Proposition I.3 gives $a_0=c^2\sqrt{\Lambda/3}$. Appendix H, Equation H.4b gives $\eta'=3/(8\sqrt3)$. Therefore
+$$
+g_0=\eta'a_0
+=
+\frac{3}{8\sqrt3}c^2\frac{\sqrt{\Lambda}}{\sqrt3}
+=
+\frac{c^2\sqrt{\Lambda}}{8}.
+$$
+The definition of $\chi_b$ is the unique dimensionless ratio formed from the local baryonic acceleration $|\nabla\Phi_b|$ and the locked acceleration scale $g_\Lambda$. ∎
+
+**Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The additional factor $\eta' = 3/(8\sqrt{3})$ is not obtained from that temperature equality alone; it is the conditional consequence of the QFI linear-response bridge law adopted in Appendix H, Definition H.0. Once that bridge-law normalization is fixed, no continuously adjustable parameter remains in the galactic-scale prediction; the scale is locked to $\Lambda$ by Corollary I.3a.
 
 ---
 
@@ -145,10 +175,18 @@ $$
 The parameter roles in Equation I.4 are:
 $$
 G_0:\text{ local normalization},\qquad
-L_0:\text{ coarse-graining transition scale tied to }g_0,\qquad
-(A_G,m):\text{ phenomenological-kernel parameters}.
+L_0:\text{ coarse-graining transition scale tied to }g_\Lambda,\qquad
+(A_G,m):\text{ phenomenological-kernel parameters},
 $$
-Within the present manuscript, only the crossover scale $L_0$ is directly tied to the Appendix H acceleration scale, and that tie is conditional on Definition H.0 and Equation H.4b. The amplitude $A_G$ and steepness $m$ remain phenomenological parameters pending either rotation-curve fits or a first-principles closure of the relaxation sector. Thus $(L_0,A_G,m)$ should be tested for universality, but only $L_0$ currently has a framework-internal bridge relation.
+where
+$$
+g_\Lambda:=\frac{c^2\sqrt{\Lambda}}{8}.
+$$
+Within the present manuscript, only the crossover scale $L_0$ is directly tied to the Appendix H acceleration scale, and that tie is conditional on Definition H.0 and Equation H.4b. The amplitude $A_G$ and steepness $m$ remain phenomenological parameters pending either rotation-curve fits or a first-principles closure of the relaxation sector. Thus $(L_0,A_G,m)$ should be tested for universality, but only $L_0$ currently has a framework-internal bridge relation. On the acceleration-lock branch, all low-acceleration transition plots should be expressed using
+$$
+\chi_b=\frac{|\nabla\Phi_b|}{g_\Lambda}
+$$
+rather than by fitting a separate acceleration scale.
 
 **I.7 A Multi-Scale Solution from Global PCE Optimization**
 
@@ -252,10 +290,36 @@ The parameters $(G_0, L_0, A_G, m)$ in Equation (I.4) must align with astronomic
 Within the status classes of Convention P.14.1a, the scale-dependent gravity framework gives model-level predictions whose parameters must be tested with a common T1/T2/T3 ledger:
 
 1.  **Model-level force law:** The enhancement factor $\varepsilon_G(R)$ is modeled as a function of scale and baryonic environment through Equation I.4 and Hypothesis I.1. Tight baryon-tracking relations such as the baryonic Tully-Fisher Relation and the Radial Acceleration Relation are therefore predictions of the phenomenological kernel $(L_0,A_G,m)$, not theorem-level consequences of Appendix H alone.
-2.  **Parameter-universality test:** The parameter set $(L_0,A_G,m)$ should be approximately universal across the galaxy class to which Equation I.4 is applied. $L_0$ inherits the bridge-normalization status of $g_0$; $A_G$ and $m$ remain phenomenological until derived from the relaxation sector or inferred with a hierarchical population model.
-3.  **Absence of particle DM in the modeled branch:** The observed phenomena are explained without conventional particle dark matter in this branch, predicting null results for direct detection experiments searching for conventional dark matter particles if this branch is the correct explanation of the relevant anomalies.
-4.  **Cosmological signatures:** The scale dependence of gravity could influence structure growth and cosmological observables. Deviations from $\Lambda$CDM predictions might be observable in cosmic microwave background (CMB) or large-scale structure surveys if $G$ varies with local density or cosmic time.
-5.  **Transient stresses:** The dynamics of complexity adaptation and parameter relaxation may lead to transient effects, such as $\rho_\Pi$ in Equation I.7, in highly dynamic events like galaxy cluster mergers. These effects would be tested through discrepancies between baryonic matter distribution and gravitational lensing maps under the same kernel and conservation assumptions.
+2.  **Acceleration-lock test:** The acceleration variable controlling the transition is fixed by
+$$
+g_\Lambda=\frac{c^2\sqrt{\Lambda}}{8}.
+$$
+Galaxy acceleration data should therefore collapse when plotted against
+$$
+\chi_b=\frac{|\nabla\Phi_b|}{g_\Lambda}
+$$
+without fitting an independent MOND scale.
+3.  **Parameter-universality test:** The parameter set $(L_0,A_G,m)$ should be approximately universal across the galaxy class to which Equation I.4 is applied. $L_0$ inherits the bridge-normalization status of $g_\Lambda$; $A_G$ and $m$ remain phenomenological until derived from the relaxation sector or inferred with a hierarchical population model.
+4.  **Surface-density lock:** Thin-disk transition data should be consistent with
+$$
+\Sigma_\dagger
+=
+\frac{g_\Lambda}{2\pi G}
+=
+\frac{c^2\sqrt{\Lambda}}{16\pi G}.
+$$
+5.  **Redshift lock:** On a constant-$\Lambda$ branch, high-redshift acceleration thresholds should remain fixed at $g_\Lambda$ rather than scaling with the full Hubble rate $H(z)$. More generally, if an effective vacuum curvature $\Lambda_{\mathrm{eff}}(z)$ is used, the branch predicts
+$$
+\frac{g_0(z)}{g_0(0)}
+=
+\sqrt{
+\frac{\Lambda_{\mathrm{eff}}(z)}
+{\Lambda_{\mathrm{eff}}(0)}
+}.
+$$
+6.  **Absence of particle DM in the modeled branch:** The observed phenomena are explained without conventional particle dark matter in this branch, predicting null results for direct detection experiments searching for conventional dark matter particles if this branch is the correct explanation of the relevant anomalies.
+7.  **Cosmological signatures:** The scale dependence of gravity could influence structure growth and cosmological observables. Deviations from $\Lambda$CDM predictions might be observable in cosmic microwave background (CMB) or large-scale structure surveys if $G$ varies with local density or cosmic time.
+8.  **Transient stresses:** The dynamics of complexity adaptation and parameter relaxation may lead to transient effects, such as $\rho_\Pi$ in Equation I.7, in highly dynamic events like galaxy cluster mergers. These effects would be tested through discrepancies between baryonic matter distribution and gravitational lensing maps under the same kernel and conservation assumptions.
 
 **I.11 Prospective Rotation-Curve Analysis**
 
@@ -429,4 +493,4 @@ The PU framework proposes a multi-scale solution to the phenomena attributed to 
 1.  **At galaxy scales,** a PCE-driven parameter relaxation mechanism causes the emergent Newton constant to increase with scale ($G(R)$, Equation I.4), providing a physically motivated framework that naturally explains galaxy rotation curves and baryonic scaling relations while respecting local tests of GR, **as an environment‑dependent relaxation** that leaves the CMB‑era effective $G$ unchanged.
 2.  **At cluster scales**, where a running $G(R)$ is cosmologically constrained, the mass discrepancy is modeled by a **non‑local predictive‑matter response**. A linear, single‑scale kernel is sufficient for **stacked profiles**, while **high‑concentration outliers** (e.g., A1689) demand either a **mild nonlinearity $q>0$** or a **multi‑scale kernel**. All options remain **CMB‑safe** with $A_G\simeq 0$ and are quantitatively testable against lensing data.
 
-This composite model provides a status-separated dark-sector program: theorem-level identities fix the acceleration scale only after the Appendix H bridge normalization is adopted, the galaxy response law is a phenomenological kernel with testable universal parameters, and the cluster response is a non-local source kernel whose conservation and lensing consequences are explicit model assumptions.
+This composite model provides a status-separated dark-sector program: theorem-level identities fix the acceleration scale only after the Appendix H bridge normalization is adopted, with the adopted representative giving the exact lock $g_\Lambda=c^2\sqrt{\Lambda}/8$; the galaxy response law is a phenomenological kernel with testable universal parameters; and the cluster response is a non-local source kernel whose conservation and lensing consequences are explicit model assumptions. The strongest common test is whether galaxy dynamics, baryonic surface-density thresholds, and cluster/lensing response can all be written with the same $g_\Lambda$ rather than with independent acceleration scales.

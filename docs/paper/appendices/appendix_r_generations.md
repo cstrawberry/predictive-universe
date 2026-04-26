@@ -354,7 +354,7 @@ The block structure $H_x\cong\mathbb C\oplus\mathbb C^2\oplus\mathbb C^3$ from A
 
 **Theorem R.3.4 (Family-charge anomaly constraints).**
 
-Let $\{q^{(g)}\}\subset L_{\rm light}$ be the set of realized light sectors. Each sector corresponds to a full SM generation with identical $G_{\rm SM}$ charges, but carries a distinct **family** charge offset $F_g := f \cdot q^{(g)}$, where $f$ is a fixed vector in the dual lattice. For a consistent theory with a family $U(1)_F$ symmetry, the net family charges must satisfy the anomaly cancellation conditions:
+Let $\{q^{(g)}\}\subset L_{\rm light}$ be the set of realized light sectors. Each sector corresponds to a full SM generation with identical $G_{\rm SM}$ charges, but carries a distinct **family** charge offset $F_g := f \cdot q^{(g)}$, where $f$ is a fixed vector in the dual lattice. On the branch where the family $U(1)_F$ is treated as a predictive-frame redundancy rather than a physical global update channel, Theorem X.8d requires the total $U(1)_F$ anomaly class to vanish. In the uniform family-charge branch this descent condition reduces to
 $$
 \sum_g F_g = 0,
 \qquad
@@ -362,7 +362,7 @@ $$
 \tag{R.11}
 $$
 
-These constraints admit multiple solutions. The pattern $\{a, -a, 0\}$ with $N=3$ sectors is the minimal solution that satisfies anomaly cancellation AND permits CP violation.
+These constraints admit multiple solutions. The pattern $\{a, -a, 0\}$ with $N=3$ sectors is the minimal solution that satisfies predictive anomaly descent and permits CP violation. The theorem is therefore a statement about the family-redundancy branch; if $U(1)_F$ were instead treated as a physical global update channel, a nonzero anomaly would be analyzed by Theorem X.8d as a channel, not as a quotient obstruction.
 
 *Proof.* Assume $U(1)_F$ is an emergent family symmetry for which every chiral fermion in generation $g$ carries the same family charge $F_g$ (i.e., the $g$-th predictive block is replicated with a uniform $U(1)_F$ charge).
 
@@ -490,6 +490,28 @@ This statement has role class ExactThreshold / DiscreteMultiplicity in the sense
 Consequently, falsifying a texture model, an $E_8$ placement rule, a CKM/PMNS ansatz, a neutrino normalization convention, or a baryogenesis realization does not by itself refute the theorem-level statement $N_g=3$ unless it also invalidates the anomaly+CP premises of Theorem R.3.4. Quantitative flavor outputs are therefore reported with the paper-wide T1/T2/T3 protocol: T1 for finite-order and geometric truncations, T2 for vacuum/regularization/threshold and branch dependence, and T3 for scheme, empirical mapping, and discrete identification ambiguity.
 
 *Proof.* Theorem R.3.4 uses only the family-charge anomaly equations together with the requirement that a physical rephasing-invariant CP phase exist. It does not use any $E_8$ placement, Yukawa overlap, Berry-holonomy, seesaw, PMNS construction, baryogenesis machinery, or low-energy extraction convention. Those ingredients first enter later sections of Appendix R and in Appendix T / Appendix Y. Since the premise set of Theorem R.3.4 is disjoint from those later model premises, the structural generation-count statement and the later flavor-model constructions have distinct dependency records. The T1/T2/T3 assignment is then the direct specialization of Convention P.14.1c to the flavor variables: omitted hierarchy orders and geodesic approximations are T1, vacuum/threshold/regularization choices are T2, and scheme, empirical extraction, and generation-label identification are T3. ∎
+
+**Corollary R.3.5g (Matter Generations as Minimal Anomaly-Code Completion).** In the family-charge class of Theorem R.3.4, the generation count is the minimal code-completion number for simultaneous predictive anomaly descent and CP-active holonomy:
+$$
+N_g
+=
+\min\{N:\ [\mathcal A_N]=0\ \text{and}\ J_{\mathrm{CP}}(N)\ne0\}
+=
+3.
+$$
+Here $[\mathcal A_N]=0$ denotes the family-charge descent equations
+$$
+\sum_{g=1}^N F_g=0,
+\qquad
+\sum_{g=1}^N F_g^3=0,
+$$
+and $J_{\mathrm{CP}}(N)\ne0$ denotes the existence of a rephasing-invariant CP phase. The realized three-sector pattern is
+$$
+\{F_g\}=\{a,-a,0\}.
+$$
+Thus the three generations are not redundant copies on this branch; they are the smallest anomaly-completing predictive code that still carries CP-active orientation holonomy.
+
+*Proof.* Theorem R.3.4 proves that $N=1$ fails anomaly cancellation unless the family charge is trivial, and $N=2$ supports only opposite charges and cannot carry a physical CKM-type CP phase after rephasing. For $N=3$, the anomaly equations imply one zero charge and two opposite charges, giving $\{a,-a,0\}$, and the three-sector system admits a physical rephasing-invariant CP phase. Hence $3$ is the minimum $N$ satisfying both conditions. ∎
 
 ## R.4 Three-Fold Structure: Topological Derivation and Geometric Compatibility
 

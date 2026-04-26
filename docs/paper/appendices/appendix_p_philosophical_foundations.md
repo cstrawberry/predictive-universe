@@ -197,7 +197,7 @@ H_0 \cong \mathbb{C}^8
 $$
 (see Theorem 23). For viability we require:
 
-- **C1 — Mathematical consistency (anomaly cancellation).** The 8-dimensional complex representation $R$ of the gauge group $G$ on $H_0$ must be free of all local and global anomalies for an effective 4D left‑chiral Weyl matter sector; in particular, the pure $SU(3)^3$ anomaly and the $SU(2)$ global (Witten) anomaly must vanish on the $SU(3)\times SU(2)$ subgroup.
+- **C1 — Mathematical consistency (predictive anomaly descent).** The 8-dimensional complex representation $R$ of the gauge group $G$ on $H_0$ must be free of all local and global gauge anomalies for an effective 4D left‑chiral Weyl matter sector. By Theorem X.8d, gauge transformations are predictive-frame redundancies, so the total anomaly class must vanish for the predictive functional to descend to the physical quotient. In particular, the pure $SU(3)^3$ anomaly and the $SU(2)$ global (Witten) anomaly must vanish on the $SU(3)\times SU(2)$ subgroup.
 
 - **C2 — Nontrivial non‑Abelian action.** $G$ must contain subgroups isomorphic to $SU(3)$ and $SU(2)$ acting nontrivially on $R$ (to support SM‑like color and weak structure).
 

@@ -789,7 +789,14 @@ The framework distinguishes Type I CP violation (Lagrangian parameters, forbidde
 
 ### 14.2.8 Baryon Asymmetry from Anomaly Inflow
 
-The cosmic baryon asymmetry $\eta_B=n_B/n_\gamma\approx6\times10^{-10}$ is computed in **Appendix Y** on the anomaly-holonomy, Berry-response, sphaleron-transport, electroweak-threshold, and washout branches.
+The cosmic baryon asymmetry $\eta_B=n_B/n_\gamma\approx6\times10^{-10}$ is computed in **Appendix Y** on the anomaly-holonomy, Berry-response, sphaleron-transport, electroweak-threshold, and washout branches. The relevant anomaly is not an uncanceled gauge redundancy anomaly: by Theorem X.8d and Section G.8.2.3, gauge anomaly classes must vanish for predictive descent. The Appendix Y anomaly is instead the allowed global-current $B+L$ update channel whose integrated form is Theorem Y.4. Corollary Y.11.4b also gives the sharper square-root form
+$$
+\eta_B
+=
+\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}2^{-1/3}
+\sqrt{\frac{v}{A_{EW}M_{Pl}}},
+$$
+so the observed baryon asymmetry becomes a test of the CP half-step relation between baryogenesis and the electroweak instanton exponent.
 
 **Sakharov Conditions (Theorem Y.2):** On the Appendix Y baryogenesis branch, the three ingredients are realized:
 1. *B-violation:* Chiral electroweak anomaly $\partial_\mu J_{B+L}^\mu = 2 N_g \frac{g^2}{32\pi^2} W^a_{\mu\nu}\tilde{W}^{a\mu\nu}$
@@ -827,17 +834,33 @@ where the efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is obtained b
 | Spatial projection | $(D-1)/D = 3/4$ | Rotational invariance |
 | Generator normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | QFI additivity (generators) |
 
-The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\text{m/s}^2$ agrees with the empirically observed Milgrom scale $a_0 \approx 1.2 \times 10^{-10}\,\text{m/s}^2$ to within 2%. This derivation follows the chain:
+The product gives the exact Cosmological Acceleration Lock:
 $$
-\text{SPAP} \xrightarrow{K_0=3} d_0 = 8 \xrightarrow{\varepsilon=\ln 2} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{K(D)=24} D = 4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}}
+g_0
+=
+\frac{3}{8\sqrt3}c^2\sqrt{\frac{\Lambda}{3}}
+=
+\frac{c^2\sqrt{\Lambda}}{8}.
 $$
-Once Definition H.0 is fixed, the result has no additional continuous fitting inside that bridge-law branch and connects microscopic quantum geometry directly to galactic dynamics without invoking dark matter particles.
+The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\text{m/s}^2$ agrees with the empirically observed Milgrom scale $a_0 \approx 1.2 \times 10^{-10}\,\text{m/s}^2$ to within current observational systematics. The same lock fixes the baryonic surface-density threshold:
+$$
+\Sigma_\dagger
+=
+\frac{g_0}{2\pi G}
+=
+\frac{c^2\sqrt{\Lambda}}{16\pi G}.
+$$
+This derivation follows the chain:
+$$
+\text{SPAP} \xrightarrow{K_0=3} d_0 = 8 \xrightarrow{\varepsilon=\ln 2} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{K(D)=24} D = 4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}} \xrightarrow{\Lambda} g_0=\frac{c^2\sqrt{\Lambda}}{8}.
+$$
+Once Definition H.0 is fixed, the result has no additional continuous fitting inside that bridge-law branch and connects microscopic quantum geometry directly to galactic dynamics without invoking dark matter particles. The branch is experimentally sharper than an order-of-magnitude $cH_0$ relation: on a constant-$\Lambda$ branch, $g_0$ is redshift-independent even though $H(z)$ changes.
 
 *   **Internal Justification for Emergence (via Appendices):** PU's viability relies on emergence mechanisms justified internally: Complexity Alignment (Theorem 2, Appendix D via work-cost gap feedback); Applicability of SPAP/RUD limits (grounded in the MPU's intrinsic $K_0$ complexity, Definition 23, with network context enabling effective reliable computation, Proposition A.0.3); Geometric Regularity (Theorem 43, Appendices C/D via POP/PCE optimization against irregularity); Thermodynamics/Area Law (Theorem 49, Appendix E via ND-RID limits); Stress-Energy Tensor (Appendices B/F via coarse-graining/conservation); Locality Framing (Appendix F, where Postulate 3 statistical FTL is analyzed for compatibility with operator locality when the continuum-bridge hypotheses of Theorem F.0 hold, together with operational causality Theorem 42); and the Baryon Asymmetry (Appendix Y, from the generic properties of the emergent gauge bundle).
 
 *   **Emergence and Self-Organization:** PU is built on emergence, deriving QM/GR from collective MPU dynamics under POP/PCE and constraints (SPAP, $\varepsilon$). Macroscopic features like geometric regularity (Theorem 43) result from self-organization driven by optimization (Appendices C, D). CC (Hypothesis 3) proposes feedback within the emergent hierarchy.
 
-*   **Action Principles as Emergent Bookkeeping:** Action principles ($\delta S = 0$) are reframed as emergent descriptions of underlying optimization. Appendix X identifies the standard 1PI effective action of QFT, $\Gamma[\Phi]$, as the Legendre transform of the cumulant generating functional for the network's predictive statistics, providing a direct physical interpretation of the action principle as the macroscopic bookkeeping rule for the network's resource economy under the constraints of PCE. The Predictive Ward Identity (Theorem X.3) shows that the connected response kernel and the quadratic effective-action kernel are the QFI kernel written in dual variables, through the chain $\mathcal{G}=\mathcal{K}^{-1}$ (Ward identity) $\to$ $\Gamma^{(2)}=\mathcal{G}^{-1}=\mathcal{K}$ (Legendre duality). Appendix Z then supplies the QFI-rigidity and capacity-saturation input that fixes $\kappa^*_{\mathrm{bulk}}=1$ at the PCE-Attractor in the U(1) sector by obstructing the usual field-rescaling freedom. The PU natural-gradient RG flow corresponds to Wilsonian coarse-graining (Section X.2), while the open-system structure of ND-RID dynamics requires Schwinger-Keldysh closed-time-path formalism (Section X.5), encoding dissipation and noise consistent with the local second law.
+*   **Action Principles as Emergent Bookkeeping:** Action principles ($\delta S = 0$) are reframed as emergent descriptions of underlying optimization. Appendix X identifies the standard 1PI effective action of QFT, $\Gamma[\Phi]$, as the Legendre transform of the cumulant generating functional for the network's predictive statistics, providing a direct physical interpretation of the action principle as the macroscopic bookkeeping rule for the network's resource economy under the constraints of PCE. The Predictive Ward Identity (Theorem X.3) shows that the connected response kernel and the quadratic effective-action kernel are the QFI kernel written in dual variables, through the chain $\mathcal{G}=\mathcal{K}^{-1}$ (Ward identity) $\to$ $\Gamma^{(2)}=\mathcal{G}^{-1}=\mathcal{K}$ (Legendre duality). Appendix Q adds the Landauer-Noether closure layer: on the $\varepsilon=\ln2$ branch, the dense subgroup $G_L=\{e^{iN\ln2}:N\in\mathbb Z\}$ forces full effective $U(1)$ invariance for continuous finite-resolution response functionals, so the Noether current used in Appendix G is the closure of discrete irreversible phase updates rather than evidence for an ontologically fundamental phase continuum. Appendix Z then supplies the QFI-rigidity and capacity-saturation input that fixes $\kappa^*_{\mathrm{bulk}}=1$ at the PCE-Attractor in the U(1) sector by obstructing the usual field-rescaling freedom. The PU natural-gradient RG flow corresponds to Wilsonian coarse-graining (Section X.2), while the open-system structure of ND-RID dynamics requires Schwinger-Keldysh closed-time-path formalism (Section X.5), encoding dissipation and noise consistent with the local second law.
 
 *   **Connections to Information Processing:** PU provides a potential physical realization for "it from bit" ideas [Wheeler 1990], portraying reality as an efficient, self-regulating information processing system.
 
@@ -1242,7 +1265,13 @@ C_s(\beta-\alpha)xe^{-x},
 $$
 which tends to $0$ as $x\to\infty$. Hence for any fixed $b>0$ there is an admissible finite-complexity value with $C_{\mathrm{self}}A<b$. This contradicts any universal positive lower bound. A separate normalization theorem for $C_{\mathrm{self}}$ could define a different quantity, but that would be an additional hypothesis, not a consequence of the current PU structure. ∎
 
-*Finiteness of the Operationally Admissible Inflationary Model Space.* The finite channel capacity (Theorem E.2) and operational finite resolution (Theorem K.10.4), applied to the $\sim 1.3 \times 10^7$ independently measurable CMB modes (bounded by Silk damping and cosmic variance), imply that the space of inflationary models distinguishable by any finite observational protocol is finite. Models differing only in trans-horizon or pre-inflationary structure are operationally equivalent. The precise cardinality of the operationally admissible equivalence classes remains to be determined.
+*Finiteness of the Operationally Admissible Inflationary Model Space.* The finite channel capacity (Theorem E.2) and operational finite resolution (Theorem K.10.4), applied to the $\sim 1.3 \times 10^7$ independently measurable CMB modes (bounded by Silk damping and cosmic variance), imply that the space of inflationary models distinguishable by any finite observational protocol is finite. Models differing only in trans-horizon or pre-inflationary structure are operationally equivalent. The precise cardinality of the operationally admissible equivalence classes remains to be determined. Appendix U supplies a sharper branch-level discriminator inside this finite class: on the balanced Golay primordial branch, the Starobinsky scalar amplitude and tensor ratio obey the e-fold-independent product
+$$
+A_s r
+=
+\frac{A_Qe^{-22}}{4\pi^2},
+$$
+where $22=\dim_{\mathbb R}(\mathbb{CP}^{11})$ comes from the projective signal space of the 12-dimensional Golay signal subspace. Thus a future tensor measurement tests not only the Starobinsky branch but also the PU claim that the primordial amplitude scale is the physical instantiation of the $\mathbb{CP}^{11}$ complexity exponent.
 
 **Theorem 14.4b (Accessible Hidden-Variable Exclusion).** Let a hidden-variable completion for a binary outcome system be called *self-accessible* when the system whose next outcome is fixed by $\lambda$ has an MPU-admissible query operation $Q$ that returns the outcome bit $h(\lambda)$ before the system's next update, and when the system can condition that next update on $Q(\lambda)$. Every self-accessible completion is incompatible with SPAP.
 
@@ -1270,9 +1299,11 @@ On the balanced rate-$\tfrac{1}{2}$ Golay branch, the 24 QFI modes are organized
 
 **Implication:** The physical vacuum is not a blank substrate but an error-correcting structure. What is fixed by the framework is a rate-$\frac{1}{2}$ 12+12 organization of the 24-mode sector, not a literal identification of physical degrees of freedom as message bits versus parity bits. Physical law therefore includes built-in redundancy—the universe is structured to preserve predictive content against thermal and quantum noise.
 
+On the substrate-aligned residual branch this claim becomes experimentally sharper than ordinary code-performance benchmarking. The prediction is not merely that Golay codes perform well; standard coding theory already explains much of that. The discriminating prediction is that after ordinary device noise is modeled away, the irreducible residual correlated syndrome spectrum of a clean 24-mode interface should carry the Golay shell geometry itself: the leading nontrivial residual shell is the 759-octad shell, and its incidence statistics obey $253:77:21:5:1$.
+
 This resolves the "unreasonable stability" puzzle: Why do coherent structures persist despite quantum uncertainty? Because PCE optimization produces error correction as a necessary feature. Stability emerges from information-theoretic optimality.
 
-The rootlessness of the Leech lattice (Theorem Z.8c; Proposition Z.13a) reinforces this: the absence of vectors at squared norm 2 creates a gap between the vacuum and all excitations. Small perturbations cannot reach alternative configurations. The vacuum is stable because it is isolated—a direct consequence of the Golay code's minimum distance $d = 8$.
+The rootlessness of the Leech lattice (Theorem Z.8c; Proposition Z.13a) reinforces this: the absence of vectors at squared norm 2 creates a gap between the vacuum and all excitations. Small perturbations cannot reach alternative configurations. The vacuum is stable because it is isolated—a direct consequence of the Golay code's minimum distance $d = 8$. The same minimum-distance fact gives the spectroscopy discriminator: ordinary hardware channels may produce low-weight errors, but the exact substrate residual component has no native nonzero shell below weight 8.
 
 #### Mass Gap Robustness
 
@@ -1304,7 +1335,7 @@ The eight-fold over-determination of $M = 24$ (Theorem Z.12) reveals that mathem
 
 **Implication:** Stable physics requires hitting specific "critical values" where multiple optimization criteria converge. The framework predicts that universe-like structures exist only at discrete parameter values—not because of fine-tuning, but because optimization landscapes have isolated minima.
 
-This inverts the fine-tuning puzzle. The question is not "why are constants tuned?" but "what are the fixed points of PCE optimization?" The answer—$M = 24$, $D = 4$, $\varepsilon = \ln 2$—is derived, not assumed. Universes at other parameter values exhibit geometric frustration (Remark P.8.2): inability to satisfy mode-channel matching, producing no stable spacetime.
+This inverts the fine-tuning puzzle. The question is not "why are constants tuned?" but "what are the fixed points and active constraint prices of PCE optimization?" The discrete backbone values $M = 24$, $D = 4$, and $\varepsilon = \ln 2$ are derived, not assumed. On the regular effective-action branch, coupling strengths are likewise not free knobs: they are normalized shadow prices or active capacity-boundary coordinates of the relevant admissibility constraints (Theorem X.8c; Appendix Z, Corollary Z.8.2a). Universes at other parameter values exhibit geometric frustration (Remark P.8.2): inability to satisfy mode-channel matching, producing no stable spacetime.
 
 ### 14.5.3 The Unity of Mathematics and Physics
 

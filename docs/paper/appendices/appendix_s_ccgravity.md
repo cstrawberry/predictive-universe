@@ -556,37 +556,96 @@ $$
 
 ### S.7.3 Dephasing Rate on the Phase-Uncertainty / Environmental-Tracing Branch
 
-A deterministic, fully known gravitational phase shift $|\Delta\phi_{ij}^{(grav)}| \sim 1$ is a unitary phase rotation of the superposition $|i\rangle + |j\rangle$ and does not by itself suppress coherence: the off-diagonal density matrix elements rotate but do not decay. Genuine dephasing occurs on branches with an additional ingredient — either (a) the gravitational potential $\Phi$ (or equivalently $\Delta\tau_d$) fluctuates with variance $\mathrm{Var}(\Delta\phi)$ across unresolved degrees of freedom, (b) the spatial wavepacket components experience different gravitational potentials and become entangled with position degrees of freedom that are then traced out, or (c) the gravitational substrate couples to environmental degrees of freedom whose state is traced out per Zurek-style decoherence (Zurek, 1991, 2003).
+A deterministic, fully known gravitational phase shift $|\Delta\phi_{ij}^{(grav)}| \sim 1$ is a unitary phase rotation of the superposition $|i\rangle + |j\rangle$ and does not by itself suppress coherence: the off-diagonal density matrix elements rotate but do not decay. Genuine dephasing occurs only when the retained finite-resolution state does not resolve the relative chronometric phase. This happens on branches with an additional ingredient — either (a) the gravitational potential $\Phi$ (or equivalently $\Delta\tau_d$) fluctuates with variance $\mathrm{Var}(\Delta\phi)$ across unresolved degrees of freedom, (b) the spatial wavepacket components experience different gravitational potentials and become entangled with position degrees of freedom that are then traced out, (c) the gravitational substrate couples to environmental degrees of freedom whose state is traced out per Zurek-style decoherence (Zurek, 1991, 2003), or (d) the saturated chronometric ND-RID branch identifies unresolved proper-time phase slip with the minimal Markovian dephasing contraction rate.
 
-On the phase-uncertainty / environmental-tracing branch where one of (a)–(c) supplies a phase variance $\mathrm{Var}(\Delta\phi_{ij})$ over the coherence interval $\tau_c$, the off-diagonal coherence is suppressed by the factor $\exp(-\mathrm{Var}(\Delta\phi_{ij})/2)$, defining the dephasing rate:
+On the phase-uncertainty / environmental-tracing branch where one of (a)–(c) supplies a phase variance $\mathrm{Var}(\Delta\phi_{ij})$ over the coherence interval $\tau_c$, the off-diagonal coherence is suppressed by the factor $\exp(-\mathrm{Var}(\Delta\phi_{ij})/2)$, defining the variance dephasing rate:
 $$
-\Gamma_{\mathrm{deph}}^{(ij)} = \frac{1}{\tau_{\mathrm{deph}}} \sim \frac{\mathrm{Var}(\Delta\phi_{ij}^{(grav)})}{2\tau_c}.
+\Gamma_{\mathrm{var}}^{(ij)}
+=
+\frac{1}{\tau_{\mathrm{deph}}}
+=
+\frac{\mathrm{Var}(\Delta\phi_{ij}^{(grav)})}{2\tau_c}
+\quad
+\text{on the Gaussian phase-noise branch.}
 \tag{S.56}
 $$
 
-If the gravitational phase variance is parameterized by a phenomenological dephasing coefficient $K_{\mathrm{eff}}^{\mathrm{deph}}$ scaled by the energy splitting and the context power, one obtains:
+On the saturated chronometric ND-RID branch (d), define the chronometric phase-slip rate by
 $$
-\boxed{\Gamma_{\mathrm{deph}} = \frac{\Delta E}{\hbar} K_{\mathrm{eff}}^{\mathrm{deph}} P_{\mathrm{context}}}
+\omega_{\mathrm{ch}}^{(ij)}
+:=
+\frac{|\Delta\phi_{ij}^{(grav)}|}{\tau_c}.
+$$
+The branch postulate is the minimal Markovian identification
+$$
+\Gamma_{\mathrm{ch}}^{(ij)}:=\omega_{\mathrm{ch}}^{(ij)}.
+$$
+Using Equation S.54 gives
+$$
+\boxed{
+\Gamma_{\mathrm{ch}}^{(ij)}
+=
+\frac{|\Delta E_{ij}|}{\hbar}\frac{|\Delta\Phi|}{c^2}
+=
+\frac{|\Delta E_{ij}|}{\hbar}K_{\mathrm{eff}}P_{\mathrm{context}}
+}
 \tag{S.57}
 $$
+where the last equality uses $\Delta\tau_d/\tau_c=\Delta\Phi/c^2=K_{\mathrm{eff}}P_{\mathrm{context}}$ from Equations S.18-S.21. The deterministic tracked-phase branch has $\Gamma_{\mathrm{grav}}^{(ij)}=0$; the variance branch has $\Gamma_{\mathrm{grav}}^{(ij)}=\Gamma_{\mathrm{var}}^{(ij)}$; the saturated chronometric ND-RID branch has $\Gamma_{\mathrm{grav}}^{(ij)}=\Gamma_{\mathrm{ch}}^{(ij)}$.
 
-where $K_{\mathrm{eff}}^{\mathrm{deph}}$ is the dephasing-branch coefficient, model-distinct from the deterministic-phase coefficient $K_{\mathrm{eff}}$ of Equation S.20 unless an explicit branch identifies them. Without specifying which of (a)–(c) supplies the phase variance, the deterministic-phase analysis of S.7.1–S.7.2 does not by itself yield decoherence; it yields a coherent phase rotation that leaves the state pure.
-
-The effective coherence time is reduced from its baseline value $\tau_{coh}^0$ (determined by environmental decoherence sources) by the gravitational contribution:
+**Theorem S.7.3a (Chronometric Dephasing Branch and Clock-Gap Scaling).** On the saturated chronometric ND-RID branch, the residual gravitational dephasing rate for an internal transition $i\leftrightarrow j$ satisfies
 $$
-\frac{1}{\tau_{coh}^{eff}} = \frac{1}{\tau_{coh}^0} + \Gamma_{deco} = \frac{1}{\tau_{coh}^0} + \frac{\Delta E}{\hbar} K_{eff} P_{context}
+\frac{\hbar\Gamma_{\mathrm{ch}}^{(ij)}}{|\Delta E_{ij}|}
+=
+\frac{|\Delta\Phi|}{c^2}.
+$$
+Therefore two transitions measured in the same geometry obey
+$$
+\frac{\Gamma_{\mathrm{ch}}^{(ij)}}{\Gamma_{\mathrm{ch}}^{(kl)}}
+=
+\frac{|\Delta E_{ij}|}{|\Delta E_{kl}|}.
+$$
+If the same branch pair is engineered so that the mass-density difference is held fixed while the internal energy splitting is changed, this linear clock-gap law is a PU chronometric signature distinct from any model whose rate depends only on branch mass-density difference.
+
+*Proof.* Equation S.54 gives
+$$
+|\Delta\phi_{ij}^{(grav)}|
+=
+\frac{|\Delta E_{ij}|}{\hbar}\frac{|\Delta\Phi|}{c^2}\tau_c.
+$$
+Dividing by $\tau_c$ and applying the saturated chronometric branch identification $\Gamma_{\mathrm{ch}}^{(ij)}=|\Delta\phi_{ij}^{(grav)}|/\tau_c$ gives the first formula. For two transitions in the same geometry, the common factor $|\Delta\Phi|/c^2$ cancels, giving the ratio formula. ∎
+
+The effective coherence time is reduced from its baseline value $\tau_{coh}^0$ (determined by environmental decoherence sources) by the gravitational contribution selected by the branch:
+$$
+\frac{1}{\tau_{coh}^{eff}}
+=
+\frac{1}{\tau_{coh}^0}
++
+\Gamma_{\mathrm{grav}}^{(ij)}.
 \tag{S.58}
 $$
 
-For $\Gamma_{deco} \tau_{coh}^0 \ll 1$ (weak gravitational decoherence):
+For $\Gamma_{\mathrm{grav}}^{(ij)}\tau_{coh}^0\ll1$,
 $$
-\tau_{coh}^{eff} \approx \tau_{coh}^0 \left(1 - \Gamma_{deco} \tau_{coh}^0\right) = \frac{\tau_{coh}^0}{1 + K_{\Gamma} P_{context}}
+\tau_{coh}^{eff}
+\approx
+\tau_{coh}^0\left(1-\Gamma_{\mathrm{grav}}^{(ij)}\tau_{coh}^0\right)
+=
+\frac{\tau_{coh}^0}{1+\Gamma_{\mathrm{grav}}^{(ij)}\tau_{coh}^0}.
 \tag{S.59}
 $$
 
-where:
+On the saturated chronometric branch this can be written as
 $$
-K_{\Gamma} := \frac{\Delta E}{\hbar} K_{eff} \tau_{coh}^0 = \frac{4\pi G}{3c^4} (1 + 3w_c) \frac{\Delta E}{\hbar} \frac{r L_q \tau_c \tau_{coh}^0}{V_S}
+\Gamma_{\mathrm{grav}}^{(ij)}\tau_{coh}^0
+=
+K_{\Gamma}^{(ij)}P_{\mathrm{context}},
+\qquad
+K_{\Gamma}^{(ij)}
+:=
+\frac{|\Delta E_{ij}|}{\hbar}K_{\mathrm{eff}}\tau_{coh}^0
+=
+\frac{4\pi G}{3c^4}(1+3w_c)\frac{|\Delta E_{ij}|}{\hbar}\frac{rL_q\tau_c\tau_{coh}^0}{V_S}.
 \tag{S.60}
 $$
 
@@ -629,7 +688,7 @@ $$
 3. Energy density sources gravitational field $\Phi \sim G u_{context} r$ (Equation S.15)
 4. Gravitational gradient across quantum system creates $\Delta\Phi \sim g_{CC} L_q$ (Equation S.16)
 5. Time dilation gradient produces differential phase evolution $\Delta\phi \sim \Delta E \Delta\Phi/(c^2 \hbar)$ (Equation S.54)
-6. Phase gradient causes decoherence at rate $\Gamma_{deco} \sim \Delta E K_{eff} P_{context}/\hbar$ (Equation S.57)
+6. A tracked phase gradient causes coherent chronometric phase rotation; on the saturated chronometric ND-RID branch it causes residual dephasing at rate $\Gamma_{\mathrm{ch}}^{(ij)}=(|\Delta E_{ij}|/\hbar)K_{\mathrm{eff}}P_{\mathrm{context}}$ (Equation S.57)
 7. Decoherence reduces effective coherence time $\tau_{coh}^{eff}$ (Equation S.59)
 8. Reduced coherence time limits effective CC capability (Equation S.63)
 9. PCE optimization balances utility against both direct cost and gravitational self-limitation (Section S.4)
@@ -702,7 +761,7 @@ $$
 
 **Feedback constraint (reverse direction - Appendix S focus):**
 $$
-P_{context} \to u_{context} \to \Phi_{grav} \to \Delta\tau_d \to \Gamma_{deco} \to \tau_{coh}^{eff} \downarrow \to \text{CC}_{eff} \downarrow
+P_{context} \to u_{context} \to \Phi_{grav} \to \Delta\tau_d \to \{\Theta_{ij},\Gamma_{\mathrm{grav}}^{(ij)}\}_{\mathrm{branch}} \to \tau_{coh}^{eff} \downarrow \to \text{CC}_{eff} \downarrow
 $$
 
 **Complete cycle:**
@@ -843,7 +902,7 @@ This appendix has established the gravitational self-limitation mechanism for Co
 
 6. **Entanglement non-local influence** (S.6): Local gravitational field affects distant correlations without violating no-signaling, providing concrete realization of statistical FTL
 
-7. **Decoherence mechanism** (S.7): Time dilation gradient causes phase decoherence at rate $\Gamma_{deco} \sim (\Delta E/\hbar) K_{eff} P_{context}$, reducing effective coherence time and limiting CC
+7. **Chronometric phase/decoherence mechanism** (S.7): Time-dilation gradients always cause energy-gap-scaled phase rotation; on unresolved phase-noise or saturated chronometric ND-RID branches they produce residual dephasing, with the saturated branch obeying $\Gamma_{\mathrm{ch}}^{(ij)}=(|\Delta E_{ij}|/\hbar)K_{\mathrm{eff}}P_{\mathrm{context}}$
 
 8. **Integration with L** (S.8): Gravitational feedback complements electromagnetic dominance; both essential for complete framework consistency
 

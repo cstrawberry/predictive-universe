@@ -37,7 +37,8 @@ The framework’s predictions, derived from the discrete MPU invariants at the P
 | $n_s$ | $0.9663$ (conditional on U.20, U.44a, U.51 and U.26, U.41, U.48) | $0.9649 \pm 0.0042$ | $0.3\sigma$ |
 | $r$ | $0.0034$ (same conditions) | $< 0.036$ | $\checkmark$ |
 | $A_s$ | $2.08 \times 10^{-9}$ (same conditions) | $(2.10 \pm 0.03) \times 10^{-9}$ | $0.7\sigma$ |
-| $g_0$ (m/s$^2$) | Bridge-law value $(1.18 \pm 0.02)\times 10^{-10}$ | $\sim (1.2 \pm 0.2)\times 10^{-10}$ | consistent at current precision |
+| $A_s r$ | $A_Qe^{-22}/(4\pi^2)$; leading $A_Q=1$ gives $7.07\times10^{-12}$ | tensor measurement pending | product-lock target |
+| $g_0$ (m/s$^2$) | Bridge-law lock $c^2\sqrt{\Lambda}/8=(1.18 \pm 0.02)\times 10^{-10}$ | $\sim (1.2 \pm 0.2)\times 10^{-10}$ | consistent at current precision |
 | $\eta_B$ | $(6.2 \pm 0.5)\times 10^{-10}$ | $(6.12 \pm 0.04)\times 10^{-10}$ | $+0.2\sigma$ |
 | $\tau_*/T$ | $0.176$ | $0.176 \pm 0.001$ | matches |
 | $\bar{\theta}$ | $0$ (exactly) | $< 10^{-10}$ | $\checkmark$ |
@@ -47,7 +48,19 @@ The framework’s predictions, derived from the discrete MPU invariants at the P
 
 Experimental reference values in Table 15.1 are drawn from [NIST 2024] ($\alpha$ and related constants), [Planck Collaboration 2020a] (cosmological parameters and baryon density), [Particle Data Group 2024] (electroweak/particle-physics quantities), and galaxy-rotation empirical compilations such as [McGaugh, Lelli & Schombert 2016].
 
-Additionally, **Appendix H** fixes the galactic acceleration scale once the QFI-Gravity Bridge Law (Definition H.0, Theorems H.1a–H.3) is adopted: $g_0 = \eta' \cdot c^2\sqrt{\Lambda/3} = (1.18 \pm 0.02) \times 10^{-10}\,\text{m/s}^2$, where $\eta' = 3/(8\sqrt{3})$ is computed from PU constants within that normalization. Empirical extractions of the Milgrom scale carry $\mathcal{O}(10\text{–}20\%)$ systematics, so the result should be read as consistent at the current observational precision.
+Additionally, **Appendix H** fixes the galactic acceleration scale once the QFI-Gravity Bridge Law (Definition H.0, Theorems H.1a–H.3) is adopted:
+$$
+g_0
+=
+\eta'c^2\sqrt{\frac{\Lambda}{3}}
+=
+\frac{c^2\sqrt{\Lambda}}{8}
+=
+(1.18 \pm 0.02) \times 10^{-10}\,\text{m/s}^2,
+\qquad
+\eta'=\frac{3}{8\sqrt3}.
+$$
+Empirical extractions of the Milgrom scale carry $\mathcal{O}(10\text{–}20\%)$ systematics, so the result should be read as consistent at the current observational precision. The exact lock $8g_0=c^2\sqrt{\Lambda}$ gives an additional cross-domain falsification target: galaxy acceleration thresholds, baryonic surface-density thresholds, and lensing/dynamics response scales must share the same $\Lambda$-fixed acceleration scale on this branch.
 
 The framework's empirical comparison is reported as a status-resolved diagnostic. Aggregate chi-square values over theorem-level, branch-level, validation-level, and model-level rows must be labeled by the weakest included status and are not theorem-level prediction statistics when they include threshold-validation rows, transferred prefactors, bridge-law normalizations, or model kernels.
 

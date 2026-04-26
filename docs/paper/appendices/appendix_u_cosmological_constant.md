@@ -1778,6 +1778,135 @@ $$\boxed{A_s = 2.08 \times 10^{-9}}$$
 
 *Verification.* $e^{-22} = 2.790 \times 10^{-10}$; $3528/236.9 = 14.89$; $14.89 \times 1.395 = 20.8$. $\checkmark$
 
+**Corollary U.65a (Primordial Complexity Product Lock).** On the balanced Golay primordial branch of Definition U.18, Identification U.20, Corollary U.24, Identification U.51, Lemma U.64, and Theorem U.63, the scalar amplitude and tensor-to-scalar ratio satisfy
+$$
+\boxed{
+A_s r
+=
+\frac{A_Qe^{-22}}{4\pi^2}
+}.
+\tag{U.65a}
+$$
+In the leading one-loop branch $A_Q=1$,
+$$
+A_s r
+=
+\frac{e^{-22}}{4\pi^2}
+=
+7.0658\times10^{-12}.
+$$
+Equivalently, using a measured scalar amplitude as an external normalization input,
+$$
+r
+=
+\frac{A_Qe^{-22}}{4\pi^2 A_s}.
+\tag{U.65b}
+$$
+With $A_Q=1$ and $A_s=2.10\times10^{-9}$, this gives
+$$
+r=3.36\times10^{-3}.
+$$
+The product is independent of the e-fold count $N_e$; its exponential factor is fixed by
+$$
+22=2\kappa_Q=\dim_{\mathbb R}(\mathbb{CP}^{11}).
+$$
+
+*Proof.* Lemma U.64 gives
+$$
+A_s=\frac{N_e^2Q^2}{24\pi^2}.
+$$
+Theorem U.63 gives
+$$
+r=\frac{12}{N_e^2}.
+$$
+Multiplying these two identities cancels $N_e$:
+$$
+A_s r
+=
+\frac{N_e^2Q^2}{24\pi^2}\frac{12}{N_e^2}
+=
+\frac{Q^2}{2\pi^2}.
+$$
+Corollary U.24 gives
+$$
+Q^2=\frac12A_Qe^{-2\kappa_Q}.
+$$
+Identification U.20 gives $\kappa_Q=11$, hence
+$$
+Q^2=\frac12A_Qe^{-22}.
+$$
+Substitution yields
+$$
+A_s r
+=
+\frac{1}{2\pi^2}\frac12A_Qe^{-22}
+=
+\frac{A_Qe^{-22}}{4\pi^2}.
+$$
+The numerical value follows by inserting $A_Q=1$. Solving the same identity for $r$ gives Equation U.65b. ∎
+
+**Corollary U.65b (Three-Observable Primordial Lock).** At the displayed leading Starobinsky order of Theorems U.62, U.63, and U.67, the observables obey
+$$
+r
+=
+3(1-n_s)^2
++
+O(N_e^{-3}),
+\tag{U.65c}
+$$
+$$
+A_s(1-n_s)^2
+=
+\frac{A_Qe^{-22}}{12\pi^2}
++
+O\!\left(\frac{A_Qe^{-22}}{N_e}\right),
+\tag{U.65d}
+$$
+and
+$$
+\frac{dn_s}{d\ln k}
+=
+-\frac{r}{6}
++
+O(N_e^{-3}).
+\tag{U.65e}
+$$
+Thus the leading primordial branch locks the scalar amplitude, tensor amplitude, spectral tilt, and running to the same Golay signal-space complexity exponent $22$.
+
+*Proof.* Theorem U.62 gives
+$$
+1-n_s=\frac{2}{N_e}+O(N_e^{-2}).
+$$
+Squaring gives
+$$
+(1-n_s)^2=\frac{4}{N_e^2}+O(N_e^{-3}).
+$$
+Theorem U.63 gives $r=12/N_e^2$, so
+$$
+r=3(1-n_s)^2+O(N_e^{-3}).
+$$
+Multiplying the product-lock identity of Corollary U.65a by $(1-n_s)^2/r$ and using the previous relation gives
+$$
+A_s(1-n_s)^2
+=
+\frac{A_s r}{3}
++
+O\!\left(\frac{A_s}{N_e^3}\right)
+=
+\frac{A_Qe^{-22}}{12\pi^2}
++
+O\!\left(\frac{A_Qe^{-22}}{N_e}\right),
+$$
+where Lemma U.64 supplies $A_s=O(N_e^2e^{-22})$. Finally, Theorem U.67 gives
+$$
+\frac{dn_s}{d\ln k}=-\frac{2}{N_e^2}+O(N_e^{-3}),
+$$
+while Theorem U.63 gives $r=12/N_e^2$, hence
+$$
+-\frac{2}{N_e^2}=-\frac{r}{6}.
+$$
+This proves Equation U.65e. ∎
+
 ### U.24.5 Non-Gaussianity
 
 **Theorem U.66 (Local Non-Gaussianity).** For single-field slow-roll inflation:
@@ -1821,6 +1950,7 @@ The predictions are compared against Planck 2018 results (Planck Collaboration 2
 | $n_s$ | $0.9663 \pm 0.0011$ | $0.9649 \pm 0.0042$ | 0.3σ (diagnostic; includes $\Delta N_e$) |
 | $r$ | $0.0034 \pm 0.00023$ | <0.032 | consistent |
 | $A_s$ | $(2.08 \pm 0.14)\times10^{-9}\, f_{\text{amp}}^2$ | $(2.10 \pm 0.03)\times10^{-9}$ | consistent for $f_{\text{amp}}\approx1$ |
+| $A_s r$ | $(7.07 \pm 0.64)\times10^{-12}$ on the $A_Q=1\pm0.09$ branch | tensor measurement pending | product-lock target |
 | $f_{NL}$ | $0.0140 \pm 0.0005$ | -0.9 ±5.1 | consistent |
 | $dn_s/d\ln k$ | $-(5.7 \pm 0.4)\times10^{-4}$ | -0.0045 ±0.0067 | consistent |
 
@@ -1837,8 +1967,15 @@ The predictions are compared against Planck 2018 results (Planck Collaboration 2
 2. **Spectral index**: $n_s \notin [0.9630,\,0.9696]$ at $>3\sigma$ (prediction: $n_s = 0.9663 \pm 0.0011$)
 3. **Local non-Gaussianity**: $f_{NL}^{\text{local}} \notin [0.0125,\,0.0155]$ at $>3\sigma$ (prediction: $0.0140 \pm 0.0005$)
 4. **Running**: $dn_s/d\ln k \notin [-(6.9\times10^{-4}),\,-(4.5\times10^{-4})]$ at $>3\sigma$ (prediction: $-(5.7 \pm 0.4)\times10^{-4}$)
+5. **Primordial product lock**: after applying the stated $A_Q$ branch window, the measured product $A_s r$ lies outside
+$$
+A_s r
+=
+\frac{A_Qe^{-22}}{4\pi^2}.
+$$
+On the leading $A_Q=1$ branch, the central value is $7.0658\times10^{-12}$.
 
-If $N_e$ differs from 59.4, replace the central values using $n_s \simeq 1 - 2/N_e$, $r \simeq 12/N_e^2$, $dn_s/d\ln k \simeq -2/N_e^2$, $f_{NL}^{\text{local}} \simeq 5/(6N_e)$, and $n_t \simeq -3/(2N_e^2)$, and propagate the corresponding theory windows.
+If $N_e$ differs from 59.4, replace the central values using $n_s \simeq 1 - 2/N_e$, $r \simeq 12/N_e^2$, $dn_s/d\ln k \simeq -2/N_e^2$, $f_{NL}^{\text{local}} \simeq 5/(6N_e)$, and $n_t \simeq -3/(2N_e^2)$, and propagate the corresponding theory windows. The product-lock identity $A_s r=A_Qe^{-22}/(4\pi^2)$ is unchanged by this replacement because $N_e$ cancels between $A_s$ and $r$.
 
 These criteria are testable by CMB-S4, LiteBIRD, and future 21-cm observations.
 
@@ -2066,6 +2203,7 @@ With the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$, this g
 | $n_s$ | $0.9663$ | $0.9649 \pm 0.0042$ |
 | $r$ | $0.0034$ | $< 0.036$ |
 | $A_s$ | $2.08 \times 10^{-9}$ | $(2.10 \pm 0.03) \times 10^{-9}$ |
+| $A_s r$ | $7.07\times10^{-12}$ on the leading $A_Q=1$ branch | tensor measurement pending |
 
 **Structural Unity.** Both sectors derive from the Golay code $[24, 12, 8]$:
 

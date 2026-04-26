@@ -10,7 +10,7 @@ The framework's core insight—that physical law emerges from the operational re
 
 **Puzzle:** The Standard Model of particle physics and general relativity contain approximately 25 fundamental parameters (masses, coupling constants, mixing angles) whose specific numerical values are precisely measured experimentally but are not derived from first principles within standard frameworks. Why these particular values?
 
-**PU Resolution:** The framework organizes specific values of fundamental constants into branch-separated derivation chains, all rooted in the dynamically determined equilibrium state of the MPU network governed by minimizing the global PCE Potential $V(x)$ (Appendix D, Definition D.1) and satisfying derived constraints. These equilibrium parameters are shaped by the underlying MPU properties ($C_{op}, K_0, \varepsilon$, ND-RID dynamics, interaction costs $\Phi$) and environmental factors. The constants below carry the branch labels of their source appendices: some are theorem-level on the minimal PCE branch, others are canonical-branch predictions, calibration/exchange-rate definitions, or validation-level quantities conditional on the branch closures specified in their source appendices. The branch table at the end of this section consolidates these distinctions. In the per-quantity discussions, terminology such as "rigorously derived" refers to the within-branch dependence of each chain rather than an unconditional, branch-independent claim.
+**PU Resolution:** The framework organizes specific values of fundamental constants into branch-separated derivation chains, all rooted in the dynamically determined equilibrium state of the MPU network governed by minimizing the global PCE Potential $V(x)$ (Appendix D, Definition D.1) and satisfying derived constraints. Appendix X makes the coupling sector precise through Constraint-Coupling Duality: when a constant is the coefficient of an active physical admissibility constraint, its canonical coefficient is the relevant KKT shadow price after the branch normalization map; when the branch uses a rate coordinate, the observed coupling is the normalized active boundary coordinate together with the associated shadow price. These equilibrium parameters are shaped by the underlying MPU properties ($C_{op}, K_0, \varepsilon$, ND-RID dynamics, interaction costs $\Phi$) and environmental factors. The constants below carry the branch labels of their source appendices: some are theorem-level on the minimal PCE branch, others are canonical-branch predictions, calibration/exchange-rate definitions, or validation-level quantities conditional on the branch closures specified in their source appendices. The branch table at the end of this section consolidates these distinctions. In the per-quantity discussions, terminology such as "rigorously derived" refers to the within-branch dependence of each chain rather than an unconditional, branch-independent claim.
 
 **Invariant speed of light $c$:** Emerges from the finite minimum MPU processing time $\tau_{min} > 0$ (Theorem 29) and the effective microscopic length scale $\ell_0$ (Definition 35), with $c \approx \ell_0 / \tau_{min}$ (Theorem 46). These scales are set by the minimal operational requirements of the MPU cycle.
 
@@ -32,7 +32,7 @@ $$\boxed{D = 4}$$
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000060}$$
 where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The derivation proceeds through a seven-stage chain: MPU invariants ($d_0 = 8$, $\varepsilon = \ln 2$) → active kernel dimension $a = 2$ via the Physical Instantiation Principle (Theorem Z.1) → interface mode count $M = 2ab = 24$ (Theorem Z.5) → PCE-Attractor orbit $\mathrm{Gr}(2,8)$ → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1–Z.21). The second-order correction arises from the Grassmannian curvature sector (Theorem Z.24; Lemma Z.24a) and minimal holonomy (Lemma Z.14), and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension $D = 4$ from the mode-channel correspondence (Theorems Z.10–Z.11), while Appendix G supplies an independent stability-based reinforcement.
 
-**Strong coupling $g_s$ and weak coupling $g_w$:** These relate to the effective "stiffness" or cost coefficients ($\kappa_F$ in Equation G.5.2) in the emergent gauge field actions (Appendix G), determined by PCE optimization balancing the benefit of predictive coherence provided by gauge fields against their resource cost. The unified gauge structure $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ with dimension 12 emerges from the thermodynamically optimal partition $H_0 \cong \mathbb{C}^2 \oplus \mathbb{C}^6$ (Appendix G, Proposition G.M1; Appendix Z, Theorem Z.1). At the PCE-optimal attractor, the unified coupling satisfies $g_U^2 = \pi/6$ with $\alpha_U^{-1} = 24$ (Appendix T, Theorem T.39a), derived from first principles via Bures holonomy on $\mathrm{Gr}(2,8)$.
+**Strong coupling $g_s$ and weak coupling $g_w$:** These relate to the effective stiffness or inverse-stiffness coefficients in the emergent gauge field actions (Appendix G, Equation G.5.2). In the stiffness convention of Theorem X.8c, the coefficient $1/g_i^2$ is the normalized shadow price of maintaining the corresponding gauge-coherence constraint; in the interaction-strength convention, $g_i^2$ is the reciprocal normalized price after the matching factors are applied. The unified gauge structure $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ with dimension 12 emerges from the thermodynamically optimal partition $H_0 \cong \mathbb{C}^2 \oplus \mathbb{C}^6$ (Appendix G, Proposition G.M1; Appendix Z, Theorem Z.1). At the PCE-optimal attractor, the unified coupling satisfies $g_U^2 = \pi/6$ with $\alpha_U^{-1} = 24$ (Appendix T, Theorem T.39a), derived from first principles via Bures holonomy on $\mathrm{Gr}(2,8)$.
 
 The hierarchy among couplings at a common fundamental scale arises from the information-theoretic costs of maintaining gauge coherence on the noisy MPU substrate. Modeling this as continuous-time quantum error correction, the minimal Predictive Physical Complexity $C_P(G, g)$ required to maintain coherence scales polynomially with the group's self-interaction complexity, quantified by the quadratic Casimir of the adjoint representation $C_2(\text{Adj})$. For $U(1)$, $C_2(\text{Adj}) = 0$; for $SU(2)$, $C_2(\text{Adj}) = 2$; for $SU(3)$, $C_2(\text{Adj}) = 3$. PCE optimization balancing coherence cost against predictive benefit predicts the UV hierarchy $g_1^* > g_2^* > g_3^*$, which standard renormalization group evolution transforms into the observed low-energy hierarchy $g_3 > g_2 > g_1$.
 
@@ -165,7 +165,26 @@ $$
 $$
 which reproduces the Page-curve behavior: growth until $d_E(t)\sim d_L(t)$ and subsequent decrease. $\square$
 
-**Current Status:** The conceptual framework for black hole information conservation is established, with key components (SPAP dynamics, thermodynamic bounds, perspectival encoding, Page curve consistency) rigorously derived. However, detailed calculations of information extraction rates, explicit construction of the Perspectival Information Channel capacity as a function of observer resources, and precise comparison with holographic entropy calculations (Ryu-Takayanagi formula, quantum extremal surfaces) remain to be completed. This represents a promising avenue for future theoretical development, building on the solid foundation of reflexive computational costs and thermodynamic channel limits established in the framework.
+**Corollary K.3a (Black-Hole Edge Modes as Predictive Anomaly Inflow).** On a horizon branch where exterior predictive descriptions are quotiented by gauge/frame redundancies but interior degrees of freedom are operationally inaccessible, exterior descent is consistent only when the total anomaly class cancels across the horizon interface:
+$$
+[\mathcal A_{\mathrm{outside}}]
++
+[\mathcal A_{\mathrm{horizon}}]
++
+[\mathcal A_{\mathrm{interface}}]
+=
+0.
+$$
+The horizon edge code is therefore the minimal boundary completion that makes exterior prediction descend consistently. When the boundary completion saturates the Appendix E area-law channel density, its number of distinguishable edge states is bounded by
+$$
+\dim\mathcal H_{\mathrm{edge}}
+\le
+\exp\left(\frac{\mathcal A}{4L_P^2}\right).
+$$
+
+*Proof.* Exterior observers identify gauge/frame-related descriptions as redundancies. If the exterior sector alone has nonzero anomaly class, its predictive functional does not descend to the quotient. Adding horizon/interface degrees of freedom multiplies the exterior generating functional by boundary factors, so anomaly phases add. Descent holds exactly when the displayed sum vanishes. The channel bound is Appendix E's area-law capacity bound applied to the edge subsystem on the horizon cross-section. ∎
+
+**Current Status:** The conceptual framework for black hole information conservation is established, with key components (SPAP dynamics, thermodynamic bounds, perspectival encoding, Page curve consistency, and the horizon edge-inflow consistency condition) rigorously derived. However, detailed calculations of information extraction rates, explicit construction of the Perspectival Information Channel capacity as a function of observer resources, and precise comparison with holographic entropy calculations (Ryu-Takayanagi formula, quantum extremal surfaces) remain to be completed. This represents a promising avenue for future theoretical development, building on the solid foundation of reflexive computational costs and thermodynamic channel limits established in the framework.
 
 
 ## K.4 Arrow of Time and Temporal Asymmetry
@@ -1071,6 +1090,24 @@ $$
 then $\mathfrak C$ cannot be physically instantiated as an exact object by any single finite-resource MPU instantiation. It can enter PU only through finite-resolution quotients, effective closures, or coarse-grained descriptions whose required $N_{\mathfrak C}(\nu)$ is finite at the resolution actually used.
 
 In particular, an exact real-number continuum, an exact uniformly refinable positive-dimensional Lie symmetry, a continuum of ontic branch labels, or a continuum field with independently meaningful sub-$\delta$ modes is not a physically instantiated PU object. Such structures are mathematical completions of finite operational data.
+
+**Corollary K.10.3b (Operational Continuum as a Universality Class).** Let $\{\mathcal N_i,\mathcal E_i,V_i\}_{i\in I}$ be finite MPU-network descriptions with common operational resolution $\delta$ and let
+$$
+\mathcal O_{\le\delta}
+$$
+be the admissible observable algebra at that resolution. If for every pair $i,j$ and every $O\in\mathcal O_{\le\delta}$ the induced outcome distributions agree up to operational tolerance,
+$$
+d_{\mathrm{TV}}\!\left(P_i(O),P_j(O)\right)\le \epsilon_\delta,
+$$
+then the descriptions belong to the same operational-continuum universality class:
+$$
+[\mathcal N_i]_{\mathrm{cont}}
+=
+[\mathcal N_j]_{\mathrm{cont}}.
+$$
+The emergent manifold, metric, and AQFT net are therefore representatives of a finite-resolution closure class rather than an ontological $\delta\to0$ limit.
+
+*Proof.* MPU-equivalence at resolution $\delta$ is defined by equality of all admissible predictive distributions up to the readout tolerance. The displayed total-variation bound is exactly that equivalence criterion for the observable algebra $\mathcal O_{\le\delta}$. Quotienting finite descriptions by this operational equivalence produces classes. Any continuum structure assigned to the class is determined only by the shared predictions of its representatives, not by sub-$\delta$ distinctions. Hence the continuum is a universality class of finite closures. ∎
 
 *Proof.* Fix any finite-resource MPU instantiation or protocol $\mathcal P$ on a bounded operational domain. It uses finitely many update cycles and finitely many finite-dimensional channels. Since each update requires at least $\tau_{\min}>0$ (Theorem 29), the number of update layers in any finite duration is finite. Since each channel has finite capacity $C_{\max}<\ln d_0$ (Theorem E.2), the total distinguishability budget of $\mathcal P$ is bounded by some finite number
 $$

@@ -379,7 +379,16 @@ The Principle of Compression Efficiency (PCE) dictates that the mechanism for em
 
 *   **At Cluster Scales:** In the deep potential wells of clusters, a large change in $G$ is ruled out by global cosmological constraints (e.g., from the CMB). PCE therefore selects a different, globally-consistent mechanism: a "Source Modification." This manifests as a non-local "predictive matter" response (Equation I.7), a collective reconfiguration of the MPU substrate that contributes to the stress-energy tensor only in these extreme environments.
 
-This two-tiered model provides a unified phenomenological description of dark-matter-like behavior across scales while remaining consistent with cosmological constraints. Within the QFI linear-response bridge-law normalization of Appendix H (Definition H.0), the efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed by PU constants, yielding the bridge-law prediction $g_0 = \eta' c^2\sqrt{\Lambda/3} \approx 1.18 \times 10^{-10}$ m/s$^2$—consistent with the empirical galactic acceleration scale at current observational precision and involving no fitted parameters once that normalization is adopted.
+This two-tiered model provides a unified phenomenological description of dark-matter-like behavior across scales while remaining consistent with cosmological constraints. Within the QFI linear-response bridge-law normalization of Appendix H (Definition H.0), the efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed by PU constants, yielding the bridge-law prediction
+$$
+g_0
+=
+\eta'c^2\sqrt{\frac{\Lambda}{3}}
+=
+\frac{c^2\sqrt{\Lambda}}{8}
+\approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}.
+$$
+This is the Cosmological Acceleration Lock: the low-acceleration dark-sector threshold is tied to the de Sitter vacuum curvature scale and involves no fitted acceleration parameter once that normalization is adopted.
 
 **Theorem 12.3 (Universality at fixed scale).** Let
 $$

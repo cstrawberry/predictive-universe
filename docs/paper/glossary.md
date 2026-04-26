@@ -244,6 +244,65 @@ where $Q_{\mathrm{src}}$ is the excess heat from the SPAP-dependent part of refl
 
 *   **Principle of Physical Instantiation (PPI):** (Appendix P) Any abstract computational/logical requirement realized by a finite physical system incurs irreducible thermodynamic costs and hence is subject to optimization (PCE). Physical laws reflect resource-efficient embodiments of these instantiated logical structures.
 
+
+*   **Predictive Curvature Principle:** (Theorem 47, Theorem G.4b, Corollary G.4b.1, Corollary X.8b) On the regular product-bundle branch, local predictive frames form the joint spin-internal bundle $\mathcal W=S\otimes E$ with predictive connection $D^{\mathrm{pred}}=\nabla^{\mathrm{spin}}\otimes 1+1\otimes\nabla^{\mathrm{int}}$. Its curvature
+$$
+\mathcal F^{\mathrm{pred}}=R(\Omega)\otimes 1+1\otimes F(A^{\mathrm{int}})
+$$
+is the loop-closure obstruction for predictive-frame transport.
+
+*   **Predictive Price Principle (Constraint-Coupling Duality):** (Appendix X, Theorem X.8c; Appendix Z, Corollary Z.8.2a) On regular constrained PCE branches, the coefficient of an active physical admissibility constraint is its KKT shadow price after the branch normalization map. In canonical stiffness conventions $g_A^{-2}=\mathcal N_A\lambda_A$; in rate-coordinate branches, the active boundary coordinate $u_A^*$ and Ward/interface normalization give $\alpha_A=u_A^*/(4\pi\kappa_A)$, while the multiplier gives the marginal value of relaxing the capacity bound.
+
+*   **Predictive Anomaly Descent/Inflow Principle:** (Appendix X, Theorem X.8d; Corollary X.8d.1) Transformations treated as predictive-frame redundancies must have vanishing total anomaly class so that the predictive functional descends to the quotient of physically equivalent descriptions. Bulk anomaly classes may be canceled by boundary, horizon, or interface classes. A nonzero anomaly for a global current not treated as a redundancy is instead a physical update channel.
+
+*   **Landauer-Noether Closure Principle:** (Appendix Q, Theorem Q.0.7d2; Corollary Q.0.7d3) On the Landauer-saturating branch, the dense subgroup $G_L=\{e^{iN\ln2}:N\in\mathbb Z\}\subset U(1)$ upgrades discrete SPAP/Landauer phase invariance of continuous finite-resolution response functionals to full effective $U(1)$ invariance and the corresponding Noether current.
+
+*   **Chronometric Curvature-Dephasing Principle:** (Section 11.7.2, Theorem 47c; Appendix S, Theorem S.7.3a) Internal energy splittings act as clocks for proper-time mismatch. The coherent phase-rate invariant is $\mathcal D_{ij}^{\phi}=\hbar|\dot\Theta_{ij}|/|\Delta E_{ij}|=|\Delta\Phi|/c^2$. On the saturated chronometric ND-RID dephasing branch, $\mathcal D_{ij}^{\Gamma}=\hbar\Gamma_{\mathrm{ch}}^{(ij)}/|\Delta E_{ij}|=|\Delta\Phi|/c^2$.
+
+*   **Landauer Horizon Spectroscopy:** (Appendix Q, Definition Q.0.7u, Proposition Q.0.19, Proposition Q.0.20, Corollaries Q.0.20a–Q.0.20c; Section 13.8.4) Conditional horizon-transfer branch on which resonant closed-loop horizon phases in $x=\hbar\omega/(k_B T_H)$ satisfy $x\equiv N\ln2\pmod{2\pi}$.
+
+*   **Golay Noise Spectroscopy:** (Appendix Z, Corollary Z.13b.1, Definition Z.13b.2, Theorem Z.13b.3; Section 13.9, Protocol 4.4) Conditional residual-noise branch on which irreducible correlated 24-mode residual syndromes decompose into Golay shells after ordinary device-local noise is separated. The leading octad statistic satisfies $\mathcal R_8=1+968\eta_8$ and the octad incidence sequence is $253:77:21:5:1$.
+
+*   **Cosmological Acceleration Lock:** (Appendix H, Corollary H.1; Appendix I, Corollary I.3a) On the QFI-gravity bridge representative of Definition H.0 and Equation H.4b,
+$$
+g_0=\frac{c^2\sqrt{\Lambda}}{8},
+\qquad
+\Sigma_\dagger=\frac{c^2\sqrt{\Lambda}}{16\pi G}.
+$$
+
+*   **Primordial Complexity Product Lock:** (Appendix U, Corollaries U.65a–U.65b; Section 13.10.6) On the balanced Golay primordial branch and Starobinsky effective branch,
+$$
+A_s r=\frac{A_Qe^{-22}}{4\pi^2},
+$$
+where $22=\dim_{\mathbb R}(\mathbb{CP}^{11})$.
+
+*   **Vacuum–Electroweak Complexity Product Lock:** (Appendix T, Corollary T.62c) On the Appendix U five-mode reference branch and Appendix T electroweak determinant branch,
+$$
+(\Lambda L_P^2)(v/M_{Pl})^2
+=
+8\pi A_{\mathrm{eff}}A_{EW}^2e^{-360}.
+$$
+
+*   **Electroweak–Baryon Square-Root Lock:** (Appendix Y, Corollary Y.11.4b; Appendix T, Corollary T.63.2) On the canonical baryogenesis branch,
+$$
+\eta_B
+=
+\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}2^{-1/3}
+\sqrt{\frac{v}{A_{EW}M_{Pl}}}.
+$$
+
+*   **Proper-Acceleration Entropy Drag:** (Appendix N, Corollary N.12b) UCT branch on which a system undergoing proper acceleration has excess predictive-refresh power $P_{\mathrm{UCT}}=q_{\mathrm{act}}cm_S|a|/(2\pi)$ and dimensionless observable $\mathcal Q_a=2\pi P_{\mathrm{excess}}/(c m_S|a|)=q_{\mathrm{act}}$.
+
+*   **A2 Neutrino Cosmology Closure:** (Appendix T, Corollary T.24.16a) Anchored Majorana branch on which $m_3/m_2=e^{\sqrt3}$ and $m_3/m_1=e^{3\sqrt3}$ lock oscillation data, cosmological mass sum, and direct beta endpoint mass:
+$$
+\Sigma_\nu=58.2\,\mathrm{meV},
+\qquad
+m_\beta=8.85\,\mathrm{meV}.
+$$
+
+*   **Scalar-Channel Hyperon Spin Filter:** (Appendix Z, Corollary Z.8k.1a) Collider-level scalar $0^{++}$ branch on which the local $\Lambda\bar\Lambda$ spin-correlation slope is nonzero in the short-range charge-conjugate channel while long-range, same-sign, and spin-zero controls vanish.
+
+
 *   **Postulate 1 (Minimal Awareness):** (Section 7.1.2) Interpretive postulate linking the operational $C_{op}$ cycle of an MPU to the most basic form of awareness.
 
 *   **Postulate 2 (Causality Definition):** (Section 10.1.1) Operational definition of causality preservation requiring the impossibility of deterministic FTL signaling.

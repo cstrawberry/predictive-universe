@@ -104,7 +104,7 @@ the resulting gravitational backreaction induces a time-dilation $\Delta\tau_d$ 
 $$
 \Delta\tau_d = K\,P_{\text{context}},
 $$
-with geometry constant $K$ defined in Appendix S (Equation S.19). This reduces the achieved $\text{CC}_{eff}$ (Equation S.21), with decoherence rate $\Gamma_{deco} = (\Delta E/\hbar) K_{eff} P_{context}$ (Equation S.57), further limiting any practical advantage.
+with geometry constant $K$ defined in Appendix S (Equation S.19). This reduces the achieved $\text{CC}_{eff}$ (Equation S.21). A fully tracked gravitational phase remains coherent, while unresolved chronometric phase on the saturated ND-RID branch gives the residual dephasing rate $\Gamma_{\mathrm{ch}}^{(ij)}=(|\Delta E_{ij}|/\hbar)K_{\mathrm{eff}}P_{\mathrm{context}}$ (Equation S.57), further limiting any practical advantage on that branch.
 
 **10.4 Consistency Analysis: Statistical Influence vs. Causality**
 
