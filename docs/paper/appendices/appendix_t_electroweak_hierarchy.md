@@ -36,7 +36,7 @@ The appendix uses a three-level dictionary to separate the PU fixed point from p
   $$
   D^{\mathrm{PCE}}_{\widetilde X}\longmapsto F=(F_C,F_W,F_Y)\longmapsto \Delta=TF,
   $$
-  with $T$ the Dynkin-index matrix of Remark T.17a.3 and with tails certified by Corollary T.69.1. Remark T.17a.4 and Proposition T.17a.5 remain the local no-go showing that a sector-independent affine local truncation cannot replace the global sector-resolving block sum, while Theorem T.78.2 records that the current canonical ledger does not yet determine the missing spectral branch data needed to execute the global block sum. Equivalently,
+  with $T$ the Dynkin-index matrix of Remark T.17a.3 and with tails certified by Corollary T.69.1. Remark T.17a.4 and Proposition T.17a.5 remain the local no-go showing that a sector-independent affine local truncation cannot replace the global sector-resolving block sum. Theorem T.78.2 isolates the missing spectral branch data, and Theorem T.78.5 closes the current-framework status negatively: the canonical ledger does not supply a PU-internal branch package determining a theorem-level numerical tuple. Equivalently,
   $$
   Z_i = 1+\frac{\Delta_i}{24},
   $$
@@ -67,7 +67,7 @@ The following constants are derived in the main text and Appendix Z:
 |$(\kappa_1,\kappa_2,\kappa_3)$|$(0.695,\,0.729,\,1.140)$|Branch optimum on the imposed $c_\ell/c_d = 8/3$ normalization branch |Corollary T.34.2 (with imposed Corollary T.34.1) |
 |$g_U^2$ |$\pi/6$ |PU-normalized gauge coefficient squared |Theorem T.39a |
 |$\alpha_U^{-1}$ |$24$ |Inverse PU fine structure $\alpha_U=g_U^2/(4\pi)$ |Theorem T.39a |
-|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |$(15.14,\,20.94,\,18.41)$ (validation target tuple)|Flag-lift spectral threshold shifts above $\alpha_U^{-1}=24$; the displayed tuple is used only to compare with the forward $\mathrm{MS2}_{\mu_G}$ block-sum calculation after $D^{\mathrm{PCE}}_{\widetilde X}$, the Golay/parity construction, the structural parameters, and the tail certificate are fixed. Remark T.17a.4 and Proposition T.17a.5 show that any sector-independent local affine truncation still forces $F_Y>0$, so the operative object is the global sector-resolving spectral functional on $\widetilde X$ rather than the local affine truncation. Theorem T.78.2 states the current non-closure of those missing branch data in the canonical ledger, and Theorem T.78.5 proves that no PU-internal branch package supplies them from the current framework |Definition T.17a / Remark T.17a.4 / Prop. T.17a.5 / Theorem T.18 / Theorem T.78.2 / Theorem T.78.5 |
 
 The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connects the PU fixed point to SM effective theory. Remark T.62.1 fixes the exponent $9$ from confinement complexity, and Theorem T.64a identifies this matching scale with the seesaw scale: $\mu_G = M_R$ (Section T.23).
 
@@ -1174,7 +1174,7 @@ Z_2=1+\frac{20.94}{24}\approx1.8725,
 Z_3=1+\frac{18.41}{24}\approx1.7671.
 }
 $$
-Remark T.17a.4 and Proposition T.17a.5 give a theorem-level local no-go: once the positive color and weak validation channels are matched, every sector-independent affine local truncation still forces $F_Y>0$, whereas the validation tuple would require $F_Y=-8.9775$. The lifted threshold sector is therefore evaluated by the sector-resolving global $\mathrm{MS2}_{\mu_G}$ block functional of Definition T.17a, Convention T.69a, and Theorem T.70. Proposition T.17a.3a fixes the canonical base-to-lift identification of the local part of the threshold sector, Theorem T.69 fixes the local/global split, and Theorem T.78 records the determinacy of any completed flag-lift spectral problem. Theorem T.78.2 records the complementary status boundary: the present canonical ledger has not yet fixed the branch data needed to execute that completed spectral problem without additional input. On the minimal residual ledger $\delta_i=0$ of Definition T.19a, one-loop SM running (Theorem T.15) gives
+Remark T.17a.4 and Proposition T.17a.5 give a theorem-level local no-go: once the positive color and weak validation channels are matched, every sector-independent affine local truncation still forces $F_Y>0$, whereas the validation tuple would require $F_Y=-8.9775$. The lifted threshold sector is therefore evaluated by the sector-resolving global $\mathrm{MS2}_{\mu_G}$ block functional of Definition T.17a, Convention T.69a, and Theorem T.70. Proposition T.17a.3a fixes the canonical base-to-lift identification of the local part of the threshold sector, Theorem T.69 fixes the local/global split, and Theorem T.78 records the determinacy of any completed flag-lift spectral problem. Theorem T.78.2 records the complementary status boundary, and Theorem T.78.5 proves that the present canonical ledger has no PU-internal branch package supplying the missing data needed to execute that completed spectral problem. Thus the displayed numerical run remains validation-level unless a separate appended spectral branch extension is fixed before comparison and evaluated forward. On the minimal residual ledger $\delta_i=0$ of Definition T.19a, one-loop SM running (Theorem T.15) gives
 $$
 \alpha_i^{-1}(M_Z)=Z_i\alpha_U^{-1}+\frac{b_i}{2\pi}\ln\!\left(\frac{\mu_G}{M_Z}\right),
 \qquad i=1,2,3.
@@ -1535,13 +1535,13 @@ so for the numerical target value $\Delta_3=18.41$ of Theorem T.18, equivalently
 
 - "Derived" — derived within the adopted Appendix T branches (Golay rate-½, weak-left projection, row-pair, Bures-gauge holonomy normalization, Yukawa probability-overlap, $E_8$ triad selection, generation-internal tensor factorization, Majorana A₂, triplet-projection exponent, PMNS Berry-loop, and the controlling branch package of Theorem T.79), not necessarily unconditional theorem-level output from the foundational PU axioms alone.
 
-- "Validation" — validation-run output produced by the displayed validation tuple $\Delta^{\mathrm{val}}$ in conjunction with SM running. Such entries remain validation targets rather than derived predictions until the global flag-lift threshold problem is fixed by the data specified in Theorem T.78.2.
+- "Validation" — validation-run output produced by the displayed validation tuple $\Delta^{\mathrm{val}}$ in conjunction with SM running. Such entries remain validation targets rather than derived predictions under the canonical minimal ledger. Theorem T.78.5 closes the current-framework flag-lift gate negatively; only a separately appended spectral branch extension fixed before validation comparison and evaluated by Theorem T.78 can supply a positive theorem-level tuple.
 
 - "Conditional" or "Branch optimum" — the entry depends on an explicitly imposed normalization or branch input (e.g., $c_\ell/c_d = 8/3$ from Corollary T.34.1).
 
 - "Imposed" or "Constraint" — the entry is supplied as a branch input rather than derived (e.g., the lepton-to-quark tilt normalization).
 
-Theorems T.78.2, T.78.3, and T.79 are the controlling branch-ledger sections for the entire Appendix T quantitative ledger; entries in summary tables that omit branch labels or use unqualified "Derived" are governed by this convention.
+Theorem T.78.2, Corollary T.78.3, Theorem T.78.5, and Theorem T.79 are the controlling branch-ledger sections for the entire Appendix T quantitative ledger; entries in summary tables that omit branch labels or use unqualified "Derived" are governed by this convention.
 
 ### T.19.1 Derived Quantities
 
@@ -1551,8 +1551,8 @@ Theorems T.78.2, T.78.3, and T.79 are the controlling branch-ledger sections for
 |$A_{EW}$ |One-loop determinant model |1.084 |— |Model layer |
 |$v$ |$A_{EW} e^{-\kappa_{EW}} M_{Pl}$ |252 GeV |246 GeV |2.3% |
 |$\sin^2\theta_W^{(0)}$ |PU-normalized fixed-point value |$3/8$ |— |Exact |
-|$\sin^2\theta_W(\mu_G)$ |matching with lifted spectral thresholds |$\frac{3Z_2}{3Z_2+5Z_1}$ with $Z_i=1+\Delta_i/24$ |(matching-scale input) |Derived |
-|$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ validation tuple reproducing the previous matching outputs if obtained forward; Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$, so the tuple must be compared against the global sector-resolving $\mathrm{MS2}_{\mu_G}$ block functional rather than inserted as input |— |Forward spectral block-sum gate |
+|$\sin^2\theta_W(\mu_G)$ |matching with lifted spectral thresholds |$\frac{3Z_2}{3Z_2+5Z_1}$ with $Z_i=1+\Delta_i/24$ |(matching-scale input) |Conditional on completed spectral input |
+|$(\Delta_1,\Delta_2,\Delta_3)$ |Lifted spectral threshold shifts on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ (Definition T.17a)|$(15.14,\,20.94,\,18.41)$ validation tuple reproducing the previous matching outputs if obtained forward; Remark T.17a.4 and Proposition T.17a.5 show that every sector-independent affine local truncation gives $F_Y>0$, so the tuple must be compared against the global sector-resolving $\mathrm{MS2}_{\mu_G}$ block functional rather than inserted as input; Theorem T.78.5 proves that the current canonical ledger supplies no PU-internal positive branch package |— |Validation target; current-framework gate closed negatively |
 |$\sin^2\theta_W(M_Z)$ |SM RG from matched boundary |Conditional on the lifted spectral thresholds and $\delta_i$ |$0.2312$ |Conditional|
 |$5/3$ factor |Canonical hypercharge normalization |$5/3$ |$5/3$ |Derived |
 |$\lambda_{\text{block}}$ |6 SU(2) blocks |$-1/36$ |— |Exact |
@@ -4384,7 +4384,7 @@ $$
 $$
 Therefore the two expressions agree on that reference branch. Theorem U.8c shows that this identity is branch-specific rather than a theorem-level vacuum closure for the current Definition U.4 continuum action. ∎
 
-**Remark T.62b (Cross-Appendix Significance of the Vacuum–Electroweak Sum Rule).** The identity $2\kappa_{\Lambda,\mathrm{ref}} + 2\kappa_{EW} = 360 = \binom{D+2}{2}M$ holds on the Appendix U five-mode reference branch and carries the branch-dependent status of that branch. Its structural content is that the two largest instanton complexity exponents in the framework sum to exactly $15M$, where $15 = \binom{D+2}{2}$ encodes the emergent spacetime dimension $D=4$ and $M=24$ is the interface mode count. This sum rule is therefore sensitive to the spacetime dimension through $\binom{D+2}{2}$: any $D \neq 4$ would give a different right-hand side, so the identity provides a cross-check linking the hierarchy mechanism to the dimensional selection of Theorem Z.11. Turning that sensitivity into a standalone falsifier would require an external observable that constrains the effective dimensional count independently of the identity itself; the present manuscript does not yet supply such an independent bound.
+**Remark T.62b (Cross-Appendix Significance of the Vacuum–Electroweak Sum Rule).** The identity $2\kappa_{\Lambda,\mathrm{ref}} + 2\kappa_{EW} = 360 = \binom{D+2}{2}M$ holds on the Appendix U five-mode reference branch and carries the branch-dependent status of that branch. Its structural content is that the two largest instanton complexity exponents in the framework sum to exactly $15M$, where $15 = \binom{D+2}{2}$ encodes the emergent spacetime dimension $D=4$ and $M=24$ is the interface mode count. This sum rule is therefore sensitive to the spacetime dimension through $\binom{D+2}{2}$: any $D \neq 4$ would give a different right-hand side, so the identity provides a cross-check linking the hierarchy mechanism to the dimensional selection of Theorem Z.11. Turning that sensitivity into a standalone falsifier would require an external observable that constrains the effective dimensional count independently of the identity itself; the present manuscript does not yet supply such an independent bound. The identity is not a Moonshine-character coefficient identity: the numbers $196883$ and $196884$ do not enter the vacuum zero-mode count, the electroweak Morse-Bott count, or the determinant-prefactor ledgers.
 
 -----
 
@@ -6886,9 +6886,136 @@ F_s^{(\le L)}(r)-F_s^{(\le L)}(0)
 $$
 where the sum is over the retained positive eigenvalues. For every nonempty retained sector and every admissible $r\ne0$ small enough to keep positivity, this expression is not identically zero. Similarly, changing $m_{\mathcal J}$ or $\eta$ changes the parity shifts $m_{\mathcal J}+\eta\lambda_s$, and changing $\beta$ changes every nonzero Casimir contribution. Since the canonical $\mathrm{MS2}_{\mu_G}$ prescription fixes zero additional finite counterterm at $\mu_G$, these variations are not removable by a later counterterm choice. Finally, $T$ is fixed and invertible, so variation of $F$ gives variation of $\Delta=TF$. Therefore the current data do not determine a unique completed spectral output. ∎
 
-**Corollary T.78.3 (Airtight Status of the Lifted Threshold Computation).** The global flag-lift threshold problem is structurally formulated and locally constrained, but it is not numerically closed in the current canonical ledger. A theorem-level closure requires an independently specified spectral branch package containing the missing data listed in Theorem T.78.2, followed by the forward block-sum computation and Corollary T.69.1 tail certificate. Until then, no value of $(\Delta_i,Z_i)$ may be promoted from validation target to derived prediction, and no nonminimal $\delta_i$ may be introduced unless a separate heavy-threshold ledger is explicitly appended.
+**Corollary T.78.3 (Airtight Status of the Lifted Threshold Computation).** The global flag-lift threshold problem is structurally formulated and locally constrained, but it does not produce theorem-level numerical thresholds in the current canonical ledger. A positive theorem-level numerical closure would require an independently specified spectral branch package containing the missing data listed in Theorem T.78.2, followed by the forward block-sum computation and Corollary T.69.1 tail certificate. Without such an appended positive branch extension, no value of $(\Delta_i,Z_i)$ may be promoted from validation target to derived prediction, and no nonminimal $\delta_i$ may be introduced unless a separate heavy-threshold ledger is explicitly appended.
 
 *Proof.* Immediate from Theorem T.78.2, Definition T.19a, Proposition T.19c, and Corollary T.79.1. ∎
+
+**Definition T.78.4 (Current-Framework PU-Internal Spectral Branch Package).** Let $\mathcal D_{\mathrm{cur}}$ denote the canonical flag-lift threshold data fixed in Definition T.17a, Convention T.17a.0, Convention T.69a, Theorems T.69-T.70, Theorem T.78.2, the flag-lift construction of Theorems G.8.4e-G.8.4e.1 and Proposition G.8.4e.1a, and the marked Golay-Leech half-swap convention of Definition G.8.4f.3.
+
+A spectral branch package is **current-framework PU-internal** if every non-formal entry required by Theorem T.78 is fixed as a theorem-level consequence of $\mathcal D_{\mathrm{cur}}$, with no appended continuous constants, no appended sector/parity $H$-type table, no appended residual block matrices, no declared heat/zeta constants, no fitted finite counterterms, no appended tail constants, no replacement of the ordinary $\mathrm{MS2}_{\mu_G}$ determinant, and no use of the external validation tuple.
+
+A spectral branch package is an **appended spectral branch extension** if at least one of those entries is stipulated as additional branch data before validation comparison. An appended extension may be evaluated by Theorem T.78, but it is not supplied by $\mathcal D_{\mathrm{cur}}$.
+
+**Theorem T.78.5 (Negative Completion of the Current-Framework Flag-Lift Spectral Gate).** No current-framework PU-internal admissible spectral branch package supplies the missing data required for theorem-level numerical values of
+$$
+(F_C,F_W,F_Y),\qquad
+(\Delta_1,\Delta_2,\Delta_3),\qquad
+(Z_1,Z_2,Z_3).
+$$
+Equivalently,
+$$
+\mathcal D_{\mathrm{cur}}
+\not\Rightarrow
+\mathfrak S_{\widetilde X},
+\qquad
+\mathcal D_{\mathrm{cur}}
+\not\Rightarrow
+(F,\Delta,Z),
+$$
+while any completed $\mathfrak S_{\widetilde X}$ still determines $(F,\Delta,Z)$ by Theorem T.78. Thus the global flag-lift spectral gate closes inside the present framework only on its negative completion branch: any positive numerical closure requires appending a new spectral branch extension before validation comparison.
+
+*Proof.* The positive completion route requires a completed tuple
+$$
+\mathfrak S_{\widetilde X}
+=
+(\widetilde X,
+D^{\mathrm{PCE}}_{\widetilde X},
+\mathrm{MS2}_{\mu_G},
+\mathcal J_G,
+\beta,
+\nabla^{\widetilde G},
+\mu_0,m_{\mathcal J},\eta,
+\{\tau_{s,\pm,a}\}\text{ or }\{J_{\Lambda,s,a}\},
+\{\varepsilon_s(L)\}).
+$$
+Theorem T.78.2 proves that $\mathcal D_{\mathrm{cur}}$ does not determine the metric normalization $\beta$, the homogeneous connection $\nabla^{\widetilde G}$, the structural parameters $(\mu_0,m_{\mathcal J},\eta)$, the operator-level Golay/parity block data required by Theorem T.70, the sector/parity $H$-types or residual finite matrices, or the Corollary T.69.1 tail certificate. These missing entries are genuine spectral moduli, not notation.
+
+If no admissible completed package exists, then no current-framework PU-internal admissible package exists. Suppose, therefore, that at least one admissible completed package exists. For each sector $s$, write its positive operator as $D_s$. Replacing $\mu_0$ by $\mu_0+r$ gives $D_s(r)=D_s+rI$. For every real $r$ sufficiently small with $D_s+rI$ positive, and for every $r>0$, this replacement preserves the flag manifold, the sector split, self-adjointness, ellipticity, compact resolvent, the ordinary $\mathrm{MS2}_{\mu_G}$ prescription, the Dynkin-index matrix $T$, the marked carrier convention, and positivity. Hence $\mathcal D_{\mathrm{cur}}$ does not distinguish $D_s(0)$ from $D_s(r)$.
+
+The dependence of the ordinary determinant on $r$ is nontrivial. In the convergence half-plane,
+$$
+\frac{d}{dr}\zeta_{s,r}(q)=-q\,\zeta_{s,r}(q+1).
+$$
+Writing the Laurent expansion at $q=0$ as
+$$
+\zeta_{s,r}(q+1)=\frac{\rho_{s,r}}{q}+\operatorname{FP}_{z=1}\zeta_{s,r}(z)+O(q),
+$$
+one obtains
+$$
+\frac{d}{dr}F_s(r)
+=
+\operatorname{FP}_{z=1}\zeta_{s,r}(z)+\rho_{s,r}\log\mu_G^2.
+$$
+This derivative cannot vanish identically as a function of $r$. Indeed the Seeley expansion for $\log\det_{\zeta,\mu_G}(D_s+r)$ as $r\to+\infty$ has a leading heat-kernel term controlled by
+$$
+a_{0,s}=(4\pi)^{-23}\operatorname{rk}(E_s)\operatorname{Vol}(\widetilde X)>0,
+$$
+because $\dim_{\mathbb R}\widetilde X=46$ and every sector bundle has positive rank. Therefore the determinant is not constant along the admissible mass-shift family. Already on any nonempty retained block set,
+$$
+F_s^{(\le L)}(r)-F_s^{(\le L)}(0)
+=
+\sum_{\nu\le L}m_\nu\log\left(1+\frac r\nu\right),
+$$
+which is nonzero for $r\ne0$ of fixed sign. The full zeta variation is therefore not a cutoff artifact.
+
+The same non-descent applies to the other missing entries. Varying $\beta$ changes every nonzero Casimir contribution in the homogeneous formula
+$$
+\nu_{\Lambda,s,\pm,a}
+=
+\beta\left(C_2^{SU(8)}(\Lambda)-C_2^H(\tau_{s,\pm,a})\right)+c_{s,\pm}.
+$$
+Varying $(m_{\mathcal J},\eta)$ changes the parity shift
+$$
+Q_s=m_{\mathcal J}+\eta\lambda_s.
+$$
+Since $\lambda_C,\lambda_W,\lambda_Y$ are distinct, this variation is sector-dependent unless an additional theorem fixes $(m_{\mathcal J},\eta)$. Positivity defines an admissible region; it does not select a point.
+
+The marked Golay half-swap supplies a carrier involution but not the spectral block package required by Theorem T.70. The finite carrier convention
+$$
+J_0=(1\,13)(2\,14)\cdots(12\,24)
+$$
+is a marked involution on the 24-mode Golay-Leech frame, and Proposition G.8.4f.4 transports it to a self-adjoint orthogonal involution on the lifted real interface bundle. Theorem T.70 still requires either a homogeneous operator commuting with the selected sector Laplacians together with its sector/parity $H$-type eigenspaces, or explicit residual finite matrices $J_{\Lambda,s,a}$ on every residual block. Corollary T.70.1 shows that a homogeneous irreducible pointwise $H$-equivariant involution is scalar on that irreducible sector, while the nonhomogeneous residual-symmetry case requires the infinite block family or an equivalent rule for all omitted blocks. Thus $J_0$ by itself does not determine the required block decomposition or residual matrices.
+
+A retained finite-block sum is not, by itself, the canonical $\mathrm{MS2}_{\mu_G}$ finite part. Its raw pre-subtraction values have the form
+$$
+S_s^{(\le L)}=\sum_{\nu\le L}m_\nu\log\nu.
+$$
+For $P=24$, set
+$$
+B_s(q):=
+\int_0^1 t^{q-1}\left(K_s(t)-\sum_{j=0}^{24}a_{2j,s}t^{j-23}\right)dt
++
+\int_1^\infty t^{q-1}K_s(t)dt.
+$$
+Convention T.69a gives
+$$
+F_s
+=
+-B_s(0)
+-
+\sum_{\substack{0\le j\le24\\ j\ne23}}
+\frac{a_{2j,s}}{j-23}
+-
+\gamma a_{46,s}
+-
+a_{46,s}\log\mu_G^2.
+$$
+Thus the determinant requires $B_s(0)$, the local coefficient vector $(a_{0,s},a_{2,s},\ldots,a_{48,s})$, and numerical constants $A_s,C_{s,24}$ for the tail certificate in each sector. Retained block counts, raw retained log sums, and tail-integral factors do not determine these quantities.
+
+Therefore the assumptions that the package is completed in the sense of Theorem T.78 and that the package is current-framework PU-internal in the sense of Definition T.78.4 are incompatible. Since
+$$
+T=
+\begin{pmatrix}
+2/5&3/5&8/15\\
+0&1&0\\
+1&0&0
+\end{pmatrix}
+$$
+has determinant $-8/15$, failure to determine $F$ propagates to failure to determine $\Delta=TF$, and then to failure to determine $Z_i=1+\Delta_i/24$. The canonical minimal residual ledger remains $\delta_i=0$ and cannot absorb missing principal lifted thresholds. ∎
+
+**Corollary T.78.5.1 (Disposition of the Flag-Lift Spectral Gate).** The current-framework flag-lift spectral gate is closed negatively. No theorem-level numerical $(F,\Delta,Z)$ follows from the canonical ledger, and no validation tuple may be promoted to a derived threshold output. Any future positive computation must be entered as a separate appended spectral branch extension containing a completed tuple, forward block sums, heat/zeta data, and Corollary T.69.1 tail constants fixed before validation comparison.
+
+*Proof.* Immediate from Theorem T.78.5, Theorem T.78, Corollary T.78.3, and Corollary T.79.1. ∎
 
 **Theorem T.79 (Conditional Closure of the Quantitative Parameter Sector).** On a fixed PU structural branch with the two-loop SM RG system, suppose:
 1. a completed flag-lift spectral calculation provides a definite threshold triplet $\Delta$;

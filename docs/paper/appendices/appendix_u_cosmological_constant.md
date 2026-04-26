@@ -1907,6 +1907,18 @@ $$
 $$
 ∎
 
+**Proposition U.72b (No Moonshine-Coefficient Shortcut for $\kappa_{\Lambda}$).** In Appendix U, the cosmological exponent is fixed only by the Grassmannian dimension and the zero-mode branch:
+$$
+\kappa_{\Lambda}=\frac{N_{\mathbb R}-m}{2},
+\qquad
+N_{\mathbb R}=288,
+\qquad
+m=4+\nu.
+$$
+The Moonshine character coefficient $196884$ and the Monster representation dimension $196883$ are not inputs to this formula and do not determine $\kappa_{\Lambda}$, $A_{\mathrm{eff}}$, or the four-mode/five-mode branch choice.
+
+*Proof.* Theorem U.16a gives $\kappa=142-\nu/2$ with $\nu\in\{0,1\}$, so the branch data needed for the vacuum exponent are the real dimension $N_{\mathbb R}=288$ and the zero-mode indicator $\nu$. Theorem U.8c, Theorem U.13, and Theorem U.13b decide the status of the fifth mode by continuum and discrete Hessian information. None of those statements contains a VOA weight-space dimension or Monster representation dimension. Conversely, Theorem P.13.17 supplies the character coefficient $196884$ only after the Leech/Moonshine branch has been selected; it does not supply a Hessian null vector, a finite determinant, a zero-mode volume, a Jacobian, or a measure normalization. Therefore replacing the Morse-Bott zero-mode ledger by Moonshine coefficient data would change the definition of the Appendix U exponent rather than deriving it. ∎
+
 **Proposition U.73 (Conditional Weighted-Conformal Zero Mode on the Definition U.4 Branch).** Work in $D=4$ with the continuum action of Definition U.4. Assume:
 
 1. $\phi^*(x)=\varphi(|x|)$ is a non-trivial finite-action $O(4)$-symmetric critical point of $S_{\mathrm{cont}}$;

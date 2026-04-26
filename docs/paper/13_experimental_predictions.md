@@ -328,6 +328,45 @@ The framework quantities—$a = 2$, $b = 6$, $d_{\text{Golay}} = 8$, $|v|^2_{\mi
 
 **Falsifiability:** Improved lattice QCD calculations could confirm or refute these predictions at the sub-percent level. The $2^{++}$, $3^{++}$, and $1^{+-}$ predictions are particularly sharp.
 
+### 13.8.4 Conditional Landauer Phase Grid in Horizon Radiation
+
+Appendix Q, Definition Q.0.7u, defines a horizon closed-loop transfer branch for near-horizon modes whose round-trip phases can be compared with MPU-cycle phases. On that branch, Proposition Q.0.19 gives the conditional phase-grid signature
+$$
+x := \frac{\hbar\omega}{k_B T_H}=\omega\tau_H,
+\qquad
+x\equiv N\ln2\pmod{2\pi}.
+$$
+
+The two fixed scales are:
+- closure period $2\pi$;
+- SPAP cycle step $\ln2$.
+
+Their ratio is
+$$
+\alpha_L=\frac{\ln2}{2\pi}\approx0.110317800,
+\qquad
+\beta_L=\frac{2\pi}{\ln2}\approx9.064720284.
+$$
+By Lemma Q.0.7b, $\alpha_L$ is transcendental and hence irrational.
+
+**Low-defect phase hierarchy.** Corollary Q.0.19b gives the first continued-fraction low-defect phase pairs:
+
+| Rank | $(k,N)$ | $|\alpha_L-k/N|$ | $\delta_N=|N\ln2-2\pi k|$ |
+|:----:|:--------|:----------------:|:-------------------------:|
+| 1 | $(1,9)$ | $7.93\times10^{-4}$ | $0.0449$ |
+| 2 | $(15,136)$ | $2.37\times10^{-5}$ | $0.0202$ |
+| 3 | $(31,281)$ | $2.49\times10^{-6}$ | $0.00439$ |
+| 4 | $(139,1260)$ | $3.40\times10^{-7}$ | $0.00269$ |
+| 5 | $(170,1541)$ | $1.75\times10^{-7}$ | $0.00170$ |
+
+**Three-gap finite-budget test.** For any finite cutoff $N_{\max}$, the points $\{N\ln2\bmod2\pi:N=1,\ldots,N_{\max}\}$ partition $[0,2\pi)$ into at most three distinct gap lengths by Proposition Q.0.7n.
+
+**Falsification conditions on this branch:**
+- no phase-grid component at $x\equiv N\ln2\pmod{2\pi}$ in a system independently shown to satisfy Definition Q.0.7u;
+- a measured exact rational phase-step ratio replacing $\alpha_L$;
+- a dimensionless phase grid whose positions vary with horizon mass after transforming to $x=\hbar\omega/(k_B T_H)$.
+
+**Status:** This is a conditional transfer-branch prediction. It does not replace ordinary greybody-factor calculations and does not assert universal amplitudes, widths, or envelopes.
 
 ## 13.9 Prediction 4: Quantum Error Correction Optimality from PCE Structure
 
@@ -562,7 +601,7 @@ The framework generates falsifiable rows once the core PU invariants are fixed, 
 
 The predictions fall into three epistemic categories that must be distinguished to prevent conflation of claims of different logical type:
 
-*Theorem-level quantitative predictions* are numerical values obtained from the framework without validation targets, phenomenological kernels, empirical inversions, or uncomputed spectral inputs. *Branch-level quantitative rows* are numerical values obtained after named branch hypotheses, bridge laws, finite-part conventions, or matching conventions are fixed. *Validation and model rows* use validation targets, phenomenological response kernels, transferred prefactors, or unclosed global spectral data; these rows are falsifiable as stated branch/model claims but are not counted as theorem-level PU predictions until their status-carrying inputs are derived from prior PU structure. These include $\alpha^{-1} = 137.036092 \pm 0.000060$ (Theorem Z.26), $D = 4$ (Theorem Z.11), $\Lambda L_P^2 = (2.88 \pm 0.03) \times 10^{-122}$ (Appendix U), and the glueball mass ratios (Theorem Z.8h). Falsification is straightforward: measured values falling outside stated uncertainty bounds refute the prediction. In particular, Appendix T matching-scale observables such as $\sin^2\theta_W(M_Z)$, Yukawa hierarchy quantities, and $\alpha_s(M_Z)$ remain validation-level unless and until the global flag-lift spectral branch package required by Theorem T.78.2 is independently fixed and evaluated by the forward $\mathrm{MS2}_{\mu_G}$ block sum.
+*Theorem-level quantitative predictions* are numerical values obtained from the framework without validation targets, phenomenological kernels, empirical inversions, or uncomputed spectral inputs. *Branch-level quantitative rows* are numerical values obtained after named branch hypotheses, bridge laws, finite-part conventions, or matching conventions are fixed. *Validation and model rows* use validation targets, phenomenological response kernels, transferred prefactors, or status-limited spectral data; these rows are falsifiable as stated branch/model claims but are not counted as theorem-level PU predictions unless their status-carrying inputs are derived from prior PU structure or supplied by an explicitly appended branch extension. These include $\alpha^{-1} = 137.036092 \pm 0.000060$ (Theorem Z.26), $D = 4$ (Theorem Z.11), $\Lambda L_P^2 = (2.88 \pm 0.03) \times 10^{-122}$ (Appendix U), and the glueball mass ratios (Theorem Z.8h). Falsification is straightforward: measured values falling outside stated uncertainty bounds refute the prediction. In particular, Appendix T matching-scale observables such as $\sin^2\theta_W(M_Z)$ and $\alpha_s(M_Z)$ remain validation-level in the canonical minimal gauge ledger because Theorem T.78.5 proves that the current framework supplies no PU-internal flag-lift spectral branch package. A positive theorem-level gauge-threshold row would require a separately appended branch extension fixed before validation comparison and evaluated by the forward $\mathrm{MS2}_{\mu_G}$ block sum. The Yukawa hierarchy quantities retain their own Appendix T flavor-normalization and CP-profile status boundaries.
 
 *Structural predictions* assert that specific mathematical structures emerge necessarily or conditionally from the framework's axioms and stated surrogate principles. These include Lorentz invariance (Theorem 46), the gauge group $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ (Theorem G.8.4b, conditional on Proposition G.M1), the Born rule (Proposition 7), the three-generation claim as formulated in Appendix R, and chronology protection (Theorem 14.1). Falsification requires discovering that the predicted structure is violated in nature — for example, observation of fundamental Lorentz violation or a functioning closed timelike curve.
 

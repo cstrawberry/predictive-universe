@@ -387,6 +387,7 @@
 *   Lee, J. G., Adelberger, E. G., Cook, T. S., Fleischer, S. M., & Heckel, B. R. (2020). New Test of the Gravitational $1/r^2$ Law at Separations down to 52 μm. *Physical Review Letters*, *124*, 101101. DOI: 10.1103/PhysRevLett.124.101101
 *   Leech, J. (1967). Notes on sphere packings. *Canadian Journal of Mathematics*, *19*, 251–267.
 *   LEGEND Collaboration (Abgrall, N., *et al.*) (2021). The Large Enriched Germanium Experiment for Neutrinoless ββ Decay: LEGEND-1000 Preconceptual Design Report. arXiv:2107.11462.
+*   LHAASO Collaboration (Cao, Z., et al.) (2024). Stringent tests of Lorentz invariance violation from LHAASO observations of GRB 221009A. *Physical Review Letters*, *133*(7), 071501. DOI: 10.1103/PhysRevLett.133.071501
 *   Leibniz, G. W. (1989). The principles of nature and grace, based on reason. In R. Ariew & D. Garber (Eds. & Trans.), *Philosophical Essays* (pp. 206–213). Hackett. (Original work published 1714)
 *   Leifer, M. S., & Pusey, M. F. (2017). Is a time symmetric interpretation of quantum theory possible without retrocausality? *Proceedings of the Royal Society A*, *473*(2202), 20160607. DOI: 10.1098/rspa.2016.0607
 *   Lelli, F., McGaugh, S. S., & Schombert, J. M. (2016). SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves. *The Astronomical Journal*, *152*(6), 157. DOI: 10.3847/0004-6256/152/6/157
@@ -477,6 +478,7 @@
 *   Padmanabhan, T. (2010). Equipartition of energy in the horizon degrees of freedom and the emergence of gravity. *Modern Physics Letters A*, *25*(14), 1129-1136. DOI: 10.1142/S021773231003294X
 *   Page, D. N. (1976). Particle emission rates from a black hole: Massless particles from an uncharged, nonrotating hole. *Physical Review D*, *13*(2), 198–206. DOI: 10.1103/PhysRevD.13.198
 *   Page, D. N. (1993). Average entropy of a subsystem. *Physical Review Letters*, *71*(9), 1291–1294. DOI: 10.1103/PhysRevLett.71.1291
+*   Peters, P. C. (1964). Gravitational radiation and the motion of two point masses. *Physical Review*, *136*(4B), B1224–B1232. DOI: 10.1103/PhysRev.136.B1224
 *   Pai, V. P., Aw, S., Shomrat, T., Lemire, J. M., & Levin, M. (2012). Transmembrane voltage potential controls embryonic eye patterning in *Xenopus laevis*. *Development*, *139*(2), 313–323. DOI: 10.1242/dev.073759
 *   Pareto, V. (1896). *Cours d'économie politique*. Lausanne: F. Rouge.
 *   Pauli, W. (1940). The connection between spin and statistics. *Physical Review*, *58*(8), 716–722. DOI: 10.1103/PhysRev.58.716
@@ -587,6 +589,7 @@
 *   Steane, A. M. (1996). Error correcting codes in quantum theory. *Physical Review Letters*, *77*(5), 793–797. DOI: 10.1103/PhysRevLett.77.793
 *   Steinhaus, H. (1957). Problem. *Colloquium Mathematicum*, *5*, 116.
 *   Stinespring, W. F. (1955). Positive functions on C*-algebras. *Proceedings of the American Mathematical Society*, *6*(2), 211–216. DOI: 10.1090/S0002-9939-1955-0069403-4
+*   Stappers, B. W., Keane, E. F., Kramer, M., Possenti, A., & Stairs, I. H. (2018). The prospects of pulsar timing with new-generation radio telescopes and the Square Kilometre Array. *Philosophical Transactions of the Royal Society A*, *376*(2120), 20170293. DOI: 10.1098/rsta.2017.0293
 *   Stone, M. H. (1932). On one-parameter unitary groups in Hilbert space. *Annals of Mathematics*, *33*(3), 643–648. DOI: 10.2307/1968538
 *   Storm, L., Tressoldi, P. E., & Di Risio, L. (2010). Meta-analysis of free-response studies, 1992–2008: Assessing the noise reduction model in parapsychology. *Psychological Bulletin*, *136*(4), 471–485. DOI: 10.1037/a0019457
 *   Strawson, G. (2006). Realistic monism: why physicalism entails panpsychism. *Journal of Consciousness Studies*, *13*(10–11), 3–31.
@@ -638,6 +641,7 @@
 *   Weinberg, S. (1989). The cosmological constant problem. *Reviews of Modern Physics*, *61*(1), 1–23. DOI: 10.1103/RevModPhys.61.1
 *   Weinberg, S. (1995). *The Quantum Theory of Fields, Volume I: Foundations*. Cambridge University Press. DOI: 10.1017/CBO9781139644167
 *   Weinberg, S. (1996). *The Quantum Theory of Fields, Vol. II: Modern Applications*. Cambridge University Press. DOI (eBook): 10.1017/CBO9781139644174.
+*   Weltman, A., Bull, P., Camera, S., Kelley, K., Padmanabhan, H., Pritchard, J. R., Raccanelli, A., Riemer-Sørensen, S., Shao, L., Andrianomena, S., Athanassoula, E., et al. (2020). Fundamental physics with the Square Kilometre Array. *Publications of the Astronomical Society of Australia*, *37*, e002. DOI: 10.1017/pasa.2019.42
 *   West, G. B., Brown, J. H., & Enquist, B. J. (1997). A general model for the origin of allometric scaling laws in biology. *Science*, *276*(5309), 122–126. DOI: 10.1126/science.276.5309.122
 *   Weisberg, J. M., Nice, D. J., & Taylor, J. H. (2010). Timing Measurements of the Relativistic Binary Pulsar PSR B1913+16. *The Astrophysical Journal*, *722*(2), 1030. DOI: 10.1088/0004-637X/722/2/1030
 *   Wetterich, C. (1993). Exact evolution equation for the effective potential. *Physics Letters B*, *301*(1), 90–94. DOI: 10.1016/0370-2693(93)90726-X

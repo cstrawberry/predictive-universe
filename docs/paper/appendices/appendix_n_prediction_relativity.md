@@ -297,7 +297,7 @@ The key to detecting this effect lies in the fact that the two energy loss mecha
     $$
     P_{UCT}(t)=\frac{k_B T_U(a(t))\,(\ln 2)}{\tau_{cycle}}\,C_{eff}(t)=\frac{\lambda_{PM}}{\tau_{cycle}}\,a(t)\,C_{eff}(t),
     $$
-    where $T_U(a)=\hbar a/(2\pi c k_B)$ (Equation N.4), $\lambda_{PM}=\hbar\ln 2/(2\pi c)$ (Definition N.4), and $C_{eff}(t)$ is the effective number of refreshed predictive bits whose maintenance is driven by the acceleration-induced noise component of the environment (a component of $C_{req}$ in Equation N.5). The leading-order UCT signature is therefore linear in $a(t)$, with a single amplitude parameter $C_{eff}/\tau_{cycle}$ for a given system.
+    where $T_U(a)=\hbar a/(2\pi c k_B)$ (Equation N.4), $\lambda_{PM}=\hbar\ln 2/(2\pi c)$ (Definition N.4), and $C_{eff}(t)$ is the effective number of refreshed predictive bits whose maintenance is driven by the acceleration-induced noise component of the environment (a component of $C_{req}$ in Equation N.5). The leading-order UCT signature is therefore linear in proper acceleration $a(t)$, with a single amplitude factor $\Xi(S):=C_{eff}/\tau_{cycle}$ for a given system $S$. Section N.8.6 rewrites this amplitude as $\Xi(S)=q_{\mathrm{act}}(S)c^2m_S/(\hbar\ln2)$, where $q_{\mathrm{act}}$ is the active-refresh fraction normalized to the saturated proper-acceleration branch. The binary-pulsar timing construction uses the separate orbital-acceleration bridge factor $q_{\mathrm{act}}^{\mathrm{orb}}$ of Definition N.12a. Both factors are distinct from the boundary-channel utilization factor $q$ in Proposition N.4 unless an additional bridge equates them.
 
 In an elliptic orbit, the acceleration magnitude varies periodically. Therefore, the anomalous power loss $P_{UCT}(t)$ would also vary periodically, having its maximum value at periastron. This would lead to a subtle, non-Keplerian distortion of the orbit and a deviation in the observed orbital period derivative, $\dot{P}_b$, from the GR prediction.
 
@@ -316,8 +316,12 @@ The search for this effect constitutes a high-precision data analysis challenge.
 
 3.  **Construct the Alternative Hypothesis (Model$_{UCT}$):**
     *   Begin with the standard Model$_{GR}$.
-    *   Introduce a new term that models the cumulative effect of the anomalous energy loss $P_{UCT}(t)=\lambda_{PM}\,a(t)\,\Xi$ on the orbit, where $\Xi := C_{eff}/\tau_{cycle}$ is an effective accelerated-complexity rate for the system. This requires integrating this power loss over time to calculate the resulting additional contribution to the orbital period derivative, $(dP_b/dt)_{UCT}$. The single parameter $\Xi$ is a free parameter in the fit.
-    *   This defines a new, expanded timing model: Model$_{UCT}$ = Model$_{GR}$ + Correction$_{UCT}(\Xi)$.
+    *   The proper-acceleration UCT amplitude is fixed by Section N.8.6 as
+        $$
+        \Xi(S)=q_{\mathrm{act}}(S)\,\frac{c^2m_S}{\hbar\ln2}.
+        $$
+        A binary-pulsar timing model may use this normalization only after adding the orbital-acceleration test bridge of Definition N.12a. On that bridge the cumulative anomalous energy loss is modeled by $P_{UCT}^{\mathrm{orb}}(t)$, with fitted parameter $q_{\mathrm{act}}^{\mathrm{orb}}$, rather than by an unconstrained dimensional amplitude $\Xi$.
+    *   This defines a new, expanded timing model: Model$_{UCT}$ = Model$_{GR}$ + Correction$_{UCT}(q_{\mathrm{act}}^{\mathrm{orb}})$ on the orbital-acceleration bridge.
 
 4.  **Perform a Bayesian Model Comparison:**
     *   Use a Bayesian inference framework (e.g., employing nested sampling or MCMC techniques) to simultaneously fit both Model$_{GR}$ and Model$_{UCT}$ to the dataset.
@@ -335,7 +339,131 @@ This is an extraordinarily difficult measurement that pushes the boundaries of p
 *   **Magnitude Problem:** The astounding success of GR implies that the $P_{UCT}$ term, if it exists, must be an extremely small fraction of the $P_{GW}$ term. We would be searching for a deviation at perhaps the 1-in-10,000 level or smaller of an already tiny effect.
 *   **Degeneracy Problem:** The primary systematic challenge is ensuring that any detected signal isn't mimicking some other subtle, unmodeled physical effect. High-eccentricity systems are essential, as they provide a wide dynamic range of acceleration, which is key to tracing out the functional form of $P_{UCT}(a)$ and distinguishing it from other potential systematics. A full analysis must rigorously account for or model effects like tidal dissipation and magnetospheric interactions, even if they are expected to be negligible.
 
-Despite these hurdles, this is a well-posed and compelling scientific question. It transforms the abstract UCT principle into a search for a specific, anomalous signature in one of the most precise datasets in all of science. A positive detection would provide the first empirical evidence for the thermodynamic cost of acceleration and a confirmation of the Predictive Universe framework. A null result would be equally valuable, placing the first-ever direct empirical constraints on the effective accelerated-complexity rate $\Xi=C_{eff}/\tau_{cycle}$ entering the UCT signal model.
+Despite these hurdles, this is a well-posed scientific question once its branch assumptions are stated explicitly. It transforms the abstract UCT principle into a search for a specific anomalous timing signature. A positive detection would provide evidence for an orbital-acceleration bridge between relational orbital dynamics and the thermodynamic cost of acceleration. A null result is equally valuable, placing direct empirical constraints on the orbital-bridge active-refresh factor $q_{\mathrm{act}}^{\mathrm{orb}}$ defined below.
+
+#### N.8.6 Active-Refresh Normalization and Conditional Binary-Pulsar Bridge
+
+**Definition N.12 (Proper-Acceleration Active-Refresh Factor).** For a system $S$ of inertial mass $m_S$ undergoing proper acceleration magnitude $a>0$, define
+$$
+q_{\mathrm{act}}(S;a)
+:=
+\frac{P_{UCT}(S;a)}
+{P_{UCT}^{\mathrm{sat}}(S;a)},
+\qquad
+P_{UCT}^{\mathrm{sat}}(S;a):=\frac{c}{2\pi}m_Sa.
+$$
+The denominator is the saturated proper-acceleration active-refresh prediction of Theorem N.6 Step 5. On an active-fraction branch, $q_{\mathrm{act}}\in[0,1]$. The symbol $q_{\mathrm{act}}$ is not identified with the channel-utilization factor $q$ of Proposition N.4 unless an additional bridge theorem explicitly equates them.
+
+**Theorem N.12 (Forced Form of the Proper-Acceleration UCT Amplitude).** *If the N.8.3 proper-acceleration signal is written as*
+$$
+P_{UCT}(S;a)=\lambda_{PM}\,a\,\Xi(S),
+\qquad
+\lambda_{PM}=\frac{\hbar\ln2}{2\pi c},
+$$
+*then*
+$$
+\Xi(S)=q_{\mathrm{act}}(S;a)\,\frac{c^2m_S}{\hbar\ln2}.
+$$
+*On the saturated proper-acceleration active-refresh branch, $q_{\mathrm{act}}=1$ and hence*
+$$
+\Xi_{\mathrm{sat}}(S)=\frac{c^2m_S}{\hbar\ln2}.
+$$
+
+*Proof.* Equating $P_{UCT}=\lambda_{PM}a\Xi$ with Definition N.12 gives
+$$
+\frac{\hbar\ln2}{2\pi c}a\Xi
+=
+q_{\mathrm{act}}\frac{c}{2\pi}m_Sa.
+$$
+For $a>0$, cancellation and rearrangement give the displayed expression. $\square$
+
+**Definition N.12a (Orbital-Acceleration Test Bridge).** For a gravitationally bound binary whose centers of mass follow ideal geodesic motion, the coordinate or relative orbital acceleration is not the proper acceleration entering the Unruh temperature in Equation N.4. A binary-pulsar UCT timing test therefore requires the following additional **orbital-acceleration bridge**:
+
+1. the timing-model orbital acceleration magnitudes $|a_A(t)|$ and $|a_B(t)|$ are admitted as effective relational acceleration variables for the UCT loss channel;
+2. the UCT orbital loss is modeled by
+$$
+P_{UCT}^{\mathrm{orb}}(t)
+=
+q_{\mathrm{act}}^{\mathrm{orb}}\frac{c}{2\pi}
+\left(m_A|a_A(t)|+m_B|a_B(t)|\right);
+$$
+3. this loss enters the orbital-energy balance additively with the gravitational-wave channel.
+
+Absent this bridge, the proper-acceleration UCT term gives no center-of-mass double-pulsar bound for ideal geodesic orbital motion. The parameter $q_{\mathrm{act}}^{\mathrm{orb}}$ is a bridge parameter and is not automatically equal to the proper-acceleration factor $q_{\mathrm{act}}$.
+
+**Corollary N.12.1 (Conditional Saturated-Bridge Power for the Double Pulsar).** *For PSR J0737–3039A/B with $m_A=1.338M_\odot$, $m_B=1.249M_\odot$, relative semi-major axis $a_{\mathrm{orb}}=8.79\times10^8$ m, and eccentricity $e=0.0878$ (Kramer et al. 2021), the orbit-averaged saturated orbital-bridge power is*
+$$
+\langle P_{UCT}^{\mathrm{orb,sat}}\rangle
+=
+\frac{c}{2\pi}
+\left(
+m_A\langle |a_A|\rangle + m_B\langle |a_B|\rangle
+\right)
+\approx
+5.47\times10^{40}\,\mathrm W,
+$$
+*where*
+$$
+\langle r^{-2}\rangle_t=\frac{1}{a_{\mathrm{orb}}^2\sqrt{1-e^2}},
+\qquad
+\langle |a_A|\rangle=Gm_B\langle r^{-2}\rangle_t,
+\qquad
+\langle |a_B|\rangle=Gm_A\langle r^{-2}\rangle_t.
+$$
+
+**Corollary N.12.2 (Conditional Observational Bound on $q_{\mathrm{act}}^{\mathrm{orb}}$).** *The Peters orbital-decay power for the same binary is*
+$$
+\langle P_{GW}\rangle
+=
+\frac{32}{5}
+\frac{G^4(m_Am_B)^2(m_A+m_B)}
+{c^5a_{\mathrm{orb}}^5}
+f(e),
+\qquad
+f(e):=
+\frac{1+\tfrac{73}{24}e^2+\tfrac{37}{96}e^4}{(1-e^2)^{7/2}},
+$$
+*with $f(0.0878)\approx1.0516$ and*
+$$
+\langle P_{GW}\rangle\approx2.36\times10^{25}\,\mathrm W.
+$$
+*On the orbital-acceleration bridge, both energy-loss channels enter the orbital-decay rate linearly at fixed binary parameters, so*
+$$
+\frac{\delta\dot P_b}{\dot P_b^{GR}}
+\approx
+q_{\mathrm{act}}^{\mathrm{orb}}
+\frac{\langle P_{UCT}^{\mathrm{orb,sat}}\rangle}{\langle P_{GW}\rangle}
+\approx
+q_{\mathrm{act}}^{\mathrm{orb}}\,(2.316\times10^{15}).
+$$
+*The 16-year double-pulsar agreement with GR at fractional precision $1.3\times10^{-4}$ (Kramer et al. 2021) gives*
+$$
+q_{\mathrm{act}}^{\mathrm{orb}}(\mathrm{NS};a_{\mathrm{orb}})
+<
+\frac{1.3\times10^{-4}}{2.316\times10^{15}}
+\approx
+5.6\times10^{-20}.
+$$
+
+*Proof.* Substitute Corollary N.12.1 and the Peters expression into the bridge-level linear fractional-shift relation. $\square$
+
+**Corollary N.12.3 (Conditional Exclusion of Saturated Orbital-Bridge Refresh).** *On the orbital-acceleration test bridge of Definition N.12a, the bound*
+$$
+q_{\mathrm{act}}^{\mathrm{orb}}(\mathrm{NS};a_{\mathrm{orb}})<5.6\times10^{-20}
+$$
+*is incompatible with the saturated orbital-bridge branch $q_{\mathrm{act}}^{\mathrm{orb}}=1$ for macroscopic, gravitationally bound, thermalized neutron-star matter. This conclusion does not by itself falsify the proper-acceleration UCT branch of Theorem N.12 or the boundary-channel saturation branch of Proposition N.4, because $q_{\mathrm{act}}^{\mathrm{orb}}$, $q_{\mathrm{act}}$, and the Proposition N.4 utilization factor $q$ are distinct branch parameters unless additional bridges equate them.*
+
+**Remark N.12.1 (Locked-In versus Actively Refreshed Information).** On the orbital-acceleration bridge, the bound implies that only an extremely small fraction of the relational information associated with a neutron star can be paying the bridge-level Landauer refresh cost per relevant cycle under orbital acceleration. Using the equivalent Theorem N.5 form
+$$
+\mathcal I_{\mathrm{rel}}=\frac{2c^2\tau_{\min}m}{\hbar},
+$$
+a neutron star with $m=1.338M_\odot$ has $\mathcal I_{\mathrm{rel}}\approx5.76\times10^{38}$ nats on the saturated mass-information branch, but the orbital-bridge active-refresh fraction under the double-pulsar acceleration scale is bounded by Corollary N.12.2.
+
+**Corollary N.12.4 (Forward-Looking Conditional Sensitivity).** *If future pulsar timing reaches fractional precision $10^{-5}$ on $\dot P_b$ for PSR J0737–3039A/B while preserving the same system model and the orbital-acceleration bridge, the bound becomes*
+$$
+q_{\mathrm{act}}^{\mathrm{orb}}<\frac{10^{-5}}{2.316\times10^{15}}\approx4.3\times10^{-21}.
+$$
+*A detection within this window with the orbital-phase dependence of the acceleration profile would measure the orbital-bridge active-refresh factor rather than an unconstrained dimensional UCT amplitude.*
 
 ## N.9 The UCT as a Strategic Choice Between Intensive and Extensive Knowledge Acquisition
 
@@ -465,6 +593,26 @@ By Theorem N.3, this equals the speed of light $c$ for any acceleration-complexi
 - $c_{\varepsilon}$: The speed of light as epistemic barrier—acceleration at rate $a$ imposes predictive cost $\propto a/c_\varepsilon$ through the Unruh mechanism
 
 These are not two limits that happen to share a numerical value. They are **one limit**, experienced from different operational perspectives. The UCT theorem (Section N.4) proves this identity by deriving both divergences from a common thermodynamic substrate: acceleration couples to the vacuum through the Unruh effect, creating thermal noise that degrades predictive capacity at a rate set by $c$.
+
+**Proposition N.10.3a (No Margolus-Levitin/Gamma Product Bound from N.17).** Equation (N.17) identifies the invariant speed $c_\gamma$ appearing in the Lorentz factor with the operational constant $c_\varepsilon$ extracted from the Unruh-Landauer cost formula. It does not identify the limiting operation $v \to c$ with saturation of the Margolus-Levitin orthogonalization bound, and it does not imply any universal lower bound of the form
+$$
+\frac{E_{\mathrm{ML}}}{m c^2}\,\frac{1}{\gamma} \ge \text{constant independent of }m.
+$$
+The frame-covariant quantum-speed-limit statement on the unitary internal branch remains Corollary 29.1: for proper internal cycle time $\tau_0$ and mean excitation energy $E_{\mathrm{ML}} := \langle \hat H-E_0\rangle$,
+$$
+E_{\mathrm{ML}}\tau_0 \ge \frac{\pi\hbar}{2}.
+$$
+If the same internal cycle is described in an inertial lab frame in which the system has Lorentz factor $\gamma$, then $\tau_{\mathrm{lab}}=\gamma\tau_0$, hence
+$$
+E_{\mathrm{ML}}\frac{\tau_{\mathrm{lab}}}{\gamma} \ge \frac{\pi\hbar}{2}.
+$$
+Equivalently, using $\hbar=m_Pc^2t_P$,
+$$
+\frac{E_{\mathrm{ML}}}{m c^2} \ge \frac{\pi}{2}\frac{m_P}{m}\frac{t_P}{\tau_0}.
+$$
+The factor $m_P/m$ is unavoidable when the speed-limit energy is normalized by $m c^2$, and no additional factor $1/\gamma$ suppresses the proper-time bound. Therefore the falsifiable content of Equation (N.17) remains the Unruh-Landauer coupling in Theorem N.3 and the UCT work law, not a new Margolus-Levitin/relativistic joint-saturation inequality.
+
+*Proof.* Equation (N.17) is an identity between the constants $c_\gamma$ and $c_\varepsilon$ appearing in two already defined formulae. It contains no statement about the state-dependent Hamiltonian quantity $E_{\mathrm{ML}}$, no orthogonality condition, and no condition that the Lorentz limit $v\to c$ be reached. Corollary 29.1 supplies the only Margolus-Levitin input used inside PU, namely $E_{\mathrm{ML}}\tau_0\ge\pi\hbar/2$ in the system's proper internal time. Lorentz time dilation changes the coordinate duration of that internal cycle by $\tau_{\mathrm{lab}}=\gamma\tau_0$ and leaves the proper-time inequality unchanged. Rearranging the proper-time inequality and substituting $\hbar=m_Pc^2t_P$ gives the displayed PU-unit form. A bound with $(E_{\mathrm{ML}}/mc^2)/\gamma$ and a positive right-hand side independent of $m$ would be frame-dependent and would tend to zero under boosts of the same massive system, while the proper-time speed limit is invariant. Hence such a product bound is not derivable from Theorem N.3, Definition N.5, Equation (N.17), or Corollary 29.1. ∎
 
 ### N.10.4 Physical Consequences
 
@@ -755,6 +903,12 @@ P_{UCT}(a)=\frac{c}{2\pi}\,m\,a.
 $$
 
 Thus $m$ is the coefficient that converts proper acceleration into a minimal additional predictive power overhead required for relational maintenance. **Clarification:** This linear-in-$a$ dependence arises from the Unruh temperature $T_U = \hbar a/(2\pi c k_B)$ (which is itself linear in $a$) coupling to the Landauer energy cost per nat of entropy. This is distinct from Unruh radiation power (which scales as $a^3$); here we compute the Landauer dissipation cost of maintaining $\mathcal{I}_{rel}$ nats of relational state against the Unruh thermal background \u2014 a first-order thermodynamic overhead, not a radiation reaction force.
+
+**Remark N.6.1 (Saturated-Refresh Status of Step 5).** The equality above is the saturated proper-acceleration active-refresh branch, in which all relational information contributing to the inertial mass pays the acceleration-induced Landauer refresh cost at the relevant cycle rate. Section N.8.6 introduces the normalized proper-acceleration active-refresh factor $q_{\mathrm{act}}$ and replaces the observable proper-acceleration prediction by
+$$
+P_{UCT}(a)=q_{\mathrm{act}}\,\frac{c}{2\pi}\,m\,a.
+$$
+The double-pulsar estimate of Corollary N.12.2 constrains instead the orbital-bridge factor $q_{\mathrm{act}}^{\mathrm{orb}}$ under Definition N.12a. It does not, by itself, constrain the proper-acceleration factor for geodesic center-of-mass motion, and it does not identify or falsify the boundary-channel utilization factor $q$ of Proposition N.4.
 
 **Step 6 (Inertial parameter).** In the emergent mechanical description, the same $m$ is the coefficient of the free-particle action $S_{free}=-mc^2\int d\tau$ and therefore the inertial parameter governing response to applied forces. Since Theorem N.5 derives $m$ from $\mathcal{I}_{rel}$, inertial mass is fixed by the thermodynamic cost of updating and maintaining relational state. \u220e
 

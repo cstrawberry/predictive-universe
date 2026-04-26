@@ -5393,6 +5393,50 @@ This perspective illuminates why the Monster has such remarkable properties:
 
 The Monster's size ($\approx 8 \times 10^{53}$) reflects the symmetry content of the Moonshine module, which is determined by the framework's selection of $V^\natural$ as the PCE-optimal vacuum VOA.
 
+**Proposition P.13.17.4 (No Moonshine-Coefficient Derivation of the Vacuum Exponent).** The graded character coefficients of $V^\natural$, including
+$$
+\chi_{V^\natural}(\tau)=J(\tau)=q^{-1}+196884q+21493760q^2+\cdots,
+$$
+do not determine the Appendix U vacuum exponent $\kappa_{\Lambda}$ or the Appendix T electroweak exponent $\kappa_{EW}$ in the current framework. They are branch-internal VOA spectral data on the Leech/Moonshine branch, not Morse-Bott zero-mode counts and not determinant prefactors.
+
+*Proof.* Theorem P.13.17 fixes the Moonshine character after the Leech/Moonshine branch has already been selected. Its first nontrivial coefficient gives
+$$
+\dim(V^\natural_2)=196884=196883+1,
+$$
+where $196883$ is the smallest nontrivial Monster representation dimension and the extra $1$ is the vacuum-descendant contribution. This datum is a weight-space or representation dimension in the VOA. By contrast, Appendix U defines the vacuum exponent through the Grassmannian/Morse-Bott ledger
+$$
+\kappa_{\Lambda}=\frac{N_{\mathbb R}-m}{2},
+\qquad
+N_{\mathbb R}=2\dim_{\mathbb C}\mathrm{Gr}_{\mathbb C}(12,24)=288,
+\qquad
+m=4+\nu,
+$$
+so the allowed values in Theorem U.16a are $142$ and $141.5$. Appendix T defines the electroweak exponent through the electroweak Morse-Bott ledger
+$$
+\kappa_{EW}=36+3-\frac12=38.5.
+$$
+No theorem in Appendix P, Appendix T, or Appendix U defines a functional that maps $\dim(V^\natural_2)$ or the representation dimension $196883$ to $m$, $N_{\mathbb R}$, $\kappa_{\Lambda}$, $\kappa_{EW}$, $A_{\mathrm{eff}}$, or $A_{EW}$.
+
+The numerical logarithms do not repair this absence of structure. Directly,
+$$
+\log_2(196883)=17.586979\ldots,
+\qquad
+\ln(196883)=12.190365\ldots.
+$$
+On the Appendix T electroweak branch,
+$$
+\frac{v}{M_{Pl}}=A_{EW}e^{-\kappa_{EW}},
+$$
+so
+$$
+\ln\frac{M_{Pl}}{v}=\kappa_{EW}-\ln A_{EW}=38.419342\ldots
+$$
+for $A_{EW}=1.084$, and therefore
+$$
+\log_2\frac{M_{Pl}}{v}=55.427394\ldots.
+$$
+Thus the base-two logarithm of $196883$ is not close to the base-two electroweak hierarchy exponent. The superficially similar decimal-scale size $\log_{10}(M_{Pl}/v)\approx16.69$ uses a different logarithmic base and is not a PU complexity exponent, since the PU hierarchy laws use $e^{-\kappa}$. Therefore the Moonshine coefficient data can serve only as branch-internal VOA consistency data unless an additional, independently stated spectral functional is supplied and proved. ∎
+
 ---
 
 ## P.13.18 Monstrous Moonshine and the Unity of Mathematics
@@ -5673,7 +5717,7 @@ The framework generates theoretical predictions from the PCE-selected minima ($\
 | Quantity | Framework Prediction | Experimental Value | Reference | Agreement |
 |:---------|:--------------------|:-------------------|:----------|:----------|
 | $v$ (Higgs VEV) | $252\pm5~\mathrm{GeV}$ | $246.22~\mathrm{GeV}$ | Particle Data Group 2024 | $+1.2\sigma$ |
-| $\sin^2\theta_W(M_Z)$ | $0.2312\pm0.0015$ (conditional on the lifted spectral target tuple of Appendix T; Remark T.17a.4 and Proposition T.17a.5 show that sector-independent affine local truncations do not realize it, and Theorem T.78.2 records that the current canonical ledger does not yet fix the missing spectral branch package) | $0.23122\pm0.00003$ | Particle Data Group 2024 | Conditional |
+| $\sin^2\theta_W(M_Z)$ | $0.2312\pm0.0015$ on the validation run using the lifted spectral target tuple of Appendix T; Remark T.17a.4 and Proposition T.17a.5 show that sector-independent affine local truncations do not realize it, and Theorem T.78.5 proves that the current canonical ledger supplies no PU-internal spectral branch package deriving it | $0.23122\pm0.00003$ | Particle Data Group 2024 | Validation-level |
 | $m_H$ | $125\pm2.5~\mathrm{GeV}$ | $125.25\pm0.17~\mathrm{GeV}$ | Particle Data Group 2024 | $-0.10\sigma$ |
 
 **CKM Matrix and Quark Mixing (Appendix T):**
@@ -5753,7 +5797,7 @@ $$\boxed{
 &\textbf{PCE hypothesis:} \quad \varepsilon = \ln 2, \; K_0 = 3 \text{ (assumed, falsifiable)} \\[4pt]
 &\textbf{Predictions:} \quad \alpha^{-1}, D, \Lambda, v, m_H, \sin^2\theta_W^{(0)}, \text{CKM}, \text{PMNS}, \eta_B, \ldots \\[4pt]
 &\textbf{Experimental tests:} \quad 18+ \text{ quantities; for the 12 with explicit pulls, } \chi^2/\text{d.o.f.} = 0.446;\ \text{the 17-output aggregate is conditional if } \sin^2\theta_W(M_Z) \text{ is included} \\[4pt]
-&\textbf{Conclusion:} \quad \text{PCE remains consistent with current tests within stated budgets; the global lifted-threshold computation remains open}
+&\textbf{Conclusion:} \quad \text{PCE remains consistent with current tests within stated budgets; the current-framework global lifted-threshold gate is closed negatively by Theorem T.78.5}
 \end{aligned}
 }$$
 

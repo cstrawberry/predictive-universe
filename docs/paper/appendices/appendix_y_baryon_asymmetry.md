@@ -504,13 +504,13 @@ where the quoted $1\sigma$ uncertainty is the combined Appendix Z, Section Z.27.
 **Step 2 (QED running).** Standard QED running from $q^2 = 0$ to the sphaleron scale $T_{sph} \approx 160$ GeV gives:
 $$\alpha_{em}^{-1}(T_{sph}) \approx 127.5$$
 
-**Step 3 (Weinberg angle).** From Appendix T, Theorem T.14, the PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$. Using the Appendix T validation tuple of Theorem T.18, namely $(\Delta_1,\Delta_2)=(15.14,20.94)$ and $(Z_1,Z_2)=\left(1+\frac{15.14}{24},\,1+\frac{20.94}{24}\right)$, the corresponding validation-run boundary value at $\mu_G$ is $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2 + 5Z_1) \approx 0.408$. Theorem T.78.2 records that this tuple is not yet a theorem-level output of the current canonical ledger because the global spectral branch package remains unfixed. One-loop SM RG running to the sphaleron scale gives:
+**Step 3 (Weinberg angle).** From Appendix T, Theorem T.14, the PU-normalized tree-level Weinberg angle is $\sin^2\theta_W^{(0)} = 3/8$. Using the Appendix T validation tuple of Theorem T.18, namely $(\Delta_1,\Delta_2)=(15.14,20.94)$ and $(Z_1,Z_2)=\left(1+\frac{15.14}{24},\,1+\frac{20.94}{24}\right)$, the corresponding validation-run boundary value at $\mu_G$ is $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2 + 5Z_1) \approx 0.408$. Theorem T.78.5 proves that this tuple is not a theorem-level output of the current canonical ledger, because no PU-internal global spectral branch package supplies it. One-loop SM RG running to the sphaleron scale gives:
 $$\sin^2\theta_W(T_{sph}) \approx 0.234$$
 
 **Step 4 (Combination).** By definition of the Weinberg angle:
 $$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W} = \frac{1/127.5}{0.234} \approx \frac{1}{29.8} \approx \frac{1}{30}$$
 
-This numerical evaluation is validation-level because it depends on the Appendix T validation tuple together with the standard one-loop RG running used above; by Theorem T.78.2 it is not promoted to a theorem-level PU input until the missing global spectral branch package is fixed and evaluated forward. ∎
+This numerical evaluation is validation-level because it depends on the Appendix T validation tuple together with the standard one-loop RG running used above; by Theorem T.78.5 it is not promoted to a theorem-level PU input in the canonical minimal ledger. A theorem-level input would require an appended global spectral branch extension fixed before comparison and evaluated forward. ∎
 
 ### Y.7.5 Complete Numerical Calculation
 
@@ -529,7 +529,7 @@ This numerical evaluation is validation-level because it depends on the Appendix
 | $\delta$ | $66.7°$ | Theorem T.56 |
 | $\alpha_{em}^{-1}$(Thomson) | $137.036092 \pm 0.000060$ | Theorem Z.26 |
 | $\sin^2\theta_W^{(0)}$ | $3/8$ | Gauge normalization (Theorem T.14) |
-| $\alpha_W$ | $\approx 1/30$ | Validation-run value from $\alpha_{em}/\sin^2\theta_W(T_{sph})$ using the Appendix T threshold tuple; status governed by Theorem T.78.2 |
+| $\alpha_W$ | $\approx 1/30$ | Validation-run value from $\alpha_{em}/\sin^2\theta_W(T_{sph})$ using the Appendix T threshold tuple; status governed by Theorem T.78.5 |
 | $c_{sph}$ | $28/79 = 0.354$ | $(8N_g + 4n_H)/(22N_g + 13n_H)$ with $N_g = 3$ |
 
 **Step-by-Step Derivation:**
@@ -569,7 +569,7 @@ $$= 6.16 \times 10^{-10}$$
 | $\alpha_W$ (SM running) | ±2% |
 | **Total (quadrature)** | **±9%** |
 
-The complexity $\kappa_B = 19.48$ is derived from the stated PU counting chain $K_0 \to d_0 \to (a,b) \to M \to \kappa_{EW} \to \kappa_B$ on the Appendix T hierarchy branch. The uncertainty budget above covers the external Standard Model and thermal inputs; the use of $\alpha_W$ remains validation-level until the Appendix T global spectral branch package of Theorem T.78.2 is fixed and evaluated forward.
+The complexity $\kappa_B = 19.48$ is derived from the stated PU counting chain $K_0 \to d_0 \to (a,b) \to M \to \kappa_{EW} \to \kappa_B$ on the Appendix T hierarchy branch. The uncertainty budget above covers the external Standard Model and thermal inputs; the use of $\alpha_W$ remains validation-level in the canonical minimal ledger by Theorem T.78.5 unless an appended Appendix T global spectral branch extension is fixed before comparison and evaluated forward.
 
 **Validation-Run Result:**
 $$\boxed{\eta_B = (6.2 \pm 0.5) \times 10^{-10}}$$
@@ -589,7 +589,7 @@ $$\eta_B^{\text{obs}} = (6.12 \pm 0.04) \times 10^{-10}$$
 |:---------|:--------------:|:-----------:|:----:|
 | $\eta_B$ | $(6.2 \pm 0.5) \times 10^{-10}$ | $(6.12 \pm 0.04) \times 10^{-10}$ | $+0.2\sigma$ |
 
-The validation-run prediction agrees with observation within combined uncertainties. The stated uncertainty arises from external Standard Model and thermal inputs ($c_{sph}$, $f_{wash}$, $\alpha_W$); its Appendix T gauge-threshold component remains status-limited by Theorem T.78.2.
+The validation-run prediction agrees with observation within combined uncertainties. The stated uncertainty arises from external Standard Model and thermal inputs ($c_{sph}$, $f_{wash}$, $\alpha_W$); its Appendix T gauge-threshold component remains status-limited by Theorem T.78.5.
 
 ### Y.8.2 Consistency Checks
 
@@ -619,11 +619,11 @@ All derived quantities are consistent with observation.
 | $\delta = 66.7°$ | Derived | Berry holonomy (Theorem T.56) |
 | $\alpha_{em}^{-1} = 137.036092 \pm 0.000060$ | Derived | Capacity saturation (Theorem Z.26) |
 | $\sin^2\theta_W^{(0)} = 3/8$ | Derived | Bures geometry (Theorem T.14) |
-| $\alpha_W \approx 1/30$ | Validation-level | $\alpha_{em}/\sin^2\theta_W$ at $T_{sph}$ using the Appendix T threshold tuple; status governed by Theorem T.78.2 |
+| $\alpha_W \approx 1/30$ | Validation-level | $\alpha_{em}/\sin^2\theta_W$ at $T_{sph}$ using the Appendix T threshold tuple; status governed by Theorem T.78.5 |
 | $c_{sph} = 28/79$ | Derived | $(8N_g + 4n_H)/(22N_g + 13n_H)$ |
 | $f_{wash} = 0.63$ | Calculated | $\exp(-\int \Gamma_{sph}/H \, dT/T)$ |
 
-**Continuously adjustable parameters in the displayed validation run: Zero.** The structural quantities trace to $K_0 = 3$ through the stated PU derivation chain, while $\alpha_W$ inherits the validation-level status of the Appendix T threshold tuple until Theorem T.78.2 is closed by an independently fixed spectral branch package.
+**Continuously adjustable parameters in the displayed validation run: Zero.** The structural quantities trace to $K_0 = 3$ through the stated PU derivation chain, while $\alpha_W$ inherits the validation-level status of the Appendix T threshold tuple because Theorem T.78.5 closes the current-framework spectral gate negatively. A positive theorem-level $\alpha_W$ input would require an independently appended spectral branch extension fixed before validation comparison.
 
 ---
 

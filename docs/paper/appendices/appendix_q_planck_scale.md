@@ -196,23 +196,33 @@ The quantity $\alpha_L$ measures the SPAP minimum entropy cost $\varepsilon_{\mi
 
 ---
 
-### Q.0.7.2 Irrationality of the Landauer Angle
+### Q.0.7.2 Transcendence of the Landauer Angle
 
-**Lemma Q.0.7b (Irrationality of the Landauer Phase Ratio).** *The ratio $\alpha_L = \ln 2/(2\pi)$ is irrational.*
+**Lemma Q.0.7b (Transcendence of the Landauer Phase Ratio).** *The ratio*
+$$
+\alpha_L = \frac{\ln 2}{2\pi}
+$$
+*is transcendental over $\mathbb{Q}$. In particular, it is irrational.*
 
-*Proof.* Suppose for contradiction that $\alpha_L \in \mathbb{Q}$. Then $\alpha_L = p/q$ for integers $p, q$ with $q \neq 0$, hence:
-$$e^{i\ln 2} = e^{i 2\pi p/q} = \zeta_q^{\,p}$$
+*Proof.* Suppose for contradiction that $\alpha_L$ is algebraic. Define
+$$
+b := -2i\alpha_L.
+$$
+Then $b$ is algebraic. Since $\alpha_L>0$, $b$ is non-real and therefore $b\notin\mathbb{Q}$. By the Gelfond–Schneider theorem [Gelfond 1934; Schneider 1935], if $a\in\overline{\mathbb Q}\setminus\{0,1\}$ and $b\in\overline{\mathbb Q}\setminus\mathbb Q$, then every value of $a^b$ is transcendental. Taking $a=-1$ and using the branch $\log(-1)=i\pi$ gives one value
+$$
+(-1)^b
+=
+\exp(b\,i\pi)
+=
+\exp(2\pi\alpha_L)
+=
+\exp(\ln 2)
+=
+2.
+$$
+This value is algebraic, contradicting Gelfond–Schneider. Hence $\alpha_L$ is not algebraic, so it is transcendental and therefore irrational. $\square$
 
-where $\zeta_q := e^{2\pi i/q}$ is a primitive $q$th root of unity. Therefore $e^{i\ln 2}$ would be algebraic.
-
-On the other hand, by the Gelfond–Schneider theorem [Gelfond 1934; Schneider 1935], if $a \in \overline{\mathbb{Q}} \setminus \{0,1\}$ and $b \in \overline{\mathbb{Q}} \setminus \mathbb{Q}$, then any value of $a^b$ is transcendental. Taking $a = 2$ (algebraic, $2 \neq 0,1$) and $b = i$ (algebraic, $i \notin \mathbb{Q}$) implies that $2^i$ is transcendental.
-
-By the standard definition $2^z := e^{z\ln 2}$ (with $\ln 2$ the real natural logarithm),
-$$2^i = e^{i\ln 2}$$
-
-This contradicts the algebraicity established above. Hence $\alpha_L \notin \mathbb{Q}$. $\square$
-
-**Remark Q.0.7b.1: Transcendence Status.** While the irrationality of $\alpha_L$ is proven, its transcendence remains an open question. No algebraic relation between $\pi$ and $\ln 2$ is known, and the algebraic independence of $\{\pi, \ln 2\}$ over $\mathbb{Q}$ is conjectured but unproven. The irrationality alone suffices for all results in this section.
+**Remark Q.0.7b.1: Scope of the Transcendence Statement.** The proof of Lemma Q.0.7b does not require algebraic independence of $\pi$ and $\ln 2$. It uses only the Gelfond–Schneider theorem and the identity $\exp(2\pi\alpha_L)=2$. The subsequent equidistribution and three-gap results require only irrationality, but the stronger transcendence statement rules out every rational or algebraic phase-locking replacement of $\alpha_L$.
 
 ---
 
@@ -1265,6 +1275,83 @@ S_{\mathrm{BH}}(M).
 $$
 At $M = m_P$, this gives $N_{\mathrm{MPU}}^{\mathrm{eff}}(m_P) = 2\pi/\ln 2$ and $S_{\mathrm{BH}}(m_P) = 4\pi$. $\square$
 
+#### Q.0.9.8.9 Conditional Landauer Phase Grid for Horizon Closed Loops
+
+**Definition Q.0.7u (Horizon Closed-Loop Transfer Branch).** A horizon scattering mode lies on the **horizon closed-loop transfer branch** when the following additional bridge assumptions hold:
+
+1. one near-horizon round trip of the mode is represented by a closed loop to which the Action–Entropy Identity and Holonomy Quantization clauses of Theorems Q.0.1 and Q.0.4 apply;
+2. the dynamical round-trip phase is the dimensionless thermal phase
+$$
+x := \frac{\hbar\omega}{k_B T_H} = \omega\tau_H,
+\qquad
+\tau_H=\frac{2\pi c}{\kappa};
+$$
+3. on the PCE-Attractor branch, the MPU-cycle contribution to the same closed-loop phase is $N\ln 2$ modulo $2\pi$, with $N\in\mathbb Z_{\ge1}$;
+4. resonant enhancement in the greybody response occurs at phase-matching points of the two descriptions.
+
+This definition is a horizon-transfer branch condition. It is not a consequence of Theorems Q.0.1 and Q.0.4 alone.
+
+**Lemma Q.0.7v (Thermal Phase Identity).** *For any horizon with Hawking temperature $k_B T_H=\hbar\kappa/(2\pi c)$ and Rindler–Landauer cycle time $\tau_H=2\pi c/\kappa$,*
+$$
+\frac{\hbar\omega}{k_B T_H}=\omega\tau_H.
+$$
+
+*Proof.* Multiplying $k_B T_H=\hbar\kappa/(2\pi c)$ by $\tau_H=2\pi c/\kappa$ gives $k_B T_H\,\tau_H=\hbar$. Dividing $\hbar\omega$ by $k_B T_H$ gives $\omega\tau_H$. $\square$
+
+**Proposition Q.0.19 (Conditional Landauer Phase-Grid Signature).** *On the horizon closed-loop transfer branch of Definition Q.0.7u, resonant phase-matching points in the thermal variable $x=\hbar\omega/(k_B T_H)$ obey*
+$$
+x \equiv N\ln 2 \pmod{2\pi},
+\qquad N\in\mathbb Z_{\ge1}.
+$$
+*Equivalently, after rescaling $x\mapsto x/(2\pi)$, the resonance grid is the irrational rotation orbit*
+$$
+\{N\alpha_L \bmod 1:N\in\mathbb Z_{\ge1}\},
+\qquad
+\alpha_L=\frac{\ln2}{2\pi}.
+$$
+*The orbit is dense and equidistributed in $[0,1)$, and every finite truncation partitions the circle into at most three distinct gap lengths.*
+
+*Proof.* Definition Q.0.7u equates the dynamical closed-loop phase $x$ with the MPU-cycle phase $N\ln2$ modulo the single-valuedness period $2\pi$. Dividing by $2\pi$ gives the rotation by $\alpha_L$ on $\mathbb R/\mathbb Z$. Lemma Q.0.7b gives transcendence, hence irrationality, of $\alpha_L$. Irrational rotations are dense and equidistributed by Weyl equidistribution. The finite-truncation gap statement is Proposition Q.0.7n applied to the same orbit. $\square$
+
+**Corollary Q.0.19a (Beatty Staircase of Positive-Overhead Sectors).** *For each holonomy sector $k\ge1$, the largest SPAP-minimum cycle count not overshooting the sector closure phase $2\pi k$ is*
+$$
+N_k^+ := \lfloor\beta_L k\rfloor,
+\qquad
+\beta_L=\frac{2\pi}{\ln2}.
+$$
+*The corresponding positive overhead is*
+$$
+\Delta_k^+ := 2\pi k-N_k^+\ln2\in[0,\ln2),
+$$
+*and the successor increments $N_{k+1}^+-N_k^+$ lie in $\{9,10\}$ with asymptotic 10-step frequency $\beta_L-9\approx0.0647$.*
+
+*Proof.* This is exactly Proposition Q.0.7j and Definition Q.0.7h applied to the phase grid of Proposition Q.0.19. The interval bound follows from the floor definition. $\square$
+
+**Corollary Q.0.19b (Convergent Hierarchy of Smallest Phase Defects).** *Let $(k_n,N_n)=(p_n,q_n)$ be the continued-fraction convergents of $\alpha_L=\ln2/(2\pi)$. Then*
+$$
+\delta_{N_n}:=\min_{k\in\mathbb Z}|N_n\ln2-2\pi k|<\frac{2\pi}{N_n}.
+$$
+*The first low-defect pairs are*
+$$
+(k,N)\in\{(1,9),\ (15,136),\ (31,281),\ (139,1260),\ (170,1541),\ldots\}.
+$$
+
+*Proof.* This is Corollary Q.0.7l translated from $|N\alpha_L-k|$ to $|N\ln2-2\pi k|$ by multiplication by $2\pi$. $\square$
+
+**Proposition Q.0.20 (Parameter-Free Phase Scales on the Transfer Branch).** *On the horizon closed-loop transfer branch, the phase-grid scales $(2\pi,\ln2)$ are fixed by the $U(1)$ closure period and the saturated SPAP cost. Therefore the grid in the dimensionless variable $x=\hbar\omega/(k_B T_H)$ is independent of horizon mass, charge, spin, and matter content at the level of phase positions. The response amplitudes, widths, and nonresonant envelope may still depend on the detailed greybody barrier and on the field species.*
+
+*Proof.* The period $2\pi$ is the single-valuedness period of the phase. The step $\ln2$ is the saturated SPAP cost. Neither depends on horizon parameters. The final sentence follows because Definition Q.0.7u fixes only the phase-matching grid, not the full scattering amplitude. $\square$
+
+**Remark Q.0.19.1 (Numerical Phase Locations).** Substituting $\ln2\approx0.6931472$ and $2\pi\approx6.2831853$, the first nine phase-grid locations are
+$$
+\{N\ln2\bmod2\pi\}_{N=1}^{9}
+=
+\{0.6931,\,1.3863,\,2.0794,\,2.7726,\,3.4657,\,4.1589,\,4.8520,\,5.5452,\,6.2383\}.
+$$
+The next point is $10\ln2\bmod2\pi\approx0.6483$. In sector $k=1$, the positive-overhead Beatty value is $N_1^+=9$ and $\Delta_1^+=2\pi-9\ln2\approx0.0449$.
+
+**Remark Q.0.19.2 (Status Boundary).** Proposition Q.0.19 is a conditional phase-grid statement. It should not be read as a theorem that the full greybody correction is a universal function of $x$ alone. Standard greybody factors also carry angular-momentum, spin, polarization, dimension, and barrier-shape data. The framework-level prediction is the parameter-free phase grid on the closed-loop transfer branch.
+
 ## Q.1 Foundational Relation and the Optimization Goal
 
 This appendix determines the relationship between the emergent Planck length $L_P$ and the microscopic MPU spatial spacing $\delta$ by enforcing consistency between the ND-RID thermodynamic derivation of $G$ (Appendix E) and the PCE equilibrium values of the boundary-channel parameters. The key identity is Equation (Q.3),
@@ -1455,18 +1542,38 @@ The mutual consistency constraint relates the minimal-branch values $d_0 = 8$ an
 
 ### Q.6.4 Experimental Predictions
 
-**Prediction Q.6.1 (No Leading Lorentz-Violating MDR at the PCE Attractor).** Modified dispersion relations (MDRs) provide a generic phenomenological signature of theories with fundamental discretization scales [Amelino-Camelia 2013, Mattingly 2005]. In the PU framework, the PCE-attractor discretization is Lorentz-invariant (Theorem 46 and Proposition Q.6.1). Therefore, leading-order Lorentz-violating MDR terms written separately in powers of $E$ and $p$ are not supported at the attractor:
+**Prediction Q.6.1 (No Leading Lorentz-Violating MDR at the PCE Attractor).** Modified dispersion relations (MDRs) provide a generic phenomenological signature of theories with fundamental discretization scales [Amelino-Camelia 2013, Mattingly 2005]. In the PU framework, the PCE-attractor discretization is Lorentz-invariant (Theorem 46 and Proposition Q.6.1). Therefore leading-order Lorentz-violating MDR terms written separately in powers of $E$ and $p$ are absent on the attractor branch:
+$$
+E^2-p^2c^2=m^2c^4+\text{Lorentz-invariant corrections}.
+$$
+The exact factor
+$$
+\frac{\delta}{L_P}=\frac{\tau_{\min}}{t_P}=\sqrt{8\ln 2}
+$$
+fixes the invariant MPU cutoff
+$$
+\Lambda_{\mathrm{MPU}}:=\frac{\hbar c}{\delta}=\frac{E_P}{\sqrt{8\ln 2}}\approx0.42466\,E_P,
+$$
+but it is not, by itself, an effective Lorentz-violation energy scale $E_{\mathrm{QG}}$.
 
-$$E^2 - p^2c^2 = m^2c^4 + \text{(Lorentz-invariant corrections)}$$
+*Derivation.* Proposition Q.6.1 imposes the equal-ratio condition $\delta/L_P=\tau_{\min}/t_P$ as the Lorentz-consistent scaling of the serialized MPU regime. A leading photon MDR of the form $\Delta v/c\propto(E/E_{\mathrm{QG}})^n$ would require a preferred-frame or non-attractor propagation branch specifying how the microscopic cutoff enters the continuum principal symbol. No such branch is part of Theorem 46 or Proposition Q.6.1. Hence the attractor branch gives a null prediction for leading Lorentz-violating MDR coefficients, while retaining the invariant UV cutoff $\Lambda_{\mathrm{MPU}}$. $\square$
 
-Any residual corrections must be expressible in Lorentz-scalar combinations and are suppressed by the discretization hierarchy implied by Equation (Q.18).
+**Prediction Q.6.2 (Scale-Ledger Bound for Non-Attractor LIV Branches).** If an explicitly appended non-attractor propagation branch introduces a leading photon-speed correction
+$$
+\frac{\Delta v}{c}=\xi_n\left(\frac{E}{\Lambda_{\mathrm{MPU}}}\right)^n+O\!\left(\left(\frac{E}{\Lambda_{\mathrm{MPU}}}\right)^{n+1}\right),
+\qquad n\in\{1,2\},
+$$
+then, in this convention, the corresponding effective quantum-gravity scale is
+$$
+E_{\mathrm{QG},n}=\Lambda_{\mathrm{MPU}}\,|\xi_n|^{-1/n}.
+$$
+Thus an observational lower bound $E_{\mathrm{QG},n}>B_n$ constrains the non-attractor branch coefficient by
+$$
+|\xi_n|<\left(\frac{\Lambda_{\mathrm{MPU}}}{B_n}\right)^n.
+$$
+Published photon time-of-flight limits therefore constrain only appended LIV branches, not the Lorentz-invariant attractor branch. In particular, an order-one linear branch with $E_{\mathrm{QG},1}=\Lambda_{\mathrm{MPU}}\approx0.42466E_P$ is incompatible with bounds above $E_P$ such as Vasileiou et al. (2013) and LHAASO Collaboration (2024). An order-one quadratic branch at $\Lambda_{\mathrm{MPU}}$ is not excluded by those quoted quadratic limits, because their published lower bounds are far below $0.42466E_P$.
 
-
-*Derivation.* The coefficient $\xi_s$ parameterizes leading-order corrections from spatial discretization at the MPU scale $\delta$, while $\xi_t$ parameterizes corrections from temporal discretization at scale $\tau_{min}$. By Proposition Q.6.1, the equal ratios $\delta/L_P = \tau_{min}/t_P$ implied by emergent Lorentz invariance (Theorem 46) ensure that spatial and temporal discretization effects enter at the same relative scale, yielding equal leading-order correction coefficients. This prediction distinguishes the PU framework from approaches that quantize the gravitational field directly, where such isotropy is not guaranteed.
-
-**Prediction Q.6.2 (Absence of Preferred Frame Effects).** Searches for Lorentz-violating effects in the photon sector should yield null results with any residual effects controlled by the discretization ratio $L_P/\delta = 1/\sqrt{8\ln 2} \approx 0.424$ and by the detailed structure of the Lorentz-invariant discretization (Proposition Q.6.1). Current constraints from gamma-ray burst observations [Vasileiou et al. 2013] and active galactic nuclei [MAGIC Collaboration 2008] constrain energy-dependent photon dispersion by placing lower bounds on the effective discretization scale $E_{disc}$ at linear and quadratic orders, with GRB limits reaching the Planck scale and beyond under conservative assumptions. These bounds ($E_{disc} \gtrsim E_P$) are consistent with the Lorentz-invariant MPU discretization predicted by the framework.
-
-*Derivation.* The framework predicts that discretization preserves Lorentz invariance (Proposition Q.6.1, Step 5). Preferred-frame effects would arise only from asymmetric spatial versus temporal discretization, which is excluded by the equal-ratio condition. The scale of any residual effects is set by the inverse discretization ratio $(\delta/L_P)^{-1} = 1/\sqrt{8\ln 2} \approx 0.424$.
+*Derivation.* The first formula defines the appended branch coefficient $\xi_n$. Rewriting $|\xi_n|(E/\Lambda_{\mathrm{MPU}})^n$ as $(E/E_{\mathrm{QG},n})^n$ gives $E_{\mathrm{QG},n}=\Lambda_{\mathrm{MPU}}|\xi_n|^{-1/n}$. The observational inequality follows by monotonicity. Since the PCE-attractor branch has no leading Lorentz-violating coefficient in Prediction Q.6.1, setting $\xi_n=0$ makes $E_{\mathrm{QG},n}=\infty$ in this parametrization and evades finite lower-bound exclusions. $\square$
 
 ### Q.6.5 Summary
 

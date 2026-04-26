@@ -79,7 +79,7 @@ The τ/μ mass ratio achieves $\approx\mathbf{0.04\%}$ **precision** in the log 
 | $\sin^2\theta_W^{(0)} = 3/8$ | PCE isotropy at attractor (Theorem T.14) | Theorem-level on the unbroken-tree branch; running to $M_Z$ remains validation-level |
 | $m_H \approx 125$ GeV | PU quartic boundary matched to SM metastability (Theorem T.28) | Conditional on SM metastability-boundary matching branch |
 | $\Lambda$ | Appendix U Golay-Steiner reference exponent | Five-mode reference branch / four-mode corrected branch (Theorems U.8c, U.13b) |
-| $g_s, g_w, \alpha_s(M_Z), \sin^2\theta_W(M_Z)$ | Lifted spectral threshold tuple (Theorems T.16, T.18, T.78.2) | Validation-level conditional on the forward block-sum spectral package |
+| $g_s, g_w, \alpha_s(M_Z), \sin^2\theta_W(M_Z)$ | Lifted spectral threshold tuple (Theorems T.16, T.18, T.78.2, T.78.5) | Validation-level in the canonical minimal ledger; positive theorem-level status requires an appended forward block-sum spectral package |
 | $N_g = 3$ | Anomaly+CP minimal admissible $N_{\min} = 3$; exact $N_g$ on MDL/PCE minimal-family branch (Theorem R.3.4, Proposition R.3.5) | Theorem-level minimal admissible / branch-level exact realization |
 | Fermion mass ratios | $E_8$ geometric overlaps (Appendix R, T.41-T.45) | Theorem-level discrete predictions; absolute scales calibrated through Appendix T sector prefactors |
 
@@ -847,11 +847,11 @@ in excellent agreement with the observed hierarchy.
 
 **Phenomenological Success:**
 - Hierarchy: $v \approx 246$ GeV (input) → test internal consistency
-- $\sin^2\theta_W(M_Z)$: conditional on the lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$ on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$, one-loop SM RG evolution from the matching boundary $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2+5Z_1)$ with $Z_i=1+\Delta_i/24$ yields the observed Z-pole range **(Theorem T.16, T.18)** if the forward global block-sum computation supplies that tuple; Theorem T.78.2 records that the current canonical ledger does not yet fix the missing spectral branch package
+- $\sin^2\theta_W(M_Z)$: conditional on the lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)=(15.14,20.94,18.41)$ on $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$, one-loop SM RG evolution from the matching boundary $\sin^2\theta_W(\mu_G) = 3Z_2/(3Z_2+5Z_1)$ with $Z_i=1+\Delta_i/24$ yields the observed Z-pole range **(Theorem T.16, T.18)** on the validation run; Theorem T.78.5 proves that the current canonical ledger supplies no PU-internal spectral branch package deriving that tuple
 - $m_H \approx 125$ GeV from the Appendix T metastability-boundary matching branch
 - Fermion mass ratios (Appendix T, Section T.25)
 
-The electroweak hierarchy chain gives a closed internal expression for the scale $v$ once the Appendix T determinant-model branch (Theorems T.5, T.29 with the unit-normalization branch) is fixed. The Higgs mass $m_H \approx 125$ GeV is a conditional prediction obtained by matching the PU quartic boundary $\lambda(\mu_\lambda) = 0$ to the Standard Model metastability trajectory as in Theorem T.28, on the SM metastability-boundary matching branch. The quantitative gauge-threshold sector ($\sin^2\theta_W$, $\alpha_s$, $\alpha_{\mathrm{em}}^{-1}$ at the Z pole) remains conditional on the lifted spectral computation flagged by Theorem T.78.2.
+The electroweak hierarchy chain gives a closed internal expression for the scale $v$ once the Appendix T determinant-model branch (Theorems T.5, T.29 with the unit-normalization branch) is fixed. The Higgs mass $m_H \approx 125$ GeV is a conditional prediction obtained by matching the PU quartic boundary $\lambda(\mu_\lambda) = 0$ to the Standard Model metastability trajectory as in Theorem T.28, on the SM metastability-boundary matching branch. The quantitative gauge-threshold sector ($\sin^2\theta_W$, $\alpha_s$, $\alpha_{\mathrm{em}}^{-1}$ at the Z pole) remains validation-level in the canonical minimal ledger by Theorem T.78.5 unless an appended spectral branch extension is fixed before comparison and evaluated forward.
 
 
 ## K.8 Cosmological Constant and Primordial Perturbations
@@ -1062,7 +1062,7 @@ where $R,R_I$ are the resource cost functions (Definition 3).
 $$
 \Lambda_{\text{MPU}} := \frac{\hbar}{\delta} = \frac{m_P c}{\sqrt{8\ln 2}} \approx 0.424\, m_P c,
 $$
-where $\delta = \sqrt{8\ln 2}\, L_P \approx 2.355\, L_P$ is the PCE-optimal MPU spacing (Appendix Q, Equation Q.18) and $m_P = \sqrt{\hbar c/G}$ is the Planck mass. In natural units ($\hbar = c = 1$), the corresponding wavenumber is $k_{\text{MPU}} = 1/\delta = 1/(\sqrt{8\ln 2} \cdot L_P) \approx 0.424/L_P$, which sets the scale at which the continuum approximation breaks down.
+where $\delta = \sqrt{8\ln 2}\, L_P \approx 2.355\, L_P$ is the PCE-optimal MPU spacing (Appendix Q, Equation Q.18) and $m_P = \sqrt{\hbar c/G}$ is the Planck mass. In natural units ($\hbar = c = 1$), the corresponding wavenumber is $k_{\text{MPU}} = 1/\delta = 1/(\sqrt{8\ln 2} \cdot L_P) \approx 0.424/L_P$, which sets the scale at which the continuum approximation breaks down. This is an invariant operational cutoff scale, not by itself a Lorentz-violating photon-dispersion scale; any such dispersion law requires the separate non-attractor branch data described in Appendix Q, Prediction Q.6.2.
 
 **Theorem K.10.3a (Operational Anti-Continuum Principle).** Let $\mathfrak C$ be a mathematical structure whose exact physical interpretation would require uniformly refinable distinctions at all resolutions $\nu>0$ on a fixed bounded operational domain. Let $N_{\mathfrak C}(\nu)$ be the minimum number of mutually distinguishable alternatives required to specify those distinctions to resolution $\nu$. If
 $$
