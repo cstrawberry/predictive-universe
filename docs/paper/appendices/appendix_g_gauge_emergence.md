@@ -947,15 +947,67 @@ $$
 \mathcal{B}\cong \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1.
 $$
 
-*Proof.* The unordered partitions of $6$ are
+*Proof.* Let
 $$
-6,\;5+1,\;4+2,\;4+1+1,\;3+3,\;3+2+1,\;3+1+1+1,\;2+2+2,\;2+2+1+1,\;2+1+1+1+1,\;1+1+1+1+1+1.
+\mathcal B\cong \bigoplus_{i=1}^m\mathbb C^{n_i},
+\qquad
+\sum_{i=1}^m n_i=6,
 $$
-For each partition, the maximal compact semisimple algebra preserving the decomposition is the direct sum of the corresponding $\mathfrak{su}(n_i)$ factors, together with abelian summands from blockwise rephasings. Capacity saturation with $n_G=12$ excludes all partitions whose maximal reductive algebra has dimension strictly less than $12$, leaving only candidates compatible with a $3$-block and a $2$-block. The partitions $3+3$ and $2+2+2$ have no one-dimensional block and therefore fail the assumed SM-type hypercharge realization with a single surviving abelian generator coupled non-trivially to color. The partition $3+1+1+1$ has too small a non-abelian weak factor to support the assumed chiral doublet structure. The partition $3+2+1$ admits the reductive algebra
+be an unordered block decomposition of the inactive sector. Under the single-surviving-hypercharge hypothesis, the gauged block-preserving algebra has one abelian generator and the full non-abelian semisimple part
 $$
-\mathfrak{su}(3)\oplus \mathfrak{su}(2)\oplus \mathfrak{u}(1),
+\mathfrak g(\lambda)
+=
+\left(\bigoplus_{i:n_i\ge2}\mathfrak{su}(n_i)\right)\oplus\mathfrak u(1),
+\qquad
+\lambda=(n_1,\ldots,n_m).
 $$
-whose dimension is $8+3+1=12$, and it supports the assumed anomaly-free SM-type hypercharge equations. No other partition simultaneously saturates the capacity bound and realizes the stated anomaly data. Therefore the unique admissible decomposition under the stated assumptions is $\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1$. QED
+Thus
+$$
+n_G(\lambda)
+=
+\dim\mathfrak g(\lambda)
+=
+1+\sum_{i:n_i\ge2}(n_i^2-1).
+$$
+
+The unordered partitions of $6$ give the following generator counts:
+
+| Partition $\lambda$ | $n_G(\lambda)$ |
+|:--------------------|:--------------:|
+| $6$ | $35+1=36$ |
+| $5+1$ | $24+1=25$ |
+| $4+2$ | $15+3+1=19$ |
+| $4+1+1$ | $15+1=16$ |
+| $3+3$ | $8+8+1=17$ |
+| $3+2+1$ | $8+3+1=12$ |
+| $3+1+1+1$ | $8+1=9$ |
+| $2+2+2$ | $3+3+3+1=10$ |
+| $2+2+1+1$ | $3+3+1=7$ |
+| $2+1+1+1+1$ | $3+1=4$ |
+| $1+1+1+1+1+1$ | $1$ |
+
+The Lagrangian capacity theorem gives the sharp jointly estimable bound
+$$
+n_G\le 12
+$$
+by Theorem G.8.2e. Therefore all partitions with $n_G(\lambda)>12$ are inadmissible. In the capacity-saturating regime of Equation (G.8.5), every partition with $n_G(\lambda)<12$ is also inadmissible once a partition with $n_G=12$ exists, because it leaves jointly estimable generator capacity unused on the same inactive fiber. The table has exactly one row with
+$$
+n_G(\lambda)=12,
+$$
+namely
+$$
+\lambda=3+2+1.
+$$
+Therefore the unique capacity-saturating inactive-sector block decomposition under the single-hypercharge hypothesis is
+$$
+\mathcal B\cong\mathbb C^3\oplus\mathbb C^2\oplus\mathbb C^1.
+$$
+
+The chirality and anomaly-descent hypotheses do not introduce another partition. They identify the $3$-block as the color block, the $2$-block as the weak block, and the surviving abelian generator as the hypercharge branch. The global $SU(2)$ condition is then satisfied by the SM-type block because the number of left-handed weak doublets per family is
+$$
+3+1=4,
+$$
+which is even. Hence no other inactive-sector decomposition simultaneously satisfies capacity saturation, single-hypercharge realization, chirality, and the stated SM-type anomaly branch. ∎
 
 **Corollary G.8.4c (Conditional gauge-algebra selection).** Under the hypotheses of Theorem G.8.4b, the unique capacity-saturating reductive gauge algebra acting faithfully on the inactive sector is
 $$
@@ -1231,7 +1283,139 @@ $$
 $$
 identifies the four blocks with the active subspace and the lifted $Y$, $W$, and $C$ sectors at the reference point.
 
-**Remark G.8.4e.2 (Scope of the Lift).** Theorem G.8.4b and Corollary G.8.4c remain statements about the abstract inactive fiber $\mathcal B\cong \mathbb C^6$. Theorems G.8.4e and G.8.4e.1 show that this fiberwise $(3,2,1)$ decomposition does not globalize on the bare universal quotient bundle $Q\to \mathrm{Gr}(2,8)$ and that $\widetilde X$ is, up to unique isomorphism over $\mathrm{Gr}(2,8)$, the corresponding universal global lift on which the ordered decomposition is realized as smooth bundle data. The derivations of $d_0=8$, $a=2$, $M=24$, $D=4$, the first-order fine-structure constant, and the three-generation theorem remain on bare $\mathrm{Gr}(2,8)$; only the quantitative gauge-threshold sector is lifted.
+**Theorem G.8.4e.1b (Flag-Chern Hypercharge Descent).** On the minimal flag lift
+$$
+\pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to\mathrm{Gr}(2,8),
+$$
+write the tautological sector splitting as
+$$
+\pi^*Q\cong\widetilde Q_Y\oplus\widetilde Q_W\oplus\widetilde Q_C,
+\qquad
+\operatorname{rk}_{\mathbb C}(\widetilde Q_Y,\widetilde Q_W,\widetilde Q_C)=(1,2,3).
+$$
+Assume one SM-type left-chiral predictive block with fields
+$$
+q,\quad u^c,\quad d^c,\quad \ell,\quad e^c,
+$$
+and one Higgs doublet $H$. Let their hypercharges be
+$$
+y_q,\quad y_{u^c},\quad y_{d^c},\quad y_\ell,\quad y_{e^c},
+\qquad
+y_H.
+$$
+The Chern-character anomaly descent equations on the flag-resolved $C/W/Y$ bundles are
+$$
+2y_q+y_{u^c}+y_{d^c}=0,
+$$
+$$
+3y_q+y_\ell=0,
+$$
+$$
+6y_q+3y_{u^c}+3y_{d^c}+2y_\ell+y_{e^c}=0,
+$$
+$$
+6y_q^3+3y_{u^c}^3+3y_{d^c}^3+2y_\ell^3+y_{e^c}^3=0.
+$$
+Yukawa descent for one Higgs doublet is
+$$
+y_q+y_H+y_{u^c}=0,
+\qquad
+y_q-y_H+y_{d^c}=0,
+\qquad
+y_\ell-y_H+y_{e^c}=0.
+$$
+The unique nontrivial solution up to overall abelian scale is
+$$
+y_H=3a,\quad
+y_q=a,\quad
+y_{u^c}=-4a,\quad
+y_{d^c}=2a,\quad
+y_\ell=-3a,\quad
+y_{e^c}=6a.
+$$
+With primitive Standard Model normalization $a=1/6$,
+$$
+y_q=\frac16,\quad
+y_{u^c}=-\frac23,\quad
+y_{d^c}=\frac13,\quad
+y_\ell=-\frac12,\quad
+y_{e^c}=1,\quad
+y_H=\frac12.
+$$
+The global $SU(2)$ anomaly condition is also satisfied because the number of weak doublets in one family is $3+1=4$, which is even.
+
+*Proof.* The flag lift supplies globally defined sector bundles $\widetilde Q_C$, $\widetilde Q_W$, and $\widetilde Q_Y$. Therefore the Chern-character anomaly polynomial can be written globally in terms of the sector Chern roots. In four dimensions, the perturbative gauge anomaly is the degree-six part of
+$$
+\widehat A(TM)\operatorname{ch}(E_{\mathrm{block}}).
+$$
+The coefficient of $SU(3)^2U(1)$ is the trace of $Y$ over color fundamentals, counted with weak multiplicity. The quark doublet contributes $2y_q$, and the fields $u^c,d^c$ contribute $y_{u^c},y_{d^c}$. Removing the common nonzero quadratic index gives
+$$
+2y_q+y_{u^c}+y_{d^c}=0.
+$$
+The coefficient of $SU(2)^2U(1)$ is the trace of $Y$ over weak doublets, counted with color multiplicity. The quark doublet contributes $3y_q$ and the lepton doublet contributes $y_\ell$, so
+$$
+3y_q+y_\ell=0.
+$$
+The mixed gravitational anomaly coefficient is the trace of $Y$ over all left-chiral states:
+$$
+6y_q+3y_{u^c}+3y_{d^c}+2y_\ell+y_{e^c}=0.
+$$
+The cubic abelian anomaly coefficient is the trace of $Y^3$:
+$$
+6y_q^3+3y_{u^c}^3+3y_{d^c}^3+2y_\ell^3+y_{e^c}^3=0.
+$$
+
+The Yukawa monomials are required to be sections of the trivial hypercharge line. Hence
+$$
+y_q+y_H+y_{u^c}=0,
+\qquad
+y_q-y_H+y_{d^c}=0,
+\qquad
+y_\ell-y_H+y_{e^c}=0.
+$$
+Solving these gives
+$$
+y_{u^c}=-y_q-y_H,
+\qquad
+y_{d^c}=-y_q+y_H,
+\qquad
+y_{e^c}=-y_\ell+y_H.
+$$
+The $SU(2)^2U(1)$ equation gives
+$$
+y_\ell=-3y_q.
+$$
+Substituting these four relations into the mixed gravitational equation gives
+$$
+6y_q+3(-y_q-y_H)+3(-y_q+y_H)+2(-3y_q)+(3y_q+y_H)=0.
+$$
+The left-hand side reduces to
+$$
+-y_q-y_q-y_q+y_H=-3y_q+y_H,
+$$
+so
+$$
+y_H=3y_q.
+$$
+Writing $a:=y_q$ gives
+$$
+y_H=3a,\quad
+y_{u^c}=-4a,\quad
+y_{d^c}=2a,\quad
+y_\ell=-3a,\quad
+y_{e^c}=6a.
+$$
+Substitution into the cubic anomaly gives
+$$
+6a^3+3(-4a)^3+3(2a)^3+2(-3a)^3+(6a)^3
+=
+6a^3-192a^3+24a^3-54a^3+216a^3
+=
+0.
+$$
+Thus the cubic anomaly is automatically cancelled by the Chern-character/Yukawa solution. If $a=0$, every hypercharge is zero, contradicting the nontrivial abelian-coupling branch. Hence the nontrivial solution is unique up to scale. The primitive normalization $a=1/6$ is the minimal-denominator normalization in which $e^c$ has charge $+1$ and $H$ has charge $1/2$. The number of weak doublets is four, so Witten's global $SU(2)$ parity condition is satisfied. ∎
+
+**Remark G.8.4e.2 (Scope of the Lift).** Theorem G.8.4b and Corollary G.8.4c remain statements about the abstract inactive fiber $\mathcal B\cong \mathbb C^6$. Theorems G.8.4e and G.8.4e.1 show that this fiberwise $(3,2,1)$ decomposition does not globalize on the bare universal quotient bundle $Q\to \mathrm{Gr}(2,8)$ and that $\widetilde X$ is, up to unique isomorphism over $\mathrm{Gr}(2,8)$, the corresponding universal global lift on which the ordered decomposition is realized as smooth bundle data. The derivations of $d_0=8$, $a=2$, $M=24$, $D=4$, and the first-order fine-structure constant remain on bare $\mathrm{Gr}(2,8)$. The flag lift is required exactly when the ordered $Y/W/C$ sector splitting must be treated as global bundle data: the Chern-character anomaly bookkeeping of Theorem G.8.4e.1b, the generation-index globalization of Proposition R.IDX2a, and the quantitative gauge-threshold sector of Appendix T.
 
 **Remark G.8.4e.3 (Four-Level Obstruction and Resolution Chain — Motivation for the Flag Lift).** Four independent mathematical results collectively forced the reformulation of the gauge-threshold sector from bare $\mathrm{Gr}(2,8)$ to the minimal flag lift:
 
@@ -1398,20 +1582,130 @@ O_3&:\ (6\,19),(7\,18),(9\,24),(12\,21).
 $$
 Thus $J_1(O_i)=O_i$ for $i=1,2,3$. Since $J_1\ne J_0$, the stated compatibility requirements do not select a unique element of $M_{24}$. A unique working $\mathcal J_G$ is obtained only after the marked half-swap convention of Definition G.8.4f.3 is imposed; otherwise $\mathcal J_G$ remains part of the spectral branch data in Appendix T. ∎
 
-**Theorem G.8.4g (Classical Code-Gauge Structural Analogy).** *The gauge structure of the Standard Model exhibits a structural analogy to classical error-correcting code organization.*
+**Theorem G.8.4g (Classical Golay-Gauge Lagrangian Carrier Duality).** In the marked Golay-Leech frame, the classical Golay carrier and the jointly estimable gauge carrier are exact maximal-isotropic realizations of the same 24-mode interface carrier.
 
-*Statement.* For the self-dual extended binary Golay code $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$ with parameters $[24, 12, 8]$ [MacWilliams & Sloane 1977]:
+Let
+$$
+V_{\mathbb R}
+=
+\operatorname{span}_{\mathbb R}\{X_1,\ldots,X_{12},Y_1,\ldots,Y_{12}\}
+$$
+be the QFI-active interface tangent carrier in the basis of Definition G.8.2a, ordered so that
+$$
+\omega(X_i,Y_j)=\delta_{ij},
+\qquad
+\omega(X_i,X_j)=0,
+\qquad
+\omega(Y_i,Y_j)=0.
+$$
+Let
+$$
+\Lambda_{\mathbb Z}
+=
+\bigoplus_{i=1}^{12}\mathbb Z X_i
+\oplus
+\bigoplus_{i=1}^{12}\mathbb ZY_i,
+\qquad
+\overline V:=\Lambda_{\mathbb Z}/2\Lambda_{\mathbb Z}
+\cong\mathbb F_2^{12}\oplus\mathbb F_2^{12}.
+$$
+For column vectors $s,t\in\mathbb F_2^{12}$, the reduced alternating form is
+$$
+\overline\omega((s,t),(s',t'))
+=
+s^Tt'+t^Ts'.
+$$
+In the marked systematic Golay frame of Theorem Z.13c,
+$$
+\mathcal G_{24}=\{(s,Ps):s\in\mathbb F_2^{12}\},
+$$
+where the displayed matrix satisfies
+$$
+P=P^T,
+\qquad
+PP^T=I_{12}\pmod2.
+$$
+Then:
 
-| Classical Code Structure | Gauge-Sector Reading in PU |
-|:-------------------------|:---------------------------|
-| Block length: $n = 24$ | Interface modes: $M = 24$ |
-| Rate-$\frac{1}{2}$ split: $k = n-k = 12$ | Capacity-saturating 12+12 organization |
-| Protected code organization selected by parity constraints | Low-cost physical organization selected by gauge redundancy constraints |
-| Minimum distance: $d = 8$ | Discrete robustness scale |
+1. $\mathcal G_{24}$ is a Lagrangian subspace of $(\overline V,\overline\omega)$.
 
-*Proof.* The extended binary Golay code $[24, 12, 8]$ is self-dual: $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$. The rate-$\frac{1}{2}$ structure partitions the 24-dimensional carrier into two 12-dimensional halves. For the Standard Model gauge algebra, $\dim(\mathfrak{g}_{SM}) = 8 + 3 + 1 = 12$, saturating the Lagrangian capacity bound of Theorem G.8.2e. The correspondence therefore identifies the same 24-mode organization and its 12+12 split: a 12-dimensional gauge-generator budget together with a complementary constrained sector. The parallel is functional rather than algebraic: both structures implement redundancy that protects predictive content in a 24-dimensional carrier, but the framework does not identify codewords with gauge orbits pointwise, does not identify parity checks with specific gauge generators, and does not promote gauge invariance to a literal coding-theoretic theorem. ∎
+2. The real gauge-capacity carrier
+$$
+L_X:=\operatorname{span}_{\mathbb R}\{X_1,\ldots,X_{12}\}
+$$
+is a Lagrangian subspace of $(V_{\mathbb R},\omega)$.
 
-**Remark G.8.4g.1: Clarification on CSS Quantum Codes.** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ has parameters $[[24, 0, 8]]$ with zero logical qubits, since $k_{\text{quantum}} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The quantum Singleton bound $n - k \geq 2(d-1)$ requires $k \leq 10$ for $[[24, k, 8]]$, confirming that $[[24, 12, 8]]$ is impossible. The analogy presented here concerns the **classical** code structure, not CSS quantum parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ partition ($k = n - k = 12$) and the gauge/matter sector organization.
+3. The binary shear
+$$
+R_P(x,y)=(x,y+Px)
+$$
+is symplectic and maps the reduced gauge-capacity Lagrangian onto the Golay Lagrangian:
+$$
+R_P(\overline L_X)=\mathcal G_{24},
+\qquad
+\overline L_X=\mathbb F_2^{12}\oplus0.
+$$
+
+Consequently, after fixing the marked Golay-Leech frame, the Golay $12+12$ split and the gauge $12$-generator capacity budget are not merely numerically analogous. They are two maximal-isotropic presentations of the same 24-mode carrier. This is a carrier-level duality: the Lie bracket of $\mathfrak g_{\mathrm{SM}}$ is not binary code addition, and individual gauge transformations are not individual Golay codewords.
+
+*Proof.* For two Golay vectors $(s,Ps)$ and $(s',Ps')$,
+$$
+\overline\omega((s,Ps),(s',Ps'))
+=
+s^TPs'+(Ps)^Ts'.
+$$
+Using $P=P^T$, this becomes
+$$
+s^TPs'+s^TP^Ts'
+=
+s^TPs'+s^TPs'
+=
+0
+\pmod2.
+$$
+Thus $\mathcal G_{24}$ is isotropic. Since
+$$
+\dim_{\mathbb F_2}\mathcal G_{24}=12
+=
+\frac12\dim_{\mathbb F_2}\overline V,
+$$
+it is Lagrangian.
+
+For the real carrier, $L_X$ is isotropic because $\omega(X_i,X_j)=0$ for all $i,j$. Since
+$$
+\dim_{\mathbb R}L_X=12
+=
+\frac12\dim_{\mathbb R}V_{\mathbb R},
+$$
+$L_X$ is Lagrangian. This is the geometric form of the jointly estimable generator bound of Theorem G.8.2e.
+
+It remains to prove that $R_P$ is symplectic. For $u=(x,y)$ and $v=(x',y')$,
+$$
+\overline\omega(R_Pu,R_Pv)
+=
+\overline\omega((x,y+Px),(x',y'+Px')).
+$$
+Expanding gives
+$$
+x^T(y'+Px')+(y+Px)^Tx'
+=
+x^Ty'+y^Tx'+x^TPx'+x^TP^Tx'.
+$$
+Since $P=P^T$, the last two terms are equal and cancel in characteristic two. Therefore
+$$
+\overline\omega(R_Pu,R_Pv)=\overline\omega(u,v),
+$$
+so $R_P$ is symplectic. Finally,
+$$
+R_P(s,0)=(s,Ps),
+$$
+so
+$$
+R_P(\overline L_X)=\mathcal G_{24}.
+$$
+The Standard Model algebra selected by Theorem G.8.4b has dimension $12$ and saturates this carrier dimension, while the Golay code is the unique balanced $[24,12,8]$ code on the same marked 24-mode carrier. ∎
+
+**Remark G.8.4g.1: Clarification on CSS Quantum Codes.** A CSS quantum code constructed from the self-dual Golay code using $C_1 = C_2 = \mathcal{G}_{24}$ has parameters $[[24, 0, 8]]$ with zero logical qubits, since $k_{\text{quantum}} = k_1 + k_2 - n = 12 + 12 - 24 = 0$ for self-dual codes [Calderbank & Shor 1996; Steane 1996]. The quantum Singleton bound $n - k \geq 2(d-1)$ requires $k \leq 10$ for $[[24, k, 8]]$, confirming that $[[24, 12, 8]]$ is impossible. The duality in Theorem G.8.4g concerns the classical binary Lagrangian carrier and the real jointly estimable gauge carrier, not CSS quantum-code logical parameters. The structural correspondence is between the classical rate-$\frac{1}{2}$ Lagrangian partition and the 12-dimensional gauge-capacity carrier.
 
 **Remark G.8.4g.1a: Vacuum Stabilizer Interpretation.** The $[[24, 0, 8]]$ CSS construction yields a unique stabilizer state $|\Omega_{\text{Golay}}\rangle$, the uniform superposition over all 4096 Golay codewords:
 $$|\Omega_{\text{Golay}}\rangle = \frac{1}{64} \sum_{c \in \mathcal{G}_{24}} |c\rangle$$
@@ -1419,7 +1713,7 @@ This state is stabilized by 24 independent generators: 12 X-type generators $S_i
 
 On the residual-syndrome branch of Appendix Z, this stabilizer/vacuum interpretation becomes experimentally diagnostic rather than merely structural. Ordinary hardware noise may still generate low-weight errors, but after those device-local channels are modeled and separated, the exact substrate component has no native nonzero shell below weight 8 and its leading correlated shell is the 759-octad shell. Thus the test is not whether all physical errors have high weight; it is whether the irreducible residual correlated component, in a marked 24-mode interface frame, carries the $M_{24}$-symmetric Golay shell fingerprint.
 
-**Remark G.8.4g.2: Functional Analogy.** Within PU, gauge redundancy can be interpreted as the operational redundancy of an error-correcting vacuum organization. Gauge transformations identify descriptions with the same physical content, just as parity constraints identify codewords belonging to the protected code structure. The force of the analogy is functional rather than algebraic: both organize a 24-mode carrier so that predictive content is preserved against inadmissible perturbations, and the shared appearance of the number 12 reflects the common rate-$\frac{1}{2}$ optimization on $M = 24$ modes (Theorem Z.13).
+**Remark G.8.4g.2: Functional and Carrier-Level Readings.** Within PU, gauge redundancy can be interpreted as the operational redundancy of an error-correcting vacuum organization. Gauge transformations identify descriptions with the same physical content, just as parity constraints identify codewords belonging to the protected code structure. The carrier-level statement is exact by Theorem G.8.4g: both sides are Lagrangian structures on the same 24-mode interface after the marked frame is fixed. The functional statement is more limited: the Lie bracket of $\mathfrak g_{\mathrm{SM}}$ is not binary code addition, and individual gauge transformations are not individual Golay codewords.
 
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 

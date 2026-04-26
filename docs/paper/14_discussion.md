@@ -1325,7 +1325,7 @@ This overdetermination indicates structural robustness—the mass gap is a neces
 
 ### 14.5.2 Discrete Optimality: The "Island" Structure
 
-The eight-fold over-determination of $M = 24$ (Theorem Z.12) reveals that mathematical and physical optimality occur at isolated points, not along continua.
+The eight-entry constraint ledger for $M = 24$ (Theorem Z.12), together with the Niemeier self-counting fixed point (Proposition Z.12.1a), reveals that mathematical and physical optimality occur at isolated branch-compatible points, not along continua.
 
 | Nearby Value | Failure Modes |
 |:-------------|:--------------|

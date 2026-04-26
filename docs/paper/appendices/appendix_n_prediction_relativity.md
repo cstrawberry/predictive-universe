@@ -1083,6 +1083,43 @@ S(\mathcal{E}_N(\rho)\|\mathcal{E}_N(\sigma)) \le (1-p)\,S(\rho\|\sigma),
 $$
 which is strict whenever $p>0$ and $S(\rho\|\sigma)\in(0,\infty)$. ∎
 
+**Proposition N.11.5a.1a (Quantum-State Contractivity Budget for Equivalence Tests).** Let $r$ label a matter sector or internal quantum preparation branch, and suppose its ND-RID channel satisfies
+$$
+D_{tr}(\mathcal E_r(\rho),\mathcal E_r(\sigma))
+\le
+f_rD_{tr}(\rho,\sigma),
+\qquad
+0\le f_r<1,
+$$
+for all density operators $\rho,\sigma$. For $D_{tr}(\rho,\sigma)>0$, define the realized distinguishability contraction ratio
+$$
+\mathfrak d_r(\rho,\sigma)
+:=
+\frac{D_{tr}(\mathcal E_r(\rho),\mathcal E_r(\sigma))}
+{D_{tr}(\rho,\sigma)}.
+$$
+Then
+$$
+0\le\mathfrak d_r(\rho,\sigma)\le f_r.
+$$
+For two sectors $r,s$, the maximal DPI budgets differ by
+$$
+\left|
+f_rD_{tr}(\rho,\sigma)-f_sD_{tr}(\rho,\sigma)
+\right|
+=
+|f_r-f_s|D_{tr}(\rho,\sigma).
+$$
+Consequently, if $f_r=f_s$ for all matter sectors and internal quantum preparations at the same coarse-graining scale, no equivalence-principle deviation can arise from quantum coherence, superposition, mixture, or entanglement through the DPI channel alone. On the non-compensation branch of Theorem N.11, any DPI-mediated Eötvös signal must be sourced by sector-dependent contractivity.
+
+*Proof.* The first inequality is the assumed trace-distance contractivity divided by the positive number $D_{tr}(\rho,\sigma)$. Nonnegativity follows from nonnegativity of trace distance. The budget-difference identity is algebraic:
+$$
+|f_rD-f_sD|=|f_r-f_s|D,
+\qquad
+D:=D_{tr}(\rho,\sigma).
+$$
+The density-operator domain includes pure states, mixed states, coherent superpositions, and reduced states of entangled systems, so the same bound applies to all such internal preparations. If all sectors share the same value $f$, the DPI contraction budget is universal and cannot distinguish matter composition or internal quantum preparation. The final statement is exactly the converse direction of Theorem N.11 restricted to the non-compensation branch. ∎
+
 ### N.11.5a.2 The DPI-Equivalence Principle Correspondence
 
 The equivalence principle asserts that all matter couples to gravity universally—inertial and gravitational mass are identical. Within the PU framework, this universality emerges from the universality of ND-RID contractivity.

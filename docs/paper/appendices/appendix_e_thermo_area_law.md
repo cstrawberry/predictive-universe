@@ -389,6 +389,73 @@ $$
 **Remark E.6.3.1 (Calibration vs. derivation).**
 Equation (E.6c) is the internal PU definition of the coupling that appears in the Einstein equations derived from the Clausius relation in Section 12. Identifying this $G$ with the experimentally measured Newton constant is a calibration step external to the mathematical derivations; it fixes a relation among $\delta,\eta,\chi,$ and $C_{max}(f_{RID})$ in the microscopic model.
 
+**Proposition E.6.3.2 (Reverse Area-Law Implication on the Refresh Branch).** Work on the refresh-parametrized ND-RID branch of Lemma E.1:
+$$
+\mathcal E_N=(1-p)\Psi+pT_\sigma,
+\qquad
+T_\sigma(\rho)=\operatorname{Tr}(\rho)\sigma,
+\qquad
+p\in[0,1].
+$$
+Assume the operational area-law coefficient is finite and positive,
+$$
+0<\frac1{4G}
+=
+\frac{\chi C_{max}(f_{RID})}{\eta\delta^2}
+<\infty,
+$$
+with
+$$
+0<\chi<\infty,\qquad 0<\eta<\infty,\qquad 0<\delta<\infty,
+$$
+and assume the strict capacity gap is realized by the refresh-contractivity mechanism of Lemma E.1:
+$$
+C_{max}(f_{RID})<\ln d_0
+\quad
+\text{through}
+\quad
+f_{RID}=1-p<1.
+$$
+Then
+$$
+p>0,
+\qquad
+f_{RID}<1.
+$$
+Consequently every nontrivial information-gaining ND-RID step on this branch carries the active SPAP/Landauer irreversible contribution of Theorem E.1.
+
+*Proof.* Lemma E.1 gives
+$$
+f_{RID}=1-p
+$$
+on the refresh branch. The strict capacity gap is assumed to be realized through refresh contractivity, so
+$$
+f_{RID}<1.
+$$
+Therefore
+$$
+1-p<1,
+$$
+hence
+$$
+p>0.
+$$
+For any nontrivial information-gaining ND-RID step, Theorem E.1 gives
+$$
+\frac{\Delta S_{tot}}{k_B}
+\ge
+I(\rho;\mathcal E_N,o)
++
+D_{KL}[\rho'_o||\mathcal E_N(\rho)]
++
+\varepsilon,
+\qquad
+\varepsilon\ge\ln2.
+$$
+Since the branch is nontrivial, $I(\rho;\mathcal E_N,o)>0$ for at least one realized outcome class, and since $p>0$ the refresh component responsible for strict contractivity is active. Thus the irreversible SPAP/Landauer term is present on the branch. ∎
+
+**Remark E.6.3.3 (Scope of the reverse implication).** An area-law coefficient by itself does not imply $p>0$ without specifying the microscopic channel branch. A strict gap caused by an unrelated noisy channel, or a coefficient introduced only by calibration, would not prove SPAP refresh. Proposition E.6.3.2 is the exact reverse statement available inside the refresh-parametrized ND-RID branch used in Lemma E.1 and Theorem E.2.
+
 ### E.6.4 Connection to Channel Capacity Derivation
 
 From Theorem E.3 and Corollary E.2, the operational entropy density is

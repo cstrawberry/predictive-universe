@@ -368,6 +368,53 @@ a compact Hermitian symmetric space with:
 
 **Remark Z.6.3b: Geometric Interpretation of Mode Count.** The equality $\dim_{\mathbb{R}}(\text{Gr}(2,8)) = M$ is not coincidental: the QFI-active interface modes (Theorem Z.5) parametrize the tangent space to the attractor orbit. This provides an independent geometric derivation of the mode count $M = 24$.
 
+**Proposition Z.6.3c (Kähler Moment-Map Normal Form and Stability Boundary).** Let
+$$
+X=\mathrm{Gr}(a,d_0)
+$$
+be the attractor orbit of Theorem Z.6.3a, represented by rank-$a$ orthogonal projectors $P$ on $\mathbb C^{d_0}$. With the standard $SU(d_0)$-invariant Kähler form on $X$, the moment map for the $SU(d_0)$ action is
+$$
+\mu(P)=i\left(P-\frac{a}{d_0}I_{d_0}\right)
+\in\mathfrak{su}(d_0)^*,
+$$
+after identifying $\mathfrak{su}(d_0)^*$ with traceless Hermitian matrices by the trace pairing. Its squared norm is constant on the orbit:
+$$
+\|\mu(P)\|^2
+=
+\operatorname{Tr}\left(P-\frac{a}{d_0}I_{d_0}\right)^2
+=
+\frac{a(d_0-a)}{d_0}.
+$$
+On the PU branch $a=2$, $d_0=8$,
+$$
+\|\mu(P)\|^2=\frac{2\cdot6}{8}=\frac32.
+$$
+Therefore an $SU(8)$-invariant PCE functional depending only on $\|\mu\|^2$ cannot select a point, a preferred internal flag, or the ordered $(3,2,1)$ gauge splitting inside $\mathrm{Gr}(2,8)$. The Kähler moment-map statement supplies the orbit normal form and the symplectic/QFI tangent structure. The ordered gauge-sector splitting requires symmetry reduction to the flag lift of Theorem G.8.4e.1.
+
+*Proof.* The Grassmannian is the coadjoint orbit of a rank-$a$ projector under $SU(d_0)$. The trace of $P$ is $a$, so the traceless Hermitian representative of the moment map is
+$$
+P-\frac{a}{d_0}I_{d_0}.
+$$
+Since $P^2=P$ and $\operatorname{Tr}P=a$,
+$$
+\operatorname{Tr}\left(P-\frac{a}{d_0}I_{d_0}\right)^2
+=
+\operatorname{Tr}(P^2)
+-
+2\frac{a}{d_0}\operatorname{Tr}P
++
+\frac{a^2}{d_0^2}\operatorname{Tr}I_{d_0}.
+$$
+Substitution gives
+$$
+a-2\frac{a^2}{d_0}+\frac{a^2}{d_0}
+=
+a-\frac{a^2}{d_0}
+=
+\frac{a(d_0-a)}{d_0}.
+$$
+This depends only on $a$ and $d_0$, not on the point $P\in X$. Hence any $SU(d_0)$-invariant functional of $\|\mu\|^2$ alone is constant on $X$ and cannot select a point or ordered subbundle. The remaining statements follow from Theorem Z.5, Theorem Z.6.3a, and Theorem G.8.4e.1. ∎
+
 ## Z.7 QFI Spectrum at the PCE-Attractor
 
 ### Z.7.1 Generator Classification
@@ -1007,49 +1054,105 @@ The framework does not simply accommodate $D=4$; it predicts it as the unique so
 
 ### Z.12.1 Eight-Fold Over-Determination
 
-**Theorem Z.12 (Over-Determined Selection of M=24).** The value M = 24 uniquely satisfies an over-constrained system of eight convergent requirements. While some constraints share common origins (e.g., C1 and C2 both derive from the MPU structure), the diversity of mathematical domains spanned (algebra, geometry, coding theory, modular forms) provides non-trivial consistency checks:
+**Theorem Z.12 (Cross-Domain Over-Determination of $M=24$ on the Minimal Branch).** On the minimal Appendix Z branch
+$$
+d_0=8,\qquad a=2,\qquad b=d_0-a=6,
+$$
+the interface count is uniquely
+$$
+M=2ab=24.
+$$
+The same value simultaneously satisfies the following cross-domain constraint ledger:
 
 | Constraint | Statement | Status |
 |------------|-----------|--------|
-| C1 (Algebraic) | $M = 2ab$ with $a+b=d_0=8$ and $a=2$ (Theorem Z.1) | ✓ |
-| C2 (Capacity) | $M\ln(1+u)=\ln d_0$ with $\lambda_i=1$ (Theorems Z.6–Z.7) | ✓ |
-| C3 (Geometric) | K(D) = M where K(4) = 24 | ✓ |
-| C4 (Coding) | Optimal binary code [M, M/2, 8] exists | ✓ (Golay) |
-| C5 (Packing) | Unique optimal sphere packing Λ_M exists | ✓ (Leech) |
-| C6 (Unimodular) | M ≡ 0 (mod 8) | ✓ |
-| C7 (Modular) | M = 2 × 12 (weight-12 forms) | ✓ |
-| C8 (Minimal) | PCE favors smallest M satisfying C1–C7 | ✓ |
+| C1 (Algebraic) | $M = 2ab = 2\cdot2\cdot6=24$ with $a+b=d_0=8$ and $a=2$ | ✓ |
+| C2 (Capacity) | $M\ln(1+u)=\ln d_0$ gives $u^*=2^{1/8}-1$ | ✓ |
+| C3 (Geometric) | $M=K(D)$ has the unique positive-integer solution $D=4$ on the tangent-kissing branch | ✓ |
+| C4 (Coding) | The balanced distance-optimal binary code at length $24$ is $\mathcal G_{24}=[24,12,8]$ | ✓ |
+| C5 (Rootless lattice) | The unique rootless even unimodular lattice in rank $24$ is $\Lambda_{24}$ | ✓ |
+| C6 (Unimodular rank) | $24\equiv0\pmod 8$, as required for positive-definite even unimodular lattices | ✓ |
+| C7 (Modular weight) | $\eta^{24}$ has modular weight $12$ | ✓ |
+| C8 (Minimal-branch compatibility) | Within the checked $K_0$ range of Corollary Z.11.1, only $K_0=3$ gives exact mode-channel matching | ✓ |
 
-*Proof.* Systematic exclusion of alternatives:
+*Proof.* C1 is immediate from Theorem Z.1 and Theorem Z.2:
+$$
+M=2a(d_0-a)=2\cdot2\cdot(8-2)=24.
+$$
+Thus, within the minimal Appendix Z branch, no other value of $M$ is compatible with the algebraic MPU data.
 
-**For M = 23:**
-- C1: ✗ (2ab = 23 requires ab = 11.5, non-integer)
-- C4: ✗ (No optimal code; best known [23,12,7] has distance 7 < 8)
-- C6: ✗ (23 ≢ 0 (mod 8))
-- C7: ✗ (23/2 = 11.5 ≠ 12)
+For C2, Theorem Z.7 imposes the capacity equation
+$$
+M\ln(1+u)=\ln d_0.
+$$
+Substituting $M=24$ and $d_0=8$ gives
+$$
+24\ln(1+u)=\ln 8=3\ln2,
+$$
+hence
+$$
+1+u=2^{1/8},
+\qquad
+u^*=2^{1/8}-1.
+$$
 
-**For M = 24:**
-- C1: ✓ (2 × 2 × 6 = 24)
-- C2: ✓ (Yields u* = 2^{1/8}-1)
-- C3: ✓ (K(4) = 24)
-- C4: ✓ (Golay code [24,12,8] exists and is unique optimal)
-- C5: ✓ (Leech lattice $\Lambda_{24}$ exists and is unique optimal)
-- C6: ✓ (24 = 8 × 3 ≡ 0 (mod 8))
-- C7: ✓ (24 = 2 × 12)
-- C8: ✓ (24 is minimal satisfying C1-C7)
+For C3, Theorem Z.11 proves that on the tangent-kissing channel branch, PCE mode-channel matching requires
+$$
+M=K(D).
+$$
+Since $K(4)=24$ and $K(D)\neq24$ for every other positive integer $D$ under the bounds stated in Theorem Z.11, the unique solution is $D=4$.
 
-**For M = 25:**
-- C1: ✗ (2ab = 25 requires b = 6.25, non-integer with a=2)
-- C7: ✗ (25/2 = 12.5 ≠ 12)
+For C4, Theorem Z.13 gives the balanced rate-$1/2$ code on the $24$-mode carrier:
+$$
+\mathcal G_{24}=[24,12,8],
+$$
+the extended binary Golay code.
 
-**For M = 32:**
-- C1: ✗ (Requires d_0 = 10 ≠ 8)
-- C3: ✗ (K(4) = 24 ≠ 32)
-- C8: ✗ (Not minimal)
+For C5, Theorem Z.8c states that among rank-$24$ even unimodular lattices, exactly one is rootless: the Leech lattice $\Lambda_{24}$.
 
-**Probability analysis under null hypothesis**: No numerical $p$-value is asserted here. Quantifying the likelihood of a given numerical match requires an explicit null model (choice of prior over candidate constructions, independence assumptions, and tolerance definition). The constraints C1–C8 share structural origins (all derive ultimately from the MPU architecture), so independence cannot be assumed and a naive product bound would be misleading. The rigorous conclusion is that M=24 is the unique value satisfying all eight constraints simultaneously; under the framework axioms, these constraints arise from a unified optimization (PCE), making their simultaneous satisfaction a structural consequence rather than a coincidence requiring probabilistic quantification. ∎
+For C6, the existence of a positive-definite even unimodular lattice in rank $r$ requires $r\equiv0\pmod8$. The value $r=24$ satisfies this condition.
 
-**Remark Z.7: Interpretation Transformation.** This theorem transforms the status of M=24 from "interesting numerical result" to "mathematical necessity arising from convergence of multiple optimization criteria across distinct mathematical domains."
+For C7, the Dedekind eta function has modular weight $1/2$, so $\eta^{24}$ has modular weight
+$$
+24\cdot\frac12=12.
+$$
+
+For C8, Corollary Z.11.1 checks the minimal branches $K_0\in\{1,\ldots,6\}$ and shows that only $K_0=3$ gives exact mode-channel matching, namely
+$$
+M=24=K(4).
+$$
+
+Therefore $M=24$ is forced by the minimal branch and simultaneously passes the capacity, geometric, coding, lattice, unimodular, modular, and minimal-branch compatibility checks. No probabilistic independence claim is used: the conclusion is a branch-rigidity statement, not a numerical coincidence estimate. ∎
+
+**Proposition Z.12.1a (Niemeier Self-Counting Fixed Point in Rank $\le24$).** Let $N_{\mathrm{EU}}(r)$ denote the number of isomorphism classes of positive-definite even unimodular lattices of rank $r$ for
+$$
+r\in\{8,16,24\}.
+$$
+Then
+$$
+N_{\mathrm{EU}}(8)=1,\qquad N_{\mathrm{EU}}(16)=2,\qquad N_{\mathrm{EU}}(24)=24.
+$$
+Consequently, in the admissible even-unimodular ranks up to $24$, the fixed-point equation
+$$
+N_{\mathrm{EU}}(r)=r
+$$
+has the unique solution
+$$
+r=24.
+$$
+On the Appendix Z branch where the interface rank is $M=24$, the number of rank-$24$ even-unimodular vacuum branches therefore equals the number of interface modes. Imposing rootlessness then selects the Leech lattice uniquely.
+
+*Proof.* Positive-definite even unimodular lattices exist only in ranks divisible by $8$. In rank $8$, the classification gives a single class, $E_8$. In rank $16$, the classification gives exactly two classes, $E_8\oplus E_8$ and $D_{16}^+$. In rank $24$, Niemeier's classification gives exactly $24$ classes. Therefore
+$$
+N_{\mathrm{EU}}(8)=1,\qquad N_{\mathrm{EU}}(16)=2,\qquad N_{\mathrm{EU}}(24)=24.
+$$
+Comparing with the ranks gives
+$$
+1\neq8,\qquad 2\neq16,\qquad 24=24,
+$$
+so $r=24$ is the unique solution of $N_{\mathrm{EU}}(r)=r$ in the admissible set $\{8,16,24\}$. By Theorem Z.12, the Appendix Z branch has interface rank $M=24$. By Theorem Z.8c, among the $24$ rank-$24$ even-unimodular lattices, exactly one is rootless, namely $\Lambda_{24}$. Hence the self-counting rank fixes the Niemeier branch count, and rootlessness fixes the vacuum lattice. ∎
+
+**Remark Z.7: Interpretation Transformation.** This theorem transforms the status of M=24 from "interesting numerical result" to "mathematical necessity arising from convergence of multiple optimization criteria across distinct mathematical domains." Proposition Z.12.1a adds a discrete fixed-point check: at rank $24$, and only there within the admissible even-unimodular ranks up to $24$, the number of lattice vacuum branches equals the interface rank itself.
 
 ### Z.12.2 Multi-Layered Factorization
 
@@ -2154,10 +2257,42 @@ $$P = \begin{pmatrix}
 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 \\
 \end{pmatrix}$$
 
-*Proof.* The matrix is constructed via the quadratic residue method [MacWilliams & Sloane 1977]. Verification:
-- Self-orthogonality: $P \cdot P^T = I_{12} \pmod{2}$ ✓
-- Minimum distance: $d = 8$ ✓
-- Weight distribution: $A_0 = 1$, $A_8 = 759$, $A_{12} = 2576$, $A_{16} = 759$, $A_{24} = 1$ ✓ ∎
+*Proof.* Let $G=[I_{12}\mid P]$ with the displayed binary matrix $P$. The displayed matrix satisfies
+$$
+P=P^T,
+\qquad
+PP^T=I_{12}\pmod2.
+$$
+Therefore
+$$
+GG^T=I_{12}+PP^T=0\pmod2,
+$$
+so the row span $C=\operatorname{rowspan}_{\mathbb F_2}(G)$ is self-orthogonal. Since $G$ has the identity block $I_{12}$, its rows are linearly independent and
+$$
+\dim_{\mathbb F_2}C=12.
+$$
+The orthogonal complement of a binary length-$24$ code of dimension $12$ also has dimension $12$. Because $C\subseteq C^\perp$ and both spaces have dimension $12$, one has
+$$
+C=C^\perp.
+$$
+
+The same quadratic-residue construction gives the complete weight enumerator
+$$
+W_C(x,y)=x^{24}+759x^{16}y^8+2576x^{12}y^{12}+759x^8y^{16}+y^{24}.
+$$
+Equivalently,
+$$
+A_0=1,\qquad A_8=759,\qquad A_{12}=2576,\qquad A_{16}=759,\qquad A_{24}=1,
+$$
+with all other $A_w=0$. Hence the first nonzero weight is $8$, so
+$$
+d(C)=8.
+$$
+Thus the row span is a self-dual binary code with parameters
+$$
+[24,12,8].
+$$
+By the uniqueness theorem for the extended binary Golay code, this code is $\mathcal G_{24}$. ∎
 
 **Remark Z.13.5.4a: Finite Specification.** This 144-bit matrix is not a model chosen from alternatives. It is the unique structure that self-referential prediction must take when optimally protected against error. Every property can be computationally verified.
 
@@ -2741,12 +2876,12 @@ $$K(D) = M = 24 \implies D = 4$$
 
 This is not coincidence but structural unity: the same information-theoretic substrate determines both the strength of electromagnetic interactions and the dimensionality of the arena in which they occur.
 
-The 24-mode structure is overdetermined by eight independent constraints (Theorem Z.12), transforms apparent fine-tuning into mathematical necessity, and provides the unique solution satisfying:
+The 24-mode structure is fixed on the minimal branch and then overdetermined by the eight-entry cross-domain constraint ledger of Theorem Z.12, with the Niemeier self-counting fixed point of Proposition Z.12.1a providing an additional rank-$24$ consistency check. This transforms apparent fine-tuning into branch rigidity:
 - Algebraic structure (from d_0 = 8, a = 2)
 - Information capacity (saturation equation)
 - Geometric packing (kissing number)
 - Error correction (Golay code)
-- Lattice optimality (Leech lattice)
+- Rank-24 even-unimodular structure and Leech rootlessness
 - Modular form theory (weight 12)
 
 ---
@@ -3698,7 +3833,7 @@ Relative = 0.68 ppm
 1. **Spacetime Dimension D = 4**
    - K(D) = M = 24 has unique solution D = 4
    - Derived via mode-channel correspondence
-   - Overdetermined by 8 independent constraints
+   - Cross-checked by the eight-entry constraint ledger of Theorem Z.12 and the Niemeier fixed-point test of Proposition Z.12.1a
    - Global uniqueness proven via Hessian positive-definiteness
 
 2. **Fine-Structure Constant α⁻¹ ≈ 137.036092 ± 0.000060**

@@ -173,6 +173,34 @@ where $\sum_k \varepsilon_k[\phi]$ is the total SPAP entropy cost along path $\p
 
 *Proof.* Direct substitution of the Action-Entropy Identity (Corollary Q.0.1). The phase factor is oscillatory because it is a unit-modulus complex phase $e^{i\mathcal{S}[\phi]/\hbar} = e^{i\sum_k\varepsilon_k[\phi]}$ with real exponent; interference is controlled by relative phase differences (including overhead contributions when some cycles have $\varepsilon_k > \ln 2$). QED
 
+**Proposition Q.0.2c (Finite Entropy Transform Duality).** Let $\mathcal H_\Lambda$ be a finite cutoff set of admissible histories and define
+$$
+E[\phi]:=\sum_{i\in\phi}\varepsilon_i,
+\qquad
+Z_\Lambda(z):=\sum_{\phi\in\mathcal H_\Lambda}w_\phi e^{-zE[\phi]},
+$$
+where $w_\phi\ge0$ are branch weights independent of $z$. Then $Z_\Lambda(z)$ is an entire function of $z$, and its two distinguished finite-cutoff evaluations are
+$$
+Z_\Lambda(1)=\sum_{\phi\in\mathcal H_\Lambda}w_\phi e^{-E[\phi]},
+$$
+the finite Gibbs/Laplace weight of the SPAP entropy functional, and
+$$
+Z_\Lambda(-i)=\sum_{\phi\in\mathcal H_\Lambda}w_\phi e^{iE[\phi]}
+=
+\sum_{\phi\in\mathcal H_\Lambda}w_\phi e^{i\mathcal S[\phi]/\hbar},
+$$
+the finite path-amplitude weight of Proposition Q.0.2. For a countable history set $\mathcal H$, the same analytic statement holds on any domain on which
+$$
+Z(z)=\sum_{\phi\in\mathcal H}w_\phi e^{-zE[\phi]}
+$$
+converges normally on compact subsets. In particular, the Gibbs value at $z=1$ is defined whenever $1$ lies in such a domain, and the phase value at $z=-i$ is defined either when $-i$ lies in such a domain or as the limit of finite-cutoff oscillatory amplitudes whenever that limit exists.
+
+*Proof.* For finite $\mathcal H_\Lambda$, each term $w_\phi e^{-zE[\phi]}$ is entire in $z$, and a finite sum of entire functions is entire. Substituting $z=1$ gives the Gibbs/Laplace weight. Substituting $z=-i$ gives $e^{iE[\phi]}$, and by Corollary Q.0.1,
+$$
+E[\phi]=\mathcal S[\phi]/\hbar,
+$$
+giving the path-amplitude form. For countable $\mathcal H$, normal convergence on compact subsets gives analyticity by the Weierstrass theorem on the stated domain. Boundary or off-domain phase evaluations are not automatic; they are exactly the finite-cutoff oscillatory limits stated in the hypothesis. ∎
+
 **Corollary Q.0.4 (Interference as Entropy Phase Matching).** Quantum interference arises from the phase accumulated through irreversible predictive operations:
 
 $$\phi_{quantum} = \frac{\mathcal{S}}{\hbar} = \sum_i \varepsilon_i$$
@@ -483,6 +511,79 @@ $$|N\ln 2 - 2\pi k| < \frac{\pi}{N}$$
 
 *Proof.* This is exactly Legendre's theorem on continued fractions [Hardy & Wright 1979, Theorem 184]. $\square$
 
+**Theorem Q.0.7k.1 (Landauer Arithmetic Index for Low-Overhead Holonomy).** Define
+$$
+\mathfrak I_L(N,k):=N\alpha_L-k,
+\qquad
+\alpha_L=\frac{\ln2}{2\pi},
+\qquad
+(N,k)\in\mathbb Z_{\ge1}\times\mathbb Z,
+$$
+and
+$$
+\delta_L(N,k):=|N\ln2-2\pi k|=2\pi|\mathfrak I_L(N,k)|.
+$$
+Then:
+
+1. $\mathfrak I_L$ is additive under loop composition:
+$$
+\mathfrak I_L(N_1+N_2,k_1+k_2)
+=
+\mathfrak I_L(N_1,k_1)+\mathfrak I_L(N_2,k_2).
+$$
+
+2. If $p_n/q_n$ is a continued-fraction convergent of $\alpha_L$, then the pair
+$$
+(k_n,N_n)=(p_n,q_n)
+$$
+minimizes $\delta_L(N,k)$ among all integer pairs with $1\le N<q_{n+1}$ in the standard best-approximation-of-the-second-kind sense:
+$$
+|q_n\alpha_L-p_n|
+\le
+|N\alpha_L-k|
+\qquad
+(1\le N<q_{n+1}).
+$$
+
+3. Conversely, if $\gcd(k,N)=1$ and
+$$
+\delta_L(N,k)<\frac{\pi}{N},
+$$
+then $k/N$ is a continued-fraction convergent of $\alpha_L$.
+
+Therefore every primitive holonomy pair below the Landauer-Legendre gate is arithmetically indexed by the continued-fraction spectrum of $\ln2/(2\pi)$.
+
+*Proof.* Additivity follows directly:
+$$
+\mathfrak I_L(N_1+N_2,k_1+k_2)
+=
+(N_1+N_2)\alpha_L-(k_1+k_2)
+=
+\mathfrak I_L(N_1,k_1)+\mathfrak I_L(N_2,k_2).
+$$
+
+For item 2, the continued-fraction best-approximation theorem gives
+$$
+|q_n\alpha_L-p_n|
+\le
+|N\alpha_L-k|
+$$
+for all integers $k,N$ with $1\le N<q_{n+1}$. Multiplying both sides by $2\pi$ gives
+$$
+\delta_L(q_n,p_n)\le\delta_L(N,k),
+$$
+so the convergent pair minimizes phase defect on that denominator range.
+
+For item 3, the hypothesis is
+$$
+2\pi|N\alpha_L-k|<\frac{\pi}{N}.
+$$
+Dividing by $2\pi N$ gives
+$$
+\left|\alpha_L-\frac{k}{N}\right|<\frac{1}{2N^2}.
+$$
+Since $\gcd(k,N)=1$, Legendre's continued-fraction criterion applies, so $k/N$ is a convergent of $\alpha_L$. ∎
+
 *Physical interpretation.* Unusually small phase defect is not accidental—it structurally forces the $(N, k)$ pair to be a convergent. This is a selection rule with number-theoretic teeth.
 
 ---
@@ -513,11 +614,34 @@ $$\alpha_L = [0; 9, 15, 2, 4, 1, 1, 1, 1, 2, 2, 3, 1, 1, 1, \ldots]$$
 *Equivalently, the corresponding $\beta_L = 2\pi/\ln 2$ convergents are:*
 $$\frac{N}{k} \in \left\{9, \; \frac{136}{15}, \; \frac{281}{31}, \; \frac{1260}{139}, \; \frac{1541}{170}, \; \frac{2801}{309}, \; \frac{4342}{479}, \; \frac{7143}{788}, \ldots \right\}$$
 
-*Verification.* Direct computation using the standard continued fraction algorithm confirms these values:
-- $9 \times \ln 2 = 6.2383...$ vs. $2\pi \times 1 = 6.2832...$, mismatch $= 0.0449$
-- $136 \times \ln 2 = 94.268...$ vs. $2\pi \times 15 = 94.248...$, mismatch $= 0.0202$
-- $281 \times \ln 2 = 194.774...$ vs. $2\pi \times 31 = 194.779...$, mismatch $= 0.00439$
-- $1260 \times \ln 2 = 873.37...$ vs. $2\pi \times 139 = 873.37...$, mismatch $= 0.00269$
+The displayed convergents follow from the standard recurrence
+$$
+p_{-1}=1,\quad p_0=0,\qquad q_{-1}=0,\quad q_0=1,
+$$
+$$
+p_n=a_n p_{n-1}+p_{n-2},
+\qquad
+q_n=a_n q_{n-1}+q_{n-2}.
+$$
+For each row,
+$$
+2\pi k_n-N_n\ln2
+=
+2\pi(p_n-q_n\alpha_L),
+$$
+so the phase mismatch column is fixed directly by the continued-fraction data. The first mismatches are
+$$
+|2\pi-9\ln2|=0.0449\ldots,
+$$
+$$
+|30\pi-136\ln2|=0.0202\ldots,
+$$
+$$
+|62\pi-281\ln2|=0.00439\ldots,
+$$
+$$
+|278\pi-1260\ln2|=0.00269\ldots.
+$$
 
 ---
 
@@ -660,7 +784,7 @@ This section has established:
 
 4. **Topology–Overhead Principle:** Nontrivial holonomy requires $\Delta > 0$, i.e., entropy above Landauer minimum (Corollary Q.0.7g)
 
-5. **Continued-Fraction Spectrum:** Best-approximation pairs $(k,N)$ are convergents of $\alpha_L$, with explicit enumeration (Theorem Q.0.7k, Corollary Q.0.7l)
+5. **Continued-Fraction Spectrum and Arithmetic Index:** Best-approximation pairs $(k,N)$ are convergents of $\alpha_L$, and every holonomy pair below the Landauer-Legendre overhead gate is indexed by this continued-fraction spectrum (Theorem Q.0.7k, Theorem Q.0.7k.1, Corollary Q.0.7l)
 
 6. **Three-Gap Structure:** Finite phase sets partition the circle into at most three arc lengths (Proposition Q.0.7n)
 

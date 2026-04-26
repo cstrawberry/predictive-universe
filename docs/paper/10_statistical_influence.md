@@ -39,15 +39,125 @@ Under the information-rate bound for the balanced baseline $p=1/2$, $I(C;Y) \le 
 
 While deterministic FTL signaling is ruled out by Theorem 39, the proposed CC mechanism (Hypothesis 3), acting on entangled states (Proposition 10), naturally leads to the possibility of statistical correlations across space-like separations that depend on the CC context.
 
-**10.3.1 Postulate 3 (Post 3): Permissibility of Statistical FTL Influence (Two-Branch Statement)**
+**10.3.1 Postulate 3 (Post 3): Permissibility of Statistical FTL Influence (Three-Branch Statement)**
 
-As a consequence of Hypothesis 3 (CC influence mechanism) combined with quantum entanglement (Proposition 10) within the MPU network (Hypothesis 1), the Predictive Universe framework allows two distinct operational branches of statistical influence:
+As a consequence of Hypothesis 3 (CC influence mechanism) combined with quantum entanglement (Proposition 10) within the MPU network (Hypothesis 1), the Predictive Universe framework allows three operationally distinct branches of statistical influence, individuated by *which causal-temporal placement of Alice's context choice* is required to reproduce the predicted statistics.
 
-**(i) Local CPTP branch.** If the CC mechanism is implemented by local CPTP channels on Alice's side, then Bob's local marginal $P(b)$ is preserved exactly for all fixed local settings, by the standard no-signaling theorem. On this branch, a change in Alice's context $\mathrm{context}_S$ can statistically alter the joint distribution $P(a,b)$ and conditional distributions $P(b|a)$ (including post-selected sub-ensembles) that are only accessible after classical comparison of records, but it cannot alter Bob's unconditional marginal.
+**(i) Local CPTP branch.** If the CC mechanism is implemented by local CPTP channels on Alice's side, then Bob's local marginal $P(b)$ is preserved exactly for all fixed Bob settings, by the standard no-signaling theorem. On this branch, a change in Alice's context $\mathrm{context}_S$ can statistically alter Alice-side local statistics, the joint distribution $P(a,b)$, and conditional distributions $P(b|a)$ that are only accessible after classical comparison of records, but it cannot alter Bob's unconditional marginal. Branch (i) is the *Bob-marginal-preserving deformation* branch in the sense of Lemma 10.2 below.
 
-**(ii) Nonlocal/state-mediated branch (statistical FTL influence).** Beyond local CPTP, the framework allows — as a distinct, stronger hypothesis — that a change in Alice's context $\mathrm{context}_S$ can induce context-dependent shifts in Bob's local marginal $P(b)$ across a spacelike interval, mediated by the globally prepared entangled state rather than by any operator-level carrier. This is a genuine statistical faster-than-light (FTL) influence on Bob's local statistics: it is not derivable from ordinary nonlocal correlations of standard quantum mechanics, it is a real departure from the no-signaling marginals of local CPTP, and it is a falsifiable prediction requiring a separate nonlocal/state-mediated operational model.
+**(ii) Preparation-context branch.** If Alice's context $C$ is fixed before, or in the shared causal past of, the spacelike-separated measurement events at $A$ and $B$, then the global state $\omega_C$ delivered to the two stations may itself depend on $C$, and Bob's marginal $P(b\mid C)$ may depend on $C$ through ordinary common-cause statistics with no spacelike action by Alice after separation. Branch (ii) is consistent with operator-level Einstein causality (Corollary F.1) and is excluded as an explanation of any putative branch-(iii) signal only when Alice's context is randomized strictly later than the latest event in the shared causal past of the two measurement regions. Theorem L.12.8 supplies the necessary shared-past requirement for any nontrivial entanglement bias.
 
-In both branches, the influence is asserted to be incapable of enabling deterministic FTL signaling (thus preserving causality as defined in Postulate 2) provided the constraint $\alpha_{CC,max}<0.5$ (Theorem 39) holds. The distinction between the branches is that only the second is a genuine statistical FTL prediction; the first is consistent with standard quantum no-signaling and tests only the joint/conditional correlation sector. The existence and nature of the statistical FTL branch is presented as a key, falsifiable prediction of the framework, requiring stringent empirical verification (Section 13.5).
+**(iii) Nonlocal/state-mediated marginal-anomaly branch (statistical FTL influence).** Beyond branches (i) and (ii), the framework allows — as a distinct, stronger hypothesis — that a change in Alice's context $\mathrm{context}_S$, performed strictly after the spacelike-separated preparation event, can induce context-dependent shifts in Bob's local marginal $P(b)$ across a spacelike interval, mediated by the globally prepared entangled state rather than by any operator-level carrier and not reducible to the shared-past mechanism of branch (ii). This is a genuine statistical faster-than-light (FTL) influence on Bob's local statistics: it is not derivable from ordinary nonlocal correlations of standard quantum mechanics, it is a real departure from the no-signaling marginals of local CPTP, and it is a falsifiable prediction requiring a separate nonlocal/state-mediated operational model.
+
+In all three branches, the influence is asserted to be incapable of enabling deterministic FTL signaling (thus preserving causality as defined in Postulate 2) provided the constraint $\alpha_{CC,max}<0.5$ (Theorem 39) holds. The discrimination between branches is operational: branch (i) is tested through Alice-local and post-comparison joint-correlation analysis with Bob's marginal invariant; branch (ii) is excluded as an explanation of a Bob-marginal shift only by late randomization of Alice's context strictly after the spacelike-separated preparation event; branch (iii) is the unique branch on which a Bob-marginal shift of $P(b)$ persists under late randomization. The existence and nature of branch (iii) is presented as a key, falsifiable prediction of the framework, requiring stringent empirical verification (Section 13.5).
+
+**Lemma 10.2 (Bob-Marginal Kernel Decomposition of CC Deformations).** Let $P_0(a,b\mid x,y)$ be the baseline joint probability for spacelike-separated POVM settings $x$ at Alice and $y$ at Bob, and let
+$$
+P_C(a,b\mid x,y)=P_0(a,b\mid x,y)+\epsilon\,\ell_C(a,b\mid x,y)
+$$
+be a CC-deformed joint probability associated with Alice's context $C$, with $\epsilon\le\mathrm{CC}(S_A)$ the operational scale (Definition 30) and $\epsilon$ small enough that $P_C(a,b\mid x,y)\in[0,1]$ for every $(a,b,x,y)$. The deformation is normalization-preserving,
+$$
+\sum_{a,b}\ell_C(a,b\mid x,y)=0
+$$
+for every $(x,y)$. Define the Bob-marginal component
+$$
+(\Pi_B\ell_C)(a,b\mid x,y)
+:=
+\frac1{|\mathcal A|}\sum_{a'}\ell_C(a',b\mid x,y),
+$$
+and the Bob-marginal-preserving component
+$$
+\ell_C^{B0}:=(I-\Pi_B)\ell_C.
+$$
+Then
+$$
+\ell_C=\ell_C^{B0}+\Pi_B\ell_C,
+\qquad
+\sum_a\ell_C^{B0}(a,b\mid x,y)=0
+$$
+for every $(b,x,y)$, and $\Pi_B\ell_C$ carries exactly the context-dependent Bob-marginal shift:
+$$
+\sum_a(\Pi_B\ell_C)(a,b\mid x,y)
+=
+\sum_a\ell_C(a,b\mid x,y).
+$$
+Both components preserve total normalization. Branch (i) of Postulate 3 requires
+$$
+\Pi_B\ell_C=0
+$$
+for every late-randomized Alice context, while branch (iii) requires that there exist $C,y,b$ for which
+$$
+\sum_a\ell_C(a,b\mid x,y)\ne0
+$$
+under late randomization of $C$. If one also wants to isolate the pure joint-correlation component with both local marginals removed, apply the usual double-centering projector
+$$
+\Pi_{\mathrm{joint}}\ell
+=
+\ell-\overline\ell_A-\overline\ell_B+\overline\ell,
+$$
+where $\overline\ell_A$ and $\overline\ell_B$ are the Alice- and Bob-marginal mean components. This stronger joint-only subspace is useful for diagnostics, but Bob-marginal preservation is the exact no-FTL condition relevant to Alice-to-Bob signaling.
+
+*Proof.* For fixed $(x,y)$, $\Pi_B$ is the orthogonal projection onto the subspace of arrays that are constant in the Alice outcome $a$ for each Bob outcome $b$. Its complement $I-\Pi_B$ has zero Bob-column sums:
+$$
+\sum_a\ell_C^{B0}(a,b\mid x,y)
+=
+\sum_a\ell_C(a,b\mid x,y)
+-
+\sum_a\frac1{|\mathcal A|}\sum_{a'}\ell_C(a',b\mid x,y)
+=
+0.
+$$
+The Bob marginal of the full deformation is
+$$
+\sum_a\ell_C(a,b\mid x,y),
+$$
+and the displayed identity shows that this entire marginal shift lies in $\Pi_B\ell_C$. Since $\sum_{a,b}\ell_C=0$, summing the Bob-marginal component over $(a,b)$ also gives zero, and therefore both $\Pi_B\ell_C$ and $\ell_C^{B0}$ preserve total normalization. A local CPTP operation on Alice's side cannot change Bob's reduced state, so it lies in the $\Pi_B\ell_C=0$ branch. Conversely, a nonzero Bob-marginal component under late randomization is exactly a branch-(iii) marginal anomaly. ∎
+
+**Lemma 10.3 (Pre-Lightcone Information Budget and Sampling Gate).** Let $L$ be the spacelike separation between Alice and Bob, $r_{\max}$ the maximum local measurement rate per channel at Bob's station, $\alpha_{\mathrm{err}}\in(0,1/2)$ a target decoding error probability, and $\delta\le\kappa\,\mathrm{CC}(S_A)$ the per-trial Bob-marginal bias on branch (iii). Define the pre-lightcone mutual-information budget
+$$
+\mathcal C_{\mathrm{pre}}(L)
+:=
+r_{\max}\frac{L}{c}\,I(C;Y_B),
+$$
+where $I(C;Y_B)$ is the per-trial mutual information from Alice's binary context to Bob's outcome. In the small-bias regime, Theorem 41 gives
+$$
+\mathcal C_{\mathrm{pre}}(L)
+\le
+r_{\max}\frac{L}{c}\cdot \frac{\mathrm{CC}(S_A)^2}{8m_0}
++
+O\!\left(r_{\max}\frac{L}{c}\,\mathrm{CC}(S_A)^3\right).
+$$
+A one-bit pre-lightcone decoder with error probability at most $\alpha_{\mathrm{err}}$ must at least satisfy the Fano necessary condition
+$$
+\mathcal C_{\mathrm{pre}}(L)
+\ge
+\ln2-h_2(\alpha_{\mathrm{err}}),
+$$
+where $h_2$ is binary entropy in nats. Independently, resolving the marginal shift by repeated trials obeys the sampling gate of Lemma 10.1:
+$$
+r_{\max}\frac{L}{c}
+\gtrsim
+\frac{\ln(1/\alpha_{\mathrm{err}})}{2\delta^2}.
+$$
+Thus deterministic or arbitrarily reliable pre-lightcone communication is excluded whenever the finite pre-lightcone budget lies below these necessary gates, in addition to the deterministic forcing bound
+$$
+|\Delta P(i)|\le \mathrm{CC}(S_A)<\frac12
+$$
+of Theorem 39.
+
+*Proof.* Multiplying the per-trial bound of Theorem 41 by the maximum number of Bob trials before a light signal can cross the separation,
+$$
+N_{\mathrm{pre}}=r_{\max}L/c,
+$$
+gives the mutual-information budget. Fano's inequality for an equiprobable binary context gives
+$$
+P_e\ge 1-\frac{I(C;Y_B^{N_{\mathrm{pre}}})}{\ln2},
+$$
+equivalently a necessary condition
+$$
+I(C;Y_B^{N_{\mathrm{pre}}})\ge \ln2-h_2(\alpha_{\mathrm{err}})
+$$
+for error at most $\alpha_{\mathrm{err}}$. Since independent or conditionally independent trials have total mutual information bounded by the sum of per-trial informations, this gives the displayed necessary budget condition. The sharper high-confidence resolution of a small Bernoulli marginal shift is the Hoeffding/Chernoff sampling requirement already recorded in Lemma 10.1, with $\delta\le\kappa\,\mathrm{CC}(S_A)$. The deterministic-forcing bound is Theorem 39. ∎
 
 **10.3.2 Quantum Communication Protocol (QCP)**
 
@@ -192,7 +302,7 @@ The consistency of the framework's stance—allowing potential statistical FTL i
 
 In summary, the AQFT analysis (Appendix F) provides a conditional consistency setting for emergent locality while allowing bounded, state‑mediated statistical influence (which is hypothesized and bounded).
 
-**Theorem 42a (No actionable capacity without shared decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. Alice chooses a local instrument $\Phi_x$ labeled by a message $x$. Bob’s local detector is keyed by a classical variable $K$ (unavailable to Bob at measurement time), selecting a unital CP Heisenberg map $\Lambda_K^*$, and he measures effects $\{E_i^{(K)}\}$ with $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume the key distribution $\pi(K)$ is independent of $x$, and that the averaged Heisenberg map
+**Theorem 42a (Relational Decoding Principle: No Actionable Capacity Without Shared Decoding).** Consider bipartite $AB$ in state $\rho_{AB}$. Alice chooses a local instrument $\Phi_x$ labeled by a message $x$. Bob’s local detector is keyed by a classical variable $K$ (unavailable to Bob at measurement time), selecting a unital CP Heisenberg map $\Lambda_K^*$, and he measures effects $\{E_i^{(K)}\}$ with $E_i^{(K)}=\Lambda_K^*(E_i)$. Assume the key distribution $\pi(K)$ is independent of $x$, and that the averaged Heisenberg map
 $$
 \overline{\Lambda^*}:=\sum_K \pi(K)\,\Lambda_K^*
 $$
@@ -201,6 +311,16 @@ $$
 p_B(i\mid x)=\sum_K\pi(K)\operatorname{tr}\big[\rho_B\,E_i^{(K)}\big]=\operatorname{tr}\big[\rho_B\,\overline{\Lambda^*}(E_i)\big],\qquad I(X;Y)=0.
 $$
 *Proof.* Local operations on $A$ do not change $B$’s marginal, $\rho_B^{(x)}=\rho_B$. Linearity and the $x$‑independence of $\overline{\Lambda^*}$ give the result. ∎
+
+*Foundational reading.* Theorem 42a articulates a principle of *relational decoding* that is built into the framework's relational information ontology (Definition 1, Appendix N): the operational physics of a CC-induced effect resides not in any observer's standalone measurement stream but in the *jointly decoded* statistics that become accessible only after Alice's record, Bob's record, and any classical labels (context tags, basis assignments, timing certificates) have been brought together for joint analysis. Under the hypotheses of Theorem 42a,
+$$
+I(C;Y_B)=0,\qquad I(C;Y_B,K)=0,
+$$
+where $Y_B$ is Bob's record, $C$ is Alice's context label, and $K$ is the keying variable. Joint analysis with Alice's record $Y_A$ may still reveal context dependence:
+$$
+I(C;Y_A,Y_B,K)\;\text{may be}\;>0.
+$$
+Revealing the key $K$ alone does not unlock $C$ from Bob's stream because the averaged Heisenberg map is $x$-independent by hypothesis. On branch (i) of Postulate 3, Bob's marginal is invariant by Lemma 10.2. On branch (ii), any context dependence of Bob's marginal is a shared-past preparation effect and is excluded as an explanation of late-randomized branch-(iii) data by Theorem L.12.8. On branch (iii), Bob's marginal itself shifts under late randomization, but the shift is statistical with rate bounded by Theorem 41 and remains operationally inaccessible for deterministic signaling without sufficient sample complexity (Theorem 40, Lemma 10.3). The QCP of Section 10.3.2 fixes a single shared decoding rule — the pre-agreed binary mapping between context and target measurement bias — and converts the relational structure into a one-shot decision advantage $\delta=O(\mathrm{CC})$ that cannot be amplified into deterministic signaling.
 
 **10.6 Gravitational Self-Limitation of CC**
 

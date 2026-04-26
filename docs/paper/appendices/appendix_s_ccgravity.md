@@ -900,7 +900,7 @@ This appendix has established the gravitational self-limitation mechanism for Co
 
 5. **Schwarzschild interpretation** (S.5): CC bound $\alpha < 0.5$ is simultaneously information-theoretic constraint and gravitational collapse limit
 
-6. **Entanglement non-local influence** (S.6): Local gravitational field affects distant correlations without violating no-signaling, providing concrete realization of statistical FTL
+6. **Entanglement non-local influence** (S.6): Local gravitational field affects distant joint correlations without violating no-signaling, providing concrete realization of branch (i) of Postulate 3 (joint-correlation modulation, Bob's marginal preserved by Equation S.37); realizing branch (iii) (Bob-marginal anomaly under late randomization) requires a separate non-CPTP or non-local mechanism beyond the local gravitational dephasing analyzed here.
 
 7. **Chronometric phase/decoherence mechanism** (S.7): Time-dilation gradients always cause energy-gap-scaled phase rotation; on unresolved phase-noise or saturated chronometric ND-RID branches they produce residual dephasing, with the saturated branch obeying $\Gamma_{\mathrm{ch}}^{(ij)}=(|\Delta E_{ij}|/\hbar)K_{\mathrm{eff}}P_{\mathrm{context}}$
 

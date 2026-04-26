@@ -352,6 +352,70 @@ In particular, if a single predictive block is anomaly-free (all cubic/mixed gau
 **Remark: Predictive block and SM-like content.**
 The block structure $H_x\cong\mathbb C\oplus\mathbb C^2\oplus\mathbb C^3$ from Appendix G naturally yields associated bundles whose Chern classes reproduce the usual $U(1)$, $SU(2)$, $SU(3)$ contributions. In that setting, Lemma R.IDX1 pins the net chirality per block to the topological pairing $\langle \widehat A\,\mathrm{ch},[M]\rangle$, while Lemma R.IDX2 guarantees that once a single predictive block satisfies the anomaly constraints, any number of generations (blocks) preserves them automatically.
 
+**Proposition R.IDX2a (Flag-Lift Index Representation of the Minimal Family Branch).** Let
+$$
+\widetilde X=\mathrm{Flag}_{1,2,3}(Q)
+$$
+be the minimal flag lift of Theorem G.8.4e.1. On the minimal anomaly-and-CP family branch of Theorem R.3.4, the selected family-charge set is
+$$
+\{a,-a,0\},
+$$
+so the generation vector space is
+$$
+V_{\mathrm{gen}}\cong\mathbb C^3.
+$$
+Define the generation bundle
+$$
+E_{\mathrm{gen}}:=\mathcal O_{\widetilde X}\otimes V_{\mathrm{gen}}.
+$$
+Then the Dolbeault index is
+$$
+\operatorname{Ind}_{\widetilde X}(\overline\partial_{E_{\mathrm{gen}}})
+:=
+\sum_{q\ge0}(-1)^q
+\dim H^q(\widetilde X,E_{\mathrm{gen}})
+=
+3.
+$$
+
+*Proof.* The flag lift is the compact rational homogeneous space
+$$
+\widetilde X\cong SU(8)/S(U(2)\times U(1)\times U(2)\times U(3))
+$$
+by Proposition G.8.4e.1a. For a compact rational homogeneous flag manifold, Borel-Weil-Bott applied to the trivial weight gives
+$$
+H^0(\widetilde X,\mathcal O_{\widetilde X})\cong\mathbb C,
+\qquad
+H^q(\widetilde X,\mathcal O_{\widetilde X})=0
+\quad(q>0).
+$$
+Since
+$$
+E_{\mathrm{gen}}=\mathcal O_{\widetilde X}\otimes\mathbb C^3,
+$$
+cohomology commutes with tensoring by the finite-dimensional vector space $\mathbb C^3$:
+$$
+H^q(\widetilde X,E_{\mathrm{gen}})
+\cong
+H^q(\widetilde X,\mathcal O_{\widetilde X})\otimes\mathbb C^3.
+$$
+Therefore
+$$
+H^0(\widetilde X,E_{\mathrm{gen}})\cong\mathbb C^3,
+\qquad
+H^q(\widetilde X,E_{\mathrm{gen}})=0
+\quad(q>0).
+$$
+Thus
+$$
+\operatorname{Ind}_{\widetilde X}(\overline\partial_{E_{\mathrm{gen}}})
+=
+\dim\mathbb C^3
+=
+3.
+$$
+The index therefore represents the minimal family count selected by Theorem R.3.4 on the flag lift. It does not replace Theorem R.3.4; it globalizes its selected three-family branch as an index statement. ∎
+
 **Theorem R.3.4 (Family-charge anomaly constraints).**
 
 Let $\{q^{(g)}\}\subset L_{\rm light}$ be the set of realized light sectors. Each sector corresponds to a full SM generation with identical $G_{\rm SM}$ charges, but carries a distinct **family** charge offset $F_g := f \cdot q^{(g)}$, where $f$ is a fixed vector in the dual lattice. On the branch where the family $U(1)_F$ is treated as a predictive-frame redundancy rather than a physical global update channel, Theorem X.8d requires the total $U(1)_F$ anomaly class to vanish. In the uniform family-charge branch this descent condition reduces to

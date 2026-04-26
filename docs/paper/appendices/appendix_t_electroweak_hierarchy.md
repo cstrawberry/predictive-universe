@@ -741,7 +741,66 @@ T=
 1&0&0
 \end{pmatrix}.
 $$
-The tuple $(15.14,20.94,18.41)$ may be used only after this forward computation as a validation comparison. It may not be inserted into $F=T^{-1}\Delta$, used to choose the finite-part prescription, used to choose $(\mu_0,m_{\mathcal J},\eta)$, or used to select a Golay/parity lift. A finite truncation establishes a stated tolerance only when
+The tuple $(15.14,20.94,18.41)$ may be used only after this forward computation as a validation comparison. It may not be inserted into $F=T^{-1}\Delta$, used to choose the finite-part prescription, used to choose $(\mu_0,m_{\mathcal J},\eta)$, or used to select a Golay/parity lift.
+
+**Theorem T.17a.0a (Single Determinant-Line Construction for Gauge Thresholds).** For a completed flag-lift threshold tuple $\mathfrak S_{\widetilde X}$ satisfying Convention T.17a.0, let
+$$
+D_\oplus:=D_C\oplus D_W\oplus D_Y
+$$
+with sector idempotents $\Pi_C,\Pi_W,\Pi_Y$. The sector threshold vector is the equivariant determinant-line character
+$$
+F_s
+=
+\log\det_{\mathrm{PU},\mu_G}(\Pi_sD_\oplus\Pi_s)
+:=
+-\zeta_s'(0)-\zeta_s(0)\log\mu_G^2,
+\qquad
+s\in\{C,W,Y\}.
+$$
+The physical threshold vector is uniquely
+$$
+\Delta=TF,
+\qquad
+F=(F_C,F_W,F_Y)^T,
+$$
+where
+$$
+T=
+\begin{pmatrix}
+2/5&3/5&8/15\\
+0&1&0\\
+1&0&0
+\end{pmatrix},
+\qquad
+\det T=-\frac{8}{15}\ne0.
+$$
+Hence a completed spectral package determines all three threshold shifts and matching factors
+$$
+Z_i=1+\frac{\Delta_i}{24}
+$$
+with no additional sector threshold constants. Conversely, since $T$ is invertible, a numerical threshold vector determines at most one sector vector $F=T^{-1}\Delta$, but that inverse relation is diagnostic only unless $F$ has first been computed forward from $\mathfrak S_{\widetilde X}$.
+
+*Proof.* Convention T.17a.0 fixes $D_s$, the finite-part prescription, the Golay/parity sector data, and the tail certificate before validation comparison. Therefore each sector zeta function $\zeta_s(q)$ is fixed. By Definition T.17a and Convention T.69a,
+$$
+F_s=-\zeta_s'(0)-\zeta_s(0)\log\mu_G^2.
+$$
+For direct sums of positive elliptic sector operators, the heat trace and zeta function are additive:
+$$
+\zeta_{D_\oplus}(q)=\zeta_C(q)+\zeta_W(q)+\zeta_Y(q).
+$$
+The sector idempotents recover the three components, so the determinant-line construction is single at the level of $D_\oplus$ and vector-valued at the level of sector characters. The Dynkin-index matrix $T$ is fixed by the flag-resolved sector representation data. Its determinant is
+$$
+\det T
+=
+-\frac{8}{15}\ne0,
+$$
+so the linear map $F\mapsto\Delta=TF$ is injective and surjective. Definition T.17a then gives
+$$
+Z_i=1+\frac{\Delta_i}{24}.
+$$
+No free sector constants appear in these equations. The inverse $F=T^{-1}\Delta$ exists algebraically, but using it before the forward determinant calculation would replace the spectral computation by validation data, which Convention T.17a.0 forbids. ∎
+
+A finite truncation establishes a stated tolerance only when
 $$
 \left|(T F^{(\le L)})_i-\Delta_i^{\mathrm{val}}\right|
 +
