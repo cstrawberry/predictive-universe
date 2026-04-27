@@ -184,7 +184,69 @@ $$
 
 *Proof.* Exterior observers identify gauge/frame-related descriptions as redundancies. If the exterior sector alone has nonzero anomaly class, its predictive functional does not descend to the quotient. Adding horizon/interface degrees of freedom multiplies the exterior generating functional by boundary factors, so anomaly phases add. Descent holds exactly when the displayed sum vanishes. The channel bound is Appendix E's area-law capacity bound applied to the edge subsystem on the horizon cross-section. ∎
 
-**Current Status:** The conceptual framework for black hole information conservation is established, with key components (SPAP dynamics, thermodynamic bounds, perspectival encoding, Page curve consistency, and the horizon edge-inflow consistency condition) rigorously derived. However, detailed calculations of information extraction rates, explicit construction of the Perspectival Information Channel capacity as a function of observer resources, and precise comparison with holographic entropy calculations (Ryu-Takayanagi formula, quantum extremal surfaces) remain to be completed. This represents a promising avenue for future theoretical development, building on the solid foundation of reflexive computational costs and thermodynamic channel limits established in the framework.
+**Definition K.3b (Predictive Island Markov-Blanket Cost).** Let $R$ be a finite exterior radiation record algebra on a black-hole evaporation branch. Let $\mathcal I_R$ be the finite family of candidate disconnected interior or horizon-adjacent MPU regions whose boundary channels can be admitted into the exterior reconstruction ledger. The empty candidate $\varnothing$ is included. For $I\in\mathcal I_R$, let $C_{\partial I}$ be the Appendix E boundary-channel capacity cost of admitting the boundary of $I$, with
+$$
+C_{\partial\varnothing}=0.
+$$
+Define the PU generalized reconstruction cost
+$$
+S_{\mathrm{gen}}^{\mathrm{PU}}(R;I)
+:=
+C_{\partial I}
++
+S_{\mathrm{pred}}(R\cup I)
+-
+S_{\mathrm{pred}}(I).
+\tag{K.3b.1}
+$$
+Here $S_{\mathrm{pred}}$ is the retained predictive entropy of the finite record algebra after PCE compression. The second and third terms form the conditional predictive entropy of the radiation relative to the admitted candidate island.
+
+**Theorem K.3c (Predictive Island Markov-Blanket Formula).** On a finite black-hole evaporation branch whose candidate reconstruction regions are the finite family $\mathcal I_R$, the PCE-selected reconstructed radiation entropy is
+$$
+S_{\mathrm{rec}}(R)
+=
+\min_{I\in\mathcal I_R}
+S_{\mathrm{gen}}^{\mathrm{PU}}(R;I).
+\tag{K.3c.1}
+$$
+Any minimizer $I_*$ is the PCE-minimal disconnected Markov-blanket component for the radiation record. The term $C_{\partial I_*}$ is a boundary channel-capacity cost, not a fundamental geometric area operator. In the regular thermodynamic continuum representation, this capacity term is represented by the usual horizon-area density of Appendix E.
+
+*Proof.* For a fixed candidate $I$, an exterior reconstruction using $R\cup I$ must pay two costs. First, it must admit the boundary channel of $I$, whose finite channel-capacity cost is $C_{\partial I}$. Second, after $I$ is admitted, the residual uncertainty of the radiation record is the conditional predictive entropy
+$$
+S_{\mathrm{pred}}(R\mid I)
+=
+S_{\mathrm{pred}}(R\cup I)-S_{\mathrm{pred}}(I).
+$$
+Thus the total finite predictive reconstruction cost of the candidate is exactly (K.3b.1).
+
+The family $\mathcal I_R$ is finite, so a minimizer exists. PCE selects the admissible reconstruction with least total predictive cost among candidates that preserve the same exterior operational content. Therefore the selected entropy is (K.3c.1).
+
+It remains to identify the minimizer as a Markov blanket. If an additional label or subregion inside the chosen candidate does not change the conditional exterior predictions, Corollary F.10.6c removes it by PCE. If removing a component changes the conditional exterior predictions, then that component is part of the shielding boundary required by Theorem F.10.6b. Hence the retained minimizing component is exactly the PCE-minimal Markov blanket for the radiation record, possibly disconnected. The continuum area reading follows only after the Appendix E channel-density limit is taken. ∎
+
+**Corollary K.3d (PU Page Transition as Island-Blanket Switch).** A nonempty candidate $I$ beats the empty candidate precisely when
+$$
+C_{\partial I}
+<
+S_{\mathrm{pred}}(R)
+-
+\left[
+S_{\mathrm{pred}}(R\cup I)-S_{\mathrm{pred}}(I)
+\right].
+\tag{K.3d.1}
+$$
+Thus the Page transition is the point at which the predictive-entropy reduction gained by admitting a disconnected Markov-blanket component exceeds the boundary channel-capacity cost of admitting it.
+
+*Proof.* The empty candidate has
+$$
+S_{\mathrm{gen}}^{\mathrm{PU}}(R;\varnothing)=S_{\mathrm{pred}}(R).
+$$
+A nonempty candidate wins exactly when
+$$
+S_{\mathrm{gen}}^{\mathrm{PU}}(R;I)<S_{\mathrm{gen}}^{\mathrm{PU}}(R;\varnothing).
+$$
+Substituting Definition K.3b gives (K.3d.1). ∎
+
+**Current Status:** The conceptual framework for black hole information conservation is established, with key components (SPAP dynamics, thermodynamic bounds, perspectival encoding, Page curve consistency, horizon edge-inflow consistency, and the finite predictive island Markov-blanket formula) rigorously derived on their stated branches. Detailed calculations of information extraction rates, explicit construction of the Perspectival Information Channel capacity as a function of observer resources, and the continuum quantum-extremal-surface representation of the finite Markov-blanket minimizer remain branch-level development tasks.
 
 
 ## K.4 Arrow of Time and Temporal Asymmetry
@@ -1135,6 +1197,69 @@ Then $N_{\mathfrak C}(\nu)>\exp(B(\mathcal P))$, contradicting the finite distin
 (ii) In PU the fundamental degrees of freedom are MPU-network degrees of freedom with characteristic spacing $\delta$ (Definition 35; Appendix Q, Eq. Q.18). Operational protocols act by finite MPU-admissible interaction/update steps (Definition 27) across finite-capacity channels (Theorem E.2). Any purported "mode" with $\lambda<\delta$ would require independent operational distinguishability of sub-MPU structure, which is not available to MPU-admissible protocols. Therefore changes confined to $\lambda<\delta$ cannot be represented as independently measurable degrees of freedom and can affect operational predictions only via their induced change in the effective dynamics of the MPU-resolved degrees of freedom. In a continuum representation this is exactly the statement that the effect of $k>\Lambda_{MPU}$ is encoded in the parameters of the effective action defined at $\Lambda_{MPU}$.
 
 (iii) UV divergences in continuum QFT arise from integrating over arbitrarily large momenta, i.e., from assuming operational meaning for $\lambda\to 0$. Since PU enforces a non-operational regime below $\delta$, those divergent contributions are outside the domain of the effective description and cannot correspond to any operational observable. ∎
+
+**Definition K.10.4a (Hadamard-Subtracted UV PCE Cost).** Let $U$ be a relatively compact normal neighborhood in the regular AQFT branch of Theorem F.10.2. Let $\omega_2$ be the two-point distribution of a quasifree local state on $U$, and let $H_U$ be the local Hadamard parametrix with the same antisymmetric commutator singularity. Define the Hadamard-subtracted remainder
+$$
+r_U:=\omega_2-H_U.
+\tag{K.10.4a.1}
+$$
+Choose a countable family $\{Q_j\}_{j\ge1}$ of properly supported order-zero pseudodifferential microlocal cutoffs whose conic supports cover $T^*(U\times U)\setminus0$. For Sobolev order $m\ge0$, write
+$$
+N_{j,m}(r_U):=\lVert Q_j r_U\rVert_{H^m_{\mathrm{loc}}(U\times U)}.
+$$
+The local UV PCE gate cost is
+$$
+\mathcal C_{\mathrm{Had}}(\omega;U)
+:=
+\begin{cases}
+\displaystyle
+\sum_{j,m\ge1}2^{-j-m}
+\frac{N_{j,m}(r_U)}{1+N_{j,m}(r_U)},
+&
+N_{j,m}(r_U)<\infty\ \text{for all }j,m,\\[1.2em]
++\infty,
+&
+\text{otherwise.}
+\end{cases}
+\tag{K.10.4a.2}
+$$
+The global regular-branch cost is finite when (K.10.4a.2) is finite on every normal-neighborhood member of an admissible finite cover.
+
+**Theorem K.10.4b (Hadamard-PCE State Gate).** On the regular quasifree AQFT branch, a continuum state is PU-admissible at finite renormalized UV PCE cost if and only if its two-point function is Hadamard:
+$$
+\mathcal C_{\mathrm{Had}}(\omega;U)<\infty
+\quad\Longleftrightarrow\quad
+\omega_2\ \text{is Hadamard on }U.
+\tag{K.10.4b.1}
+$$
+Equivalently,
+$$
+\operatorname{WF}(\omega_2)
+=
+\{(x,k_x;y,-k_y):(x,k_x)\sim(y,k_y),\ k_x\in\overline V^+_x\}
+\tag{K.10.4b.2}
+$$
+on the regular branch. Non-Hadamard continuum states are therefore not additional physical states of PU; they are continuum representatives whose sub-resolution singular data have infinite renormalized predictive description cost.
+
+*Proof.* A distribution $u$ is smooth on $U\times U$ if and only if every microlocal cutoff $Q_j u$ belongs to $H^m_{\mathrm{loc}}(U\times U)$ for every $m\ge0$. The family $\{Q_j\}$ covers all nonzero cotangent directions, so this criterion applies to $r_U=\omega_2-H_U$.
+
+If $\omega_2$ is Hadamard, the local Hadamard theorem gives
+$$
+\omega_2=H_U+s_U
+$$
+with $s_U\in C^\infty(U\times U)$. Hence $r_U=s_U$, so $N_{j,m}(r_U)<\infty$ for all $j,m$. The sum in (K.10.4a.2) is then bounded by
+$$
+\sum_{j,m\ge1}2^{-j-m}<\infty,
+$$
+and $\mathcal C_{\mathrm{Had}}(\omega;U)<\infty$.
+
+Conversely, suppose $\mathcal C_{\mathrm{Had}}(\omega;U)<\infty$. Then every $N_{j,m}(r_U)$ is finite. Hence $Q_jr_U$ is in all local Sobolev spaces for every $j$. Since the $Q_j$ cover every nonzero cotangent direction, $r_U$ has empty wavefront set. Thus $r_U$ is smooth. Therefore $\omega_2$ differs from the local Hadamard parametrix by a smooth remainder, which is equivalent to the microlocal Hadamard spectrum condition (K.10.4b.2).
+
+If $\omega_2$ is not Hadamard, then $r_U$ is not smooth on some normal neighborhood. Its wavefront set contains a nonzero covector. Some $Q_j$ is elliptic on a conic neighborhood of that covector, so $Q_jr_U$ is not in $H^m_{\mathrm{loc}}$ for some $m$. By Definition K.10.4a the cost is $+\infty$. ∎
+
+**Corollary K.10.4c (Stress-Energy and Null-Energy Regularity Gate).** The MPU stress-energy source construction, the local Rindler/KMS horizon branch, and the predictive null-energy inequality are continuum-admissible only on the Hadamard-PCE finite-cost state sector. On that sector the point-split stress tensor and Wick powers have finite renormalized local representatives. Outside that sector, the would-be continuum stress tensor is not a PU observable because the state already fails the UV PCE gate.
+
+*Proof.* The point-splitting construction subtracts the universal Hadamard singularity before taking the coincidence limit. By Theorem K.10.4b the subtracted remainder is smooth exactly on the finite-cost sector, so the local derivatives required in the stress tensor and Wick powers are well defined there. If the state is non-Hadamard, some microlocal derivative order has infinite UV PCE cost, so no finite-resource MPU protocol can promote that continuum expression to an operational observable. ∎
 
 **Theorem K.10.5 (UV–Strong-Curvature Unified Exclusion).** UV divergences in continuum QFT and curvature singularities in continuum GR are excluded by the same operational mechanism: both arise from extrapolating continuum descriptions beyond the domain enforced by finite information-processing capacity and the discrete MPU scale.
 

@@ -16,6 +16,8 @@
 
 *   **AQFT (Algebraic Quantum Field Theory):** (Appendix F) Framework describing emergent continuum QFT from MPU networks via nets of local algebras $\mathfrak{A}(\mathcal{O})$.
 
+*   **Predictive Nuclearity Species Bound:** (Appendix F.10.4f) Local phase-space density gate for regular AQFT branches. The energy-damped map $\Theta_{\beta,O}(A)=e^{-\beta H}A\Omega_*$ must have nuclear norm bounded by finite PU channel capacity, preventing an inadmissible density of local species or excitations.
+
 *   **Area Law (Horizon Entropy):** (Theorem 49, Appendix E) Horizon entropy scales linearly with area: $S_{max} = k_B \mathcal{A} / (4 L_P^2)$, derived from ND-RID limits ($C_{\max}$) and geometric regularity ($\sigma_{link}$).
 
 *   **Assumption 1 (Context-Dependence):** (Section 9.1.2) ND-RID transition probabilities depend on local MPU aggregate state. Basis for CC hypothesis.
@@ -29,6 +31,10 @@
 *   **$B_3$ (Three Bits):** (Theorem 15) Minimum information capacity (8 states) for core SPAP logic, establishing $K_0 \equiv B_3 = 3$ bits.
 
 *   **Born Rule:** (Proposition 7, Theorem G.1.7) Probability of outcome $i$ from state $\rho$ measured via projector $P_i$ is $P(i) = \mathrm{tr}(\rho P_i)$. For pure state $|\psi\rangle$ and basis projector $P_i=|i\rangle\langle i|$, $P(i)=|\langle i|\psi\rangle_s|^2$. Derived via PCE consistency (Appendix G).
+
+*   **Contextual Holonomy / PCE Magic Cost:** (Appendix G.1.7a) Protocol-cover obstruction measuring whether Born-consistent distributions across incompatible contexts admit a positive global assignment. Its value is the minimum quasiprobability overhead $\log\lVert q\rVert_1$ over PPI-equivalent signed ledgers and vanishes exactly for noncontextual protocol covers.
+
+*   **Källén-Lehmann PPI Spectral Gate:** (Appendix F.10.4c.4) Positive spectral-measure representation for two-point functions of PPI-observable operators. Particle labels are operational only when they appear in the positive spectral response of a gauge-invariant or PPI-descended operator.
 
 *   **Bures Metric (Bures Distance):** (Appendix Z, Section Z.17) The natural Riemannian metric on the space of density operators measuring distinguishability between quantum states. For pure states, equivalent to the Fubini-Study metric. Selected by PCE for interface geometry because it saturates the quantum Cramér-Rao bound, providing the optimal estimation geometry for predictive systems.
 
@@ -46,6 +52,8 @@
 
 *   **Causal Structure:** (Definition P.8.1) The constraint that event $A$ can causally influence event $B$ if and only if $A$'s predictive information can propagate to $B$ through ND-RID channels with correctable error accumulation. Emergent from the finite propagation speed $c$ (Theorem P.8.4 / Theorem 46) and error-correction range of the Golay code structure.
 
+*   **Causal-Order Resource:** (Corollary 14.1c) A finite higher-order process property measured by robustness distance to the convex set of causally separable processes. It may be nonzero without retrocausal signaling and is not a closed-timelike-curve channel.
+
 *   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Equation 54). It bounds the maximum possible deviation from the Born rule (specifically, the Fisher-Rao distance, Definition 33) that the system can induce. Bounded by the causality constraint $\mathrm{CC}(S)\le \alpha_{\mathrm{CC,max}} < 0.5$ (Theorem 39).
 
 *   **Coherence:** (Appendix C) Reliability and stability of predictive correlations and information propagation across the MPU network. Requires geometric regularity (Theorem C.2).
@@ -53,6 +61,10 @@
 *   **Complexity Hierarchy:** (Section 2.4.1) Iterative refinement sequence $\{C_{P,n}\}$ used to define $C_P$ self-consistently without presupposing derived physical laws.
 
 *   **Continuum Limit / Operational Continuum Limit:** (Section 11, Appendix F) The finite-resolution effective closure by which the discrete MPU network admits a manifold and AQFT compression at accessible scales. It is not the ontological claim that the substrate becomes an actual real-number continuum. On the $M=24$, $D=4$ shell branch, Theorem 43.5 packages the geometric branch using Appendix C.6d–C.6e, Appendix D.6e, Theorem C.6c, and Theorem 44a under their stated curvature-transfer, finite-core, and quantitative-rigidity hypotheses; Appendix F supplies the algebraic net under the controlled coarse-graining hypotheses of Theorem F.0, with lightcone normalization supplied on the strict single-clock ND-RID branch by Corollary F.1a.
+
+*   **Ginsparg-Wilson Chirality Gate:** (Appendix F.10.4a) Finite chiral-regulator rule replacing impossible naive exact lattice chirality with the Ginsparg-Wilson relation and finite index ledger $\operatorname{Tr}(\Gamma_5(1-a_{\mathrm{PU}}D/2))$. It supplies the finite-regulator bridge for chiral anomaly descent and the Appendix R/Y index statements.
+
+*   **Hadamard-PCE State Gate:** (Appendix K.10.4a–K.10.4c) Regular AQFT admissibility condition requiring the Hadamard-subtracted two-point distribution to have finite UV PCE gate cost. It is the state-selection condition that makes renormalized stress-energy and local horizon thermodynamics finite on the continuum branch.
 
 *   **CPTP (Completely Positive Trace-Preserving):** (Appendix E, Appendix G) A quantum channel $\mathcal{E}$ is CPTP if it maps density operators to density operators, preserves trace ($\mathrm{tr}(\mathcal{E}(\rho)) = \mathrm{tr}(\rho)$), and remains positive when extended to any ancilla system. The 'Evolve' channel is CPTP by construction, with strict contractivity ($f_{RID} < 1$) guaranteed by irreversibility ($\varepsilon > 0$).
 
@@ -114,6 +126,12 @@
 *   **Kissing Number ($K(D)$):** (Appendix Z, Definition Z.7, Section Z.10) The maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in $D$-dimensional Euclidean space. Key values: $K(3) = 12$, $K(4) = 24$ (24-cell), $K(8) = 240$ ($E_8$). In the mode-channel correspondence (Appendix Z), $M_{\rm int} = K(D)$ Theorem Z.11 then selects $D = 4$ since $K(4) = M = 24$ from the mode-channel correspondence.
 
 *   **KMS (Kubo-Martin-Schwinger) Condition:** (Appendix G.1.9) The thermal equilibrium condition for quantum states at inverse temperature $\beta$, requiring $\langle A B(i\hbar\beta) \rangle = \langle B A \rangle$ for observables $A, B$. In the PU framework, the KMS condition characterizes the PCE-equilibrium thermal states and connects to the modular Hamiltonian structure in the entropy unification (Corollary G.1.9).
+
+*   **Modular Chaos Bound:** (Appendix F.10.4b) KMS analyticity and finite predictive capacity bound exponential OTOC growth by $\lambda_L\le2\pi/(\beta\hbar)$ on branches satisfying the standard scrambling-window hypotheses.
+
+*   **Operational Paley-Wiener Sector:** (Appendix F.10.4a) The finite spectral-band sector $PW_\Omega(L_{\mathrm{PU}})=\operatorname{Ran}\mathbf 1_{[0,\Omega]}(L_{\mathrm{PU}})$ of the propagation-cost Laplacian. Below operational bandwidth, cell averages form a stable reconstruction frame on this sector.
+
+*   **Predictive Resonance Spectrum:** (Appendix X.9.6d) The pole spectrum of the active ND-RID/PCE transfer resolvent $(z-\mathcal L_{\mathrm{PCE}})^{-1}$. It organizes stationary KMS states, decay of connected correlations, mixing gaps, protected Hodge ledger modes, transport poles, finite OTOC linearizations, and memory lifetimes.
 
 *   **Landauer Pointer:** (Appendix Z, Theorem Z.1, Section Z.2.3) The minimal physical subsystem instantiating the irreducible cost $\varepsilon = \ln 2$ of the SPAP cycle. Dimension determined by admissibility ($\ln a \ge \varepsilon$) together with PPI-optimality: $a = 2$. Represents the two-level active kernel within the $d_0 = 8$ MPU Hilbert space where baseline predictive activity concentrates.
 
@@ -208,6 +226,16 @@ $$
 
 *   **PCE (Principle of Compression Efficiency):** (Definition 15) The core optimization principle stating that adaptive systems evolve towards configurations that maximize predictive utility (Meaning Potential, related to high PP) while minimizing comprehensive resource costs (Signal Cost, including $R, R_I$, adaptation costs). Drives complexity adaptation and network self-organization via minimization of PCE Potential $V(x)$ (Appendix D). PCE is the operational content of the "resource-optimization imperatives" in PPI (Definition P.6.2); together they form a hierarchical principle where PPI asserts instantiation occurs under optimization and PCE specifies the optimization dynamics.
 
+*   **Predictive Infrared Admissibility Gate:** (Appendix X.8j.4) PPI rule for massless long-range sectors: a scattering quantity is observable at detector resolution $\lambda$ only if it descends to the quotient by unresolved soft-ledger refinements below $\lambda$. Inclusive and dressed observables are sufficient representatives on their regular branches.
+
+*   **Predictive Large-Deviation Instanton:** (Appendix Q.0.1a–Q.0.1c) Minimum-action rare transition on a finite ND-RID/PCE branch satisfying a path-space large-deviation principle. Its suppression exponent is the infimum of the dimensionless action $I_{\mathrm{PU}}=\mathcal S_{\mathrm{PU}}/\hbar$ over retained transition paths.
+
+*   **Predictive Thermodynamic Uncertainty Bound:** (Appendix D.8.7e–D.8.7g) Finite record-current precision law on the Blackwell-PCE commutative quotient:
+$$
+\frac{\operatorname{Var}(J_T)}{\langle J_T\rangle^2}\Sigma_T\ge2.
+$$
+It states that stable predictive current precision requires entropy production.
+
 *   **PCE-Attractor:** (Definition 15a, Appendix Z Section Z.6.3) The canonically selected global-minimum equilibrium configuration characterized by maximal efficiency and symmetry. It is the state where predictive and physical descriptions coincide, determining the attractor coupling $u^*$ and supplying the background for the U(1) fine-structure calculation. Key properties include: (i) density operator $\rho_0 = \frac{I_a}{a} \oplus 0_b$ maximally mixed on the active subspace; (ii) a flat QFI spectrum for the $U(1)$ sector; and (iii) capacity saturation $\mathcal{I}(u^*) = \ln d_0$. The equality $\kappa^*_{\mathrm{bulk}} = 1$ is a downstream U(1)-sector consequence derived in Theorem Z.14 rather than part of Definition 15a itself. Its unitary orbit is the complex Grassmannian $\text{Gr}(2,8)$ with isotropy group $U(2) \times U(6)$.  
 
 
@@ -255,13 +283,17 @@ is the loop-closure obstruction for predictive-frame transport.
 
 *   **Predictive Anomaly Descent/Inflow Principle:** (Appendix X, Theorem X.8d; Corollary X.8d.1) Transformations treated as predictive-frame redundancies must have vanishing total anomaly class so that the predictive functional descends to the quotient of physically equivalent descriptions. Bulk anomaly classes may be canceled by boundary, horizon, or interface classes. A nonzero anomaly for a global current not treated as a redundancy is instead a physical update channel.
 
+*   **Bordism-PCE Global Anomaly Gate:** (Appendix X.8d.2–X.8d.4) Global anomaly audit requiring the full bordism-valued anomaly character $\alpha_{\mathsf B}\in\operatorname{Hom}(\Omega_{d+1}^{G_{\mathrm{PU}}},U(1))$ to vanish after allowed boundary/interface inflow for any declared redundancy. It includes torsion anomalies invisible to local anomaly polynomials.
+
+*   **PCE Anomaly Matching:** (Appendix X.8d.5–X.8d.8) RG/PCE-flow constraint for retained global response symmetries: their anomaly class must be preserved under compression, after including Goldstone, topological, boundary, interface, and defect sectors. It is distinct from anomaly cancellation for redundancies.
+
 *   **Landauer-Noether Closure Principle:** (Appendix Q, Theorem Q.0.7d2; Corollary Q.0.7d3) On the Landauer-saturating branch, the dense subgroup $G_L=\{e^{iN\ln2}:N\in\mathbb Z\}\subset U(1)$ upgrades discrete SPAP/Landauer phase invariance of continuous finite-resolution response functionals to full effective $U(1)$ invariance and the corresponding Noether current.
 
 *   **Chronometric Curvature-Dephasing Principle:** (Section 11.7.2, Theorem 47c; Appendix S, Theorem S.7.3a) Internal energy splittings act as clocks for proper-time mismatch. The coherent phase-rate invariant is $\mathcal D_{ij}^{\phi}=\hbar|\dot\Theta_{ij}|/|\Delta E_{ij}|=|\Delta\Phi|/c^2$. On the saturated chronometric ND-RID dephasing branch, $\mathcal D_{ij}^{\Gamma}=\hbar\Gamma_{\mathrm{ch}}^{(ij)}/|\Delta E_{ij}|=|\Delta\Phi|/c^2$.
 
 *   **Landauer Horizon Spectroscopy:** (Appendix Q, Definition Q.0.7u, Proposition Q.0.19, Proposition Q.0.20, Corollaries Q.0.20a–Q.0.20c; Section 13.8.4) Conditional horizon-transfer branch on which resonant closed-loop horizon phases in $x=\hbar\omega/(k_B T_H)$ satisfy $x\equiv N\ln2\pmod{2\pi}$.
 
-*   **Golay Noise Spectroscopy:** (Appendix Z, Corollary Z.13b.1, Definition Z.13b.2, Theorem Z.13b.3; Section 13.9, Protocol 4.4) Conditional residual-noise branch on which irreducible correlated 24-mode residual syndromes decompose into Golay shells after ordinary device-local noise is separated. The leading octad statistic satisfies $\mathcal R_8=1+968\eta_8$ and the octad incidence sequence is $253:77:21:5:1$.
+*   **Golay Noise Spectroscopy:** (Appendix Z, Corollary Z.13b.1, Definition Z.13b.2, Theorem Z.13b.3, Corollary Z.13b.5; Section 13.9, Protocol 4.4) Conditional residual-noise branch on which irreducible correlated 24-mode residual syndromes decompose into Golay shells after ordinary device-local noise is separated. The leading octad statistic satisfies $\mathcal R_8=1+968\eta_8$, the octad incidence sequence is $253:77:21:5:1$, and controlled weight-4 decoder-boundary probes decompose into $1771$ six-tetrad sextets.
 
 *   **Cosmological Acceleration Lock:** (Appendix H, Corollary H.1; Appendix I, Corollary I.3a) On the QFI-gravity bridge representative of Definition H.0 and Equation H.4b,
 $$
@@ -377,6 +409,26 @@ on the verification/update resources required to approach that limit (Theorem 14
 *   **SPAP (Self-Referential Paradox of Accurate Prediction):** (**Section 4.2, Theorems 10, 11, A.1.1, A.1.3**) Theorems demonstrating the logical impossibility of guaranteed perfect self-prediction (deterministic or probabilistic) for systems possessing the represent / simulate / predicate-evaluate subcapacity needed for diagonalization, and therefore in particular for any system possessing Property R. Establishes fundamental Logical Indeterminacy and performance limit $\alpha_{SPAP}$.
 
 *   **Statistical FTL Influence:** (Postulate 3, Section 10.3) Hypothesized effect where CC modulation by Alice can statistically influence the marginal probabilities of outcomes for Bob's measurements on an entangled system at a space-like separated location, argued to be consistent with operational causality (Postulate 2) due to information limits (Theorem 42, Appendix F).
+
+*   **Action-Entropy Identity:** (Appendix Q, Theorem Q.0.1; Corollary Q.0.1) The identification $\mathcal{S}/\hbar=\sum_i\varepsilon_i$, meaning physical action counts cumulative SPAP entropy production in nats. Planck's constant $\hbar$ is the exchange rate between mechanical action and information-theoretic entropy.
+
+*   **Black Hole Information Problem:** (Appendix K.3, Theorem K.3, Corollary K.3a, Theorem K.3c) In PU, information is preserved globally but local recovery is constrained by perspectival channels, reflexive extraction cost, horizon edge-mode capacity, and predictive island Markov-blanket minimization. Page-curve consistency follows on the approximate-unitary-$k$-design branch, while horizon edge modes implement predictive anomaly inflow.
+
+*   **Blackwell-PCE Classicality:** (Appendix M.6.11) Classical records arise as PCE-minimal sufficient statistics of finite measurement channels. The selected output algebra is commutative because it is a quotient record algebra, not because a separate classical ontology is added.
+
+*   **Higher-Form Predictive Ledger:** (Appendix X.9.5d) Extension of the finite PU obstruction complex to line, surface, and higher-dimensional protocol operators. Higher-form labels with no extended-interface action are PCE-null; active classes obey the same exactness rule as ordinary anomaly and boundary ledgers.
+
+*   **LSM-PCE Ingappability Gate:** (Appendix Z.8d.2–Z.8d.4) Regular crystallographic branch audit: nontrivial unit-cell projective or fractional symmetry data forbid an IR phase that is simultaneously symmetric, short-range-entangled, nondegenerate, fully gapped, and uncompensated.
+
+*   **Measurement:** (Definition 30, Theorem 31) The process of actualizing quantum possibilities through MPU dynamics. Requires minimum entropy production $\varepsilon \geq \ln 2$ per measurement cycle.
+
+*   **Predictive Island:** (Appendix K.3b–K.3d) A disconnected interior or horizon-adjacent Markov-blanket component admitted into exterior radiation reconstruction when the reduction in predictive entropy exceeds its boundary channel-capacity cost. It is a finite channel-capacity object; geometric area appears only in the regular thermodynamic representation.
+
+*   **Spectrum-Broadcast PPI Objectivity:** (Appendix M.6.11d–M.6.11f) Multi-fragment objectivity criterion: a PCE-minimal record becomes public when disjoint environmental fragments independently recover the same classical statistic and are conditionally independent, equivalently when the compressed state has spectrum-broadcast form.
+
+*   **WAY-PCE Measurement Bound:** (Appendix M.6.13) Conservation-law measurement constraint: a charge-covariant finite branch cannot exactly measure a charge-asymmetric observable without reference asymmetry or finite measurement error. The Blackwell-PCE record can report only what this constrained channel can acquire.
+
+*   **Wilson Loop:** (Appendix Z.8d) Gauge-invariant observable $W(C)$ associated with a closed loop $C$. In the flux-tube confinement branch, rootlessness of the Leech lattice motivates an area law $\langle W(C)\rangle\sim e^{-\sigma\mathrm{Area}(C)}$.
 
 *   **24-Cell:** (Appendix Z, Definition Z.8) The standard 24-point configuration on $S^3$ given by the unit Hurwitz integers, realizing the optimal kissing configuration $K(4)=24$ in 4 dimensions and spanning $\mathbb{R}^4$. This is the standard coordinate realization conventionally called the 24-cell vertex set; Theorem U.30 verifies its spherical 5-design exactness. Equivalent, after normalization and orthogonal identification, to the minimal vectors of the $D_4$ root lattice.
 

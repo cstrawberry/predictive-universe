@@ -672,6 +672,224 @@ u(w)\overline{u(v)}&0
 $$
 Thus unitary conjugacy inserts exactly an edge phase. Replacing scalar values by matrices gives the same formula with $u(v)u(w)^*$ as a unitary matrix transporter. ∎
 
+**Definition F.10.4a.4 (Finite Chiral Regulator Data).** On a regular finite spectral-triple branch carrying chiral fermions, let $\Gamma_5=\Gamma_5^*=\Gamma_5^{-1}$ be the finite chirality operator on the active spinor module, and set the finite MPU regulator spacing to
+$$
+a_{\mathrm{PU}}=\delta=\sqrt{8\ln2}\,L_P.
+\tag{F.10.4a.4.1}
+$$
+A naive finite chiral regulator is a local finite Dirac operator $D$ satisfying:
+
+1. $\Gamma_5D+D\Gamma_5=0$;
+
+2. $D^*=\Gamma_5D\Gamma_5$;
+
+3. on the regular translation-covariant subbranch its symbol has the single continuum Dirac zero required by the target chiral continuum limit;
+
+4. no additional doubler zero represents an independent low-energy species.
+
+A Ginsparg-Wilson regulator representative is a finite operator of the form
+$$
+D_{\mathrm{GW}}
+=
+\frac{1}{a_{\mathrm{PU}}}(1-V),
+\tag{F.10.4a.4.2}
+$$
+where $V$ is unitary and
+$$
+\Gamma_5V\Gamma_5=V^*.
+\tag{F.10.4a.4.3}
+$$
+
+**Theorem F.10.4a.4.1 (Ginsparg-Wilson Chirality Gate).** On the regular finite-regulator branch:
+
+1. the naive regulator conditions in Definition F.10.4a.4 are jointly infeasible on a local translation-covariant finite lattice approximation with the correct continuum symbol;
+
+2. every $D_{\mathrm{GW}}$ of (F.10.4a.4.2) satisfies the finite chiral relation
+$$
+\Gamma_5D_{\mathrm{GW}}+D_{\mathrm{GW}}\Gamma_5
+=
+a_{\mathrm{PU}}D_{\mathrm{GW}}\Gamma_5D_{\mathrm{GW}};
+\tag{F.10.4a.5.1}
+$$
+
+3. the finite action
+$$
+S_F(\bar\psi,\psi)=\bar\psi D_{\mathrm{GW}}\psi
+$$
+is invariant under the exact modified chiral transformation
+$$
+\delta\psi=i\theta\,\widehat\Gamma_5\psi,
+\qquad
+\delta\bar\psi=i\theta\,\bar\psi\Gamma_5,
+\qquad
+\widehat\Gamma_5:=\Gamma_5(1-a_{\mathrm{PU}}D_{\mathrm{GW}});
+\tag{F.10.4a.5.2}
+$$
+
+4. the finite chiral index is
+$$
+\operatorname{ind}_{\mathrm{PU}}(D_{\mathrm{GW}})
+=
+\operatorname{Tr}\left(\Gamma_5\left(1-\frac{a_{\mathrm{PU}}}{2}D_{\mathrm{GW}}\right)\right)
+=
+n_+(0)-n_-(0)\in\mathbb Z,
+\tag{F.10.4a.5.3}
+$$
+where $n_\pm(0)$ are the dimensions of the zero-mode subspaces with $\Gamma_5$-chirality $\pm1$;
+
+5. on an anomaly-free gauge-descended branch, the sum of the finite chiral index characters over all retained fermion representations vanishes on gauge redundancies. If that sum does not vanish for a declared gauge redundancy, the branch fails predictive anomaly descent in the sense of Theorem X.8d and Theorem X.9.5b.
+
+Thus finite PU chirality is not represented by naive exact anticommutation. It is represented by the Ginsparg-Wilson finite-index ledger, whose continuum limit supplies the same chiral index data used in Appendix R and Appendix Y.
+
+*Proof.* Item 1 is the Nielsen-Ninomiya obstruction applied to the regular translation-covariant finite-regulator subbranch: locality, exact naive chiral anticommutation, correct single Dirac continuum behavior, and absence of doublers cannot hold simultaneously. Hence a finite PU regulator for a chiral branch must give up naive anticommutation or give up one of the physical requirements.
+
+For item 2, use (F.10.4a.4.2) and (F.10.4a.4.3). Since $V$ is unitary and $\Gamma_5V\Gamma_5=V^*$,
+$$
+V\Gamma_5V=\Gamma_5.
+\tag{F.10.4a.5.4}
+$$
+Therefore
+$$
+\Gamma_5D_{\mathrm{GW}}+D_{\mathrm{GW}}\Gamma_5
+=
+\frac{1}{a_{\mathrm{PU}}}
+(2\Gamma_5-\Gamma_5V-V\Gamma_5),
+$$
+while
+$$
+a_{\mathrm{PU}}D_{\mathrm{GW}}\Gamma_5D_{\mathrm{GW}}
+=
+\frac{1}{a_{\mathrm{PU}}}
+(1-V)\Gamma_5(1-V)
+=
+\frac{1}{a_{\mathrm{PU}}}
+(\Gamma_5-\Gamma_5V-V\Gamma_5+V\Gamma_5V).
+$$
+Substituting (F.10.4a.5.4) gives (F.10.4a.5.1).
+
+For item 3,
+$$
+\delta S_F
+=
+i\theta\,\bar\psi(\Gamma_5D_{\mathrm{GW}}+D_{\mathrm{GW}}\widehat\Gamma_5)\psi.
+$$
+Using $\widehat\Gamma_5=\Gamma_5(1-a_{\mathrm{PU}}D_{\mathrm{GW}})$,
+$$
+\Gamma_5D_{\mathrm{GW}}+D_{\mathrm{GW}}\widehat\Gamma_5
+=
+\Gamma_5D_{\mathrm{GW}}+D_{\mathrm{GW}}\Gamma_5-a_{\mathrm{PU}}D_{\mathrm{GW}}\Gamma_5D_{\mathrm{GW}}
+=
+0
+$$
+by (F.10.4a.5.1). Hence $\delta S_F=0$.
+
+For item 4, (F.10.4a.4.3) gives
+$$
+\widehat\Gamma_5^*
+=
+(\Gamma_5V)^*
+=
+V^*\Gamma_5
+=
+\Gamma_5V
+=
+\widehat\Gamma_5,
+$$
+and
+$$
+\widehat\Gamma_5^2
+=
+\Gamma_5V\Gamma_5V
+=
+V^*V
+=
+1.
+$$
+Thus $\widehat\Gamma_5$ is a finite self-adjoint involution. The standard finite Ginsparg-Wilson spectral decomposition pairs every nonzero nonexceptional eigenmode with an opposite contribution to
+$$
+\operatorname{Tr}\left(\Gamma_5\left(1-\frac{a_{\mathrm{PU}}}{2}D_{\mathrm{GW}}\right)\right).
+$$
+Only zero modes contribute, and on $\ker D_{\mathrm{GW}}$ the Ginsparg-Wilson relation reduces to ordinary chirality, so the trace equals $n_+(0)-n_-(0)$. This is an integer.
+
+For item 5, a gauge redundancy is admissible only when its anomaly class descends to the quotient. The finite chiral Jacobian is exactly the sum of the finite index characters (F.10.4a.5.3) over retained chiral representations. If that sum vanishes, the finite regulator has no residual gauge-redundancy anomaly. If it does not vanish, Theorem X.8d and Theorem X.9.5b say that the transformation cannot be declared a redundancy at finite PCE cost. The continuum APS and Atiyah-Singer index statements used in Appendix R and Appendix Y are therefore read as the regular-limit image of this finite Ginsparg-Wilson index ledger. ∎
+
+**Definition F.10.4a.4.2 (Operational Paley-Wiener Sector).** Let $L_{\mathrm{PU}}$ be the positive graph Laplacian on $C(V)$ induced by the propagation-cost quadratic form
+$$
+\mathcal E_{\mathrm{PU}}(f)
+=
+\frac12
+\sum_{\{v,w\}\in E}
+\frac{|f(v)-f(w)|^2}{\ell_{\{v,w\}}^2}.
+\tag{F.10.4a.6.1}
+$$
+For $\Omega\ge0$, define the finite operational Paley-Wiener sector
+$$
+PW_\Omega(L_{\mathrm{PU}})
+=
+\operatorname{Ran}\mathbf 1_{[0,\Omega]}(L_{\mathrm{PU}}).
+\tag{F.10.4a.6.2}
+$$
+For a finite sampling cover $\mathcal C=\{C_i\}_{i=1}^N$ of $V$, let
+$$
+\phi_i
+=
+\frac{1_{C_i}}{\lVert1_{C_i}\rVert},
+\qquad
+\mathcal A_\Omega f
+=
+(\langle f,\phi_i\rangle)_{i=1}^N.
+\tag{F.10.4a.6.3}
+$$
+
+**Theorem F.10.4a.4.3 (Paley-Wiener Frame Reconstruction of Observable Fields).** If the sampling map
+$$
+\mathcal A_\Omega:PW_\Omega(L_{\mathrm{PU}})\to\mathbb C^N
+$$
+is injective, then the cell averages form a stable finite frame on $PW_\Omega(L_{\mathrm{PU}})$: there are constants $0<A_\Omega\le B_\Omega<\infty$ such that
+$$
+A_\Omega\lVert f\rVert^2
+\le
+\sum_{i=1}^N|\langle f,\phi_i\rangle|^2
+\le
+B_\Omega\lVert f\rVert^2
+\qquad
+(f\in PW_\Omega(L_{\mathrm{PU}})).
+\tag{F.10.4a.7.1}
+$$
+Moreover, with frame operator
+$$
+S_\Omega f
+=
+\sum_{i=1}^N
+\langle f,\phi_i\rangle
+P_\Omega\phi_i,
+\qquad
+P_\Omega=\mathbf 1_{[0,\Omega]}(L_{\mathrm{PU}}),
+\tag{F.10.4a.7.2}
+$$
+every $f\in PW_\Omega(L_{\mathrm{PU}})$ is reconstructed by
+$$
+f
+=
+\sum_{i=1}^N
+\langle f,\phi_i\rangle
+S_\Omega^{-1}P_\Omega\phi_i.
+\tag{F.10.4a.7.3}
+$$
+On a regular continuum-limit branch, any admissible sampling cover whose mesh satisfies the usual Paley-Wiener/Nyquist separation bound for the limiting metric Laplacian is injective on $PW_\Omega$ for fixed $\Omega$. Therefore PPI-observable continuum fields below the operational bandwidth are stable reconstructions from finite MPU cell data, not independent trans-resolution degrees of freedom.
+
+*Proof.* The space $PW_\Omega(L_{\mathrm{PU}})$ is finite-dimensional. The upper bound in (F.10.4a.7.1) follows because $\mathcal A_\Omega$ is a linear map between finite-dimensional normed spaces. If the lower bound failed, there would be a sequence $f_n\in PW_\Omega$ with $\lVert f_n\rVert=1$ and $\mathcal A_\Omega f_n\to0$. Compactness of the unit sphere in $PW_\Omega$ gives a convergent subsequence $f_{n_k}\to f$ with $\lVert f\rVert=1$. Continuity gives $\mathcal A_\Omega f=0$, contradicting injectivity. Hence $A_\Omega>0$.
+
+The frame operator $S_\Omega=\mathcal A_\Omega^*\mathcal A_\Omega$ is positive. The lower frame bound makes it invertible on $PW_\Omega$. Applying $S_\Omega^{-1}$ to
+$$
+S_\Omega f
+=
+\sum_i\langle f,\phi_i\rangle P_\Omega\phi_i
+$$
+gives (F.10.4a.7.3).
+
+For the regular continuum branch, the standard Paley-Wiener sampling theorem for compact bounded-geometry graph/manifold limits gives injectivity of sufficiently fine cell averages on $PW_\Omega$ when the sampling mesh lies below the branch-dependent Nyquist constant. Theorem K.10.4 removes super-bandwidth distinctions from the operational domain, and the frame reconstruction above gives the finite reconstruction on the retained sector. ∎
+
 ### F.10.4b Modular Prediction Time
 
 **Definition F.10.4b.1 (Finite Modular Prediction Flow).** Let $\mathfrak A$ be a finite local algebra and let $\omega(A)=\operatorname{Tr}(\rho A)$ be a faithful state with $\rho>0$. The modular prediction flow of $\omega$ is
@@ -727,6 +945,69 @@ because the scalar normalization cancels. Direct sums of finite factors satisfy 
 
 *Proof.* Apply Theorem F.10.4b.2 to the KMS state of Theorem F.10.3, whose inverse temperature is $\beta_U=2\pi/\kappa$. ∎
 
+**Definition F.10.4b.4 (Normalized Predictive OTOC).** On a finite faithful KMS branch with inverse temperature $\beta$, let $A$ and $B$ be bounded local observables normalized so that
+$$
+\lVert A\rVert,\lVert B\rVert\le1.
+$$
+The normalized out-of-time-order response is
+$$
+F_{AB}(t)
+=
+\frac{
+\operatorname{Tr}\left(\rho_* A(t)B A(t)B\right)
+}{
+\operatorname{Tr}\left(\rho_* A^2B^2\right)
+}
+\tag{F.10.4b.4}
+$$
+when the denominator is nonzero, with the standard connected normalization used when the denominator is absorbed into the definition of $A$ and $B$. A branch has an exponential scrambling window when, for times below the finite-size saturation time,
+$$
+1-\operatorname{Re}F_{AB}(t)
+=
+c_{AB}e^{\lambda_L t}+o(e^{\lambda_L t}),
+\qquad
+c_{AB}>0.
+\tag{F.10.4b.5}
+$$
+
+**Theorem F.10.4b.5 (Modular Chaos Bound for Predictive Scrambling).** Suppose the finite KMS branch of Definition F.10.4b.4 satisfies the standard modular analyticity and boundedness hypotheses for the normalized OTOC: $F_{AB}(z)$ is analytic in the thermal strip
+$$
+0<\operatorname{Im}z<\frac{\beta\hbar}{2}
+$$
+and obeys the normalized finite-capacity bound
+$$
+|F_{AB}(z)|\le1+O(\epsilon)
+$$
+in that strip, with $\epsilon$ negligible during the scrambling window. Then any Lyapunov exponent in (F.10.4b.5) satisfies
+$$
+\lambda_L
+\le
+\frac{2\pi}{\beta\hbar}.
+\tag{F.10.4b.6}
+$$
+Thus modular/KMS prediction time has a universal upper bound on recoverable disturbance growth. A horizon-saturated thermodynamic branch may approach this bound, but the bound itself follows from KMS analyticity and finite predictive capacity, not from a fundamental gravitational Hilbert sector.
+
+*Proof.* Define
+$$
+f(z)=1-F_{AB}(z).
+$$
+By the KMS condition, the ordered thermal correlator has analytic continuation to the strip of width $\beta\hbar/2$ after the standard half-thermal separation of insertions. The finite-capacity normalization and reflection-positive Hilbert reconstruction bound the normalized correlator in the strip. Therefore the Schwarz-Pick estimate for an analytic bounded function on a strip gives
+$$
+\left|\frac{d}{dt}f(t)\right|
+\le
+\frac{2\pi}{\beta\hbar}
+\left(1+O(f(t))\right)f(t)
+$$
+during the regime where $0<f(t)\ll1$. If
+$$
+f(t)=c_{AB}e^{\lambda_L t}+o(e^{\lambda_L t}),
+$$
+then dividing by $f(t)$ and taking the leading exponential order gives
+$$
+\lambda_L\le \frac{2\pi}{\beta\hbar}.
+$$
+The local Rindler specialization uses $\beta=\beta_U=2\pi/\kappa$ from Corollary F.10.4b.3, giving the corresponding boost-temperature scrambling ceiling. ∎
+
 ### F.10.4c Reflection-Positivity Gate for Lorentzian Reconstruction
 
 **Definition F.10.4c.1 (Finite PU Reflection Positivity).** Let $\mathfrak A_E$ be a finite Euclidean predictive history algebra with an antilinear reflection involution $\Theta$ and positive-time subalgebra $\mathfrak A_+$. A normalized Euclidean functional $\Omega_E:\mathfrak A_E\to\mathbb C$ is reflection positive when
@@ -773,6 +1054,31 @@ Normalization, reflection symmetry, and transfer positivity are immediate. ∎
 **Corollary F.10.4c.3 (No Unitary Lorentzian Branch Without Reflection Positivity).** A finite predictive statistical branch that violates (F.10.4c.1) cannot be reconstructed as a unitary Lorentzian QFT branch with positive Hilbert-space norm.
 
 *Proof.* The converse direction of Theorem F.10.4c.2 shows that every such Lorentzian reconstruction necessarily satisfies reflection positivity. Violation of (F.10.4c.1) contradicts that necessary condition. ∎
+
+**Corollary F.10.4c.4 (Källén-Lehmann Spectral Gate for PPI-Observable Two-Point Functions).** On a regular translation-invariant Lorentzian branch reconstructed by Theorem F.10.4c.2, let $O$ be a scalar PPI-observable local operator, meaning that $O$ is gauge-invariant or already descends to the PPI quotient. Then its two-point response admits a positive spectral representation
+$$
+G_O(p^2)
+=
+\int_0^\infty
+\frac{\rho_O(\mu^2)}{p^2-\mu^2+i0}
+\,d\mu^2,
+\qquad
+\rho_O(\mu^2)\ge0.
+\tag{F.10.4c.4.1}
+$$
+Atoms of $\rho_O$ are stable one-particle poles with positive residue. Absolutely continuous components are multi-particle continua. A proposed particle label that does not appear as a pole, threshold, or spectral component of a PPI-observable response is not an operational particle label on that branch.
+
+*Proof.* Theorem F.10.4c.2 supplies a Hilbert-space reconstruction with positive norm, positive Hamiltonian, and unitary time evolution. Translation invariance gives a joint spectral resolution of the energy-momentum operators. For the vacuum vector $\Omega$, insert this spectral resolution into
+$$
+\langle\Omega,O(x)O(0)\Omega\rangle.
+$$
+The resulting spectral measure is
+$$
+d\rho_O(P)
+=
+\lVert dE(P)O\Omega\rVert^2,
+$$
+which is positive because it is a Hilbert-space norm square. Lorentz covariance on the scalar branch reduces the support to invariant mass $\mu^2=P^2\ge0$, giving (F.10.4c.4.1). If a component is an atom at $\mu^2=m^2$, the two-point function has a pole with positive residue equal to the corresponding norm-square projection. Continuous spectral support gives thresholds and multi-particle continua. If a label does not change any PPI-observable spectral measure, Operational Yoneda/PPI equivalence identifies it as physically null. ∎
 
 ### F.10.4d Minimal Gauge Split-Factorization
 
@@ -916,6 +1222,75 @@ $$
 $$
 and use linearity and continuity of the trace pairing. ∎
 
+### F.10.4f Predictive Nuclearity Species Bound
+
+**Definition F.10.4f.1 (PU Phase-Space Nuclearity Datum).** On a regular AQFT branch satisfying the continuum bridge hypotheses of Theorem F.0 and Theorem F.10.2, let $\mathfrak A(O)$ be the local algebra of a relatively compact causal region $O$, let $\Omega_*$ be the cyclic PCE/KMS vector of the faithful equilibrium state, and let $H\ge0$ be the positive generator of the retained time evolution. For $\beta>0$, define the local phase-space map
+$$
+\Theta_{\beta,O}:
+\mathfrak A(O)\to\mathcal H,
+\qquad
+\Theta_{\beta,O}(A)=e^{-\beta H}A\Omega_*.
+\tag{F.10.4f.1}
+$$
+A finite MPU approximation of this datum is a triple
+$$
+(\mathfrak A_h(O),H_h,\Omega_h)
+$$
+with corresponding map
+$$
+\Theta_{\beta,O}^{(h)}(A)=e^{-\beta H_h}A\Omega_h.
+\tag{F.10.4f.2}
+$$
+The branch has PU phase-space capacity bound $C_{\mathrm{PU}}(O,\beta)$ when the finite approximants, represented on their finite GNS Hilbert spaces, satisfy, uniformly in $h$,
+$$
+\operatorname{rank}\Theta_{\beta,O}^{(h)}
+\le
+\exp(C_{\mathrm{PU}}(O,\beta)),
+\qquad
+\lVert\Theta_{\beta,O}^{(h)}\rVert\le1.
+\tag{F.10.4f.3}
+$$
+Here $\lVert\cdot\rVert_1$ on finite approximants is the Hilbertian trace norm of the represented finite-rank map, and $C_{\mathrm{PU}}(O,\beta)$ is the finite channel-throughput bound supplied by the region's retained MPU capacity and the Boltzmann suppression scale $\beta$.
+
+**Theorem F.10.4f.2 (Necessary Modular Nuclearity Bound).** If a regular AQFT continuum branch is the limit of finite MPU approximants satisfying the PU phase-space capacity bound (F.10.4f.3), then
+$$
+\lVert\Theta_{\beta,O}\rVert_1
+\le
+\exp(C_{\mathrm{PU}}(O,\beta)),
+\tag{F.10.4f.4}
+$$
+where $\lVert\cdot\rVert_1$ denotes the nuclear norm of the map. A continuum branch for which the maps $\Theta_{\beta,O}$ violate every finite PU capacity bound for some admissible $O$ and $\beta$ contains more local phase-space content than finite prediction can instantiate and is not PU-admissible at that scale.
+
+This is a species-density gate for local excitations. It is separate from the Hadamard-PCE state gate: Hadamard regularity controls the allowed singularity type of states, while nuclearity controls the number of locally distinguishable excitations below a scale.
+
+*Proof.* For a finite approximant, $\Theta_{\beta,O}^{(h)}$ is a finite-rank map. For the finite GNS Hilbert-space representative of a finite-rank map $T$,
+$$
+\lVert T\rVert_1
+\le
+\operatorname{rank}(T)\,\lVert T\rVert.
+$$
+Applying this to $T=\Theta_{\beta,O}^{(h)}$ and using (F.10.4f.3) gives
+$$
+\lVert\Theta_{\beta,O}^{(h)}\rVert_1
+\le
+\exp(C_{\mathrm{PU}}(O,\beta)).
+\tag{F.10.4f.5}
+$$
+The regular AQFT branch is obtained as the controlled coarse-graining limit of the finite local-algebra system. Nuclear norms are lower semicontinuous under pointwise weak limits of uniformly nuclear maps on the retained local test domain. Hence
+$$
+\lVert\Theta_{\beta,O}\rVert_1
+\le
+\liminf_h
+\lVert\Theta_{\beta,O}^{(h)}\rVert_1
+\le
+\exp(C_{\mathrm{PU}}(O,\beta)).
+$$
+This proves (F.10.4f.4).
+
+If a putative continuum branch violates every finite bound of this form, then for some $O,\beta$ its locally accessible energy-damped excitation map has nuclear norm exceeding every value allowed by finite channel throughput. Such degrees of freedom cannot be encoded, distinguished, or thermodynamically paid for by any finite MPU refinement satisfying the branch capacity assumptions. PPI therefore does not instantiate that continuum phase space as a physical branch. ∎
+
+**Open Target F.10.4f.3 (Sufficiency of Nuclearity for Finite-PCE Realization).** The converse direction remains a structural target: determine branch conditions under which an AQFT net satisfying the nuclearity bound (F.10.4f.4), the Hadamard-PCE state gate, and the reflection-positivity gate admits a finite MPU realization with uniformly bounded PCE cost. No sufficiency claim is used elsewhere in the paper.
+
 ### F.10.5 Golay Self-Duality and Finite-Resolution Haag Duality
 
 **Definition F.10.5a (Golay-Pauli Carrier).** Let
@@ -1038,6 +1413,73 @@ For (3), let $B'_R$ be another sufficient boundary datum. Since $B_R$ is PCE-min
 
 *Proof.* Theorem F.10.6b identifies locality with conditional independence or quantum Markov recovery through $B_R$. PCE minimality removes all labels not needed for that shielding relation. ∎
 
+**Corollary F.10.6d (Markov-Split Equivalence at the Boundary Center).** On a finite quantum-algebra branch, assume $B_R=Z_{\partial R}$ is the common center of a locally complete finite gauge-split datum in the sense of Definition F.10.4d.1, and assume exterior protocols are generated by $\mathfrak A_{\bar R}$. Then the following are equivalent descriptions of the same PCE-minimal boundary condition:
+
+1. $Z_{\partial R}$ is the PCE-minimal predictive Markov boundary for $R$.
+
+2. The restricted state satisfies
+$$
+I(R:\bar R\mid Z_{\partial R})_\rho=0.
+\tag{F.10.6.4}
+$$
+
+3. There exists a CPTP recovery channel
+$$
+\mathcal R_{Z_{\partial R}\to Z_{\partial R}\bar R}
+$$
+such that
+$$
+\rho_{RZ_{\partial R}\bar R}
+=
+(\operatorname{id}_R\otimes\mathcal R_{Z_{\partial R}\to Z_{\partial R}\bar R})
+(\rho_{RZ_{\partial R}}).
+\tag{F.10.6.5}
+$$
+
+4. After decomposing over the minimal central projections of $Z_{\partial R}$, the local algebra splits blockwise as in (F.10.4d.1)–(F.10.4d.2), and no boundary label outside $Z_{\partial R}$ changes any exterior protocol distribution.
+
+If the entropy is measured in nats and
+$$
+I(R:\bar R\mid Z_{\partial R})_\rho\le\epsilon,
+\tag{F.10.6.6}
+$$
+then there is a recovery channel with recovered state $\widetilde\rho$ satisfying
+$$
+\lVert\rho_{RZ_{\partial R}\bar R}-\widetilde\rho_{RZ_{\partial R}\bar R}\rVert_1
+\le
+2\sqrt{1-e^{-\epsilon}}
+\le
+2\sqrt\epsilon.
+\tag{F.10.6.7}
+$$
+Consequently every bounded exterior protocol observable $E$ with $\lVert E\rVert\le1$ changes by at most the right-hand side of (F.10.6.7). For $\epsilon>0$ this is a state-dependent operational approximation, not an exact algebraic split.
+
+*Proof.* The equivalence of (2) and (3) is Theorem F.10.6b applied with $B_R=Z_{\partial R}$. The block decomposition in (4) is Theorem F.10.4d.2. If (1) holds, then Theorem F.10.6b gives (2) and (3), while local completeness of the gauge-split datum gives the central block split (4). Conversely, if (2), (3), and (4) hold and an additional boundary label outside $Z_{\partial R}$ changes no exterior protocol distribution, then Corollary F.10.4d.3 removes that label by PCE. If such a label does change an exterior protocol distribution, then $Z_{\partial R}$ was not sufficient, contradicting (2)–(3). Thus $Z_{\partial R}$ is exactly the PCE-minimal Markov boundary, proving (1).
+
+For (F.10.6.7), the Fawzi-Renner recoverability bound gives a channel $\mathcal R$ with fidelity
+$$
+F(\rho_{RZ_{\partial R}\bar R},\widetilde\rho_{RZ_{\partial R}\bar R})
+\ge
+e^{-\epsilon/2}.
+$$
+The Fuchs-van de Graaf inequality gives
+$$
+\lVert\rho-\widetilde\rho\rVert_1
+\le
+2\sqrt{1-F(\rho,\widetilde\rho)^2}
+\le
+2\sqrt{1-e^{-\epsilon}}
+\le
+2\sqrt\epsilon.
+$$
+Trace duality gives
+$$
+|\operatorname{Tr}E(\rho-\widetilde\rho)|
+\le
+\lVert E\rVert\,\lVert\rho-\widetilde\rho\rVert_1,
+$$
+which proves the operational error bound. ∎
+
 ### F.10.7 Modular-Inclusion Reconstruction of Local Time
 
 **Definition F.10.7a (Half-Sided Modular Inclusion Branch).** Let
@@ -1144,6 +1586,399 @@ $$
 (\mathcal C_R\rho_R)\otimes\rho_E
 $$
 for exterior protocols conditioned only on the corrected syndrome class. Therefore (F.10.8.1) holds with $\epsilon=0$, and Theorem F.10.8b gives vanishing connected correlation. ∎
+
+### F.10.9 Predictive Prefactorization Algebra
+
+**Definition F.10.9a (Golay-Compatible Local Carrier Assignment).** Let $\mathsf C_{\mathrm{MPU}}$ be a finite causal site of MPU regions with inclusions and with a symmetric causal-disjointness relation $\perp$. A Golay-compatible local carrier assignment consists of finite symplectic syndrome spaces
+$$
+S_U\le V_{24}^{\oplus N_U},
+\qquad
+V_{24}=\mathbb F_2^{24}\oplus\mathbb F_2^{24},
+$$
+for each finite region $U$, together with inclusions $S_U\hookrightarrow S_V$ whenever $U\subset V$, satisfying:
+
+1. $S_\varnothing=0$;
+
+2. if $U\subset V\subset W$, the inclusion $S_U\hookrightarrow S_W$ equals the composite $S_U\hookrightarrow S_V\hookrightarrow S_W$;
+
+3. if $U_i\perp U_j$ inside $V$, then
+$$
+\omega(S_{U_i},S_{U_j})=0;
+\tag{F.10.9.1}
+$$
+
+4. for every pairwise causally disjoint finite family $U_1,\dots,U_n\subset V$, the direct-sum map
+$$
+S_{U_1}\oplus\cdots\oplus S_{U_n}\longrightarrow S_V
+\tag{F.10.9.2}
+$$
+is injective and symplectic block-diagonal;
+
+5. each $S_U$ is already quotient-corrected by the local Golay recovery relation, so disturbances inside the Golay correction radius that have the same corrected syndrome represent the same element of $S_U$; weight-4 sextet classes remain unresolved boundary data rather than being quotiented away.
+
+Define
+$$
+\mathfrak A_{\mathcal G}(U):=\mathfrak A(S_U),
+$$
+the finite Weyl-Pauli $*$-algebra generated by $S_U$ as in Definition F.10.5a, and set $\mathfrak A_{\mathcal G}(\varnothing)=\mathbb C$.
+
+**Theorem F.10.9b (Golay Predictive Prefactorization Algebra).** A Golay-compatible local carrier assignment determines a unital symmetric prefactorization algebra
+$$
+U\longmapsto \mathfrak A_{\mathcal G}(U)
+$$
+on $\mathsf C_{\mathrm{MPU}}$. For every pairwise causally disjoint family $U_1,\dots,U_n\subset V$, the structure map is the unique $*$-homomorphism
+$$
+\mu_{U_1,\dots,U_n;V}:
+\mathfrak A_{\mathcal G}(U_1)\otimes_{\min}\cdots\otimes_{\min}
+\mathfrak A_{\mathcal G}(U_n)
+\longrightarrow
+\mathfrak A_{\mathcal G}(V)
+\tag{F.10.9.3}
+$$
+whose value on elementary tensors is multiplication inside $\mathfrak A_{\mathcal G}(V)$:
+$$
+\mu_{U_1,\dots,U_n;V}(a_1\otimes\cdots\otimes a_n)
+=
+a_1\cdots a_n.
+\tag{F.10.9.4}
+$$
+For a finite cover $\mathcal U=\{U_i\to U\}$, the descent completion is the finite algebra
+$$
+\mathfrak A_{\mathcal G}[\mathcal U]
+=
+C^*\left(\bigcup_i \mathfrak A_{\mathcal G}(U_i)\right)
+\subseteq
+\mathfrak A_{\mathcal G}(U).
+\tag{F.10.9.5}
+$$
+Under the regular convergence hypotheses of Theorem F.10.1 and Theorem F.10.2, these descent completions converge to the same emergent Haag-Kastler net as the inductive local-algebra construction. On Golay-compatible complements, finite-resolution Haag duality is exactly the duality of Theorem F.10.5c and passes to the limiting admissible diamonds by Corollary F.10.5d.
+
+*Proof.* If $U_i\perp U_j$, then (F.10.9.1) says that every Weyl generator from $S_{U_i}$ commutes with every Weyl generator from $S_{U_j}$. Hence the subalgebras $\mathfrak A_{\mathcal G}(U_i)$ commute pairwise inside $\mathfrak A_{\mathcal G}(V)$. Since all algebras are finite-dimensional $C^*$-algebras, the algebraic tensor product and the minimal tensor product coincide, and the universal property of the tensor product gives a unique $*$-homomorphism (F.10.9.3) satisfying (F.10.9.4).
+
+The empty family gives the unit map $\mathbb C\to\mathfrak A_{\mathcal G}(V)$ because $S_\varnothing=0$. Permuting the $U_i$ leaves (F.10.9.4) unchanged because the corresponding subalgebras commute. If a disjoint family is grouped into subfamilies, both iterated structure maps send
+$$
+a_1\otimes\cdots\otimes a_n
+$$
+to the same product $a_1\cdots a_n$ in the ambient algebra; associativity of multiplication proves the prefactorization associativity axiom. Functoriality under inclusions follows from item 2 of Definition F.10.9a.
+
+The Golay correction quotient is compatible with these maps because item 5 is imposed regionwise before algebra generation: replacing a local representative inside the correction radius by an equivalent corrected syndrome leaves the element of $S_U$, hence every Weyl generator and every product in (F.10.9.4), unchanged. Weight-4 sextet data are not quotiented by this step; they remain boundary syndrome classes.
+
+For a finite cover, the prefactorization descent algebra is by definition the colimit of the finite Cech diagram generated by the cover inclusions and products. Because every algebra in that diagram is represented as a subalgebra of $\mathfrak A_{\mathcal G}(U)$ and all arrows are inclusions or multiplication maps, the finite colimit is exactly the $C^*$-subalgebra generated by the local images, which is (F.10.9.5). Theorem F.10.1 supplies the convergence of the finite local algebras and boundary corrections, and Theorem F.10.2 identifies the limiting assignment with the emergent Haag-Kastler net. Therefore the prefactorization descent completion and the existing inductive-net construction have the same limit. The final Haag-duality statement is precisely Theorem F.10.5c at finite resolution and Corollary F.10.5d in the continuum limit. ∎
+
+### F.10.10 Predictive Jones Index
+
+**Definition F.10.10a (Finite Boundary Inclusion and PCE Conditional Expectation).** Let $R$ be a finite MPU region on the active support of the PCE equilibrium state. Let
+$$
+\mathfrak A_{\mathrm{raw}}(R)
+$$
+be the finite-dimensional raw local predictive algebra before PCE boundary compression, and let
+$$
+\mathfrak A_{\mathrm{obs}}(R)\subseteq\mathfrak A_{\mathrm{raw}}(R)
+$$
+be the PCE-minimal algebra visible to exterior protocols after conditioning on the boundary syndrome center. A finite boundary inclusion is in standard PCE split form when its center decomposes as
+$$
+Z_{\partial R}=\bigoplus_{\alpha\in I_R}\mathbb C p_\alpha
+$$
+and there are finite-dimensional $C^*$-algebras $\mathfrak B_\alpha$ and integers $n_\alpha\ge1$ such that
+$$
+p_\alpha\mathfrak A_{\mathrm{raw}}(R)p_\alpha
+\cong
+\mathfrak B_\alpha\otimes M_{n_\alpha}(\mathbb C),
+\qquad
+p_\alpha\mathfrak A_{\mathrm{obs}}(R)p_\alpha
+\cong
+\mathfrak B_\alpha\otimes 1_{n_\alpha}.
+\tag{F.10.10.1}
+$$
+The PCE conditional expectation is
+$$
+E_R
+=
+\bigoplus_{\alpha\in I_R}
+\left(
+\operatorname{id}_{\mathfrak B_\alpha}\otimes\operatorname{tr}_{n_\alpha}
+\right),
+\tag{F.10.10.2}
+$$
+where $\operatorname{tr}_{n_\alpha}$ is the normalized matrix trace. The central predictive Jones dimension and central index are
+$$
+d_J(E_R)=\sum_{\alpha\in I_R}n_\alpha p_\alpha,
+\qquad
+\operatorname{Ind}(E_R)=d_J(E_R)^2
+=
+\sum_{\alpha\in I_R}n_\alpha^2p_\alpha.
+\tag{F.10.10.3}
+$$
+For a faithful active positive central weight $\tau_R$ on the center, define the index capacity
+$$
+C_J(R;\tau_R)
+:=
+\tau_R(\log d_J(E_R))
+=
+\sum_{\alpha\in I_R}\tau_R(p_\alpha)\log n_\alpha.
+\tag{F.10.10.4}
+$$
+
+**Theorem F.10.10b (Boundary Index Additivity and Horizon Capacity).** For every standard finite PCE boundary inclusion of Definition F.10.10a:
+
+1. $E_R$ has finite Watatani index equal to (F.10.10.3).
+
+2. $d_J$ is multiplicative under tensor products of independent boundary inclusions:
+$$
+d_J(E_R\otimes E_S)
+=
+d_J(E_R)\otimes d_J(E_S).
+\tag{F.10.10.5}
+$$
+
+3. For product active central weights,
+$$
+C_J(R\sqcup S;\tau_R\otimes\tau_S)
+=
+C_J(R;\tau_R)+C_J(S;\tau_S).
+\tag{F.10.10.6}
+$$
+
+4. $C_J(R;\tau_R)=0$ if and only if $n_\alpha=1$ on every active central block. Any strict refinement that increases some active $n_\alpha$ while leaving all exterior protocol distributions unchanged is rejected by PCE.
+
+5. On the saturated horizon branch satisfying the channel-counting calibration of Definition F.10.10a.1 below, the existing channel-capacity area law is equivalently
+$$
+\frac{S_{\mathrm{BH}}(R)}{k_B}
+=
+C_J(R;\tau_R)
+=
+\tau_R(\log d_J(E_R)).
+\tag{F.10.10.7}
+$$
+This is an algebraic representative of the emergent metric/channel-capacity thermodynamic branch; it introduces no gravitational Hilbert sector and no fundamental graviton field.
+
+**Definition F.10.10a.1 (Channel-Counting Calibration of the Boundary Inclusion).** A standard finite PCE boundary inclusion of Definition F.10.10a is on the channel-counting calibration branch when:
+
+(i) the central block index $\alpha$ ranges over a finite partition of the boundary $\partial R$ into effective independent ND-RID channel cells of Theorem E.3, with one block per cell;
+
+(ii) the per-block multiplicity $n_\alpha$ equals the per-channel reliable distinguishability count $\exp(C_{\max}(f_{\mathrm{RID}}))$, so that
+$$
+\log n_\alpha = C_{\max}(f_{\mathrm{RID}})
+\tag{F.10.10.8}
+$$
+on each active block;
+
+(iii) the active state weight $\tau_R(p_\alpha)$ equals the saturated occupancy of cell $\alpha$, summing to the effective channel count $N_{\rm eff} = \sigma_{\rm eff}\,\mathcal A(\partial R)$ of Theorem E.3 in the form
+$$
+\sum_{\alpha\in I_R}\tau_R(p_\alpha) = N_{\rm eff};
+\tag{F.10.10.9}
+$$
+
+(iv) the spacing calibration of Equation Q.18, $\delta^2 = 8\ln 2\cdot L_P^2$, fixes the channel density $\sigma_{\rm eff}=\chi/(\eta\delta^2)$ at the PCE-saturated values $\chi=\eta=1$.
+
+*Proof.* Fix a central block $\alpha$ and write $n=n_\alpha$. Let $e_{ij}$ be matrix units in $M_n(\mathbb C)$ and set
+$$
+u_{ij}=\sqrt n\,(1_{\mathfrak B_\alpha}\otimes e_{ij}).
+$$
+For $x=b\otimes e_{ab}$,
+$$
+\begin{aligned}
+\sum_{i,j}u_{ij}E_R(u_{ij}^*x)
+&=
+\sum_{i,j}
+\sqrt n(1\otimes e_{ij})
+\left(\operatorname{id}\otimes\operatorname{tr}_n\right)
+\left(\sqrt n\,b\otimes e_{ji}e_{ab}\right) \\
+&=
+\sum_{i,j}
+\sqrt n(1\otimes e_{ij})
+\left(
+\sqrt n\,b\,\frac{\delta_{ia}\delta_{jb}}{n}
+\right) \\
+&=
+b\otimes e_{ab}
+=
+x.
+\end{aligned}
+$$
+Linearity proves the quasi-basis identity on the block; the right quasi-basis identity is identical with the order reversed. Hence $E_R$ has finite Watatani index. The block index is
+$$
+\sum_{i,j}u_{ij}u_{ij}^*
+=
+\sum_{i,j}
+n(1\otimes e_{ij}e_{ji})
+=
+\sum_{i,j}
+n(1\otimes e_{ii})
+=
+n^2(1\otimes 1_n).
+$$
+Taking the direct sum over central blocks gives
+$$
+\operatorname{Ind}(E_R)
+=
+\sum_{\alpha\in I_R}n_\alpha^2p_\alpha,
+$$
+which proves item 1.
+
+For two independent inclusions, the block dimensions multiply:
+$$
+(\mathfrak B_\alpha\otimes M_{n_\alpha})
+\otimes
+(\mathfrak C_\beta\otimes M_{m_\beta})
+\cong
+(\mathfrak B_\alpha\otimes\mathfrak C_\beta)
+\otimes
+M_{n_\alpha m_\beta}.
+$$
+Therefore the central Jones dimension on the $(\alpha,\beta)$ block is $n_\alpha m_\beta$, proving (F.10.10.5). Applying functional calculus to the central positive element gives
+$$
+\log(n_\alpha m_\beta)=\log n_\alpha+\log m_\beta.
+$$
+Taking the product active state proves (F.10.10.6).
+
+Since every $n_\alpha\ge1$, (F.10.10.4) is zero exactly when every active $\log n_\alpha$ is zero, equivalently every active $n_\alpha=1$. If a refinement increases an active multiplicity $n_\alpha$ but changes no exterior protocol distribution, then it strictly increases the description/index capacity cost while leaving predictive regret unchanged. Corollary F.10.4d.3 and Corollary F.10.6c therefore remove it by PCE, proving item 4.
+
+For item 5, work on the channel-counting calibration branch of Definition F.10.10a.1. Substituting (F.10.10.8) into (F.10.10.4) gives
+$$
+C_J(R;\tau_R)
+=
+\sum_{\alpha\in I_R}\tau_R(p_\alpha)\log n_\alpha
+=
+C_{\max}(f_{\mathrm{RID}})\sum_{\alpha\in I_R}\tau_R(p_\alpha).
+$$
+Substituting (F.10.10.9) yields
+$$
+C_J(R;\tau_R)
+=
+C_{\max}(f_{\mathrm{RID}})\cdot N_{\rm eff}
+=
+C_{\max}(f_{\mathrm{RID}})\cdot\sigma_{\rm eff}\cdot\mathcal A(\partial R).
+$$
+Theorem E.6 with the saturated values $\chi=\eta=1$ identifies the right side with $S_{\rm max}(\mathcal A)/k_B$, and the spacing calibration (iv) reduces the proportionality coefficient to $1/(4G)$ via Equation E.7. Therefore
+$$
+\frac{S_{\rm BH}(R)}{k_B}=\frac{\mathcal A(\partial R)}{4G}=C_J(R;\tau_R)=\tau_R(\log d_J(E_R)),
+$$
+which proves (F.10.10.7). Off the calibration branch of Definition F.10.10a.1, the equation holds only up to the calibration map of items (i)–(iv); the algebraic identity $C_J=\tau_R(\log d_J(E_R))$ continues to hold but its identification with horizon entropy is conditional on the channel calibration. ∎
+
+### F.10.11 Modular Connes Cocycle and Thermodynamic Gluing
+
+**Definition F.10.11a (Modular Diamond Cocycle).** Let $\{D_i\}_{i\in I}$ be a finite cover by admissible causal diamonds in the regular AQFT branch of Theorem F.10.2. Write
+$$
+\mathfrak A_i=\mathfrak A(D_i),
+\qquad
+\mathfrak A_{ij}=\mathfrak A(D_i\cap D_j),
+\qquad
+\mathfrak A_{ijk}=\mathfrak A(D_i\cap D_j\cap D_k).
+$$
+Let $\omega_i$ be faithful normal local PCE/KMS states on $\mathfrak A_i$, and assume the restrictions to each overlap are mutually absolutely continuous. The modular diamond cocycle is
+$$
+u_{ij}(t)
+:=
+[D(\omega_i|_{\mathfrak A_{ij}}):D(\omega_j|_{\mathfrak A_{ij}})]_t,
+\qquad
+t\in\mathbb R,
+\tag{F.10.11.1}
+$$
+the Connes Radon-Nikodym cocycle on $\mathfrak A_{ij}$.
+
+In a finite-dimensional overlap with density matrices $\rho_i^{ij}$ and $\rho_j^{ij}$,
+$$
+u_{ij}(t)
+=
+(\rho_i^{ij})^{it}(\rho_j^{ij})^{-it}.
+\tag{F.10.11.2}
+$$
+The infinitesimal modular mismatch is
+$$
+\Theta_{ij}
+:=
+-i\left.\frac{d}{dt}u_{ij}(t)\right|_{t=0}.
+\tag{F.10.11.3}
+$$
+
+**Theorem F.10.11b (Modular Cocycle Obstruction to Thermodynamic Gluing).** The family $\{u_{ij}(t)\}$ is a nonabelian Cech $1$-cocycle with values in overlap modular unitaries. Its cohomology class
+$$
+[u]\in \check H^1(\{D_i\},\mathcal U_{\mathrm{mod}})
+\tag{F.10.11.4}
+$$
+is the modular representative of the predictive obstruction class on the regular AQFT branch in the sense of the correspondence stated in item 5 below. More explicitly:
+
+1. on every triple overlap,
+$$
+u_{ii}(t)=1,
+\qquad
+u_{ij}(t)^{-1}=u_{ji}(t),
+\qquad
+u_{ij}(t)u_{jk}(t)=u_{ik}(t);
+\tag{F.10.11.5}
+$$
+
+2. $[u]=0$ if and only if the local modular flows glue, after inner overlap relabeling, to a single modular automorphism group on the descent algebra of the cover;
+
+3. in finite-dimensional overlaps, if
+$$
+K_i^{ij}:=-\log\rho_i^{ij},
+\qquad
+K_j^{ij}:=-\log\rho_j^{ij},
+$$
+then
+$$
+\Theta_{ij}=K_j^{ij}-K_i^{ij};
+\tag{F.10.11.6}
+$$
+
+4. on the local Rindler/KMS thermodynamic branch with each $K_i$ already normalized to its own local Unruh temperature $T_i$ in the form $K_i=Q_i/T_i$, vanishing of the modular obstruction is equivalent to path-independent Clausius gluing
+$$
+\delta S_i-\frac{\delta Q_i}{T_i}
+=
+\delta S_j-\frac{\delta Q_j}{T_j}
+\tag{F.10.11.7}
+$$
+on overlaps. Applying the existing local thermodynamic equation-of-state theorem then gives the stationary metric balance of Theorem F.10.4 and Theorem 12.1. No independent gravitational Hilbert sector is introduced;
+
+5. the Cech class $[u]$ is the modular representative of the X.9.5b finite obstruction class on the regular AQFT thermodynamic branch in the following sense: vanishing of $[u]$ implies vanishing of the local Rindler/KMS contribution to the X.9.5b connecting homomorphism, and conversely, a nonzero finite-cost local Rindler/KMS gluing failure at the level of Theorem X.9.5b lifts to a nonzero $[u]$. A constructive map from modular cocycles to the X.9.5b finite Cech complex on general regular branches is left as an open structural question.
+
+*Proof.* The Connes Radon-Nikodym derivative satisfies the chain rule for faithful normal states:
+$$
+[D\omega_i:D\omega_j]_t[D\omega_j:D\omega_k]_t
+=
+[D\omega_i:D\omega_k]_t
+$$
+after all three states are restricted to the same von Neumann algebra. Restricting to $\mathfrak A_{ijk}$ gives the third identity in (F.10.11.5); the first two identities follow by taking $i=j$ and by inverting the chain rule. Thus $\{u_{ij}(t)\}$ is a Cech $1$-cocycle.
+
+If $[u]=0$, there are local modular unitaries $v_i(t)$ such that
+$$
+u_{ij}(t)=v_i(t)v_j(t)^{-1}
+$$
+on overlaps, with the usual modular cocycle convention. Define on each $\mathfrak A_i$
+$$
+\widetilde\sigma_t^{(i)}
+=
+\operatorname{Ad}_{v_i(t)}\circ\sigma_t^{\omega_i}.
+$$
+The coboundary relation makes $\widetilde\sigma_t^{(i)}$ and $\widetilde\sigma_t^{(j)}$ agree on $\mathfrak A_{ij}$. By descent, the $\widetilde\sigma_t^{(i)}$ therefore glue to a single automorphism group on the descent algebra. Conversely, if a single modular automorphism group restricts to the local flows after inner relabeling, the implementing relabelings are a $0$-cochain whose coboundary is $u_{ij}$; hence $[u]=0$.
+
+In finite dimension, (F.10.11.2) gives
+$$
+\left.\frac{d}{dt}u_{ij}(t)\right|_{t=0}
+=
+i\log\rho_i^{ij}-i\log\rho_j^{ij}
+=
+i(K_j^{ij}-K_i^{ij}),
+$$
+so (F.10.11.3) gives (F.10.11.6).
+
+Finally, on the local Rindler/KMS branch with each $K_i$ already normalized to the local Unruh temperature $T_i$ in the form $K_i=Q_i/T_i$, the first law of relative entropy for a faithful KMS state gives
+$$
+\delta S_i=\delta\langle K_i\rangle=\frac{\delta Q_i}{T_i}
+$$
+at first order around the local equilibrium state. Therefore the difference of the Clausius one-forms on an overlap is the expectation of the infinitesimal modular mismatch,
+$$
+\left(\delta S_j-\frac{\delta Q_j}{T_j}\right)-\left(\delta S_i-\frac{\delta Q_i}{T_i}\right)
+=
+\delta\langle K_j-K_i\rangle
+=
+\delta\langle\Theta_{ij}\rangle.
+$$
+If the Cech class vanishes, $\Theta_{ij}$ is a coboundary at the level of expectations and the Clausius form is path-independent on the cover; if it does not vanish, no global thermodynamic gluing exists without an obstruction term. Theorem F.10.4 together with Theorem 12.1 identifies the vanishing local-horizon Clausius obstruction with the emergent metric equation-of-state branch.
+
+For item 5, on the local Rindler/KMS thermodynamic branch the local-cover Clausius mismatch is exactly the finite-cost gluing failure represented in the X.9.5b finite Cech complex, so vanishing of $[u]$ implies vanishing of that contribution. Conversely, a nonzero finite-cost local Rindler/KMS contribution to the X.9.5b connecting homomorphism produces a nonvanishing $\delta\langle\Theta_{ij}\rangle$ on at least one overlap, which lifts to a nonzero $[u]$. The general constructive correspondence on regular branches outside the local Rindler/KMS thermodynamic setting is left as an open structural question. ∎
 
 
 

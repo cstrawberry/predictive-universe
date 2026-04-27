@@ -5329,6 +5329,27 @@ $$
 
 *Proof.* If the label preserves the vacuum and the polarization datum, Theorem P.13.30a.2 places it in the stabilizer chain. If it does not act on any admissible interface channel, Corollary G.8.4h.3 removes it as an operationally null global label. These cases exhaust exact labels compatible with the stated branch. ∎
 
+**Corollary P.13.30a.4 (Twined-Character Observability Criterion).** Let $g\in\mathbb M$ act on $V^\natural$ on the Moonshine branch, and let $\mathrm{Resp}_{\mathrm{PU}}$ be the protocol-response presheaf of Theorem P.6.1b.3 restricted to the PU polarization datum $\Pi_{\mathrm{PU}}$. The Monster element $g$ has non-null physical content only if:
+
+1. $g$ preserves $\Pi_{\mathrm{PU}}$, equivalently $g\in\mathbb M_\Pi$; and
+
+2. the action of $g$ induces a non-identity natural transformation of $\mathrm{Resp}_{\mathrm{PU}}$.
+
+In any trace-complete protocol family, if every admissible protocol sector has the same restricted twined and untwined response trace,
+$$
+\operatorname{Tr}_{V_{\mathcal P}}
+(gq^{L_0-1})
+=
+\operatorname{Tr}_{V_{\mathcal P}}
+(q^{L_0-1})
+\tag{P.13.30a.1}
+$$
+for all protocol-separated retained subspaces $V_{\mathcal P}\subset V^\natural$, then $g$ is PPI-identical to the identity on physical predictions. Two Monster elements with identical restricted twined response traces on all $V_{\mathcal P}$ are PPI-identical to each other.
+
+*Proof.* If $g$ does not preserve $\Pi_{\mathrm{PU}}$, Theorem P.13.30a.2 excludes it from the descended exact low-energy symmetry chain. If $g$ preserves $\Pi_{\mathrm{PU}}$ but induces the identity natural transformation on $\mathrm{Resp}_{\mathrm{PU}}$, then every admissible protocol has the same outcome law with and without $g$. The operational Yoneda reconstruction theorem, Theorem P.6.1b.3, identifies physical structure only up to equality of all protocol responses, and Corollary G.8.4h.3 removes exact labels with no local interface action. Hence such a $g$ is operationally null.
+
+Conversely, if the induced natural transformation is not the identity, then by definition there exists an admissible protocol sector on which the response differs. On a trace-complete protocol family this difference is detected by a restricted trace, so (P.13.30a.1) fails on that sector. The same argument applied to $g^{-1}h$ shows that two elements $g,h\in\mathbb M_\Pi$ are PPI-identical whenever the restricted response traces are trace-complete and identical for all admissible sectors. ∎
+
 ---
 
 ### Theorem P.13.31 (Monstrous Moonshine)

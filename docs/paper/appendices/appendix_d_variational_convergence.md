@@ -1280,6 +1280,178 @@ In the constant-$f$ macroscopic branch this is the trace-normalized Einstein-typ
 
 *Proof.* Stationarity of (D.8.6.3) modulo normalization is exactly the vanishing of the traceless part of the parenthesized tensor, which is (D.8.6.5). For constant $f$, the Hessian term vanishes. Taking the trace fixes $\chi$, and the remaining traceless equation is the Einstein-type curvature-stress balance. ∎
 
+**Definition D.8.6d (Finite Entropic-Ricci PCE Generator).** Let $X$ be a finite set and let $L$ be an irreducible continuous-time Markov generator
+$$
+Lf(x)=\sum_{y\in X}K(x,y)(f(y)-f(x))
+$$
+with stationary law $\pi$ and detailed balance
+$$
+\pi(x)K(x,y)=\pi(y)K(y,x).
+\tag{D.8.6.6}
+$$
+Write a probability law as $\mu=\rho\pi$, where $\rho:X\to(0,\infty)$ and $\sum_x\rho(x)\pi(x)=1$. The finite PCE free cost is the relative entropy
+$$
+\mathcal V_{\mathrm{fin}}(\rho)
+=
+\sum_{x\in X}\rho(x)\log\rho(x)\,\pi(x).
+\tag{D.8.6.7}
+$$
+Let
+$$
+\theta(r,s)
+=
+\begin{cases}
+\dfrac{r-s}{\log r-\log s}, & r\ne s,\\
+r, & r=s,
+\end{cases}
+\tag{D.8.6.8}
+$$
+be the logarithmic mean. The Maas-Mielke transport distance $\mathcal W_L$ is defined by
+$$
+\mathcal W_L(\rho_0,\rho_1)^2
+=
+\inf_{(\rho_t,\psi_t)}
+\int_0^1
+\frac12
+\sum_{x,y\in X}
+(\psi_t(y)-\psi_t(x))^2
+\theta(\rho_t(x),\rho_t(y))
+K(x,y)\pi(x)\,dt,
+\tag{D.8.6.9}
+$$
+where the infimum is over smooth positive curves satisfying the discrete continuity equation
+$$
+\dot\rho_t(x)
++
+\sum_{y\in X}
+(\psi_t(y)-\psi_t(x))
+\theta(\rho_t(x),\rho_t(y))
+K(x,y)
+=
+0.
+\tag{D.8.6.10}
+$$
+The generator has entropic Ricci curvature at least $\lambda$ when $\mathcal V_{\mathrm{fin}}$ is $\lambda$-geodesically convex along $\mathcal W_L$ geodesics.
+
+**Theorem D.8.6e (Finite Entropic-Ricci PCE Stability).** For a finite detailed-balance generator of Definition D.8.6d, the Markov semigroup $P_t=e^{tL}$ is the $\mathcal W_L$-gradient flow of $\mathcal V_{\mathrm{fin}}$. Moreover, the following are equivalent on the positive probability simplex:
+
+1. the generator has entropic Ricci curvature at least $\lambda$;
+
+2. $P_t$ satisfies the evolution variational inequality
+$$
+\frac12\frac{d}{dt}
+\mathcal W_L(P_t\rho,\nu)^2
++
+\frac{\lambda}{2}
+\mathcal W_L(P_t\rho,\nu)^2
+\le
+\mathcal V_{\mathrm{fin}}(\nu)
+-
+\mathcal V_{\mathrm{fin}}(P_t\rho)
+\tag{D.8.6.11}
+$$
+for every positive density $\nu$;
+
+3. the finite PCE free cost is locally $\lambda$-stable in the entropic-transport geometry.
+
+If $\lambda>0$, then for all positive densities $\rho,\nu$,
+$$
+\mathcal W_L(P_t\rho,P_t\nu)
+\le
+e^{-\lambda t}
+\mathcal W_L(\rho,\nu),
+\tag{D.8.6.12}
+$$
+and
+$$
+\mathcal V_{\mathrm{fin}}(P_t\rho)
+\le
+e^{-2\lambda t}
+\mathcal V_{\mathrm{fin}}(\rho).
+\tag{D.8.6.13}
+$$
+Consequently
+$$
+\lVert P_t\rho-1\rVert_{L^1(\pi)}
+\le
+e^{-\lambda t}
+\sqrt{2\mathcal V_{\mathrm{fin}}(\rho)}.
+\tag{D.8.6.14}
+$$
+
+*Proof.* Detailed balance makes the Onsager operator associated with (D.8.6.9) symmetric and positive on the tangent space of the probability simplex. The logarithmic mean identity
+$$
+\theta(r,s)(\log r-\log s)=r-s
+$$
+turns the continuity equation into the Markov equation when the potential is $\psi=-\log\rho$: the corresponding velocity is
+$$
+\dot\rho(x)
+=
+\sum_y K(x,y)(\rho(y)-\rho(x))
+=
+L\rho(x).
+$$
+Thus $P_t=e^{tL}$ is the $\mathcal W_L$-gradient flow of $\mathcal V_{\mathrm{fin}}$.
+
+On the interior of the finite probability simplex, $\mathcal W_L$ is a smooth Riemannian transport metric on each connected component; irreducibility gives one component. For smooth gradient flows in a finite-dimensional geodesic metric, $\lambda$-geodesic convexity of the potential is equivalent to the evolution variational inequality (D.8.6.11). This proves the equivalence of (1) and (2). Item (3) is the same statement in PCE language, because $\mathcal V_{\mathrm{fin}}$ is the finite PCE free cost and (D.8.6.11) says that its gradient flow is stable with modulus $\lambda$.
+
+The contraction estimate (D.8.6.12) follows by applying (D.8.6.11) twice, once to $(P_t\rho,P_t\nu)$ and once to $(P_t\nu,P_t\rho)$, and adding:
+$$
+\frac{d}{dt}\mathcal W_L(P_t\rho,P_t\nu)^2
+\le
+-2\lambda\mathcal W_L(P_t\rho,P_t\nu)^2.
+$$
+Gronwall's inequality gives (D.8.6.12).
+
+Let $1$ denote the equilibrium density. Since $\mathcal V_{\mathrm{fin}}(1)=0$ and $1$ is the unique minimizer, $\lambda$-convexity gives the gradient-dominance inequality
+$$
+|\nabla_{\mathcal W_L}\mathcal V_{\mathrm{fin}}|^2(\rho)
+\ge
+2\lambda\mathcal V_{\mathrm{fin}}(\rho).
+\tag{D.8.6.15}
+$$
+Indeed, along a geodesic from $\rho$ to $1$,
+$$
+0
+\ge
+\mathcal V_{\mathrm{fin}}(\rho)
++
+\langle \nabla\mathcal V_{\mathrm{fin}}(\rho),\dot\gamma(0)\rangle
++
+\frac{\lambda}{2}\mathcal W_L(\rho,1)^2,
+$$
+so
+$$
+\mathcal V_{\mathrm{fin}}(\rho)
+\le
+|\nabla\mathcal V_{\mathrm{fin}}|(\rho)\mathcal W_L(\rho,1)
+-
+\frac{\lambda}{2}\mathcal W_L(\rho,1)^2
+\le
+\frac{|\nabla\mathcal V_{\mathrm{fin}}|^2(\rho)}{2\lambda}.
+$$
+Along the gradient flow,
+$$
+\frac{d}{dt}\mathcal V_{\mathrm{fin}}(P_t\rho)
+=
+-|\nabla_{\mathcal W_L}\mathcal V_{\mathrm{fin}}|^2(P_t\rho)
+\le
+-2\lambda\mathcal V_{\mathrm{fin}}(P_t\rho).
+$$
+Gronwall's inequality gives (D.8.6.13). Finally, Pinsker's inequality gives
+$$
+\lVert P_t\rho-1\rVert_{L^1(\pi)}^2
+\le
+2\mathcal V_{\mathrm{fin}}(P_t\rho),
+$$
+and (D.8.6.14) follows from (D.8.6.13). ∎
+
+**Corollary D.8.6f (Finite Entropic-Ricci Limit of PCE-Ricci Flow).** Let $(X_N,L_N,\pi_N)$ be finite detailed-balance PCE generators with entropic Ricci curvature bounded below by $\lambda_N\to\lambda$. Suppose their metric-measure realizations converge to a compact regular metric-measure branch $(M,g,e^{-f}d\mathrm{vol}_g)$, their Dirichlet forms Mosco-converge to the Cheeger energy of that branch, their entropic transport actions and entropies Γ-converge to the corresponding continuum $W_2$ action and weighted entropy, and their retained predictive energy densities converge to $\mathcal U_{\mathrm{pred}}$. Then the finite PCE gradient flows converge to the metric PCE-Ricci flow (D.8.6.3), and the stationary limit is exactly the balance equation (D.8.6.5).
+
+This is a finite Markov-chain stability statement. The metric branch appears only after the stated continuum limit, and gravity remains the thermodynamic/equation-of-state balance of Corollary D.8.6c.
+
+*Proof.* Mosco convergence of the Dirichlet forms gives convergence of the quadratic tangent norms. Γ-convergence of the transport actions gives lower semicontinuity of metric slopes and convergence of minimizing movement schemes for the entropy-gradient flows. Γ-convergence of the entropies and of the predictive energy terms identifies the limiting PCE functional with $\mathcal V_{\mathrm{geom}}$ in Definition D.8.6a. Therefore every limit curve of finite $\mathcal W_{L_N}$-gradient flows is the natural-gradient flow of $\mathcal V_{\mathrm{geom}}$. The first-variation computation in Theorem D.8.6b identifies that limiting natural-gradient equation with (D.8.6.3). Lower semicontinuity of $\lambda_N$-convexity gives the limiting entropic stability bound with modulus $\lambda$. Setting the limiting gradient to zero gives (D.8.6.5), which is Corollary D.8.6c. ∎
+
 ### D.8.7 Thermodynamic Length Bound for Varying Effective Constants
 
 **Definition D.8.7a (Predictive Coupling Manifold).** Let $\Lambda$ be a finite-dimensional manifold of effective constants or couplings $\lambda=(\lambda^1,\dots,\lambda^n)$ on a regular coarse-grained branch. Suppose the branch defines a locally asymptotically normal predictive family $p_\lambda$ with Fisher/PCE metric
@@ -1381,6 +1553,63 @@ Substitute this into Theorem D.8.7b and solve for the drift magnitude. ∎
 **Corollary D.8.7d (Predictive Price of Cosmological Drift).** Slow variation of effective constants such as $\alpha$, $G$, masses, threshold scales, or dark-sector constitutive parameters is MPU-admissible only when the corresponding Fisher-geometric distance is paid for by entropy production. A drift with zero entropy production is confined to $d_G=0$, hence to operationally indistinguishable parameter directions.
 
 *Proof.* Set $\Sigma[\lambda]=0$ in (D.8.7.4). Then $d_G(\lambda_0,\lambda_1)=0$. Since $G$ is positive definite on identifiable directions, the endpoints differ only along non-identifiable quotient directions. ∎
+
+**Definition D.8.7e (Classical Predictive Record Current).** Let $X$ be the finite Blackwell-PCE record alphabet selected by Theorem M.6.11b for a steady ND-RID quotient. Let $k(x,y)$ be the continuous-time transition rate from $x$ to $y$, with stationary law $\pi$ satisfying
+$$
+\sum_x\pi(x)k(x,y)=\pi(y)\sum_z k(y,z).
+\tag{D.8.7.6}
+$$
+For an antisymmetric increment $d(x,y)=-d(y,x)$, define the integrated record current
+$$
+J_T
+=
+\sum_{0<t\le T}
+d(X_{t^-},X_t).
+\tag{D.8.7.7}
+$$
+The total steady entropy production over time $T$ is
+$$
+\Sigma_T
+=
+T\sum_{x<y}
+\left(\pi(x)k(x,y)-\pi(y)k(y,x)\right)
+\log
+\frac{\pi(x)k(x,y)}{\pi(y)k(y,x)},
+\tag{D.8.7.8}
+$$
+with zero contribution from edges whose stationary forward and backward fluxes are both zero.
+
+**Theorem D.8.7f (Predictive Thermodynamic Uncertainty Bound).** For every finite irreducible steady ND-RID record quotient of Definition D.8.7e with $\langle J_T\rangle\ne0$,
+$$
+\frac{\operatorname{Var}(J_T)}{\langle J_T\rangle^2}\,\Sigma_T
+\ge
+2.
+\tag{D.8.7.9}
+$$
+Equivalently,
+$$
+\Sigma_T
+\ge
+2\,\frac{\langle J_T\rangle^2}{\operatorname{Var}(J_T)}.
+\tag{D.8.7.10}
+$$
+Thus a stable predictive record current cannot be both highly precise and entropy-cheap. The bound applies to measurement records, update currents, anomaly-ledger currents, and memory-ledger currents after projection to the Blackwell-PCE commutative record algebra.
+
+*Proof.* By Theorem M.6.11b, the retained record algebra is commutative and PCE-minimal. Therefore the ND-RID quotient on that record algebra is a finite continuous-time Markov jump process with rates $k(x,y)$ and stationary law $\pi$. Irreducibility gives a unique stationary law and finite current moments. The steady entropy production is exactly (D.8.7.8), the standard stochastic-thermodynamic entropy production for the stationary Markov jump process. The finite-time thermodynamic uncertainty relation for stationary continuous-time Markov jump processes gives
+$$
+\operatorname{Var}(J_T)\,\Sigma_T
+\ge
+2\langle J_T\rangle^2.
+$$
+Dividing by $\langle J_T\rangle^2$ proves (D.8.7.9), and rearranging proves (D.8.7.10). Since every reported PU record current is, by construction, a current on the selected commutative record quotient, the same inequality applies to the listed record-current channels. ∎
+
+**Corollary D.8.7g (Quantum Protocols Report TUR-Bounded Classical Records).** Let a noncommutative finite protocol be read out through the Blackwell-PCE selected record channel
+$$
+\mathcal M:\mathfrak A\to C(X).
+$$
+Any operationally reported current is the classical current $J_T$ on $X$ and therefore obeys (D.8.7.9). Coherent pre-readout dynamics may change the induced rates $k(x,y)$ and the entropy production $\Sigma_T$, but it cannot license a reported classical current that violates the bound computed from its own stationary record statistics.
+
+*Proof.* The output of $\mathcal M$ is the commutative sufficient record algebra selected by Theorem M.6.11b. Hence the reported current is a function of the classical jump record on $X$. Applying Theorem D.8.7f to that induced finite Markov quotient gives (D.8.7.9). Any coherent dynamics before $\mathcal M$ only changes the effective classical transition statistics seen by the record channel; once those statistics and their entropy production are fixed, the Markov current bound applies. ∎
 
 ### D.8.8 Tropical Predictive Action
 

@@ -600,3 +600,81 @@ $$
 If the entropy term has vanishing boundary contribution after integrating by parts, this gives the corresponding averaged null energy bound.
 
 *Proof.* Multiply (76i) by the nonnegative function $f^2$ and integrate. If the entropy contribution has vanishing boundary terms, the right side reduces to the integrated entropy-curvature correction determined by the compact support of $f$. ∎
+
+**Corollary 12.5.3e (Shape-Derivative Null Modular Tomography).** Let $\Sigma_X$ be a regular null cut of the same null hypersurface, described locally by a cut function $X(y)$ on transverse coordinates $y$. For a smooth compactly supported shape deformation $f(y)$, define
+$$
+\mathcal N_\rho[f]
+:=
+\left.
+\frac{d^2}{d\epsilon^2}
+S_{\mathrm{rel}}[X+\epsilon f]
+\right|_{\epsilon=0}.
+\tag{76l}
+$$
+Assume the functional shape derivatives exist on the finite-resolution branch and that the local Rindler modular identity (76h) holds per unit transverse area for localized shape deformations. Then
+$$
+\mathcal N_\rho[f]
+=
+\int_{\Sigma_X}
+f(y)^2
+\left(
+2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho(y)
+-
+\frac{\delta^2\Delta S_{\mathrm{pred}}}{\delta X(y)^2}
+\right)
+dA_y
++
+\mathcal N_\rho^{\mathrm{off}}[f],
+\tag{76m}
+$$
+where $\mathcal N_\rho^{\mathrm{off}}[f]$ is the off-diagonal shape-kernel contribution. In the localized-cell limit where $f$ tends to the indicator of a transverse cell shrinking to $y_0$ and the off-diagonal contribution vanishes after division by the cell area,
+$$
+2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho(y_0)
+=
+\lim_{\mathrm{cell}\to y_0}
+\frac{1}{A_{\mathrm{cell}}}
+\left[
+\mathcal N_\rho[f_{\mathrm{cell}}]
++
+\frac{d^2}{d\epsilon^2}
+\Delta S_{\mathrm{pred}}[X+\epsilon f_{\mathrm{cell}}]
+\bigg|_{\epsilon=0}
+\right].
+\tag{76n}
+$$
+Thus null modular response data reconstruct the observable stress-energy flux on the regular branch, with the nonnegative relative-entropy term measuring PCE slack. On the local Clausius-saturated thermodynamic branch this slack vanishes.
+
+*Proof.* Apply the identity
+$$
+S_{\mathrm{rel}}[X]
+=
+\Delta\langle K_X\rangle-\Delta S_{\mathrm{pred}}[X]
+$$
+to the one-parameter family $X+\epsilon f$ and differentiate twice at $\epsilon=0$. This gives
+$$
+\mathcal N_\rho[f]
+=
+\left.
+\frac{d^2}{d\epsilon^2}
+\Delta\langle K_{X+\epsilon f}\rangle
+\right|_{\epsilon=0}
+-
+\left.
+\frac{d^2}{d\epsilon^2}
+\Delta S_{\mathrm{pred}}[X+\epsilon f]
+\right|_{\epsilon=0}.
+$$
+By the stated local Rindler modular identity per unit transverse area, the diagonal part of the second modular-energy variation is
+$$
+\int_{\Sigma_X}
+2\pi f(y)^2
+\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho(y)
+\,dA_y.
+$$
+Separating the remaining smooth off-diagonal part of the shape kernel gives (76m). Relative-entropy convexity under null-cut inclusion gives
+$$
+\mathcal N_\rho[f]\ge0
+$$
+for every admissible $f$, so this term is precisely the nonnegative predictive slack already used in Theorem 12.5.3b.
+
+For a shrinking transverse cell, $f_{\mathrm{cell}}$ is constant on the cell and zero outside it. Dividing (76m) by $A_{\mathrm{cell}}$ and taking the regular localized-cell limit removes the off-diagonal contribution by hypothesis and evaluates the continuous diagonal integrand at $y_0$. Rearranging gives (76n). The Clausius-saturated case is the equality branch of Theorem F.10.4 and Theorem 12.1, so the relative-entropy slack term is zero there. ∎

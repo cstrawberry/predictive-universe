@@ -376,6 +376,69 @@ For any macroscopic system ($N \gg 1$), the required trajectory has vanishing pr
 
 **Remark 14.1a (Carrier-Mediated vs State-Mediated Influence).** Theorem 14.1 targets *carrier-mediated* CTCs: physical objects traversing closed worldlines to deliver predictively useful information to the causal past. This is categorically distinct from the *state-mediated* statistical influence of Postulate 3 (Section 10.4), in which no carrier traverses any gap — the influence operates through correlations pre-encoded in a shared entangled state $\omega$ (Equation F.4). The bounded statistical influence of Postulate 3, with CC $< 0.5$ (Theorem 39), respects causality without requiring carrier prohibition: (a) the CC bound prevents deterministic outcome forcing on any single trial; (b) Theorem 41 gives a quantitative lower bound on the number of independent trials required to detect the influence with error probability $\leq \alpha_{\mathrm{err}}$; and (c) Theorem 41 bounds the mutual information per trial by a function that is $O(\mathrm{CC}^2)$ as $\mathrm{CC}\to 0$. The SPAP diagonalization (Stage 1) requires deterministic single-shot accuracy ($P_{\mathrm{err}} = 0$), not a statistical bias ($P_{\mathrm{err}} > 0$). Since $\mathrm{CC} < 0.5$ provably prevents the former while permitting the latter, Theorem 14.1 and Postulate 3 are fully consistent. More generally, no protocol combining state-mediated statistical influence with subluminal return channels can construct a paradox-inducing causal loop: the non-zero error probability at every finite sample size breaks the diagonal construction at Step 3 (the agent receives $\hat{C}_A$ with $P_{\mathrm{err}}(N) > 0$ for all finite $N$, so negating the received estimate does not produce a logical contradiction but merely a noisy feedback loop with strictly positive error).
 
+**Corollary 14.1c (Causal-Order Resource Monotone).** Let $W$ be a finite higher-order operational process for a fixed family of local instruments, assigning valid probabilities to all admissible instrument choices and containing no carrier-mediated closed timelike curve. Let $\mathsf{CSep}$ be the closed convex set of causally separable processes with the same input-output boundary data. Define the causal-order robustness
+$$
+\mathcal C_{\mathrm{ord}}(W)
+:=
+\inf\left\{
+r\ge0:
+\exists\Omega\ \text{valid process with}\ 
+\frac{W+r\Omega}{1+r}\in\mathsf{CSep}
+\right\}.
+\tag{14.1c.1}
+$$
+Then:
+
+1. $\mathcal C_{\mathrm{ord}}(W)=0$ if and only if $W\in\mathsf{CSep}$.
+
+2. $\mathcal C_{\mathrm{ord}}$ is convex.
+
+3. If $\Lambda$ is a free causal post-processing map that sends valid processes to valid processes and sends $\mathsf{CSep}$ into $\mathsf{CSep}$, then
+$$
+\mathcal C_{\mathrm{ord}}(\Lambda W)\le\mathcal C_{\mathrm{ord}}(W).
+\tag{14.1c.2}
+$$
+
+Thus indefinite causal order, when present in a valid finite process, is classified by PU as a finite predictive resource of higher-order process structure. It is not retrocausal signaling and does not weaken Theorem 14.1.
+
+*Proof.* Since $\mathsf{CSep}$ is closed, if $\mathcal C_{\mathrm{ord}}(W)=0$ there are feasible decompositions with $r_n\to0$ and
+$$
+\frac{W+r_n\Omega_n}{1+r_n}\in\mathsf{CSep}.
+$$
+The left side converges to $W$, so $W\in\mathsf{CSep}$. Conversely, if $W\in\mathsf{CSep}$, choose $r=0$, proving item 1.
+
+For convexity, let $W_1,W_2$ have feasible decompositions with parameters $r_1,r_2$. For $0\le\lambda\le1$, set
+$$
+R=\lambda r_1+(1-\lambda)r_2.
+$$
+If $R=0$, both $W_i$ are causally separable and so is their convex combination. If $R>0$, define
+$$
+\Omega
+=
+\frac{\lambda r_1\Omega_1+(1-\lambda)r_2\Omega_2}{R}.
+$$
+Then
+$$
+\frac{\lambda W_1+(1-\lambda)W_2+R\Omega}{1+R}
+=
+\lambda\frac{1+r_1}{1+R}
+\frac{W_1+r_1\Omega_1}{1+r_1}
++
+(1-\lambda)\frac{1+r_2}{1+R}
+\frac{W_2+r_2\Omega_2}{1+r_2},
+$$
+with coefficients summing to $1$. The right side is a convex combination of causally separable processes, hence causally separable. This proves convexity.
+
+For monotonicity, apply $\Lambda$ to any feasible decomposition:
+$$
+\frac{\Lambda W+r\Lambda\Omega}{1+r}
+=
+\Lambda\left(\frac{W+r\Omega}{1+r}\right).
+$$
+The right side is causally separable because $\Lambda$ preserves $\mathsf{CSep}$, and $\Lambda\Omega$ is valid because $\Lambda$ preserves valid processes. Hence the same $r$ is feasible for $\Lambda W$. Taking the infimum gives (14.1c.2).
+
+The final statement follows because Theorem 14.1 excludes carrier-mediated backwards transmission of predictively useful information. A finite higher-order process with $\mathcal C_{\mathrm{ord}}>0$ changes the ordering resource of local instruments but, by hypothesis, still assigns ordinary forward operational probabilities and contains no paradox-inducing carrier loop. ∎
+
 **Connection to Theorem 42.** This result extends **Theorem 42 (Inability to Construct Causal Loops)**, which establishes that statistical FTL influence cannot construct paradoxes because:
 
 1. The CC bound ($\text{CC} < 0.5$, **Theorem 39**) prevents deterministic forcing
@@ -1425,7 +1488,7 @@ Let the PU vacuum be characterized by a stabilizer-like constraint structure on 
 
 * A **defect (syndrome excitation)** is a localized violation of a subset of the vacuum constraints (a nontrivial syndrome relative to the vacuum stabilizers).
 * Two defects are in the same **superselection sector** if they differ by operations generated within the local redundancy group (the same operational equivalence notion that underlies gauge redundancy, Appendix G.8.4g), i.e., if they cannot be distinguished by any strictly local MPU-limited measurement after accounting for the local redundancy.
-* **Interactions** correspond to allowed composition rules of these sectors, which in code language become fusion rules; the PU framework fixes the vacuum code geometry and symmetry constraints that such a fusion algebra must respect (Appendix R; Appendix Z), while the explicit fusion/braiding data is a further computation rather than an assumed input.
+* **Interactions** correspond to allowed composition rules of these sectors, which in code language become fusion rules; the PU framework fixes the vacuum code geometry and symmetry constraints that such a fusion algebra must respect (Appendix R; Appendix Z), while Appendix G.8.4i packages the PPI-admissible interface part as a finite predictive defect fusion category. Explicit numerical fusion and braiding coefficients remain further computations rather than assumed inputs.
 
 **Quantitative mass spectrum from Golay/Leech rigidity.**
 The code-theoretic vacuum does not stop at a qualitative classification of sectors: because the Golay/Leech constraints fix (i) the Gaussian width of generation-localized wavepackets on the generation manifold and (ii) the admissible $E_8$ triads of generation points, the same defect/superselection structure yields quantitative Yukawa and mass data. In Appendix T, Gaussian overlap of generation wavefunctions produces the hierarchy law (Theorem T.41.5):

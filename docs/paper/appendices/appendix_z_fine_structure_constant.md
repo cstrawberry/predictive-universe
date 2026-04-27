@@ -1493,9 +1493,55 @@ $$\langle W(C) \rangle \sim e^{-V(R)T} = e^{-\sigma RT} = e^{-\sigma \cdot \text
 
 This area law signifies confinement. In contrast, a rooted lattice admits massless propagation along root directions, yielding perimeter-law decay (Coulombic behavior). ∎
 
+**Remark Z.8d.0 (Higher-Form Ledger Status of the Flux-Tube Branch).** The higher-form predictive ledger of Definition X.9.5d.1 supplies the modern line-operator language for diagnosing this branch. Proposition Z.8d remains a flux-energy branch argument: it does not by itself prove the equivalence between rootlessness, an unbroken center one-form ledger, and the Wilson-loop area law. That equivalence is the open structural target X.9.5d.3.
+
 **Corollary Z.8d.1 (Unique Confining Vacuum Selection on the Combined Balanced Golay and Flux-Tube Confinement Branches).** On the combined balanced rate-½ Golay branch (Theorem Z.13b) and flux-tube confinement branch (Proposition Z.8d), among the 24 Niemeier lattices, PCE optimization uniquely selects the confining vacuum.
 
 *Proof.* On the balanced rate-½ branch, PCE optimization selects the extended binary Golay code $\mathcal{G}_{24}=[24,12,8]$ on the $M=24$ interface modes (Theorem Z.13b). The gluing construction from $\mathcal{G}_{24}$ produces an even unimodular 24-dimensional lattice with $|v|_{\min}^2=4$ (hence rootless) (Appendix R, Proposition R.4.2a and Lemma R.4.5). By Theorem Z.8c, the unique rootless even unimodular lattice in dimension 24 is the Leech lattice $\Lambda_{24}$. On the flux-tube confinement branch (Proposition Z.8d), the rootless vacuum lattice yields an area law, hence the selected vacuum is confining on that branch. ∎
+
+**Definition Z.8d.2 (Regular LSM Datum).** A regular LSM datum on a finite PU branch consists of:
+
+1. a crystallographic or periodic coarse-grained MPU branch with a well-defined unit cell;
+
+2. an internal or spatial symmetry group $G_{\mathrm{cell}}$ acting on each cell;
+
+3. a projective or fractional on-cell symmetry class
+$$
+\omega_{\mathrm{LSM}}\in H^2(G_{\mathrm{cell}},U(1)),
+\tag{Z.8d.1}
+$$
+or its higher/categorical replacement when the branch uses extended operators;
+
+4. a regular gapped-IR hypothesis under which the branch would otherwise flow to a symmetric, short-range-entangled, nondegenerate phase.
+
+**Theorem Z.8d.3 (LSM-PCE Ingappability Gate).** On any regular finite PU branch satisfying the Lieb-Schultz-Mattis-Oshikawa-Hastings hypotheses encoded in Definition Z.8d.2, if
+$$
+\omega_{\mathrm{LSM}}\ne0,
+\tag{Z.8d.2}
+$$
+then PCE compression cannot produce an IR branch that is simultaneously:
+
+1. symmetric under $G_{\mathrm{cell}}$;
+
+2. short-range entangled;
+
+3. nondegenerate;
+
+4. fully gapped;
+
+5. free of boundary anomaly inflow or compensating topological sector.
+
+Therefore at least one of the following must be retained: gapless response, topological order, symmetry breaking, or boundary/interface anomaly inflow.
+
+*Proof.* The class $\omega_{\mathrm{LSM}}$ is the obstruction to representing the microscopic unit-cell symmetry action by an ordinary linear on-site representation in a trivial symmetric product-like IR state. Suppose, for contradiction, that the IR branch is symmetric, short-range entangled, nondegenerate, fully gapped, and has no boundary or topological compensator. A finite correlation length and a unique gapped state allow PCE compression to a short-range-entangled symmetric representative without changing long-distance protocol responses. Such a representative has no anomaly inflow and carries a trivial unit-cell projective class. This contradicts (Z.8d.2). Equivalently, flux insertion or twisted-boundary transport changes the state by the nontrivial LSM class, while a trivial symmetric gapped phase would return to the same state. Hence the assumed IR phase is impossible. ∎
+
+**Corollary Z.8d.4 (Confining Vacuum LSM Audit).** The flux-tube confinement branch of Proposition Z.8d and the unique confining-vacuum statement of Corollary Z.8d.1 are compatible with the LSM-PCE gate exactly when the relevant regular unit-cell datum has
+$$
+\omega_{\mathrm{LSM}}=0
+$$
+or when any nonzero LSM obstruction is carried by one of the permitted nontrivial IR structures in Theorem Z.8d.3. If a proposed regular crystallographic realization has $\omega_{\mathrm{LSM}}\ne0$ while also claiming a symmetric, short-range-entangled, nondegenerate, fully gapped IR vacuum with no compensator, that realization is excluded.
+
+*Proof.* Apply Theorem Z.8d.3 to the unit-cell datum of the regular realization. If $\omega_{\mathrm{LSM}}=0$, the LSM obstruction is absent. If $\omega_{\mathrm{LSM}}\ne0$, Theorem Z.8d.3 requires gapless response, topological order, symmetry breaking, or boundary/interface inflow. A realization claiming none of these contradicts the theorem. ∎
 
 #### Z.13.4.1 Hyperon Spin-Correlation Transfer from the Rootless Confining Vacuum
 
@@ -2189,9 +2235,106 @@ $$
 253:77:21:5:1;
 $$
 
-4. an $M_{24}$-invariant native substrate shell appears at weight $1\le w\le7$.
+4. an $M_{24}$-invariant native substrate shell appears at weight $1\le w\le7$;
 
-*Proof.* Items 1 and 2 contradict Theorem Z.13b.3. Item 3 contradicts the incidence law of Corollary Z.13b.1. Item 4 contradicts the minimum-distance statement of the Golay shell enumerator, since $d_{\min}=8$ and the exact substrate component is supported on Golay shells. ∎
+5. in a controlled weight-4 decoder-boundary probe, the non-correctable syndrome fibers fail to decompose into $1771$ six-tetrad sextets.
+
+*Proof.* Items 1 and 2 contradict Theorem Z.13b.3. Item 3 contradicts the incidence law of Corollary Z.13b.1. Item 4 contradicts the minimum-distance statement of the Golay shell enumerator, since $d_{\min}=8$ and the exact substrate component is supported on Golay shells. Item 5 contradicts Corollary Z.13b.5. ∎
+
+**Corollary Z.13b.5 (Sextet Structure of the First Non-Correctable Shell).** Let
+$$
+\sigma:\mathbb F_2^{24}\to\mathbb F_2^{24}/\mathcal G_{24},
+\qquad
+\sigma(e)=e+\mathcal G_{24},
+$$
+be the Golay syndrome quotient on the balanced rate-$\tfrac12$ Golay branch. Let
+$$
+\mathcal T_4
+:=
+\{T\subset\{1,\dots,24\}: |T|=4\}
+$$
+denote the tetrads, identified with their characteristic vectors. Then:
+
+1. $\sigma$ is injective on all errors of Hamming weight at most $3$.
+
+2. For every tetrad $T\in\mathcal T_4$, the weight-4 fiber of its syndrome is exactly
+$$
+\mathsf S(T)
+=
+\{T\}
+\cup
+\{O\setminus T: O\in\mathcal O_8,\ T\subset O\}.
+\tag{Z.13b.5.1}
+$$
+
+3. Each fiber $\mathsf S(T)$ has exactly six tetrads: $T$ itself and the five complementary tetrads supplied by the five octads through $T$.
+
+4. The number of non-correctable weight-4 syndrome classes is
+$$
+\frac{\binom{24}{4}}{6}
+=
+1771.
+\tag{Z.13b.5.2}
+$$
+
+5. The $M_{24}$ action on these $1771$ sextets is transitive.
+
+Consequently the extended Golay branch corrects all errors of weight at most $3$, has first unavoidable decoder aliasing exactly at weight $4$, and that first aliasing shell is sextet-organized rather than generic.
+
+*Proof.* If $e$ and $f$ have Hamming weight at most $3$ and $\sigma(e)=\sigma(f)$, then
+$$
+e+f\in\mathcal G_{24}
+$$
+and
+$$
+|e+f|\le |e|+|f|\le 6.
+$$
+The selected Golay code has minimum distance $8$, so the only codeword of weight at most $6$ is $0$. Hence $e=f$, proving injectivity through weight $3$.
+
+Let $T,T'\in\mathcal T_4$. They have the same syndrome if and only if
+$$
+1_T+1_{T'}\in\mathcal G_{24}.
+\tag{Z.13b.5.3}
+$$
+If $T=T'$, this codeword is $0$. If $T\ne T'$, then
+$$
+|1_T+1_{T'}|
+=
+|T\triangle T'|
+=
+8-2|T\cap T'|.
+$$
+Since the nonzero Golay codewords have weight at least $8$, (Z.13b.5.3) can hold only when $|T\cap T'|=0$ and $T\triangle T'=T\cup T'$ is an octad. Thus every distinct tetrad in the same weight-4 syndrome fiber is the complement $O\setminus T$ of $T$ inside an octad $O$ containing $T$.
+
+By Corollary Z.13b.1, every tetrad lies in exactly
+$$
+\lambda_4=5
+$$
+octads of the Steiner system $S(5,8,24)$. These five octads give five distinct complements $O\setminus T$, and the previous paragraph shows that there are no other tetrads in the same syndrome fiber. This proves (Z.13b.5.1) and the six-tetrad fiber size.
+
+The tetrads are partitioned by syndrome fibers, so the number of such fibers is
+$$
+\frac{|\mathcal T_4|}{6}
+=
+\frac{\binom{24}{4}}{6}
+=
+1771.
+$$
+Moreover
+$$
+1+\binom{24}{1}+\binom{24}{2}+\binom{24}{3}+1771
+=
+1+24+276+2024+1771
+=
+4096
+=
+2^{12}
+=
+|\mathbb F_2^{24}/\mathcal G_{24}|.
+$$
+Thus the weight-$\le3$ cosets and the $1771$ sextet cosets exhaust all syndromes, so the covering radius is $4$ and the first non-correctable boundary is exactly weight $4$.
+
+Finally, $M_{24}=\operatorname{Aut}(\mathcal G_{24})$ preserves syndromes, octads, and the relation of lying in a common sextet. Since $M_{24}$ is $5$-transitive on the $24$ points, it is transitive on tetrads. Sending one tetrad to another sends its unique syndrome fiber to the other tetrad's unique syndrome fiber, so the induced action on the $1771$ sextets is transitive. ∎
 
 #### Z.13.5.3 Structural Correspondence: Constraint Equations and Quantum Correlations
 

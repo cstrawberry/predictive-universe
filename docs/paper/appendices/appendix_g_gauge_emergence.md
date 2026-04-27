@@ -107,6 +107,98 @@ The derivation shows that the Born rule is not an ad-hoc postulate but emerges a
 
 **Theorem G.1.7 (Born Rule from Cost Optimisation).** In the PU framework, POP assigns to each sharp event projector $P$ a predictive weight $f(P)$ that is normalized, non-negative, additive under orthogonal refinement, and non-contextual (Definition G.1.1; Lemmas G.1.1ba–G.1.1b). By Gleason's theorem (Theorem G.1.3), $f$ must take the trace form $f(P)=\mathrm{Tr}(\rho_{phys}P)$. Therefore the realized outcome probabilities of "Evolve" are given by the Born rule (G.1.4).
 
+### G.1.7a Contextual Holonomy as PCE Magic Cost
+
+**Definition G.1.7a.1 (Protocol-Cover Contextual Cost).** Let $\mathcal M$ be a finite cover of a protocol by compatible measurement contexts. For each context $C\in\mathcal M$, let $\Omega_C$ be its outcome set, and let
+$$
+p_C\in\Delta(\Omega_C)
+$$
+be the Born-response distribution assigned by Theorem G.1.7. Let $\Omega$ be the finite set of global assignments to all measurements appearing in the cover. The marginal map is
+$$
+\partial:\mathbb R^\Omega\to\prod_{C\in\mathcal M}\mathbb R^{\Omega_C}.
+\tag{G.1.7a.1}
+$$
+The empirical model is
+$$
+p=(p_C)_{C\in\mathcal M}.
+$$
+It is noncontextual on the protocol cover when there exists a probability vector $q\in\Delta(\Omega)$ such that
+$$
+\partial q=p.
+\tag{G.1.7a.2}
+$$
+The PPI quasiprobability class is
+$$
+\mathsf Q_{\mathrm{PPI}}(p)
+:=
+\{q\in\mathbb R^\Omega:\partial q=p,\ \sum_{\omega\in\Omega}q(\omega)=1\},
+\tag{G.1.7a.3}
+$$
+with elements identified when they induce the same protocol-response natural transformation. The contextual holonomy or PCE magic cost is
+$$
+\mathcal M_{\mathrm{PCE}}(p)
+:=
+\inf_{q\in\mathsf Q_{\mathrm{PPI}}(p)}
+\log\lVert q\rVert_1,
+\qquad
+\lVert q\rVert_1=\sum_{\omega\in\Omega}|q(\omega)|.
+\tag{G.1.7a.4}
+$$
+If $\mathsf Q_{\mathrm{PPI}}(p)=\varnothing$, set $\mathcal M_{\mathrm{PCE}}(p)=+\infty$.
+
+**Theorem G.1.7a.2 (Contextual Holonomy-Magic Equivalence).** For every finite no-disturbance protocol cover with nonempty $\mathsf Q_{\mathrm{PPI}}(p)$:
+
+1. $\mathcal M_{\mathrm{PCE}}(p)\ge0$.
+
+2. $\mathcal M_{\mathrm{PCE}}(p)=0$ if and only if $p$ is noncontextual on the protocol cover.
+
+3. If $T$ is a free protocol processing whose action on global assignments is a stochastic linear map and whose contextual marginals obey
+$$
+\partial_T Tq=T_C\partial q,
+\tag{G.1.7a.5}
+$$
+then
+$$
+\mathcal M_{\mathrm{PCE}}(T_Cp)
+\le
+\mathcal M_{\mathrm{PCE}}(p).
+\tag{G.1.7a.6}
+$$
+
+4. The noncontextuality used in Theorem G.1.7 is a statement about single sharp-event weights being independent of the containing measurement partition. The cost (G.1.7a.4) is a different object: it measures whether the full finite family of incompatible contexts has a positive global section. Hence positive protocol-level contextual holonomy does not contradict Born-rule noncontextuality.
+
+*Proof.* For every $q\in\mathsf Q_{\mathrm{PPI}}(p)$,
+$$
+1
+=
+\left|\sum_{\omega\in\Omega}q(\omega)\right|
+\le
+\sum_{\omega\in\Omega}|q(\omega)|
+=
+\lVert q\rVert_1.
+$$
+Thus $\log\lVert q\rVert_1\ge0$, and taking the infimum proves item 1.
+
+If $p$ is noncontextual, there exists $q\in\Delta(\Omega)$ with $\partial q=p$. For this $q$,
+$$
+\lVert q\rVert_1=\sum_\omega q(\omega)=1,
+$$
+so $\mathcal M_{\mathrm{PCE}}(p)=0$.
+
+Conversely suppose $\mathcal M_{\mathrm{PCE}}(p)=0$. Then there is a sequence $q_n\in\mathsf Q_{\mathrm{PPI}}(p)$ with $\lVert q_n\rVert_1\to1$. Since $\sum_\omega q_n(\omega)=1$, the sequence is bounded in the finite-dimensional vector space $\mathbb R^\Omega$. Passing to a subsequence gives $q_n\to q$. The constraints defining $\mathsf Q_{\mathrm{PPI}}(p)$ are closed, so $q\in\mathsf Q_{\mathrm{PPI}}(p)$. Lower semicontinuity and the limit of the norms give $\lVert q\rVert_1=1$. A real vector with total sum $1$ and $\ell^1$ norm $1$ has no negative component; otherwise the $\ell^1$ norm would exceed the total sum. Hence $q\in\Delta(\Omega)$ and $\partial q=p$. Thus $p$ is noncontextual.
+
+For item 3, let $q\in\mathsf Q_{\mathrm{PPI}}(p)$. By (G.1.7a.5), $Tq\in\mathsf Q_{\mathrm{PPI}}(T_Cp)$. Since $T$ is stochastic,
+$$
+\lVert Tq\rVert_1\le\lVert q\rVert_1.
+$$
+Taking logarithms and then the infimum over $q$ gives (G.1.7a.6).
+
+Item 4 follows from the definitions. Theorem G.1.7 assigns weights to sharp events and requires that $f(P)$ not depend on which orthogonal partition contains $P$. Definition G.1.7a.1 instead asks whether a finite family of mutually incompatible contexts admits one positive global assignment whose marginals reproduce all context distributions. These are different consistency levels. Therefore positive $\mathcal M_{\mathrm{PCE}}$ is a protocol-cover obstruction, not a failure of the Born frame functional. ∎
+
+**Corollary G.1.7a.3 (Stabilizer Baseline and Paid Non-Clifford Resource).** Any protocol family whose PPI quasiprobability class contains a nonnegative global representative has zero PCE magic cost and is compressible to a noncontextual response ledger. Any protocol requiring $\mathcal M_{\mathrm{PCE}}>0$ has irreducible signed/quasiprobability overhead. PCE selects the representative attaining the infimum in (G.1.7a.4) whenever the finite class is compact.
+
+*Proof.* The zero-cost claim is Theorem G.1.7a.2. If $\mathcal M_{\mathrm{PCE}}>0$, no nonnegative global representative exists, so every PPI-equivalent quasiprobability representation has $\lVert q\rVert_1>1$ and therefore carries signed overhead. In finite dimension, a closed PPI class with bounded $\ell^1$ norm is compact, and the continuous function $q\mapsto\log\lVert q\rVert_1$ attains its minimum. Since all representatives have the same operational responses, PCE removes all higher-cost representatives and retains the minimum-cost ledger. ∎
+
 **G.1.8 Hilbert-Space Uniqueness under POP + PCE**
 
 The existence of a well-behaved cost functional satisfying the premises of Theorem G.1.3 not only leads to the Born rule but also provides a justification for the emergence of the Hilbert space structure itself as the unique optimal framework for predictive processing under POP/PCE.
@@ -1866,6 +1958,57 @@ This equals the Lagrangian gauge-capacity bound of Theorem G.8.2e and the gauge 
 **Corollary G.8.4h.3 (No Exact Operational Global Symmetry).** Let $\eta$ be an exact symmetry label on the selected interface branch. If $\eta$ has no nontrivial action on any object of $\mathsf C_{\mathrm{int}}$ and no nontrivial action on any admissible local interface channel, then $\eta$ is operationally trivial and is quotiented out by PCE. If $\eta$ acts nontrivially on an admissible local interface channel, then it is represented by a tensor automorphism of $F_{\mathrm{int}}$ and hence lies in the reconstructed gauge group or in a finite stabilizer already present in the marked Golay-Leech data.
 
 *Proof.* Because $F_{\mathrm{int}}$ is faithful, two tensor natural transformations that agree on all objects and all morphisms of $\mathsf C_{\mathrm{int}}$ are equal. If $\eta$ acts trivially on every object and every admissible local interface channel, then it produces identical operational probabilities for every MPU-accessible protocol. By Definition X.9.1 such descriptions are MPU-equivalent, and by Proposition X.9.3 they are PCE-degenerate; the surplus label has positive description cost and zero predictive benefit, so PCE removes it. If $\eta$ acts nontrivially on a local interface channel, faithfulness represents that action as a nontrivial tensor automorphism of the functor, so by Theorem G.8.4h.2 it belongs to $S(U(3)\times U(2))$ on the connected gauge branch. If the action is discrete and preserves the marked Golay-Leech carrier rather than the connected interface functor, it is a stabilizer of the marked finite code/lattice data and is not an exact continuous global symmetry. ∎
+
+### G.8.4i Predictive Defect Fusion Category
+
+**Definition G.8.4i.1 (PCE-Admissible Predictive Defect).** Let $\mathsf R_{\mathrm{PU}}$ be the finite PPI quotient category whose objects are admissible local interface protocol sectors and whose morphisms are response-preserving finite CPTP interface maps, with two morphisms identified when they induce the same natural transformation of the protocol-response presheaf. A predictive defect is an exact finite endofunctor
+$$
+D:\mathsf R_{\mathrm{PU}}\to\mathsf R_{\mathrm{PU}}
+$$
+equipped with coherent tensor-composition maps for stacked protocols and preserving PCE-zero equivalence classes.
+
+A finite set of predictive defects is PCE-admissible when it is closed under stacking, finite direct sums, dual defects, subobjects, and idempotent splitting after PPI quotient. The resulting idempotent-complete finite semisimple $C^*$-tensor category is denoted
+$$
+\mathsf{Def}_{\mathrm{PU}}.
+$$
+Its tensor product is physical stacking of interfaces. Its tensor unit is the transparent interface. Its invertible objects form
+$$
+\operatorname{Pic}(\mathsf{Def}_{\mathrm{PU}}).
+$$
+
+A defect is response-null when its action on every object of $\mathsf R_{\mathrm{PU}}$ induces the identity natural transformation of the protocol-response presheaf.
+
+**Theorem G.8.4i.2 (Fusion-Category Completion and Operational Symmetry Boundary).** On the selected finite interface branch:
+
+1. $\mathsf{Def}_{\mathrm{PU}}$ is a unitary fusion category.
+
+2. The ordinary exact operational symmetries are precisely the invertible defect classes that act nontrivially on local interface responses. Their connected unitary fiber action is the group reconstructed in Theorem G.8.4h.2:
+$$
+S(U(3)\times U(2)).
+\tag{G.8.4i.1}
+$$
+Any additional invertible discrete action must preserve the marked Golay-Leech carrier and is a finite stabilizer datum, not an independent continuous global symmetry.
+
+3. A non-invertible defect is physically retained only when it induces a non-identity natural transformation of the protocol-response presheaf. Response-null defects are PCE-degenerate and are identified with the transparent interface.
+
+4. Let $\omega_{\mathsf{Def}}$ be the Cech cocycle formed by the local associator and module-action mismatches of the defect action on a finite protocol cover. Then
+$$
+[\omega_{\mathsf{Def}}]=0
+\tag{G.8.4i.2}
+$$
+if and only if the protocol-response presheaf is a module category over $\mathsf{Def}_{\mathrm{PU}}$ after PPI descent. A nonzero class is exactly a finite predictive obstruction in the sense of Theorem X.9.5b.
+
+*Proof.* By Definition G.8.4i.1, $\mathsf{Def}_{\mathrm{PU}}$ is finite semisimple, idempotent-complete, $C^*$-linear, rigid, and monoidal, with simple transparent tensor unit after quotienting response-null refinements. This is precisely the finite unitary fusion-category condition, proving item 1.
+
+Let $D\in\operatorname{Pic}(\mathsf{Def}_{\mathrm{PU}})$. Then there exists $D^{-1}$ with
+$$
+D\otimes D^{-1}\cong 1\cong D^{-1}\otimes D.
+$$
+Thus $D$ acts by a tensor autoequivalence on the finite interface response category. Restricting to the connected interface tensor category $\mathsf C_{\mathrm{int}}$ and to the forgetful fiber functor $F_{\mathrm{int}}$, the nontrivial unitary fiber part is a tensor natural automorphism of $F_{\mathrm{int}}$. Theorem G.8.4h.2 identifies this connected group with $S(U(3)\times U(2))$. If the invertible action does not lie in that connected fiber group but preserves the marked finite Golay-Leech carrier, Corollary G.8.4h.3 classifies it as a finite stabilizer datum rather than an exact continuous global symmetry. This proves item 2.
+
+If a defect is response-null, then every admissible local protocol has the same outcome law before and after inserting the defect. The operational Yoneda reconstruction theorem identifies physical structure by the natural family of all protocol responses; therefore a response-null defect is PPI-identical to the transparent interface. Since retaining it adds interface description cost with zero predictive benefit, PCE removes it. Conversely, if the induced natural transformation is not the identity, at least one protocol response differs, so the defect is not operationally null. This proves item 3.
+
+For item 4, choose local defect actions on a finite protocol cover. On double and triple overlaps the comparison maps are central unitaries in the finite response category. The pentagon identity for the associator implies that the product of these overlap mismatches on every quadruple overlap is trivial, so the mismatches form a Cech cocycle $\omega_{\mathsf{Def}}$. If this cocycle is a coboundary, local rephasings of the defect action remove the mismatch and produce a globally coherent module-category action. If a global module-category action exists, its local restrictions have associators satisfying the pentagon exactly, so the mismatch cocycle is a coboundary. Thus (G.8.4i.2) is equivalent to module descent. Theorem X.9.5b identifies precisely such finite-cover gluing failures with the PU predictive obstruction class, so a nonzero $[\omega_{\mathsf{Def}}]$ is the defect-fusion representative of that obstruction. ∎
 
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 

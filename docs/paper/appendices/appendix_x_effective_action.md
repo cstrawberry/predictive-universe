@@ -736,6 +736,170 @@ $$
 
 *Proof.* Items 1 and 2 are direct applications of Theorem X.8d to transformations included in the redundancy groupoid $\mathcal R$. Item 3 is the bulk-boundary-interface part of the theorem. Item 4 follows because $B+L$ is not part of the gauge quotient defining the Standard Model branch; its anomalous Ward identity changes a physical global charge through topological gauge history rather than changing the value of the predictive functional under an identified gauge frame. ∎
 
+**Definition X.8d.2 (Bordism-Valued PU Anomaly Class).** Let $\mathsf B$ be a regular $d$-dimensional effective-action branch whose declared predictive redundancies are represented by a tangential and internal structure
+$$
+G_{\mathrm{PU}}(\mathsf B)\to O(d).
+$$
+This structure includes the spin or pin data used by the branch, the gauge quotient, any finite stabilizer data retained by PPI, and any boundary or interface labels that are declared part of the redundancy descent problem. Let
+$$
+\Omega_{d+1}^{G_{\mathrm{PU}}(\mathsf B)}
+$$
+be the corresponding $(d+1)$-dimensional bordism group of closed test manifolds with $G_{\mathrm{PU}}(\mathsf B)$ structure. A bordism anomaly character is a homomorphism
+$$
+\alpha_{\mathsf B}:
+\Omega_{d+1}^{G_{\mathrm{PU}}(\mathsf B)}
+\to
+U(1).
+\tag{X.8d.1}
+$$
+When the branch is split into bulk, boundary, and interface pieces, write
+$$
+\alpha_{\mathsf B}^{\mathrm{tot}}
+=
+\alpha_{\mathsf B}^{\mathrm{bulk}}
++
+\alpha_{\mathsf B}^{\partial}
++
+\alpha_{\mathsf B}^{\mathrm{int}},
+\tag{X.8d.2}
+$$
+where addition denotes multiplication of $U(1)$ phases after identifying characters additively.
+
+The free or Chern-Weil shadow of $\alpha_{\mathsf B}$ is the image detected by local anomaly polynomials and the Cech cocycle of Definition X.8d.0. The torsion part is the part detected by finite-order bordism classes and is invisible to ordinary local anomaly polynomials.
+
+**Theorem X.8d.3 (Bordism-PCE Global Anomaly Gate).** On a regular branch admitting the bordism anomaly character of Definition X.8d.2:
+
+1. If a transformation is declared to be a predictive redundancy, then physical descent requires
+$$
+\alpha_{\mathsf B}^{\mathrm{tot}}=0
+\quad
+\text{in }
+\operatorname{Hom}
+\left(
+\Omega_{d+1}^{G_{\mathrm{PU}}(\mathsf B)},U(1)
+\right).
+\tag{X.8d.3}
+$$
+
+2. If $\alpha_{\mathsf B}^{\mathrm{tot}}\ne0$, then there exists a closed $G_{\mathrm{PU}}(\mathsf B)$ test manifold $M^{d+1}$ for which
+$$
+\alpha_{\mathsf B}^{\mathrm{tot}}([M])\ne1.
+\tag{X.8d.4}
+$$
+The branch cannot treat the corresponding transformation as a redundancy at finite PCE cost.
+
+3. If the local Cech anomaly class of Definition X.8d.0 vanishes and the full bordism character satisfies (X.8d.3), then the branch passes both the perturbative and global anomaly gates. Any remaining variation under a transformation not included in the redundancy groupoid is a physical update channel, as in Corollary X.8d.1.
+
+4. Theorem X.8d is recovered as the local/free shadow of this statement. The torsion component of $\alpha_{\mathsf B}$ supplies the additional global-anomaly audit not seen by $H^1(\mathcal R,\mathscr F/2\pi\mathbb Z)$ alone.
+
+*Proof.* A redundancy is an identification of predictive descriptions. If a closed $G_{\mathrm{PU}}(\mathsf B)$ test history $M^{d+1}$ has nontrivial anomaly phase $\alpha_{\mathsf B}^{\mathrm{tot}}([M])\ne1$, then two histories identified by the declared redundancy assign different phases to the same physical quotient datum. This is exactly the failure mode ruled out by MPU-equivalence and by the descent criterion in Theorem X.8d. Thus descent requires (X.8d.3), proving item 1.
+
+If $\alpha_{\mathsf B}^{\mathrm{tot}}\ne0$ as a homomorphism, then by definition of nonzero character there is an element $[M]\in\Omega_{d+1}^{G_{\mathrm{PU}}(\mathsf B)}$ with nontrivial value. Evaluating the branch on that closed test manifold gives (X.8d.4). Since no local observer-independent quotient can assign both phase values to one identified physical history, the declared redundancy is inadmissible at finite PCE cost. This proves item 2.
+
+For item 3, vanishing of the local Cech anomaly class supplies the counterterm descent of Theorem X.8d on the free/local part. Vanishing of the bordism character removes every remaining closed-manifold global obstruction, including torsion obstructions. Hence the redundancy passes the anomaly audit. If the transformation is not part of the redundancy groupoid, no quotient identification is being imposed, so a nonzero Ward variation is a physical update channel, exactly as in Theorem X.8d and Corollary X.8d.1.
+
+For item 4, the local anomaly polynomial and the Cech cocycle are obtained by restricting the invertible anomaly character to infinitesimal families and to the free/Chern-Weil component of the bordism group. This projection forgets finite torsion classes. Therefore Theorem X.8d is the free/local shadow, while Definition X.8d.2 and this theorem retain the torsion/global part as well. ∎
+
+**Corollary X.8d.4 (Finite-Stabilizer Torsion Audit).** Any finite stabilizer, Golay-Leech, Conway, Monster, flavor, or family label that is promoted from branch-internal data to a declared redundancy must pass the bordism gate
+$$
+\alpha_{\mathsf B}^{\mathrm{tot}}=0.
+$$
+If the label has no operational action it is removed by PCE as in Corollary G.8.4h.3. If it has operational action but carries a nontrivial torsion anomaly not canceled by an admissible boundary or interface sector, it cannot be a redundancy of the physical quotient.
+
+*Proof.* Finite groups and finite stabilizer data can carry torsion bordism characters even when the local anomaly polynomial vanishes. If the label is operationally null, Corollary G.8.4h.3 removes it. If it is operationally active and declared to identify descriptions, Theorem X.8d.3 applies. A nonzero torsion character gives a closed test manifold with nontrivial phase and blocks redundancy descent unless the boundary or interface character cancels it. ∎
+
+**Definition X.8d.5 (Retained Global Response Symmetry Under PCE Compression).** Let
+$$
+\mathcal C_{\Lambda\to\mu}:\mathsf B_{\Lambda}\to\mathsf B_{\mu}
+$$
+be a regular PCE/RG compression between predictive branches, with $\mu<\Lambda$. Let $\mathcal S$ be a symmetry datum that is not included in the redundancy groupoid of Theorem X.8d. The datum $\mathcal S$ is retained by the compression when there exists a background-field protocol family $\mathcal P_{\mathcal S}$ such that:
+
+1. $\mathcal S$ acts on the protocol-response presheaf of $\mathsf B_{\Lambda}$;
+
+2. the compressed branch $\mathsf B_{\mu}$ still has a nontrivial response to the corresponding background fields;
+
+3. the action is not PCE-null under Definition X.9.1 and Proposition X.9.3.
+
+For a retained $\mathcal S$, write
+$$
+[\mathcal A_{\Lambda}(\mathcal S)]
+$$
+for its UV anomaly class and
+$$
+[\mathcal A_{\mu}(\mathcal S)]
+$$
+for the total IR anomaly class after including all retained Goldstone, topological, boundary, interface, and defect-response sectors.
+
+**Theorem X.8d.6 (PCE Anomaly Matching for Retained Global Response Symmetries).** Let $\mathcal C_{\Lambda\to\mu}$ be a regular PCE/RG compression that preserves the predictive generating functional up to local counterterms and PPI-equivalence on all background-field protocols for a retained global response symmetry $\mathcal S$. Then
+$$
+[\mathcal A_{\Lambda}(\mathcal S)]
+=
+[\mathcal A_{\mu}(\mathcal S)]
+\tag{X.8d.5}
+$$
+in the anomaly group appropriate to the branch, including the bordism-valued refinement when Definition X.8d.2 is available.
+
+Equivalently, PCE compression may remove redundant states and response-null labels, but it cannot erase the anomaly of a symmetry that remains operationally retained.
+
+*Proof.* Couple the UV branch to nondynamical background fields $B$ for $\mathcal S$. Under a background symmetry transformation $g$, the UV generating functional changes by
+$$
+Z_{\Lambda}[B^g]
+=
+e^{i\mathcal A_{\Lambda}(g,B)}
+Z_{\Lambda}[B].
+\tag{X.8d.6}
+$$
+Regular PCE/RG compression preserves the generating functional up to a local counterterm $C_{\Lambda\to\mu}[B]$ and PPI-equivalence:
+$$
+Z_{\Lambda}[B]
+=
+e^{iC_{\Lambda\to\mu}[B]}
+Z_{\mu}[B]
+$$
+on all retained background-field protocols. Applying this identity to $B^g$ and comparing with (X.8d.6) gives
+$$
+e^{i\mathcal A_{\Lambda}(g,B)}
+=
+e^{i(C_{\Lambda\to\mu}[B^g]-C_{\Lambda\to\mu}[B])}
+e^{i\mathcal A_{\mu}(g,B)}.
+\tag{X.8d.7}
+$$
+The counterterm difference is a local coboundary. Hence the cohomology or bordism class of the anomaly is unchanged:
+$$
+[\mathcal A_{\Lambda}(\mathcal S)]
+=
+[\mathcal A_{\mu}(\mathcal S)].
+$$
+If the equality failed, there would be a background-field protocol distinguishing the UV and compressed branches by their symmetry variation. That contradicts PPI-equivalence for a retained symmetry. ∎
+
+**Corollary X.8d.7 (No Trivial Symmetric IR for a Nonzero Retained Anomaly).** Suppose $\mathcal S$ is retained and
+$$
+[\mathcal A_{\Lambda}(\mathcal S)]\ne0.
+$$
+Then the IR branch cannot be simultaneously:
+
+1. fully gapped;
+
+2. symmetry-preserving for $\mathcal S$;
+
+3. short-range entangled and topologically trivial;
+
+4. free of boundary, interface, Goldstone, or defect sectors carrying the matching anomaly.
+
+*Proof.* A fully gapped, symmetry-preserving, short-range-entangled, topologically trivial IR branch with no boundary, Goldstone, interface, topological, or defect sector has
+$$
+[\mathcal A_{\mu}(\mathcal S)]=0.
+$$
+Theorem X.8d.6 would then force
+$$
+[\mathcal A_{\Lambda}(\mathcal S)]=0,
+$$
+contradicting the hypothesis. ∎
+
+**Corollary X.8d.8 (Global-Current Channels Under Flow).** The electroweak $B+L$ update channel of Appendix Y, any retained family/flavor global response symmetry, and any operationally active finite stabilizer symmetry must obey anomaly matching under PCE/RG compression. If the label is instead response-null at the compressed scale, PCE may remove the label, and the matching question is no longer posed for that IR branch.
+
+*Proof.* Corollary X.8d.1 distinguishes global-current anomalies from redundancy anomalies: a global-current anomaly may be a physical update channel rather than a descent failure. If such a channel remains operationally retained, Theorem X.8d.6 applies. If it becomes response-null, Definition X.8d.5 is not satisfied, and Proposition X.9.3 removes the label as PCE-degenerate. ∎
+
 **Theorem X.8e (Gauge Coupling Running as Shadow-Price Flow).** On a regular constrained PCE branch with background-field effective action
 $$
 \Gamma_k^{\mathrm{gauge}}
@@ -1042,6 +1206,58 @@ $$
 $$
 Thus the set is closed under nonnegative linear combinations. ∎
 
+**Open Target X.8h.5 (Predictive Positive Geometry).** On a finite gapped regular branch, define the truncated predictive response region
+$$
+\mathcal P_{\mathrm{PU}}^{(N)}
+$$
+as the semialgebraic region cut out by:
+
+1. the Hankel positivity conditions of Theorem X.8h.2 for coefficients through order $N$;
+
+2. the finite PCE min-cut inequalities of Appendix E.8;
+
+3. the finite Golay-matroid circuit and cocircuit constraints of Theorem R.4.2.9b when the marked $M=24$ carrier is active;
+
+4. the protocol-factorization equalities required by the local algebra split on admissible boundary cuts.
+
+A positive-geometry completion of $\mathcal P_{\mathrm{PU}}^{(N)}$ would be a pair
+$$
+(\mathcal P_{\mathrm{PU}}^{(N)},\Omega_{\mathrm{PU}}^{(N)})
+\tag{X.8h.5.1}
+$$
+such that $\Omega_{\mathrm{PU}}^{(N)}$ is a logarithmic canonical form whose residues on PCE factorization facets satisfy
+$$
+\operatorname{Res}_{F_C}\Omega_{\mathrm{PU}}^{(N)}
+=
+\Omega_L^{(N_L)}\wedge\Omega_R^{(N_R)}
+\tag{X.8h.5.2}
+$$
+for every admissible predictive min-cut facet $F_C$.
+
+This is an open target, not a theorem. No scattering amplitude is identified with a canonical form unless existence, uniqueness, logarithmic boundary behavior, and the residue law (X.8h.5.2) are proved for the relevant branch. Until then, $\mathcal P_{\mathrm{PU}}^{(N)}$ is only the finite positive response region already certified by Theorem X.8h.2 and the cited finite cut/matroid constraints.
+
+**Open Target X.8h.6 (Predictive Bootstrap Compression).** On a branch satisfying both the Hadamard-PCE state gate of Theorem K.10.4b and the separate exact-scale conformal hypotheses required for an OPE description, define local operator-product data by the PCE-minimal compression
+$$
+O_i(x)O_j(0)
+\sim
+\sum_k C_{ij}^{k}(x)O_k(0)
+\tag{X.8h.6.1}
+$$
+inside admissible local response functions. The target is to prove that, on such a branch, OPE associativity is exactly path-independence of local predictive compression:
+$$
+(O_iO_j)O_k
+=
+O_i(O_jO_k)
+\quad
+\Longleftrightarrow
+\quad
+\text{crossing equality of compressed protocol responses}.
+\tag{X.8h.6.2}
+$$
+No conformal-bootstrap selection theorem is asserted here. The target is inactive unless the exact-scale conformal branch and the Hadamard-PCE admissibility gate are both satisfied. In particular, this item does not override the PCE-Attractor statements excluding an exact pure-coordinate dilatation tangent on the generic branch.
+
+### X.8i Predictive Cosmic Galois Filtration
+
 ### X.8i Predictive Cosmic Galois Filtration
 
 **Definition X.8i.1 (Finite Update-Cost Graph Hopf Algebra).** Let $\mathcal H_{\mathrm{CK}}^{(L)}$ be the finite Connes-Kreimer Hopf algebra spanned by superficially divergent Feynman graphs up to loop order $L$, with coproduct
@@ -1165,6 +1381,40 @@ The left side is precisely the change in the boundary ledger recorded between th
 **Corollary X.8j.3 (Gauge-First Soft Theorem Reading).** In gauge sectors, the soft insertion is the flux ledger $F_f$, and the soft Ward identity is the conservation of the boundary predictive ledger. In the emergent metric sector, the same formula describes the asymptotic ledger of the thermodynamic metric branch; it does not introduce a fundamental graviton degree of freedom.
 
 *Proof.* Gauge soft charges are boundary charges generated by long-range gauge transformations, so they are instances of $Q_f$. Their flux insertion is $F_f$, and Theorem X.8j.2 gives the Ward identity. The emergent metric branch has boundary channel and horizon ledger variables rather than fundamental metric quanta; applying the same finite conservation identity to those variables gives the stated asymptotic-memory reading without changing the ontology. ∎
+
+### X.8j.4 Predictive Infrared Admissibility Gate
+
+**Definition X.8j.4a (Unresolved Soft-Ledger Equivalence).** Fix detector resolution $\lambda>0$ in a massless long-range gauge sector or in the emergent thermodynamic metric ledger sector of Corollary X.8j.3. Two finite scattering records $r,r'$ are unresolved-soft equivalent at resolution $\lambda$, written
+$$
+r\sim_\lambda r',
+\tag{X.8j.5}
+$$
+when they have the same hard record above $\lambda$, the same total conserved boundary ledger charges, and differ only by ledger refinements supported on boundary or flux cells whose individual energies are below $\lambda$. An observable $\mathcal O$ is soft-ledger invariant at resolution $\lambda$ when
+$$
+r\sim_\lambda r'
+\quad\Longrightarrow\quad
+\mathcal O(r)=\mathcal O(r').
+\tag{X.8j.6}
+$$
+
+**Theorem X.8j.4b (Necessary Infrared PPI Gate).** A scattering quantity is PPI-observable at detector resolution $\lambda$ only if it is soft-ledger invariant at that resolution. Equivalently, the quantity must descend to the quotient of records by $\sim_\lambda$:
+$$
+\mathcal O
+=
+\widetilde{\mathcal O}\circ q_\lambda,
+\qquad
+q_\lambda:r\mapsto[r]_{\sim_\lambda}.
+\tag{X.8j.7}
+$$
+If a compatible family $\{\mathcal O_\lambda\}_{\lambda>0}$ has finite renormalized infrared PCE cost as $\lambda\to0$, then its quotient representatives must remain compatible under refinement of the unresolved-soft quotient.
+
+*Proof.* PPI-observability at resolution $\lambda$ means that the quantity is a function of operationally distinguished records at that resolution. By Definition X.8j.4a, records in the same $\sim_\lambda$ class differ only by refinements below the detector resolution while preserving hard data and total conserved ledger charges. No admissible protocol at that resolution distinguishes those refinements. If $\mathcal O(r)\ne\mathcal O(r')$ for some $r\sim_\lambda r'$, then $\mathcal O$ assigns two values to one operational record class and is not a well-defined PPI observable. Hence $\mathcal O$ must be constant on every $\sim_\lambda$ class, which is exactly the factorization (X.8j.7). If the family failed compatibility under $\lambda\to0$ refinement, the same operational record would acquire resolution-dependent values, producing nonzero predictive disagreement at arbitrarily fine unresolved-soft refinement and hence no finite renormalized PCE representative. ∎
+
+**Corollary X.8j.4c (Inclusive and Dressed Sufficient Conditions).** On a regular massless-gauge branch where the standard hypotheses of KLN cancellation hold, sufficiently inclusive cross sections that sum over all degenerate unresolved soft real and virtual sectors satisfy the infrared PPI gate. On a branch where Faddeev-Kulish dressed asymptotic charged states exist, matrix elements between those dressed states also satisfy the gate. These are sufficient constructions of soft-ledger-invariant observables; they are not additional gauge postulates.
+
+*Proof.* KLN inclusiveness identifies all records differing only by degenerate unresolved soft refinements and sums over that equivalence class, so the resulting cross section is a function of $[r]_{\sim_\lambda}$. Faddeev-Kulish dressing incorporates the coherent soft cloud fixed by the asymptotic charge and hard momentum data into the definition of the asymptotic state, so changing an unresolved representative inside the same soft-ledger class does not change the dressed matrix element. In both cases the observable factors through $q_\lambda$, and Theorem X.8j.4b applies. ∎
+
+**Open Target X.8j.4d (PU-Internal KLN Derivation).** The PU-internal target is to derive KLN-style cancellation directly from the finite boundary ledger identity (X.8j.2), PCE quotienting by unresolved-soft refinements, and the finite action-entropy ledger, rather than importing cancellation as a massless-gauge branch theorem.
 
 ### X.8k Predictive Calderón-Schur Boundary Reconstruction
 
@@ -1562,6 +1812,45 @@ $$
 
 *Proof.* Theorem X.9.5b identifies each listed mismatch as a cohomology class in the same finite-cost Cech complex or its relative version. Total consistency means the combined class is exact, equivalently zero in cohomology. ∎
 
+### X.9.5d Higher-Form Predictive Ledger
+
+**Definition X.9.5d.1 (Higher-Form Ledger Complex).** Let $\mathcal U$ be a finite operational cover whose nerve carries oriented cellular chains $C_q(\mathcal U;\mathbb Z)$. A $q$-dimensional protocol operator is a finite assignment
+$$
+\Gamma_q=\sum_a n_a\sigma_a,
+\qquad
+\sigma_a\in C_q(\mathcal U;\mathbb Z),
+\tag{X.9.5d.1}
+$$
+together with a response functional supported on the corresponding $q$-cells. Let $\mathcal F_{\varepsilon}^{(q)}$ be the abelian sheaf of finite-cost ledger phases acting on such $q$-dimensional protocol operators. The $q$-form predictive ledger group is
+$$
+H^{q+1}_{\mathrm{PU}}(\mathcal U,\mathcal F_{\varepsilon}^{(q)})
+=
+\ker\bigl(\delta:C^{q+1}\to C^{q+2}\bigr)/
+\operatorname{im}\bigl(\delta:C^q\to C^{q+1}\bigr).
+\tag{X.9.5d.2}
+$$
+A class is boundary-active when its pairing with at least one admissible boundary or interface $q$-protocol changes the protocol-response presheaf.
+
+**Theorem X.9.5d.2 (Higher-Form Ledger Nullity and Descent).** For every finite cover and every $q\ge0$:
+
+1. $H^{q+1}_{\mathrm{PU}}(\mathcal U,\mathcal F_{\varepsilon}^{(q)})$ is well-defined.
+
+2. A declared exact $q$-form label whose class has no action on any admissible local, boundary, or interface $q$-dimensional protocol operator is PCE-null and is quotiented out.
+
+3. A gauged, boundary-active, or interface-active $q$-form ledger class is retained exactly when its obstruction class satisfies the same exactness condition as Theorem X.9.5b on the relevant absolute or relative complex.
+
+4. For $q=0$, this reduces to the ordinary no-exact-operational-global-symmetry rule of Corollary G.8.4h.3 and the obstruction-exactness classification of Theorem X.9.5b.
+
+*Proof.* Item 1 follows because the coboundary $\delta$ is the Cech coboundary of (X.9.5.1) with coefficients in the sheaf $\mathcal F_{\varepsilon}^{(q)}$, so the same cancellation proof gives $\delta^2=0$.
+
+For item 2, if the label acts on no admissible $q$-dimensional protocol operator, then inserting or removing it leaves every protocol-response distribution unchanged. By Definition X.9.1 such descriptions are MPU-equivalent. Since the label has positive description cost and zero predictive benefit, Proposition X.9.3 and Corollary G.8.4h.3 remove it by PCE.
+
+For item 3, a gauged or boundary-active class changes at least one admissible protocol response or supplies required boundary gluing data. It therefore cannot be removed as operationally null. Its consistency is exactly the question whether its local ledger representatives glue across the cover or are compensated by a relative boundary term. Theorem X.9.5b proves that this condition is exactness of the corresponding absolute or relative cohomology class.
+
+For item 4, when $q=0$, the protocol operators are local operators and the ledger class is an ordinary symmetry, anomaly, or boundary-transition class. The statement is then precisely Corollary G.8.4h.3 together with Theorem X.9.5b. ∎
+
+**Open Target X.9.5d.3 (Confinement as a Center One-Form Ledger Phase).** On the rootless flux-tube branch of Proposition Z.8d, the structural target is to prove that the Wilson-loop area law is equivalent to an unbroken electric center one-form predictive ledger acting nontrivially on line protocols, and that screening or deconfinement corresponds to explicitly ending, gauging, or breaking that one-form ledger on dynamical charged matter. Proposition Z.8d remains the branch input for the area law until this equivalence is derived from PU primitives.
+
 ### X.9.6 Master Predictive Operator
 
 **Definition X.9.6a (Closed Predictive Dirichlet Datum).** A closed predictive Dirichlet datum is a quadruple
@@ -1649,3 +1938,74 @@ $$
 **Corollary X.9.6c (No Redundant Flow Postulate).** On the closed finite-mode branch of Theorem X.9.6b, response, RG, measurement-perspective transport, and slow adaptation are not separate structures. They are different compressions or functional-calculus images of $\mathfrak L_{\mathrm{PU}}$.
 
 *Proof.* Each listed operator is one of (X.9.6.2)–(X.9.6.5), hence is obtained from the same self-adjoint operator by projection, sign convention, or functional calculus. ∎
+
+**Corollary X.9.6d (Predictive Resonance Spectrum).** Let $\mathcal L_{\mathrm{PCE}}$ be the finite active ND-RID/PCE transfer generator obtained from the appropriate Markov or response compression of $\mathfrak L_{\mathrm{PU}}$ in Theorem X.9.6b, with faithful stationary PCE/KMS state $\rho_*$. Define the predictive resonance set by the poles of the finite resolvent
+$$
+R_{\mathrm{PCE}}(z)
+=
+(z-\mathcal L_{\mathrm{PCE}})^{-1}.
+\tag{X.9.6.6}
+$$
+Then:
+
+1. $0\in\operatorname{Res}_{\mathrm{PU}}$ and its eigenspace is the stationary ledger sector. If the active quotient is primitive, this eigenspace is one-dimensional and represented by $\rho_*$.
+
+2. Every nonzero resonance $\lambda$ satisfies
+$$
+\operatorname{Re}\lambda<0
+\tag{X.9.6.7}
+$$
+on the primitive dissipative quotient.
+
+3. For centered observables $A,B$ in the finite active algebra, the connected response correlation has the finite resonance expansion
+$$
+C_{AB}(t)
+=
+\langle A,e^{t\mathcal L_{\mathrm{PCE}}}B\rangle_{\rho_*,c}
+=
+\sum_{\lambda\in\operatorname{Res}_{\mathrm{PU}}}
+e^{\lambda t}
+P_{\lambda}^{AB}(t),
+\tag{X.9.6.8}
+$$
+where each $P_{\lambda}^{AB}$ is a polynomial whose degree is one less than the largest Jordan block at $\lambda$. On a detailed-balance normal branch, the polynomials are constants.
+
+4. The spectral gap
+$$
+\gamma_{\mathrm{PCE}}
+:=
+-\max_{\lambda\ne0}\operatorname{Re}\lambda
+\tag{X.9.6.9}
+$$
+is the finite predictive mixing rate. For every $0<\eta<\gamma_{\mathrm{PCE}}$ there is a finite constant $K_{AB,\eta}$ such that
+$$
+|C_{AB}(t)|\le K_{AB,\eta}e^{-(\gamma_{\mathrm{PCE}}-\eta)t}.
+\tag{X.9.6.10}
+$$
+
+5. Under the predictive Hodge decomposition of update currents, exact conserved harmonic ledger modes are precisely the protected zero-resonance modes before quotienting. Near-harmonic finite-lifetime modes appear as resonances with small negative real part.
+
+6. Any transport pole, linear-response pole, memory lifetime, or finite OTOC linearization expressible as a Laplace transform of an active MPU correlation has poles contained in $\operatorname{Res}_{\mathrm{PU}}$.
+
+*Proof.* In finite dimension the resolvent $(z-\mathcal L_{\mathrm{PCE}})^{-1}$ is meromorphic, and its poles are exactly the eigenvalues of $\mathcal L_{\mathrm{PCE}}$, with pole order equal to Jordan-block size. Since $\rho_*$ is stationary,
+$$
+\mathcal L_{\mathrm{PCE}}^*(\rho_*)=0,
+$$
+so $0$ is a resonance. If the active quotient is primitive, Theorem G.1.9.1 gives uniqueness of the stationary state on that quotient, so the zero eigenspace is one-dimensional.
+
+Contractivity of the ND-RID/PCE semigroup on the primitive quotient implies that no nonzero eigenvalue can have nonnegative real part. Otherwise $e^{t\mathcal L_{\mathrm{PCE}}}$ would contain either a nondecaying oscillatory mode or a growing mode in the quotient, contradicting strict convergence to $\rho_*$. Hence (X.9.6.7) holds.
+
+The Jordan decomposition of the finite matrix $\mathcal L_{\mathrm{PCE}}$ gives
+$$
+e^{t\mathcal L_{\mathrm{PCE}}}
+=
+\sum_{\lambda}
+e^{\lambda t}
+\sum_{r=0}^{m_\lambda-1}
+\frac{t^r}{r!}N_{\lambda}^{r}P_\lambda,
+$$
+where $P_\lambda$ is the spectral projection and $N_\lambda$ is the nilpotent part on the generalized eigenspace. Pairing this identity with centered observables $A,B$ gives (X.9.6.8). If the generator is normal in the KMS/GNS inner product, then every Jordan block is size one and the polynomials are constants.
+
+The decay bound follows from (X.9.6.8): the largest nonzero real part is $-\gamma_{\mathrm{PCE}}$, and every polynomial factor is bounded by a constant times $e^{\eta t}$ for any fixed $\eta>0$. This proves (X.9.6.10).
+
+The predictive Hodge theorem identifies harmonic ledger modes with closed and co-closed update currents not removed by exact or coexact compression. Such modes are conserved by the transfer generator, hence lie in $\ker\mathcal L_{\mathrm{PCE}}$. Conversely, a zero mode of the update-current generator that is not exact or coexact is harmonic in the Hodge quotient. Perturbing a protected harmonic mode by a finite dissipative leakage shifts the corresponding eigenvalue into the left half-plane with small negative real part. Finally, Laplace transforms of finite sums of the form (X.9.6.8) have poles only at the same resonances, proving item 6. ∎

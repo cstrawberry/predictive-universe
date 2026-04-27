@@ -717,15 +717,20 @@ $$
 =
 253:77:21:5:1.
 $$
-6. Repeat after interface-basis changes and across hardware platforms to distinguish a fixed Golay-frame signal from device-specific correlations.
+6. In a controlled decoder-boundary subtest, inject or isolate weight-4 tetrads $T$ and group them by the Golay syndrome quotient
+$$
+\sigma(1_T)=1_T+\mathcal G_{24}.
+$$
+The predicted first non-correctable shell consists of $1771$ syndrome classes, each containing exactly six tetrads.
+7. Repeat after interface-basis changes and across hardware platforms to distinguish a fixed Golay-frame signal from device-specific correlations.
 
 *PU Prediction on the substrate-aligned residual branch:* The observed octad excess obeys
 $$
 \mathcal R_8=1+968\eta_8,
 $$
-with $\eta_8>0$ when a substrate octad component is present. The conditional octad incidence statistics obey the exact $S(5,8,24)$ ratios.
+with $\eta_8>0$ when a substrate octad component is present. The conditional octad incidence statistics obey the exact $S(5,8,24)$ ratios. The controlled weight-4 decoder-boundary subtest obeys the sextet law of Corollary Z.13b.5: $1771$ syndrome classes, six tetrads per class.
 
-*Null Hypothesis:* After conditioning on weight and subtracting device-local noise, residual weight-8 patterns are exchangeable or hardware-specific rather than Golay-octad-supported; therefore $\mathcal R_8\approx1$ and the $253:77:21:5:1$ incidence sequence is absent.
+*Null Hypothesis:* After conditioning on weight and subtracting device-local noise, residual weight-8 patterns are exchangeable or hardware-specific rather than Golay-octad-supported; therefore $\mathcal R_8\approx1$ and the $253:77:21:5:1$ incidence sequence is absent. Under a generic rate-$\tfrac12$ code or unmarked hardware frame, weight-4 syndrome fibers need not form $M_{24}$-transitive six-tetrad sextets.
 
 **Feasibility Assessment:** Protocol 4 is implementable with current quantum computing technology. High-connectivity platforms (trapped ions, neutral atoms, superconducting circuits with all-to-all connectivity) can implement 24-qubit logical blocks. The main experimental challenges are:
 
@@ -757,7 +762,12 @@ $$
 =
 253:77:21:5:1.
 $$
-The exact substrate component has no native nonzero shell below weight 8.
+The exact substrate component has no native nonzero shell below weight 8. Separately, controlled weight-4 decoder-boundary probes satisfy the sextet law
+$$
+|\sigma^{-1}(\sigma(1_T))\cap\mathcal T_4|=6,
+\qquad
+|\sigma(\mathcal T_4)|=1771.
+$$
 
 **Falsification Criteria:**
 
@@ -770,7 +780,8 @@ The substrate alignment hypothesis (Corollary 54.1) is falsified if:
 5. On an independently substrate-aligned 24-mode interface with a closed device-noise budget, the residual weight-8 spectrum remains exchangeable with $\mathcal R_8=1$ within uncertainty
 6. The residual weight-8 spectrum shows a stable structured excess not supported on the 759 Golay octads
 7. Octad-conditioned residual events fail the Steiner incidence sequence $253:77:21:5:1$
-8. A stable $M_{24}$-invariant native residual shell appears at weight $1\le w\le7$
+8. Controlled weight-4 decoder-boundary probes fail the $1771$-class, six-tetrad sextet law
+9. A stable $M_{24}$-invariant native residual shell appears at weight $1\le w\le7$
 
 ### 13.9.9 Implications for Quantum Computing Engineering
 
@@ -951,15 +962,20 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Gauge group $G_{\mathrm{SM}}$ (conditional on Proposition G.M1, Eq. (G.8.5), and the SM-type anomaly/hypercharge data of Theorem G.8.4b) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ◐ conditional regime theorem |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ◐ hierarchy invariant; absolute normalization separate |
 | Chronometric curvature phase/dephasing | $\hbar|\dot\Theta|/|\Delta E|=|\Delta\Phi|/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/|\Delta E|=|\Delta\Phi|/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
-| Golay noise spectroscopy | $\mathcal R_8=1+968\eta_8$ with $\eta_8>0$ on the aligned residual branch; incidence $253:77:21:5:1$ | dedicated 24-mode residual-noise test required | Theorem Z.13b.3; Protocol 4.4 | ◐ branch prediction; ○ untested |
+| Golay noise spectroscopy | $\mathcal R_8=1+968\eta_8$ with $\eta_8>0$ on the aligned residual branch; incidence $253:77:21:5:1$; controlled weight-4 fibers form $1771$ six-tetrad sextets | dedicated 24-mode residual-noise and decoder-boundary tests required | Theorem Z.13b.3; Corollary Z.13b.5; Protocol 4.4 | ◐ branch prediction; ○ untested |
 | Cosmological acceleration lock | $g_0=c^2\sqrt{\Lambda}/8$; $\Sigma_\dagger=c^2\sqrt{\Lambda}/(16\pi G)$ | $g_0\sim1.2\times10^{-10}\,\mathrm{m/s^2}$; surface-density tests pending | Cor H.1, Cor H.1a, Cor I.3a | ◐ bridge-law branch; ○ redshift/lensing tests pending |
 | Primordial complexity product | $A_s r=A_Qe^{-22}/(4\pi^2)$; leading $A_Q=1$ gives $7.07\times10^{-12}$ | tensor measurement pending | Corollary U.65a; Section 13.10.6 | ◐ branch prediction; ○ untested |
 | A2 neutrino cosmology closure | $\Sigma_\nu=58.2\,\mathrm{meV}$, $m_\beta=8.85\,\mathrm{meV}$ | future cosmology/beta endpoint tests | Cor T.24.16a | ◐ neutrino branch; ○ untested |
 | Proper-acceleration entropy drag | $\mathcal Q_a=q_{\mathrm{act}}$ | dedicated acceleration calorimetry required | Cor N.12b | ◐ proper-acceleration branch; ○ untested |
+| Predictive record-current TUR | $\operatorname{Var}(J_T)\Sigma_T/\langle J_T\rangle^2\ge2$ on every Blackwell-PCE classical record quotient | stochastic record-current and entropy-production tests | Thm D.8.7f; Cor D.8.7g | ✓ finite record theorem; ○ protocol-specific tests |
 | Scalar-channel hyperon spin filter | short-range $\Lambda\bar\Lambda$ nonzero; long-range, same-sign, spin-zero controls vanish | collider correlation tests | Cor Z.8k.1a | ◐ scalar-channel branch |
 
 
-All displayed rows are currently consistent with observation at their stated status level. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row.
+All displayed rows are currently consistent with observation at their stated status level. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row. For the predictive record-current TUR row, the relevant falsifier is a closed finite record quotient with measured stationary current, variance, and entropy production satisfying
+$$
+\frac{\operatorname{Var}(J_T)}{\langle J_T\rangle^2}\Sigma_T<2
+$$
+after the Blackwell-PCE record channel and entropy-production ledger have been fixed.
 
 ---
 

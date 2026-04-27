@@ -71,6 +71,83 @@ In interference observables, only the phase $e^{i\mathcal{S}[\phi]/\hbar} = e^{i
 
 This identity connects the mechanical description of physics (action in J·s) to the information-theoretic description (entropy in nats), with ℏ serving as the conversion factor. In quantum amplitudes $e^{i\mathcal{S}[\phi]/\hbar}$, only the phase modulo $2\pi$ is observable, giving physical significance to the holonomy structure developed in Theorem Q.0.4.
 
+**Definition Q.0.1a (Predictive Large-Deviation Branch).** A predictive large-deviation branch is a family of finite ND-RID/PCE stochastic dynamics
+$$
+X^\eta_t,
+\qquad
+\eta>0,
+$$
+on a compact retained state space, with small effective noise parameter $\eta$, satisfying a good path-space large-deviation principle: for every admissible path set $\mathcal A$,
+$$
+-\inf_{\gamma\in\mathcal A^\circ} I_{\mathrm{PU}}[\gamma]
+\le
+\liminf_{\eta\downarrow0}
+\eta\log\mathbb P_\eta(X^\eta_{[0,T]}\in\mathcal A)
+\le
+\limsup_{\eta\downarrow0}
+\eta\log\mathbb P_\eta(X^\eta_{[0,T]}\in\mathcal A)
+\le
+-\inf_{\gamma\in\overline{\mathcal A}} I_{\mathrm{PU}}[\gamma].
+\tag{Q.0.1a.1}
+$$
+The rate functional has local form
+$$
+I_{\mathrm{PU}}[\gamma]
+=
+\int_0^T
+L_{\mathrm{PU}}(\gamma(t),\dot\gamma(t))\,dt
+\tag{Q.0.1a.2}
+$$
+for absolutely continuous retained paths and is $+\infty$ otherwise. The physical action of the same retained path is
+$$
+\mathcal S_{\mathrm{PU}}[\gamma]
+=
+\hbar I_{\mathrm{PU}}[\gamma].
+\tag{Q.0.1a.3}
+$$
+
+**Theorem Q.0.1b (Predictive Large-Deviation Variational Principle).** On a predictive large-deviation branch, the dominant rare transition from a closed retained basin $A$ to a closed retained basin $B$ over the time window $[0,T]$ is governed by the quasipotential
+$$
+\mathcal I_{A\to B}
+=
+\inf_{\gamma(0)\in A,\ \gamma(T)\in B}
+I_{\mathrm{PU}}[\gamma].
+\tag{Q.0.1b.1}
+$$
+For every regular transition tube $\mathcal T_{A\to B}$ whose interior and closure have the same infimum,
+$$
+\lim_{\eta\downarrow0}
+\eta\log
+\mathbb P_\eta(X^\eta_{[0,T]}\in\mathcal T_{A\to B})
+=
+-\mathcal I_{A\to B}.
+\tag{Q.0.1b.2}
+$$
+Equivalently, the physical suppression exponent is
+$$
+\frac{\mathcal S_{A\to B}^{\min}}{\hbar}
+=
+\mathcal I_{A\to B}.
+\tag{Q.0.1b.3}
+$$
+Thus vacuum decay bounces, sphaleron transitions, metastability escape paths, rare perspective transitions, and finite phase-transition nucleation paths are the same variational object whenever the corresponding branch has been reduced to a retained finite ND-RID/PCE large-deviation dynamics.
+
+*Proof.* Equation (Q.0.1a.1) is the large-deviation principle for the path family. Apply it to the transition tube $\mathcal T_{A\to B}$. The assumed regularity of the tube gives
+$$
+\inf_{\gamma\in\mathcal T_{A\to B}^\circ} I_{\mathrm{PU}}[\gamma]
+=
+\inf_{\gamma\in\overline{\mathcal T}_{A\to B}} I_{\mathrm{PU}}[\gamma]
+=
+\mathcal I_{A\to B}.
+$$
+The lower and upper bounds in (Q.0.1a.1) therefore coincide and give (Q.0.1b.2).
+
+The minimizing exponent (Q.0.1b.1) is the variational statement that the least-cost retained path dominates the rare event at exponential order. Equation (Q.0.1b.3) follows from the Action-Entropy Identity, since Definition Q.0.1a identifies the dimensionless rate functional with the retained action in units of $\hbar$. The listed physical processes differ only in the retained coordinates, boundary conditions, and basins $A,B$; the variational calculation is the same. ∎
+
+**Corollary Q.0.1c (Instanton Ledger Consolidation).** Any branch exponent already expressed in PU as a stationary or minimizing action is an instance of Theorem Q.0.1b once its retained finite dynamics satisfies Definition Q.0.1a. In particular, the Coleman-type vacuum-decay exponent of Appendix U and the electroweak sphaleron/update exponent of Appendix Y are projections of the same action-entropy large-deviation ledger on their respective retained branches.
+
+*Proof.* Appendix U and Appendix Y express their suppression exponents as finite action or action-derived complexity costs on specified retained branches. If the branch dynamics satisfies the path-space large-deviation hypothesis of Definition Q.0.1a, Theorem Q.0.1b says that the exponential suppression is the infimum of the same dimensionless action over paths with the corresponding boundary conditions. Hence those exponents are branch projections of the common variational ledger. ∎
+
 ### Q.0.4 Planck's Constant as Exchange Rate
 
 The Action-Entropy Identity reveals that $\hbar$ serves as a conversion factor between two descriptions of the same physical process: the information-theoretic description (counting SPAP entropy in nats) and the mechanical description (measuring action in J·s). 

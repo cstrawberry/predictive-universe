@@ -673,4 +673,59 @@
 *   Zhu, Y. (1996). Modular invariance of characters of vertex operator algebras. *Journal of the American Mathematical Society*, *9*, 237–302.
 *   Zurek, W. H. (1989). Thermodynamic cost of computation, algorithmic complexity and the information metric. *Nature*, *341*(6238), 119–124.
 *   Zurek, W. H. (1991). Decoherence and the transition from quantum to classical. *Physics Today*, *44*(10), 36–44.
+*   Abramsky, S., & Brandenburger, A. (2011). The sheaf-theoretic structure of non-locality and contextuality. *New Journal of Physics*, *13*, 113036. DOI: 10.1088/1367-2630/13/11/113036
+*   Almheiri, A., Engelhardt, N., Marolf, D., & Maxfield, H. (2019). The entropy of bulk quantum fields and the entanglement wedge of an evaporating black hole. *Journal of High Energy Physics*, *2019*(12), 063. DOI: 10.1007/JHEP12(2019)063
+*   Araki, H., & Yanase, M. M. (1960). Measurement of quantum mechanical operators. *Physical Review*, *120*, 622–626. DOI: 10.1103/PhysRev.120.622
+*   Arkani-Hamed, N., Bai, Y., & Lam, T. (2017). Positive geometries and canonical forms. *Journal of High Energy Physics*, *2017*(11), 039. DOI: 10.1007/JHEP11(2017)039
+*   Barato, A. C., & Seifert, U. (2015). Thermodynamic uncertainty relation for biomolecular processes. *Physical Review Letters*, *114*, 158101. DOI: 10.1103/PhysRevLett.114.158101
+*   Bhardwaj, L., Bottini, L. E., Schäfer-Nameki, S., & Tiwari, A. (2023). Non-invertible higher-categorical symmetries. *SciPost Physics*, *14*, 007. DOI: 10.21468/SciPostPhys.14.1.007
+*   Bousso, R., Fisher, Z., Koeller, J., Leichenauer, S., & Wall, A. C. (2016). Proof of the quantum null energy condition. *Physical Review D*, *93*, 024017. DOI: 10.1103/PhysRevD.93.024017
+*   Brandão, F. G. S. L., Piani, M., & Horodecki, P. (2015). Generic emergence of classical features in quantum Darwinism. *Nature Communications*, *6*, 7908. DOI: 10.1038/ncomms8908
+*   Brunetti, R., Fredenhagen, K., & Köhler, M. (1996). The microlocal spectrum condition and Wick polynomials of free fields on curved spacetimes. *Communications in Mathematical Physics*, *180*, 633–652. DOI: 10.1007/BF02099626
+*   Buchholz, D., & Wichmann, E. H. (1986). Causal independence and the energy-level density of states in local quantum field theory. *Communications in Mathematical Physics*, *106*, 321–344. DOI: 10.1007/BF01210929
+*   Chiribella, G., D'Ariano, G. M., Perinotti, P., & Valiron, B. (2013). Quantum computations without definite causal structure. *Physical Review A*, *88*, 022318. DOI: 10.1103/PhysRevA.88.022318
+*   Connes, A. (1973). Une classification des facteurs de type III. *Annales scientifiques de l'École Normale Supérieure*, *6*(2), 133–252.
+*   Costello, K., & Gwilliam, O. (2017). *Factorization Algebras in Quantum Field Theory, Volume 1*. Cambridge University Press.
+*   Costello, K., & Gwilliam, O. (2021). *Factorization Algebras in Quantum Field Theory, Volume 2*. Cambridge University Press.
+*   Erbar, M., & Maas, J. (2012). Ricci curvature of finite Markov chains via convexity of the entropy. *Archive for Rational Mechanics and Analysis*, *206*, 997–1038. DOI: 10.1007/s00205-012-0554-z
+*   Faddeev, L. D., & Kulish, P. P. (1970). Asymptotic conditions and infrared divergences in quantum electrodynamics. *Theoretical and Mathematical Physics*, *4*, 745–757. DOI: 10.1007/BF01066485
+*   Fawzi, O., & Renner, R. (2015). Quantum conditional mutual information and approximate Markov chains. *Communications in Mathematical Physics*, *340*, 575–611. DOI: 10.1007/s00220-015-2466-x
+*   Freed, D. S. (2014). Anomalies and invertible field theories. *Proceedings of Symposia in Pure Mathematics*, *88*, 25–45. arXiv:1404.7224
+*   Freed, D. S., & Hopkins, M. J. (2021). Reflection positivity and invertible topological phases. *Geometry & Topology*, *25*(3), 1165–1330. DOI: 10.2140/gt.2021.25.1165
+*   Gaiotto, D., Kapustin, A., Seiberg, N., & Willett, B. (2015). Generalized global symmetries. *Journal of High Energy Physics*, *2015*(2), 172. DOI: 10.1007/JHEP02(2015)172
+*   Giacomini, F., Castro-Ruiz, E., & Brukner, Č. (2019). Quantum mechanics and the covariance of physical laws in quantum reference frames. *Nature Communications*, *10*, 494. DOI: 10.1038/s41467-018-08155-0
+*   Gingrich, T. R., Horowitz, J. M., Perunov, N., & England, J. L. (2016). Dissipation bounds all steady-state current fluctuations. *Physical Review Letters*, *116*, 120601. DOI: 10.1103/PhysRevLett.116.120601
+*   Ginsparg, P. H., & Wilson, K. G. (1982). A remnant of chiral symmetry on the lattice. *Physical Review D*, *25*, 2649–2657. DOI: 10.1103/PhysRevD.25.2649
+*   Hastings, M. B. (2004). Lieb-Schultz-Mattis in higher dimensions. *Physical Review B*, *69*, 104431. DOI: 10.1103/PhysRevB.69.104431
+*   Hollands, S., & Wald, R. M. (2015). Quantum field theory in curved spacetime. *Physics Reports*, *574*, 1–35. DOI: 10.1016/j.physrep.2015.02.001
+*   Horodecki, R., Korbicz, J. K., & Horodecki, P. (2015). Quantum origins of objectivity. *Physical Review A*, *91*, 032122. DOI: 10.1103/PhysRevA.91.032122
+*   Howard, M., & Campbell, E. (2017). Application of a resource theory for magic states to fault-tolerant quantum computing. *Physical Review Letters*, *118*, 090501. DOI: 10.1103/PhysRevLett.118.090501
+*   Jones, V. F. R. (1983). Index for subfactors. *Inventiones Mathematicae*, *72*, 1–25. DOI: 10.1007/BF01389127
+*   Källén, G. (1952). On the definition of the renormalization constants in quantum electrodynamics. *Helvetica Physica Acta*, *25*, 417–434.
+*   Kinoshita, T. (1962). Mass singularities of Feynman amplitudes. *Journal of Mathematical Physics*, *3*, 650–677. DOI: 10.1063/1.1724268
+*   Lee, T. D., & Nauenberg, M. (1964). Degenerate systems and mass singularities. *Physical Review*, *133*, B1549–B1562. DOI: 10.1103/PhysRev.133.B1549
+*   Lehmann, H. (1954). Über Eigenschaften von Ausbreitungsfunktionen und Renormierungskonstanten quantisierter Felder. *Il Nuovo Cimento*, *11*, 342–357. DOI: 10.1007/BF02783624
+*   Lieb, E. H., Schultz, T. D., & Mattis, D. C. (1961). Two soluble models of an antiferromagnetic chain. *Annals of Physics*, *16*, 407–466. DOI: 10.1016/0003-4916(61)90115-4
+*   Lüscher, M. (1998). Exact chiral symmetry on the lattice and the Ginsparg-Wilson relation. *Physics Letters B*, *428*, 342–345. DOI: 10.1016/S0370-2693(98)00423-7
+*   Maas, J. (2011). Gradient flows of the entropy for finite Markov chains. *Journal of Functional Analysis*, *261*(8), 2250–2292. DOI: 10.1016/j.jfa.2011.06.009
+*   Maldacena, J., Shenker, S. H., & Stanford, D. (2016). A bound on chaos. *Journal of High Energy Physics*, *2016*(8), 106. DOI: 10.1007/JHEP08(2016)106
+*   Marvian, I., & Spekkens, R. W. (2014). Extending Noether's theorem by quantifying the asymmetry of quantum states. *Nature Communications*, *5*, 3821. DOI: 10.1038/ncomms4821
+*   Mielke, A. (2013). Geodesic convexity of the relative entropy in reversible Markov chains. *Calculus of Variations and Partial Differential Equations*, *48*, 1–31. DOI: 10.1007/s00526-012-0538-8
+*   Neuberger, H. (1998). Exactly massless quarks on the lattice. *Physics Letters B*, *417*, 141–144. DOI: 10.1016/S0370-2693(97)01368-3
+*   Nielsen, H. B., & Ninomiya, M. (1981). Absence of neutrinos on a lattice: I. Proof by homotopy theory. *Nuclear Physics B*, *185*, 20–40. DOI: 10.1016/0550-3213(81)90361-8
+*   Okada, M., & Tachikawa, Y. (2024). Noninvertible symmetries act locally by quantum operations. *Physical Review Letters*, *133*, 191602. DOI: 10.1103/PhysRevLett.133.191602
+*   Oreshkov, O., Costa, F., & Brukner, Č. (2012). Quantum correlations with no causal order. *Nature Communications*, *3*, 1092. DOI: 10.1038/ncomms2076
+*   Oshikawa, M. (2000). Commensurability, excitation gap, and topology in quantum many-particle systems on a periodic lattice. *Physical Review Letters*, *84*, 1535–1538. DOI: 10.1103/PhysRevLett.84.1535
+*   Penington, G. (2020). Entanglement wedge reconstruction and the information paradox. *Journal of High Energy Physics*, *2020*(9), 002. DOI: 10.1007/JHEP09(2020)002
+*   Pesenson, I. Z. (2000). A sampling theorem on compact manifolds. *Transactions of the American Mathematical Society*, *352*(9), 4257–4269. DOI: 10.1090/S0002-9947-00-02568-4
+*   Pimsner, M., & Popa, S. (1986). Entropy and index for subfactors. *Annales scientifiques de l'École Normale Supérieure*, *19*(1), 57–106. DOI: 10.24033/asens.1504
+*   Pollicott, M. (1985). On the rate of mixing of Axiom A flows. *Inventiones Mathematicae*, *81*, 413–426. DOI: 10.1007/BF01388583
+*   Radzikowski, M. J. (1996). Micro-local approach to the Hadamard condition in quantum field theory on curved space-time. *Communications in Mathematical Physics*, *179*, 529–553. DOI: 10.1007/BF02100096
+*   Rattazzi, R., Rychkov, V. S., Tonni, E., & Vichi, A. (2008). Bounding scalar operator dimensions in 4D CFT. *Journal of High Energy Physics*, *2008*(12), 031. DOI: 10.1088/1126-6708/2008/12/031
+*   Ruelle, D. (1986). Resonances of chaotic dynamical systems. *Physical Review Letters*, *56*, 405–407. DOI: 10.1103/PhysRevLett.56.405
+*   't Hooft, G. (1980). Naturalness, chiral symmetry, and spontaneous chiral symmetry breaking. In G. 't Hooft et al. (Eds.), *Recent Developments in Gauge Theories* (pp. 135–157). Springer.
+*   Veitch, V., Ferrie, C., Gross, D., & Emerson, J. (2012). Negative quasi-probability as a resource for quantum computation. *New Journal of Physics*, *14*, 113011. DOI: 10.1088/1367-2630/14/11/113011
+*   Watatani, Y. (1990). *Index for $C^*$-Subalgebras*. Memoirs of the American Mathematical Society, Vol. 83, No. 424. American Mathematical Society.
+*   Wigner, E. P. (1952). Die Messung quantenmechanischer Operatoren. *Zeitschrift für Physik*, *133*, 101–108. DOI: 10.1007/BF01324904
+*   Yonekura, K. (2019). On the cobordism classification of symmetry protected topological phases. *Communications in Mathematical Physics*, *368*, 1121–1173. DOI: 10.1007/s00220-019-03439-y
 *   Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. *Reviews of Modern Physics*, *75*(3), 715–775. DOI: 10.1103/RevModPhys.75.715

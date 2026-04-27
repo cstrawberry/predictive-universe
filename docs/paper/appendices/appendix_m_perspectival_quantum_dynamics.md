@@ -1016,6 +1016,132 @@ on the outcome sector $k$, with the endpoint weights fixed by perspective descen
 | Theorem M.10.8 | Predictability from above; finite-family screening; replay distinction | Thm M.10.5, M.10.3 |
 | Theorem M.10.9 | Irreducibility | Structural comparison |
 | Theorem M.10.10 | Entropic perspective transport | Compactness, strict convexity, Born descent |
+| Theorem M.6.10a.2 | Finite frame-change cost and covariance defect | Relative entropy, data processing, Pinsker bound |
+
+### M.6.10a Finite Perspective-Frame Backreaction
+
+**Definition M.6.10a.1 (Finite Perspective-Frame Channel).** Let $s,s'\in\Sigma$ be two perspectives and let $\mathfrak A_{\mathrm{sh}}$ be the finite shared active protocol algebra on which both perspectives assign faithful density matrices
+$$
+\rho_s,\rho_{s'}>0.
+$$
+A finite perspective-frame channel from $s$ to $s'$ is an ND-RID-compatible CPTP channel on states over $\mathfrak A_{\mathrm{sh}}$ whose induced shared-protocol endpoint is $\rho_{s'}$ when initialized at $\rho_s$.
+
+The irreducible frame-change distinguishability is
+$$
+\mathcal C_{\mathrm{QRF}}(s\to s')
+:=
+D(\rho_s\Vert\rho_{s'})
+=
+\operatorname{Tr}\rho_s(\log\rho_s-\log\rho_{s'}).
+\tag{M.6.10a.1}
+$$
+If the support condition fails, set $\mathcal C_{\mathrm{QRF}}(s\to s')=\infty$.
+
+A finite frame-change ledger is a self-adjoint cost observable $L_{s\to s'}$ on the active support satisfying
+$$
+L_{s\to s'}
+\ge
+\log\rho_s-\log\rho_{s'}
+\tag{M.6.10a.2}
+$$
+in operator order. Its dimensionless action cost is
+$$
+\mathcal L_{s\to s'}
+:=
+\operatorname{Tr}\rho_s L_{s\to s'}.
+\tag{M.6.10a.3}
+$$
+
+**Theorem M.6.10a.2 (Quantum Reference-Frame Cost and Covariance Defect).** For every finite perspective-frame pair of Definition M.6.10a.1:
+
+1. $\mathcal C_{\mathrm{QRF}}(s\to s')\ge0$, with equality if and only if $\rho_s=\rho_{s'}$.
+
+2. For every CPTP coarse-graining $\Lambda$ of the shared protocol algebra,
+$$
+D(\Lambda\rho_s\Vert\Lambda\rho_{s'})
+\le
+D(\rho_s\Vert\rho_{s'}).
+\tag{M.6.10a.4}
+$$
+
+3. For every bounded shared observable $A\in\mathfrak A_{\mathrm{sh}}$,
+$$
+\left|
+\operatorname{Tr}A(\rho_s-\rho_{s'})
+\right|
+\le
+\lVert A\rVert_\infty
+\sqrt{2\mathcal C_{\mathrm{QRF}}(s\to s')}.
+\tag{M.6.10a.5}
+$$
+
+4. Every finite ledger implementation has the decomposition
+$$
+\mathcal L_{s\to s'}
+=
+\mathcal C_{\mathrm{QRF}}(s\to s')
++
+\xi_{\mathrm{PCE}}(s\to s'),
+\qquad
+\xi_{\mathrm{PCE}}(s\to s')\ge0.
+\tag{M.6.10a.6}
+$$
+The physical action cost is therefore
+$$
+\mathcal S_{s\to s'}^{\mathrm{phys}}
+=
+\hbar\,\mathcal L_{s\to s'}.
+\tag{M.6.10a.7}
+$$
+The ideal covariance limit is the zero-defect branch $\mathcal C_{\mathrm{QRF}}=0$ or a limiting branch in which the operationally tested observables have vanishing defect under (M.6.10a.5).
+
+*Proof.* Item 1 is Klein's inequality for quantum relative entropy on a finite-dimensional faithful support, with equality exactly when the two density matrices agree.
+
+Item 2 is the data-processing inequality for quantum relative entropy under CPTP maps.
+
+For item 3, trace duality gives
+$$
+\left|
+\operatorname{Tr}A(\rho_s-\rho_{s'})
+\right|
+\le
+\lVert A\rVert_\infty
+\lVert\rho_s-\rho_{s'}\rVert_1.
+$$
+Pinsker's inequality gives
+$$
+\lVert\rho_s-\rho_{s'}\rVert_1
+\le
+\sqrt{2D(\rho_s\Vert\rho_{s'})}.
+$$
+Combining these inequalities gives (M.6.10a.5).
+
+For item 4, (M.6.10a.2) implies
+$$
+\operatorname{Tr}\rho_s L_{s\to s'}
+\ge
+\operatorname{Tr}\rho_s(\log\rho_s-\log\rho_{s'})
+=
+D(\rho_s\Vert\rho_{s'}).
+$$
+Define
+$$
+\xi_{\mathrm{PCE}}(s\to s')
+:=
+\operatorname{Tr}\rho_s
+\left(
+L_{s\to s'}-(\log\rho_s-\log\rho_{s'})
+\right).
+$$
+The operator inequality (M.6.10a.2) makes $\xi_{\mathrm{PCE}}\ge0$, proving (M.6.10a.6). Equation (M.6.10a.7) is the Action-Entropy Identity of Theorem Q.0.1 applied to the dimensionless finite update ledger $\mathcal L_{s\to s'}$. The final statement follows immediately from (M.6.10a.5). ∎
+
+**Corollary M.6.10a.3 (Perfect Perspective Covariance as a PCE Limit).** A finite perspective transformation is exactly covariance-invisible on the shared active algebra if and only if
+$$
+\rho_s=\rho_{s'}.
+$$
+Otherwise every implementation has nonzero distinguishability cost on at least one separating shared observable, bounded below by the protocol family that separates $\rho_s$ from $\rho_{s'}$.
+
+*Proof.* If $\rho_s=\rho_{s'}$, then every shared expectation value is identical and $\mathcal C_{\mathrm{QRF}}=0$ by Theorem M.6.10a.2. Conversely, if every shared observable has identical expectation value, finite-dimensional state separation implies $\rho_s=\rho_{s'}$. If the states differ, there exists a bounded observable separating them. Theorem M.6.10a.2 then gives positive relative entropy and a nonzero ledger cost for any finite implementation. ∎
 
 ### M.6.11 Blackwell-PCE Classicality
 
@@ -1082,6 +1208,103 @@ For (5), any strict refinement of $\mathcal M_{\min}$ that preserves the same ri
 **Corollary M.6.11c (Pointer Classicality Without Extra Ontology).** In a finite measurement context, the classical pointer record is the PCE-minimal sufficient statistic of the interaction channel. Its commutativity follows from minimal record status, not from adding a separate classical substance.
 
 *Proof.* Apply Theorem M.6.11b to the finite record alphabet produced by the measurement interaction. The selected quotient output algebra is $\ell^\infty(R/{\sim})$, hence commutative. ∎
+
+**Definition M.6.11d (PPI-Objective Fragment Family).** Let $S$ be a finite system with PCE-minimal classical record alphabet $X$ selected by Theorem M.6.11b, and let $E_1,\dots,E_N$ be disjoint finite environmental fragments. A state on
+$$
+S E_1\cdots E_N
+$$
+is exactly PPI-objective for $X$ when:
+
+1. the system record algebra is
+$$
+\ell^\infty(X)
+$$
+with minimal central projectors $\{|x\rangle\langle x|\}_{x\in X}$;
+
+2. for every fragment $E_i$ there exists a POVM $\{M_i^x\}_{x\in X}$ such that
+$$
+\operatorname{Tr}(M_i^x\rho_{E_i}^{x'})=\delta_{xx'}
+\tag{M.6.11.6}
+$$
+for all $x,x'$;
+
+3. conditioned on $X=x$, the fragments are independent:
+$$
+\rho_{E_1\cdots E_N}^{x}
+=
+\rho_{E_1}^{x}\otimes\cdots\otimes\rho_{E_N}^{x};
+\tag{M.6.11.7}
+$$
+
+4. no strict refinement $X'\to X$ satisfies items 1–3 with the same exterior predictive risks at lower or equal PCE cost.
+
+The associated spectrum-broadcast form is
+$$
+\rho_{SE_1\cdots E_N}
+=
+\sum_{x\in X}
+p_x
+|x\rangle\langle x|_S
+\otimes
+\rho_{E_1}^{x}\otimes\cdots\otimes\rho_{E_N}^{x},
+\tag{M.6.11.8}
+$$
+with fragment distinguishability
+$$
+\rho_{E_i}^{x}\rho_{E_i}^{x'}=0
+\qquad
+(x\ne x').
+\tag{M.6.11.9}
+$$
+
+**Theorem M.6.11e (Spectrum-Broadcast PPI Objectivity).** For a finite fragment family, a record $X$ is exactly PPI-objective in the sense of Definition M.6.11d if and only if, after PCE compression of record refinements, the joint state has the spectrum-broadcast form (M.6.11.8)–(M.6.11.9).
+
+Thus the layered structure is:
+
+1. Theorem G.1.7 fixes Born probabilities for a perspective.
+
+2. Theorem M.6.11b selects the PCE-minimal classical record for one measurement context.
+
+3. Theorem M.6.11e characterizes when that record becomes public across many disjoint perspectives.
+
+*Proof.* Suppose first that the state has the spectrum-broadcast form. The system algebra generated by the projectors $|x\rangle\langle x|$ is $\ell^\infty(X)$. For each fragment $E_i$, condition (M.6.11.9) implies that the supports
+$$
+\operatorname{supp}\rho_{E_i}^{x}
+$$
+are pairwise orthogonal. Let $M_i^x$ be the support projection of $\rho_{E_i}^{x}$. Then
+$$
+\operatorname{Tr}(M_i^x\rho_{E_i}^{x'})=\delta_{xx'},
+$$
+so every fragment recovers $x$ exactly. Conditioned on $x$, the fragment state is the tensor product in (M.6.11.8), proving independence. PCE compression removes any strict refinement that does not change predictive risks by Theorem M.6.11b. Hence the record is PPI-objective.
+
+Conversely, suppose the record is PPI-objective. Since the system record algebra is $\ell^\infty(X)$, the PCE-compressed state is classical on the selected central record:
+$$
+\rho_{SE_1\cdots E_N}
+=
+\sum_{x\in X}
+p_x
+|x\rangle\langle x|_S
+\otimes
+\rho_{E_1\cdots E_N}^{x}.
+\tag{M.6.11.10}
+$$
+Item 3 of Definition M.6.11d gives the conditional product decomposition (M.6.11.7), so (M.6.11.10) becomes (M.6.11.8).
+
+It remains to prove orthogonality. Fix a fragment $E_i$. Perfect recovery means that there is a POVM $\{M_i^x\}$ satisfying (M.6.11.6). For $x\ne x'$,
+$$
+\operatorname{Tr}(M_i^x\rho_{E_i}^{x'})=0.
+$$
+Since $M_i^x\ge0$ and $\rho_{E_i}^{x'}\ge0$, this implies $M_i^x\rho_{E_i}^{x'}=0$ on the support of $\rho_{E_i}^{x'}$. Also
+$$
+\operatorname{Tr}(M_i^x\rho_{E_i}^{x})=1.
+$$
+Because $0\le M_i^x\le1$, this forces $M_i^x$ to act as the identity on $\operatorname{supp}\rho_{E_i}^{x}$. Therefore the support of $\rho_{E_i}^{x}$ is orthogonal to the support of $\rho_{E_i}^{x'}$ for $x\ne x'$, which is equivalent to (M.6.11.9). This proves the spectrum-broadcast form.
+
+The three-layer statement is only a restatement of the roles of Theorem G.1.7, Theorem M.6.11b, and the present theorem. ∎
+
+**Corollary M.6.11f (Objectivity Without Perspective-Independent Ontology).** A classical fact shared by many perspectives is a PCE-minimal broadcast record. It is objective because many disjoint fragments independently recover the same minimal statistic $X$, not because the framework adds a perspective-free state of affairs.
+
+*Proof.* Theorem M.6.11e says that exact public objectivity is equivalent to redundant fragment recovery with conditional independence in the spectrum-broadcast form. The record $X$ is selected by PCE minimality through Theorem M.6.11b. Hence objectivity is redundancy plus minimal sufficient record structure. ∎
 
 ### M.6.12 PCE Information-Bottleneck Universality
 
@@ -1151,6 +1374,87 @@ If equality holds, $Z$ contains no information about $X$ beyond $Z_*$ except on 
 **Corollary M.6.12c (Effective Variables as PCE Bottlenecks).** Classical records, RG variables, effective field coordinates, and perspective-state summaries are PCE-admissible effective variables only when they lie on the predictive bottleneck frontier: they preserve the required information about $Y$ while minimizing retained information about $X$.
 
 *Proof.* Theorem M.6.12b proves that the coarsest sufficient statistic minimizes $I(X;Z)$ among sufficient descriptions. The functional (M.6.12.1) is the Lagrangian form of the same constrained tradeoff between compression and predictive information. ∎
+
+### M.6.13 WAY-PCE Conservation-Law Measurement Bound
+
+**Definition M.6.13a (Charge-Covariant Measurement Branch).** Let $Q_S$ be a conserved system charge, let $Q_R$ be the apparatus or reference charge, and let
+$$
+Q_{\mathrm{tot}}=Q_S+Q_R.
+$$
+A finite measurement branch for an observable $A$ is $Q$-covariant when its interaction channel $\mathcal M$ is CPTP and satisfies
+$$
+\mathcal M\left(e^{-itQ_{\mathrm{tot}}}\rho e^{itQ_{\mathrm{tot}}}\right)
+=
+e^{-itQ_{\mathrm{tot}}}\mathcal M(\rho)e^{itQ_{\mathrm{tot}}}
+\tag{M.6.13.1}
+$$
+for all $t$. The reference asymmetry is
+$$
+\mathcal A_Q(\sigma_R)
+=
+D\left(\sigma_R\Vert\mathcal G_Q(\sigma_R)\right),
+\qquad
+\mathcal G_Q(\sigma_R)
+=
+\int e^{-itQ_R}\sigma_R e^{itQ_R}\,d\mu(t),
+\tag{M.6.13.2}
+$$
+where $d\mu$ is Haar measure on the charge symmetry group.
+
+Let $\epsilon(A;\mathcal M,\sigma_R)$ be the root-mean-square measurement error of $A$ on the branch's tested preparation family.
+
+**Theorem M.6.13b (WAY-PCE Asymmetry Measurement Bound).** On every finite charge-covariant measurement branch:
+
+1. The asymmetry resource is monotone under charge-covariant processing:
+$$
+\mathcal A_Q(\mathcal N(\sigma_R))
+\le
+\mathcal A_Q(\sigma_R)
+\tag{M.6.13.3}
+$$
+for every $Q$-covariant CPTP map $\mathcal N$.
+
+2. If $\mathcal A_Q(\sigma_R)=0$ and $A$ is operationally separated from every $Q_S$-commuting observable on the tested preparation family, then exact measurement of $A$ is impossible unless
+$$
+[A,Q_S]=0
+$$
+on that family.
+
+3. In the additive conserved-charge setting with a Yanase-compatible pointer and finite charge variance, the Ozawa-WAY bound gives
+$$
+\epsilon(A;\mathcal M,\sigma_R)^2
+\ge
+\frac{
+\left|\operatorname{Tr}\rho_S[A,Q_S]\right|^2
+}{
+4(\Delta_{\rho_S}Q_S)^2+4(\Delta_{\sigma_R}Q_R)^2
+}
+\tag{M.6.13.4}
+$$
+for each tested preparation $\rho_S$ for which the denominator is finite.
+
+Consequently, measuring charge-asymmetric information requires a nonzero reference asymmetry or a finite error budget. PCE cannot make an incompatible conserved-charge measurement exact without paying the corresponding reference-frame resource.
+
+*Proof.* Item 1 is data processing for quantum relative entropy. Since $\mathcal N$ is $Q$-covariant,
+$$
+\mathcal N\circ\mathcal G_Q=\mathcal G_Q\circ\mathcal N.
+$$
+Therefore
+$$
+D(\mathcal N\sigma_R\Vert\mathcal G_Q(\mathcal N\sigma_R))
+=
+D(\mathcal N\sigma_R\Vert\mathcal N\mathcal G_Q(\sigma_R))
+\le
+D(\sigma_R\Vert\mathcal G_Q(\sigma_R)).
+$$
+
+If $\mathcal A_Q(\sigma_R)=0$, then $\sigma_R=\mathcal G_Q(\sigma_R)$ and the reference carries no distinguishable phase or orientation for the charge symmetry. A $Q$-covariant measurement channel acting on a $Q$-invariant reference cannot generate an output instrument that transforms nontrivially under the charge. Hence the implemented sharp observable must commute with $Q_S$ on the operationally tested family. If $A$ is separated from all $Q_S$-commuting observables, exact implementation of $A$ is impossible. This is the Wigner-Araki-Yanase obstruction in PPI language.
+
+For item 3, apply the finite WAY-Ozawa measurement uncertainty inequality to the additive conserved quantity $Q_{\mathrm{tot}}$. The commutator between the measured system observable and the conserved system charge supplies the numerator, while the available system and apparatus charge variances supply the denominator. This gives (M.6.13.4). The PCE statement follows because exact incompatible measurement at finite cost would require zero error while the right-hand side is positive whenever the tested state has nonzero commutator expectation and finite charge variance. ∎
+
+**Corollary M.6.13c (Compatibility with Blackwell-PCE Classicality).** The classical record selected by Theorem M.6.11b may report only the information that the covariant measurement branch can actually acquire. If the target observable is charge-asymmetric, the selected record either carries the WAY-limited error in (M.6.13.4) or the branch pays for a reference state with nonzero $\mathcal A_Q$.
+
+*Proof.* Theorem M.6.11b selects a PCE-minimal sufficient statistic of the actual measurement channel. Theorem M.6.13b constrains which channel can be implemented under the conservation law. Therefore the Blackwell-PCE record cannot contain exact charge-asymmetric information unless the reference resource or error budget permits it. ∎
 
 ## M.7 Conclusion
 
