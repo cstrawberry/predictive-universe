@@ -1070,6 +1070,218 @@ The identification of holographic saturation as a PCE attractor strengthens the 
 This reduces the logical status of "equilibrium saturation" from an assumption to a theorem within the PU framework.
 
 
+### E.8.4 Max-Flow/Min-Cut Form of PU Holography and Shared Reconstruction
+
+**Definition E.8.4a (Finite Predictive Channel Network).** Let $\mathcal N_A=(V,E)$ be a finite directed MPU channel network associated with a region $A$, with source set $S\subset V$, sink set $T\subset V$, and edge capacities
+$$
+C_e\ge0
+$$
+measured in nats per admissible channel use. For a cut $\Gamma\subset E$ separating $S$ from $T$, define
+$$
+C(\Gamma)=\sum_{e\in\Gamma}C_e.
+\tag{E.8.4.1}
+$$
+Define the maximal predictive through-capacity by
+$$
+I_{\max}(S:T)
+=
+\sup\{\text{reliably transmissible nats per use from }S\text{ to }T\}.
+\tag{E.8.4.2}
+$$
+
+**Theorem E.8.4b (PU Max-Flow/Min-Cut Holography).** For every finite predictive channel network,
+$$
+\boxed{
+I_{\max}(S:T)
+=
+\min_{\Gamma:S|T}C(\Gamma)
+}
+\tag{E.8.4.3}
+$$
+where the minimum is over all cuts separating $S$ from $T$.
+
+*Proof.* Add a supersource connected to every vertex in $S$ by infinite-capacity edges and a supersink connected from every vertex in $T$ by infinite-capacity edges. This reduces the statement to the standard single-source single-sink finite-capacity problem.
+
+For the upper bound, fix any cut $\Gamma$. Every signal from $S$ to $T$ must cross the cut. By data processing and subadditivity of channel capacities, the transmissible predictive information across that cut is at most
+$$
+\sum_{e\in\Gamma}C_e=C(\Gamma).
+$$
+Since this holds for every cut,
+$$
+I_{\max}(S:T)\le\min_\Gamma C(\Gamma).
+$$
+
+For the lower bound, the finite max-flow theorem gives a feasible flow $f:E\to\mathbb R_{\ge0}$ whose value equals the minimum cut capacity and satisfies $0\le f(e)\le C_e$ together with flow conservation at all non-source and non-sink vertices. Routing independent predictive messages along a path decomposition of this flow transmits exactly the flow value when the capacities are rational. For real capacities, approximate each $C_e$ from below by rational capacities $C_e^{(n)}\uparrow C_e$; the corresponding achievable flow values converge monotonically to the real max-flow value. Hence every rate below the minimum cut is achievable, and taking the supremum gives the reverse inequality. ∎
+
+**Corollary E.8.4c (Area Law as Minimum Predictive Cut).** Suppose the PCE-attractor branch has approximately uniform boundary channel capacity $C_{\max}^{*}$ and effective channel density $\sigma_{\mathrm{eff}}$ across a smooth cut surface $\gamma$, with boundary correction $o(\mathcal A(\gamma))$. Then
+$$
+I_{\max}(A:A^c)
+=
+C_{\max}^{*}\sigma_{\mathrm{eff}}
+\min_{\gamma\sim\partial A}\mathcal A(\gamma)
++
+o(\mathcal A).
+\tag{E.8.4.4}
+$$
+
+*Proof.* By Theorem E.8.4b, the maximal transmissible predictive information equals the minimum cut capacity. On the stated branch, a cut approximating $\gamma$ contains
+$$
+N_\gamma=\sigma_{\mathrm{eff}}\mathcal A(\gamma)+o(\mathcal A)
+$$
+effective channels, each with capacity $C_{\max}^{*}$ up to the same finite-resolution correction. Therefore
+$$
+C(\gamma)
+=
+C_{\max}^{*}\sigma_{\mathrm{eff}}\mathcal A(\gamma)+o(\mathcal A).
+$$
+Minimizing over cuts gives (E.8.4.4). ∎
+
+**Definition E.8.4d (Shared Predictive Reconstruction Advantage).** Let $A$ and $B$ be two finite boundary reconstruction regions in the same predictive channel network. Let
+$$
+C_A=\min_{\Gamma_A}C(\Gamma_A),
+\qquad
+C_B=\min_{\Gamma_B}C(\Gamma_B)
+$$
+be the separate minimum reconstruction cuts, and let
+$$
+C_{A\cup B}=\min_{\Gamma_{A\cup B}}C(\Gamma_{A\cup B})
+$$
+be the minimum cut for reconstructing $A$ and $B$ jointly. Define the shared reconstruction advantage
+$$
+\Delta_{\mathrm{rec}}(A:B)
+=
+C_A+C_B-C_{A\cup B}.
+\tag{E.8.4.5}
+$$
+
+**Theorem E.8.4e (Emergent Bridges from Shared Predictive Redundancy).** In a finite PU reconstruction network,
+$$
+\Delta_{\mathrm{rec}}(A:B)>0
+$$
+if and only if joint reconstruction of $A$ and $B$ uses strictly fewer predictive channel nats than separate reconstruction. Equivalently, the excess
+$$
+\Delta_{\mathrm{rec}}(A:B)
+$$
+is exactly the shared predictive redundancy capacity available to the joint reconstruction problem. If the regular continuum representation of the same network exists, any connected geometric bridge assigned to the pair $(A,B)$ represents this shared reconstruction redundancy; it is not an additional fundamental spacetime object.
+
+*Proof.* The separate reconstruction cost is, by definition,
+$$
+C_{\mathrm{sep}}(A:B)=C_A+C_B.
+$$
+The joint reconstruction cost is, by definition,
+$$
+C_{\mathrm{joint}}(A:B)=C_{A\cup B}.
+$$
+Thus
+$$
+\Delta_{\mathrm{rec}}(A:B)
+=
+C_{\mathrm{sep}}(A:B)-C_{\mathrm{joint}}(A:B).
+$$
+Therefore $\Delta_{\mathrm{rec}}(A:B)>0$ exactly when the joint reconstruction cut has lower capacity cost than the sum of the two separate cuts. The amount saved is precisely the number of predictive nats that need not be transmitted twice because they are carried by common channels, common syndromes, or common reconstructive constraints. This is the definition of shared predictive redundancy capacity.
+
+On the regular continuum branch, the geometric description is obtained by representing finite channel-capacity and reconstruction relations as an effective metric geometry. Since the finite theorem already identifies the invariant content as shared redundancy capacity, any connected geometric bridge in the continuum representation is a representation of that finite reconstruction relation, not an independent microscopic geometric degree of freedom. ∎
+
+**Corollary E.8.4f (RT-Type Formula Without AdS Assumptions).** In the finite PU network, the holographic bottleneck is a minimum predictive cut. When the regular continuum limit exists, the cut functional becomes an area functional with coefficient fixed by the ND-RID channel capacity, and shared geometric connectivity is represented by joint reconstruction advantage.
+
+*Proof.* Theorem E.8.4b is purely finite and uses only channel capacities. Corollary E.8.4c converts the finite cut count into an area functional using geometric regularity and the channel-density hypothesis. Theorem E.8.4e identifies the finite invariant underlying connected joint reconstruction. No AdS asymptotics, fundamental metric path integral, or gravitational Hilbert-space factorization enters the argument. ∎
+
+### E.8.5 PU Entropy-Cone Constraints
+
+**Definition E.8.5a (Predictive Cut Entropy Vector).** Let $\mathcal N=(V,E)$ be a finite undirected predictive channel network with nonnegative edge capacities $C_e$. Let boundary regions be labeled by a finite set $\mathcal B$. For each $A\subseteq\mathcal B$, define the cut entropy
+$$
+S(A)
+=
+\min_{U\subseteq V:\,A\subseteq U,\,\mathcal B\setminus A\subseteq V\setminus U}
+\sum_{e\in\delta U}C_e,
+\tag{E.8.5.1}
+$$
+where $\delta U$ is the set of edges with one endpoint in $U$ and the other in $V\setminus U$.
+
+**Theorem E.8.5b (Submodularity of Predictive Cut Entropies).** For all boundary subsets $A,B\subseteq\mathcal B$,
+$$
+S(A)+S(B)\ge S(A\cap B)+S(A\cup B).
+\tag{E.8.5.2}
+$$
+
+*Proof.* Let $U_A$ and $U_B$ be minimizing vertex sets for $S(A)$ and $S(B)$. The graph cut function
+$$
+w(U)=\sum_{e\in\delta U}C_e
+$$
+is submodular:
+$$
+w(U_A)+w(U_B)\ge w(U_A\cap U_B)+w(U_A\cup U_B).
+$$
+This follows edge by edge: an edge crossing both $U_A$ and $U_B$ contributes at least as much to the left side as to the right side, and the same is immediate for edges crossing one or neither of the two cuts.
+
+The set $U_A\cap U_B$ is an admissible cut set for $A\cap B$, and $U_A\cup U_B$ is an admissible cut set for $A\cup B$. Therefore
+$$
+S(A\cap B)\le w(U_A\cap U_B),
+\qquad
+S(A\cup B)\le w(U_A\cup U_B).
+$$
+Combining these inequalities gives (E.8.5.2). ∎
+
+**Theorem E.8.5c (Monogamy on the Pure Predictive Min-Cut Branch).** Suppose $A,B,C$ are boundary regions and $O$ is the purifier region, so the full boundary is $A\cup B\cup C\cup O$. For finite undirected predictive min-cut entropies,
+$$
+S(AB)+S(AC)+S(BC)
+\ge
+S(A)+S(B)+S(C)+S(ABC).
+\tag{E.8.5.3}
+$$
+
+*Proof.* Let $U_{AB}$, $U_{AC}$, and $U_{BC}$ be minimizing vertex sets for the cuts $AB$, $AC$, and $BC$. Assign to each vertex a bit string
+$$
+(x,y,z)\in\{0,1\}^3
+$$
+recording membership in $U_{AB}$, $U_{AC}$, and $U_{BC}$ respectively. The boundary regions have fixed patterns
+$$
+A:(1,1,0),
+\qquad
+B:(1,0,1),
+\qquad
+C:(0,1,1),
+\qquad
+O:(0,0,0).
+$$
+Define four new vertex sets:
+$$
+W_A=\{(1,1,0)\},
+\qquad
+W_B=\{(1,0,1)\},
+\qquad
+W_C=\{(0,1,1)\},
+$$
+and
+$$
+W_{ABC}=V\setminus\{(0,0,0)\}.
+$$
+These are admissible cut sets for $A$, $B$, $C$, and $ABC$ respectively.
+
+For any edge, the number of original cuts among $U_{AB}$, $U_{AC}$, $U_{BC}$ that it crosses is the Hamming distance between the endpoint bit strings. The number of new cuts among $W_A,W_B,W_C,W_{ABC}$ that it crosses is never larger than that Hamming distance. This is checked on the eight possible bit strings and follows because each $W$ separates only boundary patterns already separated by at least one of the original three coordinate cuts. Multiplying by the nonnegative edge capacity and summing over edges gives
+$$
+w(W_A)+w(W_B)+w(W_C)+w(W_{ABC})
+\le
+w(U_{AB})+w(U_{AC})+w(U_{BC}).
+$$
+Since the $W$ sets are admissible but not necessarily minimal,
+$$
+S(A)+S(B)+S(C)+S(ABC)
+\le
+w(W_A)+w(W_B)+w(W_C)+w(W_{ABC}).
+$$
+Using minimality of the original cuts,
+$$
+w(U_{AB})+w(U_{AC})+w(U_{BC})
+=
+S(AB)+S(AC)+S(BC).
+$$
+Combining the three displayed inequalities gives (E.8.5.3). ∎
+
+**Corollary E.8.5d (Entropy-Cone Tests for PU Holography).** Any finite PU entropy vector represented by predictive min-cuts must obey the graph entropy-cone inequalities generated by finite cut functions, including submodularity and, on the pure branch, monogamy of mutual information. A proposed area/channel entropy assignment violating these inequalities cannot be represented by a finite PU min-cut network at that resolution.
+
+*Proof.* Theorems E.8.5b and E.8.5c prove necessary inequalities for every finite predictive cut network. Any violation contradicts the assumed min-cut representation. ∎
+
 ## E.9 General Horizon Theorem
 
 ### E.9.1 Prediction Saturation

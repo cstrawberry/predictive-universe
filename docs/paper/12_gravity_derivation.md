@@ -516,3 +516,87 @@ where $\varepsilon_i\ge\ln 2$ is the per-cycle SPAP entropy at the $i$-th MPU cy
 *Proof.* Theorems 12.3a–b give the equivalence of the first two conditions. The Action–Entropy Identity (Appendix Q, Theorem Q.0.1) gives $\mathcal S_{\mathrm{classical}}=\hbar\sum_i\varepsilon_i$. For the free sector, $\mathcal S_{\mathrm{free}}=-mc^2\int_\gamma d\tau$, so $\delta\mathcal S_{\mathrm{free}}=\hbar\,\delta\sum_i\varepsilon_i$ and stationarity of one is equivalent to stationarity of the other. ∎
 
 Theorem 12.3 (universality at fixed scale via diff-invariance and stress-energy conservation) and Theorem 12.3b (extremization of the proper-time action) provide two independent derivations of the same geodesic law; both rest on the same underlying metric action at fixed coarse-graining scale.
+
+### 12.5.3 Predictive Energy Conditions from Relative Entropy
+
+**Definition 12.5.3a (Null Predictive Entropy Functional).** Fix a regular Lorentzian branch and a null generator with affine parameter $\lambda$ and tangent $k^\mu$. Let $\mathfrak A_\lambda$ be the finite-resolution algebra associated with a nested family of null cuts, and let $\omega_\lambda$ be the reference PCE/KMS state restricted to $\mathfrak A_\lambda$. For a perturbation $\rho_\lambda$, define the predictive relative entropy
+$$
+S_{\mathrm{rel}}(\lambda)
+=
+S(\rho_\lambda\Vert\omega_\lambda)
+=
+\Delta\langle K_\lambda\rangle-\Delta S_{\mathrm{pred}}(\lambda),
+\tag{76f}
+$$
+where $K_\lambda=-\log\omega_\lambda$ is the modular Hamiltonian representative and $\Delta S_{\mathrm{pred}}$ is the entropy change of the restricted predictive state.
+
+**Theorem 12.5.3b (Predictive Null Energy Inequality).** Assume the null-cut branch satisfies:
+
+1. finite-resolution data processing gives local null convexity,
+$$
+\frac{d^2}{d\lambda^2}S_{\mathrm{rel}}(\lambda)\ge0;
+\tag{76g}
+$$
+2. the local Rindler modular identity holds per unit transverse area,
+$$
+\frac{d^2}{d\lambda^2}\Delta\langle K_\lambda\rangle
+=
+2\pi\,\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho.
+\tag{76h}
+$$
+
+Then the predictive quantum null energy inequality holds:
+$$
+\boxed{
+\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho
+\ge
+\frac{1}{2\pi}
+\frac{d^2}{d\lambda^2}\Delta S_{\mathrm{pred}}(\lambda)
+}
+\tag{76i}
+$$
+at the same finite operational resolution.
+
+*Proof.* Differentiating (76f) twice gives
+$$
+S_{\mathrm{rel}}''(\lambda)
+=
+\Delta\langle K_\lambda\rangle''
+-
+\Delta S_{\mathrm{pred}}''(\lambda).
+$$
+Using the modular identity (76h),
+$$
+S_{\mathrm{rel}}''(\lambda)
+=
+2\pi\,\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho
+-
+\Delta S_{\mathrm{pred}}''(\lambda).
+$$
+By null convexity (76g), the left side is nonnegative. Rearranging gives (76i). ∎
+
+**Corollary 12.5.3c (Classical Null Energy as the Entropy-Flat Limit).** On a coarse-grained classical branch where the predictive entropy term is locally affine or concave along the null deformation,
+$$
+\Delta S_{\mathrm{pred}}''(\lambda)\le0,
+$$
+the predictive null energy inequality implies
+$$
+\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho\ge0.
+\tag{76j}
+$$
+
+*Proof.* Substitute $\Delta S_{\mathrm{pred}}''(\lambda)\le0$ into (76i). ∎
+
+**Corollary 12.5.3d (Averaged Predictive Null Energy).** Let $f$ be a smooth compactly supported test function along the generator. Under the hypotheses of Theorem 12.5.3b,
+$$
+\int f(\lambda)^2
+\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho\,d\lambda
+\ge
+\frac{1}{2\pi}
+\int f(\lambda)^2
+\Delta S_{\mathrm{pred}}''(\lambda)\,d\lambda.
+\tag{76k}
+$$
+If the entropy term has vanishing boundary contribution after integrating by parts, this gives the corresponding averaged null energy bound.
+
+*Proof.* Multiply (76i) by the nonnegative function $f^2$ and integrate. If the entropy contribution has vanishing boundary terms, the right side reduces to the integrated entropy-curvature correction determined by the compact support of $f$. ∎

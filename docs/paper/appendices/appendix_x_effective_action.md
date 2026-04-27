@@ -228,6 +228,50 @@ where $S_{\mathrm{grav}}^{(\ge 4)}$ contains curvature invariants with four or m
 
 
 
+**Theorem X.5b (Landauer-CTP Noise Floor on a Local Equilibrium Update Channel).** Let $q(t)$ be a coarse update coordinate on a regular CTP branch, and suppose the quadratic Keldysh action is in a local equilibrium Onsager form with dissipative matrix
+$$
+\mathcal D
+=
+\lim_{\omega\downarrow 0}
+\frac{-\operatorname{Im}\Gamma^R(\omega)}{\omega}
+\succeq 0
+$$
+and noise covariance kernel
+$$
+N=2\beta^{-1}\mathcal D,
+\tag{X.9d}
+$$
+where $\beta$ is the local inverse temperature. If the update realizes an irreversible Landauer reset over a time interval $[0,\tau]$ with entropy production
+$$
+\Delta S_q
+=
+\beta\int_0^\tau \dot q(t)^T\mathcal D\dot q(t)\,dt
+\ge \ln 2,
+\tag{X.9e}
+$$
+then the same update direction has nonzero CTP noise, and quantitatively
+$$
+\int_0^\tau \dot q(t)^T N\dot q(t)\,dt
+\ge
+2\beta^{-2}\ln 2.
+\tag{X.9f}
+$$
+In particular, on a local equilibrium CTP branch an actually irreversible MPU update cannot have a vanishing Keldysh noise kernel along the dissipative update direction.
+
+*Proof.* Equation (X.9d) is the local equilibrium fluctuation-dissipation relation in the quadratic CTP branch. Substituting (X.9d) into the quadratic noise integral gives
+$$
+\int_0^\tau \dot q^T N\dot q\,dt
+=
+2\beta^{-1}\int_0^\tau \dot q^T\mathcal D\dot q\,dt.
+$$
+By (X.9e),
+$$
+\int_0^\tau \dot q^T\mathcal D\dot q\,dt
+\ge
+\beta^{-1}\ln 2.
+$$
+Combining the two displayed equations yields (X.9f). If the Keldysh noise vanished on the update direction, the left side of (X.9f) would be zero, contradicting $\ln 2>0$. ∎
+
 ## X.6 Rate‑Level PCE Potential vs. Effective Potential
 
 For homogeneous deformations $u=g_e^2$, define the **effective potential**
@@ -274,7 +318,7 @@ Hence, at the MPU operational scale $\mu^*$ corresponding to the PCE-Attractor, 
 $$
 g^2 = u, \qquad \alpha^{-1} = \frac{4\pi\kappa_{\mathrm{eff}}}{u^*} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + O((u^*)^2)
 $$
-where $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ and the active fraction is $a/d_0=1/4$. The next curvature-controlled term is written explicitly in Section X.10.
+where $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ and the active fraction is $a/d_0=1/4$. The next curvature-controlled term is written explicitly in Appendix Z, Theorems Z.24–Z.26.
 
 ## X.7 Computational Pipeline and Renormalization Conditions
 
@@ -316,7 +360,7 @@ Therefore PU response theory, effective-action dynamics, RG flow, and perspectiv
 *Proof.* Appendix D models slow adaptation as stochastic gradient flow on the PCE potential, Theorem K.10.7 identifies FRG flow with PCE compression, and Equations (M.5a)-(M.5c) supply the metric diffusion on perspective space. Theorem X.8a records that all three are governed by the same information-geometric data. ∎
 
 
-**Remark X.8a.2 (Status of the Stronger Identity Claim).** Theorem X.8a proves a shared information-geometric control structure at the level of a common structural class. It does not yet identify a single functor, or a single operator-valued object, whose specializations simultaneously yield the Fisher kernel, the Wetterich generator, and the Appendix M drift-diffusion generator. Establishing that stronger functorial identity remains open.
+**Remark X.8a.2 (Status of the Stronger Identity Claim).** Theorem X.8a proves a shared information-geometric control structure at the level of a common structural class. Section X.9.6 gives the finite-branch operator statement: after the regular response, RG, and perspective sectors are represented as closed quadratic forms on one direct-sum predictive Hilbert module, their generators are compressions of a single self-adjoint predictive operator. The statement is exact on that finite closed-form branch and inherits precisely the regularity hypotheses stated there.
 
 **Corollary X.8b (Effective-Action Projection of Predictive Curvature).** On the regular product-bundle branch of Theorem 47 and Theorem G.4b, and under the effective-action hypotheses of Theorem X.5a, the gauge and gravitational curvature terms in the continuum effective action are projections of the predictive curvature
 $$
@@ -738,6 +782,522 @@ $$
 $$
 The derivative identity for $g_A^{-2}$ is just differentiation of $g_A^{-2}=\eta_A$. The final statement follows from the definition of canonical price equality: if the physical stiffnesses are the normalized prices, equality of stiffnesses is equality of the corresponding inverse squared couplings. ∎
 
+### X.8f Predictive Noether-KKT Equivalence
+
+**Definition X.8f.1 (Augmented PCE Lagrangian).** Let $x$ be a retained finite-mode coordinate on a regular PCE branch. Let
+$$
+g_i(x)=0,\qquad h_a(x)\le0
+$$
+be differentiable admissibility constraints, and let $V_{\mathrm{PCE}}(x)$ be the differentiable PCE objective. The augmented PCE Lagrangian is
+$$
+\mathscr L_{\mathrm{PCE}}(x,\lambda,\mu)
+=
+V_{\mathrm{PCE}}(x)
++
+\sum_i\lambda_i g_i(x)
++
+\sum_a\mu_a h_a(x),
+\tag{X.8f.1}
+$$
+with $\mu_a\ge0$ and complementary slackness $\mu_a h_a(x)=0$.
+
+**Theorem X.8f.2 (Noether-KKT Equivalence on a Regular PCE Branch).** Assume the active constraint gradients satisfy the linear-independence constraint qualification at a local optimum $x^*$. Then:
+
+1. there are unique KKT multipliers $(\lambda^*,\mu^*)$ satisfying
+$$
+d_x\mathscr L_{\mathrm{PCE}}(x^*,\lambda^*,\mu^*)=0;
+\tag{X.8f.2}
+$$
+2. if a Lie group $G$ acts on the branch and preserves $V_{\mathrm{PCE}}$, all active constraints, and the operational measure, then every infinitesimal generator $\xi_X$ satisfies
+$$
+d_x\mathscr L_{\mathrm{PCE}}(x^*,\lambda^*,\mu^*)[\xi_X(x^*)]=0;
+\tag{X.8f.3}
+$$
+3. on a continuum effective-action branch, (X.8f.3) is the Noether or Ward identity associated with the corresponding global or local symmetry;
+4. the active multipliers are predictive shadow prices:
+if a constraint is shifted to $g_i(x)=b_i$, then the derivative of the optimum value $V^*(b)$ satisfies
+$$
+\frac{\partial V^*}{\partial b_i}=-\lambda_i^*,
+\tag{X.8f.4}
+$$
+and analogously for active inequality constraints.
+
+*Proof.* The KKT theorem under the linear-independence constraint qualification gives existence of multipliers satisfying stationarity, primal feasibility, dual feasibility, and complementary slackness. Uniqueness of the multiplier vector follows because the active constraint gradients are linearly independent: if two multiplier vectors satisfied stationarity, their difference would give a vanishing linear combination of independent active gradients.
+
+If $G$ preserves the objective and active constraints, then for the curve $x(t)=\exp(t\xi)\cdot x^*$,
+$$
+\frac{d}{dt}V_{\mathrm{PCE}}(x(t))\bigg|_{t=0}=0,
+\qquad
+\frac{d}{dt}g_i(x(t))\bigg|_{t=0}=0,
+\qquad
+\frac{d}{dt}h_a(x(t))\bigg|_{t=0}=0
+$$
+for all active $a$. Taking the derivative of $\mathscr L_{\mathrm{PCE}}$ along this curve gives (X.8f.3). This proves (2).
+
+On a continuum branch, the same calculation is performed with compactly supported infinitesimal fields. For a global transformation, stationarity of the action along the symmetry orbit gives the conserved Noether current. For a local gauge transformation with arbitrary parameter $\alpha^A(x)$, the first variation has the form
+$$
+\delta_\alpha\Gamma
+=
+\int
+\alpha^A(x)\,\mathcal W_A(x)\,d^4x,
+$$
+after integrating by parts. Since $\alpha^A(x)$ is arbitrary, $\mathcal W_A(x)=0$, which is the Ward identity. This proves (3).
+
+For (4), let
+$$
+V^*(b)=\min_x V_{\mathrm{PCE}}(x)
+\quad
+\text{subject to }g_i(x)=b_i
+$$
+near the regular optimum. The envelope theorem applied to
+$$
+V_{\mathrm{PCE}}(x)+\sum_i\lambda_i(g_i(x)-b_i)
+$$
+gives
+$$
+\frac{\partial V^*}{\partial b_i}
+=
+-\lambda_i^*.
+$$
+The same argument applies to active inequalities after restricting to the active face. ∎
+
+**Corollary X.8f.3 (Conservation Laws, Ward Identities, and Couplings as One Stationarity Statement).** On a regular branch, Noether currents, gauge Ward identities, and normalized coupling constants are different readings of the same augmented PCE stationarity condition: symmetries give null directions of $\mathscr L_{\mathrm{PCE}}$, while active constraints give shadow prices.
+
+*Proof.* Noether and Ward identities are item (3) of Theorem X.8f.2. Shadow prices are item (4). The augmented stationarity equation (X.8f.2) is the common source of both. ∎
+
+### X.8g Fisher-Symplectic Predictive Response
+
+**Definition X.8g.1 (Hermitian Predictive Response Form).** Let $T$ be a finite-dimensional complex tangent space of retained perturbations on a regular MPU branch. A Hermitian predictive response form is a positive definite Hermitian form
+$$
+K:T\times T\to\mathbb C,
+\qquad
+K(u,v)=\overline{K(v,u)}.
+$$
+On the real tangent space $T_{\mathbb R}$ define
+$$
+g(u,v)=\operatorname{Re}K(u,v),
+\qquad
+\omega(u,v)=\operatorname{Im}K(u,v),
+\qquad
+J u=i u.
+\tag{X.8g.1}
+$$
+
+**Theorem X.8g.2 (Fisher-Symplectic Response Decomposition).** The triple $(g,\omega,J)$ satisfies:
+$$
+g(u,v)=g(v,u),
+\qquad
+g(u,u)>0\text{ for }u\ne0,
+$$
+$$
+\omega(u,v)=-\omega(v,u),
+\qquad
+J^2=-1,
+$$
+and
+$$
+\omega(u,v)=g(Ju,v),
+\qquad
+g(Ju,Jv)=g(u,v).
+\tag{X.8g.2}
+$$
+Thus the symmetric Fisher/Onsager response and the antisymmetric reversible response are the real and imaginary parts of one Hermitian predictive kernel.
+
+*Proof.* Hermiticity gives
+$$
+K(v,u)=\overline{K(u,v)}.
+$$
+Taking real parts gives $g(v,u)=g(u,v)$, and taking imaginary parts gives $\omega(v,u)=-\omega(u,v)$. Positivity of $K$ gives
+$$
+g(u,u)=K(u,u)>0
+$$
+for $u\ne0$. Since $J$ is multiplication by $i$, $J^2=-1$. For the compatibility identities, use complex linearity in the second slot and conjugate linearity in the first slot:
+$$
+K(Ju,v)=K(iu,v)=-iK(u,v).
+$$
+Writing $K(u,v)=g(u,v)+i\omega(u,v)$ gives
+$$
+K(Ju,v)=\omega(u,v)-ig(u,v).
+$$
+Taking real parts yields
+$$
+g(Ju,v)=\omega(u,v).
+$$
+Applying this with $u$ replaced by $Ju$ and using $J^2=-1$ gives
+$$
+g(Ju,Jv)=\omega(u,Jv)=g(Ju,Jv),
+$$
+and directly from Hermitian invariance under multiplication by $i$,
+$$
+K(Ju,Jv)=K(u,v),
+$$
+so taking real parts gives $g(Ju,Jv)=g(u,v)$. ∎
+
+**Corollary X.8g.3 (Dissipative and Reversible Dynamics as Two Projections).** For a real functional $F$ on the regular branch, define the $g$-gradient by
+$$
+g(\nabla_gF,v)=dF(v)
+$$
+and the Hamiltonian vector field by
+$$
+\omega(X_F,v)=dF(v).
+$$
+Then
+$$
+X_F=-J\nabla_gF.
+\tag{X.8g.3}
+$$
+Hence PCE relaxation and reversible unitary/classical response are respectively the gradient and symplectic projections of the same Hermitian predictive response form.
+
+*Proof.* By Theorem X.8g.2,
+$$
+\omega(X_F,v)=g(JX_F,v).
+$$
+Since $\omega(X_F,v)=dF(v)=g(\nabla_gF,v)$ for every $v$, nondegeneracy of $g$ gives
+$$
+JX_F=\nabla_gF.
+$$
+Multiplying by $-J$ and using $J^2=-1$ yields $X_F=-J\nabla_gF$. ∎
+
+### X.8h Predictive S-Matrix Positivity Cone
+
+**Definition X.8h.1 (Forward Predictive Moment Sequence).** On a gapped regular Lorentzian QFT branch, let $\mathcal A(s)$ be a forward two-to-two amplitude analytic at $s=0$ after $m$ subtractions and satisfying the positive spectral representation
+$$
+\mathcal A(s)
+=
+P_{m-1}(s)
++
+s^m
+\int_{\mu_0}^{\infty}
+\frac{d\rho(\mu)}{\mu^m(\mu-s)}
+\tag{X.8h.1}
+$$
+for $|s|<\mu_0$, where $\mu_0>0$, $P_{m-1}$ is a polynomial of degree $m-1$, and $d\rho(\mu)$ is a positive measure with finite inverse moments $\int_{\mu_0}^{\infty}\mu^{-n-1}\,d\rho(\mu)<\infty$ for the coefficients under consideration. The Wilson coefficients above the subtraction order are defined by
+$$
+\mathcal A(s)-P_{m-1}(s)
+=
+\sum_{n\ge m}c_ns^n.
+\tag{X.8h.2}
+$$
+
+**Theorem X.8h.2 (Wilson Coefficients Form a Positive Predictive Moment Cone).** Under Definition X.8h.1,
+$$
+c_n
+=
+\int_{\mu_0}^{\infty}
+\mu^{-n-1}\,d\rho(\mu),
+\qquad n\ge m.
+\tag{X.8h.3}
+$$
+Consequently every Hankel matrix
+$$
+H^{(r)}_{ij}=c_{r+i+j},
+\qquad i,j=0,\dots,N,
+\qquad r\ge m,
+$$
+is positive semidefinite. Therefore the admissible coefficient vector lies in the Stieltjes moment cone determined by the positive predictive spectral measure $d\rho$.
+
+*Proof.* For $|s|<\mu_0$,
+$$
+\frac{1}{\mu-s}
+=
+\sum_{\ell=0}^{\infty}\frac{s^\ell}{\mu^{\ell+1}}
+$$
+with uniform convergence on compact subsets of $|s|<\mu_0$. Substituting this expansion into (X.8h.1) and exchanging the uniformly convergent series with the positive measure integral gives
+$$
+\mathcal A(s)-P_{m-1}(s)
+=
+s^m\sum_{\ell=0}^{\infty}
+s^\ell
+\int_{\mu_0}^{\infty}\mu^{-m-\ell-1}\,d\rho(\mu).
+$$
+Setting $n=m+\ell$ gives (X.8h.3).
+
+For positive semidefiniteness, let $a_0,\dots,a_N\in\mathbb R$. Then
+$$
+\sum_{i,j=0}^N a_i a_j H^{(r)}_{ij}
+=
+\sum_{i,j=0}^N a_i a_j c_{r+i+j}
+=
+\int_{\mu_0}^{\infty}
+\mu^{-r-1}
+\left(\sum_{i=0}^N a_i\mu^{-i}\right)^2
+d\rho(\mu)
+\ge0.
+$$
+Thus every Hankel matrix is positive semidefinite. ∎
+
+**Corollary X.8h.3 (Finite-Resolution EFT Positivity Test).** A finite Wilson vector $(c_m,\dots,c_{m+2N})$ that violates positivity of any Hankel matrix $H^{(r)}$ cannot be the forward low-energy expansion of a PU-admissible gapped unitary causal branch satisfying Definition X.8h.1.
+
+*Proof.* Theorem X.8h.2 proves Hankel positivity for every such branch. A violation contradicts a necessary condition. ∎
+
+**Corollary X.8h.4 (Convexity of the Predictive EFT Region).** The set of coefficient vectors satisfying (X.8h.3) for positive measures $d\rho$ is a convex cone.
+
+*Proof.* If $c_n^{(1)}$ and $c_n^{(2)}$ are generated by positive measures $d\rho_1$ and $d\rho_2$, then for nonnegative $\lambda_1,\lambda_2$ the vector
+$$
+\lambda_1c_n^{(1)}+\lambda_2c_n^{(2)}
+$$
+is generated by the positive measure
+$$
+\lambda_1d\rho_1+\lambda_2d\rho_2.
+$$
+Thus the set is closed under nonnegative linear combinations. ∎
+
+### X.8i Predictive Cosmic Galois Filtration
+
+**Definition X.8i.1 (Finite Update-Cost Graph Hopf Algebra).** Let $\mathcal H_{\mathrm{CK}}^{(L)}$ be the finite Connes-Kreimer Hopf algebra spanned by superficially divergent Feynman graphs up to loop order $L$, with coproduct
+$$
+\Delta\Gamma
+=
+\sum_{\gamma\subseteq\Gamma}
+\gamma\otimes\Gamma/\gamma.
+$$
+Let
+$$
+\mathfrak c:\{\text{graphs}\}\to\mathbb N
+$$
+be an update-cost degree satisfying
+$$
+\mathfrak c(\gamma)+\mathfrak c(\Gamma/\gamma)\le\mathfrak c(\Gamma)
+\tag{X.8i.1}
+$$
+for every divergent subgraph $\gamma\subseteq\Gamma$, and
+$$
+\mathfrak c(\Gamma_1\Gamma_2)=\mathfrak c(\Gamma_1)+\mathfrak c(\Gamma_2)
+$$
+for disjoint products. Define the filtration
+$$
+F^n\mathcal H_{\mathrm{CK}}^{(L)}
+=
+\operatorname{span}\{\Gamma:\mathfrak c(\Gamma)\le n\}.
+\tag{X.8i.2}
+$$
+
+**Theorem X.8i.2 (Renormalization Preserves the Predictive Cost Filtration).** Under Definition X.8i.1,
+$$
+\Delta(F^n\mathcal H_{\mathrm{CK}}^{(L)})
+\subseteq
+\sum_{r+s\le n}
+F^r\mathcal H_{\mathrm{CK}}^{(L)}
+\otimes
+F^s\mathcal H_{\mathrm{CK}}^{(L)}.
+\tag{X.8i.3}
+$$
+If $\phi$ is a regularized Feynman-rule character and the counterterm recursion is defined by a Rota-Baxter projection that does not increase $\mathfrak c$, then the counterterm character $\phi_-$ and renormalized character $\phi_+$ also preserve the filtration.
+
+*Proof.* Let $\Gamma\in F^n\mathcal H_{\mathrm{CK}}^{(L)}$, so $\mathfrak c(\Gamma)\le n$. Every coproduct term is of the form
+$$
+\gamma\otimes\Gamma/\gamma.
+$$
+By (X.8i.1),
+$$
+\mathfrak c(\gamma)+\mathfrak c(\Gamma/\gamma)\le\mathfrak c(\Gamma)\le n.
+$$
+Thus if $r=\mathfrak c(\gamma)$ and $s=\mathfrak c(\Gamma/\gamma)$, then the term lies in
+$$
+F^r\mathcal H_{\mathrm{CK}}^{(L)}\otimes F^s\mathcal H_{\mathrm{CK}}^{(L)}
+$$
+with $r+s\le n$. Summing over all subgraphs proves (X.8i.3).
+
+For the character statement, the counterterm recursion is
+$$
+\phi_-(\Gamma)
+=
+-R\left[
+\phi(\Gamma)+
+\sum_{\emptyset\ne\gamma\subsetneq\Gamma}
+\phi_-(\gamma)\phi(\Gamma/\gamma)
+\right],
+$$
+where $R$ is the Rota-Baxter projection. Proceed by induction on $\mathfrak c(\Gamma)$. The product term
+$$
+\phi_-(\gamma)\phi(\Gamma/\gamma)
+$$
+has total cost degree at most $\mathfrak c(\gamma)+\mathfrak c(\Gamma/\gamma)\le\mathfrak c(\Gamma)$ by the first part. Since $R$ does not increase cost degree, $\phi_-(\Gamma)$ has cost degree at most $\mathfrak c(\Gamma)$. The renormalized character
+$$
+\phi_+=\phi_-*\phi
+$$
+is a convolution product, and the coproduct estimate already proved shows that convolution does not increase the total filtration degree. Hence $\phi_+$ preserves the filtration. ∎
+
+**Corollary X.8i.3 (Filtered Arithmetic Symmetry).** Any Hopf-algebra automorphism of $\mathcal H_{\mathrm{CK}}^{(L)}$ that preserves $\mathfrak c$ acts by filtered automorphisms on the algebra of PU update-history periods generated by the corresponding amplitudes.
+
+*Proof.* If an automorphism preserves $\mathfrak c$, it maps every basis graph of cost at most $n$ to a linear combination of graphs of cost at most $n$. Hence it preserves $F^n$ for every $n$. Applying the Feynman-rule period map sends this filtered graph action to a filtered action on the generated period algebra. ∎
+
+### X.8j Soft Memory as Predictive Ledger Conservation
+
+**Definition X.8j.1 (Finite Boundary Ledger).** Let $\mathscr I_-$ and $\mathscr I_+$ be finite incoming and outgoing boundary cuts of a long-range gauge or emergent-metric sector, and let $f$ be a boundary test function. A predictive ledger charge is a finite sum
+$$
+Q_f[\mathscr I]
+=
+\sum_{a\in\mathscr I} f_a\,\ell_a
+\tag{X.8j.1}
+$$
+where $\ell_a$ is the retained update ledger entry at boundary cell $a$. Let $F_f$ be the total flux ledger through the intervening bulk or channel region. The finite ledger conservation law is
+$$
+Q_f[\mathscr I_+]-Q_f[\mathscr I_-]+F_f=0.
+\tag{X.8j.2}
+$$
+
+**Theorem X.8j.2 (Soft Ward Identity and Memory Ledger).** Suppose the physical transition functional is invariant under the finite boundary ledger symmetry generated by $Q_f$ and satisfies the conservation law (X.8j.2). Then for every admissible in/out pair,
+$$
+\langle\mathrm{out}|
+Q_f[\mathscr I_+]-Q_f[\mathscr I_-]+F_f
+|\mathrm{in}\rangle
+=
+0.
+\tag{X.8j.3}
+$$
+The measured memory is
+$$
+\Delta\mathcal M_f
+=
+Q_f[\mathscr I_+]-Q_f[\mathscr I_-]
+=
+-F_f.
+\tag{X.8j.4}
+$$
+
+*Proof.* Equation (X.8j.2) is an operator identity on the finite ledger algebra of the retained boundary sector. Taking its matrix element between any admissible in-state and out-state gives (X.8j.3). Rearranging the same identity gives
+$$
+Q_f[\mathscr I_+]-Q_f[\mathscr I_-]=-F_f.
+$$
+The left side is precisely the change in the boundary ledger recorded between the two cuts, which is the memory observable $\Delta\mathcal M_f$. This proves (X.8j.4). ∎
+
+**Corollary X.8j.3 (Gauge-First Soft Theorem Reading).** In gauge sectors, the soft insertion is the flux ledger $F_f$, and the soft Ward identity is the conservation of the boundary predictive ledger. In the emergent metric sector, the same formula describes the asymptotic ledger of the thermodynamic metric branch; it does not introduce a fundamental graviton degree of freedom.
+
+*Proof.* Gauge soft charges are boundary charges generated by long-range gauge transformations, so they are instances of $Q_f$. Their flux insertion is $F_f$, and Theorem X.8j.2 gives the Ward identity. The emergent metric branch has boundary channel and horizon ledger variables rather than fundamental metric quanta; applying the same finite conservation identity to those variables gives the stated asymptotic-memory reading without changing the ontology. ∎
+
+### X.8k Predictive Calderón-Schur Boundary Reconstruction
+
+**Definition X.8k.1 (Finite Boundary Response Map).** Let a finite regular predictive network have boundary nodes $\partial N$ and interior nodes $I$. Let the quadratic predictive response operator be a positive block operator
+$$
+\mathfrak L=
+\begin{pmatrix}
+L_{\partial\partial} & L_{\partial I}\\
+L_{I\partial} & L_{II}
+\end{pmatrix},
+\qquad
+L_{II}>0.
+$$
+For imposed boundary data $u_{\partial}$, the interior harmonic extension is the unique solution of
+$$
+L_{II}u_I+L_{I\partial}u_{\partial}=0.
+\tag{X.8k.1}
+$$
+The finite boundary response map is the Schur complement
+$$
+\Lambda_{\partial}
+=
+L_{\partial\partial}
+-
+L_{\partial I}L_{II}^{-1}L_{I\partial},
+\tag{X.8k.2}
+$$
+so that the measured boundary flux is
+$$
+j_{\partial}=\Lambda_{\partial}u_{\partial}.
+$$
+
+**Theorem X.8k.2 (Boundary Protocols Determine the Predictive Schur Operator).** On a finite branch satisfying Definition X.8k.1, the complete set of linear boundary-response protocols determines $\Lambda_{\partial}$ uniquely. Two interior networks are indistinguishable by all such boundary protocols if and only if they have the same $\Lambda_{\partial}$. Under a strict PCE tie-breaker on boundary-indistinguishable representatives, there is a unique minimal representative up to boundary-preserving gauge equivalence.
+
+*Proof.* For each boundary basis vector $e_a$, impose $u_{\partial}=e_a$ and solve (X.8k.1). The measured flux is
+$$
+j_{\partial}^{(a)}=\Lambda_{\partial}e_a,
+$$
+which is the $a$-th column of $\Lambda_{\partial}$. Running this finite list of boundary protocols determines every column and hence $\Lambda_{\partial}$ uniquely.
+
+If two networks have the same $\Lambda_{\partial}$, then for every boundary input $u_{\partial}$ they produce the same boundary flux $j_{\partial}$ by (X.8k.2), so no linear boundary protocol distinguishes them. Conversely, if all boundary protocols give the same flux for every $u_{\partial}$, then
+$$
+\Lambda_{\partial}^{(1)}u_{\partial}
+=
+\Lambda_{\partial}^{(2)}u_{\partial}
+$$
+for every boundary vector. Therefore $\Lambda_{\partial}^{(1)}=\Lambda_{\partial}^{(2)}$.
+
+Boundary-indistinguishable networks lie in one PPI response class. A strict PCE tie-breaker assigns larger cost to any surplus internal representation that does not alter $\Lambda_{\partial}$. Since the equivalence class is finite at fixed resolution, the minimum exists; strictness makes it unique modulo boundary-preserving gauge transformations, which do not change any boundary protocol response. ∎
+
+**Corollary X.8k.3 (Interior Effective Structure from Boundary Protocols).** The boundary-observable content of the effective predictive operator is exactly its Schur boundary response class. Interior degrees of freedom not changing $\Lambda_{\partial}$ are PPI-invisible and PCE-degenerate.
+
+*Proof.* Theorem X.8k.2 identifies equality of all boundary protocol responses with equality of $\Lambda_{\partial}$. PPI therefore identifies the physical boundary content with the Schur response class, and PCE removes redundant representatives inside that class. ∎
+
+### X.8l Predictive Hodge Decomposition of Update Currents
+
+**Definition X.8l.1 (Finite Predictive Hodge Datum).** Let
+$$
+C^0\xrightarrow{d_0}C^1\xrightarrow{d_1}C^2
+$$
+be a finite weighted cochain complex of MPU update variables, with positive inner products on each $C^k$. Let $\delta_k:C^{k+1}\to C^k$ be the adjoint of $d_k$. The degree-one predictive Laplacian is
+$$
+\Delta_1=d_0\delta_0+\delta_1d_1
+$$
+on $C^1$.
+
+**Theorem X.8l.2 (Finite Predictive Hodge Decomposition).** Every update current $J\in C^1$ has a unique orthogonal decomposition
+$$
+J=d_0\phi+\delta_1\psi+h,
+\tag{X.8l.1}
+$$
+where
+$$
+d_0\phi\in\operatorname{im}d_0,
+\qquad
+\delta_1\psi\in\operatorname{im}\delta_1,
+\qquad
+h\in\ker\Delta_1.
+$$
+Moreover,
+$$
+\ker\Delta_1=\ker\delta_0\cap\ker d_1
+$$
+and is naturally isomorphic to the first cohomology
+$$
+H^1=\ker d_1/\operatorname{im}d_0.
+$$
+
+*Proof.* Because the spaces are finite-dimensional with positive inner products,
+$$
+(\operatorname{im}d_0)^\perp=\ker\delta_0,
+\qquad
+(\operatorname{im}\delta_1)^\perp=\ker d_1.
+$$
+Also
+$$
+\operatorname{im}d_0\perp\operatorname{im}\delta_1
+$$
+because
+$$
+\langle d_0\phi,\delta_1\psi\rangle
+=
+\langle d_1d_0\phi,\psi\rangle
+=
+0.
+$$
+Finite-dimensional linear algebra gives
+$$
+C^1=
+\operatorname{im}d_0
+\oplus
+\operatorname{im}\delta_1
+\oplus
+(\operatorname{im}d_0\oplus\operatorname{im}\delta_1)^\perp.
+$$
+The final orthogonal complement is
+$$
+\ker\delta_0\cap\ker d_1.
+$$
+For any $u\in C^1$,
+$$
+\langle u,\Delta_1u\rangle
+=
+\lVert\delta_0u\rVert^2+\lVert d_1u\rVert^2,
+$$
+so $\Delta_1u=0$ if and only if $\delta_0u=0$ and $d_1u=0$. Hence the harmonic subspace is $\ker\delta_0\cap\ker d_1$.
+
+Every cohomology class in $\ker d_1/\operatorname{im}d_0$ has a unique representative orthogonal to $\operatorname{im}d_0$, because projecting away the exact component leaves a vector in $\ker d_1\cap\ker\delta_0$. Thus $\ker\Delta_1\cong H^1$. ∎
+
+**Corollary X.8l.3 (Dissipation, Circulation, and Ledger Memory).** In (X.8l.1), the exact part $d_0\phi$ is the potential-driven dissipative update, the coexact part $\delta_1\psi$ is the circulating gauge or response component, and the harmonic part $h$ is the persistent topological ledger class. Only the harmonic part survives both quotienting by exact redefinitions and removal of coexact local circulation.
+
+*Proof.* Exact components lie in $\operatorname{im}d_0$ and vanish in cohomology. Coexact components are orthogonal response circulations. Theorem X.8l.2 identifies the quotient-invariant residue with the harmonic representative of $H^1$. ∎
+
 ## X.9 Dualities as PCE-Cost Degeneracies
 
 Dualities enter PU as *operational redundancies*: distinct descriptive formalisms that yield the same predictive content for the same Minimal Predictive Unit (MPU). In this framework, the central criterion is not microscopic ontological distinctness, but equality (up to coarse-grained readout relabeling) of the induced predictive distributions at fixed MPU constraints (finite local dimension $d_0$, irreversibility $\varepsilon$, and the minimum processing timescale $\tau_{min}$). When two descriptions are operationally indistinguishable at that resolution, PCE cannot prefer one without introducing non-operational structure; consequently, such descriptions form degenerate minima of the PCE objective (Definition D.1) when expressed through the effective-action proxy (Appendix X).
@@ -929,3 +1489,163 @@ Appendix X (Section X.7) already provides a pipeline for connecting PU quantitie
 4. **Check operational invariants.** Verify that $p(E \mid O, c)$ is unchanged for all measurable outcome events $E$, observables $O \in \mathcal{O}$, and contexts $c \in \mathcal{C}$ at MPU resolution. Equivalently, under LAN conditions, check equality of connected correlators and the induced Fisher metric $\mathcal{G}$ (Proposition X.1).
 
 5. **Conclude degeneracy.** Any candidate passing step (4) is PCE-degenerate at the proxy level by Proposition X.9.3.
+
+### X.9.5 Predictive Obstruction Complex
+
+**Definition X.9.5a (Finite PU Obstruction Complex).** Let $\mathcal U=\{U_i\}_{i\in I}$ be a finite operational cover of a regular PU branch, where each $U_i$ denotes a local predictive chart, perspective chart, gauge frame, boundary patch, or effective-action chart. Let $\mathcal F_\varepsilon$ be an abelian sheaf of finite-cost predictive correction functionals: for each $U$, $\mathcal F_\varepsilon(U)$ is the abelian group of signed local correction functionals with finite implementation cost, equipped with the filtration that records irreversible update increments satisfying the Landauer lower bound $\varepsilon\ge\ln 2$ for admissible positive updates. Define
+$$
+C^n_{\mathrm{PU}}(\mathcal U,\mathcal F_\varepsilon)
+=
+\prod_{i_0<\cdots<i_n}
+\mathcal F_\varepsilon(U_{i_0}\cap\cdots\cap U_{i_n})
+$$
+with the Cech coboundary
+$$
+(\delta c)_{i_0\cdots i_{n+1}}
+=
+\sum_{r=0}^{n+1}(-1)^r
+c_{i_0\cdots\widehat{i_r}\cdots i_{n+1}}
+\big|_{U_{i_0}\cap\cdots\cap U_{i_{n+1}}}.
+\tag{X.9.5.1}
+$$
+The predictive obstruction groups are
+$$
+H^n_{\mathrm{PU}}(\mathcal U,\mathcal F_\varepsilon)
+=
+\ker(\delta:C^n\to C^{n+1})/
+\operatorname{im}(\delta:C^{n-1}\to C^n).
+\tag{X.9.5.2}
+$$
+
+**Theorem X.9.5b (Obstruction-Exactness Classification).** For every finite operational cover $\mathcal U$ and finite-cost sheaf $\mathcal F_\varepsilon$ as in Definition X.9.5a:
+
+1. $\delta^2=0$, so $H^n_{\mathrm{PU}}(\mathcal U,\mathcal F_\varepsilon)$ is well-defined.
+2. $H^0_{\mathrm{PU}}$ consists exactly of globally glueable finite-cost predictive assignments.
+3. A nonzero class in $H^1_{\mathrm{PU}}$ is exactly the obstruction to choosing local predictive representatives whose pairwise transition corrections are all removed by local redefinitions.
+4. A nonzero class in $H^2_{\mathrm{PU}}$ is exactly the obstruction to coherent triple-overlap closure; on regular connection branches this is the Cech representative of predictive curvature or anomaly descent.
+5. For a pair $(X,\partial X)$ with boundary cover induced from $\mathcal U$, the relative complex
+$$
+C^n_{\mathrm{PU}}(X,\partial X)
+=
+\ker\bigl(C^n_{\mathrm{PU}}(X)\to C^n_{\mathrm{PU}}(\partial X)\bigr)
+$$
+has a long exact sequence
+$$
+\cdots\to H^n_{\mathrm{PU}}(X,\partial X)\to H^n_{\mathrm{PU}}(X)\to H^n_{\mathrm{PU}}(\partial X)\xrightarrow{\Delta}H^{n+1}_{\mathrm{PU}}(X,\partial X)\to\cdots,
+\tag{X.9.5.3}
+$$
+so anomaly inflow and horizon compensation are the exactness condition that the boundary class maps to the negative of the bulk obstruction under $\Delta$.
+
+*Proof.* For $c\in C^n$, compute
+$$
+(\delta^2 c)_{i_0\cdots i_{n+2}}
+=
+\sum_{r<s}(-1)^{r+s}
+c_{i_0\cdots\widehat{i_r}\cdots\widehat{i_s}\cdots i_{n+2}}
++
+\sum_{s<r}(-1)^{r+s-1}
+c_{i_0\cdots\widehat{i_s}\cdots\widehat{i_r}\cdots i_{n+2}}.
+$$
+Each term appears twice with opposite sign, hence $\delta^2c=0$. This proves (1). A zero-cochain is a family of local assignments $a_i\in\mathcal F_\varepsilon(U_i)$. The condition $\delta a=0$ says $a_i=a_j$ on every overlap, which is precisely the sheaf gluing condition for a global finite-cost assignment; quotienting by $\operatorname{im}\delta:C^{-1}\to C^0=0$ changes nothing, proving (2). A one-cocycle $g_{ij}$ satisfying $\delta g=0$ gives compatible transition corrections on triple overlaps. It is a coboundary exactly when there exist local corrections $a_i$ with $g_{ij}=a_j-a_i$, which is exactly removal by local redefinition; therefore nonzero $H^1$ is precisely the residual pairwise mismatch, proving (3). The same calculation in degree two says that a two-cocycle is the residual triple-overlap failure. In a regular connection description the triple-overlap failure is the Cech representative of curvature, and in a gauge or frame redundancy branch it is the anomaly-descent cocycle; quotienting by coboundaries removes choices of local counterterm, proving (4). For (5), the short exact sequence of cochain complexes
+$$
+0\to C^\bullet_{\mathrm{PU}}(X,\partial X)\to C^\bullet_{\mathrm{PU}}(X)\to C^\bullet_{\mathrm{PU}}(\partial X)\to0
+$$
+induces the standard long exact sequence in cohomology by the snake lemma. Exactness at each term says precisely that a boundary obstruction is admissible when it is the image of a bulk-relative compensating class with opposite sign. ∎
+
+**Corollary X.9.5c (One Exactness Principle for Curvature, Gauge Anomaly, and Horizon Inflow).** On regular branches where curvature, gauge anomaly, perspective mismatch, and horizon boundary data are represented by finite-cost transition functionals, their consistency condition is the same mathematical statement:
+$$
+[\omega_{\mathrm{bulk}}]+[\omega_{\mathrm{boundary}}]=0
+\quad
+\text{in the relevant }H^\bullet_{\mathrm{PU}}.
+\tag{X.9.5.4}
+$$
+
+*Proof.* Theorem X.9.5b identifies each listed mismatch as a cohomology class in the same finite-cost Cech complex or its relative version. Total consistency means the combined class is exact, equivalently zero in cohomology. ∎
+
+### X.9.6 Master Predictive Operator
+
+**Definition X.9.6a (Closed Predictive Dirichlet Datum).** A closed predictive Dirichlet datum is a quadruple
+$$
+\mathfrak D_{\mathrm{PU}}
+=
+(\mathscr H_{\mathrm{PU}},\mathscr Q_{\mathrm{PU}},\mathcal D_{\mathrm{PU}},\Pi)
+$$
+where:
+
+1. $\mathscr H_{\mathrm{PU}}$ is the finite direct-sum Hilbert module of retained predictive perturbations,
+$$
+\mathscr H_{\mathrm{PU}}
+=
+\mathscr H_{\mathrm{field}}
+\oplus
+\mathscr H_{\mathrm{RG}}
+\oplus
+\mathscr H_{\Sigma}
+\oplus
+\mathscr H_{\mathrm{PCE}},
+$$
+with summands respectively representing effective fields, scale deformations, perspective perturbations, and slow PCE adaptation variables.
+2. $\mathscr Q_{\mathrm{PU}}$ is a densely defined, nonnegative, closed quadratic form on $\mathscr H_{\mathrm{PU}}$.
+3. $\mathcal D_{\mathrm{PU}}$ is the common dense form domain.
+4. $\Pi_\alpha$ denotes the orthogonal projection onto the summand $\mathscr H_\alpha$.
+
+By the representation theorem for closed nonnegative forms there is a unique nonnegative self-adjoint operator $\mathfrak L_{\mathrm{PU}}$ such that
+$$
+\mathscr Q_{\mathrm{PU}}(u,v)
+=
+\langle u,\mathfrak L_{\mathrm{PU}}v\rangle
+\quad
+\text{for }v\in\operatorname{Dom}(\mathfrak L_{\mathrm{PU}}),\ u\in\mathcal D_{\mathrm{PU}}.
+\tag{X.9.6.1}
+$$
+This operator is the master predictive operator of the datum.
+
+**Theorem X.9.6b (Projection Theorem for Response, RG, Perspective Transport, and PCE Flow).** Assume the regular finite-mode branch in which the quadratic effective action, Wetterich regulator sector, Appendix M perspective diffusion form, and Appendix D PCE adaptation form are all represented as form-compatible summand restrictions of one closed predictive Dirichlet datum $\mathfrak D_{\mathrm{PU}}$, meaning that each projection $\Pi_\alpha$ leaves the common form domain invariant and each restricted form is closed. Then:
+
+1. The field response Hessian is the field form-compression of the master operator:
+$$
+\Gamma^{(2)}
+=
+\Pi_{\mathrm{field}}\mathfrak L_{\mathrm{PU}}\Pi_{\mathrm{field}}^*
+\quad
+\text{on }\mathscr H_{\mathrm{field}}.
+\tag{X.9.6.2}
+$$
+2. The perspective diffusion generator is the negative Markov generator associated with the perspective compression:
+$$
+\mathcal L_\Sigma
+=
+-\Pi_{\Sigma}\mathfrak L_{\mathrm{PU}}\Pi_{\Sigma}^*
+\quad
+\text{on }\mathscr H_{\Sigma}
+\tag{X.9.6.3}
+$$
+with sign chosen so that $e^{t\mathcal L_\Sigma}$ is contractive.
+3. The FRG trace term is a functional-calculus trace of the RG compression:
+$$
+\partial_k\Gamma_k
+=
+\frac12\operatorname{STr}
+\left[
+\left(
+\Pi_{\mathrm{RG}}\mathfrak L_{\mathrm{PU}}\Pi_{\mathrm{RG}}^*+R_k
+\right)^{-1}
+\partial_k R_k
+\right]
+\tag{X.9.6.4}
+$$
+whenever the regulator $R_k$ is positive on the retained RG sector.
+4. The local PCE adaptation equation is the natural-gradient flow generated by the PCE compression:
+$$
+\dot x
+=
+-\nabla_{\Pi_{\mathrm{PCE}}\mathfrak L_{\mathrm{PU}}\Pi_{\mathrm{PCE}}^*}V(x)
++\text{ND-RID noise}.
+\tag{X.9.6.5}
+$$
+
+*Proof.* The closed-form representation theorem gives the unique operator $\mathfrak L_{\mathrm{PU}}$ satisfying (X.9.6.1). Restricting a form-compatible closed form to a closed orthogonal summand gives a closed restricted form on that summand, and its representing operator is the corresponding self-adjoint form-compression. Applying this to $\mathscr H_{\mathrm{field}}$ gives the quadratic field kernel, which by Proposition X.1 is $\Gamma^{(2)}$, proving (1). Applying it to the Appendix M perspective Dirichlet form gives the nonnegative diffusion form; the Markov generator is its negative operator representative, proving (2). The Wetterich equation depends only on the inverse regularized quadratic kernel on the retained RG sector, so replacing that kernel by the RG compression gives (X.9.6.4), proving (3). Finally, Appendix D writes slow adaptation as natural-gradient descent with respect to the metric or stiffness form controlling local perturbations. The PCE summand compression is exactly that metric representative, proving (4). ∎
+
+**Corollary X.9.6c (No Redundant Flow Postulate).** On the closed finite-mode branch of Theorem X.9.6b, response, RG, measurement-perspective transport, and slow adaptation are not separate structures. They are different compressions or functional-calculus images of $\mathfrak L_{\mathrm{PU}}$.
+
+*Proof.* Each listed operator is one of (X.9.6.2)–(X.9.6.5), hence is obtained from the same self-adjoint operator by projection, sign convention, or functional calculus. ∎

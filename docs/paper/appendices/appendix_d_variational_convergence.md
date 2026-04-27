@@ -1169,6 +1169,292 @@ The antiderivative is $\omega^{-1}\arctan(\lambda/\omega)$, giving (D.30). If $\
 
 This identifies pink noise as the macroscopic spectral signature of PCE-regulated predictive systems operating near a marginal viability surface with no privileged update scale.
 
+### D.8.6 PCE-Ricci Metric Flow
+
+**Definition D.8.6a (Metric PCE Functional).** On a compact regular metric-measure branch $(M,g,e^{-f}d\mathrm{vol}_g)$ with fixed normalized measure
+$$
+\int_M e^{-f}d\mathrm{vol}_g=1,
+$$
+define the geometric PCE functional
+$$
+\mathcal V_{\mathrm{geom}}[g,f,\Psi]
+=
+\int_M
+\left(
+R_g+|\nabla f|_g^2+\lambda_{\mathrm{pred}}\mathcal U_{\mathrm{pred}}(g,\Psi)
+\right)
+e^{-f}d\mathrm{vol}_g,
+\tag{D.8.6.1}
+$$
+where $\Psi$ denotes retained predictive matter fields and $\mathcal U_{\mathrm{pred}}$ is the local predictive energy-cost density. Define the predictive stress tensor by
+$$
+T^{\mathrm{pred}}_{\mu\nu}
+=
+-\frac{2}{\sqrt{|g|}}
+\frac{\delta}{\delta g^{\mu\nu}}
+\left(
+\sqrt{|g|}\mathcal U_{\mathrm{pred}}
+\right).
+\tag{D.8.6.2}
+$$
+
+**Theorem D.8.6b (PCE-Ricci Flow on the Regular Metric Branch).** The negative $L^2(e^{-f}d\mathrm{vol}_g)$ natural-gradient flow of $\mathcal V_{\mathrm{geom}}$ with respect to the metric has the form
+$$
+\partial_\tau g_{\mu\nu}
+=
+-2\left(
+\operatorname{Ric}_{\mu\nu}
++
+\nabla_\mu\nabla_\nu f
+-
+\frac{\lambda_{\mathrm{pred}}}{2}
+T^{\mathrm{pred}}_{\mu\nu}
+\right)
++
+\chi(\tau)g_{\mu\nu},
+\tag{D.8.6.3}
+$$
+where $\chi(\tau)$ is the scalar normalization term enforcing the fixed weighted-volume constraint. In the gauge $f=\mathrm{const}$ and after absorbing $\chi g_{\mu\nu}$ into the volume-normalized trace sector, the leading geometric term is Ricci flow with predictive stress forcing:
+$$
+\partial_\tau g_{\mu\nu}
+=
+-2\operatorname{Ric}_{\mu\nu}
++
+\lambda_{\mathrm{pred}}T^{\mathrm{pred}}_{\mu\nu}
++
+\text{trace normalization}.
+\tag{D.8.6.4}
+$$
+
+*Proof.* The first variation of Perelman's weighted functional
+$$
+\mathcal F[g,f]=\int_M(R_g+|\nabla f|^2)e^{-f}d\mathrm{vol}_g
+$$
+under metric variations at fixed weighted measure is
+$$
+\delta\mathcal F
+=
+-\int_M
+\left(
+\operatorname{Ric}_{\mu\nu}+\nabla_\mu\nabla_\nu f
+\right)
+\delta g^{\mu\nu}
+e^{-f}d\mathrm{vol}_g
+$$
+up to the scalar constraint term enforcing $\int e^{-f}d\mathrm{vol}_g=1$. By Definition D.8.6a and (D.8.6.2),
+$$
+\delta
+\int_M\mathcal U_{\mathrm{pred}}e^{-f}d\mathrm{vol}_g
+=
+-\frac12
+\int_M
+T^{\mathrm{pred}}_{\mu\nu}\delta g^{\mu\nu}
+e^{-f}d\mathrm{vol}_g
+$$
+again up to the same scalar normalization direction. Therefore the $L^2(e^{-f}d\mathrm{vol}_g)$ gradient with respect to $g^{\mu\nu}$ is
+$$
+-\left(
+\operatorname{Ric}_{\mu\nu}
++
+\nabla_\mu\nabla_\nu f
+-
+\frac{\lambda_{\mathrm{pred}}}{2}T^{\mathrm{pred}}_{\mu\nu}
+\right)
++
+\frac12\chi g_{\mu\nu}.
+$$
+Taking the negative gradient flow and writing it for $g_{\mu\nu}$ gives (D.8.6.3), with the conventional factor $2$ fixed by Ricci-flow normalization. Setting $f$ constant removes the Hessian term and yields (D.8.6.4). ∎
+
+**Corollary D.8.6c (Einstein Branch as Stationary Predictive Metric Flow).** A regular metric branch is stationary modulo diffeomorphism and weighted-volume normalization if and only if
+$$
+\operatorname{Ric}_{\mu\nu}
++
+\nabla_\mu\nabla_\nu f
+-
+\frac{\lambda_{\mathrm{pred}}}{2}T^{\mathrm{pred}}_{\mu\nu}
+=
+\frac{\chi}{2}g_{\mu\nu}.
+\tag{D.8.6.5}
+$$
+In the constant-$f$ macroscopic branch this is the trace-normalized Einstein-type balance between curvature and predictive stress.
+
+*Proof.* Stationarity of (D.8.6.3) modulo normalization is exactly the vanishing of the traceless part of the parenthesized tensor, which is (D.8.6.5). For constant $f$, the Hessian term vanishes. Taking the trace fixes $\chi$, and the remaining traceless equation is the Einstein-type curvature-stress balance. ∎
+
+### D.8.7 Thermodynamic Length Bound for Varying Effective Constants
+
+**Definition D.8.7a (Predictive Coupling Manifold).** Let $\Lambda$ be a finite-dimensional manifold of effective constants or couplings $\lambda=(\lambda^1,\dots,\lambda^n)$ on a regular coarse-grained branch. Suppose the branch defines a locally asymptotically normal predictive family $p_\lambda$ with Fisher/PCE metric
+$$
+G_{ij}(\lambda)
+=
+\mathbb E_\lambda
+\left[
+\partial_i\log p_\lambda\,
+\partial_j\log p_\lambda
+\right],
+\tag{D.8.7.1}
+$$
+positive definite on the retained identifiable directions. For a drift path $\lambda:[0,\tau]\to\Lambda$, define its thermodynamic length
+$$
+L_G(\lambda)
+=
+\int_0^\tau
+\sqrt{
+\dot\lambda^iG_{ij}(\lambda)\dot\lambda^j
+}\,dt.
+\tag{D.8.7.2}
+$$
+
+**Theorem D.8.7b (Thermodynamic Length Bound).** Suppose the entropy production of the drift obeys the local Onsager-PCE lower bound
+$$
+\Sigma[\lambda]
+\ge
+\int_0^\tau
+\dot\lambda^iG_{ij}(\lambda)\dot\lambda^j\,dt.
+\tag{D.8.7.3}
+$$
+Then every drift from $\lambda_0$ to $\lambda_1$ in time $\tau$ satisfies
+$$
+\boxed{
+\Sigma[\lambda]\ge \frac{d_G(\lambda_0,\lambda_1)^2}{\tau}
+}
+\tag{D.8.7.4}
+$$
+where $d_G$ is the geodesic distance induced by $G$.
+
+*Proof.* Let
+$$
+v(t)=
+\sqrt{
+\dot\lambda^iG_{ij}(\lambda)\dot\lambda^j
+}.
+$$
+Then
+$$
+L_G(\lambda)=\int_0^\tau v(t)\,dt.
+$$
+By Cauchy-Schwarz,
+$$
+L_G(\lambda)^2
+\le
+\left(\int_0^\tau 1^2\,dt\right)
+\left(\int_0^\tau v(t)^2\,dt\right)
+=
+\tau
+\int_0^\tau
+\dot\lambda^iG_{ij}(\lambda)\dot\lambda^j\,dt.
+$$
+Using (D.8.7.3),
+$$
+L_G(\lambda)^2\le \tau\,\Sigma[\lambda].
+$$
+Since $d_G(\lambda_0,\lambda_1)$ is the infimum of $L_G$ over all paths with the same endpoints,
+$$
+d_G(\lambda_0,\lambda_1)^2
+\le
+L_G(\lambda)^2
+\le
+\tau\,\Sigma[\lambda].
+$$
+Dividing by $\tau$ gives (D.8.7.4). ∎
+
+**Corollary D.8.7c (Finite-Dissipation Bound on Varying Constants).** If a single effective constant $\lambda$ drifts on an interval where
+$$
+G_{\lambda\lambda}(\lambda)\ge G_{\min}>0,
+$$
+then
+$$
+|\lambda(\tau)-\lambda(0)|
+\le
+\sqrt{\frac{\Sigma[\lambda]\tau}{G_{\min}}}.
+\tag{D.8.7.5}
+$$
+
+*Proof.* In one dimension,
+$$
+d_G(\lambda(0),\lambda(\tau))
+\ge
+\sqrt{G_{\min}}\,
+|\lambda(\tau)-\lambda(0)|.
+$$
+Substitute this into Theorem D.8.7b and solve for the drift magnitude. ∎
+
+**Corollary D.8.7d (Predictive Price of Cosmological Drift).** Slow variation of effective constants such as $\alpha$, $G$, masses, threshold scales, or dark-sector constitutive parameters is MPU-admissible only when the corresponding Fisher-geometric distance is paid for by entropy production. A drift with zero entropy production is confined to $d_G=0$, hence to operationally indistinguishable parameter directions.
+
+*Proof.* Set $\Sigma[\lambda]=0$ in (D.8.7.4). Then $d_G(\lambda_0,\lambda_1)=0$. Since $G$ is positive definite on identifiable directions, the endpoints differ only along non-identifiable quotient directions. ∎
+
+### D.8.8 Tropical Predictive Action
+
+**Definition D.8.8a (Finite Update-History Free Cost).** Let $\mathcal H$ be a finite set of admissible update histories $\gamma$, each with predictive cost $C(\gamma)\in\mathbb R$. For $\beta>0$, define
+$$
+Z_\beta=\sum_{\gamma\in\mathcal H}e^{-\beta C(\gamma)}
+$$
+and the free predictive cost
+$$
+F_\beta=-\frac1\beta\log Z_\beta.
+\tag{D.8.8.1}
+$$
+
+**Theorem D.8.8b (Tropical Limit of Predictive Action).** For a finite update-history family,
+$$
+\lim_{\beta\to\infty}F_\beta
+=
+\min_{\gamma\in\mathcal H}C(\gamma).
+\tag{D.8.8.2}
+$$
+More precisely, if
+$$
+C_{\min}=\min_{\gamma}C(\gamma),
+\qquad
+m=\#\{\gamma:C(\gamma)=C_{\min}\},
+\qquad
+N=\#\mathcal H,
+$$
+then
+$$
+C_{\min}-\frac{\log N}{\beta}
+\le
+F_\beta
+\le
+C_{\min}-\frac{\log m}{\beta}.
+\tag{D.8.8.3}
+$$
+
+*Proof.* Write
+$$
+Z_\beta
+=
+e^{-\beta C_{\min}}
+\sum_{\gamma\in\mathcal H}
+e^{-\beta(C(\gamma)-C_{\min})}.
+$$
+The sum contains exactly $m$ terms equal to $1$ and at most $N$ terms bounded by $1$, hence
+$$
+m
+\le
+\sum_{\gamma\in\mathcal H}
+e^{-\beta(C(\gamma)-C_{\min})}
+\le
+N.
+$$
+Taking logarithms and multiplying by $-1/\beta$ gives (D.8.8.3). Letting $\beta\to\infty$ gives (D.8.8.2). ∎
+
+**Corollary D.8.8c (Least Action, Shortest Paths, and Minimum Cuts as One Tropical Limit).** Whenever a PU branch represents histories, paths, or cuts by finite costs $C(\gamma)$, the PCE-selected least-cost object is the tropical limit of the update-history sum. In this limit,
+$$
+\text{ordinary addition of weights becomes minimization,}
+$$
+and
+$$
+\text{ordinary multiplication of weights becomes addition of costs.}
+$$
+
+*Proof.* Theorem D.8.8b identifies the limiting free cost with the minimum of $C$. Products of weights satisfy
+$$
+e^{-\beta C_1}e^{-\beta C_2}
+=
+e^{-\beta(C_1+C_2)},
+$$
+so multiplication of weights corresponds to addition of costs. Sums of weights are dominated by the least exponent in the $\beta\to\infty$ limit, so addition of weights corresponds to minimization. ∎
+
 ## D.9 Conclusion
 
 This appendix has provided a rigorous analysis grounded in the variational perspective of minimizing the PCE Potential $V(x)$ (Definition D.1), modeling the slow adaptation dynamics of the MPU network as a stochastic gradient flow (Equation D.8). We demonstrated through formal proofs and analysis of the potential structure and dynamics that:

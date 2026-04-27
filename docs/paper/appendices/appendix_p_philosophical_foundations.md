@@ -1447,6 +1447,112 @@ The PPI is the bridge between pure mathematics and physics. It explains why the 
 
 When a derivation invokes "PPI requires…", it invokes admissibility and PPI-optimality; when it invokes "PCE selects…", it invokes the explicit $V$-minimization machinery used to guarantee strict selection among admissible alternatives.
 
+### P.6.1a PPI-Contract Rigidity
+
+**Definition P.6.1a.1 (PPI Contract).** A PPI contract is a quadruple
+$$
+\mathcal C=(\mathcal I,\mathcal O,\pi,\eta)
+$$
+where $\mathcal I$ is a finite list of PU-internal invariants, $\mathcal O$ is a finite list of operational observables, $\pi:\mathcal I\to\mathcal O$ is the interpretation map, and $\eta$ is the finite-resolution error budget assigning a tolerance to each observable comparison. Two contracts are operationally equivalent, written $\mathcal C_1\sim_{\mathrm{op}}\mathcal C_2$, when every MPU-admissible protocol produces outcome distributions agreeing within the error budget $\eta$ after applying the corresponding interpretation maps.
+
+**Definition P.6.1a.2 (Contract Cost).** On an admissible class $\mathfrak C$ of PPI contracts, define
+$$
+\mathcal L_{\mathrm{PPI}}(\mathcal C)
+=
+L_{\mathrm{desc}}(\mathcal C)
++
+L_{\mathrm{viol}}(\mathcal C)
++
+L_{\mathrm{regret}}(\mathcal C),
+\tag{P.6.1a.1}
+$$
+where $L_{\mathrm{desc}}$ is the description length of the interpretation map and branch data, $L_{\mathrm{viol}}$ is the nonnegative penalty for violating already-derived PU constraints, and $L_{\mathrm{regret}}$ is the predictive regret against admissible protocols. The cost descends to the quotient $\mathfrak C/\sim_{\mathrm{op}}$ whenever all three terms are invariant under operational equivalence.
+
+**Theorem P.6.1a.3 (PPI-Contract Rigidity on a Strict PCE Branch).** Suppose the quotient $Q=\mathfrak C/\sim_{\mathrm{op}}$ is compact in the finite-resolution topology induced by the protocol family, and suppose the descended cost
+$$
+\bar{\mathcal L}_{\mathrm{PPI}}:Q\to\mathbb R_{\ge0}
+$$
+is lower semicontinuous and strictly convex along every nontrivial operational interpolation in $Q$, and assume any two distinct minimizers in $Q$ can be joined by such an interpolation. Then there is a unique minimizing PPI contract up to operational equivalence:
+$$
+[\mathcal C_{\mathrm{phys}}]
+=
+\operatorname*{argmin}_{[\mathcal C]\in Q}
+\bar{\mathcal L}_{\mathrm{PPI}}([\mathcal C]).
+\tag{P.6.1a.2}
+$$
+
+*Proof.* Compactness of $Q$ and lower semicontinuity of $\bar{\mathcal L}_{\mathrm{PPI}}$ imply existence of at least one minimizer by the direct method. Suppose $[\mathcal C_1]$ and $[\mathcal C_2]$ are two distinct minimizers with common value $m$. Since they are distinct in $Q$, there is a nontrivial operational interpolation $[\mathcal C_t]$, $0<t<1$, between them. Strict convexity gives
+$$
+\bar{\mathcal L}_{\mathrm{PPI}}([\mathcal C_t])
+<
+(1-t)\bar{\mathcal L}_{\mathrm{PPI}}([\mathcal C_1])
++
+t\bar{\mathcal L}_{\mathrm{PPI}}([\mathcal C_2])
+=
+m,
+$$
+contradicting minimality of $m$. Hence the minimizer is unique in the quotient. Representatives of the same quotient class differ only by operationally null reparameterization, so uniqueness is exactly uniqueness up to PPI-equivalence. ∎
+
+**Corollary P.6.1a.4 (No Free Interpretive Branches at Fixed Predictive Content).** If two PPI mappings have identical operational predictions and one has strictly larger description length or constraint-violation cost, PCE removes the larger one.
+
+*Proof.* Identical operational predictions place the two mappings in the same predictive fiber. A strictly larger description or violation term increases $\mathcal L_{\mathrm{PPI}}$ while leaving $L_{\mathrm{regret}}$ unchanged, so it cannot minimize (P.6.1a.1). ∎
+
+### P.6.1b Operational Yoneda Reconstruction
+
+**Definition P.6.1b.1 (Protocol Response Presheaf).** Let $\mathsf P_{\mathrm{PU}}$ be the finite category of MPU-admissible protocols at fixed resolution, with morphisms given by admissible protocol refinements, coarse-grainings, and pre/post-processing maps. Let $\mathsf{Prob}_{\mathrm{fin}}$ be the category of finite probability spaces and stochastic maps. For a PPI-admissible internal invariant $X$, define its operational response presheaf
+$$
+\mathcal R_X:\mathsf P_{\mathrm{PU}}^{op}\to\mathsf{Prob}_{\mathrm{fin}}
+$$
+by assigning to each protocol $P$ the finite outcome distribution
+$$
+\mathcal R_X(P)=\Pr_X(\cdot\mid P).
+$$
+A protocol family is separating when
+$$
+\mathcal R_X(P)=\mathcal R_Y(P)
+\quad
+\text{for every }P\in\mathsf P_{\mathrm{PU}}
+$$
+implies $X\sim_{\mathrm{op}}Y$.
+
+**Definition P.6.1b.2 (Protocol-Complete PPI Branch).** A PPI branch is protocol-complete when every natural transformation
+$$
+\eta:\mathcal R_X\Rightarrow\mathcal R_Y
+$$
+between response presheaves is induced by a PPI-admissible transformation $X\to Y$, unique up to operational equivalence.
+
+**Theorem P.6.1b.3 (Operational Yoneda Reconstruction).** On a separating protocol-complete PPI branch, the assignment
+$$
+\mathcal Y_{\mathrm{op}}:
+X\longmapsto\mathcal R_X
+$$
+descends to a fully faithful functor
+$$
+\mathsf{Inv}_{\mathrm{PPI}}/{\sim_{\mathrm{op}}}
+\hookrightarrow
+[\mathsf P_{\mathrm{PU}}^{op},\mathsf{Prob}_{\mathrm{fin}}].
+\tag{P.6.1b.1}
+$$
+Consequently,
+$$
+\mathcal R_X\simeq\mathcal R_Y
+\quad\Longleftrightarrow\quad
+X\sim_{\mathrm{op}}Y.
+\tag{P.6.1b.2}
+$$
+
+*Proof.* The assignment is well-defined on the quotient because operationally equivalent invariants give the same outcome distributions for every admissible protocol. If
+$$
+\mathcal Y_{\mathrm{op}}([X])=\mathcal Y_{\mathrm{op}}([Y]),
+$$
+then $\mathcal R_X(P)=\mathcal R_Y(P)$ for all protocols $P$. Since the protocol family is separating, $X\sim_{\mathrm{op}}Y$, proving faithfulness on objects.
+
+For morphisms, suppose two PPI-admissible transformations $f,g:X\to Y$ induce the same natural transformation between $\mathcal R_X$ and $\mathcal R_Y$. Then every protocol sees the same stochastic response after applying $f$ or $g$. Separating protocols identify them as the same morphism in the operational quotient, proving faithfulness on Hom-sets. Conversely, protocol-completeness says that every natural transformation $\eta:\mathcal R_X\Rightarrow\mathcal R_Y$ is induced by a PPI-admissible transformation $X\to Y$, unique up to operational equivalence. This proves fullness. Therefore $\mathcal Y_{\mathrm{op}}$ is fully faithful. The equivalence (P.6.1b.2) is the object-level consequence of full faithfulness. ∎
+
+**Corollary P.6.1b.4 (No Observable Without a Protocol Presheaf).** An internal PU invariant has physical content exactly to the extent that it defines a nontrivial operational response presheaf. If two invariants define naturally isomorphic response presheaves, PPI identifies them as the same physical invariant.
+
+*Proof.* Theorem P.6.1b.3 embeds physical invariants into the presheaf category of protocol responses. A trivial or naturally redundant presheaf gives no distinction in the quotient. ∎
+
 ### P.6.2 Illustrating PPI: From Abstract Requirements to Specific Laws
 
 The following cases illustrate the PPI in action, showing how specific physical laws emerge as the optimal physical solution to abstract requirements.
@@ -5133,6 +5239,39 @@ for some constant $C$, where $j(\tau) = q^{-1} + 744 + 196884q + \cdots$
 
 ---
 
+### Theorem P.13.28a (Modular Polar Rigidity of the Vacuum Spectrum)
+
+Let $f(\tau)$ and $g(\tau)$ be weakly holomorphic modular functions of weight zero for $SL_2(\mathbb Z)$, with no poles away from the cusp. Suppose their principal parts at $q=e^{2\pi i\tau}=0$ agree:
+$$
+f(\tau)-g(\tau)=O(q^0).
+$$
+Then $f-g$ is constant. If their constant terms also agree, then
+$$
+f(\tau)=g(\tau).
+$$
+Consequently, on the Moonshine branch, the vacuum character with principal part $q^{-1}$ and vanishing constant term is uniquely
+$$
+J(\tau)=j(\tau)-744
+=
+q^{-1}+196884q+21493760q^2+\cdots.
+$$
+
+*Proof.* The compactified modular curve
+$$
+X(1)=SL_2(\mathbb Z)\backslash\mathbb H^*
+$$
+is compact. Since $f$ and $g$ are weakly holomorphic modular functions with no poles away from the cusp and have the same principal part at the cusp, the difference
+$$
+h=f-g
+$$
+has no pole at the cusp and no pole anywhere else on $X(1)$. Thus $h$ is a holomorphic function on the compact Riemann surface $X(1)$. Every holomorphic function on a compact connected Riemann surface is constant, so $f-g$ is constant. If the constant terms also agree, that constant is zero, hence $f=g$.
+
+For the Moonshine branch, the character is a weight-zero modular function with a single pole $q^{-1}$ at the cusp and no other pole. The normalization $\dim(V_1)=0$ from Theorem P.13.28 fixes the constant term to zero. Therefore the preceding uniqueness result identifies the character with $j(\tau)-744=J(\tau)$. ∎
+
+**Corollary P.13.28b (Finite Polar Data Determine the Infinite Vacuum Tower).** On the Moonshine branch, once the modular group, weight, pole order $q^{-1}$, and constant term are fixed, all positive Fourier coefficients of the vacuum character are forced.
+
+*Proof.* Theorem P.13.28a proves uniqueness of the modular function with those data. If any positive coefficient differed, the resulting function would be a distinct modular function with the same principal part and constant term, contradicting uniqueness. ∎
+
 # Part V: The Monster Group
 
 ## P.13.12 Main Results
@@ -5159,6 +5298,36 @@ $$\boxed{\text{Aut}(\mathcal{V}_{\text{PCE}}) = \mathbb{M}}$$
 *Proof.* By Theorem P.13.27, $\mathcal{V}_{\text{PCE}} = V^\natural$ on the branch under consideration. By Theorem P.13.29, $\text{Aut}(V^\natural) = \mathbb{M}$. $\square$
 
 **Epistemic Status:** Follows from the branch identification of Theorem P.13.27 together with Frenkel, Lepowsky & Meurman 1988.
+
+---
+
+### P.13.30a Vacuum Stabilizer Descent from Monster Symmetry
+
+**Definition P.13.30a.1 (Predictive Polarization Datum).** On the Moonshine branch, a predictive polarization datum is
+$$
+\Pi_{\mathrm{PU}}
+=
+(\mathcal G_{24},\Lambda_{24},\mathcal A\oplus\mathcal B,\widetilde X,J_G),
+$$
+where $\mathcal G_{24}$ is the marked Golay code, $\Lambda_{24}$ is the marked Leech lattice, $\mathcal A\oplus\mathcal B$ is the active/inactive MPU polarization with $(a,b)=(2,6)$, $\widetilde X$ is the minimal flag lift used for the ordered $Y/W/C$ decomposition, and $J_G$ is the marked half-swap branch datum of Appendix G.
+
+**Theorem P.13.30a.2 (Stabilizer Descent of Low-Energy Symmetry).** Let
+$$
+\mathbb M_{\Pi}
+=
+\{g\in\mathbb M:g(\Pi_{\mathrm{PU}})=\Pi_{\mathrm{PU}}\}
+$$
+be the stabilizer of the predictive polarization datum inside the Monster group. Any exact low-energy symmetry that lifts to an automorphism of the Moonshine vacuum and preserves the PU polarization datum is the restriction of an element of $\mathbb M_{\Pi}$. Its action on the marked Golay-Leech carrier descends through the Conway/Golay stabilizer chain and, in the marked coordinate frame, through a subgroup of $M_{24}=\operatorname{Aut}(\mathcal G_{24})$.
+
+*Proof.* By Theorem P.13.30, the automorphism group of the Moonshine vacuum branch is $\operatorname{Aut}(V^\natural)=\mathbb M$. Therefore every exact vacuum-preserving automorphism of the Moonshine VOA branch is an element of $\mathbb M$. Requiring preservation of $\Pi_{\mathrm{PU}}$ imposes exactly the stabilizer condition $g(\Pi_{\mathrm{PU}})=\Pi_{\mathrm{PU}}$, so the admissible automorphisms are precisely elements of $\mathbb M_{\Pi}$. The Leech lattice sector of $V^\natural$ carries the Conway action on $\Lambda_{24}$, and the marked Golay frame is the binary code data used in the Leech construction. Any automorphism preserving the marked Golay code acts on the 24 coordinates by an automorphism of $\mathcal G_{24}$, hence by an element of $M_{24}$. Thus the low-energy action descends through the stabilizer chain
+$$
+\mathbb M_{\Pi}\longrightarrow \operatorname{Stab}_{Co_0}(\Pi_{\mathrm{PU}})\longrightarrow \operatorname{Stab}_{M_{24}}(\Pi_{\mathrm{PU}}).
+$$
+∎
+
+**Corollary P.13.30a.3 (Gauge and Flavor Labels as Stabilizer-Descended Data).** On the Moonshine branch, no independent exact low-energy label can be appended to the Standard Model or generation structure without either acting through the stabilizer of $\Pi_{\mathrm{PU}}$ or becoming operationally trivial under Corollary G.8.4h.3.
+
+*Proof.* If the label preserves the vacuum and the polarization datum, Theorem P.13.30a.2 places it in the stabilizer chain. If it does not act on any admissible interface channel, Corollary G.8.4h.3 removes it as an operationally null global label. These cases exhaust exact labels compatible with the stated branch. ∎
 
 ---
 

@@ -1179,6 +1179,20 @@ where $C_P[\Gamma_k]$ is the predictive complexity required to specify the effec
 
 **Part D (Fixed points as PCE equilibria).** At RG fixed points, $\partial_k \Gamma_k = 0$. This corresponds to $\partial \mathcal{L}_{\text{PCE}}/\partial \Gamma = 0$: the system has reached a local extremum of the PCE functional. The RG fixed point structure thus reflects the landscape of PCE equilibria. ∎
 
+**Remark K.10.7a (Categorical Language for Operational RG).** The RG-compression statement of Theorem K.10.7 can be expressed categorically without adding a new physical postulate. Let $\mathsf P_\Lambda$ be the finite category of MPU-admissible prediction protocols at resolution $\Lambda$, let
+$$
+F_\Lambda:\mathsf P_\Lambda\to\mathsf{Prob}
+$$
+assign outcome distributions, and let
+$$
+q_{\Lambda\to\mu}:\mathsf P_\Lambda\to\mathsf P_\mu
+$$
+be the finite coarse-graining functor that forgets protocol distinctions invisible at scale $\mu<\Lambda$. The lower-resolution predictive functor may be written as the universal finite pushforward
+$$
+F_\mu\simeq \operatorname{Lan}_{q_{\Lambda\to\mu}}F_\Lambda
+$$
+whenever the left Kan extension exists in the finite stochastic category being used. In this reading, universality classes are natural-isomorphism classes of lower-resolution prediction functors. This is an organizing language for Theorem K.10.7, not an independent derivation of the MPU-to-RG correspondence.
+
 **Corollary K.10.8 (Universality from PCE).** The universality of critical phenomena—insensitivity of long-distance physics to microscopic details—follows from PCE selecting against propagation of high-complexity microscopic information to macroscopic scales. Near a critical point, only relevant operators (low PCE cost) survive; irrelevant operators (high PCE cost) are suppressed by factors of $(k/\Lambda_{\text{MPU}})^{d-4}$.
 
 **Theorem K.10.9 (Operational Meaning of Non-Renormalizability).** Let a continuum effective description at scale $\mu$ be specified by an operator expansion with coefficients $\{c_n\}$. If achieving a fixed target prediction precision $\epsilon>0$ for a given operational observable at scale $\mu$ requires specification of an unbounded amount of independent information in $\{c_n\}$ (equivalently, predictive complexity $C_P\to\infty$ as $\epsilon\to 0$ at fixed $\mu$), then the description is not MPU-admissible and signals a mismatch between the chosen variables and the operational degrees of freedom at the intrinsic cutoff $\Lambda_{MPU}$.
@@ -1315,6 +1329,87 @@ Substitution yields (K.10.21). PCE enters by justifying the absence of additiona
 **Corollary K.10.16.1 (Finite-Resolution Status of the Turbulent Cascade).** PU does not require an exact continuum Navier-Stokes cascade extending to arbitrarily large $k$. The $-5/3$ exponent holds only on the finite operational band $k_0\ll k\ll k_d$, with deviations expected near forcing, dissipation, boundaries, anisotropic constraints, or $k_d\sim\Lambda_{\mathrm{MPU}}$.
 
 *Proof.* Theorem K.10.16 assumes a finite inertial interval. If $k$ approaches $k_0$, forcing details become operationally relevant and assumption 2 fails. If $k$ approaches $k_d$, dissipation or MPU-scale discreteness becomes operationally relevant and assumption 3 fails. Therefore the exponent is a finite-band universality statement, not a claim about an exact all-scale continuum. ∎
+
+### K.10.17 Finite Operational Theory-Space
+
+**Definition K.10.17a (Operational Theory Pseudometric at Fixed Resolution).** Fix an energy bound $E$, resolution $\delta$, finite predictive capacity bound $C$, and protocol depth bound $L$. Let $\mathcal P(E,\delta,C,L)$ be the finite set of MPU-admissible experimental protocols constructible from the finite interface alphabet, with depth at most $L$, energy at most $E$, and readout resolution $\delta$. Define the operational pseudometric
+$$
+d_{E,\delta,C,L}(T_1,T_2)
+=
+\max_{P\in\mathcal P(E,\delta,C,L)}
+d_{\mathrm{TV}}\bigl(\Pr_{T_1}(\cdot\mid P),\Pr_{T_2}(\cdot\mid P)\bigr).
+\tag{K.10.22}
+$$
+A family of theories is $\delta$-distinguishable when its distinct members have pseudometric distance greater than $\delta$.
+
+**Theorem K.10.17b (Finite Operational Theory-Space).** For fixed $(E,\delta,C,L)$ with $\delta>0$, every $\delta$-distinguishable family in
+$$
+\mathcal T(E,\delta,C,L)
+$$
+is finite. Equivalently, the induced prediction set has a finite $\delta$-cover in the operational pseudometric.
+
+*Proof.* The protocol grammar is finite: the interface alphabet is finite at fixed MPU resolution, and the depth bound $L$ allows only finitely many finite words in that alphabet. Hence $\mathcal P(E,\delta,C,L)=\{P_1,\dots,P_N\}$ is finite. For each protocol $P_i$, finite capacity and finite readout resolution imply a finite outcome partition
+$$
+\Omega_i=\{\omega_{i1},\dots,\omega_{im_i}\}.
+$$
+A theory determines a point in the finite product of probability simplices
+$$
+\Delta
+=
+\prod_{i=1}^N\Delta(\Omega_i).
+$$
+Each simplex $\Delta(\Omega_i)$ is compact and finite-dimensional, so it admits a finite $\delta$-net in total variation distance. The finite product $\Delta$ therefore admits a finite $\delta$-net with cardinality bounded by the product of the finite covering numbers of the factors. If two theories map to the same net cell, then all protocol outcome distributions differ by at most the chosen operational tolerance after refining the net by a factor of two. Thus only finitely many equivalence classes can be distinguished by MPU-admissible protocols at fixed $(E,\delta,C,L)$. ∎
+
+**Corollary K.10.17c (Operational Landscape Finiteness).** Infinite continuum parameter spaces in EFT, cosmology, or dark-sector modeling reduce at finite PU resolution to a finite atlas of distinguishable predictive cells.
+
+*Proof.* Such parameter spaces define maps into the finite product simplex $\Delta$ of Theorem K.10.17b. The image of any set under a finite-cover has no more distinguishable cells than the finite cover of $\Delta$. ∎
+
+### K.10.18 Predictive $c/a$-Theorem from Data Processing
+
+**Definition K.10.18a (Predictive Distinguishability Function).** Let $k_1>k_2$ denote two operational resolution scales, with $k_1$ the finer scale. Let
+$$
+\mathcal E_{k_1\to k_2}
+$$
+be the completely positive trace-preserving coarse-graining channel from the retained state space at scale $k_1$ to the retained state space at scale $k_2$. For a branch family $\mathcal S_{k_1}$, define $\mathcal S_{k_2}:=\mathcal E_{k_1\to k_2}(\mathcal S_{k_1})$ and
+$$
+C_{\mathrm{pred}}(k)
+=
+\sup_{\rho,\sigma\in\mathcal S_k}
+D(\rho\Vert\sigma),
+\tag{K.10.23}
+$$
+where $D(\rho\Vert\sigma)=\operatorname{Tr}\rho(\log\rho-\log\sigma)$ is quantum relative entropy on the common support.
+
+**Theorem K.10.18b (Predictive RG Monotonicity).** For every admissible coarse-graining channel,
+$$
+C_{\mathrm{pred}}(k_2)\le C_{\mathrm{pred}}(k_1).
+\tag{K.10.24}
+$$
+
+*Proof.* For any $\rho,\sigma\in\mathcal S_{k_1}$, monotonicity of quantum relative entropy under completely positive trace-preserving maps gives
+$$
+D(\mathcal E_{k_1\to k_2}(\rho)\Vert
+\mathcal E_{k_1\to k_2}(\sigma))
+\le
+D(\rho\Vert\sigma).
+$$
+Taking the supremum over $\rho,\sigma\in\mathcal S_{k_1}$ gives
+$$
+\sup_{\rho',\sigma'\in\mathcal S_{k_2}}
+D(\rho'\Vert\sigma')
+\le
+\sup_{\rho,\sigma\in\mathcal S_{k_1}}
+D(\rho\Vert\sigma),
+$$
+because every element of $\mathcal S_{k_2}$ is the coarse-grained image of an element of $\mathcal S_{k_1}$. This is (K.10.24). ∎
+
+**Corollary K.10.18c (Central-Function Reading on Conformal Branches).** On any branch where $C_{\mathrm{pred}}(k)$ is normalized to equal the appropriate central datum at conformal fixed points, such as $c$, $F$, or $a$ depending on dimension and symmetry class, Theorem K.10.18b supplies the PU monotonicity theorem for that central function.
+
+*Proof.* Theorem K.10.18b proves monotonicity along the RG channel. If the endpoint normalization identifies $C_{\mathrm{pred}}$ with the standard fixed-point central datum, then the same monotone function interpolates between those fixed-point values. ∎
+
+**Corollary K.10.18d (RG Irreversibility as Predictive Irreversibility).** A coarse-graining step can preserve $C_{\mathrm{pred}}$ only when it is sufficient for the branch family: for every pair $\rho,\sigma\in\mathcal S_{k_1}$ attaining the supremum, equality in data processing must hold.
+
+*Proof.* Equality in (K.10.24) requires equality in the data-processing inequality for the relevant maximizing pairs. The equality condition for relative entropy monotonicity is precisely recoverability by a Petz recovery channel on the involved states. Thus no predictive distinguishability is lost only when the coarse-grained description is sufficient for those distinctions. ∎
 
 ## K.11 Outlook and Future Directions
 

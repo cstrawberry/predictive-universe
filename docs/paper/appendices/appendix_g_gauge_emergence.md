@@ -165,6 +165,79 @@ This establishes that non-classical state space structure is logically necessary
 
 **Remark G.1.10b (Connection to Hilbert Space Formalism).** Within the MPU Hilbert space $\mathcal{H}_0$ established by Theorem G.1.8, complementary observables necessarily satisfy $[\hat{A}, \hat{B}] \neq 0$ (Lemma 14.2a). The present result provides a logically prior exclusion of classical alternatives, while the efficiency-based derivations of Section G.1 determine the specific quantum structure among non-classical candidates.
 
+### G.1.11 Born Rule as Perspective Descent
+
+**Definition G.1.11a (Perspective-Descent Probability Assignment).** Let $\mathcal P(\mathcal H_0)$ be the projection lattice of the MPU Hilbert branch with $\dim\mathcal H_0=d_0\ge8$. Let $\Sigma$ be the perspective space of Appendix M. A perspective-local probability assignment is a family
+$$
+p_s:\mathcal P(\mathcal H_0)\to[0,1],
+\qquad s\in\Sigma,
+$$
+such that for every perspective $s$:
+
+1. $p_s(I)=1$ and $p_s(0)=0$;
+2. if $P_iP_j=0$ for $i\ne j$ and $\sum_iP_i=P$, then
+$$
+p_s(P)=\sum_i p_s(P_i);
+$$
+3. if $U_{s\to t}$ is the unitary transition map between overlapping perspective charts, then the descent condition holds:
+$$
+p_t(U_{s\to t}PU_{s\to t}^{-1})=p_s(P)
+\tag{G.1.11}
+$$
+for every sharp event projector $P$ visible on the overlap.
+
+**Theorem G.1.11b (Born Rule as Perspective Descent).** Every perspective-descent probability assignment on the MPU Hilbert branch has the Born form
+$$
+p_s(P)=\operatorname{Tr}(\rho_sP),
+\tag{G.1.12}
+$$
+where $\rho_s\ge0$ and $\operatorname{Tr}\rho_s=1$. On overlaps the density operators transform by
+$$
+\rho_t=U_{s\to t}\rho_sU_{s\to t}^{-1}.
+\tag{G.1.13}
+$$
+Conversely, every family of density operators satisfying (G.1.13) defines a perspective-descent probability assignment by (G.1.12).
+
+*Proof.* Fix a perspective $s$. By Definition G.1.11a, $p_s$ is normalized, nonnegative, and finitely additive on mutually orthogonal projectors. Since $\dim\mathcal H_0=d_0\ge8\ge3$, Gleason's theorem applies and gives a unique positive trace-one operator $\rho_s$ such that
+$$
+p_s(P)=\operatorname{Tr}(\rho_sP)
+$$
+for every projector $P$. Now let $s,t$ be overlapping perspectives. Using descent and cyclicity of trace,
+$$
+\operatorname{Tr}(\rho_tU_{s\to t}PU_{s\to t}^{-1})
+=
+p_t(U_{s\to t}PU_{s\to t}^{-1})
+=
+p_s(P)
+=
+\operatorname{Tr}(\rho_sP).
+$$
+Equivalently,
+$$
+\operatorname{Tr}(U_{s\to t}^{-1}\rho_tU_{s\to t}P)
+=
+\operatorname{Tr}(\rho_sP)
+$$
+for all projectors $P$. Projectors span the self-adjoint operator space, so
+$$
+U_{s\to t}^{-1}\rho_tU_{s\to t}=\rho_s,
+$$
+which is (G.1.13). Conversely, if (G.1.13) holds, then (G.1.12) is normalized, nonnegative, orthogonally additive, and satisfies
+$$
+p_t(U_{s\to t}PU_{s\to t}^{-1})
+=
+\operatorname{Tr}(U_{s\to t}\rho_sU_{s\to t}^{-1}U_{s\to t}PU_{s\to t}^{-1})
+=
+\operatorname{Tr}(\rho_sP)
+=
+p_s(P).
+$$
+Thus it descends. ∎
+
+**Corollary G.1.11c (Noncontextuality as Descent, Not an Additional Physical Postulate).** On the MPU Hilbert branch, the noncontextual frame functional used in Theorem G.1.7 is represented by the descent condition (G.1.11) for perspective-local probability assignments. Conversely, when admissible perspective transitions generate the relevant measurement-frame identifications, descent implies the noncontextual frame functional.
+
+*Proof.* A noncontextual frame functional assigns the same value to a projector independently of the measurement context in which it appears. Perspective descent says that the value assigned to the same sharp event is unchanged under admissible chart transition. When the admissible chart transitions cover the measurement-frame changes, both conditions identify local representatives of one global section of the probability presheaf. Theorem G.1.11b then supplies the trace-form representative. ∎
+
 **G.2 Local Phase Freedom and Emergence of Gauge Structure**
 
 Having established the necessity of a complex Hilbert space $\mathcal{H}$ and the Born rule from PCE principles, we now derive the origin of gauge symmetries.
@@ -1714,6 +1787,85 @@ This state is stabilized by 24 independent generators: 12 X-type generators $S_i
 On the residual-syndrome branch of Appendix Z, this stabilizer/vacuum interpretation becomes experimentally diagnostic rather than merely structural. Ordinary hardware noise may still generate low-weight errors, but after those device-local channels are modeled and separated, the exact substrate component has no native nonzero shell below weight 8 and its leading correlated shell is the 759-octad shell. Thus the test is not whether all physical errors have high weight; it is whether the irreducible residual correlated component, in a marked 24-mode interface frame, carries the $M_{24}$-symmetric Golay shell fingerprint.
 
 **Remark G.8.4g.2: Functional and Carrier-Level Readings.** Within PU, gauge redundancy can be interpreted as the operational redundancy of an error-correcting vacuum organization. Gauge transformations identify descriptions with the same physical content, just as parity constraints identify codewords belonging to the protected code structure. The carrier-level statement is exact by Theorem G.8.4g: both sides are Lagrangian structures on the same 24-mode interface after the marked frame is fixed. The functional statement is more limited: the Lie bracket of $\mathfrak g_{\mathrm{SM}}$ is not binary code addition, and individual gauge transformations are not individual Golay codewords.
+
+### G.8.4h Predictive Interface Tensor Category and Global-Symmetry Exclusion
+
+**Definition G.8.4h.1 (Predictive Interface Tensor Category).** Let the PCE-selected inactive-sector decomposition of Theorem G.8.4b be written
+$$
+\mathcal B=C\oplus W\oplus Y,
+\qquad
+\dim C=3,\quad \dim W=2,\quad \dim Y=1.
+$$
+The predictive interface tensor category $\mathsf C_{\mathrm{int}}$ is the rigid tensor category generated by $C$, $W$, their duals, finite direct sums, subquotients, and tensor products, with the following PPI contracts imposed:
+
+1. Hermitian inner products on $C$ and $W$ are preserved.
+2. The one-dimensional sector $Y$ is not an independent phase generator; it is the determinant marker fixing the unimodular interface relation.
+3. The determinant line
+$$
+\Lambda^3C\otimes\Lambda^2W
+$$
+is preserved as a physically fixed PPI normalization line.
+
+Let
+$$
+F_{\mathrm{int}}:\mathsf C_{\mathrm{int}}\to\mathrm{Hilb}_{\mathrm{fd}}
+$$
+be the forgetful fiber functor.
+
+**Theorem G.8.4h.2 (Tannakian Reconstruction of the Standard Model Gauge Group on the Selected Interface Branch).** The unitary tensor automorphism group of $F_{\mathrm{int}}$ is
+$$
+\operatorname{Aut}^{\otimes}_{u}(F_{\mathrm{int}})
+\cong
+S(U(3)\times U(2))
+=
+\{(g_C,g_W)\in U(3)\times U(2):\det g_C\det g_W=1\}.
+\tag{G.8.4h}
+$$
+Its Lie algebra is
+$$
+\mathfrak{aut}^{\otimes}_{u}(F_{\mathrm{int}})
+\cong
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1),
+$$
+with dimension $8+3+1=12$.
+
+*Proof.* A tensor natural automorphism of the forgetful functor is determined by its action on the tensor generators $C$ and $W$, because every object of $\mathsf C_{\mathrm{int}}$ is obtained from these by tensor operations, duals, direct sums, and subquotients. Preservation of the Hermitian contracts gives
+$$
+g_C\in U(C)\cong U(3),
+\qquad
+g_W\in U(W)\cong U(2).
+$$
+Naturality on duals forces the dual actions to be $g_C^{-T}$ and $g_W^{-T}$. Naturality on tensor products forces the action on any tensor word to be the corresponding tensor product of $g_C$, $g_W$, and their dual actions. The determinant PPI contract requires the action on $\Lambda^3C\otimes\Lambda^2W$ to be the identity, hence
+$$
+\det g_C\det g_W=1.
+$$
+Therefore the automorphism group is precisely $S(U(3)\times U(2))$.
+
+For the Lie algebra, write
+$$
+\mathfrak u(3)\oplus\mathfrak u(2)
+=
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus i\mathbb R\oplus i\mathbb R.
+$$
+The infinitesimal determinant condition is
+$$
+\operatorname{tr}X_C+\operatorname{tr}X_W=0,
+$$
+which removes one central real direction and leaves one central real direction. Thus
+$$
+\mathfrak{aut}^{\otimes}_{u}(F_{\mathrm{int}})
+=
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1),
+$$
+and its dimension is
+$$
+(3^2-1)+(2^2-1)+1=8+3+1=12.
+$$
+This equals the Lagrangian gauge-capacity bound of Theorem G.8.2e and the gauge algebra selected in Corollary G.8.4c. ∎
+
+**Corollary G.8.4h.3 (No Exact Operational Global Symmetry).** Let $\eta$ be an exact symmetry label on the selected interface branch. If $\eta$ has no nontrivial action on any object of $\mathsf C_{\mathrm{int}}$ and no nontrivial action on any admissible local interface channel, then $\eta$ is operationally trivial and is quotiented out by PCE. If $\eta$ acts nontrivially on an admissible local interface channel, then it is represented by a tensor automorphism of $F_{\mathrm{int}}$ and hence lies in the reconstructed gauge group or in a finite stabilizer already present in the marked Golay-Leech data.
+
+*Proof.* Because $F_{\mathrm{int}}$ is faithful, two tensor natural transformations that agree on all objects and all morphisms of $\mathsf C_{\mathrm{int}}$ are equal. If $\eta$ acts trivially on every object and every admissible local interface channel, then it produces identical operational probabilities for every MPU-accessible protocol. By Definition X.9.1 such descriptions are MPU-equivalent, and by Proposition X.9.3 they are PCE-degenerate; the surplus label has positive description cost and zero predictive benefit, so PCE removes it. If $\eta$ acts nontrivially on a local interface channel, faithfulness represents that action as a nontrivial tensor automorphism of the functor, so by Theorem G.8.4h.2 it belongs to $S(U(3)\times U(2))$ on the connected gauge branch. If the action is discrete and preserves the marked Golay-Leech carrier rather than the connected interface functor, it is a stabilizer of the marked finite code/lattice data and is not an exact continuous global symmetry. ∎
 
 ### G.8.5 The Standard Model, Hypercharge, and Three Generations as a Unified PCE Optimum
 

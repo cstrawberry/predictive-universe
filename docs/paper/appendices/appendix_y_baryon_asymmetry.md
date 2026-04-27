@@ -165,6 +165,55 @@ This factor governs the magnitude of CP-odd corrections to sphaleron rates.
 
 ---
 
+### Y.4.3 Predictive Index Form of Anomaly-Mediated Update
+
+**Definition Y.4.3a (Chiral Predictive Update Operator).** Let $X$ be a compact regular Euclidean interpolation region between initial and final Cauchy hypersurfaces $\Sigma_i$ and $\Sigma_f$. Let $D_X^+$ be the chiral Dirac operator coupled to the electroweak gauge background on the SM branch, with Atiyah-Patodi-Singer boundary conditions. Define the predictive update index
+$$
+\operatorname{Ind}_{\mathrm{upd}}(D_X)
+=
+\dim\ker D_X^+
+-
+\dim\ker D_X^-.
+\tag{Y.12a}
+$$
+
+**Theorem Y.4.3b (Predictive Index Theorem for Baryon Update).** On the regular electroweak anomaly branch,
+$$
+\operatorname{Ind}_{\mathrm{upd}}(D_X)
+=
+\int_X \widehat A(R)\operatorname{ch}(F)\big|_4
+-
+\frac{\eta(D_{\Sigma_f})-\eta(D_{\Sigma_i})+h_f-h_i}{2},
+\tag{Y.12b}
+$$
+where $\eta(D_{\Sigma})$ is the eta invariant of the boundary Dirac operator and $h_\Sigma=\dim\ker D_\Sigma$. For an electroweak topological transition with
+$$
+Q_W=\Delta N_{CS},
+$$
+the baryon-plus-lepton update is
+$$
+\Delta(B+L)
+=
+2N_g\,\operatorname{Ind}_{\mathrm{upd}}(D_X)
+=
+2N_g\,\Delta N_{CS}.
+\tag{Y.12c}
+$$
+
+*Proof.* Equation (Y.12b) is the Atiyah-Patodi-Singer index theorem applied to the chiral Dirac operator on the compact interpolation region $X$. On a product interpolation, the same index equals the spectral flow of the corresponding family of spatial Dirac operators between $\Sigma_i$ and $\Sigma_f$. In the electroweak $SU(2)$ sector, the spectral flow equals the gauge topological charge
+$$
+Q_W=\Delta N_{CS}
+$$
+with the standard anomaly normalization used in Theorem Y.4. For each generation, the anomaly changes baryon number and lepton number by the same topological unit, so the combined $B+L$ change per generation is $2Q_W$. Summing over $N_g$ generations gives
+$$
+\Delta(B+L)=2N_gQ_W.
+$$
+Substituting $Q_W=\operatorname{Ind}_{\mathrm{upd}}(D_X)$ gives (Y.12c). ∎
+
+**Corollary Y.4.3c (Chirality, Anomaly Inflow, and Baryogenesis Share One Index).** On the Appendix Y branch, chiral spectral flow, anomaly-mediated update, and baryon production are three descriptions of the same integer index.
+
+*Proof.* Theorem Y.4.3b identifies the chiral spectral flow with $\operatorname{Ind}_{\mathrm{upd}}(D_X)$ and identifies the same integer with $\Delta N_{CS}$. Theorem Y.4 identifies $\Delta N_{CS}$ with anomaly-mediated baryon update. Therefore all three quantities are the same index data with different projections. ∎
+
 ## Y.5 CP-Violating Source from Berry Holonomy
 
 ### Y.5.1 The Predictive Flavor Bundle

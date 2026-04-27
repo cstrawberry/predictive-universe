@@ -214,6 +214,93 @@ Finally, superluminal propagation contradicts the instantiation bounds formalize
 
 *Proof.* Direct application of Theorems O.7a (signature forcing), O.7b (speed normalization), and Corollary O.7b.1 (derived local Lorentz invariance and frame-bundle structure) to the output of Theorem 46 and §O.7.1. The three-spatial-dimensional hypothesis of Theorem O.7a is supplied on the Appendix Z tangent-kissing mode-channel branch of Theorem Z.11. ∎
 
+### 11.6.3 Causal-Diamond Reconstruction from Predictive Inclusion
+
+**Definition 46b (Operational Causal-Diamond Valuation).** On a regular Lorentzian branch, let $\mathcal D_{\mathrm{op}}$ be the set of relatively compact operational causal diamonds. Each $D\in\mathcal D_{\mathrm{op}}$ carries a finite predictive algebra $\mathfrak A(D)$ satisfying isotony:
+$$
+D_1\subseteq D_2
+\quad\Longrightarrow\quad
+\mathfrak A(D_1)\subseteq\mathfrak A(D_2).
+$$
+Assume the branch is inclusion-faithful:
+$$
+\mathfrak A(D_1)\subseteq\mathfrak A(D_2)
+\quad\Longrightarrow\quad
+D_1\subseteq D_2
+$$
+for operational diamonds. Let
+$$
+V_{\mathrm{cap}}(D)
+$$
+be the finite predictive capacity valuation of $D$, equal to the supremal reliable nats stored or transmitted by $\mathfrak A(D)$ at the stated resolution.
+
+**Theorem 46b (Causal-Diamond Reconstruction of the Emergent Metric Branch).** Let $(M,g,V_{\mathrm{cap}})$ and $(M',g',V'_{\mathrm{cap}})$ be two connected, time-oriented, past-and-future distinguishing, globally hyperbolic regular Lorentzian branches satisfying Definition 46b. Suppose there is a bijection
+$$
+\Phi:\mathcal D_{\mathrm{op}}(M)\to\mathcal D_{\mathrm{op}}(M')
+$$
+such that
+$$
+D_1\subseteq D_2
+\quad\Longleftrightarrow\quad
+\Phi(D_1)\subseteq\Phi(D_2)
+$$
+and
+$$
+V_{\mathrm{cap}}(D)=V'_{\mathrm{cap}}(\Phi(D))
+$$
+for every operational diamond $D$. Then:
+
+1. $\Phi$ induces a homeomorphism $F:M\to M'$.
+2. $F$ preserves the causal order.
+3. $F$ determines the conformal Lorentzian metric:
+$$
+F^*[g']=\Omega^2[g]
+$$
+for a positive function $\Omega$ on the regular set.
+4. If both branches use the same capacity density normalization
+$$
+V_{\mathrm{cap}}(D)=\sigma_{\mathrm{cap}}\operatorname{Vol}_g(D),
+\qquad
+V'_{\mathrm{cap}}(D')=\sigma_{\mathrm{cap}}\operatorname{Vol}_{g'}(D')
+$$
+on sufficiently small diamonds, then $\Omega=1$ almost everywhere on the regular set, so the metric scale is fixed by the capacity valuation.
+
+*Proof.* The set of relatively compact causal diamonds is a basis for the manifold topology on a globally hyperbolic distinguishing Lorentzian manifold. Since $\Phi$ preserves and reflects inclusion, it preserves the basis order. For each point $p\in M$, the family of diamonds containing $p$ is a completely prime filter in the inclusion poset. Inclusion preservation sends this filter to a completely prime filter in $\mathcal D_{\mathrm{op}}(M')$, which is the family of diamonds containing a unique point $F(p)\in M'$. This defines a bijection $F:M\to M'$. Because basic neighborhoods are diamonds and $\Phi$ preserves their inclusion relations, $F$ and $F^{-1}$ pull back basic neighborhoods to basic neighborhoods, so $F$ is a homeomorphism.
+
+Causal order is recoverable from diamonds: $p\le q$ if and only if every diamond containing $q$ whose past face is sufficiently small has a predecessor diamond containing $p$, equivalently if the Alexandrov neighborhoods ordered between $p$ and $q$ are nonempty in the diamond poset. Since $\Phi$ preserves the diamond order, $F$ preserves and reflects this causal order.
+
+On a past-and-future distinguishing Lorentzian manifold, the causal order determines the conformal class of the Lorentzian metric on the regular set. Hence
+$$
+F^*[g']=\Omega^2[g]
+$$
+for some positive $\Omega$.
+
+For the scale, take sufficiently small diamonds $D_\epsilon(p)$ shrinking regularly to $p$. In four dimensions,
+$$
+\operatorname{Vol}_{F^*g'}(D_\epsilon(p))
+=
+\Omega(p)^4\operatorname{Vol}_{g}(D_\epsilon(p))+o(\operatorname{Vol}_{g}(D_\epsilon(p))).
+$$
+Capacity preservation and the common normalization give
+$$
+\sigma_{\mathrm{cap}}\operatorname{Vol}_{g}(D_\epsilon(p))
+=
+\sigma_{\mathrm{cap}}\operatorname{Vol}_{g'}(\Phi(D_\epsilon(p))).
+$$
+Pulling back the right side and dividing by $\sigma_{\mathrm{cap}}\operatorname{Vol}_{g}(D_\epsilon(p))$ gives
+$$
+1=\Omega(p)^4+o(1).
+$$
+Letting $\epsilon\to0$ gives $\Omega(p)=1$ for almost every regular point. Thus the causal-diamond inclusion order fixes the conformal geometry, and the predictive capacity valuation fixes the conformal scale. ∎
+
+**Corollary 46c (Spacetime as the Regular Representation of Predictive Inclusion).** On the regular PU branch, the data
+$$
+(\mathcal D_{\mathrm{op}},\subseteq,V_{\mathrm{cap}})
+$$
+determine the emergent Lorentzian metric-measure structure up to the explicitly stated capacity-density normalization.
+
+*Proof.* This is exactly Theorem 46b applied to the identity class of operationally equivalent diamond-poset representations. ∎
+
 **11.7 Spacetime Curvature as Predictive Holonomy (Conditional on Thm 43, Thm 45)**
 
 Curvature of the emergent Lorentzian spacetime $(M, g_{\mu\nu})$ arises from the failure of local predictive-frame transport to close consistently around loops. The same transport statement applies to the internal predictive frame bundle, so the regular continuum branch has a single closed-system curvature object whose projections are the geometric and gauge curvatures.

@@ -933,6 +933,62 @@ Two perspective transitions of equal geometric distance $d_\Sigma(s, s')$ can ha
 
 *Proof.* (i) *Not a function of Shannon entropy.* Theorem M.10.2: patterns with identical $H$ have $\mu_S$ values ranging from $1/\alpha_{SPAP}$ to $\infty$. (ii) *Not a function of Fisher information.* Fisher information $I(\theta)$ does not possess the measurement asymmetry (Theorem M.10.5): any system with access to the model and data can compute $I(\theta)$, regardless of its complexity relative to the model. (iii) *Not a function of Kolmogorov complexity.* $K(x)$ is symmetrically uncomputable (no system can compute $K(x)$ for arbitrary $x$). Perspectival profiles are asymmetrically computable: $\mu_B(E)$ is computable by $A$ if $C_{agg}(A) > C_{agg}(B)$ but not by $B$. (iv) *Not a function of quantum information.* Von Neumann entropy and quantum mutual information are computable by any system with access to the state, regardless of self-referential structure. (v) *Not a function of integrated information.* In its core formulation, $\Phi(S)$ characterizes a system's intrinsic causal integration and does not vary over input patterns for a fixed system. More recent formulations (IIT 4.0) introduce internal structural decompositions that depend on system state, but these remain properties of the system's intrinsic causal architecture, not of external pattern-system pairs, and do not exhibit the directional measurement asymmetry (Theorem M.10.5), which is the structural differentiator. $\square$
 
+### M.10.10 Measurement as Entropic Perspective Transport
+
+**Definition M.10.10a (Entropic Perspective-Transport Problem).** Let $(\Sigma,d_\Sigma)$ be the compact perspective space of Appendix M and let $c(s,s')=d_\Sigma(s,s')^2$ be the quadratic perspective-transport cost. For a measurement partition $\{P_k\}$ and pre-measurement state $\rho$, let
+$$
+p_k=\operatorname{Tr}(\rho P_k)
+$$
+be the descended Born weights of Theorem G.1.11b. Let $\mu_0$ be the pre-interaction perspective distribution and let $\nu_k$ be the normalized endpoint distribution concentrated on perspectives in which outcome $k$ is actual. Define the endpoint mixture
+$$
+\nu=\sum_kp_k\nu_k.
+$$
+For a finite-resolution support, or more generally when $\mu_0$ and $\nu$ admit couplings absolutely continuous with respect to a strictly positive reference coupling $\pi_0$ on $\Sigma\times\Sigma$, and for $\varepsilon>0$, the entropic perspective-transport plan is the minimizer
+$$
+\pi^\star
+=
+\operatorname*{argmin}_{\pi\in\Pi(\mu_0,\nu)}
+\left[
+\int_{\Sigma\times\Sigma}c(s,s')\,d\pi(s,s')
++
+\varepsilon\,\operatorname{KL}(\pi\Vert\pi_0)
+\right],
+\tag{M.10.10.1}
+$$
+where $\Pi(\mu_0,\nu)$ is the set of couplings with marginals $\mu_0$ and $\nu$.
+
+**Theorem M.10.10b (Existence, Uniqueness, and Born Endpoint Marginals).** Under Definition M.10.10a, the minimizer $\pi^\star$ exists and is unique. Its endpoint outcome marginal is exactly the Born vector:
+$$
+\pi^\star(\Sigma\times\operatorname{supp}\nu_k)=p_k
+=
+\operatorname{Tr}(\rho P_k).
+\tag{M.10.10.2}
+$$
+
+*Proof.* The space $\Sigma$ is compact, so the coupling set $\Pi(\mu_0,\nu)$ is weakly compact. The cost $c$ is continuous and bounded on $\Sigma\times\Sigma$, hence $\pi\mapsto\int c\,d\pi$ is weakly continuous. The relative entropy term is lower semicontinuous, and because $\pi_0$ is strictly positive on the finite-resolution support, and by the stated absolute-continuity feasibility assumption, the functional is proper on $\Pi(\mu_0,\nu)$. Therefore a minimizer exists by the direct method. The relative entropy term is strictly convex on the convex set of couplings absolutely continuous with respect to $\pi_0$, while the transport cost is linear; hence the total functional is strictly convex and the minimizer is unique.
+
+The second marginal of every admissible coupling in $\Pi(\mu_0,\nu)$ is $\nu=\sum_kp_k\nu_k$. The supports of the endpoint outcome sectors are disjoint by construction of actualized outcome perspectives. Therefore
+$$
+\pi^\star(\Sigma\times\operatorname{supp}\nu_k)
+=
+\nu(\operatorname{supp}\nu_k)
+=
+p_k
+=
+\operatorname{Tr}(\rho P_k).
+$$
+This proves (M.10.10.2). ∎
+
+**Corollary M.10.10c (Measurement Kernel as a Schrödinger Bridge).** The conditional perspective kernel for a measurement interaction can be represented as the disintegration
+$$
+G_{\mathrm{persp}}(ds'\mid s,k,N,\Delta t)
+=
+\pi^\star(ds'\mid s)
+$$
+on the outcome sector $k$, with the endpoint weights fixed by perspective descent and the path selected by minimal entropic transport cost.
+
+*Proof.* The disintegration theorem gives conditional kernels $\pi^\star(ds'\mid s)$ for the unique coupling. Restricting the endpoint marginal to the sector $\operatorname{supp}\nu_k$ gives the outcome-conditioned kernel, and Theorem M.10.10b fixes the sector weights. ∎
+
 **Table M.6.10.1: Perspectival information compared with existing information types.**
 
 | Property | Shannon | Fisher | Kolmogorov | Quantum | Integrated ($\Phi$) | Perspectival |
@@ -959,6 +1015,142 @@ Two perspective transitions of equal geometric distance $d_\Sigma(s, s')$ can ha
 | Theorem M.10.7 | Physicality | Thm M.10.3, PPI, Thm 31 |
 | Theorem M.10.8 | Predictability from above; finite-family screening; replay distinction | Thm M.10.5, M.10.3 |
 | Theorem M.10.9 | Irreducibility | Structural comparison |
+| Theorem M.10.10 | Entropic perspective transport | Compactness, strict convexity, Born descent |
+
+### M.6.11 Blackwell-PCE Classicality
+
+**Definition M.6.11a (Finite Predictive Record Experiment).** Let $\Theta$ be a finite family of operationally distinguishable preparation states relevant to a measurement context, and let $R$ be a finite record alphabet. A record channel is a stochastic map
+$$
+\mathcal M:\Theta\to\Delta(R),
+\qquad
+\theta\mapsto p(r\mid\theta).
+$$
+For a finite family of predictive tasks $\mathcal T$, define the predictive profile of a record value $r$ by the vector
+$$
+\Pi(r)
+=
+\left(
+\mathbb E[X_j\mid r]
+\right)_{j\in\mathcal T},
+\tag{M.6.11.1}
+$$
+where each $X_j$ is the task-relevant target variable or loss statistic. Define an equivalence relation on records by
+$$
+r\sim r'
+\quad\Longleftrightarrow\quad
+\Pi(r)=\Pi(r').
+\tag{M.6.11.2}
+$$
+The quotient record channel is
+$$
+\mathcal M_{\min}:\Theta\to\Delta(R/{\sim}),
+\qquad
+p([r]\mid\theta)=\sum_{r'\in[r]}p(r'\mid\theta).
+\tag{M.6.11.3}
+$$
+
+**Theorem M.6.11b (Classical Records as PCE-Minimal Sufficient Statistics).** For the finite predictive task family $\mathcal T$:
+
+1. $\mathcal M_{\min}$ is sufficient for exactly the same predictive task risks as $\mathcal M$.
+2. $\mathcal M$ Blackwell-dominates $\mathcal M_{\min}$:
+$$
+\mathcal M\succeq_B\mathcal M_{\min}.
+\tag{M.6.11.4}
+$$
+3. Any record channel sufficient for all tasks in $\mathcal T$ Blackwell-dominates $\mathcal M_{\min}$.
+4. The output algebra of $\mathcal M_{\min}$ is the commutative algebra
+$$
+\ell^\infty(R/{\sim}).
+\tag{M.6.11.5}
+$$
+5. If PCE cost is strictly increasing under record refinements that do not reduce predictive regret, PCE selects $\mathcal M_{\min}$ uniquely up to relabeling of $R/{\sim}$.
+
+*Proof.* A decision rule for any task in $\mathcal T$ depends on a record $r$ only through the conditional expectations listed in $\Pi(r)$. If $r\sim r'$, substituting $r'$ for $r$ leaves every task risk unchanged. Therefore replacing $r$ by its equivalence class $[r]$ preserves exactly the predictive risks for all tasks in $\mathcal T$, proving (1).
+
+The quotient map $q:R\to R/{\sim}$ is a deterministic classical post-processing. Equation (M.6.11.3) is exactly
+$$
+\mathcal M_{\min}=q\circ\mathcal M,
+$$
+so $\mathcal M\succeq_B\mathcal M_{\min}$, proving (2).
+
+For (3), let $\mathcal N$ be any sufficient record channel for all tasks in $\mathcal T$. If $\mathcal N$ failed to determine the class $[r]$, then two records with distinct profiles $\Pi(r)\ne\Pi(r')$ would be merged. Since the task family is finite and profiles differ as vectors in a finite-dimensional real space, there exists a linear functional separating them. Choosing the corresponding finite loss statistic would give different optimal conditional risk for $r$ and $r'$, contradicting sufficiency of $\mathcal N$. Hence $\mathcal N$ determines $[r]$ by a stochastic post-processing, so $\mathcal N\succeq_B\mathcal M_{\min}$.
+
+For (4), a finite classical record alphabet $R/{\sim}$ has observable algebra of bounded functions on that set, namely $\ell^\infty(R/{\sim})$, which is commutative under pointwise multiplication.
+
+For (5), any strict refinement of $\mathcal M_{\min}$ that preserves the same risk profile adds record distinctions inside an equivalence class. These distinctions do not reduce predictive regret by (1), but they increase record description or maintenance cost by the stated strict PCE monotonicity. Therefore no strict refinement can minimize PCE cost. Since (3) makes $\mathcal M_{\min}$ Blackwell-minimal among sufficient records, the minimizer is unique up to relabeling of the quotient alphabet. ∎
+
+**Corollary M.6.11c (Pointer Classicality Without Extra Ontology).** In a finite measurement context, the classical pointer record is the PCE-minimal sufficient statistic of the interaction channel. Its commutativity follows from minimal record status, not from adding a separate classical substance.
+
+*Proof.* Apply Theorem M.6.11b to the finite record alphabet produced by the measurement interaction. The selected quotient output algebra is $\ell^\infty(R/{\sim})$, hence commutative. ∎
+
+### M.6.12 PCE Information-Bottleneck Universality
+
+**Definition M.6.12a (Finite Predictive Bottleneck).** Let $X$ be a finite substrate variable, let $Y$ be a finite task or protocol-outcome variable, and let $Z$ be a finite effective description variable generated by a stochastic kernel
+$$
+p(z\mid x).
+$$
+The PCE information-bottleneck functional is
+$$
+\mathcal B_\beta[p(z\mid x)]
+=
+I(X;Z)-\beta I(Z;Y),
+\qquad
+\beta\ge0.
+\tag{M.6.12.1}
+$$
+A statistic $Z$ is sufficient for predicting $Y$ from $X$ when
+$$
+p(y\mid x)=p(y\mid z)
+$$
+for all $x,z$ with $p(x,z)>0$.
+
+**Theorem M.6.12b (Minimal Sufficient Predictive Bottleneck).** For finite $X$ and $Y$, define an equivalence relation on substrate states by
+$$
+x\sim x'
+\quad\Longleftrightarrow\quad
+p(y\mid x)=p(y\mid x')
+\text{ for every }y.
+$$
+Let
+$$
+Z_*=X/{\sim}
+$$
+be the quotient statistic. Then:
+
+1. $Z_*$ is sufficient for predicting $Y$.
+2. Every sufficient statistic $Z$ determines $Z_*$ by a deterministic post-processing.
+3. Consequently,
+$$
+I(X;Z)\ge I(X;Z_*)
+$$
+for every sufficient $Z$.
+4. Equality holds only up to operational relabeling and null refinements.
+
+*Proof.* If $Z_*=[x]$, then by construction all elements of the class $[x]$ have the same conditional distribution $p(y\mid x)$. Therefore
+$$
+p(y\mid Z_*=[x])=p(y\mid x),
+$$
+so $Z_*$ is sufficient.
+
+Let $Z$ be any sufficient statistic. If two substrate states $x,x'$ can produce the same value $z$ with positive probability, sufficiency gives
+$$
+p(y\mid x)=p(y\mid z)=p(y\mid x')
+$$
+for all $y$. Hence $x\sim x'$. Therefore each value of $Z$ lies inside one equivalence class of $Z_*$, and $Z_*$ is determined by a deterministic map from $Z$.
+
+Since
+$$
+X\to Z\to Z_*
+$$
+is a Markov chain, data processing gives
+$$
+I(X;Z)\ge I(X;Z_*).
+$$
+If equality holds, $Z$ contains no information about $X$ beyond $Z_*$ except on null sets or by relabeling that leaves all predictive distributions unchanged. Such refinements are operationally null. ∎
+
+**Corollary M.6.12c (Effective Variables as PCE Bottlenecks).** Classical records, RG variables, effective field coordinates, and perspective-state summaries are PCE-admissible effective variables only when they lie on the predictive bottleneck frontier: they preserve the required information about $Y$ while minimizing retained information about $X$.
+
+*Proof.* Theorem M.6.12b proves that the coarsest sufficient statistic minimizes $I(X;Z)$ among sufficient descriptions. The functional (M.6.12.1) is the Lagrangian form of the same constrained tradeoff between compression and predictive information. ∎
 
 ## M.7 Conclusion
 

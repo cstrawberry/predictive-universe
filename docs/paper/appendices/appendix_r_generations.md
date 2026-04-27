@@ -1100,6 +1100,91 @@ The Golay code's error-correction properties (Theorem Z.13) suggest a robustness
 Confirmation of these predictions would provide direct empirical support for the Golay-Leech foundation of emergent spacetime geometry.
 
 
+### R.4.2.8 Syndrome-Charge Homology
+
+**Definition R.4.2.8a (Predictive Syndrome Complex).** Let $A$ be a finite abelian group of syndrome labels on a marked Golay-Leech carrier. A predictive syndrome complex is a finite chain complex
+$$
+C_2\xrightarrow{\partial_2}C_1\xrightarrow{\partial_1}C_0
+$$
+together with a local neutrality map
+$$
+\nu:C_0\to N
+$$
+to a finite abelian group $N$, satisfying
+$$
+\nu\circ\partial_1=0.
+$$
+A defect syndrome is an element $s\in\ker\nu$. Locally creatable neutral syndrome changes are elements of $\operatorname{im}\partial_1$. The syndrome-charge group is
+$$
+H_{\mathrm{synd}}
+=
+\ker\nu/\operatorname{im}\partial_1.
+\tag{R.30}
+$$
+
+**Theorem R.4.2.8b (Charge as Stable Error-Correction Syndrome).** In a predictive syndrome complex:
+
+1. local neutral updates preserve the class $[s]\in H_{\mathrm{synd}}$;
+2. fusion of defects is addition in $H_{\mathrm{synd}}$;
+3. two defect configurations are operationally charge-equivalent if and only if they represent the same class in $H_{\mathrm{synd}}$;
+4. if all local observables commute with locally creatable neutral syndrome changes, then distinct classes in $H_{\mathrm{synd}}$ are superselection sectors.
+
+*Proof.* A local neutral update changes a syndrome by
+$$
+s\mapsto s+\partial_1 c
+$$
+for some $c\in C_1$. Since the quotient defining $H_{\mathrm{synd}}$ identifies syndromes that differ by an element of $\operatorname{im}\partial_1$, the class $[s]$ is unchanged. This proves (1).
+
+If two defects have syndromes $s_1,s_2\in\ker\nu$, their combined syndrome is $s_1+s_2$. Because $\nu$ is a homomorphism,
+$$
+\nu(s_1+s_2)=\nu(s_1)+\nu(s_2)=0,
+$$
+so the fused defect is again admissible, and its class is
+$$
+[s_1+s_2]=[s_1]+[s_2].
+$$
+This proves (2).
+
+For (3), if two syndromes differ by $\partial_1c$, a local neutral update carries one to the other, so they are operationally equivalent. Conversely, any finite sequence of local neutral updates adds a finite sum of elements of $\operatorname{im}\partial_1$, hence changes the syndrome only within the same quotient class.
+
+For (4), local observables cannot distinguish representatives inside one class because those representatives are related by local neutral updates. If two classes were connected by any local observable process, that process would implement a local neutral update changing one class into the other, contradicting quotient distinctness. Therefore distinct classes label superselection sectors. ∎
+
+**Corollary R.4.2.8c (Golay Distance Protects Nontrivial Syndrome Charge).** On a marked Golay-stabilized branch where the minimum support of a nontrivial logical syndrome class is the Golay distance
+$$
+d_{\min}=8,
+$$
+no nontrivial syndrome-charge sector can be created, erased, or confused by an operator supported on fewer than eight marked carrier coordinates.
+
+*Proof.* By definition of $d_{\min}$ on this branch, every representative of a nonzero class in $H_{\mathrm{synd}}$ has support at least $8$. An operator supported on fewer than eight coordinates can therefore change only representatives of the zero class or locally trivial representatives. By Theorem R.4.2.8b, nonzero syndrome-charge classes are preserved under such local neutral changes. ∎
+
+### R.4.2.9 Golay Matroid Locality
+
+**Definition R.4.2.9a (Golay Dependency Matroid).** Let $\mathcal G_{24}\subset\mathbb F_2^{24}$ be the marked extended binary Golay code, and let $G$ be a $12\times24$ generator matrix. The Golay dependency matroid $\mathcal M_G$ is the binary matroid represented by the columns of $G$. A circuit is a minimal linearly dependent set of columns. A cocircuit is a circuit of the dual matroid $\mathcal M_G^*$.
+
+**Theorem R.4.2.9b (Self-Dual Golay Matroid Cuts and Dependencies).** Since
+$$
+\mathcal G_{24}=\mathcal G_{24}^{\perp},
+$$
+the matroid $\mathcal M_G$ is self-dual. Its circuits are exactly the minimal supports of nonzero Golay codewords, and its cocircuits are exactly the minimal supports of nonzero dual codewords. Therefore the circuit girth and cocircuit girth are both
+$$
+8.
+\tag{R.31}
+$$
+
+*Proof.* For a binary matrix $G$, a set of columns $S$ is dependent exactly when there is a nonzero vector $c\in\mathbb F_2^{24}$ supported on $S$ such that
+$$
+Gc^T=0.
+$$
+Thus circuits are the minimal supports of nonzero vectors in the nullspace of $G$. Since $G$ generates $\mathcal G_{24}$ and the code is self-dual,
+$$
+\ker G=\mathcal G_{24}^{\perp}=\mathcal G_{24}.
+$$
+Therefore circuits are minimal supports of nonzero Golay codewords. The dual matroid is represented by a parity-check matrix for $\mathcal G_{24}$, but for a self-dual code a parity-check matrix may be chosen as a generator matrix. Hence cocircuits are minimal supports of nonzero codewords in $\mathcal G_{24}^{\perp}=\mathcal G_{24}$. The extended binary Golay code has minimum Hamming weight $8$, so both the smallest circuit and the smallest cocircuit have size $8$. ∎
+
+**Corollary R.4.2.9c (Dependency-Cut Equivalence at the Golay Carrier).** On the marked 24-mode carrier, minimal predictive dependencies and minimal predictive cuts are dual presentations of the same Golay matroid structure. No nontrivial dependency or cut syndrome exists below weight $8$.
+
+*Proof.* Theorem R.4.2.9b identifies circuits with minimal dependencies and cocircuits with minimal cuts. Self-duality identifies the two classes, and the common girth is $8$. ∎
+
 ### R.4.3 Synthesis: Why Three is Necessary
 
 The strongest derivation of three generations in this appendix is the topological one:

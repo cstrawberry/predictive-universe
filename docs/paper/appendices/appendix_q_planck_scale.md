@@ -208,6 +208,94 @@ $$\phi_{quantum} = \frac{\mathcal{S}}{\hbar} = \sum_i \varepsilon_i$$
 Paths with equal total SPAP entropy cost (mod 2π) interfere constructively. The discrete structure of irreversible operations underlies the wave-like behavior of quantum mechanics.
 
 
+### Q.0.6.1 Landauer Character Duality
+
+**Definition Q.0.6a.1 (Update-Count Group Completion).** Let $\mathbb N$ be the monoid of irreversible SPAP update counts under addition. Its Grothendieck group completion is $\mathbb Z$. A character of $\mathbb Z$ is a homomorphism
+$$
+\chi:\mathbb Z\to U(1).
+$$
+The Landauer character is
+$$
+\chi_L(N)=e^{iN\ln 2}.
+\tag{Q.0.6a}
+$$
+
+**Theorem Q.0.6a.2 (Pontryagin Dual of Update Count).** The character group of the update-count completion is
+$$
+\widehat{\mathbb Z}\cong U(1),
+\tag{Q.0.6b}
+$$
+with isomorphism determined by
+$$
+\theta\in\mathbb R/2\pi\mathbb Z
+\quad\longmapsto\quad
+\chi_\theta(N)=e^{iN\theta}.
+$$
+Under this identification, the Landauer character is the point $\theta=\ln2\pmod{2\pi}$, and its image
+$$
+G_L=\{\chi_L(N):N\in\mathbb Z\}
+$$
+is dense in $U(1)$.
+
+*Proof.* A homomorphism $\chi:\mathbb Z\to U(1)$ is determined by $\chi(1)$. Conversely, every $z\in U(1)$ defines a homomorphism by $\chi_z(N)=z^N$. Thus $\widehat{\mathbb Z}\cong U(1)$. Writing $z=e^{i\theta}$ gives the displayed parameterization. The Landauer character has $z=e^{i\ln2}$. Density of its image is Theorem Q.0.7d, equivalently irrationality of $\ln2/(2\pi)$ from Lemma Q.0.7b. ∎
+
+**Theorem Q.0.6a.3 (Path Amplitudes as Fourier Transforms of Update Histories).** Let $\mathcal H_\Lambda$ be a finite cutoff set of histories, with update count $N[\gamma]\in\mathbb Z$ and weights $w_\gamma\ge0$. Define the finite update-count measure
+$$
+\mu_\Lambda
+=
+\sum_{\gamma\in\mathcal H_\Lambda}
+w_\gamma\,\delta_{N[\gamma]}.
+\tag{Q.0.6c}
+$$
+Then the baseline Landauer path amplitude is the Fourier transform of $\mu_\Lambda$ evaluated at the Landauer character:
+$$
+\widehat\mu_\Lambda(\chi_L)
+=
+\sum_{\gamma\in\mathcal H_\Lambda}
+w_\gamma\,\chi_L(N[\gamma])
+=
+\sum_{\gamma\in\mathcal H_\Lambda}
+w_\gamma\,e^{iN[\gamma]\ln2}.
+\tag{Q.0.6d}
+$$
+If a history has overhead $\Delta[\gamma]$ so that
+$$
+\mathcal S[\gamma]/\hbar=N[\gamma]\ln2+\Delta[\gamma],
+$$
+then the full finite path amplitude is the twisted Fourier transform
+$$
+\sum_{\gamma\in\mathcal H_\Lambda}
+w_\gamma e^{i\Delta[\gamma]}\chi_L(N[\gamma]).
+\tag{Q.0.6e}
+$$
+
+*Proof.* The Fourier transform of a finite measure on $\mathbb Z$ at a character $\chi$ is
+$$
+\widehat\mu(\chi)=\sum_N\mu(N)\chi(N).
+$$
+Substituting (Q.0.6c) and $\chi=\chi_L$ gives (Q.0.6d). The overhead formula follows by multiplying each history weight by the unit-modulus phase $e^{i\Delta[\gamma]}$ and using the Action-Entropy Identity. ∎
+
+**Corollary Q.0.6a.4 (Finite Interference Orthogonality).** On the cyclic quotient $\mathbb Z/q\mathbb Z$, the characters
+$$
+\chi_j(n)=e^{2\pi ijn/q},
+\qquad j=0,\dots,q-1,
+$$
+satisfy
+$$
+\frac1q\sum_{n=0}^{q-1}
+\chi_j(n)\overline{\chi_k(n)}
+=
+\delta_{jk}.
+\tag{Q.0.6f}
+$$
+Thus finite interference selection is character orthogonality of update-count sectors.
+
+*Proof.* If $j=k$, every summand equals $1$, so the average is $1$. If $j\ne k$, the sum is a finite geometric series with ratio $e^{2\pi i(j-k)/q}\ne1$, hence
+$$
+\sum_{n=0}^{q-1}e^{2\pi i(j-k)n/q}=0.
+$$
+This proves (Q.0.6f). ∎
+
 ## Q.0.7 The Landauer Phase Structure and Emergent U(1)
 
 This section establishes a precise connection between the discrete SPAP entropy structure and the emergence of continuous U(1) gauge symmetry. The key insight is that the Landauer constant $\varepsilon = \ln 2$ generates a dense subgroup of U(1), providing a microscopic origin for continuous gauge phases from discrete computational operations.

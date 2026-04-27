@@ -549,6 +549,602 @@ and restoring physical units, $\delta Q=T_U\,\delta S_{\mathrm{rel}}$ up to $O(\
 
 **Corollary F.10.4.1 (A1 and A2 Reduce to Wedge AQFT).** The wedge restriction of the PCE equilibrium state is a local KMS equilibrium state with the correct boost modular generator (Theorem F.10.3). Premise (A1) of §12 (local thermodynamic equilibrium near horizons) and Premise (A2) of §12 (horizon Unruh temperature) are therefore a single AQFT statement on the emergent Haag–Kastler net of Theorem F.10.2, derived from the discrete local net and the Lieb–Robinson bound of Proposition F.1. ∎
 
+### F.10.4a Predictive Spectral Triple
+
+**Definition F.10.4a.1 (Finite Predictive Spectral Triple).** Let $\mathcal G=(V,E)$ be a connected finite MPU carrier graph on a regular finite-resolution branch. Assign each undirected edge $e=\{v,w\}$ a positive propagation-cost length $\ell_e>0$. Define
+$$
+\mathfrak A_{\mathrm{PU}}=C(V),
+\qquad
+\mathcal H_{\mathrm{PU}}=\bigoplus_{e=\{v,w\}\in E}\mathbb C^2,
+$$
+with representation
+$$
+\pi_e(f)=
+\begin{pmatrix}
+f(v)&0\\
+0&f(w)
+\end{pmatrix}
+$$
+on the summand indexed by $e=\{v,w\}$. Define
+$$
+D_{\mathrm{pred},e}
+=
+\frac{1}{\ell_e}
+\begin{pmatrix}
+0&1\\
+1&0
+\end{pmatrix},
+\qquad
+D_{\mathrm{pred}}
+=
+\bigoplus_{e\in E}D_{\mathrm{pred},e}.
+\tag{F.10.4a.1}
+$$
+The finite predictive spectral triple is
+$$
+(\mathfrak A_{\mathrm{PU}},\mathcal H_{\mathrm{PU}},D_{\mathrm{pred}}).
+$$
+
+**Theorem F.10.4a.2 (Connes Distance Equals Propagation-Cost Distance).** For $x,y\in V$, define
+$$
+d_{D_{\mathrm{pred}}}(x,y)
+=
+\sup
+\left\{
+|f(x)-f(y)|:
+f\in C(V),\,
+\lVert[D_{\mathrm{pred}},\pi(f)]\rVert\le1
+\right\}.
+\tag{F.10.4a.2}
+$$
+Then
+$$
+d_{D_{\mathrm{pred}}}(x,y)
+=
+d_{\mathcal G,\ell}(x,y),
+\tag{F.10.4a.3}
+$$
+where $d_{\mathcal G,\ell}$ is the shortest-path distance with edge lengths $\ell_e$.
+
+*Proof.* On one edge $e=\{v,w\}$,
+$$
+[D_{\mathrm{pred},e},\pi_e(f)]
+=
+\frac{f(w)-f(v)}{\ell_e}
+\begin{pmatrix}
+0&1\\
+-1&0
+\end{pmatrix}.
+$$
+The matrix on the right has operator norm $1$, hence
+$$
+\lVert[D_{\mathrm{pred}},\pi(f)]\rVert
+=
+\max_{e=\{v,w\}}
+\frac{|f(v)-f(w)|}{\ell_e}.
+\tag{F.10.4a.4}
+$$
+Thus the condition $\lVert[D_{\mathrm{pred}},\pi(f)]\rVert\le1$ is exactly the condition that $f$ is $1$-Lipschitz on every edge.
+
+If $f$ is edgewise $1$-Lipschitz and $\gamma:x=v_0\to v_1\to\cdots\to v_m=y$ is any path, then
+$$
+|f(x)-f(y)|
+\le
+\sum_{r=0}^{m-1}|f(v_{r+1})-f(v_r)|
+\le
+\sum_{r=0}^{m-1}\ell_{\{v_r,v_{r+1}\}}.
+$$
+Taking the infimum over paths gives
+$$
+|f(x)-f(y)|\le d_{\mathcal G,\ell}(x,y),
+$$
+so $d_{D_{\mathrm{pred}}}(x,y)\le d_{\mathcal G,\ell}(x,y)$.
+
+For the reverse inequality, fix $y$ and define
+$$
+f_z=d_{\mathcal G,\ell}(z,y).
+$$
+The triangle inequality gives
+$$
+|f_v-f_w|\le\ell_{\{v,w\}}
+$$
+for every edge $\{v,w\}$, so $\lVert[D_{\mathrm{pred}},\pi(f)]\rVert\le1$. Therefore
+$$
+d_{D_{\mathrm{pred}}}(x,y)
+\ge
+|f_x-f_y|
+=
+d_{\mathcal G,\ell}(x,y).
+$$
+The two inequalities prove (F.10.4a.3). ∎
+
+**Corollary F.10.4a.3 (Metric, Spin-Interface, and Gauge Data in One Operator).** On the finite branch, the propagation-cost metric is recovered from $D_{\mathrm{pred}}$. Edge-local unitary conjugations of $D_{\mathrm{pred}}$ are precisely lattice connection variables on the same carrier. With a matrix internal algebra replacing $C(V)$ by $C(V,M_n(\mathbb C))$, the same construction gives $U(n)$ edge transporters.
+
+*Proof.* The metric statement is Theorem F.10.4a.2. For a unitary $u\in C(V,U(1))$, on edge $e=\{v,w\}$,
+$$
+\pi_e(u)D_{\mathrm{pred},e}\pi_e(u)^*
+=
+\frac{1}{\ell_e}
+\begin{pmatrix}
+0&u(v)\overline{u(w)}\\
+u(w)\overline{u(v)}&0
+\end{pmatrix}.
+$$
+Thus unitary conjugacy inserts exactly an edge phase. Replacing scalar values by matrices gives the same formula with $u(v)u(w)^*$ as a unitary matrix transporter. ∎
+
+### F.10.4b Modular Prediction Time
+
+**Definition F.10.4b.1 (Finite Modular Prediction Flow).** Let $\mathfrak A$ be a finite local algebra and let $\omega(A)=\operatorname{Tr}(\rho A)$ be a faithful state with $\rho>0$. The modular prediction flow of $\omega$ is
+$$
+\sigma_t^\omega(A)
+=
+\rho^{it}A\rho^{-it}.
+\tag{F.10.4b.1}
+$$
+
+**Theorem F.10.4b.2 (Prediction Time as Modular Time on a Local Equilibrium Branch).** Suppose a finite local PU branch has a prediction-time automorphism group
+$$
+\alpha_\tau(A)=e^{-i\tau H}Ae^{i\tau H}
+$$
+and a faithful PCE equilibrium state $\omega(A)=\operatorname{Tr}(\rho A)$ that is KMS at inverse temperature $\beta$ for $\alpha_\tau$. Then
+$$
+\rho=\frac{e^{-\beta H}}{\operatorname{Tr}(e^{-\beta H})}
+$$
+on each finite factor, and
+$$
+\sigma_t^\omega=\alpha_{\beta t}.
+\tag{F.10.4b.2}
+$$
+Hence the local physical prediction time $\tau$ and modular parameter $t$ are related by
+$$
+\tau=\beta t.
+\tag{F.10.4b.3}
+$$
+
+*Proof.* In a finite factor, the KMS condition for $\alpha_\tau$ says
+$$
+\omega(A\alpha_{i\beta}(B))=\omega(BA)
+$$
+for all matrix units $A,B$. Diagonalizing $H$ and applying this identity to matrix units gives
+$$
+\rho_i e^{\beta(E_j-E_i)}=\rho_j
+$$
+for all energy labels $i,j$. Hence $\rho_i=Ze^{-\beta E_i}$ for one normalization constant $Z^{-1}$, so
+$$
+\rho=\frac{e^{-\beta H}}{\operatorname{Tr}(e^{-\beta H})}.
+$$
+Then
+$$
+\rho^{it}A\rho^{-it}
+=
+e^{-i\beta tH}Ae^{i\beta tH}
+=
+\alpha_{\beta t}(A),
+$$
+because the scalar normalization cancels. Direct sums of finite factors satisfy the same identity factorwise. ∎
+
+**Corollary F.10.4b.3 (Unruh/KMS Time as Modular Prediction Time).** In the local Rindler branch of Theorem F.10.3, the boost time seen by the accelerated observer is the modular flow parameter of the local PCE equilibrium state, scaled by $\beta_U=2\pi/\kappa$.
+
+*Proof.* Apply Theorem F.10.4b.2 to the KMS state of Theorem F.10.3, whose inverse temperature is $\beta_U=2\pi/\kappa$. ∎
+
+### F.10.4c Reflection-Positivity Gate for Lorentzian Reconstruction
+
+**Definition F.10.4c.1 (Finite PU Reflection Positivity).** Let $\mathfrak A_E$ be a finite Euclidean predictive history algebra with an antilinear reflection involution $\Theta$ and positive-time subalgebra $\mathfrak A_+$. A normalized Euclidean functional $\Omega_E:\mathfrak A_E\to\mathbb C$ is reflection positive when
+$$
+\Omega_E(\Theta(F)F)\ge0
+\tag{F.10.4c.1}
+$$
+for every $F\in\mathfrak A_+$.
+
+**Theorem F.10.4c.2 (Finite Reflection-Positivity Reconstruction Gate).** A finite Euclidean PU branch with time-translation transfer operator $T_E$ admits a Hilbert-space Lorentzian reconstruction with positive Hamiltonian and unitary time evolution if the following hold:
+
+1. $\Omega_E(1)=1$;
+2. $\Omega_E$ is reflection positive;
+3. $T_E$ preserves $\mathfrak A_+$ and is reflection symmetric;
+4. the induced operator on the reconstructed Hilbert space is positive and has spectrum contained in $(0,1]$ after the chosen Euclidean time-step normalization.
+
+Conversely, every finite Lorentzian Hilbert-space branch with positive Hamiltonian produces Euclidean correlators satisfying these four properties.
+
+*Proof.* Assume (1)–(4). Define a sesquilinear form on $\mathfrak A_+$ by
+$$
+\langle F,G\rangle_{\mathrm{OS}}
+=
+\Omega_E(\Theta(F)G).
+$$
+Reflection positivity makes this form positive semidefinite. Quotienting by its null space and completing gives a finite Hilbert space $\mathcal H_{\mathrm{OS}}$ with cyclic vector $[1]$. The transfer operator induced by Euclidean time translation is well-defined because $T_E$ preserves $\mathfrak A_+$ and respects the null space. By assumption (4), the induced operator $T_{\mathrm{OS}}$ is positive with spectrum in $(0,1]$. Since the space is finite-dimensional, functional calculus defines
+$$
+H_{\mathrm{OS}}=-\log T_{\mathrm{OS}}
+$$
+on the support of $T_{\mathrm{OS}}$, with zero modes treated by restriction to the non-null physical support. Positivity of $T_{\mathrm{OS}}$ gives $H_{\mathrm{OS}}\ge0$ when the transfer spectrum lies in $(0,1]$, and Lorentzian time evolution is
+$$
+U(t)=e^{-itH_{\mathrm{OS}}},
+$$
+which is unitary.
+
+Conversely, suppose a finite Lorentzian branch has Hilbert space $\mathcal H$, vacuum vector $\Omega$, and positive Hamiltonian $H\ge0$. Its Euclidean transfer operator is $T_E=e^{-aH}$ for step $a>0$, hence positive. For every positive-time polynomial $F$,
+$$
+\Omega_E(\Theta(F)F)
+=
+\langle F\Omega,F\Omega\rangle_{\mathcal H}
+\ge0.
+$$
+Normalization, reflection symmetry, and transfer positivity are immediate. ∎
+
+**Corollary F.10.4c.3 (No Unitary Lorentzian Branch Without Reflection Positivity).** A finite predictive statistical branch that violates (F.10.4c.1) cannot be reconstructed as a unitary Lorentzian QFT branch with positive Hilbert-space norm.
+
+*Proof.* The converse direction of Theorem F.10.4c.2 shows that every such Lorentzian reconstruction necessarily satisfies reflection positivity. Violation of (F.10.4c.1) contradicts that necessary condition. ∎
+
+### F.10.4d Minimal Gauge Split-Factorization
+
+**Definition F.10.4d.1 (Finite Gauge-Split Datum).** A finite gauge-split datum for a region $R$ is a quadruple
+$$
+(\mathcal H_{\mathrm{phys}},\mathfrak A_R,\mathfrak A_{\bar R},Z_{\partial R})
+$$
+where $\mathcal H_{\mathrm{phys}}$ is a finite-dimensional physical Hilbert space after imposing gauge constraints, $\mathfrak A_R$ and $\mathfrak A_{\bar R}$ are commuting finite-dimensional von Neumann algebras of gauge-invariant observables, and
+$$
+Z_{\partial R}
+=
+\mathfrak A_R\cap\mathfrak A_{\bar R}
+$$
+is their common finite-dimensional center. The datum is locally complete when, on each minimal central block, $\mathfrak A_R$ and $\mathfrak A_{\bar R}$ are mutual commutants and generate the full matrix algebra of that block.
+
+**Theorem F.10.4d.2 (Minimal Gauge Split-Factorization).** Let $(\mathcal H_{\mathrm{phys}},\mathfrak A_R,\mathfrak A_{\bar R},Z_{\partial R})$ be a locally complete finite gauge-split datum. Let
+$$
+1=\sum_{\alpha\in\operatorname{Spec}Z_{\partial R}}p_\alpha
+$$
+be the decomposition into minimal central projections. Then there are finite Hilbert spaces $\mathcal H_R^\alpha$ and $\mathcal H_{\bar R}^\alpha$ such that
+$$
+\mathcal H_{\mathrm{phys}}
+\cong
+\bigoplus_{\alpha\in\operatorname{Spec}Z_{\partial R}}
+\mathcal H_R^\alpha\otimes\mathcal H_{\bar R}^\alpha,
+\tag{F.10.4d.1}
+$$
+and, under this isomorphism,
+$$
+\mathfrak A_R
+\cong
+\bigoplus_\alpha
+B(\mathcal H_R^\alpha)\otimes I_{\bar R}^\alpha,
+\qquad
+\mathfrak A_{\bar R}
+\cong
+\bigoplus_\alpha
+I_R^\alpha\otimes B(\mathcal H_{\bar R}^\alpha).
+\tag{F.10.4d.2}
+$$
+The only boundary labels required for gluing local predictions are the central syndrome labels $\alpha\in\operatorname{Spec}Z_{\partial R}$.
+
+*Proof.* Since $Z_{\partial R}$ is a finite-dimensional commutative $C^*$-algebra, it has a unique decomposition into minimal central projections:
+$$
+Z_{\partial R}\cong\bigoplus_\alpha \mathbb C p_\alpha,
+\qquad
+1=\sum_\alpha p_\alpha.
+$$
+Thus
+$$
+\mathcal H_{\mathrm{phys}}
+=
+\bigoplus_\alpha p_\alpha\mathcal H_{\mathrm{phys}}.
+$$
+Fix one block $\mathcal H_\alpha=p_\alpha\mathcal H_{\mathrm{phys}}$. The compressed algebras
+$$
+\mathfrak A_R^\alpha=p_\alpha\mathfrak A_Rp_\alpha,
+\qquad
+\mathfrak A_{\bar R}^\alpha=p_\alpha\mathfrak A_{\bar R}p_\alpha
+$$
+are finite factors by minimality of $p_\alpha$ in the common center. Local completeness says
+$$
+(\mathfrak A_R^\alpha)'=\mathfrak A_{\bar R}^\alpha,
+\qquad
+(\mathfrak A_{\bar R}^\alpha)'=\mathfrak A_R^\alpha,
+\qquad
+\mathfrak A_R^\alpha\vee\mathfrak A_{\bar R}^\alpha=B(\mathcal H_\alpha).
+$$
+The finite-dimensional bicommutant structure theorem for mutual factor commutants then gives Hilbert spaces $\mathcal H_R^\alpha$ and $\mathcal H_{\bar R}^\alpha$ with
+$$
+\mathcal H_\alpha\cong\mathcal H_R^\alpha\otimes\mathcal H_{\bar R}^\alpha,
+$$
+$$
+\mathfrak A_R^\alpha\cong B(\mathcal H_R^\alpha)\otimes I_{\bar R}^\alpha,
+\qquad
+\mathfrak A_{\bar R}^\alpha\cong I_R^\alpha\otimes B(\mathcal H_{\bar R}^\alpha).
+$$
+Taking the direct sum over $\alpha$ proves (F.10.4d.1) and (F.10.4d.2). ∎
+
+**Corollary F.10.4d.3 (PCE-Minimal Edge Data in Gauge Theory).** In a finite constrained gauge system, any refinement of $Z_{\partial R}$ that does not change the locally glueable predictions adds description cost without predictive benefit. PCE therefore selects the center $Z_{\partial R}$ and no larger boundary label algebra.
+
+*Proof.* Theorem F.10.4d.2 proves that $Z_{\partial R}$ is sufficient to glue the two local prediction algebras. A strict refinement $Z'_{\partial R}\supsetneq Z_{\partial R}$ that leaves all local predictions unchanged splits some central block into labels that no MPU-admissible local protocol can distinguish. Such labels add description length and maintenance cost while leaving predictive regret unchanged. By Definition 15, this cannot minimize the PCE potential. ∎
+
+### F.10.4e De Finetti Field Emergence
+
+**Definition F.10.4e.1 (Exchangeable MPU Ensemble).** Let $\mathcal K$ be the finite single-carrier Hilbert space of an MPU-local retained sector. A consistent exchangeable MPU ensemble is a family of states
+$$
+\rho_N\in B(\mathcal K^{\otimes N})_*,
+\qquad N=1,2,\dots,
+$$
+such that:
+
+1. $\rho_N$ is invariant under every permutation of the $N$ tensor factors;
+2. tracing out the last $N-k$ factors of $\rho_N$ gives $\rho_k$ for every $k<N$.
+
+**Theorem F.10.4e.2 (Fields as Extremal Exchangeable Predictive Components).** For every consistent exchangeable MPU ensemble there is a unique probability measure $\mu$ on the compact state space $\mathcal S(\mathcal K)$ such that for every fixed $k$,
+$$
+\rho_k
+=
+\int_{\mathcal S(\mathcal K)}
+\sigma^{\otimes k}\,d\mu(\sigma).
+\tag{F.10.4e.1}
+$$
+The extremal exchangeable components are exactly the product families $\sigma^{\otimes k}$, and the measure $\mu$ is the branch-level field-mixture measure.
+
+*Proof.* The hypotheses are exactly the hypotheses of the Størmer-Hudson-Moody quantum de Finetti theorem for a consistent exchangeable sequence over a finite-dimensional matrix algebra. That theorem gives existence and uniqueness of the representing probability measure $\mu$ on $\mathcal S(\mathcal K)$ and the representation (F.10.4e.1). If $\mu=\delta_\sigma$ is a point mass, then $\rho_k=\sigma^{\otimes k}$ for all $k$, so the component is extremal. Conversely, if $\mu$ is not a point mass, then it is a nontrivial convex mixture of at least two probability measures on $\mathcal S(\mathcal K)$, and (F.10.4e.1) is the corresponding nontrivial convex mixture of exchangeable states; hence the exchangeable state is not extremal. ∎
+
+**Corollary F.10.4e.3 (Finite Approximation Bound).** If only an $N$-carrier symmetric state is available, then for every $k<N$ there exists a probability measure $\mu_{N,k}$ on $\mathcal S(\mathcal K)$ such that
+$$
+\left\|
+\rho_{N,k}
+-
+\int\sigma^{\otimes k}\,d\mu_{N,k}(\sigma)
+\right\|_1
+\le
+\frac{4(\dim\mathcal K)^2k}{N},
+\tag{F.10.4e.2}
+$$
+where $\rho_{N,k}$ is the $k$-carrier marginal.
+
+*Proof.* This is the finite-dimensional quantum de Finetti approximation theorem applied to the symmetric state $\rho_N$. The displayed constant is a valid universal finite-dimensional trace-norm bound. ∎
+
+**Corollary F.10.4e.4 (Regular Field Branch).** Suppose the de Finetti measure $\mu$ is supported on a regular finite-dimensional family $\{\sigma_\phi\}_{\phi\in\mathcal F_{\mathrm{reg}}}$ whose correlation functions vary continuously with $\phi$. Then every $k$-point predictive correlator is a mixture of extremal field correlators:
+$$
+\langle O_1\cdots O_k\rangle
+=
+\int_{\mathcal F_{\mathrm{reg}}}
+\operatorname{Tr}\!\left(
+\sigma_\phi^{\otimes k}O_1\otimes\cdots\otimes O_k
+\right)
+d\mu(\phi).
+\tag{F.10.4e.3}
+$$
+Thus the effective field is the regular extremal coordinate of an exchangeable predictive ensemble, not a primitive continuum carrier.
+
+*Proof.* Substitute (F.10.4e.1) into
+$$
+\langle O_1\cdots O_k\rangle
+=
+\operatorname{Tr}\!\left(\rho_k\,O_1\otimes\cdots\otimes O_k\right)
+$$
+and use linearity and continuity of the trace pairing. ∎
+
+### F.10.5 Golay Self-Duality and Finite-Resolution Haag Duality
+
+**Definition F.10.5a (Golay-Pauli Carrier).** Let
+$$
+V_{24}:=\mathbb F_2^{24}\oplus\mathbb F_2^{24}
+$$
+with symplectic form
+$$
+\omega((x,z),(x',z'))=x\cdot z'+x'\cdot z
+\quad\text{in }\mathbb F_2.
+$$
+Let $\mathcal W(V_{24})$ be the finite Weyl-Pauli algebra generated by $W(v)$, $v\in V_{24}$, with
+$$
+W(v)W(w)=(-1)^{\omega(v,w)}W(w)W(v).
+$$
+For any subspace $S\le V_{24}$, let $\mathfrak A(S)$ be the unital $*$-algebra generated by $\{W(s):s\in S\}$.
+
+**Lemma F.10.5b (Finite Symplectic Commutant).** For every subspace $S\le V_{24}$,
+$$
+\mathfrak A(S)'=\mathfrak A(S^{\perp_\omega})
+\tag{F.10.5.1}
+$$
+inside the full finite Pauli algebra, up to the common center generated by the radical $S\cap S^{\perp_\omega}$.
+
+*Proof.* A Weyl generator $W(v)$ commutes with every generator $W(s)$, $s\in S$, if and only if
+$$
+\omega(v,s)=0
+\quad\text{for every }s\in S,
+$$
+which is exactly $v\in S^{\perp_\omega}$. Since the Weyl generators form a linear basis of the finite matrix algebra, an arbitrary operator commutes with $\mathfrak A(S)$ exactly when its Weyl expansion uses only generators from $S^{\perp_\omega}$, modulo central elements from $S\cap S^{\perp_\omega}$. This proves (F.10.5.1). ∎
+
+**Theorem F.10.5c (Golay Self-Duality Implies Finite-Resolution Haag Duality on the Marked Carrier).** Let $\mathcal G_{24}\subset\mathbb F_2^{24}$ be the extended binary Golay code on the marked interface frame, with
+$$
+\mathcal G_{24}=\mathcal G_{24}^{\perp}
+$$
+under the binary dot product. Let a finite operational region $R$ be represented by a coordinate subcarrier $S_R\le V_{24}$ whose complement is the Golay symplectic orthogonal
+$$
+S_{R^c}=S_R^{\perp_\omega}.
+$$
+Then
+$$
+\mathfrak A(R)'=\mathfrak A(R^c)
+\tag{F.10.5.2}
+$$
+on the marked finite-resolution carrier. Moreover, because the Golay minimum distance is $8$, no nonzero Golay stabilizer element has support of weight $<8$; therefore any violation of exact dual reconstruction in a truncated subcarrier must be supported on an unresolved shell of weight at least $8$.
+
+*Proof.* By definition, $\mathfrak A(R)=\mathfrak A(S_R)$ and $\mathfrak A(R^c)=\mathfrak A(S_{R^c})$. The complement condition gives $S_{R^c}=S_R^{\perp_\omega}$. Lemma F.10.5b then gives
+$$
+\mathfrak A(R)'
+=
+\mathfrak A(S_R)'
+=
+\mathfrak A(S_R^{\perp_\omega})
+=
+\mathfrak A(S_{R^c})
+=
+\mathfrak A(R^c),
+$$
+which is (F.10.5.2). The extended Golay code has minimum Hamming weight $8$, so every nonzero codeword or stabilizer shell has support at least $8$. Hence no lower-weight unresolved carrier element can mediate a finite-resolution duality defect. ∎
+
+**Corollary F.10.5d (Continuum Haag Duality as the Limit of Golay Duality).** Under Theorem F.10.1 and Theorem F.10.2, if the approximating finite local algebras are chosen in marked Golay-compatible frames, the boundary correction terms vanish in the sense of Theorem F.10.1(iv), and the inductive limit preserves the relevant commutants on the admissible diamond class, then the continuum net satisfies Haag duality for the corresponding admissible diamonds:
+$$
+\mathfrak A(\mathcal O)'=\mathfrak A(\mathcal O')
+$$
+at the operational resolution of the limiting net.
+
+*Proof.* At each finite stage, Theorem F.10.5c gives exact commutant equality on the marked carrier away from weight-$8$ unresolved boundary shells. Theorem F.10.1 sends boundary corrections to zero in the limit, and Theorem F.10.2 identifies the limiting assignment as the emergent Haag-Kastler net. Passing the commutant identity through the isometric limit gives the displayed equality. ∎
+
+### F.10.6 Predictive Markov-Blanket Locality
+
+**Definition F.10.6a (Predictive Markov Boundary).** Let $R$ be a finite MPU region, let $\bar R$ be its operational exterior, and let $B_R$ be a finite boundary syndrome variable or finite boundary algebra. In the classical finite branch, $B_R$ is a predictive Markov boundary for $R$ when every exterior protocol outcome $E_{\bar R}$ satisfies
+$$
+\Pr(E_{\bar R}\mid X_R,B_R)=\Pr(E_{\bar R}\mid B_R).
+\tag{F.10.6.1}
+$$
+In the finite quantum-algebra branch, $B_R$ is a predictive Markov boundary when the restricted state on $R B_R \bar R$ satisfies
+$$
+I(R:\bar R\mid B_R)_\rho=0.
+\tag{F.10.6.2}
+$$
+It is PCE-minimal when no strict coarsening of $B_R$ satisfies the same condition for all admissible exterior protocols.
+
+**Theorem F.10.6b (Locality as Boundary Conditional Independence).** On a finite branch:
+
+1. In the classical case, (F.10.6.1) is equivalent to conditional independence
+$$
+X_R\perp E_{\bar R}\mid B_R
+$$
+for every exterior protocol outcome.
+2. In the quantum finite-algebra case, (F.10.6.2) is equivalent to the existence of a completely positive trace-preserving recovery map
+$$
+\mathcal R_{B_R\to B_R\bar R}
+$$
+such that
+$$
+\rho_{R B_R\bar R}
+=
+(\operatorname{id}_R\otimes\mathcal R_{B_R\to B_R\bar R})(\rho_{R B_R}).
+\tag{F.10.6.3}
+$$
+3. If a PCE-minimal predictive Markov boundary exists, then every other boundary datum sufficient for the same exterior predictions factors through it up to operational equivalence.
+
+*Proof.* In the classical branch, conditional independence $X_R\perp E_{\bar R}\mid B_R$ is defined by
+$$
+\Pr(X_R,E_{\bar R}\mid B_R)
+=
+\Pr(X_R\mid B_R)\Pr(E_{\bar R}\mid B_R).
+$$
+Whenever $\Pr(X_R,B_R)>0$, division by $\Pr(X_R\mid B_R)$ gives (F.10.6.1). Conversely, multiplying (F.10.6.1) by $\Pr(X_R\mid B_R)$ gives the displayed factorization. This proves (1).
+
+For finite quantum algebras, the equality condition in strong subadditivity is the finite-dimensional quantum Markov theorem. It states that
+$$
+I(R:\bar R\mid B_R)_\rho=0
+$$
+if and only if the tripartite state is exactly recoverable from $\rho_{R B_R}$ by a CPTP map acting only on $B_R$. This is precisely (F.10.6.3), proving (2).
+
+For (3), let $B'_R$ be another sufficient boundary datum. Since $B_R$ is PCE-minimal, any distinction in $B'_R$ not visible in $B_R$ either changes no exterior protocol distribution or violates sufficiency after coarsening. The first case adds description cost without predictive benefit and is removed by PCE; the second case is not sufficient. Hence every sufficient $B'_R$ descends to $B_R$ in the operational quotient. ∎
+
+**Corollary F.10.6c (Boundary Locality Without Surplus Edge Labels).** Locality on a finite PU branch is equivalent to shielding exterior predictions by the PCE-minimal boundary syndrome. Extra boundary labels that do not alter the conditional exterior predictions are PCE-degenerate.
+
+*Proof.* Theorem F.10.6b identifies locality with conditional independence or quantum Markov recovery through $B_R$. PCE minimality removes all labels not needed for that shielding relation. ∎
+
+### F.10.7 Modular-Inclusion Reconstruction of Local Time
+
+**Definition F.10.7a (Half-Sided Modular Inclusion Branch).** Let
+$$
+\mathfrak A(D_1)\subset\mathfrak A(D_2)
+$$
+be nested causal-diamond algebras in the regular AQFT limit of Theorem F.10.2, and let $\omega$ be a faithful local PCE/KMS state. The inclusion is future half-sided modular when
+$$
+\sigma_t^{\omega,D_2}(\mathfrak A(D_1))\subseteq \mathfrak A(D_1)
+\quad
+\text{for all }t\ge0,
+\tag{F.10.7.1}
+$$
+where $\sigma_t^{\omega,D_2}$ is the modular flow of $(\mathfrak A(D_2),\omega)$.
+
+**Theorem F.10.7b (Local Time from Modular Inclusion).** On a regular half-sided modular inclusion branch, the modular groups of
+$$
+(\mathfrak A(D_1),\omega)
+\quad\text{and}\quad
+(\mathfrak A(D_2),\omega)
+$$
+generate a positive-energy one-parameter semigroup $U(s)$ implementing the local causal translation or dilation between the two nested diamonds. Thus the local prediction-time orientation is reconstructed from the inclusion
+$$
+\mathfrak A(D_1)\subset\mathfrak A(D_2)
+$$
+and the PCE/KMS state $\omega$.
+
+*Proof.* The hypotheses are exactly the hypotheses of the Borchers-Wiesbrock half-sided modular inclusion theorem on the regular AQFT branch: an inclusion of von Neumann algebras with a common cyclic separating vector/state and a half-sided modular invariance condition. The theorem gives a strongly continuous unitary one-parameter group or semigroup $U(s)$ with positive generator such that $U(s)$ implements the inclusion-preserving translation/dilation associated with the nested algebras. The sign of the half-sided condition $t\ge0$ selects the future-directed semigroup. Since the algebras are causal-diamond algebras in the emergent Haag-Kastler net of Theorem F.10.2, this semigroup is the local causal flow between the corresponding diamonds. Therefore local time orientation is reconstructed from modular inclusion and the equilibrium state, not postulated independently. ∎
+
+**Corollary F.10.7c (Compatibility with Modular Prediction Time).** The single-algebra modular prediction time of a local KMS state and the causal flow reconstructed from a half-sided modular inclusion agree on overlaps where both are defined.
+
+*Proof.* The single-algebra modular flow is the modular automorphism group $\sigma_t^\omega$. The half-sided inclusion theorem constructs its translation/dilation semigroup from the same modular data for the nested algebras. On the common domain, both actions are generated by the same modular operators, so the flows agree up to the temperature normalization already fixed by the local KMS branch. ∎
+
+### F.10.8 Predictive Decoupling and Cluster Locality
+
+**Definition F.10.8a (Finite Decoupling Certificate).** Let $R$ be a finite MPU region and $E$ a finite exterior environment. A local correction or update channel
+$$
+\mathcal C_R:B(\mathcal H_R)_*\to B(\mathcal H_{R'})_*
+$$
+has decoupling certificate $\epsilon$ for a state $\rho_{RE}$ when
+$$
+\left\|
+(\mathcal C_R\otimes\operatorname{id}_E)(\rho_{RE})
+-
+(\mathcal C_R\rho_R)\otimes\rho_E
+\right\|_1
+\le\epsilon.
+\tag{F.10.8.1}
+$$
+
+**Theorem F.10.8b (Decoupling Implies Cluster Locality).** If $\mathcal C_R$ has decoupling certificate $\epsilon$, then for every pair of bounded observables
+$$
+A\in B(\mathcal H_{R'}),
+\qquad
+B\in B(\mathcal H_E),
+$$
+the connected correlation after correction obeys
+$$
+\left|
+\operatorname{Tr}\!\left[
+\sigma_{R'E}(A\otimes B)
+\right]
+-
+\operatorname{Tr}(\sigma_{R'}A)\operatorname{Tr}(\rho_EB)
+\right|
+\le
+\epsilon\,\lVert A\rVert\,\lVert B\rVert,
+\tag{F.10.8.2}
+$$
+where
+$$
+\sigma_{R'E}=(\mathcal C_R\otimes\operatorname{id}_E)(\rho_{RE}),
+\qquad
+\sigma_{R'}=\mathcal C_R\rho_R.
+$$
+
+*Proof.* Let
+$$
+\Delta=
+\sigma_{R'E}-\sigma_{R'}\otimes\rho_E.
+$$
+Then (F.10.8.1) says $\lVert\Delta\rVert_1\le\epsilon$. The connected correlation is
+$$
+\operatorname{Tr}[\Delta(A\otimes B)].
+$$
+By trace duality,
+$$
+|\operatorname{Tr}[\Delta(A\otimes B)]|
+\le
+\lVert\Delta\rVert_1\lVert A\otimes B\rVert
+=
+\lVert\Delta\rVert_1\lVert A\rVert\lVert B\rVert
+\le
+\epsilon\lVert A\rVert\lVert B\rVert.
+$$
+This proves (F.10.8.2). ∎
+
+**Corollary F.10.8c (Golay-Protected Cluster Locality).** On a marked Golay branch with minimum distance $8$, any disturbance supported on fewer than eight marked carrier coordinates that is corrected by the local Golay recovery map has decoupling certificate $\epsilon=0$ relative to exterior protocols that see only the corrected syndrome class. Hence such disturbances contribute no connected exterior correlation after correction.
+
+*Proof.* A correctable sub-distance disturbance is mapped by the local recovery channel to the same corrected local state and syndrome class. Thus
+$$
+(\mathcal C_R\otimes\operatorname{id}_E)(\rho_{RE})
+=
+(\mathcal C_R\rho_R)\otimes\rho_E
+$$
+for exterior protocols conditioned only on the corrected syndrome class. Therefore (F.10.8.1) holds with $\epsilon=0$, and Theorem F.10.8b gives vanishing connected correlation. ∎
+
 
 
 
