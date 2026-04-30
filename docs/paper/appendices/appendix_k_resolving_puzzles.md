@@ -248,6 +248,122 @@ Substituting Definition K.3b gives (K.3d.1). ∎
 
 **Current Status:** The conceptual framework for black hole information conservation is established, with key components (SPAP dynamics, thermodynamic bounds, perspectival encoding, Page curve consistency, horizon edge-inflow consistency, and the finite predictive island Markov-blanket formula) rigorously derived on their stated branches. Detailed calculations of information extraction rates, explicit construction of the Perspectival Information Channel capacity as a function of observer resources, and the continuum quantum-extremal-surface representation of the finite Markov-blanket minimizer remain branch-level development tasks.
 
+### K.3.6 Finite-Budget Predictive Uncertainty Gate
+
+The finite-channel-capacity bounds of Appendix E and the predictive island Markov-blanket cost of Definition K.3b together bound the information that can be encoded on integer-dimensional supports of an evaporating-horizon configuration. This subsection records the complementary norm bound that controls *jointly trapped* configuration and update-momentum supports at finite cycle budget, ruling out hidden-remnant sectors whose support has joint dimension below a budget-dependent threshold.
+
+**Definition K.3e (Finite-Budget Update Group and Discrete Fourier).** Let $\Lambda \geq 1$ be the SPAP cycle budget on a fixed evaporation branch. Let $\mathbb{Z}/\Lambda\mathbb{Z}$ be the finite-budget update-count group of Definition Q.0.6a.1 truncated to budget $\Lambda$. The *finite-budget discrete Fourier operator* $F_\Lambda$ on $\ell^2(\mathbb{Z}/\Lambda\mathbb{Z})$ is the unitary
+
+$$
+(F_\Lambda \psi)(k)
+:=
+\frac{1}{\sqrt{\Lambda}}
+\sum_{N=0}^{\Lambda-1}
+\psi(N)\,e^{-2\pi i N k/\Lambda},
+\qquad
+k \in \mathbb{Z}/\Lambda\mathbb{Z}.
+\tag{K.3e.1}
+$$
+
+For subsets $X \subset \mathbb{Z}/\Lambda\mathbb{Z}$ (configuration support) and $P \subset \mathbb{Z}/\Lambda\mathbb{Z}$ (update-momentum support), the associated projections are
+
+$$
+\Pi_X = \mathrm{diag}(\mathbf{1}_X),
+\qquad
+\Pi_P = \mathrm{diag}(\mathbf{1}_P),
+\tag{K.3e.2}
+$$
+
+acting diagonally on $\ell^2(\mathbb{Z}/\Lambda\mathbb{Z})$ and on its Fourier dual respectively. Whenever logarithmic dimensions are used below, assume $\Lambda\ge2$ and $X,P$ are nonempty; if either support is empty, the restricted norm is $0$.
+
+**Theorem K.3e (Finite-Budget Predictive Uncertainty Gate).** *For every budget $\Lambda \geq 1$ and every pair of supports $X, P \subset \mathbb{Z}/\Lambda\mathbb{Z}$, the operator norm satisfies*
+
+$$
+\bigl\|\Pi_X\,F_\Lambda\,\Pi_P\bigr\|_{\mathrm{op}}
+\leq
+\sqrt{\frac{|X|\cdot|P|}{\Lambda}}.
+\tag{K.3e.3}
+$$
+
+*If $\Lambda\ge2$ and $X,P$ are nonempty, then with finite-budget resolution $h := 1/\Lambda$ and effective dimensions $\delta_X := \log_\Lambda|X|$, $\delta_P := \log_\Lambda|P|$,*
+
+$$
+\bigl\|\Pi_X\,F_\Lambda\,\Pi_P\bigr\|_{\mathrm{op}}
+\leq
+h^{(1 - \delta_X - \delta_P)/2}.
+\tag{K.3e.4}
+$$
+
+*The Hilbert--Schmidt estimate is sharp in the subgroup-dual saturation case $|X|\cdot|P|=\Lambda$. No sharpness claim is made for arbitrary supports.*
+
+*Proof.* By definition of $F_\Lambda$ in (K.3e.1), the matrix entries of $F_\Lambda$ in the standard basis satisfy $|(F_\Lambda)_{kN}| = 1/\sqrt{\Lambda}$ for every $k, N$. The composition $\Pi_X F_\Lambda \Pi_P$ has matrix entries
+
+$$
+(\Pi_X F_\Lambda \Pi_P)_{kN}
+=
+\mathbf{1}_X(k)\,(F_\Lambda)_{kN}\,\mathbf{1}_P(N),
+$$
+
+a $|X| \times |P|$ submatrix of $F_\Lambda$ (extended by zeros to $\Lambda \times \Lambda$). The Hilbert-Schmidt norm satisfies
+
+$$
+\|\Pi_X F_\Lambda \Pi_P\|_{\mathrm{HS}}^2
+=
+\sum_{k \in X, N \in P}|(F_\Lambda)_{kN}|^2
+=
+\frac{|X|\cdot|P|}{\Lambda}.
+$$
+
+Since the operator norm is bounded by the Hilbert-Schmidt norm, $\|\Pi_X F_\Lambda \Pi_P\|_{\mathrm{op}} \leq \|\Pi_X F_\Lambda \Pi_P\|_{\mathrm{HS}} = \sqrt{|X||P|/\Lambda}$, which is (K.3e.3). For $\Lambda\ge2$ and nonempty supports, Equation (K.3e.4) follows by substituting $|X| = \Lambda^{\delta_X}$, $|P| = \Lambda^{\delta_P}$ into (K.3e.3) and rewriting in terms of $h = 1/\Lambda$. The saturation statement follows in the subgroup-dual case. If $X$ is a subgroup of $\mathbb{Z}/\Lambda\mathbb{Z}$ and $P=X^{\perp}$ is its annihilator subgroup, then $|X||P|=\Lambda$ and the normalized indicator of $X$ is mapped by $F_\Lambda$ to the normalized indicator of $P$ up to phase. Thus the restricted operator has norm $1$, matching (K.3e.3). For general supports the Hilbert--Schmidt estimate is only an upper bound. $\square$
+
+**Corollary K.3f (No-Hidden-Remnant Theorem).** *Let an evaporation-branch protocol have budget $\Lambda\ge2$ and let its predictive response functional be supported jointly on a configuration trapped set $X$ and an update-momentum trapped set $P$ with nonempty supports satisfying $|X|\cdot|P| < \Lambda$. Then for every initial state $\psi$ supported on $P$ and every output observable $O$ supported on $X$,*
+
+$$
+\bigl|\langle O,\,F_\Lambda \psi\rangle\bigr|
+\leq
+\sqrt{\frac{|X|\cdot|P|}{\Lambda}}\,
+\|O\|\,\|\psi\|.
+\tag{K.3f.1}
+$$
+
+*Equivalently, for every unit vector $\psi$ supported on $P$, the leakage probability outside $X$ obeys*
+
+$$
+\left\|({\rm id}-\Pi_X)F_\Lambda\psi\right\|^2
+\ge
+1-\frac{|X|\cdot|P|}{\Lambda}
+=
+1-h^{1-\delta_X-\delta_P}
+>0.
+\tag{K.3f.2}
+$$
+
+*Proof.* Inequality (K.3f.1) is the operator-norm identity applied to states with $\Pi_P\psi = \psi$ and observables with $\Pi_X O = O$:
+
+$$
+|\langle O, F_\Lambda \psi\rangle|
+=
+|\langle \Pi_X O, F_\Lambda \Pi_P \psi\rangle|
+\leq
+\|\Pi_X F_\Lambda \Pi_P\|_{\mathrm{op}}\,\|O\|\,\|\psi\|,
+$$
+
+and Theorem K.3e bounds the right factor. For unit $\psi$ with $\Pi_P\psi=\psi$, unitarity gives
+$$
+1
+=
+\|F_\Lambda\psi\|^2
+=
+\|\Pi_XF_\Lambda\psi\|^2
++
+\|({\rm id}-\Pi_X)F_\Lambda\psi\|^2.
+$$
+By Theorem K.3e, $\|\Pi_XF_\Lambda\psi\|^2\le |X||P|/\Lambda$. Substitution gives (K.3f.2). $\square$
+
+**Remark K.3f.1 (Status and Scope).** Theorem K.3e and Corollary K.3f are operator-norm statements on a finite-budget cyclic group; they do not invoke any continuous spacetime construction and are compatible with the smooth emergent IR geometry of Section 11 and the regularity necessity of Theorem C.2. The trapped sets $X$ and $P$ are *operational* obstruction sets indexed by the SPAP cycle structure of Definition Q.0.6a.1; they are not fundamental ontological objects. The bound applies to every evaporation-branch protocol of finite budget, including the predictive island Markov-blanket configurations of Definition K.3b: any candidate hidden-remnant sector with joint configuration-momentum support of dimension $\delta_X + \delta_P < 1$ has leakage probability at least $1-h^{1-\delta_X-\delta_P}$, ruling out indefinitely persistent hidden ledgers at finite resolution.
+
+**Remark K.3f.2 (Connection to Open Target X.9.5d.3).** On the rootless flux-tube branch of Proposition Z.8d, the open target X.9.5d.3 asks for a derivation of the area-law equivalence with an unbroken center one-form predictive ledger. Corollary K.3f bounds the leakage rate of any line-protocol trapped sector at finite cycle budget through finite-resolution Wilson-line probes, supplying a quantitative companion to the structural target: indefinite confinement of a center charge in a fractal-supported flux configuration would require $\delta_X + \delta_P \geq 1$, which is the integer-form regime that the structural target X.9.5d.3 must analyze. The finite-budget gate therefore bounds the would-be loophole of subcritical fractal-supported hidden remnants without proving the remaining area-law/center-ledger equivalence.
+
 
 ## K.4 Arrow of Time and Temporal Asymmetry
 
@@ -743,10 +859,75 @@ The experimental value $\delta_{\text{exp}} = 65.7° \pm 1.5°$ (Particle Data G
 
 **Table K.6.2: Strong vs Weak CP**
 
-| Effect | Type | σ-Behavior | Status |
-|:-------|:-----|:-----------|:-------|
-| $\theta_{\text{QCD}}$ | I | Forbidden | $= 0$ |
-| $\delta_{\text{CKM}}$ | II | Allowed | $= 66.7°$ |
+| Effect | Type | Determinant-line status | Result |
+|:-------|:-----|:------------------------|:-------|
+| $\theta_{\text{QCD}}$ | I | Absolute $\sigma$-exact class | $=0$ |
+| $\arg\det M_q$ | I | Real $E_8$ determinant class | $=0$ |
+| $\delta_{\text{CKM}}$ | II | Relative flavor holonomy | $=66.7°$ |
+| $\delta_{\text{PMNS}}$ | II | Relative neutrino-sector holonomy | Appendix T branch value |
+| Baryogenesis CP source | II | Relative holonomy projected through APS update index | Appendix Y branch value |
+
+**Theorem K.6.18a (Relative Determinant-Line CP Ledger).** Let $D_{\mathrm{PU}}$ be the finite chiral update operator on a retained CP branch, and let
+$$
+\mathcal L_{\det}(D_{\mathrm{PU}})
+=
+\det\ker D_{\mathrm{PU}}
+\otimes
+(\det\operatorname{coker}D_{\mathrm{PU}})^*
+\tag{K.6.18a.1}
+$$
+be its determinant line. For a retained loop $\gamma$ in the gauge-flavor parameter branch, define the determinant-line CP phase by
+$$
+\Theta_{\det}(\gamma)
+=
+\arg\operatorname{Hol}_{\gamma}(\mathcal L_{\det})
++
+\Theta_{\mathrm{APS}}(\gamma)
+\pmod{2\pi},
+\tag{K.6.18a.2}
+$$
+where $\Theta_{\mathrm{APS}}(\gamma)$ is the branch-fixed finite APS boundary phase when $\gamma$ is represented by an interpolation region. In conventions where the APS phase is normalized as $\pi\eta_\gamma$, this reduces to $\arg\operatorname{Hol}_\gamma(\mathcal L_{\det})+\pi\eta_\gamma$.
+
+On the $\sigma$-symmetric PCE-Attractor branch:
+
+1. Type I CP phases are absolute determinant-line classes. They are $\sigma$-exact and PCE-null:
+$$
+\Theta_{\det}(\gamma_{\mathrm{abs}})
+=
+\bar\theta
+=
+0.
+\tag{K.6.18a.3}
+$$
+
+2. Type II CP phases are relative determinant-line holonomies. On the active flavor branches,
+$$
+\Theta_{\det}(\gamma_{\mathrm{flavor}})
+=
+\oint_{\gamma_{\mathrm{flavor}}}\mathcal A_{\mathrm{Berry}},
+\tag{K.6.18a.4}
+$$
+so the CKM and PMNS CP phases are retained exactly when the corresponding relative holonomy acts nontrivially on generation-changing protocols.
+
+3. The baryogenesis CP source is the projection of the same relative holonomy through the anomaly-update index:
+$$
+\Delta(B+L)
+=
+2N_g\,\operatorname{Ind}_{\mathrm{upd}}(D_X),
+\qquad
+\mathcal F_{\mathrm{CP}}
+=
+\tanh\!\left(\mathcal S\sin\Theta_{\det}(\gamma_{\mathrm{flavor}})\right).
+\tag{K.6.18a.5}
+$$
+
+Thus absolute CP phase is exact and removed, while relative CP holonomy is physical when it changes a finite generation or anomaly protocol response.
+
+*Proof.* The determinant line of a finite Fredholm update operator is functorial under direct sum, dualization, and restriction to retained finite sectors. The $\sigma$-involution of Definition K.6.3 acts by complex conjugation on this line. For an absolute Type I phase, Theorems K.6.6 and K.6.7 give a $\sigma$-invariant real trivialization of the QCD vacuum angle and quark-mass determinant contribution. In such a real trivialization the determinant holonomy is trivial after PCE selection of the $\theta=0$ minimum, so (K.6.18a.3) follows.
+
+For a relative flavor loop, the endpoints are compared inside the same real vacuum class, but the path may enclose Berry curvature on the generation bundle. The determinant-line connection restricted to the retained flavor bundle is the Berry connection used in Theorem K.6.18 and Appendix T. Hence its relative holonomy is (K.6.18a.4). Because PPI identifies only protocol-invisible phases, a relative holonomy survives exactly when it changes a generation-changing response presheaf.
+
+For baryogenesis, Theorem Y.4.3b identifies the anomaly-mediated update with the APS index of the chiral predictive update operator, including the APS boundary phase contribution on the boundary Dirac operator. Corollary Y.10.2 identifies the CP phase entering the baryogenesis source with predictive orientation holonomy. Substituting the relative determinant-line phase into the Appendix Y CP factor gives (K.6.18a.5). Therefore the Type I/Type II split is the exact/non-exact split of the determinant-line CP ledger. ∎
 
 ### K.6.12 Connection to Baryogenesis
 
@@ -1122,7 +1303,107 @@ $$
 - Effective negative pressure: in matter domination, $p_{ad} = -\dot\Upsilon_G\rho_b/(3H)$.
 - Local gravity tests constrain the slow drift rate $|\dot\Upsilon_G/\Upsilon_G|$ rather than a universal shift of the vacuum sector.
 
-**Current Status:** The constitutive law is closed at the homogeneous FLRW level. What remains is the derivation of $(A_c,n)$ from the full Appendix D relaxation potential and the perturbation-level confrontation with growth, lensing, BAO, and CMB data.
+**Current Status:** The constitutive law is closed at the homogeneous FLRW level. A finite entropic-bridge branch below gives the precise condition under which $(A_c,n)$ are selected by the Appendix D relaxation potential rather than stipulated. Perturbation-level confrontation with growth, lensing, BAO, and CMB data remains a separate observational branch task.
+
+**Definition K.9.4 (Homogeneous Finite Entropic-Bridge Branch).** Let $X_N$ be a finite coarse FLRW predictive state space with detailed-balance reference generator $L_N$ in the sense of Definition D.8.6d. Fix a finite protocol time grid
+$$
+0=t_0<t_1<\cdots<t_M=1
+$$
+and let $\Omega_N=X_N^{M+1}$ be the finite path ledger. Let $\mathbb P_{0,N}$ be the strictly positive reference path measure induced by the finite transition kernels of $L_N$ on this grid. Fix endpoint laws
+$$
+(e_0)_{\#}\mathbb P=\rho_{\mathrm{early}},
+\qquad
+(e_M)_{\#}\mathbb P=\rho_{\mathrm{late}},
+\tag{K.9.20}
+$$
+and a finite PCE running cost
+$$
+\mathcal A_{\mathrm{PCE},N}(\omega)
+=
+\sum_{\ell=0}^{M-1}
+(t_{\ell+1}-t_\ell)
+\mathcal L_{\mathrm{PCE},N}(x_\ell,x_{\ell+1})
+\ge0
+$$
+for $\omega=(x_0,\dots,x_M)\in\Omega_N$. The homogeneous finite entropic bridge is
+$$
+\mathbb P_{*,N}
+=
+\arg\min_{\mathbb P}
+\left[
+\operatorname{Ent}(\mathbb P\mid\mathbb P_{0,N})
++
+\mathbb E_{\mathbb P}\mathcal A_{\mathrm{PCE},N}
+\right],
+\tag{K.9.21}
+$$
+where the minimization is over probability measures on the finite path ledger satisfying (K.9.20). The endpoint constraints are part of the branch datum and are assumed feasible.
+
+Let $s_N:X_N\to[0,\infty]$ be the finite sparsity observable converging to $s_{bg}$ in the regular FLRW limit, and let $G_N/G_0-1$ be the finite non-vacuum response observable on the same ledger. Define the bridge-selected response curve by
+$$
+g_{*,N}(s)
+:=
+\mathbb E_{\mathbb P_{*,N}}\!\left[
+\frac{G_N/G_0-1}{1}
+\ \middle|\ s_N=s
+\right]
+\tag{K.9.22}
+$$
+for sparsity values with positive bridge weight. The one-scale family is
+$$
+g_{A,n}(s)=A\left(1-e^{-s^n}\right),
+\qquad A\ge0,\quad n\ge1.
+\tag{K.9.23}
+$$
+The branch is one-scale identifiable when the weighted projection problem
+$$
+(A_c,n)
+=
+\arg\min_{A\ge0,\ n\ge1}
+\int_0^\infty
+\left(g_{*,N}(s)-g_{A,n}(s)\right)^2
+\,dw_{*,N}(s)
+\tag{K.9.24}
+$$
+has a unique minimizer with positive Hessian on the active parameter tangent, where $w_{*,N}$ is the bridge-induced sparsity measure. In the regular limit, the same definition is used only when the branch supplies convergence of $s_N,w_{*,N},g_{*,N}$ to their continuum limits.
+
+**Theorem K.9.5 (Entropic-Bridge Selection of the Homogeneous Coupling Law).** On a homogeneous finite entropic-bridge branch:
+
+1. the finite bridge $\mathbb P_{*,N}$ exists and is unique;
+
+2. the induced response curve $g_{*,N}$ is unique on the support of $w_{*,N}$;
+
+3. if the branch is one-scale identifiable, then $(A_c,n)$ in (K.9.24) is uniquely selected before comparison with cosmological data;
+
+4. if the bridge-selected curve lies exactly in the one-scale family, so that
+$$
+g_{*,N}(s)=A_c(1-e^{-s^n}),
+\tag{K.9.25}
+$$
+and the regular FLRW convergence certificate holds, then the homogeneous coupling law is exactly
+$$
+\Upsilon_G(t)=1+A_c\left[1-e^{-s_{bg}(t)^n}\right],
+\qquad
+G_{eff}(t)=G_0\Upsilon_G(t),
+\tag{K.9.26}
+$$
+in the regular FLRW limit;
+
+5. the Bianchi-consistent effective-fluid form remains (K.9.14)-(K.9.19).
+
+This is an emergent metric/channel-capacity thermodynamic closure of the homogeneous non-vacuum response. It introduces no fundamental gravitational Hilbert sector.
+
+*Proof.* At fixed $N$ and fixed protocol time grid, the path ledger $\Omega_N=X_N^{M+1}$ is finite. The constraint set defined by (K.9.20) is a closed convex subset of a finite probability simplex and is nonempty by the feasibility assumption. Because $\mathbb P_{0,N}$ is strictly positive, relative entropy is strictly convex on this simplex. Adding the linear expectation of the finite nonnegative running cost preserves strict convexity. Therefore the minimizer (K.9.21) exists and is unique. This proves item 1. The conditional expectation defining $g_{*,N}$ is then fixed by the unique bridge measure, proving item 2 on the support of $w_{*,N}$.
+
+On a one-scale identifiable branch, Definition K.9.4 requires the projection functional (K.9.24) to have a unique minimizer with positive Hessian on the active tangent. Hence $(A_c,n)$ is selected by the bridge-induced response curve and the fixed sparsity measure, not by validation data. This proves item 3.
+
+If the response curve lies exactly in the one-scale family, then substituting (K.9.25) into
+$$
+\Upsilon_G=1+g_{*,N}
+$$
+and using the branch convergence $s_N\to s_{bg}$ gives (K.9.26), which is the law of Theorem K.9.3. This proves item 4.
+
+Finally, Corollary K.9.3b derived (K.9.14)-(K.9.19) from the homogeneous coupling law and the standard background continuity equations. Since the entropic-bridge branch changes only the selection rule for $(A_c,n)$ and not the Bianchi identity or the definitions of $\rho_{ad}$ and $p_{ad}$, the effective-fluid form remains unchanged. ∎
 
 
 ## K.10 Renormalization from Operational Finiteness

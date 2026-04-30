@@ -577,6 +577,47 @@ Thus the three generations are not redundant copies on this branch; they are the
 
 *Proof.* Theorem R.3.4 proves that $N=1$ fails anomaly cancellation unless the family charge is trivial, and $N=2$ supports only opposite charges and cannot carry a physical CKM-type CP phase after rephasing. For $N=3$, the anomaly equations imply one zero charge and two opposite charges, giving $\{a,-a,0\}$, and the three-sector system admits a physical rephasing-invariant CP phase. Hence $3$ is the minimum $N$ satisfying both conditions. ∎
 
+**Corollary R.3.5h (Persistent-Cohomology Representative of the Generation Class).** Let
+$$
+0=C_{\le -1}^{\bullet}\subset C_{\le0}^{\bullet}\subset\cdots\subset C_{\le M}^{\bullet}=C_{\mathrm{fam}}^{\bullet}
+$$
+be a finite filtered defect complex whose total degree-one cohomology represents the family-charge obstruction class of Theorem R.3.4. Suppose:
+
+1. the associated spectral sequence
+$$
+E_r^{p,q}\Rightarrow H^{p+q}(C_{\mathrm{fam}}^{\bullet})
+$$
+converges to the anomaly and CP-active family-charge quotient;
+
+2. filtration-exact classes are PCE-null;
+
+3. every stable degree-one class acts on an anomaly or CP protocol, so no stable invisible family label remains.
+
+Then
+$$
+\sum_p \dim E_\infty^{p,1-p}
+=
+\dim H^1(C_{\mathrm{fam}}^{\bullet})
+=
+N_g
+=
+3.
+\tag{R.3.5h.1}
+$$
+On the canonical three-sector filtration, where the stable degree-one representatives occur in one filtration degree, this reduces to
+$$
+\dim E_\infty^{1,0}=3.
+\tag{R.3.5h.2}
+$$
+
+*Proof.* Finite filtered complexes have convergent spectral sequences whose $E_\infty$ page is the associated graded object of the total cohomology. Therefore
+$$
+\sum_p \dim E_\infty^{p,1-p}
+=
+\dim H^1(C_{\mathrm{fam}}^{\bullet}).
+$$
+By hypothesis, this total degree-one cohomology is exactly the anomaly and CP-active family-charge quotient of Theorem R.3.4. Corollary R.3.5g proves that the minimal admissible family-charge quotient has $N_g=3$ represented by $\{a,-a,0\}$. Filtration-exact classes are removed by PCE, and invisible stable labels are excluded by item 3. Hence the stable persistent degree-one dimension is exactly three. If the stable representatives are concentrated in one filtration degree, the sum is the single dimension in (R.3.5h.2). ∎
+
 ## R.4 Three-Fold Structure: Topological Derivation and Geometric Compatibility
 
 This section compares two distinct appearances of a three-fold pattern in the framework. The topological route of Sections R.1–R.4.1 carries the actual derivation of $N=3$ from anomaly cancellation together with the CP-violation requirement. The geometric route of Section R.4.2 shows that the Leech/$E_8$ construction contains a natural three-fold scaffold compatible with that generation count. The convergence is structurally suggestive, but only the topological route proves the count.

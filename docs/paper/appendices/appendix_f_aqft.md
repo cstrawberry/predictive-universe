@@ -1291,6 +1291,63 @@ If a putative continuum branch violates every finite bound of this form, then fo
 
 **Open Target F.10.4f.3 (Sufficiency of Nuclearity for Finite-PCE Realization).** The converse direction remains a structural target: determine branch conditions under which an AQFT net satisfying the nuclearity bound (F.10.4f.4), the Hadamard-PCE state gate, and the reflection-positivity gate admits a finite MPU realization with uniformly bounded PCE cost. No sufficiency claim is used elsewhere in the paper.
 
+### F.10.4g Fractal Heat-Kernel and Trapped-Set Audit
+
+**Definition F.10.4g.1 (Uniform Recursive Heat-Kernel Audit).** Let $\{L_h\}_{h\downarrow0}$ be finite local MPU generators on a bounded physical region $O$, with heat kernels $p_t^{(h)}(x,y)$ for the symmetric propagation-cost sector. A uniform recursive heat-kernel audit on $O$ consists of constants
+$$
+C,c,d_w>0,
+\qquad
+\beta_{\mathrm{FUP}}>0,
+$$
+a macroscopic spectral dimension certificate $d_s=4$ on the operational-continuum scale window, and a core $\mathcal C_O$ of finite local test functions such that:
+
+1. the sub-Gaussian estimate
+$$
+p_t^{(h)}(x,y)
+\le
+C\,t^{-2}
+\exp\left[
+-c\left(\frac{d_h(x,y)^{d_w}}{t}\right)^{1/(d_w-1)}
+\right]
+\tag{F.10.4g.1}
+$$
+holds uniformly for $0<t<t_O$ and all sufficiently small $h$ on the audited macroscopic window;
+
+2. the finite forms are uniformly Markovian, conservative, tight on the local $L^2$ realization, and local on the audited window. They converge on the core in the Mosco-core sense: for canonical finite reconstructions $f_h,g_h$ of $f,g\in\mathcal C_O$,
+$$
+\mathcal E_h(f_h,g_h)\to\mathcal E_O(f,g),
+\tag{F.10.4g.2}
+$$
+and the same core supplies the liminf and recovery sequences needed for the local finite-form compactness theorem;
+
+3. if a horizon or scattering branch contains trapped predictive sets $\mathcal T_x(h)$ and dual update-frequency trapped sets $\mathcal T_p(h)$, the finite fractal-uncertainty audit holds:
+$$
+\left\|
+\Pi_{\mathcal T_x(h)}
+\mathcal F_h^{-1}
+\Pi_{\mathcal T_p(h)}
+\mathcal F_h
+\right\|
+\le
+C h^{\beta_{\mathrm{FUP}}}.
+\tag{F.10.4g.3}
+$$
+
+The exponent $\beta_{\mathrm{FUP}}$ is part of the audit certificate. It must either be derived from stated branch regularity data, such as doubling, porosity, or Frostman-type bounds for the trapped sets, or recorded as branch-supplied data under Convention P.14.1e.
+
+**Theorem F.10.4g.2 (Heat-Kernel Audit for Local Generator Tightness).** On a bounded regular region $O$, a uniform recursive heat-kernel audit supplies the diffusion part of the local generator precompactness required by Theorem F.0. If the coherent Hamiltonian parts also converge strongly on the same local core, then every subsequential local limit has the form
+$$
+\mathcal L_{\mathrm{cont}}^*
+=
+i[H_{\mathrm{cont}},\cdot]+\mathcal D_{\mathrm{cont}}^*
+\tag{F.10.4g.4}
+$$
+on $O$. If the trapped-set audit (F.10.4g.3) holds, no finite PPI-observable trapped sector can remain exactly invisible and non-decaying in the $h\downarrow0$ limit.
+
+*Proof.* The heat-kernel bound (F.10.4g.1) gives uniform short-time tightness of the finite semigroups on bounded local tests, while the Mosco-core condition (F.10.4g.2) identifies the limit form on the core and supplies recovery sequences. Since the forms are uniformly Markovian, conservative, tight, and local on the audited branch, finite-form compactness gives a closed limiting Dirichlet form $\mathcal E_O$ and hence a dissipative generator $\mathcal D_{\mathrm{cont}}^*$ on the closure of the core. Strong convergence of the Hamiltonian commutator parts on the same core adds the coherent term without changing closability, giving (F.10.4g.4).
+
+For the trapped sector, (F.10.4g.3) bounds the norm of the operator that simultaneously localizes a state on the trapped configuration set and on the trapped update-frequency set. If a nonzero retained state were exactly trapped and invisible to leakage protocols in the continuum limit, this norm would have a subsequential lower bound $1$ on that state. The estimate $C h^{\beta_{\mathrm{FUP}}}\to0$ forbids such a state. Thus any retained trapped sector must either leak through finite protocols, be removed by PCE as non-observable, or fail the audit. This theorem supplies a local generator and anti-remnant audit component; it does not by itself derive wedge KMS, Wightman analyticity, or the positive-energy representation. ∎
+
 ### F.10.5 Golay Self-Duality and Finite-Resolution Haag Duality
 
 **Definition F.10.5a (Golay-Pauli Carrier).** Let

@@ -473,6 +473,103 @@ Equal nuisance priors and equal nuisance domains ensure that the maximization do
 
 *Proof.* The first condition says the matched likelihood favors NFW on the primary observable. The second says the claimed universal galaxy-scale triple does not exist within the propagated uncertainties. The third says the successful galaxy fit is incompatible with independent sectors of the same theory. The fourth says the cross-scale branch requires a new free function rather than a transported universal law. Each condition contradicts a distinct necessary component of the Appendix I scaled-gravity claim. ∎
 
+### I.12b Adjudicated Multifractal PCE Cascade for Dark-Sector Response
+
+**Definition I.12b.1 (Covariant Multifractal Response Branch Package).** A covariant multifractal response branch package on the Appendix I branch consists of:
+
+1. a finite scale cover $\mathcal U_\ell$ of the baryonic/predictive source distribution;
+
+2. positive predictive-capacity measures $\mu_i(\ell)$ on the cells of $\mathcal U_\ell$;
+
+3. finite partition sums
+$$
+Z_q(\ell)
+=
+\sum_{i\in\mathcal U_\ell}\mu_i(\ell)^q
+\sim
+\ell^{\tau_{\mathrm{PU}}(q)}
+\tag{I.12b.1}
+$$
+on the operational scaling window;
+
+4. the associated singularity spectrum and PCE rate function
+$$
+f_{\mathrm{PU}}(\alpha)
+=
+\inf_q\left(q\alpha-\tau_{\mathrm{PU}}(q)\right),
+\qquad
+D_{\mathrm{eff}}=-\tau_{\mathrm{PU}}(0),
+\qquad
+I_{\mathrm{PCE}}(\alpha)=D_{\mathrm{eff}}-f_{\mathrm{PU}}(\alpha),
+\tag{I.12b.2}
+$$
+with $I_{\mathrm{PCE}}$ replaced by its lower-semicontinuous convex envelope when the finite branch records only the convex large-deviation envelope;
+
+5. a diffeomorphism-invariant response functional
+$$
+\Gamma_{\mathrm{mf}}[g,\chi]
+=
+\int
+\sqrt{-g}\,
+\Psi\!\left(I_{\mathrm{PCE}}(\alpha_\chi),g_\Lambda,\chi\right)\,d^4x,
+\tag{I.12b.3}
+$$
+where $\chi$ denotes the retained baryonic, predictive-matter, and environment variables, and $\alpha_\chi$ is their local scaling exponent on the branch;
+
+6. a branch-status record for $\tau_{\mathrm{PU}}$, $I_{\mathrm{PCE}}$, $\Psi$, and the support condition under Convention P.14.1e.
+
+The induced multifractal dark response tensor is
+$$
+T_{\mu\nu}^{\mathrm{mf}}
+=
+-\frac{2}{\sqrt{-g}}
+\frac{\delta\Gamma_{\mathrm{mf}}}{\delta g^{\mu\nu}}.
+\tag{I.12b.4}
+$$
+
+**Theorem I.12b.2 (Multifractal Response Branch Criterion).** On a covariant multifractal response branch, the scale-dependent galaxy and cluster response kernels are fixed by the single spectrum $\tau_{\mathrm{PU}}(q)$ and its associated rate function $I_{\mathrm{PCE}}$. Suppose the branch also supplies a fixed quasistatic projection norm and ansatz tensor
+$$
+T_{\mu\nu}^{\mathrm{ans}}(L_0,A_G,m,q)
+$$
+so that the projection functional
+$$
+\mathcal J(L_0,A_G,m,q)
+=
+\left\|
+\Pi_{\mathrm{qs}}T_{\mu\nu}^{\mathrm{mf}}
+-
+T_{\mu\nu}^{\mathrm{ans}}(L_0,A_G,m,q)
+\right\|_{\mathrm{br}}^2
+\tag{I.12b.5}
+$$
+has a unique minimum in the parameter family
+$$
+(L_0,A_G,m,q).
+\tag{I.12b.6}
+$$
+Then those parameters are selected before observational comparison. The multifractal branch is preferred over the simpler Appendix I relaxation kernel only if either:
+
+1. it has strictly lower fixed PCE description cost at the same prediction class; or
+
+2. it uniquely selects parameters that the simpler kernel leaves branch-supplied.
+
+Moreover,
+$$
+\nabla^\mu T_{\mu\nu}^{\mathrm{mf}}=0
+\tag{I.12b.7}
+$$
+on shell, and the response remains CMB-safe whenever the package support condition suppresses $\Gamma_{\mathrm{mf}}$ on the early homogeneous branch.
+
+*Proof.* The finite partition sums determine $\tau_{\mathrm{PU}}(q)$ on the operational scaling window. With the sign convention $Z_q(\ell)\sim\ell^{\tau(q)}$, the singularity spectrum is the Legendre-Fenchel envelope $f_{\mathrm{PU}}(\alpha)=\inf_q(q\alpha-\tau_{\mathrm{PU}}(q))$, and the associated nonnegative large-deviation cost relative to the support dimension is $I_{\mathrm{PCE}}=D_{\mathrm{eff}}-f_{\mathrm{PU}}$. Thus the rate input used by the response functional is fixed by the package.
+
+The response functional (I.12b.3) depends on the source variables only through this fixed rate function and the retained covariant variables, so the kernel obtained by variation is fixed by the package. Projection onto a finite ansatz family is an ordinary finite-dimensional minimization problem once the branch norm and ansatz tensor in (I.12b.5) are fixed; uniqueness of the minimum gives pre-comparison selection of $(L_0,A_G,m,q)$.
+
+The adjudication rule follows from PCE: if two branches predict the same class of observations, the lower fixed description cost is selected; if one branch fixes quantities that the other leaves supplied, it is more closed at the same status level. Diffeomorphism invariance of $\Gamma_{\mathrm{mf}}$ gives the Ward identity
+$$
+\nabla^\mu T_{\mu\nu}^{\mathrm{mf}}=0
+$$
+after imposing the Euler-Lagrange equations for the retained variables $\chi$. If the package support condition sets the multifractal response to zero on the early homogeneous branch, then no universal early-time shift of $G$ is induced. The result is an emergent metric/channel-capacity thermodynamic response law, not a microscopic gravitational Hilbert sector. ∎
+
 **I.13 Expected Parameter Ranges**
 
 Order-of-magnitude reasoning based on galaxy scaling laws and the empirical $g_0$ scale suggests the following ranges for the universal parameters:

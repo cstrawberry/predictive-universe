@@ -7015,6 +7015,82 @@ then $\Pi_T$ is absolutely unique.
 
 *Proof.* Under (1)–(3), the residual data $(\Delta,\mathcal R_T)$ become unique. Theorem T.77 then yields uniqueness of $\Pi_T$. ∎
 
+**Definition T.77.3 (Self-Similar Flavor Potential Branch Package).** A self-similar flavor potential branch package on the selected $E_8$ branch is a tuple
+$$
+\mathfrak F_{\mathrm{flav}}
+=
+\left(
+X_{\mathrm{flav}},
+\{\Phi_\alpha\}_{\alpha\in A},
+\{r_\alpha\}_{\alpha\in A},
+\{w_\alpha\}_{\alpha\in A},
+V_0,
+\mathcal N_{\mathrm{PU}},
+\{c_f\}_{f}
+\right)
+\tag{T.77.3.1}
+$$
+with the following data:
+
+1. $X_{\mathrm{flav}}$ is a compact finite-dimensional flavor cell containing the retained $E_8$ generation candidates.
+
+2. Each $\Phi_\alpha:X_{\mathrm{flav}}\to X_{\mathrm{flav}}$ is a contraction with common Lipschitz bound $\rho<1$.
+
+3. The constants $0<r_\alpha\le r<1$, $w_\alpha\in\mathbb R$, $\mathcal N_{\mathrm{PU}}$, and $c_f$ are fixed before comparison with charged-fermion or neutrino masses.
+
+4. $V_0:X_{\mathrm{flav}}\to\mathbb R$ is a fixed continuous seed potential.
+
+5. The flavor renormalization operator
+$$
+(\mathcal R_{\mathrm{flav}}V)(x)
+=
+V_0(x)
++
+\min_{\alpha\in A}
+\left[
+w_\alpha+r_\alpha V(\Phi_\alpha^{-1}x)
+\right]
+\tag{T.77.3.2}
+$$
+is interpreted on the branch pieces where $\Phi_\alpha^{-1}x$ is defined, with $+\infty$ assigned outside the image of $\Phi_\alpha$.
+
+The package is completed only when $\mathcal R_{\mathrm{flav}}$ is a strict contraction on the Banach space of continuous potentials modulo additive constants, the fixed point $V_*$ has a finite retained critical set
+$$
+\{x_{f,a}\},
+$$
+and the retained Hessians
+$$
+H_{f,a}:=\nabla^2V_*(x_{f,a})
+$$
+are positive definite on the retained flavor normal directions. These critical-set, Hessian, normalization, and sector-prefactor data are part of the package unless they are derived from earlier PU branch data in the sense of Convention P.14.1e.
+
+**Theorem T.77.4 (Self-Similar Flavor Branch Criterion).** A completed self-similar flavor potential branch package determines the residual flavor-geometric data
+$$
+(\mathcal T_{E_8},\mathcal V)
+$$
+appearing in Theorem T.77. In particular, on that branch the absolute Yukawa entries at $\mu_G$ are uniquely
+$$
+y_{f,a}(\mu_G)
+=
+\mathcal N_{\mathrm{PU}}\,c_f\,
+\det(H_{f,a})^{-1/2}
+\exp[-\alpha V_*(x_{f,a})],
+\qquad
+\alpha=\frac32.
+\tag{T.77.4.1}
+$$
+Therefore, if the threshold tuple $\Delta$ and the mixing/CP record $\mathcal B$ are also fixed, Theorem T.77 gives a unique quantitative Appendix-T parameter vector $\Pi_T$. If $\mathfrak F_{\mathrm{flav}}$ is supplied rather than derived, the resulting absolute normalization has branch-package status.
+
+*Proof.* Since $\mathcal R_{\mathrm{flav}}$ is a strict contraction on continuous potentials modulo constants, the Banach fixed-point theorem gives a unique fixed point $V_*$ modulo an additive constant. The additive constant is absorbed by the fixed normalization $\mathcal N_{\mathrm{PU}}$ and sector prefactors $c_f$, so it does not create a continuous residual flavor freedom on the completed branch.
+
+The retained generation points are the finite nondegenerate critical points $x_{f,a}$ supplied by the completed package. Nondegeneracy gives positive finite Hessians $H_{f,a}$ on the retained normal directions, hence unique Van Vleck/geodesic factors
+$$
+\mathcal V_{f,a}
+=
+\det(H_{f,a})^{-1/2}.
+$$
+Thus the package fixes both the selected generation locations $\mathcal T_{E_8}$ and the determinant data $\mathcal V$. Substitution into the Yukawa form used by Theorem T.72 gives (T.77.4.1). The final uniqueness claim is then Corollary T.77.2. The status claim follows from Convention P.14.1e. ∎
+
 ## T.30 Determinacy After Spectral Completion
 
 **Theorem T.78 (Determinacy of a Completed Flag-Lift Spectral Problem).** Let $\widetilde X=\mathrm{Flag}_{1,2,3}(Q)$ be the minimal flag lift of the quantitative gauge sector. Fix:
@@ -7216,9 +7292,308 @@ T=
 $$
 has determinant $-8/15$, failure to determine $F$ propagates to failure to determine $\Delta=TF$, and then to failure to determine $Z_i=1+\Delta_i/24$. The canonical minimal residual ledger remains $\delta_i=0$ and cannot absorb missing principal lifted thresholds. ∎
 
-**Corollary T.78.5.1 (Disposition of the Flag-Lift Spectral Gate).** The current-framework flag-lift spectral gate is closed negatively. No theorem-level numerical $(F,\Delta,Z)$ follows from the canonical ledger, and no validation tuple may be promoted to a derived threshold output. Any future positive computation must be entered as a separate appended spectral branch extension containing a completed tuple, forward block sums, heat/zeta data, and Corollary T.69.1 tail constants fixed before validation comparison.
+**Corollary T.78.5.1 (Pre-Certificate Disposition of the Flag-Lift Spectral Gate).** Before a completed spectral certificate is supplied, the current-framework flag-lift spectral gate closes negatively: no theorem-level numerical $(F,\Delta,Z)$ follows from the canonical ledger alone, and no validation tuple may be promoted to a derived threshold output. A positive branch requires a completed spectral tuple, forward block sums, heat/zeta finite parts, and Corollary T.69.1 tail constants fixed before validation comparison.
 
 *Proof.* Immediate from Theorem T.78.5, Theorem T.78, Corollary T.78.3, and Corollary T.79.1. ∎
+
+**Definition T.78.6 (RHG Flag-Lift Spectral Certificate).** An RHG flag-lift spectral certificate is a finite record
+$$
+\mathfrak C_{\mathrm{RHG}}
+=
+\left(
+\mathcal B_L,
+\mathcal D_{\mathrm{RHG}},
+\mathcal E_{\mathrm{RHG}},
+\mathcal H_{\mathrm{RHG}},
+\mathcal T_{\mathrm{RHG}},
+\mathcal F_{\mathrm{RHG}},
+\chi_{\mathrm{stat}}
+\right)
+\tag{T.78.6.1}
+$$
+with the following entries, all fixed before validation comparison.
+
+1. **Finite block ledger.** $\mathcal B_L$ is a finite list of retained Peter-Weyl/residual labels
+$$
+b=(\Lambda,s,a),
+\qquad
+s\in\{C,W,Y\},
+$$
+with cutoff $L$, omitted spectral threshold $\nu_L$, sector multiplicities, and exact dimensions $\dim V_\Lambda$.
+
+2. **RHG block data.** $\mathcal D_{\mathrm{RHG}}$ gives, for every $b\in\mathcal B_L$, exact finite matrices
+$$
+A_{\alpha,b},
+\qquad
+\Pi_{\mathrm{syn},b},
+\qquad
+J_{0,b},
+\qquad
+\Pi_{r,b},
+\qquad
+r\in\{C,W,Y\},
+$$
+satisfying Definition Z.3a. It also gives
+$$
+\mathcal K_b
+=
+\sum_{\alpha=1}^{6}
+[A_{\alpha,b},\Pi_{\mathrm{syn},b}]^*
+[A_{\alpha,b},\Pi_{\mathrm{syn},b}]
++
+\sum_{\alpha=1}^{6}
+[A_{\alpha,b},J_{0,b}]^*
+[A_{\alpha,b},J_{0,b}]
++
+\sum_r\sum_{\alpha=1}^{6}
+[A_{\alpha,b},\Pi_{r,b}]^*
+[A_{\alpha,b},\Pi_{r,b}],
+\tag{T.78.6.2}
+$$
+the spectral projection
+$$
+\Pi_b^{\mathrm{RHG}}
+=
+\mathbf 1_{\{\lambda_{\min}(\mathcal K_b)\}}(\mathcal K_b),
+\tag{T.78.6.3}
+$$
+and the parity residual matrix
+$$
+J_b^{\mathrm{RHG}}
+=
+\operatorname{sgn}_0
+\left(
+\Pi_b^{\mathrm{RHG}}J_{0,b}\Pi_b^{\mathrm{RHG}}
+\right).
+\tag{T.78.6.4}
+$$
+Here $\operatorname{sgn}_0$ is a fixed finite spectral-sign convention on the compressed block. The certificate is admissible only when this convention returns a self-adjoint involution on $\Pi_b^{\mathrm{RHG}}\mathcal H_b$, either because the compressed operator has no zero eigenvalue or because a branch-fixed $\pm1$ assignment on the zero eigenspace is included before validation comparison.
+
+3. **Geometric normalization data.** $\mathcal E_{\mathrm{RHG}}$ gives the canonical homogeneous metric $g_0$ on
+$$
+\widetilde X=SU(8)/S(U(2)\times U(1)\times U(2)\times U(3)),
+$$
+the six RHG Killing fields $E_\alpha^\#$, the exact volume $\operatorname{Vol}_{g_0}(\widetilde X)$, the metric normalization
+$$
+\beta_{\mathrm{RHG}}^{-1}
+=
+\frac{1}{6\,\operatorname{Vol}_{g_0}(\widetilde X)}
+\sum_{\alpha=1}^{6}
+\int_{\widetilde X}
+\lVert E_\alpha^\#\rVert_{g_0}^2
+\,d\operatorname{vol}_{g_0},
+\tag{T.78.6.5}
+$$
+and the canonical homogeneous connection
+$$
+\nabla_{\mathrm{RHG}}^{\widetilde G}
+$$
+induced by the reductive decomposition
+$$
+\mathfrak{su}(8)=\mathfrak h\oplus\mathfrak m.
+$$
+
+4. **Structural triple certificate.** $\mathcal H_{\mathrm{RHG}}$ gives the spectrahedral admissible set
+$$
+\mathcal A_{\mathrm{RHG}}
+=
+\left\{
+x=(\mu,m,\eta):
+B_b^{\mathrm{RHG}}(x)\ge(\ln2)I
+\text{ for every retained and tail-certified block }b
+\right\},
+\tag{T.78.6.6}
+$$
+where
+$$
+B_b^{\mathrm{RHG}}(x)
+=
+\beta_{\mathrm{RHG}}
+\left(
+C_2^{SU(8)}(\Lambda)-C_2^H(\tau_{s,a})
+\right)I
++
+(\lambda_s+\mu)I
++
+(m+\eta\lambda_s)J_b^{\mathrm{RHG}}.
+\tag{T.78.6.7}
+$$
+It also gives the exact unique minimizer
+$$
+x_{\mathrm{RHG}}
+=
+(\mu_0^{\mathrm{RHG}},m_{\mathcal J}^{\mathrm{RHG}},\eta^{\mathrm{RHG}})
+=
+\operatorname*{argmin}_{x\in\mathcal A_{\mathrm{RHG}}}
+(\mu^2+m^2+\eta^2).
+\tag{T.78.6.8}
+$$
+
+5. **Tail certificate.** $\mathcal T_{\mathrm{RHG}}$ gives, for every sector $s$, constants
+$$
+A_s,\quad C_{s,P},\quad P>23,\quad \nu_L
+$$
+such that
+$$
+N_s^{\mathrm{RHG}}(\nu)\le A_s(1+\nu)^{23},
+\tag{T.78.6.9}
+$$
+and
+$$
+|R_{s,P}^{\mathrm{RHG}}(\nu)|
+\le
+C_{s,P}(1+\nu)^{-P}\log(2+\nu)
+\tag{T.78.6.10}
+$$
+for all $\nu\ge\nu_L$. The certified tail error is
+$$
+\varepsilon_s(L)
+=
+A_sC_{s,P}
+\int_{\nu_L}^{\infty}
+(1+\nu)^{22-P}\log(2+\nu)\,d\nu.
+\tag{T.78.6.11}
+$$
+
+6. **Forward finite-part output.** $\mathcal F_{\mathrm{RHG}}$ gives certified intervals
+$$
+F_s^{\mathrm{RHG}}
+\in
+[F_s^-,F_s^+],
+\qquad
+s\in\{C,W,Y\},
+\tag{T.78.6.12}
+$$
+computed from the canonical finite part
+$$
+F_s^{\mathrm{RHG}}
+=
+-\left(\zeta_s^{\mathrm{RHG}}\right)'(0)
+-
+\zeta_s^{\mathrm{RHG}}(0)\log\mu_G^2,
+\tag{T.78.6.13}
+$$
+where
+$$
+\zeta_s^{\mathrm{RHG}}(q)
+=
+\sum_{b=(\Lambda,s,a)}
+(\dim V_\Lambda)
+\operatorname{Tr}_{\Pi_b^{\mathrm{RHG}}\mathcal H_b}
+\left(
+B_b^{\mathrm{RHG}}(x_{\mathrm{RHG}})^{-q}
+\right),
+\tag{T.78.6.14}
+$$
+with continuation and finite part fixed by Convention T.69a. It also gives
+$$
+\Delta^{\mathrm{RHG}}=T F^{\mathrm{RHG}},
+\qquad
+Z_i^{\mathrm{RHG}}=1+\frac{\Delta_i^{\mathrm{RHG}}}{24},
+\tag{T.78.6.15}
+$$
+as certified intervals.
+
+7. **Status ledger.** $\chi_{\mathrm{stat}}$ records that every entry of $\mathfrak C_{\mathrm{RHG}}$ is fixed before validation comparison and records whether it is theorem-derived, convention-fixed, or branch-certified. Any validation-selected entry invalidates the certificate.
+
+**Algorithm T.78.6a (RHG Certificate Verification).** Given a finite record $\mathfrak C_{\mathrm{RHG}}$, verify the certificate by the following finite checks.
+
+1. Check that every $A_{\alpha,b}$ is the derived $SU(8)$ representation of the RHG generator $E_\alpha=i\gamma_\alpha$ on the block $b$, and that the matrices $\Pi_{\mathrm{syn},b}$, $J_{0,b}$, and $\Pi_{r,b}$ are the transported marked Golay/syndrome/sector data.
+
+2. Recompute $\mathcal K_b$ from (T.78.6.2), verify positivity, compute its lowest spectral projection, and check (T.78.6.3).
+
+3. Recompute $J_b^{\mathrm{RHG}}$ from (T.78.6.4), including the branch-fixed zero-eigenspace convention if needed, and verify
+$$
+(J_b^{\mathrm{RHG}})^*=J_b^{\mathrm{RHG}},
+\qquad
+(J_b^{\mathrm{RHG}})^2=I.
+\tag{T.78.6.16}
+$$
+
+4. Verify the metric normalization (T.78.6.5) and the homogeneous connection definition from the reductive splitting.
+
+5. Verify that $\mathcal A_{\mathrm{RHG}}$ is the spectrahedron (T.78.6.6), that $x_{\mathrm{RHG}}$ satisfies the Karush-Kuhn-Tucker conditions for minimizing $\mu^2+m^2+\eta^2$ over $\mathcal A_{\mathrm{RHG}}$, and that the active-constraint Hessian is positive on the tangent quotient.
+
+6. Recompute the retained finite eigenvalues of every $B_b^{\mathrm{RHG}}(x_{\mathrm{RHG}})$ and the retained block finite sums.
+
+7. Verify the Weyl bound (T.78.6.9), the heat-kernel remainder bound (T.78.6.10), and the tail integral (T.78.6.11).
+
+8. Recompute the certified intervals for $F$, then propagate them through the fixed linear map
+$$
+\Delta=TF
+$$
+and through
+$$
+Z_i=1+\frac{\Delta_i}{24}.
+$$
+
+9. Reject the certificate if any entry is marked validation-selected or if any verification check fails.
+
+**Lemma T.78.6b (Finite Verification and Uniqueness).** Algorithm T.78.6a terminates on every finite record $\mathfrak C_{\mathrm{RHG}}$. If it accepts, the accepted values of
+$$
+F^{\mathrm{RHG}},
+\qquad
+\Delta^{\mathrm{RHG}},
+\qquad
+Z^{\mathrm{RHG}}
+$$
+are unique up to the certified interval widths.
+
+*Proof.* All block operations in steps 1-6 are finite-dimensional matrix computations. Spectral projections, signs, KKT checks, and finite eigenvalue enclosures are finite algebraic or interval-arithmetic checks. The tail checks in step 7 require only the listed constants $A_s,C_{s,P},P,\nu_L$ and the explicit integral (T.78.6.11), which is finite because $P>23$. Steps 8-9 are finite interval arithmetic and status-ledger checks. Hence the algorithm terminates.
+
+If the certificate is accepted, the matrices $\mathcal K_b$, projections $\Pi_b^{\mathrm{RHG}}$, involutions $J_b^{\mathrm{RHG}}$, normalization $\beta_{\mathrm{RHG}}$, connection $\nabla_{\mathrm{RHG}}^{\widetilde G}$, and structural triple $x_{\mathrm{RHG}}$ are all fixed. The finite retained eigenvalue sums are fixed, and the omitted tails are enclosed by the certified intervals. Therefore $F^{\mathrm{RHG}}$ is unique up to those intervals. Since $T$ is fixed and $Z_i=1+\Delta_i/24$ is affine, $\Delta^{\mathrm{RHG}}$ and $Z^{\mathrm{RHG}}$ are unique up to propagated interval widths. ∎
+
+**Lemma T.78.6c (Existence and Uniqueness of the RHG Structural Triple).** If the RHG block data pass steps 1-4 of Algorithm T.78.6a, the admissible set $\mathcal A_{\mathrm{RHG}}$ is nonempty, closed, and convex. Hence the structural triple (T.78.6.8) exists and is unique.
+
+*Proof.* For each block $b$, the map
+$$
+x\mapsto B_b^{\mathrm{RHG}}(x)-(\ln2)I
+$$
+is an affine Hermitian matrix pencil. The positive-semidefinite locus of an affine Hermitian matrix pencil is a closed convex spectrahedron. Intersections of closed convex sets are closed and convex. Nonemptiness follows because increasing $\mu$ shifts every block by $\mu I$, so sufficiently large $\mu$ satisfies all block inequalities. The objective $\mu^2+m^2+\eta^2$ is strictly convex and proper on $\mathbb R^3$, so its minimizer on a nonempty closed convex set is unique. ∎
+
+**Theorem T.78.7 (Certified RHG Completion of the Global Flag-Lift Spectral Gate).** An accepted RHG flag-lift spectral certificate $\mathfrak C_{\mathrm{RHG}}$ is a completed spectral tuple in the sense of Theorem T.78. It positively closes the global flag-lift spectral gate on the RHG branch by the forward map
+$$
+\mathfrak C_{\mathrm{RHG}}
+\longmapsto
+F^{\mathrm{RHG}}
+\longmapsto
+\Delta^{\mathrm{RHG}}=TF^{\mathrm{RHG}}
+\longmapsto
+Z_i^{\mathrm{RHG}}=1+\frac{\Delta_i^{\mathrm{RHG}}}{24}.
+\tag{T.78.7.1}
+$$
+In the canonical minimal residual ledger,
+$$
+\delta_i^{\mathrm{min}}=0.
+\tag{T.78.7.2}
+$$
+The comparison tuple
+$$
+(15.14,20.94,18.41)
+$$
+cannot be used to define, choose, tune, or repair any entry of $\mathfrak C_{\mathrm{RHG}}$.
+
+*Proof.* An accepted certificate supplies all non-formal data isolated in Theorem T.78.2: the metric normalization $\beta_{\mathrm{RHG}}$, homogeneous connection $\nabla_{\mathrm{RHG}}^{\widetilde G}$, structural parameters $(\mu_0^{\mathrm{RHG}},m_{\mathcal J}^{\mathrm{RHG}},\eta^{\mathrm{RHG}})$, Golay/parity block operators $J_b^{\mathrm{RHG}}$, residual finite matrices through the block pencils $B_b^{\mathrm{RHG}}$, and tail constants satisfying Corollary T.69.1. The canonical $\mathrm{MS2}_{\mu_G}$ finite-part prescription is fixed by Convention T.69a.
+
+By Lemma T.78.6b, the forward finite parts $F_s^{\mathrm{RHG}}$ are uniquely certified. Theorem T.78 then applies to the accepted tuple and gives determinacy of the completed flag-lift spectral problem. The fixed Dynkin-index map gives $\Delta^{\mathrm{RHG}}=TF^{\mathrm{RHG}}$, and Definition T.17a gives $Z_i^{\mathrm{RHG}}=1+\Delta_i^{\mathrm{RHG}}/24$. Since no separate heavy-threshold ledger is appended, Definition T.19a gives $\delta_i^{\mathrm{min}}=0$.
+
+Finally, step 9 of Algorithm T.78.6a rejects any validation-selected entry. Therefore the validation tuple cannot influence the branch construction. It is available only for comparison after the forward computation. ∎
+
+**Corollary T.78.8 (Exact Completion Criterion for Target 1).** Target 1 is fully resolved on a branch if and only if either:
+
+1. an RHG certificate $\mathfrak C_{\mathrm{RHG}}$ is accepted by Algorithm T.78.6a; or
+
+2. another completed spectral tuple satisfying Theorem T.78 and Corollary T.69.1 is supplied before validation comparison; or
+
+3. a no-go theorem proves that no admissible PU-internal spectral package can supply the missing data.
+
+The pre-certificate canonical ledger satisfies item 3 only in the negative current-framework sense of Theorem T.78.5. An accepted RHG certificate satisfies item 1 and gives positive branch closure.
+
+*Proof.* This is exactly the completion criterion of Target 1 expressed in Appendix-T terms. Theorem T.78 supplies determinacy for any completed tuple. Theorem T.78.7 proves that an accepted RHG certificate is such a tuple. Theorem T.78.5 supplies the negative pre-certificate result. These alternatives exhaust the target's stated completion modes. ∎
+
+**Corollary T.78.9 (No Fractal-Ontology Claim for RHG Closure).** RHG closure does not assert that the smooth homogeneous flag lift $\widetilde X$ is a fractal space. The RHG projection is finite and blockwise; the threshold operator remains an elliptic sector operator on the smooth compact flag lift.
+
+*Proof.* The matrices $\mathcal K_b$, $\Pi_b^{\mathrm{RHG}}$, and $J_b^{\mathrm{RHG}}$ live on finite Peter-Weyl/residual blocks. The sector zeta functions are those of the elliptic lifted threshold operator on the smooth compact homogeneous space $\widetilde X$. No topology, differentiable structure, or homogeneous-space definition of $\widetilde X$ is changed. ∎
 
 **Theorem T.79 (Conditional Closure of the Quantitative Parameter Sector).** On a fixed PU structural branch with the two-loop SM RG system, suppose:
 1. a completed flag-lift spectral calculation provides a definite threshold triplet $\Delta$;
@@ -7322,5 +7697,29 @@ $$
 \langle \psi_f|\,\mathcal O_{\mathrm{spin}}^{\mathrm{PU}}\,|\psi_i\rangle
 $$
 between eigenstates of the fixed Hamiltonian. These are all uniquely defined finite-dimensional quantities. Statement (iii) follows by combining the non-uniqueness in (i) with the uniqueness after operator closure in (ii). ∎
+
+**Corollary T.79a.1 (Boundary-Impedance Closure of Nuclear Extension Data).** For a fixed proton-neutron sector $(Z,N)$, the nuclear aggregate Hamiltonian required by Theorem T.79a is supplied at theorem level if PU supplies a finite colorless boundary impedance map
+$$
+\Lambda_A^{\mathrm{PU}}(E),
+\qquad
+A=(Z,N),
+$$
+satisfying Definition X.8k.5 and Theorem X.8k.6, together with the finite spin-current and decay boundary operators for the same retained aggregate Hilbert space. In that case:
+
+1. nuclear bound-state energies are the zeros of
+$$
+\det\Lambda_A^{\mathrm{PU}}(E)=0;
+\tag{T.79a.1}
+$$
+
+2. open-channel nuclear resonances are the zeros of
+$$
+\det\left(\Lambda_A^{\mathrm{PU}}(E)-\Lambda_{\mathrm{out}}(E)\right)=0;
+\tag{T.79a.2}
+$$
+
+3. isotope stability, shell gaps, and spin-dependent transition rates are determined by the same finite spectral data and matrix elements specified in Theorem T.79a.
+
+*Proof.* Theorem X.8k.6 proves that the finite boundary impedance map is exactly the Schur spectral representative of the corresponding finite self-adjoint aggregate operator for all colorless boundary protocols. Therefore fixing $\Lambda_A^{\mathrm{PU}}(E)$ is equivalent, for those protocols, to fixing the spectral response of $H_A^{\mathrm{PU}}(Z,N)$ up to PPI-equivalent interior representatives. Equation (T.79a.1) is (X.8k.9) applied to the nuclear aggregate sector, and (T.79a.2) is (X.8k.11). Once the spin-current and decay operators are also fixed on the same finite retained Hilbert space, the spectral theorem gives the stability, shell-gap, and transition-rate quantities listed in Theorem T.79a. ∎
 
 -----

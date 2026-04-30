@@ -184,6 +184,7 @@
 *   Dong, C., Griess, R. L., & Lam, C. H. (2007). Uniqueness results for the moonshine vertex operator algebra. *American Journal of Mathematics*, *129*(2), 583–609.
 *   Dong, C., Li, H., & Mason, G. (2000). Modular-invariance of trace functions in orbifold theory and generalized Moonshine. *Communications in Mathematical Physics*, *214*, 1–56.
 *   Dong, X., Harlow, D., & Wall, A. C. (2016). Reconstruction of bulk operators within the entanglement wedge in gauge-gravity duality. *Physical Review Letters*, *117*(2), 021601.
+*   Donoho, D. L., & Stark, P. B. (1989). Uncertainty principles and signal recovery. *SIAM Journal on Applied Mathematics*, *49*(3), 906–931. DOI: 10.1137/0149053
 *   Donsker, M. D., & Varadhan, S. R. S. (1975). Asymptotic evaluation of certain Markov process expectations for large time. I. *Communications on Pure and Applied Mathematics*, *28*(1), 1–47. DOI: 10.1002/cpa.3160280102
 *   DUNE Collaboration (Abi, B., *et al.*) (2020). Long-baseline neutrino oscillation physics potential of the DUNE experiment. *European Physical Journal C*, *80*, 978. DOI: 10.1140/epjc/s10052-020-08456-z
 *   Dunne, G. V. (2008). Functional determinants in quantum field theory. *Journal of Physics A: Mathematical and Theoretical*, *41*(30), 304006. DOI: 10.1088/1751-8113/41/30/304006
@@ -198,10 +199,12 @@
 *   Everett, H. (1957). "Relative State" formulation of quantum mechanics. *Reviews of Modern Physics*, *29*(3), 454–462. DOI: 10.1103/RevModPhys.29.454
 *   Engel, G. S., Calhoun, T. R., Read, E. L., Ahn, T. K., Mančal, T., Cheng, Y. C., ... & Fleming, G. R. (2007). Evidence for wavelike energy transfer through quantum coherence in photosynthetic systems. *Nature*, *446*(7137), 782–786.
 *   Fagnola, F., & Umanità, V. (2007). Generators of detailed balance quantum Markov semigroups. *Infinite Dimensional Analysis, Quantum Probability and Related Topics*, *10*(3), 335–363. DOI: 10.1142/S0219025707002762
+*   Falconer, K. J. (1997). *Techniques in Fractal Geometry*. John Wiley & Sons.
 *   Fechner, G. T. (1860). *Elemente der Psychophysik*. Breitkopf und Härtel. [English translation: *Elements of Psychophysics*, Vol. I, H. E. Adler, Trans., Holt, Rinehart and Winston, 1966.]
 *   Fendel, J. C., Tiersch, C., Sölder, P., Gaab, J., & Schmidt, S. (2025). Effects of open-label placebos across populations and outcomes: An updated systematic review and meta-analysis of randomized controlled trials. *Scientific Reports*, *15*, 29940. DOI: 10.1038/s41598-025-14895-z
 *   Feroz, F., & Hobson, M. P. (2008). Multimodal nested sampling: an efficient and robust alternative to Markov Chain Monte Carlo methods for astronomical data analysis. *Monthly Notices of the Royal Astronomical Society*, *384*(2), 449–463. DOI: 10.1111/j.1365-2966.2007.12353.x
 *   Feroz, F., Hobson, M. P., & Bridges, M. (2009). MultiNest: an efficient and robust Bayesian inference tool for cosmology and particle physics. *Monthly Notices of the Royal Astronomical Society*, *398*(4), 1601–1614. DOI: 10.1111/j.1365-2966.2009.14548.x
+*   Frisch, U. (1995). *Turbulence: The Legacy of A. N. Kolmogorov*. Cambridge University Press.
 *   Feroz, F., Hobson, M. P., Cameron, E., & Pettitt, A. N. (2019). Importance Nested Sampling and the MultiNest Algorithm. *The Open Journal of Astrophysics*, *2*, 10. DOI: 10.21105/astro.1306.2144
 *   Feynman, R. P., & Hibbs, A. R. (1965). *Quantum Mechanics and Path Integrals*. McGraw-Hill.
 *   Finkelstein, D., & Rubinstein, J. (1968). Connection between spin, statistics, and kinks. *Journal of Mathematical Physics*, *9*(11), 1762–1779. DOI: 10.1063/1.1664510
@@ -266,6 +269,7 @@
 *   Hameroff, S., & Penrose, R. (2014). Consciousness in the universe: A review of the 'Orch OR' theory. *Physics of Life Reviews*, *11*(1), 39–78.
 *   Hameroff, S. R., & Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, *40*(3–4), 453–480. DOI: 10.1016/0378-4754(95)00042-4
 *   Hamming, R. W. (1950). Error detecting and error correcting codes. *Bell System Technical Journal*, *29*(2), 147–160. DOI: 10.1002/j.1538-7305.1950.tb00463.x
+*   Halsey, T. C., Jensen, M. H., Kadanoff, L. P., Procaccia, I., & Shraiman, B. I. (1986). Fractal measures and their singularities: The characterization of strange sets. *Physical Review A*, *33*(2), 1141–1151. DOI: 10.1103/PhysRevA.33.1141
 *   Hardy, G. H., & Wright, E. M. (1979). *An Introduction to the Theory of Numbers* (5th ed.). Oxford University Press.
 *   Hardy, L. (2001). Quantum Theory From Five Reasonable Axioms. *arXiv*, quant-ph/0101012. DOI: 10.48550/arXiv.quant-ph/0101012
 *   Hardy, J. C., & Towner, I. S. (2020). Superallowed 0⁺→0⁺ nuclear β decays: 2020 critical survey. *Physical Review C*, *102*, 045501.

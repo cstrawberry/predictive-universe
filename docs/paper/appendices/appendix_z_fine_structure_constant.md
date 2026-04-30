@@ -295,9 +295,80 @@ $$
 $$
 is the complexification of an 8-dimensional real matrix algebra acting faithfully on $\mathbb{R}^8$. Since the octonions $\mathbb{O}$ also form an 8-dimensional real algebra, the division-algebra coherence check and the Clifford coherence check share the same 8-dimensional real foundation.
 
-This is a secondary algebraic consistency relation only. The present manuscript does **not** derive an octonionic $\mathrm{Spin}(7)$ action inside the minimal SPAP dynamics, and it does **not** prove that $\mathrm{Cl}_{\mathbb{R}}(0,6)$ is selected by a predictive-substrate real-structure theorem rather than by dimensional coincidence. Identifying the PU invariant that would pick out this real form — and, if it exists, the analogue of the Cayley $4$-form stabilizer — remains open.
+The equality $d_0=8$ first follows from the SPAP/PCE minimality argument of Theorem Z.2. Its predictive use in the lifted spectral sector is the finite Radon-Hurwitz/Golay compatibility selection below.
 
 *Consistency with Dimensional Selection.* For $K_0 \neq 3$, the framework becomes inconsistent with mode-channel matching (Theorem Z.11). Specifically, $K_0 = 2$ yields $M = 8$ with no integer $D$ satisfying $K(D) = 8$; $K_0 = 4$ yields $M = 56$ with no solution because standard bounds give $K(5)\le44<56<72\le K(6)$ [Mittelmann & Vallentin 2010]. Only $K_0 = 3$ produces $M = 24 = K(4)$, yielding the unique self-consistent dimensional structure with $D = 4$.
+
+**Definition Z.3a (Radon-Hurwitz/Golay Compatibility Data).** On the minimal branch $d_0=8$, let
+$$
+\gamma_{2k-1}
+=
+\left(\prod_{j=1}^{k-1}\sigma_z^{(j)}\right)\sigma_x^{(k)},
+\qquad
+\gamma_{2k}
+=
+\left(\prod_{j=1}^{k-1}\sigma_z^{(j)}\right)\sigma_y^{(k)},
+\qquad
+k=1,2,3,
+$$
+be the six Clifford generators of Remark Z.1a. Define
+$$
+E_\alpha=i\gamma_\alpha\in\mathfrak{su}(8),
+\qquad
+\alpha=1,\dots,6.
+\tag{Z.3a.1}
+$$
+For a retained Peter-Weyl threshold block
+$$
+b=(\Lambda,s,a),
+$$
+let $V_\Lambda$ be the irreducible $SU(8)$ module of highest weight $\Lambda$, let $M_{\Lambda,s,a}$ be the finite multiplicity space
+$$
+M_{\Lambda,s,a}
+=
+\operatorname{Hom}_H(\tau_{s,a},V_\Lambda|_H),
+$$
+and set
+$$
+\mathcal H_b=V_\Lambda\otimes M_{\Lambda,s,a}.
+$$
+The functorial RH lift to $b$ is
+$$
+A_{\alpha,b}
+=
+d\rho_\Lambda(E_\alpha)\otimes I_{M_{\Lambda,s,a}}.
+\tag{Z.3a.2}
+$$
+Let $\Pi_{\mathrm{syn},b}$ be the transported marked Golay syndrome projector, let $J_{0,b}$ be the transported marked Golay half-swap, and let $\Pi_{r,b}$ be the lifted sector projection on the same finite block. The RHG compatibility operator is
+$$
+\mathcal K_b
+=
+\sum_{\alpha=1}^{6}
+[A_{\alpha,b},\Pi_{\mathrm{syn},b}]^*
+[A_{\alpha,b},\Pi_{\mathrm{syn},b}]
++
+\sum_{\alpha=1}^{6}
+[A_{\alpha,b},J_{0,b}]^*
+[A_{\alpha,b},J_{0,b}]
++
+\sum_r\sum_{\alpha=1}^{6}
+[A_{\alpha,b},\Pi_{r,b}]^*
+[A_{\alpha,b},\Pi_{r,b}].
+\tag{Z.3a.3}
+$$
+The RHG projection is
+$$
+\Pi_b^{\mathrm{RHG}}
+=
+\mathbf 1_{\{\lambda_{\min}(\mathcal K_b)\}}(\mathcal K_b).
+\tag{Z.3a.4}
+$$
+
+**Theorem Z.3a.1 (Radon-Hurwitz/Golay Spectral Selection).** For every finite retained threshold block $b$, the projection $\Pi_b^{\mathrm{RHG}}$ is a nonzero orthogonal projector determined by the minimal $d_0=8$ Clifford real form, the marked Golay syndrome data, the marked half-swap, and the lifted sector projections. It is invariant under data-preserving unitary changes of basis. If the exact RH/Golay compatibility equations have a common solution, $\Pi_b^{\mathrm{RHG}}$ is the exact compatible projection. Otherwise it is the finite PCE-minimal least-defect projection.
+
+*Proof.* Equation (Z.3a.2) is functorial under equivalent presentations of $V_\Lambda$. The marked Golay data and sector projections are fixed finite matrices once the marked branch is fixed. Each summand in (Z.3a.3) has the form $B^*B$, so $\mathcal K_b$ is positive self-adjoint on a finite-dimensional space. Therefore it has a lowest eigenvalue and a nonzero orthogonal spectral projection.
+
+Data-preserving unitary changes of basis conjugate all matrices in (Z.3a.3), so they conjugate $\mathcal K_b$ and preserve its lowest eigenspace. If the common compatibility equations are solvable, the simultaneous kernel of all commutators is nonzero and equals $\ker\mathcal K_b$. Then the lowest eigenvalue is $0$ and $\Pi_b^{\mathrm{RHG}}$ is the exact compatible projection. If the common kernel is zero, the Rayleigh quotient of $\mathcal K_b$ is the total squared compatibility defect, and the lowest eigenspace is the unique least-defect compatible subspace. PCE selects it because all higher-defect alternatives have the same protocol role and strictly greater compatibility cost. ∎
 
 ---
 

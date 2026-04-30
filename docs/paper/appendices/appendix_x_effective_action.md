@@ -272,6 +272,121 @@ $$
 $$
 Combining the two displayed equations yields (X.9f). If the Keldysh noise vanished on the update direction, the left side of (X.9f) would be zero, contradicting $\ln 2>0$. ∎
 
+**Definition X.5c.1 (Finite Dynamical-KMS Ledger).** Let a finite CTP branch be written in the Keldysh $r/a$ basis for a finite vector of retained fields $x=(x^1,\dots,x^n)$, with quadratic action
+$$
+\Gamma_{\mathrm{CTP}}^{(2)}
+=
+\frac12
+\int_{\omega}
+\begin{pmatrix}
+x_r(-\omega)&x_a(-\omega)
+\end{pmatrix}
+\begin{pmatrix}
+0&\Gamma^A(\omega)\\
+\Gamma^R(\omega)&\Gamma^K(\omega)
+\end{pmatrix}
+\begin{pmatrix}
+x_r(\omega)\\
+x_a(\omega)
+\end{pmatrix}.
+\tag{X.9g}
+$$
+Let
+$$
+N(\omega):=-i\Gamma^K(\omega)
+\tag{X.9h}
+$$
+be the finite noise kernel. For a local inverse temperature $\beta$ and the time-reversal involution $\Theta$ of the retained variables, the quadratic dynamical-KMS involution is
+$$
+\mathsf K_{\beta}x_r(\omega)=\Theta x_r(-\omega),
+\qquad
+\mathsf K_{\beta}x_a(\omega)
+=
+\Theta\left(x_a(-\omega)+i\beta\omega x_r(-\omega)\right)
+\tag{X.9i}
+$$
+in the classical low-frequency form, and by the exact finite thermal shift on the finite-frequency branch. The branch satisfies the finite dynamical-KMS gate when the closed-time-path action is invariant under $\mathsf K_{\beta}$ up to a CTP boundary term and the quadratic kernels obey
+$$
+\Gamma^A(\omega)=\Gamma^R(\omega)^{\dagger},
+\qquad
+N(\omega)
+=
+\coth\left(\frac{\beta\omega}{2}\right)
+\frac{\Gamma^A(\omega)-\Gamma^R(\omega)}{2i}
+\succeq0,
+\tag{X.9j}
+$$
+with the value at $\omega=0$ defined by the continuous low-frequency limit.
+
+**Theorem X.5c.2 (Dynamical-KMS Gate for Finite CTP Branches).** On a finite quadratic local-equilibrium CTP branch, the dynamical-KMS gate is equivalent to the finite fluctuation-dissipation identity (X.9j). In the low-frequency Onsager limit,
+$$
+\mathcal D
+=
+\lim_{\omega\downarrow0}
+\frac{-\operatorname{Im}\Gamma^R(\omega)}{\omega}
+\succeq0,
+$$
+the gate reduces to
+$$
+N(0)=2\beta^{-1}\mathcal D.
+\tag{X.9k}
+$$
+Therefore every retained dissipative update direction has a uniquely fixed KMS noise partner. Under any finite compression $P$ of retained variables, the compressed kernels
+$$
+\Gamma_P^R=P^*\Gamma^R P,
+\qquad
+N_P=P^*NP
+\tag{X.9l}
+$$
+satisfy the same gate.
+
+*Proof.* Since the branch is finite-dimensional, the quadratic action is determined by its block kernel. CTP unitarity gives $\Gamma_{\mathrm{CTP}}[x_r,0]=0$, so the $rr$ block is zero. Reality of the closed-time contour gives $\Gamma^A=\Gamma^{R\dagger}$ and makes $N=-i\Gamma^K$ Hermitian. Invariance of the quadratic form under the dynamical-KMS involution (X.9i), or equivalently under the exact finite thermal shift at finite frequency, equates the coefficient of each independent monomial in $x_r$ and $x_a$. The $ra$ and $ar$ coefficients give $\Gamma^A=\Gamma^{R\dagger}$, while the $aa$ coefficient gives
+$$
+N(\omega)
+=
+\coth\left(\frac{\beta\omega}{2}\right)
+\frac{\Gamma^A(\omega)-\Gamma^R(\omega)}{2i}.
+$$
+The closed-time-path positivity condition is precisely $N(\omega)\succeq0$. Conversely, if these kernel identities hold, substituting them into the transformed quadratic form cancels the KMS variation pairwise between the dissipative $ra/ar$ part and the $aa$ noise part, leaving only the CTP boundary term. Hence the gate and (X.9j) are equivalent at quadratic order.
+
+For $\omega\downarrow0$,
+$$
+\coth\left(\frac{\beta\omega}{2}\right)
+=
+\frac{2}{\beta\omega}+O(\omega),
+$$
+and
+$$
+\frac{\Gamma^A(\omega)-\Gamma^R(\omega)}{2i}
+=
+-\operatorname{Im}\Gamma^R(\omega).
+$$
+Substituting the definition of $\mathcal D$ gives (X.9k). Finally, for a finite compression $P$,
+$$
+N_P
+=
+P^*NP
+=
+\coth\left(\frac{\beta\omega}{2}\right)
+P^*\frac{\Gamma^A-\Gamma^R}{2i}P
+=
+\coth\left(\frac{\beta\omega}{2}\right)
+\frac{\Gamma_P^A-\Gamma_P^R}{2i}.
+$$
+Positive semidefiniteness is preserved by $P^*NP\succeq0$. Thus every retained sector compression obeys the same dynamical-KMS gate. ∎
+
+**Corollary X.5c.3 (No Dissipation Without the KMS Noise Partner).** Any PU branch that uses a finite dissipative CTP kernel for constraint-coupling influence, washout, adaptive relaxation, dissipative holonomy, or irreversible coarse-grained update must either satisfy the dynamical-KMS gate of Definition X.5c.1 or be marked as outside the local-equilibrium CTP branch. In a gated branch, a positive dissipative coefficient $\mathcal D_v>0$ along any retained direction $v$ forces
+$$
+v^*N(0)v
+=
+2\beta^{-1}v^*\mathcal Dv
+>
+0.
+\tag{X.9m}
+$$
+
+*Proof.* The listed sectors are finite projections or finite compressions of the same CTP influence ledger. By Theorem X.5c.2, finite compression preserves (X.9j) and its low-frequency limit (X.9k). If $v^*\mathcal Dv>0$, then (X.9k) gives $v^*N(0)v=2\beta^{-1}v^*\mathcal Dv>0$. Thus a branch cannot retain dissipation in a local-equilibrium CTP sector while setting its KMS noise partner to zero. ∎
+
 ## X.6 Rate‑Level PCE Potential vs. Effective Potential
 
 For homogeneous deformations $u=g_e^2$, define the **effective potential**
@@ -361,6 +476,76 @@ Therefore PU response theory, effective-action dynamics, RG flow, and perspectiv
 
 
 **Remark X.8a.2 (Status of the Stronger Identity Claim).** Theorem X.8a proves a shared information-geometric control structure at the level of a common structural class. Section X.9.6 gives the finite-branch operator statement: after the regular response, RG, and perspective sectors are represented as closed quadratic forms on one direct-sum predictive Hilbert module, their generators are compressions of a single self-adjoint predictive operator. The statement is exact on that finite closed-form branch and inherits precisely the regularity hypotheses stated there.
+
+**Definition X.8a.3 (Fractal Decimation Response Operator).** A fractal decimation response operator on a finite regular response branch is a differentiable map
+$$
+\mathcal R_{\mathrm{dec}}:\mathcal K\to\mathcal K
+\tag{X.8a.3}
+$$
+on a finite-dimensional cone $\mathcal K$ of retained response kernels together with a branch scaling sequence
+$$
+t_n=\ell_n^{d_w}\quad\text{with }\ell_n\downarrow0,
+\quad
+\text{or, more generally, a fixed sequence }t_n\downarrow0
+\tag{X.8a.4}
+$$
+such that:
+
+1. $\mathcal R_{\mathrm{dec}}$ preserves positivity and the PCE admissibility constraints;
+
+2. fixed points of $\mathcal R_{\mathrm{dec}}$ are exactly the PCE-stationary response kernels of the branch;
+
+3. the linearization at a fixed point $K_*$,
+$$
+D\mathcal R_{\mathrm{dec}}\vert_{K_*},
+\tag{X.8a.5}
+$$
+exists on the retained tangent cone;
+
+4. the branch supplies a determinant-line normalization under which the finite logarithmic determinant
+$$
+\operatorname{Tr}_{\mathrm{fin}}
+\log
+\left(
+1+D\mathcal R_{\mathrm{dec}}\vert_{K}
+\right)
+\tag{X.8a.6}
+$$
+is defined on the branch region used for compression flow;
+
+5. the rescaled iterates converge on retained observables:
+$$
+\lim_{n\to\infty}
+\frac{\mathcal R_{\mathrm{dec}}^n-I}{t_n}
+=
+\mathcal L_{\mathrm{PCE}}.
+\tag{X.8a.7}
+$$
+
+The scaling sequence in (X.8a.4), the branch symmetrization convention, and the determinant-line normalization are part of the branch data. Without them, (X.8a.6)-(X.8a.7) are not asserted.
+
+**Theorem X.8a.4 (Decimation-Operator Criterion for Shared Control).** If a branch supplies a fractal decimation response operator in the sense of Definition X.8a.3 and also certifies that the retained response Hessian, compression determinant, and rescaled adaptation flow are represented by the following three finite images of that operator, then the three structures in Theorem X.8a are specializations of one finite recursive operator:
+
+1. the Fisher/connected-response kernel is the branch-normalized symmetric part of the fixed-point linearization,
+$$
+\mathcal G
+=
+\operatorname{Sym}_{\mathrm{br}}
+\left(D\mathcal R_{\mathrm{dec}}\vert_{K_*}\right);
+\tag{X.8a.8}
+$$
+
+2. the FRG/PCE compression trace is the logarithmic determinant flow generated by (X.8a.6);
+
+3. the Appendix M drift-diffusion generator is the scaled iterate generator (X.8a.7).
+
+Thus Theorem X.8a is upgraded from shared information-geometric control to a single recursive-operator realization only on branches where $\mathcal R_{\mathrm{dec}}$ and the scaling sequence $t_n$ are fixed. Without such data, Theorem X.8a retains exactly its stated branch status.
+
+*Proof.* At a PCE-stationary fixed point $K_*$, the first variation of the response potential vanishes. Under the stated branch certificate, the second response form is represented by the linearization of the response update. Taking its branch-normalized symmetric part gives the Fisher/connected-response kernel on the LAN branch, proving item 1.
+
+For item 2, the determinant-line normalization certificate says that a finite compression step changes the determinant-line response by the trace of the logarithm of the finite linearized update. This is exactly (X.8a.6), the finite version of the trace term appearing in the FRG/PCE correspondence branch.
+
+For item 3, the convergence statement (X.8a.7) is the definition of the generator of the rescaled iteration semigroup under the branch scaling $t_n$. Since the same $\mathcal R_{\mathrm{dec}}$ supplies the linearization, determinant flow, and rescaled iterate generator, response, compression flow, and drift-diffusion are images of the same finite recursive operator on the stated branch. ∎
 
 **Corollary X.8b (Effective-Action Projection of Predictive Curvature).** On the regular product-bundle branch of Theorem 47 and Theorem G.4b, and under the effective-action hypotheses of Theorem X.5a, the gauge and gravitational curvature terms in the continuum effective action are projections of the predictive curvature
 $$
@@ -1206,7 +1391,7 @@ $$
 $$
 Thus the set is closed under nonnegative linear combinations. ∎
 
-**Open Target X.8h.5 (Predictive Positive Geometry).** On a finite gapped regular branch, define the truncated predictive response region
+**Definition X.8h.5 (Finite Predictive Factorization Geometry).** On a finite gapped regular branch, define the truncated predictive response region
 $$
 \mathcal P_{\mathrm{PU}}^{(N)}
 $$
@@ -1220,41 +1405,127 @@ as the semialgebraic region cut out by:
 
 4. the protocol-factorization equalities required by the local algebra split on admissible boundary cuts.
 
-A positive-geometry completion of $\mathcal P_{\mathrm{PU}}^{(N)}$ would be a pair
+A finite predictive factorization geometry is the finite datum
 $$
-(\mathcal P_{\mathrm{PU}}^{(N)},\Omega_{\mathrm{PU}}^{(N)})
+\mathfrak F_{\mathrm{PU}}^{(N)}
+=
+\left(
+\mathcal P_{\mathrm{PU}}^{(N)},
+\{\mathcal A_U^{(N)}\}_{U},
+\{\mu_{\iota}^{(N)}\}_{\iota},
+\{F_C\}_{C}
+\right),
 \tag{X.8h.5.1}
 $$
-such that $\Omega_{\mathrm{PU}}^{(N)}$ is a logarithmic canonical form whose residues on PCE factorization facets satisfy
+where $\mathcal A_U^{(N)}$ is the finite-dimensional vector space spanned by retained protocol-response classes in the admissible causal diamond $U$, $\mu_{\iota}^{(N)}$ are the PCE-minimal compression products associated with inclusions and disjoint unions of such diamonds, and $F_C$ is the boundary facet associated with an admissible predictive min-cut $C$. The product maps must satisfy finite prefactorization descent:
+$$
+\mu_{U_1\sqcup\cdots\sqcup U_m\to U}
+:
+\mathcal A_{U_1}^{(N)}\otimes\cdots\otimes\mathcal A_{U_m}^{(N)}
+\to
+\mathcal A_U^{(N)}
+\tag{X.8h.5.2}
+$$
+whenever $U_1,\dots,U_m$ are mutually admissible subdiamonds of $U$, and the maps are functorial under refinement.
+
+For a cut $C$ separating a left region $L$ from a right region $R$ through boundary data $B_C$, the facet $F_C$ is a factorization facet when its retained coordinate algebra is the finite fiber product
+$$
+\mathbb R[F_C]
+\cong
+\mathbb R[\mathcal P_L^{(N_L)}]
+\otimes_{\mathbb R[\mathcal P_C^{(N_C)}]}
+\mathbb R[\mathcal P_R^{(N_R)}].
+\tag{X.8h.5.3}
+$$
+This fiber-product condition is part of the finite factorization datum; it is not automatic for an arbitrary semialgebraic response region.
+
+On an exact-scale branch with local retained operators $O_i$, the PCE compression product is written
+$$
+O_iO_j
+\sim
+\sum_k C_{ij}^{k}O_k
+\tag{X.8h.5.4}
+$$
+inside admissible finite response functions.
+
+**Theorem X.8h.6 (Predictive Factorization-Compression Equivalence).** On a finite predictive factorization geometry $\mathfrak F_{\mathrm{PU}}^{(N)}$, assume the retained local products close in the finite basis $\{O_m\}$ and that admissible response functionals separate the retained PCE quotient. Then the following are equivalent for every retained local triple $O_i,O_j,O_k$:
+
+1. local predictive compression is path-independent:
+$$
+\mu_{(ij)k}^{(N)}
+\left(
+\mu_{ij}^{(N)}(O_i\otimes O_j)\otimes O_k
+\right)
+=
+\mu_{i(jk)}^{(N)}
+\left(
+O_i\otimes \mu_{jk}^{(N)}(O_j\otimes O_k)
+\right);
+\tag{X.8h.6.1}
+$$
+
+2. the finite OPE coefficients satisfy the crossing equations
+$$
+\sum_{\ell}C_{ij}^{\ell}C_{\ell k}^{m}
+=
+\sum_{\ell}C_{jk}^{\ell}C_{i\ell}^{m}
+\quad
+\text{for every retained }m;
+\tag{X.8h.6.2}
+$$
+
+3. every admissible finite local response functional $\varphi$ assigns the same compressed protocol response to the two parenthesizations:
+$$
+\varphi\!\left((O_iO_j)O_k\right)
+=
+\varphi\!\left(O_i(O_jO_k)\right).
+\tag{X.8h.6.3}
+$$
+
+For every admissible predictive min-cut $C$, if finite PCE descent is represented by coequalizing the left and right boundary coordinate actions, then that descent condition is equivalent to the factorization-facet identity (X.8h.5.3). Thus scattering-channel factorization, exact-scale OPE associativity, and protocol-compression descent are the same finite algebraic constraint only when they are all represented on the same retained response geometry.
+
+*Proof.* Because every $\mathcal A_U^{(N)}$ is finite-dimensional, choose a retained basis $\{O_m\}$. Expanding the left side of (X.8h.6.1) using (X.8h.5.4) gives
+$$
+(O_iO_j)O_k
+=
+\sum_{\ell}C_{ij}^{\ell}O_{\ell}O_k
+=
+\sum_{\ell,m}C_{ij}^{\ell}C_{\ell k}^{m}O_m.
+$$
+Expanding the right side gives
+$$
+O_i(O_jO_k)
+=
+\sum_{\ell}C_{jk}^{\ell}O_iO_{\ell}
+=
+\sum_{\ell,m}C_{jk}^{\ell}C_{i\ell}^{m}O_m.
+$$
+The retained basis is linearly independent in the PCE quotient, so equality of the two compressed products is exactly the coefficient identity (X.8h.6.2). This proves equivalence of items 1 and 2.
+
+If item 1 holds, applying any linear response functional $\varphi$ gives item 3. Conversely, if item 3 holds for every admissible finite response functional, then the difference between the two parenthesizations pairs to zero with every separating protocol response. Separating PPI protocols identify only operationally null differences, so the two products are equal in the retained PCE quotient. This proves equivalence of items 1 and 3.
+
+For a cut $C$, finite PCE descent says that a global response assembled from left and right representatives is independent of the chosen boundary representative exactly when the two boundary actions are coequalized. In finite coordinate algebra, this coequalizer is represented by the tensor product over the boundary coordinate algebra:
+$$
+\mathbb R[\mathcal P_L^{(N_L)}]
+\otimes_{\mathbb R[\mathcal P_C^{(N_C)}]}
+\mathbb R[\mathcal P_R^{(N_R)}].
+$$
+When the factorization facet is defined by this coequalizer, the response points satisfying descent are precisely the points of $F_C$, giving (X.8h.5.3). Therefore the min-cut channel factorization and the local compression associativity are the same descent condition on branches where the stated finite algebraic representation is supplied. ∎
+
+**Corollary X.8h.7 (Canonical Residues Are the Same Descent Law).** Suppose, in addition to Definition X.8h.5, that the finite branch supplies a logarithmic canonical-form representative
+$$
+\Omega_{\mathrm{PU}}^{(N)}
+$$
+whose boundary residue functional is normalized by the finite response push-forward measure on $\mathcal P_{\mathrm{PU}}^{(N)}$. Assume also that the residue measure on each factorization facet is nondegenerate and uses the same boundary orientation convention as the finite fiber product. Then for every admissible predictive min-cut facet $F_C$,
 $$
 \operatorname{Res}_{F_C}\Omega_{\mathrm{PU}}^{(N)}
 =
 \Omega_L^{(N_L)}\wedge\Omega_R^{(N_R)}
-\tag{X.8h.5.2}
+\tag{X.8h.7.1}
 $$
-for every admissible predictive min-cut facet $F_C$.
+if and only if finite PCE descent holds across $C$ in this normalized canonical-form representative. Consequently a canonical-form residue, when present, is not an additional amplitude postulate; it is the differential-form representative of the same finite protocol-factorization theorem.
 
-This is an open target, not a theorem. No scattering amplitude is identified with a canonical form unless existence, uniqueness, logarithmic boundary behavior, and the residue law (X.8h.5.2) are proved for the relevant branch. Until then, $\mathcal P_{\mathrm{PU}}^{(N)}$ is only the finite positive response region already certified by Theorem X.8h.2 and the cited finite cut/matroid constraints.
-
-**Open Target X.8h.6 (Predictive Bootstrap Compression).** On a branch satisfying both the Hadamard-PCE state gate of Theorem K.10.4b and the separate exact-scale conformal hypotheses required for an OPE description, define local operator-product data by the PCE-minimal compression
-$$
-O_i(x)O_j(0)
-\sim
-\sum_k C_{ij}^{k}(x)O_k(0)
-\tag{X.8h.6.1}
-$$
-inside admissible local response functions. The target is to prove that, on such a branch, OPE associativity is exactly path-independence of local predictive compression:
-$$
-(O_iO_j)O_k
-=
-O_i(O_jO_k)
-\quad
-\Longleftrightarrow
-\quad
-\text{crossing equality of compressed protocol responses}.
-\tag{X.8h.6.2}
-$$
-No conformal-bootstrap selection theorem is asserted here. The target is inactive unless the exact-scale conformal branch and the Hadamard-PCE admissibility gate are both satisfied. In particular, this item does not override the PCE-Attractor statements excluding an exact pure-coordinate dilatation tangent on the generic branch.
+*Proof.* Under the stated normalization, the residue of a logarithmic canonical form on $F_C$ is the induced finite boundary response measure on that facet. By Theorem X.8h.6, descent across $C$ is equivalent to the finite fiber-product identity (X.8h.5.3). A finite measure on this fiber product factors through the left and right measures over the common boundary measure exactly when its coordinate functional factors through the tensor product over $\mathbb R[\mathcal P_C^{(N_C)}]$. With the nondegeneracy and orientation conventions fixed, this factorization is exactly (X.8h.7.1). Conversely, (X.8h.7.1) implies that all boundary-glued response functionals represented by the canonical residue factor through the same fiber product, hence descent holds by Theorem X.8h.6. ∎
 
 ### X.8i Predictive Cosmic Galois Filtration
 
@@ -1410,11 +1681,81 @@ If a compatible family $\{\mathcal O_\lambda\}_{\lambda>0}$ has finite renormali
 
 *Proof.* PPI-observability at resolution $\lambda$ means that the quantity is a function of operationally distinguished records at that resolution. By Definition X.8j.4a, records in the same $\sim_\lambda$ class differ only by refinements below the detector resolution while preserving hard data and total conserved ledger charges. No admissible protocol at that resolution distinguishes those refinements. If $\mathcal O(r)\ne\mathcal O(r')$ for some $r\sim_\lambda r'$, then $\mathcal O$ assigns two values to one operational record class and is not a well-defined PPI observable. Hence $\mathcal O$ must be constant on every $\sim_\lambda$ class, which is exactly the factorization (X.8j.7). If the family failed compatibility under $\lambda\to0$ refinement, the same operational record would acquire resolution-dependent values, producing nonzero predictive disagreement at arbitrarily fine unresolved-soft refinement and hence no finite renormalized PCE representative. ∎
 
-**Corollary X.8j.4c (Inclusive and Dressed Sufficient Conditions).** On a regular massless-gauge branch where the standard hypotheses of KLN cancellation hold, sufficiently inclusive cross sections that sum over all degenerate unresolved soft real and virtual sectors satisfy the infrared PPI gate. On a branch where Faddeev-Kulish dressed asymptotic charged states exist, matrix elements between those dressed states also satisfy the gate. These are sufficient constructions of soft-ledger-invariant observables; they are not additional gauge postulates.
+**Corollary X.8j.4c (Inclusive and Dressed Representatives of the Same Soft-Ledger Quotient).** Let $R_\lambda$ be the finite set of scattering records at detector resolution $\lambda$, let
+$$
+q_\lambda:R_\lambda\to Q_\lambda:=R_\lambda/{\sim_\lambda}
+$$
+be the unresolved-soft quotient, and let $\mu_\lambda$ be the normalized finite transition measure supplied by the action-entropy ledger. For every soft-ledger-invariant observable $\mathcal O=\widetilde{\mathcal O}\circ q_\lambda$,
+$$
+\langle\mathcal O\rangle_{\lambda}
+=
+\sum_{Q\in Q_\lambda}
+\widetilde{\mathcal O}(Q)\,
+(q_\lambda)_*\mu_\lambda(Q).
+\tag{X.8j.8}
+$$
+An inclusive representative computes (X.8j.8) by summing over the whole fiber $q_\lambda^{-1}(Q)$. A dressed representative computes the same quotient value when the branch supplies a coherent section
+$$
+s_\lambda:Q_\lambda\to R_\lambda,
+\qquad
+q_\lambda\circ s_\lambda=\mathrm{id}_{Q_\lambda},
+$$
+and transfers the push-forward measure to that section:
+$$
+\sum_{r\in R_\lambda}\mathcal O(r)\mu_\lambda(r)
+=
+\sum_{Q\in Q_\lambda}\widetilde{\mathcal O}(Q)(q_\lambda)_*\mu_\lambda(Q)
+=
+\sum_{Q\in Q_\lambda}\mathcal O(s_\lambda(Q))(q_\lambda)_*\mu_\lambda(Q).
+\tag{X.8j.9}
+$$
+Inclusive and dressed constructions are therefore two representatives of the same quotient observable whenever they induce the same quotient measure; they are not separate infrared postulates.
 
-*Proof.* KLN inclusiveness identifies all records differing only by degenerate unresolved soft refinements and sums over that equivalence class, so the resulting cross section is a function of $[r]_{\sim_\lambda}$. Faddeev-Kulish dressing incorporates the coherent soft cloud fixed by the asymptotic charge and hard momentum data into the definition of the asymptotic state, so changing an unresolved representative inside the same soft-ledger class does not change the dressed matrix element. In both cases the observable factors through $q_\lambda$, and Theorem X.8j.4b applies. ∎
+*Proof.* Since $\mathcal O=\widetilde{\mathcal O}\circ q_\lambda$,
+$$
+\sum_{r\in R_\lambda}\mathcal O(r)\mu_\lambda(r)
+=
+\sum_{r\in R_\lambda}\widetilde{\mathcal O}(q_\lambda(r))\mu_\lambda(r).
+$$
+Grouping terms by the quotient class $Q=q_\lambda(r)$ gives (X.8j.8). If $s_\lambda$ is a section, then $q_\lambda(s_\lambda(Q))=Q$, so $\mathcal O(s_\lambda(Q))=\widetilde{\mathcal O}(Q)$ for every class. Substituting this into (X.8j.8) gives (X.8j.9). ∎
 
-**Open Target X.8j.4d (PU-Internal KLN Derivation).** The PU-internal target is to derive KLN-style cancellation directly from the finite boundary ledger identity (X.8j.2), PCE quotienting by unresolved-soft refinements, and the finite action-entropy ledger, rather than importing cancellation as a massless-gauge branch theorem.
+**Theorem X.8j.4d (Finite Soft-Ledger Quotient Invariance).** Let
+$$
+(R_\lambda,\mu_\lambda,q_\lambda)
+\quad\text{and}\quad
+(R'_\lambda,\mu'_\lambda,q'_\lambda)
+$$
+be two finite unresolved-soft refinements of the same quotient record set $Q_\lambda$. Assume they preserve the same finite boundary ledger charges and have the same quotient transition measure:
+$$
+(q_\lambda)_*\mu_\lambda
+=
+(q'_\lambda)_*\mu'_\lambda.
+\tag{X.8j.10}
+$$
+Then every PPI-observable scattering quantity at resolution $\lambda$ has identical expectation on the two refinements:
+$$
+\sum_{r\in R_\lambda}\mathcal O(r)\mu_\lambda(r)
+=
+\sum_{r'\in R'_\lambda}\mathcal O'(r')\mu'_\lambda(r'),
+\tag{X.8j.11}
+$$
+where $\mathcal O=\widetilde{\mathcal O}\circ q_\lambda$ and $\mathcal O'=\widetilde{\mathcal O}\circ q'_\lambda$. Thus all dependence on unresolved soft real, virtual, or dressed bookkeeping is invisible to quotient observables after PCE quotienting, provided the branch has established the common push-forward measure (X.8j.10). Physical KLN or Faddeev-Kulish realization remains the sector-level proof that the corresponding refinements satisfy this hypothesis.
+
+*Proof.* By Theorem X.8j.4b, a PPI-observable scattering quantity descends to the quotient, so there exists $\widetilde{\mathcal O}:Q_\lambda\to\mathbb C$ with $\mathcal O=\widetilde{\mathcal O}\circ q_\lambda$ and $\mathcal O'=\widetilde{\mathcal O}\circ q'_\lambda$. Applying the push-forward identity to the first refinement gives
+$$
+\sum_{r\in R_\lambda}\mathcal O(r)\mu_\lambda(r)
+=
+\sum_{Q\in Q_\lambda}
+\widetilde{\mathcal O}(Q)(q_\lambda)_*\mu_\lambda(Q).
+$$
+Applying the same identity to the second refinement gives
+$$
+\sum_{r'\in R'_\lambda}\mathcal O'(r')\mu'_\lambda(r')
+=
+\sum_{Q\in Q_\lambda}
+\widetilde{\mathcal O}(Q)(q'_\lambda)_*\mu'_\lambda(Q).
+$$
+The quotient measures are equal by (X.8j.10), so the two sums are equal. Any remaining difference is internal to fibers of $q_\lambda$ or $q'_\lambda$, is invisible to all admissible protocols at resolution $\lambda$, and is removed by the PCE quotient. ∎
 
 ### X.8k Predictive Calderón-Schur Boundary Reconstruction
 
@@ -1468,6 +1809,154 @@ Boundary-indistinguishable networks lie in one PPI response class. A strict PCE 
 **Corollary X.8k.3 (Interior Effective Structure from Boundary Protocols).** The boundary-observable content of the effective predictive operator is exactly its Schur boundary response class. Interior degrees of freedom not changing $\Lambda_{\partial}$ are PPI-invisible and PCE-degenerate.
 
 *Proof.* Theorem X.8k.2 identifies equality of all boundary protocol responses with equality of $\Lambda_{\partial}$. PPI therefore identifies the physical boundary content with the Schur response class, and PCE removes redundant representatives inside that class. ∎
+
+**Corollary X.8k.4 (Petz-Calderón Boundary Recovery Equivalence).** On a finite quantum-algebra branch satisfying Definition X.8k.1 and Definition F.10.6a, assume that the complete linear boundary protocol family determines the same PCE-minimal boundary syndrome $B_R$ as the Schur response operator $\Lambda_{\partial}$. Then the following data are equivalent descriptions of the same local physical content:
+
+1. the Schur response class $\Lambda_{\partial}$;
+
+2. the PCE-minimal boundary syndrome $B_R$;
+
+3. the finite Markov recovery condition
+$$
+I(R:\bar R\mid B_R)_\rho=0;
+\tag{X.8k.3}
+$$
+
+4. the existence of a CPTP recovery channel
+$$
+\mathcal R_{B_R\to B_R\bar R}
+$$
+such that
+$$
+\rho_{R B_R\bar R}
+=
+(\operatorname{id}_R\otimes\mathcal R_{B_R\to B_R\bar R})(\rho_{R B_R});
+\tag{X.8k.4}
+$$
+
+5. the PCE-minimal interior representative obtained by harmonic Schur extension
+$$
+u_I=-L_{II}^{-1}L_{I\partial}u_{\partial}
+\tag{X.8k.5}
+$$
+for every boundary input $u_{\partial}$.
+
+If the exact Markov condition is weakened to
+$$
+I(R:\bar R\mid B_R)_\rho\le\epsilon,
+$$
+then there is a recovered state $\widetilde\rho$ satisfying
+$$
+\lVert\rho_{R B_R\bar R}-\widetilde\rho_{R B_R\bar R}\rVert_1
+\le
+2\sqrt{1-e^{-\epsilon}}
+\le
+2\sqrt\epsilon.
+\tag{X.8k.6}
+$$
+
+*Proof.* Theorem X.8k.2 proves that complete linear boundary protocols determine $\Lambda_{\partial}$ and that two interiors with the same $\Lambda_{\partial}$ are indistinguishable by all such protocols. By the hypothesis of this corollary, those protocols determine exactly the same PCE-minimal boundary syndrome $B_R$, so items 1 and 2 are equivalent in the operational quotient.
+
+Theorem F.10.6b proves that, for finite quantum algebras, $I(R:\bar R\mid B_R)_\rho=0$ is equivalent to the existence of the recovery channel (X.8k.4). Thus items 2, 3, and 4 are equivalent. Definition X.8k.1 gives the unique finite harmonic interior extension (X.8k.5), and Theorem X.8k.2 identifies all interiors producing the same $\Lambda_{\partial}$ as one PPI class. PCE then selects the unique minimal representative inside that class. This proves equivalence with item 5.
+
+For the approximate statement, Corollary F.10.6d gives the Fawzi-Renner recovery bound in trace norm. Substituting $B_R$ for $Z_{\partial R}$ gives (X.8k.6). ∎
+
+**Definition X.8k.5 (Colorless Boundary Impedance Map).** Let $H_{\mathrm{conf}}$ be a finite self-adjoint retained operator on a confined sector decomposed as
+$$
+\mathcal H_{\mathrm{conf}}
+=
+\mathcal H_I\oplus\mathcal H_{\partial},
+$$
+where $\mathcal H_I$ carries color-interior variables and $\mathcal H_{\partial}$ carries colorless boundary protocol variables. Write
+$$
+H_{\mathrm{conf}}
+=
+\begin{pmatrix}
+H_{II}&H_{I\partial}\\
+H_{\partial I}&H_{\partial\partial}
+\end{pmatrix}.
+$$
+For $E\notin\operatorname{spec}(H_{II})$, the colorless boundary impedance map is
+$$
+\Lambda_{\mathrm{QCD}}(E)
+=
+H_{\partial\partial}-E
+-
+H_{\partial I}(H_{II}-E)^{-1}H_{I\partial}.
+\tag{X.8k.7}
+$$
+For a nuclear aggregate sector $(Z,N)$ the same construction is denoted
+$$
+\Lambda_A^{\mathrm{PU}}(E),
+\qquad
+A=(Z,N).
+\tag{X.8k.8}
+$$
+
+**Theorem X.8k.6 (Finite Boundary-Impedance Spectral Criterion).** Let $H_{\mathrm{conf}}$ satisfy Definition X.8k.5. For every $E\notin\operatorname{spec}(H_{II})$:
+
+1. $E$ is an eigenvalue of $H_{\mathrm{conf}}$ with nonzero colorless boundary component if and only if
+$$
+\det\Lambda_{\mathrm{QCD}}(E)=0.
+\tag{X.8k.9}
+$$
+
+2. If $b\in\ker\Lambda_{\mathrm{QCD}}(E)$, the corresponding interior component is uniquely
+$$
+u_I
+=
+-(H_{II}-E)^{-1}H_{I\partial}b,
+\tag{X.8k.10}
+$$
+and
+$$
+u=u_I\oplus b
+$$
+is an eigenvector of $H_{\mathrm{conf}}$.
+
+3. Interior eigenvectors with zero colorless boundary component are invisible to colorless boundary protocols unless they act through another retained response map. They are therefore not hadron or nuclear boundary-response states in this protocol class.
+
+4. If an exterior colorless channel supplies a finite outgoing impedance $\Lambda_{\mathrm{out}}(E)$, then matched bound or resonance energies on the finite branch are the zeros of
+$$
+\det\left(\Lambda_{\mathrm{QCD}}(E)-\Lambda_{\mathrm{out}}(E)\right)=0,
+\tag{X.8k.11}
+$$
+with resonance continuation understood only on branches where the exterior finite channel map has been specified.
+
+5. Two confined interiors with the same meromorphic boundary impedance map give the same colorless boundary protocol responses and are PPI-equivalent for those protocols. PCE selects the minimal retained representative inside that equivalence class.
+
+*Proof.* Let $u=u_I\oplus b$. The eigenvalue equation $(H_{\mathrm{conf}}-E)u=0$ is the block system
+$$
+(H_{II}-E)u_I+H_{I\partial}b=0,
+\tag{X.8k.12}
+$$
+$$
+H_{\partial I}u_I+(H_{\partial\partial}-E)b=0.
+\tag{X.8k.13}
+$$
+Since $E\notin\operatorname{spec}(H_{II})$, the first equation has the unique solution (X.8k.10). Substituting it into the second equation gives
+$$
+\left(
+H_{\partial\partial}-E
+-
+H_{\partial I}(H_{II}-E)^{-1}H_{I\partial}
+\right)b=0,
+$$
+which is exactly
+$$
+\Lambda_{\mathrm{QCD}}(E)b=0.
+$$
+Thus a nonzero boundary component exists if and only if $\ker\Lambda_{\mathrm{QCD}}(E)\ne0$, equivalently (X.8k.9). This proves items 1 and 2.
+
+If an eigenvector has $b=0$, then its response under every colorless boundary protocol using $\Lambda_{\mathrm{QCD}}$ is zero. Such a state may still be physical if another retained protocol couples to it, but it is invisible in the colorless boundary-response class. This proves item 3.
+
+For an exterior finite channel, matching means equality of the interior boundary flux and exterior boundary flux for the same boundary amplitude $b$. With sign convention absorbed into $\Lambda_{\mathrm{out}}$, this is
+$$
+\left(\Lambda_{\mathrm{QCD}}(E)-\Lambda_{\mathrm{out}}(E)\right)b=0.
+$$
+A nonzero matched boundary amplitude exists exactly when (X.8k.11) holds. This proves item 4.
+
+Finally, Theorem X.8k.2 states that complete boundary protocols determine the Schur response operator and that identical boundary response classes are PPI-equivalent. Applying that theorem at each energy $E$ gives equality of the meromorphic impedance maps as equality of all colorless boundary responses. PCE removes surplus interior representatives that do not change this map. ∎
 
 ### X.8l Predictive Hodge Decomposition of Update Currents
 
@@ -2009,3 +2498,21 @@ where $P_\lambda$ is the spectral projection and $N_\lambda$ is the nilpotent pa
 The decay bound follows from (X.9.6.8): the largest nonzero real part is $-\gamma_{\mathrm{PCE}}$, and every polynomial factor is bounded by a constant times $e^{\eta t}$ for any fixed $\eta>0$. This proves (X.9.6.10).
 
 The predictive Hodge theorem identifies harmonic ledger modes with closed and co-closed update currents not removed by exact or coexact compression. Such modes are conserved by the transfer generator, hence lie in $\ker\mathcal L_{\mathrm{PCE}}$. Conversely, a zero mode of the update-current generator that is not exact or coexact is harmonic in the Hodge quotient. Perturbing a protected harmonic mode by a finite dissipative leakage shifts the corresponding eigenvalue into the left half-plane with small negative real part. Finally, Laplace transforms of finite sums of the form (X.9.6.8) have poles only at the same resonances, proving item 6. ∎
+
+**Corollary X.9.6e (Spectral-Ledger Non-Duplication).** Let $c$ be a scalar branch datum claimed to be PU-internal on the closed finite-mode branch and claimed to arise from a heat trace, zeta determinant, eta invariant, finite resolvent trace, or finite spectral action term. Then $c$ must be expressible as
+$$
+c
+=
+\mathcal N\!\left(
+\left\{
+\operatorname{Tr}_{\mathrm{ren}}
+f_j\!\left(
+P_j\mathfrak L_{\mathrm{PU}}P_j^*
+\right)
+\right\}_{j=1}^{m}
+\right),
+\tag{X.9.6.11}
+$$
+where each $P_j$ is a projection or form-compression determined by the closed predictive Dirichlet datum $\mathfrak D_{\mathrm{PU}}$, each $f_j$ is fixed before validation comparison, $\operatorname{Tr}_{\mathrm{ren}}$ denotes the ordinary finite trace or the already specified heat/zeta finite part, and $\mathcal N$ is a fixed algebraic normalization map. If no such compression and finite-part prescription is specified, then $c$ is not theorem-level PU-internal and must be recorded as branch, model, or validation input. If two branch scalars use the same compression and the same spectral functional, they are the same ledger datum; if they use orthogonal finite compressions, their trace contributions add.
+
+*Proof.* By Theorem X.9.6b, every response Hessian, RG kernel, perspective generator, and PCE flow operator on the closed finite-mode branch is a projection, sign convention, or functional-calculus image of the unique self-adjoint operator $\mathfrak L_{\mathrm{PU}}$ associated with $\mathfrak D_{\mathrm{PU}}$. The spectral theorem then fixes $f(P\mathfrak L_{\mathrm{PU}}P^*)$ uniquely for every specified compression $P$ and Borel or holomorphic function $f$ in its domain. Ordinary finite traces are basis-independent. Heat/zeta finite parts are also fixed once the operator, subtraction order, scale, and finite-part convention are fixed. Therefore a scalar claimed to be derived from such spectral data is PU-internal only when its compression and finite-part prescription are part of the branch datum, yielding (X.9.6.11). Equality of the compression and functional gives equality of the spectral value by uniqueness of functional calculus. Orthogonality of compressions gives additivity of traces on direct sums. ∎

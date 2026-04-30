@@ -672,6 +672,76 @@ The condition is necessary for any theorem whose selected configurations are req
 
 The sharpness is independent of the local $D_4$ data. At a fixed resolution, take two admissible configurations $r_n$ and $s_n$ with the same first-shell $D_4$ carrier and the same noncollapse data, but with $\mathfrak D_n(r_n)=0$ and $\mathfrak D_n(s_n)=1$. Define a core potential with $V_n(s_n)=0$ and $V_n(r_n)=1$. Then $\mathcal M_n=\{s_n\}$ and $\mathfrak d_n^*=1$, although a zero-defect $D_4$ competitor exists outside $\mathcal M_n$. Thus zero-defect local geometry does not imply zero-defect membership in the global core-minimum class. The extra hypothesis in Theorem D.6e is exactly the assertion that the zero-defect competitor exists inside $\mathcal M_n$. ∎
 
+**Definition D.6f.1 (Fractal-to-Smooth Scale Audit).** For a finite configuration $\mathcal C$ at resolution $n$, let $p_t^{(n,\mathcal C)}(x,y)$ be the heat kernel of the rescaled propagation-cost Dirichlet form and define the averaged return probability
+$$
+P_{n,\mathcal C}(\tau)
+=
+\int p_\tau^{(n,\mathcal C)}(x,x)\,d\mu_n(x).
+\tag{D.6f.2}
+$$
+The finite spectral dimension on the audited scale window is the logarithmic finite-difference quantity
+$$
+d_{s,n}^{\mathcal C}(\tau)
+=
+-2\,\Delta_{\log\tau}\log P_{n,\mathcal C}(\tau).
+\tag{D.6f.3}
+$$
+Let $\mathfrak A_n(\mathcal C)$ denote the macroscopic anomalous chemical-distance excess relative to the $D=4$ operational-continuum scaling window. The scale audit is
+$$
+\mathfrak S_n(\mathcal C)
+=
+\sup_{\tau\in[\tau_{\mathrm{IR}},\tau_{\mathrm{UV}}]}
+\left|d_{s,n}^{\mathcal C}(\tau)-4\right|^2
++
+\mathfrak A_n(\mathcal C),
+\tag{D.6f.4}
+$$
+where $[\tau_{\mathrm{IR}},\tau_{\mathrm{UV}}]$ is the fixed macroscopic operational window of the selected continuum branch. UV recursive or fractal behavior below this window is not penalized by $\mathfrak S_n$ unless it propagates into macroscopic spectral dimension or chemical-distance excess.
+
+**Theorem D.6f.2 (Scale-Audit Sufficient Condition for the Global-Core Competitor).** Suppose that, on the selected microscopic branch, the global core-minimum class $\mathcal M_n$ satisfies:
+
+1. a scale-audit competitor condition
+$$
+\inf_{\mathcal C\in\mathcal M_n}\mathfrak S_n(\mathcal C)\to0;
+\tag{D.6f.5}
+$$
+
+2. a continuum-defect domination certificate with constants $A<\infty$ and $b_n\to0$,
+$$
+\mathfrak D_n(\mathcal C)
+\le
+A\,\mathfrak S_n(\mathcal C)+b_n
+\qquad
+\text{for every }\mathcal C\in\mathcal M_n.
+\tag{D.6f.6}
+$$
+
+Then the sharp global-core competitor condition of Proposition D.6f follows:
+$$
+\mathfrak d_n^*\to0.
+\tag{D.6f.7}
+$$
+Consequently the selected minimizers of Theorem D.6e have $\mathfrak D_n\to0$. The domination estimate (D.6f.6) is an explicit branch certificate; it is not derived from the definition of $\mathfrak S_n$ alone.
+
+*Proof.* By (D.6f.5), for every $\epsilon>0$ and all sufficiently large $n$ there exists $\mathcal Y_n\in\mathcal M_n$ with
+$$
+\mathfrak S_n(\mathcal Y_n)\le\epsilon.
+$$
+Applying the domination certificate (D.6f.6) gives
+$$
+\mathfrak D_n(\mathcal Y_n)
+\le
+A\epsilon+b_n.
+$$
+Taking the infimum over $\mathcal M_n$ gives
+$$
+0\le
+\mathfrak d_n^*
+\le
+A\epsilon+b_n.
+$$
+First let $n\to\infty$ and then $\epsilon\to0$. Hence $\mathfrak d_n^*\to0$. The final claim is Theorem D.6e applied to this conclusion. ∎
+
 **Theorem 44a (Regular-Branch Manifold Closure).** Assume the hypotheses of Theorem C.6c and let the selected sequence satisfy $\mathfrak H_n\to0$ in the sense of Theorem D.6e. Then the regular set $X_{\mathrm{reg}}\subset X$ is open, every point of $X_{\mathrm{reg}}$ has unique tangent cone $\mathbb R^4$, and $X_{\mathrm{reg}}$ carries a $C^{1,\alpha}$ Riemannian metric $h_{ij}$ with
 $$
 d\mu=\sqrt{\det h}\,d^4x,

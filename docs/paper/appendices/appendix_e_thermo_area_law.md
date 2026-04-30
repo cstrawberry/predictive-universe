@@ -1186,6 +1186,54 @@ On the regular continuum branch, the geometric description is obtained by repres
 
 *Proof.* Theorem E.8.4b is purely finite and uses only channel capacities. Corollary E.8.4c converts the finite cut count into an area functional using geometric regularity and the channel-density hypothesis. Theorem E.8.4e identifies the finite invariant underlying connected joint reconstruction. No AdS asymptotics, fundamental metric path integral, or gravitational Hilbert-space factorization enters the argument. ∎
 
+**Corollary E.8.4g (Local Horizon Entropy as Predictive Min-Cut).** Let $B$ be a sufficiently small causal diamond on the regular operational-continuum branch, and let $\Gamma_B$ range over finite predictive cuts separating the operational interior of $B$ from its exterior boundary data. On the local horizon-saturation branch, with uniform channel capacity $C_{\max}^{*}$ and effective channel density $\sigma_{\mathrm{eff}}$, the horizon entropy is the minimum predictive cut:
+$$
+S_{\mathrm{cut}}(B)
+:=
+\min_{\Gamma_B}\sum_{e\in\Gamma_B}C_e
+=
+C_{\max}^{*}\sigma_{\mathrm{eff}}\mathcal A(\partial B)
++
+o(\mathcal A)
+=
+\frac{\mathcal A(\partial B)}{4G}
++
+o(\mathcal A).
+\tag{E.8.4.6}
+$$
+For first-order local Rindler perturbations satisfying Theorem 48a, the channel-capacity first variation is
+$$
+\delta S_{\mathrm{cut}}
+=
+\frac{\delta Q}{T_U}
++
+o(\lambda),
+\qquad
+T_U=\frac{\kappa}{2\pi}.
+\tag{E.8.4.7}
+$$
+Thus the local-horizon entropy used in Section 12 is the continuum representation of a finite predictive min-cut. The metric description is emergent channel-capacity thermodynamics, not an additional microscopic gravitational carrier.
+
+*Proof.* Theorem E.8.4b identifies the maximum transmissible predictive information with the minimum cut capacity for every finite predictive network. Corollary E.8.4c converts the finite cut into an area functional on the regular branch:
+$$
+\min_{\Gamma_B}\sum_{e\in\Gamma_B}C_e
+=
+C_{\max}^{*}\sigma_{\mathrm{eff}}\mathcal A(\partial B)
++
+o(\mathcal A).
+$$
+Appendix E fixes the horizon calibration by
+$$
+C_{\max}^{*}\sigma_{\mathrm{eff}}=\frac{1}{4G}
+$$
+in natural units, which gives (E.8.4.6).
+
+For a first-order local Rindler perturbation, Theorem 48a gives the modular first-law form of the Clausius relation,
+$$
+\delta S=\frac{\delta Q}{T_U}+O(\lambda^2).
+$$
+Substituting $S=S_{\mathrm{cut}}+o(\mathcal A)$ from (E.8.4.6) and restricting to the same first-order horizon slice gives (E.8.4.7). No step adds a fundamental metric Hilbert space or a gravitational path integral; the proof uses only finite channel capacities, their min-cut continuum limit, and the local thermodynamic metric representation. ∎
+
 ### E.8.5 PU Entropy-Cone Constraints
 
 **Definition E.8.5a (Predictive Cut Entropy Vector).** Let $\mathcal N=(V,E)$ be a finite undirected predictive channel network with nonnegative edge capacities $C_e$. Let boundary regions be labeled by a finite set $\mathcal B$. For each $A\subseteq\mathcal B$, define the cut entropy
