@@ -2,15 +2,15 @@
 
 This section derives the dynamical equations governing the emergent spacetime geometry $(M, g_{\mu\nu})$, whose operational-continuum branch and regular-branch properties were established conditionally in Section 11 on the $M=24$, $D=4$ shell branch. The derivation follows the thermodynamic approach pioneered by Jacobson [Jacobson 1995], interpreting Einstein's Field Equations as an equation of state for the spacetime manifold derived from the Clausius relation ($\delta Q = T \delta S$). Within the PU framework, this approach is grounded in the thermodynamic properties of the underlying MPU network interactions. Specifically, the information limits of Non-Deterministic Reflexive Interaction Dynamics (ND‑RID) give rise to the **Horizon Entropy Area Law (Theorem 49)** on the Appendix E geometric-regularity, channel-density, and calibration branches. By applying the Clausius relation to infinitesimal causal horizons and relating heat flow to the **MPU stress-energy tensor ($T_{\mu\nu}^{(MPU)}$)**, constructed in **Appendix B**, we obtain the Einstein-equation branch of the framework. We work in natural units where $c=\hbar=k_{B}=1$ unless explicitly stated otherwise, and adopt a spacetime signature convention of $(-,+,+,+)$.
 
-Under the following explicit premises, some theorem-level and some certificate-level as indicated by their source sections, we derive the macroscopic emergent metric/channel-capacity dynamics:
+The macroscopic emergent metric/channel-capacity dynamics derive from the following branch-theorem and certificate inputs on the operational-continuum branch:
 
-*   (A1) **Local Thermodynamic Equilibrium:** The MPU network admits coarse-grained states treatable as being in local thermodynamic equilibrium near causal horizons (**Postulate 4**); under the Appendix F/G bridge this local-horizon input is sharpened by Theorem 48a, by the finite channel min-cut realization of local horizon entropy in Corollary E.8.4g, and by the finite KMS-descent certificate of Definition F.10.12a when that certificate is accepted.
-*   (A2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation 69) and an entropy density given by the **Appendix E area-law branch**. The modular/KMS input sharpening this premise is supplied conditionally by Appendix F, Theorems F.10.1–F.10.4, and is certificate-complete on the branch of Theorem F.10.12c.
-*   (A3) **Geometric Regularity and operational-continuum closure:** The MPU network lies on the $M=24$, $D=4$ operational-continuum branch packaged by Theorem 43.5. Theorem 43 supplies the regularity-necessity layer; Lemma C.6d and Theorem C.6e supply $D_4$ shell isotropy and noncollapse; Theorem D.6e inserts the finite continuum-control defects into the microscopic adaptation potential and supplies the Mosco–Cheeger closure on the vanishing-defect branch; Theorem C.6c supplies the noncollapsed RCD bridge when the curvature-transfer defect vanishes along the selected sequence; and Theorem 44a supplies the regular-branch manifold structure needed for Theorems 44–46 when the rigidity defect vanishes along the selected sequence.
-*   (A4) **Conserved Energy-Momentum Source:** A covariantly conserved effective stress–energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ emerges from the underlying MPU dynamics, with $\nabla_\mu T^{\mu\nu}=0$ (**Appendix B**; derived via Corollary 45a.1 from diffeomorphism invariance of the matter action together with the matter equations of motion).
-*   (A5) **Local Lorentz Invariance and Universality:** The emergent dynamics are locally Lorentz invariant, a direct consequence of the causal structure derived from MPU interactions (**Theorem 46**; upgraded to a derived result of the emergent-spacetime branch by Corollary 46a via Theorems O.7a, O.7b, and Corollary O.7b.1). On the F.10.12 branch, the same local boost/Rindler and universal-coupling input is recorded as vanishing finite KMS-descent defect on refining covers.
+*   (T1) **Local Thermodynamic Equilibrium at Causal Horizons:** Theorem 48a.0 derives local LTE from the local KMS/Clausius theorem stack on the Appendix F/G operational-continuum branch. Theorem 48a gives the local Rindler-wedge KMS condition at inverse temperature $\beta=2\pi/\kappa$ and the first-order Clausius relation $\delta S=\delta Q/T_U+O(\lambda^2)$. The finite channel min-cut realization of local horizon entropy is supplied by Corollary E.8.4g, with the finite KMS-descent certificate of Definition F.10.12a available when that certificate is accepted.
+*   (T2) **Horizon Thermodynamics:** Local horizons possess an Unruh temperature $T=\kappa/(2\pi)$ (Equation 69) and an entropy density given by the Appendix E area-law branch. The modular/KMS input is theorem-level via Theorems F.10.1–F.10.4 and is certificate-complete on the branch of Theorem F.10.12c.
+*   (T3) **Geometric Regularity and operational-continuum closure:** Theorem 43.5 packages the MPU network on the $M=24$, $D=4$ operational-continuum branch. Theorem 43 supplies the regularity-necessity layer; Lemma C.6d, Theorem C.6e, Theorem D.6e, Theorem C.6c, and Theorem 44a supply the $D_4$ shell isotropy, noncollapse, Mosco–Cheeger closure, RCD bridge, and regular-branch manifold structure on the vanishing-defect branch.
+*   (T4) **Conserved Energy-Momentum Source:** Corollary 45a.1 derives covariant conservation $\nabla_\mu T^{(MPU){\mu\nu}}=0$ from diffeomorphism invariance of the matter action and the matter equations of motion (Appendix B).
+*   (T5) **Local Lorentz Invariance and Universality:** Corollary 46a derives local Lorentz invariance with structure group $SO^+(1,3)$ from Theorem 46 plus Theorems O.7a, O.7b, and Corollary O.7b.1. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$. On the F.10.12 branch, the same input is recorded as vanishing finite KMS-descent defect on refining covers.
 
-Under these premises, applying the Clausius relation $\delta Q=T\,\delta S$ to local Rindler horizons, with heat flux $\delta Q>0$ defined as energy flow into the causal diamond, and combining it with the Raychaudhuri equation, yields the Einstein-equation branch (**Theorem 50**). On the finite KMS-descent branch the same route is certificate-complete in the sense of Corollary 12.1b.
+From these branch-theorem and certificate inputs, applying the Clausius relation $\delta Q=T\,\delta S$ to local Rindler horizons, with heat flux $\delta Q>0$ defined as energy flow into the causal diamond, and combining it with the Raychaudhuri equation, yields the Einstein-equation branch (**Theorem 50**). On the finite KMS-descent branch the same route is certificate-complete in the sense of Corollary 12.1b.
 
 **12.1 Local Thermodynamic Equilibrium, Derived Local KMS Equilibrium, and Horizon Properties**
 
@@ -25,11 +25,15 @@ At any arbitrary point $p$ in the emergent spacetime manifold $(M, g_{\mu\nu})$,
 
 These local horizons provide the setting for applying thermodynamic reasoning to the underlying MPU network information exchange.
 
-**12.1.2 Postulate 4 (Post 4): Local Thermodynamic Equilibrium**
+**12.1.2 Theorem 48a.0 (Local Thermodynamic Equilibrium at Causal Horizons).**
 
-We postulate that the emergent macroscopic description of the MPU network, within the spacetime manifold $(M, g_{\mu\nu})$, admits states that can be considered to be in local thermodynamic equilibrium (LTE) with respect to transformations generated by the approximate Killing vector $\xi^\mu$ near any local causal horizon $\mathcal{H}$. This implies that standard thermodynamic concepts—specifically temperature $T$ and heat flow $\delta Q$—can be meaningfully defined and related for observers near such horizons.
+On the Appendix F/G operational-continuum branch, the emergent macroscopic description of the MPU network within $(M,g_{\mu\nu})$ admits local thermodynamic equilibrium states with respect to transformations generated by the approximate Killing vector $\xi^\mu$ near any local causal horizon $\mathcal H$. Consequently, the temperature $T$ and heat flow $\delta Q$ used in the local horizon derivation are well-defined to first order on the local Rindler wedge.
 
-*Justification:* This assumption, common in thermodynamic derivations of gravity, is supported within PU by the argument that POP/PCE optimization drives the MPU network towards statistically stable macroscopic states maximizing entropy under constraints near causal boundaries (local MaxEnt principle), as deviations from LTE incur efficiency penalties disfavored by the dynamics minimizing the PCE potential $V(x)$ (Appendix D).
+*Proof.* Theorem 48a derives the local Rindler-wedge KMS condition at inverse temperature $\beta=2\pi/\kappa$ and the first-order Clausius relation
+$$
+\delta S=\frac{\delta Q}{T_U}+O(\lambda^2)
+$$
+from four prior inputs on the same operational-continuum branch: PCE-optimal detailed balance with respect to the local stationary state (Corollary G.1.9.3a), Gibbs/KMS characterization of equilibrium (Theorems G.1.9.4–G.1.9.5), modular-Hamiltonian/boost identification on the local Rindler wedge (Theorem G.1.9.6), and the entanglement first law (Theorem G.1.9.7). The KMS condition is exactly the local equilibrium condition for the horizon observer, and the first-order Clausius relation is exactly the thermodynamic relation required to define $T$ and $\delta Q$ in the subsequent derivation. If an additional non-LTE label leaves all finite protocol-response presheaves unchanged, it is response-null surplus and is eliminated by PCE dominance (Theorem D.1d). If it changes the finite response presheaf, it is a different non-equilibrium branch and cannot be used inside the local-equilibrium Einstein-equation derivation. Hence LTE at local causal horizons is derived on this branch. ∎
 
 **Theorem 48a (Derived Local KMS Equilibrium at Causal Horizons).**
 
@@ -85,14 +89,14 @@ The integration is understood over a small horizon segment $\lambda\in[\lambda_0
 
 **12.1.4 Definition 40 (Def 40): Horizon Temperature $T$**
 
-Consistent with local thermodynamic equilibrium (Postulate 4) and, under the Appendix F/G bridge, with Theorem 48a, the effective temperature $T$ associated with the local causal horizon $\mathcal{H}$ is defined in terms of the surface gravity $\kappa$. In SI units: $T = \hbar \kappa / (2\pi k_B c)$. In natural units ($c=\hbar=k_B=1$):
+Consistent with local thermodynamic equilibrium as derived by Theorem 48a.0 and, under the Appendix F/G bridge, sharpened by Theorem 48a, the effective temperature $T$ associated with the local causal horizon $\mathcal{H}$ is defined in terms of the surface gravity $\kappa$. In SI units: $T = \hbar \kappa / (2\pi k_B c)$. In natural units ($c=\hbar=k_B=1$):
 
 $$
 T = \frac{\kappa}{2\pi} \quad \text{(69)}
 $$
 
 
-Within PU, this temperature reflects the effective thermal noise spectrum encountered by MPUs near the horizon, ultimately related to the information limits ($\varepsilon, f_{RID}$) of the underlying ND-RID processes.
+Within PU, this temperature reflects the effective thermal noise spectrum encountered by MPUs near the horizon, ultimately related to the structural information limits ($\varepsilon_0, f_{RID}$) of the underlying ND-RID processes, with physical overhead recorded separately by $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}$.
 
 **12.2 The Horizon Entropy Area Law**
 
@@ -100,7 +104,7 @@ A crucial ingredient is the relationship between the entropy associated with a c
 
 **12.2.1 Theorem 49 (Horizon-Entropy Area Law)**
 
-**Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43)**, the equilibrium boundary entropy $S_{boundary}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal{H}$ is proportional to the horizon's cross-sectional area $\mathcal{A}$. This arises because the per-channel reliable classical information capacity is bounded by the residual MPU information budget, $C_{\max}(f_{RID}) \le \ln(d_0)-\varepsilon < \ln(d_0)$ (Appendix E, Theorem E.2; Equation E.15), with $\varepsilon \ge \ln 2$ (Theorem 31). Assuming this bound is saturated at equilibrium—saturation is expected as a consequence of PCE driving the system towards maximum entropy states consistent with the constraints (local MaxEnt principle)—the relationship takes the universal Bekenstein-Hawking form, $S = k_B c^3 \mathcal{A} / (4 G \hbar)$ in SI units. With Planck length $L_P^2 = G\hbar/c^3$, this is $S = k_B \mathcal{A} / (4 L_P^2)$. In natural units ($c=\hbar=k_B=1$, $L_P^2=G$):
+**Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43)**, the equilibrium boundary entropy $S_{boundary}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal{H}$ is proportional to the horizon's cross-sectional area $\mathcal{A}$. This arises because the per-channel reliable classical information capacity is bounded by the residual MPU information budget, $C_{\max}(f_{RID}) \le \ln(d_0)-\varepsilon_0 < \ln(d_0)$ (Appendix E, Theorem E.2; Equation E.15), with $\varepsilon_0=\ln 2$ (Theorem 31). By Theorem E.8.3.4, the boundary-entropy potential on the holographic-attractor branch is strictly decreasing on $[0,S_{\max})$, so the unique stable equilibrium occurs at $S=S_{\max}$. Hence the bound is saturated at equilibrium on this branch, and the relationship takes the universal Bekenstein-Hawking form, $S = k_B c^3 \mathcal{A} / (4 G \hbar)$ in SI units. With Planck length $L_P^2 = G\hbar/c^3$, this is $S = k_B \mathcal{A} / (4 L_P^2)$. In natural units ($c=\hbar=k_B=1$, $L_P^2=G$):
 
 $$
 S_{boundary}(\mathcal{A}) = \frac{\mathcal{A}}{4 G} \quad \text{(70)}
@@ -156,7 +160,7 @@ which is Equation (71). ∎
 
 **12.3 Thermodynamic Derivation of Einstein's Field Equations**
 
-We combine the local thermodynamic relations (Postulate 4, Theorem 48a, Definition 39, Definition 40) with the derived entropy-area law (Theorem 49) and apply the fundamental Clausius relation ($\delta Q = T \delta S$) to an infinitesimal patch of a local causal horizon. The following theorem formalizes this derivation, following the logic of Jacobson (1995).
+We combine the local thermodynamic relations (Theorem 48a.0, Theorem 48a, Definition 39, Definition 40) with the derived entropy-area law (Theorem 49) and apply the fundamental Clausius relation ($\delta Q = T \delta S$) to an infinitesimal patch of a local causal horizon. The following theorem formalizes this derivation, following the logic of Jacobson (1995).
 
 **Theorem 12.1 (Local Clausius relation for all null generators ⇒ EFE).**
 Let $(M,g)$ be the emergent Lorentzian manifold of Section 11 with local Rindler horizons generated by null $k^\mu$ (affinely parameterized by $\lambda$) and Unruh temperature $T=\kappa/2\pi$. Assume:
@@ -283,7 +287,7 @@ $$
 
 ### 12.3.1 Theorem 50 (Einstein Field Equations)
 
-The local thermodynamic consistency input of Postulate 4, sharpened by Theorem 48a, together with the horizon area law and the micro-macro calibration of the entropy density established in Appendix E, implies that the emergent spacetime geometry $(M, g_{\mu\nu})$ and the emergent macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ are related by Einstein's Field Equations (EFE) in SI units:
+The local thermodynamic consistency derived by Theorem 48a.0 and sharpened by Theorem 48a, together with the horizon area law and the micro-macro calibration of the entropy density established in Appendix E, implies that the emergent spacetime geometry $(M, g_{\mu\nu})$ and the emergent macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ are related by Einstein's Field Equations (EFE) in SI units:
 $$
 R_{\mu\nu} - \tfrac{1}{2} R g_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}^{(MPU)}
 \quad \text{(76)}
@@ -303,6 +307,8 @@ $$
 \mathcal E_{\mu\nu} = c_1 G_{\mu\nu} + c_0 g_{\mu\nu},
 $$
 because the only additional Lovelock density, the Gauss-Bonnet term, is topological in four dimensions and contributes no local field equations. Hence no independent second-order covariant rank-2 tensor beyond $G_{\mu\nu}$ and $g_{\mu\nu}$ is available under the stated hypotheses. Appendix E fixes the horizon entropy density to the Bekenstein-Hawking value $1/(4G)$, which calibrates the normalization of the Einstein-Hilbert term and therefore sets $c_1=1$ in the units used in Equation (76). Writing $c_0=\Lambda$ gives the stated tensor. Any higher-curvature correction would either violate the hypothesis of at most second derivatives or modify the Wald entropy density away from the Appendix E coefficient. Therefore the only tensor consistent with all stated hypotheses is $G_{\mu\nu}+\Lambda g_{\mu\nu}$. QED
+
+This subsection gives an independent action-level closure of the preceding thermodynamic derivation. It should not be read as replacing the MPU/channel-capacity derivation of the entropy density; rather, it shows that once the area-law density has been fixed by the MPU channel count, the corresponding local metric equation is the Einstein equation. PCE supplies the entropy-density and channel-capacity input; Lovelock/Jacobson/Wald-style locality, diffeomorphism invariance, second-order field equations, and Wald-density matching supply the metric-action uniqueness gate. PCE alone is not used as a substitute for the local metric-action hypotheses.
 
 **Theorem 12.1a (Wald-Normalized Einstein–Hilbert Action Uniqueness).** Work on the derived $D=4$ Lorentzian branch (Corollary 46a). Let the local gravitational action be
 $$
@@ -331,7 +337,7 @@ The inner contraction is
 $$
 \bigl(g^{\mu\rho}g^{\nu\sigma}-g^{\mu\sigma}g^{\nu\rho}\bigr)\varepsilon_{\mu\nu}\varepsilon_{\rho\sigma} \;=\; \varepsilon_{\mu\nu}\varepsilon^{\mu\nu} - \varepsilon_{\mu\nu}\varepsilon^{\nu\mu} \;=\; -2 - 2 \;=\; -4,
 $$
-using $\varepsilon^{\nu\mu}=-\varepsilon^{\mu\nu}$. Therefore $S_{\mathrm{Wald}}=4\pi a_1\,A$. Matching to the PU area law $A/(4G)$ gives $4\pi a_1=1/(4G)$, hence $a_1=1/(16\pi G)$. The cosmological term contributes no Wald area density; writing $a_0=-2a_1\Lambda$ yields the stated action. Restoring SI units by the conventional factor $c^3$ gives the SI form. Varying the sum $S_{\mathrm{grav}}+S_{\mathrm{matter}}$ with respect to $g^{\mu\nu}$, using (67e), yields (76a). ∎
+using $\varepsilon^{\nu\mu}=-\varepsilon^{\mu\nu}$. Therefore $S_{\mathrm{Wald}}=4\pi a_1\,A$. Matching to the PU area law $A/(4G)$ gives $4\pi a_1=1/(4G)$, hence $a_1=1/(16\pi G)$. The cosmological term contributes no Wald area density; writing $a_0=-2a_1\Lambda$ yields the stated action. Thus PU fixes the thermodynamic entropy-density side of the argument through finite channel capacity, while the metric-action uniqueness side is the standard local Lovelock/Wald gate. Restoring SI units by the conventional factor $c^3$ gives the SI form. Varying the sum $S_{\mathrm{grav}}+S_{\mathrm{matter}}$ with respect to $g^{\mu\nu}$, using (67e), yields (76a). ∎
 
 **Corollary 12.1b (Certificate-Complete Emergent Metric Branch).** On any regular operational-continuum branch satisfying the finite KMS-descent certificate of Definition F.10.12a, the route to (76a) is a certificate-complete emergent metric/channel-capacity thermodynamics derivation. No independent microscopic gravitational Hilbert sector is introduced.
 

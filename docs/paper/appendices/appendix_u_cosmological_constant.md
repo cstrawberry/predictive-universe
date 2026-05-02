@@ -24,14 +24,15 @@ The following constants are derived elsewhere in the framework:
 
 | Symbol | Value | Definition | Source |
 |--------|-------|------------|--------|
-| $\varepsilon$ | $\ln 2$ | Landauer erasure cost | Theorem 31 |
+| $\varepsilon_0$ | $\ln 2$ | Structural SPAP/Landauer quotient | Theorem 31 |
+| $\varepsilon_{\mathrm{phys}}$ | $\ge\varepsilon_0$ | Physical implementation cost including overhead | Theorem 31 |
 | $K_0$ | 3 | Minimal self-referential bits | Theorem 15 |
 | $d_0$ | $2^{K_0} = 8$ | MPU Hilbert space dimension | Theorem 23 |
-| $a$ | $e^{\varepsilon} = 2$ | Active kernel dimension | Theorem Z.1 |
+| $a$ | minimal integer with $\ln a\ge\varepsilon_0$, hence $2$ | Active kernel dimension | Theorem Z.1 |
 | $b$ | $d_0 - a = 6$ | Inactive subspace dimension | Definition |
 | $M$ | $2ab = 24$ | Interface modes | Theorem Z.5 |
 | $D$ | 4 | Emergent spacetime dimension | Theorem Z.11 |
-| $C_{\max}/\varepsilon$ | 2 | PCE capacity ratio | Appendix Q |
+| $C_{\max}/\varepsilon_0$ | 2 | PCE capacity ratio | Appendix Q |
 
 ---
 
@@ -262,7 +263,7 @@ where $d\sigma$ is the uniform probability measure on $S^{n-1}$.
 
 **Step 1 (Interface mode count).** From Theorem Z.5, the QFI-active interface modes number $M = 2ab = 24$, where $a = 2$ (Theorem Z.1) and $b = d_0 - a = 6$.
 
-**Step 2 (Equilibrium saturation).** At thermodynamic equilibrium (Postulate 4), Theorem Z.9 establishes that the channel configuration maximizes entropy subject to distinguishability constraints, yielding $M_{\text{phys}} = K(D)$.
+**Step 2 (Equilibrium saturation).** At PCE equal-cap equilibrium, Theorem Z.9 establishes that the channel configuration maximizes entropy subject to distinguishability constraints, yielding $M_{\text{phys}} = K(D)$.
 
 **Step 3 (Mode-channel correspondence).** Theorem Z.10 requires $M_{\text{int}} = M_{\text{phys}}$ at PCE-optimal equilibrium. This matching is the unique global minimum of the PCE potential (Lemma Z.5).
 
@@ -409,13 +410,13 @@ The continuum Euclidean information action for vacuum fluctuations is constructe
 **Definition U.4 (Continuum Information Action).** The continuum action $S_{\text{cont}}[\phi]$ for a scalar fluctuation field $\phi:\mathbb{R}^4\to\mathbb{R}$ is
 
 $$
-S_{\text{cont}}[\phi] = \frac{1}{\varepsilon}\int_{\mathbb{R}^4} d^4x \left[\frac{1}{2}|\nabla \phi|^2 + V_{\text{eff}}(\phi) - V_{\text{eff}}(0)\right]
+S_{\text{cont}}[\phi] = \frac{1}{\varepsilon_0}\int_{\mathbb{R}^4} d^4x \left[\frac{1}{2}|\nabla \phi|^2 + V_{\text{eff}}(\phi) - V_{\text{eff}}(0)\right]
 $$
 
-where $\varepsilon = \ln 2$ is the Landauer cost (Theorem 31). For an $O(4)$-symmetric profile $\phi(x)=\varphi(r)$ with $r=|x|$, this is equivalently
+where $\varepsilon_0 = \ln 2$ is the structural SPAP/Landauer cost (Theorem 31). For an $O(4)$-symmetric profile $\phi(x)=\varphi(r)$ with $r=|x|$, this is equivalently
 
 $$
-S_{\text{cont}}[\varphi] = \frac{1}{\varepsilon}\int_0^\infty r^3 dr \int_{S^3} d\sigma_3 \left[\frac{1}{2}(\partial_r \varphi)^2 + \frac{1}{2r^2}|\nabla_{S^3}\varphi|^2 + V_{\text{eff}}(\varphi) - V_{\text{eff}}(0)\right]
+S_{\text{cont}}[\varphi] = \frac{1}{\varepsilon_0}\int_0^\infty r^3 dr \int_{S^3} d\sigma_3 \left[\frac{1}{2}(\partial_r \varphi)^2 + \frac{1}{2r^2}|\nabla_{S^3}\varphi|^2 + V_{\text{eff}}(\varphi) - V_{\text{eff}}(0)\right]
 $$
 
 where $d\sigma_3$ is the normalized round measure on $S^3$. The subtraction $V_{\text{eff}}(0)$ ensures finite action for vacuum-to-vacuum trajectories.
@@ -430,7 +431,7 @@ $$u_i(r) = \phi(r x_i), \quad i = 1, \ldots, 24.$$
 
 **Definition U.6 (Discrete Action).** The **discrete action** $S_{\text{disc}}$ is obtained by replacing the normalized angular average on each sphere by the 24-cell quadrature:
 $$
-S_{\text{disc}}(u) = \frac{1}{\varepsilon}\int_0^\infty r^3 dr \left[\frac{1}{24}\sum_{i=1}^{24}\frac{1}{2}(\partial_r u_i)^2 + \frac{1}{48r^2}\sum_{i,j}W_{ij}(u_i-u_j)^2 + \frac{1}{24}\sum_{i=1}^{24}\big(V_{\text{eff}}(u_i)-V_{\text{eff}}(0)\big)\right]
+S_{\text{disc}}(u) = \frac{1}{\varepsilon_0}\int_0^\infty r^3 dr \left[\frac{1}{24}\sum_{i=1}^{24}\frac{1}{2}(\partial_r u_i)^2 + \frac{1}{48r^2}\sum_{i,j}W_{ij}(u_i-u_j)^2 + \frac{1}{24}\sum_{i=1}^{24}\big(V_{\text{eff}}(u_i)-V_{\text{eff}}(0)\big)\right]
 $$
 where $W_{ij}$ encodes a chosen real self-adjoint discrete angular quadratic form on the 24-cell sample, with constants in its kernel, and the factor $1/24$ normalizes the spherical average. The quadrature $\int_{S^3} d\sigma_3 \to \frac{1}{24}\sum_{i=1}^{24}$ is exact for polynomials of degree $\leq 5$ by the spherical 5-design property (Theorem U.7).
 
@@ -764,7 +765,7 @@ The vacuum fluctuation amplitude is computed via a path integral:
 
 $$Z = \int \mathcal{D}u \, e^{-\lambda S_{\text{disc}}(u)}$$
 
-where $\lambda = C_{\max}/\varepsilon = 2$ is the PCE capacity ratio.
+where $\lambda = C_{\max}/\varepsilon_0 = 2$ is the structural PCE capacity ratio.
 
 ### U.9.2 Standard Laplace Asymptotics
 
@@ -784,7 +785,7 @@ Within the Appendix U five-mode reference branch, model the discretized bounce $
 $$
 Z = A_{\mathrm{MB}}(\lambda)\,\lambda^{-(N-5)/2} e^{-\lambda S^*}(1+O(\lambda^{-1})),
 $$
-where $A_{\mathrm{MB}}(\lambda)$ collects determinant and Jacobian factors, $N$ is the total number of Gaussian directions, and $S^* = S_{\text{disc}}(u^*)$ is the instanton action. In the PU application $\lambda = C_{\max}/\varepsilon = 2$ is fixed rather than taken to $+\infty$, so this formula is used only to identify the zero-mode power $(N-5)/2$ entering the exponent-counting convention below; the omitted $O(\lambda^{-1})$ term is not discarded as a controlled small correction. Theorem U.8c shows that this five-mode count is not realized by the pure-coordinate dilatation direction of the current continuum action.
+where $A_{\mathrm{MB}}(\lambda)$ collects determinant and Jacobian factors, $N$ is the total number of Gaussian directions, and $S^* = S_{\text{disc}}(u^*)$ is the instanton action. In the PU application $\lambda = C_{\max}/\varepsilon_0 = 2$ is fixed rather than taken to $+\infty$, so this formula is used only to identify the zero-mode power $(N-5)/2$ entering the exponent-counting convention below; the omitted $O(\lambda^{-1})$ term is not discarded as a controlled small correction. Theorem U.8c shows that this five-mode count is not realized by the pure-coordinate dilatation direction of the current continuum action.
 
 ---
 
@@ -792,11 +793,11 @@ where $A_{\mathrm{MB}}(\lambda)$ collects determinant and Jacobian factors, $N$ 
 
 ### U.10.1 Complexity-Action Correspondence
 
-**Proposition U.14 (Complexity-Action Relation on the Residual-Budget Branch).** On the residual-budget branch of Appendix E (Equation E.14, where the SPAP cost $\varepsilon$ is subtracted from the total information potential $\ln d_0$ to give the available boundary channel capacity) and Appendix Q (§Q.2.1, Equation Q.10), the instanton action $S_{\text{inst}}$ and complexity $\kappa$ are related by:
+**Proposition U.14 (Complexity-Action Relation on the Residual-Budget Branch).** On the residual-budget branch of Appendix E (Equation E.14, where the structural SPAP cost $\varepsilon_0$ is subtracted from the total information potential $\ln d_0$ to give the available boundary channel capacity) and Appendix Q (§Q.2.1, Equation Q.10), the instanton action $S_{\text{inst}}$ and complexity $\kappa$ are related by:
 
 $$S_{\text{inst}} = 2\kappa$$
 
-This follows from the residual-budget identity $C_{\max}^*/\varepsilon = 2$, which is itself a consequence of the residual-budget allocation $C_{\max}^* = \ln(d_0) - \varepsilon = 3\ln 2 - \ln 2 = 2\ln 2$. With a general capacity ratio $\rho := C_{\max}/\varepsilon$, the instanton action is $S_{\text{inst}} = \rho\kappa$ and the cosmological constant prediction $\Lambda \sim e^{-\rho\kappa_\Lambda}$ would shift by $e^{-(\rho-2)\kappa_\Lambda}$ off the residual-budget branch.
+This follows from the residual-budget identity $C_{\max}^*/\varepsilon_0 = 2$, which is itself a consequence of the residual-budget allocation $C_{\max}^* = \ln(d_0) - \varepsilon_0 = 3\ln 2 - \ln 2 = 2\ln 2$. With a general structural capacity ratio $\rho := C_{\max}/\varepsilon_0$, the instanton action is $S_{\text{inst}} = \rho\kappa$ and the cosmological constant prediction $\Lambda \sim e^{-\rho\kappa_\Lambda}$ would shift by $e^{-(\rho-2)\kappa_\Lambda}$ off the residual-budget branch.
 
 **Remark U.14.1: One-Loop Correction via Zeta Regularization.** The one-loop correction to the instanton action is formally computed via the zeta-regularized functional determinant on the attractor orbit $\text{Gr}(2,8)$:
 
@@ -808,17 +809,17 @@ $$\alpha = \frac{1}{16\sigma_B^2} = \frac{1}{16 \cdot (1/24)} = \frac{24}{16} = 
 
 where $\sigma_B^2 = 1/M = 1/24$ uses the interface-mode count $M=24$ from Theorem Z.5 together with the canonical unit-radius normalization convention of Lemma T.41.2.
 
-*Derivation.* The instanton action scales with complexity as $S_{\text{inst}} = (C_{\max}/\varepsilon)\kappa$ (Section U.4). Substituting $C_{\max}/\varepsilon = 2$ yields $S_{\text{inst}} = 2\kappa$.
+*Derivation.* The instanton action scales with complexity as $S_{\text{inst}} = (C_{\max}/\varepsilon_0)\kappa$ (Section U.4). Substituting $C_{\max}/\varepsilon_0 = 2$ yields $S_{\text{inst}} = 2\kappa$.
 
 *Consistency check.* The cosmological constant formula:
 
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-S_{\text{inst}}} = 8\pi A_{\text{eff}} \cdot e^{-2\kappa}$$
 
-Using $\varepsilon = \ln 2$, this can equivalently be written as:
+Using $\varepsilon_0 = \ln 2$, this can equivalently be written as:
 
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot 2^{-2\kappa/\ln 2} = 8\pi A_{\text{eff}} \cdot 2^{-2\kappa \cdot \log_2 e}$$
 
-The Morse-Bott correction factor $\lambda^{-m/2} = 2^{-m/2}$ (with $\lambda = C_{\max}/\varepsilon = 2$) modifies the effective complexity by reducing the number of contributing Gaussian directions from $\kappa_0$ to $\kappa_0 - m/2$.
+The Morse-Bott correction factor $\lambda^{-m/2} = 2^{-m/2}$ (with $\lambda = C_{\max}/\varepsilon_0 = 2$) modifies the effective complexity by reducing the number of contributing Gaussian directions from $\kappa_0$ to $\kappa_0 - m/2$.
 
 ### U.10.2 Zero Mode Contribution
 
@@ -836,7 +837,7 @@ to the exponent-counting parameter used in the vacuum weight.
 $$
 \lambda^{-(N_{\mathbb{R}}-m)/2}
 $$
-with $\lambda = C_{\max}/\varepsilon = 2$ (Appendix Q), $N_{\mathbb{R}} = 288$ the real dimension of the integration domain (Remark U.3a), and $m = 5$ the assumed real dimension of the collective-coordinate manifold. At the manuscript's fixed $\lambda$, this is used as a leading-order counting pattern rather than as a controlled exact asymptotic evaluation.
+with $\lambda = C_{\max}/\varepsilon_0 = 2$ (Appendix Q), $N_{\mathbb{R}} = 288$ the real dimension of the integration domain (Remark U.3a), and $m = 5$ the assumed real dimension of the collective-coordinate manifold. At the manuscript's fixed $\lambda$, this is used as a leading-order counting pattern rather than as a controlled exact asymptotic evaluation.
 
 **Step 2 (Convention-based exponent parameter).** The base complexity $\kappa_0 = 144$ counts the complex dimension of $\text{Gr}_{\mathbb{C}}(12,24)$ (Theorem U.3), with $N_{\mathbb{R}} = 2\kappa_0$. By Convention U.14a, the leading-order exponent-counting parameter is
 $$
@@ -1122,7 +1123,7 @@ uses the following explicit instantiation steps:
 
 1. **Grassmannian identification.** The Appendix U vacuum model uses $\text{Gr}_\mathbb{C}(12,24)$ as the relevant reference configuration space (Theorem U.3), so the base count is $k^2=144$ with $k=12$.
 
-2. **Action mapping.** The instanton action is identified as $S_{\text{inst}}=(C_{\max}^*/\varepsilon)\kappa$ with the operating-point value $C_{\max}^*/\varepsilon=2$ (Appendix Q). Within the Appendix U reference scheme this gives $S_{\text{inst}}=2\kappa_{\mathrm{ref}}$.
+2. **Action mapping.** The instanton action is identified as $S_{\text{inst}}=(C_{\max}^*/\varepsilon_0)\kappa$ with the operating-point value $C_{\max}^*/\varepsilon_0=2$ (Appendix Q). Within the Appendix U reference scheme this gives $S_{\text{inst}}=2\kappa_{\mathrm{ref}}$. The mapping is structural on the residual-budget branch but inherits the certificate status of the zero-mode, determinant, and finite-record ledgers named in Convention P.14.1h.
 
 3. **Einstein-normalization factor.** The PPI mapping identifies the vacuum amplitude with the coefficient of $g_{\mu\nu}$ in the Einstein-equation convention $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}$. Accordingly, when the result is written as the dimensionless quantity $\Lambda L_P^2$, a pure numerical factor $8\pi$ appears (Appendix V, normalization note following Equation (V.2)).
 
@@ -2036,7 +2037,7 @@ We identify the canonically normalized Einstein-frame scalar $\chi$ with the can
 
 $$\frac{m_s}{\bar{M}_{Pl}} = Q$$
 
-*Justification.* The PPI asserts that information-theoretic quantities must have physical instantiations. The primordial complexity parameter $\kappa_Q = 11$ (Identification U.20) yields $Q = e^{-11}/\sqrt{2}$ (Theorem U.27). The scalaron mass $m_s$ is the characteristic mass scale in the Starobinsky sector. This identification is motivated by dimensional analysis and the requirement that $Q$ control primordial perturbations, but is not uniquely determined by PPI alone. Alternative identifications such as $m_s/\bar{M}_{Pl} = f(Q)$ for some $O(1)$ function $f$ would shift predictions accordingly. The linear identification $m_s = Q \cdot \bar{M}_{Pl}$ is the simplest choice consistent with the exponential suppression structure.
+*Justification.* The PPI asserts that information-theoretic quantities must have physical instantiations. The primordial complexity parameter $\kappa_Q = 11$ (Identification U.20) yields $Q = e^{-11}/\sqrt{2}$ (Theorem U.27). The scalaron mass $m_s$ is the characteristic mass scale in the Starobinsky sector. This identification is motivated by dimensional analysis and the requirement that $Q$ control primordial perturbations, but is not uniquely determined by PPI alone. Alternative identifications such as $m_s/\bar{M}_{Pl} = f(Q)$ for some $O(1)$ function $f$ would shift predictions accordingly. The linear identification $m_s = Q \cdot \bar{M}_{Pl}$ is the simplest choice consistent with the exponential suppression structure. By Theorem P.14.1f and Corollary P.14.1g, this identification cannot be promoted to theorem-level by status relabeling or prose alone; theorem-level promotion would require a finite spectral or variational certificate fixing the linear map before comparison with inflationary observables.
 
 **Corollary U.52 (Scalaron Mass Value).**
 
@@ -2056,11 +2057,11 @@ $$\Delta S_{\min} = \ln 2$$
 
 per bit (Theorem 31).
 
-**Lemma U.54 (Capacity-Registration Ratio on the Residual-Budget Branch).** On the residual-budget, throughput-saturated, ideal-packing branch of Appendix Q (§§Q.2.1–Q.5, on which $C_{\max}^* = 2\ln 2$, $\chi^* = 1$, $\eta^* = 1$), the PCE-optimal capacity ratio is:
+**Lemma U.54 (Capacity-Registration Ratio on the Residual-Budget Branch).** On the residual-budget, throughput-saturated, ideal-packing branch of Appendix Q (§§Q.2.1–Q.5, on which $C_{\max}^* = 2\ln 2$, $\chi^* = 1$, $\eta^* = 1$), the PCE-optimal structural capacity ratio is:
 
-$$\frac{C^*_{\max}}{\varepsilon} = \frac{2\ln 2}{\ln 2} = 2$$
+$$\frac{C^*_{\max}}{\varepsilon_0} = \frac{2\ln 2}{\ln 2} = 2$$
 
-This means each Landauer erasure ($\varepsilon = \ln 2$) supports registration of $C^*_{\max} = 2\ln 2$ nats of channel capacity.
+This means each structural SPAP registration ($\varepsilon_0 = \ln 2$) supports registration of $C^*_{\max} = 2\ln 2$ nats of channel capacity.
 
 **Lemma U.55 (E-Fold Information Content).** Each e-fold of inflation corresponds to one unit of $\ln k$-space registration, where $k$ is the comoving wavenumber. At leading order in slow-roll:
 
@@ -2072,7 +2073,9 @@ $$\Delta N_e \approx \Delta \ln k$$
 
 $$N_e^{(\text{info})} = N_{\text{budget}} = 60$$
 
-*Justification.* The constraint budget $N_{\text{budget}} = 60$ (Assumption U.41) counts independent scalar (binary) registrations available in the primordial sector. We assume that one independent constraint is consumed per e-fold to register distinct horizon-exit conditions, so $N_e^{(\text{info})} \leq N_{\text{budget}}$ and at capacity saturation $N_e^{(\text{info})} = N_{\text{budget}} = 60$. The ratio $C^*_{\max}/\varepsilon = 2$ fixes the information content per registration at the PCE optimum but does not increase the number of independent constraints available for mode counting. If the true constraint count differs from 60, $N_e^{(\text{info})}$ scales proportionally.
+This is a model-layer registration rule rather than a theorem of the discrete backbone. By Convention P.14.1h, changing this rule defines a different cosmological registration branch and propagates to the inflationary prediction ledger.
+
+*Justification.* The constraint budget $N_{\text{budget}} = 60$ (Assumption U.41) counts independent scalar (binary) registrations available in the primordial sector. We assume that one independent constraint is consumed per e-fold to register distinct horizon-exit conditions, so $N_e^{(\text{info})} \leq N_{\text{budget}}$ and at capacity saturation $N_e^{(\text{info})} = N_{\text{budget}} = 60$. The ratio $C^*_{\max}/\varepsilon_0 = 2$ fixes the structural information content per registration at the PCE optimum but does not increase the number of independent constraints available for mode counting. If the true constraint count differs from 60, $N_e^{(\text{info})}$ scales proportionally.
 
 ### U.23.2 Geometric Bound
 

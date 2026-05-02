@@ -310,7 +310,7 @@ with:
 - $\psi \in \mathbb{R}$: U(1)$_{em}$ gauge angle
 - $R = I_6$: isotropic coupling matrix
 - $\mu > 0$: isotropic curvature for broken directions
-- $\varepsilon = \ln 2$: irreducible Landauer cost (Theorem 31)
+- $\varepsilon_0=\ln2$: irreducible Landauer cost (Theorem 31)
 
 -----
 
@@ -1490,7 +1490,7 @@ where $\gamma > 0$ is a dimensionless target-shift normalization. The reduced en
 $$
 V[s; u] = \frac{1}{2} s^T s + \frac{1}{2} |\Pi_L s - x(u)|^2.
 $$
-The canonical unit target-shift branch is $\gamma=1$; Theorem T.22b gives the moment-map gate under which this value is fixed rather than imposed.
+The moment-map-normalized target-shift branch has $\gamma=1$; Theorem T.22b gives the gate under which this value is fixed by the Pauli-normalized SU(2) moment map rather than imposed.
 
 *Proof.* The SU(2) rotation on each of six left-chiral links produces a coherent $O(u^2)$ shift in the reservoir, establishing the scaling order and the existence of a unit direction $v$. The magnitude coefficient $\gamma$ is the target-shift normalization of the SU(2)-coherent action on the reservoir coordinates. ∎
 
@@ -1606,7 +1606,7 @@ On the canonical unit target-shift branch $\gamma = 1$, this gives $\lambda_{\te
 
 ### T.16.1 Total Quartic at the Fixed Point
 
-**Theorem T.25** (Zero-Slack Cancellation on the canonical unit target-shift branch). At the PU fixed point $\mathfrak{A}_{PU}$:
+**Theorem T.25** (Zero-Slack Cancellation on the Moment-Map-Normalized Target-Shift Branch). At the PU fixed point $\mathfrak{A}_{PU}$:
 $$
 \lambda_{\mathrm{PU}}(\mathfrak{A}_{PU}; \gamma) = \lambda_{\text{block}} + \lambda_{\text{elastic}}(\gamma) = -\frac{1}{36} + \frac{\gamma^2}{36} = \frac{\gamma^2 - 1}{36}.
 $$
@@ -1615,13 +1615,13 @@ The zero-slack boundary
 $$
 \lambda_{\mathrm{PU}}(\mathfrak{A}_{PU}) = 0
 $$
-holds on the canonical unit target-shift branch $\gamma = 1$.
+holds on the moment-map-normalized target-shift branch $\gamma = 1$ fixed by Theorem T.22b.
 
 *Proof.* Theorems T.21 and T.24, with Theorem T.24 evaluated on the target-shift normalization $\gamma$. ∎
 
 
 
-**Remark T.25.1 (Branch Dependence of the Zero-Slack Boundary).** The vanishing of the fixed-point quartic at the PCE attractor depends on the target-shift normalization $\gamma=1$ introduced in Theorem T.22. The named supporting theorems (T.18a link count, T.19 canonical Higgs field, T.20 block quartic, T.21 block coefficient, T.5b canonical basis, T.23 optimal signal configuration) fix every factor in the derivation except this leading target-shift magnitude, which is the SU(2)-coherent action of the six left-chiral links on the six-dimensional reservoir. On the SU(2) moment-map branch, Theorem T.22b supplies the missing unit normalization and the zero-slack statement is theorem-level within that branch. Without that moment-map datum, downstream consequences of $\lambda_{\text{PU}}=0$ — including the Higgs metastability boundary used in Theorem T.28 and the resulting $m_H\approx125$ GeV prediction — remain theorem-level only on the canonical unit target-shift branch. A quantitative deviation $\gamma\neq1$ shifts $\lambda_{\text{PU}}$ by $(\gamma^2-1)/36$, which propagates to the Higgs pole mass with sensitivity $\Delta m_H\sim(v^2/m_H)|\gamma^2-1|/36$.
+**Remark T.25.1 (Branch Dependence of the Zero-Slack Boundary).** The vanishing of the fixed-point quartic at the PCE attractor depends on the target-shift normalization $\gamma=1$ introduced in Theorem T.22. The named supporting theorems (T.18a link count, T.19 canonical Higgs field, T.20 block quartic, T.21 block coefficient, T.5b canonical basis, T.23 optimal signal configuration) fix every factor in the derivation except this leading target-shift magnitude, which is the SU(2)-coherent action of the six left-chiral links on the six-dimensional reservoir. On the moment-map branch defined by Definition T.22a, Theorem T.22b supplies the unit normalization and the zero-slack statement is theorem-level within that branch. Without that moment-map datum, downstream consequences of $\lambda_{\text{PU}}=0$ — including the Higgs metastability boundary used in Theorem T.28 and the resulting $m_H\approx125$ GeV prediction — remain theorem-level only on the canonical unit target-shift branch. A quantitative deviation $\gamma\neq1$ is not a deformation of the same theorem-level branch; it is a different target-shift datum with its own response ledger. If such a deviation is admitted, it shifts $\lambda_{\text{PU}}$ by $(\gamma^2-1)/36$, which propagates to the Higgs pole mass with sensitivity $\Delta m_H\sim(v^2/m_H)|\gamma^2-1|/36$.
 
 ### T.16.2 Beta Function Boundary Condition
 
@@ -3168,7 +3168,7 @@ $$
 
 ### T.21.8.7 Complete Derivation Chain
 
-**Theorem T.42.7** (Zero Continuously Adjustable Parameters Within PU Framework). *Given the foundational axioms of the Predictive Universe framework—specifically SPAP encodability (Theorem 15) and the Landauer thermodynamic cost $\varepsilon = \ln 2$ (Theorem Z.1)—the hierarchy formula contains no additional continuously adjustable parameters. Every coefficient traces to the Horizon Constant $K_0 = 3$:*
+**Theorem T.42.7** (Zero Continuously Adjustable Parameters Within PU Framework). *Given the foundational axioms of the Predictive Universe framework—specifically SPAP encodability (Theorem 15) and the Landauer thermodynamic cost $\varepsilon_0=\ln2$ (Theorem Z.1)—the hierarchy formula contains no additional continuously adjustable parameters. Every coefficient traces to the Horizon Constant $K_0 = 3$:*
 
 **Stage 1: Structural constants**
 $$
@@ -3192,7 +3192,7 @@ $$
 
 **Remark T.42.7.1: Meaning of “Zero Continuously Adjustable Parameters Within PU Framework”.** *The statement “zero continuously adjustable parameters” must be understood in context:*
 
-- *The PU framework itself rests on foundational axioms: SPAP encodability (which yields $K_0 = 3$), the Landauer thermodynamic cost ($\varepsilon = \ln 2$), and standard Riemannian geometry on the state manifold.*
+- *The PU framework itself rests on foundational axioms: SPAP encodability (which yields $K_0 = 3$), the Landauer thermodynamic cost ($\varepsilon_0=\ln2$), and standard Riemannian geometry on the state manifold.*
 - *Given these axioms, the charged-lepton mass hierarchy predictions follow deterministically with no additional fitting or adjustment.*
 - *This is analogous to how the Standard Model, given its gauge structure and particle content, makes parameter-free predictions for certain ratios—but the gauge structure itself is an input.*
 - *The PU framework's claim is that $(K_0, \varepsilon) = (3, \ln 2)$ are not arbitrary choices but follow from logical (SPAP) and thermodynamic (Landauer) necessity. The mass hierarchy predictions then test this claim against observation.*
@@ -3635,7 +3635,7 @@ All quantities trace to established theorems:
 |:-----------------------------------|:--------------------|:----------------|:---------------------------------------------------------|
 |$K_0$ |$3$ |Theorem 15 |Horizon Constant (SPAP encodability) |
 |$d_0$ |$8$ |Theorem 23 |$2^{K_0}$ |
-|$(a, b)$ |$(2, 6)$ |Theorem Z.1 |Landauer cost $\varepsilon = \ln 2$ |
+|$(a, b)$ |$(2, 6)$ |Theorem Z.1 |Landauer cost $\varepsilon_0=\ln2$ |
 |$(\kappa_1^*,\kappa_2^*,\kappa_3^*)$|$(0.695,0.729,1.140)$|Corollary T.34.2 |PCE optimum with normalization constraint |
 |$g_U^2$ |$\pi/6$ |Theorem T.39a |Holonomy per mode $2\pi/M$ |
 |$\mathcal{N}_{PU}$ |$1/(72\sqrt{12})$ |Section T.21.11 |Democratic × capacity × isotropy |
@@ -4481,7 +4481,7 @@ The core counting parameters trace to the foundational derivation, while the qua
 |:-----------------|:----------------|:------------------------------------------------------|:-------|
 |K₀ |3 |Self-reference minimum |§2.3 |
 |d₀ |8 |Hilbert space dimension 2^K₀ |§3.2 |
-|(a, b) |(2, 6) |Spectral split from ε = ln 2 |§3.3 |
+|(a, b) |(2, 6) |Spectral split from ε0 = ln 2 |§3.3 |
 |M |24 |Interface modes 2ab |§6.4 |
 |σ²_B |1/24 |Capacity saturation |T.41.2 |
 |α |3/2 |Hierarchy coefficient 1/(16σ²_B) |T.41.3 |
@@ -4646,16 +4646,16 @@ All complexity parameters trace to the same logical foundation established in th
 
 **Proposition T.59** (Foundational Completeness of the Core Counting Chain). *Every parameter in the backbone chain $K_0 \to d_0 \to \varepsilon \to a \to b \to M \to k \to D$ derives from $K_0 = 3$ through the chain above. Quantitative hierarchy derivations later in this appendix additionally use the threshold data, prefactors, and matching prescriptions introduced in those sections.*
 
-*Proof.* The logical necessity of $K_0 = 3$ (Theorem 15) initiates the backbone cascade. Each subsequent step follows from the cited results: Theorem 23 gives the lower bound $d_0 \ge 2^{K_0}=8$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch; Theorem 31 gives $\varepsilon \ge \ln 2$, and Definition 15a supplies the attractor saturation $\varepsilon=\ln 2$; Theorem Z.1 then fixes $a = 2$ on that branch; $b = d_0 - a$ (complement); $M = 2ab$ (Theorem Z.5, interface mode count); $k = M/2$ (Theorem Z.13, PCE-optimal code dimension); and $D = 4$ from the mode-channel correspondence (Theorem Z.11). This proves foundational completeness only for the backbone counting chain. The later hierarchy sections supplement that chain with the additional sector-specific inputs stated there. ∎
+*Proof.* The logical necessity of $K_0 = 3$ (Theorem 15) initiates the backbone cascade. Each subsequent step follows from the cited results: Theorem 23 gives the lower bound $d_0 \ge 2^{K_0}=8$, and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch; Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, and Definition 15a supplies the attractor saturation $\varepsilon_0=\ln2$; Theorem Z.1 then fixes $a = 2$ on that branch; $b = d_0 - a$ (complement); $M = 2ab$ (Theorem Z.5, interface mode count); $k = M/2$ (Theorem Z.13, PCE-optimal code dimension); and $D = 4$ from the mode-channel correspondence (Theorem Z.11). This proves foundational completeness only for the backbone counting chain. The later hierarchy sections supplement that chain with the additional sector-specific inputs stated there. ∎
 
 **Corollary T.59a** (Explicit Backbone Data). On the minimal Appendix Z branch used in Proposition T.59,
 $$
 (K_0,d_0,a,b,M,k,D)=(3,8,2,6,24,12,4),
 \qquad
-\varepsilon=\ln 2.
+\varepsilon_0=\ln2.
 $$
 
-*Proof.* Proposition T.59 supplies the derivation chain. Theorem Z.2 gives $d_0=8$, Definition 15a gives $\varepsilon=\ln 2$, and Theorem Z.1 gives $a=2$, hence $b=d_0-a=6$. Theorem Z.5 then gives $M=2ab=24$, Theorem Z.13 gives $k=M/2=12$, and Theorem Z.11 gives $D=4$. ∎
+*Proof.* Proposition T.59 supplies the derivation chain. Theorem Z.2 gives $d_0=8$, Definition 15a gives $\varepsilon_0=\ln2$, and Theorem Z.1 gives $a=2$, hence $b=d_0-a=6$. Theorem Z.5 then gives $M=2ab=24$, Theorem Z.13 gives $k=M/2=12$, and Theorem Z.11 gives $D=4$. ∎
 
 -----
 
@@ -4669,7 +4669,7 @@ $$S_{\text{inst}} = 2\kappa$$
 
 $$\frac{C_{\max}}{\varepsilon} = \frac{\ln(d_0) - \varepsilon}{\varepsilon} = \frac{3\ln 2 - \ln 2}{\ln 2} = 2$$
 
-The instanton action scales with complexity as $S_{\text{inst}} = (C_{\max}/\varepsilon)\kappa$ (Appendix U, Section U.4). Substituting yields $S_{\text{inst}} = 2\kappa$. ∎
+The instanton action scales with complexity as $S_{\text{inst}} = (C_{\max}/\varepsilon_0)\kappa$ (Appendix U, Section U.4). Substituting yields $S_{\text{inst}} = 2\kappa$. ∎
 
 This correspondence connects the information-theoretic complexity parameter $\kappa$ to the Euclidean action governing tunneling amplitudes.
 
@@ -4839,7 +4839,7 @@ $$
 $$
 hence $v/M_{Pl}\propto e^{-38.5}$. The baryogenesis row is Theorem Y.8:
 $$
-\kappa_B=\frac{\kappa_{EW}}2+\frac{\varepsilon}{N_g}=19.25+0.23=19.48.
+\kappa_B=\frac{\kappa_{EW}}2+\frac{\varepsilon_0}{N_g}=19.25+0.23=19.48.
 $$
 The seesaw row is Theorem T.64:
 $$
@@ -4948,9 +4948,9 @@ $$\frac{\Lambda}{v^4} \sim e^{-206} = 3.43 \times 10^{-90}.$$
 
 **Corollary T.63.2** (Electroweak–Baryon Square-Root Lock). *The baryogenesis complexity satisfies*
 $$
-\kappa_B=\frac{\kappa_{EW}}{2}+\frac{\varepsilon}{N_g}.
+\kappa_B=\frac{\kappa_{EW}}{2}+\frac{\varepsilon_0}{N_g}.
 $$
-On the minimal Appendix Y branch with $\varepsilon=\ln2$ and $N_g=3$,
+On the minimal Appendix Y branch with $\varepsilon_0=\ln2$ and $N_g=3$,
 $$
 \kappa_B=\frac{\kappa_{EW}}2+\frac{\ln2}{3}=19.48.
 $$
@@ -5119,7 +5119,7 @@ The derivation chain from Sections T.1–T.21 establishes the complete set of fo
 
 **Recall from Theorem 23 (MPU Dimension).** Theorem 23 gives $d_0 \ge 2^{K_0} = 8$; on the minimal PCE branch used throughout the Appendix Z backbone one has $d_0 = 8$ (Theorem Z.2).
 
-**Recall from Theorem Z.1 (Active Dimension).** On the attractor-saturating branch $\varepsilon = \ln 2$, Theorem Z.1 fixes the active kernel dimension to $a = 2$.
+**Recall from Theorem Z.1 (Active Dimension).** On the attractor-saturating branch $\varepsilon_0=\ln2$, Theorem Z.1 fixes the active kernel dimension to $a = 2$.
 
 **Definition (Inactive Dimension).** The inactive subspace dimension is $b = d_0 - a = 6$.
 

@@ -220,7 +220,7 @@ $$
 by the additivity of QFI for tensor product states. ∎
 
 **Application (conditional i.i.d. repetition model):**
-- One irreversible comparison event costs at least $\varepsilon$, with $\varepsilon \ge \ln 2$, nats (Landauer principle [Landauer 1961], Theorem 31)
+- One irreversible comparison event costs at least $\varepsilon$, with $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, nats (Landauer principle [Landauer 1961], Theorem 31)
 - At the PCE-optimal operating point, the per-cycle information budget is $C_{\mathrm{max}}^* = 2\varepsilon$ (Appendix Q, Equation Q.10)
 - If the comparison events contributing to this budget are modeled as independent identically prepared Landauer-costed comparison channels, then at most $N := C_{\mathrm{max}}^*/\varepsilon = 2$ such events can be supported per cycle; the bridge-law normalization adopts this maximal i.i.d. count
 
@@ -733,7 +733,7 @@ $$
 
 **Derivation Chain:**
 $$
-\boxed{\text{SPAP} \xrightarrow{K_0=3} d_0 \ge 8 \xrightarrow{\text{minimal branch}} d_0 = 8 \xrightarrow{\varepsilon=\ln 2\ \text{on attractor branch}} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{\text{mode-channel model}} D=4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}}}
+\boxed{\text{SPAP} \xrightarrow{K_0=3} d_0 \ge 8 \xrightarrow{\text{minimal branch}} d_0 = 8 \xrightarrow{\varepsilon_0=\ln2\ \text{on attractor branch}} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{\text{mode-channel model}} D=4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}}}
 $$
 
 

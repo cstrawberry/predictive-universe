@@ -296,7 +296,7 @@ In addition to Logical Indeterminacy, prediction error can also stem from more c
 1.  **Stochasticity:** Potential intrinsic randomness in the underlying dynamics of the system or its environment, or specifically within the probabilistic transition rules ($V_{prob}, T_{prob}$) of Non-Deterministic Reflexive Interaction Dynamics (ND-RID, Definition 6).
 2.  **Epistemic Uncertainty:** Limitations arising from the predictor's perspective, such as incomplete information about the system's state or parameters, inadequacies of the internal model used (e.g., model complexity $C(M_t)$ being less than the target complexity $\hat{C}_{target}(t)$), or constraints imposed by finite computational resources (time, memory, energy).
 
-The PU framework posits (Hypothesis 2) that the apparent randomness observed in fundamental physical processes (e.g., quantum measurement outcomes) originates primarily from this Logical Indeterminacy inherent in the underlying dynamics.
+The PU framework derives (Theorem 28a) that the apparent randomness observed in fundamental physical processes (e.g., quantum measurement outcomes) originates from this Logical Indeterminacy after PCE/PPI quotienting, non-simplex state-space closure, and Born-rule descent.
 
 **4.5 Complexity Dynamics Near Predictive Limits**
 

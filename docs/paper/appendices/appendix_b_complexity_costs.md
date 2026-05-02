@@ -391,7 +391,7 @@ Two admissible coarse-grainings $(\mathbf T_h),(\widetilde{\mathbf T}_h)$ are *$
 
 (b) $\mathbf T$ is distributionally divergence-free: $\int_{M_{\mathrm{reg}}}\nabla_\mu\psi_\nu\,d\mathbf T^{\mu\nu}=0$ for every $\psi\in C_c^\infty(T^*M_{\mathrm{reg}})$.
 
-(c) If $\mathbf T$ is absolutely continuous with respect to $dV_g$ (equivalent to local thermodynamic equilibrium, Postulate 4), then there exists $T_{(\mathrm{MPU})}^{\mu\nu}\in L^1_{\mathrm{loc}}(M_{\mathrm{reg}})$ with $d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}\,dV_g$ and $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$ in the distributional sense. ∎
+(c) If $\mathbf T$ is absolutely continuous with respect to $dV_g$ (the local-equilibrium density condition supplied on the horizon branch by Theorem 48a.0), then there exists $T_{(\mathrm{MPU})}^{\mu\nu}\in L^1_{\mathrm{loc}}(M_{\mathrm{reg}})$ with $d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}\,dV_g$ and $\nabla_\mu T_{(\mathrm{MPU})}^{\mu\nu}=0$ in the distributional sense. ∎
 
 *Proof.* (a) Hypothesis (i) gives a uniform total-variation bound $|\mathbf T_h|(K)\le C_K<\infty$. By Banach–Alaoglu applied to $\mathcal M(K)$ as the dual of $C(K;T^{*2}M_{\mathrm{reg}})$, a weak-$*$ convergent subsequence on $K$ exists. A diagonal argument over an exhaustion of $M_{\mathrm{reg}}$ gives a globally defined weak-$*$ limit $\mathbf T$. Symmetry is preserved by weak-$*$ convergence.
 
@@ -418,7 +418,7 @@ $$
 
 *Proof.* By (H B.8c.2), $\delta_g S_h^{(\mathrm{MPU})}[\delta g]=\tfrac12\int\delta g_{\mu\nu}\,d\mathbf T_h^{\mu\nu}+r_h(\delta g)$ with $r_h(\delta g)=O(h)$. For fixed $\delta g$, weak-$*$ convergence (Theorem B.8b) gives $\int\delta g_{\mu\nu}\,d\mathbf T_{h_j}^{\mu\nu}\to\int\delta g_{\mu\nu}\,d\mathbf T^{\mu\nu}$. Combined with (H B.8c.1), which supplies $\delta_g S_{h_j}^{(\mathrm{MPU})}\to\delta_g S_{(\mathrm{MPU})}$, this yields the stated identity. Absolute continuity and the definition of the metric functional derivative give (B.21). ∎
 
-**Theorem B.8d (Horizon-Flux Closure).** Let $\mathcal H$ be a smooth local horizon patch in a local Rindler region with null generator $k^\mu$, affine parameter $\lambda$, and approximate boost Killing field $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$. Assume (H B.8d.1) continuity of $T_{(\mathrm{MPU})}^{\mu\nu}$ on $\mathcal H$ (a consequence of Postulate 4). Let $\mathcal H_h$ be an admissible family of discrete face-unions approximating $\mathcal H$ with face fluxes $q_h(f)$ induced by the current operators of Definition B.5. Then:
+**Theorem B.8d (Horizon-Flux Closure).** Let $\mathcal H$ be a smooth local horizon patch in a local Rindler region with null generator $k^\mu$, affine parameter $\lambda$, and approximate boost Killing field $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$. Assume (H B.8d.1) continuity of $T_{(\mathrm{MPU})}^{\mu\nu}$ on $\mathcal H$ (a consequence of the local-equilibrium branch of Theorem 48a.0). Let $\mathcal H_h$ be an admissible family of discrete face-unions approximating $\mathcal H$ with face fluxes $q_h(f)$ induced by the current operators of Definition B.5. Then:
 
 (a) *Flux convergence.*
 $$

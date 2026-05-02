@@ -8,7 +8,7 @@ This appendix provides computational programs for two constants within the Predi
 
 This appendix is intended to be mechanically reproducible from the displayed equations. An independent check should verify the following items without access to any unpublished derivations:
 
-1. **Input ledger.** Fixed PU inputs: $K_0=3$, $d_0=2^{K_0}=8$, $\varepsilon=\ln 2$, $a=2$, $b=d_0-a=6$, $M=2a(d_0-a)=24$, and (for the semiclassical vacuum sector) $S_{\mathrm{inst}}=(C_{\max}/\varepsilon)\kappa=2\kappa$.
+1. **Input ledger.** Fixed PU inputs: $K_0=3$, $d_0=2^{K_0}=8$, $\varepsilon_0=\ln2$, $a=2$, $b=d_0-a=6$, $M=2a(d_0-a)=24$, and (for the semiclassical vacuum sector) $S_{\mathrm{inst}}=(C_{\max}/\varepsilon_0)\kappa=2\kappa$.
 2. **$\Lambda$ forward evaluation + inversion check.** Using Equation (V.2) with the derived inputs $(\kappa,A_{\text{eff}})$ to compute the PU prediction for $\Lambda L_P^2$, and using Equations (V.4)–(V.5) together with Equation (V.3) to infer either $A_{\text{eff}}^{(\text{obs})}$ (holding $\kappa$ fixed) or an effective $\kappa$ (holding $A_{\text{eff}}$ fixed) from observational inputs $(H_0,\Omega_\Lambda,c,L_P)$.
 3. **$\alpha_{\mathrm{em}}$ forward program.** Using Equation (V.8) to compute $u^*$ from $(M,\lambda,d_0)$ and Equation (V.10) to compute $\alpha^{-1}$ from $(u^*,K_0)$ including the explicit interface corrections.
 4. **Uncertainty accounting.** Reported $1\sigma$ uncertainties separate (i) observational inputs, (ii) controlled truncation terms, and (iii) PU-to-physics mapping/systematic terms; when combined, they are combined in quadrature unless otherwise stated.
@@ -32,7 +32,7 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
    \boxed{S_{\mathrm{inst}}=\left(\frac{C_{\max}}{\varepsilon}\right)\kappa = 2\,\kappa} \tag{V.1}
    $$
 
-   where $C_{\max}/\varepsilon=2$ on the residual-budget branch of Appendix E (Equation E.14) and Appendix Q (§Q.2.1, Equation Q.10). The residual-budget branch is the load-bearing assumption inherited by every $\Lambda L_P^2 \sim e^{-2\kappa}$ value computed in this section.
+   where $C_{\max}/\varepsilon_0=2$ on the residual-budget branch of Appendix E (Equation E.14) and Appendix Q (§Q.2.1, Equation Q.10). The residual-budget branch is the load-bearing assumption inherited by every $\Lambda L_P^2 \sim e^{-2\kappa}$ value computed in this section.
 
 2. **Vacuum energy density.** The dimensionless combination $\Lambda L_P^2$ is
 
@@ -137,7 +137,7 @@ This section provides the direct computational program for the fine-structure co
 ### V.2.1 Foundational Inputs (Derived from PU First Principles)
 
 *   **MPU Hilbert Space Dimension:** $d_0 \ge 8$ (from $K_0=3$ bits, Theorem 23); the PCE-minimal active-operational branch used in Appendix Z selects the saturating case $d_0 = 8$ (Chapter 7; Theorem Z.2).
-*   **Irreducible Cost:** $\varepsilon = \ln 2$ nats (from SPAP cycle, Theorem 31).
+*   **Irreducible Cost:** $\varepsilon_0=\ln2$ nats (from SPAP cycle, Theorem 31).
 
 ### V.2.2 Derived Spectral Parameters for the PCE-Attractor
 

@@ -66,7 +66,7 @@
 
 *   **Hadamard-PCE State Gate:** (Appendix K.10.4a–K.10.4c) Regular AQFT admissibility condition requiring the Hadamard-subtracted two-point distribution to have finite UV PCE gate cost. It is the state-selection condition that makes renormalized stress-energy and local horizon thermodynamics finite on the continuum branch.
 
-*   **CPTP (Completely Positive Trace-Preserving):** (Appendix E, Appendix G) A quantum channel $\mathcal{E}$ is CPTP if it maps density operators to density operators, preserves trace ($\mathrm{tr}(\mathcal{E}(\rho)) = \mathrm{tr}(\rho)$), and remains positive when extended to any ancilla system. The 'Evolve' channel is CPTP by construction, with strict contractivity ($f_{RID} < 1$) guaranteed by irreversibility ($\varepsilon > 0$).
+*   **CPTP (Completely Positive Trace-Preserving):** (Appendix E, Appendix G) A quantum channel $\mathcal{E}$ is CPTP if it maps density operators to density operators, preserves trace ($\mathrm{tr}(\mathcal{E}(\rho)) = \mathrm{tr}(\rho)$), and remains positive when extended to any ancilla system. The 'Evolve' channel is CPTP by construction, with strict contractivity ($f_{RID} < 1$) guaranteed by the structural irreversibility quantum $\varepsilon_0=\ln2$ and physical implementation bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$.
 
 *   **CTB Model (Context-Targeted Bias):** (Definition 34, Equation 58–59) Example model for CC influence where probability shifts towards a context-defined target distribution: $P_{obs}(i) = (1-\text{CC}) P_{Born}(i) + \text{CC} p_{target}(i)$. In the self-directed case, the same form is applied to an internal physiological event channel of the aggregate, with the neutral channel distribution replacing the external Born baseline and with the shift bounded by $\gamma_a(c)\mathrm{CC}(S)$.
 
@@ -84,13 +84,15 @@
 
 *   **Einstein Causality (Microcausality):** (Appendix F, Corollary F.1) Standard QFT principle stating that operators associated with space-like separated regions commute: $[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}$ if $\mathcal{O}_1$ is space-like to $\mathcal{O}_2$. In the PU manuscript this appears conditionally: it follows from Appendix F once the continuum-bridge hypotheses of Theorem F.0 are satisfied.
 
-*   **'Evolve' Process:** (Definition 27, Appendix M) The stochastic interaction and update phase of the MPU cycle, implementing ND-RID. Involves probabilistic amplitude actualization (Born rule) and a stochastic perspective shift. Fundamentally irreversible ($\varepsilon \ge \ln 2$).
+*   **'Evolve' Process:** (Definition 27, Appendix M) The stochastic interaction and update phase of the MPU cycle, implementing ND-RID. Involves probabilistic amplitude actualization (Born rule) and a stochastic perspective shift. Fundamentally irreversible through the structural entropy quantum $\varepsilon_0=\ln2$, with physical implementation cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$.
 
-*   **$\varepsilon$ (Epsilon):** (Definition 28, Theorem 31, Appendix J) The fundamental, minimal dimensionless entropy production ($\Delta S_{min}/k_B$, in nats) associated with the necessary logical state merging inherent in the physical execution of the SPAP update cycle during 'Evolve'. Bounded below: $\varepsilon \ge \ln 2$ (Theorem J.1).
+*   **$\varepsilon_0$ (Structural State Change Cost):** (Definition 28, Theorem 31, Appendix J) The exact irreducible structural dimensionless entropy cost of the SPAP cycle's binary logical quotient, $\varepsilon_0=\ln2$.
+*   **$\varepsilon_{\mathrm{phys}}$ (Physical State Change Cost):** (Definition 28, Theorem 31, Appendix J) The total physical entropy production per irreversible 'Evolve' step in a concrete implementation, $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$, where $\varepsilon_{\mathrm{diss}}\ge0$ is dissipative overhead.
+*   **$\varepsilon_{\mathrm{diss}}$ (Dissipative Overhead):** Implementation-dependent excess dissipation above the structural floor; affects heat and power accounting but not the discrete structural chain unless it changes a finite protocol-response presheaf.
 
 *   **$E_8$ Root System:** (Appendix R, Section R.2) The exceptional root system in 8 dimensions consisting of 240 vectors of squared length 2; the associated $E_8$ lattice achieves the optimal sphere packing density in 8D (Viazovska 2017). Provides the information-optimal coordinatization of the MPU's internal 8-dimensional real subspace with kissing number 240, maximal symmetry, and self-duality. Squared distances between distinct roots are restricted to $d^2 \in \{2, 4, 6, 8\}$, constraining the discrete values of the Mass Hierarchy Invariant $\mathcal{R}$.
 
-*   **$f_{RID}$:** (Lemma E.1) The maximal contractivity factor ($0 \le f_{RID} < 1$) of the average 'Evolve' channel $\mathcal{E}_N$ with respect to trace distance. Strict inequality $f_{RID}<1$ is guaranteed by irreversibility ($\varepsilon \ge \ln 2$).
+*   **$f_{RID}$:** (Lemma E.1) The maximal contractivity factor ($0 \le f_{RID} < 1$) of the average 'Evolve' channel $\mathcal{E}_N$ with respect to trace distance. Strict inequality $f_{RID}<1$ is guaranteed by the structural irreversibility quantum $\varepsilon_0=\ln2$ and the associated refresh/reset component.
 
 *   **Fundamental Predictive Loop:** (Definition 4) The core operational cycle of MPU dynamics: Internal Prediction ($P_{int}$), Verification ($V$ via 'Evolve'), and Update/Cycle ($D_{cyc}$).
 
@@ -117,7 +119,7 @@
 
 *   **Hypothesis 1 (MPU Reality Model):** (Section 7.1) Postulates that physical reality is fundamentally constituted by a network of interacting MPUs governed by POP/PCE and Dual Dynamics.
 
-*   **Hypothesis 2 (Origin of Quantum Randomness):** (Section 7.3.4) Proposes that the stochasticity of the 'Evolve' process originates from the fundamental Logical Indeterminacy inherent in SPAP/RID limits acting on MPUs (possessing $K_0$ complexity).
+*   **Theorem 28a (Origin of Quantum Randomness):** (Section 7.3.4) Derives that the stochasticity of the 'Evolve' process originates from Logical Indeterminacy through non-simplex state-space closure, PCE/PPI quotient non-contextuality, and Born-rule descent on the MPU Hilbert branch.
 
 *   **Hypothesis 3 (CC Influence Mechanism):** (Section 9.4.1) Proposes that Consciousness Complexity (CC) influences quantum outcomes by modulating the parameters of the 'Evolve'/ND-RID process via context-dependent physical fields. The electromagnetic channel dominates ($\mathcal{R} \sim 10^{36}$, Proposition L.5) with both EM and gravitational channels unified through temporal wave modulation (Theorem L.8). Gravitational self-limitation (Appendix S) bounds achievable CC.
 
@@ -133,7 +135,7 @@
 
 *   **Predictive Resonance Spectrum:** (Appendix X.9.6d) The pole spectrum of the active ND-RID/PCE transfer resolvent $(z-\mathcal L_{\mathrm{PCE}})^{-1}$. It organizes stationary KMS states, decay of connected correlations, mixing gaps, protected Hodge ledger modes, transport poles, finite OTOC linearizations, and memory lifetimes.
 
-*   **Landauer Pointer:** (Appendix Z, Theorem Z.1, Section Z.2.3) The minimal physical subsystem instantiating the irreducible cost $\varepsilon = \ln 2$ of the SPAP cycle. Dimension determined by admissibility ($\ln a \ge \varepsilon$) together with PPI-optimality: $a = 2$. Represents the two-level active kernel within the $d_0 = 8$ MPU Hilbert space where baseline predictive activity concentrates.
+*   **Landauer Pointer:** (Appendix Z, Theorem Z.1, Section Z.2.3) The minimal physical subsystem instantiating the structural cost $\varepsilon_0 = \ln 2$ of the SPAP cycle. Dimension determined by admissibility ($\ln a \ge \varepsilon_0$) together with PPI-optimality: $a = 2$. Represents the two-level active kernel within the $d_0 = 8$ MPU Hilbert space where baseline predictive activity concentrates.
 
 *   **Leech Lattice ($\Lambda_{24}$):** (Appendix R, Section R.4.2) Achieves the optimal sphere packing density in 24 dimensions (Cohn et al. 2017), with kissing number 196,560 and minimum norm 4 (rootless). Contains the sublattice $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ with index $2^{12}$, providing a geometric three-fold structure compatible with the generation analysis of Appendix R. Its dimension 24 coincides with the interface mode count $M = 24$ (Theorem Z.5).
 
@@ -146,7 +148,7 @@
 
 *   **$\kappa_C$ (Reduced Curvature):** (Corollary D.5b.1) The second derivative of the reduced effective potential at the PCE optimum, $\kappa_C := V''_{eff}(C^\star) = -\Psi'(C^\star)$. It is positive under DSC and measures the local stiffness of the complexity optimum.
 
-*   **$\kappa_r$:** (Theorem 33) The positive constant ($\kappa_r > 0$) appearing in the Reflexivity Constraint, quantifying the fundamental trade-off between information gain $\Delta I$ and minimum state disturbance $\Delta S_{min}/k_B$. Arises from $\varepsilon \ge \ln 2$.
+*   **$\kappa_r$:** (Theorem 33) The positive constant ($\kappa_r > 0$) appearing in the Reflexivity Constraint, quantifying the fundamental trade-off between information gain $\Delta I$ and minimum state disturbance $\Delta S_{min}/k_B$. Arises from $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$.
 
 *   **Law of Prediction:** (Theorem 19, Equation 22) The functional relationship between invested complexity $C$, target complexity $\hat{C}_{target}$, and achievable Predictive Performance $PP$ within the viable range $(\alpha, \beta)$: $PP(C, \hat{C}_{target}) = \beta - (\beta-\alpha) \exp[-\kappa_{\mathrm{eff}} (C-C_{op})/\hat{C}_{target}]$.
 
@@ -212,7 +214,7 @@ $$
 p_{ad}=(\Upsilon_G-1)p_{nv}-\frac{\dot\Upsilon_G}{3H}\rho_{nv}.
 $$
 
-*   **Logical Indeterminacy:** (Definition 12) The fundamental, in-principle unpredictability arising directly from the logical structure of self-reference (SPAP) and reflexive interaction (RID/RU) in systems possessing sufficient computational richness (Property R). Hypothesized source of quantum randomness (Hypothesis 2).
+*   **Logical Indeterminacy:** (Definition 12) The fundamental, in-principle unpredictability arising directly from the logical structure of self-reference (SPAP) and reflexive interaction (RID/RU) in systems possessing sufficient computational richness (Property R). Theorem 28a derives quantum randomness as its Born-rule descent on the MPU Hilbert branch.
 
 *   **Mass Hierarchy Invariant ($\mathcal{R}$):** (Appendix R, Definition R.5.1) The parameter-free ratio $\mathcal{R} := \ln(m_3/m_1)/\ln(m_3/m_2) = d^2_{31}/d^2_{32}$ relating fermion mass ratios to $E_8$ root distances in path-additive Dirac-type sectors. Independent of width parameter $\xi$, Hessian constants $\alpha_1, \alpha_2$, and overall normalization. Restricted to discrete values $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ by $E_8$ geometry. Charged lepton sector shows $\mathcal{R}_\ell^{\rm obs} \approx 2.889$, consistent with $\mathcal{R} = 3$ to 3.8%. In the Majorana neutrino sector, the invariant is read in the anchored form $\mathcal R_\nu=\Delta_1/\Delta_2=3$ (Theorem T.24.11), not as a fully pairwise three-edge law.
 
@@ -220,7 +222,7 @@ $$
 
 *   **MPU (Minimal Predictive Unit):** (Definition 23) The hypothesized fundamental constituent of reality, defined as a system possessing Predictive Physical Complexity exactly equal to the Operational Threshold $C_{op}$. Operates the adaptive Fundamental Predictive Loop under Dual Dynamics.
 
-*   **ND-RID (Non-Deterministic Reflexive Interaction Dynamics):** (Definition 6) The formalism describing the probabilistic, irreversible 'Evolve' interaction process, where state transitions depend reflexively on stochastic outcomes. Characterized by $\varepsilon \ge \ln 2$ and $f_{RID} < 1$.
+*   **ND-RID (Non-Deterministic Reflexive Interaction Dynamics):** (Definition 6) The formalism describing the probabilistic, irreversible 'Evolve' interaction process, where state transitions depend reflexively on stochastic outcomes. Characterized by $\varepsilon_0=\ln2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$, and $f_{RID} < 1$.
 
 *   **Operational Alphabet Capacity:** (Appendix Z, Definition Z.4, Theorem Z.6) The maximum information $\ln d_0$ that can be reliably encoded and retrieved in a single MPU cycle when rank-raising instruments are available. Capacity saturation at the PCE-Attractor ($\mathcal{I}(u^*) = \ln d_0$) determines the bare coupling $u^* = d_0^{1/M} - 1 = 2^{1/8} - 1$.
 
@@ -287,7 +289,10 @@ is the loop-closure obstruction for predictive-frame transport.
 
 *   **PCE Anomaly Matching:** (Appendix X.8d.5–X.8d.8) RG/PCE-flow constraint for retained global response symmetries: their anomaly class must be preserved under compression, after including Goldstone, topological, boundary, interface, and defect sectors. It is distinct from anomaly cancellation for redundancies.
 
-*   **Landauer-Noether Closure Principle:** (Appendix Q, Theorem Q.0.7d2; Corollary Q.0.7d3) On the Landauer-saturating branch, the dense subgroup $G_L=\{e^{iN\ln2}:N\in\mathbb Z\}\subset U(1)$ upgrades discrete SPAP/Landauer phase invariance of continuous finite-resolution response functionals to full effective $U(1)$ invariance and the corresponding Noether current.
+*   **Landauer-Noether Closure Principle:** (Appendix Q, Theorem Q.0.7d2; Corollary Q.0.7d3) The structural SPAP quantum $\varepsilon_0=\ln2$ generates the dense subgroup $G_L=\{e^{iN\ln2}:N\in\mathbb Z\}\subset U(1)$, upgrading discrete SPAP/Landauer phase invariance of continuous finite-resolution response functionals to full effective $U(1)$ invariance and the corresponding Noether current.
+*   **Master Branch-Exclusion Ledger:** (Appendix P, Convention P.14.1h) Single dependency table recording, for every major PU output, its claimed value, local status, principal alternatives, exclusion or quotient mechanism, response-null or PCE-dominated surplus, and residual open status. Makes theorem-level, branch-level, certificate-level, model-level, and open-bridge claims visible in one ledger, with the alternative-by-alternative exclusion mechanism cited by theorem.
+*   **Residual-Status Ledger:** (Appendix P, Convention P.14.1i) Companion table to the master branch-exclusion ledger, listing the items whose outputs can vary while preserving the prior theorem stack. Records each residual gate's correct status (axiom, postulate, hypothesis, identification, assumption, branch data, or open bridge condition) and the reason it cannot be promoted to theorem status by prose alone.
+*   **Identifier and Notation Collision Discipline:** (Appendix P, Convention P.14.1j) Constraint that any relabeling, theorem promotion, or notation split must preserve unique identifiers within each local numbering family and route every occurrence of a split symbol to its structural, physical, branch, model, or validation meaning. Required so that citations determine unique nodes in the proof graph and formulas determine which quantity is being summed.
 
 *   **Chronometric Curvature-Dephasing Principle:** (Section 11.7.2, Theorem 47c; Appendix S, Theorem S.7.3a) Internal energy splittings act as clocks for proper-time mismatch. The coherent phase-rate invariant is $\mathcal D_{ij}^{\phi}=\hbar|\dot\Theta_{ij}|/|\Delta E_{ij}|=|\Delta\Phi|/c^2$. On the saturated chronometric ND-RID dephasing branch, $\mathcal D_{ij}^{\Gamma}=\hbar\Gamma_{\mathrm{ch}}^{(ij)}/|\Delta E_{ij}|=|\Delta\Phi|/c^2$.
 
@@ -341,7 +346,7 @@ $$
 
 *   **Postulate 3 (Statistical FTL Influence):** (Section 10.3.1) Hypothesis asserting that the CC mechanism acting on entangled systems allows for statistical influence across space-like separations, including a distinct nonlocal/state-mediated branch on which Bob's marginal may shift under late randomization. Compatibility with Postulate 2 is claimed through the endpoint bound (Theorem 39), finite-window zero-error gate on the regular branch (Theorem 39a, Definition 10.2a), and ND-RID information limits.
 
-*   **Postulate 4 (Local Thermodynamic Equilibrium):** (Section 12.1.2) Assumption that MPU networks admit states treatable as being in LTE near local causal horizons, enabling the thermodynamic derivation of gravity. In Section 12, the local-horizon version used in the Jacobson-type derivation is sharpened, under the Appendix F/G bridge, by Theorem 48a.
+*   **Theorem 48a.0 (Local Thermodynamic Equilibrium at Causal Horizons):** (Section 12.1.2) Derives local thermodynamic equilibrium for MPU networks near local causal horizons on the Appendix F/G operational-continuum branch. Theorem 48a sharpens this input by deriving the local Rindler KMS condition and first-order Clausius relation.
 
 *   **Proposition 4 (MPU Hilbert Space):** (Section 7.2) The MPU state is represented in a complex Hilbert space $\mathcal{H}_0$ of dimension $d_0 \ge 8$.
 
@@ -384,7 +389,7 @@ on the verification/update resources required to approach that limit (Theorem 14
 
 *   **RU (Reflexive Undecidability):** (**Theorem 12, Theorems A.2.3, A.2.4**) Fundamental limitation on the ability of an interacting algorithm to reliably decide certain properties of systems governed by RID, due to the interaction perturbing the system state.
 
-*   **Reflexivity Constraint:** (Theorem 33, Equation 48) Fundamental trade-off $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$ between relevant information gain $\Delta I$ in an 'Evolve' interaction and the minimum necessary dimensionless state disturbance (entropy production) $\Delta S_{min}/k_B$. Arises from $\varepsilon \ge \ln 2$.
+*   **Reflexivity Constraint:** (Theorem 33, Equation 48) Fundamental trade-off $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$ between relevant information gain $\Delta I$ in an 'Evolve' interaction and the minimum necessary dimensionless state disturbance (entropy production) $\Delta S_{min}/k_B$. Arises from $\varepsilon_0=\ln2$ and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$.
 
 *   **Regularity:** (Definition C.3) Geometric Regularity of the MPU network, encompassing uniform volume growth and bounded curvature. Necessary condition for viability (Theorem 43).
 
@@ -424,7 +429,7 @@ on the verification/update resources required to approach that limit (Theorem 14
 
 *   **LSM-PCE Ingappability Gate:** (Appendix Z.8d.2–Z.8d.4) Regular crystallographic branch audit: nontrivial unit-cell projective or fractional symmetry data forbid an IR phase that is simultaneously symmetric, short-range-entangled, nondegenerate, fully gapped, and uncompensated.
 
-*   **Measurement:** (Definition 30, Theorem 31) The process of actualizing quantum possibilities through MPU dynamics. Requires minimum entropy production $\varepsilon \geq \ln 2$ per measurement cycle.
+*   **Measurement:** (Definition 30, Theorem 31) The process of actualizing quantum possibilities through MPU dynamics. Requires the structural entropy quantum $\varepsilon_0=\ln2$ and physical implementation cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ per measurement cycle.
 
 *   **Predictive Island:** (Appendix K.3b–K.3d) A disconnected interior or horizon-adjacent Markov-blanket component admitted into exterior radiation reconstruction when the reduction in predictive entropy exceeds its boundary channel-capacity cost. It is a finite channel-capacity object; geometric area appears only in the regular thermodynamic representation.
 
@@ -444,7 +449,7 @@ on the verification/update resources required to approach that limit (Theorem 14
 
 *   **Theorem 29 (Physical Interpretation of Internal Hamiltonian):** (Section 7.3.3) The expectation $\langle\hat{H}\rangle$ gives the baseline operational energy associated with sustaining the predictive cycle, and the spectral structure of $\hat{H}$ determines a characteristic minimal processing timescale $\tau_{min}>0$.
 
-*   **Theorem 31 (Irreversibility Cost):** (Section 7.3.4, Appendix J) The physical instantiation of the SPAP update cycle necessarily incurs entropy production $\varepsilon \ge \ln 2$ per cycle, derived from Landauer's principle applied to the logically irreversible 2-to-1 state merge in SPAP.
+*   **Theorem 31 (Structural Landauer Floor and Physical Overhead):** (Section 7.4.4, Appendix J) The irreversible SPAP component of the 'Evolve' interaction step has exact structural entropy cost $\varepsilon_0=\ln2$, derived from the binary SPAP quotient plus Landauer mapping. Every physical implementation has total cost $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$, where $\varepsilon_{\mathrm{diss}}\ge0$ is contingent dissipative overhead. The discrete structural backbone uses $\varepsilon_0$.
 
 *   **Parameter Role Classes:** (Appendix P.14.1a) Paper-wide labels for what a quantity does inside a derivation or comparison: ExactThreshold, DiscreteMultiplicity, ThresholdData, BridgeNormalization, SchemeScale, CoarseGrainingScale, ReferenceConvention, PhenomenologicalKernel, and EmpiricalInput. These are not theorem statuses; they prevent exact thresholds, bridge normalizations, fit kernels, and observational inputs from being treated as the same kind of object.
 

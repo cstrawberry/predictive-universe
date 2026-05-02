@@ -11,7 +11,7 @@ $$
 
 where each term is a rate (power):
 *   **$V_{op}$**: The cost of maintaining and operating the MPU's internal complexity $C_i$, given by the PU cost functions $R(C_i)$ and $R_I(C_i)$ [Def. 3].
-*   **$V_{prop}$**: The cost of maintaining coherent predictive links with neighbors, penalizing both information loss (decoherence) and the fundamental thermodynamic cost ($\varepsilon \ge \ln 2$) of interaction [Appx. C, D].
+*   **$V_{prop}$**: The cost of maintaining coherent predictive links with neighbors, penalizing both information loss (decoherence) and the structural thermodynamic cost $\varepsilon_0=\ln2$, with physical implementation cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$, of interaction [Appx. C, D].
 *   **$V_{benefit}$**: The reward for predictive accuracy, proportional to the MPU's success in predicting the states of its neighbors, derived from its Predictive Performance $PP$ [Def. 7, D.1].
 
 The master equation of the PU framework is the stochastic differential equation describing the evolution of the network configuration $x$ as a gradient flow on this potential: $dx(t) = -\eta(x) \nabla V(x) dt + \sqrt{2D(x)} dW(t)$ [**Appendix D**, Equation D.8]. The principles explored in this section represent physical constraints that must be incorporated into the cost terms of the PCE potential $V$, thereby shaping the emergent dynamics of the system as it seeks to minimize this potential.
@@ -54,7 +54,7 @@ This Unruh radiation acts as a source of noise, fundamentally degrading the MPU'
 
 A distinct but analogous set of thermodynamic constraints arises from the act of rapidly increasing a stationary MPU's predictive processing intensity. This "predictive acceleration"—be it a rapid increase in its operational Predictive Physical Complexity ($dC_P/dt > 0$) or a surge in its rate of predictive operations ($d\mathcal{N}_{ops}/dt > 0$)—has intrinsic thermal consequences.
 
-The PU framework establishes that information processing, particularly the irreversible logical steps inherent in the SPAP cycle, incurs a minimal thermodynamic cost (Theorem 31: $\varepsilon \ge \ln 2$). An MPU "accelerating" its predictive capabilities performs more such operations per unit time, leading to an increased rate of internal heat generation, $dQ_{internal}/dt$.
+The PU framework establishes that information processing, particularly the irreversible logical steps inherent in the SPAP cycle, incurs an exact structural cost and a physical lower bound (Theorem 31: $\varepsilon_0=\ln2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$). An MPU "accelerating" its predictive capabilities performs more such operations per unit time, leading to an increased rate of internal heat generation, $dQ_{internal}/dt$.
 
 If this self-generated heat is not dissipated instantaneously to an external environment (i.e., finite thermal conductivity), the MPU's internal effective temperature, $T_{internal_eff}$, will rise above the ambient temperature. This internally generated thermal environment acts as a source of noise, directly impacting the MPU's own predictive machinery. Consistent with the temperature dependence of the physical cost function $R(C, T_{eff})$ (Section N.3.1), an increase in $T_{internal_eff}$ raises the marginal cost $\partial R / \partial C$. Consequently, to maintain a target predictive performance $PP_{op}$ or to achieve further increases in $C_P$ in the face of this self-induced noise, the MPU must allocate additional complexity, $C_{noise,internal}$. This represents another component of the total required complexity, $C_{req}$.
 
@@ -241,7 +241,7 @@ The process is as follows:
 
 * A system undergoes what we perceive as physical acceleration. Fundamentally, this is a rapid and forced updating of its relational state within the MPU network.
 
-* This process involves a high rate of internal predictive operations and 'Evolve' events, each carrying an irreducible thermodynamic cost ($\varepsilon \geq \ln 2$, Theorem 31).
+* This process involves a high rate of internal predictive operations and 'Evolve' events, each carrying an irreducible thermodynamic cost ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31).
 
 * This intense predictive activity generates a significant amount of "processing heat" or "computational friction" within the system's local information-processing environment.
 
@@ -584,14 +584,14 @@ Just as Einstein's equation reveals mass-energy equivalence through $c^2$, Equat
 The fundamental constant governing the coupling between motion and self-knowledge is:
 
 $$
-\boxed{\lambda_{PM} \equiv \frac{\hbar \varepsilon}{2\pi c} = \frac{\hbar \ln 2}{2\pi c} \approx 3.88 \times 10^{-44} \text{ kg·m}}
+\boxed{\lambda_{PM} \equiv \frac{\hbar \varepsilon_0}{2\pi c} = \frac{\hbar \ln 2}{2\pi c} \approx 3.88 \times 10^{-44} \text{ kg·m}}
 \tag{N.15}
 $$
 
 This single constant encodes the bridge between:
 
 - **Quantum mechanics** ($\hbar$): the fundamental action scale
-- **Information theory** ($\varepsilon = \ln 2$): the irreducible cost of self-reference
+- **Information theory** ($\varepsilon_0 = \ln 2$): the irreducible structural cost of self-reference
 - **Relativity** ($c$): the invariant speed limiting both motion and signal propagation
 
 In terms of $\lambda_{PM}$, the predictive energy cost simplifies to:
@@ -628,7 +628,7 @@ $$
 **Definition N.5 (Epistemic Speed $c_\varepsilon$).**
 The epistemic speed $c_\varepsilon$ is defined operationally as the constant appearing in the denominator of the predictive energy cost:
 
-$$c_\varepsilon \equiv \frac{\hbar \varepsilon \cdot a \cdot C}{2\pi E_{\text{pred}}}$$
+$$c_\varepsilon \equiv \frac{\hbar \varepsilon_0 \cdot a \cdot C}{2\pi E_{\text{pred}}}$$
 
 By Theorem N.3, this equals the speed of light $c$ for any acceleration-complexity-energy triple satisfying the UCT bound.
 
@@ -715,7 +715,7 @@ where $\delta = \alpha_{SPAP} - PP$ is the gap to the Prediction Coherence Bound
 
 The same constant $c$ that forbids superluminal motion also couples motion to the cost of self-knowledge. This is the core insight of Prediction Relativity: **the invariant speed $c$ does not impose limits on prediction—rather, the fundamental limits of self-referential prediction, operating through thermodynamic optimization in networks of MPUs, give rise to an emergent geometry whose causal structure is characterized by the invariant $c$.**
 
-The kinematic barrier $v < c$ is not an independent physical law but a downstream consequence of the deeper predictive constraints. What appears in the emergent description as "the speed of light limiting motion" is, at the foundational level, the geometric manifestation of SPAP limits and the irreducible cost $\varepsilon \geq \ln 2$ propagating through the PCE optimization dynamics. The UCT makes this unity explicit: the Unruh mechanism couples acceleration to predictive degradation precisely because both "motion" and "prediction" are aspects of the same underlying MPU dynamics from which spacetime itself emerges (Sections 11, 12; Appendix F).
+The kinematic barrier $v < c$ is not an independent physical law but a downstream consequence of the deeper predictive constraints. What appears in the emergent description as "the speed of light limiting motion" is, at the foundational level, the geometric manifestation of SPAP limits and the irreducible cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ propagating through the PCE optimization dynamics. The UCT makes this unity explicit: the Unruh mechanism couples acceleration to predictive degradation precisely because both "motion" and "prediction" are aspects of the same underlying MPU dynamics from which spacetime itself emerges (Sections 11, 12; Appendix F).
 
 The prediction-motion coupling constant $\lambda_{PM}$ quantifies this unity. Its smallness ($\sim 10^{-44}$ kg·m) explains why the cognitive costs of ordinary accelerations are negligible in the emergent regime, while its non-zero value ensures that the unification is physical rather than merely formal. In extreme environments—near black holes, in the early universe, or at the fundamental scales where MPU dynamics dominate—this coupling becomes the essential constraint governing the joint optimization of motion and prediction, revealing the predictive substructure beneath the emergent spacetime description.
 
@@ -793,23 +793,23 @@ $$
 
 **Step 3 (Detailed balance and steady-state exchange).** By Theorem G.1.9.3, PCE optimization drives ND-RID channels toward quantum detailed balance: $\sigma_{irr} \to 0$. In the open-system thermodynamics framework [Spohn 1978], quantum detailed balance is a sufficient condition for a stationary equilibrium state (no net currents), even though microscopic transitions continue to occur. The equilibrium is therefore dynamical rather than static: transitions occur continuously, with net zero flow.
 
-The key insight is that maintaining correlations between system and environment requires ongoing information exchange. Consider a boundary channel connecting system $S$ to environment $E$. The mutual information $I(S:E)$ characterizes shared correlations. In the presence of any noise or decoherence—which is unavoidable given $\varepsilon \ge \ln 2$ (Theorem 31)—these correlations would decay unless actively maintained [Zurek 2003]. The steady-state condition requires that correlation-building processes balance correlation-degrading processes, necessitating continuous exchange at the channel rate.
+The key insight is that maintaining correlations between system and environment requires ongoing information exchange. Consider a boundary channel connecting system $S$ to environment $E$. The mutual information $I(S:E)$ characterizes shared correlations. In the presence of any noise or decoherence—which is unavoidable given $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31)—these correlations would decay unless actively maintained [Zurek 2003]. The steady-state condition requires that correlation-building processes balance correlation-degrading processes, necessitating continuous exchange at the channel rate.
 
-**Step 4 (Channel exchange rate).** Each of the $N_{\partial}$ boundary channels participates in this exchange at rate $\nu = 1/\tau_{min}$, where $\tau_{min} = \sqrt{8\varepsilon} \cdot t_P$ is the minimum temporal discretization derived from PCE optimization (Theorem Q.6.1). This identification of the discretization timescale with the physical exchange rate follows from the ND-RID channel structure: each channel implements one SPAP cycle (Definition 27) per minimum temporal interval, as the SPAP cycle cannot complete faster than the fundamental discretization allows. The minimum time to execute the Predict $\to$ Verify $\to$ Update loop is precisely $\tau_{min}$, making this both the discretization scale and the channel processing rate. The KMS condition with $\beta = 1$ characterizes the equilibrium state with respect to the modular flow, confirming that this rate achieves detailed balance. ∎
+**Step 4 (Channel exchange rate).** Each of the $N_{\partial}$ boundary channels participates in this exchange at rate $\nu = 1/\tau_{min}$, where $\tau_{min} = \sqrt{8\varepsilon_0} \cdot t_P=\sqrt{8\ln2}\cdot t_P$ is the structural minimum temporal discretization derived from PCE optimization (Theorem Q.6.1). This identification of the discretization timescale with the physical exchange rate follows from the ND-RID channel structure: each channel implements one SPAP cycle (Definition 27) per minimum temporal interval, as the SPAP cycle cannot complete faster than the fundamental discretization allows. The minimum time to execute the Predict $\to$ Verify $\to$ Update loop is precisely $\tau_{min}$, making this both the discretization scale and the channel processing rate. Physical overhead $\varepsilon_{\mathrm{diss}}$ may increase heat production but does not shorten the structural minimum cycle time. The KMS condition with $\beta = 1$ characterizes the equilibrium state with respect to the modular flow, confirming that this rate achieves detailed balance. ∎
 
 **Remark N.4.1: Open vs. Closed Systems.** The continuous processing in Theorem N.4 does not violate the second law of thermodynamics. The system $S$ is explicitly an open system exchanging entropy with its environment $E$. The combined system $S \cup E$ may be closed, but $S$ alone is not. The entropy flow from $S$ to $E$ (and vice versa) maintains the steady state while the total entropy of the closed universe increases monotonically (Appendix O, Theorem O.3).
 
 **Corollary N.4.1 (Entropy Flow Rate on the saturated-boundary branch).** On the saturated-boundary branch of Proposition N.4, maintaining relational information $\mathcal{I}_{rel}$ requires entropy flow to the environment at rate:
 
 $$
-\frac{d\mathcal{S}}{d\tau} = \frac{\varepsilon \cdot N_{\partial}}{\tau_{min}} = \frac{\varepsilon \cdot \mathcal{I}_{rel}}{C_{\max} \cdot \tau_{min}}
+\frac{d\mathcal{S}}{d\tau} = \frac{\varepsilon_0 \cdot N_{\partial}}{\tau_{min}} = \frac{\varepsilon_0 \cdot \mathcal{I}_{rel}}{C_{\max} \cdot \tau_{min}}
 \tag{N.24}
 $$
 
-*Proof.* Each of $N_{\partial}$ channels exchanges information at rate $1/\tau_{min}$. Each exchange cycle involves an irreducible entropy cost of $\varepsilon$ nats (Theorem 31), which flows to the environment. On the saturated-boundary branch of Proposition N.4, $N_{\partial} = \mathcal{I}_{rel}/C_{\max}$. Substituting:
+*Proof.* Each of $N_{\partial}$ channels exchanges information at rate $1/\tau_{min}$. Each exchange cycle involves an irreducible structural entropy cost of $\varepsilon_0$ nats (Theorem 31), with any physical overhead adding nonnegative heat beyond the structural minimum. On the saturated-boundary branch of Proposition N.4, $N_{\partial} = \mathcal{I}_{rel}/C_{\max}$. Substituting:
 
 $$
-\frac{d\mathcal{S}}{d\tau} = N_{\partial} \times \frac{\varepsilon}{\tau_{min}} = \frac{\mathcal{I}_{rel}}{C_{\max}} \times \frac{\varepsilon}{\tau_{min}}.
+\frac{d\mathcal{S}}{d\tau} = N_{\partial} \times \frac{\varepsilon_0}{\tau_{min}} = \frac{\mathcal{I}_{rel}}{C_{\max}} \times \frac{\varepsilon_0}{\tau_{min}}.
 $$
 
 At the PCE-optimal operating point for the PU substrate, Equation E.15 gives $C_{\max}=2\ln 2$. So on the saturated-boundary branch:
@@ -827,15 +827,15 @@ On a partial-utilization branch with utilization factor $q < 1$, the rate become
 **Theorem N.5 (Mass-Information Equivalence on the saturated-boundary branch).** On the saturated-boundary branch of Proposition N.4, a system with relational information content $\mathcal{I}_{rel}$ has inertial mass:
 
 $$
-\boxed{m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P = \frac{\mathcal{I}_{rel}}{2} \cdot \frac{L_P}{\delta} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{rel} \cdot m_P}
+\boxed{m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P = \frac{\mathcal{I}_{rel}}{2} \cdot \frac{L_P}{\delta} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{rel} \cdot m_P}
 \tag{N.26}
 $$
 
-where $\varepsilon$ is evaluated at its minimum $\varepsilon=\ln 2$ (Theorem 31), $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \, L_P$ is the spatial discretization scale (Appendix Q, Equation Q.18), and $m_P = \sqrt{\hbar c/G}$ is the Planck mass. On a partial-utilization branch with utilization factor $q < 1$, the absolute mass-information coefficient rescales to $m/q$; dimensionless mass ratios are independent of $q$ under universal calibration.
+where $\varepsilon$ is evaluated at its minimum $\varepsilon_0=\ln2$ (Theorem 31), $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \, L_P$ is the spatial discretization scale (Appendix Q, Equation Q.18), and $m_P = \sqrt{\hbar c/G}$ is the Planck mass. On a partial-utilization branch with utilization factor $q < 1$, the absolute mass-information coefficient rescales to $m/q$; dimensionless mass ratios are independent of $q$ under universal calibration.
 
 
 
-**Remark N.5.1 (Branch Dependence and Interaction with Leech Norm-Information Calibration).** The absolute mass-information coefficient $m = \mathcal{I}_{rel}/(2\sqrt{8\varepsilon}) \cdot m_P$ depends on the saturated-boundary branch $q = 1$ introduced in Proposition N.4. Downstream, Definition Z.8f (Appendix Z) identifies Leech lattice excitations with relational information content via the canonical norm-information calibration $\mathcal{I}_{rel}(v) = \gamma \cdot |v|$ with canonical branch value $\gamma = 1$. The two branch parameters are logically distinct: $q$ governs whether boundary channels exactly saturate, while $\gamma$ governs the norm-to-information calibration on the Leech lattice. Absolute mass predictions — including the mass gap $\Delta_{\mathrm{gap}} = 2\mu_0$ (Corollary Z.8g.1), the fundamental mass scale $\mu_0 \approx 0.212 \, m_P$ (Definition Z.8f), and the glueball mass scale relative to $m_P$ (Theorem Z.8h) — scale as $\gamma/q$ under joint branch deformation. Dimensionless mass ratios are independent of both $q$ and $\gamma$ under universal calibration. Branch-independent absolute-mass predictions require both the saturated-boundary lemma ($q = 1$) and the Leech norm-information derivation ($\gamma = 1$).
+**Remark N.5.1 (Branch Dependence and Interaction with Leech Norm-Information Calibration).** The absolute mass-information coefficient $m = \mathcal{I}_{rel}/(2\sqrt{8\varepsilon_0}) \cdot m_P$ depends on the saturated-boundary branch $q = 1$ introduced in Proposition N.4. Downstream, Definition Z.8f (Appendix Z) identifies Leech lattice excitations with relational information content via the canonical norm-information calibration $\mathcal{I}_{rel}(v) = \gamma \cdot |v|$ with canonical branch value $\gamma = 1$. The two branch parameters are logically distinct: $q$ governs whether boundary channels exactly saturate, while $\gamma$ governs the norm-to-information calibration on the Leech lattice. Absolute mass predictions — including the mass gap $\Delta_{\mathrm{gap}} = 2\mu_0$ (Corollary Z.8g.1), the fundamental mass scale $\mu_0 \approx 0.212 \, m_P$ (Definition Z.8f), and the glueball mass scale relative to $m_P$ (Theorem Z.8h) — scale as $\gamma/q$ under joint branch deformation. Dimensionless mass ratios are independent of both $q$ and $\gamma$ under universal calibration. Branch-independent absolute-mass predictions require both the saturated-boundary lemma ($q = 1$) and the Leech norm-information derivation ($\gamma = 1$).
 
 
 *Proof.*
@@ -881,19 +881,19 @@ $$
 **Step 5 (Substituting discretization scale).** From Theorem Q.6.1:
 
 $$
-\tau_{min} = \sqrt{8\varepsilon} \cdot t_P = \sqrt{8\varepsilon} \cdot \frac{\hbar}{m_P c^2}
+\tau_{min} = \sqrt{8\varepsilon_0} \cdot t_P = \sqrt{8\varepsilon_0} \cdot \frac{\hbar}{m_P c^2}
 $$
 
 Therefore:
 
 $$
-m = \frac{\hbar \cdot \mathcal{I}_{rel}}{2c^2} \times \frac{m_P c^2}{\sqrt{8\varepsilon} \cdot \hbar} = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P
+m = \frac{\hbar \cdot \mathcal{I}_{rel}}{2c^2} \times \frac{m_P c^2}{\sqrt{8\varepsilon_0} \cdot \hbar} = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P
 $$
 
-**Step 6 (Numerical evaluation).** With $\varepsilon = \ln 2$:
+**Step 6 (Numerical evaluation).** With $\varepsilon_0=\ln2$:
 
 $$
-\frac{1}{2\sqrt{8\varepsilon}} = \frac{1}{2\sqrt{8\ln 2}} \approx \frac{1}{4.71} \approx 0.212
+\frac{1}{2\sqrt{8\varepsilon_0}} = \frac{1}{2\sqrt{8\ln 2}} \approx \frac{1}{4.71} \approx 0.212
 $$
 
 Therefore:
@@ -908,7 +908,7 @@ where $\mathcal{I}_{rel}$ is measured in nats and $m_P \approx 2.18 \times 10^{-
 **Corollary N.5.1 (Rest Energy as Information Maintenance).** The rest energy $E = mc^2$ equals the power required to maintain relational information at the fundamental rate:
 
 $$
-E = mc^2 = \frac{\hbar \cdot \mathcal{I}_{rel}}{2\tau_{min}} = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot E_P
+E = mc^2 = \frac{\hbar \cdot \mathcal{I}_{rel}}{2\tau_{min}} = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot E_P
 \tag{N.32}
 $$
 
@@ -968,7 +968,7 @@ The double-pulsar estimate of Corollary N.12.2 constrains instead the orbital-br
 **Step 1 (Inertial mass).** From Theorem N.5:
 
 $$
-m_I = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P
+m_I = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P
 $$
 
 This is the mass appearing in Newton's second law $F = m_I a$, derived from the entropy cost of updating relational information.
@@ -996,7 +996,7 @@ $$
 **Step 4 (Identity for simple systems).** For systems without high internal complexity ($C_{agg} \leq C_{op}$, Definition 30), there is no additional structure beyond the relational information. Both $m_I$ (from action accounting) and $m_G$ (from stress-energy sourcing) derive from the energy required to maintain $\mathcal{I}_{rel}$:
 
 $$
-m_I = m_G = m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P
+m_I = m_G = m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P
 $$
 
 ∎
@@ -1136,7 +1136,7 @@ The equivalence principle asserts that all matter couples to gravity universally
 **Step 1 (Inertial mass from entropy flow).** By Theorem N.5, inertial mass arises from the entropy cost of maintaining relational information:
 
 $$
-m_I = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P
+m_I = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P
 $$
 
 The entropy flow rate (Corollary N.4.1) depends on the channel capacity $C_{\max}$, which is bounded by contractivity (Theorem E.2):
@@ -1186,7 +1186,7 @@ The correspondence operates as follows:
 | Information Theory | Gravity |
 |:-------------------|:--------|
 | CPTP channel $\mathcal{E}_N$ | ND-RID 'Evolve' process (Definition 27) |
-| Contractivity $f_{RID} < 1$ | Irreversibility $\varepsilon \ge \ln 2$ (Theorem 31) |
+| Contractivity $f_{RID} < 1$ | Irreversibility $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) |
 | Universal $f_{RID}$ | Universal gravitational coupling |
 | DPI: $\mathcal{M}(\mathcal{E}(\rho), \mathcal{E}(\sigma)) \leq \mathcal{M}(\rho, \sigma)$ | EP: $m_I = m_G$ for all matter (Theorem N.7) |
 | DPI violation (side channels) | EP violation (new physics) |
@@ -1223,7 +1223,7 @@ where $\mathcal{A}$ is the horizon area and $\sigma_{eff} = 1/(4G)$ in natural u
 The derivation chain is:
 
 $$
-\varepsilon \geq \ln 2 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Theorem E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{universal}} \text{EP + Area Law}
+\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Theorem E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{universal}} \text{EP + Area Law}
 $$
 
 
@@ -1324,14 +1324,14 @@ which depends on $\delta_{\text{maint}}$ as well as the acceleration profile. Tw
 $$
 m_I(S)
 =
-\frac{\mathcal I_{\mathrm{rel}}(S)}{2\sqrt{8\varepsilon}}m_P
+\frac{\mathcal I_{\mathrm{rel}}(S)}{2\sqrt{8\varepsilon_0}}m_P
 +
 \Delta m_I(S),
 $$
 $$
 m_G(S)
 =
-\frac{\mathcal I_{\mathrm{rel}}(S)}{2\sqrt{8\varepsilon}}m_P
+\frac{\mathcal I_{\mathrm{rel}}(S)}{2\sqrt{8\varepsilon_0}}m_P
 +
 \Delta m_G(S),
 $$
@@ -1353,7 +1353,7 @@ where
 $$
 \delta_S:=
 \frac{\Delta m_G(S)-\Delta m_I(S)}
-{\mathcal I_{\mathrm{rel}}(S)m_P/(2\sqrt{8\varepsilon})}.
+{\mathcal I_{\mathrm{rel}}(S)m_P/(2\sqrt{8\varepsilon_0})}.
 $$
 If the retained complexity fractions are linearly coupled on the tested branch,
 $$
@@ -1374,7 +1374,7 @@ Thus PU predicts exact universality when all predictive costs are covariantly in
 
 *Proof.* Theorem N.5 gives the common baseline mass
 $$
-m_0(S)=\frac{\mathcal I_{\mathrm{rel}}(S)}{2\sqrt{8\varepsilon}}m_P.
+m_0(S)=\frac{\mathcal I_{\mathrm{rel}}(S)}{2\sqrt{8\varepsilon_0}}m_P.
 $$
 Theorem N.7 identifies inertial and gravitational mass for simple systems because both are this same baseline quantity. For a test body in a weak external field,
 $$
@@ -1402,7 +1402,7 @@ $$
 \tag{N.42}
 $$
 
-*Proof.* Direct from Theorem N.5, since the prefactor $m_P/(2\sqrt{8\varepsilon})$ cancels in ratios. ∎
+*Proof.* Direct from Theorem N.5, since the prefactor $m_P/(2\sqrt{8\varepsilon_0})$ cancels in ratios. ∎
 
 **Theorem N.9 (Integration with $E_8$ Mass Hierarchy).** The charged lepton mass ratios derived in Appendix T arise from differences in relational information content determined by $E_8$ geodesic distances:
 
@@ -1459,7 +1459,7 @@ reflects pure $E_8$ geometry, independent of the overall scale set by $\mathcal{
 The full chain from logical axioms to inertial mass:
 
 $$
-\boxed{K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Eq Q.18}} \delta = \sqrt{8\varepsilon} \cdot L_P \xrightarrow{\text{Thm N.5}} m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P}
+\boxed{K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Thm 31}} \varepsilon_0 = \ln 2 \xrightarrow{\text{Eq Q.18}} \delta = \sqrt{8\varepsilon_0} \cdot L_P \xrightarrow{\text{Thm N.5}} m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P}
 $$
 
 Each arrow represents a necessary implication:
@@ -1468,13 +1468,13 @@ Each arrow represents a necessary implication:
 |:-----|:-------|:-------|
 | 1 | $K_0 = 3$ | Horizon Constant from SPAP encodability (Theorem 15) |
 | 2 | $d_0 = 8$ | MPU Hilbert space dimension: $d_0 = 2^{K_0}$ (Theorem 23) |
-| 3 | $\varepsilon = \ln 2$ | Irreducible entropy cost from Landauer + SPAP (Theorem 31, Appendix J) |
-| 4 | $\tau_{min} = \sqrt{8\varepsilon} \cdot t_P$ | Temporal discretization from PCE (Theorem Q.6.1) |
-| 5 | $C_{\max} = 2\varepsilon$ | PCE-optimal channel capacity (Equation E.15) |
+| 3 | $\varepsilon_0 = \ln 2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ | Structural SPAP cost and physical implementation bound (Theorem 31, Appendix J) |
+| 4 | $\tau_{min} = \sqrt{8\varepsilon_0} \cdot t_P$ | Temporal discretization from PCE (Theorem Q.6.1) |
+| 5 | $C_{\max} = 2\varepsilon_0$ | PCE-optimal structural channel capacity (Equation E.15) |
 | 6 | KMS equilibrium | Steady-state processing at rate $1/\tau_{min}$ (Theorem G.1.9.5) |
 | 7 | $d\mathcal{S}/d\tau = \mathcal{I}_{rel}/(2\tau_{min})$ | Entropy flow rate (Corollary N.4.1) |
 | 8 | $\mathcal{S}_{action}/\hbar = \Sigma\varepsilon_i$ | Action-Entropy Identity (Corollary Q.0.1) |
-| 9 | $m = \mathcal{I}_{rel}/(2\sqrt{8\varepsilon}) \cdot m_P$ | Equating rest action to entropy flow (Theorem N.5) |
+| 9 | $m = \mathcal{I}_{rel}/(2\sqrt{8\varepsilon_0}) \cdot m_P$ | Equating rest action to structural entropy flow (Theorem N.5) |
 
 The only quantity not fixed by the logical structure is $\mathcal{I}_{rel}$—the relational information content of the specific system—which is determined by the system's configuration within the network.
 
@@ -1493,13 +1493,13 @@ This parallels the role of $\hbar$ as the action-entropy exchange rate (Corollar
 **Remark N.11.6: Connection to UCT.** The Unified Cost of Transgression (Theorem N.UCT, Equation N.5) included the kinetic term $W_{kin} = m_0c^2(\gamma - 1)$ with $m_0$ as input. Theorem N.5 now derives $m_0$:
 
 $$
-m_0 = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P
+m_0 = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P
 $$
 
 The UCT can be rewritten entirely in information-theoretic terms:
 
 $$
-W_{tot} \geq \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot E_P \cdot (\gamma - 1) + \int_0^{\tau_f} R(C_{req}(\tau), T_{eff}(\tau))\, d\tau
+W_{tot} \geq \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot E_P \cdot (\gamma - 1) + \int_0^{\tau_f} R(C_{req}(\tau), T_{eff}(\tau))\, d\tau
 $$
 
 Both terms represent information costs: the first is the relativistic cost of updating relational information; the second is the cost of maintaining predictive accuracy against noise.
@@ -1510,14 +1510,14 @@ This section has established:
 
 **Summary of Theorem N.5 (Mass-Information Equivalence):**
 $$
-m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon}} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{rel} \cdot m_P
+m = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{rel} \cdot m_P
 $$
 
 | Result | Physical Content | Reference |
 |:-------|:-----------------|:----------|
 | Theorem N.4 | Equilibrium requires steady-state information exchange | KMS + open-system thermodynamics |
 | Corollary N.4.1 | Entropy flow rate $d\mathcal{S}/d\tau = \mathcal{I}_{rel}/(2\tau_{min})$ | Channel exchange at rate $1/\tau_{min}$ |
-| Theorem N.5 | $m = \mathcal{I}_{rel}/(2\sqrt{8\varepsilon}) \cdot m_P$ | Action-Entropy Identity |
+| Theorem N.5 | $m = \mathcal{I}_{rel}/(2\sqrt{8\varepsilon_0}) \cdot m_P$ | Action-Entropy Identity |
 | Corollary N.5.1 | $E = mc^2$ = information maintenance power | Rest energy derived |
 | Theorem N.6 | Inertia = relational update resistance | Origin of inertia explained |
 | Theorem N.7 | $m_I = m_G$ for simple systems | Equivalence principle derived |

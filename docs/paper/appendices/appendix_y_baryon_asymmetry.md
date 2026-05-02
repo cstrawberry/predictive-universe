@@ -53,7 +53,7 @@ The proposition therefore establishes a model-level correspondence between the p
 ### Y.2.2 The 2-to-1 Merge and Branch Selection
 
 **Recall from Theorem 31.** Resolution of the SPAP contradiction requires irreversible state merging with minimum entropy cost
-$$\varepsilon = \ln 2 \text{ nats}.$$
+$$\varepsilon_0=\ln2 \text{ nats}.$$
 This Landauer floor is the thermodynamic input used in the branch-selection argument below.
 
 **Corollary Y.1.1** (Irreversible Branch Selection). *At the verification step of each SPAP cycle, the 2-to-1 merge selects one branch of the NOT duality and irreversibly erases the other. This selection determines whether the local predictive outcome manifests as "particle" or "antiparticle."*
@@ -104,12 +104,12 @@ This mismatch generates a non-trivial Berry curvature, and the holonomy around t
 
 ### Y.3.3 Departure from Thermal Equilibrium
 
-The SPAP cycle is intrinsically irreversible (Theorem 31: $\varepsilon \ge \ln 2$). At the cosmological level, the arrow of time (Appendix O) and the nonzero thermodynamic cost of predictive updating prevent exact global equilibrium. In the PU baryogenesis mechanism, the electroweak epoch is the regime in which sphaleron transitions are active, while the residual nonequilibrium efficiency is encoded by the complexity-suppression factor introduced later as $e^{-\kappa_B}$.
+The SPAP cycle is intrinsically irreversible (Theorem 31: $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$). At the cosmological level, the arrow of time (Appendix O) and the nonzero thermodynamic cost of predictive updating prevent exact global equilibrium. In the PU baryogenesis mechanism, the electroweak epoch is the regime in which sphaleron transitions are active, while the residual nonequilibrium efficiency is encoded by the complexity-suppression factor introduced later as $e^{-\kappa_B}$.
 
 *Proof of Theorem Y.2.*  
 (1) On the SM-gauge branch (Theorem G.8.4b), Equation (Y.1), derived from the chiral $SU(2)_L$ anomaly, gives $\partial_\mu J^\mu_{B+L}\neq 0$ whenever the topological density $W\tilde W$ has nonzero integral, so baryon number is violated.  
 (2) On the chiral SM gauge structure, the electroweak interaction distinguishes charge-conjugate configurations, and on the Berry-loop branch of Appendix T, Theorem T.56 supplies a nonzero CP-violating phase $\delta = 66.7°$, so CP is violated.  
-(3) Theorem 31 provides a strictly positive irreversible budget $\varepsilon \ge \ln 2$ for the underlying predictive update, and Appendix O supplies the macroscopic arrow of time. The remaining baryogenesis-specific departure from equilibrium is encoded by the factor $e^{-\kappa_B}$, whose magnitude is set by the Appendix Y baryogenesis branch. The Sakharov ingredients are therefore realized on the combined branch package; they are not independent assumptions, but an unconditional theorem-level result would require derivations of the SM gauge content, exact $N_g = 3$, nonzero CKM phase, and electroweak nonequilibrium environment from PU axioms alone. ∎
+(3) Theorem 31 provides a strictly positive irreversible budget $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ for the underlying predictive update, and Appendix O supplies the macroscopic arrow of time. The remaining baryogenesis-specific departure from equilibrium is encoded by the factor $e^{-\kappa_B}$, whose magnitude is set by the Appendix Y baryogenesis branch. The Sakharov ingredients are therefore realized on the combined branch package; they are not independent assumptions, but an unconditional theorem-level result would require derivations of the SM gauge content, exact $N_g = 3$, nonzero CKM phase, and electroweak nonequilibrium environment from PU axioms alone. ∎
 
 
 ---
@@ -414,7 +414,7 @@ $$\kappa_{CP} = \frac{\kappa_{EW}}{2} = \frac{38.5}{2} = 19.25$$
 **Step 3: Generational Coherence Correction.**
 
 **Lemma Y.8.2** (Generational Cost Distribution on the democratic single-verification branch). *Assume the generation-coherence sector incurs a single Landauer/SPAP verification cost $\varepsilon$ for the full coherent process, and assume the democratic single-verification branch rule assigning equal share $1/N_g$ of that cost to each coherently participating generation path. Then*
-$$\kappa_{gen} = \frac{\varepsilon}{N_g} = \frac{\ln 2}{3} = 0.231.$$
+$$\kappa_{gen} = \frac{\varepsilon_0}{N_g} = \frac{\ln 2}{3} = 0.231.$$
 
 
 *Proof of Lemma.*
@@ -435,7 +435,7 @@ $$I_{gen} = \log N_g = \log 3 \text{ nats}$$
 **(d) SPAP verification cost on the democratic single-verification branch.** The SPAP cycle (Theorem 10) requires verifying the prediction outcome. For baryogenesis, this verification resolves a single binary question: did the net baryon asymmetry have positive or negative sign? The CP-odd/even distinction is encoded in $\kappa_{CP}$ via the $\mathbb{Z}_2$ orientation projection on $SU(2)$.
 
 Total cost: $\varepsilon$. On the democratic single-verification branch, the branch rule assigns equal share $1/N_g$ of that cost to each coherently participating generation path:
-$$\kappa_{gen} = \frac{\varepsilon}{N_g} = \frac{\ln 2}{3} = 0.231.$$
+$$\kappa_{gen} = \frac{\varepsilon_0}{N_g} = \frac{\ln 2}{3} = 0.231.$$
 The democratic amplitude distribution $|c_g|^2 = 1/N_g$ from subpart (c) supplies the amplitude profile consistent with this branch rule; the branch rule itself is the assignment of total verification cost to per-generation cost shares and is not uniquely fixed by the amplitude distribution alone.
 
 
@@ -444,13 +444,13 @@ The democratic amplitude distribution $|c_g|^2 = 1/N_g$ from subpart (c) supplie
 - $S_{N_g}$ symmetry: Generation manifold has permutation symmetry up to relabeling of the three family-charge sectors (Theorem R.3.4)
 - CKM unitarity: $\sum_g |V_{ig}|^2 = 1$ enforces normalization
 
-These ingredients fix the amplitude profile $|c_g|^2 = 1/N_g$. The additional branch rule assigning a single-verification total cost $\varepsilon$ democratically to the $N_g$ coherent paths, giving $\kappa_{gen} = \varepsilon/N_g$, is the democratic single-verification branch introduced in the statement of this lemma. Alternative cost-sharing rules compatible with the same amplitude distribution (e.g. a total cost $\varepsilon$ without per-path division, or a weighted rule summing squared amplitudes) would define distinct branches with different numerical $\kappa_{gen}$.
+These ingredients fix the amplitude profile $|c_g|^2 = 1/N_g$. The additional branch rule assigning a single-verification total cost $\varepsilon$ democratically to the $N_g$ coherent paths, giving $\kappa_{gen} = \varepsilon_0/N_g$, is the democratic single-verification branch introduced in the statement of this lemma. Alternative cost-sharing rules compatible with the same amplitude distribution (e.g. a total cost $\varepsilon$ without per-path division, or a weighted rule summing squared amplitudes) would define distinct branches with different numerical $\kappa_{gen}$.
 
-The single-verification form ($\varepsilon/N_g$ rather than $2\varepsilon/N_g$) follows because the CP-sector selection is accounted for in $\kappa_{CP} = \kappa_{EW}/2$.
+The single-verification form ($\varepsilon_0/N_g$ rather than $2\varepsilon_0/N_g$) follows because the CP-sector selection is accounted for in $\kappa_{CP} = \kappa_{EW}/2$.
 
 
 
-**Remark Y.8.2.1 (Branch Dependence of the Sharing Rule).** The numerical value $\kappa_{gen} = 0.231$ depends on the democratic single-verification cost-sharing rule of Lemma Y.8.2. The named supporting ingredients (maximum-entropy amplitude distribution, $S_{N_g}$ permutation symmetry, CKM unitarity) fix the amplitude profile $|c_g|^2 = 1/N_g$ but do not uniquely determine how the total Landauer/SPAP verification cost partitions across coherently participating generation paths. A change of the sharing rule from $\varepsilon/N_g$ to $\chi \varepsilon/N_g$ for a dimensionless branch factor $\chi > 0$ propagates to the baryon-to-photon ratio as $\eta_B(\chi) = \eta_B(1) \exp[-(\chi-1)\varepsilon/N_g]$, giving approximately a 21% shift per unit change in $\chi$ at the minimal branch values $\varepsilon = \ln 2$, $N_g = 3$.
+**Remark Y.8.2.1 (Branch Dependence of the Sharing Rule).** The numerical value $\kappa_{gen} = 0.231$ depends on the democratic single-verification cost-sharing rule of Lemma Y.8.2. The named supporting ingredients (maximum-entropy amplitude distribution, $S_{N_g}$ permutation symmetry, CKM unitarity) fix the amplitude profile $|c_g|^2 = 1/N_g$ but do not uniquely determine how the total Landauer/SPAP verification cost partitions across coherently participating generation paths. A change of the sharing rule from $\varepsilon_0/N_g$ to $\chi \varepsilon_0/N_g$ for a dimensionless branch factor $\chi > 0$ propagates to the baryon-to-photon ratio as $\eta_B(\chi) = \eta_B(1) \exp[-(\chi-1)\varepsilon_0/N_g]$, giving approximately a 21% shift per unit change in $\chi$ at the minimal branch values $\varepsilon_0=\ln2$, $N_g = 3$.
 
 
 ∎
@@ -473,7 +473,7 @@ $$
 \kappa_B = \kappa_{CP} + \kappa_{gen} = 19.25 + 0.23 = 19.48.
 $$
 
-The value $\kappa_{gen} = 0.23$ corresponds to single verification ($\varepsilon/N_g$), consistent with the CP-odd projection already captured in $\kappa_{CP}$.
+The value $\kappa_{gen} = 0.23$ corresponds to single verification ($\varepsilon_0/N_g$), consistent with the CP-odd projection already captured in $\kappa_{CP}$.
 
 ∎
 
@@ -488,7 +488,7 @@ The value $\kappa_{gen} = 0.23$ corresponds to single verification ($\varepsilon
 | Component | Value | Physical Origin |
 |:----------|:-----:|:----------------|
 | $\kappa_{EW}/2$ | 19.25 | CP-odd projection via $\mathbb{Z}_2$ orientation reversal on $SU(2)$ |
-| $\varepsilon/N_g$ | 0.23 | Landauer cost distributed over 3 generations on the democratic single-verification branch |
+| $\varepsilon_0/N_g$ | 0.23 | Landauer cost distributed over 3 generations on the democratic single-verification branch |
 
 | $\kappa_B$ | 19.48 | Total baryogenesis complexity |
 
@@ -653,9 +653,9 @@ This numerical evaluation is validation-level because it depends on the Appendix
 **Step-by-Step Derivation:**
 
 **Step 1: Baryogenesis Complexity**
-$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = \frac{38.5}{2} + \frac{0.6931}{3} = 19.25 + 0.23 = 19.48$$
+$$\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g} = \frac{38.5}{2} + \frac{0.6931}{3} = 19.25 + 0.23 = 19.48$$
 
-The single-verification form $\varepsilon/N_g$ is used because the CP-sector selection is already encoded in the factor $\kappa_{EW}/2$.
+The single-verification form $\varepsilon_0/N_g$ is used because the CP-sector selection is already encoded in the factor $\kappa_{EW}/2$.
 
 **Step 2: Complexity Suppression Factor**
 $$e^{-\kappa_B} = e^{-19.48} = 3.47 \times 10^{-9}$$
@@ -732,7 +732,7 @@ All derived quantities are consistent with observation.
 | Parameter | Status | Origin |
 |:----------|:-------|:-------|
 | $K_0 = 3$ | Foundational | Horizon constant (axiom) |
-| $\varepsilon = \ln 2$ | Derived | Landauer limit (Theorem 31) |
+| $\varepsilon_0=\ln2$ | Derived | Landauer limit (Theorem 31) |
 | $N_g = 3$ | Derived | Anomaly cancellation (Theorem R.3.4) |
 | $\delta = 66.7°$ | Derived | Berry holonomy (Theorem T.56) |
 | $\alpha_{em}^{-1} = 137.036092 \pm 0.000060$ | Derived | Capacity saturation (Theorem Z.26) |
@@ -863,20 +863,20 @@ $$
 
 From Theorem Y.8, the baryogenesis complexity is
 $$
-\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g}.
+\kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g}.
 $$
 Therefore
 $$
 e^{-\kappa_B}
 =
-e^{-\varepsilon/N_g} e^{-\kappa_{EW}/2}
+e^{-\varepsilon_0/N_g} e^{-\kappa_{EW}/2}
 =
-e^{-\varepsilon/N_g} A_{EW}^{-1/2}\sqrt{\frac{v}{M_{Pl}}}.
+e^{-\varepsilon_0/N_g} A_{EW}^{-1/2}\sqrt{\frac{v}{M_{Pl}}}.
 $$
 
 The remaining CP and washout factors are dimensionless and are collected into the prefactor
 $$
-\mathcal{P}_{\mathrm{eff}} := \mathcal{C}_{eff}\mathcal{F}_{CP}f_{wash}e^{-\varepsilon/N_g}A_{EW}^{-1/2}.
+\mathcal{P}_{\mathrm{eff}} := \mathcal{C}_{eff}\mathcal{F}_{CP}f_{wash}e^{-\varepsilon_0/N_g}A_{EW}^{-1/2}.
 $$
 Hence the full hierarchy link takes the stated prefactor-weighted square-root form. ∎
 
@@ -893,7 +893,7 @@ Hence the full hierarchy link takes the stated prefactor-weighted square-root fo
 
 The factor of $\sim 7$ is accounted for by the branch-fixed prefactor:
 $$
-\mathcal{C}_{eff} \times \mathcal{F}_{CP} \times f_{wash} \times e^{-\varepsilon/N_g} \times A_{EW}^{-1/2}
+\mathcal{C}_{eff} \times \mathcal{F}_{CP} \times f_{wash} \times e^{-\varepsilon_0/N_g} \times A_{EW}^{-1/2}
 =
 0.282 \times 0.9997 \times 0.63 \times 0.79 \times 1.084^{-1/2}
 \approx 0.135
@@ -964,11 +964,11 @@ Any mechanism that explains $\kappa_{EW}$ automatically constrains $\eta_B$, and
 
 *Proof.* Theorem Y.11 gives
 $$
-\mathcal{P}_{\mathrm{eff}} = \mathcal{C}_{eff}\,\mathcal{F}_{CP}\,f_{wash}\,e^{-\varepsilon/N_g}A_{EW}^{-1/2}.
+\mathcal{P}_{\mathrm{eff}} = \mathcal{C}_{eff}\,\mathcal{F}_{CP}\,f_{wash}\,e^{-\varepsilon_0/N_g}A_{EW}^{-1/2}.
 $$
-At the PCE-Attractor, $\varepsilon = \ln 2$ and $N_g = 3$, so
+At the PCE-Attractor, $\varepsilon_0=\ln2$ and $N_g = 3$, so
 $$
-e^{-\varepsilon/N_g} = e^{-\ln 2/3} = 2^{-1/3}.
+e^{-\varepsilon_0/N_g} = e^{-\ln 2/3} = 2^{-1/3}.
 $$
 Using the branch-fixed values $\mathcal{C}_{eff} = 0.282$, $\mathcal{F}_{CP} = 0.9997$, $f_{wash} = 0.63$, and $A_{EW} = 1.084$ gives
 $$
@@ -1029,11 +1029,11 @@ $$
 $$
 Theorem Y.8 gives
 $$
-\kappa_B=\frac{\kappa_{EW}}2+\frac{\varepsilon}{N_g}.
+\kappa_B=\frac{\kappa_{EW}}2+\frac{\varepsilon_0}{N_g}.
 $$
-On the minimal branch, $\varepsilon=\ln2$ and $N_g=3$, so
+On the minimal branch, $\varepsilon_0=\ln2$ and $N_g=3$, so
 $$
-e^{-\varepsilon/N_g}=e^{-\ln2/3}=2^{-1/3}.
+e^{-\varepsilon_0/N_g}=e^{-\ln2/3}=2^{-1/3}.
 $$
 The electroweak branch gives
 $$
@@ -1096,14 +1096,14 @@ The hierarchy unification theorem implies:
 3. Theorem Y.2 uses exactly these two inputs—$N_g=3$ and nonzero $\delta$—to realize the Sakharov conditions in the PU channel.
 4. Theorems Y.8 and Y.9 then make both inputs enter the baryogenesis formula through
 $$
-\kappa_B=\frac{\kappa_{EW}}{2}+\frac{\varepsilon}{N_g},
+\kappa_B=\frac{\kappa_{EW}}{2}+\frac{\varepsilon_0}{N_g},
 \qquad
 \mathcal F_{CP}=\tanh(\mathcal S\sin\delta).
 $$
 
 Consequently, within the Appendix Y channel, the flavor-topology sector and the cosmological matter-asymmetry sector are structurally locked: if $N_g<3$ or $\delta=0$, the present mechanism ceases to produce the observed-type baryogenesis channel.
 
-*Proof.* Theorem R.3.4 proves that two generations cannot support a physical CKM phase after rephasing, whereas the minimal anomaly-free family-charge pattern allowing CP violation is the three-sector pattern $\{a,-a,0\}$. Theorem T.56 then gives a nonzero CKM phase $\delta$ as Berry holonomy. Theorem Y.2 imports both facts into the Sakharov analysis: baryon violation uses the electroweak anomaly with coefficient proportional to $N_g$, while CP violation uses the nonzero Berry-holonomy phase $\delta$. Finally, Theorem Y.8 inserts $N_g$ into the exponent through the generation-sharing term $\varepsilon/N_g$, and Theorem Y.9 inserts $\delta$ into the CP factor through $\sin\delta$. If $N_g<3$, the modeled class loses physical CKM CP violation; if $\delta=0$, then $\mathcal F_{CP}=\tanh(0)=0$. In either case the present Appendix Y mechanism collapses. ∎
+*Proof.* Theorem R.3.4 proves that two generations cannot support a physical CKM phase after rephasing, whereas the minimal anomaly-free family-charge pattern allowing CP violation is the three-sector pattern $\{a,-a,0\}$. Theorem T.56 then gives a nonzero CKM phase $\delta$ as Berry holonomy. Theorem Y.2 imports both facts into the Sakharov analysis: baryon violation uses the electroweak anomaly with coefficient proportional to $N_g$, while CP violation uses the nonzero Berry-holonomy phase $\delta$. Finally, Theorem Y.8 inserts $N_g$ into the exponent through the generation-sharing term $\varepsilon_0/N_g$, and Theorem Y.9 inserts $\delta$ into the CP factor through $\sin\delta$. If $N_g<3$, the modeled class loses physical CKM CP violation; if $\delta=0$, then $\mathcal F_{CP}=\tanh(0)=0$. In either case the present Appendix Y mechanism collapses. ∎
 
 **Corollary Y.11.6a (Three Generations Are Operational in the Appendix Y Mechanism).** In the present PU baryogenesis channel, three generations are not merely compatible with the asymmetry calculation; they are part of the mechanism's operating conditions.
 
@@ -1155,9 +1155,9 @@ K_0 = 3 &\xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[4pt]
 &\xrightarrow{\text{Thm Z.1}} a = 2, \quad b = d_0 - a = 6 \\[4pt]
 &\xrightarrow{\text{Thm Z.5}} M = 2ab = 24, \quad k = 12 \\[4pt]
 &\xrightarrow{\text{Thm T.5}} \kappa_{EW} = \frac{bk}{2} + \dim(G/H) - \frac{m}{2} = 38.5 \\[4pt]
-&\xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \\[4pt]
+&\xrightarrow{\text{Thm 31}} \varepsilon_0=\ln2 \\[4pt]
 &\xrightarrow{\text{Thm R.3.4}} N_g = 3 \\[4pt]
-&\xrightarrow{\text{Thm Y.8}} \kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon}{N_g} = 19.48 \\[4pt]
+&\xrightarrow{\text{Thm Y.8}} \kappa_B = \frac{\kappa_{EW}}{2} + \frac{\varepsilon_0}{N_g} = 19.48 \\[4pt]
 &\xrightarrow{\text{Thm T.56}} \delta = 66.7° \implies \sin\delta = 0.918 \\[4pt]
 &\xrightarrow{\text{Thm Y.9}} \eta_B = \mathcal{C}_{eff} \cdot \tanh(\mathcal{S}\sin\delta) \cdot f_{wash} \cdot e^{-\kappa_B} \\[4pt]
 &= 0.282 \times 0.9997 \times 0.63 \times 3.47 \times 10^{-9} = 6.2 \times 10^{-10}
@@ -1227,7 +1227,7 @@ CP violation beyond the CKM mechanism would manifest in electric dipole moments 
 | $\alpha_W$ running | ±2% | SM uncertainty at EW scale |
 | **Total (quadrature)** | **±9%** | $\sqrt{3^2 + 8^2 + 2^2} \approx 8.8\%$ |
 
-Within the canonical Appendix Y baryogenesis branch, the components $\kappa_{EW} = 38.5$, $\varepsilon = \ln 2$, and $N_g = 3$ are fixed by their source branch ledgers: $\kappa_{EW}$ on the Appendix T weak-left projection, row-pair, predictive-recovery MacWilliams Golay, and electroweak hierarchy branch (Theorem T.5 and the branch labels recorded for Theorems T.18a, T.8, T.1c); $\varepsilon = \ln 2$ on the PCE-Attractor (Definition 15a; Theorem 31 supplies the lower bound); $N_g = 3$ as the realized generation count on the MDL/PCE minimal-family branch (Theorem R.3.4 supplies minimal admissibility, with exact realization on the minimal-family branch). The displayed $9\%$ uncertainty above is the within-branch validation-run uncertainty conditional on these branch choices, the unit Berry-topological response coefficient $\chi_{CP} = 1$ (Theorem Y.6.1), and the unit sphaleron-transport coefficient $\chi_{tr} = 1$ (Proposition Y.9.1). It does not include alternative-branch uncertainty in the electroweak hierarchy, generation, CP-response, or sphaleron-transport mappings. A unit shift $\delta\kappa_B = 0.1$ alone shifts $e^{-\kappa_B}$ by $\sim 9.5\%$, comparable to the entire stated within-branch uncertainty.
+Within the canonical Appendix Y baryogenesis branch, the components $\kappa_{EW} = 38.5$, $\varepsilon_0=\ln2$, and $N_g = 3$ are fixed by their source branch ledgers: $\kappa_{EW}$ on the Appendix T weak-left projection, row-pair, predictive-recovery MacWilliams Golay, and electroweak hierarchy branch (Theorem T.5 and the branch labels recorded for Theorems T.18a, T.8, T.1c); $\varepsilon_0=\ln2$ on the PCE-Attractor (Definition 15a; Theorem 31 supplies the lower bound); $N_g = 3$ as the realized generation count on the MDL/PCE minimal-family branch (Theorem R.3.4 supplies minimal admissibility, with exact realization on the minimal-family branch). The displayed $9\%$ uncertainty above is the within-branch validation-run uncertainty conditional on these branch choices, the unit Berry-topological response coefficient $\chi_{CP} = 1$ (Theorem Y.6.1), and the unit sphaleron-transport coefficient $\chi_{tr} = 1$ (Proposition Y.9.1). It does not include alternative-branch uncertainty in the electroweak hierarchy, generation, CP-response, or sphaleron-transport mappings. A unit shift $\delta\kappa_B = 0.1$ alone shifts $e^{-\kappa_B}$ by $\sim 9.5\%$, comparable to the entire stated within-branch uncertainty.
 
 
 ### Y.13.2 Robustness of Saturation

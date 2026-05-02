@@ -105,7 +105,7 @@ The mass hierarchy derivation (Theorem T.39) embeds generation vacua into $E_8$ 
 
 ### Z.2.1 Foundational Constants Recap
 - **Hilbert space dimension:** Theorem 23 gives $d_0 \ge 8$ for $K_0 = 3$; on the minimal PCE branch selected in Theorem Z.2 one has $d_0 = 8$.
-- **Irreducible ND-RID cost:** $\varepsilon \ge \ln 2$ nats (Theorem 31, proved in Appendix J as Theorem J.1); at the PCE-Attractor (Definition 15a) the bound is saturated, so $\varepsilon = \ln 2$ on that branch.
+- **Irreducible ND-RID cost:** $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ nats (Theorem 31, proved in Appendix J as Theorem J.1); at the PCE-Attractor (Definition 15a) the bound is saturated, so $\varepsilon_0=\ln2$ on that branch.
 - **Horizon constant:** $K_0 = 3$ bits (Theorem 15)
 
 ### Z.2.2 The Principle of Physical Instantiation (PPI)
@@ -114,14 +114,14 @@ The mass hierarchy derivation (Theorem T.39) embeds generation vacua into $E_8$ 
 
 ### Z.2.3 Physical Instantiation of the Irreducible Cost
 
-**Theorem Z.1 (Physical Instantiation of Irreducible Cost).** The SPAP cycle necessarily implements a 2-to-1 logical merge (Lemma Z.2), so any physical implementation satisfies the Landauer lower bound $\varepsilon \ge \ln 2$ (Theorem 31, Appendix J). At the PCE-Attractor (Definition 15a), PCE selects the saturating implementation $\varepsilon=\ln 2$. The Principle of Physical Instantiation (PPI) then fixes the active kernel dimension uniquely:
+**Theorem Z.1 (Physical Instantiation of Irreducible Cost).** The SPAP cycle necessarily implements a 2-to-1 logical merge (Lemma Z.2), so any physical implementation satisfies the Landauer lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J). At the PCE-Attractor (Definition 15a), PCE selects the saturating implementation $\varepsilon_0=\ln2$. The Principle of Physical Instantiation (PPI) then fixes the active kernel dimension uniquely:
 $$a = 2$$
 
 *Proof.*
 
 **Step 1 (Irreducible entropy cost).** By Landauer's principle, a logically irreversible operation erasing one bit of information requires entropy production of at least ln 2 nats. The SPAP cycle (Theorem 10) necessarily performs a 2-to-1 state merge (Lemma Z.2), so the per-cycle thermodynamic cost satisfies
-$$\varepsilon \ge \ln 2.$$
-At the PCE-Attractor, PCE selects the minimal saturating realization, hence $\varepsilon=\ln 2$.
+$$\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2.$$
+At the PCE-Attractor, PCE selects the minimal saturating realization, hence $\varepsilon_0=\ln2$.
 
 **Step 2 (PPI Requirement — Axiom).** The Principle of Physical Instantiation (Appendix P, Definition P.6.2) requires that the abstract logical cost ε be realized by an actual physical subsystem, and that among physically admissible realizations the realized one is resource-minimal (PPI-optimality).
 
@@ -131,13 +131,13 @@ Applied here: the abstract logical cost ε must be realized by a physical subsys
 $$S(\rho)\le \ln a,$$
 with equality only for the maximally mixed state.
 
-**Step 4 (Admissibility + PPI-optimality).** To instantiate the cost ε within the active kernel, admissibility requires $\ln a \ge \varepsilon$. Since $a$ is a Hilbert-space dimension ($a\in\mathbb{N}$), PPI-optimality selects the minimal admissible $a$. With $\varepsilon=\ln 2$, the unique minimal solution is $a=2$.
+**Step 4 (Admissibility + PPI-optimality).** To instantiate the cost ε within the active kernel, admissibility requires $\ln a \ge \varepsilon$. Since $a$ is a Hilbert-space dimension ($a\in\mathbb{N}$), PPI-optimality selects the minimal admissible $a$. With $\varepsilon_0=\ln2$, the unique minimal solution is $a=2$.
 
 **Step 5 (Uniqueness).** If $a<2$ then $\ln a < \ln 2 = \varepsilon$ and the subsystem cannot register ε. If $a>2$ then $a$ is not resource-minimal within the admissible class. Therefore the unique PPI-optimal solution is $a=2$. ∎
 
 **Remark: Axiomatic Status.** This derivation uses exactly:
 - SPAP (Theorem 10): requires a 2-to-1 merge.
-- Landauer's principle (Physics): implies ε ≥ ln 2 (saturated to ε = ln 2 at the PCE-Attractor).
+- Landauer's principle (Physics): implies ε ≥ ln 2 (saturated to ε0 = ln 2 at the PCE-Attractor).
 - PPI (Definition P.6.2): requires physical instantiation of ε and selects a resource-minimal admissible realization.
 - Entropy capacity bound: gives $S(\rho)\le \ln a$.
 
@@ -147,12 +147,12 @@ Thus the result $a = 2$ is a theorem, not a free parameter.
 
 The complete chain to $M = 24$ with no continuous fit parameters is:
 
-$$\boxed{\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon \ge \ln 2 \xrightarrow{\text{Def 15a}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow[\text{Thm Z.2}]{d_0 = 8 \text{ on the minimal PCE branch}} M = 2ab = 24}$$
+$$\boxed{\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow[\text{Thm Z.2}]{d_0 = 8 \text{ on the minimal PCE branch}} M = 2ab = 24}$$
 
 | Step | Result | Justification | Status |
 |------|--------|---------------|--------|
-| 1 | $\varepsilon \ge \ln 2$ | SPAP logical merge + Landauer principle | Theorem 31 |
-| 2 | $\varepsilon = \ln 2$ on the attractor branch | PCE-attractor saturation | Definition 15a |
+| 1 | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ | SPAP logical merge + Landauer principle | Theorem 31 |
+| 2 | $\varepsilon_0=\ln2$ on the attractor branch | PCE-attractor saturation | Definition 15a |
 | 3 | $d_0 \ge 8$ | Capacity-dimension link for $K_0=3$ | Theorem 23 |
 | 4 | $d_0 = 8$ on the minimal PCE branch | SPAP tensor realization + PCE exclusion of larger active support | Theorem Z.2 |
 | 5 | $a = 2$ | Admissibility $\ln a \ge \varepsilon$ + PPI-optimality | Theorem Z.1 |
@@ -169,7 +169,7 @@ $$\rho_0 = \frac{1}{a} I_a \oplus 0_b = \frac{1}{2} I_2 \oplus 0_6$$
 
 This state has active-subspace entropy
 $$S(\rho_0|_A)=\ln a=\ln 2.$$
-At the PCE-Attractor the dissipation bound is saturated, $\varepsilon=\ln 2$, so the entropy capacity of the active kernel matches the logically required cost with no excess:
+At the PCE-Attractor the dissipation bound is saturated, $\varepsilon_0=\ln2$, so the entropy capacity of the active kernel matches the logically required cost with no excess:
 $$\ln a = \varepsilon.$$
 
 The same state simultaneously maximizes QFI along the interface directions $AB \oplus BA$. This is the unique state achieving maximal predictive capacity under minimal entropy cost.
@@ -299,7 +299,7 @@ The SPAP update rule is φ_{t+1} = NOT(p_t), where p_t is the prediction stored 
 
 The input space for the cycle map G_cycle: L_t ↦ L_{t+1} is {0,1} × {0,1}, containing 4 distinct logical states. The output space is {0,1} × {p_ready}, containing only 2 distinct logical states. Since |input| = 4 > 2 = |output|, the map G_cycle is at least 2-to-1. This constitutes a logically irreversible merge with compression factor 4/2 = 2. ∎
 
-**Lemma Z.3 (Landauer Cost of SPAP Merge).** The SPAP merge has minimum dimensionless entropy cost $\ln 2$, hence any implementation satisfies $\varepsilon \ge \ln 2$.
+**Lemma Z.3 (Landauer Cost of SPAP Merge).** The SPAP merge has minimum dimensionless entropy cost $\ln 2$, hence any implementation satisfies $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$.
 
 *Proof.* By Landauer's principle (Section J.3), the minimum entropy increase in the environment required to implement a logically irreversible operation mapping $N$ input states to $M$ output states is $\Delta S_{\mathrm{env}}^{(\min)} = k_B \ln(N/M)$. For the SPAP merge (Lemma Z.2), $N = 4$ and $M = 2$, so the minimum dimensionless cost is
 $$\varepsilon_{\min} := \frac{\Delta S_{\mathrm{env}}^{(\min)}}{k_B} = \ln\left(\frac{4}{2}\right) = \ln 2.$$
@@ -329,7 +329,7 @@ Hence the minimal active operational realization selected by PCE satisfies $d_0 
 $$K_0 = \log_2 d_0 = \log_2(2a^2)=1+2\log_2 a.$$
 On the saturating branch where $\varepsilon=\ln a$ (PCE-Attractor), this is equivalently:
 $$K_0 = 1 + \frac{2\varepsilon}{\ln 2}.$$
-With $a=2$ (Theorem Z.1): $K_0 = 1 + 2 = 3$ and $\varepsilon=\ln 2$.
+With $a=2$ (Theorem Z.1): $K_0 = 1 + 2 = 3$ and $\varepsilon_0=\ln2$.
 
 2. **Active fraction identity:**
 $$\frac{a}{d_0} = \frac{1}{2a} = \frac{1}{4}.$$
@@ -635,7 +635,7 @@ $$M = 2 \times a \times b = 2 \times 2 \times 6 = 24$$
 
 Each factor has independent origin:
 - Factor 2: Complex structure (Hermitian = symmetric + antisymmetric)
-- Factor $a = 2$: Active subspace dimension (from PCE-Attractor saturation $\varepsilon=\ln 2$, Theorem Z.1)
+- Factor $a = 2$: Active subspace dimension (from PCE-Attractor saturation $\varepsilon_0=\ln2$, Theorem Z.1)
 - Factor $b = 6$: Inactive subspace dimension (from $d_0 - a = 8 - 2$)
 
 ### Z.7.4 QFI Complexity Functional
@@ -784,9 +784,9 @@ On the cap-active branch the unconstrained minimizer lies beyond the admissible 
 
 **Definition Z.8f (Fundamental Mass Scale on the canonical Leech norm-information calibration branch).** The mass scale connecting Planck physics to the interface structure is:
 
-$$\mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} \quad (\varepsilon=\ln 2\ \text{at the PCE-Attractor}) \quad = \frac{m_P}{2\sqrt{8\ln 2}} \approx 0.212 \cdot m_P$$
+$$\mu_0 := \frac{m_P}{2\sqrt{8\varepsilon_0}} \quad (\varepsilon_0=\ln2\ \text{at the PCE-Attractor}) \quad = \frac{m_P}{2\sqrt{8\ln 2}} \approx 0.212 \cdot m_P$$
 
-*Derivation.* From the Mass-Information Equivalence (Theorem N.5), a system with relational information content $\mathcal{I}_{\mathrm{rel}}$ has inertial mass $m = \mathcal{I}_{\mathrm{rel}} \cdot m_P / (2\sqrt{8\varepsilon})$. For vacuum configurations in the Leech lattice, the canonical Leech norm-information calibration identifies the relational information content with the lattice norm:
+*Derivation.* From the Mass-Information Equivalence (Theorem N.5), a system with relational information content $\mathcal{I}_{\mathrm{rel}}$ has inertial mass $m = \mathcal{I}_{\mathrm{rel}} \cdot m_P / (2\sqrt{8\varepsilon_0})$. For vacuum configurations in the Leech lattice, the canonical Leech norm-information calibration identifies the relational information content with the lattice norm:
 $$\mathcal{I}_{\mathrm{rel}}(v) = |v| \quad \text{in Planck units (canonical calibration branch)}.$$
 
 More generally, a universal calibration $\mathcal{I}_{\mathrm{rel}}(v) = \gamma \cdot |v|$ with dimensionless $\gamma > 0$ would rescale absolute masses by a factor $\gamma$ while preserving all dimensionless mass ratios and lattice-norm ordering. The canonical branch $\gamma = 1$ used throughout this appendix fixes the absolute mass scale; ratio predictions are independent of $\gamma$. The coefficient $\mu_0$ sets the mass per unit norm on the canonical branch.
@@ -797,7 +797,7 @@ $$m^2(v) = \mu_0^2 \cdot |v|^2.$$
 
 *Proof.* By the canonical calibration of Definition Z.8f, Leech lattice excitations satisfy $\mathcal{I}_{\mathrm{rel}}(v) = |v|$ in Planck units. The Mass-Information Equivalence (Theorem N.5) then gives:
 
-$$m(v) = \frac{\mathcal{I}_{\mathrm{rel}}(v)}{2\sqrt{8\varepsilon}} \cdot m_P = \mu_0 \cdot |v|.$$
+$$m(v) = \frac{\mathcal{I}_{\mathrm{rel}}(v)}{2\sqrt{8\varepsilon_0}} \cdot m_P = \mu_0 \cdot |v|.$$
 
 Squaring yields $m^2(v) = \mu_0^2 |v|^2$ on the canonical branch. On a generalized calibration $\mathcal{I}_{\mathrm{rel}}(v) = \gamma |v|$, the same derivation gives $m^2(v) = \gamma^2 \mu_0^2 |v|^2$, uniformly rescaling all absolute masses by $\gamma^2$ while preserving all squared-norm ratios. ∎
 
@@ -832,7 +832,7 @@ where the contributions are:
 
 *Proof.*
 
-**Step 1 (Base shell from Landauer partition).** The ground state $0^{++}$ has no spin, positive parity, and positive C-parity. It must sit at the minimum Leech shell $|v|^2_{\min} = 4$ (Theorem Z.8c). On the attractor-saturating branch one has $a=2$ by Theorem Z.1, using $\varepsilon = \ln 2$ from Definition 15a together with the lower bound of Theorem 31, hence $a^2 = 4 = |v|^2_{\min}$ as required for the base-shell identification.
+**Step 1 (Base shell from Landauer partition).** The ground state $0^{++}$ has no spin, positive parity, and positive C-parity. It must sit at the minimum Leech shell $|v|^2_{\min} = 4$ (Theorem Z.8c). On the attractor-saturating branch one has $a=2$ by Theorem Z.1, using $\varepsilon_0=\ln2$ from Definition 15a together with the lower bound of Theorem 31, hence $a^2 = 4 = |v|^2_{\min}$ as required for the base-shell identification.
 
 **Step 2 (Spin contribution from tensorial structure).** For spin-$J$ states with $J \geq 2$, the symmetric traceless tensor representation requires $J(J-1)$ additional polarization modes beyond the base scalar and vector cases:
 - $J = 0$: $\Delta_J = 0$ (scalar, no tensor structure)
@@ -875,7 +875,7 @@ All four empirical shell assignments are exactly reproduced from first principle
 
 **Remark Z.8h.2: Derivation Chain.** The shell formula connects to framework axioms via:
 
-$$\varepsilon \ge \ln 2 \xrightarrow{\text{Def 15a}} \varepsilon=\ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{a^2} \text{Base shell} = 4, \quad \Delta_P(-) = 4$$
+$$\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{a^2} \text{Base shell} = 4, \quad \Delta_P(-) = 4$$
 
 $$\text{Golay } [24,12,8] \xrightarrow{d = 8} \Delta_C(-) = 8$$
 
@@ -944,7 +944,7 @@ $$M_{\mathrm{phys}} = K(D).$$
 
 *Proof.*
 
-**Step 1 (PCE-derived tangent saturation).** Condition (i) follows from the ND-RID channel structure: $\epsilon_\text{dist}$-distinguishability requires non-overlapping angular supports (Corollary Z.4). Condition (ii) follows from entropy maximization at equilibrium (Postulate 4): among $N$ non-overlapping channels with fixed total solid angle, strict concavity of the Shannon entropy forces all caps to be equal (Theorem Z.9). Condition (iii) follows from PCE: an unused geometric slot with an available internal mode strictly decreases $V_\text{tot}$, contradicting minimality (Theorem Z.11, Step 1). Equal non-overlapping caps at tangent saturation define exactly the standard kissing configuration: $N$ unit balls tangent to a central unit ball in $\mathbb{R}^D$.
+**Step 1 (PCE-derived tangent saturation).** Condition (i) follows from the ND-RID channel structure: $\epsilon_\text{dist}$-distinguishability requires non-overlapping angular supports (Corollary Z.4). Condition (ii) follows from PCE equal-cap entropy maximization: among $N$ non-overlapping channels with fixed total solid angle, strict concavity of the Shannon entropy forces all caps to be equal (Theorem Z.9). Condition (iii) follows from PCE: an unused geometric slot with an available internal mode strictly decreases $V_\text{tot}$, contradicting minimality (Theorem Z.11, Step 1). Equal non-overlapping caps at tangent saturation define exactly the standard kissing configuration: $N$ unit balls tangent to a central unit ball in $\mathbb{R}^D$.
 
 **Step 2 (Angular separation at tangency).** Let $x,y$ be centers of two neighbor balls. Both lie on the radius-2 sphere about the central MPU, so $|x|=|y|=2$. If $\theta$ is the angle between $x$ and $y$, then the chord length satisfies
 $$
@@ -1008,7 +1008,7 @@ For fixed $N$ and total solid angle, entropy is maximized when all $\Omega_i$ ar
 
 The maximum $N$ subject to the non-overlapping constraint occurs when caps are tangent—touching but not overlapping. This defines the kissing configuration.
 
-At thermodynamic equilibrium (Postulate 4), the system naturally evolves toward maximum entropy configurations subject to physical constraints. The PCE potential V(x) drives the system to minimize free energy, which at fixed temperature is equivalent to maximizing entropy. At the tangent limit for unit neighbors on the radius-$2$ shell, the center-to-center angular separation threshold is
+At PCE equal-cap equilibrium, the system naturally evolves toward maximum entropy configurations subject to physical constraints. The PCE potential $V(x)$ drives the system to minimize free energy, which at fixed temperature is equivalent to maximizing entropy. At the tangent limit for unit neighbors on the radius-$2$ shell, the center-to-center angular separation threshold is
 $$
 \theta_K=\frac{\pi}{3},
 $$
@@ -1075,7 +1075,7 @@ $$
 ds_{\rm Bures}^2=
 \frac{1}{4} F_{ij}(\rho_0)d\theta^i d\theta^j.
 $$
-Thus the leading finite-resolution distinguishability of a channel is a metric ball in the QFI tangent norm. A minimal irreversible SPAP verification event costs $\varepsilon=\ln2$ on the attractor branch, so all minimal channels have the same finite distinguishability radius after QFI normalization. By isotropy of the attractor, no direction in a fixed tangent shell may carry a different radius without adding a protocol-visible anisotropy; by Corollary P.6.1b.8 such anisotropy is removed unless it lowers regret. At the homogeneous attractor it does not, so the retained cells have equal radius.
+Thus the leading finite-resolution distinguishability of a channel is a metric ball in the QFI tangent norm. A minimal irreversible SPAP verification event costs $\varepsilon_0=\ln2$ on the attractor branch, so all minimal channels have the same finite distinguishability radius after QFI normalization. By isotropy of the attractor, no direction in a fixed tangent shell may carry a different radius without adding a protocol-visible anisotropy; by Corollary P.6.1b.8 such anisotropy is removed unless it lowers regret. At the homogeneous attractor it does not, so the retained cells have equal radius.
 
 Distinct physical channels must be distinguishable by some finite protocol. If two channel cells overlap beyond the finite error budget, the separating protocol cannot assign their responses uniquely, increasing $L_{\mathrm{regret}}$. Hence admissible retained cells have disjoint interiors. If two non-overlapping cells leave a tangent gap while an unused internal mode is available, inserting the corresponding equal-radius cell gives an additional distinguishable response channel without violating the capacity or isotropy constraints. In the positive-marginal PCE regime this lowers predictive regret, so a non-saturated packing cannot minimize the PPI cost. Therefore PCE selects a tangent-saturated equal-radius packing.
 
@@ -1224,9 +1224,9 @@ and $D=4$ is the unique positive integer satisfying $K(D)=24$. Consequently, any
 
 **Remark Z.5: Robustness.** The discrete nature of kissing numbers means D = 4 remains the unique solution for any M_int ∈ [13, 39].
 
-**Remark Z.6: Frustration for Other Values.** If the foundational constants yielded $M_{\mathrm{int}}=8$, no integer dimension exactly saturates this value, since $K(2)=6<8<12=K(3)$. The system would exhibit geometric frustration. Similarly, $M_{\mathrm{int}}=96$ cannot be matched, because standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012], so no integer dimension $D$ satisfies $K(D)=96$. This demonstrates that $D=4$ emerges not despite but because of the specific values $d_0=8$ and the saturating PCE-Attractor cost $\varepsilon=\ln 2$.
+**Remark Z.6: Frustration for Other Values.** If the foundational constants yielded $M_{\mathrm{int}}=8$, no integer dimension exactly saturates this value, since $K(2)=6<8<12=K(3)$. The system would exhibit geometric frustration. Similarly, $M_{\mathrm{int}}=96$ cannot be matched, because standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012], so no integer dimension $D$ satisfies $K(D)=96$. This demonstrates that $D=4$ emerges not despite but because of the specific values $d_0=8$ and the saturating PCE-Attractor cost $\varepsilon_0=\ln2$.
 
-**Corollary Z.5b (Generalization to Arbitrary MPU Structure).** For any hypothetical MPU with parameters $(d_0,a,b)$ where $a+b=d_0$, the emergent dimension would satisfy $K(D)=2ab$. This generalization demonstrates that $D=4$ is tied to the specific values $d_0=8$ and $\varepsilon=\ln 2$. Different fundamental constants would yield different dimensions or geometric frustration:
+**Corollary Z.5b (Generalization to Arbitrary MPU Structure).** For any hypothetical MPU with parameters $(d_0,a,b)$ where $a+b=d_0$, the emergent dimension would satisfy $K(D)=2ab$. This generalization demonstrates that $D=4$ is tied to the specific values $d_0=8$ and $\varepsilon_0=\ln2$. Different fundamental constants would yield different dimensions or geometric frustration:
 - If $d_0=4$ and $a=2$, then $M_{\mathrm{int}}=8$, but $K(2)=6<8<12=K(3)$, so no exact solution exists
 - If $d_0=16$ and $a=4$, then $M_{\mathrm{int}}=96$, while standard bounds give $K(6)\le77<96<126\le K(7)$ [de Laat et al. 2024; Boyvalenkov et al. 2012], so again no exact solution exists
 
@@ -1415,7 +1415,7 @@ $$\dim[\mathfrak{so}(3,1)] = b = 6$$
 - Lorentz dimension: $\dim[\mathfrak{so}(3,1)] = 6$ from $D = 4$ (Theorem Z.11)
 
 The derivation chains are:
-$$\varepsilon = \ln 2 \text{ on the attractor branch} \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.2}} b = 6$$
+$$\varepsilon_0=\ln2 \text{ on the attractor branch} \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Thm Z.2}} b = 6$$
 $$M = 24 \xrightarrow{\text{Thm Z.11}} D = 4 \xrightarrow{\text{Lie theory}} \dim[\mathfrak{so}(3,1)] = 6$$
 
 These chains share no common intermediate step after foundational constants, yet yield identical values. ∎
@@ -2119,7 +2119,7 @@ Conjecture Z.8k.3 is separately falsified if the short-range scalar-transfer coe
 
 ### Z.13.5 The Syndrome-Partition Correspondence
 
-The Golay code's error-correction structure exhibits a precise correspondence with the thermodynamic partition $(a, b) = (2, 6)$. This section derives the structural identity connecting these two frameworks and demonstrates that error-correction capacity is uniquely determined by the Landauer cost $\varepsilon = \ln 2$.
+The Golay code's error-correction structure exhibits a precise correspondence with the thermodynamic partition $(a, b) = (2, 6)$. This section derives the structural identity connecting these two frameworks and demonstrates that error-correction capacity is uniquely determined by the Landauer cost $\varepsilon_0=\ln2$.
 
 **Cross-reference note:** The physical interpretation of this correspondence in terms of vacuum fluctuation dynamics is developed in Section U.10, which should be consulted for the instanton complexity analysis.
 
@@ -2611,7 +2611,7 @@ The correspondence is structural: incidence patterns are identical, though coeff
 
 #### Z.13.5.4 The Explicit Generator Matrix
 
-The derivation chain from $\varepsilon = \ln 2$ through PCE optimization yields a single, explicit binary matrix—144 bits that completely specify the error-correction structure.
+The derivation chain from $\varepsilon_0=\ln2$ through PCE optimization yields a single, explicit binary matrix—144 bits that completely specify the error-correction structure.
 
 **Theorem Z.13c (Golay Generator Matrix).** The extended binary Golay code $\mathcal{G}_{24}$ has systematic generator matrix $G = [I_{12} \mid P]$ where $P$ is:
 
@@ -2713,7 +2713,7 @@ $$C_{\mathrm{stabilization}} = k \times k = 12 \times 12 = 144 \text{ bits}$$
 
 specifying how information modes couple to redundancy modes for error correction.
 
-**Step 3 (The Identity).** The equality $C_{\mathrm{interaction}} = C_{\mathrm{stabilization}} = 144$ is forced by $a = 2$, which derives from $\varepsilon = \ln 2$ (Theorem 31).
+**Step 3 (The Identity).** The equality $C_{\mathrm{interaction}} = C_{\mathrm{stabilization}} = 144$ is forced by $a = 2$, which derives from $\varepsilon_0=\ln2$ (Theorem 31).
 
 **Step 4 (Structural Correspondence).** The interaction tensor and parity matrix have identical information content (144 bits) and compatible algebraic structure ($6 \times 24 \leftrightarrow 12 \times 12$). Both are uniquely determined by the constraint $a = 2$. ∎
 
@@ -2786,9 +2786,9 @@ print(f"✓ Minimum distance d = {min_weight}")
 
 # Verification 3: Framework parameters
 print(f"\n✓ Framework derivation chain:")
-print(f"  ε = ln 2 ≈ {np.log(2):.6f}")
-a = 2  # Theorem Z.1: minimal admissible active-kernel dimension at ε = ln 2
-print(f"  a = {a} (minimal admissible active-kernel dimension at ε = ln 2)")
+print(f"  ε0 = ln 2 ≈ {np.log(2):.6f}")
+a = 2  # Theorem Z.1: minimal admissible active-kernel dimension at ε0 = ln 2
+print(f"  a = {a} (minimal admissible active-kernel dimension at ε0 = ln 2)")
 print(f"  d_0 = 8 on the minimal active branch, b = d_0 - a = {8 - a}")
 print(f"  M = 2ab = {2 * a * (8 - a)}")
 print(f"  k = M/2 = {24 // 2}")
@@ -2821,8 +2821,8 @@ print(f"  A_eff_ref^(obs) = Λ L_P² / (8π e^{{-S_inst_ref}}) ≈ {A_eff_ref:.2
 ✓ Minimum distance d = 8
 
 ✓ Framework derivation chain:
-  ε = ln 2 ≈ 0.693147
-  a = 2 (minimal admissible active-kernel dimension at ε = ln 2)
+  ε0 = ln 2 ≈ 0.693147
+  a = 2 (minimal admissible active-kernel dimension at ε0 = ln 2)
   d_0 = 8 on the minimal active branch, b = d_0 - a = 6
   M = 2ab = 24
   k = M/2 = 12
@@ -2869,12 +2869,12 @@ $$\left| \langle u_i, P_i \rangle \right| > 0.9$$
 
 **Theorem Z.13f (Synthesis).** The structural identity $k^2 = bM = 144$, combined with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ satisfying $\kappa_{\mathrm{ref}} < k^2$, encapsulates a chain of structural necessities:
 
-$$\boxed{\text{Landauer cost } (\varepsilon = \ln 2) \xrightarrow{\text{Thm Z.1}} \text{Partition } (2,6) \xleftrightarrow{bM = k^2} \text{Golay } [24,12,8] \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(4)=24} D = 4}$$
+$$\boxed{\text{Landauer cost } (\varepsilon_0=\ln2) \xrightarrow{\text{Thm Z.1}} \text{Partition } (2,6) \xleftrightarrow{bM = k^2} \text{Golay } [24,12,8] \xrightarrow{\text{gluing}} \Lambda_{24} \xrightarrow{K(4)=24} D = 4}$$
 
 | Step | Input | Output | Mechanism | Reference |
 |:----:|:------|:-------|:----------|:----------|
-| 1 | SPAP cycle | $\varepsilon \geq \ln 2$ | 2-to-1 merge + Landauer | Theorem 31 |
-| 2 | Optimal erasure | $\varepsilon = \ln 2$ | Bound saturation | Theorem 31 |
+| 1 | SPAP cycle | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ | 2-to-1 merge + Landauer | Theorem 31 |
+| 2 | Optimal erasure | $\varepsilon_0=\ln2$ | Bound saturation | Theorem 31 |
 | 3 | PPI + Shannon | $a = 2$ | Physical instantiation | Theorem Z.1 |
 | 4 | Partition | $b = 6$ | $d_0 - a = 8 - 2$ | Definition |
 | 5 | QFI structure | $M = 24$ | Interface generators | Theorem Z.5 |
@@ -3243,7 +3243,7 @@ $$\alpha^{-1} = \frac{4\pi}{u^*}\left(1 - \frac{a}{d_0} \cdot \frac{u^*}{\sqrt{K
 **Step 3: Expand.**
 $$\alpha^{-1} = \frac{4\pi}{u^*} - \frac{4\pi a}{d_0\sqrt{K_0}}$$
 
-**Remark Z.18.1: Capacity-Coupling Connection.** The bare coupling $u^*$ encodes the SPAP entropy cost $\varepsilon = \ln 2$ through capacity saturation (Theorem Z.7):
+**Remark Z.18.1: Capacity-Coupling Connection.** The bare coupling $u^*$ encodes the SPAP entropy cost $\varepsilon_0=\ln2$ through capacity saturation (Theorem Z.7):
 $$
 u^* = d_0^{1/M} - 1 = 8^{1/24} - 1 = 2^{3/24} - 1 = 2^{1/8} - 1
 $$
@@ -3272,7 +3272,7 @@ $$\alpha^{-1} = \frac{4\pi}{2^{1/8}-1} - \frac{4\pi \cdot (1/4)}{\sqrt{3}} = \fr
 |------|-----------|--------|-----------|
 | 1 | Self-referential logic (SPAP) | $K_0 = 3$ bits | Theorem 15 |
 | 2 | Quantum realization | $d_0 \ge 2^{K_0} = 8$; minimal PCE branch gives $d_0 = 8$ | Theorem 23; Theorem Z.2 |
-| 3 | Landauer irreversibility | $\varepsilon \ge \ln 2$; attractor saturation gives $\varepsilon = \ln 2$ | Theorem 31; Definition 15a |
+| 3 | Landauer irreversibility | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$; attractor saturation gives $\varepsilon_0=\ln2$ | Theorem 31; Definition 15a |
 | 4 | Physical instantiation (PPI) | $a = 2$ | Theorem Z.1 |
 | 5 | Landauer-SPAP structure | $d_0 = 2a^2$ on the minimal branch | Theorem Z.2 |
 | 6 | Subspace decomposition | $b = d_0 - a = 6$ | Theorem Z.1; Theorem Z.2 |
@@ -3333,14 +3333,14 @@ This reveals spacetime dimensionality as the optimal thermodynamic packing of th
 
 ### Z.21.1 Connection to Thermodynamics
 
-At thermodynamic equilibrium (Postulate 4), the MPU network maximizes entropy $S = -\mathrm{Tr}(\rho \ln \rho)$ subject to the constraint of maintaining predictive coherence. The mode-channel matching $M_{\mathrm{int}} = M_{\mathrm{phys}}$ represents a detailed balance condition: every information-sensitive mode (QFI-active generator) must have a corresponding spatial actualization channel (propagating mode through ND-RID), and vice versa.
+At PCE equal-cap equilibrium, the MPU network maximizes entropy $S = -\mathrm{Tr}(\rho \ln \rho)$ subject to the constraint of maintaining predictive coherence. The mode-channel matching $M_{\mathrm{int}} = M_{\mathrm{phys}}$ represents a detailed balance condition: every information-sensitive mode (QFI-active generator) must have a corresponding spatial actualization channel (propagating mode through ND-RID), and vice versa.
 
 ### Z.21.2 The Information-Geometry Bridge
 
 The kissing number correspondence converts an information-theoretic constraint into a geometric packing constraint through four principles:
 
 1. **Operational distinguishability** (Helstrom-Holevo bound): Quantum channels must be distinguishable at resolution $\varepsilon$, mapping to angular separation on the neighbor shell $S^{D-1}$
-2. **Thermodynamic equilibration** (Postulate 4): Entropy maximization drives the system toward uniform density and equal-cap packing
+2. **PCE equal-cap equilibration** (Theorem Z.9): Entropy maximization drives the system toward uniform density and equal-cap packing
 3. **Geometric regularity** (Theorem 43): The emergent smooth manifold structure ensures the network locally resembles Euclidean $\mathbb{R}^D$
 4. **Channel capacity constraints** (Theorem E.2): ND-RID channels have limited capacity $C_{\max}(f_{\mathrm{RID}}) < \ln d_0$
 
@@ -3398,7 +3398,7 @@ $$\alpha^{-1}_{\mathrm{exp}} - \alpha^{-1}_{\mathrm{PU}}{}^{(3)} = 137.035999177
 **Relative Discrepancy:**
 $$\frac{|\Delta\alpha^{-1}|}{\alpha^{-1}_{\mathrm{exp}}} = 6.8 \times 10^{-7} = 0.68 \text{ ppm}$$
 
-This lies within ~$1.5\sigma$ of the conservative theoretical uncertainty $\delta_\alpha \approx 6\times 10^{-5}$ constructed in Section Z.27.9. The prediction agrees with experiment to five significant figures with zero continuously adjustable parameters, conditional on the discrete structural axioms (POP, PCE, PPI, Hypothesis 4, Postulate 4) enumerated in Section 1.5.
+This lies within ~$1.5\sigma$ of the conservative theoretical uncertainty $\delta_\alpha \approx 6\times 10^{-5}$ constructed in Section Z.27.9. The prediction agrees with experiment to five significant figures with zero continuously adjustable parameters, conditional on the discrete structural axioms and branch theorems (POP, PCE, PPI, Theorem 8.4, and PCE equal-cap equilibrium as encoded by Theorem Z.9) enumerated in Section 1.5.
 
 ---
 
@@ -3891,7 +3891,7 @@ At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximatio
 
 The displayed $6 \times 10^{-5}$ uncertainty is the within-branch T3 subgroup-projection / matching uncertainty, not an uncertainty over alternative branch choices. With $\partial\alpha^{-1}/\partial\kappa^*_{\text{bulk}} \approx 138.8$ near the canonical value, even a $10^{-4}$ deviation in any of the load-bearing branch normalizations exceeds the within-branch uncertainty by orders of magnitude. The complete discrete chain on the canonical branch package, with no continuous fit parameter inside that package, is:
 
-$$\text{SPAP} \to K_0 = 3 \to d_0 \ge 8 \to d_0 = 8 \text{ on the minimal PCE branch} \to \varepsilon \ge \ln 2 \to \varepsilon = \ln 2 \text{ at the attractor} \to a = 2 \to M = 24$$
+$$\text{SPAP} \to K_0 = 3 \to d_0 \ge 8 \to d_0 = 8 \text{ on the minimal PCE branch} \to \varepsilon_0 = \ln 2 \to a = 2 \to M = 24$$
 
 $$\text{Bures geometry: } K_{\mathrm{avg}}^{\mathrm{Bures}} = \frac{S_B}{n(n-1)} = \frac{768}{24 \times 23} = \frac{32}{23}$$
 
@@ -3980,6 +3980,10 @@ $$
 Therefore a theorem-level Thomson interval requires an independently certified residual interval $R_\alpha$. Without such an interval the Appendix Z alpha result remains the exact certificate-core branch value rather than a completed accepted $\mathfrak C_\alpha$.
 
 *Proof.* Substitute $u^*=2^{1/8}-1$ and $K_0=3$ into (Z.27.11a), set $R_\alpha=0$, and evaluate the resulting expression. The terms are fixed analytic functions of previously derived constants, so the displayed number is unique. Definition Z.27.11a, however, includes $R_\alpha$ as the residual interval for finite-order, threshold, and projection tails not already included in the sinc factor. If $R_\alpha$ is absent, the record $\mathfrak C_\alpha$ is incomplete by Algorithm Z.27.11b. If $R_\alpha$ is chosen after comparison, Corollary Z.27.11d forbids promotion. Hence theorem-level interval status requires a pre-comparison certified $R_\alpha$. ∎
+
+**Corollary Z.27.11f (No Normalization Retuning under PPI/PCE).** Let $\mathfrak C_\alpha$ and $\mathfrak C'_\alpha$ be two Thomson normalization certificates with naturally isomorphic finite protocol-response presheaves. If $\mathfrak C'_\alpha$ differs from $\mathfrak C_\alpha$ only by extra normalization labels, finite counterterms, or projection conventions that do not change any finite response presheaf and do not shrink the certified residual interval, then $\mathfrak C'_\alpha$ is PCE-dominated by $\mathfrak C_\alpha$ and cannot be retained as a distinct physical normalization branch.
+
+*Proof.* Natural isomorphism of response presheaves identifies the two certificates in the PPI quotient by Theorem P.6.1b.3. If the added labels do not change a finite response and do not reduce $R_\alpha$, then they add description length or constraint bookkeeping without lowering regret or violation cost in the PPI contract. Corollary P.6.1a.4 removes the larger contract inside the same predictive fiber. Equivalently, in the PCE resource preorder of Definition D.1b, the leaner certificate is no more costly in every component and strictly cheaper in description/penalty cost, so Theorem D.1d eliminates the surplus branch. ∎
 
 ---
 
@@ -4243,9 +4247,9 @@ Several alternative approaches to dimensional emergence have been proposed:
 | Causal set theory | Defines but does not derive D |
 | Loop quantum gravity | Assumes D=4 |
 | String theory | D=10/11, compactification not uniquely determined |
-| **This framework** | **Derives $D=4$ from $M=24$ from the mode-channel correspondence, with $d_0=8$ on the minimal branch and $\varepsilon=\ln 2$ on the attractor branch** |
+| **This framework** | **Derives $D=4$ from $M=24$ from the mode-channel correspondence, with $d_0=8$ on the minimal branch and $\varepsilon_0=\ln2$ on the attractor branch** |
 
-The framework differs by deriving rather than assuming the dimensional parameter. Given only logical necessity (d_0 = 8) and thermodynamic necessity (ε = ln 2), dimensional selection follows from mode-channel matching: K(D) = 2ab = 24 ⟹ D = 4.
+The framework differs by deriving rather than assuming the dimensional parameter. Given only logical necessity (d_0 = 8) and thermodynamic necessity (ε0 = ln 2), dimensional selection follows from mode-channel matching: K(D) = 2ab = 24 ⟹ D = 4.
 
 This approach inverts the usual logic. Rather than starting with D-dimensional spacetime and deriving physical consequences, we start with pre-geometric information structure (the MPU) and derive that D=4 emerges as the unique thermodynamically stable configuration.
 
@@ -4351,7 +4355,7 @@ Relative = 0.68 ppm
 
 Every quantity in the final formulas traces back to:
 - $d_0 \ge 8$ from SPAP encodability (Theorem 23), with $d_0 = 8$ on the minimal PCE branch (Theorem Z.2)
-- $\varepsilon \ge \ln 2$ from ND-RID irreversibility (Theorem 31), with $\varepsilon = \ln 2$ at PCE-Attractor saturation (Definition 15a)
+- $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ from ND-RID irreversibility (Theorem 31), with $\varepsilon_0=\ln2$ at PCE-Attractor saturation (Definition 15a)
 - $\pi$ (geometric necessity)
 
 No continuous parameters are tuned at any stage. The Thomson-limit $\alpha^{-1}$ formula follows from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14; Theorem Z.25). The dimensional selection $D=4$ follows from the mode-channel correspondence (Theorems Z.10–Z.11).
@@ -4370,9 +4374,9 @@ d_0 \ge 2^{K_0} = 8 \text{ (Theorem 23)} \\[4pt]
 \Downarrow \\[4pt]
 d_0 = 8 \text{ on the minimal PCE branch (Theorem Z.2)} \\[4pt]
 \Downarrow \\[4pt]
-\varepsilon \ge \ln 2 \text{ (Theorem 31)} \\[4pt]
+\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \text{ (Theorem 31)} \\[4pt]
 \Downarrow \\[4pt]
-\varepsilon = \ln 2 \text{ at the attractor (Definition 15a)} \\[4pt]
+\varepsilon_0=\ln2 \text{ at the attractor (Definition 15a)} \\[4pt]
 \Downarrow \\[4pt]
 a = 2, \quad b = d_0 - a = 6 \text{ (Theorem Z.1; Theorem Z.2)} \\[4pt]
 \Downarrow \\[4pt]
@@ -4412,7 +4416,8 @@ n_{\text{pol}} = D - 2 = 2 \text{ after selecting } D=4 \\[4pt]
 |:---------|:------|:-------------|:-------|
 | $K_0$ | 3 | SPAP self-reference | Theorem 15 |
 | $d_0$ | $8$ on the minimal branch | $d_0 \ge 2^{K_0}$ plus PCE minimality | Theorem 23; Theorem Z.2 |
-| $\varepsilon$ | $\ln 2$ on the attractor branch | Landauer bound plus attractor saturation | Theorem 31; Definition 15a |
+| $\varepsilon_0$ | $\ln 2$ | Exact structural SPAP/Landauer quotient | Theorem 31 |
+| $\varepsilon_{\mathrm{phys}}$ | $\ge\varepsilon_0$ | Implementation overhead $\varepsilon_{\mathrm{diss}}\ge0$ | Theorem 31 |
 | $(a, b)$ | $(2, 6)$ | PCE minimization on the minimal branch | Theorem Z.1; Theorem Z.2 |
 | $M$ | 24 | QFI mode count | Theorem Z.5 |
 | $\mathcal{G}_{24}$ | $[24,12,8]$ | Error correction optimality | Theorem Z.13 |

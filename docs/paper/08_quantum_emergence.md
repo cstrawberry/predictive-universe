@@ -1,6 +1,6 @@
 # 8 Emergence of Quantum Mechanical Formalism
 
-**Conjecture boundary.** The results in this section are effective-formalism results: they show why the quantum-mechanical Hilbert-space/Born-rule/GKSL structures are selected under the stated MPU, PCE, refinement, and non-contextuality hypotheses. They do not remove the separate PPI mapping assumptions used later to identify particular information-geometric structures with Standard Model fields or measured constants.
+**Formal closure boundary.** The results in this section are effective-formalism results: they derive the quantum-mechanical Hilbert-space/Born-rule/GKSL structures from the stated MPU, PCE, refinement, and PPI quotient conditions. They do not remove the separate PPI mapping contracts used later to identify particular information-geometric structures with Standard Model fields or measured constants.
 
 This section demonstrates that the standard mathematical formalism of Quantum Mechanics (QM) provides a consistent effective description for the dynamics and state representation of Minimal Predictive Units (MPUs), as defined and constrained by the principles established in the preceding sections of the Predictive Universe (PU) framework. The core QM features—complex Hilbert spaces, superposition, the Born rule, uncertainty relations, entanglement, and Schrödinger evolution—are shown to emerge from the operational requirements of the MPU's adaptive predictive cycle (Definition 4), particularly the Dual Dynamics (Section 7.3.3) acting on the Perspectival State (Definition 24), under the fundamental limitations imposed by self-reference (SPAP, Theorem 10, Theorem 11) and reflexive interaction (ND-RID, Definition 6; Reflexivity Constraint, Theorem 33).
 
@@ -71,36 +71,54 @@ $$
 $$
 The vector $\psi_\omega$ is cyclic because classes of the form $\pi_\omega(a)\psi_\omega=[a]$ span the dense subspace $\mathfrak A/\mathcal N_\omega\subset\mathcal H_\omega$. ∎
 
-**Theorem 8.2 (PCE Selection for Non-Contextuality at the PCE-Attractor).**
-Assume the PCE objective takes the form
+**Theorem 8.2 (PCE Quotient Enforcement of Non-Contextuality at the PCE-Attractor).**
+Let $\mathsf P_{\mathrm{PU}}$ be the finite-resolution protocol category of Appendix P.6.1b. For an effect $E$ appearing in a context $\Pi$, let $\mathcal R_{E,\Pi}$ be its operational response presheaf. A predictive weight assignment is a function
 $$
-\mathcal J[\omega]=\mathcal R[\omega]+\lambda\,\mathcal C[\omega],\qquad \lambda>0,
+\omega:E,\Pi\mapsto\omega(E\mid\Pi)
 $$
-where $\mathcal R$ is the context-blind predictive risk induced by ND-RID/Evolve and $\mathcal C$ is a nonnegative context-complexity functional satisfying: (i) $\mathcal C[\omega]=0$ iff $\omega$ is non-contextual, and (ii) $\mathcal C[\omega]>0$ whenever $\omega$ depends on the measurement context $\mathcal P$. Suppose further that for every feasible contextual assignment $\omega$ and every $\varepsilon>0$ there exists a feasible non-contextual assignment $\tilde\omega$ such that
+on admissible effect-context pairs. Assume the POP risk term is response-complete: if $\mathcal R_{E,\Pi}\simeq\mathcal R_{F,\Pi'}$, then every MPU-admissible payoff protocol assigns the same payoff profile to $(E,\Pi)$ and $(F,\Pi')$. Let the PCE objective be
 $$
-\mathcal R[\tilde\omega]\le \mathcal R[\omega]+\varepsilon.
+\mathcal J[\omega]
+=
+\mathcal R[\omega]+\lambda \mathcal C_{\mathrm{ctx}}[\omega],
+\qquad
+\lambda>0,
 $$
-Then every global minimizer $\omega^\star$ of $\mathcal J$ is non-contextual. In particular, the PCE-Attractor (Definition 15a) admits an effective description with state $x=\rho$ and $\omega^\star$ a frame function finitely additive on every orthogonal decomposition of the identity.
+where $\mathcal R$ is the response-presheaf risk and $\mathcal C_{\mathrm{ctx}}$ is the description cost of retaining context labels not distinguished by response presheaves. Then every PPI-admissible global minimizer of $\mathcal J$ descends to a non-contextual assignment
+$$
+\omega(E\mid\Pi)=\omega([E]),
+$$
+where $[E]$ is the operational response class of $E$. Consequently, at the PCE-Attractor the predictive weights form a basis-independent frame function finitely additive on every orthogonal decomposition of the identity.
 
-*Proof.* Suppose, for contradiction, that a global minimizer $\omega^\star$ is contextual. Then $\mathcal C[\omega^\star]>0$. Choose
+*Proof.* Define an equivalence relation on admissible effect-context pairs by
 $$
-\varepsilon:=\frac{\lambda}{2}\,\mathcal C[\omega^\star]>0.
+(E,\Pi)\sim(F,\Pi')
+\quad\Longleftrightarrow\quad
+\mathcal R_{E,\Pi}\simeq\mathcal R_{F,\Pi'}.
 $$
-By hypothesis there exists a feasible non-contextual $\tilde\omega$ with
+By response-completeness, two equivalent pairs have identical payoff profiles in every MPU-admissible protocol. Hence any difference between their assigned weights is not a difference in the represented operational event. There are two exhaustive cases.
+
+First suppose $\omega(E\mid\Pi)\ne\omega(F\mid\Pi')$ for some equivalent pairs. Then the assignment gives different predictive values to the same operational response class. This violates PPI operational identity: by Theorem P.6.1b.3 and Corollary P.6.1b.4, naturally isomorphic response presheaves represent the same physical invariant. Therefore such an assignment is not PPI-admissible as a physical probability ledger.
+
+Second suppose all equivalent pairs have the same numerical value, but the ledger still retains the response-null label $\Pi$. Quotient the ledger by replacing every $(E,\Pi)$ with its equivalence class $[E]$ and define
 $$
-\mathcal R[\tilde\omega]\le \mathcal R[\omega^\star]+\varepsilon
-\qquad\text{and}\qquad
-\mathcal C[\tilde\omega]=0.
+\bar\omega([E])=\omega(E\mid\Pi).
 $$
-Therefore
+This is well defined by the present case assumption. Since $\mathcal R$ depends only on response presheaves, the quotient assignment has the same risk:
 $$
-\mathcal J[\tilde\omega]
-=\mathcal R[\tilde\omega]
-\le \mathcal R[\omega^\star]+\frac{\lambda}{2}\mathcal C[\omega^\star]
-< \mathcal R[\omega^\star]+\lambda \mathcal C[\omega^\star]
-=\mathcal J[\omega^\star],
+\mathcal R[\bar\omega]=\mathcal R[\omega].
 $$
-contradicting the global minimality of $\omega^\star$. Hence every global minimizer is non-contextual. The final statement is exactly the definition of a non-contextual frame function on orthogonal decompositions. ∎
+The quotient ledger has no response-null context labels. Therefore
+$$
+\mathcal C_{\mathrm{ctx}}[\bar\omega]\le\mathcal C_{\mathrm{ctx}}[\omega],
+$$
+with strict inequality whenever $\omega$ retained at least one unused context label. If strict, then $\mathcal J[\bar\omega]<\mathcal J[\omega]$, so $\omega$ cannot be a global minimizer. If equality, $\omega$ and $\bar\omega$ are the same PPI quotient object.
+
+Thus every PPI-admissible global minimizer is represented by the quotient assignment $\bar\omega([E])$, which depends only on the effect's operational response class and not on the context in which it appears. For orthogonal decompositions, payoff-refinement consistency gives finite additivity: if $P,Q$ are orthogonal, the coarse payoff event $P+Q$ and the refined mutually exclusive payoff events $P,Q$ represent the same response-complete decision problem, so
+$$
+\omega(P+Q)=\omega(P)+\omega(Q).
+$$
+Normalization and positivity follow from the probability-ledger interpretation. Hence the minimizer is a non-contextual finitely additive frame function. ∎
 
 **Theorem 8.3 (Gleason–Busch Representation).**
 Assume the predictive measure $\omega$ selected at the PCE-attractor is a normalized, positive, non-contextual frame function on the projection lattice of $\mathcal H_\omega$. Then:
@@ -147,11 +165,59 @@ $$
 $$
 for every unit vector $|\psi\rangle$. The polarization identity then implies all matrix elements of $\rho-\sigma$ vanish, hence $\rho=\sigma$. The same argument applies in the effect-algebra case because rank-one effects separate trace-class operators. ∎
 
-**Hypothesis 4 (PCE Selection for Complex Hilbert Spaces).**
-Given a predictive system whose state space is a complete inner product space over a division ring $\mathbb{D} \in \{\mathbb{R}, \mathbb{C}, \mathbb{H}\}$, and assuming:
-(i) *Local tomography*: the state of a composite system is fully determined by local measurements and their correlations (Appendix G.1.8);
-(ii) *Compositional closure*: combining two systems yields another system of the same type;
-it is hypothesized that the Principle of Compression Efficiency (PCE) selects the complex field $\mathbb{D} = \mathbb{C}$. This selection is driven by PCE's preference for the formalism with the optimal balance of descriptive power and resource efficiency, subject to the above constraints. Real spaces lack the structure for efficient representation of all required symmetries (e.g., the $U(1)$ phase), while quaternionic spaces violate local tomography and introduce higher complexity without a commensurate increase in predictive utility for the tasks governed by the Prediction Optimization Problem (POP).
+**Theorem 8.4 (Complex Hilbert-Space Uniqueness under Local Tomography and Minimal Phase Redundancy).**
+Let the predictive state space be a complete finite-dimensional inner-product space over $\mathbb D\in\{\mathbb R,\mathbb C,\mathbb H\}$. Assume:
+
+(i) **Compositional closure:** the composite of two admissible predictive systems is an admissible predictive system of the same scalar type;
+
+(ii) **Local tomography:** the state of a composite is determined by local outcome statistics and their correlations;
+
+(iii) **Connected phase transport:** the active predictive kernel supports a nontrivial connected scalar phase transport compatible with the gauge-coherence construction of Appendix G.2;
+
+(iv) **PCE minimal phase redundancy:** among scalar branches with the same finite protocol-response presheaves, PCE removes surplus phase generators.
+
+Then the unique admissible scalar field is $\mathbb D=\mathbb C$.
+
+*Proof.* For an $n$-dimensional Hilbert space over $\mathbb D$, the real dimension of normalized density data is:
+
+$$
+N_{\mathbb R}(n)=\frac{n(n+1)}2-1
+\quad(\mathbb D=\mathbb R),
+$$
+
+$$
+N_{\mathbb C}(n)=n^2-1
+\quad(\mathbb D=\mathbb C),
+$$
+
+$$
+N_{\mathbb H}(n)=n(2n-1)-1
+\quad(\mathbb D=\mathbb H).
+$$
+
+Local tomography for systems of dimensions $m,n$ requires
+$$
+N_{\mathbb D}(mn)+1=(N_{\mathbb D}(m)+1)(N_{\mathbb D}(n)+1).
+$$
+For $\mathbb C$ this identity is exact:
+$$
+(mn)^2=(m^2)(n^2).
+$$
+For $\mathbb R$ it would require
+$$
+\frac{mn(mn+1)}2
+=
+\frac{m(m+1)}2\frac{n(n+1)}2,
+$$
+which is false for nontrivial composites; for example $m=n=2$ gives $10\ne9$. For $\mathbb H$ it would require
+$$
+mn(2mn-1)=m(2m-1)n(2n-1),
+$$
+which is false for nontrivial composites; for $m=n=2$ it gives $28\ne36$. Hence local tomography plus compositional closure excludes the genuine real and quaternionic branches as closed predictive state-space types.
+
+Independently, connected scalar phase transport excludes the real branch because the unit scalars in $\mathbb R$ are $\{\pm1\}$, which has no nontrivial connected component. The quaternionic branch has unit scalars $Sp(1)\cong SU(2)$, a three-dimensional nonabelian phase redundancy. The complex branch has unit scalars $U(1)$, the unique one-dimensional connected abelian scalar phase group among the three branches. If a quaternionic implementation reproduces the same operational response presheaves as its complex subbranch, the two additional phase generators are response-null surplus and are removed by PCE minimal phase redundancy. If they change responses, they introduce extra gauge content and are not the same minimal MPU formalism.
+
+Therefore the only scalar branch satisfying compositional closure, local tomography, connected phase transport, and PCE minimality is $\mathbb C$. ∎
 
 **Theorem 8.5 (Schrödinger Dynamics from PCE and Time-Translation Symmetry).**
 Let $\{\mathcal T_t\}_{t\in\mathbb R}$ denote the Internal Prediction dynamics on rays of $\mathcal H_0$. Assume:
@@ -194,7 +260,7 @@ $$
 $$
 which is equivalent to the Schrödinger equation. ∎
 
-The complex Hilbert space structure (Proposition 4) thus provides the necessary mathematical framework for MPU dynamics. Under the local-tomography and compositional assumptions stated in Hypothesis 4 (and detailed in Appendix G.1.8), this structure is favored by the Principle of Compression Efficiency (PCE) over alternatives (such as real or quaternionic vector spaces). As argued in Appendix G (Theorem G.1.8), the complex field $\mathbb{C}$ combines superior state-tomography efficiency with reduced symmetry-representation overhead, thereby maximizing predictive utility while minimizing resource costs under these constraints. Alternative formalisms are less resource-efficient under the framework's optimization principles when local tomography is imposed. The Dual Dynamics (Section 7.3.3) dictate the evolution upon this stage, naturally mapping onto the core elements of QM formalism.
+The complex Hilbert space structure (Proposition 4) thus provides the necessary mathematical framework for MPU dynamics. Theorem 8.4 and Appendix G.1.8 show that the complex field $\mathbb C$ is the unique branch compatible with compositional closure, local tomography, connected phase transport, and PCE removal of surplus phase redundancy. Alternative formalisms either fail the composition/tomography identity, lack the required connected scalar phase, or add response-null phase generators removed by PCE. The Dual Dynamics (Section 7.3.3) dictate the evolution upon this stage, naturally mapping onto the core elements of QM formalism.
 
 **8.2 Interpretation of Superposition**
 
@@ -211,7 +277,7 @@ Within the MPU framework, a superposition state $|\psi\rangle = \sum_i c_i |i\ra
 
 **Proposition 7 (Emergence of the Born Rule)**
 
-Assume that the predictive weights form a normalized, positive, non-contextual, additive functional on complete resolutions of the identity and are continuous under directed refinements induced by the PCE-optimal dynamics (Appendix G.1; Theorem 8.6). Under these conditions, and given that the minimal Appendix Z branch satisfies $d_0 = 8 \geq 3$ (Theorem Z.2; Theorem 23 gives the lower bound), the probability $P(i | S(t), s)$ for the 'Evolve' process (Definition 27), acting on an MPU with state amplitude $S(t)=|\psi\rangle$ relative to perspective $s$ (corresponding to ONB $\{|i\rangle_s\}$), is uniquely fixed to the Born rule:
+By Theorem 8.2, Theorem 8.6, and Appendix G.1, the PCE-optimal predictive weights form a normalized, positive, non-contextual, additive functional on complete resolutions of the identity and are continuous under directed refinements. Under these conditions, and given that the minimal Appendix Z branch satisfies $d_0 = 8 \geq 3$ (Theorem Z.2; Theorem 23 gives the lower bound), the probability $P(i | S(t), s)$ for the 'Evolve' process (Definition 27), acting on an MPU with state amplitude $S(t)=|\psi\rangle$ relative to perspective $s$ (corresponding to ONB $\{|i\rangle_s\}$), is uniquely fixed to the Born rule:
 $$
 \sum_i |i\rangle_s \langle i|_s = I \quad \text{(49)}
 $$
@@ -359,7 +425,7 @@ Quantum measurement of an observable $\hat{A}$ on a system $S$ (composed of MPUs
 1.  **Probabilistic Amplitude Actualization:** The pre-measurement state $S(t)=|\psi\rangle$ actualizes to an eigenstate $|k\rangle$ of $\hat{A}$ with probability $P(k) = |\langle k | \psi \rangle|^2$ (Born rule, Equation 50).
 2.  **Stochastic Perspective Shift:** Concurrently, the perspective index shifts stochastically $s \to s'_{meas(k)}$ according to the transition kernel $G(s' | s, k, N_{app})$ appropriate for the interaction and outcome $k$.
 
-The post-measurement state is the specific, realized perspectival state $(|k\rangle, s'_{meas(k)})$, representing the definite outcome relative to the post-interaction perspective. The thermodynamic irreversibility of 'Evolve' ($\varepsilon \ge \ln 2$, Theorem 31) accounts for measurement irreversibility.
+The post-measurement state is the specific, realized perspectival state $(|k\rangle, s'_{meas(k)})$, representing the definite outcome relative to the post-interaction perspective. The thermodynamic irreversibility of 'Evolve' ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31) accounts for measurement irreversibility.
 
 *Proof.* Let the pre-measurement state be $(|\psi\rangle,s_{initial})$. By Theorem 24, the apparatus-selected measurement context is an ordered orthonormal basis $B=\{|k\rangle_{s_{meas}}\}$ for $\mathcal H_0$. Definition 27 and Appendix M.4 decompose the interaction into amplitude actualization and conditional perspective update. For measurement interaction $N_{app}$, the joint transition density has the form
 $$
@@ -399,7 +465,7 @@ Consider an MPU qubit in perspectival state $S_{(s_{initial})}(t) = (|\psi\rangl
 
 The explanation of measurement as perspectival actualization via 'Evolve' (Proposition 9) potentially resolves the measurement problem:
 1.  **Provides Mechanism:** Offers a physical mechanism ('Evolve', Definition 27) for state actualization, replacing the collapse postulate.
-2.  **Grounds Probabilities:** Grounds Born rule probabilities (Proposition 7) in fundamental Logical Indeterminacy (Hypothesis 2).
+2.  **Grounds Probabilities:** Grounds Born rule probabilities (Proposition 7) in fundamental Logical Indeterminacy and its theorem-level Born-rule descent (Theorem 28a).
 3.  **Definite Outcomes:** Explains definite outcomes via probabilistic actualization relative to the interaction perspective. Decoherence arises naturally from frequent environmental 'Evolve' interactions.
 4.  **Universality:** 'Evolve' is universal, removing the need for special observers or a Heisenberg cut. Actuality is perspectival but objective within frame, consistent with causality (Section 10).
 

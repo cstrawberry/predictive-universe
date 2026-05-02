@@ -101,7 +101,7 @@ The Fundamental Predictive Loop (Definition 4) has the ordered stages Internal P
 
 **2. Entropy production along a macroscopic forward step**
 
-By Appendix J, Theorem J.1, every nontrivial predictive update cycle dissipates at least $\varepsilon$ nats, with $\varepsilon \ge \ln 2$. For a macro-history built from $N$ such cycles,
+By Appendix J, Theorem J.1, every nontrivial predictive update cycle dissipates at least $\varepsilon$ nats, with $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$. For a macro-history built from $N$ such cycles,
 $$
 \Sigma_{\text{tot}}=\sum_{k=1}^N \Sigma_{\text{pred}}^{(k)} \ge N\varepsilon.
 $$
@@ -130,20 +130,20 @@ $$
 $$
 If this coarse-grained cycle lies in the guarantee-level update class whose realized entropy production obeys the pathwise lower bound
 $$
-\sigma(c)\ge\varepsilon\ge\ln 2,
+\sigma(c)\ge\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2,
 \tag{O.3a.2}
 $$
 then
 $$
 \frac{P_R(c^\dagger)}{P_F(c)}
 \le
-e^{-\varepsilon}
+e^{-\varepsilon_0}
 \le
 \frac12.
 \tag{O.3a.3}
 $$
 
-*Proof.* A nontrivial 'Evolve' cycle contains the ordered sequence prediction, verification, and update (Definition 4; Definition 27). Appendix J and Theorem 31 supply the guarantee-level entropy budget $\varepsilon\ge\ln 2$ for nontrivial finite-memory update cycles. The present theorem applies to the coarse-grained path class in which that budget is realized as the pathwise entropy-production bound (O.3a.2). Substituting $\sigma(c)\ge\varepsilon$ into the single-path identity (O.3a.1) gives
+*Proof.* A nontrivial 'Evolve' cycle contains the ordered sequence prediction, verification, and update (Definition 4; Definition 27). Appendix J and Theorem 31 supply the guarantee-level entropy budget $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ for nontrivial finite-memory update cycles. The present theorem applies to the coarse-grained path class in which that budget is realized as the pathwise entropy-production bound (O.3a.2). Substituting $\sigma(c)\ge\varepsilon$ into the single-path identity (O.3a.1) gives
 $$
 \log\frac{P_F(c)}{P_R(c^\dagger)}\ge\varepsilon.
 $$
@@ -323,7 +323,7 @@ C_{\text{process}}(B,E_{rev}) \ge \Omega\!\bigl(\log \mu_B(E_{rev}) \cdot \mu_B(
 $$
 (Theorem M.10.3). In the exact-restoration idealization, the task reaches the full-self-model obstruction class exemplified by Remark M.10.7(5), i.e. the $\mu_B=\infty$ boundary whose existence and unprocessability are guaranteed by Theorems M.10.4 and M.10.6.
 
-(iii) *Ratchet reinforcement.* Whenever $B$ actually processes $E_{rev}$, that processing is itself another 'Evolve' cycle. Hence it produces entropy $\Sigma_B^{(\text{proc})} \ge \varepsilon \ge \ln 2$ (Theorem 31) and constitutes a further forward update in $B$'s own history rather than an inversion of that history.
+(iii) *Ratchet reinforcement.* Whenever $B$ actually processes $E_{rev}$, that processing is itself another 'Evolve' cycle. Hence it produces entropy $\Sigma_B^{(\text{proc})} \ge \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) and constitutes a further forward update in $B$'s own history rather than an inversion of that history.
 
 *Proof.*
 
@@ -331,7 +331,7 @@ $$
 
 (ii) By construction, $E_{rev}$ is not merely external information about the environment; it is information directed at $B$'s own prior self-state. The self-model $\mathcal{M}_B$ represents $B$'s own states, predictions, accuracy, and dynamics (Definition M.10.1), so any message whose intended role is to restore a prior self-model configuration induces a nonzero self-model update, hence $\Delta M_B^{(\text{self})}(E_{rev}) \neq 0$ and $\sigma_B(E_{rev}) > 0$ by Definition M.10.2. However, Remark M.10.3 must be respected: $\sigma_B(E_{rev}) > 0$ alone does **not** imply $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. Shallow self-model perturbations can remain at the baseline value $\mu_B = 1/\alpha_{SPAP}$. The divergent regime begins only when the restoration demand is deep enough that the self-consistency condition of Equation (M.18) is not already satisfied at $PP=0$. In that case $PP_B^{(E_{rev})} > 0$, so $\mu_B(E_{rev}) > 1/\alpha_{SPAP}$. For processable such messages, Corollary B.2.1 and Theorem B.2 give the lower bound through $C_{\text{uni}}(\delta_B(E_{rev}))$, and Theorem M.10.3 gives the equivalent $\Omega(\log \mu \cdot \mu^2)$ form. In the exact-restoration idealization, the task reaches the same full-self-model obstruction class exemplified by the pattern "Here is your complete self-model, including this statement" in Remark M.10.7(5), namely the $\mu_B=\infty$ boundary whose existence and unprocessability are guaranteed by Theorems M.10.4 and M.10.6.
 
-(iii) If $B$ actually integrates $E_{rev}$, that integration is a physical instance of the predict-verify-update loop, i.e. an 'Evolve' cycle (Definition 27). By Theorem 31, every such cycle incurs entropy production at least $\varepsilon \ge \ln 2$. The communicated restoration therefore reaches $B$ only by generating a further irreversible update within $B$. It cannot constitute an exact reversal of $B$'s own arrow from within $B$'s perspective. ∎
+(iii) If $B$ actually integrates $E_{rev}$, that integration is a physical instance of the predict-verify-update loop, i.e. an 'Evolve' cycle (Definition 27). By Theorem 31, every such cycle incurs entropy production at least $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$. The communicated restoration therefore reaches $B$ only by generating a further irreversible update within $B$. It cannot constitute an exact reversal of $B$'s own arrow from within $B$'s perspective. ∎
 
 **Corollary O.4.1 (No Externally Imposed Exact Reversal).** Even a more complex external agent cannot impose an exact reversal of the arrow of time for a less complex agent $B$ by communicating a specification of $B$'s own prior state. Any such specification that $B$ can process is itself integrated through a further forward update, and the exact-restoration idealization sits at the unprocessable boundary.
 
@@ -339,7 +339,7 @@ $$
 
 This result is consistent with global unitarity (Theorem E.9.5). The total closed-system state remains pure under $U_{\text{total}}$. What Theorem O.4 adds is that each observer occupies a subsystem perspective, accessing only reduced states as in Remark E.9.5.3; within that perspectival restriction, exact temporal self-restoration is unavailable from inside the subsystem boundary. Irreversibility is therefore not a violation of global information conservation, but the subsystem-level manifestation of the entropy unification thesis.
 
-**Remark O.4.2 (Locus of Irreversibility).** The standard account of the arrow of time locates irreversibility in information loss: entropy increases, information scrambles across inaccessible degrees of freedom, and practical recovery becomes impossible. Theorem O.4 reveals a deeper mechanism. Grant the most favorable scenario: a system $A$ with $C_{agg}(A) > C_{agg}(B)$ reconstructs the complete prior state of $B$ and communicates it to $B$. By clause (i) of Theorem O.4, representing and evaluating such a candidate restoration description is sender-side SPAP-flat for $A$. But the communicated pattern $E_{rev}$ targets $B$'s own self-model at a depth that, for exact restoration, reaches the $\mu_B = \infty$ boundary (clause (ii) of Theorem O.4). Even if $B$ processes a sub-exact approximation, that processing is itself an 'Evolve' cycle producing $\Sigma_B^{(\text{proc})} \ge \varepsilon \ge \ln 2$ (clause (iii) of Theorem O.4), advancing $B$'s history rather than inverting it. The arrow does not depend on whether the information has been lost. It persists because the act of integrating self-referential content is itself irreversible.
+**Remark O.4.2 (Locus of Irreversibility).** The standard account of the arrow of time locates irreversibility in information loss: entropy increases, information scrambles across inaccessible degrees of freedom, and practical recovery becomes impossible. Theorem O.4 reveals a deeper mechanism. Grant the most favorable scenario: a system $A$ with $C_{agg}(A) > C_{agg}(B)$ reconstructs the complete prior state of $B$ and communicates it to $B$. By clause (i) of Theorem O.4, representing and evaluating such a candidate restoration description is sender-side SPAP-flat for $A$. But the communicated pattern $E_{rev}$ targets $B$'s own self-model at a depth that, for exact restoration, reaches the $\mu_B = \infty$ boundary (clause (ii) of Theorem O.4). Even if $B$ processes a sub-exact approximation, that processing is itself an 'Evolve' cycle producing $\Sigma_B^{(\text{proc})} \ge \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (clause (iii) of Theorem O.4), advancing $B$'s history rather than inverting it. The arrow does not depend on whether the information has been lost. It persists because the act of integrating self-referential content is itself irreversible.
 
 **Remark O.4.3 (Hierarchy Opacity and In-Universe Reconstruction Limits; cf. Theorem M.10.5).** The measurement asymmetry (Theorem M.10.5) induces a strict hierarchy of temporal access. Every level of the observer hierarchy (§P.5.8.3) can look downward: a system $A$ with $C_{agg}(A) > C_{agg}(B)$ can treat $B$'s self-model $\mathcal{M}_B$ as a modeling target with $\sigma_A = 0$, represent a candidate restoration description of $B$'s prior self-state, and evaluate the associated burden of communication at sender-side SPAP-flat cost (clause (i) of Theorem O.4; clause (i) of Theorem M.10.5). But every level is opaque to itself: no universal procedure within $A$ correctly computes $\mu_A(E)$ for all patterns $E$ with $\sigma_A(E) > 0$ (clause (ii) of Theorem M.10.5), and exact restoration of $A$'s own prior self-model is unavailable from within $A$'s own perspective (clause (iii) of Corollary O.4.3; Theorems M.10.4 and M.10.6).
 
@@ -359,7 +359,7 @@ This partition is determined by what the information is about, not by how it arr
 
 **Proposition O.4.2 (Complexity-Graded Arrow).** The structure of temporal irreversibility exhibited by a predictive system $S$ is graded by $S$'s position in the observer hierarchy (§P.5.8.3):
 
-(a) *Level 0 (MPU).* All information is external to the minimal observer in the reflexive sense relevant here. The processing cost is SPAP-flat: $\sigma_S = 0$ and $\mu_S(E) = 1/\alpha_{SPAP}$ for all patterns (Level 0 of §P.5.8.3). The arrow is therefore the bare thermodynamic ratchet: $\varepsilon \ge \ln 2$ per cycle.
+(a) *Level 0 (MPU).* All information is external to the minimal observer in the reflexive sense relevant here. The processing cost is SPAP-flat: $\sigma_S = 0$ and $\mu_S(E) = 1/\alpha_{SPAP}$ for all patterns (Level 0 of §P.5.8.3). The arrow is therefore the bare thermodynamic ratchet: $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per cycle.
 
 (b) *Level 1 (Simple Aggregate).* Aggregates that have not achieved Effective Operational Property R lack an operational self-model (Remark M.10.1; §P.5.8.3). Their cost structure remains SPAP-flat and Shannon-level: aggregation alone does not introduce a self-referential processing burden.
 
@@ -542,7 +542,7 @@ Premise (A5) of §12 is therefore a theorem of the emergent-spacetime branch rat
 
 The familiar properties of time—its coherence over vast scales and its unwavering forward direction—are not postulated in the Predictive Universe framework but are derived as necessary emergent features of the collective predictive process.
 *   **Temporal Coherence** emerges as a dynamically stable state, enforced by the Principle of Compression Efficiency, which penalizes the predictive errors and resource costs inherent in desynchronization. The MPU network self-organizes into a synchronized coherent causal medium to optimize its collective predictive function.
-*   **The Arrow of Time** is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle. Under the pathwise guarantee-level coarse graining of Theorem O.3a, a single nontrivial 'Evolve' cycle satisfies $P_R/P_F\le e^{-\varepsilon}\le 1/2$ before ensemble averaging is invoked.
+*   **The Arrow of Time** is a fundamental property, rooted in the logical asymmetry of prediction and made physically irreversible by the microscopic **thermodynamic ratchet** of the MPU's self-referential update cycle. Under the pathwise guarantee-level coarse graining of Theorem O.3a, a single nontrivial 'Evolve' cycle satisfies $P_R/P_F\le e^{-\varepsilon_0}\le 1/2$ before ensemble averaging is invoked.
 *   **The Perspectival Arrow** reveals that temporal irreversibility possesses internal structure graded by observer complexity (Theorem O.4; Proposition O.4.2). Even a more complex external agent cannot impose an exact reversal of another agent's arrow by communicating a specification of that agent's prior self-state: any such message that is processable is integrated through a further forward update, and the exact-restoration idealization is unprocessable (Corollary O.4.1). The depth of the arrow — the cost of temporal self-restoration — is relative to the observer's position in the complexity hierarchy, paralleling the relativization of simultaneity in Structural Correspondence M.6.4 (Corollary O.4.3). The irreversibility resides in the processing of self-referential content, not in the loss of information (Remark O.4.2): global unitarity preserves all information (Theorem E.9.5), yet no observer can use that conserved information for self-reversal, because integrating a specification of one's own prior self-model is itself another irreversible forward step. A more complex in-universe agent may externally model a less complex one at sender-side SPAP-flat cost, but every modeler remains subject to its own self-referential limits, and the decisive obstruction to exact reversal remains at the receiver (Remark O.4.3). Even highly accurate sub-exact reconstruction that targets deep self-model parameters already enters the divergent cost regime (Remark O.4.4). Communicated information partitions into externally targeted content with $\sigma_B(E) = 0$ and self-referential content with $\sigma_B(E) > 0$; the former is SPAP-flat, while the latter ranges from baseline cost in shallow cases to SPAP-divergent cost for deep self-model demands (Remark O.4.5; Remark M.10.3).
 
 Crucially, this emergent temporal structure is not a passive background. Its dynamic properties provide the physical substrate for the framework's most profound emergent phenomena. The controlled modulation of this medium's coherence provides a channel for Consciousness Complexity to exert its influence, with the energy cost of this modulation being properly accounted for within the standard stress-energy tensor. Meanwhile, uncontrolled, large-scale disturbances in the medium, sourced by bulk fluctuations in $T_{\mu\nu}$, propagate as temporal waves that are physically identical to the gravitational waves of General Relativity. This unifies the emergence of time, the mechanism of CC, and the nature of gravity within a single, coherent, and dynamic picture.

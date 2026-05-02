@@ -177,7 +177,7 @@ satisfies the standard entropy-dissipation identity
 $$
 \frac{d}{dt}H(\mu_t|\pi_k) = -\int_\Sigma \|\nabla_\Sigma \ln f_t\|_{g_{\rm FS}}^2\,d\mu_t \le 0,
 $$
-so the entropy exported to the environment over an evolve step of duration $\Delta t$ is at least $H(\mu_0|\pi_k)-H(\mu_{\Delta t}|\pi_k)\ge 0$. Hence the perspective-update contribution can only increase the total irreversibility of the full 'Evolve' step; it does not require any entropy cost smaller than the irreducible floor $\varepsilon$ satisfying $\varepsilon \ge \ln 2$ (Theorem 31), with equality in the saturating MPU model. Quantitative decay-rate bounds compatible with (M.5c) follow from the same Bakry–Émery curvature condition via standard functional inequalities [Bakry et al. 2014], but no such rate bound is required for the present construction.
+so the entropy exported to the environment over an evolve step of duration $\Delta t$ is at least $H(\mu_0|\pi_k)-H(\mu_{\Delta t}|\pi_k)\ge 0$. Hence the perspective-update contribution can only increase the total irreversibility of the full 'Evolve' step; it does not require any entropy cost smaller than the irreducible floor $\varepsilon$ satisfying $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), with equality in the saturating MPU model. Quantitative decay-rate bounds compatible with (M.5c) follow from the same Bakry–Émery curvature condition via standard functional inequalities [Bakry et al. 2014], but no such rate bound is required for the present construction.
 
 ## M.4 The Measurement Process Formalized
 
@@ -409,7 +409,7 @@ The PU resolution bears surface similarity to Rovelli's Relational Quantum Mecha
 | Aspect | Relational QM | PU Framework |
 |--------|---------------|--------------|
 | **Ontological status** | Interpretive stance; standard QM reinterpreted | Derived structure; perspectives are physical degrees of freedom |
-| **Grounding** | Taken as interpretive starting point | Derived from SPAP (Theorems 10–11) and thermodynamic necessity ($\varepsilon \geq \ln 2$, Theorem 31) |
+| **Grounding** | Taken as interpretive starting point | Derived from SPAP (Theorems 10–11) and thermodynamic necessity ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31) |
 | **Why relational?** | "Because that's what QM implies" | Because self-referential prediction is inherently perspectival (Corollary 1, Section 4.2.4) |
 | **Mathematical structure** | No explicit perspective space formalism | Perspective Space $\Sigma \cong U(d_0)/U(1)^{d_0}$ with Riemannian structure (Definition 25, Theorem 25) |
 | **Dynamics** | No quantitative mechanism for perspective change | Explicit drift-diffusion realization of $G_{\text{persp}}$ on $\Sigma$ (Equations M.5a–b) |
@@ -431,7 +431,7 @@ The perspectival resolution of Wigner's Friend extends a conceptual program init
 |--------------------|--------------|
 | Simultaneity of distant events | Definiteness of measurement outcomes |
 | "What measurements determine distant simultaneity?" | "What interactions determine outcome actuality?" |
-| Finite signal speed $c$ | SPAP + thermodynamic irreversibility ($\varepsilon \geq \ln 2$) |
+| Finite signal speed $c$ | SPAP + thermodynamic irreversibility ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$) |
 | Simultaneity relative to reference frame | Actuality relative to perspective |
 | Events have frame-dependent time ordering | Outcomes have perspective-dependent actuality |
 | Lorentz group connects frames | $G_{\text{persp}}$ kernel connects perspectives |
@@ -443,7 +443,7 @@ The perspectival resolution of Wigner's Friend extends a conceptual program init
 
 (i) An apparently absolute quantity (simultaneity / outcome definiteness) is revealed to be relative to a reference context (frame / perspective).
 
-(ii) The relativity is *forced* by a fundamental limitation (finite $c$ / SPAP + $\varepsilon \geq \ln 2$), not merely postulated.
+(ii) The relativity is *forced* by a fundamental limitation (finite $c$ / SPAP + $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$), not merely postulated.
 
 (iii) The underlying reality remains unified (one spacetime / one MPU network); only descriptions are relativized.
 
@@ -469,14 +469,14 @@ The derivational parallel is precise: just as the finite and invariant speed $c$
 **The Derivation Structure.** From Appendix E (Sections E.2–E.4) and Appendix E.10, the connection proceeds through two branches sharing a common thermodynamic origin in the SPAP entropy cost:
 
 $$
-\boxed{\text{SPAP} \;\xrightarrow{\text{Theorem 31}}\; \varepsilon \geq \ln 2}
+\boxed{\text{SPAP} \;\xrightarrow{\text{Theorem 31}}\; \varepsilon_0=\ln 2,\quad \varepsilon_{\mathrm{phys}}\ge\varepsilon_0}
 $$
 
 From this common source, two independent branches emerge:
 
 **Branch I (Information Capacity):**
 $$
-\varepsilon \geq \ln 2 \;\xrightarrow{\text{Lemma E.1}}\; p>0 \;\xrightarrow{\text{Lemma E.1}}\; f_{RID}=1-p<1 \;\xrightarrow{\text{Theorem E.2}}\; C_{\max} < \ln d_0
+\varepsilon_0=\ln 2 \;\xrightarrow{\text{Lemma E.1}}\; p>0 \;\xrightarrow{\text{Lemma E.1}}\; f_{RID}=1-p<1 \;\xrightarrow{\text{Theorem E.2}}\; C_{\max} < \ln d_0
 $$
 
 **Branch II (Propagation Velocity):**
@@ -484,17 +484,21 @@ $$
 \text{SPAP structure} \;\xrightarrow{\text{Theorem 29}}\; \tau_{min} > 0 \;\xrightarrow[\text{Definition 35}]{\delta > 0}\; v_{max} = \frac{\delta}{\tau_{min}} \;\xrightarrow{\text{Theorem 46}}\; c
 $$
 
-These branches are *parallel consequences* of SPAP, not sequential implications. Branch I proceeds through the thermodynamic cost $\varepsilon \geq \ln 2$ to constrain how faithfully information can be preserved; Branch II proceeds through the computational complexity of the SPAP cycle to constrain how fast information can propagate. Both originate in the logical structure of self-referential prediction.
+These branches are *parallel consequences* of SPAP, not sequential implications. Branch I proceeds through the structural thermodynamic cost $\varepsilon_0=\ln2$ and physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ to constrain how faithfully information can be preserved; Branch II proceeds through the computational complexity of the SPAP cycle to constrain how fast information can propagate. Both originate in the logical structure of self-referential prediction.
 
 ---
 
 ### Step-by-Step Justification
 
-**1. Theorem 31 (Appendix J): Irreducible Entropy Cost ε ≥ ln 2**
+**1. Theorem 31 (Appendix J): Structural Entropy Cost $\varepsilon_0=\ln2$ and Physical Bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$**
 
-The irreducible entropy cost $\varepsilon \geq \ln 2$ arises from the logically necessary 2-to-1 state merge in the SPAP update cycle. The SPAP cycle maps four input configurations $\{(\phi, p)\} = \{(0,0), (0,1), (1,0), (1,1)\}$ to two output configurations $\{(\phi', p_{ready})\} = \{(0, p_{ready}), (1, p_{ready})\}$.
+The structural entropy cost $\varepsilon_0=\ln 2$ arises from the logically necessary 2-to-1 state merge in the SPAP update cycle. The SPAP cycle maps four input configurations $\{(\phi, p)\} = \{(0,0), (0,1), (1,0), (1,1)\}$ to two output configurations $\{(\phi', p_{ready})\} = \{(0, p_{ready}), (1, p_{ready})\}$.
 
-*Landauer Conditions.* The SPAP cycle structure ensures the conditions for Landauer's principle [Landauer 1961] are satisfied: (i) the prediction register *must* reset to $p_{ready}$ before each new cycle can commence—this is not optional but logically required for the cycle to close; (ii) the system cannot retain side information about which of the merged input states led to the current output, because the reset erases precisely this information; (iii) the input distribution is effectively uniform over the merged states from the system's perspective post-reset. Under these conditions, Landauer's bound applies unconditionally: $\varepsilon = \ln(4/2) = \ln 2$ nats. This bound is exact and saturated by optimal erasure protocols [Landauer 1961; Bennett 1982].
+*Landauer Conditions.* The SPAP cycle structure ensures the conditions for Landauer's principle [Landauer 1961] are satisfied: (i) the prediction register *must* reset to $p_{ready}$ before each new cycle can commence—this is not optional but logically required for the cycle to close; (ii) the system cannot retain side information about which of the merged input states led to the current output, because the reset erases precisely this information; (iii) the input distribution is effectively uniform over the merged states from the system's perspective post-reset. Under these conditions, the structural quotient is exact:
+$$
+\varepsilon_0=\ln(4/2)=\ln2
+$$
+nats. Physical implementations satisfy $\varepsilon_{\mathrm{phys}}=\varepsilon_0+\varepsilon_{\mathrm{diss}}\ge\varepsilon_0$, with equality only for ideal overhead-free implementation.
 
 **2. Lemma E.1 (Branch I): Strict Contractivity of the ND-RID Channel**
 
@@ -607,7 +611,7 @@ This ratio equality follows from the definition of Planck units in terms of the 
 
 Locality is not a primitive axiom but emerges from:
 
-1. **Finite entropy cost per link:** $\varepsilon \geq \ln 2$ (Theorem 31)
+1. **Finite structural entropy cost per link:** $\varepsilon_0=\ln 2$, with physical implementations satisfying $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31)
 2. **Finite minimum cycle time:** $\tau_{min} > 0$ (Theorem 29)
 3. **PCE optimization minimizing total entropy production** (Definition 15)
 
@@ -621,7 +625,7 @@ The comparison table in Structural Correspondence M.6.4 should be read hierarchi
 
 | Special Relativity | PU Framework | Relationship |
 |:-------------------|:-------------|:-------------|
-| Finite signal speed $c$ | SPAP + $\varepsilon \geq \ln 2$ + $\tau_{min} > 0$ | **Derived from** (Branch II) |
+| Finite signal speed $c$ | SPAP + $\varepsilon_0=\ln2$ + $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ + $\tau_{min} > 0$ | **Derived from** (Branch II) |
 | Frame-relative simultaneity | Perspective-relative actuality | Both forced by constraints above |
 | Lorentz invariance | Perspective consistency | Emerge from causal structure |
 
@@ -635,7 +639,7 @@ Both relativizations trace to a **single source**—the irreducible entropy cost
 
 - **Kinematic domain** (Branch II): SPAP $\to$ finite cycle complexity $\to$ $\tau_{min} > 0$ (Margolus-Levitin) $\to$ finite $v_{max} = \delta/\tau_{min}$ $\to$ Lorentz invariance (Theorem 46) $\to$ $c \equiv v_{max}$ $\to$ frame-relative simultaneity
 
-- **Epistemic domain** (Branch I): SPAP $\to$ $\varepsilon \geq \ln 2$ $\to$ nonzero refresh component in $\mathcal{E}_N$ ($p>0$, Lemma E.1) $\to$ $f_{RID}=1-p<1$ (strict trace-distance contraction) $\to$ no perfect state preservation $\to$ measurement disturbance unavoidable $\to$ perspective-dependent outcomes $\to$ perspective-relative actuality
+- **Epistemic domain** (Branch I): SPAP $\to$ $\varepsilon_0=\ln2$ and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ $\to$ nonzero refresh component in $\mathcal{E}_N$ ($p>0$, Lemma E.1) $\to$ $f_{RID}=1-p<1$ (strict trace-distance contraction) $\to$ no perfect state preservation $\to$ measurement disturbance unavoidable $\to$ perspective-dependent outcomes $\to$ perspective-relative actuality
 
 The kinematic branch constrains how fast information can propagate through the MPU network. The epistemic branch constrains how faithfully information can be preserved through predictive processing. Both constraints originate in the logical structure of self-referential prediction.
 
@@ -833,7 +837,7 @@ $$
 $$
 C_{\text{integrate}}(S,E) \geq \Omega\left(\frac{\log \mu_S(E)}{(1/\mu_S(E))^2}\right) = \Omega\left(\log \mu_S(E) \cdot \mu_S(E)^2\right)
 $$
-The total processing cost $C_{\text{process}}(S,E) \geq C_{\text{integrate}}(S,E)$, since integration is a necessary component. By PPI (Definition P.6.2), computational cost manifests as physical resource expenditure. The Landauer chain (Theorem 31 $\to$ Lemma E.1 $\to$ Theorem E.2) converts the computational cost to thermodynamic cost bounded below by $\varepsilon \geq \ln 2$ per irreversible operation. $\square$
+The total processing cost $C_{\text{process}}(S,E) \geq C_{\text{integrate}}(S,E)$, since integration is a necessary component. By PPI (Definition P.6.2), computational cost manifests as physical resource expenditure. The Landauer chain (Theorem 31 $\to$ Lemma E.1 $\to$ Theorem E.2) converts the computational cost to thermodynamic cost bounded below by $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per irreversible operation. $\square$
 
 **Remark M.10.4 (Cost decomposition).** The total processing cost admits a decomposition $C_{\text{process}}(S,E) = C_{\text{ext}}(S,E) + C_{\text{refl}}(S,E)$, where $C_{\text{ext}}$ is the cost of updating the external model $\Delta M_S^{(\text{ext})}(E)$ and $C_{\text{refl}}$ is the cost of the self-referential integration. The SPAP divergence of Theorem M.10.3 applies to $C_{\text{refl}}$; $C_{\text{ext}}$ is bounded and SPAP-flat. The total cost inherits the divergence because $C_{\text{process}} \geq C_{\text{refl}}$.
 
@@ -900,7 +904,7 @@ where $n_{\text{ops}}(S,E) \geq \Omega(\log \mu_S(E) \cdot \mu_S(E)^2)$ (Theorem
 
 The physicality of perspectival profiles rests on a derivation chain with no gaps:
 $$
-\mu_S(E) > 1/\alpha_{SPAP} \xrightarrow{\text{Def M.10.3}} \delta_S(E) < \alpha_{SPAP} \xrightarrow{\text{Cor B.2.1 + Thm B.2}} C_{\text{refl}} = \Omega\!\left(\log \mu_S \cdot \mu_S^2\right) \xrightarrow{\text{Thm 31 + PPI}} \Delta S \geq k_B \varepsilon \cdot n_{\text{ops}} \xrightarrow{\text{Landauer}} Q = T \Delta S
+\mu_S(E) > 1/\alpha_{SPAP} \xrightarrow{\text{Def M.10.3}} \delta_S(E) < \alpha_{SPAP} \xrightarrow{\text{Cor B.2.1 + Thm B.2}} C_{\text{refl}} = \Omega\!\left(\log \mu_S \cdot \mu_S^2\right) \xrightarrow{\text{Thm 31 + PPI}} \Delta S \geq k_B \varepsilon_{\mathrm{phys}} \cdot n_{\text{ops}}\ge k_B\varepsilon_0\cdot n_{\text{ops}} \xrightarrow{\text{Landauer}} Q = T \Delta S
 $$
 Each arrow is a theorem, definition, or lemma. The chain converts SPAP proximity into heat.
 
@@ -1467,7 +1471,7 @@ This appendix has provided a rigorous mathematical framework for the Perspectiva
 - **Summary of Theorem M.6.1:** Outcome $k$ is actual relative to Friend's perspective $s'_F$ while remaining indefinite relative to Wigner's $s_W$—no contradiction arises because actuality is perspective-indexed.
 - **Summary of Lemma M.6.1:** Upon interaction, the joint kernel $G_{\text{persp}}^{(WF)}$ drives perspectives toward consistent configurations with contractivity-guaranteed convergence.
 - **Summary of Lemma M.6.2 & Theorem M.6.2:** Cross-perspective reasoning requires either prior interaction or restriction to perspective-invariant quantities; the FR contradiction traces to violating this constraint.
-- **Structural Correspondence M.6.4:** Just as finite $c$ forces frame-relative simultaneity, SPAP + thermodynamic irreversibility ($\varepsilon \geq \ln 2$) forces perspective-relative actuality—extending the relativistic program to quantum mechanics.
+- **Structural Correspondence M.6.4:** Just as finite $c$ forces frame-relative simultaneity, SPAP + thermodynamic irreversibility ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$) forces perspective-relative actuality—extending the relativistic program to quantum mechanics.
 
 **Connection to CC.** The interaction context $N$ in $G_{\text{persp}}(s'|s, k, N, \Delta t)$ provides the entry point for CC modulation (Hypothesis 3). High-complexity aggregates influence outcomes by modulating $N$ via the mapping $\mathcal{M}$ (Appendix L), yielding bounded Born rule deviations (Theorem 51). The causality bound $\alpha_{CC,max} < 0.5$ (Theorem 39) controls the size of those deviations; preservation of the consistency mechanism of Lemma M.6.1 requires, in addition, that the CC-modulated readout kernel remain within the strong-readout and contractive class assumed there.
 

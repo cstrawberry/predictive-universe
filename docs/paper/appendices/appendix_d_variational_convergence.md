@@ -80,6 +80,56 @@ V_w(x^*)<V_w(y)
 $$
 for every $y\in\mathcal F\setminus\{x^*\}$, so $w$ separates the selected point from every rejected branch point in the scalar certificate order. ∎
 
+**Theorem D.1d (PCE Dominance and No-Surplus Branch Elimination).** Let $x,y\in\mathcal X_{adm}$ be PPI-admissible configurations with naturally isomorphic finite protocol-response presheaves,
+$$
+\mathcal R_x\simeq\mathcal R_y.
+$$
+If $x\preceq_{\mathrm{PCE}}y$ and $r(y)-r(x)$ has at least one strictly positive component, then $y$ is not a primitive physical branch at the PCE-Attractor. It is either the same physical branch as $x$ in the PPI quotient or is strictly PCE-dominated by $x$.
+
+*Proof.* Since $\mathcal R_x\simeq\mathcal R_y$, Theorem P.6.1b.3 identifies $x$ and $y$ as representing the same physical invariant in the operational quotient unless an additional retained label changes a finite protocol response. By hypothesis no finite response differs. Thus any difference between $x$ and $y$ is a response-null implementation difference.
+
+Because $x\preceq_{\mathrm{PCE}}y$ and the domination is strict in at least one component, Theorem D.1c gives
+$$
+V_w(x)<V_w(y)
+$$
+for every strictly positive dual certificate $w\in\mathrm{int}\,K^*$. Therefore no PCE-admissible scalarization can select $y$ over $x$. If the response-null distinction is quotiented out, $x$ and $y$ are the same physical branch. If it is retained, it carries strictly higher PCE cost without changing any finite protocol response and is eliminated by PCE dominance. These alternatives exhaust the PPI-admissible cases. ∎
+
+**Theorem D.1e (Operational Quotient and Minimal Representative Existence).** Let $\mathcal X_{\mathrm{adm}}$ be the PPI-admissible configuration class on a finite-resolution protocol branch $\mathsf P_{\mathrm{PU}}$. Define
+$$
+x\sim_{\mathcal R}y
+\quad\Longleftrightarrow\quad
+\mathcal R_x\simeq\mathcal R_y.
+$$
+Then:
+
+1. $\sim_{\mathcal R}$ is an equivalence relation, and the quotient
+$$
+\mathcal Q_{\mathrm{phys}}:=\mathcal X_{\mathrm{adm}}/{\sim_{\mathcal R}}
+$$
+is the PPI physical configuration space on this branch.
+
+2. For any strictly positive dual certificate $w\in\mathrm{int}\,K^*$, the descended scalar potential
+$$
+\bar V_w([x])
+:=
+\inf_{y\in[x]}V_w(y)
+$$
+is well defined whenever the infimum is attained in each response class.
+
+3. If the branch is compact after PPI quotienting and $\bar V_w$ is lower semicontinuous, then at least one PCE-minimal physical class exists:
+$$
+[x_{\mathrm{phys}}]\in
+\operatorname*{argmin}_{[x]\in\mathcal Q_{\mathrm{phys}}}\bar V_w([x]).
+$$
+
+4. If the strict branch-separation hypotheses of Theorem P.6.1b.7 hold for the same descended scalarization, this PCE-minimal physical class is unique.
+
+*Proof.* Natural isomorphism of finite protocol-response presheaves is reflexive, symmetric, and transitive, so $\sim_{\mathcal R}$ is an equivalence relation. Theorem P.6.1b.3 states that naturally isomorphic response presheaves represent the same physical invariant; therefore quotienting by $\sim_{\mathcal R}$ gives exactly the PPI physical configuration space on the branch.
+
+For (2), if $x'\in[x]$, then $[x']=[x]$ by definition. The quantity $\inf_{y\in[x]}V_w(y)$ therefore depends only on the equivalence class and not on the representative. Attainment gives a minimal representative inside the response class. If two representatives have the same response presheaf but one carries strictly larger PCE cost, Theorem D.1d eliminates the higher-cost representative as response-null surplus; hence retained representatives are minimal inside their response class.
+
+For (3), compactness of $\mathcal Q_{\mathrm{phys}}$ and lower semicontinuity of $\bar V_w$ give existence of a minimizer by the direct method. For (4), Theorem P.6.1b.7 supplies strict branch separation; if two distinct classes both minimized $\bar V_w$, strict separation would give a strictly lower value for one class over the other, a contradiction. Hence the minimizer is unique under that added separation condition. ∎
+
 ## D.3 Dynamic Complexity Alignment Mechanism ($C_P \leftrightarrow \langle \hat{C}_v \rangle$)
 
 This section provides the rigorous justification for Theorem 2. We separate two statements: exact alignment as a necessary condition for true stable PCE equilibria, and quantitative operational tracking of that condition under the stochastic gradient dynamics.
@@ -279,7 +329,7 @@ We use stochastic Lyapunov methods, common in the analysis of stochastic approxi
 We make standard technical assumptions required for the convergence theorems, justifying them from the physical principles of the PU framework.
 *   **(A1) Potential Properties:** $V(x)$ is twice continuously differentiable ($C^2$), bounded below on the admissible state space $\mathcal{X}_{adm}$. We assume $V(x)$ is coercive, meaning $V(x) \to \infty$ as $x$ approaches the boundary of $\mathcal{X}_{adm}$ or as some norm $|x| \to \infty$. *Physical Justification:* The $C^2$ smoothness is required for the Lyapunov analysis involving the Hessian (Lemma D.5). Coercivity is physically plausible because the resource cost terms ($V_{op}, V_{prop}$) are expected to grow super-linearly with complexity and network size (e.g., $R(C) \propto C^{\gamma_p}$ with $\gamma_p > 1$), while the benefit term ($V_{benefit}$) saturates (due to $PP < \beta$). This ensures the potential grows at the extremes of the configuration space, confining the dynamics.
 *   **(A2) Mobility Bounds:** The mobility matrix $\eta(x)$ is symmetric positive definite, bounded, and Lipschitz on $\mathcal{X}_{adm}$: there exist constants $0<\eta_{\min}\le \eta_{\max}<\infty$ such that for all $x\in\mathcal{X}_{adm}$ and all vectors $v$,
-$\eta_{\min}\|v\|^2 \le v^T\eta(x)v \le \eta_{\max}\|v\|^2$, and $\|\eta(x)-\eta(y)\|\le L_\eta\|x-y\|$ for all $x,y$. *Physical Justification:* In PU, $\eta$ encodes local equilibration/update rates of ND-RID channels and local routing policies. These are bounded by finite cycle times and finite per-step dissipation (each irreversible ND-RID update has $\varepsilon\ge\ln 2$, Theorem 31), and Lipschitz dependence expresses local response of rates to small changes in configuration, consistent with near-equilibrium linear response [Onsager 1931].
+$\eta_{\min}\|v\|^2 \le v^T\eta(x)v \le \eta_{\max}\|v\|^2$, and $\|\eta(x)-\eta(y)\|\le L_\eta\|x-y\|$ for all $x,y$. *Physical Justification:* In PU, $\eta$ encodes local equilibration/update rates of ND-RID channels and local routing policies. These are bounded by finite cycle times and finite per-step dissipation (each irreversible ND-RID update has $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31), and Lipschitz dependence expresses local response of rates to small changes in configuration, consistent with near-equilibrium linear response [Onsager 1931].
 *   **(A3) Diffusion Matrix Bounds:** The diffusion matrix $D(x)$ is bounded and uniformly elliptic. Specifically, there exist constants $0<d_{\min}\le d_{\max}<\infty$ such that for all $x$ and all vectors $v$, $d_{\min}\|v\|^2 \le v^T D(x) v \le d_{\max}\|v\|^2$. *Physical Justification:* In PU, diffusion models aggregate microscopic stochasticity of ND-RID routing and environmental forcing. Uniform bounds correspond to finite-temperature noise with bounded per-step fluctuations set by finite update rates and capacity constraints (e.g., bounded degree $\Delta_{max}$ and minimal cycle time $\tau_{min}$), preventing arbitrarily large instantaneous kicks while ensuring ergodic exploration of admissible configurations.
 *   **(A4) Gradient Smoothness:** $\nabla V(x)$ is Lipschitz continuous on compact subsets of $\mathcal{X}_{adm}$. This prevents pathologically fast changes in the drift.
 *   **(A5) Confinement:** Assumptions (A1) and the nature of the dynamics ensure that for any initial condition $x(0)$, the trajectory $x(t)$ remains within a compact subset $\mathcal{K} \subset \mathcal{X}_{adm}$ for all $t \ge t_0 > 0$.
@@ -1126,7 +1176,7 @@ Solving this linear differential inequality yields (D.16). The asymptotic noise 
 
 **Rapid Equilibration:** The rate constant $\underline{\lambda}$ is the local "stiffness" of the complexity potential well near the optimum. DSC (Theorem 22) ensures this is strictly positive and typically $\mathcal{O}(1)$ in natural units, yielding convergence timescales $\tau_{conv} \sim 1/(\underline{\lambda}\,\eta_{adapt})$ that are rapid compared to environmental evolution timescales.
 
-**Noise Floor:** The residual fluctuations $\sigma_{eff}$ arise from the underlying ND-RID irreversibility ($\varepsilon \ge \ln 2$, Theorem 31). The noise floor is typically small:
+**Noise Floor:** The residual fluctuations $\sigma_{eff}$ arise from the underlying ND-RID irreversibility ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31). The noise floor is typically small:
 
 $$
 \frac{\sigma_{eff}^2}{\underline{\lambda}\,\eta_{adapt}} \ll C^\star

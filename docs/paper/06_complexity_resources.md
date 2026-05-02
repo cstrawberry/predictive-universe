@@ -8,7 +8,7 @@ This section explores the crucial interplay between system complexity, achievabl
 
 *Throughout this section, natural units $\hbar = c = k_B = 1$ are used unless otherwise noted.*
 
-A fundamental structural feature of the PU framework is that the ND-RID channel capacity bound $C_{\max} < \ln d_0$ (Theorem E.2) propagates through the derivation chain to constrain multiple physical domains. This bound arises from the irreversibility constraint $\varepsilon \geq \ln 2$ (Theorem 31), which implies strict contractivity $f_{RID} < 1$ (Lemma E.1), which in turn limits classical information capacity.
+A fundamental structural feature of the PU framework is that the ND-RID channel capacity bound $C_{\max} < \ln d_0$ (Theorem E.2) propagates through the derivation chain to constrain multiple physical domains. This bound arises from the irreversibility constraint $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), which implies strict contractivity $f_{RID} < 1$ (Lemma E.1), which in turn limits classical information capacity.
 
 ### 6.0.1 Capacity Manifestations Across Domains
 
@@ -44,21 +44,21 @@ where $\sigma_{link} = \chi/(\eta\delta^2)$ is the effective surface density of 
 $$
 G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}(f_{RID})}
 $$
-The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At the PCE-Attractor (Definition 15a), admissibility requires $\varepsilon \ge \ln 2$ (Theorem 31) and PCE selects the saturation $\varepsilon=\ln 2$. For the minimal MPU with $d_0=8$ (Theorem 23), Equation E.15 gives $C_{\max}^*=\ln d_0-\varepsilon=\ln 8-\ln 2=2\ln 2$, which determines $G$ in terms of the microscopic MPU parameters. ∎
+The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At the PCE-Attractor (Definition 15a), admissibility requires $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), and response-null dissipative overhead is PCE-dominated. For the minimal MPU with $d_0=8$ (Theorem 23), the residual-budget branch uses the structural floor in Equation E.15, giving $C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2$, which determines $G$ in terms of the microscopic MPU parameters. ∎
 
 **Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by the single capacity bound $C_{\max} < \ln d_0$ arising from ND-RID contractivity.*
 
 **Remark 6.0.1: Origin of the Constraint.** The capacity bound traces to the irreversibility of self-referential prediction:
 $$
-\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \varepsilon \geq \ln 2 \xrightarrow{\text{Lem E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0
+\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Lem E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0
 $$
 The logical structure of self-reference (SPAP) propagates through thermodynamics (Landauer cost) to information theory (channel capacity) to geometry (gravitational coupling).
 
-**Remark 6.0.2: PCE Optimization.** At the PCE-Attractor (Definition 15a), $\varepsilon$ is minimized subject to $\varepsilon \ge \ln 2$ (Theorem 31). For the minimal MPU ($d_0=8$, Theorem 23) this yields $\varepsilon=\ln 2$ and hence the PCE-optimal channel capacity
+**Remark 6.0.2: PCE Optimization.** At the PCE-Attractor (Definition 15a), the structural SPAP quotient is fixed at $\varepsilon_0=\ln2$ (Theorem 31), while response-null implementation overhead is removed by PCE dominance. For the minimal MPU ($d_0=8$, Theorem 23) this gives the PCE-optimal channel capacity
 $$
-C_{\max}^*=\ln d_0-\varepsilon=\ln 8-\ln 2=2\ln 2 \quad \text{(Equation E.15)}.
+C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2 \quad \text{(Equation E.15)}.
 $$
-This partitions the MPU information budget between the irreducible internal processing cost ($\varepsilon$) and the remaining external communication capacity ($C_{\max}$).
+This partitions the MPU information budget between the irreducible structural internal processing cost ($\varepsilon_0$) and the remaining external communication capacity ($C_{\max}$).
 
 ---
 
@@ -134,7 +134,7 @@ Because the feasible set $\{\mu:\ C_P(\mu)\le C\}$ is nested in $C$, $PP_{\max}(
 
 **6.2.4 Physical Nature of Complexity Transformations (Thermodynamic Irreversibility)**
 
-The adaptation process involves changing the system's complexity $C(t) \to C(t+1)$ (Section 6.4). This corresponds to a physical transformation within the system's representational medium (Theorem 7). Implementing such changes requires physical operations that consume resources (transient Adaptation Costs, part of the SC in Definition 15). Model adaptation involves information processing (e.g., incorporating new data, computing updates) and typically requires logically irreversible information erasure (e.g., discarding outdated model components or hypotheses). By the fundamental link between information and thermodynamics (Landauer's Principle; specifically the bound $\varepsilon \ge \ln 2$, Theorem 31), any logically irreversible operation that must be physically instantiated and cyclically reset incurs irreducible entropy production and energy dissipation. Therefore, complexity transformation ($C(t) \to C(t+1)$) is generally a thermodynamically irreversible physical process associated with resource costs and entropy generation, constraining the dynamics and efficiency of adaptation.
+The adaptation process involves changing the system's complexity $C(t) \to C(t+1)$ (Section 6.4). This corresponds to a physical transformation within the system's representational medium (Theorem 7). Implementing such changes requires physical operations that consume resources (transient Adaptation Costs, part of the SC in Definition 15). Model adaptation involves information processing (e.g., incorporating new data, computing updates) and typically requires logically irreversible information erasure (e.g., discarding outdated model components or hypotheses). By the fundamental link between information and thermodynamics (Landauer's Principle; specifically the bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31), any logically irreversible operation that must be physically instantiated and cyclically reset incurs irreducible entropy production and energy dissipation. Therefore, complexity transformation ($C(t) \to C(t+1)$) is generally a thermodynamically irreversible physical process associated with resource costs and entropy generation, constraining the dynamics and efficiency of adaptation.
 
 **6.2.5 Definition 19 (Def 19): Complexity-Performance Scaling Principles**
 
@@ -357,16 +357,17 @@ The Power Conversion Factor $\Gamma_0$ is not an arbitrary parameter but is a **
 
 1.  **Lower Bound (from $P_{min}$):** The minimal power $P_{min} = R(C_{op})$ required to sustain the minimal $C_{op}$ MPU cycle (Equation 16, linked to Theorem 23 and Theorem 29) sets a minimum physical scale for energy valuation. For adaptation to drive complexity increases when beneficial, the power-equivalent benefit gradient $\Gamma_0 (\partial PP/\partial C)$ must overcome the marginal cost gradient. This necessitates that $\Gamma_0$ be commensurate with baseline operational costs; locally, the threshold for $\Psi>0$ compares $\Gamma_0 \frac{\partial PP}{\partial C}$ to $\lambda R'(C_{op}) + R_I'(C_{op})$:
     $$
-    \Gamma_0 \gtrsim P_{min}=R(C_{op}) \gtrsim \frac{n_{irr}\,k_B T\,\varepsilon}{\tau_{\text{min}}}
+    \Gamma_0 \gtrsim P_{min}=R(C_{op}) \gtrsim \frac{n_{irr}\,k_B T\,\varepsilon_{\mathrm{phys}}}{\tau_{\text{min}}}
+\ge \frac{n_{irr}\,k_B T\,\varepsilon_0}{\tau_{\text{min}}}
 \ge \frac{k_B T \ln 2}{\tau_{\text{min}}} \quad \text{(27)}
     $$
-    where $n_{irr}\ge 1$ is the number of logically irreversible merges that must be reset per minimal cycle and $\varepsilon \ge \ln 2$ is the irreducible dimensionless entropy cost per such merge (Theorem 31). If the cycle rate satisfies $\nu \approx 1/\tau_{\text{min}}$, Equation (27) is equivalently
+    where $n_{irr}\ge 1$ is the number of logically irreversible merges that must be reset per minimal cycle and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ is the irreducible dimensionless entropy cost per such merge (Theorem 31). If the cycle rate satisfies $\nu \approx 1/\tau_{\text{min}}$, Equation (27) is equivalently
     $$
-    \Gamma_0 \gtrsim n_{irr}\,k_B T\,\varepsilon\,\nu.
+    \Gamma_0 \gtrsim n_{irr}\,k_B T\,\varepsilon_{\mathrm{phys}}\,\nu.
     $$
-2.  **Upper Bound (from $\varepsilon$):** The irreducible thermodynamic cost, quantified by dimensionless entropy production $\varepsilon \ge \ln 2$ (Theorem 31), associated with the necessary irreversible state change during an 'Evolve' interaction, provides an upper bound. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), must be considered relative to this fundamental dissipation $E_{dissip} \ge k_B T \varepsilon$. For thermodynamically consistent energy valuation:
+2.  **Upper Bound (from $\varepsilon$):** The irreducible thermodynamic cost, quantified by dimensionless entropy production $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), associated with the necessary irreversible state change during an 'Evolve' interaction, provides an upper bound. The maximum energy-equivalent benefit gainable in a single cycle, $\Gamma_0 \Delta PP_{max}$ (where $\Delta PP_{max} < (\beta-\alpha)$ is the maximal performance improvement), must be considered relative to this fundamental dissipation $E_{dissip} \ge k_B T \varepsilon_{\mathrm{phys}}\ge k_B T\varepsilon_0$. For thermodynamically consistent energy valuation:
      $$
-    \Gamma_0 \lesssim \frac{k_B T \varepsilon \nu}{\Delta PP_{max}} =: \Gamma_{0,crit} \quad \text{(28)}
+    \Gamma_0 \lesssim \frac{k_B T \varepsilon_{\mathrm{phys}} \nu}{\Delta PP_{max}} =: \Gamma_{0,crit} \quad \text{(28)}
     $$
 3.  **Equilibrium Calibration Identity:** At a stable equilibrium configuration characterized by complexity $C^*$ and performance $PP^*$, the Adaptation Driving Force vanishes: $\Psi(C^*, PP^*) = 0$ (Equation 18). This provides a calibration identity relating the constant $\Gamma_0$ to the equilibrium properties of the system:
     $$
@@ -557,13 +558,13 @@ The complex adaptation dynamics governing $C(t)$ and $\hat{C}_{target}(t)$ (Equa
 *   **Performance Measurement:** $PP(t)$ acts as the system's measurement of its current operational state relative to the desired state $PP_{op}$.
 *   **Error Signal:** The deviation $(PP_{op} - PP)$ serves as an error signal.
 *   **Control Actions:** Adjusting $\hat{C}_{target}$ (Equation 38) adapts the internal representation of the environment. Adjusting $C$ via $\Psi$ (Equation 30) modifies capability based on perceived difficulty and costs. Viability enforcement (Equation 39) acts as boundary control.
-*   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and environmental representation $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon \ge \ln 2$), enabling sustained viable prediction.
+*   **Goal:** The coupled dynamics function as a feedback control loop, continuously adjusting internal complexity $C$ and environmental representation $\hat{C}_{target}$ to minimize prediction error (maximize $PP$) efficiently (PCE) while staying within the operational boundaries $(\alpha, \beta)$. It implicitly manages uncertainty and the irreducible stochasticity of ND-RID interactions ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$), enabling sustained viable prediction.
 
 **6.9 Self-Consistent Determination of Viability Bounds $\alpha$ and $\beta$**
 
 In the PU framework, $\alpha$ and $\beta$ are derived thresholds tied to the structure of SPAP, ND-RID, and thermodynamic bounds. Key constraints include:
 
-*   **Lower Bound $\alpha$:** $\alpha$ is constrained by the minimal information content of a predictive act. Specifically, SPAP/erasure implies a necessary overhead of at least one bit of irreducible uncertainty, with $\varepsilon \ge \ln 2$ (Theorem 31), suggesting $\alpha \ge 0.5$ (for binary tasks) or a more general bound $\alpha > 0$.
+*   **Lower Bound $\alpha$:** $\alpha$ is constrained by the minimal information content of a predictive act. Specifically, SPAP/erasure implies a necessary overhead of at least one bit of irreducible uncertainty, with $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), suggesting $\alpha \ge 0.5$ (for binary tasks) or a more general bound $\alpha > 0$.
 
 *   **The Upper Bound $\beta$:** This is the threshold of adaptability, where the marginal cost of further predictive improvement becomes prohibitive under PCE. Its value is set by a dynamic stability condition: the system must be able to afford the resource cost of achieving the next increment of performance without entering a regime of runaway costs or instability. This constrains the relationship between the marginal cost functions ($R'$, $R_I'$) and the performance gap $(\beta - PP)$ at the limit of high complexity. Deriving $\beta$ requires a full, self-consistent solution of the PCE optimization problem at its upper boundary, likely yielding a value for $\beta$ that is a complex function of the framework's core cost and efficiency parameters ($r_p$, $\gamma_p$, $r_I$, $\kappa_{eff}$, $\lambda$, $\Gamma_0$).
 

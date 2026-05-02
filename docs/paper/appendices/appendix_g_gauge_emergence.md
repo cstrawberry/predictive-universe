@@ -203,9 +203,35 @@ Item 4 follows from the definitions. Theorem G.1.7 assigns weights to sharp even
 
 The existence of a well-behaved cost functional satisfying the premises of Theorem G.1.3 not only leads to the Born rule but also provides a justification for the emergence of the Hilbert space structure itself as the unique optimal framework for predictive processing under POP/PCE.
 
-**Theorem G.1.8 (Selection of the complex Hilbert-space branch).** Under POP/PCE, the state space carries a Hilbert-space representation. If one further imposes the branch-selection criterion that phase redundancy be realized by the minimal connected abelian group compatible with the active kernel, then the preferred realization is the complex Hilbert space.
+**Theorem G.1.8 (Complex Hilbert-Space Uniqueness under POP/PCE).** Under POP/PCE, the predictive state space carries a Hilbert-space representation. Among the real, complex, and quaternionic Hilbert-space branches, the complex branch is uniquely selected by compositional closure, local tomography, connected phase transport, and PCE removal of surplus phase redundancy.
 
-*Proof.* The reconstruction results established in Sections G.1.1–G.1.7 and the standard GNS/Wigner analysis provide a Hilbert-space representation of the predictive states and symmetries. At this stage the representation need not yet distinguish between the real, complex, and quaternionic Hilbert-space branches. Impose the additional branch-selection criterion that the physically instantiated phase symmetry be the minimal connected abelian phase group compatible with the active kernel. The real branch has only the discrete phase group $\{\pm 1\}$ and therefore lacks the connected $U(1)$ phase needed for the later gauge construction; the quaternionic branch carries a non-abelian $Sp(1)\cong SU(2)$ phase redundancy, which introduces extra gauge structure relative to the complex branch. The complex branch realizes the required connected phase symmetry with the minimal connected abelian group $U(1)$. Hence, under this added criterion, the preferred Hilbert-space realization is the complex one. QED
+*Proof.* The reconstruction results established in Sections G.1.1–G.1.7 and the standard GNS/Wigner analysis provide a Hilbert-space representation of predictive states and symmetries. The remaining scalar alternatives are $\mathbb R$, $\mathbb C$, and $\mathbb H$.
+
+For a finite $n$-dimensional Hilbert space, the real parameter counts of normalized density data are
+$$
+N_{\mathbb R}(n)=\frac{n(n+1)}2-1,\qquad
+N_{\mathbb C}(n)=n^2-1,\qquad
+N_{\mathbb H}(n)=n(2n-1)-1.
+$$
+Local tomography of a composite requires
+$$
+N_{\mathbb D}(mn)+1=(N_{\mathbb D}(m)+1)(N_{\mathbb D}(n)+1).
+$$
+For $\mathbb C$ this gives $(mn)^2=m^2n^2$, so the identity holds. For $\mathbb R$ it gives
+$$
+\frac{mn(mn+1)}2
+=
+\frac{m(m+1)}2\frac{n(n+1)}2,
+$$
+which fails already at $m=n=2$. For $\mathbb H$ it gives
+$$
+mn(2mn-1)=m(2m-1)n(2n-1),
+$$
+which also fails already at $m=n=2$. Thus genuine real and quaternionic state-space branches fail local tomography under compositional closure.
+
+The phase-redundancy condition gives the same selection independently. The real branch has only the disconnected scalar phase group $\{\pm1\}$ and cannot supply the connected phase transport used in Sections G.2-G.7. The quaternionic branch has scalar phase group $Sp(1)\cong SU(2)$, a three-dimensional nonabelian redundancy. If the extra quaternionic generators change finite protocol responses, they introduce additional gauge content beyond the minimal MPU branch. If they do not change finite protocol responses, Corollary P.6.1b.8 removes them as response-null surplus. The complex branch supplies exactly $U(1)$, the minimal connected abelian scalar phase group compatible with the active kernel.
+
+Therefore the complex Hilbert-space branch is the unique POP/PCE-stable Hilbert branch. ∎
 
 **Corollary G.1.9 (PCE Instability of Alternative Predictive Algebras).**
 Any proposed alternative algebraic structure for prediction (e.g., classical probability on phase space, real or quaternionic Hilbert spaces, Jordan algebras, $L^p$ spaces with $p \neq 2$) would be unstable under PCE optimization compared to the complex Hilbert space structure.
@@ -219,7 +245,7 @@ for all projectors $P$ in the operational theory.
 
 Now take any alternative proposal $\mathfrak{A}_{alt}$:
 
-- If $\mathfrak{A}_{alt}$ supports such a globally non-contextual additive frame functional and also supports efficient composition/local tomography as required by POP, then Theorem G.1.8 applies: the operational theory admits a (GNS) Hilbert representation and is, up to isomorphism of predictions and composition, the complex Hilbert-space theory. In this case there is no genuinely distinct alternative—PCE-stable realizations of $\mathfrak{A}_{alt}$ reproduce complex Hilbert behavior.
+- If $\mathfrak{A}_{alt}$ supports such a globally non-contextual additive frame functional and also supports efficient composition/local tomography as required by POP, then Theorem G.1.8 applies: the operational theory admits a Hilbert representation and is, up to isomorphism of finite protocol responses and composition, the complex Hilbert-space theory. In this case there is no genuinely distinct alternative—PCE-stable realizations of $\mathfrak{A}_{alt}$ reproduce complex Hilbert behavior.
 
 - If $\mathfrak{A}_{alt}$ fails to supply this structure naturally, then an MPU using it must either (i) accept reduced predictive performance $PP$ (lowering $V_{benefit}$), or (ii) impose extra constraints/hidden degrees/contextual correction rules to recover PU consistency. Case (ii) contributes a strictly positive excess cost, which appears as an effective structural penalty in the PCE potential:
 $$
@@ -884,7 +910,7 @@ The MPU network’s ability to support a complex gauge structure is fundamentall
     \tag{G.8.0}
     $$
 
-    Using plausible estimates from the PU framework ($C_{\max} \approx 1.5-2.0$ nats, derived from $f_{RID}<1$ which follows from $\varepsilon \ge \ln 2$; $\alpha_{load} \approx 0.1-0.2$ nats, related to achieving sufficient signal‑to‑noise for coherence), we get a target range for the maximum viable total gauge group dimension:
+    Using plausible estimates from the PU framework ($C_{\max} \approx 1.5-2.0$ nats, derived from $f_{RID}<1$ which follows from $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$; $\alpha_{load} \approx 0.1-0.2$ nats, related to achieving sufficient signal‑to‑noise for coherence), we get a target range for the maximum viable total gauge group dimension:
 
     $$
     n_{\max} \approx \frac{1.5 \text{ to } 2.0}{0.1 \text{ to } 0.2} = 7.5 \text{ to } 20
@@ -1048,8 +1074,8 @@ A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 2.  **Capacity Constraint:** $n_G \leq n_{\max}$. The channel capacity estimate (Equation G.8.0) yields the range $n_{\max} \approx 7.5$–$20$. The geometric bound from the Lagrangian dimension of the QFI symplectic structure (Theorem G.8.2e) yields $n_G \leq ab = 12$. This bound equals the complex dimension of the attractor orbit: $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$, providing a geometric interpretation of the gauge dimension constraint. Since $12$ lies within the channel capacity range, the geometric bound provides the sharp constraint $n_G \leq 12$. This value equals both the Golay code dimension $k = 12$ (Theorem Z.13) and the complex dimension of the attractor orbit $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ (Theorem Z.6.3a). The triple coincidence—channel capacity bound, code dimension, and orbit dimension—provides strong evidence for the structural uniqueness of the gauge sector. The convergence of channel capacity, symplectic geometry, and error-correction theory at the value 12 constitutes a non-trivial consistency check on the framework.
     
     The bound $n_G \leq 12$ traces to two foundational parameters through the derivation chain:
-    $$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon \ge \ln 2 \xrightarrow[\text{at attractor}]{\text{Def. 15a, Thm Z.1}} a = 2 \xrightarrow[\text{minimal branch}]{\text{Thm Z.2}} b = d_0 - a = 6 \xrightarrow{} ab = 12$$
-    where $d_0 = 8$ is the minimal Hilbert space dimension for on-cycle injectivity of self-referential logic on the Appendix Z branch (Theorem Z.2; Theorem 23 gives the lower bound) and $\varepsilon = \ln 2$ is the attractor-saturating SPAP entropy cost (Definition 15a; Theorem 31 gives the lower bound).
+    $$\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow[\text{at attractor}]{\text{Def. 15a, Thm Z.1}} a = 2 \xrightarrow[\text{minimal branch}]{\text{Thm Z.2}} b = d_0 - a = 6 \xrightarrow{} ab = 12$$
+    where $d_0 = 8$ is the minimal Hilbert space dimension for on-cycle injectivity of self-referential logic on the Appendix Z branch (Theorem Z.2; Theorem 23 gives the lower bound) and $\varepsilon_0=\ln2$ is the attractor-saturating SPAP entropy cost (Definition 15a; Theorem 31 gives the lower bound).
 
 3.  **Structural Stability:** $D$ must allow for the formation and persistence of stable, complex MPU aggregates capable of advanced prediction (Section G.8.2.4). This criterion strongly favors $D=4$.
 4.  **Information Efficiency:** $D$ should optimize information‑theoretic and network efficiencies related to holography, propagation, and coherence (Section G.8.2.5). This criterion is hypothesized to further favor $D=4$.
@@ -2087,19 +2113,19 @@ This probability unification is the dynamical complement to the entropy unificat
 The logical foundation for probability measures in the PU framework traces through a rigorous derivation chain:
 
 $$
-\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Def 15a}} \tau^* = \frac{I_a}{a} \oplus 0_b
+\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Def 15a}} \tau^* = \frac{I_a}{a} \oplus 0_b
 $$
 
 **Stage 1: Irreducible Entropy Cost.** The Self-Referential Paradox of Accurate Prediction (Theorems 10–11) requires a logically irreversible 2-to-1 state merge in each predictive cycle (Lemma Z.2). By Landauer's principle [Landauer 1961], this merge has an irreducible thermodynamic cost (Theorem 31, Appendix J):
 
 $$
-\varepsilon \geq \ln 2 \text{ nats}
+\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \text{ nats}
 \tag{G.1.9.1}
 $$
 
-The bound is exact and saturated by optimal erasure protocols [Bennett 1982]. This entropy cost satisfies $\varepsilon\ge \ln 2$ (Theorem 31) and is saturated, $\varepsilon=\ln 2$, at the PCE-Attractor (Definition 15a). It appears both as a thermodynamic constraint in the MPU internal cycle and as a structural constraint on the dimension of the active kernel (forcing $a=2$ on that branch). It thus ties the emergence of the quantum state space, the arrow of time, and the scaling of spacetime coupling together through one irreducible information-theoretic constant.
+The structural floor $\varepsilon_0=\ln2$ is exact. The physical bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ is saturated only on the overhead-free quasi-static implementation branch [Bennett 1982]. This cost split is fixed by Theorem 31, while the PCE-Attractor uses the structural value $\varepsilon_0=\ln2$ for the discrete backbone (Definition 15a). It appears both as a thermodynamic constraint in the MPU internal cycle and as a structural constraint on the dimension of the active kernel (forcing $a=2$ on that branch). It thus ties the emergence of the quantum state space, the arrow of time, and the scaling of spacetime coupling together through one irreducible information-theoretic constant.
 
-**Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space satisfies $S(\rho) \le \ln a$ nats, with equality only for the maximally mixed state [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible $a$ on the attractor-saturating branch (Theorem Z.1):
+**Stage 2: Physical Instantiation of the Cost.** The Principle of Physical Instantiation (PPI, Appendix P, Definition P.6.2) requires abstract logical costs to manifest as actual physical subsystems. The von Neumann entropy of a maximally mixed state on an $a$-dimensional Hilbert space satisfies $S(\rho) \le \ln a$ nats, with equality only for the maximally mixed state [von Neumann 1932]. Admissibility requires $\ln a \ge \varepsilon_0$; since $a \in \mathbb{N}$, PPI-optimality selects the minimal admissible $a$ on the attractor-saturating branch (Theorem Z.1):
 
 $$
 a = 2
@@ -2142,7 +2168,7 @@ $$
 p\in(0,1].
 \tag{G.1.9.6}
 $$
-The irreducible cost $\varepsilon=\ln 2$ (Theorem 31) is the thermodynamic signature of logically irreversible refresh/reset in the SPAP cycle, but $\varepsilon$ alone does not determine a universal quantitative lower bound on $p$ without additional microscopic assumptions about how entropy production is partitioned between $\Psi$ and the refresh component.
+The irreducible cost $\varepsilon_0=\ln2$ (Theorem 31) is the thermodynamic signature of logically irreversible refresh/reset in the SPAP cycle, but $\varepsilon$ alone does not determine a universal quantitative lower bound on $p$ without additional microscopic assumptions about how entropy production is partitioned between $\Psi$ and the refresh component.
 
 *Proof.* Equation (G.1.9.5) defines $p$ as the weight of the input-independent refresh component in a convex decomposition of the averaged channel. Theorem 31 establishes that each cycle incurs a strictly positive irreducible entropy cost, which must be physically instantiated (Stage 2) and is operationally associated with refresh/reset in the SPAP update. At the level of the averaged channel model, this corresponds to $p>0$.
 
@@ -2349,7 +2375,7 @@ This identifies the gravitational constant $G$ as an emergent quantity determine
 The result $\eta_{ent} = 1/(4G)$ connects directly to the gravitational entropy in the unified entropy framework (Section P.6.5). The Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ arises from the channel capacity of ND-RID interactions crossing the horizon (Theorems E.3 and E.5). This is not an analogy but an identity: horizon entropy counts the Shannon entropy of channel capacity across the boundary, measured in Planck units. The derivation chain from SPAP to horizon entropy (Section P.6.5.2) makes this explicit:
 
 $$
-\varepsilon \ge \ln 2 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
+\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
 $$
 
 ### G.1.9.7 The Unified Mechanism
@@ -2362,20 +2388,20 @@ with the modular Hamiltonian $K$ determined by the relevant constraint geometry.
 
 *Proof.* Sections G.1.1–G.1.8 identify measurement probabilities with expectation values computed from density operators. Theorems G.1.9.4 and G.1.9.5 show that the PCE-attractor state and its support-restricted equilibrium description are of Gibbs/KMS form. Theorem G.1.9.6 then records how additional physical constraints modify the modular Hamiltonian additively while preserving the same Gibbs-form template. Therefore the probability structures considered in these sections share a common Gibbs-form representation, with differences encoded in the constraint term entering $K$. QED
 
-### G.1.9.8 The Conversion Factor: $\varepsilon = \ln 2$
+### G.1.9.8 The Conversion Factor: $\varepsilon_0=\ln2$
 
-The irreducible entropy cost $\varepsilon = \ln 2$ plays the role of a fundamental conversion factor, analogous to $c^2$ in mass-energy equivalence.
+The irreducible entropy cost $\varepsilon_0=\ln2$ plays the role of a fundamental conversion factor, analogous to $c^2$ in mass-energy equivalence.
 
-**Theorem G.1.9.9 (Landauer Conversion).** The SPAP entropy cost $\varepsilon = \ln 2$ establishes the conversion between:
+**Theorem G.1.9.9 (Landauer Conversion).** The SPAP entropy cost $\varepsilon_0=\ln2$ establishes the conversion between:
 
 | Domain | Quantity | Conversion |
 |--------|----------|------------|
-| Logical | SPAP cycle cost | $\varepsilon = \ln 2$ nats |
+| Logical | SPAP cycle cost | $\varepsilon_0=\ln2$ nats |
 | Thermodynamic | Minimum heat dissipation | $Q_{min} = k_B T \ln 2$ |
 | Information | Active subspace dimension | $a = 2$ |
 | Geometric | Interface mode count | $M = 2ab = 24$ |
 
-These conversions realize the entropy domain correspondences of Thesis P.6.1 (Section P.6.5.1). The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains, while $\varepsilon = \ln 2$ is the fundamental quantum of entropy from which all domain-specific expressions derive.
+These conversions realize the entropy domain correspondences of Thesis P.6.1 (Section P.6.5.1). The constants $k_B$, $\hbar$, $c$, and $G$ serve as exchange rates between operational domains, while $\varepsilon_0=\ln2$ is the fundamental quantum of entropy from which all domain-specific expressions derive.
 
 *Proof.* Each conversion follows from the derivation chain:
 
@@ -2403,7 +2429,7 @@ Together with the entropy unification of Section P.6.5, this establishes that th
 
 | Entropy Unification (P.6.5) | Probability Unification (G.1.9) |
 |-----------------------------|--------------------------------|
-| SPAP entropy $\varepsilon = \ln 2$ | Irreducible cycle cost |
+| SPAP entropy $\varepsilon_0=\ln2$ | Irreducible cycle cost |
 | Shannon entropy $H$ | State distinguishability |
 | Thermodynamic entropy $dS = \delta Q/T$ | Boltzmann distribution |
 | von Neumann entropy $S(\rho)$ | Born rule |
@@ -2413,7 +2439,7 @@ The complete derivation chain from foundational principles to physical probabili
 
 $$
 \boxed{
-\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Def 15a}} \tau^* \xrightarrow{\text{PCE}} \text{Detailed Balance} \xrightarrow{\mathcal{C}} \rho^*_{\mathcal{C}} = Z^{-1}e^{-K^*(\mathcal{C})}
+\text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_0=\ln2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{\text{Def 15a}} \tau^* \xrightarrow{\text{PCE}} \text{Detailed Balance} \xrightarrow{\mathcal{C}} \rho^*_{\mathcal{C}} = Z^{-1}e^{-K^*(\mathcal{C})}
 }
 $$
 
@@ -2438,15 +2464,15 @@ This follows from single-valuedness of the amplitude $e^{i\mathcal{S}/\hbar}$. F
 
 **Corollary G.1.9.10b (SPAP-Topological Ratio).** *The ratio $2\pi/\varepsilon = 2\pi/\ln 2 \approx 9.065$ determines the number of minimum-cost SPAP cycles per quantum of orbital action.*
 
-*Proof.* From the Action-Entropy Identity (Corollary Q.0.1), action in units of $\hbar$ equals total SPAP entropy: $\mathcal{S}/\hbar = \sum_i \varepsilon_i$. At the SPAP minimum, each cycle contributes $\varepsilon = \ln 2$ nats (Theorem 31). For one Bohr-Sommerfeld quantum $\mathcal{S} = h = 2\pi\hbar$:
+*Proof.* From the Action-Entropy Identity (Corollary Q.0.1), action in units of $\hbar$ equals total SPAP entropy: $\mathcal{S}/\hbar = \sum_i \varepsilon_i$. At the SPAP minimum, each cycle contributes $\varepsilon_0=\ln2$ nats (Theorem 31). For one Bohr-Sommerfeld quantum $\mathcal{S} = h = 2\pi\hbar$:
 $$N_{\text{cycles}} = \frac{2\pi\hbar/\hbar}{\ln 2} = \frac{2\pi}{\ln 2} \approx 9.065$$
 QED
 
-**Remark G.1.9.10c: Complementary Roles of $\varepsilon$ and $2\pi$.** The quantities $\varepsilon = \ln 2$ and $2\pi$ operate in complementary domains:
+**Remark G.1.9.10c: Complementary Roles of $\varepsilon$ and $2\pi$.** The quantities $\varepsilon_0=\ln2$ and $2\pi$ operate in complementary domains:
 
 | Quantity | Domain | Origin | Role in Framework |
 |:---------|:-------|:-------|:------------------|
-| $\varepsilon = \ln 2$ | Measure-theoretic | SPAP logical merge (Theorem 31) | Irreducible information cost |
+| $\varepsilon_0=\ln2$ | Measure-theoretic | SPAP logical merge (Theorem 31) | Irreducible information cost |
 | $2\pi$ | Topological | $\pi_1(U(1)) = \mathbb{Z}$ | Phase quantization period |
 
 Neither is derivable from the other. The measure-theoretic entropy $\varepsilon$ counts distinguishable states; the topological factor $2\pi$ enforces consistency under cyclic evolution. Their ratio $2\pi/\ln 2$ characterizes the computational depth of one action quantum.
@@ -2495,7 +2521,7 @@ $$a = D - 2$$
 
 where $a = 2$ is the Landauer active dimension (Theorem Z.1) and $D = 4$ is the emergent spacetime dimension (Theorem Z.11).
 
-*Proof.* From Theorem Z.1, PPI-optimality on the attractor-saturating branch $\varepsilon = \ln 2$ selects active dimension $a = 2$. From Theorem Z.11, the mode-channel correspondence $M = K(D)$ with $M = 24$ uniquely selects $D = 4$ from the mode-channel correspondence. Therefore $D - 2 = 4 - 2 = 2 = a$.
+*Proof.* From Theorem Z.1, PPI-optimality on the attractor-saturating branch $\varepsilon_0=\ln2$ selects active dimension $a = 2$. From Theorem Z.11, the mode-channel correspondence $M = K(D)$ with $M = 24$ uniquely selects $D = 4$ from the mode-channel correspondence. Therefore $D - 2 = 4 - 2 = 2 = a$.
 
 This equality holds specifically at the PCE-optimal point. Checking alternatives:
 
@@ -2526,7 +2552,7 @@ Only the unique solution $(\varepsilon, a, b, M, D) = (\ln 2, 2, 6, 24, 4)$ exis
 
 **Theorem G.8.7f (Canonicity).** The bijection $\Phi$ is canonical—it involves no arbitrary choices.
 
-*Proof.* The partition $(a, b) = (2, 6)$ is uniquely determined by $\varepsilon = \ln 2$ (Theorem Z.1). The Grassmannian $\mathrm{Gr}(2, 8)$ has a unique compatible complex structure (Appendix P). The Golay code selects a unique (up to equivalence) Lagrangian subspace (Theorem Z.13). The SM gauge algebra is the unique 12-dimensional algebra satisfying all physical constraints (Theorem G.8.4b). The little group $SO(2)$ in $D = 4$ acts on the 2-dimensional transverse polarization plane via its defining representation. All ingredients are uniquely determined by framework constraints. ∎
+*Proof.* The partition $(a, b) = (2, 6)$ is uniquely determined by $\varepsilon_0=\ln2$ (Theorem Z.1). The Grassmannian $\mathrm{Gr}(2, 8)$ has a unique compatible complex structure (Appendix P). The Golay code selects a unique (up to equivalence) Lagrangian subspace (Theorem Z.13). The SM gauge algebra is the unique 12-dimensional algebra satisfying all physical constraints (Theorem G.8.4b). The little group $SO(2)$ in $D = 4$ acts on the 2-dimensional transverse polarization plane via its defining representation. All ingredients are uniquely determined by framework constraints. ∎
 
 ## G.10 Emergence of Spinor Structure from SPAP Logic
 
@@ -2550,7 +2576,7 @@ This involution is the logical foundation of the entire framework. The SPAP upda
 
 ### G.10.1.2 Connection to Landauer Cost
 
-The $\mathbb{Z}_2$ structure directly generates the irreducible entropy cost $\varepsilon = \ln 2$ (Theorem 31). By Lemma Z.2 (Appendix Z), the physical instantiation of the SPAP cycle implements a 2-to-1 logical state merge: the input space $\{0,1\} \times \{0,1\}$ (state and prediction registers) maps to output space $\{0,1\} \times \{p_{\text{ready}}\}$, compressing 4 states to 2. This state-space structure follows from the operational requirement that the prediction register must reset to a determinate ready state before each new cycle can commence. Specifically, the cycle map $G_{\text{cycle}}: (\phi_t, p_t) \mapsto (\phi_{t+1}, p_{t+1})$ satisfies:
+The $\mathbb{Z}_2$ structure directly generates the irreducible entropy cost $\varepsilon_0=\ln2$ (Theorem 31). By Lemma Z.2 (Appendix Z), the physical instantiation of the SPAP cycle implements a 2-to-1 logical state merge: the input space $\{0,1\} \times \{0,1\}$ (state and prediction registers) maps to output space $\{0,1\} \times \{p_{\text{ready}}\}$, compressing 4 states to 2. This state-space structure follows from the operational requirement that the prediction register must reset to a determinate ready state before each new cycle can commence. Specifically, the cycle map $G_{\text{cycle}}: (\phi_t, p_t) \mapsto (\phi_{t+1}, p_{t+1})$ satisfies:
 - Input: 4 distinct logical states $\{(0,0), (0,1), (1,0), (1,1)\}$
 - Output: 2 distinct logical states $\{(0, p_{\text{ready}}), (1, p_{\text{ready}})\}$
 
@@ -2563,7 +2589,7 @@ $$
 \varepsilon = \ln\left(\frac{4}{2}\right) = \ln 2 \text{ nats} \tag{G.10.2}
 $$
 
-This establishes the chain: $\text{SPAP} \xrightarrow{\mathbb{Z}_2} \varepsilon = \ln 2$.
+This establishes the chain: $\text{SPAP} \xrightarrow{\mathbb{Z}_2} \varepsilon_0=\ln2$.
 
 ---
 
@@ -2651,14 +2677,14 @@ using the identity $(\hat{n} \cdot \vec{\sigma})^2 = I$ and the matrix exponenti
 **Remark G.10.1: Causal Chain from SPAP $\mathbb{Z}_2$ to Spinor $\mathbb{Z}_2$.** The $\mathbb{Z}_2$ structure appears at two distinct points in the derivation chain: first as the logical involution of SPAP ($\iota: \phi \mapsto \text{NOT}(\phi)$), and second as the kernel $\{I, -I\}$ of the double cover $\pi: \text{SU}(2) \to \text{SO}(3)$. These are mathematically distinct objects—the SPAP $\mathbb{Z}_2$ acts on the logical states $\{0, 1\}$ via negation, while the double cover $\mathbb{Z}_2$ acts on the active kernel $\mathbb{C}^2$ by scalar multiplication. However, these two $\mathbb{Z}_2$ structures are *connected through necessary implication* in the derivation chain established in this appendix:
 
 1. The SPAP logical involution (Definition G.10.1) determines the 2-to-1 merge structure (Lemma Z.2)
-2. This merge structure determines $\varepsilon = \ln 2$ via Landauer's principle (Theorem 31)
+2. This merge structure determines $\varepsilon_0=\ln2$ via Landauer's principle (Theorem 31)
 3. PPI-optimality selects the minimal admissible subsystem dimension $a = 2$ (Theorem Z.1)
 4. PCE selects SU(2) as the symmetry group of this 2-dimensional active kernel (Theorem G.10.3)
 5. SU(2) inherently possesses center $\{I, -I\} \cong \mathbb{Z}_2$ and is the universal double cover of SO(3)
 
 The complete causal chain is therefore:
 $$
-\text{SPAP } \mathbb{Z}_2 \xrightarrow{\text{Landauer}} \varepsilon = \ln 2 \xrightarrow{\text{PPI}} a = 2 \xrightarrow{\text{PCE}} \text{SU}(2) \xrightarrow{\text{Lie theory}} \ker(\pi) = \mathbb{Z}_2
+\text{SPAP } \mathbb{Z}_2 \xrightarrow{\text{Landauer}} \varepsilon_0=\ln2 \xrightarrow{\text{PPI}} a = 2 \xrightarrow{\text{PCE}} \text{SU}(2) \xrightarrow{\text{Lie theory}} \ker(\pi) = \mathbb{Z}_2
 $$
 
 The spinor sign flip under $2\pi$ rotation is thus ultimately traceable to the logical structure of self-referential prediction: the SPAP $\mathbb{Z}_2$ necessarily implies (through this derivation chain) the spinor $\mathbb{Z}_2$, even though they act on different mathematical objects.
@@ -2688,15 +2714,15 @@ $$
 
 **Step 1 (Mass from relational information).** By Theorem N.5 (Mass-Information Equivalence, Appendix N), rest mass for fundamental matter is determined by relational information content:
 $$
-m = \frac{\mathcal{I}_{\text{rel}}}{2\sqrt{8\varepsilon}} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{\text{rel}} \cdot m_P \tag{G.10.12}
+m = \frac{\mathcal{I}_{\text{rel}}}{2\sqrt{8\varepsilon_0}} \cdot m_P \approx 0.212 \cdot \mathcal{I}_{\text{rel}} \cdot m_P \tag{G.10.12}
 $$
-where $\varepsilon = \ln 2$ (Theorem 31), $m_P = \sqrt{\hbar c/G}$ is the Planck mass, and $\mathcal{I}_{\text{rel}}$ quantifies the system's predictive correlations with the network.
+where $\varepsilon_0=\ln2$ (Theorem 31), $m_P = \sqrt{\hbar c/G}$ is the Planck mass, and $\mathcal{I}_{\text{rel}}$ quantifies the system's predictive correlations with the network.
 
-**Step 2 (Relational information requires active kernel processing).** The relational information $\mathcal{I}_{\text{rel}}$ for fundamental matter fields is maintained through the SPAP cycle, which necessarily involves processing on the active kernel $\mathcal{H}_a \cong \mathbb{C}^2$. The irreversible entropy cost $\varepsilon = \ln 2$ per cycle (Theorem 31, Appendix J) is incurred on this 2-dimensional subsystem. By Corollary N.4.1 (Appendix N), the entropy flow rate maintaining $\mathcal{I}_{\text{rel}}$ is:
+**Step 2 (Relational information requires active kernel processing).** The relational information $\mathcal{I}_{\text{rel}}$ for fundamental matter fields is maintained through the SPAP cycle, which necessarily involves processing on the active kernel $\mathcal{H}_a \cong \mathbb{C}^2$. The irreversible entropy cost $\varepsilon_0=\ln2$ per cycle (Theorem 31, Appendix J) is incurred on this 2-dimensional subsystem. By Corollary N.4.1 (Appendix N), the entropy flow rate maintaining $\mathcal{I}_{\text{rel}}$ is:
 $$
 \frac{d\mathcal{S}}{d\tau} = \frac{\mathcal{I}_{\text{rel}}}{2\tau_{\text{min}}} \tag{G.10.13}
 $$
-where $\tau_{\text{min}} = \sqrt{8\varepsilon} \cdot t_P$ is the temporal discretization scale (Theorem Q.6.1).
+where $\tau_{\text{min}} = \sqrt{8\varepsilon_0} \cdot t_P$ is the temporal discretization scale (Theorem Q.6.1).
 
 **Step 3 (Active kernel fields transform under SU(2)).** Fields encoding information on the active kernel $\mathcal{H}_a$ transform under the symmetry group SU(2) $\subset$ Spin(1,3) (Theorems G.10.3, G.10.5). By Corollary G.10.4.1, such fields are spinors.
 
@@ -2744,7 +2770,7 @@ This result is consistent with the spin-statistics theorem of axiomatic quantum 
 | Step | Result | Origin | Status | Reference |
 |:----:|:-------|:-------|:------:|:----------|
 | 1 | $\iota^2 = \text{id}$, $\iota \neq \text{id}$ | SPAP logical structure | Derived | Theorem 10, Definition G.10.1, Lemma G.10.1a |
-| 2 | $\varepsilon = \ln 2$ on the attractor branch | Landauer + 2-to-1 merge | Derived | Theorem 31, Definition 15a, Lemma Z.2 |
+| 2 | $\varepsilon_0=\ln2$ on the attractor branch | Landauer + 2-to-1 merge | Derived | Theorem 31, Definition 15a, Lemma Z.2 |
 | 3 | $a = 2$ | PPI-optimality on the attractor-saturating branch | Derived | Theorem Z.1 |
 | 4 | $U_\iota = \sigma_x \in U(2)$ | Unitary realization | Derived | Theorem G.10.2 |
 | 5 | SU(2) symmetry | PCE + completeness | Derived | Theorem G.10.3 |
@@ -2763,7 +2789,7 @@ The complete derivation chain is:
 
 $$
 \boxed{
-\text{SPAP} \xrightarrow{\mathbb{Z}_2} \varepsilon = \ln 2 \xrightarrow{\text{PPI}} a = 2 \xrightarrow{\text{PCE}} \text{SU}(2) \xrightarrow{\text{time}} \text{Spin}(1,3) \xrightarrow{} \textbf{Spinors} \xrightarrow{\mathcal{I}_{\text{rel}}} \textbf{Mass}
+\text{SPAP} \xrightarrow{\mathbb{Z}_2} \varepsilon_0=\ln2 \xrightarrow{\text{PPI}} a = 2 \xrightarrow{\text{PCE}} \text{SU}(2) \xrightarrow{\text{time}} \text{Spin}(1,3) \xrightarrow{} \textbf{Spinors} \xrightarrow{\mathcal{I}_{\text{rel}}} \textbf{Mass}
 } \tag{G.10.16}
 $$
 

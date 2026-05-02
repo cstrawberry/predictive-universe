@@ -16,13 +16,13 @@ The MPU network executes cyclical predictive operations, each cycle implementing
 
 $$\text{Predict} \to \text{Verify} \to \text{Update}$$
 
-Each non-trivial cycle incurs the irreducible SPAP entropy cost $\varepsilon \geq \ln 2$ nats (Theorem 31, Appendix J). This cost arises from the logically irreversible 2-to-1 state merge required by self-referential prediction (Lemma J.1), and by Landauer's principle, necessarily manifests as thermodynamic entropy production.
+Each non-trivial cycle incurs the structural SPAP entropy cost $\varepsilon_0=\ln 2$ nats and physical implementation cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31, Appendix J). This cost arises from the logically irreversible 2-to-1 state merge required by self-referential prediction (Lemma J.1), and by Landauer's principle, necessarily manifests as thermodynamic entropy production.
 
 **Definition Q.0.1 (Dimensionless Discrete Predictive Action).** For a trajectory of the MPU network over $N$ predictive cycles, define the *dimensionless* discrete predictive action by:
 
 $$\mathcal{S}_{disc} := \sum_{i=1}^{N} \varepsilon_i$$
 
-where $\varepsilon_i \ge \ln 2$ is the SPAP entropy production (in nats) of the $i$-th cycle. This quantity counts the total irreversible entropy cost required to evolve the network configuration along the specified trajectory.
+where $\varepsilon_i\ge\varepsilon_0=\ln2$ is the physical entropy production (in nats) of the $i$-th cycle, decomposed as $\varepsilon_i=\varepsilon_0+\varepsilon_{\mathrm{diss},i}$ with $\varepsilon_{\mathrm{diss},i}\ge0$. This quantity counts the total irreversible entropy cost required to evolve the network configuration along the specified trajectory.
 
 The corresponding *physical* action functional is obtained by the universal conversion factor $\hbar$:
 
@@ -33,9 +33,9 @@ $$\mathcal{S}^{phys}_{disc} := \hbar\,\mathcal{S}_{disc}$$
 
 $$\mathcal{S}_{disc} \geq N_{ops} \cdot \ln 2$$
 
-*Proof.* Each non-trivial operation contributes at least the Landauer lower bound $\varepsilon \ge \ln 2$ by Theorem 31. Summing over $N_{\text{ops}}$ operations gives the stated inequality. QED
+*Proof.* Each non-trivial operation has physical cost $\varepsilon_i=\varepsilon_0+\varepsilon_{\mathrm{diss},i}\ge\varepsilon_0=\ln2$ by Theorem 31. Summing this lower bound over $N_{\text{ops}}$ operations gives the stated inequality. QED
 
-**Remark: Entropy Unification.** The quantity $\varepsilon$ appearing here is the same SPAP entropy that, through the derivation chain of Thesis P.6.1 (Appendix P), connects to Shannon, von Neumann, thermodynamic, and Bekenstein-Hawking entropy. The discrete predictive action thus inherits this unified structure: it counts entropy in the foundational sense established by the framework.
+**Remark Q.0.1a (Structural and Physical Entropy in the Action Ledger).** The structural quantity $\varepsilon_0$ appearing here is the same SPAP entropy quantum that, through the derivation chain of Thesis P.6.1 (Appendix P), connects to Shannon, von Neumann, thermodynamic, and Bekenstein-Hawking entropy. The physical trajectory costs $\varepsilon_i=\varepsilon_0+\varepsilon_{\mathrm{diss},i}$ add nonnegative overhead to this structural floor. The discrete predictive action thus inherits the unified entropy structure while still allowing implementation-dependent dissipation.
 
 ### Q.0.3 The Continuum Limit via Γ-Convergence
 
@@ -58,7 +58,7 @@ where $\hbar$ is the universal conversion factor between SPAP entropy units (nat
 
 1. **Spatial sector:** The discrete cost for spatial variations Γ-converges to a positive-definite quadratic form defining the emergent Riemannian metric on spatial slices.
 
-2. **Temporal sector:** The irreversibility of the 'Evolve' process ($\varepsilon \ge \ln 2$, Theorem 31) supplies an entropy-selected time direction (Appendix O, §O.4) — Hypothesis O.7.2.2 of the Appendix O signature closure theorem. Promotion of the resulting operational causal frontier to a Lorentzian principal symbol with signature $(-, +, +, +)$ requires the additional hypotheses O.7.2.1, O.7.2.3, and O.7.2.4 (positive-definite spatial block, second-order continuum principal symbol, nondegenerate hyperbolic cone coinciding with the operational causal frontier). Under the full four-hypothesis package, Appendix O Theorem O.7a yields the Lorentzian signature; this matches the parallel Lorentzian-branch alignments at Theorem 46 / Corollary 46a in the main text and at Theorem P.8.5 in Appendix P.
+2. **Temporal sector:** The irreversibility of the 'Evolve' process ($\varepsilon_0=\ln2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$, Theorem 31) supplies an entropy-selected time direction (Appendix O, §O.4) — Hypothesis O.7.2.2 of the Appendix O signature closure theorem. Promotion of the resulting operational causal frontier to a Lorentzian principal symbol with signature $(-, +, +, +)$ requires the additional hypotheses O.7.2.1, O.7.2.3, and O.7.2.4 (positive-definite spatial block, second-order continuum principal symbol, nondegenerate hyperbolic cone coinciding with the operational causal frontier). Under the full four-hypothesis package, Appendix O Theorem O.7a yields the Lorentzian signature; this matches the parallel Lorentzian-branch alignments at Theorem 46 / Corollary 46a in the main text and at Theorem P.8.5 in Appendix P.
 
 
 3. **Combined action:** The full Γ-limit yields the standard action for fields in curved spacetime, with $\hbar$ appearing as the conversion factor between discrete (nats) and continuous (J·s) descriptions.
@@ -375,7 +375,7 @@ This proves (Q.0.6f). ∎
 
 ## Q.0.7 The Landauer Phase Structure and Emergent U(1)
 
-This section establishes a precise connection between the discrete SPAP entropy structure and the emergence of continuous U(1) gauge symmetry. The key insight is that the Landauer constant $\varepsilon = \ln 2$ generates a dense subgroup of U(1), providing a microscopic origin for continuous gauge phases from discrete computational operations.
+This section establishes a precise connection between the discrete SPAP entropy structure and the emergence of continuous U(1) gauge symmetry. The key insight is that the Landauer constant $\varepsilon_0=\ln2$ generates a dense subgroup of U(1), providing a microscopic origin for continuous gauge phases from discrete computational operations.
 
 ---
 
@@ -550,7 +550,7 @@ on the matter-equation solution manifold. Since $\alpha$ is arbitrary, $\nabla_\
 
 ### Q.0.7.5 Entropy-Holonomy Decomposition
 
-**Definition Q.0.7e (Entropy-Holonomy Connection and Overhead Decomposition).** For any discrete history/path $\phi$ composed of SPAP cycles with entropy costs $\{\varepsilon_i\}$, define its **dimensionless holonomy angle**:
+**Definition Q.0.7e (Entropy-Holonomy Connection and Overhead Decomposition).** For any discrete history/path $\phi$ composed of SPAP cycles with entropy costs $\{\varepsilon_i\}$, where $\varepsilon_i=\varepsilon_0+\varepsilon_{\mathrm{diss},i}$ and $\varepsilon_0=\ln2$, define its **dimensionless holonomy angle**:
 $$\Theta(\phi) := \sum_{i \in \phi} \varepsilon_i$$
 
 The corresponding phase factor is:
@@ -558,8 +558,8 @@ $$U(\phi) := e^{i\Theta(\phi)}$$
 
 By the Action–Entropy Identity (Corollary Q.0.1), $\Theta(\phi) = \mathcal{S}(\phi)/\hbar$ for histories in the action ensemble, so $U(\phi) = e^{i\mathcal{S}(\phi)/\hbar}$.
 
-Define the **Landauer baseline** $\varepsilon_{\min} := \ln 2$ (Theorem 31) and the **overhead costs**:
-$$\delta\varepsilon_i := \varepsilon_i - \ln 2 \geq 0$$
+Define the **structural Landauer baseline** $\varepsilon_0 := \ln 2$ (Theorem 31) and the **overhead costs**:
+$$\delta\varepsilon_i := \varepsilon_i - \varepsilon_0 \geq 0$$
 
 For a history with cycle number $N(\phi)$, the holonomy decomposes as:
 $$\Theta(\phi) = N(\phi) \ln 2 + \Delta(\phi), \qquad \Delta(\phi) := \sum_{i \in \phi} \delta\varepsilon_i \geq 0$$
@@ -893,7 +893,7 @@ $$M_n := \begin{pmatrix} p_n & p_{n-1} \\ q_n & q_{n-1} \end{pmatrix}, \qquad \d
 
 Equivalently, the digit string $[0; 9, 15, 2, 4, 1, 1, 1, 1, 2, 2, 3, \ldots]$ defines a word in the generators $S: \tau \mapsto -1/\tau$ and $T: \tau \mapsto \tau + 1$, giving a canonical coding of a geodesic on the modular surface $\mathcal{H}/PSL_2(\mathbb{Z})$ by continued fractions [Series 1985].
 
-This provides a rigorous $PSL_2(\mathbb{Z})$-structured object determined solely by the Landauer constant $\ln 2$—a second route into modular structure complementing the lattice/VOA path of Appendix P (Appendix P, Section P.13.15.1: $\varepsilon = \ln 2 \to M = 24 \to \Lambda_{24} \to V^\natural \to \mathbb{M}$).
+This provides a rigorous $PSL_2(\mathbb{Z})$-structured object determined solely by the Landauer constant $\ln 2$—a second route into modular structure complementing the lattice/VOA path of Appendix P (Appendix P, Section P.13.15.1: $\varepsilon_0=\ln2 \to M = 24 \to \Lambda_{24} \to V^\natural \to \mathbb{M}$).
 
 *Note:* The Klein $j$-invariant is defined on the upper half-plane $\mathcal{H} = \{\tau \in \mathbb{C} : \mathrm{Im}(\tau) > 0\}$; the real axis $\mathbb{R}$ lies on the boundary of $\mathcal{H}$, so expressions like $j(\alpha_L)$ are not defined as holomorphic values. The modular itinerary construction avoids this issue entirely. Further development of this connection is deferred to future work.
 
@@ -905,6 +905,8 @@ This provides a rigorous $PSL_2(\mathbb{Z})$-structured object determined solely
 $$D_\mu\Psi = (\partial_\mu + \Omega_\mu + iq A_\mu)\Psi$$
 
 and associated $U(1)$ holonomies $\exp(iq\oint_\gamma A_\mu dx^\mu)$ (Section G.4).
+
+The constant $\ln2$ entering the Landauer phase is the structural SPAP quantum $\varepsilon_0$ of Theorem 31, not the implementation-dependent $\varepsilon_{\mathrm{phys}}$. The dense $U(1)$ closure of $G_L$ depends only on the structural value.
 
 The present results supply a microscopic origin for an effective continuous $U(1)$ phase: the SPAP-minimum generator $g_L = e^{i\ln 2}$ generates the countable cyclic subgroup $G_L$, while Theorem Q.0.7d–Corollary Q.0.7d′ imply $\overline{G_L} = U(1)$. The Landauer-Noether Closure Principle (Theorem Q.0.7d2) strengthens this from a topological statement to an operational symmetry statement: every continuous finite-resolution predictive functional invariant under the discrete SPAP/Landauer phase subgroup is invariant under the full effective $U(1)$ closure. In particular, the holonomy constraint (Theorem Q.0.4) can be expressed as the quantization of the entropy-holonomy $\Theta(\gamma)$, and Corollary Q.0.7g shows that nontrivial holonomy requires overhead above the Landauer baseline.
 
@@ -964,7 +966,7 @@ The central result—that continuous $U(1)$ gauge symmetry emerges as the operat
 
 ### Q.0.8 Action Quantization and the Computational Structure of Interference
 
-The Action-Entropy Identity (Corollary Q.0.1) establishes that $\mathcal{S}/\hbar = \sum_i \varepsilon_i$. At the SPAP minimum, each irreversible cycle contributes $\varepsilon = \ln 2$ nats (Theorem 31, Appendix J). This section derives the conditions under which the total cycle count $N$ is constrained to discrete values, yielding a quantization of action with observable consequences.
+The Action-Entropy Identity (Corollary Q.0.1) establishes that $\mathcal{S}/\hbar = \sum_i \varepsilon_i$. At the SPAP minimum, each irreversible cycle contributes $\varepsilon_0=\ln2$ nats (Theorem 31, Appendix J). This section derives the conditions under which the total cycle count $N$ is constrained to discrete values, yielding a quantization of action with observable consequences.
 
 ---
 
@@ -1002,7 +1004,7 @@ $$\oint_\gamma \sum_i \varepsilon_i = 2\pi k$$
 
 *Proof.* Single-valuedness requires $e^{i\oint d\mathcal{S}/\hbar} = 1$, hence $\oint d\mathcal{S}/\hbar \in 2\pi\mathbb{Z}$. Substituting the Action-Entropy Identity gives the result. This is the standard Bohr-Sommerfeld-Wilson quantization condition [Sommerfeld 1916; Wilson 1915], here derived from the information-theoretic foundation. $\square$
 
-**Corollary Q.0.4a (SPAP-Minimum Closed-Sector Obstruction).** *For processes where all cycles operate at the SPAP minimum $\varepsilon=\ln 2$ (Theorem 31), an exact closed phase sector must satisfy*
+**Corollary Q.0.4a (SPAP-Minimum Closed-Sector Obstruction).** *For processes where all cycles operate at the structural SPAP minimum $\varepsilon_i=\varepsilon_0=\ln 2$ (Theorem 31), an exact closed phase sector must satisfy*
 $$
 N_\gamma\ln2=2\pi k,
 \qquad
@@ -1052,11 +1054,11 @@ confirms $|v|^2 \in \{0, 4, 6, 8, \ldots\}$ with the 196,560 minimal vectors at 
 
 $$m^2(v) = \mu_0^2 \cdot |v|^2$$
 
-*where $\mu_0 = m_P/(2\sqrt{8\varepsilon})$ is the fundamental mass scale (Definition Z.8f, Appendix Z).*
+*where $\mu_0 = m_P/(2\sqrt{8\varepsilon_0})$ is the structural fundamental mass scale (Definition Z.8f, Appendix Z).*
 
 *Proof.* On the saturated-boundary mass-information branch, Theorem N.5 (Appendix N) gives $m = \mu_0 \mathcal{I}_{\mathrm{rel}}$ for inertial mass in terms of relational information content. On the canonical Leech norm-information calibration branch, the relational information content of an excitation labeled by $v \in \Lambda_{24}$ satisfies $\mathcal{I}_{\mathrm{rel}}(v) = |v|$. Combining these two branch identifications,
 
-$$m(v) = \mu_0 |v|, \quad \mu_0 := \frac{m_P}{2\sqrt{8\varepsilon}} = \frac{m_P}{2\sqrt{8 \ln 2}} \approx 0.212 \, m_P,$$
+$$m(v) = \mu_0 |v|, \quad \mu_0 := \frac{m_P}{2\sqrt{8\varepsilon_0}} = \frac{m_P}{2\sqrt{8 \ln 2}} \approx 0.212 \, m_P,$$
 
 and squaring yields the stated relation. Neither branch follows from Leech shell structure alone; the absolute mass scale and discrete spectrum inherit both branch dependencies. $\square$
 
@@ -1067,7 +1069,7 @@ and squaring yields the stated relation. Neither branch follows from Leech shell
 
 **Corollary Q.0.5b (Landauer-Shell Correspondence).** *The minimum Leech shell $|v|^2_{\min} = 4$ equals the squared Landauer pointer dimension $a^2 = 4$. This equality traces through the derivation chain:*
 
-$$\varepsilon \ge \ln 2 \xrightarrow[\text{attractor}]{\text{Def 15a}} \varepsilon = \ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{} a^2 = 4 = |v|^2_{\min}$$
+$$\varepsilon_0=\ln 2 \xrightarrow{\text{Thm Z.1}} a = 2 \xrightarrow{} a^2 = 4 = |v|^2_{\min}$$
 
 *Proof.* On the attractor-saturating branch, Theorem Z.1 gives $a = 2$, so $a^2 = 4$. The equality $|v|^2_{\min} = 4$ follows from Leech lattice rootlessness (Proposition Q.0.5). Both quantities therefore meet at the common value 4 on that branch. $\square$
 
@@ -1075,7 +1077,7 @@ $$\varepsilon \ge \ln 2 \xrightarrow[\text{attractor}]{\text{Def 15a}} \varepsil
 
 $$m^2 \in \{0, 4, 6, 8, 10, 12, \ldots\} \times \mu_0^2$$
 
-*The mass gap is $\Delta_{\text{gap}} = 2\mu_0$, where $\mu_0 = m_P/(2\sqrt{8\varepsilon})$ is the fundamental mass scale (Definition Z.8f, Corollary Z.8g.1).*
+*The mass gap is $\Delta_{\text{gap}} = 2\mu_0$, where $\mu_0 = m_P/(2\sqrt{8\varepsilon_0})$ is the fundamental mass scale (Definition Z.8f, Corollary Z.8g.1).*
 
 ---
 
@@ -1096,7 +1098,7 @@ The identity $e^{iN\ln 2} = 2^{iN}$ follows from the definition $2^z := e^{z \ln
 | Domain | Quantity | Role in Correspondence |
 |:-------|:---------|:-----------------------|
 | Quantum mechanics | $e^{i\mathcal{S}/\hbar}$ | Phase factor governing interference |
-| Thermodynamics | $\varepsilon \ge \ln 2$ | Irreversible entropy cost per cycle, with equality only on the attractor/SPAP-minimum branch (Theorem 31; Definition 15a) |
+| Thermodynamics | $\varepsilon_0=\ln 2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ | Structural SPAP entropy quantum and physical implementation bound (Theorem 31) |
 | Computation | $N$ | Count of irreversible logical operations |
 
 The path integral sums phases $2^{iN}$ over histories, with $N$ counting irreversible computational steps. Interference arises from the complex arithmetic of these phase contributions.
@@ -1149,7 +1151,7 @@ $$
 
 *Proof.* To operationally distinguish a massive system ($m > 0$) from a massless one, the protocol must detect a dynamical difference attributable to the rest energy $E_0 = mc^2$ (Theorem 46). By the Margolus-Levitin quantum speed limit (derivable within PU from the bounded spectral structure of the MPU Hamiltonian, Theorem 29), a quantum system with energy $E$ requires time $t \geq \pi\hbar/(2E)$ to evolve to an orthogonal (operationally distinguishable) state. For the protocol to distinguish "mass $m$ present" from "mass $m$ absent" within duration $T_{\mathcal{P}}$, the rest energy must satisfy $mc^2 \geq \pi\hbar/(2T_{\mathcal{P}})$, yielding the bound. The strict positivity $m_{\min} > 0$ follows from $T_{\mathcal{P}} < \infty$. ∎
 
-**Remark Q.0.8d (PCE-Attractor Mass Scale).** At the canonical PCE-Attractor protocol duration $T_{\mathcal{P}}^* = \delta/c = \sqrt{8\ln 2} \cdot L_P/c = \sqrt{8\ln 2} \cdot t_P$ (Eq. Q.18), Theorem Q.0.8c yields the lower bound $m_{\min}^* \ge \pi m_P/(2\sqrt{8\ln 2}) \approx 0.667 \, m_P$, providing a framework-internal minimum mass scale that depends only on the derived constants $\varepsilon = \ln 2$ and $\delta = \sqrt{8\ln 2} \cdot L_P$, with no adjustable parameters. The conjecture that this value constitutes a universal mass gap for the framework requires the additional assumption that the PCE-Attractor canonical protocol is the physically realized protocol (Appendix Z).
+**Remark Q.0.8d (PCE-Attractor Mass Scale).** At the canonical PCE-Attractor protocol duration $T_{\mathcal{P}}^* = \delta/c = \sqrt{8\ln 2} \cdot L_P/c = \sqrt{8\ln 2} \cdot t_P$ (Eq. Q.18), Theorem Q.0.8c yields the lower bound $m_{\min}^* \ge \pi m_P/(2\sqrt{8\ln 2}) \approx 0.667 \, m_P$, providing a framework-internal minimum mass scale that depends only on the derived constants $\varepsilon_0=\ln2$ and $\delta = \sqrt{8\ln 2} \cdot L_P$, with no adjustable parameters. The conjecture that this value constitutes a universal mass gap for the framework requires the additional assumption that the PCE-Attractor canonical protocol is the physically realized protocol (Appendix Z).
 
 ---
 
@@ -1192,7 +1194,7 @@ Thus one quantum of action corresponds to $9$ SPAP-minimum cycles plus a small i
 **Remark Q.0.9a: Information-Theoretic Origin.** Unlike Bohr-Sommerfeld quantization (imposed as a postulate) or Dirac quantization (derived from canonical commutators), the present quantization derives from:
 
 1. The logical structure of self-referential prediction (SPAP, Theorems 10–11)
-2. The irreducible entropy cost $\varepsilon \geq \ln 2$ (Theorem 31, Appendix J)
+2. The irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J)
 3. The PCE-optimal vacuum geometry (Leech lattice, Theorem Z.8c)
 
 Action is quantized because physical processes are fundamentally computational, and computation has irreducible information-theoretic costs.
@@ -1842,17 +1844,17 @@ derived from the area law (Equation E.9). The PCE-optimal values of each paramet
 
 ### Q.2.1 Channel Capacity: $C_{\max}^* = 2\ln 2$ on the Residual-Budget Branch
 
-On the residual-budget branch of Appendix E (Equation E.14, derived from the PCE resource-partition argument in which the SPAP cost $\varepsilon$ is subtracted from the total information potential $\ln d_0$ to give the available boundary channel capacity), the PCE-optimal channel capacity satisfies $C_{\max}^* = \ln d_0 - \varepsilon$. On the minimal Appendix Z branch one has $d_0 = 8$ (Theorem Z.2), and at the PCE-Attractor one has $\varepsilon = \ln 2$ (Definition 15a; Theorem 31 gives the lower bound). Therefore:
+On the residual-budget branch of Appendix E (Equation E.14, derived from the PCE resource-partition argument in which the SPAP cost $\varepsilon$ is subtracted from the total information potential $\ln d_0$ to give the available boundary channel capacity), the PCE-optimal channel capacity satisfies $C_{\max}^* = \ln d_0 - \varepsilon$. On the minimal Appendix Z branch one has $d_0 = 8$ (Theorem Z.2), and at the PCE-Attractor one has $\varepsilon_0=\ln2$ (Definition 15a; Theorem 31 gives the lower bound). Therefore:
 $$\boxed{C_{\max}^* = \ln 8 - \ln 2 = 2\ln 2 = 2\varepsilon} \tag{Q.10}$$
 
 The residual-budget branch is the load-bearing assumption: alternative resource-partition rules (e.g., one in which the SPAP cost is paid by internal processing without subtraction from external boundary capacity) would yield different values of $C_{\max}^*$ and correspondingly different values of $\delta/L_P$ in §Q.2.4 and §Q.5.
 
 
-**Remark Q.10.1 (Bit-Budget Characterization).** Since $d_0 = 2^{K_0}$ on the minimal branch and $\varepsilon = \ln 2$ at the PCE-Attractor, the capacity-cost ratio has the structural form
+**Remark Q.10.1 (Bit-Budget Characterization).** Since $d_0 = 2^{K_0}$ on the minimal branch and $\varepsilon_0=\ln2$ at the PCE-Attractor, the capacity-cost ratio has the structural form
 $$
 \frac{C_{\max}^*}{\varepsilon} = \frac{\ln(d_0)-\varepsilon}{\varepsilon} = K_0 - 1.
 $$
-At $K_0 = 3$ this gives $C_{\max}^*/\varepsilon = 2$: of the $K_0=3$ bits per MPU cycle, one bit pays the irreversible Landauer cost of the SPAP merge, leaving $K_0-1=2$ bits of residual channel capacity. This identity is the structural source of the ratio-2 appearances that explicitly use $C_{\max}/\varepsilon$ elsewhere in the framework, while downstream applications may impose additional local assumptions.
+At $K_0 = 3$ this gives $C_{\max}^*/\varepsilon = 2$: of the $K_0=3$ bits per MPU cycle, one bit pays the irreversible Landauer cost of the SPAP merge, leaving $K_0-1=2$ bits of residual channel capacity. This identity is the structural source of the ratio-2 appearances that explicitly use $C_{\max}/\varepsilon_0$ elsewhere in the framework, while downstream applications may impose additional local assumptions.
 
 ### Q.2.2 Correlation Factor: $\chi^* = 1$
 
@@ -1983,19 +1985,19 @@ $$
 
 - **Factor $d_0 = 8$:** Theorem 23 gives the lower bound $d_0 \ge 2^{K_0} = 8$, and the minimal PCE branch used in the Appendix Z backbone selects $d_0 = 8$ (Theorem Z.2). This encodes the logical structure required for self-referential prediction.
 
-- **Factor $\varepsilon = \ln 2$:** Theorem 31 gives the irreducible thermodynamic lower bound $\varepsilon \ge \ln 2$, and the PCE-Attractor saturates that bound to $\varepsilon = \ln 2$ (Definition 15a).
+- **Factor $\varepsilon_0=\ln2$:** Theorem 31 gives the irreducible thermodynamic lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, and the PCE-Attractor saturates that bound to $\varepsilon_0=\ln2$ (Definition 15a).
 
 The discretization scale $\sqrt{d_0 \cdot \varepsilon} = \sqrt{8\ln 2} \approx 2.355$ thus represents the geometric mean of the logical capacity and thermodynamic cost of self-reference on the minimal/saturating branch.
 
 **Remark Q.6.2: Complete Derivation Chain.** The full derivation from logical axioms to spacetime discretization proceeds through two parallel pathways originating from $K_0$:
 
-$$\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 \ge 2^{K_0} = 8 \xrightarrow{\text{Thm Z.2}} d_0 = 8 \\[6pt] \text{SPAP merge} \xrightarrow{\text{Thm 31}} \varepsilon \ge \ln 2 \xrightarrow{\text{Def 15a}} \varepsilon = \ln 2 \end{array} \bigg\} \xrightarrow[\text{consistency}]{\text{P.14.3}} d_0 \cdot \varepsilon = 8\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{d_0 \cdot \varepsilon}$$
+$$\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 \ge 2^{K_0} = 8 \xrightarrow{\text{Thm Z.2}} d_0 = 8 \\[6pt] \text{SPAP merge} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Def 15a}} \varepsilon_0=\ln2 \end{array} \bigg\} \xrightarrow[\text{consistency}]{\text{P.14.3}} d_0 \cdot \varepsilon = 8\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{d_0 \cdot \varepsilon}$$
 
 The discretization scale emerges from two independent derivations constrained by internal consistency (P.14.3):
 
 1. **The Hilbert space dimension** satisfies $d_0 \ge 2^{K_0}=8$ by Theorem 23, with equality $d_0=8$ on the minimal PCE branch (Theorem Z.2).
 
-2. **The entropy cost** satisfies $\varepsilon \ge \ln 2$ by Theorem 31, with equality $\varepsilon = \ln 2$ on the attractor-saturating branch (Definition 15a).
+2. **The entropy cost** satisfies $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ by Theorem 31, with equality $\varepsilon_0=\ln2$ on the attractor-saturating branch (Definition 15a).
 
 The mutual consistency constraint relates the minimal-branch values $d_0 = 8$ and $a = 2$ through Theorem Z.2. It does not require the general identity $a = e^\varepsilon$.
 
@@ -2048,5 +2050,5 @@ Published photon time-of-flight limits therefore constrain only appended LIV bra
 
 The complete derivation chain from the horizon constant to spacetime discretization:
 
-$$\boxed{\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \\ \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon = \ln 2 \end{array} \xrightarrow{\text{Eq. Q.10}} C_{\max}^* = 2\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{8\ln 2}}$$
+$$\boxed{\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \\ \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_0=\ln2 \end{array} \xrightarrow{\text{Eq. Q.10}} C_{\max}^* = 2\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{8\ln 2}}$$
 
