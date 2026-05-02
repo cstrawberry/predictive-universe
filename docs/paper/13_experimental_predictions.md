@@ -4,14 +4,17 @@ The Predictive Universe framework, particularly the Consciousness Complexity (CC
 
 ### Assumption Checklist
 
-- Geometric regularity (Theorem 43) holds.
-- ND-RID irreversibility: $\varepsilon \geq \ln 2$ (Theorem 31).
-- Reflexivity Constraint: $\kappa_r > 0$ (Theorem 33).
+- Geometric regularity (Theorem 43) holds on the operational-continuum branch, with exact continuum ontology excluded by Theorem K.10.3a.
+- ND-RID irreversibility: $\varepsilon\ge\ln2$ (Theorem 31).
+- Reflexivity Constraint: $\kappa_r>0$ (Theorem 33).
 - PCE equilibrium reached (Definition 15a).
-- Gauge sector realized as $G_{SM}$ on the Appendix G capacity/anomaly/hypercharge branch (Theorem G.8.4b, with the Lagrangian gauge-realization branch for the generator bound).
-- Cosmological sector uses the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ (Theorem U.16) only as a branch-dependent reference convention together with the stated prefactor convention of Corollary U.15b; Theorem U.8c blocks a theorem-level pure-dilatation realization of that branch in the Definition U.4 continuum action.
-- Mapping constants use canonical Bures/Fisher and flavor-geometry normalizations (Appendix T, Section T.24), including the stated Golay, weak-left, Bures-gauge, Yukawa-overlap, and Berry-profile branches.
-- Uncertainty budgets follow the paper-wide canonical T1 (truncation), T2 (threshold/vacuum), T3 (scheme/mapping) decomposition of Appendix T.25.5.3.
+- Gauge sector realized as $G_{SM}$ on the Appendix G finite-response capacity/anomaly/hypercharge branch (Theorem G.8.4b and Corollary G.8.4c, with the Lagrangian gauge-realization branch for the generator bound where explicitly used).
+- Emergent metric predictions use the operational-continuum, channel-capacity, stress-energy, and finite KMS-descent branch of Appendix F.10.12 and Corollary 12.1b when that certificate is invoked.
+- Cosmological-sector theorem-level exponent claims use the Appendix U four-mode false-vacuum branch $\kappa=142$ under Theorem U.13b. A theorem-level numerical $\Lambda$ value additionally requires the false-vacuum Fredholm prefactor certificate of Definition U.15d and Theorem U.15e, the no-promotion gate of Corollary U.15f, and, when determinant transfer is used, the Bismut-Lebeau transfer ledger of Definition U.15g through Corollary U.15j. The five-mode $\kappa_{\mathrm{ref}}=141.5$ branch remains a reference convention blocked as theorem-level by Theorem U.8c in the Definition U.4 continuum action.
+- Fine-structure predictions use the Appendix Z Thomson normalization certificate of Definition Z.27.11a when a certificate-complete Thomson interval is claimed.
+- Electroweak matching uses the forward-locked RHG record of Definition T.78.10 and Theorem T.78.11 when a certificate-complete threshold value is claimed.
+- Flavor and baryogenesis numerics use the flavor certificate of Definition T.79.4 and the baryogenesis transport certificate of Definition Y.11.7a when theorem-level numerical closure is claimed.
+- Uncertainty budgets follow the paper-wide canonical T1 (truncation), T2 (threshold/vacuum), T3 (scheme/mapping) decomposition of Appendix T.25.5.3, with certificate-specific residual intervals fixed before comparison.
 - External observations/payoffs include $\varepsilon$ and $\kappa_r$ costs at the observer boundary.
 
 **13.0a Operational Evidence Standard for CC and Statistical-Influence Tests**
@@ -60,6 +63,29 @@ A run is classified as **null** when the preregistered confidence or posterior i
 **Corollary 13.0c (No Single-Run Upgrade for CC Claims).** No single experiment can promote Hypothesis 3 to theorem-level or established empirical status. At most, a single run can enter the support class of Definition 13.0a and become one datum in a replicated evidence ledger.
 
 *Proof.* Definition 13.0a requires independent replication for support, and theorem-level status requires derivation from prior axioms and theorems rather than empirical frequency data. Therefore one run cannot by itself supply either replicated empirical support or theorem-level derivation. ∎
+
+**Definition 13.0d (Forward-Locked Prediction Register).** A forward-locked prediction register is a finite table
+$$
+\mathfrak R_{\mathrm{pred}}
+=
+\left(
+\mathcal P,
+\mathcal C,
+\mathcal I,
+\mathcal E,
+\mathcal F,
+\chi_{\mathrm{pred}}
+\right)
+$$
+where $\mathcal P$ is the list of predicted observables, $\mathcal C$ is the accepted certificate or theorem branch for each observable, $\mathcal I$ is the predicted numerical interval or qualitative falsifier, $\mathcal E$ is the evidence protocol, $\mathcal F$ is the falsification rule, and $\chi_{\mathrm{pred}}$ records that no entry was chosen from the validation data used to test it.
+
+**Theorem 13.0e (No Validation Contamination).** A prediction listed in $\mathfrak R_{\mathrm{pred}}$ may be counted as forward PU evidence only if its branch or certificate was fixed before the validation data used to test it. If any branch entry, residual interval, normalization, or certificate component is selected after seeing the validation data, the entry remains a post-selection consistency check rather than forward evidence.
+
+*Proof.* By Definition 13.0d, every forward-evidence entry is a pair consisting of a finite derivation certificate and a finite validation protocol. If the derivation certificate is fixed first, the validation data test an already determined interval or falsifier. If a certificate component is selected after the validation data are known, then the data participate in defining the interval being tested. Such a test is logically circular as forward evidence because the tested set is no longer independent of the observations. Therefore it can only be recorded as a post-selection consistency check. ∎
+
+**Corollary 13.0f (Certificate Failure Rule).** If an observable fails the interval or falsifier associated with its accepted certificate in $\mathfrak R_{\mathrm{pred}}$, the corresponding branch is demoted or rejected. The interval may not be widened by replacing the certificate after comparison.
+
+*Proof.* The interval and falsifier are entries of the fixed register. Replacing the certificate changes the register entry and therefore changes the branch under test. It cannot rescue the failed branch as the same prediction. ∎
 
 **13.1 Prediction 1: Potential Born-Rule Deviations**
 
@@ -288,7 +314,7 @@ $|\Delta P|_{\rm EM}\ \lesssim\ 2.68\times 10^{-13}\,T$ (with $T$ in seconds). T
 Addresses the most speculative prediction: potential statistical FTL influence mediated by CC acting on entangled systems (Postulate 3). The protocol targets the nonlocal/state-mediated marginal-anomaly branch (iii) of Postulate 3, on which Bob's marginal $P(b)$ shifts with Alice's *late-randomized* context; the local CPTP branch (i) preserves Bob's marginal and permits only Alice-local or joint-correlation changes detectable after classical comparison of records, and the preparation-context branch (ii) admits a Bob-marginal shift only when Alice's context is fixed in the shared causal past of the two measurement regions and is therefore excluded as an explanation of branch-(iii) data by a late-randomization design.
 
 *   **Objective:** Sensitive search for preregistered statistical dependence of Bob's local measurement outcomes on Alice's remote context $\mathrm{context}_S$ (associated with system $S_A$ at her station), with A and B space-like separated and with $\mathrm{context}_S$ randomized strictly later than the latest event in the shared causal past of the two measurement regions. On branch (i), only Alice-local or joint/conditional correlations after classical comparison can vary; on branch (ii), a Bob-marginal shift can occur only when context randomization precedes preparation; on branch (iii), Bob's marginal itself shifts under late randomization. Secondary search for context-dependent changes in Bell parameters.
-*   **Theoretical Basis:** Postulate 3 defines three branches. On branch (i), Bob's marginal probabilities are invariant by standard no-signaling (Bob-marginal kernel decomposition, Lemma 10.2). On branch (ii), Bob's marginal can depend on $C_A$ through common-cause statistics inherited from preparation in the shared causal past (Theorem L.12.8). On branch (iii), Alice's late-randomized context $C_A$ shifts Bob's marginal $P_{\mathrm{obs}}(b|B,C_A)$ while respecting Postulate 2 (no deterministic signaling). Detection of a marginal shift requires $N \propto 1/\mathrm{CC}(S_A)^2$ trials (Theorem 40); joint-correlation tests require classical comparison of records; the pre-lightcone information budget and sampling gate are bounded by Lemma 10.3.
+*   **Theoretical Basis:** Postulate 3 defines three branches. On branch (i), Bob's marginal probabilities are invariant by standard no-signaling (Bob-marginal kernel decomposition, Lemma 10.2). On branch (ii), Bob's marginal can depend on $C_A$ through common-cause statistics inherited from preparation in the shared causal past (Theorem L.12.8). On branch (iii), Alice's late-randomized context $C_A$ shifts Bob's marginal $P_{\mathrm{obs}}(b|B,C_A)$ while respecting Postulate 2 by remaining non-deterministic and zero-error inaccessible in finite pre-lightcone windows on the regular branch (Theorems 39a and 42; Definition 10.2a). Detection of a marginal shift requires $N \propto 1/\mathrm{CC}(S_A)^2$ trials (Theorem 40); joint-correlation tests require classical comparison of records; the pre-lightcone information budget and sampling gate are bounded by Lemma 10.3.
 *   **Experimental Setup:**
     1.  **Entanglement Source:** High-quality, stable source distributing entangled pairs to space-like separated stations (Alice, Bob).
     2.  **Measurement Stations (A, B):** Standard Bell test apparatus (independent, random settings $a, b$). High efficiency desirable. The setting generators are device‑independent and statistically independent of system $S$ and any hidden variables.
@@ -300,7 +326,7 @@ Addresses the most speculative prediction: potential statistical FTL influence m
     1.  **Standard Bell Test:** Verify entanglement, calibrate, establish baseline correlations $E(a,b)$.
     2.  **Context Intervention Runs:** Interleave runs with Alice generating contexts $C_{A,k}$ (e.g., $k=0, 1, 2$). Random settings $a, b$. Collect large statistics $N_{int}$ per context $k$.
 *   **Statistical Analysis:**
-    *   **Primary Focus (Statistical Influence):** Compare Bob's marginal probabilities $P(o_B | b, C_{A,k})$ across contexts $k$. Test the null hypothesis $H_0: P(o_B | b, C_{A,k=1}) = P(o_B | b, C_{A,k=2})$. Rejection under late-randomized $C_{A,k}$ supports branch (iii) of Postulate 3. Estimate the shift $\Delta P_{marginal} = |P(o_B | b, C_{A,1}) - P(o_B | b, C_{A,2})|$. By Theorem 36, this shift is bounded by $\Delta P_{marginal} \lesssim \mathrm{CC}(S_A)$. Detection requires $N_{int} \gtrsim O(1/\mathrm{CC}(S_A)^2)$ (Theorem 40).
+    *   **Primary Focus (Statistical Influence):** Compare Bob's marginal probabilities $P(o_B | b, C_{A,k})$ across contexts $k$. Test the null hypothesis $H_0: P(o_B | b, C_{A,k=1}) = P(o_B | b, C_{A,k=2})$. Rejection under late-randomized $C_{A,k}$ supports branch (iii) of Postulate 3. Estimate the shift $\Delta P_{marginal}=|P(o_B | b, C_{A,1})-P(o_B | b, C_{A,2})|$. By Theorem 36, this shift is bounded by $\Delta P_{marginal}\lesssim\mathrm{CC}(S_A)$. Detection requires $N_{int}\gtrsim O(1/\mathrm{CC}(S_A)^2)$ (Theorem 40). Theorem 39a classifies the positive result as statistical rather than zero-error deterministic on the regular finite-window branch (Definition 10.2a).
     *   **Secondary Analysis (Correlations):** Calculate correlations $E(a,b)_k$ and Bell parameters $S_{CHSH, k}$ conditioned on context $k$. Look for differences $S_{CHSH, k=1} \neq S_{CHSH, k=2}$. Joint-correlation deformations with Bob-marginal component $\Pi_B\ell_{C_{A,k}}=0$ are compatible with branch (i); the stronger double-centered diagnostic $\Pi_{\mathrm{joint}}\ell_{C_{A,k}}$ isolates the part with both local marginals removed.
     *   **Causal Anomaly Ledger:** Each preregistered analysis pipeline must report three primary residual quantities computed on the same data:
 $$
@@ -334,9 +360,9 @@ The experimental program, especially Protocol 3, probes the framework's non-stan
 
 **13.7.1 Theorem 53 (CC Compliance with Postulate 2)**
 
-The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\mathrm{CC} \le \alpha_{CC,max} < 0.5$ (Theorem 39), is consistent with the framework's definition of causality (Postulate 2) because it prevents deterministic faster-than-light (FTL) signaling. The potential statistical FTL influence (Postulate 3) is inherently probabilistic and information-rate limited (Theorem 40, Theorem 41, consistent with bounds derived from ND-RID contractivity within the AQFT framework of Appendix F), making it unusable for constructing paradox-inducing causal loops (Theorem 42, whose consistency is supported by the AQFT analysis in Appendix F).
+The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\mathrm{CC}\le\alpha_{CC,max}<0.5$ (Theorem 39) and by the finite-window zero-error gate (Theorem 39a) on the regular statistical branch (Definition 10.2a), is consistent with the framework's definition of causality (Postulate 2) because it prevents deterministic or zero-error faster-than-light (FTL) signaling. The potential statistical FTL influence (Postulate 3) may still have positive finite-error statistical information (Theorem 41), but it remains sample-complexity limited (Theorem 40) and unusable for constructing paradox-inducing deterministic causal loops (Theorem 42, whose consistency is supported by the AQFT analysis in Appendix F).
 
-*Proof.* Theorem 39 bounds the operational bias strength by $\mathrm{CC}\le \alpha_{CC,max}<0.5$. In particular, the CC mechanism cannot force either outcome of a binary trial with probability one; hence it cannot implement deterministic one-shot superluminal signaling. Theorem 40 then shows that any nonzero CC signal can only be detected statistically, with required sample size scaling as $N=O(\mathrm{CC}^{-2})$. Theorem 41 further bounds the usable information rate by a quantity of order $\mathrm{CC}^2$, so the channel remains finite-rate and vanishes continuously as $\mathrm{CC}\to 0$. Finally, Theorem 42 establishes that a channel which is both irreducibly noisy and information-rate limited cannot be concatenated into the deterministic signaling loops excluded by Postulate 2. Appendix F supplies the AQFT locality framework in which these bounds are interpreted, but the logical implication needed here is already furnished by Theorems 39–42. Therefore the CC mechanism is compatible with Postulate 2 while remaining testable as a probabilistic Postulate 3 effect. ∎
+*Proof.* Theorem 39 bounds the operational bias strength by $\mathrm{CC}\le\alpha_{CC,max}<0.5$. In particular, the CC mechanism cannot force both deterministic endpoints of a binary trial; hence it cannot implement deterministic one-shot superluminal signaling. Theorem 39a then addresses the finite-window statistical branch on the regular operating regime: under the common-support condition of Definition 10.2a—motivated by the endpoint bound, ND-RID contractivity, irreducible $\varepsilon\ge\ln 2$, and PPI admissibility of probability kernels—the context-conditioned transcript distributions retain positive overlap, so every finite pre-lightcone decoder has nonzero error probability. Theorem 40 shows that any nonzero CC signal can only be detected statistically, with required sample size scaling as $N=O(\mathrm{CC}^{-2})$. Theorem 41 bounds the finite-error information rate by a quantity of order $\mathrm{CC}^2$ at a regular operating point. Finally, Theorem 42 establishes that such a finite-error statistical channel cannot be concatenated into the deterministic or zero-error signaling loops excluded by Postulate 2. Appendix F supplies the AQFT locality framework for the Bob-marginal-preserving branch and the operator-local baseline; the branch-(iii) statistical-FTL consistency claim is furnished by Theorems 39a–42. Therefore the CC mechanism is compatible with Postulate 2 while remaining testable as a probabilistic Postulate 3 effect. ∎
 
 *Note:* Empirical investigation of Postulate 3 (Protocol 3) critically tests this distinct aspect of PU's locality/causality. Confirmation requires re-evaluating standard locality; null results constrain/falsify this prediction.
 
@@ -534,15 +560,15 @@ By Lemma Q.0.7b, $\alpha_L$ is transcendental and hence irrational.
 
 Beyond the CC-specific predictions of Sections 13.1–13.5, the PU framework makes a structural prediction concerning optimal quantum error correction: the parameters of the uniquely optimal error-correcting code should coincide with the PCE-Attractor structure derived in Appendix Z. This prediction has empirical support from existing quantum computing research, providing an independent validation pathway for the framework's core mathematical architecture.
 
-### 13.9.1 Theorem 54 (PCE-Optimal Error Correction Parameters on the Balanced Golay Branch)
+### 13.9.1 Theorem 54 (PCE-Optimal Error Correction Parameters on the Predictive-Recovery MacWilliams Branch)
 
-Within the binary linear code class analyzed in Appendix Z and Appendix R, and on the balanced rate-$\tfrac{1}{2}$ Golay branch, the $M=24$ QFI-active interface modes at the PCE-Attractor determine the code parameters $[n,k,d]=[24,12,8]$. The mathematical uniqueness of the extended Golay code is theorem-level once the balanced split $k=12$ is fixed.
+Within the binary linear code class analyzed in Appendix Z and Appendix R, and on the predictive-recovery MacWilliams Golay branch, the $M=24$ QFI-active interface modes at the PCE-Attractor determine the code parameters $[n,k,d]=[24,12,8]$. The mathematical uniqueness of the extended Golay code is theorem-level once Theorem Z.13b.0a fixes the self-dual split $k=12$.
 
 *Proof.* Theorem Z.5 fixes the interface mode count to
 $$
 n = M = 2ab = 2 \times 2 \times 6 = 24.
 $$
-On the balanced Golay branch, the symmetric point is $k=n/2$, hence
+On the predictive-recovery MacWilliams Golay branch, the symmetric point is $k=n/2$, hence
 $$
 k = 12.
 $$
@@ -554,7 +580,7 @@ The same theorem records that the extended binary Golay code $\mathcal{G}_{24}$ 
 
 ### 13.9.2 Corollary 54.1 (Code-Substrate Alignment Hypothesis)
 
-If the physical quantum substrate exhibits structure aligned with the PCE-Attractor, then error-correcting codes matching the balanced-Golay parameters $[24,12,8]$ are predicted to demonstrate superior performance—potentially exceeding predictions based solely on mathematical distance bounds—compared to codes with different structural parameters.
+If the physical quantum substrate exhibits structure aligned with the PCE-Attractor, then error-correcting codes matching the predictive-recovery Golay parameters $[24,12,8]$ are predicted to demonstrate superior performance—potentially exceeding predictions based solely on mathematical distance bounds—compared to codes with different structural parameters.
 
 *Rationale:* Standard coding theory establishes that the Golay code saturates mathematical bounds (Hamming, Griesmer, Singleton). However, if the PCE-Attractor structure reflects genuine physical substrate organization, codes aligned with this structure may benefit from reduced effective noise, improved syndrome extraction fidelity, or enhanced logical gate performance. This creates a discriminating prediction between PU and standard quantum information theory.
 
@@ -606,9 +632,9 @@ The PU framework provides a principled branch explanation for Golay optimality:
 
 **PU Explanation:** The Golay code parameters emerge necessarily from the PCE-Attractor structure:
 
-1. $n = 24$ from QFI mode count $M = 2ab$ (Theorem Z.5)
-2. $k = 12$ from the balanced rate-$1/2$ signal/parity branch
-3. $d = 8$ from maximum distance at these constraints (Theorem R.4.4)
+1. $n=24$ from QFI mode count $M=2ab$ (Theorem Z.5)
+2. $k=12$ from predictive-recovery MacWilliams self-duality (Definition Z.13b.0, Theorem Z.13b.0a)
+3. $d=8$ from maximum distance at these constraints (Theorem R.4.4)
 
 The code's exceptional properties—self-duality, Mathieu group $M_{24}$ symmetry, connection to the Leech lattice $\Lambda_{24}$—are consequences of this branch alignment, not independent coincidences.
 
@@ -616,13 +642,13 @@ The code's exceptional properties—self-duality, Mathieu group $M_{24}$ symmetr
 
 The PCE-Attractor mode count $M=24$ enters three linked constructions:
 $$
-M=24 \xrightarrow{\text{balanced Golay branch}} \mathcal{G}_{24},\qquad
+M=24 \xrightarrow{\text{predictive-recovery MacWilliams Golay branch}} \mathcal{G}_{24},\qquad
 \mathcal{G}_{24} \xrightarrow{\text{Lemma R.4.5}} \Lambda_{24},\qquad
-M=24=K(D) \xrightarrow{\text{Appendix Z tangent-kissing branch}} D=4.
+M=24=K(D) \xrightarrow{\text{Appendix Z Bures tangent-cell channel branch}} D=4.
 $$
 Accordingly, the Golay code, the Leech-lattice gluing construction, and the spacetime-dimension selection share a common 24-mode compatibility backbone. The cited results do not by themselves show that each later object uniquely determines every subsequent entry in the chain.
 
-*Proof.* On the balanced rate-$\tfrac{1}{2}$ branch, Theorem Z.13b identifies the binary linear code at interface mode count $M=24$ with the extended Golay code $\mathcal{G}_{24}$. Lemma R.4.5 states that $\mathcal{G}_{24}$ supplies the gluing data in the standard construction of the Leech lattice from $\sqrt{2}E_8^3$. Independently, Theorem Z.11 proves that the mode-channel condition $M=K(D)$ with $M=24$ selects $D=4$. These three cited results share the same numerical backbone $M=24$, which is the precise common structure established here. ∎
+*Proof.* On the predictive-recovery MacWilliams branch, Definition Z.13b.0 and Theorem Z.13b.0a fix $k=12$, after which Theorem Z.13b identifies the binary linear code at interface mode count $M=24$ with the extended Golay code $\mathcal G_{24}$. Lemma R.4.5 states that $\mathcal G_{24}$ supplies the gluing data in the standard construction of the Leech lattice from $\sqrt2 E_8^3$. Independently, Theorem Z.11 proves that the mode-channel condition $M=K(D)$ with $M=24$ selects $D=4$. These three cited results share the same numerical backbone $M=24$, which is the precise common structure established here. ∎
 
 ### 13.9.6 Classical vs. Quantum Golay Codes
 
@@ -832,7 +858,7 @@ The predictions fall into three epistemic categories that must be distinguished 
 
 *Theorem-level quantitative predictions* are numerical values obtained from the framework without validation targets, phenomenological kernels, empirical inversions, or uncomputed spectral inputs. *Branch-level quantitative rows* are numerical values obtained after named branch hypotheses, bridge laws, finite-part conventions, or matching conventions are fixed. *Validation and model rows* use validation targets, phenomenological response kernels, transferred prefactors, or status-limited spectral data; these rows are falsifiable as stated branch/model claims but are not counted as theorem-level PU predictions unless their status-carrying inputs are derived from prior PU structure or supplied by an explicitly appended branch extension. These include $\alpha^{-1} = 137.036092 \pm 0.000060$ (Theorem Z.26), $D = 4$ (Theorem Z.11), $\Lambda L_P^2 = (2.88 \pm 0.03) \times 10^{-122}$ (Appendix U), and the glueball mass ratios (Theorem Z.8h). Falsification is straightforward: measured values falling outside stated uncertainty bounds refute the prediction. In particular, Appendix T matching-scale observables such as $\sin^2\theta_W(M_Z)$ and $\alpha_s(M_Z)$ remain validation-level in the pre-certificate canonical gauge ledger because Theorem T.78.5 proves that the canonical data alone supply no PU-internal flag-lift spectral branch package. A positive gauge-threshold row requires an accepted completed spectral certificate, such as the RHG certificate of Definition T.78.6 verified by Algorithm T.78.6a, fixed before validation comparison and evaluated by the forward $\mathrm{MS2}_{\mu_G}$ block sum. The Yukawa hierarchy quantities retain their own Appendix T flavor-normalization and CP-profile status boundaries.
 
-*Structural predictions* assert that specific mathematical structures emerge necessarily or conditionally from the framework's axioms and stated surrogate principles. These include Lorentz invariance (Theorem 46), the gauge group $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ (Theorem G.8.4b, conditional on Proposition G.M1), the Born rule (Proposition 7), the three-generation claim as formulated in Appendix R, and chronology protection (Theorem 14.1). Falsification requires discovering that the predicted structure is violated in nature — for example, observation of fundamental Lorentz violation or a functioning closed timelike curve.
+*Structural predictions* assert that specific mathematical structures emerge necessarily or conditionally from the framework's axioms and stated finite-response principles. These include Lorentz invariance (Theorem 46), the gauge group $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ on the Appendix G finite-response positive-marginal capacity branch (Theorem G.8.4b, conditional on Proposition G.M1), the Born rule (Proposition 7), $N_{\mathrm{gen}}=3$ on the Appendix R pre-flavor family-redundancy PPI branch, and chronology protection (Theorem 14.1). Falsification requires discovering that the predicted structure is violated in nature — for example, observation of fundamental Lorentz violation or a functioning closed timelike curve.
 
 *Diagnostic reclassifications* identify formal features of existing theories as artifacts of unconstrained mathematical extrapolation rather than physical phenomena requiring resolution. These include the dissolution of curvature singularities (Section 14.2.4, Appendix K.5), the arrow-of-time "problem" (Appendix O), and UV divergences (Theorem K.10.4). These are not predictions of new observations but principled reinterpretations of existing physics; they are falsified if a phenomenon is discovered that demonstrably requires attribution of physical content to a structure the framework classifies as an artifact.
 
@@ -859,37 +885,51 @@ and Corollary Z.11.3 makes the resulting falsifier explicit.
 
 ### 13.10.2 Fine-Structure Constant
 
-**Prediction:** At the Thomson limit (zero momentum transfer):
+**Prediction:** At the Thomson limit (zero momentum transfer), the canonical Appendix Z branch gives
 $$
 \alpha^{-1}_{\mathrm{theory}} = 137.036092 \pm 0.000060
 $$
+through the third-order formula of Theorem Z.26. A certificate-complete Thomson interval is obtained only from an accepted Thomson normalization certificate $\mathfrak C_\alpha$ in the sense of Definition Z.27.11a.
 
 **Derivation Summary:** Within the Appendix Z derivation, Theorem Z.26 combines bulk, interface, and curvature contributions:
 $$
 \alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right)
 $$
-where $u^*=2^{1/8}-1$ (Theorem Z.7) and $K_0=3$ (Theorem 15), evaluated on the canonical Appendix Z bulk-Ward, interface-derivative, response-sign, visible-space curvature, and separable-curvature branches.
+where $u^*=2^{1/8}-1$ (Theorem Z.7) and $K_0=3$ (Theorem 15), evaluated on the canonical Appendix Z bulk-Ward, interface-derivative, response-sign, visible-space curvature, and separable-curvature branches. The certificate form replaces the third-order transport factor by the exact $SU(2)$ sinc factor and adds the forward-locked residual interval:
+$$
+\alpha^{-1}_{\mathrm{cert}}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}
+\operatorname{sinc}(u^*)
++
+R_\alpha.
+$$
 
 **Falsification Conditions:**
-- Precision measurements yielding $\alpha^{-1}$ outside the range $137.0360 \pm 0.0002$ ($4\sigma$ envelope)
-- Energy dependence of $\alpha$ inconsistent with standard QED running from this Thomson-limit value
+- Precision measurements yielding $\alpha^{-1}$ outside the accepted branch interval in the forward-locked prediction register of Definition 13.0d
+- Energy dependence of $\alpha$ inconsistent with standard QED running from the accepted Thomson-limit value
 - Spatial or temporal variation of $\alpha$ at levels exceeding $10^{-6}$ per Gyr
+- Post-comparison widening of $R_\alpha$, which demotes the branch by Corollary Z.27.11d rather than confirming it
 
 **Current Status:**
 $$
 \alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(NIST 2024)}
 $$
-Discrepancy: $+0.000093 \pm 0.000060$ ($\sim 1.5\sigma$, 0.68 ppm). Consistent within theoretical uncertainty.
+Discrepancy relative to the third-order canonical branch: $+0.000093 \pm 0.000060$ ($\sim 1.5\sigma$, 0.68 ppm). This is a live precision test of the Appendix Z normalization package.
 
-**Consistency Check:** Standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$ (Corollary Z.8), consistent with the experimental value $127.952 \pm 0.009$ (Particle Data Group 2024).
+**Consistency Check:** Standard QED running from the accepted Thomson-limit branch value yields $\alpha^{-1}(M_Z)$ in the electroweak comparison ledger; the branch must use the same forward-locked normalization and residual interval when entered into Definition 13.0d.
 
 ---
 
 ### 13.10.3 Generation Number
 
-**Prediction:** Minimal admissible $N_{\min}=3$ in the anomaly+CP family-charge class; exact realized $N_{\mathrm{gen}}=3$ on the minimal-family PCE/MDL branch.
+**Prediction:** Minimal admissible $N_{\min}=3$ in the anomaly+CP family-charge class; exact realized $N_{\mathrm{gen}}=3$ on the pre-flavor family-redundancy PPI branch.
 
-**Derivation Summary:** The manuscript's strongest derivation of $N_{\mathrm{gen}}=3$ is topological: anomaly cancellation on $\Sigma_8 = U(8)/U(1)^8$, together with the requirement of nontrivial CP violation, selects the minimal admissible charge pattern $\{a, -a, 0\}$ (Theorem R.3.4). Proposition R.3.5 adds the MDL-surrogate selection statement on the same modeled class. The geometric $M = 24 = 8 \times 3$ and Leech/$E_8$ constructions of Appendix R provide a compatible three-fold structure, but they do not independently prove the generation count without the additional topological and modeling assumptions stated there.
+**Derivation Summary:** The manuscript's strongest derivation of $N_{\mathrm{gen}}=3$ is topological: anomaly cancellation on $\Sigma_8 = U(8)/U(1)^8$, together with the requirement of nontrivial CP violation, selects the minimal admissible charge pattern $\{a,-a,0\}$ (Theorem R.3.4). Proposition R.3.5.1a removes supernumerary response-null family copies inside the pre-flavor family-redundancy PPI branch, so the exact realized count in that branch is $N_{\mathrm{gen}}=3$. The geometric $M=24=8\times3$ and Leech/$E_8$ constructions of Appendix R provide a compatible three-fold structure without replacing the anomaly+CP and PPI selection route.
 
 **Falsification Conditions:**
 - Discovery of fourth-generation quarks or leptons at colliders
@@ -911,11 +951,16 @@ Indirectly consistent with $N_{\mathrm{gen}} = 3$ under the standard LEP identif
 
 ### 13.10.4 Gauge Group Structure
 
-**Prediction:** In the capacity-saturating PCE regime, and under the SM-type anomaly/hypercharge hypotheses used in Appendix G.8.4b, the Standard Model gauge group $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ is uniquely selected.
+**Prediction:** On the finite-response positive-marginal capacity branch of Appendix G.8.4, the Standard Model gauge group $G_{\mathrm{SM}} = SU(3)_C \times SU(2)_L \times U(1)_Y$ is uniquely selected.
 
-**Derivation Summary:** The PU gauge-search space is the set of compact reductive Lie algebras $\mathfrak{g}\subseteq\mathfrak{u}(6)$ acting faithfully on the inactive module $\mathcal{B}\cong\mathbb{C}^6$ induced by the $b=6$ Landauer partition, together with anomaly-free chiral matter assignments compatible with the induced module decomposition $\mathbb{C}^6=\oplus_i \mathbb{C}^{n_i}$ (Appendix G.8.4). Within this finite search space, the sharp generator bound is $n_G\le 12$ (Theorem G.8.2e). When the PCE objective satisfies the saturation inequality of Equation (G.8.5), so that algebras attaining $n_G = 12$ are strictly preferred whenever attainable, and when one imposes the SM-type single-hypercharge anomaly data used in Theorem G.8.4b, the exhaustive partition analysis leaves the unique surviving partition $(3,2,1)$ and hence the gauge algebra $\mathfrak{g}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)_Y$ with $n_G=12=8+3+1$.
+**Derivation Summary:** The PU gauge-search space is the set of compact reductive local frame algebras acting faithfully on the inactive module $\mathcal B\cong\mathbb C^6$ induced by the $b=6$ Landauer partition, with response-null exact global phases quotiented and determinant-compatible anomaly-admissibility imposed. Within this finite search space, the sharp generator bound is $n_G\le12$ (Theorem G.8.2e). In the positive-marginal regime of Equation (G.8.5), every anomaly-admissible non-null generator below the bound lowers finite-protocol regret, so the PCE optimum saturates $n_G=12$ whenever attainable. The exhaustive partition analysis has a unique saturating row, $(3,2,1)$, and hence the gauge algebra is
+$$
+\mathfrak g=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)_Y,
+\qquad
+n_G=12=8+3+1.
+$$
 
-**Derivation Status:** The uniqueness statement is rigorous conditional on (i) Proposition G.M1 (module-locality of the leading PCE objective), (ii) the saturation regime of Equation (G.8.5), and (iii) the SM-type anomaly and hypercharge assumptions explicitly used in Theorem G.8.4b and Corollary G.8.4c. Under these conditions, no other compact reductive $\mathfrak{g}\subseteq\mathfrak{u}(6)$ with $n_G\le 12$ both saturates the PCE optimum and admits the same anomaly-compatible chiral data; discovery of an additional long-range gauge factor would falsify at least one of these assumptions rather than merely adjust a fitted parameter.
+**Derivation Status:** The uniqueness statement is rigorous conditional on (i) Proposition G.M1, (ii) the finite-response positive-marginal saturation regime of Equation (G.8.5), and (iii) determinant-compatible anomaly-admissibility with no response-null exact global gauge factors. Under these conditions, no other compact reductive $\mathfrak g\subseteq\mathfrak u(6)$ with $n_G\le12$ both saturates the PCE optimum and preserves the same finite-response constraints; discovery of an additional long-range gauge factor would falsify at least one of these conditions rather than merely adjust a fitted parameter.
 
 **Falsification Conditions:**
 - Discovery of additional gauge bosons ($Z'$, $W'$) at accessible energies indicating enlarged gauge group
@@ -959,7 +1004,7 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
 | Fine-structure constant $\alpha^{-1}$ | $137.036092 \pm 0.000060$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
 | Light active neutrino count $N_{\nu}$ | 3 under the standard identification from $N_{\mathrm{gen}}=3$ | $2.984 \pm 0.008$ | Theorem R.3.4 + LEP $Z$ width | indirect |
-| Gauge group $G_{\mathrm{SM}}$ (conditional on Proposition G.M1, Eq. (G.8.5), and the SM-type anomaly/hypercharge data of Theorem G.8.4b) | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ◐ conditional regime theorem |
+| Gauge group $G_{\mathrm{SM}}$ on the finite-response positive-marginal capacity branch | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ◐ finite-response branch theorem |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ◐ hierarchy invariant; absolute normalization separate |
 | Chronometric curvature phase/dephasing | $\hbar|\dot\Theta|/|\Delta E|=|\Delta\Phi|/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/|\Delta E|=|\Delta\Phi|/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
 | Golay noise spectroscopy | $\mathcal R_8=1+968\eta_8$ with $\eta_8>0$ on the aligned residual branch; incidence $253:77:21:5:1$; controlled weight-4 fibers form $1771$ six-tetrad sextets | dedicated 24-mode residual-noise and decoder-boundary tests required | Theorem Z.13b.3; Corollary Z.13b.5; Protocol 4.4 | ◐ branch prediction; ○ untested |
@@ -985,10 +1030,10 @@ after the Blackwell-PCE record channel and entropy-production ledger have been f
 |:-----------|:---------------------------|:--------------------|
 | $\alpha^{-1}$ | subgroup-projection/matching systematics; interface-series and sinc truncations subleading | $\pm 0.000060$ |
 | $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
-| $N_{\mathrm{gen}}$ | Minimal admissible count exact in the anomaly+CP class; exact realized count depends on the minimal-family branch | branch-discrete |
-| $D$ | Exact on the Appendix Z tangent-kissing mode-channel branch | branch-discrete |
+| $N_{\mathrm{gen}}$ | Minimal admissible count exact in the anomaly+CP class; exact realized count fixed on the pre-flavor family-redundancy PPI branch | branch-discrete |
+| $D$ | Exact in the Appendix Z Bures tangent-cell mode-channel contract | branch-discrete |
 
-The predictions for $D$ and exact realized $N_{\mathrm{gen}}$ are exact within their named branches. A deviation would falsify the corresponding tangent-kissing or minimal-family branch; only the minimal admissible three-generation result is theorem-level inside the anomaly+CP class alone.
+The predictions for $D$ and exact realized $N_{\mathrm{gen}}$ are exact within their named finite-response branches. A deviation would falsify the corresponding Bures tangent-cell channel contract or pre-flavor family-redundancy PPI branch; detailed flavor values remain downstream branch data.
 
 **Proper-Acceleration Entropy Drag Test.**
 On the proper-acceleration UCT branch, after ordinary loss channels are subtracted, the residual excess power should obey

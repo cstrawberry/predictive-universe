@@ -1,6 +1,6 @@
 # Appendix V: Computational Programs and Numerical Consistency Checks
 
-This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program evaluates the Appendix U five-mode reference branch $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ using the reference exponent $\kappa=141.5$ (Appendix U, Theorem U.16) and the Appendix U working prefactor $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b); the inversion form is included as a numerical consistency check that converts the observed $\Lambda L_P^2$ into $A_{\text{eff}}^{(\text{obs})}$ or an effective $\kappa$ under a chosen prefactor. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that five-mode branch is obstructed in the current Definition U.4 continuum action, so the forward value is branch-dependent rather than theorem-level vacuum closure. By contrast, after the corrected Definition U.6 normalization, Theorem U.13b establishes the corrected four-mode exponent branch $\kappa=142$ under the explicit false-vacuum spectral hypotheses stated there. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap with no continuous fitting after the baseline MPU invariants and stated projection/matching conventions are fixed.
+This appendix provides computational programs for two constants within the Predictive Universe (PU) framework: the cosmological constant $\Lambda$ and the fine-structure constant $\alpha_{\mathrm{em}}$. The $\Lambda$ program evaluates the Appendix U five-mode reference branch $\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa}$ using the reference exponent $\kappa=141.5$ (Appendix U, Theorem U.16) and the Appendix U working prefactor $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b); the inversion form is included as a numerical consistency check that converts the observed $\Lambda L_P^2$ into $A_{\text{eff}}^{(\text{obs})}$ or an effective $\kappa$ under a chosen prefactor. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that five-mode branch is obstructed in the current Definition U.4 continuum action, so the forward value is branch-dependent rather than theorem-level vacuum closure. By contrast, after the corrected Definition U.6 normalization, Theorem U.13b establishes the corrected four-mode exponent branch $\kappa=142$ under the explicit false-vacuum spectral hypotheses stated there. The $\alpha_{\mathrm{em}}$ program gives a parametric, falsifiable roadmap with no continuous fitting after the baseline MPU invariants and stated projection/matching conventions are fixed. Section V.3 records a finite audit ladder: reproducibility checks that can be performed independently from the displayed PU formulas and finite combinatorial data. Passing those audits strengthens the manuscript's internal numerical discipline, but it does not by itself promote the RHG flag-lift, Bismut-Lebeau determinant transfer, or other certificate-level branches to theorem-level closure.
 
 **Conventions.** Section V.1 uses SI units (with $c$ explicit). Sections V.2–V.2.5 use Heaviside–Lorentz units with $\hbar=c=1$; $\alpha_{\mathrm{em}}=e^2/(4\pi)$.
 
@@ -132,7 +132,7 @@ Hence even an order-unity uncertainty in $A_{\text{eff}}$ shifts the inferred $\
 
 ## V.2 Calculation of $\alpha_{\mathrm{em}}$ at the PCE-Attractor on the Canonical Appendix Z Branch
 
-This section provides the direct computational program for the fine-structure constant as recorded in **Appendix Z**. The calculation introduces no continuous fit parameters once the discrete Appendix Z assumptions, branch normalizations, and matching conventions are fixed; it is not an unconditional derivation of those branch normalizations themselves. The relevant Appendix Z branches inherited here include the bulk Predictive-Ward unit-normalization branch (Theorem Z.14, $\kappa^*_{\mathrm{bulk}} = 1$), the canonical first-order interface-derivative normalization branch (Theorem Z.17), the canonical separable second-order curvature-response branch (Theorem Z.25), and the column-covariance branch (Theorem Z.24a) for the Bures-to-gauge identification.
+This section provides the direct computational program for the fine-structure constant as recorded in **Appendix Z**. The calculation introduces no continuous fit parameters once the discrete Appendix Z assumptions, branch normalizations, and matching conventions are fixed; it is not an unconditional derivation of those branch normalizations themselves. The relevant Appendix Z branches inherited here include the bulk Predictive-Ward unit-normalization branch (Theorem Z.14, $\kappa^*_{\mathrm{bulk}} = 1$, with Thomson-Ward spectral-weight closure when Definition Z.14d is supplied via Theorem Z.14e), the canonical first-order interface-derivative normalization branch (Theorem Z.17), the canonical separable second-order curvature-response branch (Theorem Z.25), and the column-covariance branch (Theorem Z.24a) for the Bures-to-gauge identification.
 
 ### V.2.1 Foundational Inputs (Derived from PU First Principles)
 
@@ -181,3 +181,167 @@ $$
 \tag{V.10}
 $$
 This is a Thomson-limit prediction within the Appendix Z derivation. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and subgroup-projection/matching systematics, with the latter dominant.
+
+## V.3 Finite Independent Audit Ladder
+
+This section separates short-run reproducibility audits from certificate-level branch closures. An audit in this section is valid only if all inputs are fixed from the cited PU formulas before comparison with observational or validation data. A passed audit confirms that the displayed PU calculation is mechanically reproducible; it does not supply missing RHG, Bismut-Lebeau, RCD, or determinant certificates unless the relevant certificate object is explicitly constructed in the cited appendix.
+
+### V.3.1 Charged-Lepton Log-Ratio Audit
+
+**Target.** Recompute the charged-lepton hierarchy log-ratios from the Appendix T Bures/Van Vleck formulae without using charged-lepton masses as fitting inputs. The audit checks whether the stated branch formulae reproduce
+$$
+\ln(m_\tau/m_\mu),
+\qquad
+\ln(m_\mu/m_e)
+$$
+from the effective dimensions, Bures curvature data, and packet-normalization conventions already fixed in Appendix T.
+
+**Pass condition.** The computation must reproduce the Appendix T log-ratio values from the stated branch data alone, with an error budget separated into truncation, branch-normalization, and external mass-comparison uncertainty.
+
+**Fail condition.** If the displayed log-ratio values require inserting charged-lepton masses, changing the effective dimensions after comparison, or choosing a packet normalization from the validation result, the audit fails and the affected Appendix T row remains a validation-level or branch-normalized claim rather than a forward calculation.
+
+### V.3.2 Golay Residual-Shell Incidence Audit
+
+**Target.** Enumerate the octads of the extended binary Golay code $\mathcal G_{24}$ and verify the residual-shell incidence statistics used by the Appendix Z/R experimental ledger. The calculation is finite: generate the $759$ octads of the Steiner system $S(5,8,24)$ and count the number of octads containing a fixed subset of size $r$ for $r=0,1,2,3,4,5$.
+
+**Pass condition.** The incidence counts must equal the Steiner-system values
+$$
+759,
+\quad
+253,
+\quad
+77,
+\quad
+21,
+\quad
+5,
+\quad
+1,
+$$
+with the ratios used in the residual-shell prediction extracted from these counts rather than assumed.
+
+**Fail condition.** If the enumerated code is not equivalent to $\mathcal G_{24}$, if the octad count is not $759$, or if the incidence counts differ from the displayed Steiner values, the corresponding residual-shell prediction is rejected on that branch.
+
+### V.3.3 Backbone Integer-Ledger Audit
+
+**Target.** Verify the finite symbolic chain
+$$
+K_0=3\to d_0=8\to (a,b)=(2,6)\to k=12\to M=24\to D=4
+$$
+using only the cited PU branch gates: the horizon-error selection of $K_0$, the minimal carrier $d_0=2^{K_0}$, the active rank $a=2$, the Peirce decomposition of the rank-$2$ projector in $\mathbb C^8$, the predictive-recovery MacWilliams gate for $k=12$, and the kissing/mode-channel condition for $D=4$.
+
+**Pass condition.** Each arrow must be checked as a separate implication with its branch hypothesis stated. In particular, the Peirce step must verify
+$$
+\dim_\mathbb C pE=2,
+\qquad
+\dim_\mathbb C(1-p)E=6,
+\qquad
+\dim_\mathbb C\operatorname{Hom}(pE,(1-p)E)=12,
+\qquad
+\dim_\mathbb R T_p\mathrm{Gr}(2,8)=24.
+$$
+
+**Fail condition.** If any arrow requires an unstated branch input, the audit must report the exact missing hypothesis rather than treating the whole integer chain as unconditional.
+
+### V.3.4 Primordial $\mathbb{CP}^{11}$ Determinant Audit
+
+**Target.** Evaluate the determinant prefactor defined by the primordial determinant certificate of Appendix U, using the fixed spectrum
+$$
+\lambda_\ell=4\ell(\ell+11)+m_Q^2
+$$
+and the stated multiplicities for nonconstant modes on $\mathbb{CP}^{11}$.
+
+**Pass condition.** The audit must output a definite value of
+$$
+A_Q^{\mathrm{det}}
+=\mathcal J_Q\exp[\tfrac12\zeta_Q'(0)]
+$$
+with the finite-part convention, zero-mode quotient, and measure factor fixed before comparison with $A_s$, $r$, or $A_s r$.
+
+**Fail condition.** If $m_Q^2$, $\mathcal J_Q$, or the finite-part convention is not fixed, the audit may verify the formal zeta expression but cannot promote the leading branch $A_Q=1$ to theorem-level determinant closure.
+
+### V.3.5 McKay/Bures-Weight No-Go Audit
+
+**Target.** Test whether a McKay quiver or Dynkin-mark computation alone can force the Bures-weight constraint
+$$
+21\kappa_1+55\kappa_2-48\kappa_3=0
+$$
+that is equivalent to the lepton-to-quark tilt normalization $c_\ell/c_d=8/3$ in Appendix T.
+
+**Pass condition for the no-go.** For every candidate finite McKay diagram compatible with the lifted Golay/parity action, the discrete McKay data must leave at least one continuous positive normalization degree of freedom in the weights $\chi_i$, so that the displayed linear relation is not forced by McKay data alone.
+
+**Pass condition for closure.** If a candidate McKay branch does force the displayed relation, the audit must identify the exact diagram, marks, representation assignment, and normalization theorem that remove the continuous freedom. In that case the Appendix T Bures-weight certificate should be updated to cite the derived McKay closure.
+
+**Fail condition.** A raw match of small integers or Dynkin marks is insufficient. The audit fails if it does not prove uniqueness of the normalization or does not separate discrete McKay data from continuous Bures-weight scale choices.
+
+### V.3.6 RHG Flag-Lift Spectral Certificate Audit
+
+This audit records the finite status of the RHG flag-lift spectral gate of Definition T.78.6 and Algorithm T.78.6a. It is forward-only: the validation tuple $(15.14,20.94,18.41)$ is not used to choose a block ledger, finite part, metric normalization, structural triple, or tail constant.
+
+For
+$$
+\widetilde X=SU(8)/S(U(2)\times U(1)\times U(2)\times U(3)),
+$$
+one has
+$$
+\dim_{\mathbb R}\widetilde X
+=
+(8^2-1)-(4+1+4+9-1)
+=46,
+\qquad
+\dim_{\mathbb C}\widetilde X=23.
+$$
+The Clifford generator count used by the RHG construction is
+$$
+\rho(24)=8,
+$$
+so the real Clifford block has eight anticommuting generators. The finite Peter-Weyl audit may verify the generator algebra, the flag-manifold dimension, the $C_2\le100$ dominant-weight enumeration, and the analytic $P=24$ tail integral.
+
+These checks do not by themselves verify Algorithm T.78.6a. The present text still lacks the explicit RHG block matrices
+$$
+\mathcal K_b,
+\qquad
+\Pi_b^{\mathrm{RHG}},
+\qquad
+J_b^{\mathrm{RHG}},
+$$
+the numerical metric normalization $\beta_{\mathrm{RHG}}$, the exact homogeneous connection certificate, the spectrahedral minimizer
+$$
+x_{\mathrm{RHG}}=(\mu_0,m_{\mathcal J},\eta),
+$$
+and the heat-kernel/zeta finite parts and tail constants required to certify intervals for $F_s^{\mathrm{RHG}}$.
+
+Consequently no certified interval triplet
+$$
+(\Delta_1,\Delta_2,\Delta_3)^{\mathrm{RHG}}
+$$
+is obtained. The validation tuple remains a comparison target only.
+
+If the validation tuple is inverted only for diagnostic comparison,
+$$
+\Delta^{\mathrm{val}}=(15.14,20.94,18.41)
+$$
+under the fixed threshold map
+$$
+\Delta=TF,
+\qquad
+T=
+\begin{pmatrix}
+2/5&3/5&8/15\\
+0&1&0\\
+1&0&0
+\end{pmatrix}
+$$
+gives
+$$
+F_C=18.41,
+\qquad
+F_W=20.94,
+\qquad
+F_Y=-8.9775.
+$$
+This diagnostic inversion is not a derivation and may not be used to select any entry of $\mathfrak C_{\mathrm{RHG}}$.
+
+### V.3.7 Audit Conclusion
+
+The finite audit ladder verifies only the displayed mechanical calculations. It does not verify Algorithm T.78.6a because the required RHG block data, spectrahedral minimizer, finite-part computation, and tail constants are absent. Therefore the RHG gate remains in the pre-certificate negative-closure status of Theorem T.78.2 and Corollary T.78.5.1.

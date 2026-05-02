@@ -141,7 +141,7 @@ $$
 
 #### H.4.2.1 The Bridge Law: QFI Linear Response Per Spatial Channel
 
-The efficiency factor $\eta'$ is a bridge-law normalization. It is not fitted to galaxy data; once Definition H.0 and the operating-point normalization of Equation H.4b are adopted, its value is fixed by the stated QFI linear-response factors. Its status is therefore **conditional theorem / bridge normalization**, not an unconditional theorem-level consequence of the Unruh–de Sitter temperature equality alone.
+The efficiency factor $\eta'$ is the unique admissible QFI linear-response normalization in the bridge-law class of Definition H.4.2.8a. It is not fitted to galaxy data. Once the linear-response role, QFI additivity, active-support projection, spatial projection, and democratic $K_0$ generator normalization are fixed, Theorem H.4.2.8b forces Equation H.4b.
 
 **Definition H.0 (Gravitational Efficiency - Bridge Law).**
 *The gravitational efficiency $\eta'$ is defined as the Quantum Fisher Information (QFI) linear-response coefficient for estimating an acceleration parameter, per spatial channel, normalized by the maximal per-channel interface QFI:*
@@ -350,41 +350,73 @@ $$
 \tag{H.4b}
 $$
 
-**Definition H.4.2.8a (Admissible Bridge-Law Class).** Let $\mathcal B_H$ be the class of bridge-law normalizations $\eta$ assigning a positive dimensionless coefficient to the acceleration relation
+**Definition H.4.2.8a (Admissible QFI-Gravity Bridge-Law Class).** Let $\mathcal B_H$ be the class of bridge-law normalizations assigning a positive dimensionless coefficient $\eta$ to
 $$
 g_0(\eta)=\eta c^2\sqrt{\frac{\Lambda}{3}}.
 $$
-An element $\eta\in\mathcal B_H$ is admissible when it satisfies:
+A bridge law is admissible when it satisfies all of the following finite-response conditions:
 
-1. **Dimensional closure:** $\eta$ is dimensionless and uses no dimensional input beyond $c$ and $\Lambda$ in $g_0(\eta)$.
-2. **Internal-data closure:** $\eta$ depends only on the PU structural data $(C_{\max}^*,\varepsilon,a,d_0,D,K_0)$ and on an explicitly stated bridge law.
-3. **Factor locality:** each factor in $\eta$ is assigned to exactly one of the four bridge roles: channel capacity, mode dilution, directional projection, or complexity curvature.
-4. **No observational fitting:** $\eta$ is not chosen by fitting galaxy rotation curves, lensing data, or cosmological acceleration data.
-5. **Positive response:** increasing the selected channel-capacity factor while holding the other bridge factors fixed cannot decrease $g_0(\eta)$.
+1. **Linear-response locality:** $\eta$ is computed from the pointwise QFI quadratic form at the attractor and contains no finite-deviation or curvature-invariant term.
+2. **Tensor-product additivity:** independent Landauer-costed comparison events contribute additively to QFI.
+3. **Active-support isotropy:** the active projection is the unique Haar-isotropic rank-$a$ projection inside $\mathbb C^{d_0}$.
+4. **Spatial equivariance:** the acceleration response is the $SO(D-1)$-equivariant spatial projection of the $D$-dimensional local response.
+5. **Per-channel intensivity:** $\eta$ is normalized per spatial channel, so the factor $M_{\rm sp}$ appearing in $F_{\rm grav}$ cancels the denominator in Definition H.0.
+6. **Democratic generator normalization:** the $K_0$ independent SPAP generators are combined with unit total QFI norm, giving the scalar factor $1/\sqrt{K_0}$.
+7. **No observational fitting:** no parameter in $\eta$ is chosen from galaxy rotation, lensing, or cosmological acceleration data.
 
-The adopted operating-point representative is
+**Theorem H.4.2.8b (Uniqueness of the QFI-Gravity Bridge Normalization).** Every bridge law in $\mathcal B_H$ has
 $$
-\eta_{\times}=\frac{C_{\max}^*}{\varepsilon}\cdot\frac{a}{d_0}\cdot\frac{D-1}{D}\cdot\frac{1}{\sqrt{K_0}}
-=\frac{3}{8\sqrt3},
-\qquad
-C_{\max}^*=2\varepsilon.
+\eta(C)=
+\left(\frac{C}{\varepsilon}\right)
+\left(\frac{a}{d_0}\right)
+\left(\frac{D-1}{D}\right)
+\left(\frac1{\sqrt{K_0}}\right).
+$$
+At the operating point $C=C_{\max}^*=2\varepsilon$, this gives
+$$
+\eta'=
+2\cdot\frac14\cdot\frac34\cdot\frac1{\sqrt3}
+=
+\frac{3}{8\sqrt3}.
 $$
 
-**Proposition H.4.2.8b (Bridge-Law Scaling and Representative Dependence).** For every admissible bridge normalization $\eta\in\mathcal B_H$, all acceleration-scale outputs depending only on the H-sector bridge law scale linearly with $\eta$:
-$$
-\frac{g_0(\eta)}{g_0(\eta_{\times})}=\frac{\eta}{\eta_{\times}}.
-$$
-Consequently, any two admissible bridge laws agree on the dimensionful dependence $c^2\sqrt{\Lambda/3}$ and differ only by the dimensionless bridge coefficient.
+*Proof.* By linear-response locality, $\eta$ is a scalar contraction of the QFI metric at the attractor. Tensor-product additivity fixes the comparison-event multiplier uniquely: if $C$ nats of comparison budget are divided into events of cost $\varepsilon$, the number of independent repetitions is $C/\varepsilon$, and QFI adds linearly by Theorem H.1b.
 
-*Proof.* The defining H-sector acceleration relation is $g_0(\eta)=\eta c^2\sqrt{\Lambda/3}$. The factor $c^2\sqrt{\Lambda/3}$ is common to every admissible bridge law by dimensional closure. Hence for two admissible coefficients $\eta$ and $\eta'$,
+Active-support isotropy fixes the active projection factor. For a rank-$a$ projector in $\mathbb C^{d_0}$, Theorem H.1a gives
 $$
-\frac{g_0(\eta)}{g_0(\eta')}=\frac{\eta c^2\sqrt{\Lambda/3}}{\eta' c^2\sqrt{\Lambda/3}}=\frac{\eta}{\eta'}.
+\mathbb E\lVert \Pi_{\rm act}\hat X\rVert^2=\frac{a}{d_0}.
 $$
-Setting $\eta'=\eta_{\times}$ gives the displayed formula. The five admissibility conditions restrict which dimensionless coefficients may be considered internal bridge laws; they do not alter the common dimensionful dependence. ∎
+No other scalar is invariant under the full unitary action while depending only on the rank of the active support.
 
-**Corollary H.4.2.8c (Bridge-Law Falsification Boundary).** A mismatch in the numerical value of $g_0$ falsifies the adopted representative $\eta_{\times}$ only after the upstream value of $\Lambda$, the unit convention for $c$, and the observational acceleration definition have been fixed. It falsifies the whole admissible class $\mathcal B_H$ only if no coefficient satisfying Definition H.4.2.8a remains compatible with the same data.
+Spatial equivariance fixes the spatial factor. The unique $SO(D-1)$-equivariant scalar projection from the $D$ local directions onto the spatial acceleration channel has trace ratio
+$$
+\frac{D-1}{D},
+$$
+which is Theorem H.2. Per-channel intensivity cancels the explicit $M_{\rm sp}$ count in Definition H.0, leaving this projection ratio rather than an additional mode-count factor.
 
-*Proof.* Proposition H.4.2.8b separates the common dimensionful factor from the dimensionless coefficient. A discrepancy can therefore arise from the adopted coefficient, from the upstream input $\Lambda$, or from the observational definition of the acceleration scale. Once the latter two are fixed, disagreement with $\eta_{\times}$ rules out that representative. Ruling out the whole class requires ruling out every admissible coefficient. ∎
+Democratic generator normalization fixes the final scalar. Combining $K_0$ independent SPAP generators with unit total QFI norm assigns equal squared weight $1/K_0$ to each and amplitude normalization $1/\sqrt{K_0}$ to the selected scalar response, as in Theorem H.1c.
+
+The four operations act on independent tensor factors: event repetition, active support, spacetime direction, and SPAP-generator normalization. Multiplicativity of independent QFI coarse-grainings therefore gives the product
+$$
+\eta(C)=
+\left(\frac{C}{\varepsilon}\right)
+\left(\frac{a}{d_0}\right)
+\left(\frac{D-1}{D}\right)
+\left(\frac1{\sqrt{K_0}}\right).
+$$
+Curvature invariants and finite-deviation terms are excluded by linear-response locality, and observational coefficients are excluded by condition 7. Thus the displayed product is the unique admissible normalization. Substituting $C_{\max}^*=2\varepsilon$, $a=2$, $d_0=8$, $D=4$, and $K_0=3$ gives $\eta'=3/(8\sqrt3)$. ∎
+
+**Corollary H.4.2.8c (Acceleration Lock).** In the admissible QFI-gravity bridge-law class,
+$$
+g_0
+=
+\frac{3}{8\sqrt3}c^2\sqrt{\frac{\Lambda}{3}}
+=
+\frac{c^2\sqrt{\Lambda}}8.
+$$
+The coefficient has no free fit parameter once the upstream PU structural data and the QFI bridge-law class are fixed.
+
+*Proof.* Substitute the unique value of $\eta'$ from Theorem H.4.2.8b into $g_0=\eta'c^2\sqrt{\Lambda/3}$. Since $\sqrt{\Lambda/3}/\sqrt3=\sqrt\Lambda/3$, the coefficient is $(3/8)(1/3)=1/8$. ∎
 
 ### H.4.3 Numerical Prediction
 
@@ -702,7 +734,6 @@ $$
 **Derivation Chain:**
 $$
 \boxed{\text{SPAP} \xrightarrow{K_0=3} d_0 \ge 8 \xrightarrow{\text{minimal branch}} d_0 = 8 \xrightarrow{\varepsilon=\ln 2\ \text{on attractor branch}} a = 2 \xrightarrow{M=2ab} 24 \xrightarrow{\text{mode-channel model}} D=4 \xrightarrow{\text{Bridge Law}} \eta' = \frac{3}{8\sqrt{3}}}
-$$
 $$
 
 

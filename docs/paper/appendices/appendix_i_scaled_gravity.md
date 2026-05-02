@@ -140,6 +140,264 @@ The definition of $\chi_b$ is the unique dimensionless ratio formed from the loc
 
 **Remark I.1.** The functional form $a_0 \propto c^2\sqrt{\Lambda}$ follows from equating two well-established temperatures (Unruh and de Sitter). The additional factor $\eta' = 3/(8\sqrt{3})$ is not obtained from that temperature equality alone; it is the conditional consequence of the QFI linear-response bridge law adopted in Appendix H, Definition H.0. Once that bridge-law normalization is fixed, no continuously adjustable parameter remains in the galactic-scale prediction; the scale is locked to $\Lambda$ by Corollary I.3a.
 
+**Definition I.3b (Predictive Focusing and Susceptibility Datum).** On a regular emergent metric/channel-capacity thermodynamic branch, let $k^\mu$ be an affine null generator of a local causal horizon, let $a(\lambda)$ be the transverse area density along the generator, and let $S_{\mathrm{pred}}(\lambda)$ be the retained predictive entropy crossing the same generator. Define the predictive generalized expansion
+$$
+\Theta_{\mathrm{PU}}(\lambda)
+=
+\frac{d}{d\lambda}
+\left(
+\frac{a(\lambda)}{4G}+S_{\mathrm{pred}}(\lambda)
+\right).
+\tag{I.3b.1}
+$$
+A metric/channel-capacity susceptibility datum is a linear response function
+$$
+\chi_g(\omega,\mathbf k)
+=
+\frac{\delta g_{\mathrm{eff}}(\omega,\mathbf k)}
+{\delta T_{\mathrm{bar}}(\omega,\mathbf k)}
+\tag{I.3b.2}
+$$
+for the effective metric response to a retained baryonic stress perturbation, with the response normalization specified by the same operating branch as Definition H.0.
+
+**Theorem I.3c (Predictive Focusing and Susceptibility Sum Rule).** Suppose a local null branch satisfies the channel-capacity focusing equation
+$$
+\frac{1}{4G}\frac{d^2a}{d\lambda^2}
+=
+-2\pi T^{\mathrm{PU}}_{kk}
+-
+\mathcal S_{\mathrm{ch}},
+\qquad
+\mathcal S_{\mathrm{ch}}\ge0,
+\tag{I.3c.1}
+$$
+where $T^{\mathrm{PU}}_{kk}=T^{\mathrm{PU}}_{\mu\nu}k^\mu k^\nu$ and $\mathcal S_{\mathrm{ch}}$ is the nonnegative shear/defect channel term. Suppose also that the retained predictive entropy satisfies the null entropy-curvature bound
+$$
+\frac{d^2S_{\mathrm{pred}}}{d\lambda^2}
+\le
+2\pi T^{\mathrm{PU}}_{kk}.
+\tag{I.3c.2}
+$$
+Then
+$$
+\frac{d\Theta_{\mathrm{PU}}}{d\lambda}
+\le
+-\mathcal S_{\mathrm{ch}}
+\le0.
+\tag{I.3c.3}
+$$
+
+If, in addition, $\chi_g(\omega,\mathbf k)$ is causal and passive for fixed $\mathbf k$, meaning that it is analytic in the upper half $\omega$-plane, obeys the reality condition $\chi_g(-\omega,\mathbf k)=\overline{\chi_g(\omega,\mathbf k)}$ for real $\omega$, has finite limits $\chi_g(0,\mathbf k)$ and $\chi_g(\infty,\mathbf k)$, and satisfies the falloff needed for the unsubtracted dispersion relation, then
+$$
+\boxed{
+\chi_g(0,\mathbf k)-\chi_g(\infty,\mathbf k)
+=
+\frac{2}{\pi}
+\int_0^\infty
+\frac{\operatorname{Im}\chi_g(\omega,\mathbf k)}{\omega}\,d\omega.
+}
+\tag{I.3c.4}
+$$
+
+*Proof.* Differentiating (I.3b.1) gives
+$$
+\frac{d\Theta_{\mathrm{PU}}}{d\lambda}
+=
+\frac{1}{4G}\frac{d^2a}{d\lambda^2}
++
+\frac{d^2S_{\mathrm{pred}}}{d\lambda^2}.
+$$
+Substituting (I.3c.1) and then applying (I.3c.2) yields
+$$
+\frac{d\Theta_{\mathrm{PU}}}{d\lambda}
+\le
+(-2\pi T^{\mathrm{PU}}_{kk}-\mathcal S_{\mathrm{ch}})
++
+2\pi T^{\mathrm{PU}}_{kk}
+=
+-\mathcal S_{\mathrm{ch}}
+\le0,
+$$
+which proves (I.3c.3).
+
+For the susceptibility statement, analyticity in the upper half-plane and the stated falloff give the Kramers-Kronig relation
+$$
+\operatorname{Re}\chi_g(0,\mathbf k)-\chi_g(\infty,\mathbf k)
+=
+\frac{2}{\pi}
+\int_0^\infty
+\frac{\operatorname{Im}\chi_g(\omega,\mathbf k)}{\omega}\,d\omega.
+$$
+The static response is real by the reality condition, so $\operatorname{Re}\chi_g(0,\mathbf k)=\chi_g(0,\mathbf k)$. This proves (I.3c.4). ∎
+
+**Corollary I.3d (No Replacement of the H-Bridge by the Sum Rule Alone).** The sum rule (I.3c.4) is a consistency and spectral-reconstruction gate for any dark-sector susceptibility model. It does not by itself fix the numerical factor $\eta'=3/(8\sqrt3)$ in Corollary I.3a. That factor remains fixed by Appendix H, Definition H.0 and Equation H.4b unless a separate PU-internal theorem derives the same static normalization from the spectral density $\operatorname{Im}\chi_g$.
+
+*Proof.* Equation (I.3c.4) determines the difference $\chi_g(0,\mathbf k)-\chi_g(\infty,\mathbf k)$ only after the spectral density and high-frequency normalization are fixed. It is therefore a dispersion constraint on an already specified susceptibility datum, not a substitute for the operating-point normalization of Appendix H. ∎
+
+**Definition I.3e (RCD-Buchert-Cheeger Backreaction Datum).** On a regular emergent metric/channel-capacity thermodynamic branch, let $D$ be a compact averaging domain in the noncollapsed $\mathrm{RCD}^*(K,4)$ limit of Theorem C.6c, with normalized measure $\langle f\rangle_D$. A backreaction datum consists of:
+
+1. an expansion scalar $\theta\in W^{1,2}(D)$ and shear magnitude $\sigma\in L^2(D)$ for the retained cosmological congruence;
+
+2. the first nonzero Neumann spectral gap $\lambda_1(D)>0$ of the Cheeger energy $\mathrm{Ch}_D$;
+
+3. the Buchert-type kinematical backreaction
+$$
+\mathcal Q_D^{\mathrm{PU}}
+=
+\frac23
+\left(
+\langle\theta^2\rangle_D-\langle\theta\rangle_D^2
+\right)
+-
+2\langle\sigma^2\rangle_D;
+\tag{I.3e.1}
+$$
+
+4. an elliptic source-control estimate supplied by the emergent metric/channel-capacity thermodynamic field equation on the retained branch:
+$$
+\frac{2}{3\lambda_1(D)}\mathrm{Ch}_D(\theta)
++
+2\langle\sigma^2\rangle_D
+\le
+B_D[
+\operatorname{Var}_D(T_{\mathrm{pred}}),
+\dot\rho_{\mathrm{src}},
+\mathfrak B_D,
+\mathfrak H_D
+],
+\tag{I.3e.2}
+$$
+where $T_{\mathrm{pred}}$ is the retained predictive stress tensor, $\dot\rho_{\mathrm{src}}$ is the source-energy rate density when present, and $\mathfrak B_D,\mathfrak H_D$ are the finite Bakry-Émery and horizon-transfer defect budgets on the branch.
+
+**Theorem I.3f (RCD-Buchert-Cheeger Backreaction Bound).** On any branch carrying the datum of Definition I.3e,
+$$
+|\mathcal Q_D^{\mathrm{PU}}|
+\le
+\frac{2}{3\lambda_1(D)}\mathrm{Ch}_D(\theta)
++
+2\langle\sigma^2\rangle_D
+\tag{I.3f.1}
+$$
+and therefore
+$$
+|\mathcal Q_D^{\mathrm{PU}}|
+\le
+B_D[
+\operatorname{Var}_D(T_{\mathrm{pred}}),
+\dot\rho_{\mathrm{src}},
+\mathfrak B_D,
+\mathfrak H_D
+].
+\tag{I.3f.2}
+$$
+
+*Proof.* By definition,
+$$
+|\mathcal Q_D^{\mathrm{PU}}|
+\le
+\frac23\operatorname{Var}_D(\theta)
++
+2\langle\sigma^2\rangle_D.
+$$
+The RCD/Poincaré inequality with first nonzero Neumann spectral gap gives
+$$
+\operatorname{Var}_D(\theta)
+\le
+\lambda_1(D)^{-1}\mathrm{Ch}_D(\theta).
+$$
+Substituting gives (I.3f.1). The source-control estimate (I.3e.2), which is the elliptic regularity form of the emergent metric/channel-capacity thermodynamic field equation on the retained branch, gives (I.3f.2). ∎
+
+**Corollary I.3g (Backreaction Status Boundary).** Cosmological backreaction on the PU regular branch is not an unconstrained phenomenological term. It is bounded by Cheeger energy, shear, predictive stress variance, source-energy rate density, and the retained finite-defect budgets. If the datum of Definition I.3e is not supplied for a cosmological domain, Appendix I makes no theorem-level backreaction estimate for that domain.
+
+*Proof.* The first sentence is exactly Theorem I.3f. The second is the contrapositive of the theorem's branch hypothesis. ∎
+
+
+
+**Definition I.3h (RCD Elliptic Scale-Bridge Datum).** Let $(X_n,d_n,m_n,\mathcal E_n)$ be the finite MPU metric-measure networks on a regular operational-continuum branch. The branch carries an RCD elliptic scale-bridge datum when:
+
+1. the finite networks have a uniform Bakry-Émery lower bound $K$ in the sense of the discrete curvature form used in Theorem C.6c;
+
+2. the channel-capacity volume bounds are noncollapsed:
+$$
+v_- r^4\le m_n(B_r(x))\le v_+r^4
+\tag{I.3h.1}
+$$
+for fixed $v_-,v_+>0$ on retained local scales;
+
+3. the finite networks have uniform local doubling and $(1,2)$-Poincaré constants;
+
+4. $(X_n,d_n,m_n)$ converge in the measured Gromov-Hausdorff sense to $(X,d,m)$;
+
+5. the Dirichlet forms $\mathcal E_n$ converge to the limit Cheeger energy in the Mosco sense;
+
+6. on each retained cosmological averaging domain $D$, the emergent metric/channel-capacity thermodynamic field equation admits an elliptic gauge in which
+$$
+\mathrm{Ch}_D(\theta)+\langle\sigma^2\rangle_D
+\le
+C_D
+\left(
+\operatorname{Var}_D(T_{\mathrm{pred}})
++
+\dot\rho_{\mathrm{src}}
++
+\mathfrak B_D+
+\mathfrak H_D
+\right)
+\tag{I.3h.2}
+$$
+for a finite domain constant $C_D$.
+
+**Theorem I.3i (RCD Elliptic Scale-Bridge Completion).** On a branch carrying the RCD elliptic scale-bridge datum, the limit space $(X,d,m)$ is an $\mathrm{RCD}^*(K,4)$ space, the limit Cheeger energy is quadratic, and the backreaction estimate of Theorem I.3f becomes
+$$
+|\mathcal Q_D^{\mathrm{PU}}|
+\le
+C_D'
+\left(
+\operatorname{Var}_D(T_{\mathrm{pred}})
++
+\dot\rho_{\mathrm{src}}
++
+\mathfrak B_D+
+\mathfrak H_D
+\right)
+\tag{I.3i.1}
+$$
+for a finite constant $C_D'$ depending only on the branch constants and the averaging domain.
+
+*Proof.* Uniform Bakry-Émery lower bounds, noncollapse, doubling, Poincaré control, and measured Gromov-Hausdorff convergence give stability of the synthetic Ricci lower bound, so the limit is $\mathrm{RCD}^*(K,4)$. Mosco convergence of $\mathcal E_n$ identifies the limit Dirichlet form with the Cheeger energy, and the RCD condition gives quadraticity of that energy. Theorem I.3f gives
+$$
+|\mathcal Q_D^{\mathrm{PU}}|
+\le
+\frac{2}{3\lambda_1(D)}\mathrm{Ch}_D(\theta)
++
+2\langle\sigma^2\rangle_D.
+$$
+Applying the elliptic estimate (I.3h.2) and absorbing the spectral-gap and numerical constants into $C_D'$ proves (I.3i.1). ∎
+
+**Corollary I.3j (Scale-Bridge Scope).** The RCD-Buchert-Cheeger estimate is theorem-level on branches satisfying Definition I.3h. If noncollapse, uniform doubling/Poincaré control, Mosco convergence, or the elliptic gauge estimate fails, Appendix I retains only the local Cheeger/Poincaré inequality of Theorem I.3f and not the full predictive-stress backreaction estimate.
+
+*Proof.* This is the branch-status boundary of Theorem I.3i. The theorem uses each of the listed hypotheses: removing any one of them blocks either RCD stability, Mosco identification, or the elliptic passage from geometry to predictive stress. ∎
+
+
+**Remark I.3k (Definite Answer to the RCD Elliptic-Backreaction Question).** The RCD elliptic-regularity step is not presently a computed numerical closure in Appendix I. The conditional theorem-level form is the following: if an averaging domain $D$ on a noncollapsed $\mathrm{RCD}^*(K,4)$ branch supplies $\lambda_1(D)>0$, $\theta\in W^{1,2}(D)$, $\sigma\in L^2(D)$, and an elliptic scale-bridge estimate
+$$
+\mathrm{Ch}_D(\theta)+\langle\sigma^2\rangle_D
+\le
+C_D
+\left(
+\operatorname{Var}_D(T_{\mathrm{pred}})
++
+\dot\rho_{\mathrm{src}}
++
+\mathfrak B_D+
+\mathfrak H_D
+\right),
+\tag{I.3k.1}
+$$
+then the Buchert-type backreaction is bounded by the same predictive-stress and defect budgets up to the Poincaré/Cheeger constants. Without (I.3k.1), Appendix I has only a conditional analytic target, not a theorem-level numerical estimate.
+
+In particular, no current Appendix I calculation fixes a canonical-domain value such as $C_D\approx10^{20}$ in Planck units. Such a number may be integrated only after the domain geometry, Poincaré constant, Hölder regularity scale, field-equation elliptic gauge, and finite defect budgets are computed on the same branch.
+
 ---
 
 The PCE-driven relaxation of network parameters can be formalized by modeling the local contribution to the global PCE Potential:

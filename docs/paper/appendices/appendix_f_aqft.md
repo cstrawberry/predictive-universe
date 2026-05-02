@@ -279,37 +279,51 @@ Thus the variationally defined stress-energy tensor is covariantly conserved on 
 
 **F.6 Rigorous Formulation of Locality and Statistical FTL**
 
-AQFT provides the precise language to formulate PU's stance on locality, distinguishing between operator-level locality and state-mediated influence. This section provides the rigorous justification for the consistency of Postulate 3 (Statistical FTL Influence) with Postulate 2 (Causality as No Deterministic FTL Signaling).
+AQFT provides the precise language to formulate PU's stance on locality, distinguishing between operator-level locality, Bob-marginal-preserving state-mediated influence, and the stronger branch-(iii) statistical-FTL marginal anomaly. This section gives the AQFT consistency setting for the local CPTP and joint/conditional branches, while Section 10 supplies the finite-window zero-error analysis needed for the branch-(iii) statistical-FTL hypothesis on the regular branch (Definition 10.2a).
 
 1.  **Emergent Einstein Causality for Algebra $\mathfrak{A}$:** When the continuum-bridge hypotheses of Theorem F.0 hold, Corollary F.1 yields the standard AQFT axiom of Einstein Causality:
 $[\mathfrak{A}(\mathcal{O}_1), \mathfrak{A}(\mathcal{O}_2)] = \{0\}$ for space-like separated regions $\mathcal{O}_1, \mathcal{O}_2$. In that continuum AQFT regime, local measurements or operations performed in $\mathcal{O}_1$ cannot causally influence local measurements or operations performed in $\mathcal{O}_2$ in a way that violates the commutation relation for local observables.
 
 2.  **CC Influence Mediated by Global State $\omega$:** The CC mechanism (Hypothesis 3) acts on a pre-existing, globally defined state $\omega$ of the MPU network, which may possess non-local correlations like entanglement (Proposition 10). The influence is a *local* process: a high-CC system $S_A$ in region $\mathcal{O}_A$, via its internal context $C_A$, locally biases the parameters of the 'Evolve' process for interactions occurring within $\mathcal{O}_A$. This bias acts upon the outcomes determined by Logical Indeterminacy (Definition 12). While SPAP (Theorems 10, 11) proves that outcomes are fundamentally unpredictable (logically indeterminate), the CC mechanism proposes that the *probability distribution* over these indeterminate outcomes is not fixed but can be subtly modulated by emergent complexity. The mechanism leverages the inherent context-sensitivity of the ND-RID parameters (Assumption 1) to favor specific outcomes within the logically allowed possibilities. This does not change the global state $\omega$ instantaneously. Instead, the statistical FTL effect (Postulate 3) arises because the outcomes of these locally biased 'Evolve' events in $\mathcal{O}_A$ are correlated, through the entanglement present in the state $\omega$, with the outcomes of 'Evolve' events in a space-like separated region $\mathcal{O}_B$. The influence is mediated by the pre-existing correlations in the state, not by a superluminal change of the state itself.
 
-3.  **State-Mediated Statistical Influence (Postulate 3 Formalized):** Consider Alice and Bob performing local measurements on a shared entangled state $\omega$. Alice's choice of context $C_A \in \{C_{A,1}, C_{A,2}\}$ in region $\mathcal{O}_A$ influences the joint probability distribution over outcomes for her measurement $A \in \mathfrak{A}(\mathcal{O}_A)$ and Bob's measurement $B \in \mathfrak{A}(\mathcal{O}_B)$. The statistical influence appears in the joint expectation values, not in Bob's unconditional marginals. Specifically, Postulate 3 asserts:
-    $$
-    \omega_{C_{A,1}}(A \otimes B) \neq \omega_{C_{A,2}}(A \otimes B) \quad \text{(Statistical FTL Correlation)} \quad \tag{F.4}
-    $$
-    This dependence of joint statistics on a distant context is a manifestation of correlations encoded in the global state $\omega$ and modulated by Alice's local CC context. When the continuum AQFT limit of Corollary F.1 applies, it does *not* violate operator locality or the no-signaling principle for Bob's local, unconditional statistics, because Bob's marginals are the quantities $\omega_{C_A}(\mathbf{1}_A \otimes B)$ and remain independent of $C_A$ for every local observable $B \in \mathfrak{A}(\mathcal{O}_B)$. The influence is mediated by the *state* $\omega$, not by superluminal propagation of effects through local operations.
+3.  **State-Mediated Statistical Influence (Postulate 3 by Branch):** Consider Alice and Bob performing local measurements on a shared entangled state $\omega$. On the local CPTP and AQFT-compatible joint/conditional branch, Alice's choice of context $C_A\in\{C_{A,1},C_{A,2}\}$ in region $\mathcal O_A$ can influence the joint probability distribution over outcomes for her measurement $A\in\mathfrak A(\mathcal O_A)$ and Bob's measurement $B\in\mathfrak A(\mathcal O_B)$ without changing Bob's unconditional marginal. Specifically, this branch asserts
+$$
+    \omega_{C_{A,1}}(A\otimes B)\ne \omega_{C_{A,2}}(A\otimes B)
+    \quad
+    \text{(state-mediated joint-correlation branch)}
+    \quad
+    \tag{F.4}
+$$
+    together with
+$$
+    \omega_{C_{A,1}}(\mathbf 1_A\otimes B)
+    =
+    \omega_{C_{A,2}}(\mathbf 1_A\otimes B)
+    \quad
+    \forall B\in\mathfrak A(\mathcal O_B).
+    \tag{F.4a}
+$$
+    The stronger branch-(iii) marginal anomaly of Postulate 3 is distinct: it hypothesizes a late-randomized context-dependent shift of Bob's marginal. That branch is not derived from local CPTP AQFT no-signaling; it is constrained instead, on the regular finite-window branch (Definition 10.2a), by Theorem 39, Theorem 39a, and Theorem 42. Thus Appendix F supplies the operator-local baseline and the branch-(i) consistency setting, while Section 10 carries the separate statistical-FTL consistency analysis.
 
 4.  **Compatibility with Operational Causality:** Operator locality together with local CP‑TP structure implies no‑signaling at the level of marginals: for any local CPTP map $\Phi_A$ on $A$,
 $$
 \operatorname{tr}_A\!\big[(\Phi_A\!\otimes\!\mathrm{id}_B)(\rho_{AB})\big]=\operatorname{tr}_A(\rho_{AB}),\qquad
 \big\|\operatorname{tr}_A[(\Phi_A^{(1)}\!\otimes\!\mathrm{id}_B)\rho]-\operatorname{tr}_A[(\Phi_A^{(2)}\!\otimes\!\mathrm{id}_B)\rho]\big\|_1=0,
 $$
-so Alice’s local choice cannot deterministically alter Bob’s marginal. Different contexts correspond to different global state preparations $\omega_{C_A}$ (not superluminal state updates), and consistency with operational causality (Postulate 2) is ensured by the constraints derived within the PU framework:
-   *   CC Bound: $\text{CC} \le \alpha_{CC,max} < 0.5$ (Theorem 39) prevents Alice from deterministically *forcing* Bob's outcome for any initial state, irrespective of entanglement.
-   *   ND-RID Information Limits: The underlying irreversible ND-RID interactions mediating state changes and correlations are subject to irreducible costs ($\varepsilon \ge \ln 2$, Theorem 31), strict contractivity ($f_{RID} < 1$, Lemma E.1), and finite channel capacity ($C_{\max} < \ln d_0$, Theorem E.2). As analyzed in Section 10 (Theorem 40, Theorem 41) and implied by the properties of channels in AQFT (Section F.2, Prop F.1), these limits fundamentally restrict the rate and fidelity of any potential information transfer via this mechanism, preventing the construction of deterministic signaling protocols required for causal paradoxes (Theorem 42).
+so Alice’s local choice cannot alter Bob’s marginal on the local CPTP branch. Different contexts may correspond to different shared-past global state preparations $\omega_{C_A}$, or to Bob-marginal-preserving joint/conditional deformations, or—on the stronger branch-(iii) hypothesis—to a statistical marginal anomaly. Consistency with operational causality (Postulate 2) is ensured by the constraints derived within the PU framework:
+   *   CC Endpoint Bound: $\text{CC}\le\alpha_{CC,max}<0.5$ (Theorem 39) prevents Alice from deterministically *forcing* Bob's outcome for any initial state, irrespective of entanglement.
+   *   Zero-Error Statistical-FTL Gate: Theorem 39a shows that, on the regular finite-window branch (Definition 10.2a), a branch-(iii) marginal shift can have positive statistical information while still having zero finite-window zero-error capacity.
+   *   ND-RID Information Limits: The underlying irreversible ND-RID interactions mediating state changes and correlations are subject to irreducible costs ($\varepsilon\ge\ln2$, Theorem 31), strict contractivity ($f_{RID}<1$, Lemma E.1), and finite channel capacity ($C_{\max}<\ln d_0$, Theorem E.2). As analyzed in Section 10 (Theorem 40, Theorem 41), these limits restrict the rate and fidelity of any potential information transfer via this mechanism, preventing the construction of deterministic signaling protocols required for causal paradoxes (Theorem 42). Mechanisms (b) and (c) of Definition 10.2a are precisely the ND-RID contractivity and irreducible-cost bounds, which is why the regular finite-window hypothesis is intrinsic to the framework rather than imposed externally.
 
 AQFT formalizes how operator locality for observables, when the continuum bridge applies, coexists with constrained state-mediated statistical non-locality for expectations and outcome probabilities. The influence is in the preparation of the global state ensemble, not in the local interaction rule.
 
 **F.7 Maintaining Lorentz Invariance**
 
-The framework is argued to maintain Lorentz invariance despite the hypothesis of state-mediated statistical FTL influence (Postulate 3):
+The framework is argued to maintain Lorentz invariance despite the hypothesis of state-mediated statistical FTL influence (Postulate 3), because the branch is statistical, finite-window zero-error inaccessible on the regular branch, and not a controllable deterministic synchronization channel:
 1.  **State Dependence:** The statistical influence (Equation F.4) depends on the global state $\omega_{C_A}$. Lorentz transformations act consistently on both the operators $B \in \mathfrak{A}(\mathcal{O}_B)$ and the description of the state $\omega$.
-2.  **No Preferred Frame Signaling:** The impossibility of *deterministic* signaling (Theorem 42) means the statistical influence cannot be used to synchronize clocks or establish a preferred reference frame for information transmission. The influence is purely statistical and does not constitute operational communication capable of violating Lorentz invariance.
+2.  **No Preferred Frame Signaling:** The impossibility of deterministic or zero-error finite-window signaling (Theorems 39a and 42 on the regular branch) means the statistical influence cannot be used to synchronize clocks or establish a preferred reference frame by a controllable error-free message. The influence may be statistically detectable, but it does not constitute the deterministic operational communication required for Lorentz-paradox construction.
 3.  **Lorentz Covariance of Dynamics:** The underlying effective action $S_{eff}$ (Section F.5) and dynamics generator $\mathcal{L}^*$ (Section F.4) are assumed to be Lorentz or generally covariant in the emergent spacetime. The process of state preparation $\omega_{C_A}$ and the resulting statistical correlations transform consistently under Lorentz boosts.
-4.  **Analogy with Entanglement:** This is analogous to the non-locality of standard quantum entanglement, which is compatible with Lorentz invariance because it cannot be used for deterministic superluminal signaling (the outcome of a local measurement is fundamentally random, even if correlated with a distant outcome). The CC state-mediated influence is argued to fall into this category.
+4.  **Analogy with Entanglement:** This is analogous in causal role, though not identical in marginal structure, to the non-locality of standard quantum entanglement: the relevant compatibility condition is not absence of every statistical dependence, but absence of deterministic or zero-error superluminal signaling. The CC state-mediated influence is argued to fall into this causal category under Theorems 39a and 42 on the regular branch.
 
 **F.8 Conclusion: AQFT as Arena for Verification and Locality**
 
@@ -317,8 +331,8 @@ AQFT provides a robust mathematical framework for analyzing the properties of th
 *   Precise definition of emergent physical states and dynamics.
 *   Rigorous definition of the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}$ (Definition F.4).
 *   Formulation of Einstein Causality (Microcausality) through Corollary F.1 when the lightcone-identification hypothesis of Theorem F.0 is satisfied.
-*   A clear formulation of the framework's stance on locality, allowing for a hypothesized state-mediated statistical FTL influence (Equation F.4, Postulate 3) that is compatible with emergent operator locality when the Appendix F continuum bridge applies, as analyzed in Section F.6.
-*   Confirmation that consistency with operational causality (Postulate 2) is maintained via the CC bound (Theorem 39) and the information limitations of the underlying ND-RID interactions (Theorem 40, Theorem 41, as analyzed in Section F.6), preventing deterministic signaling (Theorem 42).
+*   A clear formulation of the framework's stance on locality, allowing for hypothesized state-mediated statistical influence (Equation F.4, Postulate 3) on the Bob-marginal-preserving branch, while distinguishing the stronger branch-(iii) marginal anomaly analyzed in Section 10 on the regular finite-window branch (Definition 10.2a).
+*   Confirmation that consistency with operational causality (Postulate 2) is maintained via the CC endpoint bound (Theorem 39), the finite-window zero-error gate (Theorem 39a), and the information limitations of the underlying ND-RID interactions (Theorem 40, Theorem 41, as analyzed in Section F.6), preventing deterministic or zero-error signaling (Theorem 42).
 
 Establishing the full convergence from discrete MPU dynamics to a stable, local AQFT satisfying the Haag-Kastler axioms remains a major open bridge. Beyond the regularity-necessity layer of Appendix C and the compactness inputs of Appendix D, the present manuscript does not yet supply: (i) a theorem deriving the weighted-shell/local-isotropy input at the one-shell level, or an equivalent replacement strong enough for the scalar-curvature bridge; (ii) a uniform discrete curvature-dimension / Bochner estimate, or equivalent radius-2 curvature-matrix control, that transfers the rescaled family into the synthetic-curvature class used in Section 11.4; (iii) Mosco convergence of the rescaled Dirichlet forms, or another theorem identifying the limit Cheeger energy as quadratic on the selected branch; (iv) the Euclidean rigidity input needed to identify the measured limit locally with $\mathbb{R}^4$ on that branch, such as a quantitative Reifenberg theorem or the precise non-collapsed volume-rigidity statement in the model-volume regime actually used; or (v) a controlled coarse-graining theorem on local algebras that either retains the coherent Hamiltonian limit region-wise or proves its suppression/cancellation. Under the natural extensive scaling of local Hamiltonian densities, the coherent contribution on a fixed physical region is generically $O(1)$ rather than $o(1)$, so the Duhamel-smallness reduction requires an added theorem of suppression, cancellation, or retained Hamiltonian convergence. Rigorously deriving the emergent dynamics generator $\mathcal{L}^*$ and validating these remaining bridge hypotheses of Theorem F.0 are therefore key future theoretical tasks for the PU framework.
 
@@ -494,6 +508,35 @@ CPT is a symmetry of the emergent dynamical equations (S-matrix elements, field 
 
 *Proof.* Part (1) follows directly from Theorem F.4. Part (2) follows from the thermodynamic ratchet (Appendix O, Theorem O.3): every 'Evolve' step increases entropy by at least $\varepsilon \geq \ln 2$. The CPT-conjugate of an entropy-increasing sequence is an entropy-decreasing sequence, which violates the Second Law. ∎
 
+**Theorem F.5a (Modular Spin-Statistics-CPT Descent Gate).** On a regular AQFT branch, suppose the local diamond and wedge net satisfies:
+
+1. Haag duality and the split property for the retained local observable algebras;
+
+2. finite PPI sectors are localized and transportable in the DHR sense on the retained net;
+
+3. the PCE/KMS state is faithful, cyclic, and separating on every retained wedge algebra;
+
+4. the modular flow of each retained wedge algebra agrees with the corresponding local Lorentz boost flow after the normalization of Theorem F.10.3;
+
+5. the modular conjugation of each retained wedge algebra implements the associated wedge reflection on the local net;
+
+6. the modular cocycle obstruction class of Theorem F.10.11b vanishes on the wedge/diamond cover used for sector transport.
+
+Then the Wightman/Jost realization hypotheses used in Theorem F.2 and Theorem F.4 may be replaced on this branch by the modular descent package above. The exchange statistics of every retained sector is fixed by the $2\pi$ rotation class:
+$$
+\epsilon_\rho
+=
+(-1)^{2s_\rho},
+\tag{F.9.5a.1}
+$$
+so integer-spin sectors are bosonic and half-integer-spin sectors are fermionic. The same modular reflection data implement the antiunitary CPT operator of Theorem F.4 on the retained field algebra.
+
+If the modular cocycle obstruction class is nonzero, the branch fails the modular descent gate and cannot be promoted to a core regular spin-statistics-CPT branch.
+
+*Proof.* Assumptions 1 and 2 give the finite retained DHR tensor category of localized, transportable sectors. Assumptions 3-5 give the Bisognano-Wichmann modular geometry on the retained wedge net: modular automorphisms act as boosts and modular conjugations act as wedge reflections. Therefore the statistics operator of a transported sector is identified with the geometric $2\pi$ rotation in the emergent Lorentz cover. A sector of spin $s_\rho$ acquires phase $(-1)^{2s_\rho}$ under that rotation, giving (F.9.5a.1). Locality of the DHR braiding then identifies this rotation phase with the exchange statistics: $+1$ gives Bose exchange and $-1$ gives Fermi exchange. This reproduces the conclusion of Theorem F.2 without separately imposing the Wightman realization package.
+
+The modular conjugations implement wedge reflections. Products of the wedge reflection with the internal charge conjugation on the corresponding conjugate DHR sector give the antiunitary strong-reflection action on local fields, hence the CPT operator of Theorem F.4 on the retained algebra. Assumption 6 guarantees that these local modular implementations glue consistently across the wedge/diamond cover. If the obstruction class is nonzero, Theorem F.10.11b says the modular flows do not glue to a single descent automorphism group; then the sector-transport argument above is not globally defined, so the branch is rejected by the gate. ∎
+
 ---
 
 ### F.9.6 Summary
@@ -505,6 +548,7 @@ The spin-statistics connection and CPT theorem are available in the PU manuscrip
 |---------|----------------------------|--------|
 | **Spin-Statistics** (F.2) | Lorentz invariance (Thm 46), microcausality in the Theorem F.0 continuum limit (Cor F.1), positive energy (Thm 29), local field algebra (Thm F.0), and the Wightman realization hypotheses stated in Theorem F.2 | Conditional theorem |
 | **CPT Invariance** (F.4) | The AQFT/Wightman/Jost analyticity, locality, and spectrum-condition hypotheses stated in Theorem F.4, together with the spin-statistics input of Theorem F.2 | Conditional theorem |
+| **Modular Spin-Statistics-CPT Descent** (F.5a) | Haag duality, split property, DHR transportability, local PCE/KMS modular boost action, modular reflection, and vanishing modular cocycle obstruction | Conditional modular-gate theorem |
 
 The PCE interpretation (Proposition F.2, Theorem F.3) provides additional insight: Bose and Fermi statistics are the unique *optimal* ways to describe identical particles consistent with quantum superposition and locality in the AQFT regime under discussion. Within that same AQFT/Wightman regime, CPT invariance of the dynamics is consistent with the thermodynamic arrow of time: the former is a symmetry of *what evolutions are possible*, while the latter is a selection principle for *which evolutions occur*.
 
@@ -1222,6 +1266,105 @@ $$
 $$
 and use linearity and continuity of the trace pairing. ∎
 
+**Definition F.10.4e.5 (Quantum LAN Field Certificate).** Let $\{\sigma_\phi\}_{\phi\in\mathcal F_{\mathrm{reg}}}$ be a faithful finite-dimensional regular family supporting an extremal component of Theorem F.10.4e.2, let $\phi_0\in\mathcal F_{\mathrm{reg}}$, and write local coordinates as
+$$
+\phi_N(u)=\phi_0+\frac{u}{\sqrt N},
+\qquad
+u\in K\Subset T_{\phi_0}\mathcal F_{\mathrm{reg}}.
+\tag{F.10.4e.4}
+$$
+The associated finite experiment is
+$$
+\mathcal E_N(K)
+=
+\left\{
+\sigma_{\phi_N(u)}^{\otimes N}:u\in K
+\right\}.
+\tag{F.10.4e.5}
+$$
+A quantum LAN field certificate at $\phi_0$ is a tuple
+$$
+\mathfrak L_{\phi_0}
+=
+(\mathcal G_{\phi_0},\mathcal I_{\phi_0},\Omega_{\phi_0},\Theta_N,\Xi_N,\epsilon_N)
+\tag{F.10.4e.6}
+$$
+such that:
+
+1. $\mathcal G_{\phi_0}(K)=\{G_u:u\in K\}$ is a finite-rank Gaussian quantum experiment with Fisher matrix $\mathcal I_{\phi_0}\ge0$ on the identifiable tangent quotient and antisymmetric symplectic form $\Omega_{\phi_0}$ on the noncommuting tangent directions;
+
+2. its Gaussian overlap normalization is
+$$
+F(G_u,G_v)
+=
+\exp\!\left[
+-\frac18 (u-v)^T\mathcal I_{\phi_0}(u-v)
+\right];
+\tag{F.10.4e.7}
+$$
+
+3. $\Theta_N$ and $\Xi_N$ are CPTP channels satisfying the two-sided deficiency bounds
+$$
+\sup_{u\in K}
+\left\|
+\Theta_N(\sigma_{\phi_N(u)}^{\otimes N})-G_u
+\right\|_1
+\le\epsilon_N,
+\tag{F.10.4e.8}
+$$
+$$
+\sup_{u\in K}
+\left\|
+\Xi_N(G_u)-\sigma_{\phi_N(u)}^{\otimes N}
+\right\|_1
+\le\epsilon_N,
+\tag{F.10.4e.9}
+$$
+with $\epsilon_N\to0$;
+
+4. any retained polynomial probe variables used beyond bounded finite-cylinder probes are uniformly integrable under both experiments on compact $u$-sets.
+
+The branch is called a PU-LAN field branch when every retained extremal component admits such a certificate on each compact coordinate patch.
+
+**Theorem F.10.4e.6 (Gaussian Normal Form of Certified MPU Fields).** On a PU-LAN field branch, every finite operational probe of the local extremal MPU ensemble has the same limiting statistics as the Gaussian experiment $\mathcal G_{\phi_0}$. In particular:
+
+1. bounded finite-cylinder probe expectations converge uniformly on compact $u$-sets to their Gaussian values;
+
+2. all connected cumulants of order $r\ge3$ for retained bounded finite-cylinder probe variables vanish in the LAN scaling limit; the same conclusion for polynomial probes requires the uniform-integrability clause of the certificate;
+
+3. the connected two-point kernel is the inverse Fisher kernel $\mathcal I_{\phi_0}^{-1}$ on the identifiable tangent quotient;
+
+4. the noncommuting tangent response is encoded by $\Omega_{\phi_0}$;
+
+5. bounded finite-cylinder probe variables are used for the cumulant statements below, and polynomial probe variables require the additional uniform-integrability bound supplied by the certificate;
+
+6. the local predictive distinguishability kernel is fixed by
+$$
+-\log F(G_u,G_v)
+=
+\frac18 (u-v)^T\mathcal I_{\phi_0}(u-v).
+\tag{F.10.4e.10}
+$$
+
+*Proof.* Let $f$ be any bounded finite-cylinder functional of a retained probe, with $\|f\|_\infty\le1$. By (F.10.4e.8), for the POVM or finite probe channel implementing $f$,
+$$
+\left|
+\mathbb E_{\sigma_{\phi_N(u)}^{\otimes N}}[f]
+-
+\mathbb E_{G_u}[f]
+\right|
+\le
+\left\|
+\Theta_N(\sigma_{\phi_N(u)}^{\otimes N})-G_u
+\right\|_1
+\le\epsilon_N,
+$$
+uniformly for $u\in K$. This proves item 1. Since $\mathcal G_{\phi_0}$ is Gaussian by Definition F.10.4e.5, its connected cumulants of order $r\ge3$ vanish; uniform convergence of bounded cylinder moments gives item 2 on the retained finite probe algebra. The covariance of the identifiable Gaussian shift model is $\mathcal I_{\phi_0}^{-1}$ on the quotient by null Fisher directions, proving item 3. The antisymmetric commutator form of the Gaussian quantum experiment is $\Omega_{\phi_0}$ by the certificate, proving item 4. Finally, item 5 records the bounded-probe/uniform-integrability domain of the cumulant statement, and item 6 is exactly the overlap normalization (F.10.4e.7). ∎
+
+**Corollary F.10.4e.7 (Gaussian Overlap Gate for Flavor and Field Profiles).** Any use of a Gaussian local overlap kernel in the retained field, flavor, or packet-profile sectors is theorem-level only when its Hessian equals the Fisher matrix $\mathcal I_{\phi_0}$ of a PU-LAN field certificate on that branch. Otherwise the Gaussian kernel remains a branch input.
+
+*Proof.* Theorem F.10.4e.6 proves that the Gaussian overlap and its Hessian are forced by the LAN certificate. If no such certificate is supplied, the Hessian is not fixed by Theorem F.10.4e.2 or Corollary F.10.4e.4 alone, because de Finetti gives an exchangeable mixture of extremal components but does not determine the local quadratic normal form. ∎
+
 ### F.10.4f Predictive Nuclearity Species Bound
 
 **Definition F.10.4f.1 (PU Phase-Space Nuclearity Datum).** On a regular AQFT branch satisfying the continuum bridge hypotheses of Theorem F.0 and Theorem F.10.2, let $\mathfrak A(O)$ be the local algebra of a relatively compact causal region $O$, let $\Omega_*$ be the cyclic PCE/KMS vector of the faithful equilibrium state, and let $H\ge0$ be the positive generator of the retained time evolution. For $\beta>0$, define the local phase-space map
@@ -1289,7 +1432,114 @@ This proves (F.10.4f.4).
 
 If a putative continuum branch violates every finite bound of this form, then for some $O,\beta$ its locally accessible energy-damped excitation map has nuclear norm exceeding every value allowed by finite channel throughput. Such degrees of freedom cannot be encoded, distinguished, or thermodynamically paid for by any finite MPU refinement satisfying the branch capacity assumptions. PPI therefore does not instantiate that continuum phase space as a physical branch. ∎
 
-**Open Target F.10.4f.3 (Sufficiency of Nuclearity for Finite-PCE Realization).** The converse direction remains a structural target: determine branch conditions under which an AQFT net satisfying the nuclearity bound (F.10.4f.4), the Hadamard-PCE state gate, and the reflection-positivity gate admits a finite MPU realization with uniformly bounded PCE cost. No sufficiency claim is used elsewhere in the paper.
+**Definition F.10.4f.3 (Split-Nuclear MPU Realization Certificate).** Let a retained AQFT branch satisfy the nuclearity bound (F.10.4f.4), the Hadamard-PCE state gate, the reflection-positivity gate, the split property on nested regions, and the PU-LAN field certificate of Definition F.10.4e.5 on the local fluctuation sector. A split-nuclear MPU realization certificate for a relatively compact region $O$ and tolerance $\delta>0$ is a finite record
+$$
+\mathfrak R_{\delta,O}
+=
+\left(
+O_-\Subset O\Subset O_+,\,
+\mathcal N_O,\,
+\mathcal B_{\delta,O},\,
+\pi_{\delta,O},\,
+\iota_{\delta,O},\,
+\omega_{\delta,O},\,
+C_{\delta,O}
+\right)
+\tag{F.10.4f.6}
+$$
+such that:
+
+1. $\mathfrak A(O_-)\subset\mathcal N_O\subset\mathfrak A(O_+)$ is a split inclusion with $\mathcal N_O$ a type-I factor;
+
+2. $\mathcal B_{\delta,O}$ is a finite-dimensional $C^*$-algebra;
+
+3. $\pi_{\delta,O}:\mathfrak A(O)\to\mathcal B_{\delta,O}$ and $\iota_{\delta,O}:\mathcal B_{\delta,O}\to\mathfrak A(O_+)$ are unital completely positive maps;
+
+4. for every retained local test observable $A$ in the branch test core $\mathcal T_O\subset\mathfrak A(O)$,
+$$
+\left|
+\omega(A)-\omega_{\delta,O}(\pi_{\delta,O}(A))
+\right|
+\le
+\delta\|A\|;
+\tag{F.10.4f.7}
+$$
+
+5. the finite reconstructed observable is locally accurate in the GNS seminorm of $\omega$:
+$$
+\left\|
+A-\iota_{\delta,O}\pi_{\delta,O}(A)
+\right\|_{\omega}
+\le
+\delta\|A\|,
+\qquad
+A\in\mathcal T_O;
+\tag{F.10.4f.8}
+$$
+
+6. the finite phase-space map induced by $(\mathcal B_{\delta,O},\omega_{\delta,O})$ approximates $\Theta_{\beta,O}$ on $\mathcal T_O$ to tolerance $\delta$ for every retained $\beta$ in the certificate window;
+
+7. the finite realization cost obeys
+$$
+C_{\delta,O}
+\le
+C_0|\partial O|\,\operatorname{polylog}(1/\delta)
++
+C_1\operatorname{Vol}_{\mathrm{active}}(O)
++
+C_2C_{\mathrm{PU}}(O,\beta),
+\tag{F.10.4f.9}
+$$
+with constants fixed by the branch certificate, not by comparison with validation data.
+
+**Theorem F.10.4f.4 (Finite-PCE Realization from a Split-Nuclear Certificate).** If a retained AQFT branch admits a split-nuclear MPU realization certificate $\mathfrak R_{\delta,O}$ for every relatively compact $O$ and every $\delta>0$, then the branch admits finite MPU realizations with uniformly bounded PCE cost on every retained local test core. More precisely, for each $(\delta,O)$ there exists a finite MPU network $\mathcal N_{\delta,O}^{\mathrm{MPU}}$ such that
+$$
+\left|
+\omega(A)-\omega_{\mathcal N_{\delta,O}^{\mathrm{MPU}}}(A)
+\right|
+\le
+\delta\|A\|
+\qquad
+(A\in\mathcal T_O),
+\tag{F.10.4f.10}
+$$
+and
+$$
+C_{\mathrm{PCE}}\!\left(\mathcal N_{\delta,O}^{\mathrm{MPU}}\right)
+\le
+C_{\delta,O}.
+\tag{F.10.4f.11}
+$$
+
+*Proof.* Since $\mathcal B_{\delta,O}$ is finite-dimensional, it decomposes as
+$$
+\mathcal B_{\delta,O}
+\cong
+\bigoplus_{\alpha=1}^{r}M_{n_\alpha}(\mathbb C).
+$$
+Let
+$$
+m_{\delta,O}=\sum_{\alpha=1}^{r}n_\alpha.
+$$
+Choose $N$ with $d_0^N=8^N\ge m_{\delta,O}$ and choose an isometry
+$$
+V:\mathbb C^{m_{\delta,O}}\hookrightarrow(\mathbb C^{d_0})^{\otimes N}.
+$$
+Represent $\mathcal B_{\delta,O}$ faithfully on $\mathbb C^{m_{\delta,O}}$ by the block-diagonal representation. If $d_0^N>m_{\delta,O}$, extend it to a unital completely positive carrier map
+$$
+j(B)=V B V^*+\tau(B)(I-VV^*)
+$$
+using any fixed state $\tau$ on $\mathcal B_{\delta,O}$. Thus no divisibility condition for a unital $*$-embedding into a single full matrix algebra is required; the retained finite algebra is encoded as a finite MPU carrier with a PCE-null complement.
+
+Pull the state $\omega_{\delta,O}$ through this finite carrier map and implement the maps $\pi_{\delta,O}$ and $\iota_{\delta,O}$ as the finite measurement/reconstruction interface of the MPU network. For every $A\in\mathcal T_O$, condition (F.10.4f.7) gives the expectation-value error bound (F.10.4f.10). Condition (F.10.4f.8) ensures that the reconstructed local observable has the same GNS action up to $\delta\|A\|$, so the finite network reproduces the retained local correlations on the test core to the stated tolerance. Condition 6 supplies the same approximation for the energy-damped phase-space map, so the finite network respects the nuclearity window used in Theorem F.10.4f.2.
+
+Finally, condition (F.10.4f.9) is exactly the certified PCE cost budget for this finite realization. Because the complement of $VV^*$ is filled only by the fixed state $\tau$, it carries no retained test observable in the certificate; any carrier overhead is included in the certified cost $C_{\delta,O}$. Therefore
+$$
+C_{\mathrm{PCE}}\!\left(\mathcal N_{\delta,O}^{\mathrm{MPU}}\right)
+\le
+C_{\delta,O}.
+$$
+∎
 
 ### F.10.4g Fractal Heat-Kernel and Trapped-Set Audit
 
@@ -2035,7 +2285,81 @@ $$
 $$
 If the Cech class vanishes, $\Theta_{ij}$ is a coboundary at the level of expectations and the Clausius form is path-independent on the cover; if it does not vanish, no global thermodynamic gluing exists without an obstruction term. Theorem F.10.4 together with Theorem 12.1 identifies the vanishing local-horizon Clausius obstruction with the emergent metric equation-of-state branch.
 
-For item 5, on the local Rindler/KMS thermodynamic branch the local-cover Clausius mismatch is exactly the finite-cost gluing failure represented in the X.9.5b finite Cech complex, so vanishing of $[u]$ implies vanishing of that contribution. Conversely, a nonzero finite-cost local Rindler/KMS contribution to the X.9.5b connecting homomorphism produces a nonvanishing $\delta\langle\Theta_{ij}\rangle$ on at least one overlap, which lifts to a nonzero $[u]$. The general constructive correspondence on regular branches outside the local Rindler/KMS thermodynamic setting is left as an open structural question. ∎
+For item 5, on the local Rindler/KMS thermodynamic branch the local-cover Clausius mismatch is exactly the finite-cost gluing failure represented in the X.9.5b finite Cech complex, so vanishing of $[u]$ implies vanishing of that contribution. Conversely, a nonzero finite-cost local Rindler/KMS contribution to the X.9.5b connecting homomorphism produces a nonvanishing $\delta\langle\Theta_{ij}\rangle$ on at least one overlap, which lifts to a nonzero $[u]$. The certificate-complete constructive form of this equivalence is Definition F.10.12a and Theorem F.10.12c. ∎
+
+### F.10.12 Finite KMS-Descent Certificate for Emergent Metric Thermodynamics
+
+**Definition F.10.12a (Finite KMS-Descent Certificate).** Let $\{\mathcal U_n\}_{n\ge1}$ be a refining sequence of finite operational covers of a regular branch of the MPU continuum limit. A finite KMS-descent certificate on $\mathcal U_n$ is a record
+$$
+\mathfrak C^{\mathrm{KMS}}_n
+=
+\left(
+\mathcal U_n,
+\{\mathcal A_i,\omega_i,\sigma_i^{t},K_i,T_i,S_i,\Theta_i\}_{i\in I_n},
+\{u_{ij}\}_{i,j},
+\{q_{ij}\}_{i,j},
+\{\mathcal E_i,\mathcal E_{ij},\mathcal E_{ijk}\},
+\delta_n
+\right)
+$$
+such that:
+
+1. $\mathcal A_i$ is the finite protocol algebra assigned to $U_i\in\mathcal U_n$ and $\omega_i$ is a faithful finite-PCE state on $\mathcal A_i$.
+2. $\sigma_i^t$ is the modular flow of $(\mathcal A_i,\omega_i)$ and $K_i$ is its finite modular generator, so $\omega_i$ is KMS at inverse temperature $T_i^{-1}$ for $\sigma_i^t$.
+3. $S_i$ is the finite channel min-cut entropy of $U_i$ and agrees with the Appendix E area-law entropy density up to the local certified defect $\mathcal E_i$.
+4. $\Theta_i$ is the finite stress-energy flux functional obtained from the Appendix B MPU flux construction restricted to $U_i$.
+5. $u_{ij}$ is the Connes Radon-Nikodym cocycle implementing the change from $(\mathcal A_i,\omega_i)$ to $(\mathcal A_j,\omega_j)$ on $U_i\cap U_j$.
+6. $q_{ij}$ is the finite quotient correction by response-null degrees of freedom on $U_i\cap U_j$.
+7. On triple overlaps, the corrected cocycle obeys
+$$
+u_{ij}u_{jk}u_{ki}=1+\mathcal E_{ijk}
+$$
+in finite protocol norm.
+8. On each $U_i$, the finite Clausius defect satisfies
+$$
+\left|\delta Q_i - T_i\,\delta S_i\right|
+\le
+\mathcal E_i,
+\qquad
+\delta Q_i=\Theta_i(\chi_i),
+$$
+where $\chi_i$ is the local Rindler/boost generator selected by the finite clock normalization.
+9. The total defect
+$$
+\delta_n
+=
+\max\left\{
+\sup_i \mathcal E_i,\,
+\sup_{i,j}\mathcal E_{ij},\,
+\sup_{i,j,k}\mathcal E_{ijk}
+\right\}
+$$
+satisfies $\delta_n\to0$ along the refining sequence.
+
+**Algorithm F.10.12b (Acceptance Test for the KMS-Descent Certificate).** A record $\mathfrak C^{\mathrm{KMS}}_n$ is accepted if and only if every entry in Definition F.10.12a is fixed before using macroscopic metric data, each local algebra map is a restriction or inclusion map from the same protocol-response presheaf, the modular generators agree with the finite-PCE states by direct finite spectral calculation, the Cech defect and Clausius defect bounds are certified in the stated finite protocol norm, and the sequence $\delta_n$ is bounded by a monotone numerical tail with limit zero.
+
+**Theorem F.10.12c (KMS-Descent Closure of the Emergent Metric Branch).** If a refining regular operational-continuum branch admits an accepted sequence of finite KMS-descent certificates $\{\mathfrak C^{\mathrm{KMS}}_n\}$ with $\delta_n\to0$, then:
+
+1. the local KMS states glue to a compatible regular AQFT state on the limiting net;
+2. the Connes cocycle obstruction class of Theorem F.10.11b vanishes;
+3. the local Clausius relation holds in the limit:
+$$
+\delta Q = T\,\delta S;
+$$
+4. the Appendix E channel-capacity area law and Appendix B stress-energy construction supply the hypotheses of Theorem 12.1;
+5. the resulting metric dynamics are the emergent metric/channel-capacity thermodynamics branch of Equation (76a).
+
+*Proof.* The finite covers form an inverse system under refinement. By item 2 of Algorithm F.10.12b, all local restriction maps come from one protocol-response presheaf, so the local finite algebras and states form a compatible projective diagram up to the certified defects. The triple-overlap condition in Definition F.10.12a gives a finite Cech 2-cocycle with norm bounded by $\delta_n$. Since $\delta_n\to0$, its image in the limiting Cech cohomology class is zero. Therefore the corrected Connes cocycles define a trivial obstruction class, proving item 2. Triviality of the obstruction gives compatible modular clocks and hence a glued regular state on the limiting AQFT net, proving item 1.
+
+The local Clausius defect on every cover element is bounded by $\mathcal E_i\le\delta_n$. For any compactly supported finite protocol observable, choose $n$ large enough that its support is refined by $\mathcal U_n$. The finite defect bound gives
+$$
+\left|\delta Q_i-T_i\delta S_i\right|\le\delta_n
+$$
+on each cell in the partition. Additivity of the Appendix B flux functional and of the Appendix E min-cut entropy over disjoint finite protocol cells gives a total defect bounded by the sum of finitely many cell defects; after normalizing by the fixed finite partition volume and refining, the bound tends to zero. Hence the limiting local relation is $\delta Q=T\,\delta S$, proving item 3. Items 4 and 5 follow by substituting this certified local thermodynamic relation, the channel-capacity area law of Appendix E, and the conserved stress-energy tensor of Appendix B into Theorem 12.1. ∎
+
+**Corollary F.10.12d (No Fundamental-Metric Overcount).** On the branch of Theorem F.10.12c, the metric is the response tensor of the regular operational-continuum limit and the field equation is the equation of state of the certified channel-capacity thermodynamics. Adding an independent microscopic gravitational state space with no finite protocol response is response-null and is removed by the PPI quotient.
+
+*Proof.* Theorem F.10.12c derives the metric equation from finite protocol algebras, KMS states, channel entropy, and stress-energy flux. Any added microscopic gravitational state space that changes no local algebra, no modular generator, no entropy min-cut, no stress-energy flux, and no finite protocol response represents the same object in the protocol-response presheaf. The PPI no-response-surplus principle quotients such a state space out. If the added state space changes a finite response, it is not part of the same branch and must be tested as a different protocol-response theory. ∎
 
 
 

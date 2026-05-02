@@ -95,12 +95,13 @@ Vacuum fluctuations correspond to deformations of the code subspace. The space o
 
 $$\mathcal{M} = \text{Gr}_{\mathbb{C}}(k, M)$$
 
-**Theorem U.3 (Configuration Dimension on the Balanced Golay Branch).** On the balanced rate-½ Golay branch (Theorem Z.13 / P.13.12 / R.4.4 / T.1c), the base instanton complexity equals the complex dimension of the Grassmannian:
+**Theorem U.3 (Configuration Dimension on the Predictive-Recovery MacWilliams Golay Branch).** On the predictive-recovery MacWilliams Golay branch (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b; Theorem P.13.12; Theorem R.4.4; Proposition T.1c), the base instanton complexity equals the complex dimension of the Grassmannian:
 
 $$\kappa_0 = \dim_{\mathbb{C}}(\text{Gr}_{\mathbb{C}}(12, 24)) = k(M - k) = 12 \times 12 = 144$$
 
 where:
-- $k = 12$ is the Golay code dimension on the balanced rate-½ branch (Theorem Z.13 with the balanced rate-½ branch input). Off this branch, $\kappa_0 = k(M-k)$ would shift: $k = 11$ gives $\kappa_0 = 143$, $k = 10$ gives $\kappa_0 = 140$, with corresponding shifts in the cosmological constant exponent $e^{-2\kappa_\Lambda}$.
+- $M = 24$ is the QFI mode count (Theorem Z.5)
+- $k = 12$ is the Golay code dimension fixed by the predictive-recovery MacWilliams gate (Definition Z.13b.0 and Theorem Z.13b.0a). Off this branch, $\kappa_0 = k(M-k)$ would shift: $k = 11$ gives $\kappa_0 = 143$, $k = 10$ gives $\kappa_0 = 140$, with corresponding shifts in the cosmological constant exponent $e^{-2\kappa_\Lambda}$.
 - $M = 24$ is the number of interface modes (Theorem Z.5)
 - $\text{Gr}_{\mathbb{C}}(12, 24)$ is the Grassmannian of 12-dimensional complex subspaces of $\mathbb{C}^{24}$, the $M$-mode Hilbert space
 
@@ -880,11 +881,11 @@ $$
 
 This observational inversion is an algebraic consequence of Corollary U.17 once $\kappa_{\mathrm{ref}}$ is fixed.
 
-For the forward evaluation used in Appendix U, adopt the transferred determinant convention
+For the forward evaluation used in Appendix U before determinant-transfer certification, adopt the transferred determinant convention
 $$
 K_{\text{transfer}} := A_{EW}^{-1},
 $$
-where $A_{EW}=1.084 \pm 0.005$ is the electroweak determinant-model value of Theorem T.29. This transfer is a modeling convention rather than a vacuum-sector theorem. Including the conservative systematic allowance $\sigma_{T2}=0.010$ for (i) ghost/zero-mode normalization and (ii) minimal-bounce extensivity conventions in $N_{\text{eff}}$, the Appendix U working value is
+where $A_{EW}=1.084 \pm 0.005$ is the electroweak determinant-model value of Theorem T.29. This transfer is a modeling convention unless the Bismut-Lebeau determinant-transfer datum of Definition U.15g is accepted, in which case Theorem U.15h promotes the transfer to a determinant-gluing identity. Including the conservative systematic allowance $\sigma_{T2}=0.010$ for (i) ghost/zero-mode normalization and (ii) minimal-bounce extensivity conventions in $N_{\text{eff}}$, the Appendix U working value is
 
 $$
 \boxed{A_{\text{eff}} = 0.923 \pm 0.011 \qquad (\text{Appendix U working convention},\ 1\sigma).}
@@ -916,6 +917,202 @@ A_{\mathrm{eff}}^{(\mathrm{obs},\kappa)}
 \frac{\Lambda L_P^2}{8\pi e^{-2\kappa}}.
 $$
 This computes the prefactor required to match the observed value after $\kappa$ is chosen; it does not determine $A_{\mathrm{eff}}$ from PU vacuum dynamics. Conversely, the Appendix U working value is obtained by the convention $K_{\mathrm{transfer}}=A_{EW}^{-1}$ together with an explicit systematic allowance for ghost/zero-mode and extensivity conventions. Since Theorem T.29.2 makes $A_{EW}$ model-conditional, the transferred factor cannot have stronger status in Appendix U than the determinant model from which it is transferred. Finally, Proposition U.15a defines the determinant object but does not evaluate all finite determinant, Jacobian, ghost, zero-mode, finite-volume, extensivity, and measure factors on the four-mode false-vacuum branch. Hence the current manuscript has a forward convention and an observational inversion, but not a theorem-level vacuum prefactor. ∎
+
+**Definition U.15d (False-Vacuum Fredholm Prefactor Certificate).** A false-vacuum Fredholm prefactor certificate for the Appendix U bounce branch is a finite record
+$$
+\mathfrak F_U=\left(\mathcal H_{\mathrm{false}},\mathcal H_{\mathrm{bounce}},\Pi_0,\Pi_-,\mathcal J_{\mathrm{coll}},\mathcal A_{\mathrm{neg}},\mathcal A_{\mathrm{ghost}},\mathcal A_{\mathrm{fv}},\mathcal A_{\mathrm{meas}},\mu_U\right)
+\tag{U.15d.1}
+$$
+with the following data fixed before comparison with observation:
+
+1. $\mathcal H_{\mathrm{false}}$ and $\mathcal H_{\mathrm{bounce}}$ are self-adjoint Fredholm fluctuation operators with compact resolvent on the same PCE-admissible fluctuation Hilbert space after gauge quotienting;
+
+2. $\Pi_0$ is the orthogonal projection onto the exact zero-mode space $\ker\mathcal H_{\mathrm{bounce}}$, of finite dimension $m_0$, and $\Pi_-$ is the finite-rank projection onto the negative eigenspace, of finite dimension $m_-$;
+
+3. the determinant line
+$$
+\operatorname{Det}_U=\det\ker\mathcal H_{\mathrm{bounce}}\otimes\det(\operatorname{coker}\mathcal H_{\mathrm{bounce}})^*
+$$
+is oriented and its predictive anomaly class vanishes on the branch in the sense of Theorem X.9.5b;
+
+4. the zeta-regularized determinants
+$$
+\det{}'_\zeta\mathcal H_{\mathrm{false}},\qquad\det{}''_\zeta\mathcal H_{\mathrm{bounce}}
+\tag{U.15d.2}
+$$
+are evaluated with the same finite-part convention $\mu_U$, where $\det'$ omits the false-vacuum null directions removed by collective coordinates and $\det''$ omits both $\Pi_0$ and $\Pi_-$ from the spectral product;
+
+5. $\mathcal J_{\mathrm{coll}}$ is the collective-coordinate Jacobian for the $m_0$ exact zero modes; $\mathcal A_{\mathrm{neg}}$ is the negative-mode contribution implementing the standard Callan–Coleman half-imaginary prescription on the $m_-$ negative directions; $\mathcal A_{\mathrm{ghost}}$ is the ghost/gauge-volume factor; $\mathcal A_{\mathrm{fv}}$ is the finite-volume/extensivity factor identifying $N_{\mathrm{eff}}$; and $\mathcal A_{\mathrm{meas}}$ is the measure-normalization factor.
+
+The certified forward prefactor is
+$$
+A_{\mathrm{eff}}^{\mathrm{Fred}}=\mathcal J_{\mathrm{coll}}\,|\mathcal A_{\mathrm{neg}}|\,\mathcal A_{\mathrm{ghost}}\,\mathcal A_{\mathrm{fv}}\,\mathcal A_{\mathrm{meas}}\left(\frac{\det{}'_\zeta\mathcal H_{\mathrm{false}}}{|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|}\right)^{1/2},
+\tag{U.15d.3}
+$$
+where $|\mathcal A_{\mathrm{neg}}|$ and $|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|$ retain the modulus on the negative spectral subspace; the imaginary part required for false-vacuum decay is carried by $\mathcal A_{\mathrm{neg}}$ and is not part of the magnitude prefactor used in the static $\Lambda$ formula.
+
+**Theorem U.15e (Fredholm Audit of the Dilatation Direction and Vacuum Prefactor).** Let $s_D=x^\mu\partial_\mu\phi^*$ be the pure-coordinate dilatation tangent of Theorem U.8c on a false-vacuum branch admitting a certificate $\mathfrak F_U$. Exactly one of the following holds:
+
+1. $s_D\in\ker\mathcal H_{\mathrm{bounce}}$, so $s_D$ is an exact additional collective coordinate, increasing $m_0$ and contributing to $\Pi_0$ and $\mathcal J_{\mathrm{coll}}$;
+
+2. $s_D\notin\ker\mathcal H_{\mathrm{bounce}}$, so its component in $\ker\mathcal H_{\mathrm{bounce}}^\perp$ is acted on by a nonzero spectral part of $\mathcal H_{\mathrm{bounce}}$ and contributes to $\det{}''_\zeta\mathcal H_{\mathrm{bounce}}$ (with the negative-mode component, if any, captured by $\Pi_-$ and $\mathcal A_{\mathrm{neg}}$);
+
+3. the determinant line, orientation, finite-part convention, or quotient Hessian fails one of conditions (1)–(4) of Definition U.15d, in which case the branch is rejected as a theorem-level vacuum-prefactor branch.
+
+Under the current Definition U.4 continuum action and the false-vacuum hypotheses of Theorem U.13b, item 1 is excluded by Theorem U.8c (the pure-coordinate dilatation tangent is a strict negative mode) and Theorem U.13b (the four-mode discrete branch admits no fifth null direction). Hence the theorem-level four-mode branch acquires a theorem-level forward prefactor only via formula (U.15d.3) on an accepted certificate; the certificate gates this audit but is not itself the audit, which requires evaluation of all factors on the same vacuum branch.
+
+*Proof.* By Definition U.15d condition (1), $\mathcal H_{\mathrm{bounce}}$ is self-adjoint Fredholm with compact resolvent on the PCE-admissible fluctuation space after gauge quotienting; its spectrum is therefore discrete with finite-dimensional kernel and finite-rank negative spectral subspace. Any vector $s_D$ in that space lies either in the kernel or in its orthogonal complement, exhausting the Hilbert-space decomposition. If $s_D\in\ker\mathcal H_{\mathrm{bounce}}$, it is represented in $\Pi_0$ and contributes a collective-coordinate factor to $\mathcal J_{\mathrm{coll}}$ rather than to a determinant ratio (item 1). If $s_D$ has a nonzero component in $\ker\mathcal H_{\mathrm{bounce}}^\perp$, then the spectral part of $\mathcal H_{\mathrm{bounce}}$ on that complement is nonzero and either positive or negative; its contribution is captured by $\det{}''_\zeta\mathcal H_{\mathrm{bounce}}$ and, on the negative spectral subspace, by $\Pi_-$ and $\mathcal A_{\mathrm{neg}}$ (item 2). If conditions (1)–(4) of Definition U.15d fail — orientation undefined, anomaly class nonvanishing, finite-part convention not fixed, or quotient Hessian not Fredholm — formula (U.15d.3) is not a scalar branch output and the branch is rejected (item 3).
+
+Theorem U.8c proves that the pure-coordinate dilatation tangent is a strict negative eigenvector of the current Definition U.4 continuum Hessian, hence $s_D\notin\ker\mathcal H_{\mathrm{bounce}}$. Theorem U.13b supplies the corresponding full-discrete four-mode false-vacuum closure under its stated spectral hypotheses with no fifth null direction; thus item 1 is excluded on the current theorem-level branch, and the certificate routes every contribution of $s_D$ through $\Pi_-$, $\mathcal A_{\mathrm{neg}}$, and $\det{}''_\zeta\mathcal H_{\mathrm{bounce}}$ as in item 2. ∎
+
+**Corollary U.15f (No Prefactor Promotion without a Fredholm Audit).** The observational inversions $A_{\mathrm{eff}}^{(\mathrm{obs})}$ and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}$ remain observational inversions, and the Appendix U working value $A_{\mathrm{eff}}=0.923\pm0.011$ remains a forward-evaluation convention (Corollary U.15b, Proposition U.15c), unless an accepted certificate $\mathfrak F_U$ supplies a forward $A_{\mathrm{eff}}^{\mathrm{Fred}}$ via (U.15d.3) with all of $\mathcal J_{\mathrm{coll}}$, $|\mathcal A_{\mathrm{neg}}|$, $\mathcal A_{\mathrm{ghost}}$, $\mathcal A_{\mathrm{fv}}$, $\mathcal A_{\mathrm{meas}}$, $\det{}'_\zeta\mathcal H_{\mathrm{false}}$, and $|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|$ evaluated on the same vacuum branch and finite-part convention. The certificate machinery defines what would constitute a theorem-level forward prefactor; performing the audit is a separate calculation whose result may agree with, refute, or replace the working value.
+
+*Proof.* Combine Theorem U.15e (which gates the audit on an accepted certificate) with Proposition U.15c (which records that the working value and observational inversions are not theorem-level prefactors). Without the seven explicit factors evaluated on a common branch, formula (U.15d.3) is not instantiated and no scalar prefactor is determined by PU vacuum dynamics. ∎
+
+**Definition U.15g (Bismut-Lebeau Determinant-Transfer Datum).** A Bismut-Lebeau determinant-transfer datum is a finite record
+$$
+\mathfrak B_{\mathrm{BL}}
+=
+(\mathcal C_T,\mathcal C_U,\mathcal C_\perp,\delta,\|\cdot\|_Q,\mathcal B_{\mathrm{BL}},\mathfrak o_{\det})
+\tag{U.15g.1}
+$$
+where:
+
+1. $\mathcal C_T$ is the electroweak-threshold elliptic complex whose determinant norm gives $A_{EW}$ on the accepted Appendix T branch;
+
+2. $\mathcal C_U$ is the vacuum-bounce Fredholm complex of Definition U.15d;
+
+3. $\mathcal C_\perp$ is the residual transverse elliptic complex completing the determinant comparison;
+
+4. the three complexes form an exact determinant triangle
+$$
+\mathcal C_T\longrightarrow\mathcal C_U\longrightarrow\mathcal C_\perp\longrightarrow\mathcal C_T[1];
+\tag{U.15g.2}
+$$
+
+5. $\|\cdot\|_Q$ is the Quillen norm on the three determinant lines with the same finite-part convention used in Appendix T and Definition U.15d;
+
+6. $\mathcal B_{\mathrm{BL}}$ is the Bismut-Lebeau Bott-Chern anomaly term of the triangle;
+
+7. $\mathfrak o_{\det}$ orients the three determinant lines compatibly with the PU anomaly-inflow orientation of Theorem X.8d.
+
+The datum is accepted when the anomaly-inflow condition gives
+$$
+\mathcal B_{\mathrm{BL}}=0
+\tag{U.15g.3}
+$$
+and all three determinant norms are fixed before comparison with $\Lambda L_P^2$.
+
+**Theorem U.15h (Bismut-Lebeau Determinant-Transfer Identity).** On an accepted Bismut-Lebeau determinant-transfer branch,
+$$
+\|\det\mathcal C_U\|_Q
+=
+\|\det\mathcal C_T\|_Q\,
+\|\det\mathcal C_\perp\|_Q.
+\tag{U.15h.1}
+$$
+Equivalently, the vacuum prefactor factorizes as
+$$
+A_{\mathrm{eff}}^{\mathrm{BL}}
+=
+A_{EW}^{-1}\,A_\perp,
+\tag{U.15h.2}
+$$
+where $A_\perp$ is the residual transverse determinant contribution fixed by $\mathcal C_\perp$. The transferred factor $A_{EW}^{-1}$ is then a determinant-gluing identity rather than a modeling convention.
+
+*Proof.* Exactness of the determinant triangle gives the canonical determinant-line isomorphism
+$$
+\det\mathcal C_U
+\cong
+\det\mathcal C_T\otimes\det\mathcal C_\perp.
+$$
+For Quillen norms, the Bismut-Lebeau comparison formula multiplies the right-hand side by the Bott-Chern anomaly factor $e^{\mathcal B_{\mathrm{BL}}}$. The accepted datum imposes $\mathcal B_{\mathrm{BL}}=0$ by PU anomaly inflow, so the Quillen norm is multiplicative, proving (U.15h.1). Appendix T defines the electroweak determinant contribution so that its inverse appears in the vacuum transfer convention, while $\mathcal C_\perp$ supplies the missing transverse determinant. This gives (U.15h.2). ∎
+
+**Corollary U.15i (Vacuum Prefactor Status after Determinant Transfer).** On a branch carrying both the Fredholm prefactor certificate of Definition U.15d and the Bismut-Lebeau transfer datum of Definition U.15g,
+$$
+A_{\mathrm{eff}}=A_{\mathrm{eff}}^{\mathrm{BL}}=A_{\mathrm{eff}}^{\mathrm{Fred}}
+\tag{U.15i.1}
+$$
+is a forward determinant output. If the computed value differs from the observational inversion required by the chosen exponent branch, that exponent branch is rejected rather than adjusted by prefactor convention.
+
+*Proof.* Definition U.15d fixes the vacuum prefactor by direct Fredholm evaluation. Definition U.15g and Theorem U.15h fix the same determinant line by gluing it to the Appendix T determinant and the transverse residual complex. When both certificates are accepted, they refer to the same oriented Quillen determinant line with the same finite-part convention, hence give the same scalar. Since no observational datum enters either certificate, disagreement with observation cannot be repaired by redefining $A_{\mathrm{eff}}$ within the theorem-level branch. ∎
+
+**Corollary U.15j (Determinant-Transfer Branch-Decision Ledger).** Let
+$$
+\Xi_{\perp}:=A_{\perp}e^{\mathcal B_{\mathrm{BL}}}
+\tag{U.15j.1}
+$$
+denote the residual transverse Bismut-Lebeau determinant together with its Bott-Chern anomaly factor. On a determinant-transfer branch the vacuum prefactor has the form
+$$
+A_{\mathrm{eff}}^{\mathrm{BL}}=A_{EW}^{-1}\Xi_{\perp}.
+\tag{U.15j.2}
+$$
+For a fixed exponent $\kappa$, the observed cosmological constant determines only the required prefactor
+$$
+A_{\mathrm{eff}}^{(\mathrm{obs},\kappa)}
+=
+\frac{\Lambda L_P^2}{8\pi e^{-2\kappa}},
+\tag{U.15j.3}
+$$
+and therefore the required residual determinant
+$$
+\Xi_{\perp}^{(\mathrm{obs},\kappa)}
+=
+A_{EW}A_{\mathrm{eff}}^{(\mathrm{obs},\kappa)}.
+\tag{U.15j.4}
+$$
+Using Appendix V, Equation (V.5),
+$$
+\Lambda L_P^2=(2.86599\pm0.04849)\times10^{-122}
+$$
+and the Appendix T determinant-model value
+$$
+A_{EW}=1.084\pm0.005,
+$$
+the branch-required values are
+
+| Branch | $\kappa$ | $A_{\mathrm{eff}}^{(\mathrm{obs},\kappa)}$ | required $\Xi_{\perp}^{(\mathrm{obs},\kappa)}$ |
+|---|---:|---:|---:|
+| five-mode reference branch | $141.5$ | $0.9170\pm0.0155$ | $0.994\pm0.017$ |
+| four-mode false-vacuum branch | $142$ | $2.4927\pm0.0422$ | $2.702\pm0.047$ |
+
+The two residual-determinant requirements differ by exactly
+$$
+\frac{\Xi_{\perp}^{(\mathrm{obs},142)}}{\Xi_{\perp}^{(\mathrm{obs},141.5)}}
+=
+\frac{A_{\mathrm{eff}}^{(\mathrm{obs},142)}}{A_{\mathrm{eff}}^{(\mathrm{obs},141.5)}}
+=e.
+\tag{U.15j.5}
+$$
+The Appendix U working convention $A_{\mathrm{eff}}=0.923\pm0.011$ corresponds to
+$$
+\Xi_{\perp}^{(\mathrm{work})}
+=A_{EW}A_{\mathrm{eff}}
+=1.0005\pm0.0128.
+\tag{U.15j.6}
+$$
+Thus, if $\Xi_{\perp}^{(\mathrm{work})}$ were promoted to a forward determinant output, it would agree with the five-mode reference requirement and miss the four-mode requirement by the factor $e$. But that promotion is not licensed by the current Appendix U data: no residual transverse complex $\mathcal C_{\perp}$, exact determinant triangle, Bott-Chern anomaly evaluation, or residual determinant computation is supplied. Therefore the current determinant-transfer ledger supplies no theorem-level preference for either $\kappa=141.5$ or $\kappa=142$.
+
+The branch-decision rule is consequently sharp: an accepted determinant-transfer certificate with $\Xi_{\perp}$ in the first interval matches the five-mode reference exponent, an accepted certificate with $\Xi_{\perp}$ in the second interval matches the four-mode false-vacuum exponent, and a value outside both intervals rejects observational matching for both exponent branches under the same transfer convention. Until $\Xi_{\perp}$ is computed on the same finite-part convention, the five-mode agreement remains a working-convention consistency check and the four-mode mismatch remains a same-prefactor comparison, not a Bismut-Lebeau theorem-level branch decision.
+
+*Proof.* Equation (U.15j.3) is the algebraic inversion of the vacuum formula at fixed $\kappa$. Multiplying by $A_{EW}$ gives (U.15j.4) from the determinant-transfer form (U.15j.2). The numerical values follow by direct substitution. Since $142=141.5+0.5$, one has
+$$
+\frac{e^{-2\cdot141.5}}{e^{-2\cdot142}}=e,
+$$
+which proves (U.15j.5). Equation (U.15j.6) is the same multiplication applied to the Appendix U working convention. Proposition U.15c states that the working value is not a theorem-level vacuum determinant; without a computed $\mathcal C_{\perp}$, anomaly term, and residual determinant, (U.15j.2) has no instantiated value. Therefore no determinant-transfer preference follows in the current manuscript. ∎
+
+**Corollary U.15k (No Transfer of the Five-Mode or Electroweak Prefactor).** On the certified four-mode false-vacuum branch, neither the five-mode reference prefactor nor the electroweak determinant prefactor may be used as $A_{\mathrm{eff}}^{(4)}$ unless the Fredholm certificate of Definition U.15d and the audit of Theorem U.15e independently reproduce it from the four-mode Hessian, quotient, collective-coordinate, and finite-measure data. If determinant transfer is used, the Bismut-Lebeau datum of Definition U.15g must also compute the residual transverse determinant on the same finite-part convention.
+
+*Proof.* Theorem U.13b and Theorem U.8c fix the current false-vacuum branch to four translational zero modes under the stated spectral hypotheses; the pure-coordinate dilatation direction is not a fifth zero mode. A five-mode prefactor uses a collective-coordinate ledger that is not present on this branch. An electroweak prefactor uses a different determinant problem. Corollary U.15f states that no prefactor is promoted without a direct Fredholm audit, while Corollary U.15j states that determinant transfer has no theorem-level value until the residual transverse determinant is computed. Therefore transfer is allowed only when the four-mode audit or the accepted transfer datum derives the same value from the four-mode determinant line. ∎
+
+**Theorem U.15l (Four-Mode Prefactor Non-Identifiability Without Hessian Data).** The four-mode exponent $\kappa=142$ determines the exponential factor $e^{-284}$ but does not determine the multiplicative prefactor. Without the finite Hessian spectra, zero-mode quotient, negative-mode prescription, ghost/gauge-volume factor, collective-coordinate Jacobian, finite-volume/extensivity convention, measure normalization, and finite-part scale required by Definition U.15d, there exist admissible prefactor completions with the same exponent and different values of $A_{\mathrm{eff}}^{(4)}$. Consequently a numerical four-mode value of $\Lambda L_P^2$ is not theorem-level until the prefactor certificate is evaluated.
+
+*Proof.* In the vacuum formula
+$$
+\Lambda L_P^2=8\pi A_{\mathrm{eff}}^{(4)}e^{-2\kappa},
+\tag{U.15l.1}
+$$
+fixing $\kappa=142$ fixes only the exponential. The scalar $A_{\mathrm{eff}}^{(4)}$ is a product of determinant, Jacobian, quotient, negative-mode, ghost, finite-volume, and measure factors. If any one of these finite entries is unspecified, it can be varied within the admissible Fredholm and finite-measure class while preserving the same exponent. Such variations change (U.15l.1). Theorem P.14.1f therefore blocks theorem-level numerical promotion from the exponent alone. Corollary U.15f gives the corresponding audit rule. ∎
 
 **PPI mapping chain (vacuum weight).** The identification
 $$
@@ -1172,11 +1369,11 @@ This section extends the analysis to the **primordial sector**, deriving inflati
 
 ### U.16.1 Signal Subspace Geometry
 
-**Definition U.18 (Primordial Configuration Space on the Balanced Golay Branch).** On the balanced rate-½ Golay branch, let $\mathcal{S} \cong \mathbb{C}^{12}$ denote the 12-dimensional complex signal subspace (Theorem Z.13 with the balanced rate-½ branch input). The **primordial configuration space** is its projectivization:
+**Definition U.18 (Primordial Configuration Space on the Predictive-Recovery MacWilliams Golay Branch).** On the predictive-recovery MacWilliams Golay branch, let $\mathcal{S}\cong\mathbb{C}^{12}$ denote the 12-dimensional complex signal subspace (Definition Z.13b.0 and Theorem Z.13b.0a). The **primordial configuration space** is its projectivization:
 
 $$\mathcal{C}_{\text{prim}} := \mathbb{P}(\mathcal{S}) \cong \mathbb{CP}^{11}$$
 
-Off the balanced Golay branch, $\dim_\mathbb{C}(\mathcal{S}) = k$ would not equal 12, and $\mathcal{C}_{\text{prim}} \cong \mathbb{CP}^{k-1}$ would have a different complex dimension; the downstream value $\kappa_Q = 11$ in Identification U.20 inherits this branch.
+Off the predictive-recovery MacWilliams Golay branch, $\dim_\mathbb{C}(\mathcal{S}) = k$ would not equal 12, and $\mathcal{C}_{\text{prim}} \cong \mathbb{CP}^{k-1}$ would have a different complex dimension; the downstream value $\kappa_Q = 11$ in Identification U.20 inherits this branch.
 
 *Remark.* The vacuum configuration space is $\text{Gr}_\mathbb{C}(12,24)$, the Grassmannian of all 12-dimensional subspaces of $\mathbb{C}^{24}$. The primordial configuration space $\mathbb{CP}^{11}$ is the space of rays within the fixed signal subspace $\mathcal{S}$, representing perturbations around the vacuum rather than deformations of it.
 
@@ -1196,9 +1393,9 @@ $$\frac{\dim_\mathbb{C}(\text{Gr}_\mathbb{C}(12,24))}{\dim_\mathbb{C}(\mathbb{CP
 
 ### U.16.2 Complexity Exponent
 
-**Identification U.20 (Primordial Complexity on the Balanced Golay Branch).** Following Convention U.14a and the structural correspondence between configuration space dimension and instanton complexity, on the balanced rate-½ Golay branch (Definition U.18) the primordial complexity parameter is identified with the complex dimension of the configuration space:
+**Identification U.20 (Primordial Complexity on the Predictive-Recovery MacWilliams Golay Branch).** Following Convention U.14a and the structural correspondence between configuration space dimension and instanton complexity, on the predictive-recovery MacWilliams Golay branch (Definition U.18) the primordial complexity parameter is identified with the complex dimension of the configuration space:
 
-$$\boxed{\kappa_Q = \dim_\mathbb{C}(\mathbb{CP}^{11}) = 11 \quad \text{(on the balanced Golay branch)}}$$
+$$\boxed{\kappa_Q = \dim_\mathbb{C}(\mathbb{CP}^{11}) = 11 \quad \text{(on the predictive-recovery MacWilliams Golay branch)}}$$
 
 A unit shift $k \to k - 1$ off the balanced branch would give $\kappa_Q = k - 1 \to k - 2$, rescaling $Q \sim e^{-\kappa_Q}$ by a factor of $e \approx 2.7$.
 
@@ -1268,21 +1465,116 @@ $$m_\ell = \binom{n+\ell}{n}^2 - \binom{n+\ell-1}{n}^2$$
 
 *Remark: Normalization Convention.* The eigenvalue factor $4$ corresponds to the Fubini-Study metric with holomorphic sectional curvature $4$ and diameter $\pi/2$. Alternative normalizations (e.g., holomorphic sectional curvature $1$) yield eigenvalues $\lambda_\ell = \ell(\ell + n)$.
 
-**Assumption U.26 (One-Loop Prefactor Scaling).** Following Convention U.14a, the one-loop prefactor $A_Q$ for the $\mathbb{CP}^{11}$ configuration space satisfies:
+**Assumption U.26 (One-Loop Prefactor Scaling).** Following Convention U.14a, the leading one-loop prefactor branch for the $\mathbb{CP}^{11}$ configuration space is
 
 $$A_Q = 1 + O(1/\kappa_Q)$$
 
 with $\log A_Q = O(1/\kappa_Q)$ on compact Kähler symmetric spaces of large dimension. For $\kappa_Q = 11$, the correction is $O(9\%)$, contributing $O(4.5\%)$ to $Q$.
 
-*Justification.* On compact symmetric spaces, the spectral zeta function at $s = 0$ admits asymptotic expansions in inverse dimension. For Kähler manifolds, the leading behavior of $\zeta'(0)$ is controlled by curvature invariants that scale with dimension. At large $\kappa$, the prefactor approaches unity; see Voros (1987) for general spectral asymptotics and Vassilevich (2003) for heat kernel methods on symmetric spaces. Following Convention U.14a, we absorb subleading corrections into the $O(1)$ uncertainty of $A_Q$.
+*Justification.* On compact symmetric spaces, the spectral zeta function at $s = 0$ admits asymptotic expansions in inverse dimension. For Kähler manifolds, the leading behavior of $\zeta'(0)$ is controlled by curvature invariants that scale with dimension. At large $\kappa$, the prefactor approaches unity; see Voros (1987) for general spectral asymptotics and Vassilevich (2003) for heat kernel methods on symmetric spaces. Following Convention U.14a, we absorb subleading corrections into the $O(1)$ uncertainty of $A_Q$ unless the determinant certificate below is supplied.
 
-**Remark U.26a (Error Propagation).** The uncertainty $\delta A_Q / A_Q \sim 9\%$ propagates to $Q$ as $\delta Q / Q \sim 4.5\%$. For inflationary observables, this induces $\delta A_s / A_s \sim 9\%$, which is comparable to or exceeds current Planck precision on $\ln(10^{10}A_s)$. The predictions should therefore be understood as conditional on the one-loop prefactor assumption.
+**Definition U.26b (Primordial $\mathbb{CP}^{11}$ Determinant Certificate).** A primordial determinant certificate is a finite record
+$$
+\mathfrak D_Q
+=
+\left(
+\mathcal O_Q,
+m_Q^2,
+\zeta_Q,
+\mathcal J_Q,
+\mu_Q
+\right)
+\tag{U.26b.1}
+$$
+where:
+
+1. the retained one-loop fluctuation operator is
+$$
+\mathcal O_Q=-\Delta_{FS}+m_Q^2
+\tag{U.26b.2}
+$$
+on $\mathbb{CP}^{11}$ with the Fubini-Study normalization of Theorem U.25a;
+
+2. $m_Q^2$ is the branch-fixed second-variation mass term of the primordial scalar fluctuation operator;
+
+3. the nonconstant zeta function is
+$$
+\zeta_Q(s)
+=
+\sum_{\ell=1}^{\infty}
+m_\ell
+\left(4\ell(\ell+11)+m_Q^2\right)^{-s},
+\tag{U.26b.3}
+$$
+with
+$$
+m_\ell=
+\binom{11+\ell}{11}^2
+-
+\binom{10+\ell}{11}^2;
+\tag{U.26b.4}
+$$
+
+4. $\mathcal J_Q$ is the finite product of the branch-fixed gauge-zero-mode, measure, and quotient Jacobians;
+
+5. the real-part projection factor of Lemma U.23 remains the explicit prefactor $1/2$ in Corollary U.24 and is not absorbed into $A_Q$;
+
+6. the finite-part convention $\mu_Q$ is fixed before comparison with $A_s$, $r$, or $A_s r$.
+
+The determinant prefactor associated with the certificate is
+$$
+A_Q^{\mathrm{det}}
+=
+\mathcal J_Q\,
+\left(\det{}'_\zeta\mathcal O_Q\right)^{-1/2}
+=
+\mathcal J_Q\,
+\exp\!\left[\frac12\zeta_Q'(0)\right].
+\tag{U.26b.5}
+$$
+
+**Theorem U.26c (Determinant Closure of the Primordial Prefactor).** If a branch carries an accepted primordial determinant certificate $\mathfrak D_Q$, then
+$$
+A_Q=A_Q^{\mathrm{det}}
+\tag{U.26c.1}
+$$
+and the primordial amplitude formula becomes
+$$
+Q^2
+=
+\frac12 A_Q^{\mathrm{det}}e^{-2\kappa_Q}.
+\tag{U.26c.2}
+$$
+The leading branch $A_Q=1$ is theorem-level only if the certified determinant satisfies $A_Q^{\mathrm{det}}=1$ within the stated branch tolerance.
+
+*Proof.* By Definition U.25, the zeta-regularized determinant of the positive nonconstant fluctuation operator is
+$$
+\det{}'_\zeta(\mathcal O_Q)=e^{-\zeta_Q'(0)}.
+$$
+A Gaussian one-loop integration over real retained fluctuations contributes the inverse square-root determinant factor
+$$
+\left(\det{}'_\zeta(\mathcal O_Q)\right)^{-1/2}
+=
+\exp\!\left[\frac12\zeta_Q'(0)\right],
+$$
+while the finite quotient, gauge-zero-mode, and measure factors contribute $\mathcal J_Q$. This gives (U.26b.5). Corollary U.24 already isolates the real-projection factor as the explicit $1/2$ multiplying $A_Qe^{-2\kappa_Q}$, so no additional real-projection factor is included in $A_Q^{\mathrm{det}}$. Substitution gives (U.26c.2). ∎
+
+**Remark U.26a (Error Propagation).** On the leading branch, the uncertainty $\delta A_Q / A_Q \sim 9\%$ propagates to $Q$ as $\delta Q / Q \sim 4.5\%$. For inflationary observables, this induces $\delta A_s / A_s \sim 9\%$, which is comparable to or exceeds current Planck precision on $\ln(10^{10}A_s)$. On a determinant-certified branch, this uncertainty is replaced by the uncertainty of $\mathfrak D_Q$ and the finite-part convention $\mu_Q$.
 
 ### U.17.4 Primordial Scale Parameter
 
-**Theorem U.27 (Primordial Perturbation Amplitude).** With $\kappa_Q = 11$ (Identification U.20) and $A_Q = 1$ (Assumption U.26, leading order):
-
-$$\boxed{Q = \frac{e^{-\kappa_Q}}{\sqrt{2}} = \frac{e^{-11}}{\sqrt{2}} = 1.181 \times 10^{-5}}$$
+**Theorem U.27 (Primordial Perturbation Amplitude).** With $\kappa_Q = 11$ (Identification U.20), the primordial perturbation amplitude is
+$$
+Q
+=
+\sqrt{\frac{A_Q}{2}}\,e^{-11}.
+\tag{U.27.1}
+$$
+On the leading branch $A_Q=1$ (Assumption U.26),
+$$
+\boxed{Q = \frac{e^{-\kappa_Q}}{\sqrt{2}} = \frac{e^{-11}}{\sqrt{2}} = 1.181 \times 10^{-5}}.
+$$
+On a determinant-certified branch, replace $A_Q$ by $A_Q^{\mathrm{det}}$ from Theorem U.26c.
 
 *Verification.* 
 - $e^{-11} = 1.6702 \times 10^{-5}$
@@ -1551,13 +1843,46 @@ This yields one scalar constraint per degree $\ell$, as the only $SO(4)$-invaria
 
 *Proof.* By definition of a $t$-design (Theorem U.30), $\mu_\ell = 0$ for $\ell \leq t$. The squared norm $\|\mu_\ell\|^2$ is the unique $SO(4)$-invariant Hermitian form on $\mathbb{R}^{N(\ell)}$. $\square$
 
-**Assumption U.41 (Constraint Budget).** The total scalar (real) constraint count from the $k = 12$ signal modes and $t = 5$ design strength is assumed to be:
+**Assumption U.41 (Constraint Budget).** The leading scalar constraint count from the $k = 12$ signal modes and $t = 5$ design strength is
 
-$$N_{\text{budget}} = k \cdot t = 12 \times 5 = 60$$
+$$N_{\text{budget}} = k \cdot t = 12 \times 5 = 60.$$
 
-*Motivation.* The 24-cell spherical 5-design (Theorem U.30) integrates polynomials of degree $\leq 5$ exactly, providing $t = 5$ independent moment constraints per mode. The $k = 12$ signal modes of the Golay code span the information subspace. We estimate the total independent scalar constraints as the product $k \cdot t$, assuming each mode-degree pair contributes one real constraint. This counting is not rigorously proven to yield independent constraints; if the true count differs, $N_e^{(\text{info})}$ scales proportionally.
+*Motivation.* The 24-cell spherical 5-design (Theorem U.30) integrates polynomials of degree $\leq 5$ exactly, providing $t = 5$ moment degrees. The $k = 12$ signal modes of the Golay code span the information subspace. The exact independence condition is the harmonic-rank gate below.
 
-*Remark.* The constraint budget $N_{\text{budget}} = 60$ will constrain the number of inflationary e-folds in Section U.23.
+**Definition U.41a (24-Cell Harmonic-Moment Rank Certificate).** Let $\{s_a\}_{a=1}^{12}$ be a fixed orthonormal basis of the Golay signal space evaluated on the 12 antipodal lines of the 24-cell. For each $\ell=1,\ldots,5$, let $h_\ell$ be a retained real spherical harmonic test function of degree $\ell$ whose restriction to the 24-cell vertices is fixed before using the e-fold count. Define the block matrix
+$$
+\mathcal M_{\ell}(v,a)=s_a(v)h_\ell(v),
+\qquad
+v\in V_{24},\ a=1,\ldots,12,
+\tag{U.41a.1}
+$$
+and the direct-sum harmonic moment matrix
+$$
+\mathcal M_{\mathrm{HM}}
+=
+\bigoplus_{\ell=1}^{5}\mathcal M_\ell.
+\tag{U.41a.2}
+$$
+The harmonic-moment rank certificate is accepted when
+$$
+\operatorname{rank}\mathcal M_{\mathrm{HM}}=60.
+\tag{U.41a.3}
+$$
+
+**Theorem U.41b (Constraint Budget from Harmonic-Moment Rank).** On a branch carrying an accepted 24-cell harmonic-moment rank certificate,
+$$
+N_{\mathrm{budget}}=60
+\tag{U.41b.1}
+$$
+is an exact finite-rank result rather than a product-count assumption.
+
+*Proof.* The matrix $\mathcal M_{\mathrm{HM}}$ has one column for each mode-degree pair $(a,\ell)$ with $a=1,\ldots,12$ and $\ell=1,\ldots,5$, hence it has $12\cdot5=60$ columns. The accepted certificate states that these columns have rank $60$. Therefore all mode-degree constraints are linearly independent, and the number of independent scalar constraints is exactly
+$$
+N_{\mathrm{budget}}=\operatorname{rank}\mathcal M_{\mathrm{HM}}=60.
+$$
+∎
+
+*Remark.* The constraint budget $N_{\text{budget}} = 60$ will constrain the number of inflationary e-folds in Section U.23. Without the rank certificate, Assumption U.41 remains a leading branch count.
 
 ---
 
@@ -1594,7 +1919,62 @@ $$\mathcal{L}_{\text{kin}} = \frac{\lambda^2 \bar{M}_{Pl}^2}{2} (\partial d_{FS}
 
 where $d_{FS}$ is the Fubini-Study distance on $\mathbb{CP}^1_{\text{inv}} = \mathbb{P}(\mathcal{S}_{-4})$.
 
-*Justification.* This identification assumes that the discrete graph Dirichlet energy induces, in the continuum limit, a sigma-model kinetic term with the Fubini-Study target metric. If the coarse-graining map rescales $d_{FS}$ by an $O(1)$ constant, $\lambda^2$ would shift accordingly. The coefficient $\lambda^2 = 12$ then sets the field-space curvature scale.
+*Justification.* This identification assumes that the discrete graph Dirichlet energy induces, in the continuum limit, a sigma-model kinetic term with the Fubini-Study target metric. The Hopf-Rayleigh gate below supplies the exact no-rescaling condition.
+
+**Definition U.44b (Hopf-Rayleigh Kinetic Datum).** A Hopf-Rayleigh kinetic datum consists of:
+
+1. the invariant eigenspace $\mathcal S_{-4}\cong\mathbb C^2$ with graph Laplacian
+$$
+L|_{\mathcal S_{-4}}=12I;
+\tag{U.44b.1}
+$$
+
+2. the projectivization map
+$$
+\pi:S^3\subset\mathcal S_{-4}\to\mathbb{CP}^1_{\mathrm{inv}};
+\tag{U.44b.2}
+$$
+
+3. the Fubini-Study metric on $\mathbb{CP}^1_{\mathrm{inv}}$ normalized as in Proposition U.45;
+
+4. the horizontal-lift condition that every retained field path $\bar\psi(x)$ in $\mathbb{CP}^1_{\mathrm{inv}}$ is represented by a lift $\psi(x)\in S^3$ satisfying
+$$
+\psi(x)^\dagger\partial_\mu\psi(x)=0.
+\tag{U.44b.3}
+$$
+
+**Theorem U.44c (Hopf-Rayleigh Kinetic Normalization).** On a branch carrying the Hopf-Rayleigh kinetic datum,
+$$
+\lambda^2=12
+\tag{U.44c.1}
+$$
+is fixed by the graph Rayleigh quotient and the Hopf Riemannian submersion. No additional $O(1)$ rescaling of $d_{FS}$ is compatible with the datum.
+
+*Proof.* For a retained horizontal lift $\psi(x)$ of a projective path $\bar\psi(x)$, the graph Dirichlet kinetic energy is
+$$
+\frac12\langle\partial_\mu\psi,L\partial^\mu\psi\rangle.
+$$
+Using $L|_{\mathcal S_{-4}}=12I$ gives
+$$
+\frac12\langle\partial_\mu\psi,L\partial^\mu\psi\rangle
+=
+\frac{12}{2}\|\partial_\mu\psi\|^2.
+$$
+By the horizontal-lift condition, $\partial_\mu\psi$ is orthogonal to the $U(1)$ Hopf fiber. The Hopf projection is a Riemannian submersion for the normalized Fubini-Study metric, so horizontal lengths are preserved:
+$$
+\|\partial_\mu\psi\|^2
+=
+\|\partial_\mu\bar\psi\|_{FS}^2.
+$$
+Along the geodesic coordinate used in the single-field reduction,
+$$
+\|\partial_\mu\bar\psi\|_{FS}^2=(\partial_\mu d_{FS})^2.
+$$
+Therefore the induced kinetic term is
+$$
+\frac{12}{2}(\partial d_{FS})^2.
+$$
+Restoring $\bar M_{Pl}^2$ gives the Lagrangian in Identification U.44a with $\lambda^2=12$. Any extra rescaling $d_{FS}\mapsto c\,d_{FS}$ would multiply horizontal lengths by $c$ and contradict the Riemannian-submersion normalization, unless $c=1$. ∎
 
 ### U.21.3 Target Space Metric
 
@@ -1778,7 +2158,7 @@ $$\boxed{A_s = 2.08 \times 10^{-9}}$$
 
 *Verification.* $e^{-22} = 2.790 \times 10^{-10}$; $3528/236.9 = 14.89$; $14.89 \times 1.395 = 20.8$. $\checkmark$
 
-**Corollary U.65a (Primordial Complexity Product Lock).** On the balanced Golay primordial branch of Definition U.18, Identification U.20, Corollary U.24, Identification U.51, Lemma U.64, and Theorem U.63, the scalar amplitude and tensor-to-scalar ratio satisfy
+**Corollary U.65a (Primordial Complexity Product Lock).** On the predictive-recovery MacWilliams Golay primordial branch of Definition U.18, Identification U.20, Corollary U.24, Identification U.51, Lemma U.64, and Theorem U.63, the scalar amplitude and tensor-to-scalar ratio satisfy
 $$
 \boxed{
 A_s r
@@ -1961,7 +2341,7 @@ The predictions are compared against Planck 2018 results (Planck Collaboration 2
 
 ### U.25.2 Falsification Criteria
 
-**Theorem U.69 (Falsification Conditions).** Conditional on Assumptions U.26, U.41, U.48, U.56; Identifications U.20, U.44a, U.51; the balanced rate-½ Golay branch (used in Identification U.20 via Definition U.18); the residual-budget branch (used in Proposition U.14 via Lemma U.54); and the fiducial choice $\phi_0 = \phi_{\max}$ so that $N_e = 59.4$ (Result U.60), the primordial-sector predictions would be falsified by any statistically significant measurement lying outside the Appendix U $3\sigma$ theory windows:
+**Theorem U.69 (Falsification Conditions).** Conditional on Assumptions U.26, U.41, U.48, U.56; Identifications U.20, U.44a, U.51; the predictive-recovery MacWilliams Golay branch (used in Identification U.20 via Definition U.18); the residual-budget branch (used in Proposition U.14 via Lemma U.54); and the fiducial choice $\phi_0 = \phi_{\max}$ so that $N_e = 59.4$ (Result U.60), the primordial-sector predictions would be falsified by any statistically significant measurement lying outside the Appendix U $3\sigma$ theory windows:
 
 1. **Tensor ratio**: $r \notin [0.00271,\,0.00409]$ at $>3\sigma$ (prediction: $r = 0.0034 \pm 0.00023$)
 2. **Spectral index**: $n_s \notin [0.9630,\,0.9696]$ at $>3\sigma$ (prediction: $n_s = 0.9663 \pm 0.0011$)

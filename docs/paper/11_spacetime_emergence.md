@@ -212,7 +212,7 @@ Finally, superluminal propagation contradicts the instantiation bounds formalize
 
 **Corollary 46a (Lorentzian Signature and Local Lorentz Kinematics from Theorem 46 and Appendix O).** The finite operational causal frontier of Theorem 46, together with the positive-definite spatial $\Gamma$-limit of §O.7.1, the entropy-selected time coordinate of Hypothesis O.7.2.2, and the second-order continuum principal symbol of Hypothesis O.7.2.3, supplies the four hypotheses of Theorem O.7a. By Theorems O.7a and O.7b and Corollary O.7b.1 of Appendix O, this package forces a Lorentzian principal symbol on the emergent manifold and derives local Lorentz invariance with structure group $SO^+(1,3)$. Premise (A5) of §12 is therefore a theorem of the emergent-spacetime branch, and the Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle $G=\mathrm{Spin}(1,3)\times U(d_0)$ of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$.
 
-*Proof.* Direct application of Theorems O.7a (signature forcing), O.7b (speed normalization), and Corollary O.7b.1 (derived local Lorentz invariance and frame-bundle structure) to the output of Theorem 46 and §O.7.1. The three-spatial-dimensional hypothesis of Theorem O.7a is supplied on the Appendix Z tangent-kissing mode-channel branch of Theorem Z.11. ∎
+*Proof.* Direct application of Theorems O.7a (signature forcing), O.7b (speed normalization), and Corollary O.7b.1 (derived local Lorentz invariance and frame-bundle structure) to the output of Theorem 46 and §O.7.1. The three-spatial-dimensional hypothesis of Theorem O.7a is supplied on the Appendix Z Bures tangent-cell channel contract of Theorem Z.11. ∎
 
 ### 11.6.3 Causal-Diamond Reconstruction from Predictive Inclusion
 
@@ -300,6 +300,27 @@ $$
 determine the emergent Lorentzian metric-measure structure up to the explicitly stated capacity-density normalization.
 
 *Proof.* This is exactly Theorem 46b applied to the identity class of operationally equivalent diamond-poset representations. ∎
+
+**Corollary 46d (Landauer-Count Form of Causal-Diamond Reconstruction).** Suppose each operational causal diamond $D$ carries an effective Landauer update-cell count
+$$
+N_L(D)\in\mathbb N
+$$
+and a fixed cell valuation $\nu_L>0$ such that
+$$
+V_{\mathrm{cap}}(D)=\nu_L N_L(D)
+\tag{46d.1}
+$$
+on the branch under consideration. If two regular Lorentzian branches have an inclusion-preserving bijection of operational diamonds and the same Landauer counts,
+$$
+N_L(D)=N_L'(\Phi(D)),
+$$
+with the same $\nu_L$, then they determine the same emergent metric-measure structure up to the operational equivalence of Theorem 46b.
+
+*Proof.* Equation (46d.1) converts equality of Landauer counts into equality of predictive capacity valuations:
+$$
+V_{\mathrm{cap}}(D)=\nu_LN_L(D)=\nu_LN_L'(\Phi(D))=V'_{\mathrm{cap}}(\Phi(D)).
+$$
+The hypotheses of Theorem 46b are therefore satisfied. The inclusion order fixes the conformal Lorentzian metric and the common valuation fixes the conformal scale. ∎
 
 **11.7 Spacetime Curvature as Predictive Holonomy (Conditional on Thm 43, Thm 45)**
 

@@ -1107,35 +1107,32 @@ The exceptional dimensions listed above do not include $12$. Therefore no simple
 
 **Step 3 (Implication for capacity-saturating gauge algebras).** If a gauge algebra $\mathfrak{g}$ saturates the Lagrangian capacity bound $n_G = 12$ (Theorem G.8.2e), then $\dim \mathfrak{g} = 12$. By Step 2, $\mathfrak{g}$ cannot be simple. Therefore its semisimple part $[\mathfrak{g},\mathfrak{g}]$ must be a direct sum of at least two simple Lie algebras. In particular, any simple unification candidate with $\dim \mathfrak{g} > 12$ (such as $SU(5)$, $SO(10)$, or $E_6$ with dimensions $24$, $45$, and $78$ respectively) is excluded outright by the bound $n_G \leq 12$. ∎
 
-**Theorem G.8.4b (Unique module decomposition under SM-type anomaly data).** Assume the capacity-saturating regime of Equation (G.8.5), faithfulness of the inactive-sector action, chirality of the low-energy matter sector, non-trivial abelian coupling to the color factor, and the existence of one SM-type chiral family satisfying the linear, cubic, mixed-gravitational, and global $SU(2)$ anomaly-descent conditions with a single hypercharge generator. Then the unique inactive-sector module decomposition is
+**Theorem G.8.4b (Unique Capacity-Saturating Inactive-Sector Module Decomposition).** Work on the finite-response gauge branch in which compact connected local frame symmetries act faithfully on the inactive sector $\mathcal B\cong\mathbb C^6$, exact response-null global phases are quotiented by Corollary G.8.4h.3, and the positive-marginal regime of Equation (G.8.5) retains every anomaly-admissible non-null generator until the Lagrangian capacity bound of Theorem G.8.2e is saturated. Then the unique inactive-sector module decomposition is
 $$
-\mathcal{B}\cong \mathbb{C}^3 \oplus \mathbb{C}^2 \oplus \mathbb{C}^1.
+\mathcal B\cong\mathbb C^3\oplus\mathbb C^2\oplus\mathbb C^1.
 $$
 
 *Proof.* Let
 $$
-\mathcal B\cong \bigoplus_{i=1}^m\mathbb C^{n_i},
+\mathcal B\cong\bigoplus_{i=1}^m\mathbb C^{n_i},
 \qquad
 \sum_{i=1}^m n_i=6,
 $$
-be an unordered block decomposition of the inactive sector. Under the single-surviving-hypercharge hypothesis, the gauged block-preserving algebra has one abelian generator and the full non-abelian semisimple part
+be an unordered block decomposition. A connected compact unitary symmetry preserving the block structure has non-abelian part
 $$
-\mathfrak g(\lambda)
-=
-\left(\bigoplus_{i:n_i\ge2}\mathfrak{su}(n_i)\right)\oplus\mathfrak u(1),
-\qquad
-\lambda=(n_1,\ldots,n_m).
+\bigoplus_{i:n_i\ge2}\mathfrak{su}(n_i).
 $$
-Thus
+The no-exact-global-symmetry quotient removes response-null abelian labels, while anomaly descent and faithfulness leave exactly one nontrivial determinant-compatible abelian generator when a non-abelian block structure is present. Therefore the jointly estimable gauge count for a partition $\lambda=(n_1,\ldots,n_m)$ is
 $$
-n_G(\lambda)
-=
-\dim\mathfrak g(\lambda)
-=
-1+\sum_{i:n_i\ge2}(n_i^2-1).
+n_G(\lambda)=1+\sum_{i:n_i\ge2}(n_i^2-1).
 $$
+The positive-marginal regime of Equation (G.8.5) means that every omitted anomaly-admissible non-null generator below the capacity bound leaves an avoidable finite-protocol comparison untracked and therefore increases $L_{\rm regret}$. By Theorem G.8.2e, however, no branch may exceed
+$$
+n_G\le ab=12.
+$$
+Thus a PCE minimizer in this branch must saturate $n_G=12$ whenever an admissible partition with $n_G=12$ exists.
 
-The unordered partitions of $6$ give the following generator counts:
+The unordered partitions of $6$ give:
 
 | Partition $\lambda$ | $n_G(\lambda)$ |
 |:--------------------|:--------------:|
@@ -1151,36 +1148,35 @@ The unordered partitions of $6$ give the following generator counts:
 | $2+1+1+1+1$ | $3+1=4$ |
 | $1+1+1+1+1+1$ | $1$ |
 
-The Lagrangian capacity theorem gives the sharp jointly estimable bound
-$$
-n_G\le 12
-$$
-by Theorem G.8.2e. Therefore all partitions with $n_G(\lambda)>12$ are inadmissible. In the capacity-saturating regime of Equation (G.8.5), every partition with $n_G(\lambda)<12$ is also inadmissible once a partition with $n_G=12$ exists, because it leaves jointly estimable generator capacity unused on the same inactive fiber. The table has exactly one row with
-$$
-n_G(\lambda)=12,
-$$
-namely
-$$
-\lambda=3+2+1.
-$$
-Therefore the unique capacity-saturating inactive-sector block decomposition under the single-hypercharge hypothesis is
+All partitions with $n_G>12$ violate Theorem G.8.2e. All partitions with $n_G<12$ fail capacity saturation in the positive-marginal regime because the row $3+2+1$ supplies an admissible zero-violation competitor with $n_G=12$. The table has exactly one row with $n_G=12$, namely $3+2+1$. Therefore the inactive-sector decomposition is uniquely
 $$
 \mathcal B\cong\mathbb C^3\oplus\mathbb C^2\oplus\mathbb C^1.
 $$
+The later chirality and anomaly-descent ledger identifies the $3$-block as the color block, the $2$-block as the weak block, and the determinant-compatible abelian generator as the hypercharge direction; it does not introduce another capacity-saturating partition. ∎
 
-The chirality and anomaly-descent hypotheses do not introduce another partition. They identify the $3$-block as the color block, the $2$-block as the weak block, and the surviving abelian generator as the hypercharge branch. The global $SU(2)$ condition is then satisfied by the SM-type block because the number of left-handed weak doublets per family is
+**Corollary G.8.4c (Gauge-Algebra Selection on the Finite-Response Capacity Branch).** Under the hypotheses of Theorem G.8.4b, the unique capacity-saturating reductive gauge algebra acting faithfully on the inactive sector is
 $$
-3+1=4,
-$$
-which is even. Hence no other inactive-sector decomposition simultaneously satisfies capacity saturation, single-hypercharge realization, chirality, and the stated SM-type anomaly branch. ∎
-
-**Corollary G.8.4c (Conditional gauge-algebra selection).** Under the hypotheses of Theorem G.8.4b, the unique capacity-saturating reductive gauge algebra acting faithfully on the inactive sector is
-$$
-\mathfrak{g}_{\mathrm{SM}}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1),
+\mathfrak g_{\mathrm{SM}}
+=
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1),
 \qquad
-\dim \mathfrak{g}_{\mathrm{SM}} = 8+3+1 = 12.
+\dim\mathfrak g_{\mathrm{SM}}=8+3+1=12.
 $$
-In particular, this algebra saturates the geometric bound of Theorem G.8.2e.
+Equivalently, the connected gauge group is the determinant-compatible block-frame group
+$$
+S(U(3)\times U(2))
+$$
+in its standard embedding on the ordered $3+2+1$ inactive-sector split. This algebra saturates the geometric bound of Theorem G.8.2e.
+
+*Proof.* Theorem G.8.4b gives the unique block split $3+2+1$. The non-abelian block-preserving part is
+$$
+\mathfrak{su}(3)\oplus\mathfrak{su}(2).
+$$
+Corollary G.8.4h.3 quotients exact response-null global phases. Faithfulness and anomaly descent retain one determinant-compatible abelian response direction, and Theorem G.8.2e forbids any additional independent gauge generator because the non-abelian part already contributes $8+3=11$ generators. Hence the full connected algebra is exactly
+$$
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1),
+$$
+with dimension $12$. ∎
 
 **Corollary G.8.4c.1 (Exclusion of Simple Unification Groups).**
 *Grand unified theories based on simple gauge groups are excluded by the capacity bound:*

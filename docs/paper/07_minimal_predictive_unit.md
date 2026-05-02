@@ -623,9 +623,9 @@ matching the Landauer-saturating value $\varepsilon=\varepsilon_{SPAP}$ at the P
 
 The active kernel dimension $a = 2$ initiates the canonical chain:
 
-$$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{\text{PCE}} [24, 12, 8]$$
+$$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{\text{predictive-recovery MacWilliams}} [24, 12, 8]$$
 
-On the balanced rate-$\tfrac{1}{2}$ Golay branch, the endpoint is the extended binary Golay code with parameters $[n,k,d]=[24,12,8]$. The coding-theory uniqueness is theorem-level once the balanced split $k=12$ is fixed; the unconditional rate-$\tfrac{1}{2}$ split is outside the stated balanced-Golay hypotheses.
+On the predictive-recovery MacWilliams Golay branch (Definition Z.13b.0 and Theorem Z.13b.0a), the endpoint is the extended binary Golay code with parameters $[n,k,d]=[24,12,8]$. The coding-theory uniqueness is theorem-level once the dual-asymmetry gate fixes $k=12$; it is not an unconditional consequence of $M=24$ alone.
 
 **Remark (Error Correction Interpretation).** The unified entropy admits an equivalent description as *error correction overhead*. On this branch the Golay code rate $R = k/n = 12/24 = 1/2$ means half of all interface modes are dedicated to protecting the other half against errors. The parity modes (the $n - k = 12$ redundancy bits) represent entropy in the following sense: they encode information about the signal modes that would be needed to reconstruct them after corruption.
 

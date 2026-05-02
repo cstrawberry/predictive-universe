@@ -157,6 +157,152 @@ Exponentiating and rearranging gives (O.3a.3). ∎
 
 **Remark O.3a.3 (Delayed-Choice Consistency).** In delayed-choice and quantum-eraser protocols, a later experimental setting changes which verification channel becomes operationally relevant for the recorded event. It does not reverse the P-V-U order of the actualized MPU cycle. Each recorded event is still processed through a forward update, and whenever it lies in the pathwise guarantee-level class it obeys the single-cycle irreversibility bound (O.3a.3).
 
+**Definition O.3b (Three-Term Predictive Entropy Resolution).** Let $\gamma=(x_0\to\cdots\to x_T)$ be a finite coarse-grained predictive path with reversed path $\gamma^\dagger$. A three-term predictive entropy resolution is a branch datum
+$$
+(Q,N_{\mathrm{SPAP}},\Phi_{\mathrm{PCE}})
+$$
+such that the path entropy production decomposes as
+$$
+\Sigma_{\mathrm{PU}}(\gamma)
+=
+\beta Q(\gamma)
++
+N_{\mathrm{SPAP}}(\gamma)\ln2
++
+\Phi_{\mathrm{PCE}}(x_T)-\Phi_{\mathrm{PCE}}(x_0).
+\tag{O.3b.1}
+$$
+Here $Q(\gamma)$ is heat delivered to the environment at inverse temperature $\beta$, $N_{\mathrm{SPAP}}(\gamma)\in\mathbb N$ is the number of SPAP-forced merge events on the path, and $\Phi_{\mathrm{PCE}}$ is a branch-fixed PCE boundary potential. The resolution is admissible only when $Q$ and $N_{\mathrm{SPAP}}$ are additive under path concatenation and the PCE term is a genuine endpoint coboundary.
+
+**Theorem O.3b (Three-Term Predictive Fluctuation Decomposition).** On any finite path branch with a three-term predictive entropy resolution and forward/reversed path measures satisfying
+$$
+\frac{P_F(\gamma)}{P_R(\gamma^\dagger)}
+=
+\exp(\Sigma_{\mathrm{PU}}(\gamma)),
+\tag{O.3b.2}
+$$
+the following hold.
+
+1. The integral predictive fluctuation identity is
+$$
+\left\langle e^{-\Sigma_{\mathrm{PU}}}\right\rangle_F=1.
+\tag{O.3b.3}
+$$
+
+2. The mean entropy production is nonnegative:
+$$
+\langle\Sigma_{\mathrm{PU}}\rangle_F\ge0.
+\tag{O.3b.4}
+$$
+
+3. If the path moment-generating function is finite on an interval containing $0$, then
+$$
+\Lambda_{\Sigma}(\lambda)
+=
+\log\left\langle e^{\lambda\Sigma_{\mathrm{PU}}}\right\rangle_F
+\tag{O.3b.5}
+$$
+satisfies
+$$
+\Lambda_{\Sigma}'(0)
+=
+\langle\Sigma_{\mathrm{PU}}\rangle_F.
+\tag{O.3b.6}
+$$
+
+4. For $N$ independent identical resolved cycles,
+$$
+\Lambda_{\Sigma,N}(\lambda)=N\Lambda_{\Sigma,1}(\lambda).
+\tag{O.3b.7}
+$$
+For every $s$ and every $\lambda<0$ in the domain of $\Lambda_{\Sigma,1}$,
+$$
+P_F\!\left(\frac1N\sum_{j=1}^N\Sigma_{\mathrm{PU}}^{(j)}\le s\right)
+\le
+\exp\!\left[
+N\big(\Lambda_{\Sigma,1}(\lambda)-\lambda s\big)
+\right].
+\tag{O.3b.8}
+$$
+Equivalently, with
+$$
+I_-(s)=\sup_{\lambda<0}\{\lambda s-\Lambda_{\Sigma,1}(\lambda)\},
+\tag{O.3b.9}
+$$
+one has
+$$
+P_F\!\left(\frac1N\sum_{j=1}^N\Sigma_{\mathrm{PU}}^{(j)}\le s\right)
+\le
+e^{-NI_-(s)}.
+\tag{O.3b.10}
+$$
+
+5. In a stationary resolved branch observed for time $\tau$, the source-energy bookkeeping rate is fixed by the entropy cumulant generator:
+$$
+\dot{\mathcal E}_{\mathrm{src}}
+=
+k_BT\,
+\lim_{\tau\to\infty}
+\frac{1}{\tau}
+\left.
+\frac{d}{d\lambda}\Lambda_{\Sigma,\tau}(\lambda)
+\right|_{\lambda=0},
+\tag{O.3b.11}
+$$
+whenever the limit exists.
+
+*Proof.* From (O.3b.2),
+$$
+P_F(\gamma)e^{-\Sigma_{\mathrm{PU}}(\gamma)}
+=
+P_R(\gamma^\dagger).
+$$
+Summing over the finite path alphabet gives
+$$
+\left\langle e^{-\Sigma_{\mathrm{PU}}}\right\rangle_F
+=
+\sum_{\gamma}P_R(\gamma^\dagger)
+=
+1,
+$$
+which proves (O.3b.3). Jensen's inequality applied to the convex function $e^{-x}$ gives
+$$
+e^{-\langle\Sigma_{\mathrm{PU}}\rangle_F}
+\le
+\left\langle e^{-\Sigma_{\mathrm{PU}}}\right\rangle_F
+=
+1,
+$$
+hence (O.3b.4).
+
+If the moment-generating function is finite in a neighborhood of $0$, differentiation under the finite sum gives
+$$
+\Lambda_{\Sigma}'(0)
+=
+\frac{\langle \Sigma_{\mathrm{PU}}e^{0\cdot\Sigma_{\mathrm{PU}}}\rangle_F}
+{\langle e^{0\cdot\Sigma_{\mathrm{PU}}}\rangle_F}
+=
+\langle\Sigma_{\mathrm{PU}}\rangle_F,
+$$
+which proves (O.3b.6). For independent identical resolved cycles, moment-generating functions multiply, so logarithms add, giving (O.3b.7).
+
+For $\lambda<0$, the event $\frac1N\sum_j\Sigma_j\le s$ implies
+$$
+e^{\lambda\sum_j\Sigma_j}\ge e^{\lambda Ns}.
+$$
+Markov's inequality therefore gives
+$$
+P_F\!\left(\frac1N\sum_j\Sigma_j\le s\right)
+\le
+e^{-\lambda Ns}
+\left\langle e^{\lambda\sum_j\Sigma_j}\right\rangle_F
+=
+\exp\!\left[
+N\big(\Lambda_{\Sigma,1}(\lambda)-\lambda s\big)
+\right].
+$$
+Taking the infimum over $\lambda<0$ gives (O.3b.10). Equation (O.3b.11) is (O.3b.6) applied per unit time and multiplied by $k_BT$ to convert entropy production into the corresponding environmental energy bookkeeping rate. ∎
+
 ### O.5.1 The Perspectival Arrow: Complexity-Relative Temporal Asymmetry
 
 Theorem O.3 characterizes the arrow of time as a property of the physical medium: the ratio $P_R/P_F \le e^{-N\varepsilon}$ is a statement about forward and reversed path measures. The observer hierarchy of §P.5.8.3 shows that this global asymmetry acquires additional internal structure once some systems possess Effective Operational Property R and an operational self-model. The relevant mechanism is the conjunction of measurement asymmetry (Theorem M.10.5) with the SPAP-dependent integration cost of self-referential patterns (Definition M.10.3; Theorem M.10.3). A more complex system can externally model the self-referential burden of a less complex one, but it cannot thereby impose an exact temporal reversal on the less complex system from within that system's own perspective.

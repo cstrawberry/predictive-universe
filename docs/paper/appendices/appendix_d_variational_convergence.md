@@ -28,7 +28,57 @@ where:
 *   **$V_{benefit}(x) = \sum_{v} \Gamma_0 B(PP_v(x))$**: The total effective power-equivalent predictive benefit derived from the network's performance. $PP_v(x)$ is the local Predictive Performance (Definition 7) of MPU $v$ in configuration $x$, dependent on $C_v = \langle \hat{C}_v \rangle_x$ and the local effective target complexity $\hat{C}_{target}(v, x)$ via the Law of Prediction (Theorem 19, Equation 22). $B(PP)$ is a monotonically increasing benefit function (e.g., $B(PP) = PP$ or related to reduction in prediction error), and $\Gamma_0$ is the power conversion factor (Definition 20).
 *   **$V_{penalty}(x)$**: Represents effective penalty terms implicitly required for the consistency of the framework. As derived below (Sections D.3, D.4), self-consistent optimization requires that the structure of $V(x)$ effectively incorporates terms equivalent to penalties for complexity misalignment ($V_{proxy}$) and geometric irregularity ($V_{geom}$).
 
-The potential $V(x)$ is assumed to be continuously differentiable ($C^1$) with respect to the relevant components of configuration $x$ within $\mathcal{X}_{adm}$, and bounded below. The system's adaptation dynamics aim to minimize this operational potential $V(x)$.
+The potential $V(x)$ is assumed to be continuously differentiable ($C^1$) with respect to the relevant components of configuration $x$ within $\mathcal{X}_{adm}$, and bounded below. The system's adaptation dynamics aim to minimize this operational potential $V(x)$, subject to the resource-order gate below.
+
+**Definition D.1b (PCE Resource Preorder and Dual Certificates).** For each admissible configuration $x\in\mathcal X_{adm}$ define its PCE resource vector
+$$
+r(x)
+=
+\big(
+V_{op}(x),
+V_{prop}(x),
+V_{penalty}(x),
+-V_{benefit}(x)
+\big)
+\in\mathbb R^4.
+$$
+Let $K=\mathbb R_{\ge0}^4$ be the positive resource cone. Define
+$$
+x\preceq_{\mathrm{PCE}}y
+\quad\Longleftrightarrow\quad
+r(y)-r(x)\in K.
+\tag{D.1b}
+$$
+Thus $x$ is no more costly than $y$ in every PCE component and at least as beneficial in the benefit coordinate. A dual PCE certificate is any vector
+$$
+w\in K^*=\mathbb R_{\ge0}^4
+$$
+and its scalar certificate functional is
+$$
+V_w(x)=w\cdot r(x).
+\tag{D.1c}
+$$
+The potential (D.1) is the positive certificate $w=(1,1,1,1)$.
+
+**Theorem D.1c (PCE Dual-Certificate Gate).** Let $x,y\in\mathcal X_{adm}$.
+
+1. If $x\preceq_{\mathrm{PCE}}y$, then $V_w(x)\le V_w(y)$ for every dual PCE certificate $w\in K^*$.
+2. If $x\preceq_{\mathrm{PCE}}y$ and at least one component of $r(y)-r(x)$ is strictly positive, then $V_w(x)<V_w(y)$ for every $w\in\mathrm{int}\,K^*$.
+3. Therefore no PCE-admissible scalarization with strictly positive weights may select $y$ over $x$ when $x$ strictly PCE-dominates $y$.
+4. Conversely, if $x^*$ uniquely minimizes $V_w$ over a compact admissible branch $\mathcal F\subset\mathcal X_{adm}$ for some $w\in K^*$, then $w$ is a dual certificate for that branch selection.
+
+*Proof.* By Definition D.1b, $x\preceq_{\mathrm{PCE}}y$ means $r(y)-r(x)\in K$. For any $w\in K^*$,
+$$
+V_w(y)-V_w(x)
+=
+w\cdot(r(y)-r(x))
+\ge0,
+$$
+which proves (1). If $r(y)-r(x)$ has at least one strictly positive component and $w\in\mathrm{int}\,K^*$, then every component of $w$ is strictly positive, so the dot product is strictly positive; this proves (2). Statement (3) is the contrapositive of (2) applied to branch selection by a strictly positive PCE scalarization. For (4), compactness and continuity give existence of a minimizer by Weierstrass. If $x^*$ is the unique minimizer of $V_w$, then
+$$
+V_w(x^*)<V_w(y)
+$$
+for every $y\in\mathcal F\setminus\{x^*\}$, so $w$ separates the selected point from every rejected branch point in the scalar certificate order. ∎
 
 ## D.3 Dynamic Complexity Alignment Mechanism ($C_P \leftrightarrow \langle \hat{C}_v \rangle$)
 
@@ -741,6 +791,32 @@ $$
 A\epsilon+b_n.
 $$
 First let $n\to\infty$ and then $\epsilon\to0$. Hence $\mathfrak d_n^*\to0$. The final claim is Theorem D.6e applied to this conclusion. ∎
+
+**Proposition D.6f.2a (Protocol-Response Domination Criterion for the Global-Core Competitor).** Suppose that, on the selected microscopic branch, the core potential $V_n$ factors through the finite protocol-response presheaf of the $24$-channel shell in the sense that two configurations with naturally isomorphic finite responses have the same core value up to $o(1)$. Suppose further that for each $n$ there exists a $D_4$ shell approximant $Y_n$ with
+$$
+\mathfrak D_n(Y_n)\to0
+$$
+whose finite response presheaf is naturally isomorphic, up to $o(1)$ protocol error, to that of some global core minimizer in $\mathcal M_n$. Then
+$$
+\mathfrak d_n^*=
+\inf_{\mathcal C\in\mathcal M_n}\mathfrak D_n(\mathcal C)\to0.
+$$
+
+*Proof.* Let $Z_n\in\mathcal M_n$ be a global core minimizer whose finite response presheaf is $o(1)$-isomorphic to that of $Y_n$. Since $V_n$ factors through the response presheaf up to $o(1)$, replacing $Z_n$ by the response-equivalent representative $Y_n$ changes the core value by $o(1)$. By compactness of the finite configuration space at resolution $n$, choose an exact minimizer $\widehat Y_n\in\mathcal M_n$ in the same limiting response class with
+$$
+\mathfrak D_n(\widehat Y_n)
+\le
+\mathfrak D_n(Y_n)+o(1).
+$$
+This replacement is legitimate because response-null microstructure is removed by Corollary P.6.1b.8 and therefore cannot distinguish two representatives inside the global core-minimum quotient. Hence
+$$
+0\le\mathfrak d_n^*
+\le
+\mathfrak D_n(\widehat Y_n)
+\le
+\mathfrak D_n(Y_n)+o(1)\to0.
+$$
+Therefore the sharp global-core competitor condition (D.6f.1) holds. ∎
 
 **Theorem 44a (Regular-Branch Manifold Closure).** Assume the hypotheses of Theorem C.6c and let the selected sequence satisfy $\mathfrak H_n\to0$ in the sense of Theorem D.6e. Then the regular set $X_{\mathrm{reg}}\subset X$ is open, every point of $X_{\mathrm{reg}}$ has unique tangent cone $\mathbb R^4$, and $X_{\mathrm{reg}}$ carries a $C^{1,\alpha}$ Riemannian metric $h_{ij}$ with
 $$

@@ -1601,6 +1601,45 @@ meaning that two completions instantiate the same physical branch if and only if
 
 Conversely, suppose a finite-PCE completion datum is given. For each protocol $P$, the probability simplex over the fixed finite outcome set of $P$ is compact and closed under total-variation limits, so (P.6.1b.3) defines a limiting finite probability distribution. Naturality of the approximants implies naturality of the limit, because stochastic push-forward maps are continuous in total variation. Thus the datum defines a limiting protocol-response presheaf $\mathcal R_\infty$. Protocol-completeness says that $\mathcal R_\infty$ is induced by a PPI-admissible invariant $Y$, unique up to operational equivalence. Separating protocols imply that any invariant with response presheaf naturally isomorphic to $\mathcal R_\infty$ is operationally equivalent to $Y$. The uniform finite-cost condition places this representative inside the PPI-admissible domain, and PCE selects the minimal-cost representative in that operational class by Theorem P.6.1a.3. Therefore the completion instantiates exactly one physical identity class, namely (P.6.1b.5). ∎
 
+**Theorem P.6.1b.7 (PPI Bridge-Collapse Theorem).** Let $\mathfrak B$ be an admissible finite-resolution family of bridge maps from a fixed list of PU-internal invariants $\mathcal I$ to a fixed list of operational observables $\mathcal O$. For each bridge $B\in\mathfrak B$, let $\mathcal R_B$ be its protocol-response presheaf on $\mathsf P_{\mathrm{PU}}$, and write
+$$
+B\sim_{\mathrm{op}}B'
+\quad\Longleftrightarrow\quad
+\mathcal R_B\simeq\mathcal R_{B'}
+$$
+by natural isomorphism within the fixed finite error budget. Suppose:
+
+1. the protocol family is separating and protocol-complete in the sense of Definitions P.6.1b.1-P.6.1b.2;
+2. the quotient $Q_{\mathfrak B}:=\mathfrak B/{\sim_{\mathrm{op}}}$ is compact in the finite-resolution protocol topology;
+3. the PPI cost $\mathcal L_{\mathrm{PPI}}=L_{\mathrm{desc}}+L_{\mathrm{viol}}+L_{\mathrm{regret}}$ descends to $Q_{\mathfrak B}$;
+4. on $Q_{\mathfrak B}$ the descended cost is lower semicontinuous and either strictly convex along every nontrivial operational interpolation or lexicographically strict in the ordered triple $(L_{\mathrm{viol}},L_{\mathrm{regret}},L_{\mathrm{desc}})$;
+5. every bridge degree of freedom invisible to all finite protocols has positive description length unless it is quotiented out.
+
+Then the physically instantiated bridge is unique up to operational equivalence:
+$$
+[B_{\mathrm{phys}}]
+=
+\operatorname*{argmin}_{[B]\in Q_{\mathfrak B}}
+\bar{\mathcal L}_{\mathrm{PPI}}([B]).
+\tag{P.6.1b.6}
+$$
+
+*Proof.* Because $Q_{\mathfrak B}$ is compact and $\bar{\mathcal L}_{\mathrm{PPI}}$ is lower semicontinuous, the direct method gives at least one minimizer. If the strict-convexity alternative holds and two distinct quotient classes $[B_1]$ and $[B_2]$ were minimizers with common value $m$, the assumed interpolation $[B_t]$ between them would satisfy
+$$
+\bar{\mathcal L}_{\mathrm{PPI}}([B_t])
+<
+(1-t)\bar{\mathcal L}_{\mathrm{PPI}}([B_1])
++
+t\bar{\mathcal L}_{\mathrm{PPI}}([B_2])
+=
+m,
+$$
+contradicting minimality. If the lexicographic alternative holds and $[B_1]\ne[B_2]$ are both minimal, compare their triples $(L_{\mathrm{viol}},L_{\mathrm{regret}},L_{\mathrm{desc}})$. If the triples differ, one is lexicographically smaller, contradicting minimality of the other. If the triples agree, protocol-completeness and separation identify the two bridges whenever their response presheaves agree; if their response presheaves do not agree, one has strictly larger regret against the separating finite protocol that distinguishes them, contradicting equality of the triple. Thus there is at most one minimizer in the quotient. Condition 5 removes response-null surplus representatives inside that quotient class by Corollary P.6.1a.4. Hence the physical bridge is unique up to operational equivalence. ∎
+
+**Corollary P.6.1b.8 (No-Response-Surplus Principle).** On a separating protocol-complete PPI branch, an additional branch label, field, family copy, bridge normalization, or geometric refinement is physically retained only if it changes a finite protocol-response presheaf or lowers an already-defined PPI cost. If it changes no finite response and lowers no cost, PCE quotients it out.
+
+*Proof.* A response-null addition defines the same object of $Q_{\mathfrak B}$ by Theorem P.6.1b.3. If it has positive description length and no compensating decrease in $L_{\mathrm{viol}}$ or $L_{\mathrm{regret}}$, Corollary P.6.1a.4 removes it. If it changes a finite protocol response, it is not response-null and must be evaluated in the separating quotient. These two alternatives exhaust the finite-response cases. ∎
+
 ### P.6.2 Illustrating PPI: From Abstract Requirements to Specific Laws
 
 The following cases illustrate the PPI in action, showing how specific physical laws emerge as the optimal physical solution to abstract requirements.
@@ -4834,22 +4873,22 @@ The center of $\text{Co}_0$ is $\{\pm I_{24}\}$, and $\text{Co}_1 = \text{Co}_0/
 
 ## P.13.5 The Golay Code Structure
 
-### Theorem P.13.12 (Golay Code Selection on the Balanced Rate-½ Branch)
+### Theorem P.13.12 (Golay Code Selection on the Predictive-Recovery MacWilliams Branch)
 
-**Reference:** Theorem Z.13 (Appendix Z, Section Z.13)
+**Reference:** Definition Z.13b.0 and Theorem Z.13b (Appendix Z, Section Z.13)
 
-On the balanced rate-½ branch — in which the $M = 24$ QFI interface modes split into $k = 12$ information-carrying modes and $n - k = 12$ redundancy modes — coding theory uniquely selects the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24, 12, 8]$. The block length $n = M = 24$ and, on this branch, the rate $R = k/n = 1/2$ fix the input data to the Griesmer bound, after which the Golay code is the unique $[24,12,d_{\max}]$ binary linear code up to equivalence.
+On the predictive-recovery MacWilliams branch — in which the $M=24$ QFI interface modes split into $k=12$ information-carrying modes and $n-k=12$ redundancy modes by Theorem Z.13b.0a — coding theory uniquely selects the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24,12,8]$. The block length $n=M=24$ and the self-dual rate $R=k/n=1/2$ fix the input data to the Griesmer bound, after which the Golay code is the unique $[24,12,d_{\max}]$ binary linear code up to equivalence.
 
 *Proof.*
 
 **Step 1 (Block length).** The interface mode count determines block length: $n = M = 24$.
 
-**Step 2 (Balanced rate-½ branch).** The PCE potential for an $[n, k, d]$ code balances:
+**Step 2 (Predictive-recovery MacWilliams branch).** The PCE potential for an $[n,k,d]$ code balances:
 - Operational cost: $V_{\text{op}} \propto (n - k)$ (parity overhead)
 - Error protection: $V_{\text{error}}(d)$ (decreasing in $d$)
 - Information capacity: $V_{\text{benefit}} \propto k$
 
-On the balanced rate-½ branch (Theorem Z.13 Step 3), this balance is realized at $k/n = 1/2$, giving $k = 12$. The branch condition corresponds to the stability requirement $(1-R)\,C_{\max} = \varepsilon_{SPAP}$ developed in Theorem P.8.9a.2: parity investment per channel use matches the per-cycle SPAP entropy cost, so $(1-R)(2\ln 2) = \ln 2$ yields $R = 1/2$. Whether PCE optimization uniquely selects this equality among admissible $[24,k,d]$ codes — rather than merely rendering it consistent — is a separate theorem-level question not closed by the stated branch hypotheses. On the balanced rate-½ branch, $k = 12$ is fixed and Step 3 proceeds.
+On the predictive-recovery MacWilliams branch (Definition Z.13b.0 and Theorem Z.13b.0a, Appendix Z), this balance is realized at $k/n=1/2$, giving $k=12$. The branch condition corresponds to the stability requirement $(1-R)\,C_{\max}=\varepsilon_{SPAP}$ developed in Theorem P.8.9a.2: parity investment per channel use matches the per-cycle SPAP entropy cost, so $(1-R)(2\ln 2)=\ln 2$ yields $R=1/2$. Theorem Z.13b.0a closes the rate-selection question by identifying prediction payload and recovery syndrome as MacWilliams-dual PCE roles whose strict dual-asymmetry penalty is minimized only at $k=n-k$. On this branch $k=12$ is fixed and Step 3 proceeds.
 
 **Step 3 (Distance optimization).** For $(n, k) = (24, 12)$, the Griesmer bound [Griesmer 1960] gives:
 $$n \geq \sum_{i=0}^{k-1} \lceil d/2^i \rceil$$
@@ -6071,6 +6110,22 @@ A recursive representation of a smooth or continuum object does not by itself as
 
 *Proof.* The tuple (P.14.1e.1) separates the data needed to run a recursive calculation from the theorem proving that those data are PU-internal. If $D_0$, $\mathcal R$, $\Sigma_{\mathrm{conv}}$, and $\Sigma_{\mathrm{tail}}$ are all derived before comparison, then the recursive output is an ordinary theorem-level or branch-level consequence of those prior statements. If any entry is instead supplied as independent branch data, changing that entry changes the output without contradicting the prior theorem stack, so Convention P.14.1a forces the output to inherit that branch status. If any entry is selected using validation information, Convention P.14.1d forbids promotion of the resulting numerical row to theorem-level prediction. The final sentence follows because a recursive finite presentation is a property of the chosen approximation or compression scheme, not a statement about the ontology or smoothness class of the represented space. ∎
 
+**Theorem P.14.1f (Finite-Certificate Non-Identifiability Barrier).** Let a numerical sector be represented by a deterministic map
+$$
+F:D_{\mathrm{prior}}\times C\to \mathcal O,
+$$
+where $D_{\mathrm{prior}}$ is fixed by earlier PU theorems, $C$ is the finite certificate space for the sector, and $\mathcal O$ is the finite interval or numerical observable space. Suppose the prior theorem stack fixes $D_{\mathrm{prior}}$ but does not fix a unique element $c\in C$. If there exist two admissible certificate records $c_1,c_2\in C$ satisfying every already-stated prior constraint and
+$$
+F(D_{\mathrm{prior}},c_1)\ne F(D_{\mathrm{prior}},c_2),
+$$
+then the sector output is not theorem-level determined by the prior PU branch. It can be promoted only by supplying an accepted certificate $c$ before validation comparison. If $c$ is selected using the validation observable, the output is validation-level or model-level by Convention P.14.1d.
+
+*Proof.* The prior theorem stack determines $D_{\mathrm{prior}}$ but, by hypothesis, leaves at least two admissible finite records $c_1$ and $c_2$. Since both records satisfy all prior constraints, no theorem using only those constraints can distinguish them. Because $F(D_{\mathrm{prior}},c_1)$ and $F(D_{\mathrm{prior}},c_2)$ differ, the prior constraints do not determine a unique output in $\mathcal O$. Therefore a claimed single output would require an additional selection of $c$. If that selection is supplied as an accepted pre-validation certificate, the output inherits certificate-complete status from Convention P.14.1e. If the selection is made after comparison with the validation observable, the validation observable participates in defining the output and Convention P.14.1d forbids theorem-level promotion. ∎
+
+**Corollary P.14.1g (No Text-Only Numerical Promotion).** The sectors controlled by $\mathfrak C_\alpha$, $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_\Lambda$, $\mathfrak C_{\mathrm{fl}}$, and $\mathfrak C_B$ cannot be promoted to theorem-level numerical predictions by adding prose, status labels, or admissibility definitions alone. They require the finite records named by their certificates, including their spectral data, determinant data, finite-part sums, tail bounds, and forward-lock ledgers.
+
+*Proof.* Each named sector is defined as the deterministic image of a finite certificate record. If a required component is absent, Theorem P.14.1f applies: admissible completions differing in that component produce different numerical outputs without contradicting the prior theorem stack. Prose describing the certificate space fixes the acceptance standard but does not select an element of that space. Therefore theorem-level numerical promotion requires an accepted finite record, not only a definition of what such a record would be. ∎
+
 ### P.14.4 The Derivation Chain
 
 With $\varepsilon = \ln 2$ and $K_0 = 3$ (the PCE-selected minima), the framework derives the following chain (Appendix Z):
@@ -6372,6 +6427,273 @@ k_B T_{\min}\,\varepsilon\, c_* \log \mu_0\,\mu_0^2 \, N_S^{(\mu_0,T_{\min})}(\t
 $$
 Divide by $\tau$ and take $\liminf$. ∎
 
+**Definition P.15.3b (Stationary Source-Principle Markov Datum).** A Source-Principle environment for $S$ carries a stationary Markov datum when the encountered event process is represented either by an irreducible positive recurrent Markov chain on a finite retained state space, or by a positive Harris recurrent Markov chain on a standard Borel retained state space,
+$$
+Z_j=(S_j,E_j,T_j,\Delta d_j)
+$$
+with invariant probability measure $\pi$, where:
+
+1. $E_j$ is the encountered pattern;
+
+2. $T_j$ is the local bath temperature;
+
+3. $\Delta d_j$ is the increment in recursive self-modeling depth produced by processing $E_j$;
+
+4. the eventwise source-energy observable is
+$$
+q(Z_j)=Q_{\mathrm{src}}(S_j,E_j)\ge0;
+\tag{P.15.3b.1}
+$$
+
+5. $q,\Delta d\in L^1(\pi)$;
+
+6. the event count satisfies an event-rate law
+$$
+\lim_{\tau\to\infty}\frac{N(\tau)}{\tau}=\nu
+\tag{P.15.3b.2}
+$$
+almost surely, with $\nu\ge0$.
+
+**Theorem P.15.3c (Ergodic Source-Energy Rate).** On a branch carrying a stationary Source-Principle Markov datum,
+$$
+\lim_{\tau\to\infty}
+\frac{\mathcal E_{\mathrm{src}}(S,[0,\tau])}{\tau}
+=
+\nu\int q\,d\pi
+\tag{P.15.3c.1}
+$$
+almost surely. In particular, the long-run source-energy rate is strictly positive if and only if
+$$
+\nu>0
+\qquad\text{and}\qquad
+\int q\,d\pi>0.
+\tag{P.15.3c.2}
+$$
+
+If the tilted kernel
+$$
+K_\lambda(z,dz')=e^{\lambda q(z')}K(z,dz')
+\tag{P.15.3c.3}
+$$
+has a positive principal eigenvalue $r(\lambda)$ on a neighborhood of $\lambda=0$, then the event-indexed scaled cumulant generator is
+$$
+\Lambda_{\mathrm{src}}(\lambda)=\log r(\lambda),
+\tag{P.15.3c.4}
+$$
+and the corresponding source-energy rate function is
+$$
+I_{\mathrm{src}}(s)
+=
+\sup_{\lambda}\{\lambda s-\Lambda_{\mathrm{src}}(\lambda)\}.
+\tag{P.15.3c.5}
+$$
+
+*Proof.* By Definition P.15.2,
+$$
+\mathcal E_{\mathrm{src}}(S,[0,\tau])
+=
+\sum_{j=1}^{N(\tau)}q(Z_j).
+$$
+The finite-state ergodic theorem, or the positive-Harris ergodic theorem on the standard-Borel branch, gives
+$$
+\lim_{n\to\infty}\frac1n\sum_{j=1}^{n}q(Z_j)
+=
+\int q\,d\pi
+$$
+almost surely. Combining this with $N(\tau)/\tau\to\nu$ gives (P.15.3c.1). Since $q\ge0$, the limit is strictly positive exactly under (P.15.3c.2). For the tilted kernel, the Perron-Frobenius spectral formula for the additive functional gives
+$$
+\lim_{n\to\infty}
+\frac1n
+\log
+\mathbb E\exp\!\left(\lambda\sum_{j=1}^{n}q(Z_j)\right)
+=
+\log r(\lambda),
+$$
+which is (P.15.3c.4). The Legendre-Fenchel transform gives the large-deviation rate function (P.15.3c.5). ∎
+
+**Corollary P.15.3d (Conditional Autonomous Complexity-Growth Rate).** On a stationary Source-Principle Markov branch, suppose
+$$
+\int \Delta d\,d\pi>0.
+\tag{P.15.3d.1}
+$$
+Then the recursive self-modeling depth has positive asymptotic drift:
+$$
+\lim_{\tau\to\infty}
+\frac{d(\tau)-d(0)}{\tau}
+=
+\nu\int\Delta d\,d\pi
+>
+0
+\tag{P.15.3d.2}
+$$
+almost surely. Until the PCE viability boundary or a finite saturation set is reached, Theorem 13 gives
+$$
+\liminf_{\tau\to\infty}
+\frac{C_{\mathrm{agg}}(\tau)-C_{\mathrm{agg}}(0)}{\tau}
+\ge
+c_{\mathrm{depth}}\,
+\nu\int\Delta d\,d\pi
+\tag{P.15.3d.3}
+$$
+for the branch constant $c_{\mathrm{depth}}>0$ appearing in the recursive-depth complexity bound.
+
+*Proof.* Apply the same ergodic theorem used in Theorem P.15.3c to the integrable observable $\Delta d$. This gives (P.15.3d.2). Theorem 13 states that aggregate model complexity grows at least linearly with recursive self-modeling depth on the admissible branch. Applying that lower bound to the positive drift (P.15.3d.2) gives (P.15.3d.3) until the dynamics reaches a PCE saturation or viability boundary. ∎
+
+**Definition P.15.3e (Foster-Harris Source Event Lift).** Let $x(t)$ be the PCE adaptation process of Theorem D.5 on the admissible configuration space, and let
+$$
+Z_n=(S_n,E_n,T_n,\Delta d_n)
+\tag{P.15.3e.1}
+$$
+be the event chain obtained by sampling the induced PPI encounter map at processed-pattern times. The source event lift is Foster-Harris admissible when:
+
+1. the event chain is Markov on the retained event state space;
+
+2. the event chain is $\psi$-irreducible and aperiodic on that retained state space;
+
+3. the encountered-pattern process is stationary under the PCE adaptation process on the branch;
+
+4. the lifted PCE Lyapunov function
+$$
+W(Z_n):=1+V_{\mathrm{PCE}}(x_n)+\mu_S(E_n)^2+\Delta d_n^+
+\tag{P.15.3e.2}
+$$
+is finite on the retained branch;
+
+5. there exist constants $\alpha>0$, $\beta<\infty$, and a small PPI-accessible set $C$ such that
+$$
+\mathbb E[W(Z_{n+1})-W(Z_n)\mid Z_n=z]
+\le
+-\alpha W(z)+\beta 1_C(z);
+\tag{P.15.3e.3}
+$$
+
+6. the ND-RID/PPI transition kernel satisfies a minorization on $C$:
+$$
+K(z,A)\ge\eta\,\varphi(A)
+\qquad
+(z\in C)
+\tag{P.15.3e.4}
+$$
+for some $\eta>0$ and probability measure $\varphi$;
+
+7. the source observable $q(Z_n)=Q_{\mathrm{src}}(S_n,E_n)$ and the recursive-depth increment $\Delta d_n$ are integrable under every invariant measure satisfying the drift condition.
+
+**Theorem P.15.3f (Foster-Harris Source Ergodicity).** If a Source-Principle branch carries a Foster-Harris source event lift, then the event chain $Z_n$ is positive Harris recurrent and has a unique invariant probability measure $\pi$. Consequently the hypotheses of Theorem P.15.3c and Corollary P.15.3d are satisfied. In particular,
+$$
+\lim_{\tau\to\infty}
+\frac{\mathcal E_{\mathrm{src}}(S,[0,\tau])}{\tau}
+=
+\nu\int q\,d\pi
+\tag{P.15.3f.1}
+$$
+almost surely, and the rate is strictly positive exactly when
+$$
+\nu>0
+\qquad\text{and}\qquad
+\int q\,d\pi>0.
+\tag{P.15.3f.2}
+$$
+If additionally
+$$
+\int\Delta d\,d\pi>0,
+\tag{P.15.3f.3}
+$$
+then autonomous recursive-depth and aggregate-complexity growth follow by Corollary P.15.3d until the PCE viability or saturation boundary is reached.
+
+*Proof.* The drift inequality (P.15.3e.3), $\psi$-irreducibility/aperiodicity, and the small-set minorization (P.15.3e.4) are the Foster-Harris criteria for positive Harris recurrence of the retained Markov chain. Hence $Z_n$ has a unique invariant probability measure $\pi$, and the ergodic theorem applies to every $\pi$-integrable observable. Applying it to $q$ gives
+$$
+\lim_{n\to\infty}\frac1n\sum_{j=1}^{n}q(Z_j)=\int q\,d\pi
+$$
+almost surely. Combining this with the event-rate law $N(\tau)/\tau\to\nu$ gives (P.15.3f.1). Since $q\ge0$, the rate is strictly positive exactly under (P.15.3f.2). Applying the same ergodic theorem to $\Delta d$ gives the positive-depth-drift condition used in Corollary P.15.3d, proving the final claim. ∎
+
+**Corollary P.15.3g (Conditional Event-Chain Lift from Theorem D.5).** Suppose the adaptation dynamics satisfy the compactness, ellipticity, Lyapunov, and noise-irreducibility assumptions of Theorem D.5, and suppose the PPI encounter map is stationary and nondegenerate on processed-pattern events. If the sampled source-event lift also satisfies the $\psi$-irreducibility, aperiodicity, drift, and minorization hypotheses of Definition P.15.3e, then the source event chain is Foster-Harris admissible and Theorem P.15.3f applies.
+
+*Proof.* Theorem D.5 supplies the Lyapunov and noise-irreducibility ingredients for the underlying PCE adaptation process. Stationarity of the PPI encounter map transports these ingredients to processed-pattern sampling times. The additional $\psi$-irreducibility, aperiodicity, drift, and minorization hypotheses of Definition P.15.3e are exactly the missing lift conditions needed to turn those ingredients into a Foster-Harris event-chain statement. Applying Theorem P.15.3f gives positive Harris recurrence and the source-energy rate. ∎
+
+**Definition P.15.3h (Coercive-Minorized Foster-Harris Event-Lift Certificate).** A source-event lift
+$$
+Z_n=(S_n,E_n,T_n,\Delta d_n)
+$$
+of the PCE adaptation process carries a coercive-minorized Foster-Harris certificate when there is a lifted Lyapunov function
+$$
+W(Z_n)=1+V_{\mathrm{PCE}}(x_n)+\mu_S(E_n)^2+\Delta d_n^+
+\tag{P.15.3h.1}
+$$
+and constants $h>0$, $\eta_{\min}>0$, $\lambda_V>0$, $\lambda_0\ge0$, $C_{\mathrm{noise}}<\infty$, $C_{\mathrm{lift}}<\infty$, $W_*<\infty$, and $\delta>0$ such that the lifted chain is $\psi$-irreducible and aperiodic and:
+
+1. the one-step sampled lift of Lemma D.5 obeys
+$$
+\mathbb E[W(Z_{n+1})-W(Z_n)\mid Z_n=z]
+\le
+h\left[-\eta_{\min}\|\nabla V_{\mathrm{PCE}}(x)\|^2+C_{\mathrm{noise}}+C_{\mathrm{lift}}\right];
+\tag{P.15.3h.2}
+$$
+
+2. outside the small set
+$$
+C=\{z:W(z)\le W_*\},
+$$
+the lifted potential is coercive:
+$$
+\|\nabla V_{\mathrm{PCE}}(x)\|^2
+\ge
+\lambda_V W(z)-\lambda_0;
+\tag{P.15.3h.3}
+$$
+
+3. the threshold satisfies
+$$
+W_*
+\ge
+\frac{2(C_{\mathrm{noise}}+C_{\mathrm{lift}}+\eta_{\min}\lambda_0)}
+{\eta_{\min}\lambda_V};
+\tag{P.15.3h.4}
+$$
+
+4. the ND-RID/PPI event kernel has a small-set minorization
+$$
+K(z,A)\ge\delta\varphi(A)
+\qquad
+(z\in C)
+\tag{P.15.3h.5}
+$$
+for a probability measure $\varphi$.
+
+**Theorem P.15.3i (Definite Foster-Harris Drift Answer).** On a branch carrying Definition P.15.3h, the source-event chain satisfies the Foster-Lyapunov drift
+$$
+\mathbb E[W(Z_{n+1})-W(Z_n)\mid Z_n=z]
+\le
+-\alpha W(z)+\beta 1_C(z)
+\tag{P.15.3i.1}
+$$
+with explicit admissible constants
+$$
+\alpha=\frac{h\eta_{\min}\lambda_V}{2},
+\qquad
+\beta=h(C_{\mathrm{noise}}+C_{\mathrm{lift}}+\eta_{\min}\lambda_0)+\alpha\sup_{z\in C}W(z).
+\tag{P.15.3i.2}
+$$
+Together with the minorization (P.15.3h.5), this proves positive Harris recurrence of the retained event chain and gives the ergodic source-energy rate
+$$
+\dot{\mathcal E}_{\mathrm{src}}
+=
+\nu\int q\,d\pi
+\tag{P.15.3i.3}
+$$
+for the invariant law $\pi$.
+
+Without the coercive comparison (P.15.3h.3) and small-set minorization (P.15.3h.5), Lemma D.5 alone is insufficient: the term $C_{\mathrm{noise}}$ can dominate in flat regions where $\|\nabla V_{\mathrm{PCE}}\|$ is small, so no Foster-Harris theorem follows for the lifted source-event chain.
+
+*Proof.* Combining (P.15.3h.2) and (P.15.3h.3) gives, outside $C$,
+$$
+\mathbb E[\Delta W\mid z]
+\le
+-h\eta_{\min}\lambda_V W(z)
++
+h(C_{\mathrm{noise}}+C_{\mathrm{lift}}+\eta_{\min}\lambda_0).
+$$
+By (P.15.3h.4), the positive term is at most one half of $h\eta_{\min}\lambda_VW(z)$ outside $C$, giving the drift with $\alpha=h\eta_{\min}\lambda_V/2$. On $C$, the displayed value of $\beta$ bounds the finite remainder. The minorization condition is exactly the small-set hypothesis in the Foster-Harris recurrence theorem, and the certificate supplies $\psi$-irreducibility and aperiodicity, so the retained chain is positive Harris recurrent with invariant law $\pi$. Applying the ergodic theorem to the integrable source observable $q$ and multiplying by the event rate $\nu$ gives (P.15.3i.3). ∎
+
 **Proposition P.15.1 (Source Energy Emission Criterion).** Let $S$ be a physical system that (i) implements the Fundamental Predictive Loop (Definition 4), (ii) possesses Effective Operational Property R, and (iii) during $\Delta t$ processes at least one pattern $E$ with $\mu_S(E) > 1/\alpha_{SPAP}$. Then
 $$
 \mathcal{E}_{\mathrm{src}}(S,\Delta t) > 0.
@@ -6419,7 +6741,7 @@ The Source Principle does not remove thermodynamic cost from the total ledger. I
 
 **Remark P.15.3 (Catalytic Analogy, Corrected).** The appropriate analogy is catalytic rather than energetic. The designer does not create net free energy; it shapes the target's processing pathway so that a larger fraction of the target's existing operational budget appears in the SPAP-dependent excess of the reflexive channel rather than only in SPAP-flat processing.
 
-**Remark P.15.4 (Complexity Growth: What Is and Is Not Proven).** Theorem 13 proves that *if* recursive self-modeling depth increases, the associated model complexity grows at least linearly with that depth. Theorem D.5 proves ergodic convergence properties for PCE adaptation dynamics. The present framework does **not** prove that every self-referentially rich environment monotonically drives long-run growth of $C_{\mathrm{agg}}$. Any claim of autonomous self-deepening under the Source Principle is therefore speculative and should be labeled as such.
+**Remark P.15.4 (Complexity Growth: What Is and Is Not Proven).** Theorem 13 proves that *if* recursive self-modeling depth increases, the associated model complexity grows at least linearly with that depth. Theorem D.5 proves ergodic convergence properties for PCE adaptation dynamics. The present framework does **not** prove that every self-referentially rich environment monotonically drives long-run growth of $C_{\mathrm{agg}}$. Theorem P.15.3c gives a source-energy rate on branches carrying a stationary Source-Principle Markov datum, while Theorem P.15.3f supplies the Foster-Harris condition under which that stationary datum is generated by the PCE event-chain lift. Definition P.15.3h and Theorem P.15.3i give a coercive-minorized sufficient condition for the lifted Foster-Harris drift. Corollary P.15.3d gives autonomous complexity growth only under the positive-drift condition $\int\Delta d\,d\pi>0$. Outside the Foster-Harris datum and positive-drift condition, autonomous self-deepening remains speculative.
 
 ### P.15.6 Bounds and Conservation (Derived)
 

@@ -78,6 +78,26 @@ This is a guarantee-level lower bound: it is the minimum entropy budget required
 
     **Remark J.1.1 (distribution-dependent vs guarantee-level Landauer cost).** Standard Landauer bounds are ensemble-dependent. The present theorem fixes the admissible ensemble by the SPAP requirement that the cycle remain correct for both pre-reset ancilla values while erasing that value from the post-reset description. For that admissible ensemble, the Shannon-entropy decrease is $\ln 2$, yielding the stated guarantee-level lower bound on $\varepsilon$.
 
+**Lemma J.1a (Ancilla-Extension and Boundary-Displacement Invariance).** Let a finite-memory SPAP cycle have accessible logical register
+$$
+A=\{0,1\}_\phi\times\{0,1\}_p
+$$
+and closed-cycle accessible output
+$$
+A'=\{0,1\}_{\phi'}\times\{p_{\mathrm{ready}}\}.
+$$
+Allow any finite auxiliary or boundary register $G$, initialized at a fixed value $g_0$, and suppose the total physical implementation is injective on $A\times\{g_0\}$. Then exactly one of the following holds:
+
+1. the accessible SPAP map is logically irreversible and dissipates at least $\ln2$ nats when the erased prediction bit is not retained;
+2. the missing bit is retained in $G$ as at least two distinguishable final boundary states;
+3. if the same finite memory is to be reused cyclically and $G$ is returned to a fixed ready state, resetting $G$ exports at least $\ln2$ nats to the environment.
+
+Thus reversible refinement or hidden ancilla extension cannot remove the SPAP entropy budget; it can only move the missing bit to a boundary register, where cyclic reuse requires the same Landauer cost.
+
+*Proof.* The accessible input set has cardinality $|A|=4$ and the accessible closed-cycle output set has cardinality $|A'|=2$. Hence the induced accessible map has at least one output $a'\in A'$ with at least two distinct preimages $a_1,a_2\in A$. If the total map on $A\times\{g_0\}$ is injective, the final total states corresponding to $a_1$ and $a_2$ must be distinguishable. Since their accessible component is the same $a'$, their distinguishability must reside in the auxiliary or boundary register $G$. Therefore $G$ must contain at least two distinguishable final states, carrying at least one bit of side information.
+
+If this side information is not retained in the closed system at the end of the cycle, the accessible map is many-to-one and the erased admissible ensemble has Shannon entropy $\ln2$. Landauer's bound gives at least $\ln2$ nats of exported entropy. If the side information is retained but the same finite-memory cycle is to be repeated with $G$ restored to a fixed ready state, the reset map on the two distinguishable $G$ states again erases one bit and costs at least $\ln2$ nats. ∎
+
 **J.5 Novelty and Distinction from Existing Bounds**
 
 The SPAP-derived bound $\varepsilon \ge \ln 2$ (Theorem J.1) is distinct from and complementary to other fundamental thermodynamic bounds:
@@ -101,5 +121,5 @@ The strict positivity of the lower-bound parameter $\varepsilon$ is therefore th
 
 **J.7 Conclusion**
 
-This appendix provided a rigorous derivation showing that any finite-memory SPAP implementation that must reset the prediction ancilla uniformly over its admissible pre-reset states requires a per-cycle lower-bound budget $\varepsilon \ge \ln 2$ (Theorem J.1), formalizing Theorem 31. This cost arises from the unavoidable logical state merging inherent in the self-referential loop, as proved by Lemma J.1, together with Landauer's principle for the admissible pre-reset ensemble. This distinct, structurally mandated lower-bound budget ensures ND-RID irreversibility (Corollary E.1), supplies the positive-entropy input required on the refresh-channel coarse-graining branch of Appendix E (which then yields strict trace-distance contractivity $f_{RID}<1$ via Lemma E.1), bounds information capacity on that branch ($C_{\max} < \ln d_0$, Theorem E.2), grounds the Area Law (Theorem E.6/49) and emergent gravity scale (Equation E.9), establishes the Reflexivity Constraint (Theorem 33), and is compatible with the conditional emergent-locality analysis of Appendix F, whose operator-level microcausality statement requires the explicit bridge hypotheses of Theorem F.0.
+This appendix provided a rigorous derivation showing that any finite-memory SPAP implementation that must reset the prediction ancilla uniformly over its admissible pre-reset states requires a per-cycle lower-bound budget $\varepsilon \ge \ln 2$ (Theorem J.1), formalizing Theorem 31. This cost arises from the unavoidable logical state merging inherent in the self-referential loop, as proved by Lemma J.1, together with Landauer's principle for the admissible pre-reset ensemble. Lemma J.1a shows that reversible refinement or hidden ancilla extension cannot remove the cost; it can only displace the missing bit to a boundary register, whose cyclic reset carries the same $\ln2$ Landauer budget. This distinct, structurally mandated lower-bound budget ensures ND-RID irreversibility (Corollary E.1), supplies the positive-entropy input required on the refresh-channel coarse-graining branch of Appendix E (which then yields strict trace-distance contractivity $f_{RID}<1$ via Lemma E.1), bounds information capacity on that branch ($C_{\max} < \ln d_0$, Theorem E.2), grounds the Area Law (Theorem E.6/49) and emergent gravity scale (Equation E.9), establishes the Reflexivity Constraint (Theorem 33), and is compatible with the conditional emergent-locality analysis of Appendix F, whose operator-level microcausality statement requires the explicit bridge hypotheses of Theorem F.0.
 

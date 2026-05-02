@@ -1234,6 +1234,82 @@ $$
 $$
 Substituting $S=S_{\mathrm{cut}}+o(\mathcal A)$ from (E.8.4.6) and restricting to the same first-order horizon slice gives (E.8.4.7). No step adds a fundamental metric Hilbert space or a gravitational path integral; the proof uses only finite channel capacities, their min-cut continuum limit, and the local thermodynamic metric representation. ∎
 
+**Definition E.8.4h (Recovery Length and Recovery Metric).** Let $\mathcal B$ be a finite set of operational reconstruction regions in a finite predictive channel network. For $A,B\in\mathcal B$, define the directed one-step recovery cut
+$$
+\chi(A|B)
+=
+\min_{\Gamma:A|B}C(\Gamma),
+\tag{E.8.4.8}
+$$
+where the minimum ranges over finite cuts whose removal separates the predictive data required for reconstructing $A$ from the available data in $B$. Define the symmetric one-step recovery length
+$$
+\ell_{\mathrm{rec}}(A,B)
+=
+\frac12\big(\chi(A|B)+\chi(B|A)\big).
+\tag{E.8.4.9}
+$$
+The recovery metric is the shortest-path closure
+$$
+d_{\mathrm{rec}}(A,B)
+=
+\inf_{A=A_0,\ldots,A_n=B}
+\sum_{j=1}^{n}\ell_{\mathrm{rec}}(A_{j-1},A_j),
+\tag{E.8.4.10}
+$$
+where the infimum ranges over finite chains in $\mathcal B$, including the empty chain when $A=B$.
+
+**Theorem E.8.4i (Recovery Geometry from Predictive Channel Capacity).** For every finite predictive channel network and finite reconstruction set $\mathcal B$, $d_{\mathrm{rec}}$ is a pseudometric on $\mathcal B$. After quotienting by the zero-distance relation
+$$
+A\sim B
+\quad\Longleftrightarrow\quad
+d_{\mathrm{rec}}(A,B)=0,
+$$
+it becomes a genuine metric on $\mathcal B/\!\sim$. Moreover, $d_{\mathrm{rec}}$ is the greatest pseudometric bounded above by the one-step recovery lengths:
+$$
+d(A,B)\le\ell_{\mathrm{rec}}(A,B)\ \forall A,B
+\quad\Longrightarrow\quad
+d(A,B)\le d_{\mathrm{rec}}(A,B)\ \forall A,B.
+$$
+
+*Proof.* Non-negativity and symmetry follow from (E.8.4.9) and (E.8.4.10). For the triangle inequality, concatenate a chain from $A$ to $B$ with a chain from $B$ to $C$; taking infima gives
+$$
+d_{\mathrm{rec}}(A,C)
+\le
+d_{\mathrm{rec}}(A,B)+d_{\mathrm{rec}}(B,C).
+$$
+Thus $d_{\mathrm{rec}}$ is a pseudometric. Quotienting by zero distance is the standard metric quotient of a pseudometric space.
+
+Let $d$ be any pseudometric satisfying $d(A,B)\le\ell_{\mathrm{rec}}(A,B)$ for all one-step pairs. For any chain $A=A_0,\ldots,A_n=B$,
+$$
+d(A,B)
+\le
+\sum_{j=1}^{n}d(A_{j-1},A_j)
+\le
+\sum_{j=1}^{n}\ell_{\mathrm{rec}}(A_{j-1},A_j).
+$$
+Taking the infimum over chains gives $d(A,B)\le d_{\mathrm{rec}}(A,B)$. ∎
+
+**Corollary E.8.4j (Metric and Horizon Barriers as Recovery Cost).** On a regular operational-continuum branch, suppose the one-step recovery length has the local expansion
+$$
+\ell_{\mathrm{rec}}(A_\epsilon(p),A_\epsilon(q))
+=
+\mu\,d_g(p,q)+o(d_g(p,q))
+\tag{E.8.4.11}
+$$
+for sufficiently small reconstruction regions $A_\epsilon(p),A_\epsilon(q)$ and fixed $\mu>0$. Then $d_{\mathrm{rec}}/\mu$ represents the emergent metric distance at the same operational resolution. For a local causal diamond $B$ on the horizon-saturation branch,
+$$
+S_{\mathrm{cut}}(B)
+=
+\min_{\Gamma_B}\sum_{e\in\Gamma_B}C_e
+=
+\frac{\mathcal A(\partial B)}{4G}
++
+o(\mathcal A)
+$$
+is the recovery barrier separating the operational interior from exterior boundary data.
+
+*Proof.* The first statement follows by applying Theorem E.8.4i to chains of sufficiently small reconstruction regions and using the local expansion (E.8.4.11). The second statement is exactly Corollary E.8.4g, now read through Definition E.8.4h: the local horizon entropy is the minimum recovery cut required to reconstruct across the causal boundary. Thus the metric description is the continuum representation of finite recovery cost and channel-capacity thermodynamics. ∎
+
 ### E.8.5 PU Entropy-Cone Constraints
 
 **Definition E.8.5a (Predictive Cut Entropy Vector).** Let $\mathcal N=(V,E)$ be a finite undirected predictive channel network with nonnegative edge capacities $C_e$. Let boundary regions be labeled by a finite set $\mathcal B$. For each $A\subseteq\mathcal B$, define the cut entropy

@@ -240,11 +240,11 @@ $$\sin\delta = \sin(66.7°) = 0.918 \tag{Y.8}$$
 
 ### Y.5.3 CP-Odd Effective Action
 
-**Theorem Y.6.1** (CP-Odd Effective Action from Berry Holonomy on the Unit Berry-Topological Response Branch). *Fix the flavor loop $\gamma$ on $\text{Gr}(2,8)$ used in Theorem T.56, and let $\delta = \oint_\gamma \mathcal{A} = \int_\Sigma \mathcal{F}$ be its gauge-invariant holonomy angle. Any local CP-odd contribution of this sector to the four-dimensional electroweak effective action has the form*
+**Theorem Y.6.1** (CP-Odd Effective Action from Berry Holonomy on the Unit Berry-Topological Response Branch). *Fix the flavor loop $\gamma$ on $\mathrm{Gr}(2,8)$ used in Theorem T.56, and let $\delta=\oint_\gamma\mathcal A=\int_\Sigma\mathcal F$ be its gauge-invariant holonomy angle. Any local CP-odd contribution of this sector to the four-dimensional electroweak effective action has the form*
 $$
-\Delta S_{CP} = \frac{\chi_{CP}\, f(\delta)}{16\pi^2} \int d^4x \, W^a_{\mu\nu}\tilde{W}^{a\mu\nu},
+\Delta S_{CP}=\frac{\chi_{CP}\,f(\delta)}{16\pi^2}\int d^4x\,W^a_{\mu\nu}\tilde W^{a\mu\nu},
 $$
-*where $f$ is an odd $2\pi$-periodic scalar function and $\chi_{CP}$ is the dimensionless EFT matching coefficient connecting the flavor-space Berry holonomy to the four-dimensional electroweak topological density. In the single-harmonic truncation used for the rate estimate below, $f(\delta)=\sin\delta$. The Appendix Y canonical baryogenesis branch takes $\chi_{CP} = 1$. An unconditional value of $\chi_{CP}$ is outside the stated unit-response branch; the rate-bias saturation analysis of Step 6 below depends on $\chi_{CP}$ through $\mathcal{F}_{CP} = \tanh(\chi_{CP}\, \mathcal{S} \sin\delta)$.*
+*where $f$ is an odd $2\pi$-periodic scalar function and $\chi_{CP}$ is the dimensionless EFT matching coefficient connecting the flavor-space Berry holonomy to the four-dimensional electroweak topological density. In the single-harmonic truncation used for the rate estimate below, $f(\delta)=\sin\delta$. The Appendix Y canonical baryogenesis branch takes $\chi_{CP}=1$. A theorem-level value of $\chi_{CP}$ is supplied only by an accepted APS-eta transport certificate of Definition Y.6.1a and Theorem Y.6.1b; otherwise the rate-bias saturation analysis of Step 6 below depends on $\chi_{CP}$ through $\mathcal F_{CP}=\tanh(\chi_{CP}\,\mathcal S\sin\delta)$.*
 
 
 *Proof.* 
@@ -267,9 +267,9 @@ $$
 f(\delta)=\sin\delta.
 $$
 
-**Step 4 (Unit topological transition).** With this truncation,
+**Step 4 (Unit topological transition).** With this truncation on the unit Berry-topological response branch,
 $$
-\Delta S_{CP} = \frac{\sin\delta}{16\pi^2}\int d^4x\,W\tilde W.
+\Delta S_{CP}=\frac{\sin\delta}{16\pi^2}\int d^4x\,W\tilde W.
 $$
 Using the Chern-Simons identity (Y.3),
 $$
@@ -498,6 +498,63 @@ The value $\kappa_{gen} = 0.23$ corresponds to single verification ($\varepsilon
 
 ### Y.7.1 The Baryogenesis Master Formula
 
+**Definition Y.6.1a (APS-Eta Baryon Transport Certificate).** An APS-eta baryon transport certificate is a finite record
+$$
+\mathfrak A_\eta=\left(W_{\mathrm{EW}},A_{SU(2)\times U(1)},\Gamma_{\mathrm{fl}},\mathcal L_{\mathrm{Berry}},D_W,\eta_{\partial W},h_{\partial W},\mathfrak o_{\mathrm{KMS}},I_{CP},I_{tr}\right)
+\tag{Y.6.1a.1}
+$$
+where:
+
+1. $W_{\mathrm{EW}}$ is a compact oriented four-dimensional Euclidean electroweak interpolation manifold with APS boundary $\partial W_{\mathrm{EW}}=\Sigma_i\cup\Sigma_f$, connecting the initial and final electroweak Cauchy configurations used in Theorem Y.4;
+
+2. $A_{SU(2)\times U(1)}$ is the electroweak connection on $W_{\mathrm{EW}}$ extending the boundary configurations on $\Sigma_i\cup\Sigma_f$;
+
+3. $\Gamma_{\mathrm{fl}}:W_{\mathrm{EW}}\to\mathrm{Gr}(2,8)$ is a smooth branch map pulling the flavor Berry line bundle $\mathcal L_{\mathrm{Berry}}$ from the generation manifold to the cobordism, with restriction $\Gamma_{\mathrm{fl}}|_{\Sigma_f}\circ(\Gamma_{\mathrm{fl}}|_{\Sigma_i})^{-1}$ tracing the flavor loop $\gamma$ of Theorem T.56;
+
+4. $D_W$ is the chiral SM Dirac operator on $W_{\mathrm{EW}}$ twisted by $A_{SU(2)\times U(1)}$ and by $\Gamma_{\mathrm{fl}}^*\mathcal L_{\mathrm{Berry}}$, with Atiyah–Patodi–Singer boundary conditions on $\partial W_{\mathrm{EW}}=\Sigma_i\cup\Sigma_f$ rendering the boundary problem Fredholm;
+
+5. $\eta_{\partial W}=\eta(D_{\Sigma_f})-\eta(D_{\Sigma_i})$ is the oriented boundary eta-invariant difference, and $h_{\partial W}=\dim\ker D_{\Sigma_f}-\dim\ker D_{\Sigma_i}$ is the corresponding oriented APS boundary-kernel correction; on branches with no boundary zero modes, $h_{\partial W}=0$;
+
+6. $\mathfrak o_{\mathrm{KMS}}\in\{+1,-1\}$ is the chosen PCE/KMS time orientation of the determinant line of $D_W$, fixed by the Appendix O thermodynamic ratchet;
+
+7. the Berry-to-topological-density matching index is
+$$
+I_{CP}=\frac{1}{\Delta N_{CS}}\!\int_{W_{\mathrm{EW}}}\!\hat A(R)\operatorname{ch}\!\left(\Gamma_{\mathrm{fl}}^*F_{\mathcal L_{\mathrm{Berry}}}\right)\!\big|_{[4]}\!-\!\frac{\eta_{\partial W}+h_{\partial W}}{2\Delta N_{CS}},
+\tag{Y.6.1a.2}
+$$
+where $[4]$ denotes the $4$-form component on $W_{\mathrm{EW}}$, normalized by the topological Chern-Simons charge $\Delta N_{CS}$ of the interpolation;
+
+8. the baryon-number transport index is
+$$
+I_{tr}=\frac{\operatorname{SF}(D_W)_B}{N_g\Delta N_{CS}},
+\tag{Y.6.1a.3}
+$$
+where $\operatorname{SF}(D_W)_B$ is the baryon-number weighted spectral flow of the family of spatial Dirac operators along the cobordism, normalized by the standard $N_g\Delta N_{CS}$ denominator of Theorem Y.4.
+
+The certificate is accepted only when (1)–(6) hold, the APS index theorem applies to (7), and the spectral flow in (8) is well-defined. The two index outputs $I_{CP}$ and $I_{tr}$ are dimensionless branch numbers determined by the certificate data and fixed before comparison with the observed $\eta_B$. The transport index $I_{tr}$ is rational when the spectral-flow numerator and $N_g\Delta N_{CS}$ denominator are integral; the APS-eta contribution to $I_{CP}$ is a real spectral invariant unless the accepted branch supplies an additional rationality theorem for the eta difference.
+
+**Theorem Y.6.1b (APS-Eta Transport Gate).** On a baryogenesis branch carrying an accepted APS-eta certificate $\mathfrak A_\eta$ of Definition Y.6.1a, the EFT matching coefficient of Theorem Y.6.1 and the transport coefficient of Proposition Y.9.1 are determined by the index outputs:
+$$
+\chi_{CP}=I_{CP},\qquad\chi_{tr}=I_{tr}.
+\tag{Y.6.1b.1}
+$$
+The canonical unit-response Appendix Y branch is theorem-level exactly when
+$$
+I_{CP}=1,\qquad I_{tr}=1,\qquad\mathfrak o_{\mathrm{KMS}}\cdot\operatorname{or}(W_{\mathrm{EW}})\cdot\operatorname{or}(\mathcal L_{\mathrm{Berry}})=+1.
+\tag{Y.6.1b.2}
+$$
+If the accepted certificate yields different index outputs, those values replace the unit branch coefficients in the master formula of Theorem Y.9.
+
+*Proof.* By Definition Y.6.1a (1)–(4), $D_W$ is a Fredholm chiral Dirac operator with APS boundary conditions on the compact oriented four-dimensional interpolation manifold $W_{\mathrm{EW}}$, twisted by both the electroweak gauge connection and the pulled-back flavor Berry bundle $\Gamma_{\mathrm{fl}}^*\mathcal L_{\mathrm{Berry}}$. The Atiyah–Patodi–Singer index theorem then expresses the bulk-plus-boundary index
+$$
+\operatorname{Ind}_{\mathrm{APS}}(D_W)=\int_{W_{\mathrm{EW}}}\hat A(R)\operatorname{ch}(F)\big|_{[4]}-\frac{\eta_{\partial W}+h_{\partial W}}{2}
+$$
+with the standard oriented boundary-kernel correction $h_{\partial W}$ included when it is nonzero. Restricting to the flavor-Berry component of the Chern character — which by standard anomaly descent descends to the four-dimensional EFT operator $W^a_{\mu\nu}\tilde W^{a\mu\nu}$ via standard Stora–Zumino descent — gives the Berry-twisted contribution to the topological-density coefficient. Normalizing this contribution by the gauge topological charge $\Delta N_{CS}$ of the cobordism yields (Y.6.1a.2). By the inflow construction, the EFT matching coefficient $\chi_{CP}$ in Theorem Y.6.1 equals this normalized index, hence $\chi_{CP}=I_{CP}$.
+
+The baryon-number anomaly $\partial_\mu J^\mu_{B+L}=2N_g\partial_\mu K^\mu/(g^2/16\pi^2)$ of Theorem Y.4 expresses the integrated $B+L$ change as $2N_g\Delta N_{CS}$ on the cobordism. By the APS-spectral flow correspondence (Atiyah–Patodi–Singer Part III), the chiral spectral flow of the family $\{D_{\Sigma_t}\}_{t\in[0,1]}$ of spatial Dirac operators along $W_{\mathrm{EW}}$ equals $\operatorname{Ind}_{\mathrm{APS}}(D_W)$. The baryon-number-weighted projection of this spectral flow, divided by $N_g\Delta N_{CS}$, gives (Y.6.1a.3). The transport coefficient $\chi_{tr}$ multiplying the sphaleron product structure in Proposition Y.9.1 records exactly this normalized spectral flow on the canonical branch, hence $\chi_{tr}=I_{tr}$.
+
+The sign of the determinant-line contribution to the baryon yield is the product of three orientation signs: the cobordism orientation $\operatorname{or}(W_{\mathrm{EW}})$, the Berry-line orientation $\operatorname{or}(\mathcal L_{\mathrm{Berry}})$, and the KMS time orientation $\mathfrak o_{\mathrm{KMS}}$. The canonical unit branch of Theorem Y.10 (matter dominance, $\eta_B>0$) requires this orientation product to be $+1$ together with $I_{CP}=I_{tr}=1$; condition (Y.6.1b.2) makes that requirement explicit. If the accepted certificate produces different rational outputs $I_{CP}$, $I_{tr}$, the same APS calculation supplies replacement coefficients via (Y.6.1b.1), and the orientation product determines the sign of $\eta_B$ via Theorem Y.10. ∎
+
 **Theorem Y.9** (Master Formula). *The baryon-to-photon ratio is:*
 
 $$\boxed{\eta_B = \mathcal{C}_{eff} \cdot \mathcal{F}_{CP} \cdot f_{wash} \cdot e^{-\kappa_B}} \tag{Y.12}$$
@@ -514,13 +571,13 @@ $$\boxed{\eta_B = \mathcal{C}_{eff} \cdot \mathcal{F}_{CP} \cdot f_{wash} \cdot 
 
 $$\mathcal{C}_{eff} = \chi_{tr}\cdot \frac{c_{sph}}{2N_g} \cdot \mathcal{S} \cdot f_{neq} \tag{Y.13}$$
 
-*where $\chi_{tr}$ is a dimensionless transport-coefficient set to $\chi_{tr} = 1$ on the canonical Appendix Y branch, and:*
+*where $\chi_{tr}$ is a dimensionless transport coefficient set to $\chi_{tr}=1$ on the canonical Appendix Y branch, or fixed by $\chi_{tr}=I_{tr}$ when an APS-eta transport certificate is accepted (Definition Y.6.1a, Theorem Y.6.1b), and:*
 - $c_{sph} = 28/79 \approx 0.354$ — sphaleron-to-baryon conversion factor [Khlebnikov & Shaposhnikov 1988]
 - $N_g = 3$ — number of generations
 - $\mathcal{S} = 1/(2\pi\alpha_W) \approx 4.77$ — sphaleron enhancement factor
 - $f_{neq} \approx 1$ — departure from equilibrium factor at EW crossover
 
-*A theorem-level value of $\chi_{tr}$ requires solving the electroweak transport equations with the PU CP source (Theorem Y.6.1 with $\chi_{CP}$ on its branch) and freeze-out profile, and reducing the resulting baryon yield to the displayed product structure. $\eta_B$ is linear in $\mathcal{C}_{eff}$, so an $O(1)$ deviation from $\chi_{tr} = 1$ propagates linearly into the prediction and exceeds the within-branch $9\%$ uncertainty.*
+*A theorem-level value of $\chi_{tr}$ requires either solving the electroweak transport equations with the PU CP source (Theorem Y.6.1 with $\chi_{CP}$ on its branch) and freeze-out profile, and reducing the resulting baryon yield to the displayed product structure, or supplying the APS-eta transport certificate of Definition Y.6.1a; in the latter case Theorem Y.6.1b gives $\chi_{tr}=I_{tr}$. $\eta_B$ is linear in $\mathcal C_{eff}$, so an $O(1)$ deviation from $\chi_{tr}=1$ propagates linearly into the prediction and exceeds the within-branch $9\%$ uncertainty.*
 
 
 *Proof.* 
@@ -690,7 +747,7 @@ All derived quantities are consistent with observation.
 
 ## Y.9 Sign of the Baryon Asymmetry
 
-**Theorem Y.10** (Matter Dominance from Boundary Conditions). *The sign of $\eta_B > 0$ (matter over antimatter) is determined by the orientation of the initial predictive boundary, with no additional continuous dynamical parameter once the boundary orientation has been fixed. The orientation itself — comprising the sign of $\sin\delta$ from the Berry-holonomy convention on $\mathrm{Gr}(2,8)$, the past hypothesis $N_{CS}(\Sigma_i) = 0$ on the primordial Cauchy surface, and the time orientation of the KMS drive — is a discrete branch choice on the predictive boundary, not a derived consequence of the bulk dynamics, by analogy with spontaneous symmetry breaking.*
+**Theorem Y.10** (Matter Dominance from Boundary Conditions). *The sign of $\eta_B>0$ (matter over antimatter) is determined by the orientation of the initial predictive boundary, with no additional continuous dynamical parameter once the boundary orientation has been fixed. The orientation itself — comprising the sign of $\sin\delta$ from the Berry-holonomy convention on $\mathrm{Gr}(2,8)$, the past hypothesis $N_{CS}(\Sigma_i)=0$ on the primordial Cauchy surface, and the time orientation of the KMS drive — is a discrete branch choice on the predictive boundary, by analogy with spontaneous symmetry breaking, unless an accepted APS-eta certificate of Definition Y.6.1a supplies the determinant-line orientation product of Theorem Y.6.1b condition (Y.6.1b.2) that ties the three signs into a single coherent index output.*
 
 
 *Proof.* The SPAP 2-to-1 merge (Theorem 31) selects one branch of the NOT duality:
@@ -1052,6 +1109,42 @@ Consequently, within the Appendix Y channel, the flavor-topology sector and the 
 
 *Proof.* Immediate from Theorem Y.11.6. ∎
 
+**Definition Y.11.7a (Baryogenesis Transport Certificate).** A baryogenesis transport certificate is a finite record
+$$
+\mathfrak C_B
+=
+\left(
+\mathfrak R_{\mathrm{RHG}},
+\mathfrak C_{\mathrm{fl}},
+\mathcal S_{\mathrm{sph}},
+\mathcal W_{\mathrm{wash}},
+\mathcal P_{CP},
+\mathcal T_B,
+\chi_B
+\right)
+$$
+fixed before comparison with $\eta_B$, where:
+
+1. $\mathfrak R_{\mathrm{RHG}}$ is the accepted electroweak threshold record of Definition T.78.10.
+2. $\mathfrak C_{\mathrm{fl}}$ is the accepted flavor completion certificate of Definition T.79.4, or an explicitly stated branch substitute with the same forward-lock condition.
+3. $\mathcal S_{\mathrm{sph}}$ is the finite sphaleron or anomaly-transport coefficient.
+4. $\mathcal W_{\mathrm{wash}}$ is the finite washout and freeze-out integral with certified tail bounds.
+5. $\mathcal P_{CP}$ is the relative determinant-line CP phase profile used in the transport equation.
+6. $\mathcal T_B$ is the total uncertainty interval from threshold, transport, washout, and CP-profile residuals.
+7. $\chi_B$ records that no entry is chosen from the observed baryon asymmetry.
+
+**Theorem Y.11.7b (Certified Baryogenesis Determinacy).** If $\mathfrak C_B$ is accepted, then the Appendix Y value of $\eta_B$ is uniquely determined up to the certified interval $\mathcal T_B$. If no accepted $\mathfrak C_B$ exists, the numerical baryogenesis value remains model-layer.
+
+*Proof.* Appendix Y expresses $\eta_B$ as a deterministic function of electroweak threshold data, the three-generation CP-active flavor branch, sphaleron/anomaly conversion, washout, and transport factors. Definition Y.11.7a fixes each of these inputs as a finite record before comparison with $\eta_B$. The accepted RHG and flavor certificates determine the threshold and CP-sector entries; $\mathcal S_{\mathrm{sph}}$, $\mathcal W_{\mathrm{wash}}$, and $\mathcal P_{CP}$ determine the transport channel; and $\mathcal T_B$ bounds the residual uncertainty. Thus $\eta_B$ is the deterministic image of a finite accepted record up to $\mathcal T_B$. Without such a record, at least one transport input remains branch-supplied, so the numerical output is model-layer. ∎
+
+**Corollary Y.11.7c (No Baryogenesis Back-Fitting).** Changing the sphaleron coefficient, washout integral, CP profile, threshold input, or uncertainty interval after comparison with $\eta_B$ defines a new transport branch and cannot confirm the original Appendix Y numerical branch.
+
+*Proof.* Each listed item is part of $\mathfrak C_B$. The forward-lock condition $\chi_B$ forbids choosing it from the target value. ∎
+
+**Corollary Y.11.7d (Baryogenesis Numerical Dependence on RHG and Flavor Certificates).** The Appendix Y baryogenesis number is theorem-level only if the RHG threshold record, flavor or CP-sector certificate, sphaleron coefficient, washout integral, CP profile, and uncertainty interval are all fixed in an accepted $\mathfrak C_B$. The existence of $N_g=3$ and nonzero CP capacity is not by itself a numerical baryogenesis prediction.
+
+*Proof.* Theorem Y.11.7b states that $\eta_B$ is the deterministic image of $\mathfrak C_B$. The inputs of $\mathfrak C_B$ include $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$ or a branch substitute, $\mathcal S_{\mathrm{sph}}$, $\mathcal W_{\mathrm{wash}}$, $\mathcal P_{CP}$, and $\mathcal T_B$. Exact $N_g=3$ and the existence of CP-active structure determine only qualitative admissibility of the transport channel. Varying the washout integral or CP profile within admissible finite records changes the numerical asymmetry. Theorem P.14.1f therefore blocks theorem-level numerical promotion without the accepted transport certificate. ∎
+
 ## Y.11 Derivation Chain Summary
 
 The complete logical chain from $K_0 = 3$ to $\eta_B$:
@@ -1071,7 +1164,7 @@ K_0 = 3 &\xrightarrow{\text{Thm 23}} d_0 = 2^{K_0} = 8 \\[4pt]
 \end{aligned}
 }$$
 
-**Continuous fit-parameter count: Zero after fixing the Appendix T/R/Z/Y branch data.** Every quantity in the final result traces back to the foundational constant $K_0 = 3$, to independently measured/calculated Standard Model quantities, or to the explicit branch labels of the canonical Appendix Y baryogenesis branch (the SM-gauge branch from Appendix G; the realized $N_g = 3$ on the minimal-family branch of Appendix R; the $\kappa_{EW}$ branch package of Appendix T; the residual-budget and Golay branches of Appendices E/Q/Z; the unit Berry-topological response branch $\chi_{CP} = 1$; the unit sphaleron-transport branch $\chi_{tr} = 1$; the unit boundary orientation of Theorem Y.10). This is not the same as saying that every branch input is an unconditional theorem-level result.
+**Continuous fit-parameter count: Zero after fixing the Appendix T/R/Z/Y branch data.** Every quantity in the final result traces back to the foundational constant $K_0=3$, to independently measured/calculated Standard Model quantities, or to the explicit branch labels of the canonical Appendix Y baryogenesis branch (the SM-gauge branch from Appendix G; the realized $N_g=3$ on the minimal-family branch of Appendix R; the $\kappa_{EW}$ branch package of Appendix T; the residual-budget and predictive-recovery MacWilliams Golay branches of Appendices E/Q/Z; the unit Berry-topological response branch $\chi_{CP}=1$ or an APS-eta index output $\chi_{CP}=I_{CP}$ via Theorem Y.6.1b; the unit sphaleron-transport branch $\chi_{tr}=1$ or an APS-eta index output $\chi_{tr}=I_{tr}$ via Theorem Y.6.1b; the unit boundary orientation of Theorem Y.10 or the determinant-line orientation product of Theorem Y.6.1b condition (Y.6.1b.2)). This is not the same as saying that every branch input is an unconditional theorem-level result.
 
 
 ---
@@ -1134,7 +1227,7 @@ CP violation beyond the CKM mechanism would manifest in electric dipole moments 
 | $\alpha_W$ running | ±2% | SM uncertainty at EW scale |
 | **Total (quadrature)** | **±9%** | $\sqrt{3^2 + 8^2 + 2^2} \approx 8.8\%$ |
 
-Within the canonical Appendix Y baryogenesis branch, the components $\kappa_{EW} = 38.5$, $\varepsilon = \ln 2$, and $N_g = 3$ are fixed by their source branch ledgers: $\kappa_{EW}$ on the Appendix T weak-left projection, row-pair, balanced Golay, and electroweak hierarchy branch (Theorem T.5 and the branch labels recorded for Theorems T.18a, T.8, T.1c); $\varepsilon = \ln 2$ on the PCE-Attractor (Definition 15a; Theorem 31 supplies the lower bound); $N_g = 3$ as the realized generation count on the MDL/PCE minimal-family branch (Theorem R.3.4 supplies minimal admissibility, with exact realization on the minimal-family branch). The displayed $9\%$ uncertainty above is the within-branch validation-run uncertainty conditional on these branch choices, the unit Berry-topological response coefficient $\chi_{CP} = 1$ (Theorem Y.6.1), and the unit sphaleron-transport coefficient $\chi_{tr} = 1$ (Proposition Y.9.1). It does not include alternative-branch uncertainty in the electroweak hierarchy, generation, CP-response, or sphaleron-transport mappings. A unit shift $\delta\kappa_B = 0.1$ alone shifts $e^{-\kappa_B}$ by $\sim 9.5\%$, comparable to the entire stated within-branch uncertainty.
+Within the canonical Appendix Y baryogenesis branch, the components $\kappa_{EW} = 38.5$, $\varepsilon = \ln 2$, and $N_g = 3$ are fixed by their source branch ledgers: $\kappa_{EW}$ on the Appendix T weak-left projection, row-pair, predictive-recovery MacWilliams Golay, and electroweak hierarchy branch (Theorem T.5 and the branch labels recorded for Theorems T.18a, T.8, T.1c); $\varepsilon = \ln 2$ on the PCE-Attractor (Definition 15a; Theorem 31 supplies the lower bound); $N_g = 3$ as the realized generation count on the MDL/PCE minimal-family branch (Theorem R.3.4 supplies minimal admissibility, with exact realization on the minimal-family branch). The displayed $9\%$ uncertainty above is the within-branch validation-run uncertainty conditional on these branch choices, the unit Berry-topological response coefficient $\chi_{CP} = 1$ (Theorem Y.6.1), and the unit sphaleron-transport coefficient $\chi_{tr} = 1$ (Proposition Y.9.1). It does not include alternative-branch uncertainty in the electroweak hierarchy, generation, CP-response, or sphaleron-transport mappings. A unit shift $\delta\kappa_B = 0.1$ alone shifts $e^{-\kappa_B}$ by $\sim 9.5\%$, comparable to the entire stated within-branch uncertainty.
 
 
 ### Y.13.2 Robustness of Saturation

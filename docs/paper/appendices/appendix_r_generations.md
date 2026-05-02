@@ -484,6 +484,25 @@ L_{\mathrm{model}}(N) \;\ge\; L_0 + N\,L_{\mathrm{block}} + L_{\mathrm{mix}}(N)
 $$
 can in principle attain its minimum at an interior value $N > 3$, because a strictly increasing lower bound does not force the bounded quantity to be monotone. For example, the assignment $L(3)=100$, $L(4)=5$, $L(N)=N$ for $N \ge 5$ respects the lower bound $B(N)=N$ for every $N \ge 3$ yet is minimized at $N=4$. Proposition R.3.5 therefore establishes the selection result strictly within the surrogate class in which $L_{\mathrm{fam}}$ equals the displayed additive-monotone expression; it establishes minimal admissibility, while exact realized multiplicity is confined to the surrogate-objective selection branch. This is consistent with the theorem-model boundary recorded in Proposition R.3.5f: the theorem-level structural content of the generation sector is minimal admissibility within the anomaly+CP class of Theorem R.3.4; exact realized $N_g = 3$ is on the surrogate-objective selection branch defined in part (c) above.
 
+**Proposition R.3.5.1a (PPI-Realized Family Count on the Pre-Flavor Family-Redundancy Branch).** On the family-redundancy branch of Theorem R.3.4, before appending a separate flavor-potential package, the realized light family count is exactly
+$$
+N_g=3.
+$$
+
+*Proof.* Theorem R.3.4 proves that $N=3$ with family charges $\{a,-a,0\}$ is the minimal anomaly-descending family ledger that permits a physical CP phase. It remains only to exclude $N>3$ as a retained pre-flavor ledger.
+
+Fix the gauge-capacity branch of Theorem G.8.4b and Corollary G.8.4c. An additional full family beyond the three-sector ledger has the same Standard Model gauge response as an existing full family. Since no additional gauge generator is available after the $12$-generator bound is saturated, the extra family can have only two possible statuses at the pre-flavor level.
+
+First, if the extra label carries no distinct finite protocol response, then it is response-null. By Corollary P.6.1b.8 it is quotiented out because it increases description length without lowering violation cost or predictive regret.
+
+Second, if the extra label is assigned distinct masses, mixings, or flavor-holonomy data, then it is no longer part of the pre-flavor family-redundancy ledger. It is an appended flavor-sector datum and must be paid for in the separate Appendix T/R flavor package. Such appended data cannot lower the pre-flavor anomaly+CP objective because the anomaly descent equations and the existence of a physical CP phase are already satisfied by $\{a,-a,0\}$. They therefore add positive branch description cost at the pre-flavor selection step.
+
+Thus every $N>3$ candidate is either response-null at the pre-flavor level or belongs to a later flavor model layer with positive additional branch cost. PPI therefore retains exactly the minimal anomaly-descending CP-capable family ledger:
+$$
+N_g=3.
+$$
+∎
+
 **Corollary R.3.5a** (Golay Correction Radius Equals Generation Count). The Golay correction radius equals the minimal generation count:
 $$
 t = \left\lfloor \frac{d_{\min}-1}{2} \right\rfloor = 3 = N_g.
@@ -737,15 +756,15 @@ These 240 roots provide maximal symmetric discrete structure, ensuring uniform l
 
 #### R.4.2.1.2 Golay Code from PCE Error Optimization
 
-**Theorem R.4.4 (Golay Code from PCE Error Optimization on the Balanced Rate-½ Branch).**
+**Theorem R.4.4 (Golay Code from PCE Error Optimization on the Predictive-Recovery MacWilliams Branch).**
 
-On the balanced rate-½ branch — under which the $M = 24$ interface modes at the PCE-Attractor (Definition 15a) split into $k = 12$ information-carrying modes and $n - k = 12$ redundancy modes (the same branch supplied by Theorem P.13.12 in Appendix P) — coding theory uniquely selects the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24, 12, 8]$ as the PCE-optimal error-correcting structure.
+On the predictive-recovery MacWilliams branch — under which the $M=24$ interface modes at the PCE-Attractor (Definition 15a) split into $k=12$ information-carrying modes and $n-k=12$ redundancy modes by Theorem Z.13b.0a (the same branch supplied by Theorem P.13.12 in Appendix P) — coding theory uniquely selects the extended binary Golay code $\mathcal{G}_{24}$ with parameters $[24,12,8]$ as the PCE-optimal error-correcting structure.
 
 *Proof.*
 
 **Step 1 (Block length constraint).** The block length is $n = M = 24$, determined by the QFI mode count (Theorem Z.5): $M = 2ab = 2 \times 2 \times 6 = 24$.
 
-**Step 2 (Rate selection on the balanced rate-½ branch).** Under interface isotropy (Appendix Z, Theorem Z.5), Appendix Z (Theorem Z.13b, Steps 3–4) shows that on the balanced rate-½ branch the PCE code objective is minimized at $k = n/2$, giving $k = 12$ and rate $R = 1/2$ for $n = 24$. Whether PCE optimization uniquely selects this rate among admissible $[24, k, d]$ codes — rather than merely rendering it consistent — is the open rate-selection question flagged at Theorem P.13.12; the proof proceeds on the balanced rate-½ branch and inherits this branch dependency.
+**Step 2 (Rate selection on the predictive-recovery MacWilliams branch).** Under interface isotropy (Appendix Z, Theorem Z.5), Appendix Z (Definition Z.13b.0 and Theorem Z.13b.0a) identifies prediction payload and recovery syndrome as MacWilliams-dual PCE roles. The strict dual-asymmetry penalty is minimized only when $k=n-k$, giving $k=12$ and rate $R=1/2$ for $n=24$. The proof proceeds on this predictive-recovery branch.
 
 **Step 3 (Distance maximization).** With constraints $(n, k) = (24, 12)$ and symmetric noise, minimizing $L[C]$ reduces to maximizing the minimum distance $d$.
 

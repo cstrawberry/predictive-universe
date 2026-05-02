@@ -174,6 +174,100 @@ $$\ln a = \varepsilon.$$
 
 The same state simultaneously maximizes QFI along the interface directions $AB \oplus BA$. This is the unique state achieving maximal predictive capacity under minimal entropy cost.
 
+**Definition Z.2.5a (Peirce Active-Projector Ledger).** Let
+$$
+E=\mathbb C^8,\qquad
+p=\begin{pmatrix}I_2&0\\0&0_6\end{pmatrix}
+$$
+be the support projector of the active component of $\rho_0$. The Peirce decomposition of $E$ is
+$$
+E=pE\oplus(1-p)E
+=
+\mathbb C^2\oplus\mathbb C^6.
+\tag{Z.2.5a.1}
+$$
+The Peirce off-diagonal predictive-response sector is
+$$
+\mathcal P_{\mathrm{off}}
+=
+\operatorname{Hom}(pE,(1-p)E).
+\tag{Z.2.5a.2}
+$$
+
+**Theorem Z.2.5b (Peirce-Grassmannian Minimal Integer Ledger).** On the minimal active-projector branch,
+$$
+(a,b,k,M)=(2,6,12,24)
+\tag{Z.2.5b.1}
+$$
+are the Peirce-Grassmannian dimensions of the single projector $p$. More explicitly,
+$$
+a=\dim_\mathbb C pE=2,
+\qquad
+b=\dim_\mathbb C(1-p)E=6,
+$$
+$$
+k=\dim_\mathbb C\operatorname{Hom}(pE,(1-p)E)=2\cdot6=12,
+$$
+and
+$$
+M=\dim_\mathbb R T_p\mathrm{Gr}(2,8)=2\dim_\mathbb C\operatorname{Hom}(pE,(1-p)E)=24.
+$$
+
+*Proof.* Since $p$ has rank $2$ on $E=\mathbb C^8$, its image has complex dimension $2$ and its complement has complex dimension $8-2=6$. The tangent space to the Grassmannian orbit at $p$ is canonically
+$$
+T_p\mathrm{Gr}(2,8)
+\cong
+\operatorname{Hom}(pE,(1-p)E).
+$$
+Therefore
+$$
+\dim_\mathbb C T_p\mathrm{Gr}(2,8)=2\cdot6=12,
+$$
+and the real tangent dimension is twice the complex dimension:
+$$
+\dim_\mathbb R T_p\mathrm{Gr}(2,8)=24.
+$$
+These are exactly the quantities $a,b,k,M$ used in the minimal branch ledger. ∎
+
+**Corollary Z.2.5c (Single-Projector Source of the Integer Backbone).** Once $K_0=3$ fixes the minimal carrier $d_0=8$ and Landauer-PPI fixes the active projector rank $a=2$, the remaining minimal-branch integers $b=6$, $k=12$, and $M=24$ are not independent branch choices. They are forced by the Peirce decomposition of the same rank-$2$ active projector.
+
+*Proof.* Theorem Z.2.5b computes $b,k,M$ from the projector $p$ and the carrier $E=\mathbb C^8$. No further discrete choice enters the dimension calculation. ∎
+
+**Corollary Z.2.5d (Peirce-Steiner Electroweak Ledger).** Let $B$ be the pair-octad incidence matrix of the Witt design $S(5,8,24)$ and let
+$$
+\mathcal N_{\mathrm{GS}}=B^TB.
+$$
+If the active Peirce pair of $p$ is represented by an unordered pair $p_A$ in the $24$-mode Witt ledger, then
+$$
+\langle e_{p_A},\mathcal N_{\mathrm{GS}}e_{p_A}\rangle
+=
+77.
+\tag{Z.2.5d.1}
+$$
+Consequently, on the active-pair electroweak branch of Appendix T,
+$$
+2\kappa_{EW}=77.
+\tag{Z.2.5d.2}
+$$
+
+*Proof.* The diagonal entry
+$$
+\langle e_{p_A},B^TBe_{p_A}\rangle
+=
+\sum_{O\in S(5,8,24)}B_{O,p_A}^2
+$$
+counts octads containing the fixed pair $p_A$. In a Steiner system $S(5,8,24)$, the number of blocks containing a fixed pair is
+$$
+\lambda_2
+=
+\frac{\binom{24-2}{5-2}}{\binom{8-2}{5-2}}
+=
+\frac{\binom{22}{3}}{\binom{6}{3}}
+=
+77.
+$$
+The active-pair electroweak branch identifies the Morse-Bott double count with this pair-incidence trace, giving $2\kappa_{EW}=77$. ∎
+
 ---
 
 ## Z.3 The Landauer-SPAP Structural Theorem
@@ -966,53 +1060,72 @@ and the unique minimum occurs at $M_{\mathrm{int}} = K(D)$. ∎
 
 ### Z.10.5 PCE Mode-Channel Correspondence
 
-**Theorem Z.10 (PCE Mode-Channel Correspondence on the Tangent-Kissing Channel Branch).** On the tangent-kissing channel branch — under which the ND-RID propagation model fixes the operational distinguishability cap so that the tangent channel threshold is $2\theta_{\rm cap} = \pi/3$ and channels are modeled as unit balls of equal radius tangent to a central unit ball in $\mathbb{R}^D$ — three independently derived conditions hold at PCE-optimal equilibrium: (i) channels are operationally distinguishable with non-overlapping angular supports (Definition Z.6; Corollary Z.4); (ii) at thermodynamic equilibrium the entropy-maximizing channel configuration has equal angular caps (Theorem Z.9); (iii) PCE benefit maximization saturates the packing at tangency (Step 1 below). Under these conditions the channel-counting problem reduces to the kissing-number problem in $\mathbb{R}^D$ (Theorem Z.7a), and every PCE-optimal equilibrium on this branch satisfies
-$$M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D).$$
-Within this family the mismatch sector has a unique global minimum.
+**Theorem Z.10 (PPI-Forced Bures Tangent-Cell Mode-Channel Correspondence).** In the finite-response channel representation induced by the QFI/Bures tangent metric at the PCE attractor, every retained minimal Landauer channel is represented by an equal-radius distinguishability cell in the local tangent space. PPI and PCE force the cells to be non-overlapping and tangent-saturated. Consequently the physical channel count is the kissing number of the effective tangent dimension:
+$$
+M_{\mathrm{phys}}=K(D),
+$$
+and every PCE-optimal equilibrium satisfies
+$$
+M_{\mathrm{int}}=M_{\mathrm{phys}}=K(D).
+$$
+Within this admissible finite-response channel class the mismatch sector has a unique global zero exactly when $M_{\mathrm{int}}=K(D)$.
 
-*Proof.* The global PCE potential incorporating mode-channel effects is:
-$$V_{\mathrm{total}} = V_{\mathrm{op}} + V_{\mathrm{prop}} - V_{\mathrm{benefit}} + V_{\mathrm{penalty}} + V_{\mathrm{mc}}.$$
+*Proof.* Let $T_{\rho_0}\boldsymbol X$ be the QFI/Bures tangent space of the attractor branch at $\rho_0$. For a smooth one-parameter perturbation $\rho_\theta$, the Bures line element satisfies
+$$
+ds_{\rm Bures}^2=
+\frac{1}{4} F_{ij}(\rho_0)d\theta^i d\theta^j.
+$$
+Thus the leading finite-resolution distinguishability of a channel is a metric ball in the QFI tangent norm. A minimal irreversible SPAP verification event costs $\varepsilon=\ln2$ on the attractor branch, so all minimal channels have the same finite distinguishability radius after QFI normalization. By isotropy of the attractor, no direction in a fixed tangent shell may carry a different radius without adding a protocol-visible anisotropy; by Corollary P.6.1b.8 such anisotropy is removed unless it lowers regret. At the homogeneous attractor it does not, so the retained cells have equal radius.
 
-Since $M_{\mathrm{int}} = 2ab = 24$ is fixed by foundational constants (Theorem Z.5), the dimension $D$ is the effective optimization variable that determines $M_{\mathrm{phys}} = K(D)$.
+Distinct physical channels must be distinguishable by some finite protocol. If two channel cells overlap beyond the finite error budget, the separating protocol cannot assign their responses uniquely, increasing $L_{\mathrm{regret}}$. Hence admissible retained cells have disjoint interiors. If two non-overlapping cells leave a tangent gap while an unused internal mode is available, inserting the corresponding equal-radius cell gives an additional distinguishable response channel without violating the capacity or isotropy constraints. In the positive-marginal PCE regime this lowers predictive regret, so a non-saturated packing cannot minimize the PPI cost. Therefore PCE selects a tangent-saturated equal-radius packing.
 
-**Step 1 (Mismatch cost is strictly nonnegative).** Section Z.10.4 derives that mode-channel mismatch incurs a positive PCE cost: if $M_{\mathrm{int}} > M_{\mathrm{phys}}$ there are dark internal modes with no spatial actualization channel; if $M_{\mathrm{int}} < M_{\mathrm{phys}}$ there are empty channels that contribute propagation/maintenance overhead without carrying predictive information. In both cases, the mismatch term satisfies:
-$$V_{\mathrm{mc}}\ge 0,\qquad V_{\mathrm{mc}}=0 \iff M_{\mathrm{int}} = M_{\mathrm{phys}}.$$
+After rescaling the common cell radius to one, a tangent-saturated packing of equal cells around the central cell is exactly the kissing configuration in $\mathbb R^D$: the centers of the retained cells are the centers of unit balls tangent to a central unit ball, with pairwise non-overlap. By definition, the maximal number of such cells is $K(D)$. Hence the physical channel count is $M_{\mathrm{phys}}=K(D)$.
 
-**Step 2 (Equilibrium condition).** At thermodynamic equilibrium (Postulate 4), the physical channel count equals the kissing number $M_{\mathrm{phys}} = K(D)$ (Theorem Z.9). PCE minimization (Definition 15) therefore requires selecting $D$ so that the mismatch vanishes:
-$$M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D).$$
-
-**Step 3 (Global uniqueness over integer $D$).** Evaluate the mismatch at integer dimensions with $M_{\mathrm{int}} = 24$ fixed:
-
-| D | K(D) | (24 - K(D))² |
-|---|------|--------------|
-| 1 | 2 | 484 |
-| 2 | 6 | 324 |
-| 3 | 12 | 144 |
-| **4** | **24** | **0** |
-| 5 | 40 | 256 |
-| 6 | 72 | 2304 |
-
-The unique global minimum is at $D = 4$. No other integer $D$ yields zero mismatch, hence no other dimension is PCE-optimal. ∎
+The internal count is fixed independently by Theorem Z.5:
+$$
+M_{\mathrm{int}}=2ab=24.
+$$
+The mismatch part of the PPI cost is nonnegative because both types of mismatch have positive cost: if $M_{\mathrm{int}}>M_{\mathrm{phys}}$, at least one internal mode has no finite-response channel; if $M_{\mathrm{int}}<M_{\mathrm{phys}}$, at least one retained geometric channel has no internal predictive carrier. Thus
+$$
+V_{\mathrm{mc}}\ge0,
+\qquad
+V_{\mathrm{mc}}=0
+\Longleftrightarrow
+M_{\mathrm{int}}=M_{\mathrm{phys}}=K(D).
+$$
+This proves the mode-channel correspondence and the uniqueness of the zero of the mismatch sector inside the admissible finite-response channel class. ∎
 
 ---
 
+## Z.11---
+
 ## Z.11 Dimensional Selection
 
-**Theorem Z.11 (Dimensional Selection on the Tangent-Kissing Channel Branch).** On the tangent-kissing channel branch (Theorem Z.10), every PCE-optimal equilibrium satisfies $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$. Then at the attractor,
+**Theorem Z.11 (Dimensional Selection in the Bures Tangent-Cell Channel Contract).** In the finite-response Bures tangent-cell channel contract of Theorem Z.10, every PCE-optimal equilibrium satisfies $M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D)$. Then at the attractor,
 $$
 M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D) = 24,
 $$
-and the unique PCE-optimal dimension on this branch is $D = 4$. Off the tangent-kissing branch — for instance, with a different operational cap angle $2\theta_{\rm cap} \neq \pi/3$ or non-tangent channel geometry — the relevant problem becomes the spherical-code maximum $A(D, 2\theta_{\rm cap})$ rather than the kissing number $K(D)$, and the matching $M = 24$ may select a different integer dimension or no integer dimension at all.
+and the unique PCE-optimal effective tangent dimension is $D = 4$.
 
-*Proof.* By Theorem Z.5, $M_{\mathrm{int}} = 2ab = 24$. By Theorem Z.10, every PCE-optimal equilibrium satisfies
+*Proof.* By Theorem Z.5,
 $$
-M_{\mathrm{int}} = M_{\mathrm{phys}} = K(D).
+M_{\mathrm{int}}=2ab=24.
+$$
+By Theorem Z.10, the finite-response channel contract gives
+$$
+M_{\mathrm{int}}=M_{\mathrm{phys}}=K(D).
 $$
 Hence $K(D)=24$. The exact unrestricted kissing numbers in dimensions $1$ through $4$ are
 $$
-K(1)=2,\quad K(2)=6,\quad K(3)=12,\quad K(4)=24.
+K(1)=2,
+\qquad
+K(2)=6,
+\qquad
+K(3)=12,
+\qquad
+K(4)=24.
 $$
-Standard bounds further give $K(5)\ge40$ [Boyvalenkov et al. 2012], and kissing numbers are monotone nondecreasing in the dimension. Therefore every $D\ge5$ satisfies $K(D)\ge40>24$, so $D=4$ is the unique positive integer with $K(D)=24$. Substituting back gives $M_{\mathrm{phys}}=24$. ∎
+Standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012]. The kissing number is monotone nondecreasing in $D$, because any kissing configuration in $\mathbb R^D$ embeds isometrically in $\mathbb R^{D+1}$. Therefore every $D\ge5$ satisfies $K(D)\ge40>24$. No $D<4$ has $K(D)=24$, and every $D>4$ has $K(D)>24$. Thus $D=4$ is the unique positive integer solving $K(D)=24$. Substitution gives $M_{\mathrm{phys}}=24$. ∎
 
 **Remark Z.11.1: Dimensional Uniqueness from $K_0$.** The derivation chain $K_0 \to d_0 \to a \to M \to D$ produces a consistent mode-channel solution only for $K_0 = 3$. With $a=2$ fixed (Theorem Z.1) and $d_0=2^{K_0}$ on the minimal branch, the mode count is
 $$
@@ -1139,8 +1252,8 @@ The same value simultaneously satisfies the following cross-domain constraint le
 |------------|-----------|--------|
 | C1 (Algebraic) | $M = 2ab = 2\cdot2\cdot6=24$ with $a+b=d_0=8$ and $a=2$ | ✓ |
 | C2 (Capacity) | $M\ln(1+u)=\ln d_0$ gives $u^*=2^{1/8}-1$ | ✓ |
-| C3 (Geometric) | $M=K(D)$ has the unique positive-integer solution $D=4$ on the tangent-kissing branch | ✓ |
-| C4 (Coding) | The balanced distance-optimal binary code at length $24$ is $\mathcal G_{24}=[24,12,8]$ | ✓ |
+| C3 (Geometric) | $M=K(D)$ has the unique positive-integer solution $D=4$ in the Bures tangent-cell channel contract | ✓ |
+| C4 (Coding) | Predict-verify self-duality forces $k=12$, and the distance-optimal binary interface code is $\mathcal G_{24}=[24,12,8]$ | ✓ |
 | C5 (Rootless lattice) | The unique rootless even unimodular lattice in rank $24$ is $\Lambda_{24}$ | ✓ |
 | C6 (Unimodular rank) | $24\equiv0\pmod 8$, as required for positive-definite even unimodular lattices | ✓ |
 | C7 (Modular weight) | $\eta^{24}$ has modular weight $12$ | ✓ |
@@ -1167,13 +1280,13 @@ $$
 u^*=2^{1/8}-1.
 $$
 
-For C3, Theorem Z.11 proves that on the tangent-kissing channel branch, PCE mode-channel matching requires
+For C3, Theorem Z.11 proves that in the Bures tangent-cell channel contract, PCE mode-channel matching requires
 $$
 M=K(D).
 $$
 Since $K(4)=24$ and $K(D)\neq24$ for every other positive integer $D$ under the bounds stated in Theorem Z.11, the unique solution is $D=4$.
 
-For C4, Theorem Z.13 gives the balanced rate-$1/2$ code on the $24$-mode carrier:
+For C4, Theorem Z.13b gives the predictive-recovery MacWilliams Golay code on the $24$-mode carrier:
 $$
 \mathcal G_{24}=[24,12,8],
 $$
@@ -1436,38 +1549,31 @@ Each generation contains $2 + 4 + 2 = 8 = d_0$ modes. ✓
 
 ### Z.13.1 Golay Code Realization
 
-**Theorem Z.13 (Golay Code Realization from PCE Optimization).** The 24 QFI modes at the PCE-Attractor naturally split into:
-- 12 information-carrying modes (signal)
-- 12 redundancy modes (error correction)
+**Theorem Z.13 (Predictive-Recovery MacWilliams Golay Code Realization).** On the minimal $M=24$ interface branch, if the predictive-recovery MacWilliams duality gate of Definition Z.13b.0 is active, then the interface modes split into a prediction carrier and a recovery carrier of equal dimension,
+$$
+k=12,
+\qquad
+M-k=12.
+$$
+At this fixed split, the distance-optimal binary linear interface code is
+$$
+\mathcal G_{24}=[24,12,8],
+$$
+the extended binary Golay code.
 
-forming the binary Golay code [24, 12, 8] with minimum distance d = 8. This structure is the unique PCE-optimal error-correction organization.
+*Proof.* The minimal active-projector ledger gives $M=24$ interface symbols (Theorem Z.5 and Theorem Z.2.5b). Definition Z.13b.0 treats the prediction payload and recovery syndrome as MacWilliams-dual PCE roles and assigns a strict positive dual-asymmetry penalty
+$$
+V_{\mathrm{dual}}(C)=\lambda_{\mathrm{dual}}(\dim C-\dim C^\perp)^2,
+\qquad
+\lambda_{\mathrm{dual}}>0.
+$$
+Theorem Z.13b.0a proves that every PCE rate minimizer on this branch satisfies
+$$
+\dim C=\dim C^\perp=12.
+$$
+Thus the rate-$\tfrac12$ split is not a free linear-balance assumption; it is the zero-asymmetry stratum of the predictive-recovery MacWilliams gate.
 
-*Proof.* 
-
-**Step 1 (Code Space Definition).** The binary Golay code [24,12,8] is defined as a linear code with:
-- Block length n = 24
-- Dimension k = 12 (encoding 2^{12} = 4096 codewords)
-- Minimum Hamming distance d = 8
-
-**Step 2 (Error Correction Properties).** The minimum distance d=8 implies the code can:
-- Detect up to d-1 = 7 errors
-- Correct up to ⌊(d-1)/2⌋ = 3 errors
-
-**Step 3 (PCE Optimization Problem).** Define the PCE loss functional for error-correcting codes:
-$$L[C] = p_e(d) \cdot c_{\mathrm{mode}}$$
-where p_e(d) is the error probability as a (monotonically decreasing) function of minimum distance d, and c_mode is the physical cost per mode (equal for all modes by isotropy).
-
-Subject to constraints (the second of which defines the balanced rate-½ branch of Theorem P.13.12):
-- Block length n = M = 24 (fixed by QFI mode count, theorem-level from Theorem Z.5)
-- Rate R = k/n = 1/2 (balancing information and redundancy; branch-level — the stability condition $(1-R)\,C_{\max} = \varepsilon_{SPAP}$ motivates this rate, but a separate rate-selection theorem showing that no admissible rate $R \neq 1/2$ minimizes the PCE potential is outside the stated branch hypotheses)
-
-**Step 4 (Distance Maximization).** With symmetric noise and equal mode costs, minimizing L[C] at fixed (n, R) is equivalent to maximizing minimum distance d.
-
-**Step 5 (Coding Theory Theorem).** Among binary linear [24, 12] codes, the maximum achievable minimum distance is d = 8. This bound is achieved uniquely by the extended binary Golay code (Assmus & Mattson 1969).
-
-**Step 6 (PCE Selection).** The Golay code is unique up to equivalence. PCE isotropy (invariance under mode permutations) precludes preferring any non-equivalent code. Therefore, PCE optimization uniquely selects the Golay [24,12,8] structure.
-
-The correspondence between QFI modes and code symbols is established through the D₄ lattice structure. ∎
+With $(n,k)=(24,12)$ fixed, PCE minimizes the error term by maximizing the minimum Hamming distance. The classical coding-theory bound for binary linear $[24,12,d]$ codes gives $d\le8$, and the extended binary Golay code attains $d=8$ uniquely up to code equivalence. Therefore the selected binary-linear interface code on this branch is $\mathcal G_{24}=[24,12,8]$. The detection and correction capacities follow immediately from $d=8$: the code detects up to $7$ errors and corrects up to $\lfloor(d-1)/2\rfloor=3$ errors. ∎
 
 ### Z.13.2 Connection to PCE
 
@@ -1524,7 +1630,7 @@ The error correction structure solves the "unreasonable stability" problem:
 
 *Proof.* By Niemeier's classification, the even unimodular lattices of rank 24 are exactly the 24 Niemeier lattices. Of these, 23 have nonempty root systems and therefore contain vectors with $|v|^2=2$. Exactly one has empty root system; this unique rootless lattice is the Leech lattice $\Lambda_{24}$. Hence rootlessness uniquely characterizes $\Lambda_{24}$ and implies $|v|_{\min}^2=4$, while all other Niemeier lattices have $|v|_{\min}^2=2$. ∎
 
-**Corollary Z.8c.1 (Leech Rootlessness and Absence of Native Norm-2 Fifth-Force Moduli).** On the balanced Golay-to-Leech vacuum branch, no native scalar modulus whose leading displacement is represented by a norm-2 lattice root exists. Equivalently, any scalar fifth-force candidate arising from a root direction is absent in the native Leech vacuum:
+**Corollary Z.8c.1 (Leech Rootlessness and Absence of Native Norm-2 Fifth-Force Moduli).** On the predictive-recovery MacWilliams Golay-to-Leech vacuum branch, no native scalar modulus whose leading displacement is represented by a norm-2 lattice root exists. Equivalently, any scalar fifth-force candidate arising from a root direction is absent in the native Leech vacuum:
 $$
 \mathcal R(\Lambda_{24})
 :=
@@ -1564,11 +1670,11 @@ $$\langle W(C) \rangle \sim e^{-V(R)T} = e^{-\sigma RT} = e^{-\sigma \cdot \text
 
 This area law signifies confinement. In contrast, a rooted lattice admits massless propagation along root directions, yielding perimeter-law decay (Coulombic behavior). ∎
 
-**Remark Z.8d.0 (Higher-Form Ledger Status of the Flux-Tube Branch).** The higher-form predictive ledger of Definition X.9.5d.1 supplies the modern line-operator language for diagnosing this branch. Proposition Z.8d remains a flux-energy branch argument: it does not by itself prove the equivalence between rootlessness, an unbroken center one-form ledger, and the Wilson-loop area law. That equivalence is the open structural target X.9.5d.3.
+**Remark Z.8d.0 (Higher-Form Ledger Status of the Flux-Tube Branch).** The higher-form predictive ledger of Definition X.9.5d.1 supplies the line-operator language for diagnosing this branch. Proposition Z.8d supplies the rootless flux-energy and tube-tension calibration; Theorem X.9.5d.4 supplies the finite center-ledger area-law criterion once the electric center class is unbroken and the positive surface gap is fixed.
 
-**Corollary Z.8d.1 (Unique Confining Vacuum Selection on the Combined Balanced Golay and Flux-Tube Confinement Branches).** On the combined balanced rate-½ Golay branch (Theorem Z.13b) and flux-tube confinement branch (Proposition Z.8d), among the 24 Niemeier lattices, PCE optimization uniquely selects the confining vacuum.
+**Corollary Z.8d.1 (Unique Confining Vacuum Selection on the Combined Predictive-Recovery Golay and Center-Ledger Confinement Branches).** On the combined predictive-recovery MacWilliams Golay branch (Theorem Z.13b), the rootless flux-tube calibration branch (Proposition Z.8d), and the unbroken electric center-ledger branch of Theorem X.9.5d.4, among the 24 Niemeier lattices, PCE optimization uniquely selects the confining vacuum.
 
-*Proof.* On the balanced rate-½ branch, PCE optimization selects the extended binary Golay code $\mathcal{G}_{24}=[24,12,8]$ on the $M=24$ interface modes (Theorem Z.13b). The gluing construction from $\mathcal{G}_{24}$ produces an even unimodular 24-dimensional lattice with $|v|_{\min}^2=4$ (hence rootless) (Appendix R, Proposition R.4.2a and Lemma R.4.5). By Theorem Z.8c, the unique rootless even unimodular lattice in dimension 24 is the Leech lattice $\Lambda_{24}$. On the flux-tube confinement branch (Proposition Z.8d), the rootless vacuum lattice yields an area law, hence the selected vacuum is confining on that branch. ∎
+*Proof.* On the predictive-recovery MacWilliams branch, Theorem Z.13b.0a fixes $k=12$ and PCE distance optimization selects the extended binary Golay code $\mathcal{G}_{24}=[24,12,8]$ on the $M=24$ interface modes (Theorem Z.13b). The gluing construction from $\mathcal{G}_{24}$ produces an even unimodular 24-dimensional lattice with $|v|_{\min}^2=4$ (hence rootless) (Appendix R, Proposition R.4.2a and Lemma R.4.5). By Theorem Z.8c, the unique rootless even unimodular lattice in dimension 24 is the Leech lattice $\Lambda_{24}$. Proposition Z.8d supplies the positive tube-channel calibration, and Theorem X.9.5d.4 converts the unbroken center ledger with positive surface gap into the Wilson-loop area law. Hence the selected vacuum is confining on the combined branch. ∎
 
 **Definition Z.8d.2 (Regular LSM Datum).** A regular LSM datum on a finite PU branch consists of:
 
@@ -2068,7 +2174,58 @@ The syndrome-partition identity demonstrates these structures are mutually deter
 
 #### Z.13.5.2 PCE Derivation of Distance-Optimal Codes
 
-**Theorem Z.13b (Golay Code on the Balanced Rate-½ Branch).** On the balanced rate-½ branch — under which the $M = 24$ interface modes split into $k = M/2 = 12$ information modes and $M - k = 12$ redundancy modes — coding theory uniquely selects the extended binary Golay code $[24, 12, 8]$ as the maximum-distance binary linear code of dimension $k = 12$. The balanced rate-½ branch input is the load-bearing assumption: the displayed PCE objective in Step 4 below does not by itself uniquely select $k = n/2$ over other rates without an explicit symmetric (imbalance) penalty or a separate PCE rate-selection theorem.
+**Definition Z.13b.0 (Predictive-Recovery MacWilliams Duality Gate).** Let $C\subset\mathbb F_2^n$ be an admissible binary linear interface code of length $n=M=24$ with dual
+$$
+C^\perp=\{y\in\mathbb F_2^n:x\cdot y=0\ \forall x\in C\}.
+$$
+A rate-selection branch satisfies the predictive-recovery MacWilliams duality gate when:
+
+1. prediction payload and recovery syndrome are PCE-dual interface roles, so the rate-selection stage compares $C$ and $C^\perp$ as one unordered dual pair $\{C,C^\perp\}$;
+2. the active rate-stage asymmetry cost is the strictly positive quadratic dual-asymmetry penalty
+$$
+V_{\mathrm{dual}}(C)=\lambda_{\mathrm{dual}}\big(\dim C-\dim C^\perp\big)^2,\qquad\lambda_{\mathrm{dual}}>0;
+\tag{Z.13b.0.1}
+$$
+3. all remaining rate-stage terms depend on the dual pair only through MacWilliams-invariant data, equivalently through the unordered pair of weight enumerators $\{W_C,W_{C^\perp}\}$ related by
+$$
+W_{C^\perp}(x,y)=2^{-\dim C}W_C(x+y,x-y);
+\tag{Z.13b.0.2}
+$$
+4. PCE rate selection is lexicographic: the dual-asymmetry coordinate (Z.13b.0.1) is minimized first, and remaining rate-stage costs are evaluated only on the resulting zero-asymmetry stratum, before the fixed-rate distance maximization step.
+
+**Theorem Z.13b.0a (Predictive MacWilliams Rate Selection).** On the $n=M=24$ interface branch satisfying Definition Z.13b.0, every PCE rate minimizer satisfies
+$$
+\dim C=\dim C^\perp=12.
+\tag{Z.13b.0a.1}
+$$
+
+*Proof.* For any binary linear code $C\subset\mathbb F_2^n$,
+$$
+\dim C+\dim C^\perp=n,
+$$
+hence
+$$
+\dim C-\dim C^\perp=2\dim C-n.
+$$
+Therefore
+$$
+V_{\mathrm{dual}}(C)=\lambda_{\mathrm{dual}}(2\dim C-n)^2\ge0,
+$$
+with equality if and only if $\dim C=n/2$. Existence of a zero-penalty admissible code at $n=24$ is established by the hyperbolic code
+$$
+C_0=\{(x,x):x\in\mathbb F_2^{12}\}\subset\mathbb F_2^{24},
+$$
+which has dimension $12$ by construction and is self-orthogonal because for all $x,y\in\mathbb F_2^{12}$,
+$$
+(x,x)\cdot(y,y)=x\cdot y+x\cdot y=2(x\cdot y)\equiv 0\pmod{2},
+$$
+so $C_0\subseteq C_0^\perp$. Counting dimensions, $\dim C_0+\dim C_0^\perp=24$ forces $\dim C_0^\perp=12=\dim C_0$, hence $C_0=C_0^\perp$ and $V_{\mathrm{dual}}(C_0)=0$.
+
+By Definition Z.13b.0 condition (4), PCE rate selection minimizes the dual-asymmetry coordinate before the next rate-stage term. Since a zero-penalty admissible point exists, every PCE rate minimizer must lie on the zero-penalty stratum: any code with $V_{\mathrm{dual}}(C)>0$ is strictly dominated by $C_0$ at the rate-selection stage and is excluded from further consideration. Therefore every minimizer satisfies $2\dim C-24=0$, i.e. $\dim C=\dim C^\perp=12$.
+
+The MacWilliams condition (Z.13b.0.2) ensures the conclusion is invariant under exchange of predictive payload and recovery syndrome: the unordered pair $\{C,C^\perp\}$ at $\dim C=\dim C^\perp=12$ is fixed under that exchange, so the rate-selection conclusion does not depend on which side of the dual pair is labeled primary. ∎
+
+**Theorem Z.13b (Golay Code on the Predictive-Recovery MacWilliams Branch).** On the predictive-recovery MacWilliams branch — under which Theorem Z.13b.0a fixes the $M=24$ interface modes to split into $k=M/2=12$ information modes and $M-k=12$ redundancy modes — coding theory uniquely selects the extended binary Golay code $[24,12,8]$ as the maximum-distance binary linear code of dimension $k=12$. The predictive-recovery MacWilliams branch input replaces the previous explicit rate-$\tfrac12$ branch input by a closed rate-selection theorem; downstream distance maximization at fixed $k=12$ proceeds as in Steps 5–6 below.
 
 *Proof.*
 
@@ -2081,15 +2238,17 @@ where $V_{\text{op}}$ is the operational cost of redundancy, $V_{\text{error}}$ 
 
 **Step 3 (Isotropy at PCE-Attractor).** At the PCE-Attractor (Definition 15a), all 24 modes have identical QFI eigenvalue $\lambda = 1$ (Theorem Z.5, Step 5). This isotropy implies equal operational costs and benefits per mode: $c_{\text{op}} = c_{\text{benefit}}$.
 
-**Step 4 (Symmetric Optimization on the Balanced Rate Branch).** Under isotropy, an imbalance-penalized PCE potential takes the symmetric form
-$$V_{\text{code}}^{\text{sym}} = c_{\text{op}}(n - 2k)^2 + c_{\text{error}} \cdot p_e(d),$$
-which is minimized in $k$ at $k = n/2 = 12$, where the first term vanishes and the operational redundancy/benefit costs are exactly balanced. A linear imbalance term $c_{\text{op}}(n - 2k)$ is monotone in $k$ for $c_{\text{op}} > 0$ and is therefore minimized at the boundary $k = n$, not at $k = n/2$; the linear form is interpreted either as a schematic notation for the symmetric imbalance penalty above or as a branch input rather than a derivation of rate selection. On the balanced rate-½ branch — where the symmetric imbalance penalty is the operative PCE cost and the rate is therefore $k = n/2$ — the rest of the proof proceeds.
+**Step 4 (Predictive-Recovery Rate Selection).** Under Definition Z.13b.0, prediction payload and recovery syndrome are MacWilliams-dual PCE roles, so the active rate-stage asymmetry cost is
+$$
+V_{\mathrm{dual}}(C)=\lambda_{\mathrm{dual}}(2k-n)^2,\qquad\lambda_{\mathrm{dual}}>0.
+$$
+Theorem Z.13b.0a gives $k=n/2=12$. Thus the rate-$\tfrac12$ condition is selected by predictive-recovery self-duality, not by a monotone linear imbalance term. The remaining rate-stage costs (operational redundancy, error protection, capacity benefit) are evaluated on the resulting zero-asymmetry stratum.
 
-**Step 5 (Distance Maximization at fixed rate).** With $k = 12$ fixed by the balanced rate-½ branch (Step 4), PCE minimizes $V_{\text{error}}(d)$ by maximizing minimum distance $d$. Among binary linear $[24, 12]$ codes, the maximum is $d = 8$ [Assmus & Mattson 1969], uniquely achieved by the Golay code.
+**Step 5 (Distance Maximization at Fixed Self-Dual Rate).** With $k=12$ fixed by Theorem Z.13b.0a, PCE minimizes $V_{\text{error}}(d)$ by maximizing minimum distance $d$. Among binary linear $[24,12]$ codes, the maximum is $d=8$ [Assmus & Mattson 1969], uniquely achieved by the extended Golay code.
 
-**Step 6 (Uniqueness on the balanced rate-½ branch).** The extended Golay code is unique up to equivalence at parameters $[24, 12, 8]$. PCE isotropy precludes preference among equivalent representations. The combined uniqueness is therefore: on the balanced rate-½ branch with $n = 24$ and the maximum-distance criterion at fixed rate, the extended Golay code $[24, 12, 8]$ is selected up to equivalence. ∎
+**Step 6 (Uniqueness on the Predictive-Recovery Branch).** The extended Golay code is unique up to equivalence at parameters $[24,12,8]$. PCE isotropy precludes preference among equivalent representations. The combined uniqueness is therefore: on the predictive-recovery MacWilliams branch with $n=24$, self-dual rate $k=12$ from Theorem Z.13b.0a, and the maximum-distance criterion at fixed rate, the extended Golay code $[24,12,8]$ is selected up to equivalence. ∎
 
-**Corollary Z.13b.1 (Golay Shell Enumerator and Octad Incidence).** On the balanced rate-$\tfrac12$ Golay branch of Theorem Z.13b, let
+**Corollary Z.13b.1 (Golay Shell Enumerator and Octad Incidence).** On the predictive-recovery MacWilliams Golay branch of Theorem Z.13b, let
 $$
 \mathcal G_{24}\subset\mathbb F_2^{24}
 $$
@@ -2318,7 +2477,7 @@ $$
 \qquad
 \sigma(e)=e+\mathcal G_{24},
 $$
-be the Golay syndrome quotient on the balanced rate-$\tfrac12$ Golay branch. Let
+be the Golay syndrome quotient on the predictive-recovery MacWilliams Golay branch. Let
 $$
 \mathcal T_4
 :=
@@ -2560,7 +2719,7 @@ specifying how information modes couple to redundancy modes for error correction
 
 **Remark Z.13e.1: Information-Theoretic Interpretation.** The identity $C_{\mathrm{interaction}} = C_{\mathrm{stabilization}} = 144$ suggests that the structure governing hidden-visible coupling corresponds structurally to the error-correction organization. This resonates with Wheeler's "it from bit" intuition: physical structure emerges from information-theoretic optimization. The Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ indicates that minimal vacuum fluctuations activate most but not all of this constraint structure, with saturation ratio $\kappa_{\mathrm{ref}}/k^2 = 141.5/144 \approx 0.9826$; the corresponding corrected four-mode branch value gives $\kappa_{\mathrm{trans}}/k^2 = 142/144 \approx 0.9861$, and Theorem U.13b records that corrected branch under its explicit false-vacuum spectral hypotheses.
 
-**Remark Z.13e.2: Uniqueness.** The Golay code is unique up to equivalence (Theorem Z.13b). Therefore, the 144-bit structure is not one choice among many but the unique solution to PCE optimization at rate-½ with block length 24.
+**Remark Z.13e.2: Uniqueness.** The Golay code is unique up to equivalence (Theorem Z.13b). Therefore, the 144-bit structure is not one choice among many but the unique solution to predict-verify self-duality and PCE distance optimization at block length 24.
 
 #### Z.13.5.5.4 Generational Structure Compatibility
 
@@ -2807,11 +2966,67 @@ $$\alpha_{\mathrm{em}}(\mu)=\frac{u(\mu)}{4\pi\kappa(\mu)}$$
 $$\kappa^*_{\mathrm{bulk}}=1.$$
 ∎
 
-**Remark Z.14a (Comparison with standard QFT).** In standard QFT, $\kappa$ in $S_{\mathrm{Maxwell}}$ carries no empirical content because a constant field rescaling can be absorbed into a redefinition of the free gauge coupling. In PU, the coupling $u^*$ is fixed by capacity saturation in QFI-natural units (Theorem Z.7) and the QFI normalization $\lambda=1$ is fixed by state-space geometry (Theorem Z.5), which removes the ordinary $U(1)$ rescaling freedom. On the unit Predictive-Ward branch of Theorem Z.14, $\kappa^*_{\mathrm{bulk}}=1$ is then a theorem. The branch-independent Ward-map unit Jacobian $c_{\mathrm W} = 1$ is outside the stated unit Predictive-Ward hypotheses.
+**Definition Z.14d (Thomson-Ward Spectral-Weight Certificate).** A Thomson-Ward spectral-weight certificate for the minimal $a=2$, $M=24$ electromagnetic branch is a finite record
+$$
+\mathfrak W_T=\left(J_{\mathrm{em}},\chi_{JJ}^{\mathrm{op}},\Omega_{\mathrm{PW}},w_T,\mathcal Q_{\mathrm{PU}}\right)
+\tag{Z.14d.1}
+$$
+such that:
+
+1. $J_{\mathrm{em}}$ is the unique retained active $U(1)$ descent current on the branch, fixed by the SM gauge structure of Theorem G.8.4b together with the active-kernel $a=2$ data of Theorem Z.1;
+
+2. $\chi_{JJ}^{\mathrm{op}}(\omega)$ is the operationally measured retarded current-current response on the retained Paley-Wiener bandwidth $\Omega_{\mathrm{PW}}$, which contains all non-PCE-null active current spectral weight (Theorem K.10.4);
+
+3. the PU active-charge count is the integer
+$$
+\mathcal Q_{\mathrm{PU}}=a=2,
+\tag{Z.14d.2}
+$$
+fixed by the active kernel dimension and the canonical operational current normalization of conditions (1) and (2);
+
+4. $w_T(\omega)$ is the canonical Thomson-limit sum-rule weight associated with the operational current normalization of condition (1), i.e. the unique weight for which
+$$
+\int_0^{\Omega_{\mathrm{PW}}}\frac{d\omega}{\pi}\,w_T(\omega)\operatorname{Im}\chi_{JJ}^{\mathrm{op}}(\omega)
+\tag{Z.14d.3}
+$$
+returns the operational integrated active-charge weight on the retained bandwidth;
+
+5. the operational identification of integrated active-charge weight with the active-kernel charge count is
+$$
+\int_0^{\Omega_{\mathrm{PW}}}\frac{d\omega}{\pi}\,w_T(\omega)\operatorname{Im}\chi_{JJ}^{\mathrm{op}}(\omega)=\mathcal Q_{\mathrm{PU}},
+\tag{Z.14d.4}
+$$
+established by the standard f-sum/TRK derivation from current conservation $\partial_\mu J^\mu_{\mathrm{em}}=0$ and equal-time canonical commutation, applied to the retained finite-bandwidth sector with PCE-null trans-bandwidth weight.
+
+**Theorem Z.14e (Thomson-Ward Unit-Jacobian Closure).** On any branch carrying an accepted Thomson-Ward spectral-weight certificate $\mathfrak W_T$, the Ward-map Jacobian is fixed and the bulk normalization is closed:
+$$
+c_{\mathrm W}=1,\qquad\mathcal G=\mathcal K^{-1},\qquad\kappa^*_{\mathrm{bulk}}=1.
+\tag{Z.14e.1}
+$$
+
+*Proof.* Let the generalized Ward map (Theorem Z.14, Step 4) be
+$$
+\mathcal G=c_{\mathrm W}^{-1}\mathcal K^{-1},\qquad c_{\mathrm W}>0.
+$$
+The retarded current-current response $\chi_{JJ}^{\mathrm{op}}(\omega)$ is an operationally measured spectral function on the bandwidth $\Omega_{\mathrm{PW}}$ and is independent of the Ward-map Jacobian convention. The QFI kernel $\mathcal K$ is canonically normalized in QFI-natural units by Theorem Z.5, and the active-kernel charge count $\mathcal Q_{\mathrm{PU}}=a=2$ is fixed by Theorem Z.1.
+
+Under the generalized Ward map, the connected current correlator on the retained bandwidth is identified with $c_{\mathrm W}^{-1}$ times the QFI-canonical kernel, which carries integrated weight $\mathcal Q_{\mathrm{PU}}$ on the active subspace by the QFI normalization of Theorem Z.5 and the active-charge identification of condition (3). Therefore the operational sum-rule integral evaluates, under the generalized Ward map, to
+$$
+\int_0^{\Omega_{\mathrm{PW}}}\frac{d\omega}{\pi}\,w_T(\omega)\operatorname{Im}\chi_{JJ}^{\mathrm{op}}(\omega)=c_{\mathrm W}^{-1}\mathcal Q_{\mathrm{PU}}.
+\tag{Z.14e.2}
+$$
+
+By condition (5) of Definition Z.14d, the same operational integral equals $\mathcal Q_{\mathrm{PU}}$ via the standard f-sum/TRK derivation, which uses only current conservation and equal-time canonical commutation and is independent of the Ward-map Jacobian convention. Comparing (Z.14d.4) and (Z.14e.2):
+$$
+\mathcal Q_{\mathrm{PU}}=c_{\mathrm W}^{-1}\mathcal Q_{\mathrm{PU}}.
+$$
+Since $\mathcal Q_{\mathrm{PU}}=2>0$ by (Z.14d.2), this forces $c_{\mathrm W}^{-1}=1$, hence $c_{\mathrm W}=1$ and $\mathcal G=\mathcal K^{-1}$. Substituting into Theorem Z.14 gives $\kappa^*_{\mathrm{bulk}}=1$ in QFI-natural units. ∎
+
+**Remark Z.14a (Comparison with Standard QFT).** In standard QFT, $\kappa$ in $S_{\mathrm{Maxwell}}$ carries no empirical content because a constant field rescaling can be absorbed into a redefinition of the free gauge coupling. In PU, the coupling $u^*$ is fixed by capacity saturation in QFI-natural units (Theorem Z.7) and the QFI normalization $\lambda=1$ is fixed by state-space geometry (Theorem Z.5), which removes the ordinary $U(1)$ rescaling freedom. On the unit Predictive-Ward branch of Theorem Z.14, $\kappa^*_{\mathrm{bulk}}=1$ is a theorem. On a branch carrying the Thomson-Ward spectral-weight certificate of Definition Z.14d, Theorem Z.14e closes the unit Jacobian $c_{\mathrm W}=1$ from the operational $f$-sum/TRK identity (Z.14d.4) together with the QFI-canonical evaluation (Z.14e.2), rather than taking $c_{\mathrm W}=1$ as an independent branch input.
 
 
 
-**Remark Z.14c (Branch Dependence and Numerical Sensitivity).** The identification $\mathcal{G} = \mathcal{K}^{-1}$ in QFI-natural units is the unit Predictive-Ward branch assumption of Theorem Z.14. The named supporting theorems (Theorem Z.5 for QFI normalization, Theorem Z.7 for capacity-saturated $u^*$, Proposition X.1 for Legendre duality) establish the two-point structure and the coupling unit scale but do not independently force unit Jacobian on the Ward map. The downstream Thomson-limit prediction $\alpha^{-1} \approx 137.036092$ carries sensitivity $\partial \alpha^{-1}/\partial \kappa_{\mathrm{bulk}} = 4\pi/u^* \approx 138.84$ to deviations $c_{\mathrm W} \neq 1$. Matching the $6 \times 10^{-5}$ stated theory uncertainty requires the Ward-map unit Jacobian to hold to $\sim 4 \times 10^{-7}$. Consequently, the 0.68 ppm $\alpha^{-1}$ prediction is theorem-level on the unit Predictive-Ward branch; the unconditional Ward-map result is outside the stated unit Predictive-Ward hypotheses.
+**Remark Z.14c (Branch Dependence and Numerical Sensitivity).** The identification $\mathcal G=\mathcal K^{-1}$ in QFI-natural units is the unit Predictive-Ward branch assumption of Theorem Z.14 unless the Thomson-Ward certificate of Definition Z.14d is supplied. The named supporting theorems (Theorem Z.5 for QFI normalization, Theorem Z.7 for capacity-saturated $u^*$, Proposition X.1 for Legendre duality) establish the two-point structure and the coupling unit scale. Theorem Z.14e supplies the additional spectral-weight closure of the Ward-map unit Jacobian on certified branches via the operational $f$-sum/TRK identity (Z.14d.4) and the QFI-canonical evaluation (Z.14e.2). The downstream Thomson-limit prediction $\alpha^{-1}\approx 137.036092$ carries sensitivity $\partial\alpha^{-1}/\partial\kappa_{\mathrm{bulk}}=4\pi/u^*\approx 138.84$ to deviations $c_{\mathrm W}\neq 1$. Matching the $6\times 10^{-5}$ stated theory uncertainty requires the Ward-map unit Jacobian to hold to $\sim 4\times 10^{-7}$. Consequently, the 0.68 ppm $\alpha^{-1}$ prediction is theorem-level either on the explicit unit Predictive-Ward branch of Theorem Z.14 or on the certified Thomson-Ward spectral-weight branch of Theorem Z.14e.
 
 **Remark Z.14b (Mechanism).** Legendre duality fixes $\Gamma^{(2)}=\mathcal{G}^{-1}$, the predictive Ward identity fixes $\mathcal{G}=\mathcal{K}^{-1}$, and QFI/capacity rigidity fixes the units in which $\mathcal{K}$ and $u^*$ are evaluated. The unique value $\kappa^*_{\mathrm{bulk}}=1$ is the consistency condition allowing these constraints to be simultaneously satisfied.
 
@@ -3664,8 +3879,8 @@ At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximatio
 
 **Branch ledger for the Thomson-limit value $\alpha^{-1} = 137.036092 \pm 0.000060$.** The formula displayed below is exact arithmetic on the canonical Appendix Z normalization branch package, comprising:
 
-1. The tangent-kissing channel branch (Theorems Z.7a, Z.10, Z.11), giving $D = 4$ and $M = K(D) = 24$;
-2. The balanced rate-½ Golay branch (Theorem Z.13b), giving $k = 12$ and the $\mathcal{G}_{24}$ error-correction structure;
+1. The Bures tangent-cell channel contract (Theorems Z.7a, Z.10, Z.11), giving $D=4$ and $M=K(D)=24$;
+2. The predictive-recovery MacWilliams Golay branch (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b), giving $k=12$ and the $\mathcal{G}_{24}$ error-correction structure;
 3. The bulk Predictive-Ward unit-normalization branch (Theorem Z.14), giving $\kappa^*_{\text{bulk}} = 1$;
 4. The interface-response ordering branch (Theorem Z.16), giving the sign $\delta\kappa < 0$;
 5. The canonical first-order interface-derivative normalization branch (Theorem Z.17);
@@ -3690,11 +3905,85 @@ $$\text{Third-order (SU(2) sinc): } \Delta^{(2+3)} = \Delta^{(2)}\left(1 - \frac
 
 $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) \approx 137.036092 \pm 0.000060}$$
 
-The boxed Thomson-limit formula is the result of Theorems Z.24–Z.26 and is stated through third order with explicit remainder $+O(u^{*5})$. It is a Thomson-limit result. The lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)$ used later in Appendix T for PU-to-SM matching at $\mu_G$ and subsequent RG flow to $M_Z$ does not enter this derivation. No continuous parameter is fitted anywhere in this chain.
+The boxed Thomson-limit formula is the result of Theorems Z.24-Z.26 and is stated through third order with explicit remainder $+O(u^{*5})$. It is a Thomson-limit result. The lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)$ used later in Appendix T for PU-to-SM matching at $\mu_G$ and subsequent RG flow to $M_Z$ does not enter this derivation. No continuous parameter is fitted anywhere in this chain.
+
+### Z.27.11 Thomson Normalization Certificate
+
+**Definition Z.27.11a (Thomson Normalization Certificate).** A Thomson normalization certificate is a finite record
+$$
+\mathfrak C_\alpha
+=
+\left(
+u^*,
+K_0,
+\mathcal N_{\mathrm{bulk}},
+\mathcal N_{\mathrm{int}},
+\mathcal P_{\mathrm{em}},
+\mathcal K_{\mathrm{curv}},
+\mathcal S_{\mathrm{sinc}},
+R_\alpha,
+\chi_\alpha
+\right)
+$$
+fixed before comparison with measured $\alpha$, where:
+
+1. $u^*=2^{1/8}-1$ and $K_0=3$ are the previously derived PU invariants.
+2. $\mathcal N_{\mathrm{bulk}}$ is the bulk Ward normalization giving $4\pi/u^*$.
+3. $\mathcal N_{\mathrm{int}}$ is the interface derivative normalization giving $-\pi/\sqrt{K_0}$.
+4. $\mathcal P_{\mathrm{em}}$ is the electromagnetic projection inside the determinant-compatible $S(U(3)\times U(2))$ branch.
+5. $\mathcal K_{\mathrm{curv}}$ is the democratic curvature-response projection on the $24$-mode QFI branch.
+6. $\mathcal S_{\mathrm{sinc}}$ is the exact $SU(2)$ sinc transport factor, replacing the third-order truncation by
+$$
+\operatorname{sinc}(u^*)=\frac{\sin u^*}{u^*}.
+$$
+7. $R_\alpha$ is a certified residual interval for all finite-order truncation, threshold, and projection tails not already included in the sinc factor.
+8. $\chi_\alpha$ records that no entry is chosen using $\alpha_{\mathrm{obs}}$.
+
+The certified Thomson value is
+$$
+\alpha^{-1}_{\mathrm{cert}}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}
+\operatorname{sinc}(u^*)
++
+R_\alpha.
+\tag{Z.27.11a}
+$$
+
+**Algorithm Z.27.11b (Acceptance Test for $\mathfrak C_\alpha$).** The certificate $\mathfrak C_\alpha$ is accepted if and only if each normalization map is fixed by the Appendix Z bulk/interface/curvature derivation and the Appendix G determinant-compatible electromagnetic projection, the sinc replacement agrees with the same $SU(2)$ transport used in Theorem Z.26, the residual interval $R_\alpha$ is bounded without using $\alpha_{\mathrm{obs}}$, and the final interval is entered into the evidence register of Definition 13.0d before empirical comparison.
+
+**Theorem Z.27.11c (Determinacy of the Certified Thomson Branch).** If $\mathfrak C_\alpha$ is accepted, then the Thomson-limit inverse fine-structure constant is uniquely determined by (Z.27.11a) up to the certified interval $R_\alpha$. No continuous coupling parameter remains.
+
+*Proof.* The invariants $u^*$ and $K_0$ are fixed before this section. The bulk term, interface term, electromagnetic projection, and curvature projection are fixed entries of $\mathfrak C_\alpha$. The $SU(2)$ transport factor is the analytic function $\operatorname{sinc}(u^*)$, so it has a unique value for fixed $u^*$. The residual interval $R_\alpha$ is finite and fixed before comparison. Therefore (Z.27.11a) is the image of a fixed finite record under algebraic operations and one fixed analytic function, hence it determines a unique interval. Since no free coefficient occurs in (Z.27.11a), there is no remaining continuous coupling parameter. ∎
+
+**Corollary Z.27.11d (No Retuning of $\alpha$).** If a measurement of the Thomson-limit $\alpha^{-1}$ lies outside the interval determined by an accepted $\mathfrak C_\alpha$, the certified Thomson branch is falsified or must be demoted; the interval may not be enlarged by changing normalization entries after comparison.
+
+*Proof.* Definition Z.27.11a and Algorithm Z.27.11b require every entry, including $R_\alpha$, to be fixed before comparison with $\alpha_{\mathrm{obs}}$. Changing an entry after comparison produces a different certificate and therefore a different branch. It cannot serve as a confirmation of the original accepted branch. ∎
+
+**Corollary Z.27.11e (Alpha Residual-Gate Status).** With $R_\alpha=0$, the exact certificate-core value of (Z.27.11a) is
+$$
+\alpha^{-1}_{0}
+=
+\frac{4\pi}{2^{1/8}-1}
+-
+\frac{\pi}{\sqrt3}
++
+\frac{\pi(2^{1/8}-1)}{24\sqrt3}
+\frac{\sin(2^{1/8}-1)}{2^{1/8}-1}
+=
+137.03609205522858\ldots .
+$$
+Therefore a theorem-level Thomson interval requires an independently certified residual interval $R_\alpha$. Without such an interval the Appendix Z alpha result remains the exact certificate-core branch value rather than a completed accepted $\mathfrak C_\alpha$.
+
+*Proof.* Substitute $u^*=2^{1/8}-1$ and $K_0=3$ into (Z.27.11a), set $R_\alpha=0$, and evaluate the resulting expression. The terms are fixed analytic functions of previously derived constants, so the displayed number is unique. Definition Z.27.11a, however, includes $R_\alpha$ as the residual interval for finite-order, threshold, and projection tails not already included in the sinc factor. If $R_\alpha$ is absent, the record $\mathfrak C_\alpha$ is incomplete by Algorithm Z.27.11b. If $R_\alpha$ is chosen after comparison, Corollary Z.27.11d forbids promotion. Hence theorem-level interval status requires a pre-comparison certified $R_\alpha$. ∎
 
 ---
 
-# PART VI: EXPERIMENTAL PREDICTIONS (Sections Z.28–Z.32)
+# PART VI: EXPERIMENTAL PREDICTIONS (Sections Z.28-Z.32)
 
 ## Z.28 Hot-State Mode Suppression
 
@@ -3804,9 +4093,9 @@ For D_eff = 4 (K(4) = 24 = M_int):
 
 **Prediction Z.4 (Error Correction Correlation Structure).**
 
-**Statement (on the balanced rate-½ Golay branch).** On the balanced rate-½ Golay branch (Theorem Z.13b), the $24 \times 24$ mode correlation matrix reveals Golay code structure with 12 signal modes (statistically independent) and 12 redundancy modes (showing error-correction correlations governed by the Golay parity-check matrix).
+**Statement (on the predictive-recovery MacWilliams Golay branch).** On the predictive-recovery MacWilliams Golay branch (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b), the $24 \times 24$ mode correlation matrix reveals Golay code structure with 12 signal modes (statistically independent) and 12 redundancy modes (showing error-correction correlations governed by the Golay parity-check matrix).
 
-*Branch dependency.* Flat QFI spectroscopy at $\rho_0$ alone (Theorem Z.5) tests the existence and equality of the 24 interface modes; it does not by itself impose the $12 + 12$ parity-check organization. The Golay parity correlation pattern appears on the balanced rate-½ Golay branch and is the additional structural prediction tested here. Equal-mode QFI without Golay parity structure would falsify the balanced-Golay branch but not the underlying flat-spectrum result.
+*Branch dependency.* Flat QFI spectroscopy at $\rho_0$ alone (Theorem Z.5) tests the existence and equality of the 24 interface modes; it does not by itself impose the $12+12$ parity-check organization. The Golay parity correlation pattern appears on the predictive-recovery MacWilliams Golay branch and is the additional structural prediction tested here. Equal-mode QFI without Golay parity structure would falsify that Golay branch but not the underlying flat-spectrum result.
 
 **Test Protocol:**
 
@@ -4190,4 +4479,74 @@ Therefore a single code-lattice backbone propagates from interface optimization 
 
 *Proof.* Item 1 is Theorem Z.13. Item 2 is Theorem G.8.4f together with Theorem U.7a. Item 3 is Proposition R.4.2a. Item 4 is Theorem R.4.10. Item 5 is Proposition R.4.2. ∎
 
-**Remark Z.35d (Logical Boundary).** Theorems Z.35a-Z.35c unify the branch-determined geometry, holonomy, and code-lattice propagation already supported by the manuscript. They do not assert a single master partition function for every sector or a literal single moduli stack underlying all PU constructions. They also do not prove uniqueness of the hierarchy: the present manuscript does not yet show that every minimal-branch collection of PCE/QFI-compatible arenas must be isomorphic to the displayed diagram.
+**Definition Z.35d (Marked PU Arena Package).** A marked PU arena package is a tuple
+$$
+\mathfrak A=(E,p,\omega,\mathcal F_Q,\eta)
+\tag{Z.35d.1}
+$$
+where:
+
+1. $E$ is an eight-dimensional Hermitian carrier;
+
+2. $p:E\to E$ is a rank-$2$ active projector;
+
+3. $\omega$ is the QFI/Kähler form on the orbit of $p$ with the normalization of Theorem Z.5;
+
+4. $Q=E/pE$ is the universal quotient carrier and $\mathcal F_Q$ is an ordered $(1,2,3)$ flag of $Q$;
+
+5. $\eta$ is the capacity valuation fixing
+$$
+(k,M)=(\dim_\mathbb C\mathrm{Gr}(2,8),\dim_\mathbb R\mathrm{Gr}(2,8))=(12,24).
+\tag{Z.35d.2}
+$$
+
+A morphism $\mathfrak A\to\mathfrak A'$ is a unitary map $U:E\to E'$ satisfying
+$$
+UpU^{-1}=p',
+\qquad
+U^*\omega'=\omega,
+\qquad
+U(\mathcal F_Q)=\mathcal F_{Q'},
+\qquad
+\eta'=\eta.
+\tag{Z.35d.3}
+$$
+
+**Theorem Z.35e (Universal Arena Rigidity).** Every marked PU arena package satisfying the minimal-branch data is isomorphic to the canonical hierarchy
+$$
+\Sigma_8 \xrightarrow{q(F_\bullet)=F_2} \mathrm{Gr}(2,8)
+\xleftarrow{\ \pi\ }
+\widetilde X=\mathrm{Flag}_{1,2,3}(Q),
+\qquad
+\mathrm{Gr}_{\mathbb C}(12,24)=\mathrm{Gr}_{\mathbb C}(k,M).
+\tag{Z.35e.1}
+$$
+Moreover, the vacuum Grassmannian is the functorial dimension image of the active-projector orbit:
+$$
+\mathfrak A\longmapsto
+\mathrm{Gr}_{\mathbb C}
+\left(
+\dim_\mathbb C T_p\mathrm{Gr}(2,8),
+\dim_\mathbb R T_p\mathrm{Gr}(2,8)
+\right)
+=
+\mathrm{Gr}_{\mathbb C}(12,24).
+\tag{Z.35e.2}
+$$
+Thus any alternative hierarchy preserving $d_0=8$, $a=2$, the ordered $(1,2,3)$ quotient flag, the QFI form, and the valuation $(k,M)=(12,24)$ is canonically isomorphic to (Z.35e.1).
+
+*Proof.* Any two eight-dimensional Hermitian carriers are unitarily isomorphic. Since $p$ and $p'$ are rank-$2$ orthogonal projectors, there is a unitary carrying $\operatorname{im}p$ to $\operatorname{im}p'$ and $(1-p)E$ to $(1-p')E'$. This identifies the attractor orbit with the Grassmannian of rank-$2$ subspaces:
+$$
+\mathcal O_p\cong\mathrm{Gr}(2,8).
+$$
+The complete perspective arena is the complete flag space of $E$, namely $\Sigma_8=U(8)/U(1)^8$, and the forgetting map $q(F_\bullet)=F_2$ is the universal map from complete flags to rank-$2$ subspaces.
+
+For the quotient carrier $Q=E/pE$, an ordered $(1,2,3)$ splitting is classified by the flag bundle $\mathrm{Flag}_{1,2,3}(Q)$. Theorem G.8.4e.1 identifies this flag bundle as the universal ordered splitting lift over $\mathrm{Gr}(2,8)$, so any compatible quotient flag is pulled back uniquely up to the unitary isomorphism already fixed above. The QFI form normalization is preserved by the unitary orbit construction, and the capacity valuation is fixed by Theorem Z.2.5b:
+$$
+\dim_\mathbb C T_p\mathrm{Gr}(2,8)=12,
+\qquad
+\dim_\mathbb R T_p\mathrm{Gr}(2,8)=24.
+$$
+Therefore the induced vacuum arena is exactly $\mathrm{Gr}_{\mathbb C}(12,24)$. No alternative hierarchy satisfying the same marked data can differ except by a unitary isomorphism preserving all entries of Definition Z.35d. ∎
+
+**Remark Z.35f (Logical Boundary).** Theorems Z.35a-Z.35e unify the branch-determined geometry, holonomy, code-lattice propagation, and arena hierarchy already supported by the manuscript. They do not assert a single master partition function for every sector or a literal single moduli stack underlying all PU constructions. Uniqueness holds only for hierarchies preserving the marked minimal-branch data of Definition Z.35d.

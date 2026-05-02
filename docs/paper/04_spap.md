@@ -27,7 +27,7 @@ Any model class $\mathcal{M}$ that is **Turing-complete** possesses Property R r
 
 **4.2 The Self-Referential Paradox of Accurate Prediction (SPAP)**
 
-We now formally establish the core theorems demonstrating the fundamental limitations on guaranteed accurate self-prediction for systems whose formalism can represent coded self-descriptions, simulate the nominated predictor on those descriptions, and evaluate the relevant predicates about the predicted outputs. Any framework possessing Property R satisfies these conditions. These proofs utilize diagonalization arguments, constructing self-referential systems whose behavior logically contradicts the assumption of a perfect predictor. (Detailed formal proofs in Appendix A.1).
+We now formally establish the core theorems demonstrating the fundamental limitations on guaranteed accurate self-prediction for systems whose formalism can represent coded self-descriptions, simulate the nominated predictor on those descriptions, and evaluate the relevant predicates about the predicted outputs. Any framework possessing Property R satisfies these conditions. These proofs utilize diagonalization arguments, constructing self-referential systems whose behavior logically contradicts the assumption of a perfect predictor. Theorem 10a records the deterministic argument as the Lawvere fixed-point obstruction for the retained prediction-evaluation map; this recharacterizes SPAP without replacing the independent Appendix A.0 derivation of Property R. (Detailed formal proofs in Appendix A.1).
 
 **4.2.1 Definition 11 (Def 11): Dynamic Self-Reference Operator (DSRO)**
 
@@ -55,6 +55,51 @@ $$
 \hat{\phi}_{P_f}=\text{NOT}(\hat{\phi}_{P_f}).
 $$
 No element of $\{0,1\}$ satisfies this equation. This contradiction shows that no universal perfect deterministic predictor $P_f$ can exist. ∎
+
+**4.2.2a Theorem 10a (Lawvere Form of Deterministic SPAP)**
+
+Let $\mathsf P_{\mathrm{PU}}$ be the retained category of operational predictive contexts and verification protocols, and let $\mathsf{Out}=\{0,1\}$. Suppose the represent / simulate / predicate-evaluate subcapacity used in Theorem 10 internalizes an evaluation map
+$$
+\operatorname{eval}:A\times A\to\mathsf{Out}
+\tag{10a.1}
+$$
+that is weakly point-surjective on the retained predictor class: for every operationally definable binary predicate $h:A\to\mathsf{Out}$, there exists $a_h\in A$ such that
+$$
+\operatorname{eval}(a_h,x)=h(x)
+\qquad
+\forall x\in A
+\tag{10a.2}
+$$
+on the retained context domain. Then Theorem 10 is the Lawvere diagonal obstruction for the fixed-point-free endomap
+$$
+\tau:\mathsf{Out}\to\mathsf{Out},
+\qquad
+\tau(0)=1,\quad \tau(1)=0.
+\tag{10a.3}
+$$
+In particular, a universal perfect deterministic predictor would make (10a.1) weakly point-surjective, but Lawvere diagonalization would force a fixed point of $\tau$, which does not exist.
+
+*Proof.* Define the diagonal predicate
+$$
+d(x)=\tau(\operatorname{eval}(x,x)).
+$$
+By weak point-surjectivity, there exists $a_d\in A$ representing $d$, so
+$$
+\operatorname{eval}(a_d,x)=d(x)
+$$
+for all retained $x$. Evaluating at $x=a_d$ gives
+$$
+\operatorname{eval}(a_d,a_d)
+=
+d(a_d)
+=
+\tau(\operatorname{eval}(a_d,a_d)).
+$$
+Thus $\operatorname{eval}(a_d,a_d)$ is a fixed point of $\tau$. Since $\mathsf{Out}=\{0,1\}$ and $\tau$ is Boolean negation, no fixed point exists. This is exactly the contradiction in Theorem 10 with $a_d$ corresponding to the diagonal predictor-querying system $S_{diag}$. ∎
+
+**Corollary 10a.1 (Representability Boundary for SPAP).** Lawvere diagonalization does not replace Property R. It identifies the precise subcapacity of Property R needed for Theorem 10: a retained weakly point-surjective evaluator for binary prediction predicates. Systems lacking such an evaluator may still be predictors, but they are not in the SPAP-complete representational class used by Theorems 10–11.
+
+*Proof.* The proof of Theorem 10a uses only weak point-surjectivity of the evaluation map and the fixed-point-free NOT endomap. If a system lacks the retained evaluation map, or if the map is not weakly point-surjective on the relevant predictor predicates, the Lawvere diagonal cannot be formed inside that system. This is exactly the operational boundary captured by the represent / simulate / predicate-evaluate clauses of Definition 10. ∎
 
 **4.2.3 Theorem 11 (Probabilistic SPAP)**
 

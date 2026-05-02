@@ -1328,7 +1328,7 @@ C_s(\beta-\alpha)xe^{-x},
 $$
 which tends to $0$ as $x\to\infty$. Hence for any fixed $b>0$ there is an admissible finite-complexity value with $C_{\mathrm{self}}A<b$. This contradicts any universal positive lower bound. A separate normalization theorem for $C_{\mathrm{self}}$ could define a different quantity, but that would be an additional hypothesis, not a consequence of the current PU structure. ∎
 
-*Finiteness of the Operationally Admissible Inflationary Model Space.* The finite channel capacity (Theorem E.2) and operational finite resolution (Theorem K.10.4), applied to the $\sim 1.3 \times 10^7$ independently measurable CMB modes (bounded by Silk damping and cosmic variance), imply that the space of inflationary models distinguishable by any finite observational protocol is finite. Models differing only in trans-horizon or pre-inflationary structure are operationally equivalent. The precise cardinality of the operationally admissible equivalence classes remains to be determined. Appendix U supplies a sharper branch-level discriminator inside this finite class: on the balanced Golay primordial branch, the Starobinsky scalar amplitude and tensor ratio obey the e-fold-independent product
+*Finiteness of the Operationally Admissible Inflationary Model Space.* The finite channel capacity (Theorem E.2) and operational finite resolution (Theorem K.10.4), applied to the $\sim 1.3 \times 10^7$ independently measurable CMB modes (bounded by Silk damping and cosmic variance), imply that the space of inflationary models distinguishable by any finite observational protocol is finite. Models differing only in trans-horizon or pre-inflationary structure are operationally equivalent. The precise cardinality of the operationally admissible equivalence classes remains to be determined. Appendix U supplies a sharper branch-level discriminator inside this finite class: on the predictive-recovery MacWilliams Golay primordial branch, the Starobinsky scalar amplitude and tensor ratio obey the e-fold-independent product
 $$
 A_s r
 =
@@ -1358,9 +1358,9 @@ The derivation chain from foundational principles to emergent spacetime yields s
 
 ### 14.5.1 Reality as Error-Correcting Code
 
-On the balanced rate-$\tfrac{1}{2}$ Golay branch, the 24 QFI modes are organized by the extended binary Golay code $[24,12,8]$ (Theorem Z.13). This is a concrete branch identification rather than a metaphor, but the rate-$\tfrac{1}{2}$ split is not an unconditional consequence of $M=24$ alone without an additional PCE rate-selection theorem.
+On the predictive-recovery MacWilliams Golay branch, the 24 QFI modes are organized by the extended binary Golay code $[24,12,8]$ (Theorem Z.13b). This is a concrete branch identification rather than a metaphor: the rate-$\tfrac{1}{2}$ split is fixed on that branch by the MacWilliams dual-asymmetry gate of Definition Z.13b.0 and Theorem Z.13b.0a, but it is still not an unconditional consequence of $M=24$ alone.
 
-**Implication:** The physical vacuum is not a blank substrate but an error-correcting structure. What is fixed by the framework is a rate-$\frac{1}{2}$ 12+12 organization of the 24-mode sector, not a literal identification of physical degrees of freedom as message bits versus parity bits. Physical law therefore includes built-in redundancy—the universe is structured to preserve predictive content against thermal and quantum noise.
+**Implication:** The physical vacuum is not a blank substrate but an error-correcting structure. What is fixed on this branch is a rate-$\frac{1}{2}$ 12+12 organization of the 24-mode sector, not a literal identification of physical degrees of freedom as message bits versus parity bits. Physical law therefore includes built-in redundancy—the universe is structured to preserve predictive content against thermal and quantum noise.
 
 On the substrate-aligned residual branch this claim becomes experimentally sharper than ordinary code-performance benchmarking. The prediction is not merely that Golay codes perform well; standard coding theory already explains much of that. The discriminating prediction is that after ordinary device noise is modeled away, the irreducible residual correlated syndrome spectrum of a clean 24-mode interface should carry the Golay shell geometry itself: the leading nontrivial residual shell is the 759-octad shell, and its incidence statistics obey $253:77:21:5:1$.
 
@@ -1515,7 +1515,7 @@ In the continuum effective description (Appendix X), the same equivalence relati
 
 3. **Structural correspondence:** In the capacity-saturating regime of Theorem G.8.4b, the *dimension* of the gauge algebra $\mathfrak{g}_{\mathrm{SM}}$ (12 generators) matches the Lagrangian capacity bound from the symplectic structure on the interface (Theorem G.8.2e). This is a structural/dimensional correspondence, not a literal isomorphism between a finite stabilizer group and a continuous gauge group.
 
-This status is made precise in Appendix G.8.4g: the classical Golay code provides a *structural analogy* for the gauge organization, with the rate-$\frac{1}{2}$ partition $k = n-k = 12$ matching the same 12+12 organizational split that reappears in the capacity-saturating regime, while the 12-generator gauge budget itself is fixed by Theorem G.8.2e. The point is the structure of the 24-mode organization, not a literal identification of classical message/parity degrees of freedom with a continuous gauge group.
+This status is made precise in Appendix G.8.4g: the classical Golay code provides a *structural analogy* for the gauge organization, with the predictive-recovery MacWilliams partition $k=n-k=12$ matching the same 12+12 organizational split that reappears in the capacity-saturating regime, while the 12-generator gauge budget itself is fixed by Theorem G.8.2e. The point is the structure of the 24-mode organization, not a literal identification of classical message/parity degrees of freedom with a continuous gauge group.
 
 ## 14.5.8 Paradox-Avoidance Residue and the Statistics of Self-Referential Observation
 
@@ -1648,9 +1648,80 @@ Thus PCE-minimization need not commute with window restriction.
 
 The manuscript currently has no theorem excluding this finite pattern. M.3.3 fixes the structural decomposition, normalization, and ideal-limit clauses of $G_{\mathrm{persp}}$, together with the explicit drift-diffusion realization of M.5a-M.5b; it does not establish a projective family of finite-window minimizer kernels. Therefore the standard Kolmogorov extension theorem cannot be invoked to derive the Environmental SPAP support claim. A global support-exclusion theorem requires an additional commutation theorem for PCE-minimization under window restriction or an alternative global construction that does not pass through window-local minimizers. ∎
 
+**Definition 14.5.8e (Hard-Core Perspective Gibbs Datum).** Let $\Sigma$ be the retained perspective configuration manifold and let $\Sigma_{\mathrm{SPAP}}\subset\Sigma$ be the SPAP-admissible submanifold for the embedded Property-R predictor class. A hard-core perspective Gibbs datum is a finite-window family
+$$
+(\Sigma_W,V_W,\beta_W,\lambda_W,\rho_{W'W})_{W\in\mathcal W}
+\tag{14.5.8e.1}
+$$
+with:
+
+1. finite-window base measures $\lambda_W$ on $\Sigma_W$;
+
+2. inverse temperatures $\beta_W\to\infty$ along the operational refinement net;
+
+3. Gibbs kernels
+$$
+dG_W(x)=Z_W^{-1}e^{-\beta_WV_W(x)}d\lambda_W(x);
+\tag{14.5.8e.2}
+$$
+
+4. hard-core divergence away from the admissible set:
+$$
+V_W(x)\to+\infty
+$$
+uniformly on every compact subset of $\Sigma_W\setminus\Sigma_{\mathrm{SPAP},W}$;
+
+5. $\Gamma$-convergence of $V_W$ to a finite lower semicontinuous functional $V_\infty$ on $\Sigma_{\mathrm{SPAP}}$;
+
+6. zero limiting boundary capacity of $\partial\Sigma_{\mathrm{SPAP}}$ for the Dirichlet form generated by the finite-resource perspective kernels;
+
+7. DLR consistency of the finite-window conditional specifications:
+$$
+G_{W'}(\,\cdot\mid W)=G_W
+\qquad
+(W\subseteq W')
+\tag{14.5.8e.3}
+$$
+on retained operational cylinders;
+
+8. equicoercivity/tightness and partition-function convergence strong enough that the cylinder restrictions of $G_W$ form a total-variation Cauchy family on every retained operational cylinder;
+
+9. admissible-support noncollapse: for every nonempty retained operational cylinder $U$ with $U\cap\Sigma_{\mathrm{SPAP}}\ne\varnothing$, the limiting cylinder weights satisfy
+$$
+\liminf_W G_W(U)>0.
+\tag{14.5.8e.4}
+$$
+This clause excludes zero-temperature concentration onto a proper subset of $\Sigma_{\mathrm{SPAP}}$; without it, a nonconstant finite $V_\infty$ could collapse the limit to its minimizers rather than to all of $\Sigma_{\mathrm{SPAP}}$.
+
+**Theorem 14.5.8f (Hard-Core Environmental SPAP Support).** If the perspective kernel family carries a hard-core perspective Gibbs datum, then the finite-window Gibbs kernels converge in total variation on every retained operational cylinder to a global kernel $G_{\mathrm{SPAP}}$, and
+$$
+\operatorname{supp}G_{\mathrm{SPAP}}=\Sigma_{\mathrm{SPAP}}.
+\tag{14.5.8f.1}
+$$
+Thus the Environmental SPAP Hypothesis is derived on this datum rather than assumed.
+
+*Proof.* The hard-core divergence and the total-variation Cauchy/tightness clause of Definition 14.5.8e imply that every open cylinder set whose closure lies outside $\Sigma_{\mathrm{SPAP}}$ has Gibbs weight tending to zero at the large-deviation rate determined by the limiting functional. The zero boundary-capacity condition prevents loss of mass to $\partial\Sigma_{\mathrm{SPAP}}$, which is precisely the weak-limit boundary-charging obstruction of Proposition 14.5.8c. Hence the restrictions of $G_W$ converge in total variation on retained cylinders to a measure carried by $\Sigma_{\mathrm{SPAP}}$. DLR consistency gives compatibility under window restriction, so the cylinder limits determine a unique global kernel. By the admissible-support noncollapse clause of Definition 14.5.8e, every nonempty retained cylinder intersecting $\Sigma_{\mathrm{SPAP}}$ has positive limiting weight. Therefore the support is exactly $\Sigma_{\mathrm{SPAP}}$. ∎
+
+**Corollary 14.5.8g (Passive-Residue Magnitude and Protocol Invariance).** On a hard-core perspective Gibbs branch, for any retained event $A$,
+$$
+G_W(A\setminus\Sigma_{\mathrm{SPAP}})
+\le
+\exp[-\beta_W R_W(A)]
+\tag{14.5.8g.1}
+$$
+where
+$$
+R_W(A)=\inf_{x\in A\setminus\Sigma_{\mathrm{SPAP},W}}
+\big(V_W(x)-\inf_{\Sigma_{\mathrm{SPAP},W}}V_W\big).
+\tag{14.5.8g.2}
+$$
+If $R(A)=\liminf_W R_W(A)>0$, then passive-tier outcome-frequency deviations outside the SPAP-admissible support are exponentially bounded by $e^{-\beta_WR(A)}$. The limiting ceiling is protocol-invariant under changes of finite-window exhaustion that preserve the same DLR specification.
+
+*Proof.* Equation (14.5.8g.1) is the standard Gibbs large-deviation bound obtained by comparing the infimum of the potential on $A\setminus\Sigma_{\mathrm{SPAP},W}$ to the infimum on the admissible support. Taking the lower limit of the rate gaps gives the stated exponential ceiling. DLR consistency makes the limiting cylinder law independent of the exhaustion sequence, so the ceiling is a property of the global specification rather than of a chosen finite-window protocol. ∎
+
 #### The Residue Conjecture
 
-**Conjecture 14.5.8 (Residue Conjecture).** *Assume the Environmental SPAP Hypothesis.* Then for a system $S$ with Effective Operational Property R, the distribution of actualized outcomes in $S$'s local environment is the restriction of the unconstrained kernel to the SPAP-admissible submanifold of $\Sigma$. The shape of the excluded region is not directly observable to $S$, but its complement — what remains after exclusion — carries statistical structure correlated with the reflexive depth $\sigma_S(E)$ of patterns $S$ is currently integrating. This structure is the passive-tier paradox-avoidance residue.
+**Conjecture 14.5.8 (Residue Conjecture).** *Assume either the Environmental SPAP Hypothesis or the hard-core support theorem 14.5.8f.* Then for a system $S$ with Effective Operational Property R, the distribution of actualized outcomes in $S$'s local environment is the restriction of the unconstrained kernel to the SPAP-admissible submanifold of $\Sigma$. The shape of the excluded region is not directly observable to $S$, but its complement — what remains after exclusion — carries statistical structure correlated with the reflexive depth $\sigma_S(E)$ of patterns $S$ is currently integrating. This structure is the passive-tier paradox-avoidance residue.
 
 As an orientation: the mechanism posited here is negative in the same sense that the second law is negative. Entropy increase is not enforced by an agent acting on microstates but by the measure-theoretic dominance of high-entropy macrostates, and observers inside such systems experience the asymmetry as a lawlike tendency. A passive residue, if one existed, would stand in the analogous relation to SPAP: no positive faculty arranges correlated events; the configurations in which $S$'s self-model would be driven into diagonalization are simply absent from the support of $G_{\text{persp}}$, and what $S$ encounters is whatever the admissible support permits. This analogy is explanatory rather than inferential, and is offered to clarify the kind of object the conjecture proposes, not to establish it.
 
@@ -1666,17 +1737,17 @@ The Pauli–Jung intuition that observer and observed could not be fully separat
 
 #### Relation to the Historical Corpus
 
-If the Residue Conjecture holds, the structural features a passive residue would necessarily have — small magnitude, persistence across large trial counts, concentration at moments of high reflexive engagement, and independence from macroscopic energy transfer — would align with the sort of bounded, non-signalling effects that parts of the Rhine, SRI, PEAR, Ganzfeld, and precognition literatures have claimed. Whether that literature is in fact measuring such a residue is an empirical question the framework does not settle; what the framework provides is a structural template against which carefully controlled future experiments could be evaluated. The framework neither ratifies nor dismisses the historical corpus; it identifies a specific conditional statement — *if the Environmental SPAP Hypothesis holds, then effects with this structural fingerprint would be expected* — and leaves both the antecedent and the empirical status of the consequent as open questions.
+If the Residue Conjecture holds, the structural features a passive residue would necessarily have — small magnitude, persistence across large trial counts, concentration at moments of high reflexive engagement, and independence from macroscopic energy transfer — would align with the sort of bounded, non-signalling effects that parts of the Rhine, SRI, PEAR, Ganzfeld, and precognition literatures have claimed. Whether that literature is in fact measuring such a residue is an empirical question the framework does not settle; what the framework provides is a structural template against which carefully controlled future experiments could be evaluated. The framework neither ratifies nor dismisses the historical corpus; it identifies a specific conditional statement — *if the Environmental SPAP Hypothesis holds, or if the hard-core perspective Gibbs datum of Definition 14.5.8e is accepted, then effects with this structural fingerprint would be expected* — and leaves the empirical status of the consequent as an open question.
 
 #### Open Problems
 
-Three open problems are identified by this section and should be tracked explicitly.
+The three obstructions identified by this section are resolved on the hard-core perspective Gibbs branch and remain open outside it.
 
-1. *Support-exclusion gap.* Three labeled no-go results localize the obstruction. Proposition 14.5.8b shows that the Environmental SPAP Hypothesis does not follow from SPAP diagonalization, Theorem M.10.3, and PCE cost-gradient bias alone. Proposition 14.5.8c shows that the natural recovery-limit alternative — constructing $G_{\mathrm{persp}}$ as a weak limit of finite-resource update kernels — is obstructed by Corollary M.10.4.1, whose internal finite-cost approach to the SPAP boundary witnesses boundary charging under weak convergence. Proposition 14.5.8d shows that PCE-minimized window-local kernels need not be projectively consistent under window restriction, so a Kolmogorov-style global assembly is also unavailable. Closing the support-exclusion gap requires either (a) an additional support theorem or primitive support restriction, (b) a finite-resource construction with total-variation rather than weak convergence and explicit boundary avoidance, or (c) a non-projective global construction together with a commutation theorem for PCE-minimization under window restriction.
+1. *Support-exclusion gap.* Proposition 14.5.8b shows that SPAP diagonalization, Theorem M.10.3, and PCE cost-gradient bias alone do not determine null sets. Proposition 14.5.8c shows that weak finite-resource recovery limits can charge the SPAP boundary. Proposition 14.5.8d shows that window-local PCE minimizers need not be projectively consistent. Definition 14.5.8e supplies the stronger datum needed to bypass all three obstructions: total-variation cylinder convergence, zero boundary capacity, and DLR consistency. Theorem 14.5.8f then derives support exclusion on that branch.
 
-2. *Quantitative magnitude mapping.* A quantitative mapping from the cost-functional divergence of Theorem M.10.3 to a numerical bound on passive-tier outcome-frequency deviation remains to be derived. If such a mapping is established, the divergence structure would impose a corresponding ceiling on admissible passive-tier deviations; the current manuscript does not yet fix the numerical form of that ceiling.
+2. *Quantitative magnitude mapping.* Corollary 14.5.8g gives the passive-tier ceiling in terms of the hard-core rate gap $R(A)$. The manuscript still does not assign a universal numerical value to $R(A)$; that value is a branch-specific consequence of the accepted finite-resource perspective potential.
 
-3. *Protocol-invariance prediction.* If the Residue Conjecture holds, the ceiling on passive-tier effect size would be a structural property of the kernel rather than a contingent limit of current experimental technique. In contrast to typical signal-recovery scenarios, this predicts that increased trial counts under rigorous protocols should reveal the ceiling rather than overcome it: residues should remain small and persistent rather than either vanishing into null results under methodological improvement or growing into macroscopic effects under increased power. Formalizing this into a protocol specification is a target for experimental design.
+3. *Protocol-invariance prediction.* Corollary 14.5.8g also gives protocol invariance for finite-window exhaustions preserving the same DLR specification. Outside the hard-core DLR branch, protocol invariance remains a target for experimental design rather than a theorem-level prediction.
 
 #### Experimental Signature
 
@@ -1684,7 +1755,7 @@ If both tiers exist, they are in principle distinguishable by their scaling with
 
 #### Status Summary
 
-The Residue Conjecture introduces no new formal objects; it adds one new hypothesis — the Environmental SPAP Hypothesis — about the objects already present in the framework. Within the current manuscript, the active tier is theorem-level and bounded by Theorem 39; the passive tier is a conjecture conditional on the Environmental SPAP Hypothesis, and Propositions 14.5.8b, 14.5.8c, and 14.5.8d localize three independent obstructions to deriving the hypothesis from the current PU stack: cost-gradient bias does not determine null sets, weak limits of finite-resource recovery kernels can charge the SPAP boundary via the Corollary M.10.4.1 approach family, and PCE-minimized window-local kernels need not be projectively consistent under window restriction. The present framework supports a strong exclusion statement — no macroscopic acausal control channel is licensed — while leaving the passive observer-indexed, non-signalling residue as a conditional model branch rather than a derived consequence.
+The Residue Conjecture introduces no new formal objects. Within the current manuscript, the active tier is theorem-level and bounded by Theorem 39. The passive tier is theorem-level only on the hard-core perspective Gibbs branch of Definition 14.5.8e and Theorem 14.5.8f; outside that branch it remains conditional on the Environmental SPAP Hypothesis. Propositions 14.5.8b, 14.5.8c, and 14.5.8d remain important because they show exactly why ordinary cost-gradient bias, weak recovery limits, and window-local PCE minimization are insufficient. The present framework supports a strong exclusion statement — no macroscopic acausal control channel is licensed — while assigning the passive observer-indexed, non-signalling residue to the hard-core support branch or to the conditional model layer if that branch datum is not supplied.
 
 ## 14.6 Scope of the Core Derivations
 
@@ -1704,7 +1775,7 @@ $$
 $$
 on the minimal Appendix Z / attractor branch. This is the manuscript's exact one-parameter core: once $K_0 = 3$ is fixed, no further discrete choice enters the backbone itself.
 
-Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z mode-channel correspondence model, the backbone already includes $D = 4$ (Theorem Z.11). The abstract gauge algebra appears only after the additional chirality, anomaly-cancellation, and capacity-regime assumptions of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the topological three-generation theorem on its own anomaly+CP route (Theorem R.3.4), and Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The stronger slogan "$K_0 = 3$ determines everything" should therefore be read as: it determines the discrete backbone exactly, and it seeds later sectors only together with their stated local hypotheses.
+Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z Bures tangent-cell mode-channel contract, the backbone includes $D=4$ (Theorem Z.11), and predict-verify self-duality fixes the interface code dimension $k=12$ (Theorem Z.13). The abstract gauge algebra appears on the finite-response positive-marginal capacity branch of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the topological three-generation theorem on its anomaly+CP route (Theorem R.3.4) and the exact pre-flavor family-redundancy realization (Proposition R.3.5.1a). Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The stronger slogan "$K_0=3$ determines everything" should therefore be read as: it determines the discrete backbone exactly, and it seeds later sectors together with their stated local finite-response contracts.
 
 ### 14.6.2 What is conditional, convention-carried, or model-level
 
@@ -1726,37 +1797,23 @@ Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-
 
 | Sector | Best current status |
 |:-------|:--------------------|
-| Backbone $K_0 \to d_0 \to \varepsilon \to a \to b \to M$ | Theorem-level on the minimal Appendix Z / attractor branch, with $\varepsilon=\ln 2$ on the Landauer-saturating branch. The extensions $M\to k=12$ and $M\to D=4$ require, respectively, the balanced Golay branch and the tangent-kissing mode-channel branch. |
-| $N_g = 3$ | Theorem-level as the minimal admissible count in the anomaly+CP family-charge class; exact realized $N_g=3$ uses the minimal-family PCE/MDL branch. |
-| Abstract gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ | Theorem-level under chirality, anomaly cancellation, and the Appendix G.8 capacity regime |
-| Thomson-limit $\alpha$ | Canonical Appendix Z branch prediction through Theorem Z.26, requiring the unit bulk-Ward, interface-derivative, projected-response sign, democratic curvature, and separable-response branches. |
-| Operational continuum manifold / Lorentzian geometry | Conditional on the $M=24$, $D=4$ shell branch packaged by Theorem 43.5, using Appendix C.6d–C.6e, the finite-defect microscopic selection and Mosco closure of Theorem D.6e, the vanishing-defect curvature-transfer bridge of Theorem C.6c, and the vanishing-defect rigidity upgrade of Theorem 44a; exact continuum ontology excluded by Theorem K.10.3a |
-| AQFT route | Conditional on the operational-continuum branch plus the controlled generator convergence and compatible-embedding hypotheses of Theorem F.0; lightcone normalization is supplied by Corollary F.1a on the strict finite-range single-clock ND-RID branch and remains explicit otherwise |
-| Einstein route / field equations | Conditional on the operational-continuum branch, Appendix E area-law/calibration branch, Appendix B stress-energy source construction, Appendix F local Rindler/KMS modular bridge, the Clausius relation, and the local-horizon bridge of Theorem 48a. |
-| Appendix T matching-scale observables | Conditional on threshold data, running, matching, and the quantitative constructions introduced there; Remark T.17a.4 and Proposition T.17a.5 rule out the sector-independent local affine truncation, Theorem T.78.5 proves negative closure for the pre-certificate canonical ledger, and Definition T.78.6/Algorithm T.78.6a/Theorem T.78.7 give the positive RHG certificate route for the operative global sector-resolving $\mathrm{MS2}_{\mu_G}$ block functional on $\widetilde X$ |
-| Appendix U reference exponent $\kappa_{\mathrm{ref}}$ | $\kappa = 142$ is the corrected four-mode branch value under the explicit false-vacuum spectral hypotheses of Theorem U.13b; $\kappa_{\mathrm{ref}} = 141.5$ remains the Appendix U five-mode reference branch value, which Theorem U.8c does not realize in the current continuum action |
-| Appendix U working numerical prefactor $A_{\mathrm{eff}}$ | Working forward-evaluation convention of Corollary U.15b |
-| CC influence, detailed flavor numerics, and baryogenesis numerics | Model layer |
+| Backbone $K_0 \to d_0 \to \varepsilon \to a \to b \to M \to k \to D$ | Theorem-level on the minimal finite-response Appendix Z / attractor branch, with $\varepsilon=\ln2$ on the Landauer-saturating branch. The predictive-recovery MacWilliams gate of Definition Z.13b.0 and Theorem Z.13b.0a forces $k=12$ inside the interface-code contract, and the Bures tangent-cell correspondence of Theorem Z.10 together with Theorem Z.11 forces $D=4$ inside the admissible finite-response channel representation. |
+| $N_g=3$ | Theorem-level as the minimal admissible count in the anomaly+CP family-charge class by Theorem R.3.4; exact realized $N_g=3$ holds on the pre-flavor family-redundancy PPI branch by Proposition R.3.5.1a. Detailed flavor masses and mixings are certificate-complete only under Definition T.79.4 and Theorem T.79.6. |
+| Abstract gauge algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ | Theorem-level on the finite-response positive-marginal capacity branch: Theorem G.8.4b forces the $3+2+1$ inactive-sector split and Corollary G.8.4c gives the determinant-compatible gauge algebra. |
+| Thomson-limit $\alpha$ | Canonical Appendix Z branch prediction through Theorem Z.26. Theorem-level normalization closure requires an accepted Thomson normalization certificate $\mathfrak C_\alpha$ in the sense of Definition Z.27.11a and Theorem Z.27.11c; failure of the certified interval demotes the branch by Corollary Z.27.11d. |
+| QFI acceleration bridge $\eta'$ | Unique inside the admissible QFI linear-response bridge-law class of Definition H.4.2.8a; Theorem H.4.2.8b fixes $\eta'=3/(8\sqrt3)$ and Corollary H.4.2.8c gives $g_0=c^2\sqrt\Lambda/8$. |
+| Operational continuum manifold / Lorentzian geometry | Conditional on the $M=24$, $D=4$ shell branch packaged by Theorem 43.5, using Appendix C.6d-C.6e, the finite-defect microscopic selection and Mosco closure of Theorem D.6e, the curvature-transfer bridge of Theorem C.6c, the rigidity upgrade of Theorem 44a, and the global-core competitor condition refined by Proposition D.6f.2a; exact continuum ontology excluded by Theorem K.10.3a. |
+| AQFT route | Certificate-complete on the finite KMS-descent branch of Definition F.10.12a and Theorem F.10.12c; otherwise conditional on the operational-continuum branch plus the controlled generator convergence and compatible-embedding hypotheses of Theorem F.0. Lightcone normalization is supplied by Corollary F.1a on the strict finite-range single-clock ND-RID branch and remains explicit otherwise. |
+| Emergent metric / field equations | Certificate-complete on the F.10.12 branch by Corollary 12.1b; otherwise conditional on the operational-continuum branch, Appendix E area-law/calibration branch, Appendix B stress-energy source construction, Appendix F local Rindler/KMS modular bridge, the Clausius relation, and the local-horizon bridge of Theorem 48a. This is an emergent metric and channel-capacity thermodynamics route. |
+| Appendix T matching-scale observables | Conditional on threshold data, running, matching, and the quantitative constructions introduced there; Remark T.17a.4 and Proposition T.17a.5 rule out the sector-independent local affine truncation, Theorem T.78.5 proves negative closure for the pre-certificate canonical ledger, Theorem T.78.11 gives the forward-locked RHG certificate route, and Theorem T.5d.2 gives the direct Steiner-electroweak pair-count identity. |
+| Appendix U reference exponent $\kappa_{\mathrm{ref}}$ | $\kappa=142$ is the corrected four-mode branch value under the explicit false-vacuum spectral hypotheses of Theorem U.13b; $\kappa_{\mathrm{ref}}=141.5$ remains the Appendix U five-mode reference branch value, which Theorem U.8c does not realize in the current continuum action. |
+| Appendix U numerical prefactor $A_{\mathrm{eff}}$ | A theorem-level four-mode value requires the Fredholm prefactor certificate of Definition U.15d and Theorem U.15e, with no promotion without the audit by Corollary U.15f. If determinant transfer is used, the Bismut-Lebeau datum of Definition U.15g through Corollary U.15j fixes the transfer ledger. The Corollary U.15b working value remains a forward-evaluation convention unless independently reproduced by the four-mode certificate. |
+| Flavor numerics and baryogenesis numerics | Certificate-complete only under the flavor completion certificate of Definition T.79.4/Theorem T.79.6 and the baryogenesis transport certificate of Definition Y.11.7a/Theorem Y.11.7b. Without those records they remain model-layer. |
+| CC influence | Model layer unless its local protocol package is fixed before validation comparison under Definition 13.0d and the evidence standard of Definition 13.0a. |
 
-### 14.6.6 What remains for full unconditional closure
+### 14.6.6 What remains for full closure
 
-At the manuscript's present explicitly stated scope, the remaining former Tier-1 gaps are now closed negatively, so the patch is internally airtight at that scope:
-
-1. **Vacuum closure:** Theorem U.73a refutes quartic homogeneity on the theorem-level false-vacuum bounce branch, so Theorem U.13b's four-mode closure is the sole current theorem-level vacuum closure.
-2. **Hurwitz structural identification:** Theorem 23a.1c refutes the proposed functorial/categorical identification of
-$$
-K_0=3
-$$
-with the Hurwitz count
-$$
-\#\{\mathbb C,\mathbb H,\mathbb O\}=3.
-$$
-Corollary 23a.1b therefore remains a numerical coherence check rather than a shared categorical invariant.
-3. **Uniform source-energy floor:** Theorem P.15.1a refutes any system-specific uniform positive infimum of $\Delta_\Sigma$ over self-model-engaging patterns, and does so even on the subset where $\Delta_\Sigma>0$.
-
-These closures sharpen the status boundary. The manuscript is internally consistent when theorem-level rows, branch-level rows, validation targets, bridge laws, transferred prefactors, and model-layer inputs are kept separate at the point of use.
-
-The remaining unconditionality blockers are: a functorial strengthening of Theorem X.8a, a single-source derivation of the minimal-branch integer ledger, a direct structural proof of the Steiner-electroweak identity, a source-energy rate theory beyond fixed high-$\mu_S$/temperature strata, autonomous complexity growth under the Source Principle, cosmological backreaction estimates, and uniqueness of the canonical arena hierarchy. Those would deepen the framework, but their absence no longer leaves any unresolved Tier-1 logical hole.
+The remaining non-theorem rows are exactly the rows without accepted finite certificates: the Thomson normalization certificate $\mathfrak C_\alpha$, the RHG acceptance record $\mathfrak R_{\mathrm{RHG}}$, the four-mode vacuum prefactor certificate $\mathfrak F_U$, the flavor completion certificate $\mathfrak C_{\mathrm{fl}}$, the baryogenesis transport certificate $\mathfrak C_B$, and any CC/statistical-influence protocol package entered under Definition 13.0d. By Theorem P.14.1f and Corollary P.14.1g, these rows cannot be promoted by prose, status labels, or post-comparison interval choices. They require their actual finite records: spectral matrices, determinant records, finite-part sums, tail bounds, stationary data, transport integrals, and forward-lock ledgers. A functorial strengthening of Theorem X.8a, a source-energy rate theory beyond fixed high-$\mu_S$/temperature strata, autonomous complexity growth under the Source Principle, cosmological backreaction estimates, and uniqueness of the canonical arena hierarchy would further compress the framework, but their absence does not permit post-comparison branch changes. Each such sector is either certificate-complete before comparison or remains branch/model-layer by the ledger.
 
 ### 14.6.7 Final scope statement
 
