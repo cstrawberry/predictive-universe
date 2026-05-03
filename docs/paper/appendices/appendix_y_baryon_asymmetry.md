@@ -1109,6 +1109,8 @@ Consequently, within the Appendix Y channel, the flavor-topology sector and the 
 
 *Proof.* Immediate from Theorem Y.11.6. ∎
 
+**Remark Y.11.7a.0 (Anchor to the Global Ledger).** Definition Y.11.7a supplies the local strict PPI/PCE certificate of the baryon asymmetry row in Convention P.14.1k. Theorem Y.11.7b is the local determinacy theorem and Definition Y.11.7e refines the certificate to the finite transport-integral form. An accepted $\mathfrak C_B$ or accepted $\mathfrak C_B^{\mathrm{tr}}$ closes the row by Theorem D.8.9b.
+
 **Definition Y.11.7a (Baryogenesis Transport Certificate).** A baryogenesis transport certificate is a finite record
 $$
 \mathfrak C_B
@@ -1220,7 +1222,7 @@ is theorem-level only if it is the evaluated reduction of an accepted $\mathfrak
 
 *Proof.* Theorem Y.11.7f defines theorem-level transport closure through the finite generator, CP source, washout profile, quadrature ledger, and residual interval. A scalar product not derived from those entries does not instantiate the transport equation. If a factor is replaced after comparison, $\chi_B^{\mathrm{tr}}$ fails and the replacement is a new branch. ∎
 
-## Y.11 Derivation Chain Summary
+## Y.11 Baryogenesis Derivation Chain Summary
 
 The complete logical chain from $K_0 = 3$ to $\eta_B$:
 

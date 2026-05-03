@@ -1204,6 +1204,14 @@ $$
 $$
 with dimension $12$. ∎
 
+**Corollary G.8.4c.0a (No Free Gauge-Branch Selection at Fixed Inactive Sector).** Inside the finite-response positive-marginal branch of Theorem G.8.4b, the gauge algebra of Corollary G.8.4c is forced by the inactive-sector certificate and is not a post-hoc Standard Model insertion.
+
+*Proof.* Theorem G.8.4b enumerates every unordered partition of $\dim\mathcal B=6$ and evaluates the retained generator count
+$$
+n_G(\lambda)=1+\sum_{i:n_i\ge2}(n_i^2-1)
+$$
+for each partition. Rows with $n_G>12$ violate the Lagrangian capacity bound of Theorem G.8.2e. Rows with $n_G<12$ are PCE-dominated in the positive-marginal regime because the partition $3+2+1$ is admissible and saturates $n_G=12$. The enumeration contains exactly one row with $n_G=12$, namely $3+2+1$. Corollary G.8.4h.3 removes exact response-null global phases, and anomaly descent retains only one determinant-compatible abelian response direction. Therefore no other compact connected faithful block-frame algebra on $\mathcal B$ has the same admissibility, capacity saturation, and finite-response quotient data. ∎
+
 **Corollary G.8.4c.1 (Exclusion of Simple Unification Groups).**
 *Grand unified theories based on simple gauge groups are excluded by the capacity bound:*
 

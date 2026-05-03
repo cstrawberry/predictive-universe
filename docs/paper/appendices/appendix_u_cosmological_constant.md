@@ -1254,6 +1254,38 @@ $$
 $$
 fixing $\kappa=142$ fixes only the exponential. The scalar $A_{\mathrm{eff}}^{(4)}$ is a product of determinant, Jacobian, quotient, negative-mode, ghost, finite-volume, and measure factors. If any one of these finite entries is unspecified, it can be varied within the admissible Fredholm and finite-measure class while preserving the same exponent. Such variations change (U.15l.1). Theorem P.14.1f therefore blocks theorem-level numerical promotion from the exponent alone. Corollary U.15f gives the corresponding audit rule. ∎
 
+**Remark U.15d.0 (Anchor to the Global Ledger).** Definition U.15d together with Theorem U.15e supplies the local strict PPI/PCE certificate of the cosmological constant prefactor row in Convention P.14.1k. Corollary U.15f forbids promotion without the audit, and Theorem U.15l blocks four-mode prefactor promotion without the Fredholm record. The combination of an accepted $\mathfrak F_U$ filling each item of Definition U.15d, or an accepted four-mode interval audit $\mathfrak I_U^{(4)}$ in the sense of Definition U.15f.1, closes the row by Theorem D.8.9b.
+
+**Definition U.15m (Fredholm Prefactor Gate).** The cosmological-constant prefactor row is theorem-closed only when the finite Fredholm record supplies the entries required by Definition U.15d on one common vacuum branch and finite-part convention:
+
+1. the false-vacuum fluctuation operator $\mathcal H_{\mathrm{false}}$,
+2. the bounce fluctuation operator $\mathcal H_{\mathrm{bounce}}$,
+3. the exact zero-mode projector $\Pi_0$,
+4. the negative-mode projector $\Pi_-$ and negative-mode prescription $\mathcal A_{\mathrm{neg}}$,
+5. the ghost or gauge-volume factor $\mathcal A_{\mathrm{ghost}}$ when a redundancy is present,
+6. the determinant regularization rule and finite-part scale $\mu_U$,
+7. the collective-coordinate Jacobian $\mathcal J_{\mathrm{coll}}$,
+8. the finite-volume/extensivity and measure factors $\mathcal A_{\mathrm{fv}}$ and $\mathcal A_{\mathrm{meas}}$,
+9. the evaluated prefactor
+$$
+A_{\mathrm{eff}}^{(4)}
+=
+\mathcal J_{\mathrm{coll}}
+|\mathcal A_{\mathrm{neg}}|
+\mathcal A_{\mathrm{ghost}}
+\mathcal A_{\mathrm{fv}}
+\mathcal A_{\mathrm{meas}}
+\left(
+\frac{\det{}'_\zeta\mathcal H_{\mathrm{false}}}{|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|}
+\right)^{1/2}
+\tag{U.15m.1}
+$$
+with every entry fixed before comparison. An interval-valued version is theorem-closed only when the interval audit supplies the endpoint data of Definition U.15f.1 before comparison.
+
+**Theorem U.15m.1 (No Cosmological-Prefactor Promotion without the Fredholm Gate).** The four-mode cosmological-constant prefactor row is closed if Definition U.15m is satisfied. Without the full gate, the exponent row may retain its stated status, but the prefactor row remains certificate-pending.
+
+*Proof.* Equation (U.15m.1) is exactly the four-mode specialization of the Fredholm prefactor formula (U.15d.3). If the entries are accepted on one branch and finite-part convention, the prefactor is fixed and Theorem D.8.9b applies. If any input entry is missing, two completions can agree on the exponent and all parent rows while differing in the determinant ratio, collective-coordinate Jacobian, zero-mode quotient, negative-mode prescription, ghost factor, finite-volume/extensivity factor, measure normalization, or finite-part scale. Theorem P.14.1f gives non-identifiability of $A_{\mathrm{eff}}^{(4)}$, and Convention P.14.1l forbids promotion. ∎
+
 **PPI mapping chain (vacuum weight).** The identification
 $$
 \Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-2\kappa_{\mathrm{ref}}}
@@ -1398,8 +1430,9 @@ Both structures exist at $M = 24$ as derived consequences of PCE optimization (T
 | $\kappa = 142-\nu/2$ | $\nu\in\{0,1\}$ | Branch theorem | ThresholdData | T2 if branch unresolved |
 | $A_{\mathrm{eff}}^{(\mathrm{obs})}$ | $0.917\pm 0.016$ | Empirical input | EmpiricalInput / ReferenceConvention | T3 observational inversion |
 | $A_{\mathrm{eff}}$ | $0.923\pm 0.011$ | Convention | ReferenceConvention | T1 determinant-transfer truncation plus T2 prefactor convention |
+| $A_{\mathrm{eff}}^{(4)}$ | undetermined until $\mathfrak F_U$ is evaluated | Open target / negative theorem gate | ThresholdData | blocked by Theorem U.15l without the Fredholm prefactor certificate of Definition U.15d |
 | $\Lambda L_P^2 = 8\pi A_{\mathrm{eff}}e^{-283}$ | five-mode branch value | Convention | ReferenceConvention | T1+T2 at fixed branch |
-| $\Lambda L_P^2 = 8\pi A_{\mathrm{eff}}e^{-284}$ | four-mode forward evaluation | Branch theorem / Convention | ReferenceConvention | T1+T2 at fixed branch |
+| $\Lambda L_P^2 = 8\pi A_{\mathrm{eff}}e^{-284}$ | four-mode forward evaluation | Branch theorem / Convention | ReferenceConvention | T1+T2 at fixed branch; no theorem-level numerical value until $A_{\mathrm{eff}}^{(4)}$ is certified |
 | $\kappa_Q$ | $11$ | Identification | ExactThreshold | exact inside Identification U.20 |
 
 The observation-facing inversion table is therefore:
@@ -1411,7 +1444,7 @@ The observation-facing inversion table is therefore:
 | $A_{\text{eff}}^{(\text{obs})}$ on $m=5$ branch | $O(1)$ | $0.917 \pm 0.016$ | Corollary U.15b; T3 observational inversion on the five-mode branch |
 | $A_{\text{eff}}^{(\text{obs},4)}$ on $m=4$ branch | $O(1)$ | $2.49 \pm 0.04$ | same observed $\Lambda L_P^2$ with exponent $142$; T3 observational inversion on the four-mode branch |
 
-*Proof.* The status column restates the cited theorem, corollary, identification, or convention. The parameter-role column is obtained by applying Convention P.14.1a to each occurrence: a zero-mode count is a DiscreteMultiplicity, a branch exponent is a ReferenceConvention or Branch theorem depending on whether the branch is proved, and an observationally inverted prefactor is an EmpiricalInput on the named branch. The T1/T2/T3 column follows Convention P.14.1c. Determinant-transfer truncation is T1, branch and prefactor conventions are T2, and observational inversion is T3. No row changes the numerical formulas; the table only fixes their dependency records. ∎
+*Proof.* The status column restates the cited theorem, corollary, identification, convention, or negative theorem gate. The parameter-role column is obtained by applying Convention P.14.1a to each occurrence: a zero-mode count is a DiscreteMultiplicity, a branch exponent is a ReferenceConvention or Branch theorem depending on whether the branch is proved, and an observationally inverted prefactor is an EmpiricalInput on the named branch. The T1/T2/T3 column follows Convention P.14.1c. Determinant-transfer truncation is T1, branch and prefactor conventions are T2, and observational inversion is T3. The four-mode row for $A_{\mathrm{eff}}^{(4)}$ is forced by Theorem U.15l: the exponent $\kappa=142$ fixes $e^{-284}$ but does not determine the determinant, zero-mode quotient, negative-mode, ghost, measure, and finite-part prefactor. No row changes the numerical formulas; the table only fixes their dependency records. ∎
 
 ---
 

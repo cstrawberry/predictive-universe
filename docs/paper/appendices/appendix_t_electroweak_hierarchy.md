@@ -1831,9 +1831,11 @@ $$
 
 **Result**: $\lambda_{\text{elastic}} = +1/36$ derived explicitly in Section T.15 via minimization over $(s, r)$ at $O(u^4)$.
 
-### T.20.2 Solved: Threshold Corrections ✓
+### T.20.2 Closed Subproblem: Isotropic Residual Thresholds; Principal Lift Requires Certificate
 
-**Result**: Leading-order residual threshold effects are isotropic (Theorem T.17), giving only a common additive shift in $\alpha_i^{-1}(\mu_G)$ and leaving the gauge-factor separations controlled by the principal lifted spectral thresholds $\Delta_i$ (equivalently the matching factors $Z_i$) of Corollary T.13.1. Subleading anisotropic splittings are $O(M^{-1})$-suppressed (Corollary T.17.1).
+**Closed result**: Leading-order residual threshold effects are isotropic (Theorem T.17), giving only a common additive shift in $\alpha_i^{-1}(\mu_G)$ and leaving the gauge-factor separations controlled by the principal lifted spectral thresholds $\Delta_i$ (equivalently the matching factors $Z_i$) of Corollary T.13.1. Subleading anisotropic splittings are $O(M^{-1})$-suppressed (Corollary T.17.1).
+
+**Unclosed numerical gate**: The numerical threshold tuple is not promoted by this isotropy result. The principal lifted spectral thresholds remain governed by the finite spectral certificate and the negative closure result of Theorem T.78.5. Therefore this subsection closes the isotropic residual subproblem but not the theorem-level electroweak threshold tuple.
 
 ### T.20.3 Solved: Beta Function Vanishing ✓
 
@@ -7892,6 +7894,8 @@ with $\delta_i^{\mathrm{min}}=0$ on the canonical minimal residual ledger.
 
 Thus the certificate is a completed spectral problem in the sense of Theorem T.78. Theorem T.78 then gives unique sector finite parts $F_s^{\mathrm{tor}}$, the fixed Dynkin-index map gives $\Delta^{\mathrm{tor}}=TF^{\mathrm{tor}}$, and Definition T.17a gives $Z_i^{\mathrm{tor}}=1+\Delta_i^{\mathrm{tor}}/24$. Since no separate heavy-threshold ledger is appended, Definition T.19a gives $\delta_i^{\mathrm{min}}=0$. ∎
 
+**Remark T.78.6.0 (Anchor to the Global Ledger).** Definition T.78.6 supplies the local strict PPI/PCE certificate of the electroweak threshold row in Convention P.14.1k. Algorithm T.78.6a is the acceptance test, Theorem T.78.7 is the local determinacy theorem, Definition T.78.10 fixes the threshold-vector entries, and Theorem T.78.11 is the non-contamination theorem. An accepted $\mathfrak R_{\mathrm{RHG}}$ filling Definition T.78.6 and Definition T.78.10 closes the row by Theorem D.8.9b.
+
 **Definition T.78.6 (RHG Flag-Lift Spectral Certificate).** An RHG flag-lift spectral certificate is a finite record
 $$
 \mathfrak C_{\mathrm{RHG}}
@@ -8279,6 +8283,8 @@ The map is functorial with respect to data-preserving isomorphisms of input reco
 No empirical mass, mixing, or pole value is permitted to enter the derivation side of this ledger. Empirical quantities may appear only in the comparison columns governed by Convention P.14.1c.
 
 *Proof.* The first two rows follow from Theorem T.78, Definition T.19a, Proposition T.19c, and Corollary T.78.3. The matching-scale and common-scale rows follow from the stated RG/matching conventions and from Section T.25.5.3, where common-scale data are used for comparison. The $A_{EW}$ row follows from Theorem T.29.2. The flavor-geometric rows follow from Theorems T.72-T.73 and Proposition R.3.5f: the generation-count statement is separate from the later texture and normalization data. The Majorana, seesaw, and anchored-reading rows follow from Theorems T.24.11-T.24.15 and Proposition T.24.28, which list the required neutrino-sector inputs. The CKM/PMNS row follows from Theorems T.74-T.76 and the Berry-loop assumptions explicitly stated there. The baryogenesis row follows from Appendix Y, where washout and thermal factors are model-layer inputs. Since each row is assigned to exactly one role and uncertainty class at its point of use, the ledger propagates by the meet rule of Convention P.14.1d and cannot use empirical comparison values as hidden derivation inputs. ∎
+
+**Remark T.79.4.0 (Anchor to the Global Ledger).** Definition T.79.4 supplies the local strict PPI/PCE certificate of the flavor parameter row in Convention P.14.1k. Algorithm T.79.5 is the acceptance test, Theorem T.79.6 is the local determinacy theorem, Definition T.79.8a packages the joint RHG-flavor certificate, and Theorem T.79.8b is the joint determinacy theorem. An accepted $\mathfrak C_{\mathrm{fl}}$ or accepted $\mathfrak J_{\mathrm{RHG-fl}}$ closes the row by Theorem D.8.9b.
 
 **Definition T.79.4 (Flavor Completion Certificate).** A flavor completion certificate is a finite record
 $$

@@ -6143,6 +6143,28 @@ The Principle of Compression Efficiency (Definition 15) proposes that adaptive s
 
 Combining the minimal-branch equalities gives $2^{K_0}=2a^2$ with $a=2$, hence $K_0=3$ and $d_0=8$. The structural floor $\varepsilon_0=\ln2$ is the exact SPAP quotient that makes $a=2$ the minimal admissible active kernel. Alternative values such as a nonminimal branch with $a=3$ would give $d_0=18$, which violates $d_0=2^{K_0}$ for integer $K_0$ inside the same backbone. Thus the minimum is not arbitrary but is the unique value satisfying the stated structural constraints.
 
+**Convention P.14.0a (Strict-Certificate Reading of Branch Conditions).** A branch condition is not a discretionary license to choose a favorable physical interpretation. It is a finite admissibility condition awaiting either exclusion, quotient collapse, or strict certificate closure. When a branch supplies a strict PPI/PCE certificate in the sense of Definition D.8.9a, its selected value is forced modulo response equivalence by Theorem D.8.9b. When a finite acyclic dependency stack supplies such certificates and all overlap maps commute, the whole stack is forced by Theorem D.8.9c. When a named finite entry is absent, the sector keeps the weakest unresolved status of that entry by Corollary D.8.9d and Corollary P.14.1g.
+
+**Corollary P.14.0b (Non-Discretionarity of the Core Discrete Backbone).** On the minimal finite-response backbone, the values
+$$
+K_0=3,
+\qquad
+\varepsilon_0=\ln2,
+\qquad
+d_0=8,
+\qquad
+a=2,
+\qquad
+b=6,
+\qquad
+M=24,
+\qquad
+D=4
+$$
+are not selected by an unconstrained PPI preference. Each value is the unique value satisfying its local admissibility and no-surplus gate: $K_0=3$ is the minimal SPAP register count, $\varepsilon_0=\ln2$ is the irreducible binary merge cost, $d_0=8$ is the minimal state alphabet compatible with $K_0$, $a=2$ is the minimal integer with $\ln a\ge\varepsilon_0$, $b=d_0-a=6$, $M=2ab=24$, and $D=4$ is the isolated solution of $K(D)=24$ in the Bures tangent-cell mode-channel theorem.
+
+*Proof.* The cited equalities are chained in the order displayed. At each step, a smaller value violates the stated logical, entropy-capacity, or channel-count admissibility inequality, while a larger retained value either changes the finite protocol-response presheaf and becomes a different branch or leaves the presheaf unchanged and is removed as response-null surplus by the PPI/PCE quotient. The final step uses Theorem Z.11, which gives $K(D)=M=24$; the Euclidean kissing-number values and bounds used there isolate $D=4$. ∎
+
 **Convention P.14.1a (Manuscript-Wide Status Classes and Parameter Roles).** Every major PU claim has a primary status label and every numerical or symbolic quantity used in a reported output has a parameter-role label. The status label records what kind of claim is being made. The parameter-role label records what the quantity does inside the derivation or comparison. When a short table cell cannot display the full record, it may use a combined label such as **conditional theorem / model layer**; the full dependency statement in the cited section controls the claim.
 
 | Status | Dependency-record criterion |
@@ -6277,7 +6299,7 @@ then the sector output is not theorem-level determined by the prior PU branch. I
 | Electroweak threshold branch | Moment-map-normalized $\gamma=1$ branch | Branch theorem | $\gamma\ne1$ target shifts | Theorem T.22b fixes $\gamma=1$ given the SU(2) moment-map datum of Definition T.22a | Other target-shift data are different branches, not the same theorem | The moment-map datum remains branch-defining |
 | AQFT/continuum bridge | Finite KMS/AQFT bridge package | Conditional theorem (open bridge) | Uncontrolled continuum generator limit | Hadamard, split/nuclearity, local generator, and KMS-descent certificates define accepted branches | Formal continuum labels without certificates do not promote status | Theorem F.0 Condition 3 (local generator convergence) remains an open bridge condition; certificate-complete only on the F.10.12c branch |
 
-*Proof of Convention P.14.1h.* Each row is a dependency record in the sense of Convention P.14.1a and Convention P.14.1e. If an alternative contradicts a named theorem or branch condition, it is excluded on that branch. If an alternative leaves every finite protocol-response presheaf unchanged, Theorem P.6.1b.3 identifies it in the PPI quotient and Theorem D.1d removes any strictly more costly retained representative. If an alternative changes a finite response presheaf, it is not the same physical branch and must be evaluated with its own status ledger. If a numerical sector depends on a missing finite record, Theorem P.14.1f and Corollary P.14.1g block theorem-level promotion. These cases exhaust the ledger entries above. ∎
+*Proof of Convention P.14.1h.* Each row is a dependency record in the sense of Convention P.14.1a and Convention P.14.1e. If an alternative contradicts a named theorem or branch condition, it is excluded on that branch. If an alternative leaves every finite protocol-response presheaf unchanged, Theorem P.6.1b.3 identifies it in the PPI quotient and Theorem D.1d removes any strictly more costly retained representative. If an alternative changes a finite response presheaf, it is not the same physical branch and must be evaluated with its own status ledger. If the row supplies a strict PPI/PCE certificate, Definition D.8.9a and Theorem D.8.9b force the selected value modulo response equivalence. If a finite acyclic stack supplies such certificates and all overlap maps commute, Theorem D.8.9c forces the stack. If a numerical sector depends on a missing finite record, Theorem P.14.1f, Corollary P.14.1g, and Corollary D.8.9d block theorem-level promotion. These cases exhaust the ledger entries above. ∎
 
 **Convention P.14.1i (Residual-Status Ledger).** After applying the branch-exclusion ledger, the remaining weak labels are not hidden assumptions but explicit residual gates:
 
@@ -6298,6 +6320,67 @@ then the sector output is not theorem-level determined by the prior PU branch. I
 **Convention P.14.1j (Identifier and Notation Collision Discipline).** Any relabeling, theorem promotion, or notation split must preserve unique identifiers within each local numbering family. In particular, a new theorem, lemma, corollary, remark, convention, definition, or postulate may share a numeral with a different object type only when the title and type differ and no existing object of the same type has the same identifier. Every occurrence of a split symbol must be routed to its structural, physical, branch, model, or validation meaning; legacy unindexed $\varepsilon$ is routed by Definition 28 and the local structural/physical context.
 
 *Proof.* The manuscript's dependency graph is cited by identifier. If two objects of the same type share an identifier, a citation no longer determines a unique node in the proof graph. If a split symbol is left unresolved, a formula no longer determines whether it is using a structural invariant, an implementation overhead, or a validation/model input. Both failures violate Convention P.14.1a. ∎
+
+**Convention P.14.1k (Global Strict-Certificate Ledger).** The framework's global closure is audited by the following sector-by-sector ledger. Each sector $S$ supplies the seven entries of Definition D.8.9a: admissible candidate set $Q_S$, operational equivalence $\sim_S$, retained response presheaves $\mathcal R_S$, PCE functional $V_S$, selected representative $q_S^*$, strict separation gap $g_S$, and overlap maps $\Pi_S$. A sector is **closed** when every entry is theorem-level and all overlap maps commute with the previously fixed dependency graph; **certificate-pending** when at least one entry is a named accepted finite certificate that has not yet supplied its full finite record; and **open** when at least one entry is not yet defined. The status of every later numerical row is the meet of the statuses of its parent entries.
+
+| Sector $S$ | Selected representative $q_S^*$ | Local certificate or theorem source | Closure status |
+|:--|:--|:--|:--|
+| SPAP/Landauer floor | $\varepsilon_0=\ln2$ | Theorem 31, Appendix J | closed |
+| Horizon constant | $K_0=3$ | Theorem 15 | closed |
+| Hilbert dimension | $d_0=8$ | Theorem 23, Theorem Z.2 | closed |
+| Active/inactive split | $a=2,\ b=6$ | Theorem Z.1 | closed |
+| QFI mode count | $M=24$ | Theorem Z.5 | closed |
+| Predictive-recovery code dimension | $k=12$ | Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b | closed on the predictive-recovery MacWilliams branch |
+| Spacetime dimension | $D=4$ | Theorem Z.10; Theorem Z.11; Corollary Z.11.0a | closed on the Bures tangent-cell branch |
+| Gauge algebra | $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ | Theorem G.8.4b; Corollary G.8.4c; Corollary G.8.4c.0a | closed on the finite-response positive-marginal capacity branch |
+| Generation count | $N_g=3$ | Theorem R.3.4; Proposition R.3.5.1a | closed on the pre-flavor family-redundancy PPI branch |
+| Acceleration bridge | $\eta'=3/(8\sqrt3)$ | Definition H.4.2.8a; Theorem H.4.2.8b; Corollary H.4.2.8c | closed on the QFI linear-response bridge-law class |
+| Operational continuum manifold | $M=24,\ D=4$ shell | Theorem 43; Theorem 43.5; Lemma C.6d; Theorem C.6e; Theorem D.6e; Theorem C.6c; Theorem 44a | closed on the $M=24$, $D=4$ regular branch |
+| AQFT route | finite KMS-descent net | Theorem F.0; Definition F.10.12a; Theorem F.10.12c | closed on the F.10.12 branch |
+| Emergent metric / Einstein equation | $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G T_{\mu\nu}^{(\mathrm{MPU})}$ | Theorem 48a; Theorem 12.1; Corollary 12.1b; Theorem 12.1c | closed on the F.10.12 branch as emergent finite-response equation of state |
+| Emergent metric fluctuations | finite-response covariance | Definition 12.1d; Theorem 12.1c; Definition 12.1d.4; Theorem 12.1e; Corollary 12.1e.1; Corollary 12.1e.2; Definition 12.1f; Theorem 12.1f.1 | closed on every accepted nondegenerate finite-response gravitational channel ensemble: requires the finite KMS-descent certificate together with the smooth-envelope record, the positive Hessian on the retained tangent subspace, the certified linearization radius $r_{\mathrm{grav},n}$, and the PCE fluctuation scale $\tau_{\mathrm{PCE},n}$ |
+| Horizon structural conservation | retained-class injectivity of $U_n$ | Definition E.9.5d; Theorem E.9.5e; Corollary E.9.5e.1 | closed on the retained finite-response horizon algebra under injectivity of the microscopic update |
+| Horizon exterior recovery / Page curve | recovery section or scrambling estimate | Definition E.9.5f; Theorem E.9.5f.1; Corollary E.9.5e.2 | certificate-pending on the exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ for deterministic exterior recovery, or on the approximate $k$-design scrambling assumption of Step 4 of Corollary E.9.5.2 for the Page-curve estimate |
+| Thomson-limit $\alpha^{-1}$ | (Z.27.11a) | Definition Z.27.11a; Theorem Z.27.11c; Definition Z.27.11j; Theorem Z.27.11j.1 | certificate-pending on $\mathfrak C_\alpha$ together with the residual-operator gate; certificate-complete on an accepted $\mathfrak R_\alpha^{\mathrm{AO}}$ via Theorem Z.27.11h |
+| Cosmological constant exponent | $\kappa=142$ on the four-mode false-vacuum branch | Theorem U.13b | closed on the four-mode false-vacuum branch under the stated spectral hypotheses |
+| Cosmological constant five-mode reference exponent | $\kappa_{\mathrm{ref}}=141.5$ | Appendix U reference-counting convention; Theorem U.8c | reference convention; not theorem-level without the dilation/Fredholm certificate |
+| Cosmological constant prefactor | $A_{\mathrm{eff}}^{(4)}$ | Definition U.15d; Theorem U.15e; Corollary U.15f; Theorem U.15l; Definition U.15m; Theorem U.15m.1 | certificate-pending on $\mathfrak F_U$ together with the Fredholm prefactor gate |
+| Electroweak threshold tuple | $\Delta_{\mathrm{RHG}}$ | Definition T.78.6; Algorithm T.78.6a; Theorem T.78.7; Definition T.78.10; Theorem T.78.11 | certificate-pending on $\mathfrak R_{\mathrm{RHG}}$ |
+| Flavor parameter vector | $\Pi_T$ | Definition T.79.4; Algorithm T.79.5; Theorem T.79.6; Definition T.79.8a; Theorem T.79.8b | certificate-pending on $\mathfrak C_{\mathrm{fl}}$ or $\mathfrak J_{\mathrm{RHG-fl}}$ |
+| Baryon asymmetry $\eta_B$ | finite transport image | Definition Y.11.7a; Theorem Y.11.7b; Definition Y.11.7e | certificate-pending on $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ |
+| CC influence | bounded protocol response | Definition 13.0a; Definition 13.0d; Theorem 13.0e; Theorem 39; Theorem 39a | open until a forward-locked protocol package satisfying $\chi_{\mathrm{pred}}$ is entered |
+
+**Definition P.14.1k.0 (Overlap-Commutativity Audit).** Let $G_{\mathrm{PU}}$ be the directed dependency graph whose vertices are the sectors listed in Convention P.14.1k and whose edges point from parent sectors to child sectors. An overlap-commutativity audit for $G_{\mathrm{PU}}$ is a finite record
+$$
+\mathfrak O_{\mathrm{PU}}
+=
+(G_{\mathrm{PU}},\{\Pi_{S\leftarrow R}\}_{R\to S},\{\Omega_C\}_C)
+$$
+with the following entries.
+
+1. For every edge $R\to S$, $\Pi_{S\leftarrow R}$ is the finite overlap map sending the selected representative or response presheaf of $R$ to the parent input used by the certificate of $S$.
+
+2. For every directed commutative square or higher finite overlap cell $C$ in $G_{\mathrm{PU}}$, $\Omega_C$ is the finite equality check asserting that all routes through $C$ give the same retained response presheaf modulo the response equivalence relation of Definition D.8.9a.
+
+3. The audit is accepted only when every $\Omega_C$ is a theorem-level equality or a finite certificate equality fixed before any child-sector validation target is used.
+
+A sector certificate may cite parent data from Convention P.14.1k only through the corresponding accepted overlap map $\Pi_{S\leftarrow R}$. The phrase "fixed parent data" in Definition D.8.9a always means parent data transported through an accepted overlap-commutativity audit.
+
+**Theorem P.14.1k.1 (Global Closure under the Strict-Certificate Ledger).** Suppose every sector listed in Convention P.14.1k either has closure status "closed" with theorem-level entries or has an accepted finite certificate filling each entry of Definition D.8.9a in its certificate-pending row. Suppose also that the dependency graph $G_{\mathrm{PU}}$ carries an accepted finite acyclic overlap-commutativity audit $\mathfrak O_{\mathrm{PU}}$ in the sense of Definition P.14.1k.0. Then the joint PU branch has a unique selected tuple modulo response equivalence on $G_{\mathrm{PU}}$.
+
+*Proof.* The graph $G_{\mathrm{PU}}$ is finite and acyclic by hypothesis, with the displayed ordering of Convention P.14.1k used as the parent-before-child audit order. Choose any topological ordering of its vertices. For an initial vertex $S$, the hypotheses give a closed theorem-level certificate or an accepted finite certificate filling the seven entries of Definition D.8.9a. By Theorem D.8.9b this fixes $q_S^*$ uniquely modulo response equivalence.
+
+Assume by induction that all parent vertices preceding a vertex $S$ have unique selected representatives modulo response equivalence. For every parent edge $R\to S$, the accepted audit map $\Pi_{S\leftarrow R}$ transports the already fixed parent representative to the parent datum used by $S$. For any two directed routes into the same parent datum of $S$, Definition P.14.1k.0 gives an accepted equality check $\Omega_C$, so the transported datum is independent of route modulo response equivalence. Thus the parent data of $S$ are fixed.
+
+With fixed parent data, the certificate of $S$ supplies the admissible set $Q_S$, equivalence relation $\sim_S$, retained responses $\mathcal R_S$, PCE functional $V_S$, selected representative $q_S^*$, strict gap $g_S$, and overlap maps $\Pi_S$. Theorem D.8.9b then fixes $q_S^*$ uniquely modulo response equivalence. Induction over the finite topological order fixes every vertex. Theorem D.8.9c applies to the acyclic stack with the accepted overlap audit and gives a unique global selected tuple modulo response equivalence. ∎
+
+**Corollary P.14.1k.2 (Localization of Open Closure).** If at least one row in Convention P.14.1k is open or has an unaccepted certificate-pending status, the global PU branch retains the meet of the listed statuses by Corollary D.8.9d. The closed rows above continue to deliver their selected representatives, while the unaccepted rows remain branch-, model-, or validation-layer.
+
+*Proof.* By Corollary D.8.9d the global status equals the weakest unresolved status on the live dependency graph. The closed rows of Convention P.14.1k satisfy Theorem D.8.9b independently of unresolved downstream entries because the dependency graph is acyclic and they are upstream nodes. Hence their selected representatives are forced by the cited theorems regardless of unresolved certificates. The unaccepted rows fall under Theorem P.14.1f and Corollary P.14.1g and cannot be promoted by prose. ∎
+
+**Convention P.14.1l (No-Overclaim Discipline).** No sector listed in Convention P.14.1k may inherit theorem-level numerical status from a parent theorem unless every finite-response map used by that sector also has a theorem-level certificate or a closed-status entry. A theorem-level parent together with an open or certificate-pending observable map yields an open or certificate-pending child, never a theorem-level child. Equivalently, status propagation in the global ledger is by the meet rule of Convention P.14.1d on the dependency graph of Convention P.14.1k.
+
+*Proof of consistency.* If a child sector's observable map is open or certificate-pending, then by Theorem P.14.1f at least two admissible completions of the missing finite record produce different numerical outputs while preserving every parent constraint. By Convention P.14.1d the child status is then the meet with the missing entry, which is open or certificate-pending; theorem-level promotion would require the missing record. Therefore the meet rule on the dependency graph of Convention P.14.1k is the only status assignment consistent with Theorem P.14.1f, Corollary P.14.1g, and Corollary D.8.9d. ∎
 
 ### P.14.4 The Derivation Chain
 

@@ -1817,7 +1817,21 @@ The remaining non-theorem rows are exactly the rows without accepted finite cert
 
 ### 14.6.7 Final scope statement
 
-Read in this way, the manuscript already has a clear and economical architecture: a compact discrete backbone, a conditional continuum/AQFT/gravity bridge whose remaining load is explicitly visible, a gravity step whose local-horizon thermodynamic input is sharpened by Theorem 48a, and a set of quantitative model layers for later phenomenology. This identifies exactly where the derivation is already strongest and where further closure still depends on stated assumptions, conventions, or downstream modeling.
+Read in this way, the manuscript has a clear and economical architecture: a theorem-level discrete backbone $K_0=3,d_0=8,\varepsilon_0=\ln2,a=2,b=6,M=24,k=12,D=4$ on the stated branch; a conditional continuum/AQFT/gravity bridge whose remaining load is explicitly visible; a gravity step whose local-horizon thermodynamic input is sharpened by Theorem 48a; a metric-fluctuation closure given by Definition 12.1d, Theorem 12.1c, Definition 12.1d.4, Theorem 12.1e, Corollary 12.1e.1, Corollary 12.1e.2, Definition 12.1f, and Theorem 12.1f.1 on the nondegenerate finite-response gravitational branch, deriving the linearized emergent metric and its covariance without an independent microscopic graviton Hilbert sector; a retained-horizon no-deletion closure given by Definition E.9.5d, Theorem E.9.5e, Definition E.9.5f, Theorem E.9.5f.1, and Corollary E.9.5e.1, closing the structural-conservation layer while keeping exterior recovery and Page-curve estimates under their proper sufficiency and scrambling certificates; a theorem-level or branch-theorem gauge algebra selection inside Appendix G; a tightly controlled but branch-normalized fine-structure calculation in Appendix Z; a cosmological-constant sector whose current five-mode numerical value is a reference convention rather than an unconditional theorem; and electroweak/flavor quantitative layers whose certificate gaps are visible instead of hidden. The Global Strict-Certificate Ledger of Convention P.14.1k records, sector by sector, which strict PPI/PCE certificates are already closed and which remain certificate-pending, with Theorem P.14.1k.1 forcing global closure under acceptance and overlap-map commutativity, and Corollary P.14.1k.2 localizing the remaining open closure. A branch condition is a live degree of freedom only until the relevant finite-response certificate either excludes it, quotients it as response-null surplus, or supplies a strict PPI/PCE gap in the sense of Definition D.8.9a. This identifies exactly where the derivation is already strongest and where further closure still depends on stated assumptions, conventions, or downstream finite records.
+
+### Input-output economy versus notational compactness
+
+A framework is not more economical merely because its master equation is shorter. Economy is measured by the ratio of derived physical structure to external input structure. A variational principle defined on a preselected arena may be compact in notation while carrying substantial input through the arena itself: dimension, signature, admissible variables, constraint class, and observable map. PU therefore distinguishes notational compactness from foundational economy.
+
+PU does not claim economy by using fewer symbols. It claims economy when structures normally supplied as arena data are instead derived from the predictive finite-response chain, including
+$$
+d_0=8,\qquad a=2,\qquad b=6,\qquad M=24,\qquad D=4,
+$$
+and the capacity-saturating gauge split
+$$
+6=3+2+1.
+$$
+A comparison framework that begins with an operator space, signature class, Hilbert space, constraint set, or background admissible arena may remain mathematically valuable, but those arena choices count as inputs in the input-output economy ledger.
 
 
 

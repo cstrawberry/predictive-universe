@@ -1632,8 +1632,6 @@ if and only if finite PCE descent holds across $C$ in this normalized canonical-
 
 ### X.8i Predictive Cosmic Galois Filtration
 
-### X.8i Predictive Cosmic Galois Filtration
-
 **Definition X.8i.1 (Finite Update-Cost Graph Hopf Algebra).** Let $\mathcal H_{\mathrm{CK}}^{(L)}$ be the finite Connes-Kreimer Hopf algebra spanned by superficially divergent Feynman graphs up to loop order $L$, with coproduct
 $$
 \Delta\Gamma

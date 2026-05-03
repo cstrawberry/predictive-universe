@@ -81,6 +81,24 @@ where $\mathcal P$ is the list of predicted observables, $\mathcal C$ is the acc
 
 **Theorem 13.0e (No Validation Contamination).** A prediction listed in $\mathfrak R_{\mathrm{pred}}$ may be counted as forward PU evidence only if its branch or certificate was fixed before the validation data used to test it. If any branch entry, residual interval, normalization, or certificate component is selected after seeing the validation data, the entry remains a post-selection consistency check rather than forward evidence.
 
+**Definition 13.0f (Prediction Status Class).** Every numerical claim in this paper carries one of the following four prediction statuses, and the status is recorded together with the predicted value.
+
+1. **Derived-retrodictive.** The numerical value is derived from a closed PU branch but the corresponding measurement was already published before the derivation was completed. The claim counts as mathematical compression evidence in the sense of Convention P.14.1d but does not count as forward empirical evidence.
+
+2. **Certificate-retrodictive.** The numerical value is derived from a closed strict PPI/PCE certificate in the sense of Convention P.14.1k, but the measurement target was already published before the certificate was accepted. The claim counts as certificate compression evidence but does not count as forward empirical evidence.
+
+3. **Forward-locked.** The exact value, certificate, and residual interval are fixed and entered into the forward-locked prediction register $\mathfrak R_{\mathrm{pred}}$ of Definition 13.0d before the relevant validation data are collected, and $\chi_{\mathrm{pred}}$ is satisfied.
+
+4. **Prospective-confirmed or prospective-falsified.** A forward-locked prediction has met its evidence rule under Definition 13.0a or has failed its falsification rule under $\mathcal F$ in Definition 13.0d. Only this status counts as completed forward empirical evidence.
+
+**Theorem 13.0g (Forward-Lock Necessity for Empirical Promotion).** A prediction listed in $\mathfrak R_{\mathrm{pred}}$ may be promoted to status 4 of Definition 13.0f only if it was first registered at status 3. Statuses 1 and 2 cannot be promoted directly to status 4 without an intervening forward-locked re-registration on a fresh measurement.
+
+*Proof.* Status 4 requires the validation data to satisfy the evidence rule of Definition 13.0a or the falsification rule of $\mathcal F$ in Definition 13.0d, evaluated against an entry of $\mathfrak R_{\mathrm{pred}}$ that was fixed before the data were collected. Statuses 1 and 2 record retrodictive derivations against already-published targets; their entries do not satisfy the pre-comparison condition $\chi_{\mathrm{pred}}$ for those targets. Promotion of such an entry without a fresh forward-locked registration would require post-comparison fixing of certificate components, which is forbidden by Theorem 13.0e and Corollary Z.27.11d. The intervening forward-locked re-registration on a fresh measurement is exactly the registration of the same predicted value under status 3 against a target whose data are not yet collected. ∎
+
+**Corollary 13.0h (Status Inheritance for Sector Outputs).** Each numerical row in Convention P.14.1k inherits a prediction status under Definition 13.0f from its certificate acceptance and its measurement history. A row with closure status "closed" and a published target before certificate acceptance is at most certificate-retrodictive; the same row with a forward-locked registration before fresh measurement is at most forward-locked, and at most prospective-confirmed or prospective-falsified after the evidence rule is met.
+
+*Proof.* Status under Definition 13.0f depends on three independent records: closure of the strict PPI/PCE certificate, the time order of certificate acceptance relative to the measurement target, and the satisfaction of the evidence rule. The certificate closure controls statuses 1 versus 2. The time order controls status 3. The evidence rule controls status 4. Each row inherits its status as the deterministic image of these three records by Definition 13.0f and Theorem 13.0g. ∎
+
 *Proof.* By Definition 13.0d, every forward-evidence entry is a pair consisting of a finite derivation certificate and a finite validation protocol. If the derivation certificate is fixed first, the validation data test an already determined interval or falsifier. If a certificate component is selected after the validation data are known, then the data participate in defining the interval being tested. Such a test is logically circular as forward evidence because the tested set is no longer independent of the observations. Therefore it can only be recorded as a post-selection consistency check. ∎
 
 **Corollary 13.0f (Certificate Failure Rule).** If an observable fails the interval or falsifier associated with its accepted certificate in $\mathfrak R_{\mathrm{pred}}$, the corresponding branch is demoted or rejected. The interval may not be widened by replacing the certificate after comparison.
@@ -915,11 +933,13 @@ $$
 - Spatial or temporal variation of $\alpha$ at levels exceeding $10^{-6}$ per Gyr
 - Post-comparison widening of $R_\alpha$, which demotes the branch by Corollary Z.27.11d rather than confirming it
 
+**Residual interpretation.** The interval $\pm 0.000060$ on the canonical branch is a **certificate remainder** in the sense of Definition Z.27.11a: it is a bounded term whose existence and allowed magnitude follow from the named bulk, interface, electromagnetic, curvature, and sinc-transport entries of $\mathfrak C_\alpha$, and it is fixed before comparison with $\alpha_{\mathrm{obs}}$. It is not an adjustable theoretical tolerance and cannot be widened after comparison without defining a new branch by Corollary Z.27.11i.
+
 **Current Status:**
 $$
 \alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(NIST 2024)}
 $$
-Discrepancy relative to the third-order canonical branch: $+0.000093 \pm 0.000060$ ($\sim 1.5\sigma$, 0.68 ppm). This is a live precision test of the Appendix Z normalization package.
+Discrepancy relative to the third-order canonical branch: $+0.000093 \pm 0.000060$ ($\sim 1.5\sigma$, 0.68 ppm). This is a live precision test of the Appendix Z normalization package; the row is closed at theorem level only when an accepted $\mathfrak C_\alpha$ together with an accepted $\mathfrak R_\alpha^{\mathrm{AO}}$ fix every entry of Definition Z.27.11a and Definition Z.27.11g before comparison.
 
 **Consistency Check:** Standard QED running from the accepted Thomson-limit branch value yields $\alpha^{-1}(M_Z)$ in the electroweak comparison ledger; the branch must use the same forward-locked normalization and residual interval when entered into Definition 13.0d.
 

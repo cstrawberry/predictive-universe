@@ -2105,6 +2105,72 @@ The Page curve exhibits:
 
 *Proof.* Steps 1-3 of Corollary E.9.5.2 use only the closed-system definition, Theorem E.9.5, unitary invariance of von Neumann entropy, and the horizon capacity transfer supplied by Theorem E.6. Therefore fine-grained information conservation is independent of the $k$-design assumption. Step 4 explicitly adds the approximate $k$-design assumption to compare the reduced radiation entropy with the Page average. Removing that assumption leaves the conservation result intact but removes the Page-curve estimate. ∎
 
+**Definition E.9.5d (Retained Finite-Response Horizon Channel).** On a refining sequence of finite operational covers $\{\mathcal U_n\}$ carrying an accepted finite KMS-descent certificate of Definition F.10.12a, the retained finite-response horizon channel is the tuple
+$$
+\mathfrak H_n^{\mathrm{ret}}
+=
+\left(
+\mathcal A_n^{\mathrm{ret}},
+\mathcal A_n^{\mathrm{coarse}},
+\pi_{\mathrm{hor},n},
+U_n,
+\ker_{\mathrm{hid}}\pi_{\mathrm{hor},n},
+g_{\mathrm{hor},n}
+\right)
+\tag{E.9.5d.1}
+$$
+with the following entries.
+
+1. $\mathcal A_n^{\mathrm{ret}}$ is the finite retained protocol algebra over $\mathcal U_n$ after quotienting response-null labels by Corollary P.6.1b.8 and Theorem D.1d.
+
+2. $\mathcal A_n^{\mathrm{coarse}}\subseteq\mathcal A_n^{\mathrm{ret}}$ is the finite subalgebra accessible to the exterior coarse-grained horizon protocol, equivalent to the channel min-cut quotient of Theorem E.6 applied to the cover.
+
+3. $\pi_{\mathrm{hor},n}:\mathcal A_n^{\mathrm{ret}}\to\mathcal A_n^{\mathrm{coarse}}$ is the conditional expectation onto the exterior coarse-grained subalgebra.
+
+4. $U_n:\mathcal A_n^{\mathrm{ret}}\to\mathcal A_n^{\mathrm{ret}}$ is the microscopic PU update channel on the retained algebra at scale $n$, obtained from the closed-system unitary evolution of Theorem E.9.5 restricted to retained finite responses.
+
+5. $\ker_{\mathrm{hid}}\pi_{\mathrm{hor},n}$ is the kernel of $\pi_{\mathrm{hor},n}$ inside the retained quotient. It contains only response-hidden retained classes. Response-null surplus has already been removed before forming $\mathcal A_n^{\mathrm{ret}}$.
+
+6. $g_{\mathrm{hor},n}>0$ is the finite violation gap assigned by the retained algebra record to any update class that merges two distinct retained finite-response classes. Because $\mathcal A_n^{\mathrm{ret}}$ is finite, this gap may be taken as the minimum positive retained-response violation cost over the excluded non-injective update classes.
+
+**Theorem E.9.5e (No Fundamental Deletion in the Retained Algebra).** Suppose the finite KMS-descent certificate of Definition F.10.12a is accepted on the cover $\mathcal U_n$, the retained finite-response horizon channel $\mathfrak H_n^{\mathrm{ret}}$ of Definition E.9.5d is constructed, and $U_n$ is injective on retained finite-response classes. Then no two distinct retained finite-response classes are merged by the microscopic horizon update. Apparent equality after $\pi_{\mathrm{hor},n}$ is exterior coarse-graining, not deletion in $\mathcal A_n^{\mathrm{ret}}$.
+
+*Proof.* Let $[A],[B]\in\mathcal A_n^{\mathrm{ret}}$ with $[A]\ne[B]$. By the injectivity hypothesis, $[U_n(A)]\ne[U_n(B)]$. Therefore $U_n$ does not identify distinct retained finite-response classes. The exterior projection $\pi_{\mathrm{hor},n}$ may still satisfy $\pi_{\mathrm{hor},n}(U_n(A))=\pi_{\mathrm{hor},n}(U_n(B))$, in which case $U_n(A)-U_n(B)\in\ker_{\mathrm{hid}}\pi_{\mathrm{hor},n}$ by Definition E.9.5d. This is exterior coarse-graining, not deletion in $\mathcal A_n^{\mathrm{ret}}$. ∎
+
+**Definition E.9.5f (Exterior Recovery Sufficiency Certificate).** An exterior recovery sufficiency certificate for the cover $\mathcal U_n$ is a finite record
+$$
+\mathfrak S_{\mathrm{hor},n}
+=
+(\mathfrak H_n^{\mathrm{ret}},\mathcal C_n,s_n,\epsilon_n)
+$$
+where $\mathcal C_n\subseteq\mathcal A_n^{\mathrm{coarse}}$ is the coarse exterior record retained by the protocol, $s_n:\mathcal C_n\to\mathcal A_n^{\mathrm{ret}}$ is a finite section on the image of $\pi_{\mathrm{hor},n}\circ U_n$, and $\epsilon_n\ge0$ is the certified recovery error in the retained response norm. It is accepted when
+$$
+\left\|s_n(\pi_{\mathrm{hor},n}(U_n(A)))-U_n(A)\right\|_{\mathrm{ret}}
+\le
+\epsilon_n
+\tag{E.9.5f.1}
+$$
+for every retained generator $A$ in the finite protocol algebra, with $\epsilon_n$ fixed before comparison. Exact deterministic exterior recovery is the special case $\epsilon_n=0$.
+
+**Theorem E.9.5f.1 (Exterior Recovery Only under Sufficiency).** If $\mathfrak S_{\mathrm{hor},n}$ is accepted, then the map $\mathcal R_n=s_n$ recovers the retained horizon update from the coarse exterior record with certified error $\epsilon_n$:
+$$
+\left\|\mathcal R_n(\pi_{\mathrm{hor},n}(U_n(A)))-U_n(A)\right\|_{\mathrm{ret}}
+\le
+\epsilon_n.
+\tag{E.9.5f.2}
+$$
+Without such a sufficiency certificate, Theorem E.9.5e proves no fundamental deletion in the retained algebra but does not assert deterministic recovery from the exterior coarse algebra alone.
+
+*Proof.* The first statement is (E.9.5f.1) with $\mathcal R_n=s_n$. The second statement follows because $\pi_{\mathrm{hor},n}$ need not be injective on $\mathcal A_n^{\mathrm{ret}}$; distinct retained states can have the same exterior coarse image while differing by an element of $\ker_{\mathrm{hid}}\pi_{\mathrm{hor},n}$. A deterministic recovery map from $\mathcal A_n^{\mathrm{coarse}}$ alone is theorem-certified exactly when the finite section data in Definition E.9.5f are supplied on the image of $\pi_{\mathrm{hor},n}\circ U_n$, up to the certified error. ∎
+
+**Corollary E.9.5e.1 (Status of the Horizon Sector).** On every branch carrying an accepted finite KMS-descent certificate of Definition F.10.12a and injective retained update $U_n$, the horizon structural-conservation row of Convention P.14.1k is closed by Theorem E.9.5e. The exterior recovery row is certificate-complete only after an accepted exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ is supplied. The Page-curve estimate remains on the scrambling branch of Corollary E.9.5.2a.
+
+*Proof.* For the structural-conservation row, $Q_S$ is the finite family of retained horizon update classes on $\mathcal A_n^{\mathrm{ret}}$, $\sim_S$ is equality of retained response presheaves, $\mathcal R_S$ is the finite protocol response family on the retained algebra, $V_S$ is the PCE cost restricted to horizon update data, $q_S^*$ is the injective retained update class supplied by Theorem E.9.5, and $\Pi_S$ are the overlap maps to the accepted KMS and emergent-metric rows. A non-injective deletion class merges two distinct retained finite-response classes, so it fails at least one retained protocol response and is excluded by the PPI quotient or assigned violation cost at least $g_{\mathrm{hor},n}$ by the accepted retained algebra record. Hence the no-deletion structural layer is closed by Theorem E.9.5e, and its strict-certificate reading is closed by Theorem D.8.9b when the retained algebra record supplies the gap $g_{\mathrm{hor},n}$ of Definition E.9.5d. Exterior recovery from $\mathcal A_n^{\mathrm{coarse}}$ requires the additional finite section data of Definition E.9.5f; without that data, Theorem E.9.5f.1 explicitly forbids promotion to deterministic exterior recovery. The Page-curve estimate requires the separate scrambling assumption of Corollary E.9.5.2a. ∎
+
+**Corollary E.9.5e.2 (Page-Curve Branch Status).** The structural-conservation layer of Corollary E.9.5.2a is closed by Theorem E.9.5e under the injectivity hypothesis alone, without invoking the approximate $k$-design assumption of Step 4 of Corollary E.9.5.2 or the exterior recovery sufficiency certificate of Definition E.9.5f. The exterior recovery / Page-curve estimate retains its scrambling-branch status in Convention P.14.1k and is closed only on the additional acceptance of either the exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ (for deterministic exterior recovery via Theorem E.9.5f.1) or the approximate $k$-design scrambling assumption of Step 4 of Corollary E.9.5.2 (for the Page-curve estimate).
+
+*Proof.* Theorem E.9.5e uses only the unitary closure of Theorem E.9.5 on the retained algebra and the injectivity hypothesis. It does not invoke the approximate $k$-design assumption of Step 4 of Corollary E.9.5.2, nor the recovery-section property of Definition E.9.5f. Therefore the structural-conservation layer of Corollary E.9.5.2a is closed regardless of those additional hypotheses. The exterior recovery and Page-curve layers each require an additional certificate as noted, by Theorem E.9.5f.1 and the Step-4 hypothesis of Corollary E.9.5.2 respectively. ∎
+
 ---
 
 **Corollary E.9.5.3 (Predictive Necessity of Information Conservation).** *Information conservation is required for prediction to remain possible. Unitarity is necessary for the framework's foundational axiom (POP, Axiom 1) to remain satisfiable.*

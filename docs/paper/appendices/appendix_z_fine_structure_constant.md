@@ -1125,6 +1125,14 @@ K(4)=24.
 $$
 Standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012]. The kissing number is monotone nondecreasing in $D$, because any kissing configuration in $\mathbb R^D$ embeds isometrically in $\mathbb R^{D+1}$. Therefore every $D\ge5$ satisfies $K(D)\ge40>24$. No $D<4$ has $K(D)=24$, and every $D>4$ has $K(D)>24$. Thus $D=4$ is the unique positive integer solving $K(D)=24$. Substitution gives $M_{\mathrm{phys}}=24$. ∎
 
+**Corollary Z.11.0a (Packing-Gap Robustness of the $D=4$ Branch).** In the finite-response Bures tangent-cell channel contract, any exact integer-dimensional mode-channel solution with
+$$
+13\le M_{\mathrm{int}}\le39
+$$
+selects $D=4$ and hence forces $M_{\mathrm{int}}=24$. If $M_{\mathrm{int}}\ne24$ in this interval, no exact integer-dimensional Euclidean tangent-cell solution exists.
+
+*Proof.* Theorem Z.11 gives the exact condition $M_{\mathrm{int}}=K(D)$. For $D\le3$, the standard kissing-number values used in Theorem Z.11 give $K(D)\le K(3)=12$. For $D=4$, $K(4)=24$. For $D\ge5$, the same theorem uses $K(5)\ge40$ and monotonicity of the admissible kissing-number lower bound to give $K(D)\ge40$. Hence no dimension other than $D=4$ can have $13\le K(D)\le39$, and the only value in that interval realized by $D=4$ is $K(4)=24$. ∎
+
 **Remark Z.11.1: Dimensional Uniqueness from $K_0$.** The derivation chain $K_0 \to d_0 \to a \to M \to D$ produces a consistent mode-channel solution only for $K_0 = 3$. With $a=2$ fixed (Theorem Z.1) and $d_0=2^{K_0}$ on the minimal branch, the mode count is
 $$
 M(K_0)=2a(d_0-a)=4(2^{K_0}-2).
@@ -3898,7 +3906,7 @@ $$\text{sinc}(u) = \frac{\sin u}{u} = \sum_{n=0}^{\infty} \frac{(-1)^n u^{2n}}{(
 
 At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximation $1 - u^{*2}/6 = 0.998635$; truncation error $< 10^{-6}$. The fourth-order term would contribute $u^{*4}/120 \approx 5.6 \times 10^{-7}$, which is negligible compared to other theoretical uncertainties and confirms that truncating at $O(u^2)$ is justified.
 
-### Z.27.10 Derivation Chain Summary
+### Z.27.10 Fine-Structure Derivation Chain Summary
 
 **Branch ledger for the Thomson-limit value $\alpha^{-1} = 137.036092 \pm 0.000060$.** The formula displayed below is exact arithmetic on the canonical Appendix Z normalization branch package, comprising:
 
@@ -3931,6 +3939,8 @@ $$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*
 The boxed Thomson-limit formula is the result of Theorems Z.24-Z.26 and is stated through third order with explicit remainder $+O(u^{*5})$. It is a Thomson-limit result. The lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)$ used later in Appendix T for PU-to-SM matching at $\mu_G$ and subsequent RG flow to $M_Z$ does not enter this derivation. No continuous parameter is fitted anywhere in this chain.
 
 ### Z.27.11 Thomson Normalization Certificate
+
+**Remark Z.27.11.0 (Anchor to the Global Ledger).** Definition Z.27.11a fixes the local strict PPI/PCE certificate of the Thomson-limit $\alpha^{-1}$ row in Convention P.14.1k. Theorem Z.27.11c is the local closure theorem, Theorem Z.27.11h is the all-orders closure, Corollary Z.27.11d records that the certificate cannot be retuned after comparison, and Corollary Z.27.11i records that any post-comparison interval widening is a new branch. The combination of an accepted $\mathfrak C_\alpha$ together with an accepted $\mathfrak R_\alpha^{\mathrm{AO}}$ closes the row by Theorem D.8.9b.
 
 **Definition Z.27.11a (Thomson Normalization Certificate).** A Thomson normalization certificate is a finite record
 $$
@@ -4099,6 +4109,17 @@ because $u^*<R_\alpha^{\mathrm{rad}}$. The finite computed part is the interval 
 **Corollary Z.27.11i (No Alpha-Residual Absorption).** An alpha interval that is widened only to include a measured value, without an accepted $\mathfrak R_\alpha^{\mathrm{AO}}$, is not a theorem-level PU residual interval. It is a new validation-motivated branch.
 
 *Proof.* Theorem Z.27.11h derives the residual interval from coefficient intervals, an analyticity radius, and a branch audit ledger fixed before comparison. If the interval is widened without those entries, the widened interval is not the deterministic image of the branch. If it is widened after comparison, $\chi_\alpha^{\mathrm{AO}}$ fails. ∎
+
+**Definition Z.27.11j (Exact Residual-Operator Gate).** The fine-structure residual is theorem-closed only when the certificate supplies a finite or trace-class residual operator $\mathcal R_\alpha$ and a fixed evaluation functional $\Phi_\alpha$ such that
+$$
+R_\alpha=\Phi_\alpha(\mathcal R_\alpha)
+\tag{Z.27.11j.1}
+$$
+with the operator, domain, regularization rule, and error bound fixed before comparison. A numerical interval without such an operator record is a certificate remainder, not a theorem-level value.
+
+**Theorem Z.27.11j.1 (No Residual Promotion without the Operator Gate).** The Thomson-limit $\alpha^{-1}$ row can be promoted from certificate-pending to closed only if Definition Z.27.11j is satisfied, if the all-orders residual certificate of Definition Z.27.11g is accepted, or if the residual is proven identically zero by the same finite-response certificate. Otherwise the row remains certificate-pending under Convention P.14.1l.
+
+*Proof.* The residual contributes additively to the numerical output of the row. If $R_\alpha$ is not fixed by an operator record, by an accepted all-orders residual certificate, or by an exact zero theorem, then two admissible completions that agree on every closed parent row but assign different residuals inside the allowed certificate remainder give different values of $\alpha^{-1}$. Theorem P.14.1f gives non-identifiability, and Convention P.14.1l forbids theorem-level promotion. If Definition Z.27.11j is satisfied, then $R_\alpha$ is the deterministic image of the fixed residual operator under $\Phi_\alpha$; if Definition Z.27.11g is accepted, Theorem Z.27.11h fixes the residual interval. In either case Theorem D.8.9b applies to the row. ∎
 
 ---
 

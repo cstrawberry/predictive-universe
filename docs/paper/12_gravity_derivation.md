@@ -1,6 +1,6 @@
 # 12 Emergence of Gravitational Dynamics from Predictive Thermodynamics
 
-This section derives the dynamical equations governing the emergent spacetime geometry $(M, g_{\mu\nu})$, whose operational-continuum branch and regular-branch properties were established conditionally in Section 11 on the $M=24$, $D=4$ shell branch. The derivation follows the thermodynamic approach pioneered by Jacobson [Jacobson 1995], interpreting Einstein's Field Equations as an equation of state for the spacetime manifold derived from the Clausius relation ($\delta Q = T \delta S$). Within the PU framework, this approach is grounded in the thermodynamic properties of the underlying MPU network interactions. Specifically, the information limits of Non-Deterministic Reflexive Interaction Dynamics (ND‑RID) give rise to the **Horizon Entropy Area Law (Theorem 49)** on the Appendix E geometric-regularity, channel-density, and calibration branches. By applying the Clausius relation to infinitesimal causal horizons and relating heat flow to the **MPU stress-energy tensor ($T_{\mu\nu}^{(MPU)}$)**, constructed in **Appendix B**, we obtain the Einstein-equation branch of the framework. We work in natural units where $c=\hbar=k_{B}=1$ unless explicitly stated otherwise, and adopt a spacetime signature convention of $(-,+,+,+)$.
+This section derives the dynamical equations governing the emergent spacetime geometry $(M, g_{\mu\nu})$, whose operational-continuum branch and regular-branch properties were established conditionally in Section 11 on the $M=24$, $D=4$ shell branch. The derivation follows the thermodynamic approach pioneered by Jacobson [Jacobson 1995], interpreting Einstein's Field Equations as an equation of state for the spacetime manifold derived from the Clausius relation ($\delta Q = T \delta S$). Within the PU framework, this approach is grounded in the thermodynamic properties of the underlying MPU network interactions. Specifically, the information limits of Non-Deterministic Reflexive Interaction Dynamics (ND‑RID) give rise to the **Horizon Entropy Area Law (Theorem 49)** on the Appendix E geometric-regularity, channel-density, and calibration branches. By applying the Clausius relation to infinitesimal causal horizons and relating heat flow to the **MPU stress-energy tensor ($T_{\mu\nu}^{(MPU)}$)**, constructed in **Appendix B**, we obtain the Einstein-equation branch of the framework. This is an emergent finite-response thermodynamic closure, not a microscopic graviton Hilbert-space construction. A microscopic gravitational carrier may be introduced only as a non-null finite protocol-response sector; otherwise it is response-null surplus and is removed by the PPI/PCE quotient. We work in natural units where $c=\hbar=k_{B}=1$ unless explicitly stated otherwise, and adopt a spacetime signature convention of $(-,+,+,+)$.
 
 The macroscopic emergent metric/channel-capacity dynamics derive from the following branch-theorem and certificate inputs on the operational-continuum branch:
 
@@ -10,7 +10,7 @@ The macroscopic emergent metric/channel-capacity dynamics derive from the follow
 *   (T4) **Conserved Energy-Momentum Source:** Corollary 45a.1 derives covariant conservation $\nabla_\mu T^{(MPU){\mu\nu}}=0$ from diffeomorphism invariance of the matter action and the matter equations of motion (Appendix B).
 *   (T5) **Local Lorentz Invariance and Universality:** Corollary 46a derives local Lorentz invariance with structure group $SO^+(1,3)$ from Theorem 46 plus Theorems O.7a, O.7b, and Corollary O.7b.1. The Lorentzian factor $\mathrm{Spin}(1,3)$ in the principal bundle of Theorem 48 is structurally forced conditional on the spin obstruction $w_2(M_{\mathrm{reg}})=0$. On the F.10.12 branch, the same input is recorded as vanishing finite KMS-descent defect on refining covers.
 
-From these branch-theorem and certificate inputs, applying the Clausius relation $\delta Q=T\,\delta S$ to local Rindler horizons, with heat flux $\delta Q>0$ defined as energy flow into the causal diamond, and combining it with the Raychaudhuri equation, yields the Einstein-equation branch (**Theorem 50**). On the finite KMS-descent branch the same route is certificate-complete in the sense of Corollary 12.1b.
+From these branch-theorem and certificate inputs, applying the Clausius relation $\delta Q=T\,\delta S$ to local Rindler horizons, with heat flux $\delta Q>0$ defined as energy flow into the causal diamond, and combining it with the Raychaudhuri equation, yields the Einstein-equation branch (**Theorem 50**). On the finite KMS-descent branch the same route is certificate-complete in the sense of Corollary 12.1b. The metric-fluctuation sector is closed on the same branch, conditional on the smooth-envelope record, the nondegenerate Hessian on the retained tangent subspace, the certified linearization radius $r_{\mathrm{grav},n}$, and the PCE fluctuation scale $\tau_{\mathrm{PCE},n}$ of Definition 12.1d, by Theorems 12.1c and 12.1e together with Definition 12.1d.4: the linearized emergent metric response and its finite covariance $\Sigma_n$ are deterministic projections of the finite KMS-descent certificate, with no independent microscopic graviton Hilbert sector required by Corollary 12.1e.1.
 
 **12.1 Local Thermodynamic Equilibrium, Derived Local KMS Equilibrium, and Horizon Properties**
 
@@ -340,6 +340,163 @@ $$
 using $\varepsilon^{\nu\mu}=-\varepsilon^{\mu\nu}$. Therefore $S_{\mathrm{Wald}}=4\pi a_1\,A$. Matching to the PU area law $A/(4G)$ gives $4\pi a_1=1/(4G)$, hence $a_1=1/(16\pi G)$. The cosmological term contributes no Wald area density; writing $a_0=-2a_1\Lambda$ yields the stated action. Thus PU fixes the thermodynamic entropy-density side of the argument through finite channel capacity, while the metric-action uniqueness side is the standard local Lovelock/Wald gate. Restoring SI units by the conventional factor $c^3$ gives the SI form. Varying the sum $S_{\mathrm{grav}}+S_{\mathrm{matter}}$ with respect to $g^{\mu\nu}$, using (67e), yields (76a). ∎
 
 **Corollary 12.1b (Certificate-Complete Emergent Metric Branch).** On any regular operational-continuum branch satisfying the finite KMS-descent certificate of Definition F.10.12a, the route to (76a) is a certificate-complete emergent metric/channel-capacity thermodynamics derivation. No independent microscopic gravitational Hilbert sector is introduced.
+
+**Definition 12.1d (Nondegenerate Finite-Response Gravitational Channel Ensemble).** On a refining sequence of finite operational covers $\{\mathcal U_n\}_{n\ge1}$ carrying an accepted finite KMS-descent certificate $\{\mathfrak C^{\mathrm{KMS}}_n\}$ in the sense of Definition F.10.12a, the nondegenerate finite-response gravitational channel ensemble is the finite tuple
+$$
+\mathfrak G_n
+=
+\left(
+\bar Q_{\mathrm{grav},n},
+E_n,
+\widetilde V_{\mathrm{grav},n},
+q_{\mathrm{grav},n}^*,
+\mathcal T_{\mathrm{grav},n},
+H_{\mathrm{grav},n},
+\Gamma_n,
+\tau_{\mathrm{PCE},n},
+g_{\mathrm{grav},n},
+r_{\mathrm{grav},n}
+\right)
+\tag{12.1d.1}
+$$
+with the following entries.
+
+1. $\bar Q_{\mathrm{grav},n}$ is the finite operational quotient of admissible local stress-energy/min-cut profiles compatible with the cover $\mathcal U_n$, modulo equality of all retained finite protocol responses on $\mathcal U_n$.
+
+2. $E_n$ is a finite-dimensional real coordinate envelope containing $\bar Q_{\mathrm{grav},n}$ as a finite subset. The envelope is not an additional physical arena: two points of $E_n$ represent physical alternatives only when they restrict to retained finite protocol responses. It is introduced solely to define derivatives of the finite-response cost.
+
+3. $\widetilde V_{\mathrm{grav},n}:E_n\to\mathbb R$ is a twice differentiable extension of the gravitational PCE cost whose restriction to $\bar Q_{\mathrm{grav},n}$ equals the finite cost assigned by the accepted KMS-descent certificate. It contains only the description, violation, and regret components already present in the PPI/PCE cost.
+
+4. $q_{\mathrm{grav},n}^*\in\bar Q_{\mathrm{grav},n}$ is the strict PCE minimizer on $\bar Q_{\mathrm{grav},n}$ and satisfies
+$$
+\widetilde V_{\mathrm{grav},n}(q)
+\ge
+\widetilde V_{\mathrm{grav},n}(q_{\mathrm{grav},n}^*)+g_{\mathrm{grav},n}
+\quad
+\text{for all }q\in\bar Q_{\mathrm{grav},n}\setminus\{q_{\mathrm{grav},n}^*\}
+\tag{12.1d.2}
+$$
+with $g_{\mathrm{grav},n}>0$.
+
+5. $\mathcal T_{\mathrm{grav},n}\subset E_n$ is the retained tangent subspace at $q_{\mathrm{grav},n}^*$: the span of envelope tangent vectors $v$ such that there exists a retained finite protocol response $\rho\in\mathcal R_n$ whose smooth envelope extension $\widetilde\rho$ satisfies $D\widetilde\rho(q_{\mathrm{grav},n}^*)[v]\ne 0$. Directions that change no retained smooth response extension are quotient-null and are not included in $\mathcal T_{\mathrm{grav},n}$. The certificate must specify the smooth envelope extensions of the retained responses used to define $\mathcal T_{\mathrm{grav},n}$.
+
+6. The Hessian
+$$
+H_{\mathrm{grav},n}
+:=
+\left.\nabla^2\widetilde V_{\mathrm{grav},n}\right|_{q=q_{\mathrm{grav},n}^*}
+\tag{12.1d.3}
+$$
+is positive definite on $\mathcal T_{\mathrm{grav},n}$. Positive definiteness on $\mathcal T_{\mathrm{grav},n}$ is an explicit certificate entry; it is supplied by the strict-convexity entry of Theorem D.8.9b's certificate, or — when SPAP/Landauer cost dominance applies — by the strict-saturation argument of Theorem 31.
+
+7. $\Gamma_n:E_n\supset B(q_{\mathrm{grav},n}^*,r_{\mathrm{grav},n})\to\mathrm{Lor}(M_n)$ is twice differentiable on a certified radius $r_{\mathrm{grav},n}>0$ and sends each retained profile to the symmetric covariant 2-tensor reconstructed from the Appendix B flux functional and the Appendix E channel-capacity area law.
+
+8. $\tau_{\mathrm{PCE},n}>0$ is the finite fluctuation scale fixed by the same accepted certificate. In Landauer-normalized units it may be set to $1$ only when the certificate explicitly states that normalization; otherwise it remains the displayed finite scale.
+
+9. The radius $r_{\mathrm{grav},n}$ is chosen so that perturbations $\Delta q\in \mathcal T_{\mathrm{grav},n}$ with $\|\Delta q\|<r_{\mathrm{grav},n}$ remain in the same finite-response branch and do not cross the discrete gap (12.1d.2).
+
+**Theorem 12.1c (Finite-Response Linear Metric Response).** Let $\mathfrak G_n$ be a nondegenerate finite-response gravitational channel ensemble in the sense of Definition 12.1d. For every perturbation $\Delta q\in \mathcal T_{\mathrm{grav},n}$ with $\|\Delta q\|<r_{\mathrm{grav},n}$, the first-order emergent metric response is
+$$
+\delta g_n
+=
+D\Gamma_n(q_{\mathrm{grav},n}^*)[\Delta q].
+\tag{12.1c.1}
+$$
+If the finite Einstein-response residual
+$$
+\mathcal E_n(q)
+:=
+G(\Gamma_n(q))+\Lambda\Gamma_n(q)-8\pi G T_{\mathrm{MPU},n}(q)
+\tag{12.1c.2}
+$$
+vanishes on the accepted KMS-descent branch at $q_{\mathrm{grav},n}^*$ and is differentiable in the certified radius, then admissible perturbations satisfying $D\mathcal E_n(q_{\mathrm{grav},n}^*)[\Delta q]=0$ obey the linearized Einstein-response equation on $M_n$.
+
+*Proof.* The perturbation $\Delta q$ lies in the retained tangent subspace $\mathcal T_{\mathrm{grav},n}$, so by Definition 12.1d it changes a retained finite response and is not response-null surplus. The radius condition $\|\Delta q\|<r_{\mathrm{grav},n}$ keeps the perturbation inside the same certified finite-response branch. Since $\Gamma_n$ is twice differentiable on this radius, the first-order term of the Taylor expansion at $q_{\mathrm{grav},n}^*$ is the bounded linear image $D\Gamma_n(q_{\mathrm{grav},n}^*)[\Delta q]$, which proves (12.1c.1). Symmetry and covariance are inherited from the codomain of $\Gamma_n$.
+
+The finite Einstein-response residual $\mathcal E_n$ vanishes at $q_{\mathrm{grav},n}^*$ by the accepted KMS-descent branch and Theorem 12.1. Differentiability gives
+$$
+\mathcal E_n(q_{\mathrm{grav},n}^*+\Delta q)
+=
+D\mathcal E_n(q_{\mathrm{grav},n}^*)[\Delta q]+O(\|\Delta q\|^2).
+$$
+For admissible perturbations satisfying $D\mathcal E_n(q_{\mathrm{grav},n}^*)[\Delta q]=0$, the first-order residual vanishes. This is exactly the linearized Einstein-response equation around the emergent metric $\Gamma_n(q_{\mathrm{grav},n}^*)$. Uniqueness of the first-order response follows because $D\Gamma_n(q_{\mathrm{grav},n}^*)$ is a fixed linear map on the retained tangent subspace. ∎
+
+**Definition 12.1d.4 (Metric Fluctuation Two-Point Function).** On the same accepted certificate branch, the metric fluctuation two-point function is the bilinear functional
+$$
+\Sigma_n(x,y)_{\mu\nu\rho\sigma}
+:=
+\tau_{\mathrm{PCE},n}
+\left[
+D\Gamma_n(q_{\mathrm{grav},n}^*)
+\circ
+H_{\mathrm{grav},n}^{-1}
+\circ
+D\Gamma_n(q_{\mathrm{grav},n}^*)^*
+\right]_{\mu\nu\rho\sigma}(x,y),
+\tag{12.1d.4}
+$$
+where $H_{\mathrm{grav},n}^{-1}$ is the inverse of the positive-definite Hessian on $\mathcal T_{\mathrm{grav},n}$, $D\Gamma_n(q_{\mathrm{grav},n}^*)^*$ is the adjoint with respect to the finite certificate pairing on $\mathcal T_{\mathrm{grav},n}$ and the tensor-test pairing on $\mathrm{Sym}^2T^*M_n$, and $\tau_{\mathrm{PCE},n}$ is the certificate-fixed fluctuation scale of Definition 12.1d.
+
+**Theorem 12.1e (Finite-Response Metric Fluctuation Theorem).** Let $\mathfrak G_n$ be a nondegenerate finite-response gravitational channel ensemble in the sense of Definition 12.1d. Let $\Delta q$ be distributed on $\mathcal T_{\mathrm{grav},n}$ by the centered finite-dimensional Gaussian with covariance
+$$
+\operatorname{Cov}_{\mathrm{PCE}}(\Delta q)
+=
+\tau_{\mathrm{PCE},n}H_{\mathrm{grav},n}^{-1}.
+\tag{12.1e.0}
+$$
+Then the finite-response covariance of the linearized emergent metric is
+$$
+\langle\delta g_n(x)_{\mu\nu}\,\delta g_n(y)_{\rho\sigma}\rangle_{\mathrm{PCE}}
+=
+\Sigma_n(x,y)_{\mu\nu\rho\sigma}.
+\tag{12.1e.1}
+$$
+This covariance is the unique symmetric bilinear functional obtained by pushforward of the PCE Gaussian on the retained tangent subspace along $D\Gamma_n(q_{\mathrm{grav},n}^*)$.
+
+*Proof.* Positive definiteness of $H_{\mathrm{grav},n}$ on $\mathcal T_{\mathrm{grav},n}$ is an explicit entry of Definition 12.1d, so the inverse $H_{\mathrm{grav},n}^{-1}$ exists on the retained tangent subspace. The PCE fluctuation law is the centered Gaussian on $\mathcal T_{\mathrm{grav},n}$ with covariance $\tau_{\mathrm{PCE},n}H_{\mathrm{grav},n}^{-1}$ by (12.1e.0). By Theorem 12.1c the linearized metric is the linear pushforward
+$$
+\delta g_n=D\Gamma_n(q_{\mathrm{grav},n}^*)[\Delta q].
+$$
+The covariance of a linear pushforward of a centered finite-dimensional Gaussian is the pushforward covariance. Therefore for tensor test sections $\phi,\psi$,
+$$
+\Sigma_n(\phi,\psi)
+=
+\tau_{\mathrm{PCE},n}
+\left\langle
+D\Gamma_n(q_{\mathrm{grav},n}^*)^*\phi,
+H_{\mathrm{grav},n}^{-1}D\Gamma_n(q_{\mathrm{grav},n}^*)^*\psi
+\right\rangle.
+\tag{12.1e.2}
+$$
+Writing this bilinear form in distribution kernel notation gives (12.1e.1) with $\Sigma_n$ as defined in (12.1d.4). Uniqueness follows because a centered Gaussian is determined by its covariance and the pushforward map is fixed by the accepted certificate. ∎
+
+**Corollary 12.1e.1 (No Independent Graviton Hilbert Sector).** No microscopic gravitational carrier need be added to the PU framework to obtain $\delta g_n$ or $\Sigma_n$. The linearized metric response and its fluctuation covariance are deterministic images of the finite KMS-descent certificate together with the PCE functional already present on the operational-continuum branch.
+
+*Proof.* Definitions 12.1d and 12.1d.4 use only entries of the finite KMS-descent certificate $\mathfrak C^{\mathrm{KMS}}_n$, the Appendix B stress-energy flux functional, and the Appendix E channel-capacity area law. Theorems 12.1c and 12.1e then derive $\delta g_n$ and $\Sigma_n$ from those entries by linearization and Gaussian pushforward. No new Hilbert sector or carrier appears at any step. By Corollary P.6.1b.8, any additional fundamental gravitational carrier with the same finite protocol responses is response-null surplus and is removed by the PPI quotient. Any additional carrier that changes the finite responses is a different finite branch, evaluated by its own status ledger by Convention P.14.1l. ∎
+
+**Corollary 12.1e.2 (Status Boundary of the Metric-Fluctuation Sector).** The metric-fluctuation sector of Convention P.14.1k is closed at the level of $\delta g_n$ and $\Sigma_n$ for every accepted nondegenerate finite-response gravitational channel ensemble $\mathfrak G_n$ of Definition 12.1d. It remains certificate-pending until the finite KMS-descent certificate, the smooth-envelope record, the positive Hessian entry, the reconstruction derivative, and the fluctuation scale $\tau_{\mathrm{PCE},n}$ are fixed before validation comparison. Under acceptance, the residual interval on $\Sigma_n$ is only the propagated finite certificate interval inherited from these entries.
+
+*Proof.* Theorem 12.1c derives $\delta g_n$ from $D\Gamma_n(q_{\mathrm{grav},n}^*)$ on $\mathcal T_{\mathrm{grav},n}$. Theorem 12.1e derives $\Sigma_n$ from the same derivative, the positive Hessian, and the finite fluctuation scale. If the entries of Definition 12.1d are accepted, every ingredient is fixed by a finite record before comparison; Theorem D.8.9b gives local closure. If any entry is missing, Theorem P.14.1f gives non-identifiability, so the row remains certificate-pending. ∎
+
+**Definition 12.1f (Emergent Gravitational Completion Record).** An emergent gravitational completion record is a finite record
+$$
+\mathfrak C_{\mathrm{EG}}
+=
+(\mathfrak C^{\mathrm{KMS}},\mathfrak G,\mathfrak H^{\mathrm{ret}},\mathfrak O_{\mathrm{grav}})
+$$
+where $\mathfrak C^{\mathrm{KMS}}$ is an accepted finite KMS-descent certificate, $\mathfrak G$ is the nondegenerate finite-response gravitational channel ensemble of Definition 12.1d, $\mathfrak H^{\mathrm{ret}}$ is the retained finite-response horizon channel of Definition E.9.5d, and $\mathfrak O_{\mathrm{grav}}$ is the overlap audit with the AQFT, area-law, stress-energy, and horizon rows of Convention P.14.1k.
+
+**Theorem 12.1f.1 (Emergent Gravitational Completion Criterion).** If $\mathfrak C_{\mathrm{EG}}$ is accepted and its overlap audit commutes in the sense of Definition P.14.1k.0, then the gravitational sector is complete as an emergent finite-response theory at the level of:
+
+1. the effective Lorentzian metric branch,
+2. the Einstein equation as the finite-response thermodynamic equation of state,
+3. the linearized metric response,
+4. the metric fluctuation covariance,
+5. the retained-horizon no-deletion structural layer.
+
+No independent microscopic gravitational Hilbert sector is required for this closure.
+
+*Proof.* The effective Lorentzian metric and Einstein equation are supplied by Theorem 12.1 and Corollary 12.1b on the accepted finite KMS-descent branch. The linearized metric response is supplied by Theorem 12.1c. The metric covariance is supplied by Theorem 12.1e. The retained-horizon no-deletion layer is supplied by Theorem E.9.5e after the retained horizon channel is accepted. The overlap audit $\mathfrak O_{\mathrm{grav}}$ ensures that these records use the same parent data and commute on shared entries. Thus the gravitational sector closes as a finite-response emergent sector by Theorem D.8.9c and Theorem P.14.1k.1. A fundamental graviton Hilbert sector is not an entry of $\mathfrak C_{\mathrm{EG}}$. By Corollary P.6.1b.8, any additional carrier with exactly the same retained finite responses is response-null surplus; any additional carrier changing retained responses is a different branch and must pass its own strict certificate by Convention P.14.1l. ∎
 
 *Proof.* Definition F.10.12a fixes, on every element of a refining finite cover, the local modular generator, finite-temperature/KMS state, channel min-cut entropy, overlap cocycle, Clausius defect, stress-energy flux, and certified error bounds. Theorem F.10.12c proves that vanishing certificate defect gives a compatible KMS sheaf, vanishing Connes cocycle obstruction, and zero local Clausius mismatch in the continuum limit. The local-horizon bridge of Theorem 48a then supplies the local Rindler horizon used in Theorem 12.1. Corollary E.8.4g supplies the channel-capacity area law, and Appendix B supplies the conserved stress-energy tensor. Therefore every premise used in Theorem 12.1 is supplied by a finite operational certificate and its limiting regular branch. The construction is entirely through metric response, finite channel capacity, KMS thermodynamics, and stress-energy conservation, so no additional microscopic gravitational state space is added. ∎
 

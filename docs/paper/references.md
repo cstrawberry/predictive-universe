@@ -75,6 +75,8 @@
 *   Bott, R., & Tu, L. W. (1982). *Differential Forms in Algebraic Topology*. Springer (Graduate Texts in Mathematics, 82). DOI: 10.1007/978-1-4757-3951-0
 *   Bottou, L., Curtis, F. E., & Nocedal, J. (2018). Optimization methods for large-scale machine learning. *SIAM Review*, *60*(2), 223–311. DOI: 10.1137/16M1080173 
 *   Bousso, R. (2002). The holographic principle. *Reviews of Modern Physics*, *74*, 825–874.
+*   Berge, C. (1963). *Topological Spaces: Including a Treatment of Multi-Valued Functions, Vector Spaces and Convexity*. Oliver & Boyd.
+
 *   Boyd, S., & Vandenberghe, L. (2004). *Convex Optimization*. Cambridge University Press.
 *   Boyvalenkov, P., Dodunekov, S., & Musin, O. R. (2012). A survey on the kissing numbers. *Serdica Mathematical Journal*, *38*(4), 507–522.
 *   Braides, A. (2002). *Γ-convergence for Beginners*. Oxford University Press.
@@ -543,6 +545,8 @@
 *   Roberts, D. A., & Yoshida, B. (2017). Chaos and complexity by design. *Journal of High Energy Physics*, *2017*(04), 121. DOI: 10.1007/JHEP04(2017)1211007/JHEP04(2017)121
 *   Robertson, H. P. (1929). The Uncertainty Principle. *Physical Review*, *34*(1), 163–164. DOI: 10.1103/PhysRev.34.163
 *   Rosenfeld, L. (1940). Sur le tenseur d'impulsion‐énergie. *Mémoires de l'Académie Royale de Belgique, Classe des Sciences*, *18*(6), 1–30.
+*   Rockafellar, R. T. (1970). *Convex Analysis*. Princeton University Press.
+
 *   Rovelli, C. (1996). Relational quantum mechanics. *International Journal of Theoretical Physics*, *35*(8), 1637–1678. DOI: 10.1007/BF02302261
 *   Rovelli, C. (2022). Memory and entropy. *Entropy*, *24*(8), 1022. DOI: 10.3390/e24081022
 *   Rowe, W. (1975). *The Cosmological Argument*. Princeton: Princeton University Press.
