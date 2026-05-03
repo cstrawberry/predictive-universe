@@ -868,6 +868,89 @@ $$
 $$
 Therefore the sharp global-core competitor condition (D.6f.1) holds. ∎
 
+**Theorem D.6f.2b (Quantitative Defect Coercivity of the Continuum-Control Potential).** In the setting of Theorem D.6e, let
+$$
+V_{n,\min}^{\mathrm{cont}}
+=
+\inf_{\mathcal C}V_n^{\mathrm{cont}}(\mathcal C).
+$$
+Then every admissible configuration $\mathcal C$ satisfies
+$$
+V_n^{\mathrm{cont}}(\mathcal C)-V_{n,\min}^{\mathrm{cont}}
+\ge
+\lambda_{\min}\mathfrak D_n(\mathcal C)
+-
+\lambda_{\max}\mathfrak d_n^*.
+\tag{D.6f.8}
+$$
+Consequently, for every $\varepsilon>0$,
+$$
+\mathfrak D_n(\mathcal C)
+\ge
+\frac{\lambda_{\max}}{\lambda_{\min}}\mathfrak d_n^*+\varepsilon
+\quad\Longrightarrow\quad
+V_n^{\mathrm{cont}}(\mathcal C)-V_{n,\min}^{\mathrm{cont}}
+\ge
+\lambda_{\min}\varepsilon.
+\tag{D.6f.9}
+$$
+
+*Proof.* By definition,
+$$
+V_n^{\mathrm{cont}}(\mathcal C)
+=
+V_n(\mathcal C)
++
+\sum_{\bullet}
+\lambda_\bullet\mathfrak D_{n,\bullet}(\mathcal C),
+$$
+where the four defects are the Bakry-Émery, finite-core, recovery, and rigidity defects. Since $V_n(\mathcal C)\ge\min V_n$ and each defect is nonnegative,
+$$
+V_n^{\mathrm{cont}}(\mathcal C)
+\ge
+\min V_n+\lambda_{\min}\mathfrak D_n(\mathcal C).
+\tag{D.6f.10}
+$$
+For every $\eta>0$, choose $\mathcal Y_n\in\mathcal M_n$ with
+$$
+\mathfrak D_n(\mathcal Y_n)\le\mathfrak d_n^*+\eta.
+$$
+Then
+$$
+V_{n,\min}^{\mathrm{cont}}
+\le
+V_n^{\mathrm{cont}}(\mathcal Y_n)
+=
+\min V_n+
+\sum_{\bullet}
+\lambda_\bullet\mathfrak D_{n,\bullet}(\mathcal Y_n)
+\le
+\min V_n+\lambda_{\max}(\mathfrak d_n^*+\eta).
+\tag{D.6f.11}
+$$
+Subtracting (D.6f.11) from (D.6f.10) and sending $\eta\downarrow0$ gives (D.6f.8). Equation (D.6f.9) follows immediately by substituting the displayed lower bound on $\mathfrak D_n(\mathcal C)$ into (D.6f.8). ∎
+
+**Corollary D.6f.2c (No Continuum Limit with Persistent Positive Defect).** Suppose $\mathfrak d_n^*\to0$ and $\mathcal C_n$ is any sequence with
+$$
+V_n^{\mathrm{cont}}(\mathcal C_n)-V_{n,\min}^{\mathrm{cont}}\to0.
+$$
+Then
+$$
+\mathfrak D_n(\mathcal C_n)\to0.
+\tag{D.6f.12}
+$$
+Thus a selected operational-continuum branch cannot retain persistent positive Bakry-Émery, finite-core, recovery, or rigidity defect while also remaining asymptotically PCE-minimal.
+
+*Proof.* Rearranging (D.6f.8) gives
+$$
+\lambda_{\min}\mathfrak D_n(\mathcal C_n)
+\le
+V_n^{\mathrm{cont}}(\mathcal C_n)-V_{n,\min}^{\mathrm{cont}}
++
+\lambda_{\max}\mathfrak d_n^*.
+$$
+The two terms on the right tend to zero by hypothesis. Since $\lambda_{\min}>0$, (D.6f.12) follows. ∎
+
 **Theorem 44a (Regular-Branch Manifold Closure).** Assume the hypotheses of Theorem C.6c and let the selected sequence satisfy $\mathfrak H_n\to0$ in the sense of Theorem D.6e. Then the regular set $X_{\mathrm{reg}}\subset X$ is open, every point of $X_{\mathrm{reg}}$ has unique tangent cone $\mathbb R^4$, and $X_{\mathrm{reg}}$ carries a $C^{1,\alpha}$ Riemannian metric $h_{ij}$ with
 $$
 d\mu=\sqrt{\det h}\,d^4x,

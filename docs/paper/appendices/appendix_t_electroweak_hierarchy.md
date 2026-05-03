@@ -8318,6 +8318,61 @@ fixed before comparison with charged-lepton, quark, neutrino, CKM, or PMNS data,
 
 *Proof.* The SM gauge algebra and $N_g=3$ determine the representation class and the number of family copies, but not the finite stationary-point actions, Hessian determinants, Berry holonomies, threshold map, absolute Yukawa normalization, or residual interval listed in Definition T.79.4. Varying any of these unspecified finite entries while preserving the gauge algebra and three-generation ledger changes at least one flavor mass or mixing output. Theorem P.14.1f therefore forbids theorem-level numerical promotion without the accepted flavor certificate. ∎
 
+**Definition T.79.8a (Joint RHG-Flavor Spectral Certificate).** A joint RHG-flavor spectral certificate is a finite record
+$$
+\mathfrak J_{\mathrm{RHG-fl}}
+=
+\left(
+\mathfrak R_{\mathrm{RHG}},
+\mathfrak C_{\mathrm{fl}},
+\mathfrak Z_{\mathrm{PU}},
+\mathcal I_{\mathrm{mix}},
+\mathcal R_{\mathrm{joint}},
+\chi_{\mathrm{joint}}
+\right)
+\tag{T.79.8a}
+$$
+where:
+
+1. $\mathfrak R_{\mathrm{RHG}}$ is an accepted forward-locked RHG record of Definition T.78.10.
+
+2. $\mathfrak C_{\mathrm{fl}}$ is an accepted flavor completion certificate of Definition T.79.4.
+
+3. $\mathfrak Z_{\mathrm{PU}}$ is the master spectral ledger used for the RHG thresholds and the flavor stationary data.
+
+4. $\mathcal I_{\mathrm{mix}}$ is the finite integrability ledger recording all mixed finite-part derivatives shared by RHG thresholds, Yukawa normalizations, CKM/PMNS holonomies, and neutrino-sector entries:
+$$
+\partial_{t_a}\partial_{t_b}\log\det_{\mathrm{PU}}
+=
+\partial_{t_b}\partial_{t_a}\log\det_{\mathrm{PU}}
+\tag{T.79.8a.1}
+$$
+on every common chamber used by the certificate.
+
+5. $\mathcal R_{\mathrm{joint}}$ is the joint residual interval after propagating RHG tail bounds, flavor Hessian/Van Vleck bounds, holonomy bounds, RG truncation bounds, and pole-conversion bounds.
+
+6. $\chi_{\mathrm{joint}}$ records that no component is selected using observed charged-lepton, quark, neutrino, CKM, PMNS, baryogenesis, or validation-threshold data.
+
+**Theorem T.79.8b (Joint RHG-Flavor Spectral Determinacy).** If $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, then the complete electroweak/flavor observable vector
+$$
+\Pi_T
+=
+\bigl(
+\sin^2\theta_W(M_Z),g_i(\mu_G),v,m_H,
+Y_u,Y_d,Y_e,m_{\nu_a},
+V_{\mathrm{CKM}},U_{\mathrm{PMNS}}
+\bigr)
+$$
+is uniquely determined up to $\mathcal R_{\mathrm{joint}}$. Moreover, any two sector projections sharing a chamber of $\mathfrak Z_{\mathrm{PU}}$ must satisfy the mixed-derivative identities in $\mathcal I_{\mathrm{mix}}$; failure of one such identity rejects the joint certificate.
+
+*Proof.* Theorem T.78.11 makes $\Delta_{\mathrm{RHG}}$ and $\mathcal M_{\mathrm{RHG}}$ deterministic outputs of the accepted RHG record. Theorem T.79.6 makes charged-lepton, quark, neutrino, CKM, and PMNS outputs deterministic outputs of the accepted flavor certificate. The deterministic matching functor of Theorem T.79.2 then maps these inputs to $\Pi_T$ with no further continuous ambiguity once RG, decoupling, and pole conventions are fixed.
+
+It remains only to prove the joint spectral consistency condition. Since both RHG and flavor entries are required by Definition T.79.8a to factor through the same master spectral ledger $\mathfrak Z_{\mathrm{PU}}$, any shared chamber dependence is represented by finite smooth determinant or zeta functions on that chamber. Finite smooth functions have commuting mixed partial derivatives. Therefore (T.79.8a.1) is necessary for a common spectral origin. If an entry violates it, the two sectors cannot be projections of the same ledger and the joint certificate is rejected. If all entries pass, the only remaining uncertainty is the finite propagated interval $\mathcal R_{\mathrm{joint}}$. ∎
+
+**Corollary T.79.8c (No Independent RHG-Flavor Refit).** Once $\mathfrak J_{\mathrm{RHG-fl}}$ is accepted, changing RHG block matrices, heat/zeta tail bounds, stationary flavor cells, Hessian determinants, holonomy paths, neutrino branch data, RG convention, or residual intervals after comparison defines a new joint branch and cannot confirm the original one.
+
+*Proof.* Each listed object is an entry of $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak Z_{\mathrm{PU}}$, $\mathcal I_{\mathrm{mix}}$, or $\mathcal R_{\mathrm{joint}}$. The forward-lock condition $\chi_{\mathrm{joint}}$ forbids selecting any such entry from the validation targets. ∎
+
 **Theorem T.79a (Nuclear Extension Determinacy Boundary).** The Appendix-T electroweak/flavor parameter vector $\Pi_T$ does not by itself determine stable isotope patterns, nuclear magic numbers, or spin-dependent nuclear transition anomalies. Those quantities become determinate only after PU supplies a finite self-adjoint nuclear aggregate Hamiltonian
 $$
 H_A^{\mathrm{PU}}(Z,N)

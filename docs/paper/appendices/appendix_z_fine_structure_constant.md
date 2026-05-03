@@ -954,7 +954,7 @@ Non-overlap requires $|x-y|\ge 2$, hence $\sin(\theta/2)\ge 1/2$ and therefore $
 
 **Step 3 (Kissing number equality).** The largest $N$ for which unit balls can be tangent to a central unit ball in $\mathbb R^D$ is, by definition, the kissing number $K(D)$. Thus the maximal number of distinguishable channels in the tangent regime is $M_{\mathrm{phys}}=K(D)$. ∎
 
-**Remark Z.4: Information-Geometry Bridge.** This theorem establishes the fundamental connection between quantum information geometry (distinguishable generators) and classical discrete geometry (sphere packing). The information-theoretic constraint ($\epsilon_{\rm dist}$-distinguishability) translates directly into a geometric constraint (minimum angular separation) once $\theta_{\rm cap}(\epsilon_{\rm dist})$ is fixed by the propagation model $T$.
+**Remark Z.4: Information-Geometry Descent.** This theorem establishes the finite-response descent from quantum information geometry to classical discrete geometry. The metric side is fixed by PCE selection of the Bures/SLD member of the Petz family (Corollary X.8a.2c); the packing side is fixed by non-overlap, equal-radius minimal Landauer channels, and tangent saturation. The information-theoretic constraint ($\epsilon_{\rm dist}$-distinguishability) therefore translates into a geometric constraint (minimum angular separation) once $\theta_{\rm cap}(\epsilon_{\rm dist})$ is fixed by the propagation model $T$.
 
 ---
 
@@ -1060,7 +1060,7 @@ and the unique minimum occurs at $M_{\mathrm{int}} = K(D)$. ∎
 
 ### Z.10.5 PCE Mode-Channel Correspondence
 
-**Theorem Z.10 (PPI-Forced Bures Tangent-Cell Mode-Channel Correspondence).** In the finite-response channel representation induced by the QFI/Bures tangent metric at the PCE attractor, every retained minimal Landauer channel is represented by an equal-radius distinguishability cell in the local tangent space. PPI and PCE force the cells to be non-overlapping and tangent-saturated. Consequently the physical channel count is the kissing number of the effective tangent dimension:
+**Theorem Z.10 (PPI-Forced Bures Tangent-Cell Mode-Channel Correspondence).** In the finite-response channel representation induced by the PCE-selected QFI/Bures tangent metric at the PCE attractor (Corollary X.8a.2c), every retained minimal Landauer channel is represented by an equal-radius distinguishability cell in the local tangent space. PPI and PCE force the cells to be non-overlapping and tangent-saturated. Consequently the physical channel count is the kissing number of the effective tangent dimension:
 $$
 M_{\mathrm{phys}}=K(D),
 $$
@@ -1070,7 +1070,7 @@ M_{\mathrm{int}}=M_{\mathrm{phys}}=K(D).
 $$
 Within this admissible finite-response channel class the mismatch sector has a unique global zero exactly when $M_{\mathrm{int}}=K(D)$.
 
-*Proof.* Let $T_{\rho_0}\boldsymbol X$ be the QFI/Bures tangent space of the attractor branch at $\rho_0$. For a smooth one-parameter perturbation $\rho_\theta$, the Bures line element satisfies
+*Proof.* By Corollary X.8a.2c, the Bures/SLD metric is the unique PCE-minimal normalized CPTP-monotone metric on the QFI-active response quotient. Let $T_{\rho_0}\boldsymbol X$ be the resulting QFI/Bures tangent space of the attractor branch at $\rho_0$. For a smooth one-parameter perturbation $\rho_\theta$, the Bures line element satisfies
 $$
 ds_{\rm Bures}^2=
 \frac{1}{4} F_{ij}(\rho_0)d\theta^i d\theta^j.
@@ -1096,8 +1096,6 @@ $$
 This proves the mode-channel correspondence and the uniqueness of the zero of the mismatch sector inside the admissible finite-response channel class. ∎
 
 ---
-
-## Z.11---
 
 ## Z.11 Dimensional Selection
 
@@ -1338,6 +1336,27 @@ so $r=24$ is the unique solution of $N_{\mathrm{EU}}(r)=r$ in the admissible set
 
 **Remark Z.7: Interpretation Transformation.** This theorem transforms the status of M=24 from "interesting numerical result" to "mathematical necessity arising from convergence of multiple optimization criteria across distinct mathematical domains." Proposition Z.12.1a adds a discrete fixed-point check: at rank $24$, and only there within the admissible even-unimodular ranks up to $24$, the number of lattice vacuum branches equals the interface rank itself.
 
+**Corollary Z.12.1b (Canonical Branch Rigidity in the Finite-Response Quotient).** Let $\mathfrak B$ be a finite-response branch satisfying the minimal Appendix Z hypotheses and the eight-entry ledger of Theorem Z.12. Suppose further that $\mathfrak B$ carries the Niemeier self-counting condition of Proposition Z.12.1a and the rootless vacuum condition of Theorem Z.8c. Then every retained branch representative has the same canonical structural tuple
+$$
+(d_0,a,b,M,k,D,\mathcal C_{\mathrm{code}},\Lambda_{\mathrm{vac}})
+=
+(8,2,6,24,12,4,\mathcal G_{24},\Lambda_{24})
+\tag{Z.12.1b.1}
+$$
+up to finite operational equivalence. Any remaining multiplicity is either response-null surplus, removed by the PPI quotient, or a genuine finite branch degeneracy requiring an explicit certificate before it may be counted as physical.
+
+*Proof.* Theorem Z.12 fixes
+$$
+d_0=8,\qquad a=2,\qquad b=6,\qquad M=2ab=24
+$$
+on the minimal Appendix Z branch. Its coding row fixes $k=12$ and the predictive-recovery code $\mathcal G_{24}$ once the MacWilliams gate is active. Its geometric row fixes $D=4$ through exact mode-channel matching $M=K(D)$ in the Bures tangent-cell channel contract. Proposition Z.12.1a fixes rank $24$ as the unique even-unimodular self-counting rank in $\{8,16,24\}$. Theorem Z.8c then selects the unique rootless rank-$24$ even unimodular lattice, namely $\Lambda_{24}$.
+
+Let $B,B'\in\mathfrak B$ be two branch representatives satisfying these same constraints. If their finite protocol-response presheaves are naturally isomorphic, Theorem P.6.1b.3 identifies them in the operational quotient, and Corollary P.6.1b.8 removes any extra labels, moduli, or normalization decorations that change no finite response and lower no cost. If their response presheaves are not naturally isomorphic, then some finite protocol separates them. Since both representatives have the same tuple (Z.12.1b.1), the separated difference is not a continuous structural modulus of $d_0,a,b,M,k,D,\mathcal G_{24}$, or $\Lambda_{24}$; it is a finite residual branch datum. By Theorem P.6.1b.7 such a datum can be retained only as a certified finite branch degeneracy rather than as an unconstrained landscape parameter. These alternatives exhaust the finite-response quotient. ∎
+
+**Corollary Z.12.1c (No Continuous Structural Landscape on the Minimal Branch).** On the hypotheses of Corollary Z.12.1b, PU has no continuous compactification-like structural landscape for dimension, interface rank, gauge-code rank, or rootless vacuum lattice. Continuous moduli that do not change finite responses are response-null; continuous moduli that do change finite responses leave the canonical structural quotient and require a separate branch certificate.
+
+*Proof.* A continuous landscape parameter $\lambda$ inside the canonical minimal branch either leaves every finite response presheaf invariant or changes at least one finite response. In the first case $\lambda$ is removed by Corollary P.6.1b.8. In the second case it separates branch representatives and is not part of the common canonical tuple (Z.12.1b.1). Theorem P.6.1b.7 then treats it as a distinct finite-response branch only if its response, cost, and degeneracy data are explicitly certified. Hence no unconstrained continuous structural landscape remains on the minimal branch. ∎
+
 ### Z.12.2 Multi-Layered Factorization
 
 **Proposition Z.2 (Structural Richness of 24).** The number 24 has unique factorization structure where each decomposition corresponds to distinct physical or mathematical structures:
@@ -1527,7 +1546,11 @@ Each generation contains $2 + 4 + 2 = 8 = d_0$ modes. ✓
 | $bM = k^2$ | $6 \times 24 = 144$ | $12^2 = 144$ | Identity (requires $a = 2$) |
 | $M = 3 \times d_0$ | $2ab = 24$ | $3 \times 8 = 24$ | Coincidence |
 
-**Remark Z.9f: Numerical Coincidences.** The equalities $\dim[\mathfrak{so}(3,1)] = b = 6$ and $\dim[\mathfrak{g}_{\mathrm{SM}}] = k = 12$ arise from independent derivation chains within the framework. Whether these numerical coincidences reflect deeper structural connections or are arithmetically accidental remains an open question. Under PCE optimization, such coincidences may be expected if a single underlying principle manifests consistently across domains.
+**Remark Z.9f: Cross-Sector Rigidity Status.** The equalities $\dim[\mathfrak{so}(3,1)] = b = 6$ and $\dim[\mathfrak{g}_{\mathrm{SM}}] = k = 12$ arise from independent derivation chains within the framework. After Theorem Z.12 and Corollary Z.12.1b, these equalities are not used as independent proofs of Lorentz or gauge dynamics. They are cross-sector rigidity checks on the same canonical finite-response tuple
+$$
+(d_0,a,b,M,k,D)=(8,2,6,24,12,4).
+$$
+A sector that changes one of these values must either leave the finite response presheaf unchanged and be quotiented out, or enter as a separately certified finite branch. Thus the equalities are not free numerology; they are consistency locks on the minimal branch.
 
 
 #### Z.12.3.7 Falsifiable Predictions
@@ -3984,6 +4007,98 @@ Therefore a theorem-level Thomson interval requires an independently certified r
 **Corollary Z.27.11f (No Normalization Retuning under PPI/PCE).** Let $\mathfrak C_\alpha$ and $\mathfrak C'_\alpha$ be two Thomson normalization certificates with naturally isomorphic finite protocol-response presheaves. If $\mathfrak C'_\alpha$ differs from $\mathfrak C_\alpha$ only by extra normalization labels, finite counterterms, or projection conventions that do not change any finite response presheaf and do not shrink the certified residual interval, then $\mathfrak C'_\alpha$ is PCE-dominated by $\mathfrak C_\alpha$ and cannot be retained as a distinct physical normalization branch.
 
 *Proof.* Natural isomorphism of response presheaves identifies the two certificates in the PPI quotient by Theorem P.6.1b.3. If the added labels do not change a finite response and do not reduce $R_\alpha$, then they add description length or constraint bookkeeping without lowering regret or violation cost in the PPI contract. Corollary P.6.1a.4 removes the larger contract inside the same predictive fiber. Equivalently, in the PCE resource preorder of Definition D.1b, the leaner certificate is no more costly in every component and strictly cheaper in description/penalty cost, so Theorem D.1d eliminates the surplus branch. ∎
+
+**Definition Z.27.11g (All-Orders Alpha Residual Certificate).** An all-orders alpha residual certificate is a finite record
+$$
+\mathfrak R_\alpha^{\mathrm{AO}}
+=
+\left(
+N_\alpha,
+R_\alpha^{\mathrm{rad}},
+M_\alpha,
+\{I_m\}_{m=m_0}^{N_\alpha},
+\mathcal A_\alpha,
+\chi_\alpha^{\mathrm{AO}}
+\right)
+\tag{Z.27.11g}
+$$
+where:
+
+1. $m_0$ is the first order not already included in the exact branch expression (Z.27.11a).
+
+2. $N_\alpha\ge m_0$ is the finite computed order.
+
+3. $R_\alpha^{\mathrm{rad}}>u^*$ is a certified analyticity radius for the residual function
+$$
+E_\alpha(z)=\sum_{m=m_0}^{\infty}c_m z^m
+$$
+on the complex disk $|z|\le R_\alpha^{\mathrm{rad}}$.
+
+4. $M_\alpha$ is a certified uniform bound
+$$
+|E_\alpha(z)|\le M_\alpha
+\qquad
+(|z|\le R_\alpha^{\mathrm{rad}}).
+\tag{Z.27.11g.1}
+$$
+
+5. $I_m=[c_m^-,c_m^+]$ are certified coefficient intervals for $c_m$, $m_0\le m\le N_\alpha$, computed without using measured $\alpha$.
+
+6. $\mathcal A_\alpha$ is the audit ledger proving that the residual function belongs to the same bulk Ward, interface, electromagnetic-projection, curvature-response, and sinc-transport branch as Definition Z.27.11a.
+
+7. $\chi_\alpha^{\mathrm{AO}}$ records that no coefficient interval, radius, or bound is selected using $\alpha_{\mathrm{obs}}$.
+
+**Theorem Z.27.11h (All-Orders Certified Alpha Interval).** If $\mathfrak R_\alpha^{\mathrm{AO}}$ is accepted, then the residual interval in Definition Z.27.11a is
+$$
+R_\alpha^{\mathrm{AO}}
+=
+\sum_{m=m_0}^{N_\alpha}
+I_m(u^*)^m
++
+\left[
+-\rho_\alpha,
+\rho_\alpha
+\right],
+\tag{Z.27.11h.1}
+$$
+where
+$$
+\rho_\alpha
+=
+M_\alpha
+\frac{\left(u^*/R_\alpha^{\mathrm{rad}}\right)^{N_\alpha+1}}
+{1-u^*/R_\alpha^{\mathrm{rad}}}.
+\tag{Z.27.11h.2}
+$$
+The certified Thomson interval is obtained from (Z.27.11a) by replacing $R_\alpha$ with $R_\alpha^{\mathrm{AO}}$.
+
+*Proof.* For $|z|\le R_\alpha^{\mathrm{rad}}$, the accepted certificate gives the analytic expansion
+$$
+E_\alpha(z)=\sum_{m=m_0}^{\infty}c_m z^m
+$$
+and the uniform bound (Z.27.11g.1). Cauchy's estimate gives
+$$
+|c_m|\le\frac{M_\alpha}{(R_\alpha^{\mathrm{rad}})^m}.
+$$
+Therefore the tail after $N_\alpha$ satisfies
+$$
+\left|
+\sum_{m=N_\alpha+1}^{\infty}c_m(u^*)^m
+\right|
+\le
+\sum_{m=N_\alpha+1}^{\infty}
+M_\alpha
+\left(\frac{u^*}{R_\alpha^{\mathrm{rad}}}\right)^m
+=
+M_\alpha
+\frac{\left(u^*/R_\alpha^{\mathrm{rad}}\right)^{N_\alpha+1}}
+{1-u^*/R_\alpha^{\mathrm{rad}}},
+$$
+because $u^*<R_\alpha^{\mathrm{rad}}$. The finite computed part is the interval sum in (Z.27.11h.1), and the tail is bounded by $[-\rho_\alpha,\rho_\alpha]$. Substitution into (Z.27.11a) gives the certified interval. ∎
+
+**Corollary Z.27.11i (No Alpha-Residual Absorption).** An alpha interval that is widened only to include a measured value, without an accepted $\mathfrak R_\alpha^{\mathrm{AO}}$, is not a theorem-level PU residual interval. It is a new validation-motivated branch.
+
+*Proof.* Theorem Z.27.11h derives the residual interval from coefficient intervals, an analyticity radius, and a branch audit ledger fixed before comparison. If the interval is widened without those entries, the widened interval is not the deterministic image of the branch. If it is widened after comparison, $\chi_\alpha^{\mathrm{AO}}$ fails. ∎
 
 ---
 

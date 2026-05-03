@@ -491,16 +491,22 @@ $$
 
 4. classical restriction equal to the Fisher metric with the normalization of Proposition X.1;
 
-5. quantum restriction equal to the Bures/SLD member of the Petz monotone family, fixed by the PU QFI normalization
+5. quantum restriction belonging to the normalized symmetric Petz monotone family on the retained quantum sector, with PCE-minimality among normalized CPTP-monotone metrics:
+$$
+g_\rho(X,X)\le g'_\rho(X,X)
+\quad
+\text{for every retained tangent }X
+\tag{X.8a.2a.2}
+$$
+whenever $g'$ is another normalized symmetric CPTP-monotone metric inducing the same finite response-presheaf order. Equivalently, on the QFI-active subspace the selected representative is the Bures/SLD metric
 $$
 g_{\rho}^{\mathrm{Bures}}(X,X)
 =
 \frac12\operatorname{Tr}\!\left(X\,\mathcal L_\rho^{-1}(X)\right),
 \qquad
-\mathcal G=\mathcal K^{-1}
-\tag{X.8a.2a.2}
+\mathcal G=\mathcal K^{-1};
+\tag{X.8a.2a.3}
 $$
-on the QFI-active subspace;
 
 6. compatibility with PCE compression, meaning the compressed metric is the pushforward metric on the quotient of operationally equivalent predictive states;
 
@@ -513,7 +519,43 @@ F_\alpha(C\circ K)=F_\alpha(C)\circ F_\alpha(K)
 $$
 for every admissible coarse-graining $C$, update kernel $K$, and retained sector image $F_\alpha$.
 
-*Proof.* On classical retained sectors, Čencov uniqueness gives the Fisher metric as the unique Markov-monotone Riemannian metric up to scalar. Proposition X.1 fixes that scalar by the LAN/Fisher normalization. On quantum retained sectors, Petz monotonicity classifies CPTP-monotone quantum metrics by operator-monotone functions. Condition (X.8a.2a.2) selects the Bures/SLD member and fixes its QFI scale, so no additional monotone metric remains compatible with the branch normalization. PCE compression is an admissible Markov/CPTP quotient, so monotonicity and quotient compatibility force the compressed metric to be the pushforward of the same metric. Therefore the response Hessian, FRG/PCE compression kernel, and perspective drift-diffusion generator cannot choose independent control metrics. Condition 7 makes the sector images quotient-pushforward functors on the branch domain. Applying such a sector image after composing $C$ and $K$ therefore gives the same pushed-forward metric and generator as first applying the update image and then the coarse-graining image, proving (X.8a.2b.1). ∎
+*Proof.* On classical retained sectors, Čencov uniqueness gives the Fisher metric as the unique Markov-monotone Riemannian metric up to scalar. Proposition X.1 fixes that scalar by the LAN/Fisher normalization.
+
+On quantum retained sectors, Petz monotonicity classifies CPTP-monotone quantum metrics by normalized symmetric operator-monotone functions $f$ through
+$$
+g_\rho^f(X,X)
+=
+\sum_{i,j}c_f(p_i,p_j)|X_{ij}|^2,
+\qquad
+c_f(x,y)=\frac{1}{y f(x/y)}
+\tag{X.8a.2b.2}
+$$
+on a spectral decomposition $\rho=\sum_i p_i |i\rangle\langle i|$, with the QFI-active singular case obtained by restriction to the active support and continuous extension along active-inactive tangent directions. The Bures/SLD member corresponds to
+$$
+f_{\mathrm{SLD}}(t)=\frac{1+t}{2},
+\qquad
+c_{\mathrm{SLD}}(x,y)=\frac{2}{x+y}.
+\tag{X.8a.2b.3}
+$$
+The arithmetic mean is the maximal normalized symmetric Kubo-Ando mean, hence every normalized Petz function satisfies
+$$
+f(t)\le\frac{1+t}{2}.
+$$
+Therefore
+$$
+c_f(x,y)\ge c_{\mathrm{SLD}}(x,y)
+$$
+for all retained positive eigenvalue pairs, and by continuous extension on the QFI-active rank-deficient orbit. Thus the Bures/SLD metric is the pointwise minimal normalized CPTP-monotone quantum metric. If another normalized symmetric monotone metric induced the same finite response-presheaf order but was larger on some retained tangent direction, it would add metric cost without improving any finite protocol response. By Corollary P.6.1b.8, PCE removes that surplus. Hence condition (X.8a.2a.2) forces (X.8a.2a.3), fixing the quantum scale by the PU QFI normalization.
+
+PCE compression is an admissible Markov/CPTP quotient, so monotonicity and quotient compatibility force the compressed metric to be the pushforward of the same metric. Therefore the response Hessian, FRG/PCE compression kernel, and perspective drift-diffusion generator cannot choose independent control metrics. Condition 7 makes the sector images quotient-pushforward functors on the branch domain. Applying such a sector image after composing $C$ and $K$ therefore gives the same pushed-forward metric and generator as first applying the update image and then the coarse-graining image, proving (X.8a.2b.1). ∎
+
+**Corollary X.8a.2c (PCE Selection of the Bures/SLD Metric).** On any retained quantum finite-response branch satisfying Definition X.8a.2a, the Bures/SLD metric is not an independent metric bridge. It is the unique PCE-minimal normalized CPTP-monotone metric on the QFI-active response quotient.
+
+*Proof.* The Petz classification and the maximality of the arithmetic mean give the pointwise metric inequality
+$$
+g_\rho^{\mathrm{Bures}}(X,X)\le g_\rho^f(X,X)
+$$
+for every normalized symmetric CPTP-monotone metric $g^f$ and every retained tangent vector $X$. The two metrics induce the same finite response-presheaf order whenever they differ only by surplus local tangent cost on the same retained protocol ordering. A strictly larger metric then increases the response-control cost without lowering $L_{\mathrm{viol}}$ or $L_{\mathrm{regret}}$. Corollary P.6.1b.8 removes it. Equality for all retained $X$ gives the same Bures/SLD metric on the quotient. ∎
 
 **Definition X.8a.3 (Fractal Decimation Response Operator).** A fractal decimation response operator on a finite regular response branch is a differentiable map
 $$
@@ -2534,6 +2576,22 @@ $$
 
 *Proof.* Each listed operator is one of (X.9.6.2)–(X.9.6.5), hence is obtained from the same self-adjoint operator by projection, sign convention, or functional calculus. ∎
 
+**Corollary X.9.6c.0 (RG Flow as PCE Coarse-Graining).** On the closed finite-mode branch of Theorem X.9.6b, Wilsonian/FRG scale flow is not an additional bridge law. It is the logarithmic determinant response of the RG compression of the master predictive operator:
+$$
+\partial_k\Gamma_k
+=
+\frac12\operatorname{STr}
+\left[
+\left(
+\Pi_{\mathrm{RG}}\mathfrak L_{\mathrm{PU}}\Pi_{\mathrm{RG}}^*+R_k
+\right)^{-1}
+\partial_k R_k
+\right].
+\tag{X.9.6c.0}
+$$
+
+*Proof.* Equation (X.9.6.4) is item 3 of Theorem X.9.6b. The operator entering the trace is the RG-sector compression of the same closed predictive operator that generates response, perspective transport, and PCE adaptation. Hence the RG flow is fixed by the finite closed-form datum $\mathfrak D_{\mathrm{PU}}$ and the chosen regulator $R_k$. Changing the RG flow while keeping $\mathfrak D_{\mathrm{PU}}$ and $R_k$ fixed would change the functional calculus of a fixed self-adjoint operator, which is impossible by the spectral theorem. ∎
+
 **Remark X.9.6c.1 (Markov-Categorical Naturality Gate).** Theorem X.9.6b may be read as a Markov-categorical discipline without adding a new physical postulate. Let $\mathsf{PU}_{\mathrm{fin}}$ be the finite category whose objects are retained finite predictive interfaces and whose morphisms are PPI-admissible stochastic or CPTP update kernels, with tensor product given by independent interface composition. On the closed finite-mode branch, response, RG, perspective transport, measurement update, and slow PCE adaptation are functorial images of the same finite update kernel only when their compression diagrams commute.
 
 Concretely, for any admissible coarse-graining $C_\ell$ and update kernel $K$, a proposed bridge functor $F_\alpha$ must satisfy the naturality square
@@ -2635,3 +2693,463 @@ $$
 where each $P_j$ is a projection or form-compression determined by the closed predictive Dirichlet datum $\mathfrak D_{\mathrm{PU}}$, each $f_j$ is fixed before validation comparison, $\operatorname{Tr}_{\mathrm{ren}}$ denotes the ordinary finite trace or the already specified heat/zeta finite part, and $\mathcal N$ is a fixed algebraic normalization map. If no such compression and finite-part prescription is specified, then $c$ is not theorem-level PU-internal and must be recorded as branch, model, or validation input. If two branch scalars use the same compression and the same spectral functional, they are the same ledger datum; if they use orthogonal finite compressions, their trace contributions add.
 
 *Proof.* By Theorem X.9.6b, every response Hessian, RG kernel, perspective generator, and PCE flow operator on the closed finite-mode branch is a projection, sign convention, or functional-calculus image of the unique self-adjoint operator $\mathfrak L_{\mathrm{PU}}$ associated with $\mathfrak D_{\mathrm{PU}}$. The spectral theorem then fixes $f(P\mathfrak L_{\mathrm{PU}}P^*)$ uniquely for every specified compression $P$ and Borel or holomorphic function $f$ in its domain. Ordinary finite traces are basis-independent. Heat/zeta finite parts are also fixed once the operator, subtraction order, scale, and finite-part convention are fixed. Therefore a scalar claimed to be derived from such spectral data is PU-internal only when its compression and finite-part prescription are part of the branch datum, yielding (X.9.6.11). Equality of the compression and functional gives equality of the spectral value by uniqueness of functional calculus. Orthogonality of compressions gives additivity of traces on direct sums. ∎
+
+**Definition X.9.6f (Predictive Spectral-Response Datum).** On the closed finite-mode branch of Theorem X.9.6b, a predictive spectral-response datum is a tuple
+$$
+\mathfrak S_{\mathrm{PU}}
+=
+(\mathfrak A_{\mathrm{res}},\mathscr H_{\mathrm{spin}},D_{\mathrm{PU}},J_{\mathrm{PU}},\Gamma_{\mathrm{PU}},\iota)
+\tag{X.9.6.12}
+$$
+with the following data.
+
+1. $\mathfrak A_{\mathrm{res}}$ is the finite involutive algebra generated by retained protocol projectors, finite internal block labels, and finite response-compatible gauge-frame labels after the PPI quotient.
+
+2. $\iota:\mathfrak A_{\mathrm{res}}\to\mathcal B(\mathscr H_{\mathrm{spin}})$ is a faithful $*$-representation on a finite retained spin-interface submodule
+$$
+\mathscr H_{\mathrm{spin}}\subseteq\mathscr H_{\mathrm{field}}\subseteq\mathscr H_{\mathrm{PU}}.
+$$
+
+3. $D_{\mathrm{PU}}=D_{\mathrm{PU}}^*$ is a finite self-adjoint response operator on $\mathscr H_{\mathrm{spin}}$ whose square is the retained first-order factor of the field-response compression:
+$$
+D_{\mathrm{PU}}^2
+=
+\Pi_{\mathrm{spin}}
+\mathfrak L_{\mathrm{PU}}
+\Pi_{\mathrm{spin}}^*
+-
+V_{\mathrm{0}},
+\tag{X.9.6.13}
+$$
+where $V_{\mathrm{0}}$ is the finite scalar or block-diagonal zero-order response term already present in the branch ledger. When no first-order factorization is supplied, the datum is not accepted as a spectral-response datum.
+
+4. $J_{\mathrm{PU}}$ is an antiunitary real-structure operator and $\Gamma_{\mathrm{PU}}$ is a self-adjoint grading satisfying
+$$
+J_{\mathrm{PU}}^2=\epsilon,
+\qquad
+J_{\mathrm{PU}}D_{\mathrm{PU}}=\epsilon' D_{\mathrm{PU}}J_{\mathrm{PU}},
+\qquad
+J_{\mathrm{PU}}\Gamma_{\mathrm{PU}}=\epsilon''\Gamma_{\mathrm{PU}}J_{\mathrm{PU}},
+\qquad
+\Gamma_{\mathrm{PU}}D_{\mathrm{PU}}+D_{\mathrm{PU}}\Gamma_{\mathrm{PU}}=0
+\tag{X.9.6.14}
+$$
+on the even branch, with $\epsilon,\epsilon',\epsilon''\in\{\pm1\}$ fixed by the finite KO-ledger of the branch.
+
+5. The order-zero and first-order response conditions hold:
+$$
+[\iota(a),J_{\mathrm{PU}}\iota(b)^*J_{\mathrm{PU}}^{-1}]=0,
+\tag{X.9.6.15}
+$$
+and
+$$
+[[D_{\mathrm{PU}},\iota(a)],J_{\mathrm{PU}}\iota(b)^*J_{\mathrm{PU}}^{-1}]=0
+\tag{X.9.6.16}
+$$
+for all $a,b\in\mathfrak A_{\mathrm{res}}$.
+
+6. The datum is one-form complete on the stated spectral branch: every retained gauge-connection or finite internal-link carrier in this branch is represented, after the PPI quotient, by a self-adjoint element of the real one-form span defined below. A response-changing carrier outside this span is not part of the same spectral-response branch and must be recorded as a distinct finite branch.
+
+The finite one-form space of the datum is
+$$
+\Omega^1_{D_{\mathrm{PU}}}(\mathfrak A_{\mathrm{res}})
+=
+\left\{
+\sum_i \iota(a_i)[D_{\mathrm{PU}},\iota(b_i)]:
+a_i,b_i\in\mathfrak A_{\mathrm{res}}
+\right\}.
+\tag{X.9.6.17}
+$$
+
+**Theorem X.9.6f.1 (Predictive Spectral Triple Descent).** Every predictive spectral-response datum $\mathfrak S_{\mathrm{PU}}$ is a finite real even spectral triple in the response quotient. Its self-adjoint inner fluctuations
+$$
+D_{\mathrm{PU}}
+\longmapsto
+D_{\mathrm{PU},A}
+=
+D_{\mathrm{PU}}+A+J_{\mathrm{PU}}AJ_{\mathrm{PU}}^{-1},
+\qquad
+A=A^*\in\Omega^1_{D_{\mathrm{PU}}}(\mathfrak A_{\mathrm{res}}),
+\tag{X.9.6.18}
+$$
+are exactly the retained finite spectral carriers admitted by that datum for gauge connection variables and finite internal off-diagonal response links on that branch. A proposed gauge, Higgs, or internal-link field not representable by (X.9.6.18) is either outside this spectral-response branch if it changes a finite protocol-response presheaf, or response-null surplus if it changes no finite protocol-response presheaf.
+
+*Proof.* Since $\mathfrak A_{\mathrm{res}}$ is finite-dimensional and $\mathscr H_{\mathrm{spin}}$ is finite-dimensional, $\iota(a)$ and $[D_{\mathrm{PU}},\iota(a)]$ are bounded for every $a\in\mathfrak A_{\mathrm{res}}$. The resolvent of $D_{\mathrm{PU}}$ is compact because every linear operator on a finite-dimensional Hilbert space has finite-rank resolvent away from its spectrum. The representation is faithful by Definition X.9.6f, so the algebra is represented without quotienting additional response labels. Equations (X.9.6.14)–(X.9.6.16) are exactly the real, even, order-zero, and first-order finite spectral-triple identities. Thus $\mathfrak S_{\mathrm{PU}}$ is a finite real even spectral triple.
+
+For the fluctuation statement, let $A\in\Omega^1_{D_{\mathrm{PU}}}(\mathfrak A_{\mathrm{res}})$ be self-adjoint. Then $J_{\mathrm{PU}}AJ_{\mathrm{PU}}^{-1}$ is self-adjoint, so $D_{\mathrm{PU},A}$ is self-adjoint. Under a unitary $u\in\mathfrak A_{\mathrm{res}}$, set $U=\iota(u)J_{\mathrm{PU}}\iota(u)J_{\mathrm{PU}}^{-1}$. Using (X.9.6.15) and (X.9.6.16),
+$$
+UD_{\mathrm{PU},A}U^*
+=
+D_{\mathrm{PU}}
++
+A^u
++
+J_{\mathrm{PU}}A^uJ_{\mathrm{PU}}^{-1},
+\tag{X.9.6.19}
+$$
+where
+$$
+A^u
+=
+\iota(u)A\iota(u)^*
++
+\iota(u)[D_{\mathrm{PU}},\iota(u)^*].
+\tag{X.9.6.20}
+$$
+Thus unitary changes of finite predictive frame act on $A$ by the usual connection transformation law. For the graph-carrier subcase of Definition F.10.4a.1, the commutator on an edge $e=\{v,w\}$ is proportional to $f(w)-f(v)$, so a unitary fluctuation inserts precisely an edge transporter, as in Corollary F.10.4a.3. For a finite internal matrix algebra, off-diagonal components of $A$ are exactly the finite module links between retained blocks, hence the finite Higgs/internal-link carriers.
+
+Conversely, one-form completeness in Definition X.9.6f is exactly the branch certificate that every retained local gauge or internal-link carrier in this spectral branch is represented by a self-adjoint finite operator built from algebra elements and commutators with the branch Dirac response operator. Hence the retained carriers of this datum are precisely the fluctuations (X.9.6.18). If a proposed field is not representable in this way and changes no finite response presheaf, Corollary P.6.1b.8 removes it. If it changes a finite response while not fitting (X.9.6.18), it is not a field in the same spectral-response branch and must be recorded as a distinct finite branch with its own certificate. ∎
+
+**Corollary X.9.6f.2 (No Independent Gauge-Higgs Carrier on a Closed Spectral Branch).** On a branch satisfying Definition X.9.6f, the gauge connection, finite Higgs/internal-link sector, and first-order matter response are not independent carriers. They are projections of one finite spectral-response datum:
+$$
+(\mathfrak A_{\mathrm{res}},\mathscr H_{\mathrm{spin}},D_{\mathrm{PU}},J_{\mathrm{PU}},\Gamma_{\mathrm{PU}}).
+\tag{X.9.6.21}
+$$
+
+*Proof.* Theorem X.9.6f.1 shows that connection variables and finite internal links are exactly self-adjoint inner fluctuations of $D_{\mathrm{PU}}$. The matter response is represented on the same $\mathscr H_{\mathrm{spin}}$, and the real and chiral structures are part of the same datum. Any additional carrier with the same finite protocol responses is removed by Corollary P.6.1b.8. ∎
+
+**Definition X.9.6g (Master Zeta-Index Ledger).** On the closed finite-mode branch of Theorem X.9.6b, a master zeta-index ledger is a finite family
+$$
+\mathfrak Z_{\mathrm{PU}}
+=
+\left(
+\{P_j,\sigma_j,\mu_j,B_{j1},\ldots,B_{jr}\}_{j=1}^N,
+\{Q_\ell,\tau_\ell,F_{\ell0},C_{\ell1},\ldots,C_{\ell r}\}_{\ell=1}^{N_\eta}
+\right)
+\tag{X.9.6.22}
+$$
+where:
+
+1. $P_j$ and $Q_\ell$ are finite branch-determined projections or form-compressions of $\mathfrak L_{\mathrm{PU}}$.
+
+2. $\sigma_j,\tau_\ell\in\{\pm1\}$ are bosonic/fermionic or orientation signs fixed by the branch ledger.
+
+3. $\mu_j>0$ is a fixed infrared regulator for zero modes, removed only by an explicitly stated finite-part prescription.
+
+4. $B_{ja}=B_{ja}^*$ are fixed finite response perturbation matrices.
+
+5. $F_{\ell0}=F_{\ell0}^*$ and $C_{\ell a}=C_{\ell a}^*$ are fixed finite Dirac-type response matrices, with
+$$
+F_\ell(\mathbf t)=F_{\ell0}+\sum_{a=1}^r t_a C_{\ell a}.
+$$
+Zero modes are omitted in the eta trace unless a zero-mode insertion rule is explicitly supplied.
+
+For $\mathbf t=(t_1,\ldots,t_r)$ in an open chamber where every
+$$
+L_j(\mathbf t)
+=
+P_j\mathfrak L_{\mathrm{PU}}P_j^*
++
+\mu_j I
++
+\sum_{a=1}^r t_aB_{ja}
+\tag{X.9.6.23}
+$$
+is positive, define
+$$
+\zeta_{\mathrm{PU}}(s;\mathbf t)
+=
+\sum_{j=1}^N
+\sigma_j\operatorname{Tr}\left(L_j(\mathbf t)^{-s}\right),
+\tag{X.9.6.24}
+$$
+$$
+\log\det_{\mathrm{PU}}(\mathbf t)
+=
+-\left.\frac{\partial}{\partial s}\zeta_{\mathrm{PU}}(s;\mathbf t)\right|_{s=0},
+\tag{X.9.6.25}
+$$
+and
+$$
+\eta_{\mathrm{PU}}(s;\mathbf t)
+=
+\sum_{\ell=1}^{N_\eta}
+\tau_\ell
+\operatorname{Tr}'\left(
+F_\ell(\mathbf t)|F_\ell(\mathbf t)|^{-s-1}
+\right),
+\tag{X.9.6.26}
+$$
+where $\operatorname{Tr}'$ omits zero modes according to the stated zero-mode ledger.
+
+**Theorem X.9.6g.1 (Single Master Zeta-Index Ledger).** On a branch carrying $\mathfrak Z_{\mathrm{PU}}$, every theorem-level dimensionless scalar claimed to arise from heat traces, zeta finite parts, eta phases, determinant ratios, threshold finite parts, or spectral action coefficients must be expressible as
+$$
+c
+=
+\mathcal N_c
+\left(
+\operatorname{FP}_{s=s_1}\partial_{\mathbf t}^{\alpha_1}\zeta_{\mathrm{PU}}(s;\mathbf t)\big|_{\mathbf t=\mathbf t_c},
+\ldots,
+\partial_{\mathbf t}^{\alpha_m}\log\det_{\mathrm{PU}}(\mathbf t)\big|_{\mathbf t=\mathbf t_c},
+\eta_{\mathrm{PU}}(0;\mathbf t_c)
+\right),
+\tag{X.9.6.27}
+$$
+with all projections, signs, zero-mode rules, finite-part prescriptions, chamber choices, and normalization map $\mathcal N_c$ fixed before validation comparison. On any chamber where the spectra remain separated from zero, mixed derivatives commute:
+$$
+\partial_{t_a}\partial_{t_b}\log\det_{\mathrm{PU}}(\mathbf t)
+=
+\partial_{t_b}\partial_{t_a}\log\det_{\mathrm{PU}}(\mathbf t),
+\tag{X.9.6.28}
+$$
+and the same commutation holds for every finite $\zeta_{\mathrm{PU}}$ and $\eta_{\mathrm{PU}}$ derivative appearing in (X.9.6.27). A proposed numerical certificate violating these integrability identities is rejected as non-PU-internal on that branch.
+
+*Proof.* Each $L_j(\mathbf t)$ is a finite positive matrix on the stated chamber. Hence it has finitely many positive eigenvalues $\lambda_{jm}(\mathbf t)$, counted with multiplicity, and
+$$
+\operatorname{Tr}\left(L_j(\mathbf t)^{-s}\right)
+=
+\sum_m e^{-s\log\lambda_{jm}(\mathbf t)}.
+$$
+This is an entire function of $s$ and a smooth function of $\mathbf t$ on the chamber. Equation (X.9.6.25) gives
+$$
+\log\det_{\mathrm{PU}}(\mathbf t)
+=
+\sum_{j,m}\sigma_j\log\lambda_{jm}(\mathbf t),
+$$
+with the stated finite-part convention for zero-mode removal. The eta trace is also a finite sum over nonzero eigenvalues of $F_\ell(\mathbf t)$ on any chamber where the zero-mode ledger is fixed. Therefore all derivatives in (X.9.6.27) are derivatives of finite smooth functions on the chamber, and mixed partial derivatives commute.
+
+The requirement that every theorem-level scalar factor through (X.9.6.27) is exactly Corollary X.9.6e applied to the common closed predictive operator: every accepted heat, zeta, eta, determinant, threshold, or spectral-action scalar must be a fixed functional of branch-determined compressions of $\mathfrak L_{\mathrm{PU}}$ or of the Dirac-type operators supplied by Definition X.9.6f. If a claimed scalar uses no such compression and no fixed finite-part prescription, Corollary X.9.6e classifies it as branch, model, or validation input rather than theorem-level PU-internal data. Since noncommuting mixed derivatives cannot occur for the finite smooth ledger functions just described, any certificate producing them is incompatible with the claimed single-ledger origin. ∎
+
+**Corollary X.9.6g.2 (Anti-Duplication Gate for Constants).** Two PU constants claimed to arise from the same spectral projection and the same finite-part functional are the same ledger datum after normalization. Two constants claimed to arise from different sector projections must either use orthogonal compressions, in which case their traces add, or use a common master ledger with commuting mixed derivatives. Otherwise the pair is not a closed theorem-level numerical sector.
+
+*Proof.* Equality of the projection and functional gives equality by the spectral theorem, as in Corollary X.9.6e. Orthogonal projections give additive traces on direct sums. Non-orthogonal projections are coupled through the shared chamber variables of $\mathfrak Z_{\mathrm{PU}}$, so their joint dependence is governed by (X.9.6.28). A claimed pair outside these alternatives is not generated by a single branch-determined spectral datum. ∎
+
+**Definition X.9.6h (Canonical Doubled Dirac Factorization of the Master Operator).** Let $\mathfrak D_{\mathrm{PU}}$ be a closed predictive Dirichlet datum and let $\mathfrak L_{\mathrm{PU}}\ge0$ be its master predictive operator. Define
+$$
+\mathscr H_{\mathrm D}
+=
+\mathscr H_{\mathrm{PU}}\oplus\mathscr H_{\mathrm{PU}},
+\qquad
+\Gamma_{\mathrm D}
+=
+\begin{pmatrix}
+I&0\\
+0&-I
+\end{pmatrix},
+\tag{X.9.6.29}
+$$
+and
+$$
+S_{\mathrm{PU}}
+=
+\mathfrak L_{\mathrm{PU}}^{1/2},
+\qquad
+D_{\mathrm{PU}}^{\mathrm{dbl}}
+=
+\begin{pmatrix}
+0&S_{\mathrm{PU}}\\
+S_{\mathrm{PU}}&0
+\end{pmatrix}
+\quad
+\text{on }
+\operatorname{Dom}(S_{\mathrm{PU}})\oplus\operatorname{Dom}(S_{\mathrm{PU}}).
+\tag{X.9.6.30}
+$$
+This is the canonical doubled Dirac factorization of the master predictive operator.
+
+**Theorem X.9.6h.1 (Master Operator Dirac Factorization).** For every closed predictive Dirichlet datum, $D_{\mathrm{PU}}^{\mathrm{dbl}}$ is self-adjoint, odd with respect to $\Gamma_{\mathrm D}$, and satisfies
+$$
+\left(D_{\mathrm{PU}}^{\mathrm{dbl}}\right)^2
+=
+\mathfrak L_{\mathrm{PU}}\oplus\mathfrak L_{\mathrm{PU}}.
+\tag{X.9.6.31}
+$$
+Moreover it is unique among doubled odd self-adjoint factorizations
+$$
+D_T=
+\begin{pmatrix}
+0&T\\
+T&0
+\end{pmatrix},
+\qquad
+T=T^*\ge0,
+\tag{X.9.6.32}
+$$
+satisfying $D_T^2=\mathfrak L_{\mathrm{PU}}\oplus\mathfrak L_{\mathrm{PU}}$.
+
+*Proof.* Since $\mathfrak L_{\mathrm{PU}}$ is nonnegative and self-adjoint, the spectral theorem gives a unique nonnegative self-adjoint square root
+$$
+S_{\mathrm{PU}}=\mathfrak L_{\mathrm{PU}}^{1/2}
+$$
+with $S_{\mathrm{PU}}^2=\mathfrak L_{\mathrm{PU}}$. The block operator (X.9.6.30) is self-adjoint because both off-diagonal entries are the same self-adjoint operator on the same domain. Its oddness follows from direct multiplication:
+$$
+\Gamma_{\mathrm D}D_{\mathrm{PU}}^{\mathrm{dbl}}\Gamma_{\mathrm D}
+=
+-D_{\mathrm{PU}}^{\mathrm{dbl}}.
+$$
+Squaring the block matrix gives
+$$
+\left(D_{\mathrm{PU}}^{\mathrm{dbl}}\right)^2
+=
+\begin{pmatrix}
+S_{\mathrm{PU}}^2&0\\
+0&S_{\mathrm{PU}}^2
+\end{pmatrix}
+=
+\mathfrak L_{\mathrm{PU}}\oplus\mathfrak L_{\mathrm{PU}},
+$$
+which proves (X.9.6.31).
+
+For uniqueness, let $D_T$ have the form (X.9.6.32), with $T=T^*\ge0$, and suppose $D_T^2=\mathfrak L_{\mathrm{PU}}\oplus\mathfrak L_{\mathrm{PU}}$. Then
+$$
+T^2=\mathfrak L_{\mathrm{PU}}.
+$$
+By uniqueness of the nonnegative square root of a nonnegative self-adjoint operator, $T=\mathfrak L_{\mathrm{PU}}^{1/2}=S_{\mathrm{PU}}$. Hence $D_T=D_{\mathrm{PU}}^{\mathrm{dbl}}$. ∎
+
+**Definition X.9.6h.2 (Local First-Order Dirac Certificate).** A local first-order Dirac certificate for a sector projection $P$ is a finite record
+$$
+\mathfrak C_{\mathrm D}(P)
+=
+(P,\mathfrak A_P,\mathscr H_P,D_P,\Gamma_P,J_P,V_P,\mathcal E_P)
+\tag{X.9.6.33}
+$$
+where:
+
+1. $P$ is a branch-determined projection or form-compression of $\mathfrak L_{\mathrm{PU}}$.
+
+2. $\mathfrak A_P$ is the retained finite response algebra acting faithfully on $\mathscr H_P$.
+
+3. $D_P=D_P^*$ is an odd first-order response operator on $\mathscr H_P$:
+$$
+\Gamma_PD_P+D_P\Gamma_P=0.
+\tag{X.9.6.34}
+$$
+
+4. $J_P$ is the real-structure operator if that sector carries a real branch.
+
+5. $V_P=V_P^*$ is a finite zero-order response potential.
+
+6. The exact factorization identity holds:
+$$
+D_P^2+V_P
+=
+P\mathfrak L_{\mathrm{PU}}P^*.
+\tag{X.9.6.35}
+$$
+
+7. The finite order-zero and order-one response identities hold:
+$$
+[a,J_Pb^*J_P^{-1}]=0,
+\qquad
+[[D_P,a],J_Pb^*J_P^{-1}]=0
+\tag{X.9.6.36}
+$$
+for all retained algebra generators $a,b\in\mathfrak A_P$ for which $J_P$ is defined.
+
+8. $\mathcal E_P$ is the finite residual record proving (X.9.6.35) and (X.9.6.36) on the branch generators.
+
+**Theorem X.9.6h.3 (Exactness of Certified Local Dirac Factorization).** If a sector projection $P$ carries an accepted local first-order Dirac certificate $\mathfrak C_{\mathrm D}(P)$, then the sector compression $P\mathfrak L_{\mathrm{PU}}P^*$ has no independent second-order carrier beyond the certified first-order response datum $(\mathfrak A_P,\mathscr H_P,D_P,\Gamma_P,J_P,V_P)$. Any additional operator that gives the same finite protocol responses is response-null surplus; any additional operator that changes a finite response defines a distinct certified branch.
+
+*Proof.* Equation (X.9.6.35) is an equality of finite self-adjoint operators on $\mathscr H_P$. Hence every quadratic response generated by $P\mathfrak L_{\mathrm{PU}}P^*$ is equivalently generated by the certified first-order operator $D_P$ together with the zero-order potential $V_P$. The order-zero and order-one identities (X.9.6.36) show that the represented algebra acts as a finite first-order response geometry on the retained branch. Since $\mathfrak A_P$ acts faithfully, no retained algebra generator is lost in the factorization.
+
+Let $L'_P$ be another proposed carrier for the same sector. If it induces the same protocol-response presheaf as $P\mathfrak L_{\mathrm{PU}}P^*$, then Theorem P.6.1b.3 identifies it in the operational quotient, and Corollary P.6.1b.8 removes any extra label or operator decoration with no response change and no cost decrease. If $L'_P$ changes a finite response, it is not the same sector projection in the PPI quotient and must be entered as a distinct finite branch with its own certificate. These alternatives exhaust the finite response quotient. ∎
+
+**Definition X.9.6i (Numerical Projection Ledger).** A numerical projection ledger is a finite status-preserving map
+$$
+\mathfrak P_{\mathrm{num}}:
+\mathfrak D_{\mathrm{PU}}
+\longrightarrow
+\prod_c
+(\mathrm{name}_c,\mathrm{status}_c,\mathrm{formula}_c,\mathrm{value}_c,\mathrm{residual}_c)
+\tag{X.9.6.37}
+$$
+whose entries are fixed before validation comparison. The status tag is part of the datum and may be one of:
+
+1. theorem-level on an accepted certificate branch;
+
+2. canonical branch value with stated residual;
+
+3. reference-convention value;
+
+4. model-layer value;
+
+5. observational inversion, not a prediction.
+
+A numerical entry is PU-internal only when its formula is a fixed algebraic, heat, zeta, eta, determinant, finite-part, or certified response projection of the branch data already admitted by Corollary X.9.6e.
+
+**Theorem X.9.6i.1 (Status-Preserving Numerical Projection Evaluator).** On any branch carrying $\mathfrak P_{\mathrm{num}}$, the following projection entries are locked by their displayed formulas and inherit exactly the displayed status labels:
+$$
+u^*
+=
+2^{1/8}-1
+=
+0.09050773266525769\ldots,
+\tag{X.9.6.38}
+$$
+$$
+\alpha_{\mathrm{Th},0}^{-1}
+=
+\frac{4\pi}{u^*}
+-\frac{\pi}{\sqrt{3}}
++\frac{\pi u^*}{24\sqrt{3}}\frac{\sin u^*}{u^*}
+=
+137.03609205522858\ldots,
+\tag{X.9.6.39}
+$$
+with status: certificate-core Thomson branch value; theorem-level interval only on an accepted Thomson normalization certificate together with an accepted all-orders residual certificate;
+$$
+\Lambda_{5}L_P^2
+=
+8\pi(0.923)e^{-283}
+=
+2.884716788730471\ldots\times10^{-122},
+\tag{X.9.6.40}
+$$
+with status: Appendix U five-mode reference-convention value;
+$$
+\Lambda_{4}L_P^2
+=
+8\pi(0.923)e^{-284}
+=
+1.0612280001760434\ldots\times10^{-122},
+\tag{X.9.6.41}
+$$
+with status: corrected four-mode exponent branch using the transferred determinant convention $A_{\mathrm{eff}}=0.923$;
+$$
+A_{\mathrm{eff}}^{(\mathrm{obs},4)}
+=
+\frac{\Lambda_{\mathrm{obs}}L_P^2}{8\pi e^{-284}}
+=
+2.49\pm0.04,
+\tag{X.9.6.42}
+$$
+with status: observational inversion for the corrected four-mode prefactor, not a PU prediction until a Fredholm determinant certificate supplies the same prefactor;
+$$
+Q
+=
+\sqrt{\frac12}\,e^{-11}
+=
+1.1809885886131427\ldots\times10^{-5},
+\tag{X.9.6.43}
+$$
+with status: leading primordial branch value at $A_Q=1$;
+$$
+A_s r
+=
+\frac{e^{-22}}{4\pi^2}
+=
+7.065805222550351\ldots\times10^{-12},
+\tag{X.9.6.44}
+$$
+with status: leading primordial product-lock value at $A_Q=1$;
+$$
+\eta_B
+=
+0.282\cdot0.9997\cdot0.63\cdot3.47\times10^{-9}
+=
+6.1629525594\ldots\times10^{-10},
+\tag{X.9.6.45}
+$$
+with status: Appendix Y transport-branch value, theorem-level only after acceptance of the baryogenesis transport certificate.
+
+*Proof.* Each entry is a deterministic image of fixed branch quantities under ordinary arithmetic. Equation (X.9.6.38) follows from the capacity-saturation value $u^*=2^{1/8}-1$. Substituting (X.9.6.38) and $K_0=3$ into the sinc-improved Thomson certificate-core expression of Definition Z.27.11a with $R_lpha=0$ gives (X.9.6.39). Substituting the Appendix U reference prefactor $A_{\mathrm{eff}}=0.923$ into
+$$
+\Lambda L_P^2=8\pi A_{\mathrm{eff}}e^{-2\kappa}
+$$
+with $\kappa=141.5$ gives (X.9.6.40), while substituting $\kappa=142$ gives (X.9.6.41). Solving the same equation for $A_{\mathrm{eff}}$ at $\kappa=142$ gives (X.9.6.42). Equations (X.9.6.43) and (X.9.6.44) follow from the leading primordial branch $Q^2=\frac12 e^{-22}$ and the product-lock identity $A_s r=e^{-22}/(4\pi^2)$. Equation (X.9.6.45) is the displayed product of the Appendix Y transport factors.
+
+The status labels are preserved because the arithmetic evaluation does not change the logical source of any input. A reference-convention prefactor remains a reference-convention prefactor after multiplication. An observational inversion remains an inversion after solving for the prefactor. A certificate-core branch value remains interval-incomplete until its residual certificate is accepted, and it remains certificate-dependent if one of its normalization maps is certificate-dependent. Therefore the projection ledger locks the numerical images while preventing promotion of uncertified entries to theorem-level status. ∎
+
+**Corollary X.9.6i.2 (No Numerical Refit After Projection).** Once an entry of $\mathfrak P_{\mathrm{num}}$ is registered, changing any formula coefficient, prefactor, finite-part convention, residual interval, or status label after comparison with data defines a new branch and cannot confirm the original numerical projection.
+
+*Proof.* The numerical value is a deterministic image of the registered finite record by Theorem X.9.6i.1. Altering a coefficient, prefactor, finite-part convention, residual interval, or status label changes the finite record or the projection map. By Corollary X.9.6e it is then a different spectral or branch datum, and by Corollary P.6.1b.8 it cannot be treated as the same physical projection unless the change is response-null. A response-null change cannot alter the numerical value or its validation interval. ∎

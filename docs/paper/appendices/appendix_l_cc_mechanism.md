@@ -1751,7 +1751,7 @@ where $\eta_{\text{res}}: [0, \mathcal{I}_{\max}] \to [\eta_{\text{res}}^{\text{
 
 ### **L.12.9 The Entanglement-Mediated Channel**
 
-The causal information framework extends to the entanglement-mediated statistical influence (Appendix F, Equation F.4), where $S$ modulates joint statistics $\omega(A \otimes B)$ via pre-existing entanglement in the global state $\omega_{AB}$.
+The causal information framework extends first to the local-CPTP entanglement-correlation branch, where $S$ modulates preparation, measurement, or local context channels while preserving no-signaling marginal identities. A stronger nonlocal/state-mediated marginal-anomaly branch is not part of the core CC closure; it is an explicitly separated experimental extension requiring the finite-window gates of Section 10 before any validation claim. The branch analyzed here uses pre-existing entanglement in the global state $\omega_{AB}$ and local context-dependent modulation of joint statistics $\omega(A \otimes B)$.
 
 **Definition L.12.2 (Entanglement Causal Information).** Let $\omega_{AB}$ be a shared (possibly mixed) bipartite state between regions $A$ and $B$. Let $\mathcal{B}_{AB}$ denote a choice of local operator bases that diagonalizes the centered correlation operator $\omega_{AB} - \omega_A \otimes \omega_B$ (e.g., via an operator-Schmidt decomposition). Define $\theta_{AB} := (\omega_{AB}, \mathcal{B}_{AB})$ as the entanglement structure relevant to joint correlations. The **entanglement causal information** of aggregate $S$ about the joint state $\omega_{AB}$ is:
 
@@ -1769,9 +1769,40 @@ where $\eta_{\text{ent}} \in [0,1]$ satisfies $\mathcal{I}_{\text{ent}}(S, \omeg
 
 *Proof.* For the two contexts, define $\Delta\omega := \omega_{C_{A,1}} - \omega_{C_{A,2}}$. Then $|\omega_{C_{A,1}}(A \otimes B) - \omega_{C_{A,2}}(A \otimes B)| = |\operatorname{tr}(\Delta\omega \cdot A \otimes B)| \leq |\Delta\omega|_1 \cdot |A| \cdot |B|$. The CC bound limits the magnitude of context-dependent bias injected by $S_A$ (Theorem 39). The fraction of that bias that can appear in a chosen joint correlator depends on correlation strength of the shared resource and basis alignment; we denote this dimensionless efficiency by $\eta_{\text{ent}}(S_A, AB) \in [0,1]$. Hence $|\Delta\omega|_1 \leq \text{CC}(S_A) \cdot \eta_{\text{ent}}(S_A, AB)$, giving Equation L.110. When $\mathcal{I}_{\text{ent}} = 0$, the context modulation is uncorrelated with $\mathcal{B}_{AB}$; averaging over the prior gives zero net aligned bias, hence $\eta_{\text{ent}} = 0$. ∎
 
-**Theorem L.12.8 (Statistical FTL Requires Shared Past).** Non-trivial entanglement bias requires that $S$ participated in preparing or measuring the correlations of $\omega_{AB}$ through ND-RID interactions within the shared causal past of $\mathcal{O}_A$ and $\mathcal{O}_B$. No causal paradox arises: when the continuum AQFT limit of Appendix F applies, operator locality (Corollary F.1) is preserved, and causality (Postulate 2, Theorem 39) is maintained.
+**Theorem L.12.8 (Entanglement Bias Requires Shared Past).** Non-trivial entanglement-correlation bias on the local-CPTP branch requires that $S$ participated in preparing, measuring, or contextually conditioning the correlations of $\omega_{AB}$ through ND-RID interactions within the shared causal past of $\mathcal{O}_A$ and $\mathcal{O}_B$. No causal paradox arises: when the continuum AQFT limit of Appendix F applies, operator locality (Corollary F.1) is preserved, and causality (Postulate 2, Theorem 39) is maintained.
 
 *Proof.* $\eta_{\text{ent}} > 0$ requires $\mathcal{I}_{\text{ent}}(S, \omega_{AB}) > 0$, which requires a non-empty causal history between $S$ and $\theta_{AB}$. The entangled state $\omega_{AB}$ was itself established through ND-RID interactions in the common causal past of $\mathcal{O}_A$ and $\mathcal{O}_B$ (by Lemma L.12.1 generalized to multipartite systems). The same three-mechanism locality enforcement of Theorem L.12 applies: ND-RID propagation speed (3a), thermodynamic range cost (3b), and arrow of time (3c) together confine the preparation history to the shared past lightcone. ∎
+
+**Corollary L.12.8a (Core CC No-Signaling Branch).** The core CC mechanism in this appendix is the local-CPTP branch. For every bipartite state $\omega_{AB}$ and every Alice-side local context channel $\Phi_A^C$,
+$$
+\omega_{AB}^C=(\Phi_A^C\otimes \mathrm{id}_B)(\omega_{AB})
+$$
+satisfies
+$$
+\operatorname{tr}_A(\omega_{AB}^C)
+=
+\operatorname{tr}_A(\omega_{AB})
+\tag{L.111}
+$$
+whenever $\Phi_A^C$ is completely positive and trace-preserving. Therefore Bob-side marginal shifts under late-randomized Alice context choices are not a consequence of core CC. They belong only to the separated nonlocal/state-mediated marginal-anomaly branch of Postulate 3 and require the finite-window zero-error and validation gates of Section 10.
+
+*Proof.* For any Bob-side observable $B$,
+$$
+\operatorname{tr}\!\left[(I_A\otimes B)(\Phi_A^C\otimes \mathrm{id}_B)(\omega_{AB})\right]
+=
+\operatorname{tr}\!\left[(\Phi_A^{C\,*}(I_A)\otimes B)\omega_{AB}\right].
+$$
+Because $\Phi_A^C$ is trace-preserving, its Heisenberg adjoint is unital:
+$$
+\Phi_A^{C\,*}(I_A)=I_A.
+$$
+Thus
+$$
+\operatorname{tr}\!\left[(I_A\otimes B)\omega_{AB}^C\right]
+=
+\operatorname{tr}\!\left[(I_A\otimes B)\omega_{AB}\right]
+$$
+for every $B$, which is exactly (L.111). Hence a Bob-side marginal anomaly cannot be produced by the local-CPTP core branch. ∎
 
 **Remark L.12.5 (Entanglement Channel Temporal Engineering).** In the temporal-ontological description (Section L.12.3), the entanglement channel corresponds to modulating the perspective transition kernel $G_{\text{persp}}$ in region $\mathcal{O}*A$ in a way that is coherently correlated with the correlation basis $\mathcal{B}_{AB}$ connecting $\mathcal{O}_A$ to $\mathcal{O}*B$ through the global state $\omega_{AB}$. The drift-diffusion dynamics in $\mathcal{O}_A$ are entangled with those in $\mathcal{O}_B$ through the pre-established correlations in $\omega$; the aggregate's context modulation steers this correlated drift without violating the marginal independence required by operator locality when Corollary F.1 applies — consistent with Equation F.4.
 

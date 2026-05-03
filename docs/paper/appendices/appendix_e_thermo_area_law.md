@@ -715,6 +715,101 @@ $$\text{ND-RID channels} + \text{Geometric regularity} + \text{Finite capacity} 
 
 The bulk contains no independent information beyond what is encoded in boundary channels. Volume is an emergent description of nested boundary structures.
 
+**Corollary E.8.1a (Boundary Response-Quotient Holography).** Let $A$ be a bounded regular region covered by the hypotheses of Theorem E.8.2. Let $\rho,\rho'$ be two bulk code states whose boundary protocol-response presheaves agree on every retained finite boundary protocol over every nested reconstruction cut:
+$$
+\mathcal R_{\partial A}(\rho)\simeq \mathcal R_{\partial A}(\rho').
+\tag{E.8.1a.1}
+$$
+Then $\rho$ and $\rho'$ are operationally identical for all exterior observables retained by the PU finite-response quotient. Any proposed interior distinction between them is either encoded in a separating boundary protocol, response-null for exterior physics, or a separately certified finite branch degeneracy.
+
+*Proof.* Theorem E.8.2 supplies the nested boundary-channel reconstruction family on the stated branch. Therefore every retained exterior observable is represented by a finite boundary protocol or by a finite composition of such protocols over the nested cuts. If (E.8.1a.1) holds, all such protocols have identical response statistics on $\rho$ and $\rho'$. By the operational Yoneda reconstruction of Theorem P.6.1b.3, identical response presheaves define the same finite-response object for the retained exterior sector. Corollary P.6.1b.8 removes any additional interior label that changes no finite response and lowers no cost. If an interior label changes a finite response, then some retained protocol separates it, contradicting (E.8.1a.1), unless it belongs to a different finite branch with an explicit degeneracy certificate. ∎
+
+**Remark E.8.1a.1 (Status Relative to AdS/CFT).** Corollary E.8.1a is a finite-response holography statement, not a claim of conformal duality or AdS boundary dynamics. It establishes operational reconstruction in the PU quotient wherever the nested ND-RID boundary-channel hypotheses hold. The stronger Page-curve and scrambling statements remain branch-gated until the horizon code is shown to generate the required approximate design dynamics.
+
+**Definition E.8.1b (Petz-Sufficient Boundary Compression).** Let $\mathcal C_A$ be a finite retained bulk code family for a region $A$, let
+$$
+\mathcal E_{\partial A}:\mathcal B(\mathcal H_{\mathrm{code}})\to\mathcal B(\mathcal H_{\partial A})
+$$
+be the finite boundary compression channel, and let $\sigma$ be a full-rank reference state on $\mathcal H_{\mathrm{code}}$. The branch is Petz-sufficient on $\mathcal C_A$ when the Petz recovery map
+$$
+\mathcal R_{\sigma,\mathcal E_{\partial A}}(X)
+=
+\sigma^{1/2}
+\mathcal E_{\partial A}^{*}
+\left[
+\mathcal E_{\partial A}(\sigma)^{-1/2}
+X
+\mathcal E_{\partial A}(\sigma)^{-1/2}
+\right]
+\sigma^{1/2}
+\tag{E.8.1b.1}
+$$
+is well-defined on the support of $\mathcal E_{\partial A}(\sigma)$ and satisfies
+$$
+\mathcal R_{\sigma,\mathcal E_{\partial A}}
+\mathcal E_{\partial A}(\rho)
+=
+\rho
+\tag{E.8.1b.2}
+$$
+for every $\rho$ in the convex hull of $\mathcal C_A$.
+
+**Theorem E.8.1c (Petz-Sufficiency Holography).** On a Petz-sufficient finite boundary-compression branch, every retained bulk protocol response on $\mathcal C_A$ is reconstructible from boundary protocol responses. Equivalently, two code states with the same boundary response presheaf are identical in the retained bulk response quotient.
+
+*Proof.* Let $O$ be any retained bulk effect or observable on the code. Define the boundary representative
+$$
+O_{\partial A}
+=
+\mathcal R_{\sigma,\mathcal E_{\partial A}}^{*}(O).
+\tag{E.8.1c.1}
+$$
+For any $\rho\in\operatorname{conv}(\mathcal C_A)$,
+$$
+\operatorname{Tr}(O\rho)
+=
+\operatorname{Tr}\left(O\,\mathcal R_{\sigma,\mathcal E_{\partial A}}\mathcal E_{\partial A}(\rho)\right)
+$$
+by (E.8.1b.2). By the definition of the adjoint channel,
+$$
+\operatorname{Tr}\left(O\,\mathcal R_{\sigma,\mathcal E_{\partial A}}\mathcal E_{\partial A}(\rho)\right)
+=
+\operatorname{Tr}\left(\mathcal R_{\sigma,\mathcal E_{\partial A}}^{*}(O)\,\mathcal E_{\partial A}(\rho)\right)
+=
+\operatorname{Tr}\left(O_{\partial A}\,\mathcal E_{\partial A}(\rho)\right).
+$$
+Thus every retained bulk response equals a boundary response.
+
+If $\rho$ and $\rho'$ have naturally isomorphic boundary response presheaves, then for every retained boundary representative $O_{\partial A}$,
+$$
+\operatorname{Tr}\left(O_{\partial A}\mathcal E_{\partial A}(\rho)\right)
+=
+\operatorname{Tr}\left(O_{\partial A}\mathcal E_{\partial A}(\rho')\right).
+$$
+By the equality just proved, every retained bulk protocol has the same response on $\rho$ and $\rho'$. The operational Yoneda reconstruction of Theorem P.6.1b.3 therefore identifies the two states in the retained bulk response quotient. ∎
+
+**Corollary E.8.1d (Zero Data-Processing Loss on a Petz-Sufficient Branch).** If the branch is Petz-sufficient for $\rho$ and the reference state $\sigma$, then
+$$
+D(\rho\Vert\sigma)
+=
+D(\mathcal E_{\partial A}(\rho)\Vert\mathcal E_{\partial A}(\sigma)).
+\tag{E.8.1d.1}
+$$
+
+*Proof.* Monotonicity of relative entropy under $\mathcal E_{\partial A}$ gives
+$$
+D(\rho\Vert\sigma)
+\ge
+D(\mathcal E_{\partial A}(\rho)\Vert\mathcal E_{\partial A}(\sigma)).
+$$
+Monotonicity under $\mathcal R_{\sigma,\mathcal E_{\partial A}}$ gives
+$$
+D(\mathcal E_{\partial A}(\rho)\Vert\mathcal E_{\partial A}(\sigma))
+\ge
+D(\mathcal R_{\sigma,\mathcal E_{\partial A}}\mathcal E_{\partial A}(\rho)\Vert
+\mathcal R_{\sigma,\mathcal E_{\partial A}}\mathcal E_{\partial A}(\sigma)).
+$$
+Using (E.8.1b.2) for $\rho$ and the Petz recovery identity for $\sigma$, the right side is $D(\rho\Vert\sigma)$. The two inequalities therefore squeeze the middle term to equality. ∎
+
 **Corollary E.8.2 (Resolution Limit).** Bulk reconstruction has resolution limit $\sim L_P$. Finer structure cannot be encoded because:
 - Channel spacing is $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \cdot L_P$ (Appendix Q, Equation Q.18)
 - Each channel carries finite capacity $C_{\max}(f_{\text{RID}}) = 2\ln 2$ nats (Equation E.15)
@@ -1961,9 +2056,9 @@ by the unitary invariance of von Neumann entropy [von Neumann 1932].
 
 **Step 3 (Capacity transfer).** The horizon $\mathcal{H}$ has channel capacity $C_H(t) \propto \mathcal{A}_H(t)/(4G)$ (Theorem E.6). As the black hole evaporates, $\mathcal{A}_H(t) \to 0$, so $C_H(t) \to 0$. By unitarity, the information initially associated with the black hole must be relocated to the radiation field and horizon-radiation correlations.
 
-**Step 4 (Page curve emergence—conditional result).** The entanglement entropy between radiation and remaining black hole, $S_{\text{ent}}(t) = S(\rho_{\text{rad}}(t))$ for the reduced radiation state, follows the Page curve under the following assumption:
+**Step 4 (Page curve emergence—scrambling branch result).** The entanglement entropy between radiation and remaining black hole, $S_{\text{ent}}(t) = S(\rho_{\text{rad}}(t))$ for the reduced radiation state, follows the Page curve only on the following explicitly marked scrambling branch:
 
-**Assumption (Approximate k-design dynamics).** The black hole's internal MPU dynamics, governed by PCE optimization (Definition 15), generates scrambling dynamics that approximate a unitary $k$-design for sufficiently large $k$. This assumption is motivated by:
+**Scrambling-Branch Hypothesis (Approximate k-design dynamics).** The black hole's internal MPU dynamics, governed by PCE optimization (Definition 15), generates scrambling dynamics that approximate a unitary $k$-design for sufficiently large $k$. This assumption is motivated by:
 
 - PCE optimization drives systems toward configurations that maximize predictive efficiency, which generically produces chaotic dynamics with rapid information spreading [Brandão et al. 2016]
 - Scrambling dynamics generically approach random unitary behavior [Hayden & Preskill 2007]

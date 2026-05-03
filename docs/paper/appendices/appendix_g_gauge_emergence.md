@@ -1225,7 +1225,7 @@ with dimension $12$. ∎
 **Remark G.8.4c.3: Experimental Status.** Current experimental lower limits on partial lifetimes are $\tau/B(p \to e^+ \pi^0) > 2.4 \times 10^{34}$ years and $\tau/B(p \to \mu^+ \pi^0) > 1.6 \times 10^{34}$ years [Super-Kamiokande Collaboration 2020]. Minimal $SU(5)$ scenarios typically predict $\tau/B(p \to e^+ \pi^0)$ in the $10^{31}$–$10^{32}$ year range (model-dependent), which is excluded by more than two orders of magnitude [Nath & Fileviez Pérez 2007; Langacker 1981]. The framework predicts continued null results in searches for gauge-mediated proton decay modes.
 
 
-**Remark G.8.4d: Complementary Derivation Structure.** Proposition G.M1 identifies the emergent gauged algebra as the decomposition-preserving local unitary symmetry once the internal module split is fixed. Theorem G.8.4b derives the unique PCE-selected module decomposition $\mathcal{B}=\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1$ from capacity, locality, chirality, and anomaly constraints. Together they yield $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ without additional hypotheses.
+**Remark G.8.4d: Complementary Derivation Structure.** Proposition G.M1 identifies the emergent gauged algebra as the decomposition-preserving local unitary symmetry once the internal module split is fixed. Theorem G.8.4b derives the unique PCE-selected module decomposition $\mathcal{B}=\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1$ from capacity, locality, chirality, and anomaly constraints. Together they yield $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ without additional algebraic hypotheses. The remaining abelian normalization is fixed only after determinant-character and anomaly descent, supplied by Theorem G.8.4e.1b and Corollary G.8.4e.1c.
 
 **Theorem G.8.4e (Topological No-Go for a $(1,2,3)$ Reduction of the Universal Quotient Bundle).** Let
 $$
@@ -1601,6 +1601,29 @@ $$
 0.
 $$
 Thus the cubic anomaly is automatically cancelled by the Chern-character/Yukawa solution. If $a=0$, every hypercharge is zero, contradicting the nontrivial abelian-coupling branch. Hence the nontrivial solution is unique up to scale. The primitive normalization $a=1/6$ is the minimal-denominator normalization in which $e^c$ has charge $+1$ and $H$ has charge $1/2$. The number of weak doublets is four, so Witten's global $SU(2)$ parity condition is satisfied. ∎
+
+**Corollary G.8.4e.1c (No Hypercharge Refit Freedom).** On the minimal flag-lift branch of Theorem G.8.4e.1b, the Standard Model hypercharge lattice has no continuous refit freedom. The only remaining transformations are simultaneous reversal of the abelian generator and coupling,
+$$
+Y\mapsto -Y,
+\qquad
+g_1\mapsto -g_1,
+$$
+and the already fixed primitive charge-unit normalization
+$$
+a=\frac16.
+$$
+
+*Proof.* Theorem G.8.4e.1b solves the full linear Yukawa system, the mixed gravitational anomaly, the $SU(3)^2U(1)$ anomaly, the $SU(2)^2U(1)$ anomaly, and the cubic $U(1)^3$ anomaly. The nontrivial solution space is one-dimensional:
+$$
+(y_q,y_{u^c},y_{d^c},y_\ell,y_{e^c},y_H)
+=
+a(1,-4,2,-3,6,3).
+$$
+The zero vector $a=0$ is excluded by the retained nontrivial abelian-coupling branch. Multiplying all charges by $-1$ is the same physical convention as reversing the sign of the abelian generator and coupling. Multiplying by any positive real number other than the primitive charge-unit normalization changes the charge lattice and the determinant-character line by a nonprimitive cover. The minimal integral character has vector
+$$
+(1,-4,2,-3,6,3),
+$$
+whose greatest common divisor is $1$. Requiring $e^c$ to generate the unit charged singlet gives $6a=1$, hence $a=1/6$. Therefore no continuous hypercharge refit remains. ∎
 
 **Remark G.8.4e.2 (Scope of the Lift).** Theorem G.8.4b and Corollary G.8.4c remain statements about the abstract inactive fiber $\mathcal B\cong \mathbb C^6$. Theorems G.8.4e and G.8.4e.1 show that this fiberwise $(3,2,1)$ decomposition does not globalize on the bare universal quotient bundle $Q\to \mathrm{Gr}(2,8)$ and that $\widetilde X$ is, up to unique isomorphism over $\mathrm{Gr}(2,8)$, the corresponding universal global lift on which the ordered decomposition is realized as smooth bundle data. The derivations of $d_0=8$, $a=2$, $M=24$, $D=4$, and the first-order fine-structure constant remain on bare $\mathrm{Gr}(2,8)$. The flag lift is required exactly when the ordered $Y/W/C$ sector splitting must be treated as global bundle data: the Chern-character anomaly bookkeeping of Theorem G.8.4e.1b, the generation-index globalization of Proposition R.IDX2a, and the quantitative gauge-threshold sector of Appendix T.
 

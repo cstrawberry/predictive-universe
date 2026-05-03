@@ -1145,6 +1145,81 @@ fixed before comparison with $\eta_B$, where:
 
 *Proof.* Theorem Y.11.7b states that $\eta_B$ is the deterministic image of $\mathfrak C_B$. The inputs of $\mathfrak C_B$ include $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$ or a branch substitute, $\mathcal S_{\mathrm{sph}}$, $\mathcal W_{\mathrm{wash}}$, $\mathcal P_{CP}$, and $\mathcal T_B$. Exact $N_g=3$ and the existence of CP-active structure determine only qualitative admissibility of the transport channel. Varying the washout integral or CP profile within admissible finite records changes the numerical asymmetry. Theorem P.14.1f therefore blocks theorem-level numerical promotion without the accepted transport certificate. ∎
 
+**Definition Y.11.7e (Finite Baryogenesis Transport Integral Certificate).** A finite baryogenesis transport integral certificate is a refinement of $\mathfrak C_B$:
+$$
+\mathfrak C_B^{\mathrm{tr}}
+=
+\left(
+\mathfrak C_B,
+[t_i,t_f],
+\mathcal L_B(t),
+S_{CP}(t),
+W_B(t),
+\mathcal Q_B,
+\mathcal R_B^{\mathrm{tr}},
+\chi_B^{\mathrm{tr}}
+\right)
+\tag{Y.11.7e}
+$$
+where:
+
+1. $[t_i,t_f]$ is the certified electroweak transport window.
+
+2. $\mathcal L_B(t)$ is the finite baryon-number transport generator on the retained CP-active state vector.
+
+3. $S_{CP}(t)$ is the determinant-line CP source profile.
+
+4. $W_B(t)$ is the washout/freeze-out profile.
+
+5. $\mathcal Q_B$ is the quadrature and tail-bound ledger for all time integrals.
+
+6. $\mathcal R_B^{\mathrm{tr}}$ is the propagated residual interval.
+
+7. $\chi_B^{\mathrm{tr}}$ records that no entry is selected using the observed baryon asymmetry.
+
+The transport solution is
+$$
+Y_B(t_f)
+=
+\mathcal U_B(t_f,t_i)Y_B(t_i)
++
+\int_{t_i}^{t_f}
+\mathcal U_B(t_f,t)
+S_{CP}(t)
+e^{-W_B(t)}
+\,dt,
+\tag{Y.11.7e.1}
+$$
+where
+$$
+\mathcal U_B(t_2,t_1)
+=
+\mathcal T\exp
+\left(
+\int_{t_1}^{t_2}\mathcal L_B(s)\,ds
+\right).
+\tag{Y.11.7e.2}
+$$
+
+**Theorem Y.11.7f (Certified Baryogenesis Transport Determinacy).** If $\mathfrak C_B^{\mathrm{tr}}$ is accepted, then the baryon asymmetry
+$$
+\eta_B
+=
+\mathcal N_\gamma\,Y_B(t_f)
+\tag{Y.11.7f.1}
+$$
+is uniquely determined up to the residual interval $\mathcal R_B^{\mathrm{tr}}$, where $\mathcal N_\gamma$ is the fixed photon-normalization convention of the branch.
+
+*Proof.* The finite generator $\mathcal L_B(t)$, CP source $S_{CP}(t)$, washout profile $W_B(t)$, initial condition, and time window are all fixed entries of $\mathfrak C_B^{\mathrm{tr}}$. The linear finite-dimensional nonautonomous transport equation has a unique time-ordered evolution operator $\mathcal U_B(t_2,t_1)$. Therefore (Y.11.7e.1) gives one value of $Y_B(t_f)$ before residuals. The quadrature ledger $\mathcal Q_B$ supplies the finite integration approximation and certified tail/error bounds, collected in $\mathcal R_B^{\mathrm{tr}}$. Multiplication by the fixed branch normalization $\mathcal N_\gamma$ preserves uniqueness. Thus $\eta_B$ is the deterministic image of the accepted finite record up to $\mathcal R_B^{\mathrm{tr}}$. ∎
+
+**Corollary Y.11.7g (No Transport-Factor Replacement).** The product form
+$$
+0.282\cdot0.9997\cdot0.63\cdot3.47\times10^{-9}
+$$
+is theorem-level only if it is the evaluated reduction of an accepted $\mathfrak C_B^{\mathrm{tr}}$ or an accepted certificate explicitly proving equivalence to that transport integral. Otherwise it remains the Appendix Y transport-branch value.
+
+*Proof.* Theorem Y.11.7f defines theorem-level transport closure through the finite generator, CP source, washout profile, quadrature ledger, and residual interval. A scalar product not derived from those entries does not instantiate the transport equation. If a factor is replaced after comparison, $\chi_B^{\mathrm{tr}}$ fails and the replacement is a new branch. ∎
+
 ## Y.11 Derivation Chain Summary
 
 The complete logical chain from $K_0 = 3$ to $\eta_B$:

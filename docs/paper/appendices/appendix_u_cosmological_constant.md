@@ -970,6 +970,145 @@ Theorem U.8c proves that the pure-coordinate dilatation tangent is a strict nega
 
 *Proof.* Combine Theorem U.15e (which gates the audit on an accepted certificate) with Proposition U.15c (which records that the working value and observational inversions are not theorem-level prefactors). Without the seven explicit factors evaluated on a common branch, formula (U.15d.3) is not instantiated and no scalar prefactor is determined by PU vacuum dynamics. ∎
 
+**Definition U.15f.1 (Four-Mode Fredholm Interval Audit).** A four-mode Fredholm interval audit for the corrected Appendix U branch is a finite record
+$$
+\mathfrak I_U^{(4)}
+=
+\left(
+I_{\mathrm F},
+I_{\mathrm B},
+I_{\mathrm{coll}},
+I_{\mathrm{neg}},
+I_{\mathrm{ghost}},
+I_{\mathrm{fv}},
+I_{\mathrm{meas}},
+\kappa_U,
+\chi_U
+\right)
+\tag{U.15f.1}
+$$
+where:
+
+1. $\kappa_U=142$ is the corrected four-mode exponent of Theorem U.13b.
+
+2. $I_{\mathrm F}=[\ell_{\mathrm F}^-,\ell_{\mathrm F}^+]$ is a certified interval for
+$$
+\log\det{}'_\zeta\mathcal H_{\mathrm{false}}.
+$$
+
+3. $I_{\mathrm B}=[\ell_{\mathrm B}^-,\ell_{\mathrm B}^+]$ is a certified interval for
+$$
+\log|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|.
+$$
+
+4. $I_{\mathrm{coll}},I_{\mathrm{neg}},I_{\mathrm{ghost}},I_{\mathrm{fv}},I_{\mathrm{meas}}$ are certified intervals for the logarithms of
+$$
+\mathcal J_{\mathrm{coll}},
+\qquad
+|\mathcal A_{\mathrm{neg}}|,
+\qquad
+\mathcal A_{\mathrm{ghost}},
+\qquad
+\mathcal A_{\mathrm{fv}},
+\qquad
+\mathcal A_{\mathrm{meas}},
+$$
+using the same quotient Hessian, zero-mode convention, finite-volume convention, and finite-part scale $\mu_U$ as Definition U.15d. Write these intervals as
+$$
+I_x=[\ell_x^-,\ell_x^+],
+\qquad
+x\in\{\mathrm{coll},\mathrm{neg},\mathrm{ghost},\mathrm{fv},\mathrm{meas}\}.
+$$
+
+5. $\chi_U$ records that no interval endpoint is selected using the observed value of $\Lambda L_P^2$.
+
+**Theorem U.15f.2 (Four-Mode Fredholm Prefactor Interval).** An accepted $\mathfrak I_U^{(4)}$ determines a forward four-mode prefactor interval
+$$
+A_{\mathrm{eff}}^{\mathrm{Fred},4}
+\in
+\left[
+e^{L_U^-},
+e^{L_U^+}
+\right],
+\tag{U.15f.2}
+$$
+where
+$$
+L_U^-
+=
+\ell_{\mathrm{coll}}^-
++
+\ell_{\mathrm{neg}}^-
++
+\ell_{\mathrm{ghost}}^-
++
+\ell_{\mathrm{fv}}^-
++
+\ell_{\mathrm{meas}}^-
++
+\frac12(\ell_{\mathrm F}^- - \ell_{\mathrm B}^+),
+\tag{U.15f.3}
+$$
+and
+$$
+L_U^+
+=
+\ell_{\mathrm{coll}}^+
++
+\ell_{\mathrm{neg}}^+
++
+\ell_{\mathrm{ghost}}^+
++
+\ell_{\mathrm{fv}}^+
++
+\ell_{\mathrm{meas}}^+
++
+\frac12(\ell_{\mathrm F}^+ - \ell_{\mathrm B}^-).
+\tag{U.15f.4}
+$$
+It therefore determines the theorem-level four-mode interval
+$$
+\Lambda_4 L_P^2
+\in
+8\pi e^{-284}
+\left[
+e^{L_U^-},
+e^{L_U^+}
+\right].
+\tag{U.15f.5}
+$$
+
+*Proof.* Taking the logarithm of (U.15d.3) gives
+$$
+\log A_{\mathrm{eff}}^{\mathrm{Fred}}
+=
+\log\mathcal J_{\mathrm{coll}}
++
+\log|\mathcal A_{\mathrm{neg}}|
++
+\log\mathcal A_{\mathrm{ghost}}
++
+\log\mathcal A_{\mathrm{fv}}
++
+\log\mathcal A_{\mathrm{meas}}
++
+\frac12
+\left(
+\log\det{}'_\zeta\mathcal H_{\mathrm{false}}
+-
+\log|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|
+\right).
+$$
+For interval arithmetic, lower endpoints add to lower endpoints except for the subtracted bounce determinant interval, where the lower bound uses $-\ell_{\mathrm B}^+$; upper endpoints add to upper endpoints and use $-\ell_{\mathrm B}^-$. This gives (U.15f.3) and (U.15f.4). Exponentiation is monotone, giving (U.15f.2). On the corrected four-mode branch, Theorem U.13b gives $2\kappa_U=284$, so
+$$
+\Lambda L_P^2=8\pi A_{\mathrm{eff}}e^{-284},
+$$
+which gives (U.15f.5). ∎
+
+**Corollary U.15f.3 (No Four-Mode $\Lambda$ Refit).** Once $\mathfrak I_U^{(4)}$ is accepted, the four-mode $\Lambda$ interval is fixed by (U.15f.5). Changing any determinant endpoint, ghost factor, collective-coordinate Jacobian, volume/extensivity factor, measure normalization, or finite-part scale after comparison defines a new Fredholm branch and cannot confirm the original four-mode interval.
+
+*Proof.* Each listed item is an entry of $\mathfrak I_U^{(4)}$. The forward-lock condition $\chi_U$ forbids choosing it from $\Lambda_{\mathrm{obs}}$. A post-comparison change changes the finite record and therefore changes the branch. ∎
+
 **Definition U.15g (Bismut-Lebeau Determinant-Transfer Datum).** A Bismut-Lebeau determinant-transfer datum is a finite record
 $$
 \mathfrak B_{\mathrm{BL}}

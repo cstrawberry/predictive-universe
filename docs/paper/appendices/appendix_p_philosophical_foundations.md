@@ -1438,7 +1438,7 @@ The PU framework is the first to provide a complete formal specification: what a
 **Definition P.6.2 (Principle of Physical Instantiation – PPI).**
 Any derivable, self-consistent logical or mathematical structure, when physically instantiated by a system composed of finite resources and operating in finite time, will manifest in the physical world with properties and dynamics shaped by the irreducible thermodynamic costs and resource-optimization imperatives inherent in its implementation. When multiple physically admissible implementations realize the same abstract structure with the same operational functionality, the realized implementation is the one minimizing the relevant resource cost over that admissible class (PPI-optimality).
 
-The PPI is the bridge between pure mathematics and physics. It explains why the physical world is not a direct copy of abstract structures, but a specific, cost-optimized implementation of them.
+In the finite-response formulation, PPI is not an additional copy map from pure mathematics into physics. It is the operational representation rule for physical content: a structure is physically instantiated exactly through the finite protocol-response presheaf it induces after response-null labels are quotiented and PCE-minimal representatives are selected. It explains why the physical world is not a direct copy of abstract structures, but the finite-response, cost-minimal representative of those structures whenever the bridge-collapse conditions of Theorem P.6.1b.7 are satisfied and, after Theorem P.6.1b.8a, represented in the finite operational quotient with nondegenerate uniqueness still requiring the strictness clauses of Theorem P.6.1b.7.
 
 **Remark: Relation to PCE.** The phrase "resource-optimization imperatives" in Definition P.6.2 is made operationally precise by the Principle of Compression Efficiency (Definition 15, Section 6.1.2). The relationship is hierarchical:
 
@@ -1639,6 +1639,119 @@ contradicting minimality. If the lexicographic alternative holds and $[B_1]\ne[B
 **Corollary P.6.1b.8 (No-Response-Surplus Principle).** On a separating protocol-complete PPI branch, an additional branch label, field, family copy, bridge normalization, or geometric refinement is physically retained only if it changes a finite protocol-response presheaf or lowers an already-defined PPI cost. If it changes no finite response and lowers no cost, PCE quotients it out.
 
 *Proof.* A response-null addition defines the same object of $Q_{\mathfrak B}$ by Theorem P.6.1b.3. If it has positive description length and no compensating decrease in $L_{\mathrm{viol}}$ or $L_{\mathrm{regret}}$, Corollary P.6.1a.4 removes it. If it changes a finite protocol response, it is not response-null and must be evaluated in the separating quotient. These two alternatives exhaust the finite-response cases. ∎
+
+**Theorem P.6.1b.8a (Operational Forcing of the Structural Bridge-Collapse Hypotheses).** Work at fixed finite resolution, so $\mathsf P_{\mathrm{PU}}$ is finite and every retained protocol has a fixed finite outcome set. Let $\mathfrak B_0$ be any raw family of finite PPI bridge descriptions with finite protocol responses and a prefix-free finite description code for which every bounded-length code sublevel is finite. Let
+$$
+\mathcal Y_{\mathrm{op}}(B)=\mathcal R_B
+$$
+be the induced protocol-response presheaf, and define
+$$
+B\sim_{\mathrm{op}}B'
+\quad\Longleftrightarrow\quad
+\mathcal R_B\simeq\mathcal R_{B'}.
+$$
+Replace $\mathfrak B_0$ by the finite operational response closure
+$$
+Q_{\mathfrak B}:=
+\overline{\mathcal Y_{\mathrm{op}}(\mathfrak B_0)}/\simeq,
+\tag{P.6.1b.7}
+$$
+where the closure is taken in the finite product of retained protocol-outcome simplexes and the quotient is by finite natural isomorphism of response presheaves. Assume the violation and regret terms are operational functions of the retained response presheaf, continuous in this finite response topology, and define the descended class cost by
+$$
+\bar{\mathcal L}_{\mathrm{PPI}}([R])
+=
+L_{\mathrm{viol}}(R)+L_{\mathrm{regret}}(R)
++
+\inf\{L_{\mathrm{desc}}(B):\mathcal R_B\simeq R\}.
+\tag{P.6.1b.8a}
+$$
+Then compactness, finite-protocol separation, protocol-completeness relative to the retained essential image, cost descent, lower semicontinuity of $\bar{\mathcal L}_{\mathrm{PPI}}$, and removal of response-null surplus hold in the operational quotient. What is not forced by this construction is the nondegenerate-minimum condition: distinct non-isomorphic finite response classes can remain at exactly equal cost. Such a multiplicity is a genuine finite branch degeneracy and cannot be promoted to theorem-level uniqueness without the strict-convexity, lexicographic-strictness, or other nondegenerate-minimum certificate required by Theorem P.6.1b.7.
+
+*Proof.* Since each retained $\Omega_P$ is finite, each $\Delta(\Omega_P)$ is compact. Since $\mathsf P_{\mathrm{PU}}$ is finite at fixed resolution, the product of retained protocol simplexes is compact. The closure of the operational image of $\mathfrak B_0$ is compact. Finite natural isomorphisms act by finite relabellings of retained finite response data, so the quotient of the closed operational image is compact.
+
+Separation is forced at the finite-response level. If two raw bridge descriptions give naturally isomorphic response presheaves, they represent the same point of $Q_{\mathfrak B}$. If they do not, then some retained finite response coordinate, refinement map, or coarse-graining response differs. That finite protocol datum separates the two quotient points.
+
+Protocol-completeness is forced only relative to the retained essential image. Replacing the raw description family by $\overline{\mathcal Y_{\mathrm{op}}(\mathfrak B_0)}$ means that retained objects are response presheaves and retained morphisms are finite natural transformations between them. A transformation not inducing a finite natural transformation of response presheaves has no finite operational action in this quotient. A finite natural transformation between retained response presheaves is represented in the quotient by construction, uniquely up to $\sim_{\mathrm{op}}$.
+
+The cost descends because (P.6.1b.8a) depends only on the response class $[R]$. The violation and regret terms are response functions by hypothesis. The description term is the minimal finite code length among representatives of the same response class, with extra response-null symbols contributing only description overhead. Since bounded code-length sublevels are finite, every finite infimum is attained whenever the class is nonempty.
+
+Lower semicontinuity follows from the finite response topology. The regret and violation terms are finite sums or finite suprema of continuous functions of finitely many simplex coordinates. For the description term, each sublevel $\{[R]:\inf L_{\mathrm{desc}}\le N\}$ is the finite image of the bounded code-length set under the operational response map and is closed in the finite quotient topology. Hence the integer-valued description envelope is lower semicontinuous. Their nonnegative sum is therefore lower semicontinuous.
+
+Finally, response-null surplus cannot survive inside a cost-minimal representative: every response-null surplus symbol has positive description length while it changes neither $L_{\mathrm{viol}}$ nor $L_{\mathrm{regret}}$. Corollary P.6.1a.4 and Corollary P.6.1b.8 remove it. Thus the structural hypotheses of Theorem P.6.1b.7 are supplied by the finite operational quotient except for the strictness or nondegenerate-minimum clause. Exact degeneracy is not hidden bridge freedom; it is a finite branch degeneracy requiring explicit certification before uniqueness is claimed. ∎
+
+**Corollary P.6.1b.8b (Universal Finite-Response Representation).** At fixed finite resolution, every physically retained observable, bridge normalization, geometric representative, or sector label is an invariant of the response-presheaf quotient
+$$
+\mathsf{Inv}_{\mathrm{PPI}}/{\sim_{\mathrm{op}}}
+\hookrightarrow
+[\mathsf P_{\mathrm{PU}}^{op},\mathsf{Prob}_{\mathrm{fin}}],
+\tag{P.6.1b.8}
+$$
+and every proposed physical distinction outside this quotient is either response-null surplus or a separately certified finite branch degeneracy.
+
+*Proof.* The fully faithful embedding is Theorem P.6.1b.3. Corollary P.6.1b.4 identifies physical content with nontrivial response presheaves. Theorem P.6.1b.8a supplies the structural bridge-collapse hypotheses after finite operational closure, except for the explicit nondegenerate-minimum condition. Corollary P.6.1b.8 removes response-null surplus. Hence a retained distinction must be represented by a response-presheaf invariant. If two distinct quotient points remain at identical finite cost, Theorem P.6.1b.8a classifies the case as finite branch degeneracy rather than theorem-level uniqueness. These alternatives exhaust the finite-response quotient. ∎
+
+### P.6.1c Primitive-Equivalence Normal Form
+
+**Definition P.6.1c.1 (Finite Self-Verifying Operational Presentation).** A finite self-verifying operational presentation is a tuple
+$$
+\mathfrak T
+=
+(\mathsf S,\mathsf P,\Omega,E,U,V)
+\tag{P.6.1c.1}
+$$
+where:
+
+1. $\mathsf S$ is a finite state set or finite state category.
+
+2. $\mathsf P$ is a finite protocol category with refinements, coarse-grainings, and pre/post-processing morphisms.
+
+3. Each $P\in\mathsf P$ has a finite outcome set $\Omega_P$.
+
+4. $E$ assigns finite expected outcome laws,
+$$
+E(s,P)\in\Delta(\Omega_P),
+$$
+naturally with respect to protocol coarse-graining.
+
+5. $U$ assigns finite update kernels
+$$
+U_{P,o}:s\mapsto U(s,P,o)
+$$
+whenever outcome $o\in\Omega_P$ is obtained.
+
+6. $V$ assigns a finite verification statistic comparing the expected law $E(s,P)$ with the realized outcome or realized coarse-grained outcome.
+
+Two presentations $\mathfrak T$ and $\mathfrak T'$ are primitive-equivalent when their induced protocol-response presheaves are naturally isomorphic after response-null labels are quotiented and their pushed-forward update and verification maps agree.
+
+**Definition P.6.1c.2 (Predictive Normal Form).** The predictive normal form of $\mathfrak T$ is the finite predictive-instantiation object
+$$
+\mathcal N_{\mathrm{pred}}(\mathfrak T)
+=
+(\mathsf P,\mathcal R_{\mathfrak T},U_{\mathfrak T},V_{\mathfrak T})
+\tag{P.6.1c.2}
+$$
+where
+$$
+\mathcal R_{\mathfrak T}(P)(s)
+=
+E(s,P)
+\tag{P.6.1c.3}
+$$
+and the update and verification maps are the pushforwards of $U$ and $V$ to the response-presheaf quotient.
+
+**Theorem P.6.1c.3 (Primitive-Equivalence Normal Form).** Every finite self-verifying operational presentation has a canonical predictive normal form up to natural isomorphism. If two presentations have naturally isomorphic response presheaves and compatible pushed-forward update and verification maps, then they are physically identical in the PPI quotient. Consequently, relation-first, process-first, computation-first, information-first, and prediction-first presentations do not define distinct physical primitives unless they induce different finite protocol-response presheaves or different pushed-forward update or verification maps.
+
+*Proof.* Given $\mathfrak T$, equation (P.6.1c.3) defines a functor
+$$
+\mathcal R_{\mathfrak T}:\mathsf P^{op}\to\mathsf{Prob}_{\mathrm{fin}}
+$$
+because protocol refinements and coarse-grainings push finite outcome laws forward by stochastic maps. The update kernels $U_{P,o}$ and verification statistics $V$ depend only on finite states, finite protocols, and finite outcomes, so they descend to the quotient by response-null labels. This constructs $\mathcal N_{\mathrm{pred}}(\mathfrak T)$.
+
+The construction is canonical up to the same natural isomorphism used in the operational quotient. No ordering of hidden labels, no presentation-specific syntax, and no primitive vocabulary enters (P.6.1c.3); only finite protocol responses, their update kernels, and their verification statistics enter. If two presentations induce naturally isomorphic response presheaves and compatible pushed-forward $U$ and $V$, then every finite protocol, every finite update response, and every verification statistic agree after the isomorphism. Theorem P.6.1b.3 identifies the corresponding invariants in the operational quotient, and Corollary P.6.1b.8 removes any remaining response-null primitive label. If a relation-first, process-first, computation-first, or information-first presentation changes no finite response presheaf and no pushed-forward update or verification map, it is primitive-equivalent to its predictive normal form. If it changes one of these finite data, it is a distinct finite-response theory rather than an alternative notation for the same branch. ∎
+
+**Corollary P.6.1c.4 (Prediction as Canonical Operational Form).** The predictive primitive used by PU is not an extra ontology beyond finite self-verification. It is the canonical normal form of any finite presentation that contains expectations, updates, and verification statistics.
+
+*Proof.* Apply Theorem P.6.1c.3 to the presentation. The resulting object records exactly expected finite responses, update kernels, and verification statistics. That is the predictive normal form. ∎
 
 ### P.6.2 Illustrating PPI: From Abstract Requirements to Specific Laws
 
@@ -5983,7 +6096,8 @@ The framework contains three categorically different types of claims:
 |:------|:-------|:------|
 | PCE (Definition 15) | Axiom | Resource minimization subject to predictive viability |
 | PCE dominance | Theorem | Dual-certificate preorder and no-surplus branch elimination (Theorem D.1d) |
-| PPI operational quotient | Theorem on stated branch | Operational Yoneda reconstruction and bridge collapse (Theorems P.6.1b.3, P.6.1b.7) |
+| PPI operational quotient | Theorem on finite operational quotient | Operational Yoneda reconstruction and bridge collapse (Theorems P.6.1b.3, P.6.1b.7; Theorem P.6.1b.8a) |
+| Universal finite-response representation | Corollary | Physical content is a response-presheaf invariant or an explicitly certified finite branch degeneracy (Corollary P.6.1b.8b) |
 | Response-null overhead removal | Corollary | No-response-surplus principle (Corollary P.6.1b.8) |
 
 **Status-carrying sector outputs.** Later numerical sectors inherit the local status label of their bridge, branch, model, convention, or certificate. The discrete backbone is theorem-level on the minimal Appendix Z / attractor branch; fine-structure normalization, electroweak thresholds, cosmological prefactors, flavor textures, baryogenesis, CC, and emergent metric/channel-capacity thermodynamics retain their local ledgers.

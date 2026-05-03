@@ -540,6 +540,89 @@ S(\rho_\lambda\Vert\omega_\lambda)
 $$
 where $K_\lambda=-\log\omega_\lambda$ is the modular Hamiltonian representative and $\Delta S_{\mathrm{pred}}$ is the entropy change of the restricted predictive state.
 
+**Definition 12.5.3a.1 (Finite Null-Boost Ledger).** A finite null-boost ledger on a null generator is a finite affine lattice
+$$
+\lambda_n=\lambda_0+nh,
+\qquad
+n=0,\ldots,N,
+\tag{76f.1}
+$$
+with transverse area cell $A$, finite renormalized null-flux responses
+$$
+\Delta\mathsf T_n
+=
+\langle T_{\mu\nu}k^\mu k^\nu\rangle_{\rho,n}
+-
+\langle T_{\mu\nu}k^\mu k^\nu\rangle_{\omega,n},
+\tag{76f.2}
+$$
+and finite modular-energy representatives
+$$
+\frac{1}{A}\Delta\langle K_n^{(h)}\rangle
+=
+2\pi h^2
+\sum_{r=n}^{N}
+(r-n+1)\Delta\mathsf T_r
++
+a_0+a_1n,
+\tag{76f.3}
+$$
+where $a_0+a_1n$ is the identity/affine modular counterterm, whose second finite difference vanishes. The PCE/KMS reference subtraction fixes $\langle T_{\mu\nu}k^\mu k^\nu\rangle_{\omega,n}=0$ on the local patch when the reference branch has zero renormalized null flux.
+
+**Theorem 12.5.3a.2 (Finite-Response Null Modular Identity).** On a finite null-boost ledger,
+$$
+\frac{
+\Delta\langle K_n^{(h)}\rangle
+-2\Delta\langle K_{n+1}^{(h)}\rangle
++\Delta\langle K_{n+2}^{(h)}\rangle
+}
+{Ah^2}
+=
+2\pi\Delta\mathsf T_n.
+\tag{76f.4}
+$$
+If the regular localized-cell limit exists and $\Delta\mathsf T_n\to\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho(\lambda)$, then
+$$
+\frac{d^2}{d\lambda^2}\Delta\langle K_\lambda\rangle
+=
+2\pi A\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho,
+\tag{76f.5}
+$$
+or, per unit transverse area,
+$$
+\frac{d^2}{d\lambda^2}\Delta\langle K_\lambda\rangle/A
+=
+2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho.
+\tag{76f.6}
+$$
+
+*Proof.* Set
+$$
+F_n=
+\sum_{r=n}^{N}(r-n+1)q_r,
+\qquad
+q_r=h^2\Delta\mathsf T_r.
+$$
+Then
+$$
+F_n-F_{n+1}
+=
+\sum_{r=n}^{N}q_r.
+$$
+Taking the difference once more gives
+$$
+F_n-2F_{n+1}+F_{n+2}
+=
+q_n
+=
+h^2\Delta\mathsf T_n.
+$$
+The affine term $a_0+a_1n$ has zero second finite difference. Multiplying by $2\pi A$ and dividing by $Ah^2$ proves (76f.4). If the regular branch admits the localized-cell continuum limit, the finite second difference converges to the second affine derivative of the modular-energy response, while $\Delta\mathsf T_n$ converges to the renormalized null flux. This gives (76f.5), and division by $A$ gives (76f.6). ∎
+
+**Corollary 12.5.3a.3 (Modular Identity as Finite-Response Data).** The local Rindler modular identity used in the null-energy and thermodynamic arguments is not an independent continuum postulate on a branch carrying Definition 12.5.3a.1. It is the continuum limit of the finite triangular null-boost ledger (76f.3), with the identity/affine modular ambiguity removed by the second finite difference.
+
+*Proof.* Theorem 12.5.3a.2 derives the finite second-difference identity from the ledger data alone. The only continuum step is the regular localized-cell limit already required for the null-cut branch. The affine ambiguity drops out before the limit is taken. ∎
+
 **Theorem 12.5.3b (Predictive Null Energy Inequality).** Assume the null-cut branch satisfies:
 
 1. finite-resolution data processing gives local null convexity,
@@ -547,7 +630,7 @@ $$
 \frac{d^2}{d\lambda^2}S_{\mathrm{rel}}(\lambda)\ge0;
 \tag{76g}
 $$
-2. the local Rindler modular identity holds per unit transverse area,
+2. the branch carries the finite null-boost ledger of Definition 12.5.3a.1 and the regular localized-cell limit of Theorem 12.5.3a.2, so the local Rindler modular identity holds per unit transverse area,
 $$
 \frac{d^2}{d\lambda^2}\Delta\langle K_\lambda\rangle
 =
@@ -621,7 +704,7 @@ S_{\mathrm{rel}}[X+\epsilon f]
 \right|_{\epsilon=0}.
 \tag{76l}
 $$
-Assume the functional shape derivatives exist on the finite-resolution branch and that the local Rindler modular identity (76h) holds per unit transverse area for localized shape deformations. Then
+Assume the functional shape derivatives exist on the finite-resolution branch and that the finite null-boost ledger of Definition 12.5.3a.1 supplies the local Rindler modular identity (76h) per unit transverse area for localized shape deformations. Then
 $$
 \mathcal N_\rho[f]
 =
@@ -688,3 +771,73 @@ $$
 for every admissible $f$, so this term is precisely the nonnegative predictive slack already used in Theorem 12.5.3b.
 
 For a shrinking transverse cell, $f_{\mathrm{cell}}$ is constant on the cell and zero outside it. Dividing (76m) by $A_{\mathrm{cell}}$ and taking the regular localized-cell limit removes the off-diagonal contribution by hypothesis and evaluates the continuous diagonal integrand at $y_0$. Rearranging gives (76n). The Clausius-saturated case is the equality branch of Theorem F.10.4 and Theorem 12.1, so the relative-entropy slack term is zero there. ∎
+
+**Theorem 12.5.3f (QNEC-Slack Form of Metric Thermodynamics).** On the null-cut branch of Theorem 12.5.3b, define the predictive QNEC slack density by
+$$
+\mathfrak S_{\mathrm{QNEC}}(\lambda)
+:=
+2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho
+-
+\frac{d^2}{d\lambda^2}\Delta S_{\mathrm{pred}}(\lambda).
+\tag{76o}
+$$
+Then
+$$
+\mathfrak S_{\mathrm{QNEC}}(\lambda)
+=
+\frac{d^2}{d\lambda^2}S_{\mathrm{rel}}(\lambda)
+\ge0.
+\tag{76p}
+$$
+The local null Clausius defect per unit transverse area,
+$$
+\mathfrak C_{\mathrm{Cl}}(\lambda)
+:=
+\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho
+-
+\frac{1}{2\pi}
+\frac{d^2}{d\lambda^2}\Delta S_{\mathrm{pred}}(\lambda),
+\tag{76q}
+$$
+satisfies
+$$
+\mathfrak C_{\mathrm{Cl}}(\lambda)
+=
+\frac{1}{2\pi}\mathfrak S_{\mathrm{QNEC}}(\lambda).
+\tag{76r}
+$$
+Thus the local Clausius-saturated emergent metric/channel-capacity thermodynamic branch is exactly the zero-QNEC-slack branch:
+$$
+\mathfrak C_{\mathrm{Cl}}(\lambda)=0
+\quad\Longleftrightarrow\quad
+\mathfrak S_{\mathrm{QNEC}}(\lambda)=0.
+\tag{76s}
+$$
+
+*Proof.* Differentiating Definition 12.5.3a twice gives
+$$
+\frac{d^2}{d\lambda^2}S_{\mathrm{rel}}(\lambda)
+=
+\frac{d^2}{d\lambda^2}\Delta\langle K_\lambda\rangle
+-
+\frac{d^2}{d\lambda^2}\Delta S_{\mathrm{pred}}(\lambda).
+$$
+Using the local Rindler modular identity (76h),
+$$
+\frac{d^2}{d\lambda^2}\Delta\langle K_\lambda\rangle
+=
+2\pi\langle T_{\mu\nu}k^\mu k^\nu\rangle_\rho,
+$$
+so the right side is exactly (76o). This proves the equality in (76p). The inequality is the finite-resolution null convexity hypothesis (76g). Equation (76r) follows by dividing (76o) by $2\pi$ and comparing with (76q). Since $2\pi>0$, the zero sets of $\mathfrak C_{\mathrm{Cl}}$ and $\mathfrak S_{\mathrm{QNEC}}$ coincide, proving (76s). ∎
+
+**Corollary 12.5.3g (Relative-Entropy Slack as the Local Thermodynamic Gate).** On the regular branch, any derivation of the metric field equation through local channel-capacity thermodynamics must either use the zero-slack condition
+$$
+S_{\mathrm{rel}}''(\lambda)=0
+$$
+on every local null generator in the Clausius patch, or retain the nonnegative correction
+$$
+\frac{1}{2\pi}S_{\mathrm{rel}}''(\lambda)
+$$
+as a finite-response non-equilibrium source term. It cannot silently impose local Clausius equality while retaining positive predictive QNEC slack.
+
+*Proof.* By Theorem 12.5.3f, the local Clausius defect is exactly $S_{\mathrm{rel}}''/(2\pi)$. Therefore imposing the local Clausius equality used in Theorem 12.1 is equivalent to setting the slack to zero. If the slack is positive, the equality fails by that amount and must be represented as a non-equilibrium correction term. ∎
