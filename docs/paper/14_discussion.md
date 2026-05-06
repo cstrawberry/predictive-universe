@@ -1425,21 +1425,23 @@ The kissing number $K(D)$—the maximal number of equal non-overlapping spheres 
 
 This provides an information-theoretic answer to “why 3+1 dimensions?” within that model: because $K(4) = 24$ and no other dimension satisfies $K(D) = 2ab$ with $a = 2$, $b = 6$, $d_0 = 8$. The question becomes: why does PCE at $\varepsilon_0=\ln2$ produce exactly 24 interface modes? Given the Appendix Z mode-channel identification, $D = 4$ follows by arithmetic.
 
-Similarly, the number of fermion generations $N_g = 3$ is fixed in the framework by one derivation together with two supporting consistency checks (Appendix R):
+Similarly, the number of fermion generations $N_g = 3$ is fixed in the framework by one derivation together with three supporting consistency checks (Appendix R):
 
-1. **Topological Derivation (Theorem R.3.4):** In the modeled family-charge sector, the anomaly constraints
+1. **Topological Derivation (Theorem R.3.4; Proposition R.3.5.1a):** In the modeled family-charge sector, the anomaly constraints
 $$
 \sum_g F_g = 0,
 \qquad
 \sum_g F_g^3 = 0
 $$
-together with the requirement of nontrivial CP violation select the minimal admissible solution $N_g = 3$ with charges $\{a,-a,0\}$.
+together with the requirement of nontrivial CP violation select the minimal admissible solution $N_g = 3$ with charges $\{a,-a,0\}$, and the pre-flavor family-redundancy PPI branch removes response-null supernumerary copies.
 
-2. **Geometric Compatibility (Proposition R.4.2):** The $E_8$/Leech structure and the decomposition $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ furnish a three-fold scaffold compatible with three generations, but they do not independently derive the count.
+2. **Triality Compatibility (Proposition R.4.2):** On a marked real 8-carrier with $\mathfrak{so}(8)$ structure, $D_4$ triality gives the canonical $S_3$ orbit $\{V,S^+,S^-\}$ of three 8-dimensional $\mathrm{Spin}(8)$ modules. This reproduces the same $\{a,-a,0\}$ charge pattern when the anomaly equations are imposed on the three-element orbit, but it does not generate the connected $U(1)_F$ used in Theorem R.3.4.
 
-3. **Mode-Count Compatibility:** The factorization $M = 24 = 8 \times 3$ is consistent with organizing the interface into three 8-dimensional blocks.
+3. **Geometric Compatibility (Proposition R.4.2):** The $E_8$/Leech structure and the decomposition $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ furnish a three-fold scaffold compatible with three generations, but they do not independently derive the count.
 
-This yields one derivation and two nontrivial compatibility checks. The necessity claim established by the manuscript is therefore minimality of $N_g = 3$ within the modeled family-charge class, not a triple independent proof from unrelated mechanisms.
+4. **Mode-Count Compatibility:** The factorization $M = 24 = 8 \times 3$ is consistent with organizing the interface into three 8-dimensional blocks.
+
+This yields one derivation and three nontrivial compatibility checks. The necessity claim established by the manuscript is therefore minimality and branch realization of $N_g = 3$ within the modeled family-charge class, not multiple independent proofs from unrelated mechanisms.
 
 ### 14.5.5 The Structured Vacuum
 
@@ -1775,7 +1777,7 @@ $$
 $$
 on the minimal Appendix Z / attractor branch. This is the manuscript's exact one-parameter core: once $K_0 = 3$ is fixed, no further discrete choice enters the backbone itself.
 
-Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z Bures tangent-cell mode-channel contract, the backbone includes $D=4$ (Theorem Z.11), and predict-verify self-duality fixes the interface code dimension $k=12$ (Theorem Z.13). The abstract gauge algebra appears on the finite-response positive-marginal capacity branch of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the topological three-generation theorem on its anomaly+CP route (Theorem R.3.4) and the exact pre-flavor family-redundancy realization (Proposition R.3.5.1a). Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The stronger slogan "$K_0=3$ determines everything" should therefore be read as: it determines the discrete backbone exactly, and it seeds later sectors together with their stated local finite-response contracts.
+Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z Bures tangent-cell mode-channel contract, the backbone includes $D=4$ (Theorem Z.11), and predict-verify self-duality fixes the interface code dimension $k=12$ (Theorem Z.13). The abstract gauge algebra appears on the finite-response positive-marginal capacity branch of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the topological three-generation theorem on its anomaly+CP route (Theorem R.3.4), the exact pre-flavor family-redundancy realization (Proposition R.3.5.1a), and the $D_4$ triality/$E_8$/Leech compatibility record (Proposition R.4.2). Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The stronger slogan "$K_0=3$ determines everything" should therefore be read as: it determines the discrete backbone exactly, and it seeds later sectors together with their stated local finite-response contracts.
 
 ### 14.6.2 What is conditional, convention-carried, or model-level
 
@@ -1798,7 +1800,7 @@ Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-
 | Sector | Best current status |
 |:-------|:--------------------|
 | Backbone $K_0 \to d_0 \to \varepsilon_0 \to a \to b \to M \to k \to D$ | Theorem-level on the minimal finite-response Appendix Z / attractor branch, with $\varepsilon_0=\ln2$ on the Landauer-saturating branch. The predictive-recovery MacWilliams gate of Definition Z.13b.0 and Theorem Z.13b.0a forces $k=12$ inside the interface-code contract, and the Bures tangent-cell correspondence of Theorem Z.10 together with Theorem Z.11 forces $D=4$ inside the admissible finite-response channel representation. |
-| $N_g=3$ | Theorem-level as the minimal admissible count in the anomaly+CP family-charge class by Theorem R.3.4; exact realized $N_g=3$ holds on the pre-flavor family-redundancy PPI branch by Proposition R.3.5.1a. Detailed flavor masses and mixings are certificate-complete only under Definition T.79.4 and Theorem T.79.6. |
+| $N_g=3$ | Theorem-level as the minimal admissible count in the anomaly+CP family-charge class by Theorem R.3.4; exact realized $N_g=3$ holds on the pre-flavor family-redundancy PPI branch by Proposition R.3.5.1a. Proposition R.4.2 supplies $D_4$ triality and $E_8$/Leech compatibility checks without replacing the anomaly+CP proof. Detailed flavor masses and mixings are certificate-complete only under Definition T.79.4 and Theorem T.79.6. |
 | Abstract gauge algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ | Theorem-level on the finite-response positive-marginal capacity branch: Theorem G.8.4b forces the $3+2+1$ inactive-sector split and Corollary G.8.4c gives the determinant-compatible gauge algebra. |
 | Thomson-limit $\alpha$ | Canonical Appendix Z branch prediction through Theorem Z.26. Theorem-level normalization closure requires an accepted Thomson normalization certificate $\mathfrak C_\alpha$ in the sense of Definition Z.27.11a and Theorem Z.27.11c; failure of the certified interval demotes the branch by Corollary Z.27.11d. |
 | QFI acceleration bridge $\eta'$ | Unique inside the admissible QFI linear-response bridge-law class of Definition H.4.2.8a; Theorem H.4.2.8b fixes $\eta'=3/(8\sqrt3)$ and Corollary H.4.2.8c gives $g_0=c^2\sqrt\Lambda/8$. |

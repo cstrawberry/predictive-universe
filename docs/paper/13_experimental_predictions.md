@@ -949,7 +949,7 @@ Discrepancy relative to the third-order canonical branch: $+0.000093 \pm 0.00006
 
 **Prediction:** Minimal admissible $N_{\min}=3$ in the anomaly+CP family-charge class; exact realized $N_{\mathrm{gen}}=3$ on the pre-flavor family-redundancy PPI branch.
 
-**Derivation Summary:** The manuscript's strongest derivation of $N_{\mathrm{gen}}=3$ is topological: anomaly cancellation on $\Sigma_8 = U(8)/U(1)^8$, together with the requirement of nontrivial CP violation, selects the minimal admissible charge pattern $\{a,-a,0\}$ (Theorem R.3.4). Proposition R.3.5.1a removes supernumerary response-null family copies inside the pre-flavor family-redundancy PPI branch, so the exact realized count in that branch is $N_{\mathrm{gen}}=3$. The geometric $M=24=8\times3$ and Leech/$E_8$ constructions of Appendix R provide a compatible three-fold structure without replacing the anomaly+CP and PPI selection route.
+**Derivation Summary:** The manuscript's strongest derivation of $N_{\mathrm{gen}}=3$ is topological: anomaly cancellation on $\Sigma_8 = U(8)/U(1)^8$, together with the requirement of nontrivial CP violation, selects the minimal admissible charge pattern $\{a,-a,0\}$ (Theorem R.3.4). Proposition R.3.5.1a removes supernumerary response-null family copies inside the pre-flavor family-redundancy PPI branch, so the exact realized count in that branch is $N_{\mathrm{gen}}=3$. The $D_4$ triality orbit, geometric $M=24=8\times3$ factorization, and Leech/$E_8$ constructions of Appendix R provide compatible three-fold structures without replacing the anomaly+CP and PPI selection route.
 
 **Falsification Conditions:**
 - Discovery of fourth-generation quarks or leptons at colliders
@@ -1050,7 +1050,7 @@ after the Blackwell-PCE record channel and entropy-production ledger have been f
 |:-----------|:---------------------------|:--------------------|
 | $\alpha^{-1}$ | subgroup-projection/matching systematics; interface-series and sinc truncations subleading | $\pm 0.000060$ |
 | $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
-| $N_{\mathrm{gen}}$ | Minimal admissible count exact in the anomaly+CP class; exact realized count fixed on the pre-flavor family-redundancy PPI branch | branch-discrete |
+| $N_{\mathrm{gen}}$ | Minimal admissible count exact in the anomaly+CP class; exact realized count fixed on the pre-flavor family-redundancy PPI branch; $D_4$ triality and $E_8$/Leech provide compatibility checks | branch-discrete |
 | $D$ | Exact in the Appendix Z Bures tangent-cell mode-channel contract | branch-discrete |
 
 The predictions for $D$ and exact realized $N_{\mathrm{gen}}$ are exact within their named finite-response branches. A deviation would falsify the corresponding Bures tangent-cell channel contract or pre-flavor family-redundancy PPI branch; detailed flavor values remain downstream branch data.

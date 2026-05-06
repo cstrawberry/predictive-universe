@@ -21,11 +21,13 @@ driven by the Landauer bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$,
 
 The generation structure derived in this appendix thus shares a common origin with the gauge structure: both arise from the topology and symmetries of the fundamental MPU state space, as optimized by PCE. This provides a unified geometric foundation for the SM's horizontal (gauge) and vertical (generation) structures.
 
-**Generation Count and Geometric Compatibility:** This appendix contains one derivation of the generation count and one geometric compatibility analysis:
+**Generation Count and Structural Compatibility:** This appendix contains one theorem-level derivation of the generation count and two compatibility layers:
 
-1. **Topological derivation (Sections R.1-R.4.1):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent integer topological charges. Combined with the family-charge anomaly constraints and the requirement of nontrivial CP violation, this yields the minimal admissible three-generation pattern with family charges $\{a,-a,0\}$.
+1. **Topological derivation (Sections R.1-R.4.1):** The second homotopy group $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ provides seven independent integer topological charges. Combined with the family-charge anomaly constraints and the requirement of nontrivial CP violation, this yields the minimal admissible three-generation pattern with family charges $\{a,-a,0\}$. Proposition R.3.5.1a then removes supernumerary response-null copies on the pre-flavor family-redundancy PPI branch.
 
-2. **Geometric compatibility (Sections R.4.2 and R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (for roots normalized by $|r|^2 = 2$, so $r_i\cdot r_j \in \{2,1,0,-1,-2\}$ and $|r_i-r_j|^2 = 4 - 2\,r_i\cdot r_j$) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a nontrivial three-fold scaffold compatible with the topological count. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
+2. **Triality compatibility (Section R.4.2):** The minimal branch has $d_0=8$. On any marked real 8-carrier equipped with the compact rotation algebra $\mathfrak{so}(8)$, the complexified algebra has type $D_4$, whose outer automorphism group is $S_3$. The three 8-dimensional fundamental $\mathrm{Spin}(8)$ modules $V,S^+,S^-$ form a canonical three-element triality orbit. This supplies a representation-theoretic compatibility check for the three-sector ledger, but it does not by itself identify the complex MPU Hilbert space $H_0\cong\mathbb C^8$ with a real $\mathrm{Spin}(8)$ vector carrier, and it does not generate the continuous family symmetry $U(1)_F$ used in Theorem R.3.4.
+
+3. **Geometric compatibility (Sections R.4.2 and R.5-R.7):** The $E_8$ root system emerges as the information-optimal coordinatization of the 8-dimensional real subspace (detailed in Section R.2.1). The squared $E_8$ root distances $d^2 \in \{0, 2, 4, 6, 8\}$ (for roots normalized by $|r|^2 = 2$, so $r_i\cdot r_j \in \{2,1,0,-1,-2\}$ and $|r_i-r_j|^2 = 4 - 2\,r_i\cdot r_j$) determine mass ratios via Gaussian suppression on the attractor orbit $\text{Gr}(2,8)$ with hierarchy coefficient $\alpha = 3/2$ (Corollary T.41.3). The Leech lattice $\Lambda_{24}$ in 24 dimensions contains a sublattice isometric to $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$, providing a nontrivial three-fold scaffold compatible with the topological count. Remarkably, the number 24 coincides with the interface mode count $M = 24$ derived in **Appendix Z (Theorem Z.5)** from the 2-6 partition.
 
 **Mass Hierarchy from $E_8$ Geometry:** Beyond counting generations, this appendix shows how the hierarchical pattern of fermion masses arises from geodesic distances between generation vacua in the $E_8$ root system. The allowed squared distances $d^2 \in \{2, 4, 6, 8\}$ between $E_8$ roots lead to a discrete geometric invariant with zero continuously adjustable parameters:
 $$
@@ -35,7 +37,7 @@ This $\xi$-independent ratio (with $\xi$ defined in Section R.5.3) provides shar
 
 **Reading Guide:**
 - **For topology only:** Sections R.1-R.3 (standard flag manifold results)
-- **For generation counting:** Sections R.1-R.4.1 (topological derivation) together with Section R.4.2 (geometric compatibility)
+- **For generation counting:** Sections R.1-R.4.1 (topological derivation), together with Section R.4.2 for $D_4$ triality and $E_8$/Leech compatibility checks
 - **For mass hierarchy:** Sections R.5-R.7 ($E_8$ geometry, Yukawa derivation)
 - **For phenomenology:** Section R.6 (experimental comparison)
 - **For complete derivation:** Read sequentially R.0-R.9
@@ -69,6 +71,7 @@ To aid clarity, we summarize the key mathematical objects and their notation:
 | $Y_{gg'}$ | Yukawa coupling matrix element | Eq. R.15 |
 | $M$ | Interface mode count, 24 | Appendix Z, Theorem Z.5 |
 | $E_8$ | Exceptional Lie group / root system | Section R.2.1 |
+| $D_4$ | Root system of $\mathfrak{so}(8)$; triality compatibility scaffold | Proposition R.4.2 |
 | $\Lambda_{24}$ | Leech lattice in 24 dimensions | Section R.4.2 |
 | $\mathcal{R}$ | Mass hierarchy invariant | Eq. R.17 |
 
@@ -512,14 +515,14 @@ $$
 $$
 t=\left\lfloor\frac{8-1}{2}\right\rfloor=3.
 $$
-Theorem R.3.4 gives $N_g=3$. Hence $t=N_g$. ∎
+Theorem R.3.4 gives the minimal admissible value $N_g=3$ in the anomaly+CP family-charge class, and Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch. Hence $t=N_g$ on that branch. ∎
 
 **Corollary R.3.5b** (Topological Rank Identity). On the minimal Appendix Z branch,
 $$
 \operatorname{rank}\pi_2(\Sigma_8) = d_0 - 1 = N_g + D = 7.
 $$
 
-*Proof.* Theorem R.1.1 gives $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, so $\operatorname{rank}\pi_2(\Sigma_8)=7$. On the minimal branch, Theorem Z.2 gives $d_0=8$, hence $d_0-1=7$. Theorem R.3.4 gives $N_g=3$ and Theorem Z.11 gives $D=4$, so $N_g+D=7$. Therefore all quantities coincide. ∎
+*Proof.* Theorem R.1.1 gives $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, so $\operatorname{rank}\pi_2(\Sigma_8)=7$. On the minimal branch, Theorem Z.2 gives $d_0=8$, hence $d_0-1=7$. Theorem R.3.4 gives the minimal admissible value $N_g=3$ in the anomaly+CP family-charge class, Proposition R.3.5.1a realizes that value on the pre-flavor family-redundancy PPI branch, and Theorem Z.11 gives $D=4$, so $N_g+D=7$ on that branch. Therefore all quantities coincide. ∎
 
 **Corollary R.3.5c (Minimal-Branch Structural Identity).** On the minimal branch,
 $$
@@ -542,13 +545,13 @@ t_{\mathrm{Golay}}=\left\lfloor\frac{d_{\min}-1}{2}\right\rfloor
 $$
 is the Golay correction radius.
 
-*Proof.* Theorem 15 gives $K_0=3$. Theorem R.3.4 gives $N_g=3$. Corollary R.3.5a gives $t_{\mathrm{Golay}}=3=N_g$. Combining the three equalities proves the claim. ∎
+*Proof.* Theorem 15 gives $K_0=3$. Theorem R.3.4 gives the minimal admissible value $N_g=3$ in the anomaly+CP family-charge class, and Proposition R.3.5.1a realizes that value on the pre-flavor family-redundancy PPI branch. Corollary R.3.5a gives $t_{\mathrm{Golay}}=3=N_g$ on that branch. Combining the three equalities proves the claim. ∎
 
 **Proposition R.3.5e (Minimal-Branch Integer Ledger).** The recurrent minimal-branch integers satisfy the exact ledger
 
 | Integer | Rigorous identity on the minimal branch | Source chain |
 |:--:|:--|:--|
-| $3$ | $K_0=N_g=t_{\mathrm{Golay}}$ | Theorem 15; Theorem R.3.4; Corollary R.3.5a |
+| $3$ | $K_0=N_g=t_{\mathrm{Golay}}$ | Theorem 15; Theorem R.3.4; Proposition R.3.5.1a; Corollary R.3.5a |
 | $4$ | $D=4$ | Theorem Z.11 |
 | $7$ | $\operatorname{rank}\pi_2(\Sigma_8)=d_0-1=N_g+D$ | Theorem R.1.1; Corollary R.3.5b |
 | $8$ | $d_0=8=2^{K_0}$ | Theorem 23; Theorem Z.2; Theorem 15 |
@@ -637,9 +640,9 @@ $$
 $$
 By hypothesis, this total degree-one cohomology is exactly the anomaly and CP-active family-charge quotient of Theorem R.3.4. Corollary R.3.5g proves that the minimal admissible family-charge quotient has $N_g=3$ represented by $\{a,-a,0\}$. Filtration-exact classes are removed by PCE, and invisible stable labels are excluded by item 3. Hence the stable persistent degree-one dimension is exactly three. If the stable representatives are concentrated in one filtration degree, the sum is the single dimension in (R.3.5h.2). ∎
 
-## R.4 Three-Fold Structure: Topological Derivation and Geometric Compatibility
+## R.4 Three-Fold Structure: Topological Derivation and Structural Compatibility
 
-This section compares two distinct appearances of a three-fold pattern in the framework. The topological route of Sections R.1–R.4.1 carries the actual derivation of $N=3$ from anomaly cancellation together with the CP-violation requirement. The geometric route of Section R.4.2 shows that the Leech/$E_8$ construction contains a natural three-fold scaffold compatible with that generation count. The convergence is structurally suggestive, but only the topological route proves the count.
+This section compares the theorem-level generation-count derivation with the structural three-fold compatibility checks that appear on the same minimal branch. The topological route of Sections R.1–R.4.1 carries the actual derivation of $N=3$ from anomaly cancellation together with the CP-violation requirement. Section R.4.2 records two compatibility layers: the $D_4$ triality orbit on a marked real 8-carrier, and the Leech/$E_8$ three-fold scaffold at $M=24$. These compatibilities sharpen the framework's internal coherence, but they do not replace the anomaly+CP route or the pre-flavor PPI realization theorem.
 
 ### R.4.1 Topological Pathway: Anomaly Cancellation
 
@@ -659,9 +662,9 @@ This section compares two distinct appearances of a three-fold pattern in the fr
 
 7. **Minimal solution:** Combined constraints yield $N=3$ with pattern $\{a, -a, 0\}$ as the smallest admissible solution in the modeled class.
 
-This topological mechanism derives three generations from first principles within the stated anomaly and CP-violation assumptions; Proposition R.3.5 then records the additional MDL-surrogate selection statement.
+This topological mechanism derives the minimal admissible three-generation ledger from first principles within the stated anomaly and CP-violation assumptions; Proposition R.3.5 records the MDL-surrogate selection statement, and Proposition R.3.5.1a records exact realization on the pre-flavor family-redundancy PPI branch. The compatibility checks in Section R.4.2 are deliberately downstream of this theorem boundary.
 
-### R.4.2 Geometric Compatibility: $E_8$/Leech Lattice Structure
+### R.4.2 Structural Compatibility: $D_4$ Triality and $E_8$/Leech Lattice Structure
 
 **The 24-Dimensional Leech Lattice:**
 
@@ -700,17 +703,70 @@ The appearance of $M = 24$ in the interface mode count (**Appendix Z**) and the 
 
 The convergence of these independent mathematical structures at 24 suggests deep underlying unity between optimization (PCE), consistency (anomaly cancellation), and symmetry (exceptional groups).
 
-**Proposition R.4.2 (Three-Fold Compatibility of Topology, Geometry, and Mode Count).**
+**Proposition R.4.2 (Three-Fold Compatibility of Topology, Triality, Geometry, and Mode Count).**
 
-The number 3 enters the framework in three distinct ways:
+The number 3 enters the framework in four distinct ways:
 
 1. **Topological:** $\pi_2(\Sigma_8)$ anomaly cancellation together with the CP-violation requirement yields the minimal family-charge pattern $\{a,-a,0\}$ (Section R.4.1).
-2. **Geometric:** the Leech lattice contains a scaled triple $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ (this section).
-3. **Information:** the interface mode count factors as $M = 24 = 3 \times 8$ (**Appendix Z, Section Z.12**).
+2. **Triality:** on a marked real 8-carrier $W$ with compact rotation algebra $\mathfrak{so}(W)\cong\mathfrak{so}(8)$, the three 8-dimensional fundamental $\mathrm{Spin}(8)$ modules form the canonical triality orbit $\{V,S^+,S^-\}$.
+3. **Geometric:** the Leech lattice contains a scaled triple $\sqrt{2}E_8 \oplus \sqrt{2}E_8 \oplus \sqrt{2}E_8$ (this section).
+4. **Information:** the interface mode count factors as $M = 24 = 3 \times 8$ (**Appendix Z, Section Z.12**).
 
-These three appearances are mutually compatible with a three-generation interpretation. Among them, the topological mechanism is the actual derivation of $N=3$; the geometric and information-theoretic appearances provide supporting three-fold structure.
+These appearances are mutually compatible with a three-generation interpretation. Among them, item 1 is the generation-count derivation in the current theorem stack. Items 2-4 are compatibility checks unless an additional branch separately identifies the relevant real carrier and promotes the associated finite labels through the anomaly-descent gate of Appendix X.
 
-*Proof.* Mechanism 1 is Theorem R.3.4: from $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, gauge embedding, anomaly cancellation, and the requirement of nontrivial CP violation, the smallest admissible solution is $N=3$ with charges $\{a,-a,0\}$. Mechanism 2 is the lattice-theoretic statement proved in this section: $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8^3$, so the 24-dimensional geometric construction carries a natural three-fold block structure. Mechanism 3 is the factorization $M=24=3\times 8$, which is numerically compatible with grouping the interface into three 8-dimensional blocks. Thus the three mathematical structures are compatible with one another, but only the first one proves the generation count. ∎
+*Proof.* Item 1 is Theorem R.3.4: from $\pi_2(\Sigma_8)\cong \mathbb{Z}^7$, gauge embedding, anomaly cancellation, and the requirement of nontrivial CP violation, the smallest admissible solution is $N=3$ with charges $\{a,-a,0\}$. Proposition R.3.5.1a then removes response-null supernumerary family copies on the pre-flavor family-redundancy PPI branch.
+
+For item 2, let $W$ be a marked Euclidean real vector space of dimension 8 and let $\mathfrak g=\mathfrak{so}(W)\cong\mathfrak{so}(8)$ be its compact rotation algebra. Its complexification $\mathfrak g_{\mathbb C}$ has Dynkin type $D_4$. The classification of complex simple Lie algebras identifies the outer automorphism group with the automorphism group of the Dynkin diagram (Humphreys 1972; Fulton & Harris 1991). The $D_4$ diagram has one central node and three indistinguishable outer nodes, so its diagram automorphism group is $S_3$. Therefore
+$$
+\mathrm{Out}(\mathfrak{so}(8))\cong S_3.
+$$
+The fundamental modules attached to the three outer nodes have highest weights $\omega_1,\omega_3,\omega_4$. They are respectively the vector module $V$ and the two half-spin modules $S^+,S^-$. Their dimensions are
+$$
+\dim_{\mathbb C}V=8,\qquad
+\dim_{\mathbb C}S^+=\dim_{\mathbb C}S^-=2^{4-1}=8.
+$$
+A diagram automorphism sends a highest-weight module to the module whose highest weight is the corresponding permuted fundamental weight. Hence the three modules form one canonical $S_3$ orbit:
+$$
+\{V,S^+,S^-\}.
+$$
+
+This threefold equality is unique to the $D_4$ case among the orthogonal series. For $D_n=\mathfrak{so}(2n)$, the vector module has dimension $2n$ and the half-spin modules have dimension $2^{n-1}$. The equality
+$$
+2n=2^{n-1}
+$$
+holds only for $n=4$: for $n=2,3$ the right-hand side is smaller than $2n$; for $n=4$ both sides equal 8; and for $n\ge5$, the ratio $2^{n-1}/(2n)$ is already $8/5>1$ at $n=5$ and increases by the factor $2n/(n+1)>1$ from $n$ to $n+1$. Also, among simple Dynkin diagrams, only $D_4$ has an automorphism group containing an element of order 3: $A_n$ has at most $\mathbb Z_2$, $D_n$ for $n\ge5$ has $\mathbb Z_2$, $E_6$ has $\mathbb Z_2$, and the remaining simple diagrams have trivial diagram automorphism group. Thus the triality orbit is a genuine dimension-8 compatibility, not a generic spinorial accident.
+
+The same triality orbit also reproduces the algebraic charge pattern of Theorem R.3.4 when the anomaly equations are imposed on a three-element orbit. Let $F_V,F_+,F_-$ be rational charge values assigned to $V,S^+,S^-$ and suppose
+$$
+F_V+F_++F_-=0,
+\qquad
+F_V^3+F_+^3+F_-^3=0.
+$$
+Using
+$$
+x^3+y^3+z^3-3xyz
+=
+(x+y+z)(x^2+y^2+z^2-xy-yz-zx),
+$$
+the two displayed equations imply
+$$
+3F_VF_+F_-=0.
+$$
+Thus one charge is zero. The linear equation then forces the remaining two charges to be opposite. Hence, up to permutation by the $S_3$ orbit,
+$$
+\{F_V,F_+,F_-\}=\{a,-a,0\}.
+$$
+On the nontrivial family-charge branch $a\ne0$; the all-zero solution is the trivial charge assignment. This is exactly the family-charge pattern selected in Theorem R.3.4.
+
+Item 3 is the lattice-theoretic statement proved in this section: $\Lambda_{24}$ contains a sublattice isometric to $\sqrt{2}E_8^3$, so the 24-dimensional geometric construction carries a natural three-fold block structure. Item 4 is the factorization $M=24=3\times8$, which is compatible with grouping the interface into three 8-dimensional blocks.
+
+It remains to record the boundary of the claim. The MPU Hilbert space is $H_0\cong\mathbb C^8$, whereas the triality statement is a theorem about a marked real Euclidean 8-carrier with $\mathfrak{so}(8)$ structure. The QFI interface count is
+$$
+M=2a(d_0-a)=24,
+$$
+the real dimension of $T_{\rho_0}\mathrm{Gr}(2,8)$, not an 8-dimensional Hilbert-space carrier. Therefore item 2 is not a canonical identification of $H_0$ or the QFI tangent space with one fixed $\mathrm{Spin}(8)$ representation. Moreover, $S_3$ is finite and has trivial identity component, so triality does not generate the connected family symmetry $U(1)_F$ used in Theorem R.3.4. If a future branch declares the finite triality label itself to be a predictive redundancy in a 4-dimensional effective-action sector, Definition X.8d.2 requires the corresponding $(d+1)$-dimensional bordism character, hence a 5-dimensional anomaly audit for a 4-dimensional branch, not an $\Omega_4$ audit. Since the present proposition uses triality only as a compatibility layer, no new redundancy or bordism gate is added here.
+
+Thus the topological, triality, geometric, and information-theoretic structures are compatible with one another, while the proof of the generation count remains the anomaly+CP derivation together with the pre-flavor PPI realization theorem. ∎
 
 ### R.4.2.1 The Golay Bridge: From Error Correction to Optimal Geometry
 
@@ -1113,20 +1169,22 @@ Whether sporadic group structure produces observable signatures—such as specif
 ### R.4.2.6 Over-Determination and Structural Consistency
 
 **Independence verification:** 
-- Mechanism 1 (Topological derivation): relies on $\pi_2(\Sigma_8)$ structure, family-charge anomaly constraints, and the CP-violation requirement (Sections R.3–R.4.1)
-- Mechanism 2 (Geometric compatibility): relies on sphere packing optimality and $E_8$/Leech lattice constructions (Section R.4.2)
+- Mechanism 1 (Topological derivation): relies on $\pi_2(\Sigma_8)$ structure, family-charge anomaly constraints, and the CP-violation requirement (Sections R.3–R.4.1).
+- Mechanism 2 (Triality compatibility): relies on the marked real 8-carrier $\mathfrak{so}(8)$ structure and the $D_4$ diagram automorphism group $S_3$ (Proposition R.4.2).
+- Mechanism 3 (Geometric compatibility): relies on sphere packing optimality and $E_8$/Leech lattice constructions (Section R.4.2).
+- Mechanism 4 (Mode-count compatibility): relies on the QFI interface count $M=24$ from Theorem Z.5.
 
-These two strands are logically distinct, though they share foundational constants ($d_0 = 8$, $\varepsilon_0=\ln2$) at the axiomatic level. Only Mechanism 1 derives $N_{\text{gen}} = 3$; Mechanism 2 shows that the geometric sector carries a compatible three-fold structure once the topological count is fixed.
+These four strands are logically distinct, though they share foundational constants ($d_0 = 8$, $\varepsilon_0=\ln2$) at the axiomatic level. Only Mechanism 1 derives the minimal family-count theorem. Mechanism 2 shows that a marked real 8-carrier has a canonical three-element triality orbit; Mechanism 3 shows that the geometric sector carries a compatible three-fold lattice scaffold; Mechanism 4 shows that the interface-mode count is compatible with three 8-dimensional blocks.
 
 **Structural compatibility from QFI mode count:** The interface mode count $M = 24$ (**Appendix Z**, Theorem Z.5) admits the factorization:
 $$
-M = 24 = 8 \times 3 = d_0 \times N_{\text{gen}}
+M = 24 = 8 \times 3 = d_0 \times N_{\text{gen}}.
 $$
 This factorization does not independently derive $N_{\text{gen}} = 3$; rather, it shows that the topological count is compatible with organizing the interface modes into three 8-dimensional blocks. The QFI structure is therefore a consistency check, not an additional derivation pathway.
 
-**Qualitative assessment:** The convergence of one derivation with two nontrivial compatibility checks supports the internal coherence of the framework. The manuscript does not select $N = 3$ by parameter choice, but the proved result is the topological minimality claim together with geometric and information-theoretic compatibility.
+**Qualitative assessment:** The convergence of one derivation with three nontrivial compatibility checks supports the internal coherence of the framework. The manuscript does not select $N = 3$ by parameter choice, but the proved result is the anomaly+CP minimality claim together with the pre-flavor PPI realization theorem.
 
-**Remark: Methodological Note.** The strength of the consistency argument rests on the agreement between the topological derivation, the $E_8$/Leech scaffold, and the QFI factorization. The latter two do not provide independent proofs of $N = 3$; they supply supporting structural checks. ∎
+**Remark: Methodological Note.** The strength of the consistency argument rests on the agreement between the topological derivation, the $D_4$ triality orbit, the $E_8$/Leech scaffold, and the QFI factorization. The latter three do not provide independent proofs of $N = 3$; they supply supporting structural checks. ∎
 
 ---
 
@@ -1247,13 +1305,15 @@ Therefore circuits are minimal supports of nonzero Golay codewords. The dual mat
 
 ### R.4.3 Synthesis: Why Three is Necessary
 
-The strongest derivation of three generations in this appendix is the topological one:
+The theorem-level derivation of three generations in this appendix is the topological one:
 
-**Topological derivation:** Sections R.3–R.4.1 show that anomaly cancellation together with the requirement of nontrivial CP violation selects $N=3$ as the smallest admissible family count in the modeled class.
+**Topological derivation:** Sections R.3–R.4.1 show that anomaly cancellation together with the requirement of nontrivial CP violation selects $N=3$ as the smallest admissible family count in the modeled class; Proposition R.3.5.1a realizes this count exactly on the pre-flavor family-redundancy PPI branch.
 
-**Geometric compatibility:** Section R.4.2 shows that the Leech/$E_8$ construction and the factorization $M = 24 = 8 \times 3$ carry a compatible three-fold structure. This is a nontrivial internal coherence check, but it is not a second independent proof of the generation count.
+**Triality compatibility:** Section R.4.2 shows that a marked real 8-carrier with $\mathfrak{so}(8)$ structure has the canonical $D_4$ triality orbit $\{V,S^+,S^-\}$ and that the anomaly equations on this three-element orbit reproduce $\{a,-a,0\}$. This is a nontrivial representation-theoretic compatibility check, not a replacement for the $U(1)_F$ anomaly+CP theorem.
 
-**Phenomenological Success:** The observed three-generation structure of the Standard Model matches the topological prediction, with the geometric sector providing additional structural support.
+**Geometric compatibility:** Section R.4.2 also shows that the Leech/$E_8$ construction and the factorization $M = 24 = 8 \times 3$ carry a compatible three-fold structure. These are internal coherence checks, not independent proofs of the generation count.
+
+**Phenomenological Success:** The observed three-generation structure of the Standard Model matches the topological prediction, with the triality and geometric sectors providing additional structural support.
 
 ## R.5 Mass Hierarchy from $E_8$ Geometry
 
@@ -1431,7 +1491,7 @@ Before evaluating experimental agreement, we clarify how this appendix advances 
 
 | **Aspect** | **Previous Approach** | **This Appendix** |
 |------------|----------------------|-------------------|
-| **Generation Count** | Topological only (anomaly cancellation) | Topological derivation + geometric compatibility check |
+| **Generation Count** | Topological only (anomaly cancellation) | Topological derivation with pre-flavor PPI realization + triality/$E_8$/Leech compatibility checks |
 | **Mass Hierarchy** | PCE minimality (qualitative order) | $E_8$ geodesic distances (quantitative ratios) |
 | **Predictions** | $N=3$, hierarchical pattern | Discrete $\mathcal{R}$ values: $\left\{\frac{4}{3}, \frac{3}{2}, 2, 3, 4\right\}$ |
 | **Mixing Angles** | Small (qualitative statement) | Exponential suppression $\exp(-d^2/2\sigma^2)$ with $d^2$ from geometry |
@@ -1551,7 +1611,7 @@ The observed value $J_{CP} \approx 3 \times 10^{-5}$ is consistent with small mi
 
 The framework provides first-principles explanations for:
 
-1. **Generation count:** $N = 3$ from the topological anomaly-cancellation and CP-violation argument of Sections R.3-R.4.1, with Section R.4.2 providing geometric compatibility
+1. **Generation count:** $N = 3$ from the topological anomaly-cancellation and CP-violation argument of Sections R.3-R.4.1, with Proposition R.3.5.1a giving exact pre-flavor PPI realization and Section R.4.2 providing $D_4$ triality plus $E_8$/Leech compatibility
 2. **Mass hierarchy:** Exponential suppression from $E_8$ geodesic distances on the attractor orbit $\text{Gr}(2,8)$
 3. **Discrete mass ratios:** $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ from allowed root distances $d^2 \in \{2, 4, 6, 8\}$
 4. **Small mixing angles:** Exponential suppression from large vacuum separations
@@ -1591,7 +1651,7 @@ This derivation occupies a middle ground between pure mathematics and phenomenol
 - Provides **mechanism** for mass hierarchy via $E_8$ root distances
 - Achieves **unification** of horizontal (gauge) and vertical (generation) SM structure
 - Makes **discrete predictions** ($\mathcal{R}$ values) with phenomenological support
-- Supplies **compatibility checks:** the $E_8$/Leech and QFI mode structures are nontrivially consistent with the topological count $N=3$
+- Supplies **compatibility checks:** the $D_4$ triality orbit, $E_8$/Leech scaffold, and QFI mode structures are nontrivially consistent with the topological count $N=3$
 
 **Limitations:**
 - Requires **specific choices** (embedding ansatz, potential form) motivated by PCE but not uniquely derived
@@ -1612,7 +1672,7 @@ The SM CKM CP violation, enabled by three generations, provides a mechanism for 
 
 This provides an independent, cosmological motivation for the three-generation structure beyond the information-theoretic arguments of this appendix. The convergence of:
 - Topological necessity (anomaly cancellation)
-- Geometric necessity ($E_8$ structure)  
+- Representation-geometric compatibility ($D_4$ triality and $E_8$ structure)  
 - Cosmological necessity (baryogenesis)
 
 strongly suggests three generations are fundamentally required rather than environmentally selected.
@@ -1623,7 +1683,7 @@ strongly suggests three generations are fundamentally required rather than envir
 *   **$E_8$ Geometry:** The $E_8$ root system emerges as the information-optimal coordinatization in 8 dimensions, with discrete squared distances $d^2 \in \{2, 4, 6, 8\}$ between roots.
 *   **Gauge–Topology Correspondence:** An embedding of the Standard Model gauge group into the MPU's internal symmetry group induces a homomorphism from the topological charges to the Cartan weight lattice of the gauge group.
 *   **PCE Selection:** The Principle of Compression Efficiency selects for physically viable sectors by enforcing non-Abelian charge neutrality via the **light sublattice** and requiring anomaly cancellation for an emergent family symmetry $U(1)_F$.
-*   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$ (Sections R.3–R.4.1). Section R.4.2 and the factorization $M = 24 = 8 \times 3$ provide structural compatibility checks rather than a second independent derivation.
+*   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$ (Sections R.3–R.4.1), and Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch. Section R.4.2 records the $D_4$ triality orbit, the $E_8$/Leech scaffold, and the factorization $M = 24 = 8 \times 3$ as structural compatibility checks rather than independent derivations.
 *   **Interface Modes:** The number 24 appears independently in interface mode count (**Appendix Z, Theorem Z.5**), Leech lattice dimension, and Golay code dimension (**Appendix Z, Theorem Z.13**), reflecting deep information-geometric optimality.
 *   **Mass Hierarchy:** On the $E_8$-root-vacuum and diagonal-alignment Gaussian branch (R.5.2–R.5.4), $E_8$ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with zero continuously adjustable parameters once the discrete root triad is selected. Whether the PCE potential's three vacua lie exactly at an $E_8$ root triad is a separate selection question not fully closed by this theorem stack.
 *   **Phenomenological Success:** Charged lepton sector shows $\mathcal{R}_\ell \approx 2.889$, within 3.8% of the discrete value 3, strongly supporting the $E_8$ geometric mechanism.

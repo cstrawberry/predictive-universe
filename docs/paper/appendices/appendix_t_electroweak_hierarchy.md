@@ -3707,7 +3707,7 @@ All parameters trace to prior derivations:
 
 - Hierarchy coefficient α = 3/2 from capacity saturation (Corollary T.41.3)
 - $E_8$ triad distances from Section T.21.9.1
-- Generation count N_g = 3 from Proposition R.4.2
+- Generation count $N_g = 3$ from Theorem R.3.4 and Proposition R.3.5.1a, with Proposition R.4.2 supplying triality/$E_8$/Leech compatibility
 - Sector stiffness ratio κ_d/κ_u = 1.02 from Theorem T.38
 
 -----
@@ -3851,7 +3851,7 @@ $$|V_{3j}| = \sqrt{\frac{d^2_{3j,f}}{N_g}} \times \exp\left(-\alpha \cdot d^2_{\
 - *d²_{3j,f} is the $E_8$ distance in sector f ∈ {up, down}*
 - *d²_ref = min(d²_{3j,d}, d²_{3j,u}) is the least-suppressed channel*
 - *α = 3/2 (Corollary T.41.3)*
-- *N_g = 3 (Proposition R.4.2)*
+- *$N_g = 3$ (Theorem R.3.4; Proposition R.3.5.1a)*
 
 *Proof.*
 
@@ -3883,7 +3883,7 @@ $$|V_{cb}| = \sqrt{\frac{2}{3}} \times e^{-3} = 0.0407$$
 
 From established framework:
 
-- N_g = 3 (Proposition R.4.2)
+- $N_g = 3$ (Theorem R.3.4; Proposition R.3.5.1a)
 - α = 3/2 (Corollary T.41.3)
 
 **Step 2 (Geometric prefactor).**
@@ -6385,7 +6385,7 @@ $$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Thm Z.1}} (a,b)
 |$a$ |2 |Landauer partition (see Theorem Z.1) |Theorem Z.1 |
 |$b$ |6 |$d_0 - a$ |Definition |
 |$M$ |24 |$2ab$ |Theorem Z.5 |
-|$N_g$ |3 |Anomaly cancellation |Proposition R.4.2|
+|$N_g$ |3 |Anomaly+CP minimality with pre-flavor PPI realization |Theorem R.3.4; Proposition R.3.5.1a|
 |$\sigma^2_B$ |$1/24$|Capacity saturation |Lemma T.41.2 |
 |$\alpha_{\text{UV}}$|$3/2$ |$1/(16\sigma^2_B)$ |Corollary T.41.3 |
 |$f_{\text{sinc}}$ |0.9454|$\sin(u)/u$, $u = 1/\sqrt{N_g}$ |Theorem T.24.2.1 |

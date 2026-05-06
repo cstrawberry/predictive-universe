@@ -3563,7 +3563,7 @@ Relative: $4.92 \times 10^{-5} = 0.00492\%$
 **Theorem Z.22 (Symmetry Protection).** First-order state deformation vanishes:
 $$\rho_1 = -\frac{i}{\omega}[G_{\mathrm{disc}}, \rho_0] = 0$$
 
-*Proof.* Both ρ₀ and G_disc are diagonal in the computational basis with S₃ permutation symmetry. Therefore [G_disc, ρ₀] = 0, giving ρ₁ = 0. ∎
+*Proof.* Both $\rho_0$ and $G_{\mathrm{disc}}$ are diagonal in the computational basis and invariant under the computational-basis $S_3$ permutation action on the three marked indices. This $S_3$ is the discrete permutation symmetry of the Appendix Z basis, not the connected family $U(1)_F$ of Theorem R.3.4; its compatibility with the $D_4$ triality orbit is recorded in Proposition R.4.2. Since diagonal operators commute, $[G_{\mathrm{disc}},\rho_0]=0$, giving $\rho_1=0$. ∎
 
 **Corollary Z.9 (First-Order Protection of the Active Fraction).** The active fraction $a/d_0 = 1/4$ receives no correction from first-order state deformation, because Theorem Z.22 gives $\rho_1 = 0$. Any higher-order modification would have to arise from explicit operator or geometric corrections rather than from first-order deformation of $\rho_0$.
 
