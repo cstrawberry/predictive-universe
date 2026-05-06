@@ -409,6 +409,8 @@ on the verification/update resources required to approach that limit (Theorem 14
 
 *   **RU (Reflexive Undecidability):** (**Theorem 12, Theorems A.2.3, A.2.4**) Fundamental limitation on the ability of an interacting algorithm to reliably decide certain properties of systems governed by RID, due to the interaction perturbing the system state.
 
+*   **Inaccessibility Profile:** (Definition 14.4b.1) Finite record $(\mathcal Q_h^{\mathrm{fd}},\mathcal Q_h^{\mathrm{fr}},\mathcal Q_h^{\mathrm{diag}},\mathrm{ns})$ classifying a hidden-variable completion by whether the outcome-determining hidden value can be reproduced by a finite-depth query, a finite-resource query, or a query satisfying both conditions. Theorem 14.4c excludes the finite-diagonal-access class and admits the inaccessible classes only through the no-signalling gate.
+
 *   **Reflexivity Constraint:** (Theorem 33, Equation 48) Fundamental trade-off $\Delta I \cdot (\Delta S_{min}/k_B) \ge \kappa_r > 0$ between relevant information gain $\Delta I$ in an 'Evolve' interaction and the minimum necessary dimensionless state disturbance (entropy production) $\Delta S_{min}/k_B$. Arises from $\varepsilon_0=\ln2$ and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$.
 
 *   **Regularity:** (Definition C.3) Geometric Regularity of the MPU network, encompassing uniform volume growth and bounded curvature. Necessary condition for viability (Theorem 43).

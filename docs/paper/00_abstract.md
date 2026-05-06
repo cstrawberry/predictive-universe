@@ -26,4 +26,4 @@ and the inactive-sector partition $6=3+2+1$ giving the gauge algebra
 $$
 \mathfrak g_{\mathrm{SM}}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)
 $$
-on the finite-response positive-marginal capacity branch. The Global Strict-Certificate Ledger of Convention P.14.1k records the closed backbone alongside the certificate-pending sectors $\mathfrak C_\alpha$, $\mathfrak F_U$, $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak C_{\mathrm{fl}}$, and $\mathfrak C_B$; Theorem P.14.1k.1 forces global closure under acceptance and Corollary P.14.1k.2 localizes the remaining open closure.
+on the finite-response positive-marginal capacity branch. The Global Strict-Certificate Ledger of Convention P.14.1k records the closed backbone alongside certificate-pending finite records such as $\mathfrak C_\alpha$, $\mathfrak C_{\mathrm{gen}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak F_U$, $\mathfrak I_U^{(4)}$, $\mathfrak B_{\mathrm{BL}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak J_{\mathrm{RHG-fl}}$, and $\mathfrak C_B$; Theorem P.14.1k.1 forces global closure under acceptance and Corollary P.14.1k.2 localizes the remaining open closure.

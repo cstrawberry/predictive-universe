@@ -1517,6 +1517,8 @@ $$
 \tag{T.22a.3}
 $$
 
+The homogeneous Bures/Kähler-Einstein normalization may be used to verify this datum only when it supplies the displayed $L_{\mathrm{info}}$-norm identity in the same reservoir coordinates as Lemma T.5b. The curvature identity $\operatorname{Ric}(\omega)=8\omega$ fixes the homogeneous metric scale on the Grassmannian branch; it does not by itself determine the SU(2) target-shift curve $q(u)$ or the second derivative in (T.22a.3). Thus the Kähler-Einstein input closes the $\gamma=1$ branch exactly when it verifies (T.22a.3), and not merely by naming the Kähler-Einstein structure.
+
 **Theorem T.22b** (Unit Moment-Map Target-Shift Normalization). On a branch carrying the SU(2) moment-map target-shift datum of Definition T.22a, the target-shift coefficient in Theorem T.22 is
 $$
 \gamma=1.
@@ -4539,14 +4541,13 @@ The Jarlskog invariant $J \propto \sin\delta \neq 0$ confirms physical CP violat
 
 ### T.22.10.4 Berry Phase Origin of CP Violation
 
-The CP-violating phases of the Standard Model are organized in this framework by two distinct mechanisms operating on the generation manifold $\mathrm{Gr}(2,8)$: a Berry-holonomy mechanism for CKM and PMNS phases (Type II CP violation in the language of Remark T.57a.1), and a $\sigma$-invariance plus PCE topological-cost mechanism for strong CP (Type I CP violation, forbidden by $\sigma$-invariance per Theorem K.6.1 with the branch qualifications on K.6.4-K.6.10). The synthesis below identifies the mechanism in each sector:
+The CP-violating phases of the Standard Model are organized in this framework by two distinct mechanisms operating on the generation manifold $\mathrm{Gr}(2,8)$: a Berry-holonomy mechanism for CKM and PMNS phases (Type II CP violation in the language of Remark T.57a.1), and a separate strong-CP mechanism combining σ-invariance, PCE topological-cost selection, and a certified positive-orientation real-Yukawa determinant branch. The synthesis below identifies the mechanism in each sector:
 
-|Observable |Berry Phase Mechanism |Predicted Value|Reference |
+|Observable |Berry or branch mechanism |Predicted value|Reference |
 |:--------------------|:----------------------------------------------------|:--------------|:--------------|
 |CKM $\delta$ |Holonomy around $u_3 \to d_3 \to d_2 \to u_2 \to u_3$|$66.7°$ |Theorem T.56 |
 |PMNS $\delta_{CP}$ |Holonomy with D₄-A₂ sector mismatch |$232.5°$ |Theorem T.24.22|
-|Strong $\bar{\theta}$|$\sigma$-invariance forces contractible loop |$0$ |Theorem K.6.5 |
-
+|Strong $\bar\theta$|σ-invariance plus PCE topological-cost selection and certified real-Yukawa positive orientation |$0$ on the Appendix K branch |Theorem K.6.6; Corollary K.6.5; Theorem K.6.11 |
 **Theorem T.57a (CP from Holonomy).** *CP-violating phases arise as Berry-Simon holonomy on the generation manifold* [Berry 1984; Simon 1983].
 
 *Proof.*
@@ -4568,9 +4569,9 @@ $$
 
 **Step 3 (PMNS phase).** The leptonic sector involves D₄ (charged leptons) and A₂ (neutrinos) geometries. The additional holonomy from the D₄-A₂ mismatch contributes $75°$ (Theorem T.24.22, Steps 3-4), yielding $\delta_{CP} = 232.5°$.
 
-**Step 4 (Strong CP via the σ-invariance + topological-cost branch — separate mechanism from Berry holonomy).** Strong CP is governed by a different mechanism than CKM/PMNS Berry holonomy. On the σ-symmetric attractor branch (Theorem K.6.5 as conditioned by the K.6.4 Hermiticity counterexample fix and the orientation-preserving real-Yukawa branch of K.6.7-K.6.10), the σ-involution (Definition K.6.3) restricts $\theta_{QCD} \in \{0, \pi\}$, and on the topological-cost branch (Theorem K.6.2; cf. Appendix K branch ledger K.11 noting the topological cost derivation as a separate closure item), the PCE cost $V_{PCE}(\theta) \propto (1 - \cos\theta)$ selects $\theta = 0$. The Berry-holonomy identification of Steps 1-3 does not apply to the strong-CP sector; the unification claim is that all SM CP-violating phases admit a geometric origin on $\mathrm{Gr}(2, 8)$, not that they share a single Berry-loop mechanism. ∎
+**Step 4 (Strong CP via the σ-invariance + topological-cost + determinant-orientation branch — separate mechanism from Berry holonomy).** Strong CP is governed by a different mechanism than CKM/PMNS Berry holonomy. On the σ-symmetric attractor branch, the σ-involution (Definition K.6.3) restricts $\theta_{QCD}\in\{0,\pi\}$, and on the topological-cost branch Theorem K.6.6 selects $\theta_{QCD}=0$. The quark determinant phase is fixed only when the branch also supplies the positive-orientation real-Yukawa certificate of Corollary K.6.5, via the nonzero-path criterion of Theorem K.6.9 or the ordered heat-kernel chamber of Corollary K.6.9a.1. The Berry-holonomy identification of Steps 1-3 does not apply to the strong-CP sector; the unification claim is that all SM CP-violating phases admit geometric branch data on $\mathrm{Gr}(2,8)$, not that they share a single Berry-loop mechanism. ∎
 
-**Remark T.57a.1: Type I vs Type II.** The framework distinguishes Type I CP violation (Lagrangian parameters, forbidden by $\sigma$-invariance per Theorem K.6.1) from Type II (Berry holonomy, permitted). This explains why $\bar{\theta} = 0$ while $\delta_{CKM} \neq 0$.
+**Remark T.57a.1: Type I vs Type II.** The framework distinguishes Type I CP violation (Lagrangian parameters, excluded on the σ-symmetric topological-cost branch together with a positive-orientation real-Yukawa determinant certificate in Appendix K) from Type II (Berry holonomy, permitted). This explains why $\bar\theta=0$ on the Appendix K branch while $\delta_{CKM}\ne0$.
 
 ### T.22.10.4 Comparison with PMNS
 
@@ -8179,19 +8180,16 @@ By Lemma T.78.6b, the forward finite parts $F_s^{\mathrm{RHG}}$ are uniquely cer
 
 Finally, step 9 of Algorithm T.78.6a rejects any validation-selected entry. Therefore the validation tuple cannot influence the branch construction. It is available only for comparison after the forward computation. ∎
 
-**Corollary T.78.8 (Exact Completion Criterion for Target 1).** Target 1 is fully resolved on a branch if and only if either:
+**Corollary T.78.8 (Flag-Lift Threshold Closure Criterion).** The electroweak threshold row is theorem-closed on a branch exactly when one of the following explicitly stated closure modes holds before validation comparison:
 
-1. an equivariant analytic-torsion certificate $\mathfrak C_{\mathrm{tor}}$ is accepted in the sense of Definition T.78.5a and Theorem T.78.5b; or
+1. a positive numerical closure is supplied by an accepted equivariant analytic-torsion certificate $\mathfrak C_{\mathrm{tor}}$ in the sense of Definition T.78.5a and Theorem T.78.5b;
+2. a positive numerical closure is supplied by an accepted RHG certificate $\mathfrak C_{\mathrm{RHG}}$ under Algorithm T.78.6a;
+3. a positive numerical closure is supplied by another completed spectral tuple satisfying Theorem T.78 and Corollary T.69.1;
+4. a negative closure is supplied by a no-go theorem proving that no admissible PU-internal spectral package can supply the missing threshold data.
 
-2. an RHG certificate $\mathfrak C_{\mathrm{RHG}}$ is accepted by Algorithm T.78.6a; or
+A tuple of numerical threshold shifts is not promoted by agreement with the validation row. It is promoted only by one of the positive precomparison closures in items 1--3. Item 4 closes the row only negatively, by excluding theorem-level numerical threshold supply inside the stated admissible class.
 
-3. another completed spectral tuple satisfying Theorem T.78 and Corollary T.69.1 is supplied before validation comparison; or
-
-4. a no-go theorem proves that no admissible PU-internal spectral package can supply the missing data.
-
-The pre-certificate canonical ledger satisfies item 4 only in the negative current-framework sense of Theorem T.78.5. An accepted torsion certificate satisfies item 1 and an accepted RHG certificate satisfies item 2; either gives positive branch closure.
-
-*Proof.* This is exactly the completion criterion of Target 1 expressed in Appendix-T terms. Theorem T.78 supplies determinacy for any completed tuple. Theorem T.78.5b proves that an accepted torsion certificate is such a tuple, and Theorem T.78.7 proves that an accepted RHG certificate is such a tuple. Theorem T.78.5 supplies the negative pre-certificate result. These alternatives exhaust the target's stated completion modes. ∎
+*Proof.* Theorem T.78 makes the threshold tuple a deterministic function of the completed sector operator, scheme, finite-part, and tail data. Theorem T.78.5b proves that an accepted torsion certificate supplies such data. Theorem T.78.7 proves the same for an accepted RHG certificate. Item 3 is the same determinacy statement for any other completed spectral tuple satisfying the same hypotheses. Item 4 is the negative closure alternative supplied by a no-go theorem. Since each positive alternative fixes the tuple before comparison and the negative alternative forbids such a tuple, these cases exactly exhaust theorem-level threshold-row closure. ∎
 
 **Corollary T.78.9 (No Fractal-Ontology Claim for RHG Closure).** RHG closure does not assert that the smooth homogeneous flag lift $\widetilde X$ is a fractal space. The RHG projection is finite and blockwise; the threshold operator remains an elliptic sector operator on the smooth compact flag lift.
 
@@ -8226,7 +8224,9 @@ $$
 \quad\text{is not a derived theorem-level threshold tuple.}
 \tag{T.78.13}
 $$
-The validation tuple $(15.14,20.94,18.41)$ remains a validation target available only for post-comparison after an independently fixed certificate has passed Algorithm T.78.6a and Definition T.78.10. A future branch may be integrated only by supplying the Peter-Weyl branching ledger, RHG block matrices, compatibility projectors, spectrahedron minimizer, heat-kernel finite parts, scheme ledger, and Corollary T.69.1 tail intervals before comparison with that tuple. If the accepted interval misses the validation tuple, the RHG branch is rejected rather than retuned.
+The validation tuple $(15.14,20.94,18.41)$ remains a validation target available only for post-comparison after an independently fixed certificate has passed Algorithm T.78.6a and Definition T.78.10. A future branch may be integrated only by supplying the Peter-Weyl branching ledger, RHG block matrices, compatibility projectors, spectrahedron minimizer, heat-kernel finite parts, scheme ledger, and Corollary T.69.1 tail intervals before comparison with that tuple.
+
+An octad, Steiner, Mathieu, or Golay character formula may be used as a construction of the sector/parity block data only if it supplies the exact sector characters, Dynkin-index map, multiplicities, finite matrices or homogeneous $H$-types, canonical $\mathrm{MS2}_{\mu_G}$ finite parts, and tail intervals required by Theorem T.78 or Definition T.78.6. A raw octad sum, a post-comparison numerical match, or an identity involving the numbers $759$, $196560$, or the Steiner incidence constants is not a threshold certificate. If the accepted interval misses the validation tuple, the branch is rejected rather than retuned.
 **Theorem T.79 (Conditional Closure of the Quantitative Parameter Sector).** On a fixed PU structural branch with the two-loop SM RG system, suppose:
 1. a completed flag-lift spectral calculation provides a definite threshold triplet $\Delta$;
 2. the flavor-geometric residual data $(\mathcal T_{E_8},\mathcal V)$ are fixed on the selected branch;
@@ -8292,6 +8292,7 @@ $$
 =
 \left(
 \mathcal X_{\mathrm{fl}},
+\mathcal A_{\mathrm{fl}},
 \mathcal H_{\mathrm{fl}},
 \mathcal V_{\mathrm{fl}},
 \mathcal B_{\mathrm{fl}},
@@ -8303,18 +8304,19 @@ $$
 fixed before comparison with charged-lepton, quark, neutrino, CKM, or PMNS data, where:
 
 1. $\mathcal X_{\mathrm{fl}}$ is the retained finite flavor cell, generation placement, and residual symmetry ledger.
-2. $\mathcal H_{\mathrm{fl}}$ is the finite Hessian/Van Vleck package for the retained stationary points.
-3. $\mathcal V_{\mathrm{fl}}$ is the Berry/holonomy package for relative determinant-line phases.
-4. $\mathcal B_{\mathrm{fl}}$ is the finite threshold and running bridge from the RHG electroweak record to the flavor scale.
-5. $\mathcal N_{\mathrm{fl}}$ is the absolute Yukawa normalization and measure convention.
-6. $\mathcal R_{\mathrm{fl}}$ is a rigorous residual and truncation interval for all listed flavor observables.
-7. $\chi_{\mathrm{fl}}$ records that no component was selected using the observed flavor data being predicted.
+2. $\mathcal A_{\mathrm{fl}}$ is the specified finite PCE rate action whose stationary points are used for the flavor amplitudes.
+3. $\mathcal H_{\mathrm{fl}}$ is the finite Hessian/Van Vleck package for the retained stationary points, computed as the second variation of $\mathcal A_{\mathrm{fl}}$ on the same Bures/Kähler-Einstein flavor metric and finite measure used for normalization. A Ricci identity for the homogeneous metric fixes metric scale only; it does not replace the action Hessian.
+4. $\mathcal V_{\mathrm{fl}}$ is the Berry/holonomy package for relative determinant-line phases, including the determinant-line connection, loop representatives, surface choices where used, orientation convention, and, whenever a real Yukawa determinant orientation is claimed, either the nonzero-path data of Theorem K.6.9 or the ordered heat-kernel chamber data of Corollary K.6.9a.1.
+5. $\mathcal B_{\mathrm{fl}}$ is the finite threshold and running bridge from an accepted electroweak spectral record to the flavor scale.
+6. $\mathcal N_{\mathrm{fl}}$ is the absolute Yukawa normalization and measure convention, including the Quillen norm, Van Vleck-Morette determinant, finite measure normalization, RG scheme, and pole/running conversion convention whenever an absolute mass is claimed.
+7. $\mathcal R_{\mathrm{fl}}$ is a rigorous residual and truncation interval for all listed flavor observables.
+8. $\chi_{\mathrm{fl}}$ records that no component was selected using the observed flavor data being predicted.
 
-**Algorithm T.79.5 (Acceptance Test for the Flavor Completion Certificate).** The certificate $\mathfrak C_{\mathrm{fl}}$ is accepted if and only if each stationary point and each holonomy path is generated by the finite branch data already fixed in Appendices G, R, and T, the Hessian and Van Vleck determinants are computed with the same finite measure as $\mathcal N_{\mathrm{fl}}$, the RHG threshold inputs are taken only from an accepted $\mathfrak R_{\mathrm{RHG}}$, the residual interval $\mathcal R_{\mathrm{fl}}$ is bounded before empirical comparison, and $\chi_{\mathrm{fl}}$ is satisfied.
+**Algorithm T.79.5 (Acceptance Test for the Flavor Completion Certificate).** The certificate $\mathfrak C_{\mathrm{fl}}$ is accepted if and only if each stationary point and each holonomy path is generated by the finite branch data already fixed in Appendices G, R, and T; the PCE action $\mathcal A_{\mathrm{fl}}$ is specified before comparison; the Hessian and Van Vleck determinants are computed with the same Bures/Kähler-Einstein metric, finite measure, and Quillen convention as $\mathcal N_{\mathrm{fl}}$; the Berry holonomies are computed from the listed determinant-line connection and loops; every determinant-orientation claim is certified either by the nonzero-path condition of Theorem K.6.9 or by the ordered heat-kernel chamber condition of Corollary K.6.9a.1; the threshold inputs are taken only from an accepted $\mathfrak R_{\mathrm{RHG}}$, accepted $\mathfrak C_{\mathrm{tor}}$, or another completed spectral tuple satisfying Theorem T.78; the absolute normalization includes its RG and pole/running conventions before comparison; the residual interval $\mathcal R_{\mathrm{fl}}$ is bounded before empirical comparison; and $\chi_{\mathrm{fl}}$ is satisfied.
 
 **Theorem T.79.6 (Certified Flavor Determinacy).** If $\mathfrak C_{\mathrm{fl}}$ is accepted, then the charged-lepton, quark, neutrino, CKM, and PMNS outputs assigned to that certificate are uniquely determined up to the certified interval $\mathcal R_{\mathrm{fl}}$. If no accepted $\mathfrak C_{\mathrm{fl}}$ exists, those outputs remain model-layer or validation-layer statements.
 
-*Proof.* The flavor observables in Appendix T are functions of finite generation placement, stationary-point actions, Hessian determinants, Berry/holonomy phases, threshold maps, running, and absolute normalization. Definition T.79.4 fixes each of these entries as a finite record and Algorithm T.79.5 requires the record to be fixed before empirical comparison. Therefore each listed observable is the image of one finite tuple under deterministic algebraic, spectral, and RG operations, with uncertainty only from the finite residual interval $\mathcal R_{\mathrm{fl}}$. If the certificate is absent, at least one required finite entry is unspecified; then the corresponding output is not determined by the branch and must remain model-layer or validation-layer. ∎
+*Proof.* The flavor observables in Appendix T are functions of finite generation placement, the specified PCE rate action, stationary-point actions, Hessian and Van Vleck determinants, Quillen normalization, Berry/holonomy phases, accepted electroweak threshold maps, RG running, pole/running conversion, and absolute normalization. Definition T.79.4 fixes each of these entries as a finite record and Algorithm T.79.5 requires the record to be fixed before empirical comparison. Therefore each listed observable is the image of one finite tuple under deterministic algebraic, spectral, and RG operations, with uncertainty only from the finite residual interval $\mathcal R_{\mathrm{fl}}$. If the certificate is absent, at least one required finite entry is unspecified; then the corresponding output is not determined by the branch and must remain model-layer or validation-layer. ∎
 
 **Corollary T.79.7 (No Flavor Back-Fitting).** A flavor output may be promoted by Appendix T only through an accepted $\mathfrak C_{\mathrm{fl}}$. Changing generation placement, normalization, holonomy path, threshold input, or residual width after comparison defines a different flavor branch and cannot confirm the original one.
 

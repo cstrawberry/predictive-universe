@@ -837,18 +837,22 @@ The Strong CP problem—why the QCD vacuum angle $\bar{\theta}<10^{-10}$ despite
 
 **Mechanism I ($\sigma$-Invariance):** The anti-holomorphic involution $\sigma$ on Gr(2,8) corresponds to CP transformation (Theorem K.6.1). On the $\sigma$-symmetric PCE-attractor branch, the physical vacuum is required to be $\sigma$-invariant, restricting $\theta\in\{0,\pi\}$. The PCE cost functional $V_{PCE}(\theta) = V_0(1 - \cos\theta)$ selects the global minimum $\theta_{QCD} = 0$.
 
-**Mechanism II ($E_8$ Reality):** The $E_8$ root system lies in $\mathbb{R}^8$ (Lemma K.6.2). On the orientation-preserving real-Yukawa branch, Gaussian overlap on $E_8$ gives real Yukawa data with positive determinant orientation; the raw positivity of entries alone is not sufficient to fix $\arg\det M_q=0$. In the canonical branch $Y_{ij}\propto\exp(-\frac{3}{4}d^2_{E_8}(r_i, r_j)) \in \mathbb{R}_{>0}$. On the orientation-preserving branch, $R_f$ is taken in the positive-determinant component, yielding $\arg(\det M_q)=0$. A separate theorem would be needed to derive this component choice from Gaussian overlap data alone.
+**Mechanism II ($E_8$ Reality):** The $E_8$ root system lies in $\mathbb R^8$ (Lemma K.6.2). Gaussian overlap on $E_8$ gives real Yukawa data,
+$$
+Y_{ij}\propto\exp\left(-\frac34 d^2_{E_8}(r_i,r_j)\right)\in\mathbb R_{>0},
+$$
+but raw positivity of entries alone does not fix the determinant component. The determinant phase is therefore fixed only by a positive-orientation certificate: either the nonzero-path criterion of Theorem K.6.9 or the ordered heat-kernel total-positivity chamber of Corollary K.6.9a.1. On such a branch Corollary K.6.5 gives $\arg(\det M_q)=0$; without the certificate, $E_8$ reality gives only a real determinant sign, not its value.
 
 **Combined Result (Theorem K.6.11):**
 $$
 \bar{\theta} = \theta_{QCD} + \arg(\det M_q) = 0 + 0 = 0\quad\text{on the Appendix K strong-CP branch}
 $$
 
-The framework distinguishes Type I CP violation (Lagrangian parameters, forbidden by $\sigma$-invariance) from Type II CP violation (Berry holonomy, permitted). This explains why $\bar{\theta} = 0$ while $\delta_{CKM} \neq 0$.
+The framework distinguishes Type I CP violation (absolute strong-sector phases, excluded on the σ-symmetric positive-orientation branch) from Type II CP violation (Berry holonomy, permitted). This explains why $\bar\theta=0$ on the Appendix K branch while $\delta_{CKM}\ne0$.
 
 **Experimental Predictions:**
-- No QCD axion exists (null results expected in ADMX, ABRACADABRA)
-- Neutron EDM $d_n = 0$ from strong CP; SM CKM contribution $\sim 10^{-31}$ e$\cdot$cm
+- No QCD axion degree of freedom is present on the Appendix K strong-CP branch.
+- Neutron EDM $d_n=0$ from the strong-CP contribution on that branch; SM CKM contribution $\sim10^{-31}$ e$\cdot$cm.
 
 ### 14.2.8 Baryon Asymmetry from Anomaly Inflow
 
@@ -1352,6 +1356,89 @@ h(\lambda)=\mathrm{NOT}(h(\lambda)),
 $$
 which is impossible for a binary value. Thus no hidden-variable completion in which the governed system can query and condition on the variable determining its own next outcome is PU-admissible. Hidden-variable completions whose variables are inaccessible to the systems they govern are not excluded by this theorem alone; classifying that inaccessible class against no-signalling remains a separate model-classification problem. ∎
 
+**Definition 14.4b.1 (Inaccessibility Profile of a Hidden-Variable Completion).** A hidden-variable completion of a finite predictive system is specified by a hidden variable space $\Lambda$ with distribution $\mu$, a deterministic outcome map $h:\Lambda\to\{0,1\}$, an MPU-admissible query class $\mathcal Q$, a resource cost function
+$$
+r:\mathcal Q\to\{0,1,2,\ldots,\infty\},
+$$
+and a self-reference depth function
+$$
+\sigma:\mathcal Q\to\{0,1,2,\ldots,\infty\}.
+$$
+Let
+$$
+\mathcal Q_h
+=
+\{Q\in\mathcal Q:Q(\lambda)=h(\lambda)\text{ for }\mu\text{-a.e. }\lambda\},
+\tag{14.4b.1.1}
+$$
+$$
+\mathcal Q_h^{\mathrm{fd}}
+=
+\{Q\in\mathcal Q_h:\sigma(Q)<\infty\},
+\qquad
+\mathcal Q_h^{\mathrm{fr}}
+=
+\{Q\in\mathcal Q_h:r(Q)<\infty\},
+\tag{14.4b.1.2}
+$$
+and
+$$
+\mathcal Q_h^{\mathrm{diag}}
+=
+\mathcal Q_h^{\mathrm{fd}}\cap\mathcal Q_h^{\mathrm{fr}}.
+\tag{14.4b.1.3}
+$$
+The inaccessibility profile is the finite record
+$$
+\mathfrak p_{\mathrm{hv}}
+=
+(\mathcal Q_h^{\mathrm{fd}},\mathcal Q_h^{\mathrm{fr}},\mathcal Q_h^{\mathrm{diag}},\mathrm{ns}),
+\tag{14.4b.1.4}
+$$
+where
+$$
+\mathrm{ns}
+=
+\begin{cases}
+1,&\text{the completion satisfies the no-signalling condition of Theorem 42},\\
+0,&\text{otherwise}.
+\end{cases}
+\tag{14.4b.1.5}
+$$
+The completion is finite-diagonal-accessible exactly when $\mathcal Q_h^{\mathrm{diag}}\ne\varnothing$.
+
+**Theorem 14.4c (Inaccessibility-Profile Classification of Hidden-Variable Completions).** Every hidden-variable completion of a finite predictive system whose Property-R aggregate satisfies SPAP belongs to exactly one of the following four classes.
+
+1. **Self-accessible.** $\mathcal Q_h^{\mathrm{diag}}\ne\varnothing$. The completion is excluded by Theorem 14.4b, regardless of $\mathrm{ns}$.
+2. **Resource-inaccessible.** $\mathcal Q_h^{\mathrm{diag}}=\varnothing$ and $\mathcal Q_h^{\mathrm{fd}}\ne\varnothing$. A finite-depth query reproducing $h$ exists, but no such query has finite MPU resource cost. The completion passes the hidden-variable gate exactly when $\mathrm{ns}=1$.
+3. **Depth-inaccessible.** $\mathcal Q_h^{\mathrm{fd}}=\varnothing$ and $\mathcal Q_h^{\mathrm{fr}}\ne\varnothing$. A finite-resource query reproducing $h$ exists only at infinite self-reference depth, so it cannot be returned before the next update. The completion passes the hidden-variable gate exactly when $\mathrm{ns}=1$.
+4. **Fully inaccessible.** $\mathcal Q_h^{\mathrm{fd}}=\varnothing$ and $\mathcal Q_h^{\mathrm{fr}}=\varnothing$. No admissible reproducing query is available at finite depth or finite resource. The completion passes the hidden-variable gate exactly when $\mathrm{ns}=1$.
+
+Thus the PU-admissible inaccessible class relative to this hidden-variable gate is
+$$
+(\mathrm{Class\,2}\cup\mathrm{Class\,3}\cup\mathrm{Class\,4})\cap\{\mathrm{ns}=1\}.
+\tag{14.4c.1}
+$$
+It is a strict subset of the no-signalling hidden-variable completions whenever the model class contains a no-signalling self-accessible completion.
+
+*Proof.* If $\mathcal Q_h^{\mathrm{diag}}\ne\varnothing$, there is a query $Q$ that reproduces $h(\lambda)$, has finite resource cost, and has finite self-reference depth. The governed system can therefore receive and condition on $Q(\lambda)$ before the next update, which is exactly the self-accessible case diagonalized by Theorem 14.4b. This proves Class 1 exclusion.
+
+Assume $\mathcal Q_h^{\mathrm{diag}}=\varnothing$. If $\mathcal Q_h^{\mathrm{fd}}\ne\varnothing$, then finite-depth reproducing queries exist, but none has finite resource cost; otherwise such a query would lie in $\mathcal Q_h^{\mathrm{diag}}$. The finite-resource step required by Theorem 14.4b is unavailable, so the diagonal contradiction is not implementable. This is Class 2, and the remaining hidden-variable admissibility condition recorded here is no-signalling.
+
+If $\mathcal Q_h^{\mathrm{fd}}=\varnothing$ but $\mathcal Q_h^{\mathrm{fr}}\ne\varnothing$, then any finite-resource reproducing query has infinite self-reference depth. It cannot be returned before the system's next update and therefore cannot be used in the diagonal rule of Theorem 14.4b. This is Class 3, again with no-signalling as the remaining gate.
+
+If both $\mathcal Q_h^{\mathrm{fd}}$ and $\mathcal Q_h^{\mathrm{fr}}$ are empty, then no reproducing query is available at finite depth or finite resource. The diagonal construction is unavailable for both reasons. This is Class 4, with no-signalling as the remaining gate.
+
+The four cases are exhaustive and mutually exclusive by the two predicates $\mathcal Q_h^{\mathrm{diag}}\ne\varnothing$ and $\mathcal Q_h^{\mathrm{fd}}\ne\varnothing$, followed by $\mathcal Q_h^{\mathrm{fr}}\ne\varnothing$ when finite-depth access is absent. Formula (14.4c.1) is therefore the inaccessible part of the no-signalling class after removing the self-accessible completions. A no-signalling self-accessible completion can be obtained by allowing Alice to query a local hidden bit fixing Alice's own next outcome while Bob's marginal distribution is independent of that bit and of Alice's local instrument. Such a completion has $\mathrm{ns}=1$ but is excluded by Class 1, so the inclusion in the no-signalling class is strict for any model class containing that example. ∎
+
+**Corollary 14.4c.1 (Finite Diagonal Access as the Operative Filter).** No-signalling alone does not classify hidden-variable completions. The operative PU filter is finite diagonal access to the outcome-determining hidden value: no-signalling self-accessible completions are excluded, while no-signalling resource-inaccessible, depth-inaccessible, and fully inaccessible completions pass this hidden-variable gate.
+
+*Proof.* This is the partition of Theorem 14.4c. The value of $\mathrm{ns}$ is the same for a no-signalling Class 1 example and a no-signalling inaccessible example, but their values of $\mathcal Q_h^{\mathrm{diag}}$ differ. Theorem 14.4b acts exactly on the nonempty finite-diagonal-access class. ∎
+
+**Corollary 14.4c.2 (Strict Containment in the No-Signalling Class).** In any model class containing at least one no-signalling self-accessible completion and at least one no-signalling inaccessible completion, the PU-admissible inaccessible subclass is a proper subset of the no-signalling hidden-variable completions.
+
+*Proof.* The no-signalling self-accessible example in the proof of Theorem 14.4c lies in the no-signalling class but is PU-excluded by Theorem 14.4b. A completion with $\mathcal Q=\varnothing$ and Bob marginals independent of Alice's local instruments is fully inaccessible and no-signalling, hence passes the hidden-variable gate by Class 4. Therefore the no-signalling class contains both excluded and admitted completions, making the admitted inaccessible subclass proper. ∎
+
 ## 14.5 Interpretive Implications: The Vacuum as Structured Information
 
 The derivation chain from foundational principles to emergent spacetime yields several implications that merit explicit articulation. These are not additional assumptions but consequences of the framework's core results.
@@ -1815,7 +1902,7 @@ Theorem Z.26 and Appendix T solve different problems. Theorem Z.26 is a Thomson-
 
 ### 14.6.6 What remains for full closure
 
-The remaining non-theorem rows are exactly the rows without accepted finite certificates: the Thomson normalization certificate $\mathfrak C_\alpha$, the RHG acceptance record $\mathfrak R_{\mathrm{RHG}}$, the four-mode vacuum prefactor certificate $\mathfrak F_U$, the flavor completion certificate $\mathfrak C_{\mathrm{fl}}$, the baryogenesis transport certificate $\mathfrak C_B$, and any CC/statistical-influence protocol package entered under Definition 13.0d. By Theorem P.14.1f and Corollary P.14.1g, these rows cannot be promoted by prose, status labels, or post-comparison interval choices. They require their actual finite records: spectral matrices, determinant records, finite-part sums, tail bounds, stationary data, transport integrals, and forward-lock ledgers. A functorial strengthening of Theorem X.8a, a source-energy rate theory beyond fixed high-$\mu_S$/temperature strata, autonomous complexity growth under the Source Principle, cosmological backreaction estimates, and uniqueness of the canonical arena hierarchy would further compress the framework, but their absence does not permit post-comparison branch changes. Each such sector is either certificate-complete before comparison or remains branch/model-layer by the ledger.
+The remaining non-theorem rows are the rows without accepted finite certificates: the Thomson normalization certificate $\mathfrak C_\alpha$, the local generator convergence certificate $\mathfrak C_{\mathrm{gen}}$ outside already closed AQFT branches, the torsion or RHG electroweak spectral certificates $\mathfrak C_{\mathrm{tor}}$ and $\mathfrak R_{\mathrm{RHG}}$, the four-mode vacuum prefactor certificates $\mathfrak F_U$ and $\mathfrak I_U^{(4)}$ with the Bismut-Lebeau transfer datum $\mathfrak B_{\mathrm{BL}}$ when used, the flavor completion certificate $\mathfrak C_{\mathrm{fl}}$ and joint ledger $\mathfrak J_{\mathrm{RHG-fl}}$, the baryogenesis transport certificate $\mathfrak C_B$, and any CC/statistical-influence protocol package entered under Definition 13.0d. By Theorem P.14.1f and Corollary P.14.1g, these rows cannot be promoted by prose, status labels, or post-comparison interval choices. They require their actual finite records: spectral matrices, determinant records, finite-part sums, Hessian and orientation data, local generator maps, tail bounds, stationary data, transport integrals, and forward-lock ledgers. A functorial strengthening of Theorem X.8a, a source-energy rate theory beyond fixed high-$\mu_S$/temperature strata, autonomous complexity growth under the Source Principle, cosmological backreaction estimates, and uniqueness of the canonical arena hierarchy would further compress the framework, but their absence does not permit post-comparison branch changes. Each such sector is either certificate-complete before comparison or remains branch/model-layer by the ledger.
 
 ### 14.6.7 Final scope statement
 

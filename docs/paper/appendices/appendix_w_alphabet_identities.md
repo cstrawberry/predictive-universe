@@ -68,7 +68,14 @@ $$
 \lambda_i\ge 0,\quad A_{\rm PCE}>0,\quad M\ge 1,\quad d_0\ge 2,\quad x=\tfrac{S_1}{M}>0.
 $$
 
-Unless stated otherwise, the **cap‑active branch** at $\mu^\*$ is considered: the unconstrained minimizer $u_0\ge 0$ of $\phi$ (solving $\phi'(u_0)=0$) satisfies $g_J(u_0)>\ln d_0$. If instead $g_J(u_0)\le \ln d_0$, the optimum is **interior** $(u^\*=u_0)$; the equality case $g_J(u_0)=\ln d_0$ lies on the **branch boundary**.
+Unless stated otherwise, the **cap-active branch** at $\mu^*$ is considered: the unconstrained minimizer $u_0\ge 0$ of $\phi$ solving $\phi'(u_0)=0$ satisfies
+$$
+g_J(u_0)>\ln d_0.
+\tag{W.0.5}
+$$
+If instead $g_J(u_0)\le \ln d_0$, the optimum is **interior** $(u^*=u_0)$; the equality case $g_J(u_0)=\ln d_0$ lies on the **branch boundary**.
+
+Condition (W.0.5) is a branch inequality, not a consequence of the names Cramér-Rao, Holevo, Landauer, or spectral gap. A Cramér-Rao-Holevo derivation of (W.0.1) is accepted in this appendix only when it supplies, before comparison, the finite LAN/QFI eigenvalue list $\{\lambda_i\}$, the exact local Fisher quadratic cost $A_{\rm PCE}u^2$, the channel-capacity term $\Gamma_0\sum_i\ln(1+\lambda_i u)$, the convex domain $u\ge0$, and the active-cap inequality (W.0.5). Under those entries, Lemma W.1 gives strict convexity, Lemma W.2 gives the Jensen-cap boundary, and the constrained minimizer is theorem-level inside the stated branch. Without (W.0.5), the same potential has an interior branch and the cap-active downstream formulae do not apply.
 
 > **Notation box.** $u=g^2$; $\alpha=g^2/(4\pi)$; $S_1=\sum\lambda_i$; $S_2=\sum\lambda_i^2$; $x=S_1/M$; $\sigma^2=\frac{S_2}{M}-x^2$; $a_{\rm cap}=d_0^{1/M}$; $D=a_{\rm cap}(a_{\rm cap}-1)$; $K(d_0,M)=\frac{a_{\rm cap}-1}{4\pi}\bigl(1+\frac{1}{D}\bigr)$; $F_\lambda=\frac{M x^2}{S_2}=\frac{1}{1+\sigma^2/x^2}\in(0,1]$.
 

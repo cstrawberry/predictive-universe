@@ -998,3 +998,54 @@ $$
 as a finite-response non-equilibrium source term. It cannot silently impose local Clausius equality while retaining positive predictive QNEC slack.
 
 *Proof.* By Theorem 12.5.3f, the local Clausius defect is exactly $S_{\mathrm{rel}}''/(2\pi)$. Therefore imposing the local Clausius equality used in Theorem 12.1 is equivalent to setting the slack to zero. If the slack is positive, the equality fails by that amount and must be represented as a non-equilibrium correction term. ∎
+
+**Theorem 12.5.3h (Modular-QNEC Closure of the Emergent Einstein Branch).** Let a regular finite KMS/AQFT branch satisfy the local generator convergence certificate of Definition F.0a and Theorem F.0b and the predictive-energy hypotheses of Theorem 12.5.3f on every local null Clausius patch. Define the predictive QNEC slack on a local null generator $k$ by
+$$
+\mathcal Q(k)
+=
+2\pi\langle T_{kk}^{(\mathrm{MPU})}\rangle
+-
+\Delta S_{\mathrm{pred}}''(k).
+\tag{76t}
+$$
+If PCE equilibrium imposes zero retained modular slack,
+$$
+\mathcal Q(k)=0
+\quad
+\text{for every local null }k,
+\tag{76u}
+$$
+then the emergent metric satisfies
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+=
+8\pi G\,T_{\mu\nu}^{(\mathrm{MPU})}
+\tag{76v}
+$$
+on the smooth-envelope branch. If $\mathcal Q(k)>0$ for a retained local null direction, the reversible Einstein branch is not closed unless the branch retains a finite non-equilibrium slack tensor $T_{\mu\nu}^{(\mathrm{sl})}$ whose null projections satisfy
+$$
+T_{kk}^{(\mathrm{sl})}
+=
+\frac{\mathcal Q(k)}{2\pi}
+\tag{76w}
+$$
+on the retained null directions. With this sign convention the corrected finite-response equation is
+$$
+G_{\mu\nu}+\Lambda g_{\mu\nu}+8\pi G T_{\mu\nu}^{(\mathrm{sl})}
+=
+8\pi G\,T_{\mu\nu}^{(\mathrm{MPU})},
+\tag{76w.1}
+$$
+equivalently $G_{\mu\nu}+\Lambda g_{\mu\nu}=8\pi G(T_{\mu\nu}^{(\mathrm{MPU})}-T_{\mu\nu}^{(\mathrm{sl})})$.
+
+*Proof.* Theorem 12.5.3f identifies the Clausius defect on a local null generator with the relative-entropy/QNEC slack. Condition (76u) is therefore exactly the local reversible Clausius equality on every retained null patch. The Raychaudhuri variation of the local horizon area then gives, for every null vector $k$ in the patch,
+$$
+\left(G_{\mu\nu}-8\pi G\,T_{\mu\nu}^{(\mathrm{MPU})}\right)k^\mu k^\nu=0.
+\tag{76x}
+$$
+A symmetric tensor whose contraction with every null vector vanishes is proportional to the metric: applying the identity in a local orthonormal frame to $k=e_0\pm e_i$ gives equality of diagonal spatial components with the time component, and applying it to $k=e_0\pm(e_i+e_j)/\sqrt2$ gives the off-diagonal components. Hence
+$$
+G_{\mu\nu}-8\pi G\,T_{\mu\nu}^{(\mathrm{MPU})}
+=-\Lambda g_{\mu\nu}.
+$$
+The contracted Bianchi identity and local conservation of the MPU stress tensor make $\Lambda$ constant on each connected smooth-envelope component, proving (76v). If the slack is positive, Corollary 12.5.3g says the local Clausius equality fails by $\mathcal Q(k)/(2\pi)$. The entropy-side source represented by $\Delta S_{\mathrm{pred}}''/(2\pi)$ is then $T_{kk}^{(\mathrm{MPU})}-\mathcal Q(k)/(2\pi)$, so the retained slack tensor has null projections (76w) and enters with the sign shown in (76w.1). When the retained slack tensor is supplied consistently on the null cone, the same null-projection argument applies to $T^{(\mathrm{MPU})}-T^{(\mathrm{sl})}$. ∎

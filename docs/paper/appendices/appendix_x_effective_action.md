@@ -627,6 +627,95 @@ For item 2, the determinant-line normalization certificate says that a finite co
 
 For item 3, the convergence statement (X.8a.7) is the definition of the generator of the rescaled iteration semigroup under the branch scaling $t_n$. Since the same $\mathcal R_{\mathrm{dec}}$ supplies the linearization, determinant flow, and rescaled iterate generator, response, compression flow, and drift-diffusion are images of the same finite recursive operator on the stated branch. ∎
 
+**Definition X.8a.5a (Predictive Free-Energy Inverse-Hessian Datum).** A finite predictive free-energy inverse-Hessian datum on a regular finite-mode branch is a tuple
+$$
+\mathfrak B_{\mathrm{PU}}
+=
+(\mathscr H_{\mathrm{PU}},W,J_*,\Pi_{\mathrm{field}},\Pi_{\mathrm{RG}},\Pi_{\Sigma},\Pi_{\mathrm{PCE}},R_k)
+\tag{X.8a.5a.1}
+$$
+with the following finite entries.
+
+1. $\mathscr H_{\mathrm{PU}}=\mathscr H_{\mathrm{field}}\oplus\mathscr H_{\mathrm{RG}}\oplus\mathscr H_{\Sigma}\oplus\mathscr H_{\mathrm{PCE}}$ is the closed predictive Hilbert module of Definition X.9.6a.
+2. $W:\mathcal U\to\mathbb R$ is a twice differentiable strictly convex generating functional on a convex open subset $\mathcal U$ of the dual chart of $\mathscr H_{\mathrm{PU}}$, and $J_*\in\mathcal U$ is the retained branch point.
+3. The connected response Hessian $W''[J_*]$ is strictly positive and invertible on the retained finite-mode sector, and its inverse
+$$
+\mathfrak L_W
+:=
+(W''[J_*])^{-1}
+\tag{X.8a.5a.2}
+$$
+represents the closed form of (X.9.6.1), equivalently $\mathfrak L_W=\mathfrak L_{\mathrm{PU}}$ on the branch.
+4. $\Pi_\alpha$ are the orthogonal sector projections of Definition X.9.6a, satisfying $\Pi_\alpha^2=\Pi_\alpha=\Pi_\alpha^*$ and $\sum_\alpha\Pi_\alpha=I$ on the form domain.
+5. $R_k$ is a positive regulator on $\mathscr H_{\mathrm{RG}}$ with $\partial_kR_k$ trace class on the retained RG sector for the interval of $k$ used.
+
+**Theorem X.8a.5 (Single Inverse-Hessian Realization of the Four Operator Sectors).** Let $\mathfrak B_{\mathrm{PU}}$ be a predictive free-energy inverse-Hessian datum satisfying the form-compatibility hypotheses of Theorem X.9.6b. Define the bilinear form
+$$
+\mathcal Q_W(u,v)
+:=
+\langle u,\mathfrak L_W v\rangle
+\quad
+\text{for }u,v\in\mathcal D_{\mathrm{PU}}.
+\tag{X.8a.5.1}
+$$
+Then the four sector operators of Theorem X.9.6b are obtained from the single inverse Hessian $\mathfrak L_W=(W''[J_*])^{-1}$ by the following deterministic construction:
+$$
+\Gamma^{(2)}
+=
+\Pi_{\mathrm{field}}\mathfrak L_W\Pi_{\mathrm{field}}^*
+\quad
+\text{on }\mathscr H_{\mathrm{field}},
+\tag{X.8a.5.2}
+$$
+$$
+\partial_k\Gamma_k
+=
+\frac12
+\operatorname{STr}
+\left[
+\left(\Pi_{\mathrm{RG}}\mathfrak L_W\Pi_{\mathrm{RG}}^*+R_k\right)^{-1}
+\partial_kR_k
+\right],
+\tag{X.8a.5.3}
+$$
+$$
+\mathcal L_\Sigma
+=
+-\Pi_\Sigma\mathfrak L_W\Pi_\Sigma^*
+\quad
+\text{on }\mathscr H_\Sigma,
+\tag{X.8a.5.4}
+$$
+and
+$$
+\dot x
+=
+-\nabla_{\Pi_{\mathrm{PCE}}\mathfrak L_W\Pi_{\mathrm{PCE}}^*}V(x)+\text{ND-RID noise}
+\quad
+\text{on }\mathscr H_{\mathrm{PCE}}.
+\tag{X.8a.5.5}
+$$
+Equations (X.8a.5.2)-(X.8a.5.5) are sector projection, regulator-resolvent functional calculus, sign convention, and natural-gradient passage applied to the same finite inverse Hessian.
+
+*Proof.* Proposition X.1 identifies $W''[J_*]$ with the connected response kernel $\mathcal G$ on the regular branch and identifies the effective-action Hessian $\Gamma^{(2)}$ with its inverse on the same sector. Definition X.8a.5a therefore uses the inverse Hessian $\mathfrak L_W=(W''[J_*])^{-1}$, not $W''[J_*]$ itself, as the closed operator representing the branch form. Item 3 of Definition X.8a.5a identifies this operator with $\mathfrak L_{\mathrm{PU}}$ in (X.9.6.1). Applying Theorem X.9.6b to that same operator gives the field compression (X.8a.5.2), the RG regulator-resolvent trace (X.8a.5.3), the negative perspective generator (X.8a.5.4), and the PCE natural-gradient flow (X.8a.5.5). ∎
+
+**Corollary X.8a.5b (Naturality of the Single Inverse-Hessian Realization).** On the branch carrying both the predictive free-energy inverse-Hessian datum of Definition X.8a.5a and the Čencov-Petz natural QFI control datum of Definition X.8a.2a, the four sector constructions of Theorem X.8a.5 satisfy
+$$
+F_\alpha(C\circ K)
+=
+F_\alpha(C)\circ F_\alpha(K),
+\qquad
+\alpha\in\{\mathrm{field},\mathrm{RG},\Sigma,\mathrm{PCE}\},
+\tag{X.8a.5b.1}
+$$
+for every PPI-admissible coarse-graining $C$ and update kernel $K$ in the retained branch domain.
+
+*Proof.* Theorem X.8a.2b gives the naturality square (X.8a.2b.1) for the Čencov-Petz control datum. Theorem X.8a.5 identifies each $F_\alpha$ as projection, regulator-resolvent calculus, sign convention, or natural-gradient passage applied to the same branch operator $\mathfrak L_W$. These are the quotient-pushforward sector functors required in item 7 of Definition X.8a.2a, so (X.8a.5b.1) is the specialization of (X.8a.2b.1) to the inverse-Hessian realization. ∎
+
+**Corollary X.8a.5c (No Additional Independent Operator Sector from the Same Datum).** Let a competing bridge law assign one of the four sector operators by data not derivable as projection, regulator-resolvent calculus, sign convention, or natural-gradient passage applied to $\mathfrak L_W$ on the same branch. Then the competing law is not a consequence of the predictive free-energy inverse-Hessian datum alone. It is admissible only as a different branch datum, or else it fails the form-compatibility hypothesis of Theorem X.9.6b or the naturality square (X.8a.5b.1).
+
+*Proof.* By Theorem X.9.6b, every retained response, RG, perspective, and PCE operator satisfying the closed-form compatibility hypotheses is an image of the unique self-adjoint operator $\mathfrak L_{\mathrm{PU}}$. By Definition X.8a.5a this operator is $\mathfrak L_W$. Therefore a sector assignment outside the displayed image set is not determined by the same finite datum. If it is retained, it must add or change branch data; if it is not added as new data, it contradicts either the form-compatibility theorem or the functorial naturality condition. ∎
+
 **Corollary X.8b (Effective-Action Projection of Predictive Curvature).** On the regular product-bundle branch of Theorem 47 and Theorem G.4b, and under the effective-action hypotheses of Theorem X.5a, the gauge and gravitational curvature terms in the continuum effective action are projections of the predictive curvature
 $$
 \mathcal F^{\mathrm{pred}}
@@ -2402,6 +2491,58 @@ $$
 
 *Proof.* Theorem X.9.5b identifies each listed mismatch as a cohomology class in the same finite-cost Cech complex or its relative version. Total consistency means the combined class is exact, equivalently zero in cohomology. ∎
 
+**Definition X.9.5c.1 (Finite Bridge-Site Descent Datum).** A finite bridge-site descent datum is a tuple
+$$
+\mathfrak B_{\mathrm{desc}}
+=
+(\mathcal U,\mathcal F_{\mathrm{br}},\{r_i\}_{i\in I},\omega_{\mathrm{br}},\chi_{\mathrm{br}})
+\tag{X.9.5.5}
+$$
+with the following finite entries.
+
+1. $\mathcal U=\{U_i\}_{i\in I}$ is a finite operational cover by accepted local cells, such as finite diamonds, KMS patches, threshold blocks, flavor cells, Fredholm cells, or horizon patches.
+2. $\mathcal F_{\mathrm{br}}$ assigns to each nonempty intersection $U_{i_0\cdots i_p}$ the retained finite response object used by the local theorem on that cell.
+3. $r_i$ is the local accepted representative on $U_i$.
+4. $\omega_{\mathrm{br}}=(g_{ij})$ is the finite transition cochain defined by
+$$
+r_i|_{U_{ij}}
+=
+g_{ij}\cdot r_j|_{U_{ij}},
+\qquad
+U_{ij}=U_i\cap U_j,
+\tag{X.9.5.6}
+$$
+where $g_{ij}$ lies in the finite response-gauge groupoid of the branch.
+5. $\chi_{\mathrm{br}}$ records that the cover, local representatives, transition maps, and response-gauge groupoid were fixed before any global validation target using the glued object.
+
+The datum is a descent datum when
+$$
+g_{ij}g_{jk}g_{ki}=1
+\quad
+\text{on every nonempty }U_i\cap U_j\cap U_k,
+\tag{X.9.5.7}
+$$
+and its obstruction class is
+$$
+[\omega_{\mathrm{br}}]
+\in
+\check H^1(\mathcal U,\mathcal G_{\mathrm{br}}).
+\tag{X.9.5.8}
+$$
+
+**Theorem X.9.5c.2 (Finite Bridge-Descent Closure).** Let $\mathfrak B_{\mathrm{desc}}$ be a finite bridge-site descent datum satisfying $\chi_{\mathrm{br}}$. The local representatives $\{r_i\}$ glue to a unique global retained response object modulo response equivalence if and only if
+$$
+[\omega_{\mathrm{br}}]=0.
+\tag{X.9.5.9}
+$$
+If $[\omega_{\mathrm{br}}]\ne0$, exactly one of the following must be recorded before theorem-level use of the bridge: the class is response-null and is quotiented; the class is response-active and is retained as a physical defect in the ledger of Definition X.9.5e; or the branch is rejected. This applies uniformly to AQFT generator bridges, KMS clock gluing, effective-action subsequential limits, zeta-ledger projections, flavor-threshold compatibility, Fredholm determinant transfer, and horizon local-algebra gluing.
+
+*Proof.* If the class vanishes, there are local response-gauge elements $h_i$ with $g_{ij}=h_i^{-1}h_j$ on every overlap. Replacing $r_i$ by $h_ir_i$ makes the transition maps identity, so the sheaf gluing axiom for the finite response presheaf gives a global object. If two global objects restrict to the same adjusted local representatives, finite separatedness of the response presheaf identifies them modulo the response equivalence relation. Conversely, a global retained object restricts to local representatives whose transition cochain is a coboundary, so the class is zero. If the class is nonzero, no global object with the stated local restrictions exists. PPI and PCE therefore allow only the three listed alternatives: quotient a response-null class, retain a response-active class as a physical defect, or reject the branch. ∎
+
+**Corollary X.9.5c.3 (No Silent Bridge Assumption).** A local theorem cannot be promoted to a global PU theorem by naming a continuum, thermodynamic, spectral, or topological bridge. It is promoted exactly when the associated finite bridge-site descent class vanishes or is accounted for by the defect-filling rule of Definition X.9.5e.
+
+*Proof.* This is Theorem X.9.5c.2 applied to the bridge connecting the local certificates to the claimed global object. ∎
+
 ### X.9.5d Higher-Form Predictive Ledger
 
 **Definition X.9.5d.1 (Higher-Form Ledger Complex).** Let $\mathcal U$ be a finite operational cover whose nerve carries oriented cellular chains $C_q(\mathcal U;\mathbb Z)$. A $q$-dimensional protocol operator is a finite assignment
@@ -2485,6 +2626,53 @@ For rectangular loops with $|\partial C|=o(\mathsf A_{\min}(C))$, the exponent i
 **Corollary X.9.5d.5 (Leech-Golay Input to the Center-Ledger Gap).** On the predictive-recovery Golay-Leech branch, Theorem Z.8c supplies a positive rootless norm gap. If the branch calibration identifies one unit of nontrivial electric center flux with the minimal rootless displacement shell and fixes the tube-channel tension by Proposition Z.8d, then the surface-cost parameter in Definition X.9.5d.3 is positive. Therefore Theorem X.9.5d.4 promotes the flux-tube confinement branch to a center-ledger area-law theorem on that calibrated branch.
 
 *Proof.* Theorem Z.8c gives $|v|_{\min}^2=4$ and no root vectors with $|v|^2=2$. Thus a nontrivial center-flux sheet has a strictly positive local norm cost on the calibrated branch. Proposition Z.8d fixes the corresponding tube-channel tension normalization. Hence $\sigma_0>0$, so Theorem X.9.5d.4 applies. ∎
+
+**Definition X.9.5e (Finite Defect-Filling Datum).** A finite defect-filling datum for a nonzero response obstruction class is a tuple
+$$
+\mathfrak D_{\mathrm{fill}}
+=
+(H_{\mathrm{obs}},[\omega],\mathcal D_{\mathrm{act}},\partial,\otimes,\mathbf 1,C_{\mathrm{def}},\sim_{\mathrm{resp}})
+\tag{X.9.5.10}
+$$
+where $H_{\mathrm{obs}}$ is the finite obstruction group or semigroup containing $[\omega]$, $\mathcal D_{\mathrm{act}}$ is the finite set of response-active operational defects, $\partial:\mathcal D_{\mathrm{act}}\to H_{\mathrm{obs}}$ is the boundary/inflow map, $\otimes$ is the finite fusion product with unit $\mathbf 1$, $C_{\mathrm{def}}$ is the PCE defect cost, and $\sim_{\mathrm{resp}}$ is response equivalence. The datum is accepted only when
+$$
+\partial(D_1\otimes D_2)
+=
+\partial D_1+\partial D_2
+\tag{X.9.5.11}
+$$
+for all fusable defects and when all entries are fixed before any global consequence using the filled branch.
+
+A defect $D$ fills $[\omega]$ when
+$$
+[\omega]+\partial D=0
+\quad\text{in }H_{\mathrm{obs}}.
+\tag{X.9.5.12}
+$$
+
+**Theorem X.9.5e.1 (Cobordism and Non-Invertible Defect Completion).** Let $[\omega]$ be a bridge, anomaly, higher-form, horizon, or interface obstruction class represented in the finite PU obstruction complex. A branch containing $[\omega]$ is theorem-admissible exactly under one of the following conditions.
+
+1. $[\omega]=0$.
+2. $[\omega]\ne0$ is response-null and is quotiented by $\sim_{\mathrm{resp}}$.
+3. There is an accepted defect-filling datum and a defect $D\in\mathcal D_{\mathrm{act}}$ satisfying (X.9.5.12).
+
+When more than one filling defect exists, PCE selects the response class
+$$
+\mathcal D([\omega])
+=
+\operatorname*{argmin}_{D\in\mathcal D_{\mathrm{act}}:
+[\omega]+\partial D=0}
+C_{\mathrm{def}}(D)
+\quad\text{mod }\sim_{\mathrm{resp}},
+\tag{X.9.5.13}
+$$
+provided the minimizer class is unique. Non-invertible defects are admitted by the same rule: they need not be group-like, but they must possess a finite fusion law, a boundary map, and non-null protocol response.
+
+*Proof.* If $[\omega]=0$, ordinary descent closes the branch by Theorem X.9.5c.2. If $[\omega]$ is response-null, PPI identifies all representatives differing by it, so quotienting removes no observable response. If a response-active obstruction remains, exactness of the total obstruction is restored precisely by a defect whose boundary satisfies the cancellation equation (X.9.5.12). Additivity (X.9.5.11) makes fusion compatible with obstruction addition, so non-invertible fusion defects obey the same exactness law even without inverses for individual objects. PCE then forbids an arbitrary choice among fillings and selects the unique least-cost response class when it exists. If none of the three cases holds, the branch contains an unfilled response-active inconsistency and is not theorem-admissible. ∎
+
+**Corollary X.9.5e.2 (No Surplus Symmetry or Unfilled Anomaly).** In PU, a declared exact redundancy must have zero total obstruction after quotienting response-null classes and after including accepted defect inflow. Any nonzero unfilled response-active obstruction is not a hidden symmetry or harmless global label; it is either a physical defect channel selected by Theorem X.9.5e.1 or a rejected branch.
+
+*Proof.* This is the contrapositive of the admissibility criterion in Theorem X.9.5e.1. ∎
 
 ### X.9.6 Master Predictive Operator
 
@@ -2911,6 +3099,26 @@ The requirement that every theorem-level scalar factor through (X.9.6.27) is exa
 **Corollary X.9.6g.2 (Anti-Duplication Gate for Constants).** Two PU constants claimed to arise from the same spectral projection and the same finite-part functional are the same ledger datum after normalization. Two constants claimed to arise from different sector projections must either use orthogonal compressions, in which case their traces add, or use a common master ledger with commuting mixed derivatives. Otherwise the pair is not a closed theorem-level numerical sector.
 
 *Proof.* Equality of the projection and functional gives equality by the spectral theorem, as in Corollary X.9.6e. Orthogonal projections give additive traces on direct sums. Non-orthogonal projections are coupled through the shared chamber variables of $\mathfrak Z_{\mathrm{PU}}$, so their joint dependence is governed by (X.9.6.28). A claimed pair outside these alternatives is not generated by a single branch-determined spectral datum. ∎
+
+**Corollary X.9.6g.3 (Cross-Sector Zeta Lock).** Let $s$ be a theorem-level numerical sector whose output is claimed to arise from the master zeta-index ledger $\mathfrak Z_{\mathrm{PU}}$. Then its constant has the form
+$$
+C_s
+=
+\mathcal N_s
+\left(
+\{\zeta_{s,a}(0),\zeta'_{s,a}(0),\eta_{s,a}(0)\}_{a\in A_s},
+\mathcal S_s,
+\mathcal T_s
+\right),
+\tag{X.9.6g.3.1}
+$$
+where $P_{s,a}$, the finite-part scheme $\mathcal S_s$, the tail certificate $\mathcal T_s$, and the normalization map $\mathcal N_s$ are all restrictions of the single accepted ledger $\mathfrak Z_{\mathrm{PU}}$ before comparison with $C_s$. If two sectors share a ledger variable, their mixed finite differences commute because both are restrictions of the same finite trace functional.
+
+*Proof.* Definition X.9.6g fixes the master finite operator, sector projectors, grading, measure, finite-part scheme, and tail bounds. Restricting those entries to sector $s$ gives exactly the displayed finite list of zeta and eta values. Since all sector maps are obtained by compression and finite functional calculus from the same finite operator, the mixed finite differences are ordinary mixed differences of one finite function on the common ledger chamber, and therefore commute. ∎
+
+**Theorem X.9.6g.4 (One-Ledger Numerical Non-Retuning).** Suppose a finite PU branch claims theorem-level values for two or more of the alpha, electroweak-threshold, flavor, cosmological-prefactor, primordial, or baryogenesis numerical sectors through $\mathfrak Z_{\mathrm{PU}}$. Then the branch is closed only if all claimed sector constants are obtained from one accepted master zeta-index ledger by Corollary X.9.6g.3 and by overlap-compatible descent in Theorem X.9.5c.2. Changing a finite-part scheme, projector, tail bound, grading, or normalization to improve one sector after another sector has been fixed creates a different branch and does not count as a simultaneous PU prediction.
+
+*Proof.* Corollary X.9.6g.3 expresses each claimed sector value as a deterministic restriction of one ledger. Theorem X.9.5c.2 requires the local sector restrictions to glue on overlaps. Therefore a simultaneous branch has one shared finite object and one compatible descent class. Altering any listed ledger entry changes the common finite object or its descent datum. The altered object is a distinct branch, not a retuning of the same simultaneous prediction. ∎
 
 **Definition X.9.6h (Canonical Doubled Dirac Factorization of the Master Operator).** Let $\mathfrak D_{\mathrm{PU}}$ be a closed predictive Dirichlet datum and let $\mathfrak L_{\mathrm{PU}}\ge0$ be its master predictive operator. Define
 $$

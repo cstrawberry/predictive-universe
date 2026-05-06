@@ -80,7 +80,7 @@ $$\mathcal{O}_{\rho_0} = \{U\rho_0 U^\dagger : U \in U(8)\} \cong U(8)/[U(2) \ti
 | CKM/PMNS mixing | Berry holonomy around flavor loops | Theorems T.53–T.56 |
 | Generation structure | Topological sectors from $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$ | Theorem R.3.4 |
 | CP violation | Holonomy phases from sector mismatch | Theorem T.56 |
-| Strong CP solution | $\sigma$-invariance on real locus | Theorem K.6.5 |
+| Strong CP solution | σ-invariance plus positive-orientation real-Yukawa branch on the real locus | Thm K.6.6, Thm K.6.9, Thm K.6.9a, Cor K.6.9a.1, Cor K.6.5, Thm K.6.11 |
 
 **Proposition Z.1.5 (Grassmannian Parameter Emergence).** *The Standard Model parameters emerge from geometric structures on $\text{Gr}(2,8)$ and its associated lattice embeddings:*
 - *Geodesic distances on $\text{Gr}(2,8)$ with $E_8$ metric → mass ratios*

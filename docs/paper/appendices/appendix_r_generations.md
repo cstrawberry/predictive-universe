@@ -562,6 +562,46 @@ is the Golay correction radius.
 
 **Remark R.3.5e.1.** Proposition R.3.5e records a compact ledger of exact equalities on the minimal branch. It does not by itself reduce all six integers to one deeper Bott-theoretic source. Whether a single Bott-periodicity-based functor underlies all six entries, or whether some of the equalities are genuinely only coincident in the present formulation, remains open.
 
+**Proposition R.3.5e.2 (Three-Chain Decomposition of the Recurrent Integer Subledger).** The minimal-branch subledger
+$$
+(\varepsilon_0,a,d_0,b,k,M,D)
+$$
+admits the following dependency decomposition:
+$$
+\mathcal C_{\mathrm{cap}}:\quad \varepsilon_0=\ln2\to a=2\to d_0=8,
+\tag{R.3.5e.2.1}
+$$
+$$
+\mathcal C_{\mathrm{tan}}:\quad (a,d_0)=(2,8)\to b=6\to k=12\to M=24,
+\tag{R.3.5e.2.2}
+$$
+and
+$$
+\mathcal C_{\mathrm{kis}}:\quad M=24=K(4)\to D=4.
+\tag{R.3.5e.2.3}
+$$
+Here $\mathcal C_{\mathrm{cap}}$ is the capacity-saturation chain using Theorem 31, Theorem Z.1, and Theorem Z.2; $\mathcal C_{\mathrm{tan}}$ is the Peirce-Grassmannian tangent chain using Theorem Z.2.5b; and $\mathcal C_{\mathrm{kis}}$ is the mode-channel/kissing-number chain using Theorem Z.11 and Corollary Z.11.1. The remaining $3$ and $7$ rows of Proposition R.3.5e remain governed by the family-anomaly and topology ledgers cited in that proposition.
+
+*Proof.* The first chain follows from the Landauer-SPAP lower bound and PCE-attractor saturation $\varepsilon_0=\ln2$, the integer capacity condition $\ln a\ge\varepsilon_0$ with PPI minimality giving $a=2$, and the minimal SPAP tensor realization giving $d_0=8=2a^2$. The second chain follows from the rank-$a$ projector on $\mathbb C^{d_0}$: $b=d_0-a=6$, $k=\dim_\mathbb C\operatorname{Hom}(pE,(1-p)E)=ab=12$, and $M=2k=24$. The third chain is the mode-channel condition $M=K(D)$, whose accepted minimal solution is $K(4)=24$ on the checked branch of Corollary Z.11.1. The $3$ and $7$ rows are not part of this subledger decomposition because their cited proofs use Theorem 15, Theorem R.3.4, Proposition R.3.5.1a, Corollary R.3.5a, Theorem R.1.1, and Corollary R.3.5b. ∎
+
+**Theorem R.3.5e.3 (Non-Collapse of the Three Chains in the Present Dependency Ledger).** Within the theorem dependencies currently cited in Appendices R and Z, none of the three chains $\mathcal C_{\mathrm{cap}}$, $\mathcal C_{\mathrm{tan}}$, and $\mathcal C_{\mathrm{kis}}$ is a replacement for another.
+
+1. $\mathcal C_{\mathrm{cap}}$ uses the SPAP/Landauer/PPI capacity input and the minimal SPAP tensor realization. $\mathcal C_{\mathrm{tan}}$ uses Peirce-Grassmannian linear algebra after $(a,d_0)$ is already fixed.
+2. $\mathcal C_{\mathrm{tan}}$ computes $M=2a(d_0-a)$ from a projector. $\mathcal C_{\mathrm{kis}}$ imposes the additional mode-channel equation $M=K(D)$ and selects $D=4$ on the checked branch.
+3. $\mathcal C_{\mathrm{cap}}$ supplies $(a,d_0)$ but does not by itself supply the kissing-number bridge. $\mathcal C_{\mathrm{kis}}$ requires the intermediate value $M=24$ supplied by the tangent chain.
+
+*Proof.* Item 1 follows from the cited source theorems. The capacity chain depends on the SPAP merge, Landauer saturation, PPI minimality, and the three-register tensor realization. The tangent chain depends on the tangent space of the rank-$a$ projector orbit and remains a linear-algebraic calculation once $(a,d_0)$ is fixed. These are distinct inputs in the present proof graph.
+
+For item 2, Theorem Z.2.5b computes $M$ from a Peirce decomposition. Theorem Z.11 adds a separate PPI mode-channel premise equating that value with a kissing number $K(D)$. The Peirce formula alone returns a real tangent dimension; it does not define the ambient packing dimension $D$.
+
+For item 3, Theorem Z.1 and Theorem Z.2 give $(a,d_0)=(2,8)$, but the statement $M=K(D)$ is introduced only by the mode-channel bridge of Theorem Z.11 after $M$ is computed. Therefore the current ledger uses three distinct dependency steps. ∎
+
+**Corollary R.3.5e.4 (No Single-Source Reduction from the Current Inputs Alone).** The present proof ledger does not reduce the subledger $(\varepsilon_0,a,d_0,b,k,M,D)$ to one source argument. It uses three currently distinct inputs: the Landauer/PPI capacity gate, the Peirce tangent calculation at the active projector, and the mode-channel kissing-number condition.
+
+*Proof.* This is the dependency statement of Theorem R.3.5e.3 restated for the subledger of Proposition R.3.5e. ∎
+
+**Remark R.3.5e.5 (Status of a Possible Bott-Theoretic Source).** Corollary R.3.5e.4 is not a global impossibility theorem. It says that the current manuscript has not supplied a single Bott-periodicity-based functor or other common source that derives all three chains at once. Such a source would be additional structure and would have to reproduce the Landauer/PPI capacity gate, the Peirce tangent calculation, and the kissing-number mode-channel bridge without changing their finite branch outputs.
+
 **Proposition R.3.5f (Theorem–Model Boundary for the Generation Sector).** The theorem-level structural content of the generation sector is exactly this: within the family-charge class of Theorem R.3.4, anomaly cancellation together with the requirement of physical CP violation forces the minimal admissible generation number
 $$
 N_g \;=\; 3.
