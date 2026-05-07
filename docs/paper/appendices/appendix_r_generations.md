@@ -602,6 +602,10 @@ For item 3, Theorem Z.1 and Theorem Z.2 give $(a,d_0)=(2,8)$, but the statement 
 
 **Remark R.3.5e.5 (Status of a Possible Bott-Theoretic Source).** Corollary R.3.5e.4 is not a global impossibility theorem. It says that the current manuscript has not supplied a single Bott-periodicity-based functor or other common source that derives all three chains at once. Such a source would be additional structure and would have to reproduce the Landauer/PPI capacity gate, the Peirce tangent calculation, and the kissing-number mode-channel bridge without changing their finite branch outputs.
 
+**Remark R.3.5e.6 (Dependency Separation, Not Pairwise-Disjoint Inputs).** Proposition R.3.5e.2 separates the recurrent integer subledger by proof role, not by pairwise-disjoint theorem inputs. The capacity chain fixes $\varepsilon_0$, $a$, and $d_0$; the Peirce tangent chain uses the already fixed $(a,d_0)$ to compute $b$, $k$, and $M$; and the kissing-number chain uses the already fixed $M$ to select $D=4$. Thus the present ledger supports the non-collapse statement of Theorem R.3.5e.3 and Corollary R.3.5e.4, but it does not prove that the three chains have pairwise-disjoint leaf inputs. A future common parent theorem remains additional structure rather than a contradiction of the current dependency ledger.
+
+*Proof.* This is a direct reading of (R.3.5e.2.1)--(R.3.5e.2.3). The symbol $M$ appears as the output of the Peirce tangent chain and as the input of the kissing-number chain; likewise $(a,d_0)$ are fixed upstream before the Peirce calculation. Therefore pairwise-disjoint input sets are not the invariant being proved. The invariant actually proved by Theorem R.3.5e.3 is that none of the three proof roles replaces another in the current citation graph. ∎
+
 **Proposition R.3.5f (Theorem–Model Boundary for the Generation Sector).** The theorem-level structural content of the generation sector is exactly this: within the family-charge class of Theorem R.3.4, anomaly cancellation together with the requirement of physical CP violation forces the minimal admissible generation number
 $$
 N_g \;=\; 3.
@@ -1717,13 +1721,78 @@ This provides an independent, cosmological motivation for the three-generation s
 
 strongly suggests three generations are fundamentally required rather than environmentally selected.
 
+### R.8.5 Minimal Family-Charge Selection Audit
+
+**Definition R.8.5a (Admissible Minimal Family-Charge Selection Problem).** In the $U(1)_F$ family-charge class of Theorem R.3.4, an admissible charge multiset is a finite multiset
+
+$$
+\mathcal Q=\{q_1,\ldots,q_N\}\subset\mathbb Z
+$$
+
+of family charges satisfying:
+
+1. **(P1) Linear anomaly cancellation:** $\sum_i q_i=0$.
+2. **(P2) Cubic anomaly cancellation:** $\sum_i q_i^3=0$.
+3. **(P3) Non-triviality:** not all $q_i$ vanish.
+4. **(P4) CP-active distinctness:** at least three distinct charge values occur.
+5. **(P5) PCE cost monotonicity:** among multisets satisfying (P1)--(P4), the realized pre-flavor family-redundancy branch minimizes
+
+$$
+L(\mathcal Q)=L_0+N L_{\mathrm{block}}+L_{\mathrm{mix}}(N),
+$$
+
+where $L_{\mathrm{block}}>0$ and $L_{\mathrm{mix}}$ is nondecreasing in $N$, as in Proposition R.3.5.
+
+Two nonzero integer rescalings $\mathcal Q$ and $\lambda\mathcal Q$ with $\lambda\in\mathbb Z\setminus\{0\}$ are identified as the same $U(1)_F$ charge orbit.
+
+**Theorem R.8.5b (PCE Selection of $N_g=3$ in the Family-Charge Class).** Under Definition R.8.5a, the unique minimal-cost realized orbit in the $U(1)_F$ family-charge class is
+
+$$
+\mathcal Q=\{a,-a,0\},
+\qquad a\in\mathbb Z\setminus\{0\},
+$$
+
+and the selected generation count is $N_g=3$.
+
+*Proof.* For $N=1$, (P1) gives $q_1=0$, contradicting (P3). For $N=2$, (P1) gives $\{q,-q\}$, which has at most two distinct charge values and therefore violates (P4).
+
+For $N=3$, write $q_3=-q_1-q_2$. Then
+
+$$
+q_1^3+q_2^3+(-q_1-q_2)^3=-3q_1q_2(q_1+q_2).
+$$
+
+Thus (P2) forces $q_1=0$, $q_2=0$, or $q_1+q_2=0$. With (P3), every case gives the orbit $\{a,-a,0\}$ with $a\ne0$. This orbit has exactly three distinct charge values and satisfies (P1)--(P4).
+
+Now let $N>3$ and suppose some multiset satisfies (P1)--(P4). Since the $N=3$ orbit already satisfies (P1)--(P4), monotonicity gives
+
+$$
+L_0+N L_{\mathrm{block}}+L_{\mathrm{mix}}(N)
+>
+L_0+3 L_{\mathrm{block}}+L_{\mathrm{mix}}(3),
+$$
+
+because $(N-3)L_{\mathrm{block}}>0$ and $L_{\mathrm{mix}}(N)\ge L_{\mathrm{mix}}(3)$. Hence no $N>3$ multiset can minimize the PCE cost in Definition R.8.5a. Therefore the realized pre-flavor family-redundancy branch has $N_g=3$ and charge orbit $\{a,-a,0\}$. ∎
+
+**Remark R.8.5c (No Exhaustive Classification of All Larger Charge Multisets).** Theorem R.8.5b is a minimal-selection theorem, not an exhaustive classification of all integer multisets satisfying (P1)--(P4). For example,
+
+$$
+\{-20,-14,-1,17,18\}
+$$
+
+has sum $0$, cube-sum $0$, five distinct nonzero charges, and no vectorlike pair. Such larger anomaly-free multisets are PCE-demoted by (P5) unless additional response-relevant flavor data are appended as a different branch.
+
+**Corollary R.8.5d (Scope of the $U(1)_F$ Selection).** Theorem R.8.5b is internal to the integer $U(1)_F$ family-charge class. Non-Abelian family symmetries, flavor-potential branches, and response-active extra generations are different candidate classes with their own anomaly, embedding, and PCE ledgers.
+
+*Proof.* Definition R.8.5a fixes the candidate object as an integer charge multiset for a $U(1)_F$ family symmetry. Non-Abelian representations and later flavor-potential data are not such multisets; they therefore belong to different ledgers. ∎
+
 ## R.9 Summary
 
 *   **Topology:** The second homotopy group of the MPU's Perspective Space is $\pi_2(\Sigma_8) \cong \mathbb{Z}^7$, providing seven independent topological charges.
 *   **$E_8$ Geometry:** The $E_8$ root system emerges as the information-optimal coordinatization in 8 dimensions, with discrete squared distances $d^2 \in \{2, 4, 6, 8\}$ between roots.
 *   **Gauge–Topology Correspondence:** An embedding of the Standard Model gauge group into the MPU's internal symmetry group induces a homomorphism from the topological charges to the Cartan weight lattice of the gauge group.
 *   **PCE Selection:** The Principle of Compression Efficiency selects for physically viable sectors by enforcing non-Abelian charge neutrality via the **light sublattice** and requiring anomaly cancellation for an emergent family symmetry $U(1)_F$.
-*   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$ (Sections R.3–R.4.1), and Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch. Section R.4.2 records the $D_4$ triality orbit, the $E_8$/Leech scaffold, and the factorization $M = 24 = 8 \times 3$ as structural compatibility checks rather than independent derivations.
+*   **Three Generations:** The minimal solution satisfying anomaly constraints AND permitting CP violation requires exactly three generations, with family charges $\{a, -a, 0\}$ (Sections R.3–R.4.1), Proposition R.3.5.1a gives exact realization on the pre-flavor family-redundancy PPI branch, and Theorem R.8.5b records the PCE minimal-selection audit without claiming an exhaustive classification of all larger anomaly-free charge multisets. Section R.4.2 records the $D_4$ triality orbit, the $E_8$/Leech scaffold, and the factorization $M = 24 = 8 \times 3$ as structural compatibility checks rather than independent derivations.
 *   **Interface Modes:** The number 24 appears independently in interface mode count (**Appendix Z, Theorem Z.5**), Leech lattice dimension, and Golay code dimension (**Appendix Z, Theorem Z.13**), reflecting deep information-geometric optimality.
 *   **Mass Hierarchy:** On the $E_8$-root-vacuum and diagonal-alignment Gaussian branch (R.5.2–R.5.4), $E_8$ root distances provide a $\xi$-free invariant $\mathcal{R} = d^2_{31}/d^2_{32}$ that predicts discrete mass ratios $\mathcal{R} \in \{4/3, 3/2, 2, 3, 4\}$ with zero continuously adjustable parameters once the discrete root triad is selected. Whether the PCE potential's three vacua lie exactly at an $E_8$ root triad is a separate selection question not fully closed by this theorem stack.
 *   **Phenomenological Success:** Charged lepton sector shows $\mathcal{R}_\ell \approx 2.889$, within 3.8% of the discrete value 3, strongly supporting the $E_8$ geometric mechanism.

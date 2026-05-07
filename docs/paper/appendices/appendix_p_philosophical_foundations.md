@@ -6354,7 +6354,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a Landauer o
 | Predictive-recovery code dimension | $k=12$ | Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b | closed on the predictive-recovery MacWilliams branch |
 | Spacetime dimension | $D=4$ | Theorem Z.10; Theorem Z.11; Corollary Z.11.0a | closed on the Bures tangent-cell branch |
 | Gauge algebra | $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ | Theorem G.8.4b; Corollary G.8.4c; Corollary G.8.4c.0a | closed on the finite-response positive-marginal capacity branch |
-| Generation count | $N_g=3$ | Theorem R.3.4; Proposition R.3.5.1a; Proposition R.4.2 | closed on the pre-flavor family-redundancy PPI branch; triality/$E_8$/Leech entries are compatibility checks |
+| Generation count | $N_g=3$ | Theorem R.3.4; Proposition R.3.5.1a; Theorem R.8.5b; Corollary R.8.5d; Proposition R.4.2 | closed on the pre-flavor family-redundancy PPI branch with PCE minimal-selection audit; triality/$E_8$/Leech entries are compatibility checks, and larger anomaly-free charge multisets are different or PCE-demoted branches unless response-relevant flavor data are appended |
 | Acceleration bridge | $\eta'=3/(8\sqrt3)$ | Definition H.4.2.8a; Theorem H.4.2.8b; Corollary H.4.2.8c | closed on the QFI linear-response bridge-law class |
 | Operational continuum manifold | $M=24,\ D=4$ shell with selected vanishing continuum defects | Theorem 43; Theorem 43.5; Lemma C.6d; Theorem C.6e; Theorem D.6e; Proposition D.6f; Theorem D.6f.2; Proposition D.6f.2a; Theorem C.6c; Theorem 44a | conditional on the sharp global-core competitor condition $\mathfrak d_n^*\to0$ inside the global core-minimum class; local $D_4$ zero-defect approximants alone do not close the row by Proposition D.6f |
 | AQFT route | stable local net and continuum generator | Theorem F.0; Definition F.0a; Theorem F.0b; Definition F.10.12a; Theorem F.10.12c | certificate-pending on the local generator convergence record $\mathfrak C_{\mathrm{gen}}$ for bounded diamonds; outside the strict finite-range single-clock branch, lightcone equality is an explicit branch hypothesis |
@@ -6366,7 +6366,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a Landauer o
 | Emergent metric fluctuations | finite-response covariance | Definition 12.1d; Theorem 12.1c; Definition 12.1d.4; Theorem 12.1e; Corollary 12.1e.1; Corollary 12.1e.2; Definition 12.1f; Theorem 12.1f.1; Theorem 12.5.3h | closed on every accepted nondegenerate finite-response gravitational channel ensemble: requires the finite KMS-descent certificate together with the smooth-envelope record, the positive Hessian on the retained tangent subspace, the certified linearization radius $r_{\mathrm{grav},n}$, the PCE fluctuation scale $\tau_{\mathrm{PCE},n}$, and zero retained modular slack when the reversible Einstein branch is claimed |
 | Horizon structural conservation | retained-class injectivity of $U_n$ | Definition E.9.5d; Theorem E.9.5e; Corollary E.9.5e.1 | closed on the retained finite-response horizon algebra under injectivity of the microscopic update |
 | Horizon exterior recovery / Page curve | recovery section or scrambling estimate | Definition E.9.5f; Theorem E.9.5f.1; Corollary E.9.5e.2 | certificate-pending on the exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ for deterministic exterior recovery, or on an approximate $k$-design scrambling certificate with frame-potential error bounds for the Page-curve estimate |
-| Thomson-limit $\alpha^{-1}$ | (Z.27.11a) | Definition Z.27.11a; Theorem Z.27.11c; Definition Z.27.11j; Theorem Z.27.11j.1 | certificate-pending on $\mathfrak C_\alpha$ together with the residual-operator gate; certificate-complete on an accepted $\mathfrak R_\alpha^{\mathrm{AO}}$ via Theorem Z.27.11h |
+| Thomson-limit $\alpha^{-1}$ | (Z.27.11a) | Definition Z.27.11a; Theorem Z.27.11c; Remark Z.26d; Corollary Z.26d.1; Definition Z.27.11j; Theorem Z.27.11j.1 | certificate-pending on $\mathfrak C_\alpha$ together with the residual-operator gate; canonical comparison-budget scale $B_{\mathrm{budget}}^{\mathrm{can}}=5.649085604\times10^{-5}$ is a budget diagnostic, not a certified residual interval; certificate-complete on an accepted $\mathfrak R_\alpha^{\mathrm{AO}}$ via Theorem Z.27.11h |
 | Cosmological constant exponent | $\kappa=142$ on the four-mode false-vacuum branch | Theorem U.13b | closed for the exponent on the four-mode false-vacuum branch under the stated spectral hypotheses |
 | Cosmological constant five-mode reference exponent | $\kappa_{\mathrm{ref}}=141.5$ | Appendix U reference-counting convention; Theorem U.8c | reference convention; not theorem-level without the dilation/Fredholm certificate |
 | Cosmological constant prefactor | $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ | Definition U.15d; Theorem U.15e; Corollary U.15f; Theorem U.15l; Definition U.15m; Theorem U.15m.1 | certificate-pending on $\mathfrak F_U$ together with the Fredholm prefactor gate and the interval audit $\mathfrak I_U^{(4)}$ |
@@ -6411,6 +6411,77 @@ With fixed parent data, the certificate of $S$ supplies the admissible set $Q_S$
 **Convention P.14.1l (No-Overclaim Discipline).** No sector listed in Convention P.14.1k may inherit theorem-level numerical status from a parent theorem unless every finite-response map used by that sector also has a theorem-level certificate or a closed-status entry. A theorem-level parent together with an open or certificate-pending observable map yields an open or certificate-pending child, never a theorem-level child. Equivalently, status propagation in the global ledger is by the meet rule of Convention P.14.1d on the dependency graph of Convention P.14.1k.
 
 *Proof of consistency.* If a child sector's observable map is open or certificate-pending, then by Theorem P.14.1f at least two admissible completions of the missing finite record produce different numerical outputs while preserving every parent constraint. By Convention P.14.1d the child status is then the meet with the missing entry, which is open or certificate-pending; theorem-level promotion would require the missing record. Therefore the meet rule on the dependency graph of Convention P.14.1k is the only status assignment consistent with Theorem P.14.1f, Corollary P.14.1g, and Corollary D.8.9d. ∎
+
+**Definition P.14.1m (Strict-Certificate Registry Schema).** A strict-certificate registry is a finite tuple
+
+$$
+\mathfrak G_{\mathrm{PU}}
+=
+(\mathcal V,\mathcal E,\sigma,\rho,\beta,\theta,\gamma,\delta).
+$$
+
+The components are as follows.
+
+1. $\mathcal V$ is the finite set of sector identifiers in Convention P.14.1k together with one identifier for each named finite certificate used by any row.
+2. $\mathcal E\subseteq\mathcal V\times\mathcal V$ is the parent-to-child dependency relation. An edge $R\to S$ is present when the certificate or theorem stack of $S$ uses the selected representative, response presheaf, or finite certificate data of $R$.
+3. $\sigma:\mathcal V\to\{\textsf{closed},\textsf{certificate-pending},\textsf{open}\}$ records the closure status. The status order is $\textsf{closed}\succ\textsf{certificate-pending}\succ\textsf{open}$; write $\tau_1\preceq\tau_2$ when $\tau_1$ is no stronger than $\tau_2$, so $\textsf{open}\preceq\textsf{certificate-pending}\preceq\textsf{closed}$.
+4. $\rho$ assigns to each vertex a finite list of named residual entries. The empty list is allowed.
+5. $\beta$ assigns to each residual entry a finite residual-control record whose kind is either $\textsf{bound}$ or $\textsf{budget}$. A $\textsf{bound}$ record is an absolute theorem-level or certificate-level residual bound. A $\textsf{budget}$ record is a comparison-budget scale and cannot by itself close a theorem-level interval.
+6. $\theta:\mathcal V\to2^{\{1,2,3\}}$ assigns $\varnothing$ to closed vertices and a nonempty subset to non-closed vertices, where $1$ means an accepted finite certificate, $2$ means an all-completions equivalence theorem, and $3$ means a no-go theorem excluding the sector candidate class, as in Theorem P.14.1f.
+7. $\gamma=(\{\Pi_{S\leftarrow R}\}_{R\to S},\{\Omega_C\}_C)$ is the overlap-commutativity audit of Definition P.14.1k.0, consisting of an overlap map for every edge and an equality check for every directed commutative cell.
+8. $\delta:\mathcal V\to\{0,1\}$ records forward-lock status for comparison rows: $\delta(S)=1$ only when the certified interval or protocol package has been entered into the evidence register of Definition 13.0d before empirical comparison; non-comparison vertices have $\delta(S)=0$.
+
+A registry is **schema-consistent** when $\mathcal E$ is finite and acyclic, $\sigma$ is meet-monotone along dependency edges except for vertices closed by an independent theorem stack, $\rho$ lists only residuals named by the cited certificates, $\beta$ records only finite expressions in named certificate data and never in validation observables, $\theta$ is nonempty exactly on non-closed vertices, $\gamma$ supplies every required overlap map and cell check, and $\delta$ satisfies the forward-lock condition above.
+
+**Algorithm P.14.1m.0 (Registry Acceptance Test).** A registry $\mathfrak G_{\mathrm{PU}}$ is accepted exactly when all of the following finite checks pass.
+
+(C1) **Closed-row consistency.** If $\sigma(S)=\textsf{closed}$, the local theorem stack of $S$ supplies the seven entries of Definition D.8.9a, and every residual in $\rho(S)$ is either evaluated exactly or controlled by a $\textsf{bound}$ record under $\beta$.
+
+(C2) **Certificate-pending-row consistency.** If $\sigma(S)=\textsf{certificate-pending}$, the finite certificate entries are named, the residual list $\rho(S)$ is enumerated, every residual has a $\textsf{bound}$ or $\textsf{budget}$ record under $\beta$, and at least one closure gate in $\theta(S)$ is targeted.
+
+(C3) **Open-row consistency.** If $\sigma(S)=\textsf{open}$, no missing entry is supplied retroactively from a validation observable, and $\theta(S)$ is nonempty.
+
+(C4) **Status meet rule.** For every edge $R\to S$, $\sigma(S)\preceq\sigma(R)$ unless $S$ is closed by an independent theorem stack that does not use the unresolved data of $R$.
+
+(C5) **Overlap commutativity.** For every edge $R\to S$, $\gamma$ supplies $\Pi_{S\leftarrow R}$; for every directed commutative cell $C$, $\gamma$ supplies an accepted equality check $\Omega_C$ in the sense of Definition P.14.1k.0.
+
+(C6) **No validation import.** For every comparison row $S$, $\delta(S)=1$ is allowed only if the row was entered before empirical comparison; otherwise the comparison remains validation-level under Convention P.14.1d.
+
+(C7) **No-retuning enforcement.** After $\delta(S)=1$, no certificate entry, residual entry, residual-control record, finite-part convention, projector, grading, or normalization used by $S$ may be modified without changing the vertex identifier and hence defining a new branch.
+
+(C8) **Three-gate exhaustion.** For every non-closed $S$, closing every gate in $\theta(S)$ must either supply an accepted finite certificate, prove all-completions equivalence, or exclude the candidate class by a no-go theorem.
+
+(C9) **Residual-control status.** A $\textsf{bound}$ record may be used as an absolute residual interval only when its proof or certificate is fixed before comparison. A $\textsf{budget}$ record may be reported as a scale diagnostic but cannot promote a row to closed.
+
+(C10) **Master-ledger projection rule.** Whenever multiple numerical sectors cite the same spectral source, the registry attaches the shared master-ledger label and records the bridge-descent obligation of Theorem X.9.6g.4 on every affected sector.
+
+**Theorem P.14.1m.1 (Registry Soundness).** If $\mathfrak G_{\mathrm{PU}}$ is accepted by Algorithm P.14.1m.0, then every status label $\sigma(S)$ is consistent with Convention P.14.1k and the No-Overclaim Discipline of Convention P.14.1l.
+
+*Proof.* (C1) gives the strict-certificate hypotheses required for closed rows and invokes Definition D.8.9a with Theorem D.8.9b. (C2) and (C3) keep unresolved finite records in certificate-pending or open status, as required by Theorem P.14.1f and Corollary P.14.1g. (C4) is exactly the meet rule of Convention P.14.1l. (C5) supplies the overlap audit of Definition P.14.1k.0. (C6) and (C7) enforce the forward-lock and no-retuning requirements, including Corollary Z.27.11i in the Thomson row and the analogous branch rules in the other numerical sectors. (C8) is the three-gate exhaustion of Theorem P.14.1f. (C9) prevents comparison budgets from being mislabelled as theorem-level residual intervals. (C10) enforces the one-ledger discipline of Theorem X.9.6g.4. Therefore the registry cannot assign a stronger status than the finite records justify. ∎
+
+**Theorem P.14.1m.2 (Registry Realization of Any Consistent Finite Ledger).** Conversely, any finite sector ledger that already satisfies Convention P.14.1k, Convention P.14.1l, Theorem P.14.1f, Corollary P.14.1g, Definition P.14.1k.0, and the sector-specific residual-control statements can be encoded as an accepted registry $\mathfrak G_{\mathrm{PU}}$.
+
+*Proof.* Let $\mathcal V$ be the listed sectors and certificates, let $\mathcal E$ be the stated parent-to-child dependency graph, let $\sigma$ be the given status assignment, let $\rho$ be the finite residual lists, let $\beta$ be the finite residual-control records with their $\textsf{bound}$ or $\textsf{budget}$ kind, let $\theta$ be the targeted closure gates for non-closed rows, let $\gamma$ be the accepted overlap audit of Definition P.14.1k.0, and let $\delta$ be the forward-lock indicator for comparison rows. The assumed consistency conditions are exactly (C1)--(C10), so Algorithm P.14.1m.0 accepts the registry. ∎
+
+**Corollary P.14.1m.3 (Failure-Mode Catalog).** The registry rejects the following overclaim attempts.
+
+(F1) Promoting a certificate-pending row to closed without the missing finite record. Rejected by (C1)--(C3).
+
+(F2) Widening a residual interval after comparison without changing branch identifier. Rejected by (C6)--(C7).
+
+(F3) Selecting a normalization entry, finite part, projector, or residual-control scale using a validation observable. Rejected by (C6) and (C9).
+
+(F4) Treating a comparison-budget scale as an accepted absolute residual interval. Rejected by (C9).
+
+(F5) Labelling an aggregate uncertainty theorem-level while it contains certificate-pending or validation-level rows. Rejected by (C4).
+
+(F6) Sharing a spectral source across simultaneous numerical sectors without the master-ledger projection and bridge descent. Rejected by (C10).
+
+(F7) Replacing a finite generator-convergence, determinant, transport, or residual certificate by prose. Rejected by (C1)--(C3) and (C8).
+
+*Proof.* Each item is the contrapositive of the cited acceptance checks. ∎
+
+**Remark P.14.1m.4 (Implementation as a Registry File).** A text implementation of $\mathfrak G_{\mathrm{PU}}$ records vertices with fields $(\mathrm{id},\sigma,\rho,\beta,\theta,\delta)$ and edges/cells with fields $(\mathrm{src},\mathrm{dst},\Pi,\Omega)$. Because $\mathcal V$, $\mathcal E$, and the cell list are finite, Algorithm P.14.1m.0 is a finite enumeration over records. The checks are decidable by lookup in the named theorem stacks and certificate records. ∎
 
 ### P.14.4 The Derivation Chain
 

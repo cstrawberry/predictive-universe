@@ -3960,6 +3960,64 @@ The residual $R_\alpha$ is admissible only as a finite pre-comparison certificat
 
 *Proof.* By Corollary Z.26a the core value $\alpha^{-1}_{0}$ is a single-valued elementary function of the structural entries with no continuous degree of freedom. By Corollary Z.26b the residual $R_\alpha$ is bounded before comparison by the named entries of $\mathfrak C_\alpha$. The certified interval is therefore a fixed pre-comparison object on the stated branch. If $\alpha^{-1}_{\mathrm{exp}}$ exits this interval, the branch package — together with each of its load-bearing entries — is refuted at theorem level by the named no-retuning rule (Corollary Z.27.11i). Defining a new branch after comparison does not retroactively close the original row; it opens a separate row with its own pre-comparison certificate. ∎
 
+**Remark Z.26d (Canonical Comparison-Budget Scales for $R_\alpha$).** On the canonical Appendix Z normalization branch, Section Z.27.9 names two leading residual-control scales for the comparison ledger,
+
+$$
+B_{\mathrm{match}}^{\mathrm{can}}=c_1u^{*3},
+\qquad
+B_{\ge5}^{\mathrm{can}}=c_1u^{*5},
+\qquad
+c_1:=\frac{\pi}{24\sqrt{K_0}}.
+$$
+
+The exact sinc-core expression of Theorem Z.26 already includes the $SU(2)$ geodesic-chord factor $\operatorname{sinc}(u^*)$, so the next sinc Taylor term is a check on the third-order truncation and not an additional residual term of the exact core. With $u^*=2^{1/8}-1$ and $K_0=3$,
+
+$$
+c_1=0.075574973509759\ldots,
+$$
+
+$$
+B_{\mathrm{match}}^{\mathrm{can}}=5.60318626486\times10^{-5},
+\qquad
+B_{\ge5}^{\mathrm{can}}=4.58993389298\times10^{-7},
+$$
+
+therefore
+
+$$
+B_{\mathrm{budget}}^{\mathrm{can}}
+:=B_{\mathrm{match}}^{\mathrm{can}}+B_{\ge5}^{\mathrm{can}}
+=5.64908560379\times10^{-5}.
+$$
+
+The same arithmetic gives
+
+$$
+\alpha^{-1}_{0}-137.035999177
+=9.28782286269\times10^{-5}
+$$
+
+and hence
+
+$$
+\frac{|\alpha^{-1}_{0}-137.035999177|}{B_{\mathrm{budget}}^{\mathrm{can}}}
+=1.644128539\ldots .
+$$
+
+These quantities are comparison-budget scales, not an accepted absolute residual interval for $R_\alpha$. Theorem-level interval closure still requires the finite residual record of Definition Z.27.11a, the operator gate of Definition Z.27.11j, an accepted all-orders residual certificate of Definition Z.27.11g, or a same-branch theorem proving the residual bound used for comparison.
+
+*Proof.* The two displayed scales are exactly the T1/T3 arithmetic recorded in Section Z.27.9: $c_1u^{*5}$ for the interface-series tail scale and $c_1u^{*3}$ for the subgroup-projection/mapping scale. Direct substitution of $u^*=2^{1/8}-1$ and $K_0=3$ gives the numerical values above. Direct subtraction from the exact sinc-core value of Theorem Z.26 gives the displayed discrepancy. The final status statement follows from Corollary Z.26b and Algorithm Z.27.11b, which require $R_\alpha$ to be supplied as a pre-comparison certificate entry rather than inferred from the comparison itself. ∎
+
+**Corollary Z.26d.1 (Conditional Residual-Radius Test).** Let an accepted same-branch Thomson certificate fix a symmetric residual radius $B$ before comparison, so that $R_\alpha\subseteq[-B,B]$ in Definition Z.27.11a. If
+
+$$
+|\alpha^{-1}_{\mathrm{exp}}-\alpha^{-1}_{0}|>B,
+$$
+
+then the certified interval on that branch does not contain the measured value and the branch is demoted or refuted in the sense of Corollary Z.26c. In particular, any accepted same-branch certificate with $B\le B_{\mathrm{budget}}^{\mathrm{can}}$ would not contain the comparison value $137.035999177$, because $9.28782286269\times10^{-5}>5.649085604\times10^{-5}$. The comparison-budget number $B_{\mathrm{budget}}^{\mathrm{can}}$ itself does not become such a certified radius unless it is entered through the residual gate.
+
+*Proof.* The certified interval is $\alpha^{-1}_{0}+[-B,B]$. The stated inequality is exactly the condition that $\alpha^{-1}_{\mathrm{exp}}$ lies outside that interval. Corollary Z.26c supplies the branch-demotion/refutation consequence for an accepted pre-comparison certificate. The last sentence is the status distinction of Remark Z.26d and Definition Z.27.11a. ∎
+
 ### Z.27.9 Theoretical Error Budget
 
 **Uncertainty decomposition.** We separate the theory uncertainty into:
