@@ -32,21 +32,35 @@ No continuous parameters are fitted anywhere in the derivation. The additional i
 - **Part VI (Z.28–Z.32):** Experimental Predictions — Mode suppression, coordination scaling, dimensional stability, golden ratio crossover
 - **Part VII (Z.33–Z.35):** Synthesis and Corrections — Dual emergence, physical interpretation, Appendix X corrections
 
-$$\boxed{D = 4}$$
+$$
+\boxed{
+\alpha^{-1}_{0}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*)
+=
+137.03609205522863\ldots
+}
+$$
 
-$$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000060}$$
+where $u^* = 2^{1/8} - 1$, $K_0 = 3$, and $\operatorname{sinc}(u)=\sin(u)/u$. The second-order correction is derived analytically in Section Z.27 from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14). The exact $SU(2)$ transport factor is the sinc factor. Its third-order truncation is
+$$
+\operatorname{sinc}(u^*)=1-\frac{u^{*2}}{6}+O(u^{*4}),
+$$
+which gives the third-order expression of Theorem Z.26.
 
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The second-order correction is derived analytically in Section Z.27 from the symmetric-space curvature sector of $\mathrm{Gr}(2,8)$ (Theorem Z.24; Lemma Z.24a) and the minimal holonomy of $\pi_2(\mathrm{Gr}(2,8))$ (Lemma Z.14). The third-order factor $(1 - u^{*2}/6)$ arises from the SU(2) geodesic-chord relation in each interface subblock: for an SU(2) rotation by angle $\theta$, the chord-to-geodesic ratio is
+The mathematical reachability of $\alpha^{-1}$ in closed form is the Appendix Z core result: the displayed expression uses only the derived structural integers, fixed geometric constants, and a fixed elementary transport function. The certificate-complete Thomson row is
 $$
-\frac{2\sin(\theta/2)}{\theta}=\frac{\sin(\theta/2)}{\theta/2}=1-\frac{\theta^2}{24}+O(\theta^4).
+\alpha^{-1}_{\mathrm{cert}}
+=
+\alpha^{-1}_{0}+R_\alpha.
 $$
-With the identification $u^*=\theta/2$, this gives
-$$
-\frac{\sin u^*}{u^*}=1-\frac{u^{*2}}{6}+O(u^{*4}),
-$$
-which multiplies the second-order curvature term.
+It is closed as a theorem-level comparison interval only when $R_\alpha$ is fixed by Definition Z.27.11j, by an accepted all-orders residual certificate of Definition Z.27.11g, or by a theorem proving $R_\alpha=0$ on the same branch.
 
-**PPI mapping chain for this appendix (α and D).** The results $D=4$ and $\alpha$ follow once the internal interface structure is identified with macroscopic observables via PPI:
+**PPI mapping chain for this appendix (α and D).** The result $D=4$ follows once the internal interface structure is identified with macroscopic operational channels through PPI. The Thomson-limit alpha core follows as a closed-form finite-response calculation, while the comparison interval follows only after the residual gate is closed:
 
 1. **Internal modes $\to$ operational channels.** Identification: $M=2ab$ counts the real tangent directions of the attractor orbit (Theorem Z.6.3a) and is interpreted as the number of locally distinguishable interaction channels. Assumptions: local homogeneity/isotropy at the attractor and a locally Euclidean tangent cone for channel packing.
 
@@ -54,7 +68,7 @@ which multiplies the second-order curvature term.
 
 3. **Coupling identification.** The coefficient $u^*$ is fixed by capacity saturation of the internal QFI spectrum (Theorem Z.7) with the flat Bures/QFI eigenvalues $\lambda_i=1$ at the attractor (Theorem Z.5); the physical electromagnetic coupling is $\alpha_{\mathrm{em}}=u^*/(4\pi\kappa_{\mathrm{eff}})$ after the interface correction (Theorem Z.26).
 
-4. **Uncertainty accounting.** The quoted uncertainty on $\alpha^{-1}$ is a complete PU-to-physics budget including both series truncation and mapping/systematic terms, constructed explicitly in Section Z.27.9 and consolidated in Appendix V (Table V.0).
+4. **Uncertainty accounting.** The displayed $\pm0.000060$ interval is the canonical branch remainder budget used in the comparison ledger. A theorem-level Thomson interval requires the finite residual entry $R_\alpha$ demanded by Definition Z.27.11a and closed by Definition Z.27.11j, Definition Z.27.11g, or a same-branch zero-residual theorem.
 
 ### Z.1.4 Methodological Note
 - Two independent selection mechanisms for $D = 4$:
@@ -3057,7 +3071,14 @@ Since $\mathcal Q_{\mathrm{PU}}=2>0$ by (Z.14d.2), this forces $c_{\mathrm W}^{-
 
 
 
-**Remark Z.14c (Branch Dependence and Numerical Sensitivity).** The identification $\mathcal G=\mathcal K^{-1}$ in QFI-natural units is the unit Predictive-Ward branch assumption of Theorem Z.14 unless the Thomson-Ward certificate of Definition Z.14d is supplied. The named supporting theorems (Theorem Z.5 for QFI normalization, Theorem Z.7 for capacity-saturated $u^*$, Proposition X.1 for Legendre duality) establish the two-point structure and the coupling unit scale. Theorem Z.14e supplies the additional spectral-weight closure of the Ward-map unit Jacobian on certified branches via the operational $f$-sum/TRK identity (Z.14d.4) and the QFI-canonical evaluation (Z.14e.2). The downstream Thomson-limit prediction $\alpha^{-1}\approx 137.036092$ carries sensitivity $\partial\alpha^{-1}/\partial\kappa_{\mathrm{bulk}}=4\pi/u^*\approx 138.84$ to deviations $c_{\mathrm W}\neq 1$. Matching the $6\times 10^{-5}$ stated theory uncertainty requires the Ward-map unit Jacobian to hold to $\sim 4\times 10^{-7}$. Consequently, the 0.68 ppm $\alpha^{-1}$ prediction is theorem-level either on the explicit unit Predictive-Ward branch of Theorem Z.14 or on the certified Thomson-Ward spectral-weight branch of Theorem Z.14e.
+**Remark Z.14c (Branch Dependence and Numerical Sensitivity).** The identification $\mathcal G=\mathcal K^{-1}$ in QFI-natural units is the unit Predictive-Ward branch assumption of Theorem Z.14 unless the Thomson-Ward certificate of Definition Z.14d is supplied. The named supporting theorems (Theorem Z.5 for QFI normalization, Theorem Z.7 for capacity-saturated $u^*$, Proposition X.1 for Legendre duality) establish the two-point structure and the coupling unit scale. Theorem Z.14e supplies the additional spectral-weight closure of the Ward-map unit Jacobian on certified branches via the operational $f$-sum/TRK identity (Z.14d.4) together with the QFI-canonical evaluation (Z.14e.2). The downstream Thomson-limit core value carries sensitivity
+$$
+\frac{\partial\alpha^{-1}}{\partial\kappa_{\mathrm{bulk}}}
+=
+\frac{4\pi}{u^*}
+\approx 138.84
+$$
+to deviations $c_{\mathrm W}\ne1$. Matching a $6\times10^{-5}$ branch interval therefore requires the Ward-map unit Jacobian to hold to order $4\times10^{-7}$. This fixes the bulk normalization gate; it does not close the residual entry $R_\alpha$ of Definition Z.27.11a. The theorem-level Thomson interval is obtained only after the residual gate of Theorem Z.27.11j.1 is also satisfied.
 
 **Remark Z.14b (Mechanism).** Legendre duality fixes $\Gamma^{(2)}=\mathcal{G}^{-1}$, the predictive Ward identity fixes $\mathcal{G}=\mathcal{K}^{-1}$, and QFI/capacity rigidity fixes the units in which $\mathcal{K}$ and $u^*$ are evaluated. The unique value $\kappa^*_{\mathrm{bulk}}=1$ is the consistency condition allowing these constraints to be simultaneously satisfied.
 
@@ -3420,16 +3441,39 @@ $$\alpha^{-1}_{\mathrm{PU}}{}^{(1)} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} 
 **Second-Order Result (Section Z.27):**
 $$\alpha^{-1}_{\mathrm{PU}}{}^{(2)} = \alpha^{-1}_{\mathrm{PU}}{}^{(1)} + \frac{\pi u^*}{24\sqrt{K_0}} ≈ 137.0361$$
 
-**Third-Order Refinement:**
-$$\alpha^{-1}_{\mathrm{PU}}{}^{(3)} = 137.0293 + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) ≈ 137.0361$$
+**Exact Sinc-Core Refinement:**
+$$
+\alpha^{-1}_{0}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*)
+=
+137.03609205522863\ldots .
+$$
+The third-order truncation gives $\alpha^{-1}_{\mathrm{core},3}=137.03609205140443\ldots$.
 
 **Comparison with Experiment:**
-$$\alpha^{-1}_{\mathrm{exp}} - \alpha^{-1}_{\mathrm{PU}}{}^{(3)} = 137.035999177 - 137.036092 = -0.0000928$$
+$$
+\alpha^{-1}_{0}-\alpha^{-1}_{\mathrm{exp}}
+=
+137.03609205522863\ldots-137.035999177
+=
+0.00009287822863\ldots .
+$$
 
 **Relative Discrepancy:**
-$$\frac{|\Delta\alpha^{-1}|}{\alpha^{-1}_{\mathrm{exp}}} = 6.8 \times 10^{-7} = 0.68 \text{ ppm}$$
+$$
+\frac{|\Delta\alpha^{-1}|}{\alpha^{-1}_{\mathrm{exp}}}
+=
+6.7776517984\times10^{-7}
+=
+0.677765\text{ ppm}.
+$$
 
-This lies within ~$1.5\sigma$ of the conservative theoretical uncertainty $\delta_\alpha \approx 6\times 10^{-5}$ constructed in Section Z.27.9. The prediction agrees with experiment to five significant figures with zero continuously adjustable parameters, conditional on the discrete structural axioms and branch theorems (POP, PCE, PPI, Theorem 8.4, and PCE equal-cap equilibrium as encoded by Theorem Z.9) enumerated in Section 1.5.
+This arithmetic comparison is made before residual closure. The certificate-complete row is $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$, and a theorem-level comparison interval requires the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1.
 
 ---
 
@@ -3799,7 +3843,7 @@ $$
 $$
 ∎
 
-**Remark Z.25.1 (Separable-Response Branch Dependence).** Theorem Z.25 is stated on the canonical separable curvature-response branch, in which the second-order $U(1)$ interface matching functional factorizes as the product of the five named scalars with unit coefficient in QFI-natural units. The individual scalars are independently proven by Lemma Z.14, Theorem Z.18, Theorem Z.19, Theorem Z.24, and Theorem Z.7. The separable product structure itself is an additional branch assumption on the second-order response functional, analogous to the democratic visible-space model assumption recorded in Corollary Z.11 for $K_{\mathrm{eff}}$ and to the explicit factorization hypotheses stated in Theorem H.3 for the gravitational bridge-law product structure. Consequently the downstream Thomson-limit prediction $\alpha^{-1}\approx 137.036092$ is theorem-level on the canonical separable curvature-response branch at second order and above.
+**Remark Z.25.1 (Separable-Response Branch Dependence).** Theorem Z.25 is stated on the canonical separable curvature-response branch, in which the second-order $U(1)$ interface matching functional factorizes as the product of the five named scalars with unit coefficient in QFI-natural units. The individual scalars are independently proven by Lemma Z.14, Theorem Z.18, Theorem Z.19, Theorem Z.24, and Theorem Z.7. The separable product structure itself is an additional branch assumption on the second-order response functional, analogous to the democratic visible-space model assumption recorded in Corollary Z.11 for $K_{\mathrm{eff}}$ and to the explicit factorization hypotheses stated in Theorem H.3 for the gravitational bridge-law product structure. Consequently Theorem Z.25 supplies one load-bearing entry of the Thomson certificate core. It does not by itself close the full Thomson interval, because the residual entry $R_\alpha$ remains governed by Definition Z.27.11a and Theorem Z.27.11j.1.
 
 
 
@@ -3836,26 +3880,85 @@ consistent to better than $10^{-6}$. ∎
 
 ### Z.27.8 The Complete Formula
 
-**Theorem Z.26 (Fine-Structure Constant to Third Order).** Combining the bulk Ward identity (Theorem Z.14), the first-order interface correction (Theorem Z.17), the symmetric-space curvature correction (Theorem Z.24; Lemma Z.24a), the minimal holonomy normalization (Lemma Z.14; Theorem Z.25), and the SU(2) geodesic-chord factor (Lemma Z.13), the fine-structure constant at the Thomson limit is:
-$$\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) + O(u^{*5})$$
+**Theorem Z.26 (Fine-Structure Constant: Exact Sinc-Core Formula).** Combining the bulk Ward identity (Theorem Z.14), the first-order interface correction (Theorem Z.17), the symmetric-space curvature correction (Theorem Z.24; Lemma Z.24a), the minimal holonomy normalization (Lemma Z.14; Theorem Z.25), and the exact $SU(2)$ geodesic-chord transport factor (Lemma Z.13), the Thomson-limit certificate core is
+$$
+\alpha^{-1}_{0}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*),
+\qquad
+\operatorname{sinc}(u)=\frac{\sin u}{u}.
+$$
+Equivalently, its third-order expansion is
+$$
+\alpha^{-1}_{0}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}
+\left(1-\frac{u^{*2}}{6}+O(u^{*4})\right).
+$$
+With $u^*=2^{1/8}-1$ and $K_0=3$,
+$$
+\alpha^{-1}_{0}
+=
+137.03609205522863\ldots .
+$$
+The third-order truncation obtained by replacing $\operatorname{sinc}(u^*)$ with $1-u^{*2}/6$ evaluates to
+$$
+\alpha^{-1}_{\mathrm{core},3}
+=
+137.03609205140443\ldots .
+$$
 
-With $u^* = 2^{1/8} - 1$ and $K_0 = 3$:
+| Entry | Formula | Status |
+|-------|---------|--------|
+| bulk | $4\pi/u^*$ | fixed by capacity saturation and the Predictive-Ward branch |
+| interface | $-\pi/\sqrt{K_0}$ | fixed by the discrete-to-continuous interface correction |
+| curvature | $\pi u^*/(24\sqrt{K_0})$ | fixed by the $\mathrm{Gr}(2,8)$ curvature and minimal holonomy branch |
+| transport | $\operatorname{sinc}(u^*)$ | exact $SU(2)$ chord-to-geodesic factor |
+| core total | $\alpha^{-1}_{0}$ | closed-form Appendix Z core value |
+| comparison row | $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | residual-gated by Definition Z.27.11a |
 
-| Order | Formula | Value |
-|-------|---------|-------|
-| 0 (bulk) | $4\pi/u^*$ | $+138.8431$ |
-| 1 (interface) | $-\pi/\sqrt{3}$ | $-1.8138$ |
-| 2 (curvature) | $+\pi u^*/(24\sqrt{3})$ | $+0.00684$ |
-| 3 (SU(2) sinc) | $\times(1 - u^{*2}/6)$ | $-0.00001$ |
-| **Total** | | **137.036092** |
+*Proof.* Theorems Z.7 and Z.14 fix $u^*$ and the bulk normalization in QFI-natural units. Theorem Z.17 fixes the first interface correction, and Theorem Z.24 with Lemma Z.24a fixes the curvature coefficient on the canonical column-covariance and visible-space curvature branch. Lemma Z.14 and Theorem Z.25 fix the minimal holonomy normalization and separable curvature-response scalar. Lemma Z.13 identifies the exact $SU(2)$ transport multiplier as $\operatorname{sinc}(u^*)$. Substituting these fixed entries gives the displayed expression. Since $\operatorname{sinc}(u)=1-u^2/6+O(u^4)$, the stated third-order formula follows by Taylor expansion. Substitution of $u^*=2^{1/8}-1$ and $K_0=3$ gives the displayed numerical value. ∎
 
-**Comparison with Experiment:**
-$$\alpha^{-1}_{\mathrm{theory}} \approx 137.036092 \pm 0.000060$$
-$$\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$$
+**Corollary Z.26a (Closed-Form Reachability and No Continuous Fit).** On the Appendix Z core branch, $\alpha^{-1}_{0}$ is a deterministic closed-form expression in the derived structural entries $K_0=3$, $d_0=8$, $M=24$, $D=4$, the induced capacity-saturation value $u^*=2^{1/8}-1$, and the fixed elementary constants and functions $\pi$, $\sqrt{\cdot}$, and $\sin$. No continuous fitting parameter occurs in the core chain. The arithmetic comparison to $\alpha^{-1}_{\mathrm{exp}}=137.035999177(21)$ is
+$$
+\alpha^{-1}_{0}-137.035999177
+=
+0.00009287822863\ldots,
+$$
+or about $0.678$ ppm.
 
-**Discrepancy:** +0.0000928 ± 0.000060
+*Proof.* The symbols entering $\alpha^{-1}_{0}$ are fixed by the theorems cited in Theorem Z.26 and by the capacity-saturation equation $24\ln(1+u^*)=\ln8$. After those entries are fixed, the map
+$$
+(K_0,u^*)\mapsto
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*)
+$$
+is a single-valued elementary function. Hence the core value has no continuous free coefficient. The displayed discrepancy and ppm value are obtained by direct subtraction and division by $137.035999177$. ∎
 
-**Relative:** 0.68 ppm (~1.5σ)
+**Corollary Z.26b (Residual-Gated Comparison Row).** The theorem-level comparison row is not $\alpha^{-1}_{0}$ alone but
+$$
+\alpha^{-1}_{\mathrm{cert}}
+=
+\alpha^{-1}_{0}+R_\alpha.
+$$
+The residual $R_\alpha$ is admissible only as a finite pre-comparison certificate entry satisfying Definition Z.27.11a and the closure gates of Definition Z.27.11j, Definition Z.27.11g, or a same-branch zero-residual theorem. It is structurally bounded by the named bulk, interface, electromagnetic, curvature, and sinc-transport entries of $\mathfrak C_\alpha$ and is not an adjustable parameter, not a free tolerance, and not a quantity selectable using $\alpha^{-1}_{\mathrm{exp}}$.
+
+*Proof.* Definition Z.27.11a includes $R_\alpha$ as part of the Thomson normalization certificate, with the named entries of $\mathfrak C_\alpha$ supplying its admissible interval before empirical comparison. Algorithm Z.27.11b requires the residual interval to be fixed without using $\alpha_{\mathrm{obs}}$ and to be entered before empirical comparison. Corollary Z.27.11d forbids retuning after comparison, and Theorem Z.27.11j.1 gives the exact residual-operator closure gate. Therefore any theorem-level comparison interval must include a pre-comparison residual gate, while the core value remains the closed-form output of Theorem Z.26. ∎
+
+**Corollary Z.26c (Falsifiability of the Appendix Z Normalization Branch).** Once an accepted residual gate fixes $R_\alpha$ on the stated branch, the Thomson certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ defines a closed certified interval. A measured value $\alpha^{-1}_{\mathrm{exp}}$ outside that interval refutes the Appendix Z normalization branch as stated, including its bulk-Ward, interface, projected-response, democratic-curvature, separable-response, and exact $SU(2)$ transport entries. The framework cannot accommodate such a measurement by widening the residual interval after comparison.
+
+*Proof.* By Corollary Z.26a the core value $\alpha^{-1}_{0}$ is a single-valued elementary function of the structural entries with no continuous degree of freedom. By Corollary Z.26b the residual $R_\alpha$ is bounded before comparison by the named entries of $\mathfrak C_\alpha$. The certified interval is therefore a fixed pre-comparison object on the stated branch. If $\alpha^{-1}_{\mathrm{exp}}$ exits this interval, the branch package — together with each of its load-bearing entries — is refuted at theorem level by the named no-retuning rule (Corollary Z.27.11i). Defining a new branch after comparison does not retroactively close the original row; it opens a separate row with its own pre-comparison certificate. ∎
 
 ### Z.27.9 Theoretical Error Budget
 
@@ -3897,9 +4000,9 @@ $$
 $$
 We therefore adopt the conservative rounded value
 $$
-\boxed{\sigma_{\mathrm{theory}}(\alpha^{-1}) = 6\times 10^{-5}}
+\boxed{\sigma_{\mathrm{branch}}(\alpha^{-1}) = 6\times 10^{-5}}
 $$
-as the complete PU-to-physics theory uncertainty used throughout the paper.
+as the canonical branch comparison budget used before the residual-operator gate is closed. It is not a substitute for the finite residual entry $R_\alpha$ required by Definition Z.27.11a.
 
 **Geodesic-Chord Expansion Verification.** The third-order factor $(1 - u^{*2}/6)$ arises from the standard Taylor expansion of the sinc function on SU(2):
 $$\text{sinc}(u) = \frac{\sin u}{u} = \sum_{n=0}^{\infty} \frac{(-1)^n u^{2n}}{(2n+1)!} = 1 - \frac{u^2}{6} + \frac{u^4}{120} - \cdots$$
@@ -3908,7 +4011,7 @@ At $u^* = 0.0905$: Exact value $\sin(u^*)/u^* = 0.998634$; $O(u^2)$ approximatio
 
 ### Z.27.10 Fine-Structure Derivation Chain Summary
 
-**Branch ledger for the Thomson-limit value $\alpha^{-1} = 137.036092 \pm 0.000060$.** The formula displayed below is exact arithmetic on the canonical Appendix Z normalization branch package, comprising:
+**Branch ledger for the Thomson-limit core value $\alpha^{-1}_{0}=137.03609205522863\ldots$.** The formula displayed below is exact arithmetic on the canonical Appendix Z normalization branch package, before adding the residual entry $R_\alpha$. The package comprises:
 
 1. The Bures tangent-cell channel contract (Theorems Z.7a, Z.10, Z.11), giving $D=4$ and $M=K(D)=24$;
 2. The predictive-recovery MacWilliams Golay branch (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b), giving $k=12$ and the $\mathcal{G}_{24}$ error-correction structure;
@@ -3932,11 +4035,27 @@ $$\text{Effective curvature (same model): } K_{\mathrm{eff}} = \frac{32}{23} \ti
 
 $$\text{Second-order (canonical separable curvature-response branch): } \Delta^{(2)} = \frac{\pi u^*}{24\sqrt{K_0}}$$
 
-$$\text{Third-order (SU(2) sinc): } \Delta^{(2+3)} = \Delta^{(2)}\left(1 - \frac{u^{*2}}{6}\right)$$
+$$\text{Exact transport (SU(2) sinc): } \Delta^{(2+\mathrm{sinc})} = \Delta^{(2)}\operatorname{sinc}(u^*)$$
 
-$$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) \approx 137.036092 \pm 0.000060}$$
+$$
+\boxed{
+\alpha^{-1}_{0}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*)
+=
+137.03609205522863\ldots
+}
+$$
 
-The boxed Thomson-limit formula is the result of Theorems Z.24-Z.26 and is stated through third order with explicit remainder $+O(u^{*5})$. It is a Thomson-limit result. The lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)$ used later in Appendix T for PU-to-SM matching at $\mu_G$ and subsequent RG flow to $M_Z$ does not enter this derivation. No continuous parameter is fitted anywhere in this chain.
+The boxed Thomson-limit formula is the exact sinc-core result of Theorems Z.24-Z.26. Its third-order truncation is obtained by replacing $\operatorname{sinc}(u^*)$ by $1-u^{*2}/6+O(u^{*4})$. The lifted spectral threshold tuple $(\Delta_1,\Delta_2,\Delta_3)$ used later in Appendix T for PU-to-SM matching at $\mu_G$ and subsequent RG flow to $M_Z$ does not enter this derivation. No continuous parameter is fitted anywhere in the core chain. The certificate-complete row is
+$$
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha,
+$$
+where $R_\alpha$ must be fixed before comparison by Definition Z.27.11j, by the all-orders residual certificate of Definition Z.27.11g, or by a same-branch theorem proving $R_\alpha=0$.
 
 ### Z.27.11 Thomson Normalization Certificate
 
@@ -4008,7 +4127,7 @@ $$
 \frac{\pi(2^{1/8}-1)}{24\sqrt3}
 \frac{\sin(2^{1/8}-1)}{2^{1/8}-1}
 =
-137.03609205522858\ldots .
+137.03609205522863\ldots .
 $$
 Therefore a theorem-level Thomson interval requires an independently certified residual interval $R_\alpha$. Without such an interval the Appendix Z alpha result remains the exact certificate-core branch value rather than a completed accepted $\mathfrak C_\alpha$.
 
@@ -4396,7 +4515,7 @@ This approach inverts the usual logic. Rather than starting with D-dimensional s
 | Prediction | Value | Source |
 |------------|-------|--------|
 | Spacetime dimension | D = 4 | Theorem Z.11 |
-| Fine-structure constant | α⁻¹ ≈ 137.036092 ± 0.000060 | Theorem Z.26 |
+| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1 |
 | Active fraction | a/d_0 = 1/4 | Corollary Z.1 |
 | Mode count | M = 24 | Theorem Z.5 |
 | Error correction structure | Golay [24,12,8] | Theorem Z.13 |
@@ -4428,12 +4547,12 @@ extrinsic_factor = (M - 1) / (a * d_0)  # = 23/16
 K_eff = K_avg_Bures * extrinsic_factor  # = 2
 Delta_2 = np.pi * u_star / (24 * np.sqrt(K_0))
 
-# Third-order refinement (SU(2) sinc)
-third_order_factor = 1 - u_star**2 / 6  # Corrected: u*^2, not u*
-Delta_2_3 = Delta_2 * third_order_factor
+# Exact SU(2) transport refinement
+sinc_factor = np.sin(u_star) / u_star
+Delta_2_sinc = Delta_2 * sinc_factor
 
-# Final result
-alpha_inv_PU = alpha_inv_1 + Delta_2_3
+# Final core result
+alpha_inv_PU = alpha_inv_1 + Delta_2_sinc
 
 alpha_inv_exp = 137.035999177
 discrepancy = alpha_inv_PU - alpha_inv_exp
@@ -4443,13 +4562,13 @@ print(f"K_avg^Bures = {K_avg_Bures:.6f} = 32/23")
 print(f"Extrinsic factor = {extrinsic_factor:.6f} = 23/16")
 print(f"K_eff = {K_eff:.6f}")
 print(f"Δ^(2) = {Delta_2:.6f}")
-print(f"Third-order factor = {third_order_factor:.6f}")
-print(f"Δ^(2+3) = {Delta_2_3:.6f}")
+print(f"SU(2) sinc factor = {sinc_factor:.12f}")
+print(f"Δ^(2+sinc) = {Delta_2_sinc:.12f}")
 print(f"D = 4 (from K(D) = {int(M)} = M)")
-print(f"α⁻¹_PU = {alpha_inv_PU:.6f}")
+print(f"α⁻¹_0 = {alpha_inv_PU:.12f}")
 print(f"α⁻¹_exp = {alpha_inv_exp:.9f}")
-print(f"Discrepancy = {discrepancy:.6f}")
-print(f"Relative = {relative_ppm:.2f} ppm")
+print(f"Discrepancy = {discrepancy:.12f}")
+print(f"Relative = {relative_ppm:.6f} ppm")
 ```
 
 **Output:**
@@ -4458,13 +4577,13 @@ K_avg^Bures = 1.391304 = 32/23
 Extrinsic factor = 1.437500 = 23/16
 K_eff = 2.000000
 Δ^(2) = 0.006840
-Third-order factor = 0.998635
-Δ^(2+3) = 0.006831
+SU(2) sinc factor = 0.998635284138
+Δ^(2+sinc) = 0.006830784679
 D = 4 (from K(D) = 24 = M)
-α⁻¹_PU ≈ 137.036092
+α⁻¹_0 = 137.036092055229
 α⁻¹_exp = 137.035999177
-Discrepancy = 0.000093
-Relative = 0.68 ppm
+Discrepancy = 0.000092878229
+Relative = 0.677765 ppm
 ```
 
 
@@ -4479,13 +4598,16 @@ Relative = 0.68 ppm
    - Cross-checked by the eight-entry constraint ledger of Theorem Z.12 and the Niemeier fixed-point test of Proposition Z.12.1a
    - Global uniqueness proven via Hessian positive-definiteness
 
-2. **Fine-Structure Constant α⁻¹ ≈ 137.036092 ± 0.000060**
-   - u* = 8^{1/24} - 1 from capacity saturation
-   - Interface correction derived a priori (sign from Legendre structure)
-   - Multiplicative form proven unique via Schur's lemma
-   - Second-order curvature correction from Bures metric geometry
-   - Third-order SU(2) sinc correction: (1 - u*²/6)
-   - Agreement with experiment: 0.68 ppm (within the stated theory uncertainty)
+2. **Fine-Structure Constant Core $\alpha^{-1}_{0}=137.03609205522863\ldots$**
+   - $u^* = 8^{1/24} - 1 = 2^{1/8}-1$ from capacity saturation
+   - Interface correction derived a priori from the Appendix Z interface branch
+   - Multiplicative curvature response fixed by the canonical separable branch
+   - Second-order curvature correction from Bures/Grassmannian geometry
+   - Exact $SU(2)$ transport factor $\operatorname{sinc}(u^*)$
+   - Closed-form structural reachability: $\alpha^{-1}_{0}$ is a single-valued elementary function of the forced integers $K_0=3$, $d_0=8$, $M=24$, $D=4$, with no continuous fit anywhere in the chain (Theorem Z.26; Corollary Z.26a)
+   - Arithmetic comparison: the closed form lies $9.2878\times10^{-5}$ from $137.035999177(21)$, about $0.678$ ppm
+   - Certificate row: $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$, with $R_\alpha$ structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b) and not adjustable
+   - Falsifier: a measurement outside the certified residual interval, once $R_\alpha$ is fixed, refutes the Appendix Z normalization branch (Corollary Z.26c)
 
 ## Zero Continuously Adjustable Parameters Throughout
 

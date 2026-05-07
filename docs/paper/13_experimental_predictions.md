@@ -389,7 +389,27 @@ The Consciousness Complexity (CC) mechanism (Hypothesis 3), constrained by $\mat
 Beyond the direct experimental search for CC, the framework's quantitative predictions for fundamental constants and emergent gravity provide sharp, falsifiable tests.
 
 **13.8.1 The Fine-Structure Constant Prediction Window**
-The framework predicts, from the Appendix Z derivation (Theorems Z.24–Z.26), the Thomson-limit fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000060$, where the quoted $1\sigma$ theory uncertainty is the conservative combined budget of Section Z.27.9, dominated by subgroup-projection/matching systematics rather than by series truncation: the interface-series remainder is about $4.5\times 10^{-7}$, the omitted next sinc term contributes $<4\times 10^{-9}$, and the subgroup-projection/matching term is about $5.6\times 10^{-5}$. This value agrees with the experimental value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177(21)$ to 0.68 ppm (a ~1.5σ discrepancy under the stated theory uncertainty). The prediction is falsifiable: if future measurements of $\alpha(0)$ deviate from this value beyond the stated uncertainty budget, the PCE-Attractor model for the origin of the U(1) coupling would be invalidated. As a consistency check, applying standard QED running from this Thomson-limit value yields $\alpha^{-1}(M_Z) \approx 127.93$, in agreement with experiment (Appendix Z, Corollary Z.8).
+The Appendix Z derivation fixes the Thomson-limit certificate-core value
+$$
+\alpha^{-1}_{0}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*)
+=
+137.03609205522863\ldots .
+$$
+This is a closed-form finite-response result: $K_0=3$, $d_0=8$, $M=24$, $D=4$, and $u^*=2^{1/8}-1$ are fixed upstream, and no continuous fit parameter appears in the expression. The closed-form core value is a single-valued elementary function of forced integers with no continuous tunable in the displayed chain (Theorem Z.26 with Corollary Z.26a). Its distance from $\alpha^{-1}_{\mathrm{exp}}=137.035999177(21)$ is
+$$
+0.00009287822863\ldots,
+$$
+about $0.678$ ppm. The comparison row is
+$$
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
+$$
+The residual $R_\alpha$ is structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b); it is not adjustable and cannot be selected using $\alpha^{-1}_{\mathrm{exp}}$. The displayed $\pm0.000060$ budget in the Appendix Z ledger is a canonical branch comparison budget; it is not a replacement for $R_\alpha$. The row is falsifiable as stated by Corollary Z.26c: once an accepted gate fixes $R_\alpha$, a measured value outside the certified residual interval refutes the Appendix Z normalization branch. Standard QED running from an accepted Thomson certificate is a downstream consistency ledger and does not close the residual.
 
 **13.8.2 The Multi-Scale Gravity / Dark Sector Window**
 The framework's two-mechanism model for the dark sector (Appendix I) is falsifiable through its demand for cross-scale consistency with a minimal set of universal parameters. On the acceleration-lock branch the relevant threshold is fixed before galaxy fitting:
@@ -845,7 +865,7 @@ The Golay alignment prediction connects to other PU predictions through the unif
 
 | Prediction | Source | Connection to $M = 24$ |
 |------------|--------|------------------------|
-| Fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000060$ (Thomson) | Section 13.8.1, Appendix Z | Capacity saturation at PCE-Attractor |
+| Fine-structure constant core $\alpha^{-1}_{0}=137.03609205522863\ldots$ and certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | Section 13.8.1, Appendix Z | Capacity saturation, Appendix Z interface/curvature/sinc core, and residual gate |
 | Spacetime dimensionality $D = 4$ | Appendix Z, Theorem Z.11 (see also Appendix H, Theorem H.4) | Kissing number $K(4) = 24$ |
 | Vacuum stability | Appendix R, Proposition R.4.2a; Appendix Z, Theorem Z.8c and Proposition Z.13a | Golay $d = 8$ forces rootlessness, and rootlessness yields vacuum isolation |
 | Gauge group structure | Appendix W | $\dim[\mathfrak{g}_{\text{SM}}] = 12 = k$ |
@@ -874,7 +894,7 @@ The framework generates falsifiable rows once the core PU invariants are fixed, 
 
 The predictions fall into three epistemic categories that must be distinguished to prevent conflation of claims of different logical type:
 
-*Theorem-level quantitative predictions* are numerical values obtained from the framework without validation targets, phenomenological kernels, empirical inversions, or uncomputed spectral inputs. *Branch-level quantitative rows* are numerical values obtained after named branch hypotheses, bridge laws, finite-part conventions, or matching conventions are fixed. *Validation and model rows* use validation targets, phenomenological response kernels, transferred prefactors, or status-limited spectral data; these rows are falsifiable as stated branch/model claims but are not counted as theorem-level PU predictions unless their status-carrying inputs are derived from prior PU structure or supplied by an explicitly appended branch extension. These include $\alpha^{-1} = 137.036092 \pm 0.000060$ (Theorem Z.26), $D = 4$ (Theorem Z.11), $\Lambda L_P^2 = (2.88 \pm 0.03) \times 10^{-122}$ (Appendix U), and the glueball mass ratios (Theorem Z.8h). Falsification is straightforward: measured values falling outside stated uncertainty bounds refute the prediction. In particular, Appendix T matching-scale observables such as $\sin^2\theta_W(M_Z)$ and $\alpha_s(M_Z)$ remain validation-level in the pre-certificate canonical gauge ledger because Theorem T.78.5 proves that the canonical data alone supply no PU-internal flag-lift spectral branch package. A positive gauge-threshold row requires an accepted completed spectral certificate, such as the RHG certificate of Definition T.78.6 verified by Algorithm T.78.6a, fixed before validation comparison and evaluated by the forward $\mathrm{MS2}_{\mu_G}$ block sum. The Yukawa hierarchy quantities retain their own Appendix T flavor-normalization and CP-profile status boundaries.
+*Theorem-level quantitative predictions* are numerical values obtained from the framework without validation targets, phenomenological kernels, empirical inversions, uncomputed spectral inputs, transferred prefactors, or unclosed residual records. *Branch-level quantitative rows* are numerical values obtained after named branch hypotheses, bridge laws, finite-part conventions, or matching conventions are fixed. *Certificate-pending rows* are deterministic only after their finite certificates are accepted. *Validation and model rows* use validation targets, phenomenological response kernels, transferred prefactors, or status-limited spectral data; these rows are falsifiable as stated branch/model claims but are not counted as theorem-level PU predictions unless their status-carrying inputs are derived from prior PU structure, supplied by an accepted certificate, proved output-null, or removed by a no-go theorem. Thus $D=4$ is theorem-level on the Appendix Z Bures tangent-cell branch, the Appendix Z alpha core $\alpha^{-1}_{0}=137.03609205522863\ldots$ is a theorem-level closed-form core value on its stated branch, the Thomson comparison interval is certificate-pending on $R_\alpha$, the cosmological-constant prefactor is certificate-pending on $\mathfrak F_U$ and $\mathfrak I_U^{(4)}$, Appendix T matching-scale observables remain validation-level before an accepted flag-lift spectral certificate, and flavor/baryogenesis/nuclear rows inherit their own certificate gates. A measured value outside an accepted theorem-level interval refutes the corresponding theorem stack; outside a branch/model interval it refutes the named branch, bridge law, certificate record, or model layer rather than silently upgrading the row.
 
 *Structural predictions* assert that specific mathematical structures emerge necessarily or conditionally from the framework's axioms and stated finite-response principles. These include Lorentz invariance (Theorem 46), the gauge group $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ on the Appendix G finite-response positive-marginal capacity branch (Theorem G.8.4b, conditional on Proposition G.M1), the Born rule (Proposition 7), $N_{\mathrm{gen}}=3$ on the Appendix R pre-flavor family-redundancy PPI branch, and chronology protection (Theorem 14.1). Falsification requires discovering that the predicted structure is violated in nature — for example, observation of fundamental Lorentz violation or a functioning closed timelike curve.
 
@@ -905,7 +925,9 @@ and Corollary Z.11.3 makes the resulting falsifier explicit.
 
 **Prediction:** At the Thomson limit (zero momentum transfer), the canonical Appendix Z branch gives
 $$
-\alpha^{-1}_{\mathrm{theory}} = 137.036092 \pm 0.000060
+\alpha^{-1}_{0}=137.03609205522863\ldots,
+\qquad
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha
 $$
 through the third-order formula of Theorem Z.26. A certificate-complete Thomson interval is obtained only from an accepted Thomson normalization certificate $\mathfrak C_\alpha$ in the sense of Definition Z.27.11a.
 
@@ -933,13 +955,19 @@ $$
 - Spatial or temporal variation of $\alpha$ at levels exceeding $10^{-6}$ per Gyr
 - Post-comparison widening of $R_\alpha$, which demotes the branch by Corollary Z.27.11d rather than confirming it
 
-**Residual interpretation.** The interval $\pm 0.000060$ on the canonical branch is a **certificate remainder** in the sense of Definition Z.27.11a: it is a bounded term whose existence and allowed magnitude follow from the named bulk, interface, electromagnetic, curvature, and sinc-transport entries of $\mathfrak C_\alpha$, and it is fixed before comparison with $\alpha_{\mathrm{obs}}$. It is not an adjustable theoretical tolerance and cannot be widened after comparison without defining a new branch by Corollary Z.27.11i.
+**Residual interpretation.** The interval $\pm0.000060$ on the canonical branch is the displayed comparison budget attached to the provisional certificate record. It is not an adjustable tolerance and cannot be widened after comparison without defining a new branch by Corollary Z.27.11i. The residual entry $R_\alpha$ is structurally bounded by the named bulk, interface, electromagnetic, curvature, and sinc-transport entries of $\mathfrak C_\alpha$; it is not a free parameter and cannot be selected using $\alpha^{-1}_{\mathrm{exp}}$. A theorem-level Thomson comparison interval requires $R_\alpha$ to be fixed before comparison by Definition Z.27.11j, by the all-orders residual certificate of Definition Z.27.11g, or by a same-branch theorem proving $R_\alpha=0$.
 
 **Current Status:**
 $$
 \alpha^{-1}_{\mathrm{exp}} = 137.035999177(21) \quad \text{(NIST 2024)}
 $$
-Discrepancy relative to the third-order canonical branch: $+0.000093 \pm 0.000060$ ($\sim 1.5\sigma$, 0.68 ppm). This is a live precision test of the Appendix Z normalization package; the row is closed at theorem level only when an accepted $\mathfrak C_\alpha$ together with an accepted $\mathfrak R_\alpha^{\mathrm{AO}}$ fix every entry of Definition Z.27.11a and Definition Z.27.11g before comparison.
+The exact sinc-core value satisfies
+$$
+\alpha^{-1}_{0}-\alpha^{-1}_{\mathrm{exp}}
+=
+0.00009287822863\ldots,
+$$
+about $0.678$ ppm. The closed-form core value from the discrete PU branch is a deterministic single-valued elementary function of the derived integers $K_0=3$, $d_0=8$, $M=24$, $D=4$ with no continuous fitting parameter in the displayed chain. This is a live precision test of the Appendix Z normalization package: theorem-level comparison status requires an accepted $\mathfrak C_\alpha$ together with an accepted residual gate fixing every entry of Definition Z.27.11a before comparison, and a measured value outside the certified residual interval refutes the Appendix Z normalization branch by Corollary Z.26c.
 
 **Consistency Check:** Standard QED running from the accepted Thomson-limit branch value yields $\alpha^{-1}(M_Z)$ in the electroweak comparison ledger; the branch must use the same forward-locked normalization and residual interval when entered into Definition 13.0d.
 
@@ -1022,7 +1050,7 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Prediction | Framework Value | Experimental Value | Derivation | Status |
 |:-----------|:----------------|:-------------------|:-----------|:------:|
 | Spacetime dimension $D$ | 4 | 4 | Theorem Z.11 | ✓ |
-| Fine-structure constant $\alpha^{-1}$ | $137.036092 \pm 0.000060$ | $137.035999177(21)$ | Theorem Z.26 | ✓ |
+| Fine-structure constant $\alpha^{-1}$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ and $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | $137.035999177(21)$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1 | ◐ closed-form core; comparison residual-gated |
 | Light active neutrino count $N_{\nu}$ | 3 under the standard identification from $N_{\mathrm{gen}}=3$ | $2.984 \pm 0.008$ | Theorem R.3.4 + LEP $Z$ width | indirect |
 | Gauge group $G_{\mathrm{SM}}$ on the finite-response positive-marginal capacity branch | $SU(3) \times SU(2) \times U(1)$ | $SU(3) \times SU(2) \times U(1)$ | Theorem G.8.4b | ◐ finite-response branch theorem |
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ◐ hierarchy invariant; absolute normalization separate |
@@ -1048,7 +1076,7 @@ after the Blackwell-PCE record channel and entropy-production ledger have been f
 
 | Prediction | Dominant Uncertainty Source | Estimated Magnitude |
 |:-----------|:---------------------------|:--------------------|
-| $\alpha^{-1}$ | subgroup-projection/matching systematics; interface-series and sinc truncations subleading | $\pm 0.000060$ |
+| $\alpha^{-1}$ | exact sinc-core arithmetic plus branch comparison budget before residual closure | $\pm0.000060$ budget; theorem-level interval requires $R_\alpha$ |
 | $\mathcal{R}$ | QED radiative corrections ($\sim 1\%$), threshold effects ($\sim 1\%$), higher-order ($\times 2$) | $\sim 5\%$ |
 | $N_{\mathrm{gen}}$ | Minimal admissible count exact in the anomaly+CP class; exact realized count fixed on the pre-flavor family-redundancy PPI branch; $D_4$ triality and $E_8$/Leech provide compatibility checks | branch-discrete |
 | $D$ | Exact in the Appendix Z Bures tangent-cell mode-channel contract | branch-discrete |
@@ -1083,17 +1111,37 @@ The branch is falsified by a robust cosmological neutrino mass sum or direct bet
 
 ### 13.10.8 Baryon Asymmetry
 
-The baryon-to-photon ratio is computed on the Appendix Y anomaly-holonomy/sphaleron-transport branch from the coupling mechanism (Appendix Y):
+The baryon-to-photon ratio is a finite transport image on the Appendix Y anomaly-holonomy/sphaleron branch:
+$$
+\eta_B
+=
+\mathcal N_\gamma
+\left[
+\mathcal U_B(t_f,t_i)Y_B(t_i)
++
+\int_{t_i}^{t_f}
+\mathcal U_B(t_f,t)
+S_{CP}(t)e^{-W_B(t)}
+\,dt
+\right].
+$$
+The displayed validation run uses the reduced product form
+$$
+\eta_B^{\mathrm{val}}
+=
+\mathcal C_{\mathrm{eff}}\mathcal F_{CP}f_{\mathrm{wash}}e^{-\kappa_B}
+=
+(6.2\pm0.5)\times10^{-10},
+\qquad
+\kappa_B=\kappa_{EW}/2+\varepsilon_0/N_g=19.48.
+$$
+This value is theorem-level only after an accepted $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ fixes the electroweak threshold record, CP-sector record, sphaleron coefficient, washout profile, transport window, quadrature ledger, photon normalization, and residual interval before comparison.
 
-$$\eta_B = \mathcal{C}_{eff} \cdot \mathcal{F}_{CP} \cdot f_{wash} \cdot e^{-\kappa_B} = (6.2 \pm 0.5) \times 10^{-10}$$
+**Observational Status:** The Planck measurement $\eta_B^{obs}=(6.12\pm0.04)\times10^{-10}$ is consistent with the displayed validation run at its model/threshold status.
 
-where $\kappa_B = \kappa_{EW}/2 + \varepsilon_0/N_g = 19.48$. The CP-violating factor $\mathcal{F}_{CP} = \tanh(\mathcal{S}\sin\delta) \approx 1$ saturates due to the large sphaleron action.
+**Falsification Criterion:** A future value outside the accepted forward interval would falsify the accepted baryogenesis certificate if such a certificate is supplied; before acceptance, it falsifies the displayed validation branch or one of its transport inputs.
 
-**Observational Status:** The Planck measurement $\eta_B^{obs} = (6.12 \pm 0.04) \times 10^{-10}$ agrees with the prediction at the $+0.2\sigma$ level.
-
-**Falsification Criterion:** If future CMB measurements (LiteBIRD) converge outside the range $(5.7, 6.7) \times 10^{-10}$, the framework requires refinement.
-
-**Correlated Prediction (Theorem Y.11):** The baryogenesis hierarchy relation of Theorem Y.11 gives a leading square-root sensitivity, so within the same prefactor regime any BSM modification to the electroweak scale produces correlated shifts: $\delta\eta_B/\eta_B \approx (1/2)\delta v/v$.
+**Correlated Branch Prediction (Theorem Y.11):** The baryogenesis hierarchy relation of Theorem Y.11 gives a leading square-root sensitivity on the same transport branch, so within the same prefactor regime any BSM modification to the electroweak scale produces correlated shifts $\delta\eta_B/\eta_B \approx (1/2)\delta v/v$.
 
 **Hierarchy Bridge Cross-Check (Corollary Y.11.4a):** The ratio $\mathcal{P}_{\mathrm{eff}} = \eta_B / \sqrt{v/M_{Pl}}$ removes the common exponential suppression and isolates the derived $O(1)$ prefactor. The theory value
 $$

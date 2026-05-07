@@ -1178,7 +1178,7 @@ The electromagnetic-to-gravitational coupling ratio emerges from the framework's
 
 $$ \alpha_{\text{em}}(\text{bulk}) = \frac{u^*}{4\pi} \approx \frac{1}{138.843} \tag{L.81a} $$
 
-Including the discrete-to-continuous interface correction and the full Section Z.27.9 theory budget, the Thomson-limit value is $\alpha^{-1} = 137.036092 \pm 0.000060$ (Theorem Z.26). The electromagnetic fine structure constant in standard form is:
+Including the discrete-to-continuous interface correction and exact $SU(2)$ transport, Appendix Z gives the Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$ (Theorem Z.26). The certificate-complete comparison row is $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ and requires the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1. The electromagnetic fine structure constant in standard form is:
 
 $$ \alpha_{\text{em}} = \frac{e^2}{4\pi\varepsilon_0\hbar c} \tag{L.81b} $$
 

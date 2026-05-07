@@ -87,7 +87,7 @@ $C_{\text{uni}}$ represents the unified complexity, a dimensionless measure of e
 
 ## H.4 Vacuum-Based Estimate of the Acceleration Scale $g_{0}$
 
-The empirical acceleration scale $g_0 \sim 1.2 \times 10^{-10} \text{ m s}^{-2}$ that appears in galaxy scaling relations (Appendix I) is comparable to $cH_0$ where $H_0$ is the Hubble constant, suggesting a link to cosmology. Within the PU framework, the cosmological constant $\Lambda$ is organized by the Golay-Steiner structure of the MPU network vacuum through the Appendix U reference scaling law. The five-mode reference branch uses $\kappa_{\mathrm{ref}} = k^2 - (D+1)/2 = 141.5$ and yields $\Lambda L_P^2 \approx 2.88 \times 10^{-122}$ for the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$, while Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that branch is obstructed in the current continuum action. The corresponding four-mode branch value is $\kappa = 142$ and $\Lambda L_P^2 = (1.06 \pm 0.01)\times10^{-122}$ at the same prefactor; under the corrected Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b, the full discrete Hessian has exactly four translational zero modes and no additional nullity.
+The empirical acceleration scale therefore arises from the same structural sector as the cosmological-constant bridge, but with status separation. The five-mode Appendix U working-prefactor evaluation gives the reference value $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. The Definition U.6 four-mode false-vacuum branch fixes only the exponent $\kappa=142$ under Theorem U.13b, so the forward row is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ and remains prefactor-certificate-pending until $\mathfrak F_U$ and $\mathfrak I_U^{(4)}$ are supplied.
 
 ### H.4.1 de Sitter temperature
 
@@ -751,7 +751,7 @@ The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed once the Q
 | Spatial projection | $(D-1)/D = 3/4$ | Rotational invariance |
 | Generator normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | Democratic generator normalization (Theorem H.1c) |
 
-The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry independently predicts the Thomson-limit fine-structure constant $\alpha^{-1} \approx 137.036092 \pm 0.000060$ from the Appendix Z derivation (Theorems Z.24–Z.26), corresponding to a 0.68 ppm offset from the current experimental central value (a $\sim 1.5\sigma$ discrepancy under the adopted theory uncertainty).
+The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry enters the Appendix Z Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$, whose arithmetic offset from the current experimental central value is about $0.678$ ppm before residual closure.
 
 The derivation is conditional on Definition H.0, whose validity is tested by predictive agreement.
 

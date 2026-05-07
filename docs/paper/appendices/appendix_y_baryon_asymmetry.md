@@ -2,19 +2,15 @@
 
 ## Y.1 Overview and Derivation Chain
 
-This appendix derives the baryon-to-photon ratio $\eta_B$ from the foundational constants of the Predictive Universe framework. The complete derivation chain is:
-
-$$K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \xrightarrow{\text{Def 15a}} (a,b) = (2,6) \xrightarrow{\text{Thm Z.5}} M = 24$$
-
+This appendix formulates the Appendix Y baryogenesis transport branch and its validation run. The finite transport chain is:
+$$K_0=3 \xrightarrow{\text{Thm 23}} d_0=8 \xrightarrow{\text{Def 15a}} (a,b)=(2,6) \xrightarrow{\text{Thm Z.5}} M=24$$
 $$\xrightarrow{\text{Thm T.5}} \kappa_{EW} = 38.5 \xrightarrow{\text{Thm T.56}} \delta = 66.7° \xrightarrow{\text{Thm Y.8}} \kappa_B = 19.48$$
+$$\xrightarrow{\text{Thm Y.9}} \eta_B^{\mathrm{val}} = (6.2 \pm 0.5) \times 10^{-10}.$$
+The numerical value is theorem-level only after an accepted $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ fixes the electroweak threshold record, CP-sector record, sphaleron coefficient, washout profile, transport window, quadrature ledger, photon normalization, and residual interval before comparison.
 
-$$\xrightarrow{\text{Thm Y.9}} \eta_B = (6.2 \pm 0.5) \times 10^{-10}$$
-
-**Summary of Results:**
-
-| Quantity | Derived Value | Observed Value | Discrepancy |
-|:---------|:-------------:|:--------------:|:-----------:|
-| $\eta_B$ | $(6.2 \pm 0.5) \times 10^{-10}$ | $(6.12 \pm 0.04) \times 10^{-10}$ | $+0.2\sigma$ |
+| Quantity | Branch value | Observed | Status |
+|----------|--------------|----------|--------|
+| $\eta_B$ | validation run $(6.2 \pm 0.5) \times 10^{-10}$ | $(6.12 \pm 0.04) \times 10^{-10}$ | model/threshold branch pending $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ |
 | $\delta$ | $66.7°$ | $65.7° \pm 1.5°$ | $+0.7\sigma$ |
 | $J_{CP}$ | $3.22 \times 10^{-5}$ | $(3.12^{+0.13}_{-0.12}) \times 10^{-5}$ | $+0.8\sigma$ |
 
@@ -615,7 +611,9 @@ $$\alpha_W = \frac{\alpha_{em}}{\sin^2\theta_W}$$
 
 **Step 1 (Fine structure constant).** From Appendix Z, Theorem Z.26, the Thomson-limit fine structure constant is derived from capacity saturation on the PCE-Attractor with interface corrections:
 $$
-\alpha_{em}^{-1}(\text{Thomson}) = 137.036092 \pm 0.000060
+\alpha_{em}^{-1}(\text{Thomson})=\alpha^{-1}_{0}+R_\alpha,
+\qquad
+\alpha^{-1}_{0}=137.03609205522863\ldots
 $$
 where the quoted $1\sigma$ uncertainty is the combined Appendix Z, Section Z.27.9 theory budget, dominated by subgroup-projection/matching systematics rather than by truncation.
 
@@ -645,7 +643,7 @@ This numerical evaluation is validation-level because it depends on the Appendix
 | $\varepsilon$ | $\ln 2 = 0.6931$ | Theorem 31 |
 | $N_g$ | 3 | Theorem R.3.4 |
 | $\delta$ | $66.7°$ | Theorem T.56 |
-| $\alpha_{em}^{-1}$(Thomson) | $137.036092 \pm 0.000060$ | Theorem Z.26 |
+| $\alpha_{em}^{-1}$(Thomson) | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | Theorem Z.26; Definition Z.27.11a; Theorem Z.27.11j.1 |
 | $\sin^2\theta_W^{(0)}$ | $3/8$ | Gauge normalization (Theorem T.14) |
 | $\alpha_W$ | $\approx 1/30$ | Validation-run value from $\alpha_{em}/\sin^2\theta_W(T_{sph})$ using the Appendix T threshold tuple; status governed by Theorem T.78.5 |
 | $c_{sph}$ | $28/79 = 0.354$ | $(8N_g + 4n_H)/(22N_g + 13n_H)$ with $N_g = 3$ |
@@ -690,7 +688,10 @@ $$= 6.16 \times 10^{-10}$$
 The complexity $\kappa_B = 19.48$ is derived from the stated PU counting chain $K_0 \to d_0 \to (a,b) \to M \to \kappa_{EW} \to \kappa_B$ on the Appendix T hierarchy branch. The uncertainty budget above covers the external Standard Model and thermal inputs; the use of $\alpha_W$ remains validation-level in the canonical minimal ledger by Theorem T.78.5 unless an appended Appendix T global spectral branch extension is fixed before comparison and evaluated forward.
 
 **Validation-Run Result:**
-$$\boxed{\eta_B = (6.2 \pm 0.5) \times 10^{-10}}$$
+$$
+\boxed{\eta_B^{\mathrm{val}}=(6.2\pm0.5)\times10^{-10}}
+$$
+The theorem-level row is the finite transport image fixed by $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$.
 
 ---
 
@@ -698,16 +699,20 @@ $$\boxed{\eta_B = (6.2 \pm 0.5) \times 10^{-10}}$$
 
 ### Y.8.1 Primary Result
 
-$$\eta_B^{\text{val}} = (6.2 \pm 0.5) \times 10^{-10}$$
+$$
+\eta_B^{\mathrm{val}}=(6.2\pm0.5)\times10^{-10}
+$$
 
 **Observational Value** [Planck Collaboration 2020a]:
-$$\eta_B^{\text{obs}} = (6.12 \pm 0.04) \times 10^{-10}$$
+$$
+\eta_B^{\mathrm{obs}}=(6.12\pm0.04)\times10^{-10}
+$$
 
-| Quantity | Validation run | Observation | Pull |
-|:---------|:--------------:|:-----------:|:----:|
-| $\eta_B$ | $(6.2 \pm 0.5) \times 10^{-10}$ | $(6.12 \pm 0.04) \times 10^{-10}$ | $+0.2\sigma$ |
+| Quantity | Validation run | Observation | Status |
+|:---------|:--------------:|:-----------:|:-------|
+| $\eta_B$ | $(6.2\pm0.5)\times10^{-10}$ | $(6.12\pm0.04)\times10^{-10}$ | model/threshold branch consistent; theorem-level only after $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ |
 
-The validation-run prediction agrees with observation within combined uncertainties. The stated uncertainty arises from external Standard Model and thermal inputs ($c_{sph}$, $f_{wash}$, $\alpha_W$); its Appendix T gauge-threshold component remains status-limited by Theorem T.78.5.
+The validation-run value is consistent with observation within combined uncertainties. The stated uncertainty arises from external Standard Model and thermal inputs ($c_{sph}$, $f_{wash}$, $\alpha_W$); its Appendix T gauge-threshold component remains status-limited by Theorem T.78.5.
 
 ### Y.8.2 Consistency Checks
 
@@ -735,7 +740,7 @@ All derived quantities are consistent with observation.
 | $\varepsilon_0=\ln2$ | Derived | Landauer limit (Theorem 31) |
 | $N_g = 3$ | Derived | Anomaly cancellation (Theorem R.3.4) |
 | $\delta = 66.7°$ | Derived | Berry holonomy (Theorem T.56) |
-| $\alpha_{em}^{-1} = 137.036092 \pm 0.000060$ | Derived | Capacity saturation (Theorem Z.26) |
+| $\alpha_{em}^{-1} = \alpha^{-1}_{0}+R_\alpha$ with $\alpha^{-1}_{0}=137.03609205522863\ldots$ | closed-form core; residual-gated comparison | Capacity saturation and interface/sinc core (Theorem Z.26); residual gate (Definition Z.27.11a; Theorem Z.27.11j.1) |
 | $\sin^2\theta_W^{(0)} = 3/8$ | Derived | Bures geometry (Theorem T.14) |
 | $\alpha_W \approx 1/30$ | Validation-level | $\alpha_{em}/\sin^2\theta_W$ at $T_{sph}$ using the Appendix T threshold tuple; status governed by Theorem T.78.5 |
 | $c_{sph} = 28/79$ | Derived | $(8N_g + 4n_H)/(22N_g + 13n_H)$ |
@@ -1257,7 +1262,7 @@ The Planck satellite constrains $\eta_B = (6.12 \pm 0.04) \times 10^{-10}$. Futu
 | Planck (current) | $0.7\%$ | Complete |
 | LiteBIRD | $0.2\%$ | 2030s |
 
-**Prediction:** $\eta_B = (6.2 \pm 0.5) \times 10^{-10}$. If future measurements converge outside the range $(5.7, 6.7) \times 10^{-10}$, the framework requires refinement.
+**Validation-run target:** $\eta_B^{\mathrm{val}}=(6.2\pm0.5)\times10^{-10}$. If future measurements converge outside the range $(5.7,6.7)\times10^{-10}$, they falsify the displayed validation branch or an accepted baryogenesis certificate if one has been supplied; before certificate acceptance they do not constitute a theorem-level refutation of the closed PU backbone.
 
 ### Y.12.2 CKM Phase Measurements
 
@@ -1323,11 +1328,17 @@ The prediction is insensitive to $\delta$ variations of several degrees.
 
 ## Y.14 Conclusion
 
-The baryon asymmetry of the universe is derived from the foundational constant $K_0 = 3$:
+The Appendix Y branch gives the validation-run transport value
 
-$$\eta_B = \mathcal{C}_{eff} \cdot \tanh(\mathcal{S}\sin\delta) \cdot f_{wash} \cdot e^{-\kappa_B} = (6.2 \pm 0.5) \times 10^{-10}$$
+$$
+\eta_B^{\mathrm{val}}
+=
+\mathcal{C}_{eff}\cdot\tanh(\mathcal{S}\sin\delta)\cdot f_{wash}\cdot e^{-\kappa_B}
+=
+(6.2\pm0.5)\times10^{-10}.
+$$
 
-This agrees with the observed value $(6.12 \pm 0.04) \times 10^{-10}$ within uncertainties.
+This is consistent with the observed value $(6.12\pm0.04)\times10^{-10}$ within the branch/model uncertainty. Theorem-level numerical status requires an accepted $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ before comparison.
 
 The derivation reveals that:
 - **CP violation** is geometric (Berry holonomy on the flavor manifold), operating in a saturated regime where $\tanh(\mathcal{S}\sin\delta) \approx 1$

@@ -19,7 +19,7 @@ Numerical conventions: $\ln$ and $\exp$ denote the natural logarithm and exponen
 
 | Quantity | PU program | Central value | $1\sigma$ budget | Dominant contributions |
 |:--|:--|:--|:--|:--|
-| $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$ | $137.036092$ | $\pm 0.000060$ | combined Section Z.27.9 budget, dominated by subgroup-projection/matching systematics; compare $\alpha_{\mathrm{em}}^{-1} = 137.035999177(21)$ [NIST 2024] |
+| $\alpha^{-1}$ (Thomson limit) | Eqs. (V.8)–(V.10) with $K_0=3$, $d_0=8$, $M=24$, $u^*=8^{1/24}-1$; certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | $\alpha^{-1}_{0}=137.03609205522863\ldots$ | branch comparison budget $\pm0.000060$ before residual closure | exact sinc-core arithmetic plus Section Z.27.9 comparison budget; theorem-level interval requires the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1 |
 | $\Lambda L_P^2$ (vacuum sector) | Eq. (V.2) with $\kappa_{\mathrm{ref}}=141.5$ and $A_{\text{eff}}=0.923\pm0.011$ on the Appendix U five-mode reference branch | $(2.88\times10^{-122})$ | $\pm 0.03\times10^{-122}$ | branch-dependent reference evaluation on the five-mode branch; Theorem U.8c blocks the pure-coordinate dilatation realization in the current continuum action, while Theorem U.13b establishes the corrected four-mode exponent branch $\kappa=142$ under the explicit false-vacuum spectral hypotheses stated there. Eq. (V.5) gives $(\Lambda L_P^2)_{\text{obs}}=(2.86599\pm0.04849)\times10^{-122}$, implying $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ on the five-mode branch and $A_{\text{eff}}^{(\text{obs},4)}=2.49\pm0.04$ on the four-mode branch |
 
 ## V.1 The Cosmological Constant: Inversion for the Instanton Complexity $\kappa$
@@ -82,10 +82,11 @@ The quoted uncertainty is dominated by $H_0$ and $\Omega_{\Lambda}$; the relativ
 
 ### V.1.4 Consistency Check via Inversion
 
-Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16, five-mode reference-counting convention) and the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b, prefactor convention), Equation (V.2) gives the corresponding five-mode reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that five-mode branch is obstructed in the current Definition U.4 continuum action, so this agreement with the observed value (V.5) is branch-dependent rather than theorem-level vacuum closure. Holding the same prefactor fixed on the translational branch instead gives
-
+Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16, five-mode reference-counting convention) and the Appendix U working value $A_{\text{eff}}=0.923\pm0.011$ (Corollary U.15b, prefactor convention), Equation (V.2) gives the corresponding five-mode reference value $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for that five-mode branch is obstructed in the current Definition U.4 continuum action, so this agreement with the observed value (V.5) is branch-dependent rather than theorem-level vacuum closure. On the Definition U.6 four-mode branch, Theorem U.13b fixes the exponent $\kappa=142$ under the stated spectral hypotheses, so the forward expression is
 $$
-\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-284} = (1.06 \pm 0.01)\times10^{-122}.
+\Lambda_4 L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}.
+$$
+Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference evaluation; a theorem-level four-mode forward interval requires the Fredholm prefactor certificate and interval audit.
 $$
 
 Setting $A_{\text{eff}}=1$ in Equation (V.3):
@@ -177,10 +178,24 @@ $$
 With $u^* = 8^{1/24}-1 = 2^{1/8}-1$ and $K_0 = 3$:
 
 $$
-\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \Delta^{(2)} + O(u^{*5}) \approx 137.036092 \pm 0.000060}
+\boxed{
+\alpha^{-1}_{0}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*)
+=
+137.03609205522863\ldots
+}
 \tag{V.10}
 $$
-This is a Thomson-limit prediction within the Appendix Z derivation. Relative to the CODATA 2022 value $\alpha^{-1}_{\mathrm{exp}} = 137.035999177$ [NIST 2024], the central value differs by $0.68$ ppm; the quoted $1\sigma$ budget is the conservative PU-to-physics uncertainty constructed in Appendix Z (Section Z.27.9) from controlled truncation terms and subgroup-projection/matching systematics, with the latter dominant.
+The certificate-complete Thomson row is
+$$
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
+$$
+Equation (V.10) is the exact sinc-core arithmetic of the Appendix Z derivation. Relative to $\alpha^{-1}_{\mathrm{exp}}=137.035999177$, the core value differs by $0.00009287822863\ldots$, about $0.678$ ppm. The displayed Section Z.27.9 budget is a branch comparison budget; theorem-level interval status requires $R_\alpha$ to be fixed before comparison by the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1.
 
 ## V.3 Finite Independent Audit Ladder
 

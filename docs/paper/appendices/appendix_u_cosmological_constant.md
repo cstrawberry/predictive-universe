@@ -2547,7 +2547,7 @@ These criteria are testable by CMB-S4, LiteBIRD, and future 21-cm observations.
 
 | Sector | Configuration Space | $\kappa$ | Physical Scale |
 |:-------|:-------------------:|:--------:|:--------------:|
-| Vacuum | $\text{Gr}_\mathbb{C}(12,24)$ | $\kappa_{\mathrm{ref}} = 141.5$ on the Appendix U five-mode reference branch; $\kappa_{\mathrm{trans}} = 142$ on the corrected four-mode branch of Theorem U.13b | Reference value $\Lambda L_P^2 \approx 2.88 \times 10^{-122}$ on the five-mode branch; $(1.06 \pm 0.01) \times 10^{-122}$ on the same-prefactor four-mode branch of Theorem U.13b |
+| Vacuum | $k^2=144$ shell | five-mode reference exponent $\kappa_{\mathrm{ref}}=141.5$ under the reference-counting convention; Definition U.6 four-mode exponent $\kappa=142$ under Theorem U.13b | five-mode working-prefactor value $(2.88\pm0.03)\times10^{-122}$ is reference-only; four-mode forward row $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ is prefactor-certificate-pending |
 | Primordial | $\mathbb{CP}^{11}$ | $11$ | $Q \approx 1.18 \times 10^{-5}$ |
 
 The hierarchy $\kappa_{\Lambda,\mathrm{ref}} / \kappa_Q = 12.86$ summarizes the Appendix U five-mode reference separation between the vacuum branch and the primordial perturbation scale. Under the hypotheses of Theorem U.13b, the corresponding four-mode branch value gives $\kappa_{\Lambda,\mathrm{trans}} / \kappa_Q = 12.91$.
@@ -2750,7 +2750,7 @@ This appendix derives the cosmological constant reference scale and the primordi
 $$
 \Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}.
 $$
-With the Appendix U working prefactor $A_{\text{eff}} = 0.923 \pm 0.011$, this gives the branch-dependent reference value $(2.88 \pm 0.03)\times10^{-122}$ (Corollary U.17). Theorem U.8c shows that the pure-coordinate dilatation mode used in that five-mode branch is obstructed in the current Definition U.4 continuum action, and Theorem U.13 shows under its sampled-sector exactness hypothesis that the sampled translation+dilatation restriction of the discrete Hessian has no fifth zero mode. Under the corrected Definition U.6 normalization and the explicit false-vacuum spectral hypotheses of Theorem U.13b, the corresponding four-mode branch gives $(1.06 \pm 0.01)\times10^{-122}$ at the same prefactor and would require $A_{\text{eff}}^{(\text{obs},4)} = 2.49 \pm 0.04$ to match observation.
+With the working value $A_{\mathrm{eff}}=0.923\pm0.011$, the five-mode reference convention gives $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. This is not an unconditional false-vacuum closure because Theorem U.8c obstructs the pure-coordinate five-mode tangent in the current Definition U.4 action. Under the Definition U.6 four-mode false-vacuum branch, Theorem U.13b fixes $\kappa=142$ and the forward expression is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$. Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference check; theorem-level four-mode numerical status requires the Fredholm prefactor certificate and interval audit of Definition U.15m and Theorem U.15m.1. Inverting the observed value gives $A_{\mathrm{eff}}^{(\mathrm{obs})}=0.917\pm0.016$ on the five-mode reference convention and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04$ on the four-mode exponent branch.
 
 **Primordial Sector.** Conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48, the complexity $\kappa_Q = 11$ and geometric e-fold count $N_e = 59.4$ yield:
 

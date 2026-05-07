@@ -449,7 +449,7 @@ where $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ and the active frac
 
 * **Predictive geometry ↔ response:** Fisher metric $\mathcal{G}$ (Appendix D) ↔ connected kernel $\mathcal{G}=\delta^2 W$; $\Gamma^{(2)}=\mathcal{G}^{-1}$ (X.3).
 * **PU RG ↔ FRG:** KL‑monotone $c(b)$ (Appendix D) ↔ $\Gamma_k$ flow (X.4); relevant/irrelevant classification aligned via stability eigenvalues.
-* **Gauge normalization:** $u=g_e^2$, $\alpha_{\mathrm{em}}=u/(4\pi\kappa)$ (X.6); $\kappa^*_{\mathrm{bulk}}=1$ (Theorem Z.14), $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ with $a/d_0=1/4$ (Section Z.17); $u^*=8^{1/24}-1$ (Section Z.8); Thomson limit $\alpha^{-1}=\frac{4\pi}{u^*}-\frac{\pi}{\sqrt{K_0}}+\frac{\pi u^*}{24\sqrt{K_0}}\left(1-\frac{u^{*2}}{6}\right)\approx 137.036092 \pm 0.000060$ from the Appendix Z derivation (Theorems Z.24–Z.26).
+* **Gauge normalization:** $u=g_e^2$, $\alpha_{\mathrm{em}}=u/(4\pi\kappa)$ (X.6); $\kappa^*_{\mathrm{bulk}}=1$ (Theorem Z.14), $\kappa_{\mathrm{eff}}=1-(a/d_0) \cdot u^*/\sqrt{K_0}$ with $a/d_0=1/4$ (Section Z.17); $u^*=8^{1/24}-1$ (Section Z.8); the Thomson-limit core is $\alpha^{-1}_{0}=\frac{4\pi}{u^*}-\frac{\pi}{\sqrt{K_0}}+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*)=137.03609205522863\ldots$, with comparison row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ from the Appendix Z derivation (Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1).
 * **Constraint-coupling duality:** in regular constrained PCE branches, active admissibility constraints carry KKT shadow prices; canonical couplings are the corresponding normalized stiffness or inverse-stiffness images (Theorem X.8c; Appendix Z, Corollary Z.8.2a).
 * **Gravity:** $\Gamma^{\text{grav}}$ (X.7) + Wald entropy (Appendix E) ⇒ EFE (Section 12); $G$ from the area‑law coefficient; running $G(k)$ (Appendix I).
 * **Open dynamics:** CTP $\Gamma_{\rm CTP}$ (X.9) encodes dissipation/noise consistent with the local second law (Appendix E) and algebraic locality (Appendix F).
@@ -2388,19 +2388,22 @@ $$
 \alpha_{em}^{-1} = \frac{4\pi\kappa_{\mathrm{eff}}}{u^*}
 = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + O((u^*)^2).
 $$
-Carrying the next curvature-controlled term from the same interface functional (Theorems Z.24–Z.26), on the canonical separable second-order curvature-response branch (Theorem Z.25) in addition to the named branches, gives the Thomson-limit prediction
+Carrying the next curvature-controlled term from the same interface functional (Theorems Z.24-Z.26), on the canonical separable second-order curvature-response branch (Theorem Z.25) in addition to the named branches, gives the Thomson-limit core
 $$
-\alpha_{em}^{-1} =
+\alpha_{em,0}^{-1} =
 \frac{4\pi}{u^*}
 -\frac{\pi}{\sqrt{K_0}}
-+\frac{\pi u^*}{24\sqrt{K_0}}\left(1-\frac{(u^*)^2}{6}\right)
-+O((u^*)^5).
++\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*).
 $$
 With $u^*=2^{1/8}-1$ and $K_0=3$,
 $$
-\alpha_{em}^{-1} \approx 137.036092 \pm 0.000060,
+\alpha_{em,0}^{-1}=137.03609205522863\ldots .
 $$
-where the uncertainty is the conservative $1\sigma$ truncation bound for the first neglected $O((u^*)^5)$ term together with the matching/systematic contribution summarized in Appendix Z, Section Z.27.9.
+The certificate-complete comparison row is
+$$
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
+$$
+The Section Z.27.9 budget is a branch comparison budget before residual closure; theorem-level interval status requires the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1.
 
 Consequently, a literal map $u \mapsto 1/u$ is *not* a symmetry of the saturated constraint surface: the attractor selects a unique operational coupling $u^* = 2^{1/8} - 1$, and transformations that would map to $1/u^* \approx 11.05$ violate the capacity constraint (X.11). What can be dual are *descriptions*: distinct field variables or auxiliary-field representations (Appendix X) that represent the same effective $W_k[J]$ and the same operational correlators at the fixed-point physics. In this sense, "strong vs. weak" can be a coordinate artifact of the chosen effective variables, while the operational predictions remain locked to the same PCE optimum.
 
@@ -3289,10 +3292,10 @@ $$
 -\frac{\pi}{\sqrt{3}}
 +\frac{\pi u^*}{24\sqrt{3}}\frac{\sin u^*}{u^*}
 =
-137.03609205522858\ldots,
+137.03609205522863\ldots,
 \tag{X.9.6.39}
 $$
-with status: certificate-core Thomson branch value; theorem-level interval only on an accepted Thomson normalization certificate together with an accepted all-orders residual certificate;
+with status: certificate-core Thomson branch value; theorem-level interval only on an accepted Thomson normalization certificate together with an accepted all-orders residual certificate or residual-operator gate;
 $$
 \Lambda_{5}L_P^2
 =

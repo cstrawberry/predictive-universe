@@ -831,6 +831,137 @@ The Heisenberg uncertainty principle and the second law of thermodynamics share 
 
 The identity explains why quantum and thermodynamic descriptions of nature are mutually consistent: they are not independent theories requiring reconciliation but dual windows onto a single SPAP-constrained reality.
 
+#### 14.2.6.1 Extension to Inter-Observer Signaling: The Signaling Uncertainty Principle
+
+Theorem 14.2 unifies the *instantaneous* predictability limit (Heisenberg uncertainty, simultaneous-variable context) and the *sequential* distinguishability limit (second law, single-channel evolution context) under a single SPAP origin. A third operational context arises when two perspectival systems compare information across spacelike separation: the *inter-observer signaling* context. In this context the same SPAP-rooted causality and finite-window regularity gates force a determinism–reach tradeoff.
+
+**Theorem 14.2.6.1 (Signaling Uncertainty Principle).** Let $S_A$ and $S_B$ be MPU aggregates whose relevant measurement regions are spacelike separated on the AQFT branch of Theorem F.0, and let Alice's late context be binary, $C_A\in\mathcal C_A:=\{0,1\}$, with the context-fixing event outside Bob's past lightcone. Let $\Phi$ be any admissible context-to-transcript experiment assigning context-conditioned laws $P_c^{(n)}$ to a finite Bob-side transcript $Y_B^n$ over a finite alphabet. Let $D$ range over possibly randomized decoders from $Y_B^n$ to $\mathcal C_A$, with decoder randomness included in the displayed probabilities. Define
+
+$$
+e_{\mathrm{wc}}(\Phi):=\inf_D\sup_{c\in\mathcal C_A}P\!\left(D(Y_B^n)\ne c\,\middle|\,C_A=c\right),
+\qquad
+\Delta(\Phi):=1-2e_{\mathrm{wc}}(\Phi),
+$$
+
+and define the spacelike-reach indicator by
+
+$$
+\Pi(\Phi):=\mathbf{1}\{Y_B^n\text{ is closed before any subluminal signal from Alice's context-fixing event could reach Bob's region}\}.
+$$
+
+Then, under the framework's standing finite-window assumptions (Postulate 2; Theorems 14.1, 31, 39, 39a, 42, 46; Definition 10.2a; Lemma E.1; and the AQFT branch of Theorem F.0 when operator locality is invoked),
+
+$$
+\Delta(\Phi)\cdot\Pi(\Phi)<1.
+\tag{14.2.6.1}
+$$
+
+Equivalently, a binary context-to-transcript channel cannot be both zero-error deterministic and spacelike in a finite pre-lightcone window. If $\Pi(\Phi)=1$, then $e_{\mathrm{wc}}(\Phi)>0$ and hence $\Delta(\Phi)<1$.
+
+*Remark on normalization.* The factor $2$ in $\Delta=1-2e_{\mathrm{wc}}$ normalizes the binary problem: a zero-error decoder has $\Delta=1$, while a Bob transcript whose law is independent of Alice's context has $e_{\mathrm{wc}}=1/2$ and $\Delta=0$. Because randomized uniform guessing is allowed, $0\le e_{\mathrm{wc}}\le1/2$ and $0\le\Delta\le1$. This normalization is why $\Delta$ measures deterministic content rather than mere guessing success.
+
+*Remark on the indicator form of $\Pi$.* $\Pi$ is a binary spacelike-window indicator rather than a continuous reach measure, so (14.2.6.1) is a structural exclusion of the $(\Delta,\Pi)=(1,1)$ corner rather than a continuous Robertson-style inequality with a smooth tradeoff inside the spacelike region. This matches the operational role of the bound: it certifies that a finite pre-lightcone channel cannot be zero-error deterministic, without committing to a quantitative exchange rate between determinism and distance.
+
+*Proof.*
+
+**Step 1 (Operational regimes).** There are three relevant regimes in the $(\Delta,\Pi)$ plane: (R1) timelike or lightlike availability with $\Pi=0$, where ordinary signaling at speed at most $c$ is permitted; (R2) spacelike finite-window operation with $\Pi=1$ that remains outside zero-error decoding; and (R3) the forbidden corner $\Pi=1$, $\Delta=1$. Branch (ii) of Postulate 3, where the context is fixed in the shared causal past, is not a late-context channel from Alice to Bob and therefore does not instantiate (R3).
+
+**Step 2 (The corner implies a zero-error FTL decoder).** Assume for contradiction that $\Phi^*$ satisfies $\Delta(\Phi^*)\Pi(\Phi^*)=1$. Since $\Pi$ is binary and $0\le\Delta\le1$, this means $\Pi(\Phi^*)=1$ and $\Delta(\Phi^*)=1$, hence $e_{\mathrm{wc}}(\Phi^*)=0$. The transcript alphabet is finite and the randomized-decoder simplex is compact, so the infimum in $e_{\mathrm{wc}}$ is attained. There is therefore a decoder $D^*$ with
+
+$$
+\sup_{c\in\mathcal C_A}P\!\left(D^*(Y_B^n)\ne c\,\middle|\,C_A=c\right)=0.
+$$
+
+Because $\Pi(\Phi^*)=1$, this is a finite pre-lightcone zero-error decoder of Alice's late context, exactly the configuration excluded by Postulate 2, Equation (60a).
+
+**Step 3 (Branchwise exclusion of the corner).** The framework supplies the required exclusion on each admissible branch.
+
+(i) *Endpoint gate.* By Theorem 39, $\alpha_{CC,max}<0.5$, so no binary coarse-graining of Bob-side outcomes can be driven to both deterministic endpoints by Alice's context choice. This rules out one-shot deterministic endpoint forcing on the CC branch.
+
+(ii) *Regular statistical branch.* On branch (iii) of Postulate 3 in the regular finite-window regime of Definition 10.2a, the two context-conditioned transcript laws have common support. Theorem 39a gives transcript overlap $\Omega_n>0$ and, for every deterministic decoder,
+
+$$
+P_{\mathrm{err}}(D)\ge\Omega_n/2>0.
+$$
+
+By convexity of randomized decoding over deterministic decoding rules, the same lower bound holds for randomized decoders. Since the worst-case error is at least the equal-prior error, $e_{\mathrm{wc}}(\Phi)\ge\Omega_n/2>0$. Hence $\Delta(\Phi)\le1-\Omega_n<1$ on the regular statistical branch.
+
+(iii) *AQFT/local-CPTP branch.* On the conditional AQFT branch of Theorem F.0 and Corollary F.1, local operators commute across spacelike separation. The Bob-marginal-preserving branch has
+
+$$
+\omega_{C_{A,1}}(\mathbf 1_A\otimes B)=\omega_{C_{A,2}}(\mathbf 1_A\otimes B)
+$$
+
+for every Bob-side observable $B$ (Equation F.4a), so Bob's unconditional transcript law is independent of Alice's late context and $e_{\mathrm{wc}}=1/2$, $\Delta=0$. Joint-statistic decoding using both Alice and Bob records is not a counterexample: extracting those joint statistics requires a classical comparison channel, which is timelike and therefore has $\Pi=0$ for the comparison stage.
+
+(iv) *Carrier-mediated chronology route.* Theorem 14.1 excludes carrier-mediated CTC channels capable of transmitting predictively useful information across a chronology gap; Corollary 14.1c classifies finite higher-order process structure as a predictive resource rather than retrocausal signaling; and Theorem 42 excludes paradox-inducing loops from the statistical branch. Thus a finite higher-order or CTC-like carrier process cannot be used to realize the missing $\Delta=1$, $\Pi=1$ corner outside the branches above.
+
+Together, (i)–(iv) eliminate every admissible route to (R3), contradicting Step 2.
+
+**Step 4 (Common SPAP origin).** The signaling bound uses the same root obstruction as Theorem 14.2. SPAP (Theorems 10–11) supplies the logical impossibility of perfect self-referential prediction and the entropy floor $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31). That floor is represented in the ND-RID channel by the refresh/minorization component giving $f_{RID}<1$ (Lemma E.1), while the causal application is formalized by Postulate 2, Definition 10.2a, and Theorem 39a. Thus the signaling tradeoff is not an independent postulate: it is the finite-window inter-observer projection of the same SPAP-driven obstruction that appears as uncertainty in the simultaneous-variable context and irreversibility in the sequential context.
+
+Hence $\Delta(\Phi)\cdot\Pi(\Phi)<1$. ∎
+
+**Remark 14.2.6.1a (Member of the Uncertainty Family).** The Signaling Uncertainty Principle is the inter-observer member of the SPAP-uncertainty family extended from Theorem 14.2. The three operational contexts and their property pairs are:
+
+| Operational context | Property pair | Tradeoff statement | Source |
+|:--------------------|:--------------|:-------------------|:-------|
+| Simultaneous-variable | $(\Delta A,\Delta B)$ | $\Delta A\cdot\Delta B\ge \tfrac12\lvert\langle[\hat A,\hat B]\rangle\rvert$ | Theorem 14.2; Lemma 14.2a |
+| Sequential single-channel | $(I_{\mathrm{in}},I_{\mathrm{out}})$ | $C(\mathcal E_N)<\ln d_0$ | Theorem 14.2; Theorem E.2 |
+| Inter-observer signaling | $(\Delta,\Pi)$ | $\Delta(\Phi)\cdot\Pi(\Phi)<1$ | Theorem 14.2.6.1 |
+
+The first row is a continuous Robertson-style inequality on real-valued spreads; the second is a capacity bound on real-valued mutual information; the third is a corner-exclusion statement in a plane whose reach coordinate is binary by construction. The shared claim is not equality of analytic form, but common descent from the SPAP-induced obstruction to perfect predictive transfer under finite operational constraints.
+
+**Corollary 14.2.6.1a (Format Pluralism).** The binary finite-window projection to the $(\Delta,\Pi)$ plane admits two operational format regions and one excluded corner:
+
+- *Local/timelike format* ($\Pi=0$, $0\le\Delta\le1$): ordinary channels whose operational influence propagates no faster than $c$ (Theorem 46). Zero-error transmission is possible only when the ordinary channel resources support a zero-error code.
+- *Spacelike finite-window format* ($\Pi=1$, $0\le\Delta<1$): the Bob-marginal-preserving AQFT/local-CPTP branch has $\Delta=0$, while the regular branch-(iii) statistical channel may have positive finite-error information but retains nonzero finite-window decoding error. At a regular operating point its per-trial information rate is $I=O(\mathrm{CC}^2)$ (Theorem 41) and direct detection obeys $N=O(\mathrm{CC}^{-2})$ scaling when the effect size is proportional to $\mathrm{CC}$ (Theorem 40).
+- *Forbidden corner* ($\Pi=1$, $\Delta=1$): excluded by Theorem 14.2.6.1.
+
+*Proof.* The local/timelike region has $\Pi=0$, so the product bound is automatically satisfied and ordinary $c$-bounded signaling is governed by Theorem 46. The spacelike finite-window region has $\Pi=1$, and Theorem 14.2.6.1 gives $\Delta<1$; its branch-specific rate and sample bounds are Theorems 40–41. The remaining corner is exactly the contradiction case in Theorem 14.2.6.1, Step 2. ∎
+
+**Corollary 14.2.6.1b (Layered Causality Reformulation).** The four-layer causality protection of Remark 14.2 can be expressed as route-by-route exclusion of the forbidden $(\Delta,\Pi)=(1,1)$ corner.
+
+| Layer (Remark 14.2) | Excluded route to $(\Delta,\Pi)=(1,1)$ |
+|:--------------------|:------------------------------------------|
+| (i) Logical | A deterministic predictor used in a diagonal construction $\phi_{t+1}=\mathrm{NOT}(\hat\phi)$ (Theorems 10–11) |
+| (ii) Thermodynamic | Reverse-trajectory or chronology-gap processing with $\Sigma_{\mathrm{tot}}<0$ (Theorem 31; Theorem O.3) |
+| (iii) Geometric | Superluminal carrier or operator-mediated spacelike coupling outside the finite-$c$ and AQFT-locality branches (Theorem 46; Corollary F.1) |
+| (iv) Channel | A statistical CC channel amplified into zero-error FTL signaling (Theorems 39, 39a, 41, 42) |
+
+*Proof.* Remark 14.2 already identifies the logical, thermodynamic, geometric, and channel layers. Theorem 14.2.6.1 states their common finite-window target: no admissible branch supplies a zero-error decoder at spacelike reach. The table records which route each layer blocks. ∎
+
+**Corollary 14.2.6.1c (Cosmological Format Suitability).** Let $L$ be the spatial separation between two MPU aggregates and $\tau_{\mathrm{op}}$ a chosen operational coordination timescale. Define
+
+$$
+\sigma_{\det}(L,\tau_{\mathrm{op}}):=\mathbf{1}\{L/c\le\tau_{\mathrm{op}}\},
+\qquad
+\sigma_{\mathrm{stat}}(L,\tau_{\mathrm{op}}):=\mathbf{1}\{\text{an established joint-state structure is available between the aggregates in the sense of Postulate 3 branch (ii), or the prepared-state support required for a regular branch-(iii) statistical channel}\}.
+$$
+
+Here "established joint-state structure" includes the shared-past joint preparation structure of Postulate 3 branch (ii) and the prepared-state support required for a regular branch-(iii) statistical channel.
+
+Then
+
+$$
+\sigma_{\det}(L,\tau_{\mathrm{op}})+\sigma_{\mathrm{stat}}(L,\tau_{\mathrm{op}})
+\ge
+\mathbf{1}\{L/c\le\tau_{\mathrm{op}}\ \text{or such an established joint-state/statistical structure is available}\}.
+$$
+
+Strict inequality occurs exactly when both the deterministic lightcone condition and the established joint-state/statistical condition hold.
+
+*Proof.* The right-hand side is the indicator of the union of the deterministic-suitability event and the statistical-suitability event. The sum of the two indicator functions dominates the indicator of their union, with strict inequality precisely on their intersection. If $L/c>\tau_{\mathrm{op}}$, deterministic suitability vanishes and any pre-lightcone coordination must use the statistical/common-cause format, which requires an established joint-state structure in the sense of the shared-past preparation branch of Postulate 3, or the prepared-state support required for the regular branch-(iii) state-mediated statistical regime, with the AQFT state-dependence discussion around Equations F.4–F.4a supplying the operator-local baseline. ∎
+
+**Remark 14.2.6.1d (Two Primitive Finite-Window Communication Formats).** Theorem 14.2.6.1 can be read as a finite-window classification of inter-location channels by the two operational coordinates $(\Delta,\Pi)$. Once the corner $(1,1)$ is excluded, an admissible one-bit channel projected to this plane has, at the level of this projection, one of two primitive format types, or a finite concatenation of them:
+
+- *Deterministic, reach-limited format* ($\Pi=0$, $0\le\Delta\le1$): ordinary timelike or lightlike channels. They can carry zero-error content when the ordinary channel resources support a zero-error code, but their operational reach in time $\tau$ is limited by $L\le c\tau$ (Theorem 46).
+- *Spacelike, non-zero-error format* ($\Pi=1$, $0\le\Delta<1$): finite pre-lightcone channels. They carry no zero-error deterministic content in any finite pre-lightcone window. On the AQFT/local-CPTP branch Bob's unconditional marginal has $\Delta=0$; on the regular nonlocal/state-mediated branch, positive finite-error information may occur with rate $I=O(\mathrm{CC}^2)$ at a regular operating point (Theorem 41) and detection scaling $N=O(\mathrm{CC}^{-2})$ when the tested effect size is proportional to $\mathrm{CC}$ (Theorem 40).
+
+No third zero-error/reach primitive exists within this binary one-bit $(\Delta,\Pi)$ projection. Higher-arity contexts, post-selection protocols, and multi-channel concatenations may carry further internal structure that this projection collapses; they do not restore the excluded zero-error spacelike corner. This statement is a projection to the $(\Delta,\Pi)$ plane, not a collapse of the three mechanisms distinguished in Postulate 3: local CPTP/AQFT marginal preservation, shared-past preparation context, and the stronger regular branch-(iii) marginal anomaly remain operationally distinct mechanisms.
+
+Under this reading, standard no-signaling theorems are recovered as the statement that zero-error deterministic format is unavailable on the spacelike branch. Bell-type correlations belong to the spacelike non-zero-error side only as joint or conditional correlations revealed after classical comparison; by themselves they do not instantiate branch-(iii) Bob-marginal signaling. Cosmological-scale coordination outside a deterministic lightcone can therefore use only an established joint-state/common-cause structure of the shared-past kind, or the prepared-state regular statistical branch, never a zero-error spacelike message channel, recovering Corollary 14.2.6.1c as the large-separation projection of the same format split.
+
 ### 14.2.7 Resolution of the Strong CP Problem
 
 The Strong CP problem—why the QCD vacuum angle $\bar{\theta}<10^{-10}$ despite no apparent symmetry requiring it—is addressed on the Appendix K strong-CP branch, whose topological-cost, $\sigma$-symmetric, and orientation-preserving real-Yukawa assumptions remain part of the stated branch data.

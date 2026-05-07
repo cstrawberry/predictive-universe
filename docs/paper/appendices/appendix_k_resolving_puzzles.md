@@ -26,11 +26,25 @@ $$G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}$$
 $$\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2} = \frac{c^3}{4 \hbar G}$$
 This relationship is further constrained by the PCE-driven optimization of these parameters in the vacuum state. Appendix Q provides the complete calculation (with zero continuously adjustable parameters) of the ratio $\delta/L_P \approx 2.355$ through minimization of the global PCE potential, linking the microscopic MPU scale to the emergent Planck scale. The derivation proceeds by constructing $V_{vac}(\delta, \chi, \eta, C_{\max})$ and finding the unique stable equilibrium satisfying all framework constraints (Appendix Q, Equations Q.1-Q.18).
 
-**Electromagnetic coupling $\alpha$:** The fine-structure constant at the Thomson limit is derived in Appendix Z with no continuous fit parameters. The complete derivation establishes:
+**Electromagnetic coupling $\alpha$:** Appendix Z gives the Thomson-limit sinc-core value and its residual-gated certificate row. The complete core derivation establishes:
 $$\boxed{D = 4}$$
 
-$$\boxed{\alpha^{-1} = \frac{4\pi}{u^*} - \frac{\pi}{\sqrt{K_0}} + \frac{\pi u^*}{24\sqrt{K_0}}\left(1 - \frac{u^{*2}}{6}\right) = 137.036092 \pm 0.000060}$$
-where $u^* = 2^{1/8} - 1$ and $K_0 = 3$. The derivation proceeds through a seven-stage chain: MPU invariants ($d_0 = 8$, $\varepsilon_0=\ln2$) → active kernel dimension $a = 2$ via the Physical Instantiation Principle (Theorem Z.1) → interface mode count $M = 2ab = 24$ (Theorem Z.5) → PCE-Attractor orbit $\mathrm{Gr}(2,8)$ → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1–Z.21). The second-order correction arises from the Grassmannian curvature sector (Theorem Z.24; Lemma Z.24a) and minimal holonomy (Lemma Z.14), and the third-order factor $(1 - u^{*2}/6)$ from the SU(2) geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension $D = 4$ from the mode-channel correspondence (Theorems Z.10–Z.11), while Appendix G supplies an independent stability-based reinforcement.
+$$
+\boxed{
+\alpha^{-1}_{0}
+=
+\frac{4\pi}{u^*}
+-
+\frac{\pi}{\sqrt{K_0}}
++
+\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*)
+=
+137.03609205522863\ldots,
+\qquad
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha
+}
+$$
+where $u^* = 2^{1/8} - 1$, $K_0 = 3$, and $R_\alpha$ is fixed only by the residual gate. The derivation proceeds through a seven-stage chain: MPU invariants ($d_0 = 8$, $\varepsilon_0=\ln2$) → active kernel dimension $a = 2$ via the Physical Instantiation Principle (Theorem Z.1) → interface mode count $M = 2ab = 24$ (Theorem Z.5) → PCE-Attractor orbit $\mathrm{Gr}(2,8)$ → operational distinguishability → mode-channel correspondence → Ward identity → electromagnetic coupling formula (Appendix Z, Sections Z.1-Z.21). The second-order correction arises from the Grassmannian curvature sector (Theorem Z.24; Lemma Z.24a) and minimal holonomy (Lemma Z.14), and the exact transport factor is $\operatorname{sinc}(u^*)$ from the $SU(2)$ geodesic-chord relation in each interface subblock. The derivation simultaneously establishes the emergent spacetime dimension $D = 4$ from the mode-channel correspondence (Theorems Z.10-Z.11), while Appendix G supplies an independent stability-based reinforcement.
 
 **Strong coupling $g_s$ and weak coupling $g_w$:** These relate to the effective stiffness or inverse-stiffness coefficients in the emergent gauge field actions (Appendix G, Equation G.5.2). In the stiffness convention of Theorem X.8c, the coefficient $1/g_i^2$ is the normalized shadow price of maintaining the corresponding gauge-coherence constraint; in the interaction-strength convention, $g_i^2$ is the reciprocal normalized price after the matching factors are applied. The unified gauge structure $G_{SM} = SU(3)_C \times SU(2)_L \times U(1)_Y$ with dimension 12 emerges from the thermodynamically optimal partition $H_0 \cong \mathbb{C}^2 \oplus \mathbb{C}^6$ (Appendix G, Proposition G.M1; Appendix Z, Theorem Z.1). At the PCE-optimal attractor, the unified coupling satisfies $g_U^2 = \pi/6$ with $\alpha_U^{-1} = 24$ (Appendix T, Theorem T.39a), derived from first principles via Bures holonomy on $\mathrm{Gr}(2,8)$.
 
@@ -1320,7 +1334,7 @@ The Strong CP Problem is resolved through two independent geometric mechanisms:
 | $\arg(\det M_q)$ | 0 | $E_8$ root reality + positive-orientation determinant certificate | Corollary K.6.5 |
 | $\bar{\theta}$ | 0 | Combined | Theorem K.6.11 |
 | CKM phase $\delta$ | 66.7° | Berry holonomy (Type II) | Theorem K.6.18 |
-| $\eta_B$ | $(6.2 \pm 0.5) \times 10^{-10}$ | Baryogenesis | Theorem K.6.19 |
+| $\eta_B$ | validation run $(6.2 \pm 0.5)\times10^{-10}$; theorem-level only after $\mathfrak C_B$ or $\mathfrak C_B^{\mathrm{tr}}$ | Baryogenesis | Theorem K.6.19; Definitions Y.11.7a and Y.11.7e |
 
 **Key Insights:**
 
@@ -1407,7 +1421,7 @@ $$\kappa_{\mathrm{ref}} = 141.5$$
 **Reference Evaluation:**
 $$\Lambda L_P^2 = 8\pi A_{\text{eff}} e^{-283}$$
 
-For $A_{\text{eff}} = 1$, this gives $\Lambda L_P^2 = 3.13\times10^{-122}$. Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ from Corollary U.15b gives the five-mode branch reference evaluation $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$, while the corresponding four-mode branch value is $\Lambda L_P^2 = (1.06 \pm 0.01)\times10^{-122}$ at the same prefactor. Holding $\kappa_{\mathrm{ref}}$ fixed, the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times10^{-122}$ (Appendix V, Eq. (V.5)) implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ on the five-mode reference branch; the corresponding four-mode branch would require $A_{\text{eff}}^{(\text{obs},4)}=2.49\pm0.04$.
+For $A_{\text{eff}} = 1$, the five-mode reference convention gives $\Lambda L_P^2 = 3.13\times10^{-122}$. Using the Appendix U working value $A_{\text{eff}} = 0.923 \pm 0.011$ from Corollary U.15b gives the five-mode branch reference evaluation $\Lambda L_P^2 = (2.88 \pm 0.03)\times10^{-122}$. Theorem U.8c obstructs this five-mode value as an unconditional false-vacuum closure in the current Definition U.4 action. The Definition U.6 four-mode branch fixes the exponent $\kappa=142$ under Theorem U.13b and has forward expression $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$; substituting the same working prefactor gives $(1.06 \pm 0.01)\times10^{-122}$ only as a same-prefactor reference check. Holding $\kappa_{\mathrm{ref}}$ fixed, the observed value $\Lambda L_P^2 = (2.86599 \pm 0.04849)\times10^{-122}$ (Appendix V, Eq. (V.5)) implies $A_{\text{eff}}^{(\text{obs})}=0.917\pm0.016$ on the five-mode reference branch; the corresponding four-mode exponent branch would require $A_{\text{eff}}^{(\text{obs},4)}=2.49\pm0.04$.
 
 **Key Insight:** The same Golay code structure organizes both the electroweak and vacuum sectors, but the logical status differs. The electroweak scale uses the determinant model of Appendix T, whereas the cosmological-constant reference exponent additionally depends on the Appendix U five-mode reference-counting convention and the Appendix U prefactor convention. Theorem U.8c shows that the pure-coordinate dilatation tangent needed for the five-mode branch is obstructed in the current Definition U.4 continuum action. The numerical ratio
 $$\frac{2\kappa_{\Lambda,\mathrm{ref}}}{\kappa_{EW}} = \frac{283}{38.5} \approx 7.35$$
@@ -2092,7 +2106,7 @@ The following results have been derived with precise numerical predictions:
 
 | Result | Value | Source |
 |:-------|:------|:-------|
-| Fine-structure constant | $\alpha^{-1} \approx 137.036092 \pm 0.000060$ | Appendix Z, Theorems Z.24–Z.26 (no continuous fit parameters once those assumptions are fixed) |
+| Fine-structure constant | $\alpha^{-1}_{0}=137.03609205522863\ldots$; $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ | Appendix Z, Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1 |
 | Electroweak scale | $v \approx 246$ GeV from $\kappa_{EW} = 38.5$ | Appendix T, Theorem T.5 |
 | Weinberg angle | $\sin^2\theta_W^{(0)} = 3/8$ | Appendix T, Theorem T.14 |
 | Higgs mass | $m_H \approx 125$ GeV from metastability | Appendix T, Theorem T.28 |
@@ -2146,7 +2160,7 @@ The following areas have established conceptual frameworks with detailed calcula
 The framework makes precise, falsifiable predictions across multiple domains:
 
 **Fundamental Constants:**
-- $\alpha^{-1} = 137.036092 \pm 0.000060$ (test with improved QED measurements)
+- Accepted Thomson certificate interval for $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ after the residual gate is fixed before comparison
 - $\sin^2\theta_W$ and $m_H$ consistency checks with RG evolution to high precision
 
 **Particle Physics:**

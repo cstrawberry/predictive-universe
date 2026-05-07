@@ -2,7 +2,7 @@
 
 ## W.0 Notation and setup
 
-This appendix derives general, robust identities and bounds relating emergent gauge couplings to the information-theoretic invariants of the MPU's predictive cycle. This formalism provides stringent internal consistency checks for the PU framework. In **Appendix Z**, these principles are applied to a first-principles derivation of the MPU's QFI spectrum, culminating in the Thomson-limit fine-structure calculation $\alpha^{-1} \approx 137.036092 \pm 0.000060$ (Theorems Z.24–Z.26). No continuous fit parameter enters the final formula.
+This appendix derives general, robust identities and bounds relating emergent gauge couplings to the information-theoretic invariants of the MPU's predictive cycle. This formalism provides stringent internal consistency checks for the PU framework. In **Appendix Z**, these principles are applied to a derivation of the MPU's QFI spectrum, culminating in the Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$ and the certificate row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ (Theorems Z.24-Z.26; Definition Z.27.11a; Theorem Z.27.11j.1). No continuous fit parameter enters the core formula.
 
 * **Alphabet size:** $d_0\in\{2,3,\dots\}$. PU uses $d_0=8$.
 * **One‑cycle deformation variable:** $u=g^2\ge 0$ (Heaviside–Lorentz units).
