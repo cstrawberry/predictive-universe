@@ -1984,7 +1984,7 @@ The framework derives values for several fundamental ratios from first principle
 
 - **The Planck ratio**: $\delta/L_P = \sqrt{8\ln 2} \approx 2.355$ from PCE optimization (Appendix Q, Equation Q.18)
 - **The fine-structure constant (Thomson limit)**: the closed-form sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$, a single-valued elementary function of the forced integers $K_0=3$, $d_0=8$, $M=24$, $D=4$ with no continuous fit (Appendix Z, Theorem Z.26; Corollary Z.26a), landing $0.678$ ppm from the measured value; the certificate-complete comparison row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ is theorem-level only after the residual gate of Definition Z.27.11a and Theorem Z.27.11j.1, and is refutable by Corollary Z.26c
-- **The cosmological constant**: the five-mode formula $\Lambda L_P^2=8\pi A_{\text{eff}}e^{-2\kappa_{\mathrm{ref}}}$ with $\kappa_{\mathrm{ref}}=141.5$ is a reference branch obstructed as an unconditional false-vacuum closure by Theorem U.8c; the four-mode exponent branch fixes $\kappa=142$ under Theorem U.13b, while a theorem-level forward interval for $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ requires the Fredholm prefactor certificate $\mathfrak F_U$ and interval audit $\mathfrak I_U^{(4)}$
+- **The cosmological constant**: the five-mode formula $\Lambda L_P^2=8\pi A_{\text{eff}}e^{-2\kappa_{\mathrm{ref}}}$ with $\kappa_{\mathrm{ref}}=141.5$ is a reference branch obstructed as an unconditional false-vacuum closure by Theorem U.8c; the four-mode exponent branch fixes $\kappa=142$ under Theorem U.13b, while a theorem-level forward interval for $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$ requires the relative Quillen-Fredholm prefactor certificate $\mathfrak F_U$ and interval audit $\mathfrak I_U^{(4)}$
 
 These derivations represent predictions of the framework in the sense that the functional forms and discrete exponents are fixed by PU; where a one-loop prefactor (e.g., $A_{\text{eff}}$) enters, it is defined by the specified bounce and can be independently computed, while the observed value serves as a consistency check on its expected $O(1)$ magnitude. The fundamental structural quantities feeding the discrete backbone are $\varepsilon_0=\varepsilon_{SPAP}=\ln2$ and $K_0=3$—both determined by the structure of self-referential prediction. PCE removes response-null overhead and selects the minimal admissible structural branch; physical equality $\varepsilon_{\mathrm{phys}}=\varepsilon_0$ is the overhead-free implementation branch.
 
@@ -2073,7 +2073,7 @@ Where mathematics articulates what prediction *can* do in principle, physics spe
 
 The mode-channel correspondence (Theorem Z.10) makes this unity explicit. The number 24 appears in pure mathematics—as the modular weight of $\eta^{24}$, the dimension of the Leech lattice, the support of the Ramanujan $\tau$-function—because mathematicians, exploring computable structures through proof, identified those satisfying extremal optimization conditions. The same number appears in physics—as QFI mode count, Golay code length, kissing number $K(4)$—because PCE, selecting structures through thermodynamic competition, converges on the same extrema.
 
-Both processes solve the same problem: finding structures optimal for prediction under finite resources. They arrive at the same answer because they *are* the same optimization, approached from different directions. 
+Both processes instantiate the same branch-indexed PCE variational grammar: each searches an admissible structure space for stable predictive optima under finite constraints, and each removes surplus description by operational equivalence. They arrive at the same extremal structures when their branch contracts have the same response-relevant invariants, although the numerical cost function and admissible configuration space need not be identical across the mathematical and physical branches.
 
 The "unreasonable effectiveness" dissolves once the common foundation is recognized. Mathematics is the abstract articulation of predictive structure; physics is that same predictive structure under thermodynamic instantiation and finite-resource constraint. The correspondence between them is therefore not accidental but a consequence of their shared origin in prediction and their shared PCE selection of optimal structures.
 
@@ -2116,7 +2116,7 @@ This prediction remains to be tested. However, its philosophical implications me
 
 The first three constants govern the *kinematics* of the already-crystallized universe: how causes propagate ($c$), how predictability breaks down ($\hbar$), and how geometry curves ($G$). The golden ratio would govern something different—the *dynamics* of crystallization itself, the process by which geometric structure emerges from information.
 
-This would extend the resolution of Wigner's puzzle (Section P.7.1) in a striking direction. The golden ratio appears throughout mathematics—in continued fractions (the "most irrational" number), Fibonacci sequences, optimal phyllotaxis, and quasicrystal symmetries—always in contexts involving extremal packing or growth under geometric constraints. Biologists have long noted that $\varphi$ governs leaf arrangements that maximize sunlight capture. If $\varphi$ also governs spacetime emergence, then the same optimization principle that arranges sunflower seeds crystallizes the dimensional structure of reality. This would not be analogy but identity—the mathematics of efficient packing is the physics of spatial emergence because both are manifestations of PCE optimization at different scales.
+This would extend the resolution of Wigner's puzzle (Section P.7.1) in a striking direction. The golden ratio appears throughout mathematics—in continued fractions (the "most irrational" number), Fibonacci sequences, optimal phyllotaxis, and quasicrystal symmetries—always in contexts involving extremal packing or growth under geometric constraints. Biologists have long noted that $\varphi$ governs leaf arrangements that maximize sunlight capture. If $\varphi$ also governs spacetime emergence, then the same branch-indexed PCE variational grammar would appear in biological packing and in channel crystallization. This would be more than a loose analogy, but it would not identify the biological and spacetime cost functions; it would identify a shared branch-contract form of extremal packing under finite-resource constraints.
 
 The framework does not currently require $\varphi$; its core derivations (M = 24, D = 4, $\alpha_{\mathrm{em}}$) proceed without invoking it. The prediction arises from applying the Hopkins-Stillinger-Torquato theorem to the MCC mechanism, yielding a testable consequence rather than a foundational assumption. If falsified, the framework's main results remain intact while the specific dynamical picture of channel crystallization would require revision. If verified, it would suggest that the ancient geometers who revered the golden ratio intuited, without understanding, a constant as fundamental as the speed of light.
 
@@ -2456,7 +2456,7 @@ Wheeler asked how physics emerges from information. The framework's answer: thro
 
 # P.8.9a What is Life?
 
-In 1944, Erwin Schrödinger posed a question that physics had largely avoided: *What is life?* [Schrödinger 1944]. His answer—that living systems maintain their organization by "feeding on negative entropy"—was prescient but qualitative. He lacked the mathematical framework to make this precise. The PU framework provides that framework, revealing that Schrödinger's "negative entropy" is operationally realized as *error correction*, and that the genetic code exhibits the defining properties of an error-correcting code.
+In 1944, Erwin Schrödinger posed a question that physics had largely avoided: *What is life?* [Schrödinger 1944]. His answer—that living systems maintain their organization by "feeding on negative entropy"—was prescient but qualitative. He lacked the mathematical framework to make this precise. The PU framework provides that framework, revealing that Schrödinger's "negative entropy" is operationally realized as substrate error correction, and that the genetic code exhibits error-tolerant organization analogous to, but not identical with, formal algebraic error-correcting codes.
 
 This section develops this identification across five domains: the thermodynamic necessity of biological code and the negentropy–error correction identity (P.8.9a.1–2), the structure of DNA as error-correcting organization (P.8.9a.3–4), the treatment of evolution as PCE optimization across generations (P.8.9a.5–6), the emergence of Consciousness Complexity in biological aggregates (P.8.9a.7–8), and testable predictions for biological research (P.8.9a.9–10).
 
@@ -2487,7 +2487,7 @@ $$
 
 Iterating for $N$ cycles yields $D_{tr}(\mathcal{E}_N^N(\rho_1),\mathcal{E}_N^N(\rho_2)) \le f_{RID}^N D_{tr}(\rho_1,\rho_2)\to 0$ as $N\to\infty$. Hence, under passive evolution, distinguishability between alternative functional states decays to zero, so no fixed-size encoding can preserve a nontrivial amount of recoverable information for arbitrarily long times. Persistence for $T\gg\tau_{cycle}$ therefore requires periodic recovery operations that actively restore distinguishability against the contractive noise, i.e. error correction. Any such recovery requires redundant encoding (a proper code subspace with ancillary degrees of freedom) in order to satisfy the Knill–Laflamme correctability conditions for a nontrivial noise channel. Thus error correction is necessary for persistence of complex organization under PU dynamics. ∎
 
-This theorem explains why DNA exists. Life did not "choose" to use coded information—any persistent complex organization *must* use coded information. The genetic code is biology's solution to the same problem the vacuum solves with the Golay structure.
+This theorem explains why coded inheritance is PCE-favored for persistent life. Life did not "choose" to use coded information as an arbitrary convention: any persistent complex organization must preserve enough self-description to correct degradation across update cycles. The genetic code is biology's error-tolerant solution to a persistence problem structurally analogous to the vacuum's Golay-protected finite-response problem, without implying that the genetic code is itself the Golay code or a formal linear block code.
 
 ---
 
@@ -2568,7 +2568,7 @@ All three structures are determined by the PCE-selected saturation value $\varep
 
 ## P.8.9a.3 DNA and the Properties of Error-Correcting Codes
 
-The genetic code exhibits the defining properties of error-correcting codes, whose theoretical foundations were established by Shannon [Shannon 1948] and whose structural definitions were formalized by Hamming [Hamming 1950]:
+The genetic code exhibits error-tolerant properties analogous to error-correcting codes, whose theoretical foundations were established by Shannon [Shannon 1948] and whose structural definitions were formalized by Hamming [Hamming 1950]:
 
 **Definition P.8.9a.2 (Error-Correcting Code Properties).** An error-correcting code $[n, k, d]$ is characterized by:
 - Block length $n$: number of symbols per codeword
@@ -2585,9 +2585,9 @@ The genetic code exhibits structural parallels to these properties:
 |----------|-------------------------|--------------|
 | Block structure | 24-bit blocks | 3-nucleotide codons |
 | Codewords | $2^{12} = 4096$ codewords | 64 codons |
-| Information content | 12 information bits | 20 amino acids + 3 stops |
-| Redundancy ratio | $R = 12/24 = 0.5$ | $R \approx 20/64 \approx 0.31$ |
-| Error tolerance | Corrects up to 3 bit errors | Wobble position absorbs point mutations |
+| Information content | 12 formal information bits | 20 amino acids plus one termination class, i.e. 21 functional output classes |
+| Redundancy / degeneracy | Formal linear-code rate $R=12/24=0.5$ | 64 codons map to 21 output classes; the output occupancy fraction is $21/64\approx0.328$, while the information rate $\log_2 21/6\approx0.732$ is not a Shannon-Hamming linear-code rate |
+| Error tolerance | Corrects up to 3 bit errors by syndrome decoding | Wobble and chemical-neighborhood structure reduce the phenotypic impact of some point mutations |
 | Organized redundancy | 12 parity bits protect 12 signal bits | Synonymous codons cluster by chemical similarity |
 
 **Proposition P.8.9a.1 (Genetic Code Redundancy Structure).** The mapping from 64 codons to 20 amino acids plus stop signals exhibits non-random redundancy organization consistent with error-tolerance optimization.
@@ -2753,9 +2753,9 @@ The PU framework reveals a deep continuity between the error-correcting organiza
 | Property | Vacuum (Golay) | Life (Genetic) |
 |----------|---------------|----------------|
 | Block structure | 24 modes | 3 nucleotides (codon) |
-| Redundancy | 12 signal + 12 parity modes | 20 amino acids from 64 codons |
-| Rate | $R = 1/2$ | $R \approx 0.31$ (20/64) |
-| Error correction | 3-error correcting | Point mutation tolerance |
+| Redundancy | 12 signal + 12 parity modes | 64 codons map redundantly to 20 amino acids plus termination |
+| Rate / degeneracy | Formal linear-code rate $R=1/2$ | Functional occupancy fraction $21/64\approx0.328$; information rate $\log_2 21/6\approx0.732$ |
+| Error correction / tolerance | 3-error correcting by syndrome decoding | Point-mutation tolerance through wobble and chemical-neighborhood structure |
 | Selection principle | PCE optimization | Natural selection (= generational PCE) |
 
 **Thesis P.8.9a.2 (Continuity of Organization).** The organizational principles governing the vacuum and governing life are the same: PCE optimization under entropic pressure. Life is not a violation of physical law but its highest expression—physical law applied to the problem of persistent complex prediction.
@@ -5822,7 +5822,7 @@ Physicists, following PCE optimization from the predictive foundations, arrive a
 
 The convergence is not coincidental. As stated in Section P.7 of Appendix P:
 
-> "Both processes solve the same problem: finding structures optimal for prediction under finite resources. They arrive at the same answer because they *are* the same optimization, approached from different directions."
+> "Both processes instantiate the same branch-indexed PCE variational grammar: each searches an admissible structure space for stable predictive optima under finite constraints, and each removes surplus description by operational equivalence."
 
 The Monster appears in both domains because it is the automorphism group of the unique structure—the Moonshine module $V^\natural$—that satisfies the extremal optimization conditions that both mathematics and physics, as expressions of prediction, necessarily converge upon.
 
@@ -6369,7 +6369,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a Landauer o
 | Thomson-limit $\alpha^{-1}$ | (Z.27.11a) | Definition Z.27.11a; Theorem Z.27.11c; Remark Z.26d; Corollary Z.26d.1; Definition Z.27.11j; Theorem Z.27.11j.1 | certificate-pending on $\mathfrak C_\alpha$ together with the residual-operator gate; canonical comparison-budget scale $B_{\mathrm{budget}}^{\mathrm{can}}=5.649085604\times10^{-5}$ is a budget diagnostic, not a certified residual interval; certificate-complete on an accepted $\mathfrak R_\alpha^{\mathrm{AO}}$ via Theorem Z.27.11h |
 | Cosmological constant exponent | $\kappa=142$ on the four-mode false-vacuum branch | Theorem U.13b | closed for the exponent on the four-mode false-vacuum branch under the stated spectral hypotheses |
 | Cosmological constant five-mode reference exponent | $\kappa_{\mathrm{ref}}=141.5$ | Appendix U reference-counting convention; Theorem U.8c | reference convention; not theorem-level without the dilation/Fredholm certificate |
-| Cosmological constant prefactor | $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ | Definition U.15d; Theorem U.15e; Corollary U.15f; Theorem U.15l; Definition U.15m; Theorem U.15m.1 | certificate-pending on $\mathfrak F_U$ together with the Fredholm prefactor gate and the interval audit $\mathfrak I_U^{(4)}$ |
+| Cosmological constant prefactor | $A_{\mathrm{eff}}^{\mathrm{Fred},4}$ | Definition U.15d; Theorem U.15e; Corollary U.15f; Theorem U.15i.2; Theorem U.15l; Definition U.15m; Theorem U.15m.1 | certificate-pending on $\mathfrak F_U$ together with the relative Quillen-Fredholm prefactor gate and the interval audit $\mathfrak I_U^{(4)}$ |
 | Electroweak threshold tuple | $\Delta_{\mathrm{RHG}}$ | Definition T.78.6; Algorithm T.78.6a; Theorem T.78.7; Definition T.78.10; Theorem T.78.11 | certificate-pending on $\mathfrak R_{\mathrm{RHG}}$ or $\mathfrak C_{\mathrm{tor}}$ |
 | Flavor parameter vector | $\Pi_T$ | Definition T.79.4; Algorithm T.79.5; Theorem T.79.6; Definition T.79.8a; Theorem T.79.8b | certificate-pending on $\mathfrak C_{\mathrm{fl}}$ or $\mathfrak J_{\mathrm{RHG-fl}}$; gauge algebra plus $N_g=3$ does not determine flavor numerics |
 | Nuclear aggregate sector | finite nuclear Hamiltonian and colorless boundary impedance | Theorem T.79a; Corollary T.79a.1; Definition X.8k.5; Theorem X.8k.6 | certificate-pending on $H_A^{\mathrm{PU}}(Z,N)$, $\Lambda_A^{\mathrm{PU}}(E)$, spin-current, transition, and decay operators; Appendix T elementary data $\Pi_T$ do not determine nuclear spectra |
@@ -6483,6 +6483,17 @@ A registry is **schema-consistent** when $\mathcal E$ is finite and acyclic, $\s
 
 **Remark P.14.1m.4 (Implementation as a Registry File).** A text implementation of $\mathfrak G_{\mathrm{PU}}$ records vertices with fields $(\mathrm{id},\sigma,\rho,\beta,\theta,\delta)$ and edges/cells with fields $(\mathrm{src},\mathrm{dst},\Pi,\Omega)$. Because $\mathcal V$, $\mathcal E$, and the cell list are finite, Algorithm P.14.1m.0 is a finite enumeration over records. The checks are decidable by lookup in the named theorem stacks and certificate records. ∎
 
+**Remark P.14.1m.5 (Compression-Trajectory Schema for the Registry Snapshot).** The strict-certificate registry $\mathfrak G_{\mathrm{PU}}$ admits a registry-aligned compression-trajectory reading. The reading adds no new physical postulate, no new strict certificate in the sense of Definition D.8.9a, no new operator, no new bridge condition, and no new acceptance gate. It is methodological at the level of Convention P.14.1l.
+
+1. *Compression step.* A compression step on the current registry snapshot $\mathcal C^{(0)}_{\mathrm{PU}}$ replaces a finite collection of accepted records by a single record from which they are recovered by composition of registered projection or restriction maps, while preserving every accepted strict certificate and every status assignment of Convention P.14.1k.
+2. *Compression measure.* A registry-aligned compression measure $\mu$, defined as the cardinality of accepted records weighted by the status rank of Convention P.14.1k, takes values in a well-ordered set. A non-trivial compression step strictly decreases $\mu$.
+3. *Finite-snapshot termination.* From a fixed finite snapshot, every compression trajectory terminates after finitely many steps. The terminal form is either singleton, meaning one record recovers all theorem-level rows of $\mathcal C^{(0)}_{\mathrm{PU}}$ by registered maps, or plural, meaning an irreducibly plural collection has joint recovery and no further admissible compression step.
+4. *Current candidate menu within existing apparatus.* Current candidates are: the master predictive operator $\mathfrak L_{\mathrm{PU}}$ of Definition X.9.6a and Theorem X.9.6b; the master zeta-index ledger $\mathfrak Z_{\mathrm{PU}}$ of Definition X.9.6g and Theorem X.9.6g.4; the marked-arena package of Definition Z.35d with rigidity by Theorem Z.35e; a future common parent invariant for the recurrent-ledger source roles in the sense of Remark R.3.5e.5; and plural termination by joint recovery from the retained candidate records.
+5. *Status preservation.* The recurrent-ledger non-collapse status of Theorem R.3.5e.3 and the open status of Remark R.3.5e.5 are preserved. Every status assignment in Convention P.14.1k is unchanged, and no description-layer output is reinterpreted as a selection-layer assertion.
+
+*Proof.* Items 1-2 are definitions on the finite registry. Item 3 is well-founded descent: $\mu$ takes values in a well-ordered set, and each non-trivial compression step strictly decreases $\mu$. Item 4 enumerates records already present in the manuscript or explicitly marked open. Item 5 follows because the schema introduces no new acceptance test and does not alter Algorithm P.14.1m.0. ∎
+
+
 ### P.14.4 The Derivation Chain
 
 With $\varepsilon_0=\ln2$ and $K_0 = 3$ (the PCE-selected minima), the framework derives the following chain (Appendix Z):
@@ -6515,7 +6526,7 @@ $$
 8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}.
 $$
 
-The exponent is theorem-level on the stated branch; the numerical value is certificate-pending until the Fredholm determinant ratio, negative-mode factor, ghost factor, collective-coordinate Jacobian, false-vacuum Hessian, finite-volume/extensivity factor, measure normalization, and residual interval are fixed by $\mathfrak F_U$ and $\mathfrak I_U^{(4)}$.
+The exponent is theorem-level on the stated branch; the numerical value is certificate-pending until the relative Quillen-Fredholm determinant ratio, negative-mode factor, ghost factor, collective-coordinate Jacobian, false-vacuum Hessian, finite-volume/extensivity factor, measure normalization, and residual interval are fixed by $\mathfrak F_U$ and $\mathfrak I_U^{(4)}$.
 
 ### P.14.5 Theoretical Predictions and Experimental Comparison
 
@@ -6622,6 +6633,22 @@ $$\boxed{
 }$$
 
 The compiled tests are consistent with operation near the boundary of thermodynamic possibility: minimal complexity, minimal structural logical cost, and minimal necessary structure, within the stated domains and uncertainty budgets.
+
+### P.14.9 Meta-Theoretic Status and Comparative Adequacy
+
+The status ledger above concerns object-level claims: assertions about physical reality or about the finite-response structures that generate physical predictions. The manuscript also contains meta-level claims about how physical frameworks are compared and how PU positions itself under that comparison. These two levels must remain separate.
+
+**Convention P.14.9a (Object-Level / Meta-Level Separation).** A PU object-level claim is a finite-record assertion about a physical branch, response quotient, operator, sector value, or bridge map. Its status is assigned by Convention P.14.1a and audited by the registry $\mathfrak G_{\mathrm{PU}}$ of Definition P.14.1m. A PU meta-level claim is a methodological assertion about the comparison criterion for theories, the role of compression in theory choice, or PU's own positioning under that criterion. Meta-level claims may be recorded in Appendix P, the discussion, or the conclusion, but they do not create new physical sectors, constants, operators, certificates, or validation rows.
+
+**Definition P.14.9b (Structural Description Cost).** For a theory or framework $\mathcal T$ and empirical domain $\mathcal E$, let $K_{\mathcal E}(\mathcal T)$ denote the structural description cost of producing the predictions of $\mathcal T$ on $\mathcal E$ from the admitted initial data, boundary data, and observational protocols. $K_{\mathcal E}$ is a methodological comparison proxy modeled on Kolmogorov description length, not a new physical observable. It is generally not computable exactly and is proxy-dependent in practice; comparisons using it must therefore state the shared domain $\mathcal E$ and the structural inputs counted.
+
+**Principle P.14.9c (Comparative K-Adequacy).** If two frameworks $\mathcal T_1$ and $\mathcal T_2$ are predictively adequate on a shared empirical domain $\mathcal E$, predictive overlap alone does not establish theoretical equivalence. On the shared domain, the framework with greater predictive yield per structural description cost, or with equal yield and lower $K_{\mathcal E}$, is the better compression of the same content. Coverage outside $\mathcal E$ can justify additional structure only when it supplies additional predictive yield on the enlarged domain.
+
+**Remark P.14.9d (Application to PU).** PU is bound by Principle P.14.9c. It cannot dismiss quantum mechanics, general relativity, the Standard Model, or any alternative framework merely by reproducing their predictions. On a shared domain, PU must either derive with lower explicit structural input what the competitor postulates, or supply additional predictive yield that justifies any additional structure. This is the methodological reading of the input-output economy statement in Section 14.6.8.
+
+**Observation P.14.9e (Bet-Criterion Coherence).** PU's substantive framework bet is that physical reality is most efficiently modeled as predictive activity under finite-resource constraints. Principle P.14.9c evaluates theories by predictive yield per structural description cost. Thus, if PU wins the comparative $K_{\mathcal E}$ test on a domain, the criterion would have selected a framework whose subject matter is the same kind of activity that the criterion measures. This is a structural coherence between criterion and framework content. It is not evidence by itself, not a proof of correctness, and not a self-validation rule; the comparison is still empirical and relative to competing frameworks.
+
+**Convention P.14.9f (Conservative Status of the Meta-Theoretic Layer).** The meta-theoretic layer is methodological. It does not add a branch, close a certificate, promote a model-level row, modify the strict-certificate registry, or change any status in Convention P.14.1k. Rejection or alteration of the meta-theoretic layer would not by itself affect any object-level theorem. Conversely, acceptance of the meta-theoretic layer cannot repair a failed physical prediction or fill a missing certificate.
 
 
 ## P.15 Source Energy: The Thermodynamic Cost of Self-Knowledge
@@ -7425,4 +7452,4 @@ The capstone result is the derivation of the Monster group $\mathbb{M}$ as vacuu
 
 The SPAP Triad extends to a quadruple equivalence: $\mathcal{T} \cong \mathcal{E} \cong \mathcal{P} \cong \mathcal{S}$. Time, entropy, perspective, and vacuum symmetry are equivalent expressions of the predictive cycle.
 
-The resolution of Wigner's puzzle (Section P.7) follows: mathematics and physics correspond because both solve the same optimization problem. That PCE necessarily produces the Monster—connecting awareness to the largest sporadic group through thermodynamic necessity—exemplifies the depth of determination this framework achieves.
+The resolution of Wigner's puzzle (Section P.7) follows: mathematics and physics correspond because both instantiate the same branch-indexed PCE variational grammar under different admissible contracts. That PCE necessarily produces the Monster on the stated vacuum-symmetry branch—connecting awareness to the largest sporadic group through thermodynamic necessity—exemplifies the depth of determination this framework achieves.

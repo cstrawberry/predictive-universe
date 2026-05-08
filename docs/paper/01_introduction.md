@@ -125,7 +125,7 @@ The residual $R_\alpha$ is not a fit parameter and not an adjustable tolerance: 
 $$
 \Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284},
 $$
-and a theorem-level numerical interval requires the Fredholm prefactor certificate and interval audit of Definition U.15m and Theorem U.15m.1. The five-mode working-prefactor value $(2.88\pm0.03)\times10^{-122}$ and the corresponding four-mode same-prefactor evaluation remain reference and consistency checks unless the determinant/prefactor certificates are supplied. The same Appendix U primordial branch gives the Primordial Complexity Product Lock:
+and a theorem-level numerical interval requires the relative Quillen-Fredholm prefactor certificate and interval audit of Definition U.15m, Theorem U.15m.1, and Theorem U.15i.2. The five-mode working-prefactor value $(2.88\pm0.03)\times10^{-122}$ and the corresponding four-mode same-prefactor evaluation remain reference and consistency checks unless the determinant/prefactor certificates are supplied. The same Appendix U primordial branch gives the Primordial Complexity Product Lock:
 $$
 A_s r
 =

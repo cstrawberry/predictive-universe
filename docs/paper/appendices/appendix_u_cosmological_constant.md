@@ -1177,6 +1177,41 @@ is a forward determinant output. If the computed value differs from the observat
 
 *Proof.* Definition U.15d fixes the vacuum prefactor by direct Fredholm evaluation. Definition U.15g and Theorem U.15h fix the same determinant line by gluing it to the Appendix T determinant and the transverse residual complex. When both certificates are accepted, they refer to the same oriented Quillen determinant line with the same finite-part convention, hence give the same scalar. Since no observational datum enters either certificate, disagreement with observation cannot be repaired by redefining $A_{\mathrm{eff}}$ within the theorem-level branch. ∎
 
+**Theorem U.15i.2 (Relative Quillen-Fredholm Prefactor Identity).** On a branch carrying the Fredholm certificate $\mathfrak F_U$ of Definition U.15d, define the relative determinant line
+$$
+\operatorname{Det}_{\mathrm{rel},U}
+:=
+\det{}' \mathcal H_{\mathrm{false}}
+\otimes
+\left(\det{}'' \mathcal H_{\mathrm{bounce}}\right)^{-1},
+\tag{U.15i.2.1}
+$$
+where the primes encode exactly the omissions specified in Definition U.15d: false-vacuum null directions are removed from $\det{}'\mathcal H_{\mathrm{false}}$, and both $\Pi_0$ and $\Pi_-$ are removed from $\det{}''\mathcal H_{\mathrm{bounce}}$. Let $s_{\mathrm{rel},U}$ be the canonical nonzero section induced by the accepted orientation and finite-part convention. Its relative Quillen norm is
+$$
+\left\|s_{\mathrm{rel},U}\right\|_Q
+=
+\left(
+\frac{\det{}'_\zeta\mathcal H_{\mathrm{false}}}
+{|\det{}''_\zeta\mathcal H_{\mathrm{bounce}}|}
+\right)^{1/2}.
+\tag{U.15i.2.2}
+$$
+Then the certified vacuum prefactor is exactly
+$$
+A_{\mathrm{eff}}^{\mathrm{Fred}}
+=
+\mathcal J_{\mathrm{coll}}
+|\mathcal A_{\mathrm{neg}}|
+\mathcal A_{\mathrm{ghost}}
+\mathcal A_{\mathrm{fv}}
+\mathcal A_{\mathrm{meas}}
+\left\|s_{\mathrm{rel},U}\right\|_Q.
+\tag{U.15i.2.3}
+$$
+Thus the cosmological prefactor is a relative Quillen-Fredholm norm multiplied only by the explicitly listed collective-coordinate, negative-mode, ghost, finite-volume/extensivity, and measure factors. No separate determinant, Jacobian, ghost, or finite-volume constant may be appended outside this product without defining a new prefactor branch.
+
+*Proof.* This is a reformulation of (U.15d.3) in canonical determinant-line language. Definition U.15d fixes the two zeta determinants with one common finite-part convention $\mu_U$, fixes the omitted zero and negative spectral subspaces by $\Pi_0$ and $\Pi_-$, and fixes the orientation of the determinant line. Therefore the determinant ratio in (U.15d.3) is precisely the Quillen norm of the relative determinant section (U.15i.2.1), giving (U.15i.2.2). Substituting (U.15i.2.2) into (U.15d.3) gives (U.15i.2.3). Since every remaining multiplicative factor in (U.15d.3) appears explicitly in (U.15i.2.3), adding any further determinant, Jacobian, ghost, finite-volume, or measure factor changes the finite record and hence defines a different branch. ∎
+
 **Corollary U.15j (Determinant-Transfer Branch-Decision Ledger).** Let
 $$
 \Xi_{\perp}:=A_{\perp}e^{\mathcal B_{\mathrm{BL}}}

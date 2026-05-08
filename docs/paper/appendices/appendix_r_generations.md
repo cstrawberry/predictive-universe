@@ -741,6 +741,40 @@ $$
 $$
 together with the canonical hierarchy of Theorem Z.35e, without replacing any source-role chain by a numerical coincidence.
 
+**Remark R.3.5e.5a (Parent-Datum Schema Gate).** A candidate parent-source record for Remark R.3.5e.5 may be organized as a finite capacity-arena datum
+
+$$
+\mathfrak P_{ar}
+=
+(\mathcal H,p,\omega,\mathcal C_{\mathrm{resp}},\mathcal R,\mathcal Q,\lambda,
+\pi_3,\pi_{\mathrm{cap}},\pi_{\mathrm{tan}},\pi_{\mathrm{kis}},
+\rho_{\mathrm{top}},\rho_{\mathrm{Cl}},\rho_{\mathrm{ar}}),
+$$
+
+where $\mathcal H\cong\mathbb C^8$ is the minimal faithful SPAP carrier on the minimal branch, $p$ is the active rank-two projector, $\omega$ is the finite PCE state realizing $\varepsilon_0=\ln2$, $\mathcal C_{\mathrm{resp}}$ is the finite active-inactive interface response category, $\mathcal R$ is the marked Golay/Peirce recovery functor, $\mathcal Q$ is the response-null quotient, and $\lambda$ is a branch-fixed scalarization of retained predictive benefit minus PCE cost. The maps $\pi_3,\pi_{\mathrm{cap}},\pi_{\mathrm{tan}},\pi_{\mathrm{kis}}$ are proposed source-invariant readouts, and $\rho_{\mathrm{top}},\rho_{\mathrm{Cl}},\rho_{\mathrm{ar}}$ are proposed coherence readouts.
+
+The associated bookkeeping index is
+
+$$
+\mathfrak I_{\mathrm{par}}(\mathfrak P_{ar})
+:=
+(K_{log},A_{min},T_{int},\Pi_{shell}),
+$$
+
+with
+
+$$
+K_{log}=3,
+\qquad
+A_{min}=2,
+\qquad
+T_{int}=2\dim_{\mathbb C}\operatorname{Hom}(p\mathcal H,(1-p)\mathcal H)=2a(d_0-a)=24,
+\qquad
+\Pi_{shell}=4.
+$$
+
+The equalities use the already-established minimal-branch data $d_0=8$, $a=2$, and the kissing-number identity $K(4)=24$. This record is a bookkeeping gate, not a current-source compression theorem. Promotion to a parent invariant requires an autonomous derivation of $\mathfrak I_{\mathrm{par}}=(3,2,24,4)$ and of the listed readout maps without using the four source chains $\mathcal C_3,\mathcal C_{\mathrm{cap}},\mathcal C_{\mathrm{tan}},\mathcal C_{\mathrm{kis}}$ as proof inputs.
+
 **Remark R.3.5e.6 (Dependency Separation, Not Pairwise-Disjoint Inputs).** Proposition R.3.5e.2 separates the recurrent integer ledger by proof role, not by pairwise-disjoint leaf inputs. The capacity chain fixes $\varepsilon_0$, $a$, and $d_0$; the Peirce tangent chain uses the already fixed $(a,d_0)$ to compute $b$, $k$, and $M$; and the kissing-number chain uses the already fixed $M$ to select $D=4$. The invariant proved by Theorem R.3.5e.3 is therefore non-replacement of source roles inside the current dependency graph, not pairwise-disjointness of every premise.
 
 *Proof.* This is a direct reading of (R.3.5e.2.1)--(R.3.5e.2.3) and of the graph definition in Theorem R.3.5e.3. The symbol $M$ appears as the output of the Peirce tangent chain and as the input of the kissing-number chain; likewise $(a,d_0)$ are fixed upstream before the Peirce calculation. Therefore pairwise-disjoint input sets are not the invariant being proved. The invariant actually proved is that no current source role replaces all the others without adding a new parent source. ∎

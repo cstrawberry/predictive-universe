@@ -130,6 +130,76 @@ For (2), if $x'\in[x]$, then $[x']=[x]$ by definition. The quantity $\inf_{y\in[
 
 For (3), compactness of $\mathcal Q_{\mathrm{phys}}$ and lower semicontinuity of $\bar V_w$ give existence of a minimizer by the direct method. For (4), Theorem P.6.1b.7 supplies strict branch separation; if two distinct classes both minimized $\bar V_w$, strict separation would give a strictly lower value for one class over the other, a contradiction. Hence the minimizer is unique under that added separation condition. ∎
 
+**Definition D.1f (PCE Branch Contract).** A finite-resolution PCE branch contract is a tuple
+$$
+\mathfrak B=
+\bigl(
+\mathcal X_{\mathfrak B},
+\mathsf P_{\mathfrak B},
+\mathcal R_{\mathfrak B},
+K_{\mathfrak B},
+r_{\mathfrak B},
+W_{\mathfrak B}
+\bigr)
+$$
+where:
+
+1. $\mathcal X_{\mathfrak B}$ is the admissible configuration space for the branch;
+2. $\mathsf P_{\mathfrak B}$ is the finite protocol family retained at that resolution;
+3. $\mathcal R_{\mathfrak B}(x)$ is the finite protocol-response presheaf induced by $x\in\mathcal X_{\mathfrak B}$ on $\mathsf P_{\mathfrak B}$;
+4. $K_{\mathfrak B}$ is a closed pointed convex resource cone whose dual cone has nonempty interior;
+5. $r_{\mathfrak B}:\mathcal X_{\mathfrak B}\to K_{\mathfrak B}$ is the branch resource vector;
+6. $W_{\mathfrak B}\subseteq K_{\mathfrak B}^*$ is the admissible set of dual PCE certificates.
+
+For $w\in W_{\mathfrak B}$, the branch scalarization is
+$$
+V_{\mathfrak B,w}(x):=w\cdot r_{\mathfrak B}(x).
+$$
+The branch quotient is defined by
+$$
+x\sim_{\mathfrak B}y
+\quad\Longleftrightarrow\quad
+\mathcal R_{\mathfrak B}(x)\simeq\mathcal R_{\mathfrak B}(y).
+$$
+
+**Theorem D.1g (Branch-Indexed PCE Variational Grammar).** All PCE applications in the framework share the same variational grammar:
+$$
+\text{choose } \mathfrak B,\quad
+\text{quotient by } \sim_{\mathfrak B},\quad
+\text{minimize } V_{\mathfrak B,w}=w\cdot r_{\mathfrak B}
+\text{ over the quotient.}
+$$
+This is a common resource-order grammar, not a claim that every branch has the same numerical Lagrangian, the same state space, or the same physical units.
+
+More explicitly, for every finite-resolution branch contract $\mathfrak B$ and every $w\in W_{\mathfrak B}$:
+
+1. if $r_{\mathfrak B}(y)-r_{\mathfrak B}(x)\in K_{\mathfrak B}$, then
+$$
+V_{\mathfrak B,w}(x)\le V_{\mathfrak B,w}(y);
+$$
+
+2. if $w\in\mathrm{int}\,K_{\mathfrak B}^*$ and $r_{\mathfrak B}(y)-r_{\mathfrak B}(x)\in K_{\mathfrak B}\setminus\{0\}$, then
+$$
+V_{\mathfrak B,w}(x)<V_{\mathfrak B,w}(y);
+$$
+
+3. if $\mathcal R_{\mathfrak B}(x)\simeq\mathcal R_{\mathfrak B}(y)$ and one representative is strictly more costly in the resource order, the higher-cost representative is response-null surplus and is removed by PCE;
+
+4. if the quotient $\mathcal X_{\mathfrak B}/\sim_{\mathfrak B}$ is compact and the descended scalarization is lower semicontinuous, a PCE-minimal response class exists.
+
+*Proof.* Items (1) and (2) are the dual-cone argument of Theorem D.1c applied with $K_{\mathfrak B}$ and $r_{\mathfrak B}$ in place of $K$ and $r$. If $r_{\mathfrak B}(y)-r_{\mathfrak B}(x)\in K_{\mathfrak B}$, then for $w\in K_{\mathfrak B}^*$,
+$$
+V_{\mathfrak B,w}(y)-V_{\mathfrak B,w}(x)
+=
+w\cdot\bigl(r_{\mathfrak B}(y)-r_{\mathfrak B}(x)\bigr)
+\ge0.
+$$
+If $w\in\mathrm{int}\,K_{\mathfrak B}^*$ and the resource difference is a nonzero element of $K_{\mathfrak B}$, the standard dual-cone separation property gives a strict positive pairing, so the inequality is strict.
+
+Item (3) is Theorem D.1d applied inside the branch contract: naturally isomorphic response presheaves define the same PPI physical invariant on $\mathsf P_{\mathfrak B}$, and strict resource dominance eliminates the more costly representative as surplus.
+
+Item (4) is Theorem D.1e applied to the quotient of $\mathcal X_{\mathfrak B}$ by $\sim_{\mathfrak B}$. Compactness and lower semicontinuity give existence of a minimizer by the direct method. ∎
+
 ## D.3 Dynamic Complexity Alignment Mechanism ($C_P \leftrightarrow \langle \hat{C}_v \rangle$)
 
 This section provides the rigorous justification for Theorem 2. We separate two statements: exact alignment as a necessary condition for true stable PCE equilibria, and quantitative operational tracking of that condition under the stochastic gradient dynamics.
@@ -2015,6 +2085,33 @@ modulo response equivalence.
 **Corollary D.8.9d (Global Strict-Certificate Closure Criterion).** A PU branch is globally closed at theorem level by the strict-certificate route when every live sector in its dependency graph has a strict PPI/PCE certificate with theorem-level entries and all overlap maps commute. If a sector lacks one finite entry required by this route, then by Convention P.14.1a and Corollary P.14.1g the branch keeps the weakest unresolved status of that entry until an equivalent theorem-level record is supplied.
 
 *Proof.* The positive direction is Theorem D.8.9c applied to the full dependency graph. For the unresolved-entry statement, if a live sector lacks an admissible family, quotient relation, response record, cost functional, selected minimizer, strict gap, or overlap map, then the strict-certificate route cannot evaluate the sector as a unique PPI/PCE-selected quotient class. The dependency ledger therefore cannot assign theorem-level closure to that sector through Definition D.8.9a. Convention P.14.1a and Corollary P.14.1g block promotion until the missing finite entry is supplied or replaced by an equivalent theorem-level record. ∎
+
+**Remark D.8.9d.1 (Structural-Invariant Projection on a Strict Branch).** Let $S$ be a sector with strict PPI/PCE certificate $\mathfrak C_S$ in the sense of Definition D.8.9a, and let $q_S^*\in\bar Q_S$ be its unique selected class from Theorem D.8.9b. If
+
+$$
+\mathcal O:\bar Q_S\longrightarrow\mathcal Y
+$$
+
+is an internal finite invariant that is well-defined on response-equivalence classes, then the branch value
+
+$$
+\mathcal O_{\mathrm{phys}}
+:=
+\mathcal O(q_S^*)
+$$
+
+is unique on that strict branch. Consequently, once $\mathfrak C_S$ is accepted, the strict-separation proof need not be repeated for every invariant that factors through the same selected quotient class. If two derivation chains are shown to factor through the same $q_S^*$ and the same invariant $\mathcal O$, their common value is a projection of one selected response class rather than an additional independent coincidence.
+
+This remark does not collapse the recurrent-ledger source roles of Theorem R.3.5e.3. On the minimal Appendix Z / attractor branch, the tuple
+
+$$
+(K_0,d_0,\varepsilon_0,a,b,M,k,D)=(3,8,\ln2,2,6,24,12,4)
+$$
+
+retains exactly the status assigned by Proposition T.59, Corollary T.59a, Proposition R.3.5e, and Theorem R.3.5e.3: it is closed on the stated branch, with the current source-role non-collapse still in force.
+
+*Proof.* Theorem D.8.9b states that $q_S^*$ is the unique minimizer in $\bar Q_S$. Since $\mathcal O$ is a function on $\bar Q_S$, evaluating it at $q_S^*$ gives a unique value. The second statement is the same observation applied to derivation chains whose maps have both been proved to factor through $q_S^*$. The final paragraph is a status-preservation clause: Theorem R.3.5e.3 records non-collapse of the present source roles, while Proposition T.59 and Corollary T.59a record the closed minimal-branch tuple. ∎
+
 
 ## D.9 Conclusion
 

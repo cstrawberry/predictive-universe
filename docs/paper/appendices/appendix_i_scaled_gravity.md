@@ -584,13 +584,96 @@ $$
 A direct test of the scale-dependent $G(R)$ model is to fit it to observed galaxy rotation curves. The SPARC database [Lelli et al. 2016], providing high-quality rotation curves and detailed baryonic mass models for 152 disk galaxies, offers an ideal dataset. A full comparison requires:
 
 *   Accurate baryonic mass models for each galaxy, requiring estimates of stellar mass-to-light ratios $\Upsilon_\ast$.
+
+**Definition I.5a (Capacity-Elastic Weak-Field Branch).** On the quasistatic weak-field emergent metric/channel-capacity thermodynamic branch, let
+$$
+g_\Lambda:=\frac{c^2\sqrt{\Lambda}}{8}
+\tag{I.5a.1}
+$$
+be the acceleration scale fixed by Corollary I.3a. A capacity-elastic response potential is a radial convex function
+$$
+\mathcal F(\xi)=g_\Lambda^2F\left(\frac{|\xi|}{g_\Lambda}\right),
+\qquad
+\xi\in\mathbb R^3,
+\tag{I.5a.2}
+$$
+where $\mathcal F$ is $C^1$, strictly convex, coercive, and normalized so that
+$$
+\mu(x):=\frac{F'(x)}{x}
+\tag{I.5a.3}
+$$
+has a continuous extension to $x=0$. The corresponding capacity-elastic energy is
+$$
+\mathcal E_{\mathrm{cap}}[\Phi]
+=
+\frac{1}{4\pi G}
+\int_\Omega
+g_\Lambda^2F\left(\frac{|\nabla\Phi|}{g_\Lambda}\right)\,d^3x
++
+\int_\Omega\rho_b\Phi\,d^3x.
+\tag{I.5a.4}
+$$
+The saturated high-capacity branch has
+$$
+\mu(x)\to1\qquad(x\to\infty),
+\tag{I.5a.5}
+$$
+and the unsaturated low-capacity elastic branch has
+$$
+\mu(x)\sim x\qquad(x\to0).
+\tag{I.5a.6}
+$$
+
+**Proposition I.5b (Euler-Lagrange Form of Capacity Elasticity).** Critical points of (I.5a.4) satisfy
+$$
+\nabla\cdot
+\left[
+\mu\left(\frac{|\nabla\Phi|}{g_\Lambda}\right)\nabla\Phi
+\right]
+=
+4\pi G\rho_b.
+\tag{I.5b.1}
+$$
+
+*Proof.* For a compactly supported variation $\Phi+\epsilon\eta$,
+$$
+\frac{d}{d\epsilon}\mathcal E_{\mathrm{cap}}[\Phi+\epsilon\eta]\Big|_{\epsilon=0}
+=
+\frac{1}{4\pi G}
+\int_\Omega
+\nabla_\xi\mathcal F(\nabla\Phi)\cdot\nabla\eta\,d^3x
++
+\int_\Omega\rho_b\eta\,d^3x.
+$$
+Since
+$$
+\nabla_\xi\mathcal F(\xi)
+=
+g_\Lambda^2F'\left(\frac{|\xi|}{g_\Lambda}\right)
+\frac{\xi}{g_\Lambda|\xi|}
+=
+\frac{F'(x)}{x}\xi
+=
+\mu(x)\xi,
+\qquad x=\frac{|\xi|}{g_\Lambda},
+$$
+the first variation is
+$$
+\frac{1}{4\pi G}
+\int_\Omega
+\mu\left(\frac{|\nabla\Phi|}{g_\Lambda}\right)\nabla\Phi\cdot\nabla\eta\,d^3x
++
+\int_\Omega\rho_b\eta\,d^3x.
+$$
+Integrating by parts and using arbitrary $\eta$ gives (I.5b.1). ∎
+
 **Theorem I.6 (Well-posed generalized Poisson law).** Let $\Omega\subset\mathbb R^3$ be a bounded Lipschitz domain and consider the local energy functional
 $$
 \mathcal E[\Phi]=\int_\Omega \left[ \frac{1}{8\pi G}\Psi(|\nabla\Phi|^2)+\rho\,\Phi\right]\,d^3x,
 $$
 where $\Psi(u)$ is $C^1$, strictly convex, coercive, and nondecreasing in $u=|\nabla\Phi|^2$. Then the Euler–Lagrange equation is
 $$
-\nabla\\!\cdot\\!\big(\mu(|\nabla\Phi|)\,\nabla\Phi\big)=4\pi G\,\rho,\qquad \text{with}\quad \mu(s) := \Psi'(s^2).
+\nabla\cdot\big(\mu(|\nabla\Phi|)\nabla\Phi\big)=4\pi G\,\rho,\qquad \text{with}\quad \mu(s) := \Psi'(s^2).
 $$
 With homogeneous Dirichlet boundary condition $\Phi|_{\partial\Omega}=0$, the generalized Poisson equation admits a unique weak solution in $H_0^1(\Omega)$ [Minty 1962; Evans 2010]. For inhomogeneous Dirichlet data, the same argument applies after a standard $H^1$ lifting of the boundary values.
 
@@ -662,6 +745,43 @@ v_{\rm circ}^2(r)\sim \sqrt{GMa_0},
 v_{\rm circ}^4(r)\sim GMa_0.
 $$
 This is the baryonic Tully–Fisher scaling. ∎
+
+**Corollary I.7a (Capacity-Elastic Dark-Response Law).** On the capacity-elastic branch of Definition I.5a, the high-acceleration limit gives the ordinary Poisson law
+$$
+\nabla^2\Phi=4\pi G\rho_b
+\qquad
+(|\nabla\Phi|\gg g_\Lambda),
+\tag{I.7a.1}
+$$
+while the low-acceleration limit gives
+$$
+g^2\sim g_\Lambda g_N,
+\qquad
+g_N=\frac{GM}{r^2},
+\tag{I.7a.2}
+$$
+for an isolated point source. Hence
+$$
+v_{\mathrm{circ}}^4\sim GMg_\Lambda.
+\tag{I.7a.3}
+$$
+The dark response is therefore the elastic constitutive law of unsaturated channel capacity, with the transition scale fixed by $g_\Lambda=c^2\sqrt{\Lambda}/8$ on the Appendix H/I bridge branch.
+
+*Proof.* If $|\nabla\Phi|\gg g_\Lambda$, then $x=|\nabla\Phi|/g_\Lambda\to\infty$ and (I.5a.5) makes (I.5b.1) reduce to the ordinary Poisson equation, proving (I.7a.1). If $|\nabla\Phi|\ll g_\Lambda$, then (I.5a.6) gives
+$$
+\mu\left(\frac{g}{g_\Lambda}\right)\sim \frac{g}{g_\Lambda}.
+$$
+The spherical reduction used in Theorem I.7 gives
+$$
+r^2\mu\left(\frac{g}{g_\Lambda}\right)g=GM,
+$$
+so
+$$
+r^2\frac{g^2}{g_\Lambda}\sim GM,
+\qquad
+g^2\sim\frac{GMg_\Lambda}{r^2}=g_\Lambda g_N.
+$$
+Multiplying $g$ by $r$ gives $v_{\mathrm{circ}}^2=rg\sim\sqrt{GMg_\Lambda}$ and hence (I.7a.3). ∎
 
 *   A joint Bayesian inference analysis (e.g., using nested sampling [Feroz & Hobson 2008; Feroz et al. 2009, 2019]) to determine the universal parameter set $(L_0,A_G,m)$ and the per-galaxy $\Upsilon_\ast$ values by comparing predicted and observed rotation curves. When inferring $A_G$ from rotation curves, the effective far‑field enhancement reflects the baryon‑mass‑weighted $\langle\varepsilon_G\rangle_b$ rather than $A_G$ itself; the numerical fits naturally absorb this via the $\rho_{\mathrm{DM,eff}}(R)=\varepsilon_G(R)\,\rho_b(R)$ source.
 

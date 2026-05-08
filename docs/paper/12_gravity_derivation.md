@@ -1049,3 +1049,51 @@ G_{\mu\nu}-8\pi G\,T_{\mu\nu}^{(\mathrm{MPU})}
 =-\Lambda g_{\mu\nu}.
 $$
 The contracted Bianchi identity and local conservation of the MPU stress tensor make $\Lambda$ constant on each connected smooth-envelope component, proving (76v). If the slack is positive, Corollary 12.5.3g says the local Clausius equality fails by $\mathcal Q(k)/(2\pi)$. The entropy-side source represented by $\Delta S_{\mathrm{pred}}''/(2\pi)$ is then $T_{kk}^{(\mathrm{MPU})}-\mathcal Q(k)/(2\pi)$, so the retained slack tensor has null projections (76w) and enters with the sign shown in (76w.1). When the retained slack tensor is supplied consistently on the null cone, the same null-projection argument applies to $T^{(\mathrm{MPU})}-T^{(\mathrm{sl})}$. ∎
+
+**Corollary 12.5.3i (QNEC Slack as Local Recoverability Slack Curvature).** Let $\mathfrak A_{\lambda-h}\subseteq\mathfrak A_\lambda\subseteq\mathfrak A_{\lambda+h}$ be a $C^2$ nested finite null-cut algebra family on the branch of Theorem 12.5.3f, and let
+$$
+\rho_\lambda:=\rho|_{\mathfrak A_\lambda},
+\qquad
+\omega_\lambda:=\omega|_{\mathfrak A_\lambda}
+$$
+be the perturbation and reference restrictions. Let $\Phi_{\lambda+h\to\lambda}$ be the restriction channel from $\mathfrak A_{\lambda+h}$ to $\mathfrak A_\lambda$. The one-step recoverability slack is
+$$
+\Delta_{\lambda,h}
+:=
+D(\rho_{\lambda+h}\Vert\omega_{\lambda+h})
+-
+D(\rho_\lambda\Vert\omega_\lambda)
+=
+\Delta_{\Phi_{\lambda+h\to\lambda}}^{\omega_{\lambda+h}}(\rho_{\lambda+h}).
+\tag{76y}
+$$
+Then the predictive QNEC slack density is the second local finite-difference curvature of this recoverability ledger:
+$$
+\mathfrak S_{\mathrm{QNEC}}(\lambda)
+=
+\lim_{h\to0}
+\frac{
+D(\rho_{\lambda+h}\Vert\omega_{\lambda+h})
+-
+2D(\rho_\lambda\Vert\omega_\lambda)
++
+D(\rho_{\lambda-h}\Vert\omega_{\lambda-h})
+}{h^2}.
+\tag{76z}
+$$
+Consequently the reversible emergent metric/channel-capacity thermodynamic branch is the locally affine, zero-curvature branch of the recoverability ledger.
+
+*Proof.* By Definition 12.5.3a,
+$$
+S_{\mathrm{rel}}(\lambda)=D(\rho_\lambda\Vert\omega_\lambda).
+$$
+Since $\mathfrak A_\lambda$ is obtained from $\mathfrak A_{\lambda+h}$ by restriction, (76y) is exactly Definition E.8.1e applied to the channel $\Phi_{\lambda+h\to\lambda}$. The $C^2$ hypothesis gives
+$$
+\lim_{h\to0}
+\frac{
+S_{\mathrm{rel}}(\lambda+h)-2S_{\mathrm{rel}}(\lambda)+S_{\mathrm{rel}}(\lambda-h)
+}{h^2}
+=
+S_{\mathrm{rel}}''(\lambda).
+$$
+Theorem 12.5.3f identifies $S_{\mathrm{rel}}''(\lambda)$ with $\mathfrak S_{\mathrm{QNEC}}(\lambda)$, proving (76z). The zero-curvature statement follows from Theorem 12.5.3f and Corollary 12.5.3g, which identify zero QNEC slack with local Clausius saturation. ∎

@@ -301,13 +301,13 @@ $$
 | Force | Effective interactions as the PCE-optimal response of $\mathfrak{P}$ to gradients/curvatures of the same underlying cost structure: (i) generalized "forces" as gradients of $V$ in configuration space (Definition 20; Appendix D, Definition D.1), (ii) gauge forces via connection dynamics and minimal coupling (Appendix G), with their strengths fixed by normalized PCE shadow prices or active capacity-boundary coordinates (Appendix X, Theorem X.8c; Appendix Z, Corollary Z.8.2a), (iii) gravity as metric response sourced by $T_{\mu\nu}^{(MPU)}$ (Theorem 50). | Definition 20; Appendix D (Definition D.1); Appendix G; Theorem 50; Appendix X |
 | Charge | Coherence-participation label: the representation weight $q$ in the covariant derivative $D_\mu=\partial_\mu+\Omega_\mu+iqA_\mu$ specifies how a field participates in the local gauge connection required by phase freedom and PCE-efficient coherence management. The effective continuous gauge invariance is the Landauer-Noether closure of the dense SPAP/Landauer phase subgroup on the finite-resolution branch, and it yields a conserved Noether current (Appendix G, Eq. G.6.3; Theorem Q.0.7d2; Corollary Q.0.7d3). Charge quantization, when present in an effective theory, is fixed by the global structure and boundary conditions of the emergent gauge bundle; the numerical interaction strength of the sector is fixed separately by the relevant normalized shadow price or capacity boundary coordinate. | Appendix G (Definition G.4.1; Eq. G.6.3); Appendix X (Theorem X.8c); Appendix Z (Corollary Z.8.2a) |
 
-This map provides operational constructions from $(\mathcal{N},\mathcal{E}_N,V)$, and the familiar laws of each category arise as coarse‑grained consequences of the same variational/thermodynamic structure (Appendix D; Appendix X).
+This map provides operational constructions from $(\mathcal{N},\mathcal{E}_N,V)$, and the familiar laws of each category arise as coarse‑grained consequences of the same branch-indexed PCE variational grammar and thermodynamic response structure (Appendix D, Definition D.1f and Theorem D.1g; Appendix X).
 
 ### 2.6.2 Structural Identities (Inter‑Category Relations as Necessities)
 
 Because the categories are projections of one structure, canonical inter‑category relations appear as internal identities rather than independent empirical "bridges":
 
-1. **Mass–energy equivalence.** Rest energy is the maintenance cost of relational/predictive information. PU recovers $E=mc^2$ [Einstein 1905b] as a consequence of identifying mass with the action/energy required to maintain relational information content; see Corollary N.5.1 and the associated development in Appendix N.
+1. **Mass–energy equivalence.** Rest energy is the proper-time action-rate assigned to maintained relational/predictive information. PU recovers $E=mc^2$ [Einstein 1905b] as a consequence of identifying mass with the relational information content whose saturated maintenance action-rate is $E=\hbar\mathcal I_{\mathrm{rel}}/(2\tau_{\min})$; see Corollary N.5.1 and Remark N.5.1a in Appendix N.
 
 2. **Lorentzian spacetime with invariant $c$.** The same physical instantiation constraints that enforce $\tau_{\min}>0$ (Theorem 29) and $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) bound causal influence propagation and yield an invariant maximum speed $c$. With the emergent dimension fixed to $D=4$ from the mode-channel correspondence (Theorem Z.11), Theorem 46 then yields the Lorentzian signature.
 
@@ -329,7 +329,7 @@ $$
 \{\pi_{\mathfrak{C}}(\mathfrak{P})\}_{\mathfrak{C}}
 }
 $$
-with $\mathcal{E}_N$ constrained by $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) and $V$ given by the single PCE Potential (Appendix D, Definition D.1). The plurality of physical categories reflects the plurality of stable operational questions one can ask of $\mathfrak{P}$, not a plurality of independent ontological primitives.
+with $\mathcal{E}_N$ constrained by $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) and $V$ given by the branch-indexed PCE potential family whose core resource-preorder form is Definition D.1 and whose cross-sector grammar is Definition D.1f and Theorem D.1g. The plurality of physical categories reflects the plurality of stable operational questions one can ask of $\mathfrak{P}$, not a plurality of independent ontological primitives.
 
 
 

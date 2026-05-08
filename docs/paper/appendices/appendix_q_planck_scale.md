@@ -278,6 +278,23 @@ E[\phi]=\mathcal S[\phi]/\hbar,
 $$
 giving the path-amplitude form. For countable $\mathcal H$, normal convergence on compact subsets gives analyticity by the Weierstrass theorem on the stated domain. Boundary or off-domain phase evaluations are not automatic; they are exactly the finite-cutoff oscillatory limits stated in the hypothesis. ∎
 
+**Corollary Q.0.2d (Single Entropy-Transform Ledger).** Under Proposition Q.0.2c, the finite Gibbs/Laplace weight and the finite path-amplitude weight are two evaluations of the same finite entropy transform:
+$$
+Z_\Lambda(z)=\sum_{\phi\in\mathcal H_\Lambda}w_\phi e^{-zE[\phi]},
+\qquad
+E[\phi]=\sum_{i\in\phi}\varepsilon_i.
+$$
+In particular,
+$$
+Z_\Lambda(1)=\sum_{\phi\in\mathcal H_\Lambda}w_\phi e^{-E[\phi]},
+\qquad
+Z_\Lambda(-i)=\sum_{\phi\in\mathcal H_\Lambda}w_\phi e^{iE[\phi]}
+=\sum_{\phi\in\mathcal H_\Lambda}w_\phi e^{i\mathcal S[\phi]/\hbar}.
+$$
+Thus, at finite cutoff, the statistical partition weight and the path-amplitude weight are not distinct primitive objects; they are distinct evaluations of one SPAP entropy ledger. For a countable history set, this identification holds only on domains of normal convergence or as the explicitly stated finite-cutoff oscillatory limit.
+
+*Proof.* Proposition Q.0.2c defines the finite transform $Z_\Lambda(z)$ and proves it is entire. Evaluation at $z=1$ gives the Gibbs/Laplace weight. Evaluation at $z=-i$ gives $e^{iE[\phi]}$, and Corollary Q.0.1 gives $E[\phi]=\mathcal S[\phi]/\hbar$. The countable case inherits exactly the normal-convergence and finite-cutoff-limit qualifications already stated in Proposition Q.0.2c. ∎
+
 **Corollary Q.0.4 (Interference as Entropy Phase Matching).** Quantum interference arises from the phase accumulated through irreversible predictive operations:
 
 $$\phi_{quantum} = \frac{\mathcal{S}}{\hbar} = \sum_i \varepsilon_i$$

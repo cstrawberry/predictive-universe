@@ -924,6 +924,37 @@ Z_i=1+\frac{\Delta_i}{24}.
 $$
 No free sector constants appear in these equations. The inverse $F=T^{-1}\Delta$ exists algebraically, but using it before the forward determinant calculation would replace the spectral computation by validation data, which Convention T.17a.0 forbids. ∎
 
+**Corollary T.17a.0b (Spectral-Action Transfer as a Completed Threshold Tuple).** An accepted PU spectral-action transfer ledger $\mathfrak S_{\mathrm{SA}}(P)$ of Definition X.9.6h.4 supplies a completed flag-lift threshold tuple in the sense of Convention T.17a.0 exactly when its sector projections and heat coefficients determine
+$$
+\left(
+D^{\mathrm{PCE}}_{\widetilde X},
+\mathrm{MS2}_{\mu_G},
+\mathcal J_G,
+\mu_0,
+m_{\mathcal J},
+\eta,
+\{\tau_{s,\pm,a}\},
+\{\varepsilon_s(L)\}
+\right)
+\tag{T.17a.0b.1}
+$$
+before validation comparison. In that case the electroweak threshold vector is fixed by
+$$
+F_s=
+\mathcal N_{\mathrm{SA},s}
+\left(
+\{f_k\},
+\{a_{j,s}\},
+\mathcal T_{\mathrm{SA},s}
+\right),
+\qquad
+\Delta=TF.
+\tag{T.17a.0b.2}
+$$
+Thus spectral action is a positive closure route for the global flag-lift spectral gate only when it supplies the same finite data isolated by Theorem T.78.
+
+*Proof.* Theorem X.9.6h.5 makes each claimed threshold finite part a deterministic function of the spectral-action heat coefficients, cutoff moments, normalization map, and tail certificate. Convention T.17a.0 requires exactly a forward-fixed sector operator, finite-part prescription, Golay/parity sector data, and tail record. If $\mathfrak S_{\mathrm{SA}}(P)$ supplies the tuple (T.17a.0b.1), then the sector finite parts $F_s$ are fixed before validation comparison and Theorem T.17a.0a gives $\Delta=TF$. Conversely, if any entry of (T.17a.0b.1) is absent, Theorem T.78.2 identifies a missing branch datum, so the spectral-action ledger has not completed the threshold tuple. ∎
+
 A finite truncation establishes a stated tolerance only when
 $$
 \left|(T F^{(\le L)})_i-\Delta_i^{\mathrm{val}}\right|
@@ -2658,6 +2689,104 @@ $$
 The magnitude is fixed by Theorem T.41.4b; the phase $\theta_{ij}^{\mathrm{Berry}}$ is the holonomy of the retained flavor Berry connection along the chosen generation path, as in Theorem T.56 and Appendix Y.
 
 *Proof.* The probability overlap $\operatorname{Tr}(P_iP_j)$ is a gauge-invariant nonnegative real scalar, so it can determine only the magnitude $|Y_{ij}|$. A transported Yukawa section between $P_i$ and $P_j$ on the flavor bundle acquires an additional phase equal to the holonomy of the Berry connection along the generation path; this phase is gauge-invariant modulo $2\pi$ on closed loops by Lemma T.53.2 and is therefore the well-defined CKM/PMNS phase entering Theorem T.56 and the Appendix Y CP-odd source. Combining the magnitude from Theorem T.41.4b with this Berry phase gives (T.41.4c.1). ∎
+
+**Definition T.41.4d (Schur-Heat Realization of the Yukawa Magnitude Kernel).** On the retained flavor boundary branch, let the quadratic predictive operator split into visible flavor-boundary and internal blocks,
+$$
+L=
+\begin{pmatrix}
+L_{BB} & L_{BI}\\
+L_{IB} & L_{II}
+\end{pmatrix},
+\qquad
+L_{II}>0.
+\tag{T.41.4d.1}
+$$
+The Schur-reduced flavor operator is
+$$
+\Lambda_{\mathrm{fl}}
+=
+L_{BB}-L_{BI}L_{II}^{-1}L_{IB}.
+\tag{T.41.4d.2}
+$$
+Let
+$$
+K_\tau^{\mathrm{fl}}:=e^{-\tau\Lambda_{\mathrm{fl}}}
+\tag{T.41.4d.3}
+$$
+be its heat kernel on the retained generation manifold. The Schur-heat Yukawa branch is the specialization of the Toeplitz-Kraus probability-overlap branch for which
+$$
+|Y_{ij}|
+=
+\mathcal N_f
+\left\langle r_j\middle|K_{\tau_*}^{\mathrm{fl}}\middle|r_i\right\rangle
+\tag{T.41.4d.4}
+$$
+with sector normalization $\mathcal N_f$ carried by the Bures/gauge normalization factors of Sections T.20.8-T.20.11, and with the attractor heat time
+$$
+\tau_*=\frac{\sigma_B^2}{2}.
+\tag{T.41.4d.5}
+$$
+Berry phases remain separated as in Corollary T.41.4c.
+
+**Theorem T.41.4e (Schur-Heat Kernel Gives the Universal Hierarchy Exponent).** On the local Schur-heat branch of Definition T.41.4d, assume the retained heat-kernel certificate of Corollary X.8k.4a on $(\mathrm{Gr}(2,8),g_B)$. Then
+$$
+|Y_{ij}|
+=
+\mathcal N_f
+(4\pi\tau_*)^{-12}
+\Delta_{\mathrm{VVM}}(r_i,r_j)^{1/2}
+\exp\left[-\frac{d_B(r_i,r_j)^2}{4\tau_*}\right]
+\left(1+O(\tau_*)\right).
+\tag{T.41.4e.1}
+$$
+Using $\tau_*=\sigma_B^2/2$ gives
+$$
+\log |Y_{ij}|
+=
+\log\mathcal N_f
+-
+12\log(4\pi\tau_*)
+-
+\frac{d_B(r_i,r_j)^2}{2\sigma_B^2}
++
+\frac12\log\Delta_{\mathrm{VVM}}(r_i,r_j)
++
+O(\sigma_B^2).
+\tag{T.41.4e.2}
+$$
+In the flat local constant-Van-Vleck truncation this reduces to Theorem T.41.5 and, after Lemma T.41.4,
+$$
+\log |Y_{ij}|
+=
+-\frac{d_{E_8}^2(r_i,r_j)}{16\sigma_B^2}
++
+\text{sector constant},
+\tag{T.41.4e.3}
+$$
+so the hierarchy coefficient is
+$$
+\alpha=\frac{1}{16\sigma_B^2}.
+\tag{T.41.4e.4}
+$$
+
+*Proof.* Definition T.41.4d defines the Yukawa magnitude as the Schur-heat matrix element of the finite boundary operator. Corollary X.8k.4a gives the local heat-kernel expansion
+$$
+K_{\tau}^{\mathrm{fl}}(r_i,r_j)
+=
+(4\pi\tau)^{-12}
+\Delta_{\mathrm{VVM}}(r_i,r_j)^{1/2}
+\exp\left[-\frac{d_B(r_i,r_j)^2}{4\tau}\right]
+\left(1+O(\tau)\right),
+$$
+because $\dim_{\mathbb R}\mathrm{Gr}(2,8)=24$. Substitution of $\tau=\tau_*=\sigma_B^2/2$ gives (T.41.4e.1) and (T.41.4e.2). If the local chart is taken in the flat Gaussian truncation used by Theorem T.41.5, then $\Delta_{\mathrm{VVM}}=1+O(d_B^2)$ and the heat-kernel prefactor together with $\mathcal N_f$ is absorbed into the sector constant, leaving
+$$
+\log |Y_{ij}|
+=
+-\frac{d_B(r_i,r_j)^2}{2\sigma_B^2}
++
+\text{sector constant}.
+$$
+Lemma T.41.4 gives $d_B^2=d_{E_8}^2/8+O(u^4)$, hence (T.41.4e.3) at quadratic order. Matching the exponent to $\log(m_j/m_i)=\alpha d_{E_8}^2$ gives (T.41.4e.4). ∎
 
 **Theorem T.41.5** (Gaussian Overlap and Yukawa Suppression on the Toeplitz-Kraus Probability-Overlap Branch).
 Let $\psi_i,\psi_j$ be generation-localizing wavepackets modeled as isotropic Gaussians on $(\mathrm{Gr}(2,8),g_B)$ with common variance $\sigma_B^2$. The amplitude overlap is
@@ -8449,13 +8578,19 @@ $$
 $$
 between eigenstates of the fixed Hamiltonian. These are all uniquely defined finite-dimensional quantities. Statement (iii) follows by combining the non-uniqueness in (i) with the uniqueness after operator closure in (ii). ∎
 
-**Corollary T.79a.1 (Boundary-Impedance Closure of Nuclear Extension Data).** For a fixed proton-neutron sector $(Z,N)$, the nuclear aggregate Hamiltonian required by Theorem T.79a is supplied at theorem level if PU supplies a finite colorless boundary impedance map
+**Corollary T.79a.1 (Boundary-Impedance Closure of Nuclear Extension Data).** For a fixed proton-neutron sector $(Z,N)$, the nuclear aggregate Hamiltonian required by Theorem T.79a is supplied at theorem level if PU supplies either:
+
+1. a finite colorless boundary impedance map
 $$
 \Lambda_A^{\mathrm{PU}}(E),
 \qquad
 A=(Z,N),
 $$
-satisfying Definition X.8k.5 and Theorem X.8k.6, together with the finite spin-current and decay boundary operators for the same retained aggregate Hilbert space. In that case:
+satisfying Definition X.8k.5 and Theorem X.8k.6, together with the finite spin-current and decay boundary operators for the same retained aggregate Hilbert space; or
+
+2. an accepted finite nuclear aggregate bootstrap datum $\mathfrak B_A^{\mathrm{nuc}}$ satisfying Definition X.8k.6a and Theorem X.8k.6b.
+
+In that case:
 
 1. nuclear bound-state energies are the zeros of
 $$
@@ -8471,6 +8606,6 @@ $$
 
 3. isotope stability, shell gaps, and spin-dependent transition rates are determined by the same finite spectral data and matrix elements specified in Theorem T.79a.
 
-*Proof.* Theorem X.8k.6 proves that the finite boundary impedance map is exactly the Schur spectral representative of the corresponding finite self-adjoint aggregate operator for all colorless boundary protocols. Therefore fixing $\Lambda_A^{\mathrm{PU}}(E)$ is equivalent, for those protocols, to fixing the spectral response of $H_A^{\mathrm{PU}}(Z,N)$ up to PPI-equivalent interior representatives. Equation (T.79a.1) is (X.8k.9) applied to the nuclear aggregate sector, and (T.79a.2) is (X.8k.11). Once the spin-current and decay operators are also fixed on the same finite retained Hilbert space, the spectral theorem gives the stability, shell-gap, and transition-rate quantities listed in Theorem T.79a. ∎
+*Proof.* Theorem X.8k.6 proves that the finite boundary impedance map is exactly the Schur spectral representative of the corresponding finite self-adjoint aggregate operator for all colorless boundary protocols. Therefore fixing $\Lambda_A^{\mathrm{PU}}(E)$ is equivalent, for those protocols, to fixing the spectral response of $H_A^{\mathrm{PU}}(Z,N)$ up to PPI-equivalent interior representatives. Theorem X.8k.6b supplies the same object by selecting the PCE-minimal self-adjoint aggregate completion among all admissible Hamiltonians with the accepted boundary impedance record. Equation (T.79a.1) is (X.8k.9) applied to the nuclear aggregate sector, and (T.79a.2) is (X.8k.11). Once the spin-current and decay operators are also fixed on the same finite retained Hilbert space, the spectral theorem gives the stability, shell-gap, and transition-rate quantities listed in Theorem T.79a. ∎
 
 -----

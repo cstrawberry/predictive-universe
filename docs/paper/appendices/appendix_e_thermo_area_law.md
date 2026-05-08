@@ -108,6 +108,71 @@ $$
 $$
 so $\mathcal{E}_N$ is strictly positive. Strict positivity implies primitivity and uniqueness of the full-rank fixed point (Sanz et al. 2010). QED
 
+**Theorem E.1a (No-Free-Perfect-Transfer Family and Scope of Contractivity).** The standard no-cloning obstruction, no-deleting obstruction, and pure-branch monogamy obstruction are members of a single PU no-free-perfect-transfer family, but they are not all consequences of Lemma E.1 alone. More precisely:
+
+1. universal deterministic cloning is excluded by trace-distance monotonicity of CPTP maps;
+2. universal deterministic deletion on a closed reversible branch either violates inner-product preservation or transfers the deleted information to an environment;
+3. pure-branch monogamy follows from the structure of extensions of pure bipartite states, while quantitative monogamy inequalities are supplied by the entropy-cone/min-cut and Hilbert-space branches;
+4. Lemma E.1 supplies the strict refresh-channel mechanism for thermodynamic and regular statistical ND-RID branches containing the component $pT_\sigma$.
+
+*Proof.*
+
+**No-cloning.** Suppose a CPTP map $\mathcal C$ universally cloned pure states:
+$$
+\mathcal C(|\psi\rangle\langle\psi|)
+=
+|\psi\rangle\langle\psi|\otimes|\psi\rangle\langle\psi|
+$$
+for all unit vectors $|\psi\rangle$. Choose two nonorthogonal, nonidentical pure states with
+$$
+r:=|\langle\psi|\phi\rangle|\in(0,1).
+$$
+For pure states,
+$$
+D_{\mathrm{tr}}(\psi,\phi)=\sqrt{1-r^2},
+$$
+where $\psi=|\psi\rangle\langle\psi|$ and $\phi=|\phi\rangle\langle\phi|$. The cloned outputs have overlap $r^2$, hence trace distance
+$$
+D_{\mathrm{tr}}(\psi\otimes\psi,\phi\otimes\phi)
+=
+\sqrt{1-r^4}.
+$$
+Since $0<r<1$,
+$$
+\sqrt{1-r^4}>\sqrt{1-r^2}.
+$$
+This strictly increases trace distance, contradicting CPTP contractivity. Therefore universal deterministic cloning is impossible.
+
+**No-deleting.** A closed reversible deletion operation must be represented by an isometry on system plus environment. Suppose
+$$
+V\bigl(|\psi\rangle|\psi\rangle|A\rangle\bigr)
+=
+|\psi\rangle|0\rangle|B_\psi\rangle
+$$
+for all $|\psi\rangle$. For two nonorthogonal states $|\psi\rangle,|\phi\rangle$ with $r=\langle\psi|\phi\rangle\in(0,1)$ after phase choice, preservation of inner products gives
+$$
+r^2
+=
+r\,\langle B_\psi|B_\phi\rangle.
+$$
+Hence
+$$
+\langle B_\psi|B_\phi\rangle=r.
+$$
+If $|B_\psi\rangle$ is independent of $\psi$, then $\langle B_\psi|B_\phi\rangle=1$, contradicting $r\in(0,1)$. If $|B_\psi\rangle$ depends on $\psi$, the environment retains exactly the missing state-dependence. The second copy has not been physically deleted; its information has been transferred to the environment. Therefore universal deletion is excluded as no-free-erasure of quantum information.
+
+**Pure-branch monogamy.** Let $\rho_{AB}=|\Psi\rangle\langle\Psi|_{AB}$ be pure, and let $\rho_{ABC}$ be any extension with $\mathrm{Tr}_C\rho_{ABC}=\rho_{AB}$. Since $\rho_{AB}$ has one-dimensional support, positivity of $\rho_{ABC}$ implies its support lies in
+$$
+\mathrm{span}\{|\Psi\rangle_{AB}\}\otimes\mathcal H_C.
+$$
+Therefore
+$$
+\rho_{ABC}=|\Psi\rangle\langle\Psi|_{AB}\otimes\rho_C
+$$
+for some state $\rho_C$. Hence a subsystem already in a pure entangled state with its partner cannot share nontrivial additional correlations with a third subsystem. Quantitative monogamy inequalities used elsewhere in PU are supplied by the entropy-cone/min-cut branch and the standard Hilbert-space inequalities, not by Lemma E.1 alone.
+
+Combining the three cases, each obstruction forbids a perfect free transfer, duplication, deletion, or unrestricted sharing of finite quantum predictive content. Lemma E.1 strengthens this family on ND-RID branches with a nonzero refresh component by giving strict contraction $f_{\text{RID}}<1$, but the entire family should not be collapsed into Lemma E.1 alone. ∎
+
 **E.4 Limited Information Capacity Across Boundaries due to ND–RID**
 
 Strict contractivity is ensured by the presence of a nonzero input-independent refresh component in the averaged ND-RID "Evolve" channel (Lemma E.1). Structural irreversibility ($\varepsilon_0=\ln2>0$) is the operational signature of this refresh/reset in PU (Theorem 31), while physical overhead only adds nonnegative dissipation; non-unitarity alone is not sufficient to guarantee strict trace-distance contraction. The resulting strict contraction is what enforces a strict bound on the information transmission capacity of MPU-MPU interaction channels below $\ln d_0$ (Theorem E.2).
@@ -724,7 +789,7 @@ Then $\rho$ and $\rho'$ are operationally identical for all exterior observables
 
 *Proof.* Theorem E.8.2 supplies the nested boundary-channel reconstruction family on the stated branch. Therefore every retained exterior observable is represented by a finite boundary protocol or by a finite composition of such protocols over the nested cuts. If (E.8.1a.1) holds, all such protocols have identical response statistics on $\rho$ and $\rho'$. By the operational Yoneda reconstruction of Theorem P.6.1b.3, identical response presheaves define the same finite-response object for the retained exterior sector. Corollary P.6.1b.8 removes any additional interior label that changes no finite response and lowers no cost. If an interior label changes a finite response, then some retained protocol separates it, contradicting (E.8.1a.1), unless it belongs to a different finite branch with an explicit degeneracy certificate. ∎
 
-**Remark E.8.1a.1 (Status Relative to AdS/CFT).** Corollary E.8.1a is a finite-response holography statement, not a claim of conformal duality or AdS boundary dynamics. It establishes operational reconstruction in the PU quotient wherever the nested ND-RID boundary-channel hypotheses hold. The stronger Page-curve and scrambling statements remain branch-gated until the horizon code is shown to generate the required approximate design dynamics.
+**Remark E.8.1a.1 (Status Relative to AdS/CFT).** Corollary E.8.1a is a finite-response holography statement, not a claim of conformal duality or AdS boundary dynamics. It establishes operational reconstruction in the PU quotient wherever the nested ND-RID boundary-channel hypotheses hold. The stronger Page-curve and scrambling statements remain branch-gated until the horizon code is shown to generate the required approximate design dynamics. Definition K.3d.4a and Theorem K.3d.4b provide the finite Golay-expander route for supplying that design certificate on a horizon syndrome branch.
 
 **Definition E.8.1b (Petz-Sufficient Boundary Compression).** Let $\mathcal C_A$ be a finite retained bulk code family for a region $A$, let
 $$
@@ -809,6 +874,66 @@ D(\mathcal R_{\sigma,\mathcal E_{\partial A}}\mathcal E_{\partial A}(\rho)\Vert
 \mathcal R_{\sigma,\mathcal E_{\partial A}}\mathcal E_{\partial A}(\sigma)).
 $$
 Using (E.8.1b.2) for $\rho$ and the Petz recovery identity for $\sigma$, the right side is $D(\rho\Vert\sigma)$. The two inequalities therefore squeeze the middle term to equality. ∎
+
+**Definition E.8.1e (Predictive Recoverability Slack).** Let $\Phi:\mathcal B(\mathcal H_A)\to\mathcal B(\mathcal H_B)$ be a finite-dimensional CPTP channel and let $\sigma\succ0$ be a faithful reference state. For every state $\rho$ with $\operatorname{supp}\rho\subseteq\operatorname{supp}\sigma$, define the predictive recoverability slack
+$$
+\Delta_\Phi^\sigma(\rho)
+:=
+D(\rho\Vert\sigma)
+-
+D(\Phi(\rho)\Vert\Phi(\sigma)).
+\tag{E.8.1e.1}
+$$
+If the support condition for either relative entropy fails, the corresponding term is understood in the standard extended sense. A branch is zero-slack for $(\rho,\sigma,\Phi)$ when
+$$
+\Delta_\Phi^\sigma(\rho)=0.
+\tag{E.8.1e.2}
+$$
+
+**Theorem E.8.1f (Zero Slack iff Exact Predictive Recovery).** On the finite faithful branch of Definition E.8.1e,
+$$
+\Delta_\Phi^\sigma(\rho)\ge0.
+\tag{E.8.1f.1}
+$$
+Moreover,
+$$
+\Delta_\Phi^\sigma(\rho)=0
+\tag{E.8.1f.2}
+$$
+if and only if the Petz recovery map
+$$
+\mathcal R_{\sigma,\Phi}(X)
+=
+\sigma^{1/2}
+\Phi^*
+\left[
+\Phi(\sigma)^{-1/2}
+X
+\Phi(\sigma)^{-1/2}
+\right]
+\sigma^{1/2}
+\tag{E.8.1f.3}
+$$
+is well-defined on $\operatorname{supp}\Phi(\sigma)$ and satisfies
+$$
+\mathcal R_{\sigma,\Phi}\Phi(\rho)=\rho,
+\qquad
+\mathcal R_{\sigma,\Phi}\Phi(\sigma)=\sigma.
+\tag{E.8.1f.4}
+$$
+Thus positive $\Delta_\Phi^\sigma(\rho)$ is exactly the finite amount of predictive distinguishability lost by the channel that is not recoverable from the retained response algebra. A PCE branch may impose exact reversible channel-capacity thermodynamics only on the zero-slack subbranch; any retained positive slack must remain as an explicit non-equilibrium response term.
+
+*Proof.* Inequality (E.8.1f.1) is monotonicity of quantum relative entropy under the CPTP channel $\Phi$. If (E.8.1f.4) holds, then monotonicity under $\mathcal R_{\sigma,\Phi}$ gives
+$$
+D(\Phi(\rho)\Vert\Phi(\sigma))
+\ge
+D(\mathcal R_{\sigma,\Phi}\Phi(\rho)\Vert\mathcal R_{\sigma,\Phi}\Phi(\sigma))
+=
+D(\rho\Vert\sigma).
+$$
+Together with monotonicity under $\Phi$, this forces equality and hence (E.8.1f.2).
+
+Conversely, assume (E.8.1f.2). On a finite faithful algebra, equality in the data-processing inequality for relative entropy is the Petz sufficiency condition: the adjoint modular relation implied by equality is represented by the recovery channel (E.8.1f.3), and this channel recovers both the tested state and the reference state. This gives (E.8.1f.4). The final statement is a direct restatement of (E.8.1e.1): the only quantity measured by $\Delta_\Phi^\sigma$ is the relative-entropy distinguishability removed by $\Phi$ and not restored by the exact Petz inverse. ∎
 
 **Corollary E.8.2 (Resolution Limit).** Bulk reconstruction has resolution limit $\sim L_P$. Finer structure cannot be encoded because:
 - Channel spacing is $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \cdot L_P$ (Appendix Q, Equation Q.18)

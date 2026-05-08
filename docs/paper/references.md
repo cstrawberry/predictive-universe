@@ -26,6 +26,8 @@
 *   Atiyah, M. F., & Singer, I. M. (1963). The Index of Elliptic Operators on Compact Manifolds. *Bulletin of the American Mathematical Society*, *69*(3), 422–433. DOI: 10.1090/S0002-9904-1963-10957-X
 *   Atiyah, M. F., & Singer, I. M. (1968a). The index of elliptic operators: I. *Annals of Mathematics*, *87*(3), 484–530. DOI: 10.2307/1970715
 *   Atiyah, M. F., & Singer, I. M. (1968b). The index of elliptic operators: III. *Annals of Mathematics*, *87*(3), 546–604.
+*   Atiyah, M. F., Patodi, V. K., & Singer, I. M. (1975). Spectral asymmetry and Riemannian geometry I. *Mathematical Proceedings of the Cambridge Philosophical Society*, *77*(1), 43–69.
+*   Atiyah, M. F., Patodi, V. K., & Singer, I. M. (1976). Spectral asymmetry and Riemannian geometry III. *Mathematical Proceedings of the Cambridge Philosophical Society*, *79*(1), 71–99.
 *   ATLAS Collaboration (Aad, G., *et al.*) (2019). Search for high-mass dilepton resonances using 139 fb$^{-1}$ of pp collision data collected at $\sqrt{s} = 13$ TeV with the ATLAS detector. *Physics Letters B*, *796*, 68–87. DOI: 10.1016/j.physletb.2019.07.016
 *   ATLAS Collaboration (Aad, G., *et al.*) (2021). Search for new phenomena in events with an energetic jet and missing transverse momentum in pp collisions at $\sqrt{s} = 13$ TeV with the ATLAS detector. *Physical Review D*, *103*, 112006. DOI: 10.1103/PhysRevD.103.112006
 *   ATLAS Collaboration (Aad, G., *et al.*) (2024). Search for pair-produced vectorlike quarks coupling to light quarks in the lepton plus jets final state using 13 TeV pp collisions with the ATLAS detector. *Physical Review D*, *110*, 052009. DOI: 10.1103/PhysRevD.110.052009
@@ -91,6 +93,8 @@
 *   Brunetti, R., Dappiaggi, C., Fredenhagen, K., & Zahn, J. (Eds.). (2015). *Advances in Algebraic Quantum Field Theory*. Springer.
 *   Brunetti, R., Fredenhagen, K., & Verch, R. (2003). The generally covariant locality principle: A new paradigm for local quantum physics. *Communications in Mathematical Physics*, *237*(1-2), 31–68. DOI: 10.1007/s00220-003-0805-5
 *   Burkhardt, H., & Pietrzyk, B. (2001). Update of the hadronic contribution to the QED vacuum polarization. *Physics Letters B*, *513*(1–2), 46–52. DOI: 10.1016/S0370-2693(01)00393-8
+*   Bartlett, S. D., Rudolph, T., & Spekkens, R. W. (2007). Reference frames, superselection rules, and quantum information. *Reviews of Modern Physics*, *79*, 555–609. DOI: 10.1103/RevModPhys.79.555
+*   Bismut, J.-M., & Lebeau, G. (1991). Complex immersions and Quillen metrics. *Publications Mathématiques de l'IHÉS*, *74*, 1–297.
 *   Bures, D. (1969). An extension of Kakutani's theorem on infinite product measures to the tensor product of semifinite w*-algebras. *Transactions of the American Mathematical Society*, *135*, 199–212.
 *   Busch, P. (2003). Quantum States and Generalized Observables: A Simple Proof of Gleason's Theorem. *Physical Review Letters*, *91*(12), 120403. DOI: 10.1103/PhysRevLett.91.120403
 *   Buttgereit, F., & Brand, M. D. (1995). A hierarchy of ATP-consuming processes in mammalian cells. *Biochemical Journal*, *312*(Pt 1), 163–167. DOI: 10.1042/bj3120163
@@ -114,6 +118,7 @@
 *   Caves, C. M., Fuchs, C. A., Manne, K. K., & Renes, J. M. (2004). Gleason-type derivations of the quantum probability rule for generalized measurements. *Foundations of Physics*, *34*(2), 193–209. DOI: 10.1023/B\:FOOP.0000019581.00318.a5 
 *   Cesa-Bianchi, N., & Lugosi, G. (2006). *Prediction, Learning, and Games*. Cambridge University Press.
 *   Chalmers, D. J. (1995). Facing up to the problem of consciousness. *Journal of Consciousness Studies*, *2*(3), 200–219.
+*   Chamseddine, A. H., & Connes, A. (1997). The spectral action principle. *Communications in Mathematical Physics*, *186*, 731–750. DOI: 10.1007/s002200050126
 *   Chalmers, D. J. (1996). *The Conscious Mind: In Search of a Fundamental Theory*. Oxford University Press.
 *   Cheeger, J., & Ebin, D. G. (1975). *Comparison Theorems in Riemannian Geometry*. North-Holland.
 *   Cheeger, J. (1999). Differentiability of Lipschitz functions on metric measure spaces. *Geometric & Functional Analysis*, *9*(3), 428–517. DOI: 10.1007/s000390050094
@@ -181,6 +186,9 @@
 *   DeWitt, B. S., & Brehme, R. W. (1960). Radiation damping in a gravitational field. *Annals of Physics*, *9*(2), 220–259.
 *   Diósi, L. (1987). A universal master equation for the gravitational violation of quantum mechanics. *Physics Letters A*, *120*, 377–381.
 *   Dittmann, J. (1999). Explicit formulae for the Bures metric. *Journal of Physics A: Mathematical and General*, *32*, 2663–2670.
+*   Doplicher, S., Haag, R., & Roberts, J. E. (1971). Local observables and particle statistics I. *Communications in Mathematical Physics*, *23*, 199–230.
+*   Doplicher, S., Haag, R., & Roberts, J. E. (1974). Local observables and particle statistics II. *Communications in Mathematical Physics*, *35*, 49–85.
+*   Doplicher, S., & Roberts, J. E. (1990). Why there is a field algebra with a compact gauge group describing the superselection structure in particle physics. *Communications in Mathematical Physics*, *131*, 51–107.
 *   D’Onofrio, M., Rummukainen, K., & Tranberg, A. (2014). Sphaleron rate in the minimal Standard Model. *Physical Review Letters*, *113*, 141602. DOI: 10.1103/PhysRevLett.113.141602
 *   Dong, C. (1993). Vertex algebras associated with even lattices. *Journal of Algebra*, *161*, 245–265.
 *   Dong, C., Griess, R. L., & Lam, C. H. (2007). Uniqueness results for the moonshine vertex operator algebra. *American Journal of Mathematics*, *129*(2), 583–609.
@@ -272,6 +280,7 @@
 *   Hameroff, S. R., & Penrose, R. (1996). Orchestrated reduction of quantum coherence in brain microtubules: A model for consciousness. *Mathematics and Computers in Simulation*, *40*(3–4), 453–480. DOI: 10.1016/0378-4754(95)00042-4
 *   Hamming, R. W. (1950). Error detecting and error correcting codes. *Bell System Technical Journal*, *29*(2), 147–160. DOI: 10.1002/j.1538-7305.1950.tb00463.x
 *   Halsey, T. C., Jensen, M. H., Kadanoff, L. P., Procaccia, I., & Shraiman, B. I. (1986). Fractal measures and their singularities: The characterization of strange sets. *Physical Review A*, *33*(2), 1141–1151. DOI: 10.1103/PhysRevA.33.1141
+*   Hardy, G. H., Littlewood, J. E., & Pólya, G. (1952). *Inequalities* (2nd ed.). Cambridge University Press.
 *   Hardy, G. H., & Wright, E. M. (1979). *An Introduction to the Theory of Numbers* (5th ed.). Oxford University Press.
 *   Hardy, L. (2001). Quantum Theory From Five Reasonable Axioms. *arXiv*, quant-ph/0101012. DOI: 10.48550/arXiv.quant-ph/0101012
 *   Hardy, J. C., & Towner, I. S. (2020). Superallowed 0⁺→0⁺ nuclear β decays: 2020 critical survey. *Physical Review C*, *102*, 045501.
@@ -451,6 +460,7 @@
 *   Milnor, J. W., & Stasheff, J. D. (1974). *Characteristic Classes*. Princeton University Press.
 *   Minty, G. J. (1962). Monotone (nonlinear) operators in Hilbert space. *Duke Mathematical Journal*, *29*(3), 341–346. DOI: 10.1215/S0012-7094-62-02933-2 
 *   Misner, C. W., Thorne, K. S., & Wheeler, J. A. (1973). *Gravitation*. W. H. Freeman.
+*   Mosco, U. (1969). Convergence of convex sets and of solutions of variational inequalities. *Advances in Mathematics*, *3*(4), 510–585.
 *   Mittelmann, H. D., & Vallentin, F. (2010). High-accuracy semidefinite programming bounds for kissing numbers. *Experimental Mathematics*, *19*(2), 175–179. DOI: 10.1080/10586458.2010.10129070. arXiv:0902.1105.
 *   Mordell, L. J. (1938). The definite quadratic forms in eight variables with determinant unity. *Journal de Mathématiques Pures et Appliquées*, *17*, 41–46.
 *   Mosonyi, M., & Hiai, F. (2011). On the Symmetrized Rényi Relative Entropies and Related Metrics. *IEEE Transactions on Information Theory*, *57*(4), 2474–2487. DOI: 10.1109/TIT.2011.2110065
@@ -515,6 +525,7 @@
 *   Pless, V. (1968). On the uniqueness of the Golay codes. *Journal of Combinatorial Theory*, *5*(3), 215–228. DOI: 10.1016/S0021-9800(68)80067-5
 *   Polanyi, M. (1966). *The Tacit Dimension.* Doubleday.
 *   Pollard, H. (1948). The completely monotonic character of the Mittag-Leffler function $E_a(-x)$. *Bulletin of the American Mathematical Society*, *54*(12), 1115–1116. DOI: 10.1090/S0002-9904-1948-09132-7
+*   Pollock, F. A., Rodríguez-Rosario, C., Frauenheim, T., Paternostro, M., & Modi, K. (2018). Non-Markovian quantum processes: complete framework and efficient characterization. *Physical Review A*, *97*, 012127. DOI: 10.1103/PhysRevA.97.012127
 *   Polchinski, J. (1988). Scale and conformal invariance in quantum field theory. *Nuclear Physics B*, *303*, 226–236.
 *   Polyak, B. T. (1963). Gradient methods for minimizing functionals. *USSR Computational Mathematics and Mathematical Physics*, *3*(4), 864–878. DOI: 10.1016/0041-5553(63)90382-3
 *   Pontecorvo, B. (1957). Mesonium and antimesonium. *Soviet Physics JETP*, *6*, 429.
@@ -527,6 +538,7 @@
 *   Preskill, J. (1998b). Reliable quantum computers. *Proceedings of the Royal Society of London A*, *454*(1969), 385–410. DOI: 10.1098/rspa.1998.0167
 *   Price, H. (2012). Does time-symmetry imply retrocausality? How the quantum world says "maybe". *Studies in History and Philosophy of Modern Physics*, *43*(2), 75–83. DOI: 10.1016/j.shpsb.2011.12.003
 *   Putnam, H. (1967). Psychological predicates. In W. H. Capitan & D. D. Merrill (Eds.), *Art, Mind, and Religion* (pp. 37–48). University of Pittsburgh Press.
+*   Quillen, D. (1985). Determinants of Cauchy-Riemann operators over a Riemann surface. *Functional Analysis and Its Applications*, *19*, 31–34.
 *   Qureshi, T. (2020). Demystifying the delayed-choice quantum eraser. *European Journal of Physics*, *41*(5), 055403. DOI: 10.1088/1361-6404/ab923e
 *   Qureshi, T. (2021). The delayed-choice quantum eraser leaves no choice. *International Journal of Theoretical Physics*, *60*(8), 3076–3086. DOI: 10.1007/s10773-021-04906-w
 *   Radin, D. I., & Nelson, R. D. (1989). Evidence for consciousness-related anomalies in random physical systems. *Foundations of Physics*, *19*(12), 1499–1514.
@@ -653,6 +665,7 @@
 *   West, G. B., Brown, J. H., & Enquist, B. J. (1997). A general model for the origin of allometric scaling laws in biology. *Science*, *276*(5309), 122–126. DOI: 10.1126/science.276.5309.122
 *   Weisberg, J. M., Nice, D. J., & Taylor, J. H. (2010). Timing Measurements of the Relativistic Binary Pulsar PSR B1913+16. *The Astrophysical Journal*, *722*(2), 1030. DOI: 10.1088/0004-637X/722/2/1030
 *   Wetterich, C. (1993). Exact evolution equation for the effective potential. *Physics Letters B*, *301*(1), 90–94. DOI: 10.1016/0370-2693(93)90726-X
+*   Witten, E. (2016). Fermion path integrals and topological phases. *Reviews of Modern Physics*, *88*, 035001. DOI: 10.1103/RevModPhys.88.035001
 *   Weyl, H. (1916). Über die Gleichverteilung von Zahlen mod. Eins. *Mathematische Annalen*, *77*(3), 313–352.
 *   Wheeler, J. A. (1978). The “past” and the delayed-choice double-slit experiment. In *Mathematical Foundations of Quantum Theory* (pp. 9–48). Academic Press.
 *   Whitehead, A. N. (1929). *Process and Reality: An Essay in Cosmology*. Macmillan. (Corrected edition: D. R. Griffin & D. W. Sherburne, Eds., Free Press, 1978.)

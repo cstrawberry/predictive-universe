@@ -250,6 +250,58 @@ A uniform lower bound on finite-volume excitation energies is not by itself a lo
 
 *Proof.* Fix a bounded diamond $O$ and $A\in\mathfrak C_O$. Definition F.0a supplies representatives $A_n$ with $j_n(A_n)\to A$ and (F.0a.1). Hence the finite generators converge to $\mathcal L_{\mathrm{cont}}^*$ on a graph-core dense subset. The ledger $\tau_O$ is precisely the Trotter-Kato or Mosco extension from core convergence to semigroup convergence on $\mathcal A(O)$. Compatibility of the embeddings gives the same limiting action for cofinal finite refinements. Therefore the local generator convergence demanded in Condition 3 of Theorem F.0 holds on $O$. Since $O$ was arbitrary, the condition holds throughout the local net. ∎
 
+**Definition F.0c (Mosco-Bochner AQFT Bridge Certificate).** A Mosco-Bochner AQFT bridge certificate for a selected operational-continuum branch is a finite record
+$$
+\mathfrak B_{\mathrm{AQFT}}
+=
+\left(
+\mathfrak D_n,
+\mathfrak B_n,
+\mathfrak C_n,
+\mathfrak R_n,
+\mathfrak H_n,
+\mathcal E_n,
+L_n,
+\mathfrak A_n(O),
+j_n^m,
+\iota_n,
+\mathfrak C_{\mathrm{gen}},
+v_{\mathrm{LR}},
+\mathfrak S_+
+\right)
+\tag{F.0c.1}
+$$
+such that:
+
+1. the geometric defects $\mathfrak D_n,\mathfrak B_n,\mathfrak C_n,\mathfrak R_n,\mathfrak H_n$ are those of Theorem D.6e and satisfy $\mathfrak D_n\to0$ on the selected sequence;
+
+2. the finite propagation-cost Dirichlet forms $\mathcal E_n$ Mosco-converge to the quadratic Cheeger energy of the noncollapsed $\mathrm{RCD}^*(K,4)$ limit supplied by Theorem C.6c;
+
+3. the finite generators $L_n$ are the self-adjoint or dissipative generator representatives associated with $\mathcal E_n$ on the retained local algebraic cores;
+
+4. the local finite observable algebras $\mathfrak A_n(O)$ form an inductive compatible system under the embeddings $j_n^m$ and the continuum injections $\iota_n$;
+
+5. $\mathfrak C_{\mathrm{gen}}$ is the local generator convergence certificate of Definition F.0a on every bounded diamond;
+
+6. the Lieb-Robinson cones satisfy the lightcone normalization
+$$
+v_{\mathrm{LR}}^{(n)}\to c;
+\tag{F.0c.2}
+$$
+
+7. the positive-energy spectral ledger $\mathfrak S_+$ fixes a common lower bound for the limiting reversible generator after the vacuum energy convention of the branch is applied.
+
+**Theorem F.0d (Mosco-Bochner Certificate Implies Stable Local AQFT Envelope).** If a selected branch carries an accepted certificate $\mathfrak B_{\mathrm{AQFT}}$, then the finite MPU local algebras converge to a Haag-Kastler local AQFT net on the smooth operational envelope of Theorem 43.5. Moreover, for every bounded diamond $O$ and every $t\ge0$,
+$$
+e^{-tL_n}\to e^{-tL}
+\tag{F.0d.1}
+$$
+strongly on the retained finite-energy local core, where $L$ is the generator of the limiting Dirichlet form.
+
+*Proof.* Item (1) and Theorem D.6e give $\mathfrak D_n\to0$ and Mosco convergence of the rescaled propagation-cost forms. Item (2) identifies the Mosco limit with the quadratic Cheeger energy on the noncollapsed $\mathrm{RCD}^*(K,4)$ branch of Theorem C.6c. Therefore the limiting spatial envelope has a strongly local regular Dirichlet form with the infinitesimally Hilbertian structure required by Theorem 43.5.
+
+For closed Markovian forms, Mosco convergence is equivalent to strong convergence of the associated contraction semigroups on the common $L^2$ realization after applying the interpolation maps fixed by the certificate. This gives (F.0d.1) on the retained local cores. Item (5) is exactly Definition F.0a on every bounded diamond, so Theorem F.0b supplies Condition 3 of Theorem F.0. Item (4) supplies the algebraic inductive-limit compatibility required in Conditions 1 and 2 of Theorem F.0. Item (6) identifies the limiting Lieb-Robinson cone with the emergent geometric causal cone, so spacelike-separated limiting algebras commute. Item (7) supplies the positive-energy condition in the reversible subbranch. Theorem F.0 then gives isotony, additivity, covariance for the represented emergent isometry subgroup, the time-slice property under the stated core-generation assumption, and Haag-Kastler locality. ∎
+
 *   **Definition F.3 (Emergent AQFT Net and Properties).** Conditional on Theorem F.0, the emergent continuum physics is described by a net of local C*-algebras $\mathcal{O} \mapsto \mathfrak{A}(\mathcal{O})$ satisfying the Haag-Kastler axioms on the manifold $(M, g_{\mu\nu})$. This net embodies the locality structure derived from the underlying MPU dynamics.
 
 **F.4 Physical States and Dynamics**
@@ -462,6 +514,14 @@ $$
 
 The *choice* between them is then determined by the requirement of consistency with Lorentz covariance: half-integer spin representations of $SL(2,\mathbb{C})$ acquire a sign under $2\pi$ rotation, which must be matched by the exchange statistics to maintain a single-valued wavefunction. PCE does not *select* which statistics applies to which spin, but it *explains* why both statistics represent optimal information structures—and why no other multi-particle statistics (e.g., parastatistics with $S_N$ representations of dimension $> 1$) appear in nature.
 
+**Remark F.2a (Pauli Exclusion and Bures Channel Packing).** Pauli exclusion in this appendix is derived from antisymmetry together with the spin-statistics branch: for a fermionic one-particle vector $|a\rangle$,
+$$
+|a,a\rangle=-|a,a\rangle
+\quad\Rightarrow\quad
+|a,a\rangle=0.
+$$
+The tangent-cell packing result of Theorem Z.10 is a distinct finite-response statement about non-overlapping operational distinguishability cells in QFI/Bures geometry. It is compatible with the Pauli exclusion logic, because both remove operationally redundant over-occupation of a finite distinguishability structure, but Theorem Z.10 is not a substitute for the AQFT spin-statistics derivation. A derivation of Pauli exclusion from channel packing alone would require an additional branch map identifying identical-fermion occupation cells with the tangent cells of Theorem Z.10; that map is not assumed here.
+
 **Theorem F.3 (PCE Exclusion of Parastatistics).**
 Higher-dimensional representations of $S_N$ (parastatistics) incur strictly greater complexity costs than the one-dimensional representations (Bose and Fermi statistics) without providing compensating predictive benefits in the emergent AQFT.
 
@@ -567,6 +627,77 @@ If the modular cocycle obstruction class is nonzero, the branch fails the modula
 
 The modular conjugations implement wedge reflections. Products of the wedge reflection with the internal charge conjugation on the corresponding conjugate DHR sector give the antiunitary strong-reflection action on local fields, hence the CPT operator of Theorem F.4 on the retained algebra. Assumption 6 guarantees that these local modular implementations glue consistently across the wedge/diamond cover. If the obstruction class is nonzero, Theorem F.10.11b says the modular flows do not glue to a single descent automorphism group; then the sector-transport argument above is not globally defined, so the branch is rejected by the gate. ∎
 
+**Definition F.5b (Finite DHR-Tannaka Response Datum).** On a regular AQFT branch satisfying the Mosco-Bochner bridge of Definition F.0c and Theorem F.0d, a finite DHR-Tannaka response datum is a tuple
+$$
+\mathfrak T_{\mathrm{DHR}}
+=
+\left(
+\mathfrak A_{\mathrm{obs}},
+\mathcal C_{\mathrm{resp}},
+\omega_{\mathrm{fib}},
+\mathcal E_{\mathrm{loc}},
+d_{\mathrm{stat}},
+\chi_{\mathrm{DHR}}
+\right)
+\tag{F.9.5b.1}
+$$
+where:
+
+1. $\mathfrak A_{\mathrm{obs}}$ is the PPI-observable Haag-Kastler net on the retained regular branch;
+
+2. $\mathcal C_{\mathrm{resp}}$ is the finite rigid symmetric $C^*$ tensor category of transportable localized endomorphisms of $\mathfrak A_{\mathrm{obs}}$ with simple tensor unit;
+
+3. $\omega_{\mathrm{fib}}:\mathcal C_{\mathrm{resp}}\to\mathrm{Hilb}_{\mathrm{fin}}$ is a faithful symmetric tensor fiber functor;
+
+4. $\mathcal E_{\mathrm{loc}}$ records localization diamonds and charge-transport intertwiners;
+
+5. $d_{\mathrm{stat}}(\rho)$ is the finite statistical dimension assigned to each simple sector $\rho$;
+
+6. $\chi_{\mathrm{DHR}}$ records that the category, fiber functor, localization data, and statistical dimensions are fixed before adding any field algebra or hidden gauge labels.
+
+The reconstructed response gauge group is
+$$
+G_{\mathrm{resp}}
+:=
+\operatorname{Aut}^{\otimes}(\omega_{\mathrm{fib}}),
+\tag{F.9.5b.2}
+$$
+the compact group of unitary monoidal natural automorphisms of the fiber functor.
+
+**Theorem F.5c (Observable-Net Reconstruction of Field Algebra and Gauge Group).** If a branch carries an accepted finite DHR-Tannaka response datum $\mathfrak T_{\mathrm{DHR}}$, then:
+
+1. the category $\mathcal C_{\mathrm{resp}}$ is equivalent, as a rigid symmetric $C^*$ tensor category with fiber functor, to a finite full tensor subcategory of $\operatorname{Rep}(G_{\mathrm{resp}})$;
+
+2. there is a reconstructed field net $\mathfrak F_{\mathrm{PU}}$ carrying a faithful action of $G_{\mathrm{resp}}$ such that
+$$
+\mathfrak A_{\mathrm{obs}}(O)
+=
+\mathfrak F_{\mathrm{PU}}(O)^{G_{\mathrm{resp}}}
+\tag{F.9.5c.1}
+$$
+for every retained local region $O$;
+
+3. every nontrivial compact gauge label on the branch appears as a nontrivial localized superselection sector in $\mathcal C_{\mathrm{resp}}$;
+
+4. any proposed additional gauge factor whose representations do not occur in $\mathcal C_{\mathrm{resp}}$ changes no finite observable protocol response and is removed by PPI/PCE as response-null surplus.
+
+If the finite capacity derivation of Appendix G gives the same representation category,
+$$
+\mathcal C_{\mathrm{resp}}
+\simeq
+\operatorname{Rep}(G_{\mathrm{SM}}/Z)
+\tag{F.9.5c.2}
+$$
+on the retained matter branch, then the gauge sector is closed from both directions: capacity partition selects the gauge algebra, and observable superselection reconstructs the same compact response group.
+
+*Proof.* Since $\mathcal C_{\mathrm{resp}}$ is a finite rigid symmetric $C^*$ tensor category with simple unit and faithful symmetric tensor fiber functor, finite Tannaka reconstruction applies. The group of unitary monoidal natural automorphisms of $\omega_{\mathrm{fib}}$ is compact, and the fiber functor identifies every object of $\mathcal C_{\mathrm{resp}}$ with a finite-dimensional unitary representation of $G_{\mathrm{resp}}$. This proves item 1.
+
+The DHR field-algebra reconstruction applied to the localized transportable sectors gives a field net $\mathfrak F_{\mathrm{PU}}$ generated by the observable net together with charged field operators implementing the sectors in $\mathcal C_{\mathrm{resp}}$. Gauge-invariant elements are exactly the observable intertwiners, hence (F.9.5c.1). This proves item 2.
+
+If a compact gauge label is physical, then some finite local protocol distinguishes its charge transport or fusion behavior. Such a distinguishable label defines a localized transportable sector, hence an object of $\mathcal C_{\mathrm{resp}}$. This proves item 3. Conversely, if an additional gauge factor has no representation in $\mathcal C_{\mathrm{resp}}$, it acts trivially on all reconstructed localized sectors and on all observables in $\mathfrak A_{\mathrm{obs}}$. It therefore changes no protocol-response presheaf. By PPI it is the same physical description, and by PCE the surplus label is removed. This proves item 4.
+
+Finally, if (F.9.5c.2) holds, then the internally selected Appendix G capacity group and the externally reconstructed DHR-Tannaka response group have equivalent finite representation categories on the retained branch. A compact response group acting faithfully on the reconstructed sectors is then fixed up to the usual quotient by the common center invisible to all retained representations. ∎
+
 ---
 
 ### F.9.6 Summary
@@ -579,6 +710,7 @@ The spin-statistics connection and CPT theorem are available in the PU manuscrip
 | **Spin-Statistics** (F.2) | Lorentz invariance (Thm 46), microcausality in the Theorem F.0 continuum limit (Cor F.1), positive energy (Thm 29), local field algebra (Thm F.0), and the Wightman realization hypotheses stated in Theorem F.2 | Conditional theorem |
 | **CPT Invariance** (F.4) | The AQFT/Wightman/Jost analyticity, locality, and spectrum-condition hypotheses stated in Theorem F.4, together with the spin-statistics input of Theorem F.2 | Conditional theorem |
 | **Modular Spin-Statistics-CPT Descent** (F.5a) | Haag duality, split property, DHR transportability, local PCE/KMS modular boost action, modular reflection, and vanishing modular cocycle obstruction | Conditional modular-gate theorem |
+| **DHR-Tannaka Response Reconstruction** (F.5b-F.5c) | finite rigid symmetric localized sector category, faithful tensor fiber functor, fixed statistical dimensions, and forward-locked localization data | Conditional observable-net reconstruction theorem |
 
 The PCE interpretation (Proposition F.2, Theorem F.3) provides additional insight: Bose and Fermi statistics are the unique *optimal* ways to describe identical particles consistent with quantum superposition and locality in the AQFT regime under discussion. Within that same AQFT/Wightman regime, CPT invariance of the dynamics is consistent with the thermodynamic arrow of time: the former is a symmetry of *what evolutions are possible*, while the latter is a selection principle for *which evolutions occur*.
 
@@ -973,6 +1105,80 @@ $$
 \rho^{it}A\rho^{-it}.
 \tag{F.10.4b.1}
 $$
+
+**Definition F.10.4b.1a (Finite Tomita Standard Form).** For a finite factor $\mathfrak A\subseteq\mathcal B(\mathcal H)$ with faithful state $\omega(A)=\operatorname{Tr}(\rho A)$, $\rho>0$, let
+$$
+\mathcal H_\omega:=\mathcal B_2(\mathcal H),
+\qquad
+\Omega_\omega:=\rho^{1/2},
+\qquad
+\pi_\omega(A)X:=AX.
+\tag{F.10.4b.1a.1}
+$$
+The finite Tomita operator is the antilinear operator
+$$
+S_\omega\bigl(A\rho^{1/2}\bigr)
+=
+A^*\rho^{1/2}.
+\tag{F.10.4b.1a.2}
+$$
+Its polar decomposition is
+$$
+S_\omega=J_\omega\Delta_\omega^{1/2},
+\tag{F.10.4b.1a.3}
+$$
+where, on Hilbert-Schmidt representatives,
+$$
+\Delta_\omega(X)=\rho X\rho^{-1},
+\qquad
+J_\omega(X)=X^*.
+\tag{F.10.4b.1a.4}
+$$
+The modular Hamiltonian is
+$$
+K_\omega:=-\log\rho
+\tag{F.10.4b.1a.5}
+$$
+up to an additive scalar on each central block.
+
+**Theorem F.10.4b.1b (Finite Tomita-Takesaki Modular Closure).** For every finite faithful local branch of Definition F.10.4b.1a:
+
+1. $\Omega_\omega$ is cyclic and separating for $\pi_\omega(\mathfrak A)$;
+
+2. the modular group is implemented by
+$$
+\Delta_\omega^{it}\pi_\omega(A)\Delta_\omega^{-it}
+=
+\pi_\omega(\rho^{it}A\rho^{-it})
+=
+\pi_\omega(\sigma_t^\omega(A));
+\tag{F.10.4b.1b.1}
+$$
+
+3. the modular conjugation maps the represented algebra to its commutant:
+$$
+J_\omega\pi_\omega(\mathfrak A)J_\omega
+=
+\pi_\omega(\mathfrak A)'.
+\tag{F.10.4b.1b.2}
+$$
+
+Hence the modular automorphism group, the KMS clock, and the commutant/opposite-perspective algebra are not independent structures on a finite faithful branch; they are determined by the single state-algebra pair $(\mathfrak A,\omega)$.
+
+*Proof.* Because $\rho>0$, the vectors $A\rho^{1/2}$ span $\mathcal B_2(\mathcal H)$, so $\Omega_\omega$ is cyclic. If $A\rho^{1/2}=0$, then $A=0$ because $\rho^{1/2}$ is invertible, so $\Omega_\omega$ is separating.
+For $X\in\mathcal B_2(\mathcal H)$,
+$$
+\Delta_\omega^{it}X=\rho^{it}X\rho^{-it}.
+$$
+Therefore
+$$
+\Delta_\omega^{it}\pi_\omega(A)\Delta_\omega^{-it}X
+=
+\rho^{it}A\rho^{-it}X
+=
+\pi_\omega(\rho^{it}A\rho^{-it})X,
+$$
+proving (F.10.4b.1b.1). The commutant of the left representation consists of right multiplications. Since $J_\omega(X)=X^*$ exchanges left and right multiplication, (F.10.4b.1b.2) follows. The final statement is immediate from the polar decomposition and the uniqueness of the modular objects. ∎
 
 **Theorem F.10.4b.2 (Prediction Time as Modular Time on a Local Equilibrium Branch).** Suppose a finite local PU branch has a prediction-time automorphism group
 $$
@@ -1627,6 +1833,64 @@ on $O$. If the trapped-set audit (F.10.4g.3) holds, no finite PPI-observable tra
 *Proof.* The heat-kernel bound (F.10.4g.1) gives uniform short-time tightness of the finite semigroups on bounded local tests, while the Mosco-core condition (F.10.4g.2) identifies the limit form on the core and supplies recovery sequences. Since the forms are uniformly Markovian, conservative, tight, and local on the audited branch, finite-form compactness gives a closed limiting Dirichlet form $\mathcal E_O$ and hence a dissipative generator $\mathcal D_{\mathrm{cont}}^*$ on the closure of the core. Strong convergence of the Hamiltonian commutator parts on the same core adds the coherent term without changing closability, giving (F.10.4g.4).
 
 For the trapped sector, (F.10.4g.3) bounds the norm of the operator that simultaneously localizes a state on the trapped configuration set and on the trapped update-frequency set. If a nonzero retained state were exactly trapped and invisible to leakage protocols in the continuum limit, this norm would have a subsequential lower bound $1$ on that state. The estimate $C h^{\beta_{\mathrm{FUP}}}\to0$ forbids such a state. Thus any retained trapped sector must either leak through finite protocols, be removed by PCE as non-observable, or fail the audit. This theorem supplies a local generator and anti-remnant audit component; it does not by itself derive wedge KMS, Wightman analyticity, or the positive-energy representation. ∎
+
+**Definition F.10.4g.3 (Local Bochner-Mosco Certificate).** A local Bochner-Mosco certificate on a bounded operational region $O$ is a finite record
+
+$$
+\mathfrak B^{BM}_{O}
+=
+(\mathcal C_O,\Gamma_h,\Gamma_{2,h},K_h,N_h,\mathfrak B_h,\mathfrak C_h,\mathfrak R_h,\mathfrak H_h,\nu_O)
+$$
+
+such that:
+
+1. $\mathcal C_O$ is the retained radius-2 polynomial test core used by Theorem D.6e, restricted to $O$ and closed under the carré-du-champ operations required on that core.
+2. $\Gamma_h$ and $\Gamma_{2,h}$ are the finite carré-du-champ and iterated carré-du-champ forms of the local finite generator on $\mathcal C_O$.
+3. The finite forms are uniformly Markovian, conservative, local on the audited window, and Mosco-core convergent as in Definition F.10.4g.1.
+4. The radius-2 Bakry-Émery defect $\mathfrak B_h$ of Theorem D.6e tends to zero on the cover of $O$ with limiting parameters $K_h\to K$ and $N_h\to4$.
+5. The finite-core and recovery defects $\mathfrak C_h$ and $\mathfrak R_h$ of Theorem D.6e tend to zero on the same retained core.
+6. The local Euclidean-rigidity defect $\mathfrak H_h$ is recorded when the regular-manifold upgrade is invoked; otherwise the output is only the retained metric-measure RCD branch.
+7. The noncollapse, local doubling, and local $(1,2)$-Poincaré inputs required by Theorem C.6c are supplied on $O$.
+8. The heat-kernel audit has spectral dimension $d_s=4+o(1)$ on the same macroscopic window, and the noncollapse bounds in item 7 fix the limit on the noncollapsed four-dimensional branch.
+
+**Corollary F.10.4g.4 (Local RCD Gate from the Bochner-Mosco Certificate).** If $\mathfrak B^{BM}_{O}$ is accepted on a bounded regular region $O$, then every selected Mosco/measured-GH subsequential limit on $O$ satisfies the retained operational version of noncollapsed $\mathrm{RCD}^*(K,4)$, and the limiting Cheeger energy is quadratic. A response-active non-quadratic or Finsler limit fails this gate unless the non-quadratic directions are response-null.
+
+*Proof.* Items 3-5 give the Mosco-core, curvature-transfer, finite-core, and recovery-map hypotheses of Theorem D.6e on $O$. Item 7 supplies the noncollapse and compactness hypotheses of Theorem C.6c. Item 8 fixes the branch dimension at four together with noncollapse, so dimension drop is not permitted on the retained branch. The conclusion is therefore the local restriction of the D.6e/C.6c closure. A response-active non-quadratic direction would violate the quadratic Cheeger-energy conclusion; if the direction is response-null, it is removed by the PPI quotient rather than retained as a distinct continuum energy. ∎
+
+**Definition F.10.4g.5 (Coherent Hamiltonian Handling Certificate).** Let $H_{n,O}$ be the coherent Hamiltonian part of the local generator on $O$. A coherent Hamiltonian handling certificate is a finite record
+
+$$
+\mathfrak C_{\mathrm{coh}}(O)
+=
+(H_{n,O}^{\mathrm{res}},V_{n,O}^{\mathrm{null}},\Theta_O,\Psi_O,\mathfrak h_{\mathrm{coh}})
+$$
+
+where $H_{n,O}^{\mathrm{res}}$ acts on response-active classes, $V_{n,O}^{\mathrm{null}}$ acts only on response-null classes, and $H_{n,O}=H_{n,O}^{\mathrm{res}}+V_{n,O}^{\mathrm{null}}$ before passage to the retained local quotient. The indicator $\Theta_O$ is accepted only with one of the following witnesses:
+
+1. Retention witness: $\Theta_O=1$ and $H_{n,O}^{\mathrm{res}}$ converges in local strong-resolvent form to a self-adjoint finite-energy-density operator $H_{\mathrm{cont},O}^{\mathrm{res}}$ on the limit local Hilbert space.
+2. Cancellation witness: $\Theta_O=0$ and $H_{n,O}^{\mathrm{res}}$ is removed by an explicit response-null identification or by an accepted defect-filling datum $D$ satisfying $[H_{n,O}^{\mathrm{res}}]+\partial D=0$ in the finite obstruction complex.
+
+If neither witness is supplied, the coherent Hamiltonian part of the AQFT bridge remains open on $O$.
+
+**Corollary F.10.4g.6 (Closure of the Coherent-Hamiltonian Handling Gate).** If $\mathfrak C_{\mathrm{coh}}(O)$ is accepted on each bounded operational region of the retained cover, then the coherent Hamiltonian condition in Theorem F.10.4g.2 is supplied region-wise. On the retention branch,
+
+$$
+\mathcal L_{\mathrm{cont}}^*
+=
+i[H_{\mathrm{cont},O}^{\mathrm{res}},\cdot]+\mathcal D_{\mathrm{cont},O}^*.
+$$
+
+On the cancellation branch,
+
+$$
+\mathcal L_{\mathrm{cont}}^*
+=
+\mathcal D_{\mathrm{cont},O}^*.
+$$
+
+No coherent term is silently discarded: it is either transported by an accepted convergence witness, removed by an accepted response-null or defect-filling witness, or left as an open bridge condition.
+
+*Proof.* The retention witness gives strong-resolvent convergence of the coherent Hamiltonian on the same local core used in Theorem F.10.4g.2, so the commutator part passes to the local limit together with the dissipative generator. The cancellation witness removes the response-active coherent term either by the response quotient or by exact defect filling in the obstruction complex. If neither witness is present, the hypotheses of this corollary are absent and no closure is asserted. ∎
 
 ### F.10.5 Golay Self-Duality and Finite-Resolution Haag Duality
 

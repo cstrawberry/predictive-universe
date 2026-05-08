@@ -4298,6 +4298,111 @@ with the operator, domain, regularization rule, and error bound fixed before com
 
 *Proof.* The residual contributes additively to the numerical output of the row. If $R_\alpha$ is not fixed by an operator record, by an accepted all-orders residual certificate, or by an exact zero theorem, then two admissible completions that agree on every closed parent row but assign different residuals inside the allowed certificate remainder give different values of $\alpha^{-1}$. Theorem P.14.1f gives non-identifiability, and Convention P.14.1l forbids theorem-level promotion. If Definition Z.27.11j is satisfied, then $R_\alpha$ is the deterministic image of the fixed residual operator under $\Phi_\alpha$; if Definition Z.27.11g is accepted, Theorem Z.27.11h fixes the residual interval. In either case Theorem D.8.9b applies to the row. ∎
 
+**Definition Z.27.11k (Finite Electromagnetic Ward Residual Complex).** A finite electromagnetic Ward residual complex for the Thomson branch is a finite cochain complex
+$$
+C^0_{\mathrm{resp}}
+\xrightarrow{\delta_0}
+C^1_{\mathrm{em}}
+\xrightarrow{\delta_1}
+C^2_{\mathrm{em}},
+\qquad
+\delta_1\delta_0=0,
+\tag{Z.27.11k.1}
+$$
+with the following interpretation.
+
+1. $C^0_{\mathrm{resp}}$ is the finite space of response-coordinate redefinitions and PPI-null normalization changes after the closed Appendix Z core entries have been fixed.
+
+2. $C^1_{\mathrm{em}}$ is the finite space of admissible electromagnetic residual operators not already included in the bulk Ward, interface, projected-response, democratic-curvature, separable-response, or exact $SU(2)$ transport entries of $\mathfrak C_\alpha$.
+
+3. $C^2_{\mathrm{em}}$ is the finite Ward-obstruction space measuring failure of the residual to preserve the retained electromagnetic Ward identities and branch overlap conditions.
+
+4. A residual operator is admissible only when
+$$
+r\in\ker\delta_1.
+\tag{Z.27.11k.2}
+$$
+
+5. Exact residuals are those of the form
+$$
+r=\delta_0\lambda,
+\qquad
+\lambda\in C^0_{\mathrm{resp}}.
+\tag{Z.27.11k.3}
+$$
+
+The finite Ward residual cohomology is
+$$
+H^1_W(\alpha)
+:=
+\frac{\ker(\delta_1:C^1_{\mathrm{em}}\to C^2_{\mathrm{em}})}
+{\operatorname{im}(\delta_0:C^0_{\mathrm{resp}}\to C^1_{\mathrm{em}})}.
+\tag{Z.27.11k.4}
+$$
+A Ward evaluation functional is an accepted linear map
+$$
+\Phi_\alpha:C^1_{\mathrm{em}}\to\mathbb R
+\tag{Z.27.11k.5}
+$$
+satisfying
+$$
+\Phi_\alpha\delta_0=0.
+\tag{Z.27.11k.6}
+$$
+
+**Theorem Z.27.11k.1 (Ward-Cohomology Closure of the Alpha Residual).** On a Thomson branch carrying Definition Z.27.11k, every admissible residual has a well-defined cohomology evaluation
+$$
+R_\alpha=\Phi_\alpha([r]),
+\qquad
+[r]\in H^1_W(\alpha).
+\tag{Z.27.11k.7}
+$$
+In particular:
+
+1. if $H^1_W(\alpha)=0$, then
+$$
+R_\alpha=0;
+\tag{Z.27.11k.8}
+$$
+
+2. if $H^1_W(\alpha)$ has an accepted basis $[\omega_1],\ldots,[\omega_b]$ and the finite branch record fixes
+$$
+[r]=\sum_{j=1}^b c_j[\omega_j],
+\tag{Z.27.11k.9}
+$$
+then
+$$
+R_\alpha=\sum_{j=1}^b c_j\Phi_\alpha(\omega_j).
+\tag{Z.27.11k.10}
+$$
+
+A finite Ward-cohomology record satisfying either item (1) or item (2) is an exact residual-operator gate in the sense of Definition Z.27.11j.
+
+*Proof.* Since $\delta_1\delta_0=0$, $\operatorname{im}\delta_0\subseteq\ker\delta_1$, so the quotient (Z.27.11k.4) is well-defined. If $r,r'\in\ker\delta_1$ represent the same class, then
+$$
+r'-r=\delta_0\lambda
+$$
+for some $\lambda\in C^0_{\mathrm{resp}}$. By (Z.27.11k.6),
+$$
+\Phi_\alpha(r')-\Phi_\alpha(r)
+=
+\Phi_\alpha(\delta_0\lambda)=0.
+$$
+Hence $\Phi_\alpha$ descends to a well-defined linear functional on $H^1_W(\alpha)$, proving (Z.27.11k.7).
+
+If $H^1_W(\alpha)=0$, every admissible $r\in\ker\delta_1$ is exact, so $r=\delta_0\lambda$ and $\Phi_\alpha(r)=0$, proving (Z.27.11k.8). If a basis and coefficients are fixed, linearity of the descended functional gives (Z.27.11k.10). In both cases the residual operator, its domain, its regularization rule, and the evaluation functional are fixed before comparison. This is exactly the operator record demanded by Definition Z.27.11j. ∎
+
+**Corollary Z.27.11k.2 (No Ward-Exact Contribution to the Thomson Row).** A residual contribution that is a Ward coboundary cannot shift the certified Thomson value:
+$$
+r=\delta_0\lambda
+\quad\Longrightarrow\quad
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}.
+\tag{Z.27.11k.11}
+$$
+Only nonzero classes in $H^1_W(\alpha)$ can contribute to $R_\alpha$.
+
+*Proof.* By Theorem Z.27.11k.1, $\Phi_\alpha$ vanishes on $\operatorname{im}\delta_0$. Therefore exact response-coordinate or normalization changes are PPI/PCE-null for the Thomson row. ∎
+
 ---
 
 # PART VI: EXPERIMENTAL PREDICTIONS (Sections Z.28-Z.32)

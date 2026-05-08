@@ -273,6 +273,8 @@ Within the MPU framework, a superposition state $|\psi\rangle = \sum_i c_i |i\ra
 3.  **Information Encoding:** The coefficients $c_i$ carry predictive information. The Born rule (Proposition 7) links $|c_i|^2$ to probability. Relative phases encode information relevant for predictions in different bases (perspectives), enabling quantum interference.
 4.  **Perspective Relativity:** The representation $\sum c_i |i\rangle_s$ depends on the chosen perspective $s$. The same state amplitude $S(t)=|\psi\rangle$ has different representations in different bases. Superposition is thus the necessary, perspective-dependent description of the MPU's state of predictive indeterminacy. QED
 
+**Remark 8.2a (Operational Branch Support).** The support of a superposition is a perspective-, basis-, apparatus-, and resolution-indexed operational branch support. It counts the mutually distinguishable outcomes retained by the admissible protocol at the chosen resolution, not an additional commitment that each displayed basis component is a separate primitive ontology. Under a change of perspective $s\mapsto s'$, the same vector $|\psi\rangle$ may have a different coefficient support; PPI identifies descriptions that induce the same finite protocol-response distributions, and PCE removes response-null surplus labels. Thus Proposition 6 is an operational branch-enumeration statement inside the Hilbert representation, while Proposition 7 supplies the unique consistent probability measure on the retained branch support.
+
 **8.3 Emergence of the Born Rule**
 
 **Proposition 7 (Emergence of the Born Rule)**

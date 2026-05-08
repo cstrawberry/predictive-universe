@@ -309,6 +309,52 @@ This makes it impossible for the essential image to consist of all three non-iso
 
 The compatible real-carrier refinement of Corollary 23a.1 selects the $\mathrm{Cl}_{\mathbb R}(0,6)$ real form. Cayley-Dickson, octonionic, or $\mathrm{Spin}(7)$ data remain additional markings unless the branch separately supplies an octonionic product, a Cayley four-form, or an equivalent stabilizer datum. They are compatible with the $d_0=8$ carrier but do not replace the SPAP/PCE proof of $d_0=8$, the capacity chain, the Peirce tangent count, or the mode-channel/kissing-number selection.
 
+**Remark 23a.1e (Inner Symmetry of the Three-Register SPAP Frame).** Let
+
+$$
+\mathcal H_{\mathrm{PU}}^{\mathrm{SPAP}}
+=
+\mathcal H_M\otimes\mathcal H_P\otimes\mathcal H_I
+\cong
+(\mathbb C^2)^{\otimes3}
+$$
+
+be the standard minimal SPAP carrier of Theorem 23a and Corollary 23a, and let
+
+$$
+\mathfrak A_M=M_2(\mathbb C)\otimes I\otimes I,
+\qquad
+\mathfrak A_P=I\otimes M_2(\mathbb C)\otimes I,
+\qquad
+\mathfrak A_I=I\otimes I\otimes M_2(\mathbb C)
+$$
+
+be the three distinguished register subalgebras. The label-preserving projective inner symmetry of this SPAP frame is
+
+$$
+\mathrm{Inn}_{\mathrm{SPAP}}^{\mathrm{lab}}
+:=
+\{U\in U(\mathcal H_{\mathrm{PU}}^{\mathrm{SPAP}}):
+U\mathfrak A_XU^*=\mathfrak A_X\text{ for }X=M,P,I\}/U(1)
+\cong
+(\mathrm{PSU}(2))^3.
+$$
+
+If the branch keeps only the unordered three-factor frame and allows relabeling of the three functional registers, the corresponding projective frame normalizer is
+
+$$
+\mathrm{Inn}_{\mathrm{SPAP}}^{\mathrm{fr}}
+\cong
+(\mathrm{PSU}(2))^3\rtimes S_3,
+$$
+
+with $S_3$ acting by factor permutation. Thus the semidirect product occurs only on the frame-relabeling convention; with fixed Memory, Prediction, and Interface labels, the symmetry is the connected label-preserving product $(\mathrm{PSU}(2))^3$.
+
+*Proof.* The generated algebra $\mathfrak A_M\vee\mathfrak A_P\vee\mathfrak A_I$ is the full matrix algebra $M_8(\mathbb C)$, so preserving the full algebra alone would impose no restriction beyond unitarity. The operative datum is the three-factor frame $(\mathfrak A_M,\mathfrak A_P,\mathfrak A_I)$. A unitary that preserves each factor subalgebra induces an inner automorphism of each copy of $M_2(\mathbb C)$ and hence is represented, up to a scalar phase, by a tensor product $U_M\otimes U_P\otimes U_I$ with $U_X\in U(2)$. Quotienting the scalar phase and the phase of each factor leaves $PU(2)^3\cong(\mathrm{PSU}(2))^3$. If the frame is treated as unordered, one may additionally permute the three tensor factors, giving the semidirect product by $S_3$. This is compatible with Theorem G.10.3 on each active two-dimensional kernel and with Corollary 23a's factorization. ∎
+
+Where a downstream rigidity statement says "fixed up to inner unitary on the predictive carrier," the label-preserving class is $\mathrm{Inn}_{\mathrm{SPAP}}^{\mathrm{lab}}$ unless that statement explicitly permits register relabeling, in which case the frame-normalizer class $\mathrm{Inn}_{\mathrm{SPAP}}^{\mathrm{fr}}$ is used. This naming changes no previously proved rigidity content.
+
+
 **Theorem 23b (Operational Pure-State Geometry on the Minimal Branch).**
 On the minimal active branch $d_0=8$, the MPU pure-state description admits the following quotient form.
 

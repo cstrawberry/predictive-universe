@@ -1185,6 +1185,42 @@ If the label has no operational action it is removed by PCE as in Corollary G.8.
 
 *Proof.* Finite groups and finite stabilizer data can carry torsion bordism characters even when the local anomaly polynomial vanishes. If the label is operationally null, Corollary G.8.4h.3 removes it. If it is operationally active and declared to identify descriptions, Theorem X.8d.3 applies. A nonzero torsion character gives a closed test manifold with nontrivial phase and blocks redundancy descent unless the boundary or interface character cancels it. ∎
 
+**Definition X.8d.4a (Finite Anomaly-Bordism Certificate Gate).** For a declared predictive-frame redundancy $G$ acting on a finite branch $\mathsf B$, a finite anomaly-bordism certificate gate is a record
+
+$$
+\mathfrak A_{\mathrm{bord}}(G,\mathsf B)
+=
+(I_{d+2}^{\mathrm{loc}},\alpha_{\mathrm{tors}},\beta_{\mathrm{inflow}},\rho_{\mathrm{matter}},\rho_{\mathrm{edge}},\partial_{\mathrm{PCE}},\mathcal Z,\mathfrak h_A)
+$$
+
+where $I_{d+2}^{\mathrm{loc}}$ is the local anomaly representative, $\alpha_{\mathrm{tors}}\in\operatorname{Hom}(\Omega_{d+1}^{G_{\mathrm{PU}}(\mathsf B)},U(1))$ is the torsion/global anomaly character, $\beta_{\mathrm{inflow}}$ is the boundary or interface inflow class, $\rho_{\mathrm{matter}}$ and $\rho_{\mathrm{edge}}$ are the finite matter and edge ledgers, $\partial_{\mathrm{PCE}}$ is the connecting map into the finite predictive obstruction complex of Theorem X.9.5b, $\mathcal Z$ is an explicit zero-total-class witness or accepted defect-filling datum in the sense of Definition X.9.5e, and $\mathfrak h_A$ is the registry commitment fixing these entries before validation comparison.
+
+The total anomaly entry is
+
+$$
+\mathcal A_{\mathrm{tot}}
+:=
+[I_{d+2}^{\mathrm{loc}}]
+\oplus
+\alpha_{\mathrm{tors}}
+\oplus
+\partial_{\mathrm{PCE}}(\beta_{\mathrm{inflow}})
+\tag{X.8d.4a.1}
+$$
+
+after response-null labels are quotiented. The direct-sum decomposition is accepted only when the local, torsion, and inflow entries are sector-separated in the obstruction complex, so that response-null quotienting may be checked componentwise.
+
+**Algorithm X.8d.4b (Anomaly-Bordism Gate).** A declared redundancy passes the finite anomaly-bordism gate only if:
+
+1. the local anomaly representative $I_{d+2}^{\mathrm{loc}}$ is computed on the retained finite regulator branch;
+2. the torsion/global character $\alpha_{\mathrm{tors}}$ is computed on the retained finite large-protocol transformations;
+3. the boundary or interface inflow class $\beta_{\mathrm{inflow}}$ is pushed through $\partial_{\mathrm{PCE}}$;
+4. response-null labels are removed componentwise under the sector-separation hypothesis of Definition X.8d.4a;
+5. an explicit witness $\mathcal Z$ proves $\mathcal A_{\mathrm{tot}}=0$ after ordinary cancellation, response-null quotienting, or accepted defect filling;
+6. the commitment witness $\mathfrak h_A$ is registered before validation comparison.
+
+If the gate fails, the transformation is not a redundancy of the physical PPI quotient on that branch. It must be excluded, completed by accepted boundary/interface/defect data, or treated as a physical update channel rather than a quotient symmetry.
+
 **Definition X.8d.5 (Retained Global Response Symmetry Under PCE Compression).** Let
 $$
 \mathcal C_{\Lambda\to\mu}:\mathsf B_{\Lambda}\to\mathsf B_{\mu}
@@ -2051,6 +2087,42 @@ Theorem F.10.6b proves that, for finite quantum algebras, $I(R:\bar R\mid B_R)_\
 
 For the approximate statement, Corollary F.10.6d gives the Fawzi-Renner recovery bound in trace norm. Substituting $B_R$ for $Z_{\partial R}$ gives (X.8k.6). ∎
 
+**Corollary X.8k.4a (Schur-Heat Kernel Boundary Amplitudes).** Let $\mathfrak L$ satisfy Definition X.8k.1, and let $\Lambda_{\partial}$ be the Schur boundary response operator (X.8k.2). For every $\tau>0$, the finite heat operator
+$$
+K_\tau^\partial:=e^{-\tau\Lambda_{\partial}}
+\tag{X.8k.4a.1}
+$$
+is determined by boundary protocols. Hence every boundary transition amplitude
+$$
+A_{ij}(\tau)
+:=
+\langle u_j,K_\tau^\partial u_i\rangle
+\tag{X.8k.4a.2}
+$$
+between retained boundary states $u_i,u_j$ is a PPI-invariant boundary-response scalar.
+
+On a smooth-envelope branch where $\Lambda_{\partial}$ is the finite approximation to a positive Laplace-type operator on a $d$-dimensional retained boundary manifold and the branch supplies the heat-kernel certificate, the kernel has the local asymptotic form
+$$
+K_\tau^\partial(x,y)
+=
+(4\pi\tau)^{-d/2}
+\Delta_{\mathrm{VVM}}(x,y)^{1/2}
+\exp\left[-\frac{d_{\partial}(x,y)^2}{4\tau}\right]
+\left(1+O(\tau)\right),
+\tag{X.8k.4a.3}
+$$
+where $\Delta_{\mathrm{VVM}}$ is the Van Vleck-Morette determinant of the retained boundary metric.
+
+*Proof.* Theorem X.8k.2 states that complete boundary protocols determine $\Lambda_{\partial}$ uniquely. Since $\Lambda_{\partial}$ is a finite self-adjoint operator on the retained finite branch, the spectral theorem gives
+$$
+e^{-\tau\Lambda_{\partial}}
+=
+\sum_a e^{-\tau\lambda_a}P_a
+$$
+with $\lambda_a$ and $P_a$ fixed by $\Lambda_{\partial}$. Thus $K_\tau^\partial$ and all matrix elements (X.8k.4a.2) are determined by boundary protocols and are invariant under PPI-equivalent interiors.
+
+On the smooth-envelope branch, the heat-kernel certificate is precisely the statement that the finite spectral heat kernel converges on the retained local window to the heat kernel of the limiting positive Laplace-type operator. The standard local parametrix for such an operator gives (X.8k.4a.3). No independent interior label enters the expression; the distance, Van Vleck determinant, and finite remainder are all data of the Schur boundary response class. ∎
+
 **Definition X.8k.5 (Colorless Boundary Impedance Map).** Let $H_{\mathrm{conf}}$ be a finite self-adjoint retained operator on a confined sector decomposed as
 $$
 \mathcal H_{\mathrm{conf}}
@@ -2147,6 +2219,74 @@ $$
 A nonzero matched boundary amplitude exists exactly when (X.8k.11) holds. This proves item 4.
 
 Finally, Theorem X.8k.2 states that complete boundary protocols determine the Schur response operator and that identical boundary response classes are PPI-equivalent. Applying that theorem at each energy $E$ gives equality of the meromorphic impedance maps as equality of all colorless boundary responses. PCE removes surplus interior representatives that do not change this map. ∎
+
+**Definition X.8k.6a (Finite Nuclear Aggregate Bootstrap Datum).** For a fixed proton-neutron sector $A=(Z,N)$, a finite nuclear aggregate bootstrap datum is
+$$
+\mathfrak B_A^{\mathrm{nuc}}
+=
+\left(
+\mathcal H_A^{\mathrm{adm}},
+\mathcal P_A^{\partial},
+Z_A^{\mathrm{PU}}(E),
+\mathcal O_A^{\mathrm{spin}},
+\mathcal O_A^{\mathrm{decay}},
+V_A^{\mathrm{PCE}},
+\chi_A^{\mathrm{nuc}}
+\right)
+\tag{X.8k.14}
+$$
+where:
+
+1. $\mathcal H_A^{\mathrm{adm}}$ is the finite set or compact finite-dimensional family of self-adjoint colorless $A$-nucleon aggregate Hamiltonians compatible with the accepted low-energy branch data, cluster separability, unitarity, exchange symmetry, and retained two- and three-body boundary response data;
+
+2. $\mathcal P_A^{\partial}$ is the finite colorless boundary protocol family;
+
+3. $Z_A^{\mathrm{PU}}(E)$ is the accepted meromorphic colorless boundary impedance record on $\mathcal P_A^{\partial}$;
+
+4. $\mathcal O_A^{\mathrm{spin}}$ and $\mathcal O_A^{\mathrm{decay}}$ are the retained spin-current and decay boundary operators;
+
+5. $V_A^{\mathrm{PCE}}$ is the branch scalarization of the PCE resource cost on $\mathcal H_A^{\mathrm{adm}}$;
+
+6. $\chi_A^{\mathrm{nuc}}$ records that all entries are fixed before isotope, magic-number, or transition-rate comparison.
+
+The admissible completion set is
+$$
+\mathcal K_A
+=
+\left\{
+H\in\mathcal H_A^{\mathrm{adm}}
+:
+\Lambda_H(E)|_{\mathcal P_A^{\partial}}
+=
+Z_A^{\mathrm{PU}}(E)
+\right\}.
+\tag{X.8k.15}
+$$
+
+**Theorem X.8k.6b (PCE-Minimal Colorless Nuclear Aggregate Completion).** If $\mathfrak B_A^{\mathrm{nuc}}$ is accepted, $\mathcal K_A$ is nonempty and compact, and $V_A^{\mathrm{PCE}}$ is lower semicontinuous on $\mathcal K_A$, then a PCE-minimal aggregate Hamiltonian exists:
+$$
+H_A^{\mathrm{PU}}
+\in
+\operatorname*{argmin}_{H\in\mathcal K_A}
+V_A^{\mathrm{PCE}}(H).
+\tag{X.8k.16}
+$$
+If the scalarization is strict on PPI-distinct representatives, then $H_A^{\mathrm{PU}}$ is unique up to boundary-preserving unitary equivalence. Its colorless bound and resonance energies are fixed by
+$$
+\det\Lambda_{H_A^{\mathrm{PU}}}(E)=0,
+\tag{X.8k.17}
+$$
+and, for an accepted exterior channel,
+$$
+\det\left[
+\Lambda_{H_A^{\mathrm{PU}}}(E)-\Lambda_{\mathrm{out}}(E)
+\right]=0.
+\tag{X.8k.18}
+$$
+
+*Proof.* Since $\mathcal K_A$ is a closed subset of the compact admissible family by continuity of the finite Schur impedance map, it is compact. Lower semicontinuity of $V_A^{\mathrm{PCE}}$ gives existence of a minimizer by the direct method, proving (X.8k.16). If two minimizers are PPI-distinct and the scalarization is strict on PPI-distinct representatives with the same boundary response, one must have strictly smaller PCE cost, contradicting minimality. Hence the minimizer is unique up to boundary-preserving unitary transformations, which do not change any protocol in $\mathcal P_A^{\partial}$.
+
+Equations (X.8k.17) and (X.8k.18) are Theorem X.8k.6 applied to the selected aggregate Hamiltonian $H_A^{\mathrm{PU}}$. Since $\mathcal O_A^{\mathrm{spin}}$ and $\mathcal O_A^{\mathrm{decay}}$ are part of the same finite record, spin-dependent transition rates and decay channels are finite matrix elements between eigenvectors of the fixed self-adjoint operator and are therefore determined. ∎
 
 ### X.8l Predictive Hodge Decomposition of Update Currents
 
@@ -2330,6 +2470,36 @@ with the same regulator kernel $R_k$ in both charts; since $W_k$ differs only by
 Under the LAN/exponential-family conditions of Proposition X.1, $\mathcal{G}$ coincides with the Fisher information metric on the statistical manifold of coarse-grained distributions. Natural-gradient flow $\dot{\theta}^i = -\mathcal{G}^{ij}(\theta) \partial_j V$ is coordinate-invariant on this manifold [Amari 1998]: under coordinate change $\theta \mapsto \tilde{\theta}(\theta)$, the metric transforms as a $(0,2)$-tensor while its inverse transforms contravariantly, ensuring $\mathcal{G}^{ij} \partial_j V$ transforms as a vector field. Thus a proxy PCE objective expressed through these objects is degenerate on reparameterization-related charts. ∎
 
 *Remark: Anomalies.* Field redefinitions can induce Jacobian terms that are independent of $J$ but not absorbable into the permitted counterterm class while preserving the operational symmetry constraints (e.g., chiral anomalies). Such transformations are excluded by condition (2) and do not generate PCE-dualities.
+
+**Corollary X.9.3a (Duality Orbits as PCE Flat Directions).** Let $\mathcal Y$ be a smooth finite-resolution description manifold on which a group $G_{\mathrm{dual}}$ acts by PCE-dualities in the sense of Definition X.9.2 and Proposition X.9.3. Let
+$$
+\pi:\mathcal Y\to \mathcal Y/G_{\mathrm{dual}}
+$$
+be the quotient map onto operational response classes. If a PCE proxy descends to the quotient,
+$$
+V_{\mathrm{PCE}}=\bar V_{\mathrm{PCE}}\circ\pi,
+$$
+then every tangent vector $v$ tangent to a duality orbit satisfies
+$$
+dV_{\mathrm{PCE}}(v)=0.
+$$
+If $y_*$ is a critical point of $V_{\mathrm{PCE}}$, then the second variation along any smooth duality-orbit curve $\gamma(t)$ with $\gamma(0)=y_*$ is also zero:
+$$
+\frac{d^2}{dt^2}V_{\mathrm{PCE}}(\gamma(t))\Big|_{t=0}=0.
+$$
+Thus duality-related descriptions are flat directions of the PCE description space, not competing physical branches.
+
+*Proof.* If $v$ is tangent to a $G_{\mathrm{dual}}$-orbit, then $d\pi(v)=0$. Since $V_{\mathrm{PCE}}=\bar V_{\mathrm{PCE}}\circ\pi$,
+$$
+dV_{\mathrm{PCE}}(v)
+=
+d\bar V_{\mathrm{PCE}}(d\pi(v))
+=
+d\bar V_{\mathrm{PCE}}(0)
+=
+0.
+$$
+For any smooth orbit curve $\gamma(t)$, $\pi(\gamma(t))$ is constant, so $V_{\mathrm{PCE}}(\gamma(t))$ is constant. Its first and second derivatives vanish. At a critical point this identifies the orbit directions as Hessian-null directions of the descended PCE proxy. ∎
 
 At the PCE-Attractor (Definition 15a), the theory selects highly symmetric, self-dual structures (e.g., the $U(8)/(U(2) \times U(6))$ orbit realization of $\mathrm{Gr}(2,8)$ in Theorem Z.6.3a, and the Golay/Leech structures in Theorem Z.13), which enlarge the stabilizer group of the predictive data. This naturally increases the size of duality orbits (many descriptive charts realizing the same operational predictions).
 
@@ -2781,6 +2951,108 @@ $$
 
 *Proof.* Equation (X.9.6.4) is item 3 of Theorem X.9.6b. The operator entering the trace is the RG-sector compression of the same closed predictive operator that generates response, perspective transport, and PCE adaptation. Hence the RG flow is fixed by the finite closed-form datum $\mathfrak D_{\mathrm{PU}}$ and the chosen regulator $R_k$. Changing the RG flow while keeping $\mathfrak D_{\mathrm{PU}}$ and $R_k$ fixed would change the functional calculus of a fixed self-adjoint operator, which is impossible by the spectral theorem. ∎
 
+**Definition X.9.6c.2 (PCE-Descent RG Description Manifold).** A PCE-descent RG description manifold is a finite regular chart
+$$
+\mathcal Y_k
+=
+\{\theta^i(k)\}_{i=1}^m
+\tag{X.9.6c.2.1}
+$$
+of retained effective descriptions at scale $k$, equipped with:
+
+1. the Fisher/QFI metric
+$$
+\mathcal G_{ij}(k,\theta);
+\tag{X.9.6c.2.2}
+$$
+
+2. a beta vector field
+$$
+\beta^i(\theta,k):=\frac{d\theta^i}{d\log k};
+\tag{X.9.6c.2.3}
+$$
+
+3. the RG one-form
+$$
+\omega_{\mathrm{RG}}
+:=
+-\mathcal G_{ij}\beta^j\,d\theta^i;
+\tag{X.9.6c.2.4}
+$$
+
+4. a finite PCE compression potential $V_{\mathrm{RG}}(\theta,k)$ satisfying
+$$
+d_\theta V_{\mathrm{RG}}=\omega_{\mathrm{RG}}.
+\tag{X.9.6c.2.5}
+$$
+
+The exactness condition (X.9.6c.2.5) is the PCE-descent gate for RG. In a simply connected chart it is equivalent to the finite curl-vanishing condition
+$$
+\partial_i(\mathcal G_{j\ell}\beta^\ell)
+=
+\partial_j(\mathcal G_{i\ell}\beta^\ell)
+\qquad
+\text{for all }i,j.
+\tag{X.9.6c.2.6}
+$$
+
+**Theorem X.9.6c.3 (Renormalization Group Flow as PCE Descent).** On a PCE-descent RG description manifold,
+$$
+\beta^i
+=
+-\mathcal G^{ij}\partial_j V_{\mathrm{RG}}.
+\tag{X.9.6c.3.1}
+$$
+Consequently the RG trajectory is the natural-gradient descent flow of the PCE compression potential:
+$$
+\frac{d}{d\log k}V_{\mathrm{RG}}(\theta(k),k)
+=
+-\mathcal G_{ij}\beta^i\beta^j
++
+\partial_{\log k}V_{\mathrm{RG}}.
+\tag{X.9.6c.3.2}
+$$
+On an autonomous scale chart, or after including explicit scale-dependence as an extra coordinate in the extended description manifold,
+$$
+\frac{d}{d\log k}V_{\mathrm{RG}}
+=
+-\lVert\beta\rVert_{\mathcal G}^2
+\le0.
+\tag{X.9.6c.3.3}
+$$
+Fixed points of the RG flow are exactly PCE-critical descriptions:
+$$
+\beta=0
+\quad\Longleftrightarrow\quad
+d_\theta V_{\mathrm{RG}}=0.
+\tag{X.9.6c.3.4}
+$$
+
+*Proof.* Equation (X.9.6c.2.5) gives
+$$
+\partial_iV_{\mathrm{RG}}
+=
+-\mathcal G_{ij}\beta^j.
+$$
+Multiplying by $\mathcal G^{ki}$ gives (X.9.6c.3.1). Along a trajectory,
+$$
+\frac{d}{d\log k}V_{\mathrm{RG}}
+=
+\partial_iV_{\mathrm{RG}}\beta^i+\partial_{\log k}V_{\mathrm{RG}}
+=
+-\mathcal G_{ij}\beta^i\beta^j+\partial_{\log k}V_{\mathrm{RG}},
+$$
+proving (X.9.6c.3.2). If the chart is autonomous, the explicit scale term vanishes. If it is not autonomous, promote $\log k$ to an additional coordinate and include the scale work term in the extended PCE potential; the same calculation gives (X.9.6c.3.3) on the extended chart. Since $\mathcal G$ is positive definite on the retained regular branch, $\mathcal G_{ij}\beta^i\beta^j=0$ if and only if $\beta=0$. Equation (X.9.6c.3.1) then proves (X.9.6c.3.4). ∎
+
+**Corollary X.9.6c.4 (RG Curl Obstruction).** If the RG one-form $\omega_{\mathrm{RG}}$ is not exact on the retained description chart, then that chart does not carry a closed PCE-descent RG potential. The obstruction class is
+$$
+[\omega_{\mathrm{RG}}]\in H^1_{\mathrm{dR}}(\mathcal Y_k).
+\tag{X.9.6c.4.1}
+$$
+A nonzero class must be kept as an explicit branch obstruction, removed by quotienting the surplus cyclic coordinate, or resolved by enlarging the retained description manifold.
+
+*Proof.* A one-form is the differential of a globally defined scalar potential only if its de Rham cohomology class vanishes. On a simply connected finite chart this reduces to the curl condition (X.9.6c.2.6). If the class is nonzero, no globally defined $V_{\mathrm{RG}}$ satisfying (X.9.6c.2.5) exists, so RG cannot be promoted to a closed PCE gradient-descent theorem on that chart. The stated alternatives are exactly the PPI/PCE possibilities: retain the obstruction as branch data, quotient a response-null cycle, or enlarge the state description until the one-form becomes exact. ∎
+
 **Remark X.9.6c.1 (Markov-Categorical Naturality Gate).** Theorem X.9.6b may be read as a Markov-categorical discipline without adding a new physical postulate. Let $\mathsf{PU}_{\mathrm{fin}}$ be the finite category whose objects are retained finite predictive interfaces and whose morphisms are PPI-admissible stochastic or CPTP update kernels, with tensor product given by independent interface composition. On the closed finite-mode branch, response, RG, perspective transport, measurement update, and slow PCE adaptation are functorial images of the same finite update kernel only when their compression diagrams commute.
 
 Concretely, for any admissible coarse-graining $C_\ell$ and update kernel $K$, a proposed bridge functor $F_\alpha$ must satisfy the naturality square
@@ -3123,6 +3395,35 @@ where $P_{s,a}$, the finite-part scheme $\mathcal S_s$, the tail certificate $\m
 
 *Proof.* Corollary X.9.6g.3 expresses each claimed sector value as a deterministic restriction of one ledger. Theorem X.9.5c.2 requires the local sector restrictions to glue on overlaps. Therefore a simultaneous branch has one shared finite object and one compatible descent class. Altering any listed ledger entry changes the common finite object or its descent datum. The altered object is a distinct branch, not a retuning of the same simultaneous prediction. ∎
 
+**Definition X.9.6g.5 (Strict Determinant-Sector Ledger).** A strict determinant-sector ledger on the master zeta-index branch is a finite record
+
+$$
+\mathfrak M_{\mathrm{det}}
+=
+(\mathfrak L_{\mathrm{PU}},\mathcal R,\chi,\Gamma,\{P_s\}_{s\in\mathcal S},\{\mathcal N_s\}_{s\in\mathcal S},\mathcal T,\mathcal B,\mathfrak h_{\mathrm{det}})
+$$
+
+where $\mathfrak L_{\mathrm{PU}}$ is the accepted master predictive operator, $\mathcal R(z)=(\mathfrak L_{\mathrm{PU}}+z)^{-1}$ is the common resolvent on the retained spectral window, $\chi$ is one regulator profile, $\Gamma$ is one contour or heat/zeta prescription, $P_s$ are the retained sector projections, $\mathcal N_s$ are independently justified sector normalization maps, $\mathcal T$ is a finite tail-bound certificate for each regulated trace, $\mathcal B$ is the overlap-commutativity table supplied by Corollary X.9.6g.3, and $\mathfrak h_{\mathrm{det}}$ is the registry commitment fixing the tuple before validation comparison.
+
+For each sector,
+
+$$
+\Theta_s
+=
+\mathcal N_s\left(
+\frac{1}{2\pi i}
+\int_\Gamma
+\chi(z)\operatorname{Tr}(P_s\mathcal R(z)P_s)\,dz
+\right)
+\tag{X.9.6g.5.1}
+$$
+
+or the heat/zeta equivalent fixed by $\Gamma$. No sector may alter $\mathfrak L_{\mathrm{PU}}$, $\chi$, $\Gamma$, $\mathcal T$, or a shared overlap finite part after $\mathfrak h_{\mathrm{det}}$ has been registered without creating a distinct branch.
+
+**Corollary X.9.6g.6 (No Hidden Sector Retuning on a Strict Determinant-Sector Ledger).** If two numerical sectors are certified by the same strict determinant-sector ledger $\mathfrak M_{\mathrm{det}}$, then any shared spectral subblock has one finite part on the accepted branch. A correction to that shared finite part propagates through every sector projection containing the subblock. Changing a regulator, contour, tail certificate, finite part, projector, or normalization creates a distinct determinant-sector ledger rather than a retuning of the same simultaneous prediction.
+
+*Proof.* The sector values are restrictions of one resolvent trace functional of $\mathfrak L_{\mathrm{PU}}$ with one regulator, one contour or heat/zeta prescription, and one tail certificate. On an overlap subblock, Corollary X.9.6g.3 identifies the mixed finite differences as restrictions of the same finite function on the shared chamber. Hence the shared finite part is unique on the ledger. Altering one of the listed entries changes the finite record fixed by $\mathfrak h_{\mathrm{det}}$ and therefore changes the branch. ∎
+
 **Definition X.9.6h (Canonical Doubled Dirac Factorization of the Master Operator).** Let $\mathfrak D_{\mathrm{PU}}$ be a closed predictive Dirichlet datum and let $\mathfrak L_{\mathrm{PU}}\ge0$ be its master predictive operator. Define
 $$
 \mathscr H_{\mathrm D}
@@ -3252,6 +3553,101 @@ for all retained algebra generators $a,b\in\mathfrak A_P$ for which $J_P$ is def
 *Proof.* Equation (X.9.6.35) is an equality of finite self-adjoint operators on $\mathscr H_P$. Hence every quadratic response generated by $P\mathfrak L_{\mathrm{PU}}P^*$ is equivalently generated by the certified first-order operator $D_P$ together with the zero-order potential $V_P$. The order-zero and order-one identities (X.9.6.36) show that the represented algebra acts as a finite first-order response geometry on the retained branch. Since $\mathfrak A_P$ acts faithfully, no retained algebra generator is lost in the factorization.
 
 Let $L'_P$ be another proposed carrier for the same sector. If it induces the same protocol-response presheaf as $P\mathfrak L_{\mathrm{PU}}P^*$, then Theorem P.6.1b.3 identifies it in the operational quotient, and Corollary P.6.1b.8 removes any extra label or operator decoration with no response change and no cost decrease. If $L'_P$ changes a finite response, it is not the same sector projection in the PPI quotient and must be entered as a distinct finite branch with its own certificate. These alternatives exhaust the finite response quotient. ∎
+
+**Definition X.9.6h.4 (PU Spectral-Action Transfer Ledger).** A PU spectral-action transfer ledger for a sector projection $P$ is a finite record
+$$
+\mathfrak S_{\mathrm{SA}}(P)
+=
+\left(
+P,
+D_P,
+f,
+\Lambda_{\mathrm{SA}},
+\{P_s\}_{s\in\mathcal S_{\mathrm{SM}}},
+\{a_{j,s}\}_{j\le J,s\in\mathcal S_{\mathrm{SM}}},
+\mathcal N_{\mathrm{SA}},
+\mathcal T_{\mathrm{SA}},
+\chi_{\mathrm{SA}}
+\right)
+\tag{X.9.6h.4.1}
+$$
+where:
+
+1. $D_P$ is the certified first-order Dirac operator of Definition X.9.6h.2 for the projection $P$;
+
+2. $f$ is an even positive cutoff function whose moments $f_k$ used by the branch are fixed before validation comparison;
+
+3. $\Lambda_{\mathrm{SA}}$ is the spectral-action reference scale;
+
+4. $P_s$ are the branch-determined sector projections for the retained Standard Model gauge, Higgs, and matter-response sectors;
+
+5. $a_{j,s}$ are the accepted finite or smooth-envelope heat coefficients of $P_sD_P^2P_s$ through the order $J$ required by the threshold or Higgs-sector row;
+
+6. $\mathcal N_{\mathrm{SA}}$ is the normalization map from heat coefficients to the branch coupling, threshold, Higgs, and matching conventions;
+
+7. $\mathcal T_{\mathrm{SA}}$ is the heat/zeta tail certificate controlling all omitted coefficients;
+
+8. $\chi_{\mathrm{SA}}$ records that no entry was selected using $\alpha(M_Z)$, $v$, $m_H$, $\sin^2\theta_W(M_Z)$, Yukawa data, CKM data, PMNS data, or baryogenesis data.
+
+The finite spectral action is
+$$
+S_f(P,\Lambda_{\mathrm{SA}})
+=
+\operatorname{Tr}
+f\left(\frac{P D_P^2 P}{\Lambda_{\mathrm{SA}}^2}\right).
+\tag{X.9.6h.4.2}
+$$
+On a smooth-envelope heat-kernel branch, the accepted asymptotic expansion is
+$$
+S_f(P,\Lambda_{\mathrm{SA}})
+\sim
+\sum_{j=0}^{J}
+f_{4-j}\Lambda_{\mathrm{SA}}^{4-j}
+a_j(PD_P^2P)
++
+\mathcal T_{\mathrm{SA}}.
+\tag{X.9.6h.4.3}
+$$
+
+**Theorem X.9.6h.5 (Spectral-Action Transfer of Gauge-Higgs Threshold Data).** On a branch carrying an accepted $\mathfrak S_{\mathrm{SA}}(P)$, every gauge kinetic coefficient, Higgs kinetic coefficient, Higgs quartic coefficient, and electroweak threshold finite part claimed from the spectral action is a deterministic function of the finite record:
+$$
+\left(
+g_1^{-2},g_2^{-2},g_3^{-2},
+Z_H,
+\lambda_H,
+\Delta_{\mathrm{EW}}
+\right)
+=
+\mathcal N_{\mathrm{SA}}
+\left(
+\{f_k\},
+\{a_{j,s}\},
+\mathcal T_{\mathrm{SA}}
+\right).
+\tag{X.9.6h.5.1}
+$$
+No independent electroweak threshold or Higgs-sector constant may be appended on the same closed spectral branch. If a threshold row is theorem-level through spectral action, then its coefficients must be restrictions of the same master zeta-index ledger of Definition X.9.6g.
+
+*Proof.* The operator $D_P$ and projections $P_s$ are finite or heat-certified smooth-envelope restrictions of the master predictive operator by Theorem X.9.6h.3. Therefore each heat coefficient $a_{j,s}$ is fixed by the accepted ledger. For finite matrices this is immediate from the spectral theorem:
+$$
+\operatorname{Tr}f(P_sD_P^2P_s/\Lambda_{\mathrm{SA}}^2)
+=
+\sum_m f(\lambda_{s,m}/\Lambda_{\mathrm{SA}}^2).
+$$
+For the smooth-envelope branch, (X.9.6h.4.3) is part of the accepted heat-kernel certificate and supplies the same coefficients with the tail bound $\mathcal T_{\mathrm{SA}}$.
+
+The bosonic gauge, Higgs kinetic, Higgs quartic, and threshold terms are the sector projections of the same finite spectral action. Applying the fixed normalization map $\mathcal N_{\mathrm{SA}}$ gives (X.9.6h.5.1). Adding any further threshold or Higgs coefficient while keeping the same $D_P$, $f$, projections, heat coefficients, and tail certificate fixed would change the branch output without changing the spectral record, contradicting Corollary X.9.6e and Theorem X.9.6g.1. Hence such a coefficient is either response-null and removed, or it defines a distinct branch with a separate certificate. ∎
+
+**Remark X.9.6h.4 (Cross-Ledger Equivalence Gate).** A future cross-ledger equivalence record connecting the anomaly, modular, geometric, spectral, and thermodynamic ledgers must be entered as an explicit finite gate before any global-equivalence conclusion is used. Such a gate must supply:
+
+1. the accepted finite record for each participating ledger;
+2. the compression or projection map from the master predictive operator, or from a registered finite functional-calculus image of it, to each ledger;
+3. pairwise naturality squares on the retained PPI quotient;
+4. triangle-closure checks for all triples of ledgers;
+5. a parent obstruction class only if the required equalizer or fiber-product datum exists in the finite obstruction complex;
+6. a registry commitment fixing all maps and overlap checks before any cross-ledger numerical or structural consequence is invoked.
+
+Pairwise compatibility with the master operator does not by itself imply that all ledgers are one global object, that any subcollection determines the rest, or that all sector obstruction classes vanish together. Those conclusions require the additional finite gate data listed above.
 
 **Definition X.9.6i (Numerical Projection Ledger).** A numerical projection ledger is a finite status-preserving map
 $$

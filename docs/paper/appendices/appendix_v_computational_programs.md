@@ -86,7 +86,7 @@ Using the Appendix U reference input $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16
 $$
 \Lambda_4 L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}.
 $$
-Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference evaluation; a theorem-level four-mode forward interval requires the Fredholm prefactor certificate and interval audit.
+Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference evaluation; a theorem-level four-mode forward interval requires the Fredholm prefactor certificate, with the relative Quillen-Fredholm reformulation of Theorem U.15i.2, and an interval audit.
 $$
 
 Setting $A_{\text{eff}}=1$ in Equation (V.3):

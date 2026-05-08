@@ -157,6 +157,43 @@ Exponentiating and rearranging gives (O.3a.3). ∎
 
 **Remark O.3a.3 (Delayed-Choice Consistency).** In delayed-choice and quantum-eraser protocols, a later experimental setting changes which verification channel becomes operationally relevant for the recorded event. It does not reverse the P-V-U order of the actualized MPU cycle. Each recorded event is still processed through a forward update, and whenever it lies in the pathwise guarantee-level class it obeys the single-cycle irreversibility bound (O.3a.3).
 
+**Definition O.3a.2 (Modular Thermal-Time Ledger).** On a finite faithful local branch, let $(\mathfrak A_O,\omega_O)$ be the local algebra-state pair for a retained region $O$, with modular Hamiltonian
+$$
+K_O:=-\log\rho_O
+\tag{O.3a.2.1}
+$$
+as in Definition F.10.4b.1a. The modular thermal-time ledger is
+$$
+\mathfrak T_{\mathrm{mod}}(O)
+=
+\left(
+\mathfrak A_O,
+\omega_O,
+K_O,
+\sigma_t^{\omega_O},
+\beta_O,
+\chi_{\mathrm{mod}}
+\right),
+\tag{O.3a.2.2}
+$$
+where $\beta_O$ is the physical-time normalization on the KMS branch and $\chi_{\mathrm{mod}}$ records that the algebra, state, and normalization are fixed before using macroscopic clock data.
+
+**Theorem O.3a.3 (Thermal Time as Modular Prediction Time).** On a local equilibrium branch carrying Definition O.3a.2 and satisfying the KMS hypothesis of Theorem F.10.4b.2,
+$$
+\sigma_t^{\omega_O}
+=
+\alpha_{\beta_O t},
+\tag{O.3a.3.1}
+$$
+so local prediction time is the modular parameter scaled by the KMS inverse temperature:
+$$
+\tau=\beta_O t.
+\tag{O.3a.3.2}
+$$
+The arrow of time is then the orientation selected by the SPAP entropy-production branch of Theorem O.3 on the modular clock determined by $(\mathfrak A_O,\omega_O)$.
+
+*Proof.* The identity (O.3a.3.1) is Theorem F.10.4b.2 applied to the local state $\omega_O$. Equation (O.3a.3.2) is the same equality written in the physical prediction-time parameter. Theorem O.3 supplies the orientation by comparing forward and reversed update-history measures with entropy production bounded below by the SPAP cycle cost. The modular group supplies the local clock; the SPAP thermodynamic ratchet supplies its physically realized direction. ∎
+
 **Definition O.3b (Three-Term Predictive Entropy Resolution).** Let $\gamma=(x_0\to\cdots\to x_T)$ be a finite coarse-grained predictive path with reversed path $\gamma^\dagger$. A three-term predictive entropy resolution is a branch datum
 $$
 (Q,N_{\mathrm{SPAP}},\Phi_{\mathrm{PCE}})

@@ -2106,6 +2106,98 @@ The PU framework provides a robust, multi-layered argument for the co-selection 
        and the cubic $U(1)^3$ anomaly vanishes identically. *Proof.* Solve the Yukawa constraints for $y_{u^c},y_{d^c},y_{e^c}$, use $3y_q+y_\ell=0$ to get $y_\ell=-3y_q$, insert into the gravitational anomaly to obtain $y_H=3y_q$, then set $a:=y_q$. ∎
 
        **Corollary G.8.2** (canonical normalization). The PCE tie‑breaker of minimal denominator complexity fixes $a=1/6$, giving $(y_q,y_H,y_{u^c},y_{d^c},y_\ell,y_{e^c})=(1/6,1/2,-2/3,1/3,-1/2,1)$.
+
+       **Theorem G.8.1b (Determinant-Line Descent Form of Hypercharge).** On the finite chiral branch with gauge algebra
+       $$
+       \mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1),
+       $$
+       one Higgs doublet $H=(1,2)_{y_H}$, and one left-chiral response module of the Standard Model representation shape
+       $$
+       R_1=(3,2)_{y_q}
+       \oplus(\bar 3,1)_{y_{u^c}}
+       \oplus(\bar 3,1)_{y_{d^c}}
+       \oplus(1,2)_{y_\ell}
+       \oplus(1,1)_{y_{e^c}},
+       \tag{G.8.1b.1}
+       $$
+       the following are equivalent:
+
+       1. the chiral determinant line $\det D_{R_1}$ descends to the operational gauge quotient with zero local curvature anomaly, and the retained Yukawa maps
+       $$
+       qHu^c,\qquad qH^\dagger d^c,\qquad \ell H^\dagger e^c
+       \tag{G.8.1b.2}
+       $$
+       are gauge-invariant;
+
+       2. the hypercharges satisfy
+       $$
+       y_H=3a,\quad y_q=a,\quad y_{u^c}=-4a,\quad y_{d^c}=2a,\quad y_\ell=-3a,\quad y_{e^c}=6a
+       \tag{G.8.1b.3}
+       $$
+       for a single rational scale $a$.
+
+       With the canonical minimal-denominator normalization of Corollary G.8.2,
+       $$
+       a=\frac16,
+       \qquad
+       (y_q,y_H,y_{u^c},y_{d^c},y_\ell,y_{e^c})
+       =
+       \left(\frac16,\frac12,-\frac23,\frac13,-\frac12,1\right).
+       \tag{G.8.1b.4}
+       $$
+       The global $SU(2)$ determinant holonomy is also trivial on this branch, since the number of left-handed $SU(2)$ doublets per family is $N_c+1=4$. A single sterile singlet may be appended only as $(1,1)_0$ on this branch: a nonzero abelian charge would either add uncancelled abelian determinant-line terms or require an additional response channel and compensating content not included in (G.8.1b.1).
+
+       *Proof.* For the representation (G.8.1b.1), descent of the chiral determinant line through the gauge quotient requires vanishing of the local anomaly polynomial for every gauged redundancy. The mixed and linear anomaly components are exactly
+       $$
+       2y_q+y_{u^c}+y_{d^c}=0,
+       \tag{G.8.1b.5}
+       $$
+       $$
+       3y_q+y_\ell=0,
+       \tag{G.8.1b.6}
+       $$
+       $$
+       6y_q+3y_{u^c}+3y_{d^c}+2y_\ell+y_{e^c}=0.
+       \tag{G.8.1b.7}
+       $$
+       Gauge invariance of (G.8.1b.2) gives
+       $$
+       y_q+y_H+y_{u^c}=0,\qquad
+       y_q-y_H+y_{d^c}=0,\qquad
+       y_\ell-y_H+y_{e^c}=0.
+       \tag{G.8.1b.8}
+       $$
+       Solving (G.8.1b.8) gives
+       $$
+       y_{u^c}=-y_q-y_H,\qquad
+       y_{d^c}=-y_q+y_H,\qquad
+       y_{e^c}=-y_\ell+y_H.
+       \tag{G.8.1b.9}
+       $$
+       Equation (G.8.1b.6) gives $y_\ell=-3y_q$. Substituting this and (G.8.1b.9) into (G.8.1b.7) gives
+       $$
+       6y_q+3(-y_q-y_H)+3(-y_q+y_H)+2(-3y_q)+(3y_q+y_H)=0,
+       $$
+       hence
+       $$
+       -3y_q+y_H=0,
+       \qquad
+       y_H=3y_q.
+       \tag{G.8.1b.10}
+       $$
+       Setting $a:=y_q$ gives (G.8.1b.3). Equation (G.8.1b.5) is then automatically satisfied:
+       $$
+       2a-4a+2a=0.
+       $$
+       The cubic anomaly also vanishes (with the quark doublet contributing $3\cdot 2=6$ chiral states):
+       $$
+       6a^3+3(-4a)^3+3(2a)^3+2(-3a)^3+(6a)^3
+       =
+       (6-192+24-54+216)a^3=0.
+       $$
+       Therefore the local determinant-line curvature anomaly vanishes exactly for (G.8.1b.3). Conversely, any solution of the determinant descent plus Yukawa invariance equations must pass through the same linear system, hence is of the form (G.8.1b.3).
+
+       Witten's global $SU(2)$ anomaly is the residual $\mathbb Z_2$ determinant holonomy. The number of left-handed $SU(2)$ doublets in one family is three color copies of $q$ plus one $\ell$, namely $4$, so the mod-two holonomy is trivial. Finally, a single non-abelian singlet with nonzero hypercharge contributes to the abelian gravitational and cubic anomaly equations while changing no required Yukawa map. With no additional compensating content or response channel in the branch, determinant descent forces the singlet charge to zero; if a separate channel is supplied, it is a different branch. ∎
        
        Quantitative constraints on electroweak coupling ratios at the PCE-attractor—including a branch-specific prediction for $\sin^2\theta_W(\mu^*)$ under the cap-active alignment (Assumption W.3.A)—are derived in Appendix W (Theorem W.11; Eqs. W.3.1–W.3.3).
 

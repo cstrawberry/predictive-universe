@@ -821,6 +821,57 @@ $$
 
 On a partial-utilization branch with utilization factor $q < 1$, the rate becomes $\mathcal{I}_{rel}/(2q\tau_{min})$, scaling the mass-information coefficient in Theorem N.5 by $1/q$. ∎
 
+**Corollary N.4.2 (Off-Branch Entropy-Flow Residual Decomposition).** On a branch that preserves SPAP/Landauer admissibility (Theorem 31) but fails one or more of saturated-boundary utilization, KMS detailed balance, or overhead-free Landauer-saturating implementation, let $q\in(0,1]$ be the retained boundary-utilization factor and let $\sigma_{\mathrm{KMS}}\ge0$ and $\sigma_{\mathrm{oh}}\ge0$ be the branch-supplied entropy-rate defects from KMS departure and implementation overhead after response-null overhead has been quotiented. Define
+
+$$
+\mathcal R_N
+:=
+\dot\varepsilon_{\mathrm{pred}}
+-
+\frac{\mathcal{I}_{rel}}{2\tau_{min}},
+\tag{N.25a}
+$$
+
+and
+
+$$
+\Delta_q
+:=
+\frac{\mathcal{I}_{rel}}{2\tau_{min}}
+\left(\frac1q-1\right).
+\tag{N.25b}
+$$
+
+Then the retained rate ledger is
+
+$$
+\boxed{
+\mathcal R_N
+=
+\Delta_q+\sigma_{\mathrm{KMS}}+\sigma_{\mathrm{oh}}
+\ge0,
+\qquad 0<q\le1.
+}
+\tag{N.25c}
+$$
+
+Equality holds exactly on the branch with $q=1$, $\sigma_{\mathrm{KMS}}=0$, and $\sigma_{\mathrm{oh}}=0$.
+
+*Proof.* The closing sentence of Corollary N.4.1 gives the partial-utilization rate $\mathcal{I}_{rel}/(2q\tau_{min})$ for the same retained relational content. Subtracting the saturated value $\mathcal{I}_{rel}/(2\tau_{min})$ gives $\Delta_q$, which is nonnegative for $0<q\le1$. KMS detailed balance is the zero-production equilibrium reference of Theorems G.1.9.4-G.1.9.5; a branch departure from that reference contributes a nonnegative entropy-production rate $\sigma_{\mathrm{KMS}}$. Theorem 31 gives $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per non-trivial irreversible cycle, while Corollary P.6.1b.8 removes response-null overhead; any retained implementation overhead is therefore recorded by a nonnegative entropy-rate term $\sigma_{\mathrm{oh}}$. Adding the utilization deficit and the two nonnegative defect terms gives (N.25c), and equality is possible only when all three summands vanish. ∎
+
+**Remark N.4.2.1 (Operational Signature).** The decomposition (N.25c) is a branch ledger, not an additional universal saturation claim:
+
+$$
+\mathcal R_N=0
+\quad\text{on the saturated KMS overhead-free branch},
+\qquad
+\mathcal R_N>0
+\quad\text{when any retained deficit is present}.
+$$
+
+Thus the three entries $(\Delta_q,\sigma_{\mathrm{KMS}},\sigma_{\mathrm{oh}})$ refine the $1/q$ rescaling of Corollary N.4.1 by separating utilization, equilibrium, and implementation contributions.
+
+
 
 ### N.11.3 The Mass-Information Identity
 
@@ -905,7 +956,7 @@ $$
 
 where $\mathcal{I}_{rel}$ is measured in nats and $m_P \approx 2.18 \times 10^{-8}$ kg. ∎
 
-**Corollary N.5.1 (Rest Energy as Information Maintenance).** The rest energy $E = mc^2$ equals the power required to maintain relational information at the fundamental rate:
+**Corollary N.5.1 (Rest Energy as Information Maintenance).** The rest energy $E = mc^2$ is the proper-time action-rate, equivalently the energy, assigned to maintaining relational information on the saturated-boundary branch:
 
 $$
 E = mc^2 = \frac{\hbar \cdot \mathcal{I}_{rel}}{2\tau_{min}} = \frac{\mathcal{I}_{rel}}{2\sqrt{8\varepsilon_0}} \cdot E_P
@@ -915,6 +966,60 @@ $$
 where $E_P = m_P c^2 \approx 1.96 \times 10^9$ J is the Planck energy.
 
 *Proof.* Direct substitution of Theorem N.5 into $E = mc^2$. ∎
+
+**Remark N.5.1a (Energy as Proper-Time Action Rate).** Equation (N.32) is dimensionally an energy statement, not an independent power law. Since $\hbar$ has units of action and $\tau_{min}$ has units of time,
+$$
+\frac{\hbar\mathcal{I}_{rel}}{2\tau_{min}}
+$$
+has units of action per proper time, i.e. energy. The framework therefore identifies rest energy with the saturated proper-time rate at which relational action must be carried by the system's maintained predictive relations. Multiplying or dividing by an additional external duration would give work or power for a process; Corollary N.5.1 itself gives the rest-energy/action-rate assigned to the maintained state.
+
+**Corollary N.5.2 (Saturated Action-Entropy-Heat Rate Ledger).** On the saturated-boundary branch of Proposition N.4, with KMS detailed balance and Landauer-saturating refresh at effective temperature $T_{eff}$, define
+
+$$
+\mathcal E_{act}
+:=
+\left|\frac{d\mathcal S_{action}}{d\tau}\right|.
+$$
+
+Then
+
+$$
+\boxed{
+\mathcal E_{act}
+=
+\hbar\dot\varepsilon_{\mathrm{pred}}
+=
+\frac{\hbar}{k_B T_{eff}}\dot Q_{\mathrm{Land}}
+=
+\frac{\hbar\mathcal{I}_{rel}}{2\tau_{min}}
+=
+mc^2.
+}
+\tag{N.32a}
+$$
+
+Equivalently,
+
+$$
+\boxed{
+\dot\varepsilon_{\mathrm{pred}}
+=
+\frac{\mathcal{I}_{rel}}{2\tau_{min}},
+\qquad
+\dot Q_{\mathrm{Land}}
+=
+k_B T_{eff}\frac{\mathcal{I}_{rel}}{2\tau_{min}},
+\qquad
+\mathcal E_{act}
+=
+\hbar\frac{\mathcal{I}_{rel}}{2\tau_{min}}.
+}
+\tag{N.32b}
+$$
+
+*Proof.* Corollary Q.0.1 gives the action-entropy identity $\mathcal S_{action}/\hbar=\sum_i\varepsilon_i$. Taking the magnitude of the proper-time derivative on the retained ledger gives $|d\mathcal S_{action}/d\tau|=\hbar\dot\varepsilon_{\mathrm{pred}}$. On the saturated-boundary branch, Corollary N.4.1 gives $\dot\varepsilon_{\mathrm{pred}}=\mathcal{I}_{rel}/(2\tau_{min})$. Landauer-saturating refresh gives $\dot Q_{\mathrm{Land}}=k_B T_{eff}\dot\varepsilon_{\mathrm{pred}}$. Corollary N.5.1 gives $mc^2=\hbar\mathcal{I}_{rel}/(2\tau_{min})$. Combining these identities gives (N.32a) and (N.32b). ∎
+
+**Remark N.5.2a (Off-Branch Rate Residual).** The equalities in Corollary N.5.2 are saturated-branch identities. On any branch where the same variables are defined but saturation, KMS detailed balance, or overhead-free Landauer implementation fails, Corollary N.4.2 supplies the entropy-rate residual $\mathcal R_N\ge0$. The corresponding action-energy residual is $\hbar\mathcal R_N$, and the corresponding Landauer heat-power residual is $k_B T_{eff}\mathcal R_N$ when the branch supplies a Landauer conversion temperature. Hence no off-branch equality in (N.32a) is asserted without the matching branch ledger.
 
 ### N.11.4 Resolution of the Origin of Inertia
 
@@ -1482,9 +1587,9 @@ The only quantity not fixed by the logical structure is $\mathcal{I}_{rel}$—th
 
 **Remark N.11.3: What Mass "Is".** Theorem N.5 reveals that mass is not a primitive property but the measure of a system's relational information content. The universe is a network of predictive relationships; mass quantifies how much relationship a system contains.
 
-**Remark N.11.4: What Rest Energy "Is".** Corollary N.5.1 identifies rest energy as the power required to maintain relational information at the fundamental rate. The "mysterious" $c^2$ in $E = mc^2$ is the conversion factor between:
-- **Information domain:** nats of $\mathcal{I}_{rel}$ processed per Planck time
-- **Energy domain:** joules
+**Remark N.11.4: What Rest Energy "Is".** Corollary N.5.1 identifies rest energy as the proper-time action-rate assigned to maintaining relational information on the saturated-boundary branch. The "mysterious" $c^2$ in $E = mc^2$ is the conversion factor between:
+- **Information-rate domain:** $\mathcal{I}_{rel}/(2\tau_{\min})$ nats per unit proper time
+- **Energy/action-rate domain:** $\hbar\mathcal{I}_{rel}/(2\tau_{\min})$ joules
 
 This parallels the role of $\hbar$ as the action-entropy exchange rate (Corollary Q.0.2).
 
@@ -1518,7 +1623,7 @@ $$
 | Theorem N.4 | Equilibrium requires steady-state information exchange | KMS + open-system thermodynamics |
 | Corollary N.4.1 | Entropy flow rate $d\mathcal{S}/d\tau = \mathcal{I}_{rel}/(2\tau_{min})$ | Channel exchange at rate $1/\tau_{min}$ |
 | Theorem N.5 | $m = \mathcal{I}_{rel}/(2\sqrt{8\varepsilon_0}) \cdot m_P$ | Action-Entropy Identity |
-| Corollary N.5.1 | $E = mc^2$ = information maintenance power | Rest energy derived |
+| Corollary N.5.1 | $E = mc^2$ = proper-time action-rate for maintained relational information | Rest energy derived |
 | Theorem N.6 | Inertia = relational update resistance | Origin of inertia explained |
 | Theorem N.7 | $m_I = m_G$ for simple systems | Equivalence principle derived |
 | Theorem N.8 | $\delta_C \propto P_{context}$ for complex systems | Complexity-dependent deviation |
