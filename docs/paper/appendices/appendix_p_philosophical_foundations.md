@@ -7436,6 +7436,161 @@ The theorem-level content of this section is logically prior to the conjectural 
 
 The prohibition set $\mathcal{L}^{\neg}_S$ — the complement, in candidate-configuration space, of the SPAP-admissible region — is the structural locus whose causal efficacy operates through the cost potential $U_S$ (Theorem P.16.1) rather than through any positive degree of freedom. At the single-system scale this produces trajectory deflections the deliberative subprocess cannot fully reconstruct (Theorem P.16.2, Proposition 15), rendered in first-person report as compulsion, tacit knowing, or personal-fate phenomenology (Corollary P.16.2, Remarks P.16.4–P.16.5). At the coupled scale, the same per-system channel biases joint trajectories toward mutually low SPAP-related cost (Proposition P.16.2, Corollary P.16.1); the strictly stronger reading — that no global coordinating agency whatsoever is required — is conditional on Hypothesis 14.5.8. The contribution is interpretive and synthetic: no new axioms, no new dynamical laws, no new degrees of freedom. What PU delivers is the formal vocabulary in which the prohibition-as-carrier can be stated and separated, by epistemic status, from the claims that still rest on an open hypothesis.
 
+## P.16a Population-Parameter Status of Apparent Free Constants
+
+This section records, in registry-aligned form, a structural reframing of fine-tuning that is implicit in the framework's existing apparatus and is here stated explicitly as an open conjectural row. The reframing is methodological in the sense of Section P.5.3 and Definition P.5.2: it does not adopt a literal-simulator ontology and does not promote any sector. It records the open structural hypothesis suggested by the joint discipline of PPI (Definition P.6.2), PCE (Definition 15, Section 6.1.2), the strict-certificate ledger (Convention P.14.1k), and the structured-novelty conditions (Definition P.2.5.1) once the MPU population is treated as structural input rather than as an external knob.
+
+### P.16a.0 Primitive-Emergent Architecture of the Framework
+
+Before stating the population-parameter content, this subsection records the architectural distinction between the framework's primitive layer and its emergent layer. The distinction is organizational: it does not change any proof, branch status, or certificate status already assigned elsewhere in the manuscript.
+
+**Definition P.16a.0.1 (Primitive Layer of PU).** The *primitive layer* of the Predictive Universe framework consists of the following four elements, each carried with the status supplied by its cited source:
+
+1. *Prediction under finite-resource constraint.* The framework operates on predictive activity executed by finite-resource finite-time systems, with information having the operational form of Definition 1, predictive cycling having the form of Definition 4, finite-resource costs governed by Definition 3 and Definition 15, and physical instantiation governed by Definition P.6.2.
+2. *SPAP as objective logical constraint.* In any sufficiently rich Property-R model class, no single deterministic or probabilistic predictor can guarantee perfect self-prediction uniformly across all constructible self-predicting systems, by the diagonal arguments of Theorems 10–11. This impossibility is structural at that scope: it follows from the form of self-reference in predictive systems with the closure properties required by Property R.
+3. *Finite-resource cost-minimization under the modeling stance of Section P.5.3.* Under the methodological model of Section P.5.3 and Definition P.5.2, viable finite-resource configurations are evaluated by compression efficiency. PCE (Definition 15, Section 6.1.2) and its potential $V$ (Definition D.1) give the operational expression of this selection discipline. The structured-novelty requirements are supplied by Definition P.2.5.1.
+4. *MPU population parameter $N$ for structured novelty.* The MPU is the minimal predictive unit on the current minimal branch fixed by the SPAP register, the $d_0=8$ carrier, the active-inactive split, and the recurrent ledger. The population parameter $N$, together with topology, channel-capacity data, and retained-response data, is a population-level input that can affect which structured configurations are instantiated. By Theorem P.1, a single-MPU substrate cannot instantiate an SM-like chiral gauge sector; by Thesis P.2.5.1a, structured novelty is naturally realized by plurality. The framework therefore uses MPU populations whenever structured novelty or SM-like chirality is at issue.
+
+**Definition P.16a.0.2 (Emergent Layer of PU).** The *emergent layer* of the Predictive Universe framework consists of standard physical structures recovered from the primitive layer through the existing derivation chains, with each component inheriting its stated certificate status:
+
+1. *Quantum mechanics emerges from the primitive layer* through Section 8 and Appendix G. The complex Hilbert structure is selected by Theorem G.1.8 from real, complex, and quaternionic alternatives; Theorem 23 supplies the bound $d_0\ge 2^{K_0}=8$ and Theorem Z.2 selects $d_0=8$ on the minimal PCE branch; Born weights are supplied by Proposition 7 and Theorem G.1.7 through the POP/PCE noncontextual frame-functional machinery.
+2. *The Standard Model structural sector emerges from the primitive layer* through Appendix G and Appendix R. The inactive-sector module decomposition is selected by Theorem G.8.4b, and the gauge algebra $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ is selected by Corollary G.8.4c on that finite-response capacity branch; the impossibility of a single-MPU SM-like chiral sector is Theorem P.1; the generation count $N_g=3$ is established by Theorem R.3.4 and Proposition R.3.5.1a on the pre-flavor family-redundancy PPI branch. Later threshold, flavor, and baryogenesis numerics retain the status assigned by Convention P.14.1k.
+3. *General relativity emerges from the primitive layer* through Section 11, Section 12, and Appendix O. The regular continuum branch is supplied by the geometric-regularity and operational-continuum results; the Lorentzian metric signature is selected on the regular branch by Appendix O.7 under its stated hypotheses; the spacetime dimension $D=4$ is forced on the Bures tangent-cell channel contract by Theorem Z.10 and Theorem Z.11 through $K(D)=24$; and the local Einstein equation is derived as a Clausius relation on emergent horizons by Theorem 12.1, with its bridge status inherited from the gravity ledger.
+
+**Remark P.16a.0.1 (Two-Tier Organization).** Definitions P.16a.0.1 and P.16a.0.2 record an organization, not an additional derivation. The primitive layer is primitive relative to the emergence of standard physical theories: it supplies the predictive, SPAP, finite-resource, and population-configuration constraints from which the emergent layer is derived. When an item in the primitive layer is itself theorem-level inside the manuscript, its primitive role here means only that later physical sectors use it as an upstream constraint.
+
+**Remark P.16a.0.2 (Inverted Foundational Status of Laws).** Under the two-tier organization, physical laws are not independent carriers added to MPU activity. They are descriptions of stable regularities in how MPU populations behave under finite-resource PPI/PCE selection. The Schrödinger equation is the effective description of predictive activity on the Hilbert branch where unitary ray dynamics is selected by the Section 8 symmetry and PCE hypotheses. The Einstein equation is the effective description of interaction-topology geometry on the branch where Lorentzian metric structure and horizon thermodynamics are the admissible representation of channel-capacity flow. The Standard Model gauge algebra is the admissible inactive-sector gauge structure on the finite-response capacity and anomaly branch. The inversion does not weaken the predictive accuracy of the laws; it relocates their status from foundational postulate to emergent finite-response regularity.
+
+**Remark P.16a.0.3 (Methodological Status of Population Selection Language).** Informal language saying that $N$ is "set" means only that $N$ is a datum of the population configuration under the modeling stance of Section P.5.3, in a regime satisfying Definition P.2.5.1. It does not assert a literal external simulator. The source of the population configuration may be modeled as an authentic simulation source, an inflationary or anthropic selection regime, an autonomous self-organizing finite-resource process, or any other source compatible with the PPI/PCE discipline. This section uses only the structural fact that the population configuration is an input to the finite-response derivation chain.
+
+### P.16a.1 The Population Configuration
+
+**Definition P.16a.1 (Population Configuration).** A *population configuration* is a finite tuple
+$$
+\mathcal P=(N,\mathcal T,\mathcal K,\rho)
+$$
+where:
+
+1. $N\in\mathbb N_{>0}$ is the finite number of MPUs in the configuration, each MPU lying on the minimal SPAP-compatible branch with three registers, carrier dimension $d_0=8$, active kernel $a=2$, inactive complement $b=6$, SPAP cycle, and active-inactive interface.
+2. $\mathcal T$ is the finite interaction topology specifying which MPUs interact and through which retained channels.
+3. $\mathcal K$ is the finite channel-capacity assignment specifying the capacity datum of each retained interaction channel, subject to the finite-capacity constraint of Theorem E.2 and its branch refinements.
+4. $\rho$ is the finite-response retention class specifying which protocol-response distinctions are retained on the configuration.
+
+A population configuration is *admissible* when it satisfies PPI (Definition P.6.2) at finite resource cost and satisfies the structured-novelty conditions of Definition P.2.5.1 at the configuration level. For fixed $N$, write
+$$
+\mathcal A_N
+:=
+\{\mathcal P=(N,\mathcal T,\mathcal K,\rho):\mathcal P\text{ is admissible}\}/\sim_0
+$$
+for the population-configuration admissibility class modulo response-null equivalence, where $\sim_0$ identifies configurations with the same retained finite protocol-response data and no lower PPI/PCE cost after response-null surplus is quotiented out, in the finite-response discipline of Corollary P.6.1b.8 and Corollary P.6.1b.8b.
+
+**Definition P.16a.2 (Joint Structural Determination).** Let $\mathfrak X_{\mathrm{PU}}$ denote the family of sector outputs routed through Convention P.14.1k, including closed rows and certificate-pending or open rows with their current status labels. Let
+$$
+\mathfrak L_0=(K_0,d_0,\varepsilon_0,a,b,M,k,D)=(3,8,\ln2,2,6,24,12,4)
+$$
+denote the recurrent minimal-branch ledger on the current proof graph. The configuration $\mathcal P$ *jointly determines* $\mathfrak X_{\mathrm{PU}}$ relative to $\mathfrak L_0$ when, for every output $X\in\mathfrak X_{\mathrm{PU}}$, the existing derivation chain for $X$ factors through the PPI/PCE quotient of $\mathfrak L_0$ together with $\mathcal P$, its accepted overlap maps, and its current certificate gates, with no additional freely selectable numerical parent datum.
+
+The joint determination is *exclusive* when any proposed value of an output $X$ not produced by that factorization either fails an admissibility condition, changes a retained finite response and is therefore a different branch, or is response-null surplus removed by the PPI quotient. For open and certificate-pending rows, this definition records the condition that a completed audit would have to establish; it does not assert that the audit has already closed.
+
+### P.16a.2 The Population-Tuning Conjecture
+
+**Conjecture P.16a.1 (Population-Parameter Status of Apparent Free Constants).** The apparent free constants of nature — including but not limited to the fine-structure constant $\alpha^{-1}$, the cosmological-constant value $\Lambda L_P^2$, electroweak threshold data, CKM and PMNS mixing entries, the baryon asymmetry $\eta_B$, and determinant-prefactor data — are jointly determined by the population configuration $\mathcal P=(N,\mathcal T,\mathcal K,\rho)$ relative to the recurrent minimal-branch ledger $\mathfrak L_0$ in the sense of Definition P.16a.2. Equivalently, no independently free numerical parameter remains in the ledger-routed derivation chain beyond $\mathfrak L_0$, the population configuration $\mathcal P$, and the certificate gates already recorded in Convention P.14.1k.
+
+**Stability under registry growth.** The conjecture is to be read with the following stability clause closing the "ledger-routed" scope. If a sector $S^*$ is later registered into Convention P.14.1k whose accepted parent data do not factor through $(\mathfrak L_0,\mathcal P,\text{registered gates})$, then either (i) a registered overlap map of Definition P.14.1k.0 reduces the parent data of $S^*$ to that union and the conjecture is preserved, or (ii) no such overlap map is registered and the conjecture is refuted at $S^*$. Re-scoping the phrase "ledger-routed" to absorb $S^*$ without supplying an overlap map of type (i) is not permitted; such a re-scoping is a registry change in the sense of Algorithm P.14.1m.0 and triggers refutation under (ii).
+
+**Status.** Open conjectural row. The conjecture is not asserted as theorem, is not entered as a strict-certificate row promoting any numerical sector, and does not modify any existing closure status under Convention P.14.1k.
+
+**Remark P.16a.1 (Relation to Existing Apparatus).** The conjecture is a registry-aligned statement of three observations already present in the apparatus. First, the strict-certificate reading of branch conditions (Convention P.14.0a) and the no-overclaim discipline (Convention P.14.1l) block free post-comparison adjustment of numerical outputs. Second, the framework uses populations of MPUs rather than isolated MPUs whenever structured novelty or SM-like chirality is at issue (Theorem P.1, Thesis P.2.5.1a, Section 11, Appendix N). Third, the existing sector derivations and registered candidate chains route through structural inputs that include minimal-branch data, topology or channel data, retained-response data, and finite certificates: Appendix Z for $\alpha^{-1}$, Appendix U for $\Lambda L_P^2$, Appendix T for electroweak and flavor sectors, and Appendix Y for $\eta_B$. The conjecture asserts that this union of recurrent ledger data, population-configuration data, accepted overlap maps, and registered certificate gates is exhaustive.
+
+
+### P.16a.3 The Fine-Tuning Reframing
+
+**Conjecture P.16a.2 (Fine-Tuning Dissolution Under Joint Determination).** Conditional on Conjecture P.16a.1, the standard fine-tuning argument applied to PU's content is malformed. The standard argument presupposes that constants of nature are independent free parameters that could each have been varied while keeping the surrounding law-structure fixed. Conjecture P.16a.1 denies that premise for the PU derivation chain: the apparent constants are joint readouts of $\mathcal P$ together with $\mathfrak L_0$ and the existing certificate gates. Their precision reflects the precision of the structural framework producing them, not the precision of independent tuning.
+
+**Status.** Open conjectural row, conditional on Conjecture P.16a.1.
+
+**Remark P.16a.2 (Distinguishing Program).** Conjecture P.16a.1 is in principle distinguishable from its negation by a structural audit. For each apparent free constant in $\mathfrak X_{\mathrm{PU}}$, audit the existing derivation chain and determine whether every parent datum reduces to $\mathfrak L_0$ plus $\mathcal P$ data, modulo accepted overlap maps and current certificate gates. If every chain so reduces, Conjecture P.16a.1 is supported. If any chain requires an additional independent input not captured by $\mathfrak L_0$, $\mathcal P$, or the already registered certificate gate for that row, Conjecture P.16a.1 is refuted at that constant. The audit respects Convention P.14.1l: each constant's reduction status inherits the weakest unresolved dependency in its existing derivation chain.
+
+### P.16a.4 Variational Packaging of PCE Selection on the Population Admissibility Class
+
+This subsection records, as notational compression, that PCE selection on $\mathcal A_N$ admits a variational form parallel to the principle of least action. Because $\mathcal A_N$ is a finite-response quotient and may be finite, compact, stratified, or branch-dependent rather than a smooth manifold, the variational symbol is used in the global admissible-minimizer sense defined below.
+
+**Definition P.16a.4.1 (Population PCE Potential).** Let $V$ denote the PCE potential of Definition D.1,
+$$
+V(x)=V_{op}(x)+V_{prop}(x)-V_{benefit}(x)+V_{penalty}(x),
+$$
+where $V_{op}$ and $V_{prop}$ are operational and propagation costs, $V_{benefit}$ is the power-equivalent predictive benefit, and $V_{penalty}$ contains the branch-required consistency penalties of Definition D.1. In particular, proxy-alignment and geometric-regularity penalties are included where the branch requires them; SPAP and viability restrictions enter through the admissible class and, when encoded in the branch functional, through $V_{penalty}$. The *population PCE potential* is the descended restriction
+$$
+V_{\mathcal A_N}:\mathcal A_N\to\mathbb R\cup\{+\infty\}
+$$
+defined by
+$$
+V_{\mathcal A_N}([\mathcal P])
+:=
+\inf\{V(x):x\text{ realizes a representative of }[\mathcal P]\}.
+$$
+When $V$ is already invariant under response-null equivalence on the branch, this is simply $V|_{\mathcal A_N}$. When the domain is clear, $V$ denotes this descended restricted functional.
+
+**Definition P.16a.4.2 (Admissible Variational Stationarity).** For $[\mathcal P_\star]\in\mathcal A_N$, write
+$$
+\delta_{\mathcal A_N}V([\mathcal P_\star])=0
+$$
+if and only if the infimum is attained at $[\mathcal P_\star]$:
+$$
+V_{\mathcal A_N}([\mathcal P_\star])=\min_{[\mathcal P]\in\mathcal A_N}V_{\mathcal A_N}([\mathcal P]).
+$$
+The compressed expression
+$$
+\delta V=0\quad\text{on}\quad\mathcal A_N
+$$
+means $\delta_{\mathcal A_N}V([\mathcal P_\star])=0$ for the selected response-equivalence class. If the infimum is not known to be attained, the notation records only a minimizing-sequence condition and no selected class is asserted. On a smooth interior stratum, an attained global minimizer implies the ordinary first-variation condition along all admissible tangent variations. On a row carrying a strict PPI/PCE certificate whose quotient and functional match the relevant admissible class, existence and uniqueness modulo response equivalence are supplied by Theorem D.8.9b.
+
+**Proposition P.16a.4.1 (Variational Form of PCE Selection on $\mathcal A_N$).** On any branch for which $\mathcal A_N$ is nonempty and the descended potential $V_{\mathcal A_N}$ has an attained PCE minimizer, PCE selection on $\mathcal A_N$ in the sense of Definition 15 and Definition D.1 is exactly the condition
+$$
+[\mathcal P_\star]\in\operatorname*{argmin}_{[\mathcal P]\in\mathcal A_N}V_{\mathcal A_N}([\mathcal P]),
+$$
+equivalently
+$$
+\boxed{\delta V=0\ \text{on}\ \mathcal A_N}.
+$$
+When the relevant row carries a strict PPI/PCE certificate for the same quotient and descended functional, existence and uniqueness of the selected class modulo response equivalence are supplied by Theorem D.8.9b. When the relevant row is open or certificate-pending, the variational packaging preserves that status and does not assert existence, uniqueness, or closure beyond the row's current gate.
+
+*Proof.* Definition 15 states PCE as selection by compression efficiency: predictive benefit is maximized net of operational, propagation, and penalty costs. Definition D.1 represents this tradeoff by the functional $V$. Passing to $\mathcal A_N$ keeps exactly the admissible finite-response population configurations of Definition P.16a.1 and removes response-null surplus by the quotient. The descended functional $V_{\mathcal A_N}$ is therefore the PCE potential evaluated on the retained population response classes. On a branch where an attained minimizer exists, PCE selection on that class is precisely minimization of $V_{\mathcal A_N}$ over $\mathcal A_N$. By Definition P.16a.4.2, this minimization condition is exactly $\delta_{\mathcal A_N}V=0$, written $\delta V=0$ on $\mathcal A_N$. If the row has a strict PPI/PCE certificate for the same quotient and descended functional, Theorem D.8.9b gives existence and uniqueness modulo response equivalence. If it lacks such a certificate, Convention P.14.1l prevents the variational notation from asserting existence, uniqueness, or closure. ∎
+
+**Remark P.16a.4.1 (Three Symbols, Three Commitments).** The expression $\delta V=0$ on $\mathcal A_N$ compresses three commitments. The symbol $\delta$ records selection, not arbitrary choice. The potential $V$ records PCE after descent to the retained response quotient: cost minus predictive benefit plus penalty. The admissibility class $\mathcal A_N$ records PPI, the response-null quotient, and the population data $(N,\mathcal T,\mathcal K,\rho)$. SPAP enters through the unit-level bound on each MPU and through whatever branch-level SPAP admissibility or penalty gate is part of $V_{\mathcal A_N}$. No element of $\mathcal A_N$ is a perfect self-predictor.
+
+**Corollary P.16a.4.1 (Specialization to the Action Principle).** On any branch $\mathcal B\subseteq\mathcal A_N$ where the descended restricted PCE potential has an attained minimizer and has the form
+$$
+V_{\mathcal A_N}([\mathcal P])=c+\lambda_{\mathcal S}\mathcal S([\mathcal P])
+$$
+for all admissible variations in $\mathcal B$, with $c$ constant and $\lambda_{\mathcal S}>0$, Proposition P.16a.4.1 reduces, in the same admissible-minimizer sense, to the least-action condition
+$$
+\delta\mathcal S=0
+$$
+on $\mathcal B$. When Theorem Q.0.1 and Corollary Q.0.1 apply, $\mathcal S/\hbar=\sum_i\varepsilon_i$, so this specialization is the action-entropy accounting branch of the same PCE variational selection.
+
+*Proof.* Since $c$ is constant and $\lambda_{\mathcal S}>0$, the ordering of candidates by $V_{\mathcal A_N}$ on $\mathcal B$ is identical to the ordering by $\mathcal S$. Hence the attained minimizers of $V_{\mathcal A_N}$ on $\mathcal B$ are exactly the attained minimizers of $\mathcal S$ on $\mathcal B$. Applying Definition P.16a.4.2 to $V$ and to $\mathcal S$ gives equivalence of $\delta V=0$ and $\delta\mathcal S=0$ on that branch. Theorem Q.0.1 supplies the $\Gamma$-limit action branch and Corollary Q.0.1 supplies the action-entropy identity on branches where $\mathcal S/\hbar=\sum_i\varepsilon_i$, so the action principle is a specialization of the population PCE variational condition. ∎
+
+**Remark P.16a.4.2 (No New Equation of Motion).** Proposition P.16a.4.1 and Corollary P.16a.4.1 do not introduce a new dynamical law. The stochastic gradient flow of Appendix D is the dynamical representative of the same potential $V$; the expression $\delta V=0$ records the selected admissible class, and Equation (D.0) records one branch-level adaptation dynamics converging toward low-$V$ regions under the stated hypotheses.
+
+### P.16a.5 Conservative Extension
+
+**Theorem P.16a.1 (Conservative Extension Over the Existing Status Ledger).** Adding Section P.16a is conservative over Convention P.14.1k and Convention P.14.1l. Specifically:
+
+1. Every branch accepted before this section remains accepted.
+2. Every branch rejected before this section remains rejected.
+3. No theorem-level, certificate-pending, model-layer, or open row of Convention P.14.1k is promoted or demoted by this section alone.
+4. No description-layer numerical output is reinterpreted as a selection-layer assertion, and no selection-layer assertion is reinterpreted as a description-layer numerical output.
+5. No new strict certificate is registered, no new parent invariant is asserted to exist, and no bridge condition is closed.
+6. The recurrent ledger remains in the current-graph non-collapse status of Theorem R.3.5e.3, with the future common parent invariant remaining open in the sense of Remark R.3.5e.5 and the parent-datum schema gate remaining bookkeeping only in the sense of Remark R.3.5e.5a.
+7. Conjecture P.16a.1 and Conjecture P.16a.2 carry status open.
+
+*Proof.* Section P.16a introduces two organizational definitions (Definitions P.16a.0.1 and P.16a.0.2), a population-configuration definition (Definition P.16a.1), a joint-determination definition (Definition P.16a.2), two open conjectures (Conjectures P.16a.1 and P.16a.2), a structural distinguishing program (Remark P.16a.2), and a variational packaging of PCE selection on $\mathcal A_N$ (Definitions P.16a.4.1 and P.16a.4.2, Proposition P.16a.4.1, Corollary P.16a.4.1). Definitions and remarks do not modify any strict certificate of Definition D.8.9a. The conjectures are explicitly open. Proposition P.16a.4.1 is a conditional restatement of Definition 15 and Definition D.1 after descent to the admissible quotient $\mathcal A_N$ on branches where a minimizer is already supplied or certified; it supplies no new selected sector value. Corollary P.16a.4.1 is conditional on the exact branch condition $V=c+\lambda_{\mathcal S}\mathcal S$ and uses Theorem Q.0.1 and Corollary Q.0.1 only where they already apply. By Convention P.14.1l, status propagation in the global ledger follows the meet rule on the dependency graph of Convention P.14.1k; open or certificate-pending observable maps cannot promote a child row to theorem-level status. Section P.16a introduces no new registered dependency edge, overlap map, or closure map. By Algorithm P.14.1m.0, registry promotions require the schema fields of Definition P.14.1m to be supplied at the appropriate status; this section supplies no promotion entry. Therefore items 1–7 hold. ∎
+
+### P.16a.6 Summary
+
+The framework's existing commitments — finite-resource prediction, SPAP, PPI/PCE selection, MPU populations, and the strict-certificate ledger — support an open structural reframing of apparent free constants. The recurrent minimal-branch ledger $\mathfrak L_0=(3,8,\ln2,2,6,24,12,4)$ supplies the discrete backbone; the population configuration $\mathcal P=(N,\mathcal T,\mathcal K,\rho)$ supplies the finite-response population input. Conjecture P.16a.1 asserts that these two structural sources exhaust the parent data for the ledger-routed apparent constants, subject to the current certificate gates. Conjecture P.16a.2 states the corresponding fine-tuning reframing: if the constants are joint readouts rather than independent knobs, the standard fine-tuning argument is malformed when applied to PU's content. The compact expression $\delta V=0$ on $\mathcal A_N$ records the same PCE selection in variational form whenever an attained selected class is available, with $\delta\mathcal S=0$ recovered on the corresponding action branch. The section is conservative over the existing status ledger (Theorem P.16a.1).
+
 ## P.17 Conclusion
 
 This appendix has established the philosophical foundations of the Predictive Universe, arguing that its core axioms are necessary consequences of the only indubitable starting point: conscious, predictive awareness. The *Cogito*, reinterpreted as fundamentally predictive, grounds a framework where physical law follows from logical necessity under thermodynamic constraint.
