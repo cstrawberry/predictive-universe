@@ -7511,6 +7511,126 @@ The joint determination is *exclusive* when any proposed value of an output $X$ 
 
 **Remark P.16a.2 (Distinguishing Program).** Conjecture P.16a.1 is in principle distinguishable from its negation by a structural audit. For each apparent free constant in $\mathfrak X_{\mathrm{PU}}$, audit the existing derivation chain and determine whether every parent datum reduces to $\mathfrak L_0$ plus $\mathcal P$ data, modulo accepted overlap maps and current certificate gates. If every chain so reduces, Conjecture P.16a.1 is supported. If any chain requires an additional independent input not captured by $\mathfrak L_0$, $\mathcal P$, or the already registered certificate gate for that row, Conjecture P.16a.1 is refuted at that constant. The audit respects Convention P.14.1l: each constant's reduction status inherits the weakest unresolved dependency in its existing derivation chain.
 
+**Corollary P.16a.3.1 (MPU Deletion Is Not an Appendix Z Core-Tuning Direction).** Let $\mathcal B_Z$ be the branch class of population configurations or post-deletion quotients satisfying the hypotheses of the minimal Appendix Z / PCE-attractor branch: the local minimal SPAP/PCE MPU branch, the active-inactive Landauer split, the QFI interface-mode count, the predictive-recovery MacWilliams rate branch for $k$, the finite-response Bures tangent-cell mode-channel contract, and the Appendix Z normalization branch of Theorem Z.26. Define branch-restricted maps by
+$$
+\Sigma_Z(\mathcal Q)=
+\begin{cases}
+\mathfrak L_0, & \mathcal Q\in\mathcal B_Z,\\
+\bot, & \mathcal Q\notin\mathcal B_Z,
+\end{cases}
+\qquad
+A_0(\mathcal Q)=
+\begin{cases}
+\alpha^{-1}_0, & \mathcal Q\in\mathcal B_Z,\\
+\bot, & \mathcal Q\notin\mathcal B_Z,
+\end{cases}
+$$
+where
+$$
+\mathfrak L_0=(K_0,d_0,\varepsilon_0,a,b,M,k,D)=(3,8,\ln2,2,6,24,12,4),
+$$
+and $\alpha^{-1}_0$ is the Appendix Z sinc-core value of Theorem Z.26.
+
+For $\mathcal P=(N,\mathcal T,\mathcal K,\rho)$ and $S\subseteq\{1,\ldots,N\}$, let $\mathcal P|_S$ denote the induced post-deletion configuration when $|S|>0$ and the chosen population model supplies either the induced finite-response subconfiguration or an admissibly relaxed finite-response quotient. If $S=\varnothing$, or if no post-deletion admissible configuration or quotient is supplied, set
+$$
+\Sigma_Z(\mathcal P|_S)=A_0(\mathcal P|_S)=\bot.
+$$
+
+Then every deterministic MPU deletion outcome satisfies exactly one of the two alternatives
+$$
+(\Sigma_Z(\mathcal P|_S),A_0(\mathcal P|_S))=(\mathfrak L_0,\alpha^{-1}_0)
+$$
+or
+$$
+(\Sigma_Z(\mathcal P|_S),A_0(\mathcal P|_S))=(\bot,\bot).
+$$
+In the first alternative,
+$$
+(K_0,d_0,\varepsilon_0,a,b,M,k,D)(\mathcal P|_S)=(3,8,\ln2,2,6,24,12,4)
+$$
+and
+$$
+A_0(\mathcal P|_S)=137.03609205522863\ldots.
+$$
+In the second alternative, the minimal Appendix Z branch assigns no real-valued core $\alpha^{-1}_0$ to the outcome. Hence MPU deletion cannot supply a continuous deformation parameter for the Appendix Z core.
+
+For a random deletion law $\mu_f$ with random surviving set $S_f$, let
+$$
+E_f=\{\mathcal P|_{S_f}\in\mathcal B_Z\}.
+$$
+Whenever $\Pr(E_f)>0$,
+$$
+\Pr[\Sigma_Z(\mathcal P|_{S_f})=\mathfrak L_0\mid E_f]=1,
+\qquad
+\Pr[A_0(\mathcal P|_{S_f})=\alpha^{-1}_0\mid E_f]=1.
+$$
+If $\Pr(E_f)=0$, there is no conditional branch-survival statement and the branch-restricted maps take only the value $\bot$ almost surely. No universal deletion threshold $f_c$ follows from $\mathfrak L_0$ alone; such a threshold requires an additional population model specifying $\mathcal T$, $\mathcal K$, $\rho$, the deletion law, and the relaxation or rerouting rule.
+
+Finally, $M=24$ is the internal QFI-active interface-mode count $M=2ab$ and the Bures tangent-cell channel count on the retained mode-channel branch. It is not, by Definition P.16a.1 or Theorem Z.5 alone, a theorem-level graph degree asserting twenty-four distinct neighboring MPUs. Therefore no formula
+$$
+n(f)=24(1-f)
+$$
+is branch-valid unless an added population graph model identifies interface modes with distinct neighboring MPUs and proves branch preservation after the specified deletion and relaxation rule. If the comparison row uses $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_0+R_\alpha$, the same deletion-rigidity conclusion applies to that certified value only when the same accepted residual gate $R_\alpha$ is preserved.
+
+*Proof.* The definition of $\Sigma_Z$ and $A_0$ gives the off-branch value $\bot$ whenever $\mathcal P|_S$ is empty, not a population configuration, not an admissible quotient, or not on $\mathcal B_Z$. It remains to prove the on-branch value.
+
+Assume $\mathcal P|_S\in\mathcal B_Z$. By membership in $\mathcal B_Z$, the retained local MPU sectors satisfy the minimal SPAP-compatible branch. Theorem 15 fixes $K_0=3$, Theorem Z.2 fixes $d_0=8$ on the minimal PCE branch, Theorem 31 with Definition 15a fixes $\varepsilon_0=\ln2$ on the attractor branch, and Theorem Z.1 fixes
+$$
+a=\min\{n\in\mathbb N_{>0}:\ln n\ge\varepsilon_0\}=2.
+$$
+Hence
+$$
+b=d_0-a=8-2=6.
+$$
+Theorem Z.5 then fixes
+$$
+M=2ab=2\cdot2\cdot6=24,
+$$
+and Theorem Z.13b.0a on the predictive-recovery MacWilliams branch fixes
+$$
+k=M/2=12.
+$$
+Theorems Z.10 and Z.11 give the finite-response Bures tangent-cell contract
+$$
+M_{\mathrm{int}}=M_{\mathrm{phys}}=K(D).
+$$
+With $K(1)=2$, $K(2)=6$, $K(3)=12$, $K(4)=24$, and the Theorem Z.11 lower bound $K(D)\ge40$ for $D\ge5$, the unique integer solution of $K(D)=24$ is $D=4$. Therefore
+$$
+\Sigma_Z(\mathcal P|_S)=\mathfrak L_0.
+$$
+
+Theorem Z.7 gives
+$$
+u^*=d_0^{1/M}-1=8^{1/24}-1=2^{1/8}-1.
+$$
+Theorem Z.26 gives
+$$
+\alpha^{-1}_0
+=
+\frac{4\pi}{u^*}
+-\frac{\pi}{\sqrt{K_0}}
++\frac{\pi u^*}{24\sqrt{K_0}}\operatorname{sinc}(u^*),
+\qquad
+\operatorname{sinc}(u)=\frac{\sin u}{u}.
+$$
+Substituting $K_0=3$ and $u^*=2^{1/8}-1$ gives
+$$
+\alpha^{-1}_0=137.03609205522863\ldots.
+$$
+Thus
+$$
+A_0(\mathcal P|_S)=\alpha^{-1}_0
+$$
+on $\mathcal B_Z$.
+
+The two alternatives are exhaustive because every post-deletion object either lies in $\mathcal B_Z$ or does not. They are disjoint because $\bot$ is not a real number and is not equal to $\mathfrak L_0$ or $\alpha^{-1}_0$. A continuous real-valued deletion deformation would be a function whose values lie in the real-valued range of $A_0$ on $\mathcal B_Z$, but that range is the singleton $\{\alpha^{-1}_0\}$; hence every such function is constant. This excludes a nonconstant continuous branch-restricted deformation.
+
+For random deletion, conditioning on $E_f$ restricts the outcome space to branch-surviving outcomes. The deterministic result applies pointwise on every outcome in $E_f$, giving both conditional probabilities equal to one whenever $\Pr(E_f)>0$. If $\Pr(E_f)=0$, conditional probability given $E_f$ is not defined, so no conditional branch-survival assertion is made. The threshold and graph-degree statements follow because neither Definition P.16a.1 nor Theorem Z.5 supplies a deletion law, a topology-to-mode injection, or a branch-preserving relaxation theorem; without those extra data, the only branch-restricted codomain just proved is
+$$
+\{(\mathfrak L_0,\alpha^{-1}_0),(\bot,\bot)\}.
+$$
+∎
+
 ### P.16a.4 Variational Packaging of PCE Selection on the Population Admissibility Class
 
 This subsection records, as notational compression, that PCE selection on $\mathcal A_N$ admits a variational form parallel to the principle of least action. Because $\mathcal A_N$ is a finite-response quotient and may be finite, compact, stratified, or branch-dependent rather than a smooth manifold, the variational symbol is used in the global admissible-minimizer sense defined below.
@@ -7584,12 +7704,13 @@ on $\mathcal B$. When Theorem Q.0.1 and Corollary Q.0.1 apply, $\mathcal S/\hbar
 5. No new strict certificate is registered, no new parent invariant is asserted to exist, and no bridge condition is closed.
 6. The recurrent ledger remains in the current-graph non-collapse status of Theorem R.3.5e.3, with the future common parent invariant remaining open in the sense of Remark R.3.5e.5 and the parent-datum schema gate remaining bookkeeping only in the sense of Remark R.3.5e.5a.
 7. Conjecture P.16a.1 and Conjecture P.16a.2 carry status open.
+8. Corollary P.16a.3.1 is a branch-restricted guardrail over already accepted Appendix Z data; it introduces no deletion threshold, graph-degree axiom, sector value, residual gate, or promotion entry.
 
-*Proof.* Section P.16a introduces two organizational definitions (Definitions P.16a.0.1 and P.16a.0.2), a population-configuration definition (Definition P.16a.1), a joint-determination definition (Definition P.16a.2), two open conjectures (Conjectures P.16a.1 and P.16a.2), a structural distinguishing program (Remark P.16a.2), and a variational packaging of PCE selection on $\mathcal A_N$ (Definitions P.16a.4.1 and P.16a.4.2, Proposition P.16a.4.1, Corollary P.16a.4.1). Definitions and remarks do not modify any strict certificate of Definition D.8.9a. The conjectures are explicitly open. Proposition P.16a.4.1 is a conditional restatement of Definition 15 and Definition D.1 after descent to the admissible quotient $\mathcal A_N$ on branches where a minimizer is already supplied or certified; it supplies no new selected sector value. Corollary P.16a.4.1 is conditional on the exact branch condition $V=c+\lambda_{\mathcal S}\mathcal S$ and uses Theorem Q.0.1 and Corollary Q.0.1 only where they already apply. By Convention P.14.1l, status propagation in the global ledger follows the meet rule on the dependency graph of Convention P.14.1k; open or certificate-pending observable maps cannot promote a child row to theorem-level status. Section P.16a introduces no new registered dependency edge, overlap map, or closure map. By Algorithm P.14.1m.0, registry promotions require the schema fields of Definition P.14.1m to be supplied at the appropriate status; this section supplies no promotion entry. Therefore items 1–7 hold. ∎
+*Proof.* Section P.16a introduces two organizational definitions (Definitions P.16a.0.1 and P.16a.0.2), a population-configuration definition (Definition P.16a.1), a joint-determination definition (Definition P.16a.2), two open conjectures (Conjectures P.16a.1 and P.16a.2), a structural distinguishing program (Remark P.16a.2), a deletion guardrail for the Appendix Z core (Corollary P.16a.3.1), and a variational packaging of PCE selection on $\mathcal A_N$ (Definitions P.16a.4.1 and P.16a.4.2, Proposition P.16a.4.1, Corollary P.16a.4.1). Definitions and remarks do not modify any strict certificate of Definition D.8.9a. The conjectures are explicitly open. Corollary P.16a.3.1 is conditional on branch survival and has codomain $\{(\mathfrak L_0,\alpha^{-1}_0),(\bot,\bot)\}$; on branch it only restates the existing Appendix Z minimal ledger and Theorem Z.26 core, while off branch it returns $\bot$. It does not supply a topology-to-mode injection, a deletion law, a rerouting theorem, a threshold $f_c$, or a residual gate. Proposition P.16a.4.1 is a conditional restatement of Definition 15 and Definition D.1 after descent to the admissible quotient $\mathcal A_N$ on branches where a minimizer is already supplied or certified; it supplies no new selected sector value. Corollary P.16a.4.1 is conditional on the exact branch condition $V=c+\lambda_{\mathcal S}\mathcal S$ and uses Theorem Q.0.1 and Corollary Q.0.1 only where they already apply. By Convention P.14.1l, status propagation in the global ledger follows the meet rule on the dependency graph of Convention P.14.1k; open or certificate-pending observable maps cannot promote a child row to theorem-level status. Section P.16a introduces no new registered dependency edge, overlap map, or closure map. Corollary P.16a.3.1 registers no certificate schema entry of Definition P.14.1m. By Algorithm P.14.1m.0, registry promotions require the schema fields of Definition P.14.1m to be supplied at the appropriate status; this section supplies no promotion entry. Therefore items 1–8 hold. ∎
 
 ### P.16a.6 Summary
 
-The framework's existing commitments — finite-resource prediction, SPAP, PPI/PCE selection, MPU populations, and the strict-certificate ledger — support an open structural reframing of apparent free constants. The recurrent minimal-branch ledger $\mathfrak L_0=(3,8,\ln2,2,6,24,12,4)$ supplies the discrete backbone; the population configuration $\mathcal P=(N,\mathcal T,\mathcal K,\rho)$ supplies the finite-response population input. Conjecture P.16a.1 asserts that these two structural sources exhaust the parent data for the ledger-routed apparent constants, subject to the current certificate gates. Conjecture P.16a.2 states the corresponding fine-tuning reframing: if the constants are joint readouts rather than independent knobs, the standard fine-tuning argument is malformed when applied to PU's content. The compact expression $\delta V=0$ on $\mathcal A_N$ records the same PCE selection in variational form whenever an attained selected class is available, with $\delta\mathcal S=0$ recovered on the corresponding action branch. The section is conservative over the existing status ledger (Theorem P.16a.1).
+The framework's existing commitments — finite-resource prediction, SPAP, PPI/PCE selection, MPU populations, and the strict-certificate ledger — support an open structural reframing of apparent free constants. The recurrent minimal-branch ledger $\mathfrak L_0=(3,8,\ln2,2,6,24,12,4)$ supplies the discrete backbone; the population configuration $\mathcal P=(N,\mathcal T,\mathcal K,\rho)$ supplies the finite-response population input. Conjecture P.16a.1 asserts that these two structural sources exhaust the parent data for the ledger-routed apparent constants, subject to the current certificate gates. Conjecture P.16a.2 states the corresponding fine-tuning reframing: if the constants are joint readouts rather than independent knobs, the standard fine-tuning argument is malformed when applied to PU's content. Corollary P.16a.3.1 records the branch-restricted deletion boundary for the Appendix Z core: an MPU deletion either preserves $(\mathfrak L_0,\alpha^{-1}_0)$ exactly on the same branch or returns $(\bot,\bot)$ through the branch-restricted maps, and $M=24$ is not a graph-degree count without an added population graph theorem. The compact expression $\delta V=0$ on $\mathcal A_N$ records the same PCE selection in variational form whenever an attained selected class is available, with $\delta\mathcal S=0$ recovered on the corresponding action branch. The section is conservative over the existing status ledger (Theorem P.16a.1).
 
 ## P.17 Conclusion
 

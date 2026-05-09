@@ -958,9 +958,9 @@ $$M_{\mathrm{phys}} = K(D).$$
 
 *Proof.*
 
-**Step 1 (PCE-derived tangent saturation).** Condition (i) follows from the ND-RID channel structure: $\epsilon_\text{dist}$-distinguishability requires non-overlapping angular supports (Corollary Z.4). Condition (ii) follows from PCE equal-cap entropy maximization: among $N$ non-overlapping channels with fixed total solid angle, strict concavity of the Shannon entropy forces all caps to be equal (Theorem Z.9). Condition (iii) follows from PCE: an unused geometric slot with an available internal mode strictly decreases $V_\text{tot}$, contradicting minimality (Theorem Z.11, Step 1). Equal non-overlapping caps at tangent saturation define exactly the standard kissing configuration: $N$ unit balls tangent to a central unit ball in $\mathbb{R}^D$.
+**Step 1 (PCE-derived tangent saturation).** Condition (i) follows from the ND-RID channel structure: $\epsilon_\text{dist}$-distinguishability requires non-overlapping angular supports (Corollary Z.4). Condition (ii) follows from PCE equal-cap entropy maximization: among $N$ non-overlapping channels with fixed total solid angle, strict concavity of the Shannon entropy forces all caps to be equal (Theorem Z.9). Condition (iii) follows from PCE: an unused geometric slot with an available internal mode strictly decreases $V_\text{tot}$, contradicting minimality (Theorem Z.11, Step 1). Equal non-overlapping caps at tangent saturation define exactly the standard kissing configuration: $N$ unit channel balls tangent to a central unit channel ball in $\mathbb{R}^D$. This is a channel-cell statement; identifying channel balls with distinct neighboring MPUs requires a separate population graph realization.
 
-**Step 2 (Angular separation at tangency).** Let $x,y$ be centers of two neighbor balls. Both lie on the radius-2 sphere about the central MPU, so $|x|=|y|=2$. If $\theta$ is the angle between $x$ and $y$, then the chord length satisfies
+**Step 2 (Angular separation at tangency).** Let $x,y$ be centers of two channel balls in the tangent-cell packing. Both lie on the radius-2 sphere about the central channel ball, so $|x|=|y|=2$. If $\theta$ is the angle between $x$ and $y$, then the chord length satisfies
 $$
 |x-y| = 4\sin(\theta/2).
 $$
@@ -976,7 +976,7 @@ Non-overlap requires $|x-y|\ge 2$, hence $\sin(\theta/2)\ge 1/2$ and therefore $
 
 ### Z.10.1 Kissing Numbers
 
-In the context of the MPU network with emergent geometric regularity (Theorem 43), the kissing number K(D) bounds the maximum number of nearest-neighbor MPUs that can maintain operationally distinguishable, independent information channels.
+In the context of the MPU network with emergent geometric regularity (Theorem 43), the kissing number $K(D)$ bounds the maximum number of non-overlapping unit operational channel cells tangent to a central channel cell that can be retained in the tangent-cell channel contract. In population graph models that identify each retained channel cell with a distinct adjacent MPU, this also bounds the number of nearest-neighbor MPUs carrying independent channels; without that additional graph-realization model it is a channel-cell bound rather than a graph-degree assertion.
 
 **Definition Z.7 (Kissing Number).** The kissing number K(D) is the maximum number of non-overlapping unit spheres that can simultaneously touch a central unit sphere in D-dimensional Euclidean space.
 
@@ -2943,7 +2943,7 @@ Each step follows from the previous by theorem or definition. No continuously ad
 
 These are the geometric facts used later in the PU chain. They provide a concrete 24-point four-dimensional packing model with enough symmetry for uniform channel bookkeeping and with exact degree-5 quadrature for the Appendix U zero-mode computation.
 
-Predictive holonomy around closed loops in this 24-neighbor structure induces spacetime curvature (Theorem 47): parallel transport of predictive information accumulates a holonomy characterized by the Riemann tensor $R^{\rho}{}_{\sigma\mu\nu}$. The $W(F_4)$ symmetry constrains admissible anisotropies in $V_{\text{op}}$ at this bookkeeping level.
+Predictive holonomy around closed loops in any population graph realizing this 24-channel 24-cell bookkeeping structure induces spacetime curvature (Theorem 47): parallel transport of predictive information accumulates a holonomy characterized by the Riemann tensor $R^{\rho}{}_{\sigma\mu\nu}$. The $W(F_4)$ symmetry constrains admissible anisotropies in $V_{\text{op}}$ at this bookkeeping level.
 
 *Proof.* Definition Z.8 gives the coordinates. The kissing-count statement is the classical value $K(4)=24$. The coordinate set spans $\mathbb{R}^4$, and its symmetry group is the Weyl group $W(F_4)$. The spherical 5-design statement is Theorem U.30. ∎
 

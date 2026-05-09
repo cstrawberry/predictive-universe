@@ -58,6 +58,8 @@ Quantum mechanics, the Standard Model structural sector, spacetime, and gravity 
 
 The standard fine-tuning argument assumes that constants such as $\alpha^{-1}$, $\Lambda L_P^2$, electroweak thresholds, mixing entries, and $\eta_B$ can be varied independently while the surrounding law-structure is held fixed. PU's population-parameter conjecture denies that premise for the ledger-routed derivation chain. If these quantities are joint readouts of the same population configuration and recurrent ledger, then independent single-parameter variation is not the right counterfactual.
 
+For the closed Appendix Z core, this statement has a branch-restricted deletion boundary: MPU deletion is not a hidden continuous knob for $\alpha^{-1}_0$. A deletion outcome either remains on the same minimal Appendix Z branch and retains $(\mathfrak L_0,\alpha^{-1}_0)$, or it returns $(\bot,\bot)$ through the branch-restricted maps; the internal count $M=24$ is not a graph-degree count without a separate population graph theorem.
+
 This does not prove that every apparent constant is already derived. It gives a precise audit target. For each sector, one must check whether its parent data reduce to $\mathfrak L_0$, $\mathcal P$, accepted overlap maps, and the already registered certificate gate. Closed rows inherit theorem-level status; certificate-pending and open rows remain exactly as Convention P.14.1k records them.
 
 **1.1.1.4 The shape of what follows**
