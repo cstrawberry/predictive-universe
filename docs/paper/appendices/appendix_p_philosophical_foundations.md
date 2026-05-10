@@ -530,7 +530,7 @@ Between some aggregates, low-dimensional sensorimotor interfaces make sequential
 
 Between other systems, the interface may permit richer state-to-state coupling than ordinary linguistic exchange. In that regime, the relevant comparison is not symbols versus no symbols in the abstract, but whether the interface preserves relational structure directly or instead requires the receiver to rebuild it from a serialized projection.
 
-Theorem E.2 supplies the universal bound $C_{\max} < \ln d_0$ for any single ND-RID channel. It implies that capacity wasted on avoidable projection and translation overhead is genuine physical cost. PCE therefore favors, other things equal, formats that preserve receiver-relevant structure more directly.
+Proposition E.2a supplies the structural completed-reset bound $C_{\max}\le\ln d_0-\ln2$, and Theorem E.2 supplies the refresh-branch strict bound $C_{\max}<\ln d_0$ for ND-RID channels satisfying Lemma E.1. These bounds imply that capacity wasted on avoidable projection and translation overhead is genuine physical cost. PCE therefore favors, other things equal, formats that preserve receiver-relevant structure more directly.
 
 **Thesis P.2.6.3c (Geometric Pressure Against the Sequential Bottleneck).** For communication between predictive systems, PU implies a pressure against unnecessary serialization. Specifically:
 
@@ -649,7 +649,7 @@ Internal simulation is constrained in PU by resource, logical, and thermodynamic
 
 2. **Logical limits (SPAP).** Even unlimited resources cannot yield perfect self‑prediction (Theorems 10–11).
 
-3. **Thermodynamic and dynamical limits.** 'Evolve' carries irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), internal reflexivity carries irreducible cost $\kappa_r>0$ (Theorem 33), and interaction channels have strict capacity bounds below the ideal $\ln d_0$ (Theorem E.2). Aggregates are additionally bounded by a minimum cycle time $\tau_{\min}>0$ (Theorem 29).
+3. **Thermodynamic and dynamical limits.** 'Evolve' carries irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), internal reflexivity carries irreducible cost $\kappa_r>0$ (Theorem 33), and interaction channels have finite-transfer capacity bounds: the completed reset-support bound of Proposition E.2a and, on refresh/minorization branches, the strict bound below the ideal $\ln d_0$ (Theorem E.2). Aggregates are additionally bounded by a minimum cycle time $\tau_{\min}>0$ (Theorem 29).
 
 These constraints limit what any biological aggregate can achieve through internal modeling alone—and guarantee that externalization cannot "defeat" SPAP, only reallocate resources and information flow.
 
@@ -1854,7 +1854,7 @@ PPI does not establish the Landauer equivalence (that is Landauer's contribution
 
 The extension of unified entropy to gravitational phenomena is *derived* within the framework from the Landauer cost. The chain:
 
-$$\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{E.2a}} C_{\max}\le\ln d_0-\ln2 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 consists entirely of theorems and lemmas proven from the framework's axioms. This is the novel contribution: showing that gravitational entropy follows necessarily from the SPAP entropy once Landauer provides the physical grounding.
 
@@ -2020,7 +2020,7 @@ The framework achieves what these pioneers conjectured but could not derive from
 
 The derivation chain—from SPAP through Landauer to channel capacity to area law—makes this correspondence explicit and traceable:
 
-$$\varepsilon_{SPAP} = \ln 2 \to f_{RID} < 1 \to C_{\max} < 3\ln 2 \to \sigma_{link} \to \frac{1}{4G} \to S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\varepsilon_{SPAP} = \ln 2 \to C_{\max}\le 3\ln2-\ln2=2\ln2 \to \sigma_{link} \to \frac{1}{4G} \to S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 This chain ultimately determines the relationship between the Planck scale and the strength of gravity.
 
@@ -2476,16 +2476,31 @@ $$(1 - R) \cdot C_{\max} \geq \varepsilon$$
 
 where $C_{\max} = 2\ln 2$ nats is the channel capacity (Equation E.15). Substituting yields $R \leq 1/2$, with PCE selecting the equality $R^* = 1/2$.
 
-**Theorem P.8.9a.1 (Thermodynamic Necessity of Biological Code).** Any persistent complex structure in a universe governed by PU principles must implement error correction. This is not a design choice but a thermodynamic necessity.
+**Theorem P.8.9a.1 (Thermodynamic Necessity of Recovery Capacity for Biological Code).** Any persistent complex structure in a universe governed by PU principles must implement recovery capacity against update noise and entropy-producing degradation. On biological branches, coded inheritance is the PCE-efficient way to instantiate such recovery capacity.
 
-*Proof.* Let $\rho$ denote the state of the degrees of freedom encoding the structure's functional organization. Over one predictive cycle, the unavoidable ND-RID refresh component implies the effective evolution channel $\mathcal{E}_N$ is strictly contractive in trace distance (Lemma E.1): for any two distinct code states $\rho_1,\rho_2$,
-
+*Proof.* Let $\rho$ denote the retained state of the degrees of freedom encoding the structure's functional organization. A persistent complex structure must preserve a finite set of response-relevant distinctions across many predictive cycles. Each completed cycle carries the entropy floor
 $$
-D_{tr}(\mathcal{E}_N(\rho_1),\mathcal{E}_N(\rho_2)) \le f_{RID}\,D_{tr}(\rho_1,\rho_2),
-\qquad 0<f_{RID}<1.
+\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2
 $$
+(Theorem 31) and finite transfer budget (Proposition E.2a). Thus passive persistence cannot rely on cost-free exact copying or cost-free exact restoration of all response-relevant distinctions.
 
-Iterating for $N$ cycles yields $D_{tr}(\mathcal{E}_N^N(\rho_1),\mathcal{E}_N^N(\rho_2)) \le f_{RID}^N D_{tr}(\rho_1,\rho_2)\to 0$ as $N\to\infty$. Hence, under passive evolution, distinguishability between alternative functional states decays to zero, so no fixed-size encoding can preserve a nontrivial amount of recoverable information for arbitrarily long times. Persistence for $T\gg\tau_{cycle}$ therefore requires periodic recovery operations that actively restore distinguishability against the contractive noise, i.e. error correction. Any such recovery requires redundant encoding (a proper code subspace with ancillary degrees of freedom) in order to satisfy the Knill–Laflamme correctability conditions for a nontrivial noise channel. Thus error correction is necessary for persistence of complex organization under PU dynamics. ∎
+The viability threshold for the structure is the minimum trace-distance separation $\Delta_{\mathrm{viab}}>0$ between alternative response-relevant configurations below which the structure no longer instantiates the functional predictive role characterizing its complex organization (i.e., below which the structure ceases to operate at $C_{op}$ in the sense of Definition 13). The threshold is a branch-defined parameter of the functional organization, not of the patch.
+
+Let $\mathcal N_T$ denote the passive effective channel over a time interval $T$ on the retained organizational degrees of freedom, and let $\{\rho_i\}$ denote the response-relevant configuration set whose pairwise trace-distance separations exceed $\Delta_{\mathrm{viab}}$ at $T=0$. A branch is *degradation-bearing* if there exist a pair $\rho_i\ne\rho_j$ in this set and a finite $T_0$ such that the iterated passive channel obeys
+$$
+D_{tr}\!\bigl(\mathcal N_{T_0}^{\circ k}(\rho_i),\mathcal N_{T_0}^{\circ k}(\rho_j)\bigr)<\Delta_{\mathrm{viab}}
+\qquad
+\text{for all sufficiently large }k.
+$$
+This condition is strictly stronger than mere non-reversibility of $\mathcal N_{T_0}$: a non-reversible channel can in principle preserve distinctness above threshold for the response-relevant configurations, in which case passive persistence is consistent with the entropy floor and no recovery is needed. Refresh/minorization branches with strict trace-distance contraction $f_{RID}<1$ are degradation-bearing because contraction drives distinguishability to zero on every iterated trajectory; ordinary finite-temperature or environmental branches whose mixing time on the response-relevant set is finite are degradation-bearing for analogous reasons. Branches whose passive dynamics happen to preserve every $\Delta_{\mathrm{viab}}$-separation indefinitely are not degradation-bearing and fall outside the scope of this theorem.
+
+If the structure is to persist on a degradation-bearing branch for arbitrarily many intervals of length $T_0$, there must exist recovery maps $\mathcal R_k$ such that, on the retained code ledger $\mathcal C$,
+$$
+D_{tr}\!\bigl(\mathcal R_k\mathcal N_{T_0}^{\circ k}(\rho_i),\rho_i\bigr)<\Delta_{\mathrm{viab}}
+$$
+for every $\rho_i$ in the response-relevant configuration set, after each interval. Without such recovery, the degradation condition pushes some response-relevant pair below $\Delta_{\mathrm{viab}}$, and the data-processing inequality prevents passive evolution from restoring the distinction.
+
+A nontrivial recovery map for a nontrivial noise channel requires redundancy: the protected logical distinctions must be embedded into a larger physical carrier so that error syndromes can be distinguished without destroying the logical response. In the quantum case this is the Knill-Laflamme condition for correctability; in the classical finite-response case it is the existence of distinct syndrome classes whose correction restores the same logical response class. Therefore persistent complex organization on degradation-bearing PU branches requires recovery capacity, and biological coded inheritance is a PCE-efficient finite-response implementation of that requirement. ∎
 
 This theorem explains why coded inheritance is PCE-favored for persistent life. Life did not "choose" to use coded information as an arbitrary convention: any persistent complex organization must preserve enough self-description to correct degradation across update cycles. The genetic code is biology's error-tolerant solution to a persistence problem structurally analogous to the vacuum's Golay-protected finite-response problem, without implying that the genetic code is itself the Golay code or a formal linear block code.
 

@@ -6,7 +6,7 @@
 
 *   **$\alpha_{SPAP}$ (Alpha-SPAP):** (Theorem 10, Theorem 11) The fundamental upper bound on average self-prediction performance ($PP<1$) for systems possessing Property R, regarding SPAP-limited aspects. Distinct from the operational upper bound $\beta$. Theorem 14 gives a log-enhanced quadratic lower bound on the effective verification/update resources required as $\delta_{SPAP}\to0$, and the same asymptotic lower bound applies to $C_P$ whenever the chosen complexity notion lower-bounds those operations.
 
-*   **$\alpha_{CC,max}$ (Alpha-CC-max):** (Theorem 39) The strict endpoint upper bound on Consciousness Complexity (CC), requiring $\alpha_{CC,max}<0.5$ to forbid deterministic outcome forcing. Finite-window zero-error FTL decoding is separately excluded on the regular statistical branch (Definition 10.2a) by Theorem 39a.
+*   **$\alpha_{CC,max}$ (Alpha-CC-max):** (Theorem 39) The bounded-bias branch ceiling on Consciousness Complexity (CC). The strict gate $\alpha_{CC,max}<0.5$ forbids deterministic binary endpoint forcing unless a separate finite-response certificate excludes endpoint-complete context pairs. Finite-window zero-error FTL decoding is separately excluded on the regular statistical branch (Definition 10.2a) by Theorem 39a.
 
 *   **$\alpha_{\mathrm{sig}}, \beta_{\mathrm{II}}, \alpha_{\mathrm{err}}$:** Statistical type-I significance level, type-II error probability (power $1-\beta_{\mathrm{II}}$), and target decoding error probability used in Sections 10 and 13. These are distinct from the Space of Becoming parameters $\alpha,\beta$ and from the electromagnetic fine-structure constant $\alpha_{\rm em}$.
 
@@ -54,7 +54,7 @@
 
 *   **Causal-Order Resource:** (Corollary 14.1c) A finite higher-order process property measured by robustness distance to the convex set of causally separable processes. It may be nonzero without retrocausal signaling and is not a closed-timelike-curve channel.
 
-*   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Equation 54). It bounds the maximum possible deviation from the Born rule (specifically, the Fisher-Rao distance, Definition 33) that the system can induce. Its deterministic endpoint strength is bounded by $\mathrm{CC}(S)\le\alpha_{\mathrm{CC,max}}<0.5$ (Theorem 39), while statistical-FTL consistency uses the finite-window zero-error gate of Theorem 39a on the regular branch (Definition 10.2a).
+*   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the linear Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Equation 54). It bounds the maximum possible deviation from the Born rule through the Fisher-Rao distance gate of Definition 33 and the probability-shift bounds of Theorem 36. On the bounded-bias branch, its deterministic endpoint strength satisfies $\mathrm{CC}(S)\le\alpha_{\mathrm{CC,max}}<0.5$ (Theorem 39), while statistical-FTL consistency uses the finite-window zero-error gate of Theorem 39a on the regular branch (Definition 10.2a).
 
 *   **Coherence:** (Appendix C) Reliability and stability of predictive correlations and information propagation across the MPU network. Requires geometric regularity (Theorem C.2).
 
@@ -66,7 +66,7 @@
 
 *   **Hadamard-PCE State Gate:** (Appendix K.10.4a–K.10.4c) Regular AQFT admissibility condition requiring the Hadamard-subtracted two-point distribution to have finite UV PCE gate cost. It is the state-selection condition that makes renormalized stress-energy and local horizon thermodynamics finite on the continuum branch.
 
-*   **CPTP (Completely Positive Trace-Preserving):** (Appendix E, Appendix G) A quantum channel $\mathcal{E}$ is CPTP if it maps density operators to density operators, preserves trace ($\mathrm{tr}(\mathcal{E}(\rho)) = \mathrm{tr}(\rho)$), and remains positive when extended to any ancilla system. The 'Evolve' channel is CPTP by construction, with strict contractivity ($f_{RID} < 1$) guaranteed by the structural irreversibility quantum $\varepsilon_0=\ln2$ and physical implementation bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$.
+*   **CPTP (Completely Positive Trace-Preserving):** (Appendix E, Appendix G) A quantum channel $\mathcal{E}$ is CPTP if it maps density operators to density operators, preserves trace ($\mathrm{tr}(\mathcal{E}(\rho)) = \mathrm{tr}(\rho)$), and remains positive when extended to any ancilla system. The 'Evolve' channel is CPTP by construction. The completed SPAP reset gives the reset-support capacity deficit of Proposition E.2a; strict contractivity ($f_{RID} < 1$) holds on refresh/minorization branches satisfying Lemma E.1.
 
 *   **CTB Model (Context-Targeted Bias):** (Definition 34, Equation 58–59) Example model for CC influence where probability shifts towards a context-defined target distribution: $P_{obs}(i) = (1-\text{CC}) P_{Born}(i) + \text{CC} p_{target}(i)$. In the self-directed case, the same form is applied to an internal physiological event channel of the aggregate, with the neutral channel distribution replacing the external Born baseline and with the shift bounded by $\gamma_a(c)\mathrm{CC}(S)$.
 
@@ -92,7 +92,7 @@
 
 *   **$E_8$ Root System:** (Appendix R, Section R.2) The exceptional root system in 8 dimensions consisting of 240 vectors of squared length 2; the associated $E_8$ lattice achieves the optimal sphere packing density in 8D (Viazovska 2017). Provides the information-optimal coordinatization of the MPU's internal 8-dimensional real subspace with kissing number 240, maximal symmetry, and self-duality. Squared distances between distinct roots are restricted to $d^2 \in \{2, 4, 6, 8\}$, constraining the discrete values of the Mass Hierarchy Invariant $\mathcal{R}$.
 
-*   **$f_{RID}$:** (Lemma E.1) The maximal contractivity factor ($0 \le f_{RID} < 1$) of the average 'Evolve' channel $\mathcal{E}_N$ with respect to trace distance. Strict inequality $f_{RID}<1$ is guaranteed by the structural irreversibility quantum $\varepsilon_0=\ln2$ and the associated refresh/reset component.
+*   **$f_{RID}$:** (Lemma E.1) The maximal contractivity factor of the average 'Evolve' channel $\mathcal{E}_N$ with respect to trace distance. In general $0\le f_{RID}\le1$. On refresh/minorization branches with a nonzero input-independent full-state refresh component, Lemma E.1 gives $f_{RID}<1$. The structural irreversibility quantum $\varepsilon_0=\ln2$ independently gives the reset-support capacity deficit of Proposition E.2a.
 
 *   **Fundamental Predictive Loop:** (Definition 4) The core operational cycle of MPU dynamics: Internal Prediction ($P_{int}$), Verification ($V$ via 'Evolve'), and Update/Cycle ($D_{cyc}$).
 
@@ -142,7 +142,7 @@
 *   **Light Sublattice ($L_{\rm light}$):** (Appendix R, Definition R.3.2, Proposition R.3.3) The integer kernel $L_{\rm light} := \ker_{\mathbb{Z}} C \subset \mathbb{Z}^7$ of the charge map matrix $C$ encoding $SU(3) \times SU(2)$ Cartan generators. Contains topological sectors neutral under non-Abelian gauge groups. All elements have trivial $SU(3)$ center charge: $\tau(q) = 0 \in \mathbb{Z}_3$ for $q \in L_{\rm light}$.
 
 
-*   **'Internal Prediction' Phase ($P_{int}$):** (Definition 26) The deterministic, unitary evolution phase of MPU dynamics (governed by Schrödinger equation, Equation 43), representing internal model processing between 'Evolve' events.
+*   **'Internal Prediction' Phase ($P_{int}$):** (Definition 26) The deterministic, reset-free predictive generation phase of MPU dynamics between 'Evolve' events. On the Hilbert/Born branch satisfying Theorem 8.7, this phase is implemented by unitary Schrödinger evolution (Equation 43).
 
 *   **$\kappa_{\mathrm{eff}}$:** (Theorem 19, Remark 4) Dimensionless efficiency parameter governing the relationship between complexity and performance in the Law of Prediction (Equation 22). Related to equilibrium cost/benefit ratios (Equation 32).
 
@@ -222,7 +222,7 @@ $$
 
 *   **MPU (Minimal Predictive Unit):** (Definition 23) The hypothesized fundamental constituent of reality, defined as a system possessing Predictive Physical Complexity exactly equal to the Operational Threshold $C_{op}$. Operates the adaptive Fundamental Predictive Loop under Dual Dynamics.
 
-*   **ND-RID (Non-Deterministic Reflexive Interaction Dynamics):** (Definition 6) The formalism describing the probabilistic, irreversible 'Evolve' interaction process, where state transitions depend reflexively on stochastic outcomes. Characterized by $\varepsilon_0=\ln2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$, and $f_{RID} < 1$.
+*   **ND-RID (Non-Deterministic Reflexive Interaction Dynamics):** (Definition 6) The formalism describing the probabilistic, irreversible 'Evolve' interaction process, where state transitions depend reflexively on stochastic outcomes. Characterized by $\varepsilon_0=\ln2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$, the completed reset-support capacity deficit of Proposition E.2a, and $f_{RID}<1$ on refresh/minorization branches satisfying Lemma E.1.
 
 *   **Operational Alphabet Capacity:** (Appendix Z, Definition Z.4, Theorem Z.6) The maximum information $\ln d_0$ that can be reliably encoded and retrieved in a single MPU cycle when rank-raising instruments are available. Capacity saturation at the PCE-Attractor ($\mathcal{I}(u^*) = \ln d_0$) determines the bare coupling $u^* = d_0^{1/M} - 1 = 2^{1/8} - 1$.
 

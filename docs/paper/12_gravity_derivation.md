@@ -104,11 +104,32 @@ A crucial ingredient is the relationship between the entropy associated with a c
 
 **12.2.1 Theorem 49 (Horizon-Entropy Area Law)**
 
-**Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43)**, the equilibrium boundary entropy $S_{boundary}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal{H}$ is proportional to the horizon's cross-sectional area $\mathcal{A}$. This arises because the per-channel reliable classical information capacity is bounded by the residual MPU information budget, $C_{\max}(f_{RID}) \le \ln(d_0)-\varepsilon_0 < \ln(d_0)$ (Appendix E, Theorem E.2; Equation E.15), with $\varepsilon_0=\ln 2$ (Theorem 31). By Theorem E.8.3.4, the boundary-entropy potential on the holographic-attractor branch is strictly decreasing on $[0,S_{\max})$, so the unique stable equilibrium occurs at $S=S_{\max}$. Hence the bound is saturated at equilibrium on this branch, and the relationship takes the universal Bekenstein-Hawking form, $S = k_B c^3 \mathcal{A} / (4 G \hbar)$ in SI units. With Planck length $L_P^2 = G\hbar/c^3$, this is $S = k_B \mathcal{A} / (4 L_P^2)$. In natural units ($c=\hbar=k_B=1$, $L_P^2=G$):
+**Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43), the density-certificate branch of Theorem E.3, and the PCE residual-budget saturation branch of Proposition E.2a**, the equilibrium boundary entropy $S_{boundary}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal H$ is proportional to the horizon's cross-sectional area $\mathcal A$. The per-channel reliable classical information budget is bounded structurally by the completed reset-support deficit
+$$
+C_{\max}\le\ln d_0-\ln2
+$$
+(Proposition E.2a), and on the minimal saturating branch $d_0=8$ this gives
+$$
+C_{\max}^*=2\ln2.
+$$
+The boundary-channel density is supplied by Theorem E.3:
+$$
+N_{eff\_links}
+=
+\frac{\chi}{\eta\delta^2}\mathcal A+o(\mathcal A).
+$$
+By Theorem E.8.3.4, the boundary-entropy potential on the holographic-attractor branch is strictly decreasing on $[0,S_{\max})$, so the unique stable equilibrium occurs at $S=S_{\max}$. Hence the bound is saturated at equilibrium on this branch, and the relationship takes the universal Bekenstein-Hawking form, $S = k_B c^3 \mathcal A / (4G\hbar)$ in SI units. With Planck length $L_P^2 = G\hbar/c^3$, this is $S = k_B\mathcal A/(4L_P^2)$. In natural units ($c=\hbar=k_B=1$, $L_P^2=G$):
 
 $$
-S_{boundary}(\mathcal{A}) = \frac{\mathcal{A}}{4 G} \quad \text{(70)}
+S_{boundary}(\mathcal A)=\frac{\mathcal A}{4G}+o(\mathcal A)
+\quad \text{(70)}
 $$
+
+For an infinitesimal local-horizon patch in the Jacobson limit, the $o(\mathcal A)$ term is subleading under refinement and the first variation is governed by the area density:
+$$
+\delta S=\frac1{4G}\delta\mathcal A.
+$$
+The Clausius-relation derivation of the Einstein equation (Theorem 12.1) uses only this first variation through the entropy density $1/(4G)$, so the $o(\mathcal A)$ correction in Equation (70) is invisible in the local thermodynamic derivation and does not modify any downstream result.
 
 An infinitesimal change $\delta \mathcal{A}$ in area corresponds to:
 
@@ -116,29 +137,31 @@ $$
 \delta S = \frac{1}{4 G} \delta \mathcal{A} \quad \text{(71)}
 $$
 
-*Proof.* Under geometric regularity, Appendix E proves that the number of effective independent channels crossing a boundary of area $\mathcal A$ scales linearly:
+*Proof.* Under geometric regularity alone, Lemma E.5.1 gives the theorem-level upper bound on boundary-crossing links. On the density-certificate branch of Theorem E.3, the effective independent channel count has the asymptotic form
 $$
-N_{\mathrm{eff\_links}}=\sigma_{\mathrm{eff\_link}}\mathcal A,
+N_{\mathrm{eff\_links}}
+=
+\sigma_{\mathrm{eff\_link}}\mathcal A+o(\mathcal A),
 \qquad
-\sigma_{\mathrm{eff\_link}}=\frac{\chi}{\eta\delta^2}
+\sigma_{\mathrm{eff\_link}}=\frac{\chi}{\eta\delta^2}.
 $$
-(Theorem E.3). Each such channel carries at most
+Each such channel carries at most
 $$
-S^{\max}_{\mathrm{channel}}=k_B\,C_{\max}(f_{RID})
+S^{\max}_{\mathrm{channel}}=k_B C_{\max}
 $$
-(Corollary E.2). Therefore the maximum boundary entropy is
+(Corollary E.2), with $C_{\max}$ supplied quantitatively on the completed reset-support branch by Proposition E.2a and strictly bounded on refresh/minorization branches by Theorem E.2. Therefore the maximum boundary entropy is
 $$
 S_{boundary}(\mathcal A)
 =
 N_{\mathrm{eff\_links}}\,S^{\max}_{\mathrm{channel}}
 =
-k_B\left(\frac{\chi\,C_{\max}(f_{RID})}{\eta\delta^2}\right)\mathcal A,
+k_B\left(\frac{\chi C_{\max}}{\eta\delta^2}\right)\mathcal A+o(\mathcal A),
 $$
-which is exactly Equation (E.6) of Appendix E.
+which is Equation (E.6) of Appendix E on the density-certificate branch.
 
 Appendix E then defines the effective gravitational coupling by the standard normalization
 $$
-\frac{\chi\,C_{\max}(f_{RID})}{\eta\delta^2}
+\frac{\chi C_{\max}}{\eta\delta^2}
 =
 \frac{c^3}{4G\hbar}
 =
@@ -146,15 +169,29 @@ $$
 $$
 (Equation (E.7)). Substituting this into the previous expression yields
 $$
-S_{boundary}(\mathcal A)=\frac{k_B c^3\mathcal A}{4G\hbar}=\frac{k_B\mathcal A}{4L_P^2}.
+S_{boundary}(\mathcal A)
+=
+\frac{k_B c^3\mathcal A}{4G\hbar}
++
+o(\mathcal A)
+=
+\frac{k_B\mathcal A}{4L_P^2}
++
+o(\mathcal A).
 $$
 In natural units $c=\hbar=k_B=1$, this is Equation (70):
 $$
-S_{boundary}(\mathcal A)=\frac{\mathcal A}{4G}.
+S_{boundary}(\mathcal A)=\frac{\mathcal A}{4G}+o(\mathcal A).
 $$
-Differentiating with respect to area gives
+The local-horizon derivation uses the entropy density in the refinement limit. Since the density certificate gives
 $$
-\delta S=\frac{1}{4G}\,\delta\mathcal A,
+\frac{S_{boundary}(\mathcal A)}{\mathcal A}
+\to
+\frac1{4G},
+$$
+the first variation on an infinitesimal local-horizon patch is
+$$
+\delta S=\frac1{4G}\delta\mathcal A,
 $$
 which is Equation (71). ∎
 
@@ -530,12 +567,15 @@ The coefficient $\eta$ appearing in $\delta S = \eta\,\delta\mathcal{A}$ is rela
 
 **Part C (Cosmological).** The de Sitter horizon at $r_\Lambda = \sqrt{3/\Lambda}$ has Gibbons-Hawking temperature $T_{dS} = (\hbar c/2\pi k_B)\sqrt{\Lambda/3}$ [Gibbons & Hawking 1977]. The instanton tunneling rate $\Gamma \propto e^{-2\kappa}$ determines the vacuum energy density; Appendix U records a five-mode reference branch with $\kappa_{\mathrm{ref}}=141.5$ (Theorem U.16) and Theorem U.8c shows that the pure-coordinate dilatation mode needed to realize that branch is obstructed in the current continuum action. ∎
 
-**Remark 12.2.1: Common Origin.** The ND-RID channel structure that produces Born rule probabilities (via capacity bound $C_{\max} < \ln d_0$, Theorem E.2) also determines $G$ via Equation E.9:
+**Remark 12.2.1: Common Origin.** The ND-RID finite-transfer structure that supplies the horizon channel budget also determines $G$ via Equation E.9:
 $$
-G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}(f_{RID})}
+G=\frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}}.
 $$
-Both quantum measurement statistics and gravitational dynamics are constrained by the information-theoretic limits of reflexive prediction. Einstein's Field Equations (Equation 76) represent the equation of state ensuring local thermodynamic consistency between the emergent spacetime geometry and the underlying MPU network's predictive activity. The factor $1/4$ enters through the standard normalization relating horizon entropy density to the coupling in the Einstein equation; PU's nontrivial content is the operational evaluation of the entropy density from channel counting (Appendix E). PCE optimization of the vacuum state yields $C_{\max}^* = \ln(d_0) - \varepsilon = 2\ln 2$, predicting the MPU-to-Planck scale ratio $\delta/L_P \approx \sqrt{8\ln 2} \approx 2.355$ (Equation E.16). The curvature of spacetime reflects the geometric adjustments needed to satisfy the Clausius relation on all local causal horizons, given the Horizon Entropy Area Law (Theorem 49) which arises from fundamental information limits ($\varepsilon, f_{RID}$) of reflexive MPU interactions (ND‑RID). The distribution of predictive activity ($T_{\mu\nu}^{(MPU)}$)—which itself quantifies the coarse-grained density and flux of the very resource costs that are optimized by the predictive network—dictates local information capacity of boundaries (Area Law), and geometry ($g_{\mu\nu}, R_{\mu\nu}$) adapts via EFE to maintain local thermodynamic equilibrium.
-Gravity is the large-scale thermodynamic consequence of the universe's underlying predictive processing and its inherent informational limits.
+Here $C_{\max}$ is supplied quantitatively by the completed reset-support branch of Proposition E.2a, with $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ PCE residual-budget branch; refresh/minorization branches additionally give the strict inequality $C_{\max}<\ln d_0$ by Lemma E.1 and Theorem E.2. The Born rule is not derived from this capacity bound. It descends separately from the predictive observable algebra, PPI/PCE response-null quotienting, non-contextual additivity, and the Gleason-Busch representation. The common origin is SPAP finite-response closure: simultaneous ledgers yield the Born/noncommutative probability structure, while sequential update ledgers yield entropy and finite boundary capacity.
+
+Einstein's Field Equations (Equation 76) represent the equation of state ensuring local thermodynamic consistency between the emergent spacetime geometry and the underlying MPU network's predictive activity. The factor $1/4$ enters through the standard normalization relating horizon entropy density to the coupling in the Einstein equation; PU's nontrivial content is the operational evaluation of the entropy density from channel counting (Appendix E). PCE optimization of the vacuum state yields $C_{\max}^*=\ln d_0-\varepsilon_0=2\ln2$, predicting the MPU-to-Planck scale ratio $\delta/L_P=\sqrt{8\ln2}$ on the Appendix Q packing branch. The curvature of spacetime reflects the geometric adjustments needed to satisfy the Clausius relation on all local causal horizons, given the Horizon Entropy Area Law (Theorem 49), which arises from the completed reset-support capacity budget and density-certificate channel count. The distribution of predictive activity ($T_{\mu\nu}^{(MPU)}$)—which itself quantifies the coarse-grained density and flux of the resource costs optimized by the predictive network—dictates local information capacity of boundaries, and geometry ($g_{\mu\nu},R_{\mu\nu}$) adapts via EFE to maintain local thermodynamic equilibrium.
+
+Gravity is the large-scale thermodynamic consequence of finite self-referential predictive processing and its boundary-channel capacity ledger.
 
 
 ### **12.5 A Multi-Scale, Environment-Dependent Model for Emergent Gravity**

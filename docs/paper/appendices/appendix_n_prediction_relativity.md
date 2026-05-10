@@ -1113,7 +1113,7 @@ $$
 This result is consistent with experimental tests of the weak equivalence principle, which constrain violations to the level of $|\eta| < 10^{-14}$ [Will 2014; Touboul et al. 2017].
 
 
-### N.11.5a The Equivalence Principle as Universal Contractivity
+### N.11.5a The Equivalence Principle as Universal ND-RID Coupling
 
 The derivation of the weak equivalence principle in Theorem N.7 establishes that $m_I = m_G$ for simple systems because both quantities measure relational information content $\mathcal{I}_{rel}$. This section deepens this result by identifying a precise information-theoretic structure underlying the equivalence principle: the **data processing inequality** (DPI) for quantum channels.
 
@@ -1127,14 +1127,14 @@ $$
 
 for all CPTP maps $\mathcal{E}$ and all density operators $\rho, \sigma$. Examples include the trace distance $D_{tr}(\rho, \sigma) = \frac{1}{2}\|\rho - \sigma\|_1$, the relative entropy $S(\rho \| \sigma) = \mathrm{tr}(\rho \ln \rho - \rho \ln \sigma)$ when $\text{supp}(\rho) \subseteq \text{supp}(\sigma)$, quantum fidelity-derived measures [Uhlmann 1976; Jozsa 1994], and generalized relative entropy monotones [Petz 1986; Ruskai 1994].
 
-**Theorem N.10 (ND-RID Contractivity as Universal DPI).** The 'Evolve' channel $\mathcal{E}_N$ implementing ND-RID dynamics (Definition 27) satisfies the data processing inequality with strict contractivity:
+**Theorem N.10 (ND-RID Data Processing and Refresh-Branch Contractivity).** The 'Evolve' channel $\mathcal{E}_N$ implementing ND-RID dynamics (Definition 27) is CPTP and therefore satisfies the data processing inequality with non-expansive trace-distance factor $0\le f_{RID}\le1$. On refresh/minorization branches satisfying Lemma E.1 it is strictly contractive:
 
 $$
 D_{tr}(\mathcal{E}_N(\rho), \mathcal{E}_N(\sigma)) \leq f_{RID} \cdot D_{tr}(\rho, \sigma)
 \tag{N.33}
 $$
 
-where $0 \leq f_{RID} < 1$ is the contractivity factor established in Lemma E.1.
+where $0 \leq f_{RID} < 1$ is the refresh-branch contractivity factor established in Lemma E.1. Without the refresh/minorization hypothesis, CPTP data processing still gives the non-expansive bound with $0\le f_{RID}\le1$, while Proposition E.2a supplies the completed reset-support capacity deficit.
 
 *Proof.* By Lemma E.1, the averaged ND-RID 'Evolve' channel contains a nonzero input-independent refresh component, so it admits a decomposition
 $$
@@ -1227,13 +1227,27 @@ The density-operator domain includes pure states, mixed states, coherent superpo
 
 ### N.11.5a.2 The DPI-Equivalence Principle Correspondence
 
-The equivalence principle asserts that all matter couples to gravity universally—inertial and gravitational mass are identical. Within the PU framework, this universality emerges from the universality of ND-RID contractivity.
+The equivalence principle asserts that all matter couples to gravity universally—inertial and gravitational mass are identical. Within the PU framework, this universality emerges from the universality of the retained ND-RID coupling ledger: the same finite-transfer, entropy-flow, and stress-energy maps apply to all simple matter sectors at the same coarse-graining scale. Strict contractivity $f_{RID}<1$ is a refresh/minorization subbranch of this ledger, not the sole source of gravitational universality.
 
-**Theorem N.11 (Equivalence Principle from Universal Contractivity; Sufficient Direction Unconditional, Converse on the Non-Compensation Branch).** Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be two simple systems (with $C_{agg} \leq C_{op}$, Definition 30) composed of different matter types.
+**Definition N.11.0 (Retained ND-RID Coupling Ledger).** For a simple matter sector $\mathcal S$ at fixed coarse-graining scale, the retained ND-RID coupling ledger is the finite list of branch-defined data
+$$
+\lambda(\mathcal S)
+=
+\bigl(C_{\max}(\mathcal S),\ \Sigma(\mathcal S),\ T_{\mu\nu}^{(\mathrm{src})}(\mathcal S),\ f_{RID}(\mathcal S)|_{\mathrm{ref}}\bigr)
+$$
+consisting of:
+1. the reset-support per-link capacity datum $C_{\max}(\mathcal S)$ (Proposition E.2a);
+2. the entropy-flow normalization $\Sigma(\mathcal S)$ entering Theorem N.7 (the per-cycle entropy-production-to-relational-information map);
+3. the stress-energy source coefficients $T_{\mu\nu}^{(\mathrm{src})}(\mathcal S)$ entering the Appendix B stress-energy construction;
+4. the refresh-branch contraction datum $f_{RID}(\mathcal S)$ when present, which is undefined off refresh/minorization subbranches.
 
-(Sufficient direction.) If both systems couple to the ND-RID channel $\mathcal{E}_N$ with the same contractivity factor $f_{RID}$, then on the saturated-boundary mass-information branch the weak equivalence principle $(m_I/m_G)_1 = (m_I/m_G)_2 = 1$ holds.
+The ledger is universal across sectors when each entry is sector-independent at the same coarse-graining scale.
 
-(Converse, on the non-compensation branch.) On the additional branch under which sector-dependent variations in $f_{RID}$ are not compensated by other sector-dependent terms in the entropy-flow / stress-energy map, sector-dependent $f_{RID}$ generically induces matter-dependent corrections to $m_I/m_G$ and therefore EP violations. Off this branch — for instance, if both $m_I$ and $m_G$ inherit the same functional dependence on $f_{RID}$ through $C_{\max}(f_{RID})$ — sector-dependent $f_{RID}$ may cancel in the ratio $m_I/m_G$ and leave EP intact.
+**Theorem N.11 (Equivalence Principle from Universal ND-RID Coupling; Sufficient Direction Unconditional, Converse on the Non-Compensation Branch).** Let $\mathcal{S}_1$ and $\mathcal{S}_2$ be two simple systems (with $C_{agg}\le C_{op}$, Definition 30) composed of different matter types.
+
+(Sufficient direction.) If both systems instantiate the same retained ND-RID coupling ledger at the same coarse-graining scale — including the same reset-support capacity budget, entropy-flow normalization, and stress-energy source map — then on the saturated-boundary mass-information branch the weak equivalence principle $(m_I/m_G)_1=(m_I/m_G)_2=1$ holds.
+
+(Converse, on the non-compensation branch.) On the additional branch under which sector-dependent variations in any retained ND-RID coupling datum are not compensated by other sector-dependent terms in the entropy-flow / stress-energy map, such variations generically induce matter-dependent corrections to $m_I/m_G$ and therefore EP violations. Refresh-branch variations in $f_{RID}$ are one possible source of such deviations, but not the only one. Off the non-compensation branch, sector-dependent terms may cancel in the ratio $m_I/m_G$ and leave EP intact.
 
 
 *Proof.*
@@ -1252,84 +1266,146 @@ $$
 
 **Step 2 (Gravitational mass from stress-energy).** By Theorem N.7 Step 3, gravitational mass arises from the stress-energy tensor $T_{\mu\nu}^{(MPU)}$, which encodes the operational costs of maintaining predictive states. These costs are determined by the same ND-RID channel structure.
 
-**Step 3 (Universal contractivity implies universal coupling).** The ND-RID channel structure (Definition 27) is determined by the fundamental MPU dynamics, which are matter-independent by construction. Suppose $f_{RID}$ is universal—the same for all matter types. Then:
-- The channel capacity $C_{\max}(f_{RID})$ is universal
-- The entropy flow rate $d\mathcal{S}/d\tau$ depends only on $\mathcal{I}_{rel}$, not matter type
-- Both $m_I$ and $m_G$ reduce to functions of $\mathcal{I}_{rel}$ alone
+**Step 3 (Universal retained coupling ledger implies universal coupling).** The retained ND-RID coupling ledger (Definition 27, Proposition E.2a, Theorem E.6, and the stress-energy construction of Theorem N.7) is determined by the fundamental MPU dynamics, which are matter-independent by construction on the simple-system branch. Suppose this retained ledger is universal across matter types. Then:
+- the reset-support capacity budget entering the boundary entropy density is universal;
+- the entropy-flow normalization is universal;
+- the stress-energy source map is universal;
+- refresh-branch contraction data, when present, are universal as part of the same ledger.
 
-By Theorem N.7, this yields $m_I = m_G$ for all matter types.
+Therefore the entropy flow rate $d\mathcal S/d\tau$ depends only on the relational information $\mathcal I_{rel}$ and not on matter type, and both $m_I$ and $m_G$ reduce to the same function of $\mathcal I_{rel}$. By Theorem N.7, this yields $m_I=m_G$ for all simple matter types on the saturated-boundary mass-information branch.
 
-**Step 4 (Converse on the non-compensation branch).** Suppose $f_{RID}$ differs between matter sectors: $f_{RID}^{(1)} \neq f_{RID}^{(2)}$. The channel capacities $C_{\max}(f_{RID}^{(i)})$ then differ between sectors, and the entropy flow rates at fixed $\mathcal{I}_{rel}$ acquire sector-dependent contributions. On the non-compensation branch — under which these sector-dependent contributions are not exactly offset by matching sector-dependent terms in the stress-energy or relational-information maps — the ratio $m_I/m_G$ acquires matter-dependent corrections, contradicting universal EP. Off the non-compensation branch, $f_{RID}$ variations could in principle cancel between numerator and denominator of $m_I/m_G$, leaving EP undetected.
+**Step 4 (Converse on the non-compensation branch).** Suppose a retained ND-RID coupling datum differs between matter sectors. This may be a reset-support capacity datum, an entropy-flow normalization, a stress-energy source coefficient, or, on refresh/minorization branches, a contractivity factor $f_{RID}^{(i)}$. At fixed $\mathcal I_{rel}$, the corresponding entropy-flow or stress-energy maps acquire sector-dependent contributions. On the non-compensation branch — under which these sector-dependent contributions are not exactly offset by matching sector-dependent terms elsewhere in the stress-energy or relational-information maps — the ratio $m_I/m_G$ acquires matter-dependent corrections, contradicting universal EP. Off the non-compensation branch, sector-dependent terms can in principle cancel between numerator and denominator of $m_I/m_G$, leaving EP undetected.
 
-Therefore, on the non-compensation branch, EP holds iff $f_{RID}$ is universal. ∎
+Therefore, on the non-compensation branch, EP holds if and only if the retained ND-RID coupling ledger is universal. ∎
 
 
-**Corollary N.11.1 (EP Violations as DPI Violations).** Any measured violation of the equivalence principle:
-
+**Corollary N.11.1 (EP Violations as Non-Universal Coupling-Ledger Deviations).** Any measured violation of the equivalence principle,
 $$
-\eta = \frac{(m_G/m_I)_1 - (m_G/m_I)_2}{(m_G/m_I)_1 + (m_G/m_I)_2} \neq 0
+\eta=\frac{(m_G/m_I)_1-(m_G/m_I)_2}{(m_G/m_I)_1+(m_G/m_I)_2}\ne0,
 $$
-
-implies sector-dependent departures from universal ND-RID contractivity. To leading order in the deviation:
-
+implies a sector-dependent departure from the universal retained ND-RID coupling ledger on the non-compensation branch. Let $\lambda^a$ denote the finite list of retained coupling ledgers entering the simple-system mass-information map, including reset-support capacity data, entropy-flow normalizations, stress-energy coefficients, and refresh-branch contraction factors when present. Then, to leading order,
 $$
-\eta = \chi_{\text{EP}} \cdot \frac{\Delta f_{RID}}{f_{RID}} + O\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2 = \chi_{\text{EP}} \cdot \frac{f_{RID}^{(1)} - f_{RID}^{(2)}}{f_{RID}} + O\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2
+\eta
+=
+\sum_a \chi_{\mathrm{EP},a}\frac{\Delta\lambda^a}{\lambda^a}
++
+O(\|\Delta\lambda\|^2),
 \tag{N.35}
 $$
+where $\chi_{\mathrm{EP},a}$ are response coefficients determined by the branch-specific map from retained coupling data to $m_I/m_G$. On a subbranch where the only varying retained datum is $f_{RID}$, this reduces to
+$$
+\eta
+=
+\chi_{\mathrm{EP},f}\frac{\Delta f_{RID}}{f_{RID}}
++
+O\!\left(\frac{\Delta f_{RID}}{f_{RID}}\right)^2.
+$$
 
-where $\chi_{\text{EP}}$ is an $O(1)$ response coefficient determined by the functional form of the $f_{RID} \mapsto m_I/m_G$ map on the non-compensation branch.
+*Proof.* By Theorem N.11, on the non-compensation branch the ratio $m_I/m_G$ is a smooth function of the retained coupling ledger $\lambda=(\lambda^a)$ and of $\mathcal I_{rel}$. At fixed $\mathcal I_{rel}$, Taylor expansion around the universal point gives
+$$
+\frac{m_I}{m_G}(\lambda+\Delta\lambda)
+=
+\frac{m_I}{m_G}(\lambda)
++
+\sum_a
+\frac{\partial(m_I/m_G)}{\partial\lambda^a}\Delta\lambda^a
++
+O(\|\Delta\lambda\|^2).
+$$
+Substituting the two matter-sector expansions into the definition of $\eta$ gives (N.35) after absorbing the dimensionless logarithmic derivatives into the coefficients $\chi_{\mathrm{EP},a}$. The one-parameter $f_{RID}$ expression is the special case in which all $\Delta\lambda^a$ vanish except the refresh-branch contraction datum. ∎
 
-*Proof.* From Theorem N.11 on the non-compensation branch, mass ratios depend on $f_{RID}$ through the channel capacity $C_{\max}(f_{RID})$ via the saturated-boundary mass-information branch. For small sector-dependent variations $\Delta f_{RID} \ll f_{RID}$, Taylor expansion of $m_I/m_G$ yields a linear leading term whose coefficient $\chi_{\text{EP}}$ depends on the specific functional form of the $f_{RID}$-dependence and is $O(1)$ for generic smooth dependence; an unconditional value $\chi_{\text{EP}} = 1$ is not implied by Theorem N.11 alone and requires explicit specification of the $f_{RID} \mapsto m_I/m_G$ map. ∎
+**Dominant-coefficient table.** The retained coupling ledger of Definition N.11.0 has four entries, and the leading $\chi_{\mathrm{EP},a}$ on each named subbranch is:
+
+| Subbranch | Dominant variation | Leading coefficient |
+|:---|:---|:---|
+| Refresh-branch only ($f_{RID}$ varies, others sector-uniform) | $\Delta f_{RID}/f_{RID}$ | $\chi_{\mathrm{EP},f}$ |
+| Reset-support capacity sector-dependent | $\Delta C_{\max}/C_{\max}$ | $\chi_{\mathrm{EP},C}$ |
+| Entropy-flow normalization sector-dependent | $\Delta\Sigma/\Sigma$ | $\chi_{\mathrm{EP},\Sigma}$ |
+| Stress-energy source coefficient sector-dependent | $\Delta T^{(\mathrm{src})}/T^{(\mathrm{src})}$ | $\chi_{\mathrm{EP},T}$ |
+
+Off the refresh subbranch, $\chi_{\mathrm{EP},f}$ is undefined and drops from the sum. The relative magnitudes of the remaining $\chi_{\mathrm{EP},a}$ are calibration-branch outputs; an experimental EP bound at level $\eta_{\mathrm{exp}}$ constrains the dominant linear combination on whichever subbranch is operative.
 
 
 ### N.11.5a.3 Information-Theoretic Interpretation
 
-**Remark N.11.7: The DPI as Gravitational Universality.** The data processing inequality is a fundamental theorem of information theory: no physical processing can increase distinguishability without access to additional resources or side channels [Cover & Thomas 2006]. Theorem N.11 reveals that gravitational universality—the fact that gravity couples to all matter identically—is a *physical manifestation* of this mathematical theorem.
+**Remark N.11.7: Finite-Response Coupling Universality.** The data processing inequality is a fundamental theorem of information theory: no CPTP processing can increase distinguishability without access to additional resources or side channels [Cover & Thomas 2006]. In PU, gravitational universality is the physical manifestation of a broader finite-response condition: all simple matter sectors share the same retained ND-RID coupling ledger. DPI and strict contractivity are the refresh-branch expression of this condition, while reset-support capacity is the completed-cycle expression.
 
 The correspondence operates as follows:
 
 | Information Theory | Gravity |
 |:-------------------|:--------|
-| CPTP channel $\mathcal{E}_N$ | ND-RID 'Evolve' process (Definition 27) |
-| Contractivity $f_{RID} < 1$ | Irreversibility $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) |
-| Universal $f_{RID}$ | Universal gravitational coupling |
-| DPI: $\mathcal{M}(\mathcal{E}(\rho), \mathcal{E}(\sigma)) \leq \mathcal{M}(\rho, \sigma)$ | EP: $m_I = m_G$ for all matter (Theorem N.7) |
-| DPI violation (side channels) | EP violation (new physics) |
+| CPTP channel $\mathcal E_N$ | ND-RID 'Evolve' process (Definition 27) |
+| Reset-support capacity budget | Universal boundary entropy density contribution |
+| Refresh-branch $f_{RID}<1$ | Strict reduced-channel contraction when the refresh branch is active |
+| Universal retained coupling ledger | Universal gravitational coupling |
+| Sector-dependent retained ledger | EP violation on the non-compensation branch |
+| Side channels or non-universal response data | New physics / EP-violation source |
 
-**Remark N.11.8: Testable Prediction.** Current experimental bounds on EP violation are $|\eta| < 3 \times 10^{-15}$ [Touboul et al. 2022]. Given the leading-order equality (Equation N.35), this translates to a bound on sector-dependent contractivity variations:
-
+**Remark N.11.8: Testable Prediction.** Current experimental bounds on EP violation constrain the non-universality of the retained coupling ledger. If
 $$
-\left|\frac{\Delta f_{RID}}{f_{RID}}\right| < 3 \times 10^{-15}
+|\eta|<\eta_{\mathrm{exp}},
+$$
+then Equation (N.35) gives
+$$
+\left|
+\sum_a\chi_{\mathrm{EP},a}\frac{\Delta\lambda^a}{\lambda^a}
+\right|
+<
+\eta_{\mathrm{exp}}
++
+O(\|\Delta\lambda\|^2).
 \tag{N.36}
 $$
-
-For complex systems ($C_{agg} > C_{op}$), Theorem N.8 predicts $\delta_C \sim 10^{-40}$, which is consistent with this bound but lies far below current experimental sensitivity.
+On a one-parameter refresh subbranch where only $f_{RID}$ varies and $|\chi_{\mathrm{EP},f}|$ is fixed by the branch certificate, this becomes
+$$
+\left|\frac{\Delta f_{RID}}{f_{RID}}\right|
+<
+\frac{\eta_{\mathrm{exp}}}{|\chi_{\mathrm{EP},f}|}
++
+O(\eta_{\mathrm{exp}}^2).
+$$
+For complex systems ($C_{agg}>C_{op}$), Theorem N.8 predicts $\delta_C\sim10^{-40}$ on its model branch, which is consistent with current bounds but lies far below present experimental sensitivity.
 
 ### N.11.5a.4 Connection to Horizon Thermodynamics
 
 The DPI-EP correspondence connects to the unified modular structure established in Appendix G (Theorem G.1.9.5).
 
-**Proposition N.6 (Horizons as DPI Boundaries).** A causal horizon $\mathcal{H}$ is characterized information-theoretically as a boundary where the ND-RID channel capacity saturates. At saturation:
-
+**Proposition N.6 (Horizons as Finite-Response Capacity Boundaries).** A causal horizon $\mathcal H$ is characterized information-theoretically as a boundary where the total retained boundary channel budget saturates. At saturation,
 $$
-C_{\max}(\mathcal{H}) = \sigma_{eff} \cdot \mathcal{A}
+C_{\mathrm{boundary}}(\mathcal H)
+=
+N_{\mathrm{eff\_links}}C_{\max}
+=
+\sigma_{\mathrm{eff}}\mathcal A+o(\mathcal A),
 \tag{N.37}
 $$
+where $\mathcal A$ is the horizon area and $\sigma_{\mathrm{eff}}=1/(4G)$ in natural units on the density-certificate and saturation branch (Theorem E.6).
 
-where $\mathcal{A}$ is the horizon area and $\sigma_{eff} = 1/(4G)$ in natural units (Theorem E.5).
+*Proof.* By Theorem E.6, the entropy associated with a causal boundary equals the total retained channel capacity crossing it on the density-certificate branch:
+$$
+S_{\max}(\mathcal A)
+=
+N_{\mathrm{eff\_links}}C_{\max}
+=
+\frac{\mathcal A}{4G}+o(\mathcal A).
+$$
+At a horizon, this boundary budget is maximized consistent with the geometric constraints, yielding the Bekenstein-Hawking entropy density in the local-horizon refinement limit. ∎
 
-*Proof.* By Theorem E.6, the entropy associated with a causal boundary equals the total channel capacity crossing it. At a horizon, this capacity is maximized consistent with the geometric constraints, yielding the Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/(4G)$. ∎
+**Corollary N.11.2 (Unified Origin of Gravitational Phenomena).** Both the equivalence principle and the horizon area law derive from the same finite-response ND-RID coupling structure.
 
-**Corollary N.11.2 (Unified Origin of Gravitational Phenomena).** Both the equivalence principle and the horizon area law derive from the same information-theoretic structure: the universal contractivity of ND-RID channels.
-
-- **EP (local):** Universal $f_{RID}$ → universal matter-gravity coupling (Theorem N.11)
-- **Area law (global):** Capacity saturation → entropy proportional to area (Theorem E.6)
+- **EP (local):** universal retained coupling ledger $\to$ universal matter-gravity coupling (Theorem N.11)
+- **Area law (global):** reset-support capacity budget + density-certificate channel count $\to$ entropy proportional to area (Theorem E.6)
+- **Refresh branch:** $f_{RID}<1$ supplies strict reduced-channel contraction where mixing or DPI-budget contraction is required
 
 The derivation chain is:
-
 $$
-\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Lemma E.1}} f_{RID} < 1 \xrightarrow{\text{Theorem E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{universal}} \text{EP + Area Law}
+\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2
+\xrightarrow{\text{Prop E.2a}}
+C_{\max}\le\ln d_0-\ln2
+\xrightarrow{\text{Thm E.3/E.6}}
+\text{Area Law},
 $$
+with the equivalence-principle branch following from universality of the same retained ND-RID coupling ledger in the simple-system mass-information map.
 
 
 ### N.11.6 Complexity-Dependent Equivalence Principle Violation

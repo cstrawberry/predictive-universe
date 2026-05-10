@@ -286,60 +286,90 @@ $$
 
 Together with collapse avoidance $r_s<R_S$ (Equation S.31), these conditions enforce an effective operational ceiling $\text{CC}<\text{CC}_{grav}<\alpha$ for any finite system. Theorem S.2 makes this explicit.
 
-**Theorem S.2 (Unified causality-gravity bound).**
+**Theorem S.2 (Unified Bounded-Bias and Gravity Ceiling).**
 
-The operational bound $\alpha_{CC,\max} < 0.5$ is necessary to simultaneously ensure:
-
-(i) **Operational causality** (Postulate 2): No deterministic FTL signaling via quantum outcome forcing (Theorem 39)
-
-(ii) **Physical viability**: Schwarzschild radius remains well below system size: $r_s/R_S \ll 1$
-
-(iii) **Perturbative regime**: Weak-field approximation for gravitational time dilation remains valid: $\Phi_{context}/c^2 \ll 1$
-
-*Proof.* Part (i) is Theorem 39, which implies the universal causality ceiling $\alpha_{CC,\max}<0.5$.
-
-For part (ii), use Equations S.30–S.31:
+On the bounded-bias CC branch of Theorem 39, operational causality at the deterministic endpoint level is enforced by
 $$
-r_s=\frac{2G\tau_c}{c^2}P_{context}(\text{CC})<R_S
+\alpha_{CC,\max}<0.5.
+$$
+Independently, for any finite aggregate with the context-power law of Equation S.5, physical viability and perturbative weak-field operation impose system-dependent ceilings strictly below the branch parameter $\alpha$:
+$$
+\mathrm{CC}<\mathrm{CC}_{BH}<\alpha,\qquad
+\mathrm{CC}\le\mathrm{CC}_{WF}<\alpha.
+$$
+Thus the admissible operating ceiling for a finite system is
+$$
+\mathrm{CC}
+<
+\min\{\alpha_{CC,\max},\mathrm{CC}_{BH},\mathrm{CC}_{WF}\},
+\tag{S.34a}
+$$
+with $\alpha_{CC,\max}<0.5$ on the bounded-bias branch.
+
+*Proof.* Theorem 39 proves that $\alpha_{CC,\max}<0.5$ is a sufficient branch gate excluding deterministic endpoint forcing for arbitrary binary coarse-grainings. It is the endpoint-causality gate for the bounded-bias CC branch.
+
+For the gravitational-collapse ceiling, use Equations S.30–S.31:
+$$
+r_s=\frac{2G\tau_c}{c^2}P_{context}(\mathrm{CC})<R_S
 \quad\Longleftrightarrow\quad
-P_{context}(\text{CC})<\frac{c^2 R_S}{2G\tau_c}.
+P_{context}(\mathrm{CC})<\frac{c^2 R_S}{2G\tau_c}.
 $$
-Substituting Equation S.5 gives the necessary and sufficient condition
+Substituting Equation S.5 gives
 $$
-A\left[\frac{\text{CC}}{\alpha-\text{CC}}\right]^2<\frac{c^2 R_S}{2G\tau_c}.
+A\left[\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\right]^2<\frac{c^2 R_S}{2G\tau_c}.
 $$
 Let
 $$
 B:=\frac{c^2 R_S}{2G\tau_c A}>0.
 $$
-Then $\frac{\text{CC}}{\alpha-\text{CC}}<\sqrt{B}$, hence
+Since all quantities are nonnegative and $\mathrm{CC}<\alpha$ on the branch domain, the inequality is equivalent to
 $$
-\text{CC}<\frac{\alpha\sqrt{B}}{1+\sqrt{B}}=:\text{CC}_{BH}<\alpha,
+\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}<\sqrt B.
 $$
-which is the explicit gravitational-collapse ceiling.
+Solving gives
+$$
+\mathrm{CC}<\frac{\alpha\sqrt B}{1+\sqrt B}=:\mathrm{CC}_{BH}.
+$$
+Because $B$ is finite for a finite system with $A,\tau_c,R_S>0$,
+$$
+\mathrm{CC}_{BH}<\alpha.
+$$
 
-For part (iii), a sufficient perturbative condition is $K_{eff}P_{context}\le 1$ (a conservative version of $\ll 1$ in Equation S.33). Using Equation S.5 again yields
+For the perturbative weak-field ceiling, impose the conservative sufficient condition
 $$
-A\left[\frac{\text{CC}}{\alpha-\text{CC}}\right]^2\le \frac{1}{K_{eff}}.
+K_{eff}P_{context}\le1.
+$$
+Using Equation S.5,
+$$
+A\left[\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\right]^2\le\frac1{K_{eff}}.
 $$
 Let
 $$
 W:=\frac{1}{A K_{eff}}>0.
 $$
-Then $\frac{\text{CC}}{\alpha-\text{CC}}\le \sqrt{W}$, hence
+Then
 $$
-\text{CC}\le \frac{\alpha\sqrt{W}}{1+\sqrt{W}}=:\text{CC}_{WF}<\alpha.
+\frac{\mathrm{CC}}{\alpha-\mathrm{CC}}\le\sqrt W,
 $$
-Therefore, for any finite system parameters, physically viable and perturbative operation requires $\text{CC}<\min\{\text{CC}_{BH},\text{CC}_{WF}\}$, and the universal causality ceiling enforces $\alpha_{CC,\max}<0.5$. $\square$
+hence
+$$
+\mathrm{CC}\le\frac{\alpha\sqrt W}{1+\sqrt W}=:\mathrm{CC}_{WF}.
+$$
+For finite positive $A$ and $K_{eff}$, $W$ is finite and therefore
+$$
+\mathrm{CC}_{WF}<\alpha.
+$$
 
-**Corollary S.2.1 (No arbitrary CC enhancement).**
+Combining the independent endpoint, collapse, and weak-field requirements gives (S.34a). ∎
 
-No system, regardless of available energy budget, can achieve $\text{CC} \ge 0.5$ without either:
-- Violating causality (enabling paradoxes)
-- Collapsing into a black hole
-- Invalidating the framework's perturbative approximations
+**Corollary S.2.1 (No arbitrary CC enhancement on the bounded-bias branch).**
 
-This establishes the CC bound as a fundamental physical limit, not merely an engineering challenge.
+On the bounded-bias CC branch, no finite system can increase operational CC without encountering at least one of the following gates:
+- the endpoint-causality gate $\alpha_{CC,\max}<0.5$ from Theorem 39;
+- the collapse-avoidance ceiling $\mathrm{CC}<\mathrm{CC}_{BH}$;
+- the weak-field perturbative ceiling $\mathrm{CC}\le\mathrm{CC}_{WF}$.
+
+Thus arbitrary CC enhancement is excluded by the combined branch and finite-system ceilings. The endpoint gate controls deterministic outcome forcing, while the gravitational ceilings control physical viability and perturbative validity.
 
 ## S.6 Non-Local Gravitational Influence via Entanglement
 

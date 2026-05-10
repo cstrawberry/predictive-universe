@@ -82,22 +82,57 @@ $$
 
 This recovers the standard form of the Born rule (Proposition 7, Equation 50).
 
-**G.1.5 The Two-Dimensional Case**
+**G.1.5 Dimensional Subtleties and the $d=2$ Case**
 
-Gleason's original proof required the Hilbert space dimension to be $\dim(\mathcal{H}) \ge 3$. Since the MPU Hilbert space $\mathcal{H}_0$ has $\dim d_0 \ge 8$ (Theorem 23), the theorem applies directly to the fundamental MPU outcome space. However, for effective two-dimensional subspaces (qubits) that emerge within larger MPU aggregates or represent specific degrees of freedom, the validity of the Born rule requires separate justification. The framework provides two complementary and robust arguments for its universal applicability.
+Gleason's original proof required the Hilbert space dimension to be $\dim(\mathcal H)\ge3$. Since the MPU Hilbert space $\mathcal H_0$ has $d_0\ge8$ (Theorem 23), the theorem applies directly to the fundamental MPU outcome space. Effective two-dimensional sectors do not create a separate qubit loophole, because their event weights descend from the global $d_0\ge8$ Born ledger.
 
-1.  **Higher-Dimensional Embedding:** From a physical perspective, no effective qubit is a truly isolated system. It is always embedded within the MPU's native $d_0 \ge 8$ space and coupled to its environment. The full Hilbert space of the interacting system (qubit + environment/rest of MPU) is high-dimensional, satisfying the conditions for Gleason's theorem. The Born rule for the qubit subsystem then follows from the consistency of the larger system's description.
+**Lemma G.1.6a (Born Descent to Active Two-Dimensional Sectors).**
+Let $\mathcal H_0=\mathcal H_a\oplus\mathcal H_b$ with $\dim\mathcal H_a=2$ and $\dim\mathcal H_0=d_0\ge8$. Suppose the global MPU ledger has the Born form
+$$
+\omega(X)=\operatorname{tr}(\rho X)
+$$
+for all global effects $0\le X\le I_{\mathcal H_0}$. Let $P_a$ be the projector onto $\mathcal H_a$ and assume $\omega(P_a)>0$. Then the conditional active-sector ledger has the Born form
+$$
+\omega_a(E)=\operatorname{tr}(\rho_aE)
+$$
+for every active-sector effect $0\le E\le I_{\mathcal H_a}$, where
+$$
+\rho_a=\frac{P_a\rho P_a}{\operatorname{tr}(P_a\rho)}.
+$$
 
-2.  **Extension via POVMs and PCE:** From a formal perspective, the derivation can be extended to cover the $\dim=2$ case by considering the most general class of quantum measurements, described by Positive Operator-Valued Measures (POVMs). POVMs arise naturally in describing the open-system interactions of ND-RID ('Evolve') and restricted measurements on subsystems. The Principle of Compression Efficiency (PCE) demands consistent and efficient resource accounting for *all* physically realizable predictive operations, including those described by POVMs. This leads to the following derived principle:
+*Proof.* Embed an active-sector effect $E$ into the global MPU space by
+$$
+\widetilde E=E\oplus0_b.
+$$
+The conditional active-sector probability is
+$$
+\omega_a(E)
+=
+\frac{\omega(\widetilde E)}{\omega(P_a)}
+=
+\frac{\operatorname{tr}(\rho(E\oplus0_b))}{\operatorname{tr}(\rho P_a)}.
+$$
+Since $E\oplus0_b=P_a(E\oplus0_b)P_a$, cyclicity of trace gives
+$$
+\operatorname{tr}(\rho(E\oplus0_b))
+=
+\operatorname{tr}(P_a\rho P_aE).
+$$
+Therefore
+$$
+\omega_a(E)
+=
+\operatorname{tr}\!\left(\frac{P_a\rho P_a}{\operatorname{tr}(P_a\rho)}E\right)
+=
+\operatorname{tr}(\rho_aE).
+$$
+Thus the active qubit inherits Born weights as a conditional restriction of the global $d_0\ge8$ Born representation. ∎
 
-    **Principle of Generalized Additivity (PCE-Derived).** The cost frame function $f$ must be additive over all possible predictive partitions, including those represented by POVMs. That is, for any finite POVM $\{E_i\}$ satisfying $\sum_i E_i = \mathbf{1}$, the cost additivity $f(\{E_i\}) = \sum_i f(E_i)$ must hold.
-    *Justification:* This is a direct consequence of PCE. As argued in Lemma G.1.1b, any contextuality or non-additivity in the cost-accounting represents an inefficiency that increases the global PCE potential $V(x)$. PCE dynamics will therefore select for configurations where the internal accounting is maximally simple and consistent across all possible measurement types, enforcing additivity for POVMs.
+The framework also has two compatible descriptions of effective qubit measurements.
 
-    **Claim.** Let $f$ assign to each effect $E$ on $\mathbb C^2$ a number $f(E)\in[0,1]$ such that: (i) finite additivity on POVMs: for every finite POVM $\{E_i\}$ such that $\sum_i E_i = \mathbf{1}$, we have $\sum_i f(E_i)=f(\mathbf{1})$; (ii) $f$ is continuous in the operator norm; and (iii) normalization $f(\mathbf 1)=1$.Then there exists a unique density operator $\rho$ on $\mathbb C^2$ with $f(E)=\mathrm{tr}(\rho E)$ for all effects $E$.
+1.  **Higher-Dimensional Embedding:** From a physical perspective, no effective qubit is a truly isolated system. It is embedded within the MPU's native $d_0\ge8$ space and coupled to the rest of the retained finite-response ledger. Lemma G.1.6a proves that the Born rule for the qubit subsystem follows by conditional restriction from the larger system's description.
 
-    *Proof.* By the principle, $f$ is a bounded, positive, finitely additive functional on the effect algebra. For $E,F\ge 0$ with $E+F\le I$, embed $\{E,F,I-E-F\}$ into a POVM to get $f(E+F)=f(E)+f(F)$; by scaling, extend $f$ to all positive $T\le I$, then to the positive cone by homogeneity, to self-adjoints by Jordan decomposition, and to all of $\mathcal B(\mathbb C^2)$ by complex linearity (details as in Busch 2003). By the Riesz representation theorem there exists a unique $\rho\ge 0$, $\mathrm{tr}\,\rho=1$, such that $f(E)=\mathrm{tr}(\rho E)$ for all effects $E$. Specializing to projections $P$ recovers the Born weights $f(P)=\mathrm{tr}(\rho P)$. This closes the $d=2$ case. [Busch 2003; Caves et al. 2004] ∎
-
-Therefore, both the physical embedding and the formal extension via PCE-enforced consistency for POVMs ensure that the Born rule derivation holds universally within the framework.
+2.  **POVM Generalization:** Gleason's theorem can be generalized to Positive Operator-Valued Measures (POVMs), which apply in dimension 2 under natural assumptions [Busch 2003; Caves et al. 2004]. Since PU's 'Evolve' interactions are naturally described by POVMs in the presence of finite resolution and environmental coupling, the generalized theorem also yields Born weights for effective qubit measurements.
 
 **G.1.6 Physical Interpretation**
 
@@ -2498,7 +2533,7 @@ This identifies the gravitational constant $G$ as an emergent quantity determine
 The result $\eta_{ent} = 1/(4G)$ connects directly to the gravitational entropy in the unified entropy framework (Section P.6.5). The Bekenstein-Hawking entropy $S_{BH} = \mathcal{A}/4G$ arises from the channel capacity of ND-RID interactions crossing the horizon (Theorems E.3 and E.5). This is not an analogy but an identity: horizon entropy counts the Shannon entropy of channel capacity across the boundary, measured in Planck units. The derivation chain from SPAP to horizon entropy (Section P.6.5.2) makes this explicit:
 
 $$
-\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
+\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{E.2a}} C_{\max}\le\ln d_0-\ln2 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}
 $$
 
 ### G.1.9.7 The Unified Mechanism
@@ -2720,32 +2755,113 @@ This establishes the chain: $\text{SPAP} \xrightarrow{\mathbb{Z}_2} \varepsilon_
 
 ### G.10.2.1 The Active Kernel Dimension
 
-**Theorem G.10.2 (Unitary realization of the SPAP involution up to basis choice).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the logical involution $\iota$ to be realized as a nontrivial unitary involution on the active kernel $\mathcal{H}_a \cong \mathbb{C}^a$ with $a = 2$ (Theorem Z.1). Any such realization is unitarily equivalent to a Pauli involution. In a basis where the involution exchanges the two active basis states, one may write
+**Theorem G.10.2 (Projective Realization of the SPAP Involution and SU(2) Lift).** The Principle of Physical Instantiation (PPI, Definition P.6.2) requires the logical involution $\iota$ to be realized as a nontrivial projective unitary involution on the active kernel $\mathcal H_a\cong\mathbb C^2$ with $a=2$ (Theorem Z.1). Equivalently, an amplitude representative $\widetilde U_\iota$ satisfies
 $$
-U_\iota = \sigma_x.
+[\widetilde U_\iota]^2=[I],
+\qquad
+[\widetilde U_\iota]\ne[I],
 $$
+where brackets denote equality modulo global phase. In a basis where the projective involution exchanges the two active basis states, one may choose the determinant-one lift
+$$
+U_\iota=i\sigma_x\in SU(2),
+\qquad
+U_\iota^2=-I.
+$$
+Thus the SPAP involution is exact on rays and has the standard $SU(2)$ double-cover lift on amplitudes.
 
-*Proof.* A unitary involution satisfies $U_\iota^\dagger U_\iota=I$ and $U_\iota^2=I$, so its spectrum lies in $\{+1,-1\}$. Nontriviality excludes $U_\iota=\pm I$, hence in dimension $2$ the operator is unitarily equivalent to $\mathrm{diag}(1,-1)$. Conjugating by the Hadamard matrix sends $\mathrm{diag}(1,-1)$ to $\sigma_x$, so every nontrivial unitary involution on $\mathbb{C}^2$ is unitarily equivalent to a Pauli involution, and $\sigma_x$ is a convenient representative after basis choice. QED
+*Proof.* Physical outcome probabilities and density matrices are invariant under multiplication of a state vector or implementing unitary by an overall phase. Hence PPI represents the active-kernel action on rays by the projective unitary class $[\widetilde U_\iota]$ rather than by a phase-fixed operator.
+
+The logical condition $\iota^2=\mathrm{id}$ requires
+$$
+[\widetilde U_\iota]^2=[I],
+$$
+so for any unitary representative,
+$$
+\widetilde U_\iota^2=e^{i\theta}I
+$$
+for some real $\theta$. Multiplying by the response-null phase $e^{-i\theta/2}$ gives a representative $V$ with
+$$
+V^2=I.
+$$
+Nontriviality excludes $V=\pm I$. Since $V$ is a nontrivial unitary involution on $\mathbb C^2$, its eigenvalues are $+1$ and $-1$, so it is unitarily equivalent to $\mathrm{diag}(1,-1)$. In the basis obtained by conjugating with the Hadamard matrix, this representative is $\sigma_x$.
+
+The operator $\sigma_x$ has determinant $-1$, so it is not itself an element of $SU(2)$. Multiplying by the response-null phase $i$ gives
+$$
+U_\iota=i\sigma_x,
+\qquad
+\det(i\sigma_x)=i^2\det(\sigma_x)=(-1)(-1)=1,
+$$
+so $U_\iota\in SU(2)$. Moreover
+$$
+U_\iota^2=(i\sigma_x)^2=-I,
+$$
+which acts trivially on rays. Therefore $U_\iota$ is the determinant-one amplitude lift of the same projective involution. ∎
 
 ---
 
 ## G.10.3 Emergence of SU(2) as Active Kernel Symmetry
 
-**Theorem G.10.3 (SU(2) as Active Kernel Symmetry Group).** The symmetry group of the active kernel $\mathcal{H}_a \cong \mathbb{C}^2$, constrained by PCE and the SPAP involution structure, is SU(2).
+**Theorem G.10.3 (SU(2) Active-Kernel Lift of the Projective Symmetry).** The physical ray symmetry of the active kernel $\mathcal H_a\cong\mathbb C^2$, after PPI quotienting of global phase, is
+$$
+PU(2)=U(2)/U(1)\cong SO(3).
+$$
+The minimal connected determinant-one unitary amplitude lift of this projective symmetry is $SU(2)$. Thus the active-kernel symmetry is $SO(3)$ on rays and $SU(2)$ on amplitudes, with $SU(2)$ supplying the spinor double-cover structure used below.
 
 *Proof.*
 
-**Step 1 (Physical equivalence under phase).** On density matrices $\rho$, the action of $U \in U(2)$ is $\rho \mapsto U\rho U^\dagger$. For any $U$ and phase $e^{i\phi}$, we have $(e^{i\phi}U)\rho(e^{i\phi}U)^\dagger = U\rho U^\dagger$. The overall U(1) phase factor is therefore physically unobservable—it does not affect any measurable prediction. PCE (Definition 15) penalizes redundant degrees of freedom that provide no predictive benefit. Since U(2) ≅ (SU(2) × U(1))/Z₂, the subgroup SU(2) $\subset$ U(2) captures all physically distinguishable transformations while eliminating the redundant global phase degree of freedom.
-
-**Step 2 (Generator structure).** The SPAP involution $U_\iota = \sigma_x$ generates a $\mathbb{Z}_2$ subgroup of SU(2). The complete Lie algebra $\mathfrak{su}(2)$ is spanned by:
+**Step 1 (PPI quotient by global phase).** On density matrices $\rho$, the action of $U\in U(2)$ is
 $$
-\mathfrak{su}(2) = \text{span}_{\mathbb{R}}\{i\sigma_x, i\sigma_y, i\sigma_z\} \tag{G.10.5}
+\rho\mapsto U\rho U^\dagger.
 $$
-where the Pauli matrices satisfy the commutation relations $[\sigma_i, \sigma_j] = 2i\epsilon_{ijk}\sigma_k$.
+For any phase $e^{i\phi}$,
+$$
+(e^{i\phi}U)\rho(e^{i\phi}U)^\dagger=U\rho U^\dagger.
+$$
+The global $U(1)$ factor changes no finite protocol response and is therefore response-null. PPI quotients it, so the physical ray symmetry is
+$$
+PU(2)=U(2)/U(1).
+$$
 
-**Step 3 (Completeness for prediction).** The predict-verify-update cycle (Definition 4) requires the ability to prepare arbitrary predictions on $\mathcal{H}_a$. By standard quantum control theory [D'Alessandro 2007], complete controllability on $\mathbb{C}^2$ requires the full SU(2) action: the Lie algebra generated by any two non-commuting elements of $\mathfrak{su}(2)$ is all of $\mathfrak{su}(2)$, and the corresponding group acts transitively on the space of pure states (the Bloch sphere). The $\mathbb{Z}_2$ subgroup generated by $\sigma_x$ alone cannot reach states like $|+\rangle = (|0\rangle + |1\rangle)/\sqrt{2}$ from $|0\rangle$.
+**Step 2 (Identification with $SO(3)$).** Every density matrix on $\mathbb C^2$ has the Bloch form
+$$
+\rho=\frac12(I+\vec r\cdot\vec\sigma),
+\qquad
+\vec r\in\mathbb R^3,\quad |\vec r|\le1.
+$$
+Conjugation by a unitary preserves trace, positivity, and spectrum, so it maps the Bloch vector by an orthogonal transformation preserving orientation. Thus there is a homomorphism
+$$
+PU(2)\to SO(3).
+$$
+The standard Pauli commutator relation
+$$
+[\sigma_i,\sigma_j]=2i\epsilon_{ijk}\sigma_k
+$$
+identifies the induced infinitesimal action of traceless anti-Hermitian $2\times2$ matrices with $\mathfrak{so}(3)$, so the homomorphism has matching Lie-algebra dimension and is onto the connected group $SO(3)$. By Schur's lemma applied to the irreducible Bloch-vector action, a unitary that conjugates every $\rho$ to itself must be a scalar in $U(2)$; scalars are exactly the elements quotiented in $PU(2)=U(2)/U(1)$, so the induced kernel in $PU(2)$ is trivial. Hence
+$$
+PU(2)\cong SO(3).
+$$
 
-**Step 4 (Minimality).** SU(2) is the minimal connected Lie group that: (i) contains the SPAP involution, (ii) acts transitively on pure states of $\mathbb{C}^2$, and (iii) eliminates the physically redundant U(1) phase. SU(2) acts transitively on the Bloch sphere $S^2 \cong \text{SU}(2)/\text{U}(1)$, which parametrizes pure states. Any smaller group would fail transitivity; any larger group would contain redundant transformations violating PCE. ∎
+**Step 3 (The SPAP involution inside the lift).** By Theorem G.10.2 the SPAP involution is represented on rays by a projective order-two class and on amplitudes by the determinant-one lift
+$$
+U_\iota=i\sigma_x\in SU(2),
+\qquad
+U_\iota^2=-I.
+$$
+Since $-I$ acts trivially on rays, this is exactly the required logical involution in the PPI quotient.
+
+**Step 4 (Transitivity and minimality).** The pure active states form
+$$
+\mathbb CP^1\cong S^2.
+$$
+The projective group $PU(2)\cong SO(3)$ acts transitively on $S^2$. A PCE-admissible connected projective symmetry group that supports arbitrary active-kernel predictions must act transitively on this sphere; otherwise some pure predictive states would be unreachable and the retained state space would contain unsupported surplus labels.
+
+Let $G$ be a connected Lie subgroup of $SO(3)$ acting transitively on $S^2$. Its Lie algebra $\mathfrak g$ is a subalgebra of $\mathfrak{so}(3)$. Since $\mathfrak{so}(3)$ has rank one, every proper subalgebra is at most one-dimensional: the cross-product bracket of two linearly independent elements is independent of both, and any two linearly independent elements therefore generate the full three-dimensional $\mathfrak{so}(3)$. If $\mathfrak g$ is one-dimensional, the corresponding subgroup is conjugate to rotations about a fixed axis and has fixed poles on $S^2$, so it is not transitive. Thus transitivity forces
+$$
+G=SO(3).
+$$
+Therefore the minimal connected ray symmetry is $PU(2)\cong SO(3)$.
+
+The simply connected determinant-one unitary lift of $SO(3)$ is $SU(2)$, with kernel $\{\pm I\}$. The larger group $U(2)$ contains the response-null global phase already removed by PPI, so PCE retains $SU(2)$ as the minimal amplitude lift. ∎
 
 ---
 
@@ -2785,32 +2901,61 @@ Thus $\pi$ is a surjective homomorphism with kernel $\{\pm I\}$, hence a two-she
 
 ### G.10.4.2 Spinor Sign Flip Under 2π Rotation
 
-**Corollary G.10.4.1 (Spinor Structure from Active Kernel Symmetry).** Fields transforming under the fundamental representation of the active kernel symmetry group SU(2) are spinors: they acquire a sign flip under $2\pi$ rotation.
+**Corollary G.10.4.1 (Spinor Structure from the SU(2) Lift).** Fields transforming under the fundamental amplitude representation of the active-kernel lift $SU(2)\to SO(3)$ are spinors: the lift of a $2\pi$ spatial rotation acts as $-I$ on the amplitude.
 
-*Proof.* Let $|\psi\rangle \in \mathcal{H}_a \cong \mathbb{C}^2$ transform under $U \in \text{SU}(2)$. A rotation by angle $\theta$ about axis $\hat{n}$ is implemented by:
+*Proof.* Let a spatial rotation by angle $\theta$ about axis $\hat n$ be represented in $SO(3)$. Its continuous $SU(2)$ lift from the identity is
 $$
-U(\theta, \hat{n}) = \exp\left(-\frac{i\theta}{2} \hat{n} \cdot \vec{\sigma}\right) \tag{G.10.7}
+U(\theta,\hat n)=\exp\left(-\frac{i\theta}{2}\hat n\cdot\vec\sigma\right).
+\tag{G.10.7}
 $$
-For $\theta = 2\pi$:
+The Pauli identity
 $$
-U(2\pi, \hat{n}) = \exp(-i\pi \hat{n} \cdot \vec{\sigma}) = -I \tag{G.10.8}
+(\hat n\cdot\vec\sigma)^2=I
 $$
-using the identity $(\hat{n} \cdot \vec{\sigma})^2 = I$ and the matrix exponential $e^{-i\pi A} = \cos(\pi)I - i\sin(\pi)A = -I$ for any matrix $A$ with $A^2 = I$ [Sakurai & Napolitano 2017]. Thus $|\psi\rangle \mapsto -|\psi\rangle$ under $2\pi$ rotation, which is the defining property of a spinor. ∎
+gives
+$$
+U(\theta,\hat n)
+=
+\cos(\theta/2)I-i\sin(\theta/2)\hat n\cdot\vec\sigma.
+$$
+For $\theta=2\pi$,
+$$
+U(2\pi,\hat n)
+=
+\cos(\pi)I-i\sin(\pi)\hat n\cdot\vec\sigma
+=
+-I.
+\tag{G.10.8}
+$$
+The element $-I$ lies in the kernel of $SU(2)\to SO(3)$, so it represents the identity rotation on rays but a sign flip on amplitudes. This is the spinor transformation law. ∎
 
-**Remark G.10.1: Causal Chain from SPAP $\mathbb{Z}_2$ to Spinor $\mathbb{Z}_2$.** The $\mathbb{Z}_2$ structure appears at two distinct points in the derivation chain: first as the logical involution of SPAP ($\iota: \phi \mapsto \text{NOT}(\phi)$), and second as the kernel $\{I, -I\}$ of the double cover $\pi: \text{SU}(2) \to \text{SO}(3)$. These are mathematically distinct objects—the SPAP $\mathbb{Z}_2$ acts on the logical states $\{0, 1\}$ via negation, while the double cover $\mathbb{Z}_2$ acts on the active kernel $\mathbb{C}^2$ by scalar multiplication. However, these two $\mathbb{Z}_2$ structures are *connected through necessary implication* in the derivation chain established in this appendix:
+**Remark G.10.1: Causal Chain from SPAP $\mathbb{Z}_2$ to Spinor $\mathbb{Z}_2$.** The $\mathbb{Z}_2$ structure appears at two distinct points in the derivation chain: first as the logical involution of SPAP ($\iota:\phi\mapsto\mathrm{NOT}(\phi)$), and second as the kernel $\{I,-I\}$ of the double cover $\pi:SU(2)\to SO(3)$. These are mathematically distinct objects. The SPAP $\mathbb{Z}_2$ acts on logical states, while the double-cover $\mathbb{Z}_2$ acts on active-kernel amplitudes by scalar multiplication.
 
-1. The SPAP logical involution (Definition G.10.1) determines the 2-to-1 merge structure (Lemma Z.2)
-2. This merge structure determines $\varepsilon_0=\ln2$ via Landauer's principle (Theorem 31)
-3. PPI-optimality selects the minimal admissible subsystem dimension $a = 2$ (Theorem Z.1)
-4. PCE selects SU(2) as the symmetry group of this 2-dimensional active kernel (Theorem G.10.3)
-5. SU(2) inherently possesses center $\{I, -I\} \cong \mathbb{Z}_2$ and is the universal double cover of SO(3)
+The precise connection is through the projective realization of the logical involution:
+
+1. The SPAP logical involution (Definition G.10.1) determines the two-branch merge structure (Lemma Z.2).
+2. This merge structure determines $\varepsilon_0=\ln2$ via the Landauer/SPAP entropy theorem (Theorem 31).
+3. PPI-optimality selects the minimal active subsystem dimension $a=2$ (Theorem Z.1).
+4. On $\mathcal H_a\cong\mathbb C^2$, the SPAP involution is a nontrivial projective unitary involution. Its determinant-one lift is $U_\iota=i\sigma_x\in SU(2)$ with $U_\iota^2=-I$ (Theorem G.10.2).
+5. PPI/PCE quotienting of global phase gives the ray symmetry $PU(2)\cong SO(3)$, while the minimal amplitude lift is $SU(2)$ (Theorem G.10.3).
+6. The lift $SU(2)\to SO(3)$ has kernel $\{I,-I\}\cong\mathbb Z_2$ (Theorem G.10.4).
 
 The complete causal chain is therefore:
 $$
-\text{SPAP } \mathbb{Z}_2 \xrightarrow{\text{Landauer}} \varepsilon_0=\ln2 \xrightarrow{\text{PPI}} a = 2 \xrightarrow{\text{PCE}} \text{SU}(2) \xrightarrow{\text{Lie theory}} \ker(\pi) = \mathbb{Z}_2
+\text{SPAP } \mathbb Z_2
+\xrightarrow{\text{Landauer}}
+\varepsilon_0=\ln2
+\xrightarrow{\text{PPI}}
+a=2
+\xrightarrow{\text{projective lift}}
+U_\iota=i\sigma_x,\ U_\iota^2=-I
+\xrightarrow{\text{PCE/PPI}}
+SU(2)\to SO(3)
+\xrightarrow{\text{Lie theory}}
+\ker(\pi)=\{I,-I\}.
 $$
 
-The spinor sign flip under $2\pi$ rotation is thus ultimately traceable to the logical structure of self-referential prediction: the SPAP $\mathbb{Z}_2$ necessarily implies (through this derivation chain) the spinor $\mathbb{Z}_2$, even though they act on different mathematical objects.
+Thus the spinor sign flip is traceable to the logical structure of self-referential prediction through the active-kernel projective-lift chain, without identifying the SPAP logical $\mathbb Z_2$ itself with the double-cover kernel.
 
 ---
 
@@ -2860,11 +3005,36 @@ The Higgs boson, for instance, is massive and spin-0; its mass arises from the H
 
 ### G.10.6.2 Gauge Boson Masslessness
 
-**Corollary G.10.6.1 (Gauge Boson Masslessness at Tree Level).** Gauge bosons, transforming in the adjoint representation of the gauge group rather than the fundamental representation of the active kernel, are massless prior to symmetry breaking.
+**Corollary G.10.6.1 (Gauge Boson Masslessness for Unbroken Gauge Redundancy).** On an unbroken gauge-redundancy branch, a local mass term for a gauge connection is not PPI-admissible because it changes under response-equivalent gauge-frame relabelings. Therefore the gauge bosons of an unbroken gauge symmetry are massless before symmetry breaking.
 
-*Proof.* The adjoint representation of SU($N$) has dimension $N^2 - 1$. For SU(2), $\dim(\text{adj}) = 3 \neq 2 = \dim(\text{fund})$. Gauge fields transform under the adjoint representation of their respective gauge groups (SU(3)$_C$, SU(2)$_L$, U(1)$_Y$), not the fundamental representation of the active kernel SU(2). They therefore do not directly encode SPAP-processed relational information in the sense of Theorem N.5 and have $\mathcal{I}_{\text{rel}} = 0$ at tree level. By Equation (G.10.12), $m = 0$.
+*Proof.* Let $A_\mu$ be a gauge connection. For a nonabelian gauge group with local frame transformation $u(x)$, the connection transforms as
+$$
+A_\mu\mapsto A_\mu^u
+=
+uA_\mu u^{-1}
+-\frac{i}{g_c}(\partial_\mu u)u^{-1}.
+$$
+A Proca-type local mass term has the schematic form
+$$
+\mathcal L_m=\frac12m^2\operatorname{tr}(A_\mu A^\mu).
+$$
+Under the transformation above,
+$$
+\operatorname{tr}(A_\mu^uA^{u\mu})
+$$
+contains derivative terms involving $(\partial_\mu u)u^{-1}$ and cross terms between $A_\mu$ and $(\partial_\mu u)u^{-1}$. These terms do not cancel for arbitrary local $u(x)$. Hence $\mathcal L_m$ is not invariant under the gauge redundancy unless $m=0$ or the gauge redundancy is no longer unbroken.
 
-Mass acquisition via the Higgs mechanism involves coupling to the electroweak symmetry breaking sector. The Higgs doublet transforms under SU(2)$_L$, and its vacuum expectation value breaks this symmetry, enabling the W and Z bosons to acquire mass through the standard Brout-Englert-Higgs mechanism while the photon remains massless. ∎
+For an abelian gauge field, $A_\mu\mapsto A_\mu+\partial_\mu\theta/g_c$. Then
+$$
+A_\mu A^\mu
+\mapsto
+A_\mu A^\mu
++\frac{2}{g_c}A^\mu\partial_\mu\theta
++\frac{1}{g_c^2}\partial_\mu\theta\,\partial^\mu\theta,
+$$
+which is again not invariant for arbitrary local $\theta$ unless $m=0$ or an additional symmetry-breaking/Stueckelberg/Higgs structure is supplied.
+
+PPI treats gauge transformations as response-equivalent frame relabelings (Theorem X.8d, established in Appendix G and used in Appendix P §C1; gauge transformations are predictive-frame redundancies, so the predictive functional descends to the gauge quotient). A term that changes under such a relabeling is not a well-defined physical response on the quotient. Therefore an unbroken gauge redundancy forbids a local gauge-boson mass term. Mass acquisition for $W^\pm$ and $Z$ occurs only after the electroweak symmetry-breaking branch supplies the Higgs vacuum structure; the photon remains massless on the unbroken electromagnetic branch. ∎
 
 ---
 
@@ -2872,17 +3042,37 @@ Mass acquisition via the Higgs mechanism involves coupling to the electroweak sy
 
 ### G.10.7.1 Fermi-Dirac Statistics from Spinor Structure
 
-**Proposition G.10.7 (Fermionic exchange sign for spinor states).** In the spinor sector identified above, exchange of two identical single-particle spinor states is represented by the antisymmetric sign rule
+**Proposition G.10.7 (Fermionic Exchange Sign on the AQFT Spin-Statistics Branch).** Conditional on the Appendix F AQFT/modular spin-statistics branch, active-kernel spinor fields obey the fermionic exchange sign. For two identical one-particle spinor states,
 $$
-\psi(x_1,x_2) = -\psi(x_2,x_1),
+\psi(x_1,x_2)=-\psi(x_2,x_1),
 $$
 which is the finite-dimensional precursor of Fermi-Dirac statistics.
 
-*Proof.* A $2\pi$ rotation acts as $-1$ on a spin-$1/2$ state, so the exchange path in the two-particle configuration space carries the usual spinorial sign. Imposing antisymmetry under exchange yields the Pauli-exclusion counting rule on multiparticle states. This establishes the fermionic exchange sign in the spinor sector. A full relativistic spin-statistics theorem would require the additional locality and spectrum assumptions of relativistic QFT and is not proved here. QED
+*Proof.* Corollary G.10.4.1 gives the spinor amplitude representation: a $2\pi$ spatial rotation lifts to $-I$ on the one-particle spinor amplitude. This spinor sign alone is not, by itself, a complete spin-statistics theorem. The exchange sign is fixed on the AQFT/modular branch of Appendix F, where locality, positive-energy structure, and the modular/DHR transport hypotheses identify the statistics operator of a transported sector with the geometric $2\pi$ rotation in the emergent Lorentz cover. The Appendix F spin-statistics result therefore gives the sign representation of the permutation group for half-integer spin sectors.
 
-This result is consistent with the spin-statistics theorem of axiomatic quantum field theory [Streater & Wightman 1964; Pauli 1940], which is recovered in the emergent AQFT framework (Theorem F.2, Appendix F).
+Equivalently, for a finite one-particle spinor space $V$, the fermionic two-particle sector is the exterior square
+$$
+\wedge^2V
+=
+\operatorname{span}\{v\wedge w:v,w\in V\},
+$$
+with
+$$
+v\wedge w=-w\wedge v.
+$$
+Thus exchanging the two identical spinor entries acts by the sign representation:
+$$
+\psi(x_1,x_2)=-\psi(x_2,x_1).
+$$
+The Pauli exclusion rule follows immediately because
+$$
+v\wedge v=0.
+$$
+Therefore the exchange sign is theorem-level on the Appendix F AQFT/modular spin-statistics branch and is compatible with the active-kernel spinor lift derived in this appendix. ∎
 
-**Remark G.10.2: PCE Interpretation of Spin-Statistics.** Theorem G.10.7 derives the spin-statistics connection from the topological structure of configuration space combined with the spinor transformation property. An independent, information-theoretic perspective is provided in Appendix F, Proposition F.2, which establishes that Fermi-Dirac statistics minimize aggregate predictive complexity $C_{agg}$ for multi-particle configurations of half-integer spin fields. The antisymmetric wavefunction eliminates redundant configuration-space volume by enforcing the Pauli exclusion constraint automatically, reducing the effective Hilbert space dimension from $d_{int}^N$ to $\binom{d_{int}}{N}$. Both derivations—the topological (Theorem G.10.7) and the PCE-based (Proposition F.2)—arrive at the same conclusion through complementary routes, reinforcing the consistency of the framework.
+This result is the finite-dimensional active-kernel reading of the spin-statistics theorem recovered in the emergent AQFT framework (Theorem F.2 and the modular descent results of Appendix F).
+
+**Remark G.10.2: PCE Interpretation of Spin-Statistics.** Proposition G.10.7 does not derive exchange antisymmetry from the $2\pi$ spinor sign alone. The sign is fixed by the AQFT/modular spin-statistics branch. PCE supplies the compression interpretation: once identical half-integer spin sectors are on the fermionic branch, the antisymmetric exterior algebra removes redundant same-state over-occupation and gives the Pauli-exclusion counting rule. The tangent-cell packing result of Theorem Z.10 is compatible with this logic but is not a substitute for the AQFT spin-statistics branch unless an additional finite-response map identifies identical-fermion occupation cells with QFI/Bures tangent cells.
 
 ---
 
@@ -2895,14 +3085,14 @@ This result is consistent with the spin-statistics theorem of axiomatic quantum 
 | 1 | $\iota^2 = \text{id}$, $\iota \neq \text{id}$ | SPAP logical structure | Derived | Theorem 10, Definition G.10.1, Lemma G.10.1a |
 | 2 | $\varepsilon_0=\ln2$ on the attractor branch | Landauer + 2-to-1 merge | Derived | Theorem 31, Definition 15a, Lemma Z.2 |
 | 3 | $a = 2$ | PPI-optimality on the attractor-saturating branch | Derived | Theorem Z.1 |
-| 4 | $U_\iota = \sigma_x \in U(2)$ | Unitary realization | Derived | Theorem G.10.2 |
-| 5 | SU(2) symmetry | PCE + completeness | Derived | Theorem G.10.3 |
-| 6 | Double cover SU(2) → SO(3) | Lie theory | Recovered | Theorem G.10.4 |
-| 7 | Spinor representation | $2\pi \to -1$ | Recovered | Corollary G.10.4.1 |
-| 8 | Spin(1,3) $\cong$ SL(2,$\mathbb{C}$) | Temporal extension | Derived | Theorem G.10.5 |
-| 9 | Fundamental fermions spinorial | $\mathcal{I}_{\text{rel}}$ on active kernel | Derived | Theorem G.10.6 |
-| 10 | Gauge bosons massless | Adjoint $\neq$ fundamental | Derived | Corollary G.10.6.1 |
-| 11 | Fermi-Dirac statistics | Configuration space topology | Recovered | Theorem G.10.7 |
+| 4 | $[U_\iota]^2=[I]$, with determinant-one lift $U_\iota=i\sigma_x\in SU(2)$ | Projective realization and amplitude lift | Derived | Theorem G.10.2 |
+| 5 | $PU(2)\cong SO(3)$ on rays; $SU(2)$ as minimal amplitude lift | PPI phase quotient + PCE transitivity | Derived | Theorem G.10.3 |
+| 6 | Double cover $SU(2)\to SO(3)$ | Lie theory | Recovered | Theorem G.10.4 |
+| 7 | Spinor representation | Lift of $2\pi$ rotation acts as $-I$ | Recovered | Corollary G.10.4.1 |
+| 8 | $Spin(1,3)\cong SL(2,\mathbb C)$ | Lorentzian extension | Conditional on Lorentzian branch | Theorem G.10.5 |
+| 9 | Fundamental active-kernel matter spinorial | $\mathcal I_{\text{rel}}$ on active kernel | Branch-derived | Theorem G.10.6 |
+| 10 | Unbroken gauge bosons massless | Gauge-redundancy quotient forbids Proca mass | Derived | Corollary G.10.6.1 |
+| 11 | Fermi-Dirac exchange sign | AQFT/modular spin-statistics branch | Conditional theorem | Proposition G.10.7; Appendix F |
 
 **Status Legend:**
 - **Derived:** Novel result following from framework axioms

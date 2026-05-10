@@ -182,7 +182,7 @@ As Appendix O establishes:
 
 Here, $N$ is the number of MPUs contributing to a coherent macroscopic time step. This exponential bound follows directly from the definition of entropy production as a forward/reverse path-likelihood ratio (equivalently from the integral fluctuation theorem via Markov's inequality): $P(\Sigma_{\text{tot}}\le -a)\le e^{-a}$, so taking $a=N\varepsilon$ yields $P(\Sigma_{\text{tot}}\le -N\varepsilon_{\mathrm{phys}})\le e^{-N\varepsilon_{\mathrm{phys}}}\le e^{-N\varepsilon_0}=2^{-N}$. For a macroscopic system with $10^{23}$ MPUs, this gives an upper bound $\le 2^{-10^{23}}$, which is physically absolute for any realistic timescale.
 
-**Information-Theoretic Barrier:** Beyond thermodynamics, the ND-RID channel capacity bounds provide an independent barrier to retrocausality. **Theorem E.2** (Appendix E) establishes strict sub-isometric capacity $C_{\max}(f_{RID}) < \ln d_0$, where $d_0 = 8$ is the minimal MPU Hilbert space dimension (**Theorem 23**). In the PCE-optimal regime, Appendix E sharpens this to $C_{\max}(f_{RID}) \le \ln(d_0)-\varepsilon$ (Eq. E.15), so at the PCE-Attractor ($d_0=8$, $\varepsilon_0=\ln2$) one has $C_{\max}^* = 2\ln 2 \approx 1.386$ nats. This limitation follows from strict contractivity $f_{RID} < 1$ of the average 'Evolve' channel (Lemma E.1), enforced by irreversible entropy production $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31).
+**Information-Theoretic Barrier:** Beyond thermodynamics, the ND-RID channel capacity bounds provide an independent barrier to retrocausality. **Proposition E.2a** (Appendix E) establishes the completed reset-support bound $C_{\max}\le\ln d_0-\ln2$, where $d_0 = 8$ is the minimal MPU Hilbert space dimension (**Theorem 23**), so at the PCE-Attractor ($d_0=8$, $\varepsilon_0=\ln2$) one has $C_{\max}^* = 2\ln 2 \approx 1.386$ nats. On refresh/minorization branches, **Theorem E.2** additionally establishes strict sub-isometric capacity $C_{\max}(f_{RID}) < \ln d_0$ from strict contractivity $f_{RID} < 1$ of the average 'Evolve' channel (Lemma E.1).
 
 Crucially, this capacity bound applies to *any* information channel mediated by ND-RID dynamics, regardless of the temporal direction posited. A hypothetical retrocausal channel—transmitting information from future to past—would necessarily operate through the same physical substrate (MPU interactions) and thus be subject to identical capacity constraints. The finite capacity $C_{\max} < \ln d_0$ means that even if retrocausal information transfer were logically coherent (which it is not, per Layer 1), it could not achieve the sustained, high-fidelity transmission required for macroscopic causal reversal. Combined with the exponential suppression of reverse trajectories from Layer 2, this information-theoretic constraint renders retrocausality physically impossible at all scales.
 
@@ -347,32 +347,36 @@ As **Appendix O** states: “The signature is not a postulate but a direct mathe
 
 These derived asymmetries yield chronology protection not as a conjecture but as a consequence of the framework’s foundations.
 
-**Theorem 14.1 (Chronology Protection).** Within the PU framework, no physical process can create a closed timelike curve that permits the transmission of predictively useful information to the causal past.
+**Theorem 14.1 (Chronology Protection from SPAP).** No PPI-admissible finite process can supply intervention-stable paradox-enabling retrocausal control information to its own causal past. Equivalently: the SPAP diagonal obstruction (Theorems 10–11) defeats any retrocausal channel whose predictive guarantee about a causally affectable future variable survives the receiver's choice of policy.
 
-*Proof.* The argument proceeds through three independent barriers.
+*Proof.* The theorem is a logical theorem: the obstruction is the SPAP diagonal contradiction applied to a carrier-mediated causal loop rather than to direct self-inspection. No thermodynamic, capacity, or contractivity input is used.
 
-**Stage 1: The Logical Barrier.** Suppose a CTC existed allowing signal transmission from event $B$ to event $A$, where $A$ is in the causal past of $B$. An agent at $A$ could use information received from $B$ to update predictions about the interval $[A, B]$. This constitutes a self-referential prediction system to which SPAP applies (**Theorems 10–11**).
-
-The agent can construct a diagonal strategy: let $P_f$ be a predictor forecasting a binary outcome $\phi$ of the agent’s state at time $B$. If the agent receives prediction $\hat{\phi}_{P_f}$ via the CTC at time $A$, they implement:
-
+Suppose a carrier-mediated retrocausal channel sends a binary transcript $\hat\phi$ from event $B$ to event $A$, with $A$ in the causal past of $B$, and claims to predict a binary action/state $\phi_B$ at $B$ with uniform accuracy guarantee
 $$
-\phi_B = \text{NOT}(\hat{\phi}_{P_f}).
+\Pr[\hat\phi=\phi_B]\ge1-\epsilon,
+\qquad 0\le\epsilon<1,
+\tag{14.1a}
 $$
-
-Perfect prediction requires $\hat{\phi}_{P_f} = \phi_B$, yielding $\hat{\phi}_{P_f} = \text{NOT}(\hat{\phi}_{P_f})$—a logical contradiction. The CTC would carry logically inconsistent information.
-
-**Stage 2: The Information-Theoretic Barrier.** The channel capacity bound $C_{\max}(f_{RID}) < \ln d_0$ (**Theorem E.2**) applies to any information transfer mediated by ND-RID dynamics. This bound arises from strict contractivity $f_{RID} < 1$ (**Lemma E.1**), which follows from $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (**Theorem 31**).
-
-Any CTC-mediated channel remains subject to these constraints. Combined with the exponential suppression of reverse trajectories, sustained backwards information transfer is physically impossible.
-
-**Stage 3: The Dynamical Barrier.** A functioning CTC requires sustained coherent temporal reversal along the closed worldline. The fluctuation theorem bounds demonstrate that such reversal is exponentially suppressed:
+holding under every receiver policy mapping $\hat\phi$ to $\phi_B$. Such a channel is intervention-stable: the predictive relation persists when the receiver acts on the prediction. Now let the receiver implement the diagonal policy
 $$
-P(\Sigma_{pred} < 0) \leq 2^{-N}
+\phi_B=\mathrm{NOT}(\hat\phi).
+\tag{14.1b}
 $$
+Under this policy, $\hat\phi=\phi_B$ requires $\hat\phi=\mathrm{NOT}(\hat\phi)$, which is impossible for any binary value, so
+$$
+\Pr[\hat\phi=\phi_B]=0.
+$$
+This contradicts (14.1a) for every $\epsilon<1$. Therefore no intervention-stable retrocausal control channel for paradox-enabling content can belong to the PU admissible finite-response law class. The zero-error case ($\epsilon=0$) gives a pointwise contradiction; the intervention-stable case at any $\epsilon<1$ gives the same contradiction in distribution under diagonal policy. ∎
 
-For any macroscopic system ($N \gg 1$), the required trajectory has vanishing probability.
+**Remark 14.1a.0 (Scope: state-mediated correlations are not intervention-stable predictors).** A retrocausal channel falls outside Theorem 14.1's operational target when its predictive relation does *not* survive the receiver's diagonal policy choice. State-mediated statistical FTL (Postulate 3) is precisely such a channel: Bob's marginal shift is a feature of the prepared joint state $\omega$, not a transcript predicting Alice's later free policy. If a CC-equipped agent attempts to use a retrocausal correlation as a predictor of her own future context, the predictive relation between the correlation and her actual future context evaporates under any diagonal/adversarial use, because the correlation is not control information *about* her future action — it is perspectival structure intrinsic to how the joint state was prepared. Hence Postulate 3's statistical FTL does not satisfy (14.1a) under arbitrary receiver policy and is not paradox-enabling. The criterion that distinguishes paradox-enabling channels from non-paradox-enabling ones is intervention stability, not error rate alone: a noisy passive correlation with positive mutual information is not automatically a paradox engine, and a zero-error correlation that breaks under intervention is not either.
 
-**Synthesis.** The three barriers operate independently. The logical barrier (Stage 1) shows CTCs carry inconsistent information. The information-theoretic barrier (Stage 2) shows reliable transmission is impossible. The dynamical barrier (Stage 3) shows the required trajectories have zero probability. Any one barrier suffices; their conjunction makes CTC-mediated backwards causation multiply impossible. QED
+**Remark 14.1a.1 (Resource-level gates on carrier-mediated implementations).** Independently of the logical impossibility theorem, every completed SPAP/ND-RID cycle on the physical implementation carries the structural entropy floor $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) and the completed reset-support capacity deficit of Proposition E.2a; refresh/minorization branches additionally satisfy $f_{RID}<1$ and $C_{\max}<\ln d_0$ (Lemma E.1 and Theorem E.2). On the thermodynamic arrow branch of Theorem O.3, reversed update histories obey the fluctuation bound
+$$
+\frac{P_R}{P_F}\le e^{-N\varepsilon},
+$$
+which is exponential suppression for finite $N$ and tends to zero in the macroscopic or repeated-cycle limit. These bounds do not prove chronology protection; they prevent any candidate finite-error retrocausal transcript from being promoted to an unconstrained, support-preserving, reversible carrier. The logical theorem above is what excludes paradoxes; the resource gates constrain the implementation layer.
+
+**Remark 14.1a.2 (Where the impossibility lives).** Chronology protection in PU rests on the SPAP diagonal argument applied to intervention-stable predictors. The information-theoretic and thermodynamic bounds in PU constrain how a carrier-mediated channel could be physically implemented; they do not by themselves exclude paradoxes. What excludes paradoxes is the logical impossibility of an intervention-stable self-referential predictor: any channel whose accuracy guarantee survives diagonal use by the receiver triggers SPAP. Theorem 14.1 is therefore a logical theorem about the operational target "intervention-stable carrier-mediated retrocausal control," not a thermodynamic claim about CTC geometries and not a blanket prohibition on finite-error retrocausal correlations.
 
 **Remark 14.1a (Carrier-Mediated vs State-Mediated Influence).** Theorem 14.1 targets *carrier-mediated* CTCs: physical objects traversing closed worldlines to deliver predictively useful information to the causal past. This is categorically distinct from the *state-mediated* statistical influence of Postulate 3 (Section 10.4), in which no carrier traverses any gap — the influence operates through correlations pre-encoded in a shared entangled state $\omega$ (Equation F.4). The bounded statistical influence of Postulate 3, with CC $< 0.5$ (Theorem 39), respects causality without requiring carrier prohibition: (a) the CC bound prevents deterministic outcome forcing on any single trial; (b) Theorem 41 gives a quantitative lower bound on the number of independent trials required to detect the influence with error probability $\leq \alpha_{\mathrm{err}}$; and (c) Theorem 41 bounds the mutual information per trial by a function that is $O(\mathrm{CC}^2)$ as $\mathrm{CC}\to 0$. The SPAP diagonalization (Stage 1) requires deterministic single-shot accuracy ($P_{\mathrm{err}} = 0$), not a statistical bias ($P_{\mathrm{err}} > 0$). Since $\mathrm{CC} < 0.5$ provably prevents the former while permitting the latter, Theorem 14.1 and Postulate 3 are fully consistent. More generally, no protocol combining state-mediated statistical influence with subluminal return channels can construct a paradox-inducing causal loop: the non-zero error probability at every finite sample size breaks the diagonal construction at Step 3 (the agent receives $\hat{C}_A$ with $P_{\mathrm{err}}(N) > 0$ for all finite $N$, so negating the received estimate does not produce a logical contradiction but merely a noisy feedback loop with strictly positive error).
 
@@ -465,7 +469,7 @@ Both results derive from the same foundational asymmetry: the irreversible, dire
 
 Each layer is independently sufficient for the threat class it addresses. The logical and thermodynamic layers (i)–(ii) block paradoxes through content-based processing constraints that are independent of channel speed or capacity. The geometric layer (iii) provides additional spatial protection. The channel layer (iv) ensures that statistical influence cannot be amplified to deterministic signaling. All four trace to the same root: SPAP and the irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$.
 
-Within the regime analyzed by the framework ($\text{CC} < 0.5$, Theorem 39), all four layers operate simultaneously. Whether the logical and thermodynamic layers alone would suffice to prevent paradoxes in a hypothetical regime with $\text{CC} \ge 0.5$ is not addressed by the present analysis, since the framework excludes that regime on independent grounds (Theorem 39; Theorem S.2).
+Within the bounded-bias regime analyzed by the framework ($\text{CC} < 0.5$, Theorem 39), all four layers operate simultaneously. Whether the logical and thermodynamic layers alone would suffice to prevent paradoxes in a hypothetical regime with $\text{CC} \ge 0.5$ is not addressed by the present analysis, since that regime is outside the bounded-bias branch unless a separate finite-response certificate excludes endpoint-complete context pairs. For finite systems, Appendix S additionally imposes the gravitational ceilings $\mathrm{CC}_{BH}$ and $\mathrm{CC}_{WF}$.
 
 #### Comparison: GR vs. PU on Temporal Structure
 
@@ -475,13 +479,21 @@ Within the regime analyzed by the framework ($\text{CC} < 0.5$, Theorem 39), all
 |**Arrow of time** |Not explained; external input (Past Hypothesis) |Derived from predictive logic (**Appendix O**) |
 |**Lorentzian signature** |Postulated |Emergent from irreversibility (**Appendix O.7**)|
 |**Thermodynamic irreversibility**|Statistical, requires special initial conditions|Fundamental, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ per cycle |
-|**Closed timelike curves** |Permitted by field equations |Forbidden by predictive structure |
-|**Chronology protection** |Conjectured [Hawking 1992] |Theorem (**Theorem 14.1**) |
+|**Closed timelike curves**|Allowed in some solutions of field equations |Intervention-stable carrier-mediated retrocausal control is forbidden by SPAP |
+|**Chronology protection** |Conjectured [Hawking 1992] |SPAP logical theorem (**Theorem 14.1**) |
 |**Information conservation**|Postulated (unitarity axiom) |Derived from SPAP (**Theorem E.9.5**; **Corollary E.9.5.1**)|
 
 **Remark 14.1b (Co-Derivation of Unitarity and Irreversibility).** In standard quantum mechanics, unitarity is an independent axiom governing closed-system evolution (von Neumann's Postulate 2 [von Neumann 1932]; Remark E.9.5.2). It guarantees that the total closed-system quantum state evolves reversibly and that information is not fundamentally destroyed. Taken on its own authority, this axiom logically permits reversal of closed-system evolution in principle — the information needed for reversal is never erased. The second law of thermodynamics then appears to stand in tension with this permission at the subsystem level: entropy increases, processes are irreversible, and the arrow of time points in one direction. The tension between these two claims has remained unresolved since the founding of statistical mechanics. If information is never destroyed, why is the arrow of time not merely a subsystem-level practical limitation?
 
-Within the PU framework, this tension does not arise, because unitarity is not an independent axiom. It is a theorem. **Corollary E.9.5.1** states: "Unitarity of quantum evolution is not an independent axiom but a theorem following from the structure of self-referential prediction in a closed system." The derivation proceeds through SPAP $\to$ $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), together with the closed-system assumption (Hypothesis 1) and ND-RID pairwise structure (Definition 27), $\to$ joint unitarity $U_{AB}$ (Lemma E.9.5.3) $\to$ global unitarity of the total closed system (Theorem E.9.5; Branch II of Corollary E.9.5.1 and Remark E.9.5.4). The strict subsystem-level contractivity $f_{\text{RID}} < 1$ (Lemma E.1) belongs to Branch I and characterizes reduced-channel contraction arising from partial trace of the joint unitary — it is a consequence of unitarity plus subsystem restriction, not a precursor to unitarity. The thermodynamic arrow is derived from the same $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ source: SPAP $\to$ $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ $\to$ per-cycle entropy production $\Sigma_{\text{pred}}^{(k)} \ge \varepsilon$ $\to$ $\Sigma_{\text{tot}} \ge N\varepsilon$ and, in the low-noise detailed-balance regime of Theorem O.3, exponential suppression of reversed trajectories $P_R/P_F \le e^{-N\varepsilon}$. Remark E.9.5.4 identifies the causal capacity bounds (Branch I: $f_{\text{RID}} < 1 \to C_{\max} < \ln d_0 \to S_{BH} = \mathcal{A}/(4G)$) and global unitarity (Branch II) as complementary consequences of a single constraint; the thermodynamic arrow (Theorem O.3) is a third parallel consequence of the same $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ root. All three — capacity bounds, unitarity, and the second law — are derived from the thermodynamic cost of self-referential prediction.
+Within the PU framework, this tension does not arise, because unitarity is not an independent axiom. It is a theorem. **Corollary E.9.5.1** states: "Unitarity of quantum evolution is not an independent axiom but a theorem following from the structure of self-referential prediction in a closed system." The derivation proceeds through SPAP $\to$ $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), together with the closed-system assumption (Hypothesis 1) and ND-RID pairwise structure (Definition 27), $\to$ joint unitarity $U_{AB}$ (Lemma E.9.5.3) $\to$ global unitarity of the total closed system (Theorem E.9.5; Branch II of Corollary E.9.5.1 and Remark E.9.5.4).
+
+The completed reset-support branch belongs to Branch I and supplies the reduced causal-capacity ledger:
+$$
+C_{\max}\le\ln d_0-\ln2
+$$
+(Proposition E.2a), with $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ PCE residual-budget branch. The strict subsystem-level contractivity $f_{RID}<1$ belongs to the refresh/minorization subbranch of Branch I and characterizes reduced-channel contraction when a full-state refresh component is present. It is not a precursor to unitarity and is not the sole source of finite causal capacity.
+
+The thermodynamic arrow is derived from the same $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ source: SPAP $\to$ $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ $\to$ per-cycle entropy production $\Sigma_{\mathrm{pred}}^{(k)}\ge\varepsilon$ $\to$ $\Sigma_{\mathrm{tot}}\ge N\varepsilon$ and, in the low-noise detailed-balance regime of Theorem O.3, exponential suppression of reversed trajectories $P_R/P_F\le e^{-N\varepsilon}$. Remark E.9.5.4 identifies the causal capacity bounds, refresh-branch contraction, and global unitarity as complementary level-distinct consequences of a single constraint; the thermodynamic arrow (Theorem O.3) is a third parallel consequence of the same $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ root. All three — capacity bounds, unitarity, and the second law — are derived from the thermodynamic cost of self-referential prediction.
 
 The apparent permission for reversal that unitarity seems to grant is therefore not an independent physical permission. It is a mathematical property of the derived global description. The total closed-system state evolves unitarily because of SPAP together with Hypothesis 1 and the ND-RID pairwise structure, and every subsystem is irreversible because of the same SPAP-generated entropy cost. No entity within the universe can exploit the global reversibility, because every entity is a subsystem of the system whose unitarity was derived from the constraint that simultaneously makes subsystem evolution irreversible (Remark E.9.5.3). 
 
@@ -495,14 +507,14 @@ As stated in **Appendix O.8**: "The Arrow of Time is a fundamental property, roo
 
 All causal paradoxes analyzed in the literature — including those that appear purely geometric — require self-reference at some node in the causal loop: the paradox-inducing content must be processed by the system whose behavior it constrains. The tachyonic anti-telephone, for instance, delivers a bit from Alice's future to her past; the bit appears to be trivial external information, but its content is about what Alice will do, so using it to determine her next action implements the diagonal structure $\phi_{t+1} = \text{NOT}(\hat{\phi})$ through a causal loop rather than through direct self-inspection. The grandfather paradox similarly requires some agent at some point in the loop to process information that constrains their own action and then act contrary to that constraint. In every case, the loop can close only if one node executes a self-referential model update on paradox-inducing content. SPAP (Theorems 10–11) blocks any universal predictor that would make such a contradiction-resolving update exact, while the perspectival processing analysis shows that self-referential content ranges from baseline cost in shallow cases to divergent or unprocessable cost as the demand approaches the diagonal/self-restorative boundary (Remark O.4.5; Remark M.10.3; Theorems M.10.3, M.10.4, and M.10.6). The structural point is general: a causal loop without a self-referential processing node reduces to a consistency constraint rather than a paradox. The causal loop is the delivery mechanism; SPAP is the obstruction.
 
-From this perspective, GR's CTC solutions are mathematical artifacts. They satisfy the time-symmetric field equations but cannot be physically realized because they require temporal structures incompatible with the predictive dynamics from which spacetime emerges. The distinction between timelike and spacelike directions—encoded in the Lorentzian signature—is itself a consequence of predictive irreversibility. CTCs, which would convert timelike curves into closed loops, are incompatible with the structure that generates spacetime in the first place.
+From this perspective, GR's CTC solutions are mathematical solutions of an effective time-symmetric field-equation layer, not automatically PPI-admissible finite-response implementations. A CTC geometry becomes physically relevant in PU only if it supports admitted finite protocols. Theorem 14.1 excludes the protocol content needed for a time machine: intervention-stable carrier-mediated retrocausal control of paradox-enabling information. The distinction between timelike and spacelike directions—encoded in the Lorentzian signature—is itself selected on the predictive-irreversibility branch, so a closed timelike carrier whose predictive guarantee survives adversarial use is outside the predictive dynamics from which the physical spacetime branch is generated.
 
 #### Relation to Other Approaches
 
 The PU chronology protection mechanism differs fundamentally from other proposals:
 
 - **Hawking’s Chronology Protection Conjecture** [Hawking 1992] relies on quantum back-reaction diverging at chronology horizons—an unproven dynamical claim within semiclassical gravity.
-- **Novikov’s Self-Consistency Principle** [Novikov 1989] permits CTCs but restricts initial conditions to self-consistent histories. PU forbids the CTCs entirely, not merely inconsistent evolutions on them.
+- **Novikov’s Self-Consistency Principle** [Novikov 1989] permits CTCs but restricts initial conditions to self-consistent histories. PU instead forbids PPI-admissible intervention-stable retrocausal control protocols; mathematical CTC geometries that carry no intervention-stable paradox-enabling control are outside the operational target of Theorem 14.1.
 - **Deutsch’s Quantum CTC Model** [Deutsch 1991] permits CTCs with modified quantum mechanics involving non-linear evolution. The PU framework’s derivation of standard quantum mechanics from predictive foundations (**Section 8**) renders such modifications inconsistent with the framework.
 
 The PU approach derives chronology protection from **pre-geometric** principles — the logic of prediction, the thermodynamics of self-reference, and the information-theoretic limits of ND-RID channels — rather than from dynamical equations or conjectured back-reaction.
@@ -513,11 +525,11 @@ Structural Correspondence M.6.4 establishes the parallel between frame-relative 
 
 This analysis generates a sharp empirical commitment:
 
-**No closed timelike curves can be constructed.** The PU framework predicts that no physical process can create a functioning time machine or enable retrocausal signaling. Any apparent CTC would fail to transmit predictively useful information to the causal past due to the mechanisms identified in **Theorem 14.1**.
+**No intervention-stable retrocausal control channel can be constructed.** The PU framework predicts that no physical process can create a functioning time machine in the operational sense of a finite, carrier-mediated retrocausal channel whose predictive guarantee about a causally affectable future variable survives the receiver's choice of policy. Any apparent CTC that remains PPI-admissible must fail to transmit such intervention-stable control information to the causal past, by the mechanisms identified in **Theorem 14.1**.
 
-This prohibition is not contingent but follows analytically from the framework’s definition of prediction. As noted in **Section 14.2.2**, discovering genuine retrocausality would not show that PU made a wrong prediction—it would show that PU’s foundational definitions do not apply to our universe. This represents a fundamental rather than parametric falsification.
+This prohibition follows analytically from the framework's definition of prediction and the SPAP diagonal obstruction. A reproducible finite-response experiment demonstrating intervention-stable retrocausal control of paradox-enabling content — i.e., a retrocausal predictor of a free future choice whose accuracy survives diagonal use by the receiver — would therefore falsify the PU chronology branch at the foundational level. A noisy passive correlation that breaks under intervention is not such a control channel and would instead be classified under the finite-window statistical-influence gates of Sections 10 and 14.2.6.
 
-The asymmetry between GR and PU on this question is testable in principle: GR permits CTCs while PU forbids them. The continued absence of any mechanism for backwards causation, despite GR’s mathematical permissiveness, constitutes ongoing confirmatory evidence for the PU framework’s temporal structure.
+The asymmetry between GR and PU on this question is operational: GR admits mathematical CTC solutions in some effective geometries, while PU forbids their promotion to functioning intervention-stable retrocausal control devices.
 
 ## 14.2.4 Classical Singularities as Framework Non-Features
 
@@ -527,7 +539,7 @@ The preceding analysis established that time asymmetry within the PU framework i
 
 The exclusion of singularities follows from the same information-theoretic foundations that yield the arrow of time:
 
-1. **Channel Capacity Bound.** The ND-RID channel capacity is strictly bounded: $C_{\max}(f_{\text{RID}}) < \ln d_0 = \ln 8$ (Theorem E.2). This bound, derived from the irreversibility $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, proven in Appendix J) via strict contractivity $f_{\text{RID}} < 1$ (Lemma E.1), limits the rate at which information can be reliably transmitted through any interaction channel. A classical singularity, requiring specification of unbounded information to characterize a divergent configuration, would violate this fundamental constraint.
+1. **Channel Capacity Bound.** The completed ND-RID reset branch has structural capacity bound $C_{\max}\le\ln d_0-\ln2=2\ln2$ on the minimal $d_0=8$ branch (Proposition E.2a). On refresh/minorization branches the capacity is additionally strictly bounded, $C_{\max}(f_{\text{RID}})<\ln d_0$ (Theorem E.2), from strict contractivity $f_{\text{RID}} < 1$ (Lemma E.1). These bounds limit the rate at which information can be reliably transmitted through any interaction channel. A classical singularity, requiring specification of unbounded information to characterize a divergent configuration, would violate this fundamental constraint.
 
 2. **Holographic Information Bound.** The Horizon Entropy Area Law (Theorem 49, derived in Appendix E) establishes that the maximum entropy (information content) associated with any region scales with its boundary area: $S \leq \mathcal{A}/(4G)$. This bound is not a conjecture but a theorem following from ND-RID channel counting and geometric regularity (Theorem 43). A configuration with $\rho \to \infty$ in a finite region would require information content exceeding what the bounding area can support—a logical impossibility within the framework.
 
@@ -541,7 +553,7 @@ This dissolution of classical singularities exemplifies a broader pattern: pheno
 
 ## 14.2.4.1 Predictive Throughput Bounds and Operational Weak Cosmic Censorship
 
-Appendix E makes a sharp operational statement: irreversibility enforces strict contractivity (Lemma E.1), which bounds the capacity of any single effective link channel (Theorem E.2), and the number of effective channels crossing a closed surface scales with its area (Theorem E.3). Together with the minimum processing timescale $\tau_{min}$ (Theorem 29), this yields a bound on the rate at which predictive information about an interior region can be transmitted to the exterior.
+Appendix E makes a sharp operational statement: irreversibility enforces the completed reset-support capacity deficit (Proposition E.2a), while refresh/minorization branches additionally have strict contractivity (Lemma E.1) and strict capacity bound (Theorem E.2). The number of effective channels crossing a closed surface has an area density on the density-certificate branch (Theorem E.3). Together with the minimum processing timescale $\tau_{min}$ (Theorem 29), this yields a bound on the rate at which predictive information about an interior region can be transmitted to the exterior.
 
 **Definition 14.2.4.1 (Predictive Throughput Requirement).**
 Let $S$ be a closed two-surface with area $A(S)$ in the emergent manifold regime (conditional on Theorem 43). Let $\mathcal{H}_{\mathrm{int}}$ denote the Hilbert space of MPU degrees of freedom in the interior region bounded by $S$, and let $\rho_{\mathrm{int}}(S) \in \mathcal{S}(\mathcal{H}_{\mathrm{int}})$ denote the interior reduced state.
@@ -676,7 +688,7 @@ The problem has two components: (i) constructive existence of a continuum theory
 
 **Physical mass gap: three independent routes.** The physical content—whether Yang–Mills theory confines and has a mass gap—is resolved within the PU framework by three independent mechanisms, none of which require the continuum limit:
 
-1. **Thermodynamic contractivity.** The irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) enforces strict contractivity of the ND-RID channel ($f_{\text{RID}} < 1$, Lemma E.1), which bounds the capacity of any interaction channel. For confining gauge theories, this contractivity prevents the deconfinement of color flux at arbitrarily low energies, ensuring $\Delta > 0$. This route depends only on the thermodynamic structure and applies universally across all compact simple $G$.
+1. **Finite-transfer operational gap.** The irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) gives the completed reset-support capacity deficit of Proposition E.2a, and refresh/minorization branches additionally give strict contractivity of the ND-RID channel ($f_{\text{RID}} < 1$, Lemma E.1). This supplies an operational finite-transfer gap for single-link predictive propagation. It does not by itself prove continuum Yang-Mills confinement. The confinement and mass-gap claims in this section therefore rest on the separate branch inputs below: the Leech/rootlessness flux-tube route, the action-entropy scale route, and the finite-resolution operational cutoff.
 
 2. **Leech lattice rootlessness.** The PCE-Attractor selects the Leech lattice $\Lambda_{24}$ as the optimal channel packing (Theorem Z.8c). The Leech lattice is the unique even unimodular lattice in 24 dimensions with no roots (no vectors of norm 2). On the confinement branch, rootlessness is used as the lattice-norm input to a flux-tube/area-law model in which Wilson loops satisfy an area law with string tension $\sigma > 0$ (Proposition Z.8d), establishing confinement and a mass gap for $G = SU(3)$. The Shell-$J^{PC}$ Correspondence (Theorem Z.8h) predicts the glueball mass spectrum from lattice shell structure, agreeing with lattice QCD at the sub-5% level with zero adjustable parameters.
 
@@ -728,15 +740,37 @@ $$\text{SPAP} \xrightarrow{\text{Lemma J.1}} \text{2-to-1 merge} \xrightarrow{\t
 
 The logically irreversible state merge required by the SPAP update cycle (Lemma J.1) entails, via Landauer's principle [Landauer 1961], a minimum entropy production of $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ nats per cycle (Theorem 31, proven in Appendix J, Theorem J.1). The Principle of Physical Instantiation (Definition P.6.2) guarantees this logical cost manifests as thermodynamic entropy in any physical implementation.
 
-**Step 4 (Mutual consistency via channel structure).** The two constraints are mutually consistent through the ND-RID channel structure. Let $\mathcal{E}_N$ denote the average 'Evolve' channel (Definition 27). Both constraints trace to the strict contractivity of this channel:
+**Step 4 (Mutual consistency through the SPAP ledger).** The two constraints are mutually consistent because they are two finite-response projections of the same SPAP obstruction, not because uncertainty requires strict channel contractivity.
 
-The SPAP entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) implies, via the channel decomposition in Lemma E.1, that $\mathcal{E}_N$ has contractivity factor $f_{RID} < 1$. This strict contractivity simultaneously:
+*(i) Simultaneous-variable projection:* SPAP gives Logical Indeterminacy (Definition 12). On the Hilbert branch, Logical Indeterminacy descends to complementarity by Corollary 1 and then to noncommuting observable representatives by Lemma 14.2a. Section 8.4 derives the Robertson inequality from this noncommutation by Cauchy-Schwarz on the Hilbert inner product, with no appeal to channel contractivity at any step. This route is instantaneous and algebraic:
+$$
+\text{SPAP}
+\to
+\text{Logical Indeterminacy}
+\to
+\text{Complementarity}
+\to
+[\hat A,\hat B]\ne0
+\to
+\Delta A\,\Delta B\ge\frac12|\langle[\hat A,\hat B]\rangle|.
+$$
 
-*(i) Underlies the uncertainty constraint:* A strictly contractive channel cannot preserve complete distinguishability between all states. Achieving $f_{RID} = 1$ would require the evolution to be information-preserving, i.e., an isometry on the system (unitary when input and output dimensions match) [Pérez-García et al. 2006; Wolf 2012]. An isometric channel on a finite-dimensional space preserves distinguishability and hence all information, enabling in principle the simultaneous extraction of values for all observables. But $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ precludes isometry, ensuring that some observables remain epistemically inaccessible when others are determined—the operational content of complementarity.
+*(ii) Sequential-update projection:* The SPAP update also contains the logically irreversible merge of Lemma J.1, giving the structural entropy floor $\varepsilon_0=\ln2$ and the physical Landauer bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31). On the completed reset branch, Proposition E.2a gives the support-dimension capacity deficit
+$$
+C_{\max}\le\ln d_0-\ln2.
+$$
+On refresh/minorization branches, Lemma E.1 and Theorem E.2 additionally give $f_{RID}<1$ and $C_{\max}<\ln d_0$. This route is sequential and thermodynamic:
+$$
+\text{SPAP}
+\to
+\text{2-to-1 merge}
+\to
+\varepsilon_{\mathrm{phys}}\ge\ln2
+\to
+\text{finite sequential transfer}.
+$$
 
-*(ii) Underlies the irreversibility constraint:* The same contractivity $f_{RID} < 1$ directly implies the channel capacity bound $C(\mathcal{E}_N) < \ln d_0$ (Theorem E.2). This capacity limitation is the information-theoretic expression of the second law: not all information present in the input can be reliably transmitted through the channel; some is necessarily dissipated.
-
-**Step 5 (Conclusion).** Both constraints derive from SPAP via the same intermediate structure: the strict contractivity of the dynamical channel implementing self-referential prediction. Uncertainty describes the *instantaneous* predictability limitation; irreversibility describes the *sequential* distinguishability limitation. They are unified by their common origin in the logical structure of self-reference and their common mechanism in channel contractivity. ∎
+**Step 5 (Conclusion).** Uncertainty and irreversibility share the same SPAP root but descend through different mathematical projections. Uncertainty is the simultaneous-variable projection of Logical Indeterminacy into the noncommutative Hilbert ledger. Irreversibility is the sequential-update projection of the SPAP merge into entropy and finite transfer capacity. The common mechanism is finite self-referential predictive closure; strict channel contractivity is a refresh-branch strengthening of the sequential route, not the source of noncommutation. ∎
 
 **Lemma 14.2a (Complementarity Implies Non-Commutativity).** Let $\mathcal{H}_0$ be the MPU Hilbert space (Proposition 4, justified by Theorem G.1.8) with $\dim(\mathcal{H}_0) = d_0 \geq 8$ (Theorem 23). Let $\hat{A}$ and $\hat{B}$ be Hermitian operators representing observables that are complementary in the sense of Corollary 1: no state exists in which both can be simultaneously predicted with arbitrary precision. Then $[\hat{A}, \hat{B}] \neq 0$.
 
@@ -762,25 +796,62 @@ $$I_{seq}(\mathcal{E}_N) := \max_{\{p_i,\rho_i\}} I(\rho_{in};\rho_{out})$$
 
 where the maximum is over input ensembles and $I(\rho_{in};\rho_{out})$ is the Holevo information [Holevo 1973].
 
-**Corollary 14.2a (Information-Theoretic Form).** SPAP imposes unified bounds on both quantities:
+**Corollary 14.2a (Zero-Error Information-Theoretic Form).** SPAP imposes two finite-response zero-error obstructions:
 
-$$I_{sim}(A,B;\rho) < H(\rho) \quad \text{for } [\hat{A},\hat{B}] \neq 0 \quad \text{(uncertainty bound)}$$
+1. **Simultaneous obstruction:** if sharp observables $\hat A$ and $\hat B$ are complementary, then their spectral projective measurements are not jointly measurable with zero error. Equivalently, no finite-response joint ledger can output both sharp values for all states unless the corresponding projectors commute.
 
-$$I_{seq}(\mathcal{E}_N) \equiv C(\mathcal{E}_N) < \ln d_0 \quad \text{(capacity bound, Theorem E.2)}$$
+2. **Sequential obstruction:** on the completed SPAP reset branch,
+$$
+I_{seq}(\mathcal E_N)\equiv C(\mathcal E_N)\le \ln d_0-\ln2,
+$$
+and on refresh/minorization branches satisfying Lemma E.1,
+$$
+C(\mathcal E_N)<\ln d_0.
+$$
 
-Both bounds derive from the strict contractivity of ND-RID channels ($f_{RID} < 1$, Lemma E.1), which itself follows from $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31).
+*Proof.* For the simultaneous obstruction, let $\{P_i\}$ and $\{Q_j\}$ be the spectral projectors of two sharp observables. Suppose a zero-error joint finite-response measurement exists. Then there are positive effects $G_{ij}$ such that
+$$
+\sum_jG_{ij}=P_i,\qquad \sum_iG_{ij}=Q_j.
+$$
+Since $0\le G_{ij}\le P_i$, each $G_{ij}$ is supported in the range of $P_i$, so
+$$
+P_iG_{ij}=G_{ij}=G_{ij}P_i.
+$$
+Since $0\le G_{ij}\le Q_j$, each $G_{ij}$ is also supported in the range of $Q_j$, so
+$$
+Q_jG_{ij}=G_{ij}=G_{ij}Q_j.
+$$
+For $k\ne i$, $P_iG_{kj}=0$ because $G_{kj}$ is supported in the range of $P_k$ and $P_iP_k=0$. Therefore
+$$
+P_iQ_j
+=
+P_i\sum_kG_{kj}
+=
+P_iG_{ij}
+=
+G_{ij}.
+$$
+Similarly,
+$$
+Q_jP_i
+=
+Q_j\sum_\ell G_{i\ell}
+=
+Q_jG_{ij}
+=
+G_{ij}.
+$$
+Hence $P_iQ_j=Q_jP_i$ for all $i,j$. Thus zero-error joint measurability of sharp observables implies commutativity. By Lemma 14.2a, complementary SPAP-descended observables do not commute, so the zero-error joint ledger is impossible.
 
-*Proof.* The irreversible entropy production $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) implies that the dynamical channel $\mathcal{E}_N$ implementing 'Evolve' cannot preserve perfect distinguishability between states (Lemma E.1). This strict contractivity ($f_{RID} < 1$) simultaneously:
-
-1. *Limits simultaneous information:* For non-commuting observables, any measurement instrument $\mathcal{M}$ that extracts information about $\hat{A}$ necessarily disturbs the state. This disturbance is unavoidable because measurement implements an ND-RID interaction with $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$. By the data processing inequality [Lindblad 1975], information about $\hat{B}$ in the post-measurement state is reduced. The total extractable information about both observables is bounded by the original entropy $H(\rho)$, with strict inequality when $[\hat{A},\hat{B}] \neq 0$ because no simultaneous eigenstate exists (Lemma 14.2a).
-
-2. *Limits sequential information:* The channel capacity $C(\mathcal{E}_N) = I_{seq}(\mathcal{E}_N)$ satisfies (Theorem E.2):
-
-$$C(\mathcal{E}_N) \leq \ln d_0 - D_{KL}(\mathcal{E}_N(\rho^*) \| \rho^*) < \ln d_0$$
-
-where $\rho^*$ is the capacity-achieving input and the strict inequality follows from $f_{RID} < 1$ because $\mathcal{E}_N$ is not information-preserving (not an isometry) [Wolf 2012]. Strong converse bounds further formalize the sharp threshold between reliable and unreliable rates [Winter 1999; König & Wehner 2009].
-
-Both limitations trace to the same physical fact: the ND-RID channel is strictly contractive because $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$. ∎
+For the sequential obstruction, Proposition E.2a gives the completed reset-support capacity deficit:
+$$
+C(\mathcal E_N)\le\ln d_0-\ln2.
+$$
+On the separate refresh/minorization branch, Lemma E.1 gives $f_{RID}<1$ and Theorem E.2 gives
+$$
+C(\mathcal E_N)<\ln d_0.
+$$
+Thus the simultaneous and sequential obstructions are both finite-response information limits, but they arise through different projections of SPAP: noncommuting sharp ledgers for simultaneous variables and reset-support capacity loss for sequential update. ∎
 
 #### Unified Dimensional Structure
 
@@ -813,7 +884,7 @@ Both descriptions emerge from the ND-RID channel structure. Coherent evolution c
 
 The derivation chain (Appendix E, Theorems E.1–E.3 and E.5):
 
-$$\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{E.1}} f_{RID} < 1 \xrightarrow{\text{E.2}} C_{\max} < \ln d_0 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{E.2a}} C_{\max}\le\ln d_0-\ln2 \xrightarrow{\text{E.3}} N_{eff} \propto \mathcal{A} \xrightarrow{\text{E.5}} S_{BH} = \frac{\mathcal{A}}{4G}$$
 
 shows that horizon entropy inherits the SPAP structure (in natural units $c = \hbar = k_B = 1$). Thermodynamic and quantum descriptions remain consistent because both derive from the same $\varepsilon_0=\ln2$ foundation. The Bekenstein-Hawking entropy is not analogous to thermodynamic entropy; it *is* thermodynamic entropy, counting the ND-RID channel degrees of freedom crossing the horizon (Theorem E.9.1).
 

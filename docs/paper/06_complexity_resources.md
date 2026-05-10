@@ -4,11 +4,11 @@ This section explores the crucial interplay between system complexity, achievabl
 
 ## 6.0 The Capacity Bound as Structural Constraint
 
-**Capacity branch note.** The strict ND-RID bound $C_{\max}<\ln d_0$ is theorem-level under the refresh/contractive channel hypotheses. Exact residual-budget equalities such as $C_{\max}^*=\ln d_0-\varepsilon=2\ln 2$ and ratios such as $C_{\max}^*/\varepsilon=2$ are used only on the residual-budget saturation branch specified in Appendices E/Q; they are not consequences of the capacity upper bound alone.
+**Capacity branch note.** The refresh/minorization branch gives the theorem-level strict ND-RID bound $C_{\max}<\ln d_0$ under Lemma E.1 and Theorem E.2. Independently, the completed SPAP reset of an $r$-dimensional register inside the $d_0$-dimensional MPU Hilbert space gives the structural reset-support bound $C_{\max}\le\ln d_0-\ln r$ by Proposition E.2a. For the binary SPAP reset $r=2$, this specializes to $C_{\max}\le\ln d_0-\ln2$. Exact residual-budget equalities such as $C_{\max}^*=\ln d_0-\varepsilon_0=2\ln 2$ on $d_0=8$ and ratios such as $C_{\max}^*/\varepsilon_0=2$ are saturations of the reset-support bound on the PCE residual-budget branch specified in Appendices E/Q; they are not consequences of the refresh strict-capacity upper bound alone.
 
 *Throughout this section, natural units $\hbar = c = k_B = 1$ are used unless otherwise noted.*
 
-A fundamental structural feature of the PU framework is that the ND-RID channel capacity bound $C_{\max} < \ln d_0$ (Theorem E.2) propagates through the derivation chain to constrain multiple physical domains. This bound arises from the irreversibility constraint $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), which implies strict contractivity $f_{RID} < 1$ (Lemma E.1), which in turn limits classical information capacity.
+A fundamental structural feature of the PU framework is that finite predictive transfer is bounded in two compatible ways. The completed SPAP reset of an $r$-dimensional register inside $\mathcal H_{d_0}$ imposes the structural reset-support bound $C_{\max}\le\ln d_0-\ln r$ (Proposition E.2a), specializing to $C_{\max}\le\ln d_0-\ln2$ for the binary SPAP reset $r=2$. The refresh/minorization branch independently gives the strict ND-RID channel bound $C_{\max}<\ln d_0$ (Theorem E.2). The first bound follows directly from the support loss required by a completed reset; the second follows when the averaged channel has the full-state refresh component of Lemma E.1, giving strict contractivity $f_{RID}<1$.
 
 ### 6.0.1 Capacity Manifestations Across Domains
 
@@ -16,7 +16,7 @@ A fundamental structural feature of the PU framework is that the ND-RID channel 
 
 | Domain | Capacity Role | Derived Relation | Reference |
 |:-------|:--------------|:-----------------|:----------|
-| Information channels | Upper bound on reliable transmission | $C_{\max}(f_{RID}) < \ln d_0$ | Theorem E.2 |
+| Information channels | Upper bound on reliable transmission | $C_{\max}\le\ln d_0-\ln r$ on the completed reset-support branch (specializing to $\ln d_0-\ln2$ for $r=2$); $C_{\max}(f_{RID}) < \ln d_0$ on the refresh/minorization branch | Proposition E.2a; Theorem E.2 |
 | Horizon entropy | Entropy per boundary channel | $S_{channel}^{max} \leq k_B C_{\max}$ | Corollary E.2 |
 | Gravitational constant | Inverse proportionality | $G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}}$ | Equation E.9 |
 
@@ -24,11 +24,15 @@ A fundamental structural feature of the PU framework is that the ND-RID channel 
 
 *Proof.*
 
-**Part A (Information Channels).** Theorem E.2 gives the strict inequality $C(\mathcal{E}_N)<\ln d_0$ via the flagged (erasure-mixture) argument. The key structural input is Lemma E.1: the averaged ND-RID channel contains a nonzero input-independent refresh component,
+**Part A (Information Channels).** Proposition E.2a gives the structural completed-cycle bound. If the SPAP cycle resets an $r$-dimensional register inside the $d_0$-dimensional MPU Hilbert space to a fixed ready state, then all outputs of one completed use lie in a support of dimension at most $d_0/r$. Because the channel acts componentwise on tensor factors, the $n$-use output support has dimension at most $(d_0/r)^n$ on every input ensemble (entangled or not), so the Holevo information per use is bounded by $\ln d_0-\ln r$. For the binary SPAP reset $r=2$,
+$$
+C(\mathcal{E}_N)\le \ln d_0-\ln2.
+$$
+On the independent refresh/minorization branch, Theorem E.2 gives the strict inequality $C(\mathcal{E}_N)<\ln d_0$ via the flagged erasure-mixture argument. The key additional input is Lemma E.1: the averaged ND-RID channel contains a nonzero input-independent full-state refresh component,
 $$
 \mathcal{E}_N=(1-p)\Psi+pT_\sigma,\qquad p>0,
 $$
-so a fraction $p$ of uses are effectively erased when the refresh triggers. Conditioning on the (conceptual) refresh flag yields the per-use bound
+so a fraction $p$ of uses are effectively erased when the refresh triggers. Conditioning on the conceptual refresh flag yields
 $$
 C(\mathcal{E}_N)\le (1-p)\ln d_0<\ln d_0.
 $$
@@ -46,11 +50,17 @@ G = \frac{\eta\delta^2 c^3}{4\hbar\chi C_{\max}(f_{RID})}
 $$
 The gravitational constant is inversely proportional to channel capacity: higher capacity implies weaker gravity. At the PCE-Attractor (Definition 15a), admissibility requires $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31), and response-null dissipative overhead is PCE-dominated. For the minimal MPU with $d_0=8$ (Theorem 23), the residual-budget branch uses the structural floor in Equation E.15, giving $C_{\max}^*=\ln d_0-\varepsilon_0=\ln 8-\ln 2=2\ln 2$, which determines $G$ in terms of the microscopic MPU parameters. ∎
 
-**Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by the single capacity bound $C_{\max} < \ln d_0$ arising from ND-RID contractivity.*
+**Principle 6.0 (Capacity Constraint Propagation).** *The physical constants and thermodynamic limits are mutually constrained by finite predictive-transfer capacity: the structural reset-support deficit $C_{\max}\le\ln d_0-\ln r$ on completed SPAP reset cycles (specializing to $\ln d_0-\ln2$ for the binary reset) and, on refresh/minorization branches, the strict contractive bound $C_{\max}<\ln d_0$.*
 
-**Remark 6.0.1: Origin of the Constraint.** The capacity bound traces to the irreversibility of self-referential prediction:
+**Remark 6.0.1: Origin of the Constraint.** The structural capacity deficit traces to the irreversibility of self-referential prediction:
 $$
-\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Lem E.1}} f_{RID} < 1 \xrightarrow{\text{Thm E.2}} C_{\max} < \ln d_0
+\text{SPAP (Thm 10)} \xrightarrow{\text{Thm 31}} \varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \xrightarrow{\text{Prop E.2a}} C_{\max}\le \ln d_0-\ln2.
+$$
+On the refresh/minorization branch this is accompanied by the stricter channel-dynamical route
+$$
+\mathcal{E}_N=(1-p)\Psi+pT_\sigma,\ p>0
+\xrightarrow{\text{Lem E.1}} f_{RID}<1
+\xrightarrow{\text{Thm E.2}} C_{\max}<\ln d_0.
 $$
 The logical structure of self-reference (SPAP) propagates through thermodynamics (Landauer cost) to information theory (channel capacity) to geometry (gravitational coupling).
 
@@ -163,21 +173,22 @@ where the function $F: \mathbb{R}_{\geq 0} \rightarrow [0, 1)$ satisfies:
 
 **6.3 Derivation of the Law of Prediction from POP / PCE**
 
-We now derive the explicit complexity–performance relationship—the *Law of Prediction*—from the scaling principles (Definition 19) together with a PCE composition constraint: allocating relative complexity in independent refinement stages compounds multiplicatively on the remaining performance gap. This "memoryless compounding" is the unique scale-free rule compatible with Definition 19 and with stagewise PCE optimization.
+We now derive the explicit complexity–performance relationship—the *Law of Prediction*—from the scaling principles (Definition 19). The multiplicative compounding of the remaining performance gap is not an additional axiom: it is the PPI/PCE schedule-quotient consequence of allocating relative complexity in independent refinement stages. Splitting a finite-response refinement budget into response-null schedule labels cannot change the final prediction ledger, and PCE removes any surplus schedule memory.
 
 **6.3.1 Theorem 19 (Law of Prediction — Exponential Saturation Model)**
 
-Assume Definition 19 and, in addition, the following stagewise PCE composition rule: if relative complexity is allocated in two independent refinement stages with normalized residual performance gap
+Assume Definition 19. Let a system adapt its operational complexity $C(t)=\langle\hat C_v\rangle(t) \ge C_{op}$ to meet the estimated task difficulty $\hat C_{\mathrm{target}}(t)$, and define the dimensionless relative complexity and normalized residual performance gap by
 $$
-g(x):=\frac{\beta-PP(C,\hat{C}_{target})}{\beta-\alpha},
-\qquad x:=\frac{C-C_{op}}{\hat C_{target}},
+x:=\frac{C-C_{op}}{\hat C_{target}},
+\qquad
+g(x):=\frac{\beta-PP(C,\hat{C}_{target})}{\beta-\alpha}.
 $$
-then the residual gap compounds multiplicatively,
+The PPI/PCE schedule quotient forces the residual gap to compound multiplicatively:
 $$
 g(x_1+x_2)=g(x_1)\,g(x_2)
 \qquad\text{for all }x_1,x_2\ge 0.
 $$
-Let a system adapt its operational complexity $C(t)=\langle\hat C_v\rangle(t) \ge C_{op}$ to meet the estimated task difficulty $\hat C_{\mathrm{target}}(t)$. For viability bounds $\alpha<PP<\beta$ (Definition 8), the achievable **Predictive Performance** is given by the following minimal model (consistent with the principles of Definition 19 and discussed in Section 6.7):
+For viability bounds $\alpha<PP<\beta$ (Definition 8), the achievable **Predictive Performance** is given by the following minimal model (consistent with the principles of Definition 19 and discussed in Section 6.7):
 $$
 PP(C,\hat C_{\mathrm{target}}) =\beta-(\beta-\alpha)\, \exp\!\Bigl[-\kappa_{\mathrm{eff}}\, \tfrac{C-C_{op}}{\hat C_{\mathrm{target}}}\Bigr] \quad \text{(22)}
 $$
@@ -187,19 +198,35 @@ C(PP,\hat C_{\mathrm{target}}) = C_{op} +\frac{\hat C_{\mathrm{target}}}{\kappa_
 $$
 Here $\kappa_{\mathrm{eff}}$ is a dimensionless efficiency constant. Equation (22) realizes the generic form Equation (21) with $F(x)=1-e^{-\kappa_{\mathrm{eff}}x}$, satisfying the required properties (Theorem 18) and exhibiting logarithmic divergence of $C$ as $PP\rightarrow\beta$.
 
-*Proof:* Define the dimensionless relative complexity
+*Proof:* By Definition 19, predictive performance depends on the invested complexity above baseline only through the dimensionless relative budget
 $$
 x:=\frac{C-C_{op}}{\hat{C}_{target}}\ge 0,
 $$
-and the normalized performance gap
+and the normalized residual gap
 $$
-g(x):=\frac{\beta-PP(C,\hat{C}_{target})}{\beta-\alpha}\in(0,1],\qquad g(0)=1.
+g(x):=\frac{\beta-PP(C,\hat{C}_{target})}{\beta-\alpha}
 $$
-By the stated composition hypothesis, independent refinement stages add in $x$ and multiply the residual gap:
+satisfies $g(0)=1$, $0<g(x)\le1$, and $g(x)\to0$ as $x\to\infty$. The differentiability required by the monotonicity and diminishing-return clauses of Definition 19 implies continuity.
+
+Let $R_x$ denote the finite-response operation of allocating relative refinement budget $x$ to the unresolved prediction ledger. The relative-complexity clause of Definition 19 says that $R_x$ has no response-relevant parameter other than $x$ and the current unresolved fraction. Thus applying $R_x$ to an unresolved fraction $u$ leaves the fraction $g(x)u$. If two independent refinement stages with budgets $x_1$ and $x_2$ are performed in sequence, their response ledger has total relative budget $x_1+x_2$. PPI identifies the sequential schedule and the unsplit schedule whenever they induce the same finite protocol-response data, and PCE removes any retained schedule label that changes no response and lowers no cost. Therefore
 $$
-g(x_1+x_2)=g(x_1)\,g(x_2)\qquad \text{for all }x_1,x_2\ge 0. \quad (\ast)
+R_{x_2}R_{x_1}=R_{x_1+x_2}
 $$
-Assuming $g$ is continuous, $(\ast)$ together with $g(0)=1$ implies $g(x)=e^{-\kappa_{\mathrm{eff}}x}$ for a unique constant $\kappa_{\mathrm{eff}}>0$. Substituting back yields Equation (22), and solving Equation (22) for $C$ yields Equation (23). ∎
+on the response quotient, and applying both sides to the unit unresolved fraction gives
+$$
+g(x_1+x_2)=g(x_1)g(x_2)
+\qquad \text{for all }x_1,x_2\ge0.
+\tag{*}
+$$
+Since $g(x)>0$, define $h(x):=\ln g(x)$. Equation (*) gives
+$$
+h(x_1+x_2)=h(x_1)+h(x_2).
+$$
+Continuity on $\mathbb R_{\ge0}$ implies $h(x)=-\kappa_{\mathrm{eff}}x$ for a constant $\kappa_{\mathrm{eff}}\ge0$. The strict monotonicity of $PP$ for $x>0$ makes $g$ strictly decreasing, so $\kappa_{\mathrm{eff}}>0$. Hence
+$$
+g(x)=e^{-\kappa_{\mathrm{eff}}x}.
+$$
+Substituting back yields Equation (22), and solving Equation (22) for $C$ yields Equation (23). ∎
 
 *Remark:* Equation (23) implies $(C-C_{op})\propto -\ln(\beta-PP)$ as $PP\to\beta$, consistent with logarithmic rate–distortion scaling when the operational prediction error is proportional to the performance gap.
 

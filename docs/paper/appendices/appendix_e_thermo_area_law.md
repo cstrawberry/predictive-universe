@@ -6,8 +6,8 @@ This Appendix provides a rigorous derivation of the fundamental information-theo
 
 The derivation proceeds logically:
 1.  Establish ND–RID irreversibility by lower-bounding minimal entropy production, linking it to the structural state-change quantum $\varepsilon_0=\ln2$ and the physical implementation bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ (Theorem 31, derived in Appendix J). (Section E.2: Theorem E.1, Corollary E.1)
-2.  Establish strict trace-distance contractivity ($f_{\mathrm{RID}} < 1$) of the average "Evolve" channel from the ND-RID refresh/minorization component required to close the SPAP cycle (and therefore associated with $\varepsilon_0>0$). (Section E.3: Lemma E.1)
-3.  Derive a strict bound ($C(\mathcal{E}_N) < \ln d_0$) on the channel's classical information capacity based on this contractivity. (Section E.4: Theorem E.2)
+2.  Establish the structural reset-support capacity deficit caused by the completed SPAP reset: resetting an $r$-dimensional register inside the $d_0$-dimensional MPU Hilbert space bounds the completed-cycle capacity by $C(\mathcal{E}_N)\le\ln d_0-\ln r$, hence by $\ln d_0-\ln2$ for the binary SPAP reset. (Section E.4: Proposition E.2a)
+3.  Establish strict trace-distance contractivity ($f_{\mathrm{RID}} < 1$) and the corresponding strict capacity bound ($C(\mathcal{E}_N)<\ln d_0$) on the separate refresh/minorization branch where the averaged channel contains a nonzero input-independent full-state refresh component. (Section E.3: Lemma E.1; Section E.4: Theorem E.2)
 4.  Establish the geometric scaling of effective independent boundary information channels, conditional on emergent geometric regularity (Theorem 43), incorporating correlation effects. (Section E.5: Theorem E.3)
 5.  Synthesize these results to derive the Horizon Entropy Area Law (Theorem 49 / Theorem E.6) and express it in the standard Bekenstein–Hawking normalization. (Section E.6)
 6.  Perform a structural consistency check linking the emergent Planck scale to microscopic MPU parameters. (Section E.7)
@@ -20,7 +20,7 @@ $$
 \qquad
 \varepsilon_{\mathrm{diss}}\ge0.
 $$
-Implementation overhead changes heat and power accounting but does not alter the structural residual channel budget $C_{\max}\le\ln d_0-\varepsilon_0$ unless it changes a finite protocol-response presheaf.
+Implementation overhead changes heat and power accounting but does not alter the structural residual channel budget $C_{\max}\le\ln d_0-\varepsilon_0$ unless it changes a finite protocol-response presheaf. Proposition E.2a supplies the completed-reset support proof of this structural budget.
 
 **E.2 Irreversibility and Thermodynamic Costs of Reflexive MPU Interactions**
 
@@ -44,7 +44,7 @@ provided the feedback state is supported on $\operatorname{supp}\mathcal{E}_{N}(
 
 **E.3 Strict Contractivity of the Average 'Evolve' Channel**
 
-The ND-RID refresh/minorization component that operationally implements thermodynamic irreversibility yields strict contractivity of the averaged Evolve channel.
+On the refresh/minorization branch, the averaged Evolve channel contains a nonzero input-independent full-state refresh component. This branch yields strict trace-distance contractivity. The completed SPAP reset by itself yields the reset-support capacity deficit of Proposition E.2a; it does not by itself require full-state trace-distance contraction on all of $\mathcal{H}_{d_0}$.
 
 
 **Lemma E.1 (Strict Contractivity of the Average "Evolve" Channel).**
@@ -59,7 +59,7 @@ $$
 T_\sigma(\rho):=\mathrm{Tr}(\rho)\,\sigma.
 \tag{E.2a}
 $$
-(Within PU, $T_\sigma$ is the coarse-grained representation of the SPAP-mandated refresh/reset needed to close the cycle; Theorem 31.)
+(Within PU, $T_\sigma$ is the full-state refresh/minorization branch of the SPAP cycle-closure reset. Theorem 31 supplies the irreducible reset cost; the full-state decomposition (E.2a) is the additional branch hypothesis used for strict trace-distance contraction.)
 
 Then:
 
@@ -175,14 +175,13 @@ Combining the three cases, each obstruction forbids a perfect free transfer, dup
 
 **E.4 Limited Information Capacity Across Boundaries due to ND–RID**
 
-Strict contractivity is ensured by the presence of a nonzero input-independent refresh component in the averaged ND-RID "Evolve" channel (Lemma E.1). Structural irreversibility ($\varepsilon_0=\ln2>0$) is the operational signature of this refresh/reset in PU (Theorem 31), while physical overhead only adds nonnegative dissipation; non-unitarity alone is not sufficient to guarantee strict trace-distance contraction. The resulting strict contraction is what enforces a strict bound on the information transmission capacity of MPU-MPU interaction channels below $\ln d_0$ (Theorem E.2).
+There are two capacity statements used in PU. First, the completed SPAP reset gives a structural support-loss bound: if an $r$-dimensional register inside $\mathcal{H}_{d_0}$ is reset to a fixed ready state, then the completed-cycle output support has dimension at most $d_0/r$, so the regularized classical capacity is bounded by $\ln d_0-\ln r$ (Proposition E.2a). For the binary SPAP reset, $r=2$.
 
-The average Evolve channel $\mathcal{E}_N$ is strictly contractive (Lemma E.1):
+Second, on the refresh/minorization branch, strict contractivity is ensured by the presence of a nonzero input-independent full-state refresh component in the averaged ND-RID "Evolve" channel (Lemma E.1). Physical overhead only adds nonnegative dissipation; non-unitarity alone is not sufficient to guarantee strict trace-distance contraction. On this branch the average Evolve channel $\mathcal{E}_N$ satisfies
 $$
 f_{\mathrm{RID}}\bigl(\mathcal{E}_N\bigr)<1 ,
 $$
-a consequence of the nonzero refresh component associated with $\varepsilon_0=\ln2$.
-That contractivity forces the channel’s classical capacity to be strictly below the ideal $\ln d_0$ for a $d_0$-dimensional system.
+and the corresponding flagged-mixture argument enforces a strict capacity bound below $\ln d_0$ (Theorem E.2).
 
 **E.4.1 Definitions for Channel Capacity**
 
@@ -209,8 +208,8 @@ To formalize this, we use standard definitions from quantum information theory (
     It is always true that $\chi^{\ast}(\Phi)\le C(\Phi)\le\ln d_0$. For the PU framework, we are interested in the true information transmission rate $C(\mathcal{E}_N)$. The following theorem establishes that this rate is strictly less than the ideal maximum if the channel is contractive.
 
 
-**Theorem E.2 (Fundamental Strict Bound on ND–RID Channel Capacity).**
-Let $\mathcal{E}_N$ be the average 'Evolve' channel associated with an ND–RID process, acting on the $d_0$-dimensional MPU Hilbert space $\mathcal{H}_{d_0}$. Assume the averaged Evolve channel $\mathcal{E}_N$ contains a nonzero input-independent refresh component in the sense of Lemma E.1 (i.e., $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$). Then the classical Shannon capacity $C(\mathcal{E}_N)$ is strictly bounded below the ideal capacity:
+**Theorem E.2 (Fundamental Strict Bound on ND–RID Channel Capacity on the Refresh Branch).**
+Let $\mathcal{E}_N$ be the average 'Evolve' channel associated with an ND–RID process, acting on the $d_0$-dimensional MPU Hilbert space $\mathcal{H}_{d_0}$. Assume the averaged Evolve channel $\mathcal{E}_N$ contains a nonzero input-independent full-state refresh component in the sense of Lemma E.1 (i.e., $\mathcal{E}_N=(1-p)\Psi+pT_\sigma$ with $p>0$). Then the classical Shannon capacity $C(\mathcal{E}_N)$ is strictly bounded below the ideal capacity:
 $$
 C(\mathcal{E}_N) < \ln d_0
 \tag{E.3}
@@ -253,6 +252,107 @@ $$
 Thus $C(\mathcal{E}_N)<\ln d_0$. QED
 
 
+**Proposition E.2a (Reset-Support Capacity Deficit for a Completed SPAP Cycle).**
+Let the completed SPAP reset branch of an MPU cycle act on a factorization
+$$
+\mathcal H_{d_0}=\mathcal H_K\otimes\mathcal H_R,
+\qquad
+\dim\mathcal H_R=r\ge2,
+\qquad
+\dim\mathcal H_K=d_0/r,
+$$
+where the reset register $\mathcal H_R$ is returned to a fixed ready state $|0\rangle_R$. Let the completed channel have the form
+$$
+\Phi(\rho)
+=
+\operatorname{Tr}_R(U\rho U^\dagger)\otimes |0\rangle\langle0|_R
+$$
+for some unitary $U$ on $\mathcal H_{d_0}$. Then the regularized classical capacity of $\Phi$ satisfies
+$$
+C(\Phi)\le \ln d_0-\ln r.
+\tag{E.2a-cap}
+$$
+For the binary SPAP reset, $r=2$, hence
+$$
+C(\Phi)\le \ln d_0-\ln2.
+\tag{E.2a-bin}
+$$
+On the minimal MPU branch $d_0=8$,
+$$
+C(\Phi)\le 2\ln2.
+\tag{E.2a-min}
+$$
+
+*Proof.* The range of $\Phi$ is contained in the subspace
+$$
+\mathcal H_K\otimes\operatorname{span}\{|0\rangle_R\},
+$$
+whose dimension is $d_0/r$. Therefore, for any ensemble $\{p_m,\rho_m\}$, the average output state and all individual output states have support contained in a Hilbert space of dimension at most $d_0/r$. The one-shot Holevo information obeys
+$$
+\chi(\{p_m,\Phi(\rho_m)\})
+=
+S\!\left(\sum_m p_m\Phi(\rho_m)\right)
+-
+\sum_m p_m S(\Phi(\rho_m))
+\le
+S\!\left(\sum_m p_m\Phi(\rho_m)\right)
+\le
+\ln(d_0/r).
+$$
+For $n$ uses of the channel on any input ensemble $\{p_m,\rho_m^{(n)}\}$ on $\mathcal H_{d_0}^{\otimes n}$, possibly entangled across uses, the output of $\Phi^{\otimes n}$ obeys
+$$
+\Phi^{\otimes n}\bigl(\rho^{(n)}\bigr)
+\in
+\operatorname{span}\!\left\{
+\Phi(\sigma_1)\otimes\cdots\otimes\Phi(\sigma_n)
+:\sigma_i\in\mathcal S(\mathcal H_{d_0})
+\right\}
+\subseteq
+\bigl(\mathcal H_K\otimes\operatorname{span}\{|0\rangle_R\}\bigr)^{\otimes n}
+$$
+because $\Phi^{\otimes n}$ acts componentwise on the tensor factors of any input, regardless of input correlations across the $n$ copies. Hence the output support of $\Phi^{\otimes n}$ on every input has dimension at most $(d_0/r)^n$, and
+$$
+\chi^*(\Phi^{\otimes n})\le \ln\left((d_0/r)^n\right)
+=
+n(\ln d_0-\ln r).
+$$
+Dividing by $n$ and taking the regularized HSW limit [Holevo 1998; Schumacher–Westmoreland 1997] gives
+$$
+C(\Phi)=\lim_{n\to\infty}\frac1n\chi^*(\Phi^{\otimes n})
+\le
+\ln d_0-\ln r.
+$$
+The binary SPAP reset has $r=2$, giving (E.2a-bin), and the minimal MPU branch has $d_0=8$, giving (E.2a-min). ∎
+
+**Remark E.2a.1 (Scope of the reset-support bound).**
+Proposition E.2a is a support-dimension theorem. It does not assert strict trace-distance contraction on all of $\mathcal H_{d_0}$. Full-state strict contraction is the separate refresh/minorization branch of Lemma E.1. The PCE residual-budget equality
+$$
+C_{\max}^*=\ln d_0-\varepsilon_0
+$$
+is the saturation of the reset-support bound when the reset is binary, $\varepsilon_0=\ln2$, and no additional response-relevant overhead is retained.
+
+**Remark E.2a.2 (Substrate independence as a support-dimension condition).**
+Proposition E.2a is best read as a support-dimension theorem: the conclusion follows from the weaker condition
+$$
+\operatorname{supp}\Phi(\rho)\subseteq \mathcal H_K\otimes\operatorname{span}\{|0\rangle_R\}
+\qquad\text{for every input }\rho,
+$$
+since the HSW argument needs only the dimension of the output support, not the explicit unitary normal form. Any PPI-admissible completed binary SPAP cycle that returns one binary degree of freedom to a fixed ready state — including general physical reset implementations involving environment/Stinespring auxiliaries — produces output supports contained in the displayed kept-register-times-ready-state subspace once the response quotient is taken: response-null environment factors are removed by PPI, and any retained environment label that changes no finite protocol response is excluded by PCE. The explicit factored form $\Phi(\rho)=\operatorname{Tr}_R(U\rho U^\dagger)\otimes|0\rangle\langle0|_R$ is one canonical representative satisfying this support condition; the proof of (E.2a-cap) goes through for any channel meeting the support condition, regardless of its specific Stinespring dilation. Hence Proposition E.2a applies to every PPI-admissible completed binary SPAP branch, not only to channels in the displayed unitary normal form.
+
+**Remark E.2a.3 (Branch attribution for downstream uses).**
+Two structurally distinct finite-transfer routes are now available, and downstream theorems use one or the other depending on what they need.
+
+| Downstream result | Branch used | What it needs |
+|:---|:---|:---|
+| Area-law coefficient (Thm E.6) and emergent $G$ (Eq E.9) | Reset-support (Prop E.2a) | Quantitative capacity bound; saturation gives $C_{\max}^*=2\ln2$ on $d_0=8$ |
+| Bekenstein-Hawking $S_{BH}=\mathcal A/4G$ identification | Reset-support (Prop E.2a) | Same |
+| Strict capacity inequality $C(\mathcal E_N)<\ln d_0$ (Thm E.2) | Refresh/minorization (Lem E.1) | Strict, possibly non-quantitative bound |
+| Mixing/primitivity, unique full-rank fixed point (Sanz et al. 2010) | Refresh/minorization (Lem E.1) | Strict trace-distance contraction $f_{RID}<1$ |
+| Data-processing contraction $f_{RID}<1$ (Thm N.10, App C, App K transport) | Refresh/minorization (Lem E.1) | Strict trace-distance contraction across multiple cycles |
+| Born-rule / GNS / PCE non-contextuality | Independent of branch | Algebraic, does not invoke either capacity route |
+
+When a downstream argument needs a quantitative residual-budget number, it lives on the reset-support branch. When it needs strict trace-distance contraction or fixed-point uniqueness, it lives on the refresh/minorization branch. Results derivable from either branch are labeled at point of use.
+
 
 **Corollary E.2 (Maximum Entropy per ND–RID Channel).** The maximum thermodynamic entropy $S_{channel}^{max}$ (in units of $k_B$), associated with the information degrees of freedom reliably transmitted by a single ND–RID channel across a boundary, is bounded by the channel capacity:
 $$
@@ -265,8 +365,8 @@ $$
 
 The derivation of the Area Law requires understanding how the number of effective independent information channels crossing a boundary scales with the boundary's area in the emergent regular spacetime. This scaling is a consequence of the geometric regularity established by Theorem 43.
 
-**Theorem E.3 (Boundary Channel Density from Geometric Regularity).**
-Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43), consider the MPU network $\mathcal{N}$ whose emergent geometry is described by a D=4 dimensional manifold $(M, g_{\mu\nu})$ satisfying uniform volume growth and bounded Ricci curvature. Let $\mathcal{H} \subset M$ be a smooth, compact, 2-dimensional boundary surface (e.g., a cross-section of a causal horizon) with area $\mathcal{A} = \text{Area}(\mathcal{H})$. The total number of effective independent information channels $N_{eff_links}$ crossing this boundary $\mathcal{H}$ (representing the fundamental pathways for reliable information transfer via ND–RID interactions) scales linearly with its area $\mathcal{A}$ in the macroscopic limit ($\mathcal{A} \gg \delta^{2}$, where $\delta$ is the mean microscopic MPU spacing):
+**Theorem E.3 (Boundary Channel Density from Geometric Regularity and Density Certificate).**
+Conditional on the Necessary Emergence of Geometric Regularity (Theorem 43), consider the MPU network $\mathcal{N}$ whose emergent geometry is described by a D=4 dimensional manifold $(M, g_{\mu\nu})$ satisfying uniform volume growth and bounded Ricci curvature. Let $\mathcal{H} \subset M$ be a smooth, compact, 2-dimensional boundary surface (e.g., a cross-section of a causal horizon) with area $\mathcal{A} = \text{Area}(\mathcal{H})$. Geometric regularity gives the deterministic upper bound of Lemma E.5.1. On the density-certificate branch where the macroscopic transversality/orientation factor $\eta$ and independence factor $\chi$ exist, the total number of effective independent information channels $N_{eff_links}$ crossing this boundary $\mathcal{H}$ has the asymptotic area density
 $$
 N_{eff_links} = \sigma_{eff_link}\;\mathcal A\;+\;o(\mathcal A)
 \tag{E.5}
@@ -280,10 +380,33 @@ so $\eta\ge 1$ and the mean surface area per potential link is $\eta \delta^2$. 
 
 *   Let $\chi$ be a dimensionless independence factor ($0 < \chi \le 1$) defined so that the effective independent-link count satisfies $N_{eff_links}=\chi N_{geom_links}$. Thus $\chi=1$ corresponds to statistically independent boundary links and $\chi<1$ quantifies the reduction in effective independent channels due to cross-link correlations. The effective density is then $\sigma_{eff_link}=\chi/(\eta\delta^2)$; the equilibrium values are fixed in Appendix Q.
 
-*Proof.* Geometric regularity (Theorem 43) ensures that on scales larger than the MPU spacing $\delta$, the network locally resembles a smooth D-dimensional manifold (here D=4). For a 2-dimensional surface $\mathcal{H}$ embedded in this manifold, the number of fundamental units (MPUs or links between them) piercing this surface is expected to scale with the area of the surface divided by the characteristic area occupied by one such unit or link.
-1.  **Geometric Link Density:** If MPUs are arranged with an average spacing $\delta$, the number of MPUs per unit volume is $\sim 1/\delta^3$ (in 3D space). For a 2D surface, the number of links crossing it per unit area, $\sigma_{geom_link}$, would be proportional to $1/\delta^2$. The factor $\eta$ accounts for geometric details of packing and orientation relative to the surface (e.g., for a simple cubic lattice with spacing $\delta$, a surface normal to one axis would be pierced by $1/\delta^2$ links per unit area, so $\eta=1$).
-2.  **Reduction due to Correlations:** If the MPUs or their interaction channels are correlated, not all geometric links represent independent information channels. The factor $\chi$ accounts for this effective reduction in degrees of freedom. For example, if blocks of $1/\chi$ geometric links are strongly correlated such that they effectively act as a single information channel, then the density of *independent* channels is reduced by $\chi$.
-3.  **Linear Scaling:** Combining these, the density of effective independent channels is $\sigma_{eff_link} = \chi \sigma_{geom_link} = \chi / (\eta \delta^2)$. Since geometric regularity implies this density is uniform on average over macroscopic scales, integrating over the area $\mathcal{A}$ gives $N_{eff_links} = \sigma_{eff_link} \cdot \mathcal{A}$ as the leading term for large $\mathcal{A}$. Higher-order corrections $o(\mathcal{A})$ (e.g., boundary effects proportional to perimeter) become negligible for $\mathcal{A} \gg \delta^2$. QED
+*Proof.* Lemma E.5.1 gives the theorem-level upper bound
+$$
+N_{\partial A}\le c_+\frac{\mathcal A}{\delta^2}
+$$
+under geometric regularity, bounded degree, finite edge range, and quasi-uniform upper density. The density-certificate branch adds the macroscopic transversality datum that the geometric boundary-link count has an asymptotic density
+$$
+N_{geom\_links}
+=
+\frac{\mathcal A}{\eta\delta^2}+o(\mathcal A),
+\qquad
+\eta\ge1.
+$$
+The independence factor $\chi$ is defined by the finite-response quotient of correlated boundary links:
+$$
+N_{eff\_links}=\chi N_{geom\_links}+o(\mathcal A),
+\qquad
+0<\chi\le1.
+$$
+Substituting the density certificate gives
+$$
+N_{eff\_links}
+=
+\frac{\chi}{\eta\delta^2}\mathcal A+o(\mathcal A)
+=
+\sigma_{eff\_link}\mathcal A+o(\mathcal A).
+$$
+The $o(\mathcal A)$ term is negligible in the macroscopic limit $\mathcal A\gg\delta^2$. ∎
 
 
 ### E.5.1 Geometric Bounds on Boundary-Crossing Link Count (Upper bound unconditional; lower bound requires an extra hypothesis)
@@ -439,7 +562,8 @@ $$
 S_{max}(\mathcal{H})
 =
 k_B\left(\frac{\chi\,C_{max}(f_{RID})}{\eta\,\delta^2}\right)\mathcal{A}
-\quad\text{(equivalently, in natural units $k_B=1$)}.
++o(\mathcal A)
+\quad\text{(equivalently, in natural units $k_B=1$)}
 \tag{E.6b}
 $$
 Define the effective Newton coupling $G$ **operationally** by
@@ -547,13 +671,19 @@ The definition (E.6c) packages this operational density into the standard normal
 We synthesize the limit on entropy per channel (Corollary E.2) with the geometric scaling of the number of *effective independent* channels (Theorem E.3) to derive the Area Law (Theorem 49).
 
 **Theorem E.6 (Thermodynamic Boundary Area Law and Emergent $G_{\rm eff}$).**
-Conditional on emergent geometric regularity (Theorem 43) and the resulting linear scaling of effective boundary channels with area (Theorem E.3, Lemma E.5.1), the maximum thermodynamic entropy $S_{max}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal{H}$ with area $\mathcal{A}$ scales linearly with the area. The coefficient is determined by the per-channel ND–RID capacity bound and the effective channel density; writing it in the standard normalization defines $G$ as in Theorem E.5:
+Conditional on emergent geometric regularity (Theorem 43), Lemma E.5.1 gives the theorem-level upper bound
 $$
-S_{max}(\mathcal{A}) = N_{eff_links} \cdot S_{channel}^{max} = (\sigma_{eff_link} \mathcal{A}) \cdot (k_B C_{\max}(f_{RID}))
+S_{max}(\mathcal A)\le k_B C_{\max}(f_{RID})\,c_+\frac{\mathcal A}{\delta^2}.
+$$
+On the density-certificate branch of Theorem E.3, the maximum thermodynamic entropy $S_{max}$ associated with the MPU degrees of freedom constituting or crossing a causal horizon $\mathcal{H}$ with area $\mathcal{A}$ has an asymptotic area law. The coefficient is determined by the per-channel ND–RID capacity bound and the effective channel density; writing it in the standard normalization defines $G$ as in Theorem E.5:
+$$
+S_{max}(\mathcal{A}) = N_{eff_links} \cdot S_{channel}^{max}
+=
+(\sigma_{eff_link}\mathcal A+o(\mathcal A))\cdot k_B C_{\max}(f_{RID}).
 $$
 Substituting $\sigma_{eff_link} = \chi / (\eta \delta^2)$:
 $$
-S_{max}(\mathcal{A}) = k_B \left(\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}
+S_{max}(\mathcal{A}) = k_B \left(\frac{\chi C_{\max}(f_{RID})}{\eta \delta^2}\right) \mathcal{A}+o(\mathcal A).
 \tag{E.6}
 $$
 Restoring constants and defining the effective Planck area by $L_P^2:=G\hbar/c^3$, the operational definition (E.6c) is equivalently
@@ -573,10 +703,10 @@ G = \frac{\eta \delta^2 c^3}{4 \hbar \chi C_{\max}(f_{RID})}
 $$
 *Proof.*
 1.  **Total Maximum Entropy:** The total entropy is the sum over effective independent channels, $S_{max} = N_{eff_links} \cdot S_{channel}^{max}$, assuming each channel operates at its maximum capacity for reliable information transfer.
-2.  **Substitution of Components:** From Theorem E.3, $N_{eff_links} = (\chi / (\eta \delta^2)) \mathcal{A}$. From Corollary E.2, $S_{channel}^{max} = k_B C_{\max}(f_{RID})$. Substituting these into the expression for $S_{max}$ directly yields Equation (E.6).
+2.  **Substitution of Components:** From Theorem E.3 on the density-certificate branch, $N_{eff_links} = (\chi / (\eta \delta^2)) \mathcal{A}+o(\mathcal A)$. From Corollary E.2, $S_{channel}^{max} = k_B C_{\max}(f_{RID})$. Substituting these into the expression for $S_{max}$ directly yields Equation (E.6).
 3.  **Standard normalization / calibration:** Writing the operational entropy density in the standard form $S_{max}=k_B\mathcal{A}/(4G)$ defines $G$ via Equation (E.6c). Restoring constants and defining $L_P^2:=G\hbar/c^3$ gives Equation (E.7). Equating this operationally defined $G$ with the experimentally measured Newton constant is a calibration step (not a derivation); it fixes the microscopic parameter combination $\chi C_{\max}/(\eta\delta^2)$ in terms of the observed Planck area.
 4.  **Emergent G:** Equation (E.6c) is the internal PU definition of the effective coupling that appears in the Einstein equations obtained from the Clausius relation in Section 12. Identifying this $G$ with the experimentally measured Newton constant is a calibration step external to this proof; the downstream derivations require only that horizon entropy is proportional to area with a constant entropy density.
-5.  **Interpretation:** The Horizon Entropy Area Law emerges as a direct consequence of: (a) the fundamental limit on information capacity per ND–RID channel ($C_{\max} < \ln d_0$, Theorem E.2), which itself stems from the irreversibility cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31); and (b) the geometric fact that the number of such independent channels crossing a boundary scales with the boundary's area (Theorem E.3, conditional on emergent regularity). The constant of proportionality, which defines the Planck scale and thus $G$, is thereby fixed by the microscopic parameters of the MPU network ($\delta, \eta, \chi, C_{\max}$). 
+5.  **Interpretation:** The Horizon Entropy Area Law emerges as a direct consequence of: (a) finite capacity per ND–RID channel, supplied structurally by the reset-support bound $C_{\max}\le\ln d_0-\ln2$ (Proposition E.2a) and, on refresh/minorization branches, by the strict bound $C_{\max}<\ln d_0$ (Theorem E.2); and (b) the geometric/density-certificate fact that the number of independent effective channels crossing a boundary has asymptotic density $\chi/(\eta\delta^2)$ (Theorem E.3). The constant of proportionality, which defines the Planck scale and thus $G$, is thereby fixed by the microscopic parameters of the MPU network ($\delta, \eta, \chi, C_{\max}$). 
 
 ### E.6.6 Explicit Derivation of the Bekenstein-Hawking Coefficient $1/4$
 
@@ -736,49 +866,91 @@ The statement above corrects the operator-mapping direction: for an encoding cha
 
 ### E.8.2 Reconstruction Without AdS
 
-**Theorem E.8.2 (Channel-Capacity Holography).** The bulk reconstruction map exists for any geometry satisfying:
-1. Geometric regularity (Theorem 43)
-2. Area-law entropy scaling (Theorem 49)
-3. ND-RID channel structure (Definition 27)
+**Theorem E.8.2 (Capacity-Compatible Non-AdS Boundary Reconstruction Gate).** Let a bounded regular region satisfy:
+1. geometric regularity (Theorem 43);
+2. area-law entropy scaling on the density-certificate and saturation branch (Theorem 49);
+3. finite ND-RID channel capacity supplied by Proposition E.2a and, where needed, the refresh/minorization branch of Theorem E.2.
 
-The capacity-counting part of the PU holography mechanism is geometric and does not rely on AdS boundary conditions. Existence of consistent nested encodings $\Phi$ across shells is an additional structural hypothesis about the ND–RID dynamics; when it holds, the reconstruction argument is compatible with general (non-AdS) bounded-geometry settings.
+Then the capacity-counting part of the PU holography mechanism is local and does not rely on AdS boundary conditions. On the density-certificate branch of Theorem E.3, a boundary cut of area $\mathcal A$ has effective channel count
+$$
+N_{\mathrm{channels}}=\sigma_{\mathrm{eff}}\mathcal A+o(\mathcal A),
+\qquad
+\sigma_{\mathrm{eff}}=\frac{\chi}{\eta\delta^2},
+$$
+and per-channel capacity $C_{\max}$. Any exact retained bulk code of Hilbert dimension $d_{\mathrm{code}}$ reconstructible through that cut must satisfy the budget gate
+$$
+\ln d_{\mathrm{code}}\le N_{\mathrm{channels}}C_{\max}=\sigma_{\mathrm{eff}}C_{\max}\mathcal A+o(\mathcal A).
+\tag{E.8.2a}
+$$
+Conversely, if a compatible boundary encoding channel and recovery family are supplied on the nested ND-RID branch and satisfy the Petz-sufficiency condition of Definition E.8.1b, then every retained bulk response is reconstructible from boundary protocol responses by Theorem E.8.1c. Thus capacity is the necessary finite-response budget, while reconstruction is theorem-level only on the compatible encoding/recovery branch.
 
 *Proof.*
 
 **Step 1 (Local reconstruction).** For any point $p$ in the bulk, consider a small ball $B_\epsilon(p)$ of radius $\epsilon$. The boundary $\partial B_\epsilon$ has area $\mathcal{A} = 4\pi\epsilon^2$ (in the locally flat approximation valid for $\epsilon \ll R_{\text{curv}}$) and hosts $N = \sigma_{\text{eff}} \cdot \mathcal{A} \sim \epsilon^2/(\eta\delta^2)$ effective channels.
 
-**Step 2 (Encoding capacity).** The total channel capacity is:
+**Step 2 (Encoding capacity).** The total boundary budget is
+$$
+C_{\text{total}}
+=
+N C_{\max}
+=
+\frac{\chi C_{\max}}{\eta\delta^2}\,4\pi\epsilon^2+o(\epsilon^2).
+$$
+On the reset-support saturation branch,
+$$
+C_{\max}=C_{\max}^*=2\ln2,
+$$
+and on the Appendix Q packing branch,
+$$
+\delta^2/L_P^2=8\ln2.
+$$
+With $\chi=\eta=1$ at PCE equilibrium,
+$$
+C_{\text{total}}
+=
+\frac{2\ln2}{8\ln2\,L_P^2}\,4\pi\epsilon^2+o(\epsilon^2)
+=
+\frac{\pi\epsilon^2}{L_P^2}+o(\epsilon^2).
+$$
+The maximum bulk entropy from the area law is
+$$
+S_{\max}=\frac{\mathcal A}{4L_P^2}
+=
+\frac{\pi\epsilon^2}{L_P^2}.
+$$
+Thus the channel budget matches the entropy bound at leading order. This proves capacity compatibility. Exact reconstruction further requires the compatible encoding/recovery branch recorded in Definition E.8.1b and Theorem E.8.1c.
 
-$$C_{\text{total}} = N \cdot C_{\max}(f_{\text{RID}}) = \frac{\chi \cdot C_{\max}(f_{\text{RID}})}{\eta \delta^2} \cdot 4\pi\epsilon^2$$
+**Step 3 (Nested reconstruction branch).** For a larger region $A$, decompose into nested shells:
+$$
+A=\bigcup_{n=0}^{\lfloor R/\epsilon\rfloor}\mathrm{Shell}_n,
+$$
+where $\mathrm{Shell}_n$ is the annulus between radii $n\epsilon$ and $(n+1)\epsilon$.
 
-Using $C_{\max}(f_{\text{RID}}) = \ln(d_0) - \varepsilon = 2\ln 2$ (Equation E.15) and $\delta^2/L_P^2 = 8\ln 2$ (Appendix Q, Equation Q.18) with $\chi = \eta = 1$ at PCE equilibrium:
+Capacity compatibility on each shell is necessary for a nested reconstruction. If, in addition, the branch supplies compatible shell encodings $\Phi_n$ and recovery maps $\mathcal R_n$ satisfying the finite Petz-sufficiency condition of Definition E.8.1b on overlaps, then Theorem E.8.1c reconstructs each shell's retained response ledger from its boundary ledger. Iterating the compatible maps reconstructs the retained bulk response quotient. Without this encoding/recovery certificate, capacity counting alone does not assert existence of a canonical reconstruction map.
 
-$$C_{\text{total}} = \frac{2\ln 2}{8\ln 2 \cdot L_P^2} \cdot 4\pi\epsilon^2 = \frac{\pi\epsilon^2}{L_P^2}$$
+**Step 4 (Independence from global geometry).** The capacity gate uses only local properties:
+- local channel density $\sigma_{\mathrm{eff}}$ from the density-certificate branch of Theorem E.3;
+- local finite capacity $C_{\max}$ from Proposition E.2a, with refresh-branch strict capacity available from Theorem E.2 when strict contraction is needed;
+- local entropy density from the area law (Theorem 49).
 
-The maximum bulk entropy from the area law is $S_{\max} = \mathcal{A}/(4L_P^2) = \pi\epsilon^2/L_P^2$. Thus $C_{\text{total}} = S_{\max}$: the channel capacity exactly saturates the entropy bound, enabling reconstruction at the holographic limit for $\epsilon \gg L_P$.
-
-**Step 3 (Nested reconstruction).** For a larger region $A$, decompose into nested shells:
-
-$$A = \bigcup_{n=0}^{\lfloor R/\epsilon \rfloor} \text{Shell}_n$$
-
-where $\text{Shell}_n$ is the annulus between radii $n\epsilon$ and $(n+1)\epsilon$.
-
-Each shell's interior can be reconstructed from its boundary via Step 1. Iterating from the outermost shell inward, with error bounded by the capacity surplus at each step, reconstructs the entire bulk.
-
-**Step 4 (Independence from global geometry).** The reconstruction uses only local properties:
-- Local channel density $\sigma_{\text{eff}}$ (from geometric regularity, Theorem 43)
-- Local capacity bound $C_{\max}(f_{\text{RID}})$ (from ND-RID structure, Theorem E.2)
-- Local entropy bound (from area law, Theorem 49)
-
-No global geometric assumptions (asymptotic flatness, negative cosmological constant, conformal boundary) enter the construction. ∎
+No global geometric assumptions such as asymptotic flatness, negative cosmological constant, or conformal boundary enter the capacity gate. Exact reconstruction additionally requires the compatible nested encoding/recovery certificate stated above. ∎
 
 *Remark: Distinction from AdS/CFT.* The holography established here differs fundamentally from AdS/CFT correspondence [Maldacena 1999]. AdS/CFT posits a duality between quantum gravity in anti-de Sitter space and conformal field theory on its boundary, with bulk reconstruction proceeding via the Ryu-Takayanagi formula [Ryu & Takayanagi 2006] and entanglement wedge reconstruction [Dong et al. 2016]. The present construction requires neither AdS geometry nor conformal field theory; it follows solely from ND-RID channel capacity limits and geometric regularity. The two approaches may be complementary descriptions in contexts where both apply.
 
-**Corollary E.8.1 (Emergent Holography).** Holography is not an additional principle but a consequence of the derivation chain:
+**Corollary E.8.1 (Emergent Finite-Response Holography).** Holography is not an additional principle but a branch consequence of the derivation chain:
+$$
+\text{ND-RID channels}
++
+\text{geometric regularity}
++
+\text{finite capacity}
+\Rightarrow
+\text{area-law boundary budget}
+\Rightarrow
+\text{boundary reconstruction on Petz-sufficient nested encoding branches}.
+$$
 
-$$\text{ND-RID channels} + \text{Geometric regularity} + \text{Finite capacity} \Rightarrow \text{Area law} \Rightarrow \text{Bulk reconstruction}$$
-
-The bulk contains no independent information beyond what is encoded in boundary channels. Volume is an emergent description of nested boundary structures.
+The retained bulk response quotient contains no independent exterior-measurable information beyond what is encoded in the boundary response presheaves on the reconstruction branch. Volume remains an emergent nested-boundary description at finite operational resolution; labels that change no retained boundary or exterior protocol response are response-null surplus by PPI/PCE.
 
 **Corollary E.8.1a (Boundary Response-Quotient Holography).** Let $A$ be a bounded regular region covered by the hypotheses of Theorem E.8.2. Let $\rho,\rho'$ be two bulk code states whose boundary protocol-response presheaves agree on every retained finite boundary protocol over every nested reconstruction cut:
 $$
@@ -935,27 +1107,27 @@ Together with monotonicity under $\Phi$, this forces equality and hence (E.8.1f.
 
 Conversely, assume (E.8.1f.2). On a finite faithful algebra, equality in the data-processing inequality for relative entropy is the Petz sufficiency condition: the adjoint modular relation implied by equality is represented by the recovery channel (E.8.1f.3), and this channel recovers both the tested state and the reference state. This gives (E.8.1f.4). The final statement is a direct restatement of (E.8.1e.1): the only quantity measured by $\Delta_\Phi^\sigma$ is the relative-entropy distinguishability removed by $\Phi$ and not restored by the exact Petz inverse. ∎
 
-**Corollary E.8.2 (Resolution Limit).** Bulk reconstruction has resolution limit $\sim L_P$. Finer structure cannot be encoded because:
-- Channel spacing is $\delta = \sqrt{8\ln 2} \cdot L_P \approx 2.355 \cdot L_P$ (Appendix Q, Equation Q.18)
-- Each channel carries finite capacity $C_{\max}(f_{\text{RID}}) = 2\ln 2$ nats (Equation E.15)
-- Sub-Planckian features would require encoding $> C_{\max}$ bits per channel
+**Corollary E.8.2 (Resolution Limit).** On the Appendix Q packing and reset-support saturation branch, bulk reconstruction has resolution limit of order $L_P$. Finer structure is not retained as independent finite-response content because:
+- channel spacing is $\delta=\sqrt{8\ln2}\,L_P$;
+- each completed binary reset-support channel carries at most $C_{\max}^*=2\ln2$ nats on the minimal $d_0=8$ branch;
+- attempting to distinguish sub-$\delta$ structure inside a fixed boundary channel requires more distinguishable alternatives than the channel budget permits.
 
-This provides an information-theoretic derivation of the Planck-scale resolution limit, independent of gravitational arguments.
+This gives an information-theoretic Planck-scale resolution gate. It is independent of a microscopic graviton postulate and depends only on the finite-response channel budget and packing branch.
 
 ## E.8.3 Holographic Saturation as PCE Attractor
 
 ### E.8.3.1 Introduction
 
-The preceding sections established that the entropy associated with a causal boundary is bounded by the Bekenstein-Hawking area law $S \leq \mathcal{A}/4G$ (Theorem 49), derived from the finite channel capacity $C_{\max} < \ln d_0$ of ND-RID interactions (Theorem E.2). This section demonstrates a stronger result: the Principle of Compression Efficiency (PCE, Definition 15) does not merely permit boundary-area scaling of entropy but *dynamically selects* it as the unique stable equilibrium. We prove that PCE dynamics drive the system toward holographic saturation, establishing $S = \mathcal{A}/4G$ as an attractor of the PCE potential landscape.
+The preceding sections established that the entropy associated with a causal boundary is bounded by the Bekenstein-Hawking area law $S\le\mathcal A/4G$ on the geometric-regularity, density-certificate, reset-support, and calibration branches (Theorem 49). The quantitative channel budget is supplied by Proposition E.2a, with $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ residual-budget saturation branch; refresh/minorization branches supply additional strict contractivity when required. This section demonstrates a stronger result: the Principle of Compression Efficiency (PCE, Definition 15) does not merely permit boundary-area scaling of entropy but dynamically selects it as the unique stable equilibrium on the holographic-attractor branch. We prove that PCE dynamics drive the system toward holographic saturation, establishing $S=\mathcal A/4G$ as an attractor of the PCE potential landscape on that branch.
 
 The progression from bounds to attractor completes the logical arc of the thermodynamic derivations:
 
 | Item | Result | Status |
 |------|--------|--------|
 | Theorem 31 | $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (irreversibility) | Bound |
-| Lemma E.1 | $f_{RID} < 1$ (contractivity) | Bound |
-| Theorem E.2 | $C_{\max} < \ln d_0$ (capacity limit) | Bound |
-| Theorem E.6 / Theorem 49 | $S \leq \mathcal{A}/4G$ (area law) | Bound |
+| Proposition E.2a | $C_{\max}\le\ln d_0-\ln2$ on completed binary reset branch | Quantitative capacity bound |
+| Theorem E.2 | $C_{\max}<\ln d_0$ on refresh/minorization branch | Strict capacity bound |
+| Theorem E.6 / Theorem 49 | $S\le\mathcal A/4G$ on density-certificate/calibration branch | Bound |
 | **Theorem E.8.3.4** | $S \to \mathcal{A}/4G$ (saturation) | **Attractor** |
 
 ### E.8.3.2 Bulk vs. Boundary Information Storage
@@ -975,10 +1147,10 @@ Before analyzing bulk versus boundary encoding costs, we derive the retrieval co
 **Lemma E.8.3.1 (Retrieval Cost Coefficient from $V_{prop}$).**
 The cost coefficient for retrieving information at depth $r$ from the boundary, denoted $\gamma_{ret}$, is determined by the propagation cost structure $V_{prop}$ (Definition D.1) and the fundamental ND-RID parameters:
 $$
-\gamma_{ret} = \frac{\varepsilon}{\delta \cdot C_{\max}}
+\gamma_{ret}=\frac{\varepsilon}{\delta C_{\max}}.
 \tag{E.8.3a}
 $$
-where $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ is the minimum entropy cost per ND-RID interaction (Theorem 31), $\delta$ is the mean MPU spacing, and $C_{\max} < \ln d_0$ is the channel capacity (Theorem E.2).
+Here $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ is the minimum entropy cost per completed ND-RID/SPAP interaction (Theorem 31), $\delta$ is the mean MPU spacing, and $C_{\max}$ is the retained per-channel information budget. Quantitatively, $C_{\max}$ is bounded by Proposition E.2a on the reset-support branch and equals $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ PCE residual-budget saturation branch.
 
 *Proof.*
 
@@ -1001,11 +1173,19 @@ V_{prop}^{(retrieval)}(r) = n \cdot \Phi_{min} = \frac{r}{\delta} \cdot \varepsi
 \tag{E.8.3c}
 $$
 
-**Step 4 (Per-Bit Cost Coefficient).** Each link has capacity $C_{\max}$ nats (Theorem E.2), so transmitting one nat of information incurs entropy cost $\varepsilon/C_{\max}$ per link (Theorem 31). For a path of $n = r/\delta$ links to depth $r$, the cost per nat is $(r/\delta) \cdot (\varepsilon/C_{\max})$. The cost per nat of accessible information per unit retrieval depth is:
+**Step 4 (Per-Nat Cost Coefficient).** Each completed link carries at most $C_{\max}$ nats of retained information. Transmitting one nat of accessible information through one completed link therefore has entropy cost at least $\varepsilon/C_{\max}$. For a path of $n=r/\delta$ links to depth $r$, the cost per nat is
 $$
-\gamma_{ret} = \frac{(r/\delta) \cdot (\varepsilon/C_{\max})}{r} = \frac{\varepsilon}{\delta \cdot C_{\max}}
+\frac r\delta\frac{\varepsilon}{C_{\max}}.
 $$
-This has dimensions $[1/\text{length}]$ in natural units. $\square$
+The cost per nat of accessible information per unit retrieval depth is therefore
+$$
+\gamma_{ret}
+=
+\frac{(r/\delta)(\varepsilon/C_{\max})}{r}
+=
+\frac{\varepsilon}{\delta C_{\max}}.
+$$
+This has dimensions $[1/\mathrm{length}]$ in natural units. ∎
 
 **Corollary E.8.3.1 (Numerical Estimate).**
 Using $\varepsilon_0=\ln2$, $C_{\max} = 2\ln 2$ (Equation E.15), and $\delta = \sqrt{8\ln 2} \cdot L_P$ (Appendix Q, Equation Q.18):
@@ -1022,30 +1202,32 @@ For a region $\mathcal{R}$ with characteristic linear dimension $L$ (so $\mathca
 
 **Step 1 (Retrieval Cost Structure).** Consider an external observer (or subsystem at the boundary) that must access information stored in the bulk. Accessing information at average depth $\bar{r} \sim L$ from the boundary requires propagating queries and responses across $\sim L/\delta$ MPU links.
 
-**Step 2 (Channel Fidelity Decay).** Each ND-RID interaction along the retrieval path incurs the contractivity factor $f_{RID} < 1$ (Lemma E.1). For a path of $n = L/\delta$ steps, the effective fidelity of information retrieval decays exponentially:
+**Step 2 (Path-Length Cost from Completed Updates).** The excess-cost result does not require full-state trace-distance contraction. Each completed ND-RID/SPAP link used for retrieval has entropy cost at least $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$ and retained information budget at most $C_{\max}$. By Lemma E.8.3.1, retrieving one nat of accessible information from depth $r$ costs at least
 $$
-f_{eff}(L) = f_{RID}^{L/\delta}
+\gamma_{ret}r
+=
+\frac{\varepsilon}{\delta C_{\max}}r.
 \tag{E.8.3d}
 $$
-Since $f_{RID} < 1$ strictly (guaranteed by $\varepsilon > 0$, Lemma E.1), this decays exponentially with depth.
 
-**Step 3 (Compensation Cost).** To maintain reliable access to bulk-stored information despite this exponential degradation, the system must implement error correction. In fault-tolerant schemes, achieving a target logical fidelity requires resources that grow at most logarithmically with the inverse logical error rate; modeling the minimal correction overhead as logarithmic in the inverse effective fidelity yields:
+**Step 3 (Bulk Average Depth).** For information distributed through a region of characteristic size $L$, the mean distance to the boundary is $\bar r=\Theta(L)$ for any bulk distribution with nonzero volume density away from the boundary. Therefore the mean retrieval cost per nat for bulk encoding obeys
 $$
-\text{Overhead} = O\left(\log\frac{1}{f_{eff}}\right) = O\left(\frac{L}{\delta} \cdot \log\frac{1}{f_{RID}}\right)
+\langle \Delta S_{access}\rangle_{bulk}
+\ge
+\gamma_{ret}\bar r
+=
+\Theta\!\left(\frac{\varepsilon}{\delta C_{\max}}L\right).
 \tag{E.8.3e}
 $$
-This confirms that the compensation cost scales linearly with $L/\delta$ [Nielsen & Chuang 2010; Preskill 1998b].
 
-**Step 4 (Thermodynamic Cost from $V_{prop}$).** From Lemma E.8.3.1, accessing bulk information at depth $r$ produces entropy:
+**Step 4 (Boundary Depth).** For boundary encoding, retained information is localized within an $O(\delta)$ boundary layer, so the mean retrieval depth is $O(\delta)$ and the retrieval cost per nat is
 $$
-\Delta S_{access}(r) \geq \frac{r}{\delta} \cdot \varepsilon \geq \frac{r}{\delta} \cdot \ln 2
+\langle \Delta S_{access}\rangle_{boundary}
+=
+O\!\left(\frac{\varepsilon}{C_{\max}}\right).
 \tag{E.8.3f}
 $$
-Averaged over bulk-distributed information (with mean depth $\bar{r} \sim L/2$):
-$$
-\langle \Delta S_{access} \rangle_{bulk} \sim \frac{L}{2\delta} \cdot \varepsilon
-\tag{E.8.3g}
-$$
+The per-nat ratio of bulk to boundary retrieval cost scales as $\Theta(L/\delta)$. The corresponding total-cost ratio is stronger: a bulk distribution carries $\Theta(L^D/\delta^D)$ retained nats over a region of volume $L^D$, while a boundary distribution carries $\Theta(L^{D-1}/\delta^{D-1})$ retained nats over a layer of thickness $O(\delta)$. Multiplying retained-nat counts by the per-nat costs gives total bulk cost $\Theta(\varepsilon L^{D+1}/\delta^{D+1}C_{\max})$ versus total boundary cost $\Theta(\varepsilon L^{D-1}/\delta^{D-1}C_{\max})$, so the total bulk-to-boundary ratio scales as $\Theta(L^2/\delta^2)$. PCE selection on the total cost therefore amplifies the per-nat ratio by an extra $L/\delta$ factor and is what drives the holographic attractor in the macroscopic limit. On refresh/minorization branches, strict contractivity adds an independent fidelity-decay penalty, but the linear excess-cost theorem already follows from completed-update entropy and finite reset-support capacity.
 
 **Step 5 (Operational Cost Rate).** The operational cost rate $V_{op}$ (Definition D.1) includes the complexity cost of maintaining accessible information. Using the retrieval cost coefficient $\gamma_{ret}$ derived in Lemma E.8.3.1, for bulk encoding:
 $$
@@ -2128,7 +2310,21 @@ The structural SPAP entropy cost $\varepsilon_0=\ln2$ (Theorem 31) and the close
 
 **Branch I (Reduced Causal Capacity Characterization):**
 
-$$\varepsilon_0=\ln2 \xrightarrow[\text{Lem E.1}]{} f_{\text{RID}} < 1 \xrightarrow[\text{Thm E.2}]{} C_{\max} < \ln d_0 \xrightarrow[\text{Thm E.3}]{} \text{finite boundary capacity} \xrightarrow[\text{Thm E.6}]{} S_{BH} = \frac{\mathcal{A}}{4G}$$
+$$
+\varepsilon_0=\ln2
+\xrightarrow[\text{Prop E.2a}]{}
+C_{\max}\le\ln d_0-\ln2
+\xrightarrow[\text{Thm E.3}]{}
+\text{finite boundary capacity}
+\xrightarrow[\text{Thm E.6}]{}
+S_{BH}=\frac{\mathcal A}{4G}.
+$$
+
+On refresh/minorization subbranches, Lemma E.1 and Theorem E.2 add the strict reduced-channel route
+$$
+f_{RID}<1\to C_{\max}<\ln d_0,
+$$
+which supplies contraction and mixing statements but is not the quantitative source of the residual-budget value $C_{\max}^*=2\ln2$.
 
 **Branch II (Closed Global Unitarity):**
 
@@ -2141,11 +2337,20 @@ The same SPAP structure that generates the reduced-channel capacity bound also s
 *Proof.* The derivation chains are verified by tracing the logical dependencies:
 
 **Branch I:**
-1. SPAP (Theorem 10) → irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J)
-2. $\varepsilon > 0$ + nonzero SPAP refresh component → strict contraction $f_{\text{RID}}<1$ at each step (Lemma E.1)
-3. $f_{\text{RID}} < 1$ → bounded capacity $C_{\max} < \ln d_0$ (Theorem E.2)
-4. Bounded capacity + geometric regularity (Theorem 43) → finite boundary information $S_{\max} \propto \mathcal{A}$ (Theorem E.3)
-5. Thermodynamic consistency → $S_{BH} = \mathcal{A}/(4G)$ (Theorem E.6)
+1. SPAP (Theorem 10) gives the irreducible entropy cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, Appendix J).
+2. The completed binary reset branch gives the support-dimension capacity deficit
+   $$
+   C_{\max}\le\ln d_0-\ln2
+   $$
+   by Proposition E.2a.
+3. On the minimal $d_0=8$ PCE residual-budget saturation branch, this gives
+   $$
+   C_{\max}^*=2\ln2.
+   $$
+4. Finite capacity plus geometric regularity and the density-certificate branch of Theorem E.3 gives finite boundary information $S_{\max}\propto\mathcal A$.
+5. Thermodynamic consistency gives $S_{BH}=\mathcal A/(4G)$ (Theorem E.6).
+
+On refresh/minorization subbranches, the additional full-state refresh component gives $f_{RID}<1$ and the strict capacity inequality $C_{\max}<\ln d_0$ by Lemma E.1 and Theorem E.2. That strict-contraction route is used for mixing, fixed-point, and reduced-channel contraction statements; the reset-support route is used for quantitative residual-budget channel counting.
 
 **Branch II:**
 1. Closed system (Hypothesis 1) → Stinespring environment internal to network (Assumption E.9.5.1)
@@ -2397,9 +2602,17 @@ The arrow of time (Appendix O, Theorem O.3) emerges not from fundamental non-uni
 
 The parallel derivation structure:
 
-$$\text{SPAP} \xrightarrow[\text{Thm 31}]{\varepsilon_0=\ln 2,\ \varepsilon_{\mathrm{phys}}\ge\varepsilon_0} \begin{cases} \text{Branch I:} & f_{\text{RID}} < 1 \to C_{\max} < \ln d_0 \to S_{BH} = \mathcal{A}/(4G) \\ \text{Branch II:} & U_{AB} \text{ unitary} \to \text{global unitarity (internally closed)} \end{cases}$$
+$$
+\text{SPAP}
+\xrightarrow[\text{Thm 31}]{\varepsilon_0=\ln2,\ \varepsilon_{\mathrm{phys}}\ge\varepsilon_0}
+\begin{cases}
+\text{Branch I:} & C_{\max}\le\ln d_0-\ln2 \to S_{BH}=\mathcal A/(4G) \\
+\text{Branch I-ref:} & f_{RID}<1\to C_{\max}<\ln d_0 \\
+\text{Branch II:} & U_{AB}\text{ unitary}\to\text{global unitarity (internally closed)}
+\end{cases}
+$$
 
-demonstrates that the causal capacity bounds (Branch I) and global unitarity (Branch II) are complementary consequences of a single constraint: the thermodynamic cost of self-referential prediction.
+demonstrates that the causal capacity bounds, refresh-branch contraction, and global unitarity are complementary level-distinct consequences of a single source: the thermodynamic cost of self-referential prediction.
 
 **Remark E.9.5.5: Role of Closed-System Assumption.** The derivation of global unitarity (Theorem E.9.5) critically depends on Hypothesis 1. Without this assumption, the Stinespring environment for reduced dynamics could include external degrees of freedom, and global evolution could in principle be non-unitary. Within the PU framework, Hypothesis 1 is a foundational postulate asserting that the MPU network constitutes internally complete physical reality—no information leaks to degrees of freedom accessible by internal systems (consistent with the observation channel architecture of Appendix P.5). This transforms unitarity from a postulate into a theorem.
 

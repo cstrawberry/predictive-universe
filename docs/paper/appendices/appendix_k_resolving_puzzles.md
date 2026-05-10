@@ -640,7 +640,7 @@ with $C_{\max} < \ln d_0$ (Theorem E.2) and $\sigma_{eff\_link} = \chi/(\eta\del
 *Proof.* Each of $N_{eff\_links}(S)$ independent channels has capacity at most $C_{\max}$ per use. Each channel operates at most once per $\tau_{min}$. The bound follows from Theorems E.2 and E.3.
 
 **Lemma K.5.2 (Curvature-Sensitivity Bound).**
-For CPTP transport $\mathcal{E}_\gamma$ with ND-RID contraction factor $f_{RID} < 1$ over $n(\gamma)$ cycles:
+For CPTP transport $\mathcal{E}_\gamma$ on the refresh/minorization branch with ND-RID contraction factor $f_{RID} < 1$ over $n(\gamma)$ cycles:
 $$D_{tr}(\mathcal{E}_\gamma(\rho_1), \mathcal{E}_\gamma(\rho_2)) \leq f_{RID}^{n(\gamma)} D_{tr}(\rho_1, \rho_2)$$
 Curvature-dependent unitary holonomy preserves trace distance; only the dissipative component contracts.
 
@@ -2108,7 +2108,11 @@ $$
 
 (iii) The UV completion is not a conventional theory of quantized gravitons at high energy but the discrete MPU dynamics from which the metric emerges. What would be identified as gravitons in a perturbative treatment are collective excitations of the MPU network geometry.
 
-**Theorem K.10.12 (Unified Origin of UV Finiteness and Gravity on the Gravity-Bridge Package).** The channel capacity bound $C_{\max} < \ln d_0$ supplies the finite boundary-information ingredient. On the gravity-bridge package — comprising (a) horizon saturation, (b) the local Rindler/KMS modular branch of Appendix F, (c) the Clausius relation $\delta Q = T \, dS$ at local Rindler horizons, and (d) the MPU stress-energy source construction of Appendix B (Theorems B.3, B.8b, on the momentum-flux closure and admissible coarse-graining branches) — this ingredient simultaneously:
+**Theorem K.10.12 (Unified Origin of UV Finiteness and Gravity on the Gravity-Bridge Package).** The finite boundary-information ingredient is supplied quantitatively by the completed reset-support capacity bound
+$$
+C_{\max}\le\ln d_0-\ln2
+$$
+(Proposition E.2a), with $C_{\max}^*=2\ln2$ on the minimal $d_0=8$ residual-budget branch, and strictly on refresh/minorization branches by $C_{\max}<\ln d_0$ (Theorem E.2). On the gravity-bridge package — comprising (a) horizon saturation, (b) the local Rindler/KMS modular branch of Appendix F, (c) the Clausius relation $\delta Q=T\,dS$ at local Rindler horizons, and (d) the MPU stress-energy source construction of Appendix B (Theorems B.3, B.8b, on the momentum-flux closure and admissible coarse-graining branches) — this ingredient simultaneously:
 
 (i) Excludes UV divergences by limiting information extractable from sub-MPU scales (Theorem K.10.4).
 
@@ -2118,7 +2122,7 @@ $$
 
 *Proof.* All three follow from finite channel capacity:
 
-(i) Modes with $k > \Lambda_{\text{MPU}}$ require infinite channel uses to resolve. They are operationally inaccessible.
+(i) Modes with $k>\Lambda_{\mathrm{MPU}}$ require distinctions below the MPU resolution scale $\delta$. On a fixed finite boundary or finite protocol domain, the number of distinguishable alternatives needed to resolve such modes grows beyond the finite-response channel budget of Proposition E.2a and Theorem K.10.3a. They are therefore operationally inaccessible as independent physical observables.
 
 (ii) The effective link density $\sigma_{\text{eff}} = \chi/(\eta\delta^2)$ and capacity $C_{\max}$ yield boundary entropy $S = \sigma_{\text{eff}} \cdot C_{\max} \cdot A = A/(4G)$ (Theorem E.3, Theorem E.5).
 
@@ -2156,11 +2160,11 @@ This computational rate bound applies universally: at black hole horizons (Theor
 
 The equivalence established in Theorem Q.0.15—linking Bekenstein-Hawking entropy, Landauer dissipation, horizon area, and gravitational coupling—extends to UV physics: renormalization succeeds because it respects the same information bounds that exclude singularities.
 
-**Summary.** Within the Predictive Universe framework, renormalization extracts operational predictions from continuum approximations that, if extrapolated literally, would describe operationally inaccessible physics. The framework's finite channel capacity ($C_{\max} < \ln d_0$), discrete substrate ($\delta = \sqrt{8\ln 2} \cdot L_P$), and divergent complexity costs (Theorem 14) guarantee that UV divergences are extrapolation artifacts. The same bounds that exclude curvature singularities (Theorem K.5.4) exclude ultraviolet divergences (Theorem K.10.4).
+**Summary.** Within the Predictive Universe framework, renormalization extracts operational predictions from continuum approximations that, if extrapolated literally, would describe operationally inaccessible physics. The framework's finite reset-support channel budget (Proposition E.2a), discrete substrate spacing $\delta=\sqrt{8\ln2}\,L_P$ on the Appendix Q packing branch, and divergent complexity costs (Theorem 14) guarantee that UV divergences are extrapolation artifacts rather than retained finite-response observables. The same operational mechanism that excludes physically meaningful curvature singularities (Theorem K.5.4) excludes ultraviolet divergences as physical observables (Theorem K.10.4).
 
 The non-renormalizability of perturbative quantum gravity receives a definitive explanation: gravity is not a quantum field theory in the conventional sense. The metric $g_{\mu\nu}$ is a collective variable encoding MPU network geometry, and Einstein's equations emerge from thermodynamic consistency at causal boundaries (Theorem K.10.10). Attempting to quantize this emergent structure produces infinities that correctly signal operational mismatch (Corollary K.10.11).
 
-UV finiteness and emergent gravity are unified: both arise from the finite information-processing capacity $C_{\max} < \ln d_0$ of the MPU network together with the gravity-bridge package (horizon saturation; local Rindler/KMS branch of Appendix F; Clausius relation $\delta Q = T \, dS$; MPU stress-energy source construction of Appendix B), as stated in Theorem K.10.12. The cutoff at $\Lambda_{\text{MPU}}$ is not an external regularization but the scale at which the discrete substrate—from which gravity itself emerges—becomes directly relevant.
+UV finiteness and emergent gravity are unified: both arise from the finite reset-support information capacity of the MPU network together with the gravity-bridge package (horizon saturation; local Rindler/KMS branch of Appendix F; Clausius relation $\delta Q=T\,dS$; MPU stress-energy source construction of Appendix B), as stated in Theorem K.10.12. The cutoff at $\Lambda_{\mathrm{MPU}}$ is not an external regularization but the scale at which the discrete substrate—from which gravity itself emerges—becomes directly relevant.
 
 ---
 

@@ -235,9 +235,26 @@ d_{\mathcal{N}, max}(L)\propto L^{d_{min}}.
 $$
 This proves the stated super-linear worst-case scaling for that class of irregular families. ∎
 
-**Theorem C.2 (Quantitative Viability Failure due to Anomalous Dimension).** MPU networks $\mathcal{N}_{irreg}$ exhibiting anomalous dimension, leading to super-linear maximum path scaling $d_{\mathcal{N}, max}(L) \propto L^{\gamma}$ with $\gamma > 1$ (Theorem C.1(b)), necessarily violate the core PU framework requirements (GC: Global Coherence, RE: Resource Efficiency) for sufficiently large system size $L$, rendering them non-viable.
+**Theorem C.2 (Quantitative Penalty from Super-Linear Chemical Distance).** Let an MPU network family exhibit super-linear maximum path scaling
+$$
+d_{\mathcal N,\max}(L)\ge c_{\max}'L^\gamma,
+\qquad
+\gamma>1,
+$$
+as in Theorem C.1(b). Then:
 
-* **(i) Violation of Global Coherence (GC):** Coherent propagation of predictive information across a macroscopic scale $L$ requires transmission along network paths. Let $MP_{Global}(L)$ be a measure of predictive coherence maintained after signal transmission across scale $L$. This transmission occurs along network paths, with the maximum cost distance being $d_{\mathcal{N}, max}(L)$. Each ND-RID step in the path acts as a noisy channel, characterized by strict contractivity $f_{RID} < 1$ (Lemma E.1). The number of effective steps is $N_{steps} \approx d_{\mathcal{N}, max}(L) / \delta_{eff}$. Signal fidelity, measured for instance by the trace distance $D$ relative to an ideal transmission, decays exponentially with the number of steps: $D(N_{steps}) \le D_0 \cdot (f_{RID})^{N_{steps}}$ (assuming effectively independent errors per step, justified by rapid mixing due to contractivity). Using the scaling from Theorem C.1(b), $d_{\mathcal{N}, max}(L) \approx c_{max}' L^\gamma$. We define the coherence measure $MP_{Global}(L)$ based on this worst-case fidelity:
+1. On refresh/minorization branches with per-step trace-distance contraction $0\le f_{RID}<1$, bare-path coherence along worst-case paths falls below any fixed threshold $MP_{min}>0$ at a finite scale.
+
+2. Independently of strict contraction, finite processing time gives a super-linear worst-case latency
+$$
+\tau_{\max}(L)\ge \tau_{\min}\,c_{\max}'L^\gamma/\delta_{eff}.
+$$
+
+3. If the global-coherence branch requires macroscopic synchronization or refresh over a window growing at most linearly in $L$, or if the resource-efficiency branch requires average/effective communication cost to remain extensive in volume, then such a super-linear family violates GC or RE for sufficiently large $L$.
+
+Thus anomalous chemical-distance families are excluded as PCE-selected large-scale substrates on the stated GC/RE branches; the theorem-level content is the explicit super-linear penalty, while the non-viability conclusion uses the named finite-window or extensive-budget branch condition.
+
+* **(i) Violation of Global Coherence (GC):** Coherent propagation of predictive information across a macroscopic scale $L$ requires transmission along network paths. Let $MP_{Global}(L)$ be a measure of predictive coherence maintained after signal transmission across scale $L$. This transmission occurs along network paths, with the maximum cost distance being $d_{\mathcal{N}, max}(L)$. Each ND-RID step in the path acts as a noisy finite-transfer channel. On refresh/minorization branches it is characterized by strict contractivity $f_{RID} < 1$ (Lemma E.1); on the completed reset branch it is characterized by the reset-support capacity deficit of Proposition E.2a. The number of effective steps is $N_{steps} \approx d_{\mathcal{N}, max}(L) / \delta_{eff}$. Signal fidelity, measured for instance by the trace distance $D$ relative to an ideal transmission, decays exponentially with the number of steps: $D(N_{steps}) \le D_0 \cdot (f_{RID})^{N_{steps}}$ (assuming effectively independent errors per step, justified by rapid mixing due to contractivity). Using the scaling from Theorem C.1(b), $d_{\mathcal{N}, max}(L) \approx c_{max}' L^\gamma$. We define the coherence measure $MP_{Global}(L)$ based on this worst-case fidelity:
     $$
     MP_{Global}(L) \equiv D(N_{steps}) \le D_0 \cdot (f_{RID})^{\frac{c_{max}' L^\gamma}{\delta_{eff}}} = D_0 \exp\left(-\frac{c_{max}' |\ln f_{RID}|}{\delta_{eff}} L^\gamma\right)
     \tag{C.13}
@@ -248,11 +265,63 @@ This proves the stated super-linear worst-case scaling for that class of irregul
     \tag{C.14}
     $$
     The finiteness of $L_{crit}^{(GC)}$ for $\gamma > 1$ guarantees that anomalous dimension leads to a breakdown of global predictive coherence (violation of GC) in large enough systems. This decay in coherence translates to a reduction in the $V_{benefit}(x)$ term of the PCE Potential (Definition D.1), penalizing such configurations.
-* **(ii) Violation of Resource Efficiency (RE):** The Principle of Compression Efficiency (PCE, Definition 15) requires minimizing resource costs, represented in the PCE Potential $V(x)$ (Definition D.1) which includes a propagation cost term $V_{prop}$. $V_{prop}$ accounts for the resources needed to maintain communication infrastructure and transmit information across the network. In a network of size $N$ (number of MPUs), the total available resource budget $V_{max}$ is expected to scale extensively, $V_{max} \propto N$. For a D-dimensional regular network, $N \propto L^D$. If the network has anomalous dimension such that the *average* path distance scales super-linearly, $\langle d_{\mathcal{N}}(L) \rangle \propto L^{\beta}$ with $\beta > 1$, the total integrated path length needed for global communication might scale as $N \times \langle d_{\mathcal{N}}(L) \rangle \propto L^D \cdot L^{\beta} = L^{D+\beta}$. Since $\beta > 1$, this total cost $V_{prop}$ scales super-extensively ($V_{prop} \propto L^{D+\beta}$ where $D+\beta > D$). Even if the average path length scales linearly ($\beta=1$), the super-linear scaling of maximum paths ($\gamma>1$) often implies higher average costs per link or higher costs for robust routing, leading to $V_{prop}$ growing faster than $L^D$. A super-extensive cost $V_{prop}$ will inevitably exceed an extensive budget $V_{max}$ for sufficiently large $L$; this represents an unsustainable increase in the $V_{prop}(x)$ component of the PCE Potential (Definition D.1). Thus, anomalous dimension leads to unsustainable propagation costs, violating resource efficiency (RE).
+* **(ii) Resource-Efficiency Gate (RE).** The Principle of Compression Efficiency (PCE, Definition 15) minimizes resource costs, represented in the PCE Potential $V(x)$ (Definition D.1), including a propagation cost term $V_{prop}$. The theorem-level statement is the following conditional scaling gate. Suppose the branch requires a positive fraction of the $N(L)\asymp L^D$ MPUs to exchange retained predictive information over paths whose average or effective routing length satisfies
+$$
+\langle d_{\mathcal N}(L)\rangle_{\mathrm{eff}}\ge c_{\mathrm{eff}}L^\beta,
+\qquad
+\beta>1.
+$$
+Then any propagation cost with a positive per-link lower bound $w_{\min}>0$ obeys
+$$
+V_{prop}(L)
+\ge
+w_{\min} N(L)\langle d_{\mathcal N}(L)\rangle_{\mathrm{eff}}
+\ge
+c\,L^{D+\beta}
+$$
+for some $c>0$. If the admissible extensive resource budget scales as
+$$
+V_{\max}(L)\le C L^D,
+$$
+then
+$$
+\frac{V_{prop}(L)}{V_{\max}(L)}
+\ge
+\frac cC L^\beta
+\to\infty.
+$$
+Hence RE fails at sufficiently large $L$ on the extensive-budget branch. If only the maximum distance is super-linear while the effective average remains linear because the branch avoids long-distance communication, this RE conclusion does not follow from maximum distance alone; the GC latency/coherence gate in part (i) remains the applicable exclusion mechanism.
 
 *Proof:*
-* **(i)** The proof follows from the standard properties of signal decay under repeated application of a strictly contractive map ($f_{RID}<1$) over a path whose length $N_{steps}$ scales super-linearly with the system's Euclidean size $L$. The exponential decay combined with the super-linear exponent $L^\gamma$ guarantees that coherence falls below any fixed threshold $MP_{min}$ at a finite size $L_{crit}^{(GC)}$, derived explicitly in Equation (C.14).
-* **(ii)** The proof compares the scaling of the necessary communication cost $V_{prop}$ with the scaling of the available resource budget $V_{max}$. Super-linear scaling of average or effective path lengths leads to $V_{prop}$ growing faster than $N \propto L^D$, while resources $V_{max}$ are expected to scale as $N$. The inequality $V_{prop} > V_{max}$ must eventually hold for large $L$ if $V_{prop}$ scales super-extensively, demonstrating a violation of resource efficiency demanded by PCE. QED
+* **(i)** On the refresh/minorization branch, repeated application of a strictly contractive channel over a path of
+$$
+N_{steps}(L)\ge c_{\max}'L^\gamma/\delta_{eff}
+$$
+steps gives
+$$
+D(N_{steps})
+\le
+D_0 f_{RID}^{N_{steps}}
+\le
+D_0\exp\!\left(
+-\frac{c_{\max}'|\ln f_{RID}|}{\delta_{eff}}L^\gamma
+\right).
+$$
+For any $MP_{min}>0$, solving $D(N_{steps})=MP_{min}$ gives the finite critical scale already recorded in (C.14). The latency statement is independent of contraction: every completed update requires at least $\tau_{\min}$, so
+$$
+\tau_{\max}(L)
+\ge
+\tau_{\min}N_{steps}(L)
+\ge
+\tau_{\min}c_{\max}'L^\gamma/\delta_{eff}.
+$$
+For any synchronization or refresh window $\tau_{\mathrm{sync}}(L)$ scaling at most polynomially in $L$ with exponent strictly less than $\gamma$, the super-linear latency exceeds $\tau_{\mathrm{sync}}(L)$ at sufficiently large $L$ regardless of which sub-$\gamma$ exponent the GC branch supplies.
+
+* **(ii)** The displayed lower bound gives
+$$
+V_{prop}(L)\ge cL^{D+\beta}.
+$$
+The extensive-budget branch gives $V_{\max}(L)\le CL^D$. Since $\beta>1$, the ratio $V_{prop}(L)/V_{\max}(L)$ diverges, so RE fails for all sufficiently large $L$. No claim is made from worst-case distance alone to average-cost failure unless the branch supplies the effective-average lower bound. ∎
 
 ## C.5 Penalization of Unbounded Curvature Fluctuations
 

@@ -21,26 +21,46 @@ Thus Postulate 2 forbids deterministic FTL channels and, in the finite-window tr
 
 To ensure compliance with Postulate 2, the maximum possible strength of the CC effect must be constrained.
 
-**10.2.1 Theorem 39 (Endpoint Bound on CC ($\alpha_{CC,max}<0.5$))**
+**10.2.1 Theorem 39 (Endpoint Gate for the Bounded-Bias CC Branch)**
 
-The deterministic endpoint part of Postulate 2 is satisfied if the maximum operational Consciousness Complexity $\alpha_{CC,max}=\sup_S \mathrm{CC}(S)$ (**Definition 30**) is strictly bounded so that no binary coarse-grained outcome can be forced to both deterministic endpoints by context choice. A sufficient universal bound on the operational norm is:
+Let $\alpha_{CC,max}:=\sup_S\mathrm{CC}(S)$ on the CC branch under consideration. If
 $$
-\alpha_{CC,max} < 0.5 \quad \text{(61)}
+\alpha_{CC,max}<0.5,
+\tag{61}
 $$
-*Proof:* Deterministic FTL signaling with a fixed local measurement at $S_B$ would require $S_A$ (Alice) to encode at least two distinguishable messages by choosing between two contexts that yield two *deterministic* and *distinct* outcome distributions at $S_B$ (Bob). For any POVM, coarse-grain to a binary partition $\{E_i,\ I-E_i\}$; let the baseline Born probability for outcome $i$ be $p_i=P_{Born}(i)\in(0,1)$.
-1.  **Deterministic endpoints:** Encoding two deterministic messages with this binary partition requires the existence of contexts achieving both $P_{obs}(i)=1$ and $P_{obs}(i)=0$ (equivalently, certainty of $E_i$ and certainty of $I-E_i$).
-2.  **Required CC to reach both endpoints:** Achieving $P_{obs}(i)=1$ requires $\Delta P(i)=1-p_i$, and achieving $P_{obs}(i)=0$ requires $\Delta P(i)=-p_i$.
-3.  **Operational bound:** By Definition 30, for any context and any effect, $|\Delta P(i)|\le \alpha_{CC,max}$. Therefore, the existence of contexts that achieve *both* endpoints implies
-    $$
-    \alpha_{CC,max}\ge \max\{p_i,\,1-p_i\}.
-    $$
-4.  **Universal sufficient ceiling:** For any $p_i\in(0,1)$, $\max\{p_i,1-p_i\}\ge 0.5$, with equality at $p_i=0.5$. Hence if $\alpha_{CC,max}<0.5$, no binary coarse-graining can be driven to both deterministic endpoints by context choice, so no deterministic message alphabet can be realized at spacelike separation.
-5.  Therefore $\alpha_{CC,max}<0.5$ suffices to preclude deterministic FTL signaling and the construction of deterministic causal paradoxes. Hence:
-$$
-\alpha_{CC,max}<0.5.
-$$
+then no binary coarse-grained outcome can be forced to both deterministic endpoints by context choice. Conversely, any endpoint-complete branch that can force both endpoints of some binary coarse-graining must have $\alpha_{CC,max}\ge0.5$. Thus the bounded-bias branch used in Sections 10, 13, and Appendix S is Postulate-2-admissible at the deterministic endpoint level by imposing (61). A branch with $\alpha_{CC,max}\ge0.5$ is admissible only if it carries a separate finite-response certificate excluding endpoint-complete context pairs.
 
-Theorem 39 is an endpoint theorem, not the whole statistical-FTL consistency theorem. The additional step needed for branch (iii) is supplied by Theorem 39a: on the regular finite-window statistical branch, Bob's transcript distributions retain overlapping support under the two Alice contexts, so the zero-error FTL capacity is zero even when the ordinary finite-error information rate of Theorem 41 is positive.
+*Proof.* Deterministic FTL signaling with a fixed local measurement at $S_B$ would require $S_A$ to encode at least two distinguishable messages by choosing between two contexts that yield two deterministic and distinct outcome distributions at $S_B$. For any POVM, coarse-grain to a binary partition $\{E,\ I-E\}$ and let the baseline Born probability be
+$$
+p=P_{Born}(E)\in(0,1).
+$$
+Forcing the endpoint $P_{obs}(E)=1$ requires
+$$
+\Delta P(E)=1-p,
+$$
+while forcing the endpoint $P_{obs}(E)=0$ requires
+$$
+\Delta P(E)=-p.
+$$
+By Definition 30,
+$$
+|\Delta P(E)|\le\alpha_{CC,max}
+$$
+for every context and every effect. Hence a pair of contexts realizing both deterministic endpoints for the same binary coarse-graining must satisfy
+$$
+\alpha_{CC,max}\ge \max\{p,1-p\}.
+$$
+For every $p\in(0,1)$,
+$$
+\max\{p,1-p\}\ge\frac12,
+$$
+with equality only at $p=\frac12$. Therefore every endpoint-complete deterministic binary message alphabet requires
+$$
+\alpha_{CC,max}\ge\frac12.
+$$
+Taking the strict bounded-bias condition $\alpha_{CC,max}<\frac12$ excludes all such endpoint-complete binary alphabets and therefore excludes one-shot deterministic endpoint forcing. The strict inequality is used because $p=\frac12$ is an admissible balanced binary coarse-graining; equality would not leave a finite margin against endpoint completion. ∎
+
+Theorem 39 is an endpoint gate, not the whole statistical-FTL consistency theorem. The additional step needed for branch (iii) is supplied by Theorem 39a: on the regular finite-window statistical branch, Bob's transcript distributions retain overlapping support under the two Alice contexts, so the zero-error FTL capacity is zero even when the ordinary finite-error information rate of Theorem 41 is positive.
 
 **10.3 The Statistical FTL Influence Hypothesis**
 
@@ -165,7 +185,7 @@ Since $\mathbb E_0[Z_C\mid\mathcal F_B]-1$ is $\mathcal F_B$-measurable and inte
 
 **Remark 10.2.1a (Scope of the Radon-Nikodym Form).** Lemma 10.2.1 is a sharpening of the Bob-marginal-preserving part of branch (i) only; it is not an independent prohibition on branches (ii) or (iii). On branch (ii), a comparison between shared-past preparation laws may admit a Radon-Nikodym derivative when the laws are absolutely continuous, but that derivative belongs to a preparation-context comparison rather than to a late-randomized branch-(i) deformation. On branch (iii), the Bob-marginal kernel component is nonzero on the relevant Bob transcript algebra, so $\mathbb E_0[Z_C\mid\mathcal F_B]\ne1$ for at least one late-randomized context comparison. The branch-(iii) consistency claim is supplied separately by Theorems 39a–42 on the regular finite-window branch (Definition 10.2a). The Radon-Nikodym form therefore complements Lemma 10.2: it is the finite-transcript/algebraic restatement of Bob-marginal preservation, and it does not replace the three-branch structure of Postulate 3.
 
-**Definition 10.2a (Regular Statistical Branch).** A branch-(iii) implementation is *regular* in the finite pre-lightcone window of $n\le n_{\max}=\lfloor r_{\max}L/c\rfloor$ trials (Lemma 10.3) when the per-trial 'Evolve' kernels under the two Alice contexts retain common support on every Bob-side outcome with nonzero baseline Born probability. This regularity is a branch condition inside the PU framework, motivated by three independent mechanisms: (a) the endpoint bound $\mathrm{CC}<0.5$ (Theorem 39) excludes deterministic endpoint forcing in binary coarse-grainings; (b) ND-RID strict contractivity $f_{RID}<1$ (Lemma E.1) forbids a perfectly distinguishing single-shot 'Evolve' channel; and (c) the irreducible cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) forbids zero-noise erasure of the alternative-context branch. Together with PPI admissibility of probability kernels, these conditions define the common-support regular branch used below. Common support of the per-trial conditional kernels lifts to common support of every finite-$n$ transcript law because each transcript probability is a product of strictly positive per-trial conditional probabilities along an admissible adaptive history. The regular statistical branch is the operating regime for Theorems 39a, 40, 41, and Lemma 10.3.
+**Definition 10.2a (Regular Statistical Branch).** A branch-(iii) implementation is *regular* in the finite pre-lightcone window of $n\le n_{\max}=\lfloor r_{\max}L/c\rfloor$ trials (Lemma 10.3) when the per-trial 'Evolve' kernels under the two Alice contexts retain common support on every Bob-side outcome with nonzero baseline Born probability. This regularity is a branch condition inside the PU framework, motivated by three independent mechanisms: (a) the endpoint bound $\mathrm{CC}<0.5$ (Theorem 39) excludes deterministic endpoint forcing in binary coarse-grainings; (b) ND-RID finite-transfer limits, supplied by the reset-support deficit of Proposition E.2a and by strict contractivity $f_{RID}<1$ on refresh/minorization branches (Lemma E.1), forbid a perfectly distinguishing single-shot 'Evolve' channel on the regular branch; and (c) the irreducible cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31) forbids zero-noise erasure of the alternative-context branch. Together with PPI admissibility of probability kernels, these conditions define the common-support regular branch used below. Common support of the per-trial conditional kernels lifts to common support of every finite-$n$ transcript law because each transcript probability is a product of strictly positive per-trial conditional probabilities along an admissible adaptive history. The regular statistical branch is the operating regime for Theorems 39a, 40, 41, and Lemma 10.3.
 
 **Theorem 39a (Zero-Error Capacity Gate for Statistical FTL).** Let $C\in\{0,1\}$ be Alice's late-randomized context and let $Y_B^n$ be Bob's finite pre-lightcone transcript after $n$ trials, with context-conditioned transcript laws
 $$
@@ -243,13 +263,22 @@ $$
 :=
 r_{\max}\frac{L}{c}\,I(C;Y_B),
 $$
-where $I(C;Y_B)$ is the per-trial mutual information from Alice's binary context to Bob's outcome. In the small-bias regime, Theorem 41 gives
+where $I(C;Y_B)$ is the per-trial mutual information from Alice's binary context to Bob's outcome. The exact envelope of Theorem 41 gives
 $$
 \mathcal C_{\mathrm{pre}}(L)
 \le
-r_{\max}\frac{L}{c}\cdot \frac{\mathrm{CC}(S_A)^2}{8m_0}
+r_{\max}\frac{L}{c}\cdot \frac{\mathrm{CC}(S_A)^2}{4m_0}.
+$$
+In the perturbative small-bias regime, the sharper expansion in Theorem 41 gives
+$$
+\mathcal C_{\mathrm{pre}}(L)
+\le
+r_{\max}\frac{L}{c}\cdot
+\left[
+\frac{\mathrm{CC}(S_A)^2}{8m_0}
 +
-O\!\left(r_{\max}\frac{L}{c}\,\mathrm{CC}(S_A)^3\right).
+O(\mathrm{CC}(S_A)^3)
+\right].
 $$
 A one-bit pre-lightcone decoder with error probability at most $\alpha_{\mathrm{err}}$ must at least satisfy the Fano necessary condition
 $$
@@ -257,12 +286,20 @@ $$
 \ge
 \ln2-h_2(\alpha_{\mathrm{err}}),
 $$
-where $h_2$ is binary entropy in nats. Independently, resolving the marginal shift by repeated trials obeys the sampling gate of Lemma 10.1:
+where $h_2$ is binary entropy in nats. Independently, resolving the marginal shift by repeated trials obeys the necessary Bhattacharyya gate of Lemma 10.1:
 $$
 r_{\max}\frac{L}{c}
-\gtrsim
-\frac{\ln(1/\alpha_{\mathrm{err}})}{2\delta^2}.
+\ge
+\frac{\ln\!\big(1/[4\alpha_{\mathrm{err}}(1-\alpha_{\mathrm{err}})]\big)}
+{-\ln(1-4\delta^2)}
 $$
+in the symmetric Bernoulli design, while the majority-decoder Hoeffding gate
+$$
+r_{\max}\frac{L}{c}
+\ge
+\frac{\ln(1/\alpha_{\mathrm{err}})}{2\delta^2}
+$$
+is sufficient for achieving error at most $\alpha_{\mathrm{err}}$.
 Thus deterministic or arbitrarily reliable pre-lightcone communication is excluded whenever the finite pre-lightcone budget lies below these necessary gates, in addition to the deterministic forcing bound
 $$
 |\Delta P(i)|\le \mathrm{CC}(S_A)<\frac12
@@ -281,7 +318,7 @@ equivalently a necessary condition
 $$
 I(C;Y_B^{N_{\mathrm{pre}}})\ge \ln2-h_2(\alpha_{\mathrm{err}})
 $$
-for error at most $\alpha_{\mathrm{err}}$. Since independent or conditionally independent trials have total mutual information bounded by the sum of per-trial informations, this gives the displayed necessary budget condition. The sharper high-confidence resolution of a small Bernoulli marginal shift is the Hoeffding/Chernoff sampling requirement already recorded in Lemma 10.1, with $\delta\le\kappa\,\mathrm{CC}(S_A)$. The deterministic-forcing bound is Theorem 39. ∎
+for error at most $\alpha_{\mathrm{err}}$. Since independent or conditionally independent trials have total mutual information bounded by the sum of per-trial informations, this gives the displayed necessary budget condition. The sharper high-confidence resolution of a small Bernoulli marginal shift is controlled by the necessary Bhattacharyya gate and sufficient Hoeffding gate recorded in Lemma 10.1, with $\delta\le\kappa\,\mathrm{CC}(S_A)$. The deterministic endpoint gate is Theorem 39. ∎
 
 **10.3.2 Quantum Communication Protocol (QCP)**
 
@@ -306,22 +343,103 @@ $$
 so the single-shot advantage over random is exactly $\delta=O(\mathrm{CC})$.
 
 
-**Lemma 10.1 (Pre-lightcone decoding condition).**
+**Lemma 10.1 (Pre-Lightcone Decoding Gates).**
 If a QCP is used to attempt decoding strictly before a light signal could arrive, let the spatial separation be $L$. The maximum number of trials before the lightcone is
 $$
-N_{\text{pre}} \le r_{\max}\frac{L}{c},
+N_{\mathrm{pre}}\le r_{\max}\frac{L}{c},
 $$
-where $r_{\max}$ is the maximum local measurement rate per channel. For a binary decision with bias parameter $\delta$ and target error probability $\alpha_{\text{err}}$, any decoding strategy that attains error $\le\alpha_{\text{err}}$ requires at least
+where $r_{\max}$ is the maximum local measurement rate per channel. In the symmetric Bernoulli design
 $$
-N_{\text{decode}} \ge \frac{\ln(1/\alpha_{\text{err}})}{2\delta^2}
+P_+(\uparrow)=\frac12+\delta,\qquad
+P_-(\uparrow)=\frac12-\delta,\qquad
+0<\delta<\frac12,
 $$
-trials (Chernoff/Hoeffding). Therefore, achieving decoding strictly before the lightcone with error $\le\alpha_{\text{err}}$ requires
+any decoder with error probability at most $\alpha_{\mathrm{err}}<\frac12$ must satisfy the necessary Bhattacharyya gate
 $$
-r_{\max} \frac{L}{c} \ge \frac{\ln(1/\alpha_{\text{err}})}{2\delta^2}.
+N
+\ge
+\frac{\ln\!\big(1/[4\alpha_{\mathrm{err}}(1-\alpha_{\mathrm{err}})]\big)}
+{-\ln(1-4\delta^2)}.
+\tag{62a}
 $$
-If this inequality fails, pre-lightcone decoding with error $\le\alpha_{\text{err}}$ is impossible. QED
+In particular, for $\delta\le\frac14$,
+$$
+N
+\ge
+\frac{3}{16\,\delta^2}
+\ln\!\bigg(\frac{1}{4\alpha_{\mathrm{err}}(1-\alpha_{\mathrm{err}})}\bigg)
+\tag{62b}
+$$
+is a weaker but explicit necessary condition. Conversely, the majority decoder has the sufficient Hoeffding gate
+$$
+N
+\ge
+\frac{\ln(1/\alpha_{\mathrm{err}})}{2\delta^2}
+\tag{62c}
+$$
+for achieving error at most $\alpha_{\mathrm{err}}$. Thus both necessary and sufficient gates scale as
+$$
+N=\Theta\!\left(\frac{\ln(1/\alpha_{\mathrm{err}})}{\delta^2}\right)
+$$
+in the high-confidence small-bias regime.
 
-**AQFT compliance.** Conditional on the continuum-bridge hypotheses of Appendix F, operator locality is encoded by Corollary F.1; the context-conditioned dependence then arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Equation (F.4). Under the information‑rate bound for the balanced baseline $p=\tfrac12$, $I(C;Y) \le 4\ln 2 \cdot (\kappa \cdot \mathrm{CC})^2$ nats/trial (Theorem 41), this statistical influence cannot be shaped into deterministic, pre-lightcone signals; operational causality remains intact (Theorem 42). The full consistency analysis is provided in **Appendix F**.
+*Proof.* For one trial, the Bhattacharyya coefficient between $P_+$ and $P_-$ is
+$$
+B_1
+=
+\sum_y\sqrt{P_+(y)P_-(y)}
+=
+2\sqrt{\left(\frac12+\delta\right)\left(\frac12-\delta\right)}
+=
+\sqrt{1-4\delta^2}.
+$$
+For $N$ independent trials,
+$$
+B_N=B_1^N=(1-4\delta^2)^{N/2}.
+$$
+For any two probability laws $P,Q$, the optimal equal-prior error is
+$$
+P_e^*=\frac12(1-\mathrm{TV}(P,Q)).
+$$
+Cauchy-Schwarz gives
+$$
+\mathrm{TV}(P,Q)
+=
+\frac12\sum_y|\sqrt{P(y)}-\sqrt{Q(y)}|\,|\sqrt{P(y)}+\sqrt{Q(y)}|
+\le
+\sqrt{1-B(P,Q)^2}.
+$$
+Therefore
+$$
+P_e^*
+\ge
+\frac12\left(1-\sqrt{1-B_N^2}\right).
+$$
+If a decoder has error at most $\alpha_{\mathrm{err}}$, then the optimal error also satisfies $P_e^*\le\alpha_{\mathrm{err}}$, hence
+$$
+\frac12\left(1-\sqrt{1-B_N^2}\right)\le\alpha_{\mathrm{err}}.
+$$
+This is equivalent to
+$$
+B_N^2\le4\alpha_{\mathrm{err}}(1-\alpha_{\mathrm{err}}).
+$$
+Since $B_N^2=(1-4\delta^2)^N$, taking logarithms gives (62a). For $\delta\le\frac14$, $x:=4\delta^2\le\frac14$, and
+$$
+-\ln(1-x)\le\frac{x}{1-x}\le\frac{4}{3}x=\frac{16}{3}\delta^2.
+$$
+Substituting this upper bound in the denominator of (62a) gives the weaker necessary gate (62b).
+
+For the sufficient direction, the majority decoder fails only if the empirical mean differs from its expectation by at least $\delta$. Hoeffding's inequality gives
+$$
+P_e\le e^{-2N\delta^2}.
+$$
+Requiring this to be at most $\alpha_{\mathrm{err}}$ gives (62c). ∎
+
+**AQFT compliance.** Conditional on the continuum-bridge hypotheses of Appendix F, operator locality is encoded by Corollary F.1; the context-conditioned dependence then arises via the globally prepared state $\omega_{C}$, including Alice’s CC-modulated control $\mathcal M(\text{context}_S)$, as in Equation (F.4). Under the balanced binary baseline $p=\tfrac12$ with $\delta\le\kappa\,\mathrm{CC}$, Theorem 41 gives the exact envelope
+$$
+I(C;Y)\le4(\kappa\,\mathrm{CC})^2
+$$
+nats/trial, with perturbative leading behavior $I(C;Y)=2\delta^2+O(\delta^4)$ for the symmetric Bernoulli channel. This statistical influence cannot be shaped into deterministic, pre-lightcone zero-error signals on the regular finite-window branch; operational causality remains intact by Theorem 39a and Theorem 42. The full consistency analysis is provided in **Appendix F**.
 
 **No‑signaling equalities.** The standard no-signaling equalities hold with respect to local measurement *settings*. That is, for all choices of local measurement operators corresponding to settings $x,x’$ and $y,y’$ and all outcomes $a,b$,
 $$
@@ -393,13 +511,108 @@ N=2n\ge \frac{16}{\Delta^2}\ln\!\left(\frac{4}{\alpha_{\mathrm{det}}}\right).
 $$
 The final $\Theta(\log(1/\alpha_{\mathrm{det}})/\Delta^2)$ scaling follows immediately. ∎
 
-**10.4.2 Theorem 41 (No-Paradox Information Rate with Constant)**
+**10.4.2 Theorem 41 (Finite-Error Information Rate: Exact Envelope and Perturbative Constant)**
 
-The maximum classical information (Mutual Information $I(A;B)$) transmittable from Alice's choice of context ($A$) to Bob's observed outcome ($B$) per trial is quadratically suppressed by the CC value. Let $p=P_{B|A=0}$ and $q=P_{B|A=1}$ be the outcome distributions, $M=\frac{1}{2}(p+q)$ be the mixture, and $m_0 = \min_i M_i > 0$ be the minimum mixture probability (a necessary condition for a regular operating point). The mutual information is bounded by:
+Let $p=P_{B|A=0}$ and $q=P_{B|A=1}$ be Bob's outcome distributions for an equal-prior binary context, let
 $$
-I(A;B) \le \frac{\mathrm{CC}(S)^2}{8\,m_0} + O(\mathrm{CC}(S)^3) \quad \text{(nats/trial)} \quad \text{(63)}
+M=\frac12(p+q),
 $$
-*Proof:* For a binary context with equal priors, the mutual information is the Jensen-Shannon Divergence, $I(A;B)=\mathrm{JSD}(p,q)$. For small deviations, JSD admits the expansion $\mathrm{JSD}(p,q)=\frac{1}{8}\sum_i \frac{(q_i-p_i)^2}{M_i}+O(\|q-p\|_1^3)$. Since $M_i\ge m_0>0$, this is bounded by $\frac{1}{8m_0}\sum_i(q_i-p_i)^2=\frac{1}{8m_0}\|q-p\|_2^2\le\frac{1}{8m_0}\|q-p\|_1^2$. From Theorem 36, the Total Variation distance is bounded by $\|q-p\|_1=2\,\mathrm{TV}(p,q)\le2\sin(\mathrm{CC}(S)/2)$. Since $\sin z\le z$ for $z\ge0$, the bound $2\sin(\mathrm{CC}(S)/2)\le\mathrm{CC}(S)$ holds without using the small-angle approximation. Combining these yields the result. This rigorous bound, with explicit constant $K=1/(8m_0)$, quantifies the positive finite-error statistical rate of branch (iii). Theorem 39a supplies the separate zero-error statement needed for Postulate 2 on the regular finite-window branch: a positive Shannon rate does not by itself imply deterministic or zero-error FTL signaling. ∎
+and assume the regular operating point condition
+$$
+m_0:=\min_i M_i>0.
+$$
+Then the finite-error mutual information per trial satisfies the exact envelope
+$$
+I(A;B)
+=
+\mathrm{JSD}(p,q)
+\le
+\frac{1}{4m_0}\|p-q\|_2^2
+\le
+\frac{1}{4m_0}\|p-q\|_1^2
+\le
+\frac{\mathrm{CC}(S)^2}{4m_0}.
+\tag{63}
+$$
+In the perturbative small-bias regime,
+$$
+I(A;B)
+=
+\frac18\sum_i\frac{(q_i-p_i)^2}{M_i}
++
+O(\|q-p\|_1^3),
+$$
+and therefore
+$$
+I(A;B)
+\le
+\frac{\mathrm{CC}(S)^2}{8m_0}
++
+O(\mathrm{CC}(S)^3).
+\tag{63a}
+$$
+
+*Proof.* For equal priors,
+$$
+I(A;B)=\mathrm{JSD}(p,q)
+=
+\frac12D(p\|M)+\frac12D(q\|M).
+$$
+Using $\ln x\le x-1$,
+$$
+D(p\|M)
+=
+\sum_i p_i\ln\frac{p_i}{M_i}
+\le
+\sum_i p_i\left(\frac{p_i}{M_i}-1\right)
+=
+\sum_i\frac{(p_i-M_i)^2}{M_i}.
+$$
+Since $p_i-M_i=(p_i-q_i)/2$,
+$$
+D(p\|M)
+\le
+\frac14\sum_i\frac{(p_i-q_i)^2}{M_i}.
+$$
+The same argument gives
+$$
+D(q\|M)
+\le
+\frac14\sum_i\frac{(p_i-q_i)^2}{M_i}.
+$$
+Therefore
+$$
+\mathrm{JSD}(p,q)
+\le
+\frac14\sum_i\frac{(p_i-q_i)^2}{M_i}
+\le
+\frac{1}{4m_0}\|p-q\|_2^2
+\le
+\frac{1}{4m_0}\|p-q\|_1^2.
+$$
+By Theorem 36,
+$$
+\|p-q\|_1=2\,\mathrm{TV}(p,q)\le2\sin(\mathrm{CC}(S)/2)\le\mathrm{CC}(S),
+$$
+so the exact envelope (63) follows. For binary outputs the bound $\|p-q\|_2^2\le\|p-q\|_1^2$ saturates the perturbative coefficient: any 2-element traceless difference $\Delta=p-q$ has $\Delta_1=-\Delta_2$, so $\|\Delta\|_1=2|\Delta_1|$ and $\|\Delta\|_2^2=2\Delta_1^2=\|\Delta\|_1^2/2$. Hence the binary specialization sharpens to $\mathrm{JSD}\le\mathrm{CC}(S)^2/(8m_0)$ non-perturbatively, recovering the perturbative coefficient as the exact constant in the binary case used throughout Sections 10 and 13.
+
+For the perturbative statement, write $q=p+\Delta$ and $M=p+\Delta/2$, so $p-M=-\Delta/2$ and $q-M=\Delta/2$. Taylor expansion of $D(M\pm\Delta/2\|M)$ around $M$ gives
+$$
+D(M\pm\Delta/2\|M)
+=
+\frac12\sum_i\frac{(\Delta_i/2)^2}{M_i}
++
+O(\|\Delta\|_1^3).
+$$
+Averaging the two divergences yields
+$$
+\mathrm{JSD}(p,q)
+=
+\frac18\sum_i\frac{\Delta_i^2}{M_i}
++
+O(\|\Delta\|_1^3).
+$$
+Since $M_i\ge m_0$ and $\|\Delta\|_1\le\mathrm{CC}(S)$ by Theorem 36, (63a) follows. Theorem 39a supplies the separate zero-error statement needed for Postulate 2 on the regular finite-window branch: a positive Shannon rate does not by itself imply deterministic or zero-error FTL signaling. ∎
 
 **10.4.3 Theorem 42 (Inability to Construct Causal Loops)**
 

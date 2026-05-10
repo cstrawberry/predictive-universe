@@ -8,11 +8,27 @@ The foundational substrate, according to Hypothesis 1, is a dynamic network $\ma
 
 **11.2 Metric Distance from ND-RID Propagation Costs**
 
-The fundamental interaction process, ND-RID ('Evolve', Definition 27), is thermodynamically irreversible ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31) and information-limited (strictly contractive $f_{RID} < 1$, Lemma E.1). Propagating information incurs costs related to these limitations.
+The fundamental interaction process, ND-RID ('Evolve', Definition 27), is thermodynamically irreversible ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, Theorem 31) and information-limited by the completed reset-support deficit of Proposition E.2a. On refresh/minorization branches it is additionally strictly contractive ($f_{RID} < 1$, Lemma E.1). Propagating information incurs costs related to these limitations.
 
 **11.2.1 Definition 35 (Def 35): Propagation Cost Metric $d_{\mathcal{N}}$**
 
-We define a metric distance $d_{\mathcal{N}}(u,v)$ between any two MPUs $u, v \in \mathcal{V}$ based on the minimum cumulative cost of propagating information along paths in the network $\mathcal{N}$. The dimensionless cost $w_{xy}$ of traversing edge $(x,y)$ incorporates fidelity loss ($f_{RID}^{(xy)}$) and minimum entropy production ($\Delta S_{\mathrm{phys}}^{(xy)} \ge k_B \varepsilon_{\mathrm{phys}}\ge k_B\varepsilon_0$) associated with the ND-RID step (derived in Appendix E). As derived in Appendix E (**Sections E.2 and E.3**), the cost is fundamentally related to the channel contractivity and the irreversible cost split $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$. A functionally motivated form capturing these dependencies is $w_{xy} \approx -\ln f_{RID}^{(xy)} + c_S (\Delta S_{min}^{(xy)} / k_B)$, which is strictly positive (with constant $c_S>0$). Introducing a fundamental microscopic length scale $\delta$ (units $[L]$, the MPU spacing derived in Appendix Q) associated with a single interaction step, the **propagation cost metric** is the shortest path distance:
+We define a metric distance $d_{\mathcal{N}}(u,v)$ between any two MPUs $u, v \in \mathcal{V}$ based on the minimum cumulative cost of propagating retained predictive information along paths in the network $\mathcal{N}$. The dimensionless cost $w_{xy}$ of traversing edge $(x,y)$ incorporates the completed-update entropy cost
+$$
+\Delta S_{\mathrm{phys}}^{(xy)}\ge k_B\varepsilon_{\mathrm{phys}}\ge k_B\varepsilon_0
+$$
+and the finite transfer budget of the edge. On the completed reset-support branch, the per-link information budget is bounded by Proposition E.2a. On refresh/minorization branches, the same edge may also carry a strict trace-distance contraction factor $f_{RID}^{(xy)}<1$ from Lemma E.1.
+
+A branch-uniform positive cost representative is
+$$
+w_{xy}
+=
+c_S\frac{\Delta S_{\min}^{(xy)}}{k_B}
++
+c_C\frac{\ln d_0-C_{xy}}{\ln d_0}
++
+c_f[-\ln f_{RID}^{(xy)}]_{\mathrm{ref}},
+$$
+where $c_S,c_C>0$, $c_f\ge0$, $C_{xy}\le\ln d_0$ is the retained per-link transfer budget, and $[-\ln f_{RID}^{(xy)}]_{\mathrm{ref}}$ is included only on refresh/minorization branches with strict contraction. Since $\Delta S_{\min}^{(xy)}/k_B\ge\varepsilon_0=\ln2$, every completed edge has $w_{xy}>0$ even when the strict-contraction term is absent. The coefficients $c_S,c_C,c_f$ are calibration-branch parameters fixing the relative weighting of entropy, capacity-deficit, and refresh-contraction costs at a chosen reference scale; any other positive linear combination of these branch-defined positive contributions yields the same asymptotic geometric structure on each branch and is identified with this representative in the continuum/refinement limit. Introducing a fundamental microscopic length scale $\delta$ (units $[L]$, the MPU spacing derived in Appendix Q) associated with a single interaction step, the **propagation cost metric** is the shortest path distance:
 $$
 d_{\mathcal{N}}(u,v) = \min_{\gamma: u \to v} \sum_{(x,y) \in \gamma} \delta w_{xy} \qquad \text{(64)}
 $$
@@ -456,7 +472,7 @@ giving the stated holonomy expansion. Finally, on the spin branch the standard s
 
 ## 11.7.2 Dissipative Companion to Predictive Holonomy
 
-Theorem 47 identifies $\mathcal F_{\mu\nu}^{\mathrm{pred}}$ as the closed-system curvature of predictive-frame transport in the continuum limit, with Riemann curvature and internal gauge field strength obtained by projection. When ND-RID holds, transport between neighboring "contexts" is generically *open* (not strictly unitary) because irreversibility enforces contractivity at the operational level (Appendix E, Lemma E.1). The appropriate object is therefore a completely positive, trace-preserving (CPTP) transport map on reduced states, not a pure unitary parallel transport.
+Theorem 47 identifies $\mathcal F_{\mu\nu}^{\mathrm{pred}}$ as the closed-system curvature of predictive-frame transport in the continuum limit, with Riemann curvature and internal gauge field strength obtained by projection. When ND-RID holds, transport between neighboring "contexts" is generically *open* at the reduced-state level because the retained subsystem is only part of the closed predictive ledger. The completed reset branch supplies the finite transfer and entropy ledger of Proposition E.2a; refresh/minorization branches additionally supply strict trace-distance contraction (Appendix E, Lemma E.1). The appropriate reduced object is therefore a completely positive, trace-preserving (CPTP) transport map on reduced states, not a pure unitary parallel transport.
 
 **Infinitesimal Transport Structure.**
 Let $\mathcal{E}_{\Delta\tau}$ denote the CPTP transport channel associated with proper time displacement $\Delta\tau$ along a timelike worldline in emergent coordinates. In the Markovian regime, its generator admits the standard GKSL decomposition [Gorini, Kossakowski & Sudarshan 1976; Lindblad 1976]:

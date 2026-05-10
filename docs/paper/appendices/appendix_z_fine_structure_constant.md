@@ -64,7 +64,7 @@ It is closed as a theorem-level comparison interval only when $R_\alpha$ is fixe
 
 1. **Internal modes $\to$ operational channels.** Identification: $M=2ab$ counts the real tangent directions of the attractor orbit (Theorem Z.6.3a) and is interpreted as the number of locally distinguishable interaction channels. Assumptions: local homogeneity/isotropy at the attractor and a locally Euclidean tangent cone for channel packing.
 
-2. **Operational channels $\to$ dimension.** Identification: channel packing in a locally Euclidean $D$-dimensional tangent space has maximal channel number $K(D)$ (kissing number), hence equilibrium requires $M=K(D)$ (Theorem Z.11). Alternatives: dimensions with $K(D)\neq M$ either waste internal modes or lack sufficient channels; both raise the PCE potential. Robustness: $K(3)=12$, $K(4)=24$, and standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012], so $D=4$ is isolated by a gap of at least $12$ from the nearest neighboring dimensions.
+2. **Operational channels $\to$ dimension.** Identification: channel packing in a locally Euclidean $D$-dimensional tangent space has maximal channel number $K(D)$ (kissing number), hence equilibrium requires $M=K(D)$ (Theorem Z.11). Alternatives: dimensions with $K(D)\neq M$ either waste internal modes or lack sufficient channels; both raise the PCE potential. Robustness: $K(1)=2$, $K(2)=6$, $K(3)=12$, $K(4)=24$, and standard bounds give $K(5)\ge40$ [Boyvalenkov et al. 2012]. Since any kissing configuration in $\mathbb R^D$ embeds isometrically in $\mathbb R^{D+1}$, $K(D)$ is monotone nondecreasing, so every $D\ge5$ has $K(D)\ge40>24$. Hence $D=4$ is the unique positive integer solution of $K(D)=24$.
 
 3. **Coupling identification.** The coefficient $u^*$ is fixed by capacity saturation of the internal QFI spectrum (Theorem Z.7) with the flat Bures/QFI eigenvalues $\lambda_i=1$ at the attractor (Theorem Z.5); the physical electromagnetic coupling is $\alpha_{\mathrm{em}}=u^*/(4\pi\kappa_{\mathrm{eff}})$ after the interface correction (Theorem Z.26).
 
@@ -885,7 +885,7 @@ with the specific hierarchy $8 > 4 > 2 \geq 0$. This explains the observed glueb
 | $0^{-+}$ | 0 | - | + | 0 | 4 | 0 | 8 | 8 ✓ |
 | $3^{++}$ | 3 | + | + | 6 | 0 | 0 | 10 | 10 ✓ |
 
-All four empirical shell assignments are exactly reproduced from first principles.
+The four listed shell assignments match the displayed discrete-cost rule. This is a branch-level structural compatibility check: the cost rule is derived from the Landauer partition and Golay distance data, while the association of empirical glueball labels with these shell rows remains part of the stated glueball-spectrum matching branch rather than an independent theorem-level derivation of the measured spectrum.
 
 **Remark Z.8h.2: Derivation Chain.** The shell formula connects to framework axioms via:
 
@@ -903,7 +903,7 @@ Both costs are determined by the same underlying structure: the Landauer partiti
 
 ### Z.9.1 Propagating Generators
 
-**Definition Z.5 (Propagating Generator).** A generator $G$ is propagating if its action on $\rho_0$ can be transmitted to neighboring MPUs through ND-RID interactions and subsequently detected with fidelity above a threshold. The propagating property is constrained by the ND-RID channel capacity bound $C_{\max}(f_{\text{RID}}) < \ln d_0$ (Theorem E.2) and the channel density structure $\sigma_{\text{eff}} = \chi/(\eta \delta^2)$ (Theorem E.3).
+**Definition Z.5 (Propagating Generator).** A generator $G$ is propagating if its action on $\rho_0$ can be transmitted to neighboring MPUs through ND-RID interactions and subsequently detected with fidelity above a threshold. The propagating property is constrained by the finite per-channel transfer budget: quantitatively by the completed reset-support bound $C_{\max}\le\ln d_0-\ln2$ on the binary reset branch (Proposition E.2a), and by the strict refresh/minorization bound $C_{\max}<\ln d_0$ when strict trace-distance contraction is required (Theorem E.2). The density of available boundary/interface channels is governed by $\sigma_{\mathrm{eff}}=\chi/(\eta\delta^2)$ on the density-certificate branch of Theorem E.3.
 
 ### Z.9.2 Operational Distinguishability
 
