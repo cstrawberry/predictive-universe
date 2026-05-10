@@ -34,6 +34,27 @@ For each MPU $v$, its operational complexity is represented by a Hermitian, posi
 
 The expectation value $\langle \psi | \hat{C}_v | \psi \rangle$ for a state $|\psi\rangle$ provides the MPU's operational measure of complexity on the chosen coarse-graining. The justification for this coarse-grained observable serving as a valid, dynamically selected proxy for the theoretical $C_P$ at viable equilibria is rigorously provided by Theorem 2 (Dynamically Enforced Functional Correspondence), detailed in **Appendix D**. Different admissible coarse-grainings define equivalent proxies in the sense of Theorem 2 up to the tracking noise floor established there.
 
+The proxy can be used for exact PCE selection only on branches where the tracking noise is dominated by the PCE gap. Let $x^*$ be the $C_P$-selected representative in an admissible finite-response class $\mathcal A$, and suppose the proxy satisfies
+$$
+|C_P(x)-\hat C(x)|\le \varepsilon
+\qquad
+(x\in\mathcal A).
+$$
+If the true separation gap is
+$$
+\Delta_P
+:=
+\inf_{[x]\ne[x^*]}
+\big(C_P(x)-C_P(x^*)\big)>2\varepsilon,
+$$
+then $\hat C$ selects the same PPI/PCE class:
+$$
+\hat C(x)-\hat C(x^*)
+\ge C_P(x)-C_P(x^*)-2\varepsilon
+\ge \Delta_P-2\varepsilon>0.
+$$
+Thus proxy-based minimization is theorem-preserving precisely on the gap-dominating branch $\Delta_P>2\varepsilon$. If this inequality is not certified, the proxy remains an operational tracker and not an exact selector.
+
 *Proof:* On the operational coarse-graining branch, $\hat{C}_v$ is by construction a Hermitian operator with orthogonal complete spectral projectors $\{\hat{P}_d\}$ and real non-negative eigenvalues $\lambda(d) = K_0 + \Delta C(d) \ge K_0 > 0$. Self-adjointness and positive semi-definiteness follow directly. The coarse-graining choice is the branch input; exact agreement with mathematical circuit-complexity level sets is not claimed and would generally fail because such level sets are not linear subspaces.
 
 ## B.2 Physical Resource-Cost Operators $\hat{R}, \hat{R}_I$
@@ -346,15 +367,29 @@ We identify the symmetric, conserved tensor $\hat{\Theta}_{\mu\nu}^{(MPU)}(v)$ f
 
 ## B.8 Macroscopic Stress–Energy Tensor $T_{\mu\nu}^{(MPU)}$
 
-The macroscopic tensor sourcing emergent gravity is the coarse-grained average.
+The macroscopic tensor sourcing emergent gravity is the unique regular-branch source tensor obtained from the same coarse-grained MPU operator field and the same metric variation of the continuum MPU action.
 
 **Definition B.8 (Macroscopic MPU Stress-Energy Tensor $T_{\mu\nu}^{(MPU)}$)**
 
 The macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(MPU)}(x)$ at spacetime point $x$ is the expectation value of the emergent operator field $\hat{\Theta}_{\mu\nu}(x)$ (formalized in Appendix F, Def F.4) in the relevant physical state $\omega$:
 $$
-T_{\mu\nu}^{\text{(MPU)}}(x) = \omega(\hat{\Theta}_{\mu\nu}(x)) \tag{B.15}
+T_{\mu\nu}^{\text{(MPU)}}(x) = \omega(\hat{\Theta}_{\mu\nu}(x))
+\tag{B.15}
 $$
-This represents the thermodynamically relevant coarse-grained average $\langle \hat{\Theta}_{\mu\nu}^{(MPU)}(v) \rangle$.
+This represents the thermodynamically relevant coarse-grained average $\langle \hat{\Theta}_{\mu\nu}^{(MPU)}(v) \rangle$. On the regular local-equilibrium branch where the continuum MPU action exists and is Gâteaux differentiable, Theorem B.8c identifies the same tensor with the metric variational source
+$$
+T_{(\mathrm{MPU})}^{\mu\nu}
+=
+\frac{2}{\sqrt{|g|}}\,
+\frac{\delta S_{(\mathrm{MPU})}}{\delta g_{\mu\nu}},
+\qquad
+T^{(\mathrm{MPU})}_{\mu\nu}
+=
+-\frac{2}{\sqrt{|g|}}\,
+\frac{\delta S_{(\mathrm{MPU})}}{\delta g^{\mu\nu}}
+\tag{B.15a}
+$$
+Thus the expectation-value source, Belinfante continuum source, horizon heat-flux source, and metric variational source are not four independent objects; Corollary B.8d.1 identifies them as the same $T_{\mu\nu}^{(MPU)}$ on the stated branch.
 
 **Theorem B.5 (Macroscopic Covariant Conservation of $T_{\mu\nu}^{(MPU)}$)**
 
@@ -413,10 +448,58 @@ $$
 $$
 and under local equilibrium,
 $$
-T_{(\mathrm{MPU})}^{\mu\nu} \;=\; -\frac{2}{\sqrt{|g|}}\,\frac{\delta S_{(\mathrm{MPU})}}{\delta g_{\mu\nu}}.\tag{B.21}
+T_{(\mathrm{MPU})}^{\mu\nu}
+=
+\frac{2}{\sqrt{|g|}}\,
+\frac{\delta S_{(\mathrm{MPU})}}{\delta g_{\mu\nu}},
+\qquad
+T^{(\mathrm{MPU})}_{\mu\nu}
+=
+-\frac{2}{\sqrt{|g|}}\,
+\frac{\delta S_{(\mathrm{MPU})}}{\delta g^{\mu\nu}}.
+\tag{B.21}
 $$
 
-*Proof.* By (H B.8c.2), $\delta_g S_h^{(\mathrm{MPU})}[\delta g]=\tfrac12\int\delta g_{\mu\nu}\,d\mathbf T_h^{\mu\nu}+r_h(\delta g)$ with $r_h(\delta g)=O(h)$. For fixed $\delta g$, weak-$*$ convergence (Theorem B.8b) gives $\int\delta g_{\mu\nu}\,d\mathbf T_{h_j}^{\mu\nu}\to\int\delta g_{\mu\nu}\,d\mathbf T^{\mu\nu}$. Combined with (H B.8c.1), which supplies $\delta_g S_{h_j}^{(\mathrm{MPU})}\to\delta_g S_{(\mathrm{MPU})}$, this yields the stated identity. Absolute continuity and the definition of the metric functional derivative give (B.21). ∎
+*Proof.* By (H B.8c.2),
+$$
+\delta_g S_h^{(\mathrm{MPU})}[\delta g]
+=
+\frac12\int \delta g_{\mu\nu}\,d\mathbf T_h^{\mu\nu}
++
+r_h(\delta g),
+\qquad
+r_h(\delta g)=O(h).
+$$
+For fixed $\delta g$, weak-$*$ convergence (Theorem B.8b) gives
+$$
+\int \delta g_{\mu\nu}\,d\mathbf T_{h_j}^{\mu\nu}
+\to
+\int \delta g_{\mu\nu}\,d\mathbf T^{\mu\nu}.
+$$
+Combined with (H B.8c.1), which supplies $\delta_g S_{h_j}^{(\mathrm{MPU})}\to\delta_g S_{(\mathrm{MPU})}$, this yields the stated identity. Under local equilibrium,
+$$
+d\mathbf T^{\mu\nu}=T_{(\mathrm{MPU})}^{\mu\nu}\sqrt{|g|}\,d^4x,
+$$
+so
+$$
+\delta_g S_{(\mathrm{MPU})}[g,\Phi;\delta g]
+=
+\frac12\int_{M_{\mathrm{reg}}}
+T_{(\mathrm{MPU})}^{\mu\nu}\delta g_{\mu\nu}\sqrt{|g|}\,d^4x.
+$$
+Therefore
+$$
+\frac{\delta S_{(\mathrm{MPU})}}{\delta g_{\mu\nu}}
+=
+\frac12\sqrt{|g|}\,T_{(\mathrm{MPU})}^{\mu\nu},
+$$
+which gives the covariant-metric form of (B.21). The inverse-metric form follows from
+$$
+\delta g^{\alpha\beta}
+=
+-g^{\alpha\mu}g^{\beta\nu}\delta g_{\mu\nu}.
+$$
+∎
 
 **Theorem B.8d (Horizon-Flux Closure).** Let $\mathcal H$ be a smooth local horizon patch in a local Rindler region with null generator $k^\mu$, affine parameter $\lambda$, and approximate boost Killing field $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$. Assume (H B.8d.1) continuity of $T_{(\mathrm{MPU})}^{\mu\nu}$ on $\mathcal H$ (a consequence of the local-equilibrium branch of Theorem 48a.0). Let $\mathcal H_h$ be an admissible family of discrete face-unions approximating $\mathcal H$ with face fluxes $q_h(f)$ induced by the current operators of Definition B.5. Then:
 
@@ -435,7 +518,21 @@ reproducing Equation (68). ∎
 
 (b) Substituting $\chi^\mu=-\kappa\lambda k^\mu+O(\lambda^2)$ into (a) and discarding $O(\lambda^2)$ corrections yields (b). ∎
 
-**Corollary B.8d.1 (Source-Term Identity).** On $M_{\mathrm{reg}}$ under the admissibility and local-equilibrium hypotheses of Definition B.8a and (H B.8d.1), the tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ coincides simultaneously with: (1) the continuum Belinfante limit of Theorem B.8b; (2) the metric variational source $-\tfrac{2}{\sqrt{|g|}}\,\delta S_{(\mathrm{MPU})}/\delta g_{\mu\nu}$ of Theorem B.8c; (3) a covariantly conserved symmetric tensor ($\nabla_\mu T^{\mu\nu}=0$ by Theorem B.8b(b) and, independently, by Corollary 45a.1); (4) the horizon heat-flux source of Theorem B.8d. The gravity derivation of §12 therefore uses one and the same stress-energy object at the microscopic, variational, thermodynamic, and conservation levels. ∎
+**Corollary B.8d.1 (Source-Term Identity).** On $M_{\mathrm{reg}}$ under the admissibility and local-equilibrium hypotheses of Definition B.8a and (H B.8d.1), the tensor $T_{\mu\nu}^{(\mathrm{MPU})}$ coincides simultaneously with: (1) the continuum Belinfante limit of Theorem B.8b; (2) the metric variational source of Theorem B.8c, written equivalently as
+$$
+T_{(\mathrm{MPU})}^{\mu\nu}
+=
+\frac{2}{\sqrt{|g|}}\,
+\frac{\delta S_{(\mathrm{MPU})}}{\delta g_{\mu\nu}}
+\qquad
+\text{or}
+\qquad
+T^{(\mathrm{MPU})}_{\mu\nu}
+=
+-\frac{2}{\sqrt{|g|}}\,
+\frac{\delta S_{(\mathrm{MPU})}}{\delta g^{\mu\nu}};
+$$
+(3) a covariantly conserved symmetric tensor ($\nabla_\mu T^{\mu\nu}=0$ by Theorem B.8b(b) and, independently, by Corollary 45a.1); (4) the horizon heat-flux source of Theorem B.8d. The gravity derivation of §12 therefore uses one and the same stress-energy object at the microscopic, variational, thermodynamic, and conservation levels. ∎
 
 *Proof.* Items (1), (2), (4) follow from Theorems B.8b, B.8c, B.8d. Item (3) follows from Theorem B.8b(b) directly and, independently, from Corollary 45a.1 applied to the scalar-density matter action of Theorem 45a. The two routes agree because they refer to the same underlying tensor identified by (1) and (2). ∎
 

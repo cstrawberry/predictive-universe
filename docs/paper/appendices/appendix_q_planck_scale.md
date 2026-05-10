@@ -1934,7 +1934,7 @@ where $C_{\max}^* = 2\ln 2$ (Equation Q.10), $\chi^* = 1$ (Lemma Q.2.2), and $\e
 
 ## Q.6 Lorentz-Invariant Discretization and the Temporal Scale
 
-The spatial discretization scale $\delta/L_P = \sqrt{8\ln 2}$ (Equation Q.18) was derived from PCE optimization. This section establishes the corresponding temporal discretization scale through consistency with emergent Lorentzian structure.
+The spatial discretization scale $\delta/L_P=\sqrt{8\ln2}$ is fixed on the residual-budget, throughput-saturated, ideal-packing branch of Equation Q.18. This section establishes the corresponding temporal discretization scale through consistency with emergent Lorentzian structure on the same branch.
 
 ### Q.6.1 The Discretization Consistency Requirement (Conditional on Theorems 43, 46)
 
@@ -2061,7 +2061,7 @@ Published photon time-of-flight limits therefore constrain only appended LIV bra
 
 | Quantity | Symbol | Value | Origin |
 |:---------|:-------|:------|:-------|
-| Spatial discretization | $\delta/L_P$ | $\sqrt{8\ln 2} \approx 2.355$ | PCE optimization (Q.18) |
+| Spatial discretization | $\delta/L_P$ | $\sqrt{8\ln2}\approx2.355$ on the residual-budget, throughput-saturated, ideal-packing branch | Eq Q.18; Lem Q.2.2; Lem Q.2.3 |
 | Temporal discretization | $\tau_{min}/t_P$ | $\sqrt{8\ln 2} \approx 2.355$ | Lorentz consistency (Prop. Q.6.1) |
 | Information budget | $C_{\max}^*$ | $2\ln 2$ | Capacity saturation (Q.10) |
 | Hilbert space dimension | $d_0$ | $8$ on the minimal branch | Theorem 23; Theorem Z.2 |

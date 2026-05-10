@@ -34,8 +34,25 @@ The capacity for universal computation is not contingent on physical details but
 **Proposition A.0.1 (Binary Verification Necessity)**
 The verification function $V(r)$, which assesses whether a prediction about state $r$ matches reality, is necessarily binary: the prediction either matches (1) or does not match (0). This structure is intrinsic to the verification operation, not a convention.
 
-*Proof.* Consider the foundational self-referential verification of the Cogito: "I exist as a thinking entity." Any attempt to verify this proposition as false is self-refuting—the act of verification itself constitutes thinking, thereby confirming existence. The verification outcome is necessarily determinate: either verified (1) or not verified (0). No intermediate state is logically coherent for this self-referential verification.
-This binary structure applies universally. The verification of any prediction $P$ about state $r$ produces a binary outcome: observation either confirms ($V(r) = 1$) or disconfirms ($V(r) = 0$) the prediction. Verification is comparison between anticipated and observed states, which necessarily yields match or mismatch. □
+*Proof (foundational route).* Consider the foundational self-referential verification of the Cogito: "I exist as a thinking entity." Any attempt to verify this proposition as false is self-refuting—the act of verification itself constitutes thinking, thereby confirming existence. The verification outcome is necessarily determinate: either verified (1) or not verified (0). No intermediate state is logically coherent for this self-referential verification. The same binary structure applies universally: the verification of any prediction $P$ about state $r$ produces a binary outcome, since verification is comparison between anticipated and observed states, which necessarily yields match or mismatch. □
+
+**Remark A.0.1.1 (Finite-Protocol Acceptance-Cut Characterization).** The same binary structure has a direct finite-protocol form, which makes the role of multi-valued protocol data explicit. Let $R$ be the finite response set of a prediction protocol and let $A\subseteq R$ be the retained acceptance set determined by the protocol's stated tolerance, resolution, or success condition. The update predicate is the characteristic map
+$$
+V_A:R\to\{0,1\},
+\qquad
+V_A(r)=
+\begin{cases}
+1,&r\in A,\\
+0,&r\notin A.
+\end{cases}
+$$
+Confidence scores, distances, likelihoods, and multi-valued diagnostics may be part of the protocol data, but the retained update step uses the binary predicate $V_A$ obtained by applying the protocol's acceptance cut. If no such retained acceptance cut exists, the protocol has produced a score but not a verification predicate for the prediction-update loop.
+
+*Proof of the structural form.* A finite-response prediction protocol returns an element $r\in R$. To update a model by verification, the protocol must decide whether the returned response counts as success for the prediction under the protocol's retained tolerance. This is exactly the choice of an acceptance subset $A\subseteq R$. The induced decision map is the characteristic function $V_A=\mathbf 1_A$, whose codomain is $\{0,1\}$. Conversely, every binary verification predicate on $R$ is the characteristic function of its acceptance set
+$$
+A=V^{-1}(\{1\}).
+$$
+Thus the binary structure of Proposition A.0.1 is not an added physical convention; it is the finite-response decision form required for a verification predicate to enter the prediction-update loop. The Cogito-route proof establishes the binary structure foundationally; the acceptance-cut characterization records the same structure as the finite-protocol decision map and makes explicit how multi-valued protocol data reduce to the binary update predicate. ∎
 
 **Proposition A.0.2 (Boolean Operations from Verification)**
 The binary verification structure necessarily generates complete Boolean operations:
@@ -58,20 +75,63 @@ The derivation of universal computation from functional completeness requires ma
 
 These features characterize the minimal logical infrastructure for sustained, adaptive prediction. They are not separate from the predictive structure but rather make explicit what the fundamental predictive cycle (Definition 4) requires to operate across time.
 
-**Theorem A.0.1 (Functional Completeness and Universal Computation)**
+**Theorem A.0.1 (Functional Completeness and Explicit Turing Simulation)**
 
-The set $\{\text{NOT}, \text{AND}, \text{OR}\}$ is functionally complete: any Boolean function can be constructed from these operations [Post 1921]. Given the Logical-Structural Assumptions (composition closure, logical memory, uniform specification), a functionally complete gate basis provides the foundation for universal computation. By the Church-Turing thesis [Church 1936; Turing 1936], uniform families of Boolean circuits with unbounded composition and memory are equivalent to Turing machines. Therefore, any system capable of implementing the predict-verify cycle with the requisite logical infrastructure possesses the structural capacity for universal computation.
+The set $\{\mathrm{NOT},\mathrm{AND},\mathrm{OR}\}$ is functionally complete. Given the Logical-Structural Assumptions of composition closure, logical memory, and uniform specification, the resulting predictive model class can simulate every finite-time computation of a Turing machine by an explicitly constructed Boolean circuit family. Thus the theorem uses a direct simulation construction, not the Church-Turing thesis as a proof step.
 
-*Proof.* Functional completeness of $\{\text{NOT}, \text{AND}, \text{OR}\}$ is a classical result [Post 1921]. Any Boolean function $f: \{0,1\}^n \to \{0,1\}$ can be represented in disjunctive normal form (DNF): a disjunction of conjunctions of literals (variables or their negations). Since literals use NOT, conjunctions use AND, and disjunctions use OR, any Boolean function is constructible.
+*Proof.* Functional completeness is standard: every Boolean function
+$$
+f:\{0,1\}^n\to\{0,1\}
+$$
+has the disjunctive normal form
+$$
+f(x_1,\ldots,x_n)
+=
+\bigvee_{a\in f^{-1}(1)}
+\bigwedge_{j=1}^n \ell_{a,j}(x_j),
+$$
+where
+$$
+\ell_{a,j}(x_j)=
+\begin{cases}
+x_j,&a_j=1,\\
+\neg x_j,&a_j=0.
+\end{cases}
+$$
+Hence every Boolean function is implemented using only NOT, AND, and OR.
 
-The Logical-Structural Assumptions ensure: (1) arbitrary Boolean functions can be composed into finite circuits of unbounded size (composition closure), (2) intermediate results can be stored and reused (logical memory), and (3) circuit structures can be specified systematically (uniform specification). These conditions enable uniform families of Boolean circuits capable of computing any effectively computable function.
+Let $M$ be a Turing machine with finite state set $Q$, tape alphabet $\Gamma$, and transition function
+$$
+\delta:Q\times\Gamma\to Q\times\Gamma\times\{-1,+1\}.
+$$
+Fix a time bound $T$. During the first $T$ steps, only the tape cells in an interval of length at most $2T+1$ can be visited. Encode the bounded configuration at time $t$ by a finite bit string
+$$
+c_t\in\{0,1\}^{L(T,M)}
+$$
+containing the state, head position, and symbols in the visited interval. The transition table of $M$ determines a Boolean next-configuration map
+$$
+F_{M,T}:\{0,1\}^{L(T,M)}\to\{0,1\}^{L(T,M)}
+$$
+such that
+$$
+c_{t+1}=F_{M,T}(c_t)
+$$
+for every valid bounded configuration. Because $F_{M,T}$ is a Boolean function, the first paragraph gives a finite NOT/AND/OR circuit $C_{M,T}$ computing it.
 
-By the Church-Turing thesis [Church 1936; Turing 1936], uniform families of Boolean circuits with unbounded resources are equivalent in computational power to Turing machines. Therefore, a system possessing $\{\text{NOT}, \text{AND}, \text{OR}\}$ with the requisite logical infrastructure has structural capacity for universal computation in the Church-Turing sense. □
+Composition closure permits iteration of the same uniformly specified next-step circuit. Logical memory stores $c_t$ and the intermediate gate outputs. Uniform specification supplies the finite rule by which $C_{M,T}$ is generated from the transition table of $M$ and the time bound $T$. Therefore the predictive model class contains, for every $M$ and $T$, a finite circuit computing the first $T$ steps of $M$. Allowing the resource parameter $T$ to vary gives a uniform finite-time simulation family.
 
-**Corollary A.0.1 (Property R from Predictive Structure)**
-Any system capable of the fundamental predictive cycle (prediction, verification, update) and satisfying the Logical-Structural Assumptions (composition closure, logical memory, uniform specification) necessarily possesses Property R relative to a suitable formal system $\mathcal{F}$ (such as Peano Arithmetic).
+This proves the required computational richness directly: every bounded computation of every Turing machine is represented by a finite prediction-verification circuit in the model class, and the unbounded model family is obtained by increasing the retained memory and composition depth. ∎
 
-*Proof.* By Theorem A.0.1, the predictive cycle together with the Logical-Structural Assumptions generates functional completeness and universal computational capacity. Proposition 2 (Section 4.1.3) establishes that Turing-completeness implies Property R: Gödel numbering provides representation; Universal Turing Machines enable simulation/reasoning; computable predicates are evaluable through explicit computation or bounded proof search. Since the predictive cycle together with the Logical-Structural Assumptions generates Turing-completeness, any such system possesses Property R. □
+**Corollary A.0.1 (Property R from the Uniform Predictive Model Class)**
+Any uniform predictive model class satisfying the Logical-Structural Assumptions and allowing arbitrarily large finite memory and composition depth possesses Property R relative to any formal arithmetic $\mathcal F$ capable of coding finite bit strings, circuits, and bounded computations.
+
+*Proof.* By Theorem A.0.1, for every Turing machine $M$ and finite time bound $T$, the model class contains a uniformly specified Boolean circuit that simulates the first $T$ steps of $M$. A standard Gödel coding in $\mathcal F$ represents finite bit strings, circuit descriptions, machine descriptions, and bounded execution histories. Thus the model class can:
+
+1. represent states, model descriptions, predictions, and computation histories by finite codes;
+2. simulate or reason about any finite bounded computation by the circuit family of Theorem A.0.1;
+3. evaluate bounded predicates about outputs, failures, and prediction accuracy by composing the corresponding Boolean predicate circuit with the simulation circuit.
+
+For unbounded predicates, Property R requires the representability of the relevant partial computation and its finite proof/search stages, not completion of an undecidable infinite search. Therefore the uniform predictive model class has the representational, simulation, and predicate-evaluation machinery required by Definition 10. ∎
 
 **Significance:** This derivation is independent of the Self-Referential Paradox of Accurate Prediction. Property R is established before SPAP is invoked, providing a non-circular foundation. The logical sequence is:
 
@@ -110,25 +170,86 @@ The dynamics are governed by the **Prediction Optimization Problem (POP, Axiom 1
 Effective Operational Property R is the capability of the MPU network, resulting dynamically from POP/PCE optimization, to execute the specific classes of representational, simulation/reasoning, and predicate evaluation tasks required for SPAP (Theorems A.1.1, A.1.3) and RUD (Theorems A.2.3, A.2.4) diagonalization arguments with error probability per logical step $p_{\text{err}}^*$, where $p_{\text{err}}^*$ is the unique minimizer of the PCE-derived error-related potential $V_{\text{tot}}(p_{\text{err}}) = V_{\text{rel}}(p_{\text{err}}) + V_{\text{err}}(p_{\text{err}})$. This ensures that for computations of finite logical depth $T$, the probability of successful execution is sufficiently high for the logical proofs to apply.
 
 **Theorem A.0.2 (PCE Dynamically Enforces Effective Property R)**
-Under the framework's core axioms (POP, PCE, ND-RID dynamics) and the **Assumption of QEC Compatibility** (the baseline ND-RID noise is sufficiently local, suitable quantum error correction codes are implementable within the MPU network, and baseline error $p_{\text{err},0}$ is below the fault-tolerance threshold $p_{\text{th}}$), the PCE optimization dynamics drive the scalar error-rate parameter to a unique optimal value where:
-1.  The optimal error rate per logical operation $p_{\text{err}}^* > 0$ exists uniquely and satisfies robustness conditions ($p_{\text{err}}^* < 1/2$) required for noise-robust SPAP (Theorems A.1.2, A.1.4) and RUD (Theorems A.2.3, A.2.4).
-2.  The MPU network effectively possesses Operational Property R, enabling reliable execution of the representational, simulation/reasoning, and predicate evaluation tasks required for the framework's core logical arguments.
+Under the framework's core axioms (POP, PCE, ND-RID dynamics), the refresh-branch implementation condition of Lemma A.0.1, and the **Assumption of QEC Compatibility** (the baseline ND-RID noise is sufficiently local, suitable quantum error correction codes are implementable within the MPU network, and the baseline error satisfies $0<p_{\mathrm{err},0}<p_{\mathrm{th}}$), the PCE optimization dynamics drive the scalar error-rate parameter to an optimal value where:
+1.  The optimal error rate per logical operation $p_{\mathrm{err}}^*>0$ exists; it is unique under Dominant Cost Convexity and satisfies robustness conditions ($p_{\mathrm{err}}^*<1/2$ for sufficiently large protected computation windows) required for noise-robust SPAP (Theorems A.1.2, A.1.4) and RUD (Theorems A.2.3, A.2.4).
+2.  The MPU network effectively possesses Operational Property R for the finite representational, simulation/reasoning, and predicate-evaluation tasks whose working-memory, QEC-overhead, and circuit-execution resources are supplied by the network family.
 
 **Proof Structure.** The derivation proceeds through four stages:
 
 **Stage 1: Baseline Error is Strictly Positive**
 ND-RID Implementation of Logical Gates: A logical gate $G_{\text{logic}}$ is realized by a sequence of elementary ND-RID channels. The ideal error-free implementation corresponds to unitary $\mathcal{U}_{\text{ideal}}$. The actual physical channel is the composition $\mathcal{E}_{\text{actual}} = \mathcal{E}_{N_k} \circ \cdots \circ \mathcal{E}_{N_1}$.
 
-**Lemma A.0.1 (Contractivity of Composite Channel):** Each elementary ND-RID channel $\mathcal{E}_{N_j}$ is strictly contractive in trace distance with factor $f_{\text{RID}}(j) < 1$ (Lemma E.1). The composite channel has contractivity factor $f_{\text{actual}} \leq \prod_j f_{\text{RID}}(j) < 1$.
-*Proof.* Chain rule for trace distance under sequential contractive maps. □
-
-**Definition A.0.2 (Baseline Logical Gate Error):** The inherent error probability of uncorrected implementation relative to ideal gate is:
+**Lemma A.0.1 (Contractivity of Composite Refresh-Branch Channel):** Suppose the uncorrected physical implementation of a nontrivial logical gate contains elementary ND-RID channels
 $$
-p_{\text{err},0} := \sup_{\rho_{\text{in}}} \tfrac{1}{2} \|\mathcal{E}_{\text{actual}}(\rho_{\text{in}}) - \mathcal{U}_{\text{ideal}}(\rho_{\text{in}})\|_1 \quad \text{(A.0.2)}
+\mathcal E_{N_1},\ldots,\mathcal E_{N_k}
+$$
+and at least one retained elementary step lies on the refresh/minorization branch of Lemma E.1. That is, for each retained step there is a trace-distance Lipschitz factor $f_j\le1$, and for at least one index $j_*$,
+$$
+f_{j_*}<1.
+$$
+Then the composite channel
+$$
+\mathcal E_{\mathrm{actual}}
+=
+\mathcal E_{N_k}\circ\cdots\circ\mathcal E_{N_1}
+$$
+has contraction factor
+$$
+f_{\mathrm{actual}}
+\le
+\prod_{j=1}^k f_j
+<
+1.
 $$
 
-**Theorem A.0.3 (Strictly Positive Baseline Error):** If implementation involves at least one ND-RID step, $p_{\text{err},0} > 0$.
-*Proof.* By Lemma E.1, $\mathcal{E}_{\text{actual}}$ is strictly contractive ($f_{\text{actual}} < 1$). Ideal unitary $\mathcal{U}_{\text{ideal}}$ is an isometry preserving trace distance ($f_{\mathcal{U}} = 1$). Since $f_{\text{actual}} < 1$, $\mathcal{E}_{\text{actual}} \neq \mathcal{U}_{\text{ideal}}$. Therefore, there exists input state $\rho_{\text{in}}$ such that $\mathcal{E}_{\text{actual}}(\rho_{\text{in}}) \neq \mathcal{U}_{\text{ideal}}(\rho_{\text{in}})$, giving strictly positive trace distance. Thus $p_{\text{err},0} > 0$. □
+*Proof.* For any density operators $\rho,\sigma$,
+$$
+D_{\mathrm{tr}}(\mathcal E_{N_j}(\rho),\mathcal E_{N_j}(\sigma))
+\le
+f_jD_{\mathrm{tr}}(\rho,\sigma).
+$$
+Applying this inequality successively gives
+$$
+D_{\mathrm{tr}}(\mathcal E_{\mathrm{actual}}(\rho),\mathcal E_{\mathrm{actual}}(\sigma))
+\le
+\left(\prod_{j=1}^k f_j\right)D_{\mathrm{tr}}(\rho,\sigma).
+$$
+Since at least one factor is strictly smaller than $1$ and all factors are at most $1$, the product is strictly smaller than $1$. ∎
+
+**Definition A.0.2 (Baseline Logical Gate Error):** The inherent error probability of uncorrected implementation relative to the ideal gate is
+$$
+p_{\mathrm{err},0}
+:=
+\sup_{\rho_{\mathrm{in}}}
+\frac12
+\left\|
+\mathcal E_{\mathrm{actual}}(\rho_{\mathrm{in}})
+-
+\mathcal U_{\mathrm{ideal}}(\rho_{\mathrm{in}})
+\right\|_1.
+\tag{A.0.2}
+$$
+
+**Theorem A.0.3 (Strictly Positive Baseline Error on the Refresh-Branch Implementation):** If the uncorrected implementation satisfies Lemma A.0.1, then
+$$
+p_{\mathrm{err},0}>0.
+$$
+
+*Proof.* The ideal unitary channel $\mathcal U_{\mathrm{ideal}}$ is a trace-distance isometry:
+$$
+D_{\mathrm{tr}}(\mathcal U_{\mathrm{ideal}}(\rho),\mathcal U_{\mathrm{ideal}}(\sigma))
+=
+D_{\mathrm{tr}}(\rho,\sigma)
+$$
+for all $\rho,\sigma$. By Lemma A.0.1, $\mathcal E_{\mathrm{actual}}$ is strictly contractive with factor $f_{\mathrm{actual}}<1$. Therefore $\mathcal E_{\mathrm{actual}}$ cannot equal $\mathcal U_{\mathrm{ideal}}$ as a channel.
+
+If $p_{\mathrm{err},0}=0$, then
+$$
+\mathcal E_{\mathrm{actual}}(\rho)
+=
+\mathcal U_{\mathrm{ideal}}(\rho)
+$$
+for every density operator $\rho$. Density operators affinely span the real vector space of Hermitian trace-one operators, and their differences span the traceless Hermitian operators. By linearity, equality on all density operators implies equality of the two channels on the full operator space, contradicting the preceding paragraph. Hence some input state has nonzero output trace distance, and the supremum in (A.0.2) is strictly positive. ∎
 
 **Stage 2: Cost of Achieving Reliability**
 Reducing error rate below baseline requires implementing error correction protocols, incurring complexity costs.

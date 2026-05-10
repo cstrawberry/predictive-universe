@@ -151,33 +151,176 @@ For observers with finite resources operating over finite time, complete informa
 $$t_{extract} \gg t_{evap}$$
 where $t_{extract}$ is the time needed to extract information at rate $C_{PIC}$ and $t_{evap}$ is the evaporation timescale.
 
-However, **unitarity is preserved globally** through the MPU network substrate. The apparent information loss emerges from the perspectival limitations of local observers, not from fundamental loss of quantum coherence. This structural conservation statement does not require the approximate $k$-design scrambling branch; that branch is required only for the Page-curve estimate of Section K.3.5. This aligns with recent developments in holography and the island formula (Almheiri et al. 2020), providing a complementary information-theoretic foundation.
+However, **retained information is not deleted globally** through the MPU network substrate.
+
+**Theorem K.3.3a (Retained Horizon No-Deletion).** Let $\mathcal H_{\mathrm{tot}}(t)$ be the finite-response Hilbert representative of the retained black-hole-plus-radiation branch at time $t$, and let
+$$
+U_{t_1t_0}:\mathcal H_{\mathrm{tot}}(t_0)\to\mathcal H_{\mathrm{tot}}(t_1)
+$$
+be the global retained microscopic update supplied by the MPU network substrate on that branch. Suppose $U_{t_1t_0}$ is an isometry, unitary when the retained total Hilbert dimension is unchanged. Let $\mathcal A_{\mathrm{ret}}(t_0)\subset\mathcal B(\mathcal H_{\mathrm{tot}}(t_0))$ be the finite retained response algebra at $t_0$. Define the Heisenberg transport
+$$
+\iota_{t_1t_0}(A)
+=
+U_{t_1t_0} A U_{t_1t_0}^{\dagger}
+\qquad
+(A\in\mathcal A_{\mathrm{ret}}(t_0)).
+$$
+Then $\iota_{t_1t_0}$ is injective. Consequently no two distinct retained response operators at $t_0$ are identified by the global horizon evolution.
+
+*Proof.* Let $A,B\in\mathcal A_{\mathrm{ret}}(t_0)$ and suppose
+$$
+\iota_{t_1t_0}(A)=\iota_{t_1t_0}(B).
+$$
+Then
+$$
+U_{t_1t_0}(A-B)U_{t_1t_0}^{\dagger}=0.
+$$
+Multiplying on the left by $U_{t_1t_0}^{\dagger}$ and on the right by $U_{t_1t_0}$ gives
+$$
+U_{t_1t_0}^{\dagger}U_{t_1t_0}(A-B)U_{t_1t_0}^{\dagger}U_{t_1t_0}=0.
+$$
+Since $U_{t_1t_0}$ is an isometry,
+$$
+U_{t_1t_0}^{\dagger}U_{t_1t_0}=I,
+$$
+hence
+$$
+A-B=0.
+$$
+Therefore $A=B$, so $\iota_{t_1t_0}$ is injective. If two retained response classes were deleted into one class by the global update, two distinct retained response operators would have the same Heisenberg image, contradicting injectivity. ∎
+
+This theorem is the structural conservation layer. The injectivity of $\iota_{t_1t_0}$ asserts that no two distinct retained response classes already present at $t_0$ are merged by the global update; it does not assert that the image $\iota_{t_1t_0}(\mathcal A_{\mathrm{ret}}(t_0))$ exhausts $\mathcal B(\mathcal H_{\mathrm{tot}}(t_1))$, and when the retained Hilbert dimensions differ the image is in general a proper subalgebra. The theorem also does not by itself assert exterior recovery from a coarse exterior algebra. Exterior recovery is the stronger existence of a response-preserving reconstruction map
+$$
+R_{\mathrm{ext}}\circ\iota_{t_1t_0}
+=
+\mathrm{id}
+$$
+on the retained interior subalgebra, and Page-curve behavior is stronger still because it requires the entropy/scrambling input of Section K.3.5. The apparent information loss emerges from the perspectival limitations of local observers, not from fundamental deletion of retained finite-response classes already encoded at $t_0$.
 
 ### K.3.4 Testable Predictions and Open Questions
 
-The PU framework makes specific predictions about black hole information dynamics:
-1. **Modified Hawking Spectrum:** Small deviations from perfect thermality encoding information, suppressed by factor $e^{-S_{BH}}$
-2. **Page Time Modification:** Transition from entropy increase to decrease occurs when reflexive extraction cost equals remaining entropy
-3. **Horizon Complexity Scaling:** Computational complexity of extracting late-time Hawking quanta scales as $\exp(C \cdot S_{BH})$ where $C$ is a universal constant related to $\varepsilon$
+The PU framework makes layer-separated black-hole diagnostics. Each row records the branch on which it is theorem-level, the certificate that would promote the next branch, and the observation that would falsify the branch.
+
+1. **Modified Hawking Spectrum.**
+   *Theorem-level branch:* the retained horizon-correlation branch where outgoing radiation couples to retained horizon response classes (Theorem K.3.3a). On this branch, finite deviations from perfect thermality are suppressed by the horizon capacity scale $S_{BH}$ supplied by Theorem E.6.
+   *Promotion certificate (to a quantitative spectral law):* an accepted emission-channel certificate $\mathfrak C_{\mathrm{emit}}$ specifying the horizon moment channel $\mathcal M_t$, the certified emission mismatch $\varepsilon_{\mathrm{emit}}$, and the protocol bandwidth before comparison.
+   *Falsifier:* a measured emission spectrum strictly thermal to a precision exceeding the certified $\varepsilon_{\mathrm{emit}}$ ceiling on the accepted branch, or non-thermal structure inconsistent with the moment-channel form (K.3d.7)–(K.3d.8).
+
+2. **Page-Time Branch.**
+   *Theorem-level branch:* retained no-deletion (Theorem K.3.3a), which holds without scrambling input.
+   *Promotion certificate (to a von Neumann Page curve):* a trace-coupled horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ supplying the coupling error in (K.3.1). Such a certificate may be appended to an accepted horizon moment-operator certificate $\mathfrak C_{\mathrm{Hdesign}}$ of Definition K.3d.4 or to the Golay-expander certificate of Definition K.3d.4a, but a bare moment certificate supplies only the Page-purity law of Corollary K.3.1 unless it also carries this trace-coupled promotion.
+   *Falsifier:* on a system carrying an accepted $\mathfrak C_{\mathrm{PageTV}}$, a measured radiation entropy that exits the band (K.3.2) by more than $\varepsilon_{\mathrm{Page}}\ln(d_E-1)+h_2(\varepsilon_{\mathrm{Page}})$ at the certified $d_E,d_L$.
+
+3. **Horizon Complexity Scaling.**
+   *Theorem-level branch:* the finite-resource Perspectival Information Channel and reflexive-update cost bounds of Appendix K.3.6 and Appendix J on a fixed protocol class.
+   *Promotion certificate (to an exponential law $\exp(C\cdot S_{BH})$):* a registered local sequential extraction protocol class together with a fixed constant $C$ tied to the SPAP/Landauer floor $\varepsilon_0=\ln2$ before comparison.
+   *Falsifier:* a registered protocol that decodes late-time Hawking quanta in time polynomial in $S_{BH}$ on the accepted branch, contradicting the registered exponential constant $C$.
 
 ### K.3.5 Consistency with the Page Curve
 
-On the approximate unitary $k$-design scrambling branch, the PU framework is consistent with Page-curve behavior for the entanglement entropy of the Hawking radiation. Let $S_E(t)$ denote the von Neumann entropy of the early radiation subsystem at time $t$. The structural information-conservation result is independent of this scrambling branch; the Page-curve estimate is not.
+On the horizon entropy-continuity branch, the PU framework is consistent with Page-curve behavior for the entanglement entropy of the Hawking radiation. Let $S_E(t)$ denote the von Neumann entropy of the early radiation subsystem at time $t$. The structural information-conservation result is independent of this trace-coupled promotion branch; the von Neumann Page-curve estimate is not. Bare moment-design control supplies the Page-purity law of Corollary K.3.1 unless it is strengthened by the trace-coupled certificate of Definition K.3d.4c.
 
-**Theorem K.3 (Page Curve Consistency on the Approximate $k$-Design Branch).** Under the assumption that the black hole's internal MPU dynamics, governed by PCE optimization, generates an approximate unitary $k$-design for sufficiently large $k$, the expected entanglement entropy satisfies:
-$$\left|\mathbb{E}[S_E(t)] - S_{\text{Page}}(d_E(t), d_L(t))\right| \leq \varepsilon_t$$
-where $d_E(t)$ and $d_L(t)$ are the dimensions of the early and late-time radiation Hilbert spaces, $S_{\text{Page}}(m,n) = \sum_{k=n+1}^{mn}\frac{1}{k} - \frac{m-1}{2n}$ for $m \leq n$ is the exact average entropy for Haar-random unitaries, and the error term $\varepsilon_t$ is bounded by the deviation from true Haar-randomness.
+**Theorem K.3 (Page Curve Consistency on the Horizon Entropy-Continuity Branch).** Let $d_E(t)\ge2$ and $d_L(t)$ be the early-radiation and late/interior Hilbert dimensions on a finite evaporation branch. Let $S_{\mathrm{Page}}(d_E,d_L)$ denote the exact Haar-average entropy of the smaller subsystem:
+$$
+S_{\mathrm{Page}}(d_E,d_L)
+=
+\sum_{j=d_>(t)+1}^{d_E(t)d_L(t)}
+\frac1j
+-
+\frac{d_<(t)-1}{2d_>(t)},
+$$
+where
+$$
+d_<(t)=\min\{d_E(t),d_L(t)\},
+\qquad
+d_>(t)=\max\{d_E(t),d_L(t)\}.
+$$
+Assume the horizon scrambling branch supplies a finite entropy-continuity coupling certificate: there is a coupling of the PU reduced early-radiation state $\rho_E^{\mathrm{PU}}(t)$ and the Haar reduced state $\rho_E^{\mathrm{Haar}}(t)$ such that, almost surely,
+$$
+T_t
+:=
+\frac12
+\left\|
+\rho_E^{\mathrm{PU}}(t)-\rho_E^{\mathrm{Haar}}(t)
+\right\|_1
+\le
+\varepsilon_t,
+\qquad
+0\le\varepsilon_t\le1-\frac1{d_E(t)}.
+\tag{K.3.1}
+$$
+Then
+$$
+\left|
+\mathbb E\,S(\rho_E^{\mathrm{PU}}(t))
+-
+S_{\mathrm{Page}}(d_E(t),d_L(t))
+\right|
+\le
+\varepsilon_t\ln(d_E(t)-1)+h_2(\varepsilon_t),
+\tag{K.3.2}
+$$
+where
+$$
+h_2(x)=-x\ln x-(1-x)\ln(1-x)
+$$
+is binary entropy in nats, with the convention $h_2(0)=h_2(1)=0$. At the boundary $d_E(t)=2$, the factor $\ln(d_E(t)-1)=0$ and the entropy bound (K.3.2) reduces to $h_2(\varepsilon_t)$; in particular when $\varepsilon_t=0$ the right-hand side is $0$, with no implicit $0\cdot\infty$ ambiguity.
 
-*Proof.* Under (A1), the unitary evolution on ${\cal H}_{\rm BH}\otimes{\cal H}_{\rm rad}$ forms an $\varepsilon_k$-approximate unitary $k$-design with $k\ge 2$. Page's theorem gives the Haar-averaged radiation entropy for a random pure state on ${\cal H}_{\rm BH}\otimes{\cal H}_{\rm rad}$ as
+If the accepted horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ of Definition K.3d.4c supplies the stronger trace-coupled error
 $$
-S_{\rm Page}(t)=\sum_{j=d_L(t)+1}^{d_E(t)d_L(t)}\frac{1}{j}-\frac{d_E(t)-1}{2d_L(t)},
-\qquad (d_E(t)\le d_L(t)),
+\varepsilon_t
+\le
+\varepsilon_{\mathrm{Page}},
 $$
-and the symmetric expression for $d_E(t)>d_L(t)$ [Page 1993]. For an $\varepsilon_k$-approximate $k$-design with $k\ge 2$, the second moments of the reduced state match Haar up to $O(\varepsilon_k)$ [Brandão, Harrow & Horodecki 2016], implying that the expected purity ${\mathbb E}\,{\rm tr}(\rho_E^2)$ differs from the Haar value by $O(\varepsilon_k)$. Using $S(\rho_E)\ge -\ln{\rm tr}(\rho_E^2)$ and the standard continuity bound for entropy in terms of the Schatten-2 deviation from maximally mixed (via $\|X\|_1\le \sqrt{d_E}\|X\|_2$ and Audenaert's inequality), one obtains
+then (K.3.2) holds with $\varepsilon_{\mathrm{Page}}$ in place of $\varepsilon_t$. A bare moment-design certificate without this trace-coupled promotion supplies Corollary K.3.1 rather than the von Neumann entropy estimate.
+
+*Proof.* Page's theorem gives
 $$
-{\mathbb E}\,S_E(t)=S_{\rm Page}(t)+O(\varepsilon_k)+O\!\left(\frac{1}{\min\{d_E(t),d_L(t)\}}\right),
+\mathbb E\,S(\rho_E^{\mathrm{Haar}}(t))
+=
+S_{\mathrm{Page}}(d_E(t),d_L(t)).
 $$
-which reproduces the Page-curve behavior: growth until $d_E(t)\sim d_L(t)$ and subsequent decrease on the approximate $k$-design branch. $\square$
+By the coupling certificate, $T_t\le\varepsilon_t\le1-1/d_E(t)$ almost surely. Audenaert's sharp Fannes inequality gives, for every coupled pair,
+$$
+\left|
+S(\rho_E^{\mathrm{PU}}(t))
+-
+S(\rho_E^{\mathrm{Haar}}(t))
+\right|
+\le
+T_t\ln(d_E(t)-1)+h_2(T_t).
+$$
+On $[0,1-1/d_E(t)]$, the function $x\mapsto x\ln(d_E(t)-1)+h_2(x)$ is increasing, so
+$$
+\left|
+S(\rho_E^{\mathrm{PU}}(t))
+-
+S(\rho_E^{\mathrm{Haar}}(t))
+\right|
+\le
+\varepsilon_t\ln(d_E(t)-1)+h_2(\varepsilon_t).
+$$
+Taking expectations and substituting Page's theorem gives (K.3.2). The final statement follows by monotonicity of the same right-hand side in the certified error parameter. ∎
+
+**Corollary K.3.1 (Second-Moment Page-Purity Closure).** If the accepted horizon design certificate supplies only second-moment control, then the theorem-level conclusion is the Haar Page purity law rather than the full von Neumann entropy law:
+$$
+\left|
+\mathbb E\,\operatorname{tr}\big((\rho_E^{\mathrm{PU}}(t))^2\big)
+-
+\frac{d_E(t)+d_L(t)}{d_E(t)d_L(t)+1}
+\right|
+\le
+\varepsilon^{(2)}_t.
+\tag{K.3.3}
+$$
+
+*Proof.* The Haar average purity of a subsystem of a random pure state on $\mathbb C^{d_E}\otimes\mathbb C^{d_L}$ is
+$$
+\mathbb E_{\mathrm{Haar}}\operatorname{tr}(\rho_E^2)
+=
+\frac{d_E+d_L}{d_Ed_L+1}.
+$$
+A second-moment design certificate is exactly a bound on the deviation of degree-$(2,2)$ polynomial observables from their Haar averages. The purity $\operatorname{tr}(\rho_E^2)$ is such a degree-$(2,2)$ observable. Applying the certificate to this observable gives (K.3.3). ∎
 
 **Corollary K.3a (Black-Hole Edge Modes as Predictive Anomaly Inflow).** On a horizon branch where exterior predictive descriptions are quotiented by gauge/frame redundancies but interior degrees of freedom are operationally inaccessible, exterior descent is consistent only when the total anomaly class cancels across the horizon interface:
 $$
@@ -429,6 +572,29 @@ N_t\gamma_t^{G}
 $$
 Since $1-x\le e^{-x}$ for $x\in[0,1]$, (K.3d.4b.5) follows. ∎
 
+**Definition K.3d.4c (Horizon Entropy-Continuity Promotion Certificate).** A horizon entropy-continuity promotion certificate is a finite record
+$$
+\mathfrak C_{\mathrm{PageTV}}
+=
+(\mathfrak C_{\mathrm{base}},d_E,d_L,\varepsilon_{\mathrm{Page}},\chi_{\mathrm{PageTV}})
+\tag{K.3d.4c.1}
+$$
+where $\mathfrak C_{\mathrm{base}}$ is either an accepted horizon moment-operator certificate $\mathfrak C_{\mathrm{Hdesign}}$ of Definition K.3d.4 or an accepted Golay-expander certificate $\mathfrak C_{\mathrm{HGol}}$ of Definition K.3d.4a. The base certificate supplies the registered moment/Golay branch only; the additional promotion data, not $\mathfrak C_{\mathrm{base}}$ by itself, certify a coupling of the PU reduced early-radiation state and the Haar reduced state satisfying
+$$
+\frac12
+\left\|
+\rho_E^{\mathrm{PU}}(t)-\rho_E^{\mathrm{Haar}}(t)
+\right\|_1
+\le
+\varepsilon_{\mathrm{Page}},
+\qquad
+0\le\varepsilon_{\mathrm{Page}}\le1-\frac1{d_E(t)}
+\tag{K.3d.4c.2}
+$$
+for the registered evaporation time and dimensions. The forward-lock $\chi_{\mathrm{PageTV}}$ records that the coupling protocol, dimension ledger, norm, and error ceiling were fixed before Page-curve comparison. This promotion certificate is stronger than a moment-design certificate: a bare $t_{\mathrm{des}}=2$ moment certificate controls the Haar Page-purity observable, while the von Neumann entropy estimate of Theorem K.3 requires the trace-coupled condition (K.3d.4c.2).
+
+**Remark K.3d.4c.a (Status of the Promotion Data).** The trace-coupled bound (K.3d.4c.2) is an additional certified hypothesis, not a consequence of the base moment-design certificate alone. A derivation of (K.3d.4c.2) from $\mathfrak C_{\mathrm{Hdesign}}$ would have to supply an explicit high-moment-to-trace-norm upgrade theorem, including the required scaling of $t_{\mathrm{des}}$ in $d_E$ and the associated error constants; in common polynomial-approximation routes this requires $t_{\mathrm{des}}$ to grow with the relevant dimension parameter, often at least logarithmically in $d_E$. Alternatively, the certificate may supply a separate dynamical coupling or trace-mixing estimate directly in trace norm. The branch organization therefore records $\mathfrak C_{\mathrm{PageTV}}$ as admissible promotion data, not as freely available from $\mathfrak C_{\mathrm{base}}$. Supplying such a trace-coupled promotion certificate from first principles for a concrete physical horizon remains a branch-level development task.
+
 **Theorem K.3d.5 (Certified Horizon $k$-Design Mixing).** If $\mathfrak C_{\mathrm{Hdesign}}$ is accepted, then after $N_t$ horizon update steps the moment channel obeys
 $$
 \left\|
@@ -440,12 +606,12 @@ $$
 $$
 The corresponding radiation channel is an
 $$
-\varepsilon_{\mathrm{Page}}
+\varepsilon_{\mathrm{mom}}
 =
 (1-\gamma_t)^{N_t}+\varepsilon_{\mathrm{emit}}
 \tag{K.3d.8}
 $$
-approximate $t_{\mathrm{des}}$-design input for Theorem K.3.
+approximate $t_{\mathrm{des}}$-design input in moment norm. This moment bound is sufficient for the Page-purity law of Corollary K.3.1 when the controlled observable is $\operatorname{tr}(\rho_E^2)$. It becomes a von Neumann Page-curve input for Theorem K.3 only when paired with the trace-coupled promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ of Definition K.3d.4c, in which case the certified trace error is denoted $\varepsilon_{\mathrm{Page}}$.
 
 *Proof.* Since $\Pi_t^{\mathrm{Haar}}$ is the Haar fixed-point projection,
 $$
@@ -474,13 +640,13 @@ The convolution law for independent horizon update steps gives
 $$
 \mathcal M_t(\nu_H^{*N_t})=\left(\mathcal M_t(\nu_H)\right)^{N_t},
 $$
-so (K.3d.7) follows. The emission channel differs from the certified horizon moment channel by at most $\varepsilon_{\mathrm{emit}}$ in the same moment norm, hence the triangle inequality gives (K.3d.8). ∎
+so (K.3d.7) follows. The emission channel differs from the certified horizon moment channel by at most $\varepsilon_{\mathrm{emit}}$ in the same moment norm, hence the triangle inequality gives the moment-norm error (K.3d.8). Moment-norm control alone does not imply the trace-coupled entropy-continuity estimate (K.3.1); that stronger conclusion is exactly the additional content of Definition K.3d.4c. ∎
 
-**Corollary K.3d.6 (Page-Curve Promotion Gate).** The Page-curve statement of Theorem K.3 is theorem-level only on a branch carrying an accepted $\mathfrak C_{\mathrm{Hdesign}}$ with $t_{\mathrm{des}}\ge2$ and certified $\varepsilon_{\mathrm{Page}}$. Without such a certificate, the structural information-conservation, edge-inflow, and island-blanket results remain theorem-level on their stated branches, while the Page-curve shape remains a scrambling-branch result.
+**Corollary K.3d.6 (Page-Curve Promotion Gate).** The von Neumann Page-curve statement of Theorem K.3 is theorem-level only on a branch carrying an accepted horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ of Definition K.3d.4c. A bare accepted moment-design certificate $\mathfrak C_{\mathrm{Hdesign}}$ with $t_{\mathrm{des}}\ge2$ supplies moment control; for $t_{\mathrm{des}}=2$ the closed theorem-level output is the Page-purity law of Corollary K.3.1. Without the trace-coupled promotion certificate, the structural information-conservation, edge-inflow, and island-blanket results remain theorem-level on their stated branches, while the full von Neumann Page-curve shape remains a trace-coupled entropy-continuity branch result.
 
-*Proof.* Theorem K.3 assumes an approximate unitary $k$-design with $k\ge2$. Theorem K.3d.5 supplies that hypothesis with explicit error $\varepsilon_{\mathrm{Page}}$ precisely when an accepted certificate exists. If no such certificate exists, Theorem K.3 lacks its design input and cannot be promoted beyond its stated branch condition. ∎
+*Proof.* Theorem K.3 assumes the trace-distance coupling (K.3.1), not merely equality of finitely many Haar moments. Theorem K.3d.5 supplies a certified moment-norm estimate; applying that estimate to the degree-$(2,2)$ purity observable gives Corollary K.3.1. To use Audenaert's entropy-continuity inequality in Theorem K.3, one additionally needs the trace-coupled bound certified by Definition K.3d.4c. Therefore the full entropy Page-curve estimate is promoted exactly on the $\mathfrak C_{\mathrm{PageTV}}$ branch. ∎
 
-**Current Status:** The conceptual framework for black hole information conservation is established, with key components (SPAP dynamics, thermodynamic bounds, perspectival encoding, Page curve consistency on the certified horizon-design branch, horizon edge-inflow consistency, and the finite predictive island Markov-blanket formula) rigorously derived on their stated branches. Detailed calculations of information extraction rates, explicit construction of the Perspectival Information Channel capacity as a function of observer resources, accepted horizon moment-operator design certificates, and the continuum quantum-extremal-surface representation of the finite Markov-blanket minimizer remain branch-level development tasks.
+**Current Status:** The conceptual framework for black hole information conservation is established, with key components (SPAP dynamics, thermodynamic bounds, perspectival encoding, retained no-deletion, horizon edge-inflow consistency, Page-purity control on the certified moment-design branch, and the finite predictive island Markov-blanket formula) rigorously derived on their stated branches. The full von Neumann Page-curve estimate is theorem-level only on the stronger trace-coupled entropy-continuity promotion branch of Definition K.3d.4c. Detailed calculations of information extraction rates, explicit construction of the Perspectival Information Channel capacity as a function of observer resources, accepted horizon moment-operator design certificates, accepted $\mathfrak C_{\mathrm{PageTV}}$ certificates, and the continuum quantum-extremal-surface representation of the finite Markov-blanket minimizer remain branch-level development tasks.
 
 ### K.3.6 Finite-Budget Predictive Uncertainty Gate
 
@@ -700,7 +866,7 @@ The resolution employs the geometric structures established in earlier sections:
 | Active dimension | $a$ | 2 | Theorem Z.1 |
 | Inactive dimension | $b$ | $d_0 - a = 6$ | Definition |
 | Interface modes | $M$ | $2ab = 24$ | Theorem Z.5 |
-| Golay code dimension | $k$ | $M/2 = 12$ | Theorem Z.13 |
+| Golay code dimension | $k$ | $M/2=12$ on the predictive-recovery MacWilliams branch | Def Z.13b.0; Thm Z.13b.0a; Thm Z.13b |
 
 **Definition K.6.2 (PCE-Attractor State).**
 $$\rho_0 = \frac{1}{a}I_a \oplus 0_b = \frac{1}{2}\begin{pmatrix} I_2 & 0 \\ 0 & 0_6 \end{pmatrix}$$

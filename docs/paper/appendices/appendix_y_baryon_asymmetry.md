@@ -795,7 +795,7 @@ This numerical evaluation is validation-level because it depends on the Appendix
 | $d_0 = 2^{K_0}$ | 8 | Theorem 23 |
 | $(a, b)$ | $(2, 6)$ | Definition 15a |
 | $M = 2ab$ | 24 | Theorem Z.5 |
-| $k = M/2$ | 12 | Golay code dimension |
+| $k=M/2$ | 12 | Golay code dimension on the predictive-recovery MacWilliams branch (Def Z.13b.0; Thm Z.13b.0a; Thm Z.13b) |
 | $\kappa_{EW}$ | 38.5 | Theorem T.5 |
 | $\varepsilon$ | $\ln 2 = 0.6931$ | Theorem 31 |
 | $N_g$ | 3 | Theorem R.3.4 |

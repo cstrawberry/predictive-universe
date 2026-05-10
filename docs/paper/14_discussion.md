@@ -896,9 +896,12 @@ By Theorems 10–11, self-referential prediction with finite memory entails SPAP
 
 The Heisenberg uncertainty principle and the second law of thermodynamics share a unified origin in the logical structure of self-referential prediction. Both arise from SPAP: the impossibility of perfect self-referential prediction under finite resources. The uncertainty principle describes the *instantaneous* predictability limit; the second law describes the *sequential* distinguishability limit. They are unified by:
 
-1. **Common source:** The SPAP entropy $\varepsilon_0=\ln2$ (Theorem 31)
-2. **Common mechanism:** Strict contractivity $f_{RID} < 1$ of ND-RID channels (Lemma E.1)
-3. **Common consequence:** Bounded information capacity $C_{\max} < \ln d_0$ (Theorem E.2)
+1. **Common source:** the finite self-referential SPAP obstruction.
+2. **Simultaneous projection:** Logical Indeterminacy descends to complementary sharp ledgers, then to noncommuting Hilbert representatives and the Robertson uncertainty inequality.
+3. **Sequential projection:** the SPAP merge gives the structural entropy floor $\varepsilon_0=\ln2$ and, after physical instantiation, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$.
+4. **Capacity branches:** the completed reset-support branch gives $C_{\max}\le\ln d_0-\ln2$; refresh/minorization branches add $f_{\mathrm{RID}}<1$ and the strict capacity inequality $C_{\max}<\ln d_0$.
+
+Thus strict contractivity is not the common mechanism behind uncertainty and irreversibility. It is a sequential refresh-branch strengthening. The common mechanism is the SPAP obstruction itself, with uncertainty and thermodynamic irreversibility appearing as two finite-response projections of that obstruction.
 
 The identity explains why quantum and thermodynamic descriptions of nature are mutually consistent: they are not independent theories requiring reconciliation but dual windows onto a single SPAP-constrained reality.
 
@@ -1840,13 +1843,24 @@ The passive tier depends on a modeling hypothesis that is compatible with, but n
 
 *Proof.* Let $\Sigma$ be a finite or standard Borel configuration space and let $\Sigma_{\mathrm{adm}}\subseteq\Sigma$ denote the SPAP-admissible subset. Theorems 10–11 identify the diagonal obstruction for embedded Property-R predictors. Theorem M.10.3 supplies a lower-bound cost divergence as the SPAP gap closes, and Lemma P.16.1 packages the same divergence as an extended cost potential on candidate configurations. PCE uses this cost information to prefer lower-cost trajectories.
 
-A cost preference does not determine the null sets of a probability kernel. A support conclusion would require an implication of the form
+A cost preference does not determine the null sets of a probability kernel. A finite penalty cannot yield support exclusion. Indeed, if a Gibbs kernel has density
+$$
+dG_\beta(x)=Z_\beta^{-1}e^{-\beta V(x)}d\lambda(x)
+$$
+and a measurable forbidden set $B\subseteq\Sigma\setminus\Sigma_{\mathrm{adm}}$ satisfies $\lambda(B)>0$ with $V(x)<\infty$ on a subset of $B$ of positive $\lambda$-measure, then
+$$
+G_\beta(B)
+=
+Z_\beta^{-1}\int_B e^{-\beta V(x)}d\lambda(x)
+>0
+$$
+for every finite $\beta$. Therefore a support conclusion requires an implication of the form
 $$
 B\subseteq\Sigma\setminus\Sigma_{\mathrm{adm}}
 \quad\Longrightarrow\quad
 G_{\text{persp}}(B)=0,
 $$
-or an equivalent rule identifying infinite SPAP cost with zero kernel weight. No such implication is contained in Theorems 10–11, Theorem M.10.3, or the cost-gradient definition of PCE.
+or an equivalent hard-core rule identifying infinite SPAP cost with zero kernel weight. No such implication is contained in Theorems 10–11, Theorem M.10.3, or the cost-gradient definition of PCE.
 
 Equivalently, let $G_{\mathrm{adm}}$ be a kernel supported on $\Sigma_{\mathrm{adm}}$ and let $H_B$ be any probability kernel supported on a measurable set $B\subseteq\Sigma\setminus\Sigma_{\mathrm{adm}}$ that has not already been assigned zero weight by a separate support axiom. For $0<p<1$,
 $$
@@ -1989,9 +2003,69 @@ $$
 \operatorname{supp}G_{\mathrm{SPAP}}=\Sigma_{\mathrm{SPAP}}.
 \tag{14.5.8f.1}
 $$
-Thus the Environmental SPAP Hypothesis is derived on this datum rather than assumed.
+Thus the Environmental SPAP support statement is a theorem on the hard-core datum.
 
-*Proof.* The hard-core divergence and the total-variation Cauchy/tightness clause of Definition 14.5.8e imply that every open cylinder set whose closure lies outside $\Sigma_{\mathrm{SPAP}}$ has Gibbs weight tending to zero at the large-deviation rate determined by the limiting functional. The zero boundary-capacity condition prevents loss of mass to $\partial\Sigma_{\mathrm{SPAP}}$, which is precisely the weak-limit boundary-charging obstruction of Proposition 14.5.8c. Hence the restrictions of $G_W$ converge in total variation on retained cylinders to a measure carried by $\Sigma_{\mathrm{SPAP}}$. DLR consistency gives compatibility under window restriction, so the cylinder limits determine a unique global kernel. By the admissible-support noncollapse clause of Definition 14.5.8e, every nonempty retained cylinder intersecting $\Sigma_{\mathrm{SPAP}}$ has positive limiting weight. Therefore the support is exactly $\Sigma_{\mathrm{SPAP}}$. ∎
+*Proof.* Fix a retained operational cylinder $C$. By Definition 14.5.8e(8), the restricted measures $G_W|_C$ form a total-variation Cauchy net. Since finite signed measures on a fixed retained cylinder are complete in total variation norm, there is a unique finite measure $G_C$ such that
+$$
+\|G_W|_C-G_C\|_{\mathrm{TV}}\to0.
+\tag{14.5.8f.2}
+$$
+If $C\subseteq C'$ are retained cylinders, DLR consistency in Definition 14.5.8e(7) gives
+$$
+G_{C'}|_C=G_C.
+$$
+Therefore the family $\{G_C\}$ is projectively compatible on the retained cylinder algebra and determines a unique global retained kernel, denoted $G_{\mathrm{SPAP}}$.
+
+It remains to identify the support. Let $C_{\mathrm{out}}$ be a retained cylinder whose closure lies in $\Sigma\setminus\Sigma_{\mathrm{SPAP}}$. By hard-core divergence in Definition 14.5.8e(4), for every $R>0$ there exists $W_R$ such that, for all $W\ge W_R$ and all $x\in C_{\mathrm{out}}$,
+$$
+V_W(x)
+\ge
+\inf_{\Sigma_{\mathrm{SPAP},W}}V_W+R.
+$$
+Writing
+$$
+dG_W(x)=Z_W^{-1}e^{-\beta_WV_W(x)}d\lambda_W(x),
+$$
+the partition-function convergence and tightness clauses of Definition 14.5.8e give a finite comparison constant $A_{C_{\mathrm{out}}}$, independent of $W$ for all sufficiently large $W$, such that
+$$
+G_W(C_{\mathrm{out}})
+\le
+A_{C_{\mathrm{out}}}e^{-\beta_WR}.
+\tag{14.5.8f.3}
+$$
+This is the standard Gibbs comparison estimate: the numerator over $C_{\mathrm{out}}$ is suppressed by the displayed potential gap, while the admissible-support noncollapse and partition-function clauses give a nonvanishing admissible denominator on retained cylinders intersecting $\Sigma_{\mathrm{SPAP}}$. Since $\beta_W\to\infty$ by Definition 14.5.8e(2), (14.5.8f.3) implies
+$$
+G_{\mathrm{SPAP}}(C_{\mathrm{out}})=0.
+$$
+Thus
+$$
+\operatorname{supp}G_{\mathrm{SPAP}}\subseteq\Sigma_{\mathrm{SPAP}}.
+$$
+
+Conversely, let $C_{\mathrm{adm}}$ be any nonempty retained cylinder with
+$$
+C_{\mathrm{adm}}\cap\Sigma_{\mathrm{SPAP}}\ne\varnothing.
+$$
+Definition 14.5.8e(9) gives
+$$
+\liminf_WG_W(C_{\mathrm{adm}})>0.
+$$
+By total-variation convergence on retained cylinders,
+$$
+G_{\mathrm{SPAP}}(C_{\mathrm{adm}})
+=
+\lim_WG_W(C_{\mathrm{adm}})
+>0.
+$$
+Every retained neighborhood intersecting $\Sigma_{\mathrm{SPAP}}$ therefore has positive $G_{\mathrm{SPAP}}$-measure, so
+$$
+\Sigma_{\mathrm{SPAP}}\subseteq\operatorname{supp}G_{\mathrm{SPAP}}.
+$$
+Combining the two inclusions proves
+$$
+\operatorname{supp}G_{\mathrm{SPAP}}=\Sigma_{\mathrm{SPAP}}.
+$$
+∎
 
 **Corollary 14.5.8g (Passive-Residue Magnitude and Protocol Invariance).** On a hard-core perspective Gibbs branch, for any retained event $A$,
 $$
@@ -2064,7 +2138,7 @@ $$
 $$
 On this branch, $K_0=3$ together with the named local finite-response contracts (Landauer/PPI capacity, the Peirce-Grassmann tangent count, the predictive-recovery MacWilliams gate, and the Bures tangent-cell mode-channel contract) closes the discrete backbone exactly: no further discrete branch choice enters within the backbone itself. The packaging of these gates is not a single-source compression. Appendix R decomposes the proof graph into source roles $(\mathcal C_3,\mathcal C_{\mathrm{cap}},\mathcal C_{\mathrm{tan}},\mathcal C_{\mathrm{kis}})$ and downstream coherence invariants $(J_{\mathrm{top}},J_{\mathrm{Cl}},J_{\mathrm{ar}})$, and proves that the current source roles do not collapse into one supplied parent invariant.
 
-Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z Bures tangent-cell mode-channel contract, the backbone includes $D=4$ (Theorem Z.11), and predict-verify self-duality fixes the interface code dimension $k=12$ (Theorem Z.13). The abstract gauge algebra appears on the finite-response positive-marginal capacity branch of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the topological three-generation theorem on its anomaly+CP route (Theorem R.3.4), the exact pre-flavor family-redundancy realization (Proposition R.3.5.1a), and the $D_4$ triality/$E_8$/Leech compatibility record (Proposition R.4.2). Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The slogan "$K_0=3$ determines everything" should therefore be read precisely: on the minimal branch, $K_0=3$ together with the named local finite-response contracts closes the discrete backbone exactly and seeds later sectors through the contracts stated there. It is not used as a proof rule by itself; the paper uses the explicit finite-response contracts named in each sector.
+Downstream sectors do not all collapse to that single integer alone. Within the Appendix Z Bures tangent-cell mode-channel contract, the backbone includes $D=4$ (Theorem Z.11), and the predictive-recovery MacWilliams self-dual-rate gate fixes the interface code dimension $k=12$ (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b). The abstract gauge algebra appears on the finite-response positive-marginal capacity branch of Appendix G.8 (Theorem G.8.4b; Corollary G.8.4c). Appendix R gives the topological three-generation theorem on its anomaly+CP route (Theorem R.3.4), the exact pre-flavor family-redundancy realization (Proposition R.3.5.1a), and the $D_4$ triality/$E_8$/Leech compatibility record (Proposition R.4.2). Appendix Z fixes the Thomson-limit fine-structure constant through Theorem Z.26. The slogan "$K_0=3$ determines everything" should therefore be read precisely: on the minimal branch, $K_0=3$ together with the named local finite-response contracts closes the discrete backbone exactly and seeds later sectors through the contracts stated there. It is not used as a proof rule by itself; the paper uses the explicit finite-response contracts named in each sector.
 
 ### 14.6.2 What is conditional, convention-carried, or model-level
 

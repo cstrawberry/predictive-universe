@@ -515,6 +515,20 @@ G^{\mu\nu}(x) \;=\; \begin{pmatrix} a(x) & b^j(x)\\ b^i(x) & A^{ij}(x)\end{pmatr
 $$
 has inertia $(1,0,3)$: exactly one negative eigenvalue and three positive eigenvalues. Equivalently, the principal symbol has Lorentzian signature $(-,+,+,+)$. ∎
 
+The four-hypothesis package may be displayed as the antecedent
+$$
+\mathrm{EntropyTime}
+\,\land\,
+\mathrm{PositiveSpatialBlock}
+\,\land\,
+\mathrm{SecondOrderClosure}
+\,\land\,
+\mathrm{NondegenerateCone}
+\;\Longrightarrow\;
+\mathrm{LorentzianSignature}\ (-,+,+,+),
+$$
+with the four antecedents supplied by Theorem 31 plus §O.4 (entropy-selected time), §O.7.1 (positive-definite spatial $\Gamma$-limit), Hypothesis O.7.2.3 (second-order continuum closure), and Theorem 46 plus Theorem P.8.4 (nondegenerate operational causal cone). The signature conclusion is conditional theorem-level on this branch; entropy-time selection alone does not force the Lorentzian signature without the other three structural inputs.
+
 *Proof of (a).* Fix $x$ and consider the characteristic polynomial in $\omega$ with $k\in\mathbb R^3\setminus\{0\}$. The spatial cotangent space at $x$ is three-dimensional by Theorem Z.11, so the orthogonal complement $\{k : b^i k_i=0\}\subset\mathbb R^3$ is a two-dimensional subspace and contains infinitely many nonzero $k$. For any nonzero $k$ in this subspace, the polynomial simplifies to $p_x(\omega,k)=a(x)\omega^2+A^{ij}(x)k_i k_j$ with discriminant
 $$
 \Delta(k) \;=\; -4\,a(x)\,A^{ij}(x)\,k_i k_j.

@@ -2470,11 +2470,11 @@ $$\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2 \text{ nats}$$
 
 (Theorem 31, rigorously derived in Appendix J). This is not an approximation but a logical necessity: the Landauer bound [Landauer 1961] applied to self-referential prediction. Any system that persists—that maintains its organization across time—must contend with this continuous entropic degradation.
 
-The framework's resolution is error correction. At the substrate level, PCE optimization uniquely selects the Golay code $[24, 12, 8]$ (Theorem Z.13), dedicating half of all interface modes to protecting the other half against corruption. The rate $R = 1/2$ is not arbitrary but follows from the stability requirement that protection must compensate degradation:
-
-$$(1 - R) \cdot C_{\max} \geq \varepsilon$$
-
-where $C_{\max} = 2\ln 2$ nats is the channel capacity (Equation E.15). Substituting yields $R \leq 1/2$, with PCE selecting the equality $R^* = 1/2$.
+The framework's resolution is error correction. At the substrate level, the predictive-recovery MacWilliams branch first fixes the self-dual rate $R=k/n=1/2$ (Definition Z.13b.0; Theorem Z.13b.0a), and fixed-rate distance optimization then selects the Golay code $[24,12,8]$ (Theorem Z.13b), dedicating half of all interface modes to protecting the other half against corruption. The thermodynamic stability inequality
+$$
+(1-R)\cdot C_{\max}\ge\varepsilon
+$$
+with $C_{\max}=2\ln2$ nats and $\varepsilon=\ln2$ is a consistency check on this branch: it gives $R\le1/2$, and the certified self-dual-rate gate realizes the saturated value $R^*=1/2$. Thus the rate is not inferred from the inequality alone; the inequality verifies that the MacWilliams-selected rate carries enough recovery capacity on the residual-budget branch.
 
 **Theorem P.8.9a.1 (Thermodynamic Necessity of Recovery Capacity for Biological Code).** Any persistent complex structure in a universe governed by PU principles must implement recovery capacity against update noise and entropy-producing degradation. On biological branches, coded inheritance is the PCE-efficient way to instantiate such recovery capacity.
 
@@ -2573,7 +2573,7 @@ These equalities hold given the PU framework parameters:
 - $a = 2$ (Theorem Z.1, from $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ with PCE saturation $\varepsilon_0=\ln2$)
 - $b = d_0 - a = 8 - 2 = 6$ (Definition)
 - $M = 2ab = 2 \times 2 \times 6 = 24$ (Theorem Z.5)
-- $k = M/2 = 12$ (From rate $R = 1/2$)
+- $k=M/2=12$ (from the predictive-recovery MacWilliams self-dual-rate gate: Definition Z.13b.0 and Theorem Z.13b.0a)
 
 All three structures are determined by the PCE-selected saturation value $\varepsilon_0=\ln2$ under the strict floor $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$. ∎
 
@@ -3682,6 +3682,15 @@ These predictions distinguish the PCE-based account from purely phenomenological
 ## P.8.9a.12 Conditional Universal Patterns from PCE Scale Geometry
 
 The preceding section separates the internal Pareto concentration theorem from population-level and domain-level hypotheses. This subsection records the corresponding conditional universal-pattern theorems. In each case PU supplies the shared PCE scale language, while the theorem states the additional cost, rank, phase, relaxation, discrete-scale, or biological-network condition needed for the named empirical pattern.
+
+**Headline antecedent display.** Throughout this subsection, every named scale-pattern theorem has the structural form
+$$
+\mathrm{POP}\,\land\,\mathrm{PCE}
+\,\land\,\mathcal H_{\mathrm{pattern}}
+\;\Longrightarrow\;
+\text{named scale pattern},
+$$
+where $\mathcal H_{\mathrm{pattern}}$ is the explicit domain hypothesis named in each theorem: logarithmic ranked PCE cost (Zipf–Mandelbrot), multiplicative adaptation noise (Pareto), log-flat relaxation-rate measure ($1/f$), broad waiting-time or stable-subordination kernel (KWW), mantissa-equidistribution (Benford), discrete scale invariance (log-periodic), terminal-invariant space-filling biological transport (Kleiber), self-similar branching cascade with non-overlap (multifractal), or fixed-shape inverse-gamma family (Taylor). Removing $\mathcal H_{\mathrm{pattern}}$ from any of these antecedents removes the named conclusion; POP and PCE alone are not sufficient. The conditional universal-pattern template is the precise discipline by which the framework relates to the empirical scaling literature without absorbing its named domain assumptions into POP/PCE.
 
 **Theorem P.8.9a.12.1 (Conditional Zipf-Mandelbrot Law from Logarithmic PCE Cost).** Let $N\in\mathbb N\cup\{\infty\}$, let ranks be $r=1,\ldots,N$, and suppose the PCE activation weights are Gibbs weights
 $$
@@ -7503,9 +7512,28 @@ for the population-configuration admissibility class modulo response-null equiva
 $$
 \mathfrak L_0=(K_0,d_0,\varepsilon_0,a,b,M,k,D)=(3,8,\ln2,2,6,24,12,4)
 $$
-denote the recurrent minimal-branch ledger on the current proof graph. The configuration $\mathcal P$ *jointly determines* $\mathfrak X_{\mathrm{PU}}$ relative to $\mathfrak L_0$ when, for every output $X\in\mathfrak X_{\mathrm{PU}}$, the existing derivation chain for $X$ factors through the PPI/PCE quotient of $\mathfrak L_0$ together with $\mathcal P$, its accepted overlap maps, and its current certificate gates, with no additional freely selectable numerical parent datum.
+denote the recurrent minimal-branch ledger on the current proof graph. The configuration $\mathcal P$ *jointly determines* $\mathfrak X_{\mathrm{PU}}$ relative to $\mathfrak L_0$ when the following finite factorization datum exists.
 
-The joint determination is *exclusive* when any proposed value of an output $X$ not produced by that factorization either fails an admissibility condition, changes a retained finite response and is therefore a different branch, or is response-null surplus removed by the PPI quotient. For open and certificate-pending rows, this definition records the condition that a completed audit would have to establish; it does not assert that the audit has already closed.
+For every output $X_i\in\mathfrak X_{\mathrm{PU}}$ there is an admissible map
+$$
+F_i:
+(\mathfrak L_0,\mathcal P,\mathfrak C_i)
+\longrightarrow
+\mathcal O_i/\!\sim_i
+$$
+such that the existing derivation chain for $X_i$ equals $F_i$ after descent to the PPI/PCE response quotient. Here $\mathfrak C_i$ is exactly the current certificate gate or accepted finite certificate already recorded for the sector in Convention P.14.1k; it is not an additional numerical parent datum. For every pair of sectors with an accepted overlap map
+$$
+O_{ij}:\mathcal O_i/\!\sim_i\to\mathcal O_j/\!\sim_j,
+$$
+the square commutes:
+$$
+O_{ij}\circ F_i = F_j
+$$
+on their common retained parent domain. If the overlap is represented by maps in both directions, both commutativities are required on the intersection of the retained domains. Thus joint determination requires not only sectorwise factorization through $(\mathfrak L_0,\mathcal P,\mathfrak C_i)$, but also compatibility of all accepted overlap maps.
+
+The joint determination is *exclusive* when any proposed value of an output $X_i$ not produced by the factorization either fails an admissibility condition, changes a retained finite response and is therefore a different branch, violates an overlap commutativity condition, or is response-null surplus removed by the PPI quotient. For open and certificate-pending rows, this definition records the condition that a completed audit would have to establish; it does not assert that the audit has already closed.
+
+**Local refutation rule.** The factorization data $(F_i,\{O_{ij}\})$ make Definition P.16a.2 sectorwise falsifiable. If any sector $i\in\mathfrak X_{\mathrm{PU}}$ admits no admissible map $F_i$ factoring through $(\mathfrak L_0,\mathcal P,\mathfrak C_i)$ — equivalently, if the existing derivation chain for $X_i$ requires a numerical parent datum not contained in $\mathfrak L_0$, in $\mathcal P$, in the registered certificate gate $\mathfrak C_i$ of Convention P.14.1k, or transported through an accepted overlap map — then joint structural determination fails at sector $i$ and Conjecture P.16a.1 is refuted at that sector under the stability clause. If any pair $(i,j)$ has an accepted overlap map $O_{ij}$ but the equality $O_{ij}\circ F_i=F_j$ fails on the common retained parent domain, joint determination fails at the pair $(i,j)$ and the conjecture is refuted at that pair. This local refutation rule is the sectorwise instance of the registry-stability clause of Conjecture P.16a.1 and is recorded here without modifying the conjecture's open status.
 
 ### P.16a.2 The Population-Tuning Conjecture
 

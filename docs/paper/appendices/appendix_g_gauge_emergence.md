@@ -256,13 +256,29 @@ For $\mathbb C$ this gives $(mn)^2=m^2n^2$, so the identity holds. For $\mathbb 
 $$
 \frac{mn(mn+1)}2
 =
-\frac{m(m+1)}2\frac{n(n+1)}2,
+\frac{m(m+1)}2\frac{n(n+1)}2.
 $$
-which fails already at $m=n=2$. For $\mathbb H$ it gives
+Multiplying by $4$ and dividing by $mn>0$ gives
 $$
-mn(2mn-1)=m(2m-1)n(2n-1),
+2(mn+1)=(m+1)(n+1),
 $$
-which also fails already at $m=n=2$. Thus genuine real and quaternionic state-space branches fail local tomography under compositional closure.
+so
+$$
+(m-1)(n-1)=0.
+$$
+For $\mathbb H$ it gives
+$$
+mn(2mn-1)=m(2m-1)n(2n-1).
+$$
+Dividing by $mn>0$ gives
+$$
+2mn-1=(2m-1)(2n-1),
+$$
+so again
+$$
+(m-1)(n-1)=0.
+$$
+Thus the real and quaternionic tomography identities hold only for trivial composites with $m=1$ or $n=1$, and fail for every nontrivial composite with $m,n\ge2$. Hence genuine real and quaternionic state-space branches fail local tomography under compositional closure.
 
 The phase-redundancy condition gives the same selection independently. The real branch has only the disconnected scalar phase group $\{\pm1\}$ and cannot supply the connected phase transport used in Sections G.2-G.7. The quaternionic branch has scalar phase group $Sp(1)\cong SU(2)$, a three-dimensional nonabelian redundancy. If the extra quaternionic generators change finite protocol responses, they introduce additional gauge content beyond the minimal MPU branch. If they do not change finite protocol responses, Corollary P.6.1b.8 removes them as response-null surplus. The complex branch supplies exactly $U(1)$, the minimal connected abelian scalar phase group compatible with the active kernel.
 
@@ -1002,7 +1018,7 @@ $$
 
 **Corollary G.8.2f (Consistency with Channel Capacity).** The geometric bound $n_G^{(\mathrm{geom})} = 12$ refines the channel capacity range $n_{\max} \approx 7.5$–$20$ (Equation G.8.0) by providing a sharp upper constraint from symplectic geometry. The Standard Model gauge algebra $\mathfrak{su}(3) \oplus \mathfrak{su}(2) \oplus \mathfrak{u}(1)$ with $\dim = 8 + 3 + 1 = 12$ saturates the geometric bound.
 
-**Remark G.8.2g: Connection to Golay Structure.** The Lagrangian dimension $ab = 12$ equals the Golay code dimension $k = M/2 = 12$ (Theorem Z.13). This correspondence reflects structural unity: both the symplectic geometry (joint estimability) and the error-correction structure (optimal redundancy) select the same 12-dimensional subspace of the 24-dimensional interface. Gauge generators failing joint estimability incur additional PCE costs from incompatibility-induced measurement trade-offs, manifesting as increased operational cost $V_{\mathrm{op}}$ due to the necessity of sequential rather than simultaneous optimal estimation.
+**Remark G.8.2g: Connection to Golay Structure.** The Lagrangian dimension $ab=12$ equals the Golay code dimension $k=12$ on the predictive-recovery MacWilliams branch (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b). The equality $M=24$ supplies the block length; the self-dual-rate gate supplies the further conclusion $k=M/2=12$. This correspondence reflects structural unity: both the symplectic geometry (joint estimability) and the error-correction structure (optimal redundancy after the rate gate) select the same 12-dimensional subspace of the 24-dimensional interface. Gauge generators failing joint estimability incur additional PCE costs from incompatibility-induced measurement trade-offs, manifesting as increased operational cost $V_{\mathrm{op}}$ due to the necessity of sequential rather than simultaneous optimal estimation.
 
 #### G.8.2.3 Anomaly Cancellation as a PCE Imperative (D‑Sensitive)
 
@@ -1691,7 +1707,7 @@ The minimal flag lift $\widetilde X = \mathrm{Flag}_{1,2,3}(Q)$ resolves all thr
 | Golay signal dimension | $k = 12$ | Predictive-recovery MacWilliams branch on $n = 24$ (Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13) |
 | Gauge generators | $n_G = 12$ | Capacity bound saturation (Theorem G.8.4b) |
 | Grassmannian complex dimension | $\dim_{\mathbb{C}}(\text{Gr}(2,8)) = ab = 12$ | QFI tangent structure (Theorem Z.6.3a) |
-| Interface mode pairs | $M/2 = 12$ | Signal-parity partition (Theorem Z.5) |
+| Interface mode pairs | $M/2=12$ | Half-mode count from $M=24$; the code split uses Def Z.13b.0 and Thm Z.13b.0a, not Theorem Z.5 alone |
 | Golay parity constraints | $n - k = 12$ | Parity check matrix rows |
 | Stabilizer generators (each type) | 12 | CSS construction from self-dual $\mathcal{G}_{24}$ (Remark G.8.4g.1a) |
 
@@ -2706,7 +2722,11 @@ Only the unique solution $(\varepsilon, a, b, M, D) = (\ln 2, 2, 6, 24, 4)$ exis
 - 12 signal modes ↔ one Lagrangian subspace $L$
 - 12 parity modes ↔ complementary Lagrangian $L'$
 
-*Proof.* PCE isotropy at the attractor (Theorem Z.5) implies equal costs per mode. The optimal rate balancing information and redundancy is $R = 1/2$, giving $k = M/2 = 12$ (Theorem Z.13). The 12 signal modes span a subspace requiring joint estimability ($\omega = 0$ on all pairs), which is exactly the isotropic condition (Definition G.8.2d). The Golay code self-duality $\mathcal{G}_{24} = \mathcal{G}_{24}^\perp$ reflects the symmetric relationship between complementary Lagrangian subspaces. ∎
+*Proof.* The equality $k=12$ is not inferred from $M=24$ alone. The required rate statement is supplied by the predictive-recovery self-dual-rate gate of Definition Z.13b.0 and Theorem Z.13b.0a. For any binary linear interface code $C\subset\mathbb F_2^{24}$,
+$$
+\dim C+\dim C^\perp=24.
+$$
+On an exact self-dual carrier $C=C^\perp$, this gives $2\dim C=24$ and hence $\dim C=12$. On the more general MacWilliams branch, Theorem Z.13b.0a gives the same conclusion by minimizing the strict dual-asymmetry coordinate, so $k=M/2=12$. The 12 signal modes span a subspace requiring joint estimability ($\omega=0$ on all pairs), which is exactly the isotropic condition (Definition G.8.2d). The selected Golay carrier is Type II self-dual, $\mathcal G_{24}=\mathcal G_{24}^\perp$, matching the symmetric relationship between complementary Lagrangian subspaces. ∎
 
 **Theorem G.8.7f (Canonicity).** The bijection $\Phi$ is canonical—it involves no arbitrary choices.
 

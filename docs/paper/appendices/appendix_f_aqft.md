@@ -323,11 +323,26 @@ AQFT allows for a rigorous, state-dependent definition of the macroscopic MPU st
 
 *   **Definition F.4 (Macroscopic $T_{\mu\nu}^{(MPU)}$ in AQFT):** Within the emergent AQFT framework (conditional on Definition F.3), the macroscopic MPU stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}(x)$ is defined rigorously in two consistent ways:
     1.  **As Expectation Value:** As the expectation value of a symmetric, operator-valued distribution $\hat{\Theta}_{\mu\nu}(x)$ affiliated with the algebra $\mathfrak{A}$. This distribution $\hat{\Theta}_{\mu\nu}(x)$ represents the continuum limit of the microscopic symmetric tensor operator $\hat{\Theta}_{\mu\nu}^{(MPU)}(v)$ (defined in Theorem B.4, Appendix B). This requires a process of regularization and renormalization in the continuum limit. $T_{\mu\nu}^{(\mathrm{MPU})}(x) = \omega(\hat{\Theta}_{\mu\nu}(x))$, where $\omega$ is the physical state (Section F.4). This definition connects the macroscopic tensor to the underlying MPU activity and costs.
-    2.  **Via Variation of the Derived Effective Action:** On the regular branch, Theorem X.5a constructs a generally covariant coarse-grained effective action $S_{eff}[\omega,g]$. The stress-energy tensor is therefore variationally defined by
+    2.  **Via Variation of the Derived Effective Action:** On the regular branch, Theorem X.5a constructs a generally covariant coarse-grained effective action $S_{eff}[\omega,g]$. The stress-energy tensor is therefore variationally defined, with the sign convention matching Equations (B.15a), (B.21), and (67e), by
         $$
-        T_{\mu\nu}^{(\mathrm{MPU})}(x) := \frac{2}{\sqrt{-g(x)}} \frac{\delta S_{eff}[\omega, g]}{\delta g^{\mu\nu}(x)} \quad \tag{F.3}
+        T^{\mu\nu}_{(\mathrm{MPU})}(x)
+        :=
+        \frac{2}{\sqrt{-g(x)}}\,
+        \frac{\delta S_{eff}[\omega,g]}{\delta g_{\mu\nu}(x)},
+        \qquad
+        T_{\mu\nu}^{(\mathrm{MPU})}(x)
+        =
+        -\frac{2}{\sqrt{-g(x)}}\,
+        \frac{\delta S_{eff}[\omega,g]}{\delta g^{\mu\nu}(x)}
+        \tag{F.3}
         $$
-        and Theorem B.8c (Variational Identification) identifies this variational tensor with the coarse-grained expectation-value tensor of Appendix B.
+        The second equality follows from
+        $$
+        \delta g^{\alpha\beta}
+        =
+        -g^{\alpha\mu}g^{\beta\nu}\delta g_{\mu\nu}.
+        $$
+        Theorem B.8c (Variational Identification) identifies this variational tensor with the coarse-grained expectation-value tensor of Appendix B.
     Consistency of the framework is therefore an on-shell theorem rather than an additional assumption.
 
 *   **Theorem F.1 (Covariant Conservation of $T_{\mu\nu}^{(MPU)}$ in AQFT).** Assuming the effective action $S_{eff}[\omega, g]$ is generally covariant (invariant under diffeomorphisms of $M$), the variationally defined stress-energy tensor $T_{\mu\nu}^{(\mathrm{MPU})}(x)$ (Equation F.3) is covariantly conserved ($\nabla^{\mu} T_{\mu\nu}^{(\mathrm{MPU})} = 0$) when the emergent dynamical equations for the state $\omega$ (derived from $\delta S_{eff} / \delta \omega = 0$) and the geometry $g_{\mu\nu}$ (if it is also dynamical) are satisfied (on-shell).
@@ -336,7 +351,13 @@ AQFT allows for a rigorous, state-dependent definition of the macroscopic MPU st
 $$
 \delta_\xi S_{eff}[\omega,g]=0.
 $$
-On shell, the variation with respect to the state $\omega$ vanishes by the emergent equations of motion, so only the metric variation contributes. Using Equation (F.3),
+On shell, the variation with respect to the state $\omega$ vanishes by the emergent equations of motion, so only the metric variation contributes. Using the covariant-metric form of Equation (F.3),
+$$
+\frac{1}{\sqrt{-g}}\frac{\delta S_{eff}}{\delta g_{\mu\nu}}
+=
+\frac12 T^{\mu\nu}_{(\mathrm{MPU})},
+$$
+hence
 $$
 0=\delta_\xi S_{eff}
 =\frac{1}{2}\int_M d^4x\,\sqrt{-g}\,T^{\mu\nu}_{(\mathrm{MPU})}\,\delta_\xi g_{\mu\nu}.

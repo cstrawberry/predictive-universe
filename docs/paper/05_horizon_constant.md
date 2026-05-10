@@ -126,7 +126,27 @@ More precisely:
 3. (**Minimal Predictive Success—Sufficiency on $\mathcal{E}_{\mathrm{basic}}(\gamma)$**). Within the same three-bit register size, a predictive mode that stores the last observed outcome and predicts persistence (equivalently, flips its prediction on error) achieves long-run accuracy strictly greater than $1/2$ on the environment class $\mathcal{E}_{basic}(\gamma)$. In particular, its asymptotic accuracy equals the time‑average of $s_t$, which by stationarity/ergodicity converges almost surely to $\mathbb{E}[s_t]\ge\tfrac12+\gamma$.
 
 *Proof.*
-**(1) Necessity.** By (O2), the sub-dynamics must internally distinguish two phases via a control bit $c_{phase}\in\{0,1\}$. By (O3), at the Commit Snapshot (the boundary between phases) the current state component $\phi$ and the stored prediction $p_{stored}$ must coexist and remain simultaneously readable across the boundary. Since $\phi\in\{0,1\}$ and $p_{stored}\in\{0,1\}$ are independently variable logical registers at the snapshot, there must be at least $2^2=4$ distinguishable configurations for $(\phi,p_{stored})$ within each phase value. Combining with the two phase values yields at least $2\cdot 4=8$ distinct internal configurations that must be physically distinguishable at some point in the operational cycle. By (O1), the reversible sub-dynamics cannot merge distinct logical configurations into the same physical configuration on the visited set without violating injective stepping. Therefore the system requires at least $8$ distinguishable internal configurations, i.e. $K_0\ge \log_2 8=3$. ∎
+**(1) Necessity.** By Proposition 5.2.1 and (O1)–(O3), any faithful SPAP sub-dynamics has three response-relevant binary roles at the Commit Snapshot: current state, stored prediction, and cycle phase. Let
+$$
+B_m=B_p=B_v=\{0,1\}.
+$$
+A physical realization on the visited state set $\mathcal S_{\mathrm{vis}}$ must therefore admit role-readout maps
+$$
+r_m,r_p,r_v:\mathcal S_{\mathrm{vis}}\to\{0,1\}
+$$
+such that the joint readout
+$$
+r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\to B_m\times B_p\times B_v
+$$
+is surjective onto the eight logical contexts required by the two-phase SPAP update. Surjectivity follows from role independence: $\phi$ and $p_{stored}$ must be simultaneously readable and independently variable at the Commit Snapshot by (O3), giving at least $2\cdot 2=4$ distinguishable configurations of $(\phi,p_{stored})$ within each phase, while $c_{phase}$ must distinguish the prepare/store and reflex/update phases by (O2), giving the further factor of $2$ for a total of $2\cdot 4=8$ logical contexts. If two distinct triples in $B_m\times B_p\times B_v$ were represented by the same physical state, at least one of the three role readouts would fail to be a well-defined finite response; if two response-relevant visited states were merged before the Commit Snapshot, (O1) would fail on the PPI quotient. Hence
+$$
+|\mathcal S_{\mathrm{vis}}|\ge |B_m\times B_p\times B_v|=2^3=8.
+$$
+Thus the required single-cycle distinguishability is at least
+$$
+K_0\ge \log_2 8=3.
+$$
+∎
 
 **Remark 5.2.2a (Robustness of $K_0 \ge 3$ under reformalization).**  
 The lower bound in (1) depends only on the need for an injective realization of the SPAP update across a phase boundary: at the Commit Snapshot the machine must distinguish the triple $(\phi,p_{stored},c_{phase})\in\{0,1\}^3$. Any alternative encoding (e.g., relabeling states, using different internal variables, or changing the order of micro-operations) that still satisfies (O1)-(O3) must implement an injective map from these eight logical contexts to physical configurations. Consequently, any such realization requires at least $8$ distinguishable internal configurations, i.e. $\log_2 d_0\ge 3$ and thus $K_0 \ge 3$.

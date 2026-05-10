@@ -448,6 +448,7 @@
 *   Margolus, N., & Levitin, L. B. (1998). The maximum speed of dynamical evolution. *Physica D: Nonlinear Phenomena*, *120*(1–2), 188–195. DOI: 10.1016/S0167-2789(98)00054-2
 *   Marklof, J., & Strömbergsson, A. (2017). The three gap theorem and the space of lattices. *The American Mathematical Monthly*, 124(8), 741–745.
 *   Marshall, A. W., Olkin, I., & Arnold, B. C. (2011). *Inequalities: Theory of Majorization and Its Applications* (2nd ed.). Springer. DOI: 10.1007/978-0-387-68276-1
+*   Masanes, Ll., & Müller, M. P. (2011). A derivation of quantum theory from physical requirements. *New Journal of Physics*, *13*, 063001. DOI: 10.1088/1367-2630/13/6/063001
 *   Martin, P. C., & Schwinger, J. (1959). Theory of many-particle systems. I. *Physical Review*, *115*(6), 1342–1373. DOI: 10.1103/PhysRev.115.1342
 *   Matsui, T. (2013). Boundedness of entanglement entropy and split property of quantum spin chains. *Reviews in Mathematical Physics*, *25*(9), 1350017. DOI: 10.1142/S0129055X13500177
 *   Matsumoto, K. (2002). A new approach to the Cramér-Rao-type bound of the pure-state model. *Journal of Physics A: Mathematical and General*, *35*(13), 3111–3123. DOI: 10.1088/0305-4470/35/13/307

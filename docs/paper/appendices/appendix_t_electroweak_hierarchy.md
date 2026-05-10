@@ -73,14 +73,18 @@ The matching scale $\mu_G = M_{Pl}e^{-9} \approx 1.5 \times 10^{15}$ GeV connect
 
 ### T.2.2 The Golay Code Structure
 
-**Definition T.1a** (Extended Binary Golay Code). The extended binary Golay code $\mathcal{G}_{24}$ is the unique linear code with parameters $[24, 12, 8]$ [MacWilliams & Sloane 1977]:
+**Definition T.1a** (Extended Binary Golay Code). The extended binary Golay code $\mathcal{G}_{24}$ is the binary linear code with parameters $[24,12,8]$, unique up to coordinate permutation [MacWilliams & Sloane 1977]:
 
-- Block length $n = M = 24$
-- Dimension $k = 12$
-- Minimum distance $d_{\min} = 8$
-- Error correction capacity $t = \lfloor(d_{\min} - 1)/2\rfloor = 3$
+- Block length $n=M=24$
+- Dimension $k=12$
+- Minimum distance $d_{\min}=8$
+- Error correction capacity $t=\lfloor(d_{\min}-1)/2\rfloor=3$
 
-The code admits a systematic generator matrix $G = [I_{12} \mid P]$ where $I_{12}$ is the $12 \times 12$ identity and $P$ is the parity matrix. The code can detect up to 7 errors and correct up to 3 errors per block.
+After fixing a systematic coordinate frame, the code admits a generator matrix
+$$
+G=[I_{12}\mid P],
+$$
+where $I_{12}$ is the $12\times12$ identity and $P$ is the parity matrix. The code detects up to $7$ errors and corrects up to $3$ errors per block.
 
 **Remark T.1.1: Optimality Properties.** *The extended Golay code $\mathcal{G}_{24}$ is:*
 
@@ -109,7 +113,22 @@ P = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-This matrix satisfies $P P^T \equiv I_{12}\pmod{2}$ (self-orthogonality) and generates the unique optimal $[24, 12, 8]$ code.
+This matrix satisfies
+$$
+PP^T\equiv I_{12}\pmod2.
+$$
+Consequently the systematic generator
+$$
+G=[I_{12}\mid P]
+$$
+obeys
+$$
+GG^T
+=
+I_{12}+PP^T
+\equiv0\pmod2.
+$$
+Thus the generated code is self-orthogonal; since its dimension is $12=24/2$, it is self-dual. With minimum distance $8$, it is a representative of the unique coordinate-permutation equivalence class of binary linear $[24,12,8]$ codes, namely the extended binary Golay code $\mathcal G_{24}$.
 
 **Convention T.2.1** (Real lift). Throughout this appendix, when $P$ acts on real or integer vectors (as in $p = Ps$ with $s\in\mathbb{R}^{12}$), it denotes the $\{0,1\}$-entry matrix with standard real multiplication. Over $\mathbb{F}_2$, the same symbol denotes reduction mod 2. Context determines which is meant; explicit qualification is given only where ambiguity could arise.
 
@@ -591,7 +610,9 @@ This achieves 2.3% agreement with $v_{exp} = 246.22$ GeV. The agreement is a det
 
 ### T.9.2 No Fourth Generation
 
-**Prediction T.2** (Three Generations). The framework predicts exactly three fermion generations (Appendix R). A fourth sequential generation would contradict $M = K(4) = 24$.
+**Prediction T.2** (No Additional Sequential Generation on the Family-Redundancy Branch). The framework predicts exactly three realized fermion generations on the Appendix R anomaly+CP minimality route together with the pre-flavor family-redundancy PPI branch. A fourth sequential generation would require an additional response-distinct chiral family sector. On this branch, response-null copies are removed by the PPI quotient, while response-distinct copies change the finite family-charge, anomaly, or flavor certificate and leave the branch.
+
+The prediction has empirical content because the existing $M=24$, $D=4$, $k=12$ ledger imports the Appendix R anomaly+CP family route as its realized family-count branch. Discovery of a fourth sequential generation matching the Standard-Model gauge structure would therefore falsify that branch, and any replacement would have to supply a new registered family/anomaly certificate compatible with the already constrained $M=24$, $D=4$, and $k=12$ closures. Thus T.2 is not a free multiplicity adjustment inside the recurrent minimal ledger $\mathfrak L_0$ of Definition P.16a.2; it is a branch falsifier for the current Appendix R family-count route.
 
 -----
 

@@ -255,6 +255,50 @@ Since $\Omega_n>0$, no decoder has zero error in the finite pre-lightcone window
 
 If $P_0^{(n)}\ne P_1^{(n)}$, then for equal priors the mutual information between $C$ and $Y_B^n$ is the Jensen-Shannon divergence of the two transcript laws. Jensen-Shannon divergence is nonnegative and vanishes only when its two arguments are equal. Hence (61e) is strictly positive. The branch can therefore be a genuine statistical FTL channel while remaining non-deterministic and non-zero-error. ∎
 
+**Corollary 39a.1 (Closed Finite-Window Causality Separation).** On the regular statistical branch of Definition 10.2a, branch (iii) has zero finite-window zero-error FTL capacity for every admissible pre-lightcone transcript length
+$$
+n\le n_{\max}=\lfloor r_{\max}L/c\rfloor,
+$$
+even when $P_0^{(n)}\ne P_1^{(n)}$ and hence the finite-error Jensen-Shannon information is positive.
+
+*Proof.* For a binary context channel with equal priors and finite transcript laws $P_0^{(n)},P_1^{(n)}$, a zero-error decoder exists if and only if the two supports are disjoint. Indeed, if the supports are disjoint, the decoder assigns every transcript in $\operatorname{supp}P_0^{(n)}$ to $0$ and every transcript in $\operatorname{supp}P_1^{(n)}$ to $1$. Conversely, if there exists a transcript $y$ with
+$$
+P_0^{(n)}(y)>0,
+\qquad
+P_1^{(n)}(y)>0,
+$$
+then any deterministic decoder assigns $y$ to either $0$ or $1$ and is wrong with positive probability under the other context.
+
+Definition 10.2a gives common support in the finite pre-lightcone window, so the supports are not disjoint. Theorem 39a strengthens this support statement quantitatively:
+$$
+P_{\mathrm{err}}^{*(n)}
+=
+\frac12\bigl(1-\mathrm{TV}(P_0^{(n)},P_1^{(n)})\bigr)
+\ge
+\frac{\Omega_n}{2}
+>
+0.
+$$
+Therefore zero-error decoding is impossible for every admissible finite $n\le n_{\max}$.
+
+If $P_0^{(n)}\ne P_1^{(n)}$, the same theorem gives
+$$
+I(C;Y_B^n)
+=
+\mathrm{JSD}\big(P_0^{(n)},P_1^{(n)}\big)
+>
+0.
+$$
+Thus the finite-window regular branch separates two statements exactly:
+$$
+I(C;Y_B^n)>0
+\quad\text{is allowed,}
+\qquad
+P_{\mathrm{err}}^{*(n)}=0
+\quad\text{is excluded.}
+$$
+This proves the claimed causality separation. ∎
+
 **Remark 10.2b (Why Asymptotic Overlap Decay Is Irrelevant to Causality).** For independent repetitions with $P_0\ne P_1$ at the per-trial level, $\Omega_n$ generically decays exponentially in $n$ at the Chernoff overlap rate of the per-trial laws; equivalently, classical Chernoff theory gives $-\log\Omega_n\sim n\,C_{\mathrm{Ch}}(P_0,P_1)$ under the usual iid regularity assumptions, with $C_{\mathrm{Ch}}>0$ when the laws are distinct and mutually absolutely continuous. Theorem 39a uses only the strict inequality $\Omega_n>0$ at the operational $n$ permitted by the pre-lightcone budget of Lemma 10.3, namely $n\le n_{\max}=\lfloor r_{\max}L/c\rfloor$. The causality argument therefore does not depend on uniform-in-$n$ behavior: even though $\Omega_n\to0$ as $n\to\infty$, the asymptotic regime is unreachable before ordinary causal contact, so the finite-window zero-error gate is not undermined by repetition-coding amplification.
 
 **Lemma 10.3 (Pre-Lightcone Information Budget and Sampling Gate).** Let $L$ be the spacelike separation between Alice and Bob, $r_{\max}$ the maximum local measurement rate per channel at Bob's station, $\alpha_{\mathrm{err}}\in(0,1/2)$ a target decoding error probability, and $\delta\le\kappa\,\mathrm{CC}(S_A)$ the per-trial Bob-marginal bias on branch (iii). Define the pre-lightcone mutual-information budget

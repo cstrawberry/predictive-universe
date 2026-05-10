@@ -1,6 +1,23 @@
 # 12 Emergence of Gravitational Dynamics from Predictive Thermodynamics
 
-This section derives the dynamical equations governing the emergent spacetime geometry $(M, g_{\mu\nu})$, whose operational-continuum branch and regular-branch properties were established conditionally in Section 11 on the $M=24$, $D=4$ shell branch. The derivation follows the thermodynamic approach pioneered by Jacobson [Jacobson 1995], interpreting Einstein's Field Equations as an equation of state for the spacetime manifold derived from the Clausius relation ($\delta Q = T \delta S$). Within the PU framework, this approach is grounded in the thermodynamic properties of the underlying MPU network interactions. Specifically, the information limits of Non-Deterministic Reflexive Interaction Dynamics (ND‑RID) give rise to the **Horizon Entropy Area Law (Theorem 49)** on the Appendix E geometric-regularity, channel-density, and calibration branches. By applying the Clausius relation to infinitesimal causal horizons and relating heat flow to the **MPU stress-energy tensor ($T_{\mu\nu}^{(MPU)}$)**, constructed in **Appendix B**, we obtain the Einstein-equation branch of the framework. This is an emergent finite-response thermodynamic closure, not a microscopic graviton Hilbert-space construction. A microscopic gravitational carrier may be introduced only as a non-null finite protocol-response sector; otherwise it is response-null surplus and is removed by the PPI/PCE quotient. We work in natural units where $c=\hbar=k_{B}=1$ unless explicitly stated otherwise, and adopt a spacetime signature convention of $(-,+,+,+)$.
+This section derives the dynamical equations governing the emergent spacetime geometry $(M, g_{\mu\nu})$, whose operational-continuum branch and regular-branch properties were established conditionally in Section 11 on the $M=24$, $D=4$ shell branch. The derivation follows the thermodynamic approach pioneered by Jacobson [Jacobson 1995], interpreting Einstein's Field Equations as an equation of state for the spacetime manifold derived from the Clausius relation ($\delta Q = T \delta S$). Within the PU framework, this approach is grounded in the thermodynamic properties of the underlying MPU network interactions. Specifically, the information limits of Non-Deterministic Reflexive Interaction Dynamics (ND‑RID) give rise to the **Horizon Entropy Area Law (Theorem 49)** on the Appendix E geometric-regularity, channel-density, and calibration branches. By applying the Clausius relation to infinitesimal causal horizons and relating heat flow to the **MPU stress-energy tensor ($T_{\mu\nu}^{(MPU)}$)**, constructed in **Appendix B**, we obtain the Einstein-equation branch of the framework.
+
+The branch character of this section is summarized by the antecedent display
+$$
+\mathrm{Continuum}
+\,\land\,
+\mathrm{KMS}
+\,\land\,
+\mathrm{AreaLaw}
+\,\land\,
+\mathrm{Clausius}
+\,\land\,
+\mathrm{StressEnergy}
+\;\Longrightarrow\;
+R_{\mu\nu}-\tfrac12 R g_{\mu\nu}+\Lambda g_{\mu\nu}
+=\frac{8\pi G}{c^4}\,T_{\mu\nu}^{(MPU)},
+$$
+with the five antecedents supplied by (T1)–(T3) below together with the Appendix B stress-energy construction; the Einstein-equation conclusion is conditional theorem-level on this branch and is not unconditional. This is an emergent finite-response thermodynamic closure, not a microscopic graviton Hilbert-space construction. A microscopic gravitational carrier may be introduced only as a non-null finite protocol-response sector; otherwise it is response-null surplus and is removed by the PPI/PCE quotient. We work in natural units where $c=\hbar=k_{B}=1$ unless explicitly stated otherwise, and adopt a spacetime signature convention of $(-,+,+,+)$.
 
 The macroscopic emergent metric/channel-capacity dynamics derive from the following branch-theorem and certificate inputs on the operational-continuum branch:
 
@@ -601,9 +618,13 @@ This is the Cosmological Acceleration Lock: the low-acceleration dark-sector thr
 $$
 S_{\mathrm{PU}}(g,\Phi)=\int d^4x\,\sqrt{-g}\,\big(\mathcal L_{\mathrm{geom}}(g)+\mathcal L_{\mathrm{MPU}}(g,\Phi)\big)
 $$
-be a diffeomorphism-invariant action with no background structures. Define
+be a diffeomorphism-invariant action with no background structures. Define, with covariant metric variations,
 $$
-T^{\mu\nu}:=-\frac{2}{\sqrt{-g}}\frac{\delta S_{\mathrm{MPU}}}{\delta g_{\mu\nu}}.
+T^{\mu\nu}:=\frac{2}{\sqrt{-g}}\frac{\delta S_{\mathrm{MPU}}}{\delta g_{\mu\nu}},
+$$
+equivalently, with inverse-metric variations,
+$$
+T_{\mu\nu}:=-\frac{2}{\sqrt{-g}}\frac{\delta S_{\mathrm{MPU}}}{\delta g^{\mu\nu}}.
 $$
 If the matter fields $\Phi$ satisfy their Euler–Lagrange equations and are minimally coupled to $g_{\mu\nu}$, then
 $$

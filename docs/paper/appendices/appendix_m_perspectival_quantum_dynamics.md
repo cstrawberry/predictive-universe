@@ -676,7 +676,13 @@ The perspectival formalism developed in this appendix is not merely interpretive
 
 1. **Context-Dependent ND-RID (Assumption 1, Section 9.1.2).** The observable probability $P_{\text{obs}}(o|\rho, s, N, S_{\text{agg}})$ for an 'Evolve' outcome depends on the local aggregate state $S_{\text{agg}}$. This dependence is motivated by PCE: for aggregates to optimize predictions efficiently, their constituent MPUs' interactions must be sensitive to aggregate context.
 
-2. **Emergent Biasing Capability (Theorem 34, Section 9.2.1).** Given context-dependent ND-RID, the adaptive dynamics of sufficiently complex aggregates ($C_{\text{agg}} > C_{op}$), driven by POP (Axiom 1) and PCE (Definition 15), *necessarily* develop the capability to influence outcome probabilities by modulating their internal state. This is not optional—it is an inevitable consequence of optimization exploiting available degrees of freedom.
+2. **Emergent Biasing Capability (Theorem 34, Section 9.2.1).** Given context-dependent ND-RID, the adaptive dynamics of sufficiently complex aggregates ($C_{\text{agg}}>C_{op}$), driven by POP (Axiom 1) and PCE (Definition 15), develop nonzero biasing capability exactly on the strict-improvement branch of Theorem 34. In that branch there exists a reachable context $u_+$ with
+$$
+V(u_+)<V(u_0),
+\qquad
+P_{\mathrm{obs}}(\cdot|u_+)\ne P_{\mathrm{Born}},
+$$
+and every Born-realizing minimizer has cost at least $V(u_0)$. If this strict-improvement antecedent fails, PCE may select the Born reference context and the operational CC map is zero. Thus optimization does not assert bias from complexity alone; it selects bias precisely when a reachable non-Born context strictly improves the PCE objective. By the genericity remark of §9.2.1, the strict-improvement branch is the generic case for complex aggregates whose control degrees of freedom are nontrivially coupled to the measurement context; the three non-generic exclusions (decoupled control, cost-dominated regime, already-encoded improvement) are explicitly named there.
 
 3. **Context State Formalization (Definition L.1, Appendix L).** The aggregate's relevant internal state is formalized as the context state $\text{context}_S(t)$, constructed as the minimal sufficient statistic of the aggregate density operator $\rho_{\text{agg}}(t)$ under PCE optimization. This captures precisely those features capable of influencing local ND-RID while minimizing representational cost.
 
@@ -709,7 +715,14 @@ This bound alone does not prove preservation of the record-correlation mechanism
 
 **Experimental Predictions.** The empirical content distinguishing PU from standard quantum mechanics flows directly from this mechanism:
 
-- **Born Rule Deviations (Theorem 51, Section 13.1.1).** Systems with $\text{CC}(S) > 0$ induce statistically detectable deviations from Born rule predictions, bounded by $|\Delta P(i)| \leq 4\sin(\text{CC}(S)/4)$ (Theorem 36).
+- **Born Rule Deviations (Theorem 51, Section 13.1.1).** Systems with $\mathrm{CC}(S)>0$ induce statistically detectable deviations from Born rule predictions on the strict-improvement branch of Theorem 34. The operational bound is
+$$
+|\Delta P(i)|\le\mathrm{CC}(S)
+$$
+by Definition 30 and Theorem 36. On the stricter Fisher-budget subbranch of Theorem 36 this refines to
+$$
+|\Delta P(i)|\le4\sin(\mathrm{CC}(S)/4).
+$$
 - **Statistical FTL Influence (Postulate 3, Section 10).** Because $\text{context}_S$ can involve non-local entanglement, and the CC mechanism acts on local 'Evolve' events, context changes in one part of an entangled aggregate can have statistical consequences on 'Evolve' outcomes in spacelike-separated regions—while respecting operational causality (Theorem 42, Appendix F).
 - **Consciousness-Correlated Anomalies (Section 13).** The experimental protocols in Section 13 target detection of CC effects through quantum random number generators, pre-registered intention experiments, and neurophysiological correlates.
 
@@ -983,15 +996,43 @@ p_k
 $$
 This proves (M.10.10.2). ∎
 
-**Corollary M.10.10c (Measurement Kernel as a Schrödinger Bridge).** The conditional perspective kernel for a measurement interaction can be represented as the disintegration
+**Corollary M.10.10c (Measurement Kernel as a Schrödinger Bridge).** Let
 $$
-G_{\mathrm{persp}}(ds'\mid s,k,N,\Delta t)
+A_k:=\operatorname{supp}\nu_k
+$$
+be the retained endpoint sector for outcome $k$, with the sectors pairwise disjoint up to null sets. Disintegrate the unique entropic transport plan as
+$$
+\pi^\star(ds,ds')=\mu_0(ds)\,K^\star(ds'|s).
+$$
+Then the unconditioned perspective-transition kernel is $K^\star(ds'|s)$. The Born endpoint weights are
+$$
+\int_\Sigma K^\star(A_k|s)\,\mu_0(ds)=p_k.
+\tag{M.10.10.3}
+$$
+For $p_k>0$, the outcome-conditioned perspective kernel is the regular conditional restriction
+$$
+G_{\mathrm{persp}}(B|s,k,N,\Delta t)
 =
-\pi^\star(ds'\mid s)
+\frac{K^\star(B\cap A_k|s)}{K^\star(A_k|s)}
+\tag{M.10.10.4}
 $$
-on the outcome sector $k$, with the endpoint weights fixed by perspective descent and the path selected by minimal entropic transport cost.
+for $\mu_0$-almost every $s$ with $K^\star(A_k|s)>0$. On the null set where $K^\star(A_k|s)=0$, the conditional value is arbitrary because outcome $k$ has zero conditional weight from that starting perspective. Thus the path is selected by the unique entropic transport plan, while the endpoint sector weights remain exactly Born.
 
-*Proof.* The disintegration theorem gives conditional kernels $\pi^\star(ds'\mid s)$ for the unique coupling. Restricting the endpoint marginal to the sector $\operatorname{supp}\nu_k$ gives the outcome-conditioned kernel, and Theorem M.10.10b fixes the sector weights. ∎
+*Proof.* Since $\Sigma$ is compact and standard Borel, the disintegration theorem gives a Markov kernel $K^\star(ds'|s)$ satisfying
+$$
+\pi^\star(C\times B)=\int_C K^\star(B|s)\,\mu_0(ds)
+$$
+for all measurable $C,B\subseteq\Sigma$. Taking $C=\Sigma$ and $B=A_k$ gives
+$$
+\int_\Sigma K^\star(A_k|s)\,\mu_0(ds)
+=
+\pi^\star(\Sigma\times A_k).
+$$
+By Theorem M.10.10b,
+$$
+\pi^\star(\Sigma\times A_k)=p_k,
+$$
+which proves (M.10.10.3). For $p_k>0$, conditioning the endpoint kernel on the sector $A_k$ gives (M.10.10.4). The denominator is positive exactly on the starting perspectives from which the sector has nonzero conditional weight; outside that set the conditioning event has zero probability and does not affect any retained finite response. ∎
 
 **Table M.6.10.1: Perspectival information compared with existing information types.**
 

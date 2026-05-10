@@ -961,7 +961,7 @@ Then $\rho$ and $\rho'$ are operationally identical for all exterior observables
 
 *Proof.* Theorem E.8.2 supplies the nested boundary-channel reconstruction family on the stated branch. Therefore every retained exterior observable is represented by a finite boundary protocol or by a finite composition of such protocols over the nested cuts. If (E.8.1a.1) holds, all such protocols have identical response statistics on $\rho$ and $\rho'$. By the operational Yoneda reconstruction of Theorem P.6.1b.3, identical response presheaves define the same finite-response object for the retained exterior sector. Corollary P.6.1b.8 removes any additional interior label that changes no finite response and lowers no cost. If an interior label changes a finite response, then some retained protocol separates it, contradicting (E.8.1a.1), unless it belongs to a different finite branch with an explicit degeneracy certificate. ∎
 
-**Remark E.8.1a.1 (Status Relative to AdS/CFT).** Corollary E.8.1a is a finite-response holography statement, not a claim of conformal duality or AdS boundary dynamics. It establishes operational reconstruction in the PU quotient wherever the nested ND-RID boundary-channel hypotheses hold. The stronger Page-curve and scrambling statements remain branch-gated until the horizon code is shown to generate the required approximate design dynamics. Definition K.3d.4a and Theorem K.3d.4b provide the finite Golay-expander route for supplying that design certificate on a horizon syndrome branch.
+**Remark E.8.1a.1 (Status Relative to AdS/CFT).** Corollary E.8.1a is a finite-response holography statement, not a claim of conformal duality or AdS boundary dynamics. It establishes operational reconstruction in the PU quotient wherever the nested ND-RID boundary-channel hypotheses hold. The stronger Page-curve entropy statement remains branch-gated until the horizon code supplies a trace-coupled entropy-continuity promotion certificate in the sense of Definition K.3d.4c. Definition K.3d.4a and Theorem K.3d.4b provide the finite Golay-expander route for supplying moment-design control on a horizon syndrome branch; by itself that route gives moment/purity control unless the trace-coupled promotion is also certified.
 
 **Definition E.8.1b (Petz-Sufficient Boundary Compression).** Let $\mathcal C_A$ be a finite retained bulk code family for a region $A$, let
 $$
@@ -2120,98 +2120,134 @@ $$\dim(\mathcal{H}_{\Sigma_1}) = d_0^{N_{\text{total}}} = \dim(\mathcal{H}_{\Sig
 
 ### E.9.5.6 Joint Unitarity of ND-RID Operations
 
-The following lemma establishes the central technical result: while the reduced ND-RID channel on a single MPU is strictly contractive, the joint operation on interacting pairs is unitary.
+The following lemma establishes the central technical result on the closed retained-ledger branch: reduced ND-RID channels may be contractive after restriction to a subsystem, while the complete pair ledger is represented by a finite-dimensional $*$-automorphism and therefore by unitary conjugation. The proof uses finite matrix-algebra automorphism structure rather than inferring joint unitarity from a reduced CPTP channel.
 
-**Lemma E.9.5.3 (Joint ND-RID Operations are Unitary).** *For any pair of interacting MPUs $A$ and $B$, the joint evolution $U_{AB}: \mathcal{H}_{A} \otimes \mathcal{H}_{B} \to \mathcal{H}_{A} \otimes \mathcal{H}_{B}$ implementing their ND-RID interaction is unitary.*
-
-*Proof.*
-
-**Step 1 (Kraus representation of reduced channel).** The reduced ND-RID channel $\mathcal{E}_N^{(A)}$ acting on MPU $A$ alone is a CPTP map. By the Kraus representation theorem [Kraus 1983], there exist operators $\{K_i\}_{i=1}^r$ with $K_i: \mathcal{H}_A \to \mathcal{H}_A$ satisfying $\sum_i K_i^\dagger K_i = \mathbb{I}_A$ such that:
-
-$$\mathcal{E}_N^{(A)}(\rho_A) = \sum_{i=1}^r K_i \rho_A K_i^\dagger$$
-
-The minimal number of Kraus operators required is $r = \text{rank}(\mathcal{J}_{\mathcal{E}})$, where $\mathcal{J}_{\mathcal{E}}$ is the Choi-Jamiołkowski matrix of the channel [Choi 1975].
-
-**Step 2 (Physical locality constrains Kraus rank).** By Definition 27 and Definition A.2.2, the 'Evolve' process for an interacting pair $(A, B)$ couples only the degrees of freedom in $\mathcal{H}_A \otimes \mathcal{H}_B$, without involving additional external systems. This locality constraint is a structural feature of ND-RID as specified in Definition A.2.2: the probabilistic state transformation $T_{\text{prob}}: X \times Y \times O \to \Delta(X)$ acts on the participating subsystems alone, where the state space $X$ for the 'Evolve' process is $\mathcal{H}_A \otimes \mathcal{H}_B$.
-
-We now prove that physical locality bounds the Kraus rank. Let $\mathcal{E}_N^{(A)}$ arise from a joint operation on $\mathcal{H}_A \otimes \mathcal{H}_B$ followed by tracing out $B$. The most general such operation is:
-
-$$\mathcal{E}_N^{(A)}(\rho_A) = \mathrm{tr}_B\left[\mathcal{E}_{AB}(\rho_A \otimes \sigma_B)\right]$$
-
-where $\mathcal{E}_{AB}$ is a CPTP map on $\mathcal{H}_A \otimes \mathcal{H}_B$ and $\sigma_B \in \mathcal{S}(\mathcal{H}_B)$ is the initial state of $B$.
-
-**Claim:** The Kraus rank of $\mathcal{E}_N^{(A)}$ satisfies $r \leq d_0^2$, where $d_0 = \dim(\mathcal{H}_B) = 8$.
-
-*Proof of Claim:* Any CPTP map $\mathcal{E}_{AB}$ on $\mathcal{H}_A \otimes \mathcal{H}_B$ has Kraus operators $\{M_j\}$ with $M_j: \mathcal{H}_A \otimes \mathcal{H}_B \to \mathcal{H}_A \otimes \mathcal{H}_B$. Expanding in an orthonormal basis $\{|b\rangle\}$ of $\mathcal{H}_B$:
-
-$$\mathcal{E}_N^{(A)}(\rho_A) = \sum_j \mathrm{tr}_B\left[M_j(\rho_A \otimes \sigma_B)M_j^\dagger\right] = \sum_j \sum_{b,b'} \langle b|M_j(\rho_A \otimes \sigma_B)M_j^\dagger|b'\rangle \delta_{bb'}$$
-
-Define $K_{jb} := \langle b|M_j|\cdot\rangle \sqrt{\sigma_B}$ as operators on $\mathcal{H}_A$. Then:
-
-$$\mathcal{E}_N^{(A)}(\rho_A) = \sum_{j,b} K_{jb} \rho_A K_{jb}^\dagger$$
-
-The number of independent Kraus operators is at most $(\text{rank of } \mathcal{E}_{AB}) \times d_0 \leq d_0^2 \times d_0 = d_0^3$. However, completeness $\sum_{jb} K_{jb}^\dagger K_{jb} = \mathbb{I}_A$ and the structure of the partial trace further constrain this. For the minimal Kraus representation, $r \leq d_0^2$, since the Choi matrix has dimension $d_0^2 \times d_0^2$ and the minimal Kraus rank equals the Choi rank [Choi 1975].
-
-**Step 3 (Stinespring dilation with bounded environment).** By the Stinespring dilation theorem [Stinespring 1955], any CPTP map $\mathcal{E}_N^{(A)}$ on $\mathcal{H}_A$ with Kraus rank $r$ admits the representation:
-
-$$\mathcal{E}_N^{(A)}(\rho_A) = \mathrm{tr}_E\left[V(\rho_A \otimes |0\rangle_E\langle 0|)V^\dagger\right]$$
-
-where $V: \mathcal{H}_A \otimes \mathcal{H}_{E,\text{in}} \to \mathcal{H}_A \otimes \mathcal{H}_{E,\text{out}}$ is an isometry and $\dim(\mathcal{H}_E) = r$.
-
-The minimal Stinespring dilation has environment dimension equal to the Kraus rank: $\dim(\mathcal{H}_{E,\min}) = r \leq d_0^2$.
-
-**Step 4 (Closed bipartite structure).** By Definition 27, the 'Evolve' process for an interacting pair $(A, B)$ acts on the joint Hilbert space $\mathcal{H}_A \otimes \mathcal{H}_B$. This pairwise structure is a definitional feature of ND-RID (Definition A.2.2). By Assumption E.9.5.1 (Closed System, following from Hypothesis 1), no degrees of freedom external to the network exist. For the pairwise interaction, the relevant closed system is precisely the bipartite space $\mathcal{H}_A \otimes \mathcal{H}_B$.
-
-The Stinespring representation (Step 3) demonstrates that any CPTP map on $\mathcal{H}_A$ can be realized via an isometry to an extended space. For the pairwise 'Evolve' interaction, this extended space is the joint space $\mathcal{H}_A \otimes \mathcal{H}_B$ by the closed-system constraint. The joint operation is therefore an isometry:
-
-$$V: \mathcal{H}_A \otimes \mathcal{H}_B \to \mathcal{H}_A \otimes \mathcal{H}_B$$
-
-**Step 5 (Isometry to unitary).** For the isometry $V: \mathcal{H}_A \otimes \mathcal{H}_B \to \mathcal{H}_A \otimes \mathcal{H}_B$:
-
-$$\dim(\mathcal{H}_A \otimes \mathcal{H}_B)_{\text{in}} = \dim(\mathcal{H}_A \otimes \mathcal{H}_B)_{\text{out}} = d_0^2 = 64$$
-
-When input and output dimensions are equal, an isometry is necessarily a unitary operator [Nielsen & Chuang 2010, Section 2.2.5]. The 'Evolve' process preserves the Hilbert space dimensions of participating MPUs (the channel maps $\mathcal{S}(\mathcal{H}_{d_0}) \to \mathcal{S}(\mathcal{H}_{d_0})$ by Definition 27). Therefore:
-
-$$U_{AB} := V \in \mathcal{U}(\mathcal{H}_A \otimes \mathcal{H}_B)$$
-
-is unitary, satisfying $U_{AB}^\dagger U_{AB} = U_{AB} U_{AB}^\dagger = \mathbb{I}_{AB}$.
-
-**Step 6 (Contractivity as partial trace effect).** The strict contractivity $f_{\text{RID}} < 1$ of the reduced channel $\mathcal{E}_N^{(A)}$ (Lemma E.1) arises because:
-
-$$\mathcal{E}_N^{(A)}(\rho_A) = \mathrm{tr}_B\left[U_{AB}(\rho_A \otimes \rho_B)U_{AB}^\dagger\right]$$
-
-The partial trace over $B$ discards the correlations established by $U_{AB}$ between $A$ and $B$. This produces apparent information loss when examining $A$ alone. Quantitatively, the data processing inequality [Nielsen & Chuang 2010, Theorem 9.2] ensures:
-
-$$D_{\text{tr}}(\mathcal{E}_N^{(A)}(\rho_1), \mathcal{E}_N^{(A)}(\rho_2)) \leq D_{\text{tr}}(\rho_1, \rho_2)$$
-
-Strict contraction ($f_{\text{RID}}<1$) does not follow from non-unitarity alone; it follows from the presence of a nonzero input-independent refresh component (Lemma E.1). Concretely, if
+**Lemma E.9.5.3 (Joint ND-RID Operations are Finite-Response Unitary Automorphisms).** Let $A$ and $B$ be an interacting MPU pair on the closed retained-ledger branch of Assumption E.9.5.1. Let
 $$
-\Phi=(1-p)\Psi+pT_\sigma
-\quad\text{with}\quad p>0,
+\mathcal H_{AB}:=\mathcal H_A\otimes\mathcal H_B,
+\qquad
+\mathfrak A_{AB}:=\mathcal B(\mathcal H_{AB}).
 $$
-then Lemma E.1 gives the uniform bound
+Assume the joint retained ND-RID update is complete on the pair ledger and carries the automorphism certificate: in the Heisenberg picture it is a unital response-preserving $*$-automorphism
 $$
-D_{\mathrm{tr}}(\Phi(\rho_1),\Phi(\rho_2)) \le (1-p)\,D_{\mathrm{tr}}(\rho_1,\rho_2),
-\qquad f_{\text{RID}}=1-p<1.
+\alpha_{AB}:\mathfrak A_{AB}\to\mathfrak A_{AB}.
+$$
+Then there exists a unitary operator
+$$
+U_{AB}\in\mathcal U(\mathcal H_{AB})
+$$
+such that
+$$
+\alpha_{AB}(X)=U_{AB}^{\dagger}XU_{AB}
+\qquad
+(X\in\mathfrak A_{AB}).
+$$
+Equivalently, the Schrödinger-picture joint state update is
+$$
+\rho_{AB}\mapsto U_{AB}\rho_{AB}U_{AB}^{\dagger}.
 $$
 
-**Step 7 (Thermodynamic consistency).** The entropy production $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ (Theorem 31, rigorously derived in Appendix J from Lemma J.1) quantifies the irreversibility of the reduced dynamics on $A$, not the joint dynamics on $AB$. From the perspective of the joint system:
+**Remark E.9.5.3a (Automorphism Certificate on the Closed Retained Ledger).** The automorphism input is the branch certificate required for Lemma E.9.5.3. Closedness, PPI completeness, and retained injectivity are necessary ledger conditions, but they do not by themselves force an arbitrary retained CPTP update to be multiplicative. A unital trace-preserving completely positive map on a finite matrix algebra can be injective and still fail to be a $*$-automorphism. The closed retained-ledger branch therefore includes a response-product preservation certificate, equivalently
+$$
+\alpha_{AB}(XY)=\alpha_{AB}(X)\alpha_{AB}(Y),
+\qquad
+\alpha_{AB}(X^*)=\alpha_{AB}(X)^*,
+\qquad
+\alpha_{AB}(I)=I,
+$$
+for all retained pair-ledger observables $X,Y\in\mathfrak A_{AB}$. In the finite-dimensional full matrix algebra, this certificate is exactly the condition that the Heisenberg update is a $*$-automorphism. Lemma E.9.5.3 then converts that algebraic certificate into unitary conjugation. Reduced subsystem contractivity remains compatible with this statement because partial trace or restriction to a subsystem need not preserve the automorphism structure.
 
-$$S(U_{AB}\rho_{AB}U_{AB}^\dagger) = S(\rho_{AB})$$
+*Proof.* Since $\mathcal H_{AB}$ is finite dimensional, choose an orthonormal basis $\{e_i\}_{i=1}^d$ with $d=\dim\mathcal H_{AB}$ and let
+$$
+E_{ij}:=|e_i\rangle\langle e_j|
+$$
+be the standard matrix units. Because $\alpha_{AB}$ is a unital $*$-automorphism, the family
+$$
+F_{ij}:=\alpha_{AB}(E_{ij})
+$$
+satisfies the same matrix-unit relations:
+$$
+F_{ij}F_{kl}
+=
+\alpha_{AB}(E_{ij}E_{kl})
+=
+\delta_{jk}\alpha_{AB}(E_{il})
+=
+\delta_{jk}F_{il},
+$$
+and
+$$
+F_{ij}^{\dagger}
+=
+\alpha_{AB}(E_{ij}^{\dagger})
+=
+\alpha_{AB}(E_{ji})
+=
+F_{ji}.
+$$
+Automorphisms preserve minimal projections, so the projections $F_{ii}=\alpha_{AB}(E_{ii})$ are mutually orthogonal rank-one projections whose sum is the identity:
+$$
+\sum_iF_{ii}
+=
+\alpha_{AB}\left(\sum_iE_{ii}\right)
+=
+\alpha_{AB}(I)
+=
+I.
+$$
+Choose unit vectors $f_i$ with
+$$
+F_{ii}=|f_i\rangle\langle f_i|.
+$$
+From
+$$
+F_{ii}F_{ij}F_{jj}=F_{ij},
+$$
+each $F_{ij}$ maps the line $\mathbb C f_j$ into the line $\mathbb C f_i$ and vanishes on the orthogonal complement of $\mathbb C f_j$. Hence
+$$
+F_{ij}=\lambda_{ij}|f_i\rangle\langle f_j|
+$$
+for some phases $\lambda_{ij}\in U(1)$, with $\lambda_{ii}=1$. The matrix-unit relation $F_{ij}F_{jk}=F_{ik}$ gives
+$$
+\lambda_{ij}\lambda_{jk}=\lambda_{ik}.
+$$
+Taking $\mu_i:=\lambda_{i1}$ gives
+$$
+\lambda_{ij}=\mu_i\overline{\mu_j}.
+$$
+Replacing $f_i$ by $\overline{\mu_i}f_i$ makes
+$$
+F_{ij}=|f_i\rangle\langle f_j|
+$$
+for all $i,j$.
 
-von Neumann entropy is conserved under unitary evolution [von Neumann 1932]. The SPAP-mandated entropy production represents the minimum information that must flow from $A$ to correlations with $B$ (or vice versa) during the self-referential update cycle. This is information relocated to $A$-$B$ correlations, not destroyed.
-
-Specifically, if the initial state is $\rho_A \otimes \rho_B$ (product state), the mutual information after the interaction satisfies:
-
-$$\Delta I(A:B) = I(A:B)_{\rho'} - I(A:B)_{\rho} = I(A:B)_{\rho'} \geq 0$$
-
-Since $S(\rho_{AB}') = S(\rho_{AB}) = S(\rho_A) + S(\rho_B)$ (unitary evolution preserves entropy), and generically $S(\rho_A') \neq S(\rho_A)$ and $S(\rho_B') \neq S(\rho_B)$, the entropy increase in subsystem $A$ is compensated by correlation generation:
-
-$$\Delta S_A = S(\rho_A') - S(\rho_A) = I(A:B)_{\rho'} - \Delta S_B$$
-
-where $\Delta S_B = S(\rho_B') - S(\rho_B)$. The total is conserved: $\Delta S_A + \Delta S_B = I(A:B)_{\rho'}$.
-
-This reconciliation is central to the entropy unification thesis (Thesis P.6.1, Appendix P): what appears as "entropy production" from a subsystem perspective is "correlation generation" from the global perspective. ∎
+Define the unitary $W:\mathcal H_{AB}\to\mathcal H_{AB}$ by
+$$
+We_i=f_i.
+$$
+Then
+$$
+W E_{ij} W^\dagger
+=
+|f_i\rangle\langle f_j|
+=
+F_{ij}
+=
+\alpha_{AB}(E_{ij}).
+$$
+By linearity, $\alpha_{AB}(X)=WXW^\dagger$ for every $X\in\mathfrak A_{AB}$. Setting
+$$
+U_{AB}:=W^\dagger
+$$
+gives
+$$
+\alpha_{AB}(X)=U_{AB}^{\dagger}XU_{AB}.
+$$
+The dual Schrödinger-picture map is therefore
+$$
+\rho_{AB}\mapsto U_{AB}\rho_{AB}U_{AB}^{\dagger}.
+$$
+∎
 
 ### E.9.5.7 Composition Lemmas
 
@@ -2239,9 +2275,13 @@ The reverse product follows analogously. ∎
 
 **Remark E.9.5.0 (Closed-Network First Reading).** The derivational order in this subsection is closed-network first. The theorem proves that the internally complete MPU network evolves by a unitary total map between complete Cauchy-surface ledgers. Reduced ND-RID contractivity is then read as the result of restricting this closed evolution to a subsystem and tracing inaccessible partner/correlation degrees of freedom. Thus the framework does not infer global unitarity from a noisy local channel. It infers local apparent non-unitarity from restriction of a closed global evolution.
 
-**Theorem E.9.5 (Unitarity from Closed-System ND-RID Structure).** *Global unitarity—the conservation of quantum information under time evolution—is a necessary consequence of the structure of ND-RID interactions in a closed MPU network.*
+**Theorem E.9.5 (Unitarity from Closed Retained-Ledger ND-RID Automorphisms).** *Global unitarity—the conservation of retained quantum information under time evolution—is the finite-dimensional representation of closed retained-ledger automorphism dynamics.*
 
-**Statement:** For any closed system evolving between Cauchy surfaces $\Sigma_1 \to \Sigma_2$, the evolution operator $U: \mathcal{H}_{\Sigma_1} \to \mathcal{H}_{\Sigma_2}$ is unitary.
+**Statement:** For any closed MPU network evolving between Cauchy surfaces $\Sigma_1\to\Sigma_2$, if the elementary pair interactions are the finite-response $*$-automorphisms of Lemma E.9.5.3 and the Cauchy-surface Hilbert dimensions are conserved by Lemma E.9.5.2, then the total evolution operator
+$$
+U:\mathcal H_{\Sigma_1}\to\mathcal H_{\Sigma_2}
+$$
+is unitary.
 
 *Proof.*
 
@@ -2265,7 +2305,14 @@ $$U_{\text{free}}(t_k, t_{k+1}) = \bigotimes_{v \in \mathcal{V}} U_0^{(v)}(t_{k+
 
 This is unitary by Lemma E.9.5.5 (applied inductively).
 
-**Step 3 (Unitarity of pairwise interactions).** By Lemma E.9.5.3, each pairwise ND-RID interaction between MPUs $A$ and $B$ is implemented by a unitary operator $U_{AB}$ on the joint Hilbert space $\mathcal{H}_A \otimes \mathcal{H}_B$.
+**Step 3 (Unitarity of pairwise interactions).** By Lemma E.9.5.3, each complete retained pair ledger for an ND-RID interaction is a finite-dimensional $*$-automorphism of
+$$
+\mathcal B(\mathcal H_A\otimes\mathcal H_B),
+$$
+and hence is implemented in the Schrödinger picture by a unitary operator $U_{AB}$ on
+$$
+\mathcal H_A\otimes\mathcal H_B.
+$$
 
 **Step 4 (Unitarity of simultaneous non-overlapping interactions).** At any instant, multiple non-overlapping MPU pairs may interact simultaneously. The ND-RID structure (Definition 27, Definition A.2.2) specifies pairwise interactions; simultaneous interactions involving disjoint subsystems decompose into concurrent pairwise operations.
 
@@ -2304,7 +2351,7 @@ Hence $U_{\text{total}}^\dagger U_{\text{total}} = U_{\text{total}} U_{\text{tot
 
 ### E.9.5.9 Corollaries
 
-**Corollary E.9.5.1 (Unitarity as Derived, Not Assumed).** *Unitarity of quantum evolution is not an independent axiom but a theorem following from the structure of self-referential prediction in a closed system.*
+**Corollary E.9.5.1 (Unitarity as the Representation of Closed Retained-Ledger Automorphism).** *Unitarity of the total retained quantum evolution is not imposed as a separate Hilbert-space postulate; it is the finite-dimensional representation of the closed retained response algebra's $*$-automorphism dynamics.*
 
 The structural SPAP entropy cost $\varepsilon_0=\ln2$ (Theorem 31) and the closed-system condition generate two compatible but level-distinct derivation chains:
 
@@ -2328,7 +2375,15 @@ which supplies contraction and mixing statements but is not the quantitative sou
 
 **Branch II (Closed Global Unitarity):**
 
-$$\text{Closed System (Hyp 1)} + \text{ND-RID structure (Def 27)} \xrightarrow[\text{Lem E.9.5.3}]{} U_{AB} \text{ unitary on joint ledgers} \xrightarrow[\text{Thm E.9.5}]{} \text{global unitarity}$$
+$$
+\text{Closed retained ledger}
++
+\text{ND-RID pair automorphisms}
+\xrightarrow[\text{Lem E.9.5.3}]{}
+U_{AB}\text{ unitary on complete pair ledgers}
+\xrightarrow[\text{Thm E.9.5}]{}
+\text{global retained unitarity}.
+$$
 
 For systems with observation channels (Appendix P.5), Branch II applies to internal dynamics when the channel satisfies Definition P.5.3, ensuring internal closure from the internal perspective.
 
@@ -2353,12 +2408,13 @@ The same SPAP structure that generates the reduced-channel capacity bound also s
 On refresh/minorization subbranches, the additional full-state refresh component gives $f_{RID}<1$ and the strict capacity inequality $C_{\max}<\ln d_0$ by Lemma E.1 and Theorem E.2. That strict-contraction route is used for mixing, fixed-point, and reduced-channel contraction statements; the reset-support route is used for quantitative residual-budget channel counting.
 
 **Branch II:**
-1. Closed system (Hypothesis 1) → Stinespring environment internal to network (Assumption E.9.5.1)
-2. ND-RID pairwise structure (Definition 27/A.2.2) → locality constraint on interactions
-3. Locality + closed system → joint operations unitary (Lemma E.9.5.3)
-4. Unitary composition → global unitarity (Theorem E.9.5)
+1. Closed system (Hypothesis 1) and PPI completeness identify the total retained response ledger on a complete Cauchy surface.
+2. Definition 27/A.2.2 supplies the pairwise ND-RID interaction ledger.
+3. On the closed retained-ledger branch, the pair interaction is represented in the Heisenberg picture by a unital response-preserving $*$-automorphism of the full pair algebra.
+4. Lemma E.9.5.3 converts this finite-dimensional automorphism into unitary conjugation on $\mathcal H_A\otimes\mathcal H_B$.
+5. Unitary tensoring and composition give global retained unitarity by Theorem E.9.5.
 
-Branch I uses the structural SPAP cost to bound reduced channel capacity. Branch II uses closed-system completeness plus ND-RID joint structure to prove total unitarity. The apparent tension is removed because reduced contractivity is a subsystem restriction of closed evolution rather than a fundamental global loss. ∎
+Branch I uses the structural SPAP cost to bound reduced channel capacity. Branch II uses closed retained-ledger automorphism plus ND-RID pair structure to prove total retained unitarity. The apparent tension is removed because reduced contractivity is a subsystem restriction of closed evolution rather than a fundamental global loss. ∎
 
 ---
 
@@ -2386,24 +2442,42 @@ by the unitary invariance of von Neumann entropy [von Neumann 1932].
 
 **Step 3 (Capacity transfer).** The horizon $\mathcal{H}$ has channel capacity $C_H(t) \propto \mathcal{A}_H(t)/(4G)$ (Theorem E.6). As the black hole evaporates, $\mathcal{A}_H(t) \to 0$, so $C_H(t) \to 0$. By unitarity, the information initially associated with the black hole must be relocated to the radiation field and horizon-radiation correlations.
 
-**Step 4 (Page curve emergence—scrambling branch result).** The entanglement entropy between radiation and remaining black hole, $S_{\text{ent}}(t) = S(\rho_{\text{rad}}(t))$ for the reduced radiation state, follows the Page curve only on the following explicitly marked scrambling branch:
+**Step 4 (Page curve emergence — horizon entropy-continuity branch).** The entanglement entropy between radiation and remaining black hole, $S_{\mathrm{ent}}(t)=S(\rho_{\mathrm{rad}}(t))$ for the reduced radiation state, follows the Page curve only on the explicitly marked horizon entropy-continuity branch supplied by Theorem K.3.
 
-**Scrambling-Branch Hypothesis (Approximate k-design dynamics).** The black hole's internal MPU dynamics, governed by PCE optimization (Definition 15), generates scrambling dynamics that approximate a unitary $k$-design for sufficiently large $k$. This assumption is motivated by:
+**Horizon Entropy-Continuity Branch Hypothesis (Trace-Coupled Coupling Certificate).** There is a coupling of the PU reduced early-radiation state $\rho_E^{\mathrm{PU}}(t)$ and the Haar reduced state $\rho_E^{\mathrm{Haar}}(t)$ such that, almost surely,
+$$
+T_t
+=
+\frac12\left\|\rho_E^{\mathrm{PU}}(t)-\rho_E^{\mathrm{Haar}}(t)\right\|_1
+\le\varepsilon_t,
+\qquad
+0\le\varepsilon_t\le1-\frac1{d_E(t)}.
+$$
+This certificate is the additional horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ of Definition K.3d.4c. It may be attached to an accepted horizon moment-operator design certificate $\mathfrak C_{\mathrm{Hdesign}}$ (Definition K.3d.4) or to the Golay-expander certificate of Definition K.3d.4a, but the bare moment certificate alone supplies only moment/purity control. When the trace-coupled promotion is accepted, the certified error is denoted $\varepsilon_{\mathrm{Page}}$. Supporting framework elements include:
 
 - PCE optimization drives systems toward configurations that maximize predictive efficiency, which generically produces chaotic dynamics with rapid information spreading [Brandão et al. 2016]
 - Scrambling dynamics generically approach random unitary behavior [Hayden & Preskill 2007]
-- The thermalization timescale $t_{\text{scramble}} \sim \beta \ln S_{BH}$ [Sekino & Susskind 2008] is short compared to the evaporation timescale
-- The spectral gap $\Delta_{\text{gap}} > 0$ (Lemma E.6.1) ensures exponential approach to equilibrium, a necessary condition for design formation [Brandão et al. 2016]
+- The thermalization timescale $t_{\mathrm{scramble}}\sim\beta\ln S_{BH}$ [Sekino & Susskind 2008] is short compared to the evaporation timescale
+- The spectral gap $\Delta_{\mathrm{gap}}>0$ (Lemma E.6.1) ensures exponential approach to equilibrium
 
-Under this assumption, by Theorem K.3 (Appendix K), the expected entanglement entropy satisfies:
-
-$$\left|\mathbb{E}[S_{\text{ent}}(t)] - S_{\text{Page}}(d_E(t), d_L(t))\right| \leq \epsilon_t$$
-
-where $d_E(t)$ and $d_L(t)$ are the dimensions of the early (radiation) and late (black hole) Hilbert spaces, and:
-
-$$S_{\text{Page}}(m,n) = \sum_{k=n+1}^{mn}\frac{1}{k} - \frac{m-1}{2n} \quad \text{for } m \leq n$$
-
-is the exact average entropy for Haar-random unitaries [Page 1993]. The error term $\epsilon_t$ is bounded by the deviation from exact Haar-randomness, which is controlled by the frame potential of the dynamics [Roberts & Yoshida 2017].
+Under the trace-coupled coupling certificate, Theorem K.3 (Appendix K) gives, via Audenaert's sharp Fannes inequality,
+$$
+\left|\mathbb E\,S(\rho_E^{\mathrm{PU}}(t))-S_{\mathrm{Page}}(d_E(t),d_L(t))\right|
+\le
+\varepsilon_t\ln(d_E(t)-1)+h_2(\varepsilon_t),
+$$
+where
+$$
+S_{\mathrm{Page}}(d_E,d_L)
+=
+\sum_{j=d_>(t)+1}^{d_E(t)d_L(t)}\frac1j
+-
+\frac{d_<(t)-1}{2d_>(t)},
+\qquad
+d_<=\min\{d_E,d_L\},\
+d_>=\max\{d_E,d_L\},
+$$
+and $h_2(x)=-x\ln x-(1-x)\ln(1-x)$. The error term reduces to $\varepsilon_{\mathrm{Page}}\ln(d_E-1)+h_2(\varepsilon_{\mathrm{Page}})$ when the certified bound replaces $\varepsilon_t$. If only a second-moment ($t_{\mathrm{des}}=2$) design certificate is accepted, the theorem-level conclusion is the Haar Page-purity law of Corollary K.3.1 rather than the full von Neumann entropy law.
 
 The Page curve exhibits:
 
@@ -2413,7 +2487,7 @@ The Page curve exhibits:
 
 **Step 5 (Final state).** At complete evaporation ($\mathcal{A}_H \to 0$), unitarity (Theorem E.9.5) guarantees that the final radiation state $\rho_{\text{rad}}^{\text{final}}$ is pure if the initial state was pure: $S(\rho_{\text{rad}}^{\text{final}}) = S(\rho_{\text{initial}}) = 0$. All information is encoded in the radiation correlations. ∎
 
-**Remark E.9.5.1: Status of k-design assumption.** The k-design assumption in Step 4 is supported by the following framework elements but not yet derived from first principles:
+**Remark E.9.5.1: Status of horizon entropy-continuity certificate.** The trace-coupled coupling certificate of Step 4 is an additional entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ (Definition K.3d.4c). It may be attached to an accepted moment-operator or Golay-expander design certificate (Definitions K.3d.4 and K.3d.4a), but it is not supplied by moment control alone. It is supported by the following framework elements but not yet derived from first principles:
 
 *(i) Supporting evidence:*
 - The spectral gap $\Delta_{\text{gap}} = -\tau^{-1}\ln f_{\text{RID}} > 0$ (Lemma E.6.1) ensures exponential mixing
@@ -2425,15 +2499,15 @@ The Page curve exhibits:
 - Frame potential calculation for PCE dynamics
 - Verification of eigenstate thermalization hypothesis (ETH) compliance
 
-*(iii) Independence of core result:* The central claim—information conservation via unitarity (Steps 1–3)—is independent of the k-design assumption and follows directly from Theorem E.9.5. The Page curve (Step 4) provides additional structure under the stated assumption.
+*(iii) Independence of core result:* The central claim—information conservation via unitarity (Steps 1–3)—is independent of the trace-coupled entropy-continuity promotion certificate and follows directly from Theorem E.9.5. The von Neumann Page curve (Step 4) provides additional structure only under that stated certificate; bare moment-design control gives the Page-purity branch.
 
 **Corollary E.9.5.2a (Information-Paradox Status Split).** The black-hole information result in Corollary E.9.5.2 has two status layers:
 
 1. **Structural conservation layer:** closed-system unitarity and finite channel-capacity transfer imply that information is not fundamentally destroyed; it is relocated into horizon-radiation and radiation-radiation correlations.
 
-2. **Scrambling branch layer:** Page-curve behavior follows only under the approximate $k$-design scrambling assumption stated in Step 4.
+2. **Entropy-continuity branch layer:** von Neumann Page-curve behavior follows only under the trace-coupled horizon entropy-continuity promotion certificate stated in Step 4. A bare moment-design certificate gives the Page-purity branch rather than the full entropy curve.
 
-*Proof.* Steps 1-3 of Corollary E.9.5.2 use only the closed-system definition, Theorem E.9.5, unitary invariance of von Neumann entropy, and the horizon capacity transfer supplied by Theorem E.6. Therefore fine-grained information conservation is independent of the $k$-design assumption. Step 4 explicitly adds the approximate $k$-design assumption to compare the reduced radiation entropy with the Page average. Removing that assumption leaves the conservation result intact but removes the Page-curve estimate. ∎
+*Proof.* Steps 1-3 of Corollary E.9.5.2 use only the closed-system definition, Theorem E.9.5, unitary invariance of von Neumann entropy, and the horizon capacity transfer supplied by Theorem E.6. Therefore fine-grained information conservation is independent of the trace-coupled entropy-continuity promotion certificate. Step 4 explicitly adds that certificate to compare the reduced radiation entropy with the Page average through Audenaert continuity. Removing that certificate leaves the conservation result intact; if a moment-design certificate remains, the retained Page-level output is the purity law rather than the von Neumann entropy curve. ∎
 
 **Definition E.9.5d (Retained Finite-Response Horizon Channel).** On a refining sequence of finite operational covers $\{\mathcal U_n\}$ carrying an accepted finite KMS-descent certificate of Definition F.10.12a, the retained finite-response horizon channel is the tuple
 $$
@@ -2493,13 +2567,13 @@ Without such a sufficiency certificate, Theorem E.9.5e proves no fundamental del
 
 *Proof.* The first statement is (E.9.5f.1) with $\mathcal R_n=s_n$. The second statement follows because $\pi_{\mathrm{hor},n}$ need not be injective on $\mathcal A_n^{\mathrm{ret}}$; distinct retained states can have the same exterior coarse image while differing by an element of $\ker_{\mathrm{hid}}\pi_{\mathrm{hor},n}$. A deterministic recovery map from $\mathcal A_n^{\mathrm{coarse}}$ alone is theorem-certified exactly when the finite section data in Definition E.9.5f are supplied on the image of $\pi_{\mathrm{hor},n}\circ U_n$, up to the certified error. ∎
 
-**Corollary E.9.5e.1 (Status of the Horizon Sector).** On every branch carrying an accepted finite KMS-descent certificate of Definition F.10.12a and injective retained update $U_n$, the horizon structural-conservation row of Convention P.14.1k is closed by Theorem E.9.5e. The exterior recovery row is certificate-complete only after an accepted exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ is supplied. The Page-curve estimate remains on the scrambling branch of Corollary E.9.5.2a.
+**Corollary E.9.5e.1 (Status of the Horizon Sector).** On every branch carrying an accepted finite KMS-descent certificate of Definition F.10.12a and injective retained update $U_n$, the horizon structural-conservation row of Convention P.14.1k is closed by Theorem E.9.5e. The exterior recovery row is certificate-complete only after an accepted exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ is supplied. The von Neumann Page-curve estimate remains on the trace-coupled entropy-continuity branch of Corollary E.9.5.2a and Definition K.3d.4c; without that promotion, a moment-design certificate supplies only the Page-purity row.
 
 *Proof.* For the structural-conservation row, $Q_S$ is the finite family of retained horizon update classes on $\mathcal A_n^{\mathrm{ret}}$, $\sim_S$ is equality of retained response presheaves, $\mathcal R_S$ is the finite protocol response family on the retained algebra, $V_S$ is the PCE cost restricted to horizon update data, $q_S^*$ is the injective retained update class supplied by Theorem E.9.5, and $\Pi_S$ are the overlap maps to the accepted KMS and emergent-metric rows. A non-injective deletion class merges two distinct retained finite-response classes, so it fails at least one retained protocol response and is excluded by the PPI quotient or assigned violation cost at least $g_{\mathrm{hor},n}$ by the accepted retained algebra record. Hence the no-deletion structural layer is closed by Theorem E.9.5e, and its strict-certificate reading is closed by Theorem D.8.9b when the retained algebra record supplies the gap $g_{\mathrm{hor},n}$ of Definition E.9.5d. Exterior recovery from $\mathcal A_n^{\mathrm{coarse}}$ requires the additional finite section data of Definition E.9.5f; without that data, Theorem E.9.5f.1 explicitly forbids promotion to deterministic exterior recovery. The Page-curve estimate requires the separate scrambling assumption of Corollary E.9.5.2a. ∎
 
-**Corollary E.9.5e.2 (Page-Curve Branch Status).** The structural-conservation layer of Corollary E.9.5.2a is closed by Theorem E.9.5e under the injectivity hypothesis alone, without invoking the approximate $k$-design assumption of Step 4 of Corollary E.9.5.2 or the exterior recovery sufficiency certificate of Definition E.9.5f. The exterior recovery / Page-curve estimate retains its scrambling-branch status in Convention P.14.1k and is closed only on the additional acceptance of either the exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ (for deterministic exterior recovery via Theorem E.9.5f.1) or the approximate $k$-design scrambling assumption of Step 4 of Corollary E.9.5.2 (for the Page-curve estimate).
+**Corollary E.9.5e.2 (Page-Curve Branch Status).** The structural-conservation layer of Corollary E.9.5.2a is closed by Theorem E.9.5e under the injectivity hypothesis alone, without invoking the trace-coupled entropy-continuity promotion certificate of Step 4 of Corollary E.9.5.2 or the exterior recovery sufficiency certificate of Definition E.9.5f. The exterior recovery / Page-curve estimate retains its certificate-gated status in Convention P.14.1k and is closed only on the additional acceptance of either the exterior recovery sufficiency certificate $\mathfrak S_{\mathrm{hor},n}$ (for deterministic exterior recovery via Theorem E.9.5f.1) or the horizon entropy-continuity promotion certificate $\mathfrak C_{\mathrm{PageTV}}$ of Definition K.3d.4c (for the von Neumann Page-curve estimate). A bare moment-design certificate closes the Page-purity row only.
 
-*Proof.* Theorem E.9.5e uses only the unitary closure of Theorem E.9.5 on the retained algebra and the injectivity hypothesis. It does not invoke the approximate $k$-design assumption of Step 4 of Corollary E.9.5.2, nor the recovery-section property of Definition E.9.5f. Therefore the structural-conservation layer of Corollary E.9.5.2a is closed regardless of those additional hypotheses. The exterior recovery and Page-curve layers each require an additional certificate as noted, by Theorem E.9.5f.1 and the Step-4 hypothesis of Corollary E.9.5.2 respectively. ∎
+*Proof.* Theorem E.9.5e uses only the unitary closure of Theorem E.9.5 on the retained algebra and the injectivity hypothesis. It does not invoke the trace-coupled entropy-continuity promotion certificate of Step 4 of Corollary E.9.5.2, nor the recovery-section property of Definition E.9.5f. Therefore the structural-conservation layer of Corollary E.9.5.2a is closed regardless of those additional hypotheses. The exterior recovery and Page-curve layers each require an additional certificate as noted, by Theorem E.9.5f.1 and Definition K.3d.4c respectively. ∎
 
 ---
 
@@ -2586,9 +2660,9 @@ For reference, we collect the key numerical values appearing in this section:
 
 ### E.9.5.11 Concluding Remarks
 
-**Remark E.9.5.2: Relation to Standard Quantum Mechanics.** In standard quantum mechanics, unitarity is postulated as an axiom governing closed-system evolution (Postulate 2 of von Neumann's formulation [von Neumann 1932]). The present derivation reveals unitarity as a theorem following from more fundamental principles: the structure of self-referential prediction (SPAP), the thermodynamic constraints it implies ($\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$), and the closed-system assumption (Hypothesis 1).
+**Remark E.9.5.2: Relation to Standard Quantum Mechanics.** In standard quantum mechanics, unitarity is postulated as an axiom governing closed-system evolution (Postulate 2 of von Neumann's formulation [von Neumann 1932]). In the finite-response PU ledger, the closed-system result is sharper and algebraic: once the complete retained Cauchy-surface response algebra evolves by $*$-automorphisms, finite-dimensional matrix-algebra structure forces those automorphisms to be unitary conjugations.
 
-The key insight is that while individual ND-RID channels are strictly contractive ($f_{\text{RID}} < 1$, Lemma E.1), this contractivity arises from partial-trace effects on joint unitary operations (Lemma E.9.5.3), not from fundamental information destruction. The derivation applies to closed systems; open systems exhibit apparent non-unitarity through entanglement with external degrees of freedom, consistent with the standard quantum formalism and with Corollary E.9.5.4.
+The key insight is that while reduced ND-RID channels may be strictly contractive on refresh/minorization branches ($f_{\mathrm{RID}}<1$, Lemma E.1), this contractivity is a reduced-subsystem phenomenon. The complete retained pair ledger evolves by the unitary representative of Lemma E.9.5.3, and tracing or restricting to a subsystem can produce apparent non-unitarity without destroying retained global information. The derivation applies to internally closed retained ledgers; open systems exhibit apparent non-unitarity through coupling to degrees of freedom outside the subsystem being described, consistent with the standard quantum formalism and with Corollary E.9.5.4.
 
 **Remark E.9.5.3: Consistency with Arrow of Time.** Global unitarity (Theorem E.9.5) and thermodynamic irreversibility (Appendix O, Theorem O.3) are compatible because they describe different operational levels:
 
@@ -2614,7 +2688,19 @@ $$
 
 demonstrates that the causal capacity bounds, refresh-branch contraction, and global unitarity are complementary level-distinct consequences of a single source: the thermodynamic cost of self-referential prediction.
 
-**Remark E.9.5.5: Role of Closed-System Assumption.** The derivation of global unitarity (Theorem E.9.5) critically depends on Hypothesis 1. Without this assumption, the Stinespring environment for reduced dynamics could include external degrees of freedom, and global evolution could in principle be non-unitary. Within the PU framework, Hypothesis 1 is a foundational postulate asserting that the MPU network constitutes internally complete physical reality—no information leaks to degrees of freedom accessible by internal systems (consistent with the observation channel architecture of Appendix P.5). This transforms unitarity from a postulate into a theorem.
+**Remark E.9.5.5: Role of Closed-System Assumption.** The derivation of global retained unitarity (Theorem E.9.5) critically depends on the closed retained-ledger reading of Hypothesis 1. Closedness alone means that no retained information is exchanged with degrees of freedom accessible to internal systems; PPI completeness further requires the total retained response algebra on a complete Cauchy surface to carry the full internal response ledger. These conditions are necessary, but not sufficient, to make a general CPTP update unitary. The missing load-bearing condition is the pairwise response-product preservation certificate stated in Remark E.9.5.3a, i.e. that the complete retained pair update is a $*$-automorphism rather than merely an injective CPTP map.
+
+Thus the theorem-level content is
+$$
+\text{closed complete retained ledger}
++
+\text{pairwise }*\text{-automorphism certificate}
++
+\text{dimension conservation}
+\Longrightarrow
+\text{unitary total representative}.
+$$
+Without the automorphism certificate, a closed dissipative CPTP map would not be forced to be unitary. With the certificate, Lemma E.9.5.3 converts the finite-dimensional algebraic automorphism statement into unitary dynamics.
 
 The assumption admits a natural extension to systems with external observation (Appendix P.5). An observation channel satisfying Definition P.5.3 permits external information extraction while preserving internal closure: internal systems gain no information from the channel ($\Delta I_{int} = 0$) and internal states are not modified by external reading. From the internal perspective, such a system satisfies Assumption E.9.5.1, and Theorem E.9.5 applies to its internal dynamics. The external observer incurs the thermodynamic cost $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$ in their own context (Theorem 33), consistent with the Reflexivity Constraint.
 

@@ -123,16 +123,31 @@ $$
 \Delta P(i)=\mathrm{tr}\!\big(L_S(\rho)\,E_i\big)=\mathrm{tr}\!\big(\rho\,K_S(E_i)\big),\qquad K_S(I)=0 \quad \text{(78)}
 $$
 
-and the deviation magnitude is rigorously bounded by the information-geometric constraint derived from the PCE-minimal modification principle (Theorem 36):
+and the deviation magnitude is bounded by the operational CC budget of Definition 30 and Theorem 36:
 $$
-\mathrm{TV}(p,q) \le \sin\!\big(\mathrm{CC}(S)/2\big),\qquad
-|\Delta P(i)| \le 4\sin\!\big(\mathrm{CC}(S)/4\big)\ \ \forall i.
+\mathrm{TV}(p,q)\le\mathrm{CC}(S),
+\qquad
+|\Delta P(i)|\le\mathrm{CC}(S)
+\quad
+\forall i.
 $$
-In the small‑bias regime ($\mathrm{CC}(S)\ll 1$): $\mathrm{TV}(p,q) \lesssim \tfrac12\,\mathrm{CC}(S)$ and $|\Delta P(i)| \lesssim \mathrm{CC}(S)$. Domain of validity: the bound $4\sin(\mathrm{CC}(S)/4)$ is physically meaningful only for $\mathrm{CC}(S)\le \pi$, and the small‑CC approximation applies for $\mathrm{CC}(S)\ll 1$.
-Therefore, for an observed per‑outcome shift $\delta=|\Delta P(i)|$, an exact lower bound is
-$\mathrm{CC}(S) \ge 4\,\arcsin(\delta/4)$ (small bias: $\mathrm{CC}(S) \gtrsim \delta$).
+Consequently, for an observed per-outcome shift $\delta=|\Delta P(i)|$, an exact lower bound is
+$$
+\mathrm{CC}(S)\ge\delta.
+$$
+On the stricter Fisher-budget subbranch of Theorem 36, where $d_{\mathrm{FR}}(p,q)\le\mathrm{CC}(S)$, one also has
+$$
+\mathrm{TV}(p,q)\le\sin(\mathrm{CC}(S)/2),
+\qquad
+|\Delta P(i)|\le4\sin(\mathrm{CC}(S)/4)
+\quad
+\forall i.
+$$
+For $\mathrm{CC}(S)\ll1$, the Fisher-budget subbranch gives $\mathrm{TV}(p,q)\lesssim\frac12\mathrm{CC}(S)$ and $|\Delta P(i)|\lesssim\mathrm{CC}(S)$.
 
-*Remark:* The bounds are derived directly from the PCE-minimal modification principle (Definition 33) applied to the geometry of the statistical manifold, as rigorously established in Theorem 36.
+*Remark on numerical impact.* The operational total-variation bound $\mathrm{TV}\le\mathrm{CC}$ is a factor-of-two looser at leading order than the Fisher-budget total-variation bound $\mathrm{TV}\le\sin(\mathrm{CC}/2)\approx\mathrm{CC}/2$. The per-outcome operational and Fisher-budget bounds coincide to first order, because $4\sin(\mathrm{CC}/4)=\mathrm{CC}+O(\mathrm{CC}^3)$. The QRNG sensitivity protocol of §13.2 therefore reports two paired CC-extraction estimates: a **conservative** estimate $\widehat{\mathrm{CC}}_{\mathrm{op}}\ge\delta$ from the operational bound, which is always available, and a **sharp** estimate $\widehat{\mathrm{CC}}_{\mathrm{Fisher}}\ge 4\arcsin(\delta/4)$ on the Fisher-budget subbranch, which applies only when the protocol independently certifies the Fisher condition. The two per-outcome estimates differ by $O(\delta^3)$.
+
+*Remark:* The operational shift bound is Definition 30 applied to the retained event algebra; the Fisher-Rao formulas are the sharper geodesic estimates available on the stricter Fisher-budget subbranch recorded in Theorem 36.
 
 
 Using the **Context-Targeted Bias (CTB)** model (Definition 34), where the context defines a target state $\sigma_S$ and $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$, the deviation takes the form
@@ -143,7 +158,7 @@ r(\sigma_S)=1-\lambda_{\min}(\sigma_S)
 \quad \text{(79)}
 $$
 
-*Proof:* (77) is the definition of observable probability in the presence of context. The representation (78) follows from Definition 33 (operator formalism with $L_S$ on states and $K_S=L_S^\*$ on effects, with $K_S(I)=0$ ensuring normalization). The bound on $|\Delta P(i)|$ follows from Theorem 36, derived from the Fisher-Rao distance bound (Definition 33) and the operational definition of CC (Definition 30), constrained by causality (Theorem 39). The CTB expression (79) is Definition 34 with $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$ and $\alpha_S=\mathrm{CC}(S)/r(\sigma_S)$. QED
+*Proof:* (77) is the definition of observable probability in the presence of context. The representation (78) follows from Definition 33 and Definition 30: $L_S$ acts on states, $K_S=L_S^*$ acts on effects, and $K_S(I)=0$ ensures normalization. The operational bound $|\Delta P(i)|\le\mathrm{CC}(S)$ follows from Theorem 36, which applies the Definition 30 operator norm to every retained effect $E_i$. The Fisher-Rao estimates follow from the stricter Fisher-budget subbranch of Theorem 36. The CTB expression (79) is Definition 34 with $p_{\mathrm{target}}(S,i)=\mathrm{tr}(\sigma_S E_i)$ and $\alpha_S=\mathrm{CC}(S)/r(\sigma_S)$. QED
 
 
 ## 13.2 Protocol 1: Accessible Born Rule Tests (QRNGs)
@@ -319,9 +334,16 @@ $$
 $$
 which is Eq. (81).
 
-A separate bound on algorithmic predictability confounds is given by $P_{\rm guess} \le 2^{-(H_\infty L - t)}$, where an adversary has at most $t$ bits of side-information. The **CC** effect predicted by PU, using the bounds from Theorem 51 (for $P_{\mathrm{Born}}=1/2$), is
+A separate bound on algorithmic predictability confounds is given by $P_{\rm guess}\le2^{-(H_\infty L-t)}$, where an adversary has at most $t$ bits of side-information. The **CC** effect predicted by PU, using the operational bound from Theorem 51, is
 $$
-|\Delta P|_{\rm PU}\ \le\ 4\sin\!\big(\mathrm{CC}(S)/4\big)\approx \mathrm{CC}(S)\qquad(\mathrm{CC}(S)\ll 1).
+|\Delta P|_{\rm PU}\le\mathrm{CC}(S).
+$$
+On the stricter Fisher-budget subbranch this is refined to
+$$
+|\Delta P|_{\rm PU}\le4\sin\!\big(\mathrm{CC}(S)/4\big)
+\approx\mathrm{CC}(S)
+\qquad
+(\mathrm{CC}(S)\ll1).
 $$
 Using representative achievable values of $|\Delta\alpha|\!\lesssim\!10^{-39}\,\mathrm{J\,m^2/V^2}$ and $u\!\lesssim\!10^{-18}\,\mathrm{J/m^3}$, we obtain
 $|\Delta P|_{\rm EM}\ \lesssim\ 2.68\times 10^{-13}\,T$ (with $T$ in seconds). This yields $|\Delta P|_{\rm EM} \lesssim 2.7\times 10^{-13}$ at $T=1\,\mathrm{s}$, and $9.6\times 10^{-10}$ at $T=1\,\mathrm{hr}$. Consequently, any observed $|\Delta P|\gtrsim 10^{-6}$ would lie far above this Stark-channel bound under the stated residual-intensity estimate; attributing such a signal to ordinary electromagnetism would therefore require some additional uncontrolled mechanism not modeled by Eq. (81). In contrast, the PU framework predicts $|\Delta P|_{\rm PU}$ could potentially reach $\sim 10^{-4}$ (assuming $\mathrm{CC}(S) \sim 10^{-4}$).

@@ -117,7 +117,7 @@ The PCE-optimized mapping determines control parameters:
 
 $$ \mathcal{M}(\text{context}_S) \to \{\omega_{\text{rad}}(t), E_0(t), \phi_{\text{rad}}(t), \vec{\epsilon}_{\text{rad}}(t)\} \tag{L.5} $$
 
-Coherence Mechanism: Within aggregate $S$ (Definition 29), constituent MPUs share information through network coupling (Definition 5). From Theorem 34, high-CC aggregates develop the capability to bias local 'Evolve' outcomes through POP/PCE optimization. For electromagnetic field generation, this requires coordinating $N_{\text{osc}}$ oscillating charge distributions to achieve phase coherence.
+Coherence Mechanism: Within aggregate $S$ (Definition 29), constituent MPUs share information through network coupling (Definition 5). On branches satisfying the strict-improvement antecedent of Theorem 34, high-CC aggregates develop the capability to bias local 'Evolve' outcomes through POP/PCE optimization. For electromagnetic field generation, this requires coordinating $N_{\text{osc}}$ oscillating charge distributions to achieve phase coherence.
 
 The coherence emerges through PCE optimization as follows. Each oscillator $j$ produces a dipole moment $p_j(t) = d_{\text{dip}} \cos(\omega t + \phi_j)$, where $d_{\text{dip}}$ is the effective dipole-moment amplitude (including the relevant charge displacement). The total dipole moment is $p(t) = \sum_j p_j(t)$, giving the far-field radiation. The total radiated power depends on the coherent sum:
 
@@ -1051,7 +1051,15 @@ Stable under feedback if $\text{context}_S$ is influenced by past CC effects
 
 Satisfying the cost-benefit constraint (Equation L.3)
 
-(v) Threshold Emergence: The mapping $\mathcal{M}: \text{context}_S \to \mathcal{P}_{\text{control}}$ exists only when $C_{\text{agg}}(S) > C_{op}$. Below threshold, $\text{CC}(S) = 0$ regardless of available power $P_{\text{agg}}$.
+(v) Threshold and strict-improvement emergence: A nonzero retained mapping
+$$
+\mathcal M:\mathrm{context}_S\to\mathcal P_{\mathrm{control}}
+$$
+is PCE-selected only when $C_{\mathrm{agg}}(S)>C_{op}$ and the strict-improvement branch of Theorem 34 is active. Equivalently, if $\mathcal M_0$ denotes the null/Born-realizing control map, then a nonzero map is selected exactly when the compact admissible class of Theorem L.1 contains some $\mathcal M_+$ with
+$$
+\mathcal F[\mathcal M_+]>\mathcal F[\mathcal M_0].
+$$
+Below threshold, $\mathrm{CC}(S)=0$ regardless of available power $P_{\mathrm{agg}}$. Above threshold but without strict improvement, PCE selects $\mathcal M_0$ or an operationally equivalent null map.
 
 Proof of Necessity.
 
@@ -1063,7 +1071,19 @@ Proof of Necessity.
 
 (iv) POP/PCE Optimization: The mapping $\mathcal{M}$ implements resource allocation from aggregate complexity to control generation. If $\mathcal{M}$ is not Lipschitz, small context variations cause unbounded control fluctuations, creating divergent variance in the PCE potential $V(x)$ (Appendix D, Equation D.9), invalidating the assumptions needed for the ergodic stationary regime described by Theorem D.5. If $\mathcal{M}$ is unbounded, infinite resources would be required, violating physical realizability. If $\mathcal{M}$ is unstable under feedback, the system cannot maintain coherent $\text{context}_S$, precluding sustained CC. If $\mathcal{M}$ violates the cost-benefit constraint (Equation L.3), PCE dynamics select against it. Therefore all four properties are necessary.
 
-(v) Threshold Emergence: From Theorem 34, biasing capability emerges only for $C_{\text{agg}} > C_{op}$. From Theorem L.1 (existence of PCE-optimal mapping), the mapping $\mathcal{M}$ exists when there exists net predictive benefit. For $C_{\text{agg}} \le C_{op}$, no biasing capability exists (Definition 30), hence no mapping can provide predictive benefit, hence $\mathcal{M}$ doesn't exist under POP/PCE optimization. Therefore threshold emergence is necessary. ∎
+(v) Threshold and strict-improvement emergence: From Theorem 34, nonzero biasing capability requires both $C_{\mathrm{agg}}>C_{op}$ and the existence of a reachable non-Born context with strictly lower PCE potential than every Born-realizing minimizer. Theorem L.1 then guarantees that, on a nonempty compact admissible mapping class, the continuous functional
+$$
+\mathcal F[\mathcal M]=\Gamma_0\Delta PP(\mathcal M)-\lambda R_{\mathcal M}(\mathcal M)
+$$
+attains a maximum. Let $\mathcal M_0$ be the null/Born-realizing map. If
+$$
+\sup_{\mathcal M\ne\mathcal M_0}\mathcal F[\mathcal M]\le\mathcal F[\mathcal M_0],
+$$
+then every nonzero map is PCE-dominated by the null map and no operational CC influence is selected. If there exists $\mathcal M_+$ with
+$$
+\mathcal F[\mathcal M_+]>\mathcal F[\mathcal M_0],
+$$
+then every PCE maximizer lies outside the null equivalence class and induces a nonzero operational map $L_S$ by Theorem 34. For $C_{\mathrm{agg}}\le C_{op}$, Definition 30 gives $\mathrm{CC}(S)=0$, so no nonzero mapping can have positive predictive benefit. Therefore threshold plus strict improvement is necessary and sufficient for nonzero selected influence inside the admissible compact class. ∎
 
 ### **Corollary L.9.1 (Implementation Non-Uniqueness)**
 
@@ -1071,13 +1091,33 @@ Multiple distinct physical implementations may satisfy conditions (i)-(v), provi
 
 ### **Corollary L.9.2 (Threshold Emergence of Influence Capability)**
 
-For aggregate $S$ with spatial influence range $R_{\text{eff}}$ (Proposition L.9.3):
+For aggregate $S$ with spatial influence range $R_{\mathrm{eff}}$ (Proposition L.9.3):
 
-(a) $C_{\text{agg}} \le C_{op} \implies \text{CC}(S) = 0 \implies R_{\text{eff}} = 0$ (no spatial extent)
+(a) $C_{\mathrm{agg}}\le C_{op}\implies\mathrm{CC}(S)=0\implies R_{\mathrm{eff}}=0$.
 
-(b) $C_{\text{agg}} > C_{op}$ and POP/PCE converged $\implies \text{CC}(S) > 0 \implies R_{\text{eff}} > 0$
+(b) If $C_{\mathrm{agg}}>C_{op}$ and the strict-improvement condition
+$$
+\exists \mathcal M_+:\quad \mathcal F[\mathcal M_+]>\mathcal F[\mathcal M_0]
+$$
+holds in the compact admissible mapping class of Theorem L.1, then POP/PCE convergence selects a nonzero influence map, so
+$$
+\mathrm{CC}(S)>0
+\quad\Longrightarrow\quad
+R_{\mathrm{eff}}>0.
+$$
 
-Proof. (a) follows from clause (v) of Theorem L.9. (b) follows from Theorem 34 (CC emergence) combined with Proposition L.9.3 (spatial extent requires nonzero CC). ∎
+(c) If $C_{\mathrm{agg}}>C_{op}$ but
+$$
+\sup_{\mathcal M\ne\mathcal M_0}\mathcal F[\mathcal M]\le\mathcal F[\mathcal M_0],
+$$
+then the selected map is operationally null and
+$$
+\mathrm{CC}(S)=0,
+\qquad
+R_{\mathrm{eff}}=0.
+$$
+
+Proof. Part (a) follows from clause (v) of Theorem L.9. Part (b) follows from Theorem 34 together with Theorem L.1: strict improvement forces every PCE maximizer outside the null equivalence class, giving a nonzero $L_S$ and hence $\mathrm{CC}(S)>0$ by Definition 30. Proposition L.9.3 then gives positive spatial extent for nonzero CC. Part (c) is the contrapositive selection case inside the same compact admissible class: if no nonzero mapping beats the null map, PCE selects the null class, so the induced operational map vanishes and Proposition L.9.3 gives zero influence range. ∎
 
 ### **Remark L.9.1 (External Field Dominance Independence)**
 

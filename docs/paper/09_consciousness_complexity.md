@@ -18,7 +18,9 @@ The fundamental transition probabilities $P(o | x, y)$ (outcome probability) and
 
 **9.2 The Emergence of Biasing Capability from POP/PCE Optimization**
 
-Given context-dependent ND-RID probabilities (Assumption 1), and that the aggregate's internal state $\rho_{agg}$ (or its effective description) provides the primary local context for constituent MPUs within complex aggregates ($C_{agg} > C_{op}$), the framework's optimization principles lead inevitably to the exploitation of this dependence.
+Given context-dependent ND-RID probabilities (Assumption 1), and that the aggregate's internal state $\rho_{agg}$ (or its effective description) provides the primary local context for constituent MPUs within complex aggregates ($C_{agg} > C_{op}$), the framework's optimization principles select non-Born biasing exactly when a reachable non-Born context has strictly lower PCE potential than every Born-realizing minimizer in the reduced context class. If no such strict-improvement context exists, PCE may select the Born reference context and no nonzero CC follows. Theorem 34 records this strict-improvement condition.
+
+**Remark (Strict-Improvement Branch Discipline).** The strict-improvement antecedent is a branch condition, not a consequence of complexity alone. On differentiable admissible mapping classes where the context map has nonzero predictive sensitivity to the retained outcome statistics and the predictive-benefit gradient is not cancelled by the resource-cost gradient at the null/Born-realizing map, the null map is not a local PCE optimum and a nonzero context map is selected. If the sensitivity vanishes, if the resource cost dominates the reachable benefit, or if the relevant side-information has already been absorbed into the state-preparation ledger, the strict-improvement inequality can fail and PCE selects the Born/null equivalence class. The empirical content of Theorem 34 is therefore conditional: a complex aggregate coupled to a measurement channel exhibits nonzero CC on the strict-improvement branch, while the named edge cases remain zero-CC branches rather than contradictions of the theorem.
 
 **9.2.1 Theorem 34 (POP/PCE Drives Emergent Biasing)**
 
@@ -54,7 +56,7 @@ $$
 
 **9.3 Consciousness Complexity (CC): Operational Definition and Scaling**
 
-We define Consciousness Complexity (CC) operationally as the quantitative measure of the emergent biasing capability derived in Theorem 34.
+We define Consciousness Complexity (CC) operationally as the quantitative measure of the emergent biasing capability conditionally certified by Theorem 34.
 
 **9.3.1 Definition 30 (Def 30): Operational CC**
 
@@ -145,7 +147,7 @@ The operational Consciousness Complexity CC(S) (Definition 30) of an MPU aggrega
 
 1.  **Internal State as Context ($\mathrm{context}_S$):** The aggregate's internal state providing context is formally the **context state $\mathrm{context}_S(t)$** (defined via the minimal sufficient statistic construction in Appendix L, Definition L.1). Operationally, it represents the coarse-grained, predictively sufficient slice of the aggregate state $\rho_{agg}(t)$ relevant to influencing local ND-RID within available resources.
 2.  **Physical Manifestation of Context:** $\mathrm{context}_S(t)$ manifests physically through properties like the reduced density operator, entanglement structure, patterns in the coarse-grained MPU Stress-Energy Tensor ($T_{\mu\nu}^{(MPU)}$, Appendix B), or emergent curvature patterns.
-3.  **Modulation Pathway:** These collective physical patterns ($\mathrm{context}_S$) act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Equation (B.9)) of the underlying 'Evolve'/ND-RID process. Concretely, a proposed controlled AC-Stark pathway utilizes context-conditioned classical fields to induce shifts in MPU level splittings ($\Delta E \propto \alpha_{pol} E^2/\Delta$, with $\alpha_{pol}$ the effective polarizability coefficient). This tunes the effective jump rates $\gamma_k$ within the Lindblad description, consequently modulating the local 'Evolve' probabilities. The required mapping $\mathcal{M}:\mathcal{C}_{ctx} \to \mathcal{P}_{control}$ must be Lipschitz and low-cost and satisfy the POP/PCE cost–benefit inequality (L.2) to remain dynamically stable. See **Appendix L** for the rigorous formal construction (Definition L.1; Definition L.2; Lemma L.1; Theorem L.1). The electromagnetic channel dominates by factor $\mathcal{R} \sim 10^{36}$ (Proposition L.5), while gravitational self-limitation (Appendix S) bounds achievable CC. A system with high CC possesses the optimized ability (via Theorem 34) to generate and control these patterns to bias the outcomes of the 'Evolve' process.
+3.  **Modulation Pathway:** These collective physical patterns ($\mathrm{context}_S$) act as structured boundary conditions or effective fields influencing the local parameters ($V_{prob}, T_{prob}$, or effective Lindblad parameters $\gamma_k$ as in Equation (B.9)) of the underlying 'Evolve'/ND-RID process. Concretely, a proposed controlled AC-Stark pathway utilizes context-conditioned classical fields to induce shifts in MPU level splittings ($\Delta E \propto \alpha_{pol} E^2/\Delta$, with $\alpha_{pol}$ the effective polarizability coefficient). This tunes the effective jump rates $\gamma_k$ within the Lindblad description, consequently modulating the local 'Evolve' probabilities. The required mapping $\mathcal{M}:\mathcal{C}_{ctx} \to \mathcal{P}_{control}$ must be Lipschitz and low-cost and satisfy the POP/PCE cost–benefit inequality (L.2) to remain dynamically stable. See **Appendix L** for the rigorous formal construction (Definition L.1; Definition L.2; Lemma L.1; Theorem L.1). The electromagnetic channel dominates by factor $\mathcal{R} \sim 10^{36}$ (Proposition L.5), while gravitational self-limitation (Appendix S) bounds achievable CC. On branches satisfying the strict-improvement antecedent of Theorem 34, a high-CC system has the optimized ability to generate and control these patterns to bias the outcomes of the 'Evolve' process.
 4.  **Primary Locus of Observable Effect:** The principal observable consequence is hypothesized to be the biasing of probabilities associated with probabilistic amplitude actualization within the universal 'Evolve' process. This leads to measurable deviations $|\Delta P| \le \mathrm{CC}(S)$ from the baseline Born rule (Proposition 7) that would otherwise solely govern the 'Evolve' outcome probabilities in the absence of such high-complexity contextual influence.
 5.  **Operational Nature:** CC measures this biasing capability. The link between specific content of $\mathrm{context}_S$ (e.g., intent) and bias direction is learned via adaptation (driven by POP/PCE), potentially related to interpretive postulates (Postulate 1), but the mechanism of influence on the 'Evolve' parameters is proposed as objective physics.
 6.  **Implications for Locality:** Since $\mathrm{context}_S$ can involve non-local entanglement, and the CC mechanism acts by influencing local 'Evolve' events, a context change in one part of an entangled aggregate might have statistical consequences (via entanglement and the modified 'Evolve' probabilities) on 'Evolve' outcomes in space-like separated parts. This underpins the statistical FTL influence hypothesis (Postulate 3), which operates within the deterministic endpoint constraint of Theorem 39 and the finite-window zero-error constraint of Theorem 39a on the regular statistical branch.
@@ -158,12 +160,40 @@ To make the CC hypothesis testable, we model how baseline Born rule probabilitie
 
 **9.5.1 Definition 33 (Def 33): General Form of Modified Probability**
 
-The observable probability distribution $q = \{q_i\}$ for an outcome $i$ of a POVM $\{E_i\}$ on a system in state $\rho$, in the presence of a context-providing MPU aggregate $S$, is a modification of the baseline Born distribution $p = \{p_i\}$, where $p_i = P_{\mathrm{Born}}(i)=\mathrm{tr}(\rho E_i)$. The Principle of Compression Efficiency (PCE) dictates that any such modification must be minimal for a given resource cost. The canonical measure of distance on the statistical manifold of probability distributions is the Fisher-Rao geodesic distance, $d_{\mathrm{FR}}(p,q)$. We therefore formalize the CC influence as a bound on this minimal-cost path:
+The observable probability distribution $q=\{q_i\}$ for an outcome $i$ of a POVM $\{E_i\}$ on a system in state $\rho$, in the presence of a context-providing MPU aggregate $S$, is a modification of the baseline Born distribution $p=\{p_i\}$, where $p_i=P_{\mathrm{Born}}(i)=\mathrm{tr}(\rho E_i)$. The primary operational budget is Definition 30:
 $$
-d_{\mathrm{FR}}(p,q) = 2\arccos\left(\sum_k \sqrt{p_k q_k}\right) \le \mathrm{CC}(S)
-\quad \text{(57)}
+\mathrm{TV}(p,q)
+=
+\sup_A|q(A)-p(A)|
+\le
+\mathrm{CC}(S),
 $$
-This single principle yields sharp, non-perturbative, and instrument-independent bounds on observable probability shifts.
+where the supremum is over all coarse-grained events $A$ in the retained event algebra. The Principle of Compression Efficiency (PCE) selects minimal-cost representatives inside this operational ball. The canonical geodesic length on the statistical manifold is the Fisher-Rao distance
+$$
+d_{\mathrm{FR}}(p,q)
+=
+2\arccos\left(\sum_k\sqrt{p_kq_k}\right).
+$$
+Since
+$$
+1-\sum_k\sqrt{p_kq_k}
+=
+H^2(p,q)
+\le
+\mathrm{TV}(p,q)
+\le
+\min\{\mathrm{CC}(S),1\},
+$$
+the operational CC budget implies the Fisher-Rao envelope
+$$
+d_{\mathrm{FR}}(p,q)
+\le
+D_{\mathrm{CC}}(S)
+:=
+2\arccos\bigl(1-\min\{\mathrm{CC}(S),1\}\bigr).
+\tag{57}
+$$
+On branches where $0\le\mathrm{CC}(S)\le1$, this reduces to $D_{\mathrm{CC}}(S)=2\arccos(1-\mathrm{CC}(S))$. A stricter Fisher-budget subbranch may impose $d_{\mathrm{FR}}(p,q)\le\mathrm{CC}(S)$; Theorem 36 records the sharper trigonometric bounds available on that subbranch. The operational probability-shift bound itself does not require the stricter Fisher-budget condition.
 
 **Covariance:** under unitary $U$,
 $$
@@ -246,21 +276,72 @@ $$
 
 **9.5.2 Theorem 36 (PU Predictive-Perturbation Bounds)**
 
-Let $p$ be the Born distribution for a fixed measurement and $q$ the context-conditioned distribution. If the PCE-minimal modification is bounded by the complexity budget such that $d_{\mathrm{FR}}(p,q)\le \mathrm{CC}(S)$, then the observable biases are rigorously bounded. Let $\Delta P(i) = q_i - p_i$ and the Total Variation distance be $\mathrm{TV}(p,q) = \frac{1}{2}\sum_i |q_i - p_i|$.
+Let $p$ be the Born distribution for a fixed measurement and $q$ the context-conditioned distribution. Let
+$$
+\Delta P(i)=q_i-p_i,
+\qquad
+\mathrm{TV}(p,q)=\frac12\sum_i|q_i-p_i|.
+$$
 
-1.  **Exact Non-Perturbative Bounds:** For any value of $\mathrm{CC}(S) \in [0, \pi]$,
-    $$
-    \mathrm{TV}(p,q) \le \sin(\mathrm{CC}(S)/2),\qquad
-    |\Delta P(i)| \le 4\sin(\mathrm{CC}(S)/4)\;\; \forall i.
-    $$
+1. **Operational CC bounds.** From Definition 30, every retained measurement satisfies
+$$
+\mathrm{TV}(p,q)\le\mathrm{CC}(S),
+\qquad
+|\Delta P(i)|\le\mathrm{CC}(S)
+\quad
+\forall i.
+$$
+Equivalently, the Fisher-Rao distance is bounded by the derived operational envelope
+$$
+d_{\mathrm{FR}}(p,q)
+\le
+2\arccos\bigl(1-\min\{\mathrm{CC}(S),1\}\bigr).
+$$
 
-2.  **Small-Bias Regime Bounds:** For the physically relevant case $\mathrm{CC}(S) \ll 1$, the leading-order universal bounds are:
-    $$
-    \mathrm{TV}(p,q) \le \tfrac12\,\mathrm{CC}(S),\qquad
-    |\Delta P(i)| \le \mathrm{CC}(S).
-    $$
+2. **Sharper Fisher-budget subbranch.** If, in addition, the PCE-minimal modification lies on the stricter Fisher-budget subbranch
+$$
+d_{\mathrm{FR}}(p,q)\le \mathrm{CC}(S),
+\qquad
+0\le\mathrm{CC}(S)\le\pi,
+$$
+then
+$$
+\mathrm{TV}(p,q)\le\sin(\mathrm{CC}(S)/2),
+\qquad
+|\Delta P(i)|\le4\sin(\mathrm{CC}(S)/4)
+\quad
+\forall i.
+$$
 
-*Proof.* Let
+3. **Small-bias regime on the Fisher-budget subbranch.** If $\mathrm{CC}(S)\ll1$ and the stricter Fisher-budget condition holds, then
+$$
+\mathrm{TV}(p,q)\le\frac12\mathrm{CC}(S),
+\qquad
+|\Delta P(i)|\le\mathrm{CC}(S).
+$$
+
+*Proof.* The operational CC bounds follow directly from Definition 30. For any coarse-grained event $A$ in the retained event algebra,
+$$
+|q(A)-p(A)|\le\mathrm{CC}(S).
+$$
+Taking the supremum over $A$ gives $\mathrm{TV}(p,q)\le\mathrm{CC}(S)$, and each singleton event gives $|\Delta P(i)|\le\mathrm{CC}(S)$. Moreover, with
+$$
+c:=\sum_k\sqrt{p_kq_k},
+\qquad
+H^2(p,q):=1-c,
+$$
+the standard inequality $H^2(p,q)\le\mathrm{TV}(p,q)$ gives
+$$
+c\ge1-\min\{\mathrm{CC}(S),1\},
+$$
+hence
+$$
+d_{\mathrm{FR}}(p,q)=2\arccos(c)
+\le
+2\arccos\bigl(1-\min\{\mathrm{CC}(S),1\}\bigr).
+$$
+
+For the sharper Fisher-budget subbranch, let
 $$
 c:=\sum_k \sqrt{p_k q_k}.
 $$

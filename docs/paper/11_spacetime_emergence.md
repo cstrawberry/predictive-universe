@@ -168,19 +168,59 @@ Since the equality holds for arbitrary $U$ and arbitrary local field data, the i
 
 (b) Equivalence of passive coordinate relabeling (used in (a)) and active diffeomorphism of the manifold is standard (Wald 1984, §2.4; Hawking & Ellis 1973, §2.4): on a compactly supported region, the active diffeomorphism $\varphi$ acting on fields as $\Psi\mapsto\varphi^*\Psi$ is equivalent to a passive coordinate change. Applied to (67c): $\varphi$ acts on $\mathcal L$ as a scalar, on $\sqrt{|g|}\,d^4x$ as an invariant volume form, giving $S[\varphi^*\Psi]=S[\Psi]$. ∎
 
-**Corollary 45a.1 (Derived Noether Identity for the Matter Sector).** Let $S[\Psi,g]=S_{\mathrm{geom}}[g]+S_{\mathrm{MPU}}[\Psi,g]$ with $S_{\mathrm{MPU}}$ of the scalar-density form of Theorem 45a, and define the matter stress-energy tensor
+**Corollary 45a.1 (Derived Noether Identity for the Matter Sector).** Let $S[\Psi,g]=S_{\mathrm{geom}}[g]+S_{\mathrm{MPU}}[\Psi,g]$ with $S_{\mathrm{MPU}}$ of the scalar-density form of Theorem 45a. With covariant metric variations, define the matter stress-energy tensor by
 $$
-T^{\mu\nu} \;:=\; -\frac{2}{\sqrt{|g|}}\,\frac{\delta S_{\mathrm{MPU}}}{\delta g_{\mu\nu}}.\tag{67e}
+T^{\mu\nu}
+:=
+\frac{2}{\sqrt{|g|}}\,
+\frac{\delta S_{\mathrm{MPU}}}{\delta g_{\mu\nu}}.
+\tag{67e}
 $$
-If the matter fields satisfy their Euler–Lagrange equations, then $\nabla_\mu T^{\mu\nu}=0$.
+Equivalently, with inverse-metric variations,
+$$
+T_{\mu\nu}
+=
+-\frac{2}{\sqrt{|g|}}\,
+\frac{\delta S_{\mathrm{MPU}}}{\delta g^{\mu\nu}},
+\tag{67e'}
+$$
+because $\delta g^{\alpha\beta}=-g^{\alpha\mu}g^{\beta\nu}\delta g_{\mu\nu}$. If the matter fields satisfy their Euler–Lagrange equations, then $\nabla_\mu T^{\mu\nu}=0$.
 
 *Proof.* Let $\xi^\mu$ be a compactly supported smooth vector field on $M_{\mathrm{reg}}$, and consider the infinitesimal diffeomorphism it generates. By Theorem 45a(b),
 $$
-0 \;=\; \delta_\xi S_{\mathrm{MPU}} \;=\; \int d^4x\,\sqrt{|g|}\,\Bigl[\frac{1}{\sqrt{|g|}}\frac{\delta S_{\mathrm{MPU}}}{\delta\Psi}\,\delta_\xi\Psi + \frac{1}{\sqrt{|g|}}\frac{\delta S_{\mathrm{MPU}}}{\delta g_{\mu\nu}}\,\delta_\xi g_{\mu\nu}\Bigr].
+0
+=
+\delta_\xi S_{\mathrm{MPU}}
+=
+\int d^4x\,\sqrt{|g|}
+\left[
+\frac{1}{\sqrt{|g|}}\frac{\delta S_{\mathrm{MPU}}}{\delta\Psi}\,\delta_\xi\Psi
++
+\frac{1}{\sqrt{|g|}}\frac{\delta S_{\mathrm{MPU}}}{\delta g_{\mu\nu}}\,\delta_\xi g_{\mu\nu}
+\right].
 $$
-On-shell $\delta S_{\mathrm{MPU}}/\delta\Psi=0$, so only the metric variation contributes. Using $\delta_\xi g_{\mu\nu}=\mathcal L_\xi g_{\mu\nu}=\nabla_\mu\xi_\nu+\nabla_\nu\xi_\mu$, the symmetry of $T^{\mu\nu}$, and integration by parts against compactly supported $\xi$:
+On-shell $\delta S_{\mathrm{MPU}}/\delta\Psi=0$. By (67e),
 $$
-0 \;=\; \int d^4x\,\sqrt{|g|}\,(\nabla_\mu T^{\mu\nu})\,\xi_\nu.
+\frac{1}{\sqrt{|g|}}\frac{\delta S_{\mathrm{MPU}}}{\delta g_{\mu\nu}}
+=
+\frac12 T^{\mu\nu}.
+$$
+Using $\delta_\xi g_{\mu\nu}=\mathcal L_\xi g_{\mu\nu}=\nabla_\mu\xi_\nu+\nabla_\nu\xi_\mu$ and the symmetry of $T^{\mu\nu}$,
+$$
+0
+=
+\frac12\int d^4x\,\sqrt{|g|}\,
+T^{\mu\nu}(\nabla_\mu\xi_\nu+\nabla_\nu\xi_\mu)
+=
+\int d^4x\,\sqrt{|g|}\,
+T^{\mu\nu}\nabla_\mu\xi_\nu.
+$$
+Integration by parts against compactly supported $\xi$ gives
+$$
+0
+=
+-\int d^4x\,\sqrt{|g|}\,
+(\nabla_\mu T^{\mu\nu})\xi_\nu.
 $$
 Since $\xi$ is arbitrary, $\nabla_\mu T^{\mu\nu}=0$. ∎
 

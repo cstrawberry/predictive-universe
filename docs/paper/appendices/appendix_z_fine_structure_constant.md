@@ -1273,7 +1273,7 @@ The same value simultaneously satisfies the following cross-domain constraint le
 | C1 (Algebraic) | $M = 2ab = 2\cdot2\cdot6=24$ with $a+b=d_0=8$ and $a=2$ | ✓ |
 | C2 (Capacity) | $M\ln(1+u)=\ln d_0$ gives $u^*=2^{1/8}-1$ | ✓ |
 | C3 (Geometric) | $M=K(D)$ has the unique positive-integer solution $D=4$ in the Bures tangent-cell channel contract | ✓ |
-| C4 (Coding) | Predict-verify self-duality forces $k=12$, and the distance-optimal binary interface code is $\mathcal G_{24}=[24,12,8]$ | ✓ |
+| C4 (Coding) | The predictive-recovery MacWilliams self-dual-rate gate forces $k=12$, and the fixed-rate distance-optimal binary interface code is $\mathcal G_{24}=[24,12,8]$ | ✓ |
 | C5 (Rootless lattice) | The unique rootless even unimodular lattice in rank $24$ is $\Lambda_{24}$ | ✓ |
 | C6 (Unimodular rank) | $24\equiv0\pmod 8$, as required for positive-definite even unimodular lattices | ✓ |
 | C7 (Modular weight) | $\eta^{24}$ has modular weight $12$ | ✓ |
@@ -1487,8 +1487,9 @@ $$\dim[\mathfrak{g}_{\mathrm{SM}}] = k = 12$$
 - Under those hypotheses the surviving solution is $G_{\mathrm{SM}} = SU(3) \times SU(2) \times U(1)$ with dimension 12
 
 **Derivation B (Golay structure from Theorem Z.13):**
-- Block length $n = M = 24$ (Theorem Z.5)
-- PCE optimization at rate-½ selects maximum distance code
+- Block length $n=M=24$ (Theorem Z.5)
+- The predictive-recovery MacWilliams gate selects the rate-$\tfrac12$ split (Def Z.13b.0; Thm Z.13b.0a)
+- Fixed-rate PCE distance optimization selects the maximum-distance code
 - The unique optimal $[24, k, d]$ code at rate ½ is Golay with $k = 12$, $d = 8$
 
 These derivations share PCE optimization but operate on different structures. Their convergence at 12 reflects the unified role of PCE. ∎
@@ -1594,31 +1595,52 @@ A sector that changes one of these values must either leave the finite response 
 
 ### Z.13.1 Golay Code Realization
 
-**Theorem Z.13 (Predictive-Recovery MacWilliams Golay Code Realization).** On the minimal $M=24$ interface branch, if the predictive-recovery MacWilliams duality gate of Definition Z.13b.0 is active, then the interface modes split into a prediction carrier and a recovery carrier of equal dimension,
+**Theorem Z.13 (Predictive-Recovery MacWilliams Golay Code Realization).** On the minimal $M=24$ interface branch, $k=12$ follows only after the predictive-recovery self-dual-rate gate is active. Equivalently, if the retained binary interface code satisfies the exact self-dual carrier condition
 $$
-k=12,
+C=C^\perp\subset\mathbb F_2^{24},
+$$
+then
+$$
+k=\dim C=12,
 \qquad
 M-k=12.
 $$
-At this fixed split, the distance-optimal binary linear interface code is
+More generally, Definition Z.13b.0 and Theorem Z.13b.0a give the same rate conclusion by forcing $\dim C=\dim C^\perp=12$ before distance maximization. At this fixed split, the distance-optimal binary linear interface code is
 $$
 \mathcal G_{24}=[24,12,8],
 $$
 the extended binary Golay code.
 
-*Proof.* The minimal active-projector ledger gives $M=24$ interface symbols (Theorem Z.5 and Theorem Z.2.5b). Definition Z.13b.0 treats the prediction payload and recovery syndrome as MacWilliams-dual PCE roles and assigns a strict positive dual-asymmetry penalty
+*Proof.* The minimal active-projector ledger gives $M=24$ interface symbols (Theorem Z.5 and Theorem Z.2.5b). For any binary linear code $C\subset\mathbb F_2^{24}$,
+$$
+\dim C+\dim C^\perp=24.
+$$
+On the exact self-dual carrier branch $C=C^\perp$, this gives
+$$
+2\dim C=24,
+\qquad
+\dim C=12.
+$$
+Therefore $k=12$ and $M-k=12$. On the predictive-recovery MacWilliams branch, the same equality of dimensions is forced without separately assuming $C=C^\perp$: Definition Z.13b.0 treats prediction payload and recovery syndrome as MacWilliams-dual PCE roles and gives the strict dual-asymmetry penalty
 $$
 V_{\mathrm{dual}}(C)=\lambda_{\mathrm{dual}}(\dim C-\dim C^\perp)^2,
 \qquad
 \lambda_{\mathrm{dual}}>0.
 $$
-Theorem Z.13b.0a proves that every PCE rate minimizer on this branch satisfies
+Theorem Z.13b.0a proves that every rate-stage PCE minimizer lies on the zero-asymmetry stratum
 $$
 \dim C=\dim C^\perp=12.
 $$
-Thus the rate-$\tfrac12$ split is not a free linear-balance assumption; it is the zero-asymmetry stratum of the predictive-recovery MacWilliams gate.
+Thus $M=24$ alone does not imply $k=12$; the implication is
+$$
+M=24
+\quad+\quad
+\text{self-dual-rate gate}
+\quad\Longrightarrow\quad
+k=12.
+$$
 
-With $(n,k)=(24,12)$ fixed, PCE minimizes the error term by maximizing the minimum Hamming distance. The classical coding-theory bound for binary linear $[24,12,d]$ codes gives $d\le8$, and the extended binary Golay code attains $d=8$ uniquely up to code equivalence. Therefore the selected binary-linear interface code on this branch is $\mathcal G_{24}=[24,12,8]$. The detection and correction capacities follow immediately from $d=8$: the code detects up to $7$ errors and corrects up to $\lfloor(d-1)/2\rfloor=3$ errors. ∎
+With $(n,k)=(24,12)$ fixed, PCE minimizes the error term by maximizing the minimum Hamming distance. The classical coding-theory bound for binary linear $[24,12,d]$ codes gives $d\le8$, and the extended binary Golay code attains $d=8$ uniquely up to code equivalence. Therefore the selected binary-linear interface code on this branch is $\mathcal G_{24}=[24,12,8]$. The selected code is Type II self-dual, so the final Golay carrier satisfies $\mathcal G_{24}=\mathcal G_{24}^\perp$. The detection and correction capacities follow immediately from $d=8$: the code detects up to $7$ errors and corrects up to $\lfloor(d-1)/2\rfloor=3$ errors. ∎
 
 ### Z.13.2 Connection to PCE
 
@@ -2171,11 +2193,29 @@ The Golay code's error-correction structure exhibits a precise correspondence wi
 
 #### Z.13.5.1 The 144-Structure Theorem
 
-**Theorem Z.13a (Syndrome-Partition Identity).** The number of entries in the Golay code's parity matrix equals the product of the inactive subspace dimension and the interface mode count:
-
-$$\boxed{k^2 = b \times M = 144}$$
-
-where $k = 12$ is the Golay code dimension, $b = 6$ is the inactive subspace dimension, and $M = 24$ is the interface mode count. This equality holds if and only if the active kernel dimension is $a = 2$.
+**Theorem Z.13a (Syndrome-Partition Identity).** On the predictive-recovery self-dual-rate branch of Definition Z.13b.0 and Theorem Z.13b.0a, the number of entries in the Golay code's systematic parity matrix equals the product of the inactive subspace dimension and the interface mode count:
+$$
+\boxed{k^2=bM=144}.
+$$
+Here
+$$
+k=12,\qquad b=6,\qquad M=24.
+$$
+The equivalence
+$$
+bM=k^2
+\quad\Longleftrightarrow\quad
+a=2
+$$
+holds on the algebraic interface branch where
+$$
+M=2ab,
+\qquad
+k=\frac{M}{2}=ab,
+\qquad
+b=d_0-a>0.
+$$
+Thus the theorem uses the self-dual-rate gate to obtain $k=M/2$; it does not infer $k=12$ from $M=24$ alone.
 
 *Proof.*
 
@@ -2190,28 +2230,33 @@ where $k = 12$ is the Golay code dimension, $b = 6$ is the inactive subspace dim
 | $d_0$ | 8 on the minimal branch | Theorem 23; Theorem Z.2 | Lower bound $d_0 \ge 2^{K_0}$ plus minimal 3-qubit Appendix Z branch |
 | $b = d_0 - a$ | 6 | Definition | Inactive complement |
 | $M = 2ab$ | 24 | Theorem Z.5 | QFI-active interface generators |
-| $k = M/2$ | 12 | Theorem Z.13 | PCE distance optimization at rate-½ |
+| $k = M/2$ | 12 | Def Z.13b.0; Thm Z.13b.0a; Thm Z.13b | Predictive-recovery self-dual-rate gate, followed by fixed-rate distance optimization |
 
 **Step 3 (Algebraic Verification).** Direct computation:
 $$b \times M = 6 \times 24 = 144 = 12^2 = k^2 \quad \checkmark$$
 
-**Step 4 (Consistency with $a = 2$).** The identity $bM = k^2$ provides a consistency check on the framework. Given that $a = 2$ is independently derived from Theorem Z.1 (Landauer cost + PPI), we verify:
-
-From $M = 2ab$ and $k = M/2 = ab$:
-$$bM = b \cdot 2ab = 2ab^2$$
-$$k^2 = (ab)^2 = a^2b^2$$
-
-Setting equal and dividing by $ab^2$:
-$$2 = a$$
-
-Thus $bM = k^2$ holds if and only if $a = 2$, the Landauer-derived value (Theorem Z.1). ∎
+**Step 4 (Consistency with $a = 2$).** The identity $bM=k^2$ provides a consistency check on the combined active-kernel and self-dual-rate branches. The active-kernel branch gives $M=2ab$. The predictive-recovery self-dual-rate gate gives $k=M/2=ab$. Therefore
+$$
+bM=b(2ab)=2ab^2,
+$$
+while
+$$
+k^2=(ab)^2=a^2b^2.
+$$
+Because $a>0$ and $b>0$, equality $bM=k^2$ is equivalent to
+$$
+2ab^2=a^2b^2
+\quad\Longleftrightarrow\quad
+a=2.
+$$
+Thus, on the branch where $M=2ab$ and $k=M/2$ are both already certified, the syndrome-partition identity holds if and only if $a=2$, the Landauer-derived active dimension of Theorem Z.1. ∎
 
 **Corollary Z.13a.1 (Non-Triviality).** The equality $bM = k^2 = 144$ connects three independently-derived structures:
 - **Thermodynamic origin:** The partition $(a, b) = (2, 6)$ from Landauer constraints (Theorem Z.1)
 - **Information-theoretic origin:** The error-correction structure $[24, 12, 8]$ from PCE optimization (Theorem Z.13)
 - **Geometric origin:** The Grassmannian $\text{Gr}(2,8)$ with $\dim_{\mathbb{C}} = ab = 12 = k$ and $\dim_{\mathbb{R}} = 2ab = 24 = n$
 
-The syndrome-partition identity demonstrates these structures are mutually determining: each uniquely implies the other through $a = 2$. This identity provides a structural bound consistent with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$; Theorem U.8c there qualifies that value as a reference branch, while the corresponding corrected four-mode branch value is $\kappa_{\mathrm{trans}} = 142$ under the explicit false-vacuum spectral hypotheses of Theorem U.13b.
+The syndrome-partition identity demonstrates that these structures are mutually compatible on the combined branch carrying $a=2$, $M=2ab$, and the predictive-recovery self-dual-rate condition $k=M/2$. The algebraic equivalence $bM=k^2\Longleftrightarrow a=2$ uses the certified rate identity $k=M/2$; it does not derive the self-dual-rate gate from $M=24$ alone. This identity provides a structural bound consistent with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$; Theorem U.8c there qualifies that value as a reference branch, while the corresponding corrected four-mode branch value is $\kappa_{\mathrm{trans}} = 142$ under the explicit false-vacuum spectral hypotheses of Theorem U.13b.
 
 *Remark.* The three derivation paths—thermodynamic (Landauer), information-theoretic (Golay), and geometric (Grassmannian)—employ distinct mathematical frameworks yet converge on identical numerical values. This overdetermination provides strong evidence for the structural uniqueness of the PCE-Attractor.
 
@@ -2238,7 +2283,7 @@ W_{C^\perp}(x,y)=2^{-\dim C}W_C(x+y,x-y);
 $$
 4. PCE rate selection is lexicographic: the dual-asymmetry coordinate (Z.13b.0.1) is minimized first, and remaining rate-stage costs are evaluated only on the resulting zero-asymmetry stratum, before the fixed-rate distance maximization step.
 
-**Theorem Z.13b.0a (Predictive MacWilliams Rate Selection).** On the $n=M=24$ interface branch satisfying Definition Z.13b.0, every PCE rate minimizer satisfies
+**Theorem Z.13b.0a (Predictive-Recovery MacWilliams Rate Selection).** On the $n=M=24$ interface branch satisfying Definition Z.13b.0, every PCE rate minimizer satisfies
 $$
 \dim C=\dim C^\perp=12.
 \tag{Z.13b.0a.1}
@@ -2736,7 +2781,17 @@ $$\Lambda_{24} = \bigcup_{c \in \mathcal{G}_{24}} (L + g_c)$$
 **Step 3 (Rootlessness from Distance-8).** The Golay code's minimum distance $d = 8$ is necessary and sufficient for rootlessness (Proposition R.4.2a).
 
 **Step 4 (Derivation Chain).** The complete chain:
-$$a = 2 \xrightarrow{b = d_0 - a} b = 6 \xrightarrow{M = 2ab} M = 24 \xrightarrow{k = M/2} k = 12 \xrightarrow{k^2} k^2 = 144$$
+$$
+a=2
+\xrightarrow{b=d_0-a}
+b=6
+\xrightarrow{M=2ab}
+M=24
+\xrightarrow{\mathrm{Def}\ Z.13b.0,\ \mathrm{Thm}\ Z.13b.0a}
+k=M/2=12
+\xrightarrow{k^2}
+k^2=144.
+$$
 
 unifies thermodynamic (Landauer), information-theoretic (Golay), and geometric (Leech) structures as manifestations of $a = 2$, with the structural bound $k^2 = 144$ consistent with the Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ and the corresponding corrected four-mode branch value $\kappa_{\mathrm{trans}} = 142$ under the explicit false-vacuum spectral hypotheses of Theorem U.13b. ∎
 
@@ -2764,7 +2819,7 @@ specifying how information modes couple to redundancy modes for error correction
 
 **Remark Z.13e.1: Information-Theoretic Interpretation.** The identity $C_{\mathrm{interaction}} = C_{\mathrm{stabilization}} = 144$ suggests that the structure governing hidden-visible coupling corresponds structurally to the error-correction organization. This resonates with Wheeler's "it from bit" intuition: physical structure emerges from information-theoretic optimization. The Appendix U five-mode reference exponent $\kappa_{\mathrm{ref}} = 141.5$ indicates that minimal vacuum fluctuations activate most but not all of this constraint structure, with saturation ratio $\kappa_{\mathrm{ref}}/k^2 = 141.5/144 \approx 0.9826$; the corresponding corrected four-mode branch value gives $\kappa_{\mathrm{trans}}/k^2 = 142/144 \approx 0.9861$, and Theorem U.13b records that corrected branch under its explicit false-vacuum spectral hypotheses.
 
-**Remark Z.13e.2: Uniqueness.** The Golay code is unique up to equivalence (Theorem Z.13b). Therefore, the 144-bit structure is not one choice among many but the unique solution to predict-verify self-duality and PCE distance optimization at block length 24.
+**Remark Z.13e.2: Uniqueness.** The Golay code is unique up to equivalence (Theorem Z.13b). Therefore, the 144-bit structure is not one choice among many but the unique solution on the predictive-recovery MacWilliams self-dual-rate branch followed by fixed-rate PCE distance optimization at block length 24.
 
 #### Z.13.5.5.4 Generational Structure Compatibility
 
@@ -3880,7 +3935,7 @@ consistent to better than $10^{-6}$. ∎
 
 ### Z.27.8 The Complete Formula
 
-**Theorem Z.26 (Fine-Structure Constant: Exact Sinc-Core Formula).** Combining the bulk Ward identity (Theorem Z.14), the first-order interface correction (Theorem Z.17), the symmetric-space curvature correction (Theorem Z.24; Lemma Z.24a), the minimal holonomy normalization (Lemma Z.14; Theorem Z.25), and the exact $SU(2)$ geodesic-chord transport factor (Lemma Z.13), the Thomson-limit certificate core is
+**Theorem Z.26 (Fine-Structure Constant: Exact Sinc-Core Formula on the Predictive-Recovery MacWilliams Branch).** On the combined branch carrying the active-projector ledger ($M=24$), the predictive-recovery MacWilliams self-dual-rate gate of Definition Z.13b.0 and Theorem Z.13b.0a (which fixes $k=M/2=12$ as the input to the bulk Ward identity), and the Bures tangent-cell mode-channel contract of Theorem Z.11, and combining the bulk Ward identity (Theorem Z.14), the first-order interface correction (Theorem Z.17), the symmetric-space curvature correction (Theorem Z.24; Lemma Z.24a), the minimal holonomy normalization (Lemma Z.14; Theorem Z.25), and the exact $SU(2)$ geodesic-chord transport factor (Lemma Z.13), the Thomson-limit certificate core is
 $$
 \alpha^{-1}_{0}
 =
