@@ -360,3 +360,33 @@ This diagnostic inversion is not a derivation and may not be used to select any 
 ### V.3.7 Audit Conclusion
 
 The finite audit ladder verifies only the displayed mechanical calculations. It does not verify Algorithm T.78.6a because the required RHG block data, spectrahedral minimizer, finite-part computation, and tail constants are absent. Therefore the RHG gate remains in the pre-certificate negative-closure status of Theorem T.78.2 and Corollary T.78.5.1.
+
+Three additional closed auxiliary audits are recorded as Sections V.3.8–V.3.10 below. They reduce to finite cardinality or exact arithmetic rather than to missing spectral certificates, and are therefore closed at the audit level even though the spectral-certificate ladder of V.3.1–V.3.6 remains as stated.
+
+### V.3.8 SPAP Role-Readout Audit
+
+For any candidate SPAP realization with $N<8$ visited states, every joint role-readout map
+$$
+r:\mathcal S_{\mathrm{vis}}\to\{0,1\}^3
+$$
+has $|r(\mathcal S_{\mathrm{vis}})|\le N<8$, hence cannot be surjective. Therefore a claimed $N<8$ SPAP realization can be rejected before transition-table details are considered, by Corollary 5.2.2b. This audit is closed by exact finite cardinality.
+
+### V.3.9 Page-Purity-Before-Entropy Audit
+
+The $2\times2$ stabilizer witness of Corollary K.3.1a has
+$$
+\mathbb E\operatorname{tr}(\rho_E^2)=\frac45
+$$
+matching the Haar Page-purity value, but
+$$
+\mathbb E S(\rho_E)=\frac25\ln2\ne\frac13=S_{\mathrm{Page}}(2,2).
+$$
+Thus any audit promoting a second-moment or purity certificate to a von Neumann Page-entropy certificate without Definition K.3d.4c fails the branch discipline. This audit is closed by exact arithmetic on a finite ensemble.
+
+### V.3.10 Same-Branch Zero-Residual Obstruction Audit
+
+The exact sinc-core value differs from the CODATA-2022 Thomson comparison value by
+$$
+0.00009287822863,
+$$
+about $0.678$ ppm. By Corollary Z.27.11e.1, this offset is about $4422.8$ recorded measurement standard uncertainties and about $1.644$ times the canonical comparison-budget diagnostic of Remark Z.26d, so no same-branch theorem fixing $R_\alpha=0$ can land at the recorded comparison value. The residual-gated row remains certificate-pending until $R_\alpha$ is fixed by the forward-locked gate of Definition Z.27.11a, Definition Z.27.11g, or Definition Z.27.11j. This audit is closed by exact arithmetic against the recorded ledger value.

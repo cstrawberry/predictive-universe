@@ -58,7 +58,7 @@ $$
 =
 \alpha^{-1}_{0}+R_\alpha.
 $$
-It is closed as a theorem-level comparison interval only when $R_\alpha$ is fixed by Definition Z.27.11j, by an accepted all-orders residual certificate of Definition Z.27.11g, or by a theorem proving $R_\alpha=0$ on the same branch.
+It is closed as a theorem-level comparison interval only when $R_\alpha$ is fixed by Definition Z.27.11j, by an accepted all-orders residual certificate of Definition Z.27.11g, or by a theorem proving $R_\alpha=0$ on the same branch. The hypothetical residual-free same-branch theorem is constrained by Corollary Z.27.11e.1: the closed-form core lands $0.678$ ppm from the CODATA Thomson comparison value, with an offset much larger than the recorded measurement-side uncertainty and larger than the canonical comparison-budget diagnostic of Remark Z.26d. Hence a same-branch theorem fixing $R_\alpha=0$ does not land at the recorded comparison value; theorem-level comparison requires a certified nonzero residual gate or a different branch fixed before comparison.
 
 **PPI mapping chain for this appendix (α and D).** The result $D=4$ follows once the internal interface structure is identified with macroscopic operational channels through PPI. The Thomson-limit alpha core follows as a closed-form finite-response calculation, while the comparison interval follows only after the residual gate is closed:
 
@@ -68,7 +68,7 @@ It is closed as a theorem-level comparison interval only when $R_\alpha$ is fixe
 
 3. **Coupling identification.** The coefficient $u^*$ is fixed by capacity saturation of the internal QFI spectrum (Theorem Z.7) with the flat Bures/QFI eigenvalues $\lambda_i=1$ at the attractor (Theorem Z.5); the physical electromagnetic coupling is $\alpha_{\mathrm{em}}=u^*/(4\pi\kappa_{\mathrm{eff}})$ after the interface correction (Theorem Z.26).
 
-4. **Uncertainty accounting.** The displayed $\pm0.000060$ interval is the canonical branch remainder budget used in the comparison ledger. A theorem-level Thomson interval requires the finite residual entry $R_\alpha$ demanded by Definition Z.27.11a and closed by Definition Z.27.11j, Definition Z.27.11g, or a same-branch zero-residual theorem.
+4. **Uncertainty accounting.** The displayed $\pm0.000060$ interval is the canonical branch remainder budget used in the comparison ledger. A theorem-level Thomson interval requires the finite residual entry $R_\alpha$ demanded by Definition Z.27.11a and closed by Definition Z.27.11j, Definition Z.27.11g, or a same-branch zero-residual theorem. The zero-residual subbranch is constrained by Corollary Z.27.11e.1: the residual-free core does not land at the recorded comparison value, so comparison closure on this branch requires a certified nonzero residual gate unless a different branch is fixed before comparison.
 
 ### Z.1.4 Methodological Note
 - Two independent selection mechanisms for $D = 4$:
@@ -2405,6 +2405,85 @@ $$
 $$
 Solving gives the displayed formula and values. ∎
 
+**Corollary Z.13b.1a (Octad-Hessian Stiffness Fingerprint).** On the predictive-recovery MacWilliams Golay branch, let $\mathcal O_8$ be the $759$ octads of $S(5,8,24)$. For $u\in\mathbb R^{24}$ define
+$$
+\bar u:=\frac1{24}\sum_{i=1}^{24}u_i,
+\qquad
+v_i:=u_i-\bar u,
+$$
+and the centered octad quadratic form
+$$
+Q_{\mathrm{oct}}(u)
+:=
+\sum_{O\in\mathcal O_8}
+\left(\sum_{i\in O}v_i\right)^2.
+\tag{Z.13b.1a.1}
+$$
+Then
+$$
+Q_{\mathrm{oct}}(u)=176\sum_{i=1}^{24}v_i^2,
+\tag{Z.13b.1a.2}
+$$
+and its Hessian on $\mathbb R^{24}$ is
+$$
+D^2Q_{\mathrm{oct}}
+=
+352\left(I-\frac1{24}\mathbf1\mathbf1^T\right).
+\tag{Z.13b.1a.3}
+$$
+Thus the octad stiffness spectrum is
+$$
+0\quad\text{with multiplicity }1,
+\qquad
+352\quad\text{with multiplicity }23.
+\tag{Z.13b.1a.4}
+$$
+The zero mode is the uniform mode, and the nonzero sector is exactly degenerate.
+
+*Proof.* By Corollary Z.13b.1, each point lies in $\lambda_1=253$ octads and each pair of distinct points lies in $\lambda_2=77$ octads. Since $\sum_i v_i=0$, expanding (Z.13b.1a.1) gives
+$$
+Q_{\mathrm{oct}}(u)
+=
+\sum_{O\in\mathcal O_8}
+\sum_{i\in O}v_i^2
++
+2\sum_{O\in\mathcal O_8}\sum_{i<j\in O}v_iv_j
+$$
+$$
+=
+253\sum_i v_i^2+154\sum_{i<j}v_iv_j.
+$$
+Using
+$$
+\left(\sum_i v_i\right)^2
+=
+\sum_i v_i^2+2\sum_{i<j}v_iv_j
+=0,
+$$
+we have
+$$
+\sum_{i<j}v_iv_j=-\frac12\sum_i v_i^2.
+$$
+Therefore
+$$
+Q_{\mathrm{oct}}(u)
+=253\sum_i v_i^2-77\sum_i v_i^2
+=176\sum_i v_i^2,
+$$
+which proves (Z.13b.1a.2). Let
+$$
+P_0:=I-\frac1{24}\mathbf1\mathbf1^T.
+$$
+Then $v=P_0u$ and $P_0^2=P_0=P_0^T$, so
+$$
+Q_{\mathrm{oct}}(u)=176u^TP_0u.
+$$
+Taking two derivatives gives
+$$
+D^2Q_{\mathrm{oct}}=352P_0.
+$$
+The projector $P_0$ has eigenvalue $0$ on $\mathrm{span}\{\mathbf1\}$ and eigenvalue $1$ on the $23$-dimensional centered subspace $\mathbf1^\perp$, proving the stated spectrum. ∎
+
 **Definition Z.13b.2 (Substrate-Aligned Residual Syndrome Branch).** A 24-mode quantum interface is on the substrate-aligned residual syndrome branch when, after choosing a marked Golay-Leech interface frame and after modeling ordinary device-local noise, the observed binary residual event law on
 $$
 e\in\mathbb F_2^{24}
@@ -4246,6 +4325,35 @@ Therefore a theorem-level Thomson interval requires an independently certified r
 
 *Proof.* Substitute $u^*=2^{1/8}-1$ and $K_0=3$ into (Z.27.11a), set $R_\alpha=0$, and evaluate the resulting expression. The terms are fixed analytic functions of previously derived constants, so the displayed number is unique. Definition Z.27.11a, however, includes $R_\alpha$ as the residual interval for finite-order, threshold, and projection tails not already included in the sinc factor. If $R_\alpha$ is absent, the record $\mathfrak C_\alpha$ is incomplete by Algorithm Z.27.11b. If $R_\alpha$ is chosen after comparison, Corollary Z.27.11d forbids promotion. Hence theorem-level interval status requires a pre-comparison certified $R_\alpha$. ∎
 
+**Corollary Z.27.11e.1 (Same-Branch Zero-Residual Theorem Obstruction).** Let the CODATA-2022 Thomson inverse fine-structure comparison value recorded in the Appendix Z ledger be
+$$
+\alpha^{-1}_{\mathrm{exp}}=137.035999177,
+\qquad
+\sigma_{\alpha^{-1}}=0.000000021,
+$$
+where $\sigma_{\alpha^{-1}}$ is the recorded standard measurement-side uncertainty encoded by the comparison notation. On the same Appendix Z core branch, the hypothetical zero-residual same-branch theorem $R_\alpha=0$ would predict
+$$
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}=137.03609205522863\ldots,
+$$
+with no admissible additive structural correction. The arithmetic offset
+$$
+\alpha^{-1}_{0}-\alpha^{-1}_{\mathrm{exp}}=0.00009287822863\ldots
+\tag{Z.27.11e.1}
+$$
+is approximately $0.678$ ppm. It equals about $4422.8$ recorded measurement standard uncertainties, and by Remark Z.26d it is about $1.644$ times the canonical comparison-budget diagnostic $B_{\mathrm{budget}}^{\mathrm{can}}=5.64908560379\times10^{-5}$. The additive residual required to center the certified value at the measured central value is
+$$
+R_\alpha^{\mathrm{cent}}
+=
+\alpha^{-1}_{\mathrm{exp}}-\alpha^{-1}_{0}
+=
+-0.00009287822863\ldots .
+\tag{Z.27.11e.2}
+$$
+
+*Reading.* The measurement-side uncertainty $\sigma_{\alpha^{-1}}$ is not the certificate budget for theory-experiment comparison on this branch, because the certificate-complete row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ is defined to absorb structural corrections through $R_\alpha$; the relevant branch budget is the accepted residual interval once the gate is closed. The structural-correction bucket $R_\alpha$ has named bulk, interface, electromagnetic, curvature, and sinc-transport entries of $\mathfrak C_\alpha$. The arithmetic of (Z.27.11e.1) therefore constrains what kind of same-branch theorem can serve as comparison closure: a hypothetical theorem fixing $R_\alpha=0$ on the Appendix Z core branch would close the row at $\alpha^{-1}_{0}$, which does not equal the recorded comparison value and lies outside the recorded measurement-side uncertainty and the canonical comparison-budget diagnostic. The residual-gated row remains certificate-pending; a separately certified nonzero residual is consistent with the comparison value and is closed by Definition Z.27.11a, Definition Z.27.11g, or Definition Z.27.11j.
+
+*Proof.* Substituting $R_\alpha=0$ into the certificate row gives $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}$. Direct subtraction of the recorded comparison value gives (Z.27.11e.1). The same-branch additive structure of $\mathfrak C_\alpha$ requires that any residual-free theorem land at the closed-form core value; (Z.27.11e.1) records the offset of that core value from the comparison value, and (Z.27.11e.2) records the centered residual required to absorb it. Since Corollary Z.27.11d and Algorithm Z.27.11b require $R_\alpha$ to be fixed before comparison, no residual-free same-branch theorem is admissible at the comparison value, while a separately certified nonzero $R_\alpha$ remains certificate-pending. ∎
+
 **Corollary Z.27.11f (No Normalization Retuning under PPI/PCE).** Let $\mathfrak C_\alpha$ and $\mathfrak C'_\alpha$ be two Thomson normalization certificates with naturally isomorphic finite protocol-response presheaves. If $\mathfrak C'_\alpha$ differs from $\mathfrak C_\alpha$ only by extra normalization labels, finite counterterms, or projection conventions that do not change any finite response presheaf and do not shrink the certified residual interval, then $\mathfrak C'_\alpha$ is PCE-dominated by $\mathfrak C_\alpha$ and cannot be retained as a distinct physical normalization branch.
 
 *Proof.* Natural isomorphism of response presheaves identifies the two certificates in the PPI quotient by Theorem P.6.1b.3. If the added labels do not change a finite response and do not reduce $R_\alpha$, then they add description length or constraint bookkeeping without lowering regret or violation cost in the PPI contract. Corollary P.6.1a.4 removes the larger contract inside the same predictive fiber. Equivalently, in the PCE resource preorder of Definition D.1b, the leaner certificate is no more costly in every component and strictly cheaper in description/penalty cost, so Theorem D.1d eliminates the surplus branch. ∎
@@ -4612,6 +4720,11 @@ $$
 253:77:21:5:1
 $$
 for octad-conditioned residual events
+- Octad stiffness fingerprint: if a controlled 24-mode interface implements the centered octad quadratic form $Q_{\mathrm{oct}}$ of Corollary Z.13b.1a, its stiffness spectrum is exactly
+$$
+0^{(1)}\oplus352^{(23)},
+$$
+a single uniform zero mode and a $23$-fold degenerate nonzero sector. A split nonzero spectrum on the same certified octad-coupling branch falsifies the exact Golay-Steiner stiffness realization.
 
 ---
 
@@ -4825,7 +4938,7 @@ Relative = 0.677765 ppm
    - Closed-form structural reachability: $\alpha^{-1}_{0}$ is a single-valued elementary function of the forced integers $K_0=3$, $d_0=8$, $M=24$, $D=4$, with no continuous fit anywhere in the chain (Theorem Z.26; Corollary Z.26a)
    - Arithmetic comparison: the closed form lies $9.2878\times10^{-5}$ from $137.035999177(21)$, about $0.678$ ppm
    - Certificate row: $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$, with $R_\alpha$ structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b) and not adjustable
-   - Falsifier: a measurement outside the certified residual interval, once $R_\alpha$ is fixed, refutes the Appendix Z normalization branch (Corollary Z.26c)
+   - Falsifier: a measurement outside the certified residual interval, once $R_\alpha$ is fixed, refutes the Appendix Z normalization branch (Corollary Z.26c); separately, Corollary Z.27.11e.1 obstructs any same-branch theorem fixing $R_\alpha=0$ at the recorded CODATA comparison value
 
 ## Zero Continuously Adjustable Parameters Throughout
 

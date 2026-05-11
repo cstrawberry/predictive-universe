@@ -153,6 +153,26 @@ The lower bound in (1) depends only on the need for an injective realization of 
 
 Thus the required single-cycle distinguishability is at least $3$ bits: $\log_2 d_0\ge 3$ (equivalently $d_0\ge 8$).
 
+**Corollary 5.2.2b (Finite-State SPAP Counterexample Criterion).** Restated as a finite-audit falsification criterion, the surjectivity step of Theorem 15(1) gives: no faithful SPAP realization satisfying (O1)–(O3) can be carried by fewer than eight visited states. If a candidate realization has a visited state set $\mathcal S_{\mathrm{vis}}$ with
+$$
+|\mathcal S_{\mathrm{vis}}|=N<8,
+$$
+then no choice of transition table, phase convention, or state relabeling can satisfy the role-readout requirement of Theorem 15.
+
+*Proof.* Any faithful realization satisfying (O1)–(O3) admits the joint role-readout map
+$$
+r=(r_m,r_p,r_v):\mathcal S_{\mathrm{vis}}\to\{0,1\}^3
+$$
+from the proof of Theorem 15. The image of any map from an $N$-element set has cardinality at most $N$:
+$$
+|r(\mathcal S_{\mathrm{vis}})|\le |\mathcal S_{\mathrm{vis}}|=N.
+$$
+If $N<8$, then
+$$
+|r(\mathcal S_{\mathrm{vis}})|<|\{0,1\}^3|,
+$$
+so $r$ is not surjective onto the eight logical contexts required at the Commit Snapshot. Therefore at least one of the independent binary roles is not represented as a retained finite response, or two response-relevant contexts are merged before verification. Either alternative violates (O1)–(O3) on the PPI quotient. Thus no $N<8$ counterexample exists. The three-bit construction in part (2) shows that the bound is sharp. ∎
+
 **(2) Sufficiency.** Define the two-phase transition on the three-bit register $(\phi,p_{stored},c_{phase})$ by:
 - Phase boundary (Commit Snapshot): $(\phi,p_{stored},0)\mapsto(\phi,p_{stored},1)$, preserving $\phi$ and $p_{stored}$ while toggling the internal phase bit (O2–O3).
 - Reflex/update: $(\phi,p_{stored},1)\mapsto(\mathrm{NOT}(p_{stored}),\phi,0)$, which sets the next $\phi$ to $\mathrm{NOT}(p_{stored})$ while swapping the old $\phi$ into the auxiliary register to keep the map bijective (O1).

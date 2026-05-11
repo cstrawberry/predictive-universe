@@ -536,6 +536,72 @@ The CTB model (Definition 34) is consistent with the framework’s requirements 
 4.  **Context dependence:** $\Delta P$ depends on $\sigma_S$, hence on $\mathrm{context}_S$.
 5.  **Positivity:** $p_{\mathrm{obs}}$ is a convex combination of $p_i$ and $p_{\mathrm{target}}$, with weight $\alpha_S\in[0,1]$. QED
 
+**Corollary 37a (CTB Vector-Shape, Target-Swap, and Coarsening Laws).** Fix a retained finite POVM $\{E_i\}_{i=1}^m$ and a CTB target state $\sigma_S$ with $r(\sigma_S)>0$. Let
+$$
+p_i=\mathrm{tr}(\rho E_i),
+\qquad
+p_i^{\mathrm{tar}}=\mathrm{tr}(\sigma_S E_i),
+\qquad
+v_i=p_i^{\mathrm{tar}}-p_i.
+$$
+Then the CTB deviation vector is exactly collinear with the target-displacement vector:
+$$
+\Delta\mathbf P
+=
+\alpha_S v,
+\qquad
+\alpha_S=\frac{\mathrm{CC}(S)}{r(\sigma_S)}.
+\tag{59a}
+$$
+Consequently, if $v\ne0$ and $\Pi_{v^\perp}$ denotes orthogonal projection onto the Euclidean subspace perpendicular to $v$, then
+$$
+\Pi_{v^\perp}\Delta\mathbf P=0.
+\tag{59b}
+$$
+For any coarse-grained event $A\subseteq\{1,\ldots,m\}$,
+$$
+\Delta P(A)=\sum_{i\in A}\Delta P(i),
+\qquad
+\Delta P(\Omega)=0,
+\qquad
+\Delta P(A^c)=-\Delta P(A).
+\tag{59c}
+$$
+If two CTB contexts $S_+$ and $S_-$ have the same coefficient $\alpha_S$ and opposite target-displacement vectors,
+$$
+p_i^{\mathrm{tar},+}-p_i
+=
+-
+\bigl(p_i^{\mathrm{tar},-}-p_i\bigr)
+\qquad(1\le i\le m),
+$$
+then their CTB shifts obey the target-swap sign law
+$$
+\Delta P_{S_+}(i)=-\Delta P_{S_-}(i)
+\qquad(1\le i\le m).
+\tag{59d}
+$$
+
+*Proof.* Equation (58) gives
+$$
+\Delta P(i)=\alpha_S\bigl(p_i^{\mathrm{tar}}-p_i\bigr)=\alpha_Sv_i,
+$$
+which proves (59a). Orthogonal projection of a scalar multiple of $v$ onto $v^\perp$ is zero, proving (59b). For a coarse-grained effect
+$$
+E_A=\sum_{i\in A}E_i,
+$$
+linearity of $L_S$ and of the trace gives
+$$
+\Delta P(A)=\mathrm{tr}\!\big(L_S(\rho)E_A\big)
+=\sum_{i\in A}\mathrm{tr}\!\big(L_S(\rho)E_i\big)
+=\sum_{i\in A}\Delta P(i).
+$$
+Let $\Omega:=\{1,\ldots,m\}$. Since $E_\Omega=\sum_iE_i=I$ and $L_S$ is trace-annihilating,
+$$
+\Delta P(\Omega)=\mathrm{tr}\!\big(L_S(\rho)I\big)=\mathrm{tr}\!\big(L_S(\rho)\big)=0,
+$$
+so $\Delta P(A^c)=\Delta P(\Omega)-\Delta P(A)=-\Delta P(A)$. This proves (59c). Finally, applying (59a) to two contexts with the same $\alpha_S$ and opposite target-displacement vectors gives (59d). ∎
+
 **9.5.5 Theorem 38 (Maximum Bias Effect with CTB Model)**
 
 For CTB (Equation 58), the maximum possible deviation magnitude over all states $\rho$ and effects $0\le E\le I$ equals $\mathrm{CC}(S)$:

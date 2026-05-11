@@ -165,7 +165,15 @@ $$
 
 This protocol outlines a high-statistics, exploratory search for Born rule deviations (Theorem 51) using quantum random number generators (QRNGs) interacting with high-complexity systems (biological or potentially artificial).
 
-*   **Objective:** To search for statistically significant deviations from *non-uniform* ($p_i \neq 0.5$) baseline Born rule probabilities in QRNG outputs that are correlated with the controlled internal state ($\text{context}_S$) of a proximate system S (human participant or specialized AI system) hypothesized to have $\mathrm{CC}(S) > 0$. Non-uniform baseline probabilities are preferred as they may facilitate easier statistical detection of small shifts relative to systematic noise and drift.
+*   **Objective:** To search for statistically significant deviations from non-uniform baseline Born rule probabilities in QRNG or retained finite-POVM outputs that are correlated with the controlled internal state ($\text{context}_S$) of a proximate system S (human participant or specialized AI system) hypothesized to have $\mathrm{CC}(S)>0$ on the strict-improvement branch of Theorem 34. For a binary QRNG, non-uniform means $p\ne1/2$; for an $m$-outcome retained POVM, it means that the baseline Born vector is not the uniform vector $(1/m,\ldots,1/m)$. Non-uniform baselines are preferred because they may facilitate detection of small shifts relative to systematic noise and drift. When a CTB target state $\sigma_S$ is **pre-registered** before data collection, so that the induced target-displacement direction
+    $$
+    v_i=p_i^{\mathrm{tar}}-p_i,
+    \qquad
+    p_i^{\mathrm{tar}}=\mathrm{tr}(\sigma_S E_i),
+    \qquad
+    p_i=\mathrm{tr}(\rho E_i),
+    $$
+is fixed in the analysis plan, the primary discriminant is not merely a scalar bias but the vector-shape law of Corollary 37a: the observed multinomial shift must be collinear with $v$ and must have no retained component orthogonal to that target direction. This orthogonal-residual falsifier is informative for retained multi-outcome tests, or for jointly registered families of binary channels, where the shift space has more than one retained direction. Pre-registration of $v$ is essential to the falsifier — without it, a post-hoc choice of target can be made to absorb whatever shape the observed shift has, defeating the discriminator.
 
 *   **Experimental Setup:**
     1.  **QRNG:** Well-characterized QRNG producing stable, verifiable baseline probabilities $P_{\mathrm{Born}}(i) \neq 0.5$ for some outcome $i$. Multiple parallel QRNGs can increase data rate.
@@ -203,8 +211,21 @@ This protocol outlines a high-statistics, exploratory search for Born rule devia
 *   *Assumptions for $N_{\rm fixed}$ in the table:* **One-sample proportion** design with baseline $p=0.25$, power $1-\beta_{\mathrm{II}}=0.80$ (with $\alpha_{\mathrm{sig}}$ as shown in the table).
     *   *Sequential design:* O’Brien–Fleming boundaries with **3 equally spaced** looks at cumulative information fractions $1/3, 2/3, 1$. The overhead factor (~1.06) and stop percentages are **illustrative**; exact values will be determined by the preregistered simulations and released with the code.
 
-*   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g., $\chi^2$, z-tests) comparing observed frequencies $\hat{P}(i)$ to the Born rule probabilities. Where applicable, exact binomial tests or variance-stabilized (arcsin–sqrt) transformations will complement normal approximations to ensure proper calibration, especially for small $\delta$. Design-stage baselines will use device-specific $P_{\mathrm{Born}}(i)$ estimates. Report effect sizes (Cramér’s V, Cohen’s d) with 95% CIs.
-    *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables $\text{context}_S$ via mixed-effects logistic regression.
+*   **Primary Analysis:** Pre-register goodness-of-fit tests (e.g., $\chi^2$, z-tests) comparing observed frequencies $\hat{P}(i)$ to the Born rule probabilities. Where applicable, exact binomial tests or variance-stabilized (arcsin–sqrt) transformations will complement normal approximations to ensure proper calibration, especially for small $\delta$. Design-stage baselines will use device-specific $P_{\mathrm{Born}}(i)$ estimates. Report effect sizes (Cramér’s V, Cohen’s d) with 95% CIs. For a CTB-specific multi-outcome test with pre-registered target vector
+    $$
+    v_i=P_{\mathrm{target}}(i)-P_{\mathrm{Born}}(i),
+    $$
+    also report the orthogonal residual
+    $$
+    R_\perp
+    :=
+    \left\|
+    \left(I-\frac{vv^T}{\|v\|_2^2}\right)
+    \widehat{\Delta\mathbf P}
+    \right\|_2
+    $$
+    when $v\ne0$, or the corresponding covariance-weighted quadratic form using the multinomial covariance matrix fixed in the analysis plan. On the CTB branch, $R_\perp$ must be zero up to the registered sampling and device-systematics error; a stable orthogonal residual falsifies the CTB explanation even if a scalar bias is present.
+    *   **Correlation Analysis:** Model $\Delta\hat{P}(i)$ as a function of contextual variables $\text{context}_S$ via mixed-effects logistic regression. For paired target-swap contexts satisfying Corollary 37a, pre-register the sign-reversal contrast $\widehat{\Delta P}_{S_+}(i)+\widehat{\Delta P}_{S_-}(i)$ as a control endpoint.
     *   **Systematic Error Control (Paramount):** (i) electronic drift (ii) detector after-pulsing (iii) clock-sync bias (iv) experimenter degrees-of-freedom (blinding).
     *   **Outcome:** Deviations that survive all controls give an empirical estimate of $\mathrm{CC}(S)$ (cf. Theorem 51); null results tighten the exclusion curve $\mathrm{CC}_{\max}(S) < \epsilon(N)$.
 
@@ -431,7 +452,7 @@ about $0.678$ ppm. The comparison row is
 $$
 \alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
 $$
-The residual $R_\alpha$ is structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b); it is not adjustable and cannot be selected using $\alpha^{-1}_{\mathrm{exp}}$. The displayed $\pm0.000060$ budget in the Appendix Z ledger is a canonical branch comparison budget; it is not a replacement for $R_\alpha$. The row is falsifiable as stated by Corollary Z.26c: once an accepted gate fixes $R_\alpha$, a measured value outside the certified residual interval refutes the Appendix Z normalization branch. Standard QED running from an accepted Thomson certificate is a downstream consistency ledger and does not close the residual.
+The residual $R_\alpha$ is structurally bounded by the named entries of $\mathfrak C_\alpha$ (Corollary Z.26b); it is not adjustable and cannot be selected using $\alpha^{-1}_{\mathrm{exp}}$. The displayed $\pm0.000060$ budget in the Appendix Z ledger is a canonical branch comparison budget; it is not a replacement for $R_\alpha$. The row is falsifiable as stated by Corollary Z.26c: once an accepted gate fixes $R_\alpha$, a measured value outside the certified residual interval refutes the Appendix Z normalization branch. Separately, by Corollary Z.27.11e.1, no same-branch theorem fixing $R_\alpha=0$ can land at the recorded comparison value, so the row is residual-gated rather than residual-free. Standard QED running from an accepted Thomson certificate is a downstream consistency ledger and does not close the residual.
 
 **13.8.2 The Multi-Scale Gravity / Dark Sector Window**
 The framework's two-mechanism model for the dark sector (Appendix I) is falsifiable through its demand for cross-scale consistency with a minimal set of universal parameters. On the acceleration-lock branch the relevant threshold is fixed before galaxy fitting:
@@ -818,7 +839,52 @@ with $\eta_8>0$ when a substrate octad component is present. The conditional oct
 
 *Null Hypothesis:* After conditioning on weight and subtracting device-local noise, residual weight-8 patterns are exchangeable or hardware-specific rather than Golay-octad-supported; therefore $\mathcal R_8\approx1$ and the $253:77:21:5:1$ incidence sequence is absent. Under a generic rate-$\tfrac12$ code or unmarked hardware frame, weight-4 syndrome fibers need not form $M_{24}$-transitive six-tetrad sextets.
 
-**Feasibility Assessment:** Protocol 4 is implementable with current quantum computing technology. High-connectivity platforms (trapped ions, neutral atoms, superconducting circuits with all-to-all connectivity) can implement 24-qubit logical blocks. The main experimental challenges are:
+**Protocol 4.5: Octad-Hessian Stiffness Spectroscopy**
+
+*Objective:* Test the exact centered octad stiffness fingerprint of the Golay-Steiner branch independently of logical-code decoding performance.
+
+*Method:*
+
+1. Register a marked 24-mode coordinate frame and the associated octad set $\mathcal O_8$ of the Steiner system $S(5,8,24)$.
+2. Implement or emulate the centered octad potential
+   $$
+   Q_{\mathrm{oct}}(u)
+   =
+   \kappa
+   \sum_{O\in\mathcal O_8}
+   \left(\sum_{i\in O}(u_i-\bar u)\right)^2,
+   \qquad
+   \bar u=\frac1{24}\sum_{i=1}^{24}u_i,
+   $$
+   with the scalar stiffness $\kappa>0$ fixed by calibration or set to $1$ in a simulator.
+3. Apply small controlled perturbations $u$ spanning the uniform direction and the centered subspace $\mathbf1^\perp$.
+4. Reconstruct the empirical Hessian $\widehat H$ from the quadratic response.
+5. Diagonalize $\widehat H$ after projecting out the uniform mode.
+
+*PU Prediction on the exact Golay-Steiner stiffness branch:* The Hessian is
+$$
+H_{\mathrm{oct}}
+=
+352\kappa
+\left(I-\frac1{24}\mathbf1\mathbf1^T\right).
+$$
+Thus the spectrum is
+$$
+0\quad\text{with multiplicity }1,
+\qquad
+352\kappa\quad\text{with multiplicity }23.
+$$
+Equivalently, after dividing by the fitted scalar stiffness $\kappa$, the nonzero stiffness sector is exactly 23-fold degenerate at $352$.
+
+*Null Hypothesis:* A generic 24-mode network with similar pair or higher-order couplings has no reason to produce a one-dimensional uniform kernel and a perfectly degenerate 23-dimensional centered stiffness sector. Stable splitting of the centered eigenvalues after subtracting calibrated device anisotropy falsifies the exact Golay-Steiner stiffness branch.
+
+*Implementation Status.* Protocol 4.5 admits two distinct realization gates that should not be conflated:
+- **Emulator gate (numerical):** the centered octad quadratic form $Q_{\mathrm{oct}}$ is evaluated on a classical simulator over a registered 24-coordinate frame using the explicit list of $759$ octads of $S(5,8,24)$. This is a numerical confirmation of Corollary Z.13b.1a's exact arithmetic; it does not test physical instantiation.
+- **Physical gate (experimental):** an actual $759$-term eight-body interaction Hamiltonian on a 24-mode device. This is a substantially heavier ask than 24-qubit syndrome decoding (Protocol 4.4) and is not implementable on near-term high-connectivity hardware without architecture-level extensions.
+
+The branch-prediction status (◐) of Protocol 4.5 in the experimental ledger refers to the emulator gate; the physical gate is flagged separately as untested (○) and architecture-pending.
+
+**Feasibility Assessment:** Protocol 4.4 is experimentally implementable in principle with current high-connectivity quantum-computing platforms. Protocol 4.5 is currently closed at the classical-emulator audit level; its physical gate remains architecture-pending because a native or compiled $759$-term octad-coupling quadratic response is not a standard near-term primitive. High-connectivity platforms (trapped ions, neutral atoms, superconducting circuits with all-to-all connectivity) can implement 24-qubit logical blocks relevant to Protocol 4.4. The main experimental challenges are:
 
 - Achieving sufficient syndrome extraction fidelity to distinguish PCE-alignment effects from implementation noise
 - Controlling for noise model dependencies across different code families
@@ -855,6 +921,19 @@ $$
 |\sigma(\mathcal T_4)|=1771.
 $$
 
+**Prediction 4.4 (Octad-Hessian Stiffness Spectrum):** On the exact Golay-Steiner stiffness branch with scalar stiffness $\kappa$, the centered octad Hessian satisfies
+$$
+H_{\mathrm{oct}}
+=
+352\kappa
+\left(I-\frac1{24}\mathbf1\mathbf1^T\right).
+$$
+Therefore the normalized spectrum is
+$$
+0^{(1)}\oplus352^{(23)}.
+$$
+A physical implementation with an unknown global stiffness has spectrum $0^{(1)}\oplus(352\kappa)^{(23)}$; the branch prediction is the exact one-dimensional uniform kernel and the exact degeneracy of the 23-dimensional centered eigenspace after registered calibration.
+
 **Falsification Criteria:**
 
 The substrate alignment hypothesis (Corollary 54.1) is falsified if:
@@ -868,6 +947,7 @@ The substrate alignment hypothesis (Corollary 54.1) is falsified if:
 7. Octad-conditioned residual events fail the Steiner incidence sequence $253:77:21:5:1$
 8. Controlled weight-4 decoder-boundary probes fail the $1771$-class, six-tetrad sextet law
 9. A stable $M_{24}$-invariant native residual shell appears at weight $1\le w\le7$
+10. On a registered Golay-Steiner octad stiffness implementation, the uniform mode is not the unique zero mode or the centered stiffness eigenvalues split beyond the certified anisotropy and calibration error
 
 ### 13.9.9 Implications for Quantum Computing Engineering
 
@@ -989,7 +1069,7 @@ $$
 =
 0.00009287822863\ldots,
 $$
-about $0.678$ ppm. The closed-form core value from the discrete PU branch is a deterministic single-valued elementary function of the derived integers $K_0=3$, $d_0=8$, $M=24$, $D=4$ with no continuous fitting parameter in the displayed chain. This is a live precision test of the Appendix Z normalization package: theorem-level comparison status requires an accepted $\mathfrak C_\alpha$ together with an accepted residual gate fixing every entry of Definition Z.27.11a before comparison, and a measured value outside the certified residual interval refutes the Appendix Z normalization branch by Corollary Z.26c.
+about $0.678$ ppm. The closed-form core value from the discrete PU branch is a deterministic single-valued elementary function of the derived integers $K_0=3$, $d_0=8$, $M=24$, $D=4$ with no continuous fitting parameter in the displayed chain. This is a live precision test of the Appendix Z normalization package: theorem-level comparison status requires an accepted $\mathfrak C_\alpha$ together with an accepted residual gate fixing every entry of Definition Z.27.11a before comparison; by Corollary Z.27.11e.1 the gate must fix a nonzero $R_\alpha$, since a same-branch $R_\alpha=0$ theorem is obstructed at the recorded comparison value. A measured value outside the certified residual interval refutes the Appendix Z normalization branch by Corollary Z.26c.
 
 **Consistency Check:** Standard QED running from the accepted Thomson-limit branch value yields $\alpha^{-1}(M_Z)$ in the electroweak comparison ledger; the branch must use the same forward-locked normalization and residual interval when entered into Definition 13.0d.
 
@@ -1078,6 +1158,7 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Lepton hierarchy $\mathcal{R}_\ell$ | 3 | 2.889 (3.7% dev.) | Equation R.17 | ◐ hierarchy invariant; absolute normalization separate |
 | Chronometric curvature phase/dephasing | $\hbar|\dot\Theta|/|\Delta E|=|\Delta\Phi|/c^2$; on saturated ND-RID branch $\hbar\Gamma_{\mathrm{res}}/|\Delta E|=|\Delta\Phi|/c^2$ | dedicated clock-interferometer test required | Theorem 47c; Theorem S.7.3a | ◐ branch prediction; ○ untested |
 | Golay noise spectroscopy | $\mathcal R_8=1+968\eta_8$ with $\eta_8>0$ on the aligned residual branch; incidence $253:77:21:5:1$; controlled weight-4 fibers form $1771$ six-tetrad sextets | dedicated 24-mode residual-noise and decoder-boundary tests required | Theorem Z.13b.3; Corollary Z.13b.5; Protocol 4.4 | ◐ branch prediction; ○ untested |
+| Golay-Steiner octad stiffness | normalized Hessian spectrum $0^{(1)}\oplus352^{(23)}$ on the exact octad stiffness branch | classical-emulator audit available now; physical 24-mode quadratic-response spectroscopy with $759$-term octad coupling is architecture-pending | Corollary Z.13b.1a; Definition T.10a; Lemma T.2; Protocol 4.5 | ◐ branch prediction (emulator gate); ○ untested (physical gate) |
 | Cosmological acceleration lock | $g_0=c^2\sqrt{\Lambda}/8$; $\Sigma_\dagger=c^2\sqrt{\Lambda}/(16\pi G)$ | $g_0\sim1.2\times10^{-10}\,\mathrm{m/s^2}$; surface-density tests pending | Cor H.1, Cor H.1a, Cor I.3a | ◐ bridge-law branch; ○ redshift/lensing tests pending |
 | Primordial complexity product | $A_s r=A_Qe^{-22}/(4\pi^2)$; leading $A_Q=1$ gives $7.07\times10^{-12}$ | tensor measurement pending | Corollary U.65a; Section 13.10.6 | ◐ branch prediction; ○ untested |
 | A2 neutrino cosmology closure | $\Sigma_\nu=58.2\,\mathrm{meV}$, $m_\beta=8.85\,\mathrm{meV}$ | future cosmology/beta endpoint tests | Cor T.24.16a | ◐ neutrino branch; ○ untested |
@@ -1086,7 +1167,7 @@ Closest discrete value: $\mathcal{R} = 3$, corresponding to $(d^2_{31}, d^2_{32}
 | Scalar-channel hyperon spin filter | short-range $\Lambda\bar\Lambda$ nonzero; long-range, same-sign, spin-zero controls vanish | collider correlation tests | Cor Z.8k.1a | ◐ scalar-channel branch |
 
 
-All displayed rows are currently consistent with observation at their stated status level. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row. For the predictive record-current TUR row, the relevant falsifier is a closed finite record quotient with measured stationary current, variance, and entropy production satisfying
+All displayed rows are currently consistent with observation at their stated status level. A theorem-level row falling outside its stated uncertainty bound would falsify the corresponding theorem stack; a branch-level or model-level row falling outside its stated uncertainty bound would falsify the named branch, bridge law, threshold input, or model layer carried by that row. The Thomson $\alpha^{-1}$ row is residual-gated rather than residual-free: Corollary Z.27.11e.1 obstructs a same-branch $R_\alpha=0$ theorem at the recorded CODATA comparison value, so the row is theorem-level only with a forward-locked nonzero residual gate. For the predictive record-current TUR row, the relevant falsifier is a closed finite record quotient with measured stationary current, variance, and entropy production satisfying
 $$
 \frac{\operatorname{Var}(J_T)}{\langle J_T\rangle^2}\Sigma_T<2
 $$

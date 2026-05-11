@@ -322,6 +322,60 @@ $$
 $$
 A second-moment design certificate is exactly a bound on the deviation of degree-$(2,2)$ polynomial observables from their Haar averages. The purity $\operatorname{tr}(\rho_E^2)$ is such a degree-$(2,2)$ observable. Applying the certificate to this observable gives (K.3.3). ∎
 
+**Corollary K.3.1a (Second-Moment/Entropy Separation Witness).** Equality of the Haar Page-purity average does not imply equality of the Haar Page-entropy average. In the $2\times2$ bipartition, there is a finite ensemble of pure states whose reduced-state average purity is exactly Haar but whose average von Neumann entropy is not Haar.
+
+*Proof.* Consider the finite ensemble consisting of the $60$ two-qubit stabilizer pure states with the uniform measure. Under the $2\times2$ bipartition, exactly $36$ of these states are product stabilizer states and exactly $24$ are Bell-type maximally entangled stabilizer states. Hence their reduced early-system purities are
+$$
+\operatorname{tr}(\rho_E^2)=1
+\quad\text{for the }36\text{ product states},
+$$
+and
+$$
+\operatorname{tr}(\rho_E^2)=\frac12
+\quad\text{for the }24\text{ Bell states}.
+$$
+Therefore
+$$
+\mathbb E_{\mathrm{stab}}\operatorname{tr}(\rho_E^2)
+=
+\frac{36}{60}\cdot1+
+\frac{24}{60}\cdot\frac12
+=
+\frac45.
+$$
+The Haar Page-purity value for $d_E=d_L=2$ is
+$$
+\frac{d_E+d_L}{d_Ed_L+1}
+=
+\frac{2+2}{4+1}
+=
+\frac45.
+$$
+Thus the purity averages agree exactly.
+
+For entropy, the same ensemble gives
+$$
+\mathbb E_{\mathrm{stab}}S(\rho_E)
+=
+\frac{36}{60}\cdot0+
+\frac{24}{60}\cdot\ln2
+=
+\frac25\ln2.
+$$
+Page's exact Haar entropy for $d_E=d_L=2$ is
+$$
+S_{\mathrm{Page}}(2,2)
+=
+\sum_{j=3}^{4}\frac1j-\frac{1}{4}
+=
+\frac13.
+$$
+Since
+$$
+\frac25\ln2\ne\frac13,
+$$
+the entropy averages differ although the purity averages coincide. Consequently a second-moment or Page-purity certificate cannot by itself imply the von Neumann Page-entropy estimate of Theorem K.3. The trace-coupled promotion certificate of Definition K.3d.4c is therefore a logically independent input. The witness is exhibited at $d_E=d_L=2$; this is the worked instance establishing logical separation, not a quantitative claim about the magnitude of the purity-entropy gap at higher dimensions, which is governed by the trace-coupled promotion data of Definition K.3d.4c. The witness is consistent with the standard fact that the uniform pure two-qubit stabilizer ensemble is an exact projective $2$-design in the moment sense — its degree-$(2,2)$ polynomial averages match Haar. That moment identity is not a trace-norm coupling of the reduced-state distribution to Haar, and it does not control the non-polynomial entropy functional. The witness exploits exactly this gap between second-moment matching and trace-continuity control. ∎
+
 **Corollary K.3a (Black-Hole Edge Modes as Predictive Anomaly Inflow).** On a horizon branch where exterior predictive descriptions are quotiented by gauge/frame redundancies but interior degrees of freedom are operationally inaccessible, exterior descent is consistent only when the total anomaly class cancels across the horizon interface:
 $$
 [\mathcal A_{\mathrm{outside}}]

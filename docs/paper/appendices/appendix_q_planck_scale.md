@@ -2073,3 +2073,56 @@ The complete derivation chain from the horizon constant to spacetime discretizat
 
 $$\boxed{\begin{array}{c} K_0 = 3 \xrightarrow{\text{Thm 23}} d_0 = 8 \\ \text{SPAP} \xrightarrow{\text{Thm 31}} \varepsilon_0=\ln2 \end{array} \xrightarrow{\text{Eq. Q.10}} C_{\max}^* = 2\ln 2 \xrightarrow{\text{Eq. Q.18}} \frac{\delta}{L_P} = \sqrt{8\ln 2}}$$
 
+## Q.7 The Time-Quantum-to-Hubble Ratio
+
+The minimum cycle time $\tau_{\min}$ derived in Section Q.6 sets the microscopic temporal scale of the MPU network. The de Sitter horizon associated with the cosmological constant $\Lambda$ supplies a complementary cosmic temporal scale, the Hubble time $t_H$. Combining the two PU-derived dimensionless ratios — $\delta/L_P=\sqrt{8\ln 2}$ from the minimal Appendix Z branch (Section Q.6) and $\Lambda L_P^2$ from the Appendix U cosmological-constant sector — yields a single dimensionless time-quantum-to-Hubble ratio fixed by PU constants and $\Lambda$.
+
+### Q.7.1 The Hubble Time on the de Sitter Branch
+
+**Definition Q.7.1 (de Sitter Hubble Time).** On the cosmological branch with cosmological constant $\Lambda>0$, the de Sitter Hubble time is
+$$
+t_H\;:=\;\frac{1}{H_\Lambda}\;=\;\frac{1}{c}\sqrt{\frac{3}{\Lambda}},
+$$
+where $H_\Lambda=c\sqrt{\Lambda/3}$ is the de Sitter Hubble rate (Appendix E, Theorem E.9.3; Appendix H, Equation H.2).
+
+### Q.7.2 The Closed-Form Ratio
+
+**Theorem Q.7.1 (Time-Quantum-to-Hubble Identity).** On the minimal Appendix Z branch with PCE-saturated discretization (Section Q.6), the ratio of the minimum cycle time to the de Sitter Hubble time is
+$$
+\boxed{\;\frac{\tau_{\min}}{t_H}\;=\;\sqrt{8\ln 2}\,\sqrt{\frac{\Lambda L_P^2}{3}}\;.}
+$$
+
+*Proof.* By Theorem Q.6.1, $\tau_{\min}=\sqrt{8\ln 2}\,t_P$. By the Planck unit identity $L_P/t_P=c$,
+$$
+\tau_{\min}\;=\;\sqrt{8\ln 2}\cdot\frac{L_P}{c}.
+$$
+By Definition Q.7.1, $t_H=\sqrt{3/\Lambda}/c$. Therefore
+$$
+\frac{\tau_{\min}}{t_H}\;=\;\sqrt{8\ln 2}\cdot\frac{L_P/c}{\sqrt{3/\Lambda}/c}\;=\;\sqrt{8\ln 2}\cdot L_P\sqrt{\frac{\Lambda}{3}}\;=\;\sqrt{8\ln 2}\,\sqrt{\frac{\Lambda L_P^2}{3}}.
+$$
+∎
+
+**Corollary Q.7.2 (Hubble-Cycle Count Per MPU at Saturation).** The number of MPU cycles per MPU per Hubble time on the minimal Appendix Z branch with PCE-saturated discretization is
+$$
+\frac{t_H}{\tau_{\min}}\;=\;\frac{1}{\sqrt{8\ln 2}}\,\sqrt{\frac{3}{\Lambda L_P^2}}.
+$$
+
+*Proof.* Reciprocal of Theorem Q.7.1. ∎
+
+### Q.7.3 Numerical Evaluation
+
+Using the observed central value $\Lambda L_P^2=2.86599\times 10^{-122}$ from Equation V.5 (Appendix V), Theorem Q.7.1 gives
+$$
+\frac{\tau_{\min}}{t_H}\;=\;\sqrt{8\ln 2}\,\sqrt{\frac{2.86599\times 10^{-122}}{3}}\;\approx\;2.302\times 10^{-61}.
+$$
+The reciprocal cycle count per MPU per Hubble time is
+$$
+\frac{t_H}{\tau_{\min}}\;\approx\;4.345\times 10^{60}.
+$$
+
+### Q.7.4 Status of the Identity
+
+**Remark Q.7.1 (Status of Theorem Q.7.1).** Theorem Q.7.1 is a direct algebraic consequence of two independently established framework results: the discretization ratio $\delta/L_P=\sqrt{8\ln 2}$ (Equation Q.18, valid on the residual-budget, throughput-saturated, ideal-packing branch) and the de Sitter Hubble time of Definition Q.7.1 fixed by the cosmological-constant sector (Appendix U). The identity contains no additional fitting parameter beyond the inputs $K_0=3$, $\varepsilon_0=\ln 2$, $d_0=8$, and $\Lambda L_P^2$. It is a closed-form consequence of those inputs, not an independent closure constraint on $\Lambda$. Its falsification status inherits from the upstream branches: Theorem Q.7.1 fails if either $\delta/L_P\neq\sqrt{8\ln 2}$ on the stated PCE-saturated branch or the de Sitter identification of $t_H$ on the cosmological branch is invalidated.
+
+**Remark Q.7.2 (Cosmological-Microscopic Bridge).** Theorem Q.7.1 packages the framework's smallest derived time scale (the MPU cycle time on the saturating branch) and the largest cosmological time scale (the de Sitter Hubble time) into a single dimensionless number determined by $K_0$, $\varepsilon_0$, and $\Lambda L_P^2$. This complements Equation Q.18 (which relates microscopic and Planck *length* scales by $K_0,\varepsilon_0$ alone) by extending the same construction to *temporal* scales once the cosmological-constant sector is adjoined.
+

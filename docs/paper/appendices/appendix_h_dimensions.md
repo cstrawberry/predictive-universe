@@ -751,7 +751,7 @@ The efficiency factor $\eta' = 3/(8\sqrt{3}) \approx 0.2165$ is fixed once the Q
 | Spatial projection | $(D-1)/D = 3/4$ | Rotational invariance |
 | Generator normalization | $1/\sqrt{K_0} = 1/\sqrt{3}$ | Democratic generator normalization (Theorem H.1c) |
 
-The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry enters the Appendix Z Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$, whose arithmetic offset from the current experimental central value is about $0.678$ ppm before residual closure.
+The resulting prediction $g_0 \approx 1.18 \times 10^{-10}\,\mathrm{m/s^2}$ agrees with the empirical galactic scale to within 2%, comfortably inside the ~20% systematic uncertainty of current measurements. The same Grassmannian geometry enters the Appendix Z Thomson-limit sinc-core value $\alpha^{-1}_{0}=137.03609205522863\ldots$, whose arithmetic offset from the NIST/CODATA comparison central value is about $0.678$ ppm before residual closure.
 
 The derivation is conditional on Definition H.0, whose validity is tested by predictive agreement.
 
