@@ -4398,6 +4398,8 @@ $$
 
 7. $\chi_\alpha^{\mathrm{AO}}$ records that no coefficient interval, radius, or bound is selected using $\alpha_{\mathrm{obs}}$.
 
+A named realization for the finite-order sinc-tail diagnostic — the SPAP-reflexive sinc-tail audit certificate $\mathfrak R_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}$ constructed in Definition Z.27.11L below — supplies a forward-locked sub-instance of $\mathfrak R_\alpha^{\mathrm{AO}}$ specialized to the third-order Taylor truncation of the sinc factor already included in the core (Definition Z.27.11a). Because that exact factor is already present in the core expression, the SR certificate is strictly an internal consistency audit of the truncation and does not tighten the residual entry $R_\alpha$. It is not by itself an electromagnetic, threshold, curvature, or finite Ward residual closure for $R_\alpha$.
+
 **Theorem Z.27.11h (All-Orders Certified Alpha Interval).** If $\mathfrak R_\alpha^{\mathrm{AO}}$ is accepted, then the residual interval in Definition Z.27.11a is
 $$
 R_\alpha^{\mathrm{AO}}
@@ -4565,6 +4567,118 @@ $$
 Only nonzero classes in $H^1_W(\alpha)$ can contribute to $R_\alpha$.
 
 *Proof.* By Theorem Z.27.11k.1, $\Phi_\alpha$ vanishes on $\operatorname{im}\delta_0$. Therefore exact response-coordinate or normalization changes are PPI/PCE-null for the Thomson row. ∎
+
+**Definition Z.27.11L (SPAP-Reflexive Sinc-Tail Audit Certificate).** On the canonical Appendix Z exact-sinc core branch, the SPAP-reflexive sinc-tail audit certificate is the record
+$$
+\mathfrak R_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}
+=
+\left(
+N_{\alpha,\mathrm{sinc}}^{\mathrm{SR}},
+R_{\alpha,\mathrm{sinc}}^{\mathrm{rad,SR}},
+M_{\alpha,\mathrm{sinc}}^{\mathrm{SR}},
+I_5^{\mathrm{SR}},
+\mathcal A_{\alpha,\mathrm{sinc}}^{\mathrm{SR}},
+\chi_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}
+\right)
+\tag{Z.27.11L.1}
+$$
+with the following entries, all evaluated from the closed discrete backbone $(K_0=3,d_0=8,a=2,b=6,M=24,D=4,u^*=2^{1/8}-1)$ and the reflexivity quantum $\varepsilon_0=\ln2$ of Theorem 31, without any use of $\alpha_{\mathrm{obs}}$.
+
+1. Lowest tail order: $m_0=5$.
+2. Computed order: $N_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}=5$.
+3. Certified analyticity radius:
+$$
+R_{\alpha,\mathrm{sinc}}^{\mathrm{rad,SR}}
+=
+\frac{1}{\sqrt{K_0}}
+=
+\frac{1}{\sqrt3}.
+\tag{Z.27.11L.2}
+$$
+4. Certified uniform bound on the sinc-tail diagnostic function:
+$$
+M_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}
+=
+\frac{\pi\ln2}{48\sqrt3}.
+\tag{Z.27.11L.3}
+$$
+5. Single computed coefficient interval at order $5$:
+$$
+I_5^{\mathrm{SR}}
+=
+\left[0,\frac{\pi}{120\sqrt3}\right].
+\tag{Z.27.11L.4}
+$$
+This interval contains the exact order-$5$ coefficient
+$$
+c_5=\frac{\pi}{2880\sqrt3}
+$$
+of the diagnostic function
+$$
+E_{\alpha,\mathrm{sinc}}(z)
+=
+\frac{\pi z}{24\sqrt3}
+\left(
+\operatorname{sinc}(z)-\left(1-\frac{z^2}{6}\right)
+\right)
+=
+\sum_{m=5}^{\infty}c_mz^m.
+\tag{Z.27.11L.5}
+$$
+6. Audit ledger $\mathcal A_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}$: the diagnostic function is the analytic tail of the same Lemma Z.13 sinc factor already present in the exact Appendix Z core branch.
+7. Forward-lock $\chi_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}$: no coefficient interval, radius, or bound is selected using $\alpha_{\mathrm{obs}}$.
+
+**Theorem Z.27.11L.1 (Acceptance Audit for the Sinc-Tail Certificate).** The record $\mathfrak R_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}$ satisfies the radius, coefficient, uniform-bound, audit, and forward-lock clauses of Definition Z.27.11g for the diagnostic function $E_{\alpha,\mathrm{sinc}}$. It is therefore a valid all-orders subcertificate for the finite Taylor replacement of the sinc factor.
+
+*Proof.* The map $z\mapsto E_{\alpha,\mathrm{sinc}}(z)$ is entire because it is a polynomial-subtracted entire sinc function multiplied by $z$. Thus the radius (Z.27.11L.2) is admissible and
+$$
+\frac{R_{\alpha,\mathrm{sinc}}^{\mathrm{rad,SR}}}{u^*}
+=
+\frac{1}{\sqrt3(2^{1/8}-1)}
+>1.
+$$
+For $r=|z|\le 1/\sqrt3$, the absolute Taylor series gives
+$$
+\left|\operatorname{sinc}(z)-\left(1-\frac{z^2}{6}\right)\right|
+\le
+\sum_{n=2}^{\infty}\frac{r^{2n}}{(2n+1)!}
+=
+\frac{\sinh r}{r}-1-\frac{r^2}{6}.
+$$
+The right-hand side has nonnegative Taylor coefficients and is increasing for $r\ge0$. Hence, on $|z|\le1/\sqrt3$,
+$$
+|E_{\alpha,\mathrm{sinc}}(z)|
+\le
+\frac{\pi}{72}
+\left(
+\frac{\sinh(1/\sqrt3)}{1/\sqrt3}-1-\frac1{18}
+\right)
+<
+\frac{\pi\ln2}{48\sqrt3}
+=
+M_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}.
+$$
+The coefficient of $z^4$ in $\operatorname{sinc}(z)-(1-z^2/6)$ is $1/120$, so multiplication by $\pi z/(24\sqrt3)$ gives $c_5=\pi/(2880\sqrt3)$, which lies in $I_5^{\mathrm{SR}}$. The audit and forward-lock clauses are exactly items 6 and 7. ∎
+
+**Corollary Z.27.11L.2 (Certified Sinc-Tail Diagnostic Interval).** The Cauchy-tail estimate used in Theorem Z.27.11h gives the diagnostic interval
+$$
+R_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}
+=
+I_5^{\mathrm{SR}}(u^*)^5
++
+[-\rho_{\alpha,\mathrm{sinc}}^{\mathrm{SR}},\rho_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}],
+\qquad
+\rho_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}
+=
+M_{\alpha,\mathrm{sinc}}^{\mathrm{SR}}
+\frac{(\sqrt3u^*)^6}{1-\sqrt3u^*}.
+\tag{Z.27.11L.6}
+$$
+This interval certifies only the finite Taylor replacement tail of the exact sinc factor. It is not substituted for the full residual $R_\alpha$ in Definition Z.27.11a unless a branch separately proves that the full residual entry is exactly this diagnostic function.
+
+*Proof.* This is the same Cauchy estimate used in Theorem Z.27.11h, specialized to (Z.27.11L.1)–(Z.27.11L.5). The final sentence follows because Definition Z.27.11a already includes the exact sinc factor in the core expression and reserves $R_\alpha$ for residual entries not already included in that exact factor. ∎
+
+**Remark Z.27.11L.3 (Status of the Sinc-Tail Audit).** Because the core expression of Definition Z.27.11a already uses the exact $SU(2)$ sinc factor, the sinc-tail audit is a forward-locked analytic consistency check on the third-order Taylor truncation of that factor, not a residual-entry tightening. It rules out hidden error from replacing the exact sinc factor by its finite Taylor truncation on this diagnostic branch. It does not close the Corollary Z.27.11e.1 same-branch obstruction, does not prove $R_\alpha=0$, and does not by itself supply the electromagnetic or Ward-cohomology residual operator required by Definition Z.27.11j.
 
 ---
 

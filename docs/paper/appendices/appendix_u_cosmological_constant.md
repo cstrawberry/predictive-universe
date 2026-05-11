@@ -2765,6 +2765,21 @@ $$
 
 *Proof.* Proposition U.73 requires quartic homogeneity. Theorem U.73a refutes that hypothesis on the theorem-level false-vacuum branch. Theorem U.13b supplies the four-mode closure. ∎
 
+**Remark U.73b.1 (24-Cell Orthogonality Boundary for the Dilatation Gate).** Let $X=V_{24}\subset S^3$ be the 24-cell vertex set and let $d(r,i)=r\varphi'(r)$ be the sampled pure-coordinate dilatation tangent of Theorem U.13. For fixed $r$, $d(r,i)$ is constant in the vertex label $i$. By the explicit coordinate enumeration of Definition U.28 and Lemma U.29 — equivalently the degree-$1$ case of the spherical-design identity of Theorem U.30 — each coordinate sum
+$$
+\sum_{i=1}^{24}(x_i)_\mu=0
+$$
+vanishes because $\{\pm e_j\}$ contributes zero on every axis and $\{\frac12(\pm1,\pm1,\pm1,\pm1)\}$ contributes zero on every axis by sign symmetry. Hence the sampled inner product of $d$ with each coordinate function is
+$$
+\langle d,x^{(\mu)}\rangle_{24}
+=
+\frac{r\varphi'(r)}{24}\sum_{i=1}^{24}(x_i)_\mu
+=0.
+$$
+This proves orthogonality of the sampled dilatation tangent to the coordinate module $E_3=\mathrm{span}\{x^{(1)},x^{(2)},x^{(3)},x^{(4)}\}$ identified by Corollary U.13a.1 and named in Theorem U.13b.
+
+This orthogonality is not a fifth-mode closure theorem. Proposition U.13a gives $L_W1=0$, so the sampled angular kernel of $L_W$ is exactly the constant mode; Corollary U.13a.1 places the four coordinate functions at $\lambda=3$, not in $\ker L_W$. The four translation zero modes of the full discrete Hessian therefore arise from the separated radial operator in the $\lambda=3$ sector via Lemma U.13a.3, not from any angular kernel mechanism. The exclusion of a zero mode in the constant angular sector uses Lemma U.13a.2. Therefore Theorem U.13b remains the theorem-level four-mode closure only under its stated false-vacuum spectral hypotheses; the 24-cell coordinate sum identity supplies an orthogonality audit, not a promotion of those spectral hypotheses.
+
 **Remark U.73c (Logical Boundary).** Theorem U.73a closes the issue negatively for the bounce branch actually used to obtain theorem-level vacuum closure. It does not exclude the possibility that a different, explicitly massless continuum action could have an asymptotically quartic UV regime; it shows only that such a regime is not the current Appendix U closure branch. Theorem K.10.7 supplies RG/fixed-point language but not an exact scale-invariant fixed-point theorem at the bounce scale; Theorem U.3 fixes the Gaussian base count $144$ but does not determine the homogeneity degree of $V_{\mathrm{eff}}$; and Proposition R.4.2a constrains the lattice sector rather than the local false-vacuum mass term.
 
 **Remark U.73d.** Corollary U.15b gives
@@ -2785,7 +2800,7 @@ This appendix derives the cosmological constant reference scale and the primordi
 $$
 \Lambda L_P^2 = 8\pi A_{\text{eff}} \cdot e^{-283}.
 $$
-With the working value $A_{\mathrm{eff}}=0.923\pm0.011$, the five-mode reference convention gives $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. This is not an unconditional false-vacuum closure because Theorem U.8c obstructs the pure-coordinate five-mode tangent in the current Definition U.4 action. Under the Definition U.6 four-mode false-vacuum branch, Theorem U.13b fixes $\kappa=142$ and the forward expression is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$. Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference check; theorem-level four-mode numerical status requires the Fredholm prefactor certificate and interval audit of Definition U.15m and Theorem U.15m.1. Inverting the observed value gives $A_{\mathrm{eff}}^{(\mathrm{obs})}=0.917\pm0.016$ on the five-mode reference convention and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04$ on the four-mode exponent branch.
+With the working value $A_{\mathrm{eff}}=0.923\pm0.011$, the five-mode reference convention gives $\Lambda L_P^2=(2.88\pm0.03)\times10^{-122}$. This is not an unconditional false-vacuum closure because Theorem U.8c obstructs the pure-coordinate five-mode tangent in the current Definition U.4 action. Under the Definition U.6 four-mode false-vacuum branch, Theorem U.13b fixes $\kappa=142$ and the forward expression is $\Lambda_4L_P^2=8\pi A_{\mathrm{eff}}^{\mathrm{Fred},4}e^{-284}$. Substituting the same working prefactor gives $(1.06\pm0.01)\times10^{-122}$ only as a same-prefactor reference check; theorem-level four-mode numerical status requires the Fredholm prefactor certificate and interval audit of Definition U.15m and Theorem U.15m.1. The 24-cell coordinate-sum orthogonality audit of Remark U.73b.1 is consistent with the four-mode branch but does not replace the false-vacuum spectral hypotheses used in Theorem U.13b. Inverting the observed value gives $A_{\mathrm{eff}}^{(\mathrm{obs})}=0.917\pm0.016$ on the five-mode reference convention and $A_{\mathrm{eff}}^{(\mathrm{obs},4)}=2.49\pm0.04$ on the four-mode exponent branch.
 
 **Primordial Sector.** Conditional on Identifications U.20, U.44a, U.51 and Assumptions U.26, U.41, U.48, the complexity $\kappa_Q = 11$ and geometric e-fold count $N_e = 59.4$ yield:
 

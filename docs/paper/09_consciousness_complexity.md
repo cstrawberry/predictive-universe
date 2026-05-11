@@ -137,6 +137,61 @@ $$
 $$
 with parameters $\alpha_\infty \le \alpha_{CC,max} < 0.5$, $C_{op}$ (Definition 13), and $C_{scale} > 0$.
 
+**9.3.4a Definition 32a (Backbone Representative for CC Scaling).** On any bounded-bias branch whose endpoint ceiling satisfies $3/8\le\alpha_{CC,max}<1/2$, the backbone representative is the admissible model representative of Theorem 35 with
+$$
+\alpha_\infty=\frac{3}{8},
+\qquad
+C_{scale}=K_0\varepsilon_0=3\ln2,
+\qquad
+\mathcal G_{\mathrm{bin}}(y)=1-2^{-y},
+\tag{56a}
+$$
+where
+$$
+y=\frac{C_{agg}-C_{op}}{K_0\varepsilon_0}.
+$$
+It is an admissible model representative of the monotone-concave family, not a uniqueness theorem for all admissible CC functions.
+
+**9.3.4b Proposition 35a (Admissibility of the Backbone Representative).** On branches satisfying $3/8\le\alpha_{CC,max}<1/2$, the representative of Definition 32a satisfies Definition 31 and the general form of Theorem 35. Its closed form is
+$$
+\text{CC}(C_{agg})
+=
+\frac{3}{8}
+\left(
+1-2^{-(C_{agg}-C_{op})/(3\ln2)}
+\right)
+\Theta(C_{agg}-C_{op}).
+\tag{56b}
+$$
+
+*Proof.* The branch condition gives $3/8\le\alpha_{CC,max}<1/2$, so the upper-bound condition in Definition 31 is satisfied. For $y\ge0$,
+$$
+\mathcal G_{\mathrm{bin}}(0)=0,
+\qquad
+\lim_{y\to\infty}\mathcal G_{\mathrm{bin}}(y)=1,
+$$
+while
+$$
+\mathcal G_{\mathrm{bin}}'(y)=(\ln2)2^{-y}>0,
+\qquad
+\mathcal G_{\mathrm{bin}}''(y)=-(\ln2)^2 2^{-y}<0.
+$$
+Thus the representative is monotone and concave with diminishing returns. Substitution into Theorem 35 gives (56b). ∎
+
+**9.3.4c Corollary 35a.1 (Backbone Representative Saturation Points).** For the representative (56b), half saturation occurs at
+$$
+C_{agg}-C_{op}=K_0\varepsilon_0=3\ln2,
+$$
+and $99\%$ saturation occurs at
+$$
+C_{agg}-C_{op}=K_0\varepsilon_0\log_2(100)\approx13.8
+$$
+nats.
+
+*Proof.* Half saturation means $1-2^{-y}=1/2$, hence $y=1$. The $99\%$ point means $1-2^{-y}=0.99$, hence $y=\log_2(100)$. Substituting $y=(C_{agg}-C_{op})/(K_0\varepsilon_0)$ gives the two displayed values. ∎
+
+**9.3.4d Remark 35a.2 (Status of the Backbone Representative).** Definition 31 and Theorem 35 permit many monotone-concave scaling functions. Definition 32 remains a rational example, while Definition 32a supplies a binary-saturating benchmark representative. The branch condition $3/8\le\alpha_{CC,max}<1/2$ of Definition 32a is strictly stronger than the universal Theorem 39 bound $\alpha_{CC,max}<1/2$, so the representative is admissible only on the upper portion of CC branches consistent with the kernel and is not a universal closure for every Theorem 35 branch. The asymptotic value $3/8$ is the same ratio as the sub-threshold Van Vleck effective dimension $D_{\mathrm{eff}}=t/d_{\min}=3/8$ of Theorem T.42.5 on the Golay assignment branch; the scale $K_0\varepsilon_0=3\ln2$ matches the per-cycle Landauer complexity quantum used in the capacity-floor analysis of Theorem E.6 and Equation E.9. These are cross-sector resonance choices motivating the representative from shared Golay integers $(t=3,d_{\min}=8)$ and the structural quantum $\varepsilon_0=\ln2$; they are not derivations of a unique CC scaling function, and the numerical coincidence of ratios from common upstream invariants does not by itself elevate the identification beyond model-representative status. The value $3/8$ and the scale $3\ln2$ are therefore status-labeled model choices inside the CC extension on branches whose endpoint-bias ceiling admits $3/8$, unless a later forward-locked protocol package derives them from the underlying response dynamics.
+
 **9.4 Proposed Mechanism of CC Influence**
 
 Having defined Consciousness Complexity (CC) operationally (Definition 30) as an emergent biasing capability (Theorem 34), we now propose a specific hypothesis for the physical mechanism through which this influence is exerted on the fundamental MPU interactions.

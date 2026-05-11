@@ -649,6 +649,45 @@ for the registered evaporation time and dimensions. The forward-lock $\chi_{\mat
 
 **Remark K.3d.4c.a (Status of the Promotion Data).** The trace-coupled bound (K.3d.4c.2) is an additional certified hypothesis, not a consequence of the base moment-design certificate alone. A derivation of (K.3d.4c.2) from $\mathfrak C_{\mathrm{Hdesign}}$ would have to supply an explicit high-moment-to-trace-norm upgrade theorem, including the required scaling of $t_{\mathrm{des}}$ in $d_E$ and the associated error constants; in common polynomial-approximation routes this requires $t_{\mathrm{des}}$ to grow with the relevant dimension parameter, often at least logarithmically in $d_E$. Alternatively, the certificate may supply a separate dynamical coupling or trace-mixing estimate directly in trace norm. The branch organization therefore records $\mathfrak C_{\mathrm{PageTV}}$ as admissible promotion data, not as freely available from $\mathfrak C_{\mathrm{base}}$. Supplying such a trace-coupled promotion certificate from first principles for a concrete physical horizon remains a branch-level development task.
 
+**Definition K.3d.4d (Relative-Entropy Contraction Trace-Coupling Certificate).** A relative-entropy contraction trace-coupling certificate is a finite record
+$$
+\mathfrak C_{\mathrm{REC-TV}}
+=
+(\mathfrak C_{\mathrm{base}},\Gamma_t,D_0,\gamma_{\mathrm{REC}},N_t,\chi_{\mathrm{REC}})
+\tag{K.3d.4d.1}
+$$
+where $\mathfrak C_{\mathrm{base}}$ is an accepted certificate of Definition K.3d.4 or K.3d.4a, $\Gamma_t$ is a certified coupling of the PU reduced early-radiation state $\rho_E^{\mathrm{PU}}(t)$ and the Haar reduced state $\rho_E^{\mathrm{Haar}}(t)$ on the same early-radiation Hilbert space, $D_0<\infty$ is an initial relative-entropy ceiling, $\gamma_{\mathrm{REC}}>0$ is a certified entropy-contraction rate per retained cycle, and $N_t$ is the retained-cycle counter. The record is accepted only if the relative entropy is finite on the certified support and it certifies, before Page-curve comparison, that every paired state in the support of $\Gamma_t$ obeys
+$$
+D(\rho_E^{\mathrm{PU}}(t)\|\rho_E^{\mathrm{Haar}}(t))
+\le
+D_0e^{-2\gamma_{\mathrm{REC}}N_t}
+\tag{K.3d.4d.2}
+$$
+under the natural-log convention. The named Landauer-tight substatus records the special subcase $\gamma_{\mathrm{REC}}=\varepsilon_0=\ln2$ when, and only when, the branch separately proves that the retained-cycle entropy-contraction rate saturates the structural Landauer quantum of Theorem 31. Absent such a separate proof on a concrete horizon branch, the Landauer-tight substatus is empty and the certificate is just a generic relative-entropy contraction certificate. The contraction estimate (K.3d.4d.2), not the Landauer-tight label, is the certificate entry used for promotion.
+
+**Theorem K.3d.4e (Certificate-to-Trace-Coupling Promotion).** An accepted relative-entropy contraction trace-coupling certificate supplies the trace-coupled promotion data of Definition K.3d.4c with
+$$
+\varepsilon_{\mathrm{Page}}^{\mathrm{REC}}(t)
+=
+\sqrt{\frac{D_0}{2}}e^{-\gamma_{\mathrm{REC}}N_t},
+\tag{K.3d.4e.1}
+$$
+provided $\varepsilon_{\mathrm{Page}}^{\mathrm{REC}}(t)\le1-1/d_E(t)$.
+
+*Proof.* For every paired state in the certified coupling $\Gamma_t$, quantum Pinsker under the natural-log convention gives
+$$
+D(\rho\|\sigma)\ge\frac12\|\rho-\sigma\|_1^2.
+$$
+Combining this with (K.3d.4d.2) yields
+$$
+\frac12\|\rho_E^{\mathrm{PU}}(t)-\rho_E^{\mathrm{Haar}}(t)\|_1
+\le
+\sqrt{\frac{D_0}{2}}e^{-\gamma_{\mathrm{REC}}N_t}.
+$$
+Thus the trace-distance input in (K.3d.4c.2) holds almost surely under $\Gamma_t$, with the stated ceiling condition. The forward-lock follows from $\chi_{\mathrm{REC}}$, because the coupling, entropy ceiling, contraction rate, retained-cycle counter, and norm are fixed before Page-curve comparison. ∎
+
+**Corollary K.3d.4f (Conditional Page-Entropy Promotion).** The von Neumann Page-curve estimate is theorem-level on a horizon branch only when that branch carries either the original trace-coupled promotion certificate of Definition K.3d.4c or an accepted certificate of Definition K.3d.4d satisfying Theorem K.3d.4e. A bare Landauer entropy ledger, a second-moment design certificate, or a Golay-expander moment certificate without (K.3d.4c.2) remains Page-purity or certificate-pending data rather than a full entropy-curve theorem.
+
 **Theorem K.3d.5 (Certified Horizon $k$-Design Mixing).** If $\mathfrak C_{\mathrm{Hdesign}}$ is accepted, then after $N_t$ horizon update steps the moment channel obeys
 $$
 \left\|

@@ -958,6 +958,26 @@ m\simeq2\!-\!4.
 $$
 These ranges will be constrained by the forthcoming rotation-curve fits. Note that the range for $A_G$ is widened here compared to Section I.9 to accommodate the full range of needed enhancements (2-10 times). No theorem-level value of $A_G$ is derived in the present appendix.
 
+**Definition I.13a (Backbone-Channel-Recruitment Benchmark Branch).** The backbone-channel-recruitment benchmark branch is the subbranch of the galaxy-scale relaxation kernel (I.4) on which the discrete backbone is used to choose the preregistered test pair
+$$
+A_G=d_0-1=7,
+\qquad
+m=K_0=3.
+\tag{I.13a.1}
+$$
+The choice $A_G=d_0-1$ and $m=K_0$ is a backbone-motivated guess inside the Section I.13 phenomenological range, not a derivation of the pair from the existing Appendix I equations. The pair is preregistered as a falsifiable benchmark only; it carries test-lock status (the pair cannot be re-chosen after a rotation-curve comparison) but not the kernel-forward-lock status of derived backbone constants. The structural obstruction to a theorem-level derivation of $(A_G,m)$ is recorded in Remark I.13c. The scale $L_0$ remains a phenomenological galaxy-scale parameter, and the cluster parameters $(K,q,A_{\mathrm{PM}})$ remain outside this benchmark.
+
+**Proposition I.13b (Benchmark Kernel Form).** On the benchmark branch of Definition I.13a, Equation I.4 becomes
+$$
+G(R)=G_0\left[1+7\left(1-e^{-(R/L_0)^3}\right)\right].
+\tag{I.13b.1}
+$$
+The branch is falsified if a forward-locked rotation-curve analysis requiring a single universal $(A_G,m)$ excludes $(7,3)$ within its stated model and uncertainty ledger.
+
+*Proof.* Substitute $A_G=d_0-1=7$ and $m=K_0=3$ from (I.13a.1) into Equation I.4. The final sentence is the direct falsification condition for a benchmark subbranch with a fixed parameter pair. ∎
+
+**Remark I.13c (No Capacity-Floor Derivation of $A_G$).** Equation E.9 has $G\propto\eta\delta^2/(\chi C_{\max})$ only after the remaining substrate parameters are fixed. It does not, by itself, imply $G_{\mathrm{large}}/G_0=d_0$. In particular, setting an effective $C_{\max}$ below the structural floor $\varepsilon_0=\ln2$ is not an admissible theorem-level derivation. The pair $(A_G,m)=(7,3)$ is therefore retained as a benchmark branch rather than a closed dark-sector theorem.
+
 **I.14 Timescale Separation (Quasistatic Local-Relaxation Branch)**
 
 On the quasistatic local-relaxation branch, the adaptation dynamics of local MPU parameters ($\delta, C_{\max}$) governing $G(R)$ are assumed to reach local PCE equilibrium on timescales (Myr–Gyr in this branch) short compared with potential cosmological drift of the environment or fundamental parameters that might cause $(L_0, A_G, m)$ to evolve (Gyr–Hubble time). Under this branch assumption, $G(R)$ may be treated as quasi-static when analyzing galaxy dynamics, while allowing for a slow cosmic evolution of the universal parameters themselves. A first-principles derivation of the Myr–Gyr local equilibration scale from the Appendix D adaptation dynamics ($\eta_{\mathrm{adapt}}$ and the local-PL neighborhood structure of Theorem D.8) remains a separate closure lemma; the galaxy-scale phenomenology of Sections I.6-I.13 inherits this quasistatic branch label.
