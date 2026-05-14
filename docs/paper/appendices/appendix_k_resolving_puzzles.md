@@ -2294,6 +2294,273 @@ If $\omega_2$ is not Hadamard, then $r_U$ is not smooth on some normal neighborh
 
 The parallel is structural: in both cases, the divergence signals breakdown of the continuum approximation below $\ell\sim\delta$, where no operationally admissible protocol can access additional independent degrees of freedom. ∎
 
+**Corollary K.10.5a (Finite-Substrate Cutoff and Continuum-Exit Wall).** On the residual-budget, throughput-saturated, ideal-packing branch of Appendix Q, the MPU spacing is
+$$
+\delta=\sqrt{8\ln2}\,L_P
+$$
+and the corresponding invariant MPU momentum cutoff (consistent with Definition K.10.3) is
+$$
+\Lambda_{\mathrm{MPU}}
+=
+\frac{\hbar}{\delta}
+=
+\frac{m_Pc}{\sqrt{8\ln2}}.
+$$
+
+This cutoff is not an auxiliary regulator placed on top of an underlying continuum. It is the finite operational resolution of the MPU substrate. Consequently:
+
+1. **No sub-cutoff continuum modes.** A continuum field mode with wavelength
+   $$
+   \lambda<\delta
+   $$
+   is not an independently physically instantiated PU degree of freedom. Such a mode may appear in a continuum representation, but only as an extrapolation beyond the retained finite-response algebra.
+
+2. **No operational curvature divergence.** In the manifold regime, a continuum curvature description is operationally meaningful only while
+   $$
+   \|R\|\,\delta^2=O(1),
+   $$
+   where $\|R\|$ denotes a local curvature scale such as
+   $$
+   \|R\|
+   =
+   \left(
+   R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}
+   \right)^{1/2}.
+   $$
+   Any continuum trajectory along which
+   $$
+   \|R\|\to\infty
+   $$
+   necessarily exits the certified manifold regime at finite curvature, before the formal divergence becomes an operational PU state.
+
+3. **Finite-area capacity wall.** For any finite-area boundary $S$, the retained exterior-accessible information throughput is bounded by the finite ND--RID channel capacity and the area-law channel density. Therefore a continuum extrapolation requiring infinitely many independent interior distinctions through finite $A(S)$ is not a physically certified PU state.
+
+The resulting obstruction is a **continuum-exit wall**: classical continuum evolution cannot be operationally continued through a regime requiring sub-$\delta$ distinctions, infinite curvature, or infinite finite-area information density. The corollary does not by itself specify a smooth bounce or a post-wall successor state. Those require an additional finite MPU transition theorem.
+
+*Proof.* The value
+$$
+\delta=\sqrt{8\ln2}\,L_P
+$$
+is Equation Q.18 on the residual-budget, throughput-saturated, ideal-packing branch. Definition K.10.3 then gives
+$$
+\Lambda_{\mathrm{MPU}}=\hbar/\delta.
+$$
+
+For item 1, Theorem K.10.3a states that exact continuum structures requiring uniformly refinable distinctions at arbitrarily small resolution are not physically instantiated by a finite-resource MPU object. Theorem K.10.4 applies this principle to continuum QFT observables: wavelengths below $\delta$, equivalently momenta above $\Lambda_{\mathrm{MPU}}$, are not independent operational degrees of freedom and can influence larger-scale observables only through the parameters of the effective description at the cutoff.
+
+For item 2, Lemma K.5.3 states that in the manifold regime the continuum curvature tensor is operationally meaningful only when
+$$
+\|R\|\,\delta^2=O(1).
+$$
+If a continuum solution has $\|R\|\to\infty$, then since $\delta>0$ is fixed on the branch, there is a finite point along the trajectory at which $\|R\|\delta^2$ leaves the $O(1)$ regime. Beyond that point the manifold approximation is not certified.
+
+For item 3, Theorem K.5.1 bounds predictive throughput through a finite-area surface by the number of effective boundary links times the finite per-link channel capacity. Theorem E.6 / Theorem 49 gives the corresponding area-law entropy bound. Hence a finite-area boundary cannot transmit or certify infinitely many independent interior distinctions. The dichotomy of Theorem K.5.4 then applies: a would-be singular extrapolation is replaced, at the operational level, by horizon/capacity saturation or by breakdown of the manifold approximation.
+
+Thus sub-cutoff continuum modes, curvature divergences, and finite-area infinite-information extrapolations are all excluded by the same finite-substrate mechanism. ∎
+
+**Definition K.10.5b (MPU Diffusion Certificate).** A branch supplies an **MPU diffusion certificate** when it specifies finite response data
+$$
+\mathcal D_{\mathrm{MPU}}
+=
+(G_\delta,m,\Delta_{\mathrm{MPU}},K_\sigma)
+$$
+with the following components:
+
+1. a finite or locally finite MPU graph or network $G_\delta$ with operational edge scale $\delta$;
+
+2. a positive vertex or cell measure $m$;
+
+3. a Markov or heat generator $\Delta_{\mathrm{MPU}}$ on retained scalar response classes, with the corresponding semigroup
+   $$
+   K_\sigma=e^{-\sigma\Delta_{\mathrm{MPU}}},
+   $$
+   where $\sigma$ is diffusion time with dimensions of length squared;
+
+4. positivity preservation and mass conservation:
+   $$
+   K_\sigma f\ge0\quad\text{when }f\ge0,
+   \qquad
+   K_\sigma 1=1;
+   $$
+
+5. a return kernel
+   $$
+   P_\sigma(x,x)
+   :=
+   K_\sigma(x,x)
+   $$
+   defined with respect to $m$;
+
+6. compatibility with the finite MPU propagation and locality bounds of Appendix E / Appendix F;
+
+7. on continuum branches, a convergence statement identifying the mesoscopic limit of $\Delta_{\mathrm{MPU}}$ with a Laplace-type diffusion operator on the emergent regular manifold.
+
+On such a branch, the local spectral dimension at probe scale $\ell$ is defined by
+$$
+D_s(x,\ell)
+:=
+-2
+\left.
+\frac{\partial\ln P_\sigma(x,x)}
+{\partial\ln\sigma}
+\right|_{\sigma=\ell^2}.
+\tag{K.10.5b.1}
+$$
+
+If a spatial average over a finite region $U$ is required, define
+$$
+\overline D_s(U,\ell)
+:=
+-2
+\left.
+\frac{\partial}{\partial\ln\sigma}
+\ln
+\left(
+\frac{1}{m(U)}
+\sum_{x\in U}m_xP_\sigma(x,x)
+\right)
+\right|_{\sigma=\ell^2}.
+\tag{K.10.5b.2}
+$$
+
+Without an MPU diffusion certificate, $D_s$ is not a PU-defined observable. A Lieb--Robinson or serialized-propagation bound supplies locality and finite signal speed; it does not by itself define a diffusion semigroup or a heat-kernel return probability.
+
+**Theorem K.10.5c (Cutoff and Serialized Propagation Do Not Determine Spectral Dimension).** The intrinsic MPU cutoff
+$$
+\delta
+$$
+and the serialized propagation bound
+$$
+v_{\max}=\delta/\tau_{\min}
+$$
+do not determine the cutoff-scale spectral dimension.
+
+More precisely, the data
+$$
+(\delta,\tau_{\min},v_{\max})
+$$
+together with nearest-neighbor locality or a Lieb--Robinson-type finite-propagation constraint are insufficient to derive a theorem-level value or interval such as
+$$
+D_s(\delta)\in[1,2].
+$$
+
+A theorem-level statement about $D_s(\ell)$ requires an MPU diffusion certificate in the sense of Definition K.10.5b.
+
+*Proof.* The serialized propagation bound controls how quickly operational influence can cross MPU links. It is a causal or locality constraint. Spectral dimension, by contrast, is defined from the logarithmic scaling of the heat-kernel return probability
+$$
+P_\sigma(x,x).
+$$
+These are distinct data.
+
+To see the underdetermination explicitly, fix the same microscopic spacing $\delta$ and the same minimum update time $\tau_{\min}$. Consider nearest-neighbor discrete-time random walks in which one step traverses one edge of length $\delta$ in one update time $\tau_{\min}$. Each model has the same serialized speed bound
+$$
+v_{\max}=\delta/\tau_{\min}.
+$$
+
+On a one-dimensional chain, the return probability in the pre-mixing scaling window behaves as
+$$
+P_n(0,0)\sim n^{-1/2},
+$$
+so the spectral dimension is
+$$
+D_s=1.
+$$
+
+On a four-dimensional hypercubic lattice with the same edge length and the same one-edge-per-update rule, the return probability in the corresponding pre-mixing scaling window behaves as
+$$
+P_n(0,0)\sim n^{-2},
+$$
+so the spectral dimension is
+$$
+D_s=4.
+$$
+
+Both examples obey the same cutoff scale and the same serialized nearest-neighbor propagation speed. They differ only in the diffusion generator / graph connectivity data. Therefore the cutoff and speed bound alone do not determine $D_s$.
+
+Consequently, no theorem-level claim such as
+$$
+D_s(\delta)\in[1,2]
+$$
+follows from the current cutoff and propagation theorems alone. Such a claim requires the additional branch data specified in Definition K.10.5b. ∎
+
+**Corollary K.10.5d (Continuum Spectral Dimension on a Certified Diffusion Branch).** Suppose a branch supplies an MPU diffusion certificate whose mesoscopic continuum limit is a Laplace-type diffusion operator on the regular four-dimensional emergent manifold of Theorem Z.11 / Theorem 43.
+
+Then in any local heat-kernel window
+$$
+\delta^2\ll \sigma \ll L_{\mathrm{curv}}^2,
+$$
+where $L_{\mathrm{curv}}$ is the local curvature radius, the spectral dimension is
+$$
+D_s=4+O(\sigma/L_{\mathrm{curv}}^2)+O(\delta^2/\sigma).
+$$
+
+Equivalently, for probe lengths
+$$
+\delta\ll \ell\ll L_{\mathrm{curv}},
+$$
+one has
+$$
+D_s(\ell)\to4
+$$
+up to the controlled continuum and discretization corrections.
+
+*Proof.* On the stated branch, the MPU diffusion generator converges in the mesoscopic window to a Laplace-type operator on a regular four-dimensional manifold. The local heat-kernel asymptotic has the standard form
+$$
+P_\sigma(x,x)
+=
+(4\pi\sigma)^{-2}
+\left(
+1+O(\sigma/L_{\mathrm{curv}}^2)+O(\delta^2/\sigma)
+\right).
+$$
+Taking
+$$
+-2\frac{\partial\ln P_\sigma(x,x)}{\partial\ln\sigma}
+$$
+gives
+$$
+D_s
+=
+4+O(\sigma/L_{\mathrm{curv}}^2)+O(\delta^2/\sigma).
+$$
+Thus the spectral dimension tends to $4$ in the local continuum diffusion window. ∎
+
+**Remark K.10.5e (Status of Dimensional Flow and Bounce Claims).** Corollary K.10.5a proves a finite-substrate cutoff and continuum-exit wall. It does not prove a smooth bounce, nor does it specify the post-wall MPU successor dynamics.
+
+Definition K.10.5b and Theorem K.10.5c show that spectral dimension is not determined by the cutoff alone. A scale-dependent spectral-dimension flow
+$$
+D_s(\ell)
+$$
+requires a branch supplying an explicit MPU diffusion certificate. Once such a certificate is supplied, Corollary K.10.5d gives the theorem-level continuum limit
+$$
+D_s\to4
+$$
+in the mesoscopic local heat-kernel window. The cutoff-scale endpoint
+$$
+D_s(\delta)
+$$
+and any monotone interpolation between $D_s(\ell\gg\delta)=4$ and $D_s(\delta)$ remain branch-level until the discrete MPU diffusion generator is explicitly computed.
+
+Thus the theorem-level PU content is:
+
+1. the cutoff
+   $$
+   \delta=\sqrt{8\ln2}\,L_P;
+   $$
+
+2. non-instantiation of sub-$\delta$ continuum modes;
+
+3. finite-area capacity exclusion of operational singularities;
+
+4. continuum exit at finite curvature scale
+   $$
+   \|R\|\delta^2=O(1);
+   $$
+
+5. the requirement of a diffusion certificate before any spectral-dimension endpoint can be claimed.
+
+This is an operational finite-substrate result, not a metaphysical simulation postulate.
+
 **Corollary K.10.6 (Divergent Complexity Cost).** Achieving predictive accuracy $\alpha$ approaching the SPAP limit requires complexity $C_{\text{uni}}(\delta_{\text{SPAP}})$ satisfying (Theorem 14, Appendix B Equation B.5):
 $$
 C_{\text{uni}}(\delta_{\text{SPAP}}) = \Omega\left(\log\left(\frac{1}{\delta_{\text{SPAP}}}\right) \cdot \frac{1}{\delta_{\text{SPAP}}^2}\right)

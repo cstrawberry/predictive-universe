@@ -6330,7 +6330,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a Landauer o
 | Lorentzian signature | $(1,3)$ | Branch theorem | Euclidean four-space, multi-time branches, Galilean branch | Appendix O signature package plus Corollary 46a derive the Lorentzian causal branch under the stated hyperbolic-frontier hypotheses | Non-hyperbolic or preferred-frame labels are excluded on the accepted causal-continuum branch | Conditional on Appendix O hypotheses |
 | Complex Hilbert scalar | $\mathbb C$ | Theorem on MPU Hilbert branch | $\mathbb R$, $\mathbb H$ | Local tomography, connected phase transport, compositional closure, and PCE removal of surplus phase redundancy select $\mathbb C$ | Extra quaternionic phase generators are surplus if response-null; if active, they define a different gauge branch | Closed on MPU Hilbert branch |
 | Born weights | $\omega(P)=\operatorname{tr}(\rho P)$ | Theorem on MPU Hilbert branch | Contextual ledgers, non-additive weights | PCE/PPI quotient enforcement removes response-null context labels; Gleason-Busch fixes the trace form | Context labels with no response difference are PPI-gauge | Closed on non-contextual finite-effect branch |
-| Gauge algebra | $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ | Finite-response branch theorem | Other partitions of $6$: $\{6\}$, $\{5,1\}$, $\{4,2\}$, $\{4,1,1\}$, $\{3,3\}$, $\{2,2,2\}$, $\{2,2,1,1\}$, $\{2,1,1,1,1\}$, $\{1,1,1,1,1,1\}$ | The $3+2+1$ inactive split uniquely satisfies the four gates of Theorem G.8.4b: (i) capacity bound $n_G\le ab=12$ excludes $\{6\}$ and $\{4,2\}$; (ii) chirality/anomaly excludes $\{3,3\}$ and $\{2,2,2\}$; (iii) Witten anomaly and minimal charge lattice exclude $\{5,1\}$ and $\{4,1,1\}$; (iv) PCE minimality excludes $\{2,2,1,1\}$, $\{2,1,1,1,1\}$, and $\{1,1,1,1,1,1\}$ | Extra abelian or non-response gauge labels are PCE-dominated | Closed on SM anomaly/capacity branch; partition-by-partition exclusion table cross-referenced in §G.8 |
+| Gauge algebra | $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ | Finite-response block-frame branch theorem | Other block-frame partitions of $6$: $\{6\}$, $\{5,1\}$, $\{4,2\}$, $\{4,1,1\}$, $\{3,3\}$, $\{3,1,1,1\}$, $\{2,2,2\}$, $\{2,2,1,1\}$, $\{2,1,1,1,1\}$, $\{1,1,1,1,1,1\}$ | The unordered block-frame partition table of Theorem G.8.4b has exactly one capacity-saturating admissible row under $n_G\le ab=12$, namely $3+2+1$. Rows with $n_G>12$ violate the Lagrangian capacity bound; rows with $n_G<12$ are PCE-dominated in the positive-marginal regime because the $3+2+1$ row is admissible and saturates the bound. The determinant-compatible abelian response gives the retained hypercharge direction. | Response-null exact phases and surplus non-response labels are quotiented. The theorem is block-frame/interface-category uniqueness, not a classification of all compact connected subgroups of $U(6)$; irreducible tensor-product embeddings are outside this admissible family. | Closed on the finite-response block-frame anomaly/capacity branch; arbitrary-subgroup uniqueness is not claimed |
 | Hypercharge | SM hypercharge vector up to normalization | Branch theorem | Other anomaly-free $U(1)$ assignments | Anomaly cancellation, Yukawa compatibility, Witten anomaly gate, and minimal charge lattice fix the SM pattern up to scale | Redundant $U(1)$ mixtures are quotiented by anomaly and charge-lattice equivalence | Overall normalization remains tied to charge-unit convention |
 | Generations | $N_g=3$ | Theorem plus pre-flavor PPI realization branch | $N_g=1,2,4,\ldots$ | Anomaly balance plus CP phase requires the minimal nontrivial balanced family pattern $\{a,-a,0\}$; Proposition R.3.5.1a removes response-null supernumerary copies before the flavor-potential layer | Extra balanced pairs are surplus unless response-relevant flavor data are appended | Closed on the pre-flavor family-redundancy PPI branch; larger anomaly-free branches exist at later flavor-model cost |
 | Gravity | Emergent metric/channel-capacity thermodynamics | Branch theorem/certificate stack | Fundamental metric ontology, non-saturated horizon branch, non-LTE horizon branch | Appendix E supplies finite channel capacity, min-cut horizon entropy, and area law; Section 12 supplies local KMS/LTE, Clausius, Raychaudhuri, and conserved MPU stress-energy | Non-saturating or non-LTE labels that do not change finite responses are PCE-dominated; response-changing cases are different branches | Certificate-complete on finite KMS-descent branch; conditional outside it |
@@ -6377,7 +6377,7 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a Landauer o
 | QFI mode count | $M=24$ | Theorem Z.5 | closed |
 | Predictive-recovery code dimension | $k=12$ | Definition Z.13b.0; Theorem Z.13b.0a; Theorem Z.13b | closed on the predictive-recovery MacWilliams branch |
 | Spacetime dimension | $D=4$ | Theorem Z.10; Theorem Z.11; Corollary Z.11.0a | closed on the Bures tangent-cell branch |
-| Gauge algebra | $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ | Theorem G.8.4b; Corollary G.8.4c; Corollary G.8.4c.0a | closed on the finite-response positive-marginal capacity branch |
+| Gauge algebra | $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)$ | Theorem G.8.4b; Corollary G.8.4c; Corollary G.8.4c.0a | closed on the finite-response block-frame positive-marginal capacity branch; arbitrary $U(6)$-subgroup uniqueness is not claimed |
 | Generation count | $N_g=3$ | Theorem R.3.4; Proposition R.3.5.1a; Theorem R.8.5b; Corollary R.8.5d; Proposition R.4.2 | closed on the pre-flavor family-redundancy PPI branch with PCE minimal-selection audit; triality/$E_8$/Leech entries are compatibility checks, and larger anomaly-free charge multisets are different or PCE-demoted branches unless response-relevant flavor data are appended |
 | Acceleration bridge | $\eta'=3/(8\sqrt3)$ | Definition H.4.2.8a; Theorem H.4.2.8b; Corollary H.4.2.8c | closed on the QFI linear-response bridge-law class |
 | Operational continuum manifold | $M=24,\ D=4$ shell with selected vanishing continuum defects | Theorem 43; Theorem 43.5; Lemma C.6d; Theorem C.6e; Theorem D.6e; Proposition D.6f; Theorem D.6f.2; Proposition D.6f.2a; Theorem C.6c; Theorem 44a | conditional on the sharp global-core competitor condition $\mathfrak d_n^*\to0$ inside the global core-minimum class; local $D_4$ zero-defect approximants alone do not close the row by Proposition D.6f |
@@ -6403,6 +6403,14 @@ A Kähler-Einstein normalization, an octad/Steiner/Golay character, a Landauer o
 | Late-time backreaction | RCD-Buchert-Cheeger estimate | Definition I.3e; Theorem I.3f; Theorem I.3i; Corollaries I.3g--I.3j | certificate-pending on the RCD-Buchert-Cheeger datum, elliptic scale bridge, predictive-stress variance, source-energy rate density, and finite defect budgets |
 | Recurrent integer subledger | current-graph non-collapse decomposition of $(K_0,d_0,\varepsilon_0,a,b,M,k,D)$ with marked arena rigidity | Proposition T.59; Corollary T.59a; Proposition R.3.5e; Remark R.3.5e.1; Proposition R.3.5e.2; Theorem R.3.5e.3; Corollary R.3.5e.4; Remarks R.3.5e.5–R.3.5e.6; Definition Z.35d; Theorem Z.35e | closed as a non-collapse decomposition: the exact tuple is theorem-level on the minimal branch, the marked arena hierarchy is unique under Definition Z.35d, and no current-source compression exists in the stated proof graph; a future common parent invariant remains open |
 | CC influence | bounded protocol response; binary-saturating backbone representative available as a resonance-motivated model branch | Definition 13.0a; Definition 13.0d; Theorem 13.0e; Theorem 39; Theorem 39a; Definition 32a; Proposition 35a; Corollary 35a.1 | open until a forward-locked protocol package satisfying $\chi_{\mathrm{pred}}$ is entered; the representative scaling is admissible on branches whose endpoint-bias ceiling admits $3/8$ (strictly stronger than the universal Theorem 39 bound $\alpha_{CC,max}<1/2$) but is not a unique theorem-level closure |
+
+**Theorem P.14.1k.0a (Operational Conservative-Projection Principle).** Any PU result whose proof uses only the operational core data
+$$
+(V_{\mathrm{PCE}},\mathcal H_0,\rho_0,\text{transition kernels},\text{branch hypotheses},\text{observable maps},\text{response presheaves})
+$$
+is invariant under interpretive changes that preserve those data up to natural isomorphism. Interpretive claims therefore do not function as hidden dynamical assumptions. If a claim changes finite response data, it is a branch hypothesis; if it changes no finite response data, it cannot change theorem-level predictions.
+
+*Proof.* Naturality of operational equivalence (Corollary P.6.1b.8) identifies two descriptions that agree on all retained response presheaves. A claim that does not alter response presheaves, cost functionals, transition kernels, observable maps, or branch certificates produces no change in any retained response output and therefore no change in any theorem-level prediction derived from those outputs. Conversely, a claim that alters any of these data is a branch hypothesis by Convention P.14.1a and is audited as such. ∎
 
 **Definition P.14.1k.0 (Overlap-Commutativity Audit).** Let $G_{\mathrm{PU}}$ be the directed dependency graph whose vertices are the sectors listed in Convention P.14.1k and whose edges point from parent sectors to child sectors. An overlap-commutativity audit for $G_{\mathrm{PU}}$ is a finite record
 $$
@@ -7755,6 +7763,1435 @@ on $\mathcal B$. When Theorem Q.0.1 and Corollary Q.0.1 apply, $\mathcal S/\hbar
 
 The framework's existing commitments — finite-resource prediction, SPAP, PPI/PCE selection, MPU populations, and the strict-certificate ledger — support an open structural reframing of apparent free constants. The recurrent minimal-branch ledger $\mathfrak L_0=(3,8,\ln2,2,6,24,12,4)$ supplies the discrete backbone; the population configuration $\mathcal P=(N,\mathcal T,\mathcal K,\rho)$ supplies the finite-response population input. Conjecture P.16a.1 asserts that these two structural sources exhaust the parent data for the ledger-routed apparent constants, subject to the current certificate gates. Conjecture P.16a.2 states the corresponding fine-tuning reframing: if the constants are joint readouts rather than independent knobs, the standard fine-tuning argument is malformed when applied to PU's content. Corollary P.16a.3.1 records the branch-restricted deletion boundary for the Appendix Z core: an MPU deletion either preserves $(\mathfrak L_0,\alpha^{-1}_0)$ exactly on the same branch or returns $(\bot,\bot)$ through the branch-restricted maps, and $M=24$ is not a graph-degree count without an added population graph theorem. The compact expression $\delta V=0$ on $\mathcal A_N$ records the same PCE selection in variational form whenever an attained selected class is available, with $\delta\mathcal S=0$ recovered on the corresponding action branch. The section is conservative over the existing status ledger (Theorem P.16a.1).
 
+## P.16b Perspective-Indexed Semantics, Description-Arity, and Creative Decompression
+
+### P.16b.0 Standing and Scope
+
+This section extends the philosophical foundations by formalizing five semantic and interpretive structures in PU notation:
+
+1. role-indexed self-reference and the failure of the Universality Assumption;
+2. perspective-indexed closure and guarded cross-perspective adoption;
+3. local classicality with global holonomy or process-type obstruction;
+4. cogito-centered perspective geometry;
+5. shape recognition, decompression, and bounded creative transfer.
+
+This section introduces no new physical primitive. It is a semantic, epistemic, and philosophical extension of the existing operational PU layer. Physical consequences require the independent physical branch certificates already stated elsewhere in the manuscript.
+
+The results below are theorem-level only on their named semantic branches. General claims beyond those branches are stated as conjectures or boundary principles.
+
+---
+
+### P.16b.1 Role-Indexed Evaluation and the Universality Assumption
+
+**Definition P.16b.1.1 (Universality Assumption).**
+
+The **Universality Assumption** is the claim that every evaluable content admits a single final evaluation independent of evaluative role, perspective, and context.
+
+In its strongest Boolean form it asserts a total map
+$$
+\tau:\mathrm{Sent}\to\{0,1\},
+$$
+where $1$ denotes true and $0$ denotes false.
+
+In reflexive contexts the stronger hidden form is the role-collapse condition:
+$$
+v_P(E)=v_T(E),
+$$
+where $P$ is the evaluator or pointer role and $T$ is the evaluated or target role.
+
+**Definition P.16b.1.2 (Role-Indexed Reflexive Evaluation).**
+
+A reflexive evaluation datum is a tuple
+$$
+\mathfrak R=(E,P,T,F,v_P,v_T)
+$$
+where:
+
+1. $E$ is an expression or content item;
+2. $P$ is the pointer/evaluator role;
+3. $T$ is the target/evaluated role;
+4. $F$ is a value transformation;
+5. $v_P(E)$ is the value of $E$ in the pointer role;
+6. $v_T(E)$ is the value of $E$ in the target role.
+
+The role-indexed evaluation equation is
+$$
+v_P(E)=F(v_T(E)).
+\tag{P.16b.1.1}
+$$
+
+**Theorem P.16b.1.3 (Liar Contradiction Requires Role Collapse).**
+
+Let $F(v)=1-v$ on Boolean values. The role-indexed Liar equation
+$$
+v_P(L)=1-v_T(L)
+\tag{P.16b.1.2}
+$$
+is consistent as a relation between two roles. A contradiction follows exactly when the additional role-collapse condition
+$$
+v_P(L)=v_T(L)
+\tag{P.16b.1.3}
+$$
+is imposed.
+
+*Proof.* Equation (P.16b.1.2) alone relates two possibly distinct role-values. For example, $v_T(L)=0$ and $v_P(L)=1$ satisfies it; likewise $v_T(L)=1$ and $v_P(L)=0$ satisfies it. Hence the role-indexed relation is satisfiable.
+
+If (P.16b.1.3) is added, write the common value as $v$. Substituting into (P.16b.1.2) gives
+$$
+v=1-v.
+$$
+There is no Boolean solution: if $v=0$, then the equation gives $0=1$; if $v=1$, it gives $1=0$. Therefore contradiction is produced by the conjunction of reflexive negation and role collapse.
+
+Conversely, if no role-collapse condition is imposed, the satisfying assignments displayed above show that no Boolean contradiction follows. ∎
+
+**Corollary P.16b.1.4 (The Liar as a Diagnostic of Unindexed Evaluation).**
+
+The Liar sentence does not by itself refute local Boolean reasoning. It exposes that the demand for one unindexed role-insensitive value is an additional assumption.
+
+*Proof.* Theorem P.16b.1.3 shows that the contradiction is absent before role collapse and present after role collapse. Thus the failure is located in unindexed role collapse, not in ordinary Boolean evaluation inside one fixed role. ∎
+
+**Theorem P.16b.1.5 (Stabilizing and Destabilizing Reflexive Transformations).**
+
+For a reflexive evaluation equation
+$$
+v_P=F(v_T),
+$$
+role collapse produces the fixed-point equation
+$$
+v=F(v).
+\tag{P.16b.1.4}
+$$
+If $F$ has a fixed point, the collapsed reflexive structure may stabilize. If $F$ has no fixed point in the value domain, the collapsed structure is obstructed.
+
+*Proof.* Under role collapse $v_P=v_T=v$, and the role-indexed equation becomes (P.16b.1.4). A stable collapsed value is precisely a solution of (P.16b.1.4). If such a solution exists, assigning $v$ to both roles satisfies the collapsed equation. If no such solution exists, no collapsed assignment satisfies it. ∎
+
+**Corollary P.16b.1.6 (Cogito Contrast).**
+
+The cogito pattern is stabilizing rather than Liar-like when the relevant transformation is identity or presence-confirming. In that case the collapsed equation is
+$$
+v=v,
+$$
+or a closure fixed-point condition rather than a negating contradiction.
+
+*Proof.* Apply Theorem P.16b.1.5 with $F(v)=v$ or with an extensive closure operator whose fixed points exist by Theorem P.16b.6.2 below. ∎
+
+---
+
+### P.16b.2 Perspective-Indexed Closure
+
+**Definition P.16b.2.1 (Labeled Values and Validating Perspectives).**
+
+Let $P$ be a nonempty set of perspectives and let $V$ be a nonempty set of values. A labeled value is written
+$$
+a(s),
+$$
+where $a\in V$ and $s\in P$.
+
+A validating perspective $p\in P$ evaluates directed judgments of the form
+$$
+a(s)\longrightarrow c(u).
+$$
+Let
+$$
+D:=P\times P\times V\times V.
+$$
+A configuration is a family
+$$
+R=(R_p)_{p\in P},
+\qquad
+R_p\subseteq D.
+$$
+The interpretation is
+$$
+(s,u,a,c)\in R_p
+$$
+iff, from validating perspective $p$, the labeled value $a(s)$ relates to the labeled value $c(u)$.
+
+**Definition P.16b.2.2 (Base Kernels and CPA Guards).**
+
+For each $p\in P$, let
+$$
+R_p^\circ\subseteq D
+$$
+be the base kernel of judgments accepted at $p$.
+
+A Cross-Perspective Adoption guard is a function
+$$
+\mathrm{CPA}_p:P\times P\to\{0,1\}.
+$$
+The value
+$$
+\mathrm{CPA}_p(q,u)=1
+$$
+means that $p$ is allowed to adopt a judgment validated by $q$ when the target perspective is $u$.
+
+**Definition P.16b.2.3 (Closure Operator).**
+
+Let
+$$
+\mathcal L:=\prod_{p\in P}\mathcal P(D)
+$$
+ordered by pointwise inclusion. Define
+$$
+T:\mathcal L\to\mathcal L
+$$
+by the following clauses for each $p$.
+
+**Seed.**
+$$
+R_p^\circ\subseteq (T(R))_p.
+$$
+
+**Reflexivity.** For every $s\in P$ and $a\in V$,
+$$
+(s,s,a,a)\in (T(R))_p.
+$$
+
+**Same-perspective transitivity.** If
+$$
+(s,t,a,b)\in R_p
+$$
+and
+$$
+(t,u,b,c)\in R_p,
+$$
+then
+$$
+(s,u,a,c)\in (T(R))_p.
+$$
+
+**Guarded cross-perspective adoption.** If
+$$
+(s,t,a,b)\in R_p,
+$$
+$$
+(t,u,b,c)\in R_q,
+$$
+and
+$$
+\mathrm{CPA}_p(q,u)=1,
+$$
+then
+$$
+(s,u,a,c)\in (T(R))_p.
+$$
+
+**Theorem P.16b.2.4 (Least Perspective Closure).**
+
+The operator $T$ is monotone and Scott-continuous. Hence it has a least fixed point
+$$
+R^\star=(R_p^\star)_{p\in P},
+$$
+and
+$$
+R^\star=\bigcup_{n<\omega}R^{(n)},
+\qquad
+R^{(0)}=\bot,
+\qquad
+R^{(n+1)}=T(R^{(n)}).
+$$
+
+*Proof.* If $R\le S$, every premise available in $R$ is available in $S$. Each Seed, Reflexivity, Transitivity, and CPA conclusion generated from $R$ is therefore generated from $S$. Thus $T$ is monotone.
+
+Let $\{R_i\}_{i\in I}$ be a directed family and set $R=\bigcup_iR_i$. If a tuple belongs to $T(R)$, it is either a Seed or Reflexivity tuple, in which case it belongs to $T(R_i)$ for every $i$, or it is generated by Transitivity or CPA from finitely many premises. Directedness gives an index $j$ containing all those premises. Hence the tuple belongs to $T(R_j)$. Therefore
+$$
+T\left(\bigcup_iR_i\right)=\bigcup_iT(R_i),
+$$
+so $T$ is Scott-continuous.
+
+The lattice $\mathcal L$ is complete. By the Kleene fixed-point theorem for Scott-continuous maps on complete lattices with bottom, the least fixed point exists and is the union of the ascending chain from $\bot$. ∎
+
+**Corollary P.16b.2.5 (Local Preorders).**
+
+For each validating perspective $p$, define
+$$
+a(s)\preceq_p c(u)
+\quad\Longleftrightarrow\quad
+(s,u,a,c)\in R_p^\star.
+$$
+Then $\preceq_p$ is reflexive and transitive.
+
+*Proof.* Reflexivity is inserted by the Reflexivity clause. Transitivity is closed by the same-perspective Transitivity clause at the fixed point. ∎
+
+**Definition P.16b.2.6 (Labeled Proof System).**
+
+Let $E_p(s,u,a,c)$ denote the judgment
+$$
+(s,u,a,c)\in R_p^\star.
+$$
+The proof rules are:
+
+1. **Base:** if $(s,u,a,c)\in R_p^\circ$, infer $E_p(s,u,a,c)$;
+2. **Refl:** infer $E_p(s,s,a,a)$;
+3. **Trans:** from $E_p(s,t,a,b)$ and $E_p(t,u,b,c)$, infer $E_p(s,u,a,c)$;
+4. **CPA:** from $E_p(s,t,a,b)$, $E_q(t,u,b,c)$, and $\mathrm{CPA}_p(q,u)=1$, infer $E_p(s,u,a,c)$.
+
+**Theorem P.16b.2.7 (Soundness and Completeness of Labeled Proofs).**
+
+For every $p,s,u,a,c$,
+$$
+\vdash E_p(s,u,a,c)
+\quad\Longleftrightarrow\quad
+(s,u,a,c)\in R_p^\star.
+$$
+
+*Proof.* Soundness follows by induction on proof height. Base and Refl match the Seed and Reflexivity clauses. Trans and CPA match the closure clauses defining $T$. Therefore every derivable judgment appears at some finite stage and hence in $R^\star$.
+
+For completeness, suppose $(s,u,a,c)\in R_p^\star$. By Theorem P.16b.2.4, the tuple appears in some finite stage $R_p^{(n)}$. Induct on the least such $n$. Each tuple introduced at stage $n+1$ is introduced by one of the four defining clauses of $T$. The corresponding proof rule derives it from premises that appeared at earlier stages. The induction hypothesis supplies derivations of those premises. Thus the tuple is derivable. ∎
+
+---
+
+### P.16b.3 Finite-Support Paradox Containment
+
+**Definition P.16b.3.1 (Finite-Support Configuration).**
+
+A perspective configuration has finite support if there are finite sets
+$$
+S_P\subseteq P,
+\qquad
+S_V\subseteq V
+$$
+such that:
+
+1. all non-reflexive seeds lie in
+$$
+S_P\times S_P\times S_V\times S_V;
+$$
+
+2. if $\mathrm{CPA}_p(q,u)=1$, then
+$$
+p,q,u\in S_P.
+$$
+
+Let
+$$
+\mathrm{NonRefl}:=D\setminus\{(s,s,a,a):s\in P,
+ a\in V\}.
+$$
+
+**Theorem P.16b.3.2 (No Explosion Under Finite Support).**
+
+In a finite-support configuration,
+$$
+R_p^\star\cap\mathrm{NonRefl}
+\subseteq
+S_P\times S_P\times S_V\times S_V
+$$
+for every $p\in P$.
+
+Thus a paradox-shaped cycle does not derive arbitrary non-reflexive judgments outside the finite supported domain.
+
+*Proof.* Induct on the finite stages $R^{(n)}$.
+
+At stage $1$, the only non-reflexive tuples are base seeds, and by hypothesis all such seeds are supported.
+
+Assume the result at stage $n$. A new non-reflexive tuple at stage $n+1$ can arise only by Trans or CPA. For Trans, both premises are supported by the induction hypothesis unless one premise is reflexive. If one premise is reflexive, the conclusion equals the other premise and remains supported. If both are non-reflexive, the composed endpoints and values are already in $S_P$ and $S_V$.
+
+For CPA, the guard condition ensures the validating and target perspectives involved in the imported step are in $S_P$. The local and imported premises are supported by the induction hypothesis unless reflexive, and reflexive premises do not introduce new values or perspectives. Therefore the conclusion remains supported.
+
+Taking the union over all finite stages preserves the inclusion. ∎
+
+**Corollary P.16b.3.3 (Paradox as Local Cycle Rather Than Global Explosion).**
+
+A role-sensitive or perspective-sensitive self-reference cycle may exist inside the supported substructure without forcing every judgment in $D$.
+
+*Proof.* Theorem P.16b.3.2 bounds every non-reflexive derived judgment by the finite supported set. Since $D$ may contain values and perspectives outside that set, arbitrary judgments outside it are not derivable. ∎
+
+---
+
+### P.16b.4 Process Typing and Local Classicality
+
+**Definition P.16b.4.1 (Prop and Proc Types).**
+
+Let $E$ be an expression evaluated at perspective $p$.
+
+$E$ is **Prop-typed** at $p$ when all admissible evaluation sequences converge to the same Boolean value, independent of initial condition and evaluation strategy.
+
+$E$ is **Proc-typed** at $p$ when this fails: the evaluation oscillates, diverges, depends on an initial condition, depends on strategy, or requires non-well-founded context update.
+
+The local truth predicate $\tau_p(E)$ is defined only for Prop-typed expressions.
+
+**Theorem P.16b.4.2 (Local Classicality of Value-Compositional Prop-Typed Expressions).**
+
+At a fixed perspective $p$, assume the local Boolean language is value-compositional: the connectives $\neg$, $\wedge$, $\vee$, and $\to$ are interpreted extensionally by the usual truth tables on settled Boolean values and do not introduce additional evaluation dynamics. Then the Prop-typed expressions form a classical Boolean algebra under the usual Boolean connectives, after quotienting expressions by equality of local Boolean value.
+
+*Proof.* Each Prop-typed expression has a unique Boolean value in $\{0,1\}$ at $p$. By the value-compositional branch hypothesis, the value of $\neg E$, $E\wedge F$, $E\vee F$, and $E\to F$ is obtained by the ordinary Boolean truth tables on those unique values, and the resulting expressions remain Prop-typed at the quotient level. Since the quotient identifies expressions with the same value, the quotient algebra has exactly the usual Boolean operations on $\{0,1\}$. Hence all classical Boolean laws hold locally on the value-compositional Prop-typed quotient. ∎
+
+**Corollary P.16b.4.3 (Liar-Pattern Expressions Are Not Prop-Typed on the Unstratified Branch).**
+
+On the unstratified branch requiring one role-insensitive value for a negating reflexive expression, the Liar pattern is Proc-typed rather than Prop-typed.
+
+*Proof.* By Theorem P.16b.1.3, the unstratified collapsed Liar equation has no Boolean solution. Therefore there is no unique Boolean value to assign. By Definition P.16b.4.1, it is not Prop-typed. ∎
+
+**Remark P.16b.4.4 (Decidability Boundary).**
+
+On finite bounded-evaluation branches, Prop/Proc typing can be checked by finite convergence analysis. In unrestricted languages with arbitrary self-reference and syntax-quantification, Prop/Proc classification need not be decidable.
+
+---
+
+### P.16b.5 Holonomy and Global-Section Obstruction
+
+**Definition P.16b.5.1 (Finite Signed Logical Atlas).**
+
+A finite signed logical atlas consists of:
+
+1. a finite set of vantages $\mathcal V$;
+2. for each $i\in\mathcal V$, a local Boolean valuation domain;
+3. for each overlap edge $(i,j)$ and shared atom $a$, a sign
+$$
+s_{ij}(a)\in\{+1,-1\}.
+$$
+
+A local valuation assigns
+$$
+v_i(a)\in\{+1,-1\}.
+$$
+Edge compatibility is
+$$
+v_i(a)=s_{ij}(a)v_j(a).
+\tag{P.16b.5.1}
+$$
+
+For a cycle
+$$
+\gamma=i_0i_1\cdots i_ki_0,
+$$
+define holonomy
+$$
+H_\gamma(a)=\prod_{r=0}^k s_{i_ri_{r+1}}(a).
+\tag{P.16b.5.2}
+$$
+
+**Theorem P.16b.5.2 (Flatness-and-Compatibility Criterion).**
+
+On a connected finite signed atlas, a global section for atom $a$ exists if and only if:
+
+1. every cycle has trivial holonomy,
+$$
+H_\gamma(a)=+1;
+$$
+
+2. local valuations are edgewise compatible,
+$$
+v_i(a)=s_{ij}(a)v_j(a)
+$$
+on every overlap edge.
+
+*Proof.* If a global section exists, transporting the value around any closed cycle must return the same value. Transport around $\gamma$ multiplies the value by $H_\gamma(a)$. Therefore $H_\gamma(a)=+1$. Edge compatibility is the definition of local restrictions agreeing on overlaps.
+
+Conversely, choose a root vantage $i_0$ and assign a value at $i_0$. For any other vantage $j$, define the value at $j$ by transporting along a path from $i_0$ to $j$. Trivial holonomy makes this path-independent, because two paths from $i_0$ to $j$ form a cycle when one is reversed. Edge compatibility ensures the transported values agree with local overlap data. Hence the local valuations glue to a global section. ∎
+
+**Corollary P.16b.5.3 (Global Curvature Without Local Contradiction).**
+
+A signed atlas may be locally classical at every vantage and still lack a global section because of nontrivial holonomy.
+
+*Proof.* Local classicality concerns Boolean evaluation inside each vantage. Theorem P.16b.5.2 shows that global gluing additionally requires trivial cycle holonomy. A cycle with $H_\gamma(a)=-1$ obstructs the global section while leaving each local Boolean algebra intact. ∎
+
+---
+
+### P.16b.6 Cogito-Centered Perspective Geometry
+
+**Definition P.16b.6.1 (Evidential Perspective Space).**
+
+Let $(V_C,\mathcal F,\nu)$ be a probability space of contents. A graded evidential perspective is a measurable function
+$$
+p:V_C\to[0,1].
+$$
+Let $\mathcal P\subseteq L^1(V_C,\nu)$ be a lattice of such functions closed under pointwise essential suprema and infima.
+
+Fix a measurable set
+$$
+I\in\mathcal F
+$$
+representing minimal presence-as-experiencing, and assume
+$$
+\mathbf 1_I\in\mathcal P.
+$$
+Equivalently, the retained evidential-perspective branch is closed under adjoining the minimal presence indicator.
+
+Define the self-evidence operator
+$$
+\mathrm{SE}(p)=\max\{p,\mathbf 1_I\}.
+\tag{P.16b.6.1}
+$$
+
+**Theorem P.16b.6.2 (Cogito as Least Self-Evidence Fixed Point).**
+
+The operator $\mathrm{SE}$ is a closure operator on $\mathcal P$. Its least fixed point is
+$$
+p^\ast=\mathbf 1_I.
+$$
+
+*Proof.* Since $\mathbf 1_I\in\mathcal P$ and $\mathcal P$ is closed under pointwise essential suprema, $\mathrm{SE}$ is a well-defined map $\mathcal P\to\mathcal P$. The operator is extensive because
+$$
+p\le \max\{p,\mathbf 1_I\}.
+$$
+It is monotone because $p\le q$ implies
+$$
+\max\{p,\mathbf 1_I\}\le\max\{q,\mathbf 1_I\}.
+$$
+It is idempotent because
+$$
+\mathrm{SE}(\mathrm{SE}(p))
+=
+\max\{\max(p,\mathbf 1_I),\mathbf 1_I\}
+=
+\max\{p,\mathbf 1_I\}
+=
+\mathrm{SE}(p).
+$$
+Thus $\mathrm{SE}$ is a closure operator.
+
+A fixed point satisfies
+$$
+p=\max\{p,\mathbf 1_I\},
+$$
+which holds exactly when $p\ge\mathbf 1_I$ almost everywhere. The least such element is $\mathbf 1_I$. ∎
+
+**Definition P.16b.6.3 (Perspective Metric and Cogito Radius).**
+
+Define
+$$
+\Delta_{\mathcal P}(p,q)=\int_{V_C}|p(v)-q(v)|\,d\nu(v).
+\tag{P.16b.6.2}
+$$
+After quotienting by equality almost everywhere, this is a metric. The cogito radius is
+$$
+r_P(p)=\Delta_{\mathcal P}(p,p^\ast).
+\tag{P.16b.6.3}
+$$
+
+**Theorem P.16b.6.4 (Cogito Radius Is 1-Lipschitz).**
+
+For all $p,q\in\mathcal P$,
+$$
+|r_P(p)-r_P(q)|\le \Delta_{\mathcal P}(p,q).
+$$
+
+*Proof.* The triangle inequality gives
+$$
+\Delta_{\mathcal P}(p,p^\ast)
+\le
+\Delta_{\mathcal P}(p,q)+\Delta_{\mathcal P}(q,p^\ast).
+$$
+Thus
+$$
+r_P(p)-r_P(q)\le\Delta_{\mathcal P}(p,q).
+$$
+Interchanging $p$ and $q$ gives
+$$
+r_P(q)-r_P(p)\le\Delta_{\mathcal P}(p,q).
+$$
+Combining the two inequalities proves the claim. ∎
+
+**Definition P.16b.6.5 (Cogito-Origin Separating Branch).**
+
+A content profile chart
+$$
+\mathcal P_S(c)=(\Delta Q_S(c),\mu_S(c),\sigma_S(c))
+$$
+is normalized and separating at the origin on a retained content class $\mathcal E$ when it is invariant under $\equiv_{\mathrm{op}}^S$ on $\mathcal E$, satisfies
+$$
+c\equiv_{\mathrm{op}}^S\psi_C
+\quad\Longrightarrow\quad
+\mathcal P_S(c)=(0,0,0),
+$$
+and satisfies
+$$
+\mathcal P_S(c)=(0,0,0)
+\quad\Longrightarrow\quad
+c\equiv_{\mathrm{op}}^S\psi_C
+$$
+for all $c\in\mathcal E$, where $\psi_C$ is the cogito content and $\equiv_{\mathrm{op}}^S$ is operational response equivalence.
+
+**Theorem P.16b.6.6 (Unique Zero on the Separating-Origin Branch).**
+
+Define the evaluation cost
+$$
+E_S(c)=
+\sqrt{
+ w_Q\Delta Q_S(c)^2+w_\mu\mu_S(c)^2+w_\sigma\sigma_S(c)^2
+}
+\tag{P.16b.6.4}
+$$
+with strictly positive weights. On the cogito-origin separating branch,
+$$
+E_S(c)=0
+\quad\Longleftrightarrow\quad
+c\equiv_{\mathrm{op}}^S\psi_C.
+$$
+
+*Proof.* If $c\equiv_{\mathrm{op}}^S\psi_C$, then the profile agrees with the cogito profile on the branch, so $\mathcal P_S(c)=(0,0,0)$ and $E_S(c)=0$.
+
+Conversely, if $E_S(c)=0$, then every term in (P.16b.6.4) is nonnegative and each weight is positive. Therefore
+$$
+\Delta Q_S(c)=\mu_S(c)=\sigma_S(c)=0.
+$$
+By the separating-origin hypothesis, this implies
+$$
+c\equiv_{\mathrm{op}}^S\psi_C.
+$$
+∎
+
+**Remark P.16b.6.7 (Boundary of the Cogito Zero Claim).**
+
+Without the separating-origin branch, $E_S(c)=0$ proves only that the chosen finite profile chart assigns zero to $c$. It does not by itself prove operational equivalence to the cogito. The separating condition is the load-bearing hypothesis.
+
+---
+
+### P.16b.7 Predictive Role-Position Equivalence
+
+**Definition P.16b.7.1 (Operational Response Presheaf of a Content).**
+
+Let $S$ be a knowledge system with retained protocol category $\mathsf P_S$. For content $c$, define its operational response presheaf
+$$
+\mathcal R_c^S:\mathsf P_S^{op}\to\mathbf{Set}
+$$
+or, on probabilistic branches,
+$$
+\mathcal R_c^S:\mathsf P_S^{op}\to\mathbf{Prob}_{\mathrm{fin}}.
+$$
+For a protocol $P\in\mathsf P_S$, $\mathcal R_c^S(P)$ is the finite response produced when $S$ engages content $c$ under $P$.
+
+**Definition P.16b.7.2 (Predictive-Function Space).**
+
+Define operational equivalence by
+$$
+c_1\equiv_{\mathrm{op}}^S c_2
+\quad\Longleftrightarrow\quad
+\mathcal R_{c_1}^S\cong\mathcal R_{c_2}^S
+$$
+by natural isomorphism of response presheaves.
+
+The predictive-function space is the quotient
+$$
+\mathcal F_S:=\mathsf{Cont}_S/\equiv_{\mathrm{op}}^S.
+$$
+The position map is
+$$
+\pi_S:\mathsf{Cont}_S\to\mathcal F_S,
+\qquad
+\pi_S(c)=[c]_{\mathrm{op}}.
+$$
+
+**Definition P.16b.7.3 (Predictive Role).**
+
+The predictive role of $c$ for $S$ is
+$$
+\operatorname{Role}_S(c):=[\mathcal R_c^S]_{\cong}.
+$$
+
+**Theorem P.16b.7.4 (Predictive Role-Position Equivalence).**
+
+For every retained content item $c$,
+$$
+\pi_S(c)=[c]_{\mathrm{op}}=[\mathcal R_c^S]_{\cong}=\operatorname{Role}_S(c).
+$$
+Thus qualitative predictive role and quantitative position in $\mathcal F_S$ are the same operational invariant expressed in two vocabularies.
+
+*Proof.* By Definition P.16b.7.2, $\pi_S(c)$ is the equivalence class of $c$ under natural-isomorphism equivalence of operational response presheaves. Therefore
+$$
+\pi_S(c)=[\mathcal R_c^S]_{\cong}.
+$$
+By Definition P.16b.7.3, the right-hand side is $\operatorname{Role}_S(c)$. Hence all displayed quantities are identical in the quotient. ∎
+
+**Corollary P.16b.7.5 (Finite Profiles Are Charts, Not Complete Identities).**
+
+A finite profile such as
+$$
+(\Delta Q,\mu,\sigma)
+$$
+is a coordinate chart on $\mathcal F_S$ where defined. Equality of finite profile coordinates implies equality of predictive role only on a separating-profile branch.
+
+*Proof.* The full point of $\mathcal F_S$ is the response-presheaf equivalence class. A finite coordinate chart can fail to separate distinct points unless separation is assumed. Therefore coordinate equality alone is weaker than role-position equality except on a separating branch. ∎
+
+---
+
+### P.16b.8 Triadic Description-Arity
+
+**Definition P.16b.8.1 (SPAP Role Set).**
+
+The SPAP role set is
+$$
+\mathcal R_{\mathrm{SPAP}}=\{\Phi,\Pi,\Gamma\},
+$$
+where:
+
+1. $\Phi$ is the state role;
+2. $\Pi$ is the prediction role;
+3. $\Gamma$ is the control/comparison role.
+
+The SPAP register notation $(\phi,p,c)$ realizes these roles. A full SPAP role implementation is a typed register with projections onto all three sorts and an admissible update map whose domain contains the ordered pair consisting of a present state and a stored prediction and whose codomain contains the comparison/update channel. The update involution is an operation inside the role system, not a fourth role.
+
+**Theorem P.16b.8.2 (Three-Role Necessity).**
+
+The SPAP architecture requires all three roles $\Phi$, $\Pi$, and $\Gamma$. No two-role subsystem implements the full SPAP cycle.
+
+*Proof.* Work in the typed signature of Definition P.16b.8.1. A full implementation must type every occurrence of the SPAP cycle: the realized state term, the stored prediction term, and the comparison/update term. If $\Phi$ is removed, the state term has no sort, so the comparison map has no current-state argument. If $\Pi$ is removed, the prediction term has no sort, so there is no stored target against which the current state can be compared. If $\Gamma$ is removed, the comparison/update codomain has no sort, so the ordered cycle cannot feed an error or control value back into the next predictive step. In each two-role reduct, at least one required typed occurrence is undefined, hence the reduct cannot implement the full SPAP cycle. Conversely, the triple $(\phi,p,c)$ supplies one value in each required sort, and the update involution is an internal operation on those sorts. Therefore three roles are necessary and sufficient for the typed SPAP role architecture. ∎
+
+**Definition P.16b.8.3 (Description Lenses).**
+
+The semantic-extension ledger uses three primitive description lenses:
+
+1. **Operational/categorical lens $\mathsf C$:** finite protocol identity, response presheaves, operational quotienting, branch predicates, and categorical role structure.
+
+2. **Geometric/topological lens $\mathsf G$:** connections, holonomy, curvature, signed atlases, shape, transport, and metric geometry.
+
+3. **Measure-theoretic/dynamical lens $\mathsf M$:** probability measures, Markov kernels, entropy, cost, convergence, and quantitative profiles.
+
+**Definition P.16b.8.4 (Description-Arity of a Finite Ledger).**
+
+For a finite theorem ledger $\mathcal L$, let $\operatorname{Req}(T)$ be the subset of $\{\mathsf C,\mathsf G,\mathsf M\}$ used essentially in the proof of $T$. Define
+$$
+\operatorname{descArity}(\mathcal L)
+=
+\min\left\{|S|:S\subseteq\{\mathsf C,\mathsf G,\mathsf M\},
+\ \operatorname{Req}(T)\subseteq S\text{ for every }T\in\mathcal L\right\}.
+$$
+
+**Branch Condition P.16b.8.4a (Primitive-Lens Independence).**
+
+On the typed non-collapse branch, the three lenses $\mathsf C$, $\mathsf G$, and $\mathsf M$ are treated as primitive description lenses. No one of the three is definitionally eliminable into the other two while preserving the theorem statements of the retained ledger. In particular, response-presheaf quotienting, signed holonomy/transport, and measure-defined metric or dynamical data remain typed separately.
+
+**Theorem P.16b.8.5 (Three-Lens Minimality of the Semantic Ledger).**
+
+Let $\mathcal L_{\mathrm{sem}}$ be the finite ledger consisting of Theorems P.16b.1.3, P.16b.2.4, P.16b.3.2, P.16b.4.2, P.16b.5.2, P.16b.6.2, P.16b.6.4, P.16b.7.4, P.16b.8.2, P.16b.9.5, P.16b.10.3, P.16b.10.4, and P.16b.10.6. On the typed non-collapse branch with Primitive-Lens Independence,
+$$
+\operatorname{descArity}(\mathcal L_{\mathrm{sem}})=3.
+$$
+
+*Proof.* Every listed theorem uses only the three lenses $\mathsf C$, $\mathsf G$, and $\mathsf M$, so $\operatorname{descArity}(\mathcal L_{\mathrm{sem}})\le3$.
+
+No two-lens cover suffices. Theorem P.16b.7.4 requires response presheaves and operational quotienting, so $\mathsf C$ is essential. Theorem P.16b.5.2 requires signed transport around cycles and holonomy, so $\mathsf G$ is essential. Theorem P.16b.6.4 requires an $L^1$ integral metric and the triangle inequality for a measure-defined distance, so $\mathsf M$ is essential. By Branch Condition P.16b.8.4a, none of these three primitive sorts is definitionally eliminable by the other two on the retained branch. Therefore every cover must contain all three lenses, giving $\operatorname{descArity}(\mathcal L_{\mathrm{sem}})\ge3$.
+
+Combining the two inequalities yields equality. ∎
+
+**Remark P.16b.8.5a (Branch-Conditional Status of descArity = 3).** Theorem P.16b.8.5 is a conditional theorem on the typed non-collapse branch with Primitive-Lens Independence (Branch Condition P.16b.8.4a). It is not a metaphysical claim that any account of the retained semantic ledger must use three primitive lenses. Alternative formal foundations in which one of $\mathsf C$, $\mathsf G$, or $\mathsf M$ is definitionally encoded inside the other two — for example, a purely categorical encoding that internalizes measure data as enriched homs, or a purely measure-theoretic encoding that reconstructs categorical quotients from $\sigma$-algebras — supply alternative branches on which descArity may be strictly less than three for the same ledger. The PU statement is the conditional minimality of three lenses on the named branch, not the impossibility of two-lens reductions on other branches.
+
+**Corollary P.16b.8.6 (Role-Compatible Lens Map).**
+
+The map
+$$
+\Theta(\mathsf C)=\Phi,
+\qquad
+\Theta(\mathsf M)=\Pi,
+\qquad
+\Theta(\mathsf G)=\Gamma
+$$
+is role-compatible: operational identity supplies the state role, measure/dynamics supplies predictive law, and geometry supplies comparison/transport.
+
+*Proof.* $\mathsf C$ decides what counts as the retained object or state, matching $\Phi$. $\mathsf M$ supplies probability, cost, and dynamics for prediction, matching $\Pi$. $\mathsf G$ supplies transport and comparison across positions, matching $\Gamma$. The three source lenses and three target roles are both necessary by Theorem P.16b.8.5 and Theorem P.16b.8.2. ∎
+
+---
+
+### P.16b.9 Predictive Models, Shape, and Compression
+
+**Definition P.16b.9.1 (Predictive Model Presentation).**
+
+A predictive model presentation for a knowledge system $S$ is a tuple
+$$
+\mathcal M_S=(\mathcal C_S,\mathcal R_S,\ell_S,\mu_S,\mathrm{Pred}_S)
+$$
+where:
+
+1. $\mathcal C_S$ is a finite or locally finite typed concept/protocol category;
+2. $\mathcal R_S$ is a response presheaf on $\mathcal C_S$;
+3. $\ell_S$ is a description and traversal cost;
+4. $\mu_S$ is a query distribution;
+5. $\mathrm{Pred}_S$ is the prediction operation obtained by finite diagram evaluation, path traversal, or morphism composition.
+
+The signal cost is
+$$
+SC(\mathcal M_S)=
+\operatorname{CodeLength}(\mathcal C_S,\mathcal R_S,\ell_S,\mathrm{Pred}_S)
++
+\mathbb E_{q\sim\mu_S}\left[\ell_S(\mathrm{PredPath}(q))\right].
+$$
+
+The meaning potential is
+$$
+MP(\mathcal M_S)=
+\mathbb E_{q\sim\mu_S}\left[\operatorname{Adeq}(\mathrm{Pred}_S(q),q)\right].
+$$
+
+**Theorem P.16b.9.2 (Finite-Resource Compression Necessity).**
+
+Let $S$ have finite predictive complexity budget $C_P(S)$. For a task family $Q$, suppose the minimum enumerative code length satisfies
+$$
+K_{\mathrm{enum}}(Q)>C_P(S).
+$$
+If $S$ remains viable on $Q$, then its model cannot be purely enumerative. It must use a compressed relational presentation with cost at most $C_P(S)$.
+
+*Proof.* A purely enumerative model for $Q$ must store independent responses for the required tasks, so its representation cost is at least $K_{\mathrm{enum}}(Q)$. By hypothesis this exceeds $C_P(S)$, making enumeration nonviable. Since $S$ is viable, some presentation has cost at most $C_P(S)$. That presentation cannot be enumerative, so it must use relations, rules, composition, or shared structure to generate multiple predictions. This is exactly a compressed relational presentation. ∎
+
+**Theorem P.16b.9.3 (PCE Selection of Equal-Adequacy Compression).**
+
+On the PCE presentation branch, define
+$$
+\mathcal F_{\mathrm{PCE}}(\mathcal M_S)=SC(\mathcal M_S)-\lambda MP(\mathcal M_S),
+\qquad
+\lambda>0.
+$$
+If
+$$
+MP(\mathcal M_1)=MP(\mathcal M_2)
+$$
+and
+$$
+SC(\mathcal M_1)<SC(\mathcal M_2),
+$$
+then PCE strictly selects $\mathcal M_1$ over $\mathcal M_2$.
+
+*Proof.* Subtract the two objective values:
+$$
+\mathcal F_{\mathrm{PCE}}(\mathcal M_1)-\mathcal F_{\mathrm{PCE}}(\mathcal M_2)
+=
+SC(\mathcal M_1)-SC(\mathcal M_2)
+-
+\lambda(MP(\mathcal M_1)-MP(\mathcal M_2)).
+$$
+The meaning potentials are equal, so the second term vanishes. The signal-cost difference is negative. Hence
+$$
+\mathcal F_{\mathrm{PCE}}(\mathcal M_1)<\mathcal F_{\mathrm{PCE}}(\mathcal M_2).
+$$
+∎
+
+**Definition P.16b.9.4 (Exact Shape).**
+
+A model region $A$ is a finite retained subdiagram of $\mathcal C_S$ with restricted response presheaf and cost data. Two regions $A$ and $B$ have the same exact shape when there is a typed isomorphism
+$$
+\varphi:A\to B
+$$
+preserving relation types, incidence, composition, relevant cost data, and response presheaves:
+$$
+\mathcal R_A\cong\varphi^*\mathcal R_B.
+$$
+
+**Theorem P.16b.9.5 (Operational Shape Recognition).**
+
+Exact shape recognition is the registration of a typed subdiagram isomorphism together with natural isomorphism of restricted response presheaves. Approximate shape recognition is the same structure with bounded response discrepancy over a retained test family.
+
+*Proof.* By Definition P.16b.9.4, exact shape consists exactly of a typed isomorphism preserving diagram structure and a natural isomorphism of response presheaves. Recognizing exact shape therefore amounts to detecting those data. If exact equality is replaced by a finite test family and discrepancy bound, the same proof gives approximate shape recognition with the stated tolerance. ∎
+
+---
+
+### P.16b.10 Decompression and Creative Transfer
+
+**Definition P.16b.10.1 (Structural Content and Annotation Content).**
+
+For a model region $A$, the structural content $\operatorname{Str}(A)$ is the set of statements expressible purely in the retained relational, categorical, geometric, and response-presheaf language of $A$.
+
+The annotation content $\operatorname{Ann}(A)$ is the set of non-structural associations accumulated from prior use, including domain interpretations, empirical associations, heuristics, and qualitative expectations.
+
+**Definition P.16b.10.2 (Decompression Along a Shape Match).**
+
+Given a shape match
+$$
+\varphi:A\dashrightarrow B,
+$$
+decompression produces:
+
+1. transported structural consequences $\varphi_*\operatorname{Str}(A)$;
+2. transferred hypotheses $\varphi_?\operatorname{Ann}(A)$;
+3. tests in $B$ for the transferred hypotheses.
+
+**Theorem P.16b.10.3 (Structural Decompression Is Sound).**
+
+If
+$$
+\varphi:A\to B
+$$
+is an exact shape isomorphism, then every structural statement in $\operatorname{Str}(A)$ transports to a true corresponding structural statement in $\operatorname{Str}(B)$.
+
+*Proof.* A structural statement is written only in the language preserved by the exact shape isomorphism: typed relations, incidence, composition, response-presheaf structure, and retained cost relations. Isomorphisms preserve truth of all statements in the preserved language. Therefore any $\sigma\in\operatorname{Str}(A)$ has a corresponding transported statement $\varphi_*\sigma$ true in $B$. ∎
+
+**Theorem P.16b.10.4 (Annotation Transfer Is Hypothesis Generation).**
+
+If
+$$
+\alpha\in\operatorname{Ann}(A),
+$$
+then $\varphi_?\alpha$ has hypothesis status in $B$ unless $\alpha$ is independently shown to be structural.
+
+*Proof.* Annotation content may depend on domain-specific facts, empirical history, or contextual interpretation not preserved by shape isomorphism. Therefore shape matching alone does not guarantee its truth in $B$. It can be carried forward only as a testable hypothesis. If it is later proven to depend solely on structure preserved by $\varphi$, it belongs to $\operatorname{Str}(A)$ and Theorem P.16b.10.3 applies. ∎
+
+**Definition P.16b.10.5 (Intuitive Creative Episode).**
+
+An intuitive creative episode is a tuple
+$$
+\mathcal E=(A,B,\varphi,\mathcal O)
+$$
+where:
+
+1. $A$ is a prior model region;
+2. $B$ is a target model region;
+3. $\varphi:A\dashrightarrow B$ is an exact or approximate shape match;
+4. $\mathcal O=\operatorname{Decomp}_\varphi(A\to B)$ is the decompressed output.
+
+**Theorem P.16b.10.6 (Soundness of the Creativity Algorithm).**
+
+For every intuitive creative episode:
+
+1. exact structural outputs are theorem-level consequences of the shape match;
+2. approximate structural outputs require an explicit retained discrepancy metric and a stated stability modulus for the transported statement;
+3. annotation outputs are hypotheses requiring testing;
+4. any output lacking one of these statuses is not licensed by the algorithm.
+
+*Proof.* Item 1 is Theorem P.16b.10.3. For item 2, an approximate match is not an isomorphism, so truth is not preserved by invariance alone. A quantitative conclusion is licensed only after specifying a discrepancy metric $d$ on the retained test family and a modulus $\omega_\sigma$ for the transported structural statement $\sigma$, so that a match with discrepancy at most $\epsilon$ yields an error bound at most $\omega_\sigma(\epsilon)$. Without $d$ and $\omega_\sigma$, there is no well-defined theorem-level error statement. Item 3 is Theorem P.16b.10.4. Definition P.16b.10.2 lists only transported structural consequences, transferred hypotheses, and tests; hence any output lacking one of these statuses is not licensed by the decompression operation. ∎
+
+**Conjecture P.16b.10.7 (Sufficiency for Intuitive Structural Creativity).**
+
+Every instance of intuitive structural creativity that produces genuine new content in a predictive model can be represented as shape recognition followed by decompression.
+
+Formally, for every such output $\mathcal O$, there exist model regions $A,B$ and a correspondence $\varphi:A\dashrightarrow B$ such that
+$$
+\mathcal O\subseteq\operatorname{Decomp}_\varphi(A\to B).
+$$
+
+This is a conjecture, not a theorem of the present section.
+
+---
+
+### P.16b.11 Integration with the Philosophical Foundations
+
+**Theorem P.16b.11.1 (Operational/Interpretive Separation).**
+
+Any PU result whose proof uses only response presheaves, PCE data, kernels, observable maps, and branch hypotheses is invariant under operationally conservative interpretive readings, where operational conservativity means preservation of those data up to the response equivalences already used in the proof.
+
+*Proof.* A finite-response result is computed from the listed operational data. If an interpretation preserves those data, every term entering the proof remains identical. Therefore the derived prediction, equivalence relation, or branch status is unchanged. ∎
+
+**Corollary P.16b.11.2 (Semantic Extension Does Not Alter Physical Branches).**
+
+The semantic, metric, and creativity structures of Section P.16b do not change gauge, gravity, quantum, cosmological, or numerical branches unless an explicit operational map changes the corresponding response presheaf, cost functional, or branch certificate.
+
+*Proof.* By Theorem P.16b.11.1, an interpretive extension without operational data change is conservative. If operational data do change, the result is no longer a pure philosophy extension and must be entered as a new branch certificate elsewhere in the PU ledger. ∎
+
+**Theorem P.16b.11.3 (Consolidated Semantic-Extension Package).**
+
+On the named branches, Section P.16b establishes:
+
+1. the Liar contradiction requires role collapse;
+2. perspective-indexed closure has a least fixed point and guarded import proof theory;
+3. finite-support paradox cycles do not explode globally;
+4. Prop-typed local reasoning is classical on the value-compositional branch;
+5. global obstruction is represented by holonomy rather than local contradiction;
+6. the cogito is the least self-evidence fixed point;
+7. cogito-zero uniqueness requires the separating-origin branch;
+8. predictive role equals position in the operational response quotient;
+9. the philosophy-extension ledger has minimal description-arity three on the typed non-collapse and Primitive-Lens Independence branch;
+10. shape recognition plus decompression gives a sound mechanism for structural creative transfer;
+11. provenance, conservative fusion, finite process typing, perspective metrics, and semantic holonomy are separated as distinct semantic structures;
+12. statistical self-similarity is a finite empirical branch with theorem-level recurrence statistics;
+13. perspectival self-organization represents engagement as configuration membership;
+14. information projections such as Shannon entropy are many-to-one and do not replace response-presheaf role identity.
+
+*Proof.* Items 1--10 are Theorem P.16b.1.3, Theorem P.16b.2.4, Theorem P.16b.3.2, Theorem P.16b.4.2, Theorem P.16b.5.2, Theorem P.16b.6.2, Theorem P.16b.6.6, Theorem P.16b.7.4, Theorem P.16b.8.5, and Theorem P.16b.10.6 respectively. Item 11 is Theorem P.16b.12.2 for provenance, Theorem P.16b.12.4 for conservative fusion, Theorem P.16b.12.6 for finite process typing, Theorems P.16b.12.8 and P.16b.12.10 for perspective and operational qualia metrics, and Theorems P.16b.5.2, P.16b.12.12, and P.16b.12.13 for semantic holonomy and obstruction separation. Item 12 is Theorem P.16b.13.4 and Theorem P.16b.13.5, item 13 is Theorem P.16b.14.5, and item 14 is Theorem P.16b.16.4. ∎
+
+---
+
+
+### P.16b.12 Provenance, Fusion, Metrics, and Semantic Obstruction
+
+**Definition P.16b.12.1 (Proof provenance support).**
+
+In the labeled proof system of Definition P.16b.2.6, a seed label is a tuple
+$$
+\beta=(p,s,u,a,c)
+$$
+with
+$$
+(s,u,a,c)\in R_p^\circ.
+$$
+A provenance support for a derivation of
+$$
+E_p(s,u,a,c)
+$$
+is the finite set of base-kernel seed labels used as leaves of the derivation tree. Reflexivity instances have empty provenance support.
+
+**Theorem P.16b.12.2 (Strict finite provenance).**
+
+Every derivable labeled judgment in the finite proof system of Definition P.16b.2.6 has finite provenance support. A non-reflexive judgment with no seed in any derivation is not derivable except when it is equal to a judgment already forced by reflexivity.
+
+*Proof.* Induct on proof height. A Base proof uses one seed. A Refl proof uses no seed. A Trans proof uses the finite union of the two premise supports. A CPA proof uses the finite union of the local and imported premise supports. Finite unions of finite sets are finite. Conversely, the proof rules have only Base, Refl, Trans, and CPA introductions. If a non-reflexive judgment is introduced without any seed support, then all contributing leaves are reflexivity instances. Transitivity or CPA compositions of only reflexive premises cannot introduce a new non-reflexive relation; they return a reflexive or already identical relation. ∎
+
+**Definition P.16b.12.3 (Conservative fusion of perspectives).**
+
+Given two validating perspectives $p,q\in P$, their conservative fusion $p\boxtimes q$ is a validating perspective whose base kernel is
+$$
+R_{p\boxtimes q}^{\circ}=R_p^{\circ}\cap R_q^{\circ},
+$$
+and whose CPA guard is
+$$
+\mathrm{CPA}_{p\boxtimes q}(r,u)=1
+\quad\Longleftrightarrow\quad
+\mathrm{CPA}_{p}(r,u)=1
+\text{ and }
+\mathrm{CPA}_{q}(r,u)=1.
+$$
+
+**Theorem P.16b.12.4 (Fusion is conservative).**
+
+For all labeled values $a(s),c(u)$,
+$$
+a(s)\preceq_{p\boxtimes q} c(u)
+\quad\Longrightarrow\quad
+a(s)\preceq_p c(u)
+\text{ and }
+a(s)\preceq_q c(u).
+$$
+
+*Proof.* The fused base kernel is contained in each parent base kernel, and the fused CPA guard is true only when both parent guards are true. Reflexivity is shared by all perspectives. If a fused judgment is derived by Trans, the induction hypothesis puts both premises in each parent, and the parent Trans rule gives the same conclusion. If it is derived by CPA, the imported premise and the guard are valid in each parent, so the same CPA conclusion is derivable in each parent. Induction on proof height proves the claim. ∎
+
+**Definition P.16b.12.5 (Bounded Prop/Proc evaluation system).**
+
+A bounded evaluation system consists of a finite expression set $\mathcal E$, a finite state set $X_E$ for each expression $E$, an evaluation transition map
+$$
+T_E:X_E\to X_E,
+$$
+and an output map
+$$
+o_E:X_E\to\{0,1,\bot\},
+$$
+where $\bot$ denotes no settled Boolean value.
+
+Expression $E$ is Prop-typed when every trajectory of $T_E$ eventually reaches a fixed point with the same Boolean output in $\{0,1\}$. It is Proc-typed when this condition fails.
+
+**Theorem P.16b.12.6 (Finite Prop/Proc criterion).**
+
+In a bounded evaluation system, $E$ is Prop-typed if and only if every directed cycle of $T_E$ reachable from $X_E$ is a fixed point and all reachable fixed points have the same Boolean output in $\{0,1\}$.
+
+*Proof.* A map on a finite set eventually enters a directed cycle. If every reachable cycle is a fixed point and all reachable fixed points have the same Boolean output, every trajectory settles to that value, so $E$ is Prop-typed. Conversely, if $E$ is Prop-typed, every trajectory settles to one Boolean value. A reachable nontrivial cycle would prevent settlement, and two fixed points with different Boolean outputs would make the result depend on the initial state. Hence the stated condition is necessary. ∎
+
+**Definition P.16b.12.7 (Perspective discrepancy pseudometric).**
+
+Let $P$ be a perspective set and let $\mathcal A$ be a nonempty finite retained atom set. For perspectives $p,q\in P$, define
+$$
+d_{\mathcal A}(p,q)
+=
+\frac1{|\mathcal A|}
+\sum_{a\in\mathcal A}
+|v_p(a)-v_q(a)|,
+$$
+whenever the retained valuations $v_p(a),v_q(a)$ are real-valued or embedded in a fixed finite real code.
+
+**Theorem P.16b.12.8 (Perspective discrepancy is a pseudometric).**
+
+The function $d_{\mathcal A}$ is nonnegative, symmetric, satisfies the triangle inequality, and may identify distinct perspectives. After quotienting by $d_{\mathcal A}=0$, it becomes a metric.
+
+*Proof.* Nonnegativity and symmetry follow from absolute value. For every retained atom,
+$$
+|v_p(a)-v_r(a)|
+\le
+|v_p(a)-v_q(a)|+|v_q(a)-v_r(a)|.
+$$
+Summing over $a\in\mathcal A$ and dividing by $|\mathcal A|$ gives the triangle inequality. Distinct perspectives may agree on all retained atoms, so the function can vanish on distinct points. The zero-distance quotient is therefore a metric. ∎
+
+**Definition P.16b.12.9 (Operational qualia metric).**
+
+On the self-organization branch of P.16b.14, let $Q_S$ be the extended configuration space and let $\mathcal T_S$ be a finite retained test family of response probes. Define
+$$
+d_Q(q,q')
+=
+\sum_{T\in\mathcal T_S}w_T
+D_T\bigl(
+\mathcal R_q^S(T),
+\mathcal R_{q'}^S(T)
+\bigr),
+$$
+where $w_T>0$ and each $D_T$ is a metric on the finite response space of probe $T$.
+
+**Theorem P.16b.12.10 (Qualia metric on the operational quotient).**
+
+The function $d_Q$ is a pseudometric on $Q_S$ and becomes a metric on the quotient that identifies configurations with identical retained response profiles across $\mathcal T_S$.
+
+*Proof.* Each $D_T$ is nonnegative, symmetric, and satisfies the triangle inequality. A positive weighted finite sum of pseudometrics has the same properties. It may vanish on configurations that no retained probe distinguishes, so it is a pseudometric. The zero-distance quotient is a metric. ∎
+
+**Definition P.16b.12.11 (Higher-order semantic obstruction).**
+
+In a finite signed logical atlas, a higher-order compatibility obstruction occurs for an atom $a$ when a cycle $\gamma$ has
+$$
+H_\gamma(a)=-1.
+$$
+
+**Theorem P.16b.12.12 (Higher-order semantic obstruction).**
+
+If a finite signed atlas contains an atom $a$ and a cycle $\gamma$ with $H_\gamma(a)=-1$, then no global Boolean section assigning a nonzero sign to $a$ exists on that connected component.
+
+*Proof.* Transporting a putative global value $v(a)\in\{+1,-1\}$ around $\gamma$ multiplies it by $H_\gamma(a)=-1$. Compatibility would require $v(a)=-v(a)$, impossible for a nonzero sign. ∎
+
+**Theorem P.16b.12.13 (Meta-synthesis of semantic geometry).**
+
+On the combined P.16b.1, P.16b.2, P.16b.4, P.16b.5, P.16b.6, and P.16b.12 branches, semantic obstruction has three distinct theorem-level forms:
+
+1. role-collapse obstruction, detected by Theorem P.16b.1.3;
+2. process-typing obstruction, detected by Theorem P.16b.12.6;
+3. holonomy obstruction, detected by Theorem P.16b.5.2 and Theorem P.16b.12.12.
+
+These obstructions are compatible and nonredundant: removing one does not remove the other two.
+
+*Proof.* Role-collapse obstruction is an algebraic fixed-point failure for a reflexive value equation. Process-typing obstruction is a dynamical failure of finite evaluation convergence. Holonomy obstruction is a failure of global section gluing around a signed cycle. Each construction has examples in which it appears while the other two are absent: a collapsed Boolean Liar equation for role collapse, a finite two-cycle with no settled output for process typing, and a signed atlas with local Boolean valuations but nontrivial holonomy for global obstruction. Therefore the obstruction types are distinct. ∎
+
+---
+
+### P.16b.13 Statistical Self-Similarity in Knowledge Organization
+
+#### P.16b.13.0 Statistical Self-Similarity Standing
+
+This section states the Statistical Self-Similarity Hypothesis for finite self-referential predictive systems:
+$$
+\text{PCE compression}+\text{SPAP self-reference discipline}+\text{shape recognition/decompression}
+\Longrightarrow
+\text{statistical recurrence of relational form across abstraction levels}.
+$$
+The hypothesis is an empirical branch. The finite statistics and synthetic pipeline are theorem-level constructions; the claim that natural knowledge corpora exhibit the pattern remains open until tested on real corpora.
+
+**Definition P.16b.13.1 (Abstraction hierarchy).**
+
+Let $S$ be a knowledge system with retained content class $\mathsf{Cont}_S$. An abstraction hierarchy is a finite sequence
+$$
+\mathcal H_S=\bigl(\mathsf{Cont}_S^{[0]},\mathsf{Cont}_S^{[1]},\dots,\mathsf{Cont}_S^{[L]}\bigr),
+$$
+where $\mathsf{Cont}_S^{[\ell]}$ is the retained content at abstraction level $\ell$.
+
+**Definition P.16b.13.2 (Relational carrier and shape signature).**
+
+For each content item
+$$
+c\in\mathsf{Cont}_S^{[\ell]},
+$$
+let $G(c)$ be its finite relational carrier. In applications, $G(c)$ may be a typed protocol subdiagram, response-presheaf restriction, theorem-dependency graph, semantic network, proof graph, program-call graph, or other finite relation object.
+
+A shape signature is a finite map
+$$
+\mathrm{Sig}:G(c)\mapsto \mathbb R^m
+$$
+whose coordinates are invariant or approximately invariant under the selected relational equivalences.
+
+**Definition P.16b.13.3 (Level distribution and adjacent recurrence).**
+
+Let $\mu_\ell$ be the empirical distribution of shape signatures at level $\ell$. Define adjacent recurrence by
+$$
+\rho(\ell,\ell+1)
+=
+1-
+\frac{D_{\mathrm{JS}}(\mu_\ell,\mu_{\ell+1})}{\log2},
+$$
+where $D_{\mathrm{JS}}$ is Jensen-Shannon divergence. Then
+$$
+0\le \rho(\ell,\ell+1)\le1.
+$$
+
+**Theorem P.16b.13.4 (Recurrence statistic bounds).**
+
+For finite empirical level distributions,
+$$
+0\le\rho(\ell,\ell+1)\le1,
+$$
+with $\rho=1$ iff $\mu_\ell=\mu_{\ell+1}$ and $\rho=0$ when the Jensen-Shannon divergence is maximal.
+
+*Proof.* Jensen-Shannon divergence between two discrete probability distributions satisfies
+$$
+0\le D_{\mathrm{JS}}(\mu,\nu)\le \log2,
+$$
+and equals $0$ iff $\mu=\nu$. Substitution into the definition of $\rho$ gives the result. ∎
+
+**Theorem P.16b.13.5 (Recurrence-compression link under grammar coding).**
+
+Suppose a corpus $\mathcal H$ is generated by a finite shape grammar $\mathcal G$, and adjacent levels share reusable shape rules. Let $K_{\mathrm{sep}}$ be the description length when each level encodes its rules independently, and let $K_{\mathrm{shared}}$ be the description length when shared rules are encoded once and referenced across levels. If the eliminated duplicated rule-description cost is $K_{\mathrm{share}}>0$ and the reference overhead is $K_{\mathrm{ref}}$, then
+$$
+K_{\mathrm{shared}}\le K_{\mathrm{sep}}-K_{\mathrm{share}}+K_{\mathrm{ref}}.
+$$
+If
+$$
+K_{\mathrm{share}}>K_{\mathrm{ref}},
+$$
+then
+$$
+K_{\mathrm{shared}}<K_{\mathrm{sep}}.
+$$
+
+*Proof.* Independent encoding pays for every shared rule separately at each level. Shared encoding pays once for the shared rule and then pays references. The difference is the eliminated duplicated rule cost minus the reference overhead. If the eliminated cost is larger, the shared encoding is strictly shorter. ∎
+
+**Corollary P.16b.13.6 (Relation to creative decompression).**
+
+If statistical self-similarity holds in a natural corpus, then recurring shapes are not arbitrary analogies. They are candidate reusable structures produced by compression and stabilized by self-reference discipline. Section P.16b.10 then explains what a system does after recognizing such a shape: it decompresses structural content and carries annotations only as hypotheses.
+
+*Proof.* P.16b.13 supplies the recurrence source; P.16b.10 supplies the transfer rule and status separation between structural transfer and annotation transfer. ∎
+
+#### P.16b.13.7 Empirical status
+
+The synthetic-pipeline branch validates the measurement procedure on recursively generated synthetic corpora: recursive corpora show stronger adjacent-level recurrence than size-matched random null corpora and a negative recurrence-compression association. This does not prove the natural-corpus claim. Natural-corpus testing requires stronger null models, including density-matched, degree-preserving, motif-preserving, block-model, and level-permutation nulls.
+
+---
+
+### P.16b.14 Perspectival Self-Organization and Non-Separation of Organism and Qualia Space
+
+#### P.16b.14.0 Self-Organization Standing
+
+This section formalizes the operational claim that a perspectival organism is not an external observer moving through a qualia space. In the PU operational domain, the organism is the self-organizing dynamical realization of its qualia space.
+
+The precise carrier is
+$$
+\mathfrak O_S=(Q_S,d_{Q,S},o_S,\delta_S,\gamma_S,\mathcal A_S),
+$$
+where $Q_S$ is the possible qualia-configuration space, $d_{Q,S}$ is its metric, $o_S$ is the cogito origin, $\delta_S$ is the transition/update structure, $\gamma_S:T\to Q_S$ is the realized trajectory, and $\mathcal A_S$ records active response-presheaf configurations.
+
+**Definition P.16b.14.1 (Basic qualia space).**
+
+The basic qualia space of a perspectival knowledge system $S$ is
+$$
+Q_S^0=V_{C,S}\times\overline{\mathcal P}_S,
+$$
+where $V_{C,S}$ is the retained content space and $\overline{\mathcal P}_S$ is the quotient of evidential perspectives by zero $L^1$ distance. A basic qualia token is
+$$
+x=(v,[p])\in Q_S^0.
+$$
+The cogito origin is
+$$
+o_S^0=(v^*,[p^*]),
+$$
+where $p^*$ is the least fixed point of the self-evidence closure operator, $[p^*]$ is its zero-distance quotient class, and $v^*$ is the baseline cogito-associated content.
+
+**Definition P.16b.14.2 (Extended organismic configuration space).**
+
+The extended configuration space is
+$$
+Q_S=Q_S^0\times\mathsf{Lev}_S\times\mathsf{Act}_S,
+$$
+where $\mathsf{Lev}_S$ is the set of available abstraction-level or attention modes and $\mathsf{Act}_S$ is the space of active response-presheaf configurations. A configuration is
+$$
+q=(v,p,\ell,A),
+$$
+where $v$ is foregrounded content, $p$ is the realized perspective, $\ell$ is the active abstraction level, and $A$ records active subdiagrams, response presheaves, protocols, and internal monitoring structures.
+
+**Definition P.16b.14.3 (Perspectival organism).**
+
+A perspectival organism is the structure
+$$
+\mathfrak O_S=(Q_S,d_{Q,S},o_S,\delta_S,\gamma_S,\mathcal A_S),
+$$
+with realized state
+$$
+q_t=\gamma_S(t).
+$$
+The phrase “the organism is its qualia space” means that the organism is the self-organizing dynamical realization of $Q_S$, not the bare set $Q_S$ alone.
+
+**Definition P.16b.14.4 (Engagement region).**
+
+For a content item $c\in\mathsf{Cont}_S$, let $\mathcal R_c^S$ be its operational response presheaf. The engagement region of $c$ is
+$$
+\mathrm{Eng}_S(c)=
+\{q\in Q_S:\mathcal A_S(q)\text{ contains a subpresheaf naturally isomorphic to }\mathcal R_c^S\}.
+$$
+Thus $S$ engages $c$ at time $t$ iff
+$$
+q_t\in\mathrm{Eng}_S(c).
+$$
+
+**Theorem P.16b.14.5 (Non-separation representation).**
+
+On the self-organization branch, content engagement is not represented as an external relation between a subject and an object. It is represented as membership of the current organismic configuration in an engagement region:
+$$
+S\text{ engages }c\text{ at }t
+\quad\Longleftrightarrow\quad
+q_t\in\mathrm{Eng}_S(c).
+$$
+
+*Proof.* By Definition P.16b.14.4, $\mathrm{Eng}_S(c)$ is exactly the set of configurations in which the response role of $c$ is active. Since the realized organismic state at time $t$ is $q_t=\gamma_S(t)$, engagement is precisely $q_t\in\mathrm{Eng}_S(c)$. No external subject-object relation is required in the formal carrier. ∎
+
+**Corollary P.16b.14.6 (Self-observation is internal).**
+
+Self-observation is an internal subconfiguration or monitoring channel inside $\mathcal A_S(q_t)$, not a perspective-free standpoint outside $Q_S$.
+
+*Proof.* Self-observation is engagement with content whose response presheaf concerns the system's own configuration. By Theorem P.16b.14.5, engagement is realized internally as membership in an engagement region. ∎
+
+**Definition P.16b.14.7 (Shape-coherent reconfiguration).**
+
+A reconfiguration
+$$
+q_0\leadsto q_1
+$$
+is shape-coherent when there exists a recognized correspondence
+$$
+\varphi:A(q_0)\dashrightarrow A(q_1)
+$$
+between active subdiagrams or response-presheaf regions, and the registration of $\varphi$ is included in the active configuration $\mathcal A_S(q_1)$.
+
+**Theorem P.16b.14.8 (Recognition as self-reconfiguration).**
+
+On the recognition branch, recognizing a shape is a shape-coherent self-reconfiguration:
+$$
+q_0\leadsto q_1,
+\qquad
+\varphi:A(q_0)\dashrightarrow A(q_1),
+\qquad
+\mathcal R_{\mathrm{reg}(\varphi)}^S\hookrightarrow \mathcal A_S(q_1).
+$$
+
+*Proof.* Section P.16b.9 identifies shape recognition with response-presheaf or subdiagram correspondence. In the organismic carrier, active recognitions are elements of the current active response configuration. Therefore recognition occurs exactly when the configuration changes into one containing the registered correspondence. ∎
+
+**Theorem P.16b.14.9 (Cogito radial elaboration).**
+
+Let $o_S$ be the cogito origin in $Q_S$, and define
+$$
+\rho_S(q)=d_{Q,S}(q,o_S).
+$$
+Then $\rho_S$ is 1-Lipschitz:
+$$
+|\rho_S(q)-\rho_S(q')|\le d_{Q,S}(q,q').
+$$
+If the cogito-origin separating branch is assumed, $o_S$ is the unique zero-radial configuration.
+
+*Proof.* The Lipschitz property is the triangle inequality for distance from a fixed point. Uniqueness of the zero follows from the separating-origin condition: $d_{Q,S}(q,o_S)=0$ implies equality in the metric quotient, hence operational equivalence to the cogito origin. ∎
+
+**Theorem P.16b.14.10 (Operational qualia are configurations).**
+
+Within PU's operational domain, qualia are active configurations of $Q_S$ as registered by the organismic response structure. They are not additional decorations attached to configurations.
+
+*Proof.* A reportable or behaviorally active phenomenal distinction is operationally real only insofar as it changes response presheaves, active subdiagrams, or transitions. These are components of $\mathcal A_S(q)$ and $\delta_S$ on $Q_S$. Therefore the operational quale is represented by the configuration and its active response structure. The theorem does not assert that non-operational phenomenal character is exhausted by this representation. ∎
+
+**Remark P.16b.14.10a (Operational Representation, Not Metaphysical Reduction).** Theorem P.16b.14.10 is an operational-representation theorem inside the PU operational domain. It identifies what counts as an *operational* quale — namely, an active configuration registered by the organismic response structure — and asserts only that operational qualia are not extra decorations on top of such configurations. It does not assert that phenomenal character as such is exhausted by operational configurations, nor that non-operational phenomenal content is impossible. Equivalently, the theorem is an internal-vocabulary identity for the operational sense of "quale" and is silent on metaphysical reduction claims about consciousness. Theorems P.16b.14.5, P.16b.14.8, and P.16b.14.11 inherit the same operational scope.
+
+**Theorem P.16b.14.11 (Creativity as reconfiguration plus export).**
+
+On the creativity branch, a creative episode is a shape-coherent self-reconfiguration followed by decompression and export:
+$$
+q_0\leadsto q_1
+\quad\Longrightarrow\quad
+\operatorname{Decomp}_\varphi(A\to B)
+\quad\Longrightarrow\quad
+\text{communicable output}.
+$$
+
+*Proof.* Theorem P.16b.14.8 gives recognition as self-reconfiguration. Section P.16b.10 gives decompression along the recognized shape, with theorem-level structural transfer and hypothesis-level annotation transfer. Export is the encoding of the decompressed content into a communicable response channel. ∎
+
+---
+
+### P.16b.15 Conditional fractal-like organization of the psyche
+
+**Definition P.16b.15.1 (Fractal-like organization).**
+
+A perspectival organism is fractal-like in the operational sense when its output traces or internal relational carriers exhibit statistically significant recurrence of relational form across abstraction levels, measured by the recurrence statistic of P.16b.13 against appropriate null models.
+
+**Proposition P.16b.15.2 (Conditional fractal-like organization).**
+
+If the Statistical Self-Similarity Hypothesis holds for the natural output traces of a perspectival organism $\mathfrak O_S$, then the psyche of $S$ is fractal-like in the operational sense of Definition P.16b.15.1.
+
+*Proof.* By P.16b.14, the operational psyche is represented by trajectories and active configurations in $Q_S$. By P.16b.13, statistical self-similarity is recurrence of relational shape across abstraction levels in those traces. If the hypothesis holds for the natural traces of $\mathfrak O_S$, then those traces satisfy the definition of fractal-like organization. ∎
+
+**Remark P.16b.15.3 (Boundary).**
+
+This is not a claim of exact mathematical fractality, scale invariance at all resolutions, or a universal numerical fractal dimension. It is a conditional claim of statistically detectable recurrence of relational form across abstraction levels.
+
+---
+
+
+### P.16b.16 Information Projections and Many-to-One Boundaries
+
+**Definition P.16b.16.1 (Finite profile projections).**
+
+Let
+$$
+\mathcal P_S(c)=(\Delta Q_S(c),\mu_S(c),\sigma_S(c))
+$$
+be a finite perspectival coordinate chart on the operational quotient $\mathcal F_S$ where defined.
+
+A Shannon projection is a branch map
+$$
+\rho_H(\Delta Q,\mu,\sigma)=\Delta Q
+$$
+on a pure-information branch where $\Delta Q$ is identified with the Shannon entropy coordinate. A Kolmogorov-style projection is a branch map
+$$
+\rho_K(\Delta Q,\mu,\sigma)=K_S(c)
+$$
+when the content is represented by a finite program or code relative to $S$'s retained apparatus.
+
+**Theorem P.16b.16.2 (Shannon recovery on the pure-information branch).**
+
+On a branch where content $c$ is purely informational and the finite chart is normalized by
+$$
+\Delta Q_S(c)=H(c),
+\qquad
+\mu_S(c)=0,
+\qquad
+\sigma_S(c)=0,
+$$
+the Shannon projection recovers Shannon entropy:
+$$
+\rho_H(\mathcal P_S(c))=H(c).
+$$
+
+*Proof.* Substitute the branch normalization into Definition P.16b.16.1:
+$$
+\rho_H(\mathcal P_S(c))=\rho_H(H(c),0,0)=H(c).
+$$
+∎
+
+**Corollary P.16b.16.3 (Shannon projection is many-to-one).**
+
+The Shannon projection does not classify full perspectival role. Distinct profiles
+$$
+(\Delta Q,\mu_1,\sigma_1)
+\ne
+(\Delta Q,\mu_2,\sigma_2)
+$$
+with the same first coordinate have the same Shannon projection.
+
+*Proof.* Definition P.16b.16.1 ignores $\mu$ and $\sigma$ in $\rho_H$. Therefore all profiles with the same $\Delta Q$ have the same Shannon projection, even when their full operational roles differ. ∎
+
+**Theorem P.16b.16.4 (Information projections do not replace role-position equivalence).**
+
+Equality of Shannon or Kolmogorov-style projections does not imply equality in $\mathcal F_S$ unless a separating projection branch is supplied.
+
+*Proof.* By Theorem P.16b.7.4, equality in $\mathcal F_S$ is equality of operational response-presheaf role. By Corollary P.16b.7.5, finite coordinate equality is weaker than role-position equality unless the chart is separating. Since $\rho_H$ and $\rho_K$ discard response-presheaf data on their ordinary branches, equality of their values does not force equality of operational role without a separating hypothesis. ∎
+
+**Corollary P.16b.16.5 (Cogito-zero boundary for profile costs).**
+
+The zero of a profile cost identifies the cogito only on the separating-origin branch of Definition P.16b.6.5. Without that branch, zero cost identifies only a zero value in the chosen finite chart.
+
+*Proof.* This is Theorem P.16b.6.6 and Remark P.16b.6.7 applied to information-projection costs. ∎
+
+---
+
+### P.16b.17 Consolidated Status Table
+
+| Result | Statement | Status |
+|:---|:---|:---|
+| Theorem P.16b.1.3 | Liar contradiction requires role collapse | theorem-level semantic algebra |
+| Theorem P.16b.2.4 | Least perspective closure exists | theorem-level lattice theorem |
+| Theorem P.16b.2.7 | Labeled proof system is sound and complete | theorem-level |
+| Theorem P.16b.3.2 | Finite-support no-explosion | theorem-level on finite-support branch |
+| Theorem P.16b.4.2 | Prop-typed expressions are locally classical | theorem-level on value-compositional Prop branch |
+| Theorem P.16b.5.2 | Global section iff holonomy is trivial and overlaps are compatible | theorem-level finite-atlas theorem |
+| Theorem P.16b.6.2 | Cogito is least self-evidence fixed point | theorem-level on cogito-evidence branch |
+| Theorem P.16b.6.6 | Cogito is unique zero only on separating-origin branch | theorem-level branch theorem |
+| Theorem P.16b.7.4 | Predictive role-position equivalence | theorem-level quotient theorem |
+| Theorem P.16b.8.5 | Description-arity equals three for the core semantic ledger | theorem-level on typed non-collapse and Primitive-Lens Independence branch |
+| Theorem P.16b.9.2 | Over-budget task families force compression | theorem-level finite-resource theorem |
+| Theorem P.16b.10.3 | Structural decompression is sound | theorem-level |
+| Theorem P.16b.10.4 | Annotation transfer is hypothesis generation | theorem-level status separation |
+| Theorem P.16b.10.6 | Creativity algorithm has theorem/error/hypothesis output statuses | theorem-level |
+| Theorem P.16b.12.2 | Derivable perspective judgments have finite provenance | theorem-level |
+| Theorem P.16b.12.4 | Conjunctive fusion is conservative | theorem-level |
+| Theorem P.16b.12.6 | Finite Prop/Proc classification criterion | theorem-level on bounded-evaluation branch |
+| Theorem P.16b.12.8 | Perspective discrepancy is a pseudometric | theorem-level |
+| Theorem P.16b.12.10 | Operational qualia metric descends to a metric quotient | theorem-level on retained-test branch |
+| Theorem P.16b.12.12 | Nontrivial signed holonomy obstructs a global Boolean section | theorem-level finite-atlas theorem |
+| Theorem P.16b.12.13 | Role, process, and holonomy obstructions are distinct | theorem-level branch synthesis |
+| Theorem P.16b.13.4 | Adjacent recurrence statistic is bounded by Jensen-Shannon divergence | theorem-level finite statistic |
+| Theorem P.16b.13.5 | Shared grammar rules reduce description length when duplicated rule cost exceeds reference overhead | theorem-level coding result |
+| Theorem P.16b.14.5 | Engagement is internal configuration membership | theorem-level on self-organization branch |
+| Theorem P.16b.14.8 | Recognition is shape-coherent self-reconfiguration | branch-level representation theorem |
+| Theorem P.16b.14.9 | Cogito radial coordinate is 1-Lipschitz and unique on separating branch | theorem-level metric result |
+| Theorem P.16b.14.10 | Operational qualia are active configurations | branch-level boundary theorem |
+| Theorem P.16b.14.11 | Creativity is reconfiguration plus decompression/export | branch-level integration theorem |
+| Theorem P.16b.16.2 | Shannon projection recovers entropy on pure-information branch | theorem-level branch theorem |
+| Corollary P.16b.16.3 | Shannon projection is many-to-one | theorem-level boundary |
+| Theorem P.16b.16.4 | Information projections do not replace role-position equivalence | theorem-level boundary |
+| Corollary P.16b.16.5 | Cogito-zero boundary requires the separating-origin branch | theorem-level boundary |
+| Proposition P.16b.15.2 | Fractal-like psyche claim follows conditionally from SSSH on natural traces | conditional empirical branch |
+| Conjecture P.16b.10.7 | Shape recognition plus decompression suffices for intuitive structural creativity | open conjecture |
+
 ## P.17 Conclusion
 
 This appendix has established the philosophical foundations of the Predictive Universe, arguing that its core axioms are necessary consequences of the only indubitable starting point: conscious, predictive awareness. The *Cogito*, reinterpreted as fundamentally predictive, grounds a framework where physical law follows from logical necessity under thermodynamic constraint.
@@ -7766,6 +9203,7 @@ The Principle of Physical Instantiation (PPI) bridges abstract logical necessiti
 * **General Relativity** emerges as geometry in equilibrium with predictive activity
 * **Vacuum Symmetry** emerges as the automorphism group of the PCE-optimal vacuum
 * **Agency** (single-system, theorem-level) emerges as a trajectory-shaping effect of the cost potential $U_S$ induced by the prohibition set $\mathcal{L}^{\neg}_S$ — the structural complement of the SPAP-admissible region — without requiring any positive carrier substance; coupled-system **unauthored coordination** follows in bias form (Proposition P.16.2, Corollary P.16.1), with the stronger "no coordinator required" reading conditional on Hypothesis 14.5.8 (Section P.16)
+* **Semantic perspective discipline** emerges as a conservative theorem-level package for role-indexed self-reference, perspective-indexed closure, semantic holonomy, cogito-radius geometry, predictive role-position identity, description-arity, and creative decompression on their named branches; it adds no physical primitive and changes no physical branch without an explicit response-presheaf, cost-functional, or certificate change (Section P.16b)
 
 The capstone result is the derivation of the Monster group $\mathbb{M}$ as vacuum symmetry (Section P.13). The chain $\varepsilon_0=\ln2 \to a = 2 \to M = 24 \to \Lambda_{24} \to V^\natural \to \mathbb{M}$ shows that the largest sporadic simple group is the necessary symmetry of optimal prediction. This resolves Monstrous Moonshine: the connections between the Monster, modular forms, and vertex algebras reflect convergence of mathematical extremality and physical optimality under PCE.
 

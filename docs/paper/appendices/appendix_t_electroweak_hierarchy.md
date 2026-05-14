@@ -1478,6 +1478,49 @@ $$
 
 *Proof.* On the weak-left projection branch, Definition T.3a fixes the rank-6 projection $\Pi_L:\mathbb{R}^{12}\to\mathbb{R}^6$ identifying $k/2 = 6$ independent information modes that couple to $SU(2)_L$, with $\Pi_L\Pi_L^T = I_6$ confirming six independent directions. On the row-pair branch (Theorem T.8), each such direction supports an independent $SU(2)_L$ doublet rotation via the $\mathbb{R}^3 \otimes \mathbb{R}^2$ identification, so each corresponds to one left-chiral SU(2) link. Therefore on the combined branch the electroweak sector contains exactly 6 independent left-chiral SU(2) links, matching the inactive dimension $b = 6$ used in the alignment-counting definition of $N_0$ (Definition T.5a). ∎
 
+The $SU(2)_L$ algebra used by these six left-chiral links is the rank-2 weak-block algebra selected by Theorem G.8.4b and locally reflected from the active Pauli carrier by Theorem G.8.4c.0c. The link count remains $b=6$, while the Pauli algebra on each weak link is compatible with any local finite-response frame identification between the active rank-2 carrier and the capacity-selected weak rank-2 block.
+
+**Definition T.14.2a (Structural Mass-Cost Ledger).** On any certified mass branch in which a fermion mass has multiplicative form
+$$
+m_f(\mu)=v\,Z_f(\mu)\prod_{\alpha\in\mathcal A}M_\alpha(f),
+$$
+define the structural mass-cost ledger
+$$
+\Omega_{\mathrm{mass}}(f;\mu)
+:=-\log\frac{m_f(\mu)}{v}
+=-\log Z_f(\mu)-\sum_{\alpha\in\mathcal A}\log M_\alpha(f).
+$$
+Equivalently, if $M_\alpha(f)=e^{-\Omega_\alpha(f)}$, then
+$$
+\Omega_{\mathrm{mass}}(f;\mu)
+=\Omega_{\mathrm{RG}}(f;\mu)+\sum_{\alpha\in\mathcal A}\Omega_\alpha(f).
+$$
+
+**Proposition T.14.2b (Universal/Sector-Specific Separation of the Mass-Cost Ledger).** On a certified mass branch with running factor $Z_f(\mu)$ that depends only on the retained sector signature $\Gamma(f)$ of $f$ at scale $\mu$ — where $\Gamma(f)$ is the retained running-data class encoding the full charge signature of $f$ under color, weak, and hypercharge (rather than membership in a single exclusive gauge sector) — and on certified factors $\{M_\alpha\}_{\alpha\in\mathcal A}$ partitioned as
+$$
+\mathcal A=\mathcal A_{\mathrm{univ}}\sqcup\mathcal A_{\mathrm{sect}}\sqcup\mathcal A_{\mathrm{gen}},
+$$
+where $\mathcal A_{\mathrm{univ}}$ holds factors common to all fermions on the branch, $\mathcal A_{\mathrm{sect}}$ holds factors that depend only on $\Gamma(f)$, and $\mathcal A_{\mathrm{gen}}$ holds factors that depend only on generation index $g(f)\in\{1,2,3\}$, the mass-cost ledger separates as
+$$
+\Omega_{\mathrm{mass}}(f;\mu)
+=
+\Omega_{\mathrm{RG}}(\Gamma(f);\mu)
++\Omega_{\mathrm{univ}}
++\Omega_{\mathrm{sect}}(\Gamma(f))
++\Omega_{\mathrm{gen}}(g(f)).
+$$
+Consequently, for fermions $f,f'$ sharing the same sector signature $\Gamma(f)=\Gamma(f')$ at the same scale,
+$$
+\Omega_{\mathrm{mass}}(f;\mu)-\Omega_{\mathrm{mass}}(f';\mu)
+=
+\Omega_{\mathrm{gen}}(g(f))-\Omega_{\mathrm{gen}}(g(f')),
+$$
+and the running and sector contributions cancel from same-signature ratios.
+
+*Proof.* Substitute the partitioned product into $\Omega_{\mathrm{mass}}=-\log(m_f/v)$. The logarithm of a product is the sum of logarithms, so the three certified groups add. The RG factor depends on $\Gamma(f)$ by hypothesis. Taking the difference between entries with the same sector signature removes the running, universal, and sector summands and leaves the generation summand. ∎
+
+This ledger introduces no new mass formula. It reorganizes certified root, holonomy, sector, generation, and running factors into one additive accounting on which same-sector comparison isolates generation cost. A measured mass or mixing datum falsifies a certified mass branch only after the branch's stated running, threshold, and tolerance conventions are applied.
+
 ### T.14.3 Canonical Field and Total Potential
 
 **Theorem T.19** (Canonical Higgs Field). Define:

@@ -82,6 +82,16 @@ The detailed interaction dependence of the conditional kernel $G_{persp}(s' | s,
     G_{persp}(s' | s, k, N_{proj}, \Delta t \to \tau_{meas}) \longrightarrow \delta_{\Sigma}(s', |k\rangle_s) \quad \text{(M.4)}
     $$
     where $\delta_{\Sigma}$ is the Dirac delta distribution on the manifold $\Sigma$ centered at the perspective corresponding to the state vector $|k\rangle_s$.
+
+**Remark M.3.3a (Sharp-Projective Conditional Kernel and No Born Double Counting).** On the sharp projective perspective branch, the ideal conditional perspective kernel is unique:
+$$
+G_{persp}(s'|s,k,N_{proj},\Delta t\to\tau_{meas})
+=
+\delta_\Sigma(s',s_k),
+$$
+where $\delta_\Sigma(\cdot,s_k)$ denotes the Dirac measure-valued (Dirac Markov) kernel on $\Sigma$ concentrated at the outcome perspective $s_k$, understood as a weak-limit measure rather than a pointwise density. It is the unique normalized Markov kernel supported at $s_k$. The Born factor remains outside $G_{persp}$ in Equation (M.2), because $G_{persp}$ is already conditional on the realized outcome $k$. Placing another Born factor inside $G_{persp}$ would double count actualization probability and violate the Markov normalization (M.3).
+
+**Remark M.3.3b (Kolmogorov Kernel Reading).** On the standard-Borel finite-protocol branches established in Section M.2 and Definition M.10.10a, the Born rule, perspective-update kernel, Gibbs stationary law, and large-deviation path law are all probability kernels on explicit measurable spaces. A finite protocol history has a unique joint law obtained by composing these kernels. Conditioning on positive-probability events uses the ordinary ratio formula; conditioning on zero-measure fibers requires regular conditional probabilities, which exist on these standard-Borel branches. The Born kernel is state-conditioned response probability, not a Haar pushforward of the perspective measure.
 *   **Finite Interaction Model (Diffusion/Relaxation):** For realistic physical interactions occurring over a finite time $\Delta t$ with finite strength, the perspective shift might be modeled as a diffusion or relaxation process on $\Sigma$, biased towards the outcome perspective $|k\rangle_s$. A potential model capturing this involves a diffusion term combined with a drift towards the target perspective $|k\rangle_s$:
     $$
     G_{persp}(s' | s, k, N, \Delta t) = \mathcal{N}^{-1} \exp\left(-\frac{d_{\Sigma}^2(s', |k\rangle_s)}{2\sigma^2(\Delta t, N)}\right) K(s', s, k, N) \quad \text{(M.5)}
@@ -1034,6 +1044,78 @@ $$
 $$
 which proves (M.10.10.3). For $p_k>0$, conditioning the endpoint kernel on the sector $A_k$ gives (M.10.10.4). The denominator is positive exactly on the starting perspectives from which the sector has nonzero conditional weight; outside that set the conditioning event has zero probability and does not affect any retained finite response. ∎
 
+**Theorem M.10.10d (Predictive Role-Position Equivalence).** Let $S$ be a knowledge system on the predictive-function-space branch. Let $\mathsf{Cont}_S$ be its retained content class, and let
+$$
+\mathcal R_c^S:\mathsf P_S^{op}\to\mathbf{Set}
+$$
+or, on probabilistic branches,
+$$
+\mathcal R_c^S:\mathsf P_S^{op}\to\mathbf{Prob}_{\mathrm{fin}}
+$$
+be the operational response presheaf of a content item $c$. Define operational equivalence by
+$$
+c_1\equiv_{\mathrm{op}}^S c_2
+\quad\Longleftrightarrow\quad
+\mathcal R_{c_1}^S\cong\mathcal R_{c_2}^S,
+$$
+and define the predictive-function space
+$$
+\mathcal F_S:=\mathsf{Cont}_S/\!\equiv_{\mathrm{op}}^S,
+\qquad
+\pi_S(c)=[c]_{\mathrm{op}}.
+$$
+Then the quantitative position $\pi_S(c)$ and the qualitative predictive role of $c$ are the same operational invariant:
+$$
+\pi_S(c)
+=
+[c]_{\mathrm{op}}
+=
+[\mathcal R_c^S]_{\cong}
+=
+\operatorname{Role}_S(c).
+$$
+Consequently,
+$$
+c_1\equiv_{\mathrm{op}}^S c_2
+\quad\Longleftrightarrow\quad
+\pi_S(c_1)=\pi_S(c_2),
+$$
+with equality taken modulo retained internal symmetry if an internal symmetry group acts on $\mathcal F_S$.
+
+The perspectival profile
+$$
+\mathcal P_S(c)=(\Delta Q_S(c),\mu_S(c),\sigma_S(c))
+$$
+is a finite coordinate chart on $\mathcal F_S$ wherever it is well-defined. It captures profile-visible role features but is not assumed to separate all operational distinctions. Therefore
+$$
+\mathcal P_S(c_1)=\mathcal P_S(c_2)
+$$
+does not imply $c_1\equiv_{\mathrm{op}}^S c_2$ unless a separating-profile branch is explicitly supplied.
+
+*Proof.* By definition, $\mathcal R_c^S$ records the finite responses produced by $S$ when content $c$ is engaged under retained protocols. Therefore the predictive role of $c$ is the natural-isomorphism class $[\mathcal R_c^S]_{\cong}$. The quotient defining $\mathcal F_S$ identifies exactly those contents whose response presheaves are naturally isomorphic, so
+$$
+\pi_S(c)=[c]_{\mathrm{op}}=[\mathcal R_c^S]_{\cong}.
+$$
+This proves the role-position identity. The equivalence between operational equivalence and equality of positions follows immediately from the quotient map. If an internal symmetry acts, physical equality is equality on the orbit quotient, giving the stated modulo-symmetry form.
+
+The profile $\mathcal P_S$ assigns finitely many coordinates to the position $\pi_S(c)$. A finite chart need not be injective on the whole quotient space, so equality of profile tuples is not equality of operational roles unless injectivity is supplied on the retained content class. ∎
+
+**Definition M.10.10d.1 (Separating-profile branch).** A profile is separating on a retained content class $\mathcal E\subseteq\mathsf{Cont}_S$ if
+$$
+\mathcal P_S(c_1)=\mathcal P_S(c_2)
+\quad\Longrightarrow\quad
+c_1\equiv_{\mathrm{op}}^S c_2
+$$
+for all $c_1,c_2\in\mathcal E$.
+
+**Corollary M.10.10d.2 (Profile overclaim guard).** On any class where the separating-profile condition has not been supplied, the tuple $(\Delta Q,\mu,\sigma)$ may be used as a finite chart but not as a complete invariant.
+
+*Proof.* This is the contrapositive of the injectivity requirement in Definition M.10.10d.1. ∎
+
+**Corollary M.10.10d.3 (Compatibility with shape recognition).** Exact shape identity remains typed subdiagram isomorphism plus response-presheaf isomorphism. Predictive role-position equivalence supplies the role-level quotient of that structure; it does not reduce shape identity to equality of the finite tuple $(\Delta Q,\mu,\sigma)$.
+
+*Proof.* Shape identity requires the subdiagram structure and the response-presheaf correspondence. Theorem M.10.10d identifies the role-level quotient represented by response presheaves. A coordinate chart on that quotient does not replace the full subdiagram and presheaf data. ∎
+
 **Table M.6.10.1: Perspectival information compared with existing information types.**
 
 | Property | Shannon | Fisher | Kolmogorov | Quantum | Integrated ($\Phi$) | Perspectival |
@@ -1061,6 +1143,7 @@ which proves (M.10.10.3). For $p_k>0$, conditioning the endpoint kernel on the s
 | Theorem M.10.8 | Predictability from above; finite-family screening; replay distinction | Thm M.10.5, M.10.3 |
 | Theorem M.10.9 | Irreducibility | Structural comparison |
 | Theorem M.10.10 | Entropic perspective transport | Compactness, strict convexity, Born descent |
+| Theorem M.10.10d | Predictive role-position equivalence and profile overclaim guard | Response-presheaf quotient, separating-profile branch |
 | Theorem M.6.10a.2 | Finite frame-change cost and covariance defect | Relative entropy, data processing, Pinsker bound |
 
 ### M.6.10a Finite Perspective-Frame Backreaction

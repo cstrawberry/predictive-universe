@@ -148,6 +148,18 @@ The minimizing exponent (Q.0.1b.1) is the variational statement that the least-c
 
 *Proof.* Appendix U and Appendix Y express their suppression exponents as finite action or action-derived complexity costs on specified retained branches. If the branch dynamics satisfies the path-space large-deviation hypothesis of Definition Q.0.1a, Theorem Q.0.1b says that the exponential suppression is the infimum of the same dimensionless action over paths with the corresponding boundary conditions. Hence those exponents are branch projections of the common variational ledger. ∎
 
+**Remark Q.0.1c.1 (Code-Maintenance Viability Inequality).** For any finite MPU aggregate $S$ that maintains an internal predictive code against reset dissipation and noise, a necessary steady-operation condition is
+$$
+R_{\mathrm{in}}
+\ge
+\varepsilon_0N_{\mathrm{MPU}}(S)\nu_{\mathrm{cycle}}+R_{\mathrm{loss}},
+\qquad
+\varepsilon_0=\ln2.
+$$
+Here $N_{\mathrm{MPU}}(S)$ is the number of constituent MPU cycles (dimensionless), $\nu_{\mathrm{cycle}}$ is their cycle frequency (cycles per unit time), and $R_{\mathrm{in}}$ and $R_{\mathrm{loss}}$ are the repair/negentropy input rate and code-maintenance loss rate, both measured in nats per unit time (equivalently, negentropy-rate units; if logarithms are taken in base 2, the same inequality holds with $\varepsilon_0=1$ bit and rates measured in bits per unit time). If the inequality fails, the same maintained-code branch cannot persist indefinitely.
+
+This is a necessary finite-resource viability condition for code-maintaining aggregates, not a complete biological classification theorem. A biological classification would require additional operational conditions such as boundary maintenance, metabolism, self-maintenance, reproduction or lineage persistence, and environmental coupling.
+
 ### Q.0.4 Planck's Constant as Exchange Rate
 
 The Action-Entropy Identity reveals that $\hbar$ serves as a conversion factor between two descriptions of the same physical process: the information-theoretic description (counting SPAP entropy in nats) and the mechanical description (measuring action in J·s). 

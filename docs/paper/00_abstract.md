@@ -40,8 +40,8 @@ is theorem-level, with the dependency chain
 $$
 \mathrm{SPAP}\Rightarrow\varepsilon_0=\ln2\Rightarrow K_0=3\Rightarrow d_0=8\Rightarrow a=2\Rightarrow b=6\Rightarrow M=24\Rightarrow D=4
 $$
-and the inactive-sector partition $6=3+2+1$ giving the gauge algebra
+and the finite-response block-frame inactive-sector partition $6=3+2+1$ giving the gauge algebra
 $$
 \mathfrak g_{\mathrm{SM}}=\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak u(1)
 $$
-on the finite-response positive-marginal capacity branch. The Global Strict-Certificate Ledger of Convention P.14.1k records the closed backbone alongside certificate-pending finite records such as $\mathfrak C_\alpha$, $\mathfrak C_{\mathrm{gen}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak F_U$, $\mathfrak I_U^{(4)}$, $\mathfrak B_{\mathrm{BL}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak J_{\mathrm{RHG-fl}}$, and $\mathfrak C_B$; Theorem P.14.1k.1 forces global closure under acceptance and Corollary P.14.1k.2 localizes the remaining open closure.
+on the determinant-compatible positive-marginal capacity branch. This is block-frame/interface-category uniqueness, not a classification of all compact connected subgroups of $U(6)$. The Global Strict-Certificate Ledger of Convention P.14.1k records the closed backbone alongside certificate-pending finite records such as $\mathfrak C_\alpha$, $\mathfrak C_{\mathrm{gen}}$, $\mathfrak C_{\mathrm{tor}}$, $\mathfrak R_{\mathrm{RHG}}$, $\mathfrak F_U$, $\mathfrak I_U^{(4)}$, $\mathfrak B_{\mathrm{BL}}$, $\mathfrak C_{\mathrm{fl}}$, $\mathfrak J_{\mathrm{RHG-fl}}$, and $\mathfrak C_B$; Theorem P.14.1k.1 forces global closure under acceptance and Corollary P.14.1k.2 localizes the remaining open closure.

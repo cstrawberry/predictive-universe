@@ -685,6 +685,50 @@ G_{\mathrm{resp}}
 $$
 the compact group of unitary monoidal natural automorphisms of the fiber functor.
 
+**Definition F.5b.1 (PU One-Particle Sector Label).** On a regular AQFT/DHR response branch with emergent Poincaré asymptotics, a retained one-particle sector is labeled by
+$$
+\mathfrak s=(\mathcal O_p,\lambda_{\mathrm{Wig}},\rho_{\mathrm{int}},\chi),
+$$
+where $\mathcal O_p$ is a positive-energy Poincaré momentum orbit, $\lambda_{\mathrm{Wig}}$ is the Wigner little-group label $(m,s)$ for $m>0$ or $(0,h)$ for $m=0$, $\rho_{\mathrm{int}}$ is a simple object of the retained finite DHR response category, and $\chi$ records chirality data when the Lorentz representation is Weyl. On branches where retained multiplicities arise, the label is enriched to
+$$
+\mathfrak s_{\mathrm{mult}}=(\mathcal O_p,\lambda_{\mathrm{Wig}},\rho_{\mathrm{int}},\chi,\iota_{\mathrm{mult}}),
+$$
+with $\iota_{\mathrm{mult}}$ recording the retained-multiplicity index.
+
+The conjugate sector is
+$$
+\overline{\mathfrak s}=(\mathcal O_p,\overline{\lambda}_{\mathrm{Wig}},\overline{\rho}_{\mathrm{int}},\overline\chi),
+$$
+where $\overline{\rho}_{\mathrm{int}}$ is the DHR conjugate object. Antiparticles are represented by conjugate response sectors, not by appending a central $\mathbb Z_2$ label to Poincaré representation theory.
+
+**Proposition F.5b.2 (Wigner-DHR-PU Sector Representation).** On a regular particle-sector branch satisfying the modular spin-statistics-CPT gate and the **multiplicity-free retained branch hypothesis** — every retained one-particle PPI-equivalence class is represented by exactly one localized-transportable endomorphism realization up to unitary equivalence — retained asymptotic one-particle sectors are represented up to PPI response equivalence by the labels of Definition F.5b.1, via the map
+$$
+\Psi:\{\text{retained one-particle sectors}\}/\!\equiv_{\mathrm{PPI}}
+\longrightarrow
+\{(\mathcal O_p,\lambda_{\mathrm{Wig}},\rho_{\mathrm{int}},\chi)\},
+$$
+where:
+
+1. (Injectivity) Distinct PPI-equivalence classes give distinct labels: the Wigner orbit and little-group label are separated by the emergent Poincaré asymptotic data of Theorem F.4, the DHR object is separated by the finite localized-transportable endomorphism class of Theorem F.5a, and $\chi$ is separated by the Lorentz Weyl-representation gate. The multiplicity-free retained branch hypothesis ensures no two distinct PPI classes accidentally share the same label through a hidden retained multiplicity.
+
+2. (Surjectivity onto retained labels) A label is in the image of $\Psi$ exactly when the branch supplies a retained response-sector object realizing the Wigner data and DHR class; labels with no retained response-sector object are not in the image.
+
+3. (Functoriality) Conjugate sectors are represented by conjugate labels via $\mathfrak s\mapsto\overline{\mathfrak s}$, and the spin-statistics descent of Theorem F.5a is the statistics descent on the right-hand side.
+
+If the multiplicity-free hypothesis fails on a given branch, $\Psi$ is replaced by an enriched map
+$$
+\Psi_{\mathrm{mult}}:\{\text{retained sectors}\}/\!\equiv_{\mathrm{PPI}}
+\to
+\{(\mathcal O_p,\lambda_{\mathrm{Wig}},\rho_{\mathrm{int}},\chi,\iota_{\mathrm{mult}})\}
+$$
+carrying a retained-multiplicity label $\iota_{\mathrm{mult}}$, and the injectivity statement is rephrased for the enriched labels.
+
+This is branch-relative. It does not exclude every mathematical Poincaré representation; it excludes only labels that are response-null, violate the fixed branch constraints, or lack a retained response-sector object. Continuous-spin (infinite-helicity) massless Wigner representations are excluded *by branch retention*, not by Poincaré representation theory itself: they have no finite retained response-sector realization on the standard particle-sector branch.
+
+*Proof.* Injectivity is the conjunction of the three separation statements cited in item 1 together with the multiplicity-free hypothesis; each follows from its named theorem. Surjectivity onto retained labels follows from the existence of localized-transportable endomorphism representatives for each retained DHR class (Theorem F.5a) combined with Wigner-orbit realization on the emergent Poincaré branch (Theorem F.4). Conjugation functoriality is the DHR-conjugate construction in Theorem F.5a. PPI response equivalence on the left-hand side is Corollary P.6.1b.8. The enriched-label case follows by replacing single equivalence-class representatives with multiplicity-labeled representatives throughout. ∎
+
+**Remark F.5b.3 (CPT Is Not a Three-Label Shortcut).** CPT closure is not obtained by merely naming abstract $C$, $P$, and $T$ involutions. It requires either the Wightman/Jost package of Theorem F.4 or the antiunitary modular reflection plus DHR conjugate-sector implementation of Theorem F.5a, with vanishing modular cocycle obstruction. The thermodynamic arrow remains the entropy-increasing realization branch and is compatible with CPT symmetry of the retained field algebra.
+
 **Theorem F.5c (Observable-Net Reconstruction of Field Algebra and Gauge Group).** If a branch carries an accepted finite DHR-Tannaka response datum $\mathfrak T_{\mathrm{DHR}}$, then:
 
 1. the category $\mathcal C_{\mathrm{resp}}$ is equivalent, as a rigid symmetric $C^*$ tensor category with fiber functor, to a finite full tensor subcategory of $\operatorname{Rep}(G_{\mathrm{resp}})$;

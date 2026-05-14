@@ -402,7 +402,7 @@ $$\Delta S_{CP}(\pm)=\frac{\sin\delta}{16\pi^2}\int d^4x\,W\tilde W
 =\pm\frac{2\sin\delta}{g^2}
 =\pm\sin\delta\frac{S_{sph}}{8\pi^2}.$$
 
-**(e) Complexity cost.** In PU the CP operation is the $\mathbb{Z}_2$ half-step channel whose square reproduces the full electroweak locking step (Theorem Y.11.2). Since PCE costs add under sequential composition, the corresponding suppression exponents add: $\kappa(\mathcal{C}^2)=2\kappa(\mathcal{C})$. The electroweak hierarchy involves the full step with exponent $\kappa_{EW}$, while baryogenesis depends on the single CP half-step, giving $\kappa_{CP}=\kappa_{EW}/2$.
+**(e) Complexity cost.** On the CP half-step branch of Theorem Y.11.2, the CP-odd observable is placed on the equal-exponent exponential branch: the CP involution is free or response-null on the retained leading saddle support, the reduced measure is CP-invariant, the CP-odd projection is nonzero at leading order, and the electroweak exponential weight splits into two equal components. Under those branch hypotheses, equivalently by Theorem Y.11.2a with $G=\mathbb Z_2$, the retained CP-odd component has
 $$\kappa_{CP} = \frac{\kappa_{EW}}{2} = \frac{38.5}{2} = 19.25$$
 
 ∎
@@ -1104,7 +1104,102 @@ $$
 
 This is the square-root relation used in Theorem Y.8. ∎
 
-**Corollary Y.11.3** (Topological Origin). *The factor of 2 in $\kappa_B = \kappa_{EW}/2$ is exact, not approximate. It reflects the topological structure of $\mathbb{Z}_2$, which has exactly two elements.*
+**Theorem Y.11.2a (Finite Abelian Group-Step Exponent Template).** Let
+$$
+\mathfrak D_G=(\mathcal M,G,\mu,\widehat G,\kappa_{\mathcal M},\mathcal O_{\mathcal M})
+$$
+be a finite abelian PCE reduction datum on a retained saddle sector $\mathcal M$, where $G$ is finite abelian of order $n=|G|$, $\mu$ is the reduced PCE measure, $\widehat G$ is the character group, and
+$$
+\mathcal O_{\mathcal M}=A_{\mathcal M}e^{-\kappa_{\mathcal M}}(1+o(1))
+$$
+is the parent observable on the PCE-exponential branch. For $\chi\in\widehat G$, let
+$$
+P_\chi=\frac1{|G|}\sum_{g\in G}\overline{\chi(g)}U_g
+$$
+be the character projector whenever the action is measure-preserving.
+
+Assume the following branch hypotheses:
+
+1. the $G$-action is free on the retained leading saddle support, or all fixed-locus contributions are response-null;
+2. the reduced PCE measure is $G$-invariant;
+3. the leading saddle fiber carries the regular $G$-representation and the leading PCE complexity form is scalar on that regular fiber;
+4. the character projection has nonzero leading coefficient;
+5. the observable uses exponential placement rather than prefactor, variance, or normalization placement;
+6. (**Equal-exponent decomposition**) the parent exponential weight factorizes additively along the $G$-orbit into $|G|$ equal PCE-exponential components,
+$$
+\kappa_{\mathcal M}=\sum_{g\in G}\kappa_g,
+\qquad
+\kappa_g=\frac{\kappa_{\mathcal M}}{|G|}\quad\text{for every }g\in G,
+$$
+and the retained character observable selects one such normalized component at exponential order rather than at the prefactor or normalization level.
+
+Then every retained nonzero character component has
+$$
+\kappa_\chi=\frac{\kappa_{\mathcal M}}{|G|},
+$$
+and
+$$
+\mathcal O_\chi
+=
+A_\chi e^{-\kappa_{\mathcal M}/|G|}(1+o(1)).
+$$
+For $G=\mathbb Z_2$, this reduces to the CP half-step law
+$$
+\kappa_{CP}=\frac{\kappa_{EW}}2.
+$$
+The load-bearing hypotheses are the regular-isotypic equal split, the equal-exponent decomposition (hypothesis 6), the nonzero leading projection, and the exponential-placement branch. Without hypothesis 6, character projection generically changes amplitudes and prefactors while leaving the saddle exponent unchanged; the $1/|G|$ exponent step is not automatic from group theory alone. Group theory alone does not promote a physical sector.
+
+**Theorem Y.11.2b (Finite Isotropic Character-Projection Template).** Let $V$ carry one retained regular finite abelian $G$-fiber of order $|G|=n$, and let $X$ be a mean-zero fluctuation with covariance isotropic on that regular fiber and total RMS normalization
+$$
+\mathbb E\lVert X\rVert^2=\sigma_{\mathrm{tot}}^2.
+$$
+Then projection onto a normalized complex character line satisfies
+$$
+\mathbb E\lVert P_\chi X\rVert^2=\frac{\sigma_{\mathrm{tot}}^2}{|G|},
+\qquad
+\lVert P_\chi X\rVert_{\mathrm{RMS}}
+=
+\frac{\lVert X\rVert_{\mathrm{RMS}}}{\sqrt{|G|}}.
+$$
+If the physical field is real, $\chi\ne\bar\chi$, and the observable retains the full conjugate pair $V_\chi\oplus V_{\bar\chi}$, the RMS factor is
+$$
+\sqrt{\frac{2}{|G|}},
+$$
+not $|G|^{-1/2}$. For self-conjugate characters, the factor is determined by the retained real component dimension rather than by doubling. Therefore a claimed $1/\sqrt{|G|}$ physical factor requires a certificate that the observable selects one normalized complex character line, one oriented real projection direction, or an equivalent response-normalized component.
+
+This RMS projection law is distinct from Theorem Y.11.2a. It does not imply
+$$
+\kappa_\chi=\frac{\kappa_{\mathcal M}}{|G|},
+$$
+and the exponent-step law does not imply an RMS factor.
+
+**Proposition Y.11.2c (Certificate-Pending Triality Route for a Majorana Projection Factor).** A triality route to a Majorana coefficient is certificate-pending unless a finite record
+$$
+\mathfrak C_{\mathbb Z_3\text{-Maj}}
+=(\rho_3,\mathcal M_\nu,\mu_\nu,V_\nu,K_\nu,\mathcal B_\nu)
+$$
+verifies all of the following:
+
+1. an order-three lift $\rho_3$ acts on the retained Majorana saddle package and stabilizes $\mathcal M_\nu$;
+2. fixed loci are absent on the retained support or response-null with no leading quotient-stack correction;
+3. $\mu_\nu$ is triality-invariant;
+4. $V_\nu$ carries a regular isotropic $\mathbb Z_3$ fiber at leading order;
+5. the physical Weinberg-overlap observable selects one normalized nontrivial character line or equivalent oriented response component, not the whole real conjugate pair;
+6. the branch-placement record $\mathcal B_\nu$ proves that the RMS factor lands on the Gaussian exponent coefficient.
+
+Only under these conditions does Theorem Y.11.2b give
+$$
+\alpha_\nu=\frac{\alpha_{\mathrm{UV}}}{\sqrt3}=\frac{\sqrt3}{2}
+$$
+when $\alpha_{\mathrm{UV}}=3/2$. The equality is not selected merely because it numerically matches a target. It is falsified if the triality lift fails, if non-null fixed points contribute, if the real observable keeps $\chi\oplus\bar\chi$, or if the projection factor lands in a prefactor, distance variable, or covariance instead of the exponent coefficient.
+
+A global free $\mathbb Z_3$ action on all of $\mathrm{Gr}_{\mathbb C}(2,8)$ is obstructed because
+$$
+\chi(\mathrm{Gr}_{\mathbb C}(2,8))=\binom82=28
+$$
+is not divisible by $3$. Thus any free-action assertion must be restricted to the retained Majorana saddle support or accompanied by a fixed-locus response-null audit.
+
+**Corollary Y.11.3** (Certified Half-Step Origin). *On the hypotheses of Theorem Y.11.2, equivalently the finite group-step template of Theorem Y.11.2a with $G=\mathbb Z_2$, the denominator $2$ in $\kappa_B=\kappa_{EW}/2$ is exact on that branch. It reflects both the order of the CP action and the equal-exponent exponential-placement certificate. It is not a consequence of group order alone.*
 
 ### Y.10.3.4 Unification of Hierarchy Problems
 

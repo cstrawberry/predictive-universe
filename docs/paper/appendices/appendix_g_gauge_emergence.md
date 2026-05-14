@@ -608,6 +608,22 @@ for some smooth scalar $\chi$.
 
 The introduction of the connection $A_\mu$ and covariant derivative $D_\mu$ is the minimal structural modification required to allow local, phase-invariant comparison of field values. This represents the most resource-efficient solution, strongly favored by PCE, to overcome the predictive coherence problem arising from local phase freedom. If the $U(1)$ symmetry group is compact (which is physically expected for charge conservation), consistency of the gauge theory (e.g., topological considerations for magnetic monopoles, if they exist) generally requires that the charge $q$ be quantized in units of some fundamental charge $e_0$.
 
+**Remark G.4a.2 (Existence, Dynamics, and Holonomy Detection Are Distinct).** The local phase-response argument forces a connection and covariant derivative before any field-action normalization is chosen. The Maxwell equations follow only after the minimal local quadratic gauge-action branch is added. Thus
+$$
+D_\mu=\partial_\mu+iqA_\mu
+$$
+is forced by local phase-comparison consistency, while
+$$
+\nabla_\mu F^{\mu\nu}=\kappa_FJ^\nu
+$$
+requires the additional local, gauge-invariant, positive-energy quadratic action with linear matter-current coupling.
+
+For any closed loop $\gamma$, the finite response observable is the Wilson holonomy
+$$
+W(\gamma)=\exp\left(iq\oint_\gamma A\right).
+$$
+On a flat-holonomy interferometer branch, two configurations with the same local field strength on the detection arms but different $W(\gamma)$ are operationally distinguishable by their interference phase. Arbitrary noninteger Aharonov-type holonomy is allowed on punctured-region branches; flux quantization is asserted only on the additional nontrivial compact $U(1)$ bundle or Chern-class branch. Nontrivial holonomy may also carry phase-defect overhead on the strict Q.0.7g branch, but that overhead statement is separate from the existence of detectable holonomy.
+
 **G.4.2 Joint Spin-Internal Covariant Derivative**
 
 **Theorem G.4b (Joint Covariant Derivative).** Let $S\to M_{\mathrm{reg}}$ be the spinor bundle associated to $P_{\mathrm{spin}}$, and let $E\to M_{\mathrm{reg}}$ be the internal Hermitian bundle associated to $P_{\mathrm{int}}$ (Theorem 48b). Let $\nabla^{\mathrm{spin}}$ and $\nabla^{\mathrm{int}}$ be connections on $S$ and $E$, with local connection one-forms $\Omega_\mu$ and $A_\mu^{\mathrm{int}}$. Then the tensor-product bundle
@@ -1117,7 +1133,13 @@ PCE favors system parameters such that $\eta_{ben}(D)>\lambda_c(D)\alpha_{load}/
 
 ### G.8.4 PCE Selection Criteria for Gauge Groups and Dimension
 
-The search space is the set of compact, reductive gauge algebras acting faithfully on the inactive subspace $\mathcal{B} = \mathbb{C}^6$.
+The search space used in the theorem-level selection is the determinant-compatible finite-response block-frame/interface family acting faithfully on a direct-sum inactive-sector certificate
+$$
+\mathcal B\cong\bigoplus_i\mathbb C^{n_i},
+\qquad
+\sum_i n_i=6.
+$$
+It is not the set of all compact connected Lie subgroups of $U(6)$.
 
 A triplet $(G,{\psi},D)$ is a stable, PCE‑optimal solution if it satisfies:
 
@@ -1184,7 +1206,13 @@ The exceptional dimensions listed above do not include $12$. Therefore no simple
 
 **Step 3 (Implication for capacity-saturating gauge algebras).** If a gauge algebra $\mathfrak{g}$ saturates the Lagrangian capacity bound $n_G = 12$ (Theorem G.8.2e), then $\dim \mathfrak{g} = 12$. By Step 2, $\mathfrak{g}$ cannot be simple. Therefore its semisimple part $[\mathfrak{g},\mathfrak{g}]$ must be a direct sum of at least two simple Lie algebras. In particular, any simple unification candidate with $\dim \mathfrak{g} > 12$ (such as $SU(5)$, $SO(10)$, or $E_6$ with dimensions $24$, $45$, and $78$ respectively) is excluded outright by the bound $n_G \leq 12$. ∎
 
-**Theorem G.8.4b (Unique Capacity-Saturating Inactive-Sector Module Decomposition).** Work on the finite-response gauge branch in which compact connected local frame symmetries act faithfully on the inactive sector $\mathcal B\cong\mathbb C^6$, exact response-null global phases are quotiented by Corollary G.8.4h.3, and the positive-marginal regime of Equation (G.8.5) retains every anomaly-admissible non-null generator until the Lagrangian capacity bound of Theorem G.8.2e is saturated. Then the unique inactive-sector module decomposition is
+**Theorem G.8.4b (Unique Capacity-Saturating Block-Frame Inactive-Sector Module Decomposition).** Work on the finite-response block-frame gauge branch in which compact connected local frame symmetries act faithfully on a direct-sum inactive-sector certificate
+$$
+\mathcal B\cong\bigoplus_i \mathbb C^{n_i},
+\qquad
+\sum_i n_i=6,
+$$
+exact response-null global phases are quotiented, determinant-compatible anomaly-admissibility is imposed, and the positive-marginal regime of Equation (G.8.5) retains every admissible non-null generator inside this block-frame family until the Lagrangian capacity bound of Theorem G.8.2e is saturated. Then the unique capacity-saturating block-frame inactive-sector module decomposition is
 $$
 \mathcal B\cong\mathbb C^3\oplus\mathbb C^2\oplus\mathbb C^1.
 $$
@@ -1231,7 +1259,7 @@ $$
 $$
 The later chirality and anomaly-descent ledger identifies the $3$-block as the color block, the $2$-block as the weak block, and the determinant-compatible abelian generator as the hypercharge direction; it does not introduce another capacity-saturating partition. ∎
 
-**Corollary G.8.4c (Gauge-Algebra Selection on the Finite-Response Capacity Branch).** Under the hypotheses of Theorem G.8.4b, the unique capacity-saturating reductive gauge algebra acting faithfully on the inactive sector is
+**Corollary G.8.4c (Gauge-Algebra Selection on the Finite-Response Block-Frame Capacity Branch).** Under the hypotheses of Theorem G.8.4b, the unique capacity-saturating determinant-compatible block-frame gauge algebra acting faithfully on the inactive-sector certificate is
 $$
 \mathfrak g_{\mathrm{SM}}
 =
@@ -1239,11 +1267,17 @@ $$
 \qquad
 \dim\mathfrak g_{\mathrm{SM}}=8+3+1=12.
 $$
-Equivalently, the connected gauge group is the determinant-compatible block-frame group
+At the connected-cover notation level, the Lie algebra above is represented by
+$$
+SU(3)\times SU(2)\times U(1).
+$$
+The determinant-compatible block-frame global form on the ordered $3+2+1$ inactive-sector split is
 $$
 S(U(3)\times U(2))
+\cong
+\frac{SU(3)\times SU(2)\times U(1)}{\mathbb Z_6},
 $$
-in its standard embedding on the ordered $3+2+1$ inactive-sector split. This algebra saturates the geometric bound of Theorem G.8.2e.
+up to the hypercharge normalization and simultaneous sign convention fixed later by Theorem G.8.4e.1b and Corollary G.8.4e.1c. Thus Theorem G.8.4b fixes the algebra and determinant-compatible interface group; it does not by itself add an independent arbitrary global-form classification. This algebra saturates the geometric bound of Theorem G.8.2e.
 
 *Proof.* Theorem G.8.4b gives the unique block split $3+2+1$. The non-abelian block-preserving part is
 $$
@@ -1255,13 +1289,125 @@ $$
 $$
 with dimension $12$. ∎
 
-**Corollary G.8.4c.0a (No Free Gauge-Branch Selection at Fixed Inactive Sector).** Inside the finite-response positive-marginal branch of Theorem G.8.4b, the gauge algebra of Corollary G.8.4c is forced by the inactive-sector certificate and is not a post-hoc Standard Model insertion.
+**Corollary G.8.4c.0a (No Free Gauge-Branch Selection at Fixed Inactive Sector).** Inside the finite-response block-frame positive-marginal branch of Theorem G.8.4b, the gauge algebra of Corollary G.8.4c is forced by the inactive-sector certificate and is not a post-hoc Standard Model insertion.
 
 *Proof.* Theorem G.8.4b enumerates every unordered partition of $\dim\mathcal B=6$ and evaluates the retained generator count
 $$
 n_G(\lambda)=1+\sum_{i:n_i\ge2}(n_i^2-1)
 $$
 for each partition. Rows with $n_G>12$ violate the Lagrangian capacity bound of Theorem G.8.2e. Rows with $n_G<12$ are PCE-dominated in the positive-marginal regime because the partition $3+2+1$ is admissible and saturates $n_G=12$. The enumeration contains exactly one row with $n_G=12$, namely $3+2+1$. Corollary G.8.4h.3 removes exact response-null global phases, and anomaly descent retains only one determinant-compatible abelian response direction. Therefore no other compact connected faithful block-frame algebra on $\mathcal B$ has the same admissibility, capacity saturation, and finite-response quotient data. ∎
+
+**Remark G.8.4c.0b (Scope Guard: No Arbitrary $U(6)$-Subgroup Classification).** Theorem G.8.4b and Corollary G.8.4c classify the finite-response block-frame/interface-category branch. They do not classify all compact connected Lie subgroups of $U(6)$.
+
+In particular, the tensor-product image
+$$
+G_\otimes
+=
+(U(1)\times SU(2)\times SU(3))/\Gamma
+\hookrightarrow U(6)
+$$
+acting irreducibly on
+$$
+\mathbb C^6\cong\mathbb C^2\otimes\mathbb C^3
+$$
+has Lie algebra
+$$
+\mathfrak u(1)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(3)
+$$
+and dimension
+$$
+1+3+8=12.
+$$
+It is not $U(6)$-conjugate to the reducible block-frame action on
+$$
+\mathbb C^3\oplus\mathbb C^2\oplus\mathbb C^1,
+$$
+because irreducibility is invariant under unitary conjugacy.
+
+This tensor-product image is therefore not excluded by an arbitrary-subgroup classification theorem. It is outside the admissible family of Theorem G.8.4b because it does not preserve the finite-response direct-sum certificate
+$$
+\mathcal B=C\oplus W\oplus Y
+$$
+or the determinant interface contract used in Definition G.8.4h.1. Thus the PU result is block-frame/interface-category uniqueness, not uniqueness among all compact connected subgroups of $U(6)$.
+
+Equivalently, PU does not assume or derive a full-centralizer maximality rule
+$$
+G=Z_{U(\mathcal B)}(V|_{\mathcal B})
+$$
+modulo phase. At capacity, an omitted response-changing centralizer direction may be unaffordable rather than response-null. The valid PCE statement is saturation inside the accepted finite-response admissible family, not equality with the full centralizer.
+
+The rank-2 weak block is not an independent rank coincidence at the block-frame level. It is the unique capacity-saturating rank-2 summand selected when the Landauer-selected active rank $a=2$, the minimal carrier dimension $d_0=8$, and the capacity equation
+$$
+ab=2(8-2)=12
+$$
+are imposed. Fiberwise, any local unitary identification between the active rank-2 carrier and the weak rank-2 summand transports the Pauli $\mathfrak{su}(2)$ algebra to the weak block. This is a local frame identification, not a canonical global bundle isomorphism.
+
+**Theorem G.8.4c.0c (Pauli Reflection of the Capacity-Selected Weak Block).** On the minimal finite-response flag-lift branch, let
+$$
+X=\mathrm{Gr}(2,8),
+$$
+with tautological active bundle $S\to X$ and inactive quotient bundle $Q\to X$. On the ordered flag lift
+$$
+\pi:\widetilde X=\mathrm{Flag}_{1,2,3}(Q)\to X,
+$$
+write
+$$
+\pi^*Q\cong\widetilde Q_Y\oplus\widetilde Q_W\oplus\widetilde Q_C,
+\qquad
+\operatorname{rk}_{\mathbb C}(\widetilde Q_Y,\widetilde Q_W,\widetilde Q_C)=(1,2,3).
+$$
+Then the weak rank-2 block is forced by the same active-rank source as the active Pauli algebra:
+$$
+\text{SPAP merge}
+\to
+\varepsilon_0=\ln2
+\to
+a=2
+\to
+(b,ab)=(6,12)
+\to
+3+2+1.
+$$
+For every $\tilde x\in\widetilde X$ and every local unitary fiber isometry
+$$
+\Phi_{\tilde x}:S_{\pi(\tilde x)}\to(\widetilde Q_W)_{\tilde x},
+$$
+one has
+$$
+\operatorname{Ad}_{\Phi_{\tilde x}}
+\bigl(\mathfrak{su}(S_{\pi(\tilde x)})\bigr)
+=
+\mathfrak{su}((\widetilde Q_W)_{\tilde x}).
+$$
+Equivalently, the weak algebra is the inactive Pauli reflection of the active-kernel Pauli algebra, fiberwise and up to local unitary frame choice:
+$$
+\mathfrak{su}(2)_L
+=
+\Phi\,\mathfrak{su}(2)_{\mathrm{act}}\,\Phi^\dagger.
+$$
+This does not assert a canonical global bundle isomorphism $S\cong\widetilde Q_W$.
+
+*Proof.* The SPAP/Landauer/PPI chain (Theorems 10, 31, Z.1, G.10.2, G.10.3) gives $a=2$. The minimal carrier dimension gives $d_0=8$ and hence $b=6$. The block-frame capacity bound gives $ab=12$. The unordered block-partition count
+$$
+n_G(\lambda)=1+\sum_{i:n_i\ge2}(n_i^2-1)
+$$
+has a unique saturating row at $b=6$, namely $3+2+1$, so the weak block has rank $2$. Every complex Hermitian rank-2 fiber carries a Pauli algebra by the active-kernel identification of Theorems G.10.2--G.10.3: choosing a unitary basis gives the traceless Hermitian Pauli span $\operatorname{span}_{\mathbb R}\{\sigma_i\}$, equivalently $i\operatorname{span}_{\mathbb R}\{\sigma_i\}$ in the anti-Hermitian Lie-algebra convention, and a change of unitary basis acts by the adjoint $PU(2)\cong SO(3)$ on traceless generators. Conjugation by any unitary $\Phi_{\tilde x}$ preserves brackets and sends traceless anti-Hermitian endomorphisms of the active fiber bijectively to those of the weak fiber. Corollary G.8.4c identifies the nonabelian algebra of that rank-2 block with the weak algebra. ∎
+
+**Remark G.8.4c.0d (Counterfactual Active-Rank Audit and No Color-Block Ambiguity).** At fixed $d_0=8$, the active rank $a=2$ is the only admissible value that uniquely forces exactly one inactive 2-block by capacity saturation. The counterfactual ledger is:
+
+| $a$ | $b=8-a$ | $ab$ | Saturating partition(s) | 2-block outcome |
+|:--:|:--:|:--:|:--|:--|
+| $1$ | $7$ | $7$ | $2+2+1+1+1$ | two 2-blocks; also violates $\ln a\ge\ln2$ |
+| $2$ | $6$ | $12$ | $3+2+1$ | exactly one 2-block |
+| $3$ | $5$ | $15$ | none | no saturation |
+| $4$ | $4$ | $16$ | $4$ | no 2-block |
+| $5$ | $3$ | $15$ | none | no saturation |
+| $6$ | $2$ | $12$ | none | no saturation |
+| $7$ | $1$ | $7$ | none | no saturation |
+
+Although $\mathfrak{su}(3)$ contains embedded $\mathfrak{su}(2)$ subalgebras, those embedded subalgebras do not replace the weak block. The $3$-block contributes the full $\mathfrak{su}(3)$ with $8$ retained generators on the capacity branch; replacing it by a proper embedded $\mathfrak{su}(2)$ would discard response-changing generators and fail the saturation certificate. The weak algebra is $\mathfrak{su}(\widetilde Q_W)$, placed left-chirally by the existing chiral determinant-line and weak-left projection branch. An accepted low-energy independent $SU(2)_R$ or any non-$\mathfrak{su}(2)$ weak carrier at the same capacity level would require changing the $n_G=12$ ledger rather than silently coexisting with it.
+
+The downstream paragraphs at the end of Appendix G.10 (the causal-chain paragraph extending SPAP $\mathbb Z_2$ through the active-rank/weak-block identification) and in Section Z.14a (the weak-block caveat) cross-reference this theorem and should be read as the same local frame statement under different headings, not as independent transport claims.
 
 **Corollary G.8.4c.1 (Exclusion of Simple Unification Groups).**
 *Grand unified theories based on simple gauge groups are excluded by the capacity bound:*
@@ -1284,7 +1430,15 @@ for each partition. Rows with $n_G>12$ violate the Lagrangian capacity bound of 
 **Remark G.8.4c.3: Experimental Status.** Current experimental lower limits on partial lifetimes are $\tau/B(p \to e^+ \pi^0) > 2.4 \times 10^{34}$ years and $\tau/B(p \to \mu^+ \pi^0) > 1.6 \times 10^{34}$ years [Super-Kamiokande Collaboration 2020]. Minimal $SU(5)$ scenarios typically predict $\tau/B(p \to e^+ \pi^0)$ in the $10^{31}$–$10^{32}$ year range (model-dependent), which is excluded by more than two orders of magnitude [Nath & Fileviez Pérez 2007; Langacker 1981]. The framework predicts continued null results in searches for gauge-mediated proton decay modes.
 
 
-**Remark G.8.4d: Complementary Derivation Structure.** Proposition G.M1 identifies the emergent gauged algebra as the decomposition-preserving local unitary symmetry once the internal module split is fixed. Theorem G.8.4b derives the unique PCE-selected module decomposition $\mathcal{B}=\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1$ from capacity, locality, chirality, and anomaly constraints. Together they yield $\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)$ without additional algebraic hypotheses. The remaining abelian normalization is fixed only after determinant-character and anomaly descent, supplied by Theorem G.8.4e.1b and Corollary G.8.4e.1c.
+**Remark G.8.4d: Complementary Derivation Structure.** Proposition G.M1 identifies the emergent gauged algebra as the decomposition-preserving local unitary symmetry once the internal block-frame module split is fixed. Theorem G.8.4b derives the unique PCE-selected block-frame decomposition
+$$
+\mathcal{B}=\mathbb{C}^3\oplus\mathbb{C}^2\oplus\mathbb{C}^1
+$$
+inside the finite-response block-frame positive-marginal capacity branch. Together they yield
+$$
+\mathfrak{su}(3)\oplus\mathfrak{su}(2)\oplus\mathfrak{u}(1)
+$$
+as the unique determinant-compatible block-frame algebra on that branch. This is not an arbitrary compact-subgroup classification in $U(6)$ and does not use a full-centralizer maximality assumption. The remaining abelian normalization is fixed only after determinant-character and anomaly descent, supplied by Theorem G.8.4e.1b and Corollary G.8.4e.1c.
 
 **Theorem G.8.4e (Topological No-Go for a $(1,2,3)$ Reduction of the Universal Quotient Bundle).** Let
 $$
@@ -2730,7 +2884,7 @@ On an exact self-dual carrier $C=C^\perp$, this gives $2\dim C=24$ and hence $\d
 
 **Theorem G.8.7f (Canonicity).** The bijection $\Phi$ is canonical—it involves no arbitrary choices.
 
-*Proof.* The partition $(a, b) = (2, 6)$ is uniquely determined by $\varepsilon_0=\ln2$ (Theorem Z.1). The Grassmannian $\mathrm{Gr}(2, 8)$ has a unique compatible complex structure (Appendix P). The Golay code selects a unique (up to equivalence) Lagrangian subspace (Theorem Z.13). The SM gauge algebra is the unique 12-dimensional algebra satisfying all physical constraints (Theorem G.8.4b). The little group $SO(2)$ in $D = 4$ acts on the 2-dimensional transverse polarization plane via its defining representation. All ingredients are uniquely determined by framework constraints. ∎
+*Proof.* The partition $(a, b) = (2, 6)$ is uniquely determined by $\varepsilon_0=\ln2$ (Theorem Z.1). The Grassmannian $\mathrm{Gr}(2, 8)$ has a unique compatible complex structure (Appendix P). The Golay code selects a unique (up to equivalence) Lagrangian subspace (Theorem Z.13). The SM gauge algebra is the unique determinant-compatible capacity-saturating block-frame algebra in the admissible finite-response family (Theorem G.8.4b; Corollary G.8.4c). The little group $SO(2)$ in $D = 4$ acts on the 2-dimensional transverse polarization plane via its defining representation. All ingredients are uniquely determined by framework constraints. ∎
 
 ## G.10 Emergence of Spinor Structure from SPAP Logic
 
@@ -2960,6 +3114,8 @@ The precise connection is through the projective realization of the logical invo
 5. PPI/PCE quotienting of global phase gives the ray symmetry $PU(2)\cong SO(3)$, while the minimal amplitude lift is $SU(2)$ (Theorem G.10.3).
 6. The lift $SU(2)\to SO(3)$ has kernel $\{I,-I\}\cong\mathbb Z_2$ (Theorem G.10.4).
 
+Together with the minimal carrier dimension $d_0=8$ and the finite-response block-frame capacity-saturation theorem, the same active rank $a=2$ selects the rank-2 weak inactive summand inside the unique $3+2+1$ decomposition. On the minimal flag lift, Theorem G.8.4c.0c states that any local unitary fiber isometry from the active rank-2 carrier to the weak rank-2 summand transports the Pauli $\mathfrak{su}(2)$ algebra to the weak block. This is a local finite-response frame identification and does not assert a canonical global bundle isomorphism.
+
 The complete causal chain is therefore:
 $$
 \text{SPAP } \mathbb Z_2
@@ -2987,6 +3143,31 @@ Spin(1,3)\cong SL(2,\mathbb{C}).
 $$
 
 *Proof.* Theorem G.10.4 establishes the compact spin representation $SU(2)\to SO(3)$ for the spatial sector. For a Lorentzian spacetime in $3+1$ dimensions, the connected Lorentz group is $SO^+(1,3)$, whose universal double cover is the Lie group $SL(2,\mathbb{C})\cong Spin(1,3)$. The compact subgroup of this cover is precisely $SU(2)$, so the two-state spin sector embeds in the standard relativistic spinor representation. Thus, under the Lorentzian spacetime identification, the spinor sector is compatible with the usual $Spin(1,3)$ structure. QED
+
+**Corollary G.10.5.1 (Active Spinor Source of the Lorentz Six-Generator Count).** On the Lorentzian spinor branch, the active rank-2 carrier supplies the standard Hermitian determinant model of Minkowski space:
+$$
+x^\mu\longmapsto X=x^0I+x^i\sigma_i,
+\qquad
+\det X=(x^0)^2-\lVert\vec x\rVert^2.
+$$
+The action
+$$
+X\longmapsto AXA^\dagger,
+\qquad A\in SL(2,\mathbb C),
+$$
+preserves $\det X$ and has kernel $\{\pm I\}$, hence descends to
+$$
+SL(2,\mathbb C)/\{\pm I\}\cong SO^+(1,3).
+$$
+Therefore
+$$
+6_{\mathrm{Lorentz}}=\dim_{\mathbb R}\mathfrak{so}(1,3),
+$$
+with three rotation and three boost generators. This is a real Lie-algebra generator count sourced by the active rank-2 spinor kernel. It is not the same statement as
+$$
+\dim_{\mathbb C}\mathcal B=6,
+$$
+which is the inactive complex rank used by the gauge-capacity ledger.
 
 **Definition G.10.5a (Weyl Spinors).** A left-handed Weyl spinor is a field $\psi_L$ transforming under the $(\frac{1}{2}, 0)$ representation of SL(2,$\mathbb{C}$), corresponding to the fundamental representation of the first $\mathfrak{sl}(2,\mathbb{C})$ factor with the second acting trivially. A right-handed Weyl spinor $\psi_R$ transforms under $(0, \frac{1}{2})$. A Dirac spinor combines both: $\Psi = (\psi_L, \psi_R)^T$.
 
@@ -3060,7 +3241,7 @@ PPI treats gauge transformations as response-equivalent frame relabelings (Theor
 
 ## G.10.7 The Spin-Statistics Connection
 
-### G.10.7.1 Fermi-Dirac Statistics from Spinor Structure
+### G.10.7.1 Fermi-Dirac Statistics on the AQFT/Modular Spin-Statistics Branch
 
 **Proposition G.10.7 (Fermionic Exchange Sign on the AQFT Spin-Statistics Branch).** Conditional on the Appendix F AQFT/modular spin-statistics branch, active-kernel spinor fields obey the fermionic exchange sign. For two identical one-particle spinor states,
 $$
@@ -3093,6 +3274,28 @@ Therefore the exchange sign is theorem-level on the Appendix F AQFT/modular spin
 This result is the finite-dimensional active-kernel reading of the spin-statistics theorem recovered in the emergent AQFT framework (Theorem F.2 and the modular descent results of Appendix F).
 
 **Remark G.10.2: PCE Interpretation of Spin-Statistics.** Proposition G.10.7 does not derive exchange antisymmetry from the $2\pi$ spinor sign alone. The sign is fixed by the AQFT/modular spin-statistics branch. PCE supplies the compression interpretation: once identical half-integer spin sectors are on the fermionic branch, the antisymmetric exterior algebra removes redundant same-state over-occupation and gives the Pauli-exclusion counting rule. The tangent-cell packing result of Theorem Z.10 is compatible with this logic but is not a substitute for the AQFT spin-statistics branch unless an additional finite-response map identifies identical-fermion occupation cells with QFI/Bures tangent cells.
+
+**Remark G.10.2a (Configuration-Space Topology Does Not Replace Spin-Statistics).** For two unordered distinct points in $\mathbb R^3$,
+$$
+C_2(\mathbb R^3)
+=
+\frac{(\mathbb R^3\times\mathbb R^3)\setminus\Delta}{S_2}
+\simeq
+(\mathbb R^3\setminus\{0\})/\{\pm1\}
+\simeq
+\mathbb{RP}^2.
+$$
+Hence
+$$
+\pi_1(C_2(\mathbb R^3))\cong\mathbb Z_2.
+$$
+This topology permits two one-dimensional exchange characters,
+$$
+\chi_+(\tau)=+1,
+\qquad
+\chi_-(\tau)=-1.
+$$
+It does not by itself select the fermionic sign. The missing selection is precisely the spin-statistics bridge supplied on the Appendix F AQFT/modular branch, where locality, positive-energy/modular transport, and the statistics operator identify half-integer spin with the sign representation. Thus PPI single-valuedness and the $2\pi$ active-kernel spinor sign are compatible with fermionic statistics but do not replace the AQFT/modular gate.
 
 ---
 

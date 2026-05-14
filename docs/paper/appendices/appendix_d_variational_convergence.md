@@ -527,6 +527,60 @@ $$
 $$
 with $C_\delta:=\operatorname{Vol}(\mathcal K)/\operatorname{Vol}(U_\delta)<\infty$, yielding (D.12b). The final sentence follows from Theorem D.3. QED
 
+**Theorem D.6.5a (Finite Detailed-Balance PCE H-Theorem).** On a finite detailed-balance PCE branch, let $X$ be a finite state set and let $L$ be an irreducible continuous-time Markov generator acting on functions $f:X\to\mathbb R$ by
+$$
+Lf(x)=\sum_{y\in X}K(x,y)\bigl(f(y)-f(x)\bigr),
+$$
+where the rate kernel $K:X\times X\to[0,\infty)$ satisfies $K(x,y)\ge0$ for $x\ne y$ and the off-diagonal entries are the transition rates from $x$ to $y$. Let $\pi$ be the unique stationary law of $L$ on the irreducible branch, and impose detailed balance
+$$
+\pi(x)K(x,y)=\pi(y)K(y,x).
+$$
+Writing
+$$
+\mu_t(x)=\rho_t(x)\pi(x),
+\qquad
+\rho_t(x)>0,
+$$
+define the finite PCE free-cost functional
+$$
+H_{\mathrm{PCE}}(\mu_t\mid\pi)
+=
+D(\mu_t\Vert\pi)
+=
+\sum_{x\in X}\rho_t(x)\log\rho_t(x)\,\pi(x).
+$$
+Then
+$$
+\frac{d}{dt}D(\mu_t\Vert\pi)
+=
+-\frac12\sum_{x,y\in X}\pi(x)K(x,y)
+(\rho_t(y)-\rho_t(x))(\log\rho_t(y)-\log\rho_t(x))
+\le0.
+$$
+Equality holds, under irreducibility, exactly at $\mu_t=\pi$.
+
+This is the detailed-balance entropy monotone underlying the low-noise concentration part of Theorem D.5. It is relative entropy to the stationary PCE law, not raw entropy and not the reset entropy ledger.
+
+**Theorem D.6.5b (Regular Morse-Smale Basin Decomposition of Deterministic PCE Flow).** On a deterministic regular Morse-Smale PCE branch, let $\mathcal X$ be a compact retained smooth configuration manifold or compact retained chart, let $V_{\mathrm{PCE}}\in C^2(\mathcal X)$ be Morse or Morse-Bott, and let
+$$
+\dot x=-\nabla V_{\mathrm{PCE}}(x)
+$$
+have Morse-Smale stable and unstable manifolds. Then
+$$
+\mathcal X=\bigsqcup_{c\in\mathrm{Crit}(V_{\mathrm{PCE}})}W^s(c),
+$$
+and for any retained set of minima $A$,
+$$
+\mathcal B(A)=\{x:\omega(x)\subseteq A\}
+=
+\bigsqcup_{a\in A}W^s(a).
+$$
+The basin $\mathcal B(A)$ is open, and its frontier lies in stable manifolds of non-retained critical points of positive Morse index. Sublevel-set topology changes only at critical values, by handle attachment with index equal to the Morse index.
+
+On compatible small-noise gradient-diffusion branches, transition quasipotentials are bounded below by the PCE communication-height barrier between basins, with the noise normalization fixed by the corresponding large-deviation branch.
+
+These statements require the regular Morse-Smale branch. The stochastic Theorem D.5 alone gives ergodicity and low-noise stationary concentration, not deterministic basin topology.
+
 ## D.7 Formal Justification of Theorems 2 and 43
 
 The results derived in this appendix provide the rigorous dynamical justification for Theorems 2 and 43, establishing them as necessary consequences of the framework's core optimization principles operating through stochastic dynamics. The convergence from the discrete MPU network to a continuum description governed by a standard action is made precise by the following theorem.

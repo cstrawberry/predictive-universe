@@ -1442,6 +1442,10 @@ The same argument applies to active inequalities after restricting to the active
 
 *Proof.* Noether and Ward identities are item (3) of Theorem X.8f.2. Shadow prices are item (4). The augmented stationarity equation (X.8f.2) is the common source of both. ∎
 
+**Remark X.8f.3a (No Separate Conservation-Law Postulates on the Regular Branch).** On a regular PCE branch satisfying Theorem X.8f.2, charge conservation, stress-energy conservation, angular-momentum conservation, gauge Ward identities, and active coupling normalizations are not independent postulates. They are readings of one augmented stationarity equation under the relevant symmetry and constraint data.
+
+This remark does not select which symmetries exist. Symmetry selection remains supplied by the appropriate branch, such as the finite-response block-frame capacity branch for the gauge algebra. It also does not override anomalies: when the local measure or response determinant carries a nonzero anomaly class, the Ward identity is replaced by the anomaly-descent statement for that branch.
+
 ### X.8g Fisher-Symplectic Predictive Response
 
 **Definition X.8g.1 (Hermitian Predictive Response Form).** Let $T$ be a finite-dimensional complex tangent space of retained perturbations on a regular MPU branch. A Hermitian predictive response form is a positive definite Hermitian form
@@ -1754,6 +1758,352 @@ $$
 if and only if finite PCE descent holds across $C$ in this normalized canonical-form representative. Consequently a canonical-form residue, when present, is not an additional amplitude postulate; it is the differential-form representative of the same finite protocol-factorization theorem.
 
 *Proof.* Under the stated normalization, the residue of a logarithmic canonical form on $F_C$ is the induced finite boundary response measure on that facet. By Theorem X.8h.6, descent across $C$ is equivalent to the finite fiber-product identity (X.8h.5.3). A finite measure on this fiber product factors through the left and right measures over the common boundary measure exactly when its coordinate functional factors through the tensor product over $\mathbb R[\mathcal P_C^{(N_C)}]$. With the nondegeneracy and orientation conventions fixed, this factorization is exactly (X.8h.7.1). Conversely, (X.8h.7.1) implies that all boundary-glued response functionals represented by the canonical residue factor through the same fiber product, hence descent holds by Theorem X.8h.6. ∎
+
+**Definition X.8h.8 (Finite Predictive Amplitude from PCE Compression).** Let
+$$
+\mathfrak F_{\mathrm{PU}}^{(N)}
+=
+\left(
+\mathcal P_{\mathrm{PU}}^{(N)},
+\{\mathcal A_U^{(N)}\}_U,
+\{\mu_{\iota}^{(N)}\}_{\iota},
+\{F_C\}_C
+\right)
+$$
+be a finite predictive factorization geometry as in Definition X.8h.5.
+
+Let $U_1,\dots,U_n\subset U$ be mutually admissible finite causal diamonds, and let
+$$
+O_i\in \mathcal A_{U_i}^{(N)}
+$$
+be retained finite response classes. For a binary compression tree $\tau$ assembling $U_1,\dots,U_n$ into $U$, write
+$$
+\mu_\tau^{(N)}
+:
+\mathcal A_{U_1}^{(N)}\otimes\cdots\otimes\mathcal A_{U_n}^{(N)}
+\longrightarrow
+\mathcal A_U^{(N)}
+$$
+for the iterated PCE compression product determined by the maps $\mu_{\iota}^{(N)}$.
+
+For any admissible finite response functional
+$$
+\varphi_U\in \left(\mathcal A_U^{(N)}\right)^*,
+$$
+the **finite predictive amplitude** of the protocol $(O_1,\dots,O_n)$ in compression channel $\tau$ is
+$$
+\mathfrak A_{\mathrm{PU},\varphi_U}^{(N)}
+(\tau;O_1,\dots,O_n)
+:=
+\varphi_U
+\left(
+\mu_\tau^{(N)}
+(O_1\otimes\cdots\otimes O_n)
+\right).
+\tag{X.8h.8.1}
+$$
+
+This definition uses only finite retained response classes, PCE compression, and admissible response evaluation. It does not assume a canonical form, a positive geometry, a Grassmannian external-state map, or a physical scattering $S$-matrix interpretation.
+
+**Theorem X.8h.9 (First-Principles Crossing of Finite Predictive Amplitudes).** On any finite predictive factorization geometry satisfying the hypotheses of Theorem X.8h.6 — in particular, assuming admissible response functionals separate the retained PCE quotient — finite predictive amplitudes are independent of compression parenthesization exactly when the retained PCE compression product is path-independent.
+
+For three retained local response classes
+$$
+O_i,O_j,O_k,
+$$
+and any admissible response functional $\varphi$, define
+$$
+\mathfrak A_{(ij)k}^{\varphi}
+:=
+\varphi\!\left(
+\mu_{(ij)k}^{(N)}
+\left(
+\mu_{ij}^{(N)}(O_i\otimes O_j)\otimes O_k
+\right)
+\right),
+$$
+and
+$$
+\mathfrak A_{i(jk)}^{\varphi}
+:=
+\varphi\!\left(
+\mu_{i(jk)}^{(N)}
+\left(
+O_i\otimes \mu_{jk}^{(N)}(O_j\otimes O_k)
+\right)
+\right).
+$$
+
+Then the following are equivalent:
+
+1. finite predictive amplitudes are compression-path independent:
+   $$
+   \mathfrak A_{(ij)k}^{\varphi}
+   =
+   \mathfrak A_{i(jk)}^{\varphi}
+   $$
+   for every admissible finite response functional $\varphi$;
+
+2. local predictive compression is path-independent in the retained PCE quotient:
+   $$
+   \mu_{(ij)k}^{(N)}
+   \left(
+   \mu_{ij}^{(N)}(O_i\otimes O_j)\otimes O_k
+   \right)
+   =
+   \mu_{i(jk)}^{(N)}
+   \left(
+   O_i\otimes \mu_{jk}^{(N)}(O_j\otimes O_k)
+   \right);
+   $$
+
+3. the retained finite OPE coefficients satisfy the crossing equations
+   $$
+   \sum_{\ell} C_{ij}^{\ell}C_{\ell k}^{m}
+   =
+   \sum_{\ell} C_{jk}^{\ell}C_{i\ell}^{m}
+   \quad
+   \text{for every retained }m.
+   \tag{X.8h.9.1}
+   $$
+
+Consequently, on the PCE quotient separated by admissible response functionals, the finite predictive amplitude
+$$
+\mathfrak A_{\mathrm{PU},\varphi}^{(N)}
+(O_1,\dots,O_n)
+$$
+is a well-defined operational quantity independent of the chosen compression tree whenever the finite crossing identities hold.
+
+*Proof.* By Definition X.8h.8, the two three-point compression amplitudes differ by
+$$
+\mathfrak A_{(ij)k}^{\varphi}
+-
+\mathfrak A_{i(jk)}^{\varphi}
+=
+\varphi
+\left(
+\mu_{(ij)k}^{(N)}
+\left(
+\mu_{ij}^{(N)}(O_i\otimes O_j)\otimes O_k
+\right)
+-
+\mu_{i(jk)}^{(N)}
+\left(
+O_i\otimes \mu_{jk}^{(N)}(O_j\otimes O_k)
+\right)
+\right).
+$$
+
+Equality of the two amplitudes for every admissible separating response functional $\varphi$ holds if and only if the difference inside the parenthesis is operationally null in the retained PCE quotient. Since admissible response functionals separate the retained quotient by the hypothesis of Theorem X.8h.6, this is equivalent to path-independence of the compression product itself.
+
+The equivalence between compression path-independence and the finite crossing identities is exactly Theorem X.8h.6. Iterating the three-point associativity move across binary trees gives independence of the full $n$-point compression tree. ∎
+
+**Theorem X.8h.10 (Finite Min-Cut Descent of Predictive Amplitudes).** Let $C$ be an admissible predictive min-cut in a finite predictive factorization geometry, separating a left region $L$ from a right region $R$ through boundary data $B_C$. Suppose finite PCE descent across $C$ is represented by the factorization-facet identity
+$$
+\mathbb R[F_C]
+\cong
+\mathbb R[\mathcal P_L^{(N_L)}]
+\otimes_{\mathbb R[\mathcal P_C^{(N_C)}]}
+\mathbb R[\mathcal P_R^{(N_R)}].
+\tag{X.8h.10.1}
+$$
+
+Then finite predictive amplitudes descend through the same coequalizer. Equivalently, for every boundary coordinate class
+$$
+b\in \mathbb R[\mathcal P_C^{(N_C)}],
+$$
+left response class $a_L$, right response class $a_R$, and admissible response functional $\varphi_C$ on the factorization facet, the amplitude satisfies the balancing relation
+$$
+\varphi_C\!\left((a_L b)\otimes a_R\right)
+=
+\varphi_C\!\left(a_L\otimes (b a_R)\right).
+\tag{X.8h.10.2}
+$$
+
+Therefore the finite predictive amplitude depends only on the balanced tensor class
+$$
+a_L\otimes_{\mathbb R[\mathcal P_C^{(N_C)}]}a_R,
+$$
+not on the arbitrary choice of left or right representative for the shared boundary data.
+
+In this precise finite-response sense, predictive amplitudes factorize across admissible min-cuts: the global response is the PCE-balanced gluing of the left and right responses over the shared boundary response algebra.
+
+*Proof.* Finite PCE descent across $C$ says that the assembled global response is independent of the representative chosen for the shared boundary data $B_C$. In coordinate algebra this independence is exactly the coequalizer relation
+$$
+(a_L b)\otimes a_R
+\sim
+a_L\otimes (b a_R),
+$$
+for
+$$
+b\in\mathbb R[\mathcal P_C^{(N_C)}].
+$$
+
+By Definition X.8h.5, the factorization facet $F_C$ represents this coequalizer as the finite fiber product
+$$
+\mathbb R[F_C]
+\cong
+\mathbb R[\mathcal P_L^{(N_L)}]
+\otimes_{\mathbb R[\mathcal P_C^{(N_C)}]}
+\mathbb R[\mathcal P_R^{(N_R)}].
+$$
+
+Any admissible finite response functional $\varphi_C$ on $F_C$ is therefore a linear functional on the balanced tensor product. Hence it assigns equal values to representatives identified by the coequalizer:
+$$
+\varphi_C\!\left((a_L b)\otimes a_R\right)
+=
+\varphi_C\!\left(a_L\otimes (b a_R)\right).
+$$
+
+By Definition X.8h.8, finite predictive amplitudes are precisely such response evaluations after PCE compression. Therefore the predictive amplitude descends through the same balanced tensor product and depends only on the glued left/right response class. ∎
+
+**Corollary X.8h.11 (Boundary-Basis Expansion from Pairing and Factorization Certificates).** In the setting of Theorem X.8h.10, suppose the finite boundary response space admits a nondegenerate pairing certificate
+$$
+\eta_C:
+\mathcal B_C^{(N)}\otimes\mathcal B_C^{(N)}
+\to \mathbb R
+$$
+with finite dual bases
+$$
+\{e_\alpha\},\qquad
+\{e^\alpha\},
+\qquad
+\eta_C(e_\alpha,e^\beta)=\delta_\alpha^{\beta}.
+$$
+
+Suppose also that the branch supplies a finite factorization certificate for the min-cut facet: for each retained left class $a_L$ and right class $a_R$, the facet response functional is represented by compatible left and right boundary response maps
+$$
+\mathfrak A_L^{(N_L)}(a_L,-):\mathcal B_C^{(N)}\to\mathbb R,
+\qquad
+\mathfrak A_R^{(N_R)}(-,a_R):\mathcal B_C^{(N)}\to\mathbb R,
+$$
+whose contraction over the boundary pairing equals the balanced response class of Theorem X.8h.10.
+
+Then the finite min-cut amplitude has the boundary-channel expansion
+$$
+\mathfrak A_{\mathrm{PU}}^{(N)}(a_L,a_R)
+=
+\sum_{\alpha}
+\mathfrak A_L^{(N_L)}(a_L,e_\alpha)\,
+\mathfrak A_R^{(N_R)}(e^\alpha,a_R),
+\tag{X.8h.11.1}
+$$
+with the pairing convention absorbed into the dual basis. Equivalently, for a general matrix pairing
+$$
+\eta_{\alpha\beta}=\eta_C(e_\alpha,e_\beta),
+\qquad
+(\eta^{\alpha\beta})=(\eta_{\alpha\beta})^{-1},
+$$
+one has
+$$
+\mathfrak A_{\mathrm{PU}}^{(N)}(a_L,a_R)
+=
+\sum_{\alpha,\beta}
+\mathfrak A_L^{(N_L)}(a_L,e_\alpha)\,
+\eta^{\alpha\beta}\,
+\mathfrak A_R^{(N_R)}(e_\beta,a_R).
+\tag{X.8h.11.2}
+$$
+
+This is the finite PU analogue of summing over intermediate boundary channels. The primitive theorem-level statement is the balanced descent relation of Theorem X.8h.10. The basis expansion additionally requires both the nondegenerate boundary pairing and the finite factorization certificate; a pairing alone does not force an arbitrary balanced functional to split into left and right channel amplitudes.
+
+*Proof.* Theorem X.8h.10 places the global min-cut response in the balanced tensor class over the boundary response algebra. A nondegenerate finite pairing identifies the boundary space with its dual and supplies the finite identity resolution
+$$
+\mathrm{id}_{\mathcal B_C^{(N)}}
+=
+\sum_{\alpha} e_\alpha\otimes e^\alpha
+$$
+or, in matrix notation,
+$$
+\mathrm{id}_{\mathcal B_C^{(N)}}
+=
+\sum_{\alpha,\beta}
+e_\alpha\,\eta^{\alpha\beta}\,\eta_C(e_\beta,\cdot).
+$$
+
+The factorization certificate states that the facet response functional is obtained by contracting the left and right boundary response maps through this pairing. Substituting the finite identity resolution on the shared boundary gives (X.8h.11.1), and the matrix form gives (X.8h.11.2). Without the factorization certificate, Theorem X.8h.10 still gives balanced descent, but not a distinguished left/right channel-sum representation. ∎
+
+**Corollary X.8h.12 (Canonical-Form Representation of Finite Predictive Amplitudes).** Suppose, in addition to the finite PCE data above, that the branch supplies a normalized logarithmic canonical-form representative
+$$
+\Omega_{\mathrm{PU}}^{(N)}
+$$
+on
+$$
+\mathcal P_{\mathrm{PU}}^{(N)}
+$$
+with nondegenerate boundary residue measures and orientation conventions as in Corollary X.8h.7.
+
+Then the canonical residue on a predictive min-cut facet $F_C$ represents the finite predictive amplitude density on that facet:
+$$
+\mathcal A_{\mathrm{PU}}^{(N)}[C]
+=
+\operatorname{Res}_{F_C}\Omega_{\mathrm{PU}}^{(N)}.
+\tag{X.8h.12.1}
+$$
+
+Moreover,
+$$
+\operatorname{Res}_{F_C}\Omega_{\mathrm{PU}}^{(N)}
+=
+\Omega_L^{(N_L)}\wedge\Omega_R^{(N_R)}
+\tag{X.8h.12.2}
+$$
+if and only if finite PCE descent holds across $C$.
+
+Thus canonical-form residues are not the first definition of PU amplitudes. They are a geometric representative of the first-principles finite predictive amplitudes defined by PCE compression and response evaluation.
+
+*Proof.* The finite predictive amplitude is defined in Definition X.8h.8 by PCE compression followed by admissible response evaluation. Theorem X.8h.10 proves that, across a min-cut, this amplitude descends through the balanced finite response coequalizer.
+
+Corollary X.8h.7 states that, when a normalized logarithmic canonical-form representative exists, its boundary residue functional is the induced finite boundary response measure on the same factorization facet and factors as
+$$
+\Omega_L^{(N_L)}\wedge\Omega_R^{(N_R)}
+$$
+if and only if the same finite PCE descent holds.
+
+Therefore the residue is a differential-form representative of the finite predictive amplitude density already defined algebraically. ∎
+
+**Theorem X.8h.13 (External Scattering Amplitudes Require a Physical-Instantiation Map).** The finite predictive amplitudes of Definition X.8h.8 are theorem-level internal PU quantities. They are not automatically identical to physical scattering $S$-matrix elements.
+
+To identify a physical $n$-external scattering amplitude with a PU finite predictive amplitude, a branch must supply at least:
+
+1. an external protocol or kinematic space
+   $$
+   \mathcal X_n;
+   $$
+
+2. a finite physical-instantiation response map
+   $$
+   \Phi_n:\mathcal X_n\to \mathcal P_{\mathrm{PU}}^{(N)};
+   $$
+
+3. a proof that physical factorization channels in $\mathcal X_n$ map to predictive min-cut facets $F_C$;
+
+4. a normalization theorem matching the PU finite response functional to the physical amplitude normalization.
+
+Without these data, the internal finite predictive amplitude is determined, but its identification with a physical scattering amplitude is underdetermined.
+
+In particular, if two admissible maps
+$$
+\Phi_n,\Phi_n':\mathcal X_n\to\mathcal P_{\mathrm{PU}}^{(N)}
+$$
+agree with all internal PU finite-response axioms but differ on the image of a physical channel, then the pulled-back functions
+$$
+\Phi_n^*\mathfrak A_{\mathrm{PU}}^{(N)}
+\qquad\text{and}\qquad
+(\Phi_n')^*\mathfrak A_{\mathrm{PU}}^{(N)}
+$$
+can differ while the internal PU theorem remains unchanged. Therefore the external scattering interpretation is not fixed by the internal finite response geometry alone.
+
+*Proof.* Definitions X.8h.5 and X.8h.8 construct the finite predictive amplitude entirely inside the retained response geometry. No external kinematic labels, asymptotic one-particle states, momentum twistors, LSZ map, color ordering, or physical normalization convention appears in that construction.
+
+A physical scattering amplitude is a function or distribution on a physical external data space $\mathcal X_n$. To compare it with a PU finite predictive amplitude, one must pull the PU response data back to $\mathcal X_n$, which requires a map
+$$
+\Phi_n:\mathcal X_n\to\mathcal P_{\mathrm{PU}}^{(N)}.
+$$
+
+If no such map is supplied, there is no mathematical object with domain $\mathcal X_n$ to compare to the physical amplitude. If two different admissible maps are supplied, functorial pullback gives two generally different pulled-back amplitude functions. Since the internal PU construction does not distinguish between them, the physical scattering identification is underdetermined until the branch supplies the physical-instantiation map and normalization certificate.
+
+Thus the internal finite predictive amplitude is theorem-level, while the physical scattering $S$-matrix identification is a separate branch theorem. ∎
 
 ### X.8i Predictive Cosmic Galois Filtration
 

@@ -1502,7 +1502,21 @@ These derivations share PCE optimization but operate on different structures. Th
 
 $$\boxed{24 \longleftrightarrow 6_{\text{Lorentz}} + 12_{\text{Gauge}} + 6_{\text{Residual}}}$$
 
-**Caveat:** This decomposition reflects numerical coincidences between independently derived quantities. Whether these coincidences indicate deeper structural connections or are arithmetically accidental remains an open question.
+**Caveat:** This decomposition reflects numerical correspondences between independently derived quantities. The $3_{\mathfrak{su}(2)}$ subpiece of the gauge term is supported by the finite-response block-frame capacity ledger: the active rank $a=2$, together with $d_0=8$, Theorem G.8.4b, and Theorem G.8.4c.0c, selects the unique rank-2 weak summand in the capacity-saturating inactive decomposition $3+2+1$. Fiberwise, any local unitary identification between the active rank-2 carrier and that weak summand transports the Pauli $\mathfrak{su}(2)$ algebra to the weak block. The broader $24=6+12+6$ correspondence, and the Lorentz, color, abelian, and residual terms in it, retain their stated derivations and caveats; no additional global identification is claimed here.
+
+The Lorentz term is closed only as the real Lie-algebra count
+$$
+6_{\mathrm{Lorentz}}=\dim_{\mathbb R}\mathfrak{so}(1,3),
+$$
+sourced by the active rank-2 spinor determinant form on the Lorentzian branch (Corollary G.10.5.1). It is not identified with the inactive complex rank
+$$
+\dim_{\mathbb C}\mathcal B=6.
+$$
+The residual term
+$$
+6_{\mathrm{Residual}}
+$$
+remains a ledger remainder unless a separate residual-sector certificate is supplied.
 
 | Component | Value | Derivation | Reference |
 |:----------|:-----:|:-----------|:----------|
@@ -4348,6 +4362,23 @@ R_\alpha^{\mathrm{cent}}
 =
 -0.00009287822863\ldots .
 \tag{Z.27.11e.2}
+$$
+
+For sign clarity, define the positive comparison offset
+$$
+\Delta_\alpha
+:=
+\alpha^{-1}_{0}-\alpha^{-1}_{\mathrm{exp}}
+=
++0.00009287822863\ldots .
+$$
+Thus $\Delta_\alpha>0$ is the residual-free core's overshoot relative to the recorded comparison value, while $R_\alpha$ remains the additive certificate residual in
+$$
+\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha.
+$$
+Consequently the centered additive correction has the opposite sign:
+$$
+R_\alpha^{\mathrm{cent}}=-\Delta_\alpha.
 $$
 
 *Reading.* The measurement-side uncertainty $\sigma_{\alpha^{-1}}$ is not the certificate budget for theory-experiment comparison on this branch, because the certificate-complete row $\alpha^{-1}_{\mathrm{cert}}=\alpha^{-1}_{0}+R_\alpha$ is defined to absorb structural corrections through $R_\alpha$; the relevant branch budget is the accepted residual interval once the gate is closed. The structural-correction bucket $R_\alpha$ has named bulk, interface, electromagnetic, curvature, and sinc-transport entries of $\mathfrak C_\alpha$. The arithmetic of (Z.27.11e.1) therefore constrains what kind of same-branch theorem can serve as comparison closure: a hypothetical theorem fixing $R_\alpha=0$ on the Appendix Z core branch would close the row at $\alpha^{-1}_{0}$, which does not equal the recorded comparison value and lies outside the recorded measurement-side uncertainty and the canonical comparison-budget diagnostic. The residual-gated row remains certificate-pending; a separately certified nonzero residual is consistent with the comparison value and is closed by Definition Z.27.11a, Definition Z.27.11g, or Definition Z.27.11j.

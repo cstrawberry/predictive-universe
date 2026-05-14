@@ -919,6 +919,22 @@ A_{\mathrm{eff}}^{(\mathrm{obs},\kappa)}
 $$
 This computes the prefactor required to match the observed value after $\kappa$ is chosen; it does not determine $A_{\mathrm{eff}}$ from PU vacuum dynamics. Conversely, the Appendix U working value is obtained by the convention $K_{\mathrm{transfer}}=A_{EW}^{-1}$ together with an explicit systematic allowance for ghost/zero-mode and extensivity conventions. Since Theorem T.29.2 makes $A_{EW}$ model-conditional, the transferred factor cannot have stronger status in Appendix U than the determinant model from which it is transferred. Finally, Proposition U.15a defines the determinant object but does not evaluate all finite determinant, Jacobian, ghost, zero-mode, finite-volume, extensivity, and measure factors on the four-mode false-vacuum branch. Hence the current manuscript has a forward convention and an observational inversion, but not a theorem-level vacuum prefactor. ∎
 
+**Remark U.15c.1 (Vacuum Weight Interpretation of $\Lambda$).** Within Appendix U, the cosmological constant is the gravitational-unit expression of a residual vacuum-sector finite-action weight:
+$$
+\Lambda L_P^2=8\pi A_{\mathrm{eff}}e^{-2\kappa}.
+$$
+The exponent $\kappa$ is determined by the vacuum configuration-space count and zero-mode ledger of the chosen branch. The current theorem-level false-vacuum branch gives
+$$
+\kappa=142
+$$
+under Theorem U.13b, while the five-mode value
+$$
+\kappa_{\Lambda,\mathrm{ref}}=141.5
+$$
+remains a reference convention rather than a theorem-level zero-mode count for the current Definition U.4 continuum action.
+
+This is not an unsuppressed Planck zero-point estimate. The exponential weight $e^{-2\kappa}$ is the compressed vacuum-sector contribution, while the forward numerical value still requires the Fredholm prefactor certificate of Definition U.15d.
+
 **Definition U.15d (False-Vacuum Fredholm Prefactor Certificate).** A false-vacuum Fredholm prefactor certificate for the Appendix U bounce branch is a finite record
 $$
 \mathfrak F_U=\left(\mathcal H_{\mathrm{false}},\mathcal H_{\mathrm{bounce}},\Pi_0,\Pi_-,\mathcal J_{\mathrm{coll}},\mathcal A_{\mathrm{neg}},\mathcal A_{\mathrm{ghost}},\mathcal A_{\mathrm{fv}},\mathcal A_{\mathrm{meas}},\mu_U\right)
