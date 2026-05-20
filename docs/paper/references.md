@@ -141,6 +141,15 @@
 *   Cohen-Tannoudji, C., Dupont-Roc, J., & Grynberg, G. (1992). *Atom-Photon Interactions: Basic Processes and Applications*. Wiley-Interscience.
 *   Cohn, H., & Elkies, N. (2003). New upper bounds on sphere packings I. *Annals of Mathematics*, *157*, 689–714.
 *   Cohn, H., Kumar, A., Miller, S. D., Radchenko, D., & Viazovska, M. (2017). The sphere packing problem in dimension 24. *Annals of Mathematics*, *185*(3), 1017–1033.
+*   Berndt, B. C. (1985). *Ramanujan's Notebooks, Part I*. Springer.
+*   Carr, G. S. (1886). *A Synopsis of Elementary Results in Pure and Applied Mathematics*. Francis Hodgson.
+*   Hardy, G. H. (1940). *Ramanujan: Twelve Lectures on Subjects Suggested by His Life and Work*. Cambridge University Press.
+*   Kong, Z.-Y., & Teo, L.-P. (2023). An elementary proof of the transformation formula for the Dedekind eta function. arXiv:2302.03280.
+*   LMFDB Collaboration. Newform orbit 1.12.a.a: the discriminant modular form $\Delta=\sum\tau(n)q^n$.
+*   MacTutor History of Mathematics Archive. Srinivasa Aiyangar Ramanujan. University of St Andrews.
+*   OEIS Foundation. Sequence A000594, Ramanujan's tau function.
+*   Weisstein, E. W. Dedekind Eta Function. *MathWorld--A Wolfram Web Resource*.
+*   Weisstein, E. W. Leech Lattice. *MathWorld--A Wolfram Web Resource*.
 *   Coleman, S., & Weinberg, E. (1973). Radiative Corrections as the Origin of Spontaneous Symmetry Breaking. *Physical Review D*, *7*(6), 1888–1912. DOI: 10.1103/PhysRevD.7.1888
 *   Coleman, S. (1977). The fate of the false vacuum: Semiclassical theory. *Physical Review D*, *15*(10), 2929–2936; Erratum: *Physical Review D*, *16*, 1248 (1977). DOIs: 10.1103/PhysRevD.15.2929; 10.1103/PhysRevD.16.1248
 *   Coleman, S. (1985). *Aspects of Symmetry: Selected Erice Lectures*. Cambridge University Press. DOI: 10.1017/CBO9780511565045
@@ -150,6 +159,8 @@
 *   Conway, J. H., & Norton, S. P. (1979). Monstrous Moonshine. *Bulletin of the London Mathematical Society*, *11*, 308–339.
 *   Conway, J. H., & Sloane, N. J. A. (1999). *Sphere Packings, Lattices and Groups* (3rd ed.). Springer-Verlag.
 *   Cook, M. (2004). Universality in elementary cellular automata. *Complex Systems*, *15*(1), 1–40. DOI: 10.25088/ComplexSystems.15.1.1
+*   Cook, S. A. (1978). Soundness and completeness of an axiom system for program verification. *SIAM Journal on Computing*, *7*(1), 70–90. DOI: 10.1137/0207005
+*   Cook, S., & Nguyen, P. (2010). *Logical Foundations of Proof Complexity*. Cambridge University Press.
 *   Corless, R. M., Gonnet, G. H., Hare, D. E. G., Jeffrey, D. J., & Knuth, D. E. (1996). On the Lambert W function. *Advances in Computational Mathematics*, *5*(1), 329–359. DOI: 10.1007/BF02124750
 *   Cover, T. M., & Thomas, J. A. (2006). *Elements of Information Theory* (2nd ed.). Wiley. DOI: 10.1002/047174882X
 *   Craddock, T. J. A., Kurian, P., Preto, J., Sahu, K., Hameroff, S. R., Klobukowski, M., & Tuszynski, J. A. (2017). Anesthetic Alterations of Collective Terahertz Oscillations in Tubulin Correlate with Clinical Potency: Implications for Anesthetic Action and Post-Operative Cognitive Dysfunction. *Scientific Reports*, *7*, 9877.
@@ -255,6 +266,10 @@
 *   Gildener, E., & Weinberg, S. (1976). Symmetry breaking and scalar bosons. *Physical Review D*, *13*(12), 3333–3341. DOI: 10.1103/PhysRevD.13.3333 
 *   Gelfand, S. B., & Mitter, S. K. (1991). Recursive stochastic algorithms for global optimization in $\mathbb{R}^d$. *SIAM Journal on Control and Optimization*, *29*(5), 999–1018. DOI: 10.1137/0329055
 *   Gleason, A. M. (1957). Measures on the closed subspaces of a Hilbert space. *Journal of Mathematics and Mechanics*, *6*(4), 885–893. DOI: 10.1512/iumj.1957.6.56050
+*   Fallenstein, B., & Soares, N. (2015). *Vingean Reflection: Reliable Reasoning for Self-Improving Agents*. Machine Intelligence Research Institute Technical Report 2015-2.
+*   Fallenstein, B., Taylor, J., & Christiano, P. F. (2015). Reflective Oracles: A Foundation for Classical Game Theory. arXiv:1508.04145.
+*   Garrabrant, S., Benson-Tilsen, T., Critch, A., Soares, N., & Taylor, J. (2016). Logical Induction. arXiv:1609.03543.
+*   Garrabrant, S., Benson-Tilsen, T., Critch, A., Soares, N., & Taylor, J. (2017). A Formal Approach to the Problem of Logical Non-Omniscience. *Electronic Proceedings in Theoretical Computer Science*, *251*, 221–235. DOI: 10.4204/EPTCS.251.16.
 *   Gödel, K. (1931). Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I. *Monatshefte für Mathematik und Physik*, *38*(1), 173–198. DOI: 10.1007/BF01700692
 *   Goff, P. (2017). *Consciousness and Fundamental Reality*. Oxford University Press.
 *   Goodman, R., & Wallach, N. R. (2009). *Symmetry, Representations, and Invariants*. Springer.
@@ -376,6 +391,7 @@
 *   Koch, C., & Hepp, K. (2006). Quantum mechanics in the brain. *Nature*, *440*(7084), 611. DOI: 10.1038/440611a
 *   Kolchinsky, A., & Wolpert, D. H. (2018). Semantic information, autonomous agency and non-equilibrium statistical physics. *Interface Focus*, *8*(6), 20180041. DOI: 10.1098/rsfs.2018.0041
 *   Wolpert, D. H. (1992). Memory systems, computation, and the second law of thermodynamics. *International Journal of Theoretical Physics*, *31*(4), 743–785. DOI: 10.1007/BF00670829
+*   Wolpert, D. H. (2008). Physical limits of inference. *Physica D: Nonlinear Phenomena*, *237*(9), 1257–1281. DOI: 10.1016/j.physd.2008.03.040
 *   Wolpert, D. H., & Kipper, J. (2024). Memory systems, the epistemic arrow of time, and the second law. *Entropy*, *26*(2), 170. DOI: 10.3390/e26020170
 *   Wolpert, D., Rovelli, C., & Scharnhorst, J. (2025). Disentangling Boltzmann brains, the time-asymmetry of memory, and the second law. *Entropy*, *27*(12), 1227. DOI: 10.3390/e27121227
 *   Korkine, A., & Zolotareff, G. (1873). Sur les formes quadratiques. *Mathematische Annalen*, *6*, 366–389. DOI: 10.1007/BF01442795
@@ -456,6 +472,7 @@
 *   McGaugh, S. S. (2012). The Baryonic Tully-Fisher Relation of Gas-Rich Galaxies as a Test of ΛCDM and MOND. *The Astronomical Journal*, *143*(2), 40. DOI: 10.1088/0004-6256/143/2/40
 *   McGaugh, S. S., Lelli, F., & Schombert, J. M. (2016). The Radial Acceleration Relation in Rotationally Supported Galaxies. *Physical Review Letters*, *117*(20), 201101. DOI: 10.1103/PhysRevLett.117.201101
 *   Mendelson, E. (2015). *Introduction to Mathematical Logic* (6th ed.). CRC Press.
+*   Okamoto, T., & Kashima, R. (2005). Resource Bounded Unprovability of Computational Lower Bounds. arXiv:cs/0503091.
 *   Milgrom, M. (1983). A modification of the Newtonian dynamics as a possible alternative to the hidden mass hypothesis. *The Astrophysical Journal*, *270*, 365–370. DOI: 10.1086/161130
 *   Milnor, J., & Husemoller, D. (1973). *Symmetric Bilinear Forms*. Ergebnisse der Mathematik und ihrer Grenzgebiete (Vol. 73). Springer-Verlag. DOI: 10.1007/978-3-642-88330-9
 *   Milnor, J. W., & Stasheff, J. D. (1974). *Characteristic Classes*. Princeton University Press.
@@ -634,6 +651,7 @@
 *   Tononi, G., Boly, M., Massimini, M., & Koch, C. (2016). Integrated information theory: from consciousness to its physical substrate. *Nature Reviews Neuroscience*, *17*(7), 450–461. DOI: 10.1038/nrn.2016.44
 *   Touboul, P., et al. (MICROSCOPE Collaboration) (2017). MICROSCOPE mission: First results of a space test of the equivalence principle. *Physical Review Letters*, *119*, 231101. DOI: 10.1103/PhysRevLett.119.231101
 *   Touboul, P., et al. (2022). MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle. *Physical Review Letters*, *129*(12), 121102.
+*   Treur, J. (1993). Heuristic reasoning and relative incompleteness. *International Journal of Approximate Reasoning*, *8*, 51–87. DOI: 10.1016/S0888-613X(05)80005-2
 *   Turing, A. M. (1936). On computable numbers, with an application to the Entscheidungsproblem. *Proceedings of the London Mathematical Society*, s2-42(1), 230–265. DOI: 10.1112/plms/s2-42.1.230
 *   Tuszyński, J. A., Brown, J. A., & Hawrylak, P. (1998). Dielectric polarization, electrical conduction, information processing and quantum computation in microtubules. Are they plausible? *Philosophical Transactions of the Royal Society of London A*, *356*(1743), 1897–1926.
 *   Uhlmann, A. (1976). The "transition probability" in the state space of a *-algebra. *Reports on Mathematical Physics*, *9*, 273–279.
@@ -750,4 +768,5 @@
 *   Watatani, Y. (1990). *Index for $C^*$-Subalgebras*. Memoirs of the American Mathematical Society, Vol. 83, No. 424. American Mathematical Society.
 *   Wigner, E. P. (1952). Die Messung quantenmechanischer Operatoren. *Zeitschrift für Physik*, *133*, 101–108. DOI: 10.1007/BF01324904
 *   Yonekura, K. (2019). On the cobordism classification of symmetry protected topological phases. *Communications in Mathematical Physics*, *368*, 1121–1173. DOI: 10.1007/s00220-019-03439-y
+*   Yudkowsky, E., & Herreshoff, M. (2013). Tiling Agents for Self-Modifying AI, and the Löbian Obstacle. Machine Intelligence Research Institute draft.
 *   Zurek, W. H. (2003). Decoherence, einselection, and the quantum origins of the classical. *Reviews of Modern Physics*, *75*(3), 715–775. DOI: 10.1103/RevModPhys.75.715

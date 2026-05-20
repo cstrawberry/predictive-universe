@@ -789,20 +789,22 @@ $$
 $$
 where $\Delta M_S^{(\text{ext})}(E)$ modifies $S$'s model of the external world and $\Delta M_S^{(\text{self})}(E)$ modifies $S$'s self-model $\mathcal{M}_S$. The decomposition is defined by orthogonal projection in the Fisher information metric on $M_S$: the full parameter space of $M_S$ partitions into the self-model subspace $\Theta_S^{(\text{self})}$ and its Fisher-orthogonal complement $\Theta_S^{(\text{ext})}$, and we define $\Delta M_S^{(\text{self})}(E) := \text{proj}_{\Theta_S^{(\text{self})}} \Delta M_S(E)$ and $\Delta M_S^{(\text{ext})}(E) := \text{proj}_{\Theta_S^{(\text{ext})}} \Delta M_S(E)$. By construction, $\langle \Delta M_S^{(\text{ext})}(E),\, \Delta M_S^{(\text{self})}(E) \rangle_{\mathcal{F}_S} = 0$. The Pythagorean identity $\|\Delta M_S\|_{\mathcal{F}_S}^2 = \|\Delta M_S^{(\text{ext})}\|_{\mathcal{F}_S}^2 + \|\Delta M_S^{(\text{self})}\|_{\mathcal{F}_S}^2$ then holds, ensuring the reflexivity fraction $\sigma_S \in [0,1]$ (Definition M.10.4). The component $\Delta M_S^{(\text{self})}(E)$ is defined as the total change to the self-model, including indirect changes propagated from external model updates via causal coupling between external and self-model components; any such propagated changes are absorbed into $\Delta M_S^{(\text{self})}$ prior to the orthogonal decomposition, so the decomposition reflects the final allocation of model-change across subspaces rather than the causal pathway. All qualitative results below hold for any consistent assignment satisfying $\sigma_S = 0 \iff \Delta M_S^{(\text{self})} = 0$.
 
-**Definition M.10.3 (SPAP Proximity).** Let $S$ be a system with Effective Operational Property R and self-model $\mathcal{M}_S$ parameterized by $\theta_S \in \Theta_S \subseteq \mathbb{R}^{d_S}$, where $d_S$ is the self-model dimensionality. Processing $E$ induces a candidate updated parameter $\theta_S' = \theta_S + \delta\theta_S(E)$, where $\delta\theta_S(E)$ is determined by $\Delta M_S^{(\text{self})}(E)$. Define the *required self-predictive performance* $PP_S^{(E)}$ as:
+**Definition M.10.3 (SPAP Proximity).** Let $S$ be a system with Effective Operational Property R and self-model $\mathcal{M}_S$ parameterized by $\theta_S \in \Theta_S \subseteq \mathbb{R}^{d_S}$, where $d_S$ is the self-model dimensionality. Processing $E$ induces a candidate updated parameter $\theta_S' = \theta_S + \delta\theta_S(E)$, where $\delta\theta_S(E)$ is determined by $\Delta M_S^{(\mathrm{self})}(E)$. Define the *required self-predictive performance* $PP_S^{(E)}$ as:
+
 $$
-PP_S^{(E)} := \inf\left\{PP \in [0, \alpha_{SPAP}] : \left\| \Pi_S^{(PP)}(\theta_S') - \theta_S' \right\|_{\mathcal{F}_S} \leq g(\alpha_{SPAP} - PP) \right\}
+PP_S^{(E)} := \inf\left\{PP \in [0, \alpha_{SPAP}] : \left\| \Pi_S^{(PP)}(\theta_S') - \theta_S' \right\|_{\mathcal F_S} \le g(\alpha_{SPAP} - PP) \right\}
 \tag{M.18}
 $$
+
 where:
 
-- $\Pi_S^{(PP)}(\theta_S')$ is the self-model prediction map at performance level $PP$: given a self-model configuration $\theta_S'$ and a specified performance level $PP \in [0, \alpha_{SPAP}]$, $\Pi_S^{(PP)}$ returns the configuration that $S$'s predictive process, constrained to operate at performance level $PP$, would assign to itself. The map $\Pi_S^{(PP)}$ is smooth in both arguments on $[0, \alpha_{SPAP}] \times \Theta_S$ (finite-dimensional smooth manifolds). At $PP = 0$, the predictor makes no self-referential commitment: $\Pi_S^{(0)}(\theta_S')$ is $S$'s default self-model (independent of $\theta_S'$), so the discrepancy $\|\Pi_S^{(0)}(\theta_S') - \theta_S'\|_{\mathcal{F}_S}$ equals the full displacement $\|\delta\theta_S(E)\|_{\mathcal{F}_S}$. As $PP$ increases toward $\alpha_{SPAP}$, the predictor becomes increasingly accurate and $\|\Pi_S^{(PP)}(\theta_S') - \theta_S'\|_{\mathcal{F}_S}$ decreases, but SPAP (Theorem 10) guarantees this discrepancy remains strictly positive for self-referential patterns: $\inf_{PP < \alpha_{SPAP}} \|\Pi_S^{(PP)}(\theta_S') - \theta_S'\|_{\mathcal{F}_S} > 0$ whenever $\Delta M_S^{(\text{self})}(E) \neq 0$. This is the formal expression of self-referential prediction applied to the self-model component.
-- $\|\cdot\|_{\mathcal{F}_S}$ is the norm induced by the Fisher information metric on $\Theta_S$: for tangent vectors $u, v \in T_\theta\Theta_S$, the metric is $g^{(\mathcal{F})}_{ij}(\theta) = \mathbb{E}\left[\frac{\partial \ln p(x|\theta)}{\partial \theta_i}\frac{\partial \ln p(x|\theta)}{\partial \theta_j}\right]$, where $p(x|\theta)$ is the predictive distribution parameterized by $\theta$.
-- $g: (0, \alpha_{SPAP}] \to (0, \infty)$ is monotone increasing with $g(0^+) = 0$, encoding the requirement that smaller gaps to the SPAP boundary demand more precise self-model agreement. The linear choice $g(\delta) = \delta$ suffices for all results below; any monotone increasing $g$ with $g(0^+) = 0$ yields the same qualitative structure, since the asymptotic divergence class (Theorem M.10.3) inherits from Theorem 14 independently of the particular tolerance profile.
+- $\Pi_S^{(PP)}(\theta_S')$ is the self-model prediction map at performance level $PP$: given a self-model configuration $\theta_S'$ and a specified performance level $PP \in [0, \alpha_{SPAP}]$, $\Pi_S^{(PP)}$ returns the configuration that $S$'s predictive process, constrained to operate at performance level $PP$, would assign to itself. The map $\Pi_S^{(PP)}$ is smooth in both arguments on $[0, \alpha_{SPAP}] \times \Theta_S$. At $PP=0$, the predictor makes no self-referential commitment: $\Pi_S^{(0)}(\theta_S')$ is $S$'s default self-model, independent of $\theta_S'$, so the discrepancy $\|\Pi_S^{(0)}(\theta_S') - \theta_S'\|_{\mathcal F_S}$ equals the full displacement $\|\delta\theta_S(E)\|_{\mathcal F_S}$. The performance coordinate is calibrated by nested attainable self-prediction classes: increasing $PP$ cannot make the best attainable self-model agreement worse. Hence, for each fixed target and each fixed register component, the corresponding optimal discrepancy is nonincreasing as $PP$ increases. For deterministic binary diagonal registers satisfying the positive Fisher-separation register hypothesis of Theorem M.10.4, the positive register discrepancy used there follows from SPAP's NOT construction, the specified binary code-state separation, and this calibrated performance ordering.
+- $\|\cdot\|_{\mathcal F_S}$ is the norm induced by the Fisher information metric on $\Theta_S$: for tangent vectors $u,v\in T_\theta\Theta_S$, the metric is $g^{(\mathcal F)}_{ij}(\theta)=\mathbb E[(\partial_i\ln p(x|\theta))(\partial_j\ln p(x|\theta))]$, where $p(x|\theta)$ is the predictive distribution parameterized by $\theta$.
+- $g:[0,\alpha_{SPAP}]\to[0,\infty)$ is continuous and monotone increasing, with $g(0)=0$ and $g(\delta)>0$ for $\delta>0$. The linear choice $g(\delta)=\delta$ suffices for all results below. The asymptotic divergence class in Theorem M.10.3 inherits from Theorem 14 independently of the particular continuous tolerance profile.
 
-The infimum exists because $[0, \alpha_{SPAP}]$ is compact and the constraint set $\{PP : \|\Pi_S^{(PP)}(\theta_S') - \theta_S'\|_{\mathcal{F}_S} \leq g(\alpha_{SPAP} - PP)\}$ is closed (since the left side is continuous in $PP$ by smoothness of $\Pi_S^{(PP)}$ and $g$ is monotone increasing; for continuous $g$ — including the canonical choice $g(\delta) = \delta$ — the constraint function $PP \mapsto \|\Pi_S^{(PP)}(\theta_S') - \theta_S'\|_{\mathcal{F}_S} - g(\alpha_{SPAP} - PP)$ is continuous, and the sublevel set of a continuous function at level $0$ is closed; for merely right-continuous $g$, the composite $PP \mapsto g(\alpha_{SPAP} - PP)$ is left-continuous, so the right-hand side of the constraint is upper semicontinuous as a function of $PP$, the difference is lower semicontinuous, and its sub-zero-level set is again closed). If the constraint set is empty — no sub-boundary performance suffices — define $PP_S^{(E)} := \alpha_{SPAP}$.
+When the constraint set in Equation M.18 is nonempty, the infimum exists because $[0,\alpha_{SPAP}]$ is compact and the constraint set is closed: the left side is continuous in $PP$ by smoothness of $\Pi_S^{(PP)}$, the right side is continuous by continuity of $g$, and the constraint is the sublevel set of a continuous function. If the constraint set is empty—no performance level satisfies the self-consistency requirement—define $PP_S^{(E)}:=\alpha_{SPAP}$.
 
-The self-consistency condition states that the updated self-model $\theta_S'$ must approximately equal $S$'s own prediction of what its self-model should be, with tolerance controlled by the gap to $\alpha_{SPAP}$. At $PP = \alpha_{SPAP}$, zero tolerance is required: $\Pi_S^{(\alpha_{SPAP})}(\theta_S') = \theta_S'$ exactly, demanding a fixed point of the self-model prediction map — the formal expression of perfect self-knowledge, which SPAP (Theorem 10) prohibits universally.
+The self-consistency condition states that the updated self-model $\theta_S'$ must approximately equal $S$'s own prediction of what its self-model should be, with tolerance controlled by the gap to $\alpha_{SPAP}$. At $PP=\alpha_{SPAP}$, zero tolerance is required: $\Pi_S^{(\alpha_{SPAP})}(\theta_S')=\theta_S'$ exactly, demanding a fixed point of the self-model prediction map. SPAP (Theorem 10) prohibits that fixed point for the diagonal self-referential branch.
 
 The *SPAP proximity* of pattern $E$ for system $S$ is:
 $$
@@ -836,19 +838,20 @@ $$
 
 *Proof.* Let $S_1$ and $S_2$ differ in self-model parameter $\theta_{S_1}^{(k)} \neq \theta_{S_2}^{(k)}$. Construct a pattern $E$ asserting: "Your parameter $\theta^{(k)}$ is incorrect." For $S_1$, processing $E$ requires modifying $\theta_{S_1}^{(k)}$, yielding $\|\Delta M_{S_1}^{(\text{self})}(E)\|_{\mathcal{F}_{S_1}} > 0$ and hence $\sigma_{S_1}(E) > 0$. For $S_2$, if $\theta_{S_2}^{(k)}$ already satisfies the assertion, processing $E$ requires no self-model change: $\Delta M_{S_2}^{(\text{self})}(E) = 0$ and therefore $\sigma_{S_2}(E) = 0$. Since the perspectival profile includes the reflexivity fraction as a component, $\mathcal{P}_{S_1}(E) \neq \mathcal{P}_{S_2}(E)$. In many such cases the SPAP proximity also differs, but the profile difference already follows from the change in $\sigma$. $\square$
 
-**Theorem M.10.2 (Content Dependence — Shannon-Decoupled).** For any system $S$ with Effective Operational Property R, and patterns $E_1, E_2$ with identical Shannon entropy $H(E_1) = H(E_2)$:
+**Theorem M.10.2 (Content Dependence — Shannon-Decoupled).** There exist systems $S$ with Effective Operational Property R and binary patterns $E_1,E_2$ with identical Shannon entropy $H(E_1)=H(E_2)$ such that
 $$
-\mu_S(E_1) \neq \mu_S(E_2) \quad \text{in general}
+\mu_S(E_1) \neq \mu_S(E_2).
 \tag{M.22}
 $$
+Thus SPAP proximity is not a function of Shannon entropy alone.
 
-*Proof.* Let $E_1$ and $E_2$ both be binary propositions (true/false with equal prior probability), so $H(E_1) = H(E_2) = \ln 2$. Let $E_1$ = "It will rain tomorrow." For any system $S$ with a non-trivial self-model, $E_1$ modifies only the external model, giving $\sigma_S(E_1) = 0$ and $\mu_S(E_1) = 1/\alpha_{SPAP}$ by Corollary M.10.3.1.
+*Proof.* Let $S$ be a Property-R system satisfying the independent-register amplification conditions of Theorem M.10.4. Let $E_1$ and $E_2$ both be binary propositions (true/false with equal prior probability), so $H(E_1)=H(E_2)=\ln 2$. Let $E_1$ be a purely external binary proposition, such as "It will rain tomorrow," processed only through $S$'s external model. Then $\sigma_S(E_1)=0$ and $\mu_S(E_1)=1/\alpha_{SPAP}$ by Corollary M.10.3.1.
 
-For $E_2$, choose a binary diagonal proposition targeted at $S$'s self-model, for example the yes/no pattern asserting the joint truth of the finite multi-register diagonal construction of Theorem M.10.4 (proved below; the argument is non-circular, since Theorem M.10.4 relies only on SPAP and the multi-register construction, not on the present result). Its Shannon entropy is still $\ln 2$, but by Theorem M.10.4 it can be chosen so that $\mu_S(E_2) = \infty$. Therefore
+For $E_2$, choose a binary diagonal proposition targeted at $S$'s self-model, for example the yes/no pattern asserting the joint truth of the finite multi-register diagonal construction of Theorem M.10.4. Its Shannon entropy is still $\ln 2$, but by Theorem M.10.4 it can be chosen on the independent-register amplification construction so that $\mu_S(E_2)=\infty$. Therefore
 $$
 \mu_S(E_1)=\frac{1}{\alpha_{SPAP}} \neq \infty = \mu_S(E_2),
 $$
-even though $H(E_1)=H(E_2)=\ln 2$. Hence SPAP proximity is not a function of Shannon entropy. $\square$
+even though $H(E_1)=H(E_2)=\ln 2$. Hence SPAP proximity is not determined by Shannon entropy. $\square$
 
 **Theorem M.10.3 (Content-Dependent Cost).** The minimum physical processing cost for system $S$ to integrate pattern $E$ satisfies:
 $$
@@ -868,23 +871,107 @@ The total processing cost $C_{\text{process}}(S,E) \geq C_{\text{integrate}}(S,E
 
 *Proof.* When $\sigma_S(E) = 0$, $\Delta M_S^{(\text{self})}(E) = 0$, so $\theta_S' = \theta_S$. The self-consistency condition (Equation M.18) requires $\|\Pi_S^{(PP)}(\theta_S) - \theta_S\|_{\mathcal{F}_S} \leq g(\alpha_{SPAP} - PP)$. Since $\theta_S$ is the current self-model and $\Pi_S^{(PP)}(\theta_S) = \theta_S$ at all $PP$ (predicting the unchanged self-model reproduces it), the discrepancy is zero and the constraint is satisfied at $PP = 0$. Hence $PP_S^{(E)} = 0$, $\delta_S(E) = \alpha_{SPAP}$, and $\mu_S(E) = 1/\alpha_{SPAP}$. The reflexive integration subtask is empty, so $C_{\text{refl}} = 0$. $\square$
 
-**Theorem M.10.4 (Existence of Divergent SPAP Proximity on the Independent-Register Branch).** For any system $S$ with Effective Operational Property R and sufficient independent self-model register capacity to host the diagonal amplification construction below ($d_S \ge N^*$ with $N^* \ge \lceil (g(\alpha_{SPAP})/D_1)^2 \rceil + 1$ Fisher-orthogonal addressable registers), there exist patterns $E^*$ such that $\mu_S(E^*) = \infty$. More generally, across scalable families $\{S_n\}_{n \in \mathbb{N}}$ of Property-R systems with $d_{S_n} \to \infty$, $\mu_{S_n}$ is unbounded as a function of admissible pattern complexity, with the boundary $\mu = \infty$ reached on systems whose self-model register capacity meets the diagonal amplification requirement for the relevant $N^*$.
+**Theorem M.10.4 (Existence of Divergent SPAP Proximity by Independent-Register Amplification).** Let $S$ be a system with Effective Operational Property R whose self-model contains $n_S$ Fisher-orthogonal addressable deterministic SPAP registers. Assume that, for each retained register, the two operational binary code states are represented by distinct parameter values at positive Fisher distance. For the $j$-th register, let $\eta_{S,j}>0$ denote the Fisher distance between those two code states. Define
 
-*Proof.* The proof proceeds in two stages: first showing $\mu_S$ is unbounded, then constructing a pattern achieving $\mu_S = \infty$.
+$$
+D_1(S):=\min_{1\le j\le n_S}\eta_{S,j}>0
+$$
 
-*Stage 1 (Unboundedness).* By SPAP (Theorem 10), for any predictor $P_f$ implementable within $S$'s model class $\mathcal{M}$, there exists a constructible system $S_{diag}$ with update rule $\phi_{t+1} = \text{NOT}(\hat{\phi}_{P_f})$ (Equation 10). Let $E_1$ be the pattern encoding "System $S_{diag}$ will produce output $\phi_{t+1} = 1$." Processing $E_1$ engages the self-model because $S$ (having Property R) can represent $S_{diag}$'s construction and recognize the self-referential content, giving $\sigma_S(E_1) > 0$. By SPAP, the self-prediction map $\Pi_S^{(PP)}$ cannot achieve a fixed point on the component encoding the prediction about $S_{diag}$, so $\inf_{PP < \alpha_{SPAP}} \|\Pi_S^{(PP)}(\theta_{S,1}') - \theta_{S,1}'\|_{\mathcal{F}_S} \geq D_1 > 0$ for some $D_1$ determined by the Fisher geometry of the diagonal parameter.
+and
 
-Now construct $N$ independent diagonal challenges: for $j = 1, \ldots, N$, let $S_{diag}^{(j)}$ be the diagonal system constructed against $S$'s $j$-th self-model prediction register. This construction is admissible on the independent-register branch — under which $S$'s self-model contains at least $N$ Fisher-orthogonal addressable registers, $d_S \ge N$, with Property R supplying reflexive representability of each. The condition $d_S \ge 1$ alone gives only one such register; the diagonal-amplification step requires $d_S$ to scale with the chosen $N^*$. Define $E^{(N)}$ as the joint pattern asserting all $N$ diagonal predictions simultaneously. By Definition M.10.2, the self-model change decomposes across the $N$ independent registers, and by additivity of the Fisher metric on orthogonal parameter subspaces, $\|\delta\theta_S(E^{(N)})\|_{\mathcal{F}_S}^2 = \sum_{j=1}^N \|\delta\theta_{S,j}\|_{\mathcal{F}_S}^2$. The discrepancy at $PP = 0$ is $\|\Pi_S^{(0)}(\theta_S') - \theta_S'\|_{\mathcal{F}_S} = \|\delta\theta_S(E^{(N)})\|_{\mathcal{F}_S} \geq \sqrt{N} \cdot D_1$, since $\Pi_S^{(0)}$ is the default self-model (no self-referential commitment). The tolerance at $PP = 0$ is $g(\alpha_{SPAP})$, which is finite. Choosing $N > (g(\alpha_{SPAP})/D_1)^2$ ensures the discrepancy exceeds the tolerance at $PP = 0$. For $PP$ near $\alpha_{SPAP}$, SPAP guarantees each per-register discrepancy remains above $D_1 > 0$, while $g(\alpha_{SPAP} - PP) \to 0$, so the constraint fails for all sufficiently large $PP$. Continuity of $\|\Pi_S^{(PP)}(\theta_S') - \theta_S'\|_{\mathcal{F}_S}$ in $PP$ (smoothness of $\Pi_S^{(PP)}$) and the intermediate value theorem guarantee the constraint fails at all intermediate $PP$ as well, for $N$ sufficiently large. Hence the constraint set in Equation M.18 is empty, giving $PP_S^{(E^{(N)})} = \alpha_{SPAP}$, $\delta_S(E^{(N)}) = 0$, and $\mu_S(E^{(N)}) = \infty$.
+$$
+N^*(S):=\left\lceil\left(\frac{g(\alpha_{SPAP})}{D_1(S)}\right)^2\right\rceil+1.
+$$
 
-*Stage 2 (Explicit construction).* Define $E^* := E^{(N^*)}$ where $N^* := \lceil (g(\alpha_{SPAP})/D_1)^2 \rceil + 1$. By Stage 1, $\mu_S(E^*) = \infty$. By Property R, each $S_{diag}^{(j)}$ is constructible within $\mathcal{M}$, and by PPI (Definition P.6.2), $E^*$ exists as a physically realizable pattern. $\square$
+If $n_S\ge N^*(S)$, then there exist patterns $E^*$ such that $\mu_S(E^*)=\infty$. More generally, in scalable MPU-network product families built from deterministic $K_0$ SPAP cores with block-diagonal Fisher register geometry, $\mu_S$ is unbounded as a function of admissible pattern complexity, and the boundary $\mu=\infty$ is reached once the register capacity meets the diagonal-amplification inequality above.
+
+*Proof.* The uniform register discrepancy is supplied by the register antecedent. Theorem 15 supplies the deterministic SPAP core with finite binary roles capable of storing and comparing the predicted bit and the realized bit. The independent-register hypothesis further requires that each retained register instantiate those two operational binary code states as distinct parameter values with Fisher distance $\eta_{S,j}>0$. Since the retained register family used in the construction is finite, $D_1(S)=\min_j\eta_{S,j}>0$.
+
+For a single retained register $j$, construct the deterministic SPAP diagonal challenge against the boundary self-prediction of $S$ on that register. If the boundary prediction map satisfied
+
+$$
+\left(\Pi_S^{(\alpha_{SPAP})}(\theta_{S,j}')\right)_j=(\theta_{S,j}')_j,
+$$
+
+then the predicted binary value and the realized binary value in the diagonal register would coincide. But the diagonal rule is
+
+$$
+\phi_{t+1}^{(j)}=\mathrm{NOT}(\hat\phi^{(j)}),
+$$
+
+so equality would imply $\hat\phi^{(j)}=\mathrm{NOT}(\hat\phi^{(j)})$, contradicting Theorem 10. Therefore the boundary discrepancy on register $j$ is at least the binary code-state separation:
+
+$$
+\left\|\left(\Pi_S^{(\alpha_{SPAP})}(\theta_{S,j}')-\theta_{S,j}'\right)_j\right\|_{\mathcal F_S}\ge \eta_{S,j}.
+$$
+
+By the calibrated performance ordering in Definition M.10.3, lowering $PP$ cannot improve the optimal self-model agreement beyond the boundary case. Hence, for every $PP\in[0,\alpha_{SPAP})$,
+
+$$
+\left\|\left(\Pi_S^{(PP)}(\theta_{S,j}')-\theta_{S,j}'\right)_j\right\|_{\mathcal F_S}
+\ge
+\eta_{S,j}
+\ge
+D_1(S).
+$$
+
+Now choose $N=N^*(S)$ Fisher-orthogonal addressable registers from the available $n_S$ registers and construct $N$ diagonal challenges $S_{diag}^{(j)}$, $j=1,\ldots,N$, one per register. Let $E^{(N)}$ be the joint pattern encoding those diagonal challenges simultaneously, and write $\theta_S'$ for the self-model state after attempting to integrate $E^{(N)}$. The register family is Fisher-orthogonal by the theorem antecedent; in MPU-network product realizations this is supplied by the tensor-product/block-diagonal register construction of Theorem A.0.6 together with the finite $K_0$ SPAP core of Theorem 15. Therefore, by additivity of the Fisher metric on orthogonal parameter subspaces, for every $PP\in[0,\alpha_{SPAP})$,
+
+$$
+\left\|\Pi_S^{(PP)}(\theta_S')-\theta_S'\right\|_{\mathcal F_S}^2
+\ge
+\sum_{j=1}^{N}D_1(S)^2
+=
+N D_1(S)^2.
+$$
+
+Thus
+
+$$
+\left\|\Pi_S^{(PP)}(\theta_S')-\theta_S'\right\|_{\mathcal F_S}
+\ge
+\sqrt{N}\,D_1(S).
+$$
+
+For $N=N^*(S)$,
+
+$$
+\sqrt{N^*(S)}\,D_1(S)>g(\alpha_{SPAP}).
+$$
+
+Since $g$ is monotone and $0\le\alpha_{SPAP}-PP\le\alpha_{SPAP}$, $g(\alpha_{SPAP}-PP)\le g(\alpha_{SPAP})$ for all $PP\in[0,\alpha_{SPAP})$. Hence the self-consistency condition in Equation M.18 fails for every subboundary performance level:
+
+$$
+\left\|\Pi_S^{(PP)}(\theta_S')-\theta_S'\right\|_{\mathcal F_S}
+>
+g(\alpha_{SPAP})
+\ge
+g(\alpha_{SPAP}-PP).
+$$
+
+At the boundary $PP=\alpha_{SPAP}$, Equation M.18 requires zero tolerance because $g(0)=0$. The joint diagonal object would then require an exact fixed point of the self-prediction map on all retained diagonal registers, which SPAP excludes by Theorem 10. Thus the constraint set in Equation M.18 is empty. Consequently
+
+$$
+PP_S^{(E^{(N^*(S))})}=\alpha_{SPAP},
+$$
+
+$$
+\delta_S(E^{(N^*(S))})=0,
+$$
+
+and
+
+$$
+\mu_S(E^{(N^*(S))})=\infty.
+$$
+
+Define $E^*:=E^{(N^*(S))}$. By Property R, each $S_{diag}^{(j)}$ is constructible within $\mathcal M$, and by PPI (Definition P.6.2), $E^*$ exists as a physically realizable pattern. $\square$
 
 **Remark M.10.5 (Terminological consistency with Definition 1).** The pattern $E^*$ with $\mu_S(E^*) = \infty$ is unprocessable by $S$ at finite cost (Theorem M.10.6 below). Since $S$ cannot process $E^*$, $E^*$ does not constitute *information for $S$* under Definition 1. The perspectival profile $\mathcal{P}_S(E^*)$ characterizes the boundary of the information regime — the point at which self-referential depth exceeds the system's processing capacity — rather than an instance of information.
 
-**Corollary M.10.4.1 (Full Range of SPAP Proximity).** Every predictive system $S$ with Effective Operational Property R necessarily inhabits a perspectival landscape: the baseline value $\mu_S = 1/\alpha_{SPAP}$ is attained by purely external patterns, $\mu_S = \infty$ is attained at the boundary (Theorem M.10.4), and every intermediate value in $(1/\alpha_{SPAP}, \infty)$ is attained.
+**Corollary M.10.4.1 (Endpoint Range of SPAP Proximity).** Every predictive system $S$ with Effective Operational Property R attains the baseline value $\mu_S=1/\alpha_{SPAP}$ on purely external patterns. Every system satisfying the independent-register amplification conditions of Theorem M.10.4 also attains the boundary value $\mu_S=\infty$.
 
-*Proof.* Corollary M.10.3.1 gives $\mu_S = 1/\alpha_{SPAP}$ for any pattern with $\sigma_S = 0$. Theorem M.10.4 gives a pattern $E^*$ with $\mu_S(E^*) = \infty$. It remains to show every intermediate value is achieved.
-
-Define a one-parameter family of self-model perturbations $\delta\theta(\lambda) := \lambda \cdot \delta\theta^*$ for $\lambda \in [0,1]$, where $\delta\theta^* := \delta\theta_S(E^*)$ is the perturbation of Theorem M.10.4. Consider the discrepancy function $D(\lambda, PP) := \|\Pi_S^{(PP)}(\theta_S + \lambda\delta\theta^*) - (\theta_S + \lambda\delta\theta^*)\|_{\mathcal{F}_S}$. By smoothness of $\Pi_S^{(PP)}$ on $[0, \alpha_{SPAP}] \times \Theta_S$ (Definition M.10.3), $D$ is jointly continuous. For continuous $g$ (including the canonical $g(\delta) = \delta$), the constraint correspondence $\mathcal{C}(\lambda) := \{PP \in [0, \alpha_{SPAP}] : D(\lambda, PP) \leq g(\alpha_{SPAP} - PP)\}$ is a closed-valued correspondence from $[0,1]$ to closed subsets of $[0, \alpha_{SPAP}]$. Joint continuity of $D$ and continuity of $g$ imply that $\mathcal{C}$ is both upper and lower hemicontinuous (the constraint function $(PP, \lambda) \mapsto D(\lambda, PP) - g(\alpha_{SPAP} - PP)$ is jointly continuous, and sublevel correspondences of jointly continuous functions are continuous in the Vietoris topology). By Berge's Maximum Theorem, the value function $\lambda \mapsto \inf \mathcal{C}(\lambda)$ (i.e., $PP_S^{(E_\lambda)}$, or $\alpha_{SPAP}$ when $\mathcal{C}(\lambda) = \emptyset$) is continuous on the set where $\mathcal{C}(\lambda) \neq \emptyset$, and the transition to $\alpha_{SPAP}$ at the emptying point is also continuous because lower hemicontinuity prevents the feasible set from collapsing discontinuously. Since $PP_S^{(E_0)} = 0$ (giving $\mu_S = 1/\alpha_{SPAP}$) and $PP_S^{(E_1)} = \alpha_{SPAP}$ (giving $\mu_S = \infty$), and $\lambda \mapsto PP_S^{(E_\lambda)}$ is continuous, the standard Intermediate Value Theorem yields that every value in $[0, \alpha_{SPAP}]$ is achieved by $PP_S$, and hence every value in $(1/\alpha_{SPAP}, \infty)$ is achieved by $\mu_S$. $\square$
+*Proof.* Corollary M.10.3.1 gives $\mu_S=1/\alpha_{SPAP}$ for any pattern with $\sigma_S=0$. Theorem M.10.4 gives $\mu_S(E^*)=\infty$ for systems with enough Fisher-orthogonal deterministic SPAP registers to satisfy the derived amplification inequality. Therefore the theorem-level endpoint landscape consists of the SPAP-flat baseline and the diagonal boundary. No claim that every intermediate value in $(1/\alpha_{SPAP},\infty)$ is realized follows from continuity alone; such a continuum claim requires an additional realization theorem for admissible interpolating patterns and is not used in the endpoint obstruction. $\square$
 
 **Theorem M.10.5 (Downward Measurability — Measurement Asymmetry on the Model-Access Branch).** Let $A, B$ be predictive systems with $C_{agg}(A) > C_{agg}(B) > C_{op}$, both possessing Effective Operational Property R, and assume $A$ has model access to $B$ — i.e., an accurate external representation of $B$'s self-model $\mathcal{M}_B$, parameter space $\Theta_B$, Fisher metric $g_B$, and prediction maps $\Pi_B^{(PP)}$, together with the data necessary to evaluate them. Then:
 
@@ -906,15 +993,20 @@ Define a one-parameter family of self-model perturbations $\delta\theta(\lambda)
 
 **Corollary M.10.5.2 (Experiential Access Without Measurement).** Although $B$ cannot *compute* $\mu_B(E)$, $B$ does *incur* the cost $C_{\text{process}}(B, E)$ dictated by Theorem M.10.3. The cost is physically real — it manifests as entropy production, metabolic expenditure, and stress-energy contribution (via Theorem 31 and the Appendix B construction, Definition B.8). $B$ experiences the consequence of $\mu_B(E) > 1/\alpha_{SPAP}$ without being able to quantify it.
 
-**Theorem M.10.6 (Maximum SPAP Proximity is Unprocessable).** For every system $S$ with Effective Operational Property R, the pattern $E^*$ that achieves $\mu_S(E^*) = \infty$ (Theorem M.10.4) is unprocessable by $S$:
+**Theorem M.10.6 (Boundary SPAP Proximity is Unprocessable).** Let $S$ be a system with Effective Operational Property R and let $E$ be any pattern with $\mu_S(E)=\infty$. Then $E$ is unprocessable by $S$ at finite cost:
 $$
-\mu_S(E^*) = \infty \implies C_{\text{process}}(S, E^*) = \infty
+\mu_S(E) = \infty \implies C_{\text{process}}(S, E) = \infty
 \tag{M.24}
 $$
+In particular, any boundary pattern $E^*$ supplied by Theorem M.10.4 on the independent-register amplification construction satisfies this implication.
 
-*Proof.* By Theorem M.10.4, $\mu_S(E^*) = \infty$, so $\delta_S(E^*) = 0$. By Corollary B.2.1, $C_{\text{integrate}}(S, E^*) \geq C_{\text{uni}}(\delta_S(E^*)) = C_{\text{uni}}(0)$. By Theorem B.2, $\lim_{\delta \to 0^+} \log(1/\delta)/\delta^2 = \infty$. Therefore $C_{\text{integrate}}(S, E^*) = \infty$, and since $C_{\text{process}}(S, E^*) \geq C_{\text{integrate}}(S, E^*)$, we have $C_{\text{process}}(S, E^*) = \infty$. $\square$
+*Proof.* By Definition M.10.3 (Equation M.19), $\mu_S(E)=\infty$ means $\delta_S(E)=\alpha_{SPAP}-PP_S^{(E)}=0$. Thus processing $E$ would require the self-consistency requirement of Equation M.18 at the SPAP boundary. A finite completed integration event must satisfy the self-consistency requirement at an admissible subboundary performance level $PP<\alpha_{SPAP}$; otherwise it demands exact boundary self-prediction. But $\delta_S(E)=0$ states precisely that no such subboundary level suffices. At the boundary, the tolerance is zero and the condition requires an exact fixed point of the relevant self-prediction map. The boundary performance level is excluded from finite operational processing by SPAP's no-perfect-self-prediction constraint (Theorem 10) and by the cost lower bound of Theorem M.10.3 in the extended sense
+$$
+C_{\text{uni}}(0):=\lim_{\delta\to0^+}C_{\text{uni}}(\delta)=\infty,
+$$
+with the limit supplied by Theorem B.2 and Corollary B.2.1 for $\delta>0$. Therefore the boundary case has no finite content-integrating processing event, and $C_{\text{process}}(S,E)=\infty$. $\square$
 
-**Remark M.10.6 (Comparison with Gödel).** Theorem M.10.6 is structurally analogous to Gödel's First Incompleteness Theorem: both assert the existence of self-referential objects (statements/patterns) that the system cannot fully process (prove/integrate). The analogy is structural, not isomorphic. Gödel's theorem concerns *provability* within a formal axiom system and can be transcended by adding axioms. Perspectival unprocessability concerns *physical processing cost* within the shared axiomatic structure of POP/PCE/SPAP and cannot be evaded by adding axioms — the cost is thermodynamic (Theorem M.10.3 + PPI), not merely formal. A more complex system $A$ can process $B$'s unprocessable pattern (clause (i) of Theorem M.10.5), but $A$ operates under the same SPAP within the same universe and possesses its own unprocessable patterns (Theorem M.10.4 applied to $A$).
+**Remark M.10.6 (Comparison with Gödel).** Theorem M.10.6 is structurally analogous to Gödel's First Incompleteness Theorem: both concern self-referential objects that the target system cannot fully process in the relevant sense. The analogy is structural, not isomorphic. Gödel's theorem concerns *provability* within a formal axiom system and can be transcended for a specific sentence by adding axioms. Perspectival unprocessability concerns *physical processing cost* within the shared axiomatic structure of POP/PCE/SPAP and cannot be evaded merely by adding axioms when the proof-content still has to be integrated by the same target self-model. Theorem M.10.4 supplies such unprocessable boundary objects on the independent-register amplification construction. A more complex system $A$ can compute $B$'s perspectival profile on the model-access branch (Theorem M.10.5(i)), and can process $B$'s boundary object as external content when the external-insulation conditions are satisfied. Such an $A$ remains subject to SPAP and, whenever it satisfies the corresponding branch hypotheses, has its own boundary objects.
 
 **Theorem M.10.7 (Physicality).** For any system $S$ with Effective Operational Property R processing a pattern $E$ with $\mu_S(E) > 1/\alpha_{SPAP}$, the processing event produces a physical signature — entropy production, energy dissipation, and stress-energy contribution — whose magnitude is bounded below by a function of $\mu_S(E)$:
 $$
@@ -1136,7 +1228,7 @@ for all $c_1,c_2\in\mathcal E$.
 | Theorem M.10.1 | Perspectival dependence | Def M.10.2, M.10.4 |
 | Theorem M.10.2 | Content dependence (Shannon-decoupled) | Def M.10.4 |
 | Theorem M.10.3 | SPAP-divergent cost | Cor B.2.1, Thm B.2, PPI |
-| Theorem M.10.4 | Existence of $\mu_S = \infty$ | SPAP diagonal, $N$-copy amplification |
+| Theorem M.10.4 | Existence of $\mu_S = \infty$ on the independent-register amplification construction | SPAP diagonal, uniform Fisher-orthogonal $N$-register amplification |
 | Theorem M.10.5 | Measurement asymmetry | SPAP, Thm 33, diagonal argument |
 | Theorem M.10.6 | Unprocessability at boundary | Thm M.10.3, M.10.4 |
 | Theorem M.10.7 | Physicality | Thm M.10.3, PPI, Thm 31 |

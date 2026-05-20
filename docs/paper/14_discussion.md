@@ -1872,7 +1872,7 @@ $$
 $$
 Ruling out the $pH_B$ term is precisely the hard-support claim. If one declares that no such $B$ can carry kernel weight because every point in it has infinite SPAP cost, that declaration is an additional support theorem or primitive support restriction, not a consequence of a gradient bias alone. Therefore the hard-support exclusion is independent of the cited theorem stack. ∎
 
-**Proposition 14.5.8c (Recovery-Limit Boundary Charging).** Let $W$ be a finite operational window containing an Effective Operational Property-R predictor $S$, and let
+**Proposition 14.5.8c (Conditional Recovery-Limit Boundary Charging).** Let $W$ be a finite operational window containing an Effective Operational Property-R predictor $S$ satisfying the independent-register amplification conditions of Theorem M.10.4 and a separate interpolation-realization theorem of the kind identified as additional by Corollary M.10.4.1. Let
 $$
 F_W:=\{x\in\Sigma:U_W(x)=+\infty\}
 $$
@@ -1880,19 +1880,21 @@ be the window-local infinite-cost set for the envelope
 $$
 U_W(x):=\sup_{S'\in\mathfrak P_W}U_{S',\theta_{0,S'}}(\theta_{S',W}'(x))
 $$
-of the cost potentials of Definition P.16.3. There is no theorem-level implication of the form
+of the cost potentials of Definition P.16.3. On this branch, there is no theorem-level implication of the form
 $$
 \bigl[\,G_{n,W}\Rightarrow G_W^{(\infty)},\quad G_{n,W}(F_W)=0\ \forall n\,\bigr]
 \;\Longrightarrow\;
 G_W^{(\infty)}(F_W)=0
 $$
-for finite-resource kernels $G_{n,W}$ supported on finite-cost configurations. The obstruction is internal to PU: Corollary M.10.4.1 supplies a finite-cost approach to the SPAP boundary that witnesses boundary charging under weak convergence.
+for finite-resource kernels $G_{n,W}$ supported on finite-cost configurations. The obstruction is internal to PU on the stated branch: the assumed interpolation-realization theorem supplies a finite-cost approach to the SPAP boundary that witnesses boundary charging under weak convergence.
 
-*Proof.* It suffices to consider a window $W$ whose predictor set contains the single Property-R system $S$ supplied by the M.10.4 independent-register branch. Let $E^*$ be a boundary pattern with $\mu_S(E^*)=\infty$ from Theorem M.10.4. Corollary M.10.4.1 constructs the continuous one-parameter family
+*Proof.* It suffices to consider a window $W$ whose predictor set contains a single system $S$ satisfying the independent-register amplification conditions of Theorem M.10.4 and the separate interpolation-realization theorem assumed in the proposition. Let $E^*$ be a boundary pattern with $\mu_S(E^*)=\infty$ from Theorem M.10.4. The separate interpolation-realization theorem supplies a one-parameter admissible family with
 $$
-\delta\theta(\lambda)=\lambda\,\delta\theta^*,\qquad \lambda\in[0,1],
+\mu_S(\lambda)<\infty\quad(\lambda<1),
+\qquad
+\mu_S(\lambda)\to\infty\quad\text{as }\lambda\to1^-,
 $$
-with $\mu_S(\lambda)<\infty$ for $\lambda<1$ and $\mu_S(\lambda)\to\infty$ as $\lambda\to1^-$. By Definition M.10.3, the finite-gap cases $\delta_S(\lambda)>0$ are processable at finite cost, while Theorem M.10.6 gives infinite cost at the boundary $\lambda=1$. By Proposition M.10.9, the corresponding self-model displacement embeds continuously into $\Sigma$, producing configurations $x_\lambda\in\Sigma$ with
+and boundary value $\mu_S(1)=\infty$. By Definition M.10.3, the finite-gap cases $\delta_S(\lambda)>0$ are processable at finite cost, while Theorem M.10.6 gives infinite cost at the boundary $\lambda=1$. By Proposition M.10.9, the corresponding self-model displacement embeds continuously into $\Sigma$, producing configurations $x_\lambda\in\Sigma$ with
 $$
 x_\lambda\notin F_W\quad(\lambda<1),
 \qquad
@@ -1912,7 +1914,7 @@ weakly on the compact perspective manifold $\Sigma$, and
 $$
 G_W^{(\infty)}(F_W)=\delta_{x_1}(F_W)=1.
 $$
-Thus weak recovery limits can charge the infinite-cost SPAP boundary. A derivation of the Environmental SPAP Hypothesis by finite-resource approximation would need a stronger convergence mode, such as total-variation convergence with explicit boundary avoidance, or an additional support theorem. ∎
+Thus weak recovery limits can charge the infinite-cost SPAP boundary on the stated branch. A derivation of the Environmental SPAP Hypothesis by finite-resource approximation would need a stronger convergence mode, such as total-variation convergence with explicit boundary avoidance, or an additional support theorem. Without such an interpolation-realization theorem, this proposition supplies no boundary-charging witness. ∎
 
 **Proposition 14.5.8d (Window-Family Gluing No-Go).** Let $\mathcal W$ denote the family of finite operational windows with the inclusion partial order $W\subseteq W'$. POP, PCE, PPI, and the present M-appendix kernel machinery do not force the projective consistency condition
 $$

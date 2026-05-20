@@ -234,6 +234,60 @@ $$
 
 *   **Core Discrete Backbone:** The theorem-level minimal finite-response chain $K_0=3$, $\varepsilon_0=\ln2$, $d_0=8$, $a=2$, $b=6$, $M=24$, $k=12$, and $D=4$ on the stated Appendix Z/PPI/PCE branch. Later numerical sectors may depend on additional certificates without changing this backbone.
 
+*   **Ordered $(12,24)$ Bridge:** (Appendix Z.5) The componentwise ledger equivalence
+    $$
+    (k,M)_{\mathrm{PU}}
+    =
+    (12,24)
+    =
+    (\operatorname{weight}(\Delta),\operatorname{exp}_{\eta}(\Delta))_{\mathrm{Ramanujan}}
+    =
+    (\operatorname{weight}(\Theta_{\Lambda_{24}}),\operatorname{rank}(\Lambda_{24}))_{\mathrm{Leech}}.
+    $$
+    It is not a bare numerological occurrence of $24$; admissibility requires preservation of the ordered pair and the doubling relation $24=2\cdot12$.
+
+*   **Ramanujan-Type Mathematical Event:** (Appendix P.2.6.3e) A mathematical-cognition event in which an assertion $E$ is retained by the full predictor through a positive finite verification register, $\Delta V_S(E\mid\mathcal V_S)<0$, while the deliberative subprocess lacks the current budget to serialize the public proof, $C_{\mathrm{seq}}(\pi_{\mathrm{seq}}(E))>B_{\mathcal D_S}$.
+
+*   **Active Inadmissible Self-Information:** (Appendix A.5.6a) Information whose proof or truth-label may exist externally but cannot be admitted by a predictor as active self-targeted evidence at the targeted cycle without destabilizing the prediction condition. The diagonal object $E_{B,t}$ is inaccessible to $B$ at $t$, accessible to an external predictor, and accessible to $B$ after historical record formation. At the proof-access layer, the correct labeled proof exists in $\mathcal F$, but register-coherent active admissibility forces $\operatorname{LITE}^{\mathrm{act}}_B(t,e_{B,t},N)=\bot$ for every $N$.
+
+*   **Register-Coherent Active Admissibility:** (Appendix A.5.6a, Definition A.5.6a.7) A proof-admissibility predicate satisfying
+    $$
+    \operatorname{Adm}^{\mathrm{act}}_B(t,p,e,y)
+    \Longrightarrow
+    P_B(t,e)=y,
+    $$
+    for $y\in\{0,1\}$. It ensures that active evidence supports the Boolean label actually issued by the current register, and excludes active Boolean proof admission when the register value is $\bot$.
+
+*   **Model-Indexed LITE:** (Appendix A.5.6a) A bounded proof search through a predictor-indexed admissibility relation. In the labeled version,
+    $$
+    \operatorname{LabProof}_{\mathcal F}(p,e,1)
+    \Longleftrightarrow
+    \operatorname{Proof}_{\mathcal F}(p,e),
+    \qquad
+    \operatorname{LabProof}_{\mathcal F}(p,e,0)
+    \Longleftrightarrow
+    \operatorname{Proof}_{\mathcal F}(p,\operatorname{Neg}(e)),
+    $$
+    and $\operatorname{LITE}^{\mathrm{act}}_B$ or $\operatorname{LITE}^{\mathrm{hist}}_B$ returns a bounded admitted labeled proof, or $\bot$ if none is admitted. For $E_{B,t}$, active register-coherent access misses every bound, while faithful historical access recovers the correct label $y^*_{B,t}$ for sufficiently large bounds.
+
+*   **Thermodynamic Dressing:** (Appendix P.6.1) A tuple
+    $$
+    X^\Theta=(X,\Pi_X,R_X,V_X,C_X,\tau_X)
+    $$
+    converting a bare mathematical object or aspect $X$ into a finite-cost physicalization candidate with protocol, record, verifier, cost, and update-ordering data.
+
+*   **Operational Latent Mathematics:** (Appendix P.6.1) The PPI-physicalizable but not yet actualized sector
+    $$
+    \mathfrak W_{\mathrm{OLM}}(t)=\mathfrak P\setminus\mathfrak A(t),
+    $$
+    together with the predictor-relative sector
+    $$
+    \mathfrak W_{\mathrm{OLM}}(S,t)=\mathfrak P\setminus\mathfrak E_S(t).
+    $$
+    These are mathematical structures eligible for finite-cost physicalization or access but not yet actualized or not yet accessible to the specified predictor.
+
+*   **Generative Non-Closure (GNC):** (Appendix A.6; Appendix P.16c) Conservative PU reading in which total internal reflexive self-closure is impossible for SPAP-capable predictors, and axiom-like structures arise as stable finite partial closures. The formal chain is: no total trace-diagonal internal closure (Theorem A.6.2), stable axiom-stabilizer necessity for nontrivial verified prediction (Theorem A.6.4), and conservativity of the vocabulary (Theorem A.6.6). GNC does not add a new axiom and does not promote any branch-conditional or certificate-pending physical claim.
+
 *   **Global Strict-Certificate Ledger:** (Appendix P, Convention P.14.1k; Theorem P.14.1k.1; Corollary P.14.1k.2) Sector-by-sector audit table assigning, to every major PU output, its selected representative, its local strict PPI/PCE certificate or theorem source, and its closure status (closed, certificate-pending, or open). Theorem P.14.1k.1 forces a unique global tuple modulo response equivalence under acceptance of the certificate-pending rows; Corollary P.14.1k.2 localizes the remaining open closure to the unaccepted entries.
 
 *   **No-Overclaim Discipline:** (Appendix P, Convention P.14.1l) Status-propagation rule stating that no sector listed in Convention P.14.1k may inherit theorem-level numerical status from a parent theorem unless every finite-response map used by that sector also has a theorem-level certificate or a closed-status entry. Status propagation is by the meet rule on the dependency graph of Convention P.14.1k.
@@ -317,7 +371,7 @@ It states that stable predictive current precision requires entropy production.
 $$
 \Delta_\Sigma(S;E)=\mu_S(E)-\frac{1}{\alpha_{SPAP}}.
 $$
-It vanishes on SPAP-flat patterns and is unbounded above by Theorem M.10.4.
+It vanishes on SPAP-flat patterns and is unbounded above on the independent-register amplification construction supplied by Theorem M.10.4.
 
 *   **Source Energy ($\mathcal{E}_{\mathrm{src}}$):** (Appendix P.15) The excess reflexive thermodynamic dissipation generated when a predictive system processes patterns whose SPAP proximity exceeds the SPAP-flat baseline. Over an interval $\Delta t$,
 $$
@@ -477,15 +531,15 @@ on the verification/update resources required to approach that limit (Theorem 14
 
 *   **Space of Becoming:** (Definition 8) The open interval $(\alpha, \beta)$, representing the necessary operational range for Predictive Performance $PP(t)$ for viable, adaptive MPU functioning (Axiom 3).
 
-*   **Paradox-Avoidance Residue:** (Section 14.5.8, Definition 14.5.8) A hypothetical observer-indexed, non-signalling correction to local outcome statistics, split into an *active tier* (theorem-level; identified with the CC mechanism of Appendix L, bounded by $\alpha_{CC,\max} < 0.5$ via Theorem 39) and a *passive tier* (Conjecture 14.5.8, the Residue Conjecture, conditional on Hypothesis 14.5.8, the Environmental SPAP Hypothesis). The Environmental SPAP Hypothesis posits that the support of $G_{\text{persp}}$ coincides with the SPAP-admissible submanifold of $\Sigma$; three labeled no-go results localize the obstruction to deriving it. Proposition 14.5.8b shows the support-exclusion claim is not derivable from SPAP diagonalization, Theorem M.10.3, and PCE cost-gradient bias alone. Proposition 14.5.8c shows the recovery-limit alternative is obstructed by Corollary M.10.4.1, whose continuous finite-cost approach to the SPAP boundary witnesses boundary charging under weak convergence. Proposition 14.5.8d shows that PCE-minimized window-local kernels need not be projectively consistent under window restriction, blocking Kolmogorov-style global assembly. The passive tier, if it exists, is predicted to be independent of aggregate complexity $C_{agg}$ and thereby experimentally separable from the active tier. Section 14.5.8 relates the structural fingerprint of a hypothetical passive residue (small magnitude, persistence under large trial counts, concentration at high reflexive engagement, independence from macroscopic energy transfer) in conditional form to claims made in parts of the Rhine, SRI, PEAR, Ganzfeld, and precognition literatures; the framework neither ratifies nor dismisses that corpus.
+*   **Paradox-Avoidance Residue:** (Section 14.5.8, Definition 14.5.8) A hypothetical observer-indexed, non-signalling correction to local outcome statistics, split into an *active tier* (theorem-level; identified with the CC mechanism of Appendix L, bounded by $\alpha_{CC,\max} < 0.5$ via Theorem 39) and a *passive tier* (Conjecture 14.5.8, the Residue Conjecture, conditional on Hypothesis 14.5.8, the Environmental SPAP Hypothesis). The Environmental SPAP Hypothesis posits that the support of $G_{\text{persp}}$ coincides with the SPAP-admissible submanifold of $\Sigma$; three labeled no-go results localize the obstruction to deriving it. Proposition 14.5.8b shows the support-exclusion claim is not derivable from SPAP diagonalization, Theorem M.10.3, and PCE cost-gradient bias alone. Proposition 14.5.8c shows that, on a separately established interpolation-realization theorem of the kind identified as additional by Corollary M.10.4.1, the recovery-limit alternative is obstructed by a continuous finite-cost approach to the SPAP boundary that witnesses boundary charging under weak convergence. Proposition 14.5.8d shows that PCE-minimized window-local kernels need not be projectively consistent under window restriction, blocking Kolmogorov-style global assembly. The passive tier, if it exists, is predicted to be independent of aggregate complexity $C_{agg}$ and thereby experimentally separable from the active tier. Section 14.5.8 relates the structural fingerprint of a hypothetical passive residue (small magnitude, persistence under large trial counts, concentration at high reflexive engagement, independence from macroscopic energy transfer) in conditional form to claims made in parts of the Rhine, SRI, PEAR, Ganzfeld, and precognition literatures; the framework neither ratifies nor dismisses that corpus.
 
-*   **Prohibition Set ($\mathcal{L}^{\neg}_S$):** (Definition P.16.1) The set of candidate post-update self-model configurations $\theta' \in \Theta_S$ that the self-modeling map $\Pi_S^{(PP)}$ cannot realize at any admissible $PP < \alpha_{SPAP}$ (Definition M.10.3); equivalently, the candidate configurations whose realization forces $S$ into the SPAP-divergent regime $\mu_S = \infty$ (Theorem M.10.4). The prohibition set contains no degrees of freedom of its own but exerts causal efficacy through the cost potential $U_S$ of Definition P.16.3, which diverges on $\mathcal{L}^{\neg}_S$ (Lemma P.16.1) and is sourced by Theorem M.10.3; the thermodynamic chain Theorem 31 → Definition P.6.2 → Proposition P.15.1 → Proposition N.8.1 gives its stress-energy footprint (Theorem P.16.1). The *coupled* prohibition set $\mathcal{L}^{\neg}_{\{S_i\}}$ (Definition P.16.2) is the subset of the joint candidate-configuration space $\prod_i \Theta_{S_i}$ in which at least one factor lies in its individual prohibition set, intersected with $\mathrm{supp}(G_{\text{persp}})$.
+*   **Prohibition Set ($\mathcal{L}^{\neg}_S$):** (Definition P.16.1) The set of candidate post-update self-model configurations $\theta' \in \Theta_S$ that the self-modeling map $\Pi_S^{(PP)}$ cannot realize at any admissible $PP < \alpha_{SPAP}$ (Definition M.10.3); equivalently, the candidate configurations whose realization forces $S$ into the SPAP-divergent regime $\mu_S=\infty$ by Definition M.10.3. Theorem M.10.4 supplies explicit nonempty diagonal examples on the independent-register amplification construction. The prohibition set contains no degrees of freedom of its own but, on nonempty branches, exerts causal efficacy through the cost potential $U_S$ of Definition P.16.3, which diverges on $\mathcal{L}^{\neg}_S$ (Lemma P.16.1) and is sourced by Theorem M.10.3 and Theorem M.10.6; the thermodynamic chain Theorem 31 → Definition P.6.2 → Proposition P.15.1 → Proposition N.8.1 gives its stress-energy footprint (Theorem P.16.1). The *coupled* prohibition set $\mathcal{L}^{\neg}_{\{S_i\}}$ (Definition P.16.2) is the subset of the joint candidate-configuration space $\prod_i \Theta_{S_i}$ in which at least one factor lies in its individual prohibition set, intersected with $\mathrm{supp}(G_{\text{persp}})$.
 
 *   **Cost Potential ($U_{S,\theta_0}$):** (Definition P.16.3) The scalar field $U_{S,\theta_0}(\theta') := \inf\{C_{\text{process}}(S, E) : \theta_0 + \delta\theta(E) = \theta'\}$ on candidate configurations, where $\theta_0$ is $S$'s current self-model parameter value, with $U_{S,\theta_0}(\theta') = +\infty$ when no integrable pattern realizes $\theta'$. Written $U_S$ when $\theta_0$ is clear from context. Divergence of $U_{S,\theta_0}$ on $\mathcal{L}^{\neg}_S$ (Lemma P.16.1) provides the rigorous substrate for the cost-stratification language of Theorem P.16.1 and its scale-applicability consequences.
 
 *   **Deep Rationality:** (Definition P.16.5, Proposition P.16.1) A trajectory of a Property-R aggregate's self-model that is (i) PCE-optimal on the system's full operational budget (Theorem L.6) yet (ii) cannot be reconstructed as PCE-optimal by the deliberative subprocess $\mathcal{D}_S$ (Definition P.16.4) within the verbal-rational standard available to that subprocess. Existence of such trajectories follows from PCE acting on total cost (Definition 15) while the deliberative subprocess has bounded introspective access (Proposition 15). First-person reports of deep-rational acts as compulsion, possession, fate, or "something coming over me" are consistent with cost-gradient direction whose structural origin lies below $\mathcal{D}_S$'s introspective access (Corollary P.16.2).
 
-*   **Constraint-as-Carrier (PU reading):** (Section P.16) The structural locus to which the cross-cultural vocabulary of *daimon*, *muse*, *the spirit*, *intuition*, *inspiration*, *vocation*, *fate* (in its *character-as-destiny* sense), *karma-as-trajectory-constraint*, *tacit knowledge* (Polanyi 1966), *strange loop* (Hofstadter 1979), and *élan vital* (Bergson 1907) historically refers. PU identifies this locus as the prohibition set $\mathcal{L}^{\neg}_S$, whose causal efficacy is carried by the cost potential $U_S$ (Theorem P.16.1) rather than by any positive degree of freedom. Theorem P.16.2 (Inner-Compulsion Clause) establishes the single-system consequence; Proposition P.16.2 (Coupled-Set Cost-Gradient Bias) and Corollary P.16.1 (Bias Form) establish a coupled-system *bias* toward mutually low-cost configurations. The strictly stronger reading — that no global coordinating agency whatsoever is required for multi-system coordination (synchronicity, cosmic fate, providence-in-the-large) — additionally presupposes the Environmental SPAP Hypothesis (Hypothesis 14.5.8). Remark P.16.5 gives the term-by-term separation by epistemic status.
+*   **Constraint-as-Carrier (PU reading):** (Section P.16) On nonempty prohibition branches, the structural locus to which the cross-cultural vocabulary of *daimon*, *muse*, *the spirit*, *intuition*, *inspiration*, *vocation*, *fate* (in its *character-as-destiny* sense), *karma-as-trajectory-constraint*, *tacit knowledge* (Polanyi 1966), *strange loop* (Hofstadter 1979), and *élan vital* (Bergson 1907) historically refers. PU identifies this locus as the prohibition set $\mathcal{L}^{\neg}_S$, whose causal efficacy is carried by the cost potential $U_S$ (Theorem P.16.1) rather than by any positive degree of freedom. Theorem P.16.2 (Inner-Compulsion Clause) establishes the single-system consequence under the nonempty-branch hypotheses; Proposition P.16.2 (Coupled-Set Cost-Gradient Bias) and Corollary P.16.1 (Bias Form) establish a coupled-system *bias* toward mutually low-cost configurations on the corresponding relevant branches. The strictly stronger reading — that no global coordinating agency whatsoever is required for multi-system coordination (synchronicity, cosmic fate, providence-in-the-large) — additionally presupposes the Environmental SPAP Hypothesis (Hypothesis 14.5.8). Remark P.16.5 gives the term-by-term separation by epistemic status.
 
 *   **SPAP (Self-Referential Paradox of Accurate Prediction):** (**Section 4.2, Theorems 10, 11, A.1.1, A.1.3**) Theorems demonstrating the logical impossibility of guaranteed perfect self-prediction (deterministic or probabilistic) for systems possessing the represent / simulate / predicate-evaluate subcapacity needed for diagonalization, and therefore in particular for any system possessing Property R. Establishes fundamental Logical Indeterminacy and performance limit $\alpha_{SPAP}$.
 
@@ -558,3 +612,47 @@ on the verification/update resources required to approach that limit (Theorem 14
 *   **PU Spectral-Action Transfer Ledger:** (Appendix X, Definition X.9.6h.4; Theorem X.9.6h.5; Appendix T, Corollary T.17a.0b) Certificate machinery making gauge kinetic coefficients, Higgs coefficients, and electroweak threshold finite parts deterministic heat-coefficient projections of a certified first-order PU Dirac operator.
 *   **APS-Eta Baryon Transport Certificate:** (Appendix Y, Definition Y.6.1a; Theorem Y.6.1b) Certificate machinery specifying a four-dimensional Euclidean electroweak interpolation manifold $W_{\mathrm{EW}}$ with APS boundary, a chiral SM Dirac operator $D_W$ twisted by the electroweak connection and the pulled-back flavor Berry bundle, producing two normalized index outputs $I_{CP}$ and $I_{tr}$ that determine $\chi_{CP}$ and $\chi_{tr}$ in Theorem Y.6.1 and Proposition Y.9.1. The canonical unit branch is theorem-level when $I_{CP}=I_{tr}=1$ and the determinant-line orientation product equals $+1$.
 *   **APS-Kubo Baryon Transport Certificate:** (Appendix Y, Definition Y.6.1c; Theorem Y.6.1d; Corollary Y.6.1e) Certificate machinery combining the APS eta CP phase, Berry holonomy, Kubo Chern-Simons diffusion coefficient, washout rate, susceptibility kernel, entropy/photon normalization, and quadrature ledger into one finite baryogenesis response integral. Reduction to the Theorem Y.9 product form requires an additional factorized-window datum (Corollary Y.6.1e); without it, the certificate locks the integral form (Y.6.1d.1) directly.
+
+*   **Finite Predictive Budget:** (Appendix P, Definition P.16d.0.1) Finite protocol, outcome, coarse-graining, tolerance-quotient, and cost data $B=(\mathsf P_B,\Omega_B,q_B,\eta_B,\vartheta_B,\mathcal L_B)$ used to form the retained response quotient $Q_B(\mathcal A)$.
+
+*   **Predictive Renormalization Group (PRG):** (Appendix P, Definition P.16d.1.1; Theorem P.16d.1.2) Functorial flow between finite predictive quotients $Q_{B_1}\to Q_{B_2}$ under compatible coarsening of protocol, resolution, tolerance, retained maps, or cost budget. A distinction is physically retained at a budget only if it survives the corresponding finite-response quotient, changes a retained map, supplies a certificate role, or lowers the descended PPI/PCE cost.
+
+*   **Finite-Channel Covariance:** (Appendix P, Definition P.16d.2.1; Theorem P.16d.2.2) Invariance of PU physical content under finite encoding, representation, protocol, observer, or resolution transformations that preserve retained response presheaves, retained maps, certificate commutativity, and descended costs.
+
+*   **Paradox Residue:** (Appendix P, Definition P.16d.3.1; Theorem P.16d.3.2) Diagnostic tuple measuring failure of a proposed branch to descend to the finite operational quotient: naturality failure, PU-constraint violation, SPAP/RUD or role-collapse obstruction, certificate noncommutativity, or response-null surplus.
+
+*   **Operational Naturalness:** (Appendix P, Definition P.16d.4.1; Theorem P.16d.4.2) Stability of a retained parameter under PRG quotient flow with bounded transition description. Precision that changes no finite response, retained map, certificate role, or cost is operational fine-tuning and is removed.
+
+*   **Context-State Tomography:** (Appendix P, Definition P.16d.5.1; Theorem P.16d.5.2) Reconstruction of an aggregate context state $\text{context}_S(t)$ from finite interventions and responses. The reconstructable object is the quotient of context space by the registered finite tomography map $\vartheta_B^\Theta\circ\Theta_{S,B}$.
+
+*   **Reflexive Opacity:** (Appendix P, Definition P.16d.6.1; Theorem P.16d.6.2) The finite-cost limit on complete transparency of a Property-R self-modeling system. Nonzero self-context information measured in nats obeys $\Delta I(\Delta S_{\min}/k_B)\ge\kappa_r$ on the reflexivity-constraint branch.
+
+*   **Perspective Curvature:** (Appendix P, Definition P.16d.7.1; Theorem P.16d.7.2) Operational path-dependence of predictive transport across perspectives, measured by the retained holonomy defect $\operatorname{curv}_\gamma([X])=d_B(H_\gamma([X]),[X])$. Trivial holonomy is equivalent to path-independent global response gluing.
+
+*   **Observer Calibration Kernel:** (Appendix P, Definition P.16d.8.1; Theorem P.16d.8.2) Finite stochastic natural transformation between predictive systems' response presheaves. Reproducibility is the existence of a common calibrated response class.
+
+*   **Finite Predictive Horizon:** (Appendix P, Definition P.16d.9.1; Theorem P.16d.9.2) Kernel of accessible finite distinctions for a system at budget $B$. Distinctions inside the horizon cannot be reconstructed without a stronger budget or new separating protocol.
+
+*   **PCE Experiment Value:** (Appendix P, Definition P.16d.10.1; Theorem P.16d.10.2) Expected reduction in admissible response-class entropy per positive experiment cost. Any maximal-value experiment is PCE-optimal for the stated single-step finite menu objective.
+
+*   **Reflexive Burden Spectrum:** (Appendix P, Definition P.16d.11.1; Theorem P.16d.11.2) Retained energy, latency, noise, entropy, and complexity differences between matched self-referential and non-self-referential tasks. It lower-bounds self-model burden when a matching certificate isolates the additional self-context channel.
+
+*   **Proof-Cost Datum:** (Appendix P, Definition P.16d.12.1; Theorem P.16d.12.2) Finite physical cost ledger for producing and verifying mathematical proofs or certificates. Lower-cost certificates dominate higher-cost certificates with the same verification response unless the latter supply an independent certificate role.
+
+*   **Proof-Life:** (proof_life_verification_model.md) A finite verification-gated toy universe whose local objects are bounded proof-existence targets $O_{\psi,N}=\mathsf{BProof}_{\mathcal F_0}(\psi,N)$. Cells predict, verify by finite certificates or finite exhaustion traces, retain only positive-gain verification registers, propagate only independently checked certificates, and instantiate the A.5.6a active/external/historical plus labeled proof-access separation.
+
+*   **Curriculum Reconstruction Problem:** (Appendix P, Definition P.16d.13.1; Theorem P.16d.13.2) Finite PCE problem of choosing an instructional sequence that minimizes reconstruction discrepancy, processing cost, and ambiguity overhead for a target response structure.
+
+*   **Institutional Predictive Code:** (Appendix P, Definition P.16d.14.1; Theorem P.16d.14.2) Network-level record, verification, correction, and update machinery preserving knowledge exactly when correction maps descend to identity on the retained response quotient.
+
+*   **Finite Response Alignment:** (Appendix P, Definition P.16d.15.1; Theorem P.16d.15.2) Alignment criterion for predictive systems requiring stable response compatibility under context translation, not equality of internal states.
+
+*   **Intervention Budget Functional:** (Appendix P, Definition P.16d.16.1; Theorem P.16d.16.2) PCE objective for interventions combining intervention cost, expected predictive loss, surplus disruption, and constraint-violation penalty.
+
+*   **Ontology Audit Gate:** (Appendix P, Definition P.16d.17.1; Theorem P.16d.17.2) No-surplus test for proposed entities, branch labels, hidden variables, continuum refinements, or interpretations. A proposal is retained only by response change, retained-map change, cost reduction, certificate role, or finite branch-degeneracy record.
+
+*   **Cross-Scale Certificate Mining:** (Appendix P, Definition P.16d.18.1; Theorem P.16d.18.2) Certificate discipline requiring independent derivation paths through the PU graph to commute in the finite response quotient before a shared target invariant is accepted relative to a cover.
+
+*   **Predictive Failure Taxonomy:** (Appendix P, Definition P.16d.19.1; Theorem P.16d.19.2) Classification of knowledge failure by the broken finite-presentation component: context, response expectation, update, verification, cross-perspective transfer, quotient selection, surplus, status, or model capacity.
+
+*   **Knowledge Interface Area Law:** (Appendix P, Definition P.16d.20.1; Theorem P.16d.20.2) Finite-capacity upper bound on cross-boundary knowledge growth. In one update step, transferable distinguishable response information across a cut is bounded by $\operatorname{Cap}_B(\partial A)$.
