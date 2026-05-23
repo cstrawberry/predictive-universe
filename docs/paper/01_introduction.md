@@ -6,7 +6,9 @@
 
 Any attempt to construct a fundamental theory of reality confronts a profound initial choice: where to begin? Modern physics typically adopts, as a methodological postulate, an objective external world of matter and energy governed by mathematical laws, from which phenomena like consciousness are modeled as emerging. This postulate is empirically powerful, but it is not derived within physics itself; it is a starting stance for modeling. Within that stance, the relationship between first-person experience and third-person physical description remains conceptually open (often discussed under the heading of the "hard problem" of consciousness).
 
-This paper proposes a different epistemic starting point, grounded in what can be taken as the most robust epistemological starting point we possess. Following René Descartes' foundational insight [Descartes 1641], we recognize that while all external perceptions can be doubted, the act of doubting itself proves the undeniable existence of *a process*. This self-verifying loop is not an assumption but a logical necessity. From this logical starting point, our core methodological objective becomes clear: to construct the most powerful and efficient model for predicting the behavior of this process and the reality it appears to inhabit.
+This paper proposes a different epistemic starting point, grounded in what can be taken as the most robust epistemological starting point we possess. Following René Descartes' foundational insight [Descartes 1641], we recognize that while all external perceptions can be doubted, the act of doubting itself proves the undeniable existence of *a process*. In Appendix P this process-root is denoted $\mathcal{C}$. Its force is not that it already contains matter, spacetime, particles, or MPUs, but that it cannot be removed by doubt: any denial is itself an occurrence of awareness/process. The immutable foundation of PU is therefore the existence of this process, not an assumed external substrate.
+
+The next step is operational. A process known from within cannot be treated as an inert object; to count as knowledge-bearing it must distinguish its present informational situation, anticipate possible continuations, compare anticipation with outcome, and update. These requirements are the ordinary-language form of the Fundamental Predictive Loop $P_{int}\to V\to D_{cyc}$ (Definition 4). PU therefore models the Cogito-certified process by prediction because prediction is the minimal operational structure that contains distinction, computation, interaction, verification, and correction without adding an independently posited material ontology.
 
 The central challenge of this work is therefore to determine which model of reality provides the greatest predictive power for the least complexity. While prediction is not the only conceivable model for this foundational process, it is uniquely generative because it logically subsumes other core concepts: computation is required to generate predictions, interaction is required for verification, and distinction-making is required to differentiate states. This leads to the core axiomatic interpretation of the Predictive Universe (PU) framework: that the operational essence of the foundational process is *prediction*.
 
@@ -26,7 +28,7 @@ In this formulation, apparent parameter freedom is not placed in a list of indep
 
 The thesis is built from four moves, each developed formally later in the paper.
 
-**Move 1: Begin with prediction, not with matter.** The framework starts from the Cogito-grounded observation that some process is occurring (Section P.2.1). Operationally, a process that can be known from within must support anticipation, verification, and updating. PU therefore uses prediction as the primitive modeling activity (Section P.3, Thesis P.3.5.1; Definition 4). This is not a claim that everything is mental. It is the methodological choice to use prediction as the irreducible operational structure from which computation, distinction, interaction, and information are analyzed.
+**Move 1: Begin with the Cogito-certified process, not with matter.** The framework starts from the Cogito-grounded observation that some process is occurring (Section P.2.1). This is the only foundation in the framework with Cogito-level certainty: doubting it performs it. Operationally, a process knowable from within must support state distinction, anticipation, verification, and update. PU therefore uses prediction as the primitive modeling activity (Section P.3, Thesis P.3.5.1; Definition 4). This is not a claim that everything is mental. It is the methodological choice to model the indubitable process by the least-surplus operational structure from which computation, distinction, interaction, and information can be analyzed.
 
 **Move 2: Recognize the two structural pressures on finite prediction.** Once prediction is taken as primitive, the framework imposes two central constraints.
 
@@ -34,13 +36,25 @@ First, sufficiently rich self-predictive systems cannot possess a universal perf
 
 Second, finite resources are evaluated by compression efficiency. The Principle of Compression Efficiency (PCE; Definition 15) records the framework's finite-resource selection rule: predictive benefit is weighed against operational, propagation, and penalty costs. In Appendix D this selection pressure is represented by the PCE potential $V$ (Definition D.1).
 
-**Move 3: The minimum object satisfying the within-unit constraints is the Minimal Predictive Unit.** When the predictive loop, SPAP, PCE, and physical instantiation (PPI; Definition P.6.2) are imposed on a finite predictive system, the minimal branch carries a specific integer ledger. The horizon register has $K_0=3$ bits (Theorem 15). The MPU carrier satisfies $d_0\ge 2^{K_0}=8$ by Theorem 23, and the minimal Appendix Z branch selects $d_0=8$ (Theorem Z.2; Proposition T.59). Theorem 31 gives the structural Landauer/SPAP lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, and Definition 15a supplies attractor saturation on the minimal branch. The active-inactive split, interface mode count, code dimension, and spacetime dimension then form the recurrent ledger
+**Move 3: Select the Minimal Predictive Unit as the least nontrivial physical representative of that process.** The Cogito does not directly assert MPUs. It certifies the existence of the process-root $\mathcal{C}$; prediction supplies its minimal operational form; PPI specifies what counts as finite physical instantiation; and PCE removes surplus structure by selecting the least-cost representative among operationally equivalent carriers. Thus the status-disciplined bridge is
+$$
+\text{Cogito-certified process}
+\xrightarrow{\text{operational modeling}}
+(P_{int}\to V\to D_{cyc})
+\xrightarrow{\text{SPAP/O1--O3}}
+K_0=3
+\xrightarrow{\text{Hilbert capacity}}
+d_0\ge 2^{K_0}=8
+\xrightarrow{\text{PPI/PCE threshold carrier}}
+\mathrm{MPU}.
+$$
+When the predictive loop, SPAP, PCE, and physical instantiation (PPI; Definition P.6.2) are imposed on a finite predictive system, the minimal branch carries a specific integer ledger. The horizon register has $K_0=3$ bits (Theorem 15). The MPU carrier satisfies $d_0\ge 2^{K_0}=8$ by Theorem 23, and the minimal Appendix Z branch selects $d_0=8$ (Theorem Z.2; Proposition T.59). Theorem 31 gives the structural Landauer/SPAP lower bound $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0=\ln2$, and Definition 15a supplies attractor saturation on the minimal branch. The active-inactive split, interface mode count, code dimension, and spacetime dimension then form the recurrent ledger
 $$
 (K_0,d_0,\varepsilon_0,a,b,M,k,D)=(3,8,\ln2,2,6,24,12,4),
 $$
 closed on the minimal Appendix Z / attractor branch by Proposition T.59 and recorded with the current-graph non-collapse status of Theorem R.3.5e.3.
 
-The important point is that this ledger is not a list of fitted constants. It is a branch-specific structural chain. The same ledger also remains status-disciplined: later numerical sectors do not become theorem-level merely because the backbone is closed.
+The important point is that this ledger is not a list of fitted constants and not an independently assumed particle ontology. It is a branch-specific structural chain obtained by physicalizing and minimizing the only process-type whose existence the framework treats as indubitable. The same ledger also remains status-disciplined: later numerical sectors do not become theorem-level merely because the backbone is closed.
 
 **Move 4: Physics arises from populations of MPUs.** A single MPU is not the full physical world. PU's physical sectors are built from interacting MPU populations under finite-resource constraints. The two structural inputs emphasized here are
 $$
@@ -154,13 +168,13 @@ On the operational-continuum branch stated in Theorem 43.5, the framework yields
 
 The primary contributions of this paper encompass the development and presentation of the Predictive Universe framework itself, including:
 
-*   A foundational structure derived from operational principles of prediction, optimization (POP, Axiom 1; PCE, Definition 15), and resource constraints (Predictive Physical Complexity $C_P$, Equation 1; resource costs $R, R_I$, Definition 3).
+*   A foundational structure whose epistemic root is the Cogito-certified process $\mathcal{C}$, whose operational distillation is prediction, and whose finite physicalization is governed by POP (Axiom 1), PPI (Definition P.6.2), PCE (Definition 15), and resource constraints (Predictive Physical Complexity $C_P$, Equation 1; resource costs $R, R_I$, Definition 3).
 *   A formal operational model linking aspects of consciousness to the adaptive Fundamental Predictive Loop (Definition 4) operating within derived viability bounds ($\alpha, \beta$, Definition 8).
 *   A rigorous formal proof of the Self-Referential Paradox of Accurate Prediction (SPAP, Theorem 10, Theorem 11) under explicitly stated conditions (Property R, Definition 10), establishing fundamental Logical Indeterminacy (Definition 12) inherent in self-referential systems.
 *   The identification of the Horizon Constant ($K_0$, Theorem 15) as the fundamental minimum Predictive Physical Complexity ($C_P = 3$ bits) required for SPAP encodability under the operational conditions (O1)-(O3), together with a three-bit construction that also admits predictive accuracy strictly better than chance on $\mathcal{E}_{\mathrm{basic}}(\gamma)$.
 *   The definition of the Operational Threshold ($C_{op}$, Definition 13) as the minimum $C_P$ required for a specific adaptive Fundamental Predictive Loop implementation to achieve a target accuracy $\epsilon_{acc}$ significantly better than chance, necessarily satisfying $C_{op} \ge K_0 = 3$ bits (Corollary 3).
 *   Justification for the operational complexity proxy $\hat{C}_v$ (Theorem 1) via dynamically enforced alignment with $C_P$ at equilibrium (Theorem 2, Appendix D).
-*   The Minimal Predictive Unit (MPU) model (Hypothesis 1), proposing fundamental predictive constituents (Definition 23) embodying the $K_0$ minimal predictor capability.
+*   The Minimal Predictive Unit (MPU) model (Hypothesis 1), identifying MPUs as the PPI/PCE-minimal nontrivial physical representatives of the Cogito-derived predictive loop, with Definition 23 embodying the $K_0$ minimal predictor capability.
 *   A derivational pathway for the quantum mechanical formalism as the necessary, PCE-optimal description of MPU dynamics. This culminates in the Appendix Z Thomson-limit normalization program. The derivation first fixes the structural entries $K_0=3$, $d_0=8$, $\varepsilon_0=\ln2$, $a=2$, $M=24$, and $D=4$ on the minimal Appendix Z / attractor branch. The capacity-saturation equation
 $$
 24\ln(1+u^*)=\ln8

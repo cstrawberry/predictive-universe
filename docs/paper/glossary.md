@@ -56,6 +56,8 @@
 
 *   **CC (Consciousness Complexity):** (Definition 30) A quantitative measure of a system’s emergent biasing capability, defined as the **operational norm** of the linear Probability Modification Map $L_S$: $\mathrm{CC}(S):=\|L_S\|_{\mathrm{op}}$ (Equation 54). It bounds the maximum possible deviation from the Born rule through the Fisher-Rao distance gate of Definition 33 and the probability-shift bounds of Theorem 36. On the bounded-bias branch, its deterministic endpoint strength satisfies $\mathrm{CC}(S)\le\alpha_{\mathrm{CC,max}}<0.5$ (Theorem 39), while statistical-FTL consistency uses the finite-window zero-error gate of Theorem 39a on the regular branch (Definition 10.2a).
 
+*   **Cogito-to-MPU Bridge:** (Introduction; Appendix P.1–P.3; Definition 23) The epistemic-to-physical chain by which the Cogito certifies an indubitable awareness/process $\mathcal{C}$, operational analysis models $\mathcal{C}$ as the Fundamental Predictive Loop, PPI restricts admissible physicalization to finite implementations, and PCE selects the no-surplus representative. The MPU is the resulting minimal nontrivial physical representative of the predictive process, not a direct Cogito-level certainty.
+
 *   **Coherence:** (Appendix C) Reliability and stability of predictive correlations and information propagation across the MPU network. Requires geometric regularity (Theorem C.2).
 
 *   **Complexity Hierarchy:** (Section 2.4.1) Iterative refinement sequence $\{C_{P,n}\}$ used to define $C_P$ self-consistently without presupposing derived physical laws.
@@ -117,7 +119,7 @@
 
 *   **Horizon Constant ($K_0$):** (Theorem 15) The fundamental minimum Predictive Physical Complexity ($C_P = 3$ bits) required for SPAP encodability under the operational conditions (O1)-(O3). The same three-bit register size also admits a basic predictive mode with accuracy strictly better than chance on $\mathcal{E}_{\mathrm{basic}}(\gamma)$. Represents the absolute floor for non-trivial predictive agency. Necessarily $C_{op} \ge K_0$.
 
-*   **Hypothesis 1 (MPU Reality Model):** (Section 7.1) Postulates that physical reality is fundamentally constituted by a network of interacting MPUs governed by POP/PCE and Dual Dynamics.
+*   **Hypothesis 1 (MPU Reality Model):** (Section 7.1) Models physical reality, from the internal perspective, as fundamentally constituted by a network of interacting MPUs governed by POP/PCE and Dual Dynamics. The motivation is the Cogito-to-MPU bridge: MPUs are selected as the PPI/PCE-minimal physical representatives of the indubitable predictive process-root.
 
 *   **Theorem 28a (Origin of Quantum Randomness):** (Section 7.3.4) Derives that the stochasticity of the 'Evolve' process originates from Logical Indeterminacy through non-simplex state-space closure, PCE/PPI quotient non-contextuality, and Born-rule descent on the MPU Hilbert branch.
 
@@ -220,7 +222,7 @@ $$
 
 *   **Mode-Channel Correspondence:** (Appendix Z, Theorem Z.10) The finite-response Bures tangent-cell channel contract requiring internal QFI modes to match operationally retained channel cells: $M_{\rm int}=M_{\rm phys}$. PPI and PCE force equal-radius, non-overlapping, tangent-saturated distinguishability cells, so $M_{\rm phys}=K(D)$. Combined with $M_{\rm int}=2ab=24$, Theorem Z.11 selects $D=4$ at the PCE-optimal equilibrium.
 
-*   **MPU (Minimal Predictive Unit):** (Definition 23) The hypothesized fundamental constituent of reality, defined as a system possessing Predictive Physical Complexity exactly equal to the Operational Threshold $C_{op}$. Operates the adaptive Fundamental Predictive Loop under Dual Dynamics.
+*   **MPU (Minimal Predictive Unit):** (Definition 23) The hypothesized fundamental constituent of the physical model, defined as a system possessing Predictive Physical Complexity exactly equal to the Operational Threshold $C_{op}$. It is the simplest nontrivial finite physical representative of the Cogito-derived predictive loop under PPI admissibility and PCE no-surplus selection, and operates the adaptive Fundamental Predictive Loop under Dual Dynamics.
 
 *   **ND-RID (Non-Deterministic Reflexive Interaction Dynamics):** (Definition 6) The formalism describing the probabilistic, irreversible 'Evolve' interaction process, where state transitions depend reflexively on stochastic outcomes. Characterized by $\varepsilon_0=\ln2$, $\varepsilon_{\mathrm{phys}}\ge\varepsilon_0$, the completed reset-support capacity deficit of Proposition E.2a, and $f_{RID}<1$ on refresh/minorization branches satisfying Lemma E.1.
 
